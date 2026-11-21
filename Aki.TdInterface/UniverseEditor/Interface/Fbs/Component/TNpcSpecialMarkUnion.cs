@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C76 RID: 23670
+	// Token: 0x0200629E RID: 25246
 	public class TNpcSpecialMarkUnion
 	{
-		// Token: 0x1700B22C RID: 45612
-		// (get) Token: 0x060288D9 RID: 166105 RVA: 0x00593812 File Offset: 0x00591A12
-		// (set) Token: 0x060288DA RID: 166106 RVA: 0x0059381A File Offset: 0x00591A1A
+		// Token: 0x1700BB80 RID: 48000
+		// (get) Token: 0x0602AEF9 RID: 175865 RVA: 0x005DBC06 File Offset: 0x005D9E06
+		// (set) Token: 0x0602AEFA RID: 175866 RVA: 0x005DBC0E File Offset: 0x005D9E0E
 		public TNpcSpecialMark Type { get; set; }
 
-		// Token: 0x1700B22D RID: 45613
-		// (get) Token: 0x060288DB RID: 166107 RVA: 0x00593823 File Offset: 0x00591A23
-		// (set) Token: 0x060288DC RID: 166108 RVA: 0x0059382B File Offset: 0x00591A2B
+		// Token: 0x1700BB81 RID: 48001
+		// (get) Token: 0x0602AEFB RID: 175867 RVA: 0x005DBC17 File Offset: 0x005D9E17
+		// (set) Token: 0x0602AEFC RID: 175868 RVA: 0x005DBC1F File Offset: 0x005D9E1F
 		public object Value { get; set; }
 
-		// Token: 0x060288DD RID: 166109 RVA: 0x00593834 File Offset: 0x00591A34
+		// Token: 0x0602AEFD RID: 175869 RVA: 0x005DBC28 File Offset: 0x005D9E28
 		public TNpcSpecialMarkUnion()
 		{
 			this.Type = TNpcSpecialMark.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060288DE RID: 166110 RVA: 0x0059384A File Offset: 0x00591A4A
+		// Token: 0x0602AEFE RID: 175870 RVA: 0x005DBC3E File Offset: 0x005D9E3E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060288DF RID: 166111 RVA: 0x0059385C File Offset: 0x00591A5C
+		// Token: 0x0602AEFF RID: 175871 RVA: 0x005DBC50 File Offset: 0x005D9E50
 		public INpcSpecialMarkIgnoreCameraHideNpcT AsINpcSpecialMarkIgnoreCameraHideNpc()
 		{
 			return this.As<INpcSpecialMarkIgnoreCameraHideNpcT>();
 		}
 
-		// Token: 0x060288E0 RID: 166112 RVA: 0x00593864 File Offset: 0x00591A64
+		// Token: 0x0602AF00 RID: 175872 RVA: 0x005DBC58 File Offset: 0x005D9E58
 		public static TNpcSpecialMarkUnion FromINpcSpecialMarkIgnoreCameraHideNpc(INpcSpecialMarkIgnoreCameraHideNpcT _inpcspecialmarkignorecamerahidenpc)
 		{
 			return new TNpcSpecialMarkUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060288E1 RID: 166113 RVA: 0x00593879 File Offset: 0x00591A79
+		// Token: 0x0602AF01 RID: 175873 RVA: 0x005DBC6D File Offset: 0x005D9E6D
 		public INpcSpecialMarkTrafficLightT AsINpcSpecialMarkTrafficLight()
 		{
 			return this.As<INpcSpecialMarkTrafficLightT>();
 		}
 
-		// Token: 0x060288E2 RID: 166114 RVA: 0x00593881 File Offset: 0x00591A81
+		// Token: 0x0602AF02 RID: 175874 RVA: 0x005DBC75 File Offset: 0x005D9E75
 		public static TNpcSpecialMarkUnion FromINpcSpecialMarkTrafficLight(INpcSpecialMarkTrafficLightT _inpcspecialmarktrafficlight)
 		{
 			return new TNpcSpecialMarkUnion
@@ -61,19 +61,36 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060288E3 RID: 166115 RVA: 0x00593898 File Offset: 0x00591A98
+		// Token: 0x0602AF03 RID: 175875 RVA: 0x005DBC8A File Offset: 0x005D9E8A
+		public INpcSpecialMarkTriggerBlueprintFootprintEventT AsINpcSpecialMarkTriggerBlueprintFootprintEvent()
+		{
+			return this.As<INpcSpecialMarkTriggerBlueprintFootprintEventT>();
+		}
+
+		// Token: 0x0602AF04 RID: 175876 RVA: 0x005DBC92 File Offset: 0x005D9E92
+		public static TNpcSpecialMarkUnion FromINpcSpecialMarkTriggerBlueprintFootprintEvent(INpcSpecialMarkTriggerBlueprintFootprintEventT _inpcspecialmarktriggerblueprintfootprintevent)
+		{
+			return new TNpcSpecialMarkUnion
+			{
+				Type = TNpcSpecialMark.INpcSpecialMarkTriggerBlueprintFootprintEvent,
+				Value = _inpcspecialmarktriggerblueprintfootprintevent
+			};
+		}
+
+		// Token: 0x0602AF05 RID: 175877 RVA: 0x005DBCA8 File Offset: 0x005D9EA8
 		public static int Pack(FlatBufferBuilder builder, TNpcSpecialMarkUnion _o)
 		{
-			TNpcSpecialMark type = _o.Type;
-			if (type == TNpcSpecialMark.INpcSpecialMarkIgnoreCameraHideNpc)
+			switch (_o.Type)
 			{
+			case TNpcSpecialMark.INpcSpecialMarkIgnoreCameraHideNpc:
 				return INpcSpecialMarkIgnoreCameraHideNpc.Pack(builder, _o.AsINpcSpecialMarkIgnoreCameraHideNpc()).Value;
-			}
-			if (type != TNpcSpecialMark.INpcSpecialMarkTrafficLight)
-			{
+			case TNpcSpecialMark.INpcSpecialMarkTrafficLight:
+				return INpcSpecialMarkTrafficLight.Pack(builder, _o.AsINpcSpecialMarkTrafficLight()).Value;
+			case TNpcSpecialMark.INpcSpecialMarkTriggerBlueprintFootprintEvent:
+				return INpcSpecialMarkTriggerBlueprintFootprintEvent.Pack(builder, _o.AsINpcSpecialMarkTriggerBlueprintFootprintEvent()).Value;
+			default:
 				return 0;
 			}
-			return INpcSpecialMarkTrafficLight.Pack(builder, _o.AsINpcSpecialMarkTrafficLight()).Value;
 		}
 	}
 }

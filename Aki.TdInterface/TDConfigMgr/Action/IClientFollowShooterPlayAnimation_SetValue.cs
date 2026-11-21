@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018BB RID: 6331
+	// Token: 0x02001A48 RID: 6728
 	public class IClientFollowShooterPlayAnimation_SetValue
 	{
-		// Token: 0x0400556C RID: 21868
+		// Token: 0x040059BC RID: 22972
 		public EClientFollowShooterLeisureInteractType Type;
 
-		// Token: 0x0400556D RID: 21869
-		[Nullable(1)]
+		// Token: 0x040059BD RID: 22973
 		public string Montage;
 	}
 }

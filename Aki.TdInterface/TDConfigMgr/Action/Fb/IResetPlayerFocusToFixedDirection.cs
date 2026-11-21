@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028CB RID: 10443
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BA0 RID: 11168
 	public class IResetPlayerFocusToFixedDirection : IResetPlayerFocusType
 	{
-		// Token: 0x0600E7F5 RID: 59381 RVA: 0x00220CDD File Offset: 0x0021EEDD
+		// Token: 0x0600F624 RID: 63012 RVA: 0x0023DC5D File Offset: 0x0023BE5D
 		public static IResetPlayerFocusToFixedDirection Create(IResetPlayerFocusToFixedDirection? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004821 RID: 18465
-		// (get) Token: 0x0600E7F6 RID: 59382 RVA: 0x00220CFC File Offset: 0x0021EEFC
+		// Token: 0x17004B92 RID: 19346
+		// (get) Token: 0x0600F625 RID: 63013 RVA: 0x0023DC7C File Offset: 0x0023BE7C
 		public override EResetPlayerFocusType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004822 RID: 18466
-		// (get) Token: 0x0600E7F7 RID: 59383 RVA: 0x00220D09 File Offset: 0x0021EF09
+		// Token: 0x17004B93 RID: 19347
+		// (get) Token: 0x0600F626 RID: 63014 RVA: 0x0023DC89 File Offset: 0x0023BE89
 		public virtual VectorInfo Direction
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008039 RID: 32825
+		// Token: 0x040086F8 RID: 34552
 		private IResetPlayerFocusToFixedDirection Instance;
 
-		// Token: 0x0400803A RID: 32826
+		// Token: 0x040086F9 RID: 34553
 		[Nullable(2)]
 		private VectorInfo _DirectionCache;
 
-		// Token: 0x0400803B RID: 32827
+		// Token: 0x040086FA RID: 34554
 		private bool _DirectionInited;
 	}
 }

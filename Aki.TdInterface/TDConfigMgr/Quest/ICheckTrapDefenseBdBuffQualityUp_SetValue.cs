@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F03 RID: 3843
+	// Token: 0x02001019 RID: 4121
 	public class ICheckTrapDefenseBdBuffQualityUp_SetValue
 	{
-		// Token: 0x04003351 RID: 13137
+		// Token: 0x0400365E RID: 13918
 		public ECheckTrapDefenseEvent Type;
 	}
 }

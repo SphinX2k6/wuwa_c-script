@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200111C RID: 4380
+// Token: 0x020005D0 RID: 1488
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class BabelTowerBuffItem : GridProxyAbstract<IBabelTowerBuffItemData>
 {
-	// Token: 0x0600729C RID: 29340 RVA: 0x00178198 File Offset: 0x00176398
+	// Token: 0x06004632 RID: 17970 RVA: 0x00180B54 File Offset: 0x0017ED54
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -48,7 +48,7 @@ public class BabelTowerBuffItem : GridProxyAbstract<IBabelTowerBuffItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600729D RID: 29341 RVA: 0x001782E4 File Offset: 0x001764E4
+	// Token: 0x06004633 RID: 17971 RVA: 0x00180CA0 File Offset: 0x0017EEA0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerBuffItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ public class BabelTowerBuffItem : GridProxyAbstract<IBabelTowerBuffItemData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600729E RID: 29342 RVA: 0x00178327 File Offset: 0x00176527
+	// Token: 0x06004634 RID: 17972 RVA: 0x00180CE3 File Offset: 0x0017EEE3
 	private void OnToggleClickInternal(EToggleState state)
 	{
 		Action<int> onToggleClick = this.OnToggleClick;
@@ -70,7 +70,7 @@ public class BabelTowerBuffItem : GridProxyAbstract<IBabelTowerBuffItemData>
 		onToggleClick(base.GridIndex);
 	}
 
-	// Token: 0x0600729F RID: 29343 RVA: 0x00178340 File Offset: 0x00176540
+	// Token: 0x06004635 RID: 17973 RVA: 0x00180CFC File Offset: 0x0017EEFC
 	[NullableContext(1)]
 	public override void Refresh(IBabelTowerBuffItemData data, bool isSelected, int gridIndex)
 	{
@@ -110,50 +110,50 @@ public class BabelTowerBuffItem : GridProxyAbstract<IBabelTowerBuffItemData>
 		base.SetQualityIconById(base.GetSprite(0), qualityId, null, null, null);
 	}
 
-	// Token: 0x060072A0 RID: 29344 RVA: 0x00178491 File Offset: 0x00176691
+	// Token: 0x06004636 RID: 17974 RVA: 0x00180E4D File Offset: 0x0017F04D
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(6).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x060072A1 RID: 29345 RVA: 0x001784A4 File Offset: 0x001766A4
+	// Token: 0x06004637 RID: 17975 RVA: 0x00180E60 File Offset: 0x0017F060
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(6).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0400350C RID: 13580
+	// Token: 0x040035A5 RID: 13733
 	private IBabelTowerBuffItemData Data;
 
-	// Token: 0x0400350D RID: 13581
+	// Token: 0x040035A6 RID: 13734
 	private BabelTowerBuffStarItem StarItem;
 
-	// Token: 0x0400350E RID: 13582
+	// Token: 0x040035A7 RID: 13735
 	public Action<int> OnToggleClick;
 
-	// Token: 0x020076E2 RID: 30434
+	// Token: 0x02006876 RID: 26742
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040273AC RID: 160684
+		// Token: 0x040226F5 RID: 141045
 		public const int QualitySprite = 0;
 
-		// Token: 0x040273AD RID: 160685
+		// Token: 0x040226F6 RID: 141046
 		public const int IconTexture = 1;
 
-		// Token: 0x040273AE RID: 160686
+		// Token: 0x040226F7 RID: 141047
 		public const int NameText = 2;
 
-		// Token: 0x040273AF RID: 160687
+		// Token: 0x040226F8 RID: 141048
 		public const int BgSprite = 3;
 
-		// Token: 0x040273B0 RID: 160688
+		// Token: 0x040226F9 RID: 141049
 		public const int AdditionItem = 4;
 
-		// Token: 0x040273B1 RID: 160689
+		// Token: 0x040226FA RID: 141050
 		public const int BottomAdditionItem = 5;
 
-		// Token: 0x040273B2 RID: 160690
+		// Token: 0x040226FB RID: 141051
 		public const int BuffToggle = 6;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003260 RID: 12896
+// Token: 0x020027CF RID: 10191
 public enum ESimpleNpcClearOutModuleDefine
 {
-	// Token: 0x0400DBD5 RID: 56277
+	// Token: 0x0400E074 RID: 57460
 	Plot,
-	// Token: 0x0400DBD6 RID: 56278
+	// Token: 0x0400E075 RID: 57461
 	Quest
 }

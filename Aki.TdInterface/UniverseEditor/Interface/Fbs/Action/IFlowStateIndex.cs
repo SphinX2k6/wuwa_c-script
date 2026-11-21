@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200681F RID: 26655
+	// Token: 0x02006EA2 RID: 28322
 	public struct IFlowStateIndex : IFlatbufferObject
 	{
-		// Token: 0x1700C5FD RID: 50685
-		// (get) Token: 0x0602E766 RID: 190310 RVA: 0x0065761C File Offset: 0x0065581C
+		// Token: 0x1700CFBE RID: 53182
+		// (get) Token: 0x06030FDC RID: 200668 RVA: 0x006A53E4 File Offset: 0x006A35E4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E767 RID: 190311 RVA: 0x00657629 File Offset: 0x00655829
+		// Token: 0x06030FDD RID: 200669 RVA: 0x006A53F1 File Offset: 0x006A35F1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E768 RID: 190312 RVA: 0x00657630 File Offset: 0x00655830
+		// Token: 0x06030FDE RID: 200670 RVA: 0x006A53F8 File Offset: 0x006A35F8
 		public static IFlowStateIndex GetRootAsIFlowStateIndex(ByteBuffer _bb)
 		{
 			return IFlowStateIndex.GetRootAsIFlowStateIndex(_bb, default(IFlowStateIndex));
 		}
 
-		// Token: 0x0602E769 RID: 190313 RVA: 0x0065764C File Offset: 0x0065584C
+		// Token: 0x06030FDF RID: 200671 RVA: 0x006A5414 File Offset: 0x006A3614
 		public static IFlowStateIndex GetRootAsIFlowStateIndex(ByteBuffer _bb, IFlowStateIndex obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E76A RID: 190314 RVA: 0x00657669 File Offset: 0x00655869
+		// Token: 0x06030FE0 RID: 200672 RVA: 0x006A5431 File Offset: 0x006A3631
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E76B RID: 190315 RVA: 0x00657678 File Offset: 0x00655878
+		// Token: 0x06030FE1 RID: 200673 RVA: 0x006A5440 File Offset: 0x006A3640
 		public IFlowStateIndex __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C5FE RID: 50686
-		// (get) Token: 0x0602E76C RID: 190316 RVA: 0x00657688 File Offset: 0x00655888
+		// Token: 0x1700CFBF RID: 53183
+		// (get) Token: 0x06030FE2 RID: 200674 RVA: 0x006A5450 File Offset: 0x006A3650
 		public string FlowListName
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E76D RID: 190317 RVA: 0x006576BF File Offset: 0x006558BF
+		// Token: 0x06030FE3 RID: 200675 RVA: 0x006A5487 File Offset: 0x006A3687
 		public Span<byte> GetFlowListNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602E76E RID: 190318 RVA: 0x006576CE File Offset: 0x006558CE
+		// Token: 0x06030FE4 RID: 200676 RVA: 0x006A5496 File Offset: 0x006A3696
 		public byte[] GetFlowListNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700C5FF RID: 50687
-		// (get) Token: 0x0602E76F RID: 190319 RVA: 0x006576DC File Offset: 0x006558DC
+		// Token: 0x1700CFC0 RID: 53184
+		// (get) Token: 0x06030FE5 RID: 200677 RVA: 0x006A54A4 File Offset: 0x006A36A4
 		public int FlowId
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C600 RID: 50688
-		// (get) Token: 0x0602E770 RID: 190320 RVA: 0x00657718 File Offset: 0x00655918
+		// Token: 0x1700CFC1 RID: 53185
+		// (get) Token: 0x06030FE6 RID: 200678 RVA: 0x006A54E0 File Offset: 0x006A36E0
 		public int StateId
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E771 RID: 190321 RVA: 0x00657754 File Offset: 0x00655954
+		// Token: 0x06030FE7 RID: 200679 RVA: 0x006A551C File Offset: 0x006A371C
 		public static Offset<IFlowStateIndex> CreateIFlowStateIndex(FlatBufferBuilder builder, StringOffset FlowListNameOffset = default(StringOffset), int FlowId = 0, int StateId = 0)
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowStateIndex.EndIFlowStateIndex(builder);
 		}
 
-		// Token: 0x0602E772 RID: 190322 RVA: 0x00657778 File Offset: 0x00655978
+		// Token: 0x06030FE8 RID: 200680 RVA: 0x006A5540 File Offset: 0x006A3740
 		public static void StartIFlowStateIndex(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602E773 RID: 190323 RVA: 0x00657781 File Offset: 0x00655981
+		// Token: 0x06030FE9 RID: 200681 RVA: 0x006A5549 File Offset: 0x006A3749
 		public static void AddFlowListName(FlatBufferBuilder builder, StringOffset flowListNameOffset)
 		{
 			builder.AddOffset(0, flowListNameOffset.Value, 0);
 		}
 
-		// Token: 0x0602E774 RID: 190324 RVA: 0x00657791 File Offset: 0x00655991
+		// Token: 0x06030FEA RID: 200682 RVA: 0x006A5559 File Offset: 0x006A3759
 		public static void AddFlowId(FlatBufferBuilder builder, int flowId)
 		{
 			builder.AddInt(1, flowId, 0);
 		}
 
-		// Token: 0x0602E775 RID: 190325 RVA: 0x0065779C File Offset: 0x0065599C
+		// Token: 0x06030FEB RID: 200683 RVA: 0x006A5564 File Offset: 0x006A3764
 		public static void AddStateId(FlatBufferBuilder builder, int stateId)
 		{
 			builder.AddInt(2, stateId, 0);
 		}
 
-		// Token: 0x0602E776 RID: 190326 RVA: 0x006577A7 File Offset: 0x006559A7
+		// Token: 0x06030FEC RID: 200684 RVA: 0x006A556F File Offset: 0x006A376F
 		public static Offset<IFlowStateIndex> EndIFlowStateIndex(FlatBufferBuilder builder)
 		{
 			return new Offset<IFlowStateIndex>(builder.EndTable());
 		}
 
-		// Token: 0x0602E777 RID: 190327 RVA: 0x006577B4 File Offset: 0x006559B4
+		// Token: 0x06030FED RID: 200685 RVA: 0x006A557C File Offset: 0x006A377C
 		public IFlowStateIndexT UnPack()
 		{
 			IFlowStateIndexT flowStateIndexT = new IFlowStateIndexT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return flowStateIndexT;
 		}
 
-		// Token: 0x0602E778 RID: 190328 RVA: 0x006577CF File Offset: 0x006559CF
+		// Token: 0x06030FEE RID: 200686 RVA: 0x006A5597 File Offset: 0x006A3797
 		public void UnPackTo(IFlowStateIndexT _o)
 		{
 			_o.FlowListName = this.FlowListName;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.StateId = this.StateId;
 		}
 
-		// Token: 0x0602E779 RID: 190329 RVA: 0x006577F8 File Offset: 0x006559F8
+		// Token: 0x06030FEF RID: 200687 RVA: 0x006A55C0 File Offset: 0x006A37C0
 		public static Offset<IFlowStateIndex> Pack(FlatBufferBuilder builder, IFlowStateIndexT _o)
 		{
 			if (_o == null)
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowStateIndex.CreateIFlowStateIndex(builder, flowListNameOffset, _o.FlowId, _o.StateId);
 		}
 
-		// Token: 0x04010F5C RID: 69468
+		// Token: 0x04011D94 RID: 73108
 		private Table __p;
 	}
 }

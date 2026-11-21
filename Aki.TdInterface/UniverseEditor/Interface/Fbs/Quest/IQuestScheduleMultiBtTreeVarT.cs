@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200402C RID: 16428
+	// Token: 0x0200446D RID: 17517
 	public class IQuestScheduleMultiBtTreeVarT
 	{
-		// Token: 0x17007397 RID: 29591
-		// (get) Token: 0x06017C32 RID: 97330 RVA: 0x0036DBBD File Offset: 0x0036BDBD
-		// (set) Token: 0x06017C33 RID: 97331 RVA: 0x0036DBC5 File Offset: 0x0036BDC5
+		// Token: 0x17007999 RID: 31129
+		// (get) Token: 0x060192CB RID: 103115 RVA: 0x003979B1 File Offset: 0x00395BB1
+		// (set) Token: 0x060192CC RID: 103116 RVA: 0x003979B9 File Offset: 0x00395BB9
 		public EQuestScheduleType Type { get; set; }
 
-		// Token: 0x17007398 RID: 29592
-		// (get) Token: 0x06017C34 RID: 97332 RVA: 0x0036DBCE File Offset: 0x0036BDCE
-		// (set) Token: 0x06017C35 RID: 97333 RVA: 0x0036DBD6 File Offset: 0x0036BDD6
+		// Token: 0x1700799A RID: 31130
+		// (get) Token: 0x060192CD RID: 103117 RVA: 0x003979C2 File Offset: 0x00395BC2
+		// (set) Token: 0x060192CE RID: 103118 RVA: 0x003979CA File Offset: 0x00395BCA
 		public List<TVarRefUnion> Vars { get; set; }
 
-		// Token: 0x17007399 RID: 29593
-		// (get) Token: 0x06017C36 RID: 97334 RVA: 0x0036DBDF File Offset: 0x0036BDDF
-		// (set) Token: 0x06017C37 RID: 97335 RVA: 0x0036DBE7 File Offset: 0x0036BDE7
+		// Token: 0x1700799B RID: 31131
+		// (get) Token: 0x060192CF RID: 103119 RVA: 0x003979D3 File Offset: 0x00395BD3
+		// (set) Token: 0x060192D0 RID: 103120 RVA: 0x003979DB File Offset: 0x00395BDB
 		public IWordArtConfigT ShowAsWordArt { get; set; }
 
-		// Token: 0x06017C38 RID: 97336 RVA: 0x0036DBF0 File Offset: 0x0036BDF0
+		// Token: 0x060192D1 RID: 103121 RVA: 0x003979E4 File Offset: 0x00395BE4
 		public IQuestScheduleMultiBtTreeVarT()
 		{
 			this.Type = EQuestScheduleType.None;

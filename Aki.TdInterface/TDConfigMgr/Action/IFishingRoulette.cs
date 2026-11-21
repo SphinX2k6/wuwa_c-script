@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A6B RID: 6763
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C00 RID: 7168
 	public class IFishingRoulette : IUiGame
 	{
-		// Token: 0x060090CE RID: 37070 RVA: 0x001515EC File Offset: 0x0014F7EC
+		// Token: 0x06009838 RID: 38968 RVA: 0x00161518 File Offset: 0x0015F718
 		private IFishingRoulette_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060090CF RID: 37071 RVA: 0x00151624 File Offset: 0x0014F824
+		// Token: 0x06009839 RID: 38969 RVA: 0x00161550 File Offset: 0x0015F750
 		public static IFishingRoulette Create([Nullable(2)] IFishingRoulette instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060090D0 RID: 37072 RVA: 0x00151637 File Offset: 0x0014F837
+		// Token: 0x0600983A RID: 38970 RVA: 0x00161563 File Offset: 0x0015F763
 		public static IFishingRoulette CreateFromSetValue([Nullable(2)] IFishingRoulette_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060090D1 RID: 37073 RVA: 0x0015164A File Offset: 0x0014F84A
+		// Token: 0x0600983B RID: 38971 RVA: 0x00161576 File Offset: 0x0015F776
 		public new IFishingRoulette_SetValue ToSetValue()
 		{
 			return new IFishingRoulette_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E1C RID: 11804
-		// (get) Token: 0x060090D2 RID: 37074 RVA: 0x0015165D File Offset: 0x0014F85D
-		// (set) Token: 0x060090D3 RID: 37075 RVA: 0x00151688 File Offset: 0x0014F888
+		// Token: 0x17003029 RID: 12329
+		// (get) Token: 0x0600983C RID: 38972 RVA: 0x00161589 File Offset: 0x0015F789
+		// (set) Token: 0x0600983D RID: 38973 RVA: 0x001615B4 File Offset: 0x0015F7B4
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005961 RID: 22881
+		// Token: 0x04005DC6 RID: 24006
 		[Nullable(2)]
 		protected new IFishingRoulette FbInstance;
 
-		// Token: 0x04005962 RID: 22882
+		// Token: 0x04005DC7 RID: 24007
 		[Nullable(2)]
 		protected new IFishingRoulette_SetValue PocoInterface;
 	}

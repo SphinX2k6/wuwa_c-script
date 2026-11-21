@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B28 RID: 6952
+	// Token: 0x02001CD7 RID: 7383
 	public class IInformationViewConfig_SetValue
 	{
-		// Token: 0x04005B29 RID: 23337
+		// Token: 0x04005FC7 RID: 24519
 		public int? InfoDisplayGroup;
 	}
 }

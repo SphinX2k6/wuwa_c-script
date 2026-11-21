@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001B55 RID: 6997
+// Token: 0x02001014 RID: 4116
 public class FloroRanchStageFailState : FloroRanchStateBase
 {
-	// Token: 0x0600CF97 RID: 53143 RVA: 0x002F4869 File Offset: 0x002F2A69
+	// Token: 0x0600A3A8 RID: 41896 RVA: 0x002FF941 File Offset: 0x002FDB41
 	[NullableContext(1)]
 	public FloroRanchStageFailState(FloroRanchStageFsm stageFsm) : base(stageFsm)
 	{
 	}
 
-	// Token: 0x0600CF98 RID: 53144 RVA: 0x002F4874 File Offset: 0x002F2A74
+	// Token: 0x0600A3A9 RID: 41897 RVA: 0x002FF94C File Offset: 0x002FDB4C
 	protected override void OnEnter()
 	{
 		FloroRanchGamePlayModel instance = FloroRanchGamePlayModel.Instance;

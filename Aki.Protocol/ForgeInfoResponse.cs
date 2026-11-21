@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000620 RID: 1568
+	// Token: 0x0200060C RID: 1548
 	[NetMessage(EMessageId.ForgeInfoResponse)]
 	public sealed class ForgeInfoResponse : IMessage<ForgeInfoResponse>, IMessage, IEquatable<ForgeInfoResponse>, IDeepCloneable<ForgeInfoResponse>, IBufferMessage
 	{
-		// Token: 0x060090A9 RID: 37033 RVA: 0x0015E112 File Offset: 0x0015C312
+		// Token: 0x06008F53 RID: 36691 RVA: 0x0015B6DE File Offset: 0x001598DE
 		[NullableContext(1)]
 		public static ForgeInfoResponse Create()
 		{
 			return new ForgeInfoResponse();
 		}
 
-		// Token: 0x17001CB9 RID: 7353
-		// (get) Token: 0x060090AA RID: 37034 RVA: 0x0015E119 File Offset: 0x0015C319
+		// Token: 0x17001C6F RID: 7279
+		// (get) Token: 0x06008F54 RID: 36692 RVA: 0x0015B6E5 File Offset: 0x001598E5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001CBA RID: 7354
-		// (get) Token: 0x060090AB RID: 37035 RVA: 0x0015E11C File Offset: 0x0015C31C
+		// Token: 0x17001C70 RID: 7280
+		// (get) Token: 0x06008F55 RID: 36693 RVA: 0x0015B6E8 File Offset: 0x001598E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060090AC RID: 37036 RVA: 0x0015E123 File Offset: 0x0015C323
+		// Token: 0x06008F56 RID: 36694 RVA: 0x0015B6EF File Offset: 0x001598EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ForgeInfoResponse()
 		{
 		}
 
-		// Token: 0x060090AD RID: 37037 RVA: 0x0015E144 File Offset: 0x0015C344
+		// Token: 0x06008F57 RID: 36695 RVA: 0x0015B710 File Offset: 0x00159910
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ForgeInfoResponse(ForgeInfoResponse other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060090AE RID: 37038 RVA: 0x0015E1A2 File Offset: 0x0015C3A2
+		// Token: 0x06008F58 RID: 36696 RVA: 0x0015B76E File Offset: 0x0015996E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ForgeInfoResponse Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new ForgeInfoResponse(this);
 		}
 
-		// Token: 0x17001CBB RID: 7355
-		// (get) Token: 0x060090AF RID: 37039 RVA: 0x0015E1AA File Offset: 0x0015C3AA
-		// (set) Token: 0x060090B0 RID: 37040 RVA: 0x0015E1B2 File Offset: 0x0015C3B2
+		// Token: 0x17001C71 RID: 7281
+		// (get) Token: 0x06008F59 RID: 36697 RVA: 0x0015B776 File Offset: 0x00159976
+		// (set) Token: 0x06008F5A RID: 36698 RVA: 0x0015B77E File Offset: 0x0015997E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode Code
@@ -87,8 +87,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001CBC RID: 7356
-		// (get) Token: 0x060090B1 RID: 37041 RVA: 0x0015E1BB File Offset: 0x0015C3BB
+		// Token: 0x17001C72 RID: 7282
+		// (get) Token: 0x06008F5B RID: 36699 RVA: 0x0015B787 File Offset: 0x00159987
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<OneForgeInfo> ForgeInfoList
@@ -99,8 +99,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001CBD RID: 7357
-		// (get) Token: 0x060090B2 RID: 37042 RVA: 0x0015E1C3 File Offset: 0x0015C3C3
+		// Token: 0x17001C73 RID: 7283
+		// (get) Token: 0x06008F5C RID: 36700 RVA: 0x0015B78F File Offset: 0x0015998F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<OneForgeConfig> ForgeConfigs
@@ -111,9 +111,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001CBE RID: 7358
-		// (get) Token: 0x060090B3 RID: 37043 RVA: 0x0015E1CB File Offset: 0x0015C3CB
-		// (set) Token: 0x060090B4 RID: 37044 RVA: 0x0015E1D3 File Offset: 0x0015C3D3
+		// Token: 0x17001C74 RID: 7284
+		// (get) Token: 0x06008F5D RID: 36701 RVA: 0x0015B797 File Offset: 0x00159997
+		// (set) Token: 0x06008F5E RID: 36702 RVA: 0x0015B79F File Offset: 0x0015999F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long LimitRefreshTime
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060090B5 RID: 37045 RVA: 0x0015E1DC File Offset: 0x0015C3DC
+		// Token: 0x06008F5F RID: 36703 RVA: 0x0015B7A8 File Offset: 0x001599A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ForgeInfoResponse);
 		}
 
-		// Token: 0x060090B6 RID: 37046 RVA: 0x0015E1EC File Offset: 0x0015C3EC
+		// Token: 0x06008F60 RID: 36704 RVA: 0x0015B7B8 File Offset: 0x001599B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ForgeInfoResponse other)
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Code == other.Code && this.forgeInfoList_.Equals(other.forgeInfoList_) && this.forgeConfigs_.Equals(other.forgeConfigs_) && this.LimitRefreshTime == other.LimitRefreshTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060090B7 RID: 37047 RVA: 0x0015E260 File Offset: 0x0015C460
+		// Token: 0x06008F61 RID: 36705 RVA: 0x0015B82C File Offset: 0x00159A2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060090B8 RID: 37048 RVA: 0x0015E2DA File Offset: 0x0015C4DA
+		// Token: 0x06008F62 RID: 36706 RVA: 0x0015B8A6 File Offset: 0x00159AA6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060090B9 RID: 37049 RVA: 0x0015E2E7 File Offset: 0x0015C4E7
+		// Token: 0x06008F63 RID: 36707 RVA: 0x0015B8B3 File Offset: 0x00159AB3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -183,30 +183,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060090BA RID: 37050 RVA: 0x0015E2F0 File Offset: 0x0015C4F0
+		// Token: 0x06008F64 RID: 36708 RVA: 0x0015B8BC File Offset: 0x00159ABC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.forgeInfoList_.WriteTo(ref output, ForgeInfoResponse._repeated_forgeInfoList_codec);
 			if (this.LimitRefreshTime != 0L)
 			{
-				output.WriteRawTag(40);
+				output.WriteRawTag(16);
 				output.WriteInt64(this.LimitRefreshTime);
 			}
+			this.forgeConfigs_.WriteTo(ref output, ForgeInfoResponse._repeated_forgeConfigs_codec);
 			if (this.Code != ErrorCode.Success)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(56);
 				output.WriteEnum((int)this.Code);
 			}
-			this.forgeConfigs_.WriteTo(ref output, ForgeInfoResponse._repeated_forgeConfigs_codec);
+			this.forgeInfoList_.WriteTo(ref output, ForgeInfoResponse._repeated_forgeInfoList_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x060090BB RID: 37051 RVA: 0x0015E36C File Offset: 0x0015C56C
+		// Token: 0x06008F65 RID: 36709 RVA: 0x0015B938 File Offset: 0x00159B38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060090BC RID: 37052 RVA: 0x0015E3E8 File Offset: 0x0015C5E8
+		// Token: 0x06008F66 RID: 36710 RVA: 0x0015B9B4 File Offset: 0x00159BB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ForgeInfoResponse other)
@@ -251,7 +251,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060090BD RID: 37053 RVA: 0x0015E45A File Offset: 0x0015C65A
+		// Token: 0x06008F67 RID: 36711 RVA: 0x0015BA26 File Offset: 0x00159C26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -259,7 +259,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060090BE RID: 37054 RVA: 0x0015E464 File Offset: 0x0015C664
+		// Token: 0x06008F68 RID: 36712 RVA: 0x0015BA30 File Offset: 0x00159C30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -271,29 +271,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 40U)
+				if (num <= 42U)
 				{
-					if (num == 18U)
-					{
-						this.forgeInfoList_.AddEntriesFrom(ref input, ForgeInfoResponse._repeated_forgeInfoList_codec);
-						continue;
-					}
-					if (num == 40U)
+					if (num == 16U)
 					{
 						this.LimitRefreshTime = input.ReadInt64();
+						continue;
+					}
+					if (num == 42U)
+					{
+						this.forgeConfigs_.AddEntriesFrom(ref input, ForgeInfoResponse._repeated_forgeConfigs_codec);
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 80U)
+					if (num == 56U)
 					{
 						this.Code = (ErrorCode)input.ReadEnum();
 						continue;
 					}
-					if (num == 114U)
+					if (num == 106U)
 					{
-						this.forgeConfigs_.AddEntriesFrom(ref input, ForgeInfoResponse._repeated_forgeConfigs_codec);
+						this.forgeInfoList_.AddEntriesFrom(ref input, ForgeInfoResponse._repeated_forgeInfoList_codec);
 						continue;
 					}
 				}
@@ -301,37 +301,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040045F9 RID: 17913
+		// Token: 0x040045F2 RID: 17906
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040045FA RID: 17914
-		public const int CodeFieldNumber = 10;
+		// Token: 0x040045F3 RID: 17907
+		public const int CodeFieldNumber = 7;
 
-		// Token: 0x040045FB RID: 17915
+		// Token: 0x040045F4 RID: 17908
 		private ErrorCode code_;
 
-		// Token: 0x040045FC RID: 17916
-		public const int ForgeInfoListFieldNumber = 2;
+		// Token: 0x040045F5 RID: 17909
+		public const int ForgeInfoListFieldNumber = 13;
 
-		// Token: 0x040045FD RID: 17917
-		private static readonly FieldCodec<OneForgeInfo> _repeated_forgeInfoList_codec = FieldCodec.ForMessage<OneForgeInfo>(18U, OneForgeInfo.Parser);
+		// Token: 0x040045F6 RID: 17910
+		private static readonly FieldCodec<OneForgeInfo> _repeated_forgeInfoList_codec = FieldCodec.ForMessage<OneForgeInfo>(106U, OneForgeInfo.Parser);
 
-		// Token: 0x040045FE RID: 17918
+		// Token: 0x040045F7 RID: 17911
 		private readonly RepeatedField<OneForgeInfo> forgeInfoList_ = new RepeatedField<OneForgeInfo>();
 
-		// Token: 0x040045FF RID: 17919
-		public const int ForgeConfigsFieldNumber = 14;
+		// Token: 0x040045F8 RID: 17912
+		public const int ForgeConfigsFieldNumber = 5;
 
-		// Token: 0x04004600 RID: 17920
-		private static readonly FieldCodec<OneForgeConfig> _repeated_forgeConfigs_codec = FieldCodec.ForMessage<OneForgeConfig>(114U, OneForgeConfig.Parser);
+		// Token: 0x040045F9 RID: 17913
+		private static readonly FieldCodec<OneForgeConfig> _repeated_forgeConfigs_codec = FieldCodec.ForMessage<OneForgeConfig>(42U, OneForgeConfig.Parser);
 
-		// Token: 0x04004601 RID: 17921
+		// Token: 0x040045FA RID: 17914
 		private readonly RepeatedField<OneForgeConfig> forgeConfigs_ = new RepeatedField<OneForgeConfig>();
 
-		// Token: 0x04004602 RID: 17922
-		public const int LimitRefreshTimeFieldNumber = 5;
+		// Token: 0x040045FB RID: 17915
+		public const int LimitRefreshTimeFieldNumber = 2;
 
-		// Token: 0x04004603 RID: 17923
+		// Token: 0x040045FC RID: 17916
 		private long limitRefreshTime_;
 	}
 }

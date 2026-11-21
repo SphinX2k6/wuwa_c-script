@@ -2,24 +2,24 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200102E RID: 4142
+// Token: 0x020004E2 RID: 1250
 [NullableContext(2)]
 [Nullable(0)]
 public class GuessJokerDialogData : IGuessJokerDialogData
 {
-	// Token: 0x17000892 RID: 2194
-	// (get) Token: 0x06006A53 RID: 27219 RVA: 0x00155316 File Offset: 0x00153516
-	// (set) Token: 0x06006A54 RID: 27220 RVA: 0x0015531E File Offset: 0x0015351E
+	// Token: 0x170008B2 RID: 2226
+	// (get) Token: 0x06003DE8 RID: 15848 RVA: 0x0015DC3E File Offset: 0x0015BE3E
+	// (set) Token: 0x06003DE9 RID: 15849 RVA: 0x0015DC46 File Offset: 0x0015BE46
 	public Func<EGuessJokerPlayerType, UUIItem> GetDialogItem { get; set; }
 
-	// Token: 0x17000893 RID: 2195
-	// (get) Token: 0x06006A55 RID: 27221 RVA: 0x00155327 File Offset: 0x00153527
-	// (set) Token: 0x06006A56 RID: 27222 RVA: 0x0015532F File Offset: 0x0015352F
+	// Token: 0x170008B3 RID: 2227
+	// (get) Token: 0x06003DEA RID: 15850 RVA: 0x0015DC4F File Offset: 0x0015BE4F
+	// (set) Token: 0x06003DEB RID: 15851 RVA: 0x0015DC57 File Offset: 0x0015BE57
 	public Func<EGuessJokerPlayerType, UUIText> GetDialogText { get; set; }
 
-	// Token: 0x17000894 RID: 2196
-	// (get) Token: 0x06006A57 RID: 27223 RVA: 0x00155338 File Offset: 0x00153538
-	// (set) Token: 0x06006A58 RID: 27224 RVA: 0x00155340 File Offset: 0x00153540
+	// Token: 0x170008B4 RID: 2228
+	// (get) Token: 0x06003DEC RID: 15852 RVA: 0x0015DC60 File Offset: 0x0015BE60
+	// (set) Token: 0x06003DED RID: 15853 RVA: 0x0015DC68 File Offset: 0x0015BE68
 	[Nullable(new byte[]
 	{
 		2,
@@ -38,9 +38,9 @@ public class GuessJokerDialogData : IGuessJokerDialogData
 		1
 	})] set; }
 
-	// Token: 0x17000895 RID: 2197
-	// (get) Token: 0x06006A59 RID: 27225 RVA: 0x00155349 File Offset: 0x00153549
-	// (set) Token: 0x06006A5A RID: 27226 RVA: 0x00155351 File Offset: 0x00153551
+	// Token: 0x170008B5 RID: 2229
+	// (get) Token: 0x06003DEE RID: 15854 RVA: 0x0015DC71 File Offset: 0x0015BE71
+	// (set) Token: 0x06003DEF RID: 15855 RVA: 0x0015DC79 File Offset: 0x0015BE79
 	[Nullable(new byte[]
 	{
 		2,
@@ -56,8 +56,8 @@ public class GuessJokerDialogData : IGuessJokerDialogData
 		1
 	})] set; }
 
-	// Token: 0x17000896 RID: 2198
-	// (get) Token: 0x06006A5B RID: 27227 RVA: 0x0015535A File Offset: 0x0015355A
-	// (set) Token: 0x06006A5C RID: 27228 RVA: 0x00155362 File Offset: 0x00153562
+	// Token: 0x170008B6 RID: 2230
+	// (get) Token: 0x06003DF0 RID: 15856 RVA: 0x0015DC82 File Offset: 0x0015BE82
+	// (set) Token: 0x06003DF1 RID: 15857 RVA: 0x0015DC8A File Offset: 0x0015BE8A
 	public Action<EGuessJokerPlayerType> OnCancelDialogStartAnim { get; set; }
 }

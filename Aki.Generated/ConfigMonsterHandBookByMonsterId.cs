@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000551 RID: 1361
+	// Token: 0x02000567 RID: 1383
 	public class ConfigMonsterHandBookByMonsterId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001FF3 RID: 8179 RVA: 0x0010DF18 File Offset: 0x0010C118
+		// Token: 0x06002077 RID: 8311 RVA: 0x0011466C File Offset: 0x0011286C
 		static ConfigMonsterHandBookByMonsterId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMonsterHandBookByMonsterId.CreateStaticDefaultValue), new Action(ConfigMonsterHandBookByMonsterId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001FF4 RID: 8180 RVA: 0x0010DF38 File Offset: 0x0010C138
+		// Token: 0x06002078 RID: 8312 RVA: 0x0011468C File Offset: 0x0011288C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMonsterHandBookByMonsterId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001FF5 RID: 8181 RVA: 0x0010DFB7 File Offset: 0x0010C1B7
+		// Token: 0x06002079 RID: 8313 RVA: 0x0011470B File Offset: 0x0011290B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMonsterHandBookByMonsterId.LogPair = null;
 			ConfigMonsterHandBookByMonsterId.HandleId = 0;
 		}
 
-		// Token: 0x06001FF6 RID: 8182 RVA: 0x0010DFC5 File Offset: 0x0010C1C5
+		// Token: 0x0600207A RID: 8314 RVA: 0x00114719 File Offset: 0x00112919
 		public static void Init()
 		{
 			ConfigMonsterHandBookByMonsterId.HandleId = ConfigCommon.InitDataStatement(ConfigMonsterHandBookByMonsterId.HandleId, "db_handbook.db", "select BinData from `MonsterHandBook` where MonsterId=?");
 		}
 
-		// Token: 0x06001FF7 RID: 8183 RVA: 0x0010DFE0 File Offset: 0x0010C1E0
+		// Token: 0x0600207B RID: 8315 RVA: 0x00114734 File Offset: 0x00112934
 		public static MonsterHandBook? GetConfig(int p0MonsterId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMonsterHandBookByMonsterId.HandleId, ConfigMonsterHandBookByMonsterId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MonsterHandBook?(rootAsMonsterHandBook);
 		}
 
-		// Token: 0x0400251B RID: 9499
+		// Token: 0x040025B5 RID: 9653
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x0400251C RID: 9500
+		// Token: 0x040025B6 RID: 9654
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x0400251D RID: 9501
+		// Token: 0x040025B7 RID: 9655
 		private const string TABLE = "MonsterHandBook";
 
-		// Token: 0x0400251E RID: 9502
+		// Token: 0x040025B8 RID: 9656
 		private const string COMMAND = "select BinData from `MonsterHandBook` where MonsterId=?";
 
-		// Token: 0x0400251F RID: 9503
+		// Token: 0x040025B9 RID: 9657
 		private const string KEY_PREFIX = "MonsterHandBookByMonsterId";
 
-		// Token: 0x04002520 RID: 9504
+		// Token: 0x040025BA RID: 9658
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002521 RID: 9505
+		// Token: 0x040025BB RID: 9659
 		private static int HandleId;
 	}
 }

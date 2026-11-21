@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DCB RID: 28107
+	// Token: 0x02007546 RID: 30022
 	public struct IPromptStyleBattle : IFlatbufferObject
 	{
-		// Token: 0x1700D191 RID: 53649
-		// (get) Token: 0x06031A5D RID: 203357 RVA: 0x006B9D1C File Offset: 0x006B7F1C
+		// Token: 0x1700DCD9 RID: 56537
+		// (get) Token: 0x06034A59 RID: 215641 RVA: 0x00715404 File Offset: 0x00713604
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031A5E RID: 203358 RVA: 0x006B9D29 File Offset: 0x006B7F29
+		// Token: 0x06034A5A RID: 215642 RVA: 0x00715411 File Offset: 0x00713611
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031A5F RID: 203359 RVA: 0x006B9D30 File Offset: 0x006B7F30
+		// Token: 0x06034A5B RID: 215643 RVA: 0x00715418 File Offset: 0x00713618
 		public static IPromptStyleBattle GetRootAsIPromptStyleBattle(ByteBuffer _bb)
 		{
 			return IPromptStyleBattle.GetRootAsIPromptStyleBattle(_bb, default(IPromptStyleBattle));
 		}
 
-		// Token: 0x06031A60 RID: 203360 RVA: 0x006B9D4C File Offset: 0x006B7F4C
+		// Token: 0x06034A5C RID: 215644 RVA: 0x00715434 File Offset: 0x00713634
 		public static IPromptStyleBattle GetRootAsIPromptStyleBattle(ByteBuffer _bb, IPromptStyleBattle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031A61 RID: 203361 RVA: 0x006B9D69 File Offset: 0x006B7F69
+		// Token: 0x06034A5D RID: 215645 RVA: 0x00715451 File Offset: 0x00713651
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031A62 RID: 203362 RVA: 0x006B9D78 File Offset: 0x006B7F78
+		// Token: 0x06034A5E RID: 215646 RVA: 0x00715460 File Offset: 0x00713660
 		public IPromptStyleBattle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D192 RID: 53650
-		// (get) Token: 0x06031A63 RID: 203363 RVA: 0x006B9D88 File Offset: 0x006B7F88
+		// Token: 0x1700DCDA RID: 56538
+		// (get) Token: 0x06034A5F RID: 215647 RVA: 0x00715470 File Offset: 0x00713670
 		public EPromptStyle Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031A64 RID: 203364 RVA: 0x006B9DC4 File Offset: 0x006B7FC4
+		// Token: 0x06034A60 RID: 215648 RVA: 0x007154AC File Offset: 0x007136AC
 		public static Offset<IPromptStyleBattle> CreateIPromptStyleBattle(FlatBufferBuilder builder, EPromptStyle Type = EPromptStyle.Default)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPromptStyleBattle.EndIPromptStyleBattle(builder);
 		}
 
-		// Token: 0x06031A65 RID: 203365 RVA: 0x006B9DDA File Offset: 0x006B7FDA
+		// Token: 0x06034A61 RID: 215649 RVA: 0x007154C2 File Offset: 0x007136C2
 		public static void StartIPromptStyleBattle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031A66 RID: 203366 RVA: 0x006B9DE3 File Offset: 0x006B7FE3
+		// Token: 0x06034A62 RID: 215650 RVA: 0x007154CB File Offset: 0x007136CB
 		public static void AddType(FlatBufferBuilder builder, EPromptStyle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031A67 RID: 203367 RVA: 0x006B9DEE File Offset: 0x006B7FEE
+		// Token: 0x06034A63 RID: 215651 RVA: 0x007154D6 File Offset: 0x007136D6
 		public static Offset<IPromptStyleBattle> EndIPromptStyleBattle(FlatBufferBuilder builder)
 		{
 			return new Offset<IPromptStyleBattle>(builder.EndTable());
 		}
 
-		// Token: 0x06031A68 RID: 203368 RVA: 0x006B9DFC File Offset: 0x006B7FFC
+		// Token: 0x06034A64 RID: 215652 RVA: 0x007154E4 File Offset: 0x007136E4
 		public IPromptStyleBattleT UnPack()
 		{
 			IPromptStyleBattleT promptStyleBattleT = new IPromptStyleBattleT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return promptStyleBattleT;
 		}
 
-		// Token: 0x06031A69 RID: 203369 RVA: 0x006B9E17 File Offset: 0x006B8017
+		// Token: 0x06034A65 RID: 215653 RVA: 0x007154FF File Offset: 0x007136FF
 		public void UnPackTo(IPromptStyleBattleT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06031A6A RID: 203370 RVA: 0x006B9E28 File Offset: 0x006B8028
+		// Token: 0x06034A66 RID: 215654 RVA: 0x00715510 File Offset: 0x00713710
 		public static Offset<IPromptStyleBattle> Pack(FlatBufferBuilder builder, IPromptStyleBattleT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPromptStyleBattle.CreateIPromptStyleBattle(builder, _o.Type);
 		}
 
-		// Token: 0x040117AE RID: 71598
+		// Token: 0x0401272A RID: 75562
 		private Table __p;
 	}
 }

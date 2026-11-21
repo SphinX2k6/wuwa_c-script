@@ -10,37 +10,37 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005EF0 RID: 24304
+	// Token: 0x02004ED7 RID: 20183
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class GuQinActivityController : ActivityControllerBase
 	{
-		// Token: 0x0603DC20 RID: 252960 RVA: 0x00EED9CE File Offset: 0x00EEBBCE
+		// Token: 0x06032BBB RID: 207803 RVA: 0x00E3F692 File Offset: 0x00E3D892
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.QingXiaoTaskUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnQingXiaoTaskUpdateNotify));
 		}
 
-		// Token: 0x0603DC21 RID: 252961 RVA: 0x00EED9EC File Offset: 0x00EEBBEC
+		// Token: 0x06032BBC RID: 207804 RVA: 0x00E3F6B0 File Offset: 0x00E3D8B0
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.QingXiaoTaskUpdateNotify);
 		}
 
-		// Token: 0x0603DC22 RID: 252962 RVA: 0x00EED9FE File Offset: 0x00EEBBFE
+		// Token: 0x06032BBD RID: 207805 RVA: 0x00E3F6C2 File Offset: 0x00E3D8C2
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x0603DC23 RID: 252963 RVA: 0x00EEDA1C File Offset: 0x00EEBC1C
+		// Token: 0x06032BBE RID: 207806 RVA: 0x00E3F6E0 File Offset: 0x00E3D8E0
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x0603DC24 RID: 252964 RVA: 0x00EEDA3C File Offset: 0x00EEBC3C
+		// Token: 0x06032BBF RID: 207807 RVA: 0x00E3F700 File Offset: 0x00E3D900
 		[NullableContext(2)]
 		private void OnQingXiaoTaskUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DC25 RID: 252965 RVA: 0x00EEDB80 File Offset: 0x00EEBD80
+		// Token: 0x06032BC0 RID: 207808 RVA: 0x00E3F844 File Offset: 0x00E3DA44
 		private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 		{
 			if (this.Data == null)
@@ -96,12 +96,12 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DC26 RID: 252966 RVA: 0x00EEDC64 File Offset: 0x00EEBE64
+		// Token: 0x06032BC1 RID: 207809 RVA: 0x00E3F928 File Offset: 0x00E3DB28
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x0603DC27 RID: 252967 RVA: 0x00EEDC68 File Offset: 0x00EEBE68
+		// Token: 0x06032BC2 RID: 207810 RVA: 0x00E3F92C File Offset: 0x00E3DB2C
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -114,32 +114,32 @@ namespace CSharpScript.Game.Module.Activity
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DC28 RID: 252968 RVA: 0x00EEDCB3 File Offset: 0x00EEBEB3
+		// Token: 0x06032BC3 RID: 207811 RVA: 0x00E3F977 File Offset: 0x00E3DB77
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_QingxiaoActivityMain";
 		}
 
-		// Token: 0x0603DC29 RID: 252969 RVA: 0x00EEDCBA File Offset: 0x00EEBEBA
+		// Token: 0x06032BC4 RID: 207812 RVA: 0x00E3F97E File Offset: 0x00E3DB7E
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new GuQinActivitySubView();
 		}
 
-		// Token: 0x0603DC2A RID: 252970 RVA: 0x00EEDCC1 File Offset: 0x00EEBEC1
+		// Token: 0x06032BC5 RID: 207813 RVA: 0x00E3F985 File Offset: 0x00E3DB85
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.Data = new GuQinActivityData();
 			return this.Data;
 		}
 
-		// Token: 0x0603DC2B RID: 252971 RVA: 0x00EEDCD4 File Offset: 0x00EEBED4
+		// Token: 0x06032BC6 RID: 207814 RVA: 0x00E3F998 File Offset: 0x00E3DB98
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return UiManager.Instance.IsViewOpen(EUiViewName.GuQinActivityMainView);
 		}
 
-		// Token: 0x0603DC2C RID: 252972 RVA: 0x00EEDCE8 File Offset: 0x00EEBEE8
+		// Token: 0x06032BC7 RID: 207815 RVA: 0x00E3F9AC File Offset: 0x00E3DBAC
 		public void RequestReward(GuQinActivityTaskData taskData, Action callback)
 		{
 			QingXiaoTaskRewardRequest qingXiaoTaskRewardRequest = new QingXiaoTaskRewardRequest();
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity
 				QingXiaoTaskRewardResponse qingXiaoTaskRewardResponse = (QingXiaoTaskRewardResponse)msg;
 				if (qingXiaoTaskRewardResponse.ErrCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(qingXiaoTaskRewardResponse.ErrCode, 26165, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(qingXiaoTaskRewardResponse.ErrCode, 29336, null, true, true);
 					return;
 				}
 				taskData.TaskState = ConditionTaskState.ConditionTaskTaken;
@@ -159,8 +159,8 @@ namespace CSharpScript.Game.Module.Activity
 			}, 0);
 		}
 
-		// Token: 0x17008EEB RID: 36587
-		// (get) Token: 0x0603DC2D RID: 252973 RVA: 0x00EEDD5A File Offset: 0x00EEBF5A
+		// Token: 0x170062BD RID: 25277
+		// (get) Token: 0x06032BC8 RID: 207816 RVA: 0x00E3FA1E File Offset: 0x00E3DC1E
 		public static GuQinActivityController Instance
 		{
 			get
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DC2E RID: 252974 RVA: 0x00EEDD61 File Offset: 0x00EEBF61
+		// Token: 0x06032BC9 RID: 207817 RVA: 0x00E3FA25 File Offset: 0x00E3DC25
 		public static GuQinActivityController GetOrCreateInstance()
 		{
 			if (GuQinActivityController._Instance == null)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity
 			return GuQinActivityController._Instance;
 		}
 
-		// Token: 0x0603DC2F RID: 252975 RVA: 0x00EEDD75 File Offset: 0x00EEBF75
+		// Token: 0x06032BCA RID: 207818 RVA: 0x00E3FA39 File Offset: 0x00E3DC39
 		public static bool CreateInstance()
 		{
 			if (GuQinActivityController._Instance != null)
@@ -190,28 +190,28 @@ namespace CSharpScript.Game.Module.Activity
 			return true;
 		}
 
-		// Token: 0x0603DC30 RID: 252976 RVA: 0x00EEDD8B File Offset: 0x00EEBF8B
+		// Token: 0x06032BCB RID: 207819 RVA: 0x00E3FA4F File Offset: 0x00E3DC4F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603DC31 RID: 252977 RVA: 0x00EEDD8D File Offset: 0x00EEBF8D
+		// Token: 0x06032BCC RID: 207820 RVA: 0x00E3FA51 File Offset: 0x00E3DC51
 		public static void ResetStaticDefaultValue()
 		{
 			GuQinActivityController._Instance = null;
 		}
 
-		// Token: 0x0603DC32 RID: 252978 RVA: 0x00EEDD95 File Offset: 0x00EEBF95
+		// Token: 0x06032BCD RID: 207821 RVA: 0x00E3FA59 File Offset: 0x00E3DC59
 		static GuQinActivityController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GuQinActivityController.CreateStaticDefaultValue), new Action(GuQinActivityController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020456 RID: 132182
+		// Token: 0x0401AF28 RID: 110376
 		[Nullable(2)]
 		public GuQinActivityData Data;
 
-		// Token: 0x04020457 RID: 132183
+		// Token: 0x0401AF29 RID: 110377
 		[Nullable(2)]
 		private static GuQinActivityController _Instance;
 	}

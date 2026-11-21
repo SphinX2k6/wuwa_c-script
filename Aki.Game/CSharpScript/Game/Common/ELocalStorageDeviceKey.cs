@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Common
 {
-	// Token: 0x0200728B RID: 29323
+	// Token: 0x0200640A RID: 25610
 	public enum ELocalStorageDeviceKey
 	{
-		// Token: 0x04025E70 RID: 155248
+		// Token: 0x0402113C RID: 135484
 		CacheP4Version,
-		// Token: 0x04025E71 RID: 155249
+		// Token: 0x0402113D RID: 135485
 		PatchVersion,
-		// Token: 0x04025E72 RID: 155250
+		// Token: 0x0402113E RID: 135486
 		LauncherPatchVersion
 	}
 }

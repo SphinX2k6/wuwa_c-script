@@ -6,26 +6,25 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.CombatMessage;
 using CSharpScript.Game.Utils;
 using CSharpScript.Typing;
-using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070BD RID: 28861
+	// Token: 0x02006321 RID: 25377
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BaseMovementSyncComponent : EntityComponent, IMoveSync
 	{
-		// Token: 0x060465E9 RID: 288233 RVA: 0x011A31BF File Offset: 0x011A13BF
+		// Token: 0x0603D6C2 RID: 251586 RVA: 0x011C2EA3 File Offset: 0x011C10A3
 		protected virtual bool DefaultEnableMovementSync()
 		{
 			return false;
 		}
 
-		// Token: 0x17009C85 RID: 40069
-		// (get) Token: 0x060465EA RID: 288234 RVA: 0x011A31C2 File Offset: 0x011A13C2
-		// (set) Token: 0x060465EB RID: 288235 RVA: 0x011A31CC File Offset: 0x011A13CC
+		// Token: 0x1700747D RID: 29821
+		// (get) Token: 0x0603D6C3 RID: 251587 RVA: 0x011C2EA6 File Offset: 0x011C10A6
+		// (set) Token: 0x0603D6C4 RID: 251588 RVA: 0x011C2EB0 File Offset: 0x011C10B0
 		protected bool EnableMovementSync
 		{
 			get
@@ -59,14 +58,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060465EC RID: 288236 RVA: 0x011A325B File Offset: 0x011A145B
+		// Token: 0x0603D6C5 RID: 251589 RVA: 0x011C2F3F File Offset: 0x011C113F
 		protected override bool OnInit()
 		{
 			this.EnableMovementSync = this.DefaultEnableMovementSync();
 			return true;
 		}
 
-		// Token: 0x060465ED RID: 288237 RVA: 0x011A326C File Offset: 0x011A146C
+		// Token: 0x0603D6C6 RID: 251590 RVA: 0x011C2F50 File Offset: 0x011C1150
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -80,7 +79,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060465EE RID: 288238 RVA: 0x011A32EC File Offset: 0x011A14EC
+		// Token: 0x0603D6C7 RID: 251591 RVA: 0x011C2FD0 File Offset: 0x011C11D0
 		protected override bool OnEnd()
 		{
 			if (!CombatMessageModel.Instance.DeleteMoveSync(this))
@@ -91,17 +90,17 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060465EF RID: 288239 RVA: 0x011A332E File Offset: 0x011A152E
+		// Token: 0x0603D6C8 RID: 251592 RVA: 0x011C3012 File Offset: 0x011C1212
 		protected virtual void ApplyInput(int input, global::Rotator rotation)
 		{
 		}
 
-		// Token: 0x17009C86 RID: 40070
-		// (get) Token: 0x060465F0 RID: 288240 RVA: 0x011A3330 File Offset: 0x011A1530
-		// (set) Token: 0x060465F1 RID: 288241 RVA: 0x011A3338 File Offset: 0x011A1538
+		// Token: 0x1700747E RID: 29822
+		// (get) Token: 0x0603D6C9 RID: 251593 RVA: 0x011C3014 File Offset: 0x011C1214
+		// (set) Token: 0x0603D6CA RID: 251594 RVA: 0x011C301C File Offset: 0x011C121C
 		public List<MoveReplaySample> PendingMoveInfos { get; set; } = new List<MoveReplaySample>();
 
-		// Token: 0x060465F2 RID: 288242 RVA: 0x011A3344 File Offset: 0x011A1544
+		// Token: 0x0603D6CB RID: 251595 RVA: 0x011C3028 File Offset: 0x011C1228
 		protected override void OnActivate()
 		{
 			if (this.LastReceiveMoveSample != null && Time.Instance.NowSeconds >= this.LastReceiveMoveSample.TimeStamp)
@@ -132,7 +131,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.Activated = true;
 		}
 
-		// Token: 0x060465F3 RID: 288243 RVA: 0x011A347C File Offset: 0x011A167C
+		// Token: 0x0603D6CC RID: 251596 RVA: 0x011C3160 File Offset: 0x011C1360
 		public virtual MoveReplaySample GetCurrentMoveSample()
 		{
 			MoveReplaySample moveReplaySample = MoveReplaySample.Create();
@@ -164,7 +163,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return moveReplaySample;
 		}
 
-		// Token: 0x060465F4 RID: 288244 RVA: 0x011A35E4 File Offset: 0x011A17E4
+		// Token: 0x0603D6CD RID: 251597 RVA: 0x011C32C8 File Offset: 0x011C14C8
 		protected void CompressData(MoveReplaySample data)
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -179,16 +178,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				data.RTT = 0;
 				data.SlideForward = null;
 				data.TickInterval = 0;
-				return;
-			}
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				data.ServerTimeStamp = 0L;
-				data.RTT = 0;
 			}
 		}
 
-		// Token: 0x060465F5 RID: 288245 RVA: 0x011A3668 File Offset: 0x011A1868
+		// Token: 0x0603D6CE RID: 251598 RVA: 0x011C3330 File Offset: 0x011C1530
 		protected virtual void RecordLastData(bool isMove = false)
 		{
 			this.LastLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
@@ -197,20 +190,20 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.LastMove = isMove;
 		}
 
-		// Token: 0x060465F6 RID: 288246 RVA: 0x011A36B9 File Offset: 0x011A18B9
+		// Token: 0x0603D6CF RID: 251599 RVA: 0x011C3381 File Offset: 0x011C1581
 		protected override void OnTick(float delta)
 		{
 			this.LastLogicTickTime = this.NowLogicTickTime;
 			this.NowLogicTickTime = Time.Instance.NowSeconds;
 		}
 
-		// Token: 0x060465F7 RID: 288247 RVA: 0x011A36D7 File Offset: 0x011A18D7
+		// Token: 0x0603D6D0 RID: 251600 RVA: 0x011C339F File Offset: 0x011C159F
 		private void CustomPreTick(float delta)
 		{
 			this.CustomPreTickInternal(delta);
 		}
 
-		// Token: 0x060465F8 RID: 288248 RVA: 0x011A36E0 File Offset: 0x011A18E0
+		// Token: 0x0603D6D1 RID: 251601 RVA: 0x011C33A8 File Offset: 0x011C15A8
 		protected unsafe virtual void CustomPreTickInternal(float delta)
 		{
 			if (this.ActorComp.IsMoveAutonomousProxy)
@@ -239,31 +232,31 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060465F9 RID: 288249 RVA: 0x011A37CC File Offset: 0x011A19CC
+		// Token: 0x0603D6D2 RID: 251602 RVA: 0x011C3494 File Offset: 0x011C1694
 		protected virtual bool GetIsMoving()
 		{
 			return !this.LastLocation.Equals(this.ActorComp.ActorLocationProxy, 9.999999747378752E-05) || !this.LastRotation.Equals(this.ActorComp.ActorRotationProxy, 0.0001f);
 		}
 
-		// Token: 0x060465FA RID: 288250 RVA: 0x011A381A File Offset: 0x011A1A1A
+		// Token: 0x0603D6D3 RID: 251603 RVA: 0x011C34E2 File Offset: 0x011C16E2
 		protected virtual bool GetImportantMove(bool moving)
 		{
 			return !moving && this.LastMove;
 		}
 
-		// Token: 0x060465FB RID: 288251 RVA: 0x011A3827 File Offset: 0x011A1A27
+		// Token: 0x0603D6D4 RID: 251604 RVA: 0x011C34EF File Offset: 0x011C16EF
 		protected virtual bool GetSecondaryImportantMove()
 		{
 			return false;
 		}
 
-		// Token: 0x060465FC RID: 288252 RVA: 0x011A382A File Offset: 0x011A1A2A
+		// Token: 0x0603D6D5 RID: 251605 RVA: 0x011C34F2 File Offset: 0x011C16F2
 		private void CustomAfterTick(float delta)
 		{
 			this.CustomAfterTickInternal(delta);
 		}
 
-		// Token: 0x060465FD RID: 288253 RVA: 0x011A3834 File Offset: 0x011A1A34
+		// Token: 0x0603D6D6 RID: 251606 RVA: 0x011C34FC File Offset: 0x011C16FC
 		protected virtual void CustomAfterTickInternal(float delta)
 		{
 			if (!this.EnableMovementSync || !this.ActorComp.IsMoveAutonomousProxy)
@@ -291,7 +284,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.RecordLastData(isMoving);
 		}
 
-		// Token: 0x060465FE RID: 288254 RVA: 0x011A38F4 File Offset: 0x011A1AF4
+		// Token: 0x0603D6D7 RID: 251607 RVA: 0x011C35BC File Offset: 0x011C17BC
 		protected void TryPushMoveSingle(bool isMoving, global::Vector location, global::Rotator rotation)
 		{
 			bool flag = Time.Instance.NowSeconds - this.LastSendTime >= (double)this.SingleModeSendInterval;
@@ -324,7 +317,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060465FF RID: 288255 RVA: 0x011A3A1C File Offset: 0x011A1C1C
+		// Token: 0x0603D6D8 RID: 251608 RVA: 0x011C36E4 File Offset: 0x011C18E4
 		protected unsafe void TryPushMoveMulti(bool isMoving, bool importantMove, global::Vector location)
 		{
 			if (!this.LastMoveAutonomousProxy)
@@ -378,7 +371,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046600 RID: 288256 RVA: 0x011A3BEC File Offset: 0x011A1DEC
+		// Token: 0x0603D6D9 RID: 251609 RVA: 0x011C38B4 File Offset: 0x011C1AB4
 		protected void UpdateForcePushFlag(MovePackagePush movePkg)
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -404,7 +397,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046601 RID: 288257 RVA: 0x011A3CCC File Offset: 0x011A1ECC
+		// Token: 0x0603D6DA RID: 251610 RVA: 0x011C3994 File Offset: 0x011C1B94
 		public virtual void CollectSampleAndSend(bool immediately = false)
 		{
 			MoveReplaySample currentMoveSample = this.GetCurrentMoveSample();
@@ -420,52 +413,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 					this.UpdateForcePushFlag(movePackagePush);
 				}
 				Net.Instance.Send(EPushMessageId.MovePackagePush, movePackagePush);
-				if (Info.Instance.IsBuildDevelopmentOrDebug)
-				{
-					string data = Json.Encode(new Dictionary<string, object>
-					{
-						{
-							"scene_id",
-							CreatureModel.Instance.GetSceneId()
-						},
-						{
-							"instance_id",
-							CreatureModel.Instance.GetInstanceId()
-						},
-						{
-							"msg_id",
-							24756
-						},
-						{
-							"immediately",
-							true
-						},
-						{
-							"sub_count",
-							movePackagePush.MovingEntities.Count
-						},
-						{
-							"is_multi",
-							GameModeModel.Instance.IsMulti
-						},
-						{
-							"ed",
-							BaseMovementSyncComponent.IsWithEditor
-						},
-						{
-							"br",
-							LogAnalyzer.Instance.GetBranch()
-						}
-					}, null);
-					CombatDebugController.Instance.DataReport("COMBAT_MESSAGE_COUNT", data);
-				}
 				this.LastSendTime = Time.Instance.NowSeconds;
 				return;
 			}
 			CombatMessageModel.Instance.NeedPushMove = true;
 		}
 
-		// Token: 0x06046602 RID: 288258 RVA: 0x011A3E48 File Offset: 0x011A2048
+		// Token: 0x0603D6DB RID: 251611 RVA: 0x011C3A30 File Offset: 0x011C1C30
 		public void CollectSampleAndSendUdp()
 		{
 			if (Time.Instance.NowSeconds - this.LastSendTime < (double)CombatMessageModel.Instance.MoveSyncUdpSendInterval)
@@ -483,45 +437,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			udpmovePackagePush.SceneOwnerId = (GameModeModel.Instance.IsMulti ? OnlineModel.Instance.OwnerId : CreatureModel.Instance.GetPlayerId());
 			udpmovePackagePush.MovingEntities.Add(this.CollectPendingMoveInfos());
 			Net.Instance.Send(EPushMessageId.UDPMovePackagePush, udpmovePackagePush);
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				string data = Json.Encode(new Dictionary<string, object>
-				{
-					{
-						"scene_id",
-						CreatureModel.Instance.GetSceneId()
-					},
-					{
-						"instance_id",
-						CreatureModel.Instance.GetInstanceId()
-					},
-					{
-						"msg_id",
-						24978
-					},
-					{
-						"immediately",
-						true
-					},
-					{
-						"is_multi",
-						GameModeModel.Instance.IsMulti
-					},
-					{
-						"ed",
-						BaseMovementSyncComponent.IsWithEditor
-					},
-					{
-						"br",
-						LogAnalyzer.Instance.GetBranch()
-					}
-				}, null);
-				CombatDebugController.Instance.DataReport("COMBAT_MESSAGE_COUNT", data);
-			}
 			this.LastSendTime = Time.Instance.NowSeconds;
 		}
 
-		// Token: 0x06046603 RID: 288259 RVA: 0x011A3FCC File Offset: 0x011A21CC
+		// Token: 0x0603D6DC RID: 251612 RVA: 0x011C3AF0 File Offset: 0x011C1CF0
 		[NullableContext(2)]
 		public unsafe MovingEntityData CollectPendingMoveInfos()
 		{
@@ -583,71 +502,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.IsPending = false;
 			this.LastSendTime = Time.Instance.NowSeconds;
 			this.PendingMoveInfos = new List<MoveReplaySample>();
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				byte[] array = movingEntityData.ToByteArray();
-				CreatureDataComponent creatureDataComp = this.CreatureDataComp;
-				int? num = (creatureDataComp != null) ? new int?(creatureDataComp.GetPbDataId()) : null;
-				CreatureDataComponent creatureDataComp2 = this.CreatureDataComp;
-				EEntityType? eentityType = (creatureDataComp2 != null) ? new EEntityType?(creatureDataComp2.GetEntityType()) : null;
-				CreatureDataComponent creatureDataComp3 = this.CreatureDataComp;
-				long? num2 = (creatureDataComp3 != null) ? new long?(creatureDataComp3.GetCreatureDataId()) : null;
-				if (array.Length != 0)
-				{
-					string data = Json.Encode(new Dictionary<string, object>
-					{
-						{
-							"scene_id",
-							CreatureModel.Instance.GetSceneId()
-						},
-						{
-							"instance_id",
-							CreatureModel.Instance.GetInstanceId()
-						},
-						{
-							"creature_id",
-							num2
-						},
-						{
-							"pb_data_id",
-							num
-						},
-						{
-							"entity_type",
-							eentityType
-						},
-						{
-							"msg_id",
-							-1
-						},
-						{
-							"length",
-							array.Length
-						},
-						{
-							"is_multi",
-							GameModeModel.Instance.IsMulti
-						},
-						{
-							"is_send",
-							true
-						},
-						{
-							"ed",
-							BaseMovementSyncComponent.IsWithEditor
-						},
-						{
-							"br",
-							LogAnalyzer.Instance.GetBranch()
-						}
-					}, null);
-					CombatDebugController.Instance.DataReport("COMBAT_MESSAGE_INFO", data);
-				}
-			}
 			return movingEntityData;
 		}
 
-		// Token: 0x06046604 RID: 288260 RVA: 0x011A4484 File Offset: 0x011A2684
+		// Token: 0x0603D6DD RID: 251613 RVA: 0x011C3E28 File Offset: 0x011C2028
 		public unsafe void ReceiveMoveInfos(RepeatedField<MoveReplaySample> moveInfos, int originator, float timestamp)
 		{
 			if (moveInfos.Count == 0)
@@ -715,13 +573,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.LastReceiveControllerPlayerId = originator;
 		}
 
-		// Token: 0x06046605 RID: 288261 RVA: 0x011A4748 File Offset: 0x011A2948
+		// Token: 0x0603D6DE RID: 251614 RVA: 0x011C40EC File Offset: 0x011C22EC
 		public bool GetEnableMovementSync()
 		{
 			return this.EnableMovementSync;
 		}
 
-		// Token: 0x06046606 RID: 288262 RVA: 0x011A4750 File Offset: 0x011A2950
+		// Token: 0x0603D6DF RID: 251615 RVA: 0x011C40F4 File Offset: 0x011C22F4
 		public unsafe void SetEnableMovementSync(bool enable, string reason = "")
 		{
 			CombatLog instance = CombatLog.Instance;
@@ -735,7 +593,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.EnableMovementSync = enable;
 		}
 
-		// Token: 0x06046607 RID: 288263 RVA: 0x011A47C0 File Offset: 0x011A29C0
+		// Token: 0x0603D6E0 RID: 251616 RVA: 0x011C4164 File Offset: 0x011C2364
 		public void AddReplaySample(ReplaySample sample)
 		{
 			while (!this.ReplaySampleQueue.Empty && this.ReplaySampleQueue.Rear.TimeStamp > sample.TimeStamp)
@@ -746,46 +604,46 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.LastReceiveMoveSample = sample;
 		}
 
-		// Token: 0x06046608 RID: 288264 RVA: 0x011A4813 File Offset: 0x011A2A13
+		// Token: 0x0603D6E1 RID: 251617 RVA: 0x011C41B7 File Offset: 0x011C23B7
 		public void ClearReplaySamples()
 		{
 			this.ReplaySampleQueue.Clear();
 			this.LastApplyMoveSample = null;
 		}
 
-		// Token: 0x06046609 RID: 288265 RVA: 0x011A4827 File Offset: 0x011A2A27
+		// Token: 0x0603D6E2 RID: 251618 RVA: 0x011C41CB File Offset: 0x011C23CB
 		public void ClearPendingMoveInfos()
 		{
 			this.PendingMoveInfos.Clear();
 			this.IsPending = false;
 		}
 
-		// Token: 0x0604660A RID: 288266 RVA: 0x011A483B File Offset: 0x011A2A3B
+		// Token: 0x0603D6E3 RID: 251619 RVA: 0x011C41DF File Offset: 0x011C23DF
 		public void CloneMoveSampleInfos(BaseMovementSyncComponent otherMoveSyncComp)
 		{
 			this.ReplaySampleQueue.Clone(otherMoveSyncComp.ReplaySampleQueue);
 		}
 
-		// Token: 0x0604660B RID: 288267 RVA: 0x011A484E File Offset: 0x011A2A4E
+		// Token: 0x0603D6E4 RID: 251620 RVA: 0x011C41F2 File Offset: 0x011C23F2
 		protected virtual bool CalcRelativeMove(ReplaySample sample1, ReplaySample sample2, float lerpPercent, global::Vector outLocation, global::Rotator outRotator)
 		{
 			return false;
 		}
 
-		// Token: 0x0604660C RID: 288268 RVA: 0x011A4851 File Offset: 0x011A2A51
+		// Token: 0x0603D6E5 RID: 251621 RVA: 0x011C41F5 File Offset: 0x011C23F5
 		[return: Nullable(2)]
 		protected virtual EntityHandle CheckRelativeMove(ReplaySample sample1, ReplaySample sample2, float lerpPercent, global::Vector outLocation, global::Rotator outRotator)
 		{
 			return null;
 		}
 
-		// Token: 0x0604660D RID: 288269 RVA: 0x011A4854 File Offset: 0x011A2A54
+		// Token: 0x0603D6E6 RID: 251622 RVA: 0x011C41F8 File Offset: 0x011C23F8
 		protected virtual bool TransformFromRelativeMove(EntityHandle handle, global::Vector location, global::Rotator rotator, global::Vector outLocation, global::Rotator outRotator)
 		{
 			return false;
 		}
 
-		// Token: 0x0604660E RID: 288270 RVA: 0x011A4858 File Offset: 0x011A2A58
+		// Token: 0x0603D6E7 RID: 251623 RVA: 0x011C41FC File Offset: 0x011C23FC
 		public virtual void TickReplaySamples()
 		{
 			double nowSeconds = Time.Instance.NowSeconds;
@@ -846,7 +704,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604660F RID: 288271 RVA: 0x011A4B9C File Offset: 0x011A2D9C
+		// Token: 0x0603D6E8 RID: 251624 RVA: 0x011C4540 File Offset: 0x011C2740
 		protected unsafe virtual void ApplyMoveSample(int movementMode, global::Vector location, global::Rotator rotator, global::Vector linearVelocity, global::Vector slideForward, int controllerPlayerId, int input, float controllerPitch, float timeScale, long serverTimeStamp, float originRtt)
 		{
 			if (this.LastMoveAutonomousProxy || this.ControllerPlayerId != controllerPlayerId)
@@ -877,7 +735,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.ReportMoveDataApplyInfo((float)(Time.Instance.CombatServerTime - (double)serverTimeStamp), bufferTime, originRtt);
 		}
 
-		// Token: 0x06046610 RID: 288272 RVA: 0x011A4D3C File Offset: 0x011A2F3C
+		// Token: 0x0603D6E9 RID: 251625 RVA: 0x011C46E0 File Offset: 0x011C28E0
 		public string VectorToString([Nullable(2)] Aki.Protocol.Vector vector)
 		{
 			if (vector == null)
@@ -895,7 +753,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06046611 RID: 288273 RVA: 0x011A4DC8 File Offset: 0x011A2FC8
+		// Token: 0x0603D6EA RID: 251626 RVA: 0x011C476C File Offset: 0x011C296C
 		public string VectorToString([Nullable(2)] global::Vector vector)
 		{
 			if (vector == null)
@@ -913,7 +771,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06046612 RID: 288274 RVA: 0x011A4E54 File Offset: 0x011A3054
+		// Token: 0x0603D6EB RID: 251627 RVA: 0x011C47F8 File Offset: 0x011C29F8
 		public string MoveInfosToString(IList<MoveReplaySample> moveInfos)
 		{
 			MoveReplaySample moveReplaySample = moveInfos[0];
@@ -943,7 +801,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06046613 RID: 288275 RVA: 0x011A4FD0 File Offset: 0x011A31D0
+		// Token: 0x0603D6EC RID: 251628 RVA: 0x011C4974 File Offset: 0x011C2B74
 		public string MoveInfoToString(MoveReplaySample moveInfo)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(25, 3);
@@ -956,7 +814,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06046614 RID: 288276 RVA: 0x011A5044 File Offset: 0x011A3244
+		// Token: 0x0603D6ED RID: 251629 RVA: 0x011C49E8 File Offset: 0x011C2BE8
 		public string MoveInfoToString(ReplaySample moveInfo)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(25, 3);
@@ -969,7 +827,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06046615 RID: 288277 RVA: 0x011A50B8 File Offset: 0x011A32B8
+		// Token: 0x0603D6EE RID: 251630 RVA: 0x011C4A5C File Offset: 0x011C2C5C
 		public void ReportMoveDataApplyInfo(float delayMs, float bufferTime, float originRtt)
 		{
 			string data = Json.Encode(new Dictionary<string, object>
@@ -1006,7 +864,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CombatDebugController.Instance.DataReport("MOVE_SYNC_INFO", data);
 		}
 
-		// Token: 0x06046616 RID: 288278 RVA: 0x011A518C File Offset: 0x011A338C
+		// Token: 0x0603D6EF RID: 251631 RVA: 0x011C4B30 File Offset: 0x011C2D30
 		public void ReportMoveDataDragDistance(float distance, bool toSelf)
 		{
 			string data = Json.Encode(new Dictionary<string, object>
@@ -1039,7 +897,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CombatDebugController.Instance.DataReport("MOVE_SYNC_DRAG_DISTANCE", data);
 		}
 
-		// Token: 0x06046617 RID: 288279 RVA: 0x011A5244 File Offset: 0x011A3444
+		// Token: 0x0603D6F0 RID: 251632 RVA: 0x011C4BE8 File Offset: 0x011C2DE8
 		public void ReportMoveDataBufferMissTime(float missTime)
 		{
 			string data = Json.Encode(new Dictionary<string, object>
@@ -1068,7 +926,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CombatDebugController.Instance.DataReport("MOVE_SYNC_BUFFER_MISS_TIME", data);
 		}
 
-		// Token: 0x06046618 RID: 288280 RVA: 0x011A52E8 File Offset: 0x011A34E8
+		// Token: 0x0603D6F1 RID: 251633 RVA: 0x011C4C8C File Offset: 0x011C2E8C
 		public void ReportMoveDataInnerBufferMissTime(float missTime)
 		{
 			string data = Json.Encode(new Dictionary<string, object>
@@ -1097,7 +955,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CombatDebugController.Instance.DataReport("MOVE_SYNC_INNER_BUFFER_MISS_TIME", data);
 		}
 
-		// Token: 0x06046619 RID: 288281 RVA: 0x011A538C File Offset: 0x011A358C
+		// Token: 0x0603D6F2 RID: 251634 RVA: 0x011C4D30 File Offset: 0x011C2F30
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1105,425 +963,385 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			BaseMovementSyncComponent baseMovementSyncComponent = (BaseMovementSyncComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (baseMovementSyncComponent.ActorComp == null)
 			{
-				if (baseMovementSyncComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TimeScaleComp"))
-			{
-				if (baseMovementSyncComponent.TimeScaleComp == null)
-				{
-					this.TimeScaleComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterTimeScaleComponent>(this.TimeScaleComp), "TimeScaleComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MoveComp"))
-			{
-				if (baseMovementSyncComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (baseMovementSyncComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EnableMovementSyncInternal"))
-			{
-				this.EnableMovementSyncInternal = baseMovementSyncComponent.EnableMovementSyncInternal;
-			}
-			if (base.CanResetComponentProperty("CacheBaseEntityHandle"))
-			{
-				if (baseMovementSyncComponent.CacheBaseEntityHandle == null)
-				{
-					this.CacheBaseEntityHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.CacheBaseEntityHandle), "CacheBaseEntityHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CacheRelativeLocation") && baseMovementSyncComponent.CacheRelativeLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheRelativeLocation), "CacheRelativeLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CacheRelativeRotator") && baseMovementSyncComponent.CacheRelativeRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.CacheRelativeRotator), "CacheRelativeRotator"))
+			if (baseMovementSyncComponent.TimeScaleComp == null)
+			{
+				this.TimeScaleComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleComp), "TimeScaleComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CacheFinalLocation") && baseMovementSyncComponent.CacheFinalLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheFinalLocation), "CacheFinalLocation"))
+			if (baseMovementSyncComponent.MoveComp == null)
+			{
+				this.MoveComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CacheFinalRotator") && baseMovementSyncComponent.CacheFinalRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.CacheFinalRotator), "CacheFinalRotator"))
+			if (baseMovementSyncComponent.CreatureDataComp == null)
+			{
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CacheVelocity") && baseMovementSyncComponent.CacheVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheVelocity), "CacheVelocity"))
+			this.EnableMovementSyncInternal = baseMovementSyncComponent.EnableMovementSyncInternal;
+			if (baseMovementSyncComponent.CacheBaseEntityHandle == null)
+			{
+				this.CacheBaseEntityHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheBaseEntityHandle), "CacheBaseEntityHandle"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ControllerPlayerId"))
-			{
-				this.ControllerPlayerId = baseMovementSyncComponent.ControllerPlayerId;
-			}
-			if (base.CanResetComponentProperty("TmpVector") && baseMovementSyncComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector), "TmpVector"))
+			if (baseMovementSyncComponent.CacheRelativeLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheRelativeLocation), "CacheRelativeLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector2") && baseMovementSyncComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector2), "TmpVector2"))
+			if (baseMovementSyncComponent.CacheRelativeRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheRelativeRotator), "CacheRelativeRotator"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LastHasBaseMovement"))
-			{
-				this.LastHasBaseMovement = baseMovementSyncComponent.LastHasBaseMovement;
-			}
-			if (base.CanResetComponentProperty("LastBasePlatform"))
-			{
-				if (baseMovementSyncComponent.LastBasePlatform == null)
-				{
-					this.LastBasePlatform = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BasePlatform>(this.LastBasePlatform), "LastBasePlatform"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LastMoveAutonomousProxy"))
-			{
-				this.LastMoveAutonomousProxy = baseMovementSyncComponent.LastMoveAutonomousProxy;
-			}
-			if (base.CanResetComponentProperty("LastRelativeMove"))
-			{
-				this.LastRelativeMove = baseMovementSyncComponent.LastRelativeMove;
-			}
-			if (base.CanResetComponentProperty("LastMove"))
-			{
-				this.LastMove = baseMovementSyncComponent.LastMove;
-			}
-			if (base.CanResetComponentProperty("LastSendTime"))
-			{
-				this.LastSendTime = baseMovementSyncComponent.LastSendTime;
-			}
-			if (base.CanResetComponentProperty("LastReceiveControllerPlayerId"))
-			{
-				this.LastReceiveControllerPlayerId = baseMovementSyncComponent.LastReceiveControllerPlayerId;
-			}
-			if (base.CanResetComponentProperty("LastSendLocation") && baseMovementSyncComponent.LastSendLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastSendLocation), "LastSendLocation"))
+			if (baseMovementSyncComponent.CacheFinalLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheFinalLocation), "CacheFinalLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LastSendRotation") && baseMovementSyncComponent.LastSendRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.LastSendRotation), "LastSendRotation"))
+			if (baseMovementSyncComponent.CacheFinalRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheFinalRotator), "CacheFinalRotator"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LastLocation") && baseMovementSyncComponent.LastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastLocation), "LastLocation"))
+			if (baseMovementSyncComponent.CacheVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheVelocity), "CacheVelocity"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LastRotation") && baseMovementSyncComponent.LastRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.LastRotation), "LastRotation"))
+			this.ControllerPlayerId = baseMovementSyncComponent.ControllerPlayerId;
+			if (baseMovementSyncComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsPending"))
-			{
-				this.IsPending = baseMovementSyncComponent.IsPending;
-			}
-			if (base.CanResetComponentProperty("PendingTime"))
-			{
-				this.PendingTime = baseMovementSyncComponent.PendingTime;
-			}
-			if (base.CanResetComponentProperty("SingleModeSendInterval"))
-			{
-				this.SingleModeSendInterval = baseMovementSyncComponent.SingleModeSendInterval;
-			}
-			if (base.CanResetComponentProperty("<PendingMoveInfos>k__BackingField"))
-			{
-				if (baseMovementSyncComponent.PendingMoveInfos == null)
-				{
-					this.PendingMoveInfos = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<MoveReplaySample>>(this.PendingMoveInfos), "<PendingMoveInfos>k__BackingField"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LastReceiveMoveSample"))
-			{
-				if (baseMovementSyncComponent.LastReceiveMoveSample == null)
-				{
-					this.LastReceiveMoveSample = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ReplaySample>(this.LastReceiveMoveSample), "LastReceiveMoveSample"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LastApplyMoveSample"))
-			{
-				if (baseMovementSyncComponent.LastApplyMoveSample == null)
-				{
-					this.LastApplyMoveSample = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ReplaySample>(this.LastApplyMoveSample), "LastApplyMoveSample"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LastMoveSample"))
-			{
-				if (baseMovementSyncComponent.LastMoveSample == null)
-				{
-					this.LastMoveSample = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MoveReplaySample>(this.LastMoveSample), "LastMoveSample"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LastApplyMoveSampleUsed"))
-			{
-				this.LastApplyMoveSampleUsed = baseMovementSyncComponent.LastApplyMoveSampleUsed;
-			}
-			if (base.CanResetComponentProperty("NowLogicTickTime"))
-			{
-				this.NowLogicTickTime = baseMovementSyncComponent.NowLogicTickTime;
-			}
-			if (base.CanResetComponentProperty("LastLogicTickTime"))
-			{
-				this.LastLogicTickTime = baseMovementSyncComponent.LastLogicTickTime;
-			}
-			if (base.CanResetComponentProperty("LastApplyLogicTickTime"))
-			{
-				this.LastApplyLogicTickTime = baseMovementSyncComponent.LastApplyLogicTickTime;
-			}
-			if (base.CanResetComponentProperty("Activated"))
-			{
-				this.Activated = baseMovementSyncComponent.Activated;
-			}
-			if (base.CanResetComponentProperty("PkgLastTimeScale"))
-			{
-				this.PkgLastTimeScale = baseMovementSyncComponent.PkgLastTimeScale;
-			}
-			if (base.CanResetComponentProperty("ReplaySampleQueue") && baseMovementSyncComponent.ReplaySampleQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Deque<ReplaySample>>(this.ReplaySampleQueue), "ReplaySampleQueue"))
+			if (baseMovementSyncComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpLocation"))
+			this.LastHasBaseMovement = baseMovementSyncComponent.LastHasBaseMovement;
+			if (baseMovementSyncComponent.LastBasePlatform == null)
 			{
-				if (baseMovementSyncComponent.TmpLocation == null)
-				{
-					this.TmpLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpLocation), "TmpLocation"))
-				{
-					return false;
-				}
+				this.LastBasePlatform = null;
 			}
-			if (base.CanResetComponentProperty("TmpLocation2"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastBasePlatform), "LastBasePlatform"))
 			{
-				if (baseMovementSyncComponent.TmpLocation2 == null)
-				{
-					this.TmpLocation2 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpLocation2), "TmpLocation2"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TmpRotation"))
+			this.LastMoveAutonomousProxy = baseMovementSyncComponent.LastMoveAutonomousProxy;
+			this.LastRelativeMove = baseMovementSyncComponent.LastRelativeMove;
+			this.LastMove = baseMovementSyncComponent.LastMove;
+			this.LastSendTime = baseMovementSyncComponent.LastSendTime;
+			this.LastReceiveControllerPlayerId = baseMovementSyncComponent.LastReceiveControllerPlayerId;
+			if (baseMovementSyncComponent.LastSendLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSendLocation), "LastSendLocation"))
 			{
-				if (baseMovementSyncComponent.TmpRotation == null)
-				{
-					this.TmpRotation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotation), "TmpRotation"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (baseMovementSyncComponent.LastSendRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSendRotation), "LastSendRotation"))
+			{
+				return false;
+			}
+			if (baseMovementSyncComponent.LastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLocation), "LastLocation"))
+			{
+				return false;
+			}
+			if (baseMovementSyncComponent.LastRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastRotation), "LastRotation"))
+			{
+				return false;
+			}
+			this.IsPending = baseMovementSyncComponent.IsPending;
+			this.PendingTime = baseMovementSyncComponent.PendingTime;
+			this.SingleModeSendInterval = baseMovementSyncComponent.SingleModeSendInterval;
+			if (baseMovementSyncComponent.PendingMoveInfos == null)
+			{
+				this.PendingMoveInfos = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingMoveInfos), "PendingMoveInfos"))
+			{
+				return false;
+			}
+			if (baseMovementSyncComponent.LastReceiveMoveSample == null)
+			{
+				this.LastReceiveMoveSample = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastReceiveMoveSample), "LastReceiveMoveSample"))
+			{
+				return false;
+			}
+			if (baseMovementSyncComponent.LastApplyMoveSample == null)
+			{
+				this.LastApplyMoveSample = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastApplyMoveSample), "LastApplyMoveSample"))
+			{
+				return false;
+			}
+			if (baseMovementSyncComponent.LastMoveSample == null)
+			{
+				this.LastMoveSample = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastMoveSample), "LastMoveSample"))
+			{
+				return false;
+			}
+			this.LastApplyMoveSampleUsed = baseMovementSyncComponent.LastApplyMoveSampleUsed;
+			this.NowLogicTickTime = baseMovementSyncComponent.NowLogicTickTime;
+			this.LastLogicTickTime = baseMovementSyncComponent.LastLogicTickTime;
+			this.LastApplyLogicTickTime = baseMovementSyncComponent.LastApplyLogicTickTime;
+			this.Activated = baseMovementSyncComponent.Activated;
+			this.PkgLastTimeScale = baseMovementSyncComponent.PkgLastTimeScale;
+			if (baseMovementSyncComponent.ReplaySampleQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReplaySampleQueue), "ReplaySampleQueue"))
+			{
+				return false;
+			}
+			if (baseMovementSyncComponent.TmpLocation == null)
+			{
+				this.TmpLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpLocation), "TmpLocation"))
+			{
+				return false;
+			}
+			if (baseMovementSyncComponent.TmpLocation2 == null)
+			{
+				this.TmpLocation2 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpLocation2), "TmpLocation2"))
+			{
+				return false;
+			}
+			if (baseMovementSyncComponent.TmpRotation == null)
+			{
+				this.TmpRotation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotation), "TmpRotation"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x0604661C RID: 288284 RVA: 0x011A5B8C File Offset: 0x011A3D8C
+		// Token: 0x1700747F RID: 29823
+		// (get) Token: 0x0603D6F3 RID: 251635 RVA: 0x011C51E3 File Offset: 0x011C33E3
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007480 RID: 29824
+		// (get) Token: 0x0603D6F4 RID: 251636 RVA: 0x011C51E6 File Offset: 0x011C33E6
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007481 RID: 29825
+		// (get) Token: 0x0603D6F5 RID: 251637 RVA: 0x011C51E9 File Offset: 0x011C33E9
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007482 RID: 29826
+		// (get) Token: 0x0603D6F6 RID: 251638 RVA: 0x011C51EC File Offset: 0x011C33EC
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007483 RID: 29827
+		// (get) Token: 0x0603D6F7 RID: 251639 RVA: 0x011C51EF File Offset: 0x011C33EF
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0603D6FA RID: 251642 RVA: 0x011C531C File Offset: 0x011C351C
 		Entity IMoveSync.get_Entity()
 		{
 			return base.Entity;
 		}
 
-		// Token: 0x04024DF2 RID: 151026
+		// Token: 0x04020930 RID: 133424
 		private static readonly int IsWithEditor = (KuroApplication.IsWithEditor() > false) ? 1 : 0;
 
-		// Token: 0x04024DF3 RID: 151027
+		// Token: 0x04020931 RID: 133425
 		[Nullable(2)]
 		protected BaseActorComponent ActorComp;
 
-		// Token: 0x04024DF4 RID: 151028
+		// Token: 0x04020932 RID: 133426
 		[Nullable(2)]
 		protected CharacterTimeScaleComponent TimeScaleComp;
 
-		// Token: 0x04024DF5 RID: 151029
+		// Token: 0x04020933 RID: 133427
 		[Nullable(2)]
 		protected BaseMoveComponent MoveComp;
 
-		// Token: 0x04024DF6 RID: 151030
+		// Token: 0x04020934 RID: 133428
 		[Nullable(2)]
 		protected CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024DF7 RID: 151031
+		// Token: 0x04020935 RID: 133429
 		protected bool EnableMovementSyncInternal;
 
-		// Token: 0x04024DF8 RID: 151032
+		// Token: 0x04020936 RID: 133430
 		[Nullable(2)]
 		protected EntityHandle CacheBaseEntityHandle;
 
-		// Token: 0x04024DF9 RID: 151033
+		// Token: 0x04020937 RID: 133431
 		protected readonly global::Vector CacheRelativeLocation = global::Vector.Create();
 
-		// Token: 0x04024DFA RID: 151034
+		// Token: 0x04020938 RID: 133432
 		protected readonly global::Rotator CacheRelativeRotator = global::Rotator.Create();
 
-		// Token: 0x04024DFB RID: 151035
+		// Token: 0x04020939 RID: 133433
 		protected readonly global::Vector CacheFinalLocation = global::Vector.Create();
 
-		// Token: 0x04024DFC RID: 151036
+		// Token: 0x0402093A RID: 133434
 		protected readonly global::Rotator CacheFinalRotator = global::Rotator.Create();
 
-		// Token: 0x04024DFD RID: 151037
+		// Token: 0x0402093B RID: 133435
 		protected readonly global::Vector CacheVelocity = global::Vector.Create();
 
-		// Token: 0x04024DFE RID: 151038
+		// Token: 0x0402093C RID: 133436
 		public int ControllerPlayerId;
 
-		// Token: 0x04024DFF RID: 151039
+		// Token: 0x0402093D RID: 133437
 		private readonly float MaxExtraOffset = 1f;
 
-		// Token: 0x04024E00 RID: 151040
+		// Token: 0x0402093E RID: 133438
 		protected readonly global::Vector TmpVector = global::Vector.Create();
 
-		// Token: 0x04024E01 RID: 151041
+		// Token: 0x0402093F RID: 133439
 		protected readonly global::Vector TmpVector2 = global::Vector.Create();
 
-		// Token: 0x04024E02 RID: 151042
+		// Token: 0x04020940 RID: 133440
 		protected bool LastHasBaseMovement;
 
-		// Token: 0x04024E03 RID: 151043
+		// Token: 0x04020941 RID: 133441
 		[Nullable(2)]
 		protected BasePlatform LastBasePlatform;
 
-		// Token: 0x04024E04 RID: 151044
+		// Token: 0x04020942 RID: 133442
 		public bool LastMoveAutonomousProxy;
 
-		// Token: 0x04024E05 RID: 151045
+		// Token: 0x04020943 RID: 133443
 		protected bool LastRelativeMove;
 
-		// Token: 0x04024E06 RID: 151046
+		// Token: 0x04020944 RID: 133444
 		protected bool LastMove;
 
-		// Token: 0x04024E07 RID: 151047
+		// Token: 0x04020945 RID: 133445
 		protected double LastSendTime;
 
-		// Token: 0x04024E08 RID: 151048
+		// Token: 0x04020946 RID: 133446
 		protected int LastReceiveControllerPlayerId;
 
-		// Token: 0x04024E09 RID: 151049
+		// Token: 0x04020947 RID: 133447
 		protected readonly global::Vector LastSendLocation = global::Vector.Create();
 
-		// Token: 0x04024E0A RID: 151050
+		// Token: 0x04020948 RID: 133448
 		protected readonly global::Rotator LastSendRotation = global::Rotator.Create();
 
-		// Token: 0x04024E0B RID: 151051
+		// Token: 0x04020949 RID: 133449
 		protected readonly global::Vector LastLocation = global::Vector.Create();
 
-		// Token: 0x04024E0C RID: 151052
+		// Token: 0x0402094A RID: 133450
 		protected readonly global::Rotator LastRotation = global::Rotator.Create();
 
-		// Token: 0x04024E0D RID: 151053
+		// Token: 0x0402094B RID: 133451
 		protected bool IsPending;
 
-		// Token: 0x04024E0E RID: 151054
+		// Token: 0x0402094C RID: 133452
 		protected double PendingTime;
 
-		// Token: 0x04024E0F RID: 151055
+		// Token: 0x0402094D RID: 133453
 		public static readonly float PendingMoveCacheTime = 0.08f;
 
-		// Token: 0x04024E10 RID: 151056
+		// Token: 0x0402094E RID: 133454
 		public static readonly float MaxPendingMoveCacheTime = 1f;
 
-		// Token: 0x04024E11 RID: 151057
+		// Token: 0x0402094F RID: 133455
 		public float SingleModeSendInterval = 1f;
 
-		// Token: 0x04024E12 RID: 151058
+		// Token: 0x04020950 RID: 133456
 		public static readonly float SingleModeSendLocationTolerance = 10f;
 
-		// Token: 0x04024E13 RID: 151059
+		// Token: 0x04020951 RID: 133457
 		public static readonly float SingleModeSendRotationTolerance = 5f;
 
-		// Token: 0x04024E14 RID: 151060
+		// Token: 0x04020952 RID: 133458
 		public static readonly float SingleModeSendLocationToleranceMax = 600f;
 
-		// Token: 0x04024E16 RID: 151062
+		// Token: 0x04020954 RID: 133460
 		[Nullable(2)]
 		protected ReplaySample LastReceiveMoveSample;
 
-		// Token: 0x04024E17 RID: 151063
+		// Token: 0x04020955 RID: 133461
 		[Nullable(2)]
 		protected ReplaySample LastApplyMoveSample;
 
-		// Token: 0x04024E18 RID: 151064
+		// Token: 0x04020956 RID: 133462
 		[Nullable(2)]
 		protected MoveReplaySample LastMoveSample;
 
-		// Token: 0x04024E19 RID: 151065
+		// Token: 0x04020957 RID: 133463
 		protected bool LastApplyMoveSampleUsed;
 
-		// Token: 0x04024E1A RID: 151066
+		// Token: 0x04020958 RID: 133464
 		protected double NowLogicTickTime;
 
-		// Token: 0x04024E1B RID: 151067
+		// Token: 0x04020959 RID: 133465
 		protected double LastLogicTickTime;
 
-		// Token: 0x04024E1C RID: 151068
+		// Token: 0x0402095A RID: 133466
 		protected double LastApplyLogicTickTime;
 
-		// Token: 0x04024E1D RID: 151069
+		// Token: 0x0402095B RID: 133467
 		private bool Activated;
 
-		// Token: 0x04024E1E RID: 151070
+		// Token: 0x0402095C RID: 133468
 		private float PkgLastTimeScale;
 
-		// Token: 0x04024E1F RID: 151071
+		// Token: 0x0402095D RID: 133469
 		private readonly Deque<ReplaySample> ReplaySampleQueue = new Deque<ReplaySample>(4);
 
-		// Token: 0x04024E20 RID: 151072
+		// Token: 0x0402095E RID: 133470
 		public global::Vector TmpLocation = global::Vector.Create();
 
-		// Token: 0x04024E21 RID: 151073
+		// Token: 0x0402095F RID: 133471
 		public global::Vector TmpLocation2 = global::Vector.Create();
 
-		// Token: 0x04024E22 RID: 151074
+		// Token: 0x04020960 RID: 133472
 		public global::Rotator TmpRotation = global::Rotator.Create();
 	}
 }

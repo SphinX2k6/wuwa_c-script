@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.HonamiStory;
 
-// Token: 0x02001E93 RID: 7827
+// Token: 0x02001355 RID: 4949
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryGamepadInteractController
 {
-	// Token: 0x0600EFE7 RID: 61415 RVA: 0x00396C6B File Offset: 0x00394E6B
+	// Token: 0x0600C406 RID: 50182 RVA: 0x003A2827 File Offset: 0x003A0A27
 	public void RegisterPanel(HonamiStoryBackpackPanelBase panel)
 	{
 		this.PanelBaseList.Add(panel);
 	}
 
-	// Token: 0x0600EFE8 RID: 61416 RVA: 0x00396C79 File Offset: 0x00394E79
+	// Token: 0x0600C407 RID: 50183 RVA: 0x003A2835 File Offset: 0x003A0A35
 	public void ClearPanel()
 	{
 		this.PanelBaseList.Clear();
 	}
 
-	// Token: 0x170012DA RID: 4826
-	// (get) Token: 0x0600EFE9 RID: 61417 RVA: 0x00396C86 File Offset: 0x00394E86
+	// Token: 0x17001304 RID: 4868
+	// (get) Token: 0x0600C408 RID: 50184 RVA: 0x003A2842 File Offset: 0x003A0A42
 	[Nullable(2)]
 	private HonamiStoryGamepadLogicController Logic
 	{
@@ -33,7 +33,7 @@ public class HonamiStoryGamepadInteractController
 		}
 	}
 
-	// Token: 0x0600EFEA RID: 61418 RVA: 0x00396C94 File Offset: 0x00394E94
+	// Token: 0x0600C409 RID: 50185 RVA: 0x003A2850 File Offset: 0x003A0A50
 	public bool CheckOverflowByLeftOrRight(int position, HonamiStoryGridItemBase item, int backpackWidth, int offset)
 	{
 		int num = position % backpackWidth;
@@ -47,13 +47,13 @@ public class HonamiStoryGamepadInteractController
 		return num + offset < 0 || flag;
 	}
 
-	// Token: 0x0600EFEB RID: 61419 RVA: 0x00396CCB File Offset: 0x00394ECB
+	// Token: 0x0600C40A RID: 50186 RVA: 0x003A2887 File Offset: 0x003A0A87
 	public bool HasFallingPile()
 	{
 		return this.PanelBaseList.Count > 2;
 	}
 
-	// Token: 0x0600EFEC RID: 61420 RVA: 0x00396CDC File Offset: 0x00394EDC
+	// Token: 0x0600C40B RID: 50187 RVA: 0x003A2898 File Offset: 0x003A0A98
 	[NullableContext(2)]
 	private HonamiStoryBackpackData GetBackpackData(int backpackType)
 	{
@@ -65,7 +65,7 @@ public class HonamiStoryGamepadInteractController
 		return null;
 	}
 
-	// Token: 0x0600EFED RID: 61421 RVA: 0x00396D0C File Offset: 0x00394F0C
+	// Token: 0x0600C40C RID: 50188 RVA: 0x003A28C8 File Offset: 0x003A0AC8
 	public int GetBackpackCapacity(int backpackType)
 	{
 		int result = 0;
@@ -77,7 +77,7 @@ public class HonamiStoryGamepadInteractController
 		return result;
 	}
 
-	// Token: 0x0600EFEE RID: 61422 RVA: 0x00396D30 File Offset: 0x00394F30
+	// Token: 0x0600C40D RID: 50189 RVA: 0x003A28EC File Offset: 0x003A0AEC
 	public int GetBackpackWidth(int backpackType)
 	{
 		int result = 0;
@@ -89,19 +89,19 @@ public class HonamiStoryGamepadInteractController
 		return result;
 	}
 
-	// Token: 0x0600EFEF RID: 61423 RVA: 0x00396D52 File Offset: 0x00394F52
+	// Token: 0x0600C40E RID: 50190 RVA: 0x003A290E File Offset: 0x003A0B0E
 	private int GetColumn(int startPosition, int backpackWidth)
 	{
 		return startPosition / backpackWidth;
 	}
 
-	// Token: 0x0600EFF0 RID: 61424 RVA: 0x00396D57 File Offset: 0x00394F57
+	// Token: 0x0600C40F RID: 50191 RVA: 0x003A2913 File Offset: 0x003A0B13
 	private int GetRow(int startPosition, int backpackWidth)
 	{
 		return startPosition % backpackWidth;
 	}
 
-	// Token: 0x0600EFF1 RID: 61425 RVA: 0x00396D5C File Offset: 0x00394F5C
+	// Token: 0x0600C410 RID: 50192 RVA: 0x003A2918 File Offset: 0x003A0B18
 	private int GetGridCenterPositionByParam(int startPosition, int itemWidth, int itemHeight, int backpackWidth)
 	{
 		int row = this.GetRow(startPosition, backpackWidth);
@@ -145,7 +145,7 @@ public class HonamiStoryGamepadInteractController
 		return num2 * backpackWidth + num;
 	}
 
-	// Token: 0x0600EFF2 RID: 61426 RVA: 0x00396E10 File Offset: 0x00395010
+	// Token: 0x0600C411 RID: 50193 RVA: 0x003A29CC File Offset: 0x003A0BCC
 	private int GetGridCenterPosition(HonamiStoryGridItemBase item, int backpackWidth)
 	{
 		int startPosition = 0;
@@ -161,7 +161,7 @@ public class HonamiStoryGamepadInteractController
 		return this.GetGridCenterPositionByParam(startPosition, itemWidth, itemHeight, backpackWidth);
 	}
 
-	// Token: 0x0600EFF3 RID: 61427 RVA: 0x00396E4C File Offset: 0x0039504C
+	// Token: 0x0600C412 RID: 50194 RVA: 0x003A2A08 File Offset: 0x003A0C08
 	public List<HonamiStoryGridItemBase> GetGridItemListByBackpackType(int backpackType)
 	{
 		List<HonamiStoryGridItemBase> result = new List<HonamiStoryGridItemBase>();
@@ -176,7 +176,7 @@ public class HonamiStoryGamepadInteractController
 		return result;
 	}
 
-	// Token: 0x0600EFF4 RID: 61428 RVA: 0x00396EB4 File Offset: 0x003950B4
+	// Token: 0x0600C413 RID: 50195 RVA: 0x003A2A70 File Offset: 0x003A0C70
 	[NullableContext(2)]
 	public HonamiStoryGridItemBase GetGridItemByPosition(int position, int backpackType)
 	{
@@ -198,7 +198,7 @@ public class HonamiStoryGamepadInteractController
 		return null;
 	}
 
-	// Token: 0x0600EFF5 RID: 61429 RVA: 0x00396F38 File Offset: 0x00395138
+	// Token: 0x0600C414 RID: 50196 RVA: 0x003A2AF4 File Offset: 0x003A0CF4
 	[NullableContext(2)]
 	public HonamiStoryBackpackPanelBase GetPanelByBackpackType(int backpackType)
 	{
@@ -214,7 +214,7 @@ public class HonamiStoryGamepadInteractController
 		return result;
 	}
 
-	// Token: 0x0600EFF6 RID: 61430 RVA: 0x00396F94 File Offset: 0x00395194
+	// Token: 0x0600C415 RID: 50197 RVA: 0x003A2B50 File Offset: 0x003A0D50
 	[return: Nullable(2)]
 	public HonamiStoryBackpackPanelBase GetPanelByGridItem(HonamiStoryGridItemBase gridItem)
 	{
@@ -236,7 +236,7 @@ public class HonamiStoryGamepadInteractController
 		return result;
 	}
 
-	// Token: 0x0600EFF7 RID: 61431 RVA: 0x00397024 File Offset: 0x00395224
+	// Token: 0x0600C416 RID: 50198 RVA: 0x003A2BE0 File Offset: 0x003A0DE0
 	public int GetPanelIndexByGridItem(HonamiStoryGridItemBase gridItem)
 	{
 		int result = 0;
@@ -260,7 +260,7 @@ public class HonamiStoryGamepadInteractController
 		return result;
 	}
 
-	// Token: 0x0600EFF8 RID: 61432 RVA: 0x00397068 File Offset: 0x00395268
+	// Token: 0x0600C417 RID: 50199 RVA: 0x003A2C24 File Offset: 0x003A0E24
 	public int GetEquipIndexByGridItem(HonamiStoryGridItemBase gridItem)
 	{
 		HonamiStoryBackpackPanelBase honamiStoryBackpackPanelBase = null;
@@ -290,7 +290,7 @@ public class HonamiStoryGamepadInteractController
 		return num;
 	}
 
-	// Token: 0x0600EFF9 RID: 61433 RVA: 0x00397110 File Offset: 0x00395310
+	// Token: 0x0600C418 RID: 50200 RVA: 0x003A2CCC File Offset: 0x003A0ECC
 	public void OnPickUp(HonamiStoryGridItemBase item)
 	{
 		HonamiStoryBackpackPanelBase panelByGridItem = this.GetPanelByGridItem(item);
@@ -311,7 +311,7 @@ public class HonamiStoryGamepadInteractController
 		this.OnMove(item);
 	}
 
-	// Token: 0x0600EFFA RID: 61434 RVA: 0x003971B4 File Offset: 0x003953B4
+	// Token: 0x0600C419 RID: 50201 RVA: 0x003A2D70 File Offset: 0x003A0F70
 	public void OnMove(HonamiStoryGridItemBase item)
 	{
 		HonamiStoryBackpackPanelBase panelByGridItem = this.GetPanelByGridItem(item);
@@ -345,7 +345,7 @@ public class HonamiStoryGamepadInteractController
 		targetOperateBackpack3.OnHoverGamepad(item, this.CacheDragItemPosition, this.OperateAgent);
 	}
 
-	// Token: 0x0600EFFB RID: 61435 RVA: 0x0039726B File Offset: 0x0039546B
+	// Token: 0x0600C41A RID: 50202 RVA: 0x003A2E27 File Offset: 0x003A1027
 	public void OnPutDown(HonamiStoryGridItemBase item)
 	{
 		this.ExecuteOperate(item);
@@ -355,7 +355,7 @@ public class HonamiStoryGamepadInteractController
 		}
 	}
 
-	// Token: 0x0600EFFC RID: 61436 RVA: 0x00397294 File Offset: 0x00395494
+	// Token: 0x0600C41B RID: 50203 RVA: 0x003A2E50 File Offset: 0x003A1050
 	private void ExecuteOperate(HonamiStoryGridItemBase item)
 	{
 		if (this.OperateAgent.TargetOperateBackpack == null || this.OperateAgent.StartOperateBackpack == null)
@@ -399,7 +399,7 @@ public class HonamiStoryGamepadInteractController
 		HonamiStoryController.Instance.SendHonamiStoryBagOperateRequest(list);
 	}
 
-	// Token: 0x0600EFFD RID: 61437 RVA: 0x003973B8 File Offset: 0x003955B8
+	// Token: 0x0600C41C RID: 50204 RVA: 0x003A2F74 File Offset: 0x003A1174
 	public void Reset()
 	{
 		this.CacheBackpackWidth = -1;
@@ -410,15 +410,15 @@ public class HonamiStoryGamepadInteractController
 		}
 	}
 
-	// Token: 0x04006EFF RID: 28415
+	// Token: 0x04006FE0 RID: 28640
 	public List<HonamiStoryBackpackPanelBase> PanelBaseList = new List<HonamiStoryBackpackPanelBase>();
 
-	// Token: 0x04006F00 RID: 28416
+	// Token: 0x04006FE1 RID: 28641
 	private readonly HonamiStoryInteractOperateAgent OperateAgent = new HonamiStoryInteractOperateAgent();
 
-	// Token: 0x04006F01 RID: 28417
+	// Token: 0x04006FE2 RID: 28642
 	private int CacheBackpackWidth = -1;
 
-	// Token: 0x04006F02 RID: 28418
+	// Token: 0x04006FE3 RID: 28643
 	private int CacheDragItemPosition = -1;
 }

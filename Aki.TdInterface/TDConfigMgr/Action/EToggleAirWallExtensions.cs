@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002477 RID: 9335
+	// Token: 0x02002718 RID: 10008
 	public static class EToggleAirWallExtensions
 	{
-		// Token: 0x0600CA96 RID: 51862 RVA: 0x001DD270 File Offset: 0x001DB470
+		// Token: 0x0600D746 RID: 55110 RVA: 0x001F7324 File Offset: 0x001F5524
 		public static string ToEnumString(this EToggleAirWall value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA97 RID: 51863 RVA: 0x001DD2A8 File Offset: 0x001DB4A8
+		// Token: 0x0600D747 RID: 55111 RVA: 0x001F735C File Offset: 0x001F555C
 		public static EToggleAirWall FromString(string name)
 		{
 			EToggleAirWall result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA98 RID: 51864 RVA: 0x001DD2D1 File Offset: 0x001DB4D1
+		// Token: 0x0600D748 RID: 55112 RVA: 0x001F7385 File Offset: 0x001F5585
 		public static bool TryFromString(string name, out EToggleAirWall value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CA99 RID: 51865 RVA: 0x001DD30A File Offset: 0x001DB50A
+		// Token: 0x0600D749 RID: 55113 RVA: 0x001F73BE File Offset: 0x001F55BE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA9A RID: 51866 RVA: 0x001DD322 File Offset: 0x001DB522
+		// Token: 0x0600D74A RID: 55114 RVA: 0x001F73D6 File Offset: 0x001F55D6
 		public static EToggleAirWall[] GetValues()
 		{
 			return new EToggleAirWall[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA9B RID: 51867 RVA: 0x001DD32E File Offset: 0x001DB52E
+		// Token: 0x0600D74B RID: 55115 RVA: 0x001F73E2 File Offset: 0x001F55E2
 		public static string[] GetNames()
 		{
 			return new string[]

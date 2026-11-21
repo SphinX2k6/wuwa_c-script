@@ -9,10 +9,10 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020016A1 RID: 5793
+// Token: 0x02000B59 RID: 2905
 public class NewSoundLordItem : UiPanelBase, INewSoundItem
 {
-	// Token: 0x0600A55D RID: 42333 RVA: 0x0024EF28 File Offset: 0x0024D128
+	// Token: 0x0600793D RID: 31037 RVA: 0x00259344 File Offset: 0x00257544
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -30,7 +30,7 @@ public class NewSoundLordItem : UiPanelBase, INewSoundItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A55E RID: 42334 RVA: 0x0024EFD3 File Offset: 0x0024D1D3
+	// Token: 0x0600793E RID: 31038 RVA: 0x002593EF File Offset: 0x002575EF
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(3);
@@ -41,7 +41,7 @@ public class NewSoundLordItem : UiPanelBase, INewSoundItem
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x0600A55F RID: 42335 RVA: 0x0024EFE8 File Offset: 0x0024D1E8
+	// Token: 0x0600793F RID: 31039 RVA: 0x00259404 File Offset: 0x00257604
 	[NullableContext(1)]
 	public void Update(NewSoundDetectItemData sourceData)
 	{
@@ -76,16 +76,16 @@ public class NewSoundLordItem : UiPanelBase, INewSoundItem
 		});
 	}
 
-	// Token: 0x02007C77 RID: 31863
+	// Token: 0x02006DFC RID: 28156
 	private enum EChildType
 	{
-		// Token: 0x04028D6A RID: 167274
+		// Token: 0x04024093 RID: 147603
 		NameText,
-		// Token: 0x04028D6B RID: 167275
+		// Token: 0x04024094 RID: 147604
 		IconTexture,
-		// Token: 0x04028D6C RID: 167276
+		// Token: 0x04024095 RID: 147605
 		ProgressText,
-		// Token: 0x04028D6D RID: 167277
+		// Token: 0x04024096 RID: 147606
 		ProgressNumberText
 	}
 }

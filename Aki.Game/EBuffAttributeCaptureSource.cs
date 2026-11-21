@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002E89 RID: 11913
+// Token: 0x020023DB RID: 9179
 public enum EBuffAttributeCaptureSource
 {
-	// Token: 0x0400BDA4 RID: 48548
+	// Token: 0x0400C13B RID: 49467
 	Owner,
-	// Token: 0x0400BDA5 RID: 48549
+	// Token: 0x0400C13C RID: 49468
 	Instigator
 }

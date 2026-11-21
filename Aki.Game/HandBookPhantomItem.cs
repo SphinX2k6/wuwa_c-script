@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E0B RID: 7691
+// Token: 0x020012CD RID: 4813
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookPhantomItem : UiPanelBase
 {
-	// Token: 0x0600E9EC RID: 59884 RVA: 0x003759CD File Offset: 0x00373BCD
+	// Token: 0x0600BE0B RID: 48651 RVA: 0x003816D5 File Offset: 0x0037F8D5
 	public void Initialize(HandBookCommonItemData handBookCommonItemData, [Nullable(2)] UUIItem item)
 	{
 		this.HandBookCommonItemData = handBookCommonItemData;
@@ -21,7 +21,7 @@ public class HandBookPhantomItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E9ED RID: 59885 RVA: 0x003759E8 File Offset: 0x00373BE8
+	// Token: 0x0600BE0C RID: 48652 RVA: 0x003816F0 File Offset: 0x0037F8F0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class HandBookPhantomItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E9EE RID: 59886 RVA: 0x00375A58 File Offset: 0x00373C58
+	// Token: 0x0600BE0D RID: 48653 RVA: 0x00381760 File Offset: 0x0037F960
 	protected override void OnStart()
 	{
 		this.HandBookCommonItem = new HandBookCommonItem();
@@ -60,13 +60,13 @@ public class HandBookPhantomItem : UiPanelBase
 		text.ShowTextNew(phantomItem.MonsterName);
 	}
 
-	// Token: 0x0600E9EF RID: 59887 RVA: 0x00375B5B File Offset: 0x00373D5B
+	// Token: 0x0600BE0E RID: 48654 RVA: 0x00381863 File Offset: 0x0037FA63
 	public void BindToggleCallback(THandBookPhantomItemToggleFunction toggleFunction)
 	{
 		this.OnToggleCallback = toggleFunction;
 	}
 
-	// Token: 0x0600E9F0 RID: 59888 RVA: 0x00375B64 File Offset: 0x00373D64
+	// Token: 0x0600BE0F RID: 48655 RVA: 0x0038186C File Offset: 0x0037FA6C
 	private void OnToggleClicked(MediumItemGridExtendCallback callbackParameter)
 	{
 		if (this.OnToggleCallback != null)
@@ -75,19 +75,19 @@ public class HandBookPhantomItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E9F1 RID: 59889 RVA: 0x00375B80 File Offset: 0x00373D80
+	// Token: 0x0600BE10 RID: 48656 RVA: 0x00381888 File Offset: 0x0037FA88
 	public void SetToggleStateForce(EToggleState state, bool bFire = false)
 	{
 		this.HandBookCommonItem.SetSelected(state == EToggleState.ETT_Checked, false);
 	}
 
-	// Token: 0x0600E9F2 RID: 59890 RVA: 0x00375B92 File Offset: 0x00373D92
+	// Token: 0x0600BE11 RID: 48657 RVA: 0x0038189A File Offset: 0x0037FA9A
 	public void OnSelected(bool fireEvent)
 	{
 		this.HandBookCommonItem.OnSelected(fireEvent);
 	}
 
-	// Token: 0x0600E9F3 RID: 59891 RVA: 0x00375BA0 File Offset: 0x00373DA0
+	// Token: 0x0600BE12 RID: 48658 RVA: 0x003818A8 File Offset: 0x0037FAA8
 	protected override void OnBeforeDestroy()
 	{
 		this.HandBookCommonItem = null;
@@ -95,32 +95,32 @@ public class HandBookPhantomItem : UiPanelBase
 		this.OnToggleCallback = null;
 	}
 
-	// Token: 0x04006C86 RID: 27782
+	// Token: 0x04006D67 RID: 28007
 	[Nullable(2)]
 	private HandBookCommonItem HandBookCommonItem;
 
-	// Token: 0x04006C87 RID: 27783
+	// Token: 0x04006D68 RID: 28008
 	[Nullable(2)]
 	private HandBookCommonItemData HandBookCommonItemData;
 
-	// Token: 0x04006C88 RID: 27784
+	// Token: 0x04006D69 RID: 28009
 	[Nullable(2)]
 	private THandBookPhantomItemToggleFunction OnToggleCallback;
 
-	// Token: 0x020083C7 RID: 33735
+	// Token: 0x0200754C RID: 30028
 	[NullableContext(0)]
 	private class EHandBookPhantomItemDefine
 	{
-		// Token: 0x0402AE81 RID: 175745
+		// Token: 0x040261A4 RID: 156068
 		public const int HandBookCommonItem = 0;
 
-		// Token: 0x0402AE82 RID: 175746
+		// Token: 0x040261A5 RID: 156069
 		public const int NameText = 1;
 
-		// Token: 0x0402AE83 RID: 175747
+		// Token: 0x040261A6 RID: 156070
 		public const int HaveText = 2;
 
-		// Token: 0x0402AE84 RID: 175748
+		// Token: 0x040261A7 RID: 156071
 		public const int PlaceText = 3;
 	}
 }

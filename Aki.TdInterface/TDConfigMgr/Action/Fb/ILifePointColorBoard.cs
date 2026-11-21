@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002861 RID: 10337
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B34 RID: 11060
 	public class ILifePointColorBoard
 	{
-		// Token: 0x0600E519 RID: 58649 RVA: 0x0021B316 File Offset: 0x00219516
+		// Token: 0x0600F33E RID: 62270 RVA: 0x0023817A File Offset: 0x0023637A
 		public static ILifePointColorBoard Create(ILifePointColorBoard? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004619 RID: 17945
-		// (get) Token: 0x0600E51A RID: 58650 RVA: 0x0021B338 File Offset: 0x00219538
+		// Token: 0x17004984 RID: 18820
+		// (get) Token: 0x0600F33F RID: 62271 RVA: 0x0023819C File Offset: 0x0023639C
 		public virtual List<IColorPiece> Config
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700461A RID: 17946
-		// (get) Token: 0x0600E51B RID: 58651 RVA: 0x0021B3A4 File Offset: 0x002195A4
+		// Token: 0x17004985 RID: 18821
+		// (get) Token: 0x0600F340 RID: 62272 RVA: 0x00238208 File Offset: 0x00236408
 		public virtual List<EPieceColorType> Colors
 		{
 			get
@@ -65,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700461B RID: 17947
-		// (get) Token: 0x0600E51C RID: 58652 RVA: 0x0021B408 File Offset: 0x00219608
+		// Token: 0x17004986 RID: 18822
+		// (get) Token: 0x0600F341 RID: 62273 RVA: 0x0023826C File Offset: 0x0023646C
 		public virtual EPieceColorType TargetColor
 		{
 			get
@@ -75,19 +72,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EBB RID: 32443
+		// Token: 0x04008578 RID: 34168
 		private ILifePointColorBoard Instance;
 
-		// Token: 0x04007EBC RID: 32444
+		// Token: 0x04008579 RID: 34169
 		private List<IColorPiece> _ConfigCache;
 
-		// Token: 0x04007EBD RID: 32445
+		// Token: 0x0400857A RID: 34170
 		private bool _ConfigInited;
 
-		// Token: 0x04007EBE RID: 32446
+		// Token: 0x0400857B RID: 34171
 		private List<EPieceColorType> _ColorsCache;
 
-		// Token: 0x04007EBF RID: 32447
+		// Token: 0x0400857C RID: 34172
 		private bool _ColorsInited;
 	}
 }

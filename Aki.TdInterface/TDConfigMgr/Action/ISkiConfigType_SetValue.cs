@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E7A RID: 7802
+	// Token: 0x020020AF RID: 8367
 	public class ISkiConfigType_SetValue
 	{
-		// Token: 0x040063AD RID: 25517
+		// Token: 0x04006991 RID: 27025
 		public ESkiConfig Type;
 
-		// Token: 0x040063AE RID: 25518
-		[Nullable(1)]
+		// Token: 0x04006992 RID: 27026
 		public ITargetEntityType Target;
 	}
 }

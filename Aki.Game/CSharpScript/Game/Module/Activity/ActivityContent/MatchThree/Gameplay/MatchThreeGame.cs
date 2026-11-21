@@ -13,17 +13,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064AB RID: 25771
+	// Token: 0x02005429 RID: 21545
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MatchThreeGame
 	{
-		// Token: 0x170094BC RID: 38076
-		// (get) Token: 0x06040B73 RID: 265075 RVA: 0x00FAACA5 File Offset: 0x00FA8EA5
+		// Token: 0x1700681E RID: 26654
+		// (get) Token: 0x06035837 RID: 219191 RVA: 0x00EF1CED File Offset: 0x00EEFEED
 		public int MaxTurns { get; }
 
-		// Token: 0x170094BD RID: 38077
-		// (get) Token: 0x06040B74 RID: 265076 RVA: 0x00FAACAD File Offset: 0x00FA8EAD
+		// Token: 0x1700681F RID: 26655
+		// (get) Token: 0x06035838 RID: 219192 RVA: 0x00EF1CF5 File Offset: 0x00EEFEF5
 		public int Score
 		{
 			get
@@ -32,28 +32,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x06040B75 RID: 265077 RVA: 0x00FAACBA File Offset: 0x00FA8EBA
+		// Token: 0x06035839 RID: 219193 RVA: 0x00EF1D02 File Offset: 0x00EEFF02
 		public int ClearedCountOf(EPieceType type)
 		{
 			return this.ResultKeeper.ClearedCountOf(type);
 		}
 
-		// Token: 0x170094BE RID: 38078
-		// (get) Token: 0x06040B76 RID: 265078 RVA: 0x00FAACC8 File Offset: 0x00FA8EC8
+		// Token: 0x17006820 RID: 26656
+		// (get) Token: 0x0603583A RID: 219194 RVA: 0x00EF1D10 File Offset: 0x00EEFF10
 		public MatchThreeStatsKeeper Stats { get; }
 
-		// Token: 0x170094BF RID: 38079
-		// (get) Token: 0x06040B77 RID: 265079 RVA: 0x00FAACD0 File Offset: 0x00FA8ED0
-		// (set) Token: 0x06040B78 RID: 265080 RVA: 0x00FAACD8 File Offset: 0x00FA8ED8
+		// Token: 0x17006821 RID: 26657
+		// (get) Token: 0x0603583B RID: 219195 RVA: 0x00EF1D18 File Offset: 0x00EEFF18
+		// (set) Token: 0x0603583C RID: 219196 RVA: 0x00EF1D20 File Offset: 0x00EEFF20
 		public EMatchThreeGameState State { get; private set; }
 
-		// Token: 0x170094C0 RID: 38080
-		// (get) Token: 0x06040B79 RID: 265081 RVA: 0x00FAACE1 File Offset: 0x00FA8EE1
-		// (set) Token: 0x06040B7A RID: 265082 RVA: 0x00FAACE9 File Offset: 0x00FA8EE9
+		// Token: 0x17006822 RID: 26658
+		// (get) Token: 0x0603583D RID: 219197 RVA: 0x00EF1D29 File Offset: 0x00EEFF29
+		// (set) Token: 0x0603583E RID: 219198 RVA: 0x00EF1D31 File Offset: 0x00EEFF31
 		public bool InputLocked { get; private set; }
 
-		// Token: 0x170094C1 RID: 38081
-		// (get) Token: 0x06040B7B RID: 265083 RVA: 0x00FAACF2 File Offset: 0x00FA8EF2
+		// Token: 0x17006823 RID: 26659
+		// (get) Token: 0x0603583F RID: 219199 RVA: 0x00EF1D3A File Offset: 0x00EEFF3A
 		public bool IsResolveAborted
 		{
 			get
@@ -62,24 +62,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x06040B7C RID: 265084 RVA: 0x00FAACFF File Offset: 0x00FA8EFF
+		// Token: 0x06035840 RID: 219200 RVA: 0x00EF1D47 File Offset: 0x00EEFF47
 		public void AbortResolve()
 		{
 			this.Resolver.AbortResolve();
 		}
 
-		// Token: 0x170094C2 RID: 38082
-		// (get) Token: 0x06040B7D RID: 265085 RVA: 0x00FAAD0C File Offset: 0x00FA8F0C
-		// (set) Token: 0x06040B7E RID: 265086 RVA: 0x00FAAD14 File Offset: 0x00FA8F14
+		// Token: 0x17006824 RID: 26660
+		// (get) Token: 0x06035841 RID: 219201 RVA: 0x00EF1D54 File Offset: 0x00EEFF54
+		// (set) Token: 0x06035842 RID: 219202 RVA: 0x00EF1D5C File Offset: 0x00EEFF5C
 		public int RemainingTurns { get; private set; }
 
-		// Token: 0x170094C3 RID: 38083
-		// (get) Token: 0x06040B7F RID: 265087 RVA: 0x00FAAD1D File Offset: 0x00FA8F1D
-		// (set) Token: 0x06040B80 RID: 265088 RVA: 0x00FAAD25 File Offset: 0x00FA8F25
+		// Token: 0x17006825 RID: 26661
+		// (get) Token: 0x06035843 RID: 219203 RVA: 0x00EF1D65 File Offset: 0x00EEFF65
+		// (set) Token: 0x06035844 RID: 219204 RVA: 0x00EF1D6D File Offset: 0x00EEFF6D
 		public int LastTurnCostDelta { get; private set; }
 
-		// Token: 0x170094C4 RID: 38084
-		// (get) Token: 0x06040B81 RID: 265089 RVA: 0x00FAAD2E File Offset: 0x00FA8F2E
+		// Token: 0x17006826 RID: 26662
+		// (get) Token: 0x06035845 RID: 219205 RVA: 0x00EF1D76 File Offset: 0x00EEFF76
 		public Board Board
 		{
 			get
@@ -88,8 +88,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x170094C5 RID: 38085
-		// (get) Token: 0x06040B82 RID: 265090 RVA: 0x00FAAD3B File Offset: 0x00FA8F3B
+		// Token: 0x17006827 RID: 26663
+		// (get) Token: 0x06035846 RID: 219206 RVA: 0x00EF1D83 File Offset: 0x00EEFF83
 		public IReadOnlyList<LevelMechanic> Mechanics
 		{
 			get
@@ -98,8 +98,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x170094C6 RID: 38086
-		// (get) Token: 0x06040B83 RID: 265091 RVA: 0x00FAAD48 File Offset: 0x00FA8F48
+		// Token: 0x17006828 RID: 26664
+		// (get) Token: 0x06035847 RID: 219207 RVA: 0x00EF1D90 File Offset: 0x00EEFF90
 		public int Round
 		{
 			get
@@ -108,8 +108,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x170094C7 RID: 38087
-		// (get) Token: 0x06040B84 RID: 265092 RVA: 0x00FAAD55 File Offset: 0x00FA8F55
+		// Token: 0x17006829 RID: 26665
+		// (get) Token: 0x06035848 RID: 219208 RVA: 0x00EF1D9D File Offset: 0x00EEFF9D
 		public int Energy
 		{
 			get
@@ -118,8 +118,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x170094C8 RID: 38088
-		// (get) Token: 0x06040B85 RID: 265093 RVA: 0x00FAAD62 File Offset: 0x00FA8F62
+		// Token: 0x1700682A RID: 26666
+		// (get) Token: 0x06035849 RID: 219209 RVA: 0x00EF1DAA File Offset: 0x00EEFFAA
 		public int FullEnergy
 		{
 			get
@@ -128,8 +128,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x170094C9 RID: 38089
-		// (get) Token: 0x06040B86 RID: 265094 RVA: 0x00FAAD6F File Offset: 0x00FA8F6F
+		// Token: 0x1700682B RID: 26667
+		// (get) Token: 0x0603584A RID: 219210 RVA: 0x00EF1DB7 File Offset: 0x00EEFFB7
 		public IReadOnlyList<ValidMove> LastValidMoves
 		{
 			get
@@ -138,18 +138,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x170094CA RID: 38090
-		// (get) Token: 0x06040B87 RID: 265095 RVA: 0x00FAAD7C File Offset: 0x00FA8F7C
-		// (set) Token: 0x06040B88 RID: 265096 RVA: 0x00FAAD84 File Offset: 0x00FA8F84
+		// Token: 0x1700682C RID: 26668
+		// (get) Token: 0x0603584B RID: 219211 RVA: 0x00EF1DC4 File Offset: 0x00EEFFC4
+		// (set) Token: 0x0603584C RID: 219212 RVA: 0x00EF1DCC File Offset: 0x00EEFFCC
 		public bool LastSwapAccepted { get; private set; }
 
-		// Token: 0x06040B89 RID: 265097 RVA: 0x00FAAD8D File Offset: 0x00FA8F8D
+		// Token: 0x0603584D RID: 219213 RVA: 0x00EF1DD5 File Offset: 0x00EEFFD5
 		public void CollectSkillPoints(List<SkillPointDisplayData> buffer, int displayEnergy)
 		{
 			this.Resolver.CollectSkillPoints(buffer, displayEnergy);
 		}
 
-		// Token: 0x06040B8A RID: 265098 RVA: 0x00FAAD9C File Offset: 0x00FA8F9C
+		// Token: 0x0603584E RID: 219214 RVA: 0x00EF1DE4 File Offset: 0x00EEFFE4
 		[NullableContext(2)]
 		public static MatchThreeGame Create(int level, int roleId, int seed = 0)
 		{
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return new MatchThreeGame(new GameplayResolver(board, MatchThreeGame.CreateSkills(roleId), list, levelMechanics, gameplayConfig.Value.ExchangeEnergy, fillRulesArray, rng, matchThreeStatsKeeper), levelGoals, gameplayConfig.Value.TurnCount, resultKeeper, matchThreeStatsKeeper, rng, gameplayConfig.Value.Board);
 		}
 
-		// Token: 0x06040B8B RID: 265099 RVA: 0x00FAAF04 File Offset: 0x00FA9104
+		// Token: 0x0603584F RID: 219215 RVA: 0x00EF1F4C File Offset: 0x00EF014C
 		private unsafe static List<ISkill> CreateSkills(int roleId)
 		{
 			List<ISkill> list = new List<ISkill>();
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return list;
 		}
 
-		// Token: 0x06040B8C RID: 265100 RVA: 0x00FAB038 File Offset: 0x00FA9238
+		// Token: 0x06035850 RID: 219216 RVA: 0x00EF2080 File Offset: 0x00EF0280
 		public MatchThreeGame(GameplayResolver resolver, IReadOnlyList<LevelGoal> goals, int maxTurns, ResultKeeper resultKeeper, MatchThreeStatsKeeper stats, GameRandom rng, int boardId)
 		{
 			this.Resolver = resolver;
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x06040B8D RID: 265101 RVA: 0x00FAB148 File Offset: 0x00FA9348
+		// Token: 0x06035851 RID: 219217 RVA: 0x00EF2190 File Offset: 0x00EF0390
 		public bool Reset(int seed = 0)
 		{
 			if (this.InputLocked)
@@ -294,8 +294,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return true;
 		}
 
-		// Token: 0x170094CB RID: 38091
-		// (get) Token: 0x06040B8E RID: 265102 RVA: 0x00FAB25C File Offset: 0x00FA945C
+		// Token: 0x1700682D RID: 26669
+		// (get) Token: 0x06035852 RID: 219218 RVA: 0x00EF22A4 File Offset: 0x00EF04A4
 		public bool CanRewind
 		{
 			get
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x06040B8F RID: 265103 RVA: 0x00FAB284 File Offset: 0x00FA9484
+		// Token: 0x06035853 RID: 219219 RVA: 0x00EF22CC File Offset: 0x00EF04CC
 		[NullableContext(0)]
 		public UniTask<bool> RewindAsync(int turns)
 		{
@@ -317,8 +317,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return <RewindAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x170094CC RID: 38092
-		// (get) Token: 0x06040B90 RID: 265104 RVA: 0x00FAB2D0 File Offset: 0x00FA94D0
+		// Token: 0x1700682E RID: 26670
+		// (get) Token: 0x06035854 RID: 219220 RVA: 0x00EF2318 File Offset: 0x00EF0518
 		public bool CanLowerGoalDifficulty
 		{
 			get
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x06040B91 RID: 265105 RVA: 0x00FAB324 File Offset: 0x00FA9524
+		// Token: 0x06035855 RID: 219221 RVA: 0x00EF236C File Offset: 0x00EF056C
 		public void LowerGoalDifficulty()
 		{
 			foreach (LevelGoal levelGoal in this.Goals)
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x06040B92 RID: 265106 RVA: 0x00FAB370 File Offset: 0x00FA9570
+		// Token: 0x06035856 RID: 219222 RVA: 0x00EF23B8 File Offset: 0x00EF05B8
 		private void RaiseSegmentPlay(int trailCharge)
 		{
 			Action<int> onSegmentPlay = this.OnSegmentPlay;
@@ -357,13 +357,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			onSegmentPlay(trailCharge);
 		}
 
-		// Token: 0x06040B93 RID: 265107 RVA: 0x00FAB383 File Offset: 0x00FA9583
+		// Token: 0x06035857 RID: 219223 RVA: 0x00EF23CB File Offset: 0x00EF05CB
 		public void BindPresenter(IMatchThreePresentation presenter)
 		{
 			this.Resolver.BindPresenter(presenter);
 		}
 
-		// Token: 0x06040B94 RID: 265108 RVA: 0x00FAB394 File Offset: 0x00FA9594
+		// Token: 0x06035858 RID: 219224 RVA: 0x00EF23DC File Offset: 0x00EF05DC
 		public UniTask OnPlayerSwapInput(GridPosition a, GridPosition b)
 		{
 			MatchThreeGame.<OnPlayerSwapInput>d__68 <OnPlayerSwapInput>d__;
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return <OnPlayerSwapInput>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040B95 RID: 265109 RVA: 0x00FAB3E8 File Offset: 0x00FA95E8
+		// Token: 0x06035859 RID: 219225 RVA: 0x00EF2430 File Offset: 0x00EF0630
 		private void SettleOutcome(int turnCostDelta)
 		{
 			if (this.State == EMatchThreeGameState.Win || this.State == EMatchThreeGameState.Lose)
@@ -431,25 +431,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x06040B96 RID: 265110 RVA: 0x00FAB49D File Offset: 0x00FA969D
+		// Token: 0x0603585A RID: 219226 RVA: 0x00EF24E5 File Offset: 0x00EF06E5
 		private void HandleGoalAchieved(LevelGoal goal)
 		{
 			this.AchievedGoals++;
 		}
 
-		// Token: 0x06040B97 RID: 265111 RVA: 0x00FAB4AD File Offset: 0x00FA96AD
+		// Token: 0x0603585B RID: 219227 RVA: 0x00EF24F5 File Offset: 0x00EF06F5
 		private bool HasAchievedAllGoals()
 		{
 			return this.Goals.Count > 0 && this.AchievedGoals >= this.Goals.Count;
 		}
 
-		// Token: 0x06040B98 RID: 265112 RVA: 0x00FAB4D5 File Offset: 0x00FA96D5
+		// Token: 0x0603585C RID: 219228 RVA: 0x00EF251D File Offset: 0x00EF071D
 		private bool WillExhaustTurns(int turnCostDelta)
 		{
 			return this.RemainingTurns - (1 + turnCostDelta) <= 0;
 		}
 
-		// Token: 0x06040B99 RID: 265113 RVA: 0x00FAB4E8 File Offset: 0x00FA96E8
+		// Token: 0x0603585D RID: 219229 RVA: 0x00EF2530 File Offset: 0x00EF0730
 		private bool AnyGoalUnachieved()
 		{
 			using (IEnumerator<LevelGoal> enumerator = this.Goals.GetEnumerator())
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return false;
 		}
 
-		// Token: 0x06040B9A RID: 265114 RVA: 0x00FAB53C File Offset: 0x00FA973C
+		// Token: 0x0603585E RID: 219230 RVA: 0x00EF2584 File Offset: 0x00EF0784
 		public void Dispose()
 		{
 			this.Resolver.OnSegmentPlay = null;
@@ -477,16 +477,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x04021ACF RID: 137935
+		// Token: 0x0401C400 RID: 115712
 		private readonly GameplayResolver Resolver;
 
-		// Token: 0x04021AD0 RID: 137936
+		// Token: 0x0401C401 RID: 115713
 		private readonly ResultKeeper ResultKeeper;
 
-		// Token: 0x04021AD1 RID: 137937
+		// Token: 0x0401C402 RID: 115714
 		private readonly GameRandom Rng;
 
-		// Token: 0x04021AD2 RID: 137938
+		// Token: 0x0401C403 RID: 115715
 		[TupleElementNames(new string[]
 		{
 			"A",
@@ -499,7 +499,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 		})]
 		private readonly List<ValueTuple<GridPosition, GridPosition>> AcceptedSwaps = new List<ValueTuple<GridPosition, GridPosition>>();
 
-		// Token: 0x04021AD3 RID: 137939
+		// Token: 0x0401C404 RID: 115716
 		[TupleElementNames(new string[]
 		{
 			"A",
@@ -512,24 +512,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 		})]
 		private readonly List<ValueTuple<GridPosition, GridPosition>> ReplayBuffer = new List<ValueTuple<GridPosition, GridPosition>>();
 
-		// Token: 0x04021AD4 RID: 137940
+		// Token: 0x0401C405 RID: 115717
 		public readonly IReadOnlyList<LevelGoal> Goals;
 
-		// Token: 0x04021AD5 RID: 137941
+		// Token: 0x0401C406 RID: 115718
 		private readonly int BoardId;
 
-		// Token: 0x04021ADA RID: 137946
+		// Token: 0x0401C40B RID: 115723
 		private int AchievedGoals;
 
-		// Token: 0x04021ADD RID: 137949
+		// Token: 0x0401C40E RID: 115726
 		[Nullable(2)]
 		public Action OnWin;
 
-		// Token: 0x04021ADE RID: 137950
+		// Token: 0x0401C40F RID: 115727
 		[Nullable(2)]
 		public Action OnLose;
 
-		// Token: 0x04021ADF RID: 137951
+		// Token: 0x0401C410 RID: 115728
 		[Nullable(2)]
 		public Action<int> OnSegmentPlay;
 	}

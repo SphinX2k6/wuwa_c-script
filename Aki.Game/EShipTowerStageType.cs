@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200297B RID: 10619
+// Token: 0x02001EF6 RID: 7926
 public enum EShipTowerStageType
 {
-	// Token: 0x0400A3A5 RID: 41893
+	// Token: 0x0400A78F RID: 42895
 	OneTimeStage,
-	// Token: 0x0400A3A6 RID: 41894
+	// Token: 0x0400A790 RID: 42896
 	RefreshStage,
-	// Token: 0x0400A3A7 RID: 41895
+	// Token: 0x0400A791 RID: 42897
 	EndlessStage
 }

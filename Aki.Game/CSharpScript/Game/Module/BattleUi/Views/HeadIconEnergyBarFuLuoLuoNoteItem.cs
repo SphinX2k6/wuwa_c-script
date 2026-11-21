@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D38 RID: 23864
+	// Token: 0x02004D1A RID: 19738
 	internal class HeadIconEnergyBarFuLuoLuoNoteItem : UiPanelBase
 	{
-		// Token: 0x0603C86D RID: 247917 RVA: 0x00E85654 File Offset: 0x00E83854
+		// Token: 0x060317C6 RID: 202694 RVA: 0x00DD5DF4 File Offset: 0x00DD3FF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C86E RID: 247918 RVA: 0x00E85720 File Offset: 0x00E83920
+		// Token: 0x060317C7 RID: 202695 RVA: 0x00DD5EC0 File Offset: 0x00DD40C0
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitTweenAnim(4);
 		}
 
-		// Token: 0x0603C86F RID: 247919 RVA: 0x00E857BC File Offset: 0x00E839BC
+		// Token: 0x060317C8 RID: 202696 RVA: 0x00DD5F5C File Offset: 0x00DD415C
 		public void SetEnergyType(int energyType)
 		{
 			if (energyType == this.EnergyType)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C870 RID: 247920 RVA: 0x00E8586E File Offset: 0x00E83A6E
+		// Token: 0x060317C9 RID: 202697 RVA: 0x00DD600E File Offset: 0x00DD420E
 		protected void InitTweenAnim(int componentType)
 		{
 			if (this.TweenAnimPlayer == null)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimPlayer.InitTweenAnim(componentType, base.GetItem(componentType), false);
 		}
 
-		// Token: 0x0603C871 RID: 247921 RVA: 0x00E85897 File Offset: 0x00E83A97
+		// Token: 0x060317CA RID: 202698 RVA: 0x00DD6037 File Offset: 0x00DD4237
 		protected void PlayTweenAnim(int componentType)
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.PlayTweenAnim(componentType);
 		}
 
-		// Token: 0x0603C872 RID: 247922 RVA: 0x00E858AA File Offset: 0x00E83AAA
+		// Token: 0x060317CB RID: 202699 RVA: 0x00DD604A File Offset: 0x00DD424A
 		protected void StopTweenAnim(int componentType)
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.StopTweenAnim(componentType);
 		}
 
-		// Token: 0x0603C873 RID: 247923 RVA: 0x00E858BD File Offset: 0x00E83ABD
+		// Token: 0x060317CC RID: 202700 RVA: 0x00DD605D File Offset: 0x00DD425D
 		protected void ClearAllTweenAnim()
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -127,32 +127,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.Clear(false);
 		}
 
-		// Token: 0x0401F889 RID: 129161
+		// Token: 0x0401A342 RID: 107330
 		[Nullable(1)]
 		private readonly List<UUIItem> ItemList = new List<UUIItem>(3);
 
-		// Token: 0x0401F88A RID: 129162
+		// Token: 0x0401A343 RID: 107331
 		[Nullable(2)]
 		protected BattleUiTweenAnimPlayer TweenAnimPlayer;
 
-		// Token: 0x0401F88B RID: 129163
+		// Token: 0x0401A344 RID: 107332
 		private int EnergyType = -1;
 
-		// Token: 0x0401F88C RID: 129164
+		// Token: 0x0401A345 RID: 107333
 		private bool IsExhausted;
 
-		// Token: 0x0200BFD4 RID: 49108
+		// Token: 0x0200A9DA RID: 43482
 		private enum ENoteChildType
 		{
-			// Token: 0x04039DF7 RID: 237047
+			// Token: 0x040347B9 RID: 214969
 			Item1,
-			// Token: 0x04039DF8 RID: 237048
+			// Token: 0x040347BA RID: 214970
 			Item2,
-			// Token: 0x04039DF9 RID: 237049
+			// Token: 0x040347BB RID: 214971
 			Item3,
-			// Token: 0x04039DFA RID: 237050
+			// Token: 0x040347BC RID: 214972
 			AniDefault,
-			// Token: 0x04039DFB RID: 237051
+			// Token: 0x040347BD RID: 214973
 			AniExhaust
 		}
 	}

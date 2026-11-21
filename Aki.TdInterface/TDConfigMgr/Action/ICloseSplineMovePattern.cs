@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018EC RID: 6380
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A77 RID: 6775
 	public class ICloseSplineMovePattern
 	{
-		// Token: 0x060088C5 RID: 35013 RVA: 0x00143484 File Offset: 0x00141684
+		// Token: 0x06008FF3 RID: 36851 RVA: 0x00152D84 File Offset: 0x00150F84
 		private ICloseSplineMovePattern_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060088C6 RID: 35014 RVA: 0x001434BC File Offset: 0x001416BC
+		// Token: 0x06008FF4 RID: 36852 RVA: 0x00152DBC File Offset: 0x00150FBC
 		public static ICloseSplineMovePattern Create([Nullable(2)] ICloseSplineMovePattern instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060088C7 RID: 35015 RVA: 0x001434CF File Offset: 0x001416CF
+		// Token: 0x06008FF5 RID: 36853 RVA: 0x00152DCF File Offset: 0x00150FCF
 		public static ICloseSplineMovePattern CreateFromSetValue([Nullable(2)] ICloseSplineMovePattern_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060088C8 RID: 35016 RVA: 0x001434E2 File Offset: 0x001416E2
+		// Token: 0x06008FF6 RID: 36854 RVA: 0x00152DE2 File Offset: 0x00150FE2
 		public ICloseSplineMovePattern_SetValue ToSetValue()
 		{
 			return new ICloseSplineMovePattern_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C55 RID: 11349
-		// (get) Token: 0x060088C9 RID: 35017 RVA: 0x00143501 File Offset: 0x00141701
-		// (set) Token: 0x060088CA RID: 35018 RVA: 0x0014352C File Offset: 0x0014172C
+		// Token: 0x17002E53 RID: 11859
+		// (get) Token: 0x06008FF7 RID: 36855 RVA: 0x00152E01 File Offset: 0x00151001
+		// (set) Token: 0x06008FF8 RID: 36856 RVA: 0x00152E2C File Offset: 0x0015102C
 		public virtual ESplineMovePattern Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C56 RID: 11350
-		// (get) Token: 0x060088CB RID: 35019 RVA: 0x0014353C File Offset: 0x0014173C
-		// (set) Token: 0x060088CC RID: 35020 RVA: 0x00143576 File Offset: 0x00141776
+		// Token: 0x17002E54 RID: 11860
+		// (get) Token: 0x06008FF9 RID: 36857 RVA: 0x00152E3C File Offset: 0x0015103C
+		// (set) Token: 0x06008FFA RID: 36858 RVA: 0x00152E76 File Offset: 0x00151076
 		public virtual float? GravitySwitchAngularVelocity
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040055D0 RID: 21968
+		// Token: 0x04005A20 RID: 23072
 		[Nullable(2)]
 		protected ICloseSplineMovePattern FbInstance;
 
-		// Token: 0x040055D1 RID: 21969
+		// Token: 0x04005A21 RID: 23073
 		[Nullable(2)]
 		protected ICloseSplineMovePattern_SetValue PocoInterface;
 	}

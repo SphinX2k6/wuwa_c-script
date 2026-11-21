@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CDC RID: 23772
+	// Token: 0x02006310 RID: 25360
 	public class TWuWaGoEntityDataUnion
 	{
-		// Token: 0x1700B270 RID: 45680
-		// (get) Token: 0x06028ACB RID: 166603 RVA: 0x005965C6 File Offset: 0x005947C6
-		// (set) Token: 0x06028ACC RID: 166604 RVA: 0x005965CE File Offset: 0x005947CE
+		// Token: 0x1700BBCC RID: 48076
+		// (get) Token: 0x0602B11F RID: 176415 RVA: 0x005DEE36 File Offset: 0x005DD036
+		// (set) Token: 0x0602B120 RID: 176416 RVA: 0x005DEE3E File Offset: 0x005DD03E
 		public TWuWaGoEntityData Type { get; set; }
 
-		// Token: 0x1700B271 RID: 45681
-		// (get) Token: 0x06028ACD RID: 166605 RVA: 0x005965D7 File Offset: 0x005947D7
-		// (set) Token: 0x06028ACE RID: 166606 RVA: 0x005965DF File Offset: 0x005947DF
+		// Token: 0x1700BBCD RID: 48077
+		// (get) Token: 0x0602B121 RID: 176417 RVA: 0x005DEE47 File Offset: 0x005DD047
+		// (set) Token: 0x0602B122 RID: 176418 RVA: 0x005DEE4F File Offset: 0x005DD04F
 		public object Value { get; set; }
 
-		// Token: 0x06028ACF RID: 166607 RVA: 0x005965E8 File Offset: 0x005947E8
+		// Token: 0x0602B123 RID: 176419 RVA: 0x005DEE58 File Offset: 0x005DD058
 		public TWuWaGoEntityDataUnion()
 		{
 			this.Type = TWuWaGoEntityData.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028AD0 RID: 166608 RVA: 0x005965FE File Offset: 0x005947FE
+		// Token: 0x0602B124 RID: 176420 RVA: 0x005DEE6E File Offset: 0x005DD06E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028AD1 RID: 166609 RVA: 0x00596610 File Offset: 0x00594810
+		// Token: 0x0602B125 RID: 176421 RVA: 0x005DEE80 File Offset: 0x005DD080
 		public IWuWaGoBowTrapT AsIWuWaGoBowTrap()
 		{
 			return this.As<IWuWaGoBowTrapT>();
 		}
 
-		// Token: 0x06028AD2 RID: 166610 RVA: 0x00596618 File Offset: 0x00594818
+		// Token: 0x0602B126 RID: 176422 RVA: 0x005DEE88 File Offset: 0x005DD088
 		public static TWuWaGoEntityDataUnion FromIWuWaGoBowTrap(IWuWaGoBowTrapT _iwuwagobowtrap)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028AD3 RID: 166611 RVA: 0x0059662D File Offset: 0x0059482D
+		// Token: 0x0602B127 RID: 176423 RVA: 0x005DEE9D File Offset: 0x005DD09D
 		public IWuWaGoEndGridT AsIWuWaGoEndGrid()
 		{
 			return this.As<IWuWaGoEndGridT>();
 		}
 
-		// Token: 0x06028AD4 RID: 166612 RVA: 0x00596635 File Offset: 0x00594835
+		// Token: 0x0602B128 RID: 176424 RVA: 0x005DEEA5 File Offset: 0x005DD0A5
 		public static TWuWaGoEntityDataUnion FromIWuWaGoEndGrid(IWuWaGoEndGridT _iwuwagoendgrid)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028AD5 RID: 166613 RVA: 0x0059664A File Offset: 0x0059484A
+		// Token: 0x0602B129 RID: 176425 RVA: 0x005DEEBA File Offset: 0x005DD0BA
 		public IWuWaGoGearT AsIWuWaGoGear()
 		{
 			return this.As<IWuWaGoGearT>();
 		}
 
-		// Token: 0x06028AD6 RID: 166614 RVA: 0x00596652 File Offset: 0x00594852
+		// Token: 0x0602B12A RID: 176426 RVA: 0x005DEEC2 File Offset: 0x005DD0C2
 		public static TWuWaGoEntityDataUnion FromIWuWaGoGear(IWuWaGoGearT _iwuwagogear)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028AD7 RID: 166615 RVA: 0x00596667 File Offset: 0x00594867
+		// Token: 0x0602B12B RID: 176427 RVA: 0x005DEED7 File Offset: 0x005DD0D7
 		public IWuWaGoLevelCenterT AsIWuWaGoLevelCenter()
 		{
 			return this.As<IWuWaGoLevelCenterT>();
 		}
 
-		// Token: 0x06028AD8 RID: 166616 RVA: 0x0059666F File Offset: 0x0059486F
+		// Token: 0x0602B12C RID: 176428 RVA: 0x005DEEDF File Offset: 0x005DD0DF
 		public static TWuWaGoEntityDataUnion FromIWuWaGoLevelCenter(IWuWaGoLevelCenterT _iwuwagolevelcenter)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028AD9 RID: 166617 RVA: 0x00596684 File Offset: 0x00594884
+		// Token: 0x0602B12D RID: 176429 RVA: 0x005DEEF4 File Offset: 0x005DD0F4
 		public IWuWaGoMovableFloorT AsIWuWaGoMovableFloor()
 		{
 			return this.As<IWuWaGoMovableFloorT>();
 		}
 
-		// Token: 0x06028ADA RID: 166618 RVA: 0x0059668C File Offset: 0x0059488C
+		// Token: 0x0602B12E RID: 176430 RVA: 0x005DEEFC File Offset: 0x005DD0FC
 		public static TWuWaGoEntityDataUnion FromIWuWaGoMovableFloor(IWuWaGoMovableFloorT _iwuwagomovablefloor)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028ADB RID: 166619 RVA: 0x005966A1 File Offset: 0x005948A1
+		// Token: 0x0602B12F RID: 176431 RVA: 0x005DEF11 File Offset: 0x005DD111
 		public IWuWaGoPressureTriggerT AsIWuWaGoPressureTrigger()
 		{
 			return this.As<IWuWaGoPressureTriggerT>();
 		}
 
-		// Token: 0x06028ADC RID: 166620 RVA: 0x005966A9 File Offset: 0x005948A9
+		// Token: 0x0602B130 RID: 176432 RVA: 0x005DEF19 File Offset: 0x005DD119
 		public static TWuWaGoEntityDataUnion FromIWuWaGoPressureTrigger(IWuWaGoPressureTriggerT _iwuwagopressuretrigger)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028ADD RID: 166621 RVA: 0x005966BE File Offset: 0x005948BE
+		// Token: 0x0602B131 RID: 176433 RVA: 0x005DEF2E File Offset: 0x005DD12E
 		public IWuWaGoPullRodT AsIWuWaGoPullRod()
 		{
 			return this.As<IWuWaGoPullRodT>();
 		}
 
-		// Token: 0x06028ADE RID: 166622 RVA: 0x005966C6 File Offset: 0x005948C6
+		// Token: 0x0602B132 RID: 176434 RVA: 0x005DEF36 File Offset: 0x005DD136
 		public static TWuWaGoEntityDataUnion FromIWuWaGoPullRod(IWuWaGoPullRodT _iwuwagopullrod)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028ADF RID: 166623 RVA: 0x005966DB File Offset: 0x005948DB
+		// Token: 0x0602B133 RID: 176435 RVA: 0x005DEF4B File Offset: 0x005DD14B
 		public IWuWaGoSaveGridT AsIWuWaGoSaveGrid()
 		{
 			return this.As<IWuWaGoSaveGridT>();
 		}
 
-		// Token: 0x06028AE0 RID: 166624 RVA: 0x005966E3 File Offset: 0x005948E3
+		// Token: 0x0602B134 RID: 176436 RVA: 0x005DEF53 File Offset: 0x005DD153
 		public static TWuWaGoEntityDataUnion FromIWuWaGoSaveGrid(IWuWaGoSaveGridT _iwuwagosavegrid)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028AE1 RID: 166625 RVA: 0x005966F8 File Offset: 0x005948F8
+		// Token: 0x0602B135 RID: 176437 RVA: 0x005DEF68 File Offset: 0x005DD168
 		public IWuWaGoSpikeTrapT AsIWuWaGoSpikeTrap()
 		{
 			return this.As<IWuWaGoSpikeTrapT>();
 		}
 
-		// Token: 0x06028AE2 RID: 166626 RVA: 0x00596700 File Offset: 0x00594900
+		// Token: 0x0602B136 RID: 176438 RVA: 0x005DEF70 File Offset: 0x005DD170
 		public static TWuWaGoEntityDataUnion FromIWuWaGoSpikeTrap(IWuWaGoSpikeTrapT _iwuwagospiketrap)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028AE3 RID: 166627 RVA: 0x00596716 File Offset: 0x00594916
+		// Token: 0x0602B137 RID: 176439 RVA: 0x005DEF86 File Offset: 0x005DD186
 		public IWuWaGoStartGridT AsIWuWaGoStartGrid()
 		{
 			return this.As<IWuWaGoStartGridT>();
 		}
 
-		// Token: 0x06028AE4 RID: 166628 RVA: 0x0059671E File Offset: 0x0059491E
+		// Token: 0x0602B138 RID: 176440 RVA: 0x005DEF8E File Offset: 0x005DD18E
 		public static TWuWaGoEntityDataUnion FromIWuWaGoStartGrid(IWuWaGoStartGridT _iwuwagostartgrid)
 		{
 			return new TWuWaGoEntityDataUnion
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028AE5 RID: 166629 RVA: 0x00596734 File Offset: 0x00594934
+		// Token: 0x0602B139 RID: 176441 RVA: 0x005DEFA4 File Offset: 0x005DD1A4
 		public static int Pack(FlatBufferBuilder builder, TWuWaGoEntityDataUnion _o)
 		{
 			switch (_o.Type)

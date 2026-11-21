@@ -5,29 +5,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x02004709 RID: 18185
+	// Token: 0x02003639 RID: 13881
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WuWaGoWorldMoveTarget : IWuWaGoWorldMoveTarget
 	{
-		// Token: 0x170076BD RID: 30397
-		// (get) Token: 0x0602F87E RID: 194686 RVA: 0x00B037E9 File Offset: 0x00B019E9
-		// (set) Token: 0x0602F87F RID: 194687 RVA: 0x00B037F1 File Offset: 0x00B019F1
+		// Token: 0x17004979 RID: 18809
+		// (get) Token: 0x06024044 RID: 147524 RVA: 0x00A334B9 File Offset: 0x00A316B9
+		// (set) Token: 0x06024045 RID: 147525 RVA: 0x00A334C1 File Offset: 0x00A316C1
 		public WuWaGoBaseUnit Unit { get; set; }
 
-		// Token: 0x170076BE RID: 30398
-		// (get) Token: 0x0602F880 RID: 194688 RVA: 0x00B037FA File Offset: 0x00B019FA
-		// (set) Token: 0x0602F881 RID: 194689 RVA: 0x00B03802 File Offset: 0x00B01A02
+		// Token: 0x1700497A RID: 18810
+		// (get) Token: 0x06024046 RID: 147526 RVA: 0x00A334CA File Offset: 0x00A316CA
+		// (set) Token: 0x06024047 RID: 147527 RVA: 0x00A334D2 File Offset: 0x00A316D2
 		public AActor Actor { get; set; }
 
-		// Token: 0x170076BF RID: 30399
-		// (get) Token: 0x0602F882 RID: 194690 RVA: 0x00B0380B File Offset: 0x00B01A0B
-		// (set) Token: 0x0602F883 RID: 194691 RVA: 0x00B03813 File Offset: 0x00B01A13
+		// Token: 0x1700497B RID: 18811
+		// (get) Token: 0x06024048 RID: 147528 RVA: 0x00A334DB File Offset: 0x00A316DB
+		// (set) Token: 0x06024049 RID: 147529 RVA: 0x00A334E3 File Offset: 0x00A316E3
 		public Vector FromWorldPosition { get; set; }
 
-		// Token: 0x170076C0 RID: 30400
-		// (get) Token: 0x0602F884 RID: 194692 RVA: 0x00B0381C File Offset: 0x00B01A1C
-		// (set) Token: 0x0602F885 RID: 194693 RVA: 0x00B03824 File Offset: 0x00B01A24
+		// Token: 0x1700497C RID: 18812
+		// (get) Token: 0x0602404A RID: 147530 RVA: 0x00A334EC File Offset: 0x00A316EC
+		// (set) Token: 0x0602404B RID: 147531 RVA: 0x00A334F4 File Offset: 0x00A316F4
 		public Vector ToWorldPosition { get; set; }
 	}
 }

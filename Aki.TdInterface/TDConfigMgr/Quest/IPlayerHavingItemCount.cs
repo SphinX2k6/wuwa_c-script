@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001051 RID: 4177
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200117F RID: 4479
 	public class IPlayerHavingItemCount : IBindingProgressType
 	{
-		// Token: 0x06005D96 RID: 23958 RVA: 0x000E283C File Offset: 0x000E0A3C
+		// Token: 0x06006388 RID: 25480 RVA: 0x000EF810 File Offset: 0x000EDA10
 		private IPlayerHavingItemCount_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D97 RID: 23959 RVA: 0x000E2874 File Offset: 0x000E0A74
+		// Token: 0x06006389 RID: 25481 RVA: 0x000EF848 File Offset: 0x000EDA48
 		public static IPlayerHavingItemCount Create([Nullable(2)] IPlayerHavingItemCount instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D98 RID: 23960 RVA: 0x000E2887 File Offset: 0x000E0A87
+		// Token: 0x0600638A RID: 25482 RVA: 0x000EF85B File Offset: 0x000EDA5B
 		public static IPlayerHavingItemCount CreateFromSetValue([Nullable(2)] IPlayerHavingItemCount_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D99 RID: 23961 RVA: 0x000E289A File Offset: 0x000E0A9A
+		// Token: 0x0600638B RID: 25483 RVA: 0x000EF86E File Offset: 0x000EDA6E
 		public new IPlayerHavingItemCount_SetValue ToSetValue()
 		{
 			return new IPlayerHavingItemCount_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001ED3 RID: 7891
-		// (get) Token: 0x06005D9A RID: 23962 RVA: 0x000E28B9 File Offset: 0x000E0AB9
-		// (set) Token: 0x06005D9B RID: 23963 RVA: 0x000E28E4 File Offset: 0x000E0AE4
+		// Token: 0x17002082 RID: 8322
+		// (get) Token: 0x0600638C RID: 25484 RVA: 0x000EF88D File Offset: 0x000EDA8D
+		// (set) Token: 0x0600638D RID: 25485 RVA: 0x000EF8B8 File Offset: 0x000EDAB8
 		public override EBindingProgressType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001ED4 RID: 7892
-		// (get) Token: 0x06005D9C RID: 23964 RVA: 0x000E28F2 File Offset: 0x000E0AF2
-		// (set) Token: 0x06005D9D RID: 23965 RVA: 0x000E291D File Offset: 0x000E0B1D
+		// Token: 0x17002083 RID: 8323
+		// (get) Token: 0x0600638E RID: 25486 RVA: 0x000EF8C6 File Offset: 0x000EDAC6
+		// (set) Token: 0x0600638F RID: 25487 RVA: 0x000EF8F1 File Offset: 0x000EDAF1
 		public virtual int ItemId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003858 RID: 14424
+		// Token: 0x04003BA0 RID: 15264
 		[Nullable(2)]
 		protected new IPlayerHavingItemCount FbInstance;
 
-		// Token: 0x04003859 RID: 14425
+		// Token: 0x04003BA1 RID: 15265
 		[Nullable(2)]
 		protected new IPlayerHavingItemCount_SetValue PocoInterface;
 	}

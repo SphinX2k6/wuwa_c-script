@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200094D RID: 2381
+	// Token: 0x020009FC RID: 2556
 	public class EFollowDecorationTypeJsonConverter : JsonConverter<EFollowDecorationType>
 	{
-		// Token: 0x0600358D RID: 13709 RVA: 0x0008BBEC File Offset: 0x00089DEC
+		// Token: 0x06003902 RID: 14594 RVA: 0x000938A4 File Offset: 0x00091AA4
 		public override EFollowDecorationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EFollowDecorationTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600358E RID: 13710 RVA: 0x0008BC10 File Offset: 0x00089E10
+		// Token: 0x06003903 RID: 14595 RVA: 0x000938C8 File Offset: 0x00091AC8
 		public override void Write(Utf8JsonWriter writer, EFollowDecorationType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

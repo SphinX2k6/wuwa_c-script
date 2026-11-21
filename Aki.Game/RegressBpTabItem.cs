@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001481 RID: 5249
+// Token: 0x02000935 RID: 2357
 [NullableContext(1)]
 [Nullable(0)]
 internal class RegressBpTabItem : CommonTabItemBase
 {
-	// Token: 0x06009488 RID: 38024 RVA: 0x001FFDC0 File Offset: 0x001FDFC0
+	// Token: 0x0600681D RID: 26653 RVA: 0x00208D24 File Offset: 0x00206F24
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ internal class RegressBpTabItem : CommonTabItemBase
 		};
 	}
 
-	// Token: 0x06009489 RID: 38025 RVA: 0x001FFE6C File Offset: 0x001FE06C
+	// Token: 0x0600681E RID: 26654 RVA: 0x00208DD0 File Offset: 0x00206FD0
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		UUIText text = base.GetText(1);
@@ -48,7 +48,7 @@ internal class RegressBpTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600948A RID: 38026 RVA: 0x001FFEDB File Offset: 0x001FE0DB
+	// Token: 0x0600681F RID: 26655 RVA: 0x00208E3F File Offset: 0x0020703F
 	public void BindRedDot(ERedDotName redDotName, int uId = 0)
 	{
 		this.RedDotName = new ERedDotName?(redDotName);
@@ -58,7 +58,7 @@ internal class RegressBpTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600948B RID: 38027 RVA: 0x001FFF0A File Offset: 0x001FE10A
+	// Token: 0x06006820 RID: 26656 RVA: 0x00208E6E File Offset: 0x0020706E
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -68,24 +68,24 @@ internal class RegressBpTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600948C RID: 38028 RVA: 0x001FFF3A File Offset: 0x001FE13A
+	// Token: 0x06006821 RID: 26657 RVA: 0x00208E9E File Offset: 0x0020709E
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x0600948D RID: 38029 RVA: 0x001FFF3C File Offset: 0x001FE13C
+	// Token: 0x06006822 RID: 26658 RVA: 0x00208EA0 File Offset: 0x002070A0
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(0).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x0600948E RID: 38030 RVA: 0x001FFF4F File Offset: 0x001FE14F
+	// Token: 0x06006823 RID: 26659 RVA: 0x00208EB3 File Offset: 0x002070B3
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600948F RID: 38031 RVA: 0x001FFF58 File Offset: 0x001FE158
+	// Token: 0x06006824 RID: 26660 RVA: 0x00208EBC File Offset: 0x002070BC
 	private void ToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -94,44 +94,44 @@ internal class RegressBpTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x06009490 RID: 38032 RVA: 0x001FFF71 File Offset: 0x001FE171
+	// Token: 0x06006825 RID: 26661 RVA: 0x00208ED5 File Offset: 0x002070D5
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SelectedCallBack(base.GridIndex);
 	}
 
-	// Token: 0x06009491 RID: 38033 RVA: 0x001FFF84 File Offset: 0x001FE184
+	// Token: 0x06006826 RID: 26662 RVA: 0x00208EE8 File Offset: 0x002070E8
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x06009492 RID: 38034 RVA: 0x001FFF8C File Offset: 0x001FE18C
+	// Token: 0x06006827 RID: 26663 RVA: 0x00208EF0 File Offset: 0x002070F0
 	protected override void OnClear()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x040041D8 RID: 16856
+	// Token: 0x04004270 RID: 17008
 	private ERedDotName? RedDotName;
 
-	// Token: 0x02007AA7 RID: 31399
+	// Token: 0x02006C2B RID: 27691
 	[NullableContext(0)]
 	private class ETabItemComponents
 	{
-		// Token: 0x040285B0 RID: 165296
+		// Token: 0x040238CA RID: 145610
 		public const int Toggle = 0;
 
-		// Token: 0x040285B1 RID: 165297
+		// Token: 0x040238CB RID: 145611
 		public const int TxtType = 1;
 
-		// Token: 0x040285B2 RID: 165298
+		// Token: 0x040238CC RID: 145612
 		public const int PanelUp = 2;
 
-		// Token: 0x040285B3 RID: 165299
+		// Token: 0x040238CD RID: 145613
 		public const int PanelFinish = 3;
 
-		// Token: 0x040285B4 RID: 165300
+		// Token: 0x040238CE RID: 145614
 		public const int PanelRedDot = 4;
 	}
 }

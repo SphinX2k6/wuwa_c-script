@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200695A RID: 26970
+	// Token: 0x02005AB5 RID: 23221
 	public enum EOptionType
 	{
-		// Token: 0x04022FC4 RID: 143300
+		// Token: 0x0401E1AE RID: 123310
 		Normal,
-		// Token: 0x04022FC5 RID: 143301
+		// Token: 0x0401E1AF RID: 123311
 		Dynamic,
-		// Token: 0x04022FC6 RID: 143302
+		// Token: 0x0401E1B0 RID: 123312
 		Random,
-		// Token: 0x04022FC7 RID: 143303
+		// Token: 0x0401E1B1 RID: 123313
 		Custom
 	}
 }

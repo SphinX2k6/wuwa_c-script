@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CED RID: 23789
+	// Token: 0x02004CCF RID: 19663
 	public class BattleSkillLongPressItem : UiPanelBase
 	{
-		// Token: 0x0603C3D6 RID: 246742 RVA: 0x00E6BBA4 File Offset: 0x00E69DA4
+		// Token: 0x0603132C RID: 201516 RVA: 0x00DBC158 File Offset: 0x00DBA358
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C3D7 RID: 246743 RVA: 0x00E6BBEC File Offset: 0x00E69DEC
+		// Token: 0x0603132D RID: 201517 RVA: 0x00DBC1A0 File Offset: 0x00DBA3A0
 		protected override void OnStart()
 		{
 			this.ProgressTex = base.GetTexture(0);
@@ -36,27 +36,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetComponentActive(this.TargetActive);
 		}
 
-		// Token: 0x0603C3D8 RID: 246744 RVA: 0x00E6BC1D File Offset: 0x00E69E1D
+		// Token: 0x0603132E RID: 201518 RVA: 0x00DBC1D1 File Offset: 0x00DBA3D1
 		protected override void OnBeforeShow()
 		{
 			this.BindEvents();
 		}
 
-		// Token: 0x0603C3D9 RID: 246745 RVA: 0x00E6BC25 File Offset: 0x00E69E25
+		// Token: 0x0603132F RID: 201519 RVA: 0x00DBC1D9 File Offset: 0x00DBA3D9
 		protected override void OnAfterHide()
 		{
 			this.UnbindEvents();
 			this.ClearTimer();
 		}
 
-		// Token: 0x0603C3DA RID: 246746 RVA: 0x00E6BC33 File Offset: 0x00E69E33
+		// Token: 0x06031330 RID: 201520 RVA: 0x00DBC1E7 File Offset: 0x00DBA3E7
 		protected override void OnBeforeDestroy()
 		{
 			this.UnbindEvents();
 			this.ClearTimer();
 		}
 
-		// Token: 0x0603C3DB RID: 246747 RVA: 0x00E6BC44 File Offset: 0x00E69E44
+		// Token: 0x06031331 RID: 201521 RVA: 0x00DBC1F8 File Offset: 0x00DBA3F8
 		private void BindEvents()
 		{
 			if (this.IsBindEvent)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.SkillLongPressEnd, new Action<EInputAction>(this.OnSkillLongPressEnd));
 		}
 
-		// Token: 0x0603C3DC RID: 246748 RVA: 0x00E6BC9C File Offset: 0x00E69E9C
+		// Token: 0x06031332 RID: 201522 RVA: 0x00DBC250 File Offset: 0x00DBA450
 		private void UnbindEvents()
 		{
 			if (!this.IsBindEvent)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.SkillLongPressEnd, new Action<EInputAction>(this.OnSkillLongPressEnd));
 		}
 
-		// Token: 0x0603C3DD RID: 246749 RVA: 0x00E6BCF1 File Offset: 0x00E69EF1
+		// Token: 0x06031333 RID: 201523 RVA: 0x00DBC2A5 File Offset: 0x00DBA4A5
 		private void ClearTimer()
 		{
 			if (this.Timer == null)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Timer = null;
 		}
 
-		// Token: 0x0603C3DE RID: 246750 RVA: 0x00E6BD14 File Offset: 0x00E69F14
+		// Token: 0x06031334 RID: 201524 RVA: 0x00DBC2C8 File Offset: 0x00DBA4C8
 		public void SetComponentActive(bool visibility)
 		{
 			if (this.TargetActive == visibility && !this.IsFirstShow)
@@ -113,19 +113,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			progressTex.SetFillAmount(0f);
 		}
 
-		// Token: 0x0603C3DF RID: 246751 RVA: 0x00E6BD66 File Offset: 0x00E69F66
+		// Token: 0x06031335 RID: 201525 RVA: 0x00DBC31A File Offset: 0x00DBA51A
 		public void SetAction(in EInputAction action)
 		{
 			this.Action = new EInputAction?(action);
 		}
 
-		// Token: 0x0603C3E0 RID: 246752 RVA: 0x00E6BD79 File Offset: 0x00E69F79
+		// Token: 0x06031336 RID: 201526 RVA: 0x00DBC32D File Offset: 0x00DBA52D
 		public void SetDuration(float duration)
 		{
 			this.Duration = duration * (float)TimeUtil.Instance.InverseMillisecond;
 		}
 
-		// Token: 0x0603C3E1 RID: 246753 RVA: 0x00E6BD90 File Offset: 0x00E69F90
+		// Token: 0x06031337 RID: 201527 RVA: 0x00DBC344 File Offset: 0x00DBA544
 		private void OnSkillLongPressStart(EInputAction action)
 		{
 			if (this.Action != action)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StartProgress();
 		}
 
-		// Token: 0x0603C3E2 RID: 246754 RVA: 0x00E6BDD8 File Offset: 0x00E69FD8
+		// Token: 0x06031338 RID: 201528 RVA: 0x00DBC38C File Offset: 0x00DBA58C
 		private void OnSkillLongPressEnd(EInputAction action)
 		{
 			if (this.Action != action)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			progressTex.SetFillAmount(0f);
 		}
 
-		// Token: 0x0603C3E3 RID: 246755 RVA: 0x00E6BE28 File Offset: 0x00E6A028
+		// Token: 0x06031339 RID: 201529 RVA: 0x00DBC3DC File Offset: 0x00DBA5DC
 		public void StartProgress()
 		{
 			this.ClearTimer();
@@ -177,42 +177,42 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, (float)num, 1f, null, null, true);
 		}
 
-		// Token: 0x0603C3E4 RID: 246756 RVA: 0x00E6BE75 File Offset: 0x00E6A075
+		// Token: 0x0603133A RID: 201530 RVA: 0x00DBC429 File Offset: 0x00DBA629
 		private void StopProgress()
 		{
 			this.ClearTimer();
 		}
 
-		// Token: 0x0401F649 RID: 128585
+		// Token: 0x0401A102 RID: 106754
 		public bool TargetActive;
 
-		// Token: 0x0401F64A RID: 128586
+		// Token: 0x0401A103 RID: 106755
 		[Nullable(2)]
 		private UUITexture ProgressTex;
 
-		// Token: 0x0401F64B RID: 128587
+		// Token: 0x0401A104 RID: 106756
 		private bool IsBindEvent;
 
-		// Token: 0x0401F64C RID: 128588
+		// Token: 0x0401A105 RID: 106757
 		private EInputAction? Action;
 
-		// Token: 0x0401F64D RID: 128589
+		// Token: 0x0401A106 RID: 106758
 		private float Duration;
 
-		// Token: 0x0401F64E RID: 128590
+		// Token: 0x0401A107 RID: 106759
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x0401F64F RID: 128591
+		// Token: 0x0401A108 RID: 106760
 		private float StartTime;
 
-		// Token: 0x0401F650 RID: 128592
+		// Token: 0x0401A109 RID: 106761
 		private bool IsFirstShow = true;
 
-		// Token: 0x0200BF49 RID: 48969
+		// Token: 0x0200A94F RID: 43343
 		private enum ESkillLongPressItem
 		{
-			// Token: 0x04039B23 RID: 236323
+			// Token: 0x040344E5 RID: 214245
 			ProgressTex
 		}
 	}

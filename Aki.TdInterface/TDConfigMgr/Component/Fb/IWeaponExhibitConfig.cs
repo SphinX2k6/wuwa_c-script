@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DD7 RID: 3543
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000ED3 RID: 3795
 	public class IWeaponExhibitConfig : IExhibitItemType
 	{
-		// Token: 0x06005061 RID: 20577 RVA: 0x000C6958 File Offset: 0x000C4B58
-		[NullableContext(1)]
+		// Token: 0x06005586 RID: 21894 RVA: 0x000D21A8 File Offset: 0x000D03A8
 		public static IWeaponExhibitConfig Create(IWeaponExhibitConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A70 RID: 6768
-		// (get) Token: 0x06005062 RID: 20578 RVA: 0x000C6977 File Offset: 0x000C4B77
+		// Token: 0x17001BDB RID: 7131
+		// (get) Token: 0x06005587 RID: 21895 RVA: 0x000D21C7 File Offset: 0x000D03C7
 		public override EExhibitItemType Type
 		{
 			get
@@ -34,12 +31,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A71 RID: 6769
-		// (get) Token: 0x06005063 RID: 20579 RVA: 0x000C6984 File Offset: 0x000C4B84
-		[Nullable(1)]
+		// Token: 0x17001BDC RID: 7132
+		// (get) Token: 0x06005588 RID: 21896 RVA: 0x000D21D4 File Offset: 0x000D03D4
 		public virtual VectorInfo Offset
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._OffsetInited)
@@ -52,10 +47,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A72 RID: 6770
-		// (get) Token: 0x06005064 RID: 20580 RVA: 0x000C69B8 File Offset: 0x000C4BB8
+		// Token: 0x17001BDD RID: 7133
+		// (get) Token: 0x06005589 RID: 21897 RVA: 0x000D2208 File Offset: 0x000D0408
+		[Nullable(2)]
 		public virtual IExhibitEffect ActiveEffect
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._ActiveEffectInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E22 RID: 11810
+		// Token: 0x040030E8 RID: 12520
 		private IWeaponExhibitConfig Instance;
 
-		// Token: 0x04002E23 RID: 11811
+		// Token: 0x040030E9 RID: 12521
+		[Nullable(2)]
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04002E24 RID: 11812
+		// Token: 0x040030EA RID: 12522
 		private bool _OffsetInited;
 
-		// Token: 0x04002E25 RID: 11813
+		// Token: 0x040030EB RID: 12523
+		[Nullable(2)]
 		private IExhibitEffect _ActiveEffectCache;
 
-		// Token: 0x04002E26 RID: 11814
+		// Token: 0x040030EC RID: 12524
 		private bool _ActiveEffectInited;
 	}
 }

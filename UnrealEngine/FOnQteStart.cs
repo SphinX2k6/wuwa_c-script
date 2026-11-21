@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002707 RID: 9991
+	// Token: 0x020007DD RID: 2013
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnQteStart : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060250B1 RID: 151729 RVA: 0x0036D296 File Offset: 0x0036B496
+		// Token: 0x0600AD20 RID: 44320 RVA: 0x000FFF3A File Offset: 0x000FE13A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnQteStart.StaticFunctionPtr();
 		}
 
-		// Token: 0x060250B2 RID: 151730 RVA: 0x0036D2A2 File Offset: 0x0036B4A2
+		// Token: 0x0600AD21 RID: 44321 RVA: 0x000FFF46 File Offset: 0x000FE146
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnQteStart._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnQteStart._FunctionPtr;
 		}
 
-		// Token: 0x060250B3 RID: 151731 RVA: 0x0036D2C5 File Offset: 0x0036B4C5
+		// Token: 0x0600AD22 RID: 44322 RVA: 0x000FFF69 File Offset: 0x000FE169
 		public FOnQteStart()
 		{
 		}
 
-		// Token: 0x060250B4 RID: 151732 RVA: 0x0036D2CD File Offset: 0x0036B4CD
+		// Token: 0x0600AD23 RID: 44323 RVA: 0x000FFF71 File Offset: 0x000FE171
 		[NullableContext(2)]
 		public FOnQteStart(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060250B5 RID: 151733 RVA: 0x0036D2D7 File Offset: 0x0036B4D7
+		// Token: 0x0600AD24 RID: 44324 RVA: 0x000FFF7B File Offset: 0x000FE17B
 		public FOnQteStart(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060250B6 RID: 151734 RVA: 0x0036D2E2 File Offset: 0x0036B4E2
+		// Token: 0x0600AD25 RID: 44325 RVA: 0x000FFF86 File Offset: 0x000FE186
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FMovieSceneQteEventParam>) ?? ((Action<FMovieSceneQteEventParam>)Delegate.CreateDelegate(typeof(Action<FMovieSceneQteEventParam>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060250B7 RID: 151735 RVA: 0x0036D314 File Offset: 0x0036B514
+		// Token: 0x0600AD26 RID: 44326 RVA: 0x000FFFB8 File Offset: 0x000FE1B8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FMovieSceneQteEventParam> Callback)
 		{
 			if (FOnQteStart.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FOnQteStart.RegisterId);
 		}
 
-		// Token: 0x060250B8 RID: 151736 RVA: 0x0036D34E File Offset: 0x0036B54E
+		// Token: 0x0600AD27 RID: 44327 RVA: 0x000FFFF2 File Offset: 0x000FE1F2
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FMovieSceneQteEventParam> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060250B9 RID: 151737 RVA: 0x0036D358 File Offset: 0x0036B558
+		// Token: 0x0600AD28 RID: 44328 RVA: 0x000FFFFC File Offset: 0x000FE1FC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FMovieSceneQteEventParam Param)
 		{
 			FOnQteStart.__FOnQteStart_DelegateParams* ptr = stackalloc FOnQteStart.__FOnQteStart_DelegateParams[(UIntPtr)199] + 15L / (long)sizeof(FOnQteStart.__FOnQteStart_DelegateParams) & -16L;
@@ -91,10 +88,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnQteStart._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060250BA RID: 151738 RVA: 0x0036D3C4 File Offset: 0x0036B5C4
+		// Token: 0x0600AD29 RID: 44329 RVA: 0x00100068 File Offset: 0x000FE268
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FMovieSceneQteEventParam> action = target as Action<FMovieSceneQteEventParam>;
@@ -106,31 +102,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x04013F4D RID: 81741
+		// Token: 0x04004AA0 RID: 19104
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04013F4E RID: 81742
+		// Token: 0x04004AA1 RID: 19105
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SequenceDialogue.OnQteStart__DelegateSignature";
 
-		// Token: 0x04013F4F RID: 81743
+		// Token: 0x04004AA2 RID: 19106
 		private static int RegisterId;
 
-		// Token: 0x020036AA RID: 13994
+		// Token: 0x02000F87 RID: 3975
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 184)]
-		protected ref struct __FOnQteStart_DelegateParams
+		private ref struct __FOnQteStart_DelegateParams
 		{
-			// Token: 0x040177BD RID: 96189
+			// Token: 0x04006381 RID: 25473
 			[FieldOffset(0)]
 			public byte Param;
 		}
 
-		// Token: 0x020036AB RID: 13995
+		// Token: 0x02000F88 RID: 3976
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040177BE RID: 96190
+			// Token: 0x04006382 RID: 25474
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

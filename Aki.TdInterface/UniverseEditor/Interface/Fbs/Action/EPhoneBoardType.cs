@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FCB RID: 24523
+	// Token: 0x02006622 RID: 26146
 	public enum EPhoneBoardType : byte
 	{
-		// Token: 0x0400FF29 RID: 65321
+		// Token: 0x04010CEF RID: 68847
 		MessageBoard
 	}
 }

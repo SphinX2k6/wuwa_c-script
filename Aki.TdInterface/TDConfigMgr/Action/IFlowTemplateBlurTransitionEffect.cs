@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A9B RID: 6811
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C34 RID: 7220
 	public class IFlowTemplateBlurTransitionEffect : IFlowTemplateTransitionEffect
 	{
-		// Token: 0x06009214 RID: 37396 RVA: 0x00153CB8 File Offset: 0x00151EB8
+		// Token: 0x06009994 RID: 39316 RVA: 0x00163EA4 File Offset: 0x001620A4
 		private IFlowTemplateBlurTransitionEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009215 RID: 37397 RVA: 0x00153CF0 File Offset: 0x00151EF0
+		// Token: 0x06009995 RID: 39317 RVA: 0x00163EDC File Offset: 0x001620DC
 		public static IFlowTemplateBlurTransitionEffect Create([Nullable(2)] IFlowTemplateBlurTransitionEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009216 RID: 37398 RVA: 0x00153D03 File Offset: 0x00151F03
+		// Token: 0x06009996 RID: 39318 RVA: 0x00163EEF File Offset: 0x001620EF
 		public static IFlowTemplateBlurTransitionEffect CreateFromSetValue([Nullable(2)] IFlowTemplateBlurTransitionEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009217 RID: 37399 RVA: 0x00153D16 File Offset: 0x00151F16
+		// Token: 0x06009997 RID: 39319 RVA: 0x00163F02 File Offset: 0x00162102
 		public new IFlowTemplateBlurTransitionEffect_SetValue ToSetValue()
 		{
 			return new IFlowTemplateBlurTransitionEffect_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E77 RID: 11895
-		// (get) Token: 0x06009218 RID: 37400 RVA: 0x00153D4D File Offset: 0x00151F4D
-		// (set) Token: 0x06009219 RID: 37401 RVA: 0x00153D78 File Offset: 0x00151F78
+		// Token: 0x17003089 RID: 12425
+		// (get) Token: 0x06009998 RID: 39320 RVA: 0x00163F39 File Offset: 0x00162139
+		// (set) Token: 0x06009999 RID: 39321 RVA: 0x00163F64 File Offset: 0x00162164
 		public override EFlowTemplateTransitionEffectType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E78 RID: 11896
-		// (get) Token: 0x0600921A RID: 37402 RVA: 0x00153D86 File Offset: 0x00151F86
-		// (set) Token: 0x0600921B RID: 37403 RVA: 0x00153DB5 File Offset: 0x00151FB5
+		// Token: 0x1700308A RID: 12426
+		// (get) Token: 0x0600999A RID: 39322 RVA: 0x00163F72 File Offset: 0x00162172
+		// (set) Token: 0x0600999B RID: 39323 RVA: 0x00163FA1 File Offset: 0x001621A1
 		public virtual float Aperture
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E79 RID: 11897
-		// (get) Token: 0x0600921C RID: 37404 RVA: 0x00153DC3 File Offset: 0x00151FC3
-		// (set) Token: 0x0600921D RID: 37405 RVA: 0x00153DF2 File Offset: 0x00151FF2
+		// Token: 0x1700308B RID: 12427
+		// (get) Token: 0x0600999C RID: 39324 RVA: 0x00163FAF File Offset: 0x001621AF
+		// (set) Token: 0x0600999D RID: 39325 RVA: 0x00163FDE File Offset: 0x001621DE
 		public virtual float FadeInTime
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E7A RID: 11898
-		// (get) Token: 0x0600921E RID: 37406 RVA: 0x00153E00 File Offset: 0x00152000
-		// (set) Token: 0x0600921F RID: 37407 RVA: 0x00153E2F File Offset: 0x0015202F
+		// Token: 0x1700308C RID: 12428
+		// (get) Token: 0x0600999E RID: 39326 RVA: 0x00163FEC File Offset: 0x001621EC
+		// (set) Token: 0x0600999F RID: 39327 RVA: 0x0016401B File Offset: 0x0016221B
 		public virtual float FadeOutTime
 		{
 			get
@@ -154,11 +152,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A00 RID: 23040
+		// Token: 0x04005E70 RID: 24176
 		[Nullable(2)]
 		protected new IFlowTemplateBlurTransitionEffect FbInstance;
 
-		// Token: 0x04005A01 RID: 23041
+		// Token: 0x04005E71 RID: 24177
 		[Nullable(2)]
 		protected new IFlowTemplateBlurTransitionEffect_SetValue PocoInterface;
 	}

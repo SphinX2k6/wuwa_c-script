@@ -2,22 +2,22 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.Roverlike;
 
-// Token: 0x0200334F RID: 13135
+// Token: 0x020028C1 RID: 10433
 public class RedDotRoverlikeQuestRewardBtn : RedDotBase
 {
-	// Token: 0x0601C9B0 RID: 117168 RVA: 0x00804AF7 File Offset: 0x00802CF7
+	// Token: 0x0601A6A8 RID: 108200 RVA: 0x0082B0BB File Offset: 0x008292BB
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RoverlikeQuestTaskUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C9B1 RID: 117169 RVA: 0x00804B15 File Offset: 0x00802D15
+	// Token: 0x0601A6A9 RID: 108201 RVA: 0x0082B0D9 File Offset: 0x008292D9
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RoverlikeQuestTaskUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C9B2 RID: 117170 RVA: 0x00804B34 File Offset: 0x00802D34
+	// Token: 0x0601A6AA RID: 108202 RVA: 0x0082B0F8 File Offset: 0x008292F8
 	protected override bool OnCheck(int uId = 0)
 	{
 		RoverlikeActivityController instance = RoverlikeActivityController.Instance;

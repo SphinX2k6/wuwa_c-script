@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001E45 RID: 7749
+// Token: 0x02001307 RID: 4871
 public class RedDotPhantomHandBook : RedDotBase
 {
-	// Token: 0x0600EBAF RID: 60335 RVA: 0x0037EF09 File Offset: 0x0037D109
+	// Token: 0x0600BFCE RID: 49102 RVA: 0x0038AB99 File Offset: 0x00388D99
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnPhantomReadRedDotUpdate, new Action(base.EventCheck));
 		EventSystem.Instance.Add(EEventName.OnHandBookRedDotUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0600EBB0 RID: 60336 RVA: 0x0037EF43 File Offset: 0x0037D143
+	// Token: 0x0600BFCF RID: 49103 RVA: 0x0038ABD3 File Offset: 0x00388DD3
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPhantomReadRedDotUpdate, new Action(base.EventCheck));
 		EventSystem.Instance.Remove(EEventName.OnHandBookRedDotUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0600EBB1 RID: 60337 RVA: 0x0037EF80 File Offset: 0x0037D180
+	// Token: 0x0600BFD0 RID: 49104 RVA: 0x0038AC10 File Offset: 0x00388E10
 	protected override bool OnCheck(int uId = 0)
 	{
 		List<HandBookEntry> handBookInfoList = HandBookModel.Instance.GetHandBookInfoList(EHandBookTabType.Phantom);

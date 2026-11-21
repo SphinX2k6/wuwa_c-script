@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A7C RID: 27260
+	// Token: 0x0200719E RID: 29086
 	public struct IMechBehaviorConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CA56 RID: 51798
-		// (get) Token: 0x0602FC1F RID: 195615 RVA: 0x0067F94A File Offset: 0x0067DB4A
+		// Token: 0x1700D501 RID: 54529
+		// (get) Token: 0x06032945 RID: 207173 RVA: 0x006D5A0A File Offset: 0x006D3C0A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FC20 RID: 195616 RVA: 0x0067F957 File Offset: 0x0067DB57
+		// Token: 0x06032946 RID: 207174 RVA: 0x006D5A17 File Offset: 0x006D3C17
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FC21 RID: 195617 RVA: 0x0067F960 File Offset: 0x0067DB60
+		// Token: 0x06032947 RID: 207175 RVA: 0x006D5A20 File Offset: 0x006D3C20
 		public static IMechBehaviorConfig GetRootAsIMechBehaviorConfig(ByteBuffer _bb)
 		{
 			return IMechBehaviorConfig.GetRootAsIMechBehaviorConfig(_bb, default(IMechBehaviorConfig));
 		}
 
-		// Token: 0x0602FC22 RID: 195618 RVA: 0x0067F97C File Offset: 0x0067DB7C
+		// Token: 0x06032948 RID: 207176 RVA: 0x006D5A3C File Offset: 0x006D3C3C
 		public static IMechBehaviorConfig GetRootAsIMechBehaviorConfig(ByteBuffer _bb, IMechBehaviorConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FC23 RID: 195619 RVA: 0x0067F999 File Offset: 0x0067DB99
+		// Token: 0x06032949 RID: 207177 RVA: 0x006D5A59 File Offset: 0x006D3C59
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FC24 RID: 195620 RVA: 0x0067F9A8 File Offset: 0x0067DBA8
+		// Token: 0x0603294A RID: 207178 RVA: 0x006D5A68 File Offset: 0x006D3C68
 		public IMechBehaviorConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CA57 RID: 51799
-		// (get) Token: 0x0602FC25 RID: 195621 RVA: 0x0067F9B8 File Offset: 0x0067DBB8
+		// Token: 0x1700D502 RID: 54530
+		// (get) Token: 0x0603294B RID: 207179 RVA: 0x006D5A78 File Offset: 0x006D3C78
 		public TMechStuntConfig StuntConfigType
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FC26 RID: 195622 RVA: 0x0067F9F4 File Offset: 0x0067DBF4
+		// Token: 0x0603294C RID: 207180 RVA: 0x006D5AB4 File Offset: 0x006D3CB4
 		public TTable? StuntConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -74,44 +74,44 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602FC27 RID: 195623 RVA: 0x0067FA38 File Offset: 0x0067DC38
+		// Token: 0x0603294D RID: 207181 RVA: 0x006D5AF8 File Offset: 0x006D3CF8
 		public IMechStuntBurrow StuntConfigAsIMechStuntBurrow()
 		{
 			return this.StuntConfig<IMechStuntBurrow>().Value;
 		}
 
-		// Token: 0x0602FC28 RID: 195624 RVA: 0x0067FA54 File Offset: 0x0067DC54
+		// Token: 0x0603294E RID: 207182 RVA: 0x006D5B14 File Offset: 0x006D3D14
 		public IMechStuntClimbFly StuntConfigAsIMechStuntClimbFly()
 		{
 			return this.StuntConfig<IMechStuntClimbFly>().Value;
 		}
 
-		// Token: 0x0602FC29 RID: 195625 RVA: 0x0067FA70 File Offset: 0x0067DC70
+		// Token: 0x0603294F RID: 207183 RVA: 0x006D5B30 File Offset: 0x006D3D30
 		public IMechStuntDive StuntConfigAsIMechStuntDive()
 		{
 			return this.StuntConfig<IMechStuntDive>().Value;
 		}
 
-		// Token: 0x0602FC2A RID: 195626 RVA: 0x0067FA8C File Offset: 0x0067DC8C
+		// Token: 0x06032950 RID: 207184 RVA: 0x006D5B4C File Offset: 0x006D3D4C
 		public IMechStuntHighSpeed StuntConfigAsIMechStuntHighSpeed()
 		{
 			return this.StuntConfig<IMechStuntHighSpeed>().Value;
 		}
 
-		// Token: 0x0602FC2B RID: 195627 RVA: 0x0067FAA8 File Offset: 0x0067DCA8
+		// Token: 0x06032951 RID: 207185 RVA: 0x006D5B68 File Offset: 0x006D3D68
 		public IMechStuntLevelFly StuntConfigAsIMechStuntLevelFly()
 		{
 			return this.StuntConfig<IMechStuntLevelFly>().Value;
 		}
 
-		// Token: 0x0602FC2C RID: 195628 RVA: 0x0067FAC4 File Offset: 0x0067DCC4
+		// Token: 0x06032952 RID: 207186 RVA: 0x006D5B84 File Offset: 0x006D3D84
 		public IMechStuntWater StuntConfigAsIMechStuntWater()
 		{
 			return this.StuntConfig<IMechStuntWater>().Value;
 		}
 
-		// Token: 0x1700CA58 RID: 51800
-		// (get) Token: 0x0602FC2D RID: 195629 RVA: 0x0067FAE0 File Offset: 0x0067DCE0
+		// Token: 0x1700D503 RID: 54531
+		// (get) Token: 0x06032953 RID: 207187 RVA: 0x006D5BA0 File Offset: 0x006D3DA0
 		public IVectorInfo? TargetPos
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA59 RID: 51801
-		// (get) Token: 0x0602FC2E RID: 195630 RVA: 0x0067FB40 File Offset: 0x0067DD40
+		// Token: 0x1700D504 RID: 54532
+		// (get) Token: 0x06032954 RID: 207188 RVA: 0x006D5C00 File Offset: 0x006D3E00
 		public bool CanInterrupt
 		{
 			get
@@ -136,8 +136,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA5A RID: 51802
-		// (get) Token: 0x0602FC2F RID: 195631 RVA: 0x0067FB80 File Offset: 0x0067DD80
+		// Token: 0x1700D505 RID: 54533
+		// (get) Token: 0x06032955 RID: 207189 RVA: 0x006D5C40 File Offset: 0x006D3E40
 		public byte NullMask
 		{
 			get
@@ -151,7 +151,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FC30 RID: 195632 RVA: 0x0067FBBD File Offset: 0x0067DDBD
+		// Token: 0x06032956 RID: 207190 RVA: 0x006D5C7D File Offset: 0x006D3E7D
 		public static Offset<IMechBehaviorConfig> CreateIMechBehaviorConfig(FlatBufferBuilder builder, TMechStuntConfig StuntConfig_type = TMechStuntConfig.NONE, int StuntConfigOffset = 0, Offset<IVectorInfo> TargetPosOffset = default(Offset<IVectorInfo>), bool CanInterrupt = false, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -163,49 +163,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMechBehaviorConfig.EndIMechBehaviorConfig(builder);
 		}
 
-		// Token: 0x0602FC31 RID: 195633 RVA: 0x0067FBF1 File Offset: 0x0067DDF1
+		// Token: 0x06032957 RID: 207191 RVA: 0x006D5CB1 File Offset: 0x006D3EB1
 		public static void StartIMechBehaviorConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602FC32 RID: 195634 RVA: 0x0067FBFA File Offset: 0x0067DDFA
+		// Token: 0x06032958 RID: 207192 RVA: 0x006D5CBA File Offset: 0x006D3EBA
 		public static void AddStuntConfigType(FlatBufferBuilder builder, TMechStuntConfig stuntConfigType)
 		{
 			builder.AddByte(0, (byte)stuntConfigType, 0);
 		}
 
-		// Token: 0x0602FC33 RID: 195635 RVA: 0x0067FC05 File Offset: 0x0067DE05
+		// Token: 0x06032959 RID: 207193 RVA: 0x006D5CC5 File Offset: 0x006D3EC5
 		public static void AddStuntConfig(FlatBufferBuilder builder, int stuntConfigOffset)
 		{
 			builder.AddOffset(1, stuntConfigOffset, 0);
 		}
 
-		// Token: 0x0602FC34 RID: 195636 RVA: 0x0067FC10 File Offset: 0x0067DE10
+		// Token: 0x0603295A RID: 207194 RVA: 0x006D5CD0 File Offset: 0x006D3ED0
 		public static void AddTargetPos(FlatBufferBuilder builder, Offset<IVectorInfo> targetPosOffset)
 		{
 			builder.AddOffset(2, targetPosOffset.Value, 0);
 		}
 
-		// Token: 0x0602FC35 RID: 195637 RVA: 0x0067FC20 File Offset: 0x0067DE20
+		// Token: 0x0603295B RID: 207195 RVA: 0x006D5CE0 File Offset: 0x006D3EE0
 		public static void AddCanInterrupt(FlatBufferBuilder builder, bool canInterrupt)
 		{
 			builder.AddBool(3, canInterrupt, false);
 		}
 
-		// Token: 0x0602FC36 RID: 195638 RVA: 0x0067FC2B File Offset: 0x0067DE2B
+		// Token: 0x0603295C RID: 207196 RVA: 0x006D5CEB File Offset: 0x006D3EEB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602FC37 RID: 195639 RVA: 0x0067FC36 File Offset: 0x0067DE36
+		// Token: 0x0603295D RID: 207197 RVA: 0x006D5CF6 File Offset: 0x006D3EF6
 		public static Offset<IMechBehaviorConfig> EndIMechBehaviorConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMechBehaviorConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602FC38 RID: 195640 RVA: 0x0067FC44 File Offset: 0x0067DE44
+		// Token: 0x0603295E RID: 207198 RVA: 0x006D5D04 File Offset: 0x006D3F04
 		public IMechBehaviorConfigT UnPack()
 		{
 			IMechBehaviorConfigT mechBehaviorConfigT = new IMechBehaviorConfigT();
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return mechBehaviorConfigT;
 		}
 
-		// Token: 0x0602FC39 RID: 195641 RVA: 0x0067FC60 File Offset: 0x0067DE60
+		// Token: 0x0603295F RID: 207199 RVA: 0x006D5D20 File Offset: 0x006D3F20
 		public void UnPackTo(IMechBehaviorConfigT _o)
 		{
 			_o.StuntConfig = new TMechStuntConfigUnion();
@@ -244,7 +244,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602FC3A RID: 195642 RVA: 0x0067FE58 File Offset: 0x0067E058
+		// Token: 0x06032960 RID: 207200 RVA: 0x006D5F18 File Offset: 0x006D4118
 		public static Offset<IMechBehaviorConfig> Pack(FlatBufferBuilder builder, IMechBehaviorConfigT _o)
 		{
 			if (_o == null)
@@ -257,7 +257,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMechBehaviorConfig.CreateIMechBehaviorConfig(builder, stuntConfig_type, stuntConfigOffset, targetPosOffset, _o.CanInterrupt, _o.NullMask);
 		}
 
-		// Token: 0x040112AE RID: 70318
+		// Token: 0x040121A6 RID: 74150
 		private Table __p;
 	}
 }

@@ -2,16 +2,16 @@
 using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020016AB RID: 5803
+// Token: 0x02000B63 RID: 2915
 public interface INewSoundTypeItemData
 {
-	// Token: 0x17000DD4 RID: 3540
-	// (get) Token: 0x0600A58B RID: 42379
-	// (set) Token: 0x0600A58C RID: 42380
+	// Token: 0x17000DF5 RID: 3573
+	// (get) Token: 0x0600796B RID: 31083
+	// (set) Token: 0x0600796C RID: 31084
 	EUiTabViewName? FromTabViewName { get; set; }
 
-	// Token: 0x17000DD5 RID: 3541
-	// (get) Token: 0x0600A58D RID: 42381
-	// (set) Token: 0x0600A58E RID: 42382
+	// Token: 0x17000DF6 RID: 3574
+	// (get) Token: 0x0600796D RID: 31085
+	// (set) Token: 0x0600796E RID: 31086
 	EDungeonType TypeId { get; set; }
 }

@@ -6,54 +6,54 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 {
-	// Token: 0x020068F2 RID: 26866
+	// Token: 0x02005842 RID: 22594
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonH5Controller : ActivityControllerBase
 	{
-		// Token: 0x06043018 RID: 274456 RVA: 0x010525AD File Offset: 0x010507AD
+		// Token: 0x06037B70 RID: 228208 RVA: 0x00F93BD5 File Offset: 0x00F91DD5
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06043019 RID: 274457 RVA: 0x010525AF File Offset: 0x010507AF
+		// Token: 0x06037B71 RID: 228209 RVA: 0x00F93BD7 File Offset: 0x00F91DD7
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_H5Main";
 		}
 
-		// Token: 0x0604301A RID: 274458 RVA: 0x010525B6 File Offset: 0x010507B6
+		// Token: 0x06037B72 RID: 228210 RVA: 0x00F93BDE File Offset: 0x00F91DDE
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.ActivityId = data.Id;
 			return new CommonH5Data();
 		}
 
-		// Token: 0x0604301B RID: 274459 RVA: 0x010525C9 File Offset: 0x010507C9
+		// Token: 0x06037B73 RID: 228211 RVA: 0x00F93BF1 File Offset: 0x00F91DF1
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0604301C RID: 274460 RVA: 0x010525CC File Offset: 0x010507CC
+		// Token: 0x06037B74 RID: 228212 RVA: 0x00F93BF4 File Offset: 0x00F91DF4
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new CommonH5SubView();
 		}
 
-		// Token: 0x0604301D RID: 274461 RVA: 0x010525D3 File Offset: 0x010507D3
+		// Token: 0x06037B75 RID: 228213 RVA: 0x00F93BFB File Offset: 0x00F91DFB
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.H5ViewActivityDataNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleActivityDataNotify));
 		}
 
-		// Token: 0x0604301E RID: 274462 RVA: 0x010525F1 File Offset: 0x010507F1
+		// Token: 0x06037B76 RID: 228214 RVA: 0x00F93C19 File Offset: 0x00F91E19
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.H5ViewActivityDataNotify);
 		}
 
-		// Token: 0x0604301F RID: 274463 RVA: 0x01052604 File Offset: 0x01050804
+		// Token: 0x06037B77 RID: 228215 RVA: 0x00F93C2C File Offset: 0x00F91E2C
 		[NullableContext(2)]
 		private void HandleActivityDataNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			CommonH5Model.Instance.OnActivityDataNotify(data);
 		}
 
-		// Token: 0x06043020 RID: 274464 RVA: 0x01052624 File Offset: 0x01050824
+		// Token: 0x06037B78 RID: 228216 RVA: 0x00F93C4C File Offset: 0x00F91E4C
 		private void RequestSaveReadState()
 		{
 			H5ViewActivityReadRequest message = H5ViewActivityReadRequest.Create();
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			}, 0);
 		}
 
-		// Token: 0x06043021 RID: 274465 RVA: 0x01052667 File Offset: 0x01050867
+		// Token: 0x06037B79 RID: 228217 RVA: 0x00F93C8F File Offset: 0x00F91E8F
 		[NullableContext(2)]
 		public void HandleOnEnterClick(CommonH5Data activityData)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			this.OpenUrl(activityData);
 		}
 
-		// Token: 0x06043022 RID: 274466 RVA: 0x0105267C File Offset: 0x0105087C
+		// Token: 0x06037B7A RID: 228218 RVA: 0x00F93CA4 File Offset: 0x00F91EA4
 		[NullableContext(2)]
 		private void OpenUrl(CommonH5Data data)
 		{
@@ -119,8 +119,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			}
 		}
 
-		// Token: 0x170097E5 RID: 38885
-		// (get) Token: 0x06043023 RID: 274467 RVA: 0x01052774 File Offset: 0x01050974
+		// Token: 0x17006B25 RID: 27429
+		// (get) Token: 0x06037B7B RID: 228219 RVA: 0x00F93D9C File Offset: 0x00F91F9C
 		public static CommonH5Controller Instance
 		{
 			get
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			}
 		}
 
-		// Token: 0x06043024 RID: 274468 RVA: 0x0105277B File Offset: 0x0105097B
+		// Token: 0x06037B7C RID: 228220 RVA: 0x00F93DA3 File Offset: 0x00F91FA3
 		public static CommonH5Controller GetOrCreateInstance()
 		{
 			if (CommonH5Controller._Instance == null)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			return CommonH5Controller._Instance;
 		}
 
-		// Token: 0x06043025 RID: 274469 RVA: 0x0105278F File Offset: 0x0105098F
+		// Token: 0x06037B7D RID: 228221 RVA: 0x00F93DB7 File Offset: 0x00F91FB7
 		public static bool CreateInstance()
 		{
 			if (CommonH5Controller._Instance != null)
@@ -150,27 +150,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			return true;
 		}
 
-		// Token: 0x06043026 RID: 274470 RVA: 0x010527A5 File Offset: 0x010509A5
+		// Token: 0x06037B7E RID: 228222 RVA: 0x00F93DCD File Offset: 0x00F91FCD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043027 RID: 274471 RVA: 0x010527A7 File Offset: 0x010509A7
+		// Token: 0x06037B7F RID: 228223 RVA: 0x00F93DCF File Offset: 0x00F91FCF
 		public static void ResetStaticDefaultValue()
 		{
 			CommonH5Controller._Instance = null;
 		}
 
-		// Token: 0x06043028 RID: 274472 RVA: 0x010527AF File Offset: 0x010509AF
+		// Token: 0x06037B80 RID: 228224 RVA: 0x00F93DD7 File Offset: 0x00F91FD7
 		static CommonH5Controller()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CommonH5Controller.CreateStaticDefaultValue), new Action(CommonH5Controller.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022E2A RID: 142890
+		// Token: 0x0401D686 RID: 120454
 		public int ActivityId;
 
-		// Token: 0x04022E2B RID: 142891
+		// Token: 0x0401D687 RID: 120455
 		[Nullable(2)]
 		private static CommonH5Controller _Instance;
 	}

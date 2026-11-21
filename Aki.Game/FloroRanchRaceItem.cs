@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B9B RID: 7067
+// Token: 0x0200105A RID: 4186
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +15,7 @@ using UnrealEngine;
 })]
 public class FloroRanchRaceItem : GridProxyAbstract<FloroRanchSelectRaceData>
 {
-	// Token: 0x0600D271 RID: 53873 RVA: 0x003054B0 File Offset: 0x003036B0
+	// Token: 0x0600A682 RID: 42626 RVA: 0x00310588 File Offset: 0x0030E788
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -43,7 +42,7 @@ public class FloroRanchRaceItem : GridProxyAbstract<FloroRanchSelectRaceData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D272 RID: 53874 RVA: 0x003055BC File Offset: 0x003037BC
+	// Token: 0x0600A683 RID: 42627 RVA: 0x00310694 File Offset: 0x0030E894
 	public override void Refresh(FloroRanchSelectRaceData data, bool isSelected, int gridIndex)
 	{
 		this.SubDungeonData = data.SubDungeonData;
@@ -73,12 +72,12 @@ public class FloroRanchRaceItem : GridProxyAbstract<FloroRanchSelectRaceData>
 			{
 				return;
 			}
-			item.SetUIActive(activityData != null && activityData.IsOtherRaceHasRedDot(raceList.ToList<int>()));
+			item.SetUIActive(activityData != null && activityData.IsOtherRaceHasRedDot(new List<int>(raceList)));
 			return;
 		}
 		else
 		{
-			bool uiactive = raceList.Contains(raceId);
+			bool uiactive = Array.IndexOf<int>(raceList, raceId) >= 0;
 			UUISprite sprite3 = base.GetSprite(3);
 			if (sprite3 != null)
 			{
@@ -102,7 +101,7 @@ public class FloroRanchRaceItem : GridProxyAbstract<FloroRanchSelectRaceData>
 		}
 	}
 
-	// Token: 0x0600D273 RID: 53875 RVA: 0x003056FC File Offset: 0x003038FC
+	// Token: 0x0600A684 RID: 42628 RVA: 0x003107DC File Offset: 0x0030E9DC
 	private void OnClickToggle()
 	{
 		FloroRanchRaceSelectViewParam floroRanchRaceSelectViewParam = new FloroRanchRaceSelectViewParam
@@ -113,29 +112,29 @@ public class FloroRanchRaceItem : GridProxyAbstract<FloroRanchSelectRaceData>
 		UiManager.Instance.OpenView(EUiViewName.FloroRanchRaceSelectView, floroRanchRaceSelectViewParam, null);
 	}
 
-	// Token: 0x0400607E RID: 24702
+	// Token: 0x0400614D RID: 24909
 	private FloroRanchSubDungeonData SubDungeonData;
 
-	// Token: 0x0400607F RID: 24703
+	// Token: 0x0400614E RID: 24910
 	private EFloroRanchActivityDataType ActivityDataType;
 
-	// Token: 0x02008136 RID: 33078
+	// Token: 0x020072C4 RID: 29380
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A2D0 RID: 172752
+		// Token: 0x04025604 RID: 153092
 		public const int Button = 0;
 
-		// Token: 0x0402A2D1 RID: 172753
+		// Token: 0x04025605 RID: 153093
 		public const int SpriteAdd = 1;
 
-		// Token: 0x0402A2D2 RID: 172754
+		// Token: 0x04025606 RID: 153094
 		public const int TextureRaceIcon = 2;
 
-		// Token: 0x0402A2D3 RID: 172755
+		// Token: 0x04025607 RID: 153095
 		public const int SpriteFixed = 3;
 
-		// Token: 0x0402A2D4 RID: 172756
+		// Token: 0x04025608 RID: 153096
 		public const int ItemRedDot = 4;
 	}
 }

@@ -3,25 +3,25 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015A3 RID: 5539
+	// Token: 0x02001615 RID: 5653
 	public enum VehicleShareReason
 	{
-		// Token: 0x0400A825 RID: 43045
+		// Token: 0x0400ACA4 RID: 44196
 		[OriginalName("VehicleShareReason_ClientRequest")]
 		ClientRequest,
-		// Token: 0x0400A826 RID: 43046
+		// Token: 0x0400ACA5 RID: 44197
 		[OriginalName("VehicleShareReason_ChangeFormation")]
 		ChangeFormation,
-		// Token: 0x0400A827 RID: 43047
+		// Token: 0x0400ACA6 RID: 44198
 		[OriginalName("VehicleShareReason_GetOff")]
 		GetOff,
-		// Token: 0x0400A828 RID: 43048
+		// Token: 0x0400ACA7 RID: 44199
 		[OriginalName("VehicleShareReason_RebackScene")]
 		RebackScene,
-		// Token: 0x0400A829 RID: 43049
+		// Token: 0x0400ACA8 RID: 44200
 		[OriginalName("VehicleShareReason_CharacterDie")]
 		CharacterDie,
-		// Token: 0x0400A82A RID: 43050
+		// Token: 0x0400ACA9 RID: 44201
 		[OriginalName("VehicleShareReason_Command")]
 		Command
 	}

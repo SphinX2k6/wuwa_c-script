@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016ED RID: 5869
+	// Token: 0x02001869 RID: 6249
 	[EnumExtensions]
 	public enum EUiStyleTypeOfLevelD
 	{
-		// Token: 0x04004F6A RID: 20330
+		// Token: 0x04005397 RID: 21399
 		GiantSubtitle,
-		// Token: 0x04004F6B RID: 20331
+		// Token: 0x04005398 RID: 21400
 		PlayPiano
 	}
 }

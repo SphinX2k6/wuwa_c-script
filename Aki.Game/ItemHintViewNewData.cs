@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002003 RID: 8195
+// Token: 0x020014D6 RID: 5334
 [NullableContext(2)]
 [Nullable(0)]
 public class ItemHintViewNewData : UiViewData
 {
-	// Token: 0x040076D5 RID: 30421
+	// Token: 0x040077BE RID: 30654
 	public string TitleTextId;
 
-	// Token: 0x040076D6 RID: 30422
+	// Token: 0x040077BF RID: 30655
 	public Func<bool> CheckNext;
 
-	// Token: 0x040076D7 RID: 30423
+	// Token: 0x040077C0 RID: 30656
 	[Nullable(new byte[]
 	{
 		2,
@@ -21,25 +21,25 @@ public class ItemHintViewNewData : UiViewData
 	})]
 	public Func<ItemRewardInfo> ShiftItem;
 
-	// Token: 0x040076D8 RID: 30424
+	// Token: 0x040077C1 RID: 30657
 	public int? MaxShowCount;
 
-	// Token: 0x040076D9 RID: 30425
+	// Token: 0x040077C2 RID: 30658
 	public int? AddItemTime;
 
-	// Token: 0x040076DA RID: 30426
+	// Token: 0x040077C3 RID: 30659
 	public int? ItemSliderTime;
 
-	// Token: 0x040076DB RID: 30427
+	// Token: 0x040077C4 RID: 30660
 	public int? ItemShowTime;
 
-	// Token: 0x040076DC RID: 30428
+	// Token: 0x040077C5 RID: 30661
 	public string SlotResourceId;
 
-	// Token: 0x040076DD RID: 30429
+	// Token: 0x040077C6 RID: 30662
 	public Func<bool> CheckPriorNext;
 
-	// Token: 0x040076DE RID: 30430
+	// Token: 0x040077C7 RID: 30663
 	[Nullable(new byte[]
 	{
 		2,
@@ -47,18 +47,18 @@ public class ItemHintViewNewData : UiViewData
 	})]
 	public Func<ItemRewardInfo> ShiftPriorItem;
 
-	// Token: 0x040076DF RID: 30431
+	// Token: 0x040077C8 RID: 30664
 	public int? PriorMaxShowCount;
 
-	// Token: 0x040076E0 RID: 30432
+	// Token: 0x040077C9 RID: 30665
 	public int? AddPriorItemTime;
 
-	// Token: 0x040076E1 RID: 30433
+	// Token: 0x040077CA RID: 30666
 	public int? PriorItemSliderTime;
 
-	// Token: 0x040076E2 RID: 30434
+	// Token: 0x040077CB RID: 30667
 	public int? PriorItemShowTime;
 
-	// Token: 0x040076E3 RID: 30435
+	// Token: 0x040077CC RID: 30668
 	public string PriorSlotResourceId;
 }

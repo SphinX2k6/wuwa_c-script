@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FE2 RID: 24546
+	// Token: 0x0200663C RID: 26172
 	public enum ERangeCheckType : byte
 	{
-		// Token: 0x0400FF89 RID: 65417
+		// Token: 0x04010D5A RID: 68954
 		Cone
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000173 RID: 371
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000188 RID: 392
 	public class FlowComponent : IComponentBase
 	{
-		// Token: 0x060004E0 RID: 1248 RVA: 0x0001F2D8 File Offset: 0x0001D4D8
+		// Token: 0x060004E4 RID: 1252 RVA: 0x0001FC4C File Offset: 0x0001DE4C
 		private FlowComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060004E1 RID: 1249 RVA: 0x0001F310 File Offset: 0x0001D510
+		// Token: 0x060004E5 RID: 1253 RVA: 0x0001FC84 File Offset: 0x0001DE84
 		public static FlowComponent Create([Nullable(2)] FlowComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060004E2 RID: 1250 RVA: 0x0001F323 File Offset: 0x0001D523
+		// Token: 0x060004E6 RID: 1254 RVA: 0x0001FC97 File Offset: 0x0001DE97
 		public static FlowComponent CreateFromSetValue([Nullable(2)] FlowComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060004E3 RID: 1251 RVA: 0x0001F336 File Offset: 0x0001D536
+		// Token: 0x060004E7 RID: 1255 RVA: 0x0001FCAA File Offset: 0x0001DEAA
 		public new FlowComponent_SetValue ToSetValue()
 		{
 			return new FlowComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001A1 RID: 417
-		// (get) Token: 0x060004E4 RID: 1252 RVA: 0x0001F364 File Offset: 0x0001D564
-		// (set) Token: 0x060004E5 RID: 1253 RVA: 0x0001F39E File Offset: 0x0001D59E
+		// Token: 0x170001A3 RID: 419
+		// (get) Token: 0x060004E8 RID: 1256 RVA: 0x0001FCD8 File Offset: 0x0001DED8
+		// (set) Token: 0x060004E9 RID: 1257 RVA: 0x0001FD12 File Offset: 0x0001DF12
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001A2 RID: 418
-		// (get) Token: 0x060004E6 RID: 1254 RVA: 0x0001F3AC File Offset: 0x0001D5AC
-		// (set) Token: 0x060004E7 RID: 1255 RVA: 0x0001F3D6 File Offset: 0x0001D5D6
+		// Token: 0x170001A4 RID: 420
+		// (get) Token: 0x060004EA RID: 1258 RVA: 0x0001FD20 File Offset: 0x0001DF20
+		// (set) Token: 0x060004EB RID: 1259 RVA: 0x0001FD4A File Offset: 0x0001DF4A
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001A3 RID: 419
-		// (get) Token: 0x060004E8 RID: 1256 RVA: 0x0001F3E4 File Offset: 0x0001D5E4
-		// (set) Token: 0x060004E9 RID: 1257 RVA: 0x0001F445 File Offset: 0x0001D645
+		// Token: 0x170001A5 RID: 421
+		// (get) Token: 0x060004EC RID: 1260 RVA: 0x0001FD58 File Offset: 0x0001DF58
+		// (set) Token: 0x060004ED RID: 1261 RVA: 0x0001FDB9 File Offset: 0x0001DFB9
 		public virtual PlayFlow InitState
 		{
 			get
@@ -135,18 +133,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000713 RID: 1811
+		// Token: 0x04000760 RID: 1888
 		[Nullable(2)]
 		protected new FlowComponent FbInstance;
 
-		// Token: 0x04000714 RID: 1812
+		// Token: 0x04000761 RID: 1889
 		[Nullable(2)]
 		protected new FlowComponent_SetValue PocoInterface;
 
-		// Token: 0x04000715 RID: 1813
+		// Token: 0x04000762 RID: 1890
 		private PlayFlow _InitStateCache;
 
-		// Token: 0x04000716 RID: 1814
+		// Token: 0x04000763 RID: 1891
 		private bool _InitStateInited;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CD1 RID: 19665
+	// Token: 0x020051CD RID: 20941
 	public class ISkillUseType_UnionUnion
 	{
-		// Token: 0x17008EB6 RID: 36534
-		// (get) Token: 0x0601F331 RID: 127793 RVA: 0x0045AEAA File Offset: 0x004590AA
-		// (set) Token: 0x0601F332 RID: 127794 RVA: 0x0045AEB2 File Offset: 0x004590B2
+		// Token: 0x170095EF RID: 38383
+		// (get) Token: 0x06020F75 RID: 135029 RVA: 0x0048EDA2 File Offset: 0x0048CFA2
+		// (set) Token: 0x06020F76 RID: 135030 RVA: 0x0048EDAA File Offset: 0x0048CFAA
 		public ISkillUseType_Union Type { get; set; }
 
-		// Token: 0x17008EB7 RID: 36535
-		// (get) Token: 0x0601F333 RID: 127795 RVA: 0x0045AEBB File Offset: 0x004590BB
-		// (set) Token: 0x0601F334 RID: 127796 RVA: 0x0045AEC3 File Offset: 0x004590C3
+		// Token: 0x170095F0 RID: 38384
+		// (get) Token: 0x06020F77 RID: 135031 RVA: 0x0048EDB3 File Offset: 0x0048CFB3
+		// (set) Token: 0x06020F78 RID: 135032 RVA: 0x0048EDBB File Offset: 0x0048CFBB
 		public object Value { get; set; }
 
-		// Token: 0x0601F335 RID: 127797 RVA: 0x0045AECC File Offset: 0x004590CC
+		// Token: 0x06020F79 RID: 135033 RVA: 0x0048EDC4 File Offset: 0x0048CFC4
 		public ISkillUseType_UnionUnion()
 		{
 			this.Type = ISkillUseType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F336 RID: 127798 RVA: 0x0045AEE2 File Offset: 0x004590E2
+		// Token: 0x06020F7A RID: 135034 RVA: 0x0048EDDA File Offset: 0x0048CFDA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F337 RID: 127799 RVA: 0x0045AEF4 File Offset: 0x004590F4
+		// Token: 0x06020F7B RID: 135035 RVA: 0x0048EDEC File Offset: 0x0048CFEC
 		public ISkillUseTypeT AsISkillUseType()
 		{
 			return this.As<ISkillUseTypeT>();
 		}
 
-		// Token: 0x0601F338 RID: 127800 RVA: 0x0045AEFC File Offset: 0x004590FC
+		// Token: 0x06020F7C RID: 135036 RVA: 0x0048EDF4 File Offset: 0x0048CFF4
 		public static ISkillUseType_UnionUnion FromISkillUseType(ISkillUseTypeT _iskillusetype)
 		{
 			return new ISkillUseType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F339 RID: 127801 RVA: 0x0045AF11 File Offset: 0x00459111
+		// Token: 0x06020F7D RID: 135037 RVA: 0x0048EE09 File Offset: 0x0048D009
 		public ISkillUseTypeRoleSkillT AsISkillUseTypeRoleSkill()
 		{
 			return this.As<ISkillUseTypeRoleSkillT>();
 		}
 
-		// Token: 0x0601F33A RID: 127802 RVA: 0x0045AF19 File Offset: 0x00459119
+		// Token: 0x06020F7E RID: 135038 RVA: 0x0048EE11 File Offset: 0x0048D011
 		public static ISkillUseType_UnionUnion FromISkillUseTypeRoleSkill(ISkillUseTypeRoleSkillT _iskillusetyperoleskill)
 		{
 			return new ISkillUseType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F33B RID: 127803 RVA: 0x0045AF30 File Offset: 0x00459130
+		// Token: 0x06020F7F RID: 135039 RVA: 0x0048EE28 File Offset: 0x0048D028
 		public static int Pack(FlatBufferBuilder builder, ISkillUseType_UnionUnion _o)
 		{
 			ISkillUseType_Union type = _o.Type;

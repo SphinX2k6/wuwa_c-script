@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006736 RID: 26422
+	// Token: 0x02006DB6 RID: 28086
 	public class IExitVehicleTeleportT
 	{
-		// Token: 0x1700C436 RID: 50230
-		// (get) Token: 0x0602DF63 RID: 188259 RVA: 0x00648594 File Offset: 0x00646794
-		// (set) Token: 0x0602DF64 RID: 188260 RVA: 0x0064859C File Offset: 0x0064679C
+		// Token: 0x1700CDEC RID: 52716
+		// (get) Token: 0x060307A9 RID: 198569 RVA: 0x00695CD8 File Offset: 0x00693ED8
+		// (set) Token: 0x060307AA RID: 198570 RVA: 0x00695CE0 File Offset: 0x00693EE0
 		public EExitVehicleType Type { get; set; }
 
-		// Token: 0x1700C437 RID: 50231
-		// (get) Token: 0x0602DF65 RID: 188261 RVA: 0x006485A5 File Offset: 0x006467A5
-		// (set) Token: 0x0602DF66 RID: 188262 RVA: 0x006485AD File Offset: 0x006467AD
+		// Token: 0x1700CDED RID: 52717
+		// (get) Token: 0x060307AB RID: 198571 RVA: 0x00695CE9 File Offset: 0x00693EE9
+		// (set) Token: 0x060307AC RID: 198572 RVA: 0x00695CF1 File Offset: 0x00693EF1
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x1700C438 RID: 50232
-		// (get) Token: 0x0602DF67 RID: 188263 RVA: 0x006485B6 File Offset: 0x006467B6
-		// (set) Token: 0x0602DF68 RID: 188264 RVA: 0x006485BE File Offset: 0x006467BE
+		// Token: 0x1700CDEE RID: 52718
+		// (get) Token: 0x060307AD RID: 198573 RVA: 0x00695CFA File Offset: 0x00693EFA
+		// (set) Token: 0x060307AE RID: 198574 RVA: 0x00695D02 File Offset: 0x00693F02
 		public IVectorInfoT Rot { get; set; }
 
-		// Token: 0x0602DF69 RID: 188265 RVA: 0x006485C7 File Offset: 0x006467C7
+		// Token: 0x060307AF RID: 198575 RVA: 0x00695D0B File Offset: 0x00693F0B
 		public IExitVehicleTeleportT()
 		{
 			this.Type = EExitVehicleType.Launch;

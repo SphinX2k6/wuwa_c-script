@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Guide.GroupInfo
 {
-	// Token: 0x0200460E RID: 17934
+	// Token: 0x02003537 RID: 13623
 	public class GuideGroupInfoConstants : IStaticVariableResetter
 	{
-		// Token: 0x0602E3A6 RID: 189350 RVA: 0x00AB0AB3 File Offset: 0x00AAECB3
+		// Token: 0x06022A9B RID: 141979 RVA: 0x009DD1A7 File Offset: 0x009DB3A7
 		static GuideGroupInfoConstants()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GuideGroupInfoConstants.CreateStaticDefaultValue), new Action(GuideGroupInfoConstants.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602E3A7 RID: 189351 RVA: 0x00AB0AD2 File Offset: 0x00AAECD2
+		// Token: 0x06022A9C RID: 141980 RVA: 0x009DD1C6 File Offset: 0x009DB3C6
 		public static void CreateStaticDefaultValue()
 		{
 			GuideGroupInfoConstants.stateDesc = new string[]
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			};
 		}
 
-		// Token: 0x0602E3A8 RID: 189352 RVA: 0x00AB0B07 File Offset: 0x00AAED07
+		// Token: 0x06022A9D RID: 141981 RVA: 0x009DD1FB File Offset: 0x009DB3FB
 		public static void ResetStaticDefaultValue()
 		{
 			GuideGroupInfoConstants.stateDesc = null;
 		}
 
-		// Token: 0x04018D17 RID: 101655
+		// Token: 0x04013356 RID: 78678
 		[Nullable(1)]
 		public static string[] stateDesc;
 	}

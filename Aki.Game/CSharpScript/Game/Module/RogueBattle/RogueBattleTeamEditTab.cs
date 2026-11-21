@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EB1 RID: 20145
+	// Token: 0x02003E7A RID: 15994
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleTeamEditTab : CommonTabItemBase
 	{
-		// Token: 0x06033BEB RID: 211947 RVA: 0x00C1FA80 File Offset: 0x00C1DC80
+		// Token: 0x06028A56 RID: 166486 RVA: 0x00B68F98 File Offset: 0x00B67198
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033BEC RID: 211948 RVA: 0x00C1FB29 File Offset: 0x00C1DD29
+		// Token: 0x06028A57 RID: 166487 RVA: 0x00B69041 File Offset: 0x00B67241
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetItem(2).SetUIActive(false);
 		}
 
-		// Token: 0x06033BED RID: 211949 RVA: 0x00C1FB4E File Offset: 0x00C1DD4E
+		// Token: 0x06028A58 RID: 166488 RVA: 0x00B69066 File Offset: 0x00B67266
 		private void ToggleClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -44,19 +44,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BEE RID: 211950 RVA: 0x00C1FB67 File Offset: 0x00C1DD67
+		// Token: 0x06028A59 RID: 166489 RVA: 0x00B6907F File Offset: 0x00B6727F
 		protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 		{
 			base.UpdateTabIcon(data.Data.GetIcon());
 		}
 
-		// Token: 0x06033BEF RID: 211951 RVA: 0x00C1FB7C File Offset: 0x00C1DD7C
+		// Token: 0x06028A5A RID: 166490 RVA: 0x00B69094 File Offset: 0x00B67294
 		protected override void OnUpdateTabIcon(string iconPath)
 		{
 			this.SetSpriteByPath(iconPath, base.GetSprite(0), false, null, new Action<bool>(this.RefreshTransition));
 		}
 
-		// Token: 0x06033BF0 RID: 211952 RVA: 0x00C1FBB0 File Offset: 0x00C1DDB0
+		// Token: 0x06028A5B RID: 166491 RVA: 0x00B690C8 File Offset: 0x00B672C8
 		protected void RefreshTransition(bool _)
 		{
 			UUIExtendToggleSpriteTransition uiExtendToggleSpriteTransition = base.GetUiExtendToggleSpriteTransition(3);
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BF1 RID: 211953 RVA: 0x00C1FBDA File Offset: 0x00C1DDDA
+		// Token: 0x06028A5C RID: 166492 RVA: 0x00B690F2 File Offset: 0x00B672F2
 		protected override void OnSetToggleState(EToggleState state, bool bFire)
 		{
 			this.GetTabToggle().SetToggleState(state, bFire, false, false);
 		}
 
-		// Token: 0x06033BF2 RID: 211954 RVA: 0x00C1FBEC File Offset: 0x00C1DDEC
+		// Token: 0x06028A5D RID: 166493 RVA: 0x00B69104 File Offset: 0x00B67304
 		protected override UUIExtendToggle GetTabToggle()
 		{
 			return base.GetExtendToggle(1);

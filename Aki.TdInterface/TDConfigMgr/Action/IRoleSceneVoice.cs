@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DCC RID: 7628
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FE3 RID: 8163
 	public class IRoleSceneVoice : IAudioTypeBase
 	{
-		// Token: 0x0600A35B RID: 41819 RVA: 0x00172FB8 File Offset: 0x001711B8
+		// Token: 0x0600AD65 RID: 44389 RVA: 0x001876E0 File Offset: 0x001858E0
 		private IRoleSceneVoice_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A35C RID: 41820 RVA: 0x00172FF0 File Offset: 0x001711F0
+		// Token: 0x0600AD66 RID: 44390 RVA: 0x00187718 File Offset: 0x00185918
 		public static IRoleSceneVoice Create([Nullable(2)] IRoleSceneVoice instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A35D RID: 41821 RVA: 0x00173003 File Offset: 0x00171203
+		// Token: 0x0600AD67 RID: 44391 RVA: 0x0018772B File Offset: 0x0018592B
 		public static IRoleSceneVoice CreateFromSetValue([Nullable(2)] IRoleSceneVoice_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A35E RID: 41822 RVA: 0x00173016 File Offset: 0x00171216
+		// Token: 0x0600AD68 RID: 44392 RVA: 0x0018773E File Offset: 0x0018593E
 		public new IRoleSceneVoice_SetValue ToSetValue()
 		{
 			return new IRoleSceneVoice_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003252 RID: 12882
-		// (get) Token: 0x0600A35F RID: 41823 RVA: 0x00173035 File Offset: 0x00171235
-		// (set) Token: 0x0600A360 RID: 41824 RVA: 0x00173060 File Offset: 0x00171260
+		// Token: 0x170034EC RID: 13548
+		// (get) Token: 0x0600AD69 RID: 44393 RVA: 0x0018775D File Offset: 0x0018595D
+		// (set) Token: 0x0600AD6A RID: 44394 RVA: 0x00187788 File Offset: 0x00185988
 		public override EAudioType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003253 RID: 12883
-		// (get) Token: 0x0600A361 RID: 41825 RVA: 0x0017306E File Offset: 0x0017126E
-		// (set) Token: 0x0600A362 RID: 41826 RVA: 0x00173099 File Offset: 0x00171299
+		// Token: 0x170034ED RID: 13549
+		// (get) Token: 0x0600AD6B RID: 44395 RVA: 0x00187796 File Offset: 0x00185996
+		// (set) Token: 0x0600AD6C RID: 44396 RVA: 0x001877C1 File Offset: 0x001859C1
 		public virtual int VoiceGroupData
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061F5 RID: 25077
+		// Token: 0x0400677D RID: 26493
 		[Nullable(2)]
 		protected new IRoleSceneVoice FbInstance;
 
-		// Token: 0x040061F6 RID: 25078
+		// Token: 0x0400677E RID: 26494
 		[Nullable(2)]
 		protected new IRoleSceneVoice_SetValue PocoInterface;
 	}

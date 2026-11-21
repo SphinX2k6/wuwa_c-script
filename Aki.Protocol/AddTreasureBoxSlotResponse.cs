@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020000B5 RID: 181
+	// Token: 0x020000B6 RID: 182
 	[NetMessage(EMessageId.AddTreasureBoxSlotResponse)]
 	public sealed class AddTreasureBoxSlotResponse : IMessage<AddTreasureBoxSlotResponse>, IMessage, IEquatable<AddTreasureBoxSlotResponse>, IDeepCloneable<AddTreasureBoxSlotResponse>, IBufferMessage
 	{
-		// Token: 0x06001DDB RID: 7643 RVA: 0x00051D62 File Offset: 0x0004FF62
+		// Token: 0x06001E24 RID: 7716 RVA: 0x00052A16 File Offset: 0x00050C16
 		[NullableContext(1)]
 		public static AddTreasureBoxSlotResponse Create()
 		{
 			return new AddTreasureBoxSlotResponse();
 		}
 
-		// Token: 0x1700036B RID: 875
-		// (get) Token: 0x06001DDC RID: 7644 RVA: 0x00051D69 File Offset: 0x0004FF69
+		// Token: 0x17000374 RID: 884
+		// (get) Token: 0x06001E25 RID: 7717 RVA: 0x00052A1D File Offset: 0x00050C1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700036C RID: 876
-		// (get) Token: 0x06001DDD RID: 7645 RVA: 0x00051D6C File Offset: 0x0004FF6C
+		// Token: 0x17000375 RID: 885
+		// (get) Token: 0x06001E26 RID: 7718 RVA: 0x00052A20 File Offset: 0x00050C20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001DDE RID: 7646 RVA: 0x00051D73 File Offset: 0x0004FF73
+		// Token: 0x06001E27 RID: 7719 RVA: 0x00052A27 File Offset: 0x00050C27
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AddTreasureBoxSlotResponse()
 		{
 		}
 
-		// Token: 0x06001DDF RID: 7647 RVA: 0x00051D7C File Offset: 0x0004FF7C
+		// Token: 0x06001E28 RID: 7720 RVA: 0x00052A30 File Offset: 0x00050C30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AddTreasureBoxSlotResponse(AddTreasureBoxSlotResponse other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06001DE0 RID: 7648 RVA: 0x00051DC8 File Offset: 0x0004FFC8
+		// Token: 0x06001E29 RID: 7721 RVA: 0x00052A7C File Offset: 0x00050C7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AddTreasureBoxSlotResponse Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new AddTreasureBoxSlotResponse(this);
 		}
 
-		// Token: 0x1700036D RID: 877
-		// (get) Token: 0x06001DE1 RID: 7649 RVA: 0x00051DD0 File Offset: 0x0004FFD0
-		// (set) Token: 0x06001DE2 RID: 7650 RVA: 0x00051DD8 File Offset: 0x0004FFD8
+		// Token: 0x17000376 RID: 886
+		// (get) Token: 0x06001E2A RID: 7722 RVA: 0x00052A84 File Offset: 0x00050C84
+		// (set) Token: 0x06001E2B RID: 7723 RVA: 0x00052A8C File Offset: 0x00050C8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode Code
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700036E RID: 878
-		// (get) Token: 0x06001DE3 RID: 7651 RVA: 0x00051DE1 File Offset: 0x0004FFE1
-		// (set) Token: 0x06001DE4 RID: 7652 RVA: 0x00051DE9 File Offset: 0x0004FFE9
+		// Token: 0x17000377 RID: 887
+		// (get) Token: 0x06001E2C RID: 7724 RVA: 0x00052A95 File Offset: 0x00050C95
+		// (set) Token: 0x06001E2D RID: 7725 RVA: 0x00052A9D File Offset: 0x00050C9D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureBoxSlotInfo TreasureBoxSlotInfo
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001DE5 RID: 7653 RVA: 0x00051DF2 File Offset: 0x0004FFF2
+		// Token: 0x06001E2E RID: 7726 RVA: 0x00052AA6 File Offset: 0x00050CA6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AddTreasureBoxSlotResponse);
 		}
 
-		// Token: 0x06001DE6 RID: 7654 RVA: 0x00051E00 File Offset: 0x00050000
+		// Token: 0x06001E2F RID: 7727 RVA: 0x00052AB4 File Offset: 0x00050CB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AddTreasureBoxSlotResponse other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Code == other.Code && object.Equals(this.TreasureBoxSlotInfo, other.TreasureBoxSlotInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06001DE7 RID: 7655 RVA: 0x00051E50 File Offset: 0x00050050
+		// Token: 0x06001E30 RID: 7728 RVA: 0x00052B04 File Offset: 0x00050D04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001DE8 RID: 7656 RVA: 0x00051EAB File Offset: 0x000500AB
+		// Token: 0x06001E31 RID: 7729 RVA: 0x00052B5F File Offset: 0x00050D5F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06001DE9 RID: 7657 RVA: 0x00051EB8 File Offset: 0x000500B8
+		// Token: 0x06001E32 RID: 7730 RVA: 0x00052B6C File Offset: 0x00050D6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06001DEA RID: 7658 RVA: 0x00051EC4 File Offset: 0x000500C4
+		// Token: 0x06001E33 RID: 7731 RVA: 0x00052B78 File Offset: 0x00050D78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.treasureBoxSlotInfo_ != null)
-			{
-				output.WriteRawTag(58);
-				output.WriteMessage(this.TreasureBoxSlotInfo);
-			}
 			if (this.Code != ErrorCode.Success)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(40);
 				output.WriteEnum((int)this.Code);
+			}
+			if (this.treasureBoxSlotInfo_ != null)
+			{
+				output.WriteRawTag(98);
+				output.WriteMessage(this.TreasureBoxSlotInfo);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001DEB RID: 7659 RVA: 0x00051F20 File Offset: 0x00050120
+		// Token: 0x06001E34 RID: 7732 RVA: 0x00052BD4 File Offset: 0x00050DD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001DEC RID: 7660 RVA: 0x00051F78 File Offset: 0x00050178
+		// Token: 0x06001E35 RID: 7733 RVA: 0x00052C2C File Offset: 0x00050E2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AddTreasureBoxSlotResponse other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06001DED RID: 7661 RVA: 0x00051FE0 File Offset: 0x000501E0
+		// Token: 0x06001E36 RID: 7734 RVA: 0x00052C94 File Offset: 0x00050E94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06001DEE RID: 7662 RVA: 0x00051FEC File Offset: 0x000501EC
+		// Token: 0x06001E37 RID: 7735 RVA: 0x00052CA0 File Offset: 0x00050EA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -240,41 +240,41 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 58U)
+				if (num != 40U)
 				{
-					if (num != 120U)
+					if (num != 98U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.Code = (ErrorCode)input.ReadEnum();
+						if (this.treasureBoxSlotInfo_ == null)
+						{
+							this.TreasureBoxSlotInfo = new TreasureBoxSlotInfo();
+						}
+						input.ReadMessage(this.TreasureBoxSlotInfo);
 					}
 				}
 				else
 				{
-					if (this.treasureBoxSlotInfo_ == null)
-					{
-						this.TreasureBoxSlotInfo = new TreasureBoxSlotInfo();
-					}
-					input.ReadMessage(this.TreasureBoxSlotInfo);
+					this.Code = (ErrorCode)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x04002335 RID: 9013
+		// Token: 0x04002398 RID: 9112
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002336 RID: 9014
-		public const int CodeFieldNumber = 15;
+		// Token: 0x04002399 RID: 9113
+		public const int CodeFieldNumber = 5;
 
-		// Token: 0x04002337 RID: 9015
+		// Token: 0x0400239A RID: 9114
 		private ErrorCode code_;
 
-		// Token: 0x04002338 RID: 9016
-		public const int TreasureBoxSlotInfoFieldNumber = 7;
+		// Token: 0x0400239B RID: 9115
+		public const int TreasureBoxSlotInfoFieldNumber = 12;
 
-		// Token: 0x04002339 RID: 9017
+		// Token: 0x0400239C RID: 9116
 		private TreasureBoxSlotInfo treasureBoxSlotInfo_;
 	}
 }

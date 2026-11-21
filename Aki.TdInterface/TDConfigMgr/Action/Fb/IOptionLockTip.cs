@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002510 RID: 9488
+	// Token: 0x020027B6 RID: 10166
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IOptionLockTip
 	{
-		// Token: 0x0600D3A5 RID: 54181 RVA: 0x001F5C8F File Offset: 0x001F3E8F
-		[NullableContext(1)]
+		// Token: 0x0600E101 RID: 57601 RVA: 0x00211687 File Offset: 0x0020F887
+		[NullableContext(0)]
 		public static IOptionLockTip Create(IOptionLockTip? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B47 RID: 15175
-		// (get) Token: 0x0600D3A6 RID: 54182 RVA: 0x001F5CAE File Offset: 0x001F3EAE
+		// Token: 0x17003E43 RID: 15939
+		// (get) Token: 0x0600E102 RID: 57602 RVA: 0x002116A6 File Offset: 0x0020F8A6
 		public virtual string TidAppendText
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B48 RID: 15176
-		// (get) Token: 0x0600D3A7 RID: 54183 RVA: 0x001F5CBB File Offset: 0x001F3EBB
+		// Token: 0x17003E44 RID: 15940
+		// (get) Token: 0x0600E103 RID: 57603 RVA: 0x002116B3 File Offset: 0x0020F8B3
 		public virtual string TidHintText
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B49 RID: 15177
-		// (get) Token: 0x0600D3A8 RID: 54184 RVA: 0x001F5CC8 File Offset: 0x001F3EC8
+		// Token: 0x17003E45 RID: 15941
+		// (get) Token: 0x0600E104 RID: 57604 RVA: 0x002116C0 File Offset: 0x0020F8C0
 		public virtual int? AppendTextId
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B4A RID: 15178
-		// (get) Token: 0x0600D3A9 RID: 54185 RVA: 0x001F5D00 File Offset: 0x001F3F00
+		// Token: 0x17003E46 RID: 15942
+		// (get) Token: 0x0600E105 RID: 57605 RVA: 0x002116F8 File Offset: 0x0020F8F8
 		public virtual int? HintTextId
 		{
 			get
@@ -71,8 +71,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B4B RID: 15179
-		// (get) Token: 0x0600D3AA RID: 54186 RVA: 0x001F5D36 File Offset: 0x001F3F36
+		// Token: 0x17003E47 RID: 15943
+		// (get) Token: 0x0600E106 RID: 57606 RVA: 0x0021172E File Offset: 0x0020F92E
 		public virtual string EdTidAppendText
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B4C RID: 15180
-		// (get) Token: 0x0600D3AB RID: 54187 RVA: 0x001F5D39 File Offset: 0x001F3F39
+		// Token: 0x17003E48 RID: 15944
+		// (get) Token: 0x0600E107 RID: 57607 RVA: 0x00211731 File Offset: 0x0020F931
 		public virtual string EdTidHintText
 		{
 			get
@@ -91,7 +91,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007402 RID: 29698
+		// Token: 0x04007A54 RID: 31316
 		private IOptionLockTip Instance;
 	}
 }

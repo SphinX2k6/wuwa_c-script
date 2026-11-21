@@ -4,27 +4,27 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057BD RID: 22461
+	// Token: 0x02004794 RID: 18324
 	public class EncircleRewardInfo : RewardInfo, IEncircleRewardInfo, IRewardInfo
 	{
-		// Token: 0x1700897A RID: 35194
-		// (get) Token: 0x060391F6 RID: 233974 RVA: 0x00D8FF07 File Offset: 0x00D8E107
-		// (set) Token: 0x060391F7 RID: 233975 RVA: 0x00D8FF0F File Offset: 0x00D8E10F
+		// Token: 0x17005D42 RID: 23874
+		// (get) Token: 0x0602E106 RID: 188678 RVA: 0x00CDED3F File Offset: 0x00CDCF3F
+		// (set) Token: 0x0602E107 RID: 188679 RVA: 0x00CDED47 File Offset: 0x00CDCF47
 		public bool IsSuccess { get; set; }
 
-		// Token: 0x1700897B RID: 35195
-		// (get) Token: 0x060391F8 RID: 233976 RVA: 0x00D8FF18 File Offset: 0x00D8E118
-		// (set) Token: 0x060391F9 RID: 233977 RVA: 0x00D8FF20 File Offset: 0x00D8E120
+		// Token: 0x17005D43 RID: 23875
+		// (get) Token: 0x0602E108 RID: 188680 RVA: 0x00CDED50 File Offset: 0x00CDCF50
+		// (set) Token: 0x0602E109 RID: 188681 RVA: 0x00CDED58 File Offset: 0x00CDCF58
 		public int? Score { get; set; }
 
-		// Token: 0x1700897C RID: 35196
-		// (get) Token: 0x060391FA RID: 233978 RVA: 0x00D8FF29 File Offset: 0x00D8E129
-		// (set) Token: 0x060391FB RID: 233979 RVA: 0x00D8FF31 File Offset: 0x00D8E131
+		// Token: 0x17005D44 RID: 23876
+		// (get) Token: 0x0602E10A RID: 188682 RVA: 0x00CDED61 File Offset: 0x00CDCF61
+		// (set) Token: 0x0602E10B RID: 188683 RVA: 0x00CDED69 File Offset: 0x00CDCF69
 		public int? RecordScore { get; set; }
 
-		// Token: 0x1700897D RID: 35197
-		// (get) Token: 0x060391FC RID: 233980 RVA: 0x00D8FF3A File Offset: 0x00D8E13A
-		// (set) Token: 0x060391FD RID: 233981 RVA: 0x00D8FF42 File Offset: 0x00D8E142
+		// Token: 0x17005D45 RID: 23877
+		// (get) Token: 0x0602E10C RID: 188684 RVA: 0x00CDED72 File Offset: 0x00CDCF72
+		// (set) Token: 0x0602E10D RID: 188685 RVA: 0x00CDED7A File Offset: 0x00CDCF7A
 		[Nullable(new byte[]
 		{
 			2,

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200142A RID: 5162
+	// Token: 0x02001582 RID: 5506
 	public class IWarningPreformFadeInScreen : IWarningPreformType
 	{
-		// Token: 0x0600756C RID: 30060 RVA: 0x001187BE File Offset: 0x001169BE
-		[NullableContext(1)]
+		// Token: 0x06007C31 RID: 31793 RVA: 0x0012720A File Offset: 0x0012540A
 		public static IWarningPreformFadeInScreen Create(IWarningPreformFadeInScreen? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170026EB RID: 9963
-		// (get) Token: 0x0600756D RID: 30061 RVA: 0x001187DD File Offset: 0x001169DD
+		// Token: 0x170028CF RID: 10447
+		// (get) Token: 0x06007C32 RID: 31794 RVA: 0x00127229 File Offset: 0x00125429
 		public override EWarningPreformType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004404 RID: 17412
+		// Token: 0x04004798 RID: 18328
 		private IWarningPreformFadeInScreen Instance;
 	}
 }

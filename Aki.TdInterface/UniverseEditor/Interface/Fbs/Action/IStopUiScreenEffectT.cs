@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071F4 RID: 29172
+	// Token: 0x020079C9 RID: 31177
 	public class IStopUiScreenEffectT
 	{
-		// Token: 0x1700D8A1 RID: 55457
-		// (get) Token: 0x06033BF0 RID: 211952 RVA: 0x006F73C5 File Offset: 0x006F55C5
-		// (set) Token: 0x06033BF1 RID: 211953 RVA: 0x006F73CD File Offset: 0x006F55CD
+		// Token: 0x1700E49A RID: 58522
+		// (get) Token: 0x06036EF2 RID: 225010 RVA: 0x00758725 File Offset: 0x00756925
+		// (set) Token: 0x06036EF3 RID: 225011 RVA: 0x0075872D File Offset: 0x0075692D
 		public string EffectDaPath { get; set; }
 
-		// Token: 0x06033BF2 RID: 211954 RVA: 0x006F73D6 File Offset: 0x006F55D6
+		// Token: 0x06036EF4 RID: 225012 RVA: 0x00758736 File Offset: 0x00756936
 		public IStopUiScreenEffectT()
 		{
 			this.EffectDaPath = null;

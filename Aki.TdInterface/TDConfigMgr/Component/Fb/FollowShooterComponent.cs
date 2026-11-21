@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D15 RID: 3349
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E0F RID: 3599
 	public class FollowShooterComponent : IComponentBase
 	{
-		// Token: 0x06004C6C RID: 19564 RVA: 0x000BE692 File Offset: 0x000BC892
+		// Token: 0x06005186 RID: 20870 RVA: 0x000C9D66 File Offset: 0x000C7F66
 		public static FollowShooterComponent Create(IFollowShooterComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017FF RID: 6143
-		// (get) Token: 0x06004C6D RID: 19565 RVA: 0x000BE6B4 File Offset: 0x000BC8B4
+		// Token: 0x17001963 RID: 6499
+		// (get) Token: 0x06005187 RID: 20871 RVA: 0x000C9D88 File Offset: 0x000C7F88
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001800 RID: 6144
-		// (get) Token: 0x06004C6E RID: 19566 RVA: 0x000BE6EC File Offset: 0x000BC8EC
+		// Token: 0x17001964 RID: 6500
+		// (get) Token: 0x06005188 RID: 20872 RVA: 0x000C9DC0 File Offset: 0x000C7FC0
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001801 RID: 6145
-		// (get) Token: 0x06004C6F RID: 19567 RVA: 0x000BE702 File Offset: 0x000BC902
+		// Token: 0x17001965 RID: 6501
+		// (get) Token: 0x06005189 RID: 20873 RVA: 0x000C9DD6 File Offset: 0x000C7FD6
 		public virtual string Config
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001802 RID: 6146
-		// (get) Token: 0x06004C70 RID: 19568 RVA: 0x000BE70F File Offset: 0x000BC90F
+		// Token: 0x17001966 RID: 6502
+		// (get) Token: 0x0600518A RID: 20874 RVA: 0x000C9DE3 File Offset: 0x000C7FE3
 		[Nullable(2)]
 		public virtual IFollowShooterJellyFishConfig TypeConfig
 		{
@@ -75,19 +73,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001803 RID: 6147
-		// (get) Token: 0x06004C71 RID: 19569 RVA: 0x000BE744 File Offset: 0x000BC944
+		// Token: 0x17001967 RID: 6503
+		// (get) Token: 0x0600518B RID: 20875 RVA: 0x000C9E18 File Offset: 0x000C8018
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityCategory> LockableCategories
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -110,25 +108,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BBE RID: 11198
+		// Token: 0x04002E7E RID: 11902
 		private IFollowShooterComponent Instance;
 
-		// Token: 0x04002BBF RID: 11199
+		// Token: 0x04002E7F RID: 11903
 		[Nullable(2)]
 		private IFollowShooterJellyFishConfig _TypeConfigCache;
 
-		// Token: 0x04002BC0 RID: 11200
+		// Token: 0x04002E80 RID: 11904
 		private bool _TypeConfigInited;
 
-		// Token: 0x04002BC1 RID: 11201
+		// Token: 0x04002E81 RID: 11905
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityCategory> _LockableCategoriesCache;
 
-		// Token: 0x04002BC2 RID: 11202
+		// Token: 0x04002E82 RID: 11906
 		private bool _LockableCategoriesInited;
 	}
 }

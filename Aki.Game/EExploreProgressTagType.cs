@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001AB0 RID: 6832
+// Token: 0x02000F6F RID: 3951
 public enum EExploreProgressTagType
 {
-	// Token: 0x04005D2D RID: 23853
+	// Token: 0x04005DFC RID: 24060
 	None,
-	// Token: 0x04005D2E RID: 23854
+	// Token: 0x04005DFD RID: 24061
 	VillageInfr
 }

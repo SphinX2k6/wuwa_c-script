@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004939 RID: 18745
+	// Token: 0x02004DEF RID: 19951
 	public enum EGameDifficultyType : byte
 	{
-		// Token: 0x0400D0B0 RID: 53424
+		// Token: 0x0400DB74 RID: 56180
 		None,
-		// Token: 0x0400D0B1 RID: 53425
+		// Token: 0x0400DB75 RID: 56181
 		Normal = 5,
-		// Token: 0x0400D0B2 RID: 53426
+		// Token: 0x0400DB76 RID: 56182
 		Bloody = 10
 	}
 }

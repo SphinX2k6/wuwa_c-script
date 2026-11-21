@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200617A RID: 24954
+	// Token: 0x020050F8 RID: 20728
 	public class RoverlikeRoleSelectElementTogglePanel : UiPanelBase
 	{
-		// Token: 0x0603F131 RID: 258353 RVA: 0x00F3DE2C File Offset: 0x00F3C02C
+		// Token: 0x06033DF1 RID: 212465 RVA: 0x00E84CF4 File Offset: 0x00E82EF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F132 RID: 258354 RVA: 0x00F3DF1C File Offset: 0x00F3C11C
+		// Token: 0x06033DF2 RID: 212466 RVA: 0x00E84DE4 File Offset: 0x00E82FE4
 		public void SetLocked(bool locked)
 		{
 			UUIItem item = base.GetItem(0);
@@ -66,25 +66,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0200C3E4 RID: 50148
+		// Token: 0x0200ADCB RID: 44491
 		private class EComponents
 		{
-			// Token: 0x0403B1C2 RID: 242114
+			// Token: 0x04035B23 RID: 219939
 			public const int PnlLock = 0;
 
-			// Token: 0x0403B1C3 RID: 242115
+			// Token: 0x04035B24 RID: 219940
 			public const int TexBgColor = 1;
 
-			// Token: 0x0403B1C4 RID: 242116
+			// Token: 0x04035B25 RID: 219941
 			public const int TexFeatherBg = 2;
 
-			// Token: 0x0403B1C5 RID: 242117
+			// Token: 0x04035B26 RID: 219942
 			public const int TexFeatherShadowUp = 3;
 
-			// Token: 0x0403B1C6 RID: 242118
+			// Token: 0x04035B27 RID: 219943
 			public const int TexFeatherShadowDown = 4;
 
-			// Token: 0x0403B1C7 RID: 242119
+			// Token: 0x04035B28 RID: 219944
 			public const int SprIconBg = 5;
 		}
 	}

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A31 RID: 18993
+	// Token: 0x02004EF4 RID: 20212
 	public class ICheckFormationRoleInfoConditionT
 	{
-		// Token: 0x1700897E RID: 35198
-		// (get) Token: 0x0601DBA4 RID: 121764 RVA: 0x0042E54B File Offset: 0x0042C74B
-		// (set) Token: 0x0601DBA5 RID: 121765 RVA: 0x0042E553 File Offset: 0x0042C753
+		// Token: 0x17009053 RID: 36947
+		// (get) Token: 0x0601F62D RID: 128557 RVA: 0x0045F443 File Offset: 0x0045D643
+		// (set) Token: 0x0601F62E RID: 128558 RVA: 0x0045F44B File Offset: 0x0045D64B
 		public ECondition Type { get; set; }
 
-		// Token: 0x1700897F RID: 35199
-		// (get) Token: 0x0601DBA6 RID: 121766 RVA: 0x0042E55C File Offset: 0x0042C75C
-		// (set) Token: 0x0601DBA7 RID: 121767 RVA: 0x0042E564 File Offset: 0x0042C764
+		// Token: 0x17009054 RID: 36948
+		// (get) Token: 0x0601F62F RID: 128559 RVA: 0x0045F454 File Offset: 0x0045D654
+		// (set) Token: 0x0601F630 RID: 128560 RVA: 0x0045F45C File Offset: 0x0045D65C
 		public TCheckFormationRoleInfoUnion Option { get; set; }
 
-		// Token: 0x0601DBA8 RID: 121768 RVA: 0x0042E56D File Offset: 0x0042C76D
+		// Token: 0x0601F631 RID: 128561 RVA: 0x0045F465 File Offset: 0x0045D665
 		public ICheckFormationRoleInfoConditionT()
 		{
 			this.Type = ECondition.CompareVar;

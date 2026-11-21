@@ -4,14 +4,14 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x02005082 RID: 20610
+	// Token: 0x02004052 RID: 16466
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotOptionComponentContext
 	{
-		// Token: 0x1700806E RID: 32878
-		// (get) Token: 0x06034CDD RID: 216285 RVA: 0x00C7DB9C File Offset: 0x00C7BD9C
-		// (set) Token: 0x06034CDE RID: 216286 RVA: 0x00C7DBA4 File Offset: 0x00C7BDA4
+		// Token: 0x1700542E RID: 21550
+		// (get) Token: 0x06029BD2 RID: 170962 RVA: 0x00BCAF74 File Offset: 0x00BC9174
+		// (set) Token: 0x06029BD3 RID: 170963 RVA: 0x00BCAF7C File Offset: 0x00BC917C
 		[Nullable(new byte[]
 		{
 			2,
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			1
 		})] set; }
 
-		// Token: 0x1700806F RID: 32879
-		// (get) Token: 0x06034CDF RID: 216287 RVA: 0x00C7DBAD File Offset: 0x00C7BDAD
-		// (set) Token: 0x06034CE0 RID: 216288 RVA: 0x00C7DBB5 File Offset: 0x00C7BDB5
+		// Token: 0x1700542F RID: 21551
+		// (get) Token: 0x06029BD4 RID: 170964 RVA: 0x00BCAF85 File Offset: 0x00BC9185
+		// (set) Token: 0x06029BD5 RID: 170965 RVA: 0x00BCAF8D File Offset: 0x00BC918D
 		public Action OptionsShowDelegate { get; set; }
 
-		// Token: 0x17008070 RID: 32880
-		// (get) Token: 0x06034CE1 RID: 216289 RVA: 0x00C7DBBE File Offset: 0x00C7BDBE
-		// (set) Token: 0x06034CE2 RID: 216290 RVA: 0x00C7DBC6 File Offset: 0x00C7BDC6
+		// Token: 0x17005430 RID: 21552
+		// (get) Token: 0x06029BD6 RID: 170966 RVA: 0x00BCAF96 File Offset: 0x00BC9196
+		// (set) Token: 0x06029BD7 RID: 170967 RVA: 0x00BCAF9E File Offset: 0x00BC919E
 		public Action OptionsHideDelegate { get; set; }
 	}
 }

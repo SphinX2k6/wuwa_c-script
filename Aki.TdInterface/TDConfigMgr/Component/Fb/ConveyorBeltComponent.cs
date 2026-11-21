@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BDF RID: 3039
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CAE RID: 3246
 	public class ConveyorBeltComponent : IComponentBase
 	{
-		// Token: 0x060045D5 RID: 17877 RVA: 0x000B0A3F File Offset: 0x000AEC3F
+		// Token: 0x06004A33 RID: 18995 RVA: 0x000BABBB File Offset: 0x000B8DBB
 		public static ConveyorBeltComponent Create(IConveyorBeltComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013D4 RID: 5076
-		// (get) Token: 0x060045D6 RID: 17878 RVA: 0x000B0A60 File Offset: 0x000AEC60
+		// Token: 0x170014D2 RID: 5330
+		// (get) Token: 0x06004A34 RID: 18996 RVA: 0x000BABDC File Offset: 0x000B8DDC
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013D5 RID: 5077
-		// (get) Token: 0x060045D7 RID: 17879 RVA: 0x000B0A98 File Offset: 0x000AEC98
+		// Token: 0x170014D3 RID: 5331
+		// (get) Token: 0x06004A35 RID: 18997 RVA: 0x000BAC14 File Offset: 0x000B8E14
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013D6 RID: 5078
-		// (get) Token: 0x060045D8 RID: 17880 RVA: 0x000B0AB0 File Offset: 0x000AECB0
+		// Token: 0x170014D4 RID: 5332
+		// (get) Token: 0x06004A36 RID: 18998 RVA: 0x000BAC2C File Offset: 0x000B8E2C
 		public virtual List<IConveyorBeltState> StateGroups
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027C4 RID: 10180
+		// Token: 0x04002A0F RID: 10767
 		private IConveyorBeltComponent Instance;
 
-		// Token: 0x040027C5 RID: 10181
+		// Token: 0x04002A10 RID: 10768
 		private List<IConveyorBeltState> _StateGroupsCache;
 
-		// Token: 0x040027C6 RID: 10182
+		// Token: 0x04002A11 RID: 10769
 		private bool _StateGroupsInited;
 	}
 }

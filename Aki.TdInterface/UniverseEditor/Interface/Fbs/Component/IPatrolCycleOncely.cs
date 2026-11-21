@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200570A RID: 22282
+	// Token: 0x02005CF9 RID: 23801
 	public struct IPatrolCycleOncely : IFlatbufferObject
 	{
-		// Token: 0x1700A5E6 RID: 42470
-		// (get) Token: 0x06025411 RID: 152593 RVA: 0x00523FF2 File Offset: 0x005221F2
+		// Token: 0x1700AEE9 RID: 44777
+		// (get) Token: 0x06027878 RID: 161912 RVA: 0x00568A3E File Offset: 0x00566C3E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025412 RID: 152594 RVA: 0x00523FFF File Offset: 0x005221FF
+		// Token: 0x06027879 RID: 161913 RVA: 0x00568A4B File Offset: 0x00566C4B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025413 RID: 152595 RVA: 0x00524008 File Offset: 0x00522208
+		// Token: 0x0602787A RID: 161914 RVA: 0x00568A54 File Offset: 0x00566C54
 		public static IPatrolCycleOncely GetRootAsIPatrolCycleOncely(ByteBuffer _bb)
 		{
 			return IPatrolCycleOncely.GetRootAsIPatrolCycleOncely(_bb, default(IPatrolCycleOncely));
 		}
 
-		// Token: 0x06025414 RID: 152596 RVA: 0x00524024 File Offset: 0x00522224
+		// Token: 0x0602787B RID: 161915 RVA: 0x00568A70 File Offset: 0x00566C70
 		public static IPatrolCycleOncely GetRootAsIPatrolCycleOncely(ByteBuffer _bb, IPatrolCycleOncely obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025415 RID: 152597 RVA: 0x00524041 File Offset: 0x00522241
+		// Token: 0x0602787C RID: 161916 RVA: 0x00568A8D File Offset: 0x00566C8D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025416 RID: 152598 RVA: 0x00524050 File Offset: 0x00522250
+		// Token: 0x0602787D RID: 161917 RVA: 0x00568A9C File Offset: 0x00566C9C
 		public IPatrolCycleOncely __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A5E7 RID: 42471
-		// (get) Token: 0x06025417 RID: 152599 RVA: 0x00524060 File Offset: 0x00522260
+		// Token: 0x1700AEEA RID: 44778
+		// (get) Token: 0x0602787E RID: 161918 RVA: 0x00568AAC File Offset: 0x00566CAC
 		public EPatrolCycleMode Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025418 RID: 152600 RVA: 0x0052409C File Offset: 0x0052229C
+		// Token: 0x0602787F RID: 161919 RVA: 0x00568AE8 File Offset: 0x00566CE8
 		public static Offset<IPatrolCycleOncely> CreateIPatrolCycleOncely(FlatBufferBuilder builder, EPatrolCycleMode Type = EPatrolCycleMode.Loop)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPatrolCycleOncely.EndIPatrolCycleOncely(builder);
 		}
 
-		// Token: 0x06025419 RID: 152601 RVA: 0x005240B2 File Offset: 0x005222B2
+		// Token: 0x06027880 RID: 161920 RVA: 0x00568AFE File Offset: 0x00566CFE
 		public static void StartIPatrolCycleOncely(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602541A RID: 152602 RVA: 0x005240BB File Offset: 0x005222BB
+		// Token: 0x06027881 RID: 161921 RVA: 0x00568B07 File Offset: 0x00566D07
 		public static void AddType(FlatBufferBuilder builder, EPatrolCycleMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602541B RID: 152603 RVA: 0x005240C6 File Offset: 0x005222C6
+		// Token: 0x06027882 RID: 161922 RVA: 0x00568B12 File Offset: 0x00566D12
 		public static Offset<IPatrolCycleOncely> EndIPatrolCycleOncely(FlatBufferBuilder builder)
 		{
 			return new Offset<IPatrolCycleOncely>(builder.EndTable());
 		}
 
-		// Token: 0x0602541C RID: 152604 RVA: 0x005240D4 File Offset: 0x005222D4
+		// Token: 0x06027883 RID: 161923 RVA: 0x00568B20 File Offset: 0x00566D20
 		public IPatrolCycleOncelyT UnPack()
 		{
 			IPatrolCycleOncelyT patrolCycleOncelyT = new IPatrolCycleOncelyT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return patrolCycleOncelyT;
 		}
 
-		// Token: 0x0602541D RID: 152605 RVA: 0x005240EF File Offset: 0x005222EF
+		// Token: 0x06027884 RID: 161924 RVA: 0x00568B3B File Offset: 0x00566D3B
 		public void UnPackTo(IPatrolCycleOncelyT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602541E RID: 152606 RVA: 0x00524100 File Offset: 0x00522300
+		// Token: 0x06027885 RID: 161925 RVA: 0x00568B4C File Offset: 0x00566D4C
 		public static Offset<IPatrolCycleOncely> Pack(FlatBufferBuilder builder, IPatrolCycleOncelyT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPatrolCycleOncely.CreateIPatrolCycleOncely(builder, _o.Type);
 		}
 
-		// Token: 0x0400EB6A RID: 60266
+		// Token: 0x0400F837 RID: 63543
 		private Table __p;
 	}
 }

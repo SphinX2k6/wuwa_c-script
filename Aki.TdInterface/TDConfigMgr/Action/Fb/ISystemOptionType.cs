@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200254B RID: 9547
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027F3 RID: 10227
 	public class ISystemOptionType
 	{
-		// Token: 0x0600D518 RID: 54552 RVA: 0x001F9689 File Offset: 0x001F7889
+		// Token: 0x0600E27C RID: 57980 RVA: 0x00215149 File Offset: 0x00213349
 		public static ISystemOptionType Create(ISystemOptionType? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003C44 RID: 15428
-		// (get) Token: 0x0600D519 RID: 54553 RVA: 0x001F96A8 File Offset: 0x001F78A8
+		// Token: 0x17003F44 RID: 16196
+		// (get) Token: 0x0600E27D RID: 57981 RVA: 0x00215168 File Offset: 0x00213368
 		public virtual ESystemOptionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003C45 RID: 15429
-		// (get) Token: 0x0600D51A RID: 54554 RVA: 0x001F96B8 File Offset: 0x001F78B8
+		// Token: 0x17003F45 RID: 16197
+		// (get) Token: 0x0600E27E RID: 57982 RVA: 0x00215178 File Offset: 0x00213378
 		public virtual List<ISystemOption> SystemOptions
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003C46 RID: 15430
-		// (get) Token: 0x0600D51B RID: 54555 RVA: 0x001F9724 File Offset: 0x001F7924
+		// Token: 0x17003F46 RID: 16198
+		// (get) Token: 0x0600E27F RID: 57983 RVA: 0x002151E4 File Offset: 0x002133E4
 		public virtual bool? KeepPreTalkItem
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007503 RID: 29955
+		// Token: 0x04007B5B RID: 31579
 		private ISystemOptionType Instance;
 
-		// Token: 0x04007504 RID: 29956
+		// Token: 0x04007B5C RID: 31580
 		private List<ISystemOption> _SystemOptionsCache;
 
-		// Token: 0x04007505 RID: 29957
+		// Token: 0x04007B5D RID: 31581
 		private bool _SystemOptionsInited;
 	}
 }

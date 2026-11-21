@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006078 RID: 24696
+	// Token: 0x02004FF6 RID: 20470
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorAlbumView : UiViewBase
 	{
-		// Token: 0x0603E72A RID: 255786 RVA: 0x00F16876 File Offset: 0x00F14A76
+		// Token: 0x060333EE RID: 209902 RVA: 0x00E5D63A File Offset: 0x00E5B83A
 		public SpringManorAlbumView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E72B RID: 255787 RVA: 0x00F168A8 File Offset: 0x00F14AA8
+		// Token: 0x060333EF RID: 209903 RVA: 0x00E5D66C File Offset: 0x00E5B86C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E72C RID: 255788 RVA: 0x00F16AC4 File Offset: 0x00F14CC4
+		// Token: 0x060333F0 RID: 209904 RVA: 0x00E5D888 File Offset: 0x00E5BA88
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorAlbumView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E72D RID: 255789 RVA: 0x00F16B08 File Offset: 0x00F14D08
+		// Token: 0x060333F1 RID: 209905 RVA: 0x00E5D8CC File Offset: 0x00E5BACC
 		protected override void OnStart()
 		{
 			this.CacheCharacterLockTexturePath = (ConfigCommonParamById.GetStringConfig("Spring26CharacterLockTexPath") ?? "");
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ItemLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(15), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, true);
 		}
 
-		// Token: 0x0603E72E RID: 255790 RVA: 0x00F16C18 File Offset: 0x00F14E18
+		// Token: 0x060333F2 RID: 209906 RVA: 0x00E5D9DC File Offset: 0x00E5BBDC
 		protected override void OnBeforeShow()
 		{
 			SpringManorData activityData = SpringManorModel.Instance.ActivityData;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshTabItem(this.CurTabType, true);
 		}
 
-		// Token: 0x0603E72F RID: 255791 RVA: 0x00F16CB4 File Offset: 0x00F14EB4
+		// Token: 0x060333F3 RID: 209907 RVA: 0x00E5DA78 File Offset: 0x00E5BC78
 		private void CheckDefaultParam()
 		{
 			this.CurrentTaskItemIndex = 0;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E730 RID: 255792 RVA: 0x00F16DE4 File Offset: 0x00F14FE4
+		// Token: 0x060333F4 RID: 209908 RVA: 0x00E5DBA8 File Offset: 0x00E5BDA8
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
 			if (eventName == "Sequence_Switch_Top")
@@ -189,19 +189,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E731 RID: 255793 RVA: 0x00F16E8E File Offset: 0x00F1508E
+		// Token: 0x060333F5 RID: 209909 RVA: 0x00E5DC52 File Offset: 0x00E5BE52
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnBrochureBookItemStateUpdate, new Action(this.OnBrochureBookItemStateUpdate));
 		}
 
-		// Token: 0x0603E732 RID: 255794 RVA: 0x00F16EAC File Offset: 0x00F150AC
+		// Token: 0x060333F6 RID: 209910 RVA: 0x00E5DC70 File Offset: 0x00E5BE70
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnBrochureBookItemStateUpdate, new Action(this.OnBrochureBookItemStateUpdate));
 		}
 
-		// Token: 0x0603E733 RID: 255795 RVA: 0x00F16ECC File Offset: 0x00F150CC
+		// Token: 0x060333F7 RID: 209911 RVA: 0x00E5DC90 File Offset: 0x00E5BE90
 		private void OnBrochureBookItemStateUpdate()
 		{
 			if (this.AlbumTaskDataMap.ContainsKey(this.CurTabType))
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshTabItemProgress(this.TogEasterEggTab, EBrochureType.EasterEggBook);
 		}
 
-		// Token: 0x0603E734 RID: 255796 RVA: 0x00F16F80 File Offset: 0x00F15180
+		// Token: 0x060333F8 RID: 209912 RVA: 0x00E5DD44 File Offset: 0x00E5BF44
 		[NullableContext(2)]
 		private void InitTabItem(SpringManorAlbumTabItem tab, EBrochureType tabType)
 		{
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshTabItemProgress(tab, tabType);
 		}
 
-		// Token: 0x0603E735 RID: 255797 RVA: 0x00F16F8E File Offset: 0x00F1518E
+		// Token: 0x060333F9 RID: 209913 RVA: 0x00E5DD52 File Offset: 0x00E5BF52
 		private SpringManorAlbumTaskItem InitDeTermItem()
 		{
 			SpringManorAlbumTaskItem springManorAlbumTaskItem = new SpringManorAlbumTaskItem();
@@ -236,14 +236,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return springManorAlbumTaskItem;
 		}
 
-		// Token: 0x0603E736 RID: 255798 RVA: 0x00F16FA8 File Offset: 0x00F151A8
+		// Token: 0x060333FA RID: 209914 RVA: 0x00E5DD6C File Offset: 0x00E5BF6C
 		private void OnClickMoreButton()
 		{
 			int helpId = ActivityModel.Instance.GetActivityById(this.ActivityId).GetHelpId();
 			HelpController.Instance.OpenHelpById(helpId);
 		}
 
-		// Token: 0x0603E737 RID: 255799 RVA: 0x00F16FD8 File Offset: 0x00F151D8
+		// Token: 0x060333FB RID: 209915 RVA: 0x00E5DD9C File Offset: 0x00E5BF9C
 		private void OnClickTogAlbum1(EToggleState state)
 		{
 			this.CurrentTaskItemIndex = 0;
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E738 RID: 255800 RVA: 0x00F1701C File Offset: 0x00F1521C
+		// Token: 0x060333FC RID: 209916 RVA: 0x00E5DDE0 File Offset: 0x00E5BFE0
 		private void OnClickTogAlbum2(EToggleState state)
 		{
 			this.CurrentTaskItemIndex = 0;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E739 RID: 255801 RVA: 0x00F17060 File Offset: 0x00F15260
+		// Token: 0x060333FD RID: 209917 RVA: 0x00E5DE24 File Offset: 0x00E5C024
 		private void RefreshTabItem(EBrochureType targetType, bool needSort)
 		{
 			SpringManorAlbumTabItem togCharacterTab = this.TogCharacterTab;
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E73A RID: 255802 RVA: 0x00F170B0 File Offset: 0x00F152B0
+		// Token: 0x060333FE RID: 209918 RVA: 0x00E5DE74 File Offset: 0x00E5C074
 		[NullableContext(2)]
 		private void RefreshTabItemProgress(SpringManorAlbumTabItem tab, EBrochureType tabType)
 		{
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			tab.InitProgress(num, maxNum);
 		}
 
-		// Token: 0x0603E73B RID: 255803 RVA: 0x00F17174 File Offset: 0x00F15374
+		// Token: 0x060333FF RID: 209919 RVA: 0x00E5DF38 File Offset: 0x00E5C138
 		private void OnClickPicAmplifier()
 		{
 			if (this.CacheInformationTexturePath != null && this.CacheInformationTexturePath.Length > 0)
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E73C RID: 255804 RVA: 0x00F171A8 File Offset: 0x00F153A8
+		// Token: 0x06033400 RID: 209920 RVA: 0x00E5DF6C File Offset: 0x00E5C16C
 		[NullableContext(2)]
 		private AlbumTaskData GetCurBookItemData()
 		{
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return null;
 		}
 
-		// Token: 0x0603E73D RID: 255805 RVA: 0x00F17200 File Offset: 0x00F15400
+		// Token: 0x06033401 RID: 209921 RVA: 0x00E5DFC4 File Offset: 0x00E5C1C4
 		private void OnClickBtnSecConfirmB()
 		{
 			AlbumTaskData curBookItemData = this.GetCurBookItemData();
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E73E RID: 255806 RVA: 0x00F172D4 File Offset: 0x00F154D4
+		// Token: 0x06033402 RID: 209922 RVA: 0x00E5E098 File Offset: 0x00E5C298
 		public void ClickTaskItem(AlbumTaskData tabData, int index)
 		{
 			if (tabData != null)
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SequencePlayer.PlayLevelSequenceByName("Switch_List", false, null, false);
 		}
 
-		// Token: 0x0603E73F RID: 255807 RVA: 0x00F1735C File Offset: 0x00F1555C
+		// Token: 0x06033403 RID: 209923 RVA: 0x00E5E120 File Offset: 0x00E5C320
 		private void InitBrochureData(EBrochureType tab)
 		{
 			if (!this.AlbumTaskDataMap.ContainsKey(tab))
@@ -435,7 +435,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E740 RID: 255808 RVA: 0x00F17480 File Offset: 0x00F15680
+		// Token: 0x06033404 RID: 209924 RVA: 0x00E5E244 File Offset: 0x00E5C444
 		private void RefreshBrochureItem(bool needSort)
 		{
 			if (!this.AlbumTaskDataMap.ContainsKey(this.CurTabType))
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E741 RID: 255809 RVA: 0x00F17540 File Offset: 0x00F15740
+		// Token: 0x06033405 RID: 209925 RVA: 0x00E5E304 File Offset: 0x00E5C504
 		private int SortFunc(AlbumTaskData a, AlbumTaskData b)
 		{
 			if (a.IsFollowing || b.IsFollowing)
@@ -514,7 +514,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E742 RID: 255810 RVA: 0x00F175A0 File Offset: 0x00F157A0
+		// Token: 0x06033406 RID: 209926 RVA: 0x00E5E364 File Offset: 0x00E5C564
 		private int GetStateSort(EBrochureState state)
 		{
 			switch (state)
@@ -530,7 +530,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E743 RID: 255811 RVA: 0x00F175BD File Offset: 0x00F157BD
+		// Token: 0x06033407 RID: 209927 RVA: 0x00E5E381 File Offset: 0x00E5C581
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -539,7 +539,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E744 RID: 255812 RVA: 0x00F175D8 File Offset: 0x00F157D8
+		// Token: 0x06033408 RID: 209928 RVA: 0x00E5E39C File Offset: 0x00E5C59C
 		private void SetDetailInfo(AlbumTaskData data)
 		{
 			this.CacheInformationTexturePath = null;
@@ -557,7 +557,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SetEasterEggDetailInfo(data, showState);
 		}
 
-		// Token: 0x0603E745 RID: 255813 RVA: 0x00F1763C File Offset: 0x00F1583C
+		// Token: 0x06033409 RID: 209929 RVA: 0x00E5E400 File Offset: 0x00E5C600
 		private void SetEasterEggDetailInfo(AlbumTaskData data, EBrochureState showState)
 		{
 			bool flag = showState == EBrochureState.Lock;
@@ -597,7 +597,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E746 RID: 255814 RVA: 0x00F17750 File Offset: 0x00F15950
+		// Token: 0x0603340A RID: 209930 RVA: 0x00E5E514 File Offset: 0x00E5C714
 		private void SetCharacterDetailInfo(AlbumTaskData data, EBrochureState showState)
 		{
 			bool flag = showState == EBrochureState.Lock;
@@ -641,7 +641,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E747 RID: 255815 RVA: 0x00F178C8 File Offset: 0x00F15AC8
+		// Token: 0x0603340B RID: 209931 RVA: 0x00E5E68C File Offset: 0x00E5C88C
 		private void SetGenericDetailInfo(int cfgId, EBrochureState state)
 		{
 			bool flag = state == EBrochureState.Lock;
@@ -701,7 +701,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E748 RID: 255816 RVA: 0x00F17A14 File Offset: 0x00F15C14
+		// Token: 0x0603340C RID: 209932 RVA: 0x00E5E7D8 File Offset: 0x00E5C9D8
 		[NullableContext(2)]
 		public void SetRewardItems(List<TItem> rewardItems, bool isRewarded)
 		{
@@ -723,14 +723,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E749 RID: 255817 RVA: 0x00F17A60 File Offset: 0x00F15C60
+		// Token: 0x0603340D RID: 209933 RVA: 0x00E5E824 File Offset: 0x00E5CA24
 		private bool IsNeedPlayUnlockSequence(int configId)
 		{
 			HashSet<int> player = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.SpringManorBrochureUnlockSequencePlayed, null);
 			return player == null || !player.Contains(configId);
 		}
 
-		// Token: 0x0603E74A RID: 255818 RVA: 0x00F17A88 File Offset: 0x00F15C88
+		// Token: 0x0603340E RID: 209934 RVA: 0x00E5E84C File Offset: 0x00E5CA4C
 		public void CheckPlayUnlockSequence()
 		{
 			AlbumTaskData curBookItemData = this.GetCurBookItemData();
@@ -753,19 +753,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x04020A83 RID: 133763
+		// Token: 0x0401B3B0 RID: 111536
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020A84 RID: 133764
+		// Token: 0x0401B3B1 RID: 111537
 		[Nullable(2)]
 		private SpringManorAlbumTabItem TogCharacterTab;
 
-		// Token: 0x04020A85 RID: 133765
+		// Token: 0x0401B3B2 RID: 111538
 		[Nullable(2)]
 		private SpringManorAlbumTabItem TogEasterEggTab;
 
-		// Token: 0x04020A86 RID: 133766
+		// Token: 0x0401B3B3 RID: 111539
 		[Nullable(new byte[]
 		{
 			2,
@@ -774,11 +774,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericScrollViewNew<SpringManorAlbumTaskItem, AlbumTaskData> ScrollList;
 
-		// Token: 0x04020A87 RID: 133767
+		// Token: 0x0401B3B4 RID: 111540
 		[Nullable(2)]
 		private SpringManorAlbumConfirmItem BtnConfirmItem;
 
-		// Token: 0x04020A88 RID: 133768
+		// Token: 0x0401B3B5 RID: 111541
 		[Nullable(new byte[]
 		{
 			2,
@@ -786,59 +786,59 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-		// Token: 0x04020A89 RID: 133769
+		// Token: 0x0401B3B6 RID: 111542
 		[Nullable(2)]
 		private UUIScrollViewWithScrollbarComponent ScrollViewComponent;
 
-		// Token: 0x04020A8A RID: 133770
+		// Token: 0x0401B3B7 RID: 111543
 		private EBrochureType CurTabType = EBrochureType.Brochure;
 
-		// Token: 0x04020A8B RID: 133771
+		// Token: 0x0401B3B8 RID: 111544
 		private int ActivityId;
 
-		// Token: 0x04020A8C RID: 133772
+		// Token: 0x0401B3B9 RID: 111545
 		private bool IsRewarded;
 
-		// Token: 0x04020A8D RID: 133773
+		// Token: 0x0401B3BA RID: 111546
 		private int CurrentTaskItemIndex;
 
-		// Token: 0x04020A8E RID: 133774
+		// Token: 0x0401B3BB RID: 111547
 		private int CurrentTaskItemCfgId;
 
-		// Token: 0x04020A8F RID: 133775
+		// Token: 0x0401B3BC RID: 111548
 		private readonly Dictionary<EBrochureType, List<AlbumTaskData>> AlbumTaskDataMap = new Dictionary<EBrochureType, List<AlbumTaskData>>();
 
-		// Token: 0x04020A90 RID: 133776
+		// Token: 0x0401B3BD RID: 111549
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x04020A91 RID: 133777
+		// Token: 0x0401B3BE RID: 111550
 		[Nullable(2)]
 		private UUIInturnAnimController AnimationController;
 
-		// Token: 0x04020A92 RID: 133778
+		// Token: 0x0401B3BF RID: 111551
 		[Nullable(2)]
 		private string CacheInformationTexturePath;
 
-		// Token: 0x04020A93 RID: 133779
+		// Token: 0x0401B3C0 RID: 111552
 		private string CacheCharacterLockTexturePath = "";
 
-		// Token: 0x04020A94 RID: 133780
+		// Token: 0x0401B3C1 RID: 111553
 		private string CacheEasterEggLockTexturePath = "";
 
-		// Token: 0x0200C2DF RID: 49887
+		// Token: 0x0200ACCA RID: 44234
 		[NullableContext(0)]
 		[RequiredMember]
 		public class Params
 		{
-			// Token: 0x06050728 RID: 329512 RVA: 0x015A5BD2 File Offset: 0x015A3DD2
+			// Token: 0x06046C1A RID: 289818 RVA: 0x0155D966 File Offset: 0x0155BB66
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public Params()
 			{
 			}
 
-			// Token: 0x0403AD8E RID: 241038
+			// Token: 0x040356F6 RID: 218870
 			[RequiredMember]
 			public EBrochureType OpenTab;
 		}

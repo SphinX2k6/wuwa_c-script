@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005557 RID: 21847
+	// Token: 0x02004529 RID: 17705
 	public enum EFishPointDetectSourceType
 	{
-		// Token: 0x0401D476 RID: 119926
+		// Token: 0x04017EFF RID: 98047
 		Entrust,
-		// Token: 0x0401D477 RID: 119927
+		// Token: 0x04017F00 RID: 98048
 		Collection
 	}
 }

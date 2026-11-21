@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004555 RID: 17749
+	// Token: 0x020049BD RID: 18877
 	public class IRollBlockBlockTemplateT
 	{
-		// Token: 0x17007DE7 RID: 32231
-		// (get) Token: 0x0601AB6F RID: 109423 RVA: 0x003CF3A4 File Offset: 0x003CD5A4
-		// (set) Token: 0x0601AB70 RID: 109424 RVA: 0x003CF3AC File Offset: 0x003CD5AC
+		// Token: 0x17008428 RID: 33832
+		// (get) Token: 0x0601C344 RID: 115524 RVA: 0x003FB640 File Offset: 0x003F9840
+		// (set) Token: 0x0601C345 RID: 115525 RVA: 0x003FB648 File Offset: 0x003F9848
 		public ERollBlockBlockType BlockType { get; set; }
 
-		// Token: 0x17007DE8 RID: 32232
-		// (get) Token: 0x0601AB71 RID: 109425 RVA: 0x003CF3B5 File Offset: 0x003CD5B5
-		// (set) Token: 0x0601AB72 RID: 109426 RVA: 0x003CF3BD File Offset: 0x003CD5BD
+		// Token: 0x17008429 RID: 33833
+		// (get) Token: 0x0601C346 RID: 115526 RVA: 0x003FB651 File Offset: 0x003F9851
+		// (set) Token: 0x0601C347 RID: 115527 RVA: 0x003FB659 File Offset: 0x003F9859
 		public string TemplateId { get; set; }
 
-		// Token: 0x17007DE9 RID: 32233
-		// (get) Token: 0x0601AB73 RID: 109427 RVA: 0x003CF3C6 File Offset: 0x003CD5C6
-		// (set) Token: 0x0601AB74 RID: 109428 RVA: 0x003CF3CE File Offset: 0x003CD5CE
+		// Token: 0x1700842A RID: 33834
+		// (get) Token: 0x0601C348 RID: 115528 RVA: 0x003FB662 File Offset: 0x003F9862
+		// (set) Token: 0x0601C349 RID: 115529 RVA: 0x003FB66A File Offset: 0x003F986A
 		public string PhantomTemplateId { get; set; }
 
-		// Token: 0x17007DEA RID: 32234
-		// (get) Token: 0x0601AB75 RID: 109429 RVA: 0x003CF3D7 File Offset: 0x003CD5D7
-		// (set) Token: 0x0601AB76 RID: 109430 RVA: 0x003CF3DF File Offset: 0x003CD5DF
+		// Token: 0x1700842B RID: 33835
+		// (get) Token: 0x0601C34A RID: 115530 RVA: 0x003FB673 File Offset: 0x003F9873
+		// (set) Token: 0x0601C34B RID: 115531 RVA: 0x003FB67B File Offset: 0x003F987B
 		public IVectorInfoT Size { get; set; }
 
-		// Token: 0x0601AB77 RID: 109431 RVA: 0x003CF3E8 File Offset: 0x003CD5E8
+		// Token: 0x0601C34C RID: 115532 RVA: 0x003FB684 File Offset: 0x003F9884
 		public IRollBlockBlockTemplateT()
 		{
 			this.BlockType = ERollBlockBlockType.Block1;

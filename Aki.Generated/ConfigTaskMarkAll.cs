@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009C0 RID: 2496
+	// Token: 0x02000A95 RID: 2709
 	public class ConfigTaskMarkAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003A94 RID: 14996 RVA: 0x001A5150 File Offset: 0x001A3350
+		// Token: 0x06003F92 RID: 16274 RVA: 0x001C44E4 File Offset: 0x001C26E4
 		static ConfigTaskMarkAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTaskMarkAll.CreateStaticDefaultValue), new Action(ConfigTaskMarkAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003A95 RID: 14997 RVA: 0x001A5170 File Offset: 0x001A3370
+		// Token: 0x06003F93 RID: 16275 RVA: 0x001C4504 File Offset: 0x001C2704
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTaskMarkAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003A96 RID: 14998 RVA: 0x001A51EF File Offset: 0x001A33EF
+		// Token: 0x06003F94 RID: 16276 RVA: 0x001C4583 File Offset: 0x001C2783
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTaskMarkAll.LogPair = null;
 			ConfigTaskMarkAll.HandleId = 0;
 		}
 
-		// Token: 0x06003A97 RID: 14999 RVA: 0x001A51FD File Offset: 0x001A33FD
+		// Token: 0x06003F95 RID: 16277 RVA: 0x001C4591 File Offset: 0x001C2791
 		public static void Init()
 		{
 			ConfigTaskMarkAll.HandleId = ConfigCommon.InitDataStatement(ConfigTaskMarkAll.HandleId, "db_map_mark.db", "select BinData from `TaskMark`");
 		}
 
-		// Token: 0x06003A98 RID: 15000 RVA: 0x001A5218 File Offset: 0x001A3418
+		// Token: 0x06003F96 RID: 16278 RVA: 0x001C45AC File Offset: 0x001C27AC
 		[NullableContext(2)]
 		public static IReadOnlyList<TaskMark> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004426 RID: 17446
+		// Token: 0x040049F9 RID: 18937
 		private const string DB = "db_map_mark.db";
 
-		// Token: 0x04004427 RID: 17447
+		// Token: 0x040049FA RID: 18938
 		private const string FILE = "d.地图标记.xlsx";
 
-		// Token: 0x04004428 RID: 17448
+		// Token: 0x040049FB RID: 18939
 		private const string TABLE = "TaskMark";
 
-		// Token: 0x04004429 RID: 17449
+		// Token: 0x040049FC RID: 18940
 		private const string COMMAND = "select BinData from `TaskMark`";
 
-		// Token: 0x0400442A RID: 17450
+		// Token: 0x040049FD RID: 18941
 		private const string KEY_PREFIX = "TaskMarkAll";
 
-		// Token: 0x0400442B RID: 17451
+		// Token: 0x040049FE RID: 18942
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400442C RID: 17452
+		// Token: 0x040049FF RID: 18943
 		private static int HandleId;
 	}
 }

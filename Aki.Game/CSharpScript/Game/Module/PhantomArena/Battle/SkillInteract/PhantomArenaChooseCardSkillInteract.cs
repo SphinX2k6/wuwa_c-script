@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 {
-	// Token: 0x0200527F RID: 21119
+	// Token: 0x0200424F RID: 16975
 	public class PhantomArenaChooseCardSkillInteract : PhantomArenaSkillInteractBase
 	{
-		// Token: 0x0603603C RID: 221244 RVA: 0x00CC8664 File Offset: 0x00CC6864
+		// Token: 0x0602AF37 RID: 175927 RVA: 0x00C15D68 File Offset: 0x00C13F68
 		protected override UniTask<EPhantomArenaSkillInteractExecuteResult> OnExecute([Nullable(1)] PhantomArenaBattleProxy proxy)
 		{
 			PhantomArenaChooseCardSkillInteract.<OnExecute>d__0 <OnExecute>d__;

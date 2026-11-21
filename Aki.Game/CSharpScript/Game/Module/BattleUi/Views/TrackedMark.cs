@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -25,12 +24,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E46 RID: 24134
+	// Token: 0x02004E2B RID: 20011
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrackedMark : UiPanelBase
 	{
-		// Token: 0x0603D5D9 RID: 251353 RVA: 0x00ECB580 File Offset: 0x00EC9780
+		// Token: 0x06032569 RID: 206185 RVA: 0x00E1CAEC File Offset: 0x00E1ACEC
 		public TrackedMark(ITrackData TrackData)
 		{
 			if (GlobalData.World == null)
@@ -121,20 +120,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<ETrackSource, long, int, int, bool>(EEventName.TaskRangeTrackStateChange, new Action<ETrackSource, long, int, int, bool>(this.OnTaskRangeTrackStateChange));
 		}
 
-		// Token: 0x0603D5DA RID: 251354 RVA: 0x00ECBA50 File Offset: 0x00EC9C50
+		// Token: 0x0603256A RID: 206186 RVA: 0x00E1CFBC File Offset: 0x00E1B1BC
 		public virtual void Initialize(UUIItem parent)
 		{
 			base.CreateThenShowByResourceIdAsync("UiItem_TrackedMarkMain", parent, true).Forget();
 		}
 
-		// Token: 0x0603D5DB RID: 251355 RVA: 0x00ECBA64 File Offset: 0x00EC9C64
+		// Token: 0x0603256B RID: 206187 RVA: 0x00E1CFD0 File Offset: 0x00E1B1D0
 		public void CreateMark()
 		{
 			this.FirstStartSequencePlaying = true;
 			this.PlayTrackStartSequence(0f);
 		}
 
-		// Token: 0x0603D5DC RID: 251356 RVA: 0x00ECBA78 File Offset: 0x00EC9C78
+		// Token: 0x0603256C RID: 206188 RVA: 0x00E1CFE4 File Offset: 0x00E1B1E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -181,7 +180,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603D5DD RID: 251357 RVA: 0x00ECBCD4 File Offset: 0x00EC9ED4
+		// Token: 0x0603256D RID: 206189 RVA: 0x00E1D240 File Offset: 0x00E1B440
 		protected override void OnStart()
 		{
 			this.DistanceComp = base.GetItem(4);
@@ -252,7 +251,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnUiShow();
 		}
 
-		// Token: 0x0603D5DE RID: 251358 RVA: 0x00ECBEF8 File Offset: 0x00ECA0F8
+		// Token: 0x0603256E RID: 206190 RVA: 0x00E1D464 File Offset: 0x00E1B664
 		protected override void OnBeforeDestroy()
 		{
 			this.TrackTarget = null;
@@ -281,7 +280,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5DF RID: 251359 RVA: 0x00ECBFFC File Offset: 0x00ECA1FC
+		// Token: 0x0603256F RID: 206191 RVA: 0x00E1D568 File Offset: 0x00E1B768
 		public virtual void OnUiShow()
 		{
 			if (this.TrackType == ETrackType.AudioHint)
@@ -311,7 +310,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateGravity();
 		}
 
-		// Token: 0x0603D5E0 RID: 251360 RVA: 0x00ECC15C File Offset: 0x00ECA35C
+		// Token: 0x06032570 RID: 206192 RVA: 0x00E1D6C8 File Offset: 0x00E1B8C8
 		public virtual void OnUiHide()
 		{
 			if (this.TrackType == ETrackType.AudioHint)
@@ -332,7 +331,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5E1 RID: 251361 RVA: 0x00ECC240 File Offset: 0x00ECA440
+		// Token: 0x06032571 RID: 206193 RVA: 0x00E1D7AC File Offset: 0x00E1B9AC
 		private void OnClickedTrackedButton()
 		{
 			if (TrackModel.Instance.IsForceCloseTracked())
@@ -347,7 +346,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			BattleUiControl.Instance.FocusToTargetLocation(trackPositionByTrackTarget);
 		}
 
-		// Token: 0x0603D5E2 RID: 251362 RVA: 0x00ECC281 File Offset: 0x00ECA481
+		// Token: 0x06032572 RID: 206194 RVA: 0x00E1D7ED File Offset: 0x00E1B9ED
 		private void SequenceEvent(string sequenceName)
 		{
 			if (sequenceName == "Start")
@@ -366,13 +365,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5E3 RID: 251363 RVA: 0x00ECC2B6 File Offset: 0x00ECA4B6
+		// Token: 0x06032573 RID: 206195 RVA: 0x00E1D822 File Offset: 0x00E1BA22
 		public void UpdateTrackTarget(in TTrackTarget trackTarget)
 		{
 			this.TrackTarget = trackTarget;
 		}
 
-		// Token: 0x0603D5E4 RID: 251364 RVA: 0x00ECC2C0 File Offset: 0x00ECA4C0
+		// Token: 0x06032574 RID: 206196 RVA: 0x00E1D82C File Offset: 0x00E1BA2C
 		private void UpdateIcon(bool force = false)
 		{
 			string text = (this.IsNewTrackExpress && !string.IsNullOrEmpty(this.MarkIconPic)) ? this.MarkIconPic : this.IconPath;
@@ -384,7 +383,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5E5 RID: 251365 RVA: 0x00ECC338 File Offset: 0x00ECA538
+		// Token: 0x06032575 RID: 206197 RVA: 0x00E1D8A4 File Offset: 0x00E1BAA4
 		public void UpdateUpStateSprite()
 		{
 			UUISprite sprite = base.GetSprite(14);
@@ -427,7 +426,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5E6 RID: 251366 RVA: 0x00ECC480 File Offset: 0x00ECA680
+		// Token: 0x06032576 RID: 206198 RVA: 0x00E1D9EC File Offset: 0x00E1BBEC
 		private int? GetRelativeId()
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(this.MarkId);
@@ -438,7 +437,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603D5E7 RID: 251367 RVA: 0x00ECC4C8 File Offset: 0x00ECA6C8
+		// Token: 0x06032577 RID: 206199 RVA: 0x00E1DA34 File Offset: 0x00E1BC34
 		private int? GetRelativeDungeonId()
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(this.MarkId);
@@ -449,7 +448,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603D5E8 RID: 251368 RVA: 0x00ECC510 File Offset: 0x00ECA710
+		// Token: 0x06032578 RID: 206200 RVA: 0x00E1DA7C File Offset: 0x00E1BC7C
 		public void UpdateDownStateSprite()
 		{
 			UUISprite sprite = base.GetSprite(13);
@@ -475,7 +474,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				flag = true;
 				int currentAreaId = AreaModel.Instance.GetCurrentAreaId(null);
 				MultiMap? subMapConfigById = MapConfig.Instance.GetSubMapConfigById(num);
-				if (subMapConfigById != null && subMapConfigById.Value.GetAreaArray().Contains(currentAreaId))
+				if (subMapConfigById != null && Array.IndexOf<int>(subMapConfigById.Value.GetAreaArray(), currentAreaId) >= 0)
 				{
 					flag3 = true;
 				}
@@ -502,7 +501,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5E9 RID: 251369 RVA: 0x00ECC66C File Offset: 0x00ECA86C
+		// Token: 0x06032579 RID: 206201 RVA: 0x00E1DBD8 File Offset: 0x00E1BDD8
 		public void UpdateGravity()
 		{
 			InstanceDungeon? instanceDungeon;
@@ -540,19 +539,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetAlpha(flag ? 1f : 0.4f);
 		}
 
-		// Token: 0x0603D5EA RID: 251370 RVA: 0x00ECC763 File Offset: 0x00ECA963
+		// Token: 0x0603257A RID: 206202 RVA: 0x00E1DCCF File Offset: 0x00E1BECF
 		public void SetVisibleByOccupied(bool bOccupied)
 		{
 			this.IsOccupied = bOccupied;
 		}
 
-		// Token: 0x0603D5EB RID: 251371 RVA: 0x00ECC76C File Offset: 0x00ECA96C
+		// Token: 0x0603257B RID: 206203 RVA: 0x00E1DCD8 File Offset: 0x00E1BED8
 		public void SetVisibleByInteractionSpotOccupied(bool bOccupied)
 		{
 			this.IsOccupiedByInteractionSpot = bOccupied;
 		}
 
-		// Token: 0x0603D5EC RID: 251372 RVA: 0x00ECC778 File Offset: 0x00ECA978
+		// Token: 0x0603257C RID: 206204 RVA: 0x00E1DCE4 File Offset: 0x00E1BEE4
 		public void UpdateTrackDistance()
 		{
 			global::Vector playerLocation = GeneralLogicTreeUtil.Instance.GetPlayerLocation();
@@ -580,7 +579,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			TrackModel.Instance.UpdateGroupMinDistance(this.ShowGroupId.GetValueOrDefault(0), trackDistance);
 		}
 
-		// Token: 0x0603D5ED RID: 251373 RVA: 0x00ECC85C File Offset: 0x00ECAA5C
+		// Token: 0x0603257D RID: 206205 RVA: 0x00E1DDC8 File Offset: 0x00E1BFC8
 		public unsafe virtual void Update(float delta)
 		{
 			if (GlobalData.World == null)
@@ -710,7 +709,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item2.SetUIActive(!this.IsInTrackRange && !this.IsForceHideIcon);
 		}
 
-		// Token: 0x0603D5EE RID: 251374 RVA: 0x00ECCB90 File Offset: 0x00ECAD90
+		// Token: 0x0603257E RID: 206206 RVA: 0x00E1E0FC File Offset: 0x00E1C2FC
 		protected virtual void UpdatePositionAndRotation(float delta)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -771,7 +770,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5EF RID: 251375 RVA: 0x00ECCDCC File Offset: 0x00ECAFCC
+		// Token: 0x0603257F RID: 206207 RVA: 0x00E1E338 File Offset: 0x00E1C538
 		public Vector2D MoveTowards(Vector2D current, Vector2D target, float speed)
 		{
 			double num = target.X - current.X;
@@ -782,7 +781,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new Vector2D(current.X + (double)(num5 * (float)Math.Cos((double)num4)), current.Y + (double)(num5 * (float)Math.Sin((double)num4)));
 		}
 
-		// Token: 0x0603D5F0 RID: 251376 RVA: 0x00ECCE4C File Offset: 0x00ECB04C
+		// Token: 0x06032580 RID: 206208 RVA: 0x00E1E3B8 File Offset: 0x00E1C5B8
 		private bool IsShowTrackingMark()
 		{
 			if (RecallQuestModel.Instance.IsInRecallInstance())
@@ -840,7 +839,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return TrackModel.Instance.IsTracking(this.TrackSource, this.MarkId);
 		}
 
-		// Token: 0x0603D5F1 RID: 251377 RVA: 0x00ECCFD8 File Offset: 0x00ECB1D8
+		// Token: 0x06032581 RID: 206209 RVA: 0x00E1E544 File Offset: 0x00E1C744
 		protected bool ClampToEllipse(Vector2D vector, bool inFront)
 		{
 			double x = vector.X;
@@ -856,7 +855,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603D5F2 RID: 251378 RVA: 0x00ECD04A File Offset: 0x00ECB24A
+		// Token: 0x06032582 RID: 206210 RVA: 0x00E1E5B6 File Offset: 0x00E1C7B6
 		private void OnQuestTrackUpdate(BtType contextType, long? _)
 		{
 			if ((contextType != BtType.Quest && contextType != BtType.Recall) || this.IsInTrackRange)
@@ -866,7 +865,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTrackStartSequence(0f);
 		}
 
-		// Token: 0x0603D5F3 RID: 251379 RVA: 0x00ECD068 File Offset: 0x00ECB268
+		// Token: 0x06032583 RID: 206211 RVA: 0x00E1E5D4 File Offset: 0x00E1C7D4
 		private void OnOnLogicTreeNodeStatusChange(GeneralContext context, NodeStatus oldStatus, NodeStatus newStatus, ENodeStatusUpdateReason reason)
 		{
 			GeneralLogicTreeContext generalLogicTreeContext = context as GeneralLogicTreeContext;
@@ -881,7 +880,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTrackStartSequence(0f);
 		}
 
-		// Token: 0x0603D5F4 RID: 251380 RVA: 0x00ECD0A0 File Offset: 0x00ECB2A0
+		// Token: 0x06032584 RID: 206212 RVA: 0x00E1E60C File Offset: 0x00E1C80C
 		private void OnPlaySoundTrackEffect(float effectDuration)
 		{
 			if (this.TrackType != ETrackType.AudioHint)
@@ -902,7 +901,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NiagaraNeedActivateNextTick = true;
 		}
 
-		// Token: 0x0603D5F5 RID: 251381 RVA: 0x00ECD0F4 File Offset: 0x00ECB2F4
+		// Token: 0x06032585 RID: 206213 RVA: 0x00E1E660 File Offset: 0x00E1C860
 		private void PlayTrackStartSequence(float _ = 0f)
 		{
 			if (this.IconTextureLevelSequencePlayer == null)
@@ -941,7 +940,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5F6 RID: 251382 RVA: 0x00ECD1B6 File Offset: 0x00ECB3B6
+		// Token: 0x06032586 RID: 206214 RVA: 0x00E1E722 File Offset: 0x00E1C922
 		private void OnTaskRangeTrackStateChange(ETrackSource trackSource, long treeIncId, int behaviorId, int markId, bool rangeImageActive)
 		{
 			if (trackSource != this.TrackSource || markId != this.MarkId)
@@ -957,7 +956,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			iconComp.SetUIActive(!rangeImageActive);
 		}
 
-		// Token: 0x0603D5F7 RID: 251383 RVA: 0x00ECD1EC File Offset: 0x00ECB3EC
+		// Token: 0x06032587 RID: 206215 RVA: 0x00E1E758 File Offset: 0x00E1C958
 		private void UpdateAudioHintDisplay(float delta)
 		{
 			if (this.TrackType != ETrackType.AudioHint)
@@ -1006,7 +1005,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurNiagaraShowTime += delta / 1000f;
 		}
 
-		// Token: 0x0603D5F8 RID: 251384 RVA: 0x00ECD368 File Offset: 0x00ECB568
+		// Token: 0x06032588 RID: 206216 RVA: 0x00E1E8D4 File Offset: 0x00E1CAD4
 		private void StopWaveNiagara()
 		{
 			this.WaveNiagara.SetUIActive(false);
@@ -1015,7 +1014,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NiagaraNeedActivateNextTick = false;
 		}
 
-		// Token: 0x0603D5F9 RID: 251385 RVA: 0x00ECD394 File Offset: 0x00ECB594
+		// Token: 0x06032589 RID: 206217 RVA: 0x00E1E900 File Offset: 0x00E1CB00
 		private void SetRootItemState(bool bActive)
 		{
 			if (this.RootItem == null)
@@ -1045,7 +1044,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			iconTextureLevelSequencePlayer.PlayLevelSequenceByName("Close", false, null, false);
 		}
 
-		// Token: 0x0603D5FA RID: 251386 RVA: 0x00ECD40A File Offset: 0x00ECB60A
+		// Token: 0x0603258A RID: 206218 RVA: 0x00E1E976 File Offset: 0x00E1CB76
 		[CompilerGenerated]
 		internal static void <Update>g__ResultFunction|91_0(ETrackMapMarkResultType result, bool track)
 		{
@@ -1055,234 +1054,234 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0402001C RID: 131100
+		// Token: 0x0401AAE3 RID: 109283
 		private const string WAVE_COLOR_NEAR = "86FF83";
 
-		// Token: 0x0402001D RID: 131101
+		// Token: 0x0401AAE4 RID: 109284
 		private const string WAVE_COLOR_MIDDLE = "FFE683";
 
-		// Token: 0x0402001E RID: 131102
+		// Token: 0x0401AAE5 RID: 109285
 		private const string WAVE_COLOR_FAR = "FFFFFF";
 
-		// Token: 0x0402001F RID: 131103
+		// Token: 0x0401AAE6 RID: 109286
 		private const string VARNAME_WAVE_CYCLE_TIME = "LifeTime";
 
-		// Token: 0x04020020 RID: 131104
+		// Token: 0x0401AAE7 RID: 109287
 		private const string VARNAME_WAVE_NUM_SCALE = "Scale";
 
-		// Token: 0x04020021 RID: 131105
+		// Token: 0x0401AAE8 RID: 109288
 		private const string VARNAME_WAVE_COLOR = "Color";
 
-		// Token: 0x04020022 RID: 131106
+		// Token: 0x0401AAE9 RID: 109289
 		private const string VARNAME_WAVE_ROTATION = "Rotation";
 
-		// Token: 0x04020023 RID: 131107
+		// Token: 0x0401AAEA RID: 109290
 		private const string TRACKA = "TrackA";
 
-		// Token: 0x04020024 RID: 131108
+		// Token: 0x0401AAEB RID: 109291
 		private const string TRACKB = "TrackB";
 
-		// Token: 0x04020025 RID: 131109
+		// Token: 0x0401AAEC RID: 109292
 		private const string TRACKC = "TrackC";
 
-		// Token: 0x04020026 RID: 131110
+		// Token: 0x0401AAED RID: 109293
 		private const int DELAY_TIME = 500;
 
-		// Token: 0x04020027 RID: 131111
+		// Token: 0x0401AAEE RID: 109294
 		private const float SUB_SCALE = 0.8f;
 
-		// Token: 0x04020028 RID: 131112
+		// Token: 0x0401AAEF RID: 109295
 		private const int QUEST_TRACK_MARK_INDEX = 999;
 
-		// Token: 0x04020029 RID: 131113
+		// Token: 0x0401AAF0 RID: 109296
 		[Nullable(2)]
 		public TTrackTarget TrackTarget;
 
-		// Token: 0x0402002A RID: 131114
+		// Token: 0x0401AAF1 RID: 109297
 		private readonly int TrackInstanceId;
 
-		// Token: 0x0402002B RID: 131115
+		// Token: 0x0401AAF2 RID: 109298
 		protected readonly bool IsSubTrack;
 
-		// Token: 0x0402002C RID: 131116
+		// Token: 0x0401AAF3 RID: 109299
 		private readonly float? TrackAutoCancelDistance;
 
-		// Token: 0x0402002D RID: 131117
+		// Token: 0x0401AAF4 RID: 109300
 		private bool AlreadyCancelTrack;
 
-		// Token: 0x0402002E RID: 131118
+		// Token: 0x0401AAF5 RID: 109301
 		private bool IsOccupied;
 
-		// Token: 0x0402002F RID: 131119
+		// Token: 0x0401AAF6 RID: 109302
 		private bool IsOccupiedByInteractionSpot;
 
-		// Token: 0x04020030 RID: 131120
+		// Token: 0x0401AAF7 RID: 109303
 		private string IconPath = string.Empty;
 
-		// Token: 0x04020031 RID: 131121
+		// Token: 0x0401AAF8 RID: 109304
 		private readonly float LimitA;
 
-		// Token: 0x04020032 RID: 131122
+		// Token: 0x0401AAF9 RID: 109305
 		private readonly float LimitB;
 
-		// Token: 0x04020033 RID: 131123
+		// Token: 0x0401AAFA RID: 109306
 		protected FVector2D ScreenPositionRef = new FVector2D();
 
-		// Token: 0x04020034 RID: 131124
+		// Token: 0x0401AAFB RID: 109307
 		protected FVector2D PointTransport = new FVector2D(1f, -1f);
 
-		// Token: 0x04020035 RID: 131125
+		// Token: 0x0401AAFC RID: 109308
 		protected readonly float? MarkHideDis = new float?(0f);
 
-		// Token: 0x04020036 RID: 131126
+		// Token: 0x0401AAFD RID: 109309
 		private readonly int? ShowGroupId = new int?(0);
 
-		// Token: 0x04020037 RID: 131127
+		// Token: 0x0401AAFE RID: 109310
 		private readonly int MarkId;
 
-		// Token: 0x04020038 RID: 131128
+		// Token: 0x0401AAFF RID: 109311
 		private readonly EMarkType MarkType;
 
-		// Token: 0x04020039 RID: 131129
+		// Token: 0x0401AB00 RID: 109312
 		private readonly ETrackSource TrackSource;
 
-		// Token: 0x0402003A RID: 131130
+		// Token: 0x0401AB01 RID: 109313
 		[Nullable(2)]
 		private TimerHandle DelayTrackSequenceTimerId;
 
-		// Token: 0x0402003B RID: 131131
+		// Token: 0x0401AB02 RID: 109314
 		protected bool IsInTrackRange;
 
-		// Token: 0x0402003C RID: 131132
+		// Token: 0x0401AB03 RID: 109315
 		[Nullable(2)]
 		protected global::Vector TempTrackPosition;
 
-		// Token: 0x0402003D RID: 131133
+		// Token: 0x0401AB04 RID: 109316
 		[Nullable(2)]
 		protected readonly Vector2D ScreenPosition;
 
-		// Token: 0x0402003E RID: 131134
+		// Token: 0x0401AB05 RID: 109317
 		[Nullable(2)]
 		protected readonly Vector2D LastScreenPosition;
 
-		// Token: 0x0402003F RID: 131135
+		// Token: 0x0401AB06 RID: 109318
 		protected bool InRange;
 
-		// Token: 0x04020040 RID: 131136
+		// Token: 0x0401AB07 RID: 109319
 		[Nullable(2)]
 		protected readonly global::Rotator TempRotator;
 
-		// Token: 0x04020041 RID: 131137
+		// Token: 0x0401AB08 RID: 109320
 		private double TrackDistance;
 
-		// Token: 0x04020042 RID: 131138
+		// Token: 0x0401AB09 RID: 109321
 		private int TrackDistanceDisplay = -1;
 
-		// Token: 0x04020043 RID: 131139
+		// Token: 0x0401AB0A RID: 109322
 		public bool ShouldShowTrackMark = true;
 
-		// Token: 0x04020044 RID: 131140
+		// Token: 0x0401AB0B RID: 109323
 		[Nullable(2)]
 		private LevelSequencePlayer IconTextureLevelSequencePlayer;
 
-		// Token: 0x04020045 RID: 131141
+		// Token: 0x0401AB0C RID: 109324
 		private readonly global::Vector Offset = global::Vector.Create();
 
-		// Token: 0x04020046 RID: 131142
+		// Token: 0x0401AB0D RID: 109325
 		private readonly bool AutoHide;
 
-		// Token: 0x04020047 RID: 131143
+		// Token: 0x0401AB0E RID: 109326
 		private bool FirstStartSequencePlaying;
 
-		// Token: 0x04020048 RID: 131144
+		// Token: 0x0401AB0F RID: 109327
 		[Nullable(2)]
 		private UUIItem DistanceComp;
 
-		// Token: 0x04020049 RID: 131145
+		// Token: 0x0401AB10 RID: 109328
 		[Nullable(2)]
 		protected UUIItem DirectionComp;
 
-		// Token: 0x0402004A RID: 131146
+		// Token: 0x0401AB11 RID: 109329
 		[Nullable(2)]
 		private UUIItem IconComp;
 
-		// Token: 0x0402004B RID: 131147
+		// Token: 0x0401AB12 RID: 109330
 		[Nullable(2)]
 		private UUINiagara WaveNiagara;
 
-		// Token: 0x0402004C RID: 131148
+		// Token: 0x0401AB13 RID: 109331
 		protected bool NiagaraNeedActivateNextTick;
 
-		// Token: 0x0402004D RID: 131149
+		// Token: 0x0401AB14 RID: 109332
 		private float NiagaraDuration;
 
-		// Token: 0x0402004E RID: 131150
+		// Token: 0x0401AB15 RID: 109333
 		private float CurNiagaraShowTime;
 
-		// Token: 0x0402004F RID: 131151
+		// Token: 0x0401AB16 RID: 109334
 		protected float CurShowTime;
 
-		// Token: 0x04020050 RID: 131152
+		// Token: 0x0401AB17 RID: 109335
 		private readonly float ConfigShowTime;
 
-		// Token: 0x04020051 RID: 131153
+		// Token: 0x0401AB18 RID: 109336
 		private readonly bool IsForceHideDistance;
 
-		// Token: 0x04020052 RID: 131154
+		// Token: 0x0401AB19 RID: 109337
 		protected readonly bool IsForceHideDirection;
 
-		// Token: 0x04020053 RID: 131155
+		// Token: 0x0401AB1A RID: 109338
 		private readonly bool IsForceHideIcon;
 
-		// Token: 0x04020054 RID: 131156
+		// Token: 0x0401AB1B RID: 109339
 		private readonly bool IsForceNotPlayStartSeq;
 
-		// Token: 0x04020055 RID: 131157
+		// Token: 0x0401AB1C RID: 109340
 		private readonly ETrackType TrackType;
 
-		// Token: 0x04020056 RID: 131158
+		// Token: 0x0401AB1D RID: 109341
 		private readonly double AudioNearRadius;
 
-		// Token: 0x04020057 RID: 131159
+		// Token: 0x0401AB1E RID: 109342
 		private readonly double AudioMiddleRadius;
 
-		// Token: 0x04020058 RID: 131160
+		// Token: 0x0401AB1F RID: 109343
 		private readonly double AudioFarRadius;
 
-		// Token: 0x04020059 RID: 131161
+		// Token: 0x0401AB20 RID: 109344
 		[Nullable(2)]
 		private TaskTrackedMarkItem TaskTrackedMarkItem;
 
-		// Token: 0x0402005A RID: 131162
+		// Token: 0x0401AB21 RID: 109345
 		private bool IsShowTrackingMarkCurrent;
 
-		// Token: 0x0402005B RID: 131163
+		// Token: 0x0401AB22 RID: 109346
 		private readonly bool IsWeakTrackExpress;
 
-		// Token: 0x0402005C RID: 131164
+		// Token: 0x0401AB23 RID: 109347
 		private readonly bool IsNewTrackExpress;
 
-		// Token: 0x0402005D RID: 131165
+		// Token: 0x0401AB24 RID: 109348
 		[Nullable(2)]
 		private readonly string MarkRingPic;
 
-		// Token: 0x0402005E RID: 131166
+		// Token: 0x0401AB25 RID: 109349
 		[Nullable(2)]
 		private readonly string MarkIconPic;
 
-		// Token: 0x0402005F RID: 131167
+		// Token: 0x0401AB26 RID: 109350
 		[Nullable(2)]
 		private readonly string MarkRingColor;
 
-		// Token: 0x04020060 RID: 131168
+		// Token: 0x0401AB27 RID: 109351
 		[Nullable(2)]
 		private readonly string SmallHaloColor;
 
-		// Token: 0x04020061 RID: 131169
+		// Token: 0x0401AB28 RID: 109352
 		[Nullable(2)]
 		private readonly string LargeHaloColor;
 
-		// Token: 0x04020062 RID: 131170
+		// Token: 0x0401AB29 RID: 109353
 		private readonly ETrackSource[] TrackMarkSourceTypeList = new ETrackSource[]
 		{
 			ETrackSource.Instance,
@@ -1290,47 +1289,47 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			ETrackSource.NearbyTrack
 		};
 
-		// Token: 0x0200C1C6 RID: 49606
+		// Token: 0x0200ABD5 RID: 43989
 		[NullableContext(0)]
 		private enum ETrackedMark
 		{
-			// Token: 0x0403A8E8 RID: 239848
+			// Token: 0x040352DA RID: 217818
 			Icon,
-			// Token: 0x0403A8E9 RID: 239849
+			// Token: 0x040352DB RID: 217819
 			Distance,
-			// Token: 0x0403A8EA RID: 239850
+			// Token: 0x040352DC RID: 217820
 			Direction,
-			// Token: 0x0403A8EB RID: 239851
+			// Token: 0x040352DD RID: 217821
 			TrackedButton,
-			// Token: 0x0403A8EC RID: 239852
+			// Token: 0x040352DE RID: 217822
 			DistanceItem,
-			// Token: 0x0403A8ED RID: 239853
+			// Token: 0x040352DF RID: 217823
 			WaveNiagara,
-			// Token: 0x0403A8EE RID: 239854
+			// Token: 0x040352E0 RID: 217824
 			PanelIcon,
-			// Token: 0x0403A8EF RID: 239855
+			// Token: 0x040352E1 RID: 217825
 			SpriteOverview,
-			// Token: 0x0403A8F0 RID: 239856
+			// Token: 0x040352E2 RID: 217826
 			SpriteLightB,
-			// Token: 0x0403A8F1 RID: 239857
+			// Token: 0x040352E3 RID: 217827
 			SpriteLightA,
-			// Token: 0x0403A8F2 RID: 239858
+			// Token: 0x040352E4 RID: 217828
 			SpriteCircle,
-			// Token: 0x0403A8F3 RID: 239859
+			// Token: 0x040352E5 RID: 217829
 			PanelCircle,
-			// Token: 0x0403A8F4 RID: 239860
+			// Token: 0x040352E6 RID: 217830
 			SpiteDistance,
-			// Token: 0x0403A8F5 RID: 239861
+			// Token: 0x040352E7 RID: 217831
 			SpriteStateDown,
-			// Token: 0x0403A8F6 RID: 239862
+			// Token: 0x040352E8 RID: 217832
 			SpriteStateUp
 		}
 
-		// Token: 0x0200C1C7 RID: 49607
+		// Token: 0x0200ABD6 RID: 43990
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403A8F7 RID: 239863
+			// Token: 0x040352E9 RID: 217833
 			[Nullable(0)]
 			public static Action<ETrackMapMarkResultType, bool> <0>__ResultFunction;
 		}

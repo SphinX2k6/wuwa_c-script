@@ -13,7 +13,7 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020013DF RID: 5087
+// Token: 0x02000893 RID: 2195
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -22,7 +22,7 @@ using UnrealEngine;
 })]
 public class ActivitySubViewPhantomCollectTaskItem : GridProxyAbstract<PhantomCollectReward>
 {
-	// Token: 0x06008FA9 RID: 36777 RVA: 0x001F0ACC File Offset: 0x001EECCC
+	// Token: 0x0600633E RID: 25406 RVA: 0x001F9608 File Offset: 0x001F7808
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -55,7 +55,7 @@ public class ActivitySubViewPhantomCollectTaskItem : GridProxyAbstract<PhantomCo
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008FAA RID: 36778 RVA: 0x001F0C3C File Offset: 0x001EEE3C
+	// Token: 0x0600633F RID: 25407 RVA: 0x001F9778 File Offset: 0x001F7978
 	protected void OnBtnGo()
 	{
 		PhantomCollectReward data = this.Data;
@@ -97,7 +97,7 @@ public class ActivitySubViewPhantomCollectTaskItem : GridProxyAbstract<PhantomCo
 		}
 	}
 
-	// Token: 0x06008FAB RID: 36779 RVA: 0x001F0D77 File Offset: 0x001EEF77
+	// Token: 0x06006340 RID: 25408 RVA: 0x001F98B3 File Offset: 0x001F7AB3
 	protected override void OnStart()
 	{
 		this.RewardItem = new CommonItemSmallItemGrid();
@@ -110,7 +110,7 @@ public class ActivitySubViewPhantomCollectTaskItem : GridProxyAbstract<PhantomCo
 			case SignState.IsReceive:
 				if (this.ItemId != null)
 				{
-					ItemController.Instance.OpenItemTipsByItemId(this.ItemId.Value, true, null);
+					ItemController.Instance.OpenItemTipsByItemId(this.ItemId.Value, true, null, false);
 					return;
 				}
 				break;
@@ -123,7 +123,7 @@ public class ActivitySubViewPhantomCollectTaskItem : GridProxyAbstract<PhantomCo
 		});
 	}
 
-	// Token: 0x06008FAC RID: 36780 RVA: 0x001F0DB2 File Offset: 0x001EEFB2
+	// Token: 0x06006341 RID: 25409 RVA: 0x001F98EE File Offset: 0x001F7AEE
 	protected void OnClickReward()
 	{
 		if (this.Data.State == SignState.Unlock)
@@ -146,7 +146,7 @@ public class ActivitySubViewPhantomCollectTaskItem : GridProxyAbstract<PhantomCo
 		}
 	}
 
-	// Token: 0x06008FAD RID: 36781 RVA: 0x001F0DEC File Offset: 0x001EEFEC
+	// Token: 0x06006342 RID: 25410 RVA: 0x001F9928 File Offset: 0x001F7B28
 	public override void Refresh(PhantomCollectReward data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -287,38 +287,38 @@ public class ActivitySubViewPhantomCollectTaskItem : GridProxyAbstract<PhantomCo
 		base.GetButton(4).GetRootComponent().SetUIActive(data.Type != PhantomCollectRewardType.PhantomsCollect && data.State == SignState.Lock);
 	}
 
-	// Token: 0x04003F7D RID: 16253
+	// Token: 0x04004015 RID: 16405
 	public CommonItemSmallItemGrid RewardItem;
 
-	// Token: 0x04003F7E RID: 16254
+	// Token: 0x04004016 RID: 16406
 	public PhantomCollectReward Data;
 
-	// Token: 0x04003F7F RID: 16255
+	// Token: 0x04004017 RID: 16407
 	public int? ItemId;
 
-	// Token: 0x02007A60 RID: 31328
+	// Token: 0x02006BE4 RID: 27620
 	[NullableContext(0)]
 	private class EActivitySubViewPhantomCollectTaskItem
 	{
-		// Token: 0x0402845C RID: 164956
+		// Token: 0x04023776 RID: 145270
 		public const int BtnSelf = 0;
 
-		// Token: 0x0402845D RID: 164957
+		// Token: 0x04023777 RID: 145271
 		public const int ItemGrid = 1;
 
-		// Token: 0x0402845E RID: 164958
+		// Token: 0x04023778 RID: 145272
 		public const int TxtTitle = 2;
 
-		// Token: 0x0402845F RID: 164959
+		// Token: 0x04023779 RID: 145273
 		public const int TxtInfo = 3;
 
-		// Token: 0x04028460 RID: 164960
+		// Token: 0x0402377A RID: 145274
 		public const int BtnGo = 4;
 
-		// Token: 0x04028461 RID: 164961
+		// Token: 0x0402377B RID: 145275
 		public const int SpriteIcon = 5;
 
-		// Token: 0x04028462 RID: 164962
+		// Token: 0x0402377C RID: 145276
 		public const int FinishItem = 6;
 	}
 }

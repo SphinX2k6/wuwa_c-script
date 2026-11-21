@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D7F RID: 7551
+	// Token: 0x02001F90 RID: 8080
 	public class IQuestActionContext_SetValue
 	{
-		// Token: 0x0400614E RID: 24910
-		[Nullable(1)]
+		// Token: 0x040066CA RID: 26314
 		public string Type;
 
-		// Token: 0x0400614F RID: 24911
+		// Token: 0x040066CB RID: 26315
 		public bool? IsChildQuestOfDungeon;
 	}
 }

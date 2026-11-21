@@ -4,20 +4,20 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000607 RID: 1543
+	// Token: 0x020006A4 RID: 1700
 	public class IPointAkEvent_SetValue
 	{
-		// Token: 0x0400170F RID: 5903
+		// Token: 0x04001901 RID: 6401
 		public EAkEventType Type;
 
-		// Token: 0x04001710 RID: 5904
+		// Token: 0x04001902 RID: 6402
 		[Nullable(2)]
 		public List<int> PointIds;
 
-		// Token: 0x04001711 RID: 5905
+		// Token: 0x04001903 RID: 6403
 		public bool? UseListenerCone;
 
-		// Token: 0x04001712 RID: 5906
+		// Token: 0x04001904 RID: 6404
 		public bool? EnableOcclusion;
 	}
 }

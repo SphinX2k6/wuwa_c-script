@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007778 RID: 30584
+	// Token: 0x02007FB0 RID: 32688
 	public class TScreenUnion
 	{
-		// Token: 0x1700E693 RID: 59027
-		// (get) Token: 0x06037896 RID: 227478 RVA: 0x00783F42 File Offset: 0x00782142
-		// (set) Token: 0x06037897 RID: 227479 RVA: 0x00783F4A File Offset: 0x0078214A
+		// Token: 0x1700F2ED RID: 62189
+		// (get) Token: 0x0603AE0F RID: 241167 RVA: 0x007E9402 File Offset: 0x007E7602
+		// (set) Token: 0x0603AE10 RID: 241168 RVA: 0x007E940A File Offset: 0x007E760A
 		public TScreen Type { get; set; }
 
-		// Token: 0x1700E694 RID: 59028
-		// (get) Token: 0x06037898 RID: 227480 RVA: 0x00783F53 File Offset: 0x00782153
-		// (set) Token: 0x06037899 RID: 227481 RVA: 0x00783F5B File Offset: 0x0078215B
+		// Token: 0x1700F2EE RID: 62190
+		// (get) Token: 0x0603AE11 RID: 241169 RVA: 0x007E9413 File Offset: 0x007E7613
+		// (set) Token: 0x0603AE12 RID: 241170 RVA: 0x007E941B File Offset: 0x007E761B
 		public object Value { get; set; }
 
-		// Token: 0x0603789A RID: 227482 RVA: 0x00783F64 File Offset: 0x00782164
+		// Token: 0x0603AE13 RID: 241171 RVA: 0x007E9424 File Offset: 0x007E7624
 		public TScreenUnion()
 		{
 			this.Type = TScreen.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603789B RID: 227483 RVA: 0x00783F7A File Offset: 0x0078217A
+		// Token: 0x0603AE14 RID: 241172 RVA: 0x007E943A File Offset: 0x007E763A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603789C RID: 227484 RVA: 0x00783F8C File Offset: 0x0078218C
+		// Token: 0x0603AE15 RID: 241173 RVA: 0x007E944C File Offset: 0x007E764C
 		public IMainScreenT AsIMainScreen()
 		{
 			return this.As<IMainScreenT>();
 		}
 
-		// Token: 0x0603789D RID: 227485 RVA: 0x00783F94 File Offset: 0x00782194
+		// Token: 0x0603AE16 RID: 241174 RVA: 0x007E9454 File Offset: 0x007E7654
 		public static TScreenUnion FromIMainScreen(IMainScreenT _imainscreen)
 		{
 			return new TScreenUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603789E RID: 227486 RVA: 0x00783FA9 File Offset: 0x007821A9
+		// Token: 0x0603AE17 RID: 241175 RVA: 0x007E9469 File Offset: 0x007E7669
 		public ISubScreenT AsISubScreen()
 		{
 			return this.As<ISubScreenT>();
 		}
 
-		// Token: 0x0603789F RID: 227487 RVA: 0x00783FB1 File Offset: 0x007821B1
+		// Token: 0x0603AE18 RID: 241176 RVA: 0x007E9471 File Offset: 0x007E7671
 		public static TScreenUnion FromISubScreen(ISubScreenT _isubscreen)
 		{
 			return new TScreenUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378A0 RID: 227488 RVA: 0x00783FC8 File Offset: 0x007821C8
+		// Token: 0x0603AE19 RID: 241177 RVA: 0x007E9488 File Offset: 0x007E7688
 		public static int Pack(FlatBufferBuilder builder, TScreenUnion _o)
 		{
 			TScreen type = _o.Type;

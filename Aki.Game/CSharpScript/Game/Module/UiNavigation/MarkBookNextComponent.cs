@@ -6,21 +6,21 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004990 RID: 18832
+	// Token: 0x0200390A RID: 14602
 	public class MarkBookNextComponent : HotKeyComponent
 	{
-		// Token: 0x0603111B RID: 200987 RVA: 0x00B63626 File Offset: 0x00B61826
+		// Token: 0x06025C51 RID: 154705 RVA: 0x00A9E576 File Offset: 0x00A9C776
 		public MarkBookNextComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603111C RID: 200988 RVA: 0x00B6362F File Offset: 0x00B6182F
+		// Token: 0x06025C52 RID: 154706 RVA: 0x00A9E57F File Offset: 0x00A9C77F
 		protected override void OnPress(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.BookMarkNavigation(ELGUINavigationDirection.Down, base.GetBindButtonTag());
 		}
 
-		// Token: 0x0603111D RID: 200989 RVA: 0x00B63644 File Offset: 0x00B61844
+		// Token: 0x06025C53 RID: 154707 RVA: 0x00A9E594 File Offset: 0x00A9C794
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

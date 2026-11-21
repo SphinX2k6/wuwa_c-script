@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020009E3 RID: 2531
+	// Token: 0x020009D2 RID: 2514
 	[NetMessage(EMessageId.MobileButtonSettingUpdateRequest)]
 	public sealed class MobileButtonSettingUpdateRequest : IMessage<MobileButtonSettingUpdateRequest>, IMessage, IEquatable<MobileButtonSettingUpdateRequest>, IDeepCloneable<MobileButtonSettingUpdateRequest>, IBufferMessage
 	{
-		// Token: 0x0600DDCD RID: 56781 RVA: 0x00208992 File Offset: 0x00206B92
+		// Token: 0x0600DCB3 RID: 56499 RVA: 0x002067A6 File Offset: 0x002049A6
 		[NullableContext(1)]
 		public static MobileButtonSettingUpdateRequest Create()
 		{
 			return new MobileButtonSettingUpdateRequest();
 		}
 
-		// Token: 0x17002CF6 RID: 11510
-		// (get) Token: 0x0600DDCE RID: 56782 RVA: 0x00208999 File Offset: 0x00206B99
+		// Token: 0x17002CB8 RID: 11448
+		// (get) Token: 0x0600DCB4 RID: 56500 RVA: 0x002067AD File Offset: 0x002049AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CF7 RID: 11511
-		// (get) Token: 0x0600DDCF RID: 56783 RVA: 0x0020899C File Offset: 0x00206B9C
+		// Token: 0x17002CB9 RID: 11449
+		// (get) Token: 0x0600DCB5 RID: 56501 RVA: 0x002067B0 File Offset: 0x002049B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DDD0 RID: 56784 RVA: 0x002089A3 File Offset: 0x00206BA3
+		// Token: 0x0600DCB6 RID: 56502 RVA: 0x002067B7 File Offset: 0x002049B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MobileButtonSettingUpdateRequest()
 		{
 		}
 
-		// Token: 0x0600DDD1 RID: 56785 RVA: 0x002089B6 File Offset: 0x00206BB6
+		// Token: 0x0600DCB7 RID: 56503 RVA: 0x002067CA File Offset: 0x002049CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MobileButtonSettingUpdateRequest(MobileButtonSettingUpdateRequest other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600DDD2 RID: 56786 RVA: 0x002089E0 File Offset: 0x00206BE0
+		// Token: 0x0600DCB8 RID: 56504 RVA: 0x002067F4 File Offset: 0x002049F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MobileButtonSettingUpdateRequest Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new MobileButtonSettingUpdateRequest(this);
 		}
 
-		// Token: 0x17002CF8 RID: 11512
-		// (get) Token: 0x0600DDD3 RID: 56787 RVA: 0x002089E8 File Offset: 0x00206BE8
+		// Token: 0x17002CBA RID: 11450
+		// (get) Token: 0x0600DCB9 RID: 56505 RVA: 0x002067FC File Offset: 0x002049FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MobileButtonSetting> MobileButtonSettings
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DDD4 RID: 56788 RVA: 0x002089F0 File Offset: 0x00206BF0
+		// Token: 0x0600DCBA RID: 56506 RVA: 0x00206804 File Offset: 0x00204A04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MobileButtonSettingUpdateRequest);
 		}
 
-		// Token: 0x0600DDD5 RID: 56789 RVA: 0x002089FE File Offset: 0x00206BFE
+		// Token: 0x0600DCBB RID: 56507 RVA: 0x00206812 File Offset: 0x00204A12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MobileButtonSettingUpdateRequest other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.mobileButtonSettings_.Equals(other.mobileButtonSettings_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600DDD6 RID: 56790 RVA: 0x00208A34 File Offset: 0x00206C34
+		// Token: 0x0600DCBC RID: 56508 RVA: 0x00206848 File Offset: 0x00204A48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DDD7 RID: 56791 RVA: 0x00208A68 File Offset: 0x00206C68
+		// Token: 0x0600DCBD RID: 56509 RVA: 0x0020687C File Offset: 0x00204A7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600DDD8 RID: 56792 RVA: 0x00208A75 File Offset: 0x00206C75
+		// Token: 0x0600DCBE RID: 56510 RVA: 0x00206889 File Offset: 0x00204A89
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600DDD9 RID: 56793 RVA: 0x00208A7E File Offset: 0x00206C7E
+		// Token: 0x0600DCBF RID: 56511 RVA: 0x00206892 File Offset: 0x00204A92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DDDA RID: 56794 RVA: 0x00208AA8 File Offset: 0x00206CA8
+		// Token: 0x0600DCC0 RID: 56512 RVA: 0x002068BC File Offset: 0x00204ABC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DDDB RID: 56795 RVA: 0x00208AE1 File Offset: 0x00206CE1
+		// Token: 0x0600DCC1 RID: 56513 RVA: 0x002068F5 File Offset: 0x00204AF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MobileButtonSettingUpdateRequest other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600DDDC RID: 56796 RVA: 0x00208B0F File Offset: 0x00206D0F
+		// Token: 0x0600DCC2 RID: 56514 RVA: 0x00206923 File Offset: 0x00204B23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600DDDD RID: 56797 RVA: 0x00208B18 File Offset: 0x00206D18
+		// Token: 0x0600DCC3 RID: 56515 RVA: 0x0020692C File Offset: 0x00204B2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 50U)
+				if (num != 82U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005BAE RID: 23470
+		// Token: 0x04005BB7 RID: 23479
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005BAF RID: 23471
-		public const int MobileButtonSettingsFieldNumber = 6;
+		// Token: 0x04005BB8 RID: 23480
+		public const int MobileButtonSettingsFieldNumber = 10;
 
-		// Token: 0x04005BB0 RID: 23472
-		private static readonly FieldCodec<MobileButtonSetting> _repeated_mobileButtonSettings_codec = FieldCodec.ForMessage<MobileButtonSetting>(50U, MobileButtonSetting.Parser);
+		// Token: 0x04005BB9 RID: 23481
+		private static readonly FieldCodec<MobileButtonSetting> _repeated_mobileButtonSettings_codec = FieldCodec.ForMessage<MobileButtonSetting>(82U, MobileButtonSetting.Parser);
 
-		// Token: 0x04005BB1 RID: 23473
+		// Token: 0x04005BBA RID: 23482
 		private readonly RepeatedField<MobileButtonSetting> mobileButtonSettings_ = new RepeatedField<MobileButtonSetting>();
 	}
 }

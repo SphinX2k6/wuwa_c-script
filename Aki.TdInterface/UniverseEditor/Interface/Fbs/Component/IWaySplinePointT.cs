@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B5D RID: 23389
+	// Token: 0x02006173 RID: 24947
 	public class IWaySplinePointT
 	{
-		// Token: 0x1700B0B7 RID: 45239
-		// (get) Token: 0x0602805F RID: 163935 RVA: 0x00580D3C File Offset: 0x0057EF3C
-		// (set) Token: 0x06028060 RID: 163936 RVA: 0x00580D44 File Offset: 0x0057EF44
+		// Token: 0x1700B9FF RID: 47615
+		// (get) Token: 0x0602A623 RID: 173603 RVA: 0x005C87CC File Offset: 0x005C69CC
+		// (set) Token: 0x0602A624 RID: 173604 RVA: 0x005C87D4 File Offset: 0x005C69D4
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x1700B0B8 RID: 45240
-		// (get) Token: 0x06028061 RID: 163937 RVA: 0x00580D4D File Offset: 0x0057EF4D
-		// (set) Token: 0x06028062 RID: 163938 RVA: 0x00580D55 File Offset: 0x0057EF55
+		// Token: 0x1700BA00 RID: 47616
+		// (get) Token: 0x0602A625 RID: 173605 RVA: 0x005C87DD File Offset: 0x005C69DD
+		// (set) Token: 0x0602A626 RID: 173606 RVA: 0x005C87E5 File Offset: 0x005C69E5
 		public IVectorInfoT ArriveTangent { get; set; }
 
-		// Token: 0x1700B0B9 RID: 45241
-		// (get) Token: 0x06028063 RID: 163939 RVA: 0x00580D5E File Offset: 0x0057EF5E
-		// (set) Token: 0x06028064 RID: 163940 RVA: 0x00580D66 File Offset: 0x0057EF66
+		// Token: 0x1700BA01 RID: 47617
+		// (get) Token: 0x0602A627 RID: 173607 RVA: 0x005C87EE File Offset: 0x005C69EE
+		// (set) Token: 0x0602A628 RID: 173608 RVA: 0x005C87F6 File Offset: 0x005C69F6
 		public IVectorInfoT LeaveTangent { get; set; }
 
-		// Token: 0x1700B0BA RID: 45242
-		// (get) Token: 0x06028065 RID: 163941 RVA: 0x00580D6F File Offset: 0x0057EF6F
-		// (set) Token: 0x06028066 RID: 163942 RVA: 0x00580D77 File Offset: 0x0057EF77
+		// Token: 0x1700BA02 RID: 47618
+		// (get) Token: 0x0602A629 RID: 173609 RVA: 0x005C87FF File Offset: 0x005C69FF
+		// (set) Token: 0x0602A62A RID: 173610 RVA: 0x005C8807 File Offset: 0x005C6A07
 		public ESplineLine LineType { get; set; }
 
-		// Token: 0x1700B0BB RID: 45243
-		// (get) Token: 0x06028067 RID: 163943 RVA: 0x00580D80 File Offset: 0x0057EF80
-		// (set) Token: 0x06028068 RID: 163944 RVA: 0x00580D88 File Offset: 0x0057EF88
+		// Token: 0x1700BA03 RID: 47619
+		// (get) Token: 0x0602A62B RID: 173611 RVA: 0x005C8810 File Offset: 0x005C6A10
+		// (set) Token: 0x0602A62C RID: 173612 RVA: 0x005C8818 File Offset: 0x005C6A18
 		public IVectorInfoT Rotation { get; set; }
 
-		// Token: 0x1700B0BC RID: 45244
-		// (get) Token: 0x06028069 RID: 163945 RVA: 0x00580D91 File Offset: 0x0057EF91
-		// (set) Token: 0x0602806A RID: 163946 RVA: 0x00580D99 File Offset: 0x0057EF99
+		// Token: 0x1700BA04 RID: 47620
+		// (get) Token: 0x0602A62D RID: 173613 RVA: 0x005C8821 File Offset: 0x005C6A21
+		// (set) Token: 0x0602A62E RID: 173614 RVA: 0x005C8829 File Offset: 0x005C6A29
 		public TWaySplinePointTypeUnion PointType { get; set; }
 
-		// Token: 0x0602806B RID: 163947 RVA: 0x00580DA2 File Offset: 0x0057EFA2
+		// Token: 0x0602A62F RID: 173615 RVA: 0x005C8832 File Offset: 0x005C6A32
 		public IWaySplinePointT()
 		{
 			this.Position = null;

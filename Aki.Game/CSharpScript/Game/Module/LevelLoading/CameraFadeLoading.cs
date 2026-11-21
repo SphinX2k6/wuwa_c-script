@@ -8,38 +8,38 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.LevelLoading
 {
-	// Token: 0x020056BC RID: 22204
+	// Token: 0x02004693 RID: 18067
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CameraFadeLoading
 	{
-		// Token: 0x060387C7 RID: 231367 RVA: 0x00D6AEB8 File Offset: 0x00D690B8
+		// Token: 0x0602D6CE RID: 186062 RVA: 0x00CB9000 File Offset: 0x00CB7200
 		public void EnterInterlude(float? duration = null, bool needBackToFight = false, bool? needCheckOpenView = null, int? treeId = null, EFadeInScreenShowType screenType = EFadeInScreenShowType.Black, Action callback = null)
 		{
 			float num = Math.Clamp(duration.GetValueOrDefault(1f), 0f, 30f);
 			this.FadeIn(num * (float)TimeUtil.Instance.InverseMillisecond, needBackToFight, needCheckOpenView.GetValueOrDefault(true), treeId, screenType, callback);
 		}
 
-		// Token: 0x060387C8 RID: 231368 RVA: 0x00D6AF04 File Offset: 0x00D69104
+		// Token: 0x0602D6CF RID: 186063 RVA: 0x00CB904C File Offset: 0x00CB724C
 		public void ExitInterlude(float duration = 1f, Action callback = null)
 		{
 			float num = Math.Clamp(duration, 0f, 30f);
 			this.FadeOut(num * (float)TimeUtil.Instance.InverseMillisecond, callback);
 		}
 
-		// Token: 0x060387C9 RID: 231369 RVA: 0x00D6AF36 File Offset: 0x00D69136
+		// Token: 0x0602D6D0 RID: 186064 RVA: 0x00CB907E File Offset: 0x00CB727E
 		public bool IsInFade()
 		{
 			return this.LoadingFade;
 		}
 
-		// Token: 0x060387CA RID: 231370 RVA: 0x00D6AF3E File Offset: 0x00D6913E
+		// Token: 0x0602D6D1 RID: 186065 RVA: 0x00CB9086 File Offset: 0x00CB7286
 		public bool IsInFadeOut()
 		{
 			return LevelLoadingModel.Instance.CameraFadeHidePromise != null;
 		}
 
-		// Token: 0x060387CB RID: 231371 RVA: 0x00D6AF50 File Offset: 0x00D69150
+		// Token: 0x0602D6D2 RID: 186066 RVA: 0x00CB9098 File Offset: 0x00CB7298
 		private void FadeIn(float duration = 1f, bool needBackToFight = false, bool needCheckOpenView = true, int? treeId = null, EFadeInScreenShowType screenType = EFadeInScreenShowType.Black, Action callback = null)
 		{
 			if (this.LoadingFade)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			}).Forget();
 		}
 
-		// Token: 0x060387CC RID: 231372 RVA: 0x00D6AFD4 File Offset: 0x00D691D4
+		// Token: 0x0602D6D3 RID: 186067 RVA: 0x00CB911C File Offset: 0x00CB731C
 		private void FadeOut(float duration = 1f, Action callback = null)
 		{
 			this.RemoveBlackScreen(duration).Finally(delegate()
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			}).Forget();
 		}
 
-		// Token: 0x060387CD RID: 231373 RVA: 0x00D6B014 File Offset: 0x00D69214
+		// Token: 0x0602D6D4 RID: 186068 RVA: 0x00CB915C File Offset: 0x00CB735C
 		private UniTask AddBlackScreen(float num, bool needBackToFight = false, bool needCheckOpenView = true, int? treeId = null)
 		{
 			CameraFadeLoading.<AddBlackScreen>d__12 <AddBlackScreen>d__;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			return <AddBlackScreen>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060387CE RID: 231374 RVA: 0x00D6B070 File Offset: 0x00D69270
+		// Token: 0x0602D6D5 RID: 186069 RVA: 0x00CB91B8 File Offset: 0x00CB73B8
 		private UniTask RemoveBlackScreen(float num)
 		{
 			CameraFadeLoading.<RemoveBlackScreen>d__13 <RemoveBlackScreen>d__;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			return <RemoveBlackScreen>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060387CF RID: 231375 RVA: 0x00D6B0B4 File Offset: 0x00D692B4
+		// Token: 0x0602D6D6 RID: 186070 RVA: 0x00CB91FC File Offset: 0x00CB73FC
 		public EFadeInScreenShowType ColorSearch()
 		{
 			if (Global.CharacterCameraManager.FadeColor.R >= 0.5f && Global.CharacterCameraManager.FadeColor.G >= 0.5f && Global.CharacterCameraManager.FadeColor.B >= 0.5f)
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			return EFadeInScreenShowType.Black;
 		}
 
-		// Token: 0x060387D0 RID: 231376 RVA: 0x00D6B108 File Offset: 0x00D69308
+		// Token: 0x0602D6D7 RID: 186071 RVA: 0x00CB9250 File Offset: 0x00CB7450
 		public bool SetColor(EFadeInScreenShowType type)
 		{
 			if (!this.IsInFade())
@@ -140,26 +140,26 @@ namespace CSharpScript.Game.Module.LevelLoading
 			{
 				characterCameraManager.FadeColor = this.ColorWhite;
 			}
-			BlackScreenFadeController.Instance.ChangeColor(type);
+			BlackScreenFadeController.Instance.ChangeColorByForce(type);
 			return true;
 		}
 
-		// Token: 0x0401DAA4 RID: 121508
+		// Token: 0x04018531 RID: 99633
 		private bool LoadingFade;
 
-		// Token: 0x0401DAA5 RID: 121509
+		// Token: 0x04018532 RID: 99634
 		private readonly FLinearColor ColorBlack = new FLinearColor(0f, 0f, 0f, 1f);
 
-		// Token: 0x0401DAA6 RID: 121510
+		// Token: 0x04018533 RID: 99635
 		private readonly FLinearColor ColorWhite = new FLinearColor(1f, 1f, 1f, 1f);
 
-		// Token: 0x0401DAA7 RID: 121511
+		// Token: 0x04018534 RID: 99636
 		private const float INTERLUDE_FADE_IN_TIME = 1f;
 
-		// Token: 0x0401DAA8 RID: 121512
+		// Token: 0x04018535 RID: 99637
 		private const float INTERLUDE_FADE_OUT_TIME = 1f;
 
-		// Token: 0x0401DAA9 RID: 121513
+		// Token: 0x04018536 RID: 99638
 		private const float INTERLUDE_LIMIT_TIME = 30f;
 	}
 }

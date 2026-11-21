@@ -5,12 +5,12 @@ using System.Text.RegularExpressions;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x0200024F RID: 591
+// Token: 0x02000253 RID: 595
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiTextCsvModule : Singleton
 {
-	// Token: 0x060023E5 RID: 9189 RVA: 0x000DB274 File Offset: 0x000D9474
+	// Token: 0x0600249D RID: 9373 RVA: 0x000E17BC File Offset: 0x000DF9BC
 	private string ReplaceTermHyperlink(string text)
 	{
 		return MultiTextCsvModule.TermHyperlinkRegex.Replace(text, delegate(Match m)
@@ -31,7 +31,7 @@ public class MultiTextCsvModule : Singleton
 		});
 	}
 
-	// Token: 0x060023E6 RID: 9190 RVA: 0x000DB2A0 File Offset: 0x000D94A0
+	// Token: 0x0600249E RID: 9374 RVA: 0x000E17E8 File Offset: 0x000DF9E8
 	private void AnalyzeCsvContent(string csvContent)
 	{
 		List<List<string>> list = StringUtils.ParseCsvContent(csvContent);
@@ -60,7 +60,7 @@ public class MultiTextCsvModule : Singleton
 		}
 	}
 
-	// Token: 0x060023E7 RID: 9191 RVA: 0x000DB364 File Offset: 0x000D9564
+	// Token: 0x0600249F RID: 9375 RVA: 0x000E18AC File Offset: 0x000DFAAC
 	private void AnalyzeCsvContentWithParam(string csvContent, int csvLangIndex, int csvStartIndex, int csvStartIdIndex)
 	{
 		List<List<string>> list = StringUtils.ParseCsvContent(csvContent);
@@ -89,7 +89,7 @@ public class MultiTextCsvModule : Singleton
 		}
 	}
 
-	// Token: 0x060023E8 RID: 9192 RVA: 0x000DB42C File Offset: 0x000D962C
+	// Token: 0x060024A0 RID: 9376 RVA: 0x000E1974 File Offset: 0x000DFB74
 	public void RegisterTextLocalConfig(string csvPath, bool isReload = false)
 	{
 		if (!isReload && this.CacheCsvNameSet.Contains(csvPath))
@@ -102,7 +102,7 @@ public class MultiTextCsvModule : Singleton
 		this.AnalyzeCsvContent(csvContent);
 	}
 
-	// Token: 0x060023E9 RID: 9193 RVA: 0x000DB470 File Offset: 0x000D9670
+	// Token: 0x060024A1 RID: 9377 RVA: 0x000E19B8 File Offset: 0x000DFBB8
 	public void RegisterTextLocalConfigWithParam(string csvPath, bool isReload = false, int csvLangIndex = 1, int csvStartIndex = 8, int csvStartIdIndex = 2)
 	{
 		if (!isReload && this.CacheCsvNameSet.Contains(csvPath))
@@ -115,7 +115,7 @@ public class MultiTextCsvModule : Singleton
 		this.AnalyzeCsvContentWithParam(csvContent, csvLangIndex, csvStartIndex, csvStartIdIndex);
 	}
 
-	// Token: 0x060023EA RID: 9194 RVA: 0x000DB4B8 File Offset: 0x000D96B8
+	// Token: 0x060024A2 RID: 9378 RVA: 0x000E1A00 File Offset: 0x000DFC00
 	public string GetLocalText(string stringKey)
 	{
 		string packageLanguage = LanguageSystem.Instance.PackageLanguage;
@@ -128,8 +128,8 @@ public class MultiTextCsvModule : Singleton
 		return stringKey;
 	}
 
-	// Token: 0x17000590 RID: 1424
-	// (get) Token: 0x060023EB RID: 9195 RVA: 0x000DB4F7 File Offset: 0x000D96F7
+	// Token: 0x170005B7 RID: 1463
+	// (get) Token: 0x060024A3 RID: 9379 RVA: 0x000E1A3F File Offset: 0x000DFC3F
 	public static MultiTextCsvModule Instance
 	{
 		get
@@ -143,12 +143,12 @@ public class MultiTextCsvModule : Singleton
 		}
 	}
 
-	// Token: 0x060023EC RID: 9196 RVA: 0x000DB51A File Offset: 0x000D971A
+	// Token: 0x060024A4 RID: 9380 RVA: 0x000E1A62 File Offset: 0x000DFC62
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060023ED RID: 9197 RVA: 0x000DB51C File Offset: 0x000D971C
+	// Token: 0x060024A5 RID: 9381 RVA: 0x000E1A64 File Offset: 0x000DFC64
 	public static void ResetStaticDefaultValue()
 	{
 		MultiTextCsvModule instance = MultiTextCsvModule._instance;
@@ -159,23 +159,23 @@ public class MultiTextCsvModule : Singleton
 		MultiTextCsvModule._instance = null;
 	}
 
-	// Token: 0x060023EE RID: 9198 RVA: 0x000DB535 File Offset: 0x000D9735
+	// Token: 0x060024A6 RID: 9382 RVA: 0x000E1A7D File Offset: 0x000DFC7D
 	static MultiTextCsvModule()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MultiTextCsvModule.CreateStaticDefaultValue), new Action(MultiTextCsvModule.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040023A9 RID: 9129
+	// Token: 0x04002426 RID: 9254
 	private readonly HashSet<string> CacheCsvNameSet = new HashSet<string>();
 
-	// Token: 0x040023AA RID: 9130
+	// Token: 0x04002427 RID: 9255
 	private readonly Dictionary<string, Dictionary<string, string>> MultiTextMap = new Dictionary<string, Dictionary<string, string>>();
 
-	// Token: 0x040023AB RID: 9131
+	// Token: 0x04002428 RID: 9256
 	[StaticVariableRuleIgnore]
 	private static readonly Regex TermHyperlinkRegex = new Regex("<a href=(?<Term>[^>]+)></a>", RegexOptions.None);
 
-	// Token: 0x040023AC RID: 9132
+	// Token: 0x04002429 RID: 9257
 	[Nullable(2)]
 	private static MultiTextCsvModule _instance;
 }

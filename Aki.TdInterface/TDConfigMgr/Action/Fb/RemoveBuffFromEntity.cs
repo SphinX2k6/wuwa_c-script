@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002675 RID: 9845
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002934 RID: 10548
 	public class RemoveBuffFromEntity : ActionParams
 	{
-		// Token: 0x0600DCA5 RID: 56485 RVA: 0x0020D087 File Offset: 0x0020B287
+		// Token: 0x0600EA71 RID: 60017 RVA: 0x00229797 File Offset: 0x00227997
 		public static RemoveBuffFromEntity Create(IRemoveBuffFromEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700417D RID: 16765
-		// (get) Token: 0x0600DCA6 RID: 56486 RVA: 0x0020D0A8 File Offset: 0x0020B2A8
+		// Token: 0x170044B7 RID: 17591
+		// (get) Token: 0x0600EA72 RID: 60018 RVA: 0x002297B8 File Offset: 0x002279B8
 		public virtual int? EntityId
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700417E RID: 16766
-		// (get) Token: 0x0600DCA7 RID: 56487 RVA: 0x0020D0E0 File Offset: 0x0020B2E0
+		// Token: 0x170044B8 RID: 17592
+		// (get) Token: 0x0600EA73 RID: 60019 RVA: 0x002297F0 File Offset: 0x002279F0
 		[Nullable(2)]
 		public virtual List<int> EntityIds
 		{
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700417F RID: 16767
-		// (get) Token: 0x0600DCA8 RID: 56488 RVA: 0x0020D158 File Offset: 0x0020B358
+		// Token: 0x170044B9 RID: 17593
+		// (get) Token: 0x0600EA74 RID: 60020 RVA: 0x00229868 File Offset: 0x00227A68
 		public virtual List<long> BuffIds
 		{
 			get
@@ -85,20 +83,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A9F RID: 31391
+		// Token: 0x04008136 RID: 33078
 		private IRemoveBuffFromEntity Instance;
 
-		// Token: 0x04007AA0 RID: 31392
+		// Token: 0x04008137 RID: 33079
 		[Nullable(2)]
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007AA1 RID: 31393
+		// Token: 0x04008138 RID: 33080
 		private bool _EntityIdsInited;
 
-		// Token: 0x04007AA2 RID: 31394
+		// Token: 0x04008139 RID: 33081
 		private List<long> _BuffIdsCache;
 
-		// Token: 0x04007AA3 RID: 31395
+		// Token: 0x0400813A RID: 33082
 		private bool _BuffIdsInited;
 	}
 }

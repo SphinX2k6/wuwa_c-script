@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200162D RID: 5677
+	// Token: 0x0200179A RID: 6042
 	[EnumExtensions]
 	public enum EMp4BackgroundColor
 	{
-		// Token: 0x04004C34 RID: 19508
+		// Token: 0x04005028 RID: 20520
 		Black,
-		// Token: 0x04004C35 RID: 19509
+		// Token: 0x04005029 RID: 20521
 		White
 	}
 }

@@ -5,14 +5,14 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200463D RID: 17981
+	// Token: 0x0200356E RID: 13678
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiTimeDilation : Singleton
 	{
-		// Token: 0x170075F1 RID: 30193
-		// (get) Token: 0x0602E5D4 RID: 189908 RVA: 0x00AB6908 File Offset: 0x00AB4B08
-		// (set) Token: 0x0602E5D5 RID: 189909 RVA: 0x00AB6910 File Offset: 0x00AB4B10
+		// Token: 0x170048AD RID: 18605
+		// (get) Token: 0x06022D1E RID: 142622 RVA: 0x009E3F48 File Offset: 0x009E2148
+		// (set) Token: 0x06022D1F RID: 142623 RVA: 0x009E3F50 File Offset: 0x009E2150
 		public bool GmSwitch
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075F2 RID: 30194
-		// (get) Token: 0x0602E5D6 RID: 189910 RVA: 0x00AB6919 File Offset: 0x00AB4B19
+		// Token: 0x170048AE RID: 18606
+		// (get) Token: 0x06022D20 RID: 142624 RVA: 0x009E3F59 File Offset: 0x009E2159
 		private float TimeDilation
 		{
 			get
@@ -39,8 +39,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075F3 RID: 30195
-		// (get) Token: 0x0602E5D7 RID: 189911 RVA: 0x00AB6934 File Offset: 0x00AB4B34
+		// Token: 0x170048AF RID: 18607
+		// (get) Token: 0x06022D21 RID: 142625 RVA: 0x009E3F74 File Offset: 0x009E2174
 		private int ViewId
 		{
 			get
@@ -53,8 +53,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075F4 RID: 30196
-		// (get) Token: 0x0602E5D8 RID: 189912 RVA: 0x00AB694C File Offset: 0x00AB4B4C
+		// Token: 0x170048B0 RID: 18608
+		// (get) Token: 0x06022D22 RID: 142626 RVA: 0x009E3F8C File Offset: 0x009E218C
 		private EUiViewName? DebugName
 		{
 			get
@@ -68,8 +68,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075F5 RID: 30197
-		// (get) Token: 0x0602E5D9 RID: 189913 RVA: 0x00AB6972 File Offset: 0x00AB4B72
+		// Token: 0x170048B1 RID: 18609
+		// (get) Token: 0x06022D23 RID: 142627 RVA: 0x009E3FB2 File Offset: 0x009E21B2
 		private string Reason
 		{
 			get
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5DA RID: 189914 RVA: 0x00AB6990 File Offset: 0x00AB4B90
+		// Token: 0x06022D24 RID: 142628 RVA: 0x009E3FD0 File Offset: 0x009E21D0
 		[NullableContext(2)]
 		public IUiViewInfoForTimeDilation GetTimeDilationDataCopy()
 		{
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Ui
 			return null;
 		}
 
-		// Token: 0x0602E5DB RID: 189915 RVA: 0x00AB69F0 File Offset: 0x00AB4BF0
+		// Token: 0x06022D25 RID: 142629 RVA: 0x009E4030 File Offset: 0x009E2230
 		public void Init()
 		{
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.OpenView, new Action<EUiViewName, int>(this.SetTimeFlowView));
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Add(EEventName.RogueLevelLoadingUnlockTimeDilation, new Action(this.RemoveRogueLevelLoadingTag));
 		}
 
-		// Token: 0x0602E5DC RID: 189916 RVA: 0x00AB6B98 File Offset: 0x00AB4D98
+		// Token: 0x06022D26 RID: 142630 RVA: 0x009E41D8 File Offset: 0x009E23D8
 		public void Destroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OpenView, new Action<EUiViewName, int>(this.SetTimeFlowView));
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Remove(EEventName.RogueLevelLoadingUnlockTimeDilation, new Action(this.RemoveRogueLevelLoadingTag));
 		}
 
-		// Token: 0x0602E5DD RID: 189917 RVA: 0x00AB6D40 File Offset: 0x00AB4F40
+		// Token: 0x06022D27 RID: 142631 RVA: 0x009E4380 File Offset: 0x009E2580
 		private unsafe void PrintDebugReason(float dilation, string debugReason)
 		{
 			Log instance = Log.Instance;
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0602E5DE RID: 189918 RVA: 0x00AB6DB4 File Offset: 0x00AB4FB4
+		// Token: 0x06022D28 RID: 142632 RVA: 0x009E43F4 File Offset: 0x009E25F4
 		private unsafe void SaveCacheTimeDilationData(UiViewInfoForTimeDilation viewInfo)
 		{
 			if (this.CacheTimeDilationData == null || this.CacheTimeDilationData.TimeDilation == 1f)
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5DF RID: 189919 RVA: 0x00AB6E4C File Offset: 0x00AB504C
+		// Token: 0x06022D29 RID: 142633 RVA: 0x009E448C File Offset: 0x009E268C
 		private unsafe bool SetGameTimeDilationPrivate(UiViewInfoForTimeDilation viewInfo)
 		{
 			if (GameModeModel.Instance == null)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602E5E0 RID: 189920 RVA: 0x00AB6FD4 File Offset: 0x00AB51D4
+		// Token: 0x06022D2A RID: 142634 RVA: 0x009E4614 File Offset: 0x009E2814
 		private void TrySetTimeDilation(UiViewInfoForTimeDilation viewInfo)
 		{
 			float timeDilation = viewInfo.TimeDilation;
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Ui
 			GameModeController.Instance.SetGamePaused(false, "UiTimeDilation", timeDilation * this.PanelQteTimeScale);
 		}
 
-		// Token: 0x0602E5E1 RID: 189921 RVA: 0x00AB7088 File Offset: 0x00AB5288
+		// Token: 0x06022D2B RID: 142635 RVA: 0x009E46C8 File Offset: 0x009E28C8
 		private void SetTimeFlowView(EUiViewName viewName, int viewId)
 		{
 			UiViewBase view = UiManager.Instance.GetView(viewId);
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5E2 RID: 189922 RVA: 0x00AB7118 File Offset: 0x00AB5318
+		// Token: 0x06022D2C RID: 142636 RVA: 0x009E4758 File Offset: 0x009E2958
 		public unsafe bool SetGameTimeDilation(UiViewInfoForTimeDilation viewInfo)
 		{
 			if (!Net.Instance.IsServerConnected())
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Ui
 			return this.SetGameTimeDilationPrivate(viewInfo);
 		}
 
-		// Token: 0x0602E5E3 RID: 189923 RVA: 0x00AB727C File Offset: 0x00AB547C
+		// Token: 0x06022D2D RID: 142637 RVA: 0x009E48BC File Offset: 0x009E2ABC
 		private unsafe void ResetTimeFlowView(EUiViewName name, int viewId)
 		{
 			this.RemoveSnapShopViewData(viewId);
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5E4 RID: 189924 RVA: 0x00AB7408 File Offset: 0x00AB5608
+		// Token: 0x06022D2E RID: 142638 RVA: 0x009E4A48 File Offset: 0x009E2C48
 		private void ResetTimeDilation()
 		{
 			if (GameModeModel.Instance == null)
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Ui
 			this.ForceResetTimeDilation();
 		}
 
-		// Token: 0x0602E5E5 RID: 189925 RVA: 0x00AB7430 File Offset: 0x00AB5630
+		// Token: 0x06022D2F RID: 142639 RVA: 0x009E4A70 File Offset: 0x009E2C70
 		private void ForceResetTimeDilation()
 		{
 			this.TimeDilationData = null;
@@ -385,13 +385,13 @@ namespace CSharpScript.Game.Ui
 			this.SnapShotData = null;
 		}
 
-		// Token: 0x0602E5E6 RID: 189926 RVA: 0x00AB74AD File Offset: 0x00AB56AD
+		// Token: 0x06022D30 RID: 142640 RVA: 0x009E4AED File Offset: 0x009E2CED
 		private bool InMultiplayerWorld()
 		{
 			return GameModeModel.Instance != null && GameModeModel.Instance.IsMulti;
 		}
 
-		// Token: 0x0602E5E7 RID: 189927 RVA: 0x00AB74C4 File Offset: 0x00AB56C4
+		// Token: 0x06022D31 RID: 142641 RVA: 0x009E4B04 File Offset: 0x009E2D04
 		public unsafe void SetTimeDilationHighLevel(float timeDilation, string reason)
 		{
 			Log instance = Log.Instance;
@@ -416,8 +416,8 @@ namespace CSharpScript.Game.Ui
 			GameModeController.Instance.SetGamePaused(false, "UiTimeDilation", timeDilation);
 		}
 
-		// Token: 0x170075F6 RID: 30198
-		// (get) Token: 0x0602E5E8 RID: 189928 RVA: 0x00AB757A File Offset: 0x00AB577A
+		// Token: 0x170048B2 RID: 18610
+		// (get) Token: 0x06022D32 RID: 142642 RVA: 0x009E4BBA File Offset: 0x009E2DBA
 		private bool IsUiTimeDilationGamePause
 		{
 			get
@@ -426,8 +426,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075F7 RID: 30199
-		// (get) Token: 0x0602E5E9 RID: 189929 RVA: 0x00AB759D File Offset: 0x00AB579D
+		// Token: 0x170048B3 RID: 18611
+		// (get) Token: 0x06022D33 RID: 142643 RVA: 0x009E4BDD File Offset: 0x009E2DDD
 		public bool IsUiTimeDilated
 		{
 			get
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5EA RID: 189930 RVA: 0x00AB75BC File Offset: 0x00AB57BC
+		// Token: 0x06022D34 RID: 142644 RVA: 0x009E4BFC File Offset: 0x009E2DFC
 		public void ResetTimeDilationHighLevel(string reason)
 		{
 			Log.Instance.Info(ELogModule.UiTimeDilation, ELogAuthor.XXJ, "恢复高级别时停", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.Ui
 			GameModeController.Instance.SetGamePaused(false, reason, timeDilation);
 		}
 
-		// Token: 0x0602E5EB RID: 189931 RVA: 0x00AB7654 File Offset: 0x00AB5854
+		// Token: 0x06022D35 RID: 142645 RVA: 0x009E4C94 File Offset: 0x009E2E94
 		private void UpdatePanelQteTimeDilation(float scale)
 		{
 			if (this.PanelQteTimeScale == scale)
@@ -481,13 +481,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5EC RID: 189932 RVA: 0x00AB76C6 File Offset: 0x00AB58C6
+		// Token: 0x06022D36 RID: 142646 RVA: 0x009E4D06 File Offset: 0x009E2F06
 		private void DeleteServerConnectTag()
 		{
 			this.DeleteWaitSetTimeDilationTag("ServerConnect");
 		}
 
-		// Token: 0x0602E5ED RID: 189933 RVA: 0x00AB76D3 File Offset: 0x00AB58D3
+		// Token: 0x06022D37 RID: 142647 RVA: 0x009E4D13 File Offset: 0x009E2F13
 		private void HandleCameraSequenceTag(bool bInCameraSequence, string cameraName)
 		{
 			if (cameraName != "MainCamera")
@@ -502,43 +502,43 @@ namespace CSharpScript.Game.Ui
 			this.DeleteWaitSetTimeDilationTag("CameraSequence");
 		}
 
-		// Token: 0x0602E5EE RID: 189934 RVA: 0x00AB76FD File Offset: 0x00AB58FD
+		// Token: 0x06022D38 RID: 142648 RVA: 0x009E4D3D File Offset: 0x009E2F3D
 		private void AddLoadingTag()
 		{
 			this.AddWaitSetTimeDilationTag("Loading");
 		}
 
-		// Token: 0x0602E5EF RID: 189935 RVA: 0x00AB770A File Offset: 0x00AB590A
+		// Token: 0x06022D39 RID: 142649 RVA: 0x009E4D4A File Offset: 0x009E2F4A
 		private void RemoveLoadingTag()
 		{
 			this.DeleteWaitSetTimeDilationTag("Loading");
 		}
 
-		// Token: 0x0602E5F0 RID: 189936 RVA: 0x00AB7717 File Offset: 0x00AB5917
+		// Token: 0x06022D3A RID: 142650 RVA: 0x009E4D57 File Offset: 0x009E2F57
 		private void AddLevelLoadingTag()
 		{
 			this.AddWaitSetTimeDilationTag("LevelLoading");
 		}
 
-		// Token: 0x0602E5F1 RID: 189937 RVA: 0x00AB7724 File Offset: 0x00AB5924
+		// Token: 0x06022D3B RID: 142651 RVA: 0x009E4D64 File Offset: 0x009E2F64
 		private void RemoveLevelLoadingTag()
 		{
 			this.DeleteWaitSetTimeDilationTag("LevelLoading");
 		}
 
-		// Token: 0x0602E5F2 RID: 189938 RVA: 0x00AB7731 File Offset: 0x00AB5931
+		// Token: 0x06022D3C RID: 142652 RVA: 0x009E4D71 File Offset: 0x009E2F71
 		private void AddRogueLevelLoadingTag()
 		{
 			this.AddWaitSetTimeDilationTag("RogueLevelLoading");
 		}
 
-		// Token: 0x0602E5F3 RID: 189939 RVA: 0x00AB773E File Offset: 0x00AB593E
+		// Token: 0x06022D3D RID: 142653 RVA: 0x009E4D7E File Offset: 0x009E2F7E
 		private void RemoveRogueLevelLoadingTag()
 		{
 			this.DeleteWaitSetTimeDilationTag("RogueLevelLoading");
 		}
 
-		// Token: 0x0602E5F4 RID: 189940 RVA: 0x00AB774C File Offset: 0x00AB594C
+		// Token: 0x06022D3E RID: 142654 RVA: 0x009E4D8C File Offset: 0x009E2F8C
 		public void AddViewData(EUiViewName name, int viewId, float timeDilation)
 		{
 			if (timeDilation < 1f)
@@ -554,7 +554,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5F5 RID: 189941 RVA: 0x00AB77A4 File Offset: 0x00AB59A4
+		// Token: 0x06022D3F RID: 142655 RVA: 0x009E4DE4 File Offset: 0x009E2FE4
 		public void RemoveViewData(int viewId)
 		{
 			if (this.TimeDilationMap.Remove(viewId))
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5F6 RID: 189942 RVA: 0x00AB77DC File Offset: 0x00AB59DC
+		// Token: 0x06022D40 RID: 142656 RVA: 0x009E4E1C File Offset: 0x009E301C
 		public unsafe void SetNextViewTimeDilation()
 		{
 			if (this.ViewIdList.Count == 0)
@@ -596,7 +596,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5F7 RID: 189943 RVA: 0x00AB78A4 File Offset: 0x00AB5AA4
+		// Token: 0x06022D41 RID: 142657 RVA: 0x009E4EE4 File Offset: 0x009E30E4
 		public void AddWaitSetTimeDilationTag(string tag)
 		{
 			if (this.SnapShotData != null)
@@ -639,7 +639,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E5F8 RID: 189944 RVA: 0x00AB79B8 File Offset: 0x00AB5BB8
+		// Token: 0x06022D42 RID: 142658 RVA: 0x009E4FF8 File Offset: 0x009E31F8
 		public void DeleteWaitSetTimeDilationTag(string tag)
 		{
 			if (this.SnapShotData != null)
@@ -685,13 +685,13 @@ namespace CSharpScript.Game.Ui
 			this.TriggerCacheTimeDilationData();
 		}
 
-		// Token: 0x0602E5F9 RID: 189945 RVA: 0x00AB7ADB File Offset: 0x00AB5CDB
+		// Token: 0x06022D43 RID: 142659 RVA: 0x009E511B File Offset: 0x009E331B
 		private bool InWaitTimeDilation()
 		{
 			return this.WaitSetTimeDilationTagSet.Count > 0;
 		}
 
-		// Token: 0x0602E5FA RID: 189946 RVA: 0x00AB7AEC File Offset: 0x00AB5CEC
+		// Token: 0x06022D44 RID: 142660 RVA: 0x009E512C File Offset: 0x009E332C
 		private unsafe void TriggerCacheTimeDilationData()
 		{
 			if (this.CacheTimeDilationData == null)
@@ -724,7 +724,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5FB RID: 189947 RVA: 0x00AB7BDD File Offset: 0x00AB5DDD
+		// Token: 0x06022D45 RID: 142661 RVA: 0x009E521D File Offset: 0x009E341D
 		private void ClearCurrentData()
 		{
 			this.InTimeFlowViewId = null;
@@ -735,7 +735,7 @@ namespace CSharpScript.Game.Ui
 			this.WaitSetTimeDilationTagSet = new HashSet<string>();
 		}
 
-		// Token: 0x0602E5FC RID: 189948 RVA: 0x00AB7C1C File Offset: 0x00AB5E1C
+		// Token: 0x06022D46 RID: 142662 RVA: 0x009E525C File Offset: 0x009E345C
 		private void CreateSnapShotData()
 		{
 			if (this.SnapShotData != null)
@@ -751,7 +751,7 @@ namespace CSharpScript.Game.Ui
 			this.SnapShotData.CacheTimeDilationTagSet = this.WaitSetTimeDilationTagSet;
 		}
 
-		// Token: 0x0602E5FD RID: 189949 RVA: 0x00AB7CA4 File Offset: 0x00AB5EA4
+		// Token: 0x06022D47 RID: 142663 RVA: 0x009E52E4 File Offset: 0x009E34E4
 		private void RestoreSnapShotData()
 		{
 			if (this.SnapShotData != null)
@@ -769,7 +769,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5FE RID: 189950 RVA: 0x00AB7D38 File Offset: 0x00AB5F38
+		// Token: 0x06022D48 RID: 142664 RVA: 0x009E5378 File Offset: 0x009E3578
 		private void RemoveSnapShopViewData(int viewId)
 		{
 			if (this.SnapShotData == null)
@@ -799,7 +799,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E5FF RID: 189951 RVA: 0x00AB7E50 File Offset: 0x00AB6050
+		// Token: 0x06022D49 RID: 142665 RVA: 0x009E5490 File Offset: 0x009E3690
 		public void TemporarySaveData()
 		{
 			Log.Instance.Info(ELogModule.UiTimeDilation, ELogAuthor.XXJ, "[OpenView]指定Plot层级打开界面,临时进行数据快照,重置时停表现", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -808,7 +808,7 @@ namespace CSharpScript.Game.Ui
 			GameModeController.Instance.SetGamePaused(false, "UiTimeDilation", 1f);
 		}
 
-		// Token: 0x0602E600 RID: 189952 RVA: 0x00AB7EA0 File Offset: 0x00AB60A0
+		// Token: 0x06022D4A RID: 142666 RVA: 0x009E54E0 File Offset: 0x009E36E0
 		public void RestoreSaveData()
 		{
 			Log.Instance.Info(ELogModule.UiTimeDilation, ELogAuthor.XXJ, "[CloseView]指定Plot层级关闭界面,还原数据快照,设置时停表现", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -819,13 +819,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E601 RID: 189953 RVA: 0x00AB7EE7 File Offset: 0x00AB60E7
+		// Token: 0x06022D4B RID: 142667 RVA: 0x009E5527 File Offset: 0x009E3727
 		private bool InSnapShotWaitTimeDilation()
 		{
 			return this.SnapShotData != null && this.SnapShotData.WaitSetTimeDilationTagSet.Count > 0;
 		}
 
-		// Token: 0x0602E602 RID: 189954 RVA: 0x00AB7F08 File Offset: 0x00AB6108
+		// Token: 0x06022D4C RID: 142668 RVA: 0x009E5548 File Offset: 0x009E3748
 		private unsafe void SnapShotSaveCacheTimeDilationData(UiViewInfoForTimeDilation viewInfo)
 		{
 			if (this.SnapShotData == null)
@@ -846,8 +846,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075F8 RID: 30200
-		// (get) Token: 0x0602E603 RID: 189955 RVA: 0x00AB7FB3 File Offset: 0x00AB61B3
+		// Token: 0x170048B4 RID: 18612
+		// (get) Token: 0x06022D4D RID: 142669 RVA: 0x009E55F3 File Offset: 0x009E37F3
 		public static UiTimeDilation Instance
 		{
 			get
@@ -861,12 +861,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E604 RID: 189956 RVA: 0x00AB7FD6 File Offset: 0x00AB61D6
+		// Token: 0x06022D4E RID: 142670 RVA: 0x009E5616 File Offset: 0x009E3816
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E605 RID: 189957 RVA: 0x00AB7FD8 File Offset: 0x00AB61D8
+		// Token: 0x06022D4F RID: 142671 RVA: 0x009E5618 File Offset: 0x009E3818
 		public static void ResetStaticDefaultValue()
 		{
 			UiTimeDilation instance = UiTimeDilation._instance;
@@ -877,49 +877,49 @@ namespace CSharpScript.Game.Ui
 			UiTimeDilation._instance = null;
 		}
 
-		// Token: 0x0602E606 RID: 189958 RVA: 0x00AB7FF1 File Offset: 0x00AB61F1
+		// Token: 0x06022D50 RID: 142672 RVA: 0x009E5631 File Offset: 0x009E3831
 		static UiTimeDilation()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiTimeDilation.CreateStaticDefaultValue), new Action(UiTimeDilation.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018DA7 RID: 101799
+		// Token: 0x04013400 RID: 78848
 		public bool Enable = true;
 
-		// Token: 0x04018DA8 RID: 101800
+		// Token: 0x04013401 RID: 78849
 		private bool GmSwitchInternal;
 
-		// Token: 0x04018DA9 RID: 101801
+		// Token: 0x04013402 RID: 78850
 		private int? InTimeFlowViewId;
 
-		// Token: 0x04018DAA RID: 101802
+		// Token: 0x04013403 RID: 78851
 		private bool IsHookInHighLevel;
 
-		// Token: 0x04018DAB RID: 101803
+		// Token: 0x04013404 RID: 78852
 		[Nullable(2)]
 		private UiViewInfoForTimeDilation CacheTimeDilationData;
 
-		// Token: 0x04018DAC RID: 101804
+		// Token: 0x04013405 RID: 78853
 		[Nullable(2)]
 		private UiViewInfoForTimeDilation TimeDilationData;
 
-		// Token: 0x04018DAD RID: 101805
+		// Token: 0x04013406 RID: 78854
 		private float PanelQteTimeScale = 1f;
 
-		// Token: 0x04018DAE RID: 101806
+		// Token: 0x04013407 RID: 78855
 		[Nullable(2)]
 		private SnapshotData SnapShotData;
 
-		// Token: 0x04018DAF RID: 101807
+		// Token: 0x04013408 RID: 78856
 		private List<int> ViewIdList = new List<int>();
 
-		// Token: 0x04018DB0 RID: 101808
+		// Token: 0x04013409 RID: 78857
 		private Dictionary<int, UiViewInfoForTimeDilation> TimeDilationMap = new Dictionary<int, UiViewInfoForTimeDilation>();
 
-		// Token: 0x04018DB1 RID: 101809
+		// Token: 0x0401340A RID: 78858
 		private HashSet<string> WaitSetTimeDilationTagSet = new HashSet<string>();
 
-		// Token: 0x04018DB2 RID: 101810
+		// Token: 0x0401340B RID: 78859
 		[Nullable(2)]
 		private static UiTimeDilation _instance;
 	}

@@ -6,17 +6,17 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F86 RID: 8070
+// Token: 0x02001448 RID: 5192
 public class InfluenceDisplayItem : UiPanelBase
 {
-	// Token: 0x0600FA69 RID: 64105 RVA: 0x003CAB69 File Offset: 0x003C8D69
+	// Token: 0x0600CE88 RID: 52872 RVA: 0x003D66A1 File Offset: 0x003D48A1
 	[NullableContext(1)]
 	public InfluenceDisplayItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600FA6A RID: 64106 RVA: 0x003CAB80 File Offset: 0x003C8D80
+	// Token: 0x0600CE89 RID: 52873 RVA: 0x003D66B8 File Offset: 0x003D48B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -55,7 +55,7 @@ public class InfluenceDisplayItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FA6B RID: 64107 RVA: 0x003CAD52 File Offset: 0x003C8F52
+	// Token: 0x0600CE8A RID: 52874 RVA: 0x003D688A File Offset: 0x003D4A8A
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(2).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
@@ -63,7 +63,7 @@ public class InfluenceDisplayItem : UiPanelBase
 		this.ContentItem.SetActive(false);
 	}
 
-	// Token: 0x0600FA6C RID: 64108 RVA: 0x003CAD8F File Offset: 0x003C8F8F
+	// Token: 0x0600CE8B RID: 52875 RVA: 0x003D68C7 File Offset: 0x003D4AC7
 	private bool CanExecuteChange()
 	{
 		bool flag = this.IsUnLock();
@@ -74,7 +74,7 @@ public class InfluenceDisplayItem : UiPanelBase
 		return flag;
 	}
 
-	// Token: 0x0600FA6D RID: 64109 RVA: 0x003CADAE File Offset: 0x003C8FAE
+	// Token: 0x0600CE8C RID: 52876 RVA: 0x003D68E6 File Offset: 0x003D4AE6
 	private void ShowContent(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -93,7 +93,7 @@ public class InfluenceDisplayItem : UiPanelBase
 		toggleFunction(state, this.Index);
 	}
 
-	// Token: 0x0600FA6E RID: 64110 RVA: 0x003CADDB File Offset: 0x003C8FDB
+	// Token: 0x0600CE8D RID: 52877 RVA: 0x003D6913 File Offset: 0x003D4B13
 	protected override void OnBeforeDestroy()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -104,7 +104,7 @@ public class InfluenceDisplayItem : UiPanelBase
 		this.ContentItem = null;
 	}
 
-	// Token: 0x0600FA6F RID: 64111 RVA: 0x003CAE14 File Offset: 0x003C9014
+	// Token: 0x0600CE8E RID: 52878 RVA: 0x003D694C File Offset: 0x003D4B4C
 	public void UpdateItem(int influenceId, int countryId)
 	{
 		this.InfluenceId = influenceId;
@@ -117,26 +117,26 @@ public class InfluenceDisplayItem : UiPanelBase
 		this.BindRedDot();
 	}
 
-	// Token: 0x0600FA70 RID: 64112 RVA: 0x003CAE51 File Offset: 0x003C9051
+	// Token: 0x0600CE8F RID: 52879 RVA: 0x003D6989 File Offset: 0x003D4B89
 	public void SetToggleState(EToggleState state, bool bFire = false)
 	{
 		base.GetExtendToggle(2).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x0600FA71 RID: 64113 RVA: 0x003CAE64 File Offset: 0x003C9064
+	// Token: 0x0600CE90 RID: 52880 RVA: 0x003D699C File Offset: 0x003D4B9C
 	[NullableContext(1)]
 	public void SetToggleFunction(TToggleFunction callback)
 	{
 		this.ToggleFunction = callback;
 	}
 
-	// Token: 0x0600FA72 RID: 64114 RVA: 0x003CAE6D File Offset: 0x003C906D
+	// Token: 0x0600CE91 RID: 52881 RVA: 0x003D69A5 File Offset: 0x003D4BA5
 	public void SetIndex(int index)
 	{
 		this.Index = index;
 	}
 
-	// Token: 0x0600FA73 RID: 64115 RVA: 0x003CAE76 File Offset: 0x003C9076
+	// Token: 0x0600CE92 RID: 52882 RVA: 0x003D69AE File Offset: 0x003D4BAE
 	public void SetActiveToggleState()
 	{
 		this.ContentItem.SetActive(true);
@@ -144,21 +144,21 @@ public class InfluenceDisplayItem : UiPanelBase
 		base.GetItem(10).SetUIActive(false);
 	}
 
-	// Token: 0x0600FA74 RID: 64116 RVA: 0x003CAE9D File Offset: 0x003C909D
+	// Token: 0x0600CE93 RID: 52883 RVA: 0x003D69D5 File Offset: 0x003D4BD5
 	public void SetDisActiveToggleState()
 	{
 		this.SetToggleState(EToggleState.ETT_UnChecked, false);
 		this.SetContentDisActive();
 	}
 
-	// Token: 0x0600FA75 RID: 64117 RVA: 0x003CAEAD File Offset: 0x003C90AD
+	// Token: 0x0600CE94 RID: 52884 RVA: 0x003D69E5 File Offset: 0x003D4BE5
 	private void SetContentDisActive()
 	{
 		this.ContentItem.SetActive(false);
 		this.BindRedDot();
 	}
 
-	// Token: 0x0600FA76 RID: 64118 RVA: 0x003CAEC4 File Offset: 0x003C90C4
+	// Token: 0x0600CE95 RID: 52885 RVA: 0x003D69FC File Offset: 0x003D4BFC
 	private void UpdateState(int influenceId, int countryId)
 	{
 		UUIText text = base.GetText(0);
@@ -197,65 +197,65 @@ public class InfluenceDisplayItem : UiPanelBase
 		base.SetTextureByPath(value.Logo, texture, null, null);
 	}
 
-	// Token: 0x0600FA77 RID: 64119 RVA: 0x003CB043 File Offset: 0x003C9243
+	// Token: 0x0600CE96 RID: 52886 RVA: 0x003D6B7B File Offset: 0x003D4D7B
 	private void BindRedDot()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.InfluenceReward, base.GetItem(10), null, this.InfluenceId);
 	}
 
-	// Token: 0x0600FA78 RID: 64120 RVA: 0x003CB060 File Offset: 0x003C9260
+	// Token: 0x0600CE97 RID: 52887 RVA: 0x003D6B98 File Offset: 0x003D4D98
 	private void UnBindRedDot()
 	{
 		RedDotController.Instance.UnBindRedDot(ERedDotName.InfluenceReward);
 	}
 
-	// Token: 0x0600FA79 RID: 64121 RVA: 0x003CB06E File Offset: 0x003C926E
+	// Token: 0x0600CE98 RID: 52888 RVA: 0x003D6BA6 File Offset: 0x003D4DA6
 	public bool IsUnLock()
 	{
 		return this.Relation > EInfluenceRelation.None;
 	}
 
-	// Token: 0x040074A4 RID: 29860
+	// Token: 0x04007585 RID: 30085
 	[Nullable(2)]
 	private ContentItem ContentItem;
 
-	// Token: 0x040074A5 RID: 29861
+	// Token: 0x04007586 RID: 30086
 	private EInfluenceRelation Relation;
 
-	// Token: 0x040074A6 RID: 29862
+	// Token: 0x04007587 RID: 30087
 	private int InfluenceId;
 
-	// Token: 0x040074A7 RID: 29863
+	// Token: 0x04007588 RID: 30088
 	[Nullable(2)]
 	private TToggleFunction ToggleFunction;
 
-	// Token: 0x040074A8 RID: 29864
+	// Token: 0x04007589 RID: 30089
 	private int Index;
 
-	// Token: 0x02008570 RID: 34160
+	// Token: 0x020076F5 RID: 30453
 	private enum EInfluenceDisplayItem
 	{
-		// Token: 0x0402B728 RID: 177960
+		// Token: 0x04026A4B RID: 158283
 		CountryName,
-		// Token: 0x0402B729 RID: 177961
+		// Token: 0x04026A4C RID: 158284
 		InfluenceName,
-		// Token: 0x0402B72A RID: 177962
+		// Token: 0x04026A4D RID: 158285
 		Toggle,
-		// Token: 0x0402B72B RID: 177963
+		// Token: 0x04026A4E RID: 158286
 		NeutralState,
-		// Token: 0x0402B72C RID: 177964
+		// Token: 0x04026A4F RID: 158287
 		Progress,
-		// Token: 0x0402B72D RID: 177965
+		// Token: 0x04026A50 RID: 158288
 		BelongState,
-		// Token: 0x0402B72E RID: 177966
+		// Token: 0x04026A51 RID: 158289
 		HostilityState,
-		// Token: 0x0402B72F RID: 177967
+		// Token: 0x04026A52 RID: 158290
 		LockState,
-		// Token: 0x0402B730 RID: 177968
+		// Token: 0x04026A53 RID: 158291
 		ContentItem,
-		// Token: 0x0402B731 RID: 177969
+		// Token: 0x04026A54 RID: 158292
 		TextureBg,
-		// Token: 0x0402B732 RID: 177970
+		// Token: 0x04026A55 RID: 158293
 		RedDot
 	}
 }

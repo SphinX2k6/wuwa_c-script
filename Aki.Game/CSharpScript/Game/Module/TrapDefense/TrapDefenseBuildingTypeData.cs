@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A26 RID: 18982
+	// Token: 0x020039CE RID: 14798
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBuildingTypeData
 	{
-		// Token: 0x06031471 RID: 201841 RVA: 0x00B6D7B0 File Offset: 0x00B6B9B0
+		// Token: 0x06026201 RID: 156161 RVA: 0x00AB17AC File Offset: 0x00AAF9AC
 		public static TrapDefenseBuildingTypeData Create(ETrapDefenseMachineType type, bool isInDungeon, List<TrapDefenseBuildingDevelopItemData> haveList, ETrapDefensePlacementType? placementType = null)
 		{
 			TrapDefenseBuildingTypeData trapDefenseBuildingTypeData = new TrapDefenseBuildingTypeData(type, isInDungeon, placementType);
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseBuildingTypeData;
 		}
 
-		// Token: 0x06031472 RID: 201842 RVA: 0x00B6D7D2 File Offset: 0x00B6B9D2
+		// Token: 0x06026202 RID: 156162 RVA: 0x00AB17CE File Offset: 0x00AAF9CE
 		private TrapDefenseBuildingTypeData(ETrapDefenseMachineType type, bool isInDungeon, ETrapDefensePlacementType? placementType = null)
 		{
 			this.Type = type;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.IsInDungeon = isInDungeon;
 		}
 
-		// Token: 0x06031473 RID: 201843 RVA: 0x00B6D80C File Offset: 0x00B6BA0C
+		// Token: 0x06026203 RID: 156163 RVA: 0x00AB1808 File Offset: 0x00AAFA08
 		public string GetTitleId()
 		{
 			if (this.Type == ETrapDefenseMachineType.Auxiliary)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031474 RID: 201844 RVA: 0x00B6D859 File Offset: 0x00B6BA59
+		// Token: 0x06026204 RID: 156164 RVA: 0x00AB1855 File Offset: 0x00AAFA55
 		private bool Init(List<TrapDefenseBuildingDevelopItemData> haveList)
 		{
 			if (!this.IsInDungeon)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.InitInDungeon();
 		}
 
-		// Token: 0x06031475 RID: 201845 RVA: 0x00B6D874 File Offset: 0x00B6BA74
+		// Token: 0x06026205 RID: 156165 RVA: 0x00AB1870 File Offset: 0x00AAFA70
 		private bool InitNotInDungeon(List<TrapDefenseBuildingDevelopItemData> haveList)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -130,26 +130,26 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.DataList.Count > 0;
 		}
 
-		// Token: 0x06031476 RID: 201846 RVA: 0x00B6DAB0 File Offset: 0x00B6BCB0
+		// Token: 0x06026206 RID: 156166 RVA: 0x00AB1AAC File Offset: 0x00AAFCAC
 		private bool InitInDungeon()
 		{
 			this.DataList = TrapDefenseModel.Instance.ViewModelBuildingDevelop.GetInBattleDataByType(this.PlacementType);
 			return this.DataList.Count > 0;
 		}
 
-		// Token: 0x06031477 RID: 201847 RVA: 0x00B6DADB File Offset: 0x00B6BCDB
+		// Token: 0x06026207 RID: 156167 RVA: 0x00AB1AD7 File Offset: 0x00AAFCD7
 		public List<TrapDefenseBuildingDevelopItemData> GetDataList()
 		{
 			return this.DataList;
 		}
 
-		// Token: 0x06031478 RID: 201848 RVA: 0x00B6DAE3 File Offset: 0x00B6BCE3
+		// Token: 0x06026208 RID: 156168 RVA: 0x00AB1ADF File Offset: 0x00AAFCDF
 		public Dictionary<int, TrapDefenseBuildingDevelopItemData> GetDataMap()
 		{
 			return this.DataMap;
 		}
 
-		// Token: 0x06031479 RID: 201849 RVA: 0x00B6DAEC File Offset: 0x00B6BCEC
+		// Token: 0x06026209 RID: 156169 RVA: 0x00AB1AE8 File Offset: 0x00AAFCE8
 		public void UpdateItemData(int id, bool needEmit = true)
 		{
 			ITrapDefenseMachineIdInfo trapDefenseMachineIdInfo = TrapDefenseModel.Instance.DecomposeMachineId(id);
@@ -170,32 +170,32 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603147A RID: 201850 RVA: 0x00B6DB6E File Offset: 0x00B6BD6E
+		// Token: 0x0602620A RID: 156170 RVA: 0x00AB1B6A File Offset: 0x00AAFD6A
 		protected void SortList()
 		{
 			this.DataList.Sort((TrapDefenseBuildingDevelopItemData a, TrapDefenseBuildingDevelopItemData b) => a.GetSortId() - b.GetSortId());
 		}
 
-		// Token: 0x0401A579 RID: 107897
+		// Token: 0x04014ED0 RID: 85712
 		public bool IsInDungeon;
 
-		// Token: 0x0401A57A RID: 107898
+		// Token: 0x04014ED1 RID: 85713
 		public ETrapDefenseMachineType Type;
 
-		// Token: 0x0401A57B RID: 107899
+		// Token: 0x04014ED2 RID: 85714
 		public ETrapDefensePlacementType PlacementType;
 
-		// Token: 0x0401A57C RID: 107900
+		// Token: 0x04014ED3 RID: 85715
 		protected List<TrapDefenseBuildingDevelopItemData> DataList = new List<TrapDefenseBuildingDevelopItemData>();
 
-		// Token: 0x0401A57D RID: 107901
+		// Token: 0x04014ED4 RID: 85716
 		protected Dictionary<int, TrapDefenseBuildingDevelopItemData> DataMap = new Dictionary<int, TrapDefenseBuildingDevelopItemData>();
 
-		// Token: 0x0401A57E RID: 107902
+		// Token: 0x04014ED5 RID: 85717
 		[Nullable(2)]
 		public TrapDefenseBuildingDevelopItemData CurSelectedData;
 
-		// Token: 0x0401A57F RID: 107903
+		// Token: 0x04014ED6 RID: 85718
 		[Nullable(2)]
 		public TrapDefenseBuildingDevelopItemData TempSelectedData;
 	}

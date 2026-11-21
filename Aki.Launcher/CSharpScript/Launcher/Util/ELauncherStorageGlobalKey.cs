@@ -2,52 +2,54 @@
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000070 RID: 112
+	// Token: 0x02000073 RID: 115
 	public enum ELauncherStorageGlobalKey
 	{
-		// Token: 0x040001F5 RID: 501
+		// Token: 0x04000220 RID: 544
 		PlayMenuInfo,
-		// Token: 0x040001F6 RID: 502
+		// Token: 0x04000221 RID: 545
 		MenuData,
-		// Token: 0x040001F7 RID: 503
+		// Token: 0x04000222 RID: 546
 		NotFirstTimeOpenPush,
-		// Token: 0x040001F8 RID: 504
+		// Token: 0x04000223 RID: 547
 		CachePushOpenState,
-		// Token: 0x040001F9 RID: 505
+		// Token: 0x04000224 RID: 548
 		AndroidNotFirstTimeOpenPush,
-		// Token: 0x040001FA RID: 506
+		// Token: 0x04000225 RID: 549
 		SdkProtocolAgreeState,
-		// Token: 0x040001FB RID: 507
+		// Token: 0x04000226 RID: 550
 		UserProtocolAgreeState,
-		// Token: 0x040001FC RID: 508
+		// Token: 0x04000227 RID: 551
 		PlayStationFriendOnly,
-		// Token: 0x040001FD RID: 509
+		// Token: 0x04000228 RID: 552
 		MasterVolume,
-		// Token: 0x040001FE RID: 510
+		// Token: 0x04000229 RID: 553
 		VoiceVolume,
-		// Token: 0x040001FF RID: 511
+		// Token: 0x0400022A RID: 554
 		MusicVolume,
-		// Token: 0x04000200 RID: 512
+		// Token: 0x0400022B RID: 555
 		SFXVolume,
-		// Token: 0x04000201 RID: 513
+		// Token: 0x0400022C RID: 556
 		AMBVolume,
-		// Token: 0x04000202 RID: 514
+		// Token: 0x0400022D RID: 557
 		UIVolume,
-		// Token: 0x04000203 RID: 515
+		// Token: 0x0400022E RID: 558
 		PcResolutionIndex,
-		// Token: 0x04000204 RID: 516
+		// Token: 0x0400022F RID: 559
 		TextLanguage,
-		// Token: 0x04000205 RID: 517
+		// Token: 0x04000230 RID: 560
 		VoiceLanguage,
-		// Token: 0x04000206 RID: 518
+		// Token: 0x04000231 RID: 561
 		HasLocalGameSettings,
-		// Token: 0x04000207 RID: 519
+		// Token: 0x04000232 RID: 562
 		RecentlyLoginUID,
-		// Token: 0x04000208 RID: 520
+		// Token: 0x04000233 RID: 563
 		UserFinishedVideoList,
-		// Token: 0x04000209 RID: 521
+		// Token: 0x04000234 RID: 564
 		SdkLastTimeLoginRegion,
-		// Token: 0x0400020A RID: 522
-		UserFinishedQuests
+		// Token: 0x04000235 RID: 565
+		UserFinishedQuests,
+		// Token: 0x04000236 RID: 566
+		VulkanRefreshRevision
 	}
 }

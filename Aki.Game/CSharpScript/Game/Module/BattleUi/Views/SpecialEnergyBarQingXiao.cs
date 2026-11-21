@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DFA RID: 24058
+	// Token: 0x02004DDF RID: 19935
 	public class SpecialEnergyBarQingXiao : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D286 RID: 250502 RVA: 0x00EBA9E4 File Offset: 0x00EB8BE4
+		// Token: 0x06032215 RID: 205333 RVA: 0x00E0BF30 File Offset: 0x00E0A130
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D287 RID: 250503 RVA: 0x00EBAC23 File Offset: 0x00EB8E23
+		// Token: 0x06032216 RID: 205334 RVA: 0x00E0C16F File Offset: 0x00E0A36F
 		protected override void OnInitData()
 		{
 			this.MorphPercentMachine.Init(this.GetMorphTargetAttributePercent());
 		}
 
-		// Token: 0x0603D288 RID: 250504 RVA: 0x00EBAC38 File Offset: 0x00EB8E38
+		// Token: 0x06032217 RID: 205335 RVA: 0x00E0C184 File Offset: 0x00E0A384
 		protected float GetAttributePercent(EAttributeType attrId, EAttributeType maxAttrId)
 		{
 			float currentValue = this.AttributeComponent.GetCurrentValue(attrId);
@@ -73,25 +73,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return result;
 		}
 
-		// Token: 0x0603D289 RID: 250505 RVA: 0x00EBAC72 File Offset: 0x00EB8E72
+		// Token: 0x06032218 RID: 205336 RVA: 0x00E0C1BE File Offset: 0x00E0A3BE
 		protected float GetQinTargetAttributePercent()
 		{
 			return this.GetAttributePercent(SpecialEnergyBarQingXiao.QIN_ATTR_ID, SpecialEnergyBarQingXiao.MAX_QIN_ATTR_ID);
 		}
 
-		// Token: 0x0603D28A RID: 250506 RVA: 0x00EBAC84 File Offset: 0x00EB8E84
+		// Token: 0x06032219 RID: 205337 RVA: 0x00E0C1D0 File Offset: 0x00E0A3D0
 		protected float GetJianTargetAttributePercent()
 		{
 			return this.GetAttributePercent(SpecialEnergyBarQingXiao.JIAN_ATTR_ID, SpecialEnergyBarQingXiao.MAX_JIAN_ATTR_ID);
 		}
 
-		// Token: 0x0603D28B RID: 250507 RVA: 0x00EBAC96 File Offset: 0x00EB8E96
+		// Token: 0x0603221A RID: 205338 RVA: 0x00E0C1E2 File Offset: 0x00E0A3E2
 		protected float GetMorphTargetAttributePercent()
 		{
 			return this.GetAttributePercent(SpecialEnergyBarQingXiao.MORPH_ATTR_ID, SpecialEnergyBarQingXiao.MAX_MORPH_ATTR_ID);
 		}
 
-		// Token: 0x0603D28C RID: 250508 RVA: 0x00EBACA8 File Offset: 0x00EB8EA8
+		// Token: 0x0603221B RID: 205339 RVA: 0x00E0C1F4 File Offset: 0x00E0A3F4
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForTagAddOrRemoveChanged(SpecialEnergyBarQingXiao.MorphTagId, new BaseTagComponent.TTagSwitchedCallback(this.OnMorphTagChange));
 		}
 
-		// Token: 0x0603D28D RID: 250509 RVA: 0x00EBAD2E File Offset: 0x00EB8F2E
+		// Token: 0x0603221C RID: 205340 RVA: 0x00E0C27A File Offset: 0x00E0A47A
 		private void OnQinOrMorphPercentChange(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			if (this.CurState == SpecialEnergyBarQingXiao.EState.Normal)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnMorphPercentChange(attributeId, newValue, oldValue);
 		}
 
-		// Token: 0x0603D28E RID: 250510 RVA: 0x00EBAD4C File Offset: 0x00EB8F4C
+		// Token: 0x0603221D RID: 205341 RVA: 0x00E0C298 File Offset: 0x00E0A498
 		private void OnQinPercentChange(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			float qinTargetAttributePercent = this.GetQinTargetAttributePercent();
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshNormalBarStyle(false);
 		}
 
-		// Token: 0x0603D28F RID: 250511 RVA: 0x00EBAD78 File Offset: 0x00EB8F78
+		// Token: 0x0603221E RID: 205342 RVA: 0x00E0C2C4 File Offset: 0x00E0A4C4
 		private void OnJianPercentChange(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			float jianTargetAttributePercent = this.GetJianTargetAttributePercent();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshNormalBarStyle(false);
 		}
 
-		// Token: 0x0603D290 RID: 250512 RVA: 0x00EBADA4 File Offset: 0x00EB8FA4
+		// Token: 0x0603221F RID: 205343 RVA: 0x00E0C2F0 File Offset: 0x00E0A4F0
 		private void OnMorphPercentChange(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			float morphTargetAttributePercent = this.GetMorphTargetAttributePercent();
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateMorphBarPercent();
 		}
 
-		// Token: 0x0603D291 RID: 250513 RVA: 0x00EBAE14 File Offset: 0x00EB9014
+		// Token: 0x06032220 RID: 205344 RVA: 0x00E0C360 File Offset: 0x00E0A560
 		private void SetMorphScaleVisible(bool visible)
 		{
 			bool? morphScaleVisible = this.MorphScaleVisible;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.PlayTweenAnim(11);
 		}
 
-		// Token: 0x0603D292 RID: 250514 RVA: 0x00EBAE70 File Offset: 0x00EB9070
+		// Token: 0x06032221 RID: 205345 RVA: 0x00E0C3BC File Offset: 0x00E0A5BC
 		private void SetMorphMaxNiaVisible(bool visible)
 		{
 			bool? morphMaxNiaVisible = this.MorphMaxNiaVisible;
@@ -180,13 +180,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.PlayTweenAnim(15);
 		}
 
-		// Token: 0x0603D293 RID: 250515 RVA: 0x00EBAEBB File Offset: 0x00EB90BB
+		// Token: 0x06032222 RID: 205346 RVA: 0x00E0C407 File Offset: 0x00E0A607
 		private void OnMorphTagChange(int tagId, bool tagExist)
 		{
 			this.SetState(tagExist ? SpecialEnergyBarQingXiao.EState.Morph : SpecialEnergyBarQingXiao.EState.Normal);
 		}
 
-		// Token: 0x0603D294 RID: 250516 RVA: 0x00EBAECC File Offset: 0x00EB90CC
+		// Token: 0x06032223 RID: 205347 RVA: 0x00E0C418 File Offset: 0x00E0A618
 		private void RefreshNormalBarStyle(bool isStart = false)
 		{
 			if (isStart)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsLastNormalEnergyFull = flag;
 		}
 
-		// Token: 0x0603D295 RID: 250517 RVA: 0x00EBAF7C File Offset: 0x00EB917C
+		// Token: 0x06032224 RID: 205348 RVA: 0x00E0C4C8 File Offset: 0x00E0A6C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarQingXiao.<OnBeforeStartAsync>d__33 <OnBeforeStartAsync>d__;
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D296 RID: 250518 RVA: 0x00EBAFC0 File Offset: 0x00EB91C0
+		// Token: 0x06032225 RID: 205349 RVA: 0x00E0C50C File Offset: 0x00E0A70C
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarQingXiao.<InitBarItem>d__34 <InitBarItem>d__;
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D297 RID: 250519 RVA: 0x00EBB004 File Offset: 0x00EB9204
+		// Token: 0x06032226 RID: 205350 RVA: 0x00E0C550 File Offset: 0x00E0A750
 		protected UniTask InitMorphKeyItem()
 		{
 			SpecialEnergyBarQingXiao.<InitMorphKeyItem>d__35 <InitMorphKeyItem>d__;
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitMorphKeyItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D298 RID: 250520 RVA: 0x00EBB048 File Offset: 0x00EB9248
+		// Token: 0x06032227 RID: 205351 RVA: 0x00E0C594 File Offset: 0x00E0A794
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(7);
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			morphKeyItem.RefreshKeyEnable(this.GetMorphTargetAttributePercent() >= 1f, true);
 		}
 
-		// Token: 0x0603D299 RID: 250521 RVA: 0x00EBB0BF File Offset: 0x00EB92BF
+		// Token: 0x06032228 RID: 205352 RVA: 0x00E0C60B File Offset: 0x00E0A80B
 		private void RefreshState()
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetState(SpecialEnergyBarQingXiao.EState.Normal);
 		}
 
-		// Token: 0x0603D29A RID: 250522 RVA: 0x00EBB0EC File Offset: 0x00EB92EC
+		// Token: 0x06032229 RID: 205353 RVA: 0x00E0C638 File Offset: 0x00E0A838
 		private void SetState(SpecialEnergyBarQingXiao.EState state)
 		{
 			if (this.CurState == state)
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurState = state;
 		}
 
-		// Token: 0x0603D29B RID: 250523 RVA: 0x00EBB1C0 File Offset: 0x00EB93C0
+		// Token: 0x0603222A RID: 205354 RVA: 0x00E0C70C File Offset: 0x00E0A90C
 		private void UpdateMorphBarPercent()
 		{
 			float curPercent = this.MorphPercentMachine.GetCurPercent();
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetUiNiagara(14).SetNiagaraVarFloat("Dissolve", curPercent);
 		}
 
-		// Token: 0x0603D29C RID: 250524 RVA: 0x00EBB213 File Offset: 0x00EB9413
+		// Token: 0x0603222B RID: 205355 RVA: 0x00E0C75F File Offset: 0x00E0A95F
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -349,103 +349,103 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FE2A RID: 130602
+		// Token: 0x0401A8F1 RID: 108785
 		[StaticVariableRuleIgnore]
 		private static readonly int MorphTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1QingxiaoMd10011.状态标识.剑仙状态"];
 
-		// Token: 0x0401FE2B RID: 130603
+		// Token: 0x0401A8F2 RID: 108786
 		private static readonly EAttributeType QIN_ATTR_ID = EAttributeType.SpecialEnergy1;
 
-		// Token: 0x0401FE2C RID: 130604
+		// Token: 0x0401A8F3 RID: 108787
 		private static readonly EAttributeType MAX_QIN_ATTR_ID = EAttributeType.SpecialEnergy1Max;
 
-		// Token: 0x0401FE2D RID: 130605
+		// Token: 0x0401A8F4 RID: 108788
 		private static readonly EAttributeType JIAN_ATTR_ID = EAttributeType.SpecialEnergy2;
 
-		// Token: 0x0401FE2E RID: 130606
+		// Token: 0x0401A8F5 RID: 108789
 		private static readonly EAttributeType MAX_JIAN_ATTR_ID = EAttributeType.SpecialEnergy2Max;
 
-		// Token: 0x0401FE2F RID: 130607
+		// Token: 0x0401A8F6 RID: 108790
 		private static readonly EAttributeType MORPH_ATTR_ID = EAttributeType.SpecialEnergy1;
 
-		// Token: 0x0401FE30 RID: 130608
+		// Token: 0x0401A8F7 RID: 108791
 		private static readonly EAttributeType MAX_MORPH_ATTR_ID = EAttributeType.SpecialEnergy1Max;
 
-		// Token: 0x0401FE31 RID: 130609
+		// Token: 0x0401A8F8 RID: 108792
 		[Nullable(1)]
 		private readonly SpecialEnergyBarPercentMachine MorphPercentMachine = new SpecialEnergyBarPercentMachine();
 
-		// Token: 0x0401FE32 RID: 130610
+		// Token: 0x0401A8F9 RID: 108793
 		[Nullable(2)]
 		private SpecialEnergyBarQingXiaoSlot NormalBarSlotItem;
 
-		// Token: 0x0401FE33 RID: 130611
+		// Token: 0x0401A8FA RID: 108794
 		[Nullable(2)]
 		private SpecialEnergyBarKeyItem MorphKeyItem;
 
-		// Token: 0x0401FE34 RID: 130612
+		// Token: 0x0401A8FB RID: 108795
 		private bool IsQinEnergyFull;
 
-		// Token: 0x0401FE35 RID: 130613
+		// Token: 0x0401A8FC RID: 108796
 		private bool IsJianEnergyFull;
 
-		// Token: 0x0401FE36 RID: 130614
+		// Token: 0x0401A8FD RID: 108797
 		private bool IsLastNormalEnergyFull;
 
-		// Token: 0x0401FE37 RID: 130615
+		// Token: 0x0401A8FE RID: 108798
 		private SpecialEnergyBarQingXiao.EState CurState = SpecialEnergyBarQingXiao.EState.Max;
 
-		// Token: 0x0401FE38 RID: 130616
+		// Token: 0x0401A8FF RID: 108799
 		private bool? MorphScaleVisible;
 
-		// Token: 0x0401FE39 RID: 130617
+		// Token: 0x0401A900 RID: 108800
 		private bool? MorphMaxNiaVisible;
 
-		// Token: 0x0200C141 RID: 49473
+		// Token: 0x0200AB50 RID: 43856
 		private enum EChildType
 		{
-			// Token: 0x0403A5ED RID: 239085
+			// Token: 0x04034FDF RID: 217055
 			PnlStateA,
-			// Token: 0x0403A5EE RID: 239086
+			// Token: 0x04034FE0 RID: 217056
 			SlotBarItem,
-			// Token: 0x0403A5EF RID: 239087
+			// Token: 0x04034FE1 RID: 217057
 			PnlNml,
-			// Token: 0x0403A5F0 RID: 239088
+			// Token: 0x04034FE2 RID: 217058
 			PnlAct,
-			// Token: 0x0403A5F1 RID: 239089
+			// Token: 0x04034FE3 RID: 217059
 			PnlStateB,
-			// Token: 0x0403A5F2 RID: 239090
+			// Token: 0x04034FE4 RID: 217060
 			SldBar,
-			// Token: 0x0403A5F3 RID: 239091
+			// Token: 0x04034FE5 RID: 217061
 			PnlHotKey,
-			// Token: 0x0403A5F4 RID: 239092
+			// Token: 0x04034FE6 RID: 217062
 			AnimAMax,
-			// Token: 0x0403A5F5 RID: 239093
+			// Token: 0x04034FE7 RID: 217063
 			AnimA2B,
-			// Token: 0x0403A5F6 RID: 239094
+			// Token: 0x04034FE8 RID: 217064
 			AnimB2A,
-			// Token: 0x0403A5F7 RID: 239095
+			// Token: 0x04034FE9 RID: 217065
 			AnimDGlowIn,
-			// Token: 0x0403A5F8 RID: 239096
+			// Token: 0x04034FEA RID: 217066
 			AnimDGlowOut,
-			// Token: 0x0403A5F9 RID: 239097
+			// Token: 0x04034FEB RID: 217067
 			AnimBMax,
-			// Token: 0x0403A5FA RID: 239098
+			// Token: 0x04034FEC RID: 217068
 			NiaGre,
-			// Token: 0x0403A5FB RID: 239099
+			// Token: 0x04034FED RID: 217069
 			NiaBlu,
-			// Token: 0x0403A5FC RID: 239100
+			// Token: 0x04034FEE RID: 217070
 			AnimBMax2B
 		}
 
-		// Token: 0x0200C142 RID: 49474
+		// Token: 0x0200AB51 RID: 43857
 		private enum EState
 		{
-			// Token: 0x0403A5FE RID: 239102
+			// Token: 0x04034FF0 RID: 217072
 			Normal,
-			// Token: 0x0403A5FF RID: 239103
+			// Token: 0x04034FF1 RID: 217073
 			Morph,
-			// Token: 0x0403A600 RID: 239104
+			// Token: 0x04034FF2 RID: 217074
 			Max
 		}
 	}

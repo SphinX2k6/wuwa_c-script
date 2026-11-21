@@ -5,13 +5,13 @@ using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.NewWorld.Pawn.Controllers;
 
-// Token: 0x020031CE RID: 12750
+// Token: 0x0200273D RID: 10045
 [NullableContext(1)]
 [Nullable(0)]
 public class MonsterWeaknessComponent : EntityComponent
 {
-	// Token: 0x17002605 RID: 9733
-	// (get) Token: 0x0601B7C0 RID: 112576 RVA: 0x00787ADF File Offset: 0x00785CDF
+	// Token: 0x17002819 RID: 10265
+	// (get) Token: 0x06019309 RID: 103177 RVA: 0x007AFB2D File Offset: 0x007ADD2D
 	public string TargetSocket
 	{
 		get
@@ -20,7 +20,7 @@ public class MonsterWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B7C1 RID: 112577 RVA: 0x00787AE7 File Offset: 0x00785CE7
+	// Token: 0x0601930A RID: 103178 RVA: 0x007AFB35 File Offset: 0x007ADD35
 	protected override bool OnStart()
 	{
 		PawnInteractNewComponent component = base.Entity.GetComponent<PawnInteractNewComponent>();
@@ -28,13 +28,13 @@ public class MonsterWeaknessComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B7C2 RID: 112578 RVA: 0x00787B07 File Offset: 0x00785D07
+	// Token: 0x0601930B RID: 103179 RVA: 0x007AFB55 File Offset: 0x007ADD55
 	protected override bool OnEnd()
 	{
 		return true;
 	}
 
-	// Token: 0x0601B7C3 RID: 112579 RVA: 0x00787B0C File Offset: 0x00785D0C
+	// Token: 0x0601930C RID: 103180 RVA: 0x007AFB58 File Offset: 0x007ADD58
 	public void ShowWeaknessButton(string targetSocket)
 	{
 		if (this.InteractHandle != 0)
@@ -52,7 +52,7 @@ public class MonsterWeaknessComponent : EntityComponent
 		this.InteractHandle = ((interactController != null) ? interactController.AddClientInteractOption(new BreakWeakness(), null, new EDoInteract?(EDoInteract.Direct), new float?(float.MaxValue), null, new ECustomOptionType?(ECustomOptionType.BreakWeakness), null, null) : 0);
 	}
 
-	// Token: 0x0601B7C4 RID: 112580 RVA: 0x00787B98 File Offset: 0x00785D98
+	// Token: 0x0601930D RID: 103181 RVA: 0x007AFBE4 File Offset: 0x007ADDE4
 	public void UpdateTargetSocket(string targetSocket)
 	{
 		if (this.InteractHandle != 0 && this.TargetSocketInternal != targetSocket)
@@ -67,7 +67,7 @@ public class MonsterWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B7C5 RID: 112581 RVA: 0x00787BEC File Offset: 0x00785DEC
+	// Token: 0x0601930E RID: 103182 RVA: 0x007AFC38 File Offset: 0x007ADE38
 	public void HideWeaknessButton()
 	{
 		if (this.InteractHandle != 0)
@@ -83,7 +83,7 @@ public class MonsterWeaknessComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B7C6 RID: 112582 RVA: 0x00787C4C File Offset: 0x00785E4C
+	// Token: 0x0601930F RID: 103183 RVA: 0x007AFC98 File Offset: 0x007ADE98
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -91,35 +91,46 @@ public class MonsterWeaknessComponent : EntityComponent
 			return false;
 		}
 		MonsterWeaknessComponent monsterWeaknessComponent = (MonsterWeaknessComponent)componentTemplate;
-		if (base.CanResetComponentProperty("InteractController"))
+		if (monsterWeaknessComponent.InteractController == null)
 		{
-			if (monsterWeaknessComponent.InteractController == null)
-			{
-				this.InteractController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInteractController>(this.InteractController), "InteractController"))
-			{
-				return false;
-			}
+			this.InteractController = null;
 		}
-		if (base.CanResetComponentProperty("InteractHandle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractController), "InteractController"))
 		{
-			this.InteractHandle = monsterWeaknessComponent.InteractHandle;
+			return false;
 		}
-		if (base.CanResetComponentProperty("TargetSocketInternal"))
-		{
-			this.TargetSocketInternal = monsterWeaknessComponent.TargetSocketInternal;
-		}
+		this.InteractHandle = monsterWeaknessComponent.InteractHandle;
+		this.TargetSocketInternal = monsterWeaknessComponent.TargetSocketInternal;
 		return true;
 	}
 
-	// Token: 0x0400D7AF RID: 55215
+	// Token: 0x1700281A RID: 10266
+	// (get) Token: 0x06019310 RID: 103184 RVA: 0x007AFCFB File Offset: 0x007ADEFB
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700281B RID: 10267
+	// (get) Token: 0x06019311 RID: 103185 RVA: 0x007AFCFE File Offset: 0x007ADEFE
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DC36 RID: 56374
 	[Nullable(2)]
 	private PawnInteractController InteractController;
 
-	// Token: 0x0400D7B0 RID: 55216
+	// Token: 0x0400DC37 RID: 56375
 	private int InteractHandle;
 
-	// Token: 0x0400D7B1 RID: 55217
+	// Token: 0x0400DC38 RID: 56376
 	private string TargetSocketInternal = "";
 }

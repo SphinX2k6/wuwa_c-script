@@ -4,7 +4,7 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Skin;
 
-// Token: 0x02002A50 RID: 10832
+// Token: 0x02001FCB RID: 8139
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using CSharpScript.Game.Module.Skin;
 })]
 public class FlySkinGridItem : LoopScrollSmallItemGrid<FlySkinGridData>
 {
-	// Token: 0x060168FB RID: 92411 RVA: 0x005B7AE0 File Offset: 0x005B5CE0
+	// Token: 0x0601431C RID: 82716 RVA: 0x005E3C24 File Offset: 0x005E1E24
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, true);
@@ -27,13 +27,13 @@ public class FlySkinGridItem : LoopScrollSmallItemGrid<FlySkinGridData>
 		}
 	}
 
-	// Token: 0x060168FC RID: 92412 RVA: 0x005B7B48 File Offset: 0x005B5D48
+	// Token: 0x0601431D RID: 82717 RVA: 0x005E3C8C File Offset: 0x005E1E8C
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x060168FD RID: 92413 RVA: 0x005B7B54 File Offset: 0x005B5D54
+	// Token: 0x0601431E RID: 82718 RVA: 0x005E3C98 File Offset: 0x005E1E98
 	protected override void OnRefresh(FlySkinGridData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -51,7 +51,7 @@ public class FlySkinGridItem : LoopScrollSmallItemGrid<FlySkinGridData>
 		base.SetRoleHead(null);
 	}
 
-	// Token: 0x060168FE RID: 92414 RVA: 0x005B7C00 File Offset: 0x005B5E00
+	// Token: 0x0601431F RID: 82719 RVA: 0x005E3D44 File Offset: 0x005E1F44
 	public void RefreshEquipState()
 	{
 		FlySkinGridData flySkinGridData = this.Data as FlySkinGridData;

@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D78 RID: 28024
+	// Token: 0x020074F3 RID: 29939
 	public class IPostAkEventMusicSubtitleT
 	{
-		// Token: 0x1700D118 RID: 53528
-		// (get) Token: 0x0603180C RID: 202764 RVA: 0x006B60E2 File Offset: 0x006B42E2
-		// (set) Token: 0x0603180D RID: 202765 RVA: 0x006B60EA File Offset: 0x006B42EA
+		// Token: 0x1700DC60 RID: 56416
+		// (get) Token: 0x06034808 RID: 215048 RVA: 0x007117CA File Offset: 0x0070F9CA
+		// (set) Token: 0x06034809 RID: 215049 RVA: 0x007117D2 File Offset: 0x0070F9D2
 		public EPostAkEvent Type { get; set; }
 
-		// Token: 0x1700D119 RID: 53529
-		// (get) Token: 0x0603180E RID: 202766 RVA: 0x006B60F3 File Offset: 0x006B42F3
-		// (set) Token: 0x0603180F RID: 202767 RVA: 0x006B60FB File Offset: 0x006B42FB
+		// Token: 0x1700DC61 RID: 56417
+		// (get) Token: 0x0603480A RID: 215050 RVA: 0x007117DB File Offset: 0x0070F9DB
+		// (set) Token: 0x0603480B RID: 215051 RVA: 0x007117E3 File Offset: 0x0070F9E3
 		public string MusicSubtitleGroupTag { get; set; }
 
-		// Token: 0x1700D11A RID: 53530
-		// (get) Token: 0x06031810 RID: 202768 RVA: 0x006B6104 File Offset: 0x006B4304
-		// (set) Token: 0x06031811 RID: 202769 RVA: 0x006B610C File Offset: 0x006B430C
+		// Token: 0x1700DC62 RID: 56418
+		// (get) Token: 0x0603480C RID: 215052 RVA: 0x007117EC File Offset: 0x0070F9EC
+		// (set) Token: 0x0603480D RID: 215053 RVA: 0x007117F4 File Offset: 0x0070F9F4
 		public string AkEvent { get; set; }
 
-		// Token: 0x1700D11B RID: 53531
-		// (get) Token: 0x06031812 RID: 202770 RVA: 0x006B6115 File Offset: 0x006B4315
-		// (set) Token: 0x06031813 RID: 202771 RVA: 0x006B611D File Offset: 0x006B431D
+		// Token: 0x1700DC63 RID: 56419
+		// (get) Token: 0x0603480E RID: 215054 RVA: 0x007117FD File Offset: 0x0070F9FD
+		// (set) Token: 0x0603480F RID: 215055 RVA: 0x00711805 File Offset: 0x0070FA05
 		public bool IsLoop { get; set; }
 
-		// Token: 0x1700D11C RID: 53532
-		// (get) Token: 0x06031814 RID: 202772 RVA: 0x006B6126 File Offset: 0x006B4326
-		// (set) Token: 0x06031815 RID: 202773 RVA: 0x006B612E File Offset: 0x006B432E
+		// Token: 0x1700DC64 RID: 56420
+		// (get) Token: 0x06034810 RID: 215056 RVA: 0x0071180E File Offset: 0x0070FA0E
+		// (set) Token: 0x06034811 RID: 215057 RVA: 0x00711816 File Offset: 0x0070FA16
 		public bool IsEndAkEvent { get; set; }
 
-		// Token: 0x1700D11D RID: 53533
-		// (get) Token: 0x06031816 RID: 202774 RVA: 0x006B6137 File Offset: 0x006B4337
-		// (set) Token: 0x06031817 RID: 202775 RVA: 0x006B613F File Offset: 0x006B433F
+		// Token: 0x1700DC65 RID: 56421
+		// (get) Token: 0x06034812 RID: 215058 RVA: 0x0071181F File Offset: 0x0070FA1F
+		// (set) Token: 0x06034813 RID: 215059 RVA: 0x00711827 File Offset: 0x0070FA27
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031818 RID: 202776 RVA: 0x006B6148 File Offset: 0x006B4348
+		// Token: 0x06034814 RID: 215060 RVA: 0x00711830 File Offset: 0x0070FA30
 		public IPostAkEventMusicSubtitleT()
 		{
 			this.Type = EPostAkEvent.Global;

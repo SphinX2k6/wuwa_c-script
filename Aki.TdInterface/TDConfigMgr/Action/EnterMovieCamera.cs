@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001657 RID: 5719
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017C7 RID: 6087
 	public class EnterMovieCamera : ActionParams
 	{
-		// Token: 0x06007CB1 RID: 31921 RVA: 0x0012B9D8 File Offset: 0x00129BD8
+		// Token: 0x0600838F RID: 33679 RVA: 0x0013AA84 File Offset: 0x00138C84
 		private EnterMovieCamera_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007CB2 RID: 31922 RVA: 0x0012BA10 File Offset: 0x00129C10
+		// Token: 0x06008390 RID: 33680 RVA: 0x0013AABC File Offset: 0x00138CBC
 		public static EnterMovieCamera Create([Nullable(2)] EnterMovieCamera instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CB3 RID: 31923 RVA: 0x0012BA23 File Offset: 0x00129C23
+		// Token: 0x06008391 RID: 33681 RVA: 0x0013AACF File Offset: 0x00138CCF
 		public static EnterMovieCamera CreateFromSetValue([Nullable(2)] EnterMovieCamera_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CB4 RID: 31924 RVA: 0x0012BA36 File Offset: 0x00129C36
+		// Token: 0x06008392 RID: 33682 RVA: 0x0013AAE2 File Offset: 0x00138CE2
 		public EnterMovieCamera_SetValue ToSetValue()
 		{
 			return new EnterMovieCamera_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002930 RID: 10544
-		// (get) Token: 0x06007CB5 RID: 31925 RVA: 0x0012BA49 File Offset: 0x00129C49
-		// (set) Token: 0x06007CB6 RID: 31926 RVA: 0x0012BA70 File Offset: 0x00129C70
+		// Token: 0x17002B1B RID: 11035
+		// (get) Token: 0x06008393 RID: 33683 RVA: 0x0013AAF5 File Offset: 0x00138CF5
+		// (set) Token: 0x06008394 RID: 33684 RVA: 0x0013AB1C File Offset: 0x00138D1C
 		public virtual IEnterMovieCameraType MovieCameraConfig
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004CA1 RID: 19617
+		// Token: 0x0400509C RID: 20636
 		[Nullable(2)]
 		protected new EnterMovieCamera FbInstance;
 
-		// Token: 0x04004CA2 RID: 19618
+		// Token: 0x0400509D RID: 20637
 		[Nullable(2)]
 		protected EnterMovieCamera_SetValue PocoInterface;
 	}

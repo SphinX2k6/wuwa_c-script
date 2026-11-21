@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E6E RID: 7790
+	// Token: 0x020005A1 RID: 1441
 	public sealed class FOnShape2DSkillStateChange : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DAC5 RID: 121541 RVA: 0x002BD442 File Offset: 0x002BB642
+		// Token: 0x0600822F RID: 33327 RVA: 0x000C071E File Offset: 0x000BE91E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnShape2DSkillStateChange.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DAC6 RID: 121542 RVA: 0x002BD44E File Offset: 0x002BB64E
+		// Token: 0x06008230 RID: 33328 RVA: 0x000C072A File Offset: 0x000BE92A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnShape2DSkillStateChange._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnShape2DSkillStateChange._FunctionPtr;
 		}
 
-		// Token: 0x0601DAC7 RID: 121543 RVA: 0x002BD471 File Offset: 0x002BB671
+		// Token: 0x06008231 RID: 33329 RVA: 0x000C074D File Offset: 0x000BE94D
 		public FOnShape2DSkillStateChange()
 		{
 		}
 
-		// Token: 0x0601DAC8 RID: 121544 RVA: 0x002BD479 File Offset: 0x002BB679
+		// Token: 0x06008232 RID: 33330 RVA: 0x000C0755 File Offset: 0x000BE955
 		[NullableContext(2)]
 		public FOnShape2DSkillStateChange(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DAC9 RID: 121545 RVA: 0x002BD483 File Offset: 0x002BB683
+		// Token: 0x06008233 RID: 33331 RVA: 0x000C075F File Offset: 0x000BE95F
 		public FOnShape2DSkillStateChange(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DACA RID: 121546 RVA: 0x002BD48E File Offset: 0x002BB68E
+		// Token: 0x06008234 RID: 33332 RVA: 0x000C076A File Offset: 0x000BE96A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, EKSC_Skill_State>) ?? ((Action<int, EKSC_Skill_State>)Delegate.CreateDelegate(typeof(Action<int, EKSC_Skill_State>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DACB RID: 121547 RVA: 0x002BD4C0 File Offset: 0x002BB6C0
+		// Token: 0x06008235 RID: 33333 RVA: 0x000C079C File Offset: 0x000BE99C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int, EKSC_Skill_State> Callback)
 		{
 			if (FOnShape2DSkillStateChange.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnShape2DSkillStateChange.RegisterId);
 		}
 
-		// Token: 0x0601DACC RID: 121548 RVA: 0x002BD4FC File Offset: 0x002BB6FC
+		// Token: 0x06008236 RID: 33334 RVA: 0x000C07D8 File Offset: 0x000BE9D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int SkillIndex, EKSC_Skill_State State)
 		{
 			FOnShape2DSkillStateChange.__FOnShape2DSkillStateChange_DelegateParams* ptr = stackalloc FOnShape2DSkillStateChange.__FOnShape2DSkillStateChange_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnShape2DSkillStateChange.__FOnShape2DSkillStateChange_DelegateParams) & -16L;
@@ -77,10 +75,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601DACD RID: 121549 RVA: 0x002BD540 File Offset: 0x002BB740
+		// Token: 0x06008237 RID: 33335 RVA: 0x000C081C File Offset: 0x000BEA1C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, EKSC_Skill_State> action = target as Action<int, EKSC_Skill_State>;
@@ -91,35 +88,35 @@ namespace UnrealEngine
 			action(((FOnShape2DSkillStateChange.__FOnShape2DSkillStateChange_DelegateParams*)__Parameters)->SkillIndex, ((FOnShape2DSkillStateChange.__FOnShape2DSkillStateChange_DelegateParams*)__Parameters)->State);
 		}
 
-		// Token: 0x0401012B RID: 65835
+		// Token: 0x040038C0 RID: 14528
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401012C RID: 65836
+		// Token: 0x040038C1 RID: 14529
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.OnShape2DSkillStateChange__DelegateSignature";
 
-		// Token: 0x0401012D RID: 65837
+		// Token: 0x040038C2 RID: 14530
 		private static int RegisterId;
 
-		// Token: 0x020032C3 RID: 12995
+		// Token: 0x02000D22 RID: 3362
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnShape2DSkillStateChange_DelegateParams
+		private ref struct __FOnShape2DSkillStateChange_DelegateParams
 		{
-			// Token: 0x04017167 RID: 94567
+			// Token: 0x04005FB3 RID: 24499
 			[FieldOffset(0)]
 			public int SkillIndex;
 
-			// Token: 0x04017168 RID: 94568
+			// Token: 0x04005FB4 RID: 24500
 			[FieldOffset(4)]
 			public EKSC_Skill_State State;
 		}
 
-		// Token: 0x020032C4 RID: 12996
+		// Token: 0x02000D23 RID: 3363
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017169 RID: 94569
+			// Token: 0x04005FB5 RID: 24501
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

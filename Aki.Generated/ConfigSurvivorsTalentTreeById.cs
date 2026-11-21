@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009AB RID: 2475
+	// Token: 0x02000A80 RID: 2688
 	public class ConfigSurvivorsTalentTreeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003A16 RID: 14870 RVA: 0x001A236F File Offset: 0x001A056F
+		// Token: 0x06003F14 RID: 16148 RVA: 0x001C1703 File Offset: 0x001BF903
 		static ConfigSurvivorsTalentTreeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSurvivorsTalentTreeById.CreateStaticDefaultValue), new Action(ConfigSurvivorsTalentTreeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003A17 RID: 14871 RVA: 0x001A2390 File Offset: 0x001A0590
+		// Token: 0x06003F15 RID: 16149 RVA: 0x001C1724 File Offset: 0x001BF924
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSurvivorsTalentTreeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003A18 RID: 14872 RVA: 0x001A240F File Offset: 0x001A060F
+		// Token: 0x06003F16 RID: 16150 RVA: 0x001C17A3 File Offset: 0x001BF9A3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSurvivorsTalentTreeById.LogPair = null;
 			ConfigSurvivorsTalentTreeById.HandleId = 0;
 		}
 
-		// Token: 0x06003A19 RID: 14873 RVA: 0x001A241D File Offset: 0x001A061D
+		// Token: 0x06003F17 RID: 16151 RVA: 0x001C17B1 File Offset: 0x001BF9B1
 		public static void Init()
 		{
 			ConfigSurvivorsTalentTreeById.HandleId = ConfigCommon.InitDataStatement(ConfigSurvivorsTalentTreeById.HandleId, "db_survivors.db", "select BinData from `SurvivorsTalentTree` where Id=?");
 		}
 
-		// Token: 0x06003A1A RID: 14874 RVA: 0x001A2438 File Offset: 0x001A0638
+		// Token: 0x06003F18 RID: 16152 RVA: 0x001C17CC File Offset: 0x001BF9CC
 		public static SurvivorsTalentTree? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSurvivorsTalentTreeById.HandleId, ConfigSurvivorsTalentTreeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SurvivorsTalentTree?(rootAsSurvivorsTalentTree);
 		}
 
-		// Token: 0x04004393 RID: 17299
+		// Token: 0x04004966 RID: 18790
 		private const string DB = "db_survivors.db";
 
-		// Token: 0x04004394 RID: 17300
+		// Token: 0x04004967 RID: 18791
 		private const string FILE = "x.幸存者_局外.xlsx";
 
-		// Token: 0x04004395 RID: 17301
+		// Token: 0x04004968 RID: 18792
 		private const string TABLE = "SurvivorsTalentTree";
 
-		// Token: 0x04004396 RID: 17302
+		// Token: 0x04004969 RID: 18793
 		private const string COMMAND = "select BinData from `SurvivorsTalentTree` where Id=?";
 
-		// Token: 0x04004397 RID: 17303
+		// Token: 0x0400496A RID: 18794
 		private const string KEY_PREFIX = "SurvivorsTalentTreeById";
 
-		// Token: 0x04004398 RID: 17304
+		// Token: 0x0400496B RID: 18795
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004399 RID: 17305
+		// Token: 0x0400496C RID: 18796
 		private static int HandleId;
 	}
 }

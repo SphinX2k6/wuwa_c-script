@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B77 RID: 23415
+	// Token: 0x0200618D RID: 24973
 	public struct IWellStreamingRenderSelfConfig : IFlatbufferObject
 	{
-		// Token: 0x1700B0F6 RID: 45302
-		// (get) Token: 0x06028141 RID: 164161 RVA: 0x005827F1 File Offset: 0x005809F1
+		// Token: 0x1700BA3E RID: 47678
+		// (get) Token: 0x0602A705 RID: 173829 RVA: 0x005CA281 File Offset: 0x005C8481
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028142 RID: 164162 RVA: 0x005827FE File Offset: 0x005809FE
+		// Token: 0x0602A706 RID: 173830 RVA: 0x005CA28E File Offset: 0x005C848E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028143 RID: 164163 RVA: 0x00582808 File Offset: 0x00580A08
+		// Token: 0x0602A707 RID: 173831 RVA: 0x005CA298 File Offset: 0x005C8498
 		public static IWellStreamingRenderSelfConfig GetRootAsIWellStreamingRenderSelfConfig(ByteBuffer _bb)
 		{
 			return IWellStreamingRenderSelfConfig.GetRootAsIWellStreamingRenderSelfConfig(_bb, default(IWellStreamingRenderSelfConfig));
 		}
 
-		// Token: 0x06028144 RID: 164164 RVA: 0x00582824 File Offset: 0x00580A24
+		// Token: 0x0602A708 RID: 173832 RVA: 0x005CA2B4 File Offset: 0x005C84B4
 		public static IWellStreamingRenderSelfConfig GetRootAsIWellStreamingRenderSelfConfig(ByteBuffer _bb, IWellStreamingRenderSelfConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028145 RID: 164165 RVA: 0x00582841 File Offset: 0x00580A41
+		// Token: 0x0602A709 RID: 173833 RVA: 0x005CA2D1 File Offset: 0x005C84D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028146 RID: 164166 RVA: 0x00582850 File Offset: 0x00580A50
+		// Token: 0x0602A70A RID: 173834 RVA: 0x005CA2E0 File Offset: 0x005C84E0
 		public IWellStreamingRenderSelfConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B0F7 RID: 45303
-		// (get) Token: 0x06028147 RID: 164167 RVA: 0x00582860 File Offset: 0x00580A60
+		// Token: 0x1700BA3F RID: 47679
+		// (get) Token: 0x0602A70B RID: 173835 RVA: 0x005CA2F0 File Offset: 0x005C84F0
 		public string RtActorRefKey
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028148 RID: 164168 RVA: 0x00582897 File Offset: 0x00580A97
+		// Token: 0x0602A70C RID: 173836 RVA: 0x005CA327 File Offset: 0x005C8527
 		public Span<byte> GetRtActorRefKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06028149 RID: 164169 RVA: 0x005828A6 File Offset: 0x00580AA6
+		// Token: 0x0602A70D RID: 173837 RVA: 0x005CA336 File Offset: 0x005C8536
 		public byte[] GetRtActorRefKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700B0F8 RID: 45304
-		// (get) Token: 0x0602814A RID: 164170 RVA: 0x005828B4 File Offset: 0x00580AB4
+		// Token: 0x1700BA40 RID: 47680
+		// (get) Token: 0x0602A70E RID: 173838 RVA: 0x005CA344 File Offset: 0x005C8544
 		public string FallbackCubeMapKey
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602814B RID: 164171 RVA: 0x005828EB File Offset: 0x00580AEB
+		// Token: 0x0602A70F RID: 173839 RVA: 0x005CA37B File Offset: 0x005C857B
 		public Span<byte> GetFallbackCubeMapKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602814C RID: 164172 RVA: 0x005828FA File Offset: 0x00580AFA
+		// Token: 0x0602A710 RID: 173840 RVA: 0x005CA38A File Offset: 0x005C858A
 		public byte[] GetFallbackCubeMapKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602814D RID: 164173 RVA: 0x00582908 File Offset: 0x00580B08
+		// Token: 0x0602A711 RID: 173841 RVA: 0x005CA398 File Offset: 0x005C8598
 		public static Offset<IWellStreamingRenderSelfConfig> CreateIWellStreamingRenderSelfConfig(FlatBufferBuilder builder, StringOffset RtActorRefKeyOffset = default(StringOffset), StringOffset FallbackCubeMapKeyOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWellStreamingRenderSelfConfig.EndIWellStreamingRenderSelfConfig(builder);
 		}
 
-		// Token: 0x0602814E RID: 164174 RVA: 0x00582925 File Offset: 0x00580B25
+		// Token: 0x0602A712 RID: 173842 RVA: 0x005CA3B5 File Offset: 0x005C85B5
 		public static void StartIWellStreamingRenderSelfConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602814F RID: 164175 RVA: 0x0058292E File Offset: 0x00580B2E
+		// Token: 0x0602A713 RID: 173843 RVA: 0x005CA3BE File Offset: 0x005C85BE
 		public static void AddRtActorRefKey(FlatBufferBuilder builder, StringOffset rtActorRefKeyOffset)
 		{
 			builder.AddOffset(0, rtActorRefKeyOffset.Value, 0);
 		}
 
-		// Token: 0x06028150 RID: 164176 RVA: 0x0058293E File Offset: 0x00580B3E
+		// Token: 0x0602A714 RID: 173844 RVA: 0x005CA3CE File Offset: 0x005C85CE
 		public static void AddFallbackCubeMapKey(FlatBufferBuilder builder, StringOffset fallbackCubeMapKeyOffset)
 		{
 			builder.AddOffset(1, fallbackCubeMapKeyOffset.Value, 0);
 		}
 
-		// Token: 0x06028151 RID: 164177 RVA: 0x0058294E File Offset: 0x00580B4E
+		// Token: 0x0602A715 RID: 173845 RVA: 0x005CA3DE File Offset: 0x005C85DE
 		public static Offset<IWellStreamingRenderSelfConfig> EndIWellStreamingRenderSelfConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IWellStreamingRenderSelfConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06028152 RID: 164178 RVA: 0x0058295C File Offset: 0x00580B5C
+		// Token: 0x0602A716 RID: 173846 RVA: 0x005CA3EC File Offset: 0x005C85EC
 		public IWellStreamingRenderSelfConfigT UnPack()
 		{
 			IWellStreamingRenderSelfConfigT wellStreamingRenderSelfConfigT = new IWellStreamingRenderSelfConfigT();
@@ -142,14 +142,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return wellStreamingRenderSelfConfigT;
 		}
 
-		// Token: 0x06028153 RID: 164179 RVA: 0x00582977 File Offset: 0x00580B77
+		// Token: 0x0602A717 RID: 173847 RVA: 0x005CA407 File Offset: 0x005C8607
 		public void UnPackTo(IWellStreamingRenderSelfConfigT _o)
 		{
 			_o.RtActorRefKey = this.RtActorRefKey;
 			_o.FallbackCubeMapKey = this.FallbackCubeMapKey;
 		}
 
-		// Token: 0x06028154 RID: 164180 RVA: 0x00582994 File Offset: 0x00580B94
+		// Token: 0x0602A718 RID: 173848 RVA: 0x005CA424 File Offset: 0x005C8624
 		public static Offset<IWellStreamingRenderSelfConfig> Pack(FlatBufferBuilder builder, IWellStreamingRenderSelfConfigT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWellStreamingRenderSelfConfig.CreateIWellStreamingRenderSelfConfig(builder, rtActorRefKeyOffset, fallbackCubeMapKeyOffset);
 		}
 
-		// Token: 0x0400F2D0 RID: 62160
+		// Token: 0x0400FFD6 RID: 65494
 		private Table __p;
 	}
 }

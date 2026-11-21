@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002F03 RID: 12035
+// Token: 0x02002456 RID: 9302
 public enum EChangeWeaknessType
 {
-	// Token: 0x0400C15C RID: 49500
+	// Token: 0x0400C4FE RID: 50430
 	NotWeakness,
-	// Token: 0x0400C15D RID: 49501
+	// Token: 0x0400C4FF RID: 50431
 	WeaknessUnchanged,
-	// Token: 0x0400C15E RID: 49502
+	// Token: 0x0400C500 RID: 50432
 	WeaknessChange
 }

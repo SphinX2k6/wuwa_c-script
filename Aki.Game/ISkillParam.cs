@@ -2,57 +2,57 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003137 RID: 12599
+// Token: 0x02002693 RID: 9875
 [NullableContext(2)]
 public interface ISkillParam
 {
-	// Token: 0x17002572 RID: 9586
-	// (get) Token: 0x0601B11F RID: 110879
-	// (set) Token: 0x0601B120 RID: 110880
+	// Token: 0x17002725 RID: 10021
+	// (get) Token: 0x06018B8B RID: 101259
+	// (set) Token: 0x06018B8C RID: 101260
 	Entity Target { get; set; }
 
-	// Token: 0x17002573 RID: 9587
-	// (get) Token: 0x0601B121 RID: 110881
-	// (set) Token: 0x0601B122 RID: 110882
+	// Token: 0x17002726 RID: 10022
+	// (get) Token: 0x06018B8D RID: 101261
+	// (set) Token: 0x06018B8E RID: 101262
 	AActor TargetActor { get; set; }
 
-	// Token: 0x17002574 RID: 9588
-	// (get) Token: 0x0601B123 RID: 110883
-	// (set) Token: 0x0601B124 RID: 110884
+	// Token: 0x17002727 RID: 10023
+	// (get) Token: 0x06018B8F RID: 101263
+	// (set) Token: 0x06018B90 RID: 101264
 	string SocketName { get; set; }
 
-	// Token: 0x17002575 RID: 9589
-	// (get) Token: 0x0601B125 RID: 110885
-	// (set) Token: 0x0601B126 RID: 110886
+	// Token: 0x17002728 RID: 10024
+	// (get) Token: 0x06018B91 RID: 101265
+	// (set) Token: 0x06018B92 RID: 101266
 	long? ContextId { get; set; }
 
-	// Token: 0x17002576 RID: 9590
-	// (get) Token: 0x0601B127 RID: 110887
-	// (set) Token: 0x0601B128 RID: 110888
+	// Token: 0x17002729 RID: 10025
+	// (get) Token: 0x06018B93 RID: 101267
+	// (set) Token: 0x06018B94 RID: 101268
 	string Reason { get; set; }
 
-	// Token: 0x17002577 RID: 9591
-	// (get) Token: 0x0601B129 RID: 110889
-	// (set) Token: 0x0601B12A RID: 110890
+	// Token: 0x1700272A RID: 10026
+	// (get) Token: 0x06018B95 RID: 101269
+	// (set) Token: 0x06018B96 RID: 101270
 	int? MontageIndex { get; set; }
 
-	// Token: 0x17002578 RID: 9592
-	// (get) Token: 0x0601B12B RID: 110891
-	// (set) Token: 0x0601B12C RID: 110892
+	// Token: 0x1700272B RID: 10027
+	// (get) Token: 0x06018B97 RID: 101271
+	// (set) Token: 0x06018B98 RID: 101272
 	bool? CheckMultiSkill { get; set; }
 
-	// Token: 0x17002579 RID: 9593
-	// (get) Token: 0x0601B12D RID: 110893
-	// (set) Token: 0x0601B12E RID: 110894
+	// Token: 0x1700272C RID: 10028
+	// (get) Token: 0x06018B99 RID: 101273
+	// (set) Token: 0x06018B9A RID: 101274
 	int? NextSkillId { get; set; }
 
-	// Token: 0x1700257A RID: 9594
-	// (get) Token: 0x0601B12F RID: 110895
-	// (set) Token: 0x0601B130 RID: 110896
+	// Token: 0x1700272D RID: 10029
+	// (get) Token: 0x06018B9B RID: 101275
+	// (set) Token: 0x06018B9C RID: 101276
 	bool? IsAsync { get; set; }
 
-	// Token: 0x1700257B RID: 9595
-	// (get) Token: 0x0601B131 RID: 110897
-	// (set) Token: 0x0601B132 RID: 110898
+	// Token: 0x1700272E RID: 10030
+	// (get) Token: 0x06018B9D RID: 101277
+	// (set) Token: 0x06018B9E RID: 101278
 	FVectorDouble? ExtraTargetLocation { get; set; }
 }

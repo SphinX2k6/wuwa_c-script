@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005CE RID: 1486
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200065D RID: 1629
 	public class IPasserbyNpcSpawnCountOverride
 	{
-		// Token: 0x06001F74 RID: 8052 RVA: 0x000583EC File Offset: 0x000565EC
+		// Token: 0x06002236 RID: 8758 RVA: 0x0005E938 File Offset: 0x0005CB38
 		private IPasserbyNpcSpawnCountOverride_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001F75 RID: 8053 RVA: 0x00058424 File Offset: 0x00056624
+		// Token: 0x06002237 RID: 8759 RVA: 0x0005E970 File Offset: 0x0005CB70
 		public static IPasserbyNpcSpawnCountOverride Create([Nullable(2)] IPasserbyNpcSpawnCountOverride instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F76 RID: 8054 RVA: 0x00058437 File Offset: 0x00056637
+		// Token: 0x06002238 RID: 8760 RVA: 0x0005E983 File Offset: 0x0005CB83
 		public static IPasserbyNpcSpawnCountOverride CreateFromSetValue([Nullable(2)] IPasserbyNpcSpawnCountOverride_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F77 RID: 8055 RVA: 0x0005844A File Offset: 0x0005664A
+		// Token: 0x06002239 RID: 8761 RVA: 0x0005E996 File Offset: 0x0005CB96
 		public IPasserbyNpcSpawnCountOverride_SetValue ToSetValue()
 		{
 			return new IPasserbyNpcSpawnCountOverride_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000864 RID: 2148
-		// (get) Token: 0x06001F78 RID: 8056 RVA: 0x0005846C File Offset: 0x0005666C
-		// (set) Token: 0x06001F79 RID: 8057 RVA: 0x000584A6 File Offset: 0x000566A6
+		// Token: 0x1700090E RID: 2318
+		// (get) Token: 0x0600223A RID: 8762 RVA: 0x0005E9B8 File Offset: 0x0005CBB8
+		// (set) Token: 0x0600223B RID: 8763 RVA: 0x0005E9F2 File Offset: 0x0005CBF2
 		public virtual int? PcSpawnCount
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000865 RID: 2149
-		// (get) Token: 0x06001F7A RID: 8058 RVA: 0x000584B4 File Offset: 0x000566B4
-		// (set) Token: 0x06001F7B RID: 8059 RVA: 0x000584EE File Offset: 0x000566EE
+		// Token: 0x1700090F RID: 2319
+		// (get) Token: 0x0600223C RID: 8764 RVA: 0x0005EA00 File Offset: 0x0005CC00
+		// (set) Token: 0x0600223D RID: 8765 RVA: 0x0005EA3A File Offset: 0x0005CC3A
 		public virtual int? MobileSpawnCount
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400163A RID: 5690
+		// Token: 0x0400180B RID: 6155
 		[Nullable(2)]
 		protected IPasserbyNpcSpawnCountOverride FbInstance;
 
-		// Token: 0x0400163B RID: 5691
+		// Token: 0x0400180C RID: 6156
 		[Nullable(2)]
 		protected IPasserbyNpcSpawnCountOverride_SetValue PocoInterface;
 	}

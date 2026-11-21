@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200159F RID: 5535
+	// Token: 0x020016FE RID: 5886
 	[EnumExtensions]
 	public enum ECameraLockTargetType
 	{
-		// Token: 0x040049B3 RID: 18867
+		// Token: 0x04004D65 RID: 19813
 		TargetPosition
 	}
 }

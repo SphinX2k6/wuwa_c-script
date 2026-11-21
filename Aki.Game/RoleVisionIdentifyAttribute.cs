@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028E5 RID: 10469
+// Token: 0x02001E60 RID: 7776
 public class RoleVisionIdentifyAttribute : UiPanelBase
 {
-	// Token: 0x060159D4 RID: 88532 RVA: 0x00574808 File Offset: 0x00572A08
+	// Token: 0x060133D8 RID: 78808 RVA: 0x0059F6D0 File Offset: 0x0059D8D0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -24,20 +24,20 @@ public class RoleVisionIdentifyAttribute : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060159D5 RID: 88533 RVA: 0x00574871 File Offset: 0x00572A71
+	// Token: 0x060133D9 RID: 78809 RVA: 0x0059F739 File Offset: 0x0059D939
 	protected override void OnStart()
 	{
 		this.AttributeScroller = new GenericLayout<VisionIdentifyItem, VisionSubPropViewData>(base.GetVerticalLayout(0), new Func<VisionIdentifyItem>(this.InitItem), null, false, true);
 	}
 
-	// Token: 0x060159D6 RID: 88534 RVA: 0x00574894 File Offset: 0x00572A94
+	// Token: 0x060133DA RID: 78810 RVA: 0x0059F75C File Offset: 0x0059D95C
 	[NullableContext(1)]
 	private VisionIdentifyItem InitItem()
 	{
 		return new VisionIdentifyItem();
 	}
 
-	// Token: 0x060159D7 RID: 88535 RVA: 0x0057489C File Offset: 0x00572A9C
+	// Token: 0x060133DB RID: 78811 RVA: 0x0059F764 File Offset: 0x0059D964
 	[NullableContext(2)]
 	public void Refresh([Nullable(1)] List<VisionSubPropData> data, PhantomBattleData dataBase, VisionDetailInfoComponentData detailData)
 	{
@@ -70,7 +70,7 @@ public class RoleVisionIdentifyAttribute : UiPanelBase
 		this.AttributeScroller.RefreshByData(list2, null, false);
 	}
 
-	// Token: 0x0400A0CC RID: 41164
+	// Token: 0x0400A4B6 RID: 42166
 	[Nullable(new byte[]
 	{
 		2,
@@ -79,12 +79,12 @@ public class RoleVisionIdentifyAttribute : UiPanelBase
 	})]
 	public GenericLayout<VisionIdentifyItem, VisionSubPropViewData> AttributeScroller;
 
-	// Token: 0x02008EF9 RID: 36601
+	// Token: 0x02008141 RID: 33089
 	private enum EComponent
 	{
-		// Token: 0x0402E5BE RID: 189886
+		// Token: 0x04029CB9 RID: 171193
 		VerticalLayout,
-		// Token: 0x0402E5BF RID: 189887
+		// Token: 0x04029CBA RID: 171194
 		LayoutItem
 	}
 }

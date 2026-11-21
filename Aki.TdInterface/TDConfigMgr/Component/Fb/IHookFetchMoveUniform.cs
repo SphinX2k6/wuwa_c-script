@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B22 RID: 2850
+	// Token: 0x02000BF0 RID: 3056
 	public class IHookFetchMoveUniform : IHookFetchMoveModeBase
 	{
-		// Token: 0x060041CF RID: 16847 RVA: 0x000A8CC2 File Offset: 0x000A6EC2
-		[NullableContext(1)]
+		// Token: 0x06004628 RID: 17960 RVA: 0x000B2D86 File Offset: 0x000B0F86
 		public static IHookFetchMoveUniform Create(IHookFetchMoveUniform? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001148 RID: 4424
-		// (get) Token: 0x060041D0 RID: 16848 RVA: 0x000A8CE1 File Offset: 0x000A6EE1
+		// Token: 0x17001243 RID: 4675
+		// (get) Token: 0x06004629 RID: 17961 RVA: 0x000B2DA5 File Offset: 0x000B0FA5
 		public override EHookFetchMoveMode Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001149 RID: 4425
-		// (get) Token: 0x060041D1 RID: 16849 RVA: 0x000A8CEE File Offset: 0x000A6EEE
+		// Token: 0x17001244 RID: 4676
+		// (get) Token: 0x0600462A RID: 17962 RVA: 0x000B2DB2 File Offset: 0x000B0FB2
 		public virtual float Speed
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400251B RID: 9499
+		// Token: 0x04002763 RID: 10083
 		private IHookFetchMoveUniform Instance;
 	}
 }

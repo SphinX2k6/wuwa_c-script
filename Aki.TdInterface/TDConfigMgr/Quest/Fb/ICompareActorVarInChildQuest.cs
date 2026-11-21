@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001396 RID: 5014
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014E7 RID: 5351
 	public class ICompareActorVarInChildQuest
 	{
-		// Token: 0x060072A8 RID: 29352 RVA: 0x001139AD File Offset: 0x00111BAD
+		// Token: 0x0600794E RID: 31054 RVA: 0x00122031 File Offset: 0x00120231
 		public static ICompareActorVarInChildQuest Create(ICompareActorVarInChildQuest? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700254F RID: 9551
-		// (get) Token: 0x060072A9 RID: 29353 RVA: 0x001139CC File Offset: 0x00111BCC
+		// Token: 0x17002722 RID: 10018
+		// (get) Token: 0x0600794F RID: 31055 RVA: 0x00122050 File Offset: 0x00120250
 		public virtual IActorRef ActorRef
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002550 RID: 9552
-		// (get) Token: 0x060072AA RID: 29354 RVA: 0x00113A00 File Offset: 0x00111C00
+		// Token: 0x17002723 RID: 10019
+		// (get) Token: 0x06007950 RID: 31056 RVA: 0x00122084 File Offset: 0x00120284
 		public virtual string Var1
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002551 RID: 9553
-		// (get) Token: 0x060072AB RID: 29355 RVA: 0x00113A0D File Offset: 0x00111C0D
+		// Token: 0x17002724 RID: 10020
+		// (get) Token: 0x06007951 RID: 31057 RVA: 0x00122091 File Offset: 0x00120291
 		public virtual ECompare Compare
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002552 RID: 9554
-		// (get) Token: 0x060072AC RID: 29356 RVA: 0x00113A1A File Offset: 0x00111C1A
+		// Token: 0x17002725 RID: 10021
+		// (get) Token: 0x06007952 RID: 31058 RVA: 0x0012209E File Offset: 0x0012029E
 		public virtual VarRef Var2
 		{
 			get
@@ -77,20 +75,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400424A RID: 16970
+		// Token: 0x040045CB RID: 17867
 		private ICompareActorVarInChildQuest Instance;
 
-		// Token: 0x0400424B RID: 16971
+		// Token: 0x040045CC RID: 17868
 		[Nullable(2)]
 		private IActorRef _ActorRefCache;
 
-		// Token: 0x0400424C RID: 16972
+		// Token: 0x040045CD RID: 17869
 		private bool _ActorRefInited;
 
-		// Token: 0x0400424D RID: 16973
+		// Token: 0x040045CE RID: 17870
 		private VarRef _Var2Cache;
 
-		// Token: 0x0400424E RID: 16974
+		// Token: 0x040045CF RID: 17871
 		private bool _Var2Inited;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -11,30 +10,30 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EAF RID: 7855
+// Token: 0x02001371 RID: 4977
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryRoleEquipItem : UiPanelBase
 {
-	// Token: 0x0600F177 RID: 61815 RVA: 0x003A14C5 File Offset: 0x0039F6C5
+	// Token: 0x0600C596 RID: 50582 RVA: 0x003ACFCD File Offset: 0x003AB1CD
 	public HonamiStoryRoleEquipItem(HonamiStoryRoleEquipData roleEquipData)
 	{
 		this.RoleEquipData = roleEquipData;
 	}
 
-	// Token: 0x0600F178 RID: 61816 RVA: 0x003A14DF File Offset: 0x0039F6DF
+	// Token: 0x0600C597 RID: 50583 RVA: 0x003ACFE7 File Offset: 0x003AB1E7
 	public void RegisterPanel(HonamiStoryBackpackPanelBase panel)
 	{
 		this.Panel = panel;
 	}
 
-	// Token: 0x0600F179 RID: 61817 RVA: 0x003A14E8 File Offset: 0x0039F6E8
+	// Token: 0x0600C598 RID: 50584 RVA: 0x003ACFF0 File Offset: 0x003AB1F0
 	public HonamiStoryRoleEquipData GetRoleEquipData()
 	{
 		return this.RoleEquipData;
 	}
 
-	// Token: 0x0600F17A RID: 61818 RVA: 0x003A14F0 File Offset: 0x0039F6F0
+	// Token: 0x0600C599 RID: 50585 RVA: 0x003ACFF8 File Offset: 0x003AB1F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,7 +52,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F17B RID: 61819 RVA: 0x003A15C8 File Offset: 0x0039F7C8
+	// Token: 0x0600C59A RID: 50586 RVA: 0x003AD0D0 File Offset: 0x003AB2D0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryRoleEquipItem.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -64,13 +63,13 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F17C RID: 61820 RVA: 0x003A160B File Offset: 0x0039F80B
+	// Token: 0x0600C59B RID: 50587 RVA: 0x003AD113 File Offset: 0x003AB313
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.OnHonamiStoryBackpackClickWeapon, new Action(this.OnAfterClickedWeaponItem));
 	}
 
-	// Token: 0x0600F17D RID: 61821 RVA: 0x003A1629 File Offset: 0x0039F829
+	// Token: 0x0600C59C RID: 50588 RVA: 0x003AD131 File Offset: 0x003AB331
 	protected override void OnBeforeShow()
 	{
 		this.RefreshRoleItem();
@@ -78,13 +77,13 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		this.RefreshBtnMoreVisible();
 	}
 
-	// Token: 0x0600F17E RID: 61822 RVA: 0x003A163D File Offset: 0x0039F83D
+	// Token: 0x0600C59D RID: 50589 RVA: 0x003AD145 File Offset: 0x003AB345
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHonamiStoryBackpackClickWeapon, new Action(this.OnAfterClickedWeaponItem));
 	}
 
-	// Token: 0x0600F17F RID: 61823 RVA: 0x003A165C File Offset: 0x0039F85C
+	// Token: 0x0600C59E RID: 50590 RVA: 0x003AD164 File Offset: 0x003AB364
 	private void RefreshRoleItem()
 	{
 		int roleId = this.RoleEquipData.GetRoleId();
@@ -112,7 +111,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		base.SetRoleIconByRoleIdOrSkinId(path, base.GetTexture(2), roleId, new int?(roleConfig.Value.SkinId), null, null);
 	}
 
-	// Token: 0x0600F180 RID: 61824 RVA: 0x003A1720 File Offset: 0x0039F920
+	// Token: 0x0600C59F RID: 50591 RVA: 0x003AD228 File Offset: 0x003AB428
 	private UniTask InitRolePluginItemList()
 	{
 		HonamiStoryRoleEquipItem.<InitRolePluginItemList>d__20 <InitRolePluginItemList>d__;
@@ -123,7 +122,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return <InitRolePluginItemList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F181 RID: 61825 RVA: 0x003A1764 File Offset: 0x0039F964
+	// Token: 0x0600C5A0 RID: 50592 RVA: 0x003AD26C File Offset: 0x003AB46C
 	private UniTask InitRolePluginItem(int index)
 	{
 		HonamiStoryRoleEquipItem.<InitRolePluginItem>d__21 <InitRolePluginItem>d__;
@@ -135,7 +134,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return <InitRolePluginItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F182 RID: 61826 RVA: 0x003A17B0 File Offset: 0x0039F9B0
+	// Token: 0x0600C5A1 RID: 50593 RVA: 0x003AD2B8 File Offset: 0x003AB4B8
 	public UniTask RefreshUiAsync(HonamiStoryRoleEquipData equipData)
 	{
 		HonamiStoryRoleEquipItem.<RefreshUiAsync>d__22 <RefreshUiAsync>d__;
@@ -147,7 +146,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return <RefreshUiAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F183 RID: 61827 RVA: 0x003A17FC File Offset: 0x0039F9FC
+	// Token: 0x0600C5A2 RID: 50594 RVA: 0x003AD304 File Offset: 0x003AB504
 	private UniTask RefreshPluginItemList()
 	{
 		HonamiStoryRoleEquipItem.<RefreshPluginItemList>d__23 <RefreshPluginItemList>d__;
@@ -158,7 +157,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return <RefreshPluginItemList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F184 RID: 61828 RVA: 0x003A1840 File Offset: 0x0039FA40
+	// Token: 0x0600C5A3 RID: 50595 RVA: 0x003AD348 File Offset: 0x003AB548
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -174,7 +173,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return <CreateRolePluginItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F185 RID: 61829 RVA: 0x003A1884 File Offset: 0x0039FA84
+	// Token: 0x0600C5A4 RID: 50596 RVA: 0x003AD38C File Offset: 0x003AB58C
 	[return: Nullable(2)]
 	public HonamiStoryEquipGridItem GetEquipItemByEventData(ULGUIPointerEventData eventData)
 	{
@@ -188,13 +187,13 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600F186 RID: 61830 RVA: 0x003A18E8 File Offset: 0x0039FAE8
+	// Token: 0x0600C5A5 RID: 50597 RVA: 0x003AD3F0 File Offset: 0x003AB5F0
 	public List<HonamiStoryEquipGridItem> GetPluginItemList()
 	{
 		return this.RolePluginItemList;
 	}
 
-	// Token: 0x0600F187 RID: 61831 RVA: 0x003A18F0 File Offset: 0x0039FAF0
+	// Token: 0x0600C5A6 RID: 50598 RVA: 0x003AD3F8 File Offset: 0x003AB5F8
 	public void SetRoleTipOpenState(bool isOpen)
 	{
 		bool btnMoreShowVisible = this.GetBtnMoreShowVisible();
@@ -207,7 +206,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		button.RootUIComp.Get().SetUIActive(btnMoreShowVisible && !isOpen);
 	}
 
-	// Token: 0x0600F188 RID: 61832 RVA: 0x003A1934 File Offset: 0x0039FB34
+	// Token: 0x0600C5A7 RID: 50599 RVA: 0x003AD43C File Offset: 0x003AB63C
 	private void RefreshBtnMoreVisible()
 	{
 		bool btnMoreShowVisible = this.GetBtnMoreShowVisible();
@@ -219,7 +218,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		button.RootUIComp.Get().SetUIActive(btnMoreShowVisible && !this.IsRoleTipsOpen);
 	}
 
-	// Token: 0x0600F189 RID: 61833 RVA: 0x003A1978 File Offset: 0x0039FB78
+	// Token: 0x0600C5A8 RID: 50600 RVA: 0x003AD480 File Offset: 0x003AB680
 	private bool GetBtnMoreShowVisible()
 	{
 		if (!HonamiStoryModel.Instance.GetBackpackLogic().IsBackpackView() && HonamiStoryUtil.IsMobileView())
@@ -231,7 +230,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return !flag || !flag2;
 	}
 
-	// Token: 0x0600F18A RID: 61834 RVA: 0x003A19CC File Offset: 0x0039FBCC
+	// Token: 0x0600C5A9 RID: 50601 RVA: 0x003AD4D4 File Offset: 0x003AB6D4
 	[NullableContext(2)]
 	private void OnEnterGrid(HonamiStoryItemGridItem item)
 	{
@@ -243,7 +242,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		onEnterGridCb(item);
 	}
 
-	// Token: 0x0600F18B RID: 61835 RVA: 0x003A19DF File Offset: 0x0039FBDF
+	// Token: 0x0600C5AA RID: 50602 RVA: 0x003AD4E7 File Offset: 0x003AB6E7
 	private void OnExitGrid()
 	{
 		Action onExitGridCb = this.OnExitGridCb;
@@ -254,7 +253,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		onExitGridCb();
 	}
 
-	// Token: 0x0600F18C RID: 61836 RVA: 0x003A19F1 File Offset: 0x0039FBF1
+	// Token: 0x0600C5AB RID: 50603 RVA: 0x003AD4F9 File Offset: 0x003AB6F9
 	private void OnDownGrid()
 	{
 		Action onDownGridCb = this.OnDownGridCb;
@@ -265,7 +264,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		onDownGridCb();
 	}
 
-	// Token: 0x0600F18D RID: 61837 RVA: 0x003A1A03 File Offset: 0x0039FC03
+	// Token: 0x0600C5AC RID: 50604 RVA: 0x003AD50B File Offset: 0x003AB70B
 	private void OnClickedGrid([Nullable(2)] HonamiStoryItemGridItem item, Vector2D loc, Vector2D size)
 	{
 		Action<HonamiStoryItemGridItem, Vector2D, Vector2D> onClickedGridCb = this.OnClickedGridCb;
@@ -276,7 +275,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		onClickedGridCb(item, loc, size);
 	}
 
-	// Token: 0x0600F18E RID: 61838 RVA: 0x003A1A18 File Offset: 0x0039FC18
+	// Token: 0x0600C5AD RID: 50605 RVA: 0x003AD520 File Offset: 0x003AB720
 	public void SetEnableState(EHonamiStoryBackpackLogicState state)
 	{
 		bool flag = state == EHonamiStoryBackpackLogicState.Normal;
@@ -320,7 +319,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F18F RID: 61839 RVA: 0x003A1B58 File Offset: 0x0039FD58
+	// Token: 0x0600C5AE RID: 50606 RVA: 0x003AD660 File Offset: 0x003AB860
 	public void RefreshState(EHonamiStoryBackpackLogicState state)
 	{
 		foreach (HonamiStoryEquipGridItem honamiStoryEquipGridItem in this.RolePluginItemList)
@@ -329,7 +328,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F190 RID: 61840 RVA: 0x003A1BB0 File Offset: 0x0039FDB0
+	// Token: 0x0600C5AF RID: 50607 RVA: 0x003AD6B8 File Offset: 0x003AB8B8
 	private void OnClickedMore()
 	{
 		EHonamiStoryBackpackLogicState backpackLogicState = HonamiStoryModel.Instance.GetBackpackLogicState();
@@ -352,7 +351,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F191 RID: 61841 RVA: 0x003A1BFC File Offset: 0x0039FDFC
+	// Token: 0x0600C5B0 RID: 50608 RVA: 0x003AD704 File Offset: 0x003AB904
 	private void OnRoleItemClicked()
 	{
 		bool flag = this.CheckChangeRoleFunctionOpen();
@@ -370,7 +369,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		this.HandleNormalRoleSelected();
 	}
 
-	// Token: 0x0600F192 RID: 61842 RVA: 0x003A1C44 File Offset: 0x0039FE44
+	// Token: 0x0600C5B1 RID: 50609 RVA: 0x003AD74C File Offset: 0x003AB94C
 	private void ConfirmCallback(int targetRoleId)
 	{
 		HonamiStoryModel.Instance.AddLevel = new int[]
@@ -399,10 +398,10 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 			}
 			allRoleIdList[num3] = targetRoleId;
 		}
-		HonamiStoryController.Instance.RequestHonamiStoryEquipRole(allRoleIdList.ToList<int>());
+		HonamiStoryController.Instance.RequestHonamiStoryEquipRole(allRoleIdList);
 	}
 
-	// Token: 0x0600F193 RID: 61843 RVA: 0x003A1CD0 File Offset: 0x0039FED0
+	// Token: 0x0600C5B2 RID: 50610 RVA: 0x003AD7D0 File Offset: 0x003AB9D0
 	[NullableContext(2)]
 	private string GetConfirmButtonTextFunction(int roleConfigId)
 	{
@@ -422,14 +421,14 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return "ChangeText";
 	}
 
-	// Token: 0x0600F194 RID: 61844 RVA: 0x003A1D06 File Offset: 0x0039FF06
+	// Token: 0x0600C5B3 RID: 50611 RVA: 0x003AD806 File Offset: 0x003ABA06
 	private bool IsNeedRevive(int roleConfigId)
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleConfigId, true);
 		return (roleDataById == null || !roleDataById.IsTrialRole()) && FormationModel.Instance.IsRoleDead(roleConfigId);
 	}
 
-	// Token: 0x0600F195 RID: 61845 RVA: 0x003A1D34 File Offset: 0x0039FF34
+	// Token: 0x0600C5B4 RID: 50612 RVA: 0x003AD834 File Offset: 0x003ABA34
 	private bool CanJoinTeam(int roleId)
 	{
 		int num = this.CheckChangeRoleFunctionOpen() ? 1 : 0;
@@ -477,7 +476,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x0600F196 RID: 61846 RVA: 0x003A1E70 File Offset: 0x003A0070
+	// Token: 0x0600C5B5 RID: 50613 RVA: 0x003AD970 File Offset: 0x003ABB70
 	private void OnBackCallback()
 	{
 		int[] allRoleIdList = HonamiStoryModel.Instance.GetAllRoleIdList();
@@ -502,13 +501,13 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F197 RID: 61847 RVA: 0x003A1EFC File Offset: 0x003A00FC
+	// Token: 0x0600C5B6 RID: 50614 RVA: 0x003AD9FC File Offset: 0x003ABBFC
 	private bool CheckChangeRoleFunctionOpen()
 	{
 		return FunctionModel.Instance.IsOpen(10111);
 	}
 
-	// Token: 0x0600F198 RID: 61848 RVA: 0x003A1F10 File Offset: 0x003A0110
+	// Token: 0x0600C5B7 RID: 50615 RVA: 0x003ADA10 File Offset: 0x003ABC10
 	private void HandleSpecialRoleSelected()
 	{
 		bool isInDungeon = HonamiStoryUtil.CheckInHonamiStoryDungeon();
@@ -543,7 +542,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		AudioSystem.Instance.PostEvent("play_ui_honamistory_roleselect_page_start");
 	}
 
-	// Token: 0x0600F199 RID: 61849 RVA: 0x003A2044 File Offset: 0x003A0244
+	// Token: 0x0600C5B8 RID: 50616 RVA: 0x003ADB44 File Offset: 0x003ABD44
 	private unsafe void HandleNormalRoleSelected()
 	{
 		int roleId = this.RoleEquipData.GetRoleId();
@@ -625,7 +624,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		AudioSystem.Instance.PostEvent("play_ui_honamistory_roleselect_page_start");
 	}
 
-	// Token: 0x0600F19A RID: 61850 RVA: 0x003A2344 File Offset: 0x003A0544
+	// Token: 0x0600C5B9 RID: 50617 RVA: 0x003ADE44 File Offset: 0x003AC044
 	private void OnClickedWeaponItem(HonamiStoryWeaponToggleItem selectedWeaponItem)
 	{
 		int weaponId = this.RoleEquipData.GetWeaponId();
@@ -644,7 +643,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		weaponItem.ResetToggleState();
 	}
 
-	// Token: 0x0600F19B RID: 61851 RVA: 0x003A23A7 File Offset: 0x003A05A7
+	// Token: 0x0600C5BA RID: 50618 RVA: 0x003ADEA7 File Offset: 0x003AC0A7
 	private void OnAfterClickedWeaponItem()
 	{
 		HonamiStoryWeaponToggleItem weaponItem = this.WeaponItem;
@@ -655,7 +654,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		weaponItem.SetNewItemShow(false);
 	}
 
-	// Token: 0x0600F19C RID: 61852 RVA: 0x003A23BC File Offset: 0x003A05BC
+	// Token: 0x0600C5BB RID: 50619 RVA: 0x003ADEBC File Offset: 0x003AC0BC
 	private void RefreshWeaponItem()
 	{
 		int weaponId = this.RoleEquipData.GetWeaponId();
@@ -673,7 +672,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		weaponItem.Refresh(data, false, 0);
 	}
 
-	// Token: 0x0600F19D RID: 61853 RVA: 0x003A2408 File Offset: 0x003A0608
+	// Token: 0x0600C5BC RID: 50620 RVA: 0x003ADF08 File Offset: 0x003AC108
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -699,7 +698,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600F19E RID: 61854 RVA: 0x003A24A8 File Offset: 0x003A06A8
+	// Token: 0x0600C5BD RID: 50621 RVA: 0x003ADFA8 File Offset: 0x003AC1A8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -725,19 +724,19 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x04006FAF RID: 28591
+	// Token: 0x04007090 RID: 28816
 	[Nullable(2)]
 	public Action<HonamiStoryItemGridItem> OnEnterGridCb;
 
-	// Token: 0x04006FB0 RID: 28592
+	// Token: 0x04007091 RID: 28817
 	[Nullable(2)]
 	public Action OnExitGridCb;
 
-	// Token: 0x04006FB1 RID: 28593
+	// Token: 0x04007092 RID: 28818
 	[Nullable(2)]
 	public Action OnDownGridCb;
 
-	// Token: 0x04006FB2 RID: 28594
+	// Token: 0x04007093 RID: 28819
 	[Nullable(new byte[]
 	{
 		2,
@@ -747,7 +746,7 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 	})]
 	public Action<HonamiStoryItemGridItem, Vector2D, Vector2D> OnClickedGridCb;
 
-	// Token: 0x04006FB3 RID: 28595
+	// Token: 0x04007094 RID: 28820
 	[Nullable(new byte[]
 	{
 		2,
@@ -755,37 +754,37 @@ public class HonamiStoryRoleEquipItem : UiPanelBase
 	})]
 	public Action<HonamiStoryRoleEquipItem> OnMoreClickedCb;
 
-	// Token: 0x04006FB4 RID: 28596
+	// Token: 0x04007095 RID: 28821
 	private HonamiStoryBackpackPanelBase Panel;
 
-	// Token: 0x04006FB5 RID: 28597
+	// Token: 0x04007096 RID: 28822
 	private readonly List<HonamiStoryEquipGridItem> RolePluginItemList = new List<HonamiStoryEquipGridItem>();
 
-	// Token: 0x04006FB6 RID: 28598
+	// Token: 0x04007097 RID: 28823
 	[Nullable(2)]
 	private HonamiStoryWeaponToggleItem WeaponItem;
 
-	// Token: 0x04006FB7 RID: 28599
+	// Token: 0x04007098 RID: 28824
 	private bool IsRoleTipsOpen;
 
-	// Token: 0x04006FB8 RID: 28600
+	// Token: 0x04007099 RID: 28825
 	private HonamiStoryRoleEquipData RoleEquipData;
 
-	// Token: 0x02008484 RID: 33924
+	// Token: 0x02007609 RID: 30217
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B228 RID: 176680
+		// Token: 0x0402654C RID: 157004
 		BtnHead,
-		// Token: 0x0402B229 RID: 176681
+		// Token: 0x0402654D RID: 157005
 		SpriteRoleEmpty,
-		// Token: 0x0402B22A RID: 176682
+		// Token: 0x0402654E RID: 157006
 		TexRole,
-		// Token: 0x0402B22B RID: 176683
+		// Token: 0x0402654F RID: 157007
 		WeaponItem,
-		// Token: 0x0402B22C RID: 176684
+		// Token: 0x04026550 RID: 157008
 		PluginRoot,
-		// Token: 0x0402B22D RID: 176685
+		// Token: 0x04026551 RID: 157009
 		BtnMore
 	}
 }

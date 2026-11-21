@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D8E RID: 7566
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FA1 RID: 8097
 	public class IReigns : IUiGame
 	{
-		// Token: 0x0600A22F RID: 41519 RVA: 0x00171070 File Offset: 0x0016F270
+		// Token: 0x0600AC27 RID: 44071 RVA: 0x001855DC File Offset: 0x001837DC
 		private IReigns_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A230 RID: 41520 RVA: 0x001710A8 File Offset: 0x0016F2A8
+		// Token: 0x0600AC28 RID: 44072 RVA: 0x00185614 File Offset: 0x00183814
 		public static IReigns Create([Nullable(2)] IReigns instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A231 RID: 41521 RVA: 0x001710BB File Offset: 0x0016F2BB
+		// Token: 0x0600AC29 RID: 44073 RVA: 0x00185627 File Offset: 0x00183827
 		public static IReigns CreateFromSetValue([Nullable(2)] IReigns_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A232 RID: 41522 RVA: 0x001710CE File Offset: 0x0016F2CE
+		// Token: 0x0600AC2A RID: 44074 RVA: 0x0018563A File Offset: 0x0018383A
 		public new IReigns_SetValue ToSetValue()
 		{
 			return new IReigns_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003219 RID: 12825
-		// (get) Token: 0x0600A233 RID: 41523 RVA: 0x001710ED File Offset: 0x0016F2ED
-		// (set) Token: 0x0600A234 RID: 41524 RVA: 0x00171118 File Offset: 0x0016F318
+		// Token: 0x170034B0 RID: 13488
+		// (get) Token: 0x0600AC2B RID: 44075 RVA: 0x00185659 File Offset: 0x00183859
+		// (set) Token: 0x0600AC2C RID: 44076 RVA: 0x00185684 File Offset: 0x00183884
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700321A RID: 12826
-		// (get) Token: 0x0600A235 RID: 41525 RVA: 0x00171126 File Offset: 0x0016F326
-		// (set) Token: 0x0600A236 RID: 41526 RVA: 0x00171151 File Offset: 0x0016F351
+		// Token: 0x170034B1 RID: 13489
+		// (get) Token: 0x0600AC2D RID: 44077 RVA: 0x00185692 File Offset: 0x00183892
+		// (set) Token: 0x0600AC2E RID: 44078 RVA: 0x001856BD File Offset: 0x001838BD
 		public virtual int ReignsId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006174 RID: 24948
+		// Token: 0x040066F5 RID: 26357
 		[Nullable(2)]
 		protected new IReigns FbInstance;
 
-		// Token: 0x04006175 RID: 24949
+		// Token: 0x040066F6 RID: 26358
 		[Nullable(2)]
 		protected new IReigns_SetValue PocoInterface;
 	}

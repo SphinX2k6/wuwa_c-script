@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200260D RID: 9741
+// Token: 0x02001AF8 RID: 6904
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext>
 {
-	// Token: 0x06013DDA RID: 81370 RVA: 0x004FCBE8 File Offset: 0x004FADE8
+	// Token: 0x060112BC RID: 70332 RVA: 0x0050BA24 File Offset: 0x00509C24
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -34,7 +34,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		}
 	}
 
-	// Token: 0x06013DDB RID: 81371 RVA: 0x004FCC70 File Offset: 0x004FAE70
+	// Token: 0x060112BD RID: 70333 RVA: 0x0050BAAC File Offset: 0x00509CAC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteCompassRotateItem.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013DDC RID: 81372 RVA: 0x004FCCB4 File Offset: 0x004FAEB4
+	// Token: 0x060112BE RID: 70334 RVA: 0x0050BAF0 File Offset: 0x00509CF0
 	private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 	{
 		if (!Info.Instance.IsInGamepad())
@@ -63,7 +63,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		this.SetIsDragging(false);
 	}
 
-	// Token: 0x06013DDD RID: 81373 RVA: 0x004FCD14 File Offset: 0x004FAF14
+	// Token: 0x060112BF RID: 70335 RVA: 0x0050BB50 File Offset: 0x00509D50
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -86,14 +86,14 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		this.AnchorLocation = new FVector?(base.GetItem(2).GetUIWorldPosition());
 	}
 
-	// Token: 0x06013DDE RID: 81374 RVA: 0x004FCE3B File Offset: 0x004FB03B
+	// Token: 0x060112C0 RID: 70336 RVA: 0x0050BC77 File Offset: 0x00509E77
 	[NullableContext(1)]
 	protected override bool IsContextMatched(CommonQteContextBase context)
 	{
 		return context is CommonQteDragContext;
 	}
 
-	// Token: 0x06013DDF RID: 81375 RVA: 0x004FCE46 File Offset: 0x004FB046
+	// Token: 0x060112C1 RID: 70337 RVA: 0x0050BC82 File Offset: 0x00509E82
 	[NullableContext(1)]
 	protected override void OnRefreshActionUi(string action)
 	{
@@ -113,7 +113,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		keyItem2.Show(null);
 	}
 
-	// Token: 0x06013DE0 RID: 81376 RVA: 0x004FCE78 File Offset: 0x004FB078
+	// Token: 0x060112C2 RID: 70338 RVA: 0x0050BCB4 File Offset: 0x00509EB4
 	protected override void TryApplyQteUiConfig(object uiConfig)
 	{
 		SCommonQte_Drag scommonQte_Drag = uiConfig as SCommonQte_Drag;
@@ -123,7 +123,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		}
 	}
 
-	// Token: 0x06013DE1 RID: 81377 RVA: 0x004FCEAC File Offset: 0x004FB0AC
+	// Token: 0x060112C3 RID: 70339 RVA: 0x0050BCE8 File Offset: 0x00509EE8
 	[NullableContext(1)]
 	private void OnSequenceEndEvent(string sequenceName)
 	{
@@ -157,7 +157,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		}
 	}
 
-	// Token: 0x06013DE2 RID: 81378 RVA: 0x004FCF2C File Offset: 0x004FB12C
+	// Token: 0x060112C4 RID: 70340 RVA: 0x0050BD68 File Offset: 0x00509F68
 	protected override void OnPlayQteStart()
 	{
 		base.SetUiActive(true);
@@ -177,7 +177,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		}
 	}
 
-	// Token: 0x06013DE3 RID: 81379 RVA: 0x004FCF84 File Offset: 0x004FB184
+	// Token: 0x060112C5 RID: 70341 RVA: 0x0050BDC0 File Offset: 0x00509FC0
 	protected override void RefreshUiOffset()
 	{
 		if (this.CommonQteContext != null)
@@ -196,13 +196,13 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		}
 	}
 
-	// Token: 0x06013DE4 RID: 81380 RVA: 0x004FCFF6 File Offset: 0x004FB1F6
+	// Token: 0x060112C6 RID: 70342 RVA: 0x0050BE32 File Offset: 0x0050A032
 	protected override bool IsUseBaseAction()
 	{
 		return false;
 	}
 
-	// Token: 0x06013DE5 RID: 81381 RVA: 0x004FCFFC File Offset: 0x004FB1FC
+	// Token: 0x060112C7 RID: 70343 RVA: 0x0050BE38 File Offset: 0x0050A038
 	protected override void OnBindAction()
 	{
 		InputDistributeController.Instance.BindAxisIgnoreLimit("UiScroll2", new TInputHandle<float>(this.OnInputTurn));
@@ -210,7 +210,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 	}
 
-	// Token: 0x06013DE6 RID: 81382 RVA: 0x004FD05C File Offset: 0x004FB25C
+	// Token: 0x060112C8 RID: 70344 RVA: 0x0050BE98 File Offset: 0x0050A098
 	protected override void OnUnbindAction()
 	{
 		InputDistributeController.Instance.UnBindAxisIgnoreLimit("UiScroll2", new TInputHandle<float>(this.OnInputTurn));
@@ -218,7 +218,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		EventSystem.Instance.Remove<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 	}
 
-	// Token: 0x06013DE7 RID: 81383 RVA: 0x004FD0BC File Offset: 0x004FB2BC
+	// Token: 0x060112C9 RID: 70345 RVA: 0x0050BEF8 File Offset: 0x0050A0F8
 	protected override void OnHandleQteEnd()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -234,7 +234,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		levelSequencePlayer2.PlayLevelSequenceByName("Close", false, null, false);
 	}
 
-	// Token: 0x06013DE8 RID: 81384 RVA: 0x004FD0FC File Offset: 0x004FB2FC
+	// Token: 0x060112CA RID: 70346 RVA: 0x0050BF38 File Offset: 0x0050A138
 	[NullableContext(1)]
 	private void OnInputTurn(string name, float value, InputIdentification inputIdentification)
 	{
@@ -247,7 +247,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		this.SetIsDragging(this.HasInputTurn || this.HasInputLookup);
 	}
 
-	// Token: 0x06013DE9 RID: 81385 RVA: 0x004FD154 File Offset: 0x004FB354
+	// Token: 0x060112CB RID: 70347 RVA: 0x0050BF90 File Offset: 0x0050A190
 	[NullableContext(1)]
 	private void OnInputLookup(string name, float value, InputIdentification inputIdentification)
 	{
@@ -260,19 +260,19 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		this.SetIsDragging(this.HasInputTurn || this.HasInputLookup);
 	}
 
-	// Token: 0x06013DEA RID: 81386 RVA: 0x004FD1AC File Offset: 0x004FB3AC
+	// Token: 0x060112CC RID: 70348 RVA: 0x0050BFE8 File Offset: 0x0050A1E8
 	private void OnPointerDownCallBack(ULGUIPointerEventData eventData)
 	{
 		this.RelativeAngle = this.CacheAngle;
 	}
 
-	// Token: 0x06013DEB RID: 81387 RVA: 0x004FD1BA File Offset: 0x004FB3BA
+	// Token: 0x060112CD RID: 70349 RVA: 0x0050BFF6 File Offset: 0x0050A1F6
 	private void OnPointerUpCallBack(ULGUIPointerEventData eventData)
 	{
 		this.RelativeAngle = 90;
 	}
 
-	// Token: 0x06013DEC RID: 81388 RVA: 0x004FD1CC File Offset: 0x004FB3CC
+	// Token: 0x060112CE RID: 70350 RVA: 0x0050C008 File Offset: 0x0050A208
 	private void OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 	{
 		if (!base.IsValidInput() || !this.HasBindAction || eventData == null)
@@ -286,7 +286,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		this.StartAngle = Rotator.ClampAxis((float)(Math.Atan2(vector2D.Y - (double)this.AnchorLocation.Value.Y, vector2D.X - (double)this.AnchorLocation.Value.X) * 57.295780181884766));
 	}
 
-	// Token: 0x06013DED RID: 81389 RVA: 0x004FD260 File Offset: 0x004FB460
+	// Token: 0x060112CF RID: 70351 RVA: 0x0050C09C File Offset: 0x0050A29C
 	private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 	{
 		if (!base.IsValidInput() || !this.HasBindAction || !this.IsDragging || eventData == null)
@@ -307,7 +307,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		this.DragOffset = num - this.StartAngle;
 	}
 
-	// Token: 0x06013DEE RID: 81390 RVA: 0x004FD32E File Offset: 0x004FB52E
+	// Token: 0x060112D0 RID: 70352 RVA: 0x0050C16A File Offset: 0x0050A36A
 	private void OnPointerEndDragCallBack(ULGUIPointerEventData eventData)
 	{
 		if (!base.IsValidInput() || !this.HasBindAction)
@@ -320,7 +320,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		this.RelativeAngle = 90;
 	}
 
-	// Token: 0x06013DEF RID: 81391 RVA: 0x004FD36D File Offset: 0x004FB56D
+	// Token: 0x060112D1 RID: 70353 RVA: 0x0050C1A9 File Offset: 0x0050A3A9
 	private void SetIsDragging(bool isDragging)
 	{
 		if (isDragging == this.IsDragging)
@@ -350,7 +350,7 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		}
 	}
 
-	// Token: 0x06013DF0 RID: 81392 RVA: 0x004FD3A4 File Offset: 0x004FB5A4
+	// Token: 0x060112D2 RID: 70354 RVA: 0x0050C1E0 File Offset: 0x0050A3E0
 	protected override void OnTickQteItem(float delta)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -375,63 +375,63 @@ public class CommonQteCompassRotateItem : CommonQteItemBase<CommonQteDragContext
 		this.Pointer.SetUIRelativeRotation(this.PointerRotator);
 	}
 
-	// Token: 0x040095B1 RID: 38321
+	// Token: 0x04009708 RID: 38664
 	private InputMultiKeyItem KeyItem;
 
-	// Token: 0x040095B2 RID: 38322
+	// Token: 0x04009709 RID: 38665
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040095B3 RID: 38323
+	// Token: 0x0400970A RID: 38666
 	private bool HasInputTurn;
 
-	// Token: 0x040095B4 RID: 38324
+	// Token: 0x0400970B RID: 38667
 	private bool HasInputLookup;
 
-	// Token: 0x040095B5 RID: 38325
+	// Token: 0x0400970C RID: 38668
 	private bool IsDragging;
 
-	// Token: 0x040095B6 RID: 38326
+	// Token: 0x0400970D RID: 38669
 	private UUIItem Pointer;
 
-	// Token: 0x040095B7 RID: 38327
+	// Token: 0x0400970E RID: 38670
 	private FRotator PointerRotator = new FRotator();
 
-	// Token: 0x040095B8 RID: 38328
+	// Token: 0x0400970F RID: 38671
 	private FVector? AnchorLocation;
 
-	// Token: 0x040095B9 RID: 38329
+	// Token: 0x04009710 RID: 38672
 	private Number StartAngle = 0;
 
-	// Token: 0x040095BA RID: 38330
+	// Token: 0x04009711 RID: 38673
 	private Number DragOffset = 0;
 
-	// Token: 0x040095BB RID: 38331
+	// Token: 0x04009712 RID: 38674
 	private Number CurrentAngle = 0;
 
-	// Token: 0x040095BC RID: 38332
+	// Token: 0x04009713 RID: 38675
 	private Number CacheAngle = 90;
 
-	// Token: 0x040095BD RID: 38333
+	// Token: 0x04009714 RID: 38676
 	[Nullable(1)]
 	private readonly Vector2D GamepadOffset = Vector2D.Create();
 
-	// Token: 0x040095BE RID: 38334
+	// Token: 0x04009715 RID: 38677
 	private Number RotateSpeed = 0;
 
-	// Token: 0x040095BF RID: 38335
+	// Token: 0x04009716 RID: 38678
 	private Number RelativeAngle = 90;
 
-	// Token: 0x02008C4A RID: 35914
+	// Token: 0x02007DD3 RID: 32211
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D8AB RID: 186539
+		// Token: 0x04028BC2 RID: 166850
 		Prefab,
-		// Token: 0x0402D8AC RID: 186540
+		// Token: 0x04028BC3 RID: 166851
 		Drag,
-		// Token: 0x0402D8AD RID: 186541
+		// Token: 0x04028BC4 RID: 166852
 		Pointer,
-		// Token: 0x0402D8AE RID: 186542
+		// Token: 0x04028BC5 RID: 166853
 		HotKey
 	}
 }

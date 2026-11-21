@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002122 RID: 8482
+	// Token: 0x02002383 RID: 9091
 	public class PlayWalkingOverlayMontage_SetValue
 	{
-		// Token: 0x04006FCE RID: 28622
+		// Token: 0x04007603 RID: 30211
 		public int EntityId;
 
-		// Token: 0x04006FCF RID: 28623
+		// Token: 0x04007604 RID: 30212
 		public int OverlapMontageId;
 
-		// Token: 0x04006FD0 RID: 28624
+		// Token: 0x04007605 RID: 30213
 		public float? LoopDuration;
 
-		// Token: 0x04006FD1 RID: 28625
+		// Token: 0x04007606 RID: 30214
 		public int? RepeatTimes;
 	}
 }

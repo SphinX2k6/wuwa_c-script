@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EEF RID: 20207
+	// Token: 0x02005421 RID: 21537
 	public struct IBaseShapeElementalRange : IFlatbufferObject
 	{
-		// Token: 0x1700914F RID: 37199
-		// (get) Token: 0x0601FE5D RID: 130653 RVA: 0x00470631 File Offset: 0x0046E831
+		// Token: 0x170098D1 RID: 39121
+		// (get) Token: 0x06021BCD RID: 138189 RVA: 0x004A69C5 File Offset: 0x004A4BC5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FE5E RID: 130654 RVA: 0x0047063E File Offset: 0x0046E83E
+		// Token: 0x06021BCE RID: 138190 RVA: 0x004A69D2 File Offset: 0x004A4BD2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FE5F RID: 130655 RVA: 0x00470648 File Offset: 0x0046E848
+		// Token: 0x06021BCF RID: 138191 RVA: 0x004A69DC File Offset: 0x004A4BDC
 		public static IBaseShapeElementalRange GetRootAsIBaseShapeElementalRange(ByteBuffer _bb)
 		{
 			return IBaseShapeElementalRange.GetRootAsIBaseShapeElementalRange(_bb, default(IBaseShapeElementalRange));
 		}
 
-		// Token: 0x0601FE60 RID: 130656 RVA: 0x00470664 File Offset: 0x0046E864
+		// Token: 0x06021BD0 RID: 138192 RVA: 0x004A69F8 File Offset: 0x004A4BF8
 		public static IBaseShapeElementalRange GetRootAsIBaseShapeElementalRange(ByteBuffer _bb, IBaseShapeElementalRange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FE61 RID: 130657 RVA: 0x00470681 File Offset: 0x0046E881
+		// Token: 0x06021BD1 RID: 138193 RVA: 0x004A6A15 File Offset: 0x004A4C15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FE62 RID: 130658 RVA: 0x00470690 File Offset: 0x0046E890
+		// Token: 0x06021BD2 RID: 138194 RVA: 0x004A6A24 File Offset: 0x004A4C24
 		public IBaseShapeElementalRange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009150 RID: 37200
-		// (get) Token: 0x0601FE63 RID: 130659 RVA: 0x004706A0 File Offset: 0x0046E8A0
+		// Token: 0x170098D2 RID: 39122
+		// (get) Token: 0x06021BD3 RID: 138195 RVA: 0x004A6A34 File Offset: 0x004A4C34
 		public EElementalRangeType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009151 RID: 37201
-		// (get) Token: 0x0601FE64 RID: 130660 RVA: 0x004706DC File Offset: 0x0046E8DC
+		// Token: 0x170098D3 RID: 39123
+		// (get) Token: 0x06021BD4 RID: 138196 RVA: 0x004A6A70 File Offset: 0x004A4C70
 		public TTriggerShape ShapeType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FE65 RID: 130661 RVA: 0x00470718 File Offset: 0x0046E918
+		// Token: 0x06021BD5 RID: 138197 RVA: 0x004A6AAC File Offset: 0x004A4CAC
 		public TTable? Shape<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,73 +89,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601FE66 RID: 130662 RVA: 0x0047075C File Offset: 0x0046E95C
+		// Token: 0x06021BD6 RID: 138198 RVA: 0x004A6AF0 File Offset: 0x004A4CF0
 		public IActorCollisionTriggerShape ShapeAsIActorCollisionTriggerShape()
 		{
 			return this.Shape<IActorCollisionTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE67 RID: 130663 RVA: 0x00470778 File Offset: 0x0046E978
+		// Token: 0x06021BD7 RID: 138199 RVA: 0x004A6B0C File Offset: 0x004A4D0C
 		public IActorRefVolume ShapeAsIActorRefVolume()
 		{
 			return this.Shape<IActorRefVolume>().Value;
 		}
 
-		// Token: 0x0601FE68 RID: 130664 RVA: 0x00470794 File Offset: 0x0046E994
+		// Token: 0x06021BD8 RID: 138200 RVA: 0x004A6B28 File Offset: 0x004A4D28
 		public IBoxTriggerShape ShapeAsIBoxTriggerShape()
 		{
 			return this.Shape<IBoxTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE69 RID: 130665 RVA: 0x004707B0 File Offset: 0x0046E9B0
+		// Token: 0x06021BD9 RID: 138201 RVA: 0x004A6B44 File Offset: 0x004A4D44
 		public ICombinationTriggerShape ShapeAsICombinationTriggerShape()
 		{
 			return this.Shape<ICombinationTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE6A RID: 130666 RVA: 0x004707CC File Offset: 0x0046E9CC
+		// Token: 0x06021BDA RID: 138202 RVA: 0x004A6B60 File Offset: 0x004A4D60
 		public IConeTriggerShape ShapeAsIConeTriggerShape()
 		{
 			return this.Shape<IConeTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE6B RID: 130667 RVA: 0x004707E8 File Offset: 0x0046E9E8
+		// Token: 0x06021BDB RID: 138203 RVA: 0x004A6B7C File Offset: 0x004A4D7C
 		public ICylinderTriggerShape ShapeAsICylinderTriggerShape()
 		{
 			return this.Shape<ICylinderTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE6C RID: 130668 RVA: 0x00470804 File Offset: 0x0046EA04
+		// Token: 0x06021BDC RID: 138204 RVA: 0x004A6B98 File Offset: 0x004A4D98
 		public IHollowCylinderTriggerShape ShapeAsIHollowCylinderTriggerShape()
 		{
 			return this.Shape<IHollowCylinderTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE6D RID: 130669 RVA: 0x00470820 File Offset: 0x0046EA20
+		// Token: 0x06021BDD RID: 138205 RVA: 0x004A6BB4 File Offset: 0x004A4DB4
 		public IHollowSphereTriggerShape ShapeAsIHollowSphereTriggerShape()
 		{
 			return this.Shape<IHollowSphereTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE6E RID: 130670 RVA: 0x0047083C File Offset: 0x0046EA3C
+		// Token: 0x06021BDE RID: 138206 RVA: 0x004A6BD0 File Offset: 0x004A4DD0
 		public ISphereTriggerShape ShapeAsISphereTriggerShape()
 		{
 			return this.Shape<ISphereTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE6F RID: 130671 RVA: 0x00470858 File Offset: 0x0046EA58
+		// Token: 0x06021BDF RID: 138207 RVA: 0x004A6BEC File Offset: 0x004A4DEC
 		public ISpotlightTriggerShape ShapeAsISpotlightTriggerShape()
 		{
 			return this.Shape<ISpotlightTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE70 RID: 130672 RVA: 0x00470874 File Offset: 0x0046EA74
+		// Token: 0x06021BE0 RID: 138208 RVA: 0x004A6C08 File Offset: 0x004A4E08
 		public IVolumeTriggerShape ShapeAsIVolumeTriggerShape()
 		{
 			return this.Shape<IVolumeTriggerShape>().Value;
 		}
 
-		// Token: 0x0601FE71 RID: 130673 RVA: 0x0047088F File Offset: 0x0046EA8F
+		// Token: 0x06021BE1 RID: 138209 RVA: 0x004A6C23 File Offset: 0x004A4E23
 		public static Offset<IBaseShapeElementalRange> CreateIBaseShapeElementalRange(FlatBufferBuilder builder, EElementalRangeType Type = EElementalRangeType.BaseShape, TTriggerShape Shape_type = TTriggerShape.NONE, int ShapeOffset = 0)
 		{
 			builder.StartTable(3);
@@ -165,37 +165,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBaseShapeElementalRange.EndIBaseShapeElementalRange(builder);
 		}
 
-		// Token: 0x0601FE72 RID: 130674 RVA: 0x004708B3 File Offset: 0x0046EAB3
+		// Token: 0x06021BE2 RID: 138210 RVA: 0x004A6C47 File Offset: 0x004A4E47
 		public static void StartIBaseShapeElementalRange(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601FE73 RID: 130675 RVA: 0x004708BC File Offset: 0x0046EABC
+		// Token: 0x06021BE3 RID: 138211 RVA: 0x004A6C50 File Offset: 0x004A4E50
 		public static void AddType(FlatBufferBuilder builder, EElementalRangeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601FE74 RID: 130676 RVA: 0x004708C7 File Offset: 0x0046EAC7
+		// Token: 0x06021BE4 RID: 138212 RVA: 0x004A6C5B File Offset: 0x004A4E5B
 		public static void AddShapeType(FlatBufferBuilder builder, TTriggerShape shapeType)
 		{
 			builder.AddByte(1, (byte)shapeType, 0);
 		}
 
-		// Token: 0x0601FE75 RID: 130677 RVA: 0x004708D2 File Offset: 0x0046EAD2
+		// Token: 0x06021BE5 RID: 138213 RVA: 0x004A6C66 File Offset: 0x004A4E66
 		public static void AddShape(FlatBufferBuilder builder, int shapeOffset)
 		{
 			builder.AddOffset(2, shapeOffset, 0);
 		}
 
-		// Token: 0x0601FE76 RID: 130678 RVA: 0x004708DD File Offset: 0x0046EADD
+		// Token: 0x06021BE6 RID: 138214 RVA: 0x004A6C71 File Offset: 0x004A4E71
 		public static Offset<IBaseShapeElementalRange> EndIBaseShapeElementalRange(FlatBufferBuilder builder)
 		{
 			return new Offset<IBaseShapeElementalRange>(builder.EndTable());
 		}
 
-		// Token: 0x0601FE77 RID: 130679 RVA: 0x004708EC File Offset: 0x0046EAEC
+		// Token: 0x06021BE7 RID: 138215 RVA: 0x004A6C80 File Offset: 0x004A4E80
 		public IBaseShapeElementalRangeT UnPack()
 		{
 			IBaseShapeElementalRangeT baseShapeElementalRangeT = new IBaseShapeElementalRangeT();
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return baseShapeElementalRangeT;
 		}
 
-		// Token: 0x0601FE78 RID: 130680 RVA: 0x00470908 File Offset: 0x0046EB08
+		// Token: 0x06021BE8 RID: 138216 RVA: 0x004A6C9C File Offset: 0x004A4E9C
 		public void UnPackTo(IBaseShapeElementalRangeT _o)
 		{
 			_o.Type = this.Type;
@@ -249,7 +249,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FE79 RID: 130681 RVA: 0x00470BDC File Offset: 0x0046EDDC
+		// Token: 0x06021BE9 RID: 138217 RVA: 0x004A6F70 File Offset: 0x004A5170
 		public static Offset<IBaseShapeElementalRange> Pack(FlatBufferBuilder builder, IBaseShapeElementalRangeT _o)
 		{
 			if (_o == null)
@@ -261,7 +261,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBaseShapeElementalRange.CreateIBaseShapeElementalRange(builder, _o.Type, shape_type, shapeOffset);
 		}
 
-		// Token: 0x0400DD1B RID: 56603
+		// Token: 0x0400E8CA RID: 59594
 		private Table __p;
 	}
 }

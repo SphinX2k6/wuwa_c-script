@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066F1 RID: 26353
+	// Token: 0x02006D71 RID: 28017
 	public class IEntityTurnToT
 	{
-		// Token: 0x1700C3D8 RID: 50136
-		// (get) Token: 0x0602DD44 RID: 187716 RVA: 0x00644743 File Offset: 0x00642943
-		// (set) Token: 0x0602DD45 RID: 187717 RVA: 0x0064474B File Offset: 0x0064294B
+		// Token: 0x1700CD8E RID: 52622
+		// (get) Token: 0x06030581 RID: 198017 RVA: 0x00691CB7 File Offset: 0x0068FEB7
+		// (set) Token: 0x06030582 RID: 198018 RVA: 0x00691CBF File Offset: 0x0068FEBF
 		public int EntityId { get; set; }
 
-		// Token: 0x1700C3D9 RID: 50137
-		// (get) Token: 0x0602DD46 RID: 187718 RVA: 0x00644754 File Offset: 0x00642954
-		// (set) Token: 0x0602DD47 RID: 187719 RVA: 0x0064475C File Offset: 0x0064295C
+		// Token: 0x1700CD8F RID: 52623
+		// (get) Token: 0x06030583 RID: 198019 RVA: 0x00691CC8 File Offset: 0x0068FEC8
+		// (set) Token: 0x06030584 RID: 198020 RVA: 0x00691CD0 File Offset: 0x0068FED0
 		public TActorTurnToDataUnion Target { get; set; }
 
-		// Token: 0x1700C3DA RID: 50138
-		// (get) Token: 0x0602DD48 RID: 187720 RVA: 0x00644765 File Offset: 0x00642965
-		// (set) Token: 0x0602DD49 RID: 187721 RVA: 0x0064476D File Offset: 0x0064296D
+		// Token: 0x1700CD90 RID: 52624
+		// (get) Token: 0x06030585 RID: 198021 RVA: 0x00691CD9 File Offset: 0x0068FED9
+		// (set) Token: 0x06030586 RID: 198022 RVA: 0x00691CE1 File Offset: 0x0068FEE1
 		public bool UseLookAtForSmallAngle { get; set; }
 
-		// Token: 0x1700C3DB RID: 50139
-		// (get) Token: 0x0602DD4A RID: 187722 RVA: 0x00644776 File Offset: 0x00642976
-		// (set) Token: 0x0602DD4B RID: 187723 RVA: 0x0064477E File Offset: 0x0064297E
+		// Token: 0x1700CD91 RID: 52625
+		// (get) Token: 0x06030587 RID: 198023 RVA: 0x00691CEA File Offset: 0x0068FEEA
+		// (set) Token: 0x06030588 RID: 198024 RVA: 0x00691CF2 File Offset: 0x0068FEF2
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602DD4C RID: 187724 RVA: 0x00644787 File Offset: 0x00642987
+		// Token: 0x06030589 RID: 198025 RVA: 0x00691CFB File Offset: 0x0068FEFB
 		public IEntityTurnToT()
 		{
 			this.EntityId = 0;

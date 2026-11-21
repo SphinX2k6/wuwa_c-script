@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DC2 RID: 15810
+	// Token: 0x020041D9 RID: 16857
 	public class ICustomPlaceholderBindingProgressT
 	{
-		// Token: 0x17006D26 RID: 27942
-		// (get) Token: 0x06016103 RID: 90371 RVA: 0x00330C7F File Offset: 0x0032EE7F
-		// (set) Token: 0x06016104 RID: 90372 RVA: 0x00330C87 File Offset: 0x0032EE87
+		// Token: 0x170072E0 RID: 29408
+		// (get) Token: 0x0601763C RID: 95804 RVA: 0x00358007 File Offset: 0x00356207
+		// (set) Token: 0x0601763D RID: 95805 RVA: 0x0035800F File Offset: 0x0035620F
 		public string PlaceHolderName { get; set; }
 
-		// Token: 0x17006D27 RID: 27943
-		// (get) Token: 0x06016105 RID: 90373 RVA: 0x00330C90 File Offset: 0x0032EE90
-		// (set) Token: 0x06016106 RID: 90374 RVA: 0x00330C98 File Offset: 0x0032EE98
+		// Token: 0x170072E1 RID: 29409
+		// (get) Token: 0x0601763E RID: 95806 RVA: 0x00358018 File Offset: 0x00356218
+		// (set) Token: 0x0601763F RID: 95807 RVA: 0x00358020 File Offset: 0x00356220
 		public IPlayerHavingItemCountT BindingProgressType { get; set; }
 
-		// Token: 0x06016107 RID: 90375 RVA: 0x00330CA1 File Offset: 0x0032EEA1
+		// Token: 0x06017640 RID: 95808 RVA: 0x00358029 File Offset: 0x00356229
 		public ICustomPlaceholderBindingProgressT()
 		{
 			this.PlaceHolderName = null;

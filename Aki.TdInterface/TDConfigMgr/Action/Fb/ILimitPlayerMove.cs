@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027CA RID: 10186
+	// Token: 0x02002A9D RID: 10909
 	public class ILimitPlayerMove : ILimitPlayerOption
 	{
-		// Token: 0x0600E27E RID: 57982 RVA: 0x00217284 File Offset: 0x00215484
-		[NullableContext(1)]
+		// Token: 0x0600F0A0 RID: 61600 RVA: 0x00234058 File Offset: 0x00232258
 		public static ILimitPlayerMove Create(ILimitPlayerMove? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044AC RID: 17580
-		// (get) Token: 0x0600E27F RID: 57983 RVA: 0x002172A3 File Offset: 0x002154A3
+		// Token: 0x17004814 RID: 18452
+		// (get) Token: 0x0600F0A1 RID: 61601 RVA: 0x00234077 File Offset: 0x00232277
 		public override ELimitPlayOperation Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044AD RID: 17581
-		// (get) Token: 0x0600E280 RID: 57984 RVA: 0x002172B0 File Offset: 0x002154B0
+		// Token: 0x17004815 RID: 18453
+		// (get) Token: 0x0600F0A2 RID: 61602 RVA: 0x00234084 File Offset: 0x00232284
 		public virtual bool? IsOnlyForward
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D9C RID: 32156
+		// Token: 0x04008453 RID: 33875
 		private ILimitPlayerMove Instance;
 	}
 }

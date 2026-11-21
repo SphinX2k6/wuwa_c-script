@@ -2,32 +2,32 @@
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x020026C7 RID: 9927
+// Token: 0x02001BB2 RID: 7090
 [NullableContext(1)]
 public interface IDangoDungeonCommand
 {
-	// Token: 0x17001A5A RID: 6746
-	// (get) Token: 0x060145CD RID: 83405
-	// (set) Token: 0x060145CE RID: 83406
+	// Token: 0x17001A92 RID: 6802
+	// (get) Token: 0x06011AAF RID: 72367
+	// (set) Token: 0x06011AB0 RID: 72368
 	int CommandIndex { get; set; }
 
-	// Token: 0x17001A5B RID: 6747
-	// (get) Token: 0x060145CF RID: 83407
+	// Token: 0x17001A93 RID: 6803
+	// (get) Token: 0x06011AB1 RID: 72369
 	ERacingBetsCommandType CommandType { get; }
 
-	// Token: 0x17001A5C RID: 6748
-	// (get) Token: 0x060145D0 RID: 83408
-	// (set) Token: 0x060145D1 RID: 83409
+	// Token: 0x17001A94 RID: 6804
+	// (get) Token: 0x06011AB2 RID: 72370
+	// (set) Token: 0x06011AB3 RID: 72371
 	int ActionIndex { get; set; }
 
-	// Token: 0x17001A5D RID: 6749
-	// (get) Token: 0x060145D2 RID: 83410
-	// (set) Token: 0x060145D3 RID: 83411
+	// Token: 0x17001A95 RID: 6805
+	// (get) Token: 0x06011AB4 RID: 72372
+	// (set) Token: 0x06011AB5 RID: 72373
 	bool IsAborted { get; set; }
 
-	// Token: 0x060145D4 RID: 83412
+	// Token: 0x06011AB6 RID: 72374
 	UniTask Execute();
 
-	// Token: 0x060145D5 RID: 83413
+	// Token: 0x06011AB7 RID: 72375
 	string LogInfo();
 }

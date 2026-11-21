@@ -9,16 +9,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003457 RID: 13399
+// Token: 0x020029CB RID: 10699
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Render/Battle/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Battle/WuYinQuBattleActor.WuYinQuBattleActor_C")]
 public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170027A9 RID: 10153
-	// (get) Token: 0x0601CED6 RID: 118486 RVA: 0x0080F6BA File Offset: 0x0080D8BA
-	// (set) Token: 0x0601CED7 RID: 118487 RVA: 0x0080F6CE File Offset: 0x0080D8CE
+	// Token: 0x17002B44 RID: 11076
+	// (get) Token: 0x0601ABD5 RID: 109525 RVA: 0x00835FA2 File Offset: 0x008341A2
+	// (set) Token: 0x0601ABD6 RID: 109526 RVA: 0x00835FB6 File Offset: 0x008341B6
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string 当前状态
@@ -35,9 +35,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027AA RID: 10154
-	// (get) Token: 0x0601CED8 RID: 118488 RVA: 0x0080F6E3 File Offset: 0x0080D8E3
-	// (set) Token: 0x0601CED9 RID: 118489 RVA: 0x0080F6F7 File Offset: 0x0080D8F7
+	// Token: 0x17002B45 RID: 11077
+	// (get) Token: 0x0601ABD7 RID: 109527 RVA: 0x00835FCB File Offset: 0x008341CB
+	// (set) Token: 0x0601ABD8 RID: 109528 RVA: 0x00835FDF File Offset: 0x008341DF
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string 是否已经初始化
@@ -54,9 +54,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027AB RID: 10155
-	// (get) Token: 0x0601CEDA RID: 118490 RVA: 0x0080F70C File Offset: 0x0080D90C
-	// (set) Token: 0x0601CEDB RID: 118491 RVA: 0x0080F720 File Offset: 0x0080D920
+	// Token: 0x17002B46 RID: 11078
+	// (get) Token: 0x0601ABD9 RID: 109529 RVA: 0x00835FF4 File Offset: 0x008341F4
+	// (set) Token: 0x0601ABDA RID: 109530 RVA: 0x00836008 File Offset: 0x00834208
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe AKuroLevelSequenceActor ReferenceKuroLevelSequence
 	{
@@ -70,9 +70,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027AC RID: 10156
-	// (get) Token: 0x0601CEDC RID: 118492 RVA: 0x0080F735 File Offset: 0x0080D935
-	// (set) Token: 0x0601CEDD RID: 118493 RVA: 0x0080F749 File Offset: 0x0080D949
+	// Token: 0x17002B47 RID: 11079
+	// (get) Token: 0x0601ABDB RID: 109531 RVA: 0x0083601D File Offset: 0x0083421D
+	// (set) Token: 0x0601ABDC RID: 109532 RVA: 0x00836031 File Offset: 0x00834231
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe USceneComponent Root
 	{
@@ -86,9 +86,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027AD RID: 10157
-	// (get) Token: 0x0601CEDE RID: 118494 RVA: 0x0080F75E File Offset: 0x0080D95E
-	// (set) Token: 0x0601CEDF RID: 118495 RVA: 0x0080F772 File Offset: 0x0080D972
+	// Token: 0x17002B48 RID: 11080
+	// (get) Token: 0x0601ABDD RID: 109533 RVA: 0x00836046 File Offset: 0x00834246
+	// (set) Token: 0x0601ABDE RID: 109534 RVA: 0x0083605A File Offset: 0x0083425A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent IdleInnerBox1
 	{
@@ -102,9 +102,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027AE RID: 10158
-	// (get) Token: 0x0601CEE0 RID: 118496 RVA: 0x0080F787 File Offset: 0x0080D987
-	// (set) Token: 0x0601CEE1 RID: 118497 RVA: 0x0080F79B File Offset: 0x0080D99B
+	// Token: 0x17002B49 RID: 11081
+	// (get) Token: 0x0601ABDF RID: 109535 RVA: 0x0083606F File Offset: 0x0083426F
+	// (set) Token: 0x0601ABE0 RID: 109536 RVA: 0x00836083 File Offset: 0x00834283
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent IdleInnerBox2
 	{
@@ -118,9 +118,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027AF RID: 10159
-	// (get) Token: 0x0601CEE2 RID: 118498 RVA: 0x0080F7B0 File Offset: 0x0080D9B0
-	// (set) Token: 0x0601CEE3 RID: 118499 RVA: 0x0080F7C4 File Offset: 0x0080D9C4
+	// Token: 0x17002B4A RID: 11082
+	// (get) Token: 0x0601ABE1 RID: 109537 RVA: 0x00836098 File Offset: 0x00834298
+	// (set) Token: 0x0601ABE2 RID: 109538 RVA: 0x008360AC File Offset: 0x008342AC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UKuroPostProcessComponent IdleInnerPostProcess
 	{
@@ -134,9 +134,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B0 RID: 10160
-	// (get) Token: 0x0601CEE4 RID: 118500 RVA: 0x0080F7D9 File Offset: 0x0080D9D9
-	// (set) Token: 0x0601CEE5 RID: 118501 RVA: 0x0080F7ED File Offset: 0x0080D9ED
+	// Token: 0x17002B4B RID: 11083
+	// (get) Token: 0x0601ABE3 RID: 109539 RVA: 0x008360C1 File Offset: 0x008342C1
+	// (set) Token: 0x0601ABE4 RID: 109540 RVA: 0x008360D5 File Offset: 0x008342D5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent IdleOuterBox1
 	{
@@ -150,9 +150,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B1 RID: 10161
-	// (get) Token: 0x0601CEE6 RID: 118502 RVA: 0x0080F802 File Offset: 0x0080DA02
-	// (set) Token: 0x0601CEE7 RID: 118503 RVA: 0x0080F816 File Offset: 0x0080DA16
+	// Token: 0x17002B4C RID: 11084
+	// (get) Token: 0x0601ABE5 RID: 109541 RVA: 0x008360EA File Offset: 0x008342EA
+	// (set) Token: 0x0601ABE6 RID: 109542 RVA: 0x008360FE File Offset: 0x008342FE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent IdleOuterBox2
 	{
@@ -166,9 +166,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B2 RID: 10162
-	// (get) Token: 0x0601CEE8 RID: 118504 RVA: 0x0080F82B File Offset: 0x0080DA2B
-	// (set) Token: 0x0601CEE9 RID: 118505 RVA: 0x0080F83F File Offset: 0x0080DA3F
+	// Token: 0x17002B4D RID: 11085
+	// (get) Token: 0x0601ABE7 RID: 109543 RVA: 0x00836113 File Offset: 0x00834313
+	// (set) Token: 0x0601ABE8 RID: 109544 RVA: 0x00836127 File Offset: 0x00834327
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UKuroPostProcessComponent IdleOuterPostProcess
 	{
@@ -182,9 +182,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B3 RID: 10163
-	// (get) Token: 0x0601CEEA RID: 118506 RVA: 0x0080F854 File Offset: 0x0080DA54
-	// (set) Token: 0x0601CEEB RID: 118507 RVA: 0x0080F868 File Offset: 0x0080DA68
+	// Token: 0x17002B4E RID: 11086
+	// (get) Token: 0x0601ABE9 RID: 109545 RVA: 0x0083613C File Offset: 0x0083433C
+	// (set) Token: 0x0601ABEA RID: 109546 RVA: 0x00836150 File Offset: 0x00834350
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent FightingPhase1Box1
 	{
@@ -198,9 +198,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B4 RID: 10164
-	// (get) Token: 0x0601CEEC RID: 118508 RVA: 0x0080F87D File Offset: 0x0080DA7D
-	// (set) Token: 0x0601CEED RID: 118509 RVA: 0x0080F891 File Offset: 0x0080DA91
+	// Token: 0x17002B4F RID: 11087
+	// (get) Token: 0x0601ABEB RID: 109547 RVA: 0x00836165 File Offset: 0x00834365
+	// (set) Token: 0x0601ABEC RID: 109548 RVA: 0x00836179 File Offset: 0x00834379
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent FightingPhase1Box2
 	{
@@ -214,9 +214,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B5 RID: 10165
-	// (get) Token: 0x0601CEEE RID: 118510 RVA: 0x0080F8A6 File Offset: 0x0080DAA6
-	// (set) Token: 0x0601CEEF RID: 118511 RVA: 0x0080F8BA File Offset: 0x0080DABA
+	// Token: 0x17002B50 RID: 11088
+	// (get) Token: 0x0601ABED RID: 109549 RVA: 0x0083618E File Offset: 0x0083438E
+	// (set) Token: 0x0601ABEE RID: 109550 RVA: 0x008361A2 File Offset: 0x008343A2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UKuroPostProcessComponent FightingPhase1PostProcess
 	{
@@ -230,9 +230,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B6 RID: 10166
-	// (get) Token: 0x0601CEF0 RID: 118512 RVA: 0x0080F8CF File Offset: 0x0080DACF
-	// (set) Token: 0x0601CEF1 RID: 118513 RVA: 0x0080F8E3 File Offset: 0x0080DAE3
+	// Token: 0x17002B51 RID: 11089
+	// (get) Token: 0x0601ABEF RID: 109551 RVA: 0x008361B7 File Offset: 0x008343B7
+	// (set) Token: 0x0601ABF0 RID: 109552 RVA: 0x008361CB File Offset: 0x008343CB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent FightingPhase2Box1
 	{
@@ -246,9 +246,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B7 RID: 10167
-	// (get) Token: 0x0601CEF2 RID: 118514 RVA: 0x0080F8F8 File Offset: 0x0080DAF8
-	// (set) Token: 0x0601CEF3 RID: 118515 RVA: 0x0080F90C File Offset: 0x0080DB0C
+	// Token: 0x17002B52 RID: 11090
+	// (get) Token: 0x0601ABF1 RID: 109553 RVA: 0x008361E0 File Offset: 0x008343E0
+	// (set) Token: 0x0601ABF2 RID: 109554 RVA: 0x008361F4 File Offset: 0x008343F4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent FightingPhase2Box2
 	{
@@ -262,9 +262,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B8 RID: 10168
-	// (get) Token: 0x0601CEF4 RID: 118516 RVA: 0x0080F921 File Offset: 0x0080DB21
-	// (set) Token: 0x0601CEF5 RID: 118517 RVA: 0x0080F935 File Offset: 0x0080DB35
+	// Token: 0x17002B53 RID: 11091
+	// (get) Token: 0x0601ABF3 RID: 109555 RVA: 0x00836209 File Offset: 0x00834409
+	// (set) Token: 0x0601ABF4 RID: 109556 RVA: 0x0083621D File Offset: 0x0083441D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UKuroPostProcessComponent FightingPhase2PostProcess
 	{
@@ -278,9 +278,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027B9 RID: 10169
-	// (get) Token: 0x0601CEF6 RID: 118518 RVA: 0x0080F94A File Offset: 0x0080DB4A
-	// (set) Token: 0x0601CEF7 RID: 118519 RVA: 0x0080F95E File Offset: 0x0080DB5E
+	// Token: 0x17002B54 RID: 11092
+	// (get) Token: 0x0601ABF5 RID: 109557 RVA: 0x00836232 File Offset: 0x00834432
+	// (set) Token: 0x0601ABF6 RID: 109558 RVA: 0x00836246 File Offset: 0x00834446
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent FightingPhase3Box1
 	{
@@ -294,9 +294,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027BA RID: 10170
-	// (get) Token: 0x0601CEF8 RID: 118520 RVA: 0x0080F973 File Offset: 0x0080DB73
-	// (set) Token: 0x0601CEF9 RID: 118521 RVA: 0x0080F987 File Offset: 0x0080DB87
+	// Token: 0x17002B55 RID: 11093
+	// (get) Token: 0x0601ABF7 RID: 109559 RVA: 0x0083625B File Offset: 0x0083445B
+	// (set) Token: 0x0601ABF8 RID: 109560 RVA: 0x0083626F File Offset: 0x0083446F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBoxComponent FightingPhase3Box2
 	{
@@ -310,9 +310,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027BB RID: 10171
-	// (get) Token: 0x0601CEFA RID: 118522 RVA: 0x0080F99C File Offset: 0x0080DB9C
-	// (set) Token: 0x0601CEFB RID: 118523 RVA: 0x0080F9B0 File Offset: 0x0080DBB0
+	// Token: 0x17002B56 RID: 11094
+	// (get) Token: 0x0601ABF9 RID: 109561 RVA: 0x00836284 File Offset: 0x00834484
+	// (set) Token: 0x0601ABFA RID: 109562 RVA: 0x00836298 File Offset: 0x00834498
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UKuroPostProcessComponent FightingPhase3PostProcess
 	{
@@ -326,9 +326,9 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170027BC RID: 10172
-	// (get) Token: 0x0601CEFC RID: 118524 RVA: 0x0080F9C5 File Offset: 0x0080DBC5
-	// (set) Token: 0x0601CEFD RID: 118525 RVA: 0x0080F9D9 File Offset: 0x0080DBD9
+	// Token: 0x17002B57 RID: 11095
+	// (get) Token: 0x0601ABFB RID: 109563 RVA: 0x008362AD File Offset: 0x008344AD
+	// (set) Token: 0x0601ABFC RID: 109564 RVA: 0x008362C1 File Offset: 0x008344C1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe PDA_WuYinQuBattleData_C WuYinQuFightingData
 	{
@@ -342,53 +342,41 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x0601CEFE RID: 118526 RVA: 0x0080F9F0 File Offset: 0x0080DBF0
+	// Token: 0x0601ABFD RID: 109565 RVA: 0x008362D8 File Offset: 0x008344D8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 手动初始化()
+	public virtual void 手动初始化()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("手动初始化"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(WuYinQuBattleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("手动初始化"), WuYinQuBattleActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.手动初始化_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601CEFF RID: 118527 RVA: 0x0080FA60 File Offset: 0x0080DC60
+	// Token: 0x0601ABFE RID: 109566 RVA: 0x00836331 File Offset: 0x00834531
 	protected void 手动初始化_Implementation()
 	{
 		RenderModuleController.Instance.AddWuYinQuBattleActor(this);
 	}
 
-	// Token: 0x0601CF00 RID: 118528 RVA: 0x0080FA70 File Offset: 0x0080DC70
+	// Token: 0x0601ABFF RID: 109567 RVA: 0x00836340 File Offset: 0x00834540
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 显示Debug线框()
+	public virtual void 显示Debug线框()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("显示Debug线框"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(WuYinQuBattleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("显示Debug线框"), WuYinQuBattleActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.显示Debug线框_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601CF01 RID: 118529 RVA: 0x0080FAE0 File Offset: 0x0080DCE0
+	// Token: 0x0601AC00 RID: 109568 RVA: 0x0083639C File Offset: 0x0083459C
 	protected void 显示Debug线框_Implementation()
 	{
 		RoleTriggerController.Instance.DebugTestWorldDone();
@@ -406,137 +394,107 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		this.IdleInnerBox2.SetHiddenInGame(false, false);
 	}
 
-	// Token: 0x0601CF02 RID: 118530 RVA: 0x0080FBE0 File Offset: 0x0080DDE0
+	// Token: 0x0601AC01 RID: 109569 RVA: 0x0083649C File Offset: 0x0083469C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 切换到清空状态()
+	public virtual void 切换到清空状态()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("切换到清空状态"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(WuYinQuBattleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("切换到清空状态"), WuYinQuBattleActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.切换到清空状态_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601CF03 RID: 118531 RVA: 0x0080FC50 File Offset: 0x0080DE50
+	// Token: 0x0601AC02 RID: 109570 RVA: 0x008364F5 File Offset: 0x008346F5
 	protected void 切换到清空状态_Implementation()
 	{
 		RenderModuleController.Instance.SetBattleState(this.GetKey(), EWuYinQuState.Nothing, false);
 	}
 
-	// Token: 0x0601CF04 RID: 118532 RVA: 0x0080FC64 File Offset: 0x0080DE64
+	// Token: 0x0601AC03 RID: 109571 RVA: 0x0083650C File Offset: 0x0083470C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 切换到静止状态()
+	public virtual void 切换到静止状态()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("切换到静止状态"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(WuYinQuBattleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("切换到静止状态"), WuYinQuBattleActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.切换到静止状态_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601CF05 RID: 118533 RVA: 0x0080FCD4 File Offset: 0x0080DED4
+	// Token: 0x0601AC04 RID: 109572 RVA: 0x00836565 File Offset: 0x00834765
 	protected void 切换到静止状态_Implementation()
 	{
 		RenderModuleController.Instance.SetBattleState(this.GetKey(), EWuYinQuState.StateIdle, false);
 	}
 
-	// Token: 0x0601CF06 RID: 118534 RVA: 0x0080FCE8 File Offset: 0x0080DEE8
+	// Token: 0x0601AC05 RID: 109573 RVA: 0x0083657C File Offset: 0x0083477C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 切换到战斗阶段1()
+	public virtual void 切换到战斗阶段1()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("切换到战斗阶段1"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(WuYinQuBattleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("切换到战斗阶段1"), WuYinQuBattleActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.切换到战斗阶段1_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601CF07 RID: 118535 RVA: 0x0080FD58 File Offset: 0x0080DF58
+	// Token: 0x0601AC06 RID: 109574 RVA: 0x008365D5 File Offset: 0x008347D5
 	protected void 切换到战斗阶段1_Implementation()
 	{
 		RenderModuleController.Instance.SetBattleState(this.GetKey(), EWuYinQuState.StateFighting1, false);
 	}
 
-	// Token: 0x0601CF08 RID: 118536 RVA: 0x0080FD6C File Offset: 0x0080DF6C
+	// Token: 0x0601AC07 RID: 109575 RVA: 0x008365EC File Offset: 0x008347EC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 切换到战斗阶段2()
+	public virtual void 切换到战斗阶段2()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("切换到战斗阶段2"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(WuYinQuBattleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("切换到战斗阶段2"), WuYinQuBattleActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.切换到战斗阶段2_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601CF09 RID: 118537 RVA: 0x0080FDDC File Offset: 0x0080DFDC
+	// Token: 0x0601AC08 RID: 109576 RVA: 0x00836645 File Offset: 0x00834845
 	protected void 切换到战斗阶段2_Implementation()
 	{
 		RenderModuleController.Instance.SetBattleState(this.GetKey(), EWuYinQuState.StateFighting2, false);
 	}
 
-	// Token: 0x0601CF0A RID: 118538 RVA: 0x0080FDF0 File Offset: 0x0080DFF0
+	// Token: 0x0601AC09 RID: 109577 RVA: 0x0083665C File Offset: 0x0083485C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 切换到战斗阶段3()
+	public virtual void 切换到战斗阶段3()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("切换到战斗阶段3"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(WuYinQuBattleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("切换到战斗阶段3"), WuYinQuBattleActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.切换到战斗阶段3_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601CF0B RID: 118539 RVA: 0x0080FE60 File Offset: 0x0080E060
+	// Token: 0x0601AC0A RID: 109578 RVA: 0x008366B5 File Offset: 0x008348B5
 	protected void 切换到战斗阶段3_Implementation()
 	{
 		RenderModuleController.Instance.SetBattleState(this.GetKey(), EWuYinQuState.StateFighting3, false);
 	}
 
-	// Token: 0x0601CF0C RID: 118540 RVA: 0x0080FE74 File Offset: 0x0080E074
+	// Token: 0x0601AC0B RID: 109579 RVA: 0x008366CC File Offset: 0x008348CC
 	public unsafe void ChangeState(EWuYinQuState state, bool instantTransition = false)
 	{
 		if (!this.IsInit)
@@ -638,27 +596,21 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x0601CF0D RID: 118541 RVA: 0x0081016C File Offset: 0x0080E36C
+	// Token: 0x0601AC0C RID: 109580 RVA: 0x008369C4 File Offset: 0x00834BC4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveBeginPlay()
+	public override void ReceiveBeginPlay()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveBeginPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(WuYinQuBattleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveBeginPlay"), WuYinQuBattleActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveBeginPlay_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601CF0E RID: 118542 RVA: 0x008101DC File Offset: 0x0080E3DC
+	// Token: 0x0601AC0D RID: 109581 RVA: 0x00836A1D File Offset: 0x00834C1D
 	protected virtual void ReceiveBeginPlay_Implementation()
 	{
 		if (ModelManager.Instance.IsInit)
@@ -669,28 +621,25 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		RenderModuleController.Instance.AddWuYinQuBattleActorWaiting(this);
 	}
 
-	// Token: 0x0601CF0F RID: 118543 RVA: 0x00810204 File Offset: 0x0080E404
+	// Token: 0x0601AC0E RID: 109582 RVA: 0x00836A44 File Offset: 0x00834C44
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveEndPlay(EEndPlayReason endPlayReason)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveEndPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		AActor.__ReceiveEndPlay_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(WuYinQuBattleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveEndPlay"), WuYinQuBattleActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((AActor.__ReceiveEndPlay_FunctionParams*)ptr + 15L / (long)sizeof(AActor.__ReceiveEndPlay_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(byte*)(&ptr2->EndPlayReason) = (byte)endPlayReason;
+			this.ReceiveEndPlay_Implementation(endPlayReason);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		AActor.__ReceiveEndPlay_FunctionParams* ptr = stackalloc AActor.__ReceiveEndPlay_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(AActor.__ReceiveEndPlay_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(byte*)(&ptr->EndPlayReason) = (byte)endPlayReason;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CF10 RID: 118544 RVA: 0x00810280 File Offset: 0x0080E480
+	// Token: 0x0601AC0F RID: 109583 RVA: 0x00836AD4 File Offset: 0x00834CD4
 	protected virtual void ReceiveEndPlay_Implementation(EEndPlayReason EndPlayReason)
 	{
 		Log instance = Log.Instance;
@@ -726,7 +675,7 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x0601CF11 RID: 118545 RVA: 0x00810349 File Offset: 0x0080E549
+	// Token: 0x0601AC10 RID: 109584 RVA: 0x00836B9D File Offset: 0x00834D9D
 	public AKuroLevelSequenceActor GetKuroLevelSequenceActor()
 	{
 		AKuroLevelSequenceActor referenceKuroLevelSequence = this.ReferenceKuroLevelSequence;
@@ -737,25 +686,25 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		return null;
 	}
 
-	// Token: 0x0601CF12 RID: 118546 RVA: 0x00810367 File Offset: 0x0080E567
+	// Token: 0x0601AC11 RID: 109585 RVA: 0x00836BBB File Offset: 0x00834DBB
 	public EWuYinQuState GetCurrentBattleState()
 	{
 		return this.CurrentBattleState;
 	}
 
-	// Token: 0x0601CF13 RID: 118547 RVA: 0x0081036F File Offset: 0x0080E56F
+	// Token: 0x0601AC12 RID: 109586 RVA: 0x00836BC3 File Offset: 0x00834DC3
 	public EWuYinQuState GetLastBattleState()
 	{
 		return this.LastBattleState;
 	}
 
-	// Token: 0x0601CF14 RID: 118548 RVA: 0x00810377 File Offset: 0x0080E577
+	// Token: 0x0601AC13 RID: 109587 RVA: 0x00836BCB File Offset: 0x00834DCB
 	public bool IsInitialize()
 	{
 		return this.IsInit;
 	}
 
-	// Token: 0x0601CF15 RID: 118549 RVA: 0x00810380 File Offset: 0x0080E580
+	// Token: 0x0601AC14 RID: 109588 RVA: 0x00836BD4 File Offset: 0x00834DD4
 	[NullableContext(1)]
 	public string GetKey()
 	{
@@ -766,7 +715,7 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		return this.StringKey;
 	}
 
-	// Token: 0x0601CF16 RID: 118550 RVA: 0x008103B8 File Offset: 0x0080E5B8
+	// Token: 0x0601AC15 RID: 109589 RVA: 0x00836C0C File Offset: 0x00834E0C
 	public void Tick(float delta)
 	{
 		if (!this.IsInit)
@@ -796,7 +745,7 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x0601CF17 RID: 118551 RVA: 0x00810440 File Offset: 0x0080E640
+	// Token: 0x0601AC16 RID: 109590 RVA: 0x00836C94 File Offset: 0x00834E94
 	public bool Init()
 	{
 		if (this.IsInit)
@@ -845,7 +794,7 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		return true;
 	}
 
-	// Token: 0x0601CF18 RID: 118552 RVA: 0x008105BC File Offset: 0x0080E7BC
+	// Token: 0x0601AC17 RID: 109591 RVA: 0x00836E10 File Offset: 0x00835010
 	private void InitComponents()
 	{
 		this.IdleInnerPostProcess.BlendWeight = 0f;
@@ -971,7 +920,7 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x0601CF19 RID: 118553 RVA: 0x00810B45 File Offset: 0x0080ED45
+	// Token: 0x0601AC18 RID: 109592 RVA: 0x00837399 File Offset: 0x00835599
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (WuYinQuBattleActor._ClassPtr == IntPtr.Zero)
@@ -981,71 +930,71 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		return WuYinQuBattleActor._ClassPtr;
 	}
 
-	// Token: 0x0601CF1A RID: 118554 RVA: 0x00810B6C File Offset: 0x0080ED6C
+	// Token: 0x0601AC19 RID: 109593 RVA: 0x008373C0 File Offset: 0x008355C0
 	public WuYinQuBattleActor() : this(BuiltinUtils.AllocNativeUObject(WuYinQuBattleActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601CF1B RID: 118555 RVA: 0x00810B94 File Offset: 0x0080ED94
+	// Token: 0x0601AC1A RID: 109594 RVA: 0x008373E8 File Offset: 0x008355E8
 	[NullableContext(1)]
 	public WuYinQuBattleActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(WuYinQuBattleActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601CF1C RID: 118556 RVA: 0x00810BC7 File Offset: 0x0080EDC7
+	// Token: 0x0601AC1B RID: 109595 RVA: 0x0083741B File Offset: 0x0083561B
 	protected WuYinQuBattleActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601CF1D RID: 118557 RVA: 0x00810BDE File Offset: 0x0080EDDE
+	// Token: 0x0601AC1C RID: 109596 RVA: 0x00837432 File Offset: 0x00835632
 	protected virtual void __CPPCALL_手动初始化_Implementation()
 	{
 		this.手动初始化_Implementation();
 	}
 
-	// Token: 0x0601CF1E RID: 118558 RVA: 0x00810BE6 File Offset: 0x0080EDE6
+	// Token: 0x0601AC1D RID: 109597 RVA: 0x0083743A File Offset: 0x0083563A
 	protected virtual void __CPPCALL_显示Debug线框_Implementation()
 	{
 		this.显示Debug线框_Implementation();
 	}
 
-	// Token: 0x0601CF1F RID: 118559 RVA: 0x00810BEE File Offset: 0x0080EDEE
+	// Token: 0x0601AC1E RID: 109598 RVA: 0x00837442 File Offset: 0x00835642
 	protected virtual void __CPPCALL_切换到清空状态_Implementation()
 	{
 		this.切换到清空状态_Implementation();
 	}
 
-	// Token: 0x0601CF20 RID: 118560 RVA: 0x00810BF6 File Offset: 0x0080EDF6
+	// Token: 0x0601AC1F RID: 109599 RVA: 0x0083744A File Offset: 0x0083564A
 	protected virtual void __CPPCALL_切换到静止状态_Implementation()
 	{
 		this.切换到静止状态_Implementation();
 	}
 
-	// Token: 0x0601CF21 RID: 118561 RVA: 0x00810BFE File Offset: 0x0080EDFE
+	// Token: 0x0601AC20 RID: 109600 RVA: 0x00837452 File Offset: 0x00835652
 	protected virtual void __CPPCALL_切换到战斗阶段1_Implementation()
 	{
 		this.切换到战斗阶段1_Implementation();
 	}
 
-	// Token: 0x0601CF22 RID: 118562 RVA: 0x00810C06 File Offset: 0x0080EE06
+	// Token: 0x0601AC21 RID: 109601 RVA: 0x0083745A File Offset: 0x0083565A
 	protected virtual void __CPPCALL_切换到战斗阶段2_Implementation()
 	{
 		this.切换到战斗阶段2_Implementation();
 	}
 
-	// Token: 0x0601CF23 RID: 118563 RVA: 0x00810C0E File Offset: 0x0080EE0E
+	// Token: 0x0601AC22 RID: 109602 RVA: 0x00837462 File Offset: 0x00835662
 	protected virtual void __CPPCALL_切换到战斗阶段3_Implementation()
 	{
 		this.切换到战斗阶段3_Implementation();
 	}
 
-	// Token: 0x0601CF24 RID: 118564 RVA: 0x00810C16 File Offset: 0x0080EE16
+	// Token: 0x0601AC23 RID: 109603 RVA: 0x0083746A File Offset: 0x0083566A
 	protected virtual void __CPPCALL_ReceiveBeginPlay_Implementation()
 	{
 		this.ReceiveBeginPlay_Implementation();
 	}
 
-	// Token: 0x0601CF25 RID: 118565 RVA: 0x00810C20 File Offset: 0x0080EE20
+	// Token: 0x0601AC24 RID: 109604 RVA: 0x00837474 File Offset: 0x00835674
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveEndPlay_Implementation(AActor.__ReceiveEndPlay_FunctionParams* __Params)
 	{
@@ -1053,16 +1002,16 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 		this.ReceiveEndPlay_Implementation(endPlayReason);
 	}
 
-	// Token: 0x0400E421 RID: 58401
+	// Token: 0x0400E8D2 RID: 59602
 	private EWuYinQuState CurrentBattleState = EWuYinQuState.Nothing;
 
-	// Token: 0x0400E422 RID: 58402
+	// Token: 0x0400E8D3 RID: 59603
 	private EWuYinQuState LastBattleState = EWuYinQuState.Nothing;
 
-	// Token: 0x0400E423 RID: 58403
+	// Token: 0x0400E8D4 RID: 59604
 	private bool IsInit;
 
-	// Token: 0x0400E424 RID: 58404
+	// Token: 0x0400E8D5 RID: 59605
 	[Nullable(new byte[]
 	{
 		2,
@@ -1070,91 +1019,91 @@ public class WuYinQuBattleActor : AKuroWuYinQuActorBase, IUnrealUObject, IUnreal
 	})]
 	private StateMachine<WuYinQuBattleActor, EWuYinQuBattleState> StateMachine;
 
-	// Token: 0x0400E425 RID: 58405
+	// Token: 0x0400E8D6 RID: 59606
 	private PostProcessTrigger IdleInnerPostProcessTrigger;
 
-	// Token: 0x0400E426 RID: 58406
+	// Token: 0x0400E8D7 RID: 59607
 	private PostProcessTrigger IdleOuterPostProcessTrigger;
 
-	// Token: 0x0400E427 RID: 58407
+	// Token: 0x0400E8D8 RID: 59608
 	private PostProcessTrigger FightingPhase1PostProcessTrigger;
 
-	// Token: 0x0400E428 RID: 58408
+	// Token: 0x0400E8D9 RID: 59609
 	private PostProcessTrigger FightingPhase2PostProcessTrigger;
 
-	// Token: 0x0400E429 RID: 58409
+	// Token: 0x0400E8DA RID: 59610
 	private PostProcessTrigger FightingPhase3PostProcessTrigger;
 
-	// Token: 0x0400E42A RID: 58410
+	// Token: 0x0400E8DB RID: 59611
 	private string StringKey;
 
-	// Token: 0x0400E42B RID: 58411
+	// Token: 0x0400E8DC RID: 59612
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Battle/WuYinQuBattleActor.WuYinQuBattleActor_C";
 
-	// Token: 0x0400E42C RID: 58412
+	// Token: 0x0400E8DD RID: 59613
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E42D RID: 58413
+	// Token: 0x0400E8DE RID: 59614
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E42E RID: 58414
+	// Token: 0x0400E8DF RID: 59615
 	private static int __PropertyOffset_当前状态;
 
-	// Token: 0x0400E42F RID: 58415
+	// Token: 0x0400E8E0 RID: 59616
 	private static int __PropertyOffset_是否已经初始化;
 
-	// Token: 0x0400E430 RID: 58416
+	// Token: 0x0400E8E1 RID: 59617
 	private static int __PropertyOffset_ReferenceKuroLevelSequence;
 
-	// Token: 0x0400E431 RID: 58417
+	// Token: 0x0400E8E2 RID: 59618
 	private static int __PropertyOffset_Root;
 
-	// Token: 0x0400E432 RID: 58418
+	// Token: 0x0400E8E3 RID: 59619
 	private static int __PropertyOffset_IdleInnerBox1;
 
-	// Token: 0x0400E433 RID: 58419
+	// Token: 0x0400E8E4 RID: 59620
 	private static int __PropertyOffset_IdleInnerBox2;
 
-	// Token: 0x0400E434 RID: 58420
+	// Token: 0x0400E8E5 RID: 59621
 	private static int __PropertyOffset_IdleInnerPostProcess;
 
-	// Token: 0x0400E435 RID: 58421
+	// Token: 0x0400E8E6 RID: 59622
 	private static int __PropertyOffset_IdleOuterBox1;
 
-	// Token: 0x0400E436 RID: 58422
+	// Token: 0x0400E8E7 RID: 59623
 	private static int __PropertyOffset_IdleOuterBox2;
 
-	// Token: 0x0400E437 RID: 58423
+	// Token: 0x0400E8E8 RID: 59624
 	private static int __PropertyOffset_IdleOuterPostProcess;
 
-	// Token: 0x0400E438 RID: 58424
+	// Token: 0x0400E8E9 RID: 59625
 	private static int __PropertyOffset_FightingPhase1Box1;
 
-	// Token: 0x0400E439 RID: 58425
+	// Token: 0x0400E8EA RID: 59626
 	private static int __PropertyOffset_FightingPhase1Box2;
 
-	// Token: 0x0400E43A RID: 58426
+	// Token: 0x0400E8EB RID: 59627
 	private static int __PropertyOffset_FightingPhase1PostProcess;
 
-	// Token: 0x0400E43B RID: 58427
+	// Token: 0x0400E8EC RID: 59628
 	private static int __PropertyOffset_FightingPhase2Box1;
 
-	// Token: 0x0400E43C RID: 58428
+	// Token: 0x0400E8ED RID: 59629
 	private static int __PropertyOffset_FightingPhase2Box2;
 
-	// Token: 0x0400E43D RID: 58429
+	// Token: 0x0400E8EE RID: 59630
 	private static int __PropertyOffset_FightingPhase2PostProcess;
 
-	// Token: 0x0400E43E RID: 58430
+	// Token: 0x0400E8EF RID: 59631
 	private static int __PropertyOffset_FightingPhase3Box1;
 
-	// Token: 0x0400E43F RID: 58431
+	// Token: 0x0400E8F0 RID: 59632
 	private static int __PropertyOffset_FightingPhase3Box2;
 
-	// Token: 0x0400E440 RID: 58432
+	// Token: 0x0400E8F1 RID: 59633
 	private static int __PropertyOffset_FightingPhase3PostProcess;
 
-	// Token: 0x0400E441 RID: 58433
+	// Token: 0x0400E8F2 RID: 59634
 	private static int __PropertyOffset_WuYinQuFightingData;
 }

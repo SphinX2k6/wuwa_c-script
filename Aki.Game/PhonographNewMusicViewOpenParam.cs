@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200254F RID: 9551
+// Token: 0x02001A3A RID: 6714
 public class PhonographNewMusicViewOpenParam
 {
-	// Token: 0x04009146 RID: 37190
+	// Token: 0x0400929F RID: 37535
 	[Nullable(1)]
 	public List<int> UnlockMusicList;
 
-	// Token: 0x04009147 RID: 37191
+	// Token: 0x040092A0 RID: 37536
 	[Nullable(2)]
 	public Action CloseCallback;
 }

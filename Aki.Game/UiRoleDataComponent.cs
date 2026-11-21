@@ -4,11 +4,11 @@ using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02002CAC RID: 11436
+// Token: 0x02002205 RID: 8709
 public class UiRoleDataComponent : UiModelComponentBase
 {
-	// Token: 0x17002037 RID: 8247
-	// (get) Token: 0x06017E57 RID: 97879 RVA: 0x00613204 File Offset: 0x00611404
+	// Token: 0x17002088 RID: 8328
+	// (get) Token: 0x060156CB RID: 87755 RVA: 0x00638D88 File Offset: 0x00636F88
 	public int RoleDataId
 	{
 		get
@@ -17,8 +17,8 @@ public class UiRoleDataComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x17002038 RID: 8248
-	// (get) Token: 0x06017E58 RID: 97880 RVA: 0x0061320C File Offset: 0x0061140C
+	// Token: 0x17002089 RID: 8329
+	// (get) Token: 0x060156CC RID: 87756 RVA: 0x00638D90 File Offset: 0x00636F90
 	public int RoleConfigId
 	{
 		get
@@ -27,8 +27,8 @@ public class UiRoleDataComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x17002039 RID: 8249
-	// (get) Token: 0x06017E59 RID: 97881 RVA: 0x00613214 File Offset: 0x00611414
+	// Token: 0x1700208A RID: 8330
+	// (get) Token: 0x060156CD RID: 87757 RVA: 0x00638D98 File Offset: 0x00636F98
 	public int RoleSkinId
 	{
 		get
@@ -37,13 +37,13 @@ public class UiRoleDataComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017E5A RID: 97882 RVA: 0x0061321C File Offset: 0x0061141C
+	// Token: 0x060156CE RID: 87758 RVA: 0x00638DA0 File Offset: 0x00636FA0
 	protected override void OnInit()
 	{
 		this.ModelDataComponent = base.Owner.CheckGetComponent<UiModelDataComponent>();
 	}
 
-	// Token: 0x06017E5B RID: 97883 RVA: 0x00613230 File Offset: 0x00611430
+	// Token: 0x060156CF RID: 87759 RVA: 0x00638DB4 File Offset: 0x00636FB4
 	public void SetRoleConfigId(int roleConfigId, int skinId = -1)
 	{
 		this.RoleConfigIdInternal = roleConfigId;
@@ -61,7 +61,7 @@ public class UiRoleDataComponent : UiModelComponentBase
 		EventSystem.Instance.EmitWithTarget(base.Owner, EEventName.OnUiModelRoleConfigIdChange);
 	}
 
-	// Token: 0x06017E5C RID: 97884 RVA: 0x006132CC File Offset: 0x006114CC
+	// Token: 0x060156D0 RID: 87760 RVA: 0x00638E50 File Offset: 0x00637050
 	public void SetRoleDataId(int roleDataId, int skinId = -1)
 	{
 		this.RoleDataIdInternal = roleDataId;
@@ -75,16 +75,16 @@ public class UiRoleDataComponent : UiModelComponentBase
 		EventSystem.Instance.EmitWithTarget(base.Owner, EEventName.OnUiModelRoleDataIdChange);
 	}
 
-	// Token: 0x0400B226 RID: 45606
+	// Token: 0x0400B591 RID: 46481
 	[Nullable(2)]
 	private UiModelDataComponent ModelDataComponent;
 
-	// Token: 0x0400B227 RID: 45607
+	// Token: 0x0400B592 RID: 46482
 	private int RoleDataIdInternal;
 
-	// Token: 0x0400B228 RID: 45608
+	// Token: 0x0400B593 RID: 46483
 	private int RoleConfigIdInternal;
 
-	// Token: 0x0400B229 RID: 45609
+	// Token: 0x0400B594 RID: 46484
 	private int RoleSkinIdInternal;
 }

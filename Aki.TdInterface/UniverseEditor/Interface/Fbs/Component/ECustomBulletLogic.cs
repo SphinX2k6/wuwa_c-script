@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D89 RID: 19849
+	// Token: 0x0200528A RID: 21130
 	public enum ECustomBulletLogic : byte
 	{
-		// Token: 0x0400D938 RID: 55608
+		// Token: 0x0400E47C RID: 58492
 		TrafficBullet
 	}
 }

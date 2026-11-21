@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Procedure
 {
-	// Token: 0x02000217 RID: 535
+	// Token: 0x0200021C RID: 540
 	public class MobileDiffPatchProcedure : BaseDiffPatchProcedure
 	{
-		// Token: 0x06000DE7 RID: 3559 RVA: 0x00053E4D File Offset: 0x0005204D
+		// Token: 0x06000E28 RID: 3624 RVA: 0x00056941 File Offset: 0x00054B41
 		[NullableContext(1)]
 		public MobileDiffPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr) : base(pathMisc, viewMgr)
 		{
 		}
 
-		// Token: 0x06000DE8 RID: 3560 RVA: 0x00053E58 File Offset: 0x00052058
+		// Token: 0x06000E29 RID: 3625 RVA: 0x0005694C File Offset: 0x00054B4C
 		protected virtual UniTask<bool> PromptDownload(long updateSize, [Nullable(1)] DiffUpdate update)
 		{
 			MobileDiffPatchProcedure.<PromptDownload>d__1 <PromptDownload>d__;
@@ -29,7 +29,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <PromptDownload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DE9 RID: 3561 RVA: 0x00053EA4 File Offset: 0x000520A4
+		// Token: 0x06000E2A RID: 3626 RVA: 0x00056998 File Offset: 0x00054B98
 		public override UniTask<bool> UpdateResource(bool bUseBgDownload, [Nullable(1)] DiffUpdate update, bool bIsLauncher)
 		{
 			MobileDiffPatchProcedure.<UpdateResource>d__2 <UpdateResource>d__;

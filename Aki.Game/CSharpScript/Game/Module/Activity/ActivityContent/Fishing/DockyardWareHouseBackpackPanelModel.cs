@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065D1 RID: 26065
+	// Token: 0x0200554F RID: 21839
 	public class DockyardWareHouseBackpackPanelModel : DockyardBackpackPanelModelBase
 	{
 	}

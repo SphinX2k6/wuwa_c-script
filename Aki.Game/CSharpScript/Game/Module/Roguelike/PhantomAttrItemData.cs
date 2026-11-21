@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DE7 RID: 19943
+	// Token: 0x02003DB0 RID: 15792
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomAttrItemData : IPhantomAttrItemData
 	{
-		// Token: 0x17007EBF RID: 32447
-		// (get) Token: 0x0603377B RID: 210811 RVA: 0x00C0659F File Offset: 0x00C0479F
-		// (set) Token: 0x0603377C RID: 210812 RVA: 0x00C065A7 File Offset: 0x00C047A7
+		// Token: 0x1700526F RID: 21103
+		// (get) Token: 0x060285E6 RID: 165350 RVA: 0x00B4FAAF File Offset: 0x00B4DCAF
+		// (set) Token: 0x060285E7 RID: 165351 RVA: 0x00B4FAB7 File Offset: 0x00B4DCB7
 		public AffixEntry AffixEntry { get; set; }
 
-		// Token: 0x17007EC0 RID: 32448
-		// (get) Token: 0x0603377D RID: 210813 RVA: 0x00C065B0 File Offset: 0x00C047B0
-		// (set) Token: 0x0603377E RID: 210814 RVA: 0x00C065B8 File Offset: 0x00C047B8
+		// Token: 0x17005270 RID: 21104
+		// (get) Token: 0x060285E8 RID: 165352 RVA: 0x00B4FAC0 File Offset: 0x00B4DCC0
+		// (set) Token: 0x060285E9 RID: 165353 RVA: 0x00B4FAC8 File Offset: 0x00B4DCC8
 		public RoguelikeInfo RoguelikeInfo { get; set; }
 	}
 }

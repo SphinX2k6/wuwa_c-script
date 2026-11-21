@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001078 RID: 4216
+// Token: 0x0200052C RID: 1324
 public class GuessJokerSkillActivateItem : UiPanelBase
 {
-	// Token: 0x06006CF2 RID: 27890 RVA: 0x001610F0 File Offset: 0x0015F2F0
+	// Token: 0x06004087 RID: 16519 RVA: 0x00169A24 File Offset: 0x00167C24
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,12 +20,12 @@ public class GuessJokerSkillActivateItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006CF3 RID: 27891 RVA: 0x00161176 File Offset: 0x0015F376
+	// Token: 0x06004088 RID: 16520 RVA: 0x00169AAA File Offset: 0x00167CAA
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06006CF4 RID: 27892 RVA: 0x00161178 File Offset: 0x0015F378
+	// Token: 0x06004089 RID: 16521 RVA: 0x00169AAC File Offset: 0x00167CAC
 	public void Refresh(int skillId)
 	{
 		JokerSkill? jokerSkill = GuessJokerConfig.Instance.GetJokerSkill(skillId);
@@ -54,22 +54,22 @@ public class GuessJokerSkillActivateItem : UiPanelBase
 		base.SetTextureByPath(path, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x02007673 RID: 30323
+	// Token: 0x02006807 RID: 26631
 	private static class EComponentDefine
 	{
-		// Token: 0x0402717E RID: 160126
+		// Token: 0x040224C9 RID: 140489
 		public const int MaskButton = 0;
 
-		// Token: 0x0402717F RID: 160127
+		// Token: 0x040224CA RID: 140490
 		public const int RoleTexture = 1;
 
-		// Token: 0x04027180 RID: 160128
+		// Token: 0x040224CB RID: 140491
 		public const int SkillIconTexture = 2;
 
-		// Token: 0x04027181 RID: 160129
+		// Token: 0x040224CC RID: 140492
 		public const int DescText = 3;
 
-		// Token: 0x04027182 RID: 160130
+		// Token: 0x040224CD RID: 140493
 		public const int ValueText = 4;
 	}
 }

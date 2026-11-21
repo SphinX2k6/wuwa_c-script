@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002584 RID: 9604
+	// Token: 0x02002832 RID: 10290
 	public class IVisualNovelTransitionLocation : IVisualNovelTransitionConfigBase
 	{
-		// Token: 0x0600D790 RID: 55184 RVA: 0x00201AB2 File Offset: 0x001FFCB2
-		[NullableContext(1)]
+		// Token: 0x0600E50A RID: 58634 RVA: 0x0021D7E6 File Offset: 0x0021B9E6
 		public static IVisualNovelTransitionLocation Create(IVisualNovelTransitionLocation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E4A RID: 15946
-		// (get) Token: 0x0600D791 RID: 55185 RVA: 0x00201AD1 File Offset: 0x001FFCD1
+		// Token: 0x17004154 RID: 16724
+		// (get) Token: 0x0600E50B RID: 58635 RVA: 0x0021D805 File Offset: 0x0021BA05
 		public override EVisualNovelTransitionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E4B RID: 15947
-		// (get) Token: 0x0600D792 RID: 55186 RVA: 0x00201ADE File Offset: 0x001FFCDE
+		// Token: 0x17004155 RID: 16725
+		// (get) Token: 0x0600E50C RID: 58636 RVA: 0x0021D812 File Offset: 0x0021BA12
 		public virtual int LocationId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E4C RID: 15948
-		// (get) Token: 0x0600D793 RID: 55187 RVA: 0x00201AEC File Offset: 0x001FFCEC
+		// Token: 0x17004156 RID: 16726
+		// (get) Token: 0x0600E50D RID: 58637 RVA: 0x0021D820 File Offset: 0x0021BA20
 		public virtual int? TransitionBackgroundId
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007748 RID: 30536
+		// Token: 0x04007DAE RID: 32174
 		private IVisualNovelTransitionLocation Instance;
 	}
 }

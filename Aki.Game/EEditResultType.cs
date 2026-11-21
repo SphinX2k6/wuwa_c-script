@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001BDE RID: 7134
+// Token: 0x0200109D RID: 4253
 public enum EEditResultType
 {
-	// Token: 0x0400613E RID: 24894
+	// Token: 0x0400620D RID: 25101
 	None,
-	// Token: 0x0400613F RID: 24895
+	// Token: 0x0400620E RID: 25102
 	GoUp,
-	// Token: 0x04006140 RID: 24896
+	// Token: 0x0400620F RID: 25103
 	GoDown,
-	// Token: 0x04006141 RID: 24897
+	// Token: 0x04006210 RID: 25104
 	InOtherSlot,
-	// Token: 0x04006142 RID: 24898
+	// Token: 0x04006211 RID: 25105
 	SelectedNone
 }

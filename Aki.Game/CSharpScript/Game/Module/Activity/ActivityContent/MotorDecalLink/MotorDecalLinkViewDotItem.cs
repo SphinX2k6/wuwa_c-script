@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 {
-	// Token: 0x02006443 RID: 25667
+	// Token: 0x020053C1 RID: 21441
 	public class MotorDecalLinkViewDotItem : GridProxyAbstract<bool>
 	{
-		// Token: 0x06040842 RID: 264258 RVA: 0x00F9E05E File Offset: 0x00F9C25E
+		// Token: 0x06035503 RID: 218371 RVA: 0x00EE4FDA File Offset: 0x00EE31DA
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			};
 		}
 
-		// Token: 0x06040843 RID: 264259 RVA: 0x00F9E081 File Offset: 0x00F9C281
+		// Token: 0x06035504 RID: 218372 RVA: 0x00EE4FFD File Offset: 0x00EE31FD
 		public override void Refresh(bool data, bool isSelected, int gridIndex)
 		{
 			UUIItem item = base.GetItem(0);

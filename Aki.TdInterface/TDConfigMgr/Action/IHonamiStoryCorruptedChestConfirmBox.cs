@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B13 RID: 6931
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CC2 RID: 7362
 	public class IHonamiStoryCorruptedChestConfirmBox : IInteractionConfirmBoxType
 	{
-		// Token: 0x0600946A RID: 37994 RVA: 0x00157B58 File Offset: 0x00155D58
+		// Token: 0x06009C54 RID: 40020 RVA: 0x00168834 File Offset: 0x00166A34
 		private IHonamiStoryCorruptedChestConfirmBox_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600946B RID: 37995 RVA: 0x00157B90 File Offset: 0x00155D90
+		// Token: 0x06009C55 RID: 40021 RVA: 0x0016886C File Offset: 0x00166A6C
 		public static IHonamiStoryCorruptedChestConfirmBox Create([Nullable(2)] IHonamiStoryCorruptedChestConfirmBox instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600946C RID: 37996 RVA: 0x00157BA3 File Offset: 0x00155DA3
+		// Token: 0x06009C56 RID: 40022 RVA: 0x0016887F File Offset: 0x00166A7F
 		public static IHonamiStoryCorruptedChestConfirmBox CreateFromSetValue([Nullable(2)] IHonamiStoryCorruptedChestConfirmBox_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600946D RID: 37997 RVA: 0x00157BB6 File Offset: 0x00155DB6
+		// Token: 0x06009C57 RID: 40023 RVA: 0x00168892 File Offset: 0x00166A92
 		public new IHonamiStoryCorruptedChestConfirmBox_SetValue ToSetValue()
 		{
 			return new IHonamiStoryCorruptedChestConfirmBox_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EEE RID: 12014
-		// (get) Token: 0x0600946E RID: 37998 RVA: 0x00157BD5 File Offset: 0x00155DD5
-		// (set) Token: 0x0600946F RID: 37999 RVA: 0x00157C00 File Offset: 0x00155E00
+		// Token: 0x17003114 RID: 12564
+		// (get) Token: 0x06009C58 RID: 40024 RVA: 0x001688B1 File Offset: 0x00166AB1
+		// (set) Token: 0x06009C59 RID: 40025 RVA: 0x001688DC File Offset: 0x00166ADC
 		public override EInteractionConfirmBoxType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EEF RID: 12015
-		// (get) Token: 0x06009470 RID: 38000 RVA: 0x00157C0E File Offset: 0x00155E0E
-		// (set) Token: 0x06009471 RID: 38001 RVA: 0x00157C39 File Offset: 0x00155E39
+		// Token: 0x17003115 RID: 12565
+		// (get) Token: 0x06009C5A RID: 40026 RVA: 0x001688EA File Offset: 0x00166AEA
+		// (set) Token: 0x06009C5B RID: 40027 RVA: 0x00168915 File Offset: 0x00166B15
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AFF RID: 23295
+		// Token: 0x04005F9D RID: 24477
 		[Nullable(2)]
 		protected new IHonamiStoryCorruptedChestConfirmBox FbInstance;
 
-		// Token: 0x04005B00 RID: 23296
+		// Token: 0x04005F9E RID: 24478
 		[Nullable(2)]
 		protected new IHonamiStoryCorruptedChestConfirmBox_SetValue PocoInterface;
 	}

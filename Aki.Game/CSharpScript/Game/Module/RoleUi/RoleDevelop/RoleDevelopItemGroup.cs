@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D11 RID: 19729
+	// Token: 0x02003CC8 RID: 15560
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopItemGroup : IRoleDevelopItemGroup
 	{
-		// Token: 0x17007DED RID: 32237
-		// (get) Token: 0x06032FDB RID: 208859 RVA: 0x00BE1AE1 File Offset: 0x00BDFCE1
-		// (set) Token: 0x06032FDC RID: 208860 RVA: 0x00BE1AE9 File Offset: 0x00BDFCE9
+		// Token: 0x17005197 RID: 20887
+		// (get) Token: 0x06027DB9 RID: 163257 RVA: 0x00B27417 File Offset: 0x00B25617
+		// (set) Token: 0x06027DBA RID: 163258 RVA: 0x00B2741F File Offset: 0x00B2561F
 		public EItemMaterialType Type { get; set; }
 
-		// Token: 0x17007DEE RID: 32238
-		// (get) Token: 0x06032FDD RID: 208861 RVA: 0x00BE1AF2 File Offset: 0x00BDFCF2
-		// (set) Token: 0x06032FDE RID: 208862 RVA: 0x00BE1AFA File Offset: 0x00BDFCFA
+		// Token: 0x17005198 RID: 20888
+		// (get) Token: 0x06027DBB RID: 163259 RVA: 0x00B27428 File Offset: 0x00B25628
+		// (set) Token: 0x06027DBC RID: 163260 RVA: 0x00B27430 File Offset: 0x00B25630
 		public List<RoleDevelopNeedItem> Items { get; set; }
 	}
 }

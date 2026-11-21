@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A07 RID: 10759
+// Token: 0x02001F82 RID: 8066
 [NullableContext(2)]
 [Nullable(0)]
 public class ShowerMainView : UiTickViewBase
 {
-	// Token: 0x06016544 RID: 91460 RVA: 0x005A6CBF File Offset: 0x005A4EBF
+	// Token: 0x06013F4B RID: 81739 RVA: 0x005D1C97 File Offset: 0x005CFE97
 	[NullableContext(1)]
 	public ShowerMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016545 RID: 91461 RVA: 0x005A6CC8 File Offset: 0x005A4EC8
+	// Token: 0x06013F4C RID: 81740 RVA: 0x005D1CA0 File Offset: 0x005CFEA0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class ShowerMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06016546 RID: 91462 RVA: 0x005A6D5C File Offset: 0x005A4F5C
+	// Token: 0x06013F4D RID: 81741 RVA: 0x005D1D34 File Offset: 0x005CFF34
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShowerMainView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -47,13 +47,13 @@ public class ShowerMainView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016547 RID: 91463 RVA: 0x005A6D9F File Offset: 0x005A4F9F
+	// Token: 0x06013F4E RID: 81742 RVA: 0x005D1D77 File Offset: 0x005CFF77
 	protected override void OnBeforeShow()
 	{
 		this.IsFirstPerson = false;
 	}
 
-	// Token: 0x06016548 RID: 91464 RVA: 0x005A6DA8 File Offset: 0x005A4FA8
+	// Token: 0x06013F4F RID: 81743 RVA: 0x005D1D80 File Offset: 0x005CFF80
 	protected override void OnStart()
 	{
 		this.InviteSkillItem.SetPressCallback(delegate
@@ -67,13 +67,13 @@ public class ShowerMainView : UiTickViewBase
 		this.TakePictureSkillItem.SetPressCallback(new Action(this.OnTakePictureButtonClick));
 	}
 
-	// Token: 0x06016549 RID: 91465 RVA: 0x005A6DFA File Offset: 0x005A4FFA
+	// Token: 0x06013F50 RID: 81744 RVA: 0x005D1DD2 File Offset: 0x005CFFD2
 	protected override void OnTick(float delta)
 	{
 		this.ChangeVisionSkillItem.TickSkillCoolDown(delta);
 	}
 
-	// Token: 0x0601654A RID: 91466 RVA: 0x005A6E08 File Offset: 0x005A5008
+	// Token: 0x06013F51 RID: 81745 RVA: 0x005D1DE0 File Offset: 0x005CFFE0
 	private UniTask OnInviteButtonClick()
 	{
 		ShowerMainView.<OnInviteButtonClick>d__11 <OnInviteButtonClick>d__;
@@ -84,7 +84,7 @@ public class ShowerMainView : UiTickViewBase
 		return <OnInviteButtonClick>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601654B RID: 91467 RVA: 0x005A6E4C File Offset: 0x005A504C
+	// Token: 0x06013F52 RID: 81746 RVA: 0x005D1E24 File Offset: 0x005D0024
 	private UniTask OnChangeVisionButtonClick()
 	{
 		ShowerMainView.<OnChangeVisionButtonClick>d__12 <OnChangeVisionButtonClick>d__;
@@ -95,7 +95,7 @@ public class ShowerMainView : UiTickViewBase
 		return <OnChangeVisionButtonClick>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601654C RID: 91468 RVA: 0x005A6E90 File Offset: 0x005A5090
+	// Token: 0x06013F53 RID: 81747 RVA: 0x005D1E68 File Offset: 0x005D0068
 	private void OnTakePictureButtonClick()
 	{
 		PhotoSaveViewParam param = new PhotoSaveViewParam
@@ -112,7 +112,7 @@ public class ShowerMainView : UiTickViewBase
 		PhotographController.Instance.ScreenShot(param);
 	}
 
-	// Token: 0x0601654D RID: 91469 RVA: 0x005A6EE8 File Offset: 0x005A50E8
+	// Token: 0x06013F54 RID: 81748 RVA: 0x005D1EC0 File Offset: 0x005D00C0
 	private UniTask OnCloseButtonClick()
 	{
 		ShowerMainView.<OnCloseButtonClick>d__14 <OnCloseButtonClick>d__;
@@ -123,32 +123,32 @@ public class ShowerMainView : UiTickViewBase
 		return <OnCloseButtonClick>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400A612 RID: 42514
+	// Token: 0x0400A9FC RID: 43516
 	private ShowerSkillButton InviteSkillItem;
 
-	// Token: 0x0400A613 RID: 42515
+	// Token: 0x0400A9FD RID: 43517
 	private ShowerSkillButton ChangeVisionSkillItem;
 
-	// Token: 0x0400A614 RID: 42516
+	// Token: 0x0400A9FE RID: 43518
 	private ShowerSkillButton TakePictureSkillItem;
 
-	// Token: 0x0400A615 RID: 42517
+	// Token: 0x0400A9FF RID: 43519
 	private bool IsFirstPerson;
 
-	// Token: 0x02009044 RID: 36932
+	// Token: 0x0200828B RID: 33419
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402EB6E RID: 191342
+		// Token: 0x0402A266 RID: 172646
 		public const int InviteSkillItem = 0;
 
-		// Token: 0x0402EB6F RID: 191343
+		// Token: 0x0402A267 RID: 172647
 		public const int ChangeVisionSkillItem = 1;
 
-		// Token: 0x0402EB70 RID: 191344
+		// Token: 0x0402A268 RID: 172648
 		public const int TakePictureSkillItem = 2;
 
-		// Token: 0x0402EB71 RID: 191345
+		// Token: 0x0402A269 RID: 172649
 		public const int CloseButton = 3;
 	}
 }

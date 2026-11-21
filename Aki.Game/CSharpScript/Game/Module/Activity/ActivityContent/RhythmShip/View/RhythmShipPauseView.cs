@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200622E RID: 25134
+	// Token: 0x020051AC RID: 20908
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RhythmShipPauseView : UiViewBase
 	{
-		// Token: 0x0603F5F9 RID: 259577 RVA: 0x00F51E64 File Offset: 0x00F50064
+		// Token: 0x060342BA RID: 213690 RVA: 0x00E98DBD File Offset: 0x00E96FBD
 		[NullableContext(1)]
 		public RhythmShipPauseView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F5FA RID: 259578 RVA: 0x00F51E74 File Offset: 0x00F50074
+		// Token: 0x060342BB RID: 213691 RVA: 0x00E98DD0 File Offset: 0x00E96FD0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5FB RID: 259579 RVA: 0x00F51F64 File Offset: 0x00F50164
+		// Token: 0x060342BC RID: 213692 RVA: 0x00E98EC0 File Offset: 0x00E970C0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipPauseView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F5FC RID: 259580 RVA: 0x00F51FA8 File Offset: 0x00F501A8
+		// Token: 0x060342BD RID: 213693 RVA: 0x00E98F04 File Offset: 0x00E97104
 		protected override void OnStart()
 		{
 			base.GetButton(5).RootUIComp.Get().SetUIActive(false);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			rolePanel.RefreshPanel();
 		}
 
-		// Token: 0x0603F5FD RID: 259581 RVA: 0x00F52040 File Offset: 0x00F50240
+		// Token: 0x060342BE RID: 213694 RVA: 0x00E98F9C File Offset: 0x00E9719C
 		private void OnClickExitBtn()
 		{
 			RhythmGameController.Instance.OnStopRhythmGame(true);
@@ -92,28 +92,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipChoseLevelView, param, null);
 		}
 
-		// Token: 0x0603F5FE RID: 259582 RVA: 0x00F520E5 File Offset: 0x00F502E5
+		// Token: 0x060342BF RID: 213695 RVA: 0x00E99041 File Offset: 0x00E97241
 		private void OnClickReStartBtn()
 		{
-			InstanceDungeonEntranceController.Instance.RestartInstanceDungeon().Forget<bool>();
+			InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false).Forget<bool>();
 		}
 
-		// Token: 0x0603F5FF RID: 259583 RVA: 0x00F520F6 File Offset: 0x00F502F6
+		// Token: 0x060342C0 RID: 213696 RVA: 0x00E99053 File Offset: 0x00E97253
 		private void OnClickSetBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipSetView, null, null);
 		}
 
-		// Token: 0x04021169 RID: 135529
+		// Token: 0x0401BA98 RID: 113304
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402116A RID: 135530
+		// Token: 0x0401BA99 RID: 113305
 		private SongDetailPanel SongPanel;
 
-		// Token: 0x0402116B RID: 135531
+		// Token: 0x0401BA9A RID: 113306
 		private RoleDetailPanel RolePanel;
 
-		// Token: 0x0402116C RID: 135532
+		// Token: 0x0401BA9B RID: 113307
 		private ERhythmShipPlanetType PlanetType = ERhythmShipPlanetType.Normal;
 	}
 }

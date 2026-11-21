@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042B3 RID: 17075
+	// Token: 0x0200470F RID: 18191
 	public enum TArcadeGameplay : byte
 	{
-		// Token: 0x0400BF5B RID: 48987
+		// Token: 0x0400C968 RID: 51560
 		NONE,
-		// Token: 0x0400BF5C RID: 48988
+		// Token: 0x0400C969 RID: 51561
 		IArcadeGameplayDropCatch,
-		// Token: 0x0400BF5D RID: 48989
+		// Token: 0x0400C96A RID: 51562
 		IArcadeGameplayTetrisBoardGame
 	}
 }

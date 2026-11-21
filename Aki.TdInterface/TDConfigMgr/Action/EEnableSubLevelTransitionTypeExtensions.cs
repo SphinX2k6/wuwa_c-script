@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200231D RID: 8989
+	// Token: 0x0200258C RID: 9612
 	public static class EEnableSubLevelTransitionTypeExtensions
 	{
-		// Token: 0x0600C481 RID: 50305 RVA: 0x001CAEEC File Offset: 0x001C90EC
+		// Token: 0x0600D050 RID: 53328 RVA: 0x001E2DB4 File Offset: 0x001E0FB4
 		public static string ToEnumString(this EEnableSubLevelTransitionType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C482 RID: 50306 RVA: 0x001CAF14 File Offset: 0x001C9114
+		// Token: 0x0600D051 RID: 53329 RVA: 0x001E2DDC File Offset: 0x001E0FDC
 		public static EEnableSubLevelTransitionType FromString(string name)
 		{
 			EEnableSubLevelTransitionType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C483 RID: 50307 RVA: 0x001CAF3D File Offset: 0x001C913D
+		// Token: 0x0600D052 RID: 53330 RVA: 0x001E2E05 File Offset: 0x001E1005
 		public static bool TryFromString(string name, out EEnableSubLevelTransitionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C484 RID: 50308 RVA: 0x001CAF62 File Offset: 0x001C9162
+		// Token: 0x0600D053 RID: 53331 RVA: 0x001E2E2A File Offset: 0x001E102A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C485 RID: 50309 RVA: 0x001CAF72 File Offset: 0x001C9172
+		// Token: 0x0600D054 RID: 53332 RVA: 0x001E2E3A File Offset: 0x001E103A
 		public static EEnableSubLevelTransitionType[] GetValues()
 		{
 			return new EEnableSubLevelTransitionType[1];
 		}
 
-		// Token: 0x0600C486 RID: 50310 RVA: 0x001CAF7A File Offset: 0x001C917A
+		// Token: 0x0600D055 RID: 53333 RVA: 0x001E2E42 File Offset: 0x001E1042
 		public static string[] GetNames()
 		{
 			return new string[]

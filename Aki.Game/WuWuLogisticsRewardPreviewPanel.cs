@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200166D RID: 5741
+// Token: 0x02000B25 RID: 2853
 [NullableContext(2)]
 [Nullable(0)]
 public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 {
-	// Token: 0x0600A1D6 RID: 41430 RVA: 0x0023BD70 File Offset: 0x00239F70
+	// Token: 0x060075B4 RID: 30132 RVA: 0x00245C0C File Offset: 0x00243E0C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A1D7 RID: 41431 RVA: 0x0023BE24 File Offset: 0x0023A024
+	// Token: 0x060075B5 RID: 30133 RVA: 0x00245CC0 File Offset: 0x00243EC0
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(0), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, true);
@@ -35,7 +35,7 @@ public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 		this.ConfirmQuick.SetFunction(new Action<int>(this.OnClickConfirm));
 	}
 
-	// Token: 0x0600A1D8 RID: 41432 RVA: 0x0023BE85 File Offset: 0x0023A085
+	// Token: 0x060075B6 RID: 30134 RVA: 0x00245D21 File Offset: 0x00243F21
 	public void SetPackConfigId(int packConfigId, WuWuLogisticsActivityData activityData)
 	{
 		this.PackConfigId = packConfigId;
@@ -44,7 +44,7 @@ public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 		this.RefreshConfirmButtonRedPoint();
 	}
 
-	// Token: 0x0600A1D9 RID: 41433 RVA: 0x0023BEA4 File Offset: 0x0023A0A4
+	// Token: 0x060075B7 RID: 30135 RVA: 0x00245D40 File Offset: 0x00243F40
 	private void RefreshContent()
 	{
 		if (this.PackConfigId == 0)
@@ -70,7 +70,7 @@ public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 		this.RefreshState();
 	}
 
-	// Token: 0x0600A1DA RID: 41434 RVA: 0x0023BF28 File Offset: 0x0023A128
+	// Token: 0x060075B8 RID: 30136 RVA: 0x00245DC4 File Offset: 0x00243FC4
 	private void RefreshState()
 	{
 		if (this.ActivityData == null)
@@ -107,7 +107,7 @@ public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 		item3.SetUIActive(!flag);
 	}
 
-	// Token: 0x0600A1DB RID: 41435 RVA: 0x0023BFC6 File Offset: 0x0023A1C6
+	// Token: 0x060075B9 RID: 30137 RVA: 0x00245E62 File Offset: 0x00244062
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid InitGridItem()
 	{
@@ -121,7 +121,7 @@ public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A1DC RID: 41436 RVA: 0x0023BFDF File Offset: 0x0023A1DF
+	// Token: 0x060075BA RID: 30138 RVA: 0x00245E7B File Offset: 0x0024407B
 	private void OnClickConfirm(int data)
 	{
 		if (this.ActivityData == null)
@@ -134,7 +134,7 @@ public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A1DD RID: 41437 RVA: 0x0023C010 File Offset: 0x0023A210
+	// Token: 0x060075BB RID: 30139 RVA: 0x00245EAC File Offset: 0x002440AC
 	public void RefreshConfirmButtonRedPoint()
 	{
 		WuWuLogisticsActivityData activityData = this.ActivityData;
@@ -147,13 +147,13 @@ public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 		confirmQuick.SetRedDotVisible(redDotVisible);
 	}
 
-	// Token: 0x040049BA RID: 18874
+	// Token: 0x04004A60 RID: 19040
 	private int PackConfigId;
 
-	// Token: 0x040049BB RID: 18875
+	// Token: 0x04004A61 RID: 19041
 	private WuWuLogisticsActivityData ActivityData;
 
-	// Token: 0x040049BC RID: 18876
+	// Token: 0x04004A62 RID: 19042
 	[Nullable(new byte[]
 	{
 		2,
@@ -161,6 +161,6 @@ public class WuWuLogisticsRewardPreviewPanel : UiPanelBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x040049BD RID: 18877
+	// Token: 0x04004A63 RID: 19043
 	protected ButtonItem ConfirmQuick;
 }

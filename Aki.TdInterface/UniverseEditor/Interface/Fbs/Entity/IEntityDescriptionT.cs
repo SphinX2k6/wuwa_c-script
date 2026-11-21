@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Editor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047A9 RID: 18345
+	// Token: 0x02004C11 RID: 19473
 	public class IEntityDescriptionT
 	{
-		// Token: 0x170083C0 RID: 33728
-		// (get) Token: 0x0601C4E7 RID: 115943 RVA: 0x00401D4C File Offset: 0x003FFF4C
-		// (set) Token: 0x0601C4E8 RID: 115944 RVA: 0x00401D54 File Offset: 0x003FFF54
+		// Token: 0x17008A01 RID: 35329
+		// (get) Token: 0x0601DCBC RID: 122044 RVA: 0x0042DFE8 File Offset: 0x0042C1E8
+		// (set) Token: 0x0601DCBD RID: 122045 RVA: 0x0042DFF0 File Offset: 0x0042C1F0
 		public string Category { get; set; }
 
-		// Token: 0x170083C1 RID: 33729
-		// (get) Token: 0x0601C4E9 RID: 115945 RVA: 0x00401D5D File Offset: 0x003FFF5D
-		// (set) Token: 0x0601C4EA RID: 115946 RVA: 0x00401D65 File Offset: 0x003FFF65
+		// Token: 0x17008A02 RID: 35330
+		// (get) Token: 0x0601DCBE RID: 122046 RVA: 0x0042DFF9 File Offset: 0x0042C1F9
+		// (set) Token: 0x0601DCBF RID: 122047 RVA: 0x0042E001 File Offset: 0x0042C201
 		public ETdDeveloper Owner { get; set; }
 
-		// Token: 0x170083C2 RID: 33730
-		// (get) Token: 0x0601C4EB RID: 115947 RVA: 0x00401D6E File Offset: 0x003FFF6E
-		// (set) Token: 0x0601C4EC RID: 115948 RVA: 0x00401D76 File Offset: 0x003FFF76
+		// Token: 0x17008A03 RID: 35331
+		// (get) Token: 0x0601DCC0 RID: 122048 RVA: 0x0042E00A File Offset: 0x0042C20A
+		// (set) Token: 0x0601DCC1 RID: 122049 RVA: 0x0042E012 File Offset: 0x0042C212
 		public string Status { get; set; }
 
-		// Token: 0x170083C3 RID: 33731
-		// (get) Token: 0x0601C4ED RID: 115949 RVA: 0x00401D7F File Offset: 0x003FFF7F
-		// (set) Token: 0x0601C4EE RID: 115950 RVA: 0x00401D87 File Offset: 0x003FFF87
+		// Token: 0x17008A04 RID: 35332
+		// (get) Token: 0x0601DCC2 RID: 122050 RVA: 0x0042E01B File Offset: 0x0042C21B
+		// (set) Token: 0x0601DCC3 RID: 122051 RVA: 0x0042E023 File Offset: 0x0042C223
 		public string Description { get; set; }
 
-		// Token: 0x0601C4EF RID: 115951 RVA: 0x00401D90 File Offset: 0x003FFF90
+		// Token: 0x0601DCC4 RID: 122052 RVA: 0x0042E02C File Offset: 0x0042C22C
 		public IEntityDescriptionT()
 		{
 			this.Category = null;

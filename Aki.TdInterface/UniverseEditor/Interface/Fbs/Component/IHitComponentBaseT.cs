@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200538A RID: 21386
+	// Token: 0x02005910 RID: 22800
 	public class IHitComponentBaseT
 	{
-		// Token: 0x17009D28 RID: 40232
-		// (get) Token: 0x06023050 RID: 143440 RVA: 0x004D97D7 File Offset: 0x004D79D7
-		// (set) Token: 0x06023051 RID: 143441 RVA: 0x004D97DF File Offset: 0x004D79DF
+		// Token: 0x1700A560 RID: 42336
+		// (get) Token: 0x06025104 RID: 151812 RVA: 0x005166AB File Offset: 0x005148AB
+		// (set) Token: 0x06025105 RID: 151813 RVA: 0x005166B3 File Offset: 0x005148B3
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009D29 RID: 40233
-		// (get) Token: 0x06023052 RID: 143442 RVA: 0x004D97E8 File Offset: 0x004D79E8
-		// (set) Token: 0x06023053 RID: 143443 RVA: 0x004D97F0 File Offset: 0x004D79F0
+		// Token: 0x1700A561 RID: 42337
+		// (get) Token: 0x06025106 RID: 151814 RVA: 0x005166BC File Offset: 0x005148BC
+		// (set) Token: 0x06025107 RID: 151815 RVA: 0x005166C4 File Offset: 0x005148C4
 		public THitBulletTypeUnion HitBullet { get; set; }
 
-		// Token: 0x17009D2A RID: 40234
-		// (get) Token: 0x06023054 RID: 143444 RVA: 0x004D97F9 File Offset: 0x004D79F9
-		// (set) Token: 0x06023055 RID: 143445 RVA: 0x004D9801 File Offset: 0x004D7A01
+		// Token: 0x1700A562 RID: 42338
+		// (get) Token: 0x06025108 RID: 151816 RVA: 0x005166CD File Offset: 0x005148CD
+		// (set) Token: 0x06025109 RID: 151817 RVA: 0x005166D5 File Offset: 0x005148D5
 		public IHitTimeScaleRatioT AttackerHitTimeScaleRatio { get; set; }
 
-		// Token: 0x17009D2B RID: 40235
-		// (get) Token: 0x06023056 RID: 143446 RVA: 0x004D980A File Offset: 0x004D7A0A
-		// (set) Token: 0x06023057 RID: 143447 RVA: 0x004D9812 File Offset: 0x004D7A12
+		// Token: 0x1700A563 RID: 42339
+		// (get) Token: 0x0602510A RID: 151818 RVA: 0x005166DE File Offset: 0x005148DE
+		// (set) Token: 0x0602510B RID: 151819 RVA: 0x005166E6 File Offset: 0x005148E6
 		public IHitTimeScaleRatioT VictimHitTimeScaleRatio { get; set; }
 
-		// Token: 0x17009D2C RID: 40236
-		// (get) Token: 0x06023058 RID: 143448 RVA: 0x004D981B File Offset: 0x004D7A1B
-		// (set) Token: 0x06023059 RID: 143449 RVA: 0x004D9823 File Offset: 0x004D7A23
+		// Token: 0x1700A564 RID: 42340
+		// (get) Token: 0x0602510C RID: 151820 RVA: 0x005166EF File Offset: 0x005148EF
+		// (set) Token: 0x0602510D RID: 151821 RVA: 0x005166F7 File Offset: 0x005148F7
 		public List<IAimPartT> AimParts { get; set; }
 
-		// Token: 0x17009D2D RID: 40237
-		// (get) Token: 0x0602305A RID: 143450 RVA: 0x004D982C File Offset: 0x004D7A2C
-		// (set) Token: 0x0602305B RID: 143451 RVA: 0x004D9834 File Offset: 0x004D7A34
+		// Token: 0x1700A565 RID: 42341
+		// (get) Token: 0x0602510E RID: 151822 RVA: 0x00516700 File Offset: 0x00514900
+		// (set) Token: 0x0602510F RID: 151823 RVA: 0x00516708 File Offset: 0x00514908
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602305C RID: 143452 RVA: 0x004D983D File Offset: 0x004D7A3D
+		// Token: 0x06025110 RID: 151824 RVA: 0x00516711 File Offset: 0x00514911
 		public IHitComponentBaseT()
 		{
 			this.Disabled = false;

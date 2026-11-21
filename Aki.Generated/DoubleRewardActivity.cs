@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BF8 RID: 3064
+	// Token: 0x02000CDA RID: 3290
 	public struct DoubleRewardActivity : IFlatbufferObject
 	{
-		// Token: 0x17000CE3 RID: 3299
-		// (get) Token: 0x060062E0 RID: 25312 RVA: 0x00214BE8 File Offset: 0x00212DE8
+		// Token: 0x17000D2E RID: 3374
+		// (get) Token: 0x060068BE RID: 26814 RVA: 0x002342A0 File Offset: 0x002324A0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060062E1 RID: 25313 RVA: 0x00214BF5 File Offset: 0x00212DF5
+		// Token: 0x060068BF RID: 26815 RVA: 0x002342AD File Offset: 0x002324AD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060062E2 RID: 25314 RVA: 0x00214BFC File Offset: 0x00212DFC
+		// Token: 0x060068C0 RID: 26816 RVA: 0x002342B4 File Offset: 0x002324B4
 		public static DoubleRewardActivity GetRootAsDoubleRewardActivity(ByteBuffer _bb)
 		{
 			return DoubleRewardActivity.GetRootAsDoubleRewardActivity(_bb, default(DoubleRewardActivity));
 		}
 
-		// Token: 0x060062E3 RID: 25315 RVA: 0x00214C18 File Offset: 0x00212E18
+		// Token: 0x060068C1 RID: 26817 RVA: 0x002342D0 File Offset: 0x002324D0
 		public static DoubleRewardActivity GetRootAsDoubleRewardActivity(ByteBuffer _bb, DoubleRewardActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060062E4 RID: 25316 RVA: 0x00214C35 File Offset: 0x00212E35
+		// Token: 0x060068C2 RID: 26818 RVA: 0x002342ED File Offset: 0x002324ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060062E5 RID: 25317 RVA: 0x00214C44 File Offset: 0x00212E44
+		// Token: 0x060068C3 RID: 26819 RVA: 0x002342FC File Offset: 0x002324FC
 		public DoubleRewardActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000CE4 RID: 3300
-		// (get) Token: 0x060062E6 RID: 25318 RVA: 0x00214C54 File Offset: 0x00212E54
+		// Token: 0x17000D2F RID: 3375
+		// (get) Token: 0x060068C4 RID: 26820 RVA: 0x0023430C File Offset: 0x0023250C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000CE5 RID: 3301
-		// (get) Token: 0x060062E7 RID: 25319 RVA: 0x00214C90 File Offset: 0x00212E90
+		// Token: 0x17000D30 RID: 3376
+		// (get) Token: 0x060068C5 RID: 26821 RVA: 0x00234348 File Offset: 0x00232548
 		public int Type
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000CE6 RID: 3302
-		// (get) Token: 0x060062E8 RID: 25320 RVA: 0x00214CCC File Offset: 0x00212ECC
+		// Token: 0x17000D31 RID: 3377
+		// (get) Token: 0x060068C6 RID: 26822 RVA: 0x00234384 File Offset: 0x00232584
 		public int Count
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000CE7 RID: 3303
-		// (get) Token: 0x060062E9 RID: 25321 RVA: 0x00214D08 File Offset: 0x00212F08
+		// Token: 0x17000D32 RID: 3378
+		// (get) Token: 0x060068C7 RID: 26823 RVA: 0x002343C0 File Offset: 0x002325C0
 		public int UpRate
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000CE8 RID: 3304
-		// (get) Token: 0x060062EA RID: 25322 RVA: 0x00214D48 File Offset: 0x00212F48
+		// Token: 0x17000D33 RID: 3379
+		// (get) Token: 0x060068C8 RID: 26824 RVA: 0x00234400 File Offset: 0x00232600
 		public string Prefab
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060062EB RID: 25323 RVA: 0x00214D80 File Offset: 0x00212F80
+		// Token: 0x060068C9 RID: 26825 RVA: 0x00234438 File Offset: 0x00232638
 		public Span<byte> GetPrefabBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x060062EC RID: 25324 RVA: 0x00214D90 File Offset: 0x00212F90
+		// Token: 0x060068CA RID: 26826 RVA: 0x00234448 File Offset: 0x00232648
 		public byte[] GetPrefabArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004C25 RID: 19493
+		// Token: 0x04005207 RID: 20999
 		private Table __p;
 	}
 }

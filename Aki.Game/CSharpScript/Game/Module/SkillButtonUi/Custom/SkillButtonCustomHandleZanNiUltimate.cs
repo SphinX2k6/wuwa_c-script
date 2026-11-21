@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Reflection;
 
 namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 {
-	// Token: 0x02004C21 RID: 19489
+	// Token: 0x02003BD2 RID: 15314
 	public class SkillButtonCustomHandleZanNiUltimate : SkillButtonCustomHandleBase
 	{
-		// Token: 0x06032717 RID: 206615 RVA: 0x00BC11C3 File Offset: 0x00BBF3C3
+		// Token: 0x060274CA RID: 160970 RVA: 0x00B05E03 File Offset: 0x00B04003
 		protected override void OnInit()
 		{
 			if (this.SkillButtonData == null)
@@ -16,7 +15,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			this.SkillButtonData.HideCoolDownTextCustom = true;
 		}
 
-		// Token: 0x06032718 RID: 206616 RVA: 0x00BC11DC File Offset: 0x00BBF3DC
+		// Token: 0x060274CB RID: 160971 RVA: 0x00B05E1C File Offset: 0x00B0401C
 		public override void Refresh()
 		{
 			if (this.SkillButtonData == null)
@@ -50,18 +49,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 					this.EnableModifyMark = true;
 				}
 				ActiveBuffInternal buffById = buffComponent.GetBuffById(this.BuffIds[0]);
-				object obj;
-				if (buffById == null)
-				{
-					obj = null;
-				}
-				else
-				{
-					PropertyInfo property = buffById.GetType().GetProperty("Duration");
-					obj = ((property != null) ? property.GetValue(buffById) : null);
-				}
-				int? num = obj as int?;
-				this.SkillButtonData.TotalCoolDownCustom = num.GetValueOrDefault();
+				this.SkillButtonData.TotalCoolDownCustom = (int)((buffById != null) ? buffById.Duration : 0f);
 				return;
 			}
 			this.SkillButtonData.TotalCoolDownCustom = 0;
@@ -72,7 +60,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			}
 		}
 
-		// Token: 0x06032719 RID: 206617 RVA: 0x00BC1308 File Offset: 0x00BBF508
+		// Token: 0x060274CC RID: 160972 RVA: 0x00B05F20 File Offset: 0x00B04120
 		public override void RefreshByTagChanged()
 		{
 			this.Refresh();

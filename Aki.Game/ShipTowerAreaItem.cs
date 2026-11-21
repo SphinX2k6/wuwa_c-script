@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200299B RID: 10651
+// Token: 0x02001F16 RID: 7958
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ShipTowerAreaItem : GridProxyAbstract<ShipTowerAreaItemData>
 {
-	// Token: 0x06016146 RID: 90438 RVA: 0x005952EC File Offset: 0x005934EC
+	// Token: 0x06013B4C RID: 80716 RVA: 0x005C02AC File Offset: 0x005BE4AC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class ShipTowerAreaItem : GridProxyAbstract<ShipTowerAreaItemData>
 		};
 	}
 
-	// Token: 0x06016147 RID: 90439 RVA: 0x005953AC File Offset: 0x005935AC
+	// Token: 0x06013B4D RID: 80717 RVA: 0x005C036C File Offset: 0x005BE56C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerAreaItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -44,13 +44,13 @@ public class ShipTowerAreaItem : GridProxyAbstract<ShipTowerAreaItemData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016148 RID: 90440 RVA: 0x005953EF File Offset: 0x005935EF
+	// Token: 0x06013B4E RID: 80718 RVA: 0x005C03AF File Offset: 0x005BE5AF
 	protected override void OnStart()
 	{
 		this.GetToggleRoot().bLockStateOnSelect = true;
 	}
 
-	// Token: 0x06016149 RID: 90441 RVA: 0x00595400 File Offset: 0x00593600
+	// Token: 0x06013B4F RID: 80719 RVA: 0x005C03C0 File Offset: 0x005BE5C0
 	public override void Refresh(ShipTowerAreaItemData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -82,7 +82,7 @@ public class ShipTowerAreaItem : GridProxyAbstract<ShipTowerAreaItemData>
 		item.SetUIActive(data.IsRedPoint.GetValueOrDefault());
 	}
 
-	// Token: 0x0601614A RID: 90442 RVA: 0x005954A0 File Offset: 0x005936A0
+	// Token: 0x06013B50 RID: 80720 RVA: 0x005C0460 File Offset: 0x005BE660
 	private void OnClickToggleRoot(EToggleState check)
 	{
 		if (check == EToggleState.ETT_Checked)
@@ -96,7 +96,7 @@ public class ShipTowerAreaItem : GridProxyAbstract<ShipTowerAreaItemData>
 		}
 	}
 
-	// Token: 0x0601614B RID: 90443 RVA: 0x005954C3 File Offset: 0x005936C3
+	// Token: 0x06013B51 RID: 80721 RVA: 0x005C0483 File Offset: 0x005BE683
 	public override void OnSelected(bool fireEvent)
 	{
 		this.GetToggleRoot().SetToggleState(EToggleState.ETT_Checked, false, false, false);
@@ -108,22 +108,22 @@ public class ShipTowerAreaItem : GridProxyAbstract<ShipTowerAreaItemData>
 		clickCallBack(this.ItemData);
 	}
 
-	// Token: 0x0601614C RID: 90444 RVA: 0x005954EB File Offset: 0x005936EB
+	// Token: 0x06013B52 RID: 80722 RVA: 0x005C04AB File Offset: 0x005BE6AB
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.GetToggleRoot().SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0601614D RID: 90445 RVA: 0x005954FD File Offset: 0x005936FD
+	// Token: 0x06013B53 RID: 80723 RVA: 0x005C04BD File Offset: 0x005BE6BD
 	private UUIExtendToggle GetToggleRoot()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0400A498 RID: 42136
+	// Token: 0x0400A882 RID: 43138
 	private ShipTowerAreaItemData ItemData;
 
-	// Token: 0x0400A499 RID: 42137
+	// Token: 0x0400A883 RID: 43139
 	[Nullable(new byte[]
 	{
 		2,
@@ -131,26 +131,26 @@ public class ShipTowerAreaItem : GridProxyAbstract<ShipTowerAreaItemData>
 	})]
 	public Action<ShipTowerAreaItemData> ClickCallBack;
 
-	// Token: 0x02008F9F RID: 36767
+	// Token: 0x020081E8 RID: 33256
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E84A RID: 190538
+		// Token: 0x04029F49 RID: 171849
 		public const int ToggleRoot = 0;
 
-		// Token: 0x0402E84B RID: 190539
+		// Token: 0x04029F4A RID: 171850
 		public const int TextName = 1;
 
-		// Token: 0x0402E84C RID: 190540
+		// Token: 0x04029F4B RID: 171851
 		public const int TextDesc = 2;
 
-		// Token: 0x0402E84D RID: 190541
+		// Token: 0x04029F4C RID: 171852
 		public const int TextTimeContent = 3;
 
-		// Token: 0x0402E84E RID: 190542
+		// Token: 0x04029F4D RID: 171853
 		public const int SpriteFinish = 4;
 
-		// Token: 0x0402E84F RID: 190543
+		// Token: 0x04029F4E RID: 171854
 		public const int ItemRedPoint = 5;
 	}
 }

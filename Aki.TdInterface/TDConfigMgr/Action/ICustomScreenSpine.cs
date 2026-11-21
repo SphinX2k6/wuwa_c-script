@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001952 RID: 6482
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001ADD RID: 6877
 	public class ICustomScreenSpine : ICustomScreenTypeBase
 	{
-		// Token: 0x06008ADF RID: 35551 RVA: 0x00146D08 File Offset: 0x00144F08
+		// Token: 0x06009213 RID: 37395 RVA: 0x00156704 File Offset: 0x00154904
 		private ICustomScreenSpine_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008AE0 RID: 35552 RVA: 0x00146D40 File Offset: 0x00144F40
+		// Token: 0x06009214 RID: 37396 RVA: 0x0015673C File Offset: 0x0015493C
 		public static ICustomScreenSpine Create([Nullable(2)] ICustomScreenSpine instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008AE1 RID: 35553 RVA: 0x00146D53 File Offset: 0x00144F53
+		// Token: 0x06009215 RID: 37397 RVA: 0x0015674F File Offset: 0x0015494F
 		public static ICustomScreenSpine CreateFromSetValue([Nullable(2)] ICustomScreenSpine_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008AE2 RID: 35554 RVA: 0x00146D66 File Offset: 0x00144F66
+		// Token: 0x06009216 RID: 37398 RVA: 0x00156762 File Offset: 0x00154962
 		public new ICustomScreenSpine_SetValue ToSetValue()
 		{
 			return new ICustomScreenSpine_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CC9 RID: 11465
-		// (get) Token: 0x06008AE3 RID: 35555 RVA: 0x00146D85 File Offset: 0x00144F85
-		// (set) Token: 0x06008AE4 RID: 35556 RVA: 0x00146DB0 File Offset: 0x00144FB0
+		// Token: 0x17002ECA RID: 11978
+		// (get) Token: 0x06009217 RID: 37399 RVA: 0x00156781 File Offset: 0x00154981
+		// (set) Token: 0x06009218 RID: 37400 RVA: 0x001567AC File Offset: 0x001549AC
 		public override ECustomScreenType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CCA RID: 11466
-		// (get) Token: 0x06008AE5 RID: 35557 RVA: 0x00146DBE File Offset: 0x00144FBE
-		// (set) Token: 0x06008AE6 RID: 35558 RVA: 0x00146DE9 File Offset: 0x00144FE9
+		// Token: 0x17002ECB RID: 11979
+		// (get) Token: 0x06009219 RID: 37401 RVA: 0x001567BA File Offset: 0x001549BA
+		// (set) Token: 0x0600921A RID: 37402 RVA: 0x001567E5 File Offset: 0x001549E5
 		public virtual int SpineId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056B8 RID: 22200
+		// Token: 0x04005B0B RID: 23307
 		[Nullable(2)]
 		protected new ICustomScreenSpine FbInstance;
 
-		// Token: 0x040056B9 RID: 22201
+		// Token: 0x04005B0C RID: 23308
 		[Nullable(2)]
 		protected new ICustomScreenSpine_SetValue PocoInterface;
 	}

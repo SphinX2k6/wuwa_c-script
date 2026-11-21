@@ -12,16 +12,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleMorph.View
 {
-	// Token: 0x02004D68 RID: 19816
+	// Token: 0x02003D31 RID: 15665
 	public class GuYingXiongKaiView : UiTickViewBase
 	{
-		// Token: 0x0603339A RID: 209818 RVA: 0x00BF228A File Offset: 0x00BF048A
+		// Token: 0x06028208 RID: 164360 RVA: 0x00B3B4AE File Offset: 0x00B396AE
 		[NullableContext(1)]
 		public GuYingXiongKaiView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603339B RID: 209819 RVA: 0x00BF22A0 File Offset: 0x00BF04A0
+		// Token: 0x06028209 RID: 164361 RVA: 0x00B3B4C4 File Offset: 0x00B396C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603339C RID: 209820 RVA: 0x00BF240C File Offset: 0x00BF060C
+		// Token: 0x0602820A RID: 164362 RVA: 0x00B3B630 File Offset: 0x00B39830
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GuYingXiongKaiView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603339D RID: 209821 RVA: 0x00BF2450 File Offset: 0x00BF0650
+		// Token: 0x0602820B RID: 164363 RVA: 0x00B3B674 File Offset: 0x00B39874
 		public UniTask NewAllSkillItems()
 		{
 			GuYingXiongKaiView.<NewAllSkillItems>d__10 <NewAllSkillItems>d__;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			return <NewAllSkillItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603339E RID: 209822 RVA: 0x00BF2494 File Offset: 0x00BF0694
+		// Token: 0x0602820C RID: 164364 RVA: 0x00B3B6B8 File Offset: 0x00B398B8
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			return <NewSkillItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603339F RID: 209823 RVA: 0x00BF24E8 File Offset: 0x00BF06E8
+		// Token: 0x0602820D RID: 164365 RVA: 0x00B3B70C File Offset: 0x00B3990C
 		protected override void OnAddEventListener()
 		{
 			this.BtnAttack = base.GetButton(5);
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			}
 		}
 
-		// Token: 0x060333A0 RID: 209824 RVA: 0x00BF255E File Offset: 0x00BF075E
+		// Token: 0x0602820E RID: 164366 RVA: 0x00B3B782 File Offset: 0x00B39982
 		protected override void OnRemoveEventListener()
 		{
 			if (this.BtnAttack != null)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			}
 		}
 
-		// Token: 0x060333A1 RID: 209825 RVA: 0x00BF2598 File Offset: 0x00BF0798
+		// Token: 0x0602820F RID: 164367 RVA: 0x00B3B7BC File Offset: 0x00B399BC
 		protected override void OnBeforeDestroy()
 		{
 			foreach (GuYingXiongKaiSkillItem guYingXiongKaiSkillItem in this.SkillItemList)
@@ -129,31 +129,31 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			this.BtnAttack = null;
 		}
 
-		// Token: 0x060333A2 RID: 209826 RVA: 0x00BF25FC File Offset: 0x00BF07FC
+		// Token: 0x06028210 RID: 164368 RVA: 0x00B3B820 File Offset: 0x00B39A20
 		private void OnClickClose()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.ChallengeAgain, "玩法放弃");
 		}
 
-		// Token: 0x060333A3 RID: 209827 RVA: 0x00BF2613 File Offset: 0x00BF0813
+		// Token: 0x06028211 RID: 164369 RVA: 0x00B3B837 File Offset: 0x00B39A37
 		private void OnAttackButtonPressed()
 		{
 			InputDistributeController.Instance.InputAction("攻击", true);
 		}
 
-		// Token: 0x060333A4 RID: 209828 RVA: 0x00BF2626 File Offset: 0x00BF0826
+		// Token: 0x06028212 RID: 164370 RVA: 0x00B3B84A File Offset: 0x00B39A4A
 		private void OnAttackButtonCancel()
 		{
 			InputDistributeController.Instance.InputAction("攻击", false);
 		}
 
-		// Token: 0x060333A5 RID: 209829 RVA: 0x00BF2639 File Offset: 0x00BF0839
+		// Token: 0x06028213 RID: 164371 RVA: 0x00B3B85D File Offset: 0x00B39A5D
 		private void OnAttackButtonReleased()
 		{
 			InputDistributeController.Instance.InputAction("攻击", false);
 		}
 
-		// Token: 0x060333A6 RID: 209830 RVA: 0x00BF264C File Offset: 0x00BF084C
+		// Token: 0x06028214 RID: 164372 RVA: 0x00B3B870 File Offset: 0x00B39A70
 		protected override void OnTick(float delta)
 		{
 			foreach (GuYingXiongKaiSkillItem guYingXiongKaiSkillItem in this.SkillItemList)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			this.OnTickGetCursorInput();
 		}
 
-		// Token: 0x060333A7 RID: 209831 RVA: 0x00BF26A4 File Offset: 0x00BF08A4
+		// Token: 0x06028215 RID: 164373 RVA: 0x00B3B8C8 File Offset: 0x00B39AC8
 		private void OnTickGetCursorInput()
 		{
 			if (!Info.Instance.IsInKeyBoard())
@@ -235,65 +235,65 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			}
 		}
 
-		// Token: 0x0401B31D RID: 111389
+		// Token: 0x04015CEF RID: 89327
 		[Nullable(1)]
 		private readonly List<GuYingXiongKaiSkillItem> SkillItemList = new List<GuYingXiongKaiSkillItem>();
 
-		// Token: 0x0401B31E RID: 111390
+		// Token: 0x04015CF0 RID: 89328
 		[Nullable(2)]
 		private UUIButtonComponent BtnAttack;
 
-		// Token: 0x0401B31F RID: 111391
+		// Token: 0x04015CF1 RID: 89329
 		private const float SECTOR_ANGLE_SIZE = 0.022222223f;
 
-		// Token: 0x0401B320 RID: 111392
+		// Token: 0x04015CF2 RID: 89330
 		private const float HALF_SECTOR_ANGLE_SIZE = 22.5f;
 
-		// Token: 0x0401B321 RID: 111393
+		// Token: 0x04015CF3 RID: 89331
 		private const int SECTOR_NUM = 8;
 
-		// Token: 0x0401B322 RID: 111394
+		// Token: 0x04015CF4 RID: 89332
 		private GuYingXiongKaiView.ESectorScreen LastSector;
 
-		// Token: 0x0200AED9 RID: 44761
+		// Token: 0x0200990C RID: 39180
 		private enum EChildType
 		{
-			// Token: 0x040351A2 RID: 217506
+			// Token: 0x0402FBD3 RID: 195539
 			LeftContainer,
-			// Token: 0x040351A3 RID: 217507
+			// Token: 0x0402FBD4 RID: 195540
 			Item1,
-			// Token: 0x040351A4 RID: 217508
+			// Token: 0x0402FBD5 RID: 195541
 			Item2,
-			// Token: 0x040351A5 RID: 217509
+			// Token: 0x0402FBD6 RID: 195542
 			Item3,
-			// Token: 0x040351A6 RID: 217510
+			// Token: 0x0402FBD7 RID: 195543
 			Item4,
-			// Token: 0x040351A7 RID: 217511
+			// Token: 0x0402FBD8 RID: 195544
 			BtnReset,
-			// Token: 0x040351A8 RID: 217512
+			// Token: 0x0402FBD9 RID: 195545
 			BtnClose,
-			// Token: 0x040351A9 RID: 217513
+			// Token: 0x0402FBDA RID: 195546
 			BtnHelp
 		}
 
-		// Token: 0x0200AEDA RID: 44762
+		// Token: 0x0200990D RID: 39181
 		private enum ESectorScreen
 		{
-			// Token: 0x040351AB RID: 217515
+			// Token: 0x0402FBDC RID: 195548
 			Right,
-			// Token: 0x040351AC RID: 217516
+			// Token: 0x0402FBDD RID: 195549
 			UpRight,
-			// Token: 0x040351AD RID: 217517
+			// Token: 0x0402FBDE RID: 195550
 			Up,
-			// Token: 0x040351AE RID: 217518
+			// Token: 0x0402FBDF RID: 195551
 			UpLeft,
-			// Token: 0x040351AF RID: 217519
+			// Token: 0x0402FBE0 RID: 195552
 			Left,
-			// Token: 0x040351B0 RID: 217520
+			// Token: 0x0402FBE1 RID: 195553
 			DowLeft,
-			// Token: 0x040351B1 RID: 217521
+			// Token: 0x0402FBE2 RID: 195554
 			Down,
-			// Token: 0x040351B2 RID: 217522
+			// Token: 0x0402FBE3 RID: 195555
 			DownRight
 		}
 	}

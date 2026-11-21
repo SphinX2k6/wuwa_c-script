@@ -2,26 +2,26 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F0F RID: 24335
+	// Token: 0x02006552 RID: 25938
 	public enum EAdjustPlayerCamera : byte
 	{
-		// Token: 0x0400FBDA RID: 64474
+		// Token: 0x0401094D RID: 67917
 		Basic,
-		// Token: 0x0400FBDB RID: 64475
+		// Token: 0x0401094E RID: 67918
 		Horizontal,
-		// Token: 0x0400FBDC RID: 64476
+		// Token: 0x0401094F RID: 67919
 		Dialog,
-		// Token: 0x0400FBDD RID: 64477
+		// Token: 0x04010950 RID: 67920
 		Fixed,
-		// Token: 0x0400FBDE RID: 64478
+		// Token: 0x04010951 RID: 67921
 		AxisLock,
-		// Token: 0x0400FBDF RID: 64479
+		// Token: 0x04010952 RID: 67922
 		FirstPerson,
-		// Token: 0x0400FBE0 RID: 64480
+		// Token: 0x04010953 RID: 67923
 		FixedLookAt,
-		// Token: 0x0400FBE1 RID: 64481
+		// Token: 0x04010954 RID: 67924
 		FixedSurveillance,
-		// Token: 0x0400FBE2 RID: 64482
+		// Token: 0x04010955 RID: 67925
 		ZoneFollow
 	}
 }

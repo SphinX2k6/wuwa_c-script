@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Role.FemaleXL.Jiabeilina_FP.Data
 {
-	// Token: 0x02004094 RID: 16532
+	// Token: 0x02003295 RID: 12949
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/Role/FemaleXL/Jiabeilina_FP/Data/BP_FlyingFeatherConfig.BP_FlyingFeatherConfig_C")]
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 144)]
 	public class BP_FlyingFeatherConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602A943 RID: 174403 RVA: 0x009E5156 File Offset: 0x009E3356
+		// Token: 0x06020719 RID: 132889 RVA: 0x00946C07 File Offset: 0x00944E07
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_FlyingFeatherConfig_C._ClassPtr == IntPtr.Zero)
@@ -24,172 +24,172 @@ namespace AkiClient.Game.Aki.Character.Role.FemaleXL.Jiabeilina_FP.Data
 			return BP_FlyingFeatherConfig_C._ClassPtr;
 		}
 
-		// Token: 0x0602A944 RID: 174404 RVA: 0x009E517C File Offset: 0x009E337C
+		// Token: 0x0602071A RID: 132890 RVA: 0x00946C2C File Offset: 0x00944E2C
 		public BP_FlyingFeatherConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_FlyingFeatherConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602A945 RID: 174405 RVA: 0x009E51A4 File Offset: 0x009E33A4
+		// Token: 0x0602071B RID: 132891 RVA: 0x00946C54 File Offset: 0x00944E54
 		public BP_FlyingFeatherConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_FlyingFeatherConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006862 RID: 26722
-		// (get) Token: 0x0602A946 RID: 174406 RVA: 0x009E51D7 File Offset: 0x009E33D7
-		// (set) Token: 0x0602A947 RID: 174407 RVA: 0x009E51E7 File Offset: 0x009E33E7
+		// Token: 0x17003F10 RID: 16144
+		// (get) Token: 0x0602071C RID: 132892 RVA: 0x00946C87 File Offset: 0x00944E87
+		// (set) Token: 0x0602071D RID: 132893 RVA: 0x00946C97 File Offset: 0x00944E97
 		public unsafe int BulletDelayTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_BulletDelayTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_BulletDelayTime) = value;
 			}
 		}
 
-		// Token: 0x17006863 RID: 26723
-		// (get) Token: 0x0602A948 RID: 174408 RVA: 0x009E51F8 File Offset: 0x009E33F8
-		// (set) Token: 0x0602A949 RID: 174409 RVA: 0x009E5208 File Offset: 0x009E3408
+		// Token: 0x17003F11 RID: 16145
+		// (get) Token: 0x0602071E RID: 132894 RVA: 0x00946CA8 File Offset: 0x00944EA8
+		// (set) Token: 0x0602071F RID: 132895 RVA: 0x00946CB8 File Offset: 0x00944EB8
 		public unsafe int SkillId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_SkillId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_SkillId) = value;
 			}
 		}
 
-		// Token: 0x17006864 RID: 26724
-		// (get) Token: 0x0602A94A RID: 174410 RVA: 0x009E5219 File Offset: 0x009E3419
-		// (set) Token: 0x0602A94B RID: 174411 RVA: 0x009E522D File Offset: 0x009E342D
+		// Token: 0x17003F12 RID: 16146
+		// (get) Token: 0x06020720 RID: 132896 RVA: 0x00946CC9 File Offset: 0x00944EC9
+		// (set) Token: 0x06020721 RID: 132897 RVA: 0x00946CDD File Offset: 0x00944EDD
 		public unsafe string BulletId
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_2)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_BulletId)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_2)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_BulletId)), value);
 			}
 		}
 
-		// Token: 0x17006865 RID: 26725
-		// (get) Token: 0x0602A94C RID: 174412 RVA: 0x009E5242 File Offset: 0x009E3442
-		// (set) Token: 0x0602A94D RID: 174413 RVA: 0x009E5256 File Offset: 0x009E3456
+		// Token: 0x17003F13 RID: 16147
+		// (get) Token: 0x06020722 RID: 132898 RVA: 0x00946CF2 File Offset: 0x00944EF2
+		// (set) Token: 0x06020723 RID: 132899 RVA: 0x00946D06 File Offset: 0x00944F06
 		public unsafe string FeatherTarget
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_3)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_FeatherTarget)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_3)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_FeatherTarget)), value);
 			}
 		}
 
-		// Token: 0x17006866 RID: 26726
-		// (get) Token: 0x0602A94E RID: 174414 RVA: 0x009E526B File Offset: 0x009E346B
-		// (set) Token: 0x0602A94F RID: 174415 RVA: 0x009E527B File Offset: 0x009E347B
+		// Token: 0x17003F14 RID: 16148
+		// (get) Token: 0x06020724 RID: 132900 RVA: 0x00946D1B File Offset: 0x00944F1B
+		// (set) Token: 0x06020725 RID: 132901 RVA: 0x00946D2B File Offset: 0x00944F2B
 		public unsafe double MaxSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_MaxSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_MaxSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006867 RID: 26727
-		// (get) Token: 0x0602A950 RID: 174416 RVA: 0x009E528C File Offset: 0x009E348C
-		// (set) Token: 0x0602A951 RID: 174417 RVA: 0x009E529C File Offset: 0x009E349C
+		// Token: 0x17003F15 RID: 16149
+		// (get) Token: 0x06020726 RID: 132902 RVA: 0x00946D3C File Offset: 0x00944F3C
+		// (set) Token: 0x06020727 RID: 132903 RVA: 0x00946D4C File Offset: 0x00944F4C
 		public unsafe double Acceleration
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_Acceleration);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_Acceleration) = value;
 			}
 		}
 
-		// Token: 0x17006868 RID: 26728
-		// (get) Token: 0x0602A952 RID: 174418 RVA: 0x009E52AD File Offset: 0x009E34AD
-		// (set) Token: 0x0602A953 RID: 174419 RVA: 0x009E52BD File Offset: 0x009E34BD
+		// Token: 0x17003F16 RID: 16150
+		// (get) Token: 0x06020728 RID: 132904 RVA: 0x00946D5D File Offset: 0x00944F5D
+		// (set) Token: 0x06020729 RID: 132905 RVA: 0x00946D6D File Offset: 0x00944F6D
 		public unsafe int MaxChangeStateTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_MaxChangeStateTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_MaxChangeStateTime) = value;
 			}
 		}
 
-		// Token: 0x17006869 RID: 26729
-		// (get) Token: 0x0602A954 RID: 174420 RVA: 0x009E52CE File Offset: 0x009E34CE
-		// (set) Token: 0x0602A955 RID: 174421 RVA: 0x009E52DE File Offset: 0x009E34DE
+		// Token: 0x17003F17 RID: 16151
+		// (get) Token: 0x0602072A RID: 132906 RVA: 0x00946D7E File Offset: 0x00944F7E
+		// (set) Token: 0x0602072B RID: 132907 RVA: 0x00946D8E File Offset: 0x00944F8E
 		public unsafe int ArriveDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_ArriveDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_FlyingFeatherConfig_C.__PropertyOffset_ArriveDistance) = value;
 			}
 		}
 
-		// Token: 0x0602A956 RID: 174422 RVA: 0x009E52EF File Offset: 0x009E34EF
+		// Token: 0x0602072C RID: 132908 RVA: 0x00946D9F File Offset: 0x00944F9F
 		protected BP_FlyingFeatherConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401604C RID: 90188
+		// Token: 0x04011874 RID: 71796
 		public new const string __ObjectPath = "/Game/Aki/Character/Role/FemaleXL/Jiabeilina_FP/Data/BP_FlyingFeatherConfig.BP_FlyingFeatherConfig_C";
 
-		// Token: 0x0401604D RID: 90189
+		// Token: 0x04011875 RID: 71797
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401604E RID: 90190
+		// Token: 0x04011876 RID: 71798
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401604F RID: 90191
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011877 RID: 71799
+		internal static int __PropertyOffset_BulletDelayTime;
 
-		// Token: 0x04016050 RID: 90192
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011878 RID: 71800
+		internal static int __PropertyOffset_SkillId;
 
-		// Token: 0x04016051 RID: 90193
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011879 RID: 71801
+		internal static int __PropertyOffset_BulletId;
 
-		// Token: 0x04016052 RID: 90194
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401187A RID: 71802
+		internal static int __PropertyOffset_FeatherTarget;
 
-		// Token: 0x04016053 RID: 90195
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401187B RID: 71803
+		internal static int __PropertyOffset_MaxSpeed;
 
-		// Token: 0x04016054 RID: 90196
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401187C RID: 71804
+		internal static int __PropertyOffset_Acceleration;
 
-		// Token: 0x04016055 RID: 90197
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401187D RID: 71805
+		internal static int __PropertyOffset_MaxChangeStateTime;
 
-		// Token: 0x04016056 RID: 90198
-		internal static int __PropertyOffset_7;
+		// Token: 0x0401187E RID: 71806
+		internal static int __PropertyOffset_ArriveDistance;
 	}
 }

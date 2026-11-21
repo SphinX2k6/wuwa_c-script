@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002058 RID: 8280
+// Token: 0x0200152B RID: 5419
 public class GameplayFirstPassView : UiViewBase
 {
-	// Token: 0x06010474 RID: 66676 RVA: 0x003F82F3 File Offset: 0x003F64F3
+	// Token: 0x0600D8DC RID: 55516 RVA: 0x0040485F File Offset: 0x00402A5F
 	[NullableContext(1)]
 	public GameplayFirstPassView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010475 RID: 66677 RVA: 0x003F82FC File Offset: 0x003F64FC
+	// Token: 0x0600D8DD RID: 55517 RVA: 0x00404868 File Offset: 0x00402A68
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class GameplayFirstPassView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010476 RID: 66678 RVA: 0x003F8338 File Offset: 0x003F6538
+	// Token: 0x0600D8DE RID: 55518 RVA: 0x004048A4 File Offset: 0x00402AA4
 	protected override void OnStart()
 	{
 		GameplayFirstPassViewData gameplayFirstPassViewData = this.OpenParam as GameplayFirstPassViewData;
@@ -36,7 +36,7 @@ public class GameplayFirstPassView : UiViewBase
 		this.InitMain(textById, configTextByKey);
 	}
 
-	// Token: 0x06010477 RID: 66679 RVA: 0x003F8391 File Offset: 0x003F6591
+	// Token: 0x0600D8DF RID: 55519 RVA: 0x004048FD File Offset: 0x00402AFD
 	[NullableContext(1)]
 	private void InitMain([Nullable(2)] string info, string title)
 	{
@@ -44,13 +44,13 @@ public class GameplayFirstPassView : UiViewBase
 		base.GetText(1).SetText(title, true);
 	}
 
-	// Token: 0x06010478 RID: 66680 RVA: 0x003F83B8 File Offset: 0x003F65B8
+	// Token: 0x0600D8E0 RID: 55520 RVA: 0x00404924 File Offset: 0x00402B24
 	protected override void OnAfterPlayStartSequence()
 	{
 		this.DelayClose();
 	}
 
-	// Token: 0x06010479 RID: 66681 RVA: 0x003F83C0 File Offset: 0x003F65C0
+	// Token: 0x0600D8E1 RID: 55521 RVA: 0x0040492C File Offset: 0x00402B2C
 	private void DelayClose()
 	{
 		this.TimerId = TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -59,14 +59,14 @@ public class GameplayFirstPassView : UiViewBase
 		}, 3000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601047A RID: 66682 RVA: 0x003F83EB File Offset: 0x003F65EB
+	// Token: 0x0600D8E2 RID: 55522 RVA: 0x00404957 File Offset: 0x00402B57
 	private void CloseView()
 	{
 		this.TimerId = null;
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601047B RID: 66683 RVA: 0x003F83FB File Offset: 0x003F65FB
+	// Token: 0x0600D8E3 RID: 55523 RVA: 0x00404967 File Offset: 0x00402B67
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TimerId != null)
@@ -79,17 +79,17 @@ public class GameplayFirstPassView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400784E RID: 30798
+	// Token: 0x04007937 RID: 31031
 	[Nullable(2)]
 	protected TimerHandle TimerId;
 
-	// Token: 0x0200864F RID: 34383
+	// Token: 0x020077D6 RID: 30678
 	private class EGameplayFirstPassViewCom
 	{
-		// Token: 0x0402BB5D RID: 179037
+		// Token: 0x04026E6C RID: 159340
 		public const int InfoText = 0;
 
-		// Token: 0x0402BB5E RID: 179038
+		// Token: 0x04026E6D RID: 159341
 		public const int TitleText = 1;
 	}
 }

@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
+using Aki.Protocol;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.Util;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -11,14 +14,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005160 RID: 20832
+	// Token: 0x02004130 RID: 16688
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaEntranceRepeatTabView : PhantomArenaChildViewBase
 	{
-		// Token: 0x1700811A RID: 33050
-		// (get) Token: 0x0603542F RID: 218159 RVA: 0x00C9CF11 File Offset: 0x00C9B111
-		// (set) Token: 0x06035430 RID: 218160 RVA: 0x00C9CF1E File Offset: 0x00C9B11E
+		// Token: 0x170054DA RID: 21722
+		// (get) Token: 0x0602A32B RID: 172843 RVA: 0x00BEA411 File Offset: 0x00BE8611
+		// (set) Token: 0x0602A32C RID: 172844 RVA: 0x00BEA41E File Offset: 0x00BE861E
 		public new PhantomArenaEntranceViewModel ViewModel
 		{
 			get
@@ -31,7 +34,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035431 RID: 218161 RVA: 0x00C9CF28 File Offset: 0x00C9B128
+		// Token: 0x0602A32D RID: 172845 RVA: 0x00BEA428 File Offset: 0x00BE8628
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035432 RID: 218162 RVA: 0x00C9D020 File Offset: 0x00C9B220
+		// Token: 0x0602A32E RID: 172846 RVA: 0x00BEA520 File Offset: 0x00BE8720
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaEntranceRepeatTabView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -60,20 +63,21 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035433 RID: 218163 RVA: 0x00C9D064 File Offset: 0x00C9B264
+		// Token: 0x0602A32F RID: 172847 RVA: 0x00BEA564 File Offset: 0x00BE8764
 		protected override void OnStart()
 		{
 			this.LayoutReward = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(4), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), base.GetItem(5).GetOwner() as AUIBaseActor, false, null);
 			PhantomArenaModel.Instance.SetGymRedDotChecked(7, base.ActivityId);
-			int player = LocalStorage.GetPlayer<int>(ELocalStoragePlayerKey.PhantomArenaRepeatLastIndex, 0);
+			ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.PhantomArenaRepeatLastIndex, EClientStorageSystemIdType.PhantomArenaRepeatLastIndex, true);
+			int valueOrDefault = (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.PhantomArenaRepeatLastIndex) as ServerStorageNumber).Get().GetValueOrDefault();
 			List<GymChallengeData> challengeStateListByGymLevel = PhantomArenaModel.Instance.GetChallengeStateListByGymLevel(7, base.ActivityId);
-			this.ChallengeData = challengeStateListByGymLevel[player];
-			this.DropDownDifficulty.InitScroll(challengeStateListByGymLevel, new Func<GymChallengeData, GymChallengeData>(this.GetDropDownItemData), player, true);
+			this.ChallengeData = challengeStateListByGymLevel[valueOrDefault];
+			this.DropDownDifficulty.InitScroll(challengeStateListByGymLevel, new Func<GymChallengeData, GymChallengeData>(this.GetDropDownItemData), valueOrDefault, true);
 			this.DropDownDifficulty.SetShowType(ECommonDropDownShowType.Up);
 			this.DropDownDifficulty.SetOnSelectCall(new Action<int, GymChallengeData>(this.OnSelectDifficulty));
 		}
 
-		// Token: 0x06035434 RID: 218164 RVA: 0x00C9D11B File Offset: 0x00C9B31B
+		// Token: 0x0602A330 RID: 172848 RVA: 0x00BEA63C File Offset: 0x00BE883C
 		protected override void OnBeforeShow()
 		{
 			this.RefreshInfo();
@@ -81,7 +85,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshBtns();
 		}
 
-		// Token: 0x06035435 RID: 218165 RVA: 0x00C9D130 File Offset: 0x00C9B330
+		// Token: 0x0602A331 RID: 172849 RVA: 0x00BEA650 File Offset: 0x00BE8850
 		private void RefreshInfo()
 		{
 			PhantomBattleChallenge phantomBattleChallenge = PhantomArenaConfig.Instance.GetPhantomBattleChallenge(this.ChallengeId);
@@ -99,7 +103,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}));
 		}
 
-		// Token: 0x06035436 RID: 218166 RVA: 0x00C9D20C File Offset: 0x00C9B40C
+		// Token: 0x0602A332 RID: 172850 RVA: 0x00BEA72C File Offset: 0x00BE892C
 		private void RefreshPoints()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "PhantomBattle_1106", Array.Empty<object>());
@@ -108,14 +112,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.GetText(1).SetText(commonItemCount.ToString(), true);
 		}
 
-		// Token: 0x06035437 RID: 218167 RVA: 0x00C9D268 File Offset: 0x00C9B468
+		// Token: 0x0602A333 RID: 172851 RVA: 0x00BEA788 File Offset: 0x00BE8988
 		private void RefreshBtns()
 		{
 			bool uiActive = FunctionModel.Instance.IsOpen(EFunctionType.PhantomArenaCard);
 			this.BtnCard.SetUiActive(uiActive);
 		}
 
-		// Token: 0x06035438 RID: 218168 RVA: 0x00C9D294 File Offset: 0x00C9B494
+		// Token: 0x0602A334 RID: 172852 RVA: 0x00BEA7B4 File Offset: 0x00BE89B4
 		private void OnClickCard(int _)
 		{
 			PhantomArenaMainViewOpenParam param = new PhantomArenaMainViewOpenParam
@@ -127,7 +131,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaMainView, param, null);
 		}
 
-		// Token: 0x06035439 RID: 218169 RVA: 0x00C9D2D2 File Offset: 0x00C9B4D2
+		// Token: 0x0602A335 RID: 172853 RVA: 0x00BEA7F2 File Offset: 0x00BE89F2
 		private void OnClickConfirm(int _)
 		{
 			if (!PhantomArenaModel.Instance.GetRepeatChallengeOpen(this.ChallengeId))
@@ -138,35 +142,35 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.ViewModel.SetRepeatChallenge(this.ChallengeId, false);
 		}
 
-		// Token: 0x0603543A RID: 218170 RVA: 0x00C9D30D File Offset: 0x00C9B50D
+		// Token: 0x0602A336 RID: 172854 RVA: 0x00BEA82D File Offset: 0x00BE8A2D
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603543B RID: 218171 RVA: 0x00C9D314 File Offset: 0x00C9B514
+		// Token: 0x0602A337 RID: 172855 RVA: 0x00BEA834 File Offset: 0x00BE8A34
 		private bool OnCheckCanChange(int oldIndex, int newIndex)
 		{
 			return oldIndex != newIndex && PhantomArenaModel.Instance.GetChallengeStateListByGymLevel(7, base.ActivityId)[newIndex].State > EChallengeState.Lock;
 		}
 
-		// Token: 0x0603543C RID: 218172 RVA: 0x00C9D33C File Offset: 0x00C9B53C
+		// Token: 0x0602A338 RID: 172856 RVA: 0x00BEA85C File Offset: 0x00BE8A5C
 		private void OnSelectDifficulty(int index, object data)
 		{
 			GymChallengeData challengeData = data as GymChallengeData;
 			this.ChallengeData = challengeData;
-			LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.PhantomArenaRepeatLastIndex, index);
+			(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.PhantomArenaRepeatLastIndex) as ServerStorageNumber).Set(new int?(index));
 			this.RefreshInfo();
 		}
 
-		// Token: 0x0603543D RID: 218173 RVA: 0x00C9D369 File Offset: 0x00C9B569
+		// Token: 0x0602A339 RID: 172857 RVA: 0x00BEA899 File Offset: 0x00BE8A99
 		private GymChallengeData GetDropDownItemData(object data)
 		{
 			return data as GymChallengeData;
 		}
 
-		// Token: 0x1700811B RID: 33051
-		// (get) Token: 0x0603543E RID: 218174 RVA: 0x00C9D371 File Offset: 0x00C9B571
+		// Token: 0x170054DB RID: 21723
+		// (get) Token: 0x0602A33A RID: 172858 RVA: 0x00BEA8A1 File Offset: 0x00BE8AA1
 		private int ChallengeId
 		{
 			get
@@ -180,11 +184,11 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x0401C560 RID: 116064
+		// Token: 0x04016F95 RID: 94101
 		[Nullable(2)]
 		private GymChallengeData ChallengeData;
 
-		// Token: 0x0401C561 RID: 116065
+		// Token: 0x04016F96 RID: 94102
 		[Nullable(new byte[]
 		{
 			2,
@@ -192,7 +196,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> LayoutReward;
 
-		// Token: 0x0401C562 RID: 116066
+		// Token: 0x04016F97 RID: 94103
 		[Nullable(new byte[]
 		{
 			2,
@@ -201,46 +205,46 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		private CommonDropDown<GymChallengeData, GymChallengeData> DropDownDifficulty;
 
-		// Token: 0x0401C563 RID: 116067
+		// Token: 0x04016F98 RID: 94104
 		[Nullable(2)]
 		private ButtonItem BtnCard;
 
-		// Token: 0x0401C564 RID: 116068
+		// Token: 0x04016F99 RID: 94105
 		[Nullable(2)]
 		private ButtonItem BtnConfirm;
 
-		// Token: 0x0200B2C1 RID: 45761
+		// Token: 0x02009CFA RID: 40186
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04036295 RID: 221845
+			// Token: 0x04030CEA RID: 199914
 			public const int TextPointsAllTitle = 0;
 
-			// Token: 0x04036296 RID: 221846
+			// Token: 0x04030CEB RID: 199915
 			public const int TextPointsAll = 1;
 
-			// Token: 0x04036297 RID: 221847
+			// Token: 0x04030CEC RID: 199916
 			public const int TextChallenge = 2;
 
-			// Token: 0x04036298 RID: 221848
+			// Token: 0x04030CED RID: 199917
 			public const int TextDesc = 3;
 
-			// Token: 0x04036299 RID: 221849
+			// Token: 0x04030CEE RID: 199918
 			public const int ScrollReward = 4;
 
-			// Token: 0x0403629A RID: 221850
+			// Token: 0x04030CEF RID: 199919
 			public const int ItemReward = 5;
 
-			// Token: 0x0403629B RID: 221851
+			// Token: 0x04030CF0 RID: 199920
 			public const int TextPointsNow = 6;
 
-			// Token: 0x0403629C RID: 221852
+			// Token: 0x04030CF1 RID: 199921
 			public const int ItemDropDown = 7;
 
-			// Token: 0x0403629D RID: 221853
+			// Token: 0x04030CF2 RID: 199922
 			public const int BtnConfirmLeft = 8;
 
-			// Token: 0x0403629E RID: 221854
+			// Token: 0x04030CF3 RID: 199923
 			public const int BtnConfirmRight = 9;
 		}
 	}

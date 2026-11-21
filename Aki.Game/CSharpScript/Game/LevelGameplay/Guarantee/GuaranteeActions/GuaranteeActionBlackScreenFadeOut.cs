@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee.GuaranteeActions
 {
-	// Token: 0x02006E0E RID: 28174
+	// Token: 0x02005F8E RID: 24462
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GuaranteeActionBlackScreenFadeOut : GuaranteeActionBase
 	{
-		// Token: 0x06044B60 RID: 281440 RVA: 0x010F57F0 File Offset: 0x010F39F0
+		// Token: 0x0603ACC6 RID: 240838 RVA: 0x0109FBB0 File Offset: 0x0109DDB0
 		protected override void OnExecute(ActionParams @params = null)
 		{
 			if (BlackScreenFadeController.Instance.NeedGuarantee)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee.GuaranteeActions
 			global::Log.Instance.Info(ELogModule.LevelEvent, ELogAuthor.JYS, "执行到了保底黑幕结束,但因为不需要保底被return", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06044B61 RID: 281441 RVA: 0x010F58D4 File Offset: 0x010F3AD4
+		// Token: 0x0603ACC7 RID: 240839 RVA: 0x0109FC94 File Offset: 0x0109DE94
 		protected override void OnClear(ActionParams @params = null, GeneralContext instigatorContext = null)
 		{
 			if (instigatorContext is GeneralLogicTreeContext)

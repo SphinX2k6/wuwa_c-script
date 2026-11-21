@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AFE RID: 23294
+	// Token: 0x02004ADF RID: 19167
 	public interface ICookItemData
 	{
-		// Token: 0x17008C40 RID: 35904
-		// (get) Token: 0x0603AF9E RID: 241566
-		// (set) Token: 0x0603AF9F RID: 241567
+		// Token: 0x1700601A RID: 24602
+		// (get) Token: 0x0602FF10 RID: 196368
+		// (set) Token: 0x0602FF11 RID: 196369
 		ECookListType MainType { get; set; }
 
-		// Token: 0x17008C41 RID: 35905
-		// (get) Token: 0x0603AFA0 RID: 241568
-		// (set) Token: 0x0603AFA1 RID: 241569
+		// Token: 0x1700601B RID: 24603
+		// (get) Token: 0x0602FF12 RID: 196370
+		// (set) Token: 0x0602FF13 RID: 196371
 		int ItemId { get; set; }
 
-		// Token: 0x17008C42 RID: 35906
-		// (get) Token: 0x0603AFA2 RID: 241570
-		// (set) Token: 0x0603AFA3 RID: 241571
+		// Token: 0x1700601C RID: 24604
+		// (get) Token: 0x0602FF14 RID: 196372
+		// (set) Token: 0x0602FF15 RID: 196373
 		bool IsNew { get; set; }
 
-		// Token: 0x17008C43 RID: 35907
-		// (get) Token: 0x0603AFA4 RID: 241572
-		// (set) Token: 0x0603AFA5 RID: 241573
+		// Token: 0x1700601D RID: 24605
+		// (get) Token: 0x0602FF16 RID: 196374
+		// (set) Token: 0x0602FF17 RID: 196375
 		int Quality { get; set; }
 
-		// Token: 0x17008C44 RID: 35908
-		// (get) Token: 0x0603AFA6 RID: 241574
-		// (set) Token: 0x0603AFA7 RID: 241575
+		// Token: 0x1700601E RID: 24606
+		// (get) Token: 0x0602FF18 RID: 196376
+		// (set) Token: 0x0602FF19 RID: 196377
 		bool IsUnLock { get; set; }
 	}
 }

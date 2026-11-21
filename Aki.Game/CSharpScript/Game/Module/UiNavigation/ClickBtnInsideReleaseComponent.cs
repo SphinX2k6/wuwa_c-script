@@ -4,21 +4,21 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004950 RID: 18768
+	// Token: 0x020038C8 RID: 14536
 	public class ClickBtnInsideReleaseComponent : HotKeyComponent
 	{
-		// Token: 0x06030FE6 RID: 200678 RVA: 0x00B60AA5 File Offset: 0x00B5ECA5
+		// Token: 0x06025B16 RID: 154390 RVA: 0x00A9B985 File Offset: 0x00A99B85
 		public ClickBtnInsideReleaseComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06030FE7 RID: 200679 RVA: 0x00B60AAE File Offset: 0x00B5ECAE
+		// Token: 0x06025B17 RID: 154391 RVA: 0x00A9B98E File Offset: 0x00A99B8E
 		protected override void OnRelease(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.ClickButtonInside(config.BindButtonTag);
 		}
 
-		// Token: 0x06030FE8 RID: 200680 RVA: 0x00B60AC4 File Offset: 0x00B5ECC4
+		// Token: 0x06025B18 RID: 154392 RVA: 0x00A9B9A4 File Offset: 0x00A99BA4
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

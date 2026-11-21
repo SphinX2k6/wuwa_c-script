@@ -6,23 +6,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200683F RID: 26687
+	// Token: 0x0200578F RID: 22415
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlShopExchangePopupView : GameplayExchangePopView
 	{
-		// Token: 0x060429C1 RID: 272833 RVA: 0x01031E14 File Offset: 0x01030014
+		// Token: 0x06037515 RID: 226581 RVA: 0x00F73320 File Offset: 0x00F71520
 		public DangoBrawlShopExchangePopupView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060429C2 RID: 272834 RVA: 0x01031E1D File Offset: 0x0103001D
+		// Token: 0x06037516 RID: 226582 RVA: 0x00F73329 File Offset: 0x00F71529
 		protected override NumberSelectComponent CreateNumberSelectComponent(UUIItem item)
 		{
 			return new DangoBrawlShopNumSelectComponent(item);
 		}
 
-		// Token: 0x060429C3 RID: 272835 RVA: 0x01031E25 File Offset: 0x01030025
+		// Token: 0x06037517 RID: 226583 RVA: 0x00F73331 File Offset: 0x00F71531
 		protected override void OnBeforeShow()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshLimitTextExtra();
 		}
 
-		// Token: 0x060429C4 RID: 272836 RVA: 0x01031E50 File Offset: 0x01030050
+		// Token: 0x06037518 RID: 226584 RVA: 0x00F7335C File Offset: 0x00F7155C
 		private void RefreshLimitTextExtra()
 		{
 			if (this.ViewProxy == null)
@@ -62,16 +62,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			text2.SetColor(FColor.FromHex("FED12E"));
 		}
 
-		// Token: 0x04022B2B RID: 142123
+		// Token: 0x0401D388 RID: 119688
 		private const int LimitTextIndex = 10;
 
-		// Token: 0x04022B2C RID: 142124
+		// Token: 0x0401D389 RID: 119689
 		private const int LeftTimeItemIndex = 15;
 
-		// Token: 0x04022B2D RID: 142125
+		// Token: 0x0401D38A RID: 119690
 		private const int LeftTimeTextIndex = 16;
 
-		// Token: 0x04022B2E RID: 142126
+		// Token: 0x0401D38B RID: 119691
 		private const string LimitTextColor = "FED12E";
 	}
 }

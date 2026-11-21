@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 {
-	// Token: 0x02004838 RID: 18488
+	// Token: 0x02003769 RID: 14185
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapFishingCageSecondaryTipItemParam : IWorldMapFishingCageSecondaryTipItemParam, IWorldMapSecondaryTipItemParam
 	{
-		// Token: 0x170078F4 RID: 30964
-		// (get) Token: 0x06030622 RID: 198178 RVA: 0x00B3B594 File Offset: 0x00B39794
-		// (set) Token: 0x06030623 RID: 198179 RVA: 0x00B3B59C File Offset: 0x00B3979C
+		// Token: 0x17004BB1 RID: 19377
+		// (get) Token: 0x06024DF2 RID: 151026 RVA: 0x00A6B660 File Offset: 0x00A69860
+		// (set) Token: 0x06024DF3 RID: 151027 RVA: 0x00A6B668 File Offset: 0x00A69868
 		public string Name { get; set; }
 
-		// Token: 0x170078F5 RID: 30965
-		// (get) Token: 0x06030624 RID: 198180 RVA: 0x00B3B5A5 File Offset: 0x00B397A5
-		// (set) Token: 0x06030625 RID: 198181 RVA: 0x00B3B5AD File Offset: 0x00B397AD
+		// Token: 0x17004BB2 RID: 19378
+		// (get) Token: 0x06024DF4 RID: 151028 RVA: 0x00A6B671 File Offset: 0x00A69871
+		// (set) Token: 0x06024DF5 RID: 151029 RVA: 0x00A6B679 File Offset: 0x00A69879
 		public string Desc { get; set; }
 
-		// Token: 0x170078F6 RID: 30966
-		// (get) Token: 0x06030626 RID: 198182 RVA: 0x00B3B5B6 File Offset: 0x00B397B6
-		// (set) Token: 0x06030627 RID: 198183 RVA: 0x00B3B5BE File Offset: 0x00B397BE
+		// Token: 0x17004BB3 RID: 19379
+		// (get) Token: 0x06024DF6 RID: 151030 RVA: 0x00A6B682 File Offset: 0x00A69882
+		// (set) Token: 0x06024DF7 RID: 151031 RVA: 0x00A6B68A File Offset: 0x00A6988A
 		public int RelativeId { get; set; }
 
-		// Token: 0x170078F7 RID: 30967
-		// (get) Token: 0x06030628 RID: 198184 RVA: 0x00B3B5C7 File Offset: 0x00B397C7
-		// (set) Token: 0x06030629 RID: 198185 RVA: 0x00B3B5CF File Offset: 0x00B397CF
+		// Token: 0x17004BB4 RID: 19380
+		// (get) Token: 0x06024DF8 RID: 151032 RVA: 0x00A6B693 File Offset: 0x00A69893
+		// (set) Token: 0x06024DF9 RID: 151033 RVA: 0x00A6B69B File Offset: 0x00A6989B
 		public EFishingCageSecondaryTipItemType TipItemType { get; set; }
 	}
 }

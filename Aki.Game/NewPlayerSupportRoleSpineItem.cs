@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.DreamLink;
 using UnrealEngine;
 
-// Token: 0x020013C6 RID: 5062
+// Token: 0x0200087A RID: 2170
 public class NewPlayerSupportRoleSpineItem : NewPlayerSupportRoleBaseItem
 {
-	// Token: 0x06008EDD RID: 36573 RVA: 0x001ED898 File Offset: 0x001EBA98
+	// Token: 0x06006272 RID: 25202 RVA: 0x001F63B8 File Offset: 0x001F45B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -23,7 +23,7 @@ public class NewPlayerSupportRoleSpineItem : NewPlayerSupportRoleBaseItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06008EDE RID: 36574 RVA: 0x001ED922 File Offset: 0x001EBB22
+	// Token: 0x06006273 RID: 25203 RVA: 0x001F6442 File Offset: 0x001F4642
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -31,22 +31,22 @@ public class NewPlayerSupportRoleSpineItem : NewPlayerSupportRoleBaseItem
 		base.GetTexture(1).SetUIActive(false);
 	}
 
-	// Token: 0x06008EDF RID: 36575 RVA: 0x001ED944 File Offset: 0x001EBB44
+	// Token: 0x06006274 RID: 25204 RVA: 0x001F6464 File Offset: 0x001F4664
 	public override void Refresh()
 	{
 		base.GetSpine(2).SetAnimation(0, EDreamLinkSpineDefine.Idle.ToString(), true);
 	}
 
-	// Token: 0x02007A47 RID: 31303
+	// Token: 0x02006BCD RID: 27597
 	private class EComponentType
 	{
-		// Token: 0x040283F7 RID: 164855
+		// Token: 0x04023714 RID: 145172
 		public const int DescItem = 0;
 
-		// Token: 0x040283F8 RID: 164856
+		// Token: 0x04023715 RID: 145173
 		public const int ThemeTextTexture = 1;
 
-		// Token: 0x040283F9 RID: 164857
+		// Token: 0x04023716 RID: 145174
 		public const int SpineActor = 2;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000586 RID: 1414
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005EF RID: 1519
 	public class INpcUiInteractOnChengXiaoShanShop : INpcUiInteractType
 	{
-		// Token: 0x06001D1A RID: 7450 RVA: 0x00052CC0 File Offset: 0x00050EC0
+		// Token: 0x06001F20 RID: 7968 RVA: 0x00057B7C File Offset: 0x00055D7C
 		private INpcUiInteractOnChengXiaoShanShop_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001D1B RID: 7451 RVA: 0x00052CF8 File Offset: 0x00050EF8
+		// Token: 0x06001F21 RID: 7969 RVA: 0x00057BB4 File Offset: 0x00055DB4
 		public static INpcUiInteractOnChengXiaoShanShop Create([Nullable(2)] INpcUiInteractOnChengXiaoShanShop instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001D1C RID: 7452 RVA: 0x00052D0B File Offset: 0x00050F0B
+		// Token: 0x06001F22 RID: 7970 RVA: 0x00057BC7 File Offset: 0x00055DC7
 		public static INpcUiInteractOnChengXiaoShanShop CreateFromSetValue([Nullable(2)] INpcUiInteractOnChengXiaoShanShop_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001D1D RID: 7453 RVA: 0x00052D20 File Offset: 0x00050F20
+		// Token: 0x06001F23 RID: 7971 RVA: 0x00057BDC File Offset: 0x00055DDC
 		public new INpcUiInteractOnChengXiaoShanShop_SetValue ToSetValue()
 		{
 			return new INpcUiInteractOnChengXiaoShanShop_SetValue
@@ -69,9 +67,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170007A3 RID: 1955
-		// (get) Token: 0x06001D1E RID: 7454 RVA: 0x00052DAA File Offset: 0x00050FAA
-		// (set) Token: 0x06001D1F RID: 7455 RVA: 0x00052DD5 File Offset: 0x00050FD5
+		// Token: 0x17000828 RID: 2088
+		// (get) Token: 0x06001F24 RID: 7972 RVA: 0x00057C66 File Offset: 0x00055E66
+		// (set) Token: 0x06001F25 RID: 7973 RVA: 0x00057C91 File Offset: 0x00055E91
 		public override ENpcUiInteractType Type
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007A4 RID: 1956
-		// (get) Token: 0x06001D20 RID: 7456 RVA: 0x00052DE3 File Offset: 0x00050FE3
-		// (set) Token: 0x06001D21 RID: 7457 RVA: 0x00052E0E File Offset: 0x0005100E
+		// Token: 0x17000829 RID: 2089
+		// (get) Token: 0x06001F26 RID: 7974 RVA: 0x00057C9F File Offset: 0x00055E9F
+		// (set) Token: 0x06001F27 RID: 7975 RVA: 0x00057CCA File Offset: 0x00055ECA
 		public virtual string EnterMontage
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007A5 RID: 1957
-		// (get) Token: 0x06001D22 RID: 7458 RVA: 0x00052E1C File Offset: 0x0005101C
-		// (set) Token: 0x06001D23 RID: 7459 RVA: 0x00052E47 File Offset: 0x00051047
+		// Token: 0x1700082A RID: 2090
+		// (get) Token: 0x06001F28 RID: 7976 RVA: 0x00057CD8 File Offset: 0x00055ED8
+		// (set) Token: 0x06001F29 RID: 7977 RVA: 0x00057D03 File Offset: 0x00055F03
 		public virtual string StandByMontage
 		{
 			get
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007A6 RID: 1958
-		// (get) Token: 0x06001D24 RID: 7460 RVA: 0x00052E55 File Offset: 0x00051055
-		// (set) Token: 0x06001D25 RID: 7461 RVA: 0x00052E80 File Offset: 0x00051080
+		// Token: 0x1700082B RID: 2091
+		// (get) Token: 0x06001F2A RID: 7978 RVA: 0x00057D11 File Offset: 0x00055F11
+		// (set) Token: 0x06001F2B RID: 7979 RVA: 0x00057D3C File Offset: 0x00055F3C
 		public virtual string ShopSuccessMontage
 		{
 			get
@@ -161,9 +159,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007A7 RID: 1959
-		// (get) Token: 0x06001D26 RID: 7462 RVA: 0x00052E90 File Offset: 0x00051090
-		// (set) Token: 0x06001D27 RID: 7463 RVA: 0x00052EF1 File Offset: 0x000510F1
+		// Token: 0x1700082C RID: 2092
+		// (get) Token: 0x06001F2C RID: 7980 RVA: 0x00057D4C File Offset: 0x00055F4C
+		// (set) Token: 0x06001F2D RID: 7981 RVA: 0x00057DAD File Offset: 0x00055FAD
 		public virtual PlayFlow EnterFlow
 		{
 			get
@@ -191,9 +189,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007A8 RID: 1960
-		// (get) Token: 0x06001D28 RID: 7464 RVA: 0x00052F08 File Offset: 0x00051108
-		// (set) Token: 0x06001D29 RID: 7465 RVA: 0x00052F69 File Offset: 0x00051169
+		// Token: 0x1700082D RID: 2093
+		// (get) Token: 0x06001F2E RID: 7982 RVA: 0x00057DC4 File Offset: 0x00055FC4
+		// (set) Token: 0x06001F2F RID: 7983 RVA: 0x00057E25 File Offset: 0x00056025
 		public virtual PlayFlow ShopSuccessFlow
 		{
 			get
@@ -221,9 +219,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007A9 RID: 1961
-		// (get) Token: 0x06001D2A RID: 7466 RVA: 0x00052F80 File Offset: 0x00051180
-		// (set) Token: 0x06001D2B RID: 7467 RVA: 0x00052FE1 File Offset: 0x000511E1
+		// Token: 0x1700082E RID: 2094
+		// (get) Token: 0x06001F30 RID: 7984 RVA: 0x00057E3C File Offset: 0x0005603C
+		// (set) Token: 0x06001F31 RID: 7985 RVA: 0x00057E9D File Offset: 0x0005609D
 		public virtual PlayFlow ShopFailedFlow
 		{
 			get
@@ -251,9 +249,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007AA RID: 1962
-		// (get) Token: 0x06001D2C RID: 7468 RVA: 0x00052FF6 File Offset: 0x000511F6
-		// (set) Token: 0x06001D2D RID: 7469 RVA: 0x00053021 File Offset: 0x00051221
+		// Token: 0x1700082F RID: 2095
+		// (get) Token: 0x06001F32 RID: 7986 RVA: 0x00057EB2 File Offset: 0x000560B2
+		// (set) Token: 0x06001F33 RID: 7987 RVA: 0x00057EDD File Offset: 0x000560DD
 		public virtual string UpgradeSequence
 		{
 			get
@@ -274,9 +272,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007AB RID: 1963
-		// (get) Token: 0x06001D2E RID: 7470 RVA: 0x0005302F File Offset: 0x0005122F
-		// (set) Token: 0x06001D2F RID: 7471 RVA: 0x0005305A File Offset: 0x0005125A
+		// Token: 0x17000830 RID: 2096
+		// (get) Token: 0x06001F34 RID: 7988 RVA: 0x00057EEB File Offset: 0x000560EB
+		// (set) Token: 0x06001F35 RID: 7989 RVA: 0x00057F16 File Offset: 0x00056116
 		public virtual string FinishDeliverySequence
 		{
 			get
@@ -297,9 +295,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007AC RID: 1964
-		// (get) Token: 0x06001D30 RID: 7472 RVA: 0x00053068 File Offset: 0x00051268
-		// (set) Token: 0x06001D31 RID: 7473 RVA: 0x000530A2 File Offset: 0x000512A2
+		// Token: 0x17000831 RID: 2097
+		// (get) Token: 0x06001F36 RID: 7990 RVA: 0x00057F24 File Offset: 0x00056124
+		// (set) Token: 0x06001F37 RID: 7991 RVA: 0x00057F5E File Offset: 0x0005615E
 		public virtual bool? ShowNpcWhilePlayingSequence
 		{
 			get
@@ -321,30 +319,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040014B1 RID: 5297
+		// Token: 0x0400161F RID: 5663
 		[Nullable(2)]
 		protected new INpcUiInteractOnChengXiaoShanShop FbInstance;
 
-		// Token: 0x040014B2 RID: 5298
+		// Token: 0x04001620 RID: 5664
 		[Nullable(2)]
 		protected new INpcUiInteractOnChengXiaoShanShop_SetValue PocoInterface;
 
-		// Token: 0x040014B3 RID: 5299
+		// Token: 0x04001621 RID: 5665
 		private PlayFlow _EnterFlowCache;
 
-		// Token: 0x040014B4 RID: 5300
+		// Token: 0x04001622 RID: 5666
 		private bool _EnterFlowInited;
 
-		// Token: 0x040014B5 RID: 5301
+		// Token: 0x04001623 RID: 5667
 		private PlayFlow _ShopSuccessFlowCache;
 
-		// Token: 0x040014B6 RID: 5302
+		// Token: 0x04001624 RID: 5668
 		private bool _ShopSuccessFlowInited;
 
-		// Token: 0x040014B7 RID: 5303
+		// Token: 0x04001625 RID: 5669
 		private PlayFlow _ShopFailedFlowCache;
 
-		// Token: 0x040014B8 RID: 5304
+		// Token: 0x04001626 RID: 5670
 		private bool _ShopFailedFlowInited;
 	}
 }

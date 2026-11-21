@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B25 RID: 27429
+	// Token: 0x0200725C RID: 29276
 	public class IMotorParkourTrackingEventT
 	{
-		// Token: 0x1700CBDC RID: 52188
-		// (get) Token: 0x06030255 RID: 197205 RVA: 0x0068B5E5 File Offset: 0x006897E5
-		// (set) Token: 0x06030256 RID: 197206 RVA: 0x0068B5ED File Offset: 0x006897ED
+		// Token: 0x1700D6AB RID: 54955
+		// (get) Token: 0x06033029 RID: 208937 RVA: 0x006E2C9D File Offset: 0x006E0E9D
+		// (set) Token: 0x0603302A RID: 208938 RVA: 0x006E2CA5 File Offset: 0x006E0EA5
 		public ETrackingEventType Type { get; set; }
 
-		// Token: 0x1700CBDD RID: 52189
-		// (get) Token: 0x06030257 RID: 197207 RVA: 0x0068B5F6 File Offset: 0x006897F6
-		// (set) Token: 0x06030258 RID: 197208 RVA: 0x0068B5FE File Offset: 0x006897FE
+		// Token: 0x1700D6AC RID: 54956
+		// (get) Token: 0x0603302B RID: 208939 RVA: 0x006E2CAE File Offset: 0x006E0EAE
+		// (set) Token: 0x0603302C RID: 208940 RVA: 0x006E2CB6 File Offset: 0x006E0EB6
 		public EMotorParkourPhase MotorParkourPhase { get; set; }
 
-		// Token: 0x1700CBDE RID: 52190
-		// (get) Token: 0x06030259 RID: 197209 RVA: 0x0068B607 File Offset: 0x00689807
-		// (set) Token: 0x0603025A RID: 197210 RVA: 0x0068B60F File Offset: 0x0068980F
+		// Token: 0x1700D6AD RID: 54957
+		// (get) Token: 0x0603302D RID: 208941 RVA: 0x006E2CBF File Offset: 0x006E0EBF
+		// (set) Token: 0x0603302E RID: 208942 RVA: 0x006E2CC7 File Offset: 0x006E0EC7
 		public TVarRefUnion MotorParkourScoreVarRef { get; set; }
 
-		// Token: 0x0603025B RID: 197211 RVA: 0x0068B618 File Offset: 0x00689818
+		// Token: 0x0603302F RID: 208943 RVA: 0x006E2CD0 File Offset: 0x006E0ED0
 		public IMotorParkourTrackingEventT()
 		{
 			this.Type = ETrackingEventType.EasterEgg;

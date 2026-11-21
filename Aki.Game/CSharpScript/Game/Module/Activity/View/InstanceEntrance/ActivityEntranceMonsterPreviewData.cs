@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F0F RID: 24335
+	// Token: 0x02004EF6 RID: 20214
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityEntranceMonsterPreviewData
 	{
-		// Token: 0x0603DD4F RID: 253263 RVA: 0x00EF1CBC File Offset: 0x00EEFEBC
+		// Token: 0x06032CEA RID: 208106 RVA: 0x00E439C4 File Offset: 0x00E41BC4
 		public string GetMonsterTips(int dataIndex)
 		{
 			if (this.GetMonsterTipsFunc == null)
@@ -18,13 +18,13 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return this.GetMonsterTipsFunc(dataIndex);
 		}
 
-		// Token: 0x0603DD50 RID: 253264 RVA: 0x00EF1CD8 File Offset: 0x00EEFED8
+		// Token: 0x06032CEB RID: 208107 RVA: 0x00E439E0 File Offset: 0x00E41BE0
 		public bool GetMonsterPreviewState(int dataIndex)
 		{
 			return this.GetMonsterPreviewStateFunc != null && this.GetMonsterPreviewStateFunc(dataIndex);
 		}
 
-		// Token: 0x0603DD51 RID: 253265 RVA: 0x00EF1CF0 File Offset: 0x00EEFEF0
+		// Token: 0x06032CEC RID: 208108 RVA: 0x00E439F8 File Offset: 0x00E41BF8
 		public int GetInstanceDungeonId(int dataIndex)
 		{
 			if (this.GetInstanceDungeonIdFunc == null)
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return this.GetInstanceDungeonIdFunc(dataIndex);
 		}
 
-		// Token: 0x0603DD52 RID: 253266 RVA: 0x00EF1D08 File Offset: 0x00EEFF08
+		// Token: 0x06032CED RID: 208109 RVA: 0x00E43A10 File Offset: 0x00E41C10
 		public Action<int> GetPreviewCallBack()
 		{
 			return this.GetClickPreviewCallBack;
 		}
 
-		// Token: 0x0603DD53 RID: 253267 RVA: 0x00EF1D10 File Offset: 0x00EEFF10
+		// Token: 0x06032CEE RID: 208110 RVA: 0x00E43A18 File Offset: 0x00E41C18
 		public static ActivityEntranceMonsterPreviewData Create(Func<int, string> getMonsterTipsFunc, Func<int, bool> getMonsterPreviewStateFunc, Func<int, int> getInstanceDungeonIdFunc, Action<int> getPreviewCallBack)
 		{
 			return new ActivityEntranceMonsterPreviewData
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			};
 		}
 
-		// Token: 0x040204C2 RID: 132290
+		// Token: 0x0401AF94 RID: 110484
 		[Nullable(new byte[]
 		{
 			2,
@@ -60,15 +60,15 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 		})]
 		private Func<int, string> GetMonsterTipsFunc;
 
-		// Token: 0x040204C3 RID: 132291
+		// Token: 0x0401AF95 RID: 110485
 		[Nullable(2)]
 		private Func<int, bool> GetMonsterPreviewStateFunc;
 
-		// Token: 0x040204C4 RID: 132292
+		// Token: 0x0401AF96 RID: 110486
 		[Nullable(2)]
 		private Func<int, int> GetInstanceDungeonIdFunc;
 
-		// Token: 0x040204C5 RID: 132293
+		// Token: 0x0401AF97 RID: 110487
 		[Nullable(2)]
 		private Action<int> GetClickPreviewCallBack;
 	}

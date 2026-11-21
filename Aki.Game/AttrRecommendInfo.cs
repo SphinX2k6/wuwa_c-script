@@ -2,24 +2,24 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002450 RID: 9296
+// Token: 0x02001935 RID: 6453
 [NullableContext(1)]
 [Nullable(0)]
 public class AttrRecommendInfo
 {
-	// Token: 0x06012A51 RID: 76369 RVA: 0x0049981C File Offset: 0x00497A1C
+	// Token: 0x0600FF08 RID: 65288 RVA: 0x004A6E24 File Offset: 0x004A5024
 	public int GetAttrId()
 	{
 		return this.AttrId;
 	}
 
-	// Token: 0x06012A52 RID: 76370 RVA: 0x00499824 File Offset: 0x00497A24
+	// Token: 0x0600FF09 RID: 65289 RVA: 0x004A6E2C File Offset: 0x004A502C
 	public int GetUsage()
 	{
 		return this.Usage;
 	}
 
-	// Token: 0x06012A53 RID: 76371 RVA: 0x0049982C File Offset: 0x00497A2C
+	// Token: 0x0600FF0A RID: 65290 RVA: 0x004A6E34 File Offset: 0x004A5034
 	public string GetUsageText()
 	{
 		double num = (double)(this.Usage - this.Usage % 10) / 100.0;
@@ -30,13 +30,13 @@ public class AttrRecommendInfo
 		return "";
 	}
 
-	// Token: 0x06012A54 RID: 76372 RVA: 0x00499879 File Offset: 0x00497A79
+	// Token: 0x0600FF0B RID: 65291 RVA: 0x004A6E81 File Offset: 0x004A5081
 	public int GetAddType()
 	{
 		return this.AddType;
 	}
 
-	// Token: 0x06012A55 RID: 76373 RVA: 0x00499881 File Offset: 0x00497A81
+	// Token: 0x0600FF0C RID: 65292 RVA: 0x004A6E89 File Offset: 0x004A5089
 	public void Phrase(PhantomAttrRecommendInfo data)
 	{
 		this.AttrId = data.AttrType;
@@ -44,12 +44,12 @@ public class AttrRecommendInfo
 		this.AddType = data.AddType;
 	}
 
-	// Token: 0x04008C7A RID: 35962
+	// Token: 0x04008DC1 RID: 36289
 	private int AttrId;
 
-	// Token: 0x04008C7B RID: 35963
+	// Token: 0x04008DC2 RID: 36290
 	private int Usage;
 
-	// Token: 0x04008C7C RID: 35964
+	// Token: 0x04008DC3 RID: 36291
 	private int AddType;
 }

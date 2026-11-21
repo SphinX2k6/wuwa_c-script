@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200095B RID: 2395
+	// Token: 0x02000A0E RID: 2574
 	public class EGroupAiFormationBasisJsonConverter : JsonConverter<EGroupAiFormationBasis>
 	{
-		// Token: 0x060035CC RID: 13772 RVA: 0x0008C298 File Offset: 0x0008A498
+		// Token: 0x06003953 RID: 14675 RVA: 0x000941EC File Offset: 0x000923EC
 		public override EGroupAiFormationBasis Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EGroupAiFormationBasisExtensions.FromString(@string);
 		}
 
-		// Token: 0x060035CD RID: 13773 RVA: 0x0008C2BC File Offset: 0x0008A4BC
+		// Token: 0x06003954 RID: 14676 RVA: 0x00094210 File Offset: 0x00092410
 		public override void Write(Utf8JsonWriter writer, EGroupAiFormationBasis value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

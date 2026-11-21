@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x0200009A RID: 154
+	// Token: 0x0200009D RID: 157
 	public class VideoUpdateUiEvent : ResourceDiffUpdateUiEvent
 	{
-		// Token: 0x06000560 RID: 1376 RVA: 0x00031678 File Offset: 0x0002F878
+		// Token: 0x06000577 RID: 1399 RVA: 0x00032BE0 File Offset: 0x00030DE0
 		[NullableContext(1)]
 		[return: Nullable(0)]
 		public override UniTask<bool> ShowDialog(bool bSelect, string titleId, string contentId, [Nullable(2)] string leftId, [Nullable(2)] string rightId, [Nullable(2)] string middleId, params string[] contentArgs)

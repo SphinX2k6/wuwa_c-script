@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002CAB RID: 11435
+// Token: 0x02002204 RID: 8708
 public class UiRoleBuffPreviewComponent : UiModelBuffComponent
 {
-	// Token: 0x06017E52 RID: 97874 RVA: 0x006130DC File Offset: 0x006112DC
+	// Token: 0x060156C6 RID: 87750 RVA: 0x00638C60 File Offset: 0x00636E60
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -13,7 +13,7 @@ public class UiRoleBuffPreviewComponent : UiModelBuffComponent
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.BeforeUiModelLoadStart, new Action(this.OnBeforeUiModelLoadStart));
 	}
 
-	// Token: 0x06017E53 RID: 97875 RVA: 0x00613134 File Offset: 0x00611334
+	// Token: 0x060156C7 RID: 87751 RVA: 0x00638CB8 File Offset: 0x00636EB8
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnRoleMeshLoadComplete));
@@ -21,13 +21,13 @@ public class UiRoleBuffPreviewComponent : UiModelBuffComponent
 		base.OnEnd();
 	}
 
-	// Token: 0x06017E54 RID: 97876 RVA: 0x0061318B File Offset: 0x0061138B
+	// Token: 0x060156C8 RID: 87752 RVA: 0x00638D0F File Offset: 0x00636F0F
 	private void OnBeforeUiModelLoadStart()
 	{
 		base.RemoveAllBuffId();
 	}
 
-	// Token: 0x06017E55 RID: 97877 RVA: 0x00613194 File Offset: 0x00611394
+	// Token: 0x060156C9 RID: 87753 RVA: 0x00638D18 File Offset: 0x00636F18
 	private void OnRoleMeshLoadComplete()
 	{
 		List<long> currentPreviewItemBuffList = BuffItemModel.Instance.GetCurrentPreviewItemBuffList();

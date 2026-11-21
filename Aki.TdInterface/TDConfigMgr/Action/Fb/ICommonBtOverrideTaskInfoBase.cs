@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A78 RID: 10872
+	// Token: 0x02002D6C RID: 11628
 	public class ICommonBtOverrideTaskInfoBase
 	{
-		// Token: 0x0600EF04 RID: 61188 RVA: 0x0022C468 File Offset: 0x0022A668
-		[NullableContext(1)]
+		// Token: 0x0600FDBA RID: 64954 RVA: 0x0024A174 File Offset: 0x00248374
 		public static ICommonBtOverrideTaskInfoBase Create(ICommonBtOverrideTaskInfoBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BD6 RID: 19414
-		// (get) Token: 0x0600EF05 RID: 61189 RVA: 0x0022C487 File Offset: 0x0022A687
+		// Token: 0x17004F90 RID: 20368
+		// (get) Token: 0x0600FDBB RID: 64955 RVA: 0x0024A193 File Offset: 0x00248393
 		public virtual ECommonBtPlaceholderTargetType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008382 RID: 33666
+		// Token: 0x04008A86 RID: 35462
 		private ICommonBtOverrideTaskInfoBase Instance;
 	}
 }

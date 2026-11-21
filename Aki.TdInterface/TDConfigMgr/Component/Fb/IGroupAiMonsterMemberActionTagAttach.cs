@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D59 RID: 3417
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E53 RID: 3667
 	public class IGroupAiMonsterMemberActionTagAttach
 	{
-		// Token: 0x06004DDF RID: 19935 RVA: 0x000C184A File Offset: 0x000BFA4A
+		// Token: 0x060052FB RID: 21243 RVA: 0x000CCF8E File Offset: 0x000CB18E
 		public static IGroupAiMonsterMemberActionTagAttach Create(IGroupAiMonsterMemberActionTagAttach? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018EA RID: 6378
-		// (get) Token: 0x06004DE0 RID: 19936 RVA: 0x000C1869 File Offset: 0x000BFA69
+		// Token: 0x17001A50 RID: 6736
+		// (get) Token: 0x060052FC RID: 21244 RVA: 0x000CCFAD File Offset: 0x000CB1AD
 		public virtual string ActionTag
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018EB RID: 6379
-		// (get) Token: 0x06004DE1 RID: 19937 RVA: 0x000C1878 File Offset: 0x000BFA78
+		// Token: 0x17001A51 RID: 6737
+		// (get) Token: 0x060052FD RID: 21245 RVA: 0x000CCFBC File Offset: 0x000CB1BC
 		public virtual int? AttachEntityId
 		{
 			get
@@ -46,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CA0 RID: 11424
+		// Token: 0x04002F60 RID: 12128
 		private IGroupAiMonsterMemberActionTagAttach Instance;
 	}
 }

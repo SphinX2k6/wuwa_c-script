@@ -5,18 +5,18 @@ using CSharpScript.Game.Module.Activity.ActivityContent.Pinball;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D0B RID: 7435
+// Token: 0x020011CD RID: 4557
 [NullableContext(2)]
 [Nullable(0)]
 public class PinballBattleTipsBase : UiViewBase
 {
-	// Token: 0x0600E0C6 RID: 57542 RVA: 0x0034B58E File Offset: 0x0034978E
+	// Token: 0x0600B4E3 RID: 46307 RVA: 0x00356FBE File Offset: 0x003551BE
 	[NullableContext(1)]
 	public PinballBattleTipsBase(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E0C7 RID: 57543 RVA: 0x0034B5A4 File Offset: 0x003497A4
+	// Token: 0x0600B4E4 RID: 46308 RVA: 0x00356FD4 File Offset: 0x003551D4
 	protected override void OnStart()
 	{
 		IPinballBattleTipsBaseParam pinballBattleTipsBaseParam = this.OpenParam as IPinballBattleTipsBaseParam;
@@ -45,7 +45,7 @@ public class PinballBattleTipsBase : UiViewBase
 		this.AddCloseTimer();
 	}
 
-	// Token: 0x0600E0C8 RID: 57544 RVA: 0x0034B684 File Offset: 0x00349884
+	// Token: 0x0600B4E5 RID: 46309 RVA: 0x003570B4 File Offset: 0x003552B4
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveCloseTimer();
@@ -60,7 +60,7 @@ public class PinballBattleTipsBase : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E0C9 RID: 57545 RVA: 0x0034B6AC File Offset: 0x003498AC
+	// Token: 0x0600B4E6 RID: 46310 RVA: 0x003570DC File Offset: 0x003552DC
 	private void AddCloseTimer()
 	{
 		if (this.CloseTimerHandle != null)
@@ -74,7 +74,7 @@ public class PinballBattleTipsBase : UiViewBase
 		}, (float)this.CloseTime, null, null, true, 1f);
 	}
 
-	// Token: 0x0600E0CA RID: 57546 RVA: 0x0034B6E2 File Offset: 0x003498E2
+	// Token: 0x0600B4E7 RID: 46311 RVA: 0x00357112 File Offset: 0x00355312
 	private void RemoveCloseTimer()
 	{
 		if (this.CloseTimerHandle != null)
@@ -84,14 +84,14 @@ public class PinballBattleTipsBase : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E0CB RID: 57547 RVA: 0x0034B704 File Offset: 0x00349904
+	// Token: 0x0600B4E8 RID: 46312 RVA: 0x00357134 File Offset: 0x00355334
 	public void ResetCloseTimer()
 	{
 		this.RemoveCloseTimer();
 		this.AddCloseTimer();
 	}
 
-	// Token: 0x0600E0CC RID: 57548 RVA: 0x0034B712 File Offset: 0x00349912
+	// Token: 0x0600B4E9 RID: 46313 RVA: 0x00357142 File Offset: 0x00355342
 	private void TrySetMaskActive(bool active)
 	{
 		CommonGameMainView commonGameMainView = UiManager.Instance.GetViewByName(EUiViewName.CommonGameMainView) as CommonGameMainView;
@@ -102,21 +102,21 @@ public class PinballBattleTipsBase : UiViewBase
 		commonGameMainView.SetMaskItemActive(active);
 	}
 
-	// Token: 0x0600E0CD RID: 57549 RVA: 0x0034B733 File Offset: 0x00349933
+	// Token: 0x0600B4EA RID: 46314 RVA: 0x00357163 File Offset: 0x00355363
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.OpenView, new Action<EUiViewName, int>(this.OnOpenView));
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600E0CE RID: 57550 RVA: 0x0034B766 File Offset: 0x00349966
+	// Token: 0x0600B4EB RID: 46315 RVA: 0x00357196 File Offset: 0x00355396
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<EUiViewName, int>(EEventName.OpenView, new Action<EUiViewName, int>(this.OnOpenView));
 		EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600E0CF RID: 57551 RVA: 0x0034B799 File Offset: 0x00349999
+	// Token: 0x0600B4EC RID: 46316 RVA: 0x003571C9 File Offset: 0x003553C9
 	private void OnOpenView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.PinballBattlePauseView && this.CloseTimerHandle != null && !this.CloseTimerHandle.IsPause())
@@ -125,7 +125,7 @@ public class PinballBattleTipsBase : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E0D0 RID: 57552 RVA: 0x0034B7C9 File Offset: 0x003499C9
+	// Token: 0x0600B4ED RID: 46317 RVA: 0x003571F9 File Offset: 0x003553F9
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.PinballBattlePauseView && this.CloseTimerHandle != null && this.CloseTimerHandle.IsPause())
@@ -134,21 +134,21 @@ public class PinballBattleTipsBase : UiViewBase
 		}
 	}
 
-	// Token: 0x040067C6 RID: 26566
+	// Token: 0x040068A5 RID: 26789
 	private const int PINBALL_DEFAULT_TIPS_DURATION = 2000;
 
-	// Token: 0x040067C7 RID: 26567
+	// Token: 0x040068A6 RID: 26790
 	private TimerHandle CloseTimerHandle;
 
-	// Token: 0x040067C8 RID: 26568
+	// Token: 0x040068A7 RID: 26791
 	private int CloseTime = 2000;
 
-	// Token: 0x040067C9 RID: 26569
+	// Token: 0x040068A8 RID: 26792
 	private Action CloseCallback;
 
-	// Token: 0x040067CA RID: 26570
+	// Token: 0x040068A9 RID: 26793
 	private bool AddMask;
 
-	// Token: 0x040067CB RID: 26571
+	// Token: 0x040068AA RID: 26794
 	private bool MoveToBehind;
 }

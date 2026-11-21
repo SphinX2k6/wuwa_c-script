@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002475 RID: 9333
+	// Token: 0x02002716 RID: 10006
 	public static class ETimeStampTypeExtensions
 	{
-		// Token: 0x0600CA8D RID: 51853 RVA: 0x001DD15C File Offset: 0x001DB35C
+		// Token: 0x0600D73D RID: 55101 RVA: 0x001F7210 File Offset: 0x001F5410
 		public static string ToEnumString(this ETimeStampType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA8E RID: 51854 RVA: 0x001DD194 File Offset: 0x001DB394
+		// Token: 0x0600D73E RID: 55102 RVA: 0x001F7248 File Offset: 0x001F5448
 		public static ETimeStampType FromString(string name)
 		{
 			ETimeStampType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA8F RID: 51855 RVA: 0x001DD1BD File Offset: 0x001DB3BD
+		// Token: 0x0600D73F RID: 55103 RVA: 0x001F7271 File Offset: 0x001F5471
 		public static bool TryFromString(string name, out ETimeStampType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CA90 RID: 51856 RVA: 0x001DD1F6 File Offset: 0x001DB3F6
+		// Token: 0x0600D740 RID: 55104 RVA: 0x001F72AA File Offset: 0x001F54AA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA91 RID: 51857 RVA: 0x001DD20E File Offset: 0x001DB40E
+		// Token: 0x0600D741 RID: 55105 RVA: 0x001F72C2 File Offset: 0x001F54C2
 		public static ETimeStampType[] GetValues()
 		{
 			return new ETimeStampType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA92 RID: 51858 RVA: 0x001DD21A File Offset: 0x001DB41A
+		// Token: 0x0600D742 RID: 55106 RVA: 0x001F72CE File Offset: 0x001F54CE
 		public static string[] GetNames()
 		{
 			return new string[]

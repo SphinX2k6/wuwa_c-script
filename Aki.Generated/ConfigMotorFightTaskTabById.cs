@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005A0 RID: 1440
+	// Token: 0x020005B7 RID: 1463
 	public class ConfigMotorFightTaskTabById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060021CD RID: 8653 RVA: 0x00118B13 File Offset: 0x00116D13
+		// Token: 0x06002257 RID: 8791 RVA: 0x0011F3FB File Offset: 0x0011D5FB
 		static ConfigMotorFightTaskTabById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorFightTaskTabById.CreateStaticDefaultValue), new Action(ConfigMotorFightTaskTabById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060021CE RID: 8654 RVA: 0x00118B34 File Offset: 0x00116D34
+		// Token: 0x06002258 RID: 8792 RVA: 0x0011F41C File Offset: 0x0011D61C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorFightTaskTabById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060021CF RID: 8655 RVA: 0x00118BB3 File Offset: 0x00116DB3
+		// Token: 0x06002259 RID: 8793 RVA: 0x0011F49B File Offset: 0x0011D69B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorFightTaskTabById.LogPair = null;
 			ConfigMotorFightTaskTabById.HandleId = 0;
 		}
 
-		// Token: 0x060021D0 RID: 8656 RVA: 0x00118BC1 File Offset: 0x00116DC1
+		// Token: 0x0600225A RID: 8794 RVA: 0x0011F4A9 File Offset: 0x0011D6A9
 		public static void Init()
 		{
 			ConfigMotorFightTaskTabById.HandleId = ConfigCommon.InitDataStatement(ConfigMotorFightTaskTabById.HandleId, "db_motorfight.db", "select BinData from `MotorFightTaskTab` where Id=?");
 		}
 
-		// Token: 0x060021D1 RID: 8657 RVA: 0x00118BDC File Offset: 0x00116DDC
+		// Token: 0x0600225B RID: 8795 RVA: 0x0011F4C4 File Offset: 0x0011D6C4
 		public static MotorFightTaskTab? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMotorFightTaskTabById.HandleId, ConfigMotorFightTaskTabById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MotorFightTaskTab?(rootAsMotorFightTaskTab);
 		}
 
-		// Token: 0x04002744 RID: 10052
+		// Token: 0x040027E5 RID: 10213
 		private const string DB = "db_motorfight.db";
 
-		// Token: 0x04002745 RID: 10053
+		// Token: 0x040027E6 RID: 10214
 		private const string FILE = "m.摩托战斗_局外.xlsx";
 
-		// Token: 0x04002746 RID: 10054
+		// Token: 0x040027E7 RID: 10215
 		private const string TABLE = "MotorFightTaskTab";
 
-		// Token: 0x04002747 RID: 10055
+		// Token: 0x040027E8 RID: 10216
 		private const string COMMAND = "select BinData from `MotorFightTaskTab` where Id=?";
 
-		// Token: 0x04002748 RID: 10056
+		// Token: 0x040027E9 RID: 10217
 		private const string KEY_PREFIX = "MotorFightTaskTabById";
 
-		// Token: 0x04002749 RID: 10057
+		// Token: 0x040027EA RID: 10218
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400274A RID: 10058
+		// Token: 0x040027EB RID: 10219
 		private static int HandleId;
 	}
 }

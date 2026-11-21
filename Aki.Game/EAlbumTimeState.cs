@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020022B9 RID: 8889
+// Token: 0x0200179D RID: 6045
 public enum EAlbumTimeState
 {
-	// Token: 0x04008465 RID: 33893
+	// Token: 0x040085A3 RID: 34211
 	NoLimit,
-	// Token: 0x04008466 RID: 33894
+	// Token: 0x040085A4 RID: 34212
 	NotStarted,
-	// Token: 0x04008467 RID: 33895
+	// Token: 0x040085A5 RID: 34213
 	InRange,
-	// Token: 0x04008468 RID: 33896
+	// Token: 0x040085A6 RID: 34214
 	Expired
 }

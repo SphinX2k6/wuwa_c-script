@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200246F RID: 9327
+// Token: 0x02001954 RID: 6484
 internal enum EActivatedPanelNode
 {
-	// Token: 0x04008D0B RID: 36107
+	// Token: 0x04008E52 RID: 36434
 	SpriteLock,
-	// Token: 0x04008D0C RID: 36108
+	// Token: 0x04008E53 RID: 36435
 	Text,
-	// Token: 0x04008D0D RID: 36109
+	// Token: 0x04008E54 RID: 36436
 	Button
 }

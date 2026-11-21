@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x0200185F RID: 6239
+// Token: 0x02000D18 RID: 3352
 [NullableContext(2)]
 [Nullable(0)]
 public class PhantomConfirmMediumItemGrid : LoopScrollMediumItemGrid<int>
 {
-	// Token: 0x0600B6F9 RID: 46841 RVA: 0x00295874 File Offset: 0x00293A74
+	// Token: 0x06008AE2 RID: 35554 RVA: 0x0029FF98 File Offset: 0x0029E198
 	protected override void OnExtendToggleClicked()
 	{
 		ItemController.Instance.OpenItemTipsByItemUid(this.CurrentData.GetUniqueId(), this.CurrentData.GetConfigId(false), true, null);
 	}
 
-	// Token: 0x0600B6FA RID: 46842 RVA: 0x0029589C File Offset: 0x00293A9C
+	// Token: 0x06008AE3 RID: 35555 RVA: 0x0029FFC0 File Offset: 0x0029E1C0
 	protected override void OnRefresh(int uniqueId, bool isSelected, int gridIndex)
 	{
 		InventoryModel instance = InventoryModel.Instance;
@@ -61,12 +61,12 @@ public class PhantomConfirmMediumItemGrid : LoopScrollMediumItemGrid<int>
 		base.Apply<PhantomMediumItemGrid>(phantomMediumItemGrid);
 	}
 
-	// Token: 0x0600B6FB RID: 46843 RVA: 0x00295A21 File Offset: 0x00293C21
+	// Token: 0x06008AE4 RID: 35556 RVA: 0x002A0145 File Offset: 0x0029E345
 	public PhantomBattleData GetCurrentData()
 	{
 		return this.CurrentData;
 	}
 
-	// Token: 0x040052A0 RID: 21152
+	// Token: 0x0400534B RID: 21323
 	private PhantomBattleData CurrentData;
 }

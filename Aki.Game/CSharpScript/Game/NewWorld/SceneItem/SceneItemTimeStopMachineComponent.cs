@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007197 RID: 29079
+	// Token: 0x0200624C RID: 25164
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemTimeStopMachineComponent : EntityComponent
 	{
-		// Token: 0x06047255 RID: 291413 RVA: 0x01211B18 File Offset: 0x0120FD18
+		// Token: 0x0603CB3E RID: 248638 RVA: 0x0116C07C File Offset: 0x0116A27C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047256 RID: 291414 RVA: 0x01211B59 File Offset: 0x0120FD59
+		// Token: 0x0603CB3F RID: 248639 RVA: 0x0116C0BD File Offset: 0x0116A2BD
 		protected override bool OnStart()
 		{
 			this.CreatureDataComponent = base.Entity.CheckGetComponent<CreatureDataComponent>();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047257 RID: 291415 RVA: 0x01211B89 File Offset: 0x0120FD89
+		// Token: 0x0603CB40 RID: 248640 RVA: 0x0116C0ED File Offset: 0x0116A2ED
 		protected override bool OnEnd()
 		{
 			this.RemoveEventListener();
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047258 RID: 291416 RVA: 0x01211BA8 File Offset: 0x0120FDA8
+		// Token: 0x0603CB41 RID: 248641 RVA: 0x0116C10C File Offset: 0x0116A30C
 		private void AddEventListener()
 		{
 			EventSystem.Instance.AddWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange));
 		}
 
-		// Token: 0x06047259 RID: 291417 RVA: 0x01211BCC File Offset: 0x0120FDCC
+		// Token: 0x0603CB42 RID: 248642 RVA: 0x0116C130 File Offset: 0x0116A330
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.RemoveWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange));
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604725A RID: 291418 RVA: 0x01211C40 File Offset: 0x0120FE40
+		// Token: 0x0603CB43 RID: 248643 RVA: 0x0116C1A4 File Offset: 0x0116A3A4
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			int? targetState = this.TargetState;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604725B RID: 291419 RVA: 0x01211CB0 File Offset: 0x0120FEB0
+		// Token: 0x0603CB44 RID: 248644 RVA: 0x0116C214 File Offset: 0x0116A414
 		private void OnEntityRemove(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (this.CurrentAffectedEntity.ContainsKey(handle))
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604725C RID: 291420 RVA: 0x01211D00 File Offset: 0x0120FF00
+		// Token: 0x0603CB45 RID: 248645 RVA: 0x0116C264 File Offset: 0x0116A464
 		private void StartTimeStop()
 		{
 			TimeStopComponent config = this.Config;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604725D RID: 291421 RVA: 0x01211D98 File Offset: 0x0120FF98
+		// Token: 0x0603CB46 RID: 248646 RVA: 0x0116C2FC File Offset: 0x0116A4FC
 		private void StartTimeStopInternal(EntityHandle entityHandle)
 		{
 			WorldEntity entity = entityHandle.Entity;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604725E RID: 291422 RVA: 0x01211E9C File Offset: 0x0121009C
+		// Token: 0x0603CB47 RID: 248647 RVA: 0x0116C400 File Offset: 0x0116A600
 		private void EndTimeStop()
 		{
 			foreach (KeyValuePair<EntityHandle, TimeStopData> keyValuePair in this.CurrentAffectedEntity)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604725F RID: 291423 RVA: 0x01211F44 File Offset: 0x01210144
+		// Token: 0x0603CB48 RID: 248648 RVA: 0x0116C4A8 File Offset: 0x0116A6A8
 		private void EndTimeStopInternal(EntityHandle entityHandle)
 		{
 			TimeStopData timeStopData;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047260 RID: 291424 RVA: 0x01211FE9 File Offset: 0x012101E9
+		// Token: 0x0603CB49 RID: 248649 RVA: 0x0116C54D File Offset: 0x0116A74D
 		private void TryListenAddEntityEvent()
 		{
 			if (!EventSystem.Instance.Has<EAddEntityType, EntityHandle, AActor>(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.WaitCreateEntity)))
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047261 RID: 291425 RVA: 0x01212024 File Offset: 0x01210224
+		// Token: 0x0603CB4A RID: 248650 RVA: 0x0116C588 File Offset: 0x0116A788
 		private void WaitCreateEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			int pbDataId = handle.Entity.GetComponent<CreatureDataComponent>().GetPbDataId();
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047262 RID: 291426 RVA: 0x01212090 File Offset: 0x01210290
+		// Token: 0x0603CB4B RID: 248651 RVA: 0x0116C5F4 File Offset: 0x0116A7F4
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -224,71 +224,79 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemTimeStopMachineComponent sceneItemTimeStopMachineComponent = (SceneItemTimeStopMachineComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemTimeStopMachineComponent.Config == null)
 			{
-				if (sceneItemTimeStopMachineComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimeStopComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("TargetState"))
-			{
-				this.TargetState = sceneItemTimeStopMachineComponent.TargetState;
-			}
-			if (base.CanResetComponentProperty("CreatureDataComponent"))
-			{
-				if (sceneItemTimeStopMachineComponent.CreatureDataComponent == null)
-				{
-					this.CreatureDataComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurrentAffectedEntity") && sceneItemTimeStopMachineComponent.CurrentAffectedEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EntityHandle, TimeStopData>>(this.CurrentAffectedEntity), "CurrentAffectedEntity"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("WaitAddEntitiesSet") && sceneItemTimeStopMachineComponent.WaitAddEntitiesSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.WaitAddEntitiesSet), "WaitAddEntitiesSet"))
+			this.TargetState = sceneItemTimeStopMachineComponent.TargetState;
+			if (sceneItemTimeStopMachineComponent.CreatureDataComponent == null)
+			{
+				this.CreatureDataComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsStopping"))
+			if (sceneItemTimeStopMachineComponent.CurrentAffectedEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentAffectedEntity), "CurrentAffectedEntity"))
 			{
-				this.IsStopping = sceneItemTimeStopMachineComponent.IsStopping;
+				return false;
 			}
+			if (sceneItemTimeStopMachineComponent.WaitAddEntitiesSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.WaitAddEntitiesSet), "WaitAddEntitiesSet"))
+			{
+				return false;
+			}
+			this.IsStopping = sceneItemTimeStopMachineComponent.IsStopping;
 			return true;
 		}
 
-		// Token: 0x04025675 RID: 153205
+		// Token: 0x170072D6 RID: 29398
+		// (get) Token: 0x0603CB4C RID: 248652 RVA: 0x0116C6C6 File Offset: 0x0116A8C6
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072D7 RID: 29399
+		// (get) Token: 0x0603CB4D RID: 248653 RVA: 0x0116C6C9 File Offset: 0x0116A8C9
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040202E5 RID: 131813
 		private const int TOLERANCE_TIME = 3;
 
-		// Token: 0x04025676 RID: 153206
+		// Token: 0x040202E6 RID: 131814
 		private const int TIME_STOP_BUFF_ID = 600000009;
 
-		// Token: 0x04025677 RID: 153207
+		// Token: 0x040202E7 RID: 131815
 		[Nullable(2)]
 		private TimeStopComponent Config;
 
-		// Token: 0x04025678 RID: 153208
+		// Token: 0x040202E8 RID: 131816
 		private int? TargetState;
 
-		// Token: 0x04025679 RID: 153209
+		// Token: 0x040202E9 RID: 131817
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x0402567A RID: 153210
+		// Token: 0x040202EA RID: 131818
 		private readonly Dictionary<EntityHandle, TimeStopData> CurrentAffectedEntity = new Dictionary<EntityHandle, TimeStopData>();
 
-		// Token: 0x0402567B RID: 153211
+		// Token: 0x040202EB RID: 131819
 		private readonly HashSet<int> WaitAddEntitiesSet = new HashSet<int>();
 
-		// Token: 0x0402567C RID: 153212
+		// Token: 0x040202EC RID: 131820
 		private bool IsStopping;
 	}
 }

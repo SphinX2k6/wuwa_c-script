@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004CC RID: 1228
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000525 RID: 1317
 	public class ILiftMoveCurve
 	{
-		// Token: 0x060018F0 RID: 6384 RVA: 0x0004A3B8 File Offset: 0x000485B8
+		// Token: 0x06001A8A RID: 6794 RVA: 0x0004E100 File Offset: 0x0004C300
 		private ILiftMoveCurve_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060018F1 RID: 6385 RVA: 0x0004A3F0 File Offset: 0x000485F0
+		// Token: 0x06001A8B RID: 6795 RVA: 0x0004E138 File Offset: 0x0004C338
 		public static ILiftMoveCurve Create([Nullable(2)] ILiftMoveCurve instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018F2 RID: 6386 RVA: 0x0004A403 File Offset: 0x00048603
+		// Token: 0x06001A8C RID: 6796 RVA: 0x0004E14B File Offset: 0x0004C34B
 		public static ILiftMoveCurve CreateFromSetValue([Nullable(2)] ILiftMoveCurve_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018F3 RID: 6387 RVA: 0x0004A416 File Offset: 0x00048616
+		// Token: 0x06001A8D RID: 6797 RVA: 0x0004E15E File Offset: 0x0004C35E
 		public ILiftMoveCurve_SetValue ToSetValue()
 		{
 			return new ILiftMoveCurve_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006A5 RID: 1701
-		// (get) Token: 0x060018F4 RID: 6388 RVA: 0x0004A435 File Offset: 0x00048635
-		// (set) Token: 0x060018F5 RID: 6389 RVA: 0x0004A460 File Offset: 0x00048660
+		// Token: 0x1700070C RID: 1804
+		// (get) Token: 0x06001A8E RID: 6798 RVA: 0x0004E17D File Offset: 0x0004C37D
+		// (set) Token: 0x06001A8F RID: 6799 RVA: 0x0004E1A8 File Offset: 0x0004C3A8
 		public virtual string Curve
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006A6 RID: 1702
-		// (get) Token: 0x060018F6 RID: 6390 RVA: 0x0004A46E File Offset: 0x0004866E
-		// (set) Token: 0x060018F7 RID: 6391 RVA: 0x0004A49D File Offset: 0x0004869D
+		// Token: 0x1700070D RID: 1805
+		// (get) Token: 0x06001A90 RID: 6800 RVA: 0x0004E1B6 File Offset: 0x0004C3B6
+		// (set) Token: 0x06001A91 RID: 6801 RVA: 0x0004E1E5 File Offset: 0x0004C3E5
 		public virtual float Time
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400126B RID: 4715
+		// Token: 0x0400138D RID: 5005
 		[Nullable(2)]
 		protected ILiftMoveCurve FbInstance;
 
-		// Token: 0x0400126C RID: 4716
+		// Token: 0x0400138E RID: 5006
 		[Nullable(2)]
 		protected ILiftMoveCurve_SetValue PocoInterface;
 	}

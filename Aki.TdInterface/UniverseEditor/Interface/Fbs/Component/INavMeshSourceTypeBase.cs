@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055EA RID: 21994
+	// Token: 0x02005B88 RID: 23432
 	public struct INavMeshSourceTypeBase : IFlatbufferObject
 	{
-		// Token: 0x1700A2C2 RID: 41666
-		// (get) Token: 0x060247D3 RID: 149459 RVA: 0x005096C3 File Offset: 0x005078C3
+		// Token: 0x1700AB4A RID: 43850
+		// (get) Token: 0x060269E0 RID: 158176 RVA: 0x00549C3B File Offset: 0x00547E3B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060247D4 RID: 149460 RVA: 0x005096D0 File Offset: 0x005078D0
+		// Token: 0x060269E1 RID: 158177 RVA: 0x00549C48 File Offset: 0x00547E48
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060247D5 RID: 149461 RVA: 0x005096D8 File Offset: 0x005078D8
+		// Token: 0x060269E2 RID: 158178 RVA: 0x00549C50 File Offset: 0x00547E50
 		public static INavMeshSourceTypeBase GetRootAsINavMeshSourceTypeBase(ByteBuffer _bb)
 		{
 			return INavMeshSourceTypeBase.GetRootAsINavMeshSourceTypeBase(_bb, default(INavMeshSourceTypeBase));
 		}
 
-		// Token: 0x060247D6 RID: 149462 RVA: 0x005096F4 File Offset: 0x005078F4
+		// Token: 0x060269E3 RID: 158179 RVA: 0x00549C6C File Offset: 0x00547E6C
 		public static INavMeshSourceTypeBase GetRootAsINavMeshSourceTypeBase(ByteBuffer _bb, INavMeshSourceTypeBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060247D7 RID: 149463 RVA: 0x00509711 File Offset: 0x00507911
+		// Token: 0x060269E4 RID: 158180 RVA: 0x00549C89 File Offset: 0x00547E89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060247D8 RID: 149464 RVA: 0x00509720 File Offset: 0x00507920
+		// Token: 0x060269E5 RID: 158181 RVA: 0x00549C98 File Offset: 0x00547E98
 		public INavMeshSourceTypeBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A2C3 RID: 41667
-		// (get) Token: 0x060247D9 RID: 149465 RVA: 0x00509730 File Offset: 0x00507930
+		// Token: 0x1700AB4B RID: 43851
+		// (get) Token: 0x060269E6 RID: 158182 RVA: 0x00549CA8 File Offset: 0x00547EA8
 		public ENavMeshSourceType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060247DA RID: 149466 RVA: 0x0050976C File Offset: 0x0050796C
+		// Token: 0x060269E7 RID: 158183 RVA: 0x00549CE4 File Offset: 0x00547EE4
 		public static Offset<INavMeshSourceTypeBase> CreateINavMeshSourceTypeBase(FlatBufferBuilder builder, ENavMeshSourceType Type = ENavMeshSourceType.AkiEntitySource)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INavMeshSourceTypeBase.EndINavMeshSourceTypeBase(builder);
 		}
 
-		// Token: 0x060247DB RID: 149467 RVA: 0x00509782 File Offset: 0x00507982
+		// Token: 0x060269E8 RID: 158184 RVA: 0x00549CFA File Offset: 0x00547EFA
 		public static void StartINavMeshSourceTypeBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060247DC RID: 149468 RVA: 0x0050978B File Offset: 0x0050798B
+		// Token: 0x060269E9 RID: 158185 RVA: 0x00549D03 File Offset: 0x00547F03
 		public static void AddType(FlatBufferBuilder builder, ENavMeshSourceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060247DD RID: 149469 RVA: 0x00509796 File Offset: 0x00507996
+		// Token: 0x060269EA RID: 158186 RVA: 0x00549D0E File Offset: 0x00547F0E
 		public static Offset<INavMeshSourceTypeBase> EndINavMeshSourceTypeBase(FlatBufferBuilder builder)
 		{
 			return new Offset<INavMeshSourceTypeBase>(builder.EndTable());
 		}
 
-		// Token: 0x060247DE RID: 149470 RVA: 0x005097A4 File Offset: 0x005079A4
+		// Token: 0x060269EB RID: 158187 RVA: 0x00549D1C File Offset: 0x00547F1C
 		public INavMeshSourceTypeBaseT UnPack()
 		{
 			INavMeshSourceTypeBaseT navMeshSourceTypeBaseT = new INavMeshSourceTypeBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return navMeshSourceTypeBaseT;
 		}
 
-		// Token: 0x060247DF RID: 149471 RVA: 0x005097BF File Offset: 0x005079BF
+		// Token: 0x060269EC RID: 158188 RVA: 0x00549D37 File Offset: 0x00547F37
 		public void UnPackTo(INavMeshSourceTypeBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060247E0 RID: 149472 RVA: 0x005097D0 File Offset: 0x005079D0
+		// Token: 0x060269ED RID: 158189 RVA: 0x00549D48 File Offset: 0x00547F48
 		public static Offset<INavMeshSourceTypeBase> Pack(FlatBufferBuilder builder, INavMeshSourceTypeBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INavMeshSourceTypeBase.CreateINavMeshSourceTypeBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400E955 RID: 59733
+		// Token: 0x0400F5B7 RID: 62903
 		private Table __p;
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001043 RID: 4163
+	// Token: 0x0200112B RID: 4395
 	public struct RoleDevItemJumpGroup : IFlatbufferObject
 	{
-		// Token: 0x17003237 RID: 12855
-		// (get) Token: 0x0600C7F7 RID: 51191 RVA: 0x002F91E9 File Offset: 0x002F73E9
+		// Token: 0x170032B2 RID: 12978
+		// (get) Token: 0x0600CE41 RID: 52801 RVA: 0x00314F85 File Offset: 0x00313185
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C7F8 RID: 51192 RVA: 0x002F91F6 File Offset: 0x002F73F6
+		// Token: 0x0600CE42 RID: 52802 RVA: 0x00314F92 File Offset: 0x00313192
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C7F9 RID: 51193 RVA: 0x002F9200 File Offset: 0x002F7400
+		// Token: 0x0600CE43 RID: 52803 RVA: 0x00314F9C File Offset: 0x0031319C
 		public static RoleDevItemJumpGroup GetRootAsRoleDevItemJumpGroup(ByteBuffer _bb)
 		{
 			return RoleDevItemJumpGroup.GetRootAsRoleDevItemJumpGroup(_bb, default(RoleDevItemJumpGroup));
 		}
 
-		// Token: 0x0600C7FA RID: 51194 RVA: 0x002F921C File Offset: 0x002F741C
+		// Token: 0x0600CE44 RID: 52804 RVA: 0x00314FB8 File Offset: 0x003131B8
 		public static RoleDevItemJumpGroup GetRootAsRoleDevItemJumpGroup(ByteBuffer _bb, RoleDevItemJumpGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C7FB RID: 51195 RVA: 0x002F9239 File Offset: 0x002F7439
+		// Token: 0x0600CE45 RID: 52805 RVA: 0x00314FD5 File Offset: 0x003131D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C7FC RID: 51196 RVA: 0x002F9248 File Offset: 0x002F7448
+		// Token: 0x0600CE46 RID: 52806 RVA: 0x00314FE4 File Offset: 0x003131E4
 		public RoleDevItemJumpGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003238 RID: 12856
-		// (get) Token: 0x0600C7FD RID: 51197 RVA: 0x002F9258 File Offset: 0x002F7458
+		// Token: 0x170032B3 RID: 12979
+		// (get) Token: 0x0600CE47 RID: 52807 RVA: 0x00314FF4 File Offset: 0x003131F4
 		public int ItemId
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003239 RID: 12857
-		// (get) Token: 0x0600C7FE RID: 51198 RVA: 0x002F9294 File Offset: 0x002F7494
+		// Token: 0x170032B4 RID: 12980
+		// (get) Token: 0x0600CE48 RID: 52808 RVA: 0x00315030 File Offset: 0x00313230
 		public int ItemType
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700323A RID: 12858
-		// (get) Token: 0x0600C7FF RID: 51199 RVA: 0x002F92D0 File Offset: 0x002F74D0
+		// Token: 0x170032B5 RID: 12981
+		// (get) Token: 0x0600CE49 RID: 52809 RVA: 0x0031506C File Offset: 0x0031326C
 		public int DetectionType
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C800 RID: 51200 RVA: 0x002F930C File Offset: 0x002F750C
+		// Token: 0x0600CE4A RID: 52810 RVA: 0x003150A8 File Offset: 0x003132A8
 		public int DetectionID(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700323B RID: 12859
-		// (get) Token: 0x0600C801 RID: 51201 RVA: 0x002F934C File Offset: 0x002F754C
+		// Token: 0x170032B6 RID: 12982
+		// (get) Token: 0x0600CE4B RID: 52811 RVA: 0x003150E8 File Offset: 0x003132E8
 		public int DetectionIDLength
 		{
 			get
@@ -120,19 +120,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C802 RID: 51202 RVA: 0x002F9378 File Offset: 0x002F7578
+		// Token: 0x0600CE4C RID: 52812 RVA: 0x00315114 File Offset: 0x00313314
 		public Span<int> GetDetectionIDBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600C803 RID: 51203 RVA: 0x002F9388 File Offset: 0x002F7588
+		// Token: 0x0600CE4D RID: 52813 RVA: 0x00315124 File Offset: 0x00313324
 		public int[] GetDetectionIDArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600C804 RID: 51204 RVA: 0x002F93A0 File Offset: 0x002F75A0
+		// Token: 0x0600CE4E RID: 52814 RVA: 0x0031513C File Offset: 0x0031333C
 		public int JumpGroup(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -143,8 +143,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700323C RID: 12860
-		// (get) Token: 0x0600C805 RID: 51205 RVA: 0x002F93E0 File Offset: 0x002F75E0
+		// Token: 0x170032B7 RID: 12983
+		// (get) Token: 0x0600CE4F RID: 52815 RVA: 0x0031517C File Offset: 0x0031337C
 		public int JumpGroupLength
 		{
 			get
@@ -158,20 +158,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C806 RID: 51206 RVA: 0x002F940C File Offset: 0x002F760C
+		// Token: 0x0600CE50 RID: 52816 RVA: 0x003151A8 File Offset: 0x003133A8
 		public Span<int> GetJumpGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600C807 RID: 51207 RVA: 0x002F941C File Offset: 0x002F761C
+		// Token: 0x0600CE51 RID: 52817 RVA: 0x003151B8 File Offset: 0x003133B8
 		public int[] GetJumpGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700323D RID: 12861
-		// (get) Token: 0x0600C808 RID: 51208 RVA: 0x002F9434 File Offset: 0x002F7634
+		// Token: 0x170032B8 RID: 12984
+		// (get) Token: 0x0600CE52 RID: 52818 RVA: 0x003151D0 File Offset: 0x003133D0
 		public int SpecialJumpGroup
 		{
 			get
@@ -185,8 +185,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700323E RID: 12862
-		// (get) Token: 0x0600C809 RID: 51209 RVA: 0x002F9474 File Offset: 0x002F7674
+		// Token: 0x170032B9 RID: 12985
+		// (get) Token: 0x0600CE53 RID: 52819 RVA: 0x00315210 File Offset: 0x00313410
 		public int SynthesisValue
 		{
 			get
@@ -200,8 +200,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700323F RID: 12863
-		// (get) Token: 0x0600C80A RID: 51210 RVA: 0x002F94B4 File Offset: 0x002F76B4
+		// Token: 0x170032BA RID: 12986
+		// (get) Token: 0x0600CE54 RID: 52820 RVA: 0x00315250 File Offset: 0x00313450
 		public int SubGroup
 		{
 			get
@@ -215,43 +215,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C80B RID: 51211 RVA: 0x002F94F4 File Offset: 0x002F76F4
+		// Token: 0x0600CE55 RID: 52821 RVA: 0x0031528D File Offset: 0x0031348D
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DetectionIDIter()或GetDetectionIDBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DetectionID()
+		public int[] DetectionID()
 		{
-			RoleDevItemJumpGroup roleDevItemJumpGroup = this;
-			return roleDevItemJumpGroup.GetDetectionIDArray() ?? Array.Empty<int>();
+			return this.GetDetectionIDArray();
 		}
 
-		// Token: 0x0600C80C RID: 51212 RVA: 0x002F9518 File Offset: 0x002F7718
+		// Token: 0x0600CE56 RID: 52822 RVA: 0x00315295 File Offset: 0x00313495
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DetectionIDIter()
+		public IEnumerable<int> DetectionIDIter()
 		{
 			RoleDevItemJumpGroup.<DetectionIDIter>d__31 <DetectionIDIter>d__ = new RoleDevItemJumpGroup.<DetectionIDIter>d__31(-2);
 			<DetectionIDIter>d__.<>3__<>4__this = this;
 			return <DetectionIDIter>d__;
 		}
 
-		// Token: 0x0600C80D RID: 51213 RVA: 0x002F9530 File Offset: 0x002F7730
+		// Token: 0x0600CE57 RID: 52823 RVA: 0x003152AA File Offset: 0x003134AA
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用JumpGroupIter()或GetJumpGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] JumpGroup()
+		public int[] JumpGroup()
 		{
-			RoleDevItemJumpGroup roleDevItemJumpGroup = this;
-			return roleDevItemJumpGroup.GetJumpGroupArray() ?? Array.Empty<int>();
+			return this.GetJumpGroupArray();
 		}
 
-		// Token: 0x0600C80E RID: 51214 RVA: 0x002F9554 File Offset: 0x002F7754
+		// Token: 0x0600CE58 RID: 52824 RVA: 0x003152B2 File Offset: 0x003134B2
 		[NullableContext(1)]
-		public readonly IEnumerable<int> JumpGroupIter()
+		public IEnumerable<int> JumpGroupIter()
 		{
 			RoleDevItemJumpGroup.<JumpGroupIter>d__33 <JumpGroupIter>d__ = new RoleDevItemJumpGroup.<JumpGroupIter>d__33(-2);
 			<JumpGroupIter>d__.<>3__<>4__this = this;
 			return <JumpGroupIter>d__;
 		}
 
-		// Token: 0x04005141 RID: 20801
+		// Token: 0x04005729 RID: 22313
 		private Table __p;
 	}
 }

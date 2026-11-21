@@ -12,25 +12,24 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.KuroSimpleCombat;
 using CSharpScript.Game.World.Controller;
 using CSharpScript.Launcher.BaseConfig;
-using CSharpScript.Launcher.Platform;
 using CSharpScript.Launcher.Ui.HotFix;
 using CSharpScript.Typing;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CC9 RID: 23753
+	// Token: 0x02004CAB RID: 19627
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PositionPanel : BattleChildViewPanel
 	{
-		// Token: 0x0603C0F7 RID: 246007 RVA: 0x00E5D7BC File Offset: 0x00E5B9BC
+		// Token: 0x0603104C RID: 200780 RVA: 0x00DADED0 File Offset: 0x00DAC0D0
 		public void SetShowCameraRot(bool show)
 		{
 			this.ShowCameraRot = show;
 		}
 
-		// Token: 0x0603C0F8 RID: 246008 RVA: 0x00E5D7C8 File Offset: 0x00E5B9C8
+		// Token: 0x0603104D RID: 200781 RVA: 0x00DADEDC File Offset: 0x00DAC0DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -54,7 +53,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C0F9 RID: 246009 RVA: 0x00E5D8D8 File Offset: 0x00E5BAD8
+		// Token: 0x0603104E RID: 200782 RVA: 0x00DADFEC File Offset: 0x00DAC1EC
 		protected override void OnStart()
 		{
 			this.IsPioneerFeature = FeatureRestrictionTemplate.TemplateForPioneerClient.Check();
@@ -67,15 +66,11 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.QualityTierText = base.GetText(6);
 			this.TimeZoneString = TimeUtil.Instance.GetTimeZoneOffsetString();
 			this.CsEnvInited = UCSharpBlueprintFunctionLibrary.HasCSharpEnvironmentInitialized();
-			if (!Info.Instance.IsBuildShipping)
-			{
-				this.InitEntityScore();
-			}
 			if (this.IsPioneerFeature)
 			{
 				this.IsShowPosition = true;
 			}
-			else if (Info.Instance.IsBuildShipping)
+			else
 			{
 				this.IsShowPosition = false;
 			}
@@ -97,7 +92,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshQualityTierText();
 		}
 
-		// Token: 0x0603C0FA RID: 246010 RVA: 0x00E5DA00 File Offset: 0x00E5BC00
+		// Token: 0x0603104F RID: 200783 RVA: 0x00DAE0F8 File Offset: 0x00DAC2F8
 		protected override void AddEvents()
 		{
 			this.ChildViewData.AddCallback(EBattleUiChild.Common, new Action(this.OnCommonVisibleChanged));
@@ -105,7 +100,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.ShowPlayerPosition, new Action(this.ShowPlayerPosition));
 		}
 
-		// Token: 0x0603C0FB RID: 246011 RVA: 0x00E5DA5C File Offset: 0x00E5BC5C
+		// Token: 0x06031050 RID: 200784 RVA: 0x00DAE154 File Offset: 0x00DAC354
 		protected override void RemoveEvents()
 		{
 			this.ChildViewData.RemoveCallback(EBattleUiChild.Common, new Action(this.OnCommonVisibleChanged));
@@ -113,20 +108,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.ShowPlayerPosition, new Action(this.ShowPlayerPosition));
 		}
 
-		// Token: 0x0603C0FC RID: 246012 RVA: 0x00E5DAB6 File Offset: 0x00E5BCB6
+		// Token: 0x06031051 RID: 200785 RVA: 0x00DAE1AE File Offset: 0x00DAC3AE
 		private void OnCommonVisibleChanged()
 		{
 			this.RefreshPositionTextOfficialVisible();
 			this.RefreshTimeTextOfficialVisible();
 		}
 
-		// Token: 0x0603C0FD RID: 246013 RVA: 0x00E5DAC4 File Offset: 0x00E5BCC4
+		// Token: 0x06031052 RID: 200786 RVA: 0x00DAE1BC File Offset: 0x00DAC3BC
 		private void OnPositionOfficialVisibleChanged()
 		{
 			this.RefreshPositionTextOfficialVisible();
 		}
 
-		// Token: 0x0603C0FE RID: 246014 RVA: 0x00E5DACC File Offset: 0x00E5BCCC
+		// Token: 0x06031053 RID: 200787 RVA: 0x00DAE1C4 File Offset: 0x00DAC3C4
 		private void RefreshPositionTextOfficialVisible()
 		{
 			bool childVisible = this.ChildViewData.GetChildVisible(EBattleUiChild.Common);
@@ -139,7 +134,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			positionTextOfficial.SetUIActive(childVisible && childVisible2);
 		}
 
-		// Token: 0x0603C0FF RID: 246015 RVA: 0x00E5DB08 File Offset: 0x00E5BD08
+		// Token: 0x06031054 RID: 200788 RVA: 0x00DAE200 File Offset: 0x00DAC400
 		private void RefreshTimeTextOfficialVisible()
 		{
 			bool childVisible = this.ChildViewData.GetChildVisible(EBattleUiChild.Common);
@@ -151,28 +146,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			timeTextOfficial.SetUIActive(childVisible);
 		}
 
-		// Token: 0x0603C100 RID: 246016 RVA: 0x00E5DB33 File Offset: 0x00E5BD33
+		// Token: 0x06031055 RID: 200789 RVA: 0x00DAE22B File Offset: 0x00DAC42B
 		private void ShowPlayerPosition()
 		{
 			this.IsShowPosition = !this.IsShowPosition;
 			this.PositionText.SetUIActive(this.IsShowPosition);
 		}
 
-		// Token: 0x0603C101 RID: 246017 RVA: 0x00E5DB55 File Offset: 0x00E5BD55
+		// Token: 0x06031056 RID: 200790 RVA: 0x00DAE24D File Offset: 0x00DAC44D
 		protected override void OnBeforeDestroy()
 		{
 			this.PositionText = null;
 			this.CenterPositionText = null;
 		}
 
-		// Token: 0x0603C102 RID: 246018 RVA: 0x00E5DB65 File Offset: 0x00E5BD65
+		// Token: 0x06031057 RID: 200791 RVA: 0x00DAE25D File Offset: 0x00DAC45D
 		public override void OnAfterTickBattleChildViewPanel(float delta)
 		{
 			this.UpdateDebugAndPositionText(delta);
 			this.UpdateTimeTextOfficial(delta);
 		}
 
-		// Token: 0x0603C103 RID: 246019 RVA: 0x00E5DB78 File Offset: 0x00E5BD78
+		// Token: 0x06031058 RID: 200792 RVA: 0x00DAE270 File Offset: 0x00DAC470
 		private void UpdateDebugAndPositionText(float delta)
 		{
 			if (Global.BaseCharacter == null)
@@ -197,7 +192,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			positionTextOfficial.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603C104 RID: 246020 RVA: 0x00E5DC30 File Offset: 0x00E5BE30
+		// Token: 0x06031059 RID: 200793 RVA: 0x00DAE328 File Offset: 0x00DAC528
 		private void UpdateTimeTextOfficial(float _)
 		{
 			TimeUtil instance = TimeUtil.Instance;
@@ -206,7 +201,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TimeTextOfficial.SetText(this.CsEnvInited ? (text + " *") : text, true);
 		}
 
-		// Token: 0x0603C105 RID: 246021 RVA: 0x00E5DC78 File Offset: 0x00E5BE78
+		// Token: 0x0603105A RID: 200794 RVA: 0x00DAE370 File Offset: 0x00DAC570
 		private static string BuildConfigVersionLine(string label, string clientRawValue, int? serverValue)
 		{
 			int num;
@@ -225,7 +220,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return "<color=red><b>" + text + "</b></color>";
 		}
 
-		// Token: 0x0603C106 RID: 246022 RVA: 0x00E5DD20 File Offset: 0x00E5BF20
+		// Token: 0x0603105B RID: 200795 RVA: 0x00DAE418 File Offset: 0x00DAC618
 		private void ShowDebugText(global::Vector position, float delta)
 		{
 			int value = (int)position.X;
@@ -563,133 +558,30 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PositionText.SetText(string.Join("", list), true);
 		}
 
-		// Token: 0x0603C107 RID: 246023 RVA: 0x00E5E928 File Offset: 0x00E5CB28
-		public void UpdateNiagaraGlobalWindow()
+		// Token: 0x0603105C RID: 200796 RVA: 0x00DAF020 File Offset: 0x00DAD220
+		private static string FormatNiagaraWarnValue(string name, int value, int threshold)
 		{
-			string text = "";
-			bool flag = false;
-			FNiagaraGlobalInfoInHUD globalInfo = UNiagaraFunctionLibrary.GetGlobalInfo();
-			int globalTotalActive = globalInfo.GlobalTotalActive;
-			int globalTotalScalability = globalInfo.GlobalTotalScalability;
-			int globalTotalParticles = globalInfo.GlobalTotalParticles;
-			int globalTotalEmitters = globalInfo.GlobalTotalEmitters;
-			int num;
-			int num2;
-			int num3;
-			int num4;
-			if (Platform.Instance.IsPcPlatform())
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler;
+			if (value <= threshold)
 			{
-				num = 1000;
-				num2 = 1000;
-				num3 = 4000;
-				num4 = 600;
+				defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
+				defaultInterpolatedStringHandler.AppendFormatted(name);
+				defaultInterpolatedStringHandler.AppendLiteral(":");
+				defaultInterpolatedStringHandler.AppendFormatted<int>(value);
+				return defaultInterpolatedStringHandler.ToStringAndClear();
 			}
-			else if (Platform.Instance.IsHomeConsolePlatform())
-			{
-				num = 1000;
-				num2 = 1000;
-				num3 = 4000;
-				num4 = 600;
-			}
-			else
-			{
-				num = 1000;
-				num2 = 1000;
-				num3 = 4000;
-				num4 = 400;
-			}
-			if (globalTotalActive > num)
-			{
-				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(21, 2);
-				defaultInterpolatedStringHandler.AppendFormatted(text);
-				defaultInterpolatedStringHandler.AppendLiteral(" TotalActive超标,当前值是:");
-				defaultInterpolatedStringHandler.AppendFormatted<int>(globalTotalActive);
-				defaultInterpolatedStringHandler.AppendLiteral("\n");
-				text = defaultInterpolatedStringHandler.ToStringAndClear();
-				flag = true;
-			}
-			if (globalTotalScalability > num2)
-			{
-				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(26, 2);
-				defaultInterpolatedStringHandler.AppendFormatted(text);
-				defaultInterpolatedStringHandler.AppendLiteral(" TotalScalability超标,当前值是:");
-				defaultInterpolatedStringHandler.AppendFormatted<int>(globalTotalScalability);
-				defaultInterpolatedStringHandler.AppendLiteral("\n");
-				text = defaultInterpolatedStringHandler.ToStringAndClear();
-				flag = true;
-			}
-			if (globalTotalParticles > num3)
-			{
-				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(24, 2);
-				defaultInterpolatedStringHandler.AppendFormatted(text);
-				defaultInterpolatedStringHandler.AppendLiteral(" TotalParticles超标,当前值是:");
-				defaultInterpolatedStringHandler.AppendFormatted<int>(globalTotalParticles);
-				defaultInterpolatedStringHandler.AppendLiteral("\n");
-				text = defaultInterpolatedStringHandler.ToStringAndClear();
-				flag = true;
-			}
-			if (globalTotalEmitters > num4)
-			{
-				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(23, 2);
-				defaultInterpolatedStringHandler.AppendFormatted(text);
-				defaultInterpolatedStringHandler.AppendLiteral(" TotalEmitters超标,当前值是:");
-				defaultInterpolatedStringHandler.AppendFormatted<int>(globalTotalEmitters);
-				defaultInterpolatedStringHandler.AppendLiteral("\n");
-				text = defaultInterpolatedStringHandler.ToStringAndClear();
-				flag = true;
-			}
-			if (flag)
-			{
-				text += " 请联系客户端 wanglingjie\n";
-				UUIText niagaraWarnText = this.NiagaraWarnText;
-				if (niagaraWarnText != null)
-				{
-					niagaraWarnText.SetUIActive(true);
-				}
-				UUIText niagaraWarnText2 = this.NiagaraWarnText;
-				if (niagaraWarnText2 != null)
-				{
-					niagaraWarnText2.SetText(text, true);
-				}
-				if (GameModeModel.Instance.MapConfig.PakRule == 1)
-				{
-					UUIItem niagaraWarnBackground = this.NiagaraWarnBackground;
-					if (niagaraWarnBackground == null)
-					{
-						return;
-					}
-					niagaraWarnBackground.SetUIActive(true);
-					return;
-				}
-				else
-				{
-					UUIItem niagaraWarnBackground2 = this.NiagaraWarnBackground;
-					if (niagaraWarnBackground2 == null)
-					{
-						return;
-					}
-					niagaraWarnBackground2.SetUIActive(false);
-					return;
-				}
-			}
-			else
-			{
-				UUIText niagaraWarnText3 = this.NiagaraWarnText;
-				if (niagaraWarnText3 != null)
-				{
-					niagaraWarnText3.SetUIActive(false);
-				}
-				UUIItem niagaraWarnBackground3 = this.NiagaraWarnBackground;
-				if (niagaraWarnBackground3 == null)
-				{
-					return;
-				}
-				niagaraWarnBackground3.SetUIActive(false);
-				return;
-			}
+			defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(17, 3);
+			defaultInterpolatedStringHandler.AppendLiteral("<color=");
+			defaultInterpolatedStringHandler.AppendFormatted("red");
+			defaultInterpolatedStringHandler.AppendLiteral(">");
+			defaultInterpolatedStringHandler.AppendFormatted(name);
+			defaultInterpolatedStringHandler.AppendLiteral(":");
+			defaultInterpolatedStringHandler.AppendFormatted<int>(value);
+			defaultInterpolatedStringHandler.AppendLiteral("</color>");
+			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603C108 RID: 246024 RVA: 0x00E5EB68 File Offset: 0x00E5CD68
+		// Token: 0x0603105D RID: 200797 RVA: 0x00DAF0BC File Offset: 0x00DAD2BC
 		public void UpdateEffectState()
 		{
 			int effectCount = EffectSystem.Instance.GetEffectCount();
@@ -721,7 +613,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.EffectString = defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603C109 RID: 246025 RVA: 0x00E5EC9C File Offset: 0x00E5CE9C
+		// Token: 0x0603105E RID: 200798 RVA: 0x00DAF1F0 File Offset: 0x00DAD3F0
 		private void UpdateEntityScore()
 		{
 			if (this.EntityScoreDefine.Count == 0)
@@ -777,8 +669,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TickScoreTimes = 0;
 		}
 
-		// Token: 0x17008DFE RID: 36350
-		// (get) Token: 0x0603C10A RID: 246026 RVA: 0x00E5EE14 File Offset: 0x00E5D014
+		// Token: 0x170061D0 RID: 25040
+		// (get) Token: 0x0603105F RID: 200799 RVA: 0x00DAF368 File Offset: 0x00DAD568
 		private float CalculateScore
 		{
 			get
@@ -804,7 +696,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C10B RID: 246027 RVA: 0x00E5EEC8 File Offset: 0x00E5D0C8
+		// Token: 0x06031060 RID: 200800 RVA: 0x00DAF41C File Offset: 0x00DAD61C
 		private float GetEntityScore(string blueprintType)
 		{
 			if (blueprintType.Contains("SimpleNPC"))
@@ -814,7 +706,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.EntityScoreDefine.GetValueOrDefault(blueprintType, 0f);
 		}
 
-		// Token: 0x0603C10C RID: 246028 RVA: 0x00E5EEF0 File Offset: 0x00E5D0F0
+		// Token: 0x06031061 RID: 200801 RVA: 0x00DAF444 File Offset: 0x00DAD644
 		private void InitEntityScore()
 		{
 			string configPath = PublicUtil.Instance.GetConfigPath("../Config/Raw/Tables/k.可视化编辑/EntityPerformanceData.json");
@@ -838,7 +730,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C10D RID: 246029 RVA: 0x00E5EF90 File Offset: 0x00E5D190
+		// Token: 0x06031062 RID: 200802 RVA: 0x00DAF4E4 File Offset: 0x00DAD6E4
 		private void RefreshQualityTierText()
 		{
 			if (this.QualityTierText == null)
@@ -860,41 +752,41 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.QualityTierText.SetUIActive(true);
 		}
 
-		// Token: 0x0401F527 RID: 128295
+		// Token: 0x04019FE0 RID: 106464
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject = Stat.Create("[BattleView]PositionPanelTick", "", "");
 
-		// Token: 0x0401F528 RID: 128296
+		// Token: 0x04019FE1 RID: 106465
 		private const string ENTITY_SCORE_PATH = "../Config/Raw/Tables/k.可视化编辑/EntityPerformanceData.json";
 
-		// Token: 0x0401F529 RID: 128297
+		// Token: 0x04019FE2 RID: 106466
 		private const int SIMPLE_NPC_PERFORMANCE_SCORE = 25;
 
-		// Token: 0x0401F52A RID: 128298
+		// Token: 0x04019FE3 RID: 106467
 		private const int LOW_SCORE_THRESHOLD = 300;
 
-		// Token: 0x0401F52B RID: 128299
+		// Token: 0x04019FE4 RID: 106468
 		private const int MID_SCORE_THRESHOLD = 500;
 
-		// Token: 0x0401F52C RID: 128300
+		// Token: 0x04019FE5 RID: 106469
 		private const int HIGH_SCORE_THRESHOLD = 600;
 
-		// Token: 0x0401F52D RID: 128301
+		// Token: 0x04019FE6 RID: 106470
 		private const string LOW_SCORE_COLOR = "green";
 
-		// Token: 0x0401F52E RID: 128302
+		// Token: 0x04019FE7 RID: 106471
 		private const string MID_SCORE_COLOR = "orange";
 
-		// Token: 0x0401F52F RID: 128303
+		// Token: 0x04019FE8 RID: 106472
 		private const string HIGH_SCORE_COLOR = "purple";
 
-		// Token: 0x0401F530 RID: 128304
+		// Token: 0x04019FE9 RID: 106473
 		private const string WARNING_COLOR = "red";
 
-		// Token: 0x0401F531 RID: 128305
+		// Token: 0x04019FEA RID: 106474
 		private const int EffectUpdateInterval = 500;
 
-		// Token: 0x0401F532 RID: 128306
+		// Token: 0x04019FEB RID: 106475
 		[StaticVariableRuleIgnore]
 		private static readonly string[] BudgetName = new string[]
 		{
@@ -903,109 +795,109 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"Cutscene"
 		};
 
-		// Token: 0x0401F533 RID: 128307
+		// Token: 0x04019FEC RID: 106476
 		[Nullable(2)]
 		private UUIText PositionText;
 
-		// Token: 0x0401F534 RID: 128308
+		// Token: 0x04019FED RID: 106477
 		[Nullable(2)]
 		private UUIText CenterPositionText;
 
-		// Token: 0x0401F535 RID: 128309
+		// Token: 0x04019FEE RID: 106478
 		[Nullable(2)]
 		private UUIText PositionTextOfficial;
 
-		// Token: 0x0401F536 RID: 128310
+		// Token: 0x04019FEF RID: 106479
 		[Nullable(2)]
 		private UUIText NiagaraWarnText;
 
-		// Token: 0x0401F537 RID: 128311
+		// Token: 0x04019FF0 RID: 106480
 		[Nullable(2)]
 		private UUIText TimeTextOfficial;
 
-		// Token: 0x0401F538 RID: 128312
+		// Token: 0x04019FF1 RID: 106481
 		[Nullable(2)]
 		private UUIItem NiagaraWarnBackground;
 
-		// Token: 0x0401F539 RID: 128313
+		// Token: 0x04019FF2 RID: 106482
 		[Nullable(2)]
 		private UUIText QualityTierText;
 
-		// Token: 0x0401F53A RID: 128314
+		// Token: 0x04019FF3 RID: 106483
 		private bool IsShowPosition = true;
 
-		// Token: 0x0401F53B RID: 128315
+		// Token: 0x04019FF4 RID: 106484
 		private bool IsPioneerFeature;
 
-		// Token: 0x0401F53C RID: 128316
+		// Token: 0x04019FF5 RID: 106485
 		private string EffectString = string.Empty;
 
-		// Token: 0x0401F53D RID: 128317
+		// Token: 0x04019FF6 RID: 106486
 		private string EntityString = string.Empty;
 
-		// Token: 0x0401F53E RID: 128318
+		// Token: 0x04019FF7 RID: 106487
 		private readonly Dictionary<string, float> EntityScoreDefine = new Dictionary<string, float>();
 
-		// Token: 0x0401F53F RID: 128319
+		// Token: 0x04019FF8 RID: 106488
 		private float LastUpdateTime;
 
-		// Token: 0x0401F540 RID: 128320
+		// Token: 0x04019FF9 RID: 106489
 		private bool CsEnvInited;
 
-		// Token: 0x0401F541 RID: 128321
+		// Token: 0x04019FFA RID: 106490
 		private float TickScoreSum;
 
-		// Token: 0x0401F542 RID: 128322
+		// Token: 0x04019FFB RID: 106491
 		private int TickScoreTimes;
 
-		// Token: 0x0401F543 RID: 128323
+		// Token: 0x04019FFC RID: 106492
 		private string TimeZoneString = string.Empty;
 
-		// Token: 0x0401F544 RID: 128324
+		// Token: 0x04019FFD RID: 106493
 		private bool ShowCameraRot;
 
-		// Token: 0x0200BED6 RID: 48854
+		// Token: 0x0200A8DC RID: 43228
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040398DC RID: 235740
+			// Token: 0x0403429D RID: 213661
 			PositionText,
-			// Token: 0x040398DD RID: 235741
+			// Token: 0x0403429E RID: 213662
 			PositionTextOfficial,
-			// Token: 0x040398DE RID: 235742
+			// Token: 0x0403429F RID: 213663
 			CenterText,
-			// Token: 0x040398DF RID: 235743
+			// Token: 0x040342A0 RID: 213664
 			NiagaraWarnText,
-			// Token: 0x040398E0 RID: 235744
+			// Token: 0x040342A1 RID: 213665
 			TimeText,
-			// Token: 0x040398E1 RID: 235745
+			// Token: 0x040342A2 RID: 213666
 			NiagaraWarnBackground,
-			// Token: 0x040398E2 RID: 235746
+			// Token: 0x040342A3 RID: 213667
 			QualityTierText
 		}
 
-		// Token: 0x0200BED7 RID: 48855
+		// Token: 0x0200A8DD RID: 43229
 		[NullableContext(0)]
 		private class EntityScoreDefineData
 		{
-			// Token: 0x1700A25D RID: 41565
-			// (get) Token: 0x060500EA RID: 327914 RVA: 0x01576A66 File Offset: 0x01574C66
-			// (set) Token: 0x060500EB RID: 327915 RVA: 0x01576A6E File Offset: 0x01574C6E
+			// Token: 0x170079FA RID: 31226
+			// (get) Token: 0x0604662C RID: 288300 RVA: 0x0152FDF6 File Offset: 0x0152DFF6
+			// (set) Token: 0x0604662D RID: 288301 RVA: 0x0152FDFE File Offset: 0x0152DFFE
 			public float? LowScoreThreshold { get; set; }
 
-			// Token: 0x1700A25E RID: 41566
-			// (get) Token: 0x060500EC RID: 327916 RVA: 0x01576A77 File Offset: 0x01574C77
-			// (set) Token: 0x060500ED RID: 327917 RVA: 0x01576A7F File Offset: 0x01574C7F
+			// Token: 0x170079FB RID: 31227
+			// (get) Token: 0x0604662E RID: 288302 RVA: 0x0152FE07 File Offset: 0x0152E007
+			// (set) Token: 0x0604662F RID: 288303 RVA: 0x0152FE0F File Offset: 0x0152E00F
 			public float? MidScoreThreshold { get; set; }
 
-			// Token: 0x1700A25F RID: 41567
-			// (get) Token: 0x060500EE RID: 327918 RVA: 0x01576A88 File Offset: 0x01574C88
-			// (set) Token: 0x060500EF RID: 327919 RVA: 0x01576A90 File Offset: 0x01574C90
+			// Token: 0x170079FC RID: 31228
+			// (get) Token: 0x06046630 RID: 288304 RVA: 0x0152FE18 File Offset: 0x0152E018
+			// (set) Token: 0x06046631 RID: 288305 RVA: 0x0152FE20 File Offset: 0x0152E020
 			public float? HighScoreThreshold { get; set; }
 
-			// Token: 0x1700A260 RID: 41568
-			// (get) Token: 0x060500F0 RID: 327920 RVA: 0x01576A99 File Offset: 0x01574C99
-			// (set) Token: 0x060500F1 RID: 327921 RVA: 0x01576AA1 File Offset: 0x01574CA1
+			// Token: 0x170079FD RID: 31229
+			// (get) Token: 0x06046632 RID: 288306 RVA: 0x0152FE29 File Offset: 0x0152E029
+			// (set) Token: 0x06046633 RID: 288307 RVA: 0x0152FE31 File Offset: 0x0152E031
 			[Nullable(new byte[]
 			{
 				2,
@@ -1021,24 +913,24 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				1
 			})] set; }
 
-			// Token: 0x1700A261 RID: 41569
-			// (get) Token: 0x060500F2 RID: 327922 RVA: 0x01576AAA File Offset: 0x01574CAA
-			// (set) Token: 0x060500F3 RID: 327923 RVA: 0x01576AB2 File Offset: 0x01574CB2
+			// Token: 0x170079FE RID: 31230
+			// (get) Token: 0x06046634 RID: 288308 RVA: 0x0152FE3A File Offset: 0x0152E03A
+			// (set) Token: 0x06046635 RID: 288309 RVA: 0x0152FE42 File Offset: 0x0152E042
 			public float? SceneItemAverageScore { get; set; }
 		}
 
-		// Token: 0x0200BED8 RID: 48856
+		// Token: 0x0200A8DE RID: 43230
 		[Nullable(0)]
 		private class EntityTypeScoreData
 		{
-			// Token: 0x1700A262 RID: 41570
-			// (get) Token: 0x060500F5 RID: 327925 RVA: 0x01576AC3 File Offset: 0x01574CC3
-			// (set) Token: 0x060500F6 RID: 327926 RVA: 0x01576ACB File Offset: 0x01574CCB
+			// Token: 0x170079FF RID: 31231
+			// (get) Token: 0x06046637 RID: 288311 RVA: 0x0152FE53 File Offset: 0x0152E053
+			// (set) Token: 0x06046638 RID: 288312 RVA: 0x0152FE5B File Offset: 0x0152E05B
 			public string BlueprintType { get; set; } = "";
 
-			// Token: 0x1700A263 RID: 41571
-			// (get) Token: 0x060500F7 RID: 327927 RVA: 0x01576AD4 File Offset: 0x01574CD4
-			// (set) Token: 0x060500F8 RID: 327928 RVA: 0x01576ADC File Offset: 0x01574CDC
+			// Token: 0x17007A00 RID: 31232
+			// (get) Token: 0x06046639 RID: 288313 RVA: 0x0152FE64 File Offset: 0x0152E064
+			// (set) Token: 0x0604663A RID: 288314 RVA: 0x0152FE6C File Offset: 0x0152E06C
 			public float Score { get; set; }
 		}
 	}

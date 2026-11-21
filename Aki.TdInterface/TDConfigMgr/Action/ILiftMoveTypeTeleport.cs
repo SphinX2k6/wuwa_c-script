@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B88 RID: 7048
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D35 RID: 7477
 	public class ILiftMoveTypeTeleport : ILiftMoveType
 	{
-		// Token: 0x060096E9 RID: 38633 RVA: 0x0015C588 File Offset: 0x0015A788
+		// Token: 0x06009ECB RID: 40651 RVA: 0x0016D134 File Offset: 0x0016B334
 		private ILiftMoveTypeTeleport_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060096EA RID: 38634 RVA: 0x0015C5C0 File Offset: 0x0015A7C0
+		// Token: 0x06009ECC RID: 40652 RVA: 0x0016D16C File Offset: 0x0016B36C
 		public static ILiftMoveTypeTeleport Create([Nullable(2)] ILiftMoveTypeTeleport instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096EB RID: 38635 RVA: 0x0015C5D3 File Offset: 0x0015A7D3
+		// Token: 0x06009ECD RID: 40653 RVA: 0x0016D17F File Offset: 0x0016B37F
 		public static ILiftMoveTypeTeleport CreateFromSetValue([Nullable(2)] ILiftMoveTypeTeleport_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096EC RID: 38636 RVA: 0x0015C5E8 File Offset: 0x0015A7E8
+		// Token: 0x06009ECE RID: 40654 RVA: 0x0016D194 File Offset: 0x0016B394
 		public new ILiftMoveTypeTeleport_SetValue ToSetValue()
 		{
 			return new ILiftMoveTypeTeleport_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F7F RID: 12159
-		// (get) Token: 0x060096ED RID: 38637 RVA: 0x0015C636 File Offset: 0x0015A836
-		// (set) Token: 0x060096EE RID: 38638 RVA: 0x0015C661 File Offset: 0x0015A861
+		// Token: 0x170031A4 RID: 12708
+		// (get) Token: 0x06009ECF RID: 40655 RVA: 0x0016D1E2 File Offset: 0x0016B3E2
+		// (set) Token: 0x06009ED0 RID: 40656 RVA: 0x0016D20D File Offset: 0x0016B40D
 		public override ELiftMoveType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F80 RID: 12160
-		// (get) Token: 0x060096EF RID: 38639 RVA: 0x0015C66F File Offset: 0x0015A86F
-		// (set) Token: 0x060096F0 RID: 38640 RVA: 0x0015C69E File Offset: 0x0015A89E
+		// Token: 0x170031A5 RID: 12709
+		// (get) Token: 0x06009ED1 RID: 40657 RVA: 0x0016D21B File Offset: 0x0016B41B
+		// (set) Token: 0x06009ED2 RID: 40658 RVA: 0x0016D24A File Offset: 0x0016B44A
 		public virtual float StartTeleportOffsetDistance
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F81 RID: 12161
-		// (get) Token: 0x060096F1 RID: 38641 RVA: 0x0015C6AC File Offset: 0x0015A8AC
-		// (set) Token: 0x060096F2 RID: 38642 RVA: 0x0015C6DB File Offset: 0x0015A8DB
+		// Token: 0x170031A6 RID: 12710
+		// (get) Token: 0x06009ED3 RID: 40659 RVA: 0x0016D258 File Offset: 0x0016B458
+		// (set) Token: 0x06009ED4 RID: 40660 RVA: 0x0016D287 File Offset: 0x0016B487
 		public virtual float EndTeleportOffsetDistance
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F82 RID: 12162
-		// (get) Token: 0x060096F3 RID: 38643 RVA: 0x0015C6E9 File Offset: 0x0015A8E9
-		// (set) Token: 0x060096F4 RID: 38644 RVA: 0x0015C714 File Offset: 0x0015A914
+		// Token: 0x170031A7 RID: 12711
+		// (get) Token: 0x06009ED5 RID: 40661 RVA: 0x0016D295 File Offset: 0x0016B495
+		// (set) Token: 0x06009ED6 RID: 40662 RVA: 0x0016D2C0 File Offset: 0x0016B4C0
 		public virtual bool SendTeleportEvent
 		{
 			get
@@ -151,9 +149,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F83 RID: 12163
-		// (get) Token: 0x060096F5 RID: 38645 RVA: 0x0015C722 File Offset: 0x0015A922
-		// (set) Token: 0x060096F6 RID: 38646 RVA: 0x0015C751 File Offset: 0x0015A951
+		// Token: 0x170031A8 RID: 12712
+		// (get) Token: 0x06009ED7 RID: 40663 RVA: 0x0016D2CE File Offset: 0x0016B4CE
+		// (set) Token: 0x06009ED8 RID: 40664 RVA: 0x0016D2FD File Offset: 0x0016B4FD
 		public virtual float TeleportStartEventOffsetDistance
 		{
 			get
@@ -174,11 +172,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C32 RID: 23602
+		// Token: 0x040060CB RID: 24779
 		[Nullable(2)]
 		protected new ILiftMoveTypeTeleport FbInstance;
 
-		// Token: 0x04005C33 RID: 23603
+		// Token: 0x040060CC RID: 24780
 		[Nullable(2)]
 		protected new ILiftMoveTypeTeleport_SetValue PocoInterface;
 	}

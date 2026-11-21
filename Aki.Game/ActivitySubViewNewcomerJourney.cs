@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013A1 RID: 5025
+// Token: 0x02000855 RID: 2133
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 {
-	// Token: 0x06008D23 RID: 36131 RVA: 0x001E4E60 File Offset: 0x001E3060
+	// Token: 0x060060B9 RID: 24761 RVA: 0x001EDA94 File Offset: 0x001EBC94
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 25;
@@ -86,7 +86,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008D24 RID: 36132 RVA: 0x001E5256 File Offset: 0x001E3456
+	// Token: 0x060060BA RID: 24762 RVA: 0x001EDE8A File Offset: 0x001EC08A
 	private void ClickGetCharacterBtn()
 	{
 		if (this.ActivityDataBase == null)
@@ -103,7 +103,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06008D25 RID: 36133 RVA: 0x001E528C File Offset: 0x001E348C
+	// Token: 0x060060BB RID: 24763 RVA: 0x001EDEC0 File Offset: 0x001EC0C0
 	private void ClickGetBtn()
 	{
 		if (this.ActivityDataBase == null || this.SelectChapterConfig == null)
@@ -118,7 +118,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		this.IsSendGetReward = true;
 	}
 
-	// Token: 0x06008D26 RID: 36134 RVA: 0x001E5300 File Offset: 0x001E3500
+	// Token: 0x060060BC RID: 24764 RVA: 0x001EDF34 File Offset: 0x001EC134
 	private void ClickPreviewBtn()
 	{
 		if (this.ActivityDataBase == null)
@@ -129,13 +129,13 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, previewCharacterList, null, null);
 	}
 
-	// Token: 0x06008D27 RID: 36135 RVA: 0x001E5339 File Offset: 0x001E3539
+	// Token: 0x060060BD RID: 24765 RVA: 0x001EDF6D File Offset: 0x001EC16D
 	protected override void OnSetData()
 	{
 		this.ActivityDataBase = (this.ActivityBaseData as ActivityNewcomerJourneyData);
 	}
 
-	// Token: 0x06008D28 RID: 36136 RVA: 0x001E534C File Offset: 0x001E354C
+	// Token: 0x060060BE RID: 24766 RVA: 0x001EDF80 File Offset: 0x001EC180
 	private NewcomerJourneyTabItem CreateTabItem()
 	{
 		NewcomerJourneyTabItem newcomerJourneyTabItem = new NewcomerJourneyTabItem();
@@ -144,7 +144,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		return newcomerJourneyTabItem;
 	}
 
-	// Token: 0x06008D29 RID: 36137 RVA: 0x001E5371 File Offset: 0x001E3571
+	// Token: 0x060060BF RID: 24767 RVA: 0x001EDFA5 File Offset: 0x001EC1A5
 	private void OnClickTab(AdventureTaskChapterV2 chapterConfig, int gridIndex)
 	{
 		this.SelectChapterConfig = new AdventureTaskChapterV2?(chapterConfig);
@@ -160,7 +160,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		this.RefreshSelectChapterView(true);
 	}
 
-	// Token: 0x06008D2A RID: 36138 RVA: 0x001E53A4 File Offset: 0x001E35A4
+	// Token: 0x060060C0 RID: 24768 RVA: 0x001EDFD8 File Offset: 0x001EC1D8
 	private NewcomerJourneyTaskItem CreateTaskItem()
 	{
 		NewcomerJourneyTaskItem newcomerJourneyTaskItem = new NewcomerJourneyTaskItem();
@@ -168,7 +168,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		return newcomerJourneyTaskItem;
 	}
 
-	// Token: 0x06008D2B RID: 36139 RVA: 0x001E53B7 File Offset: 0x001E35B7
+	// Token: 0x060060C1 RID: 24769 RVA: 0x001EDFEB File Offset: 0x001EC1EB
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid
@@ -185,7 +185,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06008D2C RID: 36140 RVA: 0x001E53D0 File Offset: 0x001E35D0
+	// Token: 0x060060C2 RID: 24770 RVA: 0x001EE004 File Offset: 0x001EC204
 	private void RefreshGetCharacterView()
 	{
 		bool characterHasGet = this.ActivityDataBase.GetCharacterHasGet();
@@ -202,7 +202,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		this.SetRewardBgTexture();
 	}
 
-	// Token: 0x06008D2D RID: 36141 RVA: 0x001E5450 File Offset: 0x001E3650
+	// Token: 0x060060C3 RID: 24771 RVA: 0x001EE084 File Offset: 0x001EC284
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewNewcomerJourney.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -213,7 +213,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008D2E RID: 36142 RVA: 0x001E5494 File Offset: 0x001E3694
+	// Token: 0x060060C4 RID: 24772 RVA: 0x001EE0C8 File Offset: 0x001EC2C8
 	protected override void OnBeforeShow()
 	{
 		Activity? activityConfig = ActivityConfig.Instance.GetActivityConfig(this.ActivityDataBase.Id);
@@ -227,7 +227,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		this.RefreshGetCharacterView();
 	}
 
-	// Token: 0x06008D2F RID: 36143 RVA: 0x001E5520 File Offset: 0x001E3720
+	// Token: 0x060060C5 RID: 24773 RVA: 0x001EE154 File Offset: 0x001EC354
 	private void SetLogoTexture()
 	{
 		UUITexture texture = base.GetTexture(19);
@@ -243,7 +243,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008D30 RID: 36144 RVA: 0x001E5580 File Offset: 0x001E3780
+	// Token: 0x060060C6 RID: 24774 RVA: 0x001EE1B4 File Offset: 0x001EC3B4
 	private void SetRewardBgTexture()
 	{
 		UUITexture texture = base.GetTexture(21);
@@ -258,7 +258,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008D31 RID: 36145 RVA: 0x001E55DC File Offset: 0x001E37DC
+	// Token: 0x060060C7 RID: 24775 RVA: 0x001EE210 File Offset: 0x001EC410
 	private int GetInitSelectIndex()
 	{
 		List<AdventureTaskChapterV2> chapterList = this.ActivityDataBase.GetChapterList();
@@ -294,7 +294,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		return num;
 	}
 
-	// Token: 0x06008D32 RID: 36146 RVA: 0x001E56D4 File Offset: 0x001E38D4
+	// Token: 0x060060C8 RID: 24776 RVA: 0x001EE308 File Offset: 0x001EC508
 	private void RefreshSelectChapterView(bool isPlayTurnAnimation)
 	{
 		if (this.SelectChapterConfig == null)
@@ -343,7 +343,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		base.GetItem(22).SetUIActive(chapterRewardHasGet);
 	}
 
-	// Token: 0x06008D33 RID: 36147 RVA: 0x001E58D4 File Offset: 0x001E3AD4
+	// Token: 0x060060C9 RID: 24777 RVA: 0x001EE508 File Offset: 0x001EC708
 	protected override void OnSequenceStart(string sequenceName)
 	{
 		if (sequenceName == "Start")
@@ -357,7 +357,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008D34 RID: 36148 RVA: 0x001E58F4 File Offset: 0x001E3AF4
+	// Token: 0x060060CA RID: 24778 RVA: 0x001EE528 File Offset: 0x001EC728
 	protected override void OnRefreshView()
 	{
 		List<AdventureTaskChapterV2> chapterList = this.ActivityDataBase.GetChapterList();
@@ -383,7 +383,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshActivityTab, this.ActivityBaseData.Id);
 	}
 
-	// Token: 0x06008D35 RID: 36149 RVA: 0x001E5958 File Offset: 0x001E3B58
+	// Token: 0x060060CB RID: 24779 RVA: 0x001EE58C File Offset: 0x001EC78C
 	protected override void OnTimer(float gap)
 	{
 		if (this.ActivityBaseData == null)
@@ -402,19 +402,19 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 		text.SetText(item2, true);
 	}
 
-	// Token: 0x04003E86 RID: 16006
+	// Token: 0x04003F1E RID: 16158
 	private const string NEWCOMER_LOGO_MALE_RESOURCE_ID = "T_NewcomerLogoMale";
 
-	// Token: 0x04003E87 RID: 16007
+	// Token: 0x04003F1F RID: 16159
 	private const string NEWCOMER_LOGO_FEMALE_RESOURCE_ID = "T_NewcomerLogoFemale";
 
-	// Token: 0x04003E88 RID: 16008
+	// Token: 0x04003F20 RID: 16160
 	private const string NEWCOMER_TIP_NORMAL_RESOURCE_ID = "T_RewardTipBgNor";
 
-	// Token: 0x04003E89 RID: 16009
+	// Token: 0x04003F21 RID: 16161
 	private const string NEWCOMER_TIP_REWARD_RESOURCE_ID = "T_RewardTipBgReward";
 
-	// Token: 0x04003E8A RID: 16010
+	// Token: 0x04003F22 RID: 16162
 	[Nullable(new byte[]
 	{
 		2,
@@ -422,7 +422,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 	})]
 	protected GenericScrollViewNew<NewcomerJourneyTabItem, AdventureTaskChapterV2> TabLayout;
 
-	// Token: 0x04003E8B RID: 16011
+	// Token: 0x04003F23 RID: 16163
 	[Nullable(new byte[]
 	{
 		2,
@@ -431,7 +431,7 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 	})]
 	protected GenericScrollViewNew<NewcomerJourneyTaskItem, NewcomerJourneyTaskData> TaskLayout;
 
-	// Token: 0x04003E8C RID: 16012
+	// Token: 0x04003F24 RID: 16164
 	[Nullable(new byte[]
 	{
 		2,
@@ -439,93 +439,93 @@ public class ActivitySubViewNewcomerJourney : ActivitySubViewBase
 	})]
 	protected GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x04003E8D RID: 16013
+	// Token: 0x04003F25 RID: 16165
 	[Nullable(2)]
 	private ActivityNewcomerJourneyData ActivityDataBase;
 
-	// Token: 0x04003E8E RID: 16014
+	// Token: 0x04003F26 RID: 16166
 	private AdventureTaskChapterV2? SelectChapterConfig;
 
-	// Token: 0x04003E8F RID: 16015
+	// Token: 0x04003F27 RID: 16167
 	private bool IsSendGetReward;
 
-	// Token: 0x02007A13 RID: 31251
+	// Token: 0x02006B9A RID: 27546
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040282D5 RID: 164565
+		// Token: 0x040235F5 RID: 144885
 		public const int GetCharacterBtn = 0;
 
-		// Token: 0x040282D6 RID: 164566
+		// Token: 0x040235F6 RID: 144886
 		public const int TabLayout = 1;
 
-		// Token: 0x040282D7 RID: 164567
+		// Token: 0x040235F7 RID: 144887
 		public const int TabItem = 2;
 
-		// Token: 0x040282D8 RID: 164568
+		// Token: 0x040235F8 RID: 144888
 		public const int TaskLayout = 3;
 
-		// Token: 0x040282D9 RID: 164569
+		// Token: 0x040235F9 RID: 144889
 		public const int TaskItem = 4;
 
-		// Token: 0x040282DA RID: 164570
+		// Token: 0x040235FA RID: 144890
 		public const int TipsTitleText = 5;
 
-		// Token: 0x040282DB RID: 164571
+		// Token: 0x040235FB RID: 144891
 		public const int TipsNumText = 6;
 
-		// Token: 0x040282DC RID: 164572
+		// Token: 0x040235FC RID: 144892
 		public const int RewardLayout = 7;
 
-		// Token: 0x040282DD RID: 164573
+		// Token: 0x040235FD RID: 144893
 		public const int RewardItem = 8;
 
-		// Token: 0x040282DE RID: 164574
+		// Token: 0x040235FE RID: 144894
 		public const int CantGetItem = 9;
 
-		// Token: 0x040282DF RID: 164575
+		// Token: 0x040235FF RID: 144895
 		public const int GetBtn = 10;
 
-		// Token: 0x040282E0 RID: 164576
+		// Token: 0x04023600 RID: 144896
 		public const int GetCharacterTitle = 11;
 
-		// Token: 0x040282E1 RID: 164577
+		// Token: 0x04023601 RID: 144897
 		public const int GetCharacterDesc = 12;
 
-		// Token: 0x040282E2 RID: 164578
+		// Token: 0x04023602 RID: 144898
 		public const int GetCharacterIcon = 13;
 
-		// Token: 0x040282E3 RID: 164579
+		// Token: 0x04023603 RID: 144899
 		public const int PreviewBtn = 14;
 
-		// Token: 0x040282E4 RID: 164580
+		// Token: 0x04023604 RID: 144900
 		public const int LockItem = 15;
 
-		// Token: 0x040282E5 RID: 164581
+		// Token: 0x04023605 RID: 144901
 		public const int LockText = 16;
 
-		// Token: 0x040282E6 RID: 164582
+		// Token: 0x04023606 RID: 144902
 		public const int TitleText = 17;
 
-		// Token: 0x040282E7 RID: 164583
+		// Token: 0x04023607 RID: 144903
 		public const int TitleSubText = 18;
 
-		// Token: 0x040282E8 RID: 164584
+		// Token: 0x04023608 RID: 144904
 		public const int TitleLogo = 19;
 
-		// Token: 0x040282E9 RID: 164585
+		// Token: 0x04023609 RID: 144905
 		public const int FinishItem = 20;
 
-		// Token: 0x040282EA RID: 164586
+		// Token: 0x0402360A RID: 144906
 		public const int RewardBg = 21;
 
-		// Token: 0x040282EB RID: 164587
+		// Token: 0x0402360B RID: 144907
 		public const int ChapterTakenItem = 22;
 
-		// Token: 0x040282EC RID: 164588
+		// Token: 0x0402360C RID: 144908
 		public const int CharacterNormalItem = 23;
 
-		// Token: 0x040282ED RID: 164589
+		// Token: 0x0402360D RID: 144909
 		public const int ChapterRedDot = 24;
 	}
 }

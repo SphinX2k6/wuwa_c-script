@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E26 RID: 28198
+	// Token: 0x020075A4 RID: 30116
 	public class IReignsChangeBackgroundT
 	{
-		// Token: 0x1700D22B RID: 53803
-		// (get) Token: 0x06031D35 RID: 204085 RVA: 0x006BEAD7 File Offset: 0x006BCCD7
-		// (set) Token: 0x06031D36 RID: 204086 RVA: 0x006BEADF File Offset: 0x006BCCDF
+		// Token: 0x1700DD7A RID: 56698
+		// (get) Token: 0x06034D4B RID: 216395 RVA: 0x0071A45F File Offset: 0x0071865F
+		// (set) Token: 0x06034D4C RID: 216396 RVA: 0x0071A467 File Offset: 0x00718667
 		public string Background { get; set; }
 
-		// Token: 0x1700D22C RID: 53804
-		// (get) Token: 0x06031D37 RID: 204087 RVA: 0x006BEAE8 File Offset: 0x006BCCE8
-		// (set) Token: 0x06031D38 RID: 204088 RVA: 0x006BEAF0 File Offset: 0x006BCCF0
+		// Token: 0x1700DD7B RID: 56699
+		// (get) Token: 0x06034D4D RID: 216397 RVA: 0x0071A470 File Offset: 0x00718670
+		// (set) Token: 0x06034D4E RID: 216398 RVA: 0x0071A478 File Offset: 0x00718678
 		public EReignsBackgroundChangeMode ChangeMode { get; set; }
 
-		// Token: 0x06031D39 RID: 204089 RVA: 0x006BEAF9 File Offset: 0x006BCCF9
+		// Token: 0x06034D4F RID: 216399 RVA: 0x0071A481 File Offset: 0x00718681
 		public IReignsChangeBackgroundT()
 		{
 			this.Background = null;

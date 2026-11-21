@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CF7 RID: 27895
+	// Token: 0x02007472 RID: 29810
 	public class IPlayerInitiatorT
 	{
-		// Token: 0x1700CFC0 RID: 53184
-		// (get) Token: 0x06031307 RID: 201479 RVA: 0x006AC59E File Offset: 0x006AA79E
-		// (set) Token: 0x06031308 RID: 201480 RVA: 0x006AC5A6 File Offset: 0x006AA7A6
+		// Token: 0x1700DB04 RID: 56068
+		// (get) Token: 0x060342FB RID: 213755 RVA: 0x00707ACE File Offset: 0x00705CCE
+		// (set) Token: 0x060342FC RID: 213756 RVA: 0x00707AD6 File Offset: 0x00705CD6
 		public ENpcGroupPerformInitiatorType Type { get; set; }
 
-		// Token: 0x06031309 RID: 201481 RVA: 0x006AC5AF File Offset: 0x006AA7AF
+		// Token: 0x060342FD RID: 213757 RVA: 0x00707ADF File Offset: 0x00705CDF
 		public IPlayerInitiatorT()
 		{
 			this.Type = ENpcGroupPerformInitiatorType.Player;

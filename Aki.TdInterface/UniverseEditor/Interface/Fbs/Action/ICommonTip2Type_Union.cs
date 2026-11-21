@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006489 RID: 25737
+	// Token: 0x02006AF4 RID: 27380
 	public enum ICommonTip2Type_Union : byte
 	{
-		// Token: 0x04010A93 RID: 68243
+		// Token: 0x040118A4 RID: 71844
 		NONE,
-		// Token: 0x04010A94 RID: 68244
+		// Token: 0x040118A5 RID: 71845
 		ICommonTip2Type,
-		// Token: 0x04010A95 RID: 68245
+		// Token: 0x040118A6 RID: 71846
 		ICommonTip2PrepareCountdown
 	}
 }

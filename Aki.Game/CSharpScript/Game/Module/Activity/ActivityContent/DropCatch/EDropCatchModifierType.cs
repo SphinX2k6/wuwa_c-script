@@ -4,18 +4,18 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066A8 RID: 26280
+	// Token: 0x020055F8 RID: 22008
 	[JsonConverter(typeof(EDropCatchModifierTypeJsonConverter))]
 	[EnumExtensions]
 	public enum EDropCatchModifierType
 	{
-		// Token: 0x040223E8 RID: 140264
+		// Token: 0x0401CC41 RID: 117825
 		[EnumStringMember("Override")]
 		Override,
-		// Token: 0x040223E9 RID: 140265
+		// Token: 0x0401CC42 RID: 117826
 		[EnumStringMember("Rate")]
 		Rate,
-		// Token: 0x040223EA RID: 140266
+		// Token: 0x0401CC43 RID: 117827
 		[EnumStringMember("Offset")]
 		Offset
 	}

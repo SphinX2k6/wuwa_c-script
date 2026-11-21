@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002872 RID: 10354
+// Token: 0x02001DED RID: 7661
 public enum ERoleFavorPreciousItemComponentDefine
 {
-	// Token: 0x04009F40 RID: 40768
+	// Token: 0x0400A329 RID: 41769
 	Icon,
-	// Token: 0x04009F41 RID: 40769
+	// Token: 0x0400A32A RID: 41770
 	Niagara,
-	// Token: 0x04009F42 RID: 40770
+	// Token: 0x0400A32B RID: 41771
 	LockItem,
-	// Token: 0x04009F43 RID: 40771
+	// Token: 0x0400A32C RID: 41772
 	InActiveBgItem,
-	// Token: 0x04009F44 RID: 40772
+	// Token: 0x0400A32D RID: 41773
 	ActiveBgItem
 }

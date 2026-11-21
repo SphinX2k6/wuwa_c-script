@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Manipulate
 {
-	// Token: 0x02003EF9 RID: 16121
+	// Token: 0x020031B6 RID: 12726
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(40, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 37)]
@@ -16,7 +16,7 @@ namespace AkiClient.Game.Aki.Data.Manipulate
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 40)]
 	public struct SManipulatePointInfo : IEqualityOperators<SManipulatePointInfo, SManipulatePointInfo, bool>, IEquatable<SManipulatePointInfo>, IUnrealScriptStruct
 	{
-		// Token: 0x06028D3D RID: 167229 RVA: 0x009B57DF File Offset: 0x009B39DF
+		// Token: 0x0601F6DA RID: 128730 RVA: 0x0092D8A6 File Offset: 0x0092BAA6
 		public SManipulatePointInfo(FVector Location, FVector ArriveTangent, FVector LeaveTangent, TEnumAsByte<ESplinePointType> PointType)
 		{
 			this.Location = Location;
@@ -25,25 +25,25 @@ namespace AkiClient.Game.Aki.Data.Manipulate
 			this.PointType = PointType;
 		}
 
-		// Token: 0x06028D3E RID: 167230 RVA: 0x009B5800 File Offset: 0x009B3A00
+		// Token: 0x0601F6DB RID: 128731 RVA: 0x0092D8C8 File Offset: 0x0092BAC8
 		public static bool operator ==(SManipulatePointInfo left, SManipulatePointInfo right)
 		{
 			return left.Location == right.Location && left.ArriveTangent == right.ArriveTangent && left.LeaveTangent == right.LeaveTangent && left.PointType == right.PointType;
 		}
 
-		// Token: 0x06028D3F RID: 167231 RVA: 0x009B5859 File Offset: 0x009B3A59
+		// Token: 0x0601F6DC RID: 128732 RVA: 0x0092D921 File Offset: 0x0092BB21
 		public static bool operator !=(SManipulatePointInfo left, SManipulatePointInfo right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06028D40 RID: 167232 RVA: 0x009B5865 File Offset: 0x009B3A65
+		// Token: 0x0601F6DD RID: 128733 RVA: 0x0092D92D File Offset: 0x0092BB2D
 		public bool Equals(SManipulatePointInfo other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06028D41 RID: 167233 RVA: 0x009B5874 File Offset: 0x009B3A74
+		// Token: 0x0601F6DE RID: 128734 RVA: 0x0092D93C File Offset: 0x0092BB3C
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -55,38 +55,38 @@ namespace AkiClient.Game.Aki.Data.Manipulate
 			return false;
 		}
 
-		// Token: 0x06028D42 RID: 167234 RVA: 0x009B5899 File Offset: 0x009B3A99
+		// Token: 0x0601F6DF RID: 128735 RVA: 0x0092D961 File Offset: 0x0092BB61
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<FVector, FVector, FVector, TEnumAsByte<ESplinePointType>>(this.Location, this.ArriveTangent, this.LeaveTangent, this.PointType);
 		}
 
-		// Token: 0x06028D43 RID: 167235 RVA: 0x009B58B8 File Offset: 0x009B3AB8
+		// Token: 0x0601F6E0 RID: 128736 RVA: 0x0092D980 File Offset: 0x0092BB80
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SManipulatePointInfo._ScriptStructPtr != 0) ? SManipulatePointInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Manipulate/SManipulatePointInfo.SManipulatePointInfo", ref SManipulatePointInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x04014E00 RID: 85504
+		// Token: 0x04010DA5 RID: 69029
 		[FieldOffset(0)]
 		public FVector Location;
 
-		// Token: 0x04014E01 RID: 85505
+		// Token: 0x04010DA6 RID: 69030
 		[FieldOffset(12)]
 		public FVector ArriveTangent;
 
-		// Token: 0x04014E02 RID: 85506
+		// Token: 0x04010DA7 RID: 69031
 		[FieldOffset(24)]
 		public FVector LeaveTangent;
 
-		// Token: 0x04014E03 RID: 85507
+		// Token: 0x04010DA8 RID: 69032
 		[FieldOffset(36)]
 		public TEnumAsByte<ESplinePointType> PointType;
 
-		// Token: 0x04014E04 RID: 85508
+		// Token: 0x04010DA9 RID: 69033
 		public const string __ObjectPath = "/Game/Aki/Data/Manipulate/SManipulatePointInfo.SManipulatePointInfo";
 
-		// Token: 0x04014E05 RID: 85509
+		// Token: 0x04010DAA RID: 69034
 		private static IntPtr _ScriptStructPtr;
 	}
 }

@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001992 RID: 6546
+// Token: 0x02000E4F RID: 3663
 [NullableContext(2)]
 [Nullable(0)]
 public class SmallItemGridSkinComponentParams : ISmallItemGridSkinComponentParams
 {
-	// Token: 0x17000FF5 RID: 4085
-	// (get) Token: 0x0600BF3C RID: 48956 RVA: 0x002B3768 File Offset: 0x002B1968
-	// (set) Token: 0x0600BF3D RID: 48957 RVA: 0x002B3770 File Offset: 0x002B1970
+	// Token: 0x17001019 RID: 4121
+	// (get) Token: 0x06009344 RID: 37700 RVA: 0x002BE6EC File Offset: 0x002BC8EC
+	// (set) Token: 0x06009345 RID: 37701 RVA: 0x002BE6F4 File Offset: 0x002BC8F4
 	public int? SkinId { get; set; }
 
-	// Token: 0x17000FF6 RID: 4086
-	// (get) Token: 0x0600BF3E RID: 48958 RVA: 0x002B3779 File Offset: 0x002B1979
-	// (set) Token: 0x0600BF3F RID: 48959 RVA: 0x002B3781 File Offset: 0x002B1981
+	// Token: 0x1700101A RID: 4122
+	// (get) Token: 0x06009346 RID: 37702 RVA: 0x002BE6FD File Offset: 0x002BC8FD
+	// (set) Token: 0x06009347 RID: 37703 RVA: 0x002BE705 File Offset: 0x002BC905
 	public string BottomText { get; set; }
 
-	// Token: 0x17000FF7 RID: 4087
-	// (get) Token: 0x0600BF40 RID: 48960 RVA: 0x002B378A File Offset: 0x002B198A
-	// (set) Token: 0x0600BF41 RID: 48961 RVA: 0x002B3792 File Offset: 0x002B1992
+	// Token: 0x1700101B RID: 4123
+	// (get) Token: 0x06009348 RID: 37704 RVA: 0x002BE70E File Offset: 0x002BC90E
+	// (set) Token: 0x06009349 RID: 37705 RVA: 0x002BE716 File Offset: 0x002BC916
 	public int? QualityId { get; set; }
 }

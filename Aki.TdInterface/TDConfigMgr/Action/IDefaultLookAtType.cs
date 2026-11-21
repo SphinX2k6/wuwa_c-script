@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200197A RID: 6522
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B05 RID: 6917
 	public class IDefaultLookAtType
 	{
-		// Token: 0x06008BB1 RID: 35761 RVA: 0x00148424 File Offset: 0x00146624
+		// Token: 0x060092E9 RID: 37609 RVA: 0x00157EB4 File Offset: 0x001560B4
 		private IDefaultLookAtType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008BB2 RID: 35762 RVA: 0x0014845C File Offset: 0x0014665C
+		// Token: 0x060092EA RID: 37610 RVA: 0x00157EEC File Offset: 0x001560EC
 		public static IDefaultLookAtType Create([Nullable(2)] IDefaultLookAtType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BB3 RID: 35763 RVA: 0x0014846F File Offset: 0x0014666F
+		// Token: 0x060092EB RID: 37611 RVA: 0x00157EFF File Offset: 0x001560FF
 		public static IDefaultLookAtType CreateFromSetValue([Nullable(2)] IDefaultLookAtType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BB4 RID: 35764 RVA: 0x00148482 File Offset: 0x00146682
+		// Token: 0x060092EC RID: 37612 RVA: 0x00157F12 File Offset: 0x00156112
 		public IDefaultLookAtType_SetValue ToSetValue()
 		{
 			return new IDefaultLookAtType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CF6 RID: 11510
-		// (get) Token: 0x06008BB5 RID: 35765 RVA: 0x00148495 File Offset: 0x00146695
-		// (set) Token: 0x06008BB6 RID: 35766 RVA: 0x001484C0 File Offset: 0x001466C0
+		// Token: 0x17002EF9 RID: 12025
+		// (get) Token: 0x060092ED RID: 37613 RVA: 0x00157F25 File Offset: 0x00156125
+		// (set) Token: 0x060092EE RID: 37614 RVA: 0x00157F50 File Offset: 0x00156150
 		public virtual EDefaultLookAtType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005717 RID: 22295
+		// Token: 0x04005B6C RID: 23404
 		[Nullable(2)]
 		protected IDefaultLookAtType FbInstance;
 
-		// Token: 0x04005718 RID: 22296
+		// Token: 0x04005B6D RID: 23405
 		[Nullable(2)]
 		protected IDefaultLookAtType_SetValue PocoInterface;
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000943 RID: 2371
+	// Token: 0x0200098E RID: 2446
 	public class ConfigSkillIconByTag : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060037A5 RID: 14245 RVA: 0x00193FEB File Offset: 0x001921EB
+		// Token: 0x06003967 RID: 14695 RVA: 0x001A120B File Offset: 0x0019F40B
 		static ConfigSkillIconByTag()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkillIconByTag.CreateStaticDefaultValue), new Action(ConfigSkillIconByTag.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060037A6 RID: 14246 RVA: 0x0019400C File Offset: 0x0019220C
+		// Token: 0x06003968 RID: 14696 RVA: 0x001A122C File Offset: 0x0019F42C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkillIconByTag.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060037A7 RID: 14247 RVA: 0x0019408B File Offset: 0x0019228B
+		// Token: 0x06003969 RID: 14697 RVA: 0x001A12AB File Offset: 0x0019F4AB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkillIconByTag.LogPair = null;
 			ConfigSkillIconByTag.HandleId = 0;
 		}
 
-		// Token: 0x060037A8 RID: 14248 RVA: 0x00194099 File Offset: 0x00192299
+		// Token: 0x0600396A RID: 14698 RVA: 0x001A12B9 File Offset: 0x0019F4B9
 		public static void Init()
 		{
 			ConfigSkillIconByTag.HandleId = ConfigCommon.InitDataStatement(ConfigSkillIconByTag.HandleId, "db_skillbutton.db", "select BinData from `SkillIcon` where Tag=?");
 		}
 
-		// Token: 0x060037A9 RID: 14249 RVA: 0x001940B4 File Offset: 0x001922B4
+		// Token: 0x0600396B RID: 14699 RVA: 0x001A12D4 File Offset: 0x0019F4D4
 		public static SkillIcon? GetConfig(int p0Tag, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSkillIconByTag.HandleId, ConfigSkillIconByTag.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SkillIcon?(rootAsSkillIcon);
 		}
 
-		// Token: 0x040040BB RID: 16571
+		// Token: 0x040042C8 RID: 17096
 		private const string DB = "db_skillbutton.db";
 
-		// Token: 0x040040BC RID: 16572
+		// Token: 0x040042C9 RID: 17097
 		private const string FILE = "j.技能按钮.xlsx";
 
-		// Token: 0x040040BD RID: 16573
+		// Token: 0x040042CA RID: 17098
 		private const string TABLE = "SkillIcon";
 
-		// Token: 0x040040BE RID: 16574
+		// Token: 0x040042CB RID: 17099
 		private const string COMMAND = "select BinData from `SkillIcon` where Tag=?";
 
-		// Token: 0x040040BF RID: 16575
+		// Token: 0x040042CC RID: 17100
 		private const string KEY_PREFIX = "SkillIconByTag";
 
-		// Token: 0x040040C0 RID: 16576
+		// Token: 0x040042CD RID: 17101
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040040C1 RID: 16577
+		// Token: 0x040042CE RID: 17102
 		private static int HandleId;
 	}
 }

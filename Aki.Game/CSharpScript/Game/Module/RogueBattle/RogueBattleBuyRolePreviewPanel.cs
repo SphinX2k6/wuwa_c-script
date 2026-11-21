@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E49 RID: 20041
+	// Token: 0x02003E12 RID: 15890
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueBattleBuyRolePreviewPanel : UiPanelBase
 	{
-		// Token: 0x06033AA1 RID: 211617 RVA: 0x00C18815 File Offset: 0x00C16A15
+		// Token: 0x0602890C RID: 166156 RVA: 0x00B61D3D File Offset: 0x00B5FF3D
 		public RogueBattleBuyRolePreviewPanel(int incId)
 		{
 			this.IncId = incId;
 		}
 
-		// Token: 0x06033AA2 RID: 211618 RVA: 0x00C18824 File Offset: 0x00C16A24
+		// Token: 0x0602890D RID: 166157 RVA: 0x00B61D4C File Offset: 0x00B5FF4C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AA3 RID: 211619 RVA: 0x00C18910 File Offset: 0x00C16B10
+		// Token: 0x0602890E RID: 166158 RVA: 0x00B61E38 File Offset: 0x00B60038
 		private void OnBtnConfirm()
 		{
 			MapRogueOpSelectView mapRogueOpSelectView = MapRogueModel.Instance.GetOpData(this.IncId) as MapRogueOpSelectView;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			mapRogueOpSelectView.Select(rogueResRole.Index);
 		}
 
-		// Token: 0x06033AA4 RID: 211620 RVA: 0x00C1897D File Offset: 0x00C16B7D
+		// Token: 0x0602890F RID: 166159 RVA: 0x00B61EA5 File Offset: 0x00B600A5
 		private void OnBtnBack()
 		{
 			Action backBtnFunc = this.BackBtnFunc;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			backBtnFunc();
 		}
 
-		// Token: 0x06033AA5 RID: 211621 RVA: 0x00C18990 File Offset: 0x00C16B90
+		// Token: 0x06028910 RID: 166160 RVA: 0x00B61EB8 File Offset: 0x00B600B8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleBuyRolePreviewPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033AA6 RID: 211622 RVA: 0x00C189D4 File Offset: 0x00C16BD4
+		// Token: 0x06028911 RID: 166161 RVA: 0x00B61EFC File Offset: 0x00B600FC
 		[NullableContext(1)]
 		public void Refresh(RogueResGainData data)
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x06033AA7 RID: 211623 RVA: 0x00C18B20 File Offset: 0x00C16D20
+		// Token: 0x06028912 RID: 166162 RVA: 0x00B62048 File Offset: 0x00B60248
 		private void SetStarLayoutSelectOn(bool bOn)
 		{
 			if (this.Data == null)
@@ -139,10 +139,10 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x0401B651 RID: 112209
+		// Token: 0x04016024 RID: 90148
 		public Action BackBtnFunc;
 
-		// Token: 0x0401B652 RID: 112210
+		// Token: 0x04016025 RID: 90149
 		[Nullable(new byte[]
 		{
 			2,
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private GenericLayout<RogueBattleBuyRoleStarItem, bool> StarLayout;
 
-		// Token: 0x0401B653 RID: 112211
+		// Token: 0x04016026 RID: 90150
 		[Nullable(new byte[]
 		{
 			2,
@@ -159,23 +159,23 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private GenericLayout<RogueBattleFetterLvUpItem, IRogueBattleRoleBondUpdateInfo> FetterLayout;
 
-		// Token: 0x0401B654 RID: 112212
+		// Token: 0x04016027 RID: 90151
 		private RogueResGainData Data;
 
-		// Token: 0x0401B655 RID: 112213
+		// Token: 0x04016028 RID: 90152
 		private RogueBattleShopButton ConfirmButton;
 
-		// Token: 0x0401B656 RID: 112214
+		// Token: 0x04016029 RID: 90153
 		private RogueBattleTokenElement ElementItem;
 
-		// Token: 0x0401B657 RID: 112215
+		// Token: 0x0401602A RID: 90154
 		private readonly int IncId;
 
-		// Token: 0x0200B008 RID: 45064
+		// Token: 0x02009A3A RID: 39482
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04035724 RID: 218916
+			// Token: 0x04030154 RID: 196948
 			[Nullable(new byte[]
 			{
 				0,

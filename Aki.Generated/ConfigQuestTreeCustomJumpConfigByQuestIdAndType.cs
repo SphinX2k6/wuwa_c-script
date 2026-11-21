@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200078F RID: 1935
+	// Token: 0x020007A9 RID: 1961
 	public class ConfigQuestTreeCustomJumpConfigByQuestIdAndType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002D6C RID: 11628 RVA: 0x00159DCB File Offset: 0x00157FCB
+		// Token: 0x06002E08 RID: 11784 RVA: 0x00160CD7 File Offset: 0x0015EED7
 		static ConfigQuestTreeCustomJumpConfigByQuestIdAndType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestTreeCustomJumpConfigByQuestIdAndType.CreateStaticDefaultValue), new Action(ConfigQuestTreeCustomJumpConfigByQuestIdAndType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D6D RID: 11629 RVA: 0x00159DEC File Offset: 0x00157FEC
+		// Token: 0x06002E09 RID: 11785 RVA: 0x00160CF8 File Offset: 0x0015EEF8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestTreeCustomJumpConfigByQuestIdAndType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D6E RID: 11630 RVA: 0x00159E6B File Offset: 0x0015806B
+		// Token: 0x06002E0A RID: 11786 RVA: 0x00160D77 File Offset: 0x0015EF77
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestTreeCustomJumpConfigByQuestIdAndType.LogPair = null;
 			ConfigQuestTreeCustomJumpConfigByQuestIdAndType.HandleId = 0;
 		}
 
-		// Token: 0x06002D6F RID: 11631 RVA: 0x00159E79 File Offset: 0x00158079
+		// Token: 0x06002E0B RID: 11787 RVA: 0x00160D85 File Offset: 0x0015EF85
 		public static void Init()
 		{
 			ConfigQuestTreeCustomJumpConfigByQuestIdAndType.HandleId = ConfigCommon.InitDataStatement(ConfigQuestTreeCustomJumpConfigByQuestIdAndType.HandleId, "db_questtreecustomjumpconfig.db", "select BinData from `QuestTreeCustomJumpConfig` where QuestId=? AND PreConditionType=?");
 		}
 
-		// Token: 0x06002D70 RID: 11632 RVA: 0x00159E94 File Offset: 0x00158094
+		// Token: 0x06002E0C RID: 11788 RVA: 0x00160DA0 File Offset: 0x0015EFA0
 		public static QuestTreeCustomJumpConfig? GetConfig(int p0QuestId, string p1PreConditionType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigQuestTreeCustomJumpConfigByQuestIdAndType.HandleId, ConfigQuestTreeCustomJumpConfigByQuestIdAndType.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new QuestTreeCustomJumpConfig?(rootAsQuestTreeCustomJumpConfig);
 		}
 
-		// Token: 0x040034CF RID: 13519
+		// Token: 0x04003585 RID: 13701
 		private const string DB = "db_questtreecustomjumpconfig.db";
 
-		// Token: 0x040034D0 RID: 13520
+		// Token: 0x04003586 RID: 13702
 		private const string FILE = "k.可视化编辑/c.Csv/r.任务树定制跳转/*.csv*";
 
-		// Token: 0x040034D1 RID: 13521
+		// Token: 0x04003587 RID: 13703
 		private const string TABLE = "QuestTreeCustomJumpConfig";
 
-		// Token: 0x040034D2 RID: 13522
+		// Token: 0x04003588 RID: 13704
 		private const string COMMAND = "select BinData from `QuestTreeCustomJumpConfig` where QuestId=? AND PreConditionType=?";
 
-		// Token: 0x040034D3 RID: 13523
+		// Token: 0x04003589 RID: 13705
 		private const string KEY_PREFIX = "QuestTreeCustomJumpConfigByQuestIdAndType";
 
-		// Token: 0x040034D4 RID: 13524
+		// Token: 0x0400358A RID: 13706
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040034D5 RID: 13525
+		// Token: 0x0400358B RID: 13707
 		private static int HandleId;
 	}
 }

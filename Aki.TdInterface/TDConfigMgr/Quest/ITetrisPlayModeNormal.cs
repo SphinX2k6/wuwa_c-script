@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001198 RID: 4504
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012D2 RID: 4818
 	public class ITetrisPlayModeNormal : ITetrisPlayModeBase
 	{
-		// Token: 0x06006646 RID: 26182 RVA: 0x000F52B0 File Offset: 0x000F34B0
+		// Token: 0x06006C7D RID: 27773 RVA: 0x00102A7C File Offset: 0x00100C7C
 		private ITetrisPlayModeNormal_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006647 RID: 26183 RVA: 0x000F52E8 File Offset: 0x000F34E8
+		// Token: 0x06006C7E RID: 27774 RVA: 0x00102AB4 File Offset: 0x00100CB4
 		public static ITetrisPlayModeNormal Create([Nullable(2)] ITetrisPlayModeNormal instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006648 RID: 26184 RVA: 0x000F52FB File Offset: 0x000F34FB
+		// Token: 0x06006C7F RID: 27775 RVA: 0x00102AC7 File Offset: 0x00100CC7
 		public static ITetrisPlayModeNormal CreateFromSetValue([Nullable(2)] ITetrisPlayModeNormal_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006649 RID: 26185 RVA: 0x000F530E File Offset: 0x000F350E
+		// Token: 0x06006C80 RID: 27776 RVA: 0x00102ADA File Offset: 0x00100CDA
 		public new ITetrisPlayModeNormal_SetValue ToSetValue()
 		{
 			return new ITetrisPlayModeNormal_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002144 RID: 8516
-		// (get) Token: 0x0600664A RID: 26186 RVA: 0x000F532D File Offset: 0x000F352D
-		// (set) Token: 0x0600664B RID: 26187 RVA: 0x000F5358 File Offset: 0x000F3558
+		// Token: 0x17002303 RID: 8963
+		// (get) Token: 0x06006C81 RID: 27777 RVA: 0x00102AF9 File Offset: 0x00100CF9
+		// (set) Token: 0x06006C82 RID: 27778 RVA: 0x00102B24 File Offset: 0x00100D24
 		public override ETetrisPlayMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002145 RID: 8517
-		// (get) Token: 0x0600664C RID: 26188 RVA: 0x000F5366 File Offset: 0x000F3566
-		// (set) Token: 0x0600664D RID: 26189 RVA: 0x000F5391 File Offset: 0x000F3591
+		// Token: 0x17002304 RID: 8964
+		// (get) Token: 0x06006C83 RID: 27779 RVA: 0x00102B32 File Offset: 0x00100D32
+		// (set) Token: 0x06006C84 RID: 27780 RVA: 0x00102B5D File Offset: 0x00100D5D
 		public virtual int Time
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D5F RID: 15711
+		// Token: 0x040040C7 RID: 16583
 		[Nullable(2)]
 		protected new ITetrisPlayModeNormal FbInstance;
 
-		// Token: 0x04003D60 RID: 15712
+		// Token: 0x040040C8 RID: 16584
 		[Nullable(2)]
 		protected new ITetrisPlayModeNormal_SetValue PocoInterface;
 	}

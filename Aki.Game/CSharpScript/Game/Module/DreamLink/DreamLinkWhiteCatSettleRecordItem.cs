@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AB5 RID: 23221
+	// Token: 0x02004A91 RID: 19089
 	public class DreamLinkWhiteCatSettleRecordItem : UiPanelBase
 	{
-		// Token: 0x0603AD0B RID: 240907 RVA: 0x00E034B4 File Offset: 0x00E016B4
+		// Token: 0x0602FC57 RID: 195671 RVA: 0x00D53A7C File Offset: 0x00D51C7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AD0C RID: 240908 RVA: 0x00E03540 File Offset: 0x00E01740
+		// Token: 0x0602FC58 RID: 195672 RVA: 0x00D53B08 File Offset: 0x00D51D08
 		protected override void OnBeforeShow()
 		{
 			if (this.Data == null)
@@ -38,20 +38,20 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetItem(2).SetUIActive(this.Data.IsNew);
 		}
 
-		// Token: 0x0401EB16 RID: 125718
+		// Token: 0x040195BD RID: 103869
 		[Nullable(2)]
 		public IDreamLinkRecordData Data;
 
-		// Token: 0x0200BD05 RID: 48389
+		// Token: 0x0200A70D RID: 42765
 		private class EDreamLinkWhiteCatSettleRecordItemDefine
 		{
-			// Token: 0x04039008 RID: 233480
+			// Token: 0x040339D2 RID: 211410
 			public const int TxtTitle = 0;
 
-			// Token: 0x04039009 RID: 233481
+			// Token: 0x040339D3 RID: 211411
 			public const int TxtContent = 1;
 
-			// Token: 0x0403900A RID: 233482
+			// Token: 0x040339D4 RID: 211412
 			public const int NewRecordItem = 2;
 		}
 	}

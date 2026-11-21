@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006EA RID: 1770
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200078B RID: 1931
 	public class ISpawnMonsterPoint : IPointChooseType
 	{
-		// Token: 0x06002626 RID: 9766 RVA: 0x000664F8 File Offset: 0x000646F8
+		// Token: 0x06002946 RID: 10566 RVA: 0x0006D568 File Offset: 0x0006B768
 		private ISpawnMonsterPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002627 RID: 9767 RVA: 0x00066530 File Offset: 0x00064730
+		// Token: 0x06002947 RID: 10567 RVA: 0x0006D5A0 File Offset: 0x0006B7A0
 		public static ISpawnMonsterPoint Create([Nullable(2)] ISpawnMonsterPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002628 RID: 9768 RVA: 0x00066543 File Offset: 0x00064743
+		// Token: 0x06002948 RID: 10568 RVA: 0x0006D5B3 File Offset: 0x0006B7B3
 		public static ISpawnMonsterPoint CreateFromSetValue([Nullable(2)] ISpawnMonsterPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002629 RID: 9769 RVA: 0x00066556 File Offset: 0x00064756
+		// Token: 0x06002949 RID: 10569 RVA: 0x0006D5C6 File Offset: 0x0006B7C6
 		public new ISpawnMonsterPoint_SetValue ToSetValue()
 		{
 			return new ISpawnMonsterPoint_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A13 RID: 2579
-		// (get) Token: 0x0600262A RID: 9770 RVA: 0x00066575 File Offset: 0x00064775
-		// (set) Token: 0x0600262B RID: 9771 RVA: 0x000665A0 File Offset: 0x000647A0
+		// Token: 0x17000AD1 RID: 2769
+		// (get) Token: 0x0600294A RID: 10570 RVA: 0x0006D5E5 File Offset: 0x0006B7E5
+		// (set) Token: 0x0600294B RID: 10571 RVA: 0x0006D610 File Offset: 0x0006B810
 		public override EPointChooseType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A14 RID: 2580
-		// (get) Token: 0x0600262C RID: 9772 RVA: 0x000665B0 File Offset: 0x000647B0
-		// (set) Token: 0x0600262D RID: 9773 RVA: 0x00066611 File Offset: 0x00064811
+		// Token: 0x17000AD2 RID: 2770
+		// (get) Token: 0x0600294C RID: 10572 RVA: 0x0006D620 File Offset: 0x0006B820
+		// (set) Token: 0x0600294D RID: 10573 RVA: 0x0006D681 File Offset: 0x0006B881
 		public virtual ISearchSpawnMonsterPoint RangeConstraint
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019F1 RID: 6641
+		// Token: 0x04001BF0 RID: 7152
 		[Nullable(2)]
 		protected new ISpawnMonsterPoint FbInstance;
 
-		// Token: 0x040019F2 RID: 6642
+		// Token: 0x04001BF1 RID: 7153
 		[Nullable(2)]
 		protected new ISpawnMonsterPoint_SetValue PocoInterface;
 
-		// Token: 0x040019F3 RID: 6643
+		// Token: 0x04001BF2 RID: 7154
 		private ISearchSpawnMonsterPoint _RangeConstraintCache;
 
-		// Token: 0x040019F4 RID: 6644
+		// Token: 0x04001BF3 RID: 7155
 		private bool _RangeConstraintInited;
 	}
 }

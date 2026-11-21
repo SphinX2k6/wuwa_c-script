@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.AI.StateMachine.State
 {
-	// Token: 0x0200732F RID: 29487
+	// Token: 0x020064B2 RID: 25778
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineStateMeshVisible : AiStateMachineState
 	{
-		// Token: 0x060485D8 RID: 296408 RVA: 0x0129D450 File Offset: 0x0129B650
+		// Token: 0x0603EA25 RID: 256549 RVA: 0x0123FED0 File Offset: 0x0123E0D0
 		public AiStateMachineStateMeshVisible(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.State state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x060485D9 RID: 296409 RVA: 0x0129D45A File Offset: 0x0129B65A
+		// Token: 0x0603EA26 RID: 256550 RVA: 0x0123FEDA File Offset: 0x0123E0DA
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.State state)
 		{
 			this.Tag = new FName?(new FName(state.BindMeshVisible.Tag));
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			return true;
 		}
 
-		// Token: 0x060485DA RID: 296410 RVA: 0x0129D49C File Offset: 0x0129B69C
+		// Token: 0x0603EA27 RID: 256551 RVA: 0x0123FF1C File Offset: 0x0123E11C
 		private void InitMeshComponentsCache()
 		{
 			if (this.MeshComponentsCache == null)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485DB RID: 296411 RVA: 0x0129D52C File Offset: 0x0129B72C
+		// Token: 0x0603EA28 RID: 256552 RVA: 0x0123FFB0 File Offset: 0x0123E1B0
 		[NullableContext(2)]
 		public override void OnActivate(AiStateMachineBase lastState = null, long? contextId = null)
 		{
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485DC RID: 296412 RVA: 0x0129D59C File Offset: 0x0129B79C
+		// Token: 0x0603EA29 RID: 256553 RVA: 0x01240020 File Offset: 0x0123E220
 		[NullableContext(2)]
 		public override void OnDeactivate(AiStateMachineBase nextState = null, long? contextId = null)
 		{
@@ -72,22 +72,22 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485DD RID: 296413 RVA: 0x0129D628 File Offset: 0x0129B828
+		// Token: 0x0603EA2A RID: 256554 RVA: 0x012400AC File Offset: 0x0123E2AC
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026436 RID: 156726
+		// Token: 0x04021723 RID: 136995
 		public FName? Tag;
 
-		// Token: 0x04026437 RID: 156727
+		// Token: 0x04021724 RID: 136996
 		public bool Visible;
 
-		// Token: 0x04026438 RID: 156728
+		// Token: 0x04021725 RID: 136997
 		public bool PropagateToChildren;
 
-		// Token: 0x04026439 RID: 156729
+		// Token: 0x04021726 RID: 136998
 		[Nullable(new byte[]
 		{
 			2,

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200142F RID: 5167
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001587 RID: 5511
 	public class IQuestFailedConditionEntityAlert
 	{
-		// Token: 0x06007589 RID: 30089 RVA: 0x00118C5C File Offset: 0x00116E5C
+		// Token: 0x06007C4E RID: 31822 RVA: 0x001276A8 File Offset: 0x001258A8
 		public static IQuestFailedConditionEntityAlert Create(IQuestFailedConditionEntityAlert? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170026FE RID: 9982
-		// (get) Token: 0x0600758A RID: 30090 RVA: 0x00118C7C File Offset: 0x00116E7C
+		// Token: 0x170028E2 RID: 10466
+		// (get) Token: 0x06007C4F RID: 31823 RVA: 0x001276C8 File Offset: 0x001258C8
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004417 RID: 17431
+		// Token: 0x040047AB RID: 18347
 		private IQuestFailedConditionEntityAlert Instance;
 
-		// Token: 0x04004418 RID: 17432
+		// Token: 0x040047AC RID: 18348
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04004419 RID: 17433
+		// Token: 0x040047AD RID: 18349
 		private bool _EntityIdsInited;
 	}
 }

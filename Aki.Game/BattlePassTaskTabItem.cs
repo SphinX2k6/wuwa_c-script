@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002335 RID: 9013
+// Token: 0x0200181A RID: 6170
 public class BattlePassTaskTabItem : UiPanelBase, IGridProxy<EBattlePassTaskUpdateState>
 {
-	// Token: 0x170016C4 RID: 5828
-	// (get) Token: 0x06011D67 RID: 73063 RVA: 0x004652A7 File Offset: 0x004634A7
-	// (set) Token: 0x06011D68 RID: 73064 RVA: 0x004652AF File Offset: 0x004634AF
+	// Token: 0x170016FE RID: 5886
+	// (get) Token: 0x0600F217 RID: 61975 RVA: 0x0047236F File Offset: 0x0047056F
+	// (set) Token: 0x0600F218 RID: 61976 RVA: 0x00472377 File Offset: 0x00470577
 	[Nullable(new byte[]
 	{
 		2,
@@ -27,17 +27,17 @@ public class BattlePassTaskTabItem : UiPanelBase, IGridProxy<EBattlePassTaskUpda
 		1
 	})] set; }
 
-	// Token: 0x170016C5 RID: 5829
-	// (get) Token: 0x06011D69 RID: 73065 RVA: 0x004652B8 File Offset: 0x004634B8
-	// (set) Token: 0x06011D6A RID: 73066 RVA: 0x004652C0 File Offset: 0x004634C0
+	// Token: 0x170016FF RID: 5887
+	// (get) Token: 0x0600F219 RID: 61977 RVA: 0x00472380 File Offset: 0x00470580
+	// (set) Token: 0x0600F21A RID: 61978 RVA: 0x00472388 File Offset: 0x00470588
 	public int GridIndex { get; set; }
 
-	// Token: 0x170016C6 RID: 5830
-	// (get) Token: 0x06011D6B RID: 73067 RVA: 0x004652C9 File Offset: 0x004634C9
-	// (set) Token: 0x06011D6C RID: 73068 RVA: 0x004652D1 File Offset: 0x004634D1
+	// Token: 0x17001700 RID: 5888
+	// (get) Token: 0x0600F21B RID: 61979 RVA: 0x00472391 File Offset: 0x00470591
+	// (set) Token: 0x0600F21C RID: 61980 RVA: 0x00472399 File Offset: 0x00470599
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x06011D6D RID: 73069 RVA: 0x004652DC File Offset: 0x004634DC
+	// Token: 0x0600F21D RID: 61981 RVA: 0x004723A4 File Offset: 0x004705A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -62,20 +62,20 @@ public class BattlePassTaskTabItem : UiPanelBase, IGridProxy<EBattlePassTaskUpda
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011D6E RID: 73070 RVA: 0x004653C4 File Offset: 0x004635C4
+	// Token: 0x0600F21E RID: 61982 RVA: 0x0047248C File Offset: 0x0047068C
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(2).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 	}
 
-	// Token: 0x06011D6F RID: 73071 RVA: 0x004653E3 File Offset: 0x004635E3
+	// Token: 0x0600F21F RID: 61983 RVA: 0x004724AB File Offset: 0x004706AB
 	private bool CanExecuteChange()
 	{
 		Func<int, bool> onCanExecuteChange = this.OnCanExecuteChange;
 		return onCanExecuteChange == null || onCanExecuteChange(this.GridIndex);
 	}
 
-	// Token: 0x06011D70 RID: 73072 RVA: 0x004653FC File Offset: 0x004635FC
+	// Token: 0x0600F220 RID: 61984 RVA: 0x004724C4 File Offset: 0x004706C4
 	private void ToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -89,66 +89,66 @@ public class BattlePassTaskTabItem : UiPanelBase, IGridProxy<EBattlePassTaskUpda
 		}
 	}
 
-	// Token: 0x06011D71 RID: 73073 RVA: 0x0046541A File Offset: 0x0046361A
+	// Token: 0x0600F221 RID: 61985 RVA: 0x004724E2 File Offset: 0x004706E2
 	public void SetForceSwitch(EToggleState state, bool bFire = false)
 	{
 		base.GetExtendToggle(2).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x06011D72 RID: 73074 RVA: 0x0046542D File Offset: 0x0046362D
+	// Token: 0x0600F222 RID: 61986 RVA: 0x004724F5 File Offset: 0x004706F5
 	[NullableContext(1)]
 	public void SetSelectedCallBack(Action<int> callback)
 	{
 		this.SelectedCallBack = callback;
 	}
 
-	// Token: 0x06011D73 RID: 73075 RVA: 0x00465436 File Offset: 0x00463636
+	// Token: 0x0600F223 RID: 61987 RVA: 0x004724FE File Offset: 0x004706FE
 	[NullableContext(1)]
 	public void SetCanExecuteChange(Func<int, bool> callback)
 	{
 		this.OnCanExecuteChange = callback;
 	}
 
-	// Token: 0x06011D74 RID: 73076 RVA: 0x0046543F File Offset: 0x0046363F
+	// Token: 0x0600F224 RID: 61988 RVA: 0x00472507 File Offset: 0x00470707
 	public void Refresh(EBattlePassTaskUpdateState data, bool isSelected, int gridIndex)
 	{
 		this.UpdateView(data);
 	}
 
-	// Token: 0x06011D75 RID: 73077 RVA: 0x00465448 File Offset: 0x00463648
+	// Token: 0x0600F225 RID: 61989 RVA: 0x00472510 File Offset: 0x00470710
 	[NullableContext(1)]
 	public object GetKey(EBattlePassTaskUpdateState data, int gridIndex)
 	{
 		return data;
 	}
 
-	// Token: 0x06011D76 RID: 73078 RVA: 0x00465450 File Offset: 0x00463650
+	// Token: 0x0600F226 RID: 61990 RVA: 0x00472518 File Offset: 0x00470718
 	public void Clear()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x06011D77 RID: 73079 RVA: 0x00465458 File Offset: 0x00463658
+	// Token: 0x0600F227 RID: 61991 RVA: 0x00472520 File Offset: 0x00470720
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x06011D78 RID: 73080 RVA: 0x0046545A File Offset: 0x0046365A
+	// Token: 0x0600F228 RID: 61992 RVA: 0x00472522 File Offset: 0x00470722
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x06011D79 RID: 73081 RVA: 0x0046545C File Offset: 0x0046365C
+	// Token: 0x0600F229 RID: 61993 RVA: 0x00472524 File Offset: 0x00470724
 	public void OnSelected()
 	{
 	}
 
-	// Token: 0x06011D7A RID: 73082 RVA: 0x0046545E File Offset: 0x0046365E
+	// Token: 0x0600F22A RID: 61994 RVA: 0x00472526 File Offset: 0x00470726
 	public void OnDeselected()
 	{
 	}
 
-	// Token: 0x06011D7B RID: 73083 RVA: 0x00465460 File Offset: 0x00463660
+	// Token: 0x0600F22B RID: 61995 RVA: 0x00472528 File Offset: 0x00470728
 	public void UpdateView(EBattlePassTaskUpdateState type)
 	{
 		UUIText text = base.GetText(0);
@@ -194,7 +194,7 @@ public class BattlePassTaskTabItem : UiPanelBase, IGridProxy<EBattlePassTaskUpda
 		this.BindRedDot();
 	}
 
-	// Token: 0x06011D7C RID: 73084 RVA: 0x004655D1 File Offset: 0x004637D1
+	// Token: 0x0600F22C RID: 61996 RVA: 0x00472699 File Offset: 0x00470899
 	private void BindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -203,7 +203,7 @@ public class BattlePassTaskTabItem : UiPanelBase, IGridProxy<EBattlePassTaskUpda
 		}
 	}
 
-	// Token: 0x06011D7D RID: 73085 RVA: 0x004655FE File Offset: 0x004637FE
+	// Token: 0x0600F22D RID: 61997 RVA: 0x004726C6 File Offset: 0x004708C6
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -213,27 +213,27 @@ public class BattlePassTaskTabItem : UiPanelBase, IGridProxy<EBattlePassTaskUpda
 		}
 	}
 
-	// Token: 0x0400873A RID: 34618
+	// Token: 0x0400887D RID: 34941
 	private ERedDotName? RedDotName;
 
-	// Token: 0x0400873B RID: 34619
+	// Token: 0x0400887E RID: 34942
 	[Nullable(2)]
 	protected Action<int> SelectedCallBack;
 
-	// Token: 0x0400873C RID: 34620
+	// Token: 0x0400887F RID: 34943
 	[Nullable(2)]
 	protected Func<int, bool> OnCanExecuteChange;
 
-	// Token: 0x020088B7 RID: 34999
+	// Token: 0x02007A40 RID: 31296
 	private enum EComponents
 	{
-		// Token: 0x0402C6F0 RID: 182000
+		// Token: 0x04027A04 RID: 162308
 		TitleText,
-		// Token: 0x0402C6F1 RID: 182001
+		// Token: 0x04027A05 RID: 162309
 		TimeText,
-		// Token: 0x0402C6F2 RID: 182002
+		// Token: 0x04027A06 RID: 162310
 		ExtendToggle,
-		// Token: 0x0402C6F3 RID: 182003
+		// Token: 0x04027A07 RID: 162311
 		RedDot
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005E7 RID: 1511
+	// Token: 0x02000678 RID: 1656
 	public class IPatrolCycleOncely_SetValue
 	{
-		// Token: 0x0400167F RID: 5759
+		// Token: 0x04001856 RID: 6230
 		public EPatrolCycleMode Type;
 	}
 }

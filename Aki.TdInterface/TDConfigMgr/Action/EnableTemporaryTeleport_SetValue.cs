@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200164D RID: 5709
+	// Token: 0x020017BA RID: 6074
 	public class EnableTemporaryTeleport_SetValue
 	{
-		// Token: 0x04004C80 RID: 19584
+		// Token: 0x04005074 RID: 20596
 		public bool Enable;
 
-		// Token: 0x04004C81 RID: 19585
+		// Token: 0x04005075 RID: 20597
 		public int RangeEntity;
 	}
 }

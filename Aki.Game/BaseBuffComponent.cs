@@ -1,30 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Aki.Config;
 using Aki.Protocol;
 using Aki.Protocol.BattleDefine;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.CombatMessage;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 using CSharpScript.Typing;
 
-// Token: 0x02002E62 RID: 11874
+// Token: 0x020023B4 RID: 9140
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariableResetter
 {
-	// Token: 0x0601952C RID: 103724 RVA: 0x006847F4 File Offset: 0x006829F4
+	// Token: 0x06016DED RID: 93677 RVA: 0x006AAB7C File Offset: 0x006A8D7C
 	static BaseBuffComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BaseBuffComponent.CreateStaticDefaultValue), new Action(BaseBuffComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700229F RID: 8863
-	// (get) Token: 0x0601952D RID: 103725 RVA: 0x00684985 File Offset: 0x00682B85
+	// Token: 0x1700231A RID: 8986
+	// (get) Token: 0x06016DEE RID: 93678 RVA: 0x006AAD0D File Offset: 0x006A8F0D
 	public long CreatureDataId
 	{
 		get
@@ -33,19 +31,19 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x170022A0 RID: 8864
-	// (get) Token: 0x0601952E RID: 103726 RVA: 0x00684992 File Offset: 0x00682B92
-	// (set) Token: 0x0601952F RID: 103727 RVA: 0x0068499A File Offset: 0x00682B9A
+	// Token: 0x1700231B RID: 8987
+	// (get) Token: 0x06016DEF RID: 93679 RVA: 0x006AAD1A File Offset: 0x006A8F1A
+	// (set) Token: 0x06016DF0 RID: 93680 RVA: 0x006AAD22 File Offset: 0x006A8F22
 	[Nullable(2)]
 	public ExtraEffectManager BuffEffectManager { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x06019530 RID: 103728 RVA: 0x006849A3 File Offset: 0x00682BA3
+	// Token: 0x06016DF1 RID: 93681 RVA: 0x006AAD2B File Offset: 0x006A8F2B
 	public virtual string GetDebugName()
 	{
 		return "";
 	}
 
-	// Token: 0x06019531 RID: 103729 RVA: 0x006849AC File Offset: 0x00682BAC
+	// Token: 0x06016DF2 RID: 93682 RVA: 0x006AAD34 File Offset: 0x006A8F34
 	protected override bool OnInit()
 	{
 		base.OnInit();
@@ -56,7 +54,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return true;
 	}
 
-	// Token: 0x06019532 RID: 103730 RVA: 0x00684A1C File Offset: 0x00682C1C
+	// Token: 0x06016DF3 RID: 93683 RVA: 0x006AADA4 File Offset: 0x006A8FA4
 	protected override bool OnClear()
 	{
 		BuffController.Instance.UnregisterBuffComponent(this);
@@ -104,73 +102,73 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return true;
 	}
 
-	// Token: 0x06019533 RID: 103731 RVA: 0x00684BD0 File Offset: 0x00682DD0
+	// Token: 0x06016DF4 RID: 93684 RVA: 0x006AAF58 File Offset: 0x006A9158
 	protected override void OnTick(float delta)
 	{
 		this.BuffLock = 0;
 		this.TagInChanged.Clear();
 	}
 
-	// Token: 0x06019534 RID: 103732 RVA: 0x00684BE4 File Offset: 0x00682DE4
+	// Token: 0x06016DF5 RID: 93685 RVA: 0x006AAF6C File Offset: 0x006A916C
 	protected virtual void InitBornBuff()
 	{
 	}
 
-	// Token: 0x06019535 RID: 103733 RVA: 0x00684BE6 File Offset: 0x00682DE6
+	// Token: 0x06016DF6 RID: 93686 RVA: 0x006AAF6E File Offset: 0x006A916E
 	[NullableContext(2)]
 	protected virtual bool NeedBroadcastBuff(ActiveBuffInternal buff, bool fromServer = false)
 	{
 		return !fromServer && (buff == null || !buff.Config.OnlyLocalAdd) && this.HasBuffAuthority();
 	}
 
-	// Token: 0x06019536 RID: 103734 RVA: 0x00684C05 File Offset: 0x00682E05
+	// Token: 0x06016DF7 RID: 93687 RVA: 0x006AAF8D File Offset: 0x006A918D
 	public virtual bool HasBuffAuthority()
 	{
 		return false;
 	}
 
-	// Token: 0x06019537 RID: 103735 RVA: 0x00684C08 File Offset: 0x00682E08
+	// Token: 0x06016DF8 RID: 93688 RVA: 0x006AAF90 File Offset: 0x006A9190
 	protected virtual bool NeedAddBuffOrder(long buffId)
 	{
 		return true;
 	}
 
-	// Token: 0x06019538 RID: 103736 RVA: 0x00684C0B File Offset: 0x00682E0B
+	// Token: 0x06016DF9 RID: 93689 RVA: 0x006AAF93 File Offset: 0x006A9193
 	[NullableContext(2)]
 	public virtual Entity GetEntity()
 	{
 		return null;
 	}
 
-	// Token: 0x06019539 RID: 103737 RVA: 0x00684C0E File Offset: 0x00682E0E
+	// Token: 0x06016DFA RID: 93690 RVA: 0x006AAF96 File Offset: 0x006A9196
 	[NullableContext(2)]
 	public virtual Entity GetExactEntity()
 	{
 		return base.Entity;
 	}
 
-	// Token: 0x0601953A RID: 103738 RVA: 0x00684C16 File Offset: 0x00682E16
+	// Token: 0x06016DFB RID: 93691 RVA: 0x006AAF9E File Offset: 0x006A919E
 	[NullableContext(2)]
 	public virtual BaseAttributeComponent GetAttributeComponent()
 	{
 		return null;
 	}
 
-	// Token: 0x0601953B RID: 103739 RVA: 0x00684C19 File Offset: 0x00682E19
+	// Token: 0x06016DFC RID: 93692 RVA: 0x006AAFA1 File Offset: 0x006A91A1
 	[NullableContext(2)]
 	public virtual BaseTagComponent GetTagComponent()
 	{
 		return null;
 	}
 
-	// Token: 0x0601953C RID: 103740 RVA: 0x00684C1C File Offset: 0x00682E1C
+	// Token: 0x06016DFD RID: 93693 RVA: 0x006AAFA4 File Offset: 0x006A91A4
 	[NullableContext(2)]
 	public virtual BaseSkillComponent GetSkillComponent()
 	{
 		return null;
 	}
 
-	// Token: 0x0601953D RID: 103741 RVA: 0x00684C1F File Offset: 0x00682E1F
+	// Token: 0x06016DFE RID: 93694 RVA: 0x006AAFA7 File Offset: 0x006A91A7
 	[NullableContext(2)]
 	public virtual CharacterPassiveSkillComponent GetPassiveSkillComponent()
 	{
@@ -182,33 +180,33 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return entity.GetComponent<CharacterPassiveSkillComponent>();
 	}
 
-	// Token: 0x0601953E RID: 103742 RVA: 0x00684C32 File Offset: 0x00682E32
+	// Token: 0x06016DFF RID: 93695 RVA: 0x006AAFBA File Offset: 0x006A91BA
 	[NullableContext(2)]
 	public virtual BaseActorComponent GetActorComponent()
 	{
 		return null;
 	}
 
-	// Token: 0x0601953F RID: 103743 RVA: 0x00684C35 File Offset: 0x00682E35
+	// Token: 0x06016E00 RID: 93696 RVA: 0x006AAFBD File Offset: 0x006A91BD
 	[NullableContext(2)]
 	public virtual BaseGameplayCueComponent GetCueComponent()
 	{
 		return null;
 	}
 
-	// Token: 0x06019540 RID: 103744 RVA: 0x00684C38 File Offset: 0x00682E38
+	// Token: 0x06016E01 RID: 93697 RVA: 0x006AAFC0 File Offset: 0x006A91C0
 	public virtual float GetTimeScale()
 	{
 		return 0f;
 	}
 
-	// Token: 0x06019541 RID: 103745 RVA: 0x00684C3F File Offset: 0x00682E3F
+	// Token: 0x06016E02 RID: 93698 RVA: 0x006AAFC7 File Offset: 0x006A91C7
 	public virtual float GetLogicTimeScale()
 	{
 		return 1f;
 	}
 
-	// Token: 0x06019542 RID: 103746 RVA: 0x00684C48 File Offset: 0x00682E48
+	// Token: 0x06016E03 RID: 93699 RVA: 0x006AAFD0 File Offset: 0x006A91D0
 	[NullableContext(2)]
 	protected Entity ResolveBuffStackInstigator(long? instigatorId)
 	{
@@ -230,7 +228,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return null;
 	}
 
-	// Token: 0x06019543 RID: 103747 RVA: 0x00684CB0 File Offset: 0x00682EB0
+	// Token: 0x06016E04 RID: 93700 RVA: 0x006AB038 File Offset: 0x006A9238
 	protected void EmitBuffStackInstigatorChanged(long buffId, int oldStack, int newStack, long? instigatorId)
 	{
 		Entity entity = this.ResolveBuffStackInstigator(instigatorId);
@@ -241,7 +239,29 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		SceneTeamController.Instance.EmitAbilityEvent<long, int, int, Entity, Entity>(entity, EAbilityEventName.BuffStackInstigatorChanged, buffId, buffId, oldStack, newStack, base.Entity, entity);
 	}
 
-	// Token: 0x06019544 RID: 103748 RVA: 0x00684CE4 File Offset: 0x00682EE4
+	// Token: 0x06016E05 RID: 93701 RVA: 0x006AB069 File Offset: 0x006A9269
+	protected static bool HasBuffStackMaxListener()
+	{
+		return AbilityEvent.Instance.HasListener(EAbilityEventName.BuffStackMaxChanged);
+	}
+
+	// Token: 0x06016E06 RID: 93702 RVA: 0x006AB078 File Offset: 0x006A9278
+	protected void EmitBuffStackMaxChanged(long buffId, int oldMax, int newMax)
+	{
+		if (newMax >= 2147483647)
+		{
+			return;
+		}
+		int num = Math.Max(1, oldMax);
+		int num2 = Math.Max(1, newMax);
+		if (num == num2)
+		{
+			return;
+		}
+		SceneTeamController.Instance.EmitAbilityEvent<long, int, int, Entity>(base.Entity, EAbilityEventName.BuffStackMaxChanged, buffId, buffId, num, num2, base.Entity);
+	}
+
+	// Token: 0x06016E07 RID: 93703 RVA: 0x006AB0C0 File Offset: 0x006A92C0
 	private void AddHandleMark<TKey>(Dictionary<TKey, HashSet<int>> dict, TKey key, int handle)
 	{
 		HashSet<int> hashSet;
@@ -253,7 +273,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		hashSet.Add(handle);
 	}
 
-	// Token: 0x06019545 RID: 103749 RVA: 0x00684D14 File Offset: 0x00682F14
+	// Token: 0x06016E08 RID: 93704 RVA: 0x006AB0F0 File Offset: 0x006A92F0
 	public void AddEntityMark<TKey>(Dictionary<TKey, Dictionary<long, HashSet<int>>> dict, TKey key, long creatureDataId, int handle)
 	{
 		Dictionary<long, HashSet<int>> dictionary;
@@ -271,7 +291,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		hashSet.Add(handle);
 	}
 
-	// Token: 0x06019546 RID: 103750 RVA: 0x00684D5C File Offset: 0x00682F5C
+	// Token: 0x06016E09 RID: 93705 RVA: 0x006AB138 File Offset: 0x006A9338
 	private void RemoveHandleMark<TKey>(Dictionary<TKey, HashSet<int>> dict, TKey key, int handle)
 	{
 		HashSet<int> hashSet;
@@ -285,7 +305,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019547 RID: 103751 RVA: 0x00684D90 File Offset: 0x00682F90
+	// Token: 0x06016E0A RID: 93706 RVA: 0x006AB16C File Offset: 0x006A936C
 	public void RemoveEntityMark<TKey>(Dictionary<TKey, Dictionary<long, HashSet<int>>> dict, TKey key, long creatureDataId, int handle)
 	{
 		Dictionary<long, HashSet<int>> dictionary;
@@ -304,7 +324,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019548 RID: 103752 RVA: 0x00684DE0 File Offset: 0x00682FE0
+	// Token: 0x06016E0B RID: 93707 RVA: 0x006AB1BC File Offset: 0x006A93BC
 	protected int[] GetInvolvedTags(BuffDefinition config)
 	{
 		List<int> list = new List<int>();
@@ -342,7 +362,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return list.ToArray();
 	}
 
-	// Token: 0x06019549 RID: 103753 RVA: 0x00684E9C File Offset: 0x0068309C
+	// Token: 0x06016E0C RID: 93708 RVA: 0x006AB278 File Offset: 0x006A9478
 	protected long[] GetInvolvedBuffIds(BuffDefinition config)
 	{
 		List<long> list = new List<long>();
@@ -360,7 +380,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return list.ToArray();
 	}
 
-	// Token: 0x0601954A RID: 103754 RVA: 0x00684EF4 File Offset: 0x006830F4
+	// Token: 0x06016E0D RID: 93709 RVA: 0x006AB2D0 File Offset: 0x006A94D0
 	protected int[] GetInvolvedInstigatorTags(BuffDefinition config)
 	{
 		List<int> list = new List<int>();
@@ -378,7 +398,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return list.ToArray();
 	}
 
-	// Token: 0x0601954B RID: 103755 RVA: 0x00684F4C File Offset: 0x0068314C
+	// Token: 0x06016E0E RID: 93710 RVA: 0x006AB328 File Offset: 0x006A9528
 	protected long[] GetInvolvedInstigatorBuffIds(BuffDefinition config)
 	{
 		List<long> list = new List<long>();
@@ -396,7 +416,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return list.ToArray();
 	}
 
-	// Token: 0x0601954C RID: 103756 RVA: 0x00684FA4 File Offset: 0x006831A4
+	// Token: 0x06016E0F RID: 93711 RVA: 0x006AB380 File Offset: 0x006A9580
 	protected List<TBuffAction> GetInstigatorEventActions(BuffDefinition config)
 	{
 		List<TBuffAction> list = new List<TBuffAction>();
@@ -413,7 +433,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return list;
 	}
 
-	// Token: 0x0601954D RID: 103757 RVA: 0x00684FEC File Offset: 0x006831EC
+	// Token: 0x06016E10 RID: 93712 RVA: 0x006AB3C8 File Offset: 0x006A95C8
 	protected void RegisterInstigatorEventListener(ActiveBuffInternal buff)
 	{
 		List<TBuffAction> instigatorEventActions = this.GetInstigatorEventActions(buff.Config);
@@ -452,7 +472,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0601954E RID: 103758 RVA: 0x006850E4 File Offset: 0x006832E4
+	// Token: 0x06016E11 RID: 93713 RVA: 0x006AB4C0 File Offset: 0x006A96C0
 	protected void UnregisterInstigatorEventListener(ActiveBuffInternal buff)
 	{
 		Entity instigator = buff.GetInstigator();
@@ -467,7 +487,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 			return;
 		}
 		int handle = buff.Handle;
-		foreach (int key in dictionary.Keys.ToList<int>())
+		foreach (int key in new List<int>(dictionary.Keys))
 		{
 			List<int> list = dictionary[key];
 			list.Remove(handle);
@@ -482,7 +502,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0601954F RID: 103759 RVA: 0x00685198 File Offset: 0x00683398
+	// Token: 0x06016E12 RID: 93714 RVA: 0x006AB574 File Offset: 0x006A9774
 	private void OnAnyInstigatorDead(int charId)
 	{
 		Dictionary<int, List<int>> dictionary;
@@ -490,10 +510,10 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		{
 			return;
 		}
-		List<int> source;
-		if (dictionary.TryGetValue(0, out source))
+		List<int> collection;
+		if (dictionary.TryGetValue(0, out collection))
 		{
-			foreach (int handle in source.ToList<int>())
+			foreach (int handle in new List<int>(collection))
 			{
 				if (this.GetBuffByHandle(handle) != null && this.HasBuffAuthority())
 				{
@@ -503,7 +523,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019550 RID: 103760 RVA: 0x0068524C File Offset: 0x0068344C
+	// Token: 0x06016E13 RID: 93715 RVA: 0x006AB628 File Offset: 0x006A9828
 	private void OnAnyInstigatorRemoved(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		EntityHandle entityById = CreatureModel.Instance.GetEntityById(handle.Id);
@@ -518,10 +538,10 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		{
 			return;
 		}
-		List<int> source;
-		if (dictionary.TryGetValue(1, out source))
+		List<int> collection;
+		if (dictionary.TryGetValue(1, out collection))
 		{
-			foreach (int handle2 in source.ToList<int>())
+			foreach (int handle2 in new List<int>(collection))
 			{
 				if (this.GetBuffByHandle(handle2) != null && this.HasBuffAuthority())
 				{
@@ -531,7 +551,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019551 RID: 103761 RVA: 0x00685328 File Offset: 0x00683528
+	// Token: 0x06016E14 RID: 93716 RVA: 0x006AB704 File Offset: 0x006A9904
 	protected void MarkListenerBuff(ActiveBuffInternal buff)
 	{
 		if (!this.NeedCheck(buff.Config))
@@ -576,7 +596,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.RegisterInstigatorEventListener(buff);
 	}
 
-	// Token: 0x06019552 RID: 103762 RVA: 0x006854A0 File Offset: 0x006836A0
+	// Token: 0x06016E15 RID: 93717 RVA: 0x006AB87C File Offset: 0x006A9A7C
 	protected void RemoveListenerBuff(ActiveBuffInternal buff)
 	{
 		if (!this.NeedCheck(buff.Config))
@@ -621,16 +641,18 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.UnregisterInstigatorEventListener(buff);
 	}
 
-	// Token: 0x06019553 RID: 103763 RVA: 0x00685618 File Offset: 0x00683818
+	// Token: 0x06016E16 RID: 93718 RVA: 0x006AB9F4 File Offset: 0x006A9BF4
 	protected void CheckWhenTagChanged(int tagId)
 	{
 		int i = this.BuffLock;
 		this.BuffLock = i + 1;
-		HashSet<int> source;
-		if (this.TagListenerDict.TryGetValue(tagId, out source))
+		HashSet<int> hashSet;
+		if (this.TagListenerDict.TryGetValue(tagId, out hashSet))
 		{
 			string nameByTagId = GameplayTagUtils.GetNameByTagId(tagId);
-			foreach (int handle in source.ToArray<int>())
+			int[] array = new int[hashSet.Count];
+			hashSet.CopyTo(array);
+			foreach (int handle in array)
 			{
 				IActiveBuff buffByHandle = this.GetBuffByHandle(handle);
 				if (buffByHandle != null && this.CheckRemove(buffByHandle.Config, buffByHandle.GetInstigator()))
@@ -638,7 +660,9 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 					this.RemoveBuffInner(handle, -1, true, "因为tag " + nameByTagId + "的变化触发", null, null, null);
 				}
 			}
-			foreach (int handle2 in source.ToArray<int>())
+			int[] array3 = new int[hashSet.Count];
+			hashSet.CopyTo(array3);
+			foreach (int handle2 in array3)
 			{
 				IActiveBuff buffByHandle2 = this.GetBuffByHandle(handle2);
 				if (buffByHandle2 == null)
@@ -655,17 +679,20 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 				}
 			}
 		}
-		Dictionary<long, HashSet<int>> source2;
-		if (this.VictimTagListenerDict.TryGetValue(tagId, out source2))
+		Dictionary<long, HashSet<int>> collection;
+		if (this.VictimTagListenerDict.TryGetValue(tagId, out collection))
 		{
 			string nameByTagId2 = GameplayTagUtils.GetNameByTagId(tagId);
-			foreach (KeyValuePair<long, HashSet<int>> keyValuePair in source2.ToArray<KeyValuePair<long, HashSet<int>>>())
+			foreach (KeyValuePair<long, HashSet<int>> keyValuePair in new List<KeyValuePair<long, HashSet<int>>>(collection))
 			{
 				long num;
-				HashSet<int> source3;
-				keyValuePair.Deconstruct(out num, out source3);
+				HashSet<int> hashSet2;
+				keyValuePair.Deconstruct(out num, out hashSet2);
 				long creatureDataId = num;
-				foreach (int handle3 in source3.ToArray<int>())
+				HashSet<int> hashSet3 = hashSet2;
+				int[] array4 = new int[hashSet3.Count];
+				hashSet3.CopyTo(array4);
+				foreach (int handle3 in array4)
 				{
 					EntityHandle entity = CreatureModel.Instance.GetEntity(creatureDataId);
 					BaseBuffComponent baseBuffComponent;
@@ -686,13 +713,16 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 					}
 				}
 			}
-			foreach (KeyValuePair<long, HashSet<int>> keyValuePair in source2.ToArray<KeyValuePair<long, HashSet<int>>>())
+			foreach (KeyValuePair<long, HashSet<int>> keyValuePair in new List<KeyValuePair<long, HashSet<int>>>(collection))
 			{
 				long num;
-				HashSet<int> source3;
-				keyValuePair.Deconstruct(out num, out source3);
+				HashSet<int> hashSet2;
+				keyValuePair.Deconstruct(out num, out hashSet2);
 				long creatureDataId2 = num;
-				foreach (int handle4 in source3.ToArray<int>())
+				HashSet<int> hashSet4 = hashSet2;
+				int[] array5 = new int[hashSet4.Count];
+				hashSet4.CopyTo(array5);
+				foreach (int handle4 in array5)
 				{
 					EntityHandle entity3 = CreatureModel.Instance.GetEntity(creatureDataId2);
 					BaseBuffComponent baseBuffComponent3;
@@ -726,15 +756,17 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.BuffLock = i - 1;
 	}
 
-	// Token: 0x06019554 RID: 103764 RVA: 0x00685950 File Offset: 0x00683B50
+	// Token: 0x06016E17 RID: 93719 RVA: 0x006ABDA0 File Offset: 0x006A9FA0
 	protected void CheckWhenBuffChanged(long buffId)
 	{
-		HashSet<int> source;
-		if (this.BuffListenerDict.TryGetValue(buffId, out source))
+		HashSet<int> hashSet;
+		if (this.BuffListenerDict.TryGetValue(buffId, out hashSet))
 		{
 			int i = this.BuffLock;
 			this.BuffLock = i + 1;
-			foreach (int num in source.ToArray<int>())
+			int[] array = new int[hashSet.Count];
+			hashSet.CopyTo(array);
+			foreach (int num in array)
 			{
 				IActiveBuff buffByHandle = this.GetBuffByHandle(num);
 				if (buffByHandle != null && this.CheckRemove(buffByHandle.Config, buffByHandle.GetInstigator()))
@@ -749,7 +781,9 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 					this.RemoveBuffInner(handle, removeStackCount, isPrematureRemoval, defaultInterpolatedStringHandler.ToStringAndClear(), null, null, null);
 				}
 			}
-			foreach (int handle2 in source.ToArray<int>())
+			int[] array3 = new int[hashSet.Count];
+			hashSet.CopyTo(array3);
+			foreach (int handle2 in array3)
 			{
 				IActiveBuff buffByHandle2 = this.GetBuffByHandle(handle2);
 				if (buffByHandle2 == null)
@@ -768,18 +802,21 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 			i = this.BuffLock;
 			this.BuffLock = i - 1;
 		}
-		Dictionary<long, HashSet<int>> source2;
-		if (this.VictimBuffListenerDict.TryGetValue(buffId, out source2))
+		Dictionary<long, HashSet<int>> collection;
+		if (this.VictimBuffListenerDict.TryGetValue(buffId, out collection))
 		{
 			int i = this.BuffLock;
 			this.BuffLock = i + 1;
-			foreach (KeyValuePair<long, HashSet<int>> keyValuePair in source2.ToArray<KeyValuePair<long, HashSet<int>>>())
+			foreach (KeyValuePair<long, HashSet<int>> keyValuePair in new List<KeyValuePair<long, HashSet<int>>>(collection))
 			{
 				long num2;
-				HashSet<int> source3;
-				keyValuePair.Deconstruct(out num2, out source3);
+				HashSet<int> hashSet2;
+				keyValuePair.Deconstruct(out num2, out hashSet2);
 				long creatureDataId = num2;
-				foreach (int num3 in source3.ToArray<int>())
+				HashSet<int> hashSet3 = hashSet2;
+				int[] array4 = new int[hashSet3.Count];
+				hashSet3.CopyTo(array4);
+				foreach (int num3 in array4)
 				{
 					EntityHandle entity = CreatureModel.Instance.GetEntity(creatureDataId);
 					BaseBuffComponent baseBuffComponent;
@@ -808,13 +845,16 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 					}
 				}
 			}
-			foreach (KeyValuePair<long, HashSet<int>> keyValuePair in source2.ToArray<KeyValuePair<long, HashSet<int>>>())
+			foreach (KeyValuePair<long, HashSet<int>> keyValuePair in new List<KeyValuePair<long, HashSet<int>>>(collection))
 			{
 				long num2;
-				HashSet<int> source3;
-				keyValuePair.Deconstruct(out num2, out source3);
+				HashSet<int> hashSet2;
+				keyValuePair.Deconstruct(out num2, out hashSet2);
 				long creatureDataId2 = num2;
-				foreach (int handle4 in source3.ToArray<int>())
+				HashSet<int> hashSet4 = hashSet2;
+				int[] array5 = new int[hashSet4.Count];
+				hashSet4.CopyTo(array5);
+				foreach (int handle4 in array5)
 				{
 					EntityHandle entity3 = CreatureModel.Instance.GetEntity(creatureDataId2);
 					BaseBuffComponent baseBuffComponent4;
@@ -848,7 +888,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019555 RID: 103765 RVA: 0x00685CD4 File Offset: 0x00683ED4
+	// Token: 0x06016E18 RID: 93720 RVA: 0x006AC1D4 File Offset: 0x006AA3D4
 	protected void UnregisterConfigOverrideListener(ActiveBuffInternal buff)
 	{
 		int? configOverrideListenerId = buff.GetConfigOverrideListenerId();
@@ -858,14 +898,14 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019556 RID: 103766 RVA: 0x00685D04 File Offset: 0x00683F04
+	// Token: 0x06016E19 RID: 93721 RVA: 0x006AC204 File Offset: 0x006AA404
 	public void AddBuffRoutineExpirationLock(long buffId)
 	{
 		int valueOrDefault = this.BuffRoutineExpirationLock.GetValueOrDefault(buffId, 0);
 		this.BuffRoutineExpirationLock[buffId] = valueOrDefault + 1;
 	}
 
-	// Token: 0x06019557 RID: 103767 RVA: 0x00685D30 File Offset: 0x00683F30
+	// Token: 0x06016E1A RID: 93722 RVA: 0x006AC230 File Offset: 0x006AA430
 	public void RemoveBuffRoutineExpirationLock(long buffId)
 	{
 		int valueOrDefault = this.BuffRoutineExpirationLock.GetValueOrDefault(buffId, 0);
@@ -877,19 +917,19 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.BuffRoutineExpirationLock[buffId] = valueOrDefault - 1;
 	}
 
-	// Token: 0x06019558 RID: 103768 RVA: 0x00685D6C File Offset: 0x00683F6C
+	// Token: 0x06016E1B RID: 93723 RVA: 0x006AC26C File Offset: 0x006AA46C
 	public virtual bool HasBuffRoutineExpirationLock(long buffId)
 	{
 		return this.BuffRoutineExpirationLock.GetValueOrDefault(buffId, 0) > 0;
 	}
 
-	// Token: 0x06019559 RID: 103769 RVA: 0x00685D7E File Offset: 0x00683F7E
+	// Token: 0x06016E1C RID: 93724 RVA: 0x006AC27E File Offset: 0x006AA47E
 	public virtual bool IsPaused()
 	{
 		return false;
 	}
 
-	// Token: 0x0601955A RID: 103770 RVA: 0x00685D84 File Offset: 0x00683F84
+	// Token: 0x06016E1D RID: 93725 RVA: 0x006AC284 File Offset: 0x006AA484
 	public void RefreshTimeScale()
 	{
 		float timeScale = this.GetTimeScale();
@@ -900,19 +940,19 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0601955B RID: 103771 RVA: 0x00685DEC File Offset: 0x00683FEC
+	// Token: 0x06016E1E RID: 93726 RVA: 0x006AC2EC File Offset: 0x006AA4EC
 	protected override void OnChangeTimeDilation(float timeDilation)
 	{
 		this.RefreshTimeScale();
 	}
 
-	// Token: 0x0601955C RID: 103772 RVA: 0x00685DF4 File Offset: 0x00683FF4
+	// Token: 0x06016E1F RID: 93727 RVA: 0x006AC2F4 File Offset: 0x006AA4F4
 	public bool NeedCheck(BuffDefinition config)
 	{
 		return config != null && (config.Id.GetValueOrDefault() == -3L || this.HasBuffAuthority());
 	}
 
-	// Token: 0x0601955D RID: 103773 RVA: 0x00685E14 File Offset: 0x00684014
+	// Token: 0x06016E20 RID: 93728 RVA: 0x006AC314 File Offset: 0x006AA514
 	protected virtual bool CheckAdd(BuffDefinition config, long instigatorId, bool fromServer)
 	{
 		if (fromServer)
@@ -1040,7 +1080,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return !this.CheckImmune(config);
 	}
 
-	// Token: 0x0601955E RID: 103774 RVA: 0x00686098 File Offset: 0x00684298
+	// Token: 0x06016E21 RID: 93729 RVA: 0x006AC598 File Offset: 0x006AA798
 	public virtual bool CheckImmune(BuffDefinition config)
 	{
 		foreach (int num in this.TagImmuneListenerDict.Keys)
@@ -1078,7 +1118,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return false;
 	}
 
-	// Token: 0x0601955F RID: 103775 RVA: 0x00686214 File Offset: 0x00684414
+	// Token: 0x06016E22 RID: 93730 RVA: 0x006AC714 File Offset: 0x006AA914
 	protected bool HasTagRemoveCheck(BuffDefinition config)
 	{
 		int[] removeTagIgnores = config.RemoveTagIgnores;
@@ -1107,7 +1147,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return true;
 	}
 
-	// Token: 0x06019560 RID: 103776 RVA: 0x00686290 File Offset: 0x00684490
+	// Token: 0x06016E23 RID: 93731 RVA: 0x006AC790 File Offset: 0x006AA990
 	protected bool CheckRemoveAction(BuffDefinition config, [Nullable(2)] Entity instigator)
 	{
 		if (config.BuffAction == null)
@@ -1369,7 +1409,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return false;
 	}
 
-	// Token: 0x06019561 RID: 103777 RVA: 0x0068673C File Offset: 0x0068493C
+	// Token: 0x06016E24 RID: 93732 RVA: 0x006ACC3C File Offset: 0x006AAE3C
 	protected bool CheckInactivateAction(BuffDefinition config, [Nullable(2)] Entity instigator)
 	{
 		if (config.BuffAction == null)
@@ -1631,7 +1671,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return false;
 	}
 
-	// Token: 0x06019562 RID: 103778 RVA: 0x00686BE8 File Offset: 0x00684DE8
+	// Token: 0x06016E25 RID: 93733 RVA: 0x006AD0E8 File Offset: 0x006AB2E8
 	protected virtual bool CheckRemove(BuffDefinition config, [Nullable(2)] Entity instigator)
 	{
 		BaseTagComponent tagComponent = this.GetTagComponent();
@@ -1700,7 +1740,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019563 RID: 103779 RVA: 0x00686D24 File Offset: 0x00684F24
+	// Token: 0x06016E26 RID: 93734 RVA: 0x006AD224 File Offset: 0x006AB424
 	protected virtual bool CheckActivate(BuffDefinition config, [Nullable(2)] Entity instigator)
 	{
 		BaseTagComponent tagComponent = this.GetTagComponent();
@@ -1731,7 +1771,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return !this.CheckInactivateAction(config, instigator);
 	}
 
-	// Token: 0x06019564 RID: 103780 RVA: 0x00686DA4 File Offset: 0x00684FA4
+	// Token: 0x06016E27 RID: 93735 RVA: 0x006AD2A4 File Offset: 0x006AB4A4
 	public virtual void SetBuffEffectCd(long buffId, int index, float remainCd)
 	{
 		Dictionary<int, double> dictionary;
@@ -1748,7 +1788,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		dictionary[index] = Time.Instance.ServerCombatStopTime + (double)remainCd;
 	}
 
-	// Token: 0x06019565 RID: 103781 RVA: 0x00686DFC File Offset: 0x00684FFC
+	// Token: 0x06016E28 RID: 93736 RVA: 0x006AD2FC File Offset: 0x006AB4FC
 	public double GetBuffEffectCd(long buffId, int index)
 	{
 		Dictionary<int, double> dictionary;
@@ -1768,7 +1808,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return num - Time.Instance.ServerCombatStopTime;
 	}
 
-	// Token: 0x06019566 RID: 103782 RVA: 0x00686E5C File Offset: 0x0068505C
+	// Token: 0x06016E29 RID: 93737 RVA: 0x006AD35C File Offset: 0x006AB55C
 	private unsafe void RemoveInvalidTargetCd(Dictionary<int, double> targetMap)
 	{
 		List<int> list = new List<int>();
@@ -1810,7 +1850,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019567 RID: 103783 RVA: 0x00687008 File Offset: 0x00685208
+	// Token: 0x06016E2A RID: 93738 RVA: 0x006AD508 File Offset: 0x006AB708
 	public unsafe virtual void SetBuffEffectCdForTarget(long buffId, int index, int targetEntityId, float remainCd)
 	{
 		if (targetEntityId == 0)
@@ -1848,7 +1888,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		dictionary2[targetEntityId] = Time.Instance.ServerCombatStopTime + (double)remainCd;
 	}
 
-	// Token: 0x06019568 RID: 103784 RVA: 0x006870F4 File Offset: 0x006852F4
+	// Token: 0x06016E2B RID: 93739 RVA: 0x006AD5F4 File Offset: 0x006AB7F4
 	public string GetTargetCdDebugStr(long buffId, int index)
 	{
 		Dictionary<int, Dictionary<int, double>> dictionary;
@@ -1890,7 +1930,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06019569 RID: 103785 RVA: 0x0068724C File Offset: 0x0068544C
+	// Token: 0x06016E2C RID: 93740 RVA: 0x006AD74C File Offset: 0x006AB94C
 	public double GetBuffEffectCdForTarget(long buffId, int index, int targetEntityId)
 	{
 		if (targetEntityId == 0)
@@ -1919,7 +1959,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return num - Time.Instance.ServerCombatStopTime;
 	}
 
-	// Token: 0x0601956A RID: 103786 RVA: 0x006872D0 File Offset: 0x006854D0
+	// Token: 0x06016E2D RID: 93741 RVA: 0x006AD7D0 File Offset: 0x006AB9D0
 	public unsafe long? CreateAnimNotifyContentWithAnimBp(int anIndex, string animName)
 	{
 		BaseSkillComponent skillComponent = this.GetSkillComponent();
@@ -1953,7 +1993,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return null;
 	}
 
-	// Token: 0x0601956B RID: 103787 RVA: 0x00687438 File Offset: 0x00685638
+	// Token: 0x06016E2E RID: 93742 RVA: 0x006AD938 File Offset: 0x006ABB38
 	public unsafe long? CreateAnimNotifyContentWithoutSkill(MontageInfo montageInfo, int anIndex)
 	{
 		if (montageInfo.MontageTaskMessageId != null)
@@ -1978,7 +2018,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return null;
 	}
 
-	// Token: 0x0601956C RID: 103788 RVA: 0x00687514 File Offset: 0x00685714
+	// Token: 0x06016E2F RID: 93743 RVA: 0x006ADA14 File Offset: 0x006ABC14
 	public unsafe long? CreateAnimNotifyContentWithSkill(MontageInfo montageInfo, int anIndex)
 	{
 		BaseSkillComponent skillComponent = this.GetSkillComponent();
@@ -2007,7 +2047,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return null;
 	}
 
-	// Token: 0x0601956D RID: 103789 RVA: 0x00687638 File Offset: 0x00685838
+	// Token: 0x06016E30 RID: 93744 RVA: 0x006ADB38 File Offset: 0x006ABD38
 	public long? CreateAnimNotifyContent(string montageName, int anIndex)
 	{
 		BaseMontageComponent component = base.Entity.GetComponent<BaseMontageComponent>();
@@ -2024,7 +2064,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return this.CreateAnimNotifyContentWithSkill(montageInfo, anIndex);
 	}
 
-	// Token: 0x0601956E RID: 103790 RVA: 0x0068769A File Offset: 0x0068589A
+	// Token: 0x06016E31 RID: 93745 RVA: 0x006ADB9A File Offset: 0x006ABD9A
 	public void AddBuffFromAi(long? contextId, long buffId, AddBuffParam buffParams)
 	{
 		bool flag = contextId != null;
@@ -2032,14 +2072,14 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.AddBuff(buffId, buffParams);
 	}
 
-	// Token: 0x0601956F RID: 103791 RVA: 0x006876B3 File Offset: 0x006858B3
+	// Token: 0x06016E32 RID: 93746 RVA: 0x006ADBB3 File Offset: 0x006ABDB3
 	public void AddBuffForDebug(long buffId, AddBuffParam buffParams)
 	{
 		buffParams.PreMessageId = new long?(-1L);
 		this.AddBuff(buffId, buffParams);
 	}
 
-	// Token: 0x06019570 RID: 103792 RVA: 0x006876CC File Offset: 0x006858CC
+	// Token: 0x06016E33 RID: 93747 RVA: 0x006ADBCC File Offset: 0x006ABDCC
 	public unsafe virtual void AddBuff(long buffId, AddBuffParam buffParams)
 	{
 		if (buffId <= 0L)
@@ -2106,7 +2146,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019571 RID: 103793 RVA: 0x006878E0 File Offset: 0x00685AE0
+	// Token: 0x06016E34 RID: 93748 RVA: 0x006ADDE0 File Offset: 0x006ABFE0
 	public unsafe virtual int AddBuffLocal(long buffId, AddBuffParam buffParams)
 	{
 		long instigatorId = buffParams.InstigatorId;
@@ -2159,12 +2199,12 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return this.AddBuffInner(buffId, buffDefinition, new long?(instigatorId), level.Value, outerStackCount, new ApplyGEType?(valueOrDefault), preMessageId, messageId, duration2, null, valueOrDefault2, reason, false, valueOrDefault3, valueOrDefault4, null, bulletMessageId, new bool?(valueOrDefault5));
 	}
 
-	// Token: 0x06019572 RID: 103794 RVA: 0x00687B16 File Offset: 0x00685D16
+	// Token: 0x06016E35 RID: 93749 RVA: 0x006AE016 File Offset: 0x006AC216
 	protected virtual void AddBuffOrder(long buffId, AddBuffParam buffParams)
 	{
 	}
 
-	// Token: 0x06019573 RID: 103795 RVA: 0x00687B18 File Offset: 0x00685D18
+	// Token: 0x06016E36 RID: 93750 RVA: 0x006AE018 File Offset: 0x006AC218
 	protected void AddBuffRemote(long buffId, int handle, long overrideConfigId, AddBuffParam buffParams)
 	{
 		long instigatorId = buffParams.InstigatorId;
@@ -2201,7 +2241,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019574 RID: 103796 RVA: 0x00687C5C File Offset: 0x00685E5C
+	// Token: 0x06016E37 RID: 93751 RVA: 0x006AE15C File Offset: 0x006AC35C
 	[NullableContext(2)]
 	public unsafe void AddIterativeBuff(long buffId, IActiveBuff preBuff, int? stackCount, bool isIterable, [Nullable(1)] string reason, long? bulletMessageId = null, IBuffComponent instigator = null)
 	{
@@ -2237,8 +2277,8 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		});
 	}
 
-	// Token: 0x170022A1 RID: 8865
-	// (get) Token: 0x06019575 RID: 103797 RVA: 0x00687D72 File Offset: 0x00685F72
+	// Token: 0x1700231C RID: 8988
+	// (get) Token: 0x06016E38 RID: 93752 RVA: 0x006AE272 File Offset: 0x006AC472
 	[Nullable(new byte[]
 	{
 		1,
@@ -2257,22 +2297,14 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019576 RID: 103798 RVA: 0x00687D7C File Offset: 0x00685F7C
+	// Token: 0x06016E39 RID: 93753 RVA: 0x006AE279 File Offset: 0x006AC479
 	[NullableContext(2)]
 	protected static Stat GetBuffStat(long buffId)
 	{
-		if (!Stat.Enable)
-		{
-			return null;
-		}
-		if (!BaseBuffComponent.BuffStatMap.ContainsKey(buffId))
-		{
-			BaseBuffComponent.BuffStatMap[buffId] = Stat.CreateNoFlameGraph(buffId.ToString(), "", "STATGROUP_KuroBattle");
-		}
-		return BaseBuffComponent.BuffStatMap[buffId];
+		return null;
 	}
 
-	// Token: 0x06019577 RID: 103799 RVA: 0x00687DCC File Offset: 0x00685FCC
+	// Token: 0x06016E3A RID: 93754 RVA: 0x006AE27C File Offset: 0x006AC47C
 	[NullableContext(2)]
 	public unsafe virtual int AddBuffInner(long buffId, BuffDefinition config, long? instigatorId, int level, int? outerStackCount, ApplyGEType? applyType, long? preMessageId, long? messageId, float? duration, bool? isActive, int serverId, string reason, bool fromServer, bool isIterable, bool isServerOrder, int? handle, long? bulletMessageId = null, bool? bornBuff = null)
 	{
@@ -2297,7 +2329,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		IConfigOverrideRule configOverrideRule = null;
 		if (this.HasBuffAuthority() && !fromServer && buffDefinition.ConfigOverrides != null && buffDefinition.ConfigOverrides.Length != 0)
 		{
-			configOverrideRule = this.ConfigOverrideConditionListener.ResolveOverrideConfigRule(buffDefinition.ConfigOverrides.ToList<IConfigOverrideRule>());
+			configOverrideRule = this.ConfigOverrideConditionListener.ResolveOverrideConfigRule(new List<IConfigOverrideRule>(buffDefinition.ConfigOverrides));
 			if (configOverrideRule != null)
 			{
 				BuffDefinition buffDefinition2 = BuffController.Instance.GetBuffDefinition(configOverrideRule.OverrideConfigId, reason);
@@ -2442,7 +2474,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 		if (this.HasBuffAuthority() && !fromServer && configOverrideRule != null && config.ConfigOverrides != null)
 		{
-			ConfigOverrideConditionListener.ConfigOverrideListenerRegistration configOverrideListenerRegistration = this.ConfigOverrideConditionListener.AddListener(config.ConfigOverrides.ToList<IConfigOverrideRule>(), delegate
+			ConfigOverrideConditionListener.ConfigOverrideListenerRegistration configOverrideListenerRegistration = this.ConfigOverrideConditionListener.AddListener(new List<IConfigOverrideRule>(config.ConfigOverrides), delegate
 			{
 				ActiveBuffInternal newBuff = newBuff;
 				if (newBuff == null)
@@ -2495,7 +2527,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return handle.Value;
 	}
 
-	// Token: 0x06019578 RID: 103800 RVA: 0x006885B0 File Offset: 0x006867B0
+	// Token: 0x06016E3B RID: 93755 RVA: 0x006AEA60 File Offset: 0x006ACC60
 	public virtual void RemoveBuff(long buffId, int stackCount, string reason, long? preMessageId = null, bool? isServerRequest = null, long? instigatorId = null)
 	{
 		if (this.HasBuffAuthority())
@@ -2506,12 +2538,12 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.RemoveBuffOrder(buffId, stackCount, reason, instigatorId);
 	}
 
-	// Token: 0x06019579 RID: 103801 RVA: 0x006885D6 File Offset: 0x006867D6
+	// Token: 0x06016E3C RID: 93756 RVA: 0x006AEA86 File Offset: 0x006ACC86
 	protected virtual void RemoveBuffOrder(long buffId, int stackCount, string reason, long? instigatorId = null)
 	{
 	}
 
-	// Token: 0x0601957A RID: 103802 RVA: 0x006885D8 File Offset: 0x006867D8
+	// Token: 0x06016E3D RID: 93757 RVA: 0x006AEA88 File Offset: 0x006ACC88
 	public unsafe virtual int RemoveBuffLocal(long buffId, int stackCount, string reason, long? preMessageId = null, bool? isServerRequest = null, long? instigatorId = null)
 	{
 		if (buffId <= 0L)
@@ -2541,14 +2573,14 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 			return 0;
 		}
 		int result = 0;
-		foreach (ActiveBuffInternal activeBuffInternal in this.GetAllBuffById(buffId).ToArray<ActiveBuffInternal>())
+		foreach (ActiveBuffInternal activeBuffInternal in new List<ActiveBuffInternal>(this.GetAllBuffById(buffId)))
 		{
 			result = this.RemoveBuffInner(activeBuffInternal.Handle, stackCount, true, reason, preMessageId, isServerRequest, instigatorId);
 		}
 		return result;
 	}
 
-	// Token: 0x0601957B RID: 103803 RVA: 0x00688728 File Offset: 0x00686928
+	// Token: 0x06016E3E RID: 93758 RVA: 0x006AEBF8 File Offset: 0x006ACDF8
 	public virtual void RemoveBuffByServerId(int serverId, int stackCount, long preMessageId, string reason, long? instigatorId = null)
 	{
 		foreach (IActiveBuff activeBuff in this.GetAllBuffs())
@@ -2560,7 +2592,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0601957C RID: 103804 RVA: 0x00688778 File Offset: 0x00686978
+	// Token: 0x06016E3F RID: 93759 RVA: 0x006AEC48 File Offset: 0x006ACE48
 	[NullableContext(2)]
 	public unsafe virtual void RemoveBuffByTagLocal(int tagId, string reason, long? instigatorId = null)
 	{
@@ -2601,7 +2633,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0601957D RID: 103805 RVA: 0x0068892C File Offset: 0x00686B2C
+	// Token: 0x06016E40 RID: 93760 RVA: 0x006AEDFC File Offset: 0x006ACFFC
 	public void RemoveBuffByEffectType(EExtraEffectId effectId, string reason)
 	{
 		HashSet<long> hashSet = new HashSet<long>();
@@ -2623,7 +2655,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0601957E RID: 103806 RVA: 0x00688A04 File Offset: 0x00686C04
+	// Token: 0x06016E41 RID: 93761 RVA: 0x006AEED4 File Offset: 0x006AD0D4
 	[NullableContext(2)]
 	public unsafe virtual int RemoveBuffByHandle(int handle, int removeStackCount = -1, string reason = null, long? preMessageId = null, bool? isServerRequest = null, long? instigatorId = null)
 	{
@@ -2660,14 +2692,14 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return this.RemoveBuffByHandleLocal(handle, removeStackCount, reason, preMessageId, isServerRequest, instigatorId);
 	}
 
-	// Token: 0x0601957F RID: 103807 RVA: 0x00688B22 File Offset: 0x00686D22
+	// Token: 0x06016E42 RID: 93762 RVA: 0x006AEFF2 File Offset: 0x006AD1F2
 	[NullableContext(2)]
 	protected int RemoveBuffByHandleLocal(int handle, int removeStackCount = -1, string reason = null, long? preMessageId = null, bool? isServerRequest = null, long? instigatorId = null)
 	{
 		return this.RemoveBuffInner(handle, removeStackCount, true, reason, preMessageId, isServerRequest, instigatorId);
 	}
 
-	// Token: 0x06019580 RID: 103808 RVA: 0x00688B34 File Offset: 0x00686D34
+	// Token: 0x06016E43 RID: 93763 RVA: 0x006AF004 File Offset: 0x006AD204
 	public void RemoveBuffWhenTimeout(ActiveBuffInternal buff)
 	{
 		int stackExpirationRemoveNumber = buff.Config.StackExpirationRemoveNumber;
@@ -2678,7 +2710,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019581 RID: 103809 RVA: 0x00688B98 File Offset: 0x00686D98
+	// Token: 0x06016E44 RID: 93764 RVA: 0x006AF068 File Offset: 0x006AD268
 	[NullableContext(2)]
 	public unsafe virtual int RemoveBuffInner(int handle, int removeStackCount, bool isPrematureRemoval, string reason, long? preMessageId = null, bool? isServerRequest = null, long? instigatorId = null)
 	{
@@ -2733,7 +2765,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return stackCount - num;
 	}
 
-	// Token: 0x06019582 RID: 103810 RVA: 0x00688D78 File Offset: 0x00686F78
+	// Token: 0x06016E45 RID: 93765 RVA: 0x006AF248 File Offset: 0x006AD448
 	public IActiveBuff[] GetAllBuffs()
 	{
 		List<IActiveBuff> list = new List<IActiveBuff>();
@@ -2747,7 +2779,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return list.ToArray();
 	}
 
-	// Token: 0x06019583 RID: 103811 RVA: 0x00688DF0 File Offset: 0x00686FF0
+	// Token: 0x06016E46 RID: 93766 RVA: 0x006AF2C0 File Offset: 0x006AD4C0
 	[NullableContext(2)]
 	public IActiveBuff GetBuffByHandle(int handle)
 	{
@@ -2758,40 +2790,40 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return this.BuffContainer.GetValueOrDefault(handle);
 	}
 
-	// Token: 0x06019584 RID: 103812 RVA: 0x00688E0E File Offset: 0x0068700E
+	// Token: 0x06016E47 RID: 93767 RVA: 0x006AF2DE File Offset: 0x006AD4DE
 	[NullableContext(2)]
 	public IActiveBuff GetPendingBuffByHandle(int handleId)
 	{
 		return this.BuffContainer.GetValueOrDefault(handleId);
 	}
 
-	// Token: 0x06019585 RID: 103813 RVA: 0x00688E1C File Offset: 0x0068701C
+	// Token: 0x06016E48 RID: 93768 RVA: 0x006AF2EC File Offset: 0x006AD4EC
 	public bool HasActiveBuff(long buffId)
 	{
 		return this.GetActiveBuffById(buffId) != null;
 	}
 
-	// Token: 0x06019586 RID: 103814 RVA: 0x00688E28 File Offset: 0x00687028
+	// Token: 0x06016E49 RID: 93769 RVA: 0x006AF2F8 File Offset: 0x006AD4F8
 	public bool HasBuff(long buffId, bool excludeRequestRemove = false)
 	{
 		return (!excludeRequestRemove || !this.WaitRemoveBuffResponse.ContainsKey(buffId)) && this.GetBuffById(buffId) != null;
 	}
 
-	// Token: 0x06019587 RID: 103815 RVA: 0x00688E48 File Offset: 0x00687048
+	// Token: 0x06016E4A RID: 93770 RVA: 0x006AF318 File Offset: 0x006AD518
 	public bool IsPendingAddBuff(long buffId, int checkInterval = 200)
 	{
 		double num;
 		return this.PendingAddBuff.TryGetValue(buffId, out num) && Time.Instance.Now - num < (double)checkInterval;
 	}
 
-	// Token: 0x06019588 RID: 103816 RVA: 0x00688E77 File Offset: 0x00687077
+	// Token: 0x06016E4B RID: 93771 RVA: 0x006AF347 File Offset: 0x006AD547
 	[NullableContext(2)]
 	public virtual BaseBuffComponent GetBuffApplyTarget(long buffId, long instigatorId)
 	{
 		return this;
 	}
 
-	// Token: 0x06019589 RID: 103817 RVA: 0x00688E7C File Offset: 0x0068707C
+	// Token: 0x06016E4C RID: 93772 RVA: 0x006AF34C File Offset: 0x006AD54C
 	[NullableContext(2)]
 	public ActiveBuffInternal GetActiveBuffById(long buffId)
 	{
@@ -2825,7 +2857,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return null;
 	}
 
-	// Token: 0x0601958A RID: 103818 RVA: 0x00688F78 File Offset: 0x00687178
+	// Token: 0x06016E4D RID: 93773 RVA: 0x006AF448 File Offset: 0x006AD648
 	[NullableContext(2)]
 	public ActiveBuffInternal GetBuffById(long buffId)
 	{
@@ -2859,16 +2891,16 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return null;
 	}
 
-	// Token: 0x0601958B RID: 103819 RVA: 0x00689068 File Offset: 0x00687268
+	// Token: 0x06016E4E RID: 93774 RVA: 0x006AF538 File Offset: 0x006AD738
 	public IEnumerable<ActiveBuffInternal> GetAllBuffById(long buffId)
 	{
-		BaseBuffComponent.<GetAllBuffById>d__121 <GetAllBuffById>d__ = new BaseBuffComponent.<GetAllBuffById>d__121(-2);
+		BaseBuffComponent.<GetAllBuffById>d__123 <GetAllBuffById>d__ = new BaseBuffComponent.<GetAllBuffById>d__123(-2);
 		<GetAllBuffById>d__.<>4__this = this;
 		<GetAllBuffById>d__.<>3__buffId = buffId;
 		return <GetAllBuffById>d__;
 	}
 
-	// Token: 0x0601958C RID: 103820 RVA: 0x00689080 File Offset: 0x00687280
+	// Token: 0x06016E4F RID: 93775 RVA: 0x006AF550 File Offset: 0x006AD750
 	public HashSet<int> GetBuffHandleByEffectId(int effectId)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -2895,13 +2927,13 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return hashSet;
 	}
 
-	// Token: 0x0601958D RID: 103821 RVA: 0x0068912C File Offset: 0x0068732C
+	// Token: 0x06016E50 RID: 93776 RVA: 0x006AF5FC File Offset: 0x006AD7FC
 	public virtual int? GetBuffLevel(long buffId)
 	{
 		return null;
 	}
 
-	// Token: 0x0601958E RID: 103822 RVA: 0x00689144 File Offset: 0x00687344
+	// Token: 0x06016E51 RID: 93777 RVA: 0x006AF614 File Offset: 0x006AD814
 	[NullableContext(2)]
 	protected ActiveBuffInternal GetStackableBuff(long instigatorId, long buffId, EBuffStackingType stackingType)
 	{
@@ -2948,7 +2980,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return null;
 	}
 
-	// Token: 0x0601958F RID: 103823 RVA: 0x00689278 File Offset: 0x00687478
+	// Token: 0x06016E52 RID: 93778 RVA: 0x006AF748 File Offset: 0x006AD948
 	public virtual int GetBuffTotalStackById(long buffId, bool onlyActiveBuff = false)
 	{
 		HashSet<int> hashSet;
@@ -2982,7 +3014,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return num;
 	}
 
-	// Token: 0x06019590 RID: 103824 RVA: 0x0068937C File Offset: 0x0068757C
+	// Token: 0x06016E53 RID: 93779 RVA: 0x006AF84C File Offset: 0x006ADA4C
 	protected unsafe virtual void OnBuffAdded(ActiveBuffInternal buff, int? stackCount, ApplyGEType applyType, long? preMessageId, float? duration, bool? isActive, int serverId, bool fromServer, bool isIterable, bool isServerOrder, [Nullable(2)] string reason)
 	{
 		if (buff == null)
@@ -3039,19 +3071,6 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		{
 			buff.ResetPeriodTimer(0.020000001f);
 		}
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			CharacterStatisticsComponent component = base.Entity.GetComponent<CharacterStatisticsComponent>();
-			if (component != null)
-			{
-				component.OnBuffAdded(buff);
-			}
-			CharacterGasDebugComponent component2 = base.Entity.GetComponent<CharacterGasDebugComponent>();
-			if (component2 != null)
-			{
-				component2.OnBuffAdded(buff);
-			}
-		}
 		this.CheckWhenBuffChanged(buff.Id);
 		ExtraEffectParameters[] effectInfos = buff.Config.EffectInfos;
 		for (int i = 0; i < effectInfos.Length; i++)
@@ -3067,7 +3086,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.EmitBuffStackInstigatorChanged(buff.Id, 0, buff.StackCount, buff.InstigatorId);
 	}
 
-	// Token: 0x06019591 RID: 103825 RVA: 0x006895D4 File Offset: 0x006877D4
+	// Token: 0x06016E54 RID: 93780 RVA: 0x006AFA6C File Offset: 0x006ADC6C
 	public unsafe void ApplyPeriodExecution(ActiveBuffInternal buff)
 	{
 		BuffDefinition config = buff.Config;
@@ -3120,7 +3139,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x06019592 RID: 103826 RVA: 0x006897B4 File Offset: 0x006879B4
+	// Token: 0x06016E55 RID: 93781 RVA: 0x006AFC4C File Offset: 0x006ADE4C
 	protected virtual void OnBuffRemoved(ActiveBuffInternal buff, bool isPrematureRemoval, [Nullable(2)] string reason, bool? isServerRequest = null, long? preMessageId = null, long? instigatorId = null)
 	{
 		if (buff == null)
@@ -3193,7 +3212,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.EmitBuffStackInstigatorChanged(buff.Id, stackCount, 0, instigatorId);
 	}
 
-	// Token: 0x06019593 RID: 103827 RVA: 0x006899B4 File Offset: 0x00687BB4
+	// Token: 0x06016E56 RID: 93782 RVA: 0x006AFE4C File Offset: 0x006AE04C
 	protected virtual void OnBuffStackDecreased(ActiveBuffInternal buff, int oldStack, int newStack, bool isPrematureRemoval, [Nullable(2)] string reason, EBuffStackPeriodResetOverride stackPeriodResetPolicy = EBuffStackPeriodResetOverride.Default, long? instigatorId = null)
 	{
 		if (buff == null)
@@ -3207,7 +3226,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.EmitBuffStackInstigatorChanged(buff.Id, oldStack, newStack, instigatorId);
 	}
 
-	// Token: 0x06019594 RID: 103828 RVA: 0x00689A20 File Offset: 0x00687C20
+	// Token: 0x06016E57 RID: 93783 RVA: 0x006AFEB8 File Offset: 0x006AE0B8
 	protected virtual void OnBuffStackIncreased(ActiveBuffInternal buff, int oldStack, int newStack, long? instigatorId, int level, int? outerStackCount, ApplyGEType applyType, long? preMessageId, float? duration, int serverId, bool isIterable, bool isServerOrder, [Nullable(2)] string reason, EBuffStackDurationOverride stackDurationRefreshPolicy = EBuffStackDurationOverride.Default, EBuffStackPeriodResetOverride stackPeriodResetPolicy = EBuffStackPeriodResetOverride.Default)
 	{
 		if (buff == null)
@@ -3259,7 +3278,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.EmitBuffStackInstigatorChanged(buff.Id, oldStack, newStack, instigatorId);
 	}
 
-	// Token: 0x06019595 RID: 103829 RVA: 0x00689BCC File Offset: 0x00687DCC
+	// Token: 0x06016E58 RID: 93784 RVA: 0x006B0064 File Offset: 0x006AE264
 	[NullableContext(2)]
 	protected virtual void OnBuffActiveChanged(ActiveBuffInternal buff, bool isActive, bool? syncedActive = null)
 	{
@@ -3290,12 +3309,12 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.OnAnyBuffInhibitionChanged(buff);
 	}
 
-	// Token: 0x06019596 RID: 103830 RVA: 0x00689C66 File Offset: 0x00687E66
+	// Token: 0x06016E59 RID: 93785 RVA: 0x006B00FE File Offset: 0x006AE2FE
 	protected virtual void BroadcastActivateBuff(ActiveBuffInternal buff, bool isActive)
 	{
 	}
 
-	// Token: 0x06019597 RID: 103831 RVA: 0x00689C68 File Offset: 0x00687E68
+	// Token: 0x06016E5A RID: 93786 RVA: 0x006B0100 File Offset: 0x006AE300
 	public void OnTagChanged(int tagId)
 	{
 		if (this.TagInChanged.Contains(tagId))
@@ -3313,9 +3332,9 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.TagInChanged.Remove(tagId);
 	}
 
-	// Token: 0x170022A2 RID: 8866
-	// (get) Token: 0x06019598 RID: 103832 RVA: 0x00689CD4 File Offset: 0x00687ED4
-	// (set) Token: 0x06019599 RID: 103833 RVA: 0x00689CDC File Offset: 0x00687EDC
+	// Token: 0x1700231D RID: 8989
+	// (get) Token: 0x06016E5B RID: 93787 RVA: 0x006B016C File Offset: 0x006AE36C
+	// (set) Token: 0x06016E5C RID: 93788 RVA: 0x006B0174 File Offset: 0x006AE374
 	protected int BuffLock
 	{
 		get
@@ -3351,7 +3370,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0601959A RID: 103834 RVA: 0x00689DB4 File Offset: 0x00687FB4
+	// Token: 0x06016E5D RID: 93789 RVA: 0x006B024C File Offset: 0x006AE44C
 	public void AddTrigger(int handleId, EBuffTriggerType buffEffectEventType, IBuffTrigger passiveEffects)
 	{
 		List<IBuffTrigger> list;
@@ -3363,7 +3382,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		list.Add(passiveEffects);
 	}
 
-	// Token: 0x0601959B RID: 103835 RVA: 0x00689DEC File Offset: 0x00687FEC
+	// Token: 0x06016E5E RID: 93790 RVA: 0x006B0284 File Offset: 0x006AE484
 	public void RemoveTrigger(int handleId, EBuffTriggerType extraEffectType)
 	{
 		List<IBuffTrigger> list;
@@ -3386,7 +3405,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0601959C RID: 103836 RVA: 0x00689E3C File Offset: 0x0068803C
+	// Token: 0x06016E5F RID: 93791 RVA: 0x006B02D4 File Offset: 0x006AE4D4
 	public virtual void TriggerEvents(EBuffTriggerType passiveEffectType, [Nullable(2)] BaseBuffComponent opponentBuffComp, Partial_RequirementPayload payload)
 	{
 		if (opponentBuffComp == null)
@@ -3406,7 +3425,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0601959D RID: 103837 RVA: 0x00689E94 File Offset: 0x00688094
+	// Token: 0x06016E60 RID: 93792 RVA: 0x006B032C File Offset: 0x006AE52C
 	[return: Nullable(2)]
 	public static Entity ShouldForwardToFrontChar(Entity entity)
 	{
@@ -3437,26 +3456,26 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 			return null;
 		}
 		int roleId = component2.GetRoleId();
-		if (component.GetApplyTriggerRoles().Contains(roleId))
+		if (Array.IndexOf<int>(component.GetApplyTriggerRoles(), roleId) >= 0)
 		{
 			return entity2;
 		}
 		return null;
 	}
 
-	// Token: 0x0601959E RID: 103838 RVA: 0x00689F0B File Offset: 0x0068810B
+	// Token: 0x06016E61 RID: 93793 RVA: 0x006B03A4 File Offset: 0x006AE5A4
 	public static bool IsFollowShooterByEntity(Entity entity)
 	{
 		return entity.GetComponent<FollowShooterComponent>() != null;
 	}
 
-	// Token: 0x0601959F RID: 103839 RVA: 0x00689F18 File Offset: 0x00688118
+	// Token: 0x06016E62 RID: 93794 RVA: 0x006B03B1 File Offset: 0x006AE5B1
 	public bool HasBuffTrigger(EBuffTriggerType effectType)
 	{
 		return this.TriggerMap.ContainsKey(effectType);
 	}
 
-	// Token: 0x060195A0 RID: 103840 RVA: 0x00689F28 File Offset: 0x00688128
+	// Token: 0x06016E63 RID: 93795 RVA: 0x006B03C0 File Offset: 0x006AE5C0
 	public int AddGameplayCue(long[] cueIds, float duration, string reason)
 	{
 		if (cueIds == null || cueIds.Length == 0)
@@ -3478,7 +3497,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return this.AddBuffInner(-3L, buffDefinition, null, 1, null, new ApplyGEType?(ApplyGEType.Common), null, null, new float?(duration), null, -1, reason, false, true, false, null, null, null);
 	}
 
-	// Token: 0x060195A1 RID: 103841 RVA: 0x00689FFC File Offset: 0x006881FC
+	// Token: 0x06016E64 RID: 93796 RVA: 0x006B0494 File Offset: 0x006AE694
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.ApplyGameplayEffectNotify, false, false)]
 	public static void BroadcastAddBuffNotify(Entity entity, [Nullable(1)] ApplyGameplayEffectNotify data, CombatCommon combatCommon = null)
@@ -3531,7 +3550,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195A2 RID: 103842 RVA: 0x0068A1D8 File Offset: 0x006883D8
+	// Token: 0x06016E65 RID: 93797 RVA: 0x006B0670 File Offset: 0x006AE870
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.ApplyBuffFailedNotify, false, false)]
 	public static void BroadcastAddBuffFailedNotify(Entity entity, [Nullable(1)] ApplyBuffFailedNotify data, CombatCommon combatCommon = null)
@@ -3556,7 +3575,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		instance.EmitAbilityEvent<long, Entity, Entity, int, long?>(target, name, key, arg, entity, arg2, stackCount, new long?(instance2.LongToBigInt((transferContextId != null) ? transferContextId.BulletContextId : 0L)));
 	}
 
-	// Token: 0x060195A3 RID: 103843 RVA: 0x0068A24C File Offset: 0x0068844C
+	// Token: 0x06016E66 RID: 93798 RVA: 0x006B06E4 File Offset: 0x006AE8E4
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.BuffStackCountNotify, false, false)]
 	public static void BroadcastBuffStackChangedNotify(Entity entity, [Nullable(1)] BuffStackCountNotify data, CombatCommon combatCommon = null)
@@ -3594,7 +3613,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195A4 RID: 103844 RVA: 0x0068A3D8 File Offset: 0x006885D8
+	// Token: 0x06016E67 RID: 93799 RVA: 0x006B0870 File Offset: 0x006AEA70
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.RemoveGameplayEffectNotify, false, false)]
 	public unsafe static void BroadcastRemoveBuffNotify(Entity entity, [Nullable(1)] RemoveGameplayEffectNotify data, CombatCommon combatCommon = null)
@@ -3616,7 +3635,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		baseBuffComponent.RemoveBuffInner(handle, -1, true, "远端通知移除buff", null, null, new long?(instigatorId));
 	}
 
-	// Token: 0x060195A5 RID: 103845 RVA: 0x0068A4A0 File Offset: 0x006886A0
+	// Token: 0x06016E68 RID: 93800 RVA: 0x006B0938 File Offset: 0x006AEB38
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.BuffDurationNotify, false, false)]
 	public static void BuffDurationNotify(Entity entity, [Nullable(1)] BuffDurationNotify data, CombatCommon combatCommon = null)
@@ -3638,7 +3657,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195A6 RID: 103846 RVA: 0x0068A508 File Offset: 0x00688708
+	// Token: 0x06016E69 RID: 93801 RVA: 0x006B09A0 File Offset: 0x006AEBA0
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.ApplyBuffS2cRequestNotify, false, true)]
 	public static void OrderAddBuffS2cNotify(Entity entity, [Nullable(1)] ApplyBuffS2cRequestNotify data, CombatCommon combatCommon = null)
@@ -3671,7 +3690,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		CombatNet.Instance.Send(EPushMessageId.ApplyBuffS2cResponsePush, entity, applyBuffS2cResponsePush, new long?(value), null, new bool?(true));
 	}
 
-	// Token: 0x060195A7 RID: 103847 RVA: 0x0068A6F0 File Offset: 0x006888F0
+	// Token: 0x06016E6A RID: 93802 RVA: 0x006B0B88 File Offset: 0x006AED88
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.RemoveBuffS2cRequestNotify, false, false)]
 	public static void OrderRemoveBuffS2cNotify(Entity entity, [Nullable(1)] RemoveBuffS2cRequestNotify data, CombatCommon combatCommon = null)
@@ -3689,7 +3708,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		CombatNet.Instance.Send(EPushMessageId.RemoveBuffS2cResponsePush, entity, removeBuffS2cResponsePush, new long?(value), null, new bool?(true));
 	}
 
-	// Token: 0x060195A8 RID: 103848 RVA: 0x0068A78C File Offset: 0x0068898C
+	// Token: 0x06016E6B RID: 93803 RVA: 0x006B0C24 File Offset: 0x006AEE24
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.RemoveBuffByIdS2cRequestNotify, false, false)]
 	public unsafe static void OrderRemoveBuffByIdS2cNotify(Entity entity, [Nullable(1)] RemoveBuffByIdS2cRequestNotify data, CombatCommon combatCommon = null)
@@ -3723,7 +3742,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		CombatNet.Instance.Send(EPushMessageId.RemoveBuffByIdS2cResponsePush, entity, removeBuffByIdS2cResponsePush, new long?(value), null, new bool?(true));
 	}
 
-	// Token: 0x060195A9 RID: 103849 RVA: 0x0068A904 File Offset: 0x00688B04
+	// Token: 0x06016E6C RID: 93804 RVA: 0x006B0D9C File Offset: 0x006AEF9C
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.RemoveBuffByServerIdS2cRequestNotify, false, false)]
 	public unsafe static void OrderRemoveBuffByServerIdNotify(Entity entity, [Nullable(1)] RemoveBuffByServerIdS2cRequestNotify data, CombatCommon combatCommon = null)
@@ -3755,7 +3774,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		baseBuffComponent2.RemoveBuffByServerId(serverId2, stackCount2, preMessageId, defaultInterpolatedStringHandler.ToStringAndClear(), new long?(instigatorId));
 	}
 
-	// Token: 0x060195AA RID: 103850 RVA: 0x0068A9FC File Offset: 0x00688BFC
+	// Token: 0x06016E6D RID: 93805 RVA: 0x006B0E94 File Offset: 0x006AF094
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.OrderApplyBuffNotify, false, false)]
 	public unsafe static void OrderAddBuffNotify(Entity entity, [Nullable(1)] OrderApplyBuffNotify data, CombatCommon combatCommon = null)
@@ -3805,7 +3824,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195AB RID: 103851 RVA: 0x0068AB7C File Offset: 0x00688D7C
+	// Token: 0x06016E6E RID: 93806 RVA: 0x006B1014 File Offset: 0x006AF214
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.OrderRemoveBuffNotify, false, false)]
 	public unsafe static void OrderRemoveBuffNotify(Entity entity, [Nullable(1)] OrderRemoveBuffNotify data, CombatCommon combatCommon = null)
@@ -3828,7 +3847,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		baseBuffComponent.RemoveBuffLocal(id, data.StackCount, "服务端或其它客户端请求本端移除buff", null, null, null);
 	}
 
-	// Token: 0x060195AC RID: 103852 RVA: 0x0068AC74 File Offset: 0x00688E74
+	// Token: 0x06016E6F RID: 93807 RVA: 0x006B110C File Offset: 0x006AF30C
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.OrderRemoveBuffByTagsNotify, false, false)]
 	public static void OrderRemoveBuffByTagsNotify(Entity entity, [Nullable(1)] OrderRemoveBuffByTagsNotify data, CombatCommon combatCommon = null)
@@ -3860,7 +3879,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195AD RID: 103853 RVA: 0x0068AD98 File Offset: 0x00688F98
+	// Token: 0x06016E70 RID: 93808 RVA: 0x006B1230 File Offset: 0x006AF430
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.ActivateBuffNotify, false, false)]
 	public unsafe static void BroadcastActivateBuffNotify(Entity entity, [Nullable(1)] ActivateBuffNotify data, CombatCommon combatCommon = null)
@@ -3885,7 +3904,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		baseBuffComponent.OnBuffActiveChanged(activeBuffInternal, on, null);
 	}
 
-	// Token: 0x060195AE RID: 103854 RVA: 0x0068AE9C File Offset: 0x0068909C
+	// Token: 0x06016E71 RID: 93809 RVA: 0x006B1334 File Offset: 0x006AF534
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.TransformBuffStackNotify, false, false)]
 	public static void BroadcastTransformBuffStackNotify(Entity entity, [Nullable(1)] TransformBuffStackNotify data, CombatCommon combatCommon = null)
@@ -3901,7 +3920,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		obj2.AddBuffStackModifier(buffId, handle, data.StackLimit, EBuffStackModifierType.Incremental);
 	}
 
-	// Token: 0x060195AF RID: 103855 RVA: 0x0068AED8 File Offset: 0x006890D8
+	// Token: 0x06016E72 RID: 93810 RVA: 0x006B1370 File Offset: 0x006AF570
 	public void AddBuffTimeModifier(long targetBuffId, int handle, float period, float duration, bool asInstigator)
 	{
 		if (period == 0f && duration == 0f)
@@ -3918,7 +3937,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		dictionary2[handle] = new ValueTuple<float, float>(period, duration);
 	}
 
-	// Token: 0x060195B0 RID: 103856 RVA: 0x0068AF34 File Offset: 0x00689134
+	// Token: 0x06016E73 RID: 93811 RVA: 0x006B13CC File Offset: 0x006AF5CC
 	public void RemoveBuffTimeModifier(long targetBuffId, int handle, bool asInstigator)
 	{
 		Dictionary<long, Dictionary<int, ValueTuple<float, float>>> dictionary = asInstigator ? this.InstigatorBuffTimeModifiers : this.OwnerBuffTimeModifiers;
@@ -3933,7 +3952,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195B1 RID: 103857 RVA: 0x0068AF78 File Offset: 0x00689178
+	// Token: 0x06016E74 RID: 93812 RVA: 0x006B1410 File Offset: 0x006AF610
 	[NullableContext(2)]
 	public float CalculateDurationRate(long buffId, BaseBuffComponent instigator)
 	{
@@ -3945,7 +3964,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return Math.Max(1E-08f, 1f + num * 0.0001f);
 	}
 
-	// Token: 0x060195B2 RID: 103858 RVA: 0x0068AFB4 File Offset: 0x006891B4
+	// Token: 0x06016E75 RID: 93813 RVA: 0x006B144C File Offset: 0x006AF64C
 	public virtual float CalculateDurationExtraRate(long buffId, bool asInstigator)
 	{
 		Dictionary<int, ValueTuple<float, float>> dictionary;
@@ -3962,7 +3981,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return num;
 	}
 
-	// Token: 0x060195B3 RID: 103859 RVA: 0x0068B03C File Offset: 0x0068923C
+	// Token: 0x06016E76 RID: 93814 RVA: 0x006B14D4 File Offset: 0x006AF6D4
 	[NullableContext(2)]
 	public float CalculatePeriodRate(long buffId, BaseBuffComponent instigator)
 	{
@@ -3974,7 +3993,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return Math.Max(1E-08f, 1f + num * 0.0001f);
 	}
 
-	// Token: 0x060195B4 RID: 103860 RVA: 0x0068B078 File Offset: 0x00689278
+	// Token: 0x06016E77 RID: 93815 RVA: 0x006B1510 File Offset: 0x006AF710
 	public virtual float CalculatePeriodExtraRate(long buffId, bool asInstigator)
 	{
 		Dictionary<int, ValueTuple<float, float>> dictionary;
@@ -3991,7 +4010,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return num;
 	}
 
-	// Token: 0x060195B5 RID: 103861 RVA: 0x0068B100 File Offset: 0x00689300
+	// Token: 0x06016E78 RID: 93816 RVA: 0x006B1598 File Offset: 0x006AF798
 	protected void OnRefreshBuffDuration(long[] buffIds, [Nullable(2)] string reason)
 	{
 		RefreshBuffDurationPush refreshBuffDurationPush = RefreshBuffDurationPush.Create();
@@ -4006,12 +4025,12 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195B6 RID: 103862 RVA: 0x0068B1BC File Offset: 0x006893BC
+	// Token: 0x06016E79 RID: 93817 RVA: 0x006B1654 File Offset: 0x006AF854
 	protected virtual void RefreshBuffDurationOrder(long[] buffIds, [Nullable(2)] string reason)
 	{
 	}
 
-	// Token: 0x060195B7 RID: 103863 RVA: 0x0068B1BE File Offset: 0x006893BE
+	// Token: 0x06016E7A RID: 93818 RVA: 0x006B1656 File Offset: 0x006AF856
 	public virtual void RefreshBuffDuration(long[] buffIds, [Nullable(2)] string reason)
 	{
 		if (this.HasBuffAuthority())
@@ -4022,7 +4041,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.RefreshBuffDurationOrder(buffIds, reason);
 	}
 
-	// Token: 0x060195B8 RID: 103864 RVA: 0x0068B1DC File Offset: 0x006893DC
+	// Token: 0x06016E7B RID: 93819 RVA: 0x006B1674 File Offset: 0x006AF874
 	public void AddBuffStackModifier(long targetBuffId, int handle, int value, EBuffStackModifierType modifierType = EBuffStackModifierType.Incremental)
 	{
 		if (!this.CheckBuffStackChangeable(targetBuffId))
@@ -4039,22 +4058,30 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 			dictionary = new Dictionary<int, BuffStackModifierValue>();
 			this.BuffStackModifiers[targetBuffId] = dictionary;
 		}
+		bool flag = BaseBuffComponent.HasBuffStackMaxListener();
+		int oldMax = flag ? this.CalculateBuffStackMax(targetBuffId).GetValueOrDefault() : 0;
 		dictionary[handle] = new BuffStackModifierValue
 		{
 			Value = value,
 			Type = modifierType
 		};
 		this.RefreshBuffStack(targetBuffId);
+		if (flag)
+		{
+			this.EmitBuffStackMaxChanged(targetBuffId, oldMax, this.CalculateBuffStackMax(targetBuffId).GetValueOrDefault());
+		}
 		SceneTeamController.Instance.EmitAbilityEvent<long>(base.Entity, EAbilityEventName.OnBuffMaxStackModifier, targetBuffId, targetBuffId);
 	}
 
-	// Token: 0x060195B9 RID: 103865 RVA: 0x0068B250 File Offset: 0x00689450
+	// Token: 0x06016E7C RID: 93820 RVA: 0x006B171C File Offset: 0x006AF91C
 	public void RemoveBuffStackModifier(long targetBuffId, int handle)
 	{
 		if (!this.CheckBuffStackChangeable(targetBuffId))
 		{
 			return;
 		}
+		bool flag = BaseBuffComponent.HasBuffStackMaxListener();
+		int oldMax = flag ? this.CalculateBuffStackMax(targetBuffId).GetValueOrDefault() : 0;
 		Dictionary<int, BuffStackModifierValue> dictionary;
 		if (this.BuffStackModifiers.TryGetValue(targetBuffId, out dictionary))
 		{
@@ -4065,10 +4092,14 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 			}
 		}
 		this.RefreshBuffStack(targetBuffId);
+		if (flag)
+		{
+			this.EmitBuffStackMaxChanged(targetBuffId, oldMax, this.CalculateBuffStackMax(targetBuffId).GetValueOrDefault());
+		}
 		SceneTeamController.Instance.EmitAbilityEvent<long>(base.Entity, EAbilityEventName.OnBuffMaxStackModifier, targetBuffId, targetBuffId);
 	}
 
-	// Token: 0x060195BA RID: 103866 RVA: 0x0068B2B0 File Offset: 0x006894B0
+	// Token: 0x06016E7D RID: 93821 RVA: 0x006B17B0 File Offset: 0x006AF9B0
 	public int? CalculateBuffStackMaxByConfig(BuffDefinition config, long buffId)
 	{
 		if (config.StackLimitCount <= 0)
@@ -4094,7 +4125,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return new int?(Math.Max(1, config.StackLimitCount + num));
 	}
 
-	// Token: 0x060195BB RID: 103867 RVA: 0x0068B364 File Offset: 0x00689564
+	// Token: 0x06016E7E RID: 93822 RVA: 0x006B1864 File Offset: 0x006AFA64
 	public int? CalculateBuffStackMax(long buffId)
 	{
 		BuffDefinition buffDefinition = BuffController.Instance.GetBuffDefinition(buffId, null);
@@ -4125,7 +4156,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return new int?(Math.Max(1, buffDefinition.StackLimitCount + num));
 	}
 
-	// Token: 0x060195BC RID: 103868 RVA: 0x0068B434 File Offset: 0x00689634
+	// Token: 0x06016E7F RID: 93823 RVA: 0x006B1934 File Offset: 0x006AFB34
 	public int RefreshBuffStackMax(long buffId)
 	{
 		ActiveBuffInternal buffById = this.GetBuffById(buffId);
@@ -4146,7 +4177,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return buffById.StackLimitCount;
 	}
 
-	// Token: 0x060195BD RID: 103869 RVA: 0x0068B488 File Offset: 0x00689688
+	// Token: 0x06016E80 RID: 93824 RVA: 0x006B1988 File Offset: 0x006AFB88
 	public void RefreshBuffStack(long buffId)
 	{
 		ActiveBuffInternal buffById = this.GetBuffById(buffId);
@@ -4170,14 +4201,14 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195BE RID: 103870 RVA: 0x0068B4EC File Offset: 0x006896EC
+	// Token: 0x06016E81 RID: 93825 RVA: 0x006B19EC File Offset: 0x006AFBEC
 	public bool CheckBuffStackChangeable(long buffId)
 	{
 		BuffDefinition buffDefinition = BuffController.Instance.GetBuffDefinition(buffId, null);
 		return buffDefinition != null && buffDefinition.StackLimitCount > 0;
 	}
 
-	// Token: 0x060195BF RID: 103871 RVA: 0x0068B514 File Offset: 0x00689714
+	// Token: 0x06016E82 RID: 93826 RVA: 0x006B1A14 File Offset: 0x006AFC14
 	public void ChangeBuffStack(long buffId, EBuffStackDurationOverride stackDurationRefreshPolicy, EBuffStackPeriodResetOverride stackPeriodResetPolicy, int stackChange, string reason, long? instigatorId = null)
 	{
 		if (!this.HasBuffAuthority())
@@ -4204,13 +4235,13 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195C0 RID: 103872 RVA: 0x0068B60C File Offset: 0x0068980C
+	// Token: 0x06016E83 RID: 93827 RVA: 0x006B1B0C File Offset: 0x006AFD0C
 	public void SetDeferredCueCreationEnable(bool enable)
 	{
 		this.EnableDeferredCueCreation = enable;
 	}
 
-	// Token: 0x060195C1 RID: 103873 RVA: 0x0068B618 File Offset: 0x00689818
+	// Token: 0x06016E84 RID: 93828 RVA: 0x006B1B18 File Offset: 0x006AFD18
 	public void ProcessPendingCues()
 	{
 		while (this.PendingInstantCues.Count > 0)
@@ -4284,7 +4315,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195C2 RID: 103874 RVA: 0x0068B88C File Offset: 0x00689A8C
+	// Token: 0x06016E85 RID: 93829 RVA: 0x006B1D8C File Offset: 0x006AFF8C
 	protected void CreateGameplayCueByBuff(IActiveBuff buff)
 	{
 		if (buff.Config.GameplayCueIds == null || buff.Config.GameplayCueIds.Length == 0)
@@ -4325,7 +4356,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		BuffController.Instance.RegisterBuffComponent(this);
 	}
 
-	// Token: 0x060195C3 RID: 103875 RVA: 0x0068B990 File Offset: 0x00689B90
+	// Token: 0x06016E86 RID: 93830 RVA: 0x006B1E90 File Offset: 0x006B0090
 	protected void CreateGameplayCueByBuffImmediate(IActiveBuff buff)
 	{
 		BaseGameplayCueComponent cueComponent = this.GetCueComponent();
@@ -4371,7 +4402,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		}
 	}
 
-	// Token: 0x060195C4 RID: 103876 RVA: 0x0068BA94 File Offset: 0x00689C94
+	// Token: 0x06016E87 RID: 93831 RVA: 0x006B1F94 File Offset: 0x006B0194
 	protected void DestroyGameplayCueByBuff(IActiveBuff buff)
 	{
 		int handle = buff.Handle;
@@ -4393,7 +4424,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		BuffController.Instance.RegisterBuffComponent(this);
 	}
 
-	// Token: 0x060195C5 RID: 103877 RVA: 0x0068BAFC File Offset: 0x00689CFC
+	// Token: 0x06016E88 RID: 93832 RVA: 0x006B1FFC File Offset: 0x006B01FC
 	protected void DestroyGameplayCueByBuffImmediate(int buffHandle)
 	{
 		BaseGameplayCueComponent cueComponent = this.GetCueComponent();
@@ -4413,7 +4444,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.Buff2CueMap.Remove(buffHandle);
 	}
 
-	// Token: 0x060195C6 RID: 103878 RVA: 0x0068BB74 File Offset: 0x00689D74
+	// Token: 0x06016E89 RID: 93833 RVA: 0x006B2074 File Offset: 0x006B0274
 	protected virtual void OnAnyBuffInhibitionChanged(IActiveBuff buff)
 	{
 		if (buff.IsActive())
@@ -4424,7 +4455,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.DestroyGameplayCueByBuff(buff);
 	}
 
-	// Token: 0x060195C7 RID: 103879 RVA: 0x0068BB90 File Offset: 0x00689D90
+	// Token: 0x06016E8A RID: 93834 RVA: 0x006B2090 File Offset: 0x006B0290
 	protected unsafe bool CreateSeamlessTravelCue(IActiveBuff buff, BaseGameplayCueComponent cueComp)
 	{
 		if (this.SeamlessTravelBuffCue == null)
@@ -4455,13 +4486,13 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return true;
 	}
 
-	// Token: 0x060195C8 RID: 103880 RVA: 0x0068BCC0 File Offset: 0x00689EC0
+	// Token: 0x06016E8B RID: 93835 RVA: 0x006B21C0 File Offset: 0x006B03C0
 	protected bool SeamlessTravelBuffRetain(IActiveBuff buff)
 	{
 		return buff.Id < 0L;
 	}
 
-	// Token: 0x060195C9 RID: 103881 RVA: 0x0068BCCC File Offset: 0x00689ECC
+	// Token: 0x06016E8C RID: 93836 RVA: 0x006B21CC File Offset: 0x006B03CC
 	public void SeamlessTravelingRefresh()
 	{
 		CombatLog.Instance.Info(CombatLog.EDebugModule.Buff, base.Entity, "[无缝加载]buff刷新", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -4515,70 +4546,87 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		this.OnSeamlessTravelingRefreshEnd();
 	}
 
-	// Token: 0x060195CA RID: 103882 RVA: 0x0068BF00 File Offset: 0x0068A100
+	// Token: 0x06016E8D RID: 93837 RVA: 0x006B2400 File Offset: 0x006B0600
 	protected virtual void OnSeamlessTravelingRefreshEnd()
 	{
 	}
 
-	// Token: 0x060195CB RID: 103883 RVA: 0x0068BF02 File Offset: 0x0068A102
+	// Token: 0x06016E8E RID: 93838 RVA: 0x006B2402 File Offset: 0x006B0602
 	public static void CreateStaticDefaultValue()
 	{
 		BaseBuffComponent._buffStatMap = new Dictionary<long, Stat>();
 	}
 
-	// Token: 0x060195CC RID: 103884 RVA: 0x0068BF0E File Offset: 0x0068A10E
+	// Token: 0x06016E8F RID: 93839 RVA: 0x006B240E File Offset: 0x006B060E
 	public static void ResetStaticDefaultValue()
 	{
 		BaseBuffComponent._buffStatMap = null;
 	}
 
-	// Token: 0x060195CD RID: 103885 RVA: 0x0068BF16 File Offset: 0x0068A116
+	// Token: 0x06016E90 RID: 93840 RVA: 0x006B2416 File Offset: 0x006B0616
 	protected void SetBuffComponentType(EBuffComponentType value)
 	{
 		this.BuffComponentType = value;
 	}
 
-	// Token: 0x060195CE RID: 103886 RVA: 0x0068BF1F File Offset: 0x0068A11F
+	// Token: 0x06016E91 RID: 93841 RVA: 0x006B241F File Offset: 0x006B061F
 	public EBuffComponentType GetBuffComponentType()
 	{
 		return this.BuffComponentType;
 	}
 
-	// Token: 0x060195CF RID: 103887 RVA: 0x0068BF27 File Offset: 0x0068A127
+	// Token: 0x06016E92 RID: 93842 RVA: 0x006B2427 File Offset: 0x006B0627
 	public bool IsTeamBuffComponent()
 	{
 		return this.BuffComponentType == EBuffComponentType.TeamBuffComponent;
 	}
 
-	// Token: 0x060195D0 RID: 103888 RVA: 0x0068BF32 File Offset: 0x0068A132
+	// Token: 0x06016E93 RID: 93843 RVA: 0x006B2432 File Offset: 0x006B0632
 	public bool IsRoleBuffComponent()
 	{
 		return this.BuffComponentType == EBuffComponentType.RoleBuffComponent;
 	}
 
-	// Token: 0x060195D1 RID: 103889 RVA: 0x0068BF3D File Offset: 0x0068A13D
+	// Token: 0x06016E94 RID: 93844 RVA: 0x006B2440 File Offset: 0x006B0640
 	public static List<int> GetCurrentEntityIds()
 	{
-		return (from handle in SceneTeamModel.Instance.GetTeamEntities(true)
-		select handle.Id).ToList<int>();
+		List<EntityHandle> teamEntities = SceneTeamModel.Instance.GetTeamEntities(true);
+		List<int> list = new List<int>();
+		foreach (EntityHandle entityHandle in teamEntities)
+		{
+			list.Add(entityHandle.Id);
+		}
+		return list;
 	}
 
-	// Token: 0x060195D2 RID: 103890 RVA: 0x0068BF74 File Offset: 0x0068A174
+	// Token: 0x06016E95 RID: 93845 RVA: 0x006B24A4 File Offset: 0x006B06A4
 	public static List<int> GetNewOrRemoveTeamEntityIds(List<int> oldTeamEntityIds, bool newEntity = true)
 	{
 		List<int> currentEntityIds = BaseBuffComponent.GetCurrentEntityIds();
 		if (newEntity)
 		{
-			return (from id in currentEntityIds
-			where !oldTeamEntityIds.Contains(id)
-			select id).ToList<int>();
+			List<int> list = new List<int>();
+			foreach (int item in currentEntityIds)
+			{
+				if (!oldTeamEntityIds.Contains(item))
+				{
+					list.Add(item);
+				}
+			}
+			return list;
 		}
-		return (from id in oldTeamEntityIds
-		where !currentEntityIds.Contains(id)
-		select id).ToList<int>();
+		List<int> list2 = new List<int>();
+		foreach (int item2 in oldTeamEntityIds)
+		{
+			if (!currentEntityIds.Contains(item2))
+			{
+				list2.Add(item2);
+			}
+		}
+		return list2;
 	}
 
-	// Token: 0x060195D3 RID: 103891 RVA: 0x0068BFD8 File Offset: 0x0068A1D8
+	// Token: 0x06016E96 RID: 93846 RVA: 0x006B2560 File Offset: 0x006B0760
 	public List<T> GetTargetComponents<[Nullable(0)] T>(EComponent componentType, long? buffId = null) where T : EntityComponent
 	{
 		List<T> list = new List<T>();
@@ -4626,7 +4674,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return list;
 	}
 
-	// Token: 0x060195D4 RID: 103892 RVA: 0x0068C108 File Offset: 0x0068A308
+	// Token: 0x06016E97 RID: 93847 RVA: 0x006B2690 File Offset: 0x006B0890
 	public unsafe bool AddReplaceBuff(long originBuffId, BuffReplace replaceBuffInfo)
 	{
 		if (this.ReplaceBuffMap.ContainsKey(originBuffId))
@@ -4653,7 +4701,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return true;
 	}
 
-	// Token: 0x060195D5 RID: 103893 RVA: 0x0068C1EC File Offset: 0x0068A3EC
+	// Token: 0x06016E98 RID: 93848 RVA: 0x006B2774 File Offset: 0x006B0974
 	public bool RemoveReplaceBuff(long originBuffId)
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -4666,7 +4714,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return true;
 	}
 
-	// Token: 0x060195D6 RID: 103894 RVA: 0x0068C238 File Offset: 0x0068A438
+	// Token: 0x06016E99 RID: 93849 RVA: 0x006B27C0 File Offset: 0x006B09C0
 	public long? GetReplaceBuffId(long originBuffId, AddBuffParam buffParams)
 	{
 		if (!this.ReplaceBuffMap.ContainsKey(originBuffId))
@@ -4678,23 +4726,23 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		return new long?(buffReplace.ReplaceBuffId);
 	}
 
-	// Token: 0x060195D7 RID: 103895 RVA: 0x0068C281 File Offset: 0x0068A481
+	// Token: 0x06016E9A RID: 93850 RVA: 0x006B2809 File Offset: 0x006B0A09
 	public virtual void AddBuffRefEntityId(long buffId, int entityId)
 	{
 	}
 
-	// Token: 0x060195D8 RID: 103896 RVA: 0x0068C283 File Offset: 0x0068A483
+	// Token: 0x06016E9B RID: 93851 RVA: 0x006B280B File Offset: 0x006B0A0B
 	public virtual void RemoveBuffRefEntityId(long buffId, int entityId)
 	{
 	}
 
-	// Token: 0x060195D9 RID: 103897 RVA: 0x0068C285 File Offset: 0x0068A485
+	// Token: 0x06016E9C RID: 93852 RVA: 0x006B280D File Offset: 0x006B0A0D
 	public virtual bool HasBuffRefEntityId(long buffId)
 	{
 		return false;
 	}
 
-	// Token: 0x060195DA RID: 103898 RVA: 0x0068C288 File Offset: 0x0068A488
+	// Token: 0x06016E9D RID: 93853 RVA: 0x006B2810 File Offset: 0x006B0A10
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -4702,226 +4750,230 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 			return false;
 		}
 		BaseBuffComponent baseBuffComponent = (BaseBuffComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureDataComponent"))
+		if (baseBuffComponent.CreatureDataComponent == null)
 		{
-			if (baseBuffComponent.CreatureDataComponent == null)
-			{
-				this.CreatureDataComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-			{
-				return false;
-			}
+			this.CreatureDataComponent = null;
 		}
-		if (base.CanResetComponentProperty("DeathComponent"))
-		{
-			if (baseBuffComponent.DeathComponent == null)
-			{
-				this.DeathComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseDeathComponent>(this.DeathComponent), "DeathComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BuffContainer") && baseBuffComponent.BuffContainer != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, ActiveBuffInternal>>(this.BuffContainer), "BuffContainer"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BuffIdToHandleMap") && baseBuffComponent.BuffIdToHandleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, HashSet<int>>>(this.BuffIdToHandleMap), "BuffIdToHandleMap"))
+		if (baseBuffComponent.DeathComponent == null)
+		{
+			this.DeathComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DeathComponent), "DeathComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BuffGarbageSet") && baseBuffComponent.BuffGarbageSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.BuffGarbageSet), "BuffGarbageSet"))
+		if (baseBuffComponent.BuffContainer != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffContainer), "BuffContainer"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("WaitRemoveBuffResponse") && baseBuffComponent.WaitRemoveBuffResponse != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, int>>(this.WaitRemoveBuffResponse), "WaitRemoveBuffResponse"))
+		if (baseBuffComponent.BuffIdToHandleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffIdToHandleMap), "BuffIdToHandleMap"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("PendingAddBuff") && baseBuffComponent.PendingAddBuff != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, double>>(this.PendingAddBuff), "PendingAddBuff"))
+		if (baseBuffComponent.BuffGarbageSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.BuffGarbageSet), "BuffGarbageSet"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("<BuffEffectManager>k__BackingField"))
-		{
-			if (baseBuffComponent.BuffEffectManager == null)
-			{
-				this.BuffEffectManager = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ExtraEffectManager>(this.BuffEffectManager), "<BuffEffectManager>k__BackingField"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagListenerDict") && baseBuffComponent.TagListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<int>>>(this.TagListenerDict), "TagListenerDict"))
+		if (baseBuffComponent.WaitRemoveBuffResponse != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitRemoveBuffResponse), "WaitRemoveBuffResponse"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BuffListenerDict") && baseBuffComponent.BuffListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, HashSet<int>>>(this.BuffListenerDict), "BuffListenerDict"))
+		if (baseBuffComponent.PendingAddBuff != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingAddBuff), "PendingAddBuff"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TagImmuneListenerDict") && baseBuffComponent.TagImmuneListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<int>>>(this.TagImmuneListenerDict), "TagImmuneListenerDict"))
+		if (baseBuffComponent.BuffEffectManager == null)
+		{
+			this.BuffEffectManager = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffEffectManager), "BuffEffectManager"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("VictimTagListenerDict") && baseBuffComponent.VictimTagListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, Dictionary<long, HashSet<int>>>>(this.VictimTagListenerDict), "VictimTagListenerDict"))
+		if (baseBuffComponent.TagListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagListenerDict), "TagListenerDict"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ConfigOverrideConditionListener") && baseBuffComponent.ConfigOverrideConditionListener != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<ConfigOverrideConditionListener>(this.ConfigOverrideConditionListener), "ConfigOverrideConditionListener"))
+		if (baseBuffComponent.BuffListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffListenerDict), "BuffListenerDict"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("VictimBuffListenerDict") && baseBuffComponent.VictimBuffListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, Dictionary<long, HashSet<int>>>>(this.VictimBuffListenerDict), "VictimBuffListenerDict"))
+		if (baseBuffComponent.TagImmuneListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagImmuneListenerDict), "TagImmuneListenerDict"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InstigatorEventListenDict") && baseBuffComponent.InstigatorEventListenDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, Dictionary<int, List<int>>>>(this.InstigatorEventListenDict), "InstigatorEventListenDict"))
+		if (baseBuffComponent.VictimTagListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VictimTagListenerDict), "VictimTagListenerDict"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BuffRoutineExpirationLock") && baseBuffComponent.BuffRoutineExpirationLock != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, int>>(this.BuffRoutineExpirationLock), "BuffRoutineExpirationLock"))
+		if (baseBuffComponent.ConfigOverrideConditionListener != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConfigOverrideConditionListener), "ConfigOverrideConditionListener"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("EffectTimeoutMap"))
-		{
-			if (baseBuffComponent.EffectTimeoutMap == null)
-			{
-				this.EffectTimeoutMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, Dictionary<int, double>>>(this.EffectTimeoutMap), "EffectTimeoutMap"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("EffectTargetTimeoutMap"))
-		{
-			if (baseBuffComponent.EffectTargetTimeoutMap == null)
-			{
-				this.EffectTargetTimeoutMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, Dictionary<int, Dictionary<int, double>>>>(this.EffectTargetTimeoutMap), "EffectTargetTimeoutMap"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagInChanged") && baseBuffComponent.TagInChanged != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.TagInChanged), "TagInChanged"))
+		if (baseBuffComponent.VictimBuffListenerDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VictimBuffListenerDict), "VictimBuffListenerDict"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BuffLockInternal"))
-		{
-			this.BuffLockInternal = baseBuffComponent.BuffLockInternal;
-		}
-		if (base.CanResetComponentProperty("TriggerMap") && baseBuffComponent.TriggerMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EBuffTriggerType, List<IBuffTrigger>>>(this.TriggerMap), "TriggerMap"))
+		if (baseBuffComponent.InstigatorEventListenDict != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InstigatorEventListenDict), "InstigatorEventListenDict"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("OwnerBuffTimeModifiers"))
-		{
-			if (baseBuffComponent.OwnerBuffTimeModifiers == null)
-			{
-				this.OwnerBuffTimeModifiers = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, Dictionary<int, ValueTuple<float, float>>>>(this.OwnerBuffTimeModifiers), "OwnerBuffTimeModifiers"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InstigatorBuffTimeModifiers"))
-		{
-			if (baseBuffComponent.InstigatorBuffTimeModifiers == null)
-			{
-				this.InstigatorBuffTimeModifiers = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, Dictionary<int, ValueTuple<float, float>>>>(this.InstigatorBuffTimeModifiers), "InstigatorBuffTimeModifiers"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BuffStackModifiers"))
-		{
-			if (baseBuffComponent.BuffStackModifiers == null)
-			{
-				this.BuffStackModifiers = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, Dictionary<int, BuffStackModifierValue>>>(this.BuffStackModifiers), "BuffStackModifiers"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("EnableDeferredCueCreation"))
-		{
-			this.EnableDeferredCueCreation = baseBuffComponent.EnableDeferredCueCreation;
-		}
-		if (base.CanResetComponentProperty("Buff2CueMap") && baseBuffComponent.Buff2CueMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, List<int>>>(this.Buff2CueMap), "Buff2CueMap"))
+		if (baseBuffComponent.BuffRoutineExpirationLock != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffRoutineExpirationLock), "BuffRoutineExpirationLock"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("PendingCreateCueBuffs") && baseBuffComponent.PendingCreateCueBuffs != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.PendingCreateCueBuffs), "PendingCreateCueBuffs"))
+		if (baseBuffComponent.EffectTimeoutMap == null)
+		{
+			this.EffectTimeoutMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EffectTimeoutMap), "EffectTimeoutMap"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("PendingInstantCues") && baseBuffComponent.PendingInstantCues != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<BaseBuffComponent.PendingInstantCueItem>>(this.PendingInstantCues), "PendingInstantCues"))
+		if (baseBuffComponent.EffectTargetTimeoutMap == null)
+		{
+			this.EffectTargetTimeoutMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EffectTargetTimeoutMap), "EffectTargetTimeoutMap"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("PendingDestroyCueBuffs") && baseBuffComponent.PendingDestroyCueBuffs != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.PendingDestroyCueBuffs), "PendingDestroyCueBuffs"))
+		if (baseBuffComponent.TagInChanged != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.TagInChanged), "TagInChanged"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SeamlessTravelBuffCue"))
+		this.BuffLockInternal = baseBuffComponent.BuffLockInternal;
+		if (baseBuffComponent.TriggerMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TriggerMap), "TriggerMap"))
 		{
-			if (baseBuffComponent.SeamlessTravelBuffCue == null)
-			{
-				this.SeamlessTravelBuffCue = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, List<List<int>>>>(this.SeamlessTravelBuffCue), "SeamlessTravelBuffCue"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("BuffComponentType"))
+		if (baseBuffComponent.OwnerBuffTimeModifiers == null)
 		{
-			this.BuffComponentType = baseBuffComponent.BuffComponentType;
+			this.OwnerBuffTimeModifiers = null;
 		}
-		return !base.CanResetComponentProperty("ReplaceBuffMap") || baseBuffComponent.ReplaceBuffMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, BuffReplace>>(this.ReplaceBuffMap), "ReplaceBuffMap");
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OwnerBuffTimeModifiers), "OwnerBuffTimeModifiers"))
+		{
+			return false;
+		}
+		if (baseBuffComponent.InstigatorBuffTimeModifiers == null)
+		{
+			this.InstigatorBuffTimeModifiers = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InstigatorBuffTimeModifiers), "InstigatorBuffTimeModifiers"))
+		{
+			return false;
+		}
+		if (baseBuffComponent.BuffStackModifiers == null)
+		{
+			this.BuffStackModifiers = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffStackModifiers), "BuffStackModifiers"))
+		{
+			return false;
+		}
+		this.EnableDeferredCueCreation = baseBuffComponent.EnableDeferredCueCreation;
+		if (baseBuffComponent.Buff2CueMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.Buff2CueMap), "Buff2CueMap"))
+		{
+			return false;
+		}
+		if (baseBuffComponent.PendingCreateCueBuffs != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.PendingCreateCueBuffs), "PendingCreateCueBuffs"))
+		{
+			return false;
+		}
+		if (baseBuffComponent.PendingInstantCues != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingInstantCues), "PendingInstantCues"))
+		{
+			return false;
+		}
+		if (baseBuffComponent.PendingDestroyCueBuffs != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.PendingDestroyCueBuffs), "PendingDestroyCueBuffs"))
+		{
+			return false;
+		}
+		if (baseBuffComponent.SeamlessTravelBuffCue == null)
+		{
+			this.SeamlessTravelBuffCue = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SeamlessTravelBuffCue), "SeamlessTravelBuffCue"))
+		{
+			return false;
+		}
+		this.BuffComponentType = baseBuffComponent.BuffComponentType;
+		return baseBuffComponent.ReplaceBuffMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReplaceBuffMap), "ReplaceBuffMap");
 	}
 
-	// Token: 0x060195DC RID: 103900 RVA: 0x0068C9BE File Offset: 0x0068ABBE
+	// Token: 0x1700231E RID: 8990
+	// (get) Token: 0x06016E9E RID: 93854 RVA: 0x006B2C7F File Offset: 0x006B0E7F
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700231F RID: 8991
+	// (get) Token: 0x06016E9F RID: 93855 RVA: 0x006B2C82 File Offset: 0x006B0E82
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002320 RID: 8992
+	// (get) Token: 0x06016EA0 RID: 93856 RVA: 0x006B2C85 File Offset: 0x006B0E85
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002321 RID: 8993
+	// (get) Token: 0x06016EA1 RID: 93857 RVA: 0x006B2C88 File Offset: 0x006B0E88
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x06016EA3 RID: 93859 RVA: 0x006B2DB2 File Offset: 0x006B0FB2
 	bool IBuffComponent.get_Valid()
 	{
 		return base.Valid;
 	}
 
-	// Token: 0x0400BC49 RID: 48201
+	// Token: 0x0400BFDE RID: 49118
 	[Nullable(2)]
 	protected CreatureDataComponent CreatureDataComponent;
 
-	// Token: 0x0400BC4A RID: 48202
+	// Token: 0x0400BFDF RID: 49119
 	[Nullable(2)]
 	protected BaseDeathComponent DeathComponent;
 
-	// Token: 0x0400BC4B RID: 48203
+	// Token: 0x0400BFE0 RID: 49120
 	protected readonly Dictionary<int, ActiveBuffInternal> BuffContainer = new Dictionary<int, ActiveBuffInternal>();
 
-	// Token: 0x0400BC4C RID: 48204
+	// Token: 0x0400BFE1 RID: 49121
 	protected readonly Dictionary<long, HashSet<int>> BuffIdToHandleMap = new Dictionary<long, HashSet<int>>();
 
-	// Token: 0x0400BC4D RID: 48205
+	// Token: 0x0400BFE2 RID: 49122
 	protected readonly HashSet<int> BuffGarbageSet = new HashSet<int>();
 
-	// Token: 0x0400BC4E RID: 48206
+	// Token: 0x0400BFE3 RID: 49123
 	protected readonly Dictionary<long, int> WaitRemoveBuffResponse = new Dictionary<long, int>();
 
-	// Token: 0x0400BC4F RID: 48207
+	// Token: 0x0400BFE4 RID: 49124
 	protected readonly Dictionary<long, double> PendingAddBuff = new Dictionary<long, double>();
 
-	// Token: 0x0400BC50 RID: 48208
+	// Token: 0x0400BFE5 RID: 49125
 	[StaticVariableRuleIgnore]
 	protected static readonly HashSet<long> NoLogBuffSet = new HashSet<long>
 	{
@@ -4936,81 +4988,81 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 		1202002003L
 	};
 
-	// Token: 0x0400BC52 RID: 48210
+	// Token: 0x0400BFE7 RID: 49127
 	protected readonly Dictionary<int, HashSet<int>> TagListenerDict = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x0400BC53 RID: 48211
+	// Token: 0x0400BFE8 RID: 49128
 	protected readonly Dictionary<long, HashSet<int>> BuffListenerDict = new Dictionary<long, HashSet<int>>();
 
-	// Token: 0x0400BC54 RID: 48212
+	// Token: 0x0400BFE9 RID: 49129
 	public readonly Dictionary<int, HashSet<int>> TagImmuneListenerDict = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x0400BC55 RID: 48213
+	// Token: 0x0400BFEA RID: 49130
 	public readonly Dictionary<int, Dictionary<long, HashSet<int>>> VictimTagListenerDict = new Dictionary<int, Dictionary<long, HashSet<int>>>();
 
-	// Token: 0x0400BC56 RID: 48214
+	// Token: 0x0400BFEB RID: 49131
 	protected readonly ConfigOverrideConditionListener ConfigOverrideConditionListener = new ConfigOverrideConditionListener();
 
-	// Token: 0x0400BC57 RID: 48215
+	// Token: 0x0400BFEC RID: 49132
 	public readonly Dictionary<long, Dictionary<long, HashSet<int>>> VictimBuffListenerDict = new Dictionary<long, Dictionary<long, HashSet<int>>>();
 
-	// Token: 0x0400BC58 RID: 48216
+	// Token: 0x0400BFED RID: 49133
 	protected readonly Dictionary<int, Dictionary<int, List<int>>> InstigatorEventListenDict = new Dictionary<int, Dictionary<int, List<int>>>();
 
-	// Token: 0x0400BC59 RID: 48217
+	// Token: 0x0400BFEE RID: 49134
 	[StaticVariableRuleIgnore]
 	private static readonly Stat CheckWhenTagChangedStat = Stat.Create("BaseBuffComponent.CheckWhenTagChanged", "", "");
 
-	// Token: 0x0400BC5A RID: 48218
+	// Token: 0x0400BFEF RID: 49135
 	[StaticVariableRuleIgnore]
 	private static readonly Stat CheckWhenBuffChangedStat = Stat.Create("BaseBuffComponent.CheckWhenBuffChanged", "", "");
 
-	// Token: 0x0400BC5B RID: 48219
+	// Token: 0x0400BFF0 RID: 49136
 	public readonly Dictionary<long, int> BuffRoutineExpirationLock = new Dictionary<long, int>();
 
-	// Token: 0x0400BC5C RID: 48220
+	// Token: 0x0400BFF1 RID: 49137
 	protected Dictionary<long, Dictionary<int, double>> EffectTimeoutMap = new Dictionary<long, Dictionary<int, double>>();
 
-	// Token: 0x0400BC5D RID: 48221
+	// Token: 0x0400BFF2 RID: 49138
 	protected Dictionary<long, Dictionary<int, Dictionary<int, double>>> EffectTargetTimeoutMap = new Dictionary<long, Dictionary<int, Dictionary<int, double>>>();
 
-	// Token: 0x0400BC5E RID: 48222
+	// Token: 0x0400BFF3 RID: 49139
 	private static readonly int MaxTargetCdCount = 50;
 
-	// Token: 0x0400BC5F RID: 48223
+	// Token: 0x0400BFF4 RID: 49140
 	[Nullable(2)]
 	private static Dictionary<long, Stat> _buffStatMap;
 
-	// Token: 0x0400BC60 RID: 48224
+	// Token: 0x0400BFF5 RID: 49141
 	[StaticVariableRuleIgnore]
 	private static readonly Stat GetStackableBuffStat = Stat.CreateNoFlameGraph("BaseBuffComponent.GetStackableBuff", "", "");
 
-	// Token: 0x0400BC61 RID: 48225
+	// Token: 0x0400BFF6 RID: 49142
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnBuffStackDecreasedStat = Stat.Create("BaseBuffComponent.OnBuffStackDecreased", "", "");
 
-	// Token: 0x0400BC62 RID: 48226
+	// Token: 0x0400BFF7 RID: 49143
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnBuffStackIncreasedStat = Stat.Create("BaseBuffComponent.OnBuffStackIncreased", "", "");
 
-	// Token: 0x0400BC63 RID: 48227
+	// Token: 0x0400BFF8 RID: 49144
 	private readonly HashSet<int> TagInChanged = new HashSet<int>();
 
-	// Token: 0x0400BC64 RID: 48228
+	// Token: 0x0400BFF9 RID: 49145
 	private int BuffLockInternal;
 
-	// Token: 0x0400BC65 RID: 48229
+	// Token: 0x0400BFFA RID: 49146
 	protected readonly Dictionary<EBuffTriggerType, List<IBuffTrigger>> TriggerMap = new Dictionary<EBuffTriggerType, List<IBuffTrigger>>();
 
-	// Token: 0x0400BC66 RID: 48230
+	// Token: 0x0400BFFB RID: 49147
 	[StaticVariableRuleIgnore]
 	private static readonly Stat AddGameplayCueStat = Stat.Create("AddBuff_Cue", "", "");
 
-	// Token: 0x0400BC67 RID: 48231
+	// Token: 0x0400BFFC RID: 49148
 	[StaticVariableRuleIgnore]
 	private static readonly Stat AddBuffBroadcastNotifyStat = Stat.Create("BaseBuffComponent.BroadcastAddBuffNotify", "", "");
 
-	// Token: 0x0400BC68 RID: 48232
+	// Token: 0x0400BFFD RID: 49149
 	[TupleElementNames(new string[]
 	{
 		"period",
@@ -5024,7 +5076,7 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 	})]
 	public Dictionary<long, Dictionary<int, ValueTuple<float, float>>> OwnerBuffTimeModifiers = new Dictionary<long, Dictionary<int, ValueTuple<float, float>>>();
 
-	// Token: 0x0400BC69 RID: 48233
+	// Token: 0x0400BFFE RID: 49150
 	[TupleElementNames(new string[]
 	{
 		"period",
@@ -5038,33 +5090,33 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 	})]
 	public Dictionary<long, Dictionary<int, ValueTuple<float, float>>> InstigatorBuffTimeModifiers = new Dictionary<long, Dictionary<int, ValueTuple<float, float>>>();
 
-	// Token: 0x0400BC6A RID: 48234
+	// Token: 0x0400BFFF RID: 49151
 	public Dictionary<long, Dictionary<int, BuffStackModifierValue>> BuffStackModifiers = new Dictionary<long, Dictionary<int, BuffStackModifierValue>>();
 
-	// Token: 0x0400BC6B RID: 48235
+	// Token: 0x0400C000 RID: 49152
 	private bool EnableDeferredCueCreation;
 
-	// Token: 0x0400BC6C RID: 48236
+	// Token: 0x0400C001 RID: 49153
 	protected readonly Dictionary<int, List<int>> Buff2CueMap = new Dictionary<int, List<int>>();
 
-	// Token: 0x0400BC6D RID: 48237
+	// Token: 0x0400C002 RID: 49154
 	private readonly HashSet<int> PendingCreateCueBuffs = new HashSet<int>();
 
-	// Token: 0x0400BC6E RID: 48238
+	// Token: 0x0400C003 RID: 49155
 	private readonly List<BaseBuffComponent.PendingInstantCueItem> PendingInstantCues = new List<BaseBuffComponent.PendingInstantCueItem>();
 
-	// Token: 0x0400BC6F RID: 48239
+	// Token: 0x0400C004 RID: 49156
 	private readonly HashSet<int> PendingDestroyCueBuffs = new HashSet<int>();
 
-	// Token: 0x0400BC70 RID: 48240
+	// Token: 0x0400C005 RID: 49157
 	[StaticVariableRuleIgnore]
 	private static readonly Stat CreateGameplayCueByBuffStat = Stat.Create("CreateGameplayCueByBuff", "", "");
 
-	// Token: 0x0400BC71 RID: 48241
+	// Token: 0x0400C006 RID: 49158
 	[StaticVariableRuleIgnore]
 	private static readonly Stat DestroyGameplayCueByBuffStat = Stat.Create("DestroyGameplayCueByBuff", "", "");
 
-	// Token: 0x0400BC72 RID: 48242
+	// Token: 0x0400C007 RID: 49159
 	[Nullable(new byte[]
 	{
 		2,
@@ -5073,20 +5125,20 @@ public class BaseBuffComponent : EntityComponent, IBuffComponent, IStaticVariabl
 	})]
 	protected Dictionary<long, List<List<int>>> SeamlessTravelBuffCue;
 
-	// Token: 0x0400BC73 RID: 48243
+	// Token: 0x0400C008 RID: 49160
 	private EBuffComponentType BuffComponentType;
 
-	// Token: 0x0400BC74 RID: 48244
+	// Token: 0x0400C009 RID: 49161
 	protected readonly Dictionary<long, BuffReplace> ReplaceBuffMap = new Dictionary<long, BuffReplace>();
 
-	// Token: 0x020095CD RID: 38349
+	// Token: 0x020087F9 RID: 34809
 	[NullableContext(0)]
 	private struct PendingInstantCueItem
 	{
-		// Token: 0x04030176 RID: 196982
+		// Token: 0x0402B816 RID: 178198
 		public long CueId;
 
-		// Token: 0x04030177 RID: 196983
+		// Token: 0x0402B817 RID: 178199
 		public GameplayCueParam Param;
 	}
 }

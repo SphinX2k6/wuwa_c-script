@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002929 RID: 10537
+	// Token: 0x02002C05 RID: 11269
 	public class IRoleTowerPrefabConfig : ICreatePrefabConfig
 	{
-		// Token: 0x0600E9D6 RID: 59862 RVA: 0x002243D8 File Offset: 0x002225D8
-		[NullableContext(1)]
+		// Token: 0x0600F828 RID: 63528 RVA: 0x00241730 File Offset: 0x0023F930
 		public static IRoleTowerPrefabConfig Create(IRoleTowerPrefabConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004946 RID: 18758
-		// (get) Token: 0x0600E9D7 RID: 59863 RVA: 0x002243F7 File Offset: 0x002225F7
+		// Token: 0x17004CCC RID: 19660
+		// (get) Token: 0x0600F829 RID: 63529 RVA: 0x0024174F File Offset: 0x0023F94F
 		public override ECreatePrefabType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080FB RID: 33019
+		// Token: 0x040087C9 RID: 34761
 		private IRoleTowerPrefabConfig Instance;
 	}
 }

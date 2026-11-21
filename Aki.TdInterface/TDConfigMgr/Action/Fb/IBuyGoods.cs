@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A4C RID: 10828
+	// Token: 0x02002D39 RID: 11577
 	public class IBuyGoods : ISystemFunction
 	{
-		// Token: 0x0600EE53 RID: 61011 RVA: 0x0022B348 File Offset: 0x00229548
-		[NullableContext(1)]
+		// Token: 0x0600FCEB RID: 64747 RVA: 0x00248CFC File Offset: 0x00246EFC
 		public static IBuyGoods Create(IBuyGoods? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B7D RID: 19325
-		// (get) Token: 0x0600EE54 RID: 61012 RVA: 0x0022B367 File Offset: 0x00229567
+		// Token: 0x17004F27 RID: 20263
+		// (get) Token: 0x0600FCEC RID: 64748 RVA: 0x00248D1B File Offset: 0x00246F1B
 		public override ESystemFunction Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B7E RID: 19326
-		// (get) Token: 0x0600EE55 RID: 61013 RVA: 0x0022B374 File Offset: 0x00229574
+		// Token: 0x17004F28 RID: 20264
+		// (get) Token: 0x0600FCED RID: 64749 RVA: 0x00248D28 File Offset: 0x00246F28
 		public virtual int GoodsId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008326 RID: 33574
+		// Token: 0x04008A19 RID: 35353
 		private IBuyGoods Instance;
 	}
 }

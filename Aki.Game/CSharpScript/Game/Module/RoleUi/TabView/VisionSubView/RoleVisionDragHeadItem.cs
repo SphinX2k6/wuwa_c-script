@@ -9,60 +9,60 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 {
-	// Token: 0x02004CF2 RID: 19698
+	// Token: 0x02003CA4 RID: 15524
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoleVisionDragHeadItem : RoleVisionCommonItem
 	{
-		// Token: 0x06032E33 RID: 208435 RVA: 0x00BDBFB8 File Offset: 0x00BDA1B8
+		// Token: 0x06027C0E RID: 162830 RVA: 0x00B218C0 File Offset: 0x00B1FAC0
 		[NullableContext(1)]
 		public RoleVisionDragHeadItem(UUIItem uiItem, EPhantomItemIndex index, [Nullable(2)] RoleDataBase roleData, bool needRedDot = false, bool needShowOccupyDetail = false, ERoleViewSource source = ERoleViewSource.Normal) : base(uiItem, index, roleData, needRedDot, needShowOccupyDetail, source)
 		{
 		}
 
-		// Token: 0x06032E34 RID: 208436 RVA: 0x00BDBFDB File Offset: 0x00BDA1DB
+		// Token: 0x06027C0F RID: 162831 RVA: 0x00B218E3 File Offset: 0x00B1FAE3
 		protected override UUIItem GetPlusItem()
 		{
 			return base.GetItem(6);
 		}
 
-		// Token: 0x06032E35 RID: 208437 RVA: 0x00BDBFE4 File Offset: 0x00BDA1E4
+		// Token: 0x06027C10 RID: 162832 RVA: 0x00B218EC File Offset: 0x00B1FAEC
 		protected override UUITexture GetVisionTextureComponent()
 		{
 			return base.GetTexture(2);
 		}
 
-		// Token: 0x06032E36 RID: 208438 RVA: 0x00BDBFED File Offset: 0x00BDA1ED
+		// Token: 0x06027C11 RID: 162833 RVA: 0x00B218F5 File Offset: 0x00B1FAF5
 		protected override UUISprite GetVisionQualitySprite()
 		{
 			return base.GetSprite(3);
 		}
 
-		// Token: 0x06032E37 RID: 208439 RVA: 0x00BDBFF6 File Offset: 0x00BDA1F6
+		// Token: 0x06027C12 RID: 162834 RVA: 0x00B218FE File Offset: 0x00B1FAFE
 		protected override UUIText GetVisionCostText()
 		{
 			return base.GetText(5);
 		}
 
-		// Token: 0x06032E38 RID: 208440 RVA: 0x00BDBFFF File Offset: 0x00BDA1FF
+		// Token: 0x06027C13 RID: 162835 RVA: 0x00B21907 File Offset: 0x00B1FB07
 		protected override UUIItem GetVisionCostItem()
 		{
 			return base.GetItem(4);
 		}
 
-		// Token: 0x06032E39 RID: 208441 RVA: 0x00BDC008 File Offset: 0x00BDA208
+		// Token: 0x06027C14 RID: 162836 RVA: 0x00B21910 File Offset: 0x00B1FB10
 		public override UUIDraggableComponent GetDragComponent()
 		{
 			return base.GetDraggable(1);
 		}
 
-		// Token: 0x06032E3A RID: 208442 RVA: 0x00BDC011 File Offset: 0x00BDA211
+		// Token: 0x06027C15 RID: 162837 RVA: 0x00B21919 File Offset: 0x00B1FB19
 		protected override UUIExtendToggle GetSelectToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x06032E3B RID: 208443 RVA: 0x00BDC01C File Offset: 0x00BDA21C
+		// Token: 0x06027C16 RID: 162838 RVA: 0x00B21924 File Offset: 0x00B1FB24
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			};
 		}
 
-		// Token: 0x06032E3C RID: 208444 RVA: 0x00BDC1E8 File Offset: 0x00BDA3E8
+		// Token: 0x06027C17 RID: 162839 RVA: 0x00B21AF0 File Offset: 0x00B1FCF0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleVisionDragHeadItem.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -103,13 +103,13 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032E3D RID: 208445 RVA: 0x00BDC22B File Offset: 0x00BDA42B
+		// Token: 0x06027C18 RID: 162840 RVA: 0x00B21B33 File Offset: 0x00B1FD33
 		public override void SetAniLightState(bool state)
 		{
 			base.GetItem(11).SetUIActive(state);
 		}
 
-		// Token: 0x06032E3E RID: 208446 RVA: 0x00BDC23B File Offset: 0x00BDA43B
+		// Token: 0x06027C19 RID: 162841 RVA: 0x00B21B43 File Offset: 0x00B1FD43
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -117,14 +117,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 		}
 
-		// Token: 0x06032E3F RID: 208447 RVA: 0x00BDC278 File Offset: 0x00BDA478
+		// Token: 0x06027C1A RID: 162842 RVA: 0x00B21B80 File Offset: 0x00B1FD80
 		[NullableContext(1)]
 		protected void OnSetClickCallBack(Action<int> onFunction)
 		{
 			this.ClickFunction = onFunction;
 		}
 
-		// Token: 0x06032E40 RID: 208448 RVA: 0x00BDC281 File Offset: 0x00BDA481
+		// Token: 0x06027C1B RID: 162843 RVA: 0x00B21B89 File Offset: 0x00B1FD89
 		protected override void OnDragBegin()
 		{
 			this.VisionFetterSuitItem.GetRootItem().SetUIActive(false);
@@ -137,14 +137,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.RefreshAddItemItem(true);
 		}
 
-		// Token: 0x06032E41 RID: 208449 RVA: 0x00BDC2BC File Offset: 0x00BDA4BC
+		// Token: 0x06027C1C RID: 162844 RVA: 0x00B21BC4 File Offset: 0x00B1FDC4
 		protected override void OnDragEnd()
 		{
 			this.CheckAnimationStateAndDataSetElementActiveState();
 			this.RefreshAddItemItem(this.CurrentData == null);
 		}
 
-		// Token: 0x06032E42 RID: 208450 RVA: 0x00BDC2D4 File Offset: 0x00BDA4D4
+		// Token: 0x06027C1D RID: 162845 RVA: 0x00B21BDC File Offset: 0x00B1FDDC
 		protected override void OnUpdateItem(PhantomDataBase data)
 		{
 			if (data != null)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.RefreshWarning(data);
 		}
 
-		// Token: 0x06032E43 RID: 208451 RVA: 0x00BDC364 File Offset: 0x00BDA564
+		// Token: 0x06027C1E RID: 162846 RVA: 0x00B21C6C File Offset: 0x00B1FE6C
 		private void RefreshLevelText(PhantomDataBase data)
 		{
 			if (data == null || !this.NeedLevelShowState)
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			text.SetText("+" + phantomLevel.ToString(), true);
 		}
 
-		// Token: 0x06032E44 RID: 208452 RVA: 0x00BDC3BC File Offset: 0x00BDA5BC
+		// Token: 0x06027C1F RID: 162847 RVA: 0x00B21CC4 File Offset: 0x00B1FEC4
 		private void RefreshAddItemItem(bool state)
 		{
 			UUIItem item = base.GetItem(10);
@@ -205,13 +205,13 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			item2.SetUIActive(state);
 		}
 
-		// Token: 0x06032E45 RID: 208453 RVA: 0x00BDC3E5 File Offset: 0x00BDA5E5
+		// Token: 0x06027C20 RID: 162848 RVA: 0x00B21CED File Offset: 0x00B1FEED
 		private void RefreshCircleBlackBg(PhantomDataBase data)
 		{
 			base.GetItem(9).SetUIActive(data != null);
 		}
 
-		// Token: 0x06032E46 RID: 208454 RVA: 0x00BDC3F8 File Offset: 0x00BDA5F8
+		// Token: 0x06027C21 RID: 162849 RVA: 0x00B21D00 File Offset: 0x00B1FF00
 		private void CheckAnimationStateAndDataSetElementActiveState()
 		{
 			if (!this.AnimationState && this.CurrentData != null)
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E47 RID: 208455 RVA: 0x00BDC480 File Offset: 0x00BDA680
+		// Token: 0x06027C22 RID: 162850 RVA: 0x00B21D88 File Offset: 0x00B1FF88
 		protected override void OnScrollToScrollViewEvent()
 		{
 			UUIItem item = base.GetItem(12);
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.RefreshAddItemItem(false);
 		}
 
-		// Token: 0x06032E48 RID: 208456 RVA: 0x00BDC49D File Offset: 0x00BDA69D
+		// Token: 0x06027C23 RID: 162851 RVA: 0x00B21DA5 File Offset: 0x00B1FFA5
 		protected override void OnRemoveFromScrollViewEvent()
 		{
 			UUIItem item = base.GetItem(12);
@@ -264,25 +264,25 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.RefreshAddItemItem(true);
 		}
 
-		// Token: 0x06032E49 RID: 208457 RVA: 0x00BDC4BA File Offset: 0x00BDA6BA
+		// Token: 0x06027C24 RID: 162852 RVA: 0x00B21DC2 File Offset: 0x00B1FFC2
 		protected override void OnChangeAnimationState()
 		{
 			this.CheckAnimationStateAndDataSetElementActiveState();
 		}
 
-		// Token: 0x06032E4A RID: 208458 RVA: 0x00BDC4C2 File Offset: 0x00BDA6C2
+		// Token: 0x06027C25 RID: 162853 RVA: 0x00B21DCA File Offset: 0x00B1FFCA
 		protected override void OnItemOverlay()
 		{
 			base.PlaySequence("HighLight");
 		}
 
-		// Token: 0x06032E4B RID: 208459 RVA: 0x00BDC4CF File Offset: 0x00BDA6CF
+		// Token: 0x06027C26 RID: 162854 RVA: 0x00B21DD7 File Offset: 0x00B1FFD7
 		protected override void OnItemUnOverlay()
 		{
 			base.PlaySequence("Normal");
 		}
 
-		// Token: 0x06032E4C RID: 208460 RVA: 0x00BDC4DC File Offset: 0x00BDA6DC
+		// Token: 0x06027C27 RID: 162855 RVA: 0x00B21DE4 File Offset: 0x00B1FFE4
 		[NullableContext(1)]
 		protected override void OnPlaySequence(string sequence)
 		{
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E4D RID: 208461 RVA: 0x00BDC518 File Offset: 0x00BDA718
+		// Token: 0x06027C28 RID: 162856 RVA: 0x00B21E20 File Offset: 0x00B20020
 		private void BindRedDot(PhantomDataBase data)
 		{
 			if (this.RoleData == null)
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E4E RID: 208462 RVA: 0x00BDC5F4 File Offset: 0x00BDA7F4
+		// Token: 0x06027C29 RID: 162857 RVA: 0x00B21EFC File Offset: 0x00B200FC
 		private void UnBindRedDot()
 		{
 			if (this.RedDotBindState)
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E4F RID: 208463 RVA: 0x00BDC65C File Offset: 0x00BDA85C
+		// Token: 0x06027C2A RID: 162858 RVA: 0x00B21F64 File Offset: 0x00B20164
 		private void RefreshCircleBgSprite(PhantomDataBase data)
 		{
 			if (data != null)
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.SetSpriteByPath(phantomQualityBgSprite2, base.GetSprite(3), false, null, null);
 		}
 
-		// Token: 0x06032E50 RID: 208464 RVA: 0x00BDC6C0 File Offset: 0x00BDA8C0
+		// Token: 0x06027C2B RID: 162859 RVA: 0x00B21FC8 File Offset: 0x00B201C8
 		private void RefreshWarning(PhantomDataBase data)
 		{
 			RoleDataBase roleData = this.RoleData;
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E51 RID: 208465 RVA: 0x00BDC7F4 File Offset: 0x00BDA9F4
+		// Token: 0x06027C2C RID: 162860 RVA: 0x00B220FC File Offset: 0x00B202FC
 		protected override void OnResetPosition()
 		{
 			UUIDraggableComponent dragComponent = this.GetDragComponent();
@@ -447,94 +447,94 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.CheckAnimationStateAndDataSetElementActiveState();
 		}
 
-		// Token: 0x06032E52 RID: 208466 RVA: 0x00BDC863 File Offset: 0x00BDAA63
+		// Token: 0x06027C2D RID: 162861 RVA: 0x00B2216B File Offset: 0x00B2036B
 		protected override void OnBeforeClearComponent()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x06032E53 RID: 208467 RVA: 0x00BDC86B File Offset: 0x00BDAA6B
+		// Token: 0x06027C2E RID: 162862 RVA: 0x00B22173 File Offset: 0x00B20373
 		private bool CanExecuteChange()
 		{
 			return false;
 		}
 
-		// Token: 0x06032E54 RID: 208468 RVA: 0x00BDC86E File Offset: 0x00BDAA6E
+		// Token: 0x06027C2F RID: 162863 RVA: 0x00B22176 File Offset: 0x00B20376
 		public void SetLevelItemShowState(bool state)
 		{
 			this.NeedLevelShowState = state;
 		}
 
-		// Token: 0x0401B10F RID: 110863
+		// Token: 0x04015A94 RID: 88724
 		protected Action<int> ClickFunction;
 
-		// Token: 0x0401B110 RID: 110864
+		// Token: 0x04015A95 RID: 88725
 		private VisionFetterSuitItem VisionFetterSuitItem;
 
-		// Token: 0x0401B111 RID: 110865
+		// Token: 0x04015A96 RID: 88726
 		private CommonWarningItem WarningItem;
 
-		// Token: 0x0401B112 RID: 110866
+		// Token: 0x04015A97 RID: 88727
 		private bool RedDotBindState;
 
-		// Token: 0x0401B113 RID: 110867
+		// Token: 0x04015A98 RID: 88728
 		private int RedDotType;
 
-		// Token: 0x0401B114 RID: 110868
+		// Token: 0x04015A99 RID: 88729
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B115 RID: 110869
+		// Token: 0x04015A9A RID: 88730
 		[Nullable(1)]
 		private string CurrentSequence = "";
 
-		// Token: 0x0401B116 RID: 110870
+		// Token: 0x04015A9B RID: 88731
 		private PhantomDataBase CurrentRedDotBindData;
 
-		// Token: 0x0401B117 RID: 110871
+		// Token: 0x04015A9C RID: 88732
 		private RoleDataBase CurrentRoleData;
 
-		// Token: 0x0401B118 RID: 110872
+		// Token: 0x04015A9D RID: 88733
 		private bool NeedLevelShowState = true;
 
-		// Token: 0x0200AE7E RID: 44670
+		// Token: 0x0200989C RID: 39068
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04034FAF RID: 217007
+			// Token: 0x0402F957 RID: 194903
 			ToggleItem,
-			// Token: 0x04034FB0 RID: 217008
+			// Token: 0x0402F958 RID: 194904
 			CircleItem,
-			// Token: 0x04034FB1 RID: 217009
+			// Token: 0x0402F959 RID: 194905
 			CircleItemTexture,
-			// Token: 0x04034FB2 RID: 217010
+			// Token: 0x0402F95A RID: 194906
 			QualitySprite,
-			// Token: 0x04034FB3 RID: 217011
+			// Token: 0x0402F95B RID: 194907
 			CostItem,
-			// Token: 0x04034FB4 RID: 217012
+			// Token: 0x0402F95C RID: 194908
 			CostNumText,
-			// Token: 0x04034FB5 RID: 217013
+			// Token: 0x0402F95D RID: 194909
 			PlusItem,
-			// Token: 0x04034FB6 RID: 217014
+			// Token: 0x0402F95E RID: 194910
 			SuitElementItem,
-			// Token: 0x04034FB7 RID: 217015
+			// Token: 0x0402F95F RID: 194911
 			RedItem,
-			// Token: 0x04034FB8 RID: 217016
+			// Token: 0x0402F960 RID: 194912
 			CircleTextureBlackBg,
-			// Token: 0x04034FB9 RID: 217017
+			// Token: 0x0402F961 RID: 194913
 			AddIconItem,
-			// Token: 0x04034FBA RID: 217018
+			// Token: 0x0402F962 RID: 194914
 			AniLight,
-			// Token: 0x04034FBB RID: 217019
+			// Token: 0x0402F963 RID: 194915
 			RemoveItem,
-			// Token: 0x04034FBC RID: 217020
+			// Token: 0x0402F964 RID: 194916
 			AddIconItem2,
-			// Token: 0x04034FBD RID: 217021
+			// Token: 0x0402F965 RID: 194917
 			LevelItem,
-			// Token: 0x04034FBE RID: 217022
+			// Token: 0x0402F966 RID: 194918
 			LevelText,
-			// Token: 0x04034FBF RID: 217023
+			// Token: 0x0402F967 RID: 194919
 			ItemOccupyPanel,
-			// Token: 0x04034FC0 RID: 217024
+			// Token: 0x0402F968 RID: 194920
 			ItemWarningIcon
 		}
 	}

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200191E RID: 6430
+	// Token: 0x0200040C RID: 1036
 	public sealed class FMaterialSpecDestroyRenderingComponent : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017DB7 RID: 97719 RVA: 0x0022F111 File Offset: 0x0022D311
+		// Token: 0x0600652D RID: 25901 RVA: 0x00090711 File Offset: 0x0008E911
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FMaterialSpecDestroyRenderingComponent.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017DB8 RID: 97720 RVA: 0x0022F11D File Offset: 0x0022D31D
+		// Token: 0x0600652E RID: 25902 RVA: 0x0009071D File Offset: 0x0008E91D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FMaterialSpecDestroyRenderingComponent._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FMaterialSpecDestroyRenderingComponent._FunctionPtr;
 		}
 
-		// Token: 0x06017DB9 RID: 97721 RVA: 0x0022F140 File Offset: 0x0022D340
+		// Token: 0x0600652F RID: 25903 RVA: 0x00090740 File Offset: 0x0008E940
 		public FMaterialSpecDestroyRenderingComponent()
 		{
 		}
 
-		// Token: 0x06017DBA RID: 97722 RVA: 0x0022F148 File Offset: 0x0022D348
+		// Token: 0x06006530 RID: 25904 RVA: 0x00090748 File Offset: 0x0008E948
 		[NullableContext(2)]
 		public FMaterialSpecDestroyRenderingComponent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017DBB RID: 97723 RVA: 0x0022F152 File Offset: 0x0022D352
+		// Token: 0x06006531 RID: 25905 RVA: 0x00090752 File Offset: 0x0008E952
 		public FMaterialSpecDestroyRenderingComponent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017DBC RID: 97724 RVA: 0x0022F15D File Offset: 0x0022D35D
+		// Token: 0x06006532 RID: 25906 RVA: 0x0009075D File Offset: 0x0008E95D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<UKuroCharRenderingComponent>) ?? ((Action<UKuroCharRenderingComponent>)Delegate.CreateDelegate(typeof(Action<UKuroCharRenderingComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017DBD RID: 97725 RVA: 0x0022F18F File Offset: 0x0022D38F
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06006533 RID: 25907 RVA: 0x0009078F File Offset: 0x0008E98F
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FMaterialSpecDestroyRenderingComponent.RegisterId);
 		}
 
-		// Token: 0x06017DBE RID: 97726 RVA: 0x0022F1CC File Offset: 0x0022D3CC
+		// Token: 0x06006534 RID: 25908 RVA: 0x000907CC File Offset: 0x0008E9CC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(UKuroCharRenderingComponent RenderComponent)
 		{
 			FMaterialSpecDestroyRenderingComponent.__FMaterialSpecDestroyRenderingComponent_DelegateParams* ptr = stackalloc FMaterialSpecDestroyRenderingComponent.__FMaterialSpecDestroyRenderingComponent_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FMaterialSpecDestroyRenderingComponent.__FMaterialSpecDestroyRenderingComponent_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06017DBF RID: 97727 RVA: 0x0022F218 File Offset: 0x0022D418
+		// Token: 0x06006535 RID: 25909 RVA: 0x00090818 File Offset: 0x0008EA18
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UKuroCharRenderingComponent> action = target as Action<UKuroCharRenderingComponent>;
@@ -95,31 +92,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400CECB RID: 52939
+		// Token: 0x04002A90 RID: 10896
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CECC RID: 52940
+		// Token: 0x04002A91 RID: 10897
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.MaterialSpecDestroyRenderingComponent__DelegateSignature";
 
-		// Token: 0x0400CECD RID: 52941
+		// Token: 0x04002A92 RID: 10898
 		private static int RegisterId;
 
-		// Token: 0x02002FE5 RID: 12261
+		// Token: 0x02000AF9 RID: 2809
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FMaterialSpecDestroyRenderingComponent_DelegateParams
+		private ref struct __FMaterialSpecDestroyRenderingComponent_DelegateParams
 		{
-			// Token: 0x04016BE1 RID: 93153
+			// Token: 0x04005B8A RID: 23434
 			[FieldOffset(0)]
 			public IntPtr RenderComponent;
 		}
 
-		// Token: 0x02002FE6 RID: 12262
+		// Token: 0x02000AFA RID: 2810
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016BE2 RID: 93154
+			// Token: 0x04005B8B RID: 23435
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

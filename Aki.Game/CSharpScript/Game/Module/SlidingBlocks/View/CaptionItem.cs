@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View
 {
-	// Token: 0x02004B8E RID: 19342
+	// Token: 0x02003B38 RID: 15160
 	public class CaptionItem : UiPanelBase
 	{
-		// Token: 0x06032201 RID: 205313 RVA: 0x00BA4E6C File Offset: 0x00BA306C
+		// Token: 0x06026F91 RID: 159633 RVA: 0x00AE8FB8 File Offset: 0x00AE71B8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			};
 		}
 
-		// Token: 0x06032202 RID: 205314 RVA: 0x00BA4F18 File Offset: 0x00BA3118
+		// Token: 0x06026F92 RID: 159634 RVA: 0x00AE9064 File Offset: 0x00AE7264
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CaptionItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -38,31 +38,31 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032203 RID: 205315 RVA: 0x00BA4F5B File Offset: 0x00BA315B
+		// Token: 0x06026F93 RID: 159635 RVA: 0x00AE90A7 File Offset: 0x00AE72A7
 		private void OnHelpInfoButtonClick()
 		{
 			HelpController.Instance.OpenHelpById(581);
 		}
 
-		// Token: 0x06032204 RID: 205316 RVA: 0x00BA4F6C File Offset: 0x00BA316C
+		// Token: 0x06026F94 RID: 159636 RVA: 0x00AE90B8 File Offset: 0x00AE72B8
 		private void OnCloseButtonClick()
 		{
 			SlidingBlocksController.Instance.SendGameEnd(SlidingBlocksDefine.EGameEndReason.ClickClose);
 		}
 
-		// Token: 0x0401AB43 RID: 109379
+		// Token: 0x04015497 RID: 87191
 		private const int TETRISGAME_HELP_ID = 581;
 
-		// Token: 0x0200AD91 RID: 44433
+		// Token: 0x020097B0 RID: 38832
 		private enum EViewComponent
 		{
-			// Token: 0x04034B72 RID: 215922
+			// Token: 0x0402F519 RID: 193817
 			SpriteTitleIcon,
-			// Token: 0x04034B73 RID: 215923
+			// Token: 0x0402F51A RID: 193818
 			TitleText,
-			// Token: 0x04034B74 RID: 215924
+			// Token: 0x0402F51B RID: 193819
 			HelpInfoButton,
-			// Token: 0x04034B75 RID: 215925
+			// Token: 0x0402F51C RID: 193820
 			CloseButton
 		}
 	}

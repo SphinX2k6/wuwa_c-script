@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002754 RID: 10068
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A20 RID: 10784
 	public class IMoraleAreaTip : ICommonTipType
 	{
-		// Token: 0x0600E04B RID: 57419 RVA: 0x00212E7A File Offset: 0x0021107A
+		// Token: 0x0600EE4B RID: 61003 RVA: 0x0022F9B2 File Offset: 0x0022DBB2
 		public static IMoraleAreaTip Create(IMoraleAreaTip? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004365 RID: 17253
-		// (get) Token: 0x0600E04C RID: 57420 RVA: 0x00212E99 File Offset: 0x00211099
+		// Token: 0x170046B9 RID: 18105
+		// (get) Token: 0x0600EE4C RID: 61004 RVA: 0x0022F9D1 File Offset: 0x0022DBD1
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004366 RID: 17254
-		// (get) Token: 0x0600E04D RID: 57421 RVA: 0x00212EA6 File Offset: 0x002110A6
+		// Token: 0x170046BA RID: 18106
+		// (get) Token: 0x0600EE4D RID: 61005 RVA: 0x0022F9DE File Offset: 0x0022DBDE
 		public virtual string TidAreaNameText
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004367 RID: 17255
-		// (get) Token: 0x0600E04E RID: 57422 RVA: 0x00212EB3 File Offset: 0x002110B3
+		// Token: 0x170046BB RID: 18107
+		// (get) Token: 0x0600EE4E RID: 61006 RVA: 0x0022F9EB File Offset: 0x0022DBEB
 		public virtual string TidRecommendText
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004368 RID: 17256
-		// (get) Token: 0x0600E04F RID: 57423 RVA: 0x00212EC0 File Offset: 0x002110C0
+		// Token: 0x170046BC RID: 18108
+		// (get) Token: 0x0600EE4F RID: 61007 RVA: 0x0022F9F8 File Offset: 0x0022DBF8
 		public virtual EMoraleAreaType AreaType
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004369 RID: 17257
-		// (get) Token: 0x0600E050 RID: 57424 RVA: 0x00212ED0 File Offset: 0x002110D0
+		// Token: 0x170046BD RID: 18109
+		// (get) Token: 0x0600EE50 RID: 61008 RVA: 0x0022FA08 File Offset: 0x0022DC08
 		public virtual EMoraleUiType? UiType
 		{
 			get
@@ -76,8 +74,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700436A RID: 17258
-		// (get) Token: 0x0600E051 RID: 57425 RVA: 0x00212F06 File Offset: 0x00211106
+		// Token: 0x170046BE RID: 18110
+		// (get) Token: 0x0600EE51 RID: 61009 RVA: 0x0022FA3E File Offset: 0x0022DC3E
 		[Nullable(2)]
 		public virtual string EdTidAreaNameText
 		{
@@ -88,8 +86,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700436B RID: 17259
-		// (get) Token: 0x0600E052 RID: 57426 RVA: 0x00212F09 File Offset: 0x00211109
+		// Token: 0x170046BF RID: 18111
+		// (get) Token: 0x0600EE52 RID: 61010 RVA: 0x0022FA41 File Offset: 0x0022DC41
 		[Nullable(2)]
 		public virtual string EdTidRecommendText
 		{
@@ -100,7 +98,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C52 RID: 31826
+		// Token: 0x04008300 RID: 33536
 		private IMoraleAreaTip Instance;
 	}
 }

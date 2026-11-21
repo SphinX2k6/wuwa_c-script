@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006F9 RID: 1785
+	// Token: 0x0200079A RID: 1946
 	public class ISpeedCurveMotion_SetValue
 	{
-		// Token: 0x04001A13 RID: 6675
+		// Token: 0x04001C12 RID: 7186
 		[Nullable(2)]
 		public string SpeedCurve;
 	}

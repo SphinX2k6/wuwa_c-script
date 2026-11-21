@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200054C RID: 1356
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005B3 RID: 1459
 	public class INoiseRemovalBoarderBase
 	{
-		// Token: 0x06001BC2 RID: 7106 RVA: 0x00050044 File Offset: 0x0004E244
+		// Token: 0x06001DBE RID: 7614 RVA: 0x00054E00 File Offset: 0x00053000
 		private INoiseRemovalBoarderBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001BC3 RID: 7107 RVA: 0x0005007C File Offset: 0x0004E27C
+		// Token: 0x06001DBF RID: 7615 RVA: 0x00054E38 File Offset: 0x00053038
 		public static INoiseRemovalBoarderBase Create([Nullable(2)] INoiseRemovalBoarderBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BC4 RID: 7108 RVA: 0x0005008F File Offset: 0x0004E28F
+		// Token: 0x06001DC0 RID: 7616 RVA: 0x00054E4B File Offset: 0x0005304B
 		public static INoiseRemovalBoarderBase CreateFromSetValue([Nullable(2)] INoiseRemovalBoarderBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BC5 RID: 7109 RVA: 0x000500A2 File Offset: 0x0004E2A2
+		// Token: 0x06001DC1 RID: 7617 RVA: 0x00054E5E File Offset: 0x0005305E
 		public INoiseRemovalBoarderBase_SetValue ToSetValue()
 		{
 			return new INoiseRemovalBoarderBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700074E RID: 1870
-		// (get) Token: 0x06001BC6 RID: 7110 RVA: 0x000500B5 File Offset: 0x0004E2B5
-		// (set) Token: 0x06001BC7 RID: 7111 RVA: 0x000500E0 File Offset: 0x0004E2E0
+		// Token: 0x170007D1 RID: 2001
+		// (get) Token: 0x06001DC2 RID: 7618 RVA: 0x00054E71 File Offset: 0x00053071
+		// (set) Token: 0x06001DC3 RID: 7619 RVA: 0x00054E9C File Offset: 0x0005309C
 		public virtual ENoiseRemovalBoarderShape Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040013EE RID: 5102
+		// Token: 0x04001558 RID: 5464
 		[Nullable(2)]
 		protected INoiseRemovalBoarderBase FbInstance;
 
-		// Token: 0x040013EF RID: 5103
+		// Token: 0x04001559 RID: 5465
 		[Nullable(2)]
 		protected INoiseRemovalBoarderBase_SetValue PocoInterface;
 	}

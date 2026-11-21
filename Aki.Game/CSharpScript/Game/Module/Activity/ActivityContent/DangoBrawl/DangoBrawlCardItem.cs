@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067FA RID: 26618
+	// Token: 0x0200574A RID: 22346
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlCardItem : GridProxyAbstract<DangoBrawlCardItemData>
 	{
-		// Token: 0x06042638 RID: 271928 RVA: 0x0101F030 File Offset: 0x0101D230
+		// Token: 0x0603718D RID: 225677 RVA: 0x00F60574 File Offset: 0x00F5E774
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042639 RID: 271929 RVA: 0x0101F19C File Offset: 0x0101D39C
+		// Token: 0x0603718E RID: 225678 RVA: 0x00F606E0 File Offset: 0x00F5E8E0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlCardItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -64,21 +64,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604263A RID: 271930 RVA: 0x0101F1DF File Offset: 0x0101D3DF
+		// Token: 0x0603718F RID: 225679 RVA: 0x00F60723 File Offset: 0x00F5E923
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(() => this.CanToggleExecuteChange());
 			this.CreateSequencePlayer();
 		}
 
-		// Token: 0x0604263B RID: 271931 RVA: 0x0101F204 File Offset: 0x0101D404
+		// Token: 0x06037190 RID: 225680 RVA: 0x00F60748 File Offset: 0x00F5E948
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearHyperlinkBind();
 			this.ClearSequencePlayer();
 		}
 
-		// Token: 0x0604263C RID: 271932 RVA: 0x0101F214 File Offset: 0x0101D414
+		// Token: 0x06037191 RID: 225681 RVA: 0x00F60758 File Offset: 0x00F5E958
 		private void CreateSequencePlayer()
 		{
 			this.ClearSequencePlayer();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer = new UiSequencePlayer(rootItem);
 		}
 
-		// Token: 0x0604263D RID: 271933 RVA: 0x0101F23E File Offset: 0x0101D43E
+		// Token: 0x06037192 RID: 225682 RVA: 0x00F60782 File Offset: 0x00F5E982
 		private void ClearSequencePlayer()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0604263E RID: 271934 RVA: 0x0101F258 File Offset: 0x0101D458
+		// Token: 0x06037193 RID: 225683 RVA: 0x00F6079C File Offset: 0x00F5E99C
 		[NullableContext(1)]
 		public override void Refresh(DangoBrawlCardItemData data, bool isSelected, int gridIndex)
 		{
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIActive(DangoBrawlRecommendUtil.IsEvtRecommended(data.CardId, roleId));
 		}
 
-		// Token: 0x0604263F RID: 271935 RVA: 0x0101F43C File Offset: 0x0101D63C
+		// Token: 0x06037194 RID: 225684 RVA: 0x00F60980 File Offset: 0x00F5EB80
 		private void RefreshHyperlinkBind(int hyperLinkType)
 		{
 			UUIText text = base.GetText(3);
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			ActivityDangoBrawlController.Instance.RegisterTermHyperlink(text);
 		}
 
-		// Token: 0x06042640 RID: 271936 RVA: 0x0101F4A8 File Offset: 0x0101D6A8
+		// Token: 0x06037195 RID: 225685 RVA: 0x00F609EC File Offset: 0x00F5EBEC
 		private void ClearHyperlinkBind()
 		{
 			UUIText text = base.GetText(3);
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			text.OnHyperLinkClickCallBack.Unbind();
 		}
 
-		// Token: 0x06042641 RID: 271937 RVA: 0x0101F4D8 File Offset: 0x0101D6D8
+		// Token: 0x06037196 RID: 225686 RVA: 0x00F60A1C File Offset: 0x00F5EC1C
 		[NullableContext(1)]
 		private bool OnHyperLinkItemTipsClick(string hyperLinkId)
 		{
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x06042642 RID: 271938 RVA: 0x0101F557 File Offset: 0x0101D757
+		// Token: 0x06037197 RID: 225687 RVA: 0x00F60A9B File Offset: 0x00F5EC9B
 		public void PlayChooseSeq()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sequencePlayer.PlaySequencePurely("ChooseB", false, false);
 		}
 
-		// Token: 0x06042643 RID: 271939 RVA: 0x0101F570 File Offset: 0x0101D770
+		// Token: 0x06037198 RID: 225688 RVA: 0x00F60AB4 File Offset: 0x00F5ECB4
 		private void OnClickRefresh()
 		{
 			DangoBrawlCardItemData data = this.Data;
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			ActivityDangoBrawlController.Instance.RequestEventRefresh(this.Index).Forget<bool>();
 		}
 
-		// Token: 0x06042644 RID: 271940 RVA: 0x0101F5A2 File Offset: 0x0101D7A2
+		// Token: 0x06037199 RID: 225689 RVA: 0x00F60AE6 File Offset: 0x00F5ECE6
 		private void OnClickCard(EToggleState toggleState)
 		{
 			Action<int> clickCardCallBack = this.ClickCardCallBack;
@@ -259,46 +259,46 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			clickCardCallBack(this.Index);
 		}
 
-		// Token: 0x06042645 RID: 271941 RVA: 0x0101F5BA File Offset: 0x0101D7BA
+		// Token: 0x0603719A RID: 225690 RVA: 0x00F60AFE File Offset: 0x00F5ECFE
 		public void SetToggleState(bool bSelectOn, bool bFireEvent = true)
 		{
 			this.RefreshToggleState(bSelectOn, bFireEvent);
 		}
 
-		// Token: 0x06042646 RID: 271942 RVA: 0x0101F5C4 File Offset: 0x0101D7C4
+		// Token: 0x0603719B RID: 225691 RVA: 0x00F60B08 File Offset: 0x00F5ED08
 		private void RefreshToggleState(bool selectOn, bool bFireEvent = false)
 		{
 			EToggleState state = selectOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state, bFireEvent, false, false);
 		}
 
-		// Token: 0x06042647 RID: 271943 RVA: 0x0101F5EA File Offset: 0x0101D7EA
+		// Token: 0x0603719C RID: 225692 RVA: 0x00F60B2E File Offset: 0x00F5ED2E
 		[NullableContext(1)]
 		public void BindCanToggleExecuteChange(Func<int, bool> func)
 		{
 			this.CanToggleExecuteChangeInternal = func;
 		}
 
-		// Token: 0x06042648 RID: 271944 RVA: 0x0101F5F3 File Offset: 0x0101D7F3
+		// Token: 0x0603719D RID: 225693 RVA: 0x00F60B37 File Offset: 0x00F5ED37
 		private bool CanToggleExecuteChange()
 		{
 			Func<int, bool> canToggleExecuteChangeInternal = this.CanToggleExecuteChangeInternal;
 			return canToggleExecuteChangeInternal == null || canToggleExecuteChangeInternal(this.Index);
 		}
 
-		// Token: 0x040229B6 RID: 141750
+		// Token: 0x0401D213 RID: 119315
 		public DangoBrawlCardItemData Data;
 
-		// Token: 0x040229B7 RID: 141751
+		// Token: 0x0401D214 RID: 119316
 		private int Index;
 
-		// Token: 0x040229B8 RID: 141752
+		// Token: 0x0401D215 RID: 119317
 		private Func<int, bool> CanToggleExecuteChangeInternal;
 
-		// Token: 0x040229B9 RID: 141753
+		// Token: 0x0401D216 RID: 119318
 		public Action<int> ClickCardCallBack;
 
-		// Token: 0x040229BA RID: 141754
+		// Token: 0x0401D217 RID: 119319
 		[Nullable(new byte[]
 		{
 			2,
@@ -306,31 +306,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		public Action<int, UUIItem> ClickCardHyperlinkCallBack;
 
-		// Token: 0x040229BB RID: 141755
+		// Token: 0x0401D218 RID: 119320
 		private DangoBrawlCardRefreshBtn CardRefreshBtn;
 
-		// Token: 0x040229BC RID: 141756
+		// Token: 0x0401D219 RID: 119321
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C967 RID: 51559
+		// Token: 0x0200B334 RID: 45876
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403CD11 RID: 249105
+			// Token: 0x040375FE RID: 226814
 			TogCommon,
-			// Token: 0x0403CD12 RID: 249106
+			// Token: 0x040375FF RID: 226815
 			TexIcon,
-			// Token: 0x0403CD13 RID: 249107
+			// Token: 0x04037600 RID: 226816
 			TxtName,
-			// Token: 0x0403CD14 RID: 249108
+			// Token: 0x04037601 RID: 226817
 			TxtDescript,
-			// Token: 0x0403CD15 RID: 249109
+			// Token: 0x04037602 RID: 226818
 			RefreshBtnItem,
-			// Token: 0x0403CD16 RID: 249110
+			// Token: 0x04037603 RID: 226819
 			TexCardBg,
-			// Token: 0x0403CD17 RID: 249111
+			// Token: 0x04037604 RID: 226820
 			Recommend,
-			// Token: 0x0403CD18 RID: 249112
+			// Token: 0x04037605 RID: 226821
 			TexRing
 		}
 	}

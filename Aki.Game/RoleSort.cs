@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Module.InstanceDungeon;
 
-// Token: 0x02001897 RID: 6295
+// Token: 0x02000D50 RID: 3408
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSort : CommonSort<ERoleSortWayType>
 {
-	// Token: 0x0600B85B RID: 47195 RVA: 0x0029D0D8 File Offset: 0x0029B2D8
+	// Token: 0x06008C44 RID: 35908 RVA: 0x002A77F0 File Offset: 0x002A59F0
 	private int SortLevel(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -31,7 +31,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B85C RID: 47196 RVA: 0x0029D148 File Offset: 0x0029B348
+	// Token: 0x06008C45 RID: 35909 RVA: 0x002A7860 File Offset: 0x002A5A60
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -49,7 +49,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B85D RID: 47197 RVA: 0x0029D190 File Offset: 0x0029B390
+	// Token: 0x06008C46 RID: 35910 RVA: 0x002A78A8 File Offset: 0x002A5AA8
 	private int SortFormation(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -87,7 +87,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return num - num2;
 	}
 
-	// Token: 0x0600B85E RID: 47198 RVA: 0x0029D238 File Offset: 0x0029B438
+	// Token: 0x06008C47 RID: 35911 RVA: 0x002A7950 File Offset: 0x002A5B50
 	private int SortPriority(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -103,7 +103,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B85F RID: 47199 RVA: 0x0029D298 File Offset: 0x0029B498
+	// Token: 0x06008C48 RID: 35912 RVA: 0x002A79B0 File Offset: 0x002A5BB0
 	private int SortResonance(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -121,7 +121,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B860 RID: 47200 RVA: 0x0029D2DC File Offset: 0x0029B4DC
+	// Token: 0x06008C49 RID: 35913 RVA: 0x002A79F4 File Offset: 0x002A5BF4
 	private int SortResonanceIncreased(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -139,7 +139,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B861 RID: 47201 RVA: 0x0029D31E File Offset: 0x0029B51E
+	// Token: 0x06008C4A RID: 35914 RVA: 0x002A7A36 File Offset: 0x002A5C36
 	private int SortInCollected(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -149,7 +149,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B862 RID: 47202 RVA: 0x0029D324 File Offset: 0x0029B524
+	// Token: 0x06008C4B RID: 35915 RVA: 0x002A7A3C File Offset: 0x002A5C3C
 	private int SortFriendly(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -179,7 +179,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B863 RID: 47203 RVA: 0x0029D39C File Offset: 0x0029B59C
+	// Token: 0x06008C4C RID: 35916 RVA: 0x002A7AB4 File Offset: 0x002A5CB4
 	private int SortCreateTime(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -197,7 +197,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B864 RID: 47204 RVA: 0x0029D3D4 File Offset: 0x0029B5D4
+	// Token: 0x06008C4D RID: 35917 RVA: 0x002A7AEC File Offset: 0x002A5CEC
 	private int SortLifeLimit(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -215,7 +215,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B865 RID: 47205 RVA: 0x0029D418 File Offset: 0x0029B618
+	// Token: 0x06008C4E RID: 35918 RVA: 0x002A7B30 File Offset: 0x002A5D30
 	private int SortAttack(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -233,7 +233,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B866 RID: 47206 RVA: 0x0029D45C File Offset: 0x0029B65C
+	// Token: 0x06008C4F RID: 35919 RVA: 0x002A7B74 File Offset: 0x002A5D74
 	private int SortWeeklyRogueRecommend(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -255,7 +255,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return -1;
 	}
 
-	// Token: 0x0600B867 RID: 47207 RVA: 0x0029D4A8 File Offset: 0x0029B6A8
+	// Token: 0x06008C50 RID: 35920 RVA: 0x002A7BC0 File Offset: 0x002A5DC0
 	private int SortDefense(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -273,7 +273,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B868 RID: 47208 RVA: 0x0029D4F0 File Offset: 0x0029B6F0
+	// Token: 0x06008C51 RID: 35921 RVA: 0x002A7C08 File Offset: 0x002A5E08
 	private int SortRoleSelectPosition(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -299,7 +299,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B869 RID: 47209 RVA: 0x0029D550 File Offset: 0x0029B750
+	// Token: 0x06008C52 RID: 35922 RVA: 0x002A7C68 File Offset: 0x002A5E68
 	private int SortTrialRole(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -318,7 +318,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B86A RID: 47210 RVA: 0x0029D590 File Offset: 0x0029B790
+	// Token: 0x06008C53 RID: 35923 RVA: 0x002A7CA8 File Offset: 0x002A5EA8
 	private int SortRecommendRole(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -354,7 +354,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B86B RID: 47211 RVA: 0x0029D68C File Offset: 0x0029B88C
+	// Token: 0x06008C54 RID: 35924 RVA: 0x002A7DA4 File Offset: 0x002A5FA4
 	private int SortRoguelikeDefault(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -428,7 +428,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		}
 	}
 
-	// Token: 0x0600B86C RID: 47212 RVA: 0x0029D7C0 File Offset: 0x0029B9C0
+	// Token: 0x06008C55 RID: 35925 RVA: 0x002A7ED8 File Offset: 0x002A60D8
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(ERoleSortWayType.Level, new TSortResult(this.SortLevel));
@@ -452,7 +452,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		this.SortMap.Add(ERoleSortWayType.IsRecommend, new TSortResult(this.SortRecommendRole));
 	}
 
-	// Token: 0x0600B86D RID: 47213 RVA: 0x0029D9A0 File Offset: 0x0029BBA0
+	// Token: 0x06008C56 RID: 35926 RVA: 0x002A80B8 File Offset: 0x002A62B8
 	private int SortTowerCost(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -467,7 +467,7 @@ public class RoleSort : CommonSort<ERoleSortWayType>
 		return (roleRemainCost - roleRemainCost2) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B86E RID: 47214 RVA: 0x0029D9F4 File Offset: 0x0029BBF4
+	// Token: 0x06008C57 RID: 35927 RVA: 0x002A810C File Offset: 0x002A630C
 	private bool Contains(int[] array, int value)
 	{
 		for (int i = 0; i < array.Length; i++)

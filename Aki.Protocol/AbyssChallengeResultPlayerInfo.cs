@@ -11,7 +11,7 @@ namespace Aki.Protocol
 	// Token: 0x0200001C RID: 28
 	public sealed class AbyssChallengeResultPlayerInfo : IMessage<AbyssChallengeResultPlayerInfo>, IMessage, IEquatable<AbyssChallengeResultPlayerInfo>, IDeepCloneable<AbyssChallengeResultPlayerInfo>, IBufferMessage
 	{
-		// Token: 0x06001099 RID: 4249 RVA: 0x0002E4E4 File Offset: 0x0002C6E4
+		// Token: 0x060010C4 RID: 4292 RVA: 0x0002EA98 File Offset: 0x0002CC98
 		[NullableContext(1)]
 		public static AbyssChallengeResultPlayerInfo Create()
 		{
@@ -19,7 +19,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000054 RID: 84
-		// (get) Token: 0x0600109A RID: 4250 RVA: 0x0002E4EB File Offset: 0x0002C6EB
+		// (get) Token: 0x060010C5 RID: 4293 RVA: 0x0002EA9F File Offset: 0x0002CC9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<AbyssChallengeResultPlayerInfo> Parser
@@ -31,7 +31,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000055 RID: 85
-		// (get) Token: 0x0600109B RID: 4251 RVA: 0x0002E4F2 File Offset: 0x0002C6F2
+		// (get) Token: 0x060010C6 RID: 4294 RVA: 0x0002EAA6 File Offset: 0x0002CCA6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -43,7 +43,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000056 RID: 86
-		// (get) Token: 0x0600109C RID: 4252 RVA: 0x0002E4F5 File Offset: 0x0002C6F5
+		// (get) Token: 0x060010C7 RID: 4295 RVA: 0x0002EAA9 File Offset: 0x0002CCA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600109D RID: 4253 RVA: 0x0002E4FC File Offset: 0x0002C6FC
+		// Token: 0x060010C8 RID: 4296 RVA: 0x0002EAB0 File Offset: 0x0002CCB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssChallengeResultPlayerInfo()
 		{
 		}
 
-		// Token: 0x0600109E RID: 4254 RVA: 0x0002E510 File Offset: 0x0002C710
+		// Token: 0x060010C9 RID: 4297 RVA: 0x0002EAC4 File Offset: 0x0002CCC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssChallengeResultPlayerInfo(AbyssChallengeResultPlayerInfo other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600109F RID: 4255 RVA: 0x0002E55D File Offset: 0x0002C75D
+		// Token: 0x060010CA RID: 4298 RVA: 0x0002EB11 File Offset: 0x0002CD11
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssChallengeResultPlayerInfo Clone()
@@ -81,8 +81,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000057 RID: 87
-		// (get) Token: 0x060010A0 RID: 4256 RVA: 0x0002E565 File Offset: 0x0002C765
-		// (set) Token: 0x060010A1 RID: 4257 RVA: 0x0002E56D File Offset: 0x0002C76D
+		// (get) Token: 0x060010CB RID: 4299 RVA: 0x0002EB19 File Offset: 0x0002CD19
+		// (set) Token: 0x060010CC RID: 4300 RVA: 0x0002EB21 File Offset: 0x0002CD21
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerId
@@ -98,8 +98,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000058 RID: 88
-		// (get) Token: 0x060010A2 RID: 4258 RVA: 0x0002E576 File Offset: 0x0002C776
-		// (set) Token: 0x060010A3 RID: 4259 RVA: 0x0002E57E File Offset: 0x0002C77E
+		// (get) Token: 0x060010CD RID: 4301 RVA: 0x0002EB2A File Offset: 0x0002CD2A
+		// (set) Token: 0x060010CE RID: 4302 RVA: 0x0002EB32 File Offset: 0x0002CD32
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LikeCount
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000059 RID: 89
-		// (get) Token: 0x060010A4 RID: 4260 RVA: 0x0002E587 File Offset: 0x0002C787
+		// (get) Token: 0x060010CF RID: 4303 RVA: 0x0002EB3B File Offset: 0x0002CD3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AbyssChallengeResultRoleInfo> RoleInfos
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060010A5 RID: 4261 RVA: 0x0002E58F File Offset: 0x0002C78F
+		// Token: 0x060010D0 RID: 4304 RVA: 0x0002EB43 File Offset: 0x0002CD43
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AbyssChallengeResultPlayerInfo);
 		}
 
-		// Token: 0x060010A6 RID: 4262 RVA: 0x0002E5A0 File Offset: 0x0002C7A0
+		// Token: 0x060010D1 RID: 4305 RVA: 0x0002EB54 File Offset: 0x0002CD54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AbyssChallengeResultPlayerInfo other)
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PlayerId == other.PlayerId && this.LikeCount == other.LikeCount && this.roleInfos_.Equals(other.roleInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060010A7 RID: 4263 RVA: 0x0002E600 File Offset: 0x0002C800
+		// Token: 0x060010D2 RID: 4306 RVA: 0x0002EBB4 File Offset: 0x0002CDB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060010A8 RID: 4264 RVA: 0x0002E666 File Offset: 0x0002C866
+		// Token: 0x060010D3 RID: 4307 RVA: 0x0002EC1A File Offset: 0x0002CE1A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060010A9 RID: 4265 RVA: 0x0002E673 File Offset: 0x0002C873
+		// Token: 0x060010D4 RID: 4308 RVA: 0x0002EC27 File Offset: 0x0002CE27
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060010AA RID: 4266 RVA: 0x0002E67C File Offset: 0x0002C87C
+		// Token: 0x060010D5 RID: 4309 RVA: 0x0002EC30 File Offset: 0x0002CE30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060010AB RID: 4267 RVA: 0x0002E6E8 File Offset: 0x0002C8E8
+		// Token: 0x060010D6 RID: 4310 RVA: 0x0002EC9C File Offset: 0x0002CE9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060010AC RID: 4268 RVA: 0x0002E754 File Offset: 0x0002C954
+		// Token: 0x060010D7 RID: 4311 RVA: 0x0002ED08 File Offset: 0x0002CF08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AbyssChallengeResultPlayerInfo other)
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060010AD RID: 4269 RVA: 0x0002E7B5 File Offset: 0x0002C9B5
+		// Token: 0x060010D8 RID: 4312 RVA: 0x0002ED69 File Offset: 0x0002CF69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060010AE RID: 4270 RVA: 0x0002E7C0 File Offset: 0x0002C9C0
+		// Token: 0x060010D9 RID: 4313 RVA: 0x0002ED74 File Offset: 0x0002CF74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -290,31 +290,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04001F1D RID: 7965
+		// Token: 0x04001F73 RID: 8051
 		private static readonly MessageParser<AbyssChallengeResultPlayerInfo> _parser = new MessageParser<AbyssChallengeResultPlayerInfo>(() => new AbyssChallengeResultPlayerInfo());
 
-		// Token: 0x04001F1E RID: 7966
+		// Token: 0x04001F74 RID: 8052
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04001F1F RID: 7967
+		// Token: 0x04001F75 RID: 8053
 		public const int PlayerIdFieldNumber = 1;
 
-		// Token: 0x04001F20 RID: 7968
+		// Token: 0x04001F76 RID: 8054
 		private int playerId_;
 
-		// Token: 0x04001F21 RID: 7969
+		// Token: 0x04001F77 RID: 8055
 		public const int LikeCountFieldNumber = 2;
 
-		// Token: 0x04001F22 RID: 7970
+		// Token: 0x04001F78 RID: 8056
 		private int likeCount_;
 
-		// Token: 0x04001F23 RID: 7971
+		// Token: 0x04001F79 RID: 8057
 		public const int RoleInfosFieldNumber = 4;
 
-		// Token: 0x04001F24 RID: 7972
+		// Token: 0x04001F7A RID: 8058
 		private static readonly FieldCodec<AbyssChallengeResultRoleInfo> _repeated_roleInfos_codec = FieldCodec.ForMessage<AbyssChallengeResultRoleInfo>(34U, AbyssChallengeResultRoleInfo.Parser);
 
-		// Token: 0x04001F25 RID: 7973
+		// Token: 0x04001F7B RID: 8059
 		private readonly RepeatedField<AbyssChallengeResultRoleInfo> roleInfos_ = new RepeatedField<AbyssChallengeResultRoleInfo>();
 	}
 }

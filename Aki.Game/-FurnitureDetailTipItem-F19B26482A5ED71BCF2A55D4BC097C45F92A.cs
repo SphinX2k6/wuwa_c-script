@@ -1,36 +1,36 @@
 ﻿using System;
 
-// Token: 0x02000FCA RID: 4042
+// Token: 0x0200047F RID: 1151
 internal enum <FurnitureDetailTipItem>F19B26482A5ED71BCF2A55D4BC097C45F92AF3D4CAAAA087C3EB88B9B173006BE__EComponent
 {
-	// Token: 0x04002F4E RID: 12110
+	// Token: 0x04002FE7 RID: 12263
 	QualityBgSprite1,
-	// Token: 0x04002F4F RID: 12111
+	// Token: 0x04002FE8 RID: 12264
 	QualityBgSprite2,
-	// Token: 0x04002F50 RID: 12112
+	// Token: 0x04002FE9 RID: 12265
 	FurnitureTexture,
-	// Token: 0x04002F51 RID: 12113
+	// Token: 0x04002FEA RID: 12266
 	TagIconSprite,
-	// Token: 0x04002F52 RID: 12114
+	// Token: 0x04002FEB RID: 12267
 	AtmosphereText,
-	// Token: 0x04002F53 RID: 12115
+	// Token: 0x04002FEC RID: 12268
 	TitleText,
-	// Token: 0x04002F54 RID: 12116
+	// Token: 0x04002FED RID: 12269
 	DescriptionText,
-	// Token: 0x04002F55 RID: 12117
+	// Token: 0x04002FEE RID: 12270
 	JumpButton,
-	// Token: 0x04002F56 RID: 12118
+	// Token: 0x04002FEF RID: 12271
 	HeadRootItem,
-	// Token: 0x04002F57 RID: 12119
+	// Token: 0x04002FF0 RID: 12272
 	HeadTexture,
-	// Token: 0x04002F58 RID: 12120
+	// Token: 0x04002FF1 RID: 12273
 	GetWaySprite,
-	// Token: 0x04002F59 RID: 12121
+	// Token: 0x04002FF2 RID: 12274
 	GetWayText,
-	// Token: 0x04002F5A RID: 12122
+	// Token: 0x04002FF3 RID: 12275
 	ArrowSprite,
-	// Token: 0x04002F5B RID: 12123
+	// Token: 0x04002FF4 RID: 12276
 	LockItem,
-	// Token: 0x04002F5C RID: 12124
+	// Token: 0x04002FF5 RID: 12277
 	EmptyItem
 }

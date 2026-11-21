@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020026FF RID: 9983
+	// Token: 0x020007D4 RID: 2004
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SequenceDialogue.MovieSceneSubQteParams")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 128)]
 	public class FMovieSceneSubQteParams : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602505F RID: 151647 RVA: 0x0036C5B2 File Offset: 0x0036A7B2
+		// Token: 0x0600ACC5 RID: 44229 RVA: 0x000FF122 File Offset: 0x000FD322
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMovieSceneSubQteParams._ScriptStructPtr != 0) ? FMovieSceneSubQteParams._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SequenceDialogue.MovieSceneSubQteParams", ref FMovieSceneSubQteParams._ScriptStructPtr);
 		}
 
-		// Token: 0x17008EED RID: 36589
-		// (get) Token: 0x06025060 RID: 151648 RVA: 0x0036C5D6 File Offset: 0x0036A7D6
-		// (set) Token: 0x06025061 RID: 151649 RVA: 0x0036C5E6 File Offset: 0x0036A7E6
+		// Token: 0x1700203D RID: 8253
+		// (get) Token: 0x0600ACC6 RID: 44230 RVA: 0x000FF146 File Offset: 0x000FD346
+		// (set) Token: 0x0600ACC7 RID: 44231 RVA: 0x000FF156 File Offset: 0x000FD356
 		public unsafe int SubQteId
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008EEE RID: 36590
-		// (get) Token: 0x06025062 RID: 151650 RVA: 0x0036C5F8 File Offset: 0x0036A7F8
-		// (set) Token: 0x06025063 RID: 151651 RVA: 0x0036C63B File Offset: 0x0036A83B
+		// Token: 0x1700203E RID: 8254
+		// (get) Token: 0x0600ACC8 RID: 44232 RVA: 0x000FF168 File Offset: 0x000FD368
+		// (set) Token: 0x0600ACC9 RID: 44233 RVA: 0x000FF1AB File Offset: 0x000FD3AB
 		public FQteSpineInfo SpineInfo
 		{
 			get
@@ -55,60 +55,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06025064 RID: 151652 RVA: 0x0036C65C File Offset: 0x0036A85C
+		// Token: 0x0600ACCA RID: 44234 RVA: 0x000FF1CC File Offset: 0x000FD3CC
 		public FMovieSceneSubQteParams()
 		{
 		}
 
-		// Token: 0x06025065 RID: 151653 RVA: 0x0036C664 File Offset: 0x0036A864
-		public FMovieSceneSubQteParams(int SubQteId, FQteSpineInfo SpineInfo)
-		{
-			this.SubQteId = SubQteId;
-			this.SpineInfo = SpineInfo;
-		}
-
-		// Token: 0x06025066 RID: 151654 RVA: 0x0036C67A File Offset: 0x0036A87A
+		// Token: 0x0600ACCB RID: 44235 RVA: 0x000FF1D4 File Offset: 0x000FD3D4
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMovieSceneSubQteParams.StaticStruct();
 		}
 
-		// Token: 0x06025067 RID: 151655 RVA: 0x0036C686 File Offset: 0x0036A886
+		// Token: 0x0600ACCC RID: 44236 RVA: 0x000FF1E0 File Offset: 0x000FD3E0
 		[NullableContext(2)]
 		public FMovieSceneSubQteParams(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025068 RID: 151656 RVA: 0x0036C690 File Offset: 0x0036A890
+		// Token: 0x0600ACCD RID: 44237 RVA: 0x000FF1EA File Offset: 0x000FD3EA
 		public FMovieSceneSubQteParams(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025069 RID: 151657 RVA: 0x0036C69B File Offset: 0x0036A89B
+		// Token: 0x0600ACCE RID: 44238 RVA: 0x000FF1F5 File Offset: 0x000FD3F5
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMovieSceneSubQteParams(Pointer, false, true);
 		}
 
-		// Token: 0x0602506A RID: 151658 RVA: 0x0036C6A5 File Offset: 0x0036A8A5
+		// Token: 0x0600ACCF RID: 44239 RVA: 0x000FF1FF File Offset: 0x000FD3FF
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMovieSceneSubQteParams(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04013F33 RID: 81715
+		// Token: 0x04004A83 RID: 19075
 		public const string __ObjectPath = "/Script/SequenceDialogue.MovieSceneSubQteParams";
 
-		// Token: 0x04013F34 RID: 81716
+		// Token: 0x04004A84 RID: 19076
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04013F35 RID: 81717
+		// Token: 0x04004A85 RID: 19077
 		internal static int __PropertyOffset_SubQteId;
 
-		// Token: 0x04013F36 RID: 81718
+		// Token: 0x04004A86 RID: 19078
 		internal static int __PropertyOffset_SpineInfo;
 
-		// Token: 0x04013F37 RID: 81719
+		// Token: 0x04004A87 RID: 19079
 		[Nullable(2)]
 		private FQteSpineInfo _SpineInfo;
 	}

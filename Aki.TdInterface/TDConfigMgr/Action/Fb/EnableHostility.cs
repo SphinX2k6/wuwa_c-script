@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200270A RID: 9994
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029D1 RID: 10705
 	public class EnableHostility : ActionParams
 	{
-		// Token: 0x0600DF03 RID: 57091 RVA: 0x00210F47 File Offset: 0x0020F147
+		// Token: 0x0600ECEF RID: 60655 RVA: 0x0022D8F0 File Offset: 0x0022BAF0
 		public static EnableHostility Create(IEnableHostility? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042B1 RID: 17073
-		// (get) Token: 0x0600DF04 RID: 57092 RVA: 0x00210F66 File Offset: 0x0020F166
+		// Token: 0x170045FB RID: 17915
+		// (get) Token: 0x0600ECF0 RID: 60656 RVA: 0x0022D90F File Offset: 0x0022BB0F
 		public virtual bool IsEnable
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042B2 RID: 17074
-		// (get) Token: 0x0600DF05 RID: 57093 RVA: 0x00210F74 File Offset: 0x0020F174
+		// Token: 0x170045FC RID: 17916
+		// (get) Token: 0x0600ECF1 RID: 60657 RVA: 0x0022D91C File Offset: 0x0022BB1C
 		public virtual List<int> EntityIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BC4 RID: 31684
+		// Token: 0x04008269 RID: 33385
 		private IEnableHostility Instance;
 
-		// Token: 0x04007BC5 RID: 31685
+		// Token: 0x0400826A RID: 33386
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007BC6 RID: 31686
+		// Token: 0x0400826B RID: 33387
 		private bool _EntityIdsInited;
 	}
 }

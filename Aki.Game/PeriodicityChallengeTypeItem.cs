@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020016B7 RID: 5815
+// Token: 0x02000B6F RID: 2927
 [NullableContext(2)]
 [Nullable(0)]
 public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 {
-	// Token: 0x0600A5DD RID: 42461 RVA: 0x00250F80 File Offset: 0x0024F180
+	// Token: 0x060079BD RID: 31165 RVA: 0x0025B390 File Offset: 0x00259590
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -58,7 +58,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A5DE RID: 42462 RVA: 0x002511B8 File Offset: 0x0024F3B8
+	// Token: 0x060079BE RID: 31166 RVA: 0x0025B5C8 File Offset: 0x002597C8
 	protected override void OnStart()
 	{
 		this.Toggle = base.GetExtendToggle(0);
@@ -73,7 +73,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		base.GetItem(11).SetUIActive(false);
 	}
 
-	// Token: 0x0600A5DF RID: 42463 RVA: 0x0025122C File Offset: 0x0024F42C
+	// Token: 0x060079BF RID: 31167 RVA: 0x0025B63C File Offset: 0x0025983C
 	[NullableContext(1)]
 	public void BindOnToggleFunc(Action<int, UUIExtendToggle> toggleFunc)
 	{
@@ -83,20 +83,20 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		};
 	}
 
-	// Token: 0x0600A5E0 RID: 42464 RVA: 0x00251258 File Offset: 0x0024F458
+	// Token: 0x060079C0 RID: 31168 RVA: 0x0025B668 File Offset: 0x00259868
 	[NullableContext(1)]
 	public void BindCanToggleExecuteChange(Func<int, bool> toggle)
 	{
 		this.OnCanToggleClicked = toggle;
 	}
 
-	// Token: 0x0600A5E1 RID: 42465 RVA: 0x00251261 File Offset: 0x0024F461
+	// Token: 0x060079C1 RID: 31169 RVA: 0x0025B671 File Offset: 0x00259871
 	private bool CanToggleExecuteChange()
 	{
 		return this.OnCanToggleClicked == null || this.OnCanToggleClicked((int)this.TypeId);
 	}
 
-	// Token: 0x0600A5E2 RID: 42466 RVA: 0x00251280 File Offset: 0x0024F480
+	// Token: 0x060079C2 RID: 31170 RVA: 0x0025B690 File Offset: 0x00259890
 	public override void Refresh(EDungeonType data, bool isSelected, int gridIndex)
 	{
 		this.TypeId = data;
@@ -110,7 +110,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		this.RefreshDoubleIcon();
 	}
 
-	// Token: 0x0600A5E3 RID: 42467 RVA: 0x00251328 File Offset: 0x0024F528
+	// Token: 0x060079C3 RID: 31171 RVA: 0x0025B738 File Offset: 0x00259938
 	public void RefreshSubText()
 	{
 		IPeriodicityChallengeTypeData periodicityChallengeTypeData = null;
@@ -145,7 +145,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		}
 	}
 
-	// Token: 0x0600A5E4 RID: 42468 RVA: 0x00251424 File Offset: 0x0024F624
+	// Token: 0x060079C4 RID: 31172 RVA: 0x0025B834 File Offset: 0x00259A34
 	private IPeriodicityChallengeTypeData GetTowerData()
 	{
 		if (!FunctionModel.Instance.IsOpen(10055))
@@ -170,7 +170,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		};
 	}
 
-	// Token: 0x0600A5E5 RID: 42469 RVA: 0x00251504 File Offset: 0x0024F704
+	// Token: 0x060079C5 RID: 31173 RVA: 0x0025B914 File Offset: 0x00259B14
 	private IPeriodicityChallengeTypeData GetShipTowerData()
 	{
 		ActivityShipTowerController instance = ActivityShipTowerController.Instance;
@@ -194,7 +194,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		};
 	}
 
-	// Token: 0x0600A5E6 RID: 42470 RVA: 0x002515A4 File Offset: 0x0024F7A4
+	// Token: 0x060079C6 RID: 31174 RVA: 0x0025B9B4 File Offset: 0x00259BB4
 	private IPeriodicityChallengeTypeData GetWeeklyRougeData()
 	{
 		WeeklyRogueData activityDataNew = WeeklyRogueModel.Instance.ActivityDataNew;
@@ -229,7 +229,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		};
 	}
 
-	// Token: 0x0600A5E7 RID: 42471 RVA: 0x0025169C File Offset: 0x0024F89C
+	// Token: 0x060079C7 RID: 31175 RVA: 0x0025BAAC File Offset: 0x00259CAC
 	private IPeriodicityChallengeTypeData GetWheelTowerData()
 	{
 		WheelTowerData activityData = WheelTowerModel.Instance.ActivityData;
@@ -249,7 +249,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		};
 	}
 
-	// Token: 0x0600A5E8 RID: 42472 RVA: 0x00251734 File Offset: 0x0024F934
+	// Token: 0x060079C8 RID: 31176 RVA: 0x0025BB44 File Offset: 0x00259D44
 	public void RefreshDoubleIcon()
 	{
 		object adventureUpActivity = ActivityDoubleRewardController.Instance.GetAdventureUpActivity(this.TypeId);
@@ -258,7 +258,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		base.GetItem(1).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600A5E9 RID: 42473 RVA: 0x00251775 File Offset: 0x0024F975
+	// Token: 0x060079C9 RID: 31177 RVA: 0x0025BB85 File Offset: 0x00259D85
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -267,7 +267,7 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		}
 	}
 
-	// Token: 0x0600A5EA RID: 42474 RVA: 0x00251792 File Offset: 0x0024F992
+	// Token: 0x060079CA RID: 31178 RVA: 0x0025BBA2 File Offset: 0x00259DA2
 	public override void OnSelected(bool bFireEvent)
 	{
 		if (bFireEvent)
@@ -276,26 +276,26 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		}
 	}
 
-	// Token: 0x0600A5EB RID: 42475 RVA: 0x0025179E File Offset: 0x0024F99E
+	// Token: 0x060079CB RID: 31179 RVA: 0x0025BBAE File Offset: 0x00259DAE
 	public void SetSelectToggle(EToggleState state = EToggleState.ETT_Checked)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(state, false, true, false);
 		this.ToggleFunc((int)this.TypeId, this.Toggle);
 	}
 
-	// Token: 0x0600A5EC RID: 42476 RVA: 0x002517C7 File Offset: 0x0024F9C7
+	// Token: 0x060079CC RID: 31180 RVA: 0x0025BBD7 File Offset: 0x00259DD7
 	public void OnlySetSelectToggle(EToggleState state = EToggleState.ETT_Checked)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(state, false, true, false);
 	}
 
-	// Token: 0x0600A5ED RID: 42477 RVA: 0x002517D9 File Offset: 0x0024F9D9
+	// Token: 0x060079CD RID: 31181 RVA: 0x0025BBE9 File Offset: 0x00259DE9
 	public UUIExtendToggle GetSelfToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600A5EE RID: 42478 RVA: 0x002517E4 File Offset: 0x0024F9E4
+	// Token: 0x060079CE RID: 31182 RVA: 0x0025BBF4 File Offset: 0x00259DF4
 	public UUIItem GetButtonItem()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -306,16 +306,16 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 		return extendToggle.RootUIComp.Get();
 	}
 
-	// Token: 0x0600A5EF RID: 42479 RVA: 0x0025180B File Offset: 0x0024FA0B
+	// Token: 0x060079CF RID: 31183 RVA: 0x0025BC1B File Offset: 0x00259E1B
 	public bool IsTimeOutType()
 	{
 		return this.TypeId == EDungeonType.Tower || this.TypeId == EDungeonType.ShipTower || this.TypeId == EDungeonType.WeeklyRogue || this.TypeId == EDungeonType.WheelTower;
 	}
 
-	// Token: 0x04004AED RID: 19181
+	// Token: 0x04004B94 RID: 19348
 	private EDungeonType TypeId = EDungeonType.Mat;
 
-	// Token: 0x04004AEE RID: 19182
+	// Token: 0x04004B95 RID: 19349
 	[Nullable(new byte[]
 	{
 		2,
@@ -323,43 +323,43 @@ public class PeriodicityChallengeTypeItem : GridProxyAbstract<EDungeonType>
 	})]
 	private Action<int, UUIExtendToggle> ToggleFunc;
 
-	// Token: 0x04004AEF RID: 19183
+	// Token: 0x04004B96 RID: 19350
 	private Func<int, bool> OnCanToggleClicked;
 
-	// Token: 0x04004AF0 RID: 19184
+	// Token: 0x04004B97 RID: 19351
 	private UUIExtendToggle Toggle;
 
-	// Token: 0x02007C89 RID: 31881
+	// Token: 0x02006E0E RID: 28174
 	[NullableContext(0)]
 	private enum ENodeDefine
 	{
-		// Token: 0x04028DBB RID: 167355
+		// Token: 0x040240E4 RID: 147684
 		Toggle,
-		// Token: 0x04028DBC RID: 167356
+		// Token: 0x040240E5 RID: 147685
 		DoubleTip,
-		// Token: 0x04028DBD RID: 167357
+		// Token: 0x040240E6 RID: 147686
 		RedDotItem,
-		// Token: 0x04028DBE RID: 167358
+		// Token: 0x040240E7 RID: 147687
 		Icon,
-		// Token: 0x04028DBF RID: 167359
+		// Token: 0x040240E8 RID: 147688
 		TypeText,
-		// Token: 0x04028DC0 RID: 167360
+		// Token: 0x040240E9 RID: 147689
 		SubItemA,
-		// Token: 0x04028DC1 RID: 167361
+		// Token: 0x040240EA RID: 147690
 		DoingItem,
-		// Token: 0x04028DC2 RID: 167362
+		// Token: 0x040240EB RID: 147691
 		FinishItem,
-		// Token: 0x04028DC3 RID: 167363
+		// Token: 0x040240EC RID: 147692
 		SubText,
-		// Token: 0x04028DC4 RID: 167364
+		// Token: 0x040240ED RID: 147693
 		SubItemB,
-		// Token: 0x04028DC5 RID: 167365
+		// Token: 0x040240EE RID: 147694
 		SubItemBText,
-		// Token: 0x04028DC6 RID: 167366
+		// Token: 0x040240EF RID: 147695
 		SubItemBIconItem,
-		// Token: 0x04028DC7 RID: 167367
+		// Token: 0x040240F0 RID: 147696
 		TimeOutItem,
-		// Token: 0x04028DC8 RID: 167368
+		// Token: 0x040240F1 RID: 147697
 		SprIconR
 	}
 }

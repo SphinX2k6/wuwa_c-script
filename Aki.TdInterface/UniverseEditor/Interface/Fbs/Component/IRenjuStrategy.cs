@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200585B RID: 22619
+	// Token: 0x02005E68 RID: 24168
 	public struct IRenjuStrategy : IFlatbufferObject
 	{
-		// Token: 0x1700A90D RID: 43277
-		// (get) Token: 0x0602613D RID: 155965 RVA: 0x0053FE1D File Offset: 0x0053E01D
+		// Token: 0x1700B23D RID: 45629
+		// (get) Token: 0x0602869F RID: 165535 RVA: 0x00586969 File Offset: 0x00584B69
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602613E RID: 155966 RVA: 0x0053FE2A File Offset: 0x0053E02A
+		// Token: 0x060286A0 RID: 165536 RVA: 0x00586976 File Offset: 0x00584B76
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602613F RID: 155967 RVA: 0x0053FE34 File Offset: 0x0053E034
+		// Token: 0x060286A1 RID: 165537 RVA: 0x00586980 File Offset: 0x00584B80
 		public static IRenjuStrategy GetRootAsIRenjuStrategy(ByteBuffer _bb)
 		{
 			return IRenjuStrategy.GetRootAsIRenjuStrategy(_bb, default(IRenjuStrategy));
 		}
 
-		// Token: 0x06026140 RID: 155968 RVA: 0x0053FE50 File Offset: 0x0053E050
+		// Token: 0x060286A2 RID: 165538 RVA: 0x0058699C File Offset: 0x00584B9C
 		public static IRenjuStrategy GetRootAsIRenjuStrategy(ByteBuffer _bb, IRenjuStrategy obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026141 RID: 155969 RVA: 0x0053FE6D File Offset: 0x0053E06D
+		// Token: 0x060286A3 RID: 165539 RVA: 0x005869B9 File Offset: 0x00584BB9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026142 RID: 155970 RVA: 0x0053FE7C File Offset: 0x0053E07C
+		// Token: 0x060286A4 RID: 165540 RVA: 0x005869C8 File Offset: 0x00584BC8
 		public IRenjuStrategy __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A90E RID: 43278
-		// (get) Token: 0x06026143 RID: 155971 RVA: 0x0053FE8C File Offset: 0x0053E08C
+		// Token: 0x1700B23E RID: 45630
+		// (get) Token: 0x060286A5 RID: 165541 RVA: 0x005869D8 File Offset: 0x00584BD8
 		public EAiGearStrategy Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A90F RID: 43279
-		// (get) Token: 0x06026144 RID: 155972 RVA: 0x0053FEC8 File Offset: 0x0053E0C8
+		// Token: 0x1700B23F RID: 45631
+		// (get) Token: 0x060286A6 RID: 165542 RVA: 0x00586A14 File Offset: 0x00584C14
 		public IConditionGroup? Condition
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A910 RID: 43280
-		// (get) Token: 0x06026145 RID: 155973 RVA: 0x0053FF28 File Offset: 0x0053E128
+		// Token: 0x1700B240 RID: 45632
+		// (get) Token: 0x060286A7 RID: 165543 RVA: 0x00586A74 File Offset: 0x00584C74
 		public int Chessboard
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A911 RID: 43281
-		// (get) Token: 0x06026146 RID: 155974 RVA: 0x0053FF64 File Offset: 0x0053E164
+		// Token: 0x1700B241 RID: 45633
+		// (get) Token: 0x060286A8 RID: 165544 RVA: 0x00586AB0 File Offset: 0x00584CB0
 		public string CommonConfig
 		{
 			get
@@ -108,20 +108,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026147 RID: 155975 RVA: 0x0053FF9C File Offset: 0x0053E19C
+		// Token: 0x060286A9 RID: 165545 RVA: 0x00586AE8 File Offset: 0x00584CE8
 		public Span<byte> GetCommonConfigBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06026148 RID: 155976 RVA: 0x0053FFAC File Offset: 0x0053E1AC
+		// Token: 0x060286AA RID: 165546 RVA: 0x00586AF8 File Offset: 0x00584CF8
 		public byte[] GetCommonConfigArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700A912 RID: 43282
-		// (get) Token: 0x06026149 RID: 155977 RVA: 0x0053FFBC File Offset: 0x0053E1BC
+		// Token: 0x1700B242 RID: 45634
+		// (get) Token: 0x060286AB RID: 165547 RVA: 0x00586B08 File Offset: 0x00584D08
 		public byte NullMask
 		{
 			get
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602614A RID: 155978 RVA: 0x0053FFF9 File Offset: 0x0053E1F9
+		// Token: 0x060286AC RID: 165548 RVA: 0x00586B45 File Offset: 0x00584D45
 		public static Offset<IRenjuStrategy> CreateIRenjuStrategy(FlatBufferBuilder builder, EAiGearStrategy Type = EAiGearStrategy.RenjuStrategy, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), int Chessboard = 0, StringOffset CommonConfigOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -147,49 +147,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRenjuStrategy.EndIRenjuStrategy(builder);
 		}
 
-		// Token: 0x0602614B RID: 155979 RVA: 0x0054002D File Offset: 0x0053E22D
+		// Token: 0x060286AD RID: 165549 RVA: 0x00586B79 File Offset: 0x00584D79
 		public static void StartIRenjuStrategy(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602614C RID: 155980 RVA: 0x00540036 File Offset: 0x0053E236
+		// Token: 0x060286AE RID: 165550 RVA: 0x00586B82 File Offset: 0x00584D82
 		public static void AddType(FlatBufferBuilder builder, EAiGearStrategy type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602614D RID: 155981 RVA: 0x00540041 File Offset: 0x0053E241
+		// Token: 0x060286AF RID: 165551 RVA: 0x00586B8D File Offset: 0x00584D8D
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(1, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x0602614E RID: 155982 RVA: 0x00540051 File Offset: 0x0053E251
+		// Token: 0x060286B0 RID: 165552 RVA: 0x00586B9D File Offset: 0x00584D9D
 		public static void AddChessboard(FlatBufferBuilder builder, int chessboard)
 		{
 			builder.AddInt(2, chessboard, 0);
 		}
 
-		// Token: 0x0602614F RID: 155983 RVA: 0x0054005C File Offset: 0x0053E25C
+		// Token: 0x060286B1 RID: 165553 RVA: 0x00586BA8 File Offset: 0x00584DA8
 		public static void AddCommonConfig(FlatBufferBuilder builder, StringOffset commonConfigOffset)
 		{
 			builder.AddOffset(3, commonConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06026150 RID: 155984 RVA: 0x0054006C File Offset: 0x0053E26C
+		// Token: 0x060286B2 RID: 165554 RVA: 0x00586BB8 File Offset: 0x00584DB8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06026151 RID: 155985 RVA: 0x00540077 File Offset: 0x0053E277
+		// Token: 0x060286B3 RID: 165555 RVA: 0x00586BC3 File Offset: 0x00584DC3
 		public static Offset<IRenjuStrategy> EndIRenjuStrategy(FlatBufferBuilder builder)
 		{
 			return new Offset<IRenjuStrategy>(builder.EndTable());
 		}
 
-		// Token: 0x06026152 RID: 155986 RVA: 0x00540084 File Offset: 0x0053E284
+		// Token: 0x060286B4 RID: 165556 RVA: 0x00586BD0 File Offset: 0x00584DD0
 		public IRenjuStrategyT UnPack()
 		{
 			IRenjuStrategyT renjuStrategyT = new IRenjuStrategyT();
@@ -197,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return renjuStrategyT;
 		}
 
-		// Token: 0x06026153 RID: 155987 RVA: 0x005400A0 File Offset: 0x0053E2A0
+		// Token: 0x060286B5 RID: 165557 RVA: 0x00586BEC File Offset: 0x00584DEC
 		public void UnPackTo(IRenjuStrategyT _o)
 		{
 			_o.Type = this.Type;
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026154 RID: 155988 RVA: 0x0054010C File Offset: 0x0053E30C
+		// Token: 0x060286B6 RID: 165558 RVA: 0x00586C58 File Offset: 0x00584E58
 		public static Offset<IRenjuStrategy> Pack(FlatBufferBuilder builder, IRenjuStrategyT _o)
 		{
 			if (_o == null)
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRenjuStrategy.CreateIRenjuStrategy(builder, _o.Type, conditionOffset, _o.Chessboard, commonConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400ED8B RID: 60811
+		// Token: 0x0400FA7E RID: 64126
 		private Table __p;
 	}
 }

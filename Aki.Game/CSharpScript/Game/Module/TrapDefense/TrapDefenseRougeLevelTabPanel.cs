@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AB9 RID: 19129
+	// Token: 0x02003A61 RID: 14945
 	[Nullable(new byte[]
 	{
 		0,
@@ -11,19 +11,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseRougeLevelTabPanel : TrapDefenseLevelTabPanel<TrapDefenseRougeModeData>
 	{
-		// Token: 0x060318FF RID: 203007 RVA: 0x00B7E41B File Offset: 0x00B7C61B
+		// Token: 0x0602668F RID: 157327 RVA: 0x00AC23CF File Offset: 0x00AC05CF
 		public TrapDefenseRougeLevelTabPanel()
 		{
 			this.ModeData = TrapDefenseModel.Instance.RougeModeData;
 		}
 
-		// Token: 0x06031900 RID: 203008 RVA: 0x00B7E433 File Offset: 0x00B7C633
+		// Token: 0x06026690 RID: 157328 RVA: 0x00AC23E7 File Offset: 0x00AC05E7
 		protected override void OnStart()
 		{
 			this.PanelDifficultyChange.SetActive(false);
 		}
 
-		// Token: 0x06031901 RID: 203009 RVA: 0x00B7E441 File Offset: 0x00B7C641
+		// Token: 0x06026691 RID: 157329 RVA: 0x00AC23F5 File Offset: 0x00AC05F5
 		public override void UpdateModeData()
 		{
 			base.UpdateLevelDataList(this.ModeData.LevelDataList.ToArray());

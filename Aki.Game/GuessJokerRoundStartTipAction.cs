@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001025 RID: 4133
+// Token: 0x020004D9 RID: 1241
 public class GuessJokerRoundStartTipAction : GuessJokerActionBase
 {
-	// Token: 0x06006A2A RID: 27178 RVA: 0x00154CA5 File Offset: 0x00152EA5
+	// Token: 0x06003DBF RID: 15807 RVA: 0x0015D5CD File Offset: 0x0015B7CD
 	public GuessJokerRoundStartTipAction(EGuessJokerPlayerType playerType)
 	{
 		this.PlayerType = playerType;
 	}
 
-	// Token: 0x06006A2B RID: 27179 RVA: 0x00154CB4 File Offset: 0x00152EB4
+	// Token: 0x06003DC0 RID: 15808 RVA: 0x0015D5DC File Offset: 0x0015B7DC
 	protected override void OnStart()
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -31,6 +31,6 @@ public class GuessJokerRoundStartTipAction : GuessJokerActionBase
 		});
 	}
 
-	// Token: 0x040030EC RID: 12524
+	// Token: 0x04003185 RID: 12677
 	private readonly EGuessJokerPlayerType PlayerType;
 }

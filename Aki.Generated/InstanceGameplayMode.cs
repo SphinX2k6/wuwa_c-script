@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D73 RID: 3443
+	// Token: 0x02000E58 RID: 3672
 	public struct InstanceGameplayMode : IFlatbufferObject
 	{
-		// Token: 0x170019B8 RID: 6584
-		// (get) Token: 0x0600858A RID: 34186 RVA: 0x0026428C File Offset: 0x0026248C
+		// Token: 0x17001A1C RID: 6684
+		// (get) Token: 0x06008BA5 RID: 35749 RVA: 0x00282614 File Offset: 0x00280814
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600858B RID: 34187 RVA: 0x00264299 File Offset: 0x00262499
+		// Token: 0x06008BA6 RID: 35750 RVA: 0x00282621 File Offset: 0x00280821
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600858C RID: 34188 RVA: 0x002642A0 File Offset: 0x002624A0
+		// Token: 0x06008BA7 RID: 35751 RVA: 0x00282628 File Offset: 0x00280828
 		public static InstanceGameplayMode GetRootAsInstanceGameplayMode(ByteBuffer _bb)
 		{
 			return InstanceGameplayMode.GetRootAsInstanceGameplayMode(_bb, default(InstanceGameplayMode));
 		}
 
-		// Token: 0x0600858D RID: 34189 RVA: 0x002642BC File Offset: 0x002624BC
+		// Token: 0x06008BA8 RID: 35752 RVA: 0x00282644 File Offset: 0x00280844
 		public static InstanceGameplayMode GetRootAsInstanceGameplayMode(ByteBuffer _bb, InstanceGameplayMode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600858E RID: 34190 RVA: 0x002642D9 File Offset: 0x002624D9
+		// Token: 0x06008BA9 RID: 35753 RVA: 0x00282661 File Offset: 0x00280861
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600858F RID: 34191 RVA: 0x002642E8 File Offset: 0x002624E8
+		// Token: 0x06008BAA RID: 35754 RVA: 0x00282670 File Offset: 0x00280870
 		public InstanceGameplayMode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170019B9 RID: 6585
-		// (get) Token: 0x06008590 RID: 34192 RVA: 0x002642F8 File Offset: 0x002624F8
+		// Token: 0x17001A1D RID: 6685
+		// (get) Token: 0x06008BAB RID: 35755 RVA: 0x00282680 File Offset: 0x00280880
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019BA RID: 6586
-		// (get) Token: 0x06008591 RID: 34193 RVA: 0x00264334 File Offset: 0x00262534
+		// Token: 0x17001A1E RID: 6686
+		// (get) Token: 0x06008BAC RID: 35756 RVA: 0x002826BC File Offset: 0x002808BC
 		public bool DisableAllPlayerRole
 		{
 			get
@@ -75,8 +75,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019BB RID: 6587
-		// (get) Token: 0x06008592 RID: 34194 RVA: 0x00264374 File Offset: 0x00262574
+		// Token: 0x17001A1F RID: 6687
+		// (get) Token: 0x06008BAD RID: 35757 RVA: 0x002826FC File Offset: 0x002808FC
 		public int DefaultCameraMode
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008593 RID: 34195 RVA: 0x002643B0 File Offset: 0x002625B0
+		// Token: 0x06008BAE RID: 35758 RVA: 0x00282738 File Offset: 0x00280938
 		public int CameraParams(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -101,8 +101,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170019BC RID: 6588
-		// (get) Token: 0x06008594 RID: 34196 RVA: 0x002643F0 File Offset: 0x002625F0
+		// Token: 0x17001A20 RID: 6688
+		// (get) Token: 0x06008BAF RID: 35759 RVA: 0x00282778 File Offset: 0x00280978
 		public int CameraParamsLength
 		{
 			get
@@ -116,37 +116,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008595 RID: 34197 RVA: 0x0026441C File Offset: 0x0026261C
+		// Token: 0x06008BB0 RID: 35760 RVA: 0x002827A4 File Offset: 0x002809A4
 		public Span<int> GetCameraParamsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06008596 RID: 34198 RVA: 0x0026442C File Offset: 0x0026262C
+		// Token: 0x06008BB1 RID: 35761 RVA: 0x002827B4 File Offset: 0x002809B4
 		public int[] GetCameraParamsArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008597 RID: 34199 RVA: 0x00264444 File Offset: 0x00262644
+		// Token: 0x06008BB2 RID: 35762 RVA: 0x002827CC File Offset: 0x002809CC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用CameraParamsIter()或GetCameraParamsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] CameraParams()
+		public int[] CameraParams()
 		{
-			InstanceGameplayMode instanceGameplayMode = this;
-			return instanceGameplayMode.GetCameraParamsArray() ?? Array.Empty<int>();
+			return this.GetCameraParamsArray();
 		}
 
-		// Token: 0x06008598 RID: 34200 RVA: 0x00264468 File Offset: 0x00262668
+		// Token: 0x06008BB3 RID: 35763 RVA: 0x002827D4 File Offset: 0x002809D4
 		[NullableContext(1)]
-		public readonly IEnumerable<int> CameraParamsIter()
+		public IEnumerable<int> CameraParamsIter()
 		{
 			InstanceGameplayMode.<CameraParamsIter>d__20 <CameraParamsIter>d__ = new InstanceGameplayMode.<CameraParamsIter>d__20(-2);
 			<CameraParamsIter>d__.<>3__<>4__this = this;
 			return <CameraParamsIter>d__;
 		}
 
-		// Token: 0x04004DFB RID: 19963
+		// Token: 0x040053E0 RID: 21472
 		private Table __p;
 	}
 }

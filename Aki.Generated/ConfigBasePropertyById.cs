@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000E2 RID: 226
+	// Token: 0x020000F1 RID: 241
 	public class ConfigBasePropertyById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600054D RID: 1357 RVA: 0x00077991 File Offset: 0x00075B91
+		// Token: 0x060005A7 RID: 1447 RVA: 0x0007D2F5 File Offset: 0x0007B4F5
 		static ConfigBasePropertyById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBasePropertyById.CreateStaticDefaultValue), new Action(ConfigBasePropertyById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600054E RID: 1358 RVA: 0x000779B0 File Offset: 0x00075BB0
+		// Token: 0x060005A8 RID: 1448 RVA: 0x0007D314 File Offset: 0x0007B514
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBasePropertyById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600054F RID: 1359 RVA: 0x00077A2F File Offset: 0x00075C2F
+		// Token: 0x060005A9 RID: 1449 RVA: 0x0007D393 File Offset: 0x0007B593
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBasePropertyById.LogPair = null;
 			ConfigBasePropertyById.HandleId = 0;
 		}
 
-		// Token: 0x06000550 RID: 1360 RVA: 0x00077A3D File Offset: 0x00075C3D
+		// Token: 0x060005AA RID: 1450 RVA: 0x0007D3A1 File Offset: 0x0007B5A1
 		public static void Init()
 		{
 			ConfigBasePropertyById.HandleId = ConfigCommon.InitDataStatement(ConfigBasePropertyById.HandleId, "db_property.db", "select BinData from `BaseProperty` where Id=?");
 		}
 
-		// Token: 0x06000551 RID: 1361 RVA: 0x00077A58 File Offset: 0x00075C58
+		// Token: 0x060005AB RID: 1451 RVA: 0x0007D3BC File Offset: 0x0007B5BC
 		public static BaseProperty? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBasePropertyById.HandleId, ConfigBasePropertyById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BaseProperty?(rootAsBaseProperty);
 		}
 
-		// Token: 0x04000612 RID: 1554
+		// Token: 0x0400067B RID: 1659
 		private const string DB = "db_property.db";
 
-		// Token: 0x04000613 RID: 1555
+		// Token: 0x0400067C RID: 1660
 		private const string FILE = "s.属性.xlsx";
 
-		// Token: 0x04000614 RID: 1556
+		// Token: 0x0400067D RID: 1661
 		private const string TABLE = "BaseProperty";
 
-		// Token: 0x04000615 RID: 1557
+		// Token: 0x0400067E RID: 1662
 		private const string COMMAND = "select BinData from `BaseProperty` where Id=?";
 
-		// Token: 0x04000616 RID: 1558
+		// Token: 0x0400067F RID: 1663
 		private const string KEY_PREFIX = "BasePropertyById";
 
-		// Token: 0x04000617 RID: 1559
+		// Token: 0x04000680 RID: 1664
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000618 RID: 1560
+		// Token: 0x04000681 RID: 1665
 		private static int HandleId;
 	}
 }

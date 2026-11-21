@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001036 RID: 4150
+	// Token: 0x0200111E RID: 4382
 	public struct RogueWhiteCatReward : IFlatbufferObject
 	{
-		// Token: 0x170031E3 RID: 12771
-		// (get) Token: 0x0600C71D RID: 50973 RVA: 0x002F73FD File Offset: 0x002F55FD
+		// Token: 0x1700325E RID: 12894
+		// (get) Token: 0x0600CD67 RID: 52583 RVA: 0x00313271 File Offset: 0x00311471
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C71E RID: 50974 RVA: 0x002F740A File Offset: 0x002F560A
+		// Token: 0x0600CD68 RID: 52584 RVA: 0x0031327E File Offset: 0x0031147E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C71F RID: 50975 RVA: 0x002F7414 File Offset: 0x002F5614
+		// Token: 0x0600CD69 RID: 52585 RVA: 0x00313288 File Offset: 0x00311488
 		public static RogueWhiteCatReward GetRootAsRogueWhiteCatReward(ByteBuffer _bb)
 		{
 			return RogueWhiteCatReward.GetRootAsRogueWhiteCatReward(_bb, default(RogueWhiteCatReward));
 		}
 
-		// Token: 0x0600C720 RID: 50976 RVA: 0x002F7430 File Offset: 0x002F5630
+		// Token: 0x0600CD6A RID: 52586 RVA: 0x003132A4 File Offset: 0x003114A4
 		public static RogueWhiteCatReward GetRootAsRogueWhiteCatReward(ByteBuffer _bb, RogueWhiteCatReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C721 RID: 50977 RVA: 0x002F744D File Offset: 0x002F564D
+		// Token: 0x0600CD6B RID: 52587 RVA: 0x003132C1 File Offset: 0x003114C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C722 RID: 50978 RVA: 0x002F745C File Offset: 0x002F565C
+		// Token: 0x0600CD6C RID: 52588 RVA: 0x003132D0 File Offset: 0x003114D0
 		public RogueWhiteCatReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170031E4 RID: 12772
-		// (get) Token: 0x0600C723 RID: 50979 RVA: 0x002F746C File Offset: 0x002F566C
+		// Token: 0x1700325F RID: 12895
+		// (get) Token: 0x0600CD6D RID: 52589 RVA: 0x003132E0 File Offset: 0x003114E0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170031E5 RID: 12773
-		// (get) Token: 0x0600C724 RID: 50980 RVA: 0x002F74A8 File Offset: 0x002F56A8
+		// Token: 0x17003260 RID: 12896
+		// (get) Token: 0x0600CD6E RID: 52590 RVA: 0x0031331C File Offset: 0x0031151C
 		public int NeedEnergy
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170031E6 RID: 12774
-		// (get) Token: 0x0600C725 RID: 50981 RVA: 0x002F74E4 File Offset: 0x002F56E4
+		// Token: 0x17003261 RID: 12897
+		// (get) Token: 0x0600CD6F RID: 52591 RVA: 0x00313358 File Offset: 0x00311558
 		public int ConditionGroupId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170031E7 RID: 12775
-		// (get) Token: 0x0600C726 RID: 50982 RVA: 0x002F7520 File Offset: 0x002F5720
+		// Token: 0x17003262 RID: 12898
+		// (get) Token: 0x0600CD70 RID: 52592 RVA: 0x00313394 File Offset: 0x00311594
 		public int DropId
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005133 RID: 20787
+		// Token: 0x0400571B RID: 22299
 		private Table __p;
 	}
 }

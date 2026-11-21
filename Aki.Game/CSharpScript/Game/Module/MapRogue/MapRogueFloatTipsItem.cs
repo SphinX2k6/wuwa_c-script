@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055DF RID: 21983
+	// Token: 0x020045B5 RID: 17845
 	public class MapRogueFloatTipsItem : UiPanelBase
 	{
-		// Token: 0x0603801A RID: 229402 RVA: 0x00D43CC1 File Offset: 0x00D41EC1
+		// Token: 0x0602CF18 RID: 184088 RVA: 0x00C91A09 File Offset: 0x00C8FC09
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,20 +19,20 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603801B RID: 229403 RVA: 0x00D43CFA File Offset: 0x00D41EFA
+		// Token: 0x0602CF19 RID: 184089 RVA: 0x00C91A42 File Offset: 0x00C8FC42
 		protected override void OnStart()
 		{
 			base.GetItem(1).SetAnchorOffsetY(-80f);
 		}
 
-		// Token: 0x0603801C RID: 229404 RVA: 0x00D43D0D File Offset: 0x00D41F0D
+		// Token: 0x0602CF1A RID: 184090 RVA: 0x00C91A55 File Offset: 0x00C8FC55
 		[NullableContext(1)]
 		public void SetText(string textId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0401D6C0 RID: 120512
+		// Token: 0x0401814B RID: 98635
 		private const int TIPS_OFFSET_Y = -80;
 	}
 }

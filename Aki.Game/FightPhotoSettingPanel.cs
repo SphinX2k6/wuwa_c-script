@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025BD RID: 9661
+// Token: 0x02001AA8 RID: 6824
 public class FightPhotoSettingPanel : FightPhotoTabPanelBase
 {
-	// Token: 0x06013970 RID: 80240 RVA: 0x004E6054 File Offset: 0x004E4254
+	// Token: 0x06010E50 RID: 69200 RVA: 0x004F4C54 File Offset: 0x004F2E54
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class FightPhotoSettingPanel : FightPhotoTabPanelBase
 		};
 	}
 
-	// Token: 0x06013971 RID: 80241 RVA: 0x004E60C4 File Offset: 0x004E42C4
+	// Token: 0x06010E51 RID: 69201 RVA: 0x004F4CC4 File Offset: 0x004F2EC4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoSettingPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -31,7 +31,7 @@ public class FightPhotoSettingPanel : FightPhotoTabPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013972 RID: 80242 RVA: 0x004E6108 File Offset: 0x004E4308
+	// Token: 0x06010E52 RID: 69202 RVA: 0x004F4D08 File Offset: 0x004F2F08
 	private UniTask InitializeFightPhotoSetup()
 	{
 		FightPhotoSettingPanel.<InitializeFightPhotoSetup>d__4 <InitializeFightPhotoSetup>d__;
@@ -42,7 +42,7 @@ public class FightPhotoSettingPanel : FightPhotoTabPanelBase
 		return <InitializeFightPhotoSetup>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013973 RID: 80243 RVA: 0x004E614C File Offset: 0x004E434C
+	// Token: 0x06010E53 RID: 69203 RVA: 0x004F4D4C File Offset: 0x004F2F4C
 	[NullableContext(1)]
 	private UniTask NewSetupItem(int configId, int uiType, UUIItem contentItem, UUIItem itemDropDown, UUIItem itemSlider, UUIItem itemScroll)
 	{
@@ -60,7 +60,7 @@ public class FightPhotoSettingPanel : FightPhotoTabPanelBase
 		return <NewSetupItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013974 RID: 80244 RVA: 0x004E61C4 File Offset: 0x004E43C4
+	// Token: 0x06010E54 RID: 69204 RVA: 0x004F4DC4 File Offset: 0x004F2FC4
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -71,20 +71,20 @@ public class FightPhotoSettingPanel : FightPhotoTabPanelBase
 		this.SetupItemMap.Clear();
 	}
 
-	// Token: 0x040093D6 RID: 37846
+	// Token: 0x0400952C RID: 38188
 	[Nullable(1)]
 	private readonly Dictionary<int, FightPhotoSetupBase> SetupItemMap = new Dictionary<int, FightPhotoSetupBase>();
 
-	// Token: 0x02008BCB RID: 35787
+	// Token: 0x02007D53 RID: 32083
 	private enum EComponents
 	{
-		// Token: 0x0402D5FD RID: 185853
+		// Token: 0x04028912 RID: 166162
 		Content,
-		// Token: 0x0402D5FE RID: 185854
+		// Token: 0x04028913 RID: 166163
 		ItemDropDown,
-		// Token: 0x0402D5FF RID: 185855
+		// Token: 0x04028914 RID: 166164
 		ItemSlider,
-		// Token: 0x0402D600 RID: 185856
+		// Token: 0x04028915 RID: 166165
 		ItemScroll
 	}
 }

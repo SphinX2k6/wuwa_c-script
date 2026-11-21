@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007227 RID: 29223
+	// Token: 0x020062DC RID: 25308
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemTimeTrackControlComponent : EntityComponent
 	{
-		// Token: 0x060479C4 RID: 293316 RVA: 0x0124FA60 File Offset: 0x0124DC60
+		// Token: 0x0603D314 RID: 250644 RVA: 0x011A8824 File Offset: 0x011A6A24
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			TimelineTrackControlComponent timelineTrackControlComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemTimeTrackControlComponent>() as TimelineTrackControlComponent;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060479C5 RID: 293317 RVA: 0x0124FA8B File Offset: 0x0124DC8B
+		// Token: 0x0603D315 RID: 250645 RVA: 0x011A884F File Offset: 0x011A6A4F
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060479C6 RID: 293318 RVA: 0x0124FAC4 File Offset: 0x0124DCC4
+		// Token: 0x0603D316 RID: 250646 RVA: 0x011A8888 File Offset: 0x011A6A88
 		protected override void OnActivate()
 		{
 			PawnInteractNewComponent component = base.Entity.GetComponent<PawnInteractNewComponent>();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479C7 RID: 293319 RVA: 0x0124FBA0 File Offset: 0x0124DDA0
+		// Token: 0x0603D317 RID: 250647 RVA: 0x011A8964 File Offset: 0x011A6B64
 		protected override bool OnEnd()
 		{
 			TimerHandle performSeqPauseTimerHandle = this.PerformSeqPauseTimerHandle;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060479C8 RID: 293320 RVA: 0x0124FC4E File Offset: 0x0124DE4E
+		// Token: 0x0603D318 RID: 250648 RVA: 0x011A8A12 File Offset: 0x011A6C12
 		public ITimelineControlGroup GetTimeTrackControlConfig(int index)
 		{
 			if (this.TimeControlConfigGroup.Count < index)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.TimeControlConfigGroup[index];
 		}
 
-		// Token: 0x060479C9 RID: 293321 RVA: 0x0124FC6C File Offset: 0x0124DE6C
+		// Token: 0x0603D319 RID: 250649 RVA: 0x011A8A30 File Offset: 0x011A6C30
 		[NullableContext(1)]
 		private void AddDefaultInteractionOptions(PawnInteractController interactController, int index, ITimelineControlGroup config)
 		{
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			interactController.AddClientInteractOption(actionParam, condition, interactType, null, tidContent, new ECustomOptionType?(ECustomOptionType.None), null, isPlayerTurn);
 		}
 
-		// Token: 0x060479CA RID: 293322 RVA: 0x0124FCF0 File Offset: 0x0124DEF0
+		// Token: 0x0603D31A RID: 250650 RVA: 0x011A8AB4 File Offset: 0x011A6CB4
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return result;
 		}
 
-		// Token: 0x060479CB RID: 293323 RVA: 0x0124FDAC File Offset: 0x0124DFAC
+		// Token: 0x0603D31B RID: 250651 RVA: 0x011A8B70 File Offset: 0x011A6D70
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			FGameplayTag? gameplayTagById = GameplayTagUtils.GetGameplayTagById(SceneItemTimeTrackControlComponent.PerformSeqTagId);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479CC RID: 293324 RVA: 0x0124FE88 File Offset: 0x0124E088
+		// Token: 0x0603D31C RID: 250652 RVA: 0x011A8C4C File Offset: 0x011A6E4C
 		public void PlayActiveSeqForDuration(bool bReverseFromConfig, float durationSec)
 		{
 			FGameplayTag? performTag = GameplayTagUtils.GetGameplayTagById(SceneItemTimeTrackControlComponent.PerformSeqTagId);
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479CD RID: 293325 RVA: 0x0124FFE0 File Offset: 0x0124E1E0
+		// Token: 0x0603D31D RID: 250653 RVA: 0x011A8DA4 File Offset: 0x011A6FA4
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -232,81 +232,93 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemTimeTrackControlComponent sceneItemTimeTrackControlComponent = (SceneItemTimeTrackControlComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemTimeTrackControlComponent.ActorComp == null)
 			{
-				if (sceneItemTimeTrackControlComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemTimeTrackControlComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("StateComp"))
+			if (sceneItemTimeTrackControlComponent.TagComp == null)
 			{
-				if (sceneItemTimeTrackControlComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("TimeControlConfigGroup"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (sceneItemTimeTrackControlComponent.TimeControlConfigGroup == null)
-				{
-					this.TimeControlConfigGroup = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITimelineControlGroup>>(this.TimeControlConfigGroup), "TimeControlConfigGroup"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PerformSeqPauseTimerHandle"))
+			if (sceneItemTimeTrackControlComponent.StateComp == null)
 			{
-				if (sceneItemTimeTrackControlComponent.PerformSeqPauseTimerHandle == null)
-				{
-					this.PerformSeqPauseTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.PerformSeqPauseTimerHandle), "PerformSeqPauseTimerHandle"))
-				{
-					return false;
-				}
+				this.StateComp = null;
 			}
-			if (base.CanResetComponentProperty("PerformSeqLastProgress"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
-				this.PerformSeqLastProgress = sceneItemTimeTrackControlComponent.PerformSeqLastProgress;
+				return false;
 			}
+			if (sceneItemTimeTrackControlComponent.TimeControlConfigGroup == null)
+			{
+				this.TimeControlConfigGroup = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeControlConfigGroup), "TimeControlConfigGroup"))
+			{
+				return false;
+			}
+			if (sceneItemTimeTrackControlComponent.PerformSeqPauseTimerHandle == null)
+			{
+				this.PerformSeqPauseTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformSeqPauseTimerHandle), "PerformSeqPauseTimerHandle"))
+			{
+				return false;
+			}
+			this.PerformSeqLastProgress = sceneItemTimeTrackControlComponent.PerformSeqLastProgress;
 			return true;
 		}
 
-		// Token: 0x04025ADA RID: 154330
+		// Token: 0x170073DF RID: 29663
+		// (get) Token: 0x0603D31E RID: 250654 RVA: 0x011A8EA7 File Offset: 0x011A70A7
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073E0 RID: 29664
+		// (get) Token: 0x0603D31F RID: 250655 RVA: 0x011A8EAA File Offset: 0x011A70AA
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073E1 RID: 29665
+		// (get) Token: 0x0603D320 RID: 250656 RVA: 0x011A8EAD File Offset: 0x011A70AD
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020749 RID: 132937
 		private static readonly int PerformSeqTagId = GameplayTagDefine.EGameplayTagId["关卡.Common.表现.运行"];
 
-		// Token: 0x04025ADB RID: 154331
+		// Token: 0x0402074A RID: 132938
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025ADC RID: 154332
+		// Token: 0x0402074B RID: 132939
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04025ADD RID: 154333
+		// Token: 0x0402074C RID: 132940
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04025ADE RID: 154334
+		// Token: 0x0402074D RID: 132941
 		[Nullable(new byte[]
 		{
 			2,
@@ -314,25 +326,25 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private List<ITimelineControlGroup> TimeControlConfigGroup;
 
-		// Token: 0x04025ADF RID: 154335
+		// Token: 0x0402074E RID: 132942
 		private TimerHandle PerformSeqPauseTimerHandle;
 
-		// Token: 0x04025AE0 RID: 154336
+		// Token: 0x0402074F RID: 132943
 		private float PerformSeqLastProgress;
 
-		// Token: 0x0200CF77 RID: 53111
+		// Token: 0x0200BB0C RID: 47884
 		[NullableContext(0)]
 		public enum ESceneItemState
 		{
-			// Token: 0x0403E5B6 RID: 255414
+			// Token: 0x040398DC RID: 235740
 			Born,
-			// Token: 0x0403E5B7 RID: 255415
+			// Token: 0x040398DD RID: 235741
 			Normal,
-			// Token: 0x0403E5B8 RID: 255416
+			// Token: 0x040398DE RID: 235742
 			Active,
-			// Token: 0x0403E5B9 RID: 255417
+			// Token: 0x040398DF RID: 235743
 			Destroy,
-			// Token: 0x0403E5BA RID: 255418
+			// Token: 0x040398E0 RID: 235744
 			Custom
 		}
 	}

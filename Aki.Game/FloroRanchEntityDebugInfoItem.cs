@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B8F RID: 7055
+// Token: 0x0200104E RID: 4174
 public class FloroRanchEntityDebugInfoItem : UiPanelBase
 {
-	// Token: 0x0600D215 RID: 53781 RVA: 0x003030E0 File Offset: 0x003012E0
+	// Token: 0x0600A626 RID: 42534 RVA: 0x0030E1B8 File Offset: 0x0030C3B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,7 +20,7 @@ public class FloroRanchEntityDebugInfoItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D216 RID: 53782 RVA: 0x00303128 File Offset: 0x00301328
+	// Token: 0x0600A627 RID: 42535 RVA: 0x0030E200 File Offset: 0x0030C400
 	[NullableContext(2)]
 	public void Refresh(FloroRanchEntityBase entity)
 	{
@@ -34,10 +34,10 @@ public class FloroRanchEntityDebugInfoItem : UiPanelBase
 		text.SetText(entity.DebugUiShowInfo(), true);
 	}
 
-	// Token: 0x02008116 RID: 33046
+	// Token: 0x020072A4 RID: 29348
 	private class EComponent
 	{
-		// Token: 0x0402A224 RID: 172580
+		// Token: 0x04025558 RID: 152920
 		public const int InfoText = 0;
 	}
 }

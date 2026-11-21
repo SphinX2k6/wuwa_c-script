@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020017CC RID: 6092
+// Token: 0x02000C85 RID: 3205
 [NullableContext(1)]
 [Nullable(0)]
 public class CheckSkillIdSuccessCondition : BaseCheckCondition
 {
-	// Token: 0x0600B220 RID: 45600 RVA: 0x002843A5 File Offset: 0x002825A5
+	// Token: 0x06008609 RID: 34313 RVA: 0x0028EAB7 File Offset: 0x0028CCB7
 	public CheckSkillIdSuccessCondition(string paramsString, bool isSuccessNode) : base(paramsString, isSuccessNode)
 	{
 		this.Type = EComboTeachingCheckType.Update;
 		this.SuccessType = EComboTeachingSuccessCondition.SkillIdChecker;
 	}
 
-	// Token: 0x17000EEE RID: 3822
-	// (get) Token: 0x0600B221 RID: 45601 RVA: 0x002843C4 File Offset: 0x002825C4
-	// (set) Token: 0x0600B222 RID: 45602 RVA: 0x002843CC File Offset: 0x002825CC
+	// Token: 0x17000F11 RID: 3857
+	// (get) Token: 0x0600860A RID: 34314 RVA: 0x0028EAD6 File Offset: 0x0028CCD6
+	// (set) Token: 0x0600860B RID: 34315 RVA: 0x0028EADE File Offset: 0x0028CCDE
 	public override EComboTeachingCheckType Type { get; set; } = EComboTeachingCheckType.Update;
 
-	// Token: 0x17000EEF RID: 3823
-	// (get) Token: 0x0600B223 RID: 45603 RVA: 0x002843D5 File Offset: 0x002825D5
-	// (set) Token: 0x0600B224 RID: 45604 RVA: 0x002843DD File Offset: 0x002825DD
+	// Token: 0x17000F12 RID: 3858
+	// (get) Token: 0x0600860C RID: 34316 RVA: 0x0028EAE7 File Offset: 0x0028CCE7
+	// (set) Token: 0x0600860D RID: 34317 RVA: 0x0028EAEF File Offset: 0x0028CCEF
 	protected override EComboTeachingSuccessCondition SuccessType { get; set; }
 
-	// Token: 0x0600B225 RID: 45605 RVA: 0x002843E8 File Offset: 0x002825E8
+	// Token: 0x0600860E RID: 34318 RVA: 0x0028EAF8 File Offset: 0x0028CCF8
 	public override bool Check(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo paramex = null)
 	{
 		if (this.SuccessParamsArray == null)

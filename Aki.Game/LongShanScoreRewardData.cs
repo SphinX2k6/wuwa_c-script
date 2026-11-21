@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x020012A3 RID: 4771
+// Token: 0x02000757 RID: 1879
 [NullableContext(1)]
 [Nullable(0)]
 public class LongShanScoreRewardData
 {
-	// Token: 0x060082E2 RID: 33506 RVA: 0x001BCF90 File Offset: 0x001BB190
+	// Token: 0x06005679 RID: 22137 RVA: 0x001C5D20 File Offset: 0x001C3F20
 	public List<TItem> GetPreviewReward()
 	{
 		if (this.Rewards.Count == 0)
@@ -24,7 +24,7 @@ public class LongShanScoreRewardData
 		return this.Rewards;
 	}
 
-	// Token: 0x060082E3 RID: 33507 RVA: 0x001BCFD8 File Offset: 0x001BB1D8
+	// Token: 0x0600567A RID: 22138 RVA: 0x001C5D68 File Offset: 0x001C3F68
 	public EActivityTaskState GetState()
 	{
 		if (this.Achieved)
@@ -42,22 +42,22 @@ public class LongShanScoreRewardData
 		return EActivityTaskState.Active;
 	}
 
-	// Token: 0x04003B00 RID: 15104
+	// Token: 0x04003B98 RID: 15256
 	public int Id;
 
-	// Token: 0x04003B01 RID: 15105
+	// Token: 0x04003B99 RID: 15257
 	public int Goal;
 
-	// Token: 0x04003B02 RID: 15106
+	// Token: 0x04003B9A RID: 15258
 	public bool Achieved;
 
-	// Token: 0x04003B03 RID: 15107
+	// Token: 0x04003B9B RID: 15259
 	public int DropId;
 
-	// Token: 0x04003B04 RID: 15108
+	// Token: 0x04003B9C RID: 15260
 	private List<TItem> Rewards = new List<TItem>();
 
-	// Token: 0x04003B05 RID: 15109
+	// Token: 0x04003B9D RID: 15261
 	[Nullable(2)]
 	public Func<int> GetCurrentScore;
 }

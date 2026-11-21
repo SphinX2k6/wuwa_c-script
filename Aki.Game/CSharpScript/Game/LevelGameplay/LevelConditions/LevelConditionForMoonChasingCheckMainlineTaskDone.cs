@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D2F RID: 27951
+	// Token: 0x02005EAC RID: 24236
 	public class LevelConditionForMoonChasingCheckMainlineTaskDone : LevelConditionBase
 	{
-		// Token: 0x06044702 RID: 280322 RVA: 0x010E10B8 File Offset: 0x010DF2B8
+		// Token: 0x0603A862 RID: 239714 RVA: 0x0108B244 File Offset: 0x01089444
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

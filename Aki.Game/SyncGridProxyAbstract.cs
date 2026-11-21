@@ -4,51 +4,51 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002CD5 RID: 11477
+// Token: 0x0200222E RID: 8750
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class SyncGridProxyAbstract<[Nullable(2)] TData> : UiPanelBase, ISyncGridProxy<TData>, ISyncGridProxy
 {
-	// Token: 0x17002076 RID: 8310
-	// (get) Token: 0x0601813B RID: 98619 RVA: 0x0061F27F File Offset: 0x0061D47F
-	// (set) Token: 0x0601813C RID: 98620 RVA: 0x0061F287 File Offset: 0x0061D487
+	// Token: 0x170020C9 RID: 8393
+	// (get) Token: 0x060159B8 RID: 88504 RVA: 0x00644E37 File Offset: 0x00643037
+	// (set) Token: 0x060159B9 RID: 88505 RVA: 0x00644E3F File Offset: 0x0064303F
 	public int GridIndex { get; set; }
 
-	// Token: 0x0601813D RID: 98621 RVA: 0x0061F290 File Offset: 0x0061D490
+	// Token: 0x060159BA RID: 88506 RVA: 0x00644E48 File Offset: 0x00643048
 	public virtual void Refresh(TData data)
 	{
 	}
 
-	// Token: 0x0601813E RID: 98622 RVA: 0x0061F292 File Offset: 0x0061D492
+	// Token: 0x060159BB RID: 88507 RVA: 0x00644E4A File Offset: 0x0064304A
 	public virtual void Clear()
 	{
 	}
 
-	// Token: 0x0601813F RID: 98623 RVA: 0x0061F294 File Offset: 0x0061D494
+	// Token: 0x060159BC RID: 88508 RVA: 0x00644E4C File Offset: 0x0064304C
 	public void CreateByActor(AActor actor)
 	{
 		base.CreateByActor(actor, null);
 	}
 
-	// Token: 0x06018140 RID: 98624 RVA: 0x0061F29E File Offset: 0x0061D49E
+	// Token: 0x060159BD RID: 88509 RVA: 0x00644E56 File Offset: 0x00643056
 	public void CreateThenShowByActor(AActor actor)
 	{
 		base.CreateThenShowByActor(actor, null);
 	}
 
-	// Token: 0x06018141 RID: 98625 RVA: 0x0061F2A8 File Offset: 0x0061D4A8
+	// Token: 0x060159BE RID: 88510 RVA: 0x00644E60 File Offset: 0x00643060
 	protected override UniTask OnCreateAsync()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x06018142 RID: 98626 RVA: 0x0061F2AF File Offset: 0x0061D4AF
+	// Token: 0x060159BF RID: 88511 RVA: 0x00644E67 File Offset: 0x00643067
 	protected override UniTask OnBeforeStartAsync()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x06018143 RID: 98627 RVA: 0x0061F2B6 File Offset: 0x0061D4B6
+	// Token: 0x060159C0 RID: 88512 RVA: 0x00644E6E File Offset: 0x0064306E
 	void ISyncGridProxy.Refresh(object data)
 	{
 		this.Refresh((TData)((object)data));

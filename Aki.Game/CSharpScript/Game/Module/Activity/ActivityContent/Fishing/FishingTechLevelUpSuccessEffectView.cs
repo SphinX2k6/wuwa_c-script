@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200662A RID: 26154
+	// Token: 0x020055A8 RID: 21928
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingTechLevelUpSuccessEffectView : UiViewBase
 	{
-		// Token: 0x06041908 RID: 268552 RVA: 0x00FE6A17 File Offset: 0x00FE4C17
+		// Token: 0x060365CD RID: 222669 RVA: 0x00F2DACC File Offset: 0x00F2BCCC
 		public FishingTechLevelUpSuccessEffectView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06041909 RID: 268553 RVA: 0x00FE6A20 File Offset: 0x00FE4C20
+		// Token: 0x060365CE RID: 222670 RVA: 0x00F2DAD8 File Offset: 0x00F2BCD8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604190A RID: 268554 RVA: 0x00FE6B6D File Offset: 0x00FE4D6D
+		// Token: 0x060365CF RID: 222671 RVA: 0x00F2DC25 File Offset: 0x00F2BE25
 		protected override void OnBeforeCreate()
 		{
 			if (this.OpenParam == null)
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SetAudio();
 		}
 
-		// Token: 0x0604190B RID: 268555 RVA: 0x00FE6B90 File Offset: 0x00FE4D90
+		// Token: 0x060365D0 RID: 222672 RVA: 0x00F2DC48 File Offset: 0x00F2BE48
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(1);
 			this.EffectTextLayout = new GenericScrollViewNew<SuccessDescriptionItem, SingleText>(base.GetScrollViewWithScrollbar(0), new Func<SuccessDescriptionItem>(this.CreateTextItem), item.GetOwner() as AUIBaseActor, false, null);
 		}
 
-		// Token: 0x0604190C RID: 268556 RVA: 0x00FE6BD0 File Offset: 0x00FE4DD0
+		// Token: 0x060365D1 RID: 222673 RVA: 0x00F2DC88 File Offset: 0x00F2BE88
 		protected override void OnBeforeShow()
 		{
 			this.SetTitle();
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SetTipsText();
 		}
 
-		// Token: 0x0604190D RID: 268557 RVA: 0x00FE6BE4 File Offset: 0x00FE4DE4
+		// Token: 0x060365D2 RID: 222674 RVA: 0x00F2DC9C File Offset: 0x00F2BE9C
 		private void SetAudio()
 		{
 			LevelUpSuccessEffectData data = this.Data;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604190E RID: 268558 RVA: 0x00FE6C3C File Offset: 0x00FE4E3C
+		// Token: 0x060365D3 RID: 222675 RVA: 0x00F2DCF4 File Offset: 0x00F2BEF4
 		private void OnClickButton()
 		{
 			LevelUpSuccessEffectData data = this.Data;
@@ -102,13 +102,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0604190F RID: 268559 RVA: 0x00FE6C6C File Offset: 0x00FE4E6C
+		// Token: 0x060365D4 RID: 222676 RVA: 0x00F2DD24 File Offset: 0x00F2BF24
 		private SuccessDescriptionItem CreateTextItem()
 		{
 			return new SuccessDescriptionItem();
 		}
 
-		// Token: 0x06041910 RID: 268560 RVA: 0x00FE6C74 File Offset: 0x00FE4E74
+		// Token: 0x060365D5 RID: 222677 RVA: 0x00F2DD2C File Offset: 0x00F2BF2C
 		private void SetTipsText()
 		{
 			LevelUpSuccessEffectData data = this.Data;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(3).ShowTextNew(key);
 		}
 
-		// Token: 0x06041911 RID: 268561 RVA: 0x00FE6CAC File Offset: 0x00FE4EAC
+		// Token: 0x060365D6 RID: 222678 RVA: 0x00F2DD64 File Offset: 0x00F2BF64
 		private void SetTitle()
 		{
 			LevelUpSuccessEffectData data = this.Data;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(2).ShowTextNew(key);
 		}
 
-		// Token: 0x06041912 RID: 268562 RVA: 0x00FE6CE4 File Offset: 0x00FE4EE4
+		// Token: 0x060365D7 RID: 222679 RVA: 0x00F2DD9C File Offset: 0x00F2BF9C
 		private void SetViewContent()
 		{
 			if (this.EffectTextLayout != null)
@@ -141,32 +141,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x040221CA RID: 139722
+		// Token: 0x0401CAFB RID: 117499
 		private LevelUpSuccessEffectData Data;
 
-		// Token: 0x040221CB RID: 139723
+		// Token: 0x0401CAFC RID: 117500
 		private GenericScrollViewNew<SuccessDescriptionItem, SingleText> EffectTextLayout;
 
-		// Token: 0x0200C844 RID: 51268
+		// Token: 0x0200B226 RID: 45606
 		[NullableContext(0)]
 		private class ERoleSuccessEffectNode
 		{
-			// Token: 0x0403C7F0 RID: 247792
+			// Token: 0x04037135 RID: 225589
 			public const int TextScrollLayout = 0;
 
-			// Token: 0x0403C7F1 RID: 247793
+			// Token: 0x04037136 RID: 225590
 			public const int TextItem = 1;
 
-			// Token: 0x0403C7F2 RID: 247794
+			// Token: 0x04037137 RID: 225591
 			public const int Title = 2;
 
-			// Token: 0x0403C7F3 RID: 247795
+			// Token: 0x04037138 RID: 225592
 			public const int TipsText = 3;
 
-			// Token: 0x0403C7F4 RID: 247796
+			// Token: 0x04037139 RID: 225593
 			public const int TipsButton = 4;
 
-			// Token: 0x0403C7F5 RID: 247797
+			// Token: 0x0403713A RID: 225594
 			public const int TipsButton2 = 5;
 		}
 	}

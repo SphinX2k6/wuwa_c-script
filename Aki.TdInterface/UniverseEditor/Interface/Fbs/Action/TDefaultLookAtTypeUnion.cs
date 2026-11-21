@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076A5 RID: 30373
+	// Token: 0x02007EB0 RID: 32432
 	public class TDefaultLookAtTypeUnion
 	{
-		// Token: 0x1700E607 RID: 58887
-		// (get) Token: 0x0603742E RID: 226350 RVA: 0x0077D304 File Offset: 0x0077B504
-		// (set) Token: 0x0603742F RID: 226351 RVA: 0x0077D30C File Offset: 0x0077B50C
+		// Token: 0x1700F243 RID: 62019
+		// (get) Token: 0x0603A8D1 RID: 239825 RVA: 0x007E1458 File Offset: 0x007DF658
+		// (set) Token: 0x0603A8D2 RID: 239826 RVA: 0x007E1460 File Offset: 0x007DF660
 		public TDefaultLookAtType Type { get; set; }
 
-		// Token: 0x1700E608 RID: 58888
-		// (get) Token: 0x06037430 RID: 226352 RVA: 0x0077D315 File Offset: 0x0077B515
-		// (set) Token: 0x06037431 RID: 226353 RVA: 0x0077D31D File Offset: 0x0077B51D
+		// Token: 0x1700F244 RID: 62020
+		// (get) Token: 0x0603A8D3 RID: 239827 RVA: 0x007E1469 File Offset: 0x007DF669
+		// (set) Token: 0x0603A8D4 RID: 239828 RVA: 0x007E1471 File Offset: 0x007DF671
 		public object Value { get; set; }
 
-		// Token: 0x06037432 RID: 226354 RVA: 0x0077D326 File Offset: 0x0077B526
+		// Token: 0x0603A8D5 RID: 239829 RVA: 0x007E147A File Offset: 0x007DF67A
 		public TDefaultLookAtTypeUnion()
 		{
 			this.Type = TDefaultLookAtType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037433 RID: 226355 RVA: 0x0077D33C File Offset: 0x0077B53C
+		// Token: 0x0603A8D6 RID: 239830 RVA: 0x007E1490 File Offset: 0x007DF690
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037434 RID: 226356 RVA: 0x0077D34E File Offset: 0x0077B54E
+		// Token: 0x0603A8D7 RID: 239831 RVA: 0x007E14A2 File Offset: 0x007DF6A2
 		public ILookAtBubbleEntityT AsILookAtBubbleEntity()
 		{
 			return this.As<ILookAtBubbleEntityT>();
 		}
 
-		// Token: 0x06037435 RID: 226357 RVA: 0x0077D356 File Offset: 0x0077B556
+		// Token: 0x0603A8D8 RID: 239832 RVA: 0x007E14AA File Offset: 0x007DF6AA
 		public static TDefaultLookAtTypeUnion FromILookAtBubbleEntity(ILookAtBubbleEntityT _ilookatbubbleentity)
 		{
 			return new TDefaultLookAtTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037436 RID: 226358 RVA: 0x0077D36B File Offset: 0x0077B56B
+		// Token: 0x0603A8D9 RID: 239833 RVA: 0x007E14BF File Offset: 0x007DF6BF
 		public ILookAtTargetT AsILookAtTarget()
 		{
 			return this.As<ILookAtTargetT>();
 		}
 
-		// Token: 0x06037437 RID: 226359 RVA: 0x0077D373 File Offset: 0x0077B573
+		// Token: 0x0603A8DA RID: 239834 RVA: 0x007E14C7 File Offset: 0x007DF6C7
 		public static TDefaultLookAtTypeUnion FromILookAtTarget(ILookAtTargetT _ilookattarget)
 		{
 			return new TDefaultLookAtTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037438 RID: 226360 RVA: 0x0077D388 File Offset: 0x0077B588
+		// Token: 0x0603A8DB RID: 239835 RVA: 0x007E14DC File Offset: 0x007DF6DC
 		public static int Pack(FlatBufferBuilder builder, TDefaultLookAtTypeUnion _o)
 		{
 			TDefaultLookAtType type = _o.Type;

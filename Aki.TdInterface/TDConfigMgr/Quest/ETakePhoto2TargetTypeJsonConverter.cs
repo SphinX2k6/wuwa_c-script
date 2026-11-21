@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200129D RID: 4765
+	// Token: 0x020013E3 RID: 5091
 	public class ETakePhoto2TargetTypeJsonConverter : JsonConverter<ETakePhoto2TargetType>
 	{
-		// Token: 0x06006B6B RID: 27499 RVA: 0x001021BC File Offset: 0x001003BC
+		// Token: 0x060071D9 RID: 29145 RVA: 0x00110184 File Offset: 0x0010E384
 		public override ETakePhoto2TargetType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ETakePhoto2TargetTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B6C RID: 27500 RVA: 0x001021E0 File Offset: 0x001003E0
+		// Token: 0x060071DA RID: 29146 RVA: 0x001101A8 File Offset: 0x0010E3A8
 		public override void Write(Utf8JsonWriter writer, ETakePhoto2TargetType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

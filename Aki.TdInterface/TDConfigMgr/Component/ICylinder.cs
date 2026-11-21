@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002A5 RID: 677
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002EA RID: 746
 	public class ICylinder
 	{
-		// Token: 0x06000CA3 RID: 3235 RVA: 0x00030860 File Offset: 0x0002EA60
+		// Token: 0x06000DC7 RID: 3527 RVA: 0x00033650 File Offset: 0x00031850
 		private ICylinder_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000CA4 RID: 3236 RVA: 0x00030898 File Offset: 0x0002EA98
+		// Token: 0x06000DC8 RID: 3528 RVA: 0x00033688 File Offset: 0x00031888
 		public static ICylinder Create([Nullable(2)] ICylinder instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CA5 RID: 3237 RVA: 0x000308AB File Offset: 0x0002EAAB
+		// Token: 0x06000DC9 RID: 3529 RVA: 0x0003369B File Offset: 0x0003189B
 		public static ICylinder CreateFromSetValue([Nullable(2)] ICylinder_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CA6 RID: 3238 RVA: 0x000308BE File Offset: 0x0002EABE
+		// Token: 0x06000DCA RID: 3530 RVA: 0x000336AE File Offset: 0x000318AE
 		public ICylinder_SetValue ToSetValue()
 		{
 			return new ICylinder_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003B7 RID: 951
-		// (get) Token: 0x06000CA7 RID: 3239 RVA: 0x000308F5 File Offset: 0x0002EAF5
-		// (set) Token: 0x06000CA8 RID: 3240 RVA: 0x00030920 File Offset: 0x0002EB20
+		// Token: 0x17000401 RID: 1025
+		// (get) Token: 0x06000DCB RID: 3531 RVA: 0x000336E5 File Offset: 0x000318E5
+		// (set) Token: 0x06000DCC RID: 3532 RVA: 0x00033710 File Offset: 0x00031910
 		public virtual bool IsUse
 		{
 			get
@@ -82,9 +80,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003B8 RID: 952
-		// (get) Token: 0x06000CA9 RID: 3241 RVA: 0x0003092E File Offset: 0x0002EB2E
-		// (set) Token: 0x06000CAA RID: 3242 RVA: 0x00030959 File Offset: 0x0002EB59
+		// Token: 0x17000402 RID: 1026
+		// (get) Token: 0x06000DCD RID: 3533 RVA: 0x0003371E File Offset: 0x0003191E
+		// (set) Token: 0x06000DCE RID: 3534 RVA: 0x00033749 File Offset: 0x00031949
 		public virtual int Radius
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003B9 RID: 953
-		// (get) Token: 0x06000CAB RID: 3243 RVA: 0x00030967 File Offset: 0x0002EB67
-		// (set) Token: 0x06000CAC RID: 3244 RVA: 0x00030992 File Offset: 0x0002EB92
+		// Token: 0x17000403 RID: 1027
+		// (get) Token: 0x06000DCF RID: 3535 RVA: 0x00033757 File Offset: 0x00031957
+		// (set) Token: 0x06000DD0 RID: 3536 RVA: 0x00033782 File Offset: 0x00031982
 		public virtual int Height
 		{
 			get
@@ -128,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003BA RID: 954
-		// (get) Token: 0x06000CAD RID: 3245 RVA: 0x000309A0 File Offset: 0x0002EBA0
-		// (set) Token: 0x06000CAE RID: 3246 RVA: 0x00030A01 File Offset: 0x0002EC01
+		// Token: 0x17000404 RID: 1028
+		// (get) Token: 0x06000DD1 RID: 3537 RVA: 0x00033790 File Offset: 0x00031990
+		// (set) Token: 0x06000DD2 RID: 3538 RVA: 0x000337F1 File Offset: 0x000319F1
 		public virtual PosA CylinderPos
 		{
 			get
@@ -158,18 +156,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BC2 RID: 3010
+		// Token: 0x04000CA7 RID: 3239
 		[Nullable(2)]
 		protected ICylinder FbInstance;
 
-		// Token: 0x04000BC3 RID: 3011
+		// Token: 0x04000CA8 RID: 3240
 		[Nullable(2)]
 		protected ICylinder_SetValue PocoInterface;
 
-		// Token: 0x04000BC4 RID: 3012
+		// Token: 0x04000CA9 RID: 3241
 		private PosA _CylinderPosCache;
 
-		// Token: 0x04000BC5 RID: 3013
+		// Token: 0x04000CAA RID: 3242
 		private bool _CylinderPosInited;
 	}
 }

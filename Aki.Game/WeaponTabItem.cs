@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020019C0 RID: 6592
+// Token: 0x02000E7E RID: 3710
 public class WeaponTabItem : CommonTabItem, ITabViewRegister
 {
-	// Token: 0x0600C093 RID: 49299 RVA: 0x002B638F File Offset: 0x002B458F
+	// Token: 0x0600949D RID: 38045 RVA: 0x002C131F File Offset: 0x002BF51F
 	[NullableContext(1)]
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{

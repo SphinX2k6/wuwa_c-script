@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200407C RID: 16508
+	// Token: 0x020044BD RID: 17597
 	public struct IRecallConditionByGroup : IFlatbufferObject
 	{
-		// Token: 0x1700747D RID: 29821
-		// (get) Token: 0x0601800D RID: 98317 RVA: 0x003769FA File Offset: 0x00374BFA
+		// Token: 0x17007A7F RID: 31359
+		// (get) Token: 0x060196A6 RID: 104102 RVA: 0x003A0832 File Offset: 0x0039EA32
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601800E RID: 98318 RVA: 0x00376A07 File Offset: 0x00374C07
+		// Token: 0x060196A7 RID: 104103 RVA: 0x003A083F File Offset: 0x0039EA3F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601800F RID: 98319 RVA: 0x00376A10 File Offset: 0x00374C10
+		// Token: 0x060196A8 RID: 104104 RVA: 0x003A0848 File Offset: 0x0039EA48
 		public static IRecallConditionByGroup GetRootAsIRecallConditionByGroup(ByteBuffer _bb)
 		{
 			return IRecallConditionByGroup.GetRootAsIRecallConditionByGroup(_bb, default(IRecallConditionByGroup));
 		}
 
-		// Token: 0x06018010 RID: 98320 RVA: 0x00376A2C File Offset: 0x00374C2C
+		// Token: 0x060196A9 RID: 104105 RVA: 0x003A0864 File Offset: 0x0039EA64
 		public static IRecallConditionByGroup GetRootAsIRecallConditionByGroup(ByteBuffer _bb, IRecallConditionByGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018011 RID: 98321 RVA: 0x00376A49 File Offset: 0x00374C49
+		// Token: 0x060196AA RID: 104106 RVA: 0x003A0881 File Offset: 0x0039EA81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018012 RID: 98322 RVA: 0x00376A58 File Offset: 0x00374C58
+		// Token: 0x060196AB RID: 104107 RVA: 0x003A0890 File Offset: 0x0039EA90
 		public IRecallConditionByGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700747E RID: 29822
-		// (get) Token: 0x06018013 RID: 98323 RVA: 0x00376A68 File Offset: 0x00374C68
+		// Token: 0x17007A80 RID: 31360
+		// (get) Token: 0x060196AC RID: 104108 RVA: 0x003A08A0 File Offset: 0x0039EAA0
 		public ERecallConditionType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700747F RID: 29823
-		// (get) Token: 0x06018014 RID: 98324 RVA: 0x00376AA4 File Offset: 0x00374CA4
+		// Token: 0x17007A81 RID: 31361
+		// (get) Token: 0x060196AD RID: 104109 RVA: 0x003A08DC File Offset: 0x0039EADC
 		public ERecallOperation Operation
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018015 RID: 98325 RVA: 0x00376AE0 File Offset: 0x00374CE0
+		// Token: 0x060196AE RID: 104110 RVA: 0x003A0918 File Offset: 0x0039EB18
 		public int GroupIds(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007480 RID: 29824
-		// (get) Token: 0x06018016 RID: 98326 RVA: 0x00376B20 File Offset: 0x00374D20
+		// Token: 0x17007A82 RID: 31362
+		// (get) Token: 0x060196AF RID: 104111 RVA: 0x003A0958 File Offset: 0x0039EB58
 		public int GroupIdsLength
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018017 RID: 98327 RVA: 0x00376B4B File Offset: 0x00374D4B
+		// Token: 0x060196B0 RID: 104112 RVA: 0x003A0983 File Offset: 0x0039EB83
 		public Span<int> GetGroupIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06018018 RID: 98328 RVA: 0x00376B5A File Offset: 0x00374D5A
+		// Token: 0x060196B1 RID: 104113 RVA: 0x003A0992 File Offset: 0x0039EB92
 		public int[] GetGroupIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(8);
 		}
 
-		// Token: 0x06018019 RID: 98329 RVA: 0x00376B68 File Offset: 0x00374D68
+		// Token: 0x060196B2 RID: 104114 RVA: 0x003A09A0 File Offset: 0x0039EBA0
 		public static Offset<IRecallConditionByGroup> CreateIRecallConditionByGroup(FlatBufferBuilder builder, ERecallConditionType Type = ERecallConditionType.ByEntityType, ERecallOperation Operation = ERecallOperation.Include, VectorOffset GroupIdsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -126,31 +126,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRecallConditionByGroup.EndIRecallConditionByGroup(builder);
 		}
 
-		// Token: 0x0601801A RID: 98330 RVA: 0x00376B8C File Offset: 0x00374D8C
+		// Token: 0x060196B3 RID: 104115 RVA: 0x003A09C4 File Offset: 0x0039EBC4
 		public static void StartIRecallConditionByGroup(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601801B RID: 98331 RVA: 0x00376B95 File Offset: 0x00374D95
+		// Token: 0x060196B4 RID: 104116 RVA: 0x003A09CD File Offset: 0x0039EBCD
 		public static void AddType(FlatBufferBuilder builder, ERecallConditionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601801C RID: 98332 RVA: 0x00376BA0 File Offset: 0x00374DA0
+		// Token: 0x060196B5 RID: 104117 RVA: 0x003A09D8 File Offset: 0x0039EBD8
 		public static void AddOperation(FlatBufferBuilder builder, ERecallOperation operation)
 		{
 			builder.AddByte(1, (byte)operation, 0);
 		}
 
-		// Token: 0x0601801D RID: 98333 RVA: 0x00376BAB File Offset: 0x00374DAB
+		// Token: 0x060196B6 RID: 104118 RVA: 0x003A09E3 File Offset: 0x0039EBE3
 		public static void AddGroupIds(FlatBufferBuilder builder, VectorOffset groupIdsOffset)
 		{
 			builder.AddOffset(2, groupIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0601801E RID: 98334 RVA: 0x00376BBC File Offset: 0x00374DBC
+		// Token: 0x060196B7 RID: 104119 RVA: 0x003A09F4 File Offset: 0x0039EBF4
 		public static VectorOffset CreateGroupIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601801F RID: 98335 RVA: 0x00376BF3 File Offset: 0x00374DF3
+		// Token: 0x060196B8 RID: 104120 RVA: 0x003A0A2B File Offset: 0x0039EC2B
 		public static VectorOffset CreateGroupIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018020 RID: 98336 RVA: 0x00376C0D File Offset: 0x00374E0D
+		// Token: 0x060196B9 RID: 104121 RVA: 0x003A0A45 File Offset: 0x0039EC45
 		public static VectorOffset CreateGroupIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018021 RID: 98337 RVA: 0x00376C2B File Offset: 0x00374E2B
+		// Token: 0x060196BA RID: 104122 RVA: 0x003A0A63 File Offset: 0x0039EC63
 		public static VectorOffset CreateGroupIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -185,19 +185,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018022 RID: 98338 RVA: 0x00376C44 File Offset: 0x00374E44
+		// Token: 0x060196BB RID: 104123 RVA: 0x003A0A7C File Offset: 0x0039EC7C
 		public static void StartGroupIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06018023 RID: 98339 RVA: 0x00376C4F File Offset: 0x00374E4F
+		// Token: 0x060196BC RID: 104124 RVA: 0x003A0A87 File Offset: 0x0039EC87
 		public static Offset<IRecallConditionByGroup> EndIRecallConditionByGroup(FlatBufferBuilder builder)
 		{
 			return new Offset<IRecallConditionByGroup>(builder.EndTable());
 		}
 
-		// Token: 0x06018024 RID: 98340 RVA: 0x00376C5C File Offset: 0x00374E5C
+		// Token: 0x060196BD RID: 104125 RVA: 0x003A0A94 File Offset: 0x0039EC94
 		public IRecallConditionByGroupT UnPack()
 		{
 			IRecallConditionByGroupT recallConditionByGroupT = new IRecallConditionByGroupT();
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return recallConditionByGroupT;
 		}
 
-		// Token: 0x06018025 RID: 98341 RVA: 0x00376C78 File Offset: 0x00374E78
+		// Token: 0x060196BE RID: 104126 RVA: 0x003A0AB0 File Offset: 0x0039ECB0
 		public void UnPackTo(IRecallConditionByGroupT _o)
 		{
 			_o.Type = this.Type;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018026 RID: 98342 RVA: 0x00376CCC File Offset: 0x00374ECC
+		// Token: 0x060196BF RID: 104127 RVA: 0x003A0B04 File Offset: 0x0039ED04
 		public static Offset<IRecallConditionByGroup> Pack(FlatBufferBuilder builder, IRecallConditionByGroupT _o)
 		{
 			if (_o == null)
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRecallConditionByGroup.CreateIRecallConditionByGroup(builder, _o.Type, _o.Operation, groupIdsOffset);
 		}
 
-		// Token: 0x0400BBFF RID: 48127
+		// Token: 0x0400C5E6 RID: 50662
 		private Table __p;
 	}
 }

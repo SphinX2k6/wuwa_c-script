@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024E9 RID: 9449
+// Token: 0x020019D0 RID: 6608
 public class VisionNewRecommendVisionItem : UiPanelBase
 {
-	// Token: 0x06013008 RID: 77832 RVA: 0x004B4B78 File Offset: 0x004B2D78
+	// Token: 0x060104C7 RID: 66759 RVA: 0x004C2824 File Offset: 0x004C0A24
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class VisionNewRecommendVisionItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013009 RID: 77833 RVA: 0x004B4D48 File Offset: 0x004B2F48
+	// Token: 0x060104C8 RID: 66760 RVA: 0x004C29F4 File Offset: 0x004C0BF4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionNewRecommendVisionItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class VisionNewRecommendVisionItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601300A RID: 77834 RVA: 0x004B4D8C File Offset: 0x004B2F8C
+	// Token: 0x060104C9 RID: 66761 RVA: 0x004C2A38 File Offset: 0x004C0C38
 	[NullableContext(1)]
 	public void SetData(VisionNewRecommendVisionItemData data)
 	{
@@ -61,13 +61,13 @@ public class VisionNewRecommendVisionItem : UiPanelBase
 		this.VisionFetterSuitItem.Update(new PhantomFetterGroup?(fetterGroupById));
 	}
 
-	// Token: 0x0601300B RID: 77835 RVA: 0x004B4E08 File Offset: 0x004B3008
+	// Token: 0x060104CA RID: 66762 RVA: 0x004C2AB4 File Offset: 0x004C0CB4
 	public void SetToggleState(EToggleState state, bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(state, fireEvent, false, false);
 	}
 
-	// Token: 0x0601300C RID: 77836 RVA: 0x004B4E1A File Offset: 0x004B301A
+	// Token: 0x060104CB RID: 66763 RVA: 0x004C2AC6 File Offset: 0x004C0CC6
 	private void OnToggleClick(EToggleState _)
 	{
 		Action onSelectedCallback = this.OnSelectedCallback;
@@ -78,52 +78,52 @@ public class VisionNewRecommendVisionItem : UiPanelBase
 		onSelectedCallback();
 	}
 
-	// Token: 0x04008F06 RID: 36614
+	// Token: 0x04009050 RID: 36944
 	[Nullable(2)]
 	public Action OnSelectedCallback;
 
-	// Token: 0x04008F07 RID: 36615
+	// Token: 0x04009051 RID: 36945
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02008A7C RID: 35452
+	// Token: 0x02007C04 RID: 31748
 	private enum EComponent
 	{
-		// Token: 0x0402CF81 RID: 184193
+		// Token: 0x04028299 RID: 164505
 		ToggleItem,
-		// Token: 0x0402CF82 RID: 184194
+		// Token: 0x0402829A RID: 164506
 		CircleItem,
-		// Token: 0x0402CF83 RID: 184195
+		// Token: 0x0402829B RID: 164507
 		CircleItemTexture,
-		// Token: 0x0402CF84 RID: 184196
+		// Token: 0x0402829C RID: 164508
 		QualitySprite,
-		// Token: 0x0402CF85 RID: 184197
+		// Token: 0x0402829D RID: 164509
 		CostItem,
-		// Token: 0x0402CF86 RID: 184198
+		// Token: 0x0402829E RID: 164510
 		CostNumText,
-		// Token: 0x0402CF87 RID: 184199
+		// Token: 0x0402829F RID: 164511
 		PlusItem,
-		// Token: 0x0402CF88 RID: 184200
+		// Token: 0x040282A0 RID: 164512
 		SuitElementItem,
-		// Token: 0x0402CF89 RID: 184201
+		// Token: 0x040282A1 RID: 164513
 		RedItem,
-		// Token: 0x0402CF8A RID: 184202
+		// Token: 0x040282A2 RID: 164514
 		CircleTextureBlackBg,
-		// Token: 0x0402CF8B RID: 184203
+		// Token: 0x040282A3 RID: 164515
 		AddIconItem,
-		// Token: 0x0402CF8C RID: 184204
+		// Token: 0x040282A4 RID: 164516
 		AniLight,
-		// Token: 0x0402CF8D RID: 184205
+		// Token: 0x040282A5 RID: 164517
 		RemoveItem,
-		// Token: 0x0402CF8E RID: 184206
+		// Token: 0x040282A6 RID: 164518
 		AddIconItem2,
-		// Token: 0x0402CF8F RID: 184207
+		// Token: 0x040282A7 RID: 164519
 		LevelItem,
-		// Token: 0x0402CF90 RID: 184208
+		// Token: 0x040282A8 RID: 164520
 		LevelText,
-		// Token: 0x0402CF91 RID: 184209
+		// Token: 0x040282A9 RID: 164521
 		ItemOccupyPanel,
-		// Token: 0x0402CF92 RID: 184210
+		// Token: 0x040282AA RID: 164522
 		ItemWarningIcon
 	}
 }

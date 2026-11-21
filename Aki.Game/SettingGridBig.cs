@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Inventory;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x02001FBE RID: 8126
+// Token: 0x02001480 RID: 5248
 public class SettingGridBig : SettingGridBase
 {
-	// Token: 0x0600FE0D RID: 65037 RVA: 0x003DA06C File Offset: 0x003D826C
+	// Token: 0x0600D233 RID: 53811 RVA: 0x003E5A48 File Offset: 0x003E3C48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -36,7 +36,7 @@ public class SettingGridBig : SettingGridBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FE0E RID: 65038 RVA: 0x003DA178 File Offset: 0x003D8378
+	// Token: 0x0600D234 RID: 53812 RVA: 0x003E5B54 File Offset: 0x003E3D54
 	[NullableContext(1)]
 	public override void Refresh(InventoryDefine.IManageConfigSettingGridData data, bool isSelected, int gridIndex)
 	{
@@ -61,7 +61,7 @@ public class SettingGridBig : SettingGridBase
 		this.SetNormalState();
 	}
 
-	// Token: 0x0600FE0F RID: 65039 RVA: 0x003DA1DC File Offset: 0x003D83DC
+	// Token: 0x0600D235 RID: 53813 RVA: 0x003E5BB8 File Offset: 0x003E3DB8
 	private bool CheckShow()
 	{
 		InventoryDefine.IManageConfigSettingGridData data = this.Data;
@@ -72,7 +72,7 @@ public class SettingGridBig : SettingGridBase
 		return data.IsSelect;
 	}
 
-	// Token: 0x0600FE10 RID: 65040 RVA: 0x003DA224 File Offset: 0x003D8424
+	// Token: 0x0600D236 RID: 53814 RVA: 0x003E5C00 File Offset: 0x003E3E00
 	private void SetEmptyState()
 	{
 		base.GetTexture(2).SetUIActive(false);
@@ -82,7 +82,7 @@ public class SettingGridBig : SettingGridBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "PhantomProject_EmptyChose", Array.Empty<object>());
 	}
 
-	// Token: 0x0600FE11 RID: 65041 RVA: 0x003DA280 File Offset: 0x003D8480
+	// Token: 0x0600D237 RID: 53815 RVA: 0x003E5C5C File Offset: 0x003E3E5C
 	private void SetAddState()
 	{
 		base.GetTexture(2).SetUIActive(true);
@@ -91,7 +91,7 @@ public class SettingGridBig : SettingGridBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "PhantomProject_AddChose", Array.Empty<object>());
 	}
 
-	// Token: 0x0600FE12 RID: 65042 RVA: 0x003DA2D0 File Offset: 0x003D84D0
+	// Token: 0x0600D238 RID: 53816 RVA: 0x003E5CAC File Offset: 0x003E3EAC
 	private void SetNormalState()
 	{
 		InventoryDefine.IManageConfigSettingGridData data = this.Data;
@@ -106,7 +106,7 @@ public class SettingGridBig : SettingGridBase
 		this.SetIcon(filterItemData);
 	}
 
-	// Token: 0x0600FE13 RID: 65043 RVA: 0x003DA36C File Offset: 0x003D856C
+	// Token: 0x0600D239 RID: 53817 RVA: 0x003E5D48 File Offset: 0x003E3F48
 	[NullableContext(1)]
 	private void SetIcon(FilterItemData filterData)
 	{
@@ -125,7 +125,7 @@ public class SettingGridBig : SettingGridBase
 		uuiitem.SetChangeColor(needChangeColor, fcolor);
 	}
 
-	// Token: 0x0600FE14 RID: 65044 RVA: 0x003DA3CB File Offset: 0x003D85CB
+	// Token: 0x0600D23A RID: 53818 RVA: 0x003E5DA7 File Offset: 0x003E3FA7
 	private void OnClickedSwitch()
 	{
 		if (this.CallbackOnClicked != null && this.Data != null)
@@ -134,22 +134,22 @@ public class SettingGridBig : SettingGridBase
 		}
 	}
 
-	// Token: 0x040075A3 RID: 30115
+	// Token: 0x04007685 RID: 30341
 	[Nullable(2)]
 	private InventoryDefine.IManageConfigSettingGridData Data;
 
-	// Token: 0x020085C7 RID: 34247
+	// Token: 0x02007749 RID: 30537
 	private enum EComponentBig
 	{
-		// Token: 0x0402B8CA RID: 178378
+		// Token: 0x04026BD2 RID: 158674
 		TextureIcon,
-		// Token: 0x0402B8CB RID: 178379
+		// Token: 0x04026BD3 RID: 158675
 		TextName,
-		// Token: 0x0402B8CC RID: 178380
+		// Token: 0x04026BD4 RID: 158676
 		TextureAdd,
-		// Token: 0x0402B8CD RID: 178381
+		// Token: 0x04026BD5 RID: 158677
 		TextureDelete,
-		// Token: 0x0402B8CE RID: 178382
+		// Token: 0x04026BD6 RID: 158678
 		BtnSwitch
 	}
 }

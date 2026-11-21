@@ -8,23 +8,24 @@ using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
 using CSharpScript.Game.Module.Plot.Flow;
 using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001067 RID: 4199
+// Token: 0x0200051B RID: 1307
 [NullableContext(1)]
 [Nullable(0)]
-public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
+public class GuessJokerSelectRoleView : UiViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x06006C2E RID: 27694 RVA: 0x0015CFEA File Offset: 0x0015B1EA
+	// Token: 0x06003FC3 RID: 16323 RVA: 0x0016592E File Offset: 0x00163B2E
 	public GuessJokerSelectRoleView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006C2F RID: 27695 RVA: 0x0015D000 File Offset: 0x0015B200
+	// Token: 0x06003FC4 RID: 16324 RVA: 0x00165944 File Offset: 0x00163B44
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -64,7 +65,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x06006C30 RID: 27696 RVA: 0x0015D2C0 File Offset: 0x0015B4C0
+	// Token: 0x06003FC5 RID: 16325 RVA: 0x00165C04 File Offset: 0x00163E04
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GuessJokerSelectRoleView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -75,14 +76,14 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006C31 RID: 27697 RVA: 0x0015D303 File Offset: 0x0015B503
+	// Token: 0x06003FC6 RID: 16326 RVA: 0x00165C47 File Offset: 0x00163E47
 	protected override void OnBeforeShow()
 	{
 		this.PauseTimeDilation();
-		UiCameraAnimationManager.Instance.DisablePlayerActor();
+		UiCameraModel.Instance.DisablePlayerActor();
 	}
 
-	// Token: 0x06006C32 RID: 27698 RVA: 0x0015D315 File Offset: 0x0015B515
+	// Token: 0x06003FC7 RID: 16327 RVA: 0x00165C59 File Offset: 0x00163E59
 	protected override void OnBeforeHide()
 	{
 		if (this.IsConfirmHide)
@@ -91,43 +92,42 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		}
 		else
 		{
-			UiCameraAnimationManager.Instance.EnablePlayerActor();
+			UiCameraModel.Instance.EnablePlayerActor();
 		}
 		this.ResumeTimeDilation();
 	}
 
-	// Token: 0x06006C33 RID: 27699 RVA: 0x0015D338 File Offset: 0x0015B538
+	// Token: 0x06003FC8 RID: 16328 RVA: 0x00165C7C File Offset: 0x00163E7C
 	protected void PauseTimeDilation()
 	{
 		UiTimeDilation.Instance.AddWaitSetTimeDilationTag("GuessJokerSelectRoleView");
 	}
 
-	// Token: 0x06006C34 RID: 27700 RVA: 0x0015D349 File Offset: 0x0015B549
+	// Token: 0x06003FC9 RID: 16329 RVA: 0x00165C8D File Offset: 0x00163E8D
 	protected void ResumeTimeDilation()
 	{
 		UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("GuessJokerSelectRoleView");
 	}
 
-	// Token: 0x06006C35 RID: 27701 RVA: 0x0015D35A File Offset: 0x0015B55A
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x06003FCA RID: 16330 RVA: 0x00165C9E File Offset: 0x00163E9E
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
 		if (this.CurCameraName != null)
 		{
-			UiCameraAnimationController.Instance.PushCameraHandle((EUiViewName)this.CurCameraName, new int?(viewId), isBlend);
+			UiCameraController.Instance.PushCameraHandleByOpenView((EUiViewName)this.CurCameraName, viewId, operationType);
 		}
 	}
 
-	// Token: 0x06006C36 RID: 27702 RVA: 0x0015D380 File Offset: 0x0015B580
-	[NullableContext(2)]
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x06003FCB RID: 16331 RVA: 0x00165CBF File Offset: 0x00163EBF
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
 		if (this.CurCameraName != null)
 		{
-			UiCameraAnimationController.Instance.PopCameraHandle((EUiViewName)this.CurCameraName, stackTopInfo, closeViewId, popOrDelete);
+			UiCameraController.Instance.PopCameraHandleByCloseView((EUiViewName)this.CurCameraName, nextViewName, closeViewId, operationType);
 		}
 	}
 
-	// Token: 0x06006C37 RID: 27703 RVA: 0x0015D3A3 File Offset: 0x0015B5A3
+	// Token: 0x06003FCC RID: 16332 RVA: 0x00165CE2 File Offset: 0x00163EE2
 	private GuessJokerSelectRoleItem CreateRoleItem()
 	{
 		GuessJokerSelectRoleItem guessJokerSelectRoleItem = new GuessJokerSelectRoleItem();
@@ -135,13 +135,13 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		return guessJokerSelectRoleItem;
 	}
 
-	// Token: 0x06006C38 RID: 27704 RVA: 0x0015D3BC File Offset: 0x0015B5BC
+	// Token: 0x06003FCD RID: 16333 RVA: 0x00165CFB File Offset: 0x00163EFB
 	private ActivitySmallItemGrid CreateRewardItem()
 	{
 		return new ActivitySmallItemGrid();
 	}
 
-	// Token: 0x06006C39 RID: 27705 RVA: 0x0015D3C4 File Offset: 0x0015B5C4
+	// Token: 0x06003FCE RID: 16334 RVA: 0x00165D04 File Offset: 0x00163F04
 	private void OnSelectViewSequenceFinish(string sequenceName)
 	{
 		Action action;
@@ -153,7 +153,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C3A RID: 27706 RVA: 0x0015D3F8 File Offset: 0x0015B5F8
+	// Token: 0x06003FCF RID: 16335 RVA: 0x00165D38 File Offset: 0x00163F38
 	private void ChangeRole(GuessJokerSelectRoleItem roleItem)
 	{
 		if (this.CurSelectRoleItem == roleItem)
@@ -187,7 +187,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		this.RefreshDetailView(roleItem.Level);
 	}
 
-	// Token: 0x06006C3B RID: 27707 RVA: 0x0015D4C4 File Offset: 0x0015B6C4
+	// Token: 0x06003FD0 RID: 16336 RVA: 0x00165E04 File Offset: 0x00164004
 	private void CheckClick(int levelId)
 	{
 		SpringManorData activityData = SpringManorModel.Instance.ActivityData;
@@ -213,17 +213,17 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C3C RID: 27708 RVA: 0x0015D540 File Offset: 0x0015B740
+	// Token: 0x06003FD1 RID: 16337 RVA: 0x00165E80 File Offset: 0x00164080
 	private void PushCamera()
 	{
 		if (this.CurCameraSettingName != null)
 		{
 			Log.Instance.Info(ELogModule.GuessJokerCard, ELogAuthor.LRC, "【action】Push Camera：" + this.CurCameraSettingName, default(ReadOnlySpan<ValueTuple<string, object>>));
-			UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(this.CurCameraSettingName, true, true, "1001", false, null, null);
+			UiCameraModel.Instance.PushCameraHandleByHandleName(this.CurCameraSettingName, true, true, "1001", false, null);
 		}
 	}
 
-	// Token: 0x06006C3D RID: 27709 RVA: 0x0015D5A4 File Offset: 0x0015B7A4
+	// Token: 0x06003FD2 RID: 16338 RVA: 0x00165EDC File Offset: 0x001640DC
 	private void RefreshDetailView(int levelId)
 	{
 		GuessJokerLevel? jokerLevelById = GuessJokerConfig.Instance.GetJokerLevelById(levelId);
@@ -278,7 +278,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		base.GetSprite(8).SetUIActive(!isFinished);
 	}
 
-	// Token: 0x06006C3E RID: 27710 RVA: 0x0015D874 File Offset: 0x0015BA74
+	// Token: 0x06003FD3 RID: 16339 RVA: 0x001661AC File Offset: 0x001643AC
 	private void PlaySelectViewSequence(string sequenceName, [Nullable(2)] Action finishCallback = null)
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -292,7 +292,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C3F RID: 27711 RVA: 0x0015D8B0 File Offset: 0x0015BAB0
+	// Token: 0x06003FD4 RID: 16340 RVA: 0x001661E8 File Offset: 0x001643E8
 	private void RefreshRewardData(int dropId, bool isClaimed)
 	{
 		if (dropId == 0)
@@ -314,7 +314,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		this.RewardScrollView.SetActive(list.Count > 0);
 	}
 
-	// Token: 0x06006C40 RID: 27712 RVA: 0x0015D954 File Offset: 0x0015BB54
+	// Token: 0x06003FD5 RID: 16341 RVA: 0x0016628C File Offset: 0x0016448C
 	private void OnClickRoleItem(GuessJokerSelectRoleItem roleItem)
 	{
 		this.ChangeRole(roleItem);
@@ -322,7 +322,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		this.PushCamera();
 	}
 
-	// Token: 0x06006C41 RID: 27713 RVA: 0x0015D96F File Offset: 0x0015BB6F
+	// Token: 0x06003FD6 RID: 16342 RVA: 0x001662A7 File Offset: 0x001644A7
 	private void OnClickMaskButton()
 	{
 		GuessJokerHeroSkillItem heroSkillItem = this.HeroSkillItem;
@@ -333,7 +333,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		heroSkillItem.CloseDetail();
 	}
 
-	// Token: 0x06006C42 RID: 27714 RVA: 0x0015D984 File Offset: 0x0015BB84
+	// Token: 0x06003FD7 RID: 16343 RVA: 0x001662BC File Offset: 0x001644BC
 	private void OnClickConfirm()
 	{
 		if (this.CurSelectRoleItem == null)
@@ -356,7 +356,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06006C43 RID: 27715 RVA: 0x0015DA3C File Offset: 0x0015BC3C
+	// Token: 0x06003FD8 RID: 16344 RVA: 0x00166374 File Offset: 0x00164574
 	private void OnHideToggleClick(EToggleState state)
 	{
 		bool uiactive = state != EToggleState.ETT_Checked;
@@ -366,7 +366,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		base.GetButton(24).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06006C44 RID: 27716 RVA: 0x0015DAA4 File Offset: 0x0015BCA4
+	// Token: 0x06003FD9 RID: 16345 RVA: 0x001663DC File Offset: 0x001645DC
 	private void OnClickBack()
 	{
 		int levelId = GuessJokerGamePlayModel.Instance.GetLevelId();
@@ -392,7 +392,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		UiManager.Instance.ResetToBattleView(null);
 	}
 
-	// Token: 0x06006C45 RID: 27717 RVA: 0x0015DB34 File Offset: 0x0015BD34
+	// Token: 0x06003FDA RID: 16346 RVA: 0x0016646C File Offset: 0x0016466C
 	private void OnClickGetReward()
 	{
 		if (this.CurSelectRoleItem == null)
@@ -412,7 +412,7 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x06006C46 RID: 27718 RVA: 0x0015DB84 File Offset: 0x0015BD84
+	// Token: 0x06003FDB RID: 16347 RVA: 0x001664BC File Offset: 0x001646BC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -438,13 +438,13 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x04003217 RID: 12823
+	// Token: 0x040032B0 RID: 12976
 	public PopupCaptionItem PopupCaption;
 
-	// Token: 0x04003218 RID: 12824
+	// Token: 0x040032B1 RID: 12977
 	private GenericLayout<GuessJokerSelectRoleItem, int> RoleLayout;
 
-	// Token: 0x04003219 RID: 12825
+	// Token: 0x040032B2 RID: 12978
 	[Nullable(new byte[]
 	{
 		2,
@@ -453,30 +453,30 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 	})]
 	private GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> RewardScrollView;
 
-	// Token: 0x0400321A RID: 12826
+	// Token: 0x040032B3 RID: 12979
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x0400321B RID: 12827
+	// Token: 0x040032B4 RID: 12980
 	[Nullable(2)]
 	private GuessJokerSelectRoleItem CurSelectRoleItem;
 
-	// Token: 0x0400321C RID: 12828
+	// Token: 0x040032B5 RID: 12981
 	[Nullable(2)]
 	private string CurCameraName;
 
-	// Token: 0x0400321D RID: 12829
+	// Token: 0x040032B6 RID: 12982
 	[Nullable(2)]
 	private string CurCameraSettingName;
 
-	// Token: 0x0400321E RID: 12830
+	// Token: 0x040032B7 RID: 12983
 	[Nullable(2)]
 	private GuessJokerHeroSkillItem HeroSkillItem;
 
-	// Token: 0x0400321F RID: 12831
+	// Token: 0x040032B8 RID: 12984
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04003220 RID: 12832
+	// Token: 0x040032B9 RID: 12985
 	[Nullable(new byte[]
 	{
 		1,
@@ -485,6 +485,6 @@ public class GuessJokerSelectRoleView : UiViewBase, IUiCameraBehavior
 	})]
 	private readonly Dictionary<string, Action> SequenceFinishCallbackMap = new Dictionary<string, Action>();
 
-	// Token: 0x04003221 RID: 12833
+	// Token: 0x040032BA RID: 12986
 	private bool IsConfirmHide;
 }

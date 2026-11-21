@@ -9,12 +9,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Input.BattleInputData
 {
-	// Token: 0x02006FDF RID: 28639
+	// Token: 0x02006160 RID: 24928
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NormalWorldMotorInputData : BattleInputData
 	{
-		// Token: 0x06045A38 RID: 285240 RVA: 0x0114B088 File Offset: 0x01149288
+		// Token: 0x0603BBE9 RID: 244713 RVA: 0x010F4E7C File Offset: 0x010F307C
 		public NormalWorldMotorInputData()
 		{
 			Dictionary<string, EInputAction> dictionary = new Dictionary<string, EInputAction>();
@@ -42,19 +42,19 @@ namespace CSharpScript.Game.Input.BattleInputData
 			base..ctor(EInputDataType.NormalWorldMotor, EInputBindingType.Motor);
 		}
 
-		// Token: 0x06045A39 RID: 285241 RVA: 0x0114B1D3 File Offset: 0x011493D3
+		// Token: 0x0603BBEA RID: 244714 RVA: 0x010F4FC7 File Offset: 0x010F31C7
 		protected override Dictionary<string, EInputAction> OnGetActionMap()
 		{
 			return this.ActionMap;
 		}
 
-		// Token: 0x06045A3A RID: 285242 RVA: 0x0114B1DB File Offset: 0x011493DB
+		// Token: 0x0603BBEB RID: 244715 RVA: 0x010F4FCF File Offset: 0x010F31CF
 		protected override Dictionary<string, EInputAxis> OnGetAxisMap()
 		{
 			return this.AxisMap;
 		}
 
-		// Token: 0x06045A3B RID: 285243 RVA: 0x0114B1E3 File Offset: 0x011493E3
+		// Token: 0x0603BBEC RID: 244716 RVA: 0x010F4FD7 File Offset: 0x010F31D7
 		protected override bool OnCheckActionInAllowFightActionNameList(string actionName, InputActionHandle inputActionHandle)
 		{
 			if (actionName == "载具辅助机攻击")
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return base.OnCheckActionInAllowFightActionNameList(actionName, inputActionHandle);
 		}
 
-		// Token: 0x06045A3C RID: 285244 RVA: 0x0114B218 File Offset: 0x01149418
+		// Token: 0x0603BBED RID: 244717 RVA: 0x010F500C File Offset: 0x010F320C
 		protected override bool OnCheckAxisInAllowFightAxisNameList(string axisName, InputAxisHandle inputAxisHandle)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -86,10 +86,10 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return base.OnCheckAxisInAllowFightAxisNameList(axisName, inputAxisHandle);
 		}
 
-		// Token: 0x04024584 RID: 148868
+		// Token: 0x0401F839 RID: 129081
 		private readonly Dictionary<string, EInputAction> ActionMap;
 
-		// Token: 0x04024585 RID: 148869
+		// Token: 0x0401F83A RID: 129082
 		private readonly Dictionary<string, EInputAxis> AxisMap;
 	}
 }

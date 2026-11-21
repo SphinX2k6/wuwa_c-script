@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F0D RID: 7949
+	// Token: 0x02000618 RID: 1560
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FTriggerVolumeMapUpdateDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E29E RID: 123550 RVA: 0x002CD952 File Offset: 0x002CBB52
+		// Token: 0x060088C7 RID: 35015 RVA: 0x000CE67A File Offset: 0x000CC87A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FTriggerVolumeMapUpdateDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E29F RID: 123551 RVA: 0x002CD95E File Offset: 0x002CBB5E
+		// Token: 0x060088C8 RID: 35016 RVA: 0x000CE686 File Offset: 0x000CC886
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FTriggerVolumeMapUpdateDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FTriggerVolumeMapUpdateDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601E2A0 RID: 123552 RVA: 0x002CD981 File Offset: 0x002CBB81
+		// Token: 0x060088C9 RID: 35017 RVA: 0x000CE6A9 File Offset: 0x000CC8A9
 		public FTriggerVolumeMapUpdateDelegate()
 		{
 		}
 
-		// Token: 0x0601E2A1 RID: 123553 RVA: 0x002CD989 File Offset: 0x002CBB89
+		// Token: 0x060088CA RID: 35018 RVA: 0x000CE6B1 File Offset: 0x000CC8B1
 		[NullableContext(2)]
 		public FTriggerVolumeMapUpdateDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E2A2 RID: 123554 RVA: 0x002CD993 File Offset: 0x002CBB93
+		// Token: 0x060088CB RID: 35019 RVA: 0x000CE6BB File Offset: 0x000CC8BB
 		public FTriggerVolumeMapUpdateDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E2A3 RID: 123555 RVA: 0x002CD99E File Offset: 0x002CBB9E
+		// Token: 0x060088CC RID: 35020 RVA: 0x000CE6C6 File Offset: 0x000CC8C6
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FName>) ?? ((Action<FName>)Delegate.CreateDelegate(typeof(Action<FName>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E2A4 RID: 123556 RVA: 0x002CD9D0 File Offset: 0x002CBBD0
+		// Token: 0x060088CD RID: 35021 RVA: 0x000CE6F8 File Offset: 0x000CC8F8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FName> Callback)
 		{
 			if (FTriggerVolumeMapUpdateDelegate.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FTriggerVolumeMapUpdateDelegate.RegisterId);
 		}
 
-		// Token: 0x0601E2A5 RID: 123557 RVA: 0x002CDA0A File Offset: 0x002CBC0A
+		// Token: 0x060088CE RID: 35022 RVA: 0x000CE732 File Offset: 0x000CC932
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FName> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601E2A6 RID: 123558 RVA: 0x002CDA14 File Offset: 0x002CBC14
+		// Token: 0x060088CF RID: 35023 RVA: 0x000CE73C File Offset: 0x000CC93C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FName ActorKey)
 		{
 			FTriggerVolumeMapUpdateDelegate.__FTriggerVolumeMapUpdateDelegate_DelegateParams* ptr = stackalloc FTriggerVolumeMapUpdateDelegate.__FTriggerVolumeMapUpdateDelegate_DelegateParams[(UIntPtr)27] + 15L / (long)sizeof(FTriggerVolumeMapUpdateDelegate.__FTriggerVolumeMapUpdateDelegate_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E2A7 RID: 123559 RVA: 0x002CDA50 File Offset: 0x002CBC50
+		// Token: 0x060088D0 RID: 35024 RVA: 0x000CE778 File Offset: 0x000CC978
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FName> action = target as Action<FName>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FTriggerVolumeMapUpdateDelegate.__FTriggerVolumeMapUpdateDelegate_DelegateParams*)__Parameters)->ActorKey);
 		}
 
-		// Token: 0x04010495 RID: 66709
+		// Token: 0x04003B60 RID: 15200
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010496 RID: 66710
+		// Token: 0x04003B61 RID: 15201
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.TriggerVolumeMapUpdateDelegate__DelegateSignature";
 
-		// Token: 0x04010497 RID: 66711
+		// Token: 0x04003B62 RID: 15202
 		private static int RegisterId;
 
-		// Token: 0x020033FD RID: 13309
+		// Token: 0x02000E4A RID: 3658
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
-		protected ref struct __FTriggerVolumeMapUpdateDelegate_DelegateParams
+		private ref struct __FTriggerVolumeMapUpdateDelegate_DelegateParams
 		{
-			// Token: 0x040173B7 RID: 95159
+			// Token: 0x040061E4 RID: 25060
 			[FieldOffset(0)]
 			public FName ActorKey;
 		}
 
-		// Token: 0x020033FE RID: 13310
+		// Token: 0x02000E4B RID: 3659
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040173B8 RID: 95160
+			// Token: 0x040061E5 RID: 25061
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

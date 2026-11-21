@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B24 RID: 23332
+	// Token: 0x0200613A RID: 24890
 	public class IVehicleMontagePlayConfigT
 	{
-		// Token: 0x1700B020 RID: 45088
-		// (get) Token: 0x06027E0A RID: 163338 RVA: 0x0057C045 File Offset: 0x0057A245
-		// (set) Token: 0x06027E0B RID: 163339 RVA: 0x0057C04D File Offset: 0x0057A24D
+		// Token: 0x1700B968 RID: 47464
+		// (get) Token: 0x0602A3CE RID: 173006 RVA: 0x005C3A99 File Offset: 0x005C1C99
+		// (set) Token: 0x0602A3CF RID: 173007 RVA: 0x005C3AA1 File Offset: 0x005C1CA1
 		public float MinMontageSpeedFactor { get; set; }
 
-		// Token: 0x1700B021 RID: 45089
-		// (get) Token: 0x06027E0C RID: 163340 RVA: 0x0057C056 File Offset: 0x0057A256
-		// (set) Token: 0x06027E0D RID: 163341 RVA: 0x0057C05E File Offset: 0x0057A25E
+		// Token: 0x1700B969 RID: 47465
+		// (get) Token: 0x0602A3D0 RID: 173008 RVA: 0x005C3AAA File Offset: 0x005C1CAA
+		// (set) Token: 0x0602A3D1 RID: 173009 RVA: 0x005C3AB2 File Offset: 0x005C1CB2
 		public float MaxMontageSpeedFactor { get; set; }
 
-		// Token: 0x1700B022 RID: 45090
-		// (get) Token: 0x06027E0E RID: 163342 RVA: 0x0057C067 File Offset: 0x0057A267
-		// (set) Token: 0x06027E0F RID: 163343 RVA: 0x0057C06F File Offset: 0x0057A26F
+		// Token: 0x1700B96A RID: 47466
+		// (get) Token: 0x0602A3D2 RID: 173010 RVA: 0x005C3ABB File Offset: 0x005C1CBB
+		// (set) Token: 0x0602A3D3 RID: 173011 RVA: 0x005C3AC3 File Offset: 0x005C1CC3
 		public float MinVehicleSpeed { get; set; }
 
-		// Token: 0x1700B023 RID: 45091
-		// (get) Token: 0x06027E10 RID: 163344 RVA: 0x0057C078 File Offset: 0x0057A278
-		// (set) Token: 0x06027E11 RID: 163345 RVA: 0x0057C080 File Offset: 0x0057A280
+		// Token: 0x1700B96B RID: 47467
+		// (get) Token: 0x0602A3D4 RID: 173012 RVA: 0x005C3ACC File Offset: 0x005C1CCC
+		// (set) Token: 0x0602A3D5 RID: 173013 RVA: 0x005C3AD4 File Offset: 0x005C1CD4
 		public float MaxVehicleSpeed { get; set; }
 
-		// Token: 0x1700B024 RID: 45092
-		// (get) Token: 0x06027E12 RID: 163346 RVA: 0x0057C089 File Offset: 0x0057A289
-		// (set) Token: 0x06027E13 RID: 163347 RVA: 0x0057C091 File Offset: 0x0057A291
+		// Token: 0x1700B96C RID: 47468
+		// (get) Token: 0x0602A3D6 RID: 173014 RVA: 0x005C3ADD File Offset: 0x005C1CDD
+		// (set) Token: 0x0602A3D7 RID: 173015 RVA: 0x005C3AE5 File Offset: 0x005C1CE5
 		public string TargetState { get; set; }
 
-		// Token: 0x06027E14 RID: 163348 RVA: 0x0057C09A File Offset: 0x0057A29A
+		// Token: 0x0602A3D8 RID: 173016 RVA: 0x005C3AEE File Offset: 0x005C1CEE
 		public IVehicleMontagePlayConfigT()
 		{
 			this.MinMontageSpeedFactor = 0f;

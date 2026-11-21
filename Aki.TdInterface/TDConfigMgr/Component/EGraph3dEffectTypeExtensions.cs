@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000952 RID: 2386
+	// Token: 0x02000A05 RID: 2565
 	public static class EGraph3dEffectTypeExtensions
 	{
-		// Token: 0x060035A2 RID: 13730 RVA: 0x0008BE18 File Offset: 0x0008A018
+		// Token: 0x06003929 RID: 14633 RVA: 0x00093D6C File Offset: 0x00091F6C
 		public static string ToEnumString(this EGraph3dEffectType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035A3 RID: 13731 RVA: 0x0008BE40 File Offset: 0x0008A040
+		// Token: 0x0600392A RID: 14634 RVA: 0x00093D94 File Offset: 0x00091F94
 		public static EGraph3dEffectType FromString(string name)
 		{
 			EGraph3dEffectType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035A4 RID: 13732 RVA: 0x0008BE69 File Offset: 0x0008A069
+		// Token: 0x0600392B RID: 14635 RVA: 0x00093DBD File Offset: 0x00091FBD
 		public static bool TryFromString(string name, out EGraph3dEffectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060035A5 RID: 13733 RVA: 0x0008BE8E File Offset: 0x0008A08E
+		// Token: 0x0600392C RID: 14636 RVA: 0x00093DE2 File Offset: 0x00091FE2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035A6 RID: 13734 RVA: 0x0008BE9E File Offset: 0x0008A09E
+		// Token: 0x0600392D RID: 14637 RVA: 0x00093DF2 File Offset: 0x00091FF2
 		public static EGraph3dEffectType[] GetValues()
 		{
 			return new EGraph3dEffectType[1];
 		}
 
-		// Token: 0x060035A7 RID: 13735 RVA: 0x0008BEA6 File Offset: 0x0008A0A6
+		// Token: 0x0600392E RID: 14638 RVA: 0x00093DFA File Offset: 0x00091FFA
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001863 RID: 6243
+	// Token: 0x020019EE RID: 6638
 	public class IChangeActorMPC_SetValue
 	{
-		// Token: 0x040054A9 RID: 21673
+		// Token: 0x040058F6 RID: 22774
 		public EModifyActorMaterialType Type;
 
-		// Token: 0x040054AA RID: 21674
-		[Nullable(1)]
+		// Token: 0x040058F7 RID: 22775
 		public string MpcData;
 	}
 }

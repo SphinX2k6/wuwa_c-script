@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x02006498 RID: 25752
+	// Token: 0x02005416 RID: 21526
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 	})]
 	public class MatchThreeLevelItem : SyncGridProxyAbstract<MatchThreeChapterSelectData>
 	{
-		// Token: 0x06040AC8 RID: 264904 RVA: 0x00FA7A68 File Offset: 0x00FA5C68
+		// Token: 0x0603578C RID: 219020 RVA: 0x00EEEAB0 File Offset: 0x00EECCB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040AC9 RID: 264905 RVA: 0x00FA7C3C File Offset: 0x00FA5E3C
+		// Token: 0x0603578D RID: 219021 RVA: 0x00EEEC84 File Offset: 0x00EECE84
 		protected override void OnStart()
 		{
 			this.InitTickSystem();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040ACA RID: 264906 RVA: 0x00FA7CD0 File Offset: 0x00FA5ED0
+		// Token: 0x0603578E RID: 219022 RVA: 0x00EEED18 File Offset: 0x00EECF18
 		protected override void OnBeforeDestroy()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -92,28 +92,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040ACB RID: 264907 RVA: 0x00FA7D39 File Offset: 0x00FA5F39
+		// Token: 0x0603578F RID: 219023 RVA: 0x00EEED81 File Offset: 0x00EECF81
 		public override void Refresh(MatchThreeChapterSelectData data)
 		{
 			this.ChapterData = data;
 			this.RefreshPanel();
 		}
 
-		// Token: 0x06040ACC RID: 264908 RVA: 0x00FA7D48 File Offset: 0x00FA5F48
+		// Token: 0x06035790 RID: 219024 RVA: 0x00EEED90 File Offset: 0x00EECF90
 		[NullableContext(2)]
 		public UUIItem GetNavigationItem()
 		{
 			return this.NavigationItem;
 		}
 
-		// Token: 0x06040ACD RID: 264909 RVA: 0x00FA7D50 File Offset: 0x00FA5F50
+		// Token: 0x06035791 RID: 219025 RVA: 0x00EEED98 File Offset: 0x00EECF98
 		public bool IsStartAnimationPlaying()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
 			return sequencePlayer != null && sequencePlayer.CheckSeqActorIsSeqPlaying("Start");
 		}
 
-		// Token: 0x06040ACE RID: 264910 RVA: 0x00FA7D68 File Offset: 0x00FA5F68
+		// Token: 0x06035792 RID: 219026 RVA: 0x00EEEDB0 File Offset: 0x00EECFB0
 		private void InitTickSystem()
 		{
 			this.TickId = TickSystem.Instance.Add(new Action<float>(this.RefreshTimeTick), "MatchThreeLevelItem", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040ACF RID: 264911 RVA: 0x00FA7DBC File Offset: 0x00FA5FBC
+		// Token: 0x06035793 RID: 219027 RVA: 0x00EEEE04 File Offset: 0x00EED004
 		private void RefreshPanel()
 		{
 			if (this.ChapterData == null)
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshNewDot(matchThreeData);
 		}
 
-		// Token: 0x06040AD0 RID: 264912 RVA: 0x00FA7E5B File Offset: 0x00FA605B
+		// Token: 0x06035794 RID: 219028 RVA: 0x00EEEEA3 File Offset: 0x00EED0A3
 		private void RefreshNewDot(ActivityMatchThreeData activityData)
 		{
 			if (this.ChapterData == null)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			item.SetUIActive(activityData.CheckChapterRedPointShow(this.ChapterData));
 		}
 
-		// Token: 0x06040AD1 RID: 264913 RVA: 0x00FA7E84 File Offset: 0x00FA6084
+		// Token: 0x06035795 RID: 219029 RVA: 0x00EEEECC File Offset: 0x00EED0CC
 		private void RefreshStageName()
 		{
 			this.SetStageNameText(base.GetText(3));
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.SetStageNameText(base.GetText(5));
 		}
 
-		// Token: 0x06040AD2 RID: 264914 RVA: 0x00FA7EAD File Offset: 0x00FA60AD
+		// Token: 0x06035796 RID: 219030 RVA: 0x00EEEEF5 File Offset: 0x00EED0F5
 		[NullableContext(2)]
 		private void SetStageNameText(UUIText text)
 		{
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			LguiUtil.Instance.TrySetLocalTextNew(text, ActivityMatchThreeConfig.Instance.GetLevelTitleTextId(this.ChapterData.NormalLevelId), Array.Empty<object>());
 		}
 
-		// Token: 0x06040AD3 RID: 264915 RVA: 0x00FA7EE0 File Offset: 0x00FA60E0
+		// Token: 0x06035797 RID: 219031 RVA: 0x00EEEF28 File Offset: 0x00EED128
 		private void RefreshState(ActivityMatchThreeData activityData)
 		{
 			if (this.ChapterData == null)
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshInProgressStatusText(activityData, text);
 		}
 
-		// Token: 0x06040AD4 RID: 264916 RVA: 0x00FA7FA0 File Offset: 0x00FA61A0
+		// Token: 0x06035798 RID: 219032 RVA: 0x00EEEFE8 File Offset: 0x00EED1E8
 		private void RefreshStateColor(bool isLocked, bool isDone)
 		{
 			string hexStr = isLocked ? "909090" : (isDone ? "C0D8C5" : "FFFFFF");
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			item.SetColor(FColor.FromHex(hexStr));
 		}
 
-		// Token: 0x06040AD5 RID: 264917 RVA: 0x00FA7FE0 File Offset: 0x00FA61E0
+		// Token: 0x06035799 RID: 219033 RVA: 0x00EEF028 File Offset: 0x00EED228
 		private void RefreshLockStatusText(ActivityMatchThreeData activityData, UUIText statusText)
 		{
 			if (this.ChapterData == null)
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			LguiUtil.Instance.TrySetLocalTextNew(statusText, "MatchThree_TimeCountdown", Array.Empty<object>());
 		}
 
-		// Token: 0x06040AD6 RID: 264918 RVA: 0x00FA8050 File Offset: 0x00FA6250
+		// Token: 0x0603579A RID: 219034 RVA: 0x00EEF098 File Offset: 0x00EED298
 		private void RefreshInProgressStatusText(ActivityMatchThreeData activityData, UUIText statusText)
 		{
 			if (this.ChapterData == null)
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}));
 		}
 
-		// Token: 0x06040AD7 RID: 264919 RVA: 0x00FA80B0 File Offset: 0x00FA62B0
+		// Token: 0x0603579B RID: 219035 RVA: 0x00EEF0F8 File Offset: 0x00EED2F8
 		private void RefreshEndlessStatusText(ActivityMatchThreeData activityData, UUIText statusText)
 		{
 			if (this.ChapterData == null)
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			LguiUtil.Instance.TrySetLocalTextNew(statusText, "MatchThree_NoRecord", Array.Empty<object>());
 		}
 
-		// Token: 0x06040AD8 RID: 264920 RVA: 0x00FA810C File Offset: 0x00FA630C
+		// Token: 0x0603579C RID: 219036 RVA: 0x00EEF154 File Offset: 0x00EED354
 		private void RefreshTimeTick(float _)
 		{
 			if (this.ChapterData == null)
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040AD9 RID: 264921 RVA: 0x00FA817C File Offset: 0x00FA637C
+		// Token: 0x0603579D RID: 219037 RVA: 0x00EEF1C4 File Offset: 0x00EED3C4
 		private void OnClickedSelectButton()
 		{
 			if (this.ChapterData == null)
@@ -382,40 +382,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x04021A66 RID: 137830
+		// Token: 0x0401C397 RID: 115607
 		public const int TemplateNormal = 0;
 
-		// Token: 0x04021A67 RID: 137831
+		// Token: 0x0401C398 RID: 115608
 		public const int TemplateEndless = 1;
 
-		// Token: 0x04021A68 RID: 137832
+		// Token: 0x0401C399 RID: 115609
 		private const string ColorLocked = "909090";
 
-		// Token: 0x04021A69 RID: 137833
+		// Token: 0x0401C39A RID: 115610
 		private const string ColorNormal = "FFFFFF";
 
-		// Token: 0x04021A6A RID: 137834
+		// Token: 0x0401C39B RID: 115611
 		private const string ColorDone = "C0D8C5";
 
-		// Token: 0x04021A6B RID: 137835
+		// Token: 0x0401C39C RID: 115612
 		[Nullable(2)]
 		private MatchThreeChapterSelectData ChapterData;
 
-		// Token: 0x04021A6C RID: 137836
+		// Token: 0x0401C39D RID: 115613
 		private EMatchThreeChapterState ChapterState;
 
-		// Token: 0x04021A6D RID: 137837
+		// Token: 0x0401C39E RID: 115614
 		private int TickId = -1;
 
-		// Token: 0x04021A6E RID: 137838
+		// Token: 0x0401C39F RID: 115615
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x04021A6F RID: 137839
+		// Token: 0x0401C3A0 RID: 115616
 		[Nullable(2)]
 		private UUIItem NavigationItem;
 
-		// Token: 0x04021A70 RID: 137840
+		// Token: 0x0401C3A1 RID: 115617
 		[Nullable(new byte[]
 		{
 			2,

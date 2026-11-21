@@ -1,16 +1,16 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033CE RID: 13262
+// Token: 0x02002940 RID: 10560
 public class RedDotMotorcycleDiyTab : RedDotBase
 {
-	// Token: 0x0601CBF2 RID: 117746 RVA: 0x00809265 File Offset: 0x00807465
+	// Token: 0x0601A8EA RID: 108778 RVA: 0x0082F829 File Offset: 0x0082DA29
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CBF3 RID: 117747 RVA: 0x00809268 File Offset: 0x00807468
+	// Token: 0x0601A8EB RID: 108779 RVA: 0x0082F82C File Offset: 0x0082DA2C
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.MotorDiyInfoUpdate, new Action(base.EventCheck));
@@ -18,7 +18,7 @@ public class RedDotMotorcycleDiyTab : RedDotBase
 		EventSystem.Instance.Add(EEventName.MotorDiySceneItemUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CBF4 RID: 117748 RVA: 0x008092CC File Offset: 0x008074CC
+	// Token: 0x0601A8EC RID: 108780 RVA: 0x0082F890 File Offset: 0x0082DA90
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorDiyInfoUpdate, new Action(base.EventCheck));
@@ -26,7 +26,7 @@ public class RedDotMotorcycleDiyTab : RedDotBase
 		EventSystem.Instance.Remove(EEventName.MotorDiySceneItemUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CBF5 RID: 117749 RVA: 0x0080932D File Offset: 0x0080752D
+	// Token: 0x0601A8ED RID: 108781 RVA: 0x0082F8F1 File Offset: 0x0082DAF1
 	protected override bool OnCheck(int uId = 0)
 	{
 		return MotorcycleDiyModel.Instance.RedDotForDiyTab();

@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073CE RID: 29646
+	// Token: 0x02007BB5 RID: 31669
 	public class ITetrisTriggerDelayFallT
 	{
 	}

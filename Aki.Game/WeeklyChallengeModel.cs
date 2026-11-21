@@ -6,14 +6,14 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002D2F RID: 11567
+// Token: 0x02002289 RID: 8841
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class WeeklyChallengeModel : ModelBase
 {
-	// Token: 0x170020C9 RID: 8393
-	// (get) Token: 0x06018505 RID: 99589 RVA: 0x00630509 File Offset: 0x0062E709
+	// Token: 0x17002124 RID: 8484
+	// (get) Token: 0x06015DA7 RID: 89511 RVA: 0x0065651D File Offset: 0x0065471D
 	public int WeeklyConfigId
 	{
 		get
@@ -22,8 +22,8 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020CA RID: 8394
-	// (get) Token: 0x06018506 RID: 99590 RVA: 0x00630511 File Offset: 0x0062E711
+	// Token: 0x17002125 RID: 8485
+	// (get) Token: 0x06015DA8 RID: 89512 RVA: 0x00656525 File Offset: 0x00654725
 	public List<int> WeeklyPlayIds
 	{
 		get
@@ -32,8 +32,8 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020CB RID: 8395
-	// (get) Token: 0x06018507 RID: 99591 RVA: 0x00630523 File Offset: 0x0062E723
+	// Token: 0x17002126 RID: 8486
+	// (get) Token: 0x06015DA9 RID: 89513 RVA: 0x00656537 File Offset: 0x00654737
 	public long WeeklyBeginTime
 	{
 		get
@@ -42,8 +42,8 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020CC RID: 8396
-	// (get) Token: 0x06018508 RID: 99592 RVA: 0x0063052B File Offset: 0x0062E72B
+	// Token: 0x17002127 RID: 8487
+	// (get) Token: 0x06015DAA RID: 89514 RVA: 0x0065653F File Offset: 0x0065473F
 	public long WeeklyEndTime
 	{
 		get
@@ -52,8 +52,8 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020CD RID: 8397
-	// (get) Token: 0x06018509 RID: 99593 RVA: 0x00630533 File Offset: 0x0062E733
+	// Token: 0x17002128 RID: 8488
+	// (get) Token: 0x06015DAB RID: 89515 RVA: 0x00656547 File Offset: 0x00654747
 	public int WeeklyCurrentScore
 	{
 		get
@@ -62,8 +62,8 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020CE RID: 8398
-	// (get) Token: 0x0601850A RID: 99594 RVA: 0x0063053B File Offset: 0x0062E73B
+	// Token: 0x17002129 RID: 8489
+	// (get) Token: 0x06015DAC RID: 89516 RVA: 0x0065654F File Offset: 0x0065474F
 	public List<int> WeeklyClaimedScoreTaskIds
 	{
 		get
@@ -72,8 +72,8 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020CF RID: 8399
-	// (get) Token: 0x0601850B RID: 99595 RVA: 0x00630543 File Offset: 0x0062E743
+	// Token: 0x1700212A RID: 8490
+	// (get) Token: 0x06015DAD RID: 89517 RVA: 0x00656557 File Offset: 0x00654757
 	public int WeeklyWorldLevel
 	{
 		get
@@ -82,8 +82,8 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020D0 RID: 8400
-	// (get) Token: 0x0601850C RID: 99596 RVA: 0x0063054B File Offset: 0x0062E74B
+	// Token: 0x1700212B RID: 8491
+	// (get) Token: 0x06015DAE RID: 89518 RVA: 0x0065655F File Offset: 0x0065475F
 	public int WeeklyMaxScore
 	{
 		get
@@ -92,8 +92,8 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020D1 RID: 8401
-	// (get) Token: 0x0601850D RID: 99597 RVA: 0x00630553 File Offset: 0x0062E753
+	// Token: 0x1700212C RID: 8492
+	// (get) Token: 0x06015DAF RID: 89519 RVA: 0x00656567 File Offset: 0x00654767
 	public IReadOnlyDictionary<int, DailyActivityDefine.IActivityGoalData> WeeklyGoalMap
 	{
 		get
@@ -102,21 +102,21 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601850E RID: 99598 RVA: 0x0063055B File Offset: 0x0062E75B
+	// Token: 0x06015DB0 RID: 89520 RVA: 0x0065656F File Offset: 0x0065476F
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		return true;
 	}
 
-	// Token: 0x0601850F RID: 99599 RVA: 0x0063057A File Offset: 0x0062E77A
+	// Token: 0x06015DB1 RID: 89521 RVA: 0x0065658E File Offset: 0x0065478E
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		return true;
 	}
 
-	// Token: 0x06018510 RID: 99600 RVA: 0x0063059C File Offset: 0x0062E79C
+	// Token: 0x06015DB2 RID: 89522 RVA: 0x006565B0 File Offset: 0x006547B0
 	public void RefreshData(WeeklyFrameworkInfo info)
 	{
 		this.ConfigId = info.ConfigId;
@@ -132,7 +132,7 @@ public class WeeklyChallengeModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.WeeklyChallengeRefresh);
 	}
 
-	// Token: 0x06018511 RID: 99601 RVA: 0x00630620 File Offset: 0x0062E820
+	// Token: 0x06015DB3 RID: 89523 RVA: 0x00656634 File Offset: 0x00654834
 	public void InitGoalData()
 	{
 		if (this.ScoreGoalMap.Count != 0 && this.LastInitWorldLevel == this.WorldLevel)
@@ -168,7 +168,7 @@ public class WeeklyChallengeModel : ModelBase
 		this.LastInitWorldLevel = this.WorldLevel;
 	}
 
-	// Token: 0x06018512 RID: 99602 RVA: 0x00630788 File Offset: 0x0062E988
+	// Token: 0x06015DB4 RID: 89524 RVA: 0x0065679C File Offset: 0x0065499C
 	private void RefreshGoalMapClaimedState()
 	{
 		foreach (DailyActivityDefine.IActivityGoalData activityGoalData in this.ScoreGoalMap.Values)
@@ -179,7 +179,7 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06018513 RID: 99603 RVA: 0x00630808 File Offset: 0x0062EA08
+	// Token: 0x06015DB5 RID: 89525 RVA: 0x0065681C File Offset: 0x00654A1C
 	public EDailyActiveState GetGoalState(int goalScore, bool isClaimed)
 	{
 		if (isClaimed)
@@ -193,7 +193,7 @@ public class WeeklyChallengeModel : ModelBase
 		return EDailyActiveState.Unfinished;
 	}
 
-	// Token: 0x06018514 RID: 99604 RVA: 0x0063081C File Offset: 0x0062EA1C
+	// Token: 0x06015DB6 RID: 89526 RVA: 0x00656830 File Offset: 0x00654A30
 	public List<int> GetCanRewardIdList()
 	{
 		List<int> list = new List<int>();
@@ -207,7 +207,7 @@ public class WeeklyChallengeModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06018515 RID: 99605 RVA: 0x0063088C File Offset: 0x0062EA8C
+	// Token: 0x06015DB7 RID: 89527 RVA: 0x006568A0 File Offset: 0x00654AA0
 	private void RefreshWeeklyPlayData(RepeatedField<Aki.Protocol.WeeklyPlayData> dataList)
 	{
 		this.WeeklyPlayDataMap.Clear();
@@ -222,14 +222,14 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06018516 RID: 99606 RVA: 0x00630914 File Offset: 0x0062EB14
+	// Token: 0x06015DB8 RID: 89528 RVA: 0x00656928 File Offset: 0x00654B28
 	[NullableContext(2)]
 	public global::WeeklyPlayData GetWeeklyPlayData(int playId)
 	{
 		return this.WeeklyPlayDataMap.GetValueOrDefault(playId);
 	}
 
-	// Token: 0x06018517 RID: 99607 RVA: 0x00630924 File Offset: 0x0062EB24
+	// Token: 0x06015DB9 RID: 89529 RVA: 0x00656938 File Offset: 0x00654B38
 	private bool CheckIsSaved(Aki.Protocol.WeeklyPlayData data)
 	{
 		ActivityType type = data.Type;
@@ -240,7 +240,7 @@ public class WeeklyChallengeModel : ModelBase
 		return data.RogueWeeklyPlayData != null && data.RogueWeeklyPlayData.HasRecord;
 	}
 
-	// Token: 0x06018518 RID: 99608 RVA: 0x00630974 File Offset: 0x0062EB74
+	// Token: 0x06015DBA RID: 89530 RVA: 0x00656988 File Offset: 0x00654B88
 	public List<TItem> GetRewardById(int id)
 	{
 		DailyActivityDefine.IActivityGoalData activityGoalData;
@@ -251,13 +251,13 @@ public class WeeklyChallengeModel : ModelBase
 		return activityGoalData.Rewards;
 	}
 
-	// Token: 0x06018519 RID: 99609 RVA: 0x006309A0 File Offset: 0x0062EBA0
+	// Token: 0x06015DBB RID: 89531 RVA: 0x006569B4 File Offset: 0x00654BB4
 	private int GetScoreId()
 	{
 		return ConfigCommonParamById.GetIntConfig("WeeklyChallengeScoreId").GetValueOrDefault();
 	}
 
-	// Token: 0x0601851A RID: 99610 RVA: 0x006309C0 File Offset: 0x0062EBC0
+	// Token: 0x06015DBC RID: 89532 RVA: 0x006569D4 File Offset: 0x00654BD4
 	public string GetWeeklyScoreStr()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -267,7 +267,7 @@ public class WeeklyChallengeModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0601851B RID: 99611 RVA: 0x00630A04 File Offset: 0x0062EC04
+	// Token: 0x06015DBD RID: 89533 RVA: 0x00656A18 File Offset: 0x00654C18
 	public void RefreshCurrentScore()
 	{
 		int scoreId = this.GetScoreId();
@@ -287,7 +287,7 @@ public class WeeklyChallengeModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.WeeklyChallengeScoreChanged);
 	}
 
-	// Token: 0x0601851C RID: 99612 RVA: 0x00630AA8 File Offset: 0x0062ECA8
+	// Token: 0x06015DBE RID: 89534 RVA: 0x00656ABC File Offset: 0x00654CBC
 	public void OnScoreTasksClaimed(List<int> taskIds)
 	{
 		foreach (int num in taskIds)
@@ -306,13 +306,13 @@ public class WeeklyChallengeModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.WeeklyChallengeRewardStateChanged);
 	}
 
-	// Token: 0x0601851D RID: 99613 RVA: 0x00630B38 File Offset: 0x0062ED38
+	// Token: 0x06015DBF RID: 89535 RVA: 0x00656B4C File Offset: 0x00654D4C
 	public bool IsScoreTaskClaimed(int taskId)
 	{
 		return this.ClaimedScoreTaskIds.Contains(taskId);
 	}
 
-	// Token: 0x0601851E RID: 99614 RVA: 0x00630B48 File Offset: 0x0062ED48
+	// Token: 0x06015DC0 RID: 89536 RVA: 0x00656B5C File Offset: 0x00654D5C
 	public bool CheckIsRewardWaitTake()
 	{
 		if (this.ConfigId == 0)
@@ -335,13 +335,13 @@ public class WeeklyChallengeModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601851F RID: 99615 RVA: 0x00630BD0 File Offset: 0x0062EDD0
+	// Token: 0x06015DC1 RID: 89537 RVA: 0x00656BE4 File Offset: 0x00654DE4
 	public bool CheckIsFinish()
 	{
 		return this.ConfigId == 0 || this.ScoreMax <= 0 || this.CurrentScore >= this.ScoreMax;
 	}
 
-	// Token: 0x06018520 RID: 99616 RVA: 0x00630BF8 File Offset: 0x0062EDF8
+	// Token: 0x06015DC2 RID: 89538 RVA: 0x00656C0C File Offset: 0x00654E0C
 	public int GetLastNotTaken()
 	{
 		int result = 0;
@@ -358,7 +358,7 @@ public class WeeklyChallengeModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06018521 RID: 99617 RVA: 0x00630C51 File Offset: 0x0062EE51
+	// Token: 0x06015DC3 RID: 89539 RVA: 0x00656C65 File Offset: 0x00654E65
 	private void OnCommonItemCountAnyChange(int configId, int count)
 	{
 		if (configId == this.GetScoreId())
@@ -367,7 +367,7 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06018522 RID: 99618 RVA: 0x00630C64 File Offset: 0x0062EE64
+	// Token: 0x06015DC4 RID: 89540 RVA: 0x00656C78 File Offset: 0x00654E78
 	public void ReportEndTimeRefreshLogEvent()
 	{
 		int? weeklyChallengeRefreshTime = DailyActivityModel.Instance.GetWeeklyChallengeRefreshTime();
@@ -383,8 +383,8 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x170020D2 RID: 8402
-	// (get) Token: 0x06018523 RID: 99619 RVA: 0x00630CC2 File Offset: 0x0062EEC2
+	// Token: 0x1700212D RID: 8493
+	// (get) Token: 0x06015DC5 RID: 89541 RVA: 0x00656CD6 File Offset: 0x00654ED6
 	public static WeeklyChallengeModel Instance
 	{
 		get
@@ -393,7 +393,7 @@ public class WeeklyChallengeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06018524 RID: 99620 RVA: 0x00630CC9 File Offset: 0x0062EEC9
+	// Token: 0x06015DC6 RID: 89542 RVA: 0x00656CDD File Offset: 0x00654EDD
 	public static WeeklyChallengeModel GetOrCreateInstance()
 	{
 		if (WeeklyChallengeModel._Instance == null)
@@ -403,7 +403,7 @@ public class WeeklyChallengeModel : ModelBase
 		return WeeklyChallengeModel._Instance;
 	}
 
-	// Token: 0x06018525 RID: 99621 RVA: 0x00630CDD File Offset: 0x0062EEDD
+	// Token: 0x06015DC7 RID: 89543 RVA: 0x00656CF1 File Offset: 0x00654EF1
 	public static bool CreateInstance()
 	{
 		if (WeeklyChallengeModel._Instance != null)
@@ -414,54 +414,54 @@ public class WeeklyChallengeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06018526 RID: 99622 RVA: 0x00630CF3 File Offset: 0x0062EEF3
+	// Token: 0x06015DC8 RID: 89544 RVA: 0x00656D07 File Offset: 0x00654F07
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06018527 RID: 99623 RVA: 0x00630CF5 File Offset: 0x0062EEF5
+	// Token: 0x06015DC9 RID: 89545 RVA: 0x00656D09 File Offset: 0x00654F09
 	public static void ResetStaticDefaultValue()
 	{
 		WeeklyChallengeModel._Instance = null;
 	}
 
-	// Token: 0x06018528 RID: 99624 RVA: 0x00630CFD File Offset: 0x0062EEFD
+	// Token: 0x06015DCA RID: 89546 RVA: 0x00656D11 File Offset: 0x00654F11
 	static WeeklyChallengeModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeeklyChallengeModel.CreateStaticDefaultValue), new Action(WeeklyChallengeModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B48E RID: 46222
+	// Token: 0x0400B803 RID: 47107
 	private int ConfigId;
 
-	// Token: 0x0400B48F RID: 46223
+	// Token: 0x0400B804 RID: 47108
 	private long BeginTime;
 
-	// Token: 0x0400B490 RID: 46224
+	// Token: 0x0400B805 RID: 47109
 	private long EndTime;
 
-	// Token: 0x0400B491 RID: 46225
+	// Token: 0x0400B806 RID: 47110
 	private List<int> ClaimedScoreTaskIds = new List<int>();
 
-	// Token: 0x0400B492 RID: 46226
+	// Token: 0x0400B807 RID: 47111
 	private int WorldLevel;
 
-	// Token: 0x0400B493 RID: 46227
+	// Token: 0x0400B808 RID: 47112
 	private int LastInitWorldLevel = -1;
 
-	// Token: 0x0400B494 RID: 46228
+	// Token: 0x0400B809 RID: 47113
 	private int CurrentScore;
 
-	// Token: 0x0400B495 RID: 46229
+	// Token: 0x0400B80A RID: 47114
 	private int ScoreMax;
 
-	// Token: 0x0400B496 RID: 46230
+	// Token: 0x0400B80B RID: 47115
 	private readonly Dictionary<int, DailyActivityDefine.IActivityGoalData> ScoreGoalMap = new Dictionary<int, DailyActivityDefine.IActivityGoalData>();
 
-	// Token: 0x0400B497 RID: 46231
+	// Token: 0x0400B80C RID: 47116
 	private readonly Dictionary<int, global::WeeklyPlayData> WeeklyPlayDataMap = new Dictionary<int, global::WeeklyPlayData>();
 
-	// Token: 0x0400B498 RID: 46232
+	// Token: 0x0400B80D RID: 47117
 	[Nullable(2)]
 	private static WeeklyChallengeModel _Instance;
 }

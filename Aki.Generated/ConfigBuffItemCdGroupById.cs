@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000129 RID: 297
+	// Token: 0x02000138 RID: 312
 	public class ConfigBuffItemCdGroupById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060006F7 RID: 1783 RVA: 0x000810AB File Offset: 0x0007F2AB
+		// Token: 0x06000751 RID: 1873 RVA: 0x00086A0F File Offset: 0x00084C0F
 		static ConfigBuffItemCdGroupById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBuffItemCdGroupById.CreateStaticDefaultValue), new Action(ConfigBuffItemCdGroupById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060006F8 RID: 1784 RVA: 0x000810CC File Offset: 0x0007F2CC
+		// Token: 0x06000752 RID: 1874 RVA: 0x00086A30 File Offset: 0x00084C30
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBuffItemCdGroupById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060006F9 RID: 1785 RVA: 0x0008114B File Offset: 0x0007F34B
+		// Token: 0x06000753 RID: 1875 RVA: 0x00086AAF File Offset: 0x00084CAF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBuffItemCdGroupById.LogPair = null;
 			ConfigBuffItemCdGroupById.HandleId = 0;
 		}
 
-		// Token: 0x060006FA RID: 1786 RVA: 0x00081159 File Offset: 0x0007F359
+		// Token: 0x06000754 RID: 1876 RVA: 0x00086ABD File Offset: 0x00084CBD
 		public static void Init()
 		{
 			ConfigBuffItemCdGroupById.HandleId = ConfigCommon.InitDataStatement(ConfigBuffItemCdGroupById.HandleId, "db_itemattributereward.db", "select BinData from `BuffItemCdGroup` where Id=?");
 		}
 
-		// Token: 0x060006FB RID: 1787 RVA: 0x00081174 File Offset: 0x0007F374
+		// Token: 0x06000755 RID: 1877 RVA: 0x00086AD8 File Offset: 0x00084CD8
 		public static BuffItemCdGroup? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBuffItemCdGroupById.HandleId, ConfigBuffItemCdGroupById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BuffItemCdGroup?(rootAsBuffItemCdGroup);
 		}
 
-		// Token: 0x04000803 RID: 2051
+		// Token: 0x0400086C RID: 2156
 		private const string DB = "db_itemattributereward.db";
 
-		// Token: 0x04000804 RID: 2052
+		// Token: 0x0400086D RID: 2157
 		private const string FILE = "s.属性奖励.xlsx";
 
-		// Token: 0x04000805 RID: 2053
+		// Token: 0x0400086E RID: 2158
 		private const string TABLE = "BuffItemCdGroup";
 
-		// Token: 0x04000806 RID: 2054
+		// Token: 0x0400086F RID: 2159
 		private const string COMMAND = "select BinData from `BuffItemCdGroup` where Id=?";
 
-		// Token: 0x04000807 RID: 2055
+		// Token: 0x04000870 RID: 2160
 		private const string KEY_PREFIX = "BuffItemCdGroupById";
 
-		// Token: 0x04000808 RID: 2056
+		// Token: 0x04000871 RID: 2161
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000809 RID: 2057
+		// Token: 0x04000872 RID: 2162
 		private static int HandleId;
 	}
 }

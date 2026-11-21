@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.RogueBattle;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200276E RID: 10094
+// Token: 0x02001C59 RID: 7257
 public class RogueBattleMapFetterTabChildItem : GridProxyAbstract<int>
 {
-	// Token: 0x06014B1A RID: 84762 RVA: 0x0053C968 File Offset: 0x0053AB68
+	// Token: 0x06011FFD RID: 73725 RVA: 0x0054B778 File Offset: 0x00549978
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,26 +26,26 @@ public class RogueBattleMapFetterTabChildItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06014B1B RID: 84763 RVA: 0x0053C9E5 File Offset: 0x0053ABE5
+	// Token: 0x06011FFE RID: 73726 RVA: 0x0054B7F5 File Offset: 0x005499F5
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 	}
 
-	// Token: 0x06014B1C RID: 84764 RVA: 0x0053CA04 File Offset: 0x0053AC04
+	// Token: 0x06011FFF RID: 73727 RVA: 0x0054B814 File Offset: 0x00549A14
 	public void SetSelected(bool isSelected)
 	{
 		EToggleState state = isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06014B1D RID: 84765 RVA: 0x0053CA2A File Offset: 0x0053AC2A
+	// Token: 0x06012000 RID: 73728 RVA: 0x0054B83A File Offset: 0x00549A3A
 	private bool CanExecuteChange()
 	{
 		return this.CanExecuteChangeFunction == null || this.CanExecuteChangeFunction(this.BondId, base.GetExtendToggle(0).GetToggleState());
 	}
 
-	// Token: 0x06014B1E RID: 84766 RVA: 0x0053CA54 File Offset: 0x0053AC54
+	// Token: 0x06012001 RID: 73729 RVA: 0x0054B864 File Offset: 0x00549A64
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.BondId = data;
@@ -67,17 +67,17 @@ public class RogueBattleMapFetterTabChildItem : GridProxyAbstract<int>
 		base.GetText(2).SetUIActive(false);
 	}
 
-	// Token: 0x06014B1F RID: 84767 RVA: 0x0053CB54 File Offset: 0x0053AD54
+	// Token: 0x06012002 RID: 73730 RVA: 0x0054B964 File Offset: 0x00549B64
 	private void OnClickToggle(EToggleState state)
 	{
 		RogueBattleModel.Instance.CurrentMapSummaryBond = this.BondId;
 		EventSystem.Instance.Emit<int>(EEventName.RogueResMapSummaryBondUpdate, this.BondId);
 	}
 
-	// Token: 0x04009B97 RID: 39831
+	// Token: 0x04009CEF RID: 40175
 	private int BondId;
 
-	// Token: 0x04009B98 RID: 39832
+	// Token: 0x04009CF0 RID: 40176
 	[Nullable(2)]
 	public Func<int, EToggleState, bool> CanExecuteChangeFunction;
 }

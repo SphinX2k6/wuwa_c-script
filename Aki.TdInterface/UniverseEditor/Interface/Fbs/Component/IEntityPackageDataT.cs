@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051A8 RID: 20904
+	// Token: 0x0200570D RID: 22285
 	public class IEntityPackageDataT
 	{
-		// Token: 0x170098C0 RID: 39104
-		// (get) Token: 0x06021D51 RID: 138577 RVA: 0x004B1787 File Offset: 0x004AF987
-		// (set) Token: 0x06021D52 RID: 138578 RVA: 0x004B178F File Offset: 0x004AF98F
+		// Token: 0x1700A0AF RID: 41135
+		// (get) Token: 0x06023CA9 RID: 146601 RVA: 0x004EB7EF File Offset: 0x004E99EF
+		// (set) Token: 0x06023CAA RID: 146602 RVA: 0x004EB7F7 File Offset: 0x004E99F7
 		public int PackagedLevelId { get; set; }
 
-		// Token: 0x170098C1 RID: 39105
-		// (get) Token: 0x06021D53 RID: 138579 RVA: 0x004B1798 File Offset: 0x004AF998
-		// (set) Token: 0x06021D54 RID: 138580 RVA: 0x004B17A0 File Offset: 0x004AF9A0
+		// Token: 0x1700A0B0 RID: 41136
+		// (get) Token: 0x06023CAB RID: 146603 RVA: 0x004EB800 File Offset: 0x004E9A00
+		// (set) Token: 0x06023CAC RID: 146604 RVA: 0x004EB808 File Offset: 0x004E9A08
 		public int PackageEntityId { get; set; }
 
-		// Token: 0x170098C2 RID: 39106
-		// (get) Token: 0x06021D55 RID: 138581 RVA: 0x004B17A9 File Offset: 0x004AF9A9
-		// (set) Token: 0x06021D56 RID: 138582 RVA: 0x004B17B1 File Offset: 0x004AF9B1
+		// Token: 0x1700A0B1 RID: 41137
+		// (get) Token: 0x06023CAD RID: 146605 RVA: 0x004EB811 File Offset: 0x004E9A11
+		// (set) Token: 0x06023CAE RID: 146606 RVA: 0x004EB819 File Offset: 0x004E9A19
 		public List<IEntityPackageNodeT> PackageTree { get; set; }
 
-		// Token: 0x170098C3 RID: 39107
-		// (get) Token: 0x06021D57 RID: 138583 RVA: 0x004B17BA File Offset: 0x004AF9BA
-		// (set) Token: 0x06021D58 RID: 138584 RVA: 0x004B17C2 File Offset: 0x004AF9C2
+		// Token: 0x1700A0B2 RID: 41138
+		// (get) Token: 0x06023CAF RID: 146607 RVA: 0x004EB822 File Offset: 0x004E9A22
+		// (set) Token: 0x06023CB0 RID: 146608 RVA: 0x004EB82A File Offset: 0x004E9A2A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021D59 RID: 138585 RVA: 0x004B17CB File Offset: 0x004AF9CB
+		// Token: 0x06023CB1 RID: 146609 RVA: 0x004EB833 File Offset: 0x004E9A33
 		public IEntityPackageDataT()
 		{
 			this.PackagedLevelId = 0;

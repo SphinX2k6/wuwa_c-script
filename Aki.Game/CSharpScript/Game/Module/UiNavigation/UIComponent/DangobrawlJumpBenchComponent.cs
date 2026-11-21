@@ -7,15 +7,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 {
-	// Token: 0x020049F9 RID: 18937
+	// Token: 0x02003973 RID: 14707
 	public class DangobrawlJumpBenchComponent : HotKeyComponent
 	{
-		// Token: 0x060312A8 RID: 201384 RVA: 0x00B67612 File Offset: 0x00B65812
+		// Token: 0x06025DDE RID: 155102 RVA: 0x00AA25CE File Offset: 0x00AA07CE
 		public DangobrawlJumpBenchComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060312A9 RID: 201385 RVA: 0x00B6761C File Offset: 0x00B6581C
+		// Token: 0x06025DDF RID: 155103 RVA: 0x00AA25D8 File Offset: 0x00AA07D8
 		protected override void OnRelease(HotKeyMap config)
 		{
 			DangoBrawlItemViewRegistry viewRegistry = DangoBrawlModel.Instance.GetViewRegistry();
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			UiNavigationNewController.Instance.SetNavigationMousePositionForView(uuiitem2);
 		}
 
-		// Token: 0x060312AA RID: 201386 RVA: 0x00B67663 File Offset: 0x00B65863
+		// Token: 0x06025DE0 RID: 155104 RVA: 0x00AA261F File Offset: 0x00AA081F
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

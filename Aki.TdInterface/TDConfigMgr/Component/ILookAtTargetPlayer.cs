@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004D4 RID: 1236
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200052D RID: 1325
 	public class ILookAtTargetPlayer : ILookAtTargetBase
 	{
-		// Token: 0x06001916 RID: 6422 RVA: 0x0004A788 File Offset: 0x00048988
+		// Token: 0x06001AB0 RID: 6832 RVA: 0x0004E4D0 File Offset: 0x0004C6D0
 		private ILookAtTargetPlayer_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001917 RID: 6423 RVA: 0x0004A7C0 File Offset: 0x000489C0
+		// Token: 0x06001AB1 RID: 6833 RVA: 0x0004E508 File Offset: 0x0004C708
 		public static ILookAtTargetPlayer Create([Nullable(2)] ILookAtTargetPlayer instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001918 RID: 6424 RVA: 0x0004A7D3 File Offset: 0x000489D3
+		// Token: 0x06001AB2 RID: 6834 RVA: 0x0004E51B File Offset: 0x0004C71B
 		public static ILookAtTargetPlayer CreateFromSetValue([Nullable(2)] ILookAtTargetPlayer_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001919 RID: 6425 RVA: 0x0004A7E6 File Offset: 0x000489E6
+		// Token: 0x06001AB3 RID: 6835 RVA: 0x0004E52E File Offset: 0x0004C72E
 		public new ILookAtTargetPlayer_SetValue ToSetValue()
 		{
 			return new ILookAtTargetPlayer_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006AC RID: 1708
-		// (get) Token: 0x0600191A RID: 6426 RVA: 0x0004A7F9 File Offset: 0x000489F9
-		// (set) Token: 0x0600191B RID: 6427 RVA: 0x0004A824 File Offset: 0x00048A24
+		// Token: 0x17000713 RID: 1811
+		// (get) Token: 0x06001AB4 RID: 6836 RVA: 0x0004E541 File Offset: 0x0004C741
+		// (set) Token: 0x06001AB5 RID: 6837 RVA: 0x0004E56C File Offset: 0x0004C76C
 		public override ELookAtTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400127A RID: 4730
+		// Token: 0x0400139C RID: 5020
 		[Nullable(2)]
 		protected new ILookAtTargetPlayer FbInstance;
 
-		// Token: 0x0400127B RID: 4731
+		// Token: 0x0400139D RID: 5021
 		[Nullable(2)]
 		protected new ILookAtTargetPlayer_SetValue PocoInterface;
 	}

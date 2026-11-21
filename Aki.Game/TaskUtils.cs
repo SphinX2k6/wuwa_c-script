@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003545 RID: 13637
+// Token: 0x02002ABA RID: 10938
 [NullableContext(1)]
 [Nullable(0)]
 public static class TaskUtils
 {
-	// Token: 0x0601DF42 RID: 122690 RVA: 0x00864F80 File Offset: 0x00863180
+	// Token: 0x0601BC6A RID: 113770 RVA: 0x0088CBB8 File Offset: 0x0088ADB8
 	public static List<string> GetNodesWithNoDependencies(Dictionary<string, IGraphNodeWithDependencies> graphDependencyMap)
 	{
 		List<string> list = new List<string>();
@@ -21,7 +21,7 @@ public static class TaskUtils
 		return list;
 	}
 
-	// Token: 0x0601DF43 RID: 122691 RVA: 0x00864FF0 File Offset: 0x008631F0
+	// Token: 0x0601BC6B RID: 113771 RVA: 0x0088CC28 File Offset: 0x0088AE28
 	private static Dictionary<string, HashSet<string>> GetNewDependsOnMap(Dictionary<string, IGraphNodeWithDependencies> graphDependencyMap)
 	{
 		Dictionary<string, HashSet<string>> dictionary = new Dictionary<string, HashSet<string>>();
@@ -32,7 +32,7 @@ public static class TaskUtils
 		return dictionary;
 	}
 
-	// Token: 0x0601DF44 RID: 122692 RVA: 0x0086505C File Offset: 0x0086325C
+	// Token: 0x0601BC6C RID: 113772 RVA: 0x0088CC94 File Offset: 0x0088AE94
 	private static List<string> TopologicalSort(Dictionary<string, IGraphNodeWithDependencies> graphDependencyMap, List<string> nodesWithNoDependencies)
 	{
 		List<string> list = new List<string>();
@@ -56,7 +56,7 @@ public static class TaskUtils
 		return list;
 	}
 
-	// Token: 0x0601DF45 RID: 122693 RVA: 0x00865118 File Offset: 0x00863318
+	// Token: 0x0601BC6D RID: 113773 RVA: 0x0088CD50 File Offset: 0x0088AF50
 	public static Dictionary<string, int> GetNodeCumulativePriorities(Dictionary<string, IGraphNodeWithDependencies> graphDependencyMap, List<string> nodesWithNoDependencies)
 	{
 		Dictionary<string, int> dictionary = new Dictionary<string, int>();
@@ -86,7 +86,7 @@ public static class TaskUtils
 		return dictionary;
 	}
 
-	// Token: 0x0601DF46 RID: 122694 RVA: 0x008651FC File Offset: 0x008633FC
+	// Token: 0x0601BC6E RID: 113774 RVA: 0x0088CE34 File Offset: 0x0088B034
 	private static List<string> SearchForCycleDFS(Dictionary<string, IGraphNodeWithDependencies> graph, Dictionary<string, bool> visitMap, string nodeId)
 	{
 		List<StackElement> list = new List<StackElement>
@@ -170,7 +170,7 @@ public static class TaskUtils
 		return new List<string>();
 	}
 
-	// Token: 0x0601DF47 RID: 122695 RVA: 0x00865424 File Offset: 0x00863624
+	// Token: 0x0601BC6F RID: 113775 RVA: 0x0088D05C File Offset: 0x0088B25C
 	[return: Nullable(new byte[]
 	{
 		0,

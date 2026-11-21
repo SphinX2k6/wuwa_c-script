@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D62 RID: 19810
+	// Token: 0x0200525E RID: 21086
 	public static class TVisibleConditionVerify
 	{
-		// Token: 0x0601F6E3 RID: 128739 RVA: 0x00460DA8 File Offset: 0x0045EFA8
+		// Token: 0x0602132E RID: 135982 RVA: 0x00494DB0 File Offset: 0x00492FB0
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -25,12 +25,15 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 				result = IPreQuestVerify.Verify(verifier, tablePos);
 				break;
 			case 5:
-				result = ITargetEntityInvisibleVerify.Verify(verifier, tablePos);
+				result = ISeasonAndWeatherVerify.Verify(verifier, tablePos);
 				break;
 			case 6:
-				result = ITimePeriodVerify.Verify(verifier, tablePos);
+				result = ITargetEntityInvisibleVerify.Verify(verifier, tablePos);
 				break;
 			case 7:
+				result = ITimePeriodVerify.Verify(verifier, tablePos);
+				break;
+			case 8:
 				result = IWeatherVerify.Verify(verifier, tablePos);
 				break;
 			default:

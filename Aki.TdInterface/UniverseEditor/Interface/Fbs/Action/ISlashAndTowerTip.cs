@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007139 RID: 28985
+	// Token: 0x02007905 RID: 30981
 	public struct ISlashAndTowerTip : IFlatbufferObject
 	{
-		// Token: 0x1700D761 RID: 55137
-		// (get) Token: 0x06033622 RID: 210466 RVA: 0x006ECD3E File Offset: 0x006EAF3E
+		// Token: 0x1700E344 RID: 58180
+		// (get) Token: 0x060368C4 RID: 223428 RVA: 0x0074D34A File Offset: 0x0074B54A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033623 RID: 210467 RVA: 0x006ECD4B File Offset: 0x006EAF4B
+		// Token: 0x060368C5 RID: 223429 RVA: 0x0074D357 File Offset: 0x0074B557
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033624 RID: 210468 RVA: 0x006ECD54 File Offset: 0x006EAF54
+		// Token: 0x060368C6 RID: 223430 RVA: 0x0074D360 File Offset: 0x0074B560
 		public static ISlashAndTowerTip GetRootAsISlashAndTowerTip(ByteBuffer _bb)
 		{
 			return ISlashAndTowerTip.GetRootAsISlashAndTowerTip(_bb, default(ISlashAndTowerTip));
 		}
 
-		// Token: 0x06033625 RID: 210469 RVA: 0x006ECD70 File Offset: 0x006EAF70
+		// Token: 0x060368C7 RID: 223431 RVA: 0x0074D37C File Offset: 0x0074B57C
 		public static ISlashAndTowerTip GetRootAsISlashAndTowerTip(ByteBuffer _bb, ISlashAndTowerTip obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033626 RID: 210470 RVA: 0x006ECD8D File Offset: 0x006EAF8D
+		// Token: 0x060368C8 RID: 223432 RVA: 0x0074D399 File Offset: 0x0074B599
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033627 RID: 210471 RVA: 0x006ECD9C File Offset: 0x006EAF9C
+		// Token: 0x060368C9 RID: 223433 RVA: 0x0074D3A8 File Offset: 0x0074B5A8
 		public ISlashAndTowerTip __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D762 RID: 55138
-		// (get) Token: 0x06033628 RID: 210472 RVA: 0x006ECDAC File Offset: 0x006EAFAC
+		// Token: 0x1700E345 RID: 58181
+		// (get) Token: 0x060368CA RID: 223434 RVA: 0x0074D3B8 File Offset: 0x0074B5B8
 		public ECommonTipType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D763 RID: 55139
-		// (get) Token: 0x06033629 RID: 210473 RVA: 0x006ECDE8 File Offset: 0x006EAFE8
+		// Token: 0x1700E346 RID: 58182
+		// (get) Token: 0x060368CB RID: 223435 RVA: 0x0074D3F4 File Offset: 0x0074B5F4
 		public string WarningText
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603362A RID: 210474 RVA: 0x006ECE1F File Offset: 0x006EB01F
+		// Token: 0x060368CC RID: 223436 RVA: 0x0074D42B File Offset: 0x0074B62B
 		public Span<byte> GetWarningTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0603362B RID: 210475 RVA: 0x006ECE2E File Offset: 0x006EB02E
+		// Token: 0x060368CD RID: 223437 RVA: 0x0074D43A File Offset: 0x0074B63A
 		public byte[] GetWarningTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0603362C RID: 210476 RVA: 0x006ECE3C File Offset: 0x006EB03C
+		// Token: 0x060368CE RID: 223438 RVA: 0x0074D448 File Offset: 0x0074B648
 		public static Offset<ISlashAndTowerTip> CreateISlashAndTowerTip(FlatBufferBuilder builder, ECommonTipType Type = ECommonTipType.ChallengeCondition, StringOffset WarningTextOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlashAndTowerTip.EndISlashAndTowerTip(builder);
 		}
 
-		// Token: 0x0603362D RID: 210477 RVA: 0x006ECE59 File Offset: 0x006EB059
+		// Token: 0x060368CF RID: 223439 RVA: 0x0074D465 File Offset: 0x0074B665
 		public static void StartISlashAndTowerTip(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603362E RID: 210478 RVA: 0x006ECE62 File Offset: 0x006EB062
+		// Token: 0x060368D0 RID: 223440 RVA: 0x0074D46E File Offset: 0x0074B66E
 		public static void AddType(FlatBufferBuilder builder, ECommonTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603362F RID: 210479 RVA: 0x006ECE6D File Offset: 0x006EB06D
+		// Token: 0x060368D1 RID: 223441 RVA: 0x0074D479 File Offset: 0x0074B679
 		public static void AddWarningText(FlatBufferBuilder builder, StringOffset warningTextOffset)
 		{
 			builder.AddOffset(1, warningTextOffset.Value, 0);
 		}
 
-		// Token: 0x06033630 RID: 210480 RVA: 0x006ECE7D File Offset: 0x006EB07D
+		// Token: 0x060368D2 RID: 223442 RVA: 0x0074D489 File Offset: 0x0074B689
 		public static Offset<ISlashAndTowerTip> EndISlashAndTowerTip(FlatBufferBuilder builder)
 		{
 			return new Offset<ISlashAndTowerTip>(builder.EndTable());
 		}
 
-		// Token: 0x06033631 RID: 210481 RVA: 0x006ECE8C File Offset: 0x006EB08C
+		// Token: 0x060368D3 RID: 223443 RVA: 0x0074D498 File Offset: 0x0074B698
 		public ISlashAndTowerTipT UnPack()
 		{
 			ISlashAndTowerTipT slashAndTowerTipT = new ISlashAndTowerTipT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return slashAndTowerTipT;
 		}
 
-		// Token: 0x06033632 RID: 210482 RVA: 0x006ECEA7 File Offset: 0x006EB0A7
+		// Token: 0x060368D4 RID: 223444 RVA: 0x0074D4B3 File Offset: 0x0074B6B3
 		public void UnPackTo(ISlashAndTowerTipT _o)
 		{
 			_o.Type = this.Type;
 			_o.WarningText = this.WarningText;
 		}
 
-		// Token: 0x06033633 RID: 210483 RVA: 0x006ECEC4 File Offset: 0x006EB0C4
+		// Token: 0x060368D5 RID: 223445 RVA: 0x0074D4D0 File Offset: 0x0074B6D0
 		public static Offset<ISlashAndTowerTip> Pack(FlatBufferBuilder builder, ISlashAndTowerTipT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlashAndTowerTip.CreateISlashAndTowerTip(builder, _o.Type, warningTextOffset);
 		}
 
-		// Token: 0x04011BD4 RID: 72660
+		// Token: 0x04012BC2 RID: 76738
 		private Table __p;
 	}
 }

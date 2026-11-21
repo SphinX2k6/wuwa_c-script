@@ -4,18 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000537 RID: 1335
+	// Token: 0x0200059E RID: 1438
 	public class IMovementPerformConfig_SetValue
 	{
-		// Token: 0x040013AB RID: 5035
-		[Nullable(1)]
+		// Token: 0x04001515 RID: 5397
 		public List<IVehicleMontagePlayConfig> VehicleMontagePlayConfigs;
 
-		// Token: 0x040013AC RID: 5036
+		// Token: 0x04001516 RID: 5398
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ISpeedEffectConfig> PlayerSpeedEffectConfigs;
 	}

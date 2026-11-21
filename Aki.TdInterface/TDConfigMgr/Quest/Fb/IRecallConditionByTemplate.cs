@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200145B RID: 5211
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015B4 RID: 5556
 	public class IRecallConditionByTemplate : IRecallConditionBase
 	{
-		// Token: 0x0600766D RID: 30317 RVA: 0x0011AD40 File Offset: 0x00118F40
+		// Token: 0x06007D3A RID: 32058 RVA: 0x00129924 File Offset: 0x00127B24
 		public static IRecallConditionByTemplate Create(IRecallConditionByTemplate? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700278A RID: 10122
-		// (get) Token: 0x0600766E RID: 30318 RVA: 0x0011AD5F File Offset: 0x00118F5F
+		// Token: 0x17002974 RID: 10612
+		// (get) Token: 0x06007D3B RID: 32059 RVA: 0x00129943 File Offset: 0x00127B43
 		public override ERecallConditionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700278B RID: 10123
-		// (get) Token: 0x0600766F RID: 30319 RVA: 0x0011AD6C File Offset: 0x00118F6C
+		// Token: 0x17002975 RID: 10613
+		// (get) Token: 0x06007D3C RID: 32060 RVA: 0x00129950 File Offset: 0x00127B50
 		public override ERecallOperation Operation
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700278C RID: 10124
-		// (get) Token: 0x06007670 RID: 30320 RVA: 0x0011AD7C File Offset: 0x00118F7C
+		// Token: 0x17002976 RID: 10614
+		// (get) Token: 0x06007D3D RID: 32061 RVA: 0x00129960 File Offset: 0x00127B60
 		public virtual List<string> Templates
 		{
 			get
@@ -64,8 +61,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700278D RID: 10125
-		// (get) Token: 0x06007671 RID: 30321 RVA: 0x0011ADE0 File Offset: 0x00118FE0
+		// Token: 0x17002977 RID: 10615
+		// (get) Token: 0x06007D3E RID: 32062 RVA: 0x001299C4 File Offset: 0x00127BC4
 		public virtual List<int> AreaIds
 		{
 			get
@@ -85,19 +82,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040044C3 RID: 17603
+		// Token: 0x0400485C RID: 18524
 		private IRecallConditionByTemplate Instance;
 
-		// Token: 0x040044C4 RID: 17604
+		// Token: 0x0400485D RID: 18525
 		private List<string> _TemplatesCache;
 
-		// Token: 0x040044C5 RID: 17605
+		// Token: 0x0400485E RID: 18526
 		private bool _TemplatesInited;
 
-		// Token: 0x040044C6 RID: 17606
+		// Token: 0x0400485F RID: 18527
 		private List<int> _AreaIdsCache;
 
-		// Token: 0x040044C7 RID: 17607
+		// Token: 0x04004860 RID: 18528
 		private bool _AreaIdsInited;
 	}
 }

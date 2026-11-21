@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000881 RID: 2177
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000924 RID: 2340
 	public class RollBlockItemComponent : IComponentBase
 	{
-		// Token: 0x06003061 RID: 12385 RVA: 0x0007C750 File Offset: 0x0007A950
+		// Token: 0x0600339D RID: 13213 RVA: 0x00083C38 File Offset: 0x00081E38
 		private RollBlockItemComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003062 RID: 12386 RVA: 0x0007C788 File Offset: 0x0007A988
+		// Token: 0x0600339E RID: 13214 RVA: 0x00083C70 File Offset: 0x00081E70
 		public static RollBlockItemComponent Create([Nullable(2)] RollBlockItemComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003063 RID: 12387 RVA: 0x0007C79B File Offset: 0x0007A99B
+		// Token: 0x0600339F RID: 13215 RVA: 0x00083C83 File Offset: 0x00081E83
 		public static RollBlockItemComponent CreateFromSetValue([Nullable(2)] RollBlockItemComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003064 RID: 12388 RVA: 0x0007C7AE File Offset: 0x0007A9AE
+		// Token: 0x060033A0 RID: 13216 RVA: 0x00083C96 File Offset: 0x00081E96
 		public new RollBlockItemComponent_SetValue ToSetValue()
 		{
 			return new RollBlockItemComponent_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CD2 RID: 3282
-		// (get) Token: 0x06003065 RID: 12389 RVA: 0x0007C7D0 File Offset: 0x0007A9D0
-		// (set) Token: 0x06003066 RID: 12390 RVA: 0x0007C80A File Offset: 0x0007AA0A
+		// Token: 0x17000D9B RID: 3483
+		// (get) Token: 0x060033A1 RID: 13217 RVA: 0x00083CB8 File Offset: 0x00081EB8
+		// (set) Token: 0x060033A2 RID: 13218 RVA: 0x00083CF2 File Offset: 0x00081EF2
 		public override bool? Disabled
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CD3 RID: 3283
-		// (get) Token: 0x06003067 RID: 12391 RVA: 0x0007C818 File Offset: 0x0007AA18
-		// (set) Token: 0x06003068 RID: 12392 RVA: 0x0007C842 File Offset: 0x0007AA42
+		// Token: 0x17000D9C RID: 3484
+		// (get) Token: 0x060033A3 RID: 13219 RVA: 0x00083D00 File Offset: 0x00081F00
+		// (set) Token: 0x060033A4 RID: 13220 RVA: 0x00083D2A File Offset: 0x00081F2A
 		public override bool? EdIsLocked
 		{
 			get
@@ -103,11 +101,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001FD0 RID: 8144
+		// Token: 0x040021E2 RID: 8674
 		[Nullable(2)]
 		protected new RollBlockItemComponent FbInstance;
 
-		// Token: 0x04001FD1 RID: 8145
+		// Token: 0x040021E3 RID: 8675
 		[Nullable(2)]
 		protected new RollBlockItemComponent_SetValue PocoInterface;
 	}

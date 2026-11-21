@@ -7,23 +7,23 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x0200672C RID: 26412
+	// Token: 0x0200567C RID: 22140
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayCommandMgr : DropCatchGameplayBaseMgr, ICommandContext
 	{
-		// Token: 0x06041EB6 RID: 270006 RVA: 0x00FFD0E2 File Offset: 0x00FFB2E2
+		// Token: 0x06036A02 RID: 223746 RVA: 0x00F3E4AE File Offset: 0x00F3C6AE
 		public DropCatchGameplayCommandMgr(IGameplayLogicContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06041EB7 RID: 270007 RVA: 0x00FFD122 File Offset: 0x00FFB322
+		// Token: 0x06036A03 RID: 223747 RVA: 0x00F3E4EE File Offset: 0x00F3C6EE
 		public IGameplayLogicContext GetLogicContext()
 		{
 			return this.Context;
 		}
 
-		// Token: 0x06041EB8 RID: 270008 RVA: 0x00FFD12A File Offset: 0x00FFB32A
+		// Token: 0x06036A04 RID: 223748 RVA: 0x00F3E4F6 File Offset: 0x00F3C6F6
 		public override void Init()
 		{
 			this.GameplayTimeCommands.Clear();
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.InitCommands();
 		}
 
-		// Token: 0x06041EB9 RID: 270009 RVA: 0x00FFD16C File Offset: 0x00FFB36C
+		// Token: 0x06036A05 RID: 223749 RVA: 0x00F3E538 File Offset: 0x00F3C738
 		private void InitCommands()
 		{
 			DropCatchGameplay? gameplayConfig = this.Context.GetProxy().GetGameplayConfig();
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EBA RID: 270010 RVA: 0x00FFD270 File Offset: 0x00FFB470
+		// Token: 0x06036A06 RID: 223750 RVA: 0x00F3E63C File Offset: 0x00F3C83C
 		public override void OnTick(float deltaTime)
 		{
 			this.ProcessTimedCommands();
 		}
 
-		// Token: 0x06041EBB RID: 270011 RVA: 0x00FFD278 File Offset: 0x00FFB478
+		// Token: 0x06036A07 RID: 223751 RVA: 0x00F3E644 File Offset: 0x00F3C844
 		private void LoadCommands(string serializedValue, Action<CommandData> addFn)
 		{
 			if (StringUtils.IsEmpty(serializedValue))
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EBC RID: 270012 RVA: 0x00FFD2DC File Offset: 0x00FFB4DC
+		// Token: 0x06036A08 RID: 223752 RVA: 0x00F3E6A8 File Offset: 0x00F3C8A8
 		private void LoadTimeCommands(string serializedValue, Action<TimeCommands> addFn)
 		{
 			if (StringUtils.IsEmpty(serializedValue))
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EBD RID: 270013 RVA: 0x00FFD340 File Offset: 0x00FFB540
+		// Token: 0x06036A09 RID: 223753 RVA: 0x00F3E70C File Offset: 0x00F3C90C
 		[NullableContext(2)]
 		public unsafe void ExecuteCommand(EDropCatchCommandName commandName, object @params)
 		{
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06041EBE RID: 270014 RVA: 0x00FFD404 File Offset: 0x00FFB604
+		// Token: 0x06036A0A RID: 223754 RVA: 0x00F3E7D0 File Offset: 0x00F3C9D0
 		public void ExecuteDropItemEffectCommand(int itemId)
 		{
 			List<CommandData> list;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EBF RID: 270015 RVA: 0x00FFD470 File Offset: 0x00FFB670
+		// Token: 0x06036A0B RID: 223755 RVA: 0x00F3E83C File Offset: 0x00F3CA3C
 		public void ExecuteSkillCommand()
 		{
 			foreach (CommandData commandData in this.SkillCommands)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EC0 RID: 270016 RVA: 0x00FFD4D0 File Offset: 0x00FFB6D0
+		// Token: 0x06036A0C RID: 223756 RVA: 0x00F3E89C File Offset: 0x00F3CA9C
 		private void ProcessTimedCommands()
 		{
 			float time = this.Context.GetGameplayTimeMgr().GetTime();
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EC1 RID: 270017 RVA: 0x00FFD708 File Offset: 0x00FFB908
+		// Token: 0x06036A0D RID: 223757 RVA: 0x00F3EAD4 File Offset: 0x00F3CCD4
 		[NullableContext(2)]
 		private static object DeserializeParams(EDropCatchCommandName commandName, object @params)
 		{
@@ -241,19 +241,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return element.Deserialize(returnType, JsonSettings.DecodeOptions);
 		}
 
-		// Token: 0x04022581 RID: 140673
+		// Token: 0x0401CDDA RID: 118234
 		private readonly Dictionary<float, List<CommandData>> GameplayTimeCommands = new Dictionary<float, List<CommandData>>();
 
-		// Token: 0x04022582 RID: 140674
+		// Token: 0x0401CDDB RID: 118235
 		private readonly Dictionary<float, List<CommandData>> RemainingTimeCommands = new Dictionary<float, List<CommandData>>();
 
-		// Token: 0x04022583 RID: 140675
+		// Token: 0x0401CDDC RID: 118236
 		private readonly List<CommandData> SkillCommands = new List<CommandData>();
 
-		// Token: 0x04022584 RID: 140676
+		// Token: 0x0401CDDD RID: 118237
 		private readonly Dictionary<int, List<CommandData>> DropItemEffectCommands = new Dictionary<int, List<CommandData>>();
 
-		// Token: 0x04022585 RID: 140677
+		// Token: 0x0401CDDE RID: 118238
 		private readonly List<float> TmpArray = new List<float>();
 	}
 }

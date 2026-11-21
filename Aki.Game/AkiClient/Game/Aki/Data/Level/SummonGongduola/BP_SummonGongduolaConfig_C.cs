@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Level.SummonGongduola
 {
-	// Token: 0x02003F05 RID: 16133
+	// Token: 0x020031C1 RID: 12737
 	[UnrealObjectPath("/Game/Aki/Data/Level/SummonGongduola/BP_SummonGongduolaConfig.BP_SummonGongduolaConfig_C")]
 	[UnrealStructLayout(112, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 109)]
 	public class BP_SummonGongduolaConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028E55 RID: 167509 RVA: 0x009B70C7 File Offset: 0x009B52C7
+		// Token: 0x0601F7E8 RID: 129000 RVA: 0x0092F099 File Offset: 0x0092D299
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SummonGongduolaConfig_C._ClassPtr == IntPtr.Zero)
@@ -22,174 +22,174 @@ namespace AkiClient.Game.Aki.Data.Level.SummonGongduola
 			return BP_SummonGongduolaConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06028E56 RID: 167510 RVA: 0x009B70EC File Offset: 0x009B52EC
+		// Token: 0x0601F7E9 RID: 129001 RVA: 0x0092F0C0 File Offset: 0x0092D2C0
 		public BP_SummonGongduolaConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_SummonGongduolaConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028E57 RID: 167511 RVA: 0x009B7114 File Offset: 0x009B5314
+		// Token: 0x0601F7EA RID: 129002 RVA: 0x0092F0E8 File Offset: 0x0092D2E8
 		[NullableContext(1)]
 		public BP_SummonGongduolaConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SummonGongduolaConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006032 RID: 24626
-		// (get) Token: 0x06028E58 RID: 167512 RVA: 0x009B7147 File Offset: 0x009B5347
-		// (set) Token: 0x06028E59 RID: 167513 RVA: 0x009B7157 File Offset: 0x009B5357
+		// Token: 0x1700399D RID: 14749
+		// (get) Token: 0x0601F7EB RID: 129003 RVA: 0x0092F11B File Offset: 0x0092D31B
+		// (set) Token: 0x0601F7EC RID: 129004 RVA: 0x0092F12B File Offset: 0x0092D32B
 		public unsafe float FadeInTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_FadeInTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_FadeInTime) = value;
 			}
 		}
 
-		// Token: 0x17006033 RID: 24627
-		// (get) Token: 0x06028E5A RID: 167514 RVA: 0x009B7168 File Offset: 0x009B5368
-		// (set) Token: 0x06028E5B RID: 167515 RVA: 0x009B7178 File Offset: 0x009B5378
+		// Token: 0x1700399E RID: 14750
+		// (get) Token: 0x0601F7ED RID: 129005 RVA: 0x0092F13C File Offset: 0x0092D33C
+		// (set) Token: 0x0601F7EE RID: 129006 RVA: 0x0092F14C File Offset: 0x0092D34C
 		public unsafe float StayTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_StayTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_StayTime) = value;
 			}
 		}
 
-		// Token: 0x17006034 RID: 24628
-		// (get) Token: 0x06028E5C RID: 167516 RVA: 0x009B7189 File Offset: 0x009B5389
-		// (set) Token: 0x06028E5D RID: 167517 RVA: 0x009B7199 File Offset: 0x009B5399
+		// Token: 0x1700399F RID: 14751
+		// (get) Token: 0x0601F7EF RID: 129007 RVA: 0x0092F15D File Offset: 0x0092D35D
+		// (set) Token: 0x0601F7F0 RID: 129008 RVA: 0x0092F16D File Offset: 0x0092D36D
 		public unsafe float FadeOutTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_FadeOutTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_FadeOutTime) = value;
 			}
 		}
 
-		// Token: 0x17006035 RID: 24629
-		// (get) Token: 0x06028E5E RID: 167518 RVA: 0x009B71AA File Offset: 0x009B53AA
-		// (set) Token: 0x06028E5F RID: 167519 RVA: 0x009B71BA File Offset: 0x009B53BA
+		// Token: 0x170039A0 RID: 14752
+		// (get) Token: 0x0601F7F1 RID: 129009 RVA: 0x0092F17E File Offset: 0x0092D37E
+		// (set) Token: 0x0601F7F2 RID: 129010 RVA: 0x0092F18E File Offset: 0x0092D38E
 		public unsafe int Priority
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_Priority);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_Priority) = value;
 			}
 		}
 
-		// Token: 0x17006036 RID: 24630
-		// (get) Token: 0x06028E60 RID: 167520 RVA: 0x009B71CB File Offset: 0x009B53CB
-		// (set) Token: 0x06028E61 RID: 167521 RVA: 0x009B71DB File Offset: 0x009B53DB
+		// Token: 0x170039A1 RID: 14753
+		// (get) Token: 0x0601F7F3 RID: 129011 RVA: 0x0092F19F File Offset: 0x0092D39F
+		// (set) Token: 0x0601F7F4 RID: 129012 RVA: 0x0092F1AF File Offset: 0x0092D3AF
 		public unsafe float OffsetZ
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_OffsetZ);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_OffsetZ) = value;
 			}
 		}
 
-		// Token: 0x17006037 RID: 24631
-		// (get) Token: 0x06028E62 RID: 167522 RVA: 0x009B71EC File Offset: 0x009B53EC
-		// (set) Token: 0x06028E63 RID: 167523 RVA: 0x009B71FC File Offset: 0x009B53FC
+		// Token: 0x170039A2 RID: 14754
+		// (get) Token: 0x0601F7F5 RID: 129013 RVA: 0x0092F1C0 File Offset: 0x0092D3C0
+		// (set) Token: 0x0601F7F6 RID: 129014 RVA: 0x0092F1D0 File Offset: 0x0092D3D0
 		public unsafe bool BanInput
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_BanInput) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_BanInput) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006038 RID: 24632
-		// (get) Token: 0x06028E64 RID: 167524 RVA: 0x009B720D File Offset: 0x009B540D
-		// (set) Token: 0x06028E65 RID: 167525 RVA: 0x009B721D File Offset: 0x009B541D
+		// Token: 0x170039A3 RID: 14755
+		// (get) Token: 0x0601F7F7 RID: 129015 RVA: 0x0092F1E1 File Offset: 0x0092D3E1
+		// (set) Token: 0x0601F7F8 RID: 129016 RVA: 0x0092F1F1 File Offset: 0x0092D3F1
 		public unsafe int ResummonDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_ResummonDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_ResummonDistance) = value;
 			}
 		}
 
-		// Token: 0x17006039 RID: 24633
-		// (get) Token: 0x06028E66 RID: 167526 RVA: 0x009B722E File Offset: 0x009B542E
-		// (set) Token: 0x06028E67 RID: 167527 RVA: 0x009B723E File Offset: 0x009B543E
+		// Token: 0x170039A4 RID: 14756
+		// (get) Token: 0x0601F7F9 RID: 129017 RVA: 0x0092F202 File Offset: 0x0092D402
+		// (set) Token: 0x0601F7FA RID: 129018 RVA: 0x0092F212 File Offset: 0x0092D412
 		public unsafe bool LockCamera
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_LockCamera) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SummonGongduolaConfig_C.__PropertyOffset_LockCamera) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06028E68 RID: 167528 RVA: 0x009B724F File Offset: 0x009B544F
+		// Token: 0x0601F7FB RID: 129019 RVA: 0x0092F223 File Offset: 0x0092D423
 		protected BP_SummonGongduolaConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014EA5 RID: 85669
+		// Token: 0x04010E45 RID: 69189
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/Level/SummonGongduola/BP_SummonGongduolaConfig.BP_SummonGongduolaConfig_C";
 
-		// Token: 0x04014EA6 RID: 85670
+		// Token: 0x04010E46 RID: 69190
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014EA7 RID: 85671
+		// Token: 0x04010E47 RID: 69191
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014EA8 RID: 85672
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010E48 RID: 69192
+		internal static int __PropertyOffset_FadeInTime;
 
-		// Token: 0x04014EA9 RID: 85673
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010E49 RID: 69193
+		internal static int __PropertyOffset_StayTime;
 
-		// Token: 0x04014EAA RID: 85674
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010E4A RID: 69194
+		internal static int __PropertyOffset_FadeOutTime;
 
-		// Token: 0x04014EAB RID: 85675
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010E4B RID: 69195
+		internal static int __PropertyOffset_Priority;
 
-		// Token: 0x04014EAC RID: 85676
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010E4C RID: 69196
+		internal static int __PropertyOffset_OffsetZ;
 
-		// Token: 0x04014EAD RID: 85677
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010E4D RID: 69197
+		internal static int __PropertyOffset_BanInput;
 
-		// Token: 0x04014EAE RID: 85678
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010E4E RID: 69198
+		internal static int __PropertyOffset_ResummonDistance;
 
-		// Token: 0x04014EAF RID: 85679
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010E4F RID: 69199
+		internal static int __PropertyOffset_LockCamera;
 	}
 }

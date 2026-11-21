@@ -1,12 +1,12 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02001DFF RID: 7679
+// Token: 0x020012C1 RID: 4801
 public class HandBookDefine
 {
-	// Token: 0x04006C65 RID: 27749
+	// Token: 0x04006D46 RID: 27974
 	public readonly FColor selectColor = FColor.FromHex("ECE5D8FF");
 
-	// Token: 0x04006C66 RID: 27750
+	// Token: 0x04006D47 RID: 27975
 	public readonly FColor noSelectColor = FColor.FromHex("ADADADFF");
 }

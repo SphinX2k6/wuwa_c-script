@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019A7 RID: 6567
+// Token: 0x02000E65 RID: 3685
 public class SmallItemGridDefine : IStaticVariableResetter
 {
-	// Token: 0x0600BF8D RID: 49037 RVA: 0x002B401C File Offset: 0x002B221C
+	// Token: 0x06009397 RID: 37783 RVA: 0x002BEFAB File Offset: 0x002BD1AB
 	static SmallItemGridDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SmallItemGridDefine.CreateStaticDefaultValue), new Action(SmallItemGridDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600BF8E RID: 49038 RVA: 0x002B403C File Offset: 0x002B223C
+	// Token: 0x06009398 RID: 37784 RVA: 0x002BEFCC File Offset: 0x002BD1CC
 	public static void CreateStaticDefaultValue()
 	{
 		SmallItemGridDefine.NormalResIdBySlot = new Dictionary<EMultiPlayerSlot, string>
@@ -46,18 +46,18 @@ public class SmallItemGridDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0600BF8F RID: 49039 RVA: 0x002B40A5 File Offset: 0x002B22A5
+	// Token: 0x06009399 RID: 37785 RVA: 0x002BF035 File Offset: 0x002BD235
 	public static void ResetStaticDefaultValue()
 	{
 		SmallItemGridDefine.NormalResIdBySlot = null;
 		SmallItemGridDefine.SelfResIdBySlot = null;
 	}
 
-	// Token: 0x04005629 RID: 22057
+	// Token: 0x040056DB RID: 22235
 	[Nullable(1)]
 	public static Dictionary<EMultiPlayerSlot, string> NormalResIdBySlot;
 
-	// Token: 0x0400562A RID: 22058
+	// Token: 0x040056DC RID: 22236
 	[Nullable(1)]
 	public static Dictionary<EMultiPlayerSlot, string> SelfResIdBySlot;
 }

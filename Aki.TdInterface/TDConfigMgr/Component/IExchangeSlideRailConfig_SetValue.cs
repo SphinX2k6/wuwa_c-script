@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000342 RID: 834
+	// Token: 0x02000389 RID: 905
 	public class IExchangeSlideRailConfig_SetValue
 	{
-		// Token: 0x04000DD9 RID: 3545
+		// Token: 0x04000EC4 RID: 3780
 		public int? MaxExchangeDistance;
 
-		// Token: 0x04000DDA RID: 3546
+		// Token: 0x04000EC5 RID: 3781
 		public int? MaxExchangeHigh;
 
-		// Token: 0x04000DDB RID: 3547
-		[Nullable(1)]
+		// Token: 0x04000EC6 RID: 3782
 		public List<INextSlideRail> NextRails;
 	}
 }

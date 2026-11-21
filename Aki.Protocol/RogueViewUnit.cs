@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001029 RID: 4137
+	// Token: 0x02001019 RID: 4121
 	public sealed class RogueViewUnit : IMessage<RogueViewUnit>, IMessage, IEquatable<RogueViewUnit>, IDeepCloneable<RogueViewUnit>, IBufferMessage
 	{
-		// Token: 0x060161C3 RID: 90563 RVA: 0x003365E9 File Offset: 0x003347E9
+		// Token: 0x060160DE RID: 90334 RVA: 0x00334F29 File Offset: 0x00333129
 		[NullableContext(1)]
 		public static RogueViewUnit Create()
 		{
 			return new RogueViewUnit();
 		}
 
-		// Token: 0x170049E5 RID: 18917
-		// (get) Token: 0x060161C4 RID: 90564 RVA: 0x003365F0 File Offset: 0x003347F0
+		// Token: 0x170049BB RID: 18875
+		// (get) Token: 0x060160DF RID: 90335 RVA: 0x00334F30 File Offset: 0x00333130
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RogueViewUnit> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170049E6 RID: 18918
-		// (get) Token: 0x060161C5 RID: 90565 RVA: 0x003365F7 File Offset: 0x003347F7
+		// Token: 0x170049BC RID: 18876
+		// (get) Token: 0x060160E0 RID: 90336 RVA: 0x00334F37 File Offset: 0x00333137
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170049E7 RID: 18919
-		// (get) Token: 0x060161C6 RID: 90566 RVA: 0x003365FA File Offset: 0x003347FA
+		// Token: 0x170049BD RID: 18877
+		// (get) Token: 0x060160E1 RID: 90337 RVA: 0x00334F3A File Offset: 0x0033313A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060161C7 RID: 90567 RVA: 0x00336601 File Offset: 0x00334801
+		// Token: 0x060160E2 RID: 90338 RVA: 0x00334F41 File Offset: 0x00333141
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueViewUnit()
 		{
 		}
 
-		// Token: 0x060161C8 RID: 90568 RVA: 0x0033660C File Offset: 0x0033480C
+		// Token: 0x060160E3 RID: 90339 RVA: 0x00334F4C File Offset: 0x0033314C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueViewUnit(RogueViewUnit other) : this()
@@ -80,7 +80,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060161C9 RID: 90569 RVA: 0x00336665 File Offset: 0x00334865
+		// Token: 0x060160E4 RID: 90340 RVA: 0x00334FA5 File Offset: 0x003331A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueViewUnit Clone()
@@ -88,9 +88,9 @@ namespace Aki.Protocol
 			return new RogueViewUnit(this);
 		}
 
-		// Token: 0x170049E8 RID: 18920
-		// (get) Token: 0x060161CA RID: 90570 RVA: 0x0033666D File Offset: 0x0033486D
-		// (set) Token: 0x060161CB RID: 90571 RVA: 0x00336685 File Offset: 0x00334885
+		// Token: 0x170049BE RID: 18878
+		// (get) Token: 0x060160E5 RID: 90341 RVA: 0x00334FAD File Offset: 0x003331AD
+		// (set) Token: 0x060160E6 RID: 90342 RVA: 0x00334FC5 File Offset: 0x003331C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeEventGainNotify RoguelikeEventGainNotify
@@ -110,9 +110,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170049E9 RID: 18921
-		// (get) Token: 0x060161CC RID: 90572 RVA: 0x0033669B File Offset: 0x0033489B
-		// (set) Token: 0x060161CD RID: 90573 RVA: 0x003366B3 File Offset: 0x003348B3
+		// Token: 0x170049BF RID: 18879
+		// (get) Token: 0x060160E7 RID: 90343 RVA: 0x00334FDB File Offset: 0x003331DB
+		// (set) Token: 0x060160E8 RID: 90344 RVA: 0x00334FF3 File Offset: 0x003331F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ItemObtainNotify ItemObtainNotify
@@ -132,8 +132,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170049EA RID: 18922
-		// (get) Token: 0x060161CE RID: 90574 RVA: 0x003366C9 File Offset: 0x003348C9
+		// Token: 0x170049C0 RID: 18880
+		// (get) Token: 0x060160E9 RID: 90345 RVA: 0x00335009 File Offset: 0x00333209
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueViewUnit.DataOneofCase DataCase
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060161CF RID: 90575 RVA: 0x003366D1 File Offset: 0x003348D1
+		// Token: 0x060160EA RID: 90346 RVA: 0x00335011 File Offset: 0x00333211
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x060161D0 RID: 90576 RVA: 0x003366E1 File Offset: 0x003348E1
+		// Token: 0x060160EB RID: 90347 RVA: 0x00335021 File Offset: 0x00333221
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueViewUnit);
 		}
 
-		// Token: 0x060161D1 RID: 90577 RVA: 0x003366F0 File Offset: 0x003348F0
+		// Token: 0x060160EC RID: 90348 RVA: 0x00335030 File Offset: 0x00333230
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueViewUnit other)
@@ -169,7 +169,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.RoguelikeEventGainNotify, other.RoguelikeEventGainNotify) && object.Equals(this.ItemObtainNotify, other.ItemObtainNotify) && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060161D2 RID: 90578 RVA: 0x00336754 File Offset: 0x00334954
+		// Token: 0x060160ED RID: 90349 RVA: 0x00335094 File Offset: 0x00333294
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -191,7 +191,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060161D3 RID: 90579 RVA: 0x003367B1 File Offset: 0x003349B1
+		// Token: 0x060160EE RID: 90350 RVA: 0x003350F1 File Offset: 0x003332F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060161D4 RID: 90580 RVA: 0x003367BE File Offset: 0x003349BE
+		// Token: 0x060160EF RID: 90351 RVA: 0x003350FE File Offset: 0x003332FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060161D5 RID: 90581 RVA: 0x003367C8 File Offset: 0x003349C8
+		// Token: 0x060160F0 RID: 90352 RVA: 0x00335108 File Offset: 0x00333308
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060161D6 RID: 90582 RVA: 0x00336824 File Offset: 0x00334A24
+		// Token: 0x060160F1 RID: 90353 RVA: 0x00335164 File Offset: 0x00333364
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -249,7 +249,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060161D7 RID: 90583 RVA: 0x0033687C File Offset: 0x00334A7C
+		// Token: 0x060160F2 RID: 90354 RVA: 0x003351BC File Offset: 0x003333BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueViewUnit other)
@@ -281,7 +281,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060161D8 RID: 90584 RVA: 0x003368FF File Offset: 0x00334AFF
+		// Token: 0x060160F3 RID: 90355 RVA: 0x0033523F File Offset: 0x0033343F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -289,7 +289,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060161D9 RID: 90585 RVA: 0x00336908 File Offset: 0x00334B08
+		// Token: 0x060160F4 RID: 90356 RVA: 0x00335248 File Offset: 0x00333448
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -331,32 +331,32 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400846D RID: 33901
+		// Token: 0x04008497 RID: 33943
 		private static readonly MessageParser<RogueViewUnit> _parser = new MessageParser<RogueViewUnit>(() => new RogueViewUnit());
 
-		// Token: 0x0400846E RID: 33902
+		// Token: 0x04008498 RID: 33944
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400846F RID: 33903
+		// Token: 0x04008499 RID: 33945
 		public const int RoguelikeEventGainNotifyFieldNumber = 1;
 
-		// Token: 0x04008470 RID: 33904
+		// Token: 0x0400849A RID: 33946
 		public const int ItemObtainNotifyFieldNumber = 2;
 
-		// Token: 0x04008471 RID: 33905
+		// Token: 0x0400849B RID: 33947
 		private object data_;
 
-		// Token: 0x04008472 RID: 33906
+		// Token: 0x0400849C RID: 33948
 		private RogueViewUnit.DataOneofCase dataCase_;
 
-		// Token: 0x02001943 RID: 6467
+		// Token: 0x020019BB RID: 6587
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C9A3 RID: 51619
+			// Token: 0x0400CECE RID: 52942
 			None,
-			// Token: 0x0400C9A4 RID: 51620
+			// Token: 0x0400CECF RID: 52943
 			RoguelikeEventGainNotify,
-			// Token: 0x0400C9A5 RID: 51621
+			// Token: 0x0400CED0 RID: 52944
 			ItemObtainNotify
 		}
 	}

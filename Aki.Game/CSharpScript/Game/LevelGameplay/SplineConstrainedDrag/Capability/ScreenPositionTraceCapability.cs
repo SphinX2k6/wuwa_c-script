@@ -9,28 +9,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 {
-	// Token: 0x02006950 RID: 26960
+	// Token: 0x02005AAB RID: 23211
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ScreenPositionTraceCapability : Capability
 	{
-		// Token: 0x060432D6 RID: 275158 RVA: 0x01061148 File Offset: 0x0105F348
+		// Token: 0x0603930D RID: 234253 RVA: 0x010053A8 File Offset: 0x010035A8
 		[NullableContext(2)]
 		public ScreenPositionTraceCapability(ICapabilityGameObject ownerGameObject = null) : base(ownerGameObject)
 		{
 		}
 
-		// Token: 0x060432D7 RID: 275159 RVA: 0x010611A9 File Offset: 0x0105F3A9
+		// Token: 0x0603930E RID: 234254 RVA: 0x01005409 File Offset: 0x01003609
 		public override void Setup()
 		{
 		}
 
-		// Token: 0x060432D8 RID: 275160 RVA: 0x010611AB File Offset: 0x0105F3AB
+		// Token: 0x0603930F RID: 234255 RVA: 0x0100540B File Offset: 0x0100360B
 		public override void PreTick(float deltaMilliseconds)
 		{
 		}
 
-		// Token: 0x060432D9 RID: 275161 RVA: 0x010611B0 File Offset: 0x0105F3B0
+		// Token: 0x06039310 RID: 234256 RVA: 0x01005410 File Offset: 0x01003610
 		public override void TickActive(float deltaMilliseconds)
 		{
 			ICapabilityGameObject ownerGameObject = this.OwnerGameObject;
@@ -93,25 +93,25 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			draggableHoverStateData.HoveredActorKey = text;
 		}
 
-		// Token: 0x060432DA RID: 275162 RVA: 0x01061309 File Offset: 0x0105F509
+		// Token: 0x06039311 RID: 234257 RVA: 0x01005569 File Offset: 0x01003769
 		public override bool ShouldActivate()
 		{
 			return true;
 		}
 
-		// Token: 0x060432DB RID: 275163 RVA: 0x0106130C File Offset: 0x0105F50C
+		// Token: 0x06039312 RID: 234258 RVA: 0x0100556C File Offset: 0x0100376C
 		public override bool ShouldDeactivate()
 		{
 			return false;
 		}
 
-		// Token: 0x060432DC RID: 275164 RVA: 0x0106130F File Offset: 0x0105F50F
+		// Token: 0x06039313 RID: 234259 RVA: 0x0100556F File Offset: 0x0100376F
 		public override void OnActivated()
 		{
 			this.Activate();
 		}
 
-		// Token: 0x060432DD RID: 275165 RVA: 0x01061318 File Offset: 0x0105F518
+		// Token: 0x06039314 RID: 234260 RVA: 0x01005578 File Offset: 0x01003778
 		public override void OnDeactivated()
 		{
 			this.Deactivate();
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			}
 		}
 
-		// Token: 0x060432DE RID: 275166 RVA: 0x0106135C File Offset: 0x0105F55C
+		// Token: 0x06039315 RID: 234261 RVA: 0x010055BC File Offset: 0x010037BC
 		public override void Activate()
 		{
 			float? floatConfig = ConfigCommonParamById.GetFloatConfig("ScreenPositionTraceOffset");
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			this.GetLineTrace(true, ETraceTypeQuery.TraceTypeQuery6);
 		}
 
-		// Token: 0x060432DF RID: 275167 RVA: 0x01061393 File Offset: 0x0105F593
+		// Token: 0x06039316 RID: 234262 RVA: 0x010055F3 File Offset: 0x010037F3
 		public override void Deactivate()
 		{
 			UTraceLineElement lineTrace = this.LineTrace;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			this.LineTrace = null;
 		}
 
-		// Token: 0x060432E0 RID: 275168 RVA: 0x010613AD File Offset: 0x0105F5AD
+		// Token: 0x06039317 RID: 234263 RVA: 0x0100560D File Offset: 0x0100380D
 		[NullableContext(2)]
 		public UTraceLineElement GetLineTrace(bool bIsSingle = true, ETraceTypeQuery queryType = ETraceTypeQuery.TraceTypeQuery6)
 		{
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			return this.LineTrace;
 		}
 
-		// Token: 0x060432E1 RID: 275169 RVA: 0x010613C8 File Offset: 0x0105F5C8
+		// Token: 0x06039318 RID: 234264 RVA: 0x01005628 File Offset: 0x01003828
 		private void InitLineTraceInternal(ETraceTypeQuery queryType, bool bIsSingle = true)
 		{
 			this.LineTrace = new UTraceLineElement();
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			TraceElementCommon.Instance.SetTraceHitColor(this.LineTrace, ColorUtils.LinearRed);
 		}
 
-		// Token: 0x060432E2 RID: 275170 RVA: 0x01061450 File Offset: 0x0105F650
+		// Token: 0x06039319 RID: 234265 RVA: 0x010056B0 File Offset: 0x010038B0
 		public bool GetHitResultAtScreenPosition(global::Vector screenPosition, ref UKuroHitResult outHitResult, string reason)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -212,29 +212,29 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			return true;
 		}
 
-		// Token: 0x04022FB4 RID: 143284
+		// Token: 0x0401E19E RID: 123294
 		private FVector2D ScreenPosition = new FVector2D();
 
-		// Token: 0x04022FB5 RID: 143285
+		// Token: 0x0401E19F RID: 123295
 		private FVector WorldPosition = new FVector();
 
-		// Token: 0x04022FB6 RID: 143286
+		// Token: 0x0401E1A0 RID: 123296
 		private FVector WorldDirection = new FVector();
 
-		// Token: 0x04022FB7 RID: 143287
+		// Token: 0x0401E1A1 RID: 123297
 		[Nullable(2)]
 		private UTraceLineElement LineTrace;
 
-		// Token: 0x04022FB8 RID: 143288
+		// Token: 0x0401E1A2 RID: 123298
 		private global::Vector LocationOffset = global::Vector.Create();
 
-		// Token: 0x04022FB9 RID: 143289
+		// Token: 0x0401E1A3 RID: 123299
 		public float TraceOffset = 50000f;
 
-		// Token: 0x04022FBA RID: 143290
+		// Token: 0x0401E1A4 RID: 123300
 		private UKuroHitResult HoverHitResult = new UKuroHitResult();
 
-		// Token: 0x04022FBB RID: 143291
+		// Token: 0x0401E1A5 RID: 123301
 		private global::Vector HoverScreenPos = global::Vector.Create();
 	}
 }

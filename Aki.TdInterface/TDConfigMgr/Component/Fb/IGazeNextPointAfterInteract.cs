@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B11 RID: 2833
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000BDF RID: 3039
 	public class IGazeNextPointAfterInteract
 	{
-		// Token: 0x06004173 RID: 16755 RVA: 0x000A809A File Offset: 0x000A629A
-		[NullableContext(1)]
+		// Token: 0x060045C9 RID: 17865 RVA: 0x000B20C6 File Offset: 0x000B02C6
 		public static IGazeNextPointAfterInteract Create(IGazeNextPointAfterInteract? instance)
 		{
 			if (instance == null)
@@ -23,10 +20,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700110E RID: 4366
-		// (get) Token: 0x06004174 RID: 16756 RVA: 0x000A80B9 File Offset: 0x000A62B9
+		// Token: 0x17001206 RID: 4614
+		// (get) Token: 0x060045CA RID: 17866 RVA: 0x000B20E5 File Offset: 0x000B02E5
+		[Nullable(2)]
 		public virtual IGazeCondition GazeCondition
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._GazeConditionInited)
@@ -39,12 +38,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700110F RID: 4367
-		// (get) Token: 0x06004175 RID: 16757 RVA: 0x000A80ED File Offset: 0x000A62ED
-		[Nullable(1)]
+		// Token: 0x17001207 RID: 4615
+		// (get) Token: 0x060045CB RID: 17867 RVA: 0x000B2119 File Offset: 0x000B0319
 		public virtual IGazePerformance GazePerformance
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._GazePerformanceInited)
@@ -57,19 +54,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024DE RID: 9438
+		// Token: 0x04002722 RID: 10018
 		private IGazeNextPointAfterInteract Instance;
 
-		// Token: 0x040024DF RID: 9439
+		// Token: 0x04002723 RID: 10019
+		[Nullable(2)]
 		private IGazeCondition _GazeConditionCache;
 
-		// Token: 0x040024E0 RID: 9440
+		// Token: 0x04002724 RID: 10020
 		private bool _GazeConditionInited;
 
-		// Token: 0x040024E1 RID: 9441
+		// Token: 0x04002725 RID: 10021
+		[Nullable(2)]
 		private IGazePerformance _GazePerformanceCache;
 
-		// Token: 0x040024E2 RID: 9442
+		// Token: 0x04002726 RID: 10022
 		private bool _GazePerformanceInited;
 	}
 }

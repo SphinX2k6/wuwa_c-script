@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200028D RID: 653
+	// Token: 0x020002A1 RID: 673
 	public class ConfigExchangeTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F53 RID: 3923 RVA: 0x000B01EB File Offset: 0x000AE3EB
+		// Token: 0x06000FCB RID: 4043 RVA: 0x000B64AF File Offset: 0x000B46AF
 		static ConfigExchangeTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExchangeTypeById.CreateStaticDefaultValue), new Action(ConfigExchangeTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F54 RID: 3924 RVA: 0x000B020C File Offset: 0x000AE40C
+		// Token: 0x06000FCC RID: 4044 RVA: 0x000B64D0 File Offset: 0x000B46D0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExchangeTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F55 RID: 3925 RVA: 0x000B028B File Offset: 0x000AE48B
+		// Token: 0x06000FCD RID: 4045 RVA: 0x000B654F File Offset: 0x000B474F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExchangeTypeById.LogPair = null;
 			ConfigExchangeTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06000F56 RID: 3926 RVA: 0x000B0299 File Offset: 0x000AE499
+		// Token: 0x06000FCE RID: 4046 RVA: 0x000B655D File Offset: 0x000B475D
 		public static void Init()
 		{
 			ConfigExchangeTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigExchangeTypeById.HandleId, "db_compose.db", "select BinData from `ExchangeType` where Id=?");
 		}
 
-		// Token: 0x06000F57 RID: 3927 RVA: 0x000B02B4 File Offset: 0x000AE4B4
+		// Token: 0x06000FCF RID: 4047 RVA: 0x000B6578 File Offset: 0x000B4778
 		public static ExchangeType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExchangeTypeById.HandleId, ConfigExchangeTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ExchangeType?(rootAsExchangeType);
 		}
 
-		// Token: 0x040011BF RID: 4543
+		// Token: 0x0400124B RID: 4683
 		private const string DB = "db_compose.db";
 
-		// Token: 0x040011C0 RID: 4544
+		// Token: 0x0400124C RID: 4684
 		private const string FILE = "h.合成.xlsx";
 
-		// Token: 0x040011C1 RID: 4545
+		// Token: 0x0400124D RID: 4685
 		private const string TABLE = "ExchangeType";
 
-		// Token: 0x040011C2 RID: 4546
+		// Token: 0x0400124E RID: 4686
 		private const string COMMAND = "select BinData from `ExchangeType` where Id=?";
 
-		// Token: 0x040011C3 RID: 4547
+		// Token: 0x0400124F RID: 4687
 		private const string KEY_PREFIX = "ExchangeTypeById";
 
-		// Token: 0x040011C4 RID: 4548
+		// Token: 0x04001250 RID: 4688
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040011C5 RID: 4549
+		// Token: 0x04001251 RID: 4689
 		private static int HandleId;
 	}
 }

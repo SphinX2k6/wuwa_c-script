@@ -1,6 +1,6 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02001E13 RID: 7699
-// (Invoke) Token: 0x0600EA28 RID: 59944
+// Token: 0x020012D5 RID: 4821
+// (Invoke) Token: 0x0600BE47 RID: 48711
 public delegate void TSelectedCallback(string tidText, UUIExtendToggle toggle);

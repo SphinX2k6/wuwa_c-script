@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000116 RID: 278
+	// Token: 0x02000125 RID: 293
 	public class ConfigBossRushTaskTabByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000685 RID: 1669 RVA: 0x0007E6F7 File Offset: 0x0007C8F7
+		// Token: 0x060006DF RID: 1759 RVA: 0x0008405B File Offset: 0x0008225B
 		static ConfigBossRushTaskTabByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBossRushTaskTabByActivityId.CreateStaticDefaultValue), new Action(ConfigBossRushTaskTabByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000686 RID: 1670 RVA: 0x0007E718 File Offset: 0x0007C918
+		// Token: 0x060006E0 RID: 1760 RVA: 0x0008407C File Offset: 0x0008227C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBossRushTaskTabByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000687 RID: 1671 RVA: 0x0007E797 File Offset: 0x0007C997
+		// Token: 0x060006E1 RID: 1761 RVA: 0x000840FB File Offset: 0x000822FB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBossRushTaskTabByActivityId.LogPair = null;
 			ConfigBossRushTaskTabByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06000688 RID: 1672 RVA: 0x0007E7A5 File Offset: 0x0007C9A5
+		// Token: 0x060006E2 RID: 1762 RVA: 0x00084109 File Offset: 0x00082309
 		public static void Init()
 		{
 			ConfigBossRushTaskTabByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigBossRushTaskTabByActivityId.HandleId, "db_bossrushactivity.db", "select BinData from `BossRushTaskTab` where ActivityId=?");
 		}
 
-		// Token: 0x06000689 RID: 1673 RVA: 0x0007E7C0 File Offset: 0x0007C9C0
+		// Token: 0x060006E3 RID: 1763 RVA: 0x00084124 File Offset: 0x00082324
 		[NullableContext(2)]
 		public static IReadOnlyList<BossRushTaskTab> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400077E RID: 1918
+		// Token: 0x040007E7 RID: 2023
 		private const string DB = "db_bossrushactivity.db";
 
-		// Token: 0x0400077F RID: 1919
+		// Token: 0x040007E8 RID: 2024
 		private const string FILE = "b.bossrush活动.xlsx";
 
-		// Token: 0x04000780 RID: 1920
+		// Token: 0x040007E9 RID: 2025
 		private const string TABLE = "BossRushTaskTab";
 
-		// Token: 0x04000781 RID: 1921
+		// Token: 0x040007EA RID: 2026
 		private const string COMMAND = "select BinData from `BossRushTaskTab` where ActivityId=?";
 
-		// Token: 0x04000782 RID: 1922
+		// Token: 0x040007EB RID: 2027
 		private const string KEY_PREFIX = "BossRushTaskTabByActivityId";
 
-		// Token: 0x04000783 RID: 1923
+		// Token: 0x040007EC RID: 2028
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000784 RID: 1924
+		// Token: 0x040007ED RID: 2029
 		private static int HandleId;
 	}
 }

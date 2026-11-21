@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005028 RID: 20520
+	// Token: 0x02005587 RID: 21895
 	public class IControlPointEventConfigT
 	{
-		// Token: 0x170094EE RID: 38126
-		// (get) Token: 0x06020DFF RID: 134655 RVA: 0x004926A5 File Offset: 0x004908A5
-		// (set) Token: 0x06020E00 RID: 134656 RVA: 0x004926AD File Offset: 0x004908AD
+		// Token: 0x17009CCF RID: 40143
+		// (get) Token: 0x06022D1F RID: 142623 RVA: 0x004CC0F5 File Offset: 0x004CA2F5
+		// (set) Token: 0x06022D20 RID: 142624 RVA: 0x004CC0FD File Offset: 0x004CA2FD
 		public int Index { get; set; }
 
-		// Token: 0x170094EF RID: 38127
-		// (get) Token: 0x06020E01 RID: 134657 RVA: 0x004926B6 File Offset: 0x004908B6
-		// (set) Token: 0x06020E02 RID: 134658 RVA: 0x004926BE File Offset: 0x004908BE
+		// Token: 0x17009CD0 RID: 40144
+		// (get) Token: 0x06022D21 RID: 142625 RVA: 0x004CC106 File Offset: 0x004CA306
+		// (set) Token: 0x06022D22 RID: 142626 RVA: 0x004CC10E File Offset: 0x004CA30E
 		public List<IActionInfoT> LeftInEventActions { get; set; }
 
-		// Token: 0x170094F0 RID: 38128
-		// (get) Token: 0x06020E03 RID: 134659 RVA: 0x004926C7 File Offset: 0x004908C7
-		// (set) Token: 0x06020E04 RID: 134660 RVA: 0x004926CF File Offset: 0x004908CF
+		// Token: 0x17009CD1 RID: 40145
+		// (get) Token: 0x06022D23 RID: 142627 RVA: 0x004CC117 File Offset: 0x004CA317
+		// (set) Token: 0x06022D24 RID: 142628 RVA: 0x004CC11F File Offset: 0x004CA31F
 		public List<IActionInfoT> LeftOutEventActions { get; set; }
 
-		// Token: 0x170094F1 RID: 38129
-		// (get) Token: 0x06020E05 RID: 134661 RVA: 0x004926D8 File Offset: 0x004908D8
-		// (set) Token: 0x06020E06 RID: 134662 RVA: 0x004926E0 File Offset: 0x004908E0
+		// Token: 0x17009CD2 RID: 40146
+		// (get) Token: 0x06022D25 RID: 142629 RVA: 0x004CC128 File Offset: 0x004CA328
+		// (set) Token: 0x06022D26 RID: 142630 RVA: 0x004CC130 File Offset: 0x004CA330
 		public List<IActionInfoT> RightInEventActions { get; set; }
 
-		// Token: 0x170094F2 RID: 38130
-		// (get) Token: 0x06020E07 RID: 134663 RVA: 0x004926E9 File Offset: 0x004908E9
-		// (set) Token: 0x06020E08 RID: 134664 RVA: 0x004926F1 File Offset: 0x004908F1
+		// Token: 0x17009CD3 RID: 40147
+		// (get) Token: 0x06022D27 RID: 142631 RVA: 0x004CC139 File Offset: 0x004CA339
+		// (set) Token: 0x06022D28 RID: 142632 RVA: 0x004CC141 File Offset: 0x004CA341
 		public List<IActionInfoT> RightOutEventActions { get; set; }
 
-		// Token: 0x170094F3 RID: 38131
-		// (get) Token: 0x06020E09 RID: 134665 RVA: 0x004926FA File Offset: 0x004908FA
-		// (set) Token: 0x06020E0A RID: 134666 RVA: 0x00492702 File Offset: 0x00490902
+		// Token: 0x17009CD4 RID: 40148
+		// (get) Token: 0x06022D29 RID: 142633 RVA: 0x004CC14A File Offset: 0x004CA34A
+		// (set) Token: 0x06022D2A RID: 142634 RVA: 0x004CC152 File Offset: 0x004CA352
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020E0B RID: 134667 RVA: 0x0049270B File Offset: 0x0049090B
+		// Token: 0x06022D2B RID: 142635 RVA: 0x004CC15B File Offset: 0x004CA35B
 		public IControlPointEventConfigT()
 		{
 			this.Index = 0;

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002AB7 RID: 10935
+// Token: 0x02002033 RID: 8243
 public enum ESurvivorsActivitySaveFlags
 {
-	// Token: 0x0400A90D RID: 43277
+	// Token: 0x0400AD13 RID: 44307
 	ActivityOpen,
-	// Token: 0x0400A90E RID: 43278
+	// Token: 0x0400AD14 RID: 44308
 	NewLevel,
-	// Token: 0x0400A90F RID: 43279
+	// Token: 0x0400AD15 RID: 44309
 	WeaponNewUnlockCheck,
-	// Token: 0x0400A910 RID: 43280
+	// Token: 0x0400AD16 RID: 44310
 	EndlessMode,
-	// Token: 0x0400A911 RID: 43281
+	// Token: 0x0400AD17 RID: 44311
 	EndlessFirstCheck,
-	// Token: 0x0400A912 RID: 43282
+	// Token: 0x0400AD18 RID: 44312
 	LevelFinishedCheck,
-	// Token: 0x0400A913 RID: 43283
+	// Token: 0x0400AD19 RID: 44313
 	NotTipsEnterInst
 }

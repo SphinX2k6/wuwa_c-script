@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D89 RID: 3465
+	// Token: 0x02000E6E RID: 3694
 	public struct KeyPool : IFlatbufferObject
 	{
-		// Token: 0x17001A57 RID: 6743
-		// (get) Token: 0x0600873D RID: 34621 RVA: 0x00267EF5 File Offset: 0x002660F5
+		// Token: 0x17001ABB RID: 6843
+		// (get) Token: 0x06008D58 RID: 36184 RVA: 0x00286125 File Offset: 0x00284325
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600873E RID: 34622 RVA: 0x00267F02 File Offset: 0x00266102
+		// Token: 0x06008D59 RID: 36185 RVA: 0x00286132 File Offset: 0x00284332
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600873F RID: 34623 RVA: 0x00267F0C File Offset: 0x0026610C
+		// Token: 0x06008D5A RID: 36186 RVA: 0x0028613C File Offset: 0x0028433C
 		public static KeyPool GetRootAsKeyPool(ByteBuffer _bb)
 		{
 			return KeyPool.GetRootAsKeyPool(_bb, default(KeyPool));
 		}
 
-		// Token: 0x06008740 RID: 34624 RVA: 0x00267F28 File Offset: 0x00266128
+		// Token: 0x06008D5B RID: 36187 RVA: 0x00286158 File Offset: 0x00284358
 		public static KeyPool GetRootAsKeyPool(ByteBuffer _bb, KeyPool obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008741 RID: 34625 RVA: 0x00267F45 File Offset: 0x00266145
+		// Token: 0x06008D5C RID: 36188 RVA: 0x00286175 File Offset: 0x00284375
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008742 RID: 34626 RVA: 0x00267F54 File Offset: 0x00266154
+		// Token: 0x06008D5D RID: 36189 RVA: 0x00286184 File Offset: 0x00284384
 		public KeyPool __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001A58 RID: 6744
-		// (get) Token: 0x06008743 RID: 34627 RVA: 0x00267F64 File Offset: 0x00266164
+		// Token: 0x17001ABC RID: 6844
+		// (get) Token: 0x06008D5E RID: 36190 RVA: 0x00286194 File Offset: 0x00284394
 		public string Id
 		{
 			get
@@ -65,19 +65,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008744 RID: 34628 RVA: 0x00267F9B File Offset: 0x0026619B
+		// Token: 0x06008D5F RID: 36191 RVA: 0x002861CB File Offset: 0x002843CB
 		public Span<byte> GetIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06008745 RID: 34629 RVA: 0x00267FAA File Offset: 0x002661AA
+		// Token: 0x06008D60 RID: 36192 RVA: 0x002861DA File Offset: 0x002843DA
 		public byte[] GetIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06008746 RID: 34630 RVA: 0x00267FC4 File Offset: 0x002661C4
+		// Token: 0x06008D61 RID: 36193 RVA: 0x002861F4 File Offset: 0x002843F4
 		public string ValidKeys(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -88,8 +88,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001A59 RID: 6745
-		// (get) Token: 0x06008747 RID: 34631 RVA: 0x00268000 File Offset: 0x00266200
+		// Token: 0x17001ABD RID: 6845
+		// (get) Token: 0x06008D62 RID: 36194 RVA: 0x00286230 File Offset: 0x00284430
 		public int ValidKeysLength
 		{
 			get
@@ -103,24 +103,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008748 RID: 34632 RVA: 0x0026802B File Offset: 0x0026622B
+		// Token: 0x06008D63 RID: 36195 RVA: 0x0028625B File Offset: 0x0028445B
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ValidKeysIter()或GetValidKeysBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ValidKeys()
+		public string[] ValidKeys()
 		{
 			return this.ValidKeysIter().ToArray<string>();
 		}
 
-		// Token: 0x06008749 RID: 34633 RVA: 0x00268038 File Offset: 0x00266238
+		// Token: 0x06008D64 RID: 36196 RVA: 0x00286268 File Offset: 0x00284468
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ValidKeysIter()
+		public IEnumerable<string> ValidKeysIter()
 		{
 			KeyPool.<ValidKeysIter>d__16 <ValidKeysIter>d__ = new KeyPool.<ValidKeysIter>d__16(-2);
 			<ValidKeysIter>d__.<>3__<>4__this = this;
 			return <ValidKeysIter>d__;
 		}
 
-		// Token: 0x04004E15 RID: 19989
+		// Token: 0x040053FA RID: 21498
 		private Table __p;
 	}
 }

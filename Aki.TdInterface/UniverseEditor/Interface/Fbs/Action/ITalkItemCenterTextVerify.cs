@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020072D9 RID: 29401
+	// Token: 0x02007AAE RID: 31406
 	public static class ITalkItemCenterTextVerify
 	{
-		// Token: 0x06034A0C RID: 215564 RVA: 0x0071BB70 File Offset: 0x00719D70
+		// Token: 0x06037D10 RID: 228624 RVA: 0x0077CF0C File Offset: 0x0077B10C
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false) && verifier.VerifyString(tablePos, 10, false) && verifier.VerifyString(tablePos, 12, false) && verifier.VerifyField(tablePos, 14, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 16, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 18, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 20, 4UL, 4UL, false) && verifier.VerifyString(tablePos, 22, false) && verifier.VerifyField(tablePos, 24, 4UL, 4UL, false))
@@ -209,62 +209,62 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return false;
 		}
 
-		// Token: 0x02007E89 RID: 32393
+		// Token: 0x02008720 RID: 34592
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013AE0 RID: 80608
+			// Token: 0x04014BB7 RID: 84919
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x04013AE1 RID: 80609
+			// Token: 0x04014BB8 RID: 84920
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x04013AE2 RID: 80610
+			// Token: 0x04014BB9 RID: 84921
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x04013AE3 RID: 80611
+			// Token: 0x04014BBA RID: 84922
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x04013AE4 RID: 80612
+			// Token: 0x04014BBB RID: 84923
 			public static VerifyTableAction <4>__Verify;
 
-			// Token: 0x04013AE5 RID: 80613
+			// Token: 0x04014BBC RID: 84924
 			public static VerifyTableAction <5>__Verify;
 
-			// Token: 0x04013AE6 RID: 80614
+			// Token: 0x04014BBD RID: 84925
 			public static VerifyTableAction <6>__Verify;
 
-			// Token: 0x04013AE7 RID: 80615
+			// Token: 0x04014BBE RID: 84926
 			public static VerifyTableAction <7>__Verify;
 
-			// Token: 0x04013AE8 RID: 80616
+			// Token: 0x04014BBF RID: 84927
 			public static VerifyTableAction <8>__Verify;
 
-			// Token: 0x04013AE9 RID: 80617
+			// Token: 0x04014BC0 RID: 84928
 			public static VerifyTableAction <9>__Verify;
 
-			// Token: 0x04013AEA RID: 80618
+			// Token: 0x04014BC1 RID: 84929
 			public static VerifyUnionAction <10>__Verify;
 
-			// Token: 0x04013AEB RID: 80619
+			// Token: 0x04014BC2 RID: 84930
 			public static VerifyTableAction <11>__Verify;
 
-			// Token: 0x04013AEC RID: 80620
+			// Token: 0x04014BC3 RID: 84931
 			public static VerifyUnionAction <12>__Verify;
 
-			// Token: 0x04013AED RID: 80621
+			// Token: 0x04014BC4 RID: 84932
 			public static VerifyTableAction <13>__Verify;
 
-			// Token: 0x04013AEE RID: 80622
+			// Token: 0x04014BC5 RID: 84933
 			public static VerifyTableAction <14>__Verify;
 
-			// Token: 0x04013AEF RID: 80623
+			// Token: 0x04014BC6 RID: 84934
 			public static VerifyTableAction <15>__Verify;
 
-			// Token: 0x04013AF0 RID: 80624
+			// Token: 0x04014BC7 RID: 84935
 			public static VerifyTableAction <16>__Verify;
 
-			// Token: 0x04013AF1 RID: 80625
+			// Token: 0x04014BC8 RID: 84936
 			public static VerifyTableAction <17>__Verify;
 		}
 	}

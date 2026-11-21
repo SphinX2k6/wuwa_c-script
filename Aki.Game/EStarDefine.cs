@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020018C0 RID: 6336
+// Token: 0x02000D79 RID: 3449
 internal enum EStarDefine
 {
-	// Token: 0x0400543B RID: 21563
+	// Token: 0x040054E6 RID: 21734
 	Layout,
-	// Token: 0x0400543C RID: 21564
+	// Token: 0x040054E7 RID: 21735
 	StarItem
 }

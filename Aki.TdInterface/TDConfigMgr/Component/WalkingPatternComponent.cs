@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008E4 RID: 2276
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000989 RID: 2441
 	public class WalkingPatternComponent : IComponentBase
 	{
-		// Token: 0x0600339B RID: 13211 RVA: 0x00084220 File Offset: 0x00082420
+		// Token: 0x060036E3 RID: 14051 RVA: 0x0008B85C File Offset: 0x00089A5C
 		private WalkingPatternComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600339C RID: 13212 RVA: 0x00084258 File Offset: 0x00082458
+		// Token: 0x060036E4 RID: 14052 RVA: 0x0008B894 File Offset: 0x00089A94
 		public static WalkingPatternComponent Create([Nullable(2)] WalkingPatternComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600339D RID: 13213 RVA: 0x0008426B File Offset: 0x0008246B
+		// Token: 0x060036E5 RID: 14053 RVA: 0x0008B8A7 File Offset: 0x00089AA7
 		public static WalkingPatternComponent CreateFromSetValue([Nullable(2)] WalkingPatternComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600339E RID: 13214 RVA: 0x00084280 File Offset: 0x00082480
+		// Token: 0x060036E6 RID: 14054 RVA: 0x0008B8BC File Offset: 0x00089ABC
 		public new WalkingPatternComponent_SetValue ToSetValue()
 		{
 			return new WalkingPatternComponent_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000DDF RID: 3551
-		// (get) Token: 0x0600339F RID: 13215 RVA: 0x000842F4 File Offset: 0x000824F4
-		// (set) Token: 0x060033A0 RID: 13216 RVA: 0x0008432E File Offset: 0x0008252E
+		// Token: 0x17000EAB RID: 3755
+		// (get) Token: 0x060036E7 RID: 14055 RVA: 0x0008B930 File Offset: 0x00089B30
+		// (set) Token: 0x060036E8 RID: 14056 RVA: 0x0008B96A File Offset: 0x00089B6A
 		public override bool? Disabled
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DE0 RID: 3552
-		// (get) Token: 0x060033A1 RID: 13217 RVA: 0x0008433C File Offset: 0x0008253C
-		// (set) Token: 0x060033A2 RID: 13218 RVA: 0x00084366 File Offset: 0x00082566
+		// Token: 0x17000EAC RID: 3756
+		// (get) Token: 0x060036E9 RID: 14057 RVA: 0x0008B978 File Offset: 0x00089B78
+		// (set) Token: 0x060036EA RID: 14058 RVA: 0x0008B9A2 File Offset: 0x00089BA2
 		public override bool? EdIsLocked
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DE1 RID: 3553
-		// (get) Token: 0x060033A3 RID: 13219 RVA: 0x00084374 File Offset: 0x00082574
-		// (set) Token: 0x060033A4 RID: 13220 RVA: 0x0008439F File Offset: 0x0008259F
+		// Token: 0x17000EAD RID: 3757
+		// (get) Token: 0x060036EB RID: 14059 RVA: 0x0008B9B0 File Offset: 0x00089BB0
+		// (set) Token: 0x060036EC RID: 14060 RVA: 0x0008B9DB File Offset: 0x00089BDB
 		public virtual int SplineEntityId
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DE2 RID: 3554
-		// (get) Token: 0x060033A5 RID: 13221 RVA: 0x000843AD File Offset: 0x000825AD
-		// (set) Token: 0x060033A6 RID: 13222 RVA: 0x000843D8 File Offset: 0x000825D8
+		// Token: 0x17000EAE RID: 3758
+		// (get) Token: 0x060036ED RID: 14061 RVA: 0x0008B9E9 File Offset: 0x00089BE9
+		// (set) Token: 0x060036EE RID: 14062 RVA: 0x0008BA14 File Offset: 0x00089C14
 		public virtual int EndEntityId
 		{
 			get
@@ -156,9 +154,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DE3 RID: 3555
-		// (get) Token: 0x060033A7 RID: 13223 RVA: 0x000843E6 File Offset: 0x000825E6
-		// (set) Token: 0x060033A8 RID: 13224 RVA: 0x0008440D File Offset: 0x0008260D
+		// Token: 0x17000EAF RID: 3759
+		// (get) Token: 0x060036EF RID: 14063 RVA: 0x0008BA22 File Offset: 0x00089C22
+		// (set) Token: 0x060036F0 RID: 14064 RVA: 0x0008BA49 File Offset: 0x00089C49
 		[Nullable(2)]
 		public virtual VarRef ScoreVar
 		{
@@ -183,9 +181,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DE4 RID: 3556
-		// (get) Token: 0x060033A9 RID: 13225 RVA: 0x0008441B File Offset: 0x0008261B
-		// (set) Token: 0x060033AA RID: 13226 RVA: 0x0008444A File Offset: 0x0008264A
+		// Token: 0x17000EB0 RID: 3760
+		// (get) Token: 0x060036F1 RID: 14065 RVA: 0x0008BA57 File Offset: 0x00089C57
+		// (set) Token: 0x060036F2 RID: 14066 RVA: 0x0008BA86 File Offset: 0x00089C86
 		public virtual float SpineEffectExistDuration
 		{
 			get
@@ -206,9 +204,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DE5 RID: 3557
-		// (get) Token: 0x060033AB RID: 13227 RVA: 0x00084458 File Offset: 0x00082658
-		// (set) Token: 0x060033AC RID: 13228 RVA: 0x00084483 File Offset: 0x00082683
+		// Token: 0x17000EB1 RID: 3761
+		// (get) Token: 0x060036F3 RID: 14067 RVA: 0x0008BA94 File Offset: 0x00089C94
+		// (set) Token: 0x060036F4 RID: 14068 RVA: 0x0008BABF File Offset: 0x00089CBF
 		public virtual string ReplaySpineEffect
 		{
 			get
@@ -229,9 +227,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DE6 RID: 3558
-		// (get) Token: 0x060033AD RID: 13229 RVA: 0x00084494 File Offset: 0x00082694
-		// (set) Token: 0x060033AE RID: 13230 RVA: 0x000844F5 File Offset: 0x000826F5
+		// Token: 0x17000EB2 RID: 3762
+		// (get) Token: 0x060036F5 RID: 14069 RVA: 0x0008BAD0 File Offset: 0x00089CD0
+		// (set) Token: 0x060036F6 RID: 14070 RVA: 0x0008BB31 File Offset: 0x00089D31
 		[Nullable(2)]
 		public virtual IWalkingPatternStayAwayConfig StayAwayFailConfig
 		{
@@ -262,18 +260,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040021CE RID: 8654
+		// Token: 0x040023E5 RID: 9189
 		[Nullable(2)]
 		protected new WalkingPatternComponent FbInstance;
 
-		// Token: 0x040021CF RID: 8655
+		// Token: 0x040023E6 RID: 9190
 		[Nullable(2)]
 		protected new WalkingPatternComponent_SetValue PocoInterface;
 
-		// Token: 0x040021D0 RID: 8656
+		// Token: 0x040023E7 RID: 9191
 		private IWalkingPatternStayAwayConfig _StayAwayFailConfigCache;
 
-		// Token: 0x040021D1 RID: 8657
+		// Token: 0x040023E8 RID: 9192
 		private bool _StayAwayFailConfigInited;
 	}
 }

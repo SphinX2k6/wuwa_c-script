@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200199C RID: 6556
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B23 RID: 6947
 	public class IDisableAlertAreaCondition
 	{
-		// Token: 0x06008C4F RID: 35919 RVA: 0x001494A0 File Offset: 0x001476A0
+		// Token: 0x06009373 RID: 37747 RVA: 0x00158CB0 File Offset: 0x00156EB0
 		private IDisableAlertAreaCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C50 RID: 35920 RVA: 0x001494D8 File Offset: 0x001476D8
+		// Token: 0x06009374 RID: 37748 RVA: 0x00158CE8 File Offset: 0x00156EE8
 		public static IDisableAlertAreaCondition Create([Nullable(2)] IDisableAlertAreaCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C51 RID: 35921 RVA: 0x001494EB File Offset: 0x001476EB
+		// Token: 0x06009375 RID: 37749 RVA: 0x00158CFB File Offset: 0x00156EFB
 		public static IDisableAlertAreaCondition CreateFromSetValue([Nullable(2)] IDisableAlertAreaCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C52 RID: 35922 RVA: 0x001494FE File Offset: 0x001476FE
+		// Token: 0x06009376 RID: 37750 RVA: 0x00158D0E File Offset: 0x00156F0E
 		public IDisableAlertAreaCondition_SetValue ToSetValue()
 		{
 			return new IDisableAlertAreaCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D12 RID: 11538
-		// (get) Token: 0x06008C53 RID: 35923 RVA: 0x00149511 File Offset: 0x00147711
-		// (set) Token: 0x06008C54 RID: 35924 RVA: 0x0014953C File Offset: 0x0014773C
+		// Token: 0x17002F11 RID: 12049
+		// (get) Token: 0x06009377 RID: 37751 RVA: 0x00158D21 File Offset: 0x00156F21
+		// (set) Token: 0x06009378 RID: 37752 RVA: 0x00158D4C File Offset: 0x00156F4C
 		public virtual EDisableAlertAreaCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400575D RID: 22365
+		// Token: 0x04005BA6 RID: 23462
 		[Nullable(2)]
 		protected IDisableAlertAreaCondition FbInstance;
 
-		// Token: 0x0400575E RID: 22366
+		// Token: 0x04005BA7 RID: 23463
 		[Nullable(2)]
 		protected IDisableAlertAreaCondition_SetValue PocoInterface;
 	}

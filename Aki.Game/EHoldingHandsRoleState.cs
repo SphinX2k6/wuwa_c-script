@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02003064 RID: 12388
+// Token: 0x020025BA RID: 9658
 public enum EHoldingHandsRoleState
 {
-	// Token: 0x0400CA03 RID: 51715
+	// Token: 0x0400CDDD RID: 52701
 	None,
-	// Token: 0x0400CA04 RID: 51716
+	// Token: 0x0400CDDE RID: 52702
 	Follower,
-	// Token: 0x0400CA05 RID: 51717
+	// Token: 0x0400CDDF RID: 52703
 	Leader
 }

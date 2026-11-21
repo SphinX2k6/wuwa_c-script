@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041B4 RID: 16820
+	// Token: 0x0200460D RID: 17933
 	public enum ITargetBattleAttribute_Union : byte
 	{
-		// Token: 0x0400BDF5 RID: 48629
+		// Token: 0x0400C7FF RID: 51199
 		NONE,
-		// Token: 0x0400BDF6 RID: 48630
+		// Token: 0x0400C800 RID: 51200
 		ITargetBattleAttribute,
-		// Token: 0x0400BDF7 RID: 48631
+		// Token: 0x0400C801 RID: 51201
 		ICheckPlayerBattleAttribute,
-		// Token: 0x0400BDF8 RID: 48632
+		// Token: 0x0400C802 RID: 51202
 		ICheckMonsterBattleAttribute
 	}
 }

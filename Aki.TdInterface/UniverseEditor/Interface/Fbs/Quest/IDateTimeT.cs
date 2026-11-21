@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DCB RID: 15819
+	// Token: 0x02004206 RID: 16902
 	public class IDateTimeT
 	{
-		// Token: 0x17006D33 RID: 27955
-		// (get) Token: 0x06016141 RID: 90433 RVA: 0x0033124C File Offset: 0x0032F44C
-		// (set) Token: 0x06016142 RID: 90434 RVA: 0x00331254 File Offset: 0x0032F454
+		// Token: 0x17007313 RID: 29459
+		// (get) Token: 0x06017760 RID: 96096 RVA: 0x00359C50 File Offset: 0x00357E50
+		// (set) Token: 0x06017761 RID: 96097 RVA: 0x00359C58 File Offset: 0x00357E58
 		public int Hours { get; set; }
 
-		// Token: 0x17006D34 RID: 27956
-		// (get) Token: 0x06016143 RID: 90435 RVA: 0x0033125D File Offset: 0x0032F45D
-		// (set) Token: 0x06016144 RID: 90436 RVA: 0x00331265 File Offset: 0x0032F465
+		// Token: 0x17007314 RID: 29460
+		// (get) Token: 0x06017762 RID: 96098 RVA: 0x00359C61 File Offset: 0x00357E61
+		// (set) Token: 0x06017763 RID: 96099 RVA: 0x00359C69 File Offset: 0x00357E69
 		public int Minutes { get; set; }
 
-		// Token: 0x17006D35 RID: 27957
-		// (get) Token: 0x06016145 RID: 90437 RVA: 0x0033126E File Offset: 0x0032F46E
-		// (set) Token: 0x06016146 RID: 90438 RVA: 0x00331276 File Offset: 0x0032F476
+		// Token: 0x17007315 RID: 29461
+		// (get) Token: 0x06017764 RID: 96100 RVA: 0x00359C72 File Offset: 0x00357E72
+		// (set) Token: 0x06017765 RID: 96101 RVA: 0x00359C7A File Offset: 0x00357E7A
 		public int Days { get; set; }
 
-		// Token: 0x17006D36 RID: 27958
-		// (get) Token: 0x06016147 RID: 90439 RVA: 0x0033127F File Offset: 0x0032F47F
-		// (set) Token: 0x06016148 RID: 90440 RVA: 0x00331287 File Offset: 0x0032F487
+		// Token: 0x17007316 RID: 29462
+		// (get) Token: 0x06017766 RID: 96102 RVA: 0x00359C83 File Offset: 0x00357E83
+		// (set) Token: 0x06017767 RID: 96103 RVA: 0x00359C8B File Offset: 0x00357E8B
 		public byte NullMask { get; set; }
 
-		// Token: 0x06016149 RID: 90441 RVA: 0x00331290 File Offset: 0x0032F490
+		// Token: 0x06017768 RID: 96104 RVA: 0x00359C94 File Offset: 0x00357E94
 		public IDateTimeT()
 		{
 			this.Hours = 0;

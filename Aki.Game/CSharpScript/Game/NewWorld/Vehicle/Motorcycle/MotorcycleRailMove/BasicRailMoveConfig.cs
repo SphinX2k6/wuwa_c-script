@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x02007037 RID: 28727
+	// Token: 0x020061B8 RID: 25016
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BasicRailMoveConfig
 	{
-		// Token: 0x06045F3D RID: 286525 RVA: 0x0116DC94 File Offset: 0x0116BE94
+		// Token: 0x0603C123 RID: 246051 RVA: 0x011179E8 File Offset: 0x01115BE8
 		public void UpdateFromUeData(SMotorRailMoveConfig_Basic data)
 		{
 			this.MaxDeltaTimeForMoveUpdate = data.MaxDeltaTimeForMoveUpdate;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F3E RID: 286526 RVA: 0x0116E0F8 File Offset: 0x0116C2F8
+		// Token: 0x0603C124 RID: 246052 RVA: 0x01117E68 File Offset: 0x01116068
 		public void DeepCopy(BasicRailMoveConfig other)
 		{
 			this.MaxDeltaTimeForMoveUpdate = other.MaxDeltaTimeForMoveUpdate;
@@ -226,46 +226,46 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x04024980 RID: 149888
+		// Token: 0x0401FC36 RID: 130102
 		public float MaxDeltaTimeForMoveUpdate = 0.05f;
 
-		// Token: 0x04024981 RID: 149889
+		// Token: 0x0401FC37 RID: 130103
 		public float DefaultMoveSpeed = 1500f;
 
-		// Token: 0x04024982 RID: 149890
+		// Token: 0x0401FC38 RID: 130104
 		public HashSet<int> AllowUseSkillIds = new HashSet<int>();
 
-		// Token: 0x04024983 RID: 149891
+		// Token: 0x0401FC39 RID: 130105
 		public float AutoEnterRailCdAfterLeaveRailMove = 0.5f;
 
-		// Token: 0x04024984 RID: 149892
+		// Token: 0x0401FC3A RID: 130106
 		public float AutoEnterRailCdAfterLeaveRail;
 
-		// Token: 0x04024985 RID: 149893
+		// Token: 0x0401FC3B RID: 130107
 		public readonly Dictionary<int, RailMoveEventHandler> ClientEventHandlers = new Dictionary<int, RailMoveEventHandler>();
 
-		// Token: 0x04024986 RID: 149894
+		// Token: 0x0401FC3C RID: 130108
 		public readonly Dictionary<int, bool> ModifyVehicleTagsOnEnterRail = new Dictionary<int, bool>();
 
-		// Token: 0x04024987 RID: 149895
+		// Token: 0x0401FC3D RID: 130109
 		public readonly Dictionary<int, bool> ModifyVehicleTagsOnLeaveRail = new Dictionary<int, bool>();
 
-		// Token: 0x04024988 RID: 149896
+		// Token: 0x0401FC3E RID: 130110
 		public readonly Dictionary<long, bool> ModifyVehicleBuffsOnEnterRail = new Dictionary<long, bool>();
 
-		// Token: 0x04024989 RID: 149897
+		// Token: 0x0401FC3F RID: 130111
 		public readonly Dictionary<long, bool> ModifyVehicleBuffsOnLeaveRail = new Dictionary<long, bool>();
 
-		// Token: 0x0402498A RID: 149898
+		// Token: 0x0401FC40 RID: 130112
 		public readonly Dictionary<int, bool> ModifyDriverPlayerTagsOnEnterRail = new Dictionary<int, bool>();
 
-		// Token: 0x0402498B RID: 149899
+		// Token: 0x0401FC41 RID: 130113
 		public readonly Dictionary<int, bool> ModifyDriverPlayerTagsOnLeaveRail = new Dictionary<int, bool>();
 
-		// Token: 0x0402498C RID: 149900
+		// Token: 0x0401FC42 RID: 130114
 		public readonly Dictionary<long, bool> ModifyDriverBuffsOnEnterRail = new Dictionary<long, bool>();
 
-		// Token: 0x0402498D RID: 149901
+		// Token: 0x0401FC43 RID: 130115
 		public readonly Dictionary<long, bool> ModifyDriverBuffsOnLeaveRail = new Dictionary<long, bool>();
 	}
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046E8 RID: 18152
+	// Token: 0x02003618 RID: 13848
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiViewStorage : Singleton
 	{
-		// Token: 0x0602ECDA RID: 191706 RVA: 0x00AD5E54 File Offset: 0x00AD4054
+		// Token: 0x06023415 RID: 144405 RVA: 0x00A0392C File Offset: 0x00A01B2C
 		[NullableContext(2)]
 		public UiTsInfo GetUiTsInfo(EUiViewName viewName)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Ui
 			return null;
 		}
 
-		// Token: 0x0602ECDB RID: 191707 RVA: 0x00AD5E74 File Offset: 0x00AD4074
+		// Token: 0x06023416 RID: 144406 RVA: 0x00A0394C File Offset: 0x00A01B4C
 		public unsafe void RegisterUiTsInfo(TUiTsInfo[] uiViewTsInfoList)
 		{
 			foreach (TUiTsInfo tuiTsInfo in uiViewTsInfoList)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602ECDC RID: 191708 RVA: 0x00AD5F58 File Offset: 0x00AD4158
+		// Token: 0x06023417 RID: 144407 RVA: 0x00A03A30 File Offset: 0x00A01C30
 		public void RegisterUiViewInfoDynamicData([TupleElementNames(new string[]
 		{
 			"ViewName",
@@ -84,8 +84,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x17007687 RID: 30343
-		// (get) Token: 0x0602ECDD RID: 191709 RVA: 0x00AD5FD2 File Offset: 0x00AD41D2
+		// Token: 0x17004943 RID: 18755
+		// (get) Token: 0x06023418 RID: 144408 RVA: 0x00A03AAA File Offset: 0x00A01CAA
 		public static UiViewStorage Instance
 		{
 			get
@@ -99,12 +99,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602ECDE RID: 191710 RVA: 0x00AD5FF5 File Offset: 0x00AD41F5
+		// Token: 0x06023419 RID: 144409 RVA: 0x00A03ACD File Offset: 0x00A01CCD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602ECDF RID: 191711 RVA: 0x00AD5FF7 File Offset: 0x00AD41F7
+		// Token: 0x0602341A RID: 144410 RVA: 0x00A03ACF File Offset: 0x00A01CCF
 		public static void ResetStaticDefaultValue()
 		{
 			UiViewStorage instance = UiViewStorage._instance;
@@ -115,16 +115,16 @@ namespace CSharpScript.Game.Ui
 			UiViewStorage._instance = null;
 		}
 
-		// Token: 0x0602ECE0 RID: 191712 RVA: 0x00AD6010 File Offset: 0x00AD4210
+		// Token: 0x0602341B RID: 144411 RVA: 0x00A03AE8 File Offset: 0x00A01CE8
 		static UiViewStorage()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiViewStorage.CreateStaticDefaultValue), new Action(UiViewStorage.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401976D RID: 104301
+		// Token: 0x04013E0B RID: 81419
 		private readonly Dictionary<EUiViewName, UiTsInfo> UiTsInfoMap = new Dictionary<EUiViewName, UiTsInfo>();
 
-		// Token: 0x0401976E RID: 104302
+		// Token: 0x04013E0C RID: 81420
 		[Nullable(2)]
 		private static UiViewStorage _instance;
 	}

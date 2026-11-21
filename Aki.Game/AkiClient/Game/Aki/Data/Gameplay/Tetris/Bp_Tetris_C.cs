@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.Tetris
 {
-	// Token: 0x02003F2F RID: 16175
+	// Token: 0x020031DB RID: 12763
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Gameplay/Tetris/Bp_Tetris.Bp_Tetris_C")]
 	[UnrealStructLayout(1128, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1128)]
 	public class Bp_Tetris_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060291B4 RID: 168372 RVA: 0x009BBFBE File Offset: 0x009BA1BE
+		// Token: 0x0601FAC6 RID: 129734 RVA: 0x0093311D File Offset: 0x0093131D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (Bp_Tetris_C._ClassPtr == IntPtr.Zero)
@@ -25,154 +25,154 @@ namespace AkiClient.Game.Aki.Data.Gameplay.Tetris
 			return Bp_Tetris_C._ClassPtr;
 		}
 
-		// Token: 0x060291B5 RID: 168373 RVA: 0x009BBFE4 File Offset: 0x009BA1E4
+		// Token: 0x0601FAC7 RID: 129735 RVA: 0x00933144 File Offset: 0x00931344
 		public Bp_Tetris_C() : this(BuiltinUtils.AllocNativeUObject(Bp_Tetris_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060291B6 RID: 168374 RVA: 0x009BC00C File Offset: 0x009BA20C
+		// Token: 0x0601FAC8 RID: 129736 RVA: 0x0093316C File Offset: 0x0093136C
 		public Bp_Tetris_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(Bp_Tetris_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700617C RID: 24956
-		// (get) Token: 0x060291B7 RID: 168375 RVA: 0x009BC03F File Offset: 0x009BA23F
-		// (set) Token: 0x060291B8 RID: 168376 RVA: 0x009BC053 File Offset: 0x009BA253
+		// Token: 0x17003AC8 RID: 15048
+		// (get) Token: 0x0601FAC9 RID: 129737 RVA: 0x0093319F File Offset: 0x0093139F
+		// (set) Token: 0x0601FACA RID: 129738 RVA: 0x009331B3 File Offset: 0x009313B3
 		public unsafe FVector2D DefaultBoardSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_DefaultBoardSize);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_DefaultBoardSize) = value;
 			}
 		}
 
-		// Token: 0x1700617D RID: 24957
-		// (get) Token: 0x060291B9 RID: 168377 RVA: 0x009BC068 File Offset: 0x009BA268
-		// (set) Token: 0x060291BA RID: 168378 RVA: 0x009BC078 File Offset: 0x009BA278
+		// Token: 0x17003AC9 RID: 15049
+		// (get) Token: 0x0601FACB RID: 129739 RVA: 0x009331C8 File Offset: 0x009313C8
+		// (set) Token: 0x0601FACC RID: 129740 RVA: 0x009331D8 File Offset: 0x009313D8
 		public unsafe float CubeSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_CubeSize);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_CubeSize) = value;
 			}
 		}
 
-		// Token: 0x1700617E RID: 24958
-		// (get) Token: 0x060291BB RID: 168379 RVA: 0x009BC089 File Offset: 0x009BA289
-		// (set) Token: 0x060291BC RID: 168380 RVA: 0x009BC099 File Offset: 0x009BA299
+		// Token: 0x17003ACA RID: 15050
+		// (get) Token: 0x0601FACD RID: 129741 RVA: 0x009331E9 File Offset: 0x009313E9
+		// (set) Token: 0x0601FACE RID: 129742 RVA: 0x009331F9 File Offset: 0x009313F9
 		public unsafe float CubeControlTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_CubeControlTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_CubeControlTime) = value;
 			}
 		}
 
-		// Token: 0x1700617F RID: 24959
-		// (get) Token: 0x060291BD RID: 168381 RVA: 0x009BC0AA File Offset: 0x009BA2AA
-		// (set) Token: 0x060291BE RID: 168382 RVA: 0x009BC0BA File Offset: 0x009BA2BA
+		// Token: 0x17003ACB RID: 15051
+		// (get) Token: 0x0601FACF RID: 129743 RVA: 0x0093320A File Offset: 0x0093140A
+		// (set) Token: 0x0601FAD0 RID: 129744 RVA: 0x0093321A File Offset: 0x0093141A
 		public unsafe float EndlessModeSpeedUpInterval
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_EndlessModeSpeedUpInterval);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_EndlessModeSpeedUpInterval) = value;
 			}
 		}
 
-		// Token: 0x17006180 RID: 24960
-		// (get) Token: 0x060291BF RID: 168383 RVA: 0x009BC0CB File Offset: 0x009BA2CB
-		// (set) Token: 0x060291C0 RID: 168384 RVA: 0x009BC0DB File Offset: 0x009BA2DB
+		// Token: 0x17003ACC RID: 15052
+		// (get) Token: 0x0601FAD1 RID: 129745 RVA: 0x0093322B File Offset: 0x0093142B
+		// (set) Token: 0x0601FAD2 RID: 129746 RVA: 0x0093323B File Offset: 0x0093143B
 		public unsafe float SingleControlTimeReduce
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_SingleControlTimeReduce);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_SingleControlTimeReduce) = value;
 			}
 		}
 
-		// Token: 0x17006181 RID: 24961
-		// (get) Token: 0x060291C1 RID: 168385 RVA: 0x009BC0EC File Offset: 0x009BA2EC
-		// (set) Token: 0x060291C2 RID: 168386 RVA: 0x009BC0FC File Offset: 0x009BA2FC
+		// Token: 0x17003ACD RID: 15053
+		// (get) Token: 0x0601FAD3 RID: 129747 RVA: 0x0093324C File Offset: 0x0093144C
+		// (set) Token: 0x0601FAD4 RID: 129748 RVA: 0x0093325C File Offset: 0x0093145C
 		public unsafe float MinCubeControlTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MinCubeControlTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MinCubeControlTime) = value;
 			}
 		}
 
-		// Token: 0x17006182 RID: 24962
-		// (get) Token: 0x060291C3 RID: 168387 RVA: 0x009BC10D File Offset: 0x009BA30D
-		// (set) Token: 0x060291C4 RID: 168388 RVA: 0x009BC11D File Offset: 0x009BA31D
+		// Token: 0x17003ACE RID: 15054
+		// (get) Token: 0x0601FAD5 RID: 129749 RVA: 0x0093326D File Offset: 0x0093146D
+		// (set) Token: 0x0601FAD6 RID: 129750 RVA: 0x0093327D File Offset: 0x0093147D
 		public unsafe float SpawnNextTetrominoInterval
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_SpawnNextTetrominoInterval);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_SpawnNextTetrominoInterval) = value;
 			}
 		}
 
-		// Token: 0x17006183 RID: 24963
-		// (get) Token: 0x060291C5 RID: 168389 RVA: 0x009BC12E File Offset: 0x009BA32E
-		// (set) Token: 0x060291C6 RID: 168390 RVA: 0x009BC13E File Offset: 0x009BA33E
+		// Token: 0x17003ACF RID: 15055
+		// (get) Token: 0x0601FAD7 RID: 129751 RVA: 0x0093328E File Offset: 0x0093148E
+		// (set) Token: 0x0601FAD8 RID: 129752 RVA: 0x0093329E File Offset: 0x0093149E
 		public unsafe float PrepareAreaMinY
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_PrepareAreaMinY);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_PrepareAreaMinY) = value;
 			}
 		}
 
-		// Token: 0x17006184 RID: 24964
-		// (get) Token: 0x060291C7 RID: 168391 RVA: 0x009BC14F File Offset: 0x009BA34F
-		// (set) Token: 0x060291C8 RID: 168392 RVA: 0x009BC15F File Offset: 0x009BA35F
+		// Token: 0x17003AD0 RID: 15056
+		// (get) Token: 0x0601FAD9 RID: 129753 RVA: 0x009332AF File Offset: 0x009314AF
+		// (set) Token: 0x0601FADA RID: 129754 RVA: 0x009332BF File Offset: 0x009314BF
 		public unsafe float PrepareAreaMaxY
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_PrepareAreaMaxY);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_PrepareAreaMaxY) = value;
 			}
 		}
 
-		// Token: 0x17006185 RID: 24965
-		// (get) Token: 0x060291C9 RID: 168393 RVA: 0x009BC170 File Offset: 0x009BA370
-		// (set) Token: 0x060291CA RID: 168394 RVA: 0x009BC1A9 File Offset: 0x009BA3A9
+		// Token: 0x17003AD1 RID: 15057
+		// (get) Token: 0x0601FADB RID: 129755 RVA: 0x009332D0 File Offset: 0x009314D0
+		// (set) Token: 0x0601FADC RID: 129756 RVA: 0x00933309 File Offset: 0x00931509
 		public TMap<int, int> ScoreRule
 		{
 			get
@@ -181,7 +181,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.Tetris
 				TMap<int, int> result;
 				if ((result = this._ScoreRule) == null)
 				{
-					result = (this._ScoreRule = new TMap<int, int>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_9, this));
+					result = (this._ScoreRule = new TMap<int, int>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_ScoreRule, this));
 				}
 				return result;
 			}
@@ -191,484 +191,484 @@ namespace AkiClient.Game.Aki.Data.Gameplay.Tetris
 			}
 		}
 
-		// Token: 0x17006186 RID: 24966
-		// (get) Token: 0x060291CB RID: 168395 RVA: 0x009BC1B7 File Offset: 0x009BA3B7
-		// (set) Token: 0x060291CC RID: 168396 RVA: 0x009BC1CC File Offset: 0x009BA3CC
+		// Token: 0x17003AD2 RID: 15058
+		// (get) Token: 0x0601FADD RID: 129757 RVA: 0x00933317 File Offset: 0x00931517
+		// (set) Token: 0x0601FADE RID: 129758 RVA: 0x0093332C File Offset: 0x0093152C
 		public TSoftObjectPtr<EffectModelGroup> NormalModeLineClearEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_10, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeLineClearEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_10, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeLineClearEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006187 RID: 24967
-		// (get) Token: 0x060291CD RID: 168397 RVA: 0x009BC1F1 File Offset: 0x009BA3F1
-		// (set) Token: 0x060291CE RID: 168398 RVA: 0x009BC206 File Offset: 0x009BA406
+		// Token: 0x17003AD3 RID: 15059
+		// (get) Token: 0x0601FADF RID: 129759 RVA: 0x00933351 File Offset: 0x00931551
+		// (set) Token: 0x0601FAE0 RID: 129760 RVA: 0x00933366 File Offset: 0x00931566
 		public TSoftObjectPtr<EffectModelGroup> NormalModeTetrominoLockEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_11, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeTetrominoLockEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_11, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeTetrominoLockEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006188 RID: 24968
-		// (get) Token: 0x060291CF RID: 168399 RVA: 0x009BC22B File Offset: 0x009BA42B
-		// (set) Token: 0x060291D0 RID: 168400 RVA: 0x009BC240 File Offset: 0x009BA440
+		// Token: 0x17003AD4 RID: 15060
+		// (get) Token: 0x0601FAE1 RID: 129761 RVA: 0x0093338B File Offset: 0x0093158B
+		// (set) Token: 0x0601FAE2 RID: 129762 RVA: 0x009333A0 File Offset: 0x009315A0
 		public TSoftObjectPtr<EffectModelGroup> NormalModeTetrominoSpawnEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_12, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeTetrominoSpawnEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_12, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeTetrominoSpawnEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006189 RID: 24969
-		// (get) Token: 0x060291D1 RID: 168401 RVA: 0x009BC265 File Offset: 0x009BA465
-		// (set) Token: 0x060291D2 RID: 168402 RVA: 0x009BC27A File Offset: 0x009BA47A
+		// Token: 0x17003AD5 RID: 15061
+		// (get) Token: 0x0601FAE3 RID: 129763 RVA: 0x009333C5 File Offset: 0x009315C5
+		// (set) Token: 0x0601FAE4 RID: 129764 RVA: 0x009333DA File Offset: 0x009315DA
 		public TSoftObjectPtr<EffectModelGroup> NormalModeTetrominoMoveTrailEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_13, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeTetrominoMoveTrailEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_13, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeTetrominoMoveTrailEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700618A RID: 24970
-		// (get) Token: 0x060291D3 RID: 168403 RVA: 0x009BC29F File Offset: 0x009BA49F
-		// (set) Token: 0x060291D4 RID: 168404 RVA: 0x009BC2B4 File Offset: 0x009BA4B4
+		// Token: 0x17003AD6 RID: 15062
+		// (get) Token: 0x0601FAE5 RID: 129765 RVA: 0x009333FF File Offset: 0x009315FF
+		// (set) Token: 0x0601FAE6 RID: 129766 RVA: 0x00933414 File Offset: 0x00931614
 		public TSoftObjectPtr<EffectModelGroup> NormalModeAreaLoopEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_14, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeAreaLoopEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_14, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeAreaLoopEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700618B RID: 24971
-		// (get) Token: 0x060291D5 RID: 168405 RVA: 0x009BC2D9 File Offset: 0x009BA4D9
-		// (set) Token: 0x060291D6 RID: 168406 RVA: 0x009BC2EE File Offset: 0x009BA4EE
+		// Token: 0x17003AD7 RID: 15063
+		// (get) Token: 0x0601FAE7 RID: 129767 RVA: 0x00933439 File Offset: 0x00931639
+		// (set) Token: 0x0601FAE8 RID: 129768 RVA: 0x0093344E File Offset: 0x0093164E
 		public TSoftObjectPtr<EffectModelGroup> NormalModeAreaLoopEffect2
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_15, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeAreaLoopEffect2, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_15, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeAreaLoopEffect2, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700618C RID: 24972
-		// (get) Token: 0x060291D7 RID: 168407 RVA: 0x009BC313 File Offset: 0x009BA513
-		// (set) Token: 0x060291D8 RID: 168408 RVA: 0x009BC328 File Offset: 0x009BA528
+		// Token: 0x17003AD8 RID: 15064
+		// (get) Token: 0x0601FAE9 RID: 129769 RVA: 0x00933473 File Offset: 0x00931673
+		// (set) Token: 0x0601FAEA RID: 129770 RVA: 0x00933488 File Offset: 0x00931688
 		public TSoftObjectPtr<ItemMaterialControllerActorData> NormalModeMinoDestroyEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<ItemMaterialControllerActorData>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_16, this);
+				return new TSoftObjectPtr<ItemMaterialControllerActorData>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeMinoDestroyEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_16, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeMinoDestroyEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700618D RID: 24973
-		// (get) Token: 0x060291D9 RID: 168409 RVA: 0x009BC34D File Offset: 0x009BA54D
-		// (set) Token: 0x060291DA RID: 168410 RVA: 0x009BC362 File Offset: 0x009BA562
+		// Token: 0x17003AD9 RID: 15065
+		// (get) Token: 0x0601FAEB RID: 129771 RVA: 0x009334AD File Offset: 0x009316AD
+		// (set) Token: 0x0601FAEC RID: 129772 RVA: 0x009334C2 File Offset: 0x009316C2
 		public TSoftObjectPtr<EffectModelGroup> MainLineModeTetrominoSpawnEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_17, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeTetrominoSpawnEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_17, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeTetrominoSpawnEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700618E RID: 24974
-		// (get) Token: 0x060291DB RID: 168411 RVA: 0x009BC387 File Offset: 0x009BA587
-		// (set) Token: 0x060291DC RID: 168412 RVA: 0x009BC39C File Offset: 0x009BA59C
+		// Token: 0x17003ADA RID: 15066
+		// (get) Token: 0x0601FAED RID: 129773 RVA: 0x009334E7 File Offset: 0x009316E7
+		// (set) Token: 0x0601FAEE RID: 129774 RVA: 0x009334FC File Offset: 0x009316FC
 		public TSoftObjectPtr<EffectModelGroup> MainLineModeTetrominoMoveTrailEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_18, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeTetrominoMoveTrailEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_18, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeTetrominoMoveTrailEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700618F RID: 24975
-		// (get) Token: 0x060291DD RID: 168413 RVA: 0x009BC3C1 File Offset: 0x009BA5C1
-		// (set) Token: 0x060291DE RID: 168414 RVA: 0x009BC3D6 File Offset: 0x009BA5D6
+		// Token: 0x17003ADB RID: 15067
+		// (get) Token: 0x0601FAEF RID: 129775 RVA: 0x00933521 File Offset: 0x00931721
+		// (set) Token: 0x0601FAF0 RID: 129776 RVA: 0x00933536 File Offset: 0x00931736
 		public TSoftObjectPtr<EffectModelGroup> MainLineModeTetrominoLockEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_19, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeTetrominoLockEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_19, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeTetrominoLockEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006190 RID: 24976
-		// (get) Token: 0x060291DF RID: 168415 RVA: 0x009BC3FB File Offset: 0x009BA5FB
-		// (set) Token: 0x060291E0 RID: 168416 RVA: 0x009BC410 File Offset: 0x009BA610
+		// Token: 0x17003ADC RID: 15068
+		// (get) Token: 0x0601FAF1 RID: 129777 RVA: 0x0093355B File Offset: 0x0093175B
+		// (set) Token: 0x0601FAF2 RID: 129778 RVA: 0x00933570 File Offset: 0x00931770
 		public TSoftObjectPtr<EffectModelGroup> MainLineModeLineClearEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_20, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeLineClearEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_20, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeLineClearEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006191 RID: 24977
-		// (get) Token: 0x060291E1 RID: 168417 RVA: 0x009BC435 File Offset: 0x009BA635
-		// (set) Token: 0x060291E2 RID: 168418 RVA: 0x009BC44A File Offset: 0x009BA64A
+		// Token: 0x17003ADD RID: 15069
+		// (get) Token: 0x0601FAF3 RID: 129779 RVA: 0x00933595 File Offset: 0x00931795
+		// (set) Token: 0x0601FAF4 RID: 129780 RVA: 0x009335AA File Offset: 0x009317AA
 		public TSoftObjectPtr<ItemMaterialControllerActorData> MainLineModeMinoDestroyEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<ItemMaterialControllerActorData>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_21, this);
+				return new TSoftObjectPtr<ItemMaterialControllerActorData>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeMinoDestroyEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_21, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeMinoDestroyEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006192 RID: 24978
-		// (get) Token: 0x060291E3 RID: 168419 RVA: 0x009BC46F File Offset: 0x009BA66F
-		// (set) Token: 0x060291E4 RID: 168420 RVA: 0x009BC484 File Offset: 0x009BA684
+		// Token: 0x17003ADE RID: 15070
+		// (get) Token: 0x0601FAF5 RID: 129781 RVA: 0x009335CF File Offset: 0x009317CF
+		// (set) Token: 0x0601FAF6 RID: 129782 RVA: 0x009335E4 File Offset: 0x009317E4
 		public TSoftObjectPtr<EffectModelGroup> NormalModeFailEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_22, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeFailEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_22, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModeFailEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006193 RID: 24979
-		// (get) Token: 0x060291E5 RID: 168421 RVA: 0x009BC4A9 File Offset: 0x009BA6A9
-		// (set) Token: 0x060291E6 RID: 168422 RVA: 0x009BC4BE File Offset: 0x009BA6BE
+		// Token: 0x17003ADF RID: 15071
+		// (get) Token: 0x0601FAF7 RID: 129783 RVA: 0x00933609 File Offset: 0x00931809
+		// (set) Token: 0x0601FAF8 RID: 129784 RVA: 0x0093361E File Offset: 0x0093181E
 		public TSoftObjectPtr<EffectModelGroup> MainLineModeFailEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_23, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeFailEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_23, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModeFailEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006194 RID: 24980
-		// (get) Token: 0x060291E7 RID: 168423 RVA: 0x009BC4E3 File Offset: 0x009BA6E3
-		// (set) Token: 0x060291E8 RID: 168424 RVA: 0x009BC4F8 File Offset: 0x009BA6F8
+		// Token: 0x17003AE0 RID: 15072
+		// (get) Token: 0x0601FAF9 RID: 129785 RVA: 0x00933643 File Offset: 0x00931843
+		// (set) Token: 0x0601FAFA RID: 129786 RVA: 0x00933658 File Offset: 0x00931858
 		public TSoftObjectPtr<PD_CharacterControllerData_C> NormalModePlayerOutlineEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_24, this);
+				return new TSoftObjectPtr<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModePlayerOutlineEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_24, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModePlayerOutlineEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006195 RID: 24981
-		// (get) Token: 0x060291E9 RID: 168425 RVA: 0x009BC51D File Offset: 0x009BA71D
-		// (set) Token: 0x060291EA RID: 168426 RVA: 0x009BC532 File Offset: 0x009BA732
+		// Token: 0x17003AE1 RID: 15073
+		// (get) Token: 0x0601FAFB RID: 129787 RVA: 0x0093367D File Offset: 0x0093187D
+		// (set) Token: 0x0601FAFC RID: 129788 RVA: 0x00933692 File Offset: 0x00931892
 		public TSoftObjectPtr<PD_CharacterControllerData_C> MainLineModePlayerOutlineEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_25, this);
+				return new TSoftObjectPtr<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModePlayerOutlineEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_25, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_MainLineModePlayerOutlineEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006196 RID: 24982
-		// (get) Token: 0x060291EB RID: 168427 RVA: 0x009BC557 File Offset: 0x009BA757
-		// (set) Token: 0x060291EC RID: 168428 RVA: 0x009BC56C File Offset: 0x009BA76C
+		// Token: 0x17003AE2 RID: 15074
+		// (get) Token: 0x0601FAFD RID: 129789 RVA: 0x009336B7 File Offset: 0x009318B7
+		// (set) Token: 0x0601FAFE RID: 129790 RVA: 0x009336CC File Offset: 0x009318CC
 		public TSoftObjectPtr<PD_CharacterControllerData_C> NormalModePlayerDeadEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_26, this);
+				return new TSoftObjectPtr<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModePlayerDeadEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_26, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)Bp_Tetris_C.__PropertyOffset_NormalModePlayerDeadEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006197 RID: 24983
-		// (get) Token: 0x060291ED RID: 168429 RVA: 0x009BC591 File Offset: 0x009BA791
-		// (set) Token: 0x060291EE RID: 168430 RVA: 0x009BC5A5 File Offset: 0x009BA7A5
+		// Token: 0x17003AE3 RID: 15075
+		// (get) Token: 0x0601FAFF RID: 129791 RVA: 0x009336F1 File Offset: 0x009318F1
+		// (set) Token: 0x0601FB00 RID: 129792 RVA: 0x00933705 File Offset: 0x00931905
 		public unsafe string AudioGameSpeedUp
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_27)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioGameSpeedUp)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_27)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioGameSpeedUp)), value);
 			}
 		}
 
-		// Token: 0x17006198 RID: 24984
-		// (get) Token: 0x060291EF RID: 168431 RVA: 0x009BC5BA File Offset: 0x009BA7BA
-		// (set) Token: 0x060291F0 RID: 168432 RVA: 0x009BC5CE File Offset: 0x009BA7CE
+		// Token: 0x17003AE4 RID: 15076
+		// (get) Token: 0x0601FB01 RID: 129793 RVA: 0x0093371A File Offset: 0x0093191A
+		// (set) Token: 0x0601FB02 RID: 129794 RVA: 0x0093372E File Offset: 0x0093192E
 		public unsafe string AudioTetrominoStartFall
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_28)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioTetrominoStartFall)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_28)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioTetrominoStartFall)), value);
 			}
 		}
 
-		// Token: 0x17006199 RID: 24985
-		// (get) Token: 0x060291F1 RID: 168433 RVA: 0x009BC5E3 File Offset: 0x009BA7E3
-		// (set) Token: 0x060291F2 RID: 168434 RVA: 0x009BC5F7 File Offset: 0x009BA7F7
+		// Token: 0x17003AE5 RID: 15077
+		// (get) Token: 0x0601FB03 RID: 129795 RVA: 0x00933743 File Offset: 0x00931943
+		// (set) Token: 0x0601FB04 RID: 129796 RVA: 0x00933757 File Offset: 0x00931957
 		public unsafe string AudioGameFail
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_29)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioGameFail)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_29)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioGameFail)), value);
 			}
 		}
 
-		// Token: 0x1700619A RID: 24986
-		// (get) Token: 0x060291F3 RID: 168435 RVA: 0x009BC60C File Offset: 0x009BA80C
-		// (set) Token: 0x060291F4 RID: 168436 RVA: 0x009BC620 File Offset: 0x009BA820
+		// Token: 0x17003AE6 RID: 15078
+		// (get) Token: 0x0601FB05 RID: 129797 RVA: 0x0093376C File Offset: 0x0093196C
+		// (set) Token: 0x0601FB06 RID: 129798 RVA: 0x00933780 File Offset: 0x00931980
 		public unsafe string AudioGameSuccess
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_30)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioGameSuccess)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_30)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioGameSuccess)), value);
 			}
 		}
 
-		// Token: 0x1700619B RID: 24987
-		// (get) Token: 0x060291F5 RID: 168437 RVA: 0x009BC635 File Offset: 0x009BA835
-		// (set) Token: 0x060291F6 RID: 168438 RVA: 0x009BC649 File Offset: 0x009BA849
+		// Token: 0x17003AE7 RID: 15079
+		// (get) Token: 0x0601FB07 RID: 129799 RVA: 0x00933795 File Offset: 0x00931995
+		// (set) Token: 0x0601FB08 RID: 129800 RVA: 0x009337A9 File Offset: 0x009319A9
 		public unsafe string AudioGameRestart
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_31)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioGameRestart)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_31)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioGameRestart)), value);
 			}
 		}
 
-		// Token: 0x1700619C RID: 24988
-		// (get) Token: 0x060291F7 RID: 168439 RVA: 0x009BC65E File Offset: 0x009BA85E
-		// (set) Token: 0x060291F8 RID: 168440 RVA: 0x009BC672 File Offset: 0x009BA872
+		// Token: 0x17003AE8 RID: 15080
+		// (get) Token: 0x0601FB09 RID: 129801 RVA: 0x009337BE File Offset: 0x009319BE
+		// (set) Token: 0x0601FB0A RID: 129802 RVA: 0x009337D2 File Offset: 0x009319D2
 		public unsafe string AudioTetrominoRotate
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_32)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioTetrominoRotate)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_32)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioTetrominoRotate)), value);
 			}
 		}
 
-		// Token: 0x1700619D RID: 24989
-		// (get) Token: 0x060291F9 RID: 168441 RVA: 0x009BC687 File Offset: 0x009BA887
-		// (set) Token: 0x060291FA RID: 168442 RVA: 0x009BC69B File Offset: 0x009BA89B
+		// Token: 0x17003AE9 RID: 15081
+		// (get) Token: 0x0601FB0B RID: 129803 RVA: 0x009337E7 File Offset: 0x009319E7
+		// (set) Token: 0x0601FB0C RID: 129804 RVA: 0x009337FB File Offset: 0x009319FB
 		public unsafe string AudioAimingMove
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_33)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioAimingMove)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_33)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)Bp_Tetris_C.__PropertyOffset_AudioAimingMove)), value);
 			}
 		}
 
-		// Token: 0x060291FB RID: 168443 RVA: 0x009BC6B0 File Offset: 0x009BA8B0
+		// Token: 0x0601FB0D RID: 129805 RVA: 0x00933810 File Offset: 0x00931A10
 		protected Bp_Tetris_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040150BD RID: 86205
+		// Token: 0x04010FED RID: 69613
 		public new const string __ObjectPath = "/Game/Aki/Data/Gameplay/Tetris/Bp_Tetris.Bp_Tetris_C";
 
-		// Token: 0x040150BE RID: 86206
+		// Token: 0x04010FEE RID: 69614
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040150BF RID: 86207
+		// Token: 0x04010FEF RID: 69615
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040150C0 RID: 86208
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010FF0 RID: 69616
+		internal static int __PropertyOffset_DefaultBoardSize;
 
-		// Token: 0x040150C1 RID: 86209
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010FF1 RID: 69617
+		internal static int __PropertyOffset_CubeSize;
 
-		// Token: 0x040150C2 RID: 86210
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010FF2 RID: 69618
+		internal static int __PropertyOffset_CubeControlTime;
 
-		// Token: 0x040150C3 RID: 86211
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010FF3 RID: 69619
+		internal static int __PropertyOffset_EndlessModeSpeedUpInterval;
 
-		// Token: 0x040150C4 RID: 86212
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010FF4 RID: 69620
+		internal static int __PropertyOffset_SingleControlTimeReduce;
 
-		// Token: 0x040150C5 RID: 86213
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010FF5 RID: 69621
+		internal static int __PropertyOffset_MinCubeControlTime;
 
-		// Token: 0x040150C6 RID: 86214
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010FF6 RID: 69622
+		internal static int __PropertyOffset_SpawnNextTetrominoInterval;
 
-		// Token: 0x040150C7 RID: 86215
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010FF7 RID: 69623
+		internal static int __PropertyOffset_PrepareAreaMinY;
 
-		// Token: 0x040150C8 RID: 86216
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010FF8 RID: 69624
+		internal static int __PropertyOffset_PrepareAreaMaxY;
 
-		// Token: 0x040150C9 RID: 86217
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010FF9 RID: 69625
+		internal static int __PropertyOffset_ScoreRule;
 
-		// Token: 0x040150CA RID: 86218
+		// Token: 0x04010FFA RID: 69626
 		[Nullable(2)]
 		private TMap<int, int> _ScoreRule;
 
-		// Token: 0x040150CB RID: 86219
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010FFB RID: 69627
+		internal static int __PropertyOffset_NormalModeLineClearEffect;
 
-		// Token: 0x040150CC RID: 86220
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010FFC RID: 69628
+		internal static int __PropertyOffset_NormalModeTetrominoLockEffect;
 
-		// Token: 0x040150CD RID: 86221
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010FFD RID: 69629
+		internal static int __PropertyOffset_NormalModeTetrominoSpawnEffect;
 
-		// Token: 0x040150CE RID: 86222
-		internal static int __PropertyOffset_13;
+		// Token: 0x04010FFE RID: 69630
+		internal static int __PropertyOffset_NormalModeTetrominoMoveTrailEffect;
 
-		// Token: 0x040150CF RID: 86223
-		internal static int __PropertyOffset_14;
+		// Token: 0x04010FFF RID: 69631
+		internal static int __PropertyOffset_NormalModeAreaLoopEffect;
 
-		// Token: 0x040150D0 RID: 86224
-		internal static int __PropertyOffset_15;
+		// Token: 0x04011000 RID: 69632
+		internal static int __PropertyOffset_NormalModeAreaLoopEffect2;
 
-		// Token: 0x040150D1 RID: 86225
-		internal static int __PropertyOffset_16;
+		// Token: 0x04011001 RID: 69633
+		internal static int __PropertyOffset_NormalModeMinoDestroyEffect;
 
-		// Token: 0x040150D2 RID: 86226
-		internal static int __PropertyOffset_17;
+		// Token: 0x04011002 RID: 69634
+		internal static int __PropertyOffset_MainLineModeTetrominoSpawnEffect;
 
-		// Token: 0x040150D3 RID: 86227
-		internal static int __PropertyOffset_18;
+		// Token: 0x04011003 RID: 69635
+		internal static int __PropertyOffset_MainLineModeTetrominoMoveTrailEffect;
 
-		// Token: 0x040150D4 RID: 86228
-		internal static int __PropertyOffset_19;
+		// Token: 0x04011004 RID: 69636
+		internal static int __PropertyOffset_MainLineModeTetrominoLockEffect;
 
-		// Token: 0x040150D5 RID: 86229
-		internal static int __PropertyOffset_20;
+		// Token: 0x04011005 RID: 69637
+		internal static int __PropertyOffset_MainLineModeLineClearEffect;
 
-		// Token: 0x040150D6 RID: 86230
-		internal static int __PropertyOffset_21;
+		// Token: 0x04011006 RID: 69638
+		internal static int __PropertyOffset_MainLineModeMinoDestroyEffect;
 
-		// Token: 0x040150D7 RID: 86231
-		internal static int __PropertyOffset_22;
+		// Token: 0x04011007 RID: 69639
+		internal static int __PropertyOffset_NormalModeFailEffect;
 
-		// Token: 0x040150D8 RID: 86232
-		internal static int __PropertyOffset_23;
+		// Token: 0x04011008 RID: 69640
+		internal static int __PropertyOffset_MainLineModeFailEffect;
 
-		// Token: 0x040150D9 RID: 86233
-		internal static int __PropertyOffset_24;
+		// Token: 0x04011009 RID: 69641
+		internal static int __PropertyOffset_NormalModePlayerOutlineEffect;
 
-		// Token: 0x040150DA RID: 86234
-		internal static int __PropertyOffset_25;
+		// Token: 0x0401100A RID: 69642
+		internal static int __PropertyOffset_MainLineModePlayerOutlineEffect;
 
-		// Token: 0x040150DB RID: 86235
-		internal static int __PropertyOffset_26;
+		// Token: 0x0401100B RID: 69643
+		internal static int __PropertyOffset_NormalModePlayerDeadEffect;
 
-		// Token: 0x040150DC RID: 86236
-		internal static int __PropertyOffset_27;
+		// Token: 0x0401100C RID: 69644
+		internal static int __PropertyOffset_AudioGameSpeedUp;
 
-		// Token: 0x040150DD RID: 86237
-		internal static int __PropertyOffset_28;
+		// Token: 0x0401100D RID: 69645
+		internal static int __PropertyOffset_AudioTetrominoStartFall;
 
-		// Token: 0x040150DE RID: 86238
-		internal static int __PropertyOffset_29;
+		// Token: 0x0401100E RID: 69646
+		internal static int __PropertyOffset_AudioGameFail;
 
-		// Token: 0x040150DF RID: 86239
-		internal static int __PropertyOffset_30;
+		// Token: 0x0401100F RID: 69647
+		internal static int __PropertyOffset_AudioGameSuccess;
 
-		// Token: 0x040150E0 RID: 86240
-		internal static int __PropertyOffset_31;
+		// Token: 0x04011010 RID: 69648
+		internal static int __PropertyOffset_AudioGameRestart;
 
-		// Token: 0x040150E1 RID: 86241
-		internal static int __PropertyOffset_32;
+		// Token: 0x04011011 RID: 69649
+		internal static int __PropertyOffset_AudioTetrominoRotate;
 
-		// Token: 0x040150E2 RID: 86242
-		internal static int __PropertyOffset_33;
+		// Token: 0x04011012 RID: 69650
+		internal static int __PropertyOffset_AudioAimingMove;
 	}
 }

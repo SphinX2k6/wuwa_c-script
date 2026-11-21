@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BA7 RID: 7079
+// Token: 0x02001066 RID: 4198
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchToyGridItem : UiPanelBase
 {
-	// Token: 0x0600D2C4 RID: 53956 RVA: 0x00307414 File Offset: 0x00305614
+	// Token: 0x0600A6D5 RID: 42709 RVA: 0x003124F4 File Offset: 0x003106F4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -63,14 +63,14 @@ public class FloroRanchToyGridItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D2C5 RID: 53957 RVA: 0x003076B2 File Offset: 0x003058B2
+	// Token: 0x0600A6D6 RID: 42710 RVA: 0x00312792 File Offset: 0x00310992
 	protected override void OnBeforeCreate()
 	{
 		this.UiLevelSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiLevelSequence);
 	}
 
-	// Token: 0x0600D2C6 RID: 53958 RVA: 0x003076CC File Offset: 0x003058CC
+	// Token: 0x0600A6D7 RID: 42711 RVA: 0x003127AC File Offset: 0x003109AC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchToyGridItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -81,14 +81,14 @@ public class FloroRanchToyGridItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D2C7 RID: 53959 RVA: 0x0030770F File Offset: 0x0030590F
+	// Token: 0x0600A6D8 RID: 42712 RVA: 0x003127EF File Offset: 0x003109EF
 	protected override void OnStart()
 	{
 		this.SetInfoPanelActive(false);
 		base.GetExtendToggle(0).SetSelfInteractive(false);
 	}
 
-	// Token: 0x0600D2C8 RID: 53960 RVA: 0x00307728 File Offset: 0x00305928
+	// Token: 0x0600A6D9 RID: 42713 RVA: 0x00312808 File Offset: 0x00310A08
 	private void OnToggleClick(EToggleState toggleState)
 	{
 		FloroRanchEntityBase entity = this.Entity;
@@ -102,13 +102,13 @@ public class FloroRanchToyGridItem : UiPanelBase
 		onClickCallback(obj);
 	}
 
-	// Token: 0x0600D2C9 RID: 53961 RVA: 0x00307765 File Offset: 0x00305965
+	// Token: 0x0600A6DA RID: 42714 RVA: 0x00312845 File Offset: 0x00310A45
 	public void BindClickCallback(Action<int> callback)
 	{
 		this.OnClickCallback = callback;
 	}
 
-	// Token: 0x0600D2CA RID: 53962 RVA: 0x00307770 File Offset: 0x00305970
+	// Token: 0x0600A6DB RID: 42715 RVA: 0x00312850 File Offset: 0x00310A50
 	public void RefreshItemGrid(FloroRanchEntityBase entity)
 	{
 		if (entity == null)
@@ -167,14 +167,14 @@ public class FloroRanchToyGridItem : UiPanelBase
 		this.ToyLevelItem.SetActive(false);
 	}
 
-	// Token: 0x0600D2CB RID: 53963 RVA: 0x00307902 File Offset: 0x00305B02
+	// Token: 0x0600A6DC RID: 42716 RVA: 0x003129E2 File Offset: 0x00310BE2
 	public void SetInfoPanelActive(bool isActive)
 	{
 		base.GetItem(8).SetUIActive(isActive);
 		base.GetExtendToggle(0).SetSelfInteractive(isActive);
 	}
 
-	// Token: 0x0600D2CC RID: 53964 RVA: 0x00307920 File Offset: 0x00305B20
+	// Token: 0x0600A6DD RID: 42717 RVA: 0x00312A00 File Offset: 0x00310C00
 	public void PlayShowAnim(FloroRanchEntityBase entity)
 	{
 		this.RefreshItemGrid(entity);
@@ -185,79 +185,79 @@ public class FloroRanchToyGridItem : UiPanelBase
 		this.UiLevelSequence.PlaySequence("Start", false, new float?((float)FloroRanchGamePlayModel.Instance.GetTimeDilation()));
 	}
 
-	// Token: 0x0600D2CD RID: 53965 RVA: 0x0030796F File Offset: 0x00305B6F
+	// Token: 0x0600A6DE RID: 42718 RVA: 0x00312A4F File Offset: 0x00310C4F
 	public void SetSelectState(bool isSelect)
 	{
 		base.GetExtendToggle(0).SetToggleState(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0400609A RID: 24730
+	// Token: 0x04006169 RID: 24937
 	private FloroRanchEntityBase Entity;
 
-	// Token: 0x0400609B RID: 24731
+	// Token: 0x0400616A RID: 24938
 	public UiBehaviorLevelSequence UiLevelSequence;
 
-	// Token: 0x0400609C RID: 24732
+	// Token: 0x0400616B RID: 24939
 	public FloroRanchToyLevelItem ToyLevelItem;
 
-	// Token: 0x0400609D RID: 24733
+	// Token: 0x0400616C RID: 24940
 	private Action<int> OnClickCallback = delegate(int point)
 	{
 	};
 
-	// Token: 0x02008148 RID: 33096
+	// Token: 0x020072D6 RID: 29398
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A321 RID: 172833
+		// Token: 0x04025655 RID: 153173
 		public const int Toggle = 0;
 
-		// Token: 0x0402A322 RID: 172834
+		// Token: 0x04025656 RID: 153174
 		public const int QualitySprite = 1;
 
-		// Token: 0x0402A323 RID: 172835
+		// Token: 0x04025657 RID: 153175
 		public const int IconTexture = 2;
 
-		// Token: 0x0402A324 RID: 172836
+		// Token: 0x04025658 RID: 153176
 		public const int CountDownPanel = 3;
 
-		// Token: 0x0402A325 RID: 172837
+		// Token: 0x04025659 RID: 153177
 		public const int CountdownText = 4;
 
-		// Token: 0x0402A326 RID: 172838
+		// Token: 0x0402565A RID: 153178
 		public const int NumPanel = 5;
 
-		// Token: 0x0402A327 RID: 172839
+		// Token: 0x0402565B RID: 153179
 		public const int NumText = 6;
 
-		// Token: 0x0402A328 RID: 172840
+		// Token: 0x0402565C RID: 153180
 		public const int LockSprite = 7;
 
-		// Token: 0x0402A329 RID: 172841
+		// Token: 0x0402565D RID: 153181
 		public const int InfoPanel = 8;
 
-		// Token: 0x0402A32A RID: 172842
+		// Token: 0x0402565E RID: 153182
 		public const int BgSprite = 9;
 
-		// Token: 0x0402A32B RID: 172843
+		// Token: 0x0402565F RID: 153183
 		public const int IconMaskTexture = 10;
 
-		// Token: 0x0402A32C RID: 172844
+		// Token: 0x04025660 RID: 153184
 		public const int UnknownPanel = 11;
 
-		// Token: 0x0402A32D RID: 172845
+		// Token: 0x04025661 RID: 153185
 		public const int ItemPhantomIcon = 12;
 
-		// Token: 0x0402A32E RID: 172846
+		// Token: 0x04025662 RID: 153186
 		public const int ItemNew = 13;
 
-		// Token: 0x0402A32F RID: 172847
+		// Token: 0x04025663 RID: 153187
 		public const int ToyRaceItem = 14;
 
-		// Token: 0x0402A330 RID: 172848
+		// Token: 0x04025664 RID: 153188
 		public const int ToyRaceIcon = 15;
 
-		// Token: 0x0402A331 RID: 172849
+		// Token: 0x04025665 RID: 153189
 		public const int ToyLevelItem = 16;
 	}
 }

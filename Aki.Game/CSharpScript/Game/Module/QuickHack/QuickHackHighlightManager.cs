@@ -5,30 +5,30 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F67 RID: 20327
+	// Token: 0x02003F30 RID: 16176
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class QuickHackHighlightManager
 	{
-		// Token: 0x0603412E RID: 213294 RVA: 0x00C36BB4 File Offset: 0x00C34DB4
+		// Token: 0x06028F9C RID: 167836 RVA: 0x00B80354 File Offset: 0x00B7E554
 		public virtual void Init(QuickHackDevice config)
 		{
 			this.UseTargetHighlightCondition = config.UseTargetHighlightCondition;
 		}
 
-		// Token: 0x0603412F RID: 213295 RVA: 0x00C36BC3 File Offset: 0x00C34DC3
+		// Token: 0x06028F9D RID: 167837 RVA: 0x00B80363 File Offset: 0x00B7E563
 		public void Clear()
 		{
 			this.RemoveAllHighlight();
 		}
 
-		// Token: 0x06034130 RID: 213296
+		// Token: 0x06028F9E RID: 167838
 		public abstract void RefreshTargetsHighlight(IEnumerable<EntityHandle> lockTargets, IEnumerable<EntityHandle> onScreenTargets);
 
-		// Token: 0x06034131 RID: 213297
+		// Token: 0x06028F9F RID: 167839
 		public abstract void RemoveAllHighlight();
 
-		// Token: 0x06034132 RID: 213298 RVA: 0x00C36BCC File Offset: 0x00C34DCC
+		// Token: 0x06028FA0 RID: 167840 RVA: 0x00B8036C File Offset: 0x00B7E56C
 		protected IQuickHackHighlightPreProcessResult PreProcessSelectAndOnScreenTargets(IEnumerable<EntityHandle> lockTargets, IEnumerable<EntityHandle> onScreenTargets)
 		{
 			HashSet<EntityHandle> hashSet = new HashSet<EntityHandle>(onScreenTargets);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			};
 		}
 
-		// Token: 0x0401BAA4 RID: 113316
+		// Token: 0x04016479 RID: 91257
 		private bool UseTargetHighlightCondition;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002379 RID: 9081
+	// Token: 0x02002602 RID: 9730
 	public static class ELoopStateTypeExtensions
 	{
-		// Token: 0x0600C61F RID: 50719 RVA: 0x001D065C File Offset: 0x001CE85C
+		// Token: 0x0600D263 RID: 53859 RVA: 0x001E9630 File Offset: 0x001E7830
 		public static string ToEnumString(this ELoopStateType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C620 RID: 50720 RVA: 0x001D0694 File Offset: 0x001CE894
+		// Token: 0x0600D264 RID: 53860 RVA: 0x001E9668 File Offset: 0x001E7868
 		public static ELoopStateType FromString(string name)
 		{
 			ELoopStateType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C621 RID: 50721 RVA: 0x001D06BD File Offset: 0x001CE8BD
+		// Token: 0x0600D265 RID: 53861 RVA: 0x001E9691 File Offset: 0x001E7891
 		public static bool TryFromString(string name, out ELoopStateType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C622 RID: 50722 RVA: 0x001D06F6 File Offset: 0x001CE8F6
+		// Token: 0x0600D266 RID: 53862 RVA: 0x001E96CA File Offset: 0x001E78CA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C623 RID: 50723 RVA: 0x001D070E File Offset: 0x001CE90E
+		// Token: 0x0600D267 RID: 53863 RVA: 0x001E96E2 File Offset: 0x001E78E2
 		public static ELoopStateType[] GetValues()
 		{
 			return new ELoopStateType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C624 RID: 50724 RVA: 0x001D071A File Offset: 0x001CE91A
+		// Token: 0x0600D268 RID: 53864 RVA: 0x001E96EE File Offset: 0x001E78EE
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -6,26 +6,26 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200014D RID: 333
+	// Token: 0x020000B3 RID: 179
 	[UnrealObjectPath("/Script/AIModule.BTNode")]
 	[UnrealStructLayout(112, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 112)]
 	public abstract class UBTNode : UObject, IUnrealUObject, IUnrealObject, IGameplayTaskOwnerInterface, IUnrealNativeInterface, IUnrealInterface
 	{
-		// Token: 0x0600171D RID: 5917 RVA: 0x0002205A File Offset: 0x0002025A
+		// Token: 0x06000D80 RID: 3456 RVA: 0x00015555 File Offset: 0x00013755
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBTNode._ClassPtr;
 		}
 
-		// Token: 0x0600171E RID: 5918 RVA: 0x00022066 File Offset: 0x00020266
+		// Token: 0x06000D81 RID: 3457 RVA: 0x00015561 File Offset: 0x00013761
 		int IGameplayTaskOwnerInterface.InterfaceOffset()
 		{
 			return UBTNode.__InterfaceOffset_IGameplayTaskOwnerInterface;
 		}
 
-		// Token: 0x170005F5 RID: 1525
-		// (get) Token: 0x0600171F RID: 5919 RVA: 0x0002206D File Offset: 0x0002026D
-		// (set) Token: 0x06001720 RID: 5920 RVA: 0x00022081 File Offset: 0x00020281
+		// Token: 0x17000112 RID: 274
+		// (get) Token: 0x06000D82 RID: 3458 RVA: 0x00015568 File Offset: 0x00013768
+		// (set) Token: 0x06000D83 RID: 3459 RVA: 0x0001557C File Offset: 0x0001377C
 		[Nullable(1)]
 		public unsafe string NodeName
 		{
@@ -41,9 +41,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170005F6 RID: 1526
-		// (get) Token: 0x06001721 RID: 5921 RVA: 0x00022096 File Offset: 0x00020296
-		// (set) Token: 0x06001722 RID: 5922 RVA: 0x000220A6 File Offset: 0x000202A6
+		// Token: 0x17000113 RID: 275
+		// (get) Token: 0x06000D84 RID: 3460 RVA: 0x00015591 File Offset: 0x00013791
+		// (set) Token: 0x06000D85 RID: 3461 RVA: 0x000155A1 File Offset: 0x000137A1
 		public unsafe int NodeId
 		{
 			get
@@ -56,9 +56,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170005F7 RID: 1527
-		// (get) Token: 0x06001723 RID: 5923 RVA: 0x000220B7 File Offset: 0x000202B7
-		// (set) Token: 0x06001724 RID: 5924 RVA: 0x000220CB File Offset: 0x000202CB
+		// Token: 0x17000114 RID: 276
+		// (get) Token: 0x06000D86 RID: 3462 RVA: 0x000155B2 File Offset: 0x000137B2
+		// (set) Token: 0x06000D87 RID: 3463 RVA: 0x000155C6 File Offset: 0x000137C6
 		[Nullable(2)]
 		public unsafe UBehaviorTree TreeAsset
 		{
@@ -74,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170005F8 RID: 1528
-		// (get) Token: 0x06001725 RID: 5925 RVA: 0x000220E0 File Offset: 0x000202E0
-		// (set) Token: 0x06001726 RID: 5926 RVA: 0x000220F4 File Offset: 0x000202F4
+		// Token: 0x17000115 RID: 277
+		// (get) Token: 0x06000D88 RID: 3464 RVA: 0x000155DB File Offset: 0x000137DB
+		// (set) Token: 0x06000D89 RID: 3465 RVA: 0x000155EF File Offset: 0x000137EF
 		[Nullable(2)]
 		public unsafe UBTCompositeNode ParentNode
 		{
@@ -92,45 +92,45 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06001727 RID: 5927 RVA: 0x00022109 File Offset: 0x00020309
+		// Token: 0x06000D8A RID: 3466 RVA: 0x00015604 File Offset: 0x00013804
 		static UBTNode()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AIModule.BTNode");
 		}
 
-		// Token: 0x06001728 RID: 5928 RVA: 0x00022118 File Offset: 0x00020318
+		// Token: 0x06000D8B RID: 3467 RVA: 0x00015614 File Offset: 0x00013814
 		protected UBTNode() : this(BuiltinUtils.AllocNativeUObject(UBTNode.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06001729 RID: 5929 RVA: 0x00022140 File Offset: 0x00020340
+		// Token: 0x06000D8C RID: 3468 RVA: 0x0001563C File Offset: 0x0001383C
 		protected UBTNode(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04000562 RID: 1378
+		// Token: 0x0400026C RID: 620
 		internal static int __InterfaceOffset_IGameplayTaskOwnerInterface;
 
-		// Token: 0x04000563 RID: 1379
+		// Token: 0x0400026D RID: 621
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/AIModule.BTNode";
 
-		// Token: 0x04000564 RID: 1380
+		// Token: 0x0400026E RID: 622
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04000565 RID: 1381
+		// Token: 0x0400026F RID: 623
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04000566 RID: 1382
+		// Token: 0x04000270 RID: 624
 		internal static int __PropertyOffset_NodeName;
 
-		// Token: 0x04000567 RID: 1383
+		// Token: 0x04000271 RID: 625
 		internal static int __PropertyOffset_NodeId;
 
-		// Token: 0x04000568 RID: 1384
+		// Token: 0x04000272 RID: 626
 		internal static int __PropertyOffset_TreeAsset;
 
-		// Token: 0x04000569 RID: 1385
+		// Token: 0x04000273 RID: 627
 		internal static int __PropertyOffset_ParentNode;
 	}
 }

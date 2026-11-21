@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002180 RID: 8576
+	// Token: 0x020023E1 RID: 9185
 	public class RunActions_SetValue
 	{
-		// Token: 0x04007090 RID: 28816
-		[Nullable(1)]
+		// Token: 0x040076C5 RID: 30405
 		public List<ActionInfo> ActionList;
 	}
 }

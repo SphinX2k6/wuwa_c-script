@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064B0 RID: 25776
+	// Token: 0x02006B1B RID: 27419
 	public struct ICommonTipType : IFlatbufferObject
 	{
-		// Token: 0x1700BFCF RID: 49103
-		// (get) Token: 0x0602CADE RID: 183006 RVA: 0x00621EC9 File Offset: 0x006200C9
+		// Token: 0x1700C95C RID: 51548
+		// (get) Token: 0x0602F258 RID: 193112 RVA: 0x0066DA9D File Offset: 0x0066BC9D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CADF RID: 183007 RVA: 0x00621ED6 File Offset: 0x006200D6
+		// Token: 0x0602F259 RID: 193113 RVA: 0x0066DAAA File Offset: 0x0066BCAA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CAE0 RID: 183008 RVA: 0x00621EE0 File Offset: 0x006200E0
+		// Token: 0x0602F25A RID: 193114 RVA: 0x0066DAB4 File Offset: 0x0066BCB4
 		public static ICommonTipType GetRootAsICommonTipType(ByteBuffer _bb)
 		{
 			return ICommonTipType.GetRootAsICommonTipType(_bb, default(ICommonTipType));
 		}
 
-		// Token: 0x0602CAE1 RID: 183009 RVA: 0x00621EFC File Offset: 0x006200FC
+		// Token: 0x0602F25B RID: 193115 RVA: 0x0066DAD0 File Offset: 0x0066BCD0
 		public static ICommonTipType GetRootAsICommonTipType(ByteBuffer _bb, ICommonTipType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CAE2 RID: 183010 RVA: 0x00621F19 File Offset: 0x00620119
+		// Token: 0x0602F25C RID: 193116 RVA: 0x0066DAED File Offset: 0x0066BCED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CAE3 RID: 183011 RVA: 0x00621F28 File Offset: 0x00620128
+		// Token: 0x0602F25D RID: 193117 RVA: 0x0066DAFC File Offset: 0x0066BCFC
 		public ICommonTipType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BFD0 RID: 49104
-		// (get) Token: 0x0602CAE4 RID: 183012 RVA: 0x00621F38 File Offset: 0x00620138
+		// Token: 0x1700C95D RID: 51549
+		// (get) Token: 0x0602F25E RID: 193118 RVA: 0x0066DB0C File Offset: 0x0066BD0C
 		public ECommonTipType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CAE5 RID: 183013 RVA: 0x00621F74 File Offset: 0x00620174
+		// Token: 0x0602F25F RID: 193119 RVA: 0x0066DB48 File Offset: 0x0066BD48
 		public static Offset<ICommonTipType> CreateICommonTipType(FlatBufferBuilder builder, ECommonTipType Type = ECommonTipType.ChallengeCondition)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICommonTipType.EndICommonTipType(builder);
 		}
 
-		// Token: 0x0602CAE6 RID: 183014 RVA: 0x00621F8A File Offset: 0x0062018A
+		// Token: 0x0602F260 RID: 193120 RVA: 0x0066DB5E File Offset: 0x0066BD5E
 		public static void StartICommonTipType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602CAE7 RID: 183015 RVA: 0x00621F93 File Offset: 0x00620193
+		// Token: 0x0602F261 RID: 193121 RVA: 0x0066DB67 File Offset: 0x0066BD67
 		public static void AddType(FlatBufferBuilder builder, ECommonTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CAE8 RID: 183016 RVA: 0x00621F9E File Offset: 0x0062019E
+		// Token: 0x0602F262 RID: 193122 RVA: 0x0066DB72 File Offset: 0x0066BD72
 		public static Offset<ICommonTipType> EndICommonTipType(FlatBufferBuilder builder)
 		{
 			return new Offset<ICommonTipType>(builder.EndTable());
 		}
 
-		// Token: 0x0602CAE9 RID: 183017 RVA: 0x00621FAC File Offset: 0x006201AC
+		// Token: 0x0602F263 RID: 193123 RVA: 0x0066DB80 File Offset: 0x0066BD80
 		public ICommonTipTypeT UnPack()
 		{
 			ICommonTipTypeT commonTipTypeT = new ICommonTipTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return commonTipTypeT;
 		}
 
-		// Token: 0x0602CAEA RID: 183018 RVA: 0x00621FC7 File Offset: 0x006201C7
+		// Token: 0x0602F264 RID: 193124 RVA: 0x0066DB9B File Offset: 0x0066BD9B
 		public void UnPackTo(ICommonTipTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602CAEB RID: 183019 RVA: 0x00621FD8 File Offset: 0x006201D8
+		// Token: 0x0602F265 RID: 193125 RVA: 0x0066DBAC File Offset: 0x0066BDAC
 		public static Offset<ICommonTipType> Pack(FlatBufferBuilder builder, ICommonTipTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICommonTipType.CreateICommonTipType(builder, _o.Type);
 		}
 
-		// Token: 0x04010ABF RID: 68287
+		// Token: 0x040118D0 RID: 71888
 		private Table __p;
 	}
 }

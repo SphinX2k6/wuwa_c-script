@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020023CF RID: 9167
+// Token: 0x020018B4 RID: 6324
 public enum EPersonalCardComponentDefine
 {
-	// Token: 0x04008A82 RID: 35458
+	// Token: 0x04008BC9 RID: 35785
 	ScrollView,
-	// Token: 0x04008A83 RID: 35459
+	// Token: 0x04008BCA RID: 35786
 	PersonalCardItem,
-	// Token: 0x04008A84 RID: 35460
+	// Token: 0x04008BCB RID: 35787
 	Texture,
-	// Token: 0x04008A85 RID: 35461
+	// Token: 0x04008BCC RID: 35788
 	TitleText,
-	// Token: 0x04008A86 RID: 35462
+	// Token: 0x04008BCD RID: 35789
 	DescText,
-	// Token: 0x04008A87 RID: 35463
+	// Token: 0x04008BCE RID: 35790
 	TipsText,
-	// Token: 0x04008A88 RID: 35464
+	// Token: 0x04008BCF RID: 35791
 	RightItem,
-	// Token: 0x04008A89 RID: 35465
+	// Token: 0x04008BD0 RID: 35792
 	CaptionItem,
-	// Token: 0x04008A8A RID: 35466
+	// Token: 0x04008BD1 RID: 35793
 	CardPreviewBtn,
-	// Token: 0x04008A8B RID: 35467
+	// Token: 0x04008BD2 RID: 35794
 	ConfirmButton,
-	// Token: 0x04008A8C RID: 35468
+	// Token: 0x04008BD3 RID: 35795
 	InteractionConfirmBtn
 }

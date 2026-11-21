@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200629C RID: 25244
+	// Token: 0x0200521A RID: 21018
 	public static class ERealmBetweenAnimExtensions
 	{
-		// Token: 0x0603F81E RID: 260126 RVA: 0x00F5AE50 File Offset: 0x00F59050
+		// Token: 0x060344DF RID: 214239 RVA: 0x00EA1DAC File Offset: 0x00E9FFAC
 		public static string ToEnumString(this ERealmBetweenAnim value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return result;
 		}
 
-		// Token: 0x0603F81F RID: 260127 RVA: 0x00F5AE88 File Offset: 0x00F59088
+		// Token: 0x060344E0 RID: 214240 RVA: 0x00EA1DE4 File Offset: 0x00E9FFE4
 		public static ERealmBetweenAnim FromString(string name)
 		{
 			ERealmBetweenAnim result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return result;
 		}
 
-		// Token: 0x0603F820 RID: 260128 RVA: 0x00F5AEB1 File Offset: 0x00F590B1
+		// Token: 0x060344E1 RID: 214241 RVA: 0x00EA1E0D File Offset: 0x00EA000D
 		public static bool TryFromString(string name, out ERealmBetweenAnim value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return true;
 		}
 
-		// Token: 0x0603F821 RID: 260129 RVA: 0x00F5AEEA File Offset: 0x00F590EA
+		// Token: 0x060344E2 RID: 214242 RVA: 0x00EA1E46 File Offset: 0x00EA0046
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F822 RID: 260130 RVA: 0x00F5AF02 File Offset: 0x00F59102
+		// Token: 0x060344E3 RID: 214243 RVA: 0x00EA1E5E File Offset: 0x00EA005E
 		public static ERealmBetweenAnim[] GetValues()
 		{
 			return new ERealmBetweenAnim[]
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F823 RID: 260131 RVA: 0x00F5AF0E File Offset: 0x00F5910E
+		// Token: 0x060344E4 RID: 214244 RVA: 0x00EA1E6A File Offset: 0x00EA006A
 		public static string[] GetNames()
 		{
 			return new string[]

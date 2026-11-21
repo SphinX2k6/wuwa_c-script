@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E99 RID: 7833
+	// Token: 0x020005BD RID: 1469
 	public sealed class FEndLoadTransitionMapDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DC76 RID: 121974 RVA: 0x002C0276 File Offset: 0x002BE476
+		// Token: 0x06008377 RID: 33655 RVA: 0x000C2A42 File Offset: 0x000C0C42
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FEndLoadTransitionMapDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DC77 RID: 121975 RVA: 0x002C0282 File Offset: 0x002BE482
+		// Token: 0x06008378 RID: 33656 RVA: 0x000C2A4E File Offset: 0x000C0C4E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FEndLoadTransitionMapDelegate._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FEndLoadTransitionMapDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601DC78 RID: 121976 RVA: 0x002C02A5 File Offset: 0x002BE4A5
+		// Token: 0x06008379 RID: 33657 RVA: 0x000C2A71 File Offset: 0x000C0C71
 		public FEndLoadTransitionMapDelegate()
 		{
 		}
 
-		// Token: 0x0601DC79 RID: 121977 RVA: 0x002C02AD File Offset: 0x002BE4AD
+		// Token: 0x0600837A RID: 33658 RVA: 0x000C2A79 File Offset: 0x000C0C79
 		[NullableContext(2)]
 		public FEndLoadTransitionMapDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DC7A RID: 121978 RVA: 0x002C02B7 File Offset: 0x002BE4B7
+		// Token: 0x0600837B RID: 33659 RVA: 0x000C2A83 File Offset: 0x000C0C83
 		public FEndLoadTransitionMapDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DC7B RID: 121979 RVA: 0x002C02C2 File Offset: 0x002BE4C2
+		// Token: 0x0600837C RID: 33660 RVA: 0x000C2A8E File Offset: 0x000C0C8E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DC7C RID: 121980 RVA: 0x002C02F4 File Offset: 0x002BE4F4
+		// Token: 0x0600837D RID: 33661 RVA: 0x000C2AC0 File Offset: 0x000C0CC0
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FEndLoadTransitionMapDelegate.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FEndLoadTransitionMapDelegate.RegisterId);
 		}
 
-		// Token: 0x0601DC7D RID: 121981 RVA: 0x002C032E File Offset: 0x002BE52E
+		// Token: 0x0600837E RID: 33662 RVA: 0x000C2AFA File Offset: 0x000C0CFA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x0601DC7E RID: 121982 RVA: 0x002C033C File Offset: 0x002BE53C
+		// Token: 0x0600837F RID: 33663 RVA: 0x000C2B08 File Offset: 0x000C0D08
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x040101F0 RID: 66032
+		// Token: 0x0400392C RID: 14636
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040101F1 RID: 66033
+		// Token: 0x0400392D RID: 14637
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.EndLoadTransitionMapDelegate__DelegateSignature";
 
-		// Token: 0x040101F2 RID: 66034
+		// Token: 0x0400392E RID: 14638
 		private static int RegisterId;
 
-		// Token: 0x020032E8 RID: 13032
+		// Token: 0x02000D42 RID: 3394
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017198 RID: 94616
+			// Token: 0x04005FDF RID: 24543
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

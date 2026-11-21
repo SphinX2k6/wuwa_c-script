@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002A8B RID: 10891
+// Token: 0x02002007 RID: 8199
 public enum ESplashScreenTimeType
 {
-	// Token: 0x0400A835 RID: 43061
+	// Token: 0x0400AC3A RID: 44090
 	None,
-	// Token: 0x0400A836 RID: 43062
+	// Token: 0x0400AC3B RID: 44091
 	Long,
-	// Token: 0x0400A837 RID: 43063
+	// Token: 0x0400AC3C RID: 44092
 	Short
 }

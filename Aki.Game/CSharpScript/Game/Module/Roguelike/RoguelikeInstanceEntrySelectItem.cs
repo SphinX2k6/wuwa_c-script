@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E10 RID: 19984
+	// Token: 0x02003DD9 RID: 15833
 	public class RoguelikeInstanceEntrySelectItem : GridProxyAbstract<RougePopularEntrie>
 	{
-		// Token: 0x060338ED RID: 211181 RVA: 0x00C0D2C4 File Offset: 0x00C0B4C4
+		// Token: 0x06028758 RID: 165720 RVA: 0x00B567D0 File Offset: 0x00B549D0
 		public override void Refresh(RougePopularEntrie data, bool isSelected, int gridIndex)
 		{
 			this.DataId = data.Id;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), data.Describe, data.DescriptionParam());
 		}
 
-		// Token: 0x060338EE RID: 211182 RVA: 0x00C0D438 File Offset: 0x00C0B638
+		// Token: 0x06028759 RID: 165721 RVA: 0x00B56944 File Offset: 0x00B54B44
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060338EF RID: 211183 RVA: 0x00C0D504 File Offset: 0x00C0B704
+		// Token: 0x0602875A RID: 165722 RVA: 0x00B56A10 File Offset: 0x00B54C10
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 		}
 
-		// Token: 0x060338F0 RID: 211184 RVA: 0x00C0D528 File Offset: 0x00C0B728
+		// Token: 0x0602875B RID: 165723 RVA: 0x00B56A34 File Offset: 0x00B54C34
 		protected void OnToggleStateChange(EToggleState state)
 		{
 			if (this.OnSelectBuff != null)
@@ -88,19 +88,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060338F1 RID: 211185 RVA: 0x00C0D54E File Offset: 0x00C0B74E
+		// Token: 0x0602875C RID: 165724 RVA: 0x00B56A5A File Offset: 0x00B54C5A
 		public bool IsToggleSelected()
 		{
 			return base.GetExtendToggle(4).GetToggleState() == EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x060338F2 RID: 211186 RVA: 0x00C0D55F File Offset: 0x00C0B75F
+		// Token: 0x0602875D RID: 165725 RVA: 0x00B56A6B File Offset: 0x00B54C6B
 		public void SetToggleInteractive(bool isInteractive)
 		{
 			base.GetExtendToggle(4).SetSelfInteractive(isInteractive);
 		}
 
-		// Token: 0x0401B588 RID: 112008
+		// Token: 0x04015F5B RID: 89947
 		[Nullable(new byte[]
 		{
 			2,
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public Action<int, bool, UUIExtendToggle> OnSelectBuff;
 
-		// Token: 0x0401B589 RID: 112009
+		// Token: 0x04015F5C RID: 89948
 		[Nullable(new byte[]
 		{
 			2,
@@ -116,25 +116,25 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public Func<UUIExtendToggle, bool> CheckCanExecuteChange;
 
-		// Token: 0x0401B58A RID: 112010
+		// Token: 0x04015F5D RID: 89949
 		public int DataId;
 
-		// Token: 0x0200AFAA RID: 44970
+		// Token: 0x020099DF RID: 39391
 		public class ERoguelikeInstanceEntrySelectItem
 		{
-			// Token: 0x04035548 RID: 218440
+			// Token: 0x0402FF7B RID: 196475
 			public const int TextureIcon = 0;
 
-			// Token: 0x04035549 RID: 218441
+			// Token: 0x0402FF7C RID: 196476
 			public const int TxtTitle = 1;
 
-			// Token: 0x0403554A RID: 218442
+			// Token: 0x0402FF7D RID: 196477
 			public const int TxtBuffNumber = 2;
 
-			// Token: 0x0403554B RID: 218443
+			// Token: 0x0402FF7E RID: 196478
 			public const int TxtDescription = 3;
 
-			// Token: 0x0403554C RID: 218444
+			// Token: 0x0402FF7F RID: 196479
 			public const int ExtendToggle = 4;
 		}
 	}

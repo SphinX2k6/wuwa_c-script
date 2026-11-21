@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 {
-	// Token: 0x02004D81 RID: 19841
+	// Token: 0x02003D4A RID: 15690
 	public class RoleLangCustomFilterTabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060334B3 RID: 210099 RVA: 0x00BF863C File Offset: 0x00BF683C
+		// Token: 0x06028320 RID: 164640 RVA: 0x00B41C38 File Offset: 0x00B3FE38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060334B4 RID: 210100 RVA: 0x00BF876C File Offset: 0x00BF696C
+		// Token: 0x06028321 RID: 164641 RVA: 0x00B41D68 File Offset: 0x00B3FF68
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(2);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChanged));
 		}
 
-		// Token: 0x060334B5 RID: 210101 RVA: 0x00BF87CC File Offset: 0x00BF69CC
+		// Token: 0x06028322 RID: 164642 RVA: 0x00B41DC8 File Offset: 0x00B3FFC8
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			}
 		}
 
-		// Token: 0x060334B6 RID: 210102 RVA: 0x00BF8863 File Offset: 0x00BF6A63
+		// Token: 0x06028323 RID: 164643 RVA: 0x00B41E5F File Offset: 0x00B4005F
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			Action<int> onClickedCallback = this.OnClickedCallback;
@@ -89,35 +89,35 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			onClickedCallback(this.ItemData);
 		}
 
-		// Token: 0x0401B387 RID: 111495
+		// Token: 0x04015D5A RID: 89434
 		[Nullable(2)]
 		public Func<int, bool> CheckIsSelected;
 
-		// Token: 0x0401B388 RID: 111496
+		// Token: 0x04015D5B RID: 89435
 		[Nullable(2)]
 		public Action<int> OnClickedCallback;
 
-		// Token: 0x0401B389 RID: 111497
+		// Token: 0x04015D5C RID: 89436
 		protected int ItemData;
 
-		// Token: 0x0200AEF9 RID: 44793
+		// Token: 0x0200992D RID: 39213
 		private enum EToggle
 		{
-			// Token: 0x04035259 RID: 217689
+			// Token: 0x0402FC8D RID: 195725
 			ToggleItem,
-			// Token: 0x0403525A RID: 217690
+			// Token: 0x0402FC8E RID: 195726
 			TxtName,
-			// Token: 0x0403525B RID: 217691
+			// Token: 0x0402FC8F RID: 195727
 			PanelCheckState,
-			// Token: 0x0403525C RID: 217692
+			// Token: 0x0402FC90 RID: 195728
 			BtnDownloadProgress,
-			// Token: 0x0403525D RID: 217693
+			// Token: 0x0402FC91 RID: 195729
 			SpriteDownloadFill,
-			// Token: 0x0403525E RID: 217694
+			// Token: 0x0402FC92 RID: 195730
 			SpritePauseIcon,
-			// Token: 0x0403525F RID: 217695
+			// Token: 0x0402FC93 RID: 195731
 			SpritePlayIcon,
-			// Token: 0x04035260 RID: 217696
+			// Token: 0x0402FC94 RID: 195732
 			BtnDownload
 		}
 	}

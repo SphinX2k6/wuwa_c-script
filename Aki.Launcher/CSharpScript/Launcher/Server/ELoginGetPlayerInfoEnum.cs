@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Launcher.Server
 {
-	// Token: 0x0200010C RID: 268
+	// Token: 0x02000110 RID: 272
 	public enum ELoginGetPlayerInfoEnum
 	{
-		// Token: 0x040004F3 RID: 1267
+		// Token: 0x0400052E RID: 1326
 		TestMode,
-		// Token: 0x040004F4 RID: 1268
+		// Token: 0x0400052F RID: 1327
 		SdkMode
 	}
 }

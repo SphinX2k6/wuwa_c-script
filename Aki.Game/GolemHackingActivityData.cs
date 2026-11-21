@@ -6,12 +6,12 @@ using Aki.Protocol;
 using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 
-// Token: 0x02000FEE RID: 4078
+// Token: 0x020004A3 RID: 1187
 [NullableContext(1)]
 [Nullable(0)]
 public class GolemHackingActivityData : ActivityBaseData
 {
-	// Token: 0x060068B4 RID: 26804 RVA: 0x0014CFE8 File Offset: 0x0014B1E8
+	// Token: 0x06003C4C RID: 15436 RVA: 0x001558AC File Offset: 0x00153AAC
 	protected override void OnInit(ActivityData data)
 	{
 		GolemCrackActivityInfo golemCrackActivityInfo = data.GolemCrackActivityInfo;
@@ -22,7 +22,7 @@ public class GolemHackingActivityData : ActivityBaseData
 		this.UpdateLevelInfo(golemCrackActivityInfo.GolemCrackLevelInfos);
 	}
 
-	// Token: 0x060068B5 RID: 26805 RVA: 0x0014D00C File Offset: 0x0014B20C
+	// Token: 0x06003C4D RID: 15437 RVA: 0x001558D0 File Offset: 0x00153AD0
 	protected override void PhraseEx(ActivityData data)
 	{
 		GolemCrackActivityInfo golemCrackActivityInfo = data.GolemCrackActivityInfo;
@@ -33,13 +33,13 @@ public class GolemHackingActivityData : ActivityBaseData
 		this.UpdateLevelInfo(golemCrackActivityInfo.GolemCrackLevelInfos);
 	}
 
-	// Token: 0x060068B6 RID: 26806 RVA: 0x0014D030 File Offset: 0x0014B230
+	// Token: 0x06003C4E RID: 15438 RVA: 0x001558F4 File Offset: 0x00153AF4
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.CheckRedDot();
 	}
 
-	// Token: 0x060068B7 RID: 26807 RVA: 0x0014D038 File Offset: 0x0014B238
+	// Token: 0x06003C4F RID: 15439 RVA: 0x001558FC File Offset: 0x00153AFC
 	protected override bool GetExDataFinishShowState()
 	{
 		ValueTuple<int, int> groupProgressState = this.GetGroupProgressState();
@@ -48,19 +48,19 @@ public class GolemHackingActivityData : ActivityBaseData
 		return item == item2;
 	}
 
-	// Token: 0x060068B8 RID: 26808 RVA: 0x0014D05C File Offset: 0x0014B25C
+	// Token: 0x06003C50 RID: 15440 RVA: 0x00155920 File Offset: 0x00153B20
 	public int? GetCurrentId()
 	{
 		return this.CurrentConfigId;
 	}
 
-	// Token: 0x060068B9 RID: 26809 RVA: 0x0014D064 File Offset: 0x0014B264
+	// Token: 0x06003C51 RID: 15441 RVA: 0x00155928 File Offset: 0x00153B28
 	public void SetCurrentId(int? currentId)
 	{
 		this.CurrentConfigId = currentId;
 	}
 
-	// Token: 0x060068BA RID: 26810 RVA: 0x0014D070 File Offset: 0x0014B270
+	// Token: 0x06003C52 RID: 15442 RVA: 0x00155934 File Offset: 0x00153B34
 	public void UpdateLevelInfo(IEnumerable<GolemCrackLevelInfo> levels)
 	{
 		foreach (GolemCrackLevelInfo golemCrackLevelInfo in levels)
@@ -105,13 +105,13 @@ public class GolemHackingActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060068BB RID: 26811 RVA: 0x0014D224 File Offset: 0x0014B424
+	// Token: 0x06003C53 RID: 15443 RVA: 0x00155AE8 File Offset: 0x00153CE8
 	private long GetUnlockTime(long time)
 	{
 		return time;
 	}
 
-	// Token: 0x060068BC RID: 26812 RVA: 0x0014D228 File Offset: 0x0014B428
+	// Token: 0x06003C54 RID: 15444 RVA: 0x00155AEC File Offset: 0x00153CEC
 	public void OnLevelClear(int unlockLevelId)
 	{
 		List<int> list;
@@ -131,7 +131,7 @@ public class GolemHackingActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060068BD RID: 26813 RVA: 0x0014D2C4 File Offset: 0x0014B4C4
+	// Token: 0x06003C55 RID: 15445 RVA: 0x00155B88 File Offset: 0x00153D88
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetGroupProgressState()
 	{
@@ -172,7 +172,7 @@ public class GolemHackingActivityData : ActivityBaseData
 		return new ValueTuple<int, int>(num, num2);
 	}
 
-	// Token: 0x060068BE RID: 26814 RVA: 0x0014D430 File Offset: 0x0014B630
+	// Token: 0x06003C56 RID: 15446 RVA: 0x00155CF4 File Offset: 0x00153EF4
 	[NullableContext(0)]
 	public ValueTuple<EGolemHackingGroupState, int, int> GetGroupState(int id)
 	{
@@ -196,7 +196,7 @@ public class GolemHackingActivityData : ActivityBaseData
 		return new ValueTuple<EGolemHackingGroupState, int, int>(EGolemHackingGroupState.Normal, num, golemHackingLevelGroupInfo.LevelGroup.Count);
 	}
 
-	// Token: 0x060068BF RID: 26815 RVA: 0x0014D4F8 File Offset: 0x0014B6F8
+	// Token: 0x06003C57 RID: 15447 RVA: 0x00155DBC File Offset: 0x00153FBC
 	public List<GolemHackingLevelGroupInfo> GetLevelGroupList()
 	{
 		List<GolemHackingLevelGroupInfo> list = new List<GolemHackingLevelGroupInfo>();
@@ -229,13 +229,13 @@ public class GolemHackingActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x060068C0 RID: 26816 RVA: 0x0014D5FC File Offset: 0x0014B7FC
+	// Token: 0x06003C58 RID: 15448 RVA: 0x00155EC0 File Offset: 0x001540C0
 	public GolemHackingLevelGroupInfo GetGroupLevels(int groupId)
 	{
 		return this.LevelGroup[groupId];
 	}
 
-	// Token: 0x060068C1 RID: 26817 RVA: 0x0014D60C File Offset: 0x0014B80C
+	// Token: 0x06003C59 RID: 15449 RVA: 0x00155ED0 File Offset: 0x001540D0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -255,7 +255,7 @@ public class GolemHackingActivityData : ActivityBaseData
 		return new ValueTuple<bool, string>(true, remainTimeText);
 	}
 
-	// Token: 0x060068C2 RID: 26818 RVA: 0x0014D694 File Offset: 0x0014B894
+	// Token: 0x06003C5A RID: 15450 RVA: 0x00155F58 File Offset: 0x00154158
 	public void GetGroupLockTips(int groupId)
 	{
 		int key = this.LevelGroup[groupId].LevelGroup[0];
@@ -271,13 +271,13 @@ public class GolemHackingActivityData : ActivityBaseData
 		ScrollingTipsController.Instance.ShowTipsByText(remainTimeText);
 	}
 
-	// Token: 0x060068C3 RID: 26819 RVA: 0x0014D724 File Offset: 0x0014B924
+	// Token: 0x06003C5B RID: 15451 RVA: 0x00155FE8 File Offset: 0x001541E8
 	public GolemHackingLevelInfo GetLevelInfo(int levelId)
 	{
 		return this.LevelInfo[levelId];
 	}
 
-	// Token: 0x060068C4 RID: 26820 RVA: 0x0014D734 File Offset: 0x0014B934
+	// Token: 0x06003C5C RID: 15452 RVA: 0x00155FF8 File Offset: 0x001541F8
 	public bool CheckRedDot()
 	{
 		bool flag = this.IsBonusGroupUnlocked();
@@ -295,7 +295,7 @@ public class GolemHackingActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060068C5 RID: 26821 RVA: 0x0014D7B0 File Offset: 0x0014B9B0
+	// Token: 0x06003C5D RID: 15453 RVA: 0x00156074 File Offset: 0x00154274
 	private bool IsBonusGroupUnlocked()
 	{
 		foreach (KeyValuePair<int, GolemHackingLevelGroupInfo> keyValuePair in this.LevelGroup)
@@ -319,7 +319,7 @@ public class GolemHackingActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x060068C6 RID: 26822 RVA: 0x0014D86C File Offset: 0x0014BA6C
+	// Token: 0x06003C5E RID: 15454 RVA: 0x00156130 File Offset: 0x00154330
 	public bool CheckGroupRedDot(int groupId)
 	{
 		GolemHackingLevelGroupInfo golemHackingLevelGroupInfo;
@@ -337,7 +337,7 @@ public class GolemHackingActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060068C7 RID: 26823 RVA: 0x0014D8DC File Offset: 0x0014BADC
+	// Token: 0x06003C5F RID: 15455 RVA: 0x001561A0 File Offset: 0x001543A0
 	public bool CheckLevelRedDot(int levelId)
 	{
 		GolemHackingLevelInfo golemHackingLevelInfo;
@@ -362,7 +362,7 @@ public class GolemHackingActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x060068C8 RID: 26824 RVA: 0x0014D970 File Offset: 0x0014BB70
+	// Token: 0x06003C60 RID: 15456 RVA: 0x00156234 File Offset: 0x00154434
 	public void CheckIsUnlockWhenTimeUnlock(int groupId)
 	{
 		foreach (int num in this.LevelGroup[groupId].LevelGroup)
@@ -381,15 +381,15 @@ public class GolemHackingActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x04002FF6 RID: 12278
+	// Token: 0x0400308F RID: 12431
 	protected Dictionary<int, GolemHackingLevelGroupInfo> LevelGroup = new Dictionary<int, GolemHackingLevelGroupInfo>();
 
-	// Token: 0x04002FF7 RID: 12279
+	// Token: 0x04003090 RID: 12432
 	protected Dictionary<int, List<int>> LevelUnlock = new Dictionary<int, List<int>>();
 
-	// Token: 0x04002FF8 RID: 12280
+	// Token: 0x04003091 RID: 12433
 	protected Dictionary<int, GolemHackingLevelInfo> LevelInfo = new Dictionary<int, GolemHackingLevelInfo>();
 
-	// Token: 0x04002FF9 RID: 12281
+	// Token: 0x04003092 RID: 12434
 	protected int? CurrentConfigId;
 }

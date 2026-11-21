@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Item;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005917 RID: 22807
+	// Token: 0x020048F0 RID: 18672
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrMaterialsDeliveryConsumeItem : LoopScrollMediumItemGrid<TItem>
 	{
-		// Token: 0x06039EAA RID: 237226 RVA: 0x00DC294C File Offset: 0x00DC0B4C
+		// Token: 0x0602EDCD RID: 191949 RVA: 0x00D11C4C File Offset: 0x00D0FE4C
 		protected override void OnRefresh(TItem data, bool isSelected, int gridIndex)
 		{
 			this.ItemId = data.ItemData.ItemId;
@@ -51,25 +51,25 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x06039EAB RID: 237227 RVA: 0x00DC2A6E File Offset: 0x00DC0C6E
+		// Token: 0x0602EDCE RID: 191950 RVA: 0x00D11D6E File Offset: 0x00D0FF6E
 		protected override bool OnCanExecuteChange()
 		{
 			return false;
 		}
 
-		// Token: 0x06039EAC RID: 237228 RVA: 0x00DC2A71 File Offset: 0x00DC0C71
+		// Token: 0x0602EDCF RID: 191951 RVA: 0x00D11D71 File Offset: 0x00D0FF71
 		protected override void OnExtendToggleClicked()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 		}
 
-		// Token: 0x0401E336 RID: 123702
+		// Token: 0x04018DD3 RID: 101843
 		public Func<int, int> GetRolePositionFunc;
 
-		// Token: 0x0401E337 RID: 123703
+		// Token: 0x04018DD4 RID: 101844
 		public Func<int, bool> IsHighlightIndex;
 
-		// Token: 0x0401E338 RID: 123704
+		// Token: 0x04018DD5 RID: 101845
 		private int ItemId;
 	}
 }

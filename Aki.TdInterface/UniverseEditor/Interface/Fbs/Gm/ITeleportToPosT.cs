@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046C4 RID: 18116
+	// Token: 0x02004B2C RID: 19244
 	public class ITeleportToPosT
 	{
-		// Token: 0x170080B9 RID: 32953
-		// (get) Token: 0x0601B8A5 RID: 112805 RVA: 0x003E8617 File Offset: 0x003E6817
-		// (set) Token: 0x0601B8A6 RID: 112806 RVA: 0x003E861F File Offset: 0x003E681F
+		// Token: 0x170086FA RID: 34554
+		// (get) Token: 0x0601D07A RID: 118906 RVA: 0x004148B3 File Offset: 0x00412AB3
+		// (set) Token: 0x0601D07B RID: 118907 RVA: 0x004148BB File Offset: 0x00412ABB
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x170080BA RID: 32954
-		// (get) Token: 0x0601B8A7 RID: 112807 RVA: 0x003E8628 File Offset: 0x003E6828
-		// (set) Token: 0x0601B8A8 RID: 112808 RVA: 0x003E8630 File Offset: 0x003E6830
+		// Token: 0x170086FB RID: 34555
+		// (get) Token: 0x0601D07C RID: 118908 RVA: 0x004148C4 File Offset: 0x00412AC4
+		// (set) Token: 0x0601D07D RID: 118909 RVA: 0x004148CC File Offset: 0x00412ACC
 		public IPosAT Pos { get; set; }
 
-		// Token: 0x0601B8A9 RID: 112809 RVA: 0x003E8639 File Offset: 0x003E6839
+		// Token: 0x0601D07E RID: 118910 RVA: 0x004148D5 File Offset: 0x00412AD5
 		public ITeleportToPosT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

@@ -14,17 +14,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002429 RID: 9257
+// Token: 0x0200190E RID: 6414
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManagerConfigEditPopItem : UiViewBase
 {
-	// Token: 0x0601290E RID: 76046 RVA: 0x00493391 File Offset: 0x00491591
+	// Token: 0x0600FDC4 RID: 64964 RVA: 0x004A095E File Offset: 0x0049EB5E
 	public PhantomManagerConfigEditPopItem(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601290F RID: 76047 RVA: 0x004933BC File Offset: 0x004915BC
+	// Token: 0x0600FDC5 RID: 64965 RVA: 0x004A0988 File Offset: 0x0049EB88
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -71,7 +71,7 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012910 RID: 76048 RVA: 0x0049361C File Offset: 0x0049181C
+	// Token: 0x0600FDC6 RID: 64966 RVA: 0x004A0BE8 File Offset: 0x0049EDE8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomManagerConfigEditPopItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -82,7 +82,7 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012911 RID: 76049 RVA: 0x00493660 File Offset: 0x00491860
+	// Token: 0x0600FDC7 RID: 64967 RVA: 0x004A0C2C File Offset: 0x0049EE2C
 	protected override void OnStart()
 	{
 		this.LeftInfoItem.Refresh(new PhantomManagerFetterInfo
@@ -94,7 +94,7 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		this.RefreshState();
 	}
 
-	// Token: 0x06012912 RID: 76050 RVA: 0x004936B0 File Offset: 0x004918B0
+	// Token: 0x0600FDC8 RID: 64968 RVA: 0x004A0C7C File Offset: 0x0049EE7C
 	protected void RefreshState()
 	{
 		PhantomFetterGroup fetterGroupById = PhantomBattleConfig.Instance.GetFetterGroupById(this.CurrentFetterId);
@@ -115,7 +115,7 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		item.SetUIActive(fetterConfigIsOpen);
 	}
 
-	// Token: 0x06012913 RID: 76051 RVA: 0x00493754 File Offset: 0x00491954
+	// Token: 0x0600FDC9 RID: 64969 RVA: 0x004A0D20 File Offset: 0x0049EF20
 	private void OnCloseMask(bool needApply)
 	{
 		this.ConfigData.DoCacheDataUpdate(needApply);
@@ -131,7 +131,7 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012914 RID: 76052 RVA: 0x0049378C File Offset: 0x0049198C
+	// Token: 0x0600FDCA RID: 64970 RVA: 0x004A0D58 File Offset: 0x0049EF58
 	private void ResetSinglePlan()
 	{
 		this.ConfigData.ResetFetterConfig(this.CurrentFetterId);
@@ -142,7 +142,7 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("PhantomProject_OnePlanClean_Des_2", Array.Empty<object>());
 	}
 
-	// Token: 0x06012915 RID: 76053 RVA: 0x00493808 File Offset: 0x00491A08
+	// Token: 0x0600FDCB RID: 64971 RVA: 0x004A0DD4 File Offset: 0x0049EFD4
 	private void OnClickedEditClose()
 	{
 		if (!this.ConfigData.CheckDirty())
@@ -191,7 +191,7 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06012916 RID: 76054 RVA: 0x004938D4 File Offset: 0x00491AD4
+	// Token: 0x0600FDCC RID: 64972 RVA: 0x004A0EA0 File Offset: 0x0049F0A0
 	private void OnClickedSave()
 	{
 		ServerStorageBoolean serverStorageBoolean = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.PhantomBattleConfigApplyPlanWhenSaved) as ServerStorageBoolean;
@@ -235,7 +235,7 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x06012917 RID: 76055 RVA: 0x00493978 File Offset: 0x00491B78
+	// Token: 0x0600FDCD RID: 64973 RVA: 0x004A0F44 File Offset: 0x0049F144
 	private void OnClickedReset()
 	{
 		EConfirmBoxConfigId confirmId = EConfirmBoxConfigId.PhantomConfigApplyClearPlanConfirm;
@@ -263,7 +263,7 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06012918 RID: 76056 RVA: 0x00493A2C File Offset: 0x00491C2C
+	// Token: 0x0600FDCE RID: 64974 RVA: 0x004A0FF8 File Offset: 0x0049F1F8
 	private void OnClickedRecommend()
 	{
 		if (!this.ConfigData.CheckEditFetterConfigRecommendDirty(this.CurrentFetterId))
@@ -279,32 +279,32 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("PhantomProject_OnePlanPreparatory_Des_2", Array.Empty<object>());
 	}
 
-	// Token: 0x06012919 RID: 76057 RVA: 0x00493AD4 File Offset: 0x00491CD4
+	// Token: 0x0600FDCF RID: 64975 RVA: 0x004A10A0 File Offset: 0x0049F2A0
 	private PhantomManagerConfigNewSettingItem CreateSettingTitleItem()
 	{
 		return new PhantomManagerConfigNewSettingItem();
 	}
 
-	// Token: 0x04008BEE RID: 35822
+	// Token: 0x04008D35 RID: 36149
 	private readonly Dictionary<EConfirmBoxConfigId, bool> ConfirmBoxLoginTmpMap = new Dictionary<EConfirmBoxConfigId, bool>();
 
-	// Token: 0x04008BEF RID: 35823
+	// Token: 0x04008D36 RID: 36150
 	private PhantomManagerConfigData ConfigData = new PhantomManagerConfigData();
 
-	// Token: 0x04008BF0 RID: 35824
+	// Token: 0x04008D37 RID: 36151
 	private readonly List<IPhantomManagerConfigNewSettingInfo> CurData = new List<IPhantomManagerConfigNewSettingInfo>();
 
-	// Token: 0x04008BF1 RID: 35825
+	// Token: 0x04008D38 RID: 36152
 	private int CurrentFetterId;
 
-	// Token: 0x04008BF2 RID: 35826
+	// Token: 0x04008D39 RID: 36153
 	private int FetterCount;
 
-	// Token: 0x04008BF3 RID: 35827
+	// Token: 0x04008D3A RID: 36154
 	[Nullable(2)]
 	private PhantomConfigEditToggle PhantomConfigEditToggle;
 
-	// Token: 0x04008BF4 RID: 35828
+	// Token: 0x04008D3B RID: 36155
 	[Nullable(new byte[]
 	{
 		2,
@@ -313,37 +313,37 @@ public class PhantomManagerConfigEditPopItem : UiViewBase
 	})]
 	private GenericScrollViewNew<PhantomManagerConfigNewSettingItem, IPhantomManagerConfigNewSettingInfo> ScrollSetting;
 
-	// Token: 0x04008BF5 RID: 35829
+	// Token: 0x04008D3C RID: 36156
 	[Nullable(2)]
 	private PhantomManagerConfigNewFetterItem LeftInfoItem;
 
-	// Token: 0x020089A6 RID: 35238
+	// Token: 0x02007B2D RID: 31533
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402CBA4 RID: 183204
+		// Token: 0x04027EBA RID: 163514
 		ToggleItem,
-		// Token: 0x0402CBA5 RID: 183205
+		// Token: 0x04027EBB RID: 163515
 		BtnBack,
-		// Token: 0x0402CBA6 RID: 183206
+		// Token: 0x04027EBC RID: 163516
 		ItemEchoSetPlan,
-		// Token: 0x0402CBA7 RID: 183207
+		// Token: 0x04027EBD RID: 163517
 		TexTitleBg,
-		// Token: 0x0402CBA8 RID: 183208
+		// Token: 0x04027EBE RID: 163518
 		PanelActivation,
-		// Token: 0x0402CBA9 RID: 183209
+		// Token: 0x04027EBF RID: 163519
 		TexEchoIcon,
-		// Token: 0x0402CBAA RID: 183210
+		// Token: 0x04027EC0 RID: 163520
 		TxtPlanName,
-		// Token: 0x0402CBAB RID: 183211
+		// Token: 0x04027EC1 RID: 163521
 		ScrollSetting,
-		// Token: 0x0402CBAC RID: 183212
+		// Token: 0x04027EC2 RID: 163522
 		ItemInfo,
-		// Token: 0x0402CBAD RID: 183213
+		// Token: 0x04027EC3 RID: 163523
 		BtnReset,
-		// Token: 0x0402CBAE RID: 183214
+		// Token: 0x04027EC4 RID: 163524
 		BtnRecommend,
-		// Token: 0x0402CBAF RID: 183215
+		// Token: 0x04027EC5 RID: 163525
 		BtnSave
 	}
 }

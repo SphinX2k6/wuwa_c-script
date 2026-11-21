@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004657 RID: 18007
+	// Token: 0x02003588 RID: 13704
 	[NullableContext(1)]
 	public interface IUiViewBase
 	{
-		// Token: 0x17007601 RID: 30209
-		// (get) Token: 0x0602E7BE RID: 190398
-		// (set) Token: 0x0602E7BF RID: 190399
+		// Token: 0x170048BD RID: 18621
+		// (get) Token: 0x06022F08 RID: 143112
+		// (set) Token: 0x06022F09 RID: 143113
 		UiViewBase ViewBase { get; set; }
 
-		// Token: 0x17007602 RID: 30210
-		// (get) Token: 0x0602E7C0 RID: 190400
-		// (set) Token: 0x0602E7C1 RID: 190401
+		// Token: 0x170048BE RID: 18622
+		// (get) Token: 0x06022F0A RID: 143114
+		// (set) Token: 0x06022F0B RID: 143115
 		int Priority { get; set; }
 
-		// Token: 0x17007603 RID: 30211
-		// (get) Token: 0x0602E7C2 RID: 190402
-		// (set) Token: 0x0602E7C3 RID: 190403
+		// Token: 0x170048BF RID: 18623
+		// (get) Token: 0x06022F0C RID: 143116
+		// (set) Token: 0x06022F0D RID: 143117
 		bool OnlyShowInMain { get; set; }
 	}
 }

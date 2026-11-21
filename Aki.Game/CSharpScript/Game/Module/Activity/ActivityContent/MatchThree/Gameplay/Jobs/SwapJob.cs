@@ -4,18 +4,18 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Jobs
 {
-	// Token: 0x0200651D RID: 25885
+	// Token: 0x0200549B RID: 21659
 	public class SwapJob : IJob
 	{
-		// Token: 0x06040EB6 RID: 265910 RVA: 0x00FBBACE File Offset: 0x00FB9CCE
+		// Token: 0x06035B7A RID: 220026 RVA: 0x00F02AFE File Offset: 0x00F00CFE
 		public void Set(GridPosition a, GridPosition b)
 		{
 			this.A = a;
 			this.B = b;
 		}
 
-		// Token: 0x1700951D RID: 38173
-		// (get) Token: 0x06040EB7 RID: 265911 RVA: 0x00FBBADE File Offset: 0x00FB9CDE
+		// Token: 0x1700687F RID: 26751
+		// (get) Token: 0x06035B7B RID: 220027 RVA: 0x00F02B0E File Offset: 0x00F00D0E
 		public int ExecutionOrder
 		{
 			get
@@ -24,17 +24,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040EB8 RID: 265912 RVA: 0x00FBBAE1 File Offset: 0x00FB9CE1
+		// Token: 0x06035B7C RID: 220028 RVA: 0x00F02B11 File Offset: 0x00F00D11
 		[NullableContext(1)]
 		public UniTask ExecuteAsync(IMatchThreePresentation view)
 		{
 			return view.PlaySwapAsync(this.A, this.B);
 		}
 
-		// Token: 0x04021DDA RID: 138714
+		// Token: 0x0401C70B RID: 116491
 		private GridPosition A;
 
-		// Token: 0x04021DDB RID: 138715
+		// Token: 0x0401C70C RID: 116492
 		private GridPosition B;
 	}
 }

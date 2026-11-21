@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005173 RID: 20851
+	// Token: 0x02004143 RID: 16707
 	[NullableContext(2)]
 	[Nullable(0)]
 	internal class PhantomArenaMapEntranceDifficultItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060354F0 RID: 218352 RVA: 0x00C9FE68 File Offset: 0x00C9E068
+		// Token: 0x0602A3EC RID: 173036 RVA: 0x00BED3E4 File Offset: 0x00BEB5E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x060354F1 RID: 218353 RVA: 0x00C9FEE8 File Offset: 0x00C9E0E8
+		// Token: 0x0602A3ED RID: 173037 RVA: 0x00BED464 File Offset: 0x00BEB664
 		private void OnClickItem(EToggleState toggleState)
 		{
 			if (base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_UnChecked)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			scrollViewDelegate.SelectGridProxy(base.GridIndex, base.DisplayIndex, false);
 		}
 
-		// Token: 0x060354F2 RID: 218354 RVA: 0x00C9FF38 File Offset: 0x00C9E138
+		// Token: 0x0602A3EE RID: 173038 RVA: 0x00BED4B4 File Offset: 0x00BEB6B4
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(delegate()
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060354F3 RID: 218355 RVA: 0x00C9FF68 File Offset: 0x00C9E168
+		// Token: 0x0602A3EF RID: 173039 RVA: 0x00BED4E4 File Offset: 0x00BEB6E4
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.Difficult = data;
@@ -76,44 +76,44 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x060354F4 RID: 218356 RVA: 0x00CA0001 File Offset: 0x00C9E201
+		// Token: 0x0602A3F0 RID: 173040 RVA: 0x00BED57D File Offset: 0x00BEB77D
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x060354F5 RID: 218357 RVA: 0x00CA0014 File Offset: 0x00C9E214
+		// Token: 0x0602A3F1 RID: 173041 RVA: 0x00BED590 File Offset: 0x00BEB790
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x060354F6 RID: 218358 RVA: 0x00CA0027 File Offset: 0x00C9E227
+		// Token: 0x0602A3F2 RID: 173042 RVA: 0x00BED5A3 File Offset: 0x00BEB7A3
 		public override object GetKey(int data, int displayIndex)
 		{
 			return this.Difficult;
 		}
 
-		// Token: 0x0401C594 RID: 116116
+		// Token: 0x04016FC9 RID: 94153
 		private int Difficult;
 
-		// Token: 0x0401C595 RID: 116117
+		// Token: 0x04016FCA RID: 94154
 		public Action<int> SelectCallBack;
 
-		// Token: 0x0401C596 RID: 116118
+		// Token: 0x04016FCB RID: 94155
 		public Func<int> GetCurrentMapId;
 
-		// Token: 0x0200B2DB RID: 45787
+		// Token: 0x02009D15 RID: 40213
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403630E RID: 221966
+			// Token: 0x04030D65 RID: 200037
 			public const int Toggle = 0;
 
-			// Token: 0x0403630F RID: 221967
+			// Token: 0x04030D66 RID: 200038
 			public const int TexRome = 1;
 
-			// Token: 0x04036310 RID: 221968
+			// Token: 0x04030D67 RID: 200039
 			public const int Done = 2;
 		}
 	}

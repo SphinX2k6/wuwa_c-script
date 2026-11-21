@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001B37 RID: 6967
+// Token: 0x02000FF6 RID: 4086
 public enum EFloroRanchActionState
 {
-	// Token: 0x04005F00 RID: 24320
+	// Token: 0x04005FCF RID: 24527
 	Idle,
-	// Token: 0x04005F01 RID: 24321
+	// Token: 0x04005FD0 RID: 24528
 	Executing,
-	// Token: 0x04005F02 RID: 24322
+	// Token: 0x04005FD1 RID: 24529
 	Pause,
-	// Token: 0x04005F03 RID: 24323
+	// Token: 0x04005FD2 RID: 24530
 	Finish,
-	// Token: 0x04005F04 RID: 24324
+	// Token: 0x04005FD3 RID: 24531
 	Exit
 }

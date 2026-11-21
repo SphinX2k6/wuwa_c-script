@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002037 RID: 8247
+// Token: 0x0200150A RID: 5386
 [NullableContext(2)]
 [Nullable(0)]
 public class KingShipCardItem : UiPanelBase
 {
-	// Token: 0x06010307 RID: 66311 RVA: 0x003F1754 File Offset: 0x003EF954
+	// Token: 0x0600D76F RID: 55151 RVA: 0x003FDD4C File Offset: 0x003FBF4C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +43,7 @@ public class KingShipCardItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06010308 RID: 66312 RVA: 0x003F1960 File Offset: 0x003EFB60
+	// Token: 0x0600D770 RID: 55152 RVA: 0x003FDF58 File Offset: 0x003FC158
 	protected override UniTask OnBeforeStartAsync()
 	{
 		KingShipCardItem.<OnBeforeStartAsync>d__52 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ public class KingShipCardItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010309 RID: 66313 RVA: 0x003F19A3 File Offset: 0x003EFBA3
+	// Token: 0x0600D771 RID: 55153 RVA: 0x003FDF9B File Offset: 0x003FC19B
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -65,7 +65,7 @@ public class KingShipCardItem : UiPanelBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0601030A RID: 66314 RVA: 0x003F19C0 File Offset: 0x003EFBC0
+	// Token: 0x0600D772 RID: 55154 RVA: 0x003FDFB8 File Offset: 0x003FC1B8
 	protected override void OnStart()
 	{
 		this.RotationItem = base.GetItem(19);
@@ -134,7 +134,7 @@ public class KingShipCardItem : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0601030B RID: 66315 RVA: 0x003F1B84 File Offset: 0x003EFD84
+	// Token: 0x0600D773 RID: 55155 RVA: 0x003FE17C File Offset: 0x003FC37C
 	[NullableContext(1)]
 	public void RefreshCardItemByShowTalk(int whoId, string backGroundPath)
 	{
@@ -177,7 +177,7 @@ public class KingShipCardItem : UiPanelBase
 		base.GetText(1).SetUIActive(true);
 	}
 
-	// Token: 0x0601030C RID: 66316 RVA: 0x003F1C98 File Offset: 0x003EFE98
+	// Token: 0x0600D774 RID: 55156 RVA: 0x003FE290 File Offset: 0x003FC490
 	public void RefreshCardItemByCallCard(int cardId)
 	{
 		this.IsShowBuffCard = false;
@@ -201,7 +201,7 @@ public class KingShipCardItem : UiPanelBase
 		base.GetSprite(11).SetUIActive(false);
 	}
 
-	// Token: 0x0601030D RID: 66317 RVA: 0x003F1D68 File Offset: 0x003EFF68
+	// Token: 0x0600D775 RID: 55157 RVA: 0x003FE360 File Offset: 0x003FC560
 	public void RefreshCardItemByBuffCard(int cardId)
 	{
 		this.IsShowBuffCard = true;
@@ -231,7 +231,7 @@ public class KingShipCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601030E RID: 66318 RVA: 0x003F1EA4 File Offset: 0x003F00A4
+	// Token: 0x0600D776 RID: 55158 RVA: 0x003FE49C File Offset: 0x003FC69C
 	[NullableContext(1)]
 	private void SetCardBackGroud(string backGroundPath)
 	{
@@ -301,7 +301,7 @@ public class KingShipCardItem : UiPanelBase
 		}).Forget();
 	}
 
-	// Token: 0x0601030F RID: 66319 RVA: 0x003F1F3C File Offset: 0x003F013C
+	// Token: 0x0600D777 RID: 55159 RVA: 0x003FE534 File Offset: 0x003FC734
 	[NullableContext(1)]
 	private UniTask SetCardBackGroudAsync(string backGroundPath)
 	{
@@ -314,20 +314,20 @@ public class KingShipCardItem : UiPanelBase
 		return <SetCardBackGroudAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010310 RID: 66320 RVA: 0x003F1F87 File Offset: 0x003F0187
+	// Token: 0x0600D778 RID: 55160 RVA: 0x003FE57F File Offset: 0x003FC77F
 	public void SetCardItemInputPitch(float pitch)
 	{
 		this.PitchInput = pitch;
 	}
 
-	// Token: 0x06010311 RID: 66321 RVA: 0x003F1F90 File Offset: 0x003F0190
+	// Token: 0x0600D779 RID: 55161 RVA: 0x003FE588 File Offset: 0x003FC788
 	public void SetCardItemPitchByPercentage(float percentage)
 	{
 		float num = MathUtils.Instance.Clamp(percentage, -this.ViewPortPercentage, this.ViewPortPercentage);
 		this.TargetPitch = -(num / this.ViewPortPercentage) * this.MaxCardPitch;
 	}
 
-	// Token: 0x06010312 RID: 66322 RVA: 0x003F1FCC File Offset: 0x003F01CC
+	// Token: 0x0600D77A RID: 55162 RVA: 0x003FE5C4 File Offset: 0x003FC7C4
 	public void ClearCardItemRotation()
 	{
 		this.CacheRotator.Pitch = 0f;
@@ -346,13 +346,13 @@ public class KingShipCardItem : UiPanelBase
 		this.UpdateBarSprite();
 	}
 
-	// Token: 0x06010313 RID: 66323 RVA: 0x003F204A File Offset: 0x003F024A
+	// Token: 0x0600D77B RID: 55163 RVA: 0x003FE642 File Offset: 0x003FC842
 	public void ClearTargetRotation()
 	{
 		this.TargetPitch = 0f;
 	}
 
-	// Token: 0x06010314 RID: 66324 RVA: 0x003F2058 File Offset: 0x003F0258
+	// Token: 0x0600D77C RID: 55164 RVA: 0x003FE650 File Offset: 0x003FC850
 	public void Update(float deltaTime)
 	{
 		if (this.CardSequencePlayering > 0 || !base.IsShowOrShowing)
@@ -372,7 +372,7 @@ public class KingShipCardItem : UiPanelBase
 		this.UpdateBarSprite();
 	}
 
-	// Token: 0x06010315 RID: 66325 RVA: 0x003F20B8 File Offset: 0x003F02B8
+	// Token: 0x0600D77D RID: 55165 RVA: 0x003FE6B0 File Offset: 0x003FC8B0
 	private void UpdateInput(float deltaTime)
 	{
 		float num = this.PitchInput;
@@ -392,7 +392,7 @@ public class KingShipCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06010316 RID: 66326 RVA: 0x003F2138 File Offset: 0x003F0338
+	// Token: 0x0600D77E RID: 55166 RVA: 0x003FE730 File Offset: 0x003FC930
 	private void UpdateTarget(float deltaTime)
 	{
 		if (MathUtils.Instance.IsNearlyEqual((double)this.TargetPitch, (double)this.CacheRotator.Pitch, null))
@@ -450,7 +450,7 @@ public class KingShipCardItem : UiPanelBase
 		this.TargetPitch = 0f;
 	}
 
-	// Token: 0x06010317 RID: 66327 RVA: 0x003F22D4 File Offset: 0x003F04D4
+	// Token: 0x0600D77F RID: 55167 RVA: 0x003FE8CC File Offset: 0x003FCACC
 	private void UpdatePitch()
 	{
 		float num = this.CacheRotator.Pitch;
@@ -460,7 +460,7 @@ public class KingShipCardItem : UiPanelBase
 		this.CacheRotator.Pitch = num;
 	}
 
-	// Token: 0x06010318 RID: 66328 RVA: 0x003F2330 File Offset: 0x003F0530
+	// Token: 0x0600D780 RID: 55168 RVA: 0x003FE928 File Offset: 0x003FCB28
 	private void UpdateRotator()
 	{
 		float inTime = this.CacheRotator.Pitch / this.MaxCardPitch;
@@ -542,7 +542,7 @@ public class KingShipCardItem : UiPanelBase
 		layerTextureG2.SetCustomMaterialScalarParameter(this.CardMaterialParamOffsetY, this.CacheRotator.Roll * -0.01f);
 	}
 
-	// Token: 0x06010319 RID: 66329 RVA: 0x003F25F0 File Offset: 0x003F07F0
+	// Token: 0x0600D781 RID: 55169 RVA: 0x003FEBE8 File Offset: 0x003FCDE8
 	private void UpdateBarSprite()
 	{
 		float pitch = this.CacheRotator.Pitch;
@@ -683,7 +683,7 @@ public class KingShipCardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601031A RID: 66330 RVA: 0x003F28B0 File Offset: 0x003F0AB0
+	// Token: 0x0600D782 RID: 55170 RVA: 0x003FEEA8 File Offset: 0x003FD0A8
 	[NullableContext(1)]
 	public void SetLeftAndRight(string leftText, string rightText)
 	{
@@ -693,7 +693,7 @@ public class KingShipCardItem : UiPanelBase
 		base.GetText(1).SetText(flowConfigLocalText2 ?? "", true);
 	}
 
-	// Token: 0x0601031B RID: 66331 RVA: 0x003F2904 File Offset: 0x003F0B04
+	// Token: 0x0600D783 RID: 55171 RVA: 0x003FEEFC File Offset: 0x003FD0FC
 	[NullableContext(1)]
 	public void PlaySequenceByName(string name)
 	{
@@ -712,7 +712,7 @@ public class KingShipCardItem : UiPanelBase
 		this.RightEnd = false;
 	}
 
-	// Token: 0x0601031C RID: 66332 RVA: 0x003F2960 File Offset: 0x003F0B60
+	// Token: 0x0600D784 RID: 55172 RVA: 0x003FEF58 File Offset: 0x003FD158
 	public void PlayReSetSequence()
 	{
 		UUIItem rightItem = this.RightItem;
@@ -750,233 +750,233 @@ public class KingShipCardItem : UiPanelBase
 		levelSequencePlayer4.PlayLevelSequenceByName("ResetR", false, null, false);
 	}
 
-	// Token: 0x040077A8 RID: 30632
+	// Token: 0x04007891 RID: 30865
 	private const float MATERIAL_LAYA = -0.001f;
 
-	// Token: 0x040077A9 RID: 30633
+	// Token: 0x04007892 RID: 30866
 	private const float MATERIAL_LAYB = 0.0025f;
 
-	// Token: 0x040077AA RID: 30634
+	// Token: 0x04007893 RID: 30867
 	private const float MATERIAL_LAYC = 0.0075f;
 
-	// Token: 0x040077AB RID: 30635
+	// Token: 0x04007894 RID: 30868
 	private const float MATERIAL_LAYD = 0.01f;
 
-	// Token: 0x040077AC RID: 30636
+	// Token: 0x04007895 RID: 30869
 	private const float MATERIAL_LAYG = -0.01f;
 
-	// Token: 0x040077AD RID: 30637
+	// Token: 0x04007896 RID: 30870
 	[Nullable(1)]
 	private const string CLICK_AUDIO_EVENT = "play_ui_com_slider_tick";
 
-	// Token: 0x040077AE RID: 30638
+	// Token: 0x04007897 RID: 30871
 	[Nullable(1)]
 	private readonly Rotator CacheRotator = Rotator.Create();
 
-	// Token: 0x040077AF RID: 30639
+	// Token: 0x04007898 RID: 30872
 	[Nullable(1)]
 	private readonly Rotator CacheContentRotator = Rotator.Create();
 
-	// Token: 0x040077B0 RID: 30640
+	// Token: 0x04007899 RID: 30873
 	[Nullable(1)]
 	private readonly global::Vector CacheCardVector = global::Vector.Create();
 
-	// Token: 0x040077B1 RID: 30641
+	// Token: 0x0400789A RID: 30874
 	[Nullable(1)]
 	private readonly global::Vector CacheBarVector = global::Vector.Create();
 
-	// Token: 0x040077B2 RID: 30642
+	// Token: 0x0400789B RID: 30875
 	[Nullable(1)]
 	private readonly global::Vector CacheBarRootVector = global::Vector.Create();
 
-	// Token: 0x040077B3 RID: 30643
+	// Token: 0x0400789C RID: 30876
 	private float GamepadInputRate = 1f;
 
-	// Token: 0x040077B4 RID: 30644
+	// Token: 0x0400789D RID: 30877
 	private float MobileRotateInputRate = 1f;
 
-	// Token: 0x040077B5 RID: 30645
+	// Token: 0x0400789E RID: 30878
 	private float SensitivityPitch;
 
-	// Token: 0x040077B6 RID: 30646
+	// Token: 0x0400789F RID: 30879
 	private float ViewPortPercentage;
 
-	// Token: 0x040077B7 RID: 30647
+	// Token: 0x040078A0 RID: 30880
 	private float MaxCardPitch;
 
-	// Token: 0x040077B8 RID: 30648
+	// Token: 0x040078A1 RID: 30881
 	private float LocationWhenPitch;
 
-	// Token: 0x040077B9 RID: 30649
+	// Token: 0x040078A2 RID: 30882
 	private float KingShipCardContentTextRotateRate;
 
-	// Token: 0x040077BA RID: 30650
+	// Token: 0x040078A3 RID: 30883
 	private UUIItem RotationItem;
 
-	// Token: 0x040077BB RID: 30651
+	// Token: 0x040078A4 RID: 30884
 	private UUIItem LocationItem;
 
-	// Token: 0x040077BC RID: 30652
+	// Token: 0x040078A5 RID: 30885
 	private UUIItem RightItem;
 
-	// Token: 0x040077BD RID: 30653
+	// Token: 0x040078A6 RID: 30886
 	private UUIItem LeftItem;
 
-	// Token: 0x040077BE RID: 30654
+	// Token: 0x040078A7 RID: 30887
 	private UUITexture RightTexture;
 
-	// Token: 0x040077BF RID: 30655
+	// Token: 0x040078A8 RID: 30888
 	private UUITexture LeftTexture;
 
-	// Token: 0x040077C0 RID: 30656
+	// Token: 0x040078A9 RID: 30889
 	private UCurveFloat ReignsCardMouseMoveCurve;
 
-	// Token: 0x040077C1 RID: 30657
+	// Token: 0x040078AA RID: 30890
 	private UCurveVector ReignsCardRotatorCurve;
 
-	// Token: 0x040077C2 RID: 30658
+	// Token: 0x040078AB RID: 30891
 	private UCurveFloat ReignsCardOffsetCurve;
 
-	// Token: 0x040077C3 RID: 30659
+	// Token: 0x040078AC RID: 30892
 	private UCurveFloat ReignsBarRootOffsetCurve;
 
-	// Token: 0x040077C4 RID: 30660
+	// Token: 0x040078AD RID: 30893
 	private UCurveFloat ReignsBarRootAlphaCurve;
 
-	// Token: 0x040077C5 RID: 30661
+	// Token: 0x040078AE RID: 30894
 	private UCurveFloat ReignsBarOffsetCurve;
 
-	// Token: 0x040077C6 RID: 30662
+	// Token: 0x040078AF RID: 30895
 	private UUITexture LayerTextureA;
 
-	// Token: 0x040077C7 RID: 30663
+	// Token: 0x040078B0 RID: 30896
 	private UUITexture LayerTextureB;
 
-	// Token: 0x040077C8 RID: 30664
+	// Token: 0x040078B1 RID: 30897
 	private UUITexture LayerTextureC;
 
-	// Token: 0x040077C9 RID: 30665
+	// Token: 0x040078B2 RID: 30898
 	private UUITexture LayerTextureD;
 
-	// Token: 0x040077CA RID: 30666
+	// Token: 0x040078B3 RID: 30899
 	private UUITexture LayerTextureE;
 
-	// Token: 0x040077CB RID: 30667
+	// Token: 0x040078B4 RID: 30900
 	private UUITexture LayerTextureF;
 
-	// Token: 0x040077CC RID: 30668
+	// Token: 0x040078B5 RID: 30901
 	private UUITexture LayerTextureG;
 
-	// Token: 0x040077CD RID: 30669
+	// Token: 0x040078B6 RID: 30902
 	private float PitchInput;
 
-	// Token: 0x040077CE RID: 30670
+	// Token: 0x040078B7 RID: 30903
 	private float TargetPitch;
 
-	// Token: 0x040077CF RID: 30671
+	// Token: 0x040078B8 RID: 30904
 	public bool RightEnd;
 
-	// Token: 0x040077D0 RID: 30672
+	// Token: 0x040078B9 RID: 30905
 	public bool LeftEnd;
 
-	// Token: 0x040077D1 RID: 30673
+	// Token: 0x040078BA RID: 30906
 	public Action<bool> OnPostionMaxCallBack;
 
-	// Token: 0x040077D2 RID: 30674
+	// Token: 0x040078BB RID: 30907
 	public Action OnClearPostionMax;
 
-	// Token: 0x040077D3 RID: 30675
+	// Token: 0x040078BC RID: 30908
 	public UUIItem ContentItem;
 
-	// Token: 0x040077D4 RID: 30676
+	// Token: 0x040078BD RID: 30909
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040077D5 RID: 30677
+	// Token: 0x040078BE RID: 30910
 	private int CardSequencePlayering;
 
-	// Token: 0x040077D6 RID: 30678
+	// Token: 0x040078BF RID: 30911
 	private readonly FName CardMaterialParamOffsetX = new FName("OffsetX");
 
-	// Token: 0x040077D7 RID: 30679
+	// Token: 0x040078C0 RID: 30912
 	private readonly FName CardMaterialParamOffsetY = new FName("OffsetY");
 
-	// Token: 0x040077D8 RID: 30680
+	// Token: 0x040078C1 RID: 30913
 	public Action<bool> OnCallBackDropSequence;
 
-	// Token: 0x040077D9 RID: 30681
+	// Token: 0x040078C2 RID: 30914
 	private bool IsShowBuffCard;
 
-	// Token: 0x02008631 RID: 34353
+	// Token: 0x020077B8 RID: 30648
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402BAAF RID: 178863
+		// Token: 0x04026DBE RID: 159166
 		public const int LeftText = 0;
 
-		// Token: 0x0402BAB0 RID: 178864
+		// Token: 0x04026DBF RID: 159167
 		public const int RightText = 1;
 
-		// Token: 0x0402BAB1 RID: 178865
+		// Token: 0x04026DC0 RID: 159168
 		public const int CardNameText = 2;
 
-		// Token: 0x0402BAB2 RID: 178866
+		// Token: 0x04026DC1 RID: 159169
 		public const int CardDesText = 3;
 
-		// Token: 0x0402BAB3 RID: 178867
+		// Token: 0x04026DC2 RID: 159170
 		public const int LeftBarTexture = 4;
 
-		// Token: 0x0402BAB4 RID: 178868
+		// Token: 0x04026DC3 RID: 159171
 		public const int RightBarTexture = 5;
 
-		// Token: 0x0402BAB5 RID: 178869
+		// Token: 0x04026DC4 RID: 159172
 		public const int OldItem = 6;
 
-		// Token: 0x0402BAB6 RID: 178870
+		// Token: 0x04026DC5 RID: 159173
 		public const int LeftItem = 7;
 
-		// Token: 0x0402BAB7 RID: 178871
+		// Token: 0x04026DC6 RID: 159174
 		public const int RightItem = 8;
 
-		// Token: 0x0402BAB8 RID: 178872
+		// Token: 0x04026DC7 RID: 159175
 		public const int CallCardItem = 9;
 
-		// Token: 0x0402BAB9 RID: 178873
+		// Token: 0x04026DC8 RID: 159176
 		public const int CallCardItemIconItem = 10;
 
-		// Token: 0x0402BABA RID: 178874
+		// Token: 0x04026DC9 RID: 159177
 		public const int CallCardItemIconSprite = 11;
 
-		// Token: 0x0402BABB RID: 178875
+		// Token: 0x04026DCA RID: 159178
 		public const int CallCardItemText = 12;
 
-		// Token: 0x0402BABC RID: 178876
+		// Token: 0x04026DCB RID: 159179
 		public const int LayerDTexture = 13;
 
-		// Token: 0x0402BABD RID: 178877
+		// Token: 0x04026DCC RID: 159180
 		public const int LayerCTexture = 14;
 
-		// Token: 0x0402BABE RID: 178878
+		// Token: 0x04026DCD RID: 159181
 		public const int LayerBTexture = 15;
 
-		// Token: 0x0402BABF RID: 178879
+		// Token: 0x04026DCE RID: 159182
 		public const int LayerATexture = 16;
 
-		// Token: 0x0402BAC0 RID: 178880
+		// Token: 0x04026DCF RID: 159183
 		public const int LayerFTexture = 17;
 
-		// Token: 0x0402BAC1 RID: 178881
+		// Token: 0x04026DD0 RID: 159184
 		public const int LocationItem = 18;
 
-		// Token: 0x0402BAC2 RID: 178882
+		// Token: 0x04026DD1 RID: 159185
 		public const int RotatorItem = 19;
 
-		// Token: 0x0402BAC3 RID: 178883
+		// Token: 0x04026DD2 RID: 159186
 		public const int LayerETexture = 20;
 
-		// Token: 0x0402BAC4 RID: 178884
+		// Token: 0x04026DD3 RID: 159187
 		public const int LayerGTexture = 21;
 
-		// Token: 0x0402BAC5 RID: 178885
+		// Token: 0x04026DD4 RID: 159188
 		public const int GreenItem = 22;
 	}
 }

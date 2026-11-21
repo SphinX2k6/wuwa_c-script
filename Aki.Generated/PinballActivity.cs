@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F1F RID: 3871
+	// Token: 0x02001004 RID: 4100
 	public struct PinballActivity : IFlatbufferObject
 	{
-		// Token: 0x170028BB RID: 10427
-		// (get) Token: 0x0600ADB2 RID: 44466 RVA: 0x002BEC31 File Offset: 0x002BCE31
+		// Token: 0x17002921 RID: 10529
+		// (get) Token: 0x0600B3D3 RID: 46035 RVA: 0x002DB80D File Offset: 0x002D9A0D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADB3 RID: 44467 RVA: 0x002BEC3E File Offset: 0x002BCE3E
+		// Token: 0x0600B3D4 RID: 46036 RVA: 0x002DB81A File Offset: 0x002D9A1A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600ADB4 RID: 44468 RVA: 0x002BEC48 File Offset: 0x002BCE48
+		// Token: 0x0600B3D5 RID: 46037 RVA: 0x002DB824 File Offset: 0x002D9A24
 		public static PinballActivity GetRootAsPinballActivity(ByteBuffer _bb)
 		{
 			return PinballActivity.GetRootAsPinballActivity(_bb, default(PinballActivity));
 		}
 
-		// Token: 0x0600ADB5 RID: 44469 RVA: 0x002BEC64 File Offset: 0x002BCE64
+		// Token: 0x0600B3D6 RID: 46038 RVA: 0x002DB840 File Offset: 0x002D9A40
 		public static PinballActivity GetRootAsPinballActivity(ByteBuffer _bb, PinballActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600ADB6 RID: 44470 RVA: 0x002BEC81 File Offset: 0x002BCE81
+		// Token: 0x0600B3D7 RID: 46039 RVA: 0x002DB85D File Offset: 0x002D9A5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600ADB7 RID: 44471 RVA: 0x002BEC90 File Offset: 0x002BCE90
+		// Token: 0x0600B3D8 RID: 46040 RVA: 0x002DB86C File Offset: 0x002D9A6C
 		public PinballActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170028BC RID: 10428
-		// (get) Token: 0x0600ADB8 RID: 44472 RVA: 0x002BECA0 File Offset: 0x002BCEA0
+		// Token: 0x17002922 RID: 10530
+		// (get) Token: 0x0600B3D9 RID: 46041 RVA: 0x002DB87C File Offset: 0x002D9A7C
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028BD RID: 10429
-		// (get) Token: 0x0600ADB9 RID: 44473 RVA: 0x002BECDC File Offset: 0x002BCEDC
+		// Token: 0x17002923 RID: 10531
+		// (get) Token: 0x0600B3DA RID: 46042 RVA: 0x002DB8B8 File Offset: 0x002D9AB8
 		public int ActivityId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028BE RID: 10430
-		// (get) Token: 0x0600ADBA RID: 44474 RVA: 0x002BED18 File Offset: 0x002BCF18
+		// Token: 0x17002924 RID: 10532
+		// (get) Token: 0x0600B3DB RID: 46043 RVA: 0x002DB8F4 File Offset: 0x002D9AF4
 		public int ShopId
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028BF RID: 10431
-		// (get) Token: 0x0600ADBB RID: 44475 RVA: 0x002BED54 File Offset: 0x002BCF54
+		// Token: 0x17002925 RID: 10533
+		// (get) Token: 0x0600B3DC RID: 46044 RVA: 0x002DB930 File Offset: 0x002D9B30
 		public int TitleTipId
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028C0 RID: 10432
-		// (get) Token: 0x0600ADBC RID: 44476 RVA: 0x002BED94 File Offset: 0x002BCF94
+		// Token: 0x17002926 RID: 10534
+		// (get) Token: 0x0600B3DD RID: 46045 RVA: 0x002DB970 File Offset: 0x002D9B70
 		public int RecommendTaskId
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028C1 RID: 10433
-		// (get) Token: 0x0600ADBD RID: 44477 RVA: 0x002BEDD4 File Offset: 0x002BCFD4
+		// Token: 0x17002927 RID: 10535
+		// (get) Token: 0x0600B3DE RID: 46046 RVA: 0x002DB9B0 File Offset: 0x002D9BB0
 		public int DailyLevelFuncId
 		{
 			get
@@ -139,8 +139,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028C2 RID: 10434
-		// (get) Token: 0x0600ADBE RID: 44478 RVA: 0x002BEE14 File Offset: 0x002BD014
+		// Token: 0x17002928 RID: 10536
+		// (get) Token: 0x0600B3DF RID: 46047 RVA: 0x002DB9F0 File Offset: 0x002D9BF0
 		public int RoleFuncId
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028C3 RID: 10435
-		// (get) Token: 0x0600ADBF RID: 44479 RVA: 0x002BEE54 File Offset: 0x002BD054
+		// Token: 0x17002929 RID: 10537
+		// (get) Token: 0x0600B3E0 RID: 46048 RVA: 0x002DBA30 File Offset: 0x002D9C30
 		public int ShopFuncId
 		{
 			get
@@ -169,8 +169,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028C4 RID: 10436
-		// (get) Token: 0x0600ADC0 RID: 44480 RVA: 0x002BEE94 File Offset: 0x002BD094
+		// Token: 0x1700292A RID: 10538
+		// (get) Token: 0x0600B3E1 RID: 46049 RVA: 0x002DBA70 File Offset: 0x002D9C70
 		public int DefaultDailyRandomId
 		{
 			get
@@ -184,8 +184,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028C5 RID: 10437
-		// (get) Token: 0x0600ADC1 RID: 44481 RVA: 0x002BEED4 File Offset: 0x002BD0D4
+		// Token: 0x1700292B RID: 10539
+		// (get) Token: 0x0600B3E2 RID: 46050 RVA: 0x002DBAB0 File Offset: 0x002D9CB0
 		public int ExpItemId
 		{
 			get
@@ -199,8 +199,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028C6 RID: 10438
-		// (get) Token: 0x0600ADC2 RID: 44482 RVA: 0x002BEF14 File Offset: 0x002BD114
+		// Token: 0x1700292C RID: 10540
+		// (get) Token: 0x0600B3E3 RID: 46051 RVA: 0x002DBAF0 File Offset: 0x002D9CF0
 		public int WeaponFragmentId
 		{
 			get
@@ -214,7 +214,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADC3 RID: 44483 RVA: 0x002BEF54 File Offset: 0x002BD154
+		// Token: 0x0600B3E4 RID: 46052 RVA: 0x002DBB30 File Offset: 0x002D9D30
 		public int MainAttrShowList(int j)
 		{
 			int num = this.__p.__offset(26);
@@ -225,8 +225,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170028C7 RID: 10439
-		// (get) Token: 0x0600ADC4 RID: 44484 RVA: 0x002BEF94 File Offset: 0x002BD194
+		// Token: 0x1700292D RID: 10541
+		// (get) Token: 0x0600B3E5 RID: 46053 RVA: 0x002DBB70 File Offset: 0x002D9D70
 		public int MainAttrShowListLength
 		{
 			get
@@ -240,19 +240,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADC5 RID: 44485 RVA: 0x002BEFC0 File Offset: 0x002BD1C0
+		// Token: 0x0600B3E6 RID: 46054 RVA: 0x002DBB9C File Offset: 0x002D9D9C
 		public Span<int> GetMainAttrShowListBytes()
 		{
 			return this.__p.__vector_as_span<int>(26, 4);
 		}
 
-		// Token: 0x0600ADC6 RID: 44486 RVA: 0x002BEFD0 File Offset: 0x002BD1D0
+		// Token: 0x0600B3E7 RID: 46055 RVA: 0x002DBBAC File Offset: 0x002D9DAC
 		public int[] GetMainAttrShowListArray()
 		{
 			return this.__p.__vector_as_array<int>(26) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600ADC7 RID: 44487 RVA: 0x002BEFE8 File Offset: 0x002BD1E8
+		// Token: 0x0600B3E8 RID: 46056 RVA: 0x002DBBC4 File Offset: 0x002D9DC4
 		public int AttrShowList(int j)
 		{
 			int num = this.__p.__offset(28);
@@ -263,8 +263,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170028C8 RID: 10440
-		// (get) Token: 0x0600ADC8 RID: 44488 RVA: 0x002BF028 File Offset: 0x002BD228
+		// Token: 0x1700292E RID: 10542
+		// (get) Token: 0x0600B3E9 RID: 46057 RVA: 0x002DBC04 File Offset: 0x002D9E04
 		public int AttrShowListLength
 		{
 			get
@@ -278,19 +278,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADC9 RID: 44489 RVA: 0x002BF054 File Offset: 0x002BD254
+		// Token: 0x0600B3EA RID: 46058 RVA: 0x002DBC30 File Offset: 0x002D9E30
 		public Span<int> GetAttrShowListBytes()
 		{
 			return this.__p.__vector_as_span<int>(28, 4);
 		}
 
-		// Token: 0x0600ADCA RID: 44490 RVA: 0x002BF064 File Offset: 0x002BD264
+		// Token: 0x0600B3EB RID: 46059 RVA: 0x002DBC40 File Offset: 0x002D9E40
 		public int[] GetAttrShowListArray()
 		{
 			return this.__p.__vector_as_array<int>(28) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600ADCB RID: 44491 RVA: 0x002BF07C File Offset: 0x002BD27C
+		// Token: 0x0600B3EC RID: 46060 RVA: 0x002DBC58 File Offset: 0x002D9E58
 		public int BattleAttrShowList(int j)
 		{
 			int num = this.__p.__offset(30);
@@ -301,8 +301,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170028C9 RID: 10441
-		// (get) Token: 0x0600ADCC RID: 44492 RVA: 0x002BF0BC File Offset: 0x002BD2BC
+		// Token: 0x1700292F RID: 10543
+		// (get) Token: 0x0600B3ED RID: 46061 RVA: 0x002DBC98 File Offset: 0x002D9E98
 		public int BattleAttrShowListLength
 		{
 			get
@@ -316,20 +316,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADCD RID: 44493 RVA: 0x002BF0E8 File Offset: 0x002BD2E8
+		// Token: 0x0600B3EE RID: 46062 RVA: 0x002DBCC4 File Offset: 0x002D9EC4
 		public Span<int> GetBattleAttrShowListBytes()
 		{
 			return this.__p.__vector_as_span<int>(30, 4);
 		}
 
-		// Token: 0x0600ADCE RID: 44494 RVA: 0x002BF0F8 File Offset: 0x002BD2F8
+		// Token: 0x0600B3EF RID: 46063 RVA: 0x002DBCD4 File Offset: 0x002D9ED4
 		public int[] GetBattleAttrShowListArray()
 		{
 			return this.__p.__vector_as_array<int>(30) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170028CA RID: 10442
-		// (get) Token: 0x0600ADCF RID: 44495 RVA: 0x002BF110 File Offset: 0x002BD310
+		// Token: 0x17002930 RID: 10544
+		// (get) Token: 0x0600B3F0 RID: 46064 RVA: 0x002DBCEC File Offset: 0x002D9EEC
 		public int ForceKickBallTime
 		{
 			get
@@ -343,61 +343,55 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADD0 RID: 44496 RVA: 0x002BF150 File Offset: 0x002BD350
+		// Token: 0x0600B3F1 RID: 46065 RVA: 0x002DBD29 File Offset: 0x002D9F29
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用AttrShowListIter()或GetAttrShowListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] AttrShowList()
+		public int[] AttrShowList()
 		{
-			PinballActivity pinballActivity = this;
-			return pinballActivity.GetAttrShowListArray() ?? Array.Empty<int>();
+			return this.GetAttrShowListArray();
 		}
 
-		// Token: 0x0600ADD1 RID: 44497 RVA: 0x002BF174 File Offset: 0x002BD374
+		// Token: 0x0600B3F2 RID: 46066 RVA: 0x002DBD31 File Offset: 0x002D9F31
 		[NullableContext(1)]
-		public readonly IEnumerable<int> AttrShowListIter()
+		public IEnumerable<int> AttrShowListIter()
 		{
 			PinballActivity.<AttrShowListIter>d__48 <AttrShowListIter>d__ = new PinballActivity.<AttrShowListIter>d__48(-2);
 			<AttrShowListIter>d__.<>3__<>4__this = this;
 			return <AttrShowListIter>d__;
 		}
 
-		// Token: 0x0600ADD2 RID: 44498 RVA: 0x002BF18C File Offset: 0x002BD38C
+		// Token: 0x0600B3F3 RID: 46067 RVA: 0x002DBD46 File Offset: 0x002D9F46
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BattleAttrShowListIter()或GetBattleAttrShowListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] BattleAttrShowList()
+		public int[] BattleAttrShowList()
 		{
-			PinballActivity pinballActivity = this;
-			return pinballActivity.GetBattleAttrShowListArray() ?? Array.Empty<int>();
+			return this.GetBattleAttrShowListArray();
 		}
 
-		// Token: 0x0600ADD3 RID: 44499 RVA: 0x002BF1B0 File Offset: 0x002BD3B0
+		// Token: 0x0600B3F4 RID: 46068 RVA: 0x002DBD4E File Offset: 0x002D9F4E
 		[NullableContext(1)]
-		public readonly IEnumerable<int> BattleAttrShowListIter()
+		public IEnumerable<int> BattleAttrShowListIter()
 		{
 			PinballActivity.<BattleAttrShowListIter>d__50 <BattleAttrShowListIter>d__ = new PinballActivity.<BattleAttrShowListIter>d__50(-2);
 			<BattleAttrShowListIter>d__.<>3__<>4__this = this;
 			return <BattleAttrShowListIter>d__;
 		}
 
-		// Token: 0x0600ADD4 RID: 44500 RVA: 0x002BF1C8 File Offset: 0x002BD3C8
+		// Token: 0x0600B3F5 RID: 46069 RVA: 0x002DBD63 File Offset: 0x002D9F63
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MainAttrShowListIter()或GetMainAttrShowListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MainAttrShowList()
+		public int[] MainAttrShowList()
 		{
-			PinballActivity pinballActivity = this;
-			return pinballActivity.GetMainAttrShowListArray() ?? Array.Empty<int>();
+			return this.GetMainAttrShowListArray();
 		}
 
-		// Token: 0x0600ADD5 RID: 44501 RVA: 0x002BF1EC File Offset: 0x002BD3EC
+		// Token: 0x0600B3F6 RID: 46070 RVA: 0x002DBD6B File Offset: 0x002D9F6B
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MainAttrShowListIter()
+		public IEnumerable<int> MainAttrShowListIter()
 		{
 			PinballActivity.<MainAttrShowListIter>d__52 <MainAttrShowListIter>d__ = new PinballActivity.<MainAttrShowListIter>d__52(-2);
 			<MainAttrShowListIter>d__.<>3__<>4__this = this;
 			return <MainAttrShowListIter>d__;
 		}
 
-		// Token: 0x04004FE8 RID: 20456
+		// Token: 0x040055CD RID: 21965
 		private Table __p;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007332 RID: 29490
+	// Token: 0x02007B0A RID: 31498
 	public class ITalkOptionParamTypeT
 	{
-		// Token: 0x1700E000 RID: 57344
-		// (get) Token: 0x0603584C RID: 219212 RVA: 0x0074A6E2 File Offset: 0x007488E2
-		// (set) Token: 0x0603584D RID: 219213 RVA: 0x0074A6EA File Offset: 0x007488EA
+		// Token: 0x1700EBFC RID: 60412
+		// (get) Token: 0x06038B7F RID: 232319 RVA: 0x007AC26A File Offset: 0x007AA46A
+		// (set) Token: 0x06038B80 RID: 232320 RVA: 0x007AC272 File Offset: 0x007AA472
 		public ETalkOptionParamType Type { get; set; }
 
-		// Token: 0x0603584E RID: 219214 RVA: 0x0074A6F3 File Offset: 0x007488F3
+		// Token: 0x06038B81 RID: 232321 RVA: 0x007AC27B File Offset: 0x007AA47B
 		public ITalkOptionParamTypeT()
 		{
 			this.Type = ETalkOptionParamType.QteSucceed;

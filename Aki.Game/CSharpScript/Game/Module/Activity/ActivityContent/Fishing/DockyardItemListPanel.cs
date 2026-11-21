@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065B3 RID: 26035
+	// Token: 0x02005531 RID: 21809
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardItemListPanel : UiPanelBase
 	{
-		// Token: 0x060414C5 RID: 267461 RVA: 0x00FD35E4 File Offset: 0x00FD17E4
+		// Token: 0x0603618A RID: 221578 RVA: 0x00F1A5E8 File Offset: 0x00F187E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.PanelModel = (this.OpenParam as DockyardItemListPanelModel);
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060414C6 RID: 267462 RVA: 0x00FD3774 File Offset: 0x00FD1974
+		// Token: 0x0603618B RID: 221579 RVA: 0x00F1A778 File Offset: 0x00F18978
 		private UniTask InitLoopScroll()
 		{
 			DockyardItemListPanel.<InitLoopScroll>d__10 <InitLoopScroll>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitLoopScroll>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060414C7 RID: 267463 RVA: 0x00FD37B8 File Offset: 0x00FD19B8
+		// Token: 0x0603618C RID: 221580 RVA: 0x00F1A7BC File Offset: 0x00F189BC
 		protected void InitTitle()
 		{
 			UUIText text = base.GetText(4);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060414C8 RID: 267464 RVA: 0x00FD3810 File Offset: 0x00FD1A10
+		// Token: 0x0603618D RID: 221581 RVA: 0x00F1A814 File Offset: 0x00F18A14
 		protected void SetCountText()
 		{
 			UUIText text = base.GetText(1);
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060414C9 RID: 267465 RVA: 0x00FD3864 File Offset: 0x00FD1A64
+		// Token: 0x0603618E RID: 221582 RVA: 0x00F1A868 File Offset: 0x00F18A68
 		protected void InitHelpItem()
 		{
 			UUIExtendButtonComponent uuiextendButtonComponent = base.GetButton(6) as UUIExtendButtonComponent;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060414CA RID: 267466 RVA: 0x00FD38C0 File Offset: 0x00FD1AC0
+		// Token: 0x0603618F RID: 221583 RVA: 0x00F1A8C4 File Offset: 0x00F18AC4
 		protected void InitTimeItem()
 		{
 			UUIItem item = base.GetItem(8);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060414CB RID: 267467 RVA: 0x00FD3924 File Offset: 0x00FD1B24
+		// Token: 0x06036190 RID: 221584 RVA: 0x00F1A928 File Offset: 0x00F18B28
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DockyardItemListPanel.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060414CC RID: 267468 RVA: 0x00FD3968 File Offset: 0x00FD1B68
+		// Token: 0x06036191 RID: 221585 RVA: 0x00F1A96C File Offset: 0x00F18B6C
 		protected override void OnStart()
 		{
 			this.DragTipsItem = base.GetItem(7);
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x060414CD RID: 267469 RVA: 0x00FD3A38 File Offset: 0x00FD1C38
+		// Token: 0x06036192 RID: 221586 RVA: 0x00F1AA3C File Offset: 0x00F18C3C
 		protected override UniTask OnBeforeShowAsyncImplement()
 		{
 			DockyardItemListPanel.<OnBeforeShowAsyncImplement>d__17 <OnBeforeShowAsyncImplement>d__;
@@ -150,13 +150,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060414CE RID: 267470 RVA: 0x00FD3A7B File Offset: 0x00FD1C7B
+		// Token: 0x06036193 RID: 221587 RVA: 0x00F1AA7F File Offset: 0x00F18C7F
 		protected override void OnBeforeDestroy()
 		{
 			this.TipsSequence.Clear();
 		}
 
-		// Token: 0x060414CF RID: 267471 RVA: 0x00FD3A88 File Offset: 0x00FD1C88
+		// Token: 0x06036194 RID: 221588 RVA: 0x00F1AA8C File Offset: 0x00F18C8C
 		private DockyardItemListItem InitGridItem()
 		{
 			return new DockyardItemListItem
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x060414D0 RID: 267472 RVA: 0x00FD3A9C File Offset: 0x00FD1C9C
+		// Token: 0x06036195 RID: 221589 RVA: 0x00F1AAA0 File Offset: 0x00F18CA0
 		public UniTask RefreshListItem()
 		{
 			DockyardItemListPanel.<RefreshListItem>d__20 <RefreshListItem>d__;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <RefreshListItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060414D1 RID: 267473 RVA: 0x00FD3AE0 File Offset: 0x00FD1CE0
+		// Token: 0x06036196 RID: 221590 RVA: 0x00F1AAE4 File Offset: 0x00F18CE4
 		public bool CheckInViewport()
 		{
 			ULGUIPointerEventData pointerEventData = LguiEventSystemManager.Instance.GetPointerEventData(0, true);
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return this.TempVector.X >= (double)this.ViewportItemRange.Left && this.TempVector.X <= (double)this.ViewportItemRange.Right && this.TempVector.Y >= (double)this.ViewportItemRange.Bottom && this.TempVector.Y <= (double)this.ViewportItemRange.Top;
 		}
 
-		// Token: 0x060414D2 RID: 267474 RVA: 0x00FD3BC0 File Offset: 0x00FD1DC0
+		// Token: 0x06036197 RID: 221591 RVA: 0x00F1ABC4 File Offset: 0x00F18DC4
 		private UniTask PlayShowSequence()
 		{
 			DockyardItemListPanel.<PlayShowSequence>d__22 <PlayShowSequence>d__;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <PlayShowSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060414D3 RID: 267475 RVA: 0x00FD3C04 File Offset: 0x00FD1E04
+		// Token: 0x06036198 RID: 221592 RVA: 0x00F1AC08 File Offset: 0x00F18E08
 		private UniTask PlayHideSequence()
 		{
 			DockyardItemListPanel.<PlayHideSequence>d__23 <PlayHideSequence>d__;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <PlayHideSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060414D4 RID: 267476 RVA: 0x00FD3C48 File Offset: 0x00FD1E48
+		// Token: 0x06036199 RID: 221593 RVA: 0x00F1AC4C File Offset: 0x00F18E4C
 		public void SetDragTipsActive(bool isActive)
 		{
 			if (this.DragTipsActive == isActive)
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			item.SetUIActive(showItemList.Count == 0 && !isActive);
 		}
 
-		// Token: 0x060414D5 RID: 267477 RVA: 0x00FD3CA8 File Offset: 0x00FD1EA8
+		// Token: 0x0603619A RID: 221594 RVA: 0x00F1ACAC File Offset: 0x00F18EAC
 		public void RefreshListItemStateByIncId(int incId)
 		{
 			int num = this.PanelModel.ShowItemList.FindIndex((DockyardItemBlockOriginalData item) => item.IncId == incId);
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060414D6 RID: 267478 RVA: 0x00FD3CFC File Offset: 0x00FD1EFC
+		// Token: 0x0603619B RID: 221595 RVA: 0x00F1AD00 File Offset: 0x00F18F00
 		public void RefreshListItemRedDot(int itemId)
 		{
 			for (int i = 0; i < this.PanelModel.ShowItemList.Count; i++)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060414D7 RID: 267479 RVA: 0x00FD3D74 File Offset: 0x00FD1F74
+		// Token: 0x0603619C RID: 221596 RVA: 0x00F1AD78 File Offset: 0x00F18F78
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -290,62 +290,62 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x04021FD5 RID: 139221
+		// Token: 0x0401C906 RID: 116998
 		private LoopScrollView<DockyardItemListItem, DockyardItemBlockOriginalData> LoopScroll;
 
-		// Token: 0x04021FD6 RID: 139222
+		// Token: 0x0401C907 RID: 116999
 		public DockyardItemListPanelModel PanelModel;
 
-		// Token: 0x04021FD7 RID: 139223
+		// Token: 0x0401C908 RID: 117000
 		private readonly Transform DragTipsWorldTrans = Transform.Create();
 
-		// Token: 0x04021FD8 RID: 139224
+		// Token: 0x0401C909 RID: 117001
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04021FD9 RID: 139225
+		// Token: 0x0401C90A RID: 117002
 		private IItemRange ViewportItemRange;
 
-		// Token: 0x04021FDA RID: 139226
+		// Token: 0x0401C90B RID: 117003
 		private UUIItem DragTipsItem;
 
-		// Token: 0x04021FDB RID: 139227
+		// Token: 0x0401C90C RID: 117004
 		private bool DragTipsActive;
 
-		// Token: 0x04021FDC RID: 139228
+		// Token: 0x0401C90D RID: 117005
 		private UiSequencePlayer TipsSequence;
 
-		// Token: 0x0200C7BF RID: 51135
+		// Token: 0x0200B1A3 RID: 45475
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C563 RID: 247139
+			// Token: 0x04036EB2 RID: 224946
 			public const int EmptyItem = 0;
 
-			// Token: 0x0403C564 RID: 247140
+			// Token: 0x04036EB3 RID: 224947
 			public const int Count = 1;
 
-			// Token: 0x0403C565 RID: 247141
+			// Token: 0x04036EB4 RID: 224948
 			public const int ListItem = 2;
 
-			// Token: 0x0403C566 RID: 247142
+			// Token: 0x04036EB5 RID: 224949
 			public const int GridItem = 3;
 
-			// Token: 0x0403C567 RID: 247143
+			// Token: 0x04036EB6 RID: 224950
 			public const int Title = 4;
 
-			// Token: 0x0403C568 RID: 247144
+			// Token: 0x04036EB7 RID: 224951
 			public const int TitleSprite = 5;
 
-			// Token: 0x0403C569 RID: 247145
+			// Token: 0x04036EB8 RID: 224952
 			public const int HelpBtn = 6;
 
-			// Token: 0x0403C56A RID: 247146
+			// Token: 0x04036EB9 RID: 224953
 			public const int DragTips = 7;
 
-			// Token: 0x0403C56B RID: 247147
+			// Token: 0x04036EBA RID: 224954
 			public const int TimeItem = 8;
 
-			// Token: 0x0403C56C RID: 247148
+			// Token: 0x04036EBB RID: 224955
 			public const int TimeTips = 9;
 		}
 	}

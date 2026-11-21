@@ -17,12 +17,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CBA RID: 23738
+	// Token: 0x02004C9C RID: 19612
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChatPanel : BattleChildViewPanel
 	{
-		// Token: 0x0603BFE1 RID: 245729 RVA: 0x00E57718 File Offset: 0x00E55918
+		// Token: 0x06030F34 RID: 200500 RVA: 0x00DA7DC0 File Offset: 0x00DA5FC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			EOperationType operationType = base.GetOperationType();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFE2 RID: 245730 RVA: 0x00E579C0 File Offset: 0x00E55BC0
+		// Token: 0x06030F35 RID: 200501 RVA: 0x00DA8068 File Offset: 0x00DA6268
 		public override void InitializeTemp()
 		{
 			this.ChatViewTimeDown = ConfigCommonParamById.GetIntConfig("ChatViewTimeDown").Value;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, false);
 		}
 
-		// Token: 0x0603BFE3 RID: 245731 RVA: 0x00E57A50 File Offset: 0x00E55C50
+		// Token: 0x06030F36 RID: 200502 RVA: 0x00DA80F8 File Offset: 0x00DA62F8
 		public override UniTask InitializeAsync()
 		{
 			ChatPanel.<InitializeAsync>d__14 <InitializeAsync>d__;
@@ -127,20 +127,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFE4 RID: 245732 RVA: 0x00E57A93 File Offset: 0x00E55C93
+		// Token: 0x06030F37 RID: 200503 RVA: 0x00DA813B File Offset: 0x00DA633B
 		[NullableContext(1)]
 		private ChatRowDynamicItem CreateNodeGrid(ChatRowData data, UUIItem uiItem, int index)
 		{
 			return new ChatRowDynamicItem();
 		}
 
-		// Token: 0x0603BFE5 RID: 245733 RVA: 0x00E57A9A File Offset: 0x00E55C9A
+		// Token: 0x06030F38 RID: 200504 RVA: 0x00DA8142 File Offset: 0x00DA6342
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Emit(EEventName.OnRefreshChatRedDot);
 		}
 
-		// Token: 0x0603BFE6 RID: 245734 RVA: 0x00E57AAC File Offset: 0x00E55CAC
+		// Token: 0x06030F39 RID: 200505 RVA: 0x00DA8154 File Offset: 0x00DA6354
 		public override void Reset()
 		{
 			base.Reset();
@@ -152,14 +152,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFE7 RID: 245735 RVA: 0x00E57AD5 File Offset: 0x00E55CD5
+		// Token: 0x06030F3A RID: 200506 RVA: 0x00DA817D File Offset: 0x00DA637D
 		protected override void OnAfterDestroy()
 		{
 			base.OnAfterDestroy();
 			BattleUiModel.Instance.ChatScrollViewVisible = false;
 		}
 
-		// Token: 0x0603BFE8 RID: 245736 RVA: 0x00E57AE8 File Offset: 0x00E55CE8
+		// Token: 0x06030F3B RID: 200507 RVA: 0x00DA8190 File Offset: 0x00DA6390
 		private UniTask NewRouletteItem()
 		{
 			ChatPanel.<NewRouletteItem>d__19 <NewRouletteItem>d__;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewRouletteItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFE9 RID: 245737 RVA: 0x00E57B2C File Offset: 0x00E55D2C
+		// Token: 0x06030F3C RID: 200508 RVA: 0x00DA81D4 File Offset: 0x00DA63D4
 		protected override void OnShowBattleChildViewPanel(bool isFirst)
 		{
 			if (Info.Instance.OperationType != EOperationType.Desktop)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer2.PlaySequencePurely("Start", false, false, null, null, false);
 		}
 
-		// Token: 0x0603BFEA RID: 245738 RVA: 0x00E57BE8 File Offset: 0x00E55DE8
+		// Token: 0x06030F3D RID: 200509 RVA: 0x00DA8290 File Offset: 0x00DA6490
 		private void RefreshItemVisibleByPlatform()
 		{
 			bool uiactive = Info.Instance.IsInGamepad();
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshRouletteItemVisible();
 		}
 
-		// Token: 0x0603BFEB RID: 245739 RVA: 0x00E57C20 File Offset: 0x00E55E20
+		// Token: 0x06030F3E RID: 200510 RVA: 0x00DA82C8 File Offset: 0x00DA64C8
 		private void RefreshEnvironmentKeyVisible()
 		{
 			bool flag = Info.Instance.IsInGamepad();
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(eenvironmentKey != EEnvironmentKey.None && this.IsPressMainCombineAction && flag);
 		}
 
-		// Token: 0x0603BFEC RID: 245740 RVA: 0x00E57C70 File Offset: 0x00E55E70
+		// Token: 0x06030F3F RID: 200511 RVA: 0x00DA8318 File Offset: 0x00DA6518
 		private void RefreshEnvironmentKeyText()
 		{
 			BattleUiEnvironmentKeyData environmentKeyData = BattleUiModel.Instance.EnvironmentKeyData;
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFED RID: 245741 RVA: 0x00E57CB4 File Offset: 0x00E55EB4
+		// Token: 0x06030F40 RID: 200512 RVA: 0x00DA835C File Offset: 0x00DA655C
 		private void RefreshRouletteItemVisible()
 		{
 			BattleSkillLeftRouletteItem rouletteItem = this.RouletteItem;
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rouletteItem.RefreshVisible();
 		}
 
-		// Token: 0x0603BFEE RID: 245742 RVA: 0x00E57CC8 File Offset: 0x00E55EC8
+		// Token: 0x06030F41 RID: 200513 RVA: 0x00DA8370 File Offset: 0x00DA6570
 		protected override void AddEvents()
 		{
 			if (base.GetOperationType() == EOperationType.Desktop)
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFEF RID: 245743 RVA: 0x00E57DBC File Offset: 0x00E55FBC
+		// Token: 0x06030F42 RID: 200514 RVA: 0x00DA8464 File Offset: 0x00DA6664
 		protected override void RemoveEvents()
 		{
 			if (base.GetOperationType() == EOperationType.Desktop)
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFF0 RID: 245744 RVA: 0x00E57F5C File Offset: 0x00E5615C
+		// Token: 0x06030F43 RID: 200515 RVA: 0x00DA8604 File Offset: 0x00DA6804
 		private void OnRefreshChatRowData(bool bHistory)
 		{
 			if (base.GetOperationType() == EOperationType.Desktop)
@@ -319,13 +319,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFF1 RID: 245745 RVA: 0x00E57F74 File Offset: 0x00E56174
+		// Token: 0x06030F44 RID: 200516 RVA: 0x00DA861C File Offset: 0x00DA681C
 		private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.RefreshItemVisibleByPlatform();
 		}
 
-		// Token: 0x0603BFF2 RID: 245746 RVA: 0x00E57F7C File Offset: 0x00E5617C
+		// Token: 0x06030F45 RID: 200517 RVA: 0x00DA8624 File Offset: 0x00DA6824
 		private void OnEnvironmentKeyChanged()
 		{
 			if (Info.Instance.IsInTouch())
@@ -336,19 +336,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshEnvironmentKeyText();
 		}
 
-		// Token: 0x0603BFF3 RID: 245747 RVA: 0x00E57F97 File Offset: 0x00E56197
+		// Token: 0x06030F46 RID: 200518 RVA: 0x00DA863F File Offset: 0x00DA683F
 		private void OnInputCombineButton(bool isPress)
 		{
 			this.RefreshRouletteItemVisible();
 		}
 
-		// Token: 0x0603BFF4 RID: 245748 RVA: 0x00E57F9F File Offset: 0x00E5619F
+		// Token: 0x06030F47 RID: 200519 RVA: 0x00DA8647 File Offset: 0x00DA6847
 		private void BattleUiMotorcycleStateChanged(bool isDriving)
 		{
 			this.RefreshRouletteItemVisible();
 		}
 
-		// Token: 0x0603BFF5 RID: 245749 RVA: 0x00E57FA7 File Offset: 0x00E561A7
+		// Token: 0x06030F48 RID: 200520 RVA: 0x00DA864F File Offset: 0x00DA684F
 		private void OnClickChatButton()
 		{
 			if (UiManager.Instance.IsViewShow(EUiViewName.ChatView))
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			UiManager.Instance.OpenView(EUiViewName.ChatView, null, null);
 		}
 
-		// Token: 0x0603BFF6 RID: 245750 RVA: 0x00E57FCC File Offset: 0x00E561CC
+		// Token: 0x06030F49 RID: 200521 RVA: 0x00DA8674 File Offset: 0x00DA6874
 		[NullableContext(1)]
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
@@ -411,38 +411,38 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFF7 RID: 245751 RVA: 0x00E5808D File Offset: 0x00E5628D
+		// Token: 0x06030F4A RID: 200522 RVA: 0x00DA8735 File Offset: 0x00DA6935
 		private void OnInputMainCombineAction(InputDistributeDefine.EActionType actionType)
 		{
 			this.IsPressMainCombineAction = (actionType == InputDistributeDefine.EActionType.Press);
 			this.RefreshEnvironmentKeyVisible();
 		}
 
-		// Token: 0x0603BFF8 RID: 245752 RVA: 0x00E5809F File Offset: 0x00E5629F
+		// Token: 0x06030F4B RID: 200523 RVA: 0x00DA8747 File Offset: 0x00DA6947
 		private bool CheckInTower()
 		{
 			return TowerModel.Instance.CheckInTower();
 		}
 
-		// Token: 0x0603BFF9 RID: 245753 RVA: 0x00E580AB File Offset: 0x00E562AB
+		// Token: 0x06030F4C RID: 200524 RVA: 0x00DA8753 File Offset: 0x00DA6953
 		private bool CheckInRogue()
 		{
 			return RoguelikeModel.Instance.CheckInRoguelike() || WeeklyRogueModel.Instance.CheckIsInWeeklyRogue();
 		}
 
-		// Token: 0x0603BFFA RID: 245754 RVA: 0x00E580C5 File Offset: 0x00E562C5
+		// Token: 0x06030F4D RID: 200525 RVA: 0x00DA876D File Offset: 0x00DA696D
 		private bool CheckInRogueRes()
 		{
 			return MapRogueController.Instance.CheckInMapRogueInstance();
 		}
 
-		// Token: 0x0603BFFB RID: 245755 RVA: 0x00E580D1 File Offset: 0x00E562D1
+		// Token: 0x06030F4E RID: 200526 RVA: 0x00DA8779 File Offset: 0x00DA6979
 		private bool CheckInMorale()
 		{
 			return MoraleBattleModel.Instance.IsMoraleActive();
 		}
 
-		// Token: 0x0603BFFC RID: 245756 RVA: 0x00E580DD File Offset: 0x00E562DD
+		// Token: 0x06030F4F RID: 200527 RVA: 0x00DA8785 File Offset: 0x00DA6985
 		private void OpenTowerBuffView()
 		{
 			if (!this.CheckInTower())
@@ -456,13 +456,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			UiManager.Instance.OpenView(EUiViewName.TowerGuideView, null, null);
 		}
 
-		// Token: 0x0603BFFD RID: 245757 RVA: 0x00E5810B File Offset: 0x00E5630B
+		// Token: 0x06030F50 RID: 200528 RVA: 0x00DA87B3 File Offset: 0x00DA69B3
 		private void OpenDungeonGuideView()
 		{
 			InstanceDungeonGuideController.StartReplayGuide();
 		}
 
-		// Token: 0x0603BFFE RID: 245758 RVA: 0x00E58114 File Offset: 0x00E56314
+		// Token: 0x06030F51 RID: 200529 RVA: 0x00DA87BC File Offset: 0x00DA69BC
 		private void OpenRogueInfoView()
 		{
 			if (!this.CheckInRogue())
@@ -482,31 +482,31 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			UiManager.Instance.OpenView(euiViewName, null, null);
 		}
 
-		// Token: 0x0603BFFF RID: 245759 RVA: 0x00E5817A File Offset: 0x00E5637A
+		// Token: 0x06030F52 RID: 200530 RVA: 0x00DA8822 File Offset: 0x00DA6A22
 		private static void OpenSilentInfoView()
 		{
 			EventSystem.Instance.Emit(EEventName.BattleUiToggleSilentAreaInfoView);
 		}
 
-		// Token: 0x0603C000 RID: 245760 RVA: 0x00E5818C File Offset: 0x00E5638C
+		// Token: 0x06030F53 RID: 200531 RVA: 0x00DA8834 File Offset: 0x00DA6A34
 		private static void OpenTowerDefenseInfoView()
 		{
 			EventSystem.Instance.Emit(EEventName.BattleUiToggleTowerDefenseInfoView);
 		}
 
-		// Token: 0x0603C001 RID: 245761 RVA: 0x00E5819E File Offset: 0x00E5639E
+		// Token: 0x06030F54 RID: 200532 RVA: 0x00DA8846 File Offset: 0x00DA6A46
 		private static void OpenShipTowerBuffView()
 		{
 			EventSystem.Instance.Emit(EEventName.BattleUiToggleShipTowerBuffInfo);
 		}
 
-		// Token: 0x0603C002 RID: 245762 RVA: 0x00E581B0 File Offset: 0x00E563B0
+		// Token: 0x06030F55 RID: 200533 RVA: 0x00DA8858 File Offset: 0x00DA6A58
 		private static void OpenMoraleBuffView()
 		{
 			EventSystem.Instance.Emit(EEventName.BattleUiToggleMoraleBuffInfo);
 		}
 
-		// Token: 0x0603C003 RID: 245763 RVA: 0x00E581C2 File Offset: 0x00E563C2
+		// Token: 0x06030F56 RID: 200534 RVA: 0x00DA886A File Offset: 0x00DA6A6A
 		private static void OpenRogueResSummaryView()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.RogueBattleSummary))
@@ -516,7 +516,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			UiManager.Instance.OpenView(EUiViewName.RogueBattleSummary, null, null);
 		}
 
-		// Token: 0x0603C004 RID: 245764 RVA: 0x00E581E7 File Offset: 0x00E563E7
+		// Token: 0x06030F57 RID: 200535 RVA: 0x00DA888F File Offset: 0x00DA6A8F
 		private static void OpenMoraleAreaSumView()
 		{
 			if (!MoraleModel.Instance.IsInitData)
@@ -530,7 +530,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			UiManager.Instance.OpenView(EUiViewName.MoraleAreaSumView, null, null);
 		}
 
-		// Token: 0x0603C005 RID: 245765 RVA: 0x00E58214 File Offset: 0x00E56414
+		// Token: 0x06030F58 RID: 200536 RVA: 0x00DA88BC File Offset: 0x00DA6ABC
 		private void RefreshChatRowItem()
 		{
 			this.ActualChatDataList.Clear();
@@ -561,7 +561,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			});
 		}
 
-		// Token: 0x0603C006 RID: 245766 RVA: 0x00E5826C File Offset: 0x00E5646C
+		// Token: 0x06030F59 RID: 200537 RVA: 0x00DA8914 File Offset: 0x00DA6B14
 		private void RefreshAfterInit()
 		{
 			if (this.ActualChatDataList.Count <= 0)
@@ -578,7 +578,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetChatScrollViewRootVisible(false);
 		}
 
-		// Token: 0x0603C007 RID: 245767 RVA: 0x00E582A9 File Offset: 0x00E564A9
+		// Token: 0x06030F5A RID: 200538 RVA: 0x00DA8951 File Offset: 0x00DA6B51
 		private void RefreshAfterUpdate(bool bHistory)
 		{
 			if (this.ActualChatDataList.Count <= 0)
@@ -598,7 +598,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C008 RID: 245768 RVA: 0x00E582E8 File Offset: 0x00E564E8
+		// Token: 0x06030F5B RID: 200539 RVA: 0x00DA8990 File Offset: 0x00DA6B90
 		private void BuildActualChatDataList()
 		{
 			foreach (ChatRowData chatRowData in ChatModel.Instance.GetChatRowDataList())
@@ -621,7 +621,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C009 RID: 245769 RVA: 0x00E58388 File Offset: 0x00E56588
+		// Token: 0x06030F5C RID: 200540 RVA: 0x00DA8A30 File Offset: 0x00DA6C30
 		public void DelayScroll(float delayTime)
 		{
 			this.RemoveScrollDelay();
@@ -632,7 +632,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ScrollDelayId = TimerSystem.GameplayTimeInstance.Delay(new TTimerAction(this.OnSetScrollProgressDelay), delayTime, null, null, true, 1f);
 		}
 
-		// Token: 0x0603C00A RID: 245770 RVA: 0x00E583BF File Offset: 0x00E565BF
+		// Token: 0x06030F5D RID: 200541 RVA: 0x00DA8A67 File Offset: 0x00DA6C67
 		private void RemoveScrollDelay()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.ScrollDelayId))
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ScrollDelayId = null;
 		}
 
-		// Token: 0x0603C00B RID: 245771 RVA: 0x00E583EB File Offset: 0x00E565EB
+		// Token: 0x06030F5E RID: 200542 RVA: 0x00DA8A93 File Offset: 0x00DA6C93
 		private void RemoveChatViewTimeDown()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.ChatViewTimeDownId))
@@ -652,7 +652,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ChatViewTimeDownId = null;
 		}
 
-		// Token: 0x0603C00C RID: 245772 RVA: 0x00E58417 File Offset: 0x00E56617
+		// Token: 0x06030F5F RID: 200543 RVA: 0x00DA8ABF File Offset: 0x00DA6CBF
 		private void OnSetScrollProgressDelay(float _)
 		{
 			if (this.ActualChatDataList.Count <= 0)
@@ -667,7 +667,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			chatLoopScrollView.ScrollToItemIndex(this.ActualChatDataList.Count - 1, true, false).Forget();
 		}
 
-		// Token: 0x0603C00D RID: 245773 RVA: 0x00E5844C File Offset: 0x00E5664C
+		// Token: 0x06030F60 RID: 200544 RVA: 0x00DA8AF4 File Offset: 0x00DA6CF4
 		private void ActivateChatScrollView()
 		{
 			this.RemoveChatViewTimeDown();
@@ -689,7 +689,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ChatViewTimeDownId = TimerSystem.GameplayTimeInstance.Delay(new TTimerAction(this.OnChatViewTimeDown), (float)this.ChatViewTimeDown, null, null, true, 1f);
 		}
 
-		// Token: 0x0603C00E RID: 245774 RVA: 0x00E584E0 File Offset: 0x00E566E0
+		// Token: 0x06030F61 RID: 200545 RVA: 0x00DA8B88 File Offset: 0x00DA6D88
 		private void OnChatViewTimeDown(float _)
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -705,7 +705,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer2.PlaySequencePurely("Close", false, false, null, null, false);
 		}
 
-		// Token: 0x0603C00F RID: 245775 RVA: 0x00E58522 File Offset: 0x00E56722
+		// Token: 0x06030F62 RID: 200546 RVA: 0x00DA8BCA File Offset: 0x00DA6DCA
 		private void SetChatScrollViewRootVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(3);
@@ -716,28 +716,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			BattleUiModel.Instance.ChatScrollViewVisible = bVisible;
 		}
 
-		// Token: 0x0401F4DF RID: 128223
+		// Token: 0x04019F98 RID: 106392
 		private TimerHandle ChatViewTimeDownId;
 
-		// Token: 0x0401F4E0 RID: 128224
+		// Token: 0x04019F99 RID: 106393
 		private int ChatViewTimeDown;
 
-		// Token: 0x0401F4E1 RID: 128225
+		// Token: 0x04019F9A RID: 106394
 		private TimerHandle ScrollDelayId;
 
-		// Token: 0x0401F4E2 RID: 128226
+		// Token: 0x04019F9B RID: 106395
 		private bool IsPressMainCombineAction;
 
-		// Token: 0x0401F4E3 RID: 128227
+		// Token: 0x04019F9C RID: 106396
 		private CommonKeyItem EnvironmentKeyItem;
 
-		// Token: 0x0401F4E4 RID: 128228
+		// Token: 0x04019F9D RID: 106397
 		private BattleSkillLeftRouletteItem RouletteItem;
 
-		// Token: 0x0401F4E5 RID: 128229
+		// Token: 0x04019F9E RID: 106398
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F4E6 RID: 128230
+		// Token: 0x04019F9F RID: 106399
 		[Nullable(new byte[]
 		{
 			2,
@@ -747,52 +747,52 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private DynamicScrollView<ChatRowDynamicItem, ChatRowDynamicItemSize, ChatRowData> ChatLoopScrollView;
 
-		// Token: 0x0401F4E7 RID: 128231
+		// Token: 0x04019FA0 RID: 106400
 		private ChatRowDynamicItemSize ChatBaseItem;
 
-		// Token: 0x0401F4E8 RID: 128232
+		// Token: 0x04019FA1 RID: 106401
 		[Nullable(1)]
 		private readonly List<ChatRowData> ActualChatDataList = new List<ChatRowData>();
 
-		// Token: 0x0200BEA7 RID: 48807
+		// Token: 0x0200A8AD RID: 43181
 		[NullableContext(0)]
 		private enum EDesktopChildType
 		{
-			// Token: 0x040397E5 RID: 235493
+			// Token: 0x040341A6 RID: 213414
 			ChatButton,
-			// Token: 0x040397E6 RID: 235494
+			// Token: 0x040341A7 RID: 213415
 			ChatScrollView,
-			// Token: 0x040397E7 RID: 235495
+			// Token: 0x040341A8 RID: 213416
 			ChatRowItemContent,
-			// Token: 0x040397E8 RID: 235496
+			// Token: 0x040341A9 RID: 213417
 			PanelChatScrollViewRoot,
-			// Token: 0x040397E9 RID: 235497
+			// Token: 0x040341AA RID: 213418
 			ChatItem,
-			// Token: 0x040397EA RID: 235498
+			// Token: 0x040341AB RID: 213419
 			ChatKeyItem,
-			// Token: 0x040397EB RID: 235499
+			// Token: 0x040341AC RID: 213420
 			KeyItemGroup,
-			// Token: 0x040397EC RID: 235500
+			// Token: 0x040341AD RID: 213421
 			EnvironmentKeyItemContainer,
-			// Token: 0x040397ED RID: 235501
+			// Token: 0x040341AE RID: 213422
 			EnvironmentKeyItem,
-			// Token: 0x040397EE RID: 235502
+			// Token: 0x040341AF RID: 213423
 			EnvironmentKeyItemText,
-			// Token: 0x040397EF RID: 235503
+			// Token: 0x040341B0 RID: 213424
 			RouletteItem,
-			// Token: 0x040397F0 RID: 235504
+			// Token: 0x040341B1 RID: 213425
 			PanelChatItem
 		}
 
-		// Token: 0x0200BEA8 RID: 48808
+		// Token: 0x0200A8AE RID: 43182
 		[NullableContext(0)]
 		private enum EPadChildType
 		{
-			// Token: 0x040397F2 RID: 235506
+			// Token: 0x040341B3 RID: 213427
 			ChatButton,
-			// Token: 0x040397F3 RID: 235507
+			// Token: 0x040341B4 RID: 213428
 			RedDotItem,
-			// Token: 0x040397F4 RID: 235508
+			// Token: 0x040341B5 RID: 213429
 			ChatPadItem
 		}
 	}

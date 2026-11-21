@@ -7,22 +7,22 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004304 RID: 17156
+	// Token: 0x02003342 RID: 13122
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SCounterAttack.SCounterAttack")]
 	[UnrealStructLayout(1152, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 1149)]
 	public class SCounterAttack : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C5AE RID: 181678 RVA: 0x00A1DE1A File Offset: 0x00A1C01A
+		// Token: 0x060212DA RID: 135898 RVA: 0x0095AFDA File Offset: 0x009591DA
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCounterAttack._ScriptStructPtr != 0) ? SCounterAttack._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SCounterAttack.SCounterAttack", ref SCounterAttack._ScriptStructPtr);
 		}
 
-		// Token: 0x17006EE0 RID: 28384
-		// (get) Token: 0x0602C5AF RID: 181679 RVA: 0x00A1DE40 File Offset: 0x00A1C040
-		// (set) Token: 0x0602C5B0 RID: 181680 RVA: 0x00A1DE83 File Offset: 0x00A1C083
+		// Token: 0x170042FE RID: 17150
+		// (get) Token: 0x060212DB RID: 135899 RVA: 0x0095B000 File Offset: 0x00959200
+		// (set) Token: 0x060212DC RID: 135900 RVA: 0x0095B043 File Offset: 0x00959243
 		public TArray<FName> 弹反部位
 		{
 			get
@@ -31,7 +31,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<FName> result;
 				if ((result = this._弹反部位) == null)
 				{
-					result = (this._弹反部位 = new TArray<FName>(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._弹反部位 = new TArray<FName>(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_弹反部位, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -41,9 +41,9 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006EE1 RID: 28385
-		// (get) Token: 0x0602C5B1 RID: 181681 RVA: 0x00A1DE94 File Offset: 0x00A1C094
-		// (set) Token: 0x0602C5B2 RID: 181682 RVA: 0x00A1DED7 File Offset: 0x00A1C0D7
+		// Token: 0x170042FF RID: 17151
+		// (get) Token: 0x060212DD RID: 135901 RVA: 0x0095B054 File Offset: 0x00959254
+		// (set) Token: 0x060212DE RID: 135902 RVA: 0x0095B097 File Offset: 0x00959297
 		public SCounterAttackEffect 无弹反动作效果
 		{
 			get
@@ -52,19 +52,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SCounterAttackEffect result;
 				if ((result = this._无弹反动作效果) == null)
 				{
-					result = (this._无弹反动作效果 = new SCounterAttackEffect(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._无弹反动作效果 = new SCounterAttackEffect(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_无弹反动作效果, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SCounterAttackEffect.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SCounterAttackEffect.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_无弹反动作效果, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006EE2 RID: 28386
-		// (get) Token: 0x0602C5B3 RID: 181683 RVA: 0x00A1DEF8 File Offset: 0x00A1C0F8
-		// (set) Token: 0x0602C5B4 RID: 181684 RVA: 0x00A1DF3B File Offset: 0x00A1C13B
+		// Token: 0x17004300 RID: 17152
+		// (get) Token: 0x060212DF RID: 135903 RVA: 0x0095B0B8 File Offset: 0x009592B8
+		// (set) Token: 0x060212E0 RID: 135904 RVA: 0x0095B0FB File Offset: 0x009592FB
 		public SCounterAttackEffect 有弹反动作效果
 		{
 			get
@@ -73,109 +73,109 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SCounterAttackEffect result;
 				if ((result = this._有弹反动作效果) == null)
 				{
-					result = (this._有弹反动作效果 = new SCounterAttackEffect(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._有弹反动作效果 = new SCounterAttackEffect(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_有弹反动作效果, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SCounterAttackEffect.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SCounterAttackEffect.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_有弹反动作效果, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006EE3 RID: 28387
-		// (get) Token: 0x0602C5B5 RID: 181685 RVA: 0x00A1DF5C File Offset: 0x00A1C15C
-		// (set) Token: 0x0602C5B6 RID: 181686 RVA: 0x00A1DF6C File Offset: 0x00A1C16C
+		// Token: 0x17004301 RID: 17153
+		// (get) Token: 0x060212E1 RID: 135905 RVA: 0x0095B11C File Offset: 0x0095931C
+		// (set) Token: 0x060212E2 RID: 135906 RVA: 0x0095B12C File Offset: 0x0095932C
 		public unsafe float 削韧倍率
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_削韧倍率);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_削韧倍率) = value;
 			}
 		}
 
-		// Token: 0x17006EE4 RID: 28388
-		// (get) Token: 0x0602C5B7 RID: 181687 RVA: 0x00A1DF7D File Offset: 0x00A1C17D
-		// (set) Token: 0x0602C5B8 RID: 181688 RVA: 0x00A1DF8D File Offset: 0x00A1C18D
+		// Token: 0x17004302 RID: 17154
+		// (get) Token: 0x060212E3 RID: 135907 RVA: 0x0095B13D File Offset: 0x0095933D
+		// (set) Token: 0x060212E4 RID: 135908 RVA: 0x0095B14D File Offset: 0x0095934D
 		public unsafe float 最大触发距离
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_最大触发距离);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_最大触发距离) = value;
 			}
 		}
 
-		// Token: 0x17006EE5 RID: 28389
-		// (get) Token: 0x0602C5B9 RID: 181689 RVA: 0x00A1DF9E File Offset: 0x00A1C19E
-		// (set) Token: 0x0602C5BA RID: 181690 RVA: 0x00A1DFAE File Offset: 0x00A1C1AE
+		// Token: 0x17004303 RID: 17155
+		// (get) Token: 0x060212E5 RID: 135909 RVA: 0x0095B15E File Offset: 0x0095935E
+		// (set) Token: 0x060212E6 RID: 135910 RVA: 0x0095B16E File Offset: 0x0095936E
 		public unsafe float 最大触发夹角
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_最大触发夹角);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_最大触发夹角) = value;
 			}
 		}
 
-		// Token: 0x17006EE6 RID: 28390
-		// (get) Token: 0x0602C5BB RID: 181691 RVA: 0x00A1DFBF File Offset: 0x00A1C1BF
-		// (set) Token: 0x0602C5BC RID: 181692 RVA: 0x00A1DFCF File Offset: 0x00A1C1CF
+		// Token: 0x17004304 RID: 17156
+		// (get) Token: 0x060212E7 RID: 135911 RVA: 0x0095B17F File Offset: 0x0095937F
+		// (set) Token: 0x060212E8 RID: 135912 RVA: 0x0095B18F File Offset: 0x0095938F
 		public unsafe long 被弹反者应用BuffID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_被弹反者应用BuffID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_被弹反者应用BuffID) = value;
 			}
 		}
 
-		// Token: 0x17006EE7 RID: 28391
-		// (get) Token: 0x0602C5BD RID: 181693 RVA: 0x00A1DFE0 File Offset: 0x00A1C1E0
-		// (set) Token: 0x0602C5BE RID: 181694 RVA: 0x00A1DFF0 File Offset: 0x00A1C1F0
+		// Token: 0x17004305 RID: 17157
+		// (get) Token: 0x060212E9 RID: 135913 RVA: 0x0095B1A0 File Offset: 0x009593A0
+		// (set) Token: 0x060212EA RID: 135914 RVA: 0x0095B1B0 File Offset: 0x009593B0
 		public unsafe long 攻击者应用BuffID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_攻击者应用BuffID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_攻击者应用BuffID) = value;
 			}
 		}
 
-		// Token: 0x17006EE8 RID: 28392
-		// (get) Token: 0x0602C5BF RID: 181695 RVA: 0x00A1E001 File Offset: 0x00A1C201
-		// (set) Token: 0x0602C5C0 RID: 181696 RVA: 0x00A1E011 File Offset: 0x00A1C211
+		// Token: 0x17004306 RID: 17158
+		// (get) Token: 0x060212EB RID: 135915 RVA: 0x0095B1C1 File Offset: 0x009593C1
+		// (set) Token: 0x060212EC RID: 135916 RVA: 0x0095B1D1 File Offset: 0x009593D1
 		public unsafe bool 受击动画忽略Buff检测
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_8) != 0;
+				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_受击动画忽略Buff检测) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_8) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_受击动画忽略Buff检测) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006EE9 RID: 28393
-		// (get) Token: 0x0602C5C1 RID: 181697 RVA: 0x00A1E024 File Offset: 0x00A1C224
-		// (set) Token: 0x0602C5C2 RID: 181698 RVA: 0x00A1E067 File Offset: 0x00A1C267
+		// Token: 0x17004307 RID: 17159
+		// (get) Token: 0x060212ED RID: 135917 RVA: 0x0095B1E4 File Offset: 0x009593E4
+		// (set) Token: 0x060212EE RID: 135918 RVA: 0x0095B227 File Offset: 0x00959427
 		public TArray<SCounterAttackBuff> 检测Buff列表
 		{
 			get
@@ -184,7 +184,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<SCounterAttackBuff> result;
 				if ((result = this._检测Buff列表) == null)
 				{
-					result = (this._检测Buff列表 = new TArray<SCounterAttackBuff>(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_9, base.MemoryOwner ?? this));
+					result = (this._检测Buff列表 = new TArray<SCounterAttackBuff>(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_检测Buff列表, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -194,162 +194,144 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006EEA RID: 28394
-		// (get) Token: 0x0602C5C3 RID: 181699 RVA: 0x00A1E075 File Offset: 0x00A1C275
-		// (set) Token: 0x0602C5C4 RID: 181700 RVA: 0x00A1E085 File Offset: 0x00A1C285
+		// Token: 0x17004308 RID: 17160
+		// (get) Token: 0x060212EF RID: 135919 RVA: 0x0095B235 File Offset: 0x00959435
+		// (set) Token: 0x060212F0 RID: 135920 RVA: 0x0095B245 File Offset: 0x00959445
 		public unsafe long ANS期间被弹反者生效的BuffID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_ANS期间被弹反者生效的BuffID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_ANS期间被弹反者生效的BuffID) = value;
 			}
 		}
 
-		// Token: 0x17006EEB RID: 28395
-		// (get) Token: 0x0602C5C5 RID: 181701 RVA: 0x00A1E096 File Offset: 0x00A1C296
-		// (set) Token: 0x0602C5C6 RID: 181702 RVA: 0x00A1E0AA File Offset: 0x00A1C2AA
+		// Token: 0x17004309 RID: 17161
+		// (get) Token: 0x060212F1 RID: 135921 RVA: 0x0095B256 File Offset: 0x00959456
+		// (set) Token: 0x060212F2 RID: 135922 RVA: 0x0095B26A File Offset: 0x0095946A
 		public unsafe FGameplayTag 结束事件Tag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_结束事件Tag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_结束事件Tag) = value;
 			}
 		}
 
-		// Token: 0x17006EEC RID: 28396
-		// (get) Token: 0x0602C5C7 RID: 181703 RVA: 0x00A1E0BF File Offset: 0x00A1C2BF
-		// (set) Token: 0x0602C5C8 RID: 181704 RVA: 0x00A1E0CF File Offset: 0x00A1C2CF
+		// Token: 0x1700430A RID: 17162
+		// (get) Token: 0x060212F3 RID: 135923 RVA: 0x0095B27F File Offset: 0x0095947F
+		// (set) Token: 0x060212F4 RID: 135924 RVA: 0x0095B28F File Offset: 0x0095948F
 		public unsafe bool QTE弹刀忽略角度距离检测
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_12) != 0;
+				return *(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_QTE弹刀忽略角度距离检测) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_12) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCounterAttack.__PropertyOffset_QTE弹刀忽略角度距离检测) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602C5C9 RID: 181705 RVA: 0x00A1E0E0 File Offset: 0x00A1C2E0
+		// Token: 0x060212F5 RID: 135925 RVA: 0x0095B2A0 File Offset: 0x009594A0
 		public SCounterAttack()
 		{
 		}
 
-		// Token: 0x0602C5CA RID: 181706 RVA: 0x00A1E0E8 File Offset: 0x00A1C2E8
-		public SCounterAttack(TArray<FName> 弹反部位, SCounterAttackEffect 无弹反动作效果, SCounterAttackEffect 有弹反动作效果, float 削韧倍率, float 最大触发距离, float 最大触发夹角, long 被弹反者应用BuffID, long 攻击者应用BuffID, bool 受击动画忽略Buff检测, TArray<SCounterAttackBuff> 检测Buff列表, long ANS期间被弹反者生效的BuffID, FGameplayTag 结束事件Tag, bool QTE弹刀忽略角度距离检测)
-		{
-			this.弹反部位 = 弹反部位;
-			this.无弹反动作效果 = 无弹反动作效果;
-			this.有弹反动作效果 = 有弹反动作效果;
-			this.削韧倍率 = 削韧倍率;
-			this.最大触发距离 = 最大触发距离;
-			this.最大触发夹角 = 最大触发夹角;
-			this.被弹反者应用BuffID = 被弹反者应用BuffID;
-			this.攻击者应用BuffID = 攻击者应用BuffID;
-			this.受击动画忽略Buff检测 = 受击动画忽略Buff检测;
-			this.检测Buff列表 = 检测Buff列表;
-			this.ANS期间被弹反者生效的BuffID = ANS期间被弹反者生效的BuffID;
-			this.结束事件Tag = 结束事件Tag;
-			this.QTE弹刀忽略角度距离检测 = QTE弹刀忽略角度距离检测;
-		}
-
-		// Token: 0x0602C5CB RID: 181707 RVA: 0x00A1E160 File Offset: 0x00A1C360
+		// Token: 0x060212F6 RID: 135926 RVA: 0x0095B2A8 File Offset: 0x009594A8
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCounterAttack.StaticStruct();
 		}
 
-		// Token: 0x0602C5CC RID: 181708 RVA: 0x00A1E16C File Offset: 0x00A1C36C
+		// Token: 0x060212F7 RID: 135927 RVA: 0x0095B2B4 File Offset: 0x009594B4
 		[NullableContext(2)]
 		public SCounterAttack(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C5CD RID: 181709 RVA: 0x00A1E176 File Offset: 0x00A1C376
+		// Token: 0x060212F8 RID: 135928 RVA: 0x0095B2BE File Offset: 0x009594BE
 		public SCounterAttack(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C5CE RID: 181710 RVA: 0x00A1E181 File Offset: 0x00A1C381
+		// Token: 0x060212F9 RID: 135929 RVA: 0x0095B2C9 File Offset: 0x009594C9
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCounterAttack(Pointer, false, true);
 		}
 
-		// Token: 0x0602C5CF RID: 181711 RVA: 0x00A1E18B File Offset: 0x00A1C38B
+		// Token: 0x060212FA RID: 135930 RVA: 0x0095B2D3 File Offset: 0x009594D3
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCounterAttack(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017636 RID: 95798
+		// Token: 0x0401223F RID: 74303
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SCounterAttack.SCounterAttack";
 
-		// Token: 0x04017637 RID: 95799
+		// Token: 0x04012240 RID: 74304
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017638 RID: 95800
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012241 RID: 74305
+		internal static int __PropertyOffset_弹反部位;
 
-		// Token: 0x04017639 RID: 95801
+		// Token: 0x04012242 RID: 74306
 		[Nullable(2)]
 		private TArray<FName> _弹反部位;
 
-		// Token: 0x0401763A RID: 95802
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012243 RID: 74307
+		internal static int __PropertyOffset_无弹反动作效果;
 
-		// Token: 0x0401763B RID: 95803
+		// Token: 0x04012244 RID: 74308
 		[Nullable(2)]
 		private SCounterAttackEffect _无弹反动作效果;
 
-		// Token: 0x0401763C RID: 95804
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012245 RID: 74309
+		internal static int __PropertyOffset_有弹反动作效果;
 
-		// Token: 0x0401763D RID: 95805
+		// Token: 0x04012246 RID: 74310
 		[Nullable(2)]
 		private SCounterAttackEffect _有弹反动作效果;
 
-		// Token: 0x0401763E RID: 95806
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012247 RID: 74311
+		internal static int __PropertyOffset_削韧倍率;
 
-		// Token: 0x0401763F RID: 95807
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012248 RID: 74312
+		internal static int __PropertyOffset_最大触发距离;
 
-		// Token: 0x04017640 RID: 95808
-		internal static int __PropertyOffset_5;
+		// Token: 0x04012249 RID: 74313
+		internal static int __PropertyOffset_最大触发夹角;
 
-		// Token: 0x04017641 RID: 95809
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401224A RID: 74314
+		internal static int __PropertyOffset_被弹反者应用BuffID;
 
-		// Token: 0x04017642 RID: 95810
-		internal static int __PropertyOffset_7;
+		// Token: 0x0401224B RID: 74315
+		internal static int __PropertyOffset_攻击者应用BuffID;
 
-		// Token: 0x04017643 RID: 95811
-		internal static int __PropertyOffset_8;
+		// Token: 0x0401224C RID: 74316
+		internal static int __PropertyOffset_受击动画忽略Buff检测;
 
-		// Token: 0x04017644 RID: 95812
-		internal static int __PropertyOffset_9;
+		// Token: 0x0401224D RID: 74317
+		internal static int __PropertyOffset_检测Buff列表;
 
-		// Token: 0x04017645 RID: 95813
+		// Token: 0x0401224E RID: 74318
 		[Nullable(2)]
 		private TArray<SCounterAttackBuff> _检测Buff列表;
 
-		// Token: 0x04017646 RID: 95814
-		internal static int __PropertyOffset_10;
+		// Token: 0x0401224F RID: 74319
+		internal static int __PropertyOffset_ANS期间被弹反者生效的BuffID;
 
-		// Token: 0x04017647 RID: 95815
-		internal static int __PropertyOffset_11;
+		// Token: 0x04012250 RID: 74320
+		internal static int __PropertyOffset_结束事件Tag;
 
-		// Token: 0x04017648 RID: 95816
-		internal static int __PropertyOffset_12;
+		// Token: 0x04012251 RID: 74321
+		internal static int __PropertyOffset_QTE弹刀忽略角度距离检测;
 	}
 }

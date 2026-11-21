@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.QuickTimeAction
 {
-	// Token: 0x02003EAB RID: 16043
+	// Token: 0x02003179 RID: 12665
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/QuickTimeAction/EQtaResultType.EQtaResultType")]
 	public enum EQtaResultType : byte
 	{
-		// Token: 0x04014B34 RID: 84788
+		// Token: 0x04010B60 RID: 68448
 		None,
-		// Token: 0x04014B35 RID: 84789
+		// Token: 0x04010B61 RID: 68449
 		成功,
-		// Token: 0x04014B36 RID: 84790
+		// Token: 0x04010B62 RID: 68450
 		失败,
-		// Token: 0x04014B37 RID: 84791
+		// Token: 0x04010B63 RID: 68451
 		超时,
-		// Token: 0x04014B38 RID: 84792
+		// Token: 0x04010B64 RID: 68452
 		失活,
-		// Token: 0x04014B39 RID: 84793
+		// Token: 0x04010B65 RID: 68453
 		EQtaResultType_MAX
 	}
 }

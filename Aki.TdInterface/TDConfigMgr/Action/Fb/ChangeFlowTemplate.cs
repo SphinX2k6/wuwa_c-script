@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200277D RID: 10109
+	// Token: 0x02002A4F RID: 10831
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChangeFlowTemplate : ActionParams
 	{
-		// Token: 0x0600E111 RID: 57617 RVA: 0x002140D2 File Offset: 0x002122D2
-		[NullableContext(1)]
+		// Token: 0x0600EF2F RID: 61231 RVA: 0x00230E66 File Offset: 0x0022F066
+		[NullableContext(0)]
 		public static ChangeFlowTemplate Create(IChangeFlowTemplate? instance)
 		{
 			if (instance == null)
@@ -24,12 +24,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043D9 RID: 17369
-		// (get) Token: 0x0600E112 RID: 57618 RVA: 0x002140F1 File Offset: 0x002122F1
-		[Nullable(1)]
+		// Token: 0x1700473F RID: 18239
+		// (get) Token: 0x0600EF30 RID: 61232 RVA: 0x00230E85 File Offset: 0x0022F085
+		[Nullable(0)]
 		public virtual IFlowTemplateMode TemplateMode
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._TemplateModeInited)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043DA RID: 17370
-		// (get) Token: 0x0600E113 RID: 57619 RVA: 0x00214125 File Offset: 0x00212325
+		// Token: 0x17004740 RID: 18240
+		// (get) Token: 0x0600EF31 RID: 61233 RVA: 0x00230EB9 File Offset: 0x0022F0B9
 		public virtual PosA TargetPos
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043DB RID: 17371
-		// (get) Token: 0x0600E114 RID: 57620 RVA: 0x0021415C File Offset: 0x0021235C
+		// Token: 0x17004741 RID: 18241
+		// (get) Token: 0x0600EF32 RID: 61234 RVA: 0x00230EF0 File Offset: 0x0022F0F0
 		public virtual List<int> ActorIdArray
 		{
 			get
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043DC RID: 17372
-		// (get) Token: 0x0600E115 RID: 57621 RVA: 0x002141D4 File Offset: 0x002123D4
+		// Token: 0x17004742 RID: 18242
+		// (get) Token: 0x0600EF33 RID: 61235 RVA: 0x00230F68 File Offset: 0x0022F168
 		public virtual List<int> TalkerIds
 		{
 			get
@@ -108,31 +108,31 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CA7 RID: 31911
+		// Token: 0x0400835D RID: 33629
 		private IChangeFlowTemplate Instance;
 
-		// Token: 0x04007CA8 RID: 31912
+		// Token: 0x0400835E RID: 33630
 		private IFlowTemplateMode _TemplateModeCache;
 
-		// Token: 0x04007CA9 RID: 31913
+		// Token: 0x0400835F RID: 33631
 		private bool _TemplateModeInited;
 
-		// Token: 0x04007CAA RID: 31914
+		// Token: 0x04008360 RID: 33632
 		private PosA _TargetPosCache;
 
-		// Token: 0x04007CAB RID: 31915
+		// Token: 0x04008361 RID: 33633
 		private bool _TargetPosInited;
 
-		// Token: 0x04007CAC RID: 31916
+		// Token: 0x04008362 RID: 33634
 		private List<int> _ActorIdArrayCache;
 
-		// Token: 0x04007CAD RID: 31917
+		// Token: 0x04008363 RID: 33635
 		private bool _ActorIdArrayInited;
 
-		// Token: 0x04007CAE RID: 31918
+		// Token: 0x04008364 RID: 33636
 		private List<int> _TalkerIdsCache;
 
-		// Token: 0x04007CAF RID: 31919
+		// Token: 0x04008365 RID: 33637
 		private bool _TalkerIdsInited;
 	}
 }

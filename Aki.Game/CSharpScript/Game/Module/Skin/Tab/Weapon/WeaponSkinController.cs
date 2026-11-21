@@ -8,30 +8,30 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 {
-	// Token: 0x02004BE6 RID: 19430
+	// Token: 0x02003B97 RID: 15255
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WeaponSkinController : UiControllerBase
 	{
-		// Token: 0x060323CC RID: 205772 RVA: 0x00BAB6B3 File Offset: 0x00BA98B3
+		// Token: 0x06027170 RID: 160112 RVA: 0x00AEFC52 File Offset: 0x00AEDE52
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
 		}
 
-		// Token: 0x060323CD RID: 205773 RVA: 0x00BAB6D1 File Offset: 0x00BA98D1
+		// Token: 0x06027171 RID: 160113 RVA: 0x00AEFC70 File Offset: 0x00AEDE70
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
 		}
 
-		// Token: 0x060323CE RID: 205774 RVA: 0x00BAB6EF File Offset: 0x00BA98EF
+		// Token: 0x06027172 RID: 160114 RVA: 0x00AEFC8E File Offset: 0x00AEDE8E
 		private void OnDataDone()
 		{
 			this.EquipSkinDataRequest();
 		}
 
-		// Token: 0x060323CF RID: 205775 RVA: 0x00BAB6F8 File Offset: 0x00BA98F8
+		// Token: 0x06027173 RID: 160115 RVA: 0x00AEFC98 File Offset: 0x00AEDE98
 		private void EquipSkinDataRequest()
 		{
 			LoadEquipInfoRequest message = LoadEquipInfoRequest.Create();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}, 0);
 		}
 
-		// Token: 0x060323D0 RID: 205776 RVA: 0x00BAB73C File Offset: 0x00BA993C
+		// Token: 0x06027174 RID: 160116 RVA: 0x00AEFCDC File Offset: 0x00AEDEDC
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.WeaponSkinAddNotify, delegate(IMessage msg, Net.CallbackStatus status)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			Net.Instance.Register(ENotifyMessageId.WeaponSkinUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnWeaponSkinUpdateNotify));
 		}
 
-		// Token: 0x060323D1 RID: 205777 RVA: 0x00BAB824 File Offset: 0x00BA9A24
+		// Token: 0x06027175 RID: 160117 RVA: 0x00AEFDC4 File Offset: 0x00AEDFC4
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.WeaponSkinAddNotify);
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			Net.Instance.UnRegister(ENotifyMessageId.WeaponSkinUpdateNotify);
 		}
 
-		// Token: 0x060323D2 RID: 205778 RVA: 0x00BAB884 File Offset: 0x00BA9A84
+		// Token: 0x06027176 RID: 160118 RVA: 0x00AEFE24 File Offset: 0x00AEE024
 		private unsafe void SendEquipSkinTakeOnRequest(int roleId, int skinId)
 		{
 			EquipSkinTakeOnRequest equipSkinTakeOnRequest = EquipSkinTakeOnRequest.Create();
@@ -140,11 +140,11 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 					instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(equipSkinTakeOnResponse.ErrorCode, 24452, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(equipSkinTakeOnResponse.ErrorCode, 26442, null, true, true);
 			}, 0);
 		}
 
-		// Token: 0x060323D3 RID: 205779 RVA: 0x00BAB8F8 File Offset: 0x00BA9AF8
+		// Token: 0x06027177 RID: 160119 RVA: 0x00AEFE98 File Offset: 0x00AEE098
 		private void SendEquipSkinUnLoadRequest(int roleId)
 		{
 			if (roleId <= 0)
@@ -162,12 +162,12 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 				}
 				if (equipSkinUnLoadResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(equipSkinUnLoadResponse.ErrorCode, 16037, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(equipSkinUnLoadResponse.ErrorCode, 15525, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x060323D4 RID: 205780 RVA: 0x00BAB947 File Offset: 0x00BA9B47
+		// Token: 0x06027178 RID: 160120 RVA: 0x00AEFEE7 File Offset: 0x00AEE0E7
 		public void SendEquipSkinRequest(int roleId, int skinId)
 		{
 			if (roleId <= 0)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			this.SendEquipSkinTakeOnRequest(roleId, skinId);
 		}
 
-		// Token: 0x060323D5 RID: 205781 RVA: 0x00BAB964 File Offset: 0x00BA9B64
+		// Token: 0x06027179 RID: 160121 RVA: 0x00AEFF04 File Offset: 0x00AEE104
 		[NullableContext(2)]
 		private void OnWeaponSkinUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			WeaponSkinModel.Instance.RefreshUnlockSkinData(weaponSkinUpdateNotify.SkinIds);
 		}
 
-		// Token: 0x060323D6 RID: 205782 RVA: 0x00BAB988 File Offset: 0x00BA9B88
+		// Token: 0x0602717A RID: 160122 RVA: 0x00AEFF28 File Offset: 0x00AEE128
 		public void OpenWeaponSkinShowView(List<int> skinIdList)
 		{
 			WeaponSkinShowViewData weaponSkinShowViewData = new WeaponSkinShowViewData();
@@ -198,8 +198,8 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			UiManager.Instance.OpenView(EUiViewName.WeaponSkinShowView, weaponSkinShowViewData, null);
 		}
 
-		// Token: 0x17007C6A RID: 31850
-		// (get) Token: 0x060323D7 RID: 205783 RVA: 0x00BAB9B3 File Offset: 0x00BA9BB3
+		// Token: 0x17005014 RID: 20500
+		// (get) Token: 0x0602717B RID: 160123 RVA: 0x00AEFF53 File Offset: 0x00AEE153
 		public static WeaponSkinController Instance
 		{
 			get
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}
 		}
 
-		// Token: 0x060323D8 RID: 205784 RVA: 0x00BAB9BA File Offset: 0x00BA9BBA
+		// Token: 0x0602717C RID: 160124 RVA: 0x00AEFF5A File Offset: 0x00AEE15A
 		public static WeaponSkinController GetOrCreateInstance()
 		{
 			if (WeaponSkinController._Instance == null)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			return WeaponSkinController._Instance;
 		}
 
-		// Token: 0x060323D9 RID: 205785 RVA: 0x00BAB9CE File Offset: 0x00BA9BCE
+		// Token: 0x0602717D RID: 160125 RVA: 0x00AEFF6E File Offset: 0x00AEE16E
 		public static bool CreateInstance()
 		{
 			if (WeaponSkinController._Instance != null)
@@ -229,24 +229,24 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			return true;
 		}
 
-		// Token: 0x060323DA RID: 205786 RVA: 0x00BAB9E4 File Offset: 0x00BA9BE4
+		// Token: 0x0602717E RID: 160126 RVA: 0x00AEFF84 File Offset: 0x00AEE184
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060323DB RID: 205787 RVA: 0x00BAB9E6 File Offset: 0x00BA9BE6
+		// Token: 0x0602717F RID: 160127 RVA: 0x00AEFF86 File Offset: 0x00AEE186
 		public static void ResetStaticDefaultValue()
 		{
 			WeaponSkinController._Instance = null;
 		}
 
-		// Token: 0x060323DC RID: 205788 RVA: 0x00BAB9EE File Offset: 0x00BA9BEE
+		// Token: 0x06027180 RID: 160128 RVA: 0x00AEFF8E File Offset: 0x00AEE18E
 		static WeaponSkinController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WeaponSkinController.CreateStaticDefaultValue), new Action(WeaponSkinController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401ABB9 RID: 109497
+		// Token: 0x04015514 RID: 87316
 		[Nullable(2)]
 		private static WeaponSkinController _Instance;
 	}

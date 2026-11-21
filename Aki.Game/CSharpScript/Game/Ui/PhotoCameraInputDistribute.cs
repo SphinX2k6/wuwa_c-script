@@ -6,10 +6,10 @@ using CSharpScript.Game.Camera.FightCameraController.SpecialGameplay;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200468A RID: 18058
+	// Token: 0x020035BB RID: 13755
 	public class PhotoCameraInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E99E RID: 190878 RVA: 0x00ACA4E0 File Offset: 0x00AC86E0
+		// Token: 0x060230E8 RID: 143592 RVA: 0x009F8214 File Offset: 0x009F6414
 		public unsafe override bool OnRefresh()
 		{
 			FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;

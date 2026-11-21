@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x0200282A RID: 10282
+// Token: 0x02001DA5 RID: 7589
 [NullableContext(1)]
 [Nullable(0)]
 public class NotObtainedRoleDevWeaponDetailItemData
 {
-	// Token: 0x060152DC RID: 86748 RVA: 0x0055B9E4 File Offset: 0x00559BE4
+	// Token: 0x06012CDA RID: 77018 RVA: 0x005866F8 File Offset: 0x005848F8
 	public void InitByWeaponType(int roleId, int weaponType)
 	{
 		int currentBreachLevel = 0;
@@ -32,7 +31,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		this.CollectForecastBreachItems(roleId, weaponItemConfig.Value, currentBreachLevel, targetBreachLevel);
 	}
 
-	// Token: 0x060152DD RID: 86749 RVA: 0x0055BA58 File Offset: 0x00559C58
+	// Token: 0x06012CDB RID: 77019 RVA: 0x0058676C File Offset: 0x0058496C
 	private int GetTotalNeedExp(int weaponType)
 	{
 		RoleDevWeaponItem? weaponItemConfig = this.GetWeaponItemConfig(weaponType);
@@ -53,13 +52,13 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		return weaponTypeExperienceArray[num.Value];
 	}
 
-	// Token: 0x060152DE RID: 86750 RVA: 0x0055BAB9 File Offset: 0x00559CB9
+	// Token: 0x06012CDC RID: 77020 RVA: 0x005867CD File Offset: 0x005849CD
 	private RoleDevWeaponItem? GetWeaponItemConfig(int weaponType)
 	{
 		return RoleDevConfig.Instance.GetRoleDevWeaponItemConfig(weaponType);
 	}
 
-	// Token: 0x060152DF RID: 86751 RVA: 0x0055BAC8 File Offset: 0x00559CC8
+	// Token: 0x06012CDD RID: 77021 RVA: 0x005867DC File Offset: 0x005849DC
 	private void CollectForecastUpgradeItemsWithExp(int roleId, int totalNeedExp)
 	{
 		global::IRoleDevDetailItemData roleDevDetailItemData = this.CreateForecastWeaponExpItemDetailDataWithExp(roleId, totalNeedExp);
@@ -69,7 +68,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		}
 	}
 
-	// Token: 0x060152E0 RID: 86752 RVA: 0x0055BAF0 File Offset: 0x00559CF0
+	// Token: 0x06012CDE RID: 77022 RVA: 0x00586804 File Offset: 0x00584A04
 	[NullableContext(2)]
 	private global::IRoleDevDetailItemData CreateForecastWeaponExpItemDetailDataWithExp(int roleId, int totalNeedExp)
 	{
@@ -86,7 +85,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		return this.BuildExpItemDetailData(roleId, list);
 	}
 
-	// Token: 0x060152E1 RID: 86753 RVA: 0x0055BB28 File Offset: 0x00559D28
+	// Token: 0x06012CDF RID: 77023 RVA: 0x0058683C File Offset: 0x00584A3C
 	private List<ItemDataBase> GetSortedExpItemList()
 	{
 		List<ItemInfo> weaponExpItemConfigList = WeaponModel.Instance.GetWeaponExpItemConfigList();
@@ -99,7 +98,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		return this.SortExpItemsByQuality(list);
 	}
 
-	// Token: 0x060152E2 RID: 86754 RVA: 0x0055BBB8 File Offset: 0x00559DB8
+	// Token: 0x06012CE0 RID: 77024 RVA: 0x005868CC File Offset: 0x00584ACC
 	private List<ItemDataBase> SortExpItemsByQuality(List<ItemDataBase> expItemList)
 	{
 		expItemList.Sort(delegate(ItemDataBase a, ItemDataBase b)
@@ -111,14 +110,14 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		return expItemList;
 	}
 
-	// Token: 0x060152E3 RID: 86755 RVA: 0x0055BBE0 File Offset: 0x00559DE0
+	// Token: 0x06012CE1 RID: 77025 RVA: 0x005868F4 File Offset: 0x00584AF4
 	private global::IRoleDevDetailItemData BuildExpItemDetailData(int roleId, List<global::IItemMaterial> totalMaterials)
 	{
 		List<global::IMaterialGroup> materialGroups = RoleDevUtils.GroupMaterialsByType(totalMaterials);
 		return RoleDevUtils.BuildDetailItemData(roleId, materialGroups, ERoleDevMainPage.Weapon)[0];
 	}
 
-	// Token: 0x060152E4 RID: 86756 RVA: 0x0055BC04 File Offset: 0x00559E04
+	// Token: 0x06012CE2 RID: 77026 RVA: 0x00586918 File Offset: 0x00584B18
 	private List<global::IItemMaterial> CalcRequiredExpMaterials(List<ItemDataBase> expItemList, int totalNeedExp)
 	{
 		List<global::IItemMaterial> list = new List<global::IItemMaterial>();
@@ -128,7 +127,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		return list;
 	}
 
-	// Token: 0x060152E5 RID: 86757 RVA: 0x0055BC30 File Offset: 0x00559E30
+	// Token: 0x06012CE3 RID: 77027 RVA: 0x00586944 File Offset: 0x00584B44
 	private int UseExistingExpItems(List<ItemDataBase> expItemList, int totalNeedExp, List<global::IItemMaterial> totalMaterials, int accumulatedExp)
 	{
 		int num = accumulatedExp;
@@ -157,7 +156,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		return num;
 	}
 
-	// Token: 0x060152E6 RID: 86758 RVA: 0x0055BD00 File Offset: 0x00559F00
+	// Token: 0x06012CE4 RID: 77028 RVA: 0x00586A14 File Offset: 0x00584C14
 	private void AddHighestQualityExpItemsIfNeeded(List<ItemDataBase> expItemList, int totalNeedExp, List<global::IItemMaterial> totalMaterials, int accumulatedExp)
 	{
 		if (accumulatedExp >= totalNeedExp || expItemList.Count == 0)
@@ -179,7 +178,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		});
 	}
 
-	// Token: 0x060152E7 RID: 86759 RVA: 0x0055BD84 File Offset: 0x00559F84
+	// Token: 0x06012CE5 RID: 77029 RVA: 0x00586A98 File Offset: 0x00584C98
 	private void CollectForecastBreachItems(int roleId, RoleDevWeaponItem weaponItemConfig, int currentBreachLevel, int targetBreachLevel)
 	{
 		int weaponItemGroup = weaponItemConfig.WeaponItemGroup;
@@ -197,7 +196,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		}
 	}
 
-	// Token: 0x060152E8 RID: 86760 RVA: 0x0055BDF4 File Offset: 0x00559FF4
+	// Token: 0x06012CE6 RID: 77030 RVA: 0x00586B08 File Offset: 0x00584D08
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -217,7 +216,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		return this.BuildBreachDetailItems(roleId, list);
 	}
 
-	// Token: 0x060152E9 RID: 86761 RVA: 0x0055BE28 File Offset: 0x0055A028
+	// Token: 0x06012CE7 RID: 77031 RVA: 0x00586B3C File Offset: 0x00584D3C
 	private List<global::IItemMaterial> CalculateBreachMaterials(int breakGroupId, int currentBreachLevel, int targetBreachLevel)
 	{
 		List<global::IItemMaterial> list = new List<global::IItemMaterial>();
@@ -232,7 +231,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		return list;
 	}
 
-	// Token: 0x060152EA RID: 86762 RVA: 0x0055BE6C File Offset: 0x0055A06C
+	// Token: 0x06012CE8 RID: 77032 RVA: 0x00586B80 File Offset: 0x00584D80
 	private void AddBreachLevelMaterials(WeaponBreach breachConfig, List<global::IItemMaterial> materials)
 	{
 		Dictionary<int, int> dictionary = breachConfig.Consume();
@@ -251,10 +250,18 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		}
 	}
 
-	// Token: 0x060152EB RID: 86763 RVA: 0x0055BEE0 File Offset: 0x0055A0E0
+	// Token: 0x06012CE9 RID: 77033 RVA: 0x00586BF4 File Offset: 0x00584DF4
 	private void AddOrUpdateMaterial(List<global::IItemMaterial> materials, int itemId, int count)
 	{
-		global::IItemMaterial itemMaterial = materials.FirstOrDefault((global::IItemMaterial material) => material.ItemId == itemId);
+		global::IItemMaterial itemMaterial = null;
+		foreach (global::IItemMaterial itemMaterial2 in materials)
+		{
+			if (itemMaterial2.ItemId == itemId)
+			{
+				itemMaterial = itemMaterial2;
+				break;
+			}
+		}
 		if (itemMaterial != null)
 		{
 			itemMaterial.RequiredCount += count;
@@ -267,7 +274,7 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		});
 	}
 
-	// Token: 0x060152EC RID: 86764 RVA: 0x0055BF40 File Offset: 0x0055A140
+	// Token: 0x06012CEA RID: 77034 RVA: 0x00586C78 File Offset: 0x00584E78
 	private List<global::IRoleDevDetailItemData> BuildBreachDetailItems(int roleId, List<global::IItemMaterial> materials)
 	{
 		List<global::IMaterialGroup> materialGroups = RoleDevUtils.GroupMaterialsByType(materials);
@@ -279,8 +286,8 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		return list;
 	}
 
-	// Token: 0x17001C11 RID: 7185
-	// (get) Token: 0x060152ED RID: 86765 RVA: 0x0055BF6D File Offset: 0x0055A16D
+	// Token: 0x17001C69 RID: 7273
+	// (get) Token: 0x06012CEB RID: 77035 RVA: 0x00586CA5 File Offset: 0x00584EA5
 	public List<global::IRoleDevDetailItemData> DetailItems
 	{
 		get
@@ -289,6 +296,6 @@ public class NotObtainedRoleDevWeaponDetailItemData
 		}
 	}
 
-	// Token: 0x04009E90 RID: 40592
+	// Token: 0x0400A279 RID: 41593
 	private List<global::IRoleDevDetailItemData> DetailItemsInternal = new List<global::IRoleDevDetailItemData>();
 }

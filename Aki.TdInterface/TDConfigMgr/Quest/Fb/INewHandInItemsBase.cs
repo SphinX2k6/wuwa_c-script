@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200137C RID: 4988
+	// Token: 0x020014CD RID: 5325
 	public class INewHandInItemsBase
 	{
-		// Token: 0x06007227 RID: 29223 RVA: 0x00112CDE File Offset: 0x00110EDE
-		[NullableContext(1)]
+		// Token: 0x060078CD RID: 30925 RVA: 0x00121362 File Offset: 0x0011F562
 		public static INewHandInItemsBase Create(INewHandInItemsBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002502 RID: 9474
-		// (get) Token: 0x06007228 RID: 29224 RVA: 0x00112CFD File Offset: 0x00110EFD
+		// Token: 0x170026D5 RID: 9941
+		// (get) Token: 0x060078CE RID: 30926 RVA: 0x00121381 File Offset: 0x0011F581
 		public virtual ENewHandInItemsType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004200 RID: 16896
+		// Token: 0x04004581 RID: 17793
 		private INewHandInItemsBase Instance;
 	}
 }

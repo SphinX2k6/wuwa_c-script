@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 {
-	// Token: 0x02006E54 RID: 28244
+	// Token: 0x02005FD5 RID: 24533
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FindSunSpiritPerformManager
 	{
-		// Token: 0x06044D6A RID: 281962 RVA: 0x010FD370 File Offset: 0x010FB570
+		// Token: 0x0603AEF7 RID: 241399 RVA: 0x010A78D0 File Offset: 0x010A5AD0
 		public UniTask RefreshPerformAsync(bool isLevelConfigChange, bool withLoading)
 		{
 			FindSunSpiritPerformManager.<RefreshPerformAsync>d__19 <RefreshPerformAsync>d__;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			return <RefreshPerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D6B RID: 281963 RVA: 0x010FD3C4 File Offset: 0x010FB5C4
+		// Token: 0x0603AEF8 RID: 241400 RVA: 0x010A7924 File Offset: 0x010A5B24
 		private UniTask RefreshLoading(bool isOpen)
 		{
 			FindSunSpiritPerformManager.<RefreshLoading>d__20 <RefreshLoading>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			return <RefreshLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D6C RID: 281964 RVA: 0x010FD408 File Offset: 0x010FB608
+		// Token: 0x0603AEF9 RID: 241401 RVA: 0x010A7968 File Offset: 0x010A5B68
 		private void StopSunSpiritEndMontage()
 		{
 			SunSpiritActionManager actionManager = this.ActionManager;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			this.FinishStartGridIndexSet.Clear();
 		}
 
-		// Token: 0x06044D6D RID: 281965 RVA: 0x010FD4A0 File Offset: 0x010FB6A0
+		// Token: 0x0603AEFA RID: 241402 RVA: 0x010A7A00 File Offset: 0x010A5C00
 		private void InitConfig()
 		{
 			if (this.IsGlobalInit)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			}
 		}
 
-		// Token: 0x06044D6E RID: 281966 RVA: 0x010FD580 File Offset: 0x010FB780
+		// Token: 0x0603AEFB RID: 241403 RVA: 0x010A7AE0 File Offset: 0x010A5CE0
 		private UniTask RefreshLevelFloor()
 		{
 			FindSunSpiritPerformManager.<RefreshLevelFloor>d__23 <RefreshLevelFloor>d__;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			return <RefreshLevelFloor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D6F RID: 281967 RVA: 0x010FD5C4 File Offset: 0x010FB7C4
+		// Token: 0x0603AEFC RID: 241404 RVA: 0x010A7B24 File Offset: 0x010A5D24
 		private UniTask WaitSunSpiritEntity()
 		{
 			FindSunSpiritPerformManager.<WaitSunSpiritEntity>d__24 <WaitSunSpiritEntity>d__;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			return <WaitSunSpiritEntity>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D70 RID: 281968 RVA: 0x010FD608 File Offset: 0x010FB808
+		// Token: 0x0603AEFD RID: 241405 RVA: 0x010A7B68 File Offset: 0x010A5D68
 		private UniTask RefreshSunSpirit()
 		{
 			FindSunSpiritPerformManager.<RefreshSunSpirit>d__25 <RefreshSunSpirit>d__;
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			return <RefreshSunSpirit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D71 RID: 281969 RVA: 0x010FD64C File Offset: 0x010FB84C
+		// Token: 0x0603AEFE RID: 241406 RVA: 0x010A7BAC File Offset: 0x010A5DAC
 		private UniTask RefreshModifierPerformAsync(bool isLevelConfigChange)
 		{
 			FindSunSpiritPerformManager.<RefreshModifierPerformAsync>d__26 <RefreshModifierPerformAsync>d__;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			return <RefreshModifierPerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D72 RID: 281970 RVA: 0x010FD698 File Offset: 0x010FB898
+		// Token: 0x0603AEFF RID: 241407 RVA: 0x010A7BF8 File Offset: 0x010A5DF8
 		private void RefreshGuideLine()
 		{
 			FindSunSpiritModel instance = FindSunSpiritModel.Instance;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			}
 		}
 
-		// Token: 0x06044D73 RID: 281971 RVA: 0x010FD760 File Offset: 0x010FB960
+		// Token: 0x0603AF00 RID: 241408 RVA: 0x010A7CC0 File Offset: 0x010A5EC0
 		public void SelectModifier(int releaseGridIndex, int selectGridIndex)
 		{
 			FindSunSpiritLevelModifier findSunSpiritLevelModifier;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			levelFloor.RefreshOutline();
 		}
 
-		// Token: 0x06044D74 RID: 281972 RVA: 0x010FD7AC File Offset: 0x010FB9AC
+		// Token: 0x0603AF01 RID: 241409 RVA: 0x010A7D0C File Offset: 0x010A5F0C
 		public void TriggerModifier(int gridIndex)
 		{
 			FindSunSpiritLevelModifier findSunSpiritLevelModifier;
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			levelFloor.RefreshFloor();
 		}
 
-		// Token: 0x06044D75 RID: 281973 RVA: 0x010FD830 File Offset: 0x010FBA30
+		// Token: 0x0603AF02 RID: 241410 RVA: 0x010A7D90 File Offset: 0x010A5F90
 		public void ShowGuideLine(List<int> path, bool isReachEnd)
 		{
 			int key = path[0];
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			findSunSpiritGuideLine.SpawnGuideLine(isReachEnd ? this.SuccessGuideLinePath : this.FailGuideLinePath, list.ToArray(), this.GuideLineDuration);
 		}
 
-		// Token: 0x06044D76 RID: 281974 RVA: 0x010FD95C File Offset: 0x010FBB5C
+		// Token: 0x0603AF03 RID: 241411 RVA: 0x010A7EBC File Offset: 0x010A60BC
 		public UniTask PlaySunSpiritPerformAsync([Nullable(new byte[]
 		{
 			2,
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			return <PlaySunSpiritPerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D77 RID: 281975 RVA: 0x010FD9A8 File Offset: 0x010FBBA8
+		// Token: 0x0603AF04 RID: 241412 RVA: 0x010A7F08 File Offset: 0x010A6108
 		public void ClearPerform(bool revertSunSpirit)
 		{
 			if (revertSunSpirit)
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			this.SunSpiritOriginInfoList.Clear();
 		}
 
-		// Token: 0x06044D78 RID: 281976 RVA: 0x010FDB4C File Offset: 0x010FBD4C
+		// Token: 0x0603AF05 RID: 241413 RVA: 0x010A80AC File Offset: 0x010A62AC
 		private void GetSunSpiritLocation(int gridIndex, float halfHeight, Vector outVector)
 		{
 			int levelFloorGridSize = this.LevelFloorGridSize;
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			outVector.AdditionEqual(instance.LevelPosition);
 		}
 
-		// Token: 0x06044D79 RID: 281977 RVA: 0x010FDBC0 File Offset: 0x010FBDC0
+		// Token: 0x0603AF06 RID: 241414 RVA: 0x010A8120 File Offset: 0x010A6320
 		private void GetModifierLocation(int gridIndex, Vector outVector)
 		{
 			int levelFloorGridSize = this.LevelFloorGridSize;
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			outVector.AdditionEqual(instance.LevelPosition);
 		}
 
-		// Token: 0x06044D7A RID: 281978 RVA: 0x010FDC24 File Offset: 0x010FBE24
+		// Token: 0x0603AF07 RID: 241415 RVA: 0x010A8184 File Offset: 0x010A6384
 		private void GetGridLocation(int gridIndex, float horizontalOffsetScale, float verticalOffsetScale, Vector outVector)
 		{
 			int levelFloorGridSize = this.LevelFloorGridSize;
@@ -365,64 +365,64 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance
 			outVector.AdditionEqual(instance.LevelPosition);
 		}
 
-		// Token: 0x04023D0B RID: 146699
+		// Token: 0x0401EFC0 RID: 126912
 		private const float NIAGARA_SCALE_SIZE = 0.185f;
 
-		// Token: 0x04023D0C RID: 146700
+		// Token: 0x0401EFC1 RID: 126913
 		private bool IsGlobalInit;
 
-		// Token: 0x04023D0D RID: 146701
+		// Token: 0x0401EFC2 RID: 126914
 		private string LevelFloorPath = "";
 
-		// Token: 0x04023D0E RID: 146702
+		// Token: 0x0401EFC3 RID: 126915
 		private string ModifyPrefabPath = "";
 
-		// Token: 0x04023D0F RID: 146703
+		// Token: 0x0401EFC4 RID: 126916
 		private string SuccessGuideLinePath = "";
 
-		// Token: 0x04023D10 RID: 146704
+		// Token: 0x0401EFC5 RID: 126917
 		private string FailGuideLinePath = "";
 
-		// Token: 0x04023D11 RID: 146705
+		// Token: 0x0401EFC6 RID: 126918
 		private int GuideLineDuration;
 
-		// Token: 0x04023D12 RID: 146706
+		// Token: 0x0401EFC7 RID: 126919
 		private int LevelFloorGridSize;
 
-		// Token: 0x04023D13 RID: 146707
+		// Token: 0x0401EFC8 RID: 126920
 		private int TriggerDuration;
 
-		// Token: 0x04023D14 RID: 146708
+		// Token: 0x0401EFC9 RID: 126921
 		[Nullable(2)]
 		private FindSunSpiritLevelFloor LevelFloor;
 
-		// Token: 0x04023D15 RID: 146709
+		// Token: 0x0401EFCA RID: 126922
 		private Dictionary<int, FindSunSpiritLevelModifier> GridIndexToModifierMap = new Dictionary<int, FindSunSpiritLevelModifier>();
 
-		// Token: 0x04023D16 RID: 146710
+		// Token: 0x0401EFCB RID: 126923
 		private readonly Dictionary<int, FindSunSpiritGuideLine> StartGridIndexToGuideLineMap = new Dictionary<int, FindSunSpiritGuideLine>();
 
-		// Token: 0x04023D17 RID: 146711
+		// Token: 0x0401EFCC RID: 126924
 		[Nullable(2)]
 		private FindSunSpiritShootEffect ShootEffect;
 
-		// Token: 0x04023D18 RID: 146712
+		// Token: 0x0401EFCD RID: 126925
 		public List<EntityHandle> SunSpiritEntityHandleList = new List<EntityHandle>();
 
-		// Token: 0x04023D19 RID: 146713
+		// Token: 0x0401EFCE RID: 126926
 		[Nullable(2)]
 		private SunSpiritActionManager ActionManager;
 
-		// Token: 0x04023D1A RID: 146714
+		// Token: 0x0401EFCF RID: 126927
 		private readonly List<ISunSpiritOriginInfo> SunSpiritOriginInfoList = new List<ISunSpiritOriginInfo>();
 
-		// Token: 0x04023D1B RID: 146715
+		// Token: 0x0401EFD0 RID: 126928
 		private readonly Dictionary<int, EntityHandle> StartGridIndexToSunSpiritMap = new Dictionary<int, EntityHandle>();
 
-		// Token: 0x04023D1C RID: 146716
+		// Token: 0x0401EFD1 RID: 126929
 		private readonly HashSet<int> FinishStartGridIndexSet = new HashSet<int>();
 
-		// Token: 0x04023D1D RID: 146717
+		// Token: 0x0401EFD2 RID: 126930
 		private readonly List<Vector> TempVectorList = new List<Vector>();
 	}
 }

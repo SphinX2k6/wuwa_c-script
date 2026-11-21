@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F1C RID: 3868
+	// Token: 0x02001001 RID: 4097
 	public struct PhotoWeather : IFlatbufferObject
 	{
-		// Token: 0x170028AB RID: 10411
-		// (get) Token: 0x0600AD84 RID: 44420 RVA: 0x002BE6AC File Offset: 0x002BC8AC
+		// Token: 0x17002911 RID: 10513
+		// (get) Token: 0x0600B3A5 RID: 45989 RVA: 0x002DB288 File Offset: 0x002D9488
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AD85 RID: 44421 RVA: 0x002BE6B9 File Offset: 0x002BC8B9
+		// Token: 0x0600B3A6 RID: 45990 RVA: 0x002DB295 File Offset: 0x002D9495
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AD86 RID: 44422 RVA: 0x002BE6C0 File Offset: 0x002BC8C0
+		// Token: 0x0600B3A7 RID: 45991 RVA: 0x002DB29C File Offset: 0x002D949C
 		public static PhotoWeather GetRootAsPhotoWeather(ByteBuffer _bb)
 		{
 			return PhotoWeather.GetRootAsPhotoWeather(_bb, default(PhotoWeather));
 		}
 
-		// Token: 0x0600AD87 RID: 44423 RVA: 0x002BE6DC File Offset: 0x002BC8DC
+		// Token: 0x0600B3A8 RID: 45992 RVA: 0x002DB2B8 File Offset: 0x002D94B8
 		public static PhotoWeather GetRootAsPhotoWeather(ByteBuffer _bb, PhotoWeather obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AD88 RID: 44424 RVA: 0x002BE6F9 File Offset: 0x002BC8F9
+		// Token: 0x0600B3A9 RID: 45993 RVA: 0x002DB2D5 File Offset: 0x002D94D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AD89 RID: 44425 RVA: 0x002BE708 File Offset: 0x002BC908
+		// Token: 0x0600B3AA RID: 45994 RVA: 0x002DB2E4 File Offset: 0x002D94E4
 		public PhotoWeather __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170028AC RID: 10412
-		// (get) Token: 0x0600AD8A RID: 44426 RVA: 0x002BE718 File Offset: 0x002BC918
+		// Token: 0x17002912 RID: 10514
+		// (get) Token: 0x0600B3AB RID: 45995 RVA: 0x002DB2F4 File Offset: 0x002D94F4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170028AD RID: 10413
-		// (get) Token: 0x0600AD8B RID: 44427 RVA: 0x002BE754 File Offset: 0x002BC954
+		// Token: 0x17002913 RID: 10515
+		// (get) Token: 0x0600B3AC RID: 45996 RVA: 0x002DB330 File Offset: 0x002D9530
 		public string Icon
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AD8C RID: 44428 RVA: 0x002BE78B File Offset: 0x002BC98B
+		// Token: 0x0600B3AD RID: 45997 RVA: 0x002DB367 File Offset: 0x002D9567
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600AD8D RID: 44429 RVA: 0x002BE79A File Offset: 0x002BC99A
+		// Token: 0x0600B3AE RID: 45998 RVA: 0x002DB376 File Offset: 0x002D9576
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170028AE RID: 10414
-		// (get) Token: 0x0600AD8E RID: 44430 RVA: 0x002BE7B4 File Offset: 0x002BC9B4
+		// Token: 0x17002914 RID: 10516
+		// (get) Token: 0x0600B3AF RID: 45999 RVA: 0x002DB390 File Offset: 0x002D9590
 		public string Name
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AD8F RID: 44431 RVA: 0x002BE7EB File Offset: 0x002BC9EB
+		// Token: 0x0600B3B0 RID: 46000 RVA: 0x002DB3C7 File Offset: 0x002D95C7
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600AD90 RID: 44432 RVA: 0x002BE7FA File Offset: 0x002BC9FA
+		// Token: 0x0600B3B1 RID: 46001 RVA: 0x002DB3D6 File Offset: 0x002D95D6
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170028AF RID: 10415
-		// (get) Token: 0x0600AD91 RID: 44433 RVA: 0x002BE814 File Offset: 0x002BCA14
+		// Token: 0x17002915 RID: 10517
+		// (get) Token: 0x0600B3B2 RID: 46002 RVA: 0x002DB3F0 File Offset: 0x002D95F0
 		public bool IsDefault
 		{
 			get
@@ -127,7 +127,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004FE5 RID: 20453
+		// Token: 0x040055CA RID: 21962
 		private Table __p;
 	}
 }

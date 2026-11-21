@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000638 RID: 1592
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006D5 RID: 1749
 	public class IQteCallback
 	{
-		// Token: 0x06002200 RID: 8704 RVA: 0x0005DAD0 File Offset: 0x0005BCD0
+		// Token: 0x06002506 RID: 9478 RVA: 0x000647E4 File Offset: 0x000629E4
 		private IQteCallback_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002201 RID: 8705 RVA: 0x0005DB08 File Offset: 0x0005BD08
+		// Token: 0x06002507 RID: 9479 RVA: 0x0006481C File Offset: 0x00062A1C
 		public static IQteCallback Create([Nullable(2)] IQteCallback instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002202 RID: 8706 RVA: 0x0005DB1B File Offset: 0x0005BD1B
+		// Token: 0x06002508 RID: 9480 RVA: 0x0006482F File Offset: 0x00062A2F
 		public static IQteCallback CreateFromSetValue([Nullable(2)] IQteCallback_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002203 RID: 8707 RVA: 0x0005DB2E File Offset: 0x0005BD2E
+		// Token: 0x06002509 RID: 9481 RVA: 0x00064842 File Offset: 0x00062A42
 		public IQteCallback_SetValue ToSetValue()
 		{
 			return new IQteCallback_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700090B RID: 2315
-		// (get) Token: 0x06002204 RID: 8708 RVA: 0x0005DB50 File Offset: 0x0005BD50
-		// (set) Token: 0x06002205 RID: 8709 RVA: 0x0005DBE3 File Offset: 0x0005BDE3
+		// Token: 0x170009C2 RID: 2498
+		// (get) Token: 0x0600250A RID: 9482 RVA: 0x00064864 File Offset: 0x00062A64
+		// (set) Token: 0x0600250B RID: 9483 RVA: 0x000648F7 File Offset: 0x00062AF7
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			get
@@ -101,9 +99,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700090C RID: 2316
-		// (get) Token: 0x06002206 RID: 8710 RVA: 0x0005DBF8 File Offset: 0x0005BDF8
-		// (set) Token: 0x06002207 RID: 8711 RVA: 0x0005DC1F File Offset: 0x0005BE1F
+		// Token: 0x170009C3 RID: 2499
+		// (get) Token: 0x0600250C RID: 9484 RVA: 0x0006490C File Offset: 0x00062B0C
+		// (set) Token: 0x0600250D RID: 9485 RVA: 0x00064933 File Offset: 0x00062B33
 		[Nullable(2)]
 		public virtual string SendSelfEvent
 		{
@@ -128,18 +126,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040017A7 RID: 6055
+		// Token: 0x04001999 RID: 6553
 		[Nullable(2)]
 		protected IQteCallback FbInstance;
 
-		// Token: 0x040017A8 RID: 6056
+		// Token: 0x0400199A RID: 6554
 		[Nullable(2)]
 		protected IQteCallback_SetValue PocoInterface;
 
-		// Token: 0x040017A9 RID: 6057
+		// Token: 0x0400199B RID: 6555
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x040017AA RID: 6058
+		// Token: 0x0400199C RID: 6556
 		private bool _ActionsInited;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E94 RID: 24212
+	// Token: 0x020064D7 RID: 25815
 	public class TProcessedValueUnion
 	{
-		// Token: 0x1700B4DF RID: 46303
-		// (get) Token: 0x0602975E RID: 169822 RVA: 0x005AE4DE File Offset: 0x005AC6DE
-		// (set) Token: 0x0602975F RID: 169823 RVA: 0x005AE4E6 File Offset: 0x005AC6E6
+		// Token: 0x1700BE4A RID: 48714
+		// (get) Token: 0x0602BE06 RID: 179718 RVA: 0x005F7482 File Offset: 0x005F5682
+		// (set) Token: 0x0602BE07 RID: 179719 RVA: 0x005F748A File Offset: 0x005F568A
 		public TProcessedValue Type { get; set; }
 
-		// Token: 0x1700B4E0 RID: 46304
-		// (get) Token: 0x06029760 RID: 169824 RVA: 0x005AE4EF File Offset: 0x005AC6EF
-		// (set) Token: 0x06029761 RID: 169825 RVA: 0x005AE4F7 File Offset: 0x005AC6F7
+		// Token: 0x1700BE4B RID: 48715
+		// (get) Token: 0x0602BE08 RID: 179720 RVA: 0x005F7493 File Offset: 0x005F5693
+		// (set) Token: 0x0602BE09 RID: 179721 RVA: 0x005F749B File Offset: 0x005F569B
 		public object Value { get; set; }
 
-		// Token: 0x06029762 RID: 169826 RVA: 0x005AE500 File Offset: 0x005AC700
+		// Token: 0x0602BE0A RID: 179722 RVA: 0x005F74A4 File Offset: 0x005F56A4
 		public TProcessedValueUnion()
 		{
 			this.Type = TProcessedValue.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06029763 RID: 169827 RVA: 0x005AE516 File Offset: 0x005AC716
+		// Token: 0x0602BE0B RID: 179723 RVA: 0x005F74BA File Offset: 0x005F56BA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06029764 RID: 169828 RVA: 0x005AE528 File Offset: 0x005AC728
+		// Token: 0x0602BE0C RID: 179724 RVA: 0x005F74CC File Offset: 0x005F56CC
 		public IProcessedValueConstantT AsIProcessedValueConstant()
 		{
 			return this.As<IProcessedValueConstantT>();
 		}
 
-		// Token: 0x06029765 RID: 169829 RVA: 0x005AE530 File Offset: 0x005AC730
+		// Token: 0x0602BE0D RID: 179725 RVA: 0x005F74D4 File Offset: 0x005F56D4
 		public static TProcessedValueUnion FromIProcessedValueConstant(IProcessedValueConstantT _iprocessedvalueconstant)
 		{
 			return new TProcessedValueUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029766 RID: 169830 RVA: 0x005AE545 File Offset: 0x005AC745
+		// Token: 0x0602BE0E RID: 179726 RVA: 0x005F74E9 File Offset: 0x005F56E9
 		public IProcessedValueConstraintT AsIProcessedValueConstraint()
 		{
 			return this.As<IProcessedValueConstraintT>();
 		}
 
-		// Token: 0x06029767 RID: 169831 RVA: 0x005AE54D File Offset: 0x005AC74D
+		// Token: 0x0602BE0F RID: 179727 RVA: 0x005F74F1 File Offset: 0x005F56F1
 		public static TProcessedValueUnion FromIProcessedValueConstraint(IProcessedValueConstraintT _iprocessedvalueconstraint)
 		{
 			return new TProcessedValueUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029768 RID: 169832 RVA: 0x005AE564 File Offset: 0x005AC764
+		// Token: 0x0602BE10 RID: 179728 RVA: 0x005F7508 File Offset: 0x005F5708
 		public static int Pack(FlatBufferBuilder builder, TProcessedValueUnion _o)
 		{
 			TProcessedValue type = _o.Type;

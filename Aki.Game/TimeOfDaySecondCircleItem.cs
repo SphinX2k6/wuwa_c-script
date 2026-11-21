@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002BB8 RID: 11192
+// Token: 0x02002133 RID: 8499
 [NullableContext(1)]
 [Nullable(0)]
 public class TimeOfDaySecondCircleItem : AutoAttachExhibitionItemAbstract
 {
-	// Token: 0x06017335 RID: 95029 RVA: 0x005E1D08 File Offset: 0x005DFF08
+	// Token: 0x06014D66 RID: 85350 RVA: 0x0060E8DC File Offset: 0x0060CADC
 	public TimeOfDaySecondCircleItem(AActor uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x06017336 RID: 95030 RVA: 0x005E1D68 File Offset: 0x005DFF68
+	// Token: 0x06014D67 RID: 85351 RVA: 0x0060E93C File Offset: 0x0060CB3C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -48,7 +48,7 @@ public class TimeOfDaySecondCircleItem : AutoAttachExhibitionItemAbstract
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06017337 RID: 95031 RVA: 0x005E1E95 File Offset: 0x005E0095
+	// Token: 0x06014D68 RID: 85352 RVA: 0x0060EA69 File Offset: 0x0060CC69
 	public override void RefreshItem(int showItemIndex)
 	{
 		this.CurrentShowItemIndex = showItemIndex;
@@ -57,7 +57,7 @@ public class TimeOfDaySecondCircleItem : AutoAttachExhibitionItemAbstract
 		this.RefreshArrow();
 	}
 
-	// Token: 0x06017338 RID: 95032 RVA: 0x005E1EB8 File Offset: 0x005E00B8
+	// Token: 0x06014D69 RID: 85353 RVA: 0x0060EA8C File Offset: 0x0060CC8C
 	private void RefreshShowText()
 	{
 		if (this.CurrentItemData != null)
@@ -68,7 +68,7 @@ public class TimeOfDaySecondCircleItem : AutoAttachExhibitionItemAbstract
 		}
 	}
 
-	// Token: 0x06017339 RID: 95033 RVA: 0x005E1F08 File Offset: 0x005E0108
+	// Token: 0x06014D6A RID: 85354 RVA: 0x0060EADC File Offset: 0x0060CCDC
 	private void RefreshArrow()
 	{
 		if (this.CurrentItemData != null)
@@ -86,13 +86,13 @@ public class TimeOfDaySecondCircleItem : AutoAttachExhibitionItemAbstract
 		}
 	}
 
-	// Token: 0x0601733A RID: 95034 RVA: 0x005E1F6B File Offset: 0x005E016B
+	// Token: 0x06014D6B RID: 85355 RVA: 0x0060EB3F File Offset: 0x0060CD3F
 	public override void SetData(object param)
 	{
 		this.Data = (TimeOfDaySecondItemSt[])param;
 	}
 
-	// Token: 0x0601733B RID: 95035 RVA: 0x005E1F7C File Offset: 0x005E017C
+	// Token: 0x06014D6C RID: 85356 RVA: 0x0060EB50 File Offset: 0x0060CD50
 	public override void OnMoveItem(float offset)
 	{
 		float width = base.GetAttachItem().ExhibitionView.ItemActor.GetWidth();
@@ -167,19 +167,19 @@ public class TimeOfDaySecondCircleItem : AutoAttachExhibitionItemAbstract
 		rootItem.SetUIItemScale(uiitemScale2);
 	}
 
-	// Token: 0x0601733C RID: 95036 RVA: 0x005E2222 File Offset: 0x005E0422
+	// Token: 0x06014D6D RID: 85357 RVA: 0x0060EDF6 File Offset: 0x0060CFF6
 	public override void OnUnSelect()
 	{
 	}
 
-	// Token: 0x0601733D RID: 95037 RVA: 0x005E2224 File Offset: 0x005E0424
+	// Token: 0x06014D6E RID: 85358 RVA: 0x0060EDF8 File Offset: 0x0060CFF8
 	public override void OnSelect()
 	{
 		TimeOfDayModel.Instance.CurrentSelectTimeItemSt = this.CurrentItemData;
 		EventSystem.Instance.Emit(EEventName.OnSelectTimeItem);
 	}
 
-	// Token: 0x0400ADBF RID: 44479
+	// Token: 0x0400B1C4 RID: 45508
 	[Nullable(new byte[]
 	{
 		2,
@@ -187,81 +187,81 @@ public class TimeOfDaySecondCircleItem : AutoAttachExhibitionItemAbstract
 	})]
 	private TimeOfDaySecondItemSt[] Data;
 
-	// Token: 0x0400ADC0 RID: 44480
+	// Token: 0x0400B1C5 RID: 45509
 	[Nullable(2)]
 	private TimeOfDaySecondItemSt CurrentItemData;
 
-	// Token: 0x0400ADC1 RID: 44481
+	// Token: 0x0400B1C6 RID: 45510
 	private readonly Rotator ArrowRotator = Rotator.Create();
 
-	// Token: 0x0400ADC2 RID: 44482
+	// Token: 0x0400B1C7 RID: 45511
 	private readonly FVector DefaultScale = new FVector(0.9f, 0.9f, 0.9f);
 
-	// Token: 0x0400ADC3 RID: 44483
+	// Token: 0x0400B1C8 RID: 45512
 	private const float ANIMAL_SCALE = 0.9f;
 
-	// Token: 0x0400ADC4 RID: 44484
+	// Token: 0x0400B1C9 RID: 45513
 	private const int MIDDLE_TIME = 12;
 
-	// Token: 0x0400ADC5 RID: 44485
+	// Token: 0x0400B1CA RID: 45514
 	private const int FULL_ANGLE = 360;
 
-	// Token: 0x0400ADC6 RID: 44486
+	// Token: 0x0400B1CB RID: 45515
 	private const int ONE_HOUR_ANGLE = 30;
 
-	// Token: 0x0400ADC7 RID: 44487
+	// Token: 0x0400B1CC RID: 45516
 	private const float LEFT_RANGE = 0.4f;
 
-	// Token: 0x0400ADC8 RID: 44488
+	// Token: 0x0400B1CD RID: 45517
 	private const float MIDDLE_RANGE = 0.5f;
 
-	// Token: 0x0400ADC9 RID: 44489
+	// Token: 0x0400B1CE RID: 45518
 	private const float RIGHT_RANGE = 0.6f;
 
-	// Token: 0x0400ADCA RID: 44490
+	// Token: 0x0400B1CF RID: 45519
 	private const float BORDER_ALPHA = 0.65f;
 
-	// Token: 0x0400ADCB RID: 44491
+	// Token: 0x0400B1D0 RID: 45520
 	private const float BORDER_RIGHT = 0.9f;
 
-	// Token: 0x0400ADCC RID: 44492
+	// Token: 0x0400B1D1 RID: 45521
 	private const float BORDER_LEFT = 0.1f;
 
-	// Token: 0x0400ADCD RID: 44493
+	// Token: 0x0400B1D2 RID: 45522
 	private const float BORDER_LEFT_HIDE = 0.04f;
 
-	// Token: 0x0400ADCE RID: 44494
+	// Token: 0x0400B1D3 RID: 45523
 	private const float BORDER_RIGHT_HIDE = 0.96f;
 
-	// Token: 0x0400ADCF RID: 44495
+	// Token: 0x0400B1D4 RID: 45524
 	private const float BORDER_MIDDLE = 0.5f;
 
-	// Token: 0x0400ADD0 RID: 44496
+	// Token: 0x0400B1D5 RID: 45525
 	private const float STONE2_BORDER_LEFT = 0.3f;
 
-	// Token: 0x0400ADD1 RID: 44497
+	// Token: 0x0400B1D6 RID: 45526
 	private const float STONE2_BORDER_RIGHT = 0.7f;
 
-	// Token: 0x0400ADD2 RID: 44498
+	// Token: 0x0400B1D7 RID: 45527
 	private readonly Action OnClickStoneBtn = delegate()
 	{
 	};
 
-	// Token: 0x02009170 RID: 37232
+	// Token: 0x020083B4 RID: 33716
 	[NullableContext(0)]
 	private enum ETimeOfDaySecondItemComponents
 	{
-		// Token: 0x0402F13B RID: 192827
+		// Token: 0x0402A841 RID: 174145
 		Arrow,
-		// Token: 0x0402F13C RID: 192828
+		// Token: 0x0402A842 RID: 174146
 		TimeText,
-		// Token: 0x0402F13D RID: 192829
+		// Token: 0x0402A843 RID: 174147
 		CurrentTimeShowText,
-		// Token: 0x0402F13E RID: 192830
+		// Token: 0x0402A844 RID: 174148
 		StoneBtn,
-		// Token: 0x0402F13F RID: 192831
+		// Token: 0x0402A845 RID: 174149
 		StoneMixTexture,
-		// Token: 0x0402F140 RID: 192832
+		// Token: 0x0402A846 RID: 174150
 		SelfItem
 	}
 }

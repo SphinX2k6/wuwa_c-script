@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EE2 RID: 3810
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FF8 RID: 4088
 	public class ICameraCondition
 	{
-		// Token: 0x06005408 RID: 21512 RVA: 0x000CE710 File Offset: 0x000CC910
+		// Token: 0x06005984 RID: 22916 RVA: 0x000DA8B8 File Offset: 0x000D8AB8
 		private ICameraCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005409 RID: 21513 RVA: 0x000CE748 File Offset: 0x000CC948
+		// Token: 0x06005985 RID: 22917 RVA: 0x000DA8F0 File Offset: 0x000D8AF0
 		public static ICameraCondition Create([Nullable(2)] ICameraCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600540A RID: 21514 RVA: 0x000CE75B File Offset: 0x000CC95B
+		// Token: 0x06005986 RID: 22918 RVA: 0x000DA903 File Offset: 0x000D8B03
 		public static ICameraCondition CreateFromSetValue([Nullable(2)] ICameraCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600540B RID: 21515 RVA: 0x000CE76E File Offset: 0x000CC96E
+		// Token: 0x06005987 RID: 22919 RVA: 0x000DA916 File Offset: 0x000D8B16
 		public ICameraCondition_SetValue ToSetValue()
 		{
 			return new ICameraCondition_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C32 RID: 7218
-		// (get) Token: 0x0600540C RID: 21516 RVA: 0x000CE799 File Offset: 0x000CC999
-		// (set) Token: 0x0600540D RID: 21517 RVA: 0x000CE7C4 File Offset: 0x000CC9C4
+		// Token: 0x17001DCA RID: 7626
+		// (get) Token: 0x06005988 RID: 22920 RVA: 0x000DA941 File Offset: 0x000D8B41
+		// (set) Token: 0x06005989 RID: 22921 RVA: 0x000DA96C File Offset: 0x000D8B6C
 		public virtual string TidTip
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C33 RID: 7219
-		// (get) Token: 0x0600540E RID: 21518 RVA: 0x000CE7D4 File Offset: 0x000CC9D4
-		// (set) Token: 0x0600540F RID: 21519 RVA: 0x000CE835 File Offset: 0x000CCA35
+		// Token: 0x17001DCB RID: 7627
+		// (get) Token: 0x0600598A RID: 22922 RVA: 0x000DA97C File Offset: 0x000D8B7C
+		// (set) Token: 0x0600598B RID: 22923 RVA: 0x000DA9DD File Offset: 0x000D8BDD
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C34 RID: 7220
-		// (get) Token: 0x06005410 RID: 21520 RVA: 0x000CE84A File Offset: 0x000CCA4A
-		// (set) Token: 0x06005411 RID: 21521 RVA: 0x000CE861 File Offset: 0x000CCA61
+		// Token: 0x17001DCC RID: 7628
+		// (get) Token: 0x0600598C RID: 22924 RVA: 0x000DA9F2 File Offset: 0x000D8BF2
+		// (set) Token: 0x0600598D RID: 22925 RVA: 0x000DAA09 File Offset: 0x000D8C09
 		[Nullable(2)]
 		public virtual string EdTidTip
 		{
@@ -137,18 +135,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040032E5 RID: 13029
+		// Token: 0x040035F2 RID: 13810
 		[Nullable(2)]
 		protected ICameraCondition FbInstance;
 
-		// Token: 0x040032E6 RID: 13030
+		// Token: 0x040035F3 RID: 13811
 		[Nullable(2)]
 		protected ICameraCondition_SetValue PocoInterface;
 
-		// Token: 0x040032E7 RID: 13031
+		// Token: 0x040035F4 RID: 13812
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040032E8 RID: 13032
+		// Token: 0x040035F5 RID: 13813
 		private bool _ConditionInited;
 	}
 }

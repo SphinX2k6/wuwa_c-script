@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020015B9 RID: 5561
+// Token: 0x02000A71 RID: 2673
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 {
-	// Token: 0x06009DC9 RID: 40393 RVA: 0x00224554 File Offset: 0x00222754
+	// Token: 0x060071A7 RID: 29095 RVA: 0x0022E304 File Offset: 0x0022C504
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -63,7 +63,7 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009DCA RID: 40394 RVA: 0x0022478C File Offset: 0x0022298C
+	// Token: 0x060071A8 RID: 29096 RVA: 0x0022E53C File Offset: 0x0022C73C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerBossItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009DCB RID: 40395 RVA: 0x002247CF File Offset: 0x002229CF
+	// Token: 0x060071A9 RID: 29097 RVA: 0x0022E57F File Offset: 0x0022C77F
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(3);
@@ -85,13 +85,13 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x06009DCC RID: 40396 RVA: 0x002247E3 File Offset: 0x002229E3
+	// Token: 0x060071AA RID: 29098 RVA: 0x0022E593 File Offset: 0x0022C793
 	protected override void OnBeforeDestroy()
 	{
 		this.CancelHpBarAnimationTimer();
 	}
 
-	// Token: 0x06009DCD RID: 40397 RVA: 0x002247EC File Offset: 0x002229EC
+	// Token: 0x060071AB RID: 29099 RVA: 0x0022E59C File Offset: 0x0022C79C
 	public override void Refresh(IBossItemData data, bool isSelected, int gridIndex)
 	{
 		this.RefreshInfo(data, gridIndex);
@@ -120,7 +120,7 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		}
 	}
 
-	// Token: 0x06009DCE RID: 40398 RVA: 0x002248C1 File Offset: 0x00222AC1
+	// Token: 0x060071AC RID: 29100 RVA: 0x0022E671 File Offset: 0x0022C871
 	private void CancelHpBarAnimationTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.HpBarAnimationTimerHandle))
@@ -129,7 +129,7 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		}
 	}
 
-	// Token: 0x06009DCF RID: 40399 RVA: 0x002248E6 File Offset: 0x00222AE6
+	// Token: 0x060071AD RID: 29101 RVA: 0x0022E696 File Offset: 0x0022C896
 	public void SetCurrentChallenge(bool isCurrent)
 	{
 		UUIItem item = base.GetItem(8);
@@ -140,7 +140,7 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		item.SetUIActive(isCurrent);
 	}
 
-	// Token: 0x06009DD0 RID: 40400 RVA: 0x002248FA File Offset: 0x00222AFA
+	// Token: 0x060071AE RID: 29102 RVA: 0x0022E6AA File Offset: 0x0022C8AA
 	public void SetTagVisible(bool isVisible)
 	{
 		UUIItem item = base.GetItem(13);
@@ -151,13 +151,13 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		item.SetUIActive(isVisible);
 	}
 
-	// Token: 0x06009DD1 RID: 40401 RVA: 0x0022490F File Offset: 0x00222B0F
+	// Token: 0x060071AF RID: 29103 RVA: 0x0022E6BF File Offset: 0x0022C8BF
 	public void SetClickCallback(Action<int, int> callback)
 	{
 		this.ToggleCallback = callback;
 	}
 
-	// Token: 0x06009DD2 RID: 40402 RVA: 0x00224918 File Offset: 0x00222B18
+	// Token: 0x060071B0 RID: 29104 RVA: 0x0022E6C8 File Offset: 0x0022C8C8
 	private void RefreshInfo(IBossItemData data, int gridIndex)
 	{
 		IBossInfo bossInfo = data.BossInfo;
@@ -220,7 +220,7 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		}
 	}
 
-	// Token: 0x06009DD3 RID: 40403 RVA: 0x00224AC0 File Offset: 0x00222CC0
+	// Token: 0x060071B1 RID: 29105 RVA: 0x0022E870 File Offset: 0x0022CA70
 	private void RefreshRoundColor(int round)
 	{
 		int num = round - 1;
@@ -238,7 +238,7 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		this.SetSpriteByPath(path, base.GetSprite(11), false, null, null);
 	}
 
-	// Token: 0x06009DD4 RID: 40404 RVA: 0x00224B0C File Offset: 0x00222D0C
+	// Token: 0x060071B2 RID: 29106 RVA: 0x0022E8BC File Offset: 0x0022CABC
 	private void SetFinished(bool isFinished)
 	{
 		UUIItem item = base.GetItem(6);
@@ -255,7 +255,7 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		}
 	}
 
-	// Token: 0x06009DD5 RID: 40405 RVA: 0x00224B4C File Offset: 0x00222D4C
+	// Token: 0x060071B3 RID: 29107 RVA: 0x0022E8FC File Offset: 0x0022CAFC
 	private void ButtonClick()
 	{
 		Action<int, int> toggleCallback = this.ToggleCallback;
@@ -266,13 +266,13 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		toggleCallback(base.GridIndex, this.BossId);
 	}
 
-	// Token: 0x040045CC RID: 17868
+	// Token: 0x04004672 RID: 18034
 	private const int MS_PER_SEC = 1000;
 
-	// Token: 0x040045CD RID: 17869
+	// Token: 0x04004673 RID: 18035
 	private const float HP_BAR_ANIMATION_SPEED_MULTIPLE = 1.5f;
 
-	// Token: 0x040045CE RID: 17870
+	// Token: 0x04004674 RID: 18036
 	[StaticVariableRuleIgnore]
 	private static readonly string[] RoundBgDefine = new string[]
 	{
@@ -281,18 +281,18 @@ public class WheelTowerBossItem : GridProxyAbstract<IBossItemData>
 		"/Game/Aki/UI/UIResources/UiActivity/Atlas/ActivityMowingTower/MowingTower30/SP_RoundNumBgRed.SP_RoundNumBgRed"
 	};
 
-	// Token: 0x040045CF RID: 17871
+	// Token: 0x04004675 RID: 18037
 	private int BossId;
 
-	// Token: 0x040045D0 RID: 17872
+	// Token: 0x04004676 RID: 18038
 	[Nullable(2)]
 	private Action<int, int> ToggleCallback;
 
-	// Token: 0x040045D1 RID: 17873
+	// Token: 0x04004677 RID: 18039
 	[Nullable(2)]
 	private BossTagItem TagItem;
 
-	// Token: 0x040045D2 RID: 17874
+	// Token: 0x04004678 RID: 18040
 	[Nullable(2)]
 	private TimerHandle HpBarAnimationTimerHandle;
 }

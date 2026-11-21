@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002940 RID: 10560
+	// Token: 0x02002C22 RID: 11298
 	public class IEnableMoveOperation : IMoveOperationType
 	{
-		// Token: 0x0600EA30 RID: 59952 RVA: 0x00224C01 File Offset: 0x00222E01
-		[NullableContext(1)]
+		// Token: 0x0600F89B RID: 63643 RVA: 0x002421E1 File Offset: 0x002403E1
 		public static IEnableMoveOperation Create(IEnableMoveOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004972 RID: 18802
-		// (get) Token: 0x0600EA31 RID: 59953 RVA: 0x00224C20 File Offset: 0x00222E20
+		// Token: 0x17004D05 RID: 19717
+		// (get) Token: 0x0600F89C RID: 63644 RVA: 0x00242200 File Offset: 0x00240400
 		public override EMoveOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008128 RID: 33064
+		// Token: 0x04008804 RID: 34820
 		private IEnableMoveOperation Instance;
 	}
 }

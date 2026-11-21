@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023A6 RID: 9126
+	// Token: 0x02002631 RID: 9777
 	public class EMp4BackgroundColorJsonConverter : JsonConverter<EMp4BackgroundColor>
 	{
-		// Token: 0x0600C6EB RID: 50923 RVA: 0x001D20C0 File Offset: 0x001D02C0
+		// Token: 0x0600D338 RID: 54072 RVA: 0x001EB260 File Offset: 0x001E9460
 		public override EMp4BackgroundColor Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMp4BackgroundColorExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C6EC RID: 50924 RVA: 0x001D20E4 File Offset: 0x001D02E4
+		// Token: 0x0600D339 RID: 54073 RVA: 0x001EB284 File Offset: 0x001E9484
 		public override void Write(Utf8JsonWriter writer, EMp4BackgroundColor value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

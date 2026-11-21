@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EF5 RID: 7925
+	// Token: 0x02000602 RID: 1538
 	public sealed class FOnXboxTokenAndSignatureResult : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E1A6 RID: 123302 RVA: 0x002CB950 File Offset: 0x002C9B50
+		// Token: 0x060087F1 RID: 34801 RVA: 0x000CC954 File Offset: 0x000CAB54
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnXboxTokenAndSignatureResult.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E1A7 RID: 123303 RVA: 0x002CB95C File Offset: 0x002C9B5C
+		// Token: 0x060087F2 RID: 34802 RVA: 0x000CC960 File Offset: 0x000CAB60
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnXboxTokenAndSignatureResult._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnXboxTokenAndSignatureResult._FunctionPtr;
 		}
 
-		// Token: 0x0601E1A8 RID: 123304 RVA: 0x002CB97F File Offset: 0x002C9B7F
+		// Token: 0x060087F3 RID: 34803 RVA: 0x000CC983 File Offset: 0x000CAB83
 		public FOnXboxTokenAndSignatureResult()
 		{
 		}
 
-		// Token: 0x0601E1A9 RID: 123305 RVA: 0x002CB987 File Offset: 0x002C9B87
+		// Token: 0x060087F4 RID: 34804 RVA: 0x000CC98B File Offset: 0x000CAB8B
 		[NullableContext(2)]
 		public FOnXboxTokenAndSignatureResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E1AA RID: 123306 RVA: 0x002CB991 File Offset: 0x002C9B91
+		// Token: 0x060087F5 RID: 34805 RVA: 0x000CC995 File Offset: 0x000CAB95
 		public FOnXboxTokenAndSignatureResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E1AB RID: 123307 RVA: 0x002CB99C File Offset: 0x002C9B9C
+		// Token: 0x060087F6 RID: 34806 RVA: 0x000CC9A0 File Offset: 0x000CABA0
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FXboxTokenAndSignatureResult>) ?? ((Action<FXboxTokenAndSignatureResult>)Delegate.CreateDelegate(typeof(Action<FXboxTokenAndSignatureResult>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E1AC RID: 123308 RVA: 0x002CB9CE File Offset: 0x002C9BCE
+		// Token: 0x060087F7 RID: 34807 RVA: 0x000CC9D2 File Offset: 0x000CABD2
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FXboxTokenAndSignatureResult> Callback)
 		{
 			if (FOnXboxTokenAndSignatureResult.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnXboxTokenAndSignatureResult.RegisterId);
 		}
 
-		// Token: 0x0601E1AD RID: 123309 RVA: 0x002CBA08 File Offset: 0x002C9C08
+		// Token: 0x060087F8 RID: 34808 RVA: 0x000CCA0C File Offset: 0x000CAC0C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(in FXboxTokenAndSignatureResult Result)
 		{
 			FOnXboxTokenAndSignatureResult.__FOnXboxTokenAndSignatureResult_DelegateParams* ptr = stackalloc FOnXboxTokenAndSignatureResult.__FOnXboxTokenAndSignatureResult_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(FOnXboxTokenAndSignatureResult.__FOnXboxTokenAndSignatureResult_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnXboxTokenAndSignatureResult._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601E1AE RID: 123310 RVA: 0x002CBA74 File Offset: 0x002C9C74
+		// Token: 0x060087F9 RID: 34809 RVA: 0x000CCA78 File Offset: 0x000CAC78
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FXboxTokenAndSignatureResult> action = target as Action<FXboxTokenAndSignatureResult>;
@@ -96,31 +93,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x04010439 RID: 66617
+		// Token: 0x04003B11 RID: 15121
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401043A RID: 66618
+		// Token: 0x04003B12 RID: 15122
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnXboxTokenAndSignatureResult__DelegateSignature";
 
-		// Token: 0x0401043B RID: 66619
+		// Token: 0x04003B13 RID: 15123
 		private static int RegisterId;
 
-		// Token: 0x020033D7 RID: 13271
+		// Token: 0x02000E24 RID: 3620
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __FOnXboxTokenAndSignatureResult_DelegateParams
+		private ref struct __FOnXboxTokenAndSignatureResult_DelegateParams
 		{
-			// Token: 0x0401738C RID: 95116
+			// Token: 0x040061B9 RID: 25017
 			[FieldOffset(0)]
 			public byte Result;
 		}
 
-		// Token: 0x020033D8 RID: 13272
+		// Token: 0x02000E25 RID: 3621
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401738D RID: 95117
+			// Token: 0x040061BA RID: 25018
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

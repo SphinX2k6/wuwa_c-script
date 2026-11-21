@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001745 RID: 5957
+// Token: 0x02000BFE RID: 3070
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using CSharpScript.Game.Module.RoleUi;
 })]
 public class CalabashLevelUpRewardItemGrid : LoopScrollSmallItemGrid<CalabashRewardItemData>
 {
-	// Token: 0x0600AC63 RID: 44131 RVA: 0x0026A8D8 File Offset: 0x00268AD8
+	// Token: 0x0600804A RID: 32842 RVA: 0x00274D20 File Offset: 0x00272F20
 	protected override void OnRefresh(CalabashRewardItemData data, bool isSelected, int gridIndex)
 	{
 		this.ConfigId = data.ItemData.Value.ItemData.ItemId;
@@ -22,7 +22,7 @@ public class CalabashLevelUpRewardItemGrid : LoopScrollSmallItemGrid<CalabashRew
 		this.RefreshByConfigId(this.ConfigId, new int?(count), data);
 	}
 
-	// Token: 0x0600AC64 RID: 44132 RVA: 0x0026A924 File Offset: 0x00268B24
+	// Token: 0x0600804B RID: 32843 RVA: 0x00274D6C File Offset: 0x00272F6C
 	[NullableContext(2)]
 	private void RefreshByConfigId(int itemConfigId, int? count = null, CalabashRewardItemData data = null)
 	{
@@ -71,18 +71,18 @@ public class CalabashLevelUpRewardItemGrid : LoopScrollSmallItemGrid<CalabashRew
 		base.Apply<PropSmallItemGrid>(parameters2);
 	}
 
-	// Token: 0x0600AC65 RID: 44133 RVA: 0x0026AA5C File Offset: 0x00268C5C
+	// Token: 0x0600804C RID: 32844 RVA: 0x00274EA4 File Offset: 0x002730A4
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x0600AC66 RID: 44134 RVA: 0x0026AA5F File Offset: 0x00268C5F
+	// Token: 0x0600804D RID: 32845 RVA: 0x00274EA7 File Offset: 0x002730A7
 	protected override void OnExtendToggleClicked()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null, false);
 	}
 
-	// Token: 0x04004E34 RID: 20020
+	// Token: 0x04004EDD RID: 20189
 	private int ConfigId;
 }

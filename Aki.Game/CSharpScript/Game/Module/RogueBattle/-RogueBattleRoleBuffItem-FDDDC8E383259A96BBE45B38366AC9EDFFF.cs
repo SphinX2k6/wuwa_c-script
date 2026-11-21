@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E8B RID: 20107
+	// Token: 0x02003E54 RID: 15956
 	internal enum <RogueBattleRoleBuffItem>FDDDC8E383259A96BBE45B38366AC9EDFFF02752576086B5EDC03155DE0F26FF8__ERogueBattleRoleBuffItemDefine
 	{
-		// Token: 0x0401B748 RID: 112456
+		// Token: 0x0401611B RID: 90395
 		ExtendToggle,
-		// Token: 0x0401B749 RID: 112457
+		// Token: 0x0401611C RID: 90396
 		TxtInfo,
-		// Token: 0x0401B74A RID: 112458
+		// Token: 0x0401611D RID: 90397
 		SpriteIcon,
-		// Token: 0x0401B74B RID: 112459
+		// Token: 0x0401611E RID: 90398
 		TxtName,
-		// Token: 0x0401B74C RID: 112460
+		// Token: 0x0401611F RID: 90399
 		NewItem,
-		// Token: 0x0401B74D RID: 112461
+		// Token: 0x04016120 RID: 90400
 		BtnDetail
 	}
 }

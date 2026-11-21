@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C3C RID: 3132
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D0F RID: 3343
 	public class IPointGroupByLayer : IPointGroupGenerateType
 	{
-		// Token: 0x060047B0 RID: 18352 RVA: 0x000B4756 File Offset: 0x000B2956
+		// Token: 0x06004C20 RID: 19488 RVA: 0x000BEB06 File Offset: 0x000BCD06
 		public static IPointGroupByLayer Create(IPointGroupByLayer? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014F5 RID: 5365
-		// (get) Token: 0x060047B1 RID: 18353 RVA: 0x000B4775 File Offset: 0x000B2975
+		// Token: 0x170015FD RID: 5629
+		// (get) Token: 0x06004C21 RID: 19489 RVA: 0x000BEB25 File Offset: 0x000BCD25
 		public override EPointGroupGenerateType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014F6 RID: 5366
-		// (get) Token: 0x060047B2 RID: 18354 RVA: 0x000B4782 File Offset: 0x000B2982
+		// Token: 0x170015FE RID: 5630
+		// (get) Token: 0x06004C22 RID: 19490 RVA: 0x000BEB32 File Offset: 0x000BCD32
 		public virtual VectorInfo Space
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014F7 RID: 5367
-		// (get) Token: 0x060047B3 RID: 18355 RVA: 0x000B47B8 File Offset: 0x000B29B8
+		// Token: 0x170015FF RID: 5631
+		// (get) Token: 0x06004C23 RID: 19491 RVA: 0x000BEB68 File Offset: 0x000BCD68
 		public virtual List<IParkourPointLayerConfig> Layers
 		{
 			get
@@ -71,20 +69,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028C3 RID: 10435
+		// Token: 0x04002B18 RID: 11032
 		private IPointGroupByLayer Instance;
 
-		// Token: 0x040028C4 RID: 10436
+		// Token: 0x04002B19 RID: 11033
 		[Nullable(2)]
 		private VectorInfo _SpaceCache;
 
-		// Token: 0x040028C5 RID: 10437
+		// Token: 0x04002B1A RID: 11034
 		private bool _SpaceInited;
 
-		// Token: 0x040028C6 RID: 10438
+		// Token: 0x04002B1B RID: 11035
 		private List<IParkourPointLayerConfig> _LayersCache;
 
-		// Token: 0x040028C7 RID: 10439
+		// Token: 0x04002B1C RID: 11036
 		private bool _LayersInited;
 	}
 }

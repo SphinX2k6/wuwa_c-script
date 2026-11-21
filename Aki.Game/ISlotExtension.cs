@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001BCA RID: 7114
+// Token: 0x02001089 RID: 4233
 [NullableContext(1)]
 public interface ISlotExtension
 {
-	// Token: 0x0600D429 RID: 54313
+	// Token: 0x0600A83B RID: 43067
 	UniTask OnAttach(ISlotMountPoint mount, int position);
 
-	// Token: 0x0600D42A RID: 54314
+	// Token: 0x0600A83C RID: 43068
 	void OnDetach();
 
-	// Token: 0x0600D42B RID: 54315
+	// Token: 0x0600A83D RID: 43069
 	void OnRefresh(IRoleSlotDisplayData data);
 
-	// Token: 0x0600D42C RID: 54316 RVA: 0x0030D23C File Offset: 0x0030B43C
+	// Token: 0x0600A83E RID: 43070 RVA: 0x003183B0 File Offset: 0x003165B0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -27,12 +27,12 @@ public interface ISlotExtension
 		return null;
 	}
 
-	// Token: 0x0600D42D RID: 54317 RVA: 0x0030D23F File Offset: 0x0030B43F
+	// Token: 0x0600A83F RID: 43071 RVA: 0x003183B3 File Offset: 0x003165B3
 	void OnSlotStartMove()
 	{
 	}
 
-	// Token: 0x0600D42E RID: 54318 RVA: 0x0030D241 File Offset: 0x0030B441
+	// Token: 0x0600A840 RID: 43072 RVA: 0x003183B5 File Offset: 0x003165B5
 	void OnSlotStopMove()
 	{
 	}

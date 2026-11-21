@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C34 RID: 3124
+	// Token: 0x02000D07 RID: 3335
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITimelineControlGroup
 	{
-		// Token: 0x06004786 RID: 18310 RVA: 0x000B41C5 File Offset: 0x000B23C5
-		[NullableContext(1)]
+		// Token: 0x06004BF6 RID: 19446 RVA: 0x000BE575 File Offset: 0x000BC775
+		[NullableContext(0)]
 		public static ITimelineControlGroup Create(ITimelineControlGroup? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014DB RID: 5339
-		// (get) Token: 0x06004787 RID: 18311 RVA: 0x000B41E4 File Offset: 0x000B23E4
+		// Token: 0x170015E3 RID: 5603
+		// (get) Token: 0x06004BF7 RID: 19447 RVA: 0x000BE594 File Offset: 0x000BC794
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014DC RID: 5340
-		// (get) Token: 0x06004788 RID: 18312 RVA: 0x000B4218 File Offset: 0x000B2418
+		// Token: 0x170015E4 RID: 5604
+		// (get) Token: 0x06004BF8 RID: 19448 RVA: 0x000BE5C8 File Offset: 0x000BC7C8
 		public virtual string TidContent
 		{
 			get
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014DD RID: 5341
-		// (get) Token: 0x06004789 RID: 18313 RVA: 0x000B4228 File Offset: 0x000B2428
+		// Token: 0x170015E5 RID: 5605
+		// (get) Token: 0x06004BF9 RID: 19449 RVA: 0x000BE5D8 File Offset: 0x000BC7D8
 		public virtual float? SegmentTime
 		{
 			get
@@ -65,12 +65,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014DE RID: 5342
-		// (get) Token: 0x0600478A RID: 18314 RVA: 0x000B425E File Offset: 0x000B245E
-		[Nullable(1)]
+		// Token: 0x170015E6 RID: 5606
+		// (get) Token: 0x06004BFA RID: 19450 RVA: 0x000BE60E File Offset: 0x000BC80E
+		[Nullable(0)]
 		public virtual List<ITimelineTrackControlData> ControlConfigs
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ControlConfigsInited)
@@ -83,19 +83,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014DF RID: 5343
-		// (get) Token: 0x0600478B RID: 18315 RVA: 0x000B4290 File Offset: 0x000B2490
+		// Token: 0x170015E7 RID: 5607
+		// (get) Token: 0x06004BFB RID: 19451 RVA: 0x000BE640 File Offset: 0x000BC840
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IControlPointEventConfig> ControlPointEvents
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -118,8 +118,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014E0 RID: 5344
-		// (get) Token: 0x0600478C RID: 18316 RVA: 0x000B430A File Offset: 0x000B250A
+		// Token: 0x170015E8 RID: 5608
+		// (get) Token: 0x06004BFC RID: 19452 RVA: 0x000BE6BA File Offset: 0x000BC8BA
 		public virtual string Description
 		{
 			get
@@ -128,8 +128,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014E1 RID: 5345
-		// (get) Token: 0x0600478D RID: 18317 RVA: 0x000B4317 File Offset: 0x000B2517
+		// Token: 0x170015E9 RID: 5609
+		// (get) Token: 0x06004BFD RID: 19453 RVA: 0x000BE6C7 File Offset: 0x000BC8C7
 		public virtual string EdTidContent
 		{
 			get
@@ -138,31 +138,31 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028A1 RID: 10401
+		// Token: 0x04002AF6 RID: 10998
 		private ITimelineControlGroup Instance;
 
-		// Token: 0x040028A2 RID: 10402
+		// Token: 0x04002AF7 RID: 10999
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040028A3 RID: 10403
+		// Token: 0x04002AF8 RID: 11000
 		private bool _ConditionInited;
 
-		// Token: 0x040028A4 RID: 10404
-		[Nullable(1)]
+		// Token: 0x04002AF9 RID: 11001
+		[Nullable(0)]
 		private List<ITimelineTrackControlData> _ControlConfigsCache;
 
-		// Token: 0x040028A5 RID: 10405
+		// Token: 0x04002AFA RID: 11002
 		private bool _ControlConfigsInited;
 
-		// Token: 0x040028A6 RID: 10406
+		// Token: 0x04002AFB RID: 11003
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IControlPointEventConfig> _ControlPointEventsCache;
 
-		// Token: 0x040028A7 RID: 10407
+		// Token: 0x04002AFC RID: 11004
 		private bool _ControlPointEventsInited;
 	}
 }

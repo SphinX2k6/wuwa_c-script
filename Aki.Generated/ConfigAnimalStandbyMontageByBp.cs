@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000099 RID: 153
+	// Token: 0x020000A1 RID: 161
 	public class ConfigAnimalStandbyMontageByBp : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000396 RID: 918 RVA: 0x0006DDCC File Offset: 0x0006BFCC
+		// Token: 0x060003C6 RID: 966 RVA: 0x00072680 File Offset: 0x00070880
 		static ConfigAnimalStandbyMontageByBp()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAnimalStandbyMontageByBp.CreateStaticDefaultValue), new Action(ConfigAnimalStandbyMontageByBp.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000397 RID: 919 RVA: 0x0006DDEC File Offset: 0x0006BFEC
+		// Token: 0x060003C7 RID: 967 RVA: 0x000726A0 File Offset: 0x000708A0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAnimalStandbyMontageByBp.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000398 RID: 920 RVA: 0x0006DE6B File Offset: 0x0006C06B
+		// Token: 0x060003C8 RID: 968 RVA: 0x0007271F File Offset: 0x0007091F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAnimalStandbyMontageByBp.LogPair = null;
 			ConfigAnimalStandbyMontageByBp.HandleId = 0;
 		}
 
-		// Token: 0x06000399 RID: 921 RVA: 0x0006DE79 File Offset: 0x0006C079
+		// Token: 0x060003C9 RID: 969 RVA: 0x0007272D File Offset: 0x0007092D
 		public static void Init()
 		{
 			ConfigAnimalStandbyMontageByBp.HandleId = ConfigCommon.InitDataStatement(ConfigAnimalStandbyMontageByBp.HandleId, "db_animalstandbymotnageconfig.db", "select BinData from `AnimalStandbyMontage` where Bp=?");
 		}
 
-		// Token: 0x0600039A RID: 922 RVA: 0x0006DE94 File Offset: 0x0006C094
+		// Token: 0x060003CA RID: 970 RVA: 0x00072748 File Offset: 0x00070948
 		[return: Nullable(2)]
 		public static IReadOnlyList<AnimalStandbyMontage> GetConfigList(string p0Bp, bool useCache = true)
 		{
@@ -86,22 +86,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000413 RID: 1043
+		// Token: 0x0400044B RID: 1099
 		private const string DB = "db_animalstandbymotnageconfig.db";
 
-		// Token: 0x04000414 RID: 1044
+		// Token: 0x0400044C RID: 1100
 		private const string FILE = "k.可视化编辑/c.Csv/d.动物待机动作/*.csv*";
 
-		// Token: 0x04000415 RID: 1045
+		// Token: 0x0400044D RID: 1101
 		private const string TABLE = "AnimalStandbyMontage";
 
-		// Token: 0x04000416 RID: 1046
+		// Token: 0x0400044E RID: 1102
 		private const string COMMAND = "select BinData from `AnimalStandbyMontage` where Bp=?";
 
-		// Token: 0x04000417 RID: 1047
+		// Token: 0x0400044F RID: 1103
 		private const string KEY_PREFIX = "AnimalStandbyMontageByBp";
 
-		// Token: 0x04000418 RID: 1048
+		// Token: 0x04000450 RID: 1104
 		[Nullable(new byte[]
 		{
 			2,
@@ -111,7 +111,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000419 RID: 1049
+		// Token: 0x04000451 RID: 1105
 		private static int HandleId;
 	}
 }

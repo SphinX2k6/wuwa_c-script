@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 {
-	// Token: 0x0200483B RID: 18491
+	// Token: 0x0200376C RID: 14188
 	public class WorldMapSecondaryTipListPanel : UiPanelBase
 	{
-		// Token: 0x0603063A RID: 198202 RVA: 0x00B3B6E0 File Offset: 0x00B398E0
+		// Token: 0x06024E0A RID: 151050 RVA: 0x00A6B7AC File Offset: 0x00A699AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,21 +25,21 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603063B RID: 198203 RVA: 0x00B3B74C File Offset: 0x00B3994C
+		// Token: 0x06024E0B RID: 151051 RVA: 0x00A6B818 File Offset: 0x00A69A18
 		protected override void OnStart()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(0);
 			this.TipsLayout = new GenericLayout<WorldMapSecondaryTipListItem, IWorldMapSecondaryTipItemParam>(verticalLayout, new Func<WorldMapSecondaryTipListItem>(this.CreateListItem), null, false, true);
 		}
 
-		// Token: 0x0603063C RID: 198204 RVA: 0x00B3B77D File Offset: 0x00B3997D
+		// Token: 0x06024E0C RID: 151052 RVA: 0x00A6B849 File Offset: 0x00A69A49
 		[NullableContext(1)]
 		protected virtual WorldMapSecondaryTipListItem CreateListItem()
 		{
 			return new WorldMapSecondaryTipListItem();
 		}
 
-		// Token: 0x0603063D RID: 198205 RVA: 0x00B3B784 File Offset: 0x00B39984
+		// Token: 0x06024E0D RID: 151053 RVA: 0x00A6B850 File Offset: 0x00A69A50
 		protected override void OnBeforeDestroy()
 		{
 			GenericLayout<WorldMapSecondaryTipListItem, IWorldMapSecondaryTipItemParam> tipsLayout = this.TipsLayout;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 			tipsLayout.ClearChildren();
 		}
 
-		// Token: 0x0603063E RID: 198206 RVA: 0x00B3B796 File Offset: 0x00B39996
+		// Token: 0x06024E0E RID: 151054 RVA: 0x00A6B862 File Offset: 0x00A69A62
 		[NullableContext(1)]
 		public void RefreshByData(List<IWorldMapSecondaryTipItemParam> data)
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 			tipsLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x0401A047 RID: 106567
+		// Token: 0x040146FB RID: 83707
 		[Nullable(new byte[]
 		{
 			2,
@@ -71,13 +71,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 		})]
 		private GenericLayout<WorldMapSecondaryTipListItem, IWorldMapSecondaryTipItemParam> TipsLayout;
 
-		// Token: 0x0200AB13 RID: 43795
+		// Token: 0x020094C2 RID: 38082
 		public static class EComponents
 		{
-			// Token: 0x04033FE1 RID: 212961
+			// Token: 0x0402E761 RID: 190305
 			public const int PnlMapTipsListItemA = 0;
 
-			// Token: 0x04033FE2 RID: 212962
+			// Token: 0x0402E762 RID: 190306
 			public const int PnlList = 1;
 		}
 	}

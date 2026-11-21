@@ -5,18 +5,18 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B2C RID: 19244
+	// Token: 0x02003AD4 RID: 15060
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenceDefine : IStaticVariableResetter
 	{
-		// Token: 0x06031D70 RID: 204144 RVA: 0x00B92582 File Offset: 0x00B90782
+		// Token: 0x06026B00 RID: 158464 RVA: 0x00AD65E6 File Offset: 0x00AD47E6
 		static TowerDefenceDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TowerDefenceDefine.CreateStaticDefaultValue), new Action(TowerDefenceDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06031D71 RID: 204145 RVA: 0x00B925A4 File Offset: 0x00B907A4
+		// Token: 0x06026B01 RID: 158465 RVA: 0x00AD6608 File Offset: 0x00AD4808
 		public static void CreateStaticDefaultValue()
 		{
 			TowerDefenceDefine.entranceSet = new HashSet<int>
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			};
 		}
 
-		// Token: 0x06031D72 RID: 204146 RVA: 0x00B92647 File Offset: 0x00B90847
+		// Token: 0x06026B02 RID: 158466 RVA: 0x00AD66AB File Offset: 0x00AD48AB
 		public static void ResetStaticDefaultValue()
 		{
 			TowerDefenceDefine.entranceSet = null;
@@ -69,116 +69,116 @@ namespace CSharpScript.Game.Module.TowerDefence
 			TowerDefenceDefine.inBattleQualitySpriteKey = null;
 		}
 
-		// Token: 0x0401A983 RID: 108931
+		// Token: 0x040152D5 RID: 86741
 		public const int DEFAULT_ID = 0;
 
-		// Token: 0x0401A984 RID: 108932
+		// Token: 0x040152D6 RID: 86742
 		public const int NIL_PHANTOM_ID = -1;
 
-		// Token: 0x0401A985 RID: 108933
+		// Token: 0x040152D7 RID: 86743
 		public const int INSTANCE_SUCCESS = 3018;
 
-		// Token: 0x0401A986 RID: 108934
+		// Token: 0x040152D8 RID: 86744
 		public const int INSTANCE_FAIL = 3017;
 
-		// Token: 0x0401A987 RID: 108935
+		// Token: 0x040152D9 RID: 86745
 		public const string EXIT_POPUP_TITLE = "TowerDefence_ExitTitle";
 
-		// Token: 0x0401A988 RID: 108936
+		// Token: 0x040152DA RID: 86746
 		public const string EXIT_POPUP_CONTENT = "TowerDefence_ExitContent";
 
-		// Token: 0x0401A989 RID: 108937
+		// Token: 0x040152DB RID: 86747
 		public const string EXIT_POPUP_TIPS_SINGLE = "TowerDefence_ExitTipsSingle";
 
-		// Token: 0x0401A98A RID: 108938
+		// Token: 0x040152DC RID: 86748
 		public const string EXIT_POPUP_TIPS_MULTI = "TowerDefence_ExitTipsMulti";
 
-		// Token: 0x0401A98B RID: 108939
+		// Token: 0x040152DD RID: 86749
 		public const string SETTLE_TEXT_EXIT_BTN = "Text_ButtonTextExit_Text";
 
-		// Token: 0x0401A98C RID: 108940
+		// Token: 0x040152DE RID: 86750
 		public const string SETTLE_TEXT_RESTART_BTN = "Text_ChallengeAgain_Text";
 
-		// Token: 0x0401A98D RID: 108941
+		// Token: 0x040152DF RID: 86751
 		public const string SETTLE_TEXT_TITLE_WIN = "Text_ChallengeSuccess_Text";
 
-		// Token: 0x0401A98E RID: 108942
+		// Token: 0x040152E0 RID: 86752
 		public const string SETTLE_TEXT_TITLE_LOSE = "TowerDefenceSettlement01";
 
-		// Token: 0x0401A98F RID: 108943
+		// Token: 0x040152E1 RID: 86753
 		public const string SETTLE_TEXT_HIGHEST_TIME = "TowerDefenceBestTime";
 
-		// Token: 0x0401A990 RID: 108944
+		// Token: 0x040152E2 RID: 86754
 		public const string SETTLE_TEXT_HIGHEST_SCORE = "TowerDefence_GPint";
 
-		// Token: 0x0401A991 RID: 108945
+		// Token: 0x040152E3 RID: 86755
 		public const string SETTLE_TEXT_RECORD_TITLE_CHALLENGE = "PrefabTextItem_3771425333_Text";
 
-		// Token: 0x0401A992 RID: 108946
+		// Token: 0x040152E4 RID: 86756
 		public const string SETTLE_TEXT_RECORD_TITLE_CHALLENGE_LOSE = "TowerDefencelose";
 
-		// Token: 0x0401A993 RID: 108947
+		// Token: 0x040152E5 RID: 86757
 		public const string SETTLE_TEXT_RECORD_TITLE_NORMAL = "PrefabTextItem_1350027209_Text";
 
-		// Token: 0x0401A994 RID: 108948
+		// Token: 0x040152E6 RID: 86758
 		public const string LEVEL_TEXT_DIFFICULTY_NORMAL = "TowerDefence_DifficultyNormal";
 
-		// Token: 0x0401A995 RID: 108949
+		// Token: 0x040152E7 RID: 86759
 		public const string LEVEL_TEXT_DIFFICULTY_HARD = "TowerDefence_DifficultyHard";
 
-		// Token: 0x0401A996 RID: 108950
+		// Token: 0x040152E8 RID: 86760
 		public const string LEVEL_TEXT_SUB_LEVEL_LOCKED = "TowerDefence_SubLevelLocked";
 
-		// Token: 0x0401A997 RID: 108951
+		// Token: 0x040152E9 RID: 86761
 		public const string LEVEL_TEXT_SUB_LEVEL_UNPASSED = "TowerDefence_SubLevelUnpassed";
 
-		// Token: 0x0401A998 RID: 108952
+		// Token: 0x040152EA RID: 86762
 		public const string LEVEL_TEXT_SUB_LEVEL_PASSED = "TowerDefence_SubLevelPassed";
 
-		// Token: 0x0401A999 RID: 108953
+		// Token: 0x040152EB RID: 86763
 		public const string LEVEL_TEXT_LEVEL_LOCKED_TIP = "TowerDefence_LevelLocked";
 
-		// Token: 0x0401A99A RID: 108954
+		// Token: 0x040152EC RID: 86764
 		public const string LEVEL_TEXT_PRE_NORMAL_UNPASSED = "OnlineGymnasium_LevelRst";
 
-		// Token: 0x0401A99B RID: 108955
+		// Token: 0x040152ED RID: 86765
 		public const string LEVEL_TEXT_BOSS_RUSH_LOCKED = "TowerDefence_Lcok_TipsText";
 
-		// Token: 0x0401A99C RID: 108956
+		// Token: 0x040152EE RID: 86766
 		public const string LEVEL_TEXT_COUNT_DOWN_WRAP = "ActivityMowing_UnlockCondition";
 
-		// Token: 0x0401A99D RID: 108957
+		// Token: 0x040152EF RID: 86767
 		public const string IN_BATTLE_SKILL_TITLE_BG_CURRENT = "T_LordGymTitleBgB";
 
-		// Token: 0x0401A99E RID: 108958
+		// Token: 0x040152F0 RID: 86768
 		public const string IN_BATTLE_SKILL_TITLE_BG_NORMAL = "T_LordGymTitleBgA";
 
-		// Token: 0x0401A99F RID: 108959
+		// Token: 0x040152F1 RID: 86769
 		public static HashSet<int> entranceSet;
 
-		// Token: 0x0401A9A0 RID: 108960
+		// Token: 0x040152F2 RID: 86770
 		public static Dictionary<TowerDefenceDefine.ETabType, string> tabText;
 
-		// Token: 0x0401A9A1 RID: 108961
+		// Token: 0x040152F3 RID: 86771
 		public static Dictionary<InventoryDefine.EQuality, string> inBattleQualitySpriteKey;
 
-		// Token: 0x0200ACBE RID: 44222
+		// Token: 0x020096DE RID: 38622
 		[NullableContext(0)]
 		public enum EActivityType
 		{
-			// Token: 0x040347BA RID: 214970
+			// Token: 0x0402F16B RID: 192875
 			Defense = 1,
-			// Token: 0x040347BB RID: 214971
+			// Token: 0x0402F16C RID: 192876
 			Attack
 		}
 
-		// Token: 0x0200ACBF RID: 44223
+		// Token: 0x020096DF RID: 38623
 		[NullableContext(0)]
 		public enum ETabType
 		{
-			// Token: 0x040347BD RID: 214973
+			// Token: 0x0402F16E RID: 192878
 			Single,
-			// Token: 0x040347BE RID: 214974
+			// Token: 0x0402F16F RID: 192879
 			Online
 		}
 	}

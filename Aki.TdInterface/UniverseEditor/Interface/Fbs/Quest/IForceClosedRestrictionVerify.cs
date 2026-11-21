@@ -6,10 +6,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E71 RID: 15985
+	// Token: 0x020042AC RID: 17068
 	public static class IForceClosedRestrictionVerify
 	{
-		// Token: 0x06016852 RID: 92242 RVA: 0x0034134C File Offset: 0x0033F54C
+		// Token: 0x06017E89 RID: 97929 RVA: 0x0036A0B0 File Offset: 0x003682B0
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos))
@@ -28,7 +28,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 					{
 						verifyAction2 = (IForceClosedRestrictionVerify.<>O.<1>__Verify = new VerifyTableAction(Aki.UniverseEditor.Interface.Fbs.Action.IPosAVerify.Verify));
 					}
-					if (verifier.VerifyTable(tablePos, offsetId2, verifyAction2, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 14, 1UL, 1UL, false))
+					if (verifier.VerifyTable(tablePos, offsetId2, verifyAction2, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false) && verifier.VerifyVectorOfData(tablePos, 14, 4UL, false) && verifier.VerifyField(tablePos, 16, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 18, 1UL, 1UL, false))
 					{
 						return verifier.VerifyTableEnd(tablePos);
 					}
@@ -37,14 +37,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return false;
 		}
 
-		// Token: 0x020078EC RID: 30956
+		// Token: 0x02008132 RID: 33074
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040131A4 RID: 78244
+			// Token: 0x04014202 RID: 82434
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040131A5 RID: 78245
+			// Token: 0x04014203 RID: 82435
 			public static VerifyTableAction <1>__Verify;
 		}
 	}

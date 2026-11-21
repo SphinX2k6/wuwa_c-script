@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -10,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001686 RID: 5766
+// Token: 0x02000B3E RID: 2878
 public class ActivitySevenDaySignView : ActivitySubViewBase
 {
-	// Token: 0x0600A357 RID: 41815 RVA: 0x00242368 File Offset: 0x00240568
+	// Token: 0x06007734 RID: 30516 RVA: 0x0024C3D0 File Offset: 0x0024A5D0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -52,7 +51,7 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A358 RID: 41816 RVA: 0x0024253C File Offset: 0x0024073C
+	// Token: 0x06007735 RID: 30517 RVA: 0x0024C5A4 File Offset: 0x0024A7A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySevenDaySignView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -63,7 +62,7 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A359 RID: 41817 RVA: 0x00242580 File Offset: 0x00240780
+	// Token: 0x06007736 RID: 30518 RVA: 0x0024C5E8 File Offset: 0x0024A7E8
 	protected override void OnBeforeShow()
 	{
 		foreach (SignRewardItemBase child in this.ItemList)
@@ -72,13 +71,13 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600A35A RID: 41818 RVA: 0x002425AD File Offset: 0x002407AD
+	// Token: 0x06007737 RID: 30519 RVA: 0x0024C615 File Offset: 0x0024A815
 	protected override void OnSetData()
 	{
 		this.ActivitySignData = (this.ActivityBaseData as ActivitySevenDaySignData);
 	}
 
-	// Token: 0x0600A35B RID: 41819 RVA: 0x002425C0 File Offset: 0x002407C0
+	// Token: 0x06007738 RID: 30520 RVA: 0x0024C628 File Offset: 0x0024A828
 	protected override void OnTimer(float gap)
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -91,7 +90,7 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600A35C RID: 41820 RVA: 0x00242600 File Offset: 0x00240800
+	// Token: 0x06007739 RID: 30521 RVA: 0x0024C668 File Offset: 0x0024A868
 	protected override void OnBeforeDestroy()
 	{
 		foreach (SignRewardItemBase child in this.ItemList)
@@ -100,14 +99,14 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600A35D RID: 41821 RVA: 0x00242630 File Offset: 0x00240830
+	// Token: 0x0600773A RID: 30522 RVA: 0x0024C698 File Offset: 0x0024A898
 	[NullableContext(1)]
 	private string GetDesc()
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.ActivitySignData.LocalConfig.Value.Desc, null);
 	}
 
-	// Token: 0x0600A35E RID: 41822 RVA: 0x0024265B File Offset: 0x0024085B
+	// Token: 0x0600773B RID: 30523 RVA: 0x0024C6C3 File Offset: 0x0024A8C3
 	protected override void OnRefreshView()
 	{
 		base.GetText(0).SetText(this.ActivitySignData.GetTitle(), true);
@@ -115,7 +114,7 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 		this.RefreshReward();
 	}
 
-	// Token: 0x0600A35F RID: 41823 RVA: 0x00242690 File Offset: 0x00240890
+	// Token: 0x0600773C RID: 30524 RVA: 0x0024C6F8 File Offset: 0x0024A8F8
 	private void RefreshReward()
 	{
 		this.OnTimer(1f);
@@ -144,13 +143,13 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 		button2.RootUIComp.Get().SetRaycastTarget(flag);
 	}
 
-	// Token: 0x0600A360 RID: 41824 RVA: 0x00242744 File Offset: 0x00240944
+	// Token: 0x0600773D RID: 30525 RVA: 0x0024C7AC File Offset: 0x0024A9AC
 	private bool IsRewardCanGet(int day)
 	{
 		return this.ActivitySignData.GetRewardStateByDay(day).GetValueOrDefault() == SignState.Unlock;
 	}
 
-	// Token: 0x0600A361 RID: 41825 RVA: 0x00242768 File Offset: 0x00240968
+	// Token: 0x0600773E RID: 30526 RVA: 0x0024C7D0 File Offset: 0x0024A9D0
 	private void OnClickToGetReward(int index)
 	{
 		if (this.IsRewardCanGet(index))
@@ -164,14 +163,14 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600A362 RID: 41826 RVA: 0x002427A0 File Offset: 0x002409A0
+	// Token: 0x0600773F RID: 30527 RVA: 0x0024C808 File Offset: 0x0024AA08
 	private void OnClickLook()
 	{
 		ActivitySign? activitySignById = ActivitySevenDaySignConfig.Instance.GetActivitySignById(this.ActivitySignData.Id);
 		int importantRewardType = activitySignById.Value.ImportantRewardType;
 		if (importantRewardType == 1)
 		{
-			RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, activitySignById.Value.PreviewListIter().ToList<int>(), null, null);
+			RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, new List<int>(activitySignById.Value.PreviewListIter()), null, null);
 			return;
 		}
 		if (importantRewardType != 2)
@@ -193,13 +192,13 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 		UiManager.Instance.OpenView(EUiViewName.WeaponPreviewView, param, null);
 	}
 
-	// Token: 0x04004A3B RID: 19003
+	// Token: 0x04004AE2 RID: 19170
 	private const int ITEM_START_INDEX = 4;
 
-	// Token: 0x04004A3C RID: 19004
+	// Token: 0x04004AE3 RID: 19171
 	private const int SIGN_DAY_COUNT = 7;
 
-	// Token: 0x04004A3D RID: 19005
+	// Token: 0x04004AE4 RID: 19172
 	[Nullable(new byte[]
 	{
 		2,
@@ -207,44 +206,44 @@ public class ActivitySevenDaySignView : ActivitySubViewBase
 	})]
 	private SignRewardItemBase[] ItemList;
 
-	// Token: 0x04004A3E RID: 19006
+	// Token: 0x04004AE5 RID: 19173
 	[Nullable(2)]
 	private ActivitySevenDaySignData ActivitySignData;
 
-	// Token: 0x02007C51 RID: 31825
+	// Token: 0x02006DD6 RID: 28118
 	private class EMainSignInComponents
 	{
-		// Token: 0x04028CAE RID: 167086
+		// Token: 0x04023FD8 RID: 147416
 		public const int TxtTitle = 0;
 
-		// Token: 0x04028CAF RID: 167087
+		// Token: 0x04023FD9 RID: 147417
 		public const int TxtTime = 1;
 
-		// Token: 0x04028CB0 RID: 167088
+		// Token: 0x04023FDA RID: 147418
 		public const int TxtInfo = 2;
 
-		// Token: 0x04028CB1 RID: 167089
+		// Token: 0x04023FDB RID: 147419
 		public const int BtnLook = 3;
 
-		// Token: 0x04028CB2 RID: 167090
+		// Token: 0x04023FDC RID: 147420
 		public const int ItemOne = 4;
 
-		// Token: 0x04028CB3 RID: 167091
+		// Token: 0x04023FDD RID: 147421
 		public const int ItemTwo = 5;
 
-		// Token: 0x04028CB4 RID: 167092
+		// Token: 0x04023FDE RID: 147422
 		public const int ItemThree = 6;
 
-		// Token: 0x04028CB5 RID: 167093
+		// Token: 0x04023FDF RID: 147423
 		public const int ItemFour = 7;
 
-		// Token: 0x04028CB6 RID: 167094
+		// Token: 0x04023FE0 RID: 147424
 		public const int ItemFive = 8;
 
-		// Token: 0x04028CB7 RID: 167095
+		// Token: 0x04023FE1 RID: 147425
 		public const int ItemSix = 9;
 
-		// Token: 0x04028CB8 RID: 167096
+		// Token: 0x04023FE2 RID: 147426
 		public const int ItemSeven = 10;
 	}
 }

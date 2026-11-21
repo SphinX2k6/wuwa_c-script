@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C30 RID: 23600
+	// Token: 0x02006255 RID: 25173
 	public enum THitBulletType : byte
 	{
-		// Token: 0x0400F416 RID: 62486
+		// Token: 0x04010140 RID: 65856
 		NONE,
-		// Token: 0x0400F417 RID: 62487
+		// Token: 0x04010141 RID: 65857
 		IHitBulletTypeAllCharacterAttack,
-		// Token: 0x0400F418 RID: 62488
+		// Token: 0x04010142 RID: 65858
 		IHitBulletTypeCrystalAttack,
-		// Token: 0x0400F419 RID: 62489
+		// Token: 0x04010143 RID: 65859
 		IHitBulletTypeFixedBulletId,
-		// Token: 0x0400F41A RID: 62490
+		// Token: 0x04010144 RID: 65860
 		IHitBulletTypeOnlyDropAttack,
-		// Token: 0x0400F41B RID: 62491
+		// Token: 0x04010145 RID: 65861
 		IHitBulletTypePlayerAttack,
-		// Token: 0x0400F41C RID: 62492
+		// Token: 0x04010146 RID: 65862
 		IHitBulletTypePlayerOrThrenodianAttack
 	}
 }

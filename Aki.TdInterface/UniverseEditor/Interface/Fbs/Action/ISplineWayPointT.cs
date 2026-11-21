@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200719A RID: 29082
+	// Token: 0x0200796F RID: 31087
 	public class ISplineWayPointT
 	{
-		// Token: 0x1700D7FF RID: 55295
-		// (get) Token: 0x06033906 RID: 211206 RVA: 0x006F1D94 File Offset: 0x006EFF94
-		// (set) Token: 0x06033907 RID: 211207 RVA: 0x006F1D9C File Offset: 0x006EFF9C
+		// Token: 0x1700E3F6 RID: 58358
+		// (get) Token: 0x06036C02 RID: 224258 RVA: 0x00753024 File Offset: 0x00751224
+		// (set) Token: 0x06036C03 RID: 224259 RVA: 0x0075302C File Offset: 0x0075122C
 		public int Spline { get; set; }
 
-		// Token: 0x1700D800 RID: 55296
-		// (get) Token: 0x06033908 RID: 211208 RVA: 0x006F1DA5 File Offset: 0x006EFFA5
-		// (set) Token: 0x06033909 RID: 211209 RVA: 0x006F1DAD File Offset: 0x006EFFAD
+		// Token: 0x1700E3F7 RID: 58359
+		// (get) Token: 0x06036C04 RID: 224260 RVA: 0x00753035 File Offset: 0x00751235
+		// (set) Token: 0x06036C05 RID: 224261 RVA: 0x0075303D File Offset: 0x0075123D
 		public int PointId { get; set; }
 
-		// Token: 0x0603390A RID: 211210 RVA: 0x006F1DB6 File Offset: 0x006EFFB6
+		// Token: 0x06036C06 RID: 224262 RVA: 0x00753046 File Offset: 0x00751246
 		public ISplineWayPointT()
 		{
 			this.Spline = 0;

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FE5 RID: 8165
+	// Token: 0x0200222C RID: 8748
 	public class ITransitionPopupConfig_SetValue
 	{
-		// Token: 0x04006C5C RID: 27740
+		// Token: 0x0400725E RID: 29278
 		public float? Duration;
 
-		// Token: 0x04006C5D RID: 27741
-		[Nullable(1)]
+		// Token: 0x0400725F RID: 29279
 		public ITransitionPopupStyle PopupStyle;
 	}
 }

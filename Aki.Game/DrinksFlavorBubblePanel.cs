@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F5B RID: 3931
+// Token: 0x02000410 RID: 1040
 [NullableContext(1)]
 [Nullable(0)]
 public class DrinksFlavorBubblePanel : UiPanelBase
 {
-	// Token: 0x06006492 RID: 25746 RVA: 0x0013E71E File Offset: 0x0013C91E
+	// Token: 0x0600382A RID: 14378 RVA: 0x00146FBA File Offset: 0x001451BA
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class DrinksFlavorBubblePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006493 RID: 25747 RVA: 0x0013E758 File Offset: 0x0013C958
+	// Token: 0x0600382B RID: 14379 RVA: 0x00146FF4 File Offset: 0x001451F4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DrinksFlavorBubblePanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -32,7 +32,7 @@ public class DrinksFlavorBubblePanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006494 RID: 25748 RVA: 0x0013E79C File Offset: 0x0013C99C
+	// Token: 0x0600382C RID: 14380 RVA: 0x00147038 File Offset: 0x00145238
 	protected override void OnAfterShow()
 	{
 		Vector originPos = this.OriginPos;
@@ -40,14 +40,14 @@ public class DrinksFlavorBubblePanel : UiPanelBase
 		originPos.FromUeVector(uiworldPosition);
 	}
 
-	// Token: 0x06006495 RID: 25749 RVA: 0x0013E7C2 File Offset: 0x0013C9C2
+	// Token: 0x0600382D RID: 14381 RVA: 0x0014705E File Offset: 0x0014525E
 	public void RefreshOnStart()
 	{
 		this.Bubble1.SetUiActive(false);
 		this.Bubble2.SetUiActive(false);
 	}
 
-	// Token: 0x06006496 RID: 25750 RVA: 0x0013E7DC File Offset: 0x0013C9DC
+	// Token: 0x0600382E RID: 14382 RVA: 0x00147078 File Offset: 0x00145278
 	public void Refresh()
 	{
 		EDrinksPlayStep curStep = DrinksModel.Instance.GetCurStep();
@@ -96,7 +96,7 @@ public class DrinksFlavorBubblePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006497 RID: 25751 RVA: 0x0013E9A0 File Offset: 0x0013CBA0
+	// Token: 0x0600382F RID: 14383 RVA: 0x0014723C File Offset: 0x0014543C
 	private void UpdateBubble(int index, int type, int value)
 	{
 		FVector uiworldPosition = this.RootItem.GetUIWorldPosition();
@@ -109,26 +109,26 @@ public class DrinksFlavorBubblePanel : UiPanelBase
 		this.BubbleList[index].Refresh((EDrinksFlavorType)type, value, randomFloatNumber, randomFloatNumber2);
 	}
 
-	// Token: 0x04002DA6 RID: 11686
+	// Token: 0x04002E3F RID: 11839
 	protected DrinksFlavorBubble Bubble1;
 
-	// Token: 0x04002DA7 RID: 11687
+	// Token: 0x04002E40 RID: 11840
 	protected DrinksFlavorBubble Bubble2;
 
-	// Token: 0x04002DA8 RID: 11688
+	// Token: 0x04002E41 RID: 11841
 	protected List<DrinksFlavorBubble> BubbleList = new List<DrinksFlavorBubble>();
 
-	// Token: 0x04002DA9 RID: 11689
+	// Token: 0x04002E42 RID: 11842
 	protected Vector OriginPos = Vector.Create();
 
-	// Token: 0x020075A7 RID: 30119
+	// Token: 0x0200673B RID: 26427
 	[NullableContext(0)]
 	private static class EItem
 	{
-		// Token: 0x04026E3C RID: 159292
+		// Token: 0x04022187 RID: 139655
 		public const int Bubble1 = 0;
 
-		// Token: 0x04026E3D RID: 159293
+		// Token: 0x04022188 RID: 139656
 		public const int Bubble2 = 1;
 	}
 }

@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060CF RID: 24783
+	// Token: 0x0200504D RID: 20557
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 	})]
 	internal class SolarSpeedTabCellPanel : GridProxyAbstract<ISolarSpeedTabCellPanelData>
 	{
-		// Token: 0x0603EA84 RID: 256644 RVA: 0x00F21F08 File Offset: 0x00F20108
+		// Token: 0x06033748 RID: 210760 RVA: 0x00E68CD8 File Offset: 0x00E66ED8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EA85 RID: 256645 RVA: 0x00F21FF0 File Offset: 0x00F201F0
+		// Token: 0x06033749 RID: 210761 RVA: 0x00E68DC0 File Offset: 0x00E66FC0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SolarSpeedTabCellPanel.<OnBeforeStartAsync>d__1 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EA86 RID: 256646 RVA: 0x00F22033 File Offset: 0x00F20233
+		// Token: 0x0603374A RID: 210762 RVA: 0x00E68E03 File Offset: 0x00E67003
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -66,14 +66,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			extendToggle.CanExecuteChange.Unbind();
 		}
 
-		// Token: 0x0603EA87 RID: 256647 RVA: 0x00F2204B File Offset: 0x00F2024B
+		// Token: 0x0603374B RID: 210763 RVA: 0x00E68E1B File Offset: 0x00E6701B
 		public override void Refresh(ISolarSpeedTabCellPanelData data, bool isSelected, int gridIndex)
 		{
 			this.OpenParam = data;
 			this.RefreshByOpenParam(data);
 		}
 
-		// Token: 0x0603EA88 RID: 256648 RVA: 0x00F2205C File Offset: 0x00F2025C
+		// Token: 0x0603374C RID: 210764 RVA: 0x00E68E2C File Offset: 0x00E6702C
 		private void RefreshByOpenParam(ISolarSpeedTabCellPanelData data)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			item.SetUIActive(data.IsRedDot);
 		}
 
-		// Token: 0x0603EA89 RID: 256649 RVA: 0x00F220DC File Offset: 0x00F202DC
+		// Token: 0x0603374D RID: 210765 RVA: 0x00E68EAC File Offset: 0x00E670AC
 		private void HandleOnClickTab(EToggleState toggleState)
 		{
 			ISolarSpeedTabCellPanelData solarSpeedTabCellPanelData = this.OpenParam as ISolarSpeedTabCellPanelData;
@@ -99,26 +99,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			EventSystem.Instance.Emit<int>(EEventName.SolarSpeedClickRewardTab, solarSpeedTabCellPanelData.LevelId);
 		}
 
-		// Token: 0x0603EA8A RID: 256650 RVA: 0x00F2211B File Offset: 0x00F2031B
+		// Token: 0x0603374E RID: 210766 RVA: 0x00E68EEB File Offset: 0x00E670EB
 		private bool HandleCanExecuteChange()
 		{
 			return !(this.OpenParam as ISolarSpeedTabCellPanelData).IsChosen;
 		}
 
-		// Token: 0x0200C322 RID: 49954
+		// Token: 0x0200AD0D RID: 44301
 		[NullableContext(0)]
 		private class ETabCellComponent
 		{
-			// Token: 0x0403AEB6 RID: 241334
+			// Token: 0x0403581E RID: 219166
 			public const int RootToggle = 0;
 
-			// Token: 0x0403AEB7 RID: 241335
+			// Token: 0x0403581F RID: 219167
 			public const int NameText = 1;
 
-			// Token: 0x0403AEB8 RID: 241336
+			// Token: 0x04035820 RID: 219168
 			public const int NumberTexture = 2;
 
-			// Token: 0x0403AEB9 RID: 241337
+			// Token: 0x04035821 RID: 219169
 			public const int RedDotItem = 3;
 		}
 	}

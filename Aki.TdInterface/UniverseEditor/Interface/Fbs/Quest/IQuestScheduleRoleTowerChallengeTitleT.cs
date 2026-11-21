@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004035 RID: 16437
+	// Token: 0x02004476 RID: 17526
 	public class IQuestScheduleRoleTowerChallengeTitleT
 	{
-		// Token: 0x170073A5 RID: 29605
-		// (get) Token: 0x06017C77 RID: 97399 RVA: 0x0036E32B File Offset: 0x0036C52B
-		// (set) Token: 0x06017C78 RID: 97400 RVA: 0x0036E333 File Offset: 0x0036C533
+		// Token: 0x170079A7 RID: 31143
+		// (get) Token: 0x06019310 RID: 103184 RVA: 0x0039811F File Offset: 0x0039631F
+		// (set) Token: 0x06019311 RID: 103185 RVA: 0x00398127 File Offset: 0x00396327
 		public EQuestScheduleType Type { get; set; }
 
-		// Token: 0x170073A6 RID: 29606
-		// (get) Token: 0x06017C79 RID: 97401 RVA: 0x0036E33C File Offset: 0x0036C53C
-		// (set) Token: 0x06017C7A RID: 97402 RVA: 0x0036E344 File Offset: 0x0036C544
+		// Token: 0x170079A8 RID: 31144
+		// (get) Token: 0x06019312 RID: 103186 RVA: 0x00398130 File Offset: 0x00396330
+		// (set) Token: 0x06019313 RID: 103187 RVA: 0x00398138 File Offset: 0x00396338
 		public TRoleTowerChallengeTitleTypeUnion TitleType { get; set; }
 
-		// Token: 0x06017C7B RID: 97403 RVA: 0x0036E34D File Offset: 0x0036C54D
+		// Token: 0x06019314 RID: 103188 RVA: 0x00398141 File Offset: 0x00396341
 		public IQuestScheduleRoleTowerChallengeTitleT()
 		{
 			this.Type = EQuestScheduleType.None;

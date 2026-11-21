@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D25 RID: 23845
+	// Token: 0x0200635C RID: 25436
 	public struct IBvbAiDiscardData : IFlatbufferObject
 	{
-		// Token: 0x1700B2B6 RID: 45750
-		// (get) Token: 0x06028C06 RID: 166918 RVA: 0x00598E7C File Offset: 0x0059707C
+		// Token: 0x1700BC17 RID: 48151
+		// (get) Token: 0x0602B270 RID: 176752 RVA: 0x005E18EC File Offset: 0x005DFAEC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028C07 RID: 166919 RVA: 0x00598E89 File Offset: 0x00597089
+		// Token: 0x0602B271 RID: 176753 RVA: 0x005E18F9 File Offset: 0x005DFAF9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028C08 RID: 166920 RVA: 0x00598E90 File Offset: 0x00597090
+		// Token: 0x0602B272 RID: 176754 RVA: 0x005E1900 File Offset: 0x005DFB00
 		public static IBvbAiDiscardData GetRootAsIBvbAiDiscardData(ByteBuffer _bb)
 		{
 			return IBvbAiDiscardData.GetRootAsIBvbAiDiscardData(_bb, default(IBvbAiDiscardData));
 		}
 
-		// Token: 0x06028C09 RID: 166921 RVA: 0x00598EAC File Offset: 0x005970AC
+		// Token: 0x0602B273 RID: 176755 RVA: 0x005E191C File Offset: 0x005DFB1C
 		public static IBvbAiDiscardData GetRootAsIBvbAiDiscardData(ByteBuffer _bb, IBvbAiDiscardData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028C0A RID: 166922 RVA: 0x00598EC9 File Offset: 0x005970C9
+		// Token: 0x0602B274 RID: 176756 RVA: 0x005E1939 File Offset: 0x005DFB39
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028C0B RID: 166923 RVA: 0x00598ED8 File Offset: 0x005970D8
+		// Token: 0x0602B275 RID: 176757 RVA: 0x005E1948 File Offset: 0x005DFB48
 		public IBvbAiDiscardData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B2B7 RID: 45751
-		// (get) Token: 0x06028C0C RID: 166924 RVA: 0x00598EE8 File Offset: 0x005970E8
+		// Token: 0x1700BC18 RID: 48152
+		// (get) Token: 0x0602B276 RID: 176758 RVA: 0x005E1958 File Offset: 0x005DFB58
 		public EBvbEventName Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B2B8 RID: 45752
-		// (get) Token: 0x06028C0D RID: 166925 RVA: 0x00598F24 File Offset: 0x00597124
+		// Token: 0x1700BC19 RID: 48153
+		// (get) Token: 0x0602B277 RID: 176759 RVA: 0x005E1994 File Offset: 0x005DFB94
 		public TVarRef ReserveHandCardType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028C0E RID: 166926 RVA: 0x00598F60 File Offset: 0x00597160
+		// Token: 0x0602B278 RID: 176760 RVA: 0x005E19D0 File Offset: 0x005DFBD0
 		public TTable? ReserveHandCard<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,38 +89,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06028C0F RID: 166927 RVA: 0x00598FA4 File Offset: 0x005971A4
+		// Token: 0x0602B279 RID: 176761 RVA: 0x005E1A14 File Offset: 0x005DFC14
 		public IConstVarRef ReserveHandCardAsIConstVarRef()
 		{
 			return this.ReserveHandCard<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06028C10 RID: 166928 RVA: 0x00598FC0 File Offset: 0x005971C0
+		// Token: 0x0602B27A RID: 176762 RVA: 0x005E1A30 File Offset: 0x005DFC30
 		public IGlobalVarRef ReserveHandCardAsIGlobalVarRef()
 		{
 			return this.ReserveHandCard<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06028C11 RID: 166929 RVA: 0x00598FDC File Offset: 0x005971DC
+		// Token: 0x0602B27B RID: 176763 RVA: 0x005E1A4C File Offset: 0x005DFC4C
 		public IOtherVarRef ReserveHandCardAsIOtherVarRef()
 		{
 			return this.ReserveHandCard<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06028C12 RID: 166930 RVA: 0x00598FF8 File Offset: 0x005971F8
+		// Token: 0x0602B27C RID: 176764 RVA: 0x005E1A68 File Offset: 0x005DFC68
 		public ISelfVarRef ReserveHandCardAsISelfVarRef()
 		{
 			return this.ReserveHandCard<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06028C13 RID: 166931 RVA: 0x00599014 File Offset: 0x00597214
+		// Token: 0x0602B27D RID: 176765 RVA: 0x005E1A84 File Offset: 0x005DFC84
 		public ISystemVarRef ReserveHandCardAsISystemVarRef()
 		{
 			return this.ReserveHandCard<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x1700B2B9 RID: 45753
-		// (get) Token: 0x06028C14 RID: 166932 RVA: 0x00599030 File Offset: 0x00597230
+		// Token: 0x1700BC1A RID: 48154
+		// (get) Token: 0x0602B27E RID: 176766 RVA: 0x005E1AA0 File Offset: 0x005DFCA0
 		public EDiscardStrategy Strategy
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028C15 RID: 166933 RVA: 0x0059906D File Offset: 0x0059726D
+		// Token: 0x0602B27F RID: 176767 RVA: 0x005E1ADD File Offset: 0x005DFCDD
 		public static Offset<IBvbAiDiscardData> CreateIBvbAiDiscardData(FlatBufferBuilder builder, EBvbEventName Type = EBvbEventName.AIEvolution, TVarRef ReserveHandCard_type = TVarRef.NONE, int ReserveHandCardOffset = 0, EDiscardStrategy Strategy = EDiscardStrategy.LowestScore)
 		{
 			builder.StartTable(4);
@@ -145,43 +145,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbAiDiscardData.EndIBvbAiDiscardData(builder);
 		}
 
-		// Token: 0x06028C16 RID: 166934 RVA: 0x00599099 File Offset: 0x00597299
+		// Token: 0x0602B280 RID: 176768 RVA: 0x005E1B09 File Offset: 0x005DFD09
 		public static void StartIBvbAiDiscardData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06028C17 RID: 166935 RVA: 0x005990A2 File Offset: 0x005972A2
+		// Token: 0x0602B281 RID: 176769 RVA: 0x005E1B12 File Offset: 0x005DFD12
 		public static void AddType(FlatBufferBuilder builder, EBvbEventName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028C18 RID: 166936 RVA: 0x005990AD File Offset: 0x005972AD
+		// Token: 0x0602B282 RID: 176770 RVA: 0x005E1B1D File Offset: 0x005DFD1D
 		public static void AddReserveHandCardType(FlatBufferBuilder builder, TVarRef reserveHandCardType)
 		{
 			builder.AddByte(1, (byte)reserveHandCardType, 0);
 		}
 
-		// Token: 0x06028C19 RID: 166937 RVA: 0x005990B8 File Offset: 0x005972B8
+		// Token: 0x0602B283 RID: 176771 RVA: 0x005E1B28 File Offset: 0x005DFD28
 		public static void AddReserveHandCard(FlatBufferBuilder builder, int reserveHandCardOffset)
 		{
 			builder.AddOffset(2, reserveHandCardOffset, 0);
 		}
 
-		// Token: 0x06028C1A RID: 166938 RVA: 0x005990C3 File Offset: 0x005972C3
+		// Token: 0x0602B284 RID: 176772 RVA: 0x005E1B33 File Offset: 0x005DFD33
 		public static void AddStrategy(FlatBufferBuilder builder, EDiscardStrategy strategy)
 		{
 			builder.AddByte(3, (byte)strategy, 0);
 		}
 
-		// Token: 0x06028C1B RID: 166939 RVA: 0x005990CE File Offset: 0x005972CE
+		// Token: 0x0602B285 RID: 176773 RVA: 0x005E1B3E File Offset: 0x005DFD3E
 		public static Offset<IBvbAiDiscardData> EndIBvbAiDiscardData(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbAiDiscardData>(builder.EndTable());
 		}
 
-		// Token: 0x06028C1C RID: 166940 RVA: 0x005990DC File Offset: 0x005972DC
+		// Token: 0x0602B286 RID: 176774 RVA: 0x005E1B4C File Offset: 0x005DFD4C
 		public IBvbAiDiscardDataT UnPack()
 		{
 			IBvbAiDiscardDataT bvbAiDiscardDataT = new IBvbAiDiscardDataT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return bvbAiDiscardDataT;
 		}
 
-		// Token: 0x06028C1D RID: 166941 RVA: 0x005990F8 File Offset: 0x005972F8
+		// Token: 0x0602B287 RID: 176775 RVA: 0x005E1B68 File Offset: 0x005DFD68
 		public void UnPackTo(IBvbAiDiscardDataT _o)
 		{
 			_o.Type = this.Type;
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			_o.Strategy = this.Strategy;
 		}
 
-		// Token: 0x06028C1E RID: 166942 RVA: 0x00599280 File Offset: 0x00597480
+		// Token: 0x0602B288 RID: 176776 RVA: 0x005E1CF0 File Offset: 0x005DFEF0
 		public static Offset<IBvbAiDiscardData> Pack(FlatBufferBuilder builder, IBvbAiDiscardDataT _o)
 		{
 			if (_o == null)
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbAiDiscardData.CreateIBvbAiDiscardData(builder, _o.Type, reserveHandCard_type, reserveHandCardOffset, _o.Strategy);
 		}
 
-		// Token: 0x0400F6D3 RID: 63187
+		// Token: 0x04010425 RID: 66597
 		private Table __p;
 	}
 }

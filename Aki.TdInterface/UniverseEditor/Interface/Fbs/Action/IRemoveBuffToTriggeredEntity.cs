@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E40 RID: 28224
+	// Token: 0x020075BE RID: 30142
 	public struct IRemoveBuffToTriggeredEntity : IFlatbufferObject
 	{
-		// Token: 0x1700D24F RID: 53839
-		// (get) Token: 0x06031DFC RID: 204284 RVA: 0x006BFDC6 File Offset: 0x006BDFC6
+		// Token: 0x1700DD9E RID: 56734
+		// (get) Token: 0x06034E12 RID: 216594 RVA: 0x0071B74E File Offset: 0x0071994E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031DFD RID: 204285 RVA: 0x006BFDD3 File Offset: 0x006BDFD3
+		// Token: 0x06034E13 RID: 216595 RVA: 0x0071B75B File Offset: 0x0071995B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031DFE RID: 204286 RVA: 0x006BFDDC File Offset: 0x006BDFDC
+		// Token: 0x06034E14 RID: 216596 RVA: 0x0071B764 File Offset: 0x00719964
 		public static IRemoveBuffToTriggeredEntity GetRootAsIRemoveBuffToTriggeredEntity(ByteBuffer _bb)
 		{
 			return IRemoveBuffToTriggeredEntity.GetRootAsIRemoveBuffToTriggeredEntity(_bb, default(IRemoveBuffToTriggeredEntity));
 		}
 
-		// Token: 0x06031DFF RID: 204287 RVA: 0x006BFDF8 File Offset: 0x006BDFF8
+		// Token: 0x06034E15 RID: 216597 RVA: 0x0071B780 File Offset: 0x00719980
 		public static IRemoveBuffToTriggeredEntity GetRootAsIRemoveBuffToTriggeredEntity(ByteBuffer _bb, IRemoveBuffToTriggeredEntity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031E00 RID: 204288 RVA: 0x006BFE15 File Offset: 0x006BE015
+		// Token: 0x06034E16 RID: 216598 RVA: 0x0071B79D File Offset: 0x0071999D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031E01 RID: 204289 RVA: 0x006BFE24 File Offset: 0x006BE024
+		// Token: 0x06034E17 RID: 216599 RVA: 0x0071B7AC File Offset: 0x007199AC
 		public IRemoveBuffToTriggeredEntity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06031E02 RID: 204290 RVA: 0x006BFE34 File Offset: 0x006BE034
+		// Token: 0x06034E18 RID: 216600 RVA: 0x0071B7BC File Offset: 0x007199BC
 		public long BuffIds(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetLong(this.__p.__vector(num) + j * 8);
 		}
 
-		// Token: 0x1700D250 RID: 53840
-		// (get) Token: 0x06031E03 RID: 204291 RVA: 0x006BFE74 File Offset: 0x006BE074
+		// Token: 0x1700DD9F RID: 56735
+		// (get) Token: 0x06034E19 RID: 216601 RVA: 0x0071B7FC File Offset: 0x007199FC
 		public int BuffIdsLength
 		{
 			get
@@ -74,19 +74,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031E04 RID: 204292 RVA: 0x006BFE9F File Offset: 0x006BE09F
+		// Token: 0x06034E1A RID: 216602 RVA: 0x0071B827 File Offset: 0x00719A27
 		public Span<long> GetBuffIdsBytes()
 		{
 			return this.__p.__vector_as_span<long>(4, 8);
 		}
 
-		// Token: 0x06031E05 RID: 204293 RVA: 0x006BFEAE File Offset: 0x006BE0AE
+		// Token: 0x06034E1B RID: 216603 RVA: 0x0071B836 File Offset: 0x00719A36
 		public long[] GetBuffIdsArray()
 		{
 			return this.__p.__vector_as_array<long>(4);
 		}
 
-		// Token: 0x06031E06 RID: 204294 RVA: 0x006BFEBC File Offset: 0x006BE0BC
+		// Token: 0x06034E1C RID: 216604 RVA: 0x0071B844 File Offset: 0x00719A44
 		public static Offset<IRemoveBuffToTriggeredEntity> CreateIRemoveBuffToTriggeredEntity(FlatBufferBuilder builder, VectorOffset BuffIdsOffset = default(VectorOffset))
 		{
 			builder.StartTable(1);
@@ -94,19 +94,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRemoveBuffToTriggeredEntity.EndIRemoveBuffToTriggeredEntity(builder);
 		}
 
-		// Token: 0x06031E07 RID: 204295 RVA: 0x006BFED2 File Offset: 0x006BE0D2
+		// Token: 0x06034E1D RID: 216605 RVA: 0x0071B85A File Offset: 0x00719A5A
 		public static void StartIRemoveBuffToTriggeredEntity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031E08 RID: 204296 RVA: 0x006BFEDB File Offset: 0x006BE0DB
+		// Token: 0x06034E1E RID: 216606 RVA: 0x0071B863 File Offset: 0x00719A63
 		public static void AddBuffIds(FlatBufferBuilder builder, VectorOffset buffIdsOffset)
 		{
 			builder.AddOffset(0, buffIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06031E09 RID: 204297 RVA: 0x006BFEEC File Offset: 0x006BE0EC
+		// Token: 0x06034E1F RID: 216607 RVA: 0x0071B874 File Offset: 0x00719A74
 		public static VectorOffset CreateBuffIdsVector(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -117,7 +117,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031E0A RID: 204298 RVA: 0x006BFF23 File Offset: 0x006BE123
+		// Token: 0x06034E20 RID: 216608 RVA: 0x0071B8AB File Offset: 0x00719AAB
 		public static VectorOffset CreateBuffIdsVectorBlock(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031E0B RID: 204299 RVA: 0x006BFF3D File Offset: 0x006BE13D
+		// Token: 0x06034E21 RID: 216609 RVA: 0x0071B8C5 File Offset: 0x00719AC5
 		public static VectorOffset CreateBuffIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<long> data)
 		{
 			builder.StartVector(8, data.Count, 8);
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031E0C RID: 204300 RVA: 0x006BFF5B File Offset: 0x006BE15B
+		// Token: 0x06034E22 RID: 216610 RVA: 0x0071B8E3 File Offset: 0x00719AE3
 		public static VectorOffset CreateBuffIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -141,19 +141,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031E0D RID: 204301 RVA: 0x006BFF74 File Offset: 0x006BE174
+		// Token: 0x06034E23 RID: 216611 RVA: 0x0071B8FC File Offset: 0x00719AFC
 		public static void StartBuffIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(8, numElems, 8);
 		}
 
-		// Token: 0x06031E0E RID: 204302 RVA: 0x006BFF7F File Offset: 0x006BE17F
+		// Token: 0x06034E24 RID: 216612 RVA: 0x0071B907 File Offset: 0x00719B07
 		public static Offset<IRemoveBuffToTriggeredEntity> EndIRemoveBuffToTriggeredEntity(FlatBufferBuilder builder)
 		{
 			return new Offset<IRemoveBuffToTriggeredEntity>(builder.EndTable());
 		}
 
-		// Token: 0x06031E0F RID: 204303 RVA: 0x006BFF8C File Offset: 0x006BE18C
+		// Token: 0x06034E25 RID: 216613 RVA: 0x0071B914 File Offset: 0x00719B14
 		public IRemoveBuffToTriggeredEntityT UnPack()
 		{
 			IRemoveBuffToTriggeredEntityT removeBuffToTriggeredEntityT = new IRemoveBuffToTriggeredEntityT();
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return removeBuffToTriggeredEntityT;
 		}
 
-		// Token: 0x06031E10 RID: 204304 RVA: 0x006BFFA8 File Offset: 0x006BE1A8
+		// Token: 0x06034E26 RID: 216614 RVA: 0x0071B930 File Offset: 0x00719B30
 		public void UnPackTo(IRemoveBuffToTriggeredEntityT _o)
 		{
 			_o.BuffIds = new List<long>();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031E11 RID: 204305 RVA: 0x006BFFE4 File Offset: 0x006BE1E4
+		// Token: 0x06034E27 RID: 216615 RVA: 0x0071B96C File Offset: 0x00719B6C
 		public static Offset<IRemoveBuffToTriggeredEntity> Pack(FlatBufferBuilder builder, IRemoveBuffToTriggeredEntityT _o)
 		{
 			if (_o == null)
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRemoveBuffToTriggeredEntity.CreateIRemoveBuffToTriggeredEntity(builder, buffIdsOffset);
 		}
 
-		// Token: 0x04011825 RID: 71717
+		// Token: 0x040127A5 RID: 75685
 		private Table __p;
 	}
 }

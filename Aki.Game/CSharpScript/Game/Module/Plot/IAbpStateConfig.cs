@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FF8 RID: 20472
+	// Token: 0x02003FC2 RID: 16322
 	[NullableContext(1)]
 	public interface IAbpStateConfig
 	{
-		// Token: 0x17007FD9 RID: 32729
-		// (get) Token: 0x060345E6 RID: 214502
-		// (set) Token: 0x060345E7 RID: 214503
+		// Token: 0x1700538E RID: 21390
+		// (get) Token: 0x06029471 RID: 169073
+		// (set) Token: 0x06029472 RID: 169074
 		string Abp { get; set; }
 
-		// Token: 0x17007FDA RID: 32730
-		// (get) Token: 0x060345E8 RID: 214504
-		// (set) Token: 0x060345E9 RID: 214505
+		// Token: 0x1700538F RID: 21391
+		// (get) Token: 0x06029473 RID: 169075
+		// (set) Token: 0x06029474 RID: 169076
 		string State1 { get; set; }
 
-		// Token: 0x17007FDB RID: 32731
-		// (get) Token: 0x060345EA RID: 214506
-		// (set) Token: 0x060345EB RID: 214507
+		// Token: 0x17005390 RID: 21392
+		// (get) Token: 0x06029475 RID: 169077
+		// (set) Token: 0x06029476 RID: 169078
 		string State2 { get; set; }
 	}
 }

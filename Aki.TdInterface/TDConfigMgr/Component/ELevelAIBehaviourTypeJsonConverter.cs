@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000987 RID: 2439
+	// Token: 0x02000A3A RID: 2618
 	public class ELevelAIBehaviourTypeJsonConverter : JsonConverter<ELevelAIBehaviourType>
 	{
-		// Token: 0x06003692 RID: 13970 RVA: 0x0008E2FC File Offset: 0x0008C4FC
+		// Token: 0x06003A19 RID: 14873 RVA: 0x00096268 File Offset: 0x00094468
 		public override ELevelAIBehaviourType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ELevelAIBehaviourTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003693 RID: 13971 RVA: 0x0008E320 File Offset: 0x0008C520
+		// Token: 0x06003A1A RID: 14874 RVA: 0x0009628C File Offset: 0x0009448C
 		public override void Write(Utf8JsonWriter writer, ELevelAIBehaviourType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

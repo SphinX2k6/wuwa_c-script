@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001272 RID: 4722
+	// Token: 0x020012E1 RID: 4833
 	public sealed class SpringFestivalActivityInfo : IMessage<SpringFestivalActivityInfo>, IMessage, IEquatable<SpringFestivalActivityInfo>, IDeepCloneable<SpringFestivalActivityInfo>, IBufferMessage
 	{
-		// Token: 0x06019276 RID: 103030 RVA: 0x003A8B59 File Offset: 0x003A6D59
+		// Token: 0x06019CAC RID: 105644 RVA: 0x003C32A9 File Offset: 0x003C14A9
 		[NullableContext(1)]
 		public static SpringFestivalActivityInfo Create()
 		{
 			return new SpringFestivalActivityInfo();
 		}
 
-		// Token: 0x170054D8 RID: 21720
-		// (get) Token: 0x06019277 RID: 103031 RVA: 0x003A8B60 File Offset: 0x003A6D60
+		// Token: 0x17005759 RID: 22361
+		// (get) Token: 0x06019CAD RID: 105645 RVA: 0x003C32B0 File Offset: 0x003C14B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054D9 RID: 21721
-		// (get) Token: 0x06019278 RID: 103032 RVA: 0x003A8B63 File Offset: 0x003A6D63
+		// Token: 0x1700575A RID: 22362
+		// (get) Token: 0x06019CAE RID: 105646 RVA: 0x003C32B3 File Offset: 0x003C14B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019279 RID: 103033 RVA: 0x003A8B6C File Offset: 0x003A6D6C
+		// Token: 0x06019CAF RID: 105647 RVA: 0x003C32BC File Offset: 0x003C14BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringFestivalActivityInfo()
 		{
 		}
 
-		// Token: 0x0601927A RID: 103034 RVA: 0x003A8BE4 File Offset: 0x003A6DE4
+		// Token: 0x06019CB0 RID: 105648 RVA: 0x003C3334 File Offset: 0x003C1534
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringFestivalActivityInfo(SpringFestivalActivityInfo other) : this()
@@ -69,7 +69,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601927B RID: 103035 RVA: 0x003A8CD5 File Offset: 0x003A6ED5
+		// Token: 0x06019CB1 RID: 105649 RVA: 0x003C3425 File Offset: 0x003C1625
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringFestivalActivityInfo Clone()
@@ -77,8 +77,8 @@ namespace Aki.Protocol
 			return new SpringFestivalActivityInfo(this);
 		}
 
-		// Token: 0x170054DA RID: 21722
-		// (get) Token: 0x0601927C RID: 103036 RVA: 0x003A8CDD File Offset: 0x003A6EDD
+		// Token: 0x1700575B RID: 22363
+		// (get) Token: 0x06019CB2 RID: 105650 RVA: 0x003C342D File Offset: 0x003C162D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AreaInfo> AreaInfos
@@ -89,8 +89,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054DB RID: 21723
-		// (get) Token: 0x0601927D RID: 103037 RVA: 0x003A8CE5 File Offset: 0x003A6EE5
+		// Token: 0x1700575C RID: 22364
+		// (get) Token: 0x06019CB3 RID: 105651 RVA: 0x003C3435 File Offset: 0x003C1635
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockFurnitures
@@ -101,9 +101,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054DC RID: 21724
-		// (get) Token: 0x0601927E RID: 103038 RVA: 0x003A8CED File Offset: 0x003A6EED
-		// (set) Token: 0x0601927F RID: 103039 RVA: 0x003A8CF5 File Offset: 0x003A6EF5
+		// Token: 0x1700575D RID: 22365
+		// (get) Token: 0x06019CB4 RID: 105652 RVA: 0x003C343D File Offset: 0x003C163D
+		// (set) Token: 0x06019CB5 RID: 105653 RVA: 0x003C3445 File Offset: 0x003C1645
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DrinkMixData DrinkMixData
@@ -118,8 +118,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054DD RID: 21725
-		// (get) Token: 0x06019280 RID: 103040 RVA: 0x003A8CFE File Offset: 0x003A6EFE
+		// Token: 0x1700575E RID: 22366
+		// (get) Token: 0x06019CB6 RID: 105654 RVA: 0x003C344E File Offset: 0x003C164E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<OneBrochureInfo> OneBrochureInfos
@@ -130,8 +130,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054DE RID: 21726
-		// (get) Token: 0x06019281 RID: 103041 RVA: 0x003A8D06 File Offset: 0x003A6F06
+		// Token: 0x1700575F RID: 22367
+		// (get) Token: 0x06019CB7 RID: 105655 RVA: 0x003C3456 File Offset: 0x003C1656
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GuessJokerLevelInfo> JokerLevelInfos
@@ -142,8 +142,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054DF RID: 21727
-		// (get) Token: 0x06019282 RID: 103042 RVA: 0x003A8D0E File Offset: 0x003A6F0E
+		// Token: 0x17005760 RID: 22368
+		// (get) Token: 0x06019CB8 RID: 105656 RVA: 0x003C345E File Offset: 0x003C165E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ConditionTask> ConditionTasks
@@ -154,8 +154,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054E0 RID: 21728
-		// (get) Token: 0x06019283 RID: 103043 RVA: 0x003A8D16 File Offset: 0x003A6F16
+		// Token: 0x17005761 RID: 22369
+		// (get) Token: 0x06019CB9 RID: 105657 RVA: 0x003C3466 File Offset: 0x003C1666
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> SpringFunctionIds
@@ -166,8 +166,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054E1 RID: 21729
-		// (get) Token: 0x06019284 RID: 103044 RVA: 0x003A8D1E File Offset: 0x003A6F1E
+		// Token: 0x17005762 RID: 22370
+		// (get) Token: 0x06019CBA RID: 105658 RVA: 0x003C346E File Offset: 0x003C166E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> RewardScoreIds
@@ -178,8 +178,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054E2 RID: 21730
-		// (get) Token: 0x06019285 RID: 103045 RVA: 0x003A8D26 File Offset: 0x003A6F26
+		// Token: 0x17005763 RID: 22371
+		// (get) Token: 0x06019CBB RID: 105659 RVA: 0x003C3476 File Offset: 0x003C1676
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> RewardLevelIds
@@ -190,9 +190,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054E3 RID: 21731
-		// (get) Token: 0x06019286 RID: 103046 RVA: 0x003A8D2E File Offset: 0x003A6F2E
-		// (set) Token: 0x06019287 RID: 103047 RVA: 0x003A8D36 File Offset: 0x003A6F36
+		// Token: 0x17005764 RID: 22372
+		// (get) Token: 0x06019CBC RID: 105660 RVA: 0x003C347E File Offset: 0x003C167E
+		// (set) Token: 0x06019CBD RID: 105661 RVA: 0x003C3486 File Offset: 0x003C1686
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Atmosphere
@@ -207,9 +207,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054E4 RID: 21732
-		// (get) Token: 0x06019288 RID: 103048 RVA: 0x003A8D3F File Offset: 0x003A6F3F
-		// (set) Token: 0x06019289 RID: 103049 RVA: 0x003A8D47 File Offset: 0x003A6F47
+		// Token: 0x17005765 RID: 22373
+		// (get) Token: 0x06019CBE RID: 105662 RVA: 0x003C348F File Offset: 0x003C168F
+		// (set) Token: 0x06019CBF RID: 105663 RVA: 0x003C3497 File Offset: 0x003C1697
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int AtmosphereLevel
@@ -224,8 +224,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054E5 RID: 21733
-		// (get) Token: 0x0601928A RID: 103050 RVA: 0x003A8D50 File Offset: 0x003A6F50
+		// Token: 0x17005766 RID: 22374
+		// (get) Token: 0x06019CC0 RID: 105664 RVA: 0x003C34A0 File Offset: 0x003C16A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SpringSkipEntry> SpringSkipEntries
@@ -236,7 +236,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601928B RID: 103051 RVA: 0x003A8D58 File Offset: 0x003A6F58
+		// Token: 0x06019CC1 RID: 105665 RVA: 0x003C34A8 File Offset: 0x003C16A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -244,7 +244,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SpringFestivalActivityInfo);
 		}
 
-		// Token: 0x0601928C RID: 103052 RVA: 0x003A8D68 File Offset: 0x003A6F68
+		// Token: 0x06019CC2 RID: 105666 RVA: 0x003C34B8 File Offset: 0x003C16B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SpringFestivalActivityInfo other)
@@ -252,7 +252,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.areaInfos_.Equals(other.areaInfos_) && this.unlockFurnitures_.Equals(other.unlockFurnitures_) && object.Equals(this.DrinkMixData, other.DrinkMixData) && this.oneBrochureInfos_.Equals(other.oneBrochureInfos_) && this.jokerLevelInfos_.Equals(other.jokerLevelInfos_) && this.conditionTasks_.Equals(other.conditionTasks_) && this.springFunctionIds_.Equals(other.springFunctionIds_) && this.rewardScoreIds_.Equals(other.rewardScoreIds_) && this.rewardLevelIds_.Equals(other.rewardLevelIds_) && this.Atmosphere == other.Atmosphere && this.AtmosphereLevel == other.AtmosphereLevel && this.springSkipEntries_.Equals(other.springSkipEntries_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601928D RID: 103053 RVA: 0x003A8E84 File Offset: 0x003A7084
+		// Token: 0x06019CC3 RID: 105667 RVA: 0x003C35D4 File Offset: 0x003C17D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601928E RID: 103054 RVA: 0x003A8F70 File Offset: 0x003A7170
+		// Token: 0x06019CC4 RID: 105668 RVA: 0x003C36C0 File Offset: 0x003C18C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601928F RID: 103055 RVA: 0x003A8F7D File Offset: 0x003A717D
+		// Token: 0x06019CC5 RID: 105669 RVA: 0x003C36CD File Offset: 0x003C18CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -302,7 +302,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06019290 RID: 103056 RVA: 0x003A8F88 File Offset: 0x003A7188
+		// Token: 0x06019CC6 RID: 105670 RVA: 0x003C36D8 File Offset: 0x003C18D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -337,7 +337,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019291 RID: 103057 RVA: 0x003A9098 File Offset: 0x003A7298
+		// Token: 0x06019CC7 RID: 105671 RVA: 0x003C37E8 File Offset: 0x003C19E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -371,7 +371,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06019292 RID: 103058 RVA: 0x003A91B4 File Offset: 0x003A73B4
+		// Token: 0x06019CC8 RID: 105672 RVA: 0x003C3904 File Offset: 0x003C1B04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SpringFestivalActivityInfo other)
@@ -408,7 +408,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06019293 RID: 103059 RVA: 0x003A92C9 File Offset: 0x003A74C9
+		// Token: 0x06019CC9 RID: 105673 RVA: 0x003C3A19 File Offset: 0x003C1C19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -416,7 +416,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06019294 RID: 103060 RVA: 0x003A92D4 File Offset: 0x003A74D4
+		// Token: 0x06019CCA RID: 105674 RVA: 0x003C3A24 File Offset: 0x003C1C24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -547,106 +547,106 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400940C RID: 37900
+		// Token: 0x04009836 RID: 38966
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400940D RID: 37901
+		// Token: 0x04009837 RID: 38967
 		public const int AreaInfosFieldNumber = 1;
 
-		// Token: 0x0400940E RID: 37902
+		// Token: 0x04009838 RID: 38968
 		private static readonly FieldCodec<AreaInfo> _repeated_areaInfos_codec = FieldCodec.ForMessage<AreaInfo>(10U, AreaInfo.Parser);
 
-		// Token: 0x0400940F RID: 37903
+		// Token: 0x04009839 RID: 38969
 		private readonly RepeatedField<AreaInfo> areaInfos_ = new RepeatedField<AreaInfo>();
 
-		// Token: 0x04009410 RID: 37904
+		// Token: 0x0400983A RID: 38970
 		public const int UnlockFurnituresFieldNumber = 2;
 
-		// Token: 0x04009411 RID: 37905
+		// Token: 0x0400983B RID: 38971
 		private static readonly FieldCodec<int> _repeated_unlockFurnitures_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x04009412 RID: 37906
+		// Token: 0x0400983C RID: 38972
 		private readonly RepeatedField<int> unlockFurnitures_ = new RepeatedField<int>();
 
-		// Token: 0x04009413 RID: 37907
+		// Token: 0x0400983D RID: 38973
 		public const int DrinkMixDataFieldNumber = 3;
 
-		// Token: 0x04009414 RID: 37908
+		// Token: 0x0400983E RID: 38974
 		private DrinkMixData drinkMixData_;
 
-		// Token: 0x04009415 RID: 37909
+		// Token: 0x0400983F RID: 38975
 		public const int OneBrochureInfosFieldNumber = 4;
 
-		// Token: 0x04009416 RID: 37910
+		// Token: 0x04009840 RID: 38976
 		private static readonly FieldCodec<OneBrochureInfo> _repeated_oneBrochureInfos_codec = FieldCodec.ForMessage<OneBrochureInfo>(34U, OneBrochureInfo.Parser);
 
-		// Token: 0x04009417 RID: 37911
+		// Token: 0x04009841 RID: 38977
 		private readonly RepeatedField<OneBrochureInfo> oneBrochureInfos_ = new RepeatedField<OneBrochureInfo>();
 
-		// Token: 0x04009418 RID: 37912
+		// Token: 0x04009842 RID: 38978
 		public const int JokerLevelInfosFieldNumber = 5;
 
-		// Token: 0x04009419 RID: 37913
+		// Token: 0x04009843 RID: 38979
 		private static readonly FieldCodec<GuessJokerLevelInfo> _repeated_jokerLevelInfos_codec = FieldCodec.ForMessage<GuessJokerLevelInfo>(42U, GuessJokerLevelInfo.Parser);
 
-		// Token: 0x0400941A RID: 37914
+		// Token: 0x04009844 RID: 38980
 		private readonly RepeatedField<GuessJokerLevelInfo> jokerLevelInfos_ = new RepeatedField<GuessJokerLevelInfo>();
 
-		// Token: 0x0400941B RID: 37915
+		// Token: 0x04009845 RID: 38981
 		public const int ConditionTasksFieldNumber = 6;
 
-		// Token: 0x0400941C RID: 37916
+		// Token: 0x04009846 RID: 38982
 		private static readonly FieldCodec<ConditionTask> _repeated_conditionTasks_codec = FieldCodec.ForMessage<ConditionTask>(50U, ConditionTask.Parser);
 
-		// Token: 0x0400941D RID: 37917
+		// Token: 0x04009847 RID: 38983
 		private readonly RepeatedField<ConditionTask> conditionTasks_ = new RepeatedField<ConditionTask>();
 
-		// Token: 0x0400941E RID: 37918
+		// Token: 0x04009848 RID: 38984
 		public const int SpringFunctionIdsFieldNumber = 7;
 
-		// Token: 0x0400941F RID: 37919
+		// Token: 0x04009849 RID: 38985
 		private static readonly FieldCodec<int> _repeated_springFunctionIds_codec = FieldCodec.ForInt32(58U);
 
-		// Token: 0x04009420 RID: 37920
+		// Token: 0x0400984A RID: 38986
 		private readonly RepeatedField<int> springFunctionIds_ = new RepeatedField<int>();
 
-		// Token: 0x04009421 RID: 37921
+		// Token: 0x0400984B RID: 38987
 		public const int RewardScoreIdsFieldNumber = 8;
 
-		// Token: 0x04009422 RID: 37922
+		// Token: 0x0400984C RID: 38988
 		private static readonly FieldCodec<int> _repeated_rewardScoreIds_codec = FieldCodec.ForInt32(66U);
 
-		// Token: 0x04009423 RID: 37923
+		// Token: 0x0400984D RID: 38989
 		private readonly RepeatedField<int> rewardScoreIds_ = new RepeatedField<int>();
 
-		// Token: 0x04009424 RID: 37924
+		// Token: 0x0400984E RID: 38990
 		public const int RewardLevelIdsFieldNumber = 9;
 
-		// Token: 0x04009425 RID: 37925
+		// Token: 0x0400984F RID: 38991
 		private static readonly FieldCodec<int> _repeated_rewardLevelIds_codec = FieldCodec.ForInt32(74U);
 
-		// Token: 0x04009426 RID: 37926
+		// Token: 0x04009850 RID: 38992
 		private readonly RepeatedField<int> rewardLevelIds_ = new RepeatedField<int>();
 
-		// Token: 0x04009427 RID: 37927
+		// Token: 0x04009851 RID: 38993
 		public const int AtmosphereFieldNumber = 10;
 
-		// Token: 0x04009428 RID: 37928
+		// Token: 0x04009852 RID: 38994
 		private int atmosphere_;
 
-		// Token: 0x04009429 RID: 37929
+		// Token: 0x04009853 RID: 38995
 		public const int AtmosphereLevelFieldNumber = 11;
 
-		// Token: 0x0400942A RID: 37930
+		// Token: 0x04009854 RID: 38996
 		private int atmosphereLevel_;
 
-		// Token: 0x0400942B RID: 37931
+		// Token: 0x04009855 RID: 38997
 		public const int SpringSkipEntriesFieldNumber = 12;
 
-		// Token: 0x0400942C RID: 37932
+		// Token: 0x04009856 RID: 38998
 		private static readonly FieldCodec<SpringSkipEntry> _repeated_springSkipEntries_codec = FieldCodec.ForMessage<SpringSkipEntry>(98U, SpringSkipEntry.Parser);
 
-		// Token: 0x0400942D RID: 37933
+		// Token: 0x04009857 RID: 38999
 		private readonly RepeatedField<SpringSkipEntry> springSkipEntries_ = new RepeatedField<SpringSkipEntry>();
 	}
 }

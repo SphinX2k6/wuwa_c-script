@@ -3,31 +3,31 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005859 RID: 22617
+	// Token: 0x02004831 RID: 18481
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class LongPressButtonStyle : ILongPressButtonStyle
 	{
-		// Token: 0x17008A55 RID: 35413
-		// (get) Token: 0x0603980F RID: 235535 RVA: 0x00DA7087 File Offset: 0x00DA5287
-		// (set) Token: 0x06039810 RID: 235536 RVA: 0x00DA708F File Offset: 0x00DA528F
+		// Token: 0x17005E21 RID: 24097
+		// (get) Token: 0x0602E72C RID: 190252 RVA: 0x00CF5DAF File Offset: 0x00CF3FAF
+		// (set) Token: 0x0602E72D RID: 190253 RVA: 0x00CF5DB7 File Offset: 0x00CF3FB7
 		[RequiredMember]
 		public string ResourceId { get; set; }
 
-		// Token: 0x17008A56 RID: 35414
-		// (get) Token: 0x06039811 RID: 235537 RVA: 0x00DA7098 File Offset: 0x00DA5298
-		// (set) Token: 0x06039812 RID: 235538 RVA: 0x00DA70A0 File Offset: 0x00DA52A0
+		// Token: 0x17005E22 RID: 24098
+		// (get) Token: 0x0602E72E RID: 190254 RVA: 0x00CF5DC0 File Offset: 0x00CF3FC0
+		// (set) Token: 0x0602E72F RID: 190255 RVA: 0x00CF5DC8 File Offset: 0x00CF3FC8
 		[RequiredMember]
 		public Func<InteractionLongPressButton> Create { get; set; }
 
-		// Token: 0x17008A57 RID: 35415
-		// (get) Token: 0x06039813 RID: 235539 RVA: 0x00DA70A9 File Offset: 0x00DA52A9
-		// (set) Token: 0x06039814 RID: 235540 RVA: 0x00DA70B1 File Offset: 0x00DA52B1
+		// Token: 0x17005E23 RID: 24099
+		// (get) Token: 0x0602E730 RID: 190256 RVA: 0x00CF5DD1 File Offset: 0x00CF3FD1
+		// (set) Token: 0x0602E731 RID: 190257 RVA: 0x00CF5DD9 File Offset: 0x00CF3FD9
 		[RequiredMember]
 		public Func<ILongPressInteractRestriction> CreateRestriction { get; set; }
 
-		// Token: 0x06039815 RID: 235541 RVA: 0x00DA70BA File Offset: 0x00DA52BA
+		// Token: 0x0602E732 RID: 190258 RVA: 0x00CF5DE2 File Offset: 0x00CF3FE2
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public LongPressButtonStyle()

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AE7 RID: 19175
+	// Token: 0x02004FBC RID: 20412
 	public struct ICheckPlayerFaceToCondition : IFlatbufferObject
 	{
-		// Token: 0x17008B09 RID: 35593
-		// (get) Token: 0x0601E208 RID: 123400 RVA: 0x00439CD2 File Offset: 0x00437ED2
+		// Token: 0x17009200 RID: 37376
+		// (get) Token: 0x0601FD1D RID: 130333 RVA: 0x0046B97E File Offset: 0x00469B7E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E209 RID: 123401 RVA: 0x00439CDF File Offset: 0x00437EDF
+		// Token: 0x0601FD1E RID: 130334 RVA: 0x0046B98B File Offset: 0x00469B8B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E20A RID: 123402 RVA: 0x00439CE8 File Offset: 0x00437EE8
+		// Token: 0x0601FD1F RID: 130335 RVA: 0x0046B994 File Offset: 0x00469B94
 		public static ICheckPlayerFaceToCondition GetRootAsICheckPlayerFaceToCondition(ByteBuffer _bb)
 		{
 			return ICheckPlayerFaceToCondition.GetRootAsICheckPlayerFaceToCondition(_bb, default(ICheckPlayerFaceToCondition));
 		}
 
-		// Token: 0x0601E20B RID: 123403 RVA: 0x00439D04 File Offset: 0x00437F04
+		// Token: 0x0601FD20 RID: 130336 RVA: 0x0046B9B0 File Offset: 0x00469BB0
 		public static ICheckPlayerFaceToCondition GetRootAsICheckPlayerFaceToCondition(ByteBuffer _bb, ICheckPlayerFaceToCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E20C RID: 123404 RVA: 0x00439D21 File Offset: 0x00437F21
+		// Token: 0x0601FD21 RID: 130337 RVA: 0x0046B9CD File Offset: 0x00469BCD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E20D RID: 123405 RVA: 0x00439D30 File Offset: 0x00437F30
+		// Token: 0x0601FD22 RID: 130338 RVA: 0x0046B9DC File Offset: 0x00469BDC
 		public ICheckPlayerFaceToCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B0A RID: 35594
-		// (get) Token: 0x0601E20E RID: 123406 RVA: 0x00439D40 File Offset: 0x00437F40
+		// Token: 0x17009201 RID: 37377
+		// (get) Token: 0x0601FD23 RID: 130339 RVA: 0x0046B9EC File Offset: 0x00469BEC
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B0B RID: 35595
-		// (get) Token: 0x0601E20F RID: 123407 RVA: 0x00439D7C File Offset: 0x00437F7C
+		// Token: 0x17009202 RID: 37378
+		// (get) Token: 0x0601FD24 RID: 130340 RVA: 0x0046BA28 File Offset: 0x00469C28
 		public TTargetEntity TargetType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E210 RID: 123408 RVA: 0x00439DB8 File Offset: 0x00437FB8
+		// Token: 0x0601FD25 RID: 130341 RVA: 0x0046BA64 File Offset: 0x00469C64
 		public TTable? Target<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,32 +88,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601E211 RID: 123409 RVA: 0x00439DFC File Offset: 0x00437FFC
+		// Token: 0x0601FD26 RID: 130342 RVA: 0x0046BAA8 File Offset: 0x00469CA8
 		public IPlayerEntity TargetAsIPlayerEntity()
 		{
 			return this.Target<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x0601E212 RID: 123410 RVA: 0x00439E18 File Offset: 0x00438018
+		// Token: 0x0601FD27 RID: 130343 RVA: 0x0046BAC4 File Offset: 0x00469CC4
 		public ISelfEntity TargetAsISelfEntity()
 		{
 			return this.Target<ISelfEntity>().Value;
 		}
 
-		// Token: 0x0601E213 RID: 123411 RVA: 0x00439E34 File Offset: 0x00438034
+		// Token: 0x0601FD28 RID: 130344 RVA: 0x0046BAE0 File Offset: 0x00469CE0
 		public ITargetEntity TargetAsITargetEntity()
 		{
 			return this.Target<ITargetEntity>().Value;
 		}
 
-		// Token: 0x0601E214 RID: 123412 RVA: 0x00439E50 File Offset: 0x00438050
+		// Token: 0x0601FD29 RID: 130345 RVA: 0x0046BAFC File Offset: 0x00469CFC
 		public ITriggeredEntity TargetAsITriggeredEntity()
 		{
 			return this.Target<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x17008B0C RID: 35596
-		// (get) Token: 0x0601E215 RID: 123413 RVA: 0x00439E6C File Offset: 0x0043806C
+		// Token: 0x17009203 RID: 37379
+		// (get) Token: 0x0601FD2A RID: 130346 RVA: 0x0046BB18 File Offset: 0x00469D18
 		public float AngleInterval
 		{
 			get
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E216 RID: 123414 RVA: 0x00439EAD File Offset: 0x004380AD
+		// Token: 0x0601FD2B RID: 130347 RVA: 0x0046BB59 File Offset: 0x00469D59
 		public static Offset<ICheckPlayerFaceToCondition> CreateICheckPlayerFaceToCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, TTargetEntity Target_type = TTargetEntity.NONE, int TargetOffset = 0, float AngleInterval = 0f)
 		{
 			builder.StartTable(4);
@@ -138,43 +138,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerFaceToCondition.EndICheckPlayerFaceToCondition(builder);
 		}
 
-		// Token: 0x0601E217 RID: 123415 RVA: 0x00439ED9 File Offset: 0x004380D9
+		// Token: 0x0601FD2C RID: 130348 RVA: 0x0046BB85 File Offset: 0x00469D85
 		public static void StartICheckPlayerFaceToCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601E218 RID: 123416 RVA: 0x00439EE2 File Offset: 0x004380E2
+		// Token: 0x0601FD2D RID: 130349 RVA: 0x0046BB8E File Offset: 0x00469D8E
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E219 RID: 123417 RVA: 0x00439EED File Offset: 0x004380ED
+		// Token: 0x0601FD2E RID: 130350 RVA: 0x0046BB99 File Offset: 0x00469D99
 		public static void AddTargetType(FlatBufferBuilder builder, TTargetEntity targetType)
 		{
 			builder.AddByte(1, (byte)targetType, 0);
 		}
 
-		// Token: 0x0601E21A RID: 123418 RVA: 0x00439EF8 File Offset: 0x004380F8
+		// Token: 0x0601FD2F RID: 130351 RVA: 0x0046BBA4 File Offset: 0x00469DA4
 		public static void AddTarget(FlatBufferBuilder builder, int targetOffset)
 		{
 			builder.AddOffset(2, targetOffset, 0);
 		}
 
-		// Token: 0x0601E21B RID: 123419 RVA: 0x00439F03 File Offset: 0x00438103
+		// Token: 0x0601FD30 RID: 130352 RVA: 0x0046BBAF File Offset: 0x00469DAF
 		public static void AddAngleInterval(FlatBufferBuilder builder, float angleInterval)
 		{
 			builder.AddFloat(3, angleInterval, 0.0);
 		}
 
-		// Token: 0x0601E21C RID: 123420 RVA: 0x00439F16 File Offset: 0x00438116
+		// Token: 0x0601FD31 RID: 130353 RVA: 0x0046BBC2 File Offset: 0x00469DC2
 		public static Offset<ICheckPlayerFaceToCondition> EndICheckPlayerFaceToCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckPlayerFaceToCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E21D RID: 123421 RVA: 0x00439F24 File Offset: 0x00438124
+		// Token: 0x0601FD32 RID: 130354 RVA: 0x0046BBD0 File Offset: 0x00469DD0
 		public ICheckPlayerFaceToConditionT UnPack()
 		{
 			ICheckPlayerFaceToConditionT checkPlayerFaceToConditionT = new ICheckPlayerFaceToConditionT();
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkPlayerFaceToConditionT;
 		}
 
-		// Token: 0x0601E21E RID: 123422 RVA: 0x00439F40 File Offset: 0x00438140
+		// Token: 0x0601FD33 RID: 130355 RVA: 0x0046BBEC File Offset: 0x00469DEC
 		public void UnPackTo(ICheckPlayerFaceToConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.AngleInterval = this.AngleInterval;
 		}
 
-		// Token: 0x0601E21F RID: 123423 RVA: 0x0043A088 File Offset: 0x00438288
+		// Token: 0x0601FD34 RID: 130356 RVA: 0x0046BD34 File Offset: 0x00469F34
 		public static Offset<ICheckPlayerFaceToCondition> Pack(FlatBufferBuilder builder, ICheckPlayerFaceToConditionT _o)
 		{
 			if (_o == null)
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerFaceToCondition.CreateICheckPlayerFaceToCondition(builder, _o.Type, target_type, targetOffset, _o.AngleInterval);
 		}
 
-		// Token: 0x0400D377 RID: 54135
+		// Token: 0x0400DE62 RID: 56930
 		private Table __p;
 	}
 }

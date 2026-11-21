@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049E6 RID: 18918
+	// Token: 0x02004EA6 RID: 20134
 	public class ICheckElementalWaterBoxStagnationSeqT
 	{
-		// Token: 0x170088D3 RID: 35027
-		// (get) Token: 0x0601D8E8 RID: 121064 RVA: 0x0042928A File Offset: 0x0042748A
-		// (set) Token: 0x0601D8E9 RID: 121065 RVA: 0x00429292 File Offset: 0x00427492
+		// Token: 0x17008FA3 RID: 36771
+		// (get) Token: 0x0601F35B RID: 127835 RVA: 0x00459EF6 File Offset: 0x004580F6
+		// (set) Token: 0x0601F35C RID: 127836 RVA: 0x00459EFE File Offset: 0x004580FE
 		public ECondition Type { get; set; }
 
-		// Token: 0x170088D4 RID: 35028
-		// (get) Token: 0x0601D8EA RID: 121066 RVA: 0x0042929B File Offset: 0x0042749B
-		// (set) Token: 0x0601D8EB RID: 121067 RVA: 0x004292A3 File Offset: 0x004274A3
+		// Token: 0x17008FA4 RID: 36772
+		// (get) Token: 0x0601F35D RID: 127837 RVA: 0x00459F07 File Offset: 0x00458107
+		// (set) Token: 0x0601F35E RID: 127838 RVA: 0x00459F0F File Offset: 0x0045810F
 		public int EntityId { get; set; }
 
-		// Token: 0x170088D5 RID: 35029
-		// (get) Token: 0x0601D8EC RID: 121068 RVA: 0x004292AC File Offset: 0x004274AC
-		// (set) Token: 0x0601D8ED RID: 121069 RVA: 0x004292B4 File Offset: 0x004274B4
+		// Token: 0x17008FA5 RID: 36773
+		// (get) Token: 0x0601F35F RID: 127839 RVA: 0x00459F18 File Offset: 0x00458118
+		// (set) Token: 0x0601F360 RID: 127840 RVA: 0x00459F20 File Offset: 0x00458120
 		public string StartMark { get; set; }
 
-		// Token: 0x170088D6 RID: 35030
-		// (get) Token: 0x0601D8EE RID: 121070 RVA: 0x004292BD File Offset: 0x004274BD
-		// (set) Token: 0x0601D8EF RID: 121071 RVA: 0x004292C5 File Offset: 0x004274C5
+		// Token: 0x17008FA6 RID: 36774
+		// (get) Token: 0x0601F361 RID: 127841 RVA: 0x00459F29 File Offset: 0x00458129
+		// (set) Token: 0x0601F362 RID: 127842 RVA: 0x00459F31 File Offset: 0x00458131
 		public string EndMark { get; set; }
 
-		// Token: 0x0601D8F0 RID: 121072 RVA: 0x004292CE File Offset: 0x004274CE
+		// Token: 0x0601F363 RID: 127843 RVA: 0x00459F3A File Offset: 0x0045813A
 		public ICheckElementalWaterBoxStagnationSeqT()
 		{
 			this.Type = ECondition.CompareVar;

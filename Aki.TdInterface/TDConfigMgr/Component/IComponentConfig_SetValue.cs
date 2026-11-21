@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200025D RID: 605
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002A0 RID: 672
 	public class IComponentConfig_SetValue
 	{
-		// Token: 0x04000AB6 RID: 2742
+		// Token: 0x04000B97 RID: 2967
 		public List<EAction> BaseActions;
 
-		// Token: 0x04000AB7 RID: 2743
+		// Token: 0x04000B98 RID: 2968
 		public string ActionsByComponent;
 	}
 }

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001606 RID: 5638
+	// Token: 0x02001768 RID: 5992
 	[EnumExtensions]
 	public enum EJigsawShape
 	{
-		// Token: 0x04004B74 RID: 19316
+		// Token: 0x04004F3A RID: 20282
 		Circle,
-		// Token: 0x04004B75 RID: 19317
+		// Token: 0x04004F3B RID: 20283
 		Rectangle
 	}
 }

@@ -8,13 +8,13 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001347 RID: 4935
+// Token: 0x020007FB RID: 2043
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MoonChasingModel : ModelBase
 {
-	// Token: 0x06008969 RID: 35177 RVA: 0x001D5746 File Offset: 0x001D3946
+	// Token: 0x06005D04 RID: 23812 RVA: 0x001DE5B2 File Offset: 0x001DC7B2
 	protected override bool OnInit()
 	{
 		this.InitHandbookReward();
@@ -22,40 +22,40 @@ public class MoonChasingModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600896A RID: 35178 RVA: 0x001D5755 File Offset: 0x001D3955
+	// Token: 0x06005D05 RID: 23813 RVA: 0x001DE5C1 File Offset: 0x001DC7C1
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x0600896B RID: 35179 RVA: 0x001D5758 File Offset: 0x001D3958
+	// Token: 0x06005D06 RID: 23814 RVA: 0x001DE5C4 File Offset: 0x001DC7C4
 	public int GetPopularityValue()
 	{
 		int popularityItemId = BusinessConfig.Instance.GetPopularityItemId();
 		return InventoryModel.Instance.GetItemCountByConfigId(popularityItemId, 0);
 	}
 
-	// Token: 0x0600896C RID: 35180 RVA: 0x001D577C File Offset: 0x001D397C
+	// Token: 0x06005D07 RID: 23815 RVA: 0x001DE5E8 File Offset: 0x001DC7E8
 	public int GetWishValue()
 	{
 		int wishItemId = BusinessConfig.Instance.GetWishItemId();
 		return InventoryModel.Instance.GetItemCountByConfigId(wishItemId, 0);
 	}
 
-	// Token: 0x0600896D RID: 35181 RVA: 0x001D57A0 File Offset: 0x001D39A0
+	// Token: 0x06005D08 RID: 23816 RVA: 0x001DE60C File Offset: 0x001DC80C
 	public int GetCoinValue()
 	{
 		int coinItemId = BusinessConfig.Instance.GetCoinItemId();
 		return InventoryModel.Instance.GetItemCountByConfigId(coinItemId, 0);
 	}
 
-	// Token: 0x0600896E RID: 35182 RVA: 0x001D57C4 File Offset: 0x001D39C4
+	// Token: 0x06005D09 RID: 23817 RVA: 0x001DE630 File Offset: 0x001DC830
 	public List<UiDynamicTab> GetRewardTabList()
 	{
 		return DynamicTabConfig.Instance.GetViewTabList(EUiViewName.RewardMainView);
 	}
 
-	// Token: 0x0600896F RID: 35183 RVA: 0x001D57DC File Offset: 0x001D39DC
+	// Token: 0x06005D0A RID: 23818 RVA: 0x001DE648 File Offset: 0x001DC848
 	public void InitQuestInfo()
 	{
 		this.MainQuestIdList.Clear();
@@ -70,13 +70,13 @@ public class MoonChasingModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008970 RID: 35184 RVA: 0x001D589C File Offset: 0x001D3A9C
+	// Token: 0x06005D0B RID: 23819 RVA: 0x001DE708 File Offset: 0x001DC908
 	public List<IHandbookGridData> GetHandbookGridList()
 	{
 		return this.GetBuildingHandbookDataList();
 	}
 
-	// Token: 0x06008971 RID: 35185 RVA: 0x001D58A4 File Offset: 0x001D3AA4
+	// Token: 0x06005D0C RID: 23820 RVA: 0x001DE710 File Offset: 0x001DC910
 	public int GetHandbookUnlockCount()
 	{
 		int num = 0;
@@ -93,7 +93,7 @@ public class MoonChasingModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06008972 RID: 35186 RVA: 0x001D5904 File Offset: 0x001D3B04
+	// Token: 0x06005D0D RID: 23821 RVA: 0x001DE770 File Offset: 0x001DC970
 	public List<IHandbookGridData> GetBuildingHandbookDataList()
 	{
 		List<BuildingData> allBuildingData = MoonChasingBuildingModel.Instance.GetAllBuildingData();
@@ -110,7 +110,7 @@ public class MoonChasingModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008973 RID: 35187 RVA: 0x001D5980 File Offset: 0x001D3B80
+	// Token: 0x06005D0E RID: 23822 RVA: 0x001DE7EC File Offset: 0x001DC9EC
 	public void InitHandbookReward()
 	{
 		foreach (TrackMoonHandbookReward trackMoonHandbookReward in MoonChasingHandbookConfig.Instance.GetHandbookRewardList())
@@ -130,13 +130,13 @@ public class MoonChasingModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008974 RID: 35188 RVA: 0x001D5A80 File Offset: 0x001D3C80
+	// Token: 0x06005D0F RID: 23823 RVA: 0x001DE8EC File Offset: 0x001DCAEC
 	private int SortRewardData(HandbookRewardData a, HandbookRewardData b)
 	{
 		return a.Goal - b.Goal;
 	}
 
-	// Token: 0x06008975 RID: 35189 RVA: 0x001D5A90 File Offset: 0x001D3C90
+	// Token: 0x06005D10 RID: 23824 RVA: 0x001DE8FC File Offset: 0x001DCAFC
 	[NullableContext(2)]
 	public HandbookRewardData GetHandbookRewardDataById(int id)
 	{
@@ -148,7 +148,7 @@ public class MoonChasingModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06008976 RID: 35190 RVA: 0x001D5AB0 File Offset: 0x001D3CB0
+	// Token: 0x06005D11 RID: 23825 RVA: 0x001DE91C File Offset: 0x001DCB1C
 	public bool HasHandbookRewardRedDot()
 	{
 		int handbookUnlockCount = this.GetHandbookUnlockCount();
@@ -165,7 +165,7 @@ public class MoonChasingModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06008977 RID: 35191 RVA: 0x001D5B18 File Offset: 0x001D3D18
+	// Token: 0x06005D12 RID: 23826 RVA: 0x001DE984 File Offset: 0x001DCB84
 	public List<IMemoryItemData> GetMemoryInfo(TrackMoonSettleResponse data)
 	{
 		IEnumerable<TrackMoonMemory> allMemoryInfo = MoonChasingMemoryConfig.Instance.GetAllMemoryInfo();
@@ -285,7 +285,7 @@ public class MoonChasingModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008978 RID: 35192 RVA: 0x001D5EB8 File Offset: 0x001D40B8
+	// Token: 0x06005D13 RID: 23827 RVA: 0x001DED24 File Offset: 0x001DCF24
 	private int SortMemoryData(IMemoryItemData a, IMemoryItemData b)
 	{
 		if (a.Sort == b.Sort)
@@ -295,7 +295,7 @@ public class MoonChasingModel : ModelBase
 		return a.Sort - b.Sort;
 	}
 
-	// Token: 0x06008979 RID: 35193 RVA: 0x001D5EE4 File Offset: 0x001D40E4
+	// Token: 0x06005D14 RID: 23828 RVA: 0x001DED50 File Offset: 0x001DCF50
 	[NullableContext(0)]
 	public ValueTuple<EMoonChasingUnlockType, int>? GetFirstUnlockData()
 	{
@@ -312,9 +312,9 @@ public class MoonChasingModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x17000BBA RID: 3002
-	// (get) Token: 0x0600897A RID: 35194 RVA: 0x001D5F38 File Offset: 0x001D4138
-	// (set) Token: 0x0600897B RID: 35195 RVA: 0x001D5F78 File Offset: 0x001D4178
+	// Token: 0x17000BDA RID: 3034
+	// (get) Token: 0x06005D15 RID: 23829 RVA: 0x001DEDA4 File Offset: 0x001DCFA4
+	// (set) Token: 0x06005D16 RID: 23830 RVA: 0x001DEDE4 File Offset: 0x001DCFE4
 	private double DelegationReadTimeStamp
 	{
 		get
@@ -338,25 +338,25 @@ public class MoonChasingModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600897C RID: 35196 RVA: 0x001D5FC7 File Offset: 0x001D41C7
+	// Token: 0x06005D17 RID: 23831 RVA: 0x001DEE33 File Offset: 0x001DD033
 	public bool CheckDelegationRedDotState()
 	{
 		return this.DelegationReadTimeStamp == 0.0 || TimeUtil.Instance.GetCurrentCrossDayStamp() != this.DelegationReadTimeStamp;
 	}
 
-	// Token: 0x0600897D RID: 35197 RVA: 0x001D5FF1 File Offset: 0x001D41F1
+	// Token: 0x06005D18 RID: 23832 RVA: 0x001DEE5D File Offset: 0x001DD05D
 	public void RemoveDelegationRedDot()
 	{
 		this.DelegationReadTimeStamp = TimeUtil.Instance.GetCurrentCrossDayStamp();
 	}
 
-	// Token: 0x0600897E RID: 35198 RVA: 0x001D6003 File Offset: 0x001D4203
+	// Token: 0x06005D19 RID: 23833 RVA: 0x001DEE6F File Offset: 0x001DD06F
 	public bool CheckRoleRedDotState()
 	{
 		return this.CheckRoleUnlockRedDotState() || this.CheckRoleFosterTipsRedDotState();
 	}
 
-	// Token: 0x0600897F RID: 35199 RVA: 0x001D6018 File Offset: 0x001D4218
+	// Token: 0x06005D1A RID: 23834 RVA: 0x001DEE84 File Offset: 0x001DD084
 	public bool CheckRoleUnlockRedDotState()
 	{
 		foreach (EditTeamData editTeamData in MoonChasingBusinessModel.Instance.GetHelpEditTeamDataList(false))
@@ -369,34 +369,34 @@ public class MoonChasingModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06008980 RID: 35200 RVA: 0x001D6080 File Offset: 0x001D4280
+	// Token: 0x06005D1B RID: 23835 RVA: 0x001DEEEC File Offset: 0x001DD0EC
 	public bool CheckRoleIdRedDotState(int roleId)
 	{
 		return NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.MoonChasingRoleUnlock, roleId);
 	}
 
-	// Token: 0x06008981 RID: 35201 RVA: 0x001D608F File Offset: 0x001D428F
+	// Token: 0x06005D1C RID: 23836 RVA: 0x001DEEFB File Offset: 0x001DD0FB
 	public void ReadRoleIdUnlockFlag(int roleId)
 	{
 		NewFlagModel.Instance.RemoveNewFlag(ELocalStoragePlayerKey.MoonChasingRoleUnlock, roleId);
 		this.SaveRoleRedDot();
 	}
 
-	// Token: 0x06008982 RID: 35202 RVA: 0x001D60A5 File Offset: 0x001D42A5
+	// Token: 0x06005D1D RID: 23837 RVA: 0x001DEF11 File Offset: 0x001DD111
 	public void SaveRoleIdUnlockFlag(int roleId)
 	{
 		NewFlagModel.Instance.AddNewFlag(ELocalStoragePlayerKey.MoonChasingRoleUnlock, roleId);
 		this.SaveRoleRedDot();
 	}
 
-	// Token: 0x06008983 RID: 35203 RVA: 0x001D60BB File Offset: 0x001D42BB
+	// Token: 0x06005D1E RID: 23838 RVA: 0x001DEF27 File Offset: 0x001DD127
 	public void SaveRoleRedDot()
 	{
 		NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.MoonChasingRoleUnlock);
 		EventSystem.Instance.Emit(EEventName.MoonChasingRefreshRoleRedDot);
 	}
 
-	// Token: 0x06008984 RID: 35204 RVA: 0x001D60DC File Offset: 0x001D42DC
+	// Token: 0x06005D1F RID: 23839 RVA: 0x001DEF48 File Offset: 0x001DD148
 	public bool CheckRoleFosterTipsRedDotState()
 	{
 		bool flag = false;
@@ -418,13 +418,13 @@ public class MoonChasingModel : ModelBase
 		return value != 0 && this.GetWishValue() >= value;
 	}
 
-	// Token: 0x06008985 RID: 35205 RVA: 0x001D6160 File Offset: 0x001D4360
+	// Token: 0x06005D20 RID: 23840 RVA: 0x001DEFCC File Offset: 0x001DD1CC
 	public bool CheckQuestRedDotState()
 	{
 		return this.CheckMainlineRedDot() || this.CheckBranchRedDot();
 	}
 
-	// Token: 0x06008986 RID: 35206 RVA: 0x001D6174 File Offset: 0x001D4374
+	// Token: 0x06005D21 RID: 23841 RVA: 0x001DEFE0 File Offset: 0x001DD1E0
 	public bool CheckMainlineRedDot()
 	{
 		foreach (MainLine mainLine in TaskConfig.Instance.GetAllMainLineTask())
@@ -437,7 +437,7 @@ public class MoonChasingModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06008987 RID: 35207 RVA: 0x001D61D4 File Offset: 0x001D43D4
+	// Token: 0x06005D22 RID: 23842 RVA: 0x001DF040 File Offset: 0x001DD240
 	public bool CheckBranchRedDot()
 	{
 		foreach (BranchLine branchLine in TaskConfig.Instance.GetAllBranchLineTask())
@@ -450,14 +450,14 @@ public class MoonChasingModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06008988 RID: 35208 RVA: 0x001D6234 File Offset: 0x001D4434
+	// Token: 0x06005D23 RID: 23843 RVA: 0x001DF0A0 File Offset: 0x001DD2A0
 	public bool CheckQuestIdRedDotState(int questId)
 	{
 		EQuestState questState = QuestNewModel.Instance.GetQuestState(questId);
 		return questState != EQuestState.InActive && questState != EQuestState.Finish && !NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.MoonChasingQuestUnlock, questId);
 	}
 
-	// Token: 0x06008989 RID: 35209 RVA: 0x001D6266 File Offset: 0x001D4466
+	// Token: 0x06005D24 RID: 23844 RVA: 0x001DF0D2 File Offset: 0x001DD2D2
 	public bool ReadQuestIdUnlockFlag(int questId)
 	{
 		if (!this.CheckQuestIdRedDotState(questId))
@@ -469,16 +469,16 @@ public class MoonChasingModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600898A RID: 35210 RVA: 0x001D6288 File Offset: 0x001D4488
+	// Token: 0x06005D25 RID: 23845 RVA: 0x001DF0F4 File Offset: 0x001DD2F4
 	public void SaveQuestRedDot()
 	{
 		NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.MoonChasingQuestUnlock);
 		EventSystem.Instance.Emit(EEventName.MoonChasingRefreshQuestRedDot);
 	}
 
-	// Token: 0x17000BBB RID: 3003
-	// (get) Token: 0x0600898B RID: 35211 RVA: 0x001D62A8 File Offset: 0x001D44A8
-	// (set) Token: 0x0600898C RID: 35212 RVA: 0x001D62E4 File Offset: 0x001D44E4
+	// Token: 0x17000BDB RID: 3035
+	// (get) Token: 0x06005D26 RID: 23846 RVA: 0x001DF114 File Offset: 0x001DD314
+	// (set) Token: 0x06005D27 RID: 23847 RVA: 0x001DF150 File Offset: 0x001DD350
 	private bool MemoryReadFlag
 	{
 		get
@@ -503,20 +503,20 @@ public class MoonChasingModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600898D RID: 35213 RVA: 0x001D632E File Offset: 0x001D452E
+	// Token: 0x06005D28 RID: 23848 RVA: 0x001DF19A File Offset: 0x001DD39A
 	public bool CheckMemoryRedDotState()
 	{
 		return !this.MemoryReadFlag;
 	}
 
-	// Token: 0x0600898E RID: 35214 RVA: 0x001D6339 File Offset: 0x001D4539
+	// Token: 0x06005D29 RID: 23849 RVA: 0x001DF1A5 File Offset: 0x001DD3A5
 	public void RemoveMemoryRedDot()
 	{
 		this.MemoryReadFlag = true;
 	}
 
-	// Token: 0x17000BBC RID: 3004
-	// (get) Token: 0x0600898F RID: 35215 RVA: 0x001D6342 File Offset: 0x001D4542
+	// Token: 0x17000BDC RID: 3036
+	// (get) Token: 0x06005D2A RID: 23850 RVA: 0x001DF1AE File Offset: 0x001DD3AE
 	public static MoonChasingModel Instance
 	{
 		get
@@ -525,7 +525,7 @@ public class MoonChasingModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008990 RID: 35216 RVA: 0x001D6349 File Offset: 0x001D4549
+	// Token: 0x06005D2B RID: 23851 RVA: 0x001DF1B5 File Offset: 0x001DD3B5
 	public static MoonChasingModel GetOrCreateInstance()
 	{
 		if (MoonChasingModel._Instance == null)
@@ -535,7 +535,7 @@ public class MoonChasingModel : ModelBase
 		return MoonChasingModel._Instance;
 	}
 
-	// Token: 0x06008991 RID: 35217 RVA: 0x001D635D File Offset: 0x001D455D
+	// Token: 0x06005D2C RID: 23852 RVA: 0x001DF1C9 File Offset: 0x001DD3C9
 	public static bool CreateInstance()
 	{
 		if (MoonChasingModel._Instance != null)
@@ -546,45 +546,45 @@ public class MoonChasingModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06008992 RID: 35218 RVA: 0x001D6373 File Offset: 0x001D4573
+	// Token: 0x06005D2D RID: 23853 RVA: 0x001DF1DF File Offset: 0x001DD3DF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008993 RID: 35219 RVA: 0x001D6375 File Offset: 0x001D4575
+	// Token: 0x06005D2E RID: 23854 RVA: 0x001DF1E1 File Offset: 0x001DD3E1
 	public static void ResetStaticDefaultValue()
 	{
 		MoonChasingModel._Instance = null;
 	}
 
-	// Token: 0x06008994 RID: 35220 RVA: 0x001D637D File Offset: 0x001D457D
+	// Token: 0x06005D2F RID: 23855 RVA: 0x001DF1E9 File Offset: 0x001DD3E9
 	static MoonChasingModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MoonChasingModel.CreateStaticDefaultValue), new Action(MoonChasingModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003D49 RID: 15689
+	// Token: 0x04003DE1 RID: 15841
 	public readonly List<int> MainQuestIdList = new List<int>();
 
-	// Token: 0x04003D4A RID: 15690
+	// Token: 0x04003DE2 RID: 15842
 	public readonly List<int> BranchQuestIdList = new List<int>();
 
-	// Token: 0x04003D4B RID: 15691
+	// Token: 0x04003DE3 RID: 15843
 	public bool HasEnteredMainViewFlag;
 
-	// Token: 0x04003D4C RID: 15692
+	// Token: 0x04003DE4 RID: 15844
 	private readonly Dictionary<int, HandbookRewardData> HandbookRewardMap = new Dictionary<int, HandbookRewardData>();
 
-	// Token: 0x04003D4D RID: 15693
+	// Token: 0x04003DE5 RID: 15845
 	public List<int> HandbookRewardIdList = new List<int>();
 
-	// Token: 0x04003D4E RID: 15694
+	// Token: 0x04003DE6 RID: 15846
 	private double? DelegationReadTimeStampInternal;
 
-	// Token: 0x04003D4F RID: 15695
+	// Token: 0x04003DE7 RID: 15847
 	private bool? MemoryReadFlagInternal;
 
-	// Token: 0x04003D50 RID: 15696
+	// Token: 0x04003DE8 RID: 15848
 	[Nullable(2)]
 	private static MoonChasingModel _Instance;
 }

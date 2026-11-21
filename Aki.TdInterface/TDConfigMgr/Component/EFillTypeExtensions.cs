@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200094A RID: 2378
+	// Token: 0x020009F9 RID: 2553
 	public static class EFillTypeExtensions
 	{
-		// Token: 0x0600357E RID: 13694 RVA: 0x0008BA38 File Offset: 0x00089C38
+		// Token: 0x060038F3 RID: 14579 RVA: 0x000936F0 File Offset: 0x000918F0
 		public static string ToEnumString(this EFillType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600357F RID: 13695 RVA: 0x0008BA70 File Offset: 0x00089C70
+		// Token: 0x060038F4 RID: 14580 RVA: 0x00093728 File Offset: 0x00091928
 		public static EFillType FromString(string name)
 		{
 			EFillType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003580 RID: 13696 RVA: 0x0008BA99 File Offset: 0x00089C99
+		// Token: 0x060038F5 RID: 14581 RVA: 0x00093751 File Offset: 0x00091951
 		public static bool TryFromString(string name, out EFillType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003581 RID: 13697 RVA: 0x0008BAD2 File Offset: 0x00089CD2
+		// Token: 0x060038F6 RID: 14582 RVA: 0x0009378A File Offset: 0x0009198A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003582 RID: 13698 RVA: 0x0008BAEA File Offset: 0x00089CEA
+		// Token: 0x060038F7 RID: 14583 RVA: 0x000937A2 File Offset: 0x000919A2
 		public static EFillType[] GetValues()
 		{
 			return new EFillType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003583 RID: 13699 RVA: 0x0008BAF6 File Offset: 0x00089CF6
+		// Token: 0x060038F8 RID: 14584 RVA: 0x000937AE File Offset: 0x000919AE
 		public static string[] GetNames()
 		{
 			return new string[]

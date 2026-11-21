@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000099 RID: 153
+// Token: 0x0200009B RID: 155
 [NullableContext(1)]
 [Nullable(0)]
 public class ConditionListener<[Nullable(2)] TParamType> : IConditionListener
 {
-	// Token: 0x17000097 RID: 151
-	// (get) Token: 0x0600047D RID: 1149 RVA: 0x0001A4A2 File Offset: 0x000186A2
+	// Token: 0x170000A9 RID: 169
+	// (get) Token: 0x060004BE RID: 1214 RVA: 0x0001AC06 File Offset: 0x00018E06
 	[Nullable(new byte[]
 	{
 		2,
@@ -29,8 +29,8 @@ public class ConditionListener<[Nullable(2)] TParamType> : IConditionListener
 		}
 	}
 
-	// Token: 0x17000098 RID: 152
-	// (get) Token: 0x0600047E RID: 1150 RVA: 0x0001A4AA File Offset: 0x000186AA
+	// Token: 0x170000AA RID: 170
+	// (get) Token: 0x060004BF RID: 1215 RVA: 0x0001AC0E File Offset: 0x00018E0E
 	[Nullable(new byte[]
 	{
 		2,
@@ -53,34 +53,34 @@ public class ConditionListener<[Nullable(2)] TParamType> : IConditionListener
 		}
 	}
 
-	// Token: 0x0600047F RID: 1151 RVA: 0x0001A4B2 File Offset: 0x000186B2
+	// Token: 0x060004C0 RID: 1216 RVA: 0x0001AC16 File Offset: 0x00018E16
 	public bool IsHandlesEmpty()
 	{
 		return this.Handles.Count == 0;
 	}
 
-	// Token: 0x06000480 RID: 1152 RVA: 0x0001A4C4 File Offset: 0x000186C4
+	// Token: 0x060004C1 RID: 1217 RVA: 0x0001AC28 File Offset: 0x00018E28
 	public bool Has(TParamType param, Delegate eventHandle)
 	{
 		List<EventHandleEntry> handles;
 		return this.Handles.TryGetValue(param, out handles) && handles.ContainsHandle(eventHandle);
 	}
 
-	// Token: 0x06000481 RID: 1153 RVA: 0x0001A4EC File Offset: 0x000186EC
+	// Token: 0x060004C2 RID: 1218 RVA: 0x0001AC50 File Offset: 0x00018E50
 	public bool IsInPendingAdd(TParamType conditionParam, Delegate handle)
 	{
 		List<EventHandleEntry> handles;
 		return this.PendingAddHandlesInternal != null && this.PendingAddHandlesInternal.TryGetValue(conditionParam, out handles) && handles.ContainsHandle(handle);
 	}
 
-	// Token: 0x06000482 RID: 1154 RVA: 0x0001A51C File Offset: 0x0001871C
+	// Token: 0x060004C3 RID: 1219 RVA: 0x0001AC80 File Offset: 0x00018E80
 	public bool IsInPendingRemove(TParamType conditionParam, Delegate handle)
 	{
 		List<Delegate> list;
 		return this.PendingRemoveHandlesInternal != null && this.PendingRemoveHandlesInternal.TryGetValue(conditionParam, out list) && list.Contains(handle);
 	}
 
-	// Token: 0x06000483 RID: 1155 RVA: 0x0001A54C File Offset: 0x0001874C
+	// Token: 0x060004C4 RID: 1220 RVA: 0x0001ACB0 File Offset: 0x00018EB0
 	[return: Nullable(2)]
 	public List<EventHandleEntry> GetHandlesByParam(TParamType param)
 	{
@@ -89,13 +89,13 @@ public class ConditionListener<[Nullable(2)] TParamType> : IConditionListener
 		return result;
 	}
 
-	// Token: 0x06000484 RID: 1156 RVA: 0x0001A569 File Offset: 0x00018769
+	// Token: 0x060004C5 RID: 1221 RVA: 0x0001ACCD File Offset: 0x00018ECD
 	public bool DeleteHandlesByParam(TParamType param)
 	{
 		return this.Handles.Remove(param);
 	}
 
-	// Token: 0x06000485 RID: 1157 RVA: 0x0001A578 File Offset: 0x00018778
+	// Token: 0x060004C6 RID: 1222 RVA: 0x0001ACDC File Offset: 0x00018EDC
 	public bool Add(TParamType param, Delegate eventHandle, EHandleType handleType)
 	{
 		List<EventHandleEntry> list;
@@ -112,14 +112,14 @@ public class ConditionListener<[Nullable(2)] TParamType> : IConditionListener
 		return true;
 	}
 
-	// Token: 0x06000486 RID: 1158 RVA: 0x0001A5C4 File Offset: 0x000187C4
+	// Token: 0x060004C7 RID: 1223 RVA: 0x0001AD28 File Offset: 0x00018F28
 	public bool Remove(TParamType param, Delegate eventHandle)
 	{
 		List<EventHandleEntry> handles;
 		return this.Handles.TryGetValue(param, out handles) && handles.RemoveHandle(eventHandle);
 	}
 
-	// Token: 0x06000487 RID: 1159 RVA: 0x0001A5EC File Offset: 0x000187EC
+	// Token: 0x060004C8 RID: 1224 RVA: 0x0001AD50 File Offset: 0x00018F50
 	public bool AddToPendingAddHandles(TParamType conditionParam, Delegate handle, EHandleType handleType)
 	{
 		if (this.PendingAddHandlesInternal == null)
@@ -140,7 +140,7 @@ public class ConditionListener<[Nullable(2)] TParamType> : IConditionListener
 		return true;
 	}
 
-	// Token: 0x06000488 RID: 1160 RVA: 0x0001A64C File Offset: 0x0001884C
+	// Token: 0x060004C9 RID: 1225 RVA: 0x0001ADB0 File Offset: 0x00018FB0
 	public bool AddToPendingRemoveHandles(TParamType conditionParam, Delegate handle)
 	{
 		if (this.PendingRemoveHandlesInternal == null)
@@ -161,24 +161,24 @@ public class ConditionListener<[Nullable(2)] TParamType> : IConditionListener
 		return true;
 	}
 
-	// Token: 0x06000489 RID: 1161 RVA: 0x0001A6A8 File Offset: 0x000188A8
+	// Token: 0x060004CA RID: 1226 RVA: 0x0001AE0C File Offset: 0x0001900C
 	public bool RemoveFromPendingAddHandles(TParamType conditionParam, Delegate handle)
 	{
 		List<EventHandleEntry> handles;
 		return this.PendingAddHandlesInternal != null && this.PendingAddHandlesInternal.TryGetValue(conditionParam, out handles) && handles.RemoveHandle(handle);
 	}
 
-	// Token: 0x0600048A RID: 1162 RVA: 0x0001A6D8 File Offset: 0x000188D8
+	// Token: 0x060004CB RID: 1227 RVA: 0x0001AE3C File Offset: 0x0001903C
 	public bool RemoveFromPendingMoveHandles(TParamType conditionParam, Delegate handle)
 	{
 		List<Delegate> list;
 		return this.PendingRemoveHandlesInternal != null && this.PendingRemoveHandlesInternal.TryGetValue(conditionParam, out list) && list.Remove(handle);
 	}
 
-	// Token: 0x0400040B RID: 1035
+	// Token: 0x04000419 RID: 1049
 	private readonly Dictionary<TParamType, List<EventHandleEntry>> Handles = new Dictionary<TParamType, List<EventHandleEntry>>();
 
-	// Token: 0x0400040C RID: 1036
+	// Token: 0x0400041A RID: 1050
 	[Nullable(new byte[]
 	{
 		2,
@@ -187,7 +187,7 @@ public class ConditionListener<[Nullable(2)] TParamType> : IConditionListener
 	})]
 	private Dictionary<TParamType, List<EventHandleEntry>> PendingAddHandlesInternal;
 
-	// Token: 0x0400040D RID: 1037
+	// Token: 0x0400041B RID: 1051
 	[Nullable(new byte[]
 	{
 		2,

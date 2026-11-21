@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DFF RID: 11775
+// Token: 0x0200235A RID: 9050
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataShield.LogicDataShield_C")]
 public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002214 RID: 8724
-	// (get) Token: 0x06018BFD RID: 101373 RVA: 0x006592CC File Offset: 0x006574CC
-	// (set) Token: 0x06018BFE RID: 101374 RVA: 0x006592DC File Offset: 0x006574DC
+	// Token: 0x17002278 RID: 8824
+	// (get) Token: 0x060164B2 RID: 91314 RVA: 0x0067F350 File Offset: 0x0067D550
+	// (set) Token: 0x060164B3 RID: 91315 RVA: 0x0067F360 File Offset: 0x0067D560
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DefenseCanDodgeBullet
 	{
@@ -30,9 +30,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002215 RID: 8725
-	// (get) Token: 0x06018BFF RID: 101375 RVA: 0x006592ED File Offset: 0x006574ED
-	// (set) Token: 0x06018C00 RID: 101376 RVA: 0x006592FD File Offset: 0x006574FD
+	// Token: 0x17002279 RID: 8825
+	// (get) Token: 0x060164B4 RID: 91316 RVA: 0x0067F371 File Offset: 0x0067D571
+	// (set) Token: 0x060164B5 RID: 91317 RVA: 0x0067F381 File Offset: 0x0067D581
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DefenseCaughtTrigger
 	{
@@ -46,9 +46,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002216 RID: 8726
-	// (get) Token: 0x06018C01 RID: 101377 RVA: 0x00659310 File Offset: 0x00657510
-	// (set) Token: 0x06018C02 RID: 101378 RVA: 0x00659349 File Offset: 0x00657549
+	// Token: 0x1700227A RID: 8826
+	// (get) Token: 0x060164B6 RID: 91318 RVA: 0x0067F394 File Offset: 0x0067D594
+	// (set) Token: 0x060164B7 RID: 91319 RVA: 0x0067F3CD File Offset: 0x0067D5CD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> DefenseBulletIdList
 	{
@@ -68,9 +68,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002217 RID: 8727
-	// (get) Token: 0x06018C03 RID: 101379 RVA: 0x00659358 File Offset: 0x00657558
-	// (set) Token: 0x06018C04 RID: 101380 RVA: 0x00659391 File Offset: 0x00657591
+	// Token: 0x1700227B RID: 8827
+	// (get) Token: 0x060164B8 RID: 91320 RVA: 0x0067F3DC File Offset: 0x0067D5DC
+	// (set) Token: 0x060164B9 RID: 91321 RVA: 0x0067F415 File Offset: 0x0067D615
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> NotDefenseBulletIdList
 	{
@@ -90,9 +90,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002218 RID: 8728
-	// (get) Token: 0x06018C05 RID: 101381 RVA: 0x0065939F File Offset: 0x0065759F
-	// (set) Token: 0x06018C06 RID: 101382 RVA: 0x006593AF File Offset: 0x006575AF
+	// Token: 0x1700227C RID: 8828
+	// (get) Token: 0x060164BA RID: 91322 RVA: 0x0067F423 File Offset: 0x0067D623
+	// (set) Token: 0x060164BB RID: 91323 RVA: 0x0067F433 File Offset: 0x0067D633
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECampType SelfCampType
 	{
@@ -106,9 +106,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002219 RID: 8729
-	// (get) Token: 0x06018C07 RID: 101383 RVA: 0x006593C0 File Offset: 0x006575C0
-	// (set) Token: 0x06018C08 RID: 101384 RVA: 0x006593D0 File Offset: 0x006575D0
+	// Token: 0x1700227D RID: 8829
+	// (get) Token: 0x060164BC RID: 91324 RVA: 0x0067F444 File Offset: 0x0067D644
+	// (set) Token: 0x060164BD RID: 91325 RVA: 0x0067F454 File Offset: 0x0067D654
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECampType FriendCampType
 	{
@@ -122,9 +122,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700221A RID: 8730
-	// (get) Token: 0x06018C09 RID: 101385 RVA: 0x006593E1 File Offset: 0x006575E1
-	// (set) Token: 0x06018C0A RID: 101386 RVA: 0x006593F1 File Offset: 0x006575F1
+	// Token: 0x1700227E RID: 8830
+	// (get) Token: 0x060164BE RID: 91326 RVA: 0x0067F465 File Offset: 0x0067D665
+	// (set) Token: 0x060164BF RID: 91327 RVA: 0x0067F475 File Offset: 0x0067D675
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECampType EnemyCampType
 	{
@@ -138,9 +138,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700221B RID: 8731
-	// (get) Token: 0x06018C0B RID: 101387 RVA: 0x00659402 File Offset: 0x00657602
-	// (set) Token: 0x06018C0C RID: 101388 RVA: 0x00659412 File Offset: 0x00657612
+	// Token: 0x1700227F RID: 8831
+	// (get) Token: 0x060164C0 RID: 91328 RVA: 0x0067F486 File Offset: 0x0067D686
+	// (set) Token: 0x060164C1 RID: 91329 RVA: 0x0067F496 File Offset: 0x0067D696
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int DefenseAngle
 	{
@@ -154,9 +154,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700221C RID: 8732
-	// (get) Token: 0x06018C0D RID: 101389 RVA: 0x00659424 File Offset: 0x00657624
-	// (set) Token: 0x06018C0E RID: 101390 RVA: 0x0065945D File Offset: 0x0065765D
+	// Token: 0x17002280 RID: 8832
+	// (get) Token: 0x060164C2 RID: 91330 RVA: 0x0067F4A8 File Offset: 0x0067D6A8
+	// (set) Token: 0x060164C3 RID: 91331 RVA: 0x0067F4E1 File Offset: 0x0067D6E1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<long> AddBuffToSelf
 	{
@@ -176,9 +176,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700221D RID: 8733
-	// (get) Token: 0x06018C0F RID: 101391 RVA: 0x0065946C File Offset: 0x0065766C
-	// (set) Token: 0x06018C10 RID: 101392 RVA: 0x006594A5 File Offset: 0x006576A5
+	// Token: 0x17002281 RID: 8833
+	// (get) Token: 0x060164C4 RID: 91332 RVA: 0x0067F4F0 File Offset: 0x0067D6F0
+	// (set) Token: 0x060164C5 RID: 91333 RVA: 0x0067F529 File Offset: 0x0067D729
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<long> AddBuffToEnemy
 	{
@@ -198,9 +198,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700221E RID: 8734
-	// (get) Token: 0x06018C11 RID: 101393 RVA: 0x006594B3 File Offset: 0x006576B3
-	// (set) Token: 0x06018C12 RID: 101394 RVA: 0x006594C3 File Offset: 0x006576C3
+	// Token: 0x17002282 RID: 8834
+	// (get) Token: 0x060164C6 RID: 91334 RVA: 0x0067F537 File Offset: 0x0067D737
+	// (set) Token: 0x060164C7 RID: 91335 RVA: 0x0067F547 File Offset: 0x0067D747
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int DecreaseBulletHitCount
 	{
@@ -214,9 +214,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700221F RID: 8735
-	// (get) Token: 0x06018C13 RID: 101395 RVA: 0x006594D4 File Offset: 0x006576D4
-	// (set) Token: 0x06018C14 RID: 101396 RVA: 0x0065950D File Offset: 0x0065770D
+	// Token: 0x17002283 RID: 8835
+	// (get) Token: 0x060164C8 RID: 91336 RVA: 0x0067F558 File Offset: 0x0067D758
+	// (set) Token: 0x060164C9 RID: 91337 RVA: 0x0067F591 File Offset: 0x0067D791
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<int> SelfCalcTypeArray
 	{
@@ -236,9 +236,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002220 RID: 8736
-	// (get) Token: 0x06018C15 RID: 101397 RVA: 0x0065951C File Offset: 0x0065771C
-	// (set) Token: 0x06018C16 RID: 101398 RVA: 0x00659555 File Offset: 0x00657755
+	// Token: 0x17002284 RID: 8836
+	// (get) Token: 0x060164CA RID: 91338 RVA: 0x0067F5A0 File Offset: 0x0067D7A0
+	// (set) Token: 0x060164CB RID: 91339 RVA: 0x0067F5D9 File Offset: 0x0067D7D9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<int> FriendCalcTypeArray
 	{
@@ -258,9 +258,9 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002221 RID: 8737
-	// (get) Token: 0x06018C17 RID: 101399 RVA: 0x00659564 File Offset: 0x00657764
-	// (set) Token: 0x06018C18 RID: 101400 RVA: 0x0065959D File Offset: 0x0065779D
+	// Token: 0x17002285 RID: 8837
+	// (get) Token: 0x060164CC RID: 91340 RVA: 0x0067F5E8 File Offset: 0x0067D7E8
+	// (set) Token: 0x060164CD RID: 91341 RVA: 0x0067F621 File Offset: 0x0067D821
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<int> EnemyCalcTypeArray
 	{
@@ -280,7 +280,7 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06018C19 RID: 101401 RVA: 0x006595AB File Offset: 0x006577AB
+	// Token: 0x060164CE RID: 91342 RVA: 0x0067F62F File Offset: 0x0067D82F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataShield._ClassPtr == IntPtr.Zero)
@@ -290,40 +290,40 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 		return LogicDataShield._ClassPtr;
 	}
 
-	// Token: 0x06018C1A RID: 101402 RVA: 0x006595D0 File Offset: 0x006577D0
+	// Token: 0x060164CF RID: 91343 RVA: 0x0067F654 File Offset: 0x0067D854
 	public LogicDataShield() : this(BuiltinUtils.AllocNativeUObject(LogicDataShield.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018C1B RID: 101403 RVA: 0x006595F8 File Offset: 0x006577F8
+	// Token: 0x060164D0 RID: 91344 RVA: 0x0067F67C File Offset: 0x0067D87C
 	public LogicDataShield(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataShield.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018C1C RID: 101404 RVA: 0x0065962B File Offset: 0x0065782B
+	// Token: 0x060164D1 RID: 91345 RVA: 0x0067F6AF File Offset: 0x0067D8AF
 	protected LogicDataShield(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B8B7 RID: 47287
+	// Token: 0x0400BC3D RID: 48189
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataShield.LogicDataShield_C";
 
-	// Token: 0x0400B8B8 RID: 47288
+	// Token: 0x0400BC3E RID: 48190
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B8B9 RID: 47289
+	// Token: 0x0400BC3F RID: 48191
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B8BA RID: 47290
+	// Token: 0x0400BC40 RID: 48192
 	private static int __PropertyOffset_DefenseCanDodgeBullet;
 
-	// Token: 0x0400B8BB RID: 47291
+	// Token: 0x0400BC41 RID: 48193
 	private static int __PropertyOffset_DefenseCaughtTrigger;
 
-	// Token: 0x0400B8BC RID: 47292
+	// Token: 0x0400BC42 RID: 48194
 	private static int __PropertyOffset_DefenseBulletIdList;
 
-	// Token: 0x0400B8BD RID: 47293
+	// Token: 0x0400BC43 RID: 48195
 	[Nullable(new byte[]
 	{
 		2,
@@ -331,10 +331,10 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 	})]
 	private TArray<string> _DefenseBulletIdList;
 
-	// Token: 0x0400B8BE RID: 47294
+	// Token: 0x0400BC44 RID: 48196
 	private static int __PropertyOffset_NotDefenseBulletIdList;
 
-	// Token: 0x0400B8BF RID: 47295
+	// Token: 0x0400BC45 RID: 48197
 	[Nullable(new byte[]
 	{
 		2,
@@ -342,53 +342,53 @@ public class LogicDataShield : LogicDataBase, IUnrealUObject, IUnrealObject
 	})]
 	private TArray<string> _NotDefenseBulletIdList;
 
-	// Token: 0x0400B8C0 RID: 47296
+	// Token: 0x0400BC46 RID: 48198
 	private static int __PropertyOffset_SelfCampType;
 
-	// Token: 0x0400B8C1 RID: 47297
+	// Token: 0x0400BC47 RID: 48199
 	private static int __PropertyOffset_FriendCampType;
 
-	// Token: 0x0400B8C2 RID: 47298
+	// Token: 0x0400BC48 RID: 48200
 	private static int __PropertyOffset_EnemyCampType;
 
-	// Token: 0x0400B8C3 RID: 47299
+	// Token: 0x0400BC49 RID: 48201
 	private static int __PropertyOffset_DefenseAngle;
 
-	// Token: 0x0400B8C4 RID: 47300
+	// Token: 0x0400BC4A RID: 48202
 	private static int __PropertyOffset_AddBuffToSelf;
 
-	// Token: 0x0400B8C5 RID: 47301
+	// Token: 0x0400BC4B RID: 48203
 	[Nullable(2)]
 	private TArray<long> _AddBuffToSelf;
 
-	// Token: 0x0400B8C6 RID: 47302
+	// Token: 0x0400BC4C RID: 48204
 	private static int __PropertyOffset_AddBuffToEnemy;
 
-	// Token: 0x0400B8C7 RID: 47303
+	// Token: 0x0400BC4D RID: 48205
 	[Nullable(2)]
 	private TArray<long> _AddBuffToEnemy;
 
-	// Token: 0x0400B8C8 RID: 47304
+	// Token: 0x0400BC4E RID: 48206
 	private static int __PropertyOffset_DecreaseBulletHitCount;
 
-	// Token: 0x0400B8C9 RID: 47305
+	// Token: 0x0400BC4F RID: 48207
 	private static int __PropertyOffset_SelfCalcTypeArray;
 
-	// Token: 0x0400B8CA RID: 47306
+	// Token: 0x0400BC50 RID: 48208
 	[Nullable(2)]
 	private TArray<int> _SelfCalcTypeArray;
 
-	// Token: 0x0400B8CB RID: 47307
+	// Token: 0x0400BC51 RID: 48209
 	private static int __PropertyOffset_FriendCalcTypeArray;
 
-	// Token: 0x0400B8CC RID: 47308
+	// Token: 0x0400BC52 RID: 48210
 	[Nullable(2)]
 	private TArray<int> _FriendCalcTypeArray;
 
-	// Token: 0x0400B8CD RID: 47309
+	// Token: 0x0400BC53 RID: 48211
 	private static int __PropertyOffset_EnemyCalcTypeArray;
 
-	// Token: 0x0400B8CE RID: 47310
+	// Token: 0x0400BC54 RID: 48212
 	[Nullable(2)]
 	private TArray<int> _EnemyCalcTypeArray;
 }

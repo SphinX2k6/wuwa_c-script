@@ -4,10 +4,10 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005850 RID: 22608
+	// Token: 0x02004828 RID: 18472
 	public abstract class InteractConfirmBoxActionBase : InteractConfirmActionBase
 	{
-		// Token: 0x0603977C RID: 235388 RVA: 0x00DA45DC File Offset: 0x00DA27DC
+		// Token: 0x0602E698 RID: 190104 RVA: 0x00CF329C File Offset: 0x00CF149C
 		[NullableContext(1)]
 		protected override bool OnExecute(InteractSecondConfirmContext context)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return false;
 		}
 
-		// Token: 0x0603977D RID: 235389 RVA: 0x00DA4618 File Offset: 0x00DA2818
+		// Token: 0x0602E699 RID: 190105 RVA: 0x00CF32D8 File Offset: 0x00CF14D8
 		protected override void OnCancel()
 		{
 			if (ConfirmBoxController.Instance.CheckIsConfirmBoxOpen())
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Interaction
 			base.ExecuteFinish(false);
 		}
 
-		// Token: 0x0603977E RID: 235390
+		// Token: 0x0602E69A RID: 190106
 		[NullableContext(2)]
 		protected abstract ConfirmBoxDataNew ConfigConfirmBoxData();
 	}

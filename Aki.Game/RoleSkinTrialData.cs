@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020014C9 RID: 5321
+// Token: 0x0200097D RID: 2429
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkinTrialData : ActivityBaseData
 {
-	// Token: 0x060096FF RID: 38655 RVA: 0x00209D20 File Offset: 0x00207F20
+	// Token: 0x06006A94 RID: 27284 RVA: 0x00212C8C File Offset: 0x00210E8C
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.RoleSkinTrailContentDataList.Clear();
@@ -22,7 +21,7 @@ public class RoleSkinTrialData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06009700 RID: 38656 RVA: 0x00209D90 File Offset: 0x00207F90
+	// Token: 0x06006A95 RID: 27285 RVA: 0x00212CFC File Offset: 0x00210EFC
 	public void FinishRewardById(int roleId)
 	{
 		RoleSkinTrailContentData roleSkinTrailContentDataById = this.GetRoleSkinTrailContentDataById(roleId);
@@ -32,27 +31,27 @@ public class RoleSkinTrialData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06009701 RID: 38657 RVA: 0x00209DB0 File Offset: 0x00207FB0
+	// Token: 0x06006A96 RID: 27286 RVA: 0x00212D1C File Offset: 0x00210F1C
 	[NullableContext(2)]
 	public RoleSkinTrailContentData GetRoleSkinTrailContentDataByRoleId(int roleId)
 	{
 		return this.RoleSkinTrailContentDataList.Find((RoleSkinTrailContentData data) => data.RoleId == roleId);
 	}
 
-	// Token: 0x06009702 RID: 38658 RVA: 0x00209DE4 File Offset: 0x00207FE4
+	// Token: 0x06006A97 RID: 27287 RVA: 0x00212D50 File Offset: 0x00210F50
 	[NullableContext(2)]
 	public RoleSkinTrailContentData GetRoleSkinTrailContentDataById(int id)
 	{
 		return this.RoleSkinTrailContentDataList.Find((RoleSkinTrailContentData data) => data.Id == id);
 	}
 
-	// Token: 0x06009703 RID: 38659 RVA: 0x00209E18 File Offset: 0x00208018
+	// Token: 0x06006A98 RID: 27288 RVA: 0x00212D84 File Offset: 0x00210F84
 	public RoleSkinTrialActivity GetConfig()
 	{
 		return RoleSkinTrialConfig.Instance.GetRoleSkinTrialActivityByActivityId(base.Id).Value;
 	}
 
-	// Token: 0x06009704 RID: 38660 RVA: 0x00209E40 File Offset: 0x00208040
+	// Token: 0x06006A99 RID: 27289 RVA: 0x00212DAC File Offset: 0x00210FAC
 	public int GetSelectIdByIndex(int index)
 	{
 		List<int> roleList = this.GetRoleList();
@@ -63,7 +62,7 @@ public class RoleSkinTrialData : ActivityBaseData
 		return roleList[index];
 	}
 
-	// Token: 0x06009705 RID: 38661 RVA: 0x00209E68 File Offset: 0x00208068
+	// Token: 0x06006A9A RID: 27290 RVA: 0x00212DD4 File Offset: 0x00210FD4
 	public int? GetInstanceIdById(int id)
 	{
 		RoleSkinTrialInfo? roleSkinTrialInfoById = RoleSkinTrialConfig.Instance.GetRoleSkinTrialInfoById(id);
@@ -74,13 +73,13 @@ public class RoleSkinTrialData : ActivityBaseData
 		return new int?(roleSkinTrialInfoById.GetValueOrDefault().InstanceId);
 	}
 
-	// Token: 0x06009706 RID: 38662 RVA: 0x00209EA8 File Offset: 0x002080A8
+	// Token: 0x06006A9B RID: 27291 RVA: 0x00212E14 File Offset: 0x00211014
 	public List<int> GetRoleList()
 	{
-		return this.GetConfig().GetRoleIdListArray().ToList<int>();
+		return new List<int>(this.GetConfig().GetRoleIdListArray());
 	}
 
-	// Token: 0x06009707 RID: 38663 RVA: 0x00209EC8 File Offset: 0x002080C8
+	// Token: 0x06006A9C RID: 27292 RVA: 0x00212E34 File Offset: 0x00211034
 	public ChallengeState GetRewardStateById(int id)
 	{
 		RoleSkinTrailContentData roleSkinTrailContentDataById = this.GetRoleSkinTrailContentDataById(id);
@@ -91,7 +90,7 @@ public class RoleSkinTrialData : ActivityBaseData
 		return ChallengeState.Running;
 	}
 
-	// Token: 0x06009708 RID: 38664 RVA: 0x00209EE8 File Offset: 0x002080E8
+	// Token: 0x06006A9D RID: 27293 RVA: 0x00212E54 File Offset: 0x00211054
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -107,7 +106,7 @@ public class RoleSkinTrialData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x06009709 RID: 38665 RVA: 0x00209F08 File Offset: 0x00208108
+	// Token: 0x06006A9E RID: 27294 RVA: 0x00212E74 File Offset: 0x00211074
 	public RoleSkinTrialInfo? GetInfoByRoleIdAndInstanceDungeonId(int roleId, int dungeonId)
 	{
 		foreach (RoleSkinTrailContentData roleSkinTrailContentData in this.RoleSkinTrailContentDataList)
@@ -124,7 +123,7 @@ public class RoleSkinTrialData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600970A RID: 38666 RVA: 0x00209F84 File Offset: 0x00208184
+	// Token: 0x06006A9F RID: 27295 RVA: 0x00212EF0 File Offset: 0x002110F0
 	public RoleSkinTrialUiConfig? GetRoleSkinTrialUiConfigById(int id)
 	{
 		RoleSkinTrailContentData roleSkinTrailContentDataById = this.GetRoleSkinTrailContentDataById(id);
@@ -135,7 +134,7 @@ public class RoleSkinTrialData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600970B RID: 38667 RVA: 0x00209FB4 File Offset: 0x002081B4
+	// Token: 0x06006AA0 RID: 27296 RVA: 0x00212F20 File Offset: 0x00211120
 	public int GetAccessIdById(int id)
 	{
 		RoleSkinTrailContentData roleSkinTrailContentDataById = this.GetRoleSkinTrailContentDataById(id);
@@ -146,13 +145,13 @@ public class RoleSkinTrialData : ActivityBaseData
 		return 0;
 	}
 
-	// Token: 0x0600970C RID: 38668 RVA: 0x00209FD4 File Offset: 0x002081D4
+	// Token: 0x06006AA1 RID: 27297 RVA: 0x00212F40 File Offset: 0x00211140
 	public override bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x0600970D RID: 38669 RVA: 0x00209FD8 File Offset: 0x002081D8
+	// Token: 0x06006AA2 RID: 27298 RVA: 0x00212F44 File Offset: 0x00211144
 	public override bool GetExDataRedPointShowState()
 	{
 		using (List<RoleSkinTrailContentData>.Enumerator enumerator = this.RoleSkinTrailContentDataList.GetEnumerator())
@@ -168,7 +167,7 @@ public class RoleSkinTrialData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600970E RID: 38670 RVA: 0x0020A034 File Offset: 0x00208234
+	// Token: 0x06006AA3 RID: 27299 RVA: 0x00212FA0 File Offset: 0x002111A0
 	protected override bool GetExDataFinishShowState()
 	{
 		using (List<RoleSkinTrailContentData>.Enumerator enumerator = this.RoleSkinTrailContentDataList.GetEnumerator())
@@ -184,9 +183,9 @@ public class RoleSkinTrialData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0400428B RID: 17035
+	// Token: 0x04004323 RID: 17187
 	public bool TrialState;
 
-	// Token: 0x0400428C RID: 17036
+	// Token: 0x04004324 RID: 17188
 	private readonly List<RoleSkinTrailContentData> RoleSkinTrailContentDataList = new List<RoleSkinTrailContentData>();
 }

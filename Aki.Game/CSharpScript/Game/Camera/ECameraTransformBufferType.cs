@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072C7 RID: 29383
+	// Token: 0x02006449 RID: 25673
 	public enum ECameraTransformBufferType
 	{
-		// Token: 0x0402609D RID: 155805
+		// Token: 0x04021380 RID: 136064
 		None,
-		// Token: 0x0402609E RID: 155806
+		// Token: 0x04021381 RID: 136065
 		MotorCycle
 	}
 }

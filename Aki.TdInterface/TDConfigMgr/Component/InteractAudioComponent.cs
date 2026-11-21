@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200059C RID: 1436
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000605 RID: 1541
 	public class InteractAudioComponent : IComponentBase
 	{
-		// Token: 0x06001E10 RID: 7696 RVA: 0x00055444 File Offset: 0x00053644
+		// Token: 0x06002016 RID: 8214 RVA: 0x0005A300 File Offset: 0x00058500
 		private InteractAudioComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001E11 RID: 7697 RVA: 0x0005547C File Offset: 0x0005367C
+		// Token: 0x06002017 RID: 8215 RVA: 0x0005A338 File Offset: 0x00058538
 		public static InteractAudioComponent Create([Nullable(2)] InteractAudioComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E12 RID: 7698 RVA: 0x0005548F File Offset: 0x0005368F
+		// Token: 0x06002018 RID: 8216 RVA: 0x0005A34B File Offset: 0x0005854B
 		public static InteractAudioComponent CreateFromSetValue([Nullable(2)] InteractAudioComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E13 RID: 7699 RVA: 0x000554A2 File Offset: 0x000536A2
+		// Token: 0x06002019 RID: 8217 RVA: 0x0005A35E File Offset: 0x0005855E
 		public new InteractAudioComponent_SetValue ToSetValue()
 		{
 			return new InteractAudioComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170007FD RID: 2045
-		// (get) Token: 0x06001E14 RID: 7700 RVA: 0x000554DC File Offset: 0x000536DC
-		// (set) Token: 0x06001E15 RID: 7701 RVA: 0x00055516 File Offset: 0x00053716
+		// Token: 0x17000882 RID: 2178
+		// (get) Token: 0x0600201A RID: 8218 RVA: 0x0005A398 File Offset: 0x00058598
+		// (set) Token: 0x0600201B RID: 8219 RVA: 0x0005A3D2 File Offset: 0x000585D2
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007FE RID: 2046
-		// (get) Token: 0x06001E16 RID: 7702 RVA: 0x00055524 File Offset: 0x00053724
-		// (set) Token: 0x06001E17 RID: 7703 RVA: 0x0005554E File Offset: 0x0005374E
+		// Token: 0x17000883 RID: 2179
+		// (get) Token: 0x0600201C RID: 8220 RVA: 0x0005A3E0 File Offset: 0x000585E0
+		// (set) Token: 0x0600201D RID: 8221 RVA: 0x0005A40A File Offset: 0x0005860A
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170007FF RID: 2047
-		// (get) Token: 0x06001E18 RID: 7704 RVA: 0x0005555C File Offset: 0x0005375C
-		// (set) Token: 0x06001E19 RID: 7705 RVA: 0x00055596 File Offset: 0x00053796
+		// Token: 0x17000884 RID: 2180
+		// (get) Token: 0x0600201E RID: 8222 RVA: 0x0005A418 File Offset: 0x00058618
+		// (set) Token: 0x0600201F RID: 8223 RVA: 0x0005A452 File Offset: 0x00058652
 		public virtual EInteractAudioMaterial? CollisionMaterial
 		{
 			get
@@ -130,9 +128,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000800 RID: 2048
-		// (get) Token: 0x06001E1A RID: 7706 RVA: 0x000555A4 File Offset: 0x000537A4
-		// (set) Token: 0x06001E1B RID: 7707 RVA: 0x00055605 File Offset: 0x00053805
+		// Token: 0x17000885 RID: 2181
+		// (get) Token: 0x06002020 RID: 8224 RVA: 0x0005A460 File Offset: 0x00058660
+		// (set) Token: 0x06002021 RID: 8225 RVA: 0x0005A4C1 File Offset: 0x000586C1
 		[Nullable(2)]
 		public virtual IAudioEventConfig InteractEventConfig
 		{
@@ -163,18 +161,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001571 RID: 5489
+		// Token: 0x040016DF RID: 5855
 		[Nullable(2)]
 		protected new InteractAudioComponent FbInstance;
 
-		// Token: 0x04001572 RID: 5490
+		// Token: 0x040016E0 RID: 5856
 		[Nullable(2)]
 		protected new InteractAudioComponent_SetValue PocoInterface;
 
-		// Token: 0x04001573 RID: 5491
+		// Token: 0x040016E1 RID: 5857
 		private IAudioEventConfig _InteractEventConfigCache;
 
-		// Token: 0x04001574 RID: 5492
+		// Token: 0x040016E2 RID: 5858
 		private bool _InteractEventConfigInited;
 	}
 }

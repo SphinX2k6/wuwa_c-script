@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A15 RID: 2581
+	// Token: 0x02000AEA RID: 2794
 	public class ConfigTrainRoleDialogByRoleIdAndTrainType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003C92 RID: 15506 RVA: 0x001B03FC File Offset: 0x001AE5FC
+		// Token: 0x06004190 RID: 16784 RVA: 0x001CF790 File Offset: 0x001CD990
 		static ConfigTrainRoleDialogByRoleIdAndTrainType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTrainRoleDialogByRoleIdAndTrainType.CreateStaticDefaultValue), new Action(ConfigTrainRoleDialogByRoleIdAndTrainType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003C93 RID: 15507 RVA: 0x001B041C File Offset: 0x001AE61C
+		// Token: 0x06004191 RID: 16785 RVA: 0x001CF7B0 File Offset: 0x001CD9B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTrainRoleDialogByRoleIdAndTrainType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003C94 RID: 15508 RVA: 0x001B049B File Offset: 0x001AE69B
+		// Token: 0x06004192 RID: 16786 RVA: 0x001CF82F File Offset: 0x001CDA2F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTrainRoleDialogByRoleIdAndTrainType.LogPair = null;
 			ConfigTrainRoleDialogByRoleIdAndTrainType.HandleId = 0;
 		}
 
-		// Token: 0x06003C95 RID: 15509 RVA: 0x001B04A9 File Offset: 0x001AE6A9
+		// Token: 0x06004193 RID: 16787 RVA: 0x001CF83D File Offset: 0x001CDA3D
 		public static void Init()
 		{
 			ConfigTrainRoleDialogByRoleIdAndTrainType.HandleId = ConfigCommon.InitDataStatement(ConfigTrainRoleDialogByRoleIdAndTrainType.HandleId, "db_moonchasing.db", "select BinData from `TrainRoleDialog` where RoleId=? AND TrainType=?");
 		}
 
-		// Token: 0x06003C96 RID: 15510 RVA: 0x001B04C4 File Offset: 0x001AE6C4
+		// Token: 0x06004194 RID: 16788 RVA: 0x001CF858 File Offset: 0x001CDA58
 		public static TrainRoleDialog? GetConfig(int p0RoleId, int p1TrainType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTrainRoleDialogByRoleIdAndTrainType.HandleId, ConfigTrainRoleDialogByRoleIdAndTrainType.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new TrainRoleDialog?(rootAsTrainRoleDialog);
 		}
 
-		// Token: 0x04004679 RID: 18041
+		// Token: 0x04004C4C RID: 19532
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x0400467A RID: 18042
+		// Token: 0x04004C4D RID: 19533
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x0400467B RID: 18043
+		// Token: 0x04004C4E RID: 19534
 		private const string TABLE = "TrainRoleDialog";
 
-		// Token: 0x0400467C RID: 18044
+		// Token: 0x04004C4F RID: 19535
 		private const string COMMAND = "select BinData from `TrainRoleDialog` where RoleId=? AND TrainType=?";
 
-		// Token: 0x0400467D RID: 18045
+		// Token: 0x04004C50 RID: 19536
 		private const string KEY_PREFIX = "TrainRoleDialogByRoleIdAndTrainType";
 
-		// Token: 0x0400467E RID: 18046
+		// Token: 0x04004C51 RID: 19537
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400467F RID: 18047
+		// Token: 0x04004C52 RID: 19538
 		private static int HandleId;
 	}
 }

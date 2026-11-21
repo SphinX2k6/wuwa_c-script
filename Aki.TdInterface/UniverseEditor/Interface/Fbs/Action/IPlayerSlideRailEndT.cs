@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D0F RID: 27919
+	// Token: 0x0200748A RID: 29834
 	public class IPlayerSlideRailEndT
 	{
-		// Token: 0x1700CFE6 RID: 53222
-		// (get) Token: 0x060313BA RID: 201658 RVA: 0x006AD95E File Offset: 0x006ABB5E
-		// (set) Token: 0x060313BB RID: 201659 RVA: 0x006AD966 File Offset: 0x006ABB66
+		// Token: 0x1700DB2A RID: 56106
+		// (get) Token: 0x060343AE RID: 213934 RVA: 0x00708E8E File Offset: 0x0070708E
+		// (set) Token: 0x060343AF RID: 213935 RVA: 0x00708E96 File Offset: 0x00707096
 		public ESlideRailEndType Type { get; set; }
 
-		// Token: 0x060313BC RID: 201660 RVA: 0x006AD96F File Offset: 0x006ABB6F
+		// Token: 0x060343B0 RID: 213936 RVA: 0x00708E9F File Offset: 0x0070709F
 		public IPlayerSlideRailEndT()
 		{
 			this.Type = ESlideRailEndType.Player;

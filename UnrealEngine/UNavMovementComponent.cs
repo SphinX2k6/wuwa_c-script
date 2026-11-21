@@ -6,43 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000EE2 RID: 3810
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200024A RID: 586
 	[UnrealObjectPath("/Script/Engine.NavMovementComponent")]
 	[UnrealStructLayout(344, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 344)]
 	public abstract class UNavMovementComponent : UMovementComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600CE6B RID: 52843 RVA: 0x0012D459 File Offset: 0x0012B659
+		// Token: 0x06003289 RID: 12937 RVA: 0x000481F4 File Offset: 0x000463F4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UNavMovementComponent._ClassPtr;
 		}
 
-		// Token: 0x170030A3 RID: 12451
-		// (get) Token: 0x0600CE6C RID: 52844 RVA: 0x0012D468 File Offset: 0x0012B668
-		// (set) Token: 0x0600CE6D RID: 52845 RVA: 0x0012D4A1 File Offset: 0x0012B6A1
-		public FNavAgentProperties NavAgentProps
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FNavAgentProperties result;
-				if ((result = this._NavAgentProps) == null)
-				{
-					result = (this._NavAgentProps = new FNavAgentProperties(base.NativePtr + (IntPtr)UNavMovementComponent.__PropertyOffset_NavAgentProps, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FNavAgentProperties.StaticStruct(), base.NativePtr + (IntPtr)UNavMovementComponent.__PropertyOffset_NavAgentProps, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170030A4 RID: 12452
-		// (get) Token: 0x0600CE6E RID: 52846 RVA: 0x0012D4C2 File Offset: 0x0012B6C2
-		// (set) Token: 0x0600CE6F RID: 52847 RVA: 0x0012D4D2 File Offset: 0x0012B6D2
+		// Token: 0x1700071E RID: 1822
+		// (get) Token: 0x0600328A RID: 12938 RVA: 0x00048200 File Offset: 0x00046400
+		// (set) Token: 0x0600328B RID: 12939 RVA: 0x00048210 File Offset: 0x00046410
 		public unsafe float FixedPathBrakingDistance
 		{
 			get
@@ -55,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170030A5 RID: 12453
-		// (get) Token: 0x0600CE70 RID: 52848 RVA: 0x0012D4E3 File Offset: 0x0012B6E3
-		// (set) Token: 0x0600CE71 RID: 52849 RVA: 0x0012D4FC File Offset: 0x0012B6FC
+		// Token: 0x1700071F RID: 1823
+		// (get) Token: 0x0600328C RID: 12940 RVA: 0x00048221 File Offset: 0x00046421
+		// (set) Token: 0x0600328D RID: 12941 RVA: 0x0004823A File Offset: 0x0004643A
 		public unsafe bool bUpdateNavAgentWithOwnersCollision
 		{
 			get
@@ -70,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170030A6 RID: 12454
-		// (get) Token: 0x0600CE72 RID: 52850 RVA: 0x0012D52C File Offset: 0x0012B72C
-		// (set) Token: 0x0600CE73 RID: 52851 RVA: 0x0012D545 File Offset: 0x0012B745
+		// Token: 0x17000720 RID: 1824
+		// (get) Token: 0x0600328E RID: 12942 RVA: 0x0004826A File Offset: 0x0004646A
+		// (set) Token: 0x0600328F RID: 12943 RVA: 0x00048283 File Offset: 0x00046483
 		public unsafe bool bUseAccelerationForPaths
 		{
 			get
@@ -85,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170030A7 RID: 12455
-		// (get) Token: 0x0600CE74 RID: 52852 RVA: 0x0012D575 File Offset: 0x0012B775
-		// (set) Token: 0x0600CE75 RID: 52853 RVA: 0x0012D58E File Offset: 0x0012B78E
+		// Token: 0x17000721 RID: 1825
+		// (get) Token: 0x06003290 RID: 12944 RVA: 0x000482B3 File Offset: 0x000464B3
+		// (set) Token: 0x06003291 RID: 12945 RVA: 0x000482CC File Offset: 0x000464CC
 		public unsafe bool bUseFixedBrakingDistanceForPaths
 		{
 			get
@@ -100,30 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170030A8 RID: 12456
-		// (get) Token: 0x0600CE76 RID: 52854 RVA: 0x0012D5C0 File Offset: 0x0012B7C0
-		// (set) Token: 0x0600CE77 RID: 52855 RVA: 0x0012D5F9 File Offset: 0x0012B7F9
-		public FMovementProperties MovementState
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMovementProperties result;
-				if ((result = this._MovementState) == null)
-				{
-					result = (this._MovementState = new FMovementProperties(base.NativePtr + (IntPtr)UNavMovementComponent.__PropertyOffset_MovementState, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMovementProperties.StaticStruct(), base.NativePtr + (IntPtr)UNavMovementComponent.__PropertyOffset_MovementState, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170030A9 RID: 12457
-		// (get) Token: 0x0600CE78 RID: 52856 RVA: 0x0012D61A File Offset: 0x0012B81A
-		// (set) Token: 0x0600CE79 RID: 52857 RVA: 0x0012D62E File Offset: 0x0012B82E
+		// Token: 0x17000722 RID: 1826
+		// (get) Token: 0x06003292 RID: 12946 RVA: 0x000482FC File Offset: 0x000464FC
+		// (set) Token: 0x06003293 RID: 12947 RVA: 0x00048310 File Offset: 0x00046510
 		[Nullable(2)]
 		public unsafe UObject PathFollowingComp
 		{
@@ -139,137 +95,124 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600CE7A RID: 52858 RVA: 0x0012D643 File Offset: 0x0012B843
+		// Token: 0x06003294 RID: 12948 RVA: 0x00048325 File Offset: 0x00046525
 		public void StopMovementKeepPathing()
 		{
 			UNavMovementComponent.__StopMovementKeepPathing_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600CE7B RID: 52859 RVA: 0x0012D650 File Offset: 0x0012B850
+		// Token: 0x06003295 RID: 12949 RVA: 0x00048332 File Offset: 0x00046532
 		public void StopActiveMovement()
 		{
 			UNavMovementComponent.__StopActiveMovement_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600CE7C RID: 52860 RVA: 0x0012D65D File Offset: 0x0012B85D
+		// Token: 0x06003296 RID: 12950 RVA: 0x0004833F File Offset: 0x0004653F
 		public bool IsSwimming()
 		{
 			return UNavMovementComponent.__IsSwimming_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600CE7D RID: 52861 RVA: 0x0012D66A File Offset: 0x0012B86A
+		// Token: 0x06003297 RID: 12951 RVA: 0x0004834C File Offset: 0x0004654C
 		public bool IsMovingOnGround()
 		{
 			return UNavMovementComponent.__IsMovingOnGround_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600CE7E RID: 52862 RVA: 0x0012D677 File Offset: 0x0012B877
+		// Token: 0x06003298 RID: 12952 RVA: 0x00048359 File Offset: 0x00046559
 		public bool IsFlying()
 		{
 			return UNavMovementComponent.__IsFlying_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600CE7F RID: 52863 RVA: 0x0012D684 File Offset: 0x0012B884
+		// Token: 0x06003299 RID: 12953 RVA: 0x00048366 File Offset: 0x00046566
 		public bool IsFalling()
 		{
 			return UNavMovementComponent.__IsFalling_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600CE80 RID: 52864 RVA: 0x0012D691 File Offset: 0x0012B891
+		// Token: 0x0600329A RID: 12954 RVA: 0x00048373 File Offset: 0x00046573
 		public bool IsCrouching()
 		{
 			return UNavMovementComponent.__IsCrouching_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600CE81 RID: 52865
+		// Token: 0x0600329B RID: 12955
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopMovementKeepPathing_Internal(IntPtr @this);
 
-		// Token: 0x0600CE82 RID: 52866
+		// Token: 0x0600329C RID: 12956
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopActiveMovement_Internal(IntPtr @this);
 
-		// Token: 0x0600CE83 RID: 52867
+		// Token: 0x0600329D RID: 12957
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsSwimming_Internal(IntPtr @this);
 
-		// Token: 0x0600CE84 RID: 52868
+		// Token: 0x0600329E RID: 12958
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsMovingOnGround_Internal(IntPtr @this);
 
-		// Token: 0x0600CE85 RID: 52869
+		// Token: 0x0600329F RID: 12959
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsFlying_Internal(IntPtr @this);
 
-		// Token: 0x0600CE86 RID: 52870
+		// Token: 0x060032A0 RID: 12960
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsFalling_Internal(IntPtr @this);
 
-		// Token: 0x0600CE87 RID: 52871
+		// Token: 0x060032A1 RID: 12961
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsCrouching_Internal(IntPtr @this);
 
-		// Token: 0x0600CE88 RID: 52872 RVA: 0x0012D69E File Offset: 0x0012B89E
+		// Token: 0x060032A2 RID: 12962 RVA: 0x00048380 File Offset: 0x00046580
 		static UNavMovementComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.NavMovementComponent");
 		}
 
-		// Token: 0x0600CE89 RID: 52873 RVA: 0x0012D6AC File Offset: 0x0012B8AC
+		// Token: 0x060032A3 RID: 12963 RVA: 0x00048390 File Offset: 0x00046590
 		protected UNavMovementComponent() : this(BuiltinUtils.AllocNativeUObject(UNavMovementComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600CE8A RID: 52874 RVA: 0x0012D6D4 File Offset: 0x0012B8D4
+		// Token: 0x060032A4 RID: 12964 RVA: 0x000483B8 File Offset: 0x000465B8
 		protected UNavMovementComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04006F53 RID: 28499
+		// Token: 0x040011A4 RID: 4516
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.NavMovementComponent";
 
-		// Token: 0x04006F54 RID: 28500
+		// Token: 0x040011A5 RID: 4517
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04006F55 RID: 28501
+		// Token: 0x040011A6 RID: 4518
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04006F56 RID: 28502
-		internal static int __PropertyOffset_NavAgentProps;
-
-		// Token: 0x04006F57 RID: 28503
-		[Nullable(2)]
-		private FNavAgentProperties _NavAgentProps;
-
-		// Token: 0x04006F58 RID: 28504
+		// Token: 0x040011A7 RID: 4519
 		internal static int __PropertyOffset_FixedPathBrakingDistance;
 
-		// Token: 0x04006F59 RID: 28505
+		// Token: 0x040011A8 RID: 4520
 		internal static int __PropertyOffset_bUpdateNavAgentWithOwnersCollision;
 
-		// Token: 0x04006F5A RID: 28506
+		// Token: 0x040011A9 RID: 4521
 		internal static byte __PropertyMask_bUpdateNavAgentWithOwnersCollision;
 
-		// Token: 0x04006F5B RID: 28507
+		// Token: 0x040011AA RID: 4522
 		internal static int __PropertyOffset_bUseAccelerationForPaths;
 
-		// Token: 0x04006F5C RID: 28508
+		// Token: 0x040011AB RID: 4523
 		internal static byte __PropertyMask_bUseAccelerationForPaths;
 
-		// Token: 0x04006F5D RID: 28509
+		// Token: 0x040011AC RID: 4524
 		internal static int __PropertyOffset_bUseFixedBrakingDistanceForPaths;
 
-		// Token: 0x04006F5E RID: 28510
+		// Token: 0x040011AD RID: 4525
 		internal static byte __PropertyMask_bUseFixedBrakingDistanceForPaths;
 
-		// Token: 0x04006F5F RID: 28511
-		internal static int __PropertyOffset_MovementState;
-
-		// Token: 0x04006F60 RID: 28512
-		[Nullable(2)]
-		private FMovementProperties _MovementState;
-
-		// Token: 0x04006F61 RID: 28513
+		// Token: 0x040011AE RID: 4526
 		internal static int __PropertyOffset_PathFollowingComp;
 	}
 }

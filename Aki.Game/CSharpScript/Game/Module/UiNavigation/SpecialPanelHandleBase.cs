@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004904 RID: 18692
+	// Token: 0x0200387B RID: 14459
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class SpecialPanelHandleBase
 	{
-		// Token: 0x06030DD1 RID: 200145 RVA: 0x00B5922B File Offset: 0x00B5742B
+		// Token: 0x060258FE RID: 153854 RVA: 0x00A9409B File Offset: 0x00A9229B
 		public SpecialPanelHandleBase(string type)
 		{
 			this.Type = ESpecialPanelHandleDefine.FromString(type);
 		}
 
-		// Token: 0x06030DD2 RID: 200146 RVA: 0x00B5926C File Offset: 0x00B5746C
+		// Token: 0x060258FF RID: 153855 RVA: 0x00A940DC File Offset: 0x00A922DC
 		protected unsafe void SetNavigationGroupDefaultListener(TsUiNavigationBehaviorListener listener, bool isForce = false)
 		{
 			NavigationGroup navigationGroup = this.GetNavigationGroup(listener.GroupName);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DD3 RID: 200147 RVA: 0x00B5930C File Offset: 0x00B5750C
+		// Token: 0x06025900 RID: 153856 RVA: 0x00A9417C File Offset: 0x00A9237C
 		[return: Nullable(2)]
 		public NavigationGroup GetNavigationGroup(string groupName)
 		{
@@ -51,31 +51,31 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return result;
 		}
 
-		// Token: 0x06030DD4 RID: 200148 RVA: 0x00B59333 File Offset: 0x00B57533
+		// Token: 0x06025901 RID: 153857 RVA: 0x00A941A3 File Offset: 0x00A923A3
 		public void Init()
 		{
 			this.OnInit();
 		}
 
-		// Token: 0x06030DD5 RID: 200149 RVA: 0x00B5933B File Offset: 0x00B5753B
+		// Token: 0x06025902 RID: 153858 RVA: 0x00A941AB File Offset: 0x00A923AB
 		public void SetGroupMap(Dictionary<string, NavigationGroup> groupMap)
 		{
 			this.GroupMap = groupMap;
 		}
 
-		// Token: 0x06030DD6 RID: 200150 RVA: 0x00B59344 File Offset: 0x00B57544
+		// Token: 0x06025903 RID: 153859 RVA: 0x00A941B4 File Offset: 0x00A923B4
 		public void AddListener(TsUiNavigationBehaviorListener listener)
 		{
 			this.ListenerSet.Add(listener);
 		}
 
-		// Token: 0x06030DD7 RID: 200151 RVA: 0x00B59353 File Offset: 0x00B57553
+		// Token: 0x06025904 RID: 153860 RVA: 0x00A941C3 File Offset: 0x00A923C3
 		public void DeleteListener(TsUiNavigationBehaviorListener listener)
 		{
 			this.ListenerSet.Remove(listener);
 		}
 
-		// Token: 0x06030DD8 RID: 200152 RVA: 0x00B59364 File Offset: 0x00B57564
+		// Token: 0x06025905 RID: 153861 RVA: 0x00A941D4 File Offset: 0x00A923D4
 		public List<TsUiNavigationBehaviorListener> GetListenerListByTag(string tag)
 		{
 			List<TsUiNavigationBehaviorListener> list = new List<TsUiNavigationBehaviorListener>();
@@ -90,19 +90,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list;
 		}
 
-		// Token: 0x06030DD9 RID: 200153 RVA: 0x00B593D4 File Offset: 0x00B575D4
+		// Token: 0x06025906 RID: 153862 RVA: 0x00A94244 File Offset: 0x00A92444
 		public HashSet<TsUiNavigationBehaviorListener> GetListenerSet()
 		{
 			return this.ListenerSet;
 		}
 
-		// Token: 0x06030DDA RID: 200154 RVA: 0x00B593DC File Offset: 0x00B575DC
+		// Token: 0x06025907 RID: 153863 RVA: 0x00A9424C File Offset: 0x00A9244C
 		public void SetDefaultNavigationListenerList(TArray<AActor> actorArray)
 		{
 			this.OnDefaultNavigationListenerList(actorArray);
 		}
 
-		// Token: 0x06030DDB RID: 200155 RVA: 0x00B593E5 File Offset: 0x00B575E5
+		// Token: 0x06025908 RID: 153864 RVA: 0x00A94255 File Offset: 0x00A92455
 		public void ReplaceDefaultNavigationListener(TsUiNavigationBehaviorListener listener, int index)
 		{
 			if (this.DefaultNavigationListener.Count <= index)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.SetNavigationGroupDefaultListener(listener, false);
 		}
 
-		// Token: 0x06030DDC RID: 200156 RVA: 0x00B59418 File Offset: 0x00B57618
+		// Token: 0x06025909 RID: 153865 RVA: 0x00A94288 File Offset: 0x00A92488
 		public void ForceReplaceDefaultNavigationListener(TsUiNavigationBehaviorListener listener, int index)
 		{
 			if (this.DefaultNavigationListener.Count <= index)
@@ -130,31 +130,31 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.SetNavigationGroupDefaultListener(listener, true);
 		}
 
-		// Token: 0x06030DDD RID: 200157 RVA: 0x00B5944B File Offset: 0x00B5764B
+		// Token: 0x0602590A RID: 153866 RVA: 0x00A942BB File Offset: 0x00A924BB
 		public int GetDefaultListenerIndex(TsUiNavigationBehaviorListener listener)
 		{
 			return this.DefaultNavigationListener.IndexOf(listener);
 		}
 
-		// Token: 0x06030DDE RID: 200158 RVA: 0x00B59459 File Offset: 0x00B57659
+		// Token: 0x0602590B RID: 153867 RVA: 0x00A942C9 File Offset: 0x00A924C9
 		public List<TsUiNavigationBehaviorListener> GetSuitableNavigationListenerList(bool isDefault)
 		{
 			return this.OnGetSuitableNavigationListenerList(isDefault);
 		}
 
-		// Token: 0x06030DDF RID: 200159 RVA: 0x00B59462 File Offset: 0x00B57662
+		// Token: 0x0602590C RID: 153868 RVA: 0x00A942D2 File Offset: 0x00A924D2
 		public void NotifyFindResult(FindNavigationResult result)
 		{
 			this.OnNotifyFindResult(result);
 		}
 
-		// Token: 0x06030DE0 RID: 200160 RVA: 0x00B5946B File Offset: 0x00B5766B
+		// Token: 0x0602590D RID: 153869 RVA: 0x00A942DB File Offset: 0x00A924DB
 		public TsUiNavigationBehaviorListener GetLoopOrLayoutListener(TsUiNavigationBehaviorListener listener)
 		{
 			return this.OnGetLoopOrLayoutListener(listener);
 		}
 
-		// Token: 0x06030DE1 RID: 200161 RVA: 0x00B59474 File Offset: 0x00B57674
+		// Token: 0x0602590E RID: 153870 RVA: 0x00A942E4 File Offset: 0x00A924E4
 		[return: Nullable(2)]
 		public TsUiNavigationBehaviorListener GetSuitableListenerWithoutLayout(TsUiNavigationBehaviorListener listener)
 		{
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return UiNavigationNewController.Instance.FindSuitableListenerWithoutLayout(navigationGroup);
 		}
 
-		// Token: 0x06030DE2 RID: 200162 RVA: 0x00B594A0 File Offset: 0x00B576A0
+		// Token: 0x0602590F RID: 153871 RVA: 0x00A94310 File Offset: 0x00A92510
 		public void ResetGroupConfigMemory()
 		{
 			foreach (NavigationGroup navigationGroup in this.GroupMap.Values)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DE3 RID: 200163 RVA: 0x00B59500 File Offset: 0x00B57700
+		// Token: 0x06025910 RID: 153872 RVA: 0x00A94370 File Offset: 0x00A92570
 		public void TryRemoveListener(TsUiNavigationBehaviorListener listener)
 		{
 			this.DeleteListener(listener);
@@ -212,39 +212,39 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DE4 RID: 200164 RVA: 0x00B595AF File Offset: 0x00B577AF
+		// Token: 0x06025911 RID: 153873 RVA: 0x00A9441F File Offset: 0x00A9261F
 		public bool IsFirstFindFromSubPanel()
 		{
 			return this.OnIsFirstFindFromSubPanel();
 		}
 
-		// Token: 0x06030DE5 RID: 200165 RVA: 0x00B595B7 File Offset: 0x00B577B7
+		// Token: 0x06025912 RID: 153874 RVA: 0x00A94427 File Offset: 0x00A92627
 		public bool CanOverrideFindNavigation(ELGUINavigationDirection direction, TsUiNavigationBehaviorListener lastListener, [Nullable(2)] TsUiNavigationBehaviorListener targetListener)
 		{
 			return this.OnCanOverrideFindNavigation(direction, lastListener, targetListener);
 		}
 
-		// Token: 0x06030DE6 RID: 200166 RVA: 0x00B595C2 File Offset: 0x00B577C2
+		// Token: 0x06025913 RID: 153875 RVA: 0x00A94432 File Offset: 0x00A92632
 		[NullableContext(2)]
 		public TsUiNavigationBehaviorListener HandleOverrideFindNavigation(ELGUINavigationDirection direction, [Nullable(1)] TsUiNavigationBehaviorListener lastListener, TsUiNavigationBehaviorListener targetListener)
 		{
 			return this.OnHandleOverrideFindNavigation(direction, lastListener, targetListener);
 		}
 
-		// Token: 0x06030DE7 RID: 200167 RVA: 0x00B595CD File Offset: 0x00B577CD
+		// Token: 0x06025914 RID: 153876 RVA: 0x00A9443D File Offset: 0x00A9263D
 		[NullableContext(2)]
 		public TsUiNavigationBehaviorListener HandleAfterFindOpposite(ELGUINavigationDirection direction, [Nullable(1)] TsUiNavigationBehaviorListener lastListener, TsUiNavigationBehaviorListener targetListener, bool isPositive)
 		{
 			return this.OnHandleAfterFindOpposite(direction, lastListener, targetListener, isPositive);
 		}
 
-		// Token: 0x06030DE8 RID: 200168 RVA: 0x00B595DA File Offset: 0x00B577DA
+		// Token: 0x06025915 RID: 153877 RVA: 0x00A9444A File Offset: 0x00A9264A
 		protected virtual List<TsUiNavigationBehaviorListener> OnGetSuitableNavigationListenerList(bool isDefault)
 		{
 			return this.DefaultNavigationListener;
 		}
 
-		// Token: 0x06030DE9 RID: 200169 RVA: 0x00B595E4 File Offset: 0x00B577E4
+		// Token: 0x06025916 RID: 153878 RVA: 0x00A94454 File Offset: 0x00A92654
 		protected virtual void OnDefaultNavigationListenerList(TArray<AActor> actorArray)
 		{
 			List<TsUiNavigationBehaviorListener> list = new List<TsUiNavigationBehaviorListener>();
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.DefaultNavigationListener = list;
 		}
 
-		// Token: 0x06030DEA RID: 200170 RVA: 0x00B59644 File Offset: 0x00B57844
+		// Token: 0x06025917 RID: 153879 RVA: 0x00A944B4 File Offset: 0x00A926B4
 		[return: Nullable(2)]
 		protected virtual TsUiNavigationBehaviorListener OnGetLoopOrLayoutListener(TsUiNavigationBehaviorListener listener)
 		{
@@ -273,38 +273,38 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return UiNavigationNewController.Instance.FindLoopOrDynListener(navigationGroup);
 		}
 
-		// Token: 0x06030DEB RID: 200171 RVA: 0x00B5966E File Offset: 0x00B5786E
+		// Token: 0x06025918 RID: 153880 RVA: 0x00A944DE File Offset: 0x00A926DE
 		protected virtual void OnNotifyFindResult(FindNavigationResult result)
 		{
 		}
 
-		// Token: 0x06030DEC RID: 200172 RVA: 0x00B59670 File Offset: 0x00B57870
+		// Token: 0x06025919 RID: 153881 RVA: 0x00A944E0 File Offset: 0x00A926E0
 		protected virtual bool OnIsFirstFindFromSubPanel()
 		{
 			return false;
 		}
 
-		// Token: 0x06030DED RID: 200173 RVA: 0x00B59673 File Offset: 0x00B57873
+		// Token: 0x0602591A RID: 153882 RVA: 0x00A944E3 File Offset: 0x00A926E3
 		protected virtual bool OnCanOverrideFindNavigation(ELGUINavigationDirection direction, TsUiNavigationBehaviorListener lastListener, [Nullable(2)] TsUiNavigationBehaviorListener targetListener)
 		{
 			return false;
 		}
 
-		// Token: 0x06030DEE RID: 200174 RVA: 0x00B59676 File Offset: 0x00B57876
+		// Token: 0x0602591B RID: 153883 RVA: 0x00A944E6 File Offset: 0x00A926E6
 		[NullableContext(2)]
 		protected virtual TsUiNavigationBehaviorListener OnHandleOverrideFindNavigation(ELGUINavigationDirection direction, [Nullable(1)] TsUiNavigationBehaviorListener lastListener, TsUiNavigationBehaviorListener targetListener)
 		{
 			return null;
 		}
 
-		// Token: 0x06030DEF RID: 200175 RVA: 0x00B59679 File Offset: 0x00B57879
+		// Token: 0x0602591C RID: 153884 RVA: 0x00A944E9 File Offset: 0x00A926E9
 		[NullableContext(2)]
 		protected virtual TsUiNavigationBehaviorListener OnHandleAfterFindOpposite(ELGUINavigationDirection direction, [Nullable(1)] TsUiNavigationBehaviorListener lastListener, TsUiNavigationBehaviorListener targetListener, bool isPositive)
 		{
 			return targetListener;
 		}
 
-		// Token: 0x06030DF0 RID: 200176 RVA: 0x00B5967C File Offset: 0x00B5787C
+		// Token: 0x0602591D RID: 153885 RVA: 0x00A944EC File Offset: 0x00A926EC
 		public void Clear()
 		{
 			this.OnClear();
@@ -312,32 +312,32 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.ListenerSet.Clear();
 		}
 
-		// Token: 0x06030DF1 RID: 200177 RVA: 0x00B5969A File Offset: 0x00B5789A
+		// Token: 0x0602591E RID: 153886 RVA: 0x00A9450A File Offset: 0x00A9270A
 		public new ESpecialPanelHandleDefine GetType()
 		{
 			return this.Type;
 		}
 
-		// Token: 0x06030DF2 RID: 200178 RVA: 0x00B596A2 File Offset: 0x00B578A2
+		// Token: 0x0602591F RID: 153887 RVA: 0x00A94512 File Offset: 0x00A92712
 		protected virtual void OnInit()
 		{
 		}
 
-		// Token: 0x06030DF3 RID: 200179 RVA: 0x00B596A4 File Offset: 0x00B578A4
+		// Token: 0x06025920 RID: 153888 RVA: 0x00A94514 File Offset: 0x00A92714
 		protected virtual void OnClear()
 		{
 		}
 
-		// Token: 0x0401A3C6 RID: 107462
+		// Token: 0x04014C39 RID: 85049
 		protected List<TsUiNavigationBehaviorListener> DefaultNavigationListener = new List<TsUiNavigationBehaviorListener>();
 
-		// Token: 0x0401A3C7 RID: 107463
+		// Token: 0x04014C3A RID: 85050
 		private readonly HashSet<TsUiNavigationBehaviorListener> ListenerSet = new HashSet<TsUiNavigationBehaviorListener>();
 
-		// Token: 0x0401A3C8 RID: 107464
+		// Token: 0x04014C3B RID: 85051
 		private Dictionary<string, NavigationGroup> GroupMap = new Dictionary<string, NavigationGroup>();
 
-		// Token: 0x0401A3C9 RID: 107465
+		// Token: 0x04014C3C RID: 85052
 		private readonly ESpecialPanelHandleDefine Type = ESpecialPanelHandleDefine.Default;
 	}
 }

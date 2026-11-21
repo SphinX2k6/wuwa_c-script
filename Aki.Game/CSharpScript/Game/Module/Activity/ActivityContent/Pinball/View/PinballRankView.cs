@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062D9 RID: 25305
+	// Token: 0x02005257 RID: 21079
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballRankView : UiViewBase
 	{
-		// Token: 0x0603FACC RID: 260812 RVA: 0x00F68097 File Offset: 0x00F66297
+		// Token: 0x0603478D RID: 214925 RVA: 0x00EAEFF3 File Offset: 0x00EAD1F3
 		[NullableContext(1)]
 		public PinballRankView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FACD RID: 260813 RVA: 0x00F680A0 File Offset: 0x00F662A0
+		// Token: 0x0603478E RID: 214926 RVA: 0x00EAEFFC File Offset: 0x00EAD1FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FACE RID: 260814 RVA: 0x00F6816C File Offset: 0x00F6636C
+		// Token: 0x0603478F RID: 214927 RVA: 0x00EAF0C8 File Offset: 0x00EAD2C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballRankView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,32 +52,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FACF RID: 260815 RVA: 0x00F681AF File Offset: 0x00F663AF
+		// Token: 0x06034790 RID: 214928 RVA: 0x00EAF10B File Offset: 0x00EAD30B
 		[NullableContext(1)]
 		private PinballRankItem CreateItem()
 		{
 			return new PinballRankItem();
 		}
 
-		// Token: 0x0603FAD0 RID: 260816 RVA: 0x00F681B6 File Offset: 0x00F663B6
+		// Token: 0x06034791 RID: 214929 RVA: 0x00EAF112 File Offset: 0x00EAD312
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603FAD1 RID: 260817 RVA: 0x00F681BF File Offset: 0x00F663BF
+		// Token: 0x06034792 RID: 214930 RVA: 0x00EAF11B File Offset: 0x00EAD31B
 		private void OnHelpBtnClick()
 		{
 			HelpController.Instance.OpenHelpById(557);
 		}
 
-		// Token: 0x0402143D RID: 136253
+		// Token: 0x0401BD6C RID: 114028
 		private PinballActivityData PinballActivityData;
 
-		// Token: 0x0402143E RID: 136254
+		// Token: 0x0401BD6D RID: 114029
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402143F RID: 136255
+		// Token: 0x0401BD6E RID: 114030
 		[Nullable(new byte[]
 		{
 			2,
@@ -86,22 +86,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 		})]
 		private LoopScrollView<PinballRankItem, PinballRankData> RankScrollView;
 
-		// Token: 0x04021440 RID: 136256
+		// Token: 0x0401BD6F RID: 114031
 		private PinballRankItem MyRankItem;
 
-		// Token: 0x0200C4C4 RID: 50372
+		// Token: 0x0200AEAB RID: 44715
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B600 RID: 243200
+			// Token: 0x04035F62 RID: 221026
 			ItemCaption,
-			// Token: 0x0403B601 RID: 243201
+			// Token: 0x04035F63 RID: 221027
 			LoopViewRank,
-			// Token: 0x0403B602 RID: 243202
+			// Token: 0x04035F64 RID: 221028
 			ItemRank,
-			// Token: 0x0403B603 RID: 243203
+			// Token: 0x04035F65 RID: 221029
 			ItemMyRank,
-			// Token: 0x0403B604 RID: 243204
+			// Token: 0x04035F66 RID: 221030
 			Content
 		}
 	}

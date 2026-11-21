@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C3A RID: 19514
+	// Token: 0x0200512D RID: 20781
 	public struct IHealthAttribute : IFlatbufferObject
 	{
-		// Token: 0x17008DC2 RID: 36290
-		// (get) Token: 0x0601EED3 RID: 126675 RVA: 0x00453B4A File Offset: 0x00451D4A
+		// Token: 0x170094EB RID: 38123
+		// (get) Token: 0x06020AD7 RID: 133847 RVA: 0x00487426 File Offset: 0x00485626
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EED4 RID: 126676 RVA: 0x00453B57 File Offset: 0x00451D57
+		// Token: 0x06020AD8 RID: 133848 RVA: 0x00487433 File Offset: 0x00485633
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EED5 RID: 126677 RVA: 0x00453B60 File Offset: 0x00451D60
+		// Token: 0x06020AD9 RID: 133849 RVA: 0x0048743C File Offset: 0x0048563C
 		public static IHealthAttribute GetRootAsIHealthAttribute(ByteBuffer _bb)
 		{
 			return IHealthAttribute.GetRootAsIHealthAttribute(_bb, default(IHealthAttribute));
 		}
 
-		// Token: 0x0601EED6 RID: 126678 RVA: 0x00453B7C File Offset: 0x00451D7C
+		// Token: 0x06020ADA RID: 133850 RVA: 0x00487458 File Offset: 0x00485658
 		public static IHealthAttribute GetRootAsIHealthAttribute(ByteBuffer _bb, IHealthAttribute obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EED7 RID: 126679 RVA: 0x00453B99 File Offset: 0x00451D99
+		// Token: 0x06020ADB RID: 133851 RVA: 0x00487475 File Offset: 0x00485675
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EED8 RID: 126680 RVA: 0x00453BA8 File Offset: 0x00451DA8
+		// Token: 0x06020ADC RID: 133852 RVA: 0x00487484 File Offset: 0x00485684
 		public IHealthAttribute __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008DC3 RID: 36291
-		// (get) Token: 0x0601EED9 RID: 126681 RVA: 0x00453BB8 File Offset: 0x00451DB8
+		// Token: 0x170094EC RID: 38124
+		// (get) Token: 0x06020ADD RID: 133853 RVA: 0x00487494 File Offset: 0x00485694
 		public EPlayerAttributeType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008DC4 RID: 36292
-		// (get) Token: 0x0601EEDA RID: 126682 RVA: 0x00453BF4 File Offset: 0x00451DF4
+		// Token: 0x170094ED RID: 38125
+		// (get) Token: 0x06020ADE RID: 133854 RVA: 0x004874D0 File Offset: 0x004856D0
 		public ECompare Compare
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008DC5 RID: 36293
-		// (get) Token: 0x0601EEDB RID: 126683 RVA: 0x00453C30 File Offset: 0x00451E30
+		// Token: 0x170094EE RID: 38126
+		// (get) Token: 0x06020ADF RID: 133855 RVA: 0x0048750C File Offset: 0x0048570C
 		public float Value
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EEDC RID: 126684 RVA: 0x00453C70 File Offset: 0x00451E70
+		// Token: 0x06020AE0 RID: 133856 RVA: 0x0048754C File Offset: 0x0048574C
 		public static Offset<IHealthAttribute> CreateIHealthAttribute(FlatBufferBuilder builder, EPlayerAttributeType Type = EPlayerAttributeType.Health, ECompare Compare = ECompare.Eq, float Value = 0f)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IHealthAttribute.EndIHealthAttribute(builder);
 		}
 
-		// Token: 0x0601EEDD RID: 126685 RVA: 0x00453C94 File Offset: 0x00451E94
+		// Token: 0x06020AE1 RID: 133857 RVA: 0x00487570 File Offset: 0x00485770
 		public static void StartIHealthAttribute(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601EEDE RID: 126686 RVA: 0x00453C9D File Offset: 0x00451E9D
+		// Token: 0x06020AE2 RID: 133858 RVA: 0x00487579 File Offset: 0x00485779
 		public static void AddType(FlatBufferBuilder builder, EPlayerAttributeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EEDF RID: 126687 RVA: 0x00453CA8 File Offset: 0x00451EA8
+		// Token: 0x06020AE3 RID: 133859 RVA: 0x00487584 File Offset: 0x00485784
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(1, (byte)compare, 0);
 		}
 
-		// Token: 0x0601EEE0 RID: 126688 RVA: 0x00453CB3 File Offset: 0x00451EB3
+		// Token: 0x06020AE4 RID: 133860 RVA: 0x0048758F File Offset: 0x0048578F
 		public static void AddValue(FlatBufferBuilder builder, float value)
 		{
 			builder.AddFloat(2, value, 0.0);
 		}
 
-		// Token: 0x0601EEE1 RID: 126689 RVA: 0x00453CC6 File Offset: 0x00451EC6
+		// Token: 0x06020AE5 RID: 133861 RVA: 0x004875A2 File Offset: 0x004857A2
 		public static Offset<IHealthAttribute> EndIHealthAttribute(FlatBufferBuilder builder)
 		{
 			return new Offset<IHealthAttribute>(builder.EndTable());
 		}
 
-		// Token: 0x0601EEE2 RID: 126690 RVA: 0x00453CD4 File Offset: 0x00451ED4
+		// Token: 0x06020AE6 RID: 133862 RVA: 0x004875B0 File Offset: 0x004857B0
 		public IHealthAttributeT UnPack()
 		{
 			IHealthAttributeT healthAttributeT = new IHealthAttributeT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return healthAttributeT;
 		}
 
-		// Token: 0x0601EEE3 RID: 126691 RVA: 0x00453CEF File Offset: 0x00451EEF
+		// Token: 0x06020AE7 RID: 133863 RVA: 0x004875CB File Offset: 0x004857CB
 		public void UnPackTo(IHealthAttributeT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Value = this.Value;
 		}
 
-		// Token: 0x0601EEE4 RID: 126692 RVA: 0x00453D18 File Offset: 0x00451F18
+		// Token: 0x06020AE8 RID: 133864 RVA: 0x004875F4 File Offset: 0x004857F4
 		public static Offset<IHealthAttribute> Pack(FlatBufferBuilder builder, IHealthAttributeT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IHealthAttribute.CreateIHealthAttribute(builder, _o.Type, _o.Compare, _o.Value);
 		}
 
-		// Token: 0x0400D5DE RID: 54750
+		// Token: 0x0400E0FD RID: 57597
 		private Table __p;
 	}
 }

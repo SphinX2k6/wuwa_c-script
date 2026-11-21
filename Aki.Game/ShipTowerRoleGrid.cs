@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x020029CB RID: 10699
+// Token: 0x02001F46 RID: 8006
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,7 +11,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 })]
 public class ShipTowerRoleGrid : LoopScrollMediumItemGrid<RoleDataBase>
 {
-	// Token: 0x060162CD RID: 90829 RVA: 0x0059BBC4 File Offset: 0x00599DC4
+	// Token: 0x06013CD3 RID: 81107 RVA: 0x005C6B7C File Offset: 0x005C4D7C
 	protected override void OnRefresh(RoleDataBase data, bool isSelected, int gridIndex)
 	{
 		RoleLevelData levelData = data.GetLevelData();
@@ -47,25 +47,25 @@ public class ShipTowerRoleGrid : LoopScrollMediumItemGrid<RoleDataBase>
 		this.SetSelected(bSelected, true);
 	}
 
-	// Token: 0x060162CE RID: 90830 RVA: 0x0059BD6F File Offset: 0x00599F6F
+	// Token: 0x06013CD4 RID: 81108 RVA: 0x005C6D27 File Offset: 0x005C4F27
 	public void OnForceSelected()
 	{
 		this.SetSelected(true, true);
 	}
 
-	// Token: 0x060162CF RID: 90831 RVA: 0x0059BD79 File Offset: 0x00599F79
+	// Token: 0x06013CD5 RID: 81109 RVA: 0x005C6D31 File Offset: 0x005C4F31
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
 	}
 
-	// Token: 0x060162D0 RID: 90832 RVA: 0x0059BD83 File Offset: 0x00599F83
+	// Token: 0x06013CD6 RID: 81110 RVA: 0x005C6D3B File Offset: 0x005C4F3B
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);
 	}
 
-	// Token: 0x0400A522 RID: 42274
+	// Token: 0x0400A90C RID: 43276
 	[Nullable(2)]
 	public Func<int, bool> IsHighlightIndex;
 }

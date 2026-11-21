@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Fight.Struct;
 
-// Token: 0x02002F95 RID: 12181
+// Token: 0x020024E9 RID: 9449
 [NullableContext(1)]
 [Nullable(0)]
 public class QteExecution : InitExecution
 {
-	// Token: 0x06019DBA RID: 105914 RVA: 0x006C0A27 File Offset: 0x006BEC27
+	// Token: 0x060176CC RID: 95948 RVA: 0x006E72EF File Offset: 0x006E54EF
 	public QteExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DBB RID: 105915 RVA: 0x006C0A30 File Offset: 0x006BEC30
+	// Token: 0x060176CD RID: 95949 RVA: 0x006E72F8 File Offset: 0x006E54F8
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -23,7 +23,7 @@ public class QteExecution : InitExecution
 		}
 	}
 
-	// Token: 0x06019DBC RID: 105916 RVA: 0x006C0A84 File Offset: 0x006BEC84
+	// Token: 0x060176CE RID: 95950 RVA: 0x006E734C File Offset: 0x006E554C
 	[return: Nullable(2)]
 	public unsafe override object OnExecute(params object[] args)
 	{
@@ -127,9 +127,9 @@ public class QteExecution : InitExecution
 		return null;
 	}
 
-	// Token: 0x0400C358 RID: 50008
+	// Token: 0x0400C701 RID: 50945
 	private float NeedEnergy;
 
-	// Token: 0x0400C359 RID: 50009
+	// Token: 0x0400C702 RID: 50946
 	private bool AllowChangeRole;
 }

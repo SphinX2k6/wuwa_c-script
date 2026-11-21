@@ -7,10 +7,10 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002C0C RID: 11276
+// Token: 0x02002187 RID: 8583
 public class TowerVariationShareTeamItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601769D RID: 95901 RVA: 0x005F62C8 File Offset: 0x005F44C8
+	// Token: 0x060150CE RID: 86222 RVA: 0x00622DEC File Offset: 0x00620FEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -30,7 +30,7 @@ public class TowerVariationShareTeamItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601769E RID: 95902 RVA: 0x005F6394 File Offset: 0x005F4594
+	// Token: 0x060150CF RID: 86223 RVA: 0x00622EB8 File Offset: 0x006210B8
 	protected override void OnStart()
 	{
 		this.StarLayout = new GenericLayout<TowerStarsSimpleItem, bool>(base.GetHorizontalLayout(3), new Func<TowerStarsSimpleItem>(this.InitStarItem), null, false, true);
@@ -38,7 +38,7 @@ public class TowerVariationShareTeamItem : GridProxyAbstract<int>
 		base.GetExtendToggle(0).ToggleState = EToggleState.ETT_UnDetermined;
 	}
 
-	// Token: 0x0601769F RID: 95903 RVA: 0x005F63F0 File Offset: 0x005F45F0
+	// Token: 0x060150D0 RID: 86224 RVA: 0x00622F14 File Offset: 0x00621114
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.TowerId = data;
@@ -78,27 +78,27 @@ public class TowerVariationShareTeamItem : GridProxyAbstract<int>
 		goto IL_E6;
 	}
 
-	// Token: 0x060176A0 RID: 95904 RVA: 0x005F6530 File Offset: 0x005F4730
+	// Token: 0x060150D1 RID: 86225 RVA: 0x00623054 File Offset: 0x00621254
 	[NullableContext(1)]
 	private TowerStarsSimpleItem InitStarItem()
 	{
 		return new TowerStarsSimpleItem();
 	}
 
-	// Token: 0x060176A1 RID: 95905 RVA: 0x005F6537 File Offset: 0x005F4737
+	// Token: 0x060150D2 RID: 86226 RVA: 0x0062305B File Offset: 0x0062125B
 	[NullableContext(1)]
 	private TowerRoleSimpleItem InitRoleItem()
 	{
 		return new TowerRoleSimpleItem();
 	}
 
-	// Token: 0x0400AF15 RID: 44821
+	// Token: 0x0400B31A RID: 45850
 	private int TowerId = -1;
 
-	// Token: 0x0400AF16 RID: 44822
+	// Token: 0x0400B31B RID: 45851
 	private int Star = -1;
 
-	// Token: 0x0400AF17 RID: 44823
+	// Token: 0x0400B31C RID: 45852
 	[Nullable(new byte[]
 	{
 		2,
@@ -106,7 +106,7 @@ public class TowerVariationShareTeamItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<TowerStarsSimpleItem, bool> StarLayout;
 
-	// Token: 0x0400AF18 RID: 44824
+	// Token: 0x0400B31D RID: 45853
 	[Nullable(new byte[]
 	{
 		2,
@@ -115,22 +115,22 @@ public class TowerVariationShareTeamItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<TowerRoleSimpleItem, RoleDataWithBranch> RoleLayout;
 
-	// Token: 0x020091D7 RID: 37335
+	// Token: 0x0200841A RID: 33818
 	private enum EChildType
 	{
-		// Token: 0x0402F2EE RID: 193262
+		// Token: 0x0402A9EF RID: 174575
 		FloorToggle,
-		// Token: 0x0402F2EF RID: 193263
+		// Token: 0x0402A9F0 RID: 174576
 		BgTexture,
-		// Token: 0x0402F2F0 RID: 193264
+		// Token: 0x0402A9F1 RID: 174577
 		FloorNumberText,
-		// Token: 0x0402F2F1 RID: 193265
+		// Token: 0x0402A9F2 RID: 174578
 		StarRootLayout,
-		// Token: 0x0402F2F2 RID: 193266
+		// Token: 0x0402A9F3 RID: 174579
 		RoleRootLayout,
-		// Token: 0x0402F2F3 RID: 193267
+		// Token: 0x0402A9F4 RID: 174580
 		PnlLevel,
-		// Token: 0x0402F2F4 RID: 193268
+		// Token: 0x0402A9F5 RID: 174581
 		QuickPassItem
 	}
 }

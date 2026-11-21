@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070DA RID: 28890
+	// Token: 0x020078A6 RID: 30886
 	public class IShowCenterTextParamsT
 	{
-		// Token: 0x1700D6A4 RID: 54948
-		// (get) Token: 0x060332DB RID: 209627 RVA: 0x006E664D File Offset: 0x006E484D
-		// (set) Token: 0x060332DC RID: 209628 RVA: 0x006E6655 File Offset: 0x006E4855
+		// Token: 0x1700E287 RID: 57991
+		// (get) Token: 0x0603657D RID: 222589 RVA: 0x00746C59 File Offset: 0x00744E59
+		// (set) Token: 0x0603657E RID: 222590 RVA: 0x00746C61 File Offset: 0x00744E61
 		public float TotalTime { get; set; }
 
-		// Token: 0x1700D6A5 RID: 54949
-		// (get) Token: 0x060332DD RID: 209629 RVA: 0x006E665E File Offset: 0x006E485E
-		// (set) Token: 0x060332DE RID: 209630 RVA: 0x006E6666 File Offset: 0x006E4866
+		// Token: 0x1700E288 RID: 57992
+		// (get) Token: 0x0603657F RID: 222591 RVA: 0x00746C6A File Offset: 0x00744E6A
+		// (set) Token: 0x06036580 RID: 222592 RVA: 0x00746C72 File Offset: 0x00744E72
 		public ITextStyleT TextStyle { get; set; }
 
-		// Token: 0x1700D6A6 RID: 54950
-		// (get) Token: 0x060332DF RID: 209631 RVA: 0x006E666F File Offset: 0x006E486F
-		// (set) Token: 0x060332E0 RID: 209632 RVA: 0x006E6677 File Offset: 0x006E4877
+		// Token: 0x1700E289 RID: 57993
+		// (get) Token: 0x06036581 RID: 222593 RVA: 0x00746C7B File Offset: 0x00744E7B
+		// (set) Token: 0x06036582 RID: 222594 RVA: 0x00746C83 File Offset: 0x00744E83
 		public string BgImageId { get; set; }
 
-		// Token: 0x1700D6A7 RID: 54951
-		// (get) Token: 0x060332E1 RID: 209633 RVA: 0x006E6680 File Offset: 0x006E4880
-		// (set) Token: 0x060332E2 RID: 209634 RVA: 0x006E6688 File Offset: 0x006E4888
+		// Token: 0x1700E28A RID: 57994
+		// (get) Token: 0x06036583 RID: 222595 RVA: 0x00746C8C File Offset: 0x00744E8C
+		// (set) Token: 0x06036584 RID: 222596 RVA: 0x00746C94 File Offset: 0x00744E94
 		public bool IsMulLine { get; set; }
 
-		// Token: 0x1700D6A8 RID: 54952
-		// (get) Token: 0x060332E3 RID: 209635 RVA: 0x006E6691 File Offset: 0x006E4891
-		// (set) Token: 0x060332E4 RID: 209636 RVA: 0x006E6699 File Offset: 0x006E4899
+		// Token: 0x1700E28B RID: 57995
+		// (get) Token: 0x06036585 RID: 222597 RVA: 0x00746C9D File Offset: 0x00744E9D
+		// (set) Token: 0x06036586 RID: 222598 RVA: 0x00746CA5 File Offset: 0x00744EA5
 		public bool IsManualNext { get; set; }
 
-		// Token: 0x1700D6A9 RID: 54953
-		// (get) Token: 0x060332E5 RID: 209637 RVA: 0x006E66A2 File Offset: 0x006E48A2
-		// (set) Token: 0x060332E6 RID: 209638 RVA: 0x006E66AA File Offset: 0x006E48AA
+		// Token: 0x1700E28C RID: 57996
+		// (get) Token: 0x06036587 RID: 222599 RVA: 0x00746CAE File Offset: 0x00744EAE
+		// (set) Token: 0x06036588 RID: 222600 RVA: 0x00746CB6 File Offset: 0x00744EB6
 		public bool IsCancelAutoLine { get; set; }
 
-		// Token: 0x1700D6AA RID: 54954
-		// (get) Token: 0x060332E7 RID: 209639 RVA: 0x006E66B3 File Offset: 0x006E48B3
-		// (set) Token: 0x060332E8 RID: 209640 RVA: 0x006E66BB File Offset: 0x006E48BB
+		// Token: 0x1700E28D RID: 57997
+		// (get) Token: 0x06036589 RID: 222601 RVA: 0x00746CBF File Offset: 0x00744EBF
+		// (set) Token: 0x0603658A RID: 222602 RVA: 0x00746CC7 File Offset: 0x00744EC7
 		public byte NullMask { get; set; }
 
-		// Token: 0x060332E9 RID: 209641 RVA: 0x006E66C4 File Offset: 0x006E48C4
+		// Token: 0x0603658B RID: 222603 RVA: 0x00746CD0 File Offset: 0x00744ED0
 		public IShowCenterTextParamsT()
 		{
 			this.TotalTime = 0f;

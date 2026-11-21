@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B72 RID: 19314
+	// Token: 0x02003B1C RID: 15132
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TeleportStreamingHelper : TeleportContextHolder
 	{
-		// Token: 0x06032090 RID: 204944 RVA: 0x00B9D406 File Offset: 0x00B9B606
+		// Token: 0x06026E21 RID: 159265 RVA: 0x00AE15B6 File Offset: 0x00ADF7B6
 		public TeleportStreamingHelper(TeleportContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06032091 RID: 204945 RVA: 0x00B9D410 File Offset: 0x00B9B610
+		// Token: 0x06026E22 RID: 159266 RVA: 0x00AE15C0 File Offset: 0x00ADF7C0
 		public void FlushWorldPartitionUnloadingStreamingCells()
 		{
 			if (!UKuroStaticLibrary.IsLowMemoryDevice())
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06032092 RID: 204946 RVA: 0x00B9D4A0 File Offset: 0x00B9B6A0
+		// Token: 0x06026E23 RID: 159267 RVA: 0x00AE1650 File Offset: 0x00ADF850
 		public UniTask CheckLiveLocationStreamingCompleted(bool isVoxel = false)
 		{
 			TeleportStreamingHelper.<CheckLiveLocationStreamingCompleted>d__3 <CheckLiveLocationStreamingCompleted>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <CheckLiveLocationStreamingCompleted>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032093 RID: 204947 RVA: 0x00B9D4EC File Offset: 0x00B9B6EC
+		// Token: 0x06026E24 RID: 159268 RVA: 0x00AE169C File Offset: 0x00ADF89C
 		private TimerHandle CheckTargetLiveLocationStreamingCompleted(UWorldPartitionStreamingSourceComponent streamingSourceComponent, GameModePromise completedPromise)
 		{
 			UWorldPartitionSubsystem worldPartitionSubsystem = UKuroRenderingRuntimeBPPluginBPLibrary.GetSubsystem(GlobalData.World, UWorldPartitionSubsystem.StaticClass()) as UWorldPartitionSubsystem;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return timerId;
 		}
 
-		// Token: 0x06032094 RID: 204948 RVA: 0x00B9D58C File Offset: 0x00B9B78C
+		// Token: 0x06026E25 RID: 159269 RVA: 0x00AE173C File Offset: 0x00ADF93C
 		public UniTask CheckStreamingCompleted(bool isVoxel = false)
 		{
 			TeleportStreamingHelper.<CheckStreamingCompleted>d__5 <CheckStreamingCompleted>d__;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <CheckStreamingCompleted>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032095 RID: 204949 RVA: 0x00B9D5D8 File Offset: 0x00B9B7D8
+		// Token: 0x06026E26 RID: 159270 RVA: 0x00AE1788 File Offset: 0x00ADF988
 		private unsafe TimerHandle CheckTargetStreamingCompleted(UWorldPartitionStreamingSourceComponent streamingSourceComponent, GameModePromise completed, [Nullable(2)] TArray<FName> dataLayerLabels, bool checkPhysics = false)
 		{
 			TArray<FName> targetGrids = streamingSourceComponent.TargetGrids;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return timerId;
 		}
 
-		// Token: 0x06032096 RID: 204950 RVA: 0x00B9D73E File Offset: 0x00B9B93E
+		// Token: 0x06026E27 RID: 159271 RVA: 0x00AE18EE File Offset: 0x00ADFAEE
 		private void TimerStreamingStuckLog(UWorldPartitionStreamingSourceComponent streamingSourceComponent, float interval, bool bRequestPhysics = false)
 		{
 			this.StreamingStuckLogInterval += interval;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x0401AAAE RID: 109230
+		// Token: 0x04015402 RID: 87042
 		private float StreamingStuckLogInterval;
 	}
 }

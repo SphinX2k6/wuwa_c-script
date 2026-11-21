@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015FE RID: 5630
+// Token: 0x02000AB6 RID: 2742
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerTemplateSelectPanel : UiPanelBase
 {
-	// Token: 0x06009EC8 RID: 40648 RVA: 0x0022B07C File Offset: 0x0022927C
+	// Token: 0x060072A6 RID: 29350 RVA: 0x00234E54 File Offset: 0x00233054
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -26,33 +25,36 @@ public class WheelTowerTemplateSelectPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009EC9 RID: 40649 RVA: 0x0022B0E8 File Offset: 0x002292E8
+	// Token: 0x060072A7 RID: 29351 RVA: 0x00234EC0 File Offset: 0x002330C0
 	protected override void OnStart()
 	{
 		this.ScrollView = new GenericScrollViewNew<WheelTowerRoleGridItem, RoleDataWithBranch>(base.GetScrollViewWithScrollbar(0), new Func<WheelTowerRoleGridItem>(this.CreateWheelTowerRoleGridItem), null, false, null);
 		this.FilterSortEntrance = new FilterSortEntrance<RoleDataBase>(base.GetItem(1), new TUpdateDataListFunction<RoleDataBase>(this.UpdateRoleList));
 	}
 
-	// Token: 0x06009ECA RID: 40650 RVA: 0x0022B134 File Offset: 0x00229334
+	// Token: 0x060072A8 RID: 29352 RVA: 0x00234F0C File Offset: 0x0023310C
 	public void Refresh()
 	{
-		List<RoleDataBase> dataList = (from roleId in RoleModel.Instance.GetRoleIdList()
-		select RoleModel.Instance.GetRoleDataById(roleId, true)).ToList<RoleDataBase>();
+		List<RoleDataBase> list = new List<RoleDataBase>();
+		foreach (int id in RoleModel.Instance.GetRoleIdList(null))
+		{
+			list.Add(RoleModel.Instance.GetRoleDataById(id, true));
+		}
 		FilterSortEntrance<RoleDataBase> filterSortEntrance = this.FilterSortEntrance;
 		if (filterSortEntrance == null)
 		{
 			return;
 		}
-		filterSortEntrance.UpdateData(EFilterSortGroupId.EditFormation, dataList, Array.Empty<object>());
+		filterSortEntrance.UpdateData(EFilterSortGroupId.EditFormation, list, Array.Empty<object>());
 	}
 
-	// Token: 0x06009ECB RID: 40651 RVA: 0x0022B18C File Offset: 0x0022938C
+	// Token: 0x060072A9 RID: 29353 RVA: 0x00234F8C File Offset: 0x0023318C
 	public int GetFirstRoleId()
 	{
 		return this.FirstRoleId;
 	}
 
-	// Token: 0x06009ECC RID: 40652 RVA: 0x0022B194 File Offset: 0x00229394
+	// Token: 0x060072AA RID: 29354 RVA: 0x00234F94 File Offset: 0x00233194
 	public void OnlyRefreshScroll()
 	{
 		GenericScrollViewNew<WheelTowerRoleGridItem, RoleDataWithBranch> scrollView = this.ScrollView;
@@ -68,7 +70,7 @@ public class WheelTowerTemplateSelectPanel : UiPanelBase
 		genericLayout.RefreshWithoutDataSync();
 	}
 
-	// Token: 0x06009ECD RID: 40653 RVA: 0x0022B1B0 File Offset: 0x002293B0
+	// Token: 0x060072AB RID: 29355 RVA: 0x00234FB0 File Offset: 0x002331B0
 	public void RefreshRoleSkillBranch(int roleId)
 	{
 		if (roleId <= 0)
@@ -121,7 +123,7 @@ public class WheelTowerTemplateSelectPanel : UiPanelBase
 		scrollItemByIndex.Refresh(roleDataWithBranch, false, num);
 	}
 
-	// Token: 0x06009ECE RID: 40654 RVA: 0x0022B271 File Offset: 0x00229471
+	// Token: 0x060072AC RID: 29356 RVA: 0x00235071 File Offset: 0x00233271
 	private WheelTowerRoleGridItem CreateWheelTowerRoleGridItem()
 	{
 		WheelTowerRoleGridItem wheelTowerRoleGridItem = new WheelTowerRoleGridItem();
@@ -129,7 +131,7 @@ public class WheelTowerTemplateSelectPanel : UiPanelBase
 		return wheelTowerRoleGridItem;
 	}
 
-	// Token: 0x06009ECF RID: 40655 RVA: 0x0022B28A File Offset: 0x0022948A
+	// Token: 0x060072AD RID: 29357 RVA: 0x0023508A File Offset: 0x0023328A
 	private void OnToggleClick(int roleId)
 	{
 		Action<int> onTemplateSelect = this.OnTemplateSelect;
@@ -140,7 +142,7 @@ public class WheelTowerTemplateSelectPanel : UiPanelBase
 		this.OnlyRefreshScroll();
 	}
 
-	// Token: 0x06009ED0 RID: 40656 RVA: 0x0022B2A4 File Offset: 0x002294A4
+	// Token: 0x060072AE RID: 29358 RVA: 0x002350A4 File Offset: 0x002332A4
 	private void UpdateRoleList(List<RoleDataBase> list, bool isShowText, EFilterSortType sortType)
 	{
 		List<int> list2 = new List<int>();
@@ -206,11 +208,11 @@ public class WheelTowerTemplateSelectPanel : UiPanelBase
 		scrollView2.RefreshByData(list4, null, false);
 	}
 
-	// Token: 0x04004709 RID: 18185
+	// Token: 0x040047AF RID: 18351
 	[Nullable(2)]
 	public Action<int> OnTemplateSelect;
 
-	// Token: 0x0400470A RID: 18186
+	// Token: 0x040047B0 RID: 18352
 	[Nullable(new byte[]
 	{
 		2,
@@ -219,7 +221,7 @@ public class WheelTowerTemplateSelectPanel : UiPanelBase
 	})]
 	private GenericScrollViewNew<WheelTowerRoleGridItem, RoleDataWithBranch> ScrollView;
 
-	// Token: 0x0400470B RID: 18187
+	// Token: 0x040047B1 RID: 18353
 	[Nullable(new byte[]
 	{
 		2,
@@ -227,6 +229,6 @@ public class WheelTowerTemplateSelectPanel : UiPanelBase
 	})]
 	private FilterSortEntrance<RoleDataBase> FilterSortEntrance;
 
-	// Token: 0x0400470C RID: 18188
+	// Token: 0x040047B2 RID: 18354
 	private int FirstRoleId;
 }

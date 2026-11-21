@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006813 RID: 26643
+	// Token: 0x02005763 RID: 22371
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,8 +17,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlOccupationWeaponItem : GridProxyAbstract<DangoBrawlOccupationWeaponItemData>
 	{
-		// Token: 0x17009736 RID: 38710
-		// (get) Token: 0x0604277E RID: 272254 RVA: 0x01025B45 File Offset: 0x01023D45
+		// Token: 0x17006A77 RID: 27255
+		// (get) Token: 0x060372D3 RID: 226003 RVA: 0x00F67089 File Offset: 0x00F65289
 		public DangoBrawlOccupationWeaponItemData ItemData
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604277F RID: 272255 RVA: 0x01025B50 File Offset: 0x01023D50
+		// Token: 0x060372D4 RID: 226004 RVA: 0x00F67094 File Offset: 0x00F65294
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042780 RID: 272256 RVA: 0x01025C7B File Offset: 0x01023E7B
+		// Token: 0x060372D5 RID: 226005 RVA: 0x00F671BF File Offset: 0x00F653BF
 		protected override void OnStart()
 		{
 			UUISprite sprite = base.GetSprite(3);
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sprite.SetUIActive(false);
 		}
 
-		// Token: 0x06042781 RID: 272257 RVA: 0x01025C8F File Offset: 0x01023E8F
+		// Token: 0x060372D6 RID: 226006 RVA: 0x00F671D3 File Offset: 0x00F653D3
 		protected override void OnBeforeDestroy()
 		{
 			this.BlurGridPool.Clear();
 		}
 
-		// Token: 0x06042782 RID: 272258 RVA: 0x01025C9C File Offset: 0x01023E9C
+		// Token: 0x060372D7 RID: 226007 RVA: 0x00F671E0 File Offset: 0x00F653E0
 		public override void Refresh(DangoBrawlOccupationWeaponItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshBlurGrids(posList);
 		}
 
-		// Token: 0x06042783 RID: 272259 RVA: 0x01025D8C File Offset: 0x01023F8C
+		// Token: 0x060372D8 RID: 226008 RVA: 0x00F672D0 File Offset: 0x00F654D0
 		private void RefreshBlurGrids(PanelPos[] posList)
 		{
 			UUISprite sprite = base.GetSprite(3);
@@ -130,19 +130,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042784 RID: 272260 RVA: 0x01025ECA File Offset: 0x010240CA
+		// Token: 0x060372D9 RID: 226009 RVA: 0x00F6740E File Offset: 0x00F6560E
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x06042785 RID: 272261 RVA: 0x01025ED3 File Offset: 0x010240D3
+		// Token: 0x060372DA RID: 226010 RVA: 0x00F67417 File Offset: 0x00F65617
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x06042786 RID: 272262 RVA: 0x01025EDC File Offset: 0x010240DC
+		// Token: 0x060372DB RID: 226011 RVA: 0x00F67420 File Offset: 0x00F65620
 		private void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			extendToggle.SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x06042787 RID: 272263 RVA: 0x01025F07 File Offset: 0x01024107
+		// Token: 0x060372DC RID: 226012 RVA: 0x00F6744B File Offset: 0x00F6564B
 		private void OnToggleClick(EToggleState state)
 		{
 			Action<int, DangoBrawlOccupationWeaponItemData> onClickToggleBack = this.OnClickToggleBack;
@@ -165,19 +165,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickToggleBack(base.GridIndex, this.Data);
 		}
 
-		// Token: 0x06042788 RID: 272264 RVA: 0x01025F25 File Offset: 0x01024125
+		// Token: 0x060372DD RID: 226013 RVA: 0x00F67469 File Offset: 0x00F65669
 		public override object GetKey(DangoBrawlOccupationWeaponItemData data, int displayIndex)
 		{
 			return data.PanelPos;
 		}
 
-		// Token: 0x04022A35 RID: 141877
+		// Token: 0x0401D292 RID: 119442
 		private DangoBrawlOccupationWeaponItemData Data;
 
-		// Token: 0x04022A36 RID: 141878
+		// Token: 0x0401D293 RID: 119443
 		private readonly List<UUIItem> BlurGridPool = new List<UUIItem>();
 
-		// Token: 0x04022A37 RID: 141879
+		// Token: 0x0401D294 RID: 119444
 		[Nullable(new byte[]
 		{
 			2,
@@ -185,21 +185,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		public Action<int, DangoBrawlOccupationWeaponItemData> OnClickToggleBack;
 
-		// Token: 0x0200C99F RID: 51615
+		// Token: 0x0200B36C RID: 45932
 		[NullableContext(0)]
 		private enum EItemComponent
 		{
-			// Token: 0x0403CE55 RID: 249429
+			// Token: 0x04037742 RID: 227138
 			TexQuality,
-			// Token: 0x0403CE56 RID: 249430
+			// Token: 0x04037743 RID: 227139
 			TexIcon,
-			// Token: 0x0403CE57 RID: 249431
+			// Token: 0x04037744 RID: 227140
 			GridContent,
-			// Token: 0x0403CE58 RID: 249432
+			// Token: 0x04037745 RID: 227141
 			SprGrid,
-			// Token: 0x0403CE59 RID: 249433
+			// Token: 0x04037746 RID: 227142
 			TogItem,
-			// Token: 0x0403CE5A RID: 249434
+			// Token: 0x04037747 RID: 227143
 			UniqueWeaponItem = 9
 		}
 	}

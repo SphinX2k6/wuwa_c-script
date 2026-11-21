@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002414 RID: 9236
+	// Token: 0x020026B3 RID: 9907
 	public class ESetVehicleSpeedImmediatelyTypeJsonConverter : JsonConverter<ESetVehicleSpeedImmediatelyType>
 	{
-		// Token: 0x0600C8DA RID: 51418 RVA: 0x001D6288 File Offset: 0x001D4488
+		// Token: 0x0600D581 RID: 54657 RVA: 0x001EFE84 File Offset: 0x001EE084
 		public override ESetVehicleSpeedImmediatelyType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESetVehicleSpeedImmediatelyTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C8DB RID: 51419 RVA: 0x001D62AC File Offset: 0x001D44AC
+		// Token: 0x0600D582 RID: 54658 RVA: 0x001EFEA8 File Offset: 0x001EE0A8
 		public override void Write(Utf8JsonWriter writer, ESetVehicleSpeedImmediatelyType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FA9 RID: 24489
+	// Token: 0x02004F90 RID: 20368
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPreviewRole37SubView : TotalTopUpPreviewSubViewBase
 	{
-		// Token: 0x0603E191 RID: 254353 RVA: 0x00EFEDD8 File Offset: 0x00EFCFD8
+		// Token: 0x0603312B RID: 209195 RVA: 0x00E50A94 File Offset: 0x00E4EC94
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E192 RID: 254354 RVA: 0x00EFEE40 File Offset: 0x00EFD040
+		// Token: 0x0603312C RID: 209196 RVA: 0x00E50AFC File Offset: 0x00E4ECFC
 		public UniTask ShowPreviewAsync(ITotalTopUpPreviewViewParam param)
 		{
 			TotalTopUpPreviewRole37SubView.<ShowPreviewAsync>d__4 <ShowPreviewAsync>d__;
@@ -39,36 +39,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <ShowPreviewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E193 RID: 254355 RVA: 0x00EFEE8B File Offset: 0x00EFD08B
+		// Token: 0x0603312D RID: 209197 RVA: 0x00E50B47 File Offset: 0x00E4ED47
 		public override void ShowPreview(ITotalTopUpPreviewViewParam param)
 		{
 			this.ShowPreviewAsync(param).Forget();
 		}
 
-		// Token: 0x0603E194 RID: 254356 RVA: 0x00EFEE9C File Offset: 0x00EFD09C
+		// Token: 0x0603312E RID: 209198 RVA: 0x00E50B58 File Offset: 0x00E4ED58
 		private void OnClickPreview()
 		{
 			RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, this.TrailIdList, null, null);
 		}
 
-		// Token: 0x0603E195 RID: 254357 RVA: 0x00EFEEC5 File Offset: 0x00EFD0C5
+		// Token: 0x0603312F RID: 209199 RVA: 0x00E50B81 File Offset: 0x00E4ED81
 		private void OnClickHelp()
 		{
 			if (this.PropsItemId <= 0)
 			{
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(this.PropsItemId, false, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.PropsItemId, false, null, false);
 		}
 
-		// Token: 0x04020708 RID: 132872
+		// Token: 0x0401B1DA RID: 111066
 		[Nullable(2)]
 		private TotalTopUpRecharge37InfoItem RechargeInfo;
 
-		// Token: 0x04020709 RID: 132873
+		// Token: 0x0401B1DB RID: 111067
 		private List<int> TrailIdList = new List<int>();
 
-		// Token: 0x0402070A RID: 132874
+		// Token: 0x0401B1DC RID: 111068
 		private int PropsItemId;
 	}
 }

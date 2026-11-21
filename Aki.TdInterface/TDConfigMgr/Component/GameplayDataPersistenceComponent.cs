@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200017F RID: 383
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000196 RID: 406
 	public class GameplayDataPersistenceComponent : IComponentBase
 	{
-		// Token: 0x0600053E RID: 1342 RVA: 0x00020124 File Offset: 0x0001E324
+		// Token: 0x06000552 RID: 1362 RVA: 0x00020D00 File Offset: 0x0001EF00
 		private GameplayDataPersistenceComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600053F RID: 1343 RVA: 0x0002015C File Offset: 0x0001E35C
+		// Token: 0x06000553 RID: 1363 RVA: 0x00020D38 File Offset: 0x0001EF38
 		public static GameplayDataPersistenceComponent Create([Nullable(2)] GameplayDataPersistenceComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000540 RID: 1344 RVA: 0x0002016F File Offset: 0x0001E36F
+		// Token: 0x06000554 RID: 1364 RVA: 0x00020D4B File Offset: 0x0001EF4B
 		public static GameplayDataPersistenceComponent CreateFromSetValue([Nullable(2)] GameplayDataPersistenceComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000541 RID: 1345 RVA: 0x00020182 File Offset: 0x0001E382
+		// Token: 0x06000555 RID: 1365 RVA: 0x00020D5E File Offset: 0x0001EF5E
 		public new GameplayDataPersistenceComponent_SetValue ToSetValue()
 		{
 			return new GameplayDataPersistenceComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001BE RID: 446
-		// (get) Token: 0x06000542 RID: 1346 RVA: 0x000201B0 File Offset: 0x0001E3B0
-		// (set) Token: 0x06000543 RID: 1347 RVA: 0x000201EA File Offset: 0x0001E3EA
+		// Token: 0x170001C5 RID: 453
+		// (get) Token: 0x06000556 RID: 1366 RVA: 0x00020D8C File Offset: 0x0001EF8C
+		// (set) Token: 0x06000557 RID: 1367 RVA: 0x00020DC6 File Offset: 0x0001EFC6
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001BF RID: 447
-		// (get) Token: 0x06000544 RID: 1348 RVA: 0x000201F8 File Offset: 0x0001E3F8
-		// (set) Token: 0x06000545 RID: 1349 RVA: 0x00020222 File Offset: 0x0001E422
+		// Token: 0x170001C6 RID: 454
+		// (get) Token: 0x06000558 RID: 1368 RVA: 0x00020DD4 File Offset: 0x0001EFD4
+		// (set) Token: 0x06000559 RID: 1369 RVA: 0x00020DFE File Offset: 0x0001EFFE
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001C0 RID: 448
-		// (get) Token: 0x06000546 RID: 1350 RVA: 0x00020230 File Offset: 0x0001E430
-		// (set) Token: 0x06000547 RID: 1351 RVA: 0x00020291 File Offset: 0x0001E491
+		// Token: 0x170001C7 RID: 455
+		// (get) Token: 0x0600055A RID: 1370 RVA: 0x00020E0C File Offset: 0x0001F00C
+		// (set) Token: 0x0600055B RID: 1371 RVA: 0x00020E6D File Offset: 0x0001F06D
 		public virtual IGameplayDataPersistenceTetrisBoardGame DataPersistenceGameplay
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000750 RID: 1872
+		// Token: 0x040007A6 RID: 1958
 		[Nullable(2)]
 		protected new GameplayDataPersistenceComponent FbInstance;
 
-		// Token: 0x04000751 RID: 1873
+		// Token: 0x040007A7 RID: 1959
 		[Nullable(2)]
 		protected new GameplayDataPersistenceComponent_SetValue PocoInterface;
 
-		// Token: 0x04000752 RID: 1874
+		// Token: 0x040007A8 RID: 1960
 		private IGameplayDataPersistenceTetrisBoardGame _DataPersistenceGameplayCache;
 
-		// Token: 0x04000753 RID: 1875
+		// Token: 0x040007A9 RID: 1961
 		private bool _DataPersistenceGameplayInited;
 	}
 }

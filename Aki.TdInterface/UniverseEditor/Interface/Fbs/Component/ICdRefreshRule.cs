@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F73 RID: 20339
+	// Token: 0x020054A2 RID: 21666
 	public struct ICdRefreshRule : IFlatbufferObject
 	{
-		// Token: 0x170092FD RID: 37629
-		// (get) Token: 0x06020483 RID: 132227 RVA: 0x0047DF91 File Offset: 0x0047C191
+		// Token: 0x17009A76 RID: 39542
+		// (get) Token: 0x060221D5 RID: 139733 RVA: 0x004B3F81 File Offset: 0x004B2181
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020484 RID: 132228 RVA: 0x0047DF9E File Offset: 0x0047C19E
+		// Token: 0x060221D6 RID: 139734 RVA: 0x004B3F8E File Offset: 0x004B218E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020485 RID: 132229 RVA: 0x0047DFA8 File Offset: 0x0047C1A8
+		// Token: 0x060221D7 RID: 139735 RVA: 0x004B3F98 File Offset: 0x004B2198
 		public static ICdRefreshRule GetRootAsICdRefreshRule(ByteBuffer _bb)
 		{
 			return ICdRefreshRule.GetRootAsICdRefreshRule(_bb, default(ICdRefreshRule));
 		}
 
-		// Token: 0x06020486 RID: 132230 RVA: 0x0047DFC4 File Offset: 0x0047C1C4
+		// Token: 0x060221D8 RID: 139736 RVA: 0x004B3FB4 File Offset: 0x004B21B4
 		public static ICdRefreshRule GetRootAsICdRefreshRule(ByteBuffer _bb, ICdRefreshRule obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020487 RID: 132231 RVA: 0x0047DFE1 File Offset: 0x0047C1E1
+		// Token: 0x060221D9 RID: 139737 RVA: 0x004B3FD1 File Offset: 0x004B21D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020488 RID: 132232 RVA: 0x0047DFF0 File Offset: 0x0047C1F0
+		// Token: 0x060221DA RID: 139738 RVA: 0x004B3FE0 File Offset: 0x004B21E0
 		public ICdRefreshRule __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170092FE RID: 37630
-		// (get) Token: 0x06020489 RID: 132233 RVA: 0x0047E000 File Offset: 0x0047C200
+		// Token: 0x17009A77 RID: 39543
+		// (get) Token: 0x060221DB RID: 139739 RVA: 0x004B3FF0 File Offset: 0x004B21F0
 		public ERefreshRule Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092FF RID: 37631
-		// (get) Token: 0x0602048A RID: 132234 RVA: 0x0047E03C File Offset: 0x0047C23C
+		// Token: 0x17009A78 RID: 39544
+		// (get) Token: 0x060221DC RID: 139740 RVA: 0x004B402C File Offset: 0x004B222C
 		public int Cd
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602048B RID: 132235 RVA: 0x0047E078 File Offset: 0x0047C278
+		// Token: 0x060221DD RID: 139741 RVA: 0x004B4068 File Offset: 0x004B2268
 		public static Offset<ICdRefreshRule> CreateICdRefreshRule(FlatBufferBuilder builder, ERefreshRule Type = ERefreshRule.CD, int Cd = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICdRefreshRule.EndICdRefreshRule(builder);
 		}
 
-		// Token: 0x0602048C RID: 132236 RVA: 0x0047E095 File Offset: 0x0047C295
+		// Token: 0x060221DE RID: 139742 RVA: 0x004B4085 File Offset: 0x004B2285
 		public static void StartICdRefreshRule(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602048D RID: 132237 RVA: 0x0047E09E File Offset: 0x0047C29E
+		// Token: 0x060221DF RID: 139743 RVA: 0x004B408E File Offset: 0x004B228E
 		public static void AddType(FlatBufferBuilder builder, ERefreshRule type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602048E RID: 132238 RVA: 0x0047E0A9 File Offset: 0x0047C2A9
+		// Token: 0x060221E0 RID: 139744 RVA: 0x004B4099 File Offset: 0x004B2299
 		public static void AddCd(FlatBufferBuilder builder, int cd)
 		{
 			builder.AddInt(1, cd, 0);
 		}
 
-		// Token: 0x0602048F RID: 132239 RVA: 0x0047E0B4 File Offset: 0x0047C2B4
+		// Token: 0x060221E1 RID: 139745 RVA: 0x004B40A4 File Offset: 0x004B22A4
 		public static Offset<ICdRefreshRule> EndICdRefreshRule(FlatBufferBuilder builder)
 		{
 			return new Offset<ICdRefreshRule>(builder.EndTable());
 		}
 
-		// Token: 0x06020490 RID: 132240 RVA: 0x0047E0C4 File Offset: 0x0047C2C4
+		// Token: 0x060221E2 RID: 139746 RVA: 0x004B40B4 File Offset: 0x004B22B4
 		public ICdRefreshRuleT UnPack()
 		{
 			ICdRefreshRuleT cdRefreshRuleT = new ICdRefreshRuleT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return cdRefreshRuleT;
 		}
 
-		// Token: 0x06020491 RID: 132241 RVA: 0x0047E0DF File Offset: 0x0047C2DF
+		// Token: 0x060221E3 RID: 139747 RVA: 0x004B40CF File Offset: 0x004B22CF
 		public void UnPackTo(ICdRefreshRuleT _o)
 		{
 			_o.Type = this.Type;
 			_o.Cd = this.Cd;
 		}
 
-		// Token: 0x06020492 RID: 132242 RVA: 0x0047E0FC File Offset: 0x0047C2FC
+		// Token: 0x060221E4 RID: 139748 RVA: 0x004B40EC File Offset: 0x004B22EC
 		public static Offset<ICdRefreshRule> Pack(FlatBufferBuilder builder, ICdRefreshRuleT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICdRefreshRule.CreateICdRefreshRule(builder, _o.Type, _o.Cd);
 		}
 
-		// Token: 0x0400DE19 RID: 56857
+		// Token: 0x0400E9C3 RID: 59843
 		private Table __p;
 	}
 }

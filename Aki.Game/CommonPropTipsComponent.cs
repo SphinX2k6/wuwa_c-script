@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
@@ -9,19 +8,19 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020019C5 RID: 6597
+// Token: 0x02000E84 RID: 3716
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonPropTipsComponent : UiPanelBase
 {
-	// Token: 0x0600C0A9 RID: 49321 RVA: 0x002B6C7C File Offset: 0x002B4E7C
+	// Token: 0x060094B6 RID: 38070 RVA: 0x002C1C28 File Offset: 0x002BFE28
 	public CommonPropTipsComponent(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600C0AA RID: 49322 RVA: 0x002B6CC8 File Offset: 0x002B4EC8
+	// Token: 0x060094B7 RID: 38071 RVA: 0x002C1C74 File Offset: 0x002BFE74
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +48,7 @@ public class CommonPropTipsComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C0AB RID: 49323 RVA: 0x002B6E6C File Offset: 0x002B506C
+	// Token: 0x060094B8 RID: 38072 RVA: 0x002C1E18 File Offset: 0x002C0018
 	private void GetWayButtonClick()
 	{
 		this.IsOpenGetWay = !this.IsOpenGetWay;
@@ -57,7 +56,7 @@ public class CommonPropTipsComponent : UiPanelBase
 		base.GetExtendToggle(4).SetToggleState(this.IsOpenGetWay ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600C0AC RID: 49324 RVA: 0x002B6EBC File Offset: 0x002B50BC
+	// Token: 0x060094B9 RID: 38073 RVA: 0x002C1E68 File Offset: 0x002C0068
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -78,7 +77,7 @@ public class CommonPropTipsComponent : UiPanelBase
 		this.SetOwnTextState(false);
 	}
 
-	// Token: 0x0600C0AD RID: 49325 RVA: 0x002B6F68 File Offset: 0x002B5168
+	// Token: 0x060094BA RID: 38074 RVA: 0x002C1F14 File Offset: 0x002C0114
 	private ILayoutItem<UiPanelBase> InitItem(object data, UUIItem uiItem, int index, int originalItemIndex)
 	{
 		int getWayId = (int)data;
@@ -108,7 +107,7 @@ public class CommonPropTipsComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C0AE RID: 49326 RVA: 0x002B703C File Offset: 0x002B523C
+	// Token: 0x060094BB RID: 38075 RVA: 0x002C1FE8 File Offset: 0x002C01E8
 	private void SetGetWayState(bool bActive)
 	{
 		base.GetExtendToggle(4).RootUIComp.Get().SetUIActive(bActive);
@@ -117,13 +116,18 @@ public class CommonPropTipsComponent : UiPanelBase
 		base.GetExtendToggle(4).SetToggleState(this.IsOpenGetWay ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600C0AF RID: 49327 RVA: 0x002B7098 File Offset: 0x002B5298
+	// Token: 0x060094BC RID: 38076 RVA: 0x002C2044 File Offset: 0x002C0244
 	private void UpdateGetWay(int[] getWayList)
 	{
-		this.GetWayLayout.AddItemToLayout(getWayList.Cast<object>().ToArray<object>(), 1);
+		object[] array = new object[getWayList.Length];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = getWayList[i];
+		}
+		this.GetWayLayout.AddItemToLayout(array, 1);
 	}
 
-	// Token: 0x0600C0B0 RID: 49328 RVA: 0x002B70B4 File Offset: 0x002B52B4
+	// Token: 0x060094BD RID: 38077 RVA: 0x002C2080 File Offset: 0x002C0280
 	protected void LoadDebugText()
 	{
 		if (!GlobalData.IsPlayInEditor)
@@ -144,7 +148,7 @@ public class CommonPropTipsComponent : UiPanelBase
 		LguiUtil.Instance.SetLocalText(this.DebugText, "CommonTipsDebugItemId", new <>z__ReadOnlySingleElementList<object>(this.ConfigId));
 	}
 
-	// Token: 0x0600C0B1 RID: 49329 RVA: 0x002B7134 File Offset: 0x002B5334
+	// Token: 0x060094BE RID: 38078 RVA: 0x002C2100 File Offset: 0x002C0300
 	protected override void OnBeforeDestroy()
 	{
 		this.LevelSequencePlayer.Clear();
@@ -166,7 +170,7 @@ public class CommonPropTipsComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C0B2 RID: 49330 RVA: 0x002B7204 File Offset: 0x002B5404
+	// Token: 0x060094BF RID: 38079 RVA: 0x002C21D0 File Offset: 0x002C03D0
 	public void UpdateComponent(int configId, bool needGetWay = false)
 	{
 		this.ConfigId = configId;
@@ -200,7 +204,7 @@ public class CommonPropTipsComponent : UiPanelBase
 		this.SetGetWayState(false);
 	}
 
-	// Token: 0x0600C0B3 RID: 49331 RVA: 0x002B732C File Offset: 0x002B552C
+	// Token: 0x060094C0 RID: 38080 RVA: 0x002C22F8 File Offset: 0x002C04F8
 	public void SetBottomState(bool bActive, bool isOneButton)
 	{
 		UUIItem item = base.GetItem(6);
@@ -216,7 +220,7 @@ public class CommonPropTipsComponent : UiPanelBase
 		item3.SetUIActive(!isOneButton);
 	}
 
-	// Token: 0x0600C0B4 RID: 49332 RVA: 0x002B7374 File Offset: 0x002B5574
+	// Token: 0x060094C1 RID: 38081 RVA: 0x002C2340 File Offset: 0x002C0540
 	public void SetOwnTextState(bool bActive)
 	{
 		UUIText text = base.GetText(14);
@@ -230,54 +234,54 @@ public class CommonPropTipsComponent : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x0600C0B5 RID: 49333 RVA: 0x002B73C9 File Offset: 0x002B55C9
+	// Token: 0x060094C2 RID: 38082 RVA: 0x002C2395 File Offset: 0x002C0595
 	public ButtonItem GetDoubleLeftButton()
 	{
 		return this.DoubleButtonItemList[0];
 	}
 
-	// Token: 0x0600C0B6 RID: 49334 RVA: 0x002B73D7 File Offset: 0x002B55D7
+	// Token: 0x060094C3 RID: 38083 RVA: 0x002C23A3 File Offset: 0x002C05A3
 	public ButtonItem GetDoubleRightButton()
 	{
 		return this.DoubleButtonItemList[1];
 	}
 
-	// Token: 0x0600C0B7 RID: 49335 RVA: 0x002B73E5 File Offset: 0x002B55E5
+	// Token: 0x060094C4 RID: 38084 RVA: 0x002C23B1 File Offset: 0x002C05B1
 	[NullableContext(2)]
 	public ButtonItem GetOneButton()
 	{
 		return this.OneButtonItem;
 	}
 
-	// Token: 0x0600C0B8 RID: 49336 RVA: 0x002B73ED File Offset: 0x002B55ED
+	// Token: 0x060094C5 RID: 38085 RVA: 0x002C23B9 File Offset: 0x002C05B9
 	public void SetOneButtonEnable(bool bEnable)
 	{
 		this.OneButtonItem.SetEnableClick(bEnable);
 	}
 
-	// Token: 0x0600C0B9 RID: 49337 RVA: 0x002B73FB File Offset: 0x002B55FB
+	// Token: 0x060094C6 RID: 38086 RVA: 0x002C23C7 File Offset: 0x002C05C7
 	public int GetConfigId()
 	{
 		return this.ConfigId;
 	}
 
-	// Token: 0x0600C0BA RID: 49338 RVA: 0x002B7404 File Offset: 0x002B5604
+	// Token: 0x060094C7 RID: 38087 RVA: 0x002C23D0 File Offset: 0x002C05D0
 	public void PlayStartSequence()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0600C0BB RID: 49339 RVA: 0x002B742C File Offset: 0x002B562C
+	// Token: 0x060094C8 RID: 38088 RVA: 0x002C23F8 File Offset: 0x002C05F8
 	public void StopStartSequence()
 	{
 		this.LevelSequencePlayer.StopSequenceByKey("Start", false, false);
 	}
 
-	// Token: 0x04005685 RID: 22149
+	// Token: 0x04005737 RID: 22327
 	[Nullable(2)]
 	private UUIText DebugText;
 
-	// Token: 0x04005686 RID: 22150
+	// Token: 0x04005738 RID: 22328
 	[Nullable(new byte[]
 	{
 		2,
@@ -285,61 +289,61 @@ public class CommonPropTipsComponent : UiPanelBase
 	})]
 	protected GenericLayoutAdd<UiPanelBase> GetWayLayout;
 
-	// Token: 0x04005687 RID: 22151
+	// Token: 0x04005739 RID: 22329
 	protected int ConfigId;
 
-	// Token: 0x04005688 RID: 22152
+	// Token: 0x0400573A RID: 22330
 	protected List<ButtonItem> DoubleButtonItemList = new List<ButtonItem>();
 
-	// Token: 0x04005689 RID: 22153
+	// Token: 0x0400573B RID: 22331
 	[Nullable(2)]
 	protected ButtonItem OneButtonItem;
 
-	// Token: 0x0400568A RID: 22154
+	// Token: 0x0400573C RID: 22332
 	protected bool IsOpenGetWay;
 
-	// Token: 0x0400568B RID: 22155
+	// Token: 0x0400573D RID: 22333
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400568C RID: 22156
+	// Token: 0x0400573E RID: 22334
 	private int DebugTextLoadId = LguiResourceManager.Instance.InvalidId;
 
-	// Token: 0x02007EEF RID: 32495
+	// Token: 0x0200707E RID: 28798
 	[NullableContext(0)]
 	private enum ECommonPropTipsComponentDefine
 	{
-		// Token: 0x04029789 RID: 169865
+		// Token: 0x04024AC6 RID: 150214
 		NameText,
-		// Token: 0x0402978A RID: 169866
+		// Token: 0x04024AC7 RID: 150215
 		IconTexture,
-		// Token: 0x0402978B RID: 169867
+		// Token: 0x04024AC8 RID: 150216
 		TypeText,
-		// Token: 0x0402978C RID: 169868
+		// Token: 0x04024AC9 RID: 150217
 		ContentText,
-		// Token: 0x0402978D RID: 169869
+		// Token: 0x04024ACA RID: 150218
 		GetWayButton,
-		// Token: 0x0402978E RID: 169870
+		// Token: 0x04024ACB RID: 150219
 		GetWayLayout,
-		// Token: 0x0402978F RID: 169871
+		// Token: 0x04024ACC RID: 150220
 		BottomItem,
-		// Token: 0x04029790 RID: 169872
+		// Token: 0x04024ACD RID: 150221
 		DoubleButtonItem,
-		// Token: 0x04029791 RID: 169873
+		// Token: 0x04024ACE RID: 150222
 		OneButtonItem,
-		// Token: 0x04029792 RID: 169874
+		// Token: 0x04024ACF RID: 150223
 		CanGetWayItem,
-		// Token: 0x04029793 RID: 169875
+		// Token: 0x04024AD0 RID: 150224
 		CantGetWayItem,
-		// Token: 0x04029794 RID: 169876
+		// Token: 0x04024AD1 RID: 150225
 		TitleSprite,
-		// Token: 0x04029795 RID: 169877
+		// Token: 0x04024AD2 RID: 150226
 		BgDescribeText,
-		// Token: 0x04029796 RID: 169878
+		// Token: 0x04024AD3 RID: 150227
 		ChipSprite,
-		// Token: 0x04029797 RID: 169879
+		// Token: 0x04024AD4 RID: 150228
 		OwnText,
-		// Token: 0x04029798 RID: 169880
+		// Token: 0x04024AD5 RID: 150229
 		GetWayBg
 	}
 }

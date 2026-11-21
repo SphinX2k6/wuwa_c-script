@@ -4,58 +4,58 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048F0 RID: 18672
+	// Token: 0x02003867 RID: 14439
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationDynamicScrollViewFindContext
 	{
-		// Token: 0x0401A393 RID: 107411
+		// Token: 0x04014C06 RID: 84998
 		public Vector LastListenerPosition = Vector.Create();
 
-		// Token: 0x0401A394 RID: 107412
+		// Token: 0x04014C07 RID: 84999
 		public UINavigationWrapMode WrapMode;
 
-		// Token: 0x0401A395 RID: 107413
+		// Token: 0x04014C08 RID: 85000
 		public UINavigationPriorityMode PriorityMode = UINavigationPriorityMode.Direction;
 
-		// Token: 0x0401A396 RID: 107414
+		// Token: 0x04014C09 RID: 85001
 		public bool IsVertical;
 
-		// Token: 0x0401A397 RID: 107415
+		// Token: 0x04014C0A RID: 85002
 		public double NavigateTolerance;
 
-		// Token: 0x0401A398 RID: 107416
+		// Token: 0x04014C0B RID: 85003
 		public double NavigateToleranceReverse;
 
-		// Token: 0x0401A399 RID: 107417
+		// Token: 0x04014C0C RID: 85004
 		public UUIScrollViewWithScrollbarComponent ScrollView;
 
-		// Token: 0x0401A39A RID: 107418
+		// Token: 0x04014C0D RID: 85005
 		public NavigationGroup GroupConfig;
 
-		// Token: 0x0401A39B RID: 107419
+		// Token: 0x04014C0E RID: 85006
 		public bool NegativeDirection;
 
-		// Token: 0x0401A39C RID: 107420
+		// Token: 0x04014C0F RID: 85007
 		public bool Reversed;
 
-		// Token: 0x0401A39D RID: 107421
+		// Token: 0x04014C10 RID: 85008
 		[Nullable(2)]
 		public TsUiNavigationBehaviorListener LastListener;
 
-		// Token: 0x0401A39E RID: 107422
+		// Token: 0x04014C11 RID: 85009
 		public EDynamicScrollViewFindNextType NextType;
 
-		// Token: 0x0401A39F RID: 107423
+		// Token: 0x04014C12 RID: 85010
 		public bool NeedWaitScroll;
 
-		// Token: 0x0401A3A0 RID: 107424
+		// Token: 0x04014C13 RID: 85011
 		public bool IsScrollToEdge;
 
-		// Token: 0x0401A3A1 RID: 107425
+		// Token: 0x04014C14 RID: 85012
 		public float VerticalScrollValue;
 
-		// Token: 0x0401A3A2 RID: 107426
+		// Token: 0x04014C15 RID: 85013
 		public float HorizontalScrollValue;
 	}
 }

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D13 RID: 23827
+	// Token: 0x02004CF5 RID: 19701
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BuffItemPool
 	{
-		// Token: 0x0603C64D RID: 247373 RVA: 0x00E79CA4 File Offset: 0x00E77EA4
+		// Token: 0x060315A6 RID: 202150 RVA: 0x00DCA324 File Offset: 0x00DC8524
 		public void Clear()
 		{
 			foreach (BuffItem buffItem in this.CommonBuffItemList)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.QuickHackBuffItemList.Clear();
 		}
 
-		// Token: 0x0603C64E RID: 247374 RVA: 0x00E79D4C File Offset: 0x00E77F4C
+		// Token: 0x060315A7 RID: 202151 RVA: 0x00DCA3CC File Offset: 0x00DC85CC
 		public BuffItemBase GetBuffItem(USceneComponent parentItem, GameplayCue? cueConfig)
 		{
 			if (cueConfig != null && cueConfig.Value.CueType == 37)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.NewCommonBuffItem(parentItem);
 		}
 
-		// Token: 0x0603C64F RID: 247375 RVA: 0x00E79D90 File Offset: 0x00E77F90
+		// Token: 0x060315A8 RID: 202152 RVA: 0x00DCA410 File Offset: 0x00DC8610
 		public void RecycleBuffItem(BuffItemBase buffItem)
 		{
 			BuffItem buffItem2 = buffItem as BuffItem;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C650 RID: 247376 RVA: 0x00E79DCC File Offset: 0x00E77FCC
+		// Token: 0x060315A9 RID: 202153 RVA: 0x00DCA44C File Offset: 0x00DC864C
 		private BuffItem NewCommonBuffItem(USceneComponent parentItem)
 		{
 			if (this.CommonBuffItemList.Count > 0)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new BuffItem(parentItem);
 		}
 
-		// Token: 0x0603C651 RID: 247377 RVA: 0x00E79E1E File Offset: 0x00E7801E
+		// Token: 0x060315AA RID: 202154 RVA: 0x00DCA49E File Offset: 0x00DC869E
 		[return: Nullable(2)]
 		private BuffItemBase NewCustomStyleBuffItem(USceneComponent parentItem, GameplayCue cueConfig)
 		{
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603C652 RID: 247378 RVA: 0x00E79E44 File Offset: 0x00E78044
+		// Token: 0x060315AB RID: 202155 RVA: 0x00DCA4C4 File Offset: 0x00DC86C4
 		private QuickHackBuffItem NewQuickHackBuffItem(USceneComponent parentItem)
 		{
 			if (this.QuickHackBuffItemList.Count > 0)
@@ -91,10 +91,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new QuickHackBuffItem(parentItem);
 		}
 
-		// Token: 0x0401F780 RID: 128896
+		// Token: 0x0401A239 RID: 107065
 		private readonly List<BuffItem> CommonBuffItemList = new List<BuffItem>();
 
-		// Token: 0x0401F781 RID: 128897
+		// Token: 0x0401A23A RID: 107066
 		private readonly List<QuickHackBuffItem> QuickHackBuffItemList = new List<QuickHackBuffItem>();
 	}
 }

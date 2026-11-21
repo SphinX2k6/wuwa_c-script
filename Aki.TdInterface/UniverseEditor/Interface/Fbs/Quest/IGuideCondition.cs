@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E84 RID: 16004
+	// Token: 0x020042BF RID: 17087
 	public struct IGuideCondition : IFlatbufferObject
 	{
-		// Token: 0x17006F03 RID: 28419
-		// (get) Token: 0x060168F6 RID: 92406 RVA: 0x00342890 File Offset: 0x00340A90
+		// Token: 0x170074EB RID: 29931
+		// (get) Token: 0x06017F2D RID: 98093 RVA: 0x0036B614 File Offset: 0x00369814
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060168F7 RID: 92407 RVA: 0x0034289D File Offset: 0x00340A9D
+		// Token: 0x06017F2E RID: 98094 RVA: 0x0036B621 File Offset: 0x00369821
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060168F8 RID: 92408 RVA: 0x003428A4 File Offset: 0x00340AA4
+		// Token: 0x06017F2F RID: 98095 RVA: 0x0036B628 File Offset: 0x00369828
 		public static IGuideCondition GetRootAsIGuideCondition(ByteBuffer _bb)
 		{
 			return IGuideCondition.GetRootAsIGuideCondition(_bb, default(IGuideCondition));
 		}
 
-		// Token: 0x060168F9 RID: 92409 RVA: 0x003428C0 File Offset: 0x00340AC0
+		// Token: 0x06017F30 RID: 98096 RVA: 0x0036B644 File Offset: 0x00369844
 		public static IGuideCondition GetRootAsIGuideCondition(ByteBuffer _bb, IGuideCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060168FA RID: 92410 RVA: 0x003428DD File Offset: 0x00340ADD
+		// Token: 0x06017F31 RID: 98097 RVA: 0x0036B661 File Offset: 0x00369861
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060168FB RID: 92411 RVA: 0x003428EC File Offset: 0x00340AEC
+		// Token: 0x06017F32 RID: 98098 RVA: 0x0036B670 File Offset: 0x00369870
 		public IGuideCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006F04 RID: 28420
-		// (get) Token: 0x060168FC RID: 92412 RVA: 0x003428FC File Offset: 0x00340AFC
+		// Token: 0x170074EC RID: 29932
+		// (get) Token: 0x06017F33 RID: 98099 RVA: 0x0036B680 File Offset: 0x00369880
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F05 RID: 28421
-		// (get) Token: 0x060168FD RID: 92413 RVA: 0x00342938 File Offset: 0x00340B38
+		// Token: 0x170074ED RID: 29933
+		// (get) Token: 0x06017F34 RID: 98100 RVA: 0x0036B6BC File Offset: 0x003698BC
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F06 RID: 28422
-		// (get) Token: 0x060168FE RID: 92414 RVA: 0x00342998 File Offset: 0x00340B98
+		// Token: 0x170074EE RID: 29934
+		// (get) Token: 0x06017F35 RID: 98101 RVA: 0x0036B71C File Offset: 0x0036991C
 		public int GuideGroupId
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060168FF RID: 92415 RVA: 0x003429D4 File Offset: 0x00340BD4
+		// Token: 0x06017F36 RID: 98102 RVA: 0x0036B758 File Offset: 0x00369958
 		public static Offset<IGuideCondition> CreateIGuideCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), int GuideGroupId = 0)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IGuideCondition.EndIGuideCondition(builder);
 		}
 
-		// Token: 0x06016900 RID: 92416 RVA: 0x003429F8 File Offset: 0x00340BF8
+		// Token: 0x06017F37 RID: 98103 RVA: 0x0036B77C File Offset: 0x0036997C
 		public static void StartIGuideCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06016901 RID: 92417 RVA: 0x00342A01 File Offset: 0x00340C01
+		// Token: 0x06017F38 RID: 98104 RVA: 0x0036B785 File Offset: 0x00369985
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016902 RID: 92418 RVA: 0x00342A0C File Offset: 0x00340C0C
+		// Token: 0x06017F39 RID: 98105 RVA: 0x0036B790 File Offset: 0x00369990
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06016903 RID: 92419 RVA: 0x00342A1C File Offset: 0x00340C1C
+		// Token: 0x06017F3A RID: 98106 RVA: 0x0036B7A0 File Offset: 0x003699A0
 		public static void AddGuideGroupId(FlatBufferBuilder builder, int guideGroupId)
 		{
 			builder.AddInt(2, guideGroupId, 0);
 		}
 
-		// Token: 0x06016904 RID: 92420 RVA: 0x00342A27 File Offset: 0x00340C27
+		// Token: 0x06017F3B RID: 98107 RVA: 0x0036B7AB File Offset: 0x003699AB
 		public static Offset<IGuideCondition> EndIGuideCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IGuideCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06016905 RID: 92421 RVA: 0x00342A34 File Offset: 0x00340C34
+		// Token: 0x06017F3C RID: 98108 RVA: 0x0036B7B8 File Offset: 0x003699B8
 		public IGuideConditionT UnPack()
 		{
 			IGuideConditionT guideConditionT = new IGuideConditionT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return guideConditionT;
 		}
 
-		// Token: 0x06016906 RID: 92422 RVA: 0x00342A50 File Offset: 0x00340C50
+		// Token: 0x06017F3D RID: 98109 RVA: 0x0036B7D4 File Offset: 0x003699D4
 		public void UnPackTo(IGuideConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.GuideGroupId = this.GuideGroupId;
 		}
 
-		// Token: 0x06016907 RID: 92423 RVA: 0x00342AA4 File Offset: 0x00340CA4
+		// Token: 0x06017F3E RID: 98110 RVA: 0x0036B828 File Offset: 0x00369A28
 		public static Offset<IGuideCondition> Pack(FlatBufferBuilder builder, IGuideConditionT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IGuideCondition.CreateIGuideCondition(builder, _o.Type, preConditionsOffset, _o.GuideGroupId);
 		}
 
-		// Token: 0x0400B83F RID: 47167
+		// Token: 0x0400C218 RID: 49688
 		private Table __p;
 	}
 }

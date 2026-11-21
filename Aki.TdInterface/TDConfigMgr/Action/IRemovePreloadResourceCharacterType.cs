@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D9A RID: 7578
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FAF RID: 8111
 	public class IRemovePreloadResourceCharacterType
 	{
-		// Token: 0x0600A26B RID: 41579 RVA: 0x001716B0 File Offset: 0x0016F8B0
+		// Token: 0x0600AC6B RID: 44139 RVA: 0x00185CD8 File Offset: 0x00183ED8
 		private IRemovePreloadResourceCharacterType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A26C RID: 41580 RVA: 0x001716E8 File Offset: 0x0016F8E8
+		// Token: 0x0600AC6C RID: 44140 RVA: 0x00185D10 File Offset: 0x00183F10
 		public static IRemovePreloadResourceCharacterType Create([Nullable(2)] IRemovePreloadResourceCharacterType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A26D RID: 41581 RVA: 0x001716FB File Offset: 0x0016F8FB
+		// Token: 0x0600AC6D RID: 44141 RVA: 0x00185D23 File Offset: 0x00183F23
 		public static IRemovePreloadResourceCharacterType CreateFromSetValue([Nullable(2)] IRemovePreloadResourceCharacterType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A26E RID: 41582 RVA: 0x0017170E File Offset: 0x0016F90E
+		// Token: 0x0600AC6E RID: 44142 RVA: 0x00185D36 File Offset: 0x00183F36
 		public IRemovePreloadResourceCharacterType_SetValue ToSetValue()
 		{
 			return new IRemovePreloadResourceCharacterType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003225 RID: 12837
-		// (get) Token: 0x0600A26F RID: 41583 RVA: 0x00171721 File Offset: 0x0016F921
-		// (set) Token: 0x0600A270 RID: 41584 RVA: 0x0017174C File Offset: 0x0016F94C
+		// Token: 0x170034BD RID: 13501
+		// (get) Token: 0x0600AC6F RID: 44143 RVA: 0x00185D49 File Offset: 0x00183F49
+		// (set) Token: 0x0600AC70 RID: 44144 RVA: 0x00185D74 File Offset: 0x00183F74
 		public virtual ERemovePreloadResourceObjectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400618E RID: 24974
+		// Token: 0x04006712 RID: 26386
 		[Nullable(2)]
 		protected IRemovePreloadResourceCharacterType FbInstance;
 
-		// Token: 0x0400618F RID: 24975
+		// Token: 0x04006713 RID: 26387
 		[Nullable(2)]
 		protected IRemovePreloadResourceCharacterType_SetValue PocoInterface;
 	}

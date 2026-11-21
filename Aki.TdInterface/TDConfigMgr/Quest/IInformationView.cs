@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FBD RID: 4029
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010E9 RID: 4329
 	public class IInformationView : IShowUi
 	{
-		// Token: 0x060059D2 RID: 22994 RVA: 0x000DAA64 File Offset: 0x000D8C64
+		// Token: 0x06005FB0 RID: 24496 RVA: 0x000E75F0 File Offset: 0x000E57F0
 		private IInformationView_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060059D3 RID: 22995 RVA: 0x000DAA9C File Offset: 0x000D8C9C
+		// Token: 0x06005FB1 RID: 24497 RVA: 0x000E7628 File Offset: 0x000E5828
 		public static IInformationView Create([Nullable(2)] IInformationView instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060059D4 RID: 22996 RVA: 0x000DAAAF File Offset: 0x000D8CAF
+		// Token: 0x06005FB2 RID: 24498 RVA: 0x000E763B File Offset: 0x000E583B
 		public static IInformationView CreateFromSetValue([Nullable(2)] IInformationView_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060059D5 RID: 22997 RVA: 0x000DAAC2 File Offset: 0x000D8CC2
+		// Token: 0x06005FB3 RID: 24499 RVA: 0x000E764E File Offset: 0x000E584E
 		public new IInformationView_SetValue ToSetValue()
 		{
 			return new IInformationView_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DCF RID: 7631
-		// (get) Token: 0x060059D6 RID: 22998 RVA: 0x000DAAE1 File Offset: 0x000D8CE1
-		// (set) Token: 0x060059D7 RID: 22999 RVA: 0x000DAB0C File Offset: 0x000D8D0C
+		// Token: 0x17001F77 RID: 8055
+		// (get) Token: 0x06005FB4 RID: 24500 RVA: 0x000E766D File Offset: 0x000E586D
+		// (set) Token: 0x06005FB5 RID: 24501 RVA: 0x000E7698 File Offset: 0x000E5898
 		public override EShowUiType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DD0 RID: 7632
-		// (get) Token: 0x060059D8 RID: 23000 RVA: 0x000DAB1A File Offset: 0x000D8D1A
-		// (set) Token: 0x060059D9 RID: 23001 RVA: 0x000DAB45 File Offset: 0x000D8D45
+		// Token: 0x17001F78 RID: 8056
+		// (get) Token: 0x06005FB6 RID: 24502 RVA: 0x000E76A6 File Offset: 0x000E58A6
+		// (set) Token: 0x06005FB7 RID: 24503 RVA: 0x000E76D1 File Offset: 0x000E58D1
 		public virtual int InformationViewId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003630 RID: 13872
+		// Token: 0x04003965 RID: 14693
 		[Nullable(2)]
 		protected new IInformationView FbInstance;
 
-		// Token: 0x04003631 RID: 13873
+		// Token: 0x04003966 RID: 14694
 		[Nullable(2)]
 		protected new IInformationView_SetValue PocoInterface;
 	}

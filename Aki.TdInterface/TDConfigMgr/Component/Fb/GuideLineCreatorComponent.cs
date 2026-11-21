@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C0C RID: 3084
+	// Token: 0x02000CDC RID: 3292
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GuideLineCreatorComponent : IComponentBase
 	{
-		// Token: 0x060046C9 RID: 18121 RVA: 0x000B2955 File Offset: 0x000B0B55
-		[NullableContext(1)]
+		// Token: 0x06004B2C RID: 19244 RVA: 0x000BCB21 File Offset: 0x000BAD21
+		[NullableContext(0)]
 		public static GuideLineCreatorComponent Create(IGuideLineCreatorComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700146E RID: 5230
-		// (get) Token: 0x060046CA RID: 18122 RVA: 0x000B2974 File Offset: 0x000B0B74
+		// Token: 0x1700156F RID: 5487
+		// (get) Token: 0x06004B2D RID: 19245 RVA: 0x000BCB40 File Offset: 0x000BAD40
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700146F RID: 5231
-		// (get) Token: 0x060046CB RID: 18123 RVA: 0x000B29AC File Offset: 0x000B0BAC
+		// Token: 0x17001570 RID: 5488
+		// (get) Token: 0x06004B2E RID: 19246 RVA: 0x000BCB78 File Offset: 0x000BAD78
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001470 RID: 5232
-		// (get) Token: 0x060046CC RID: 18124 RVA: 0x000B29C2 File Offset: 0x000B0BC2
+		// Token: 0x17001571 RID: 5489
+		// (get) Token: 0x06004B2F RID: 19247 RVA: 0x000BCB8E File Offset: 0x000BAD8E
 		public virtual IColorChangeStrategyOfRGB ColorChangeOption
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001471 RID: 5233
-		// (get) Token: 0x060046CD RID: 18125 RVA: 0x000B29F6 File Offset: 0x000B0BF6
+		// Token: 0x17001572 RID: 5490
+		// (get) Token: 0x06004B30 RID: 19248 RVA: 0x000BCBC2 File Offset: 0x000BADC2
 		public virtual int SplineEntityId
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001472 RID: 5234
-		// (get) Token: 0x060046CE RID: 18126 RVA: 0x000B2A03 File Offset: 0x000B0C03
+		// Token: 0x17001573 RID: 5491
+		// (get) Token: 0x06004B31 RID: 19249 RVA: 0x000BCBCF File Offset: 0x000BADCF
 		public virtual IGuideLineCreatorScanOption ScanOption
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400283B RID: 10299
+		// Token: 0x04002A87 RID: 10887
 		private IGuideLineCreatorComponent Instance;
 
-		// Token: 0x0400283C RID: 10300
+		// Token: 0x04002A88 RID: 10888
 		private IColorChangeStrategyOfRGB _ColorChangeOptionCache;
 
-		// Token: 0x0400283D RID: 10301
+		// Token: 0x04002A89 RID: 10889
 		private bool _ColorChangeOptionInited;
 
-		// Token: 0x0400283E RID: 10302
+		// Token: 0x04002A8A RID: 10890
 		private IGuideLineCreatorScanOption _ScanOptionCache;
 
-		// Token: 0x0400283F RID: 10303
+		// Token: 0x04002A8B RID: 10891
 		private bool _ScanOptionInited;
 	}
 }

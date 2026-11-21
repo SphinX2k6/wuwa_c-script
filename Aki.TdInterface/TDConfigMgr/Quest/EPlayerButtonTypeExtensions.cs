@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001262 RID: 4706
+	// Token: 0x020013A2 RID: 5026
 	public static class EPlayerButtonTypeExtensions
 	{
-		// Token: 0x06006A60 RID: 27232 RVA: 0x000FEF14 File Offset: 0x000FD114
+		// Token: 0x060070B3 RID: 28851 RVA: 0x0010CB40 File Offset: 0x0010AD40
 		public static string ToEnumString(this EPlayerButtonType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A61 RID: 27233 RVA: 0x000FEF4C File Offset: 0x000FD14C
+		// Token: 0x060070B4 RID: 28852 RVA: 0x0010CB78 File Offset: 0x0010AD78
 		public static EPlayerButtonType FromString(string name)
 		{
 			EPlayerButtonType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A62 RID: 27234 RVA: 0x000FEF75 File Offset: 0x000FD175
+		// Token: 0x060070B5 RID: 28853 RVA: 0x0010CBA1 File Offset: 0x0010ADA1
 		public static bool TryFromString(string name, out EPlayerButtonType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006A63 RID: 27235 RVA: 0x000FEFAE File Offset: 0x000FD1AE
+		// Token: 0x060070B6 RID: 28854 RVA: 0x0010CBDA File Offset: 0x0010ADDA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A64 RID: 27236 RVA: 0x000FEFC6 File Offset: 0x000FD1C6
+		// Token: 0x060070B7 RID: 28855 RVA: 0x0010CBF2 File Offset: 0x0010ADF2
 		public static EPlayerButtonType[] GetValues()
 		{
 			return new EPlayerButtonType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A65 RID: 27237 RVA: 0x000FEFD2 File Offset: 0x000FD1D2
+		// Token: 0x060070B8 RID: 28856 RVA: 0x0010CBFE File Offset: 0x0010ADFE
 		public static string[] GetNames()
 		{
 			return new string[]

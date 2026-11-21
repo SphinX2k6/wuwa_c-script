@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200162F RID: 5679
+	// Token: 0x0200179C RID: 6044
 	[EnumExtensions]
 	public enum EMpcEffectParamType
 	{
-		// Token: 0x04004C3B RID: 19515
+		// Token: 0x0400502F RID: 20527
 		[EnumStringMember("PPV_CenterPosition")]
 		PostProcessVolumeCenterPosition
 	}

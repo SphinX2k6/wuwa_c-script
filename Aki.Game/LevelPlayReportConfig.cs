@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Core.Common;
 
-// Token: 0x02002053 RID: 8275
+// Token: 0x02001526 RID: 5414
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class LevelPlayReportConfig : ConfigBase
 {
-	// Token: 0x0601042E RID: 66606 RVA: 0x003F70BC File Offset: 0x003F52BC
+	// Token: 0x0600D895 RID: 55445 RVA: 0x004035B4 File Offset: 0x004017B4
 	protected override bool OnInit()
 	{
 		foreach (LevelPlayInfoMappingConfig levelPlayInfoMappingConfig in ConfigLevelPlayInfoMappingConfigAll.GetConfigList(true))
@@ -42,7 +42,7 @@ public class LevelPlayReportConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601042F RID: 66607 RVA: 0x003F71C0 File Offset: 0x003F53C0
+	// Token: 0x0600D896 RID: 55446 RVA: 0x004036B8 File Offset: 0x004018B8
 	[NullableContext(2)]
 	public LevelPlayReportDefine.ILevelPlayReportConfigData GetLevelPlayReportConfig(int levelPlayReportId)
 	{
@@ -60,7 +60,7 @@ public class LevelPlayReportConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06010430 RID: 66608 RVA: 0x003F7210 File Offset: 0x003F5410
+	// Token: 0x0600D897 RID: 55447 RVA: 0x00403708 File Offset: 0x00401908
 	public HiddenBossWindow? GetHiddenBossWindowConfig(int id)
 	{
 		HiddenBossWindow? config = ConfigHiddenBossWindowById.GetConfig(id, true);
@@ -77,8 +77,8 @@ public class LevelPlayReportConfig : ConfigBase
 		return new HiddenBossWindow?(config.Value);
 	}
 
-	// Token: 0x170013F5 RID: 5109
-	// (get) Token: 0x06010431 RID: 66609 RVA: 0x003F7273 File Offset: 0x003F5473
+	// Token: 0x17001422 RID: 5154
+	// (get) Token: 0x0600D898 RID: 55448 RVA: 0x0040376B File Offset: 0x0040196B
 	public static LevelPlayReportConfig Instance
 	{
 		get
@@ -87,7 +87,7 @@ public class LevelPlayReportConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06010432 RID: 66610 RVA: 0x003F727A File Offset: 0x003F547A
+	// Token: 0x0600D899 RID: 55449 RVA: 0x00403772 File Offset: 0x00401972
 	public static LevelPlayReportConfig GetOrCreateInstance()
 	{
 		if (LevelPlayReportConfig._Instance == null)
@@ -97,7 +97,7 @@ public class LevelPlayReportConfig : ConfigBase
 		return LevelPlayReportConfig._Instance;
 	}
 
-	// Token: 0x06010433 RID: 66611 RVA: 0x003F728E File Offset: 0x003F548E
+	// Token: 0x0600D89A RID: 55450 RVA: 0x00403786 File Offset: 0x00401986
 	public static bool CreateInstance()
 	{
 		if (LevelPlayReportConfig._Instance != null)
@@ -108,27 +108,27 @@ public class LevelPlayReportConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06010434 RID: 66612 RVA: 0x003F72A4 File Offset: 0x003F54A4
+	// Token: 0x0600D89B RID: 55451 RVA: 0x0040379C File Offset: 0x0040199C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010435 RID: 66613 RVA: 0x003F72A6 File Offset: 0x003F54A6
+	// Token: 0x0600D89C RID: 55452 RVA: 0x0040379E File Offset: 0x0040199E
 	public static void ResetStaticDefaultValue()
 	{
 		LevelPlayReportConfig._Instance = null;
 	}
 
-	// Token: 0x06010436 RID: 66614 RVA: 0x003F72AE File Offset: 0x003F54AE
+	// Token: 0x0600D89D RID: 55453 RVA: 0x004037A6 File Offset: 0x004019A6
 	static LevelPlayReportConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LevelPlayReportConfig.CreateStaticDefaultValue), new Action(LevelPlayReportConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007840 RID: 30784
+	// Token: 0x04007929 RID: 31017
 	private readonly Dictionary<int, LevelPlayReportDefine.ILevelPlayReportConfigData> LevelPlayReportConfigMapping = new Dictionary<int, LevelPlayReportDefine.ILevelPlayReportConfigData>();
 
-	// Token: 0x04007841 RID: 30785
+	// Token: 0x0400792A RID: 31018
 	[Nullable(2)]
 	private static LevelPlayReportConfig _Instance;
 }

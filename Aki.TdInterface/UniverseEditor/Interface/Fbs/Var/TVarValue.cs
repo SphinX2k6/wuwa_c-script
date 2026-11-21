@@ -2,28 +2,28 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B65 RID: 15205
+	// Token: 0x02003F6D RID: 16237
 	public enum TVarValue : byte
 	{
-		// Token: 0x0400B08D RID: 45197
+		// Token: 0x0400BA0A RID: 47626
 		NONE,
-		// Token: 0x0400B08E RID: 45198
+		// Token: 0x0400BA0B RID: 47627
 		BooleanValue,
-		// Token: 0x0400B08F RID: 45199
+		// Token: 0x0400BA0C RID: 47628
 		IntValue,
-		// Token: 0x0400B090 RID: 45200
+		// Token: 0x0400BA0D RID: 47629
 		FloatValue,
-		// Token: 0x0400B091 RID: 45201
+		// Token: 0x0400BA0E RID: 47630
 		StringValue,
-		// Token: 0x0400B092 RID: 45202
+		// Token: 0x0400BA0F RID: 47631
 		QuestStateValue,
-		// Token: 0x0400B093 RID: 45203
+		// Token: 0x0400BA10 RID: 47632
 		EntityValue,
-		// Token: 0x0400B094 RID: 45204
+		// Token: 0x0400BA11 RID: 47633
 		QuestValue,
-		// Token: 0x0400B095 RID: 45205
+		// Token: 0x0400BA12 RID: 47634
 		PrefabValue,
-		// Token: 0x0400B096 RID: 45206
+		// Token: 0x0400BA13 RID: 47635
 		TransformValue
 	}
 }

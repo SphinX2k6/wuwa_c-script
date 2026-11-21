@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005291 RID: 21137
+	// Token: 0x020057F9 RID: 22521
 	public struct IFollowDecorationConfig : IFlatbufferObject
 	{
-		// Token: 0x17009AFD RID: 39677
-		// (get) Token: 0x06022720 RID: 141088 RVA: 0x004C6913 File Offset: 0x004C4B13
+		// Token: 0x1700A2FB RID: 41723
+		// (get) Token: 0x060246BA RID: 149178 RVA: 0x00501483 File Offset: 0x004FF683
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022721 RID: 141089 RVA: 0x004C6920 File Offset: 0x004C4B20
+		// Token: 0x060246BB RID: 149179 RVA: 0x00501490 File Offset: 0x004FF690
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022722 RID: 141090 RVA: 0x004C6928 File Offset: 0x004C4B28
+		// Token: 0x060246BC RID: 149180 RVA: 0x00501498 File Offset: 0x004FF698
 		public static IFollowDecorationConfig GetRootAsIFollowDecorationConfig(ByteBuffer _bb)
 		{
 			return IFollowDecorationConfig.GetRootAsIFollowDecorationConfig(_bb, default(IFollowDecorationConfig));
 		}
 
-		// Token: 0x06022723 RID: 141091 RVA: 0x004C6944 File Offset: 0x004C4B44
+		// Token: 0x060246BD RID: 149181 RVA: 0x005014B4 File Offset: 0x004FF6B4
 		public static IFollowDecorationConfig GetRootAsIFollowDecorationConfig(ByteBuffer _bb, IFollowDecorationConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022724 RID: 141092 RVA: 0x004C6961 File Offset: 0x004C4B61
+		// Token: 0x060246BE RID: 149182 RVA: 0x005014D1 File Offset: 0x004FF6D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022725 RID: 141093 RVA: 0x004C6970 File Offset: 0x004C4B70
+		// Token: 0x060246BF RID: 149183 RVA: 0x005014E0 File Offset: 0x004FF6E0
 		public IFollowDecorationConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009AFE RID: 39678
-		// (get) Token: 0x06022726 RID: 141094 RVA: 0x004C6980 File Offset: 0x004C4B80
+		// Token: 0x1700A2FC RID: 41724
+		// (get) Token: 0x060246C0 RID: 149184 RVA: 0x005014F0 File Offset: 0x004FF6F0
 		public EFollowDecorationType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022727 RID: 141095 RVA: 0x004C69BC File Offset: 0x004C4BBC
+		// Token: 0x060246C1 RID: 149185 RVA: 0x0050152C File Offset: 0x004FF72C
 		public static Offset<IFollowDecorationConfig> CreateIFollowDecorationConfig(FlatBufferBuilder builder, EFollowDecorationType Type = EFollowDecorationType.Chair)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFollowDecorationConfig.EndIFollowDecorationConfig(builder);
 		}
 
-		// Token: 0x06022728 RID: 141096 RVA: 0x004C69D2 File Offset: 0x004C4BD2
+		// Token: 0x060246C2 RID: 149186 RVA: 0x00501542 File Offset: 0x004FF742
 		public static void StartIFollowDecorationConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06022729 RID: 141097 RVA: 0x004C69DB File Offset: 0x004C4BDB
+		// Token: 0x060246C3 RID: 149187 RVA: 0x0050154B File Offset: 0x004FF74B
 		public static void AddType(FlatBufferBuilder builder, EFollowDecorationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602272A RID: 141098 RVA: 0x004C69E6 File Offset: 0x004C4BE6
+		// Token: 0x060246C4 RID: 149188 RVA: 0x00501556 File Offset: 0x004FF756
 		public static Offset<IFollowDecorationConfig> EndIFollowDecorationConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IFollowDecorationConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602272B RID: 141099 RVA: 0x004C69F4 File Offset: 0x004C4BF4
+		// Token: 0x060246C5 RID: 149189 RVA: 0x00501564 File Offset: 0x004FF764
 		public IFollowDecorationConfigT UnPack()
 		{
 			IFollowDecorationConfigT followDecorationConfigT = new IFollowDecorationConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return followDecorationConfigT;
 		}
 
-		// Token: 0x0602272C RID: 141100 RVA: 0x004C6A0F File Offset: 0x004C4C0F
+		// Token: 0x060246C6 RID: 149190 RVA: 0x0050157F File Offset: 0x004FF77F
 		public void UnPackTo(IFollowDecorationConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602272D RID: 141101 RVA: 0x004C6A20 File Offset: 0x004C4C20
+		// Token: 0x060246C7 RID: 149191 RVA: 0x00501590 File Offset: 0x004FF790
 		public static Offset<IFollowDecorationConfig> Pack(FlatBufferBuilder builder, IFollowDecorationConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFollowDecorationConfig.CreateIFollowDecorationConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400E3FE RID: 58366
+		// Token: 0x0400F005 RID: 61445
 		private Table __p;
 	}
 }

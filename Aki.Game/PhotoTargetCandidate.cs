@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025A0 RID: 9632
+// Token: 0x02001A8B RID: 6795
 [NullableContext(2)]
 [Nullable(0)]
 public class PhotoTargetCandidate
 {
-	// Token: 0x0601381C RID: 79900 RVA: 0x004DEEB0 File Offset: 0x004DD0B0
+	// Token: 0x06010CFE RID: 68862 RVA: 0x004ED9E4 File Offset: 0x004EBBE4
 	private PhotoTargetCandidate(EntityHandle entity, AActor actor)
 	{
 		this.Entity = entity;
 		this.Actor = actor;
 	}
 
-	// Token: 0x0601381D RID: 79901 RVA: 0x004DEEC8 File Offset: 0x004DD0C8
+	// Token: 0x06010CFF RID: 68863 RVA: 0x004ED9FC File Offset: 0x004EBBFC
 	public Vector GetPosition()
 	{
 		if (this.Entity != null)
@@ -38,7 +38,7 @@ public class PhotoTargetCandidate
 		}
 	}
 
-	// Token: 0x0601381E RID: 79902 RVA: 0x004DEF30 File Offset: 0x004DD130
+	// Token: 0x06010D00 RID: 68864 RVA: 0x004EDA64 File Offset: 0x004EBC64
 	public int? GetPbDataId()
 	{
 		EntityHandle entity = this.Entity;
@@ -49,7 +49,7 @@ public class PhotoTargetCandidate
 		return new int?(entity.PbDataId);
 	}
 
-	// Token: 0x0601381F RID: 79903 RVA: 0x004DEF5B File Offset: 0x004DD15B
+	// Token: 0x06010D01 RID: 68865 RVA: 0x004EDA8F File Offset: 0x004EBC8F
 	public AActor GetActor()
 	{
 		if (this.Entity == null)
@@ -65,23 +65,23 @@ public class PhotoTargetCandidate
 		return baseActorComponent.Owner;
 	}
 
-	// Token: 0x06013820 RID: 79904 RVA: 0x004DEF8E File Offset: 0x004DD18E
+	// Token: 0x06010D02 RID: 68866 RVA: 0x004EDAC2 File Offset: 0x004EBCC2
 	[NullableContext(1)]
 	public static PhotoTargetCandidate CreateFromEntity(EntityHandle handle)
 	{
 		return new PhotoTargetCandidate(handle, null);
 	}
 
-	// Token: 0x06013821 RID: 79905 RVA: 0x004DEF97 File Offset: 0x004DD197
+	// Token: 0x06010D03 RID: 68867 RVA: 0x004EDACB File Offset: 0x004EBCCB
 	[NullableContext(1)]
 	public static PhotoTargetCandidate CreateFromActor(AActor actor)
 	{
 		return new PhotoTargetCandidate(null, actor);
 	}
 
-	// Token: 0x0400933F RID: 37695
+	// Token: 0x04009497 RID: 38039
 	private readonly EntityHandle Entity;
 
-	// Token: 0x04009340 RID: 37696
+	// Token: 0x04009498 RID: 38040
 	private readonly AActor Actor;
 }

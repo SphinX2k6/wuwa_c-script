@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AED RID: 10989
+	// Token: 0x02002DE1 RID: 11745
 	public class ISetStateMachineBlendAnimType : IBlendAnimTypeBase
 	{
-		// Token: 0x0600F0CE RID: 61646 RVA: 0x0022F30A File Offset: 0x0022D50A
-		[NullableContext(1)]
+		// Token: 0x0600FF84 RID: 65412 RVA: 0x0024D016 File Offset: 0x0024B216
 		public static ISetStateMachineBlendAnimType Create(ISetStateMachineBlendAnimType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CB6 RID: 19638
-		// (get) Token: 0x0600F0CF RID: 61647 RVA: 0x0022F329 File Offset: 0x0022D529
+		// Token: 0x17005070 RID: 20592
+		// (get) Token: 0x0600FF85 RID: 65413 RVA: 0x0024D035 File Offset: 0x0024B235
 		public override EBlendAnimType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CB7 RID: 19639
-		// (get) Token: 0x0600F0D0 RID: 61648 RVA: 0x0022F336 File Offset: 0x0022D536
+		// Token: 0x17005071 RID: 20593
+		// (get) Token: 0x0600FF86 RID: 65414 RVA: 0x0024D042 File Offset: 0x0024B242
 		public virtual EBlendAnimState State
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008479 RID: 33913
+		// Token: 0x04008B7D RID: 35709
 		private ISetStateMachineBlendAnimType Instance;
 	}
 }

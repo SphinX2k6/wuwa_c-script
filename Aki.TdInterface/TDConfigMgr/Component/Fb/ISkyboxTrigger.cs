@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BF8 RID: 3064
+	// Token: 0x02000CC8 RID: 3272
 	public class ISkyboxTrigger
 	{
-		// Token: 0x06004662 RID: 18018 RVA: 0x000B1D1B File Offset: 0x000AFF1B
-		[NullableContext(1)]
+		// Token: 0x06004AC5 RID: 19141 RVA: 0x000BBEE7 File Offset: 0x000BA0E7
 		public static ISkyboxTrigger Create(ISkyboxTrigger? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700142F RID: 5167
-		// (get) Token: 0x06004663 RID: 18019 RVA: 0x000B1D3A File Offset: 0x000AFF3A
+		// Token: 0x17001530 RID: 5424
+		// (get) Token: 0x06004AC6 RID: 19142 RVA: 0x000BBF06 File Offset: 0x000BA106
 		public virtual ETriggerMode Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002811 RID: 10257
+		// Token: 0x04002A5D RID: 10845
 		private ISkyboxTrigger Instance;
 	}
 }

@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028F6 RID: 10486
+// Token: 0x02001E71 RID: 7793
 public class RoleTrialLabelItem : UiPanelBase
 {
-	// Token: 0x06015A6C RID: 88684 RVA: 0x0057764C File Offset: 0x0057584C
+	// Token: 0x06013470 RID: 78960 RVA: 0x005A2518 File Offset: 0x005A0718
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class RoleTrialLabelItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015A6D RID: 88685 RVA: 0x005776A8 File Offset: 0x005758A8
+	// Token: 0x06013471 RID: 78961 RVA: 0x005A2574 File Offset: 0x005A0774
 	public void Refresh(int roleId)
 	{
 		if (!RoleUtils.IsTrialRole(roleId))
@@ -47,7 +47,7 @@ public class RoleTrialLabelItem : UiPanelBase
 		this.SetSpriteByPath(resourcePath, base.GetSprite(1), false, null, null);
 	}
 
-	// Token: 0x0400A108 RID: 41224
+	// Token: 0x0400A4F3 RID: 42227
 	[Nullable(1)]
 	private readonly Dictionary<int, string> trialRoleHexColor = new Dictionary<int, string>
 	{
@@ -65,14 +65,14 @@ public class RoleTrialLabelItem : UiPanelBase
 		}
 	};
 
-	// Token: 0x02008F01 RID: 36609
+	// Token: 0x02008149 RID: 33097
 	private enum EComponentType
 	{
-		// Token: 0x0402E5E7 RID: 189927
+		// Token: 0x04029CE2 RID: 171234
 		FrameImg,
-		// Token: 0x0402E5E8 RID: 189928
+		// Token: 0x04029CE3 RID: 171235
 		IconImg,
-		// Token: 0x0402E5E9 RID: 189929
+		// Token: 0x04029CE4 RID: 171236
 		TrialTxt
 	}
 }

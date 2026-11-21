@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055BF RID: 21951
+	// Token: 0x02004595 RID: 17813
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GridPathFinder
 	{
-		// Token: 0x06037F5F RID: 229215 RVA: 0x00D420DD File Offset: 0x00D402DD
+		// Token: 0x0602CE5D RID: 183901 RVA: 0x00C8FE25 File Offset: 0x00C8E025
 		public GridPathFinder(IGridsConstructor gridConstructor, bool includeStartNode = true, bool includeEndNode = true, EHeuristicFunction heuristic = EHeuristicFunction.Manhattan)
 		{
 			this.IncludeStartNode = includeStartNode;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GridsInternal = new Grids(gridConstructor);
 		}
 
-		// Token: 0x06037F60 RID: 229216 RVA: 0x00D42120 File Offset: 0x00D40320
+		// Token: 0x0602CE5E RID: 183902 RVA: 0x00C8FE68 File Offset: 0x00C8E068
 		public List<int> FindPath(IPos startPosition, IPos endPosition)
 		{
 			this.ClosedList = new List<Node>();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return new List<int>();
 		}
 
-		// Token: 0x06037F61 RID: 229217 RVA: 0x00D423D0 File Offset: 0x00D405D0
+		// Token: 0x0602CE5F RID: 183903 RVA: 0x00C90118 File Offset: 0x00C8E318
 		public void UpdateGrid(IPathNode grid)
 		{
 			Node nodeByIndex = this.GridsInternal.GetNodeByIndex(grid.GridIndex);
@@ -114,22 +114,22 @@ namespace CSharpScript.Game.Module.MapRogue
 			nodeByIndex.Cost = grid.Cost;
 		}
 
-		// Token: 0x0401D646 RID: 120390
+		// Token: 0x040180D1 RID: 98513
 		private readonly Grids GridsInternal;
 
-		// Token: 0x0401D647 RID: 120391
+		// Token: 0x040180D2 RID: 98514
 		private List<Node> ClosedList = new List<Node>();
 
-		// Token: 0x0401D648 RID: 120392
+		// Token: 0x040180D3 RID: 98515
 		private List<Node> OpenList = new List<Node>();
 
-		// Token: 0x0401D649 RID: 120393
+		// Token: 0x040180D4 RID: 98516
 		private readonly bool IncludeStartNode;
 
-		// Token: 0x0401D64A RID: 120394
+		// Token: 0x040180D5 RID: 98517
 		private readonly bool IncludeEndNode;
 
-		// Token: 0x0401D64B RID: 120395
+		// Token: 0x040180D6 RID: 98518
 		private readonly EHeuristicFunction Heuristic;
 	}
 }

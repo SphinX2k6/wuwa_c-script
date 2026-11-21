@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AE4 RID: 2788
+	// Token: 0x02000BAE RID: 2990
 	public class ITrampleRayDetection
 	{
-		// Token: 0x06004032 RID: 16434 RVA: 0x000A3E66 File Offset: 0x000A2066
-		[NullableContext(1)]
+		// Token: 0x0600445C RID: 17500 RVA: 0x000AD45A File Offset: 0x000AB65A
 		public static ITrampleRayDetection Create(ITrampleRayDetection? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x040023B7 RID: 9143
+		// Token: 0x040025D3 RID: 9683
 		private ITrampleRayDetection Instance;
 	}
 }

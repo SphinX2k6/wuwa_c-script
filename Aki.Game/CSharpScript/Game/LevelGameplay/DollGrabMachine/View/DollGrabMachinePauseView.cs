@@ -10,21 +10,21 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EFE RID: 28414
+	// Token: 0x0200607E RID: 24702
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DollGrabMachinePauseView : UiViewBase
 	{
-		// Token: 0x060452C7 RID: 283335 RVA: 0x0111C474 File Offset: 0x0111A674
+		// Token: 0x0603B470 RID: 242800 RVA: 0x010C6204 File Offset: 0x010C4404
 		[NullableContext(1)]
 		public DollGrabMachinePauseView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060452C8 RID: 283336 RVA: 0x0111C480 File Offset: 0x0111A680
+		// Token: 0x0603B471 RID: 242801 RVA: 0x010C6210 File Offset: 0x010C4410
 		protected unsafe override void OnRegisterComponent()
 		{
-			int num = 12;
+			int num = 13;
 			List<ValueTuple<int, Type>> list = new List<ValueTuple<int, Type>>(num);
 			CollectionsMarshal.SetCount<ValueTuple<int, Type>>(list, num);
 			Span<ValueTuple<int, Type>> span = CollectionsMarshal.AsSpan<ValueTuple<int, Type>>(list);
@@ -52,6 +52,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			*span[num2] = new ValueTuple<int, Type>(10, typeof(UUISprite));
 			num2++;
 			*span[num2] = new ValueTuple<int, Type>(11, typeof(UUIText));
+			num2++;
+			*span[num2] = new ValueTuple<int, Type>(12, typeof(UUIItem));
 			this.ComponentRegisterInfos = list;
 			num2 = 2;
 			List<ValueTuple<int, Delegate>> list2 = new List<ValueTuple<int, Delegate>>(num2);
@@ -64,7 +66,18 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060452C9 RID: 283337 RVA: 0x0111C698 File Offset: 0x0111A898
+		// Token: 0x0603B472 RID: 242802 RVA: 0x010C644C File Offset: 0x010C464C
+		protected override UniTask OnBeforeStartAsync()
+		{
+			DollGrabMachinePauseView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
+			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<OnBeforeStartAsync>d__.<>4__this = this;
+			<OnBeforeStartAsync>d__.<>1__state = -1;
+			<OnBeforeStartAsync>d__.<>t__builder.Start<DollGrabMachinePauseView.<OnBeforeStartAsync>d__11>(ref <OnBeforeStartAsync>d__);
+			return <OnBeforeStartAsync>d__.<>t__builder.Task;
+		}
+
+		// Token: 0x0603B473 RID: 242803 RVA: 0x010C6490 File Offset: 0x010C4690
 		protected override void OnStart()
 		{
 			this.GenericLayout = new GenericLayout<DollGrabMachinePauseItem, IGrabItemData>(base.GetHorizontalLayout(1), new Func<DollGrabMachinePauseItem>(this.CreateDollGrabPauseItem), null, false, true);
@@ -77,29 +90,29 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.EndlessTxtDescri02 = base.GetText(11);
 		}
 
-		// Token: 0x060452CA RID: 283338 RVA: 0x0111C724 File Offset: 0x0111A924
+		// Token: 0x0603B474 RID: 242804 RVA: 0x010C651C File Offset: 0x010C471C
 		protected override UniTask OnBeforeShowAsyncImplementImplement()
 		{
-			DollGrabMachinePauseView.<OnBeforeShowAsyncImplementImplement>d__11 <OnBeforeShowAsyncImplementImplement>d__;
+			DollGrabMachinePauseView.<OnBeforeShowAsyncImplementImplement>d__13 <OnBeforeShowAsyncImplementImplement>d__;
 			<OnBeforeShowAsyncImplementImplement>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeShowAsyncImplementImplement>d__.<>4__this = this;
 			<OnBeforeShowAsyncImplementImplement>d__.<>1__state = -1;
-			<OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Start<DollGrabMachinePauseView.<OnBeforeShowAsyncImplementImplement>d__11>(ref <OnBeforeShowAsyncImplementImplement>d__);
+			<OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Start<DollGrabMachinePauseView.<OnBeforeShowAsyncImplementImplement>d__13>(ref <OnBeforeShowAsyncImplementImplement>d__);
 			return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060452CB RID: 283339 RVA: 0x0111C768 File Offset: 0x0111A968
+		// Token: 0x0603B475 RID: 242805 RVA: 0x010C6560 File Offset: 0x010C4760
 		private UniTask RefreshNormalMode()
 		{
-			DollGrabMachinePauseView.<RefreshNormalMode>d__12 <RefreshNormalMode>d__;
+			DollGrabMachinePauseView.<RefreshNormalMode>d__14 <RefreshNormalMode>d__;
 			<RefreshNormalMode>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<RefreshNormalMode>d__.<>4__this = this;
 			<RefreshNormalMode>d__.<>1__state = -1;
-			<RefreshNormalMode>d__.<>t__builder.Start<DollGrabMachinePauseView.<RefreshNormalMode>d__12>(ref <RefreshNormalMode>d__);
+			<RefreshNormalMode>d__.<>t__builder.Start<DollGrabMachinePauseView.<RefreshNormalMode>d__14>(ref <RefreshNormalMode>d__);
 			return <RefreshNormalMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060452CC RID: 283340 RVA: 0x0111C7AC File Offset: 0x0111A9AC
+		// Token: 0x0603B476 RID: 242806 RVA: 0x010C65A4 File Offset: 0x010C47A4
 		private void RefreshEndlessMode()
 		{
 			UUIItem pnlEmptyReward = this.PnlEmptyReward;
@@ -140,7 +153,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			LguiUtil.Instance.SetLocalTextNew(this.EndlessTxtDescri02, "KClaw_Infinite_Requirement", new <>z__ReadOnlySingleElementList<object>((endlessRewardData != null) ? endlessRewardData.TargetAccumulatedScore : "0"));
 		}
 
-		// Token: 0x060452CD RID: 283341 RVA: 0x0111C8CC File Offset: 0x0111AACC
+		// Token: 0x0603B477 RID: 242807 RVA: 0x010C66C4 File Offset: 0x010C48C4
 		private void OnExitButtonClick()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.DollGrabMachineExitConfirm);
@@ -152,42 +165,45 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x060452CE RID: 283342 RVA: 0x0111C908 File Offset: 0x0111AB08
+		// Token: 0x0603B478 RID: 242808 RVA: 0x010C6700 File Offset: 0x010C4900
 		private void OnGotoButtonClick()
 		{
 			base.CloseMe(null);
 			DollGrabMachineController.Instance.ResumeDollGrabMachine();
 		}
 
-		// Token: 0x060452CF RID: 283343 RVA: 0x0111C91B File Offset: 0x0111AB1B
+		// Token: 0x0603B479 RID: 242809 RVA: 0x010C6713 File Offset: 0x010C4913
 		[NullableContext(1)]
 		private DollGrabMachinePauseItem CreateDollGrabPauseItem()
 		{
 			return new DollGrabMachinePauseItem();
 		}
 
-		// Token: 0x040240AA RID: 147626
+		// Token: 0x0401F35E RID: 127838
 		private UUIItem PnlReward;
 
-		// Token: 0x040240AB RID: 147627
+		// Token: 0x0401F35F RID: 127839
 		private UUIItem PnlEmptyReward;
 
-		// Token: 0x040240AC RID: 147628
+		// Token: 0x0401F360 RID: 127840
+		private DollGrabMachinePauseCaptionPanel CaptionPanel;
+
+		// Token: 0x0401F361 RID: 127841
 		private UUIItem PnlEndlessModel;
 
-		// Token: 0x040240AD RID: 147629
+		// Token: 0x0401F362 RID: 127842
 		private UUIText EndlessCurrentScore;
 
-		// Token: 0x040240AE RID: 147630
+		// Token: 0x0401F363 RID: 127843
 		private UUIText EndlessTotalScore;
 
-		// Token: 0x040240AF RID: 147631
+		// Token: 0x0401F364 RID: 127844
 		private UUISprite EndlessSpriteCheck;
 
-		// Token: 0x040240B0 RID: 147632
+		// Token: 0x0401F365 RID: 127845
 		private UUIText EndlessTxtDescri02;
 
-		// Token: 0x040240B1 RID: 147633
+		// Token: 0x0401F366 RID: 127846
 		[Nullable(new byte[]
 		{
 			2,

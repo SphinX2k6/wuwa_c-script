@@ -4,38 +4,38 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200497E RID: 18814
+	// Token: 0x020038F6 RID: 14582
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InteractReleaseComponent : HotKeyComponent
 	{
-		// Token: 0x060310CC RID: 200908 RVA: 0x00B62A6C File Offset: 0x00B60C6C
+		// Token: 0x06025BFC RID: 154620 RVA: 0x00A9D96C File Offset: 0x00A9BB6C
 		public InteractReleaseComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060310CD RID: 200909 RVA: 0x00B62A75 File Offset: 0x00B60C75
+		// Token: 0x06025BFD RID: 154621 RVA: 0x00A9D975 File Offset: 0x00A9BB75
 		protected override void OnPress(HotKeyMap config)
 		{
 			this.PressListener = UiNavigationNewController.Instance.GetCurrentNavigationFocusListener();
 			UiNavigationNewController.Instance.Interact(true, config.Id);
 		}
 
-		// Token: 0x060310CE RID: 200910 RVA: 0x00B62A9A File Offset: 0x00B60C9A
+		// Token: 0x06025BFE RID: 154622 RVA: 0x00A9D99A File Offset: 0x00A9BB9A
 		protected override void OnRelease(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.InteractRelease(config.Id, this.PressListener);
 			this.PressListener = null;
 		}
 
-		// Token: 0x060310CF RID: 200911 RVA: 0x00B62ABC File Offset: 0x00B60CBC
+		// Token: 0x06025BFF RID: 154623 RVA: 0x00A9D9BC File Offset: 0x00A9BBBC
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			TsUiNavigationBehaviorListener focusListener = viewHandle.GetFocusListener();
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, focusListener != null, false);
 		}
 
-		// Token: 0x060310D0 RID: 200912 RVA: 0x00B62ADC File Offset: 0x00B60CDC
+		// Token: 0x06025C00 RID: 154624 RVA: 0x00A9D9DC File Offset: 0x00A9BBDC
 		protected override void HandleLogicAfterRefresh(UiNavigationViewHandle viewHandle)
 		{
 			TsUiNavigationBehaviorListener focusListener = viewHandle.GetFocusListener();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x060310D1 RID: 200913 RVA: 0x00B62B18 File Offset: 0x00B60D18
+		// Token: 0x06025C01 RID: 154625 RVA: 0x00A9DA18 File Offset: 0x00A9BC18
 		protected override void OnRefreshHotKeyText(UiNavigationViewHandle viewHandle)
 		{
 			TsUiNavigationBehaviorListener focusListener = viewHandle.GetFocusListener();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.ResetHotKeyDescTextForce();
 		}
 
-		// Token: 0x060310D2 RID: 200914 RVA: 0x00B62B54 File Offset: 0x00B60D54
+		// Token: 0x06025C02 RID: 154626 RVA: 0x00A9DA54 File Offset: 0x00A9BC54
 		protected override void OnRefreshHotKeyTextId(UiNavigationViewHandle viewHandle)
 		{
 			TsUiNavigationBehaviorListener focusListener = viewHandle.GetFocusListener();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.RefreshHotKeyNameText();
 		}
 
-		// Token: 0x0401A4A0 RID: 107680
+		// Token: 0x04014D13 RID: 85267
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener PressListener;
 	}

@@ -2,100 +2,100 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200493F RID: 18751
+	// Token: 0x020038B6 RID: 14518
 	public enum ENavigationSelectableDefine
 	{
-		// Token: 0x0401A403 RID: 107523
+		// Token: 0x04014C76 RID: 85110
 		Selectable,
-		// Token: 0x0401A404 RID: 107524
+		// Token: 0x04014C77 RID: 85111
 		Button,
-		// Token: 0x0401A405 RID: 107525
+		// Token: 0x04014C78 RID: 85112
 		Toggle,
-		// Token: 0x0401A406 RID: 107526
+		// Token: 0x04014C79 RID: 85113
 		Scrollbar,
-		// Token: 0x0401A407 RID: 107527
+		// Token: 0x04014C7A RID: 85114
 		Slider,
-		// Token: 0x0401A408 RID: 107528
+		// Token: 0x04014C7B RID: 85115
 		DragComponent,
-		// Token: 0x0401A409 RID: 107529
+		// Token: 0x04014C7C RID: 85116
 		VisionTabViewToggle,
-		// Token: 0x0401A40A RID: 107530
+		// Token: 0x04014C7D RID: 85117
 		VisionReplaceViewToggle,
-		// Token: 0x0401A40B RID: 107531
+		// Token: 0x04014C7E RID: 85118
 		VisionTabViewReplaceButton,
-		// Token: 0x0401A40C RID: 107532
+		// Token: 0x04014C7F RID: 85119
 		FunctionPageButton,
-		// Token: 0x0401A40D RID: 107533
+		// Token: 0x04014C80 RID: 85120
 		FunctionPageLeftButton,
-		// Token: 0x0401A40E RID: 107534
+		// Token: 0x04014C81 RID: 85121
 		FunctionPageRightButton,
-		// Token: 0x0401A40F RID: 107535
+		// Token: 0x04014C82 RID: 85122
 		RoleSkillTreeToggle,
-		// Token: 0x0401A410 RID: 107536
+		// Token: 0x04014C83 RID: 85123
 		RoleSkillTreeExitButton,
-		// Token: 0x0401A411 RID: 107537
+		// Token: 0x04014C84 RID: 85124
 		RoleSkillPreviewToggle,
-		// Token: 0x0401A412 RID: 107538
+		// Token: 0x04014C85 RID: 85125
 		RoleSkillPreviewExitButton,
-		// Token: 0x0401A413 RID: 107539
+		// Token: 0x04014C86 RID: 85126
 		RoleResonanceToggle,
-		// Token: 0x0401A414 RID: 107540
+		// Token: 0x04014C87 RID: 85127
 		RoleResonanceLockToggle,
-		// Token: 0x0401A415 RID: 107541
+		// Token: 0x04014C88 RID: 85128
 		RoleResonanceExitButton,
-		// Token: 0x0401A416 RID: 107542
+		// Token: 0x04014C89 RID: 85129
 		InventoryDestroyEnterButton,
-		// Token: 0x0401A417 RID: 107543
+		// Token: 0x04014C8A RID: 85130
 		InventoryDestroyExitButton,
-		// Token: 0x0401A418 RID: 107544
+		// Token: 0x04014C8B RID: 85131
 		InventoryItemGridToggle,
-		// Token: 0x0401A419 RID: 107545
+		// Token: 0x04014C8C RID: 85132
 		RouletteExitButton,
-		// Token: 0x0401A41A RID: 107546
+		// Token: 0x04014C8D RID: 85133
 		RoguelikeGridToggle,
-		// Token: 0x0401A41B RID: 107547
+		// Token: 0x04014C8E RID: 85134
 		QuestTitleToggle,
-		// Token: 0x0401A41C RID: 107548
+		// Token: 0x04014C8F RID: 85135
 		VisionReplaceSortTabToggle,
-		// Token: 0x0401A41D RID: 107549
+		// Token: 0x04014C90 RID: 85136
 		CalabashDetailExitBtn,
-		// Token: 0x0401A41E RID: 107550
+		// Token: 0x04014C91 RID: 85137
 		VisionAssembleToggle,
-		// Token: 0x0401A41F RID: 107551
+		// Token: 0x04014C92 RID: 85138
 		VisionAssembleCompareToggle,
-		// Token: 0x0401A420 RID: 107552
+		// Token: 0x04014C93 RID: 85139
 		CommonRefreshNavigationButton,
-		// Token: 0x0401A421 RID: 107553
+		// Token: 0x04014C94 RID: 85140
 		PhantomArenaOwnHandToggle,
-		// Token: 0x0401A422 RID: 107554
+		// Token: 0x04014C95 RID: 85141
 		PhantomArenaOwnBattleToggle,
-		// Token: 0x0401A423 RID: 107555
+		// Token: 0x04014C96 RID: 85142
 		PhantomArenaOwnFunctionalToggle,
-		// Token: 0x0401A424 RID: 107556
+		// Token: 0x04014C97 RID: 85143
 		PhantomArenaOpponentBattleToggle,
-		// Token: 0x0401A425 RID: 107557
+		// Token: 0x04014C98 RID: 85144
 		PhantomArenaOpponentFunctionalToggle,
-		// Token: 0x0401A426 RID: 107558
+		// Token: 0x04014C99 RID: 85145
 		PhantomArenaVisionButton,
-		// Token: 0x0401A427 RID: 107559
+		// Token: 0x04014C9A RID: 85146
 		PhantomArenaEmptyButton,
-		// Token: 0x0401A428 RID: 107560
+		// Token: 0x04014C9B RID: 85147
 		PhantomArenaCardToggle,
-		// Token: 0x0401A429 RID: 107561
+		// Token: 0x04014C9C RID: 85148
 		PhantomManageConfigGridBig,
-		// Token: 0x0401A42A RID: 107562
+		// Token: 0x04014C9D RID: 85149
 		HonamiStoryGridItem,
-		// Token: 0x0401A42B RID: 107563
+		// Token: 0x04014C9E RID: 85150
 		CantFocusInScrollOrLayoutByJumpGroup,
-		// Token: 0x0401A42C RID: 107564
+		// Token: 0x04014C9F RID: 85151
 		FormationSelectPosition,
-		// Token: 0x0401A42D RID: 107565
+		// Token: 0x04014CA0 RID: 85152
 		ReFindMultipleScrollGridToggle,
-		// Token: 0x0401A42E RID: 107566
+		// Token: 0x04014CA1 RID: 85153
 		NavigationChatTalkToggle,
-		// Token: 0x0401A42F RID: 107567
+		// Token: 0x04014CA2 RID: 85154
 		NavigationChatPhraseToggle,
-		// Token: 0x0401A430 RID: 107568
+		// Token: 0x04014CA3 RID: 85155
 		NavigationChatTalkPartnerToggle
 	}
 }

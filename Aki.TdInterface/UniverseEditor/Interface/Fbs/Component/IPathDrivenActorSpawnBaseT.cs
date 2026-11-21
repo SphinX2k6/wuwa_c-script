@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056F6 RID: 22262
+	// Token: 0x02005CE5 RID: 23781
 	public class IPathDrivenActorSpawnBaseT
 	{
-		// Token: 0x1700A5B4 RID: 42420
-		// (get) Token: 0x06025344 RID: 152388 RVA: 0x005225BA File Offset: 0x005207BA
-		// (set) Token: 0x06025345 RID: 152389 RVA: 0x005225C2 File Offset: 0x005207C2
+		// Token: 0x1700AEB7 RID: 44727
+		// (get) Token: 0x060277AB RID: 161707 RVA: 0x00567006 File Offset: 0x00565206
+		// (set) Token: 0x060277AC RID: 161708 RVA: 0x0056700E File Offset: 0x0056520E
 		public EPathDrivenActorSpawnType Type { get; set; }
 
-		// Token: 0x06025346 RID: 152390 RVA: 0x005225CB File Offset: 0x005207CB
+		// Token: 0x060277AD RID: 161709 RVA: 0x00567017 File Offset: 0x00565217
 		public IPathDrivenActorSpawnBaseT()
 		{
 			this.Type = EPathDrivenActorSpawnType.IntervalSplineSpawn;

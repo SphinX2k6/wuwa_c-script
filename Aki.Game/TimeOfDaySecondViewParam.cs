@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002BBD RID: 11197
+// Token: 0x02002138 RID: 8504
 public class TimeOfDaySecondViewParam : ITimeOfDaySecondViewParam
 {
-	// Token: 0x17001F5D RID: 8029
-	// (get) Token: 0x0601734F RID: 95055 RVA: 0x005E23E7 File Offset: 0x005E05E7
-	// (set) Token: 0x06017350 RID: 95056 RVA: 0x005E23EF File Offset: 0x005E05EF
+	// Token: 0x17001FB5 RID: 8117
+	// (get) Token: 0x06014D80 RID: 85376 RVA: 0x0060EFBB File Offset: 0x0060D1BB
+	// (set) Token: 0x06014D81 RID: 85377 RVA: 0x0060EFC3 File Offset: 0x0060D1C3
 	public double SetTime { get; set; }
 }

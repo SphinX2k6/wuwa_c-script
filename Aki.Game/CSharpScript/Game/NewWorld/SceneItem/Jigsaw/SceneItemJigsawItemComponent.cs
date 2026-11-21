@@ -8,14 +8,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 {
-	// Token: 0x020071F4 RID: 29172
+	// Token: 0x020062A9 RID: 25257
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemJigsawItemComponent : EntityComponent
 	{
-		// Token: 0x17009E0A RID: 40458
-		// (get) Token: 0x06047687 RID: 292487 RVA: 0x0122E798 File Offset: 0x0122C998
-		// (set) Token: 0x06047688 RID: 292488 RVA: 0x0122E7A0 File Offset: 0x0122C9A0
+		// Token: 0x17007364 RID: 29540
+		// (get) Token: 0x0603CF8C RID: 249740 RVA: 0x011883E0 File Offset: 0x011865E0
+		// (set) Token: 0x0603CF8D RID: 249741 RVA: 0x011883E8 File Offset: 0x011865E8
 		public JigsawIndex PutDownIndex
 		{
 			get
@@ -28,9 +28,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x17009E0B RID: 40459
-		// (get) Token: 0x06047689 RID: 292489 RVA: 0x0122E7A9 File Offset: 0x0122C9A9
-		// (set) Token: 0x0604768A RID: 292490 RVA: 0x0122E7B1 File Offset: 0x0122C9B1
+		// Token: 0x17007365 RID: 29541
+		// (get) Token: 0x0603CF8E RID: 249742 RVA: 0x011883F1 File Offset: 0x011865F1
+		// (set) Token: 0x0603CF8F RID: 249743 RVA: 0x011883F9 File Offset: 0x011865F9
 		public SceneItemJigsawBaseComponent PutDownBase
 		{
 			get
@@ -43,9 +43,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x17009E0C RID: 40460
-		// (get) Token: 0x0604768B RID: 292491 RVA: 0x0122E7BA File Offset: 0x0122C9BA
-		// (set) Token: 0x0604768C RID: 292492 RVA: 0x0122E7C2 File Offset: 0x0122C9C2
+		// Token: 0x17007366 RID: 29542
+		// (get) Token: 0x0603CF90 RID: 249744 RVA: 0x01188402 File Offset: 0x01186602
+		// (set) Token: 0x0603CF91 RID: 249745 RVA: 0x0118840A File Offset: 0x0118660A
 		public Number Rotation
 		{
 			get
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604768D RID: 292493 RVA: 0x0122E7CC File Offset: 0x0122C9CC
+		// Token: 0x0603CF92 RID: 249746 RVA: 0x01188414 File Offset: 0x01186614
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return true;
 		}
 
-		// Token: 0x0604768E RID: 292494 RVA: 0x0122E948 File Offset: 0x0122CB48
+		// Token: 0x0603CF93 RID: 249747 RVA: 0x01188590 File Offset: 0x01186790
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return true;
 		}
 
-		// Token: 0x0604768F RID: 292495 RVA: 0x0122EA24 File Offset: 0x0122CC24
+		// Token: 0x0603CF94 RID: 249748 RVA: 0x0118866C File Offset: 0x0118686C
 		private void OnGameplayTagChanged(int tagId, bool tagExist)
 		{
 			int num = GameplayTagDefine.EGameplayTagId["关卡.Common.表现.被控物被锁定中"];
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047690 RID: 292496 RVA: 0x0122EBDC File Offset: 0x0122CDDC
+		// Token: 0x0603CF95 RID: 249749 RVA: 0x01188824 File Offset: 0x01186A24
 		protected override bool OnEnd()
 		{
 			LevelTagComponent tagComp = this.TagComp;
@@ -193,13 +193,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return true;
 		}
 
-		// Token: 0x06047691 RID: 292497 RVA: 0x0122EC6E File Offset: 0x0122CE6E
+		// Token: 0x0603CF96 RID: 249750 RVA: 0x011888B6 File Offset: 0x01186AB6
 		protected override void OnActivate()
 		{
 			this.GenDynamicBlock();
 		}
 
-		// Token: 0x06047692 RID: 292498 RVA: 0x0122EC78 File Offset: 0x0122CE78
+		// Token: 0x0603CF97 RID: 249751 RVA: 0x011888C0 File Offset: 0x01186AC0
 		private void GenDynamicBlock()
 		{
 			IFixedFill fixedFill = this.Config.FillCfg as IFixedFill;
@@ -224,13 +224,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047693 RID: 292499 RVA: 0x0122ED4C File Offset: 0x0122CF4C
+		// Token: 0x0603CF98 RID: 249752 RVA: 0x01188994 File Offset: 0x01186B94
 		public JigsawIndex GetCenterIndex()
 		{
 			return this.CenterIndex;
 		}
 
-		// Token: 0x06047694 RID: 292500 RVA: 0x0122ED54 File Offset: 0x0122CF54
+		// Token: 0x0603CF99 RID: 249753 RVA: 0x0118899C File Offset: 0x01186B9C
 		public List<JigsawIndex> GetActiveBlockOffset(int? rotation = null)
 		{
 			List<JigsawIndex> list = new List<JigsawIndex>();
@@ -241,13 +241,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return list;
 		}
 
-		// Token: 0x06047695 RID: 292501 RVA: 0x0122EDE0 File Offset: 0x0122CFE0
+		// Token: 0x0603CF9A RID: 249754 RVA: 0x01188A28 File Offset: 0x01186C28
 		public void RotateSelf()
 		{
 			this.SelfRotation += 90;
 		}
 
-		// Token: 0x06047696 RID: 292502 RVA: 0x0122EDFC File Offset: 0x0122CFFC
+		// Token: 0x0603CF9B RID: 249755 RVA: 0x01188A44 File Offset: 0x01186C44
 		private JigsawIndex GetRotatedIndex(JigsawIndex index, int? rotation = null)
 		{
 			int num = (rotation ?? this.SelfRotation) / 90 % SceneItemJigsawItemComponent.sinValue.Length;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return new JigsawIndex(row, col);
 		}
 
-		// Token: 0x06047697 RID: 292503 RVA: 0x0122EE78 File Offset: 0x0122D078
+		// Token: 0x0603CF9C RID: 249756 RVA: 0x01188AC0 File Offset: 0x01186CC0
 		[return: Nullable(2)]
 		public Vector GetBlockLocationByIndex(JigsawIndex index)
 		{
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return vector;
 		}
 
-		// Token: 0x06047698 RID: 292504 RVA: 0x0122EFA4 File Offset: 0x0122D1A4
+		// Token: 0x0603CF9D RID: 249757 RVA: 0x01188BEC File Offset: 0x01186DEC
 		public void OnPutDownToBase(SceneItemJigsawBaseComponent baseComp)
 		{
 			this.PutDownBaseInternal = baseComp;
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047699 RID: 292505 RVA: 0x0122F0B4 File Offset: 0x0122D2B4
+		// Token: 0x0603CF9E RID: 249758 RVA: 0x01188CFC File Offset: 0x01186EFC
 		public void OnPickUpFormBase(SceneItemJigsawBaseComponent baseComp)
 		{
 			this.PutDownBaseInternal = null;
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604769A RID: 292506 RVA: 0x0122F1C4 File Offset: 0x0122D3C4
+		// Token: 0x0603CF9F RID: 249759 RVA: 0x01188E0C File Offset: 0x0118700C
 		public void OnFinish()
 		{
 			foreach (JigsawIndex index in this.ActivatedBlock)
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604769B RID: 292507 RVA: 0x0122F22C File Offset: 0x0122D42C
+		// Token: 0x0603CFA0 RID: 249760 RVA: 0x01188E74 File Offset: 0x01187074
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -356,19 +356,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return new ValueTuple<bool, Vector, JigsawIndex>?(new ValueTuple<bool, Vector, JigsawIndex>(nextPosByDirection.GetKey() != this.PutDownIndex.GetKey(), this.PutDownBase.GetBlockLocationByIndex(nextPosByDirection, true), nextPosByDirection));
 		}
 
-		// Token: 0x0604769C RID: 292508 RVA: 0x0122F2A1 File Offset: 0x0122D4A1
+		// Token: 0x0603CFA1 RID: 249761 RVA: 0x01188EE9 File Offset: 0x011870E9
 		public void OnMove(JigsawIndex targetIndex)
 		{
 			this.PutDownBase.OnItemMove(this, targetIndex);
 		}
 
-		// Token: 0x0604769D RID: 292509 RVA: 0x0122F2B0 File Offset: 0x0122D4B0
+		// Token: 0x0603CFA2 RID: 249762 RVA: 0x01188EF8 File Offset: 0x011870F8
 		public void RemoveMagnetTipsTag()
 		{
 			this.PutDownBase.RemoveMagnetTipsTag(this.PutDownIndex);
 		}
 
-		// Token: 0x0604769E RID: 292510 RVA: 0x0122F2C4 File Offset: 0x0122D4C4
+		// Token: 0x0603CFA3 RID: 249763 RVA: 0x01188F0C File Offset: 0x0118710C
 		public List<Vector> GetAllActivatedBlockPos()
 		{
 			List<Vector> list = new List<Vector>();
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return list;
 		}
 
-		// Token: 0x0604769F RID: 292511 RVA: 0x0122F330 File Offset: 0x0122D530
+		// Token: 0x0603CFA4 RID: 249764 RVA: 0x01188F78 File Offset: 0x01187178
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -391,110 +391,110 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 				return false;
 			}
 			SceneItemJigsawItemComponent sceneItemJigsawItemComponent = (SceneItemJigsawItemComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemJigsawItemComponent.Config == null)
 			{
-				if (sceneItemJigsawItemComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawItem>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (sceneItemJigsawItemComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemJigsawItemComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MultiActorComp"))
-			{
-				if (sceneItemJigsawItemComponent.MultiActorComp == null)
-				{
-					this.MultiActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMultiInteractionActorComponent>(this.MultiActorComp), "MultiActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemJigsawItemComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("Direction"))
-			{
-				this.Direction = sceneItemJigsawItemComponent.Direction;
-			}
-			if (base.CanResetComponentProperty("ActivatedBlock") && sceneItemJigsawItemComponent.ActivatedBlock != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<JigsawIndex>>(this.ActivatedBlock), "ActivatedBlock"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CenterIndex"))
+			if (sceneItemJigsawItemComponent.CreatureDataComp == null)
 			{
-				if (sceneItemJigsawItemComponent.CenterIndex == null)
-				{
-					this.CenterIndex = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawIndex>(this.CenterIndex), "CenterIndex"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("PutDownIndexInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (sceneItemJigsawItemComponent.PutDownIndexInternal == null)
-				{
-					this.PutDownIndexInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawIndex>(this.PutDownIndexInternal), "PutDownIndexInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PutDownBaseInternal"))
+			if (sceneItemJigsawItemComponent.ActorComp == null)
 			{
-				if (sceneItemJigsawItemComponent.PutDownBaseInternal == null)
-				{
-					this.PutDownBaseInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemJigsawBaseComponent>(this.PutDownBaseInternal), "PutDownBaseInternal"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("SelfRotation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.SelfRotation = sceneItemJigsawItemComponent.SelfRotation;
+				return false;
 			}
+			if (sceneItemJigsawItemComponent.MultiActorComp == null)
+			{
+				this.MultiActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MultiActorComp), "MultiActorComp"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawItemComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			this.Direction = sceneItemJigsawItemComponent.Direction;
+			if (sceneItemJigsawItemComponent.ActivatedBlock != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActivatedBlock), "ActivatedBlock"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawItemComponent.CenterIndex == null)
+			{
+				this.CenterIndex = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CenterIndex), "CenterIndex"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawItemComponent.PutDownIndexInternal == null)
+			{
+				this.PutDownIndexInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PutDownIndexInternal), "PutDownIndexInternal"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawItemComponent.PutDownBaseInternal == null)
+			{
+				this.PutDownBaseInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PutDownBaseInternal), "PutDownBaseInternal"))
+			{
+				return false;
+			}
+			this.SelfRotation = sceneItemJigsawItemComponent.SelfRotation;
 			return true;
 		}
 
-		// Token: 0x060476A1 RID: 292513 RVA: 0x0122F590 File Offset: 0x0122D790
+		// Token: 0x17007367 RID: 29543
+		// (get) Token: 0x0603CFA5 RID: 249765 RVA: 0x0118912A File Offset: 0x0118732A
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007368 RID: 29544
+		// (get) Token: 0x0603CFA6 RID: 249766 RVA: 0x0118912D File Offset: 0x0118732D
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007369 RID: 29545
+		// (get) Token: 0x0603CFA7 RID: 249767 RVA: 0x01189130 File Offset: 0x01187330
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0603CFA9 RID: 249769 RVA: 0x01189152 File Offset: 0x01187352
 		// Note: this type is marked as 'beforefieldinit'.
 		static SceneItemJigsawItemComponent()
 		{
@@ -504,7 +504,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			SceneItemJigsawItemComponent.cosValue = array;
 		}
 
-		// Token: 0x040258ED RID: 153837
+		// Token: 0x0402055C RID: 132444
 		[StaticVariableRuleIgnore]
 		private static readonly int[] sinValue = new int[]
 		{
@@ -514,49 +514,49 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			-1
 		};
 
-		// Token: 0x040258EE RID: 153838
+		// Token: 0x0402055D RID: 132445
 		[StaticVariableRuleIgnore]
 		private static readonly int[] cosValue;
 
-		// Token: 0x040258EF RID: 153839
+		// Token: 0x0402055E RID: 132446
 		[Nullable(2)]
 		public JigsawItem Config;
 
-		// Token: 0x040258F0 RID: 153840
+		// Token: 0x0402055F RID: 132447
 		[Nullable(2)]
 		public CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040258F1 RID: 153841
+		// Token: 0x04020560 RID: 132448
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040258F2 RID: 153842
+		// Token: 0x04020561 RID: 132449
 		[Nullable(2)]
 		private SceneItemMultiInteractionActorComponent MultiActorComp;
 
-		// Token: 0x040258F3 RID: 153843
+		// Token: 0x04020562 RID: 132450
 		[Nullable(2)]
 		private LevelTagComponent TagComp;
 
-		// Token: 0x040258F4 RID: 153844
+		// Token: 0x04020563 RID: 132451
 		public int Direction;
 
-		// Token: 0x040258F5 RID: 153845
+		// Token: 0x04020564 RID: 132452
 		private readonly List<JigsawIndex> ActivatedBlock = new List<JigsawIndex>();
 
-		// Token: 0x040258F6 RID: 153846
+		// Token: 0x04020565 RID: 132453
 		[Nullable(2)]
 		private JigsawIndex CenterIndex;
 
-		// Token: 0x040258F7 RID: 153847
+		// Token: 0x04020566 RID: 132454
 		[Nullable(2)]
 		private JigsawIndex PutDownIndexInternal;
 
-		// Token: 0x040258F8 RID: 153848
+		// Token: 0x04020567 RID: 132455
 		[Nullable(2)]
 		private SceneItemJigsawBaseComponent PutDownBaseInternal;
 
-		// Token: 0x040258F9 RID: 153849
+		// Token: 0x04020568 RID: 132456
 		private Number SelfRotation = 0;
 	}
 }

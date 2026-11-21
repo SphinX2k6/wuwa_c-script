@@ -2,36 +2,38 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C9B RID: 15515
+	// Token: 0x020040AF RID: 16559
 	public enum EEnableSystemType : byte
 	{
-		// Token: 0x0400B3BC RID: 46012
+		// Token: 0x0400BD5D RID: 48477
 		GradingSystem,
-		// Token: 0x0400B3BD RID: 46013
+		// Token: 0x0400BD5E RID: 48478
 		TrapDefense,
-		// Token: 0x0400B3BE RID: 46014
+		// Token: 0x0400BD5F RID: 48479
 		SurvivorsRouge,
-		// Token: 0x0400B3BF RID: 46015
+		// Token: 0x0400BD60 RID: 48480
 		GameDifficulty,
-		// Token: 0x0400B3C0 RID: 46016
+		// Token: 0x0400BD61 RID: 48481
 		LinkSystem,
-		// Token: 0x0400B3C1 RID: 46017
+		// Token: 0x0400BD62 RID: 48482
 		MotorRacing,
-		// Token: 0x0400B3C2 RID: 46018
+		// Token: 0x0400BD63 RID: 48483
 		NightmareSettlement,
-		// Token: 0x0400B3C3 RID: 46019
+		// Token: 0x0400BD64 RID: 48484
 		MotorFight,
-		// Token: 0x0400B3C4 RID: 46020
+		// Token: 0x0400BD65 RID: 48485
 		Kurotato,
-		// Token: 0x0400B3C5 RID: 46021
+		// Token: 0x0400BD66 RID: 48486
 		FlagChallenge,
-		// Token: 0x0400B3C6 RID: 46022
+		// Token: 0x0400BD67 RID: 48487
 		Flipper,
-		// Token: 0x0400B3C7 RID: 46023
+		// Token: 0x0400BD68 RID: 48488
 		RogueTowerTrial,
-		// Token: 0x0400B3C8 RID: 46024
+		// Token: 0x0400BD69 RID: 48489
 		KuroSimpleCombatKillMonster,
-		// Token: 0x0400B3C9 RID: 46025
-		RoleTower
+		// Token: 0x0400BD6A RID: 48490
+		RoleTower,
+		// Token: 0x0400BD6B RID: 48491
+		DarkTide
 	}
 }

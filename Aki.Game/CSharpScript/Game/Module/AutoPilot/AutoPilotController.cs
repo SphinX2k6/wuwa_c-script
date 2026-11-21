@@ -16,13 +16,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E6A RID: 24170
+	// Token: 0x02004E4F RID: 20047
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class AutoPilotController : ControllerBase
 	{
-		// Token: 0x0603D730 RID: 251696 RVA: 0x00ED3519 File Offset: 0x00ED1719
+		// Token: 0x060326C0 RID: 206528 RVA: 0x00E24A89 File Offset: 0x00E22C89
 		protected override bool OnInit()
 		{
 			this.OnAddEvents();
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return true;
 		}
 
-		// Token: 0x0603D731 RID: 251697 RVA: 0x00ED353E File Offset: 0x00ED173E
+		// Token: 0x060326C1 RID: 206529 RVA: 0x00E24AAE File Offset: 0x00E22CAE
 		protected override bool OnClear()
 		{
 			this.OnRemoveEvents();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return true;
 		}
 
-		// Token: 0x0603D732 RID: 251698 RVA: 0x00ED3580 File Offset: 0x00ED1780
+		// Token: 0x060326C2 RID: 206530 RVA: 0x00E24AF0 File Offset: 0x00E22CF0
 		private void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDone));
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			EventSystem.Instance.Add(EEventName.OnChangeSelectedExploreId, new Action(this.OnChangeSelectedExploreId));
 		}
 
-		// Token: 0x0603D733 RID: 251699 RVA: 0x00ED368C File Offset: 0x00ED188C
+		// Token: 0x060326C3 RID: 206531 RVA: 0x00E24BFC File Offset: 0x00E22DFC
 		private void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDone));
@@ -77,20 +77,20 @@ namespace CSharpScript.Game.Module.AutoPilot
 			EventSystem.Instance.Remove(EEventName.OnChangeSelectedExploreId, new Action(this.OnChangeSelectedExploreId));
 		}
 
-		// Token: 0x0603D734 RID: 251700 RVA: 0x00ED3795 File Offset: 0x00ED1995
+		// Token: 0x060326C4 RID: 206532 RVA: 0x00E24D05 File Offset: 0x00E22F05
 		private void OnWorldDone()
 		{
 			base.ResumeTick();
 			this.RefreshAutoPilotAreaId();
 		}
 
-		// Token: 0x0603D735 RID: 251701 RVA: 0x00ED37A3 File Offset: 0x00ED19A3
+		// Token: 0x060326C5 RID: 206533 RVA: 0x00E24D13 File Offset: 0x00E22F13
 		private void OnBeforeLoadMap()
 		{
 			base.PauseTick();
 		}
 
-		// Token: 0x0603D736 RID: 251702 RVA: 0x00ED37AB File Offset: 0x00ED19AB
+		// Token: 0x060326C6 RID: 206534 RVA: 0x00E24D1B File Offset: 0x00E22F1B
 		private void OnTeleportStart(bool _)
 		{
 			TeleportContext teleportContext = TeleportModel.Instance.TeleportContext;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			base.PauseTick();
 		}
 
-		// Token: 0x0603D737 RID: 251703 RVA: 0x00ED37E7 File Offset: 0x00ED19E7
+		// Token: 0x060326C7 RID: 206535 RVA: 0x00E24D57 File Offset: 0x00E22F57
 		[NullableContext(2)]
 		private void OnTeleportEnd(TeleportContext _)
 		{
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.RefreshAutoPilotAreaId();
 		}
 
-		// Token: 0x0603D738 RID: 251704 RVA: 0x00ED37F8 File Offset: 0x00ED19F8
+		// Token: 0x060326C8 RID: 206536 RVA: 0x00E24D68 File Offset: 0x00E22F68
 		[NullableContext(0)]
 		public UniTask<bool> EnterAutoPilot()
 		{
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <EnterAutoPilot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D739 RID: 251705 RVA: 0x00ED383C File Offset: 0x00ED1A3C
+		// Token: 0x060326C9 RID: 206537 RVA: 0x00E24DAC File Offset: 0x00E22FAC
 		private void CheckAutoPilotEnabled()
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			instance2.CheckCircleAutoPilotConditions();
 		}
 
-		// Token: 0x0603D73A RID: 251706 RVA: 0x00ED3884 File Offset: 0x00ED1A84
+		// Token: 0x060326CA RID: 206538 RVA: 0x00E24DF4 File Offset: 0x00E22FF4
 		[NullableContext(2)]
 		private UAutopilotRoute GetAutoPilotRoute()
 		{
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return autoPilotCirclePathResult.GenerateAutopilotRoute();
 		}
 
-		// Token: 0x0603D73B RID: 251707 RVA: 0x00ED38C8 File Offset: 0x00ED1AC8
+		// Token: 0x060326CB RID: 206539 RVA: 0x00E24E38 File Offset: 0x00E23038
 		[NullableContext(0)]
 		private UniTask<bool> StartAutoPilotMovement([Nullable(1)] UAutopilotRoute autopilotRoute, bool isServerReq)
 		{
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <StartAutoPilotMovement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D73C RID: 251708 RVA: 0x00ED391B File Offset: 0x00ED1B1B
+		// Token: 0x060326CC RID: 206540 RVA: 0x00E24E8B File Offset: 0x00E2308B
 		private void EndAutoPilotMovement(bool isServerReq)
 		{
 			MotorcycleSplineMoveComponent splineMoveComp = AutoPilotModel.Instance.SplineMoveComp;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D73D RID: 251709 RVA: 0x00ED393C File Offset: 0x00ED1B3C
+		// Token: 0x060326CD RID: 206541 RVA: 0x00E24EAC File Offset: 0x00E230AC
 		public UniTask ExitAutoPilot(string reason, bool clearTracking = false)
 		{
 			AutoPilotController.<ExitAutoPilot>d__31 <ExitAutoPilot>d__;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <ExitAutoPilot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D73E RID: 251710 RVA: 0x00ED3990 File Offset: 0x00ED1B90
+		// Token: 0x060326CE RID: 206542 RVA: 0x00E24F00 File Offset: 0x00E23100
 		public UniTask OpenAutoPilotView()
 		{
 			AutoPilotController.<OpenAutoPilotView>d__32 <OpenAutoPilotView>d__;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <OpenAutoPilotView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D73F RID: 251711 RVA: 0x00ED39D3 File Offset: 0x00ED1BD3
+		// Token: 0x060326CF RID: 206543 RVA: 0x00E24F43 File Offset: 0x00E23143
 		private void ClearView()
 		{
 			AutoPilotView autoPilotView = this.AutoPilotView;
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.AutoPilotView = null;
 		}
 
-		// Token: 0x0603D740 RID: 251712 RVA: 0x00ED39FC File Offset: 0x00ED1BFC
+		// Token: 0x060326D0 RID: 206544 RVA: 0x00E24F6C File Offset: 0x00E2316C
 		public void SkipToTarget()
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}).Forget<bool>();
 		}
 
-		// Token: 0x0603D741 RID: 251713 RVA: 0x00ED3B0C File Offset: 0x00ED1D0C
+		// Token: 0x060326D1 RID: 206545 RVA: 0x00E2507C File Offset: 0x00E2327C
 		protected override void OnTick(float delta)
 		{
 			if (this.TickGroup.Count > 0)
@@ -288,19 +288,19 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D742 RID: 251714 RVA: 0x00ED3B70 File Offset: 0x00ED1D70
+		// Token: 0x060326D2 RID: 206546 RVA: 0x00E250E0 File Offset: 0x00E232E0
 		public void AddTick(Action<float?> tick)
 		{
 			this.TickGroup.Add(tick);
 		}
 
-		// Token: 0x0603D743 RID: 251715 RVA: 0x00ED3B7F File Offset: 0x00ED1D7F
+		// Token: 0x060326D3 RID: 206547 RVA: 0x00E250EF File Offset: 0x00E232EF
 		public void RemoveTick(Action<float?> tick)
 		{
 			this.TickGroup.Remove(tick);
 		}
 
-		// Token: 0x0603D744 RID: 251716 RVA: 0x00ED3B90 File Offset: 0x00ED1D90
+		// Token: 0x060326D4 RID: 206548 RVA: 0x00E25100 File Offset: 0x00E23300
 		private void OnCircleStateChange(bool isInCircle)
 		{
 			if (isInCircle)
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D745 RID: 251717 RVA: 0x00ED3BF5 File Offset: 0x00ED1DF5
+		// Token: 0x060326D5 RID: 206549 RVA: 0x00E25165 File Offset: 0x00E23365
 		public void RefreshHighLightExploreSkill()
 		{
 			this.HighLightExploreSkill(false);
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D746 RID: 251718 RVA: 0x00ED3C28 File Offset: 0x00ED1E28
+		// Token: 0x060326D6 RID: 206550 RVA: 0x00E25198 File Offset: 0x00E23398
 		private void HighLightExploreSkill(bool isHighLight)
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D747 RID: 251719 RVA: 0x00ED3D14 File Offset: 0x00ED1F14
+		// Token: 0x060326D7 RID: 206551 RVA: 0x00E25284 File Offset: 0x00E23484
 		private void RefreshAutoPilotAreaId()
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
@@ -406,13 +406,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			AutoPilotModel.Instance.AutoPilotAreaId = this.GetAutoPilotAreaId(characterActorComponent.ActorLocationProxy, currentWorldMapConfigId);
 		}
 
-		// Token: 0x0603D748 RID: 251720 RVA: 0x00ED3D59 File Offset: 0x00ED1F59
+		// Token: 0x060326D8 RID: 206552 RVA: 0x00E252C9 File Offset: 0x00E234C9
 		public int GetAutoPilotAreaId(global::Vector inputP, int mapId)
 		{
 			return this.AreaCheck.BinTest(inputP, mapId);
 		}
 
-		// Token: 0x0603D749 RID: 251721 RVA: 0x00ED3D68 File Offset: 0x00ED1F68
+		// Token: 0x060326D9 RID: 206553 RVA: 0x00E252D8 File Offset: 0x00E234D8
 		private void OnTickAutoPilotTime(float? delta)
 		{
 			if (delta == null)
@@ -427,13 +427,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			instance.AddAutoPilotTime((double)delta.Value);
 		}
 
-		// Token: 0x0603D74A RID: 251722 RVA: 0x00ED3D8B File Offset: 0x00ED1F8B
+		// Token: 0x060326DA RID: 206554 RVA: 0x00E252FB File Offset: 0x00E234FB
 		public void SummonMotorAndEnterAutoPilot()
 		{
 			AutoPilotModel.Instance.IsSummonWaitingEnterVehicle = true;
 		}
 
-		// Token: 0x0603D74B RID: 251723 RVA: 0x00ED3D98 File Offset: 0x00ED1F98
+		// Token: 0x060326DB RID: 206555 RVA: 0x00E25308 File Offset: 0x00E23508
 		private void OnChangeSelectedExploreId()
 		{
 			if (AutoPilotModel.Instance.IsSummonWaitingEnterVehicle)
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D74C RID: 251724 RVA: 0x00ED3DB4 File Offset: 0x00ED1FB4
+		// Token: 0x060326DC RID: 206556 RVA: 0x00E25324 File Offset: 0x00E23524
 		private UniTask SummonMotor()
 		{
 			AutoPilotController.<SummonMotor>d__46 <SummonMotor>d__;
@@ -452,7 +452,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <SummonMotor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D74D RID: 251725 RVA: 0x00ED3DF0 File Offset: 0x00ED1FF0
+		// Token: 0x060326DD RID: 206557 RVA: 0x00E25360 File Offset: 0x00E23560
 		private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsDriver || info.VehicleType != EVehicleType.Motorcycle || !info.IsRolePassenger(true))
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.RefreshHighLightExploreSkill();
 		}
 
-		// Token: 0x0603D74E RID: 251726 RVA: 0x00ED3E68 File Offset: 0x00ED2068
+		// Token: 0x060326DE RID: 206558 RVA: 0x00E253D8 File Offset: 0x00E235D8
 		private void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsDriver || info.VehicleType != EVehicleType.Motorcycle || !info.IsRolePassenger(true))
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}, null, null);
 		}
 
-		// Token: 0x0603D74F RID: 251727 RVA: 0x00ED3EB4 File Offset: 0x00ED20B4
+		// Token: 0x060326DF RID: 206559 RVA: 0x00E25424 File Offset: 0x00E23624
 		private void OnTickDistanceToAutopilotRoute(float? _)
 		{
 			if (!AutoPilotModel.Instance.GetIsInAutoPilot())
@@ -531,7 +531,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D750 RID: 251728 RVA: 0x00ED3FB9 File Offset: 0x00ED21B9
+		// Token: 0x060326E0 RID: 206560 RVA: 0x00E25529 File Offset: 0x00E23729
 		private void OnInfrastructureRoadDataUpdate()
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
@@ -542,8 +542,8 @@ namespace CSharpScript.Game.Module.AutoPilot
 			instance.UpdateCirclePathData();
 		}
 
-		// Token: 0x17008E77 RID: 36471
-		// (get) Token: 0x0603D751 RID: 251729 RVA: 0x00ED3FCA File Offset: 0x00ED21CA
+		// Token: 0x17006249 RID: 25161
+		// (get) Token: 0x060326E1 RID: 206561 RVA: 0x00E2553A File Offset: 0x00E2373A
 		[Nullable(2)]
 		public AutoPilotView AutoPilotViewInstance
 		{
@@ -554,7 +554,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D752 RID: 251730 RVA: 0x00ED3FD2 File Offset: 0x00ED21D2
+		// Token: 0x060326E2 RID: 206562 RVA: 0x00E25542 File Offset: 0x00E23742
 		private void ClearLeaveVehicleTimer()
 		{
 			if (TimerSystem.Instance.Has(this.LeaveVehicleTimer))
@@ -564,7 +564,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D753 RID: 251731 RVA: 0x00ED4000 File Offset: 0x00ED2200
+		// Token: 0x060326E3 RID: 206563 RVA: 0x00E25570 File Offset: 0x00E23770
 		private void AutoPilotServerReq(bool isStart)
 		{
 			MotorCycleCruiseStatePush motorCycleCruiseStatePush = MotorCycleCruiseStatePush.Create();
@@ -572,7 +572,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			Net.Instance.Send(EPushMessageId.MotorCycleCruiseStatePush, motorCycleCruiseStatePush);
 		}
 
-		// Token: 0x0603D754 RID: 251732 RVA: 0x00ED402C File Offset: 0x00ED222C
+		// Token: 0x060326E4 RID: 206564 RVA: 0x00E2559C File Offset: 0x00E2379C
 		private void OnTickAutoPilotStuck(float? deltaF)
 		{
 			if (this.IsRecoveringFromStuck)
@@ -615,7 +615,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}).Forget();
 		}
 
-		// Token: 0x0603D755 RID: 251733 RVA: 0x00ED4158 File Offset: 0x00ED2358
+		// Token: 0x060326E5 RID: 206565 RVA: 0x00E256C8 File Offset: 0x00E238C8
 		private UniTask RecoverFromStuck()
 		{
 			AutoPilotController.<RecoverFromStuck>d__56 <RecoverFromStuck>d__;
@@ -626,7 +626,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <RecoverFromStuck>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D756 RID: 251734 RVA: 0x00ED419C File Offset: 0x00ED239C
+		// Token: 0x060326E6 RID: 206566 RVA: 0x00E2570C File Offset: 0x00E2390C
 		private bool CheckIsPositionBlock(FVectorDouble start, FVectorDouble end)
 		{
 			VehicleActorComponent component = AutoPilotModel.Instance.VehicleEntity.GetComponent<VehicleActorComponent>();
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return TraceElementCommon.Instance.ShapeTrace(capsuleComponent, this.TraceElement, "AutoPilotController CheckIsPositionBlock", "AutoPilotController CheckIsPositionBlock");
 		}
 
-		// Token: 0x0603D757 RID: 251735 RVA: 0x00ED428C File Offset: 0x00ED248C
+		// Token: 0x060326E7 RID: 206567 RVA: 0x00E257FC File Offset: 0x00E239FC
 		private UTraceSphereElement GetTraceElement()
 		{
 			if (this.TraceElement == null || !this.TraceElement.IsValid())
@@ -682,8 +682,8 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return this.TraceElement;
 		}
 
-		// Token: 0x17008E78 RID: 36472
-		// (get) Token: 0x0603D758 RID: 251736 RVA: 0x00ED4368 File Offset: 0x00ED2568
+		// Token: 0x1700624A RID: 25162
+		// (get) Token: 0x060326E8 RID: 206568 RVA: 0x00E258D8 File Offset: 0x00E23AD8
 		public static AutoPilotController Instance
 		{
 			get
@@ -692,7 +692,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D759 RID: 251737 RVA: 0x00ED436F File Offset: 0x00ED256F
+		// Token: 0x060326E9 RID: 206569 RVA: 0x00E258DF File Offset: 0x00E23ADF
 		public static AutoPilotController GetOrCreateInstance()
 		{
 			if (AutoPilotController._Instance == null)
@@ -702,7 +702,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return AutoPilotController._Instance;
 		}
 
-		// Token: 0x0603D75A RID: 251738 RVA: 0x00ED4383 File Offset: 0x00ED2583
+		// Token: 0x060326EA RID: 206570 RVA: 0x00E258F3 File Offset: 0x00E23AF3
 		public static bool CreateInstance()
 		{
 			if (AutoPilotController._Instance != null)
@@ -713,82 +713,82 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return true;
 		}
 
-		// Token: 0x0603D75B RID: 251739 RVA: 0x00ED4399 File Offset: 0x00ED2599
+		// Token: 0x060326EB RID: 206571 RVA: 0x00E25909 File Offset: 0x00E23B09
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603D75C RID: 251740 RVA: 0x00ED439B File Offset: 0x00ED259B
+		// Token: 0x060326EC RID: 206572 RVA: 0x00E2590B File Offset: 0x00E23B0B
 		public static void ResetStaticDefaultValue()
 		{
 			AutoPilotController._Instance = null;
 		}
 
-		// Token: 0x0603D75D RID: 251741 RVA: 0x00ED43A3 File Offset: 0x00ED25A3
+		// Token: 0x060326ED RID: 206573 RVA: 0x00E25913 File Offset: 0x00E23B13
 		static AutoPilotController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AutoPilotController.CreateStaticDefaultValue), new Action(AutoPilotController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402010F RID: 131343
+		// Token: 0x0401ABD6 RID: 109526
 		private const int BLOCK_DETECT_RADIUS = 15;
 
-		// Token: 0x04020110 RID: 131344
+		// Token: 0x0401ABD7 RID: 109527
 		private const int BLOCK_DETECT_HEIGHT = 100;
 
-		// Token: 0x04020111 RID: 131345
+		// Token: 0x0401ABD8 RID: 109528
 		private const int BLOCK_DETECT_DIS = 4000;
 
-		// Token: 0x04020112 RID: 131346
+		// Token: 0x0401ABD9 RID: 109529
 		private const int BLOCK_DETECT_MAXTIMES = 10;
 
-		// Token: 0x04020113 RID: 131347
+		// Token: 0x0401ABDA RID: 109530
 		private const string PROFILE_KEY = "AutoPilotController CheckIsPositionBlock";
 
-		// Token: 0x04020114 RID: 131348
+		// Token: 0x0401ABDB RID: 109531
 		[Nullable(2)]
 		private AutoPilotView AutoPilotView;
 
-		// Token: 0x04020115 RID: 131349
+		// Token: 0x0401ABDC RID: 109532
 		public readonly AutoPilotAreaCheck AreaCheck = new AutoPilotAreaCheck();
 
-		// Token: 0x04020116 RID: 131350
+		// Token: 0x0401ABDD RID: 109533
 		private readonly global::Vector OffsetVector = global::Vector.Create();
 
-		// Token: 0x04020117 RID: 131351
+		// Token: 0x0401ABDE RID: 109534
 		private readonly global::Vector OffsetVectorH = global::Vector.Create();
 
-		// Token: 0x04020118 RID: 131352
+		// Token: 0x0401ABDF RID: 109535
 		private readonly global::Vector OffsetVectorV = global::Vector.Create();
 
-		// Token: 0x04020119 RID: 131353
+		// Token: 0x0401ABE0 RID: 109536
 		private readonly HashSet<Action<float?>> TickGroup = new HashSet<Action<float?>>();
 
-		// Token: 0x0402011A RID: 131354
+		// Token: 0x0401ABE1 RID: 109537
 		[Nullable(2)]
 		private TimerHandle LeaveVehicleTimer;
 
-		// Token: 0x0402011B RID: 131355
+		// Token: 0x0401ABE2 RID: 109538
 		private bool IsOnMotor;
 
-		// Token: 0x0402011C RID: 131356
+		// Token: 0x0401ABE3 RID: 109539
 		[Nullable(2)]
 		private AutoPilotSkillHighLightLogic HighLightLogic;
 
-		// Token: 0x0402011D RID: 131357
+		// Token: 0x0401ABE4 RID: 109540
 		private float StuckAccumulatedTime;
 
-		// Token: 0x0402011E RID: 131358
+		// Token: 0x0401ABE5 RID: 109541
 		private readonly global::Vector StuckLastLocation = global::Vector.Create();
 
-		// Token: 0x0402011F RID: 131359
+		// Token: 0x0401ABE6 RID: 109542
 		private bool IsRecoveringFromStuck;
 
-		// Token: 0x04020120 RID: 131360
+		// Token: 0x0401ABE7 RID: 109543
 		[Nullable(2)]
 		private UTraceSphereElement TraceElement;
 
-		// Token: 0x04020121 RID: 131361
+		// Token: 0x0401ABE8 RID: 109544
 		[Nullable(2)]
 		private static AutoPilotController _Instance;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000692 RID: 1682
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000733 RID: 1843
 	public class IRtSize
 	{
-		// Token: 0x06002408 RID: 9224 RVA: 0x00061EB8 File Offset: 0x000600B8
+		// Token: 0x06002724 RID: 10020 RVA: 0x00068E80 File Offset: 0x00067080
 		private IRtSize_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002409 RID: 9225 RVA: 0x00061EF0 File Offset: 0x000600F0
+		// Token: 0x06002725 RID: 10021 RVA: 0x00068EB8 File Offset: 0x000670B8
 		public static IRtSize Create([Nullable(2)] IRtSize instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600240A RID: 9226 RVA: 0x00061F03 File Offset: 0x00060103
+		// Token: 0x06002726 RID: 10022 RVA: 0x00068ECB File Offset: 0x000670CB
 		public static IRtSize CreateFromSetValue([Nullable(2)] IRtSize_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600240B RID: 9227 RVA: 0x00061F16 File Offset: 0x00060116
+		// Token: 0x06002727 RID: 10023 RVA: 0x00068EDE File Offset: 0x000670DE
 		public IRtSize_SetValue ToSetValue()
 		{
 			return new IRtSize_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000988 RID: 2440
-		// (get) Token: 0x0600240C RID: 9228 RVA: 0x00061F35 File Offset: 0x00060135
-		// (set) Token: 0x0600240D RID: 9229 RVA: 0x00061F60 File Offset: 0x00060160
+		// Token: 0x17000A44 RID: 2628
+		// (get) Token: 0x06002728 RID: 10024 RVA: 0x00068EFD File Offset: 0x000670FD
+		// (set) Token: 0x06002729 RID: 10025 RVA: 0x00068F28 File Offset: 0x00067128
 		public virtual int Length
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000989 RID: 2441
-		// (get) Token: 0x0600240E RID: 9230 RVA: 0x00061F6E File Offset: 0x0006016E
-		// (set) Token: 0x0600240F RID: 9231 RVA: 0x00061F99 File Offset: 0x00060199
+		// Token: 0x17000A45 RID: 2629
+		// (get) Token: 0x0600272A RID: 10026 RVA: 0x00068F36 File Offset: 0x00067136
+		// (set) Token: 0x0600272B RID: 10027 RVA: 0x00068F61 File Offset: 0x00067161
 		public virtual int Width
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040018CA RID: 6346
+		// Token: 0x04001AC7 RID: 6855
 		[Nullable(2)]
 		protected IRtSize FbInstance;
 
-		// Token: 0x040018CB RID: 6347
+		// Token: 0x04001AC8 RID: 6856
 		[Nullable(2)]
 		protected IRtSize_SetValue PocoInterface;
 	}

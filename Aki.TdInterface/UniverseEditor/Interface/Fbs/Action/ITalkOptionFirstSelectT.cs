@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200732F RID: 29487
+	// Token: 0x02007B07 RID: 31495
 	public class ITalkOptionFirstSelectT
 	{
-		// Token: 0x1700DFFD RID: 57341
-		// (get) Token: 0x0603583A RID: 219194 RVA: 0x0074A56A File Offset: 0x0074876A
-		// (set) Token: 0x0603583B RID: 219195 RVA: 0x0074A572 File Offset: 0x00748772
+		// Token: 0x1700EBF9 RID: 60409
+		// (get) Token: 0x06038B6D RID: 232301 RVA: 0x007AC0F2 File Offset: 0x007AA2F2
+		// (set) Token: 0x06038B6E RID: 232302 RVA: 0x007AC0FA File Offset: 0x007AA2FA
 		public ETalkOptionPreConditionType Type { get; set; }
 
-		// Token: 0x0603583C RID: 219196 RVA: 0x0074A57B File Offset: 0x0074877B
+		// Token: 0x06038B6F RID: 232303 RVA: 0x007AC103 File Offset: 0x007AA303
 		public ITalkOptionFirstSelectT()
 		{
 			this.Type = ETalkOptionPreConditionType.PreOption;

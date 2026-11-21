@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000624 RID: 1572
+	// Token: 0x0200063C RID: 1596
 	public class ConfigOccupyScoreAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060024E8 RID: 9448 RVA: 0x0012A641 File Offset: 0x00128841
+		// Token: 0x06002578 RID: 9592 RVA: 0x001310BD File Offset: 0x0012F2BD
 		static ConfigOccupyScoreAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigOccupyScoreAll.CreateStaticDefaultValue), new Action(ConfigOccupyScoreAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060024E9 RID: 9449 RVA: 0x0012A660 File Offset: 0x00128860
+		// Token: 0x06002579 RID: 9593 RVA: 0x001310DC File Offset: 0x0012F2DC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigOccupyScoreAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060024EA RID: 9450 RVA: 0x0012A6DF File Offset: 0x001288DF
+		// Token: 0x0600257A RID: 9594 RVA: 0x0013115B File Offset: 0x0012F35B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigOccupyScoreAll.LogPair = null;
 			ConfigOccupyScoreAll.HandleId = 0;
 		}
 
-		// Token: 0x060024EB RID: 9451 RVA: 0x0012A6ED File Offset: 0x001288ED
+		// Token: 0x0600257B RID: 9595 RVA: 0x00131169 File Offset: 0x0012F369
 		public static void Init()
 		{
 			ConfigOccupyScoreAll.HandleId = ConfigCommon.InitDataStatement(ConfigOccupyScoreAll.HandleId, "db_moraleplay.db", "select BinData from `OccupyScore`");
 		}
 
-		// Token: 0x060024EC RID: 9452 RVA: 0x0012A708 File Offset: 0x00128908
+		// Token: 0x0600257C RID: 9596 RVA: 0x00131184 File Offset: 0x0012F384
 		[NullableContext(2)]
 		public static IReadOnlyList<OccupyScore> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002AE2 RID: 10978
+		// Token: 0x04002B8A RID: 11146
 		private const string DB = "db_moraleplay.db";
 
-		// Token: 0x04002AE3 RID: 10979
+		// Token: 0x04002B8B RID: 11147
 		private const string FILE = "c.插旗玩法.xlsx";
 
-		// Token: 0x04002AE4 RID: 10980
+		// Token: 0x04002B8C RID: 11148
 		private const string TABLE = "OccupyScore";
 
-		// Token: 0x04002AE5 RID: 10981
+		// Token: 0x04002B8D RID: 11149
 		private const string COMMAND = "select BinData from `OccupyScore`";
 
-		// Token: 0x04002AE6 RID: 10982
+		// Token: 0x04002B8E RID: 11150
 		private const string KEY_PREFIX = "OccupyScoreAll";
 
-		// Token: 0x04002AE7 RID: 10983
+		// Token: 0x04002B8F RID: 11151
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002AE8 RID: 10984
+		// Token: 0x04002B90 RID: 11152
 		private static int HandleId;
 	}
 }

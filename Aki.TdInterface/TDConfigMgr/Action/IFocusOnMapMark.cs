@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AAF RID: 6831
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C48 RID: 7240
 	public class IFocusOnMapMark
 	{
-		// Token: 0x06009282 RID: 37506 RVA: 0x00154950 File Offset: 0x00152B50
+		// Token: 0x06009A02 RID: 39426 RVA: 0x00164B3C File Offset: 0x00162D3C
 		private IFocusOnMapMark_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009283 RID: 37507 RVA: 0x00154988 File Offset: 0x00152B88
+		// Token: 0x06009A03 RID: 39427 RVA: 0x00164B74 File Offset: 0x00162D74
 		public static IFocusOnMapMark Create([Nullable(2)] IFocusOnMapMark instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009284 RID: 37508 RVA: 0x0015499B File Offset: 0x00152B9B
+		// Token: 0x06009A04 RID: 39428 RVA: 0x00164B87 File Offset: 0x00162D87
 		public static IFocusOnMapMark CreateFromSetValue([Nullable(2)] IFocusOnMapMark_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009285 RID: 37509 RVA: 0x001549AE File Offset: 0x00152BAE
+		// Token: 0x06009A05 RID: 39429 RVA: 0x00164B9A File Offset: 0x00162D9A
 		public IFocusOnMapMark_SetValue ToSetValue()
 		{
 			return new IFocusOnMapMark_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E90 RID: 11920
-		// (get) Token: 0x06009286 RID: 37510 RVA: 0x001549C1 File Offset: 0x00152BC1
-		// (set) Token: 0x06009287 RID: 37511 RVA: 0x001549EC File Offset: 0x00152BEC
+		// Token: 0x170030A2 RID: 12450
+		// (get) Token: 0x06009A06 RID: 39430 RVA: 0x00164BAD File Offset: 0x00162DAD
+		// (set) Token: 0x06009A07 RID: 39431 RVA: 0x00164BD8 File Offset: 0x00162DD8
 		public virtual EMapMarkType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A35 RID: 23093
+		// Token: 0x04005EA5 RID: 24229
 		[Nullable(2)]
 		protected IFocusOnMapMark FbInstance;
 
-		// Token: 0x04005A36 RID: 23094
+		// Token: 0x04005EA6 RID: 24230
 		[Nullable(2)]
 		protected IFocusOnMapMark_SetValue PocoInterface;
 	}

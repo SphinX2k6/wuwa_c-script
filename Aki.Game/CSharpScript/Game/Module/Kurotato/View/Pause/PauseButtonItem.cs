@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Pause
 {
-	// Token: 0x0200573E RID: 22334
+	// Token: 0x02004715 RID: 18197
 	internal class PauseButtonItem : UiPanelBase
 	{
-		// Token: 0x06038C73 RID: 232563 RVA: 0x00D7B0CC File Offset: 0x00D792CC
+		// Token: 0x0602DB83 RID: 187267 RVA: 0x00CC977C File Offset: 0x00CC797C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,14 +31,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038C74 RID: 232564 RVA: 0x00D7B172 File Offset: 0x00D79372
+		// Token: 0x0602DB84 RID: 187268 RVA: 0x00CC9822 File Offset: 0x00CC7A22
 		[NullableContext(1)]
 		public void SetClickCb(Action cb)
 		{
 			this.ClickCb = cb;
 		}
 
-		// Token: 0x06038C75 RID: 232565 RVA: 0x00D7B17B File Offset: 0x00D7937B
+		// Token: 0x0602DB85 RID: 187269 RVA: 0x00CC982B File Offset: 0x00CC7A2B
 		private void OnClick()
 		{
 			Action clickCb = this.ClickCb;
@@ -49,16 +49,16 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			clickCb();
 		}
 
-		// Token: 0x0401DC88 RID: 121992
+		// Token: 0x0401871E RID: 100126
 		[Nullable(2)]
 		private Action ClickCb;
 
-		// Token: 0x0200B922 RID: 47394
+		// Token: 0x0200A343 RID: 41795
 		private enum EPauseBtnComp
 		{
-			// Token: 0x04037FE2 RID: 229346
+			// Token: 0x040329F2 RID: 207346
 			Self,
-			// Token: 0x04037FE3 RID: 229347
+			// Token: 0x040329F3 RID: 207347
 			Button
 		}
 	}

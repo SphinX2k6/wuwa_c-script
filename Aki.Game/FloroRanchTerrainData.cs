@@ -2,20 +2,20 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001B07 RID: 6919
+// Token: 0x02000FC6 RID: 4038
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchTerrainData
 {
-	// Token: 0x0600CD6E RID: 52590 RVA: 0x002ED0A7 File Offset: 0x002EB2A7
+	// Token: 0x0600A17F RID: 41343 RVA: 0x002F8193 File Offset: 0x002F6393
 	public FloroRanchTerrainData(FloroRanchTerrain config)
 	{
 		this.Config = config;
 		this.TagData.SetTagId(this.Config.Tag);
 	}
 
-	// Token: 0x17001129 RID: 4393
-	// (get) Token: 0x0600CD6F RID: 52591 RVA: 0x002ED0D8 File Offset: 0x002EB2D8
+	// Token: 0x1700114E RID: 4430
+	// (get) Token: 0x0600A180 RID: 41344 RVA: 0x002F81C4 File Offset: 0x002F63C4
 	public string Name
 	{
 		get
@@ -24,8 +24,8 @@ public class FloroRanchTerrainData
 		}
 	}
 
-	// Token: 0x1700112A RID: 4394
-	// (get) Token: 0x0600CD70 RID: 52592 RVA: 0x002ED0F9 File Offset: 0x002EB2F9
+	// Token: 0x1700114F RID: 4431
+	// (get) Token: 0x0600A181 RID: 41345 RVA: 0x002F81E5 File Offset: 0x002F63E5
 	public string Desc
 	{
 		get
@@ -34,8 +34,8 @@ public class FloroRanchTerrainData
 		}
 	}
 
-	// Token: 0x1700112B RID: 4395
-	// (get) Token: 0x0600CD71 RID: 52593 RVA: 0x002ED108 File Offset: 0x002EB308
+	// Token: 0x17001150 RID: 4432
+	// (get) Token: 0x0600A182 RID: 41346 RVA: 0x002F81F4 File Offset: 0x002F63F4
 	public string Icon
 	{
 		get
@@ -44,9 +44,9 @@ public class FloroRanchTerrainData
 		}
 	}
 
-	// Token: 0x04005E37 RID: 24119
+	// Token: 0x04005F06 RID: 24326
 	private readonly FloroRanchTerrain Config;
 
-	// Token: 0x04005E38 RID: 24120
+	// Token: 0x04005F07 RID: 24327
 	public FloroRanchTagData TagData = new FloroRanchTagData();
 }

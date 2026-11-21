@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C9A RID: 23706
+	// Token: 0x020062CB RID: 25291
 	public class TRefreshRuleUnion
 	{
-		// Token: 0x1700B244 RID: 45636
-		// (get) Token: 0x0602898D RID: 166285 RVA: 0x005948B6 File Offset: 0x00592AB6
-		// (set) Token: 0x0602898E RID: 166286 RVA: 0x005948BE File Offset: 0x00592ABE
+		// Token: 0x1700BB9E RID: 48030
+		// (get) Token: 0x0602AFD3 RID: 176083 RVA: 0x005DCFEE File Offset: 0x005DB1EE
+		// (set) Token: 0x0602AFD4 RID: 176084 RVA: 0x005DCFF6 File Offset: 0x005DB1F6
 		public TRefreshRule Type { get; set; }
 
-		// Token: 0x1700B245 RID: 45637
-		// (get) Token: 0x0602898F RID: 166287 RVA: 0x005948C7 File Offset: 0x00592AC7
-		// (set) Token: 0x06028990 RID: 166288 RVA: 0x005948CF File Offset: 0x00592ACF
+		// Token: 0x1700BB9F RID: 48031
+		// (get) Token: 0x0602AFD5 RID: 176085 RVA: 0x005DCFFF File Offset: 0x005DB1FF
+		// (set) Token: 0x0602AFD6 RID: 176086 RVA: 0x005DD007 File Offset: 0x005DB207
 		public object Value { get; set; }
 
-		// Token: 0x06028991 RID: 166289 RVA: 0x005948D8 File Offset: 0x00592AD8
+		// Token: 0x0602AFD7 RID: 176087 RVA: 0x005DD010 File Offset: 0x005DB210
 		public TRefreshRuleUnion()
 		{
 			this.Type = TRefreshRule.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028992 RID: 166290 RVA: 0x005948EE File Offset: 0x00592AEE
+		// Token: 0x0602AFD8 RID: 176088 RVA: 0x005DD026 File Offset: 0x005DB226
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028993 RID: 166291 RVA: 0x00594900 File Offset: 0x00592B00
+		// Token: 0x0602AFD9 RID: 176089 RVA: 0x005DD038 File Offset: 0x005DB238
 		public ICdRefreshRuleT AsICdRefreshRule()
 		{
 			return this.As<ICdRefreshRuleT>();
 		}
 
-		// Token: 0x06028994 RID: 166292 RVA: 0x00594908 File Offset: 0x00592B08
+		// Token: 0x0602AFDA RID: 176090 RVA: 0x005DD040 File Offset: 0x005DB240
 		public static TRefreshRuleUnion FromICdRefreshRule(ICdRefreshRuleT _icdrefreshrule)
 		{
 			return new TRefreshRuleUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028995 RID: 166293 RVA: 0x0059491D File Offset: 0x00592B1D
+		// Token: 0x0602AFDB RID: 176091 RVA: 0x005DD055 File Offset: 0x005DB255
 		public IFixedDateTimeRefreshRuleT AsIFixedDateTimeRefreshRule()
 		{
 			return this.As<IFixedDateTimeRefreshRuleT>();
 		}
 
-		// Token: 0x06028996 RID: 166294 RVA: 0x00594925 File Offset: 0x00592B25
+		// Token: 0x0602AFDC RID: 176092 RVA: 0x005DD05D File Offset: 0x005DB25D
 		public static TRefreshRuleUnion FromIFixedDateTimeRefreshRule(IFixedDateTimeRefreshRuleT _ifixeddatetimerefreshrule)
 		{
 			return new TRefreshRuleUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028997 RID: 166295 RVA: 0x0059493A File Offset: 0x00592B3A
+		// Token: 0x0602AFDD RID: 176093 RVA: 0x005DD072 File Offset: 0x005DB272
 		public IRandomNpcRuleT AsIRandomNpcRule()
 		{
 			return this.As<IRandomNpcRuleT>();
 		}
 
-		// Token: 0x06028998 RID: 166296 RVA: 0x00594942 File Offset: 0x00592B42
+		// Token: 0x0602AFDE RID: 176094 RVA: 0x005DD07A File Offset: 0x005DB27A
 		public static TRefreshRuleUnion FromIRandomNpcRule(IRandomNpcRuleT _irandomnpcrule)
 		{
 			return new TRefreshRuleUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028999 RID: 166297 RVA: 0x00594958 File Offset: 0x00592B58
+		// Token: 0x0602AFDF RID: 176095 RVA: 0x005DD090 File Offset: 0x005DB290
 		public static int Pack(FlatBufferBuilder builder, TRefreshRuleUnion _o)
 		{
 			switch (_o.Type)

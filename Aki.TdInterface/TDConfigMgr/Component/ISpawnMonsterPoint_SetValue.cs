@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006EB RID: 1771
+	// Token: 0x0200078C RID: 1932
 	public class ISpawnMonsterPoint_SetValue
 	{
-		// Token: 0x040019F5 RID: 6645
+		// Token: 0x04001BF4 RID: 7156
 		public EPointChooseType Type;
 
-		// Token: 0x040019F6 RID: 6646
-		[Nullable(1)]
+		// Token: 0x04001BF5 RID: 7157
 		public ISearchSpawnMonsterPoint RangeConstraint;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066AF RID: 26287
+	// Token: 0x020055FF RID: 22015
 	public enum EDropCatchGameplayInputSource
 	{
-		// Token: 0x040223FA RID: 140282
+		// Token: 0x0401CC53 RID: 117843
 		Joystick,
-		// Token: 0x040223FB RID: 140283
+		// Token: 0x0401CC54 RID: 117844
 		Command
 	}
 }

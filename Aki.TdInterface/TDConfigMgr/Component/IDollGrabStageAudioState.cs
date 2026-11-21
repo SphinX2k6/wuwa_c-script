@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002C9 RID: 713
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000310 RID: 784
 	public class IDollGrabStageAudioState
 	{
-		// Token: 0x06000D6D RID: 3437 RVA: 0x00032200 File Offset: 0x00030400
+		// Token: 0x06000E9D RID: 3741 RVA: 0x00035134 File Offset: 0x00033334
 		private IDollGrabStageAudioState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000D6E RID: 3438 RVA: 0x00032238 File Offset: 0x00030438
+		// Token: 0x06000E9E RID: 3742 RVA: 0x0003516C File Offset: 0x0003336C
 		public static IDollGrabStageAudioState Create([Nullable(2)] IDollGrabStageAudioState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D6F RID: 3439 RVA: 0x0003224B File Offset: 0x0003044B
+		// Token: 0x06000E9F RID: 3743 RVA: 0x0003517F File Offset: 0x0003337F
 		public static IDollGrabStageAudioState CreateFromSetValue([Nullable(2)] IDollGrabStageAudioState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D70 RID: 3440 RVA: 0x0003225E File Offset: 0x0003045E
+		// Token: 0x06000EA0 RID: 3744 RVA: 0x00035192 File Offset: 0x00033392
 		public IDollGrabStageAudioState_SetValue ToSetValue()
 		{
 			return new IDollGrabStageAudioState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003E6 RID: 998
-		// (get) Token: 0x06000D71 RID: 3441 RVA: 0x0003227D File Offset: 0x0003047D
-		// (set) Token: 0x06000D72 RID: 3442 RVA: 0x000322A8 File Offset: 0x000304A8
+		// Token: 0x17000433 RID: 1075
+		// (get) Token: 0x06000EA1 RID: 3745 RVA: 0x000351B1 File Offset: 0x000333B1
+		// (set) Token: 0x06000EA2 RID: 3746 RVA: 0x000351DC File Offset: 0x000333DC
 		public virtual string Group
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003E7 RID: 999
-		// (get) Token: 0x06000D73 RID: 3443 RVA: 0x000322B6 File Offset: 0x000304B6
-		// (set) Token: 0x06000D74 RID: 3444 RVA: 0x000322E1 File Offset: 0x000304E1
+		// Token: 0x17000434 RID: 1076
+		// (get) Token: 0x06000EA3 RID: 3747 RVA: 0x000351EA File Offset: 0x000333EA
+		// (set) Token: 0x06000EA4 RID: 3748 RVA: 0x00035215 File Offset: 0x00033415
 		public virtual string State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C2F RID: 3119
+		// Token: 0x04000D19 RID: 3353
 		[Nullable(2)]
 		protected IDollGrabStageAudioState FbInstance;
 
-		// Token: 0x04000C30 RID: 3120
+		// Token: 0x04000D1A RID: 3354
 		[Nullable(2)]
 		protected IDollGrabStageAudioState_SetValue PocoInterface;
 	}

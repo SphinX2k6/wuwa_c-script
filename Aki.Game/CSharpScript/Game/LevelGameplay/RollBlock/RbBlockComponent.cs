@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock
 {
-	// Token: 0x02006AA0 RID: 27296
+	// Token: 0x02005BFD RID: 23549
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RbBlockComponent : RbBaseComponent
 	{
-		// Token: 0x06043D03 RID: 277763 RVA: 0x0109934C File Offset: 0x0109754C
+		// Token: 0x06039D51 RID: 236881 RVA: 0x0103DB50 File Offset: 0x0103BD50
 		protected unsafe override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return true;
 		}
 
-		// Token: 0x06043D04 RID: 277764 RVA: 0x010995A0 File Offset: 0x010977A0
+		// Token: 0x06039D52 RID: 236882 RVA: 0x0103DDA4 File Offset: 0x0103BFA4
 		public override void RegisterToGameplay(int incId)
 		{
 			base.RegisterToGameplay(incId);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D05 RID: 277765 RVA: 0x01099628 File Offset: 0x01097828
+		// Token: 0x06039D53 RID: 236883 RVA: 0x0103DE2C File Offset: 0x0103C02C
 		protected unsafe override void OnTick(float delta)
 		{
 			if (this.FirstTick)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D06 RID: 277766 RVA: 0x0109981D File Offset: 0x01097A1D
+		// Token: 0x06039D54 RID: 236884 RVA: 0x0103E021 File Offset: 0x0103C221
 		protected override bool OnEnd()
 		{
 			if (this.IsVisionBlock)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return true;
 		}
 
-		// Token: 0x06043D07 RID: 277767 RVA: 0x0109983D File Offset: 0x01097A3D
+		// Token: 0x06039D55 RID: 236885 RVA: 0x0103E041 File Offset: 0x0103C241
 		private void InitMoveState()
 		{
 			this.IdleState = new RbIdleState(this);
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			this.JumpState = new RbJumpState(this);
 		}
 
-		// Token: 0x06043D08 RID: 277768 RVA: 0x01099864 File Offset: 0x01097A64
+		// Token: 0x06039D56 RID: 236886 RVA: 0x0103E068 File Offset: 0x0103C268
 		[NullableContext(1)]
 		public global::Vector CalculateRotationCenter(float halfHeight, global::Vector inputVector)
 		{
@@ -231,12 +231,12 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return vector;
 		}
 
-		// Token: 0x06043D09 RID: 277769 RVA: 0x01099A77 File Offset: 0x01097C77
+		// Token: 0x06039D57 RID: 236887 RVA: 0x0103E27B File Offset: 0x0103C47B
 		public void UpdateAvailableMovement()
 		{
 		}
 
-		// Token: 0x06043D0A RID: 277770 RVA: 0x01099A7C File Offset: 0x01097C7C
+		// Token: 0x06039D58 RID: 236888 RVA: 0x0103E280 File Offset: 0x0103C480
 		public global::Vector PbDirToVector(RbGridDirection pbDir)
 		{
 			if (this.ActorComp == null)
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return vector;
 		}
 
-		// Token: 0x06043D0B RID: 277771 RVA: 0x01099B5C File Offset: 0x01097D5C
+		// Token: 0x06039D59 RID: 236889 RVA: 0x0103E360 File Offset: 0x0103C560
 		[NullableContext(1)]
 		public unsafe void ChangeMoveState(RbBlockPbState newState, bool force = false)
 		{
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D0C RID: 277772 RVA: 0x01099D9C File Offset: 0x01097F9C
+		// Token: 0x06039D5A RID: 236890 RVA: 0x0103E5A0 File Offset: 0x0103C7A0
 		private void SetCurMoveState(RbBaseMoveState value, [Nullable(new byte[]
 		{
 			0,
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D0D RID: 277773 RVA: 0x01099E64 File Offset: 0x01098064
+		// Token: 0x06039D5B RID: 236891 RVA: 0x0103E668 File Offset: 0x0103C868
 		[NullableContext(1)]
 		private void CacheNewMoveState(RbBlockPbState info)
 		{
@@ -402,8 +402,8 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			this.CacheStateInfo.Push(info);
 		}
 
-		// Token: 0x17009944 RID: 39236
-		// (get) Token: 0x06043D0E RID: 277774 RVA: 0x01099ED6 File Offset: 0x010980D6
+		// Token: 0x17006E29 RID: 28201
+		// (get) Token: 0x06039D5C RID: 236892 RVA: 0x0103E6DA File Offset: 0x0103C8DA
 		public FTransformDouble Transform
 		{
 			get
@@ -412,8 +412,8 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x17009945 RID: 39237
-		// (get) Token: 0x06043D0F RID: 277775 RVA: 0x01099EE3 File Offset: 0x010980E3
+		// Token: 0x17006E2A RID: 28202
+		// (get) Token: 0x06039D5D RID: 236893 RVA: 0x0103E6E7 File Offset: 0x0103C8E7
 		public long CreatureDataId
 		{
 			get
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D10 RID: 277776 RVA: 0x01099EF0 File Offset: 0x010980F0
+		// Token: 0x06039D5E RID: 236894 RVA: 0x0103E6F4 File Offset: 0x0103C8F4
 		public void SetActorTransform(FTransformDouble transform)
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			actorComp.SetActorTransform(transform, "RollBlockController", true, null);
 		}
 
-		// Token: 0x06043D11 RID: 277777 RVA: 0x01099F3E File Offset: 0x0109813E
+		// Token: 0x06039D5F RID: 236895 RVA: 0x0103E742 File Offset: 0x0103C942
 		public AActor GetActor()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -445,8 +445,8 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return actorComp.Owner;
 		}
 
-		// Token: 0x17009946 RID: 39238
-		// (get) Token: 0x06043D12 RID: 277778 RVA: 0x01099F51 File Offset: 0x01098151
+		// Token: 0x17006E2B RID: 28203
+		// (get) Token: 0x06039D60 RID: 236896 RVA: 0x0103E755 File Offset: 0x0103C955
 		public ERollBlockMoveState CurState
 		{
 			get
@@ -460,13 +460,13 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D13 RID: 277779 RVA: 0x01099F64 File Offset: 0x01098164
+		// Token: 0x06039D61 RID: 236897 RVA: 0x0103E768 File Offset: 0x0103C968
 		public override bool IsMoving()
 		{
 			return !this.IsVisionBlock && this.CurState != ERollBlockMoveState.Idle;
 		}
 
-		// Token: 0x06043D14 RID: 277780 RVA: 0x01099F7C File Offset: 0x0109817C
+		// Token: 0x06039D62 RID: 236898 RVA: 0x0103E780 File Offset: 0x0103C980
 		[NullableContext(1)]
 		public void SetActorLocationAndRotation(global::Vector location, global::Rotator rotation)
 		{
@@ -479,7 +479,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			actorComp.SetActorLocationAndRotation(location.ToUeVector(false), rotation.ToUeRotator(), "RollBlockController", false, null);
 		}
 
-		// Token: 0x06043D15 RID: 277781 RVA: 0x01099FD8 File Offset: 0x010981D8
+		// Token: 0x06039D63 RID: 236899 RVA: 0x0103E7DC File Offset: 0x0103C9DC
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -488,151 +488,142 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 				return false;
 			}
 			RbBlockComponent rbBlockComponent = (RbBlockComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (rbBlockComponent.ActorComp == null)
 			{
-				if (rbBlockComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (rbBlockComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SizeX"))
+			if (rbBlockComponent.CreatureDataComp == null)
 			{
-				this.SizeX = rbBlockComponent.SizeX;
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("SizeY"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				this.SizeY = rbBlockComponent.SizeY;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SizeZ"))
+			this.SizeX = rbBlockComponent.SizeX;
+			this.SizeY = rbBlockComponent.SizeY;
+			this.SizeZ = rbBlockComponent.SizeZ;
+			if (rbBlockComponent.CurMoveState == null)
 			{
-				this.SizeZ = rbBlockComponent.SizeZ;
+				this.CurMoveState = null;
 			}
-			if (base.CanResetComponentProperty("CurMoveState"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurMoveState), "CurMoveState"))
 			{
-				if (rbBlockComponent.CurMoveState == null)
-				{
-					this.CurMoveState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RbBaseMoveState>(this.CurMoveState), "CurMoveState"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RollState"))
+			if (rbBlockComponent.RollState == null)
 			{
-				if (rbBlockComponent.RollState == null)
-				{
-					this.RollState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RbRollState>(this.RollState), "RollState"))
-				{
-					return false;
-				}
+				this.RollState = null;
 			}
-			if (base.CanResetComponentProperty("IdleState"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RollState), "RollState"))
 			{
-				if (rbBlockComponent.IdleState == null)
-				{
-					this.IdleState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RbIdleState>(this.IdleState), "IdleState"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("JumpState"))
+			if (rbBlockComponent.IdleState == null)
 			{
-				if (rbBlockComponent.JumpState == null)
-				{
-					this.JumpState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RbJumpState>(this.JumpState), "JumpState"))
-				{
-					return false;
-				}
+				this.IdleState = null;
 			}
-			if (base.CanResetComponentProperty("FirstTick"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.IdleState), "IdleState"))
 			{
-				this.FirstTick = rbBlockComponent.FirstTick;
+				return false;
 			}
-			if (base.CanResetComponentProperty("AvailableInputDirs"))
+			if (rbBlockComponent.JumpState == null)
 			{
-				if (rbBlockComponent.AvailableInputDirs == null)
-				{
-					this.AvailableInputDirs = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<RbGridDirection>>(this.AvailableInputDirs), "AvailableInputDirs"))
-				{
-					return false;
-				}
+				this.JumpState = null;
 			}
-			if (base.CanResetComponentProperty("DisableHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.JumpState), "JumpState"))
 			{
-				this.DisableHandle = rbBlockComponent.DisableHandle;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsVisionBlock"))
+			this.FirstTick = rbBlockComponent.FirstTick;
+			if (rbBlockComponent.AvailableInputDirs == null)
 			{
-				this.IsVisionBlock = rbBlockComponent.IsVisionBlock;
+				this.AvailableInputDirs = null;
 			}
-			return !base.CanResetComponentProperty("CacheStateInfo") || rbBlockComponent.CacheStateInfo == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Stack<RbBlockPbState>>(this.CacheStateInfo), "CacheStateInfo");
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AvailableInputDirs), "AvailableInputDirs"))
+			{
+				return false;
+			}
+			this.DisableHandle = rbBlockComponent.DisableHandle;
+			this.IsVisionBlock = rbBlockComponent.IsVisionBlock;
+			return rbBlockComponent.CacheStateInfo == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheStateInfo), "CacheStateInfo");
 		}
 
-		// Token: 0x040236D8 RID: 145112
+		// Token: 0x17006E2C RID: 28204
+		// (get) Token: 0x06039D64 RID: 236900 RVA: 0x0103E993 File Offset: 0x0103CB93
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006E2D RID: 28205
+		// (get) Token: 0x06039D65 RID: 236901 RVA: 0x0103E996 File Offset: 0x0103CB96
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006E2E RID: 28206
+		// (get) Token: 0x06039D66 RID: 236902 RVA: 0x0103E999 File Offset: 0x0103CB99
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401E8CA RID: 125130
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040236D9 RID: 145113
+		// Token: 0x0401E8CB RID: 125131
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040236DA RID: 145114
+		// Token: 0x0401E8CC RID: 125132
 		public int SizeX = 1;
 
-		// Token: 0x040236DB RID: 145115
+		// Token: 0x0401E8CD RID: 125133
 		public int SizeY = 1;
 
-		// Token: 0x040236DC RID: 145116
+		// Token: 0x0401E8CE RID: 125134
 		public int SizeZ = 1;
 
-		// Token: 0x040236DD RID: 145117
+		// Token: 0x0401E8CF RID: 125135
 		private RbBaseMoveState CurMoveState;
 
-		// Token: 0x040236DE RID: 145118
+		// Token: 0x0401E8D0 RID: 125136
 		private RbRollState RollState;
 
-		// Token: 0x040236DF RID: 145119
+		// Token: 0x0401E8D1 RID: 125137
 		private RbIdleState IdleState;
 
-		// Token: 0x040236E0 RID: 145120
+		// Token: 0x0401E8D2 RID: 125138
 		private RbJumpState JumpState;
 
-		// Token: 0x040236E1 RID: 145121
+		// Token: 0x0401E8D3 RID: 125139
 		private bool FirstTick;
 
-		// Token: 0x040236E2 RID: 145122
+		// Token: 0x0401E8D4 RID: 125140
 		[Nullable(1)]
 		public List<RbGridDirection> AvailableInputDirs;
 
-		// Token: 0x040236E3 RID: 145123
+		// Token: 0x0401E8D5 RID: 125141
 		private int DisableHandle = -1;
 
-		// Token: 0x040236E4 RID: 145124
+		// Token: 0x0401E8D6 RID: 125142
 		public bool IsVisionBlock;
 
-		// Token: 0x040236E5 RID: 145125
+		// Token: 0x0401E8D7 RID: 125143
 		[Nullable(1)]
 		private readonly global::Stack<RbBlockPbState> CacheStateInfo = new global::Stack<RbBlockPbState>();
 	}

@@ -5,13 +5,13 @@ using CSharpScript.Game;
 using CSharpScript.Game.Module.Audio;
 using UnrealEngine;
 
-// Token: 0x0200304F RID: 12367
+// Token: 0x020025A5 RID: 9637
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterAudioComponent : BaseAudioComponent
 {
-	// Token: 0x1700242E RID: 9262
-	// (get) Token: 0x0601A488 RID: 107656 RVA: 0x006F372D File Offset: 0x006F192D
+	// Token: 0x1700253D RID: 9533
+	// (get) Token: 0x06017E17 RID: 97815 RVA: 0x0071A9AD File Offset: 0x00718BAD
 	protected new CharacterActorComponent ActorComp
 	{
 		get
@@ -20,7 +20,7 @@ public class CharacterAudioComponent : BaseAudioComponent
 		}
 	}
 
-	// Token: 0x0601A489 RID: 107657 RVA: 0x006F373A File Offset: 0x006F193A
+	// Token: 0x06017E18 RID: 97816 RVA: 0x0071A9BA File Offset: 0x00718BBA
 	protected override bool OnInit()
 	{
 		base.OnInit();
@@ -28,7 +28,7 @@ public class CharacterAudioComponent : BaseAudioComponent
 		return true;
 	}
 
-	// Token: 0x0601A48A RID: 107658 RVA: 0x006F3755 File Offset: 0x006F1955
+	// Token: 0x06017E19 RID: 97817 RVA: 0x0071A9D5 File Offset: 0x00718BD5
 	protected override bool OnEnd()
 	{
 		base.OnEnd();
@@ -40,7 +40,7 @@ public class CharacterAudioComponent : BaseAudioComponent
 		return true;
 	}
 
-	// Token: 0x0601A48B RID: 107659 RVA: 0x006F3788 File Offset: 0x006F1988
+	// Token: 0x06017E1A RID: 97818 RVA: 0x0071AA08 File Offset: 0x00718C08
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -54,14 +54,14 @@ public class CharacterAudioComponent : BaseAudioComponent
 		return true;
 	}
 
-	// Token: 0x0601A48C RID: 107660 RVA: 0x006F37C4 File Offset: 0x006F19C4
+	// Token: 0x06017E1B RID: 97819 RVA: 0x0071AA44 File Offset: 0x00718C44
 	protected override void OnAkComponentCreated()
 	{
 		base.OnAkComponentCreated();
 		this.InitCharacterAudioPlayPriority();
 	}
 
-	// Token: 0x0601A48D RID: 107661 RVA: 0x006F37D4 File Offset: 0x006F19D4
+	// Token: 0x06017E1C RID: 97820 RVA: 0x0071AA54 File Offset: 0x00718C54
 	private void InitCharacterAudioPlayPriority()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -112,7 +112,7 @@ public class CharacterAudioComponent : BaseAudioComponent
 		}
 	}
 
-	// Token: 0x0601A48E RID: 107662 RVA: 0x006F3928 File Offset: 0x006F1B28
+	// Token: 0x06017E1D RID: 97821 RVA: 0x0071ABA8 File Offset: 0x00718DA8
 	private void InitWeaknessAudio()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -124,7 +124,7 @@ public class CharacterAudioComponent : BaseAudioComponent
 		}
 	}
 
-	// Token: 0x0601A48F RID: 107663 RVA: 0x006F399F File Offset: 0x006F1B9F
+	// Token: 0x06017E1E RID: 97822 RVA: 0x0071AC1F File Offset: 0x00718E1F
 	private void RemoveTagTask()
 	{
 		if (this.WeaknessTagTask != null)
@@ -134,7 +134,7 @@ public class CharacterAudioComponent : BaseAudioComponent
 		}
 	}
 
-	// Token: 0x0601A490 RID: 107664 RVA: 0x006F39BC File Offset: 0x006F1BBC
+	// Token: 0x06017E1F RID: 97823 RVA: 0x0071AC3C File Offset: 0x00718E3C
 	private void OnWeaknessTagChanged(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -157,7 +157,7 @@ public class CharacterAudioComponent : BaseAudioComponent
 		}
 	}
 
-	// Token: 0x0601A491 RID: 107665 RVA: 0x006F3A48 File Offset: 0x006F1C48
+	// Token: 0x06017E20 RID: 97824 RVA: 0x0071ACC8 File Offset: 0x00718EC8
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -166,41 +166,59 @@ public class CharacterAudioComponent : BaseAudioComponent
 			return false;
 		}
 		CharacterAudioComponent characterAudioComponent = (CharacterAudioComponent)componentTemplate;
-		if (base.CanResetComponentProperty("SummonerId"))
+		this.SummonerId = characterAudioComponent.SummonerId;
+		this.CurrentPriority = characterAudioComponent.CurrentPriority;
+		if (characterAudioComponent.WeaknessTagTask == null)
 		{
-			this.SummonerId = characterAudioComponent.SummonerId;
+			this.WeaknessTagTask = null;
 		}
-		if (base.CanResetComponentProperty("CurrentPriority"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeaknessTagTask), "WeaknessTagTask"))
 		{
-			this.CurrentPriority = characterAudioComponent.CurrentPriority;
+			return false;
 		}
-		if (base.CanResetComponentProperty("WeaknessTagTask"))
-		{
-			if (characterAudioComponent.WeaknessTagTask == null)
-			{
-				this.WeaknessTagTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.WeaknessTagTask), "WeaknessTagTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MonsterMatchType"))
-		{
-			this.MonsterMatchType = characterAudioComponent.MonsterMatchType;
-		}
+		this.MonsterMatchType = characterAudioComponent.MonsterMatchType;
 		return true;
 	}
 
-	// Token: 0x0400C85A RID: 51290
+	// Token: 0x1700253E RID: 9534
+	// (get) Token: 0x06017E21 RID: 97825 RVA: 0x0071AD37 File Offset: 0x00718F37
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700253F RID: 9535
+	// (get) Token: 0x06017E22 RID: 97826 RVA: 0x0071AD3A File Offset: 0x00718F3A
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002540 RID: 9536
+	// (get) Token: 0x06017E23 RID: 97827 RVA: 0x0071AD3D File Offset: 0x00718F3D
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CC33 RID: 52275
 	protected int SummonerId;
 
-	// Token: 0x0400C85B RID: 51291
+	// Token: 0x0400CC34 RID: 52276
 	public ERoleAudioPriorityType CurrentPriority;
 
-	// Token: 0x0400C85C RID: 51292
+	// Token: 0x0400CC35 RID: 52277
 	private ITagTask WeaknessTagTask;
 
-	// Token: 0x0400C85D RID: 51293
+	// Token: 0x0400CC36 RID: 52278
 	private EMonsterMatchType MonsterMatchType;
 }

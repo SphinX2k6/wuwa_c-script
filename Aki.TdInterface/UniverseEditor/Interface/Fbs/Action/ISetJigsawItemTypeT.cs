@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007014 RID: 28692
+	// Token: 0x020077DD RID: 30685
 	public class ISetJigsawItemTypeT
 	{
-		// Token: 0x1700D510 RID: 54544
-		// (get) Token: 0x06032BFF RID: 207871 RVA: 0x006D8CE2 File Offset: 0x006D6EE2
-		// (set) Token: 0x06032C00 RID: 207872 RVA: 0x006D8CEA File Offset: 0x006D6EEA
+		// Token: 0x1700E0E4 RID: 57572
+		// (get) Token: 0x06035E65 RID: 220773 RVA: 0x00738926 File Offset: 0x00736B26
+		// (set) Token: 0x06035E66 RID: 220774 RVA: 0x0073892E File Offset: 0x00736B2E
 		public ESetJigsawItemType Type { get; set; }
 
-		// Token: 0x06032C01 RID: 207873 RVA: 0x006D8CF3 File Offset: 0x006D6EF3
+		// Token: 0x06035E67 RID: 220775 RVA: 0x00738937 File Offset: 0x00736B37
 		public ISetJigsawItemTypeT()
 		{
 			this.Type = ESetJigsawItemType.MoveJigsawItem;

@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02003205 RID: 12805
+// Token: 0x02002774 RID: 10100
 public enum EInterestActionType
 {
-	// Token: 0x0400D94E RID: 55630
+	// Token: 0x0400DDED RID: 56813
 	LookAt
 }

@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200279B RID: 10139
+// Token: 0x02001D15 RID: 7445
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleListComponent : UiPanelBase
 {
-	// Token: 0x17001B24 RID: 6948
-	// (get) Token: 0x06014D13 RID: 85267 RVA: 0x00548274 File Offset: 0x00546474
+	// Token: 0x17001B7B RID: 7035
+	// (get) Token: 0x060126E4 RID: 75492 RVA: 0x00572314 File Offset: 0x00570514
 	public int CurSelectDataId
 	{
 		get
@@ -28,7 +29,7 @@ public class RoleListComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014D14 RID: 85268 RVA: 0x005482BF File Offset: 0x005464BF
+	// Token: 0x060126E5 RID: 75493 RVA: 0x0057235F File Offset: 0x0057055F
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -40,7 +41,7 @@ public class RoleListComponent : UiPanelBase
 		return this.ScrollView;
 	}
 
-	// Token: 0x06014D15 RID: 85269 RVA: 0x005482C7 File Offset: 0x005464C7
+	// Token: 0x060126E6 RID: 75494 RVA: 0x00572367 File Offset: 0x00570567
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +50,7 @@ public class RoleListComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06014D16 RID: 85270 RVA: 0x005482EC File Offset: 0x005464EC
+	// Token: 0x060126E7 RID: 75495 RVA: 0x0057238C File Offset: 0x0057058C
 	protected override void OnStart()
 	{
 		this.RoleViewAgent = (this.OpenParam as RoleViewAgent);
@@ -66,7 +67,7 @@ public class RoleListComponent : UiPanelBase
 		this.ScrollView = new GenericScrollViewNew<RoleListItem, RoleListItemData>(base.GetScrollViewWithScrollbar(0), new Func<RoleListItem>(this.InitRoleItem), null, false, null);
 	}
 
-	// Token: 0x06014D17 RID: 85271 RVA: 0x0054835F File Offset: 0x0054655F
+	// Token: 0x060126E8 RID: 75496 RVA: 0x005723FF File Offset: 0x005705FF
 	private RoleListItem InitRoleItem()
 	{
 		return new RoleListItem
@@ -76,13 +77,13 @@ public class RoleListComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06014D18 RID: 85272 RVA: 0x0054838A File Offset: 0x0054658A
+	// Token: 0x060126E9 RID: 75497 RVA: 0x0057242A File Offset: 0x0057062A
 	private bool CanToggleExecuteChange(int gridIndex)
 	{
-		return this.ScrollView.GetGenericLayout().GetSelectedGridIndex() != gridIndex && !UiCameraAnimationManager.Instance.IsPlayingAnimation();
+		return this.ScrollView.GetGenericLayout().GetSelectedGridIndex() != gridIndex && !UiCameraModel.Instance.IsPlayingAnimation();
 	}
 
-	// Token: 0x06014D19 RID: 85273 RVA: 0x005483B0 File Offset: 0x005465B0
+	// Token: 0x060126EA RID: 75498 RVA: 0x00572450 File Offset: 0x00570650
 	private void OnRoleItemToggleCallBack(int gridIndex)
 	{
 		this.ScrollView.GetGenericLayout().SelectGridProxy(gridIndex, false);
@@ -92,19 +93,19 @@ public class RoleListComponent : UiPanelBase
 		EventSystem.Instance.Emit<int>(EEventName.RoleSystemChangeRole, this.CurSelectDataId);
 	}
 
-	// Token: 0x06014D1A RID: 85274 RVA: 0x00548418 File Offset: 0x00546618
+	// Token: 0x060126EB RID: 75499 RVA: 0x005724B8 File Offset: 0x005706B8
 	public void UnBindRedDot()
 	{
 		RedDotController.Instance.UnBindRedDot(ERedDotName.RoleSystemRoleList);
 	}
 
-	// Token: 0x06014D1B RID: 85275 RVA: 0x00548425 File Offset: 0x00546625
+	// Token: 0x060126EC RID: 75500 RVA: 0x005724C5 File Offset: 0x005706C5
 	public void SetRoleSystemUiParams(IRoleSystemUiParams roleSystemUiParams)
 	{
 		this.RoleSystemUiParams = roleSystemUiParams;
 	}
 
-	// Token: 0x06014D1C RID: 85276 RVA: 0x00548430 File Offset: 0x00546630
+	// Token: 0x060126ED RID: 75501 RVA: 0x005724D0 File Offset: 0x005706D0
 	public UniTask UpdateComponent(IReadOnlyList<int> roleList)
 	{
 		RoleListComponent.<UpdateComponent>d__15 <UpdateComponent>d__;
@@ -116,7 +117,34 @@ public class RoleListComponent : UiPanelBase
 		return <UpdateComponent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014D1D RID: 85277 RVA: 0x0054847C File Offset: 0x0054667C
+	// Token: 0x060126EE RID: 75502 RVA: 0x0057251C File Offset: 0x0057071C
+	public int FindDisplayIndex(Predicate<int> match)
+	{
+		List<RoleListItemData> dataList = this.DataList;
+		if (dataList == null)
+		{
+			return -1;
+		}
+		return dataList.FindIndex((RoleListItemData data) => match(data.RoleDataId));
+	}
+
+	// Token: 0x060126EF RID: 75503 RVA: 0x00572553 File Offset: 0x00570753
+	public void RefreshVisibleItems()
+	{
+		GenericScrollViewNew<RoleListItem, RoleListItemData> scrollView = this.ScrollView;
+		if (scrollView == null)
+		{
+			return;
+		}
+		GenericLayout<RoleListItem, RoleListItemData> genericLayout = scrollView.GetGenericLayout();
+		if (genericLayout == null)
+		{
+			return;
+		}
+		genericLayout.RefreshWithoutDataSync();
+	}
+
+	// Token: 0x060126F0 RID: 75504 RVA: 0x00572570 File Offset: 0x00570770
 	public void SetCurSelection(int dataId)
 	{
 		int num = this.DataList.IndexOf((RoleListItemData a) => a.RoleDataId == dataId);
@@ -132,7 +160,7 @@ public class RoleListComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x04009CB3 RID: 40115
+	// Token: 0x0400A081 RID: 41089
 	[Nullable(new byte[]
 	{
 		2,
@@ -141,11 +169,11 @@ public class RoleListComponent : UiPanelBase
 	})]
 	protected GenericScrollViewNew<RoleListItem, RoleListItemData> ScrollView;
 
-	// Token: 0x04009CB4 RID: 40116
+	// Token: 0x0400A082 RID: 41090
 	[Nullable(2)]
 	protected RoleViewAgent RoleViewAgent;
 
-	// Token: 0x04009CB5 RID: 40117
+	// Token: 0x0400A083 RID: 41091
 	[Nullable(new byte[]
 	{
 		2,
@@ -153,15 +181,15 @@ public class RoleListComponent : UiPanelBase
 	})]
 	protected List<RoleListItemData> DataList;
 
-	// Token: 0x04009CB6 RID: 40118
+	// Token: 0x0400A084 RID: 41092
 	[Nullable(2)]
 	protected IRoleSystemUiParams RoleSystemUiParams;
 
-	// Token: 0x02008E0F RID: 36367
+	// Token: 0x02008053 RID: 32851
 	[NullableContext(0)]
 	private enum ERoleListComponentDefine
 	{
-		// Token: 0x0402E17A RID: 188794
+		// Token: 0x04029854 RID: 170068
 		ScrollViewWithScrollbar
 	}
 }

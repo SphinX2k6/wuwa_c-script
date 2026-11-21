@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Util;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200243B RID: 9275
+// Token: 0x02001920 RID: 6432
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class PhantomFettersItem : GridProxyAbstract<PhantomFetterItemData>
 {
-	// Token: 0x06012990 RID: 76176 RVA: 0x00496834 File Offset: 0x00494A34
+	// Token: 0x0600FE46 RID: 65094 RVA: 0x004A3E00 File Offset: 0x004A2000
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class PhantomFettersItem : GridProxyAbstract<PhantomFetterItemData>
 		};
 	}
 
-	// Token: 0x06012991 RID: 76177 RVA: 0x004968F4 File Offset: 0x00494AF4
+	// Token: 0x0600FE47 RID: 65095 RVA: 0x004A3EC0 File Offset: 0x004A20C0
 	protected override void OnStart()
 	{
 		this.VisionFetterSuitItem = new VisionFetterSuitItem(base.GetItem(2));
@@ -44,7 +44,7 @@ public class PhantomFettersItem : GridProxyAbstract<PhantomFetterItemData>
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06012992 RID: 76178 RVA: 0x00496952 File Offset: 0x00494B52
+	// Token: 0x0600FE48 RID: 65096 RVA: 0x004A3F1E File Offset: 0x004A211E
 	public override void Refresh(PhantomFetterItemData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -55,7 +55,7 @@ public class PhantomFettersItem : GridProxyAbstract<PhantomFetterItemData>
 		this.Selected(isSelected, false);
 	}
 
-	// Token: 0x06012993 RID: 76179 RVA: 0x0049697C File Offset: 0x00494B7C
+	// Token: 0x0600FE49 RID: 65097 RVA: 0x004A3F48 File Offset: 0x004A2148
 	private void RefreshLikeItemState()
 	{
 		int id = this.ItemData.PhantomFetterGroup.Value.Id;
@@ -83,13 +83,13 @@ public class PhantomFettersItem : GridProxyAbstract<PhantomFetterItemData>
 		base.GetItem(5).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06012994 RID: 76180 RVA: 0x00496A44 File Offset: 0x00494C44
+	// Token: 0x0600FE4A RID: 65098 RVA: 0x004A4010 File Offset: 0x004A2210
 	public void RefreshName()
 	{
 		base.GetText(1).ShowTextNew(this.ItemData.PhantomFetterGroup.Value.FetterGroupName);
 	}
 
-	// Token: 0x06012995 RID: 76181 RVA: 0x00496A78 File Offset: 0x00494C78
+	// Token: 0x0600FE4B RID: 65099 RVA: 0x004A4044 File Offset: 0x004A2244
 	public void RefreshUnlockText()
 	{
 		int id = this.ItemData.PhantomFetterGroup.Value.Id;
@@ -102,31 +102,31 @@ public class PhantomFettersItem : GridProxyAbstract<PhantomFetterItemData>
 		}));
 	}
 
-	// Token: 0x06012996 RID: 76182 RVA: 0x00496AEB File Offset: 0x00494CEB
+	// Token: 0x0600FE4C RID: 65100 RVA: 0x004A40B7 File Offset: 0x004A22B7
 	public void BindOnItemButtonClickedCallback(Action<PhantomFetterItemData> onItemButtonClicked)
 	{
 		this.OnItemButtonClickedCallback = onItemButtonClicked;
 	}
 
-	// Token: 0x06012997 RID: 76183 RVA: 0x00496AF4 File Offset: 0x00494CF4
+	// Token: 0x0600FE4D RID: 65101 RVA: 0x004A40C0 File Offset: 0x004A22C0
 	public override void OnSelected(bool fireEvent)
 	{
 		this.Selected(true, true);
 	}
 
-	// Token: 0x06012998 RID: 76184 RVA: 0x00496AFE File Offset: 0x00494CFE
+	// Token: 0x0600FE4E RID: 65102 RVA: 0x004A40CA File Offset: 0x004A22CA
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.Selected(false, true);
 	}
 
-	// Token: 0x06012999 RID: 76185 RVA: 0x00496B08 File Offset: 0x00494D08
+	// Token: 0x0600FE4F RID: 65103 RVA: 0x004A40D4 File Offset: 0x004A22D4
 	private void RefreshSuitElement()
 	{
 		this.VisionFetterSuitItem.Update(this.ItemData.PhantomFetterGroup);
 	}
 
-	// Token: 0x0601299A RID: 76186 RVA: 0x00496B20 File Offset: 0x00494D20
+	// Token: 0x0600FE50 RID: 65104 RVA: 0x004A40EC File Offset: 0x004A22EC
 	private void Selected(bool bSelected, bool fire = true)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -138,7 +138,7 @@ public class PhantomFettersItem : GridProxyAbstract<PhantomFetterItemData>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0601299B RID: 76187 RVA: 0x00496B4F File Offset: 0x00494D4F
+	// Token: 0x0600FE51 RID: 65105 RVA: 0x004A411B File Offset: 0x004A231B
 	private void OnItemButtonClicked(EToggleState state)
 	{
 		if (this.OnItemButtonClickedCallback != null)
@@ -147,15 +147,15 @@ public class PhantomFettersItem : GridProxyAbstract<PhantomFetterItemData>
 		}
 	}
 
-	// Token: 0x04008C39 RID: 35897
+	// Token: 0x04008D80 RID: 36224
 	[Nullable(2)]
 	private PhantomFetterItemData ItemData;
 
-	// Token: 0x04008C3A RID: 35898
+	// Token: 0x04008D81 RID: 36225
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x04008C3B RID: 35899
+	// Token: 0x04008D82 RID: 36226
 	[Nullable(new byte[]
 	{
 		2,

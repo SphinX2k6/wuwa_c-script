@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002244 RID: 8772
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024AF RID: 9391
 	public class ToggleEntityElementalAbility : ActionParams
 	{
-		// Token: 0x0600C082 RID: 49282 RVA: 0x001BA364 File Offset: 0x001B8564
+		// Token: 0x0600CC40 RID: 52288 RVA: 0x001D1A30 File Offset: 0x001CFC30
 		private ToggleEntityElementalAbility_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C083 RID: 49283 RVA: 0x001BA39C File Offset: 0x001B859C
+		// Token: 0x0600CC41 RID: 52289 RVA: 0x001D1A68 File Offset: 0x001CFC68
 		public static ToggleEntityElementalAbility Create([Nullable(2)] ToggleEntityElementalAbility instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C084 RID: 49284 RVA: 0x001BA3AF File Offset: 0x001B85AF
+		// Token: 0x0600CC42 RID: 52290 RVA: 0x001D1A7B File Offset: 0x001CFC7B
 		public static ToggleEntityElementalAbility CreateFromSetValue([Nullable(2)] ToggleEntityElementalAbility_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C085 RID: 49285 RVA: 0x001BA3C2 File Offset: 0x001B85C2
+		// Token: 0x0600CC43 RID: 52291 RVA: 0x001D1A8E File Offset: 0x001CFC8E
 		public ToggleEntityElementalAbility_SetValue ToSetValue()
 		{
 			return new ToggleEntityElementalAbility_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A46 RID: 14918
-		// (get) Token: 0x0600C086 RID: 49286 RVA: 0x001BA3E1 File Offset: 0x001B85E1
-		// (set) Token: 0x0600C087 RID: 49287 RVA: 0x001BA40C File Offset: 0x001B860C
+		// Token: 0x17003D3C RID: 15676
+		// (get) Token: 0x0600CC44 RID: 52292 RVA: 0x001D1AAD File Offset: 0x001CFCAD
+		// (set) Token: 0x0600CC45 RID: 52293 RVA: 0x001D1AD8 File Offset: 0x001CFCD8
 		public virtual int EntityId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A47 RID: 14919
-		// (get) Token: 0x0600C088 RID: 49288 RVA: 0x001BA41A File Offset: 0x001B861A
-		// (set) Token: 0x0600C089 RID: 49289 RVA: 0x001BA445 File Offset: 0x001B8645
+		// Token: 0x17003D3D RID: 15677
+		// (get) Token: 0x0600CC46 RID: 52294 RVA: 0x001D1AE6 File Offset: 0x001CFCE6
+		// (set) Token: 0x0600CC47 RID: 52295 RVA: 0x001D1B11 File Offset: 0x001CFD11
 		public virtual bool Enable
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072C6 RID: 29382
+		// Token: 0x04007910 RID: 30992
 		[Nullable(2)]
 		protected new ToggleEntityElementalAbility FbInstance;
 
-		// Token: 0x040072C7 RID: 29383
+		// Token: 0x04007911 RID: 30993
 		[Nullable(2)]
 		protected ToggleEntityElementalAbility_SetValue PocoInterface;
 	}

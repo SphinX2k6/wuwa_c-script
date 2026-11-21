@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002916 RID: 10518
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BF2 RID: 11250
 	public class TriggerCameraShake : ActionParams
 	{
-		// Token: 0x0600E975 RID: 59765 RVA: 0x00223994 File Offset: 0x00221B94
+		// Token: 0x0600F7C7 RID: 63431 RVA: 0x00240CEC File Offset: 0x0023EEEC
 		public static TriggerCameraShake Create(ITriggerCameraShake? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700490B RID: 18699
-		// (get) Token: 0x0600E976 RID: 59766 RVA: 0x002239B3 File Offset: 0x00221BB3
+		// Token: 0x17004C91 RID: 19601
+		// (get) Token: 0x0600F7C8 RID: 63432 RVA: 0x00240D0B File Offset: 0x0023EF0B
 		public virtual ICameraShakeConfig CameraShakeConfig
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700490C RID: 18700
-		// (get) Token: 0x0600E977 RID: 59767 RVA: 0x002239E2 File Offset: 0x00221BE2
+		// Token: 0x17004C92 RID: 19602
+		// (get) Token: 0x0600F7C9 RID: 63433 RVA: 0x00240D3A File Offset: 0x0023EF3A
 		public virtual string CameraShakeBp
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080DA RID: 32986
+		// Token: 0x040087A8 RID: 34728
 		private ITriggerCameraShake Instance;
 
-		// Token: 0x040080DB RID: 32987
+		// Token: 0x040087A9 RID: 34729
 		private ICameraShakeConfig _CameraShakeConfigCache;
 
-		// Token: 0x040080DC RID: 32988
+		// Token: 0x040087AA RID: 34730
 		private bool _CameraShakeConfigInited;
 	}
 }

@@ -6,24 +6,24 @@ using CSharpScript.Game.Module.Plot.FlowActions;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x02005090 RID: 20624
+	// Token: 0x02004060 RID: 16480
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowActionCenter : ControllerAssistantBase
 	{
-		// Token: 0x06034D67 RID: 216423 RVA: 0x00C7F003 File Offset: 0x00C7D203
+		// Token: 0x06029C60 RID: 171104 RVA: 0x00BCC5B3 File Offset: 0x00BCA7B3
 		protected override void OnInit()
 		{
 			this.InitActions();
 		}
 
-		// Token: 0x06034D68 RID: 216424 RVA: 0x00C7F00B File Offset: 0x00C7D20B
+		// Token: 0x06029C61 RID: 171105 RVA: 0x00BCC5BB File Offset: 0x00BCA7BB
 		protected override void OnDestroy()
 		{
 			this.FlowActionMap.Clear();
 		}
 
-		// Token: 0x06034D69 RID: 216425 RVA: 0x00C7F018 File Offset: 0x00C7D218
+		// Token: 0x06029C62 RID: 171106 RVA: 0x00BCC5C8 File Offset: 0x00BCA7C8
 		private void InitActions()
 		{
 			this.InitAction(EAction.ShowTalk, () => new FlowActionShowTalk(), false);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.InitAction(EAction.AvgShakeUi, () => new FlowActionAvgShakeUi(), true);
 		}
 
-		// Token: 0x06034D6A RID: 216426 RVA: 0x00C7FAC0 File Offset: 0x00C7DCC0
+		// Token: 0x06029C63 RID: 171107 RVA: 0x00BCD070 File Offset: 0x00BCB270
 		private void InitAction(EAction type, Func<FlowActionBase> actionFactory, bool isAutoFinished = false)
 		{
 			if (this.FlowActionMap.ContainsKey(type))
@@ -105,14 +105,14 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.FlowActionMap.Add(type, flowAction);
 		}
 
-		// Token: 0x06034D6B RID: 216427 RVA: 0x00C7FAF8 File Offset: 0x00C7DCF8
+		// Token: 0x06029C64 RID: 171108 RVA: 0x00BCD0A8 File Offset: 0x00BCB2A8
 		[NullableContext(2)]
 		public FlowAction GetFlowAction(EAction type)
 		{
 			return this.FlowActionMap.GetValueOrDefault(type);
 		}
 
-		// Token: 0x0401C269 RID: 115305
+		// Token: 0x04016C98 RID: 93336
 		private readonly Dictionary<EAction, FlowAction> FlowActionMap = new Dictionary<EAction, FlowAction>();
 	}
 }

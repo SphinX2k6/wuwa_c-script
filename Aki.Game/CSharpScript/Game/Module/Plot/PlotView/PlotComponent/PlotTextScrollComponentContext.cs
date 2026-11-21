@@ -4,19 +4,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x02005081 RID: 20609
+	// Token: 0x02004051 RID: 16465
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotTextScrollComponentContext
 	{
-		// Token: 0x1700806C RID: 32876
-		// (get) Token: 0x06034CD8 RID: 216280 RVA: 0x00C7DB72 File Offset: 0x00C7BD72
-		// (set) Token: 0x06034CD9 RID: 216281 RVA: 0x00C7DB7A File Offset: 0x00C7BD7A
+		// Token: 0x1700542C RID: 21548
+		// (get) Token: 0x06029BCD RID: 170957 RVA: 0x00BCAF4A File Offset: 0x00BC914A
+		// (set) Token: 0x06029BCE RID: 170958 RVA: 0x00BCAF52 File Offset: 0x00BC9152
 		public UUIText TextComponent { get; set; }
 
-		// Token: 0x1700806D RID: 32877
-		// (get) Token: 0x06034CDA RID: 216282 RVA: 0x00C7DB83 File Offset: 0x00C7BD83
-		// (set) Token: 0x06034CDB RID: 216283 RVA: 0x00C7DB8B File Offset: 0x00C7BD8B
+		// Token: 0x1700542D RID: 21549
+		// (get) Token: 0x06029BCF RID: 170959 RVA: 0x00BCAF5B File Offset: 0x00BC915B
+		// (set) Token: 0x06029BD0 RID: 170960 RVA: 0x00BCAF63 File Offset: 0x00BC9163
 		public UUIScrollViewComponent TextScrollView { get; set; }
 	}
 }

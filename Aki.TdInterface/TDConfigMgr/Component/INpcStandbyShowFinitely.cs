@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200057A RID: 1402
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005E3 RID: 1507
 	public class INpcStandbyShowFinitely : INpcStandbyShowMode
 	{
-		// Token: 0x06001CB2 RID: 7346 RVA: 0x00051C00 File Offset: 0x0004FE00
+		// Token: 0x06001EB8 RID: 7864 RVA: 0x00056ABC File Offset: 0x00054CBC
 		private INpcStandbyShowFinitely_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001CB3 RID: 7347 RVA: 0x00051C38 File Offset: 0x0004FE38
+		// Token: 0x06001EB9 RID: 7865 RVA: 0x00056AF4 File Offset: 0x00054CF4
 		public static INpcStandbyShowFinitely Create([Nullable(2)] INpcStandbyShowFinitely instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001CB4 RID: 7348 RVA: 0x00051C4B File Offset: 0x0004FE4B
+		// Token: 0x06001EBA RID: 7866 RVA: 0x00056B07 File Offset: 0x00054D07
 		public static INpcStandbyShowFinitely CreateFromSetValue([Nullable(2)] INpcStandbyShowFinitely_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001CB5 RID: 7349 RVA: 0x00051C5E File Offset: 0x0004FE5E
+		// Token: 0x06001EBB RID: 7867 RVA: 0x00056B1A File Offset: 0x00054D1A
 		public new INpcStandbyShowFinitely_SetValue ToSetValue()
 		{
 			return new INpcStandbyShowFinitely_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000781 RID: 1921
-		// (get) Token: 0x06001CB6 RID: 7350 RVA: 0x00051C95 File Offset: 0x0004FE95
-		// (set) Token: 0x06001CB7 RID: 7351 RVA: 0x00051CC0 File Offset: 0x0004FEC0
+		// Token: 0x17000806 RID: 2054
+		// (get) Token: 0x06001EBC RID: 7868 RVA: 0x00056B51 File Offset: 0x00054D51
+		// (set) Token: 0x06001EBD RID: 7869 RVA: 0x00056B7C File Offset: 0x00054D7C
 		public override ENpcStandbyShowMode Type
 		{
 			get
@@ -88,20 +86,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000782 RID: 1922
-		// (get) Token: 0x06001CB8 RID: 7352 RVA: 0x00051CD0 File Offset: 0x0004FED0
-		// (set) Token: 0x06001CB9 RID: 7353 RVA: 0x00051D63 File Offset: 0x0004FF63
+		// Token: 0x17000807 RID: 2055
+		// (get) Token: 0x06001EBE RID: 7870 RVA: 0x00056B8C File Offset: 0x00054D8C
+		// (set) Token: 0x06001EBF RID: 7871 RVA: 0x00056C1F File Offset: 0x00054E1F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.INpcLookAtConfig> LookAtConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -132,7 +130,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000783 RID: 1923
-		// (get) Token: 0x06001CBA RID: 7354 RVA: 0x00051D78 File Offset: 0x0004FF78
-		// (set) Token: 0x06001CBB RID: 7355 RVA: 0x00051DA3 File Offset: 0x0004FFA3
+		// Token: 0x17000808 RID: 2056
+		// (get) Token: 0x06001EC0 RID: 7872 RVA: 0x00056C34 File Offset: 0x00054E34
+		// (set) Token: 0x06001EC1 RID: 7873 RVA: 0x00056C5F File Offset: 0x00054E5F
 		public virtual ENpcStandbyShowFinitelyPlayMode PlayMode
 		{
 			get
@@ -164,9 +162,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000784 RID: 1924
-		// (get) Token: 0x06001CBC RID: 7356 RVA: 0x00051DB4 File Offset: 0x0004FFB4
-		// (set) Token: 0x06001CBD RID: 7357 RVA: 0x00051E47 File Offset: 0x00050047
+		// Token: 0x17000809 RID: 2057
+		// (get) Token: 0x06001EC2 RID: 7874 RVA: 0x00056C70 File Offset: 0x00054E70
+		// (set) Token: 0x06001EC3 RID: 7875 RVA: 0x00056D03 File Offset: 0x00054F03
 		public virtual List<INpcStandbyShowFinitelyInfo> Montages
 		{
 			get
@@ -202,29 +200,29 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001467 RID: 5223
+		// Token: 0x040015D5 RID: 5589
 		[Nullable(2)]
 		protected new INpcStandbyShowFinitely FbInstance;
 
-		// Token: 0x04001468 RID: 5224
+		// Token: 0x040015D6 RID: 5590
 		[Nullable(2)]
 		protected new INpcStandbyShowFinitely_SetValue PocoInterface;
 
-		// Token: 0x04001469 RID: 5225
+		// Token: 0x040015D7 RID: 5591
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.INpcLookAtConfig> _LookAtConfigsCache;
 
-		// Token: 0x0400146A RID: 5226
+		// Token: 0x040015D8 RID: 5592
 		private bool _LookAtConfigsInited;
 
-		// Token: 0x0400146B RID: 5227
+		// Token: 0x040015D9 RID: 5593
 		private List<INpcStandbyShowFinitelyInfo> _MontagesCache;
 
-		// Token: 0x0400146C RID: 5228
+		// Token: 0x040015DA RID: 5594
 		private bool _MontagesInited;
 	}
 }

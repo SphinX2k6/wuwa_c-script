@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200081F RID: 2079
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020008C2 RID: 2242
 	public class JigsawItem : IComponentBase
 	{
-		// Token: 0x06002D33 RID: 11571 RVA: 0x0007529C File Offset: 0x0007349C
-		[NullableContext(1)]
+		// Token: 0x06003063 RID: 12387 RVA: 0x0007C600 File Offset: 0x0007A800
 		private JigsawItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002D34 RID: 11572 RVA: 0x000752D4 File Offset: 0x000734D4
-		[NullableContext(1)]
+		// Token: 0x06003064 RID: 12388 RVA: 0x0007C638 File Offset: 0x0007A838
 		public static JigsawItem Create([Nullable(2)] JigsawItem instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D35 RID: 11573 RVA: 0x000752E7 File Offset: 0x000734E7
-		[NullableContext(1)]
+		// Token: 0x06003065 RID: 12389 RVA: 0x0007C64B File Offset: 0x0007A84B
 		public static JigsawItem CreateFromSetValue([Nullable(2)] JigsawItem_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D36 RID: 11574 RVA: 0x000752FA File Offset: 0x000734FA
-		[NullableContext(1)]
+		// Token: 0x06003066 RID: 12390 RVA: 0x0007C65E File Offset: 0x0007A85E
 		public new JigsawItem_SetValue ToSetValue()
 		{
 			return new JigsawItem_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BCE RID: 3022
-		// (get) Token: 0x06002D37 RID: 11575 RVA: 0x00075328 File Offset: 0x00073528
-		// (set) Token: 0x06002D38 RID: 11576 RVA: 0x00075362 File Offset: 0x00073562
+		// Token: 0x17000C91 RID: 3217
+		// (get) Token: 0x06003067 RID: 12391 RVA: 0x0007C68C File Offset: 0x0007A88C
+		// (set) Token: 0x06003068 RID: 12392 RVA: 0x0007C6C6 File Offset: 0x0007A8C6
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BCF RID: 3023
-		// (get) Token: 0x06002D39 RID: 11577 RVA: 0x00075370 File Offset: 0x00073570
-		// (set) Token: 0x06002D3A RID: 11578 RVA: 0x0007539A File Offset: 0x0007359A
+		// Token: 0x17000C92 RID: 3218
+		// (get) Token: 0x06003069 RID: 12393 RVA: 0x0007C6D4 File Offset: 0x0007A8D4
+		// (set) Token: 0x0600306A RID: 12394 RVA: 0x0007C6FE File Offset: 0x0007A8FE
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,11 +102,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BD0 RID: 3024
-		// (get) Token: 0x06002D3B RID: 11579 RVA: 0x000753A8 File Offset: 0x000735A8
-		// (set) Token: 0x06002D3C RID: 11580 RVA: 0x000753CF File Offset: 0x000735CF
+		// Token: 0x17000C93 RID: 3219
+		// (get) Token: 0x0600306B RID: 12395 RVA: 0x0007C70C File Offset: 0x0007A90C
+		// (set) Token: 0x0600306C RID: 12396 RVA: 0x0007C733 File Offset: 0x0007A933
+		[Nullable(2)]
 		public virtual IFillType FillCfg
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -126,16 +122,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.FillCfg;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().FillCfg = value;
 			}
 		}
 
-		// Token: 0x04001DEE RID: 7662
+		// Token: 0x04001FFA RID: 8186
+		[Nullable(2)]
 		protected new JigsawItem FbInstance;
 
-		// Token: 0x04001DEF RID: 7663
+		// Token: 0x04001FFB RID: 8187
+		[Nullable(2)]
 		protected new JigsawItem_SetValue PocoInterface;
 	}
 }

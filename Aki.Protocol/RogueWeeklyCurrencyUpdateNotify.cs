@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001034 RID: 4148
+	// Token: 0x02001024 RID: 4132
 	[NetMessage(EMessageId.RogueWeeklyCurrencyUpdateNotify)]
 	public sealed class RogueWeeklyCurrencyUpdateNotify : IMessage<RogueWeeklyCurrencyUpdateNotify>, IMessage, IEquatable<RogueWeeklyCurrencyUpdateNotify>, IDeepCloneable<RogueWeeklyCurrencyUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x060162A5 RID: 90789 RVA: 0x003383D7 File Offset: 0x003365D7
+		// Token: 0x060161C0 RID: 90560 RVA: 0x00336D13 File Offset: 0x00334F13
 		[NullableContext(1)]
 		public static RogueWeeklyCurrencyUpdateNotify Create()
 		{
 			return new RogueWeeklyCurrencyUpdateNotify();
 		}
 
-		// Token: 0x17004A14 RID: 18964
-		// (get) Token: 0x060162A6 RID: 90790 RVA: 0x003383DE File Offset: 0x003365DE
+		// Token: 0x170049EA RID: 18922
+		// (get) Token: 0x060161C1 RID: 90561 RVA: 0x00336D1A File Offset: 0x00334F1A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A15 RID: 18965
-		// (get) Token: 0x060162A7 RID: 90791 RVA: 0x003383E1 File Offset: 0x003365E1
+		// Token: 0x170049EB RID: 18923
+		// (get) Token: 0x060161C2 RID: 90562 RVA: 0x00336D1D File Offset: 0x00334F1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060162A8 RID: 90792 RVA: 0x003383E8 File Offset: 0x003365E8
+		// Token: 0x060161C3 RID: 90563 RVA: 0x00336D24 File Offset: 0x00334F24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyCurrencyUpdateNotify()
 		{
 		}
 
-		// Token: 0x060162A9 RID: 90793 RVA: 0x003383FB File Offset: 0x003365FB
+		// Token: 0x060161C4 RID: 90564 RVA: 0x00336D37 File Offset: 0x00334F37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyCurrencyUpdateNotify(RogueWeeklyCurrencyUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060162AA RID: 90794 RVA: 0x00338425 File Offset: 0x00336625
+		// Token: 0x060161C5 RID: 90565 RVA: 0x00336D61 File Offset: 0x00334F61
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyCurrencyUpdateNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new RogueWeeklyCurrencyUpdateNotify(this);
 		}
 
-		// Token: 0x17004A16 RID: 18966
-		// (get) Token: 0x060162AB RID: 90795 RVA: 0x0033842D File Offset: 0x0033662D
+		// Token: 0x170049EC RID: 18924
+		// (get) Token: 0x060161C6 RID: 90566 RVA: 0x00336D69 File Offset: 0x00334F69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> CurrencyDict
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060162AC RID: 90796 RVA: 0x00338435 File Offset: 0x00336635
+		// Token: 0x060161C7 RID: 90567 RVA: 0x00336D71 File Offset: 0x00334F71
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueWeeklyCurrencyUpdateNotify);
 		}
 
-		// Token: 0x060162AD RID: 90797 RVA: 0x00338443 File Offset: 0x00336643
+		// Token: 0x060161C8 RID: 90568 RVA: 0x00336D7F File Offset: 0x00334F7F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueWeeklyCurrencyUpdateNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.CurrencyDict.Equals(other.CurrencyDict) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060162AE RID: 90798 RVA: 0x00338478 File Offset: 0x00336678
+		// Token: 0x060161C9 RID: 90569 RVA: 0x00336DB4 File Offset: 0x00334FB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060162AF RID: 90799 RVA: 0x003384AC File Offset: 0x003366AC
+		// Token: 0x060161CA RID: 90570 RVA: 0x00336DE8 File Offset: 0x00334FE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060162B0 RID: 90800 RVA: 0x003384B9 File Offset: 0x003366B9
+		// Token: 0x060161CB RID: 90571 RVA: 0x00336DF5 File Offset: 0x00334FF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060162B1 RID: 90801 RVA: 0x003384C2 File Offset: 0x003366C2
+		// Token: 0x060161CC RID: 90572 RVA: 0x00336DFE File Offset: 0x00334FFE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060162B2 RID: 90802 RVA: 0x003384EC File Offset: 0x003366EC
+		// Token: 0x060161CD RID: 90573 RVA: 0x00336E28 File Offset: 0x00335028
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060162B3 RID: 90803 RVA: 0x00338525 File Offset: 0x00336725
+		// Token: 0x060161CE RID: 90574 RVA: 0x00336E61 File Offset: 0x00335061
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueWeeklyCurrencyUpdateNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060162B4 RID: 90804 RVA: 0x00338553 File Offset: 0x00336753
+		// Token: 0x060161CF RID: 90575 RVA: 0x00336E8F File Offset: 0x0033508F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060162B5 RID: 90805 RVA: 0x0033855C File Offset: 0x0033675C
+		// Token: 0x060161D0 RID: 90576 RVA: 0x00336E98 File Offset: 0x00335098
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 106U)
+				if (num != 42U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040084A9 RID: 33961
+		// Token: 0x040084D3 RID: 34003
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040084AA RID: 33962
-		public const int CurrencyDictFieldNumber = 13;
+		// Token: 0x040084D4 RID: 34004
+		public const int CurrencyDictFieldNumber = 5;
 
-		// Token: 0x040084AB RID: 33963
-		private static readonly MapField<int, int>.Codec _map_currencyDict_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 106U);
+		// Token: 0x040084D5 RID: 34005
+		private static readonly MapField<int, int>.Codec _map_currencyDict_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 42U);
 
-		// Token: 0x040084AC RID: 33964
+		// Token: 0x040084D6 RID: 34006
 		private readonly MapField<int, int> currencyDict_ = new MapField<int, int>();
 	}
 }

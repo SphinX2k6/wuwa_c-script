@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x020018FA RID: 6394
-// (Invoke) Token: 0x0600BB74 RID: 47988
+// Token: 0x02000DB3 RID: 3507
+// (Invoke) Token: 0x06008F5E RID: 36702
 public delegate void TSequenceStartEvent(string sequenceName);

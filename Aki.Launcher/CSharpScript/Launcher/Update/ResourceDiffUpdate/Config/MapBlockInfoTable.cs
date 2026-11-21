@@ -5,7 +5,7 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000B3 RID: 179
+	// Token: 0x020000B6 RID: 182
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,25 +14,25 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 	})]
 	public class MapBlockInfoTable : TableReader<MapBlockInfoRow>
 	{
-		// Token: 0x0600061B RID: 1563 RVA: 0x00036A4E File Offset: 0x00034C4E
+		// Token: 0x06000636 RID: 1590 RVA: 0x0003854E File Offset: 0x0003674E
 		protected override string GetTableName()
 		{
 			return "MapBlockInfo";
 		}
 
-		// Token: 0x0600061C RID: 1564 RVA: 0x00036A55 File Offset: 0x00034C55
+		// Token: 0x06000637 RID: 1591 RVA: 0x00038555 File Offset: 0x00036755
 		protected override string GetDbFile()
 		{
 			return "db_download.db";
 		}
 
-		// Token: 0x0600061D RID: 1565 RVA: 0x00036A5C File Offset: 0x00034C5C
+		// Token: 0x06000638 RID: 1592 RVA: 0x0003855C File Offset: 0x0003675C
 		protected override string GetIdString()
 		{
 			return "BlockId";
 		}
 
-		// Token: 0x0600061E RID: 1566 RVA: 0x00036A64 File Offset: 0x00034C64
+		// Token: 0x06000639 RID: 1593 RVA: 0x00038564 File Offset: 0x00036764
 		public override MapBlockInfoRow Parse(ByteBuffer byteBuffer)
 		{
 			MapBlockInfoRow mapBlockInfoRow = new MapBlockInfoRow();

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Common
 {
-	// Token: 0x02007285 RID: 29317
+	// Token: 0x02006404 RID: 25604
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class FbFileLoader
 	{
-		// Token: 0x06047DB3 RID: 294323 RVA: 0x01262DE4 File Offset: 0x01260FE4
+		// Token: 0x0603E173 RID: 254323 RVA: 0x012037F4 File Offset: 0x012019F4
 		[return: Nullable(2)]
 		public unsafe static ByteBuffer LoadBytes(string filePath)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Common
 			return new ByteBuffer(inArr.ToArray<byte>());
 		}
 
-		// Token: 0x06047DB4 RID: 294324 RVA: 0x01262E90 File Offset: 0x01261090
+		// Token: 0x0603E174 RID: 254324 RVA: 0x012038A0 File Offset: 0x01201AA0
 		public static Dictionary<string, int> ParseTemplateKepMapping(string filePath)
 		{
 			ByteBuffer byteBuffer = FbFileLoader.LoadBytes(filePath);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Common
 			return result;
 		}
 
-		// Token: 0x06047DB5 RID: 294325 RVA: 0x01262F1C File Offset: 0x0126111C
+		// Token: 0x0603E175 RID: 254325 RVA: 0x0120392C File Offset: 0x01201B2C
 		private static string ReadUtf8String(ByteBuffer bb, ref int position)
 		{
 			int num = 0;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Common
 			return @string;
 		}
 
-		// Token: 0x06047DB6 RID: 294326 RVA: 0x01262F8C File Offset: 0x0126118C
+		// Token: 0x0603E176 RID: 254326 RVA: 0x0120399C File Offset: 0x01201B9C
 		private unsafe static void LogFbFile(string filePath, bool ok)
 		{
 			Log instance = Log.Instance;
@@ -112,10 +112,10 @@ namespace CSharpScript.Game.Common
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x04025C78 RID: 154744
+		// Token: 0x04020F38 RID: 134968
 		private const string FbDir = "Aki/Config/UniverseEditorConfig/";
 
-		// Token: 0x04025C79 RID: 154745
+		// Token: 0x04020F39 RID: 134969
 		private const string FbDirIosAudit = "Aki/Config/UniverseEditorConfig_IosAudit/";
 	}
 }

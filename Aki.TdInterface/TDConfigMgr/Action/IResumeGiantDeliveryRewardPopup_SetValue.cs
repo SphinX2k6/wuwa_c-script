@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DB9 RID: 7609
+	// Token: 0x02001FD0 RID: 8144
 	public class IResumeGiantDeliveryRewardPopup_SetValue
 	{
-		// Token: 0x040061CF RID: 25039
+		// Token: 0x04006757 RID: 26455
 		public ESystemType Type;
 	}
 }

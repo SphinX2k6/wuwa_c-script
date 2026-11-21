@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 {
-	// Token: 0x020059EF RID: 23023
+	// Token: 0x020049C8 RID: 18888
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CheckPointEffectController
 	{
-		// Token: 0x0603A5A0 RID: 239008 RVA: 0x00DE231A File Offset: 0x00DE051A
+		// Token: 0x0602F4C7 RID: 193735 RVA: 0x00D31B86 File Offset: 0x00D2FD86
 		public CheckPointEffectController(Blackboard Blackboard)
 		{
 		}
 
-		// Token: 0x0603A5A1 RID: 239009 RVA: 0x00DE2340 File Offset: 0x00DE0540
+		// Token: 0x0602F4C8 RID: 193736 RVA: 0x00D31BAC File Offset: 0x00D2FDAC
 		public void EnableAllEffects(bool value)
 		{
 			foreach (KeyValuePair<int, CheckPointEffectController.CheckPointEffectInfo> keyValuePair in this.EffectSpawnInfos)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A5A2 RID: 239010 RVA: 0x00DE23B4 File Offset: 0x00DE05B4
+		// Token: 0x0602F4C9 RID: 193737 RVA: 0x00D31C20 File Offset: 0x00D2FE20
 		public void UpdateOnChildQuestNodeStatusChange(ChildQuestNodeBase node, bool bStart, bool bEnd)
 		{
 			if (node.TrackTarget != null)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A5A3 RID: 239011 RVA: 0x00DE2418 File Offset: 0x00DE0618
+		// Token: 0x0602F4CA RID: 193738 RVA: 0x00D31C84 File Offset: 0x00D2FE84
 		private void OnNodeStart(int nodeId, string effectPathKey, Vector effectSpawnPosition, bool bOccupied)
 		{
 			CheckPointEffectController.CheckPointEffectInfo checkPointEffectInfo;
@@ -85,14 +85,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.SpawnEffect(nodeId, checkPointEffectInfo);
 		}
 
-		// Token: 0x0603A5A4 RID: 239012 RVA: 0x00DE2464 File Offset: 0x00DE0664
+		// Token: 0x0602F4CB RID: 193739 RVA: 0x00D31CD0 File Offset: 0x00D2FED0
 		private void OnNodeEnd(int nodeId)
 		{
 			this.EffectSpawnInfos.Remove(nodeId);
 			this.StopEffect(nodeId);
 		}
 
-		// Token: 0x0603A5A5 RID: 239013 RVA: 0x00DE247A File Offset: 0x00DE067A
+		// Token: 0x0602F4CC RID: 193740 RVA: 0x00D31CE6 File Offset: 0x00D2FEE6
 		public void OnBtApplyExpressionOccupation(bool bSelf)
 		{
 			if (bSelf)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.EnableAllEffects(true);
 		}
 
-		// Token: 0x0603A5A6 RID: 239014 RVA: 0x00DE2487 File Offset: 0x00DE0687
+		// Token: 0x0602F4CD RID: 193741 RVA: 0x00D31CF3 File Offset: 0x00D2FEF3
 		public void OnBtReleaseExpressionOccupation(bool bSelf)
 		{
 			if (bSelf)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.EnableAllEffects(false);
 		}
 
-		// Token: 0x0603A5A7 RID: 239015 RVA: 0x00DE2494 File Offset: 0x00DE0694
+		// Token: 0x0602F4CE RID: 193742 RVA: 0x00D31D00 File Offset: 0x00D2FF00
 		private void SpawnEffect(int nodeId, CheckPointEffectController.CheckPointEffectInfo info)
 		{
 			string effectPath = EffectUtil.GetEffectPath((!string.IsNullOrEmpty(info.EffectPathKey)) ? info.EffectPathKey : "DA_Fx_Group_Sl3_Cishi_10idle");
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}, null, false, false);
 		}
 
-		// Token: 0x0603A5A8 RID: 239016 RVA: 0x00DE252C File Offset: 0x00DE072C
+		// Token: 0x0602F4CF RID: 193743 RVA: 0x00D31D98 File Offset: 0x00D2FF98
 		public void StopEffect(int nodeId)
 		{
 			int num;
@@ -166,24 +166,24 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0401E6B8 RID: 124600
+		// Token: 0x04019157 RID: 102743
 		[CompilerGenerated]
 		private Blackboard <Blackboard>P = Blackboard;
 
-		// Token: 0x0401E6B9 RID: 124601
+		// Token: 0x04019158 RID: 102744
 		private readonly Dictionary<int, CheckPointEffectController.CheckPointEffectInfo> EffectSpawnInfos = new Dictionary<int, CheckPointEffectController.CheckPointEffectInfo>();
 
-		// Token: 0x0401E6BA RID: 124602
+		// Token: 0x04019159 RID: 102745
 		private readonly Dictionary<int, int> EffectHandles = new Dictionary<int, int>();
 
-		// Token: 0x0200BC3F RID: 48191
+		// Token: 0x0200A649 RID: 42569
 		[Nullable(0)]
 		private class CheckPointEffectInfo
 		{
-			// Token: 0x04038CC1 RID: 232641
+			// Token: 0x0403368E RID: 210574
 			public string EffectPathKey = "";
 
-			// Token: 0x04038CC2 RID: 232642
+			// Token: 0x0403368F RID: 210575
 			public Vector EffectSpawnPosition = Vector.ZeroVectorProxy;
 		}
 	}

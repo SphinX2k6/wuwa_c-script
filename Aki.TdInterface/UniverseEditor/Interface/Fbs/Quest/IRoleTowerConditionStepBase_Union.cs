@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040D0 RID: 16592
+	// Token: 0x02004511 RID: 17681
 	public enum IRoleTowerConditionStepBase_Union : byte
 	{
-		// Token: 0x0400BC67 RID: 48231
+		// Token: 0x0400C650 RID: 50768
 		NONE,
-		// Token: 0x0400BC68 RID: 48232
+		// Token: 0x0400C651 RID: 50769
 		IRoleTowerConditionStepBase,
-		// Token: 0x0400BC69 RID: 48233
+		// Token: 0x0400C652 RID: 50770
 		IRoleTowerConditionStepPrepare,
-		// Token: 0x0400BC6A RID: 48234
+		// Token: 0x0400C653 RID: 50771
 		IRoleTowerConditionStepBattle,
-		// Token: 0x0400BC6B RID: 48235
+		// Token: 0x0400C654 RID: 50772
 		IRoleTowerConditionStepSettle,
-		// Token: 0x0400BC6C RID: 48236
+		// Token: 0x0400C655 RID: 50773
 		IRoleTowerConditionStepTeamUpgrade,
-		// Token: 0x0400BC6D RID: 48237
+		// Token: 0x0400C656 RID: 50774
 		IRoleTowerConditionStepLoadSubLevel
 	}
 }

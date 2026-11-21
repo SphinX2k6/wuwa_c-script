@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006186 RID: 24966
+	// Token: 0x020067F1 RID: 26609
 	public class IAkEventMapType_UnionUnion
 	{
-		// Token: 0x1700BA27 RID: 47655
-		// (get) Token: 0x0602B010 RID: 176144 RVA: 0x005EECAD File Offset: 0x005ECEAD
-		// (set) Token: 0x0602B011 RID: 176145 RVA: 0x005EECB5 File Offset: 0x005ECEB5
+		// Token: 0x1700C3A5 RID: 50085
+		// (get) Token: 0x0602D741 RID: 186177 RVA: 0x00639521 File Offset: 0x00637721
+		// (set) Token: 0x0602D742 RID: 186178 RVA: 0x00639529 File Offset: 0x00637729
 		public IAkEventMapType_Union Type { get; set; }
 
-		// Token: 0x1700BA28 RID: 47656
-		// (get) Token: 0x0602B012 RID: 176146 RVA: 0x005EECBE File Offset: 0x005ECEBE
-		// (set) Token: 0x0602B013 RID: 176147 RVA: 0x005EECC6 File Offset: 0x005ECEC6
+		// Token: 0x1700C3A6 RID: 50086
+		// (get) Token: 0x0602D743 RID: 186179 RVA: 0x00639532 File Offset: 0x00637732
+		// (set) Token: 0x0602D744 RID: 186180 RVA: 0x0063953A File Offset: 0x0063773A
 		public object Value { get; set; }
 
-		// Token: 0x0602B014 RID: 176148 RVA: 0x005EECCF File Offset: 0x005ECECF
+		// Token: 0x0602D745 RID: 186181 RVA: 0x00639543 File Offset: 0x00637743
 		public IAkEventMapType_UnionUnion()
 		{
 			this.Type = IAkEventMapType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602B015 RID: 176149 RVA: 0x005EECE5 File Offset: 0x005ECEE5
+		// Token: 0x0602D746 RID: 186182 RVA: 0x00639559 File Offset: 0x00637759
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602B016 RID: 176150 RVA: 0x005EECF7 File Offset: 0x005ECEF7
+		// Token: 0x0602D747 RID: 186183 RVA: 0x0063956B File Offset: 0x0063776B
 		public IAkEventMapTypeT AsIAkEventMapType()
 		{
 			return this.As<IAkEventMapTypeT>();
 		}
 
-		// Token: 0x0602B017 RID: 176151 RVA: 0x005EECFF File Offset: 0x005ECEFF
+		// Token: 0x0602D748 RID: 186184 RVA: 0x00639573 File Offset: 0x00637773
 		public static IAkEventMapType_UnionUnion FromIAkEventMapType(IAkEventMapTypeT _iakeventmaptype)
 		{
 			return new IAkEventMapType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B018 RID: 176152 RVA: 0x005EED14 File Offset: 0x005ECF14
+		// Token: 0x0602D749 RID: 186185 RVA: 0x00639588 File Offset: 0x00637788
 		public IPlayMapMusicT AsIPlayMapMusic()
 		{
 			return this.As<IPlayMapMusicT>();
 		}
 
-		// Token: 0x0602B019 RID: 176153 RVA: 0x005EED1C File Offset: 0x005ECF1C
+		// Token: 0x0602D74A RID: 186186 RVA: 0x00639590 File Offset: 0x00637790
 		public static IAkEventMapType_UnionUnion FromIPlayMapMusic(IPlayMapMusicT _iplaymapmusic)
 		{
 			return new IAkEventMapType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B01A RID: 176154 RVA: 0x005EED34 File Offset: 0x005ECF34
+		// Token: 0x0602D74B RID: 186187 RVA: 0x006395A8 File Offset: 0x006377A8
 		public static int Pack(FlatBufferBuilder builder, IAkEventMapType_UnionUnion _o)
 		{
 			IAkEventMapType_Union type = _o.Type;

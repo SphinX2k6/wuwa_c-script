@@ -7,20 +7,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200082A RID: 2090
+	// Token: 0x0200017D RID: 381
 	[UnrealObjectPath("/Script/Engine.AnimNotifyState")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 72)]
 	public abstract class UAnimNotifyState : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06007080 RID: 28800 RVA: 0x000A158F File Offset: 0x0009F78F
+		// Token: 0x0600183F RID: 6207 RVA: 0x000250A0 File Offset: 0x000232A0
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAnimNotifyState._ClassPtr;
 		}
 
-		// Token: 0x17001A79 RID: 6777
-		// (get) Token: 0x06007081 RID: 28801 RVA: 0x000A159B File Offset: 0x0009F79B
-		// (set) Token: 0x06007082 RID: 28802 RVA: 0x000A15AB File Offset: 0x0009F7AB
+		// Token: 0x1700029F RID: 671
+		// (get) Token: 0x06001840 RID: 6208 RVA: 0x000250AC File Offset: 0x000232AC
+		// (set) Token: 0x06001841 RID: 6209 RVA: 0x000250BC File Offset: 0x000232BC
 		public unsafe bool bOnlyTriggerInMainAnim
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A7A RID: 6778
-		// (get) Token: 0x06007083 RID: 28803 RVA: 0x000A15BC File Offset: 0x0009F7BC
-		// (set) Token: 0x06007084 RID: 28804 RVA: 0x000A15CC File Offset: 0x0009F7CC
+		// Token: 0x170002A0 RID: 672
+		// (get) Token: 0x06001842 RID: 6210 RVA: 0x000250CD File Offset: 0x000232CD
+		// (set) Token: 0x06001843 RID: 6211 RVA: 0x000250DD File Offset: 0x000232DD
 		public unsafe bool NeedSimulateBegin
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A7B RID: 6779
-		// (get) Token: 0x06007085 RID: 28805 RVA: 0x000A15DD File Offset: 0x0009F7DD
-		// (set) Token: 0x06007086 RID: 28806 RVA: 0x000A15ED File Offset: 0x0009F7ED
+		// Token: 0x170002A1 RID: 673
+		// (get) Token: 0x06001844 RID: 6212 RVA: 0x000250EE File Offset: 0x000232EE
+		// (set) Token: 0x06001845 RID: 6213 RVA: 0x000250FE File Offset: 0x000232FE
 		public unsafe bool NeedSimulateTick
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A7C RID: 6780
-		// (get) Token: 0x06007087 RID: 28807 RVA: 0x000A15FE File Offset: 0x0009F7FE
-		// (set) Token: 0x06007088 RID: 28808 RVA: 0x000A160E File Offset: 0x0009F80E
+		// Token: 0x170002A2 RID: 674
+		// (get) Token: 0x06001846 RID: 6214 RVA: 0x0002510F File Offset: 0x0002330F
+		// (set) Token: 0x06001847 RID: 6215 RVA: 0x0002511F File Offset: 0x0002331F
 		public unsafe bool NeedSimulateEnd
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A7D RID: 6781
-		// (get) Token: 0x06007089 RID: 28809 RVA: 0x000A161F File Offset: 0x0009F81F
-		// (set) Token: 0x0600708A RID: 28810 RVA: 0x000A162F File Offset: 0x0009F82F
+		// Token: 0x170002A3 RID: 675
+		// (get) Token: 0x06001848 RID: 6216 RVA: 0x00025130 File Offset: 0x00023330
+		// (set) Token: 0x06001849 RID: 6217 RVA: 0x00025140 File Offset: 0x00023340
 		public unsafe bool bRestartWithReplay
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A7E RID: 6782
-		// (get) Token: 0x0600708B RID: 28811 RVA: 0x000A1640 File Offset: 0x0009F840
-		// (set) Token: 0x0600708C RID: 28812 RVA: 0x000A1650 File Offset: 0x0009F850
+		// Token: 0x170002A4 RID: 676
+		// (get) Token: 0x0600184A RID: 6218 RVA: 0x00025151 File Offset: 0x00023351
+		// (set) Token: 0x0600184B RID: 6219 RVA: 0x00025161 File Offset: 0x00023361
 		public unsafe float CurrentTimeLength
 		{
 			get
@@ -108,193 +108,193 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600708D RID: 28813 RVA: 0x000A1661 File Offset: 0x0009F861
+		// Token: 0x0600184C RID: 6220 RVA: 0x00025172 File Offset: 0x00023372
 		[NullableContext(2)]
 		public virtual bool Received_NotifyTick(USkeletalMeshComponent MeshComp, UAnimSequenceBase Animation, float FrameDeltaTime)
 		{
 			return UAnimNotifyState.__Received_NotifyTick_Internal(base.NativePtr, (MeshComp != null) ? MeshComp.NativePtr : IntPtr.Zero, (Animation != null) ? Animation.NativePtr : IntPtr.Zero, FrameDeltaTime);
 		}
 
-		// Token: 0x0600708E RID: 28814 RVA: 0x000A168F File Offset: 0x0009F88F
+		// Token: 0x0600184D RID: 6221 RVA: 0x000251A0 File Offset: 0x000233A0
 		[NullableContext(2)]
 		public virtual bool Received_NotifyEnd(USkeletalMeshComponent MeshComp, UAnimSequenceBase Animation)
 		{
 			return UAnimNotifyState.__Received_NotifyEnd_Internal(base.NativePtr, (MeshComp != null) ? MeshComp.NativePtr : IntPtr.Zero, (Animation != null) ? Animation.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600708F RID: 28815 RVA: 0x000A16BC File Offset: 0x0009F8BC
+		// Token: 0x0600184E RID: 6222 RVA: 0x000251CD File Offset: 0x000233CD
 		[NullableContext(2)]
 		public virtual bool Received_NotifyBegin(USkeletalMeshComponent MeshComp, UAnimSequenceBase Animation, float TotalDuration)
 		{
 			return UAnimNotifyState.__Received_NotifyBegin_Internal(base.NativePtr, (MeshComp != null) ? MeshComp.NativePtr : IntPtr.Zero, (Animation != null) ? Animation.NativePtr : IntPtr.Zero, TotalDuration);
 		}
 
-		// Token: 0x06007090 RID: 28816 RVA: 0x000A16EA File Offset: 0x0009F8EA
+		// Token: 0x0600184F RID: 6223 RVA: 0x000251FB File Offset: 0x000233FB
 		[NullableContext(1)]
 		public virtual string GetNotifyName()
 		{
 			return FString.ToStringAndDeleteNativePtr(UAnimNotifyState.__GetNotifyName_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06007091 RID: 28817 RVA: 0x000A16FC File Offset: 0x0009F8FC
+		// Token: 0x06001850 RID: 6224 RVA: 0x0002520D File Offset: 0x0002340D
 		[NullableContext(1)]
 		protected virtual string GetNotifyName_Implementation()
 		{
 			return FString.ToStringAndDeleteNativePtr(UAnimNotifyState.__GetNotifyName_Implementation_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06007092 RID: 28818 RVA: 0x000A170E File Offset: 0x0009F90E
+		// Token: 0x06001851 RID: 6225 RVA: 0x0002521F File Offset: 0x0002341F
 		public float GetCurrentTriggerOffsetInThisNotifyTick()
 		{
 			return UAnimNotifyState.__GetCurrentTriggerOffsetInThisNotifyTick_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06007093 RID: 28819 RVA: 0x000A171B File Offset: 0x0009F91B
+		// Token: 0x06001852 RID: 6226 RVA: 0x0002522C File Offset: 0x0002342C
 		public float GetCurrentTimeLength()
 		{
 			return UAnimNotifyState.__GetCurrentTimeLength_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06007094 RID: 28820
+		// Token: 0x06001853 RID: 6227
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Received_NotifyTick_Internal(IntPtr @this, IntPtr MeshComp, IntPtr Animation, float FrameDeltaTime);
 
-		// Token: 0x06007095 RID: 28821
+		// Token: 0x06001854 RID: 6228
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Received_NotifyEnd_Internal(IntPtr @this, IntPtr MeshComp, IntPtr Animation);
 
-		// Token: 0x06007096 RID: 28822
+		// Token: 0x06001855 RID: 6229
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Received_NotifyBegin_Internal(IntPtr @this, IntPtr MeshComp, IntPtr Animation, float TotalDuration);
 
-		// Token: 0x06007097 RID: 28823
+		// Token: 0x06001856 RID: 6230
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetNotifyName_Internal(IntPtr @this);
 
-		// Token: 0x06007098 RID: 28824
+		// Token: 0x06001857 RID: 6231
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetNotifyName_Implementation_Internal(IntPtr @this);
 
-		// Token: 0x06007099 RID: 28825
+		// Token: 0x06001858 RID: 6232
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetCurrentTriggerOffsetInThisNotifyTick_Internal(IntPtr @this);
 
-		// Token: 0x0600709A RID: 28826
+		// Token: 0x06001859 RID: 6233
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetCurrentTimeLength_Internal(IntPtr @this);
 
-		// Token: 0x0600709B RID: 28827 RVA: 0x000A1728 File Offset: 0x0009F928
+		// Token: 0x0600185A RID: 6234 RVA: 0x00025239 File Offset: 0x00023439
 		static UAnimNotifyState()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.AnimNotifyState");
 		}
 
-		// Token: 0x0600709C RID: 28828 RVA: 0x000A1738 File Offset: 0x0009F938
+		// Token: 0x0600185B RID: 6235 RVA: 0x00025248 File Offset: 0x00023448
 		protected UAnimNotifyState() : this(BuiltinUtils.AllocNativeUObject(UAnimNotifyState.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600709D RID: 28829 RVA: 0x000A1760 File Offset: 0x0009F960
+		// Token: 0x0600185C RID: 6236 RVA: 0x00025270 File Offset: 0x00023470
 		protected UAnimNotifyState(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003603 RID: 13827
+		// Token: 0x040007AE RID: 1966
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.AnimNotifyState";
 
-		// Token: 0x04003604 RID: 13828
+		// Token: 0x040007AF RID: 1967
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003605 RID: 13829
+		// Token: 0x040007B0 RID: 1968
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003606 RID: 13830
+		// Token: 0x040007B1 RID: 1969
 		internal static int __PropertyOffset_bOnlyTriggerInMainAnim;
 
-		// Token: 0x04003607 RID: 13831
+		// Token: 0x040007B2 RID: 1970
 		internal static int __PropertyOffset_NeedSimulateBegin;
 
-		// Token: 0x04003608 RID: 13832
+		// Token: 0x040007B3 RID: 1971
 		internal static int __PropertyOffset_NeedSimulateTick;
 
-		// Token: 0x04003609 RID: 13833
+		// Token: 0x040007B4 RID: 1972
 		internal static int __PropertyOffset_NeedSimulateEnd;
 
-		// Token: 0x0400360A RID: 13834
+		// Token: 0x040007B5 RID: 1973
 		internal static int __PropertyOffset_bRestartWithReplay;
 
-		// Token: 0x0400360B RID: 13835
+		// Token: 0x040007B6 RID: 1974
 		internal static int __PropertyOffset_CurrentTimeLength;
 
-		// Token: 0x02002C87 RID: 11399
+		// Token: 0x0200096A RID: 2410
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __Received_NotifyTick_FunctionParams
 		{
-			// Token: 0x040165C2 RID: 91586
+			// Token: 0x04005898 RID: 22680
 			[FieldOffset(0)]
 			public IntPtr MeshComp;
 
-			// Token: 0x040165C3 RID: 91587
+			// Token: 0x04005899 RID: 22681
 			[FieldOffset(8)]
 			public IntPtr Animation;
 
-			// Token: 0x040165C4 RID: 91588
+			// Token: 0x0400589A RID: 22682
 			[FieldOffset(16)]
 			public float FrameDeltaTime;
 
-			// Token: 0x040165C5 RID: 91589
+			// Token: 0x0400589B RID: 22683
 			[FieldOffset(20)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002C88 RID: 11400
+		// Token: 0x0200096B RID: 2411
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __Received_NotifyEnd_FunctionParams
 		{
-			// Token: 0x040165C6 RID: 91590
+			// Token: 0x0400589C RID: 22684
 			[FieldOffset(0)]
 			public IntPtr MeshComp;
 
-			// Token: 0x040165C7 RID: 91591
+			// Token: 0x0400589D RID: 22685
 			[FieldOffset(8)]
 			public IntPtr Animation;
 
-			// Token: 0x040165C8 RID: 91592
+			// Token: 0x0400589E RID: 22686
 			[FieldOffset(16)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002C89 RID: 11401
+		// Token: 0x0200096C RID: 2412
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __Received_NotifyBegin_FunctionParams
 		{
-			// Token: 0x040165C9 RID: 91593
+			// Token: 0x0400589F RID: 22687
 			[FieldOffset(0)]
 			public IntPtr MeshComp;
 
-			// Token: 0x040165CA RID: 91594
+			// Token: 0x040058A0 RID: 22688
 			[FieldOffset(8)]
 			public IntPtr Animation;
 
-			// Token: 0x040165CB RID: 91595
+			// Token: 0x040058A1 RID: 22689
 			[FieldOffset(16)]
 			public float TotalDuration;
 
-			// Token: 0x040165CC RID: 91596
+			// Token: 0x040058A2 RID: 22690
 			[FieldOffset(20)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002C8A RID: 11402
+		// Token: 0x0200096D RID: 2413
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetNotifyName_FunctionParams
 		{
-			// Token: 0x040165CD RID: 91597
+			// Token: 0x040058A3 RID: 22691
 			[FieldOffset(0)]
 			public FString __Result;
 		}

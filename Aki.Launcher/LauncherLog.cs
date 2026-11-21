@@ -12,7 +12,7 @@ using UnrealEngine.Utils;
 [Nullable(0)]
 public class LauncherLog : Singleton
 {
-	// Token: 0x0600009D RID: 157 RVA: 0x00006F23 File Offset: 0x00005123
+	// Token: 0x0600009D RID: 157 RVA: 0x00006F5B File Offset: 0x0000515B
 	public void SetJsDebugId(string id)
 	{
 		if (!string.IsNullOrEmpty(id))
@@ -21,37 +21,37 @@ public class LauncherLog : Singleton
 		}
 	}
 
-	// Token: 0x0600009E RID: 158 RVA: 0x00006F43 File Offset: 0x00005143
+	// Token: 0x0600009E RID: 158 RVA: 0x00006F7B File Offset: 0x0000517B
 	public void SetLevel(LauncherLog.ELogLevel level)
 	{
 		this.Level = level;
 	}
 
-	// Token: 0x0600009F RID: 159 RVA: 0x00006F4C File Offset: 0x0000514C
+	// Token: 0x0600009F RID: 159 RVA: 0x00006F84 File Offset: 0x00005184
 	public bool CheckError()
 	{
 		return this.Level >= LauncherLog.ELogLevel.Error;
 	}
 
-	// Token: 0x060000A0 RID: 160 RVA: 0x00006F5A File Offset: 0x0000515A
+	// Token: 0x060000A0 RID: 160 RVA: 0x00006F92 File Offset: 0x00005192
 	public bool CheckWarn()
 	{
 		return this.Level >= LauncherLog.ELogLevel.Warn;
 	}
 
-	// Token: 0x060000A1 RID: 161 RVA: 0x00006F68 File Offset: 0x00005168
+	// Token: 0x060000A1 RID: 161 RVA: 0x00006FA0 File Offset: 0x000051A0
 	public bool CheckInfo()
 	{
 		return this.Level >= LauncherLog.ELogLevel.Info;
 	}
 
-	// Token: 0x060000A2 RID: 162 RVA: 0x00006F76 File Offset: 0x00005176
+	// Token: 0x060000A2 RID: 162 RVA: 0x00006FAE File Offset: 0x000051AE
 	public bool CheckDebug()
 	{
 		return this.Level >= LauncherLog.ELogLevel.Debug;
 	}
 
-	// Token: 0x060000A3 RID: 163 RVA: 0x00006F84 File Offset: 0x00005184
+	// Token: 0x060000A3 RID: 163 RVA: 0x00006FBC File Offset: 0x000051BC
 	public void Error(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -63,7 +63,7 @@ public class LauncherLog : Singleton
 		this.Print(LauncherLog.ELogLevel.Error, message, pairs, this.LevelTrace[LauncherLog.ELogLevel.Error], null);
 	}
 
-	// Token: 0x060000A4 RID: 164 RVA: 0x00006F9C File Offset: 0x0000519C
+	// Token: 0x060000A4 RID: 164 RVA: 0x00006FD4 File Offset: 0x000051D4
 	public void ErrorWithStack(string message, Exception error, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -75,7 +75,7 @@ public class LauncherLog : Singleton
 		this.Print(LauncherLog.ELogLevel.Error, message, pairs, this.LevelTrace[LauncherLog.ELogLevel.Error], error);
 	}
 
-	// Token: 0x060000A5 RID: 165 RVA: 0x00006FB4 File Offset: 0x000051B4
+	// Token: 0x060000A5 RID: 165 RVA: 0x00006FEC File Offset: 0x000051EC
 	public void Warn(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -87,7 +87,7 @@ public class LauncherLog : Singleton
 		this.Print(LauncherLog.ELogLevel.Warn, message, pairs, this.LevelTrace[LauncherLog.ELogLevel.Warn], null);
 	}
 
-	// Token: 0x060000A6 RID: 166 RVA: 0x00006FCC File Offset: 0x000051CC
+	// Token: 0x060000A6 RID: 166 RVA: 0x00007004 File Offset: 0x00005204
 	public void Info(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -99,7 +99,7 @@ public class LauncherLog : Singleton
 		this.Print(LauncherLog.ELogLevel.Info, message, pairs, this.LevelTrace[LauncherLog.ELogLevel.Info], null);
 	}
 
-	// Token: 0x060000A7 RID: 167 RVA: 0x00006FE4 File Offset: 0x000051E4
+	// Token: 0x060000A7 RID: 167 RVA: 0x0000701C File Offset: 0x0000521C
 	public void Debug(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -111,7 +111,7 @@ public class LauncherLog : Singleton
 		this.Print(LauncherLog.ELogLevel.Debug, message, pairs, this.LevelTrace[LauncherLog.ELogLevel.Debug], null);
 	}
 
-	// Token: 0x060000A8 RID: 168 RVA: 0x00006FFC File Offset: 0x000051FC
+	// Token: 0x060000A8 RID: 168 RVA: 0x00007034 File Offset: 0x00005234
 	private unsafe void Print(LauncherLog.ELogLevel level, string message, [Nullable(new byte[]
 	{
 		0,
@@ -159,7 +159,7 @@ public class LauncherLog : Singleton
 		this.LogMessage(level, logBuilder.ToString());
 	}
 
-	// Token: 0x060000A9 RID: 169 RVA: 0x0000713C File Offset: 0x0000533C
+	// Token: 0x060000A9 RID: 169 RVA: 0x00007174 File Offset: 0x00005374
 	private string GetTime()
 	{
 		DateTime now = DateTime.Now;
@@ -174,7 +174,7 @@ public class LauncherLog : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060000AA RID: 170 RVA: 0x000071BC File Offset: 0x000053BC
+	// Token: 0x060000AA RID: 170 RVA: 0x000071F4 File Offset: 0x000053F4
 	private void AppendValueToBuilder(UnsafeStringBuilder builder, [Nullable(2)] object value)
 	{
 		if (value == null)
@@ -197,13 +197,13 @@ public class LauncherLog : Singleton
 		builder.Append(value.ToString());
 	}
 
-	// Token: 0x060000AB RID: 171 RVA: 0x00007228 File Offset: 0x00005428
+	// Token: 0x060000AB RID: 171 RVA: 0x00007260 File Offset: 0x00005460
 	[return: Nullable(2)]
 	private string Encode(object target)
 	{
 		try
 		{
-			return LauncherJson.Stringify<object>(target, null);
+			return LauncherJson.Stringify(target, null);
 		}
 		catch (Exception ex)
 		{
@@ -215,7 +215,7 @@ public class LauncherLog : Singleton
 		return null;
 	}
 
-	// Token: 0x060000AC RID: 172 RVA: 0x0000727C File Offset: 0x0000547C
+	// Token: 0x060000AC RID: 172 RVA: 0x000072B4 File Offset: 0x000054B4
 	private void GetStack(UnsafeStringBuilder contentBuilder, [Nullable(2)] Exception error, int firstStackIndex)
 	{
 		UnsafeStringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new UnsafeStringBuilder.AppendInterpolatedStringHandler(8, 1, contentBuilder);
@@ -247,7 +247,7 @@ public class LauncherLog : Singleton
 		contentBuilder.Append(blueprintCallstack);
 	}
 
-	// Token: 0x060000AD RID: 173 RVA: 0x00007329 File Offset: 0x00005529
+	// Token: 0x060000AD RID: 173 RVA: 0x00007361 File Offset: 0x00005561
 	private void LogMessage(LauncherLog.ELogLevel level, string message)
 	{
 		switch (level)
@@ -270,7 +270,7 @@ public class LauncherLog : Singleton
 	}
 
 	// Token: 0x1700000A RID: 10
-	// (get) Token: 0x060000AE RID: 174 RVA: 0x0000735D File Offset: 0x0000555D
+	// (get) Token: 0x060000AE RID: 174 RVA: 0x00007395 File Offset: 0x00005595
 	public static LauncherLog Instance
 	{
 		get
@@ -284,12 +284,12 @@ public class LauncherLog : Singleton
 		}
 	}
 
-	// Token: 0x060000AF RID: 175 RVA: 0x00007380 File Offset: 0x00005580
+	// Token: 0x060000AF RID: 175 RVA: 0x000073B8 File Offset: 0x000055B8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060000B0 RID: 176 RVA: 0x00007382 File Offset: 0x00005582
+	// Token: 0x060000B0 RID: 176 RVA: 0x000073BA File Offset: 0x000055BA
 	public static void ResetStaticDefaultValue()
 	{
 		LauncherLog instance = LauncherLog._instance;
@@ -300,13 +300,13 @@ public class LauncherLog : Singleton
 		LauncherLog._instance = null;
 	}
 
-	// Token: 0x060000B1 RID: 177 RVA: 0x0000739C File Offset: 0x0000559C
+	// Token: 0x060000B1 RID: 177 RVA: 0x000073D4 File Offset: 0x000055D4
 	static LauncherLog()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LauncherLog.CreateStaticDefaultValue), new Action(LauncherLog.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000051 RID: 81
+	// Token: 0x04000052 RID: 82
 	private readonly Dictionary<LauncherLog.ELogLevel, bool> LevelTrace = new Dictionary<LauncherLog.ELogLevel, bool>
 	{
 		{
@@ -327,7 +327,7 @@ public class LauncherLog : Singleton
 		}
 	};
 
-	// Token: 0x04000052 RID: 82
+	// Token: 0x04000053 RID: 83
 	private readonly Dictionary<LauncherLog.ELogLevel, string> LevelName = new Dictionary<LauncherLog.ELogLevel, string>
 	{
 		{
@@ -348,45 +348,45 @@ public class LauncherLog : Singleton
 		}
 	};
 
-	// Token: 0x04000053 RID: 83
+	// Token: 0x04000054 RID: 84
 	private LauncherLog.ELogLevel Level = LauncherLog.ELogLevel.Debug;
 
-	// Token: 0x04000054 RID: 84
+	// Token: 0x04000055 RID: 85
 	private readonly bool Serialization;
 
-	// Token: 0x04000055 RID: 85
+	// Token: 0x04000056 RID: 86
 	private int Increment;
 
-	// Token: 0x04000056 RID: 86
-	private string JsDebugId = string.Empty;
-
 	// Token: 0x04000057 RID: 87
-	[StaticVariableRuleIgnore]
-	private static readonly UnsafeStringBuilder LogBuilder = new UnsafeStringBuilder(128);
+	private string JsDebugId = string.Empty;
 
 	// Token: 0x04000058 RID: 88
 	[StaticVariableRuleIgnore]
-	private static readonly UnsafeStringBuilder ValueBuilder = new UnsafeStringBuilder(128);
+	private static readonly UnsafeStringBuilder LogBuilder = new UnsafeStringBuilder(128);
 
 	// Token: 0x04000059 RID: 89
 	[StaticVariableRuleIgnore]
-	private static readonly UnsafeStringBuilder StackContentBuilder = new UnsafeStringBuilder(128);
+	private static readonly UnsafeStringBuilder ValueBuilder = new UnsafeStringBuilder(128);
 
 	// Token: 0x0400005A RID: 90
+	[StaticVariableRuleIgnore]
+	private static readonly UnsafeStringBuilder StackContentBuilder = new UnsafeStringBuilder(128);
+
+	// Token: 0x0400005B RID: 91
 	[Nullable(2)]
 	private static LauncherLog _instance;
 
-	// Token: 0x02000286 RID: 646
+	// Token: 0x0200028F RID: 655
 	[NullableContext(0)]
 	public enum ELogLevel
 	{
-		// Token: 0x04000A3E RID: 2622
+		// Token: 0x04000A8E RID: 2702
 		Error,
-		// Token: 0x04000A3F RID: 2623
+		// Token: 0x04000A8F RID: 2703
 		Warn,
-		// Token: 0x04000A40 RID: 2624
+		// Token: 0x04000A90 RID: 2704
 		Info,
-		// Token: 0x04000A41 RID: 2625
+		// Token: 0x04000A91 RID: 2705
 		Debug
 	}
 }

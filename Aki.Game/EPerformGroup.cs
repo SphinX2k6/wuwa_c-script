@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003123 RID: 12579
+// Token: 0x0200267E RID: 9854
 public enum EPerformGroup
 {
-	// Token: 0x0400D230 RID: 53808
+	// Token: 0x0400D652 RID: 54866
 	DefaultGroup,
-	// Token: 0x0400D231 RID: 53809
+	// Token: 0x0400D653 RID: 54867
 	KuroPerformSubGroup
 }

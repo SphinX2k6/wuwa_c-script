@@ -28,12 +28,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007184 RID: 29060
+	// Token: 0x02006238 RID: 25144
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemManipulatableComponent : EntityComponent
 	{
-		// Token: 0x06047082 RID: 290946 RVA: 0x011FED6C File Offset: 0x011FCF6C
+		// Token: 0x0603C922 RID: 248098 RVA: 0x01159370 File Offset: 0x01157570
 		public bool ControlledByLocalPlayer()
 		{
 			long controllerId = this.ControllerId;
@@ -52,21 +52,21 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return controllerId == num2.GetValueOrDefault() & num2 != null;
 		}
 
-		// Token: 0x06047083 RID: 290947 RVA: 0x011FEDC8 File Offset: 0x011FCFC8
+		// Token: 0x0603C923 RID: 248099 RVA: 0x011593CC File Offset: 0x011575CC
 		public long GetControllerId()
 		{
 			return this.ControllerId;
 		}
 
-		// Token: 0x06047084 RID: 290948 RVA: 0x011FEDD0 File Offset: 0x011FCFD0
+		// Token: 0x0603C924 RID: 248100 RVA: 0x011593D4 File Offset: 0x011575D4
 		public void SetControllerId(long id)
 		{
 			this.ControllerId = id;
 			this.ActorComp.GetPrimitiveComponent().bCanCharacterStandOn = (id == 0L);
 		}
 
-		// Token: 0x17009D81 RID: 40321
-		// (get) Token: 0x06047085 RID: 290949 RVA: 0x011FEDF0 File Offset: 0x011FCFF0
+		// Token: 0x17007282 RID: 29314
+		// (get) Token: 0x0603C925 RID: 248101 RVA: 0x011593F4 File Offset: 0x011575F4
 		public bool CanBeHeld
 		{
 			get
@@ -92,8 +92,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D82 RID: 40322
-		// (get) Token: 0x06047086 RID: 290950 RVA: 0x011FEE95 File Offset: 0x011FD095
+		// Token: 0x17007283 RID: 29315
+		// (get) Token: 0x0603C926 RID: 248102 RVA: 0x01159499 File Offset: 0x01157699
 		public JigsawIndex PutIndex
 		{
 			get
@@ -102,9 +102,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D83 RID: 40323
-		// (get) Token: 0x06047087 RID: 290951 RVA: 0x011FEE9D File Offset: 0x011FD09D
-		// (set) Token: 0x06047088 RID: 290952 RVA: 0x011FEEA5 File Offset: 0x011FD0A5
+		// Token: 0x17007284 RID: 29316
+		// (get) Token: 0x0603C927 RID: 248103 RVA: 0x011594A1 File Offset: 0x011576A1
+		// (set) Token: 0x0603C928 RID: 248104 RVA: 0x011594A9 File Offset: 0x011576A9
 		public bool IsProjectileAimMode
 		{
 			get
@@ -139,8 +139,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D84 RID: 40324
-		// (get) Token: 0x06047089 RID: 290953 RVA: 0x011FEEE0 File Offset: 0x011FD0E0
+		// Token: 0x17007285 RID: 29317
+		// (get) Token: 0x0603C929 RID: 248105 RVA: 0x011594E4 File Offset: 0x011576E4
 		public bool CannotCastWithoutTarget
 		{
 			get
@@ -149,14 +149,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604708A RID: 290954 RVA: 0x011FEEE8 File Offset: 0x011FD0E8
+		// Token: 0x0603C92A RID: 248106 RVA: 0x011594EC File Offset: 0x011576EC
 		public void SetEnableTargetLocationCalculation(bool enable)
 		{
 			this.EnableTargetLocationCalculation = enable;
 		}
 
-		// Token: 0x17009D85 RID: 40325
-		// (get) Token: 0x0604708B RID: 290955 RVA: 0x011FEEF1 File Offset: 0x011FD0F1
+		// Token: 0x17007286 RID: 29318
+		// (get) Token: 0x0603C92B RID: 248107 RVA: 0x011594F5 File Offset: 0x011576F5
 		public bool IsEnableTargetLocationCalculation
 		{
 			get
@@ -165,13 +165,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604708C RID: 290956 RVA: 0x011FEEF9 File Offset: 0x011FD0F9
+		// Token: 0x0603C92C RID: 248108 RVA: 0x011594FD File Offset: 0x011576FD
 		public bool IsCanInteractType()
 		{
 			return LevelGamePlayController.Instance.MultiplayerLimitTypeCheck(this.OnlineType.Value, true);
 		}
 
-		// Token: 0x0604708D RID: 290957 RVA: 0x011FEF14 File Offset: 0x011FD114
+		// Token: 0x0603C92D RID: 248109 RVA: 0x01159518 File Offset: 0x01157718
 		protected unsafe override bool OnInitData(IEntityArgs args = null)
 		{
 			TeleControl2 config = args.GetP1<CreateEntityData>().GetParam<SceneItemManipulatableComponent>() as TeleControl2;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604708E RID: 290958 RVA: 0x011FF130 File Offset: 0x011FD330
+		// Token: 0x0603C92E RID: 248110 RVA: 0x01159734 File Offset: 0x01157934
 		protected override bool OnClear()
 		{
 			if (EventSystem.Instance.HasWithTarget(this, EEventName.OnSceneItemHit, new Action(this.CreateBulletOnHit)))
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604708F RID: 290959 RVA: 0x011FF1C0 File Offset: 0x011FD3C0
+		// Token: 0x0603C92F RID: 248111 RVA: 0x011597C4 File Offset: 0x011579C4
 		[NullableContext(1)]
 		private void CheckOutletWaitEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047090 RID: 290960 RVA: 0x011FF284 File Offset: 0x011FD484
+		// Token: 0x0603C930 RID: 248112 RVA: 0x01159888 File Offset: 0x01157A88
 		private void CheckOutletWaitLoadCompleted()
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.CreatureDataComponent.RelationId);
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CheckJisgawBase(entityByPbDataId);
 		}
 
-		// Token: 0x06047091 RID: 290961 RVA: 0x011FF2E8 File Offset: 0x011FD4E8
+		// Token: 0x0603C931 RID: 248113 RVA: 0x011598EC File Offset: 0x01157AEC
 		[NullableContext(1)]
 		private void CheckJisgawBase(EntityHandle handle)
 		{
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047092 RID: 290962 RVA: 0x011FF398 File Offset: 0x011FD598
+		// Token: 0x0603C932 RID: 248114 RVA: 0x0115999C File Offset: 0x01157B9C
 		[NullableContext(1)]
 		private void CheckOutlet(EntityHandle relationEntityHandle, int? matchCfgIndex)
 		{
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047093 RID: 290963 RVA: 0x011FF458 File Offset: 0x011FD658
+		// Token: 0x0603C933 RID: 248115 RVA: 0x01159A5C File Offset: 0x01157C5C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047094 RID: 290964 RVA: 0x011FF6A0 File Offset: 0x011FD8A0
+		// Token: 0x0603C934 RID: 248116 RVA: 0x01159CA4 File Offset: 0x01157EA4
 		protected override void OnActivate()
 		{
 			if (!Info.Instance.EnableForceTick && base.Active)
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047095 RID: 290965 RVA: 0x011FF6FE File Offset: 0x011FD8FE
+		// Token: 0x0603C935 RID: 248117 RVA: 0x01159D02 File Offset: 0x01157F02
 		private unsafe void LoadBaseConfig()
 		{
 			ResourceSystem.Instance.LoadAsync<BP_TeleControlConfig_C>(this.Config.BaseCfg.CommonConfig, delegate([Nullable(2)] BP_TeleControlConfig_C result, string _)
@@ -636,7 +636,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06047096 RID: 290966 RVA: 0x011FF730 File Offset: 0x011FD930
+		// Token: 0x0603C936 RID: 248118 RVA: 0x01159D34 File Offset: 0x01157F34
 		private unsafe void CheckInitMatch()
 		{
 			this.ActivatedOutlet = null;
@@ -688,7 +688,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047097 RID: 290967 RVA: 0x011FF928 File Offset: 0x011FDB28
+		// Token: 0x0603C937 RID: 248119 RVA: 0x01159F2C File Offset: 0x0115812C
 		private void CheckInitAttach()
 		{
 			SceneItemDynamicAttachTargetComponent component = base.Entity.GetComponent<SceneItemDynamicAttachTargetComponent>();
@@ -729,7 +729,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047098 RID: 290968 RVA: 0x011FFA30 File Offset: 0x011FDC30
+		// Token: 0x0603C938 RID: 248120 RVA: 0x0115A034 File Offset: 0x01158234
 		private void CreateBulletOnHit()
 		{
 			Entity entity = Global.BaseCharacter.CharacterActorComponent.Entity;
@@ -741,7 +741,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047099 RID: 290969 RVA: 0x011FFA88 File Offset: 0x011FDC88
+		// Token: 0x0603C939 RID: 248121 RVA: 0x0115A08C File Offset: 0x0115828C
 		private void CreateBulletOnHitActor(AActor selfActor, AActor otherActor, FVector hitLoc, [Nullable(1)] FHitResult hitResult)
 		{
 			if (otherActor == Global.BaseCharacter.CharacterActorComponent.Owner)
@@ -756,7 +756,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604709A RID: 290970 RVA: 0x011FFAD8 File Offset: 0x011FDCD8
+		// Token: 0x0603C93A RID: 248122 RVA: 0x0115A0DC File Offset: 0x011582DC
 		private void OnManipulateCancelChanting()
 		{
 			if (this.GetState() == SceneItemManipulatableComponent.EManipulatableState.BeChanting)
@@ -765,7 +765,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604709B RID: 290971 RVA: 0x011FFAF0 File Offset: 0x011FDCF0
+		// Token: 0x0603C93B RID: 248123 RVA: 0x0115A0F4 File Offset: 0x011582F4
 		private void OnSceneInteractionLoadCompleted()
 		{
 			if (EventSystem.Instance.HasWithTarget(base.Entity, EEventName.OnSceneInteractionShowCompleted, new Action(this.OnSceneInteractionLoadCompleted)))
@@ -780,7 +780,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			actorComp.GetPrimitiveComponent().OnComponentBeginOverlap.Add(new Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int, bool, FHitResult>(this.OnComponentOverlap));
 		}
 
-		// Token: 0x0604709C RID: 290972 RVA: 0x011FFB68 File Offset: 0x011FDD68
+		// Token: 0x0603C93C RID: 248124 RVA: 0x0115A16C File Offset: 0x0115836C
 		private void OnComponentOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex, bool bFromSweep, [Nullable(1)] FHitResult sweepResult)
 		{
 			if (otherComp == null)
@@ -795,13 +795,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			GlobalData.BpEventManager.被控物撞到水面时.Broadcast(this.ActorComp.Owner, otherActor);
 		}
 
-		// Token: 0x0604709D RID: 290973 RVA: 0x011FFBAB File Offset: 0x011FDDAB
+		// Token: 0x0603C93D RID: 248125 RVA: 0x0115A1AF File Offset: 0x011583AF
 		protected override void OnForceTick(float delta)
 		{
 			this.ForceTickInternal(delta);
 		}
 
-		// Token: 0x0604709E RID: 290974 RVA: 0x011FFBB4 File Offset: 0x011FDDB4
+		// Token: 0x0603C93E RID: 248126 RVA: 0x0115A1B8 File Offset: 0x011583B8
 		private void ForceTickInternal(float delta)
 		{
 			this.CreateBulletIntervalTimer += delta;
@@ -881,7 +881,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604709F RID: 290975 RVA: 0x011FFD58 File Offset: 0x011FDF58
+		// Token: 0x0603C93F RID: 248127 RVA: 0x0115A35C File Offset: 0x0115855C
 		protected override void OnEnable()
 		{
 			if (!Info.Instance.EnableForceTick)
@@ -894,7 +894,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470A0 RID: 290976 RVA: 0x011FFD91 File Offset: 0x011FDF91
+		// Token: 0x0603C940 RID: 248128 RVA: 0x0115A395 File Offset: 0x01158595
 		[NullableContext(1)]
 		protected override void OnDisable(string reason)
 		{
@@ -904,7 +904,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470A1 RID: 290977 RVA: 0x011FFDAC File Offset: 0x011FDFAC
+		// Token: 0x0603C941 RID: 248129 RVA: 0x0115A3B0 File Offset: 0x011585B0
 		protected override bool OnEnd()
 		{
 			this.TryDisableTick("[SceneItemManipulatableComponent.OnEnd] 重置数据");
@@ -991,7 +991,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060470A2 RID: 290978 RVA: 0x0120006C File Offset: 0x011FE26C
+		// Token: 0x0603C942 RID: 248130 RVA: 0x0115A670 File Offset: 0x01158870
 		public void BePopupFormOutlet()
 		{
 			this.IsCanBeHeld = false;
@@ -1001,7 +1001,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.MatchSequence = null;
 		}
 
-		// Token: 0x060470A3 RID: 290979 RVA: 0x012000B0 File Offset: 0x011FE2B0
+		// Token: 0x0603C943 RID: 248131 RVA: 0x0115A6B4 File Offset: 0x011588B4
 		[NullableContext(1)]
 		private void CreateBullet(Entity attacker, string bulletId)
 		{
@@ -1023,7 +1023,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			BulletController.Instance.CreateBulletCustomTarget(attacker, bulletId, new FTransformDouble?(this.ActorComp.ActorTransform), new BulletController.BulletCreateParams(), this.ContextMessageId, global::EBulletCreateSource.Others);
 		}
 
-		// Token: 0x060470A4 RID: 290980 RVA: 0x01200140 File Offset: 0x011FE340
+		// Token: 0x0603C944 RID: 248132 RVA: 0x0115A744 File Offset: 0x01158944
 		[NullableContext(1)]
 		private void DoMatchToOutlet(Entity outlet)
 		{
@@ -1041,7 +1041,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470A5 RID: 290981 RVA: 0x01200194 File Offset: 0x011FE394
+		// Token: 0x0603C945 RID: 248133 RVA: 0x0115A798 File Offset: 0x01158998
 		[NullableContext(1)]
 		public void AfterRequestMatch(bool isActive, Entity outlet)
 		{
@@ -1078,7 +1078,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.SetState(SceneItemManipulatableComponent.EManipulatableState.BeDrawing, "AfterRequestMatch");
 		}
 
-		// Token: 0x060470A6 RID: 290982 RVA: 0x01200238 File Offset: 0x011FE438
+		// Token: 0x0603C946 RID: 248134 RVA: 0x0115A83C File Offset: 0x01158A3C
 		[NullableContext(1)]
 		public void TryPlayMismatchSequence(Entity outlet)
 		{
@@ -1107,7 +1107,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470A7 RID: 290983 RVA: 0x012002F4 File Offset: 0x011FE4F4
+		// Token: 0x0603C947 RID: 248135 RVA: 0x0115A8F8 File Offset: 0x01158AF8
 		[NullableContext(1)]
 		public bool ShouldPlayMismatchSequence(Entity outlet)
 		{
@@ -1115,7 +1115,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return component.GetMismatchSequence(base.Entity) != null && (component != null && component.Valid);
 		}
 
-		// Token: 0x060470A8 RID: 290984 RVA: 0x0120032A File Offset: 0x011FE52A
+		// Token: 0x0603C948 RID: 248136 RVA: 0x0115A92E File Offset: 0x01158B2E
 		[NullableContext(1)]
 		private void LoadMismatchSeq(string mismatchSeq)
 		{
@@ -1142,7 +1142,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060470A9 RID: 290985 RVA: 0x0120034C File Offset: 0x011FE54C
+		// Token: 0x0603C949 RID: 248137 RVA: 0x0115A950 File Offset: 0x01158B50
 		public void ResetItemLocationAndRotation(long areaId = 0L, bool needRequest = false)
 		{
 			this.TryDisableTick("[SceneItemManipulatableComponent.ResetItemLocationAndRotation]");
@@ -1225,7 +1225,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.OnManipulatedItemPosReset);
 		}
 
-		// Token: 0x060470AA RID: 290986 RVA: 0x01200708 File Offset: 0x011FE908
+		// Token: 0x0603C94A RID: 248138 RVA: 0x0115AD0C File Offset: 0x01158F0C
 		private void CancelRelation()
 		{
 			this.MatchSequence = null;
@@ -1237,7 +1237,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470AB RID: 290987 RVA: 0x0120074C File Offset: 0x011FE94C
+		// Token: 0x0603C94B RID: 248139 RVA: 0x0115AD50 File Offset: 0x01158F50
 		[NullableContext(1)]
 		private void OnStateBlackboardChanged(SceneItemMovementSyncComponent.TBlackboardValue? value, bool fromRemote, string reason)
 		{
@@ -1245,7 +1245,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnStateBlackboardChanged((num != null) ? new SceneItemManipulatableComponent.EManipulatableState?((SceneItemManipulatableComponent.EManipulatableState)num.GetValueOrDefault()) : null, fromRemote, reason);
 		}
 
-		// Token: 0x060470AC RID: 290988 RVA: 0x012007AC File Offset: 0x011FE9AC
+		// Token: 0x0603C94C RID: 248140 RVA: 0x0115ADB0 File Offset: 0x01158FB0
 		[NullableContext(1)]
 		private unsafe void OnStateBlackboardChanged(SceneItemManipulatableComponent.EManipulatableState? state, bool fromRemote, string reason)
 		{
@@ -1285,7 +1285,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470AD RID: 290989 RVA: 0x01200909 File Offset: 0x011FEB09
+		// Token: 0x0603C94D RID: 248141 RVA: 0x0115AF0D File Offset: 0x0115910D
 		private void OnMoveControlChanged(bool isAutonomous)
 		{
 			this.TryEnableTick(false);
@@ -1297,7 +1297,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			currentStateInternal.ChangeMoveController(isAutonomous);
 		}
 
-		// Token: 0x060470AE RID: 290990 RVA: 0x01200924 File Offset: 0x011FEB24
+		// Token: 0x0603C94E RID: 248142 RVA: 0x0115AF28 File Offset: 0x01159128
 		private void OnStateChanged(int stateId, bool isReady)
 		{
 			if (stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.低压"])
@@ -1313,7 +1313,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470AF RID: 290991 RVA: 0x012009D4 File Offset: 0x011FEBD4
+		// Token: 0x0603C94F RID: 248143 RVA: 0x0115AFD8 File Offset: 0x011591D8
 		private void OnPosInFoundation(int relationId, int? matchCfgIndex)
 		{
 			if (relationId != 0)
@@ -1325,7 +1325,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CancelRelation();
 		}
 
-		// Token: 0x060470B0 RID: 290992 RVA: 0x01200A00 File Offset: 0x011FEC00
+		// Token: 0x0603C950 RID: 248144 RVA: 0x0115B004 File Offset: 0x01159204
 		private void InitPerformanceTag()
 		{
 			int? num = null;
@@ -1343,7 +1343,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470B1 RID: 290993 RVA: 0x01200A9C File Offset: 0x011FEC9C
+		// Token: 0x0603C951 RID: 248145 RVA: 0x0115B0A0 File Offset: 0x011592A0
 		public void CalcCastTargetPoint()
 		{
 			if (this.MatchSequence != null)
@@ -1390,7 +1390,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CastTargetLocation = castTargetLocation;
 		}
 
-		// Token: 0x060470B2 RID: 290994 RVA: 0x01200BA8 File Offset: 0x011FEDA8
+		// Token: 0x0603C952 RID: 248146 RVA: 0x0115B1AC File Offset: 0x011593AC
 		[NullableContext(1)]
 		public global::Vector CalcCastTargetPointWithEntity(Entity entity)
 		{
@@ -1403,7 +1403,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return component2.GetSocketLocation(base.Entity);
 		}
 
-		// Token: 0x060470B3 RID: 290995 RVA: 0x01200BDE File Offset: 0x011FEDDE
+		// Token: 0x0603C953 RID: 248147 RVA: 0x0115B1E2 File Offset: 0x011593E2
 		[NullableContext(1)]
 		public global::Vector GetDrawStartLocation()
 		{
@@ -1414,7 +1414,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.CastTargetLocation;
 		}
 
-		// Token: 0x060470B4 RID: 290996 RVA: 0x01200C00 File Offset: 0x011FEE00
+		// Token: 0x0603C954 RID: 248148 RVA: 0x0115B204 File Offset: 0x01159404
 		public void TryEnableTick(bool enablePhysics = false)
 		{
 			this.ForceDisplaceFinish = false;
@@ -1441,7 +1441,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470B5 RID: 290997 RVA: 0x01200CD8 File Offset: 0x011FEED8
+		// Token: 0x0603C955 RID: 248149 RVA: 0x0115B2DC File Offset: 0x011594DC
 		[NullableContext(1)]
 		public void TryDisableTick(string reason)
 		{
@@ -1455,7 +1455,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470B6 RID: 290998 RVA: 0x01200D12 File Offset: 0x011FEF12
+		// Token: 0x0603C956 RID: 248150 RVA: 0x0115B316 File Offset: 0x01159516
 		public void TickState(float delta)
 		{
 			SceneItemManipulableBaseState currentState = this.CurrentState;
@@ -1463,7 +1463,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			currentState.Tick(delta, movementSyncComp != null && movementSyncComp.HasMoveAuthority());
 		}
 
-		// Token: 0x060470B7 RID: 290999 RVA: 0x01200D34 File Offset: 0x011FEF34
+		// Token: 0x0603C957 RID: 248151 RVA: 0x0115B338 File Offset: 0x01159538
 		private void ForceDisplace(float delta)
 		{
 			SceneItemManipulatableComponent.EManipulatableState state = this.GetState();
@@ -1475,14 +1475,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ForceDisplaceFinish = true;
 		}
 
-		// Token: 0x060470B8 RID: 291000 RVA: 0x01200D68 File Offset: 0x011FEF68
+		// Token: 0x0603C958 RID: 248152 RVA: 0x0115B36C File Offset: 0x0115956C
 		public void ResetForceDisplace()
 		{
 			this.ForceDisplaceFinish = false;
 			this.TryEnableTick(false);
 		}
 
-		// Token: 0x060470B9 RID: 291001 RVA: 0x01200D78 File Offset: 0x011FEF78
+		// Token: 0x0603C959 RID: 248153 RVA: 0x0115B37C File Offset: 0x0115957C
 		private void DisplaceCheck()
 		{
 			if (this.ForceMoving)
@@ -1501,7 +1501,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470BA RID: 291002 RVA: 0x01200E4C File Offset: 0x011FF04C
+		// Token: 0x0603C95A RID: 248154 RVA: 0x0115B450 File Offset: 0x01159650
 		private void GroundingCheck()
 		{
 			if (this.PlayingMatchSequence)
@@ -1537,7 +1537,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470BB RID: 291003 RVA: 0x01200F44 File Offset: 0x011FF144
+		// Token: 0x0603C95B RID: 248155 RVA: 0x0115B548 File Offset: 0x01159748
 		private void PhysicsCheck(float delta)
 		{
 			if (this.ForceMoving)
@@ -1610,7 +1610,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470BC RID: 291004 RVA: 0x01201105 File Offset: 0x011FF305
+		// Token: 0x0603C95C RID: 248156 RVA: 0x0115B709 File Offset: 0x01159909
 		private void FakePhysicsCheck()
 		{
 			if (this.PlayingMatchSequence)
@@ -1623,7 +1623,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470BD RID: 291005 RVA: 0x01201128 File Offset: 0x011FF328
+		// Token: 0x0603C95D RID: 248157 RVA: 0x0115B72C File Offset: 0x0115992C
 		private void RequestRemoveControllerId()
 		{
 			if (this.ControllerId == 0L)
@@ -1671,7 +1671,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 0);
 		}
 
-		// Token: 0x060470BE RID: 291006 RVA: 0x01201238 File Offset: 0x011FF438
+		// Token: 0x0603C95E RID: 248158 RVA: 0x0115B83C File Offset: 0x01159A3C
 		private void ActiveOrDeactiveHandFx(long playerId, bool isShow)
 		{
 			EntityHandle entity = CreatureModel.Instance.GetEntity(playerId);
@@ -1688,7 +1688,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			component.DeactiveHandFx();
 		}
 
-		// Token: 0x060470BF RID: 291007 RVA: 0x01201288 File Offset: 0x011FF488
+		// Token: 0x0603C95F RID: 248159 RVA: 0x0115B88C File Offset: 0x01159A8C
 		[NullableContext(1)]
 		public unsafe void SetState(SceneItemManipulatableComponent.EManipulatableState state, string reason)
 		{
@@ -1723,7 +1723,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			movementSyncComp2.ModifyBlackboard(SceneItemBBKey.ManipulatableState, (int)state, reason);
 		}
 
-		// Token: 0x060470C0 RID: 291008 RVA: 0x012013C8 File Offset: 0x011FF5C8
+		// Token: 0x0603C960 RID: 248160 RVA: 0x0115B9CC File Offset: 0x01159BCC
 		public SceneItemManipulatableComponent.EManipulatableState GetState()
 		{
 			SceneItemMovementSyncComponent movementSyncComp = this.MovementSyncComp;
@@ -1732,8 +1732,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return ((num != null) ? new SceneItemManipulatableComponent.EManipulatableState?((SceneItemManipulatableComponent.EManipulatableState)num.GetValueOrDefault()) : null).GetValueOrDefault(SceneItemManipulatableComponent.EManipulatableState.Reset);
 		}
 
-		// Token: 0x17009D86 RID: 40326
-		// (get) Token: 0x060470C1 RID: 291009 RVA: 0x01201445 File Offset: 0x011FF645
+		// Token: 0x17007287 RID: 29319
+		// (get) Token: 0x0603C961 RID: 248161 RVA: 0x0115BA49 File Offset: 0x01159C49
 		[Nullable(1)]
 		public SceneItemManipulableBaseState CurrentState
 		{
@@ -1744,7 +1744,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470C2 RID: 291010 RVA: 0x0120144D File Offset: 0x011FF64D
+		// Token: 0x0603C962 RID: 248162 RVA: 0x0115BA51 File Offset: 0x01159C51
 		public void TryEnterMatchOutletState()
 		{
 			if (this.LoadingBaseConfigFinish && this.ActivatedOutlet != null && this.GetState() == SceneItemManipulatableComponent.EManipulatableState.MatchingOutlet)
@@ -1753,7 +1753,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470C3 RID: 291011 RVA: 0x01201474 File Offset: 0x011FF674
+		// Token: 0x0603C963 RID: 248163 RVA: 0x0115BA78 File Offset: 0x01159C78
 		private unsafe void ChangeCurrentStateInner(SceneItemManipulatableComponent.EManipulatableState newState)
 		{
 			if (newState == SceneItemManipulatableComponent.EManipulatableState.Reset)
@@ -1889,14 +1889,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.NewStateQueue.Push(newState);
 		}
 
-		// Token: 0x060470C4 RID: 291012 RVA: 0x01201824 File Offset: 0x011FFA24
+		// Token: 0x0603C964 RID: 248164 RVA: 0x0115BE28 File Offset: 0x0115A028
 		public void RequestAttachToOutlet()
 		{
 			this.MovementSyncComp.CollectSampleAndSend(true);
 			this.ActivatedOutlet.RequestMatch(base.Entity);
 		}
 
-		// Token: 0x060470C5 RID: 291013 RVA: 0x01201844 File Offset: 0x011FFA44
+		// Token: 0x0603C965 RID: 248165 RVA: 0x0115BE48 File Offset: 0x0115A048
 		public void ClearAttachOutletInfo()
 		{
 			this.ActivatedOutlet.EntityInSocket = null;
@@ -1904,7 +1904,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ActivatedOutlet = null;
 		}
 
-		// Token: 0x060470C6 RID: 291014 RVA: 0x01201878 File Offset: 0x011FFA78
+		// Token: 0x0603C966 RID: 248166 RVA: 0x0115BE7C File Offset: 0x0115A07C
 		private void GenerateStaticDirector()
 		{
 			if (this.DirectorActor == null)
@@ -1914,7 +1914,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470C7 RID: 291015 RVA: 0x012018B4 File Offset: 0x011FFAB4
+		// Token: 0x0603C967 RID: 248167 RVA: 0x0115BEB8 File Offset: 0x0115A0B8
 		[NullableContext(1)]
 		public void PlayMatchSequence(Action callback, bool reverse)
 		{
@@ -1941,7 +1941,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060470C8 RID: 291016 RVA: 0x01201970 File Offset: 0x011FFB70
+		// Token: 0x0603C968 RID: 248168 RVA: 0x0115BF74 File Offset: 0x0115A174
 		[NullableContext(1)]
 		private void PlaySequenceInternal(bool reverse, Action callback)
 		{
@@ -1967,7 +1967,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			});
 		}
 
-		// Token: 0x060470C9 RID: 291017 RVA: 0x01201A34 File Offset: 0x011FFC34
+		// Token: 0x0603C969 RID: 248169 RVA: 0x0115C038 File Offset: 0x0115A238
 		public void StopSequence()
 		{
 			ALevelSequenceActor directorActor = this.DirectorActor;
@@ -1989,14 +1989,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470CA RID: 291018 RVA: 0x01201AA9 File Offset: 0x011FFCA9
+		// Token: 0x0603C96A RID: 248170 RVA: 0x0115C0AD File Offset: 0x0115A2AD
 		[NullableContext(1)]
 		private bool PlayerAttackCheck(global::HitInformation hitData)
 		{
 			return SceneItemHitUtils.CheckHitDataMatchPlayerAttack(hitData);
 		}
 
-		// Token: 0x060470CB RID: 291019 RVA: 0x01201AB4 File Offset: 0x011FFCB4
+		// Token: 0x0603C96B RID: 248171 RVA: 0x0115C0B8 File Offset: 0x0115A2B8
 		private void RequsetDestroySelf()
 		{
 			CreatureDataComponent creatureDataComponent = this.CreatureDataComponent;
@@ -2042,7 +2042,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 0);
 		}
 
-		// Token: 0x060470CC RID: 291020 RVA: 0x01201B64 File Offset: 0x011FFD64
+		// Token: 0x0603C96C RID: 248172 RVA: 0x0115C168 File Offset: 0x0115A368
 		public void OnCastItem()
 		{
 			if (this.IsDestoyAfterCast)
@@ -2055,7 +2055,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470CD RID: 291021 RVA: 0x01201BEF File Offset: 0x011FFDEF
+		// Token: 0x0603C96D RID: 248173 RVA: 0x0115C1F3 File Offset: 0x0115A3F3
 		public void ClearCastDestroyTimer()
 		{
 			if (this.DestroyTimer != null)
@@ -2065,7 +2065,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470CE RID: 291022 RVA: 0x01201C11 File Offset: 0x011FFE11
+		// Token: 0x0603C96E RID: 248174 RVA: 0x0115C215 File Offset: 0x0115A415
 		public void TryAddTagById(int tagId)
 		{
 			if (!this.LevelTagComponent.HasTag(tagId))
@@ -2074,7 +2074,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470CF RID: 291023 RVA: 0x01201C32 File Offset: 0x011FFE32
+		// Token: 0x0603C96F RID: 248175 RVA: 0x0115C236 File Offset: 0x0115A436
 		public void TryRemoveTagById(int tagId)
 		{
 			if (this.LevelTagComponent.HasTag(tagId))
@@ -2083,7 +2083,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470D0 RID: 291024 RVA: 0x01201C54 File Offset: 0x011FFE54
+		// Token: 0x0603C970 RID: 248176 RVA: 0x0115C258 File Offset: 0x0115A458
 		public unsafe void ForceStopDropping()
 		{
 			SceneItemManipulatableComponent.EManipulatableState state = this.GetState();
@@ -2125,7 +2125,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ForceMoving = false;
 		}
 
-		// Token: 0x060470D1 RID: 291025 RVA: 0x01201DDC File Offset: 0x011FFFDC
+		// Token: 0x0603C971 RID: 248177 RVA: 0x0115C3E0 File Offset: 0x0115A5E0
 		public void TryAddSpecLockTag()
 		{
 			if (base.Entity.GetComponent<SceneItemJigsawItemComponent>() == null)
@@ -2139,7 +2139,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470D2 RID: 291026 RVA: 0x01201E44 File Offset: 0x01200044
+		// Token: 0x0603C972 RID: 248178 RVA: 0x0115C448 File Offset: 0x0115A648
 		public void TryRemoveSpecLockTag()
 		{
 			if (base.Entity.GetComponent<SceneItemJigsawItemComponent>() == null)
@@ -2158,7 +2158,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470D3 RID: 291027 RVA: 0x01201EC0 File Offset: 0x012000C0
+		// Token: 0x0603C973 RID: 248179 RVA: 0x0115C4C4 File Offset: 0x0115A6C4
 		public void TryReqAttachToFloor()
 		{
 			SceneItemDynamicAttachTargetComponent component = base.Entity.GetComponent<SceneItemDynamicAttachTargetComponent>();
@@ -2228,7 +2228,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470D4 RID: 291028 RVA: 0x01202074 File Offset: 0x01200274
+		// Token: 0x0603C974 RID: 248180 RVA: 0x0115C678 File Offset: 0x0115A878
 		public void ResetManipulatableState()
 		{
 			if (this.CurrentState == this.MatchOutletState)
@@ -2253,7 +2253,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060470D5 RID: 291029 RVA: 0x012020E8 File Offset: 0x012002E8
+		// Token: 0x0603C975 RID: 248181 RVA: 0x0115C6EC File Offset: 0x0115A8EC
 		private AActor TraceFindFloorActor(float zStartOffset, float zEndOffset)
 		{
 			if (this.ActorComp == null)
@@ -2270,7 +2270,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			FVector fvector = new FVector();
 			mainCollisionActor.D_GetActorBounds(false, ref fvectorDouble, ref fvector, false);
 			mainCollisionActor.K2_SetActorRotation(new FRotator(0f, 0f, 0f), false);
-			mainCollisionActor.D_GetActorBounds(false, ref fvectorDouble, ref fvector, false);
+			FVectorDouble fvectorDouble2 = new FVectorDouble();
+			FVector fvector2 = new FVector();
+			mainCollisionActor.D_GetActorBounds(false, ref fvectorDouble2, ref fvector2, false);
 			mainCollisionActor.K2_SetActorRotation(frotator, false);
 			global::Vector commonTempVector = MathUtils.Instance.CommonTempVector;
 			commonTempVector.FromUeVector(fvectorDouble);
@@ -2290,7 +2292,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 			boxTrace.bIgnoreSelf = true;
 			global::Vector commonTempVector2 = MathUtils.Instance.CommonTempVector;
-			commonTempVector2.FromUeVector(fvector);
+			commonTempVector2.FromUeVector(fvector2);
 			boxTrace.HalfSizeX = (float)commonTempVector2.X;
 			boxTrace.HalfSizeY = (float)commonTempVector2.Y;
 			boxTrace.HalfSizeZ = (float)commonTempVector2.Z;
@@ -2320,7 +2322,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return result;
 		}
 
-		// Token: 0x060470D6 RID: 291030 RVA: 0x0120235C File Offset: 0x0120055C
+		// Token: 0x0603C976 RID: 248182 RVA: 0x0115C970 File Offset: 0x0115AB70
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -2352,7 +2354,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return new ValueTuple<AActor, string>(null, null);
 		}
 
-		// Token: 0x060470D7 RID: 291031 RVA: 0x012023F4 File Offset: 0x012005F4
+		// Token: 0x0603C977 RID: 248183 RVA: 0x0115CA08 File Offset: 0x0115AC08
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -2405,31 +2407,31 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return new ValueTuple<Entity, string>(entityByChildActor.Entity, item);
 		}
 
-		// Token: 0x060470D8 RID: 291032 RVA: 0x012024D8 File Offset: 0x012006D8
+		// Token: 0x0603C978 RID: 248184 RVA: 0x0115CAEC File Offset: 0x0115ACEC
 		public long GetPassThroughPortalId()
 		{
 			return this.PassThroughPortalId;
 		}
 
-		// Token: 0x060470D9 RID: 291033 RVA: 0x012024E0 File Offset: 0x012006E0
+		// Token: 0x0603C979 RID: 248185 RVA: 0x0115CAF4 File Offset: 0x0115ACF4
 		public void SetPassthroughPortalId(long portalId)
 		{
 			this.PassThroughPortalId = portalId;
 		}
 
-		// Token: 0x060470DA RID: 291034 RVA: 0x012024E9 File Offset: 0x012006E9
+		// Token: 0x0603C97A RID: 248186 RVA: 0x0115CAFD File Offset: 0x0115ACFD
 		public CharacterManipulateComponent.EPassThroughPortalType GetPassThroughPortalType()
 		{
 			return this.PassThroughPortalType;
 		}
 
-		// Token: 0x060470DB RID: 291035 RVA: 0x012024F1 File Offset: 0x012006F1
+		// Token: 0x0603C97B RID: 248187 RVA: 0x0115CB05 File Offset: 0x0115AD05
 		public void SetPassThroughPortalType(CharacterManipulateComponent.EPassThroughPortalType portalType)
 		{
 			this.PassThroughPortalType = portalType;
 		}
 
-		// Token: 0x060470DC RID: 291036 RVA: 0x012024FC File Offset: 0x012006FC
+		// Token: 0x0603C97C RID: 248188 RVA: 0x0115CB10 File Offset: 0x0115AD10
 		[NullableContext(1)]
 		public bool IsMatchRoleGravityDirect(CharacterActorComponent playerActorComp)
 		{
@@ -2448,7 +2450,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.EntityGravityDirect.Equals(playerActorComp.ActorGravityDirectProxy, 9.999999747378752E-05);
 		}
 
-		// Token: 0x060470DD RID: 291037 RVA: 0x01202564 File Offset: 0x01200764
+		// Token: 0x0603C97D RID: 248189 RVA: 0x0115CB78 File Offset: 0x0115AD78
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -2457,704 +2459,513 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemManipulatableComponent sceneItemManipulatableComponent = (SceneItemManipulatableComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemManipulatableComponent.Config == null)
 			{
-				if (sceneItemManipulatableComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TeleControl2>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ManipulateBaseConfig"))
-			{
-				if (sceneItemManipulatableComponent.ManipulateBaseConfig == null)
-				{
-					this.ManipulateBaseConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_TeleControlConfig_C>(this.ManipulateBaseConfig), "ManipulateBaseConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LoadingBaseConfigFinish"))
-			{
-				this.LoadingBaseConfigFinish = sceneItemManipulatableComponent.LoadingBaseConfigFinish;
-			}
-			if (base.CanResetComponentProperty("ConfigHoldOffset"))
-			{
-				this.ConfigHoldOffset = sceneItemManipulatableComponent.ConfigHoldOffset;
-			}
-			if (base.CanResetComponentProperty("ConfigHoldRotator"))
-			{
-				this.ConfigHoldRotator = sceneItemManipulatableComponent.ConfigHoldRotator;
-			}
-			if (base.CanResetComponentProperty("ConfigMatchType"))
-			{
-				this.ConfigMatchType = sceneItemManipulatableComponent.ConfigMatchType;
-			}
-			if (base.CanResetComponentProperty("TargetActorComponent"))
-			{
-				if (sceneItemManipulatableComponent.TargetActorComponent == null)
-				{
-					this.TargetActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.TargetActorComponent), "TargetActorComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TargetOutletComponent"))
-			{
-				if (sceneItemManipulatableComponent.TargetOutletComponent == null)
-				{
-					this.TargetOutletComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemOutletComponent>(this.TargetOutletComponent), "TargetOutletComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemManipulatableComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActivatedOutlet"))
-			{
-				if (sceneItemManipulatableComponent.ActivatedOutlet == null)
-				{
-					this.ActivatedOutlet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemOutletComponent>(this.ActivatedOutlet), "ActivatedOutlet"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InitRotation"))
-			{
-				if (sceneItemManipulatableComponent.InitRotation == null)
-				{
-					this.InitRotation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.InitRotation), "InitRotation"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LastLocation"))
-			{
-				if (sceneItemManipulatableComponent.LastLocation == null)
-				{
-					this.LastLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastLocation), "LastLocation"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LastRotation"))
-			{
-				if (sceneItemManipulatableComponent.LastRotation == null)
-				{
-					this.LastRotation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.LastRotation), "LastRotation"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LevelTagComponent"))
-			{
-				if (sceneItemManipulatableComponent.LevelTagComponent == null)
-				{
-					this.LevelTagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.LevelTagComponent), "LevelTagComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ChantCameraShakeBpClass"))
-			{
-				this.ChantCameraShakeBpClass = sceneItemManipulatableComponent.ChantCameraShakeBpClass;
-			}
-			if (base.CanResetComponentProperty("HoldCameraShakeBpClass"))
-			{
-				this.HoldCameraShakeBpClass = sceneItemManipulatableComponent.HoldCameraShakeBpClass;
-			}
-			if (base.CanResetComponentProperty("DrawCameraShakeBpClass"))
-			{
-				this.DrawCameraShakeBpClass = sceneItemManipulatableComponent.DrawCameraShakeBpClass;
-			}
-			if (base.CanResetComponentProperty("CastCameraShakeBpClass"))
-			{
-				this.CastCameraShakeBpClass = sceneItemManipulatableComponent.CastCameraShakeBpClass;
-			}
-			if (base.CanResetComponentProperty("CastGamepadShake"))
-			{
-				if (sceneItemManipulatableComponent.CastGamepadShake == null)
-				{
-					this.CastGamepadShake = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroForceFeedbackEffect>(this.CastGamepadShake), "CastGamepadShake"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DrawGamepadShake"))
-			{
-				if (sceneItemManipulatableComponent.DrawGamepadShake == null)
-				{
-					this.DrawGamepadShake = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroForceFeedbackEffect>(this.DrawGamepadShake), "DrawGamepadShake"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CastTargetLocation"))
-			{
-				if (sceneItemManipulatableComponent.CastTargetLocation == null)
-				{
-					this.CastTargetLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CastTargetLocation), "CastTargetLocation"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MatchSequence"))
-			{
-				this.MatchSequence = sceneItemManipulatableComponent.MatchSequence;
-			}
-			if (base.CanResetComponentProperty("PlayingMatchSequence"))
-			{
-				this.PlayingMatchSequence = sceneItemManipulatableComponent.PlayingMatchSequence;
-			}
-			if (base.CanResetComponentProperty("PropComp"))
-			{
-				if (sceneItemManipulatableComponent.PropComp == null)
-				{
-					this.PropComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.PropComp), "PropComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CastCurve"))
-			{
-				if (sceneItemManipulatableComponent.CastCurve == null)
-				{
-					this.CastCurve = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.CastCurve), "CastCurve"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsCanBeHeld"))
-			{
-				this.IsCanBeHeld = sceneItemManipulatableComponent.IsCanBeHeld;
-			}
-			if (base.CanResetComponentProperty("DisableKey"))
-			{
-				this.DisableKey = sceneItemManipulatableComponent.DisableKey;
-			}
-			if (base.CanResetComponentProperty("ContextMessageId"))
-			{
-				this.ContextMessageId = sceneItemManipulatableComponent.ContextMessageId;
-			}
-			if (base.CanResetComponentProperty("ControllerId"))
-			{
-				this.ControllerId = sceneItemManipulatableComponent.ControllerId;
-			}
-			if (base.CanResetComponentProperty("NeedRemoveControllerId"))
-			{
-				this.NeedRemoveControllerId = sceneItemManipulatableComponent.NeedRemoveControllerId;
-			}
-			if (base.CanResetComponentProperty("IsRequestingRemoveControllerId"))
-			{
-				this.IsRequestingRemoveControllerId = sceneItemManipulatableComponent.IsRequestingRemoveControllerId;
-			}
-			if (base.CanResetComponentProperty("IsVelocityLess"))
-			{
-				this.IsVelocityLess = sceneItemManipulatableComponent.IsVelocityLess;
-			}
-			if (base.CanResetComponentProperty("FinishCheckInitAttach"))
-			{
-				this.FinishCheckInitAttach = sceneItemManipulatableComponent.FinishCheckInitAttach;
-			}
-			if (base.CanResetComponentProperty("EnableDynamicAttach"))
-			{
-				this.EnableDynamicAttach = sceneItemManipulatableComponent.EnableDynamicAttach;
-			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (sceneItemManipulatableComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OnRecontrolCd"))
-			{
-				this.OnRecontrolCd = sceneItemManipulatableComponent.OnRecontrolCd;
-			}
-			if (base.CanResetComponentProperty("RecontrolCdTimerHandle"))
-			{
-				if (sceneItemManipulatableComponent.RecontrolCdTimerHandle == null)
-				{
-					this.RecontrolCdTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.RecontrolCdTimerHandle), "RecontrolCdTimerHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("NeedForceStopDropping"))
-			{
-				this.NeedForceStopDropping = sceneItemManipulatableComponent.NeedForceStopDropping;
-			}
-			if (base.CanResetComponentProperty("ForceDisplaceFinish"))
-			{
-				this.ForceDisplaceFinish = sceneItemManipulatableComponent.ForceDisplaceFinish;
-			}
-			if (base.CanResetComponentProperty("DisplaceCheckPass"))
-			{
-				this.DisplaceCheckPass = sceneItemManipulatableComponent.DisplaceCheckPass;
-			}
-			if (base.CanResetComponentProperty("GroundingCheckPass"))
-			{
-				this.GroundingCheckPass = sceneItemManipulatableComponent.GroundingCheckPass;
-			}
-			if (base.CanResetComponentProperty("PhysicsCheckPass"))
-			{
-				this.PhysicsCheckPass = sceneItemManipulatableComponent.PhysicsCheckPass;
-			}
-			if (base.CanResetComponentProperty("CreatureDataComponent"))
-			{
-				if (sceneItemManipulatableComponent.CreatureDataComponent == null)
-				{
-					this.CreatureDataComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OnlineType"))
-			{
-				this.OnlineType = sceneItemManipulatableComponent.OnlineType;
-			}
-			if (base.CanResetComponentProperty("MovementSyncComp"))
-			{
-				if (sceneItemManipulatableComponent.MovementSyncComp == null)
-				{
-					this.MovementSyncComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMovementSyncComponent>(this.MovementSyncComp), "MovementSyncComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DirectorActor"))
-			{
-				if (sceneItemManipulatableComponent.DirectorActor == null)
-				{
-					this.DirectorActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ALevelSequenceActor>(this.DirectorActor), "DirectorActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("UsingAssistantHoldOffset"))
-			{
-				this.UsingAssistantHoldOffset = sceneItemManipulatableComponent.UsingAssistantHoldOffset;
-			}
-			if (base.CanResetComponentProperty("ConfigAssistantHoldOffset"))
-			{
-				this.ConfigAssistantHoldOffset = sceneItemManipulatableComponent.ConfigAssistantHoldOffset;
-			}
-			if (base.CanResetComponentProperty("MovementTargetLocation"))
-			{
-				this.MovementTargetLocation = sceneItemManipulatableComponent.MovementTargetLocation;
-			}
-			if (base.CanResetComponentProperty("MovementTargetRotation"))
-			{
-				this.MovementTargetRotation = sceneItemManipulatableComponent.MovementTargetRotation;
-			}
-			if (base.CanResetComponentProperty("CurrentStateInternal"))
-			{
-				if (sceneItemManipulatableComponent.CurrentStateInternal == null)
-				{
-					this.CurrentStateInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableBaseState>(this.CurrentStateInternal), "CurrentStateInternal"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ResetState"))
-			{
-				if (sceneItemManipulatableComponent.ResetState == null)
-				{
-					this.ResetState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableResetState>(this.ResetState), "ResetState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ChantState"))
-			{
-				if (sceneItemManipulatableComponent.ChantState == null)
-				{
-					this.ChantState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableChantState>(this.ChantState), "ChantState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DrawState"))
-			{
-				if (sceneItemManipulatableComponent.DrawState == null)
-				{
-					this.DrawState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableDrawState>(this.DrawState), "DrawState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HoldState"))
-			{
-				if (sceneItemManipulatableComponent.HoldState == null)
-				{
-					this.HoldState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableHoldState>(this.HoldState), "HoldState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PrecastState"))
-			{
-				if (sceneItemManipulatableComponent.PrecastState == null)
-				{
-					this.PrecastState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulablePrecastState>(this.PrecastState), "PrecastState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("AdsorbedState"))
-			{
-				if (sceneItemManipulatableComponent.AdsorbedState == null)
-				{
-					this.AdsorbedState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableAdsorbedState>(this.AdsorbedState), "AdsorbedState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CastToTargetState"))
-			{
-				if (sceneItemManipulatableComponent.CastToTargetState == null)
-				{
-					this.CastToTargetState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableCastState>(this.CastToTargetState), "CastToTargetState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CastToOutletState"))
-			{
-				if (sceneItemManipulatableComponent.CastToOutletState == null)
-				{
-					this.CastToOutletState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableCastState>(this.CastToOutletState), "CastToOutletState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CastFreeState"))
-			{
-				if (sceneItemManipulatableComponent.CastFreeState == null)
-				{
-					this.CastFreeState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableCastState>(this.CastFreeState), "CastFreeState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CastProjectileState"))
-			{
-				if (sceneItemManipulatableComponent.CastProjectileState == null)
-				{
-					this.CastProjectileState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableCastState>(this.CastProjectileState), "CastProjectileState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MatchOutletState"))
-			{
-				if (sceneItemManipulatableComponent.MatchOutletState == null)
-				{
-					this.MatchOutletState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableMatchOutletState>(this.MatchOutletState), "MatchOutletState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DropState"))
-			{
-				if (sceneItemManipulatableComponent.DropState == null)
-				{
-					this.DropState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulableDropState>(this.DropState), "DropState"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CannotCastWithoutTargetInternal"))
-			{
-				this.CannotCastWithoutTargetInternal = sceneItemManipulatableComponent.CannotCastWithoutTargetInternal;
-			}
-			if (base.CanResetComponentProperty("OnHitBulletId"))
-			{
-				this.OnHitBulletId = sceneItemManipulatableComponent.OnHitBulletId;
-			}
-			if (base.CanResetComponentProperty("CreateBulletCount"))
-			{
-				this.CreateBulletCount = sceneItemManipulatableComponent.CreateBulletCount;
-			}
-			if (base.CanResetComponentProperty("IsDestroySelfOnCreateBullet"))
-			{
-				this.IsDestroySelfOnCreateBullet = sceneItemManipulatableComponent.IsDestroySelfOnCreateBullet;
-			}
-			if (base.CanResetComponentProperty("IsDestroySelfOnDrop"))
-			{
-				this.IsDestroySelfOnDrop = sceneItemManipulatableComponent.IsDestroySelfOnDrop;
-			}
-			if (base.CanResetComponentProperty("IsDestoyAfterCast"))
-			{
-				this.IsDestoyAfterCast = sceneItemManipulatableComponent.IsDestoyAfterCast;
-			}
-			if (base.CanResetComponentProperty("BulletIdOnHitActor"))
-			{
-				this.BulletIdOnHitActor = sceneItemManipulatableComponent.BulletIdOnHitActor;
-			}
-			if (base.CanResetComponentProperty("ZeroVelocityFrame"))
-			{
-				this.ZeroVelocityFrame = sceneItemManipulatableComponent.ZeroVelocityFrame;
-			}
-			if (base.CanResetComponentProperty("MaxCreateBulletNum"))
-			{
-				this.MaxCreateBulletNum = sceneItemManipulatableComponent.MaxCreateBulletNum;
-			}
-			if (base.CanResetComponentProperty("CreateBulletInterval"))
-			{
-				this.CreateBulletInterval = sceneItemManipulatableComponent.CreateBulletInterval;
-			}
-			if (base.CanResetComponentProperty("CreateBulletIntervalTimer"))
-			{
-				this.CreateBulletIntervalTimer = sceneItemManipulatableComponent.CreateBulletIntervalTimer;
-			}
-			if (base.CanResetComponentProperty("IsHoldingUsePhysics"))
-			{
-				this.IsHoldingUsePhysics = sceneItemManipulatableComponent.IsHoldingUsePhysics;
-			}
-			if (base.CanResetComponentProperty("ForceMoving"))
-			{
-				this.ForceMoving = sceneItemManipulatableComponent.ForceMoving;
-			}
-			if (base.CanResetComponentProperty("LastHoldingLocation"))
-			{
-				if (sceneItemManipulatableComponent.LastHoldingLocation == null)
-				{
-					this.LastHoldingLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastHoldingLocation), "LastHoldingLocation"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DestroyTimer"))
-			{
-				if (sceneItemManipulatableComponent.DestroyTimer == null)
-				{
-					this.DestroyTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DestroyTimer), "DestroyTimer"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreateBulletTimer"))
-			{
-				if (sceneItemManipulatableComponent.CreateBulletTimer == null)
-				{
-					this.CreateBulletTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.CreateBulletTimer), "CreateBulletTimer"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ConditionGroup"))
-			{
-				if (sceneItemManipulatableComponent.ConditionGroup == null)
-				{
-					this.ConditionGroup = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IConditionGroup>(this.ConditionGroup), "ConditionGroup"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurrentPutIndex") && sceneItemManipulatableComponent.CurrentPutIndex != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawIndex>(this.CurrentPutIndex), "CurrentPutIndex"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("PassThroughPortalId"))
+			if (sceneItemManipulatableComponent.ManipulateBaseConfig == null)
 			{
-				this.PassThroughPortalId = sceneItemManipulatableComponent.PassThroughPortalId;
+				this.ManipulateBaseConfig = null;
 			}
-			if (base.CanResetComponentProperty("PassThroughPortalType"))
-			{
-				this.PassThroughPortalType = sceneItemManipulatableComponent.PassThroughPortalType;
-			}
-			if (base.CanResetComponentProperty("Mutex"))
-			{
-				this.Mutex = sceneItemManipulatableComponent.Mutex;
-			}
-			if (base.CanResetComponentProperty("Count"))
-			{
-				this.Count = sceneItemManipulatableComponent.Count;
-			}
-			if (base.CanResetComponentProperty("NewStateQueue") && sceneItemManipulatableComponent.NewStateQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Queue<SceneItemManipulatableComponent.EManipulatableState>>(this.NewStateQueue), "NewStateQueue"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ManipulateBaseConfig), "ManipulateBaseConfig"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EntityGravityDirect"))
+			this.LoadingBaseConfigFinish = sceneItemManipulatableComponent.LoadingBaseConfigFinish;
+			this.ConfigHoldOffset = sceneItemManipulatableComponent.ConfigHoldOffset;
+			this.ConfigHoldRotator = sceneItemManipulatableComponent.ConfigHoldRotator;
+			this.ConfigMatchType = sceneItemManipulatableComponent.ConfigMatchType;
+			if (sceneItemManipulatableComponent.TargetActorComponent == null)
 			{
-				if (sceneItemManipulatableComponent.EntityGravityDirect == null)
-				{
-					this.EntityGravityDirect = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.EntityGravityDirect), "EntityGravityDirect"))
-				{
-					return false;
-				}
+				this.TargetActorComponent = null;
 			}
-			if (base.CanResetComponentProperty("IsProjectileAimModeInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetActorComponent), "TargetActorComponent"))
 			{
-				this.IsProjectileAimModeInternal = sceneItemManipulatableComponent.IsProjectileAimModeInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("EnableTargetLocationCalculation"))
+			if (sceneItemManipulatableComponent.TargetOutletComponent == null)
 			{
-				this.EnableTargetLocationCalculation = sceneItemManipulatableComponent.EnableTargetLocationCalculation;
+				this.TargetOutletComponent = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetOutletComponent), "TargetOutletComponent"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.ActivatedOutlet == null)
+			{
+				this.ActivatedOutlet = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActivatedOutlet), "ActivatedOutlet"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.InitRotation == null)
+			{
+				this.InitRotation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InitRotation), "InitRotation"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.LastLocation == null)
+			{
+				this.LastLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLocation), "LastLocation"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.LastRotation == null)
+			{
+				this.LastRotation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastRotation), "LastRotation"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.LevelTagComponent == null)
+			{
+				this.LevelTagComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LevelTagComponent), "LevelTagComponent"))
+			{
+				return false;
+			}
+			this.ChantCameraShakeBpClass = sceneItemManipulatableComponent.ChantCameraShakeBpClass;
+			this.HoldCameraShakeBpClass = sceneItemManipulatableComponent.HoldCameraShakeBpClass;
+			this.DrawCameraShakeBpClass = sceneItemManipulatableComponent.DrawCameraShakeBpClass;
+			this.CastCameraShakeBpClass = sceneItemManipulatableComponent.CastCameraShakeBpClass;
+			if (sceneItemManipulatableComponent.CastGamepadShake == null)
+			{
+				this.CastGamepadShake = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CastGamepadShake), "CastGamepadShake"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.DrawGamepadShake == null)
+			{
+				this.DrawGamepadShake = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DrawGamepadShake), "DrawGamepadShake"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.CastTargetLocation == null)
+			{
+				this.CastTargetLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CastTargetLocation), "CastTargetLocation"))
+			{
+				return false;
+			}
+			this.MatchSequence = sceneItemManipulatableComponent.MatchSequence;
+			this.PlayingMatchSequence = sceneItemManipulatableComponent.PlayingMatchSequence;
+			if (sceneItemManipulatableComponent.PropComp == null)
+			{
+				this.PropComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PropComp), "PropComp"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.CastCurve == null)
+			{
+				this.CastCurve = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CastCurve), "CastCurve"))
+			{
+				return false;
+			}
+			this.IsCanBeHeld = sceneItemManipulatableComponent.IsCanBeHeld;
+			this.DisableKey = sceneItemManipulatableComponent.DisableKey;
+			this.ContextMessageId = sceneItemManipulatableComponent.ContextMessageId;
+			this.ControllerId = sceneItemManipulatableComponent.ControllerId;
+			this.NeedRemoveControllerId = sceneItemManipulatableComponent.NeedRemoveControllerId;
+			this.IsRequestingRemoveControllerId = sceneItemManipulatableComponent.IsRequestingRemoveControllerId;
+			this.IsVelocityLess = sceneItemManipulatableComponent.IsVelocityLess;
+			this.FinishCheckInitAttach = sceneItemManipulatableComponent.FinishCheckInitAttach;
+			this.EnableDynamicAttach = sceneItemManipulatableComponent.EnableDynamicAttach;
+			if (sceneItemManipulatableComponent.StateComp == null)
+			{
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
+			{
+				return false;
+			}
+			this.OnRecontrolCd = sceneItemManipulatableComponent.OnRecontrolCd;
+			if (sceneItemManipulatableComponent.RecontrolCdTimerHandle == null)
+			{
+				this.RecontrolCdTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RecontrolCdTimerHandle), "RecontrolCdTimerHandle"))
+			{
+				return false;
+			}
+			this.NeedForceStopDropping = sceneItemManipulatableComponent.NeedForceStopDropping;
+			this.ForceDisplaceFinish = sceneItemManipulatableComponent.ForceDisplaceFinish;
+			this.DisplaceCheckPass = sceneItemManipulatableComponent.DisplaceCheckPass;
+			this.GroundingCheckPass = sceneItemManipulatableComponent.GroundingCheckPass;
+			this.PhysicsCheckPass = sceneItemManipulatableComponent.PhysicsCheckPass;
+			if (sceneItemManipulatableComponent.CreatureDataComponent == null)
+			{
+				this.CreatureDataComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
+			{
+				return false;
+			}
+			this.OnlineType = sceneItemManipulatableComponent.OnlineType;
+			if (sceneItemManipulatableComponent.MovementSyncComp == null)
+			{
+				this.MovementSyncComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovementSyncComp), "MovementSyncComp"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.DirectorActor == null)
+			{
+				this.DirectorActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DirectorActor), "DirectorActor"))
+			{
+				return false;
+			}
+			this.UsingAssistantHoldOffset = sceneItemManipulatableComponent.UsingAssistantHoldOffset;
+			this.ConfigAssistantHoldOffset = sceneItemManipulatableComponent.ConfigAssistantHoldOffset;
+			this.MovementTargetLocation = sceneItemManipulatableComponent.MovementTargetLocation;
+			this.MovementTargetRotation = sceneItemManipulatableComponent.MovementTargetRotation;
+			if (sceneItemManipulatableComponent.CurrentStateInternal == null)
+			{
+				this.CurrentStateInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentStateInternal), "CurrentStateInternal"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.ResetState == null)
+			{
+				this.ResetState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ResetState), "ResetState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.ChantState == null)
+			{
+				this.ChantState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChantState), "ChantState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.DrawState == null)
+			{
+				this.DrawState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DrawState), "DrawState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.HoldState == null)
+			{
+				this.HoldState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HoldState), "HoldState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.PrecastState == null)
+			{
+				this.PrecastState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PrecastState), "PrecastState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.AdsorbedState == null)
+			{
+				this.AdsorbedState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AdsorbedState), "AdsorbedState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.CastToTargetState == null)
+			{
+				this.CastToTargetState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CastToTargetState), "CastToTargetState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.CastToOutletState == null)
+			{
+				this.CastToOutletState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CastToOutletState), "CastToOutletState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.CastFreeState == null)
+			{
+				this.CastFreeState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CastFreeState), "CastFreeState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.CastProjectileState == null)
+			{
+				this.CastProjectileState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CastProjectileState), "CastProjectileState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.MatchOutletState == null)
+			{
+				this.MatchOutletState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MatchOutletState), "MatchOutletState"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.DropState == null)
+			{
+				this.DropState = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DropState), "DropState"))
+			{
+				return false;
+			}
+			this.CannotCastWithoutTargetInternal = sceneItemManipulatableComponent.CannotCastWithoutTargetInternal;
+			this.OnHitBulletId = sceneItemManipulatableComponent.OnHitBulletId;
+			this.CreateBulletCount = sceneItemManipulatableComponent.CreateBulletCount;
+			this.IsDestroySelfOnCreateBullet = sceneItemManipulatableComponent.IsDestroySelfOnCreateBullet;
+			this.IsDestroySelfOnDrop = sceneItemManipulatableComponent.IsDestroySelfOnDrop;
+			this.IsDestoyAfterCast = sceneItemManipulatableComponent.IsDestoyAfterCast;
+			this.BulletIdOnHitActor = sceneItemManipulatableComponent.BulletIdOnHitActor;
+			this.ZeroVelocityFrame = sceneItemManipulatableComponent.ZeroVelocityFrame;
+			this.MaxCreateBulletNum = sceneItemManipulatableComponent.MaxCreateBulletNum;
+			this.CreateBulletInterval = sceneItemManipulatableComponent.CreateBulletInterval;
+			this.CreateBulletIntervalTimer = sceneItemManipulatableComponent.CreateBulletIntervalTimer;
+			this.IsHoldingUsePhysics = sceneItemManipulatableComponent.IsHoldingUsePhysics;
+			this.ForceMoving = sceneItemManipulatableComponent.ForceMoving;
+			if (sceneItemManipulatableComponent.LastHoldingLocation == null)
+			{
+				this.LastHoldingLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastHoldingLocation), "LastHoldingLocation"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.DestroyTimer == null)
+			{
+				this.DestroyTimer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DestroyTimer), "DestroyTimer"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.CreateBulletTimer == null)
+			{
+				this.CreateBulletTimer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreateBulletTimer), "CreateBulletTimer"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.ConditionGroup == null)
+			{
+				this.ConditionGroup = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConditionGroup), "ConditionGroup"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.CurrentPutIndex != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentPutIndex), "CurrentPutIndex"))
+			{
+				return false;
+			}
+			this.PassThroughPortalId = sceneItemManipulatableComponent.PassThroughPortalId;
+			this.PassThroughPortalType = sceneItemManipulatableComponent.PassThroughPortalType;
+			this.Mutex = sceneItemManipulatableComponent.Mutex;
+			this.Count = sceneItemManipulatableComponent.Count;
+			if (sceneItemManipulatableComponent.NewStateQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.NewStateQueue), "NewStateQueue"))
+			{
+				return false;
+			}
+			if (sceneItemManipulatableComponent.EntityGravityDirect == null)
+			{
+				this.EntityGravityDirect = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityGravityDirect), "EntityGravityDirect"))
+			{
+				return false;
+			}
+			this.IsProjectileAimModeInternal = sceneItemManipulatableComponent.IsProjectileAimModeInternal;
+			this.EnableTargetLocationCalculation = sceneItemManipulatableComponent.EnableTargetLocationCalculation;
 			return true;
 		}
 
-		// Token: 0x04025550 RID: 152912
+		// Token: 0x17007288 RID: 29320
+		// (get) Token: 0x0603C97E RID: 248190 RVA: 0x0115D48A File Offset: 0x0115B68A
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007289 RID: 29321
+		// (get) Token: 0x0603C97F RID: 248191 RVA: 0x0115D48D File Offset: 0x0115B68D
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700728A RID: 29322
+		// (get) Token: 0x0603C980 RID: 248192 RVA: 0x0115D490 File Offset: 0x0115B690
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700728B RID: 29323
+		// (get) Token: 0x0603C981 RID: 248193 RVA: 0x0115D493 File Offset: 0x0115B693
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700728C RID: 29324
+		// (get) Token: 0x0603C982 RID: 248194 RVA: 0x0115D496 File Offset: 0x0115B696
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700728D RID: 29325
+		// (get) Token: 0x0603C983 RID: 248195 RVA: 0x0115D499 File Offset: 0x0115B699
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700728E RID: 29326
+		// (get) Token: 0x0603C984 RID: 248196 RVA: 0x0115D49C File Offset: 0x0115B69C
+		public override bool NeedForceTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040201B7 RID: 131511
 		public const float ON_GROUND_OFFSET = 0.2f;
 
-		// Token: 0x04025551 RID: 152913
+		// Token: 0x040201B8 RID: 131512
 		public static readonly FName BINDING_TAG = new FName("Obj");
 
-		// Token: 0x04025552 RID: 152914
+		// Token: 0x040201B9 RID: 131513
 		public static readonly FName CONTROL_OBJECT_TAG = new FName("ControlObj");
 
-		// Token: 0x04025553 RID: 152915
+		// Token: 0x040201BA RID: 131514
 		public const int INVALID_ID = 0;
 
-		// Token: 0x04025554 RID: 152916
+		// Token: 0x040201BB RID: 131515
 		public const int MAX_CREATE_BULLET_NUM = 1;
 
-		// Token: 0x04025555 RID: 152917
+		// Token: 0x040201BC RID: 131516
 		public const float MIN_VELOCITY = 0.3f;
 
-		// Token: 0x04025556 RID: 152918
+		// Token: 0x040201BD RID: 131517
 		public const float FAKE_GRAVITY_MIN_VELOCITY = 1f;
 
-		// Token: 0x04025557 RID: 152919
+		// Token: 0x040201BE RID: 131518
 		public const float FAKE_GRAVITY_MIN_ANGLE = 0.1f;
 
-		// Token: 0x04025558 RID: 152920
+		// Token: 0x040201BF RID: 131519
 		public const int ZERO_VELOCITY_FRAME_NUM = 10;
 
-		// Token: 0x04025559 RID: 152921
+		// Token: 0x040201C0 RID: 131520
 		public const int CHANGE_MODE_NAX_COUNT = 3;
 
-		// Token: 0x0402555A RID: 152922
+		// Token: 0x040201C1 RID: 131521
 		public TeleControl2 Config;
 
-		// Token: 0x0402555B RID: 152923
+		// Token: 0x040201C2 RID: 131522
 		public BP_TeleControlConfig_C ManipulateBaseConfig;
 
-		// Token: 0x0402555C RID: 152924
+		// Token: 0x040201C3 RID: 131523
 		public bool LoadingBaseConfigFinish;
 
-		// Token: 0x0402555D RID: 152925
+		// Token: 0x040201C4 RID: 131524
 		public FVectorDouble? ConfigHoldOffset;
 
-		// Token: 0x0402555E RID: 152926
+		// Token: 0x040201C5 RID: 131525
 		public FRotator? ConfigHoldRotator;
 
-		// Token: 0x0402555F RID: 152927
+		// Token: 0x040201C6 RID: 131526
 		public EControlMatchType? ConfigMatchType;
 
-		// Token: 0x04025560 RID: 152928
+		// Token: 0x040201C7 RID: 131527
 		public BaseActorComponent TargetActorComponent;
 
-		// Token: 0x04025561 RID: 152929
+		// Token: 0x040201C8 RID: 131528
 		public SceneItemOutletComponent TargetOutletComponent;
 
-		// Token: 0x04025562 RID: 152930
+		// Token: 0x040201C9 RID: 131529
 		public SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025563 RID: 152931
+		// Token: 0x040201CA RID: 131530
 		public SceneItemOutletComponent ActivatedOutlet;
 
-		// Token: 0x04025564 RID: 152932
+		// Token: 0x040201CB RID: 131531
 		private global::Rotator InitRotation;
 
-		// Token: 0x04025565 RID: 152933
+		// Token: 0x040201CC RID: 131532
 		private global::Vector LastLocation;
 
-		// Token: 0x04025566 RID: 152934
+		// Token: 0x040201CD RID: 131533
 		private global::Rotator LastRotation;
 
-		// Token: 0x04025567 RID: 152935
+		// Token: 0x040201CE RID: 131534
 		private LevelTagComponent LevelTagComponent;
 
-		// Token: 0x04025568 RID: 152936
+		// Token: 0x040201CF RID: 131535
 		[Nullable(new byte[]
 		{
 			0,
@@ -3162,7 +2973,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private TSubclassOf<UMatineeCameraShake>? ChantCameraShakeBpClass;
 
-		// Token: 0x04025569 RID: 152937
+		// Token: 0x040201D0 RID: 131536
 		[Nullable(new byte[]
 		{
 			0,
@@ -3170,7 +2981,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private TSubclassOf<UMatineeCameraShake>? HoldCameraShakeBpClass;
 
-		// Token: 0x0402556A RID: 152938
+		// Token: 0x040201D1 RID: 131537
 		[Nullable(new byte[]
 		{
 			0,
@@ -3178,7 +2989,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private TSubclassOf<UMatineeCameraShake>? DrawCameraShakeBpClass;
 
-		// Token: 0x0402556B RID: 152939
+		// Token: 0x040201D2 RID: 131538
 		[Nullable(new byte[]
 		{
 			0,
@@ -3186,249 +2997,249 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private TSubclassOf<UMatineeCameraShake>? CastCameraShakeBpClass;
 
-		// Token: 0x0402556C RID: 152940
+		// Token: 0x040201D3 RID: 131539
 		private UKuroForceFeedbackEffect CastGamepadShake;
 
-		// Token: 0x0402556D RID: 152941
+		// Token: 0x040201D4 RID: 131540
 		private UKuroForceFeedbackEffect DrawGamepadShake;
 
-		// Token: 0x0402556E RID: 152942
+		// Token: 0x040201D5 RID: 131541
 		public global::Vector CastTargetLocation;
 
-		// Token: 0x0402556F RID: 152943
+		// Token: 0x040201D6 RID: 131542
 		public string MatchSequence;
 
-		// Token: 0x04025570 RID: 152944
+		// Token: 0x040201D7 RID: 131543
 		public bool PlayingMatchSequence;
 
-		// Token: 0x04025571 RID: 152945
+		// Token: 0x040201D8 RID: 131544
 		public SceneItemPropertyComponent PropComp;
 
-		// Token: 0x04025572 RID: 152946
+		// Token: 0x040201D9 RID: 131545
 		public UCurveFloat CastCurve;
 
-		// Token: 0x04025573 RID: 152947
+		// Token: 0x040201DA RID: 131546
 		public bool IsCanBeHeld = true;
 
-		// Token: 0x04025574 RID: 152948
+		// Token: 0x040201DB RID: 131547
 		private int? DisableKey;
 
-		// Token: 0x04025575 RID: 152949
+		// Token: 0x040201DC RID: 131548
 		private long? ContextMessageId;
 
-		// Token: 0x04025576 RID: 152950
+		// Token: 0x040201DD RID: 131549
 		private long ControllerId;
 
-		// Token: 0x04025577 RID: 152951
+		// Token: 0x040201DE RID: 131550
 		public bool NeedRemoveControllerId;
 
-		// Token: 0x04025578 RID: 152952
+		// Token: 0x040201DF RID: 131551
 		public bool IsRequestingRemoveControllerId;
 
-		// Token: 0x04025579 RID: 152953
+		// Token: 0x040201E0 RID: 131552
 		private bool IsVelocityLess;
 
-		// Token: 0x0402557A RID: 152954
+		// Token: 0x040201E1 RID: 131553
 		public bool FinishCheckInitAttach;
 
-		// Token: 0x0402557B RID: 152955
+		// Token: 0x040201E2 RID: 131554
 		public bool EnableDynamicAttach;
 
-		// Token: 0x0402557C RID: 152956
+		// Token: 0x040201E3 RID: 131555
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x0402557D RID: 152957
+		// Token: 0x040201E4 RID: 131556
 		private bool OnRecontrolCd;
 
-		// Token: 0x0402557E RID: 152958
+		// Token: 0x040201E5 RID: 131557
 		private TimerHandle RecontrolCdTimerHandle;
 
-		// Token: 0x0402557F RID: 152959
+		// Token: 0x040201E6 RID: 131558
 		private bool NeedForceStopDropping;
 
-		// Token: 0x04025580 RID: 152960
+		// Token: 0x040201E7 RID: 131559
 		private bool ForceDisplaceFinish = true;
 
-		// Token: 0x04025581 RID: 152961
+		// Token: 0x040201E8 RID: 131560
 		private bool DisplaceCheckPass = true;
 
-		// Token: 0x04025582 RID: 152962
+		// Token: 0x040201E9 RID: 131561
 		private bool GroundingCheckPass = true;
 
-		// Token: 0x04025583 RID: 152963
+		// Token: 0x040201EA RID: 131562
 		private bool PhysicsCheckPass = true;
 
-		// Token: 0x04025584 RID: 152964
+		// Token: 0x040201EB RID: 131563
 		private CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x04025585 RID: 152965
+		// Token: 0x040201EC RID: 131564
 		private EOnlineInteractType? OnlineType;
 
-		// Token: 0x04025586 RID: 152966
+		// Token: 0x040201ED RID: 131565
 		private SceneItemMovementSyncComponent MovementSyncComp;
 
-		// Token: 0x04025587 RID: 152967
+		// Token: 0x040201EE RID: 131566
 		private ALevelSequenceActor DirectorActor;
 
-		// Token: 0x04025588 RID: 152968
+		// Token: 0x040201EF RID: 131567
 		public bool UsingAssistantHoldOffset;
 
-		// Token: 0x04025589 RID: 152969
+		// Token: 0x040201F0 RID: 131568
 		public FVectorDouble? ConfigAssistantHoldOffset;
 
-		// Token: 0x0402558A RID: 152970
+		// Token: 0x040201F1 RID: 131569
 		public FVectorDouble? MovementTargetLocation;
 
-		// Token: 0x0402558B RID: 152971
+		// Token: 0x040201F2 RID: 131570
 		public FRotator? MovementTargetRotation;
 
-		// Token: 0x0402558C RID: 152972
+		// Token: 0x040201F3 RID: 131571
 		private SceneItemManipulableBaseState CurrentStateInternal;
 
-		// Token: 0x0402558D RID: 152973
+		// Token: 0x040201F4 RID: 131572
 		private SceneItemManipulableResetState ResetState;
 
-		// Token: 0x0402558E RID: 152974
+		// Token: 0x040201F5 RID: 131573
 		private SceneItemManipulableChantState ChantState;
 
-		// Token: 0x0402558F RID: 152975
+		// Token: 0x040201F6 RID: 131574
 		private SceneItemManipulableDrawState DrawState;
 
-		// Token: 0x04025590 RID: 152976
+		// Token: 0x040201F7 RID: 131575
 		public SceneItemManipulableHoldState HoldState;
 
-		// Token: 0x04025591 RID: 152977
+		// Token: 0x040201F8 RID: 131576
 		public SceneItemManipulablePrecastState PrecastState;
 
-		// Token: 0x04025592 RID: 152978
+		// Token: 0x040201F9 RID: 131577
 		public SceneItemManipulableAdsorbedState AdsorbedState;
 
-		// Token: 0x04025593 RID: 152979
+		// Token: 0x040201FA RID: 131578
 		public SceneItemManipulableCastState CastToTargetState;
 
-		// Token: 0x04025594 RID: 152980
+		// Token: 0x040201FB RID: 131579
 		public SceneItemManipulableCastState CastToOutletState;
 
-		// Token: 0x04025595 RID: 152981
+		// Token: 0x040201FC RID: 131580
 		public SceneItemManipulableCastState CastFreeState;
 
-		// Token: 0x04025596 RID: 152982
+		// Token: 0x040201FD RID: 131581
 		private SceneItemManipulableCastState CastProjectileState;
 
-		// Token: 0x04025597 RID: 152983
+		// Token: 0x040201FE RID: 131582
 		private SceneItemManipulableMatchOutletState MatchOutletState;
 
-		// Token: 0x04025598 RID: 152984
+		// Token: 0x040201FF RID: 131583
 		private SceneItemManipulableDropState DropState;
 
-		// Token: 0x04025599 RID: 152985
+		// Token: 0x04020200 RID: 131584
 		private bool CannotCastWithoutTargetInternal;
 
-		// Token: 0x0402559A RID: 152986
+		// Token: 0x04020201 RID: 131585
 		[Nullable(1)]
 		private string OnHitBulletId = "";
 
-		// Token: 0x0402559B RID: 152987
+		// Token: 0x04020202 RID: 131586
 		private int CreateBulletCount;
 
-		// Token: 0x0402559C RID: 152988
+		// Token: 0x04020203 RID: 131587
 		private bool IsDestroySelfOnCreateBullet;
 
-		// Token: 0x0402559D RID: 152989
+		// Token: 0x04020204 RID: 131588
 		private bool IsDestroySelfOnDrop;
 
-		// Token: 0x0402559E RID: 152990
+		// Token: 0x04020205 RID: 131589
 		private bool IsDestoyAfterCast;
 
-		// Token: 0x0402559F RID: 152991
+		// Token: 0x04020206 RID: 131590
 		private long BulletIdOnHitActor;
 
-		// Token: 0x040255A0 RID: 152992
+		// Token: 0x04020207 RID: 131591
 		private int ZeroVelocityFrame;
 
-		// Token: 0x040255A1 RID: 152993
+		// Token: 0x04020208 RID: 131592
 		private int MaxCreateBulletNum = 1;
 
-		// Token: 0x040255A2 RID: 152994
+		// Token: 0x04020209 RID: 131593
 		private float CreateBulletInterval;
 
-		// Token: 0x040255A3 RID: 152995
+		// Token: 0x0402020A RID: 131594
 		private float CreateBulletIntervalTimer;
 
-		// Token: 0x040255A4 RID: 152996
+		// Token: 0x0402020B RID: 131595
 		public bool IsHoldingUsePhysics;
 
-		// Token: 0x040255A5 RID: 152997
+		// Token: 0x0402020C RID: 131596
 		public bool ForceMoving;
 
-		// Token: 0x040255A6 RID: 152998
+		// Token: 0x0402020D RID: 131597
 		[Nullable(1)]
 		public global::Vector LastHoldingLocation = global::Vector.Create();
 
-		// Token: 0x040255A7 RID: 152999
+		// Token: 0x0402020E RID: 131598
 		private TimerHandle DestroyTimer;
 
-		// Token: 0x040255A8 RID: 153000
+		// Token: 0x0402020F RID: 131599
 		private TimerHandle CreateBulletTimer;
 
-		// Token: 0x040255A9 RID: 153001
+		// Token: 0x04020210 RID: 131600
 		private IConditionGroup ConditionGroup;
 
-		// Token: 0x040255AA RID: 153002
+		// Token: 0x04020211 RID: 131601
 		private readonly JigsawIndex CurrentPutIndex;
 
-		// Token: 0x040255AB RID: 153003
+		// Token: 0x04020212 RID: 131602
 		private long PassThroughPortalId = -1L;
 
-		// Token: 0x040255AC RID: 153004
+		// Token: 0x04020213 RID: 131603
 		private CharacterManipulateComponent.EPassThroughPortalType PassThroughPortalType;
 
-		// Token: 0x040255AD RID: 153005
+		// Token: 0x04020214 RID: 131604
 		private bool Mutex;
 
-		// Token: 0x040255AE RID: 153006
+		// Token: 0x04020215 RID: 131605
 		private int Count;
 
-		// Token: 0x040255AF RID: 153007
+		// Token: 0x04020216 RID: 131606
 		[Nullable(1)]
 		private readonly Queue<SceneItemManipulatableComponent.EManipulatableState> NewStateQueue = new Queue<SceneItemManipulatableComponent.EManipulatableState>(3);
 
-		// Token: 0x040255B0 RID: 153008
+		// Token: 0x04020217 RID: 131607
 		private global::Vector EntityGravityDirect;
 
-		// Token: 0x040255B1 RID: 153009
+		// Token: 0x04020218 RID: 131608
 		private bool IsProjectileAimModeInternal;
 
-		// Token: 0x040255B2 RID: 153010
+		// Token: 0x04020219 RID: 131609
 		private bool EnableTargetLocationCalculation = true;
 
-		// Token: 0x0200CECE RID: 52942
+		// Token: 0x0200BA64 RID: 47716
 		[NullableContext(0)]
 		public enum EManipulatableState
 		{
-			// Token: 0x0403E38D RID: 254861
+			// Token: 0x040396B3 RID: 235187
 			Reset = 1,
-			// Token: 0x0403E38E RID: 254862
+			// Token: 0x040396B4 RID: 235188
 			BeChanting,
-			// Token: 0x0403E38F RID: 254863
+			// Token: 0x040396B5 RID: 235189
 			BeDrawing,
-			// Token: 0x0403E390 RID: 254864
+			// Token: 0x040396B6 RID: 235190
 			BeHolding,
-			// Token: 0x0403E391 RID: 254865
+			// Token: 0x040396B7 RID: 235191
 			BePrecasting,
-			// Token: 0x0403E392 RID: 254866
+			// Token: 0x040396B8 RID: 235192
 			BeCastingToTarget,
-			// Token: 0x0403E393 RID: 254867
+			// Token: 0x040396B9 RID: 235193
 			BeCastingToOutlet,
-			// Token: 0x0403E394 RID: 254868
+			// Token: 0x040396BA RID: 235194
 			BeCastingProjectile,
-			// Token: 0x0403E395 RID: 254869
+			// Token: 0x040396BB RID: 235195
 			BeCastingFree,
-			// Token: 0x0403E396 RID: 254870
+			// Token: 0x040396BC RID: 235196
 			MatchingOutlet,
-			// Token: 0x0403E397 RID: 254871
+			// Token: 0x040396BD RID: 235197
 			BeDropping,
-			// Token: 0x0403E398 RID: 254872
+			// Token: 0x040396BE RID: 235198
 			BeAdsorbed
 		}
 	}

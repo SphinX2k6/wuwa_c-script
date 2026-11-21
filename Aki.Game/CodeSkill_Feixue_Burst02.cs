@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200317B RID: 12667
+// Token: 0x020026E8 RID: 9960
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 {
-	// Token: 0x0601B3E0 RID: 111584 RVA: 0x0076E47A File Offset: 0x0076C67A
+	// Token: 0x06018EE5 RID: 102117 RVA: 0x00795DDE File Offset: 0x00793FDE
 	public CodeSkill_Feixue_Burst02(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B3E1 RID: 111585 RVA: 0x0076E484 File Offset: 0x0076C684
+	// Token: 0x06018EE6 RID: 102118 RVA: 0x00795DE8 File Offset: 0x00793FE8
 	public override void OnBegin(Skill skill)
 	{
 		this.ReceivedThreshold = false;
@@ -34,14 +34,14 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		this.RegisterChargeEventListeners();
 	}
 
-	// Token: 0x0601B3E2 RID: 111586 RVA: 0x0076E510 File Offset: 0x0076C710
+	// Token: 0x06018EE7 RID: 102119 RVA: 0x00795E74 File Offset: 0x00794074
 	public override void OnEnd(Skill skill)
 	{
 		this.RemoveChargeEventListeners();
 		this.ActiveSkill = null;
 	}
 
-	// Token: 0x0601B3E3 RID: 111587 RVA: 0x0076E51F File Offset: 0x0076C71F
+	// Token: 0x06018EE8 RID: 102120 RVA: 0x00795E83 File Offset: 0x00794083
 	private void OnMontageCompleted(Skill skill, bool isInterrupted)
 	{
 		if (isInterrupted)
@@ -52,7 +52,7 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		this.TriggerBurstAttack(skill);
 	}
 
-	// Token: 0x0601B3E4 RID: 111588 RVA: 0x0076E533 File Offset: 0x0076C733
+	// Token: 0x06018EE9 RID: 102121 RVA: 0x00795E97 File Offset: 0x00794097
 	private void OnMontageBlendOut(Skill skill, bool isInterrupted)
 	{
 		if (isInterrupted)
@@ -62,7 +62,7 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		this.TriggerBurstAttack(skill);
 	}
 
-	// Token: 0x0601B3E5 RID: 111589 RVA: 0x0076E540 File Offset: 0x0076C740
+	// Token: 0x06018EEA RID: 102122 RVA: 0x00795EA4 File Offset: 0x007940A4
 	private void RegisterChargeEventListeners()
 	{
 		BaseAbilityComponent component = base.Entity.GetComponent<BaseAbilityComponent>();
@@ -75,7 +75,7 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		this.ThresholdListenerActive = true;
 	}
 
-	// Token: 0x0601B3E6 RID: 111590 RVA: 0x0076E5B4 File Offset: 0x0076C7B4
+	// Token: 0x06018EEB RID: 102123 RVA: 0x00795F18 File Offset: 0x00794118
 	private void RemoveChargeEventListeners()
 	{
 		IGameplayEventTask releaseEventTask = this.ReleaseEventTask;
@@ -97,7 +97,7 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		component.RemoveGameplayEventListener(GameplayTagDefine.EGameplayTagId["角色.R2T1TaidaonvMd10011.事件相关.大招阈值"], new TGameplayEventCallback(this.OnThresholdEvent));
 	}
 
-	// Token: 0x0601B3E7 RID: 111591 RVA: 0x0076E619 File Offset: 0x0076C819
+	// Token: 0x06018EEC RID: 102124 RVA: 0x00795F7D File Offset: 0x0079417D
 	private void OnReleaseEvent(int tagId, FGameplayEventData payload)
 	{
 		this.Released = true;
@@ -107,7 +107,7 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B3E8 RID: 111592 RVA: 0x0076E630 File Offset: 0x0076C830
+	// Token: 0x06018EED RID: 102125 RVA: 0x00795F94 File Offset: 0x00794194
 	private void OnThresholdEvent(int tagId, FGameplayEventData payload)
 	{
 		this.ReceivedThreshold = true;
@@ -123,7 +123,7 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B3E9 RID: 111593 RVA: 0x0076E684 File Offset: 0x0076C884
+	// Token: 0x06018EEE RID: 102126 RVA: 0x00795FE8 File Offset: 0x007941E8
 	private void OnChargeGateReady()
 	{
 		if (this.ChargeReleaseGateUsed)
@@ -134,7 +134,7 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		this.DoChargeBuffAndAttack();
 	}
 
-	// Token: 0x0601B3EA RID: 111594 RVA: 0x0076E69C File Offset: 0x0076C89C
+	// Token: 0x06018EEF RID: 102127 RVA: 0x00796000 File Offset: 0x00794200
 	private void DoChargeBuffAndAttack()
 	{
 		Skill activeSkill = this.ActiveSkill;
@@ -146,7 +146,7 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		this.TriggerBurstAttack(activeSkill);
 	}
 
-	// Token: 0x0601B3EB RID: 111595 RVA: 0x0076E6C4 File Offset: 0x0076C8C4
+	// Token: 0x06018EF0 RID: 102128 RVA: 0x00796028 File Offset: 0x00794228
 	private void AddChargeBuff(Skill skill)
 	{
 		CharacterBuffComponent component = base.Entity.GetComponent<CharacterBuffComponent>();
@@ -178,7 +178,7 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B3EC RID: 111596 RVA: 0x0076E7BF File Offset: 0x0076C9BF
+	// Token: 0x06018EF1 RID: 102129 RVA: 0x00796123 File Offset: 0x00794323
 	private void TriggerBurstAttack(Skill skill)
 	{
 		if (this.AttackTriggered)
@@ -195,35 +195,35 @@ public class CodeSkill_Feixue_Burst02 : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0400D48F RID: 54415
+	// Token: 0x0400D8F2 RID: 55538
 	private const long CHARGE_BUFF_ID = 1108408002L;
 
-	// Token: 0x0400D490 RID: 54416
+	// Token: 0x0400D8F3 RID: 55539
 	private const int BURST_ATTACK_SKILL_ID = 1108131;
 
-	// Token: 0x0400D491 RID: 54417
+	// Token: 0x0400D8F4 RID: 55540
 	private const int BURST_MONTAGE_INDEX = 0;
 
-	// Token: 0x0400D492 RID: 54418
+	// Token: 0x0400D8F5 RID: 55541
 	private bool ReceivedThreshold;
 
-	// Token: 0x0400D493 RID: 54419
+	// Token: 0x0400D8F6 RID: 55542
 	private bool Released;
 
-	// Token: 0x0400D494 RID: 54420
+	// Token: 0x0400D8F7 RID: 55543
 	private bool AttackTriggered;
 
-	// Token: 0x0400D495 RID: 54421
+	// Token: 0x0400D8F8 RID: 55544
 	private bool ChargeReleaseGateUsed;
 
-	// Token: 0x0400D496 RID: 54422
+	// Token: 0x0400D8F9 RID: 55545
 	[Nullable(2)]
 	private Skill ActiveSkill;
 
-	// Token: 0x0400D497 RID: 54423
+	// Token: 0x0400D8FA RID: 55546
 	[Nullable(2)]
 	private IGameplayEventTask ReleaseEventTask;
 
-	// Token: 0x0400D498 RID: 54424
+	// Token: 0x0400D8FB RID: 55547
 	private bool ThresholdListenerActive;
 }

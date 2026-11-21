@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002572 RID: 9586
+	// Token: 0x0200281B RID: 10267
 	public class IVisualNovelRoleConfig
 	{
-		// Token: 0x0600D71D RID: 55069 RVA: 0x00200BF0 File Offset: 0x001FEDF0
-		[NullableContext(1)]
+		// Token: 0x0600E488 RID: 58504 RVA: 0x0021C7FC File Offset: 0x0021A9FC
 		public static IVisualNovelRoleConfig Create(IVisualNovelRoleConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DFB RID: 15867
-		// (get) Token: 0x0600D71E RID: 55070 RVA: 0x00200C10 File Offset: 0x001FEE10
+		// Token: 0x17004100 RID: 16640
+		// (get) Token: 0x0600E489 RID: 58505 RVA: 0x0021C81C File Offset: 0x0021AA1C
 		public virtual int? Expression
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DFC RID: 15868
-		// (get) Token: 0x0600D71F RID: 55071 RVA: 0x00200C48 File Offset: 0x001FEE48
+		// Token: 0x17004101 RID: 16641
+		// (get) Token: 0x0600E48A RID: 58506 RVA: 0x0021C854 File Offset: 0x0021AA54
 		public virtual EAvgVisualEffect? VisualEffect
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DFD RID: 15869
-		// (get) Token: 0x0600D720 RID: 55072 RVA: 0x00200C80 File Offset: 0x001FEE80
+		// Token: 0x17004102 RID: 16642
+		// (get) Token: 0x0600E48B RID: 58507 RVA: 0x0021C88C File Offset: 0x0021AA8C
 		public virtual bool? HideAvatar
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DFE RID: 15870
-		// (get) Token: 0x0600D721 RID: 55073 RVA: 0x00200CB8 File Offset: 0x001FEEB8
+		// Token: 0x17004103 RID: 16643
+		// (get) Token: 0x0600E48C RID: 58508 RVA: 0x0021C8C4 File Offset: 0x0021AAC4
 		public virtual bool? HidePortrait
 		{
 			get
@@ -77,7 +75,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007714 RID: 30484
+		// Token: 0x17004104 RID: 16644
+		// (get) Token: 0x0600E48D RID: 58509 RVA: 0x0021C8FC File Offset: 0x0021AAFC
+		public virtual int? CustomLayer
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 16) == 0)
+				{
+					return null;
+				}
+				return new int?(this.Instance.CustomLayer);
+			}
+		}
+
+		// Token: 0x04007D71 RID: 32113
 		private IVisualNovelRoleConfig Instance;
 	}
 }

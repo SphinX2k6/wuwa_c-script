@@ -7,14 +7,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003325 RID: 13093
+// Token: 0x02002897 RID: 10391
 [UClass("/Game/Aki/TypeScript/Game/Recorder/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Recorder/TsBpFxEffect.TsBpFxEffect_C")]
 public class TsBpFxEffect : AActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002790 RID: 10128
-	// (get) Token: 0x0601C855 RID: 116821 RVA: 0x007FFE1F File Offset: 0x007FE01F
-	// (set) Token: 0x0601C856 RID: 116822 RVA: 0x007FFE2F File Offset: 0x007FE02F
+	// Token: 0x17002B2D RID: 11053
+	// (get) Token: 0x0601A54E RID: 107854 RVA: 0x008263EB File Offset: 0x008245EB
+	// (set) Token: 0x0601A54F RID: 107855 RVA: 0x008263FB File Offset: 0x008245FB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsRecorderActor
 	{
@@ -28,9 +28,9 @@ public class TsBpFxEffect : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002791 RID: 10129
-	// (get) Token: 0x0601C857 RID: 116823 RVA: 0x007FFE40 File Offset: 0x007FE040
-	// (set) Token: 0x0601C858 RID: 116824 RVA: 0x007FFE50 File Offset: 0x007FE050
+	// Token: 0x17002B2E RID: 11054
+	// (get) Token: 0x0601A550 RID: 107856 RVA: 0x0082640C File Offset: 0x0082460C
+	// (set) Token: 0x0601A551 RID: 107857 RVA: 0x0082641C File Offset: 0x0082461C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float RecordTime
 	{
@@ -44,9 +44,9 @@ public class TsBpFxEffect : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002792 RID: 10130
-	// (get) Token: 0x0601C859 RID: 116825 RVA: 0x007FFE61 File Offset: 0x007FE061
-	// (set) Token: 0x0601C85A RID: 116826 RVA: 0x007FFE75 File Offset: 0x007FE075
+	// Token: 0x17002B2F RID: 11055
+	// (get) Token: 0x0601A552 RID: 107858 RVA: 0x0082642D File Offset: 0x0082462D
+	// (set) Token: 0x0601A553 RID: 107859 RVA: 0x00826441 File Offset: 0x00824641
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TsBpFxEffect RecorderShadow
@@ -63,256 +63,217 @@ public class TsBpFxEffect : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x0601C85B RID: 116827 RVA: 0x007FFE8C File Offset: 0x007FE08C
+	// Token: 0x0601A554 RID: 107860 RVA: 0x00826458 File Offset: 0x00824658
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveBeginPlay()
+	public override void ReceiveBeginPlay()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveBeginPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBpFxEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveBeginPlay"), TsBpFxEffect.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveBeginPlay_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601C85C RID: 116828 RVA: 0x007FFEFC File Offset: 0x007FE0FC
-	protected virtual void ReceiveBeginPlay_Implementation()
+	// Token: 0x0601A555 RID: 107861 RVA: 0x008264B1 File Offset: 0x008246B1
+	protected void ReceiveBeginPlay_Implementation()
 	{
 		this.OnPlay();
 	}
 
-	// Token: 0x0601C85D RID: 116829 RVA: 0x007FFF04 File Offset: 0x007FE104
+	// Token: 0x0601A556 RID: 107862 RVA: 0x008264BC File Offset: 0x008246BC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> endPlayReason)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveEndPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBpFxEffect.__ReceiveEndPlay_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBpFxEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveEndPlay"), TsBpFxEffect.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBpFxEffect.__ReceiveEndPlay_FunctionParams*)ptr + 15L / (long)sizeof(TsBpFxEffect.__ReceiveEndPlay_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->endPlayReason = endPlayReason;
+			this.ReceiveEndPlay_Implementation(endPlayReason);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBpFxEffect.__ReceiveEndPlay_FunctionParams* ptr = stackalloc TsBpFxEffect.__ReceiveEndPlay_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBpFxEffect.__ReceiveEndPlay_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->endPlayReason = endPlayReason;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601C85E RID: 116830 RVA: 0x007FFF7A File Offset: 0x007FE17A
+	// Token: 0x0601A557 RID: 107863 RVA: 0x00826548 File Offset: 0x00824748
 	protected virtual void ReceiveEndPlay_Implementation(TEnumAsByte<EEndPlayReason> endPlayReason)
 	{
 		this.OnStop();
 	}
 
-	// Token: 0x0601C85F RID: 116831 RVA: 0x007FFF84 File Offset: 0x007FE184
+	// Token: 0x0601A558 RID: 107864 RVA: 0x00826550 File Offset: 0x00824750
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void TryRecord()
+	public virtual void TryRecord()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("TryRecord"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBpFxEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("TryRecord"), TsBpFxEffect.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.TryRecord_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601C860 RID: 116832 RVA: 0x007FFFF4 File Offset: 0x007FE1F4
+	// Token: 0x0601A559 RID: 107865 RVA: 0x008265A9 File Offset: 0x008247A9
 	protected void TryRecord_Implementation()
 	{
 		this.OnPlay();
 	}
 
-	// Token: 0x0601C861 RID: 116833 RVA: 0x007FFFFC File Offset: 0x007FE1FC
+	// Token: 0x0601A55A RID: 107866 RVA: 0x008265B4 File Offset: 0x008247B4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddAutoFloatTrack(FName propertyName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddAutoFloatTrack"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBpFxEffect.__AddAutoFloatTrack_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBpFxEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddAutoFloatTrack"), TsBpFxEffect.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBpFxEffect.__AddAutoFloatTrack_FunctionParams*)ptr + 15L / (long)sizeof(TsBpFxEffect.__AddAutoFloatTrack_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->propertyName = propertyName;
+			this.AddAutoFloatTrack_Implementation(propertyName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBpFxEffect.__AddAutoFloatTrack_FunctionParams* ptr = stackalloc TsBpFxEffect.__AddAutoFloatTrack_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBpFxEffect.__AddAutoFloatTrack_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->propertyName = propertyName;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601C862 RID: 116834 RVA: 0x00800072 File Offset: 0x007FE272
+	// Token: 0x0601A55B RID: 107867 RVA: 0x00826640 File Offset: 0x00824840
 	protected void AddAutoFloatTrack_Implementation(FName propertyName)
 	{
 	}
 
-	// Token: 0x0601C863 RID: 116835 RVA: 0x00800074 File Offset: 0x007FE274
+	// Token: 0x0601A55C RID: 107868 RVA: 0x00826644 File Offset: 0x00824844
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddAutoVectorTrack(FName propertyName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddAutoVectorTrack"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBpFxEffect.__AddAutoVectorTrack_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBpFxEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddAutoVectorTrack"), TsBpFxEffect.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBpFxEffect.__AddAutoVectorTrack_FunctionParams*)ptr + 15L / (long)sizeof(TsBpFxEffect.__AddAutoVectorTrack_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->propertyName = propertyName;
+			this.AddAutoVectorTrack_Implementation(propertyName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBpFxEffect.__AddAutoVectorTrack_FunctionParams* ptr = stackalloc TsBpFxEffect.__AddAutoVectorTrack_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBpFxEffect.__AddAutoVectorTrack_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->propertyName = propertyName;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601C864 RID: 116836 RVA: 0x008000EA File Offset: 0x007FE2EA
+	// Token: 0x0601A55D RID: 107869 RVA: 0x008266D0 File Offset: 0x008248D0
 	protected virtual void AddAutoVectorTrack_Implementation(FName propertyName)
 	{
 	}
 
-	// Token: 0x0601C865 RID: 116837 RVA: 0x008000EC File Offset: 0x007FE2EC
+	// Token: 0x0601A55E RID: 107870 RVA: 0x008266D4 File Offset: 0x008248D4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddAutoObjectTrack(FName propertyName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddAutoObjectTrack"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBpFxEffect.__AddAutoObjectTrack_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBpFxEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddAutoObjectTrack"), TsBpFxEffect.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBpFxEffect.__AddAutoObjectTrack_FunctionParams*)ptr + 15L / (long)sizeof(TsBpFxEffect.__AddAutoObjectTrack_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->propertyName = propertyName;
+			this.AddAutoObjectTrack_Implementation(propertyName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBpFxEffect.__AddAutoObjectTrack_FunctionParams* ptr = stackalloc TsBpFxEffect.__AddAutoObjectTrack_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBpFxEffect.__AddAutoObjectTrack_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->propertyName = propertyName;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601C866 RID: 116838 RVA: 0x00800162 File Offset: 0x007FE362
+	// Token: 0x0601A55F RID: 107871 RVA: 0x00826760 File Offset: 0x00824960
 	protected virtual void AddAutoObjectTrack_Implementation(FName propertyName)
 	{
 	}
 
-	// Token: 0x0601C867 RID: 116839 RVA: 0x00800164 File Offset: 0x007FE364
+	// Token: 0x0601A560 RID: 107872 RVA: 0x00826764 File Offset: 0x00824964
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void OnRecordStart()
+	public virtual void OnRecordStart()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnRecordStart"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBpFxEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnRecordStart"), TsBpFxEffect.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnRecordStart_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601C868 RID: 116840 RVA: 0x008001D4 File Offset: 0x007FE3D4
+	// Token: 0x0601A561 RID: 107873 RVA: 0x008267BD File Offset: 0x008249BD
 	protected virtual void OnRecordStart_Implementation()
 	{
 	}
 
-	// Token: 0x0601C869 RID: 116841 RVA: 0x008001D8 File Offset: 0x007FE3D8
+	// Token: 0x0601A562 RID: 107874 RVA: 0x008267C0 File Offset: 0x008249C0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void OnRecordTick(float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnRecordTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBpFxEffect.__OnRecordTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBpFxEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnRecordTick"), TsBpFxEffect.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBpFxEffect.__OnRecordTick_FunctionParams*)ptr + 15L / (long)sizeof(TsBpFxEffect.__OnRecordTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->deltaSeconds = deltaSeconds;
+			this.OnRecordTick_Implementation(deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBpFxEffect.__OnRecordTick_FunctionParams* ptr = stackalloc TsBpFxEffect.__OnRecordTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBpFxEffect.__OnRecordTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->deltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601C86A RID: 116842 RVA: 0x0080024E File Offset: 0x007FE44E
+	// Token: 0x0601A563 RID: 107875 RVA: 0x0082684C File Offset: 0x00824A4C
 	protected virtual void OnRecordTick_Implementation(float deltaSeconds)
 	{
 	}
 
-	// Token: 0x0601C86B RID: 116843 RVA: 0x00800250 File Offset: 0x007FE450
+	// Token: 0x0601A564 RID: 107876 RVA: 0x00826850 File Offset: 0x00824A50
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void OnRecordStop()
+	public virtual void OnRecordStop()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnRecordStop"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBpFxEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnRecordStop"), TsBpFxEffect.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnRecordStop_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601C86C RID: 116844 RVA: 0x008002C0 File Offset: 0x007FE4C0
+	// Token: 0x0601A565 RID: 107877 RVA: 0x008268A9 File Offset: 0x00824AA9
 	protected virtual void OnRecordStop_Implementation()
 	{
 	}
 
-	// Token: 0x0601C86D RID: 116845 RVA: 0x008002C2 File Offset: 0x007FE4C2
+	// Token: 0x0601A566 RID: 107878 RVA: 0x008268AB File Offset: 0x00824AAB
 	private void OnPlay()
 	{
 	}
 
-	// Token: 0x0601C86E RID: 116846 RVA: 0x008002C4 File Offset: 0x007FE4C4
+	// Token: 0x0601A567 RID: 107879 RVA: 0x008268AD File Offset: 0x00824AAD
 	private void OnStop()
 	{
 	}
 
-	// Token: 0x0601C86F RID: 116847 RVA: 0x008002C6 File Offset: 0x007FE4C6
+	// Token: 0x0601A568 RID: 107880 RVA: 0x008268AF File Offset: 0x00824AAF
 	public void ClearRecorder()
 	{
 		this.RecorderShadow = null;
 	}
 
-	// Token: 0x0601C870 RID: 116848 RVA: 0x008002CF File Offset: 0x007FE4CF
+	// Token: 0x0601A569 RID: 107881 RVA: 0x008268B8 File Offset: 0x00824AB8
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsBpFxEffect._ClassPtr == IntPtr.Zero)
@@ -322,36 +283,24 @@ public class TsBpFxEffect : AActor, IUnrealUObject, IUnrealObject
 		return TsBpFxEffect._ClassPtr;
 	}
 
-	// Token: 0x0601C871 RID: 116849 RVA: 0x008002F4 File Offset: 0x007FE4F4
+	// Token: 0x0601A56A RID: 107882 RVA: 0x008268DC File Offset: 0x00824ADC
 	public TsBpFxEffect() : this(BuiltinUtils.AllocNativeUObject(TsBpFxEffect.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601C872 RID: 116850 RVA: 0x0080031C File Offset: 0x007FE51C
+	// Token: 0x0601A56B RID: 107883 RVA: 0x00826904 File Offset: 0x00824B04
 	[NullableContext(1)]
 	public TsBpFxEffect(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsBpFxEffect.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601C873 RID: 116851 RVA: 0x0080034F File Offset: 0x007FE54F
+	// Token: 0x0601A56C RID: 107884 RVA: 0x00826937 File Offset: 0x00824B37
 	protected TsBpFxEffect(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x17002793 RID: 10131
-	// (get) Token: 0x0601C874 RID: 116852 RVA: 0x00800358 File Offset: 0x007FE558
-	[Nullable(1)]
-	public unsafe FPointerToUberGraphFrame UberGraphFrame
-	{
-		[NullableContext(1)]
-		get
-		{
-			return *(base.NativePtr + (IntPtr)TsBpFxEffect.__PropertyOffset_UberGraphFrame);
-		}
-	}
-
-	// Token: 0x17002794 RID: 10132
-	// (get) Token: 0x0601C875 RID: 116853 RVA: 0x00800368 File Offset: 0x007FE568
+	// Token: 0x17002B30 RID: 11056
+	// (get) Token: 0x0601A56D RID: 107885 RVA: 0x00826940 File Offset: 0x00824B40
 	[Nullable(2)]
 	public unsafe USceneComponent DefaultSceneRoot
 	{
@@ -362,131 +311,128 @@ public class TsBpFxEffect : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x0601C876 RID: 116854 RVA: 0x0080037C File Offset: 0x007FE57C
+	// Token: 0x0601A56E RID: 107886 RVA: 0x00826954 File Offset: 0x00824B54
 	protected virtual void __CPPCALL_ReceiveBeginPlay_Implementation()
 	{
 		this.ReceiveBeginPlay_Implementation();
 	}
 
-	// Token: 0x0601C877 RID: 116855 RVA: 0x00800384 File Offset: 0x007FE584
+	// Token: 0x0601A56F RID: 107887 RVA: 0x0082695C File Offset: 0x00824B5C
 	protected unsafe virtual void __CPPCALL_ReceiveEndPlay_Implementation(TsBpFxEffect.__ReceiveEndPlay_FunctionParams* __Params)
 	{
 		this.ReceiveEndPlay_Implementation(__Params->endPlayReason);
 	}
 
-	// Token: 0x0601C878 RID: 116856 RVA: 0x00800392 File Offset: 0x007FE592
+	// Token: 0x0601A570 RID: 107888 RVA: 0x0082696A File Offset: 0x00824B6A
 	protected virtual void __CPPCALL_TryRecord_Implementation()
 	{
 		this.TryRecord_Implementation();
 	}
 
-	// Token: 0x0601C879 RID: 116857 RVA: 0x0080039A File Offset: 0x007FE59A
+	// Token: 0x0601A571 RID: 107889 RVA: 0x00826972 File Offset: 0x00824B72
 	protected unsafe virtual void __CPPCALL_AddAutoFloatTrack_Implementation(TsBpFxEffect.__AddAutoFloatTrack_FunctionParams* __Params)
 	{
 		this.AddAutoFloatTrack_Implementation(__Params->propertyName);
 	}
 
-	// Token: 0x0601C87A RID: 116858 RVA: 0x008003A8 File Offset: 0x007FE5A8
+	// Token: 0x0601A572 RID: 107890 RVA: 0x00826980 File Offset: 0x00824B80
 	protected unsafe virtual void __CPPCALL_AddAutoVectorTrack_Implementation(TsBpFxEffect.__AddAutoVectorTrack_FunctionParams* __Params)
 	{
 		this.AddAutoVectorTrack_Implementation(__Params->propertyName);
 	}
 
-	// Token: 0x0601C87B RID: 116859 RVA: 0x008003B6 File Offset: 0x007FE5B6
+	// Token: 0x0601A573 RID: 107891 RVA: 0x0082698E File Offset: 0x00824B8E
 	protected unsafe virtual void __CPPCALL_AddAutoObjectTrack_Implementation(TsBpFxEffect.__AddAutoObjectTrack_FunctionParams* __Params)
 	{
 		this.AddAutoObjectTrack_Implementation(__Params->propertyName);
 	}
 
-	// Token: 0x0601C87C RID: 116860 RVA: 0x008003C4 File Offset: 0x007FE5C4
+	// Token: 0x0601A574 RID: 107892 RVA: 0x0082699C File Offset: 0x00824B9C
 	protected virtual void __CPPCALL_OnRecordStart_Implementation()
 	{
 		this.OnRecordStart_Implementation();
 	}
 
-	// Token: 0x0601C87D RID: 116861 RVA: 0x008003CC File Offset: 0x007FE5CC
+	// Token: 0x0601A575 RID: 107893 RVA: 0x008269A4 File Offset: 0x00824BA4
 	protected unsafe virtual void __CPPCALL_OnRecordTick_Implementation(TsBpFxEffect.__OnRecordTick_FunctionParams* __Params)
 	{
 		this.OnRecordTick_Implementation(__Params->deltaSeconds);
 	}
 
-	// Token: 0x0601C87E RID: 116862 RVA: 0x008003DA File Offset: 0x007FE5DA
+	// Token: 0x0601A576 RID: 107894 RVA: 0x008269B2 File Offset: 0x00824BB2
 	protected virtual void __CPPCALL_OnRecordStop_Implementation()
 	{
 		this.OnRecordStop_Implementation();
 	}
 
-	// Token: 0x0400E298 RID: 58008
+	// Token: 0x0400E749 RID: 59209
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Recorder/TsBpFxEffect.TsBpFxEffect_C";
 
-	// Token: 0x0400E299 RID: 58009
+	// Token: 0x0400E74A RID: 59210
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E29A RID: 58010
+	// Token: 0x0400E74B RID: 59211
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E29B RID: 58011
-	private static int __PropertyOffset_UberGraphFrame;
-
-	// Token: 0x0400E29C RID: 58012
+	// Token: 0x0400E74C RID: 59212
 	private static int __PropertyOffset_DefaultSceneRoot;
 
-	// Token: 0x0400E29D RID: 58013
+	// Token: 0x0400E74D RID: 59213
 	private static int __PropertyOffset_IsRecorderActor;
 
-	// Token: 0x0400E29E RID: 58014
+	// Token: 0x0400E74E RID: 59214
 	private static int __PropertyOffset_RecordTime;
 
-	// Token: 0x0400E29F RID: 58015
+	// Token: 0x0400E74F RID: 59215
 	private static int __PropertyOffset_RecorderShadow;
 
-	// Token: 0x0200979D RID: 38813
+	// Token: 0x020089C0 RID: 35264
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected new ref struct __ReceiveEndPlay_FunctionParams
 	{
-		// Token: 0x04030751 RID: 198481
+		// Token: 0x0402BDDE RID: 179678
 		[FieldOffset(0)]
 		public TEnumAsByte<EEndPlayReason> endPlayReason;
 	}
 
-	// Token: 0x0200979E RID: 38814
+	// Token: 0x020089C1 RID: 35265
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 12)]
 	protected ref struct __AddAutoFloatTrack_FunctionParams
 	{
-		// Token: 0x04030752 RID: 198482
+		// Token: 0x0402BDDF RID: 179679
 		[FieldOffset(0)]
 		public FName propertyName;
 	}
 
-	// Token: 0x0200979F RID: 38815
+	// Token: 0x020089C2 RID: 35266
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 12)]
 	protected ref struct __AddAutoVectorTrack_FunctionParams
 	{
-		// Token: 0x04030753 RID: 198483
+		// Token: 0x0402BDE0 RID: 179680
 		[FieldOffset(0)]
 		public FName propertyName;
 	}
 
-	// Token: 0x020097A0 RID: 38816
+	// Token: 0x020089C3 RID: 35267
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 12)]
 	protected ref struct __AddAutoObjectTrack_FunctionParams
 	{
-		// Token: 0x04030754 RID: 198484
+		// Token: 0x0402BDE1 RID: 179681
 		[FieldOffset(0)]
 		public FName propertyName;
 	}
 
-	// Token: 0x020097A1 RID: 38817
+	// Token: 0x020089C4 RID: 35268
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __OnRecordTick_FunctionParams
 	{
-		// Token: 0x04030755 RID: 198485
+		// Token: 0x0402BDE2 RID: 179682
 		[FieldOffset(0)]
 		public float deltaSeconds;
 	}

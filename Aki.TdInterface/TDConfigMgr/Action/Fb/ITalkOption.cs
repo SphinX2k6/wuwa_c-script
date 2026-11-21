@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200251A RID: 9498
+	// Token: 0x020027C1 RID: 10177
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITalkOption
 	{
-		// Token: 0x0600D3CE RID: 54222 RVA: 0x001F606A File Offset: 0x001F426A
-		[NullableContext(1)]
+		// Token: 0x0600E12E RID: 57646 RVA: 0x00211ACA File Offset: 0x0020FCCA
+		[NullableContext(0)]
 		public static ITalkOption Create(ITalkOption? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B5C RID: 15196
-		// (get) Token: 0x0600D3CF RID: 54223 RVA: 0x001F6089 File Offset: 0x001F4289
+		// Token: 0x17003E5A RID: 15962
+		// (get) Token: 0x0600E12F RID: 57647 RVA: 0x00211AE9 File Offset: 0x0020FCE9
 		public virtual string TidTalkOption
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B5D RID: 15197
-		// (get) Token: 0x0600D3D0 RID: 54224 RVA: 0x001F6098 File Offset: 0x001F4298
+		// Token: 0x17003E5B RID: 15963
+		// (get) Token: 0x0600E130 RID: 57648 RVA: 0x00211AF8 File Offset: 0x0020FCF8
 		public virtual int? TextId
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B5E RID: 15198
-		// (get) Token: 0x0600D3D1 RID: 54225 RVA: 0x001F60D0 File Offset: 0x001F42D0
+		// Token: 0x17003E5C RID: 15964
+		// (get) Token: 0x0600E131 RID: 57649 RVA: 0x00211B30 File Offset: 0x0020FD30
 		public virtual int? PlotLineId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B5F RID: 15199
-		// (get) Token: 0x0600D3D2 RID: 54226 RVA: 0x001F6106 File Offset: 0x001F4306
+		// Token: 0x17003E5D RID: 15965
+		// (get) Token: 0x0600E132 RID: 57650 RVA: 0x00211B66 File Offset: 0x0020FD66
 		public virtual string PlotLineKey
 		{
 			get
@@ -72,8 +72,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B60 RID: 15200
-		// (get) Token: 0x0600D3D3 RID: 54227 RVA: 0x001F6114 File Offset: 0x001F4314
+		// Token: 0x17003E5E RID: 15966
+		// (get) Token: 0x0600E133 RID: 57651 RVA: 0x00211B74 File Offset: 0x0020FD74
 		public virtual int? Icon
 		{
 			get
@@ -86,8 +86,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B61 RID: 15201
-		// (get) Token: 0x0600D3D4 RID: 54228 RVA: 0x001F614A File Offset: 0x001F434A
+		// Token: 0x17003E5F RID: 15967
+		// (get) Token: 0x0600E134 RID: 57652 RVA: 0x00211BAA File Offset: 0x0020FDAA
 		public virtual IChangeIcon ChangeIcon
 		{
 			get
@@ -102,8 +102,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B62 RID: 15202
-		// (get) Token: 0x0600D3D5 RID: 54229 RVA: 0x001F6180 File Offset: 0x001F4380
+		// Token: 0x17003E60 RID: 15968
+		// (get) Token: 0x0600E135 RID: 57653 RVA: 0x00211BE0 File Offset: 0x0020FDE0
 		public virtual bool? ReadMarkEnabled
 		{
 			get
@@ -116,19 +116,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B63 RID: 15203
-		// (get) Token: 0x0600D3D6 RID: 54230 RVA: 0x001F61B8 File Offset: 0x001F43B8
+		// Token: 0x17003E61 RID: 15969
+		// (get) Token: 0x0600E136 RID: 57654 RVA: 0x00211C18 File Offset: 0x0020FE18
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -151,8 +151,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B64 RID: 15204
-		// (get) Token: 0x0600D3D7 RID: 54231 RVA: 0x001F6234 File Offset: 0x001F4434
+		// Token: 0x17003E62 RID: 15970
+		// (get) Token: 0x0600E137 RID: 57655 RVA: 0x00211C94 File Offset: 0x0020FE94
 		public virtual ETalkOptionStyle? OptionStyle
 		{
 			get
@@ -165,12 +165,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B65 RID: 15205
-		// (get) Token: 0x0600D3D8 RID: 54232 RVA: 0x001F626B File Offset: 0x001F446B
-		[Nullable(1)]
+		// Token: 0x17003E63 RID: 15971
+		// (get) Token: 0x0600E138 RID: 57656 RVA: 0x00211CCB File Offset: 0x0020FECB
+		[Nullable(0)]
 		public virtual ITalkOptionPreConditionBase PreCondition
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._PreConditionInited)
@@ -183,8 +183,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B66 RID: 15206
-		// (get) Token: 0x0600D3D9 RID: 54233 RVA: 0x001F629C File Offset: 0x001F449C
+		// Token: 0x17003E64 RID: 15972
+		// (get) Token: 0x0600E139 RID: 57657 RVA: 0x00211CFC File Offset: 0x0020FEFC
 		public virtual bool? _Folded
 		{
 			get
@@ -197,8 +197,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B67 RID: 15207
-		// (get) Token: 0x0600D3DA RID: 54234 RVA: 0x001F62D4 File Offset: 0x001F44D4
+		// Token: 0x17003E65 RID: 15973
+		// (get) Token: 0x0600E13A RID: 57658 RVA: 0x00211D34 File Offset: 0x0020FF34
 		public virtual EEditFlag? _EditFlag
 		{
 			get
@@ -211,8 +211,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B68 RID: 15208
-		// (get) Token: 0x0600D3DB RID: 54235 RVA: 0x001F630E File Offset: 0x001F450E
+		// Token: 0x17003E66 RID: 15974
+		// (get) Token: 0x0600E13B RID: 57659 RVA: 0x00211D6E File Offset: 0x0020FF6E
 		public virtual IOptionLockTip OptionLockTip
 		{
 			get
@@ -227,12 +227,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B69 RID: 15209
-		// (get) Token: 0x0600D3DC RID: 54236 RVA: 0x001F6342 File Offset: 0x001F4542
-		[Nullable(1)]
+		// Token: 0x17003E67 RID: 15975
+		// (get) Token: 0x0600E13C RID: 57660 RVA: 0x00211DA2 File Offset: 0x0020FFA2
+		[Nullable(0)]
 		public virtual ITalkOptionParamType TypeParams
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._TypeParamsInited)
@@ -245,8 +245,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B6A RID: 15210
-		// (get) Token: 0x0600D3DD RID: 54237 RVA: 0x001F6374 File Offset: 0x001F4574
+		// Token: 0x17003E68 RID: 15976
+		// (get) Token: 0x0600E13D RID: 57661 RVA: 0x00211DD4 File Offset: 0x0020FFD4
 		public virtual bool? HiddenOption
 		{
 			get
@@ -259,8 +259,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B6B RID: 15211
-		// (get) Token: 0x0600D3DE RID: 54238 RVA: 0x001F63AE File Offset: 0x001F45AE
+		// Token: 0x17003E69 RID: 15977
+		// (get) Token: 0x0600E13E RID: 57662 RVA: 0x00211E0E File Offset: 0x0021000E
 		public virtual string EdOptionComment
 		{
 			get
@@ -269,44 +269,44 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007410 RID: 29712
+		// Token: 0x04007A65 RID: 31333
 		private ITalkOption Instance;
 
-		// Token: 0x04007411 RID: 29713
+		// Token: 0x04007A66 RID: 31334
 		private IChangeIcon _ChangeIconCache;
 
-		// Token: 0x04007412 RID: 29714
+		// Token: 0x04007A67 RID: 31335
 		private bool _ChangeIconInited;
 
-		// Token: 0x04007413 RID: 29715
+		// Token: 0x04007A68 RID: 31336
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04007414 RID: 29716
+		// Token: 0x04007A69 RID: 31337
 		private bool _ActionsInited;
 
-		// Token: 0x04007415 RID: 29717
-		[Nullable(1)]
+		// Token: 0x04007A6A RID: 31338
+		[Nullable(0)]
 		private ITalkOptionPreConditionBase _PreConditionCache;
 
-		// Token: 0x04007416 RID: 29718
+		// Token: 0x04007A6B RID: 31339
 		private bool _PreConditionInited;
 
-		// Token: 0x04007417 RID: 29719
+		// Token: 0x04007A6C RID: 31340
 		private IOptionLockTip _OptionLockTipCache;
 
-		// Token: 0x04007418 RID: 29720
+		// Token: 0x04007A6D RID: 31341
 		private bool _OptionLockTipInited;
 
-		// Token: 0x04007419 RID: 29721
-		[Nullable(1)]
+		// Token: 0x04007A6E RID: 31342
+		[Nullable(0)]
 		private ITalkOptionParamType _TypeParamsCache;
 
-		// Token: 0x0400741A RID: 29722
+		// Token: 0x04007A6F RID: 31343
 		private bool _TypeParamsInited;
 	}
 }

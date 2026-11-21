@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200591F RID: 22815
+	// Token: 0x020048F8 RID: 18680
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrRoadNetworkMainView : UiViewBase
 	{
-		// Token: 0x06039F05 RID: 237317 RVA: 0x00DC4D10 File Offset: 0x00DC2F10
+		// Token: 0x0602EE28 RID: 192040 RVA: 0x00D14004 File Offset: 0x00D12204
 		public InfrRoadNetworkMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06039F06 RID: 237318 RVA: 0x00DC4D7C File Offset: 0x00DC2F7C
+		// Token: 0x0602EE29 RID: 192041 RVA: 0x00D14070 File Offset: 0x00D12270
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -74,21 +73,21 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039F07 RID: 237319 RVA: 0x00DC4FF9 File Offset: 0x00DC31F9
+		// Token: 0x0602EE2A RID: 192042 RVA: 0x00D142ED File Offset: 0x00D124ED
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IReadOnlyList<InfrastructureDefine.InfrNoticeData>>(EEventName.InfrastructureRoadNoticeUpdate, new Action<IReadOnlyList<InfrastructureDefine.InfrNoticeData>>(this.OnNoticeUpdate));
 			EventSystem.Instance.Add(EEventName.InfrastructureTraceRoadUpdate, new Action(this.OnTraceRoadUpdate));
 		}
 
-		// Token: 0x06039F08 RID: 237320 RVA: 0x00DC5033 File Offset: 0x00DC3233
+		// Token: 0x0602EE2B RID: 192043 RVA: 0x00D14327 File Offset: 0x00D12527
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<IReadOnlyList<InfrastructureDefine.InfrNoticeData>>(EEventName.InfrastructureRoadNoticeUpdate, new Action<IReadOnlyList<InfrastructureDefine.InfrNoticeData>>(this.OnNoticeUpdate));
 			EventSystem.Instance.Remove(EEventName.InfrastructureTraceRoadUpdate, new Action(this.OnTraceRoadUpdate));
 		}
 
-		// Token: 0x06039F09 RID: 237321 RVA: 0x00DC5070 File Offset: 0x00DC3270
+		// Token: 0x0602EE2C RID: 192044 RVA: 0x00D14364 File Offset: 0x00D12564
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrRoadNetworkMainView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F0A RID: 237322 RVA: 0x00DC50B4 File Offset: 0x00DC32B4
+		// Token: 0x0602EE2D RID: 192045 RVA: 0x00D143A8 File Offset: 0x00D125A8
 		private void SetupOpenParam(InfrastructureDefine.IInfrRoadNetworkOpenParam openParam)
 		{
 			if (openParam == null)
@@ -111,7 +110,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.NeedPlayFinishSeq = openParam.NeedPlayFinishSeq.GetValueOrDefault();
 		}
 
-		// Token: 0x06039F0B RID: 237323 RVA: 0x00DC50F4 File Offset: 0x00DC32F4
+		// Token: 0x0602EE2E RID: 192046 RVA: 0x00D143E8 File Offset: 0x00D125E8
 		private UniTask CreateCaption()
 		{
 			InfrRoadNetworkMainView.<CreateCaption>d__21 <CreateCaption>d__;
@@ -122,7 +121,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F0C RID: 237324 RVA: 0x00DC5138 File Offset: 0x00DC3338
+		// Token: 0x0602EE2F RID: 192047 RVA: 0x00D1442C File Offset: 0x00D1262C
 		private UniTask CreateMapPanel()
 		{
 			InfrRoadNetworkMainView.<CreateMapPanel>d__22 <CreateMapPanel>d__;
@@ -133,7 +132,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateMapPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F0D RID: 237325 RVA: 0x00DC517C File Offset: 0x00DC337C
+		// Token: 0x0602EE30 RID: 192048 RVA: 0x00D14470 File Offset: 0x00D12670
 		private UniTask CreateFireExpItem()
 		{
 			InfrRoadNetworkMainView.<CreateFireExpItem>d__23 <CreateFireExpItem>d__;
@@ -144,7 +143,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateFireExpItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F0E RID: 237326 RVA: 0x00DC51C0 File Offset: 0x00DC33C0
+		// Token: 0x0602EE31 RID: 192049 RVA: 0x00D144B4 File Offset: 0x00D126B4
 		private UniTask RefreshCaption()
 		{
 			InfrRoadNetworkMainView.<RefreshCaption>d__24 <RefreshCaption>d__;
@@ -155,7 +154,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RefreshCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F0F RID: 237327 RVA: 0x00DC5203 File Offset: 0x00DC3403
+		// Token: 0x0602EE32 RID: 192050 RVA: 0x00D144F7 File Offset: 0x00D126F7
 		protected override void OnStart()
 		{
 			this.CreateMoveComponent();
@@ -165,7 +164,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshMapInitialParam();
 		}
 
-		// Token: 0x06039F10 RID: 237328 RVA: 0x00DC5228 File Offset: 0x00DC3428
+		// Token: 0x0602EE33 RID: 192051 RVA: 0x00D1451C File Offset: 0x00D1271C
 		protected override void OnBeforeShow()
 		{
 			this.MapPanel.RefreshMarkScale((float)this.MoveComponent.MapScale);
@@ -174,20 +173,20 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.SetMapMarkTraced();
 		}
 
-		// Token: 0x06039F11 RID: 237329 RVA: 0x00DC525D File Offset: 0x00DC345D
+		// Token: 0x0602EE34 RID: 192052 RVA: 0x00D14551 File Offset: 0x00D12751
 		protected override void OnAfterHide()
 		{
 			this.MoveComponent.UnbindTouch();
 			this.MoveComponent.RemoveGamepadEvent();
 		}
 
-		// Token: 0x06039F12 RID: 237330 RVA: 0x00DC5275 File Offset: 0x00DC3475
+		// Token: 0x0602EE35 RID: 192053 RVA: 0x00D14569 File Offset: 0x00D12769
 		protected override void OnAfterPlayStartSequence()
 		{
 			this.MapPanel.ShowMarkUnlock(this.NeedPlayFinishSeq, new Action(this.ShowBuildFinishSequence));
 		}
 
-		// Token: 0x06039F13 RID: 237331 RVA: 0x00DC5294 File Offset: 0x00DC3494
+		// Token: 0x0602EE36 RID: 192054 RVA: 0x00D14588 File Offset: 0x00D12788
 		private void CreateMoveComponent()
 		{
 			this.MoveComponent = new BuildingMapMoveComponent(base.GetDraggable(9), true, true, false);
@@ -198,7 +197,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.MoveComponent.SetChangeScaleCallback(new Action<ESetScaleSource>(this.OnChangeSlider));
 		}
 
-		// Token: 0x06039F14 RID: 237332 RVA: 0x00DC5324 File Offset: 0x00DC3524
+		// Token: 0x0602EE37 RID: 192055 RVA: 0x00D14618 File Offset: 0x00D12818
 		private void InitZoom()
 		{
 			UUISliderComponent slider = base.GetSlider(7);
@@ -209,7 +208,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ZoomOut = new LongPressButton(base.GetButton(6), new Action<float>(this.OnZoomOut), 100);
 		}
 
-		// Token: 0x06039F15 RID: 237333 RVA: 0x00DC53C0 File Offset: 0x00DC35C0
+		// Token: 0x0602EE38 RID: 192056 RVA: 0x00D146B4 File Offset: 0x00D128B4
 		private void RefreshFireExpItem()
 		{
 			this.FireExpPanel.SetOnClickHelpCb(delegate
@@ -223,7 +222,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F16 RID: 237334 RVA: 0x00DC5410 File Offset: 0x00DC3610
+		// Token: 0x0602EE39 RID: 192057 RVA: 0x00D14704 File Offset: 0x00D12904
 		private void SetMapMarkTraced()
 		{
 			InfrastructureDefine.IInfrRoadNetworkOpenParam infrRoadNetworkOpenParam = this.OpenParam as InfrastructureDefine.IInfrRoadNetworkOpenParam;
@@ -233,7 +232,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F17 RID: 237335 RVA: 0x00DC5454 File Offset: 0x00DC3654
+		// Token: 0x0602EE3A RID: 192058 RVA: 0x00D14748 File Offset: 0x00D12948
 		private void ShowBuildFinishSequence()
 		{
 			if (this.NeedPlayFinishSeq)
@@ -287,7 +286,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			texture.SetUIActive(false);
 		}
 
-		// Token: 0x06039F18 RID: 237336 RVA: 0x00DC54D8 File Offset: 0x00DC36D8
+		// Token: 0x0602EE3B RID: 192059 RVA: 0x00D147CC File Offset: 0x00D129CC
 		private void RefreshMapInitialParam()
 		{
 			float value = ConfigCommonParamById.GetFloatConfig("InfrRoadNetworkMapDefaultSize").Value;
@@ -322,7 +321,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}, LTweenEase.Linear, 0.0, null);
 		}
 
-		// Token: 0x06039F19 RID: 237337 RVA: 0x00DC55EC File Offset: 0x00DC37EC
+		// Token: 0x0602EE3C RID: 192060 RVA: 0x00D148E0 File Offset: 0x00D12AE0
 		private void RefreshPartUiVisible()
 		{
 			this.Caption.SetUiActive(!this.ShowInfoPanel);
@@ -359,7 +358,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F1A RID: 237338 RVA: 0x00DC56B7 File Offset: 0x00DC38B7
+		// Token: 0x0602EE3D RID: 192061 RVA: 0x00D149AB File Offset: 0x00D12BAB
 		protected override void OnBeforeDestroy()
 		{
 			this.MoveComponent.Destroy();
@@ -370,25 +369,25 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F1B RID: 237339 RVA: 0x00DC56E4 File Offset: 0x00DC38E4
+		// Token: 0x0602EE3E RID: 192062 RVA: 0x00D149D8 File Offset: 0x00D12BD8
 		private void OnZoomOut(float _)
 		{
 			this.MoveComponent.LongPressScroll((float)(-(float)this.MoveComponent.ScaleStep));
 		}
 
-		// Token: 0x06039F1C RID: 237340 RVA: 0x00DC56FE File Offset: 0x00DC38FE
+		// Token: 0x0602EE3F RID: 192063 RVA: 0x00D149F2 File Offset: 0x00D12BF2
 		private void OnZoomIn(float _)
 		{
 			this.MoveComponent.LongPressScroll((float)this.MoveComponent.ScaleStep);
 		}
 
-		// Token: 0x06039F1D RID: 237341 RVA: 0x00DC5717 File Offset: 0x00DC3917
+		// Token: 0x0602EE40 RID: 192064 RVA: 0x00D14A0B File Offset: 0x00D12C0B
 		private void OnSliderValueChange(float value)
 		{
 			this.MoveComponent.SliderScroll(value);
 		}
 
-		// Token: 0x06039F1E RID: 237342 RVA: 0x00DC5725 File Offset: 0x00DC3925
+		// Token: 0x0602EE41 RID: 192065 RVA: 0x00D14A19 File Offset: 0x00D12C19
 		private void OnChangeSlider(ESetScaleSource source)
 		{
 			UUISliderComponent slider = base.GetSlider(7);
@@ -399,7 +398,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.MapPanel.RefreshMarkScale((float)this.MoveComponent.MapScale);
 		}
 
-		// Token: 0x06039F1F RID: 237343 RVA: 0x00DC5760 File Offset: 0x00DC3960
+		// Token: 0x0602EE42 RID: 192066 RVA: 0x00D14A54 File Offset: 0x00D12C54
 		private void CheckInfoPanel(ULGUIPointerEventData data)
 		{
 			if (this.ShowInfoPanel)
@@ -421,7 +420,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshPartUiVisible();
 		}
 
-		// Token: 0x06039F20 RID: 237344 RVA: 0x00DC583C File Offset: 0x00DC3A3C
+		// Token: 0x0602EE43 RID: 192067 RVA: 0x00D14B30 File Offset: 0x00D12D30
 		private void OnSelectMark(InfrastructureDefine.IInfrMaterialsDeliveryOpenParam param)
 		{
 			if (this.SelectedParam == null)
@@ -481,7 +480,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshPartUiVisible();
 		}
 
-		// Token: 0x06039F21 RID: 237345 RVA: 0x00DC5A04 File Offset: 0x00DC3C04
+		// Token: 0x0602EE44 RID: 192068 RVA: 0x00D14CF8 File Offset: 0x00D12EF8
 		private void OnNoticeUpdate(IReadOnlyList<InfrastructureDefine.InfrNoticeData> notices)
 		{
 			if (notices.Count != 0)
@@ -491,9 +490,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 				{
 					text.SetUIActive(true);
 				}
-				InfrastructureDefine.InfrNoticeData infrNoticeData = (from n in notices
-				orderby n.CreateTime descending
-				select n).FirstOrDefault<InfrastructureDefine.InfrNoticeData>();
+				InfrastructureDefine.InfrNoticeData infrNoticeData = notices[0];
+				for (int i = 1; i < notices.Count; i++)
+				{
+					if (notices[i].CreateTime > infrNoticeData.CreateTime)
+					{
+						infrNoticeData = notices[i];
+					}
+				}
 				InfrPasser? infrPasserConfigById = InfrastructureConfig.Instance.GetInfrPasserConfigById(infrNoticeData.PasserId);
 				InfrRoadBuild? roadConfigById = InfrastructureConfig.Instance.GetRoadConfigById(infrNoticeData.RoadId);
 				LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "BuildRoad_InfrPasser", new <>z__ReadOnlyArray<object>(new object[]
@@ -517,7 +521,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			text3.SetUIActive(false);
 		}
 
-		// Token: 0x06039F22 RID: 237346 RVA: 0x00DC5B10 File Offset: 0x00DC3D10
+		// Token: 0x0602EE45 RID: 192069 RVA: 0x00D14E0C File Offset: 0x00D1300C
 		private UniTask OnClickBtnBuild()
 		{
 			InfrRoadNetworkMainView.<OnClickBtnBuild>d__44 <OnClickBtnBuild>d__;
@@ -528,19 +532,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnClickBtnBuild>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F23 RID: 237347 RVA: 0x00DC5B53 File Offset: 0x00DC3D53
+		// Token: 0x0602EE46 RID: 192070 RVA: 0x00D14E4F File Offset: 0x00D1304F
 		private void OnTraceRoadUpdate()
 		{
 			this.MapPanel.RefreshAllMarks();
 		}
 
-		// Token: 0x06039F24 RID: 237348 RVA: 0x00DC5B60 File Offset: 0x00DC3D60
+		// Token: 0x0602EE47 RID: 192071 RVA: 0x00D14E5C File Offset: 0x00D1305C
 		private void OnClickMask()
 		{
 			this.CheckInfoPanel(null);
 		}
 
-		// Token: 0x06039F25 RID: 237349 RVA: 0x00DC5B69 File Offset: 0x00DC3D69
+		// Token: 0x0602EE48 RID: 192072 RVA: 0x00D14E65 File Offset: 0x00D13065
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams.Length == 0)
@@ -559,98 +563,98 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return mapPanel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0401E352 RID: 123730
+		// Token: 0x04018DEF RID: 101871
 		private readonly PopupCaptionItem Caption = new PopupCaptionItem(null);
 
-		// Token: 0x0401E353 RID: 123731
+		// Token: 0x04018DF0 RID: 101872
 		private readonly InfrRoadNetworkMapPanel MapPanel = new InfrRoadNetworkMapPanel();
 
-		// Token: 0x0401E354 RID: 123732
+		// Token: 0x04018DF1 RID: 101873
 		private readonly InfrastructureFireExpPanel FireExpPanel = new InfrastructureFireExpPanel();
 
-		// Token: 0x0401E355 RID: 123733
+		// Token: 0x04018DF2 RID: 101874
 		private InfrastructureDefine.IInfrMaterialsDeliveryOpenParam SelectedParam;
 
-		// Token: 0x0401E356 RID: 123734
+		// Token: 0x04018DF3 RID: 101875
 		private BuildingMapMoveComponent MoveComponent;
 
-		// Token: 0x0401E357 RID: 123735
+		// Token: 0x04018DF4 RID: 101876
 		protected LongPressButton ZoomIn;
 
-		// Token: 0x0401E358 RID: 123736
+		// Token: 0x04018DF5 RID: 101877
 		protected LongPressButton ZoomOut;
 
-		// Token: 0x0401E359 RID: 123737
+		// Token: 0x04018DF6 RID: 101878
 		private bool ShowInfoPanel;
 
-		// Token: 0x0401E35A RID: 123738
+		// Token: 0x04018DF7 RID: 101879
 		private TimerHandle TimerId;
 
-		// Token: 0x0401E35B RID: 123739
+		// Token: 0x04018DF8 RID: 101880
 		private ActionInfrastructureItemDeliveryType OpenDeliveryType = ActionInfrastructureItemDeliveryType.Road;
 
-		// Token: 0x0401E35C RID: 123740
+		// Token: 0x04018DF9 RID: 101881
 		private int OpenRoadId;
 
-		// Token: 0x0401E35D RID: 123741
+		// Token: 0x04018DFA RID: 101882
 		private bool NeedPlayFinishSeq;
 
-		// Token: 0x0401E35E RID: 123742
+		// Token: 0x04018DFB RID: 101883
 		private double PreScale = 1.0;
 
-		// Token: 0x0401E35F RID: 123743
+		// Token: 0x04018DFC RID: 101884
 		private Tuple<double, double> PreOffset = new Tuple<double, double>(0.0, 0.0);
 
-		// Token: 0x0200BBAF RID: 48047
+		// Token: 0x0200A5BF RID: 42431
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038A8D RID: 232077
+			// Token: 0x04033473 RID: 210035
 			public const int ItemCaption = 0;
 
-			// Token: 0x04038A8E RID: 232078
+			// Token: 0x04033474 RID: 210036
 			public const int PanelMapRoot = 1;
 
-			// Token: 0x04038A8F RID: 232079
+			// Token: 0x04033475 RID: 210037
 			public const int PanelViewRoot = 2;
 
-			// Token: 0x04038A90 RID: 232080
+			// Token: 0x04033476 RID: 210038
 			public const int PanelUi = 3;
 
-			// Token: 0x04038A91 RID: 232081
+			// Token: 0x04033477 RID: 210039
 			public const int FireExpPanel = 4;
 
-			// Token: 0x04038A92 RID: 232082
+			// Token: 0x04033478 RID: 210040
 			public const int BtnAdd = 5;
 
-			// Token: 0x04038A93 RID: 232083
+			// Token: 0x04033479 RID: 210041
 			public const int BtnReduce = 6;
 
-			// Token: 0x04038A94 RID: 232084
+			// Token: 0x0403347A RID: 210042
 			public const int SliderScaleCtrl = 7;
 
-			// Token: 0x04038A95 RID: 232085
+			// Token: 0x0403347B RID: 210043
 			public const int TextInfo = 8;
 
-			// Token: 0x04038A96 RID: 232086
+			// Token: 0x0403347C RID: 210044
 			public const int MapItem = 9;
 
-			// Token: 0x04038A97 RID: 232087
+			// Token: 0x0403347D RID: 210045
 			public const int TextTips = 10;
 
-			// Token: 0x04038A98 RID: 232088
+			// Token: 0x0403347E RID: 210046
 			public const int TextureMask = 11;
 
-			// Token: 0x04038A99 RID: 232089
+			// Token: 0x0403347F RID: 210047
 			public const int PanelPos = 12;
 
-			// Token: 0x04038A9A RID: 232090
+			// Token: 0x04033480 RID: 210048
 			public const int PanelMsgLayout = 13;
 
-			// Token: 0x04038A9B RID: 232091
+			// Token: 0x04033481 RID: 210049
 			public const int MsgItem = 14;
 
-			// Token: 0x04038A9C RID: 232092
+			// Token: 0x04033482 RID: 210050
 			public const int BtnMask = 15;
 		}
 	}

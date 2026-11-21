@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003183 RID: 12675
+// Token: 0x020026F0 RID: 9968
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 {
-	// Token: 0x0601B432 RID: 111666 RVA: 0x0076FD11 File Offset: 0x0076DF11
+	// Token: 0x06018F37 RID: 102199 RVA: 0x00797675 File Offset: 0x00795875
 	public CodeSkill_Feixue_Jvhe_Air(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B433 RID: 111667 RVA: 0x0076FD1C File Offset: 0x0076DF1C
+	// Token: 0x06018F38 RID: 102200 RVA: 0x00797680 File Offset: 0x00795880
 	public override void OnBegin(Skill skill)
 	{
 		this.ClearParryWeakTask();
@@ -29,7 +29,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		this.PlayJvheMontage(skill, 1, 0);
 	}
 
-	// Token: 0x0601B434 RID: 111668 RVA: 0x0076FD6C File Offset: 0x0076DF6C
+	// Token: 0x06018F39 RID: 102201 RVA: 0x007976D0 File Offset: 0x007958D0
 	public override void OnTick(float delta, Skill skill)
 	{
 		if (!this.MontageActive || !this.CanLand || this.LandCheckDone)
@@ -59,7 +59,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B435 RID: 111669 RVA: 0x0076FE03 File Offset: 0x0076E003
+	// Token: 0x06018F3A RID: 102202 RVA: 0x00797767 File Offset: 0x00795967
 	public override void OnEnd(Skill skill)
 	{
 		this.MontageActive = false;
@@ -67,7 +67,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		this.RemoveCanLandEventListener();
 	}
 
-	// Token: 0x0601B436 RID: 111670 RVA: 0x0076FE18 File Offset: 0x0076E018
+	// Token: 0x06018F3B RID: 102203 RVA: 0x0079777C File Offset: 0x0079597C
 	private void ApplyStartBranch(Skill skill)
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -121,7 +121,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		this.CreateSkillBullet(skill, "1108124001");
 	}
 
-	// Token: 0x0601B437 RID: 111671 RVA: 0x0076FF34 File Offset: 0x0076E134
+	// Token: 0x06018F3C RID: 102204 RVA: 0x00797898 File Offset: 0x00795A98
 	private void AddBuffs(Skill skill, long[] buffIds)
 	{
 		CharacterBuffComponent component = base.Entity.GetComponent<CharacterBuffComponent>();
@@ -156,7 +156,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B438 RID: 111672 RVA: 0x00770050 File Offset: 0x0076E250
+	// Token: 0x06018F3D RID: 102205 RVA: 0x007979B4 File Offset: 0x00795BB4
 	private void CreateSkillBullet(Skill skill, string bulletId)
 	{
 		long? skillContextId = BulletUtil.GetSkillContextId(base.Entity, skill.SkillId);
@@ -169,19 +169,19 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		}, skillContextId, EBulletCreateSource.Skill);
 	}
 
-	// Token: 0x0601B439 RID: 111673 RVA: 0x007700B8 File Offset: 0x0076E2B8
+	// Token: 0x06018F3E RID: 102206 RVA: 0x00797A1C File Offset: 0x00795C1C
 	private int GetJvheStage()
 	{
 		return BlackboardController.Instance.GetIntValueByEntity(base.Entity.Id, "居合段数").GetValueOrDefault();
 	}
 
-	// Token: 0x0601B43A RID: 111674 RVA: 0x007700E7 File Offset: 0x0076E2E7
+	// Token: 0x06018F3F RID: 102207 RVA: 0x00797A4B File Offset: 0x00795C4B
 	private void SetJvheStage(int value)
 	{
 		BlackboardController.Instance.SetIntValueByEntity(base.Entity.Id, "居合段数", value);
 	}
 
-	// Token: 0x0601B43B RID: 111675 RVA: 0x00770104 File Offset: 0x0076E304
+	// Token: 0x06018F40 RID: 102208 RVA: 0x00797A68 File Offset: 0x00795C68
 	private void PlayJvheMontage(Skill skill, int montageIndex, int nextStage)
 	{
 		this.MontageActive = true;
@@ -201,7 +201,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		this.RegisterCanLandEventListener();
 	}
 
-	// Token: 0x0601B43C RID: 111676 RVA: 0x0077017C File Offset: 0x0076E37C
+	// Token: 0x06018F41 RID: 102209 RVA: 0x00797AE0 File Offset: 0x00795CE0
 	private void RegisterParryWeakListener()
 	{
 		this.ClearParryWeakTask();
@@ -209,7 +209,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		this.ParryWeakTask = ((component != null) ? component.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["角色.R2T1TaidaonvMd10011.事件相关.弹反成功弱"]), new BaseTagComponent.TTagSwitchedCallback(this.OnParryWeak), null) : null);
 	}
 
-	// Token: 0x0601B43D RID: 111677 RVA: 0x007701CE File Offset: 0x0076E3CE
+	// Token: 0x06018F42 RID: 102210 RVA: 0x00797B32 File Offset: 0x00795D32
 	private void ClearParryWeakTask()
 	{
 		ITagTask parryWeakTask = this.ParryWeakTask;
@@ -220,7 +220,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		this.ParryWeakTask = null;
 	}
 
-	// Token: 0x0601B43E RID: 111678 RVA: 0x007701E8 File Offset: 0x0076E3E8
+	// Token: 0x06018F43 RID: 102211 RVA: 0x00797B4C File Offset: 0x00795D4C
 	private void OnParryWeak(int tagId, bool tagExist)
 	{
 		if (!tagExist)
@@ -231,7 +231,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		this.DestroyGpBullets();
 	}
 
-	// Token: 0x0601B43F RID: 111679 RVA: 0x007701FC File Offset: 0x0076E3FC
+	// Token: 0x06018F44 RID: 102212 RVA: 0x00797B60 File Offset: 0x00795D60
 	private void DestroyGpBullets()
 	{
 		int id = base.Entity.Id;
@@ -239,7 +239,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		BulletController.Instance.DestroySpecifiedBullet(id, new FName("绯雪二形态-空中居合-GP拼刀子弹（无伤害）"), false, 0, 0f);
 	}
 
-	// Token: 0x0601B440 RID: 111680 RVA: 0x00770250 File Offset: 0x0076E450
+	// Token: 0x06018F45 RID: 102213 RVA: 0x00797BB4 File Offset: 0x00795DB4
 	private void RegisterCanLandEventListener()
 	{
 		BaseAbilityComponent component = base.Entity.GetComponent<BaseAbilityComponent>();
@@ -251,7 +251,7 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		this.CanLandListenerActive = true;
 	}
 
-	// Token: 0x0601B441 RID: 111681 RVA: 0x007702A0 File Offset: 0x0076E4A0
+	// Token: 0x06018F46 RID: 102214 RVA: 0x00797C04 File Offset: 0x00795E04
 	private void RemoveCanLandEventListener()
 	{
 		if (!this.CanLandListenerActive)
@@ -267,47 +267,47 @@ public class CodeSkill_Feixue_Jvhe_Air : CodeSkillBase
 		component.RemoveGameplayEventListener(GameplayTagDefine.EGameplayTagId["角色.R2T1TaidaonvMd10011.事件相关.可接地"], new TGameplayEventCallback(this.OnCanLandEvent));
 	}
 
-	// Token: 0x0601B442 RID: 111682 RVA: 0x007702ED File Offset: 0x0076E4ED
+	// Token: 0x06018F47 RID: 102215 RVA: 0x00797C51 File Offset: 0x00795E51
 	private void OnCanLandEvent(int tagId, FGameplayEventData payload)
 	{
 		this.CanLand = true;
 		this.RemoveCanLandEventListener();
 	}
 
-	// Token: 0x0400D4CD RID: 54477
+	// Token: 0x0400D930 RID: 55600
 	private const int JVHE_MONTAGE_INDEX = 0;
 
-	// Token: 0x0400D4CE RID: 54478
+	// Token: 0x0400D931 RID: 55601
 	private const int JVHE_SECOND_MONTAGE_INDEX = 1;
 
-	// Token: 0x0400D4CF RID: 54479
+	// Token: 0x0400D932 RID: 55602
 	private const string JVHE_STAGE_BLACKBOARD_KEY = "居合段数";
 
-	// Token: 0x0400D4D0 RID: 54480
+	// Token: 0x0400D933 RID: 55603
 	private const string JVHE_BULLET_ID = "1108124001";
 
-	// Token: 0x0400D4D1 RID: 54481
+	// Token: 0x0400D934 RID: 55604
 	private const string JVHE_NO_STACK_BULLET_ID = "1108124003";
 
-	// Token: 0x0400D4D2 RID: 54482
+	// Token: 0x0400D935 RID: 55605
 	private const string GP_BULLET_NAME = "绯雪二形态-空中居合-GP子弹（无伤害）";
 
-	// Token: 0x0400D4D3 RID: 54483
+	// Token: 0x0400D936 RID: 55606
 	private const string GP_PARRY_BULLET_NAME = "绯雪二形态-空中居合-GP拼刀子弹（无伤害）";
 
-	// Token: 0x0400D4D4 RID: 54484
+	// Token: 0x0400D937 RID: 55607
 	[Nullable(2)]
 	private ITagTask ParryWeakTask;
 
-	// Token: 0x0400D4D5 RID: 54485
+	// Token: 0x0400D938 RID: 55608
 	private bool CanLand;
 
-	// Token: 0x0400D4D6 RID: 54486
+	// Token: 0x0400D939 RID: 55609
 	private bool LandCheckDone;
 
-	// Token: 0x0400D4D7 RID: 54487
+	// Token: 0x0400D93A RID: 55610
 	private bool MontageActive;
 
-	// Token: 0x0400D4D8 RID: 54488
+	// Token: 0x0400D93B RID: 55611
 	private bool CanLandListenerActive;
 }

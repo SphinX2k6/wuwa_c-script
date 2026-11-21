@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D0B RID: 23819
+	// Token: 0x0200633F RID: 25407
 	public enum EVehicleType : byte
 	{
-		// Token: 0x0400F69C RID: 63132
+		// Token: 0x040103EB RID: 66539
 		Gongduola,
-		// Token: 0x0400F69D RID: 63133
+		// Token: 0x040103EC RID: 66540
 		AutoMoveGongduola,
-		// Token: 0x0400F69E RID: 63134
+		// Token: 0x040103ED RID: 66541
 		NpcVehicle,
-		// Token: 0x0400F69F RID: 63135
+		// Token: 0x040103EE RID: 66542
 		FishingBoat,
-		// Token: 0x0400F6A0 RID: 63136
+		// Token: 0x040103EF RID: 66543
 		SceneItemAutoMoveVehicle,
-		// Token: 0x0400F6A1 RID: 63137
+		// Token: 0x040103F0 RID: 66544
 		Motorcycle,
-		// Token: 0x0400F6A2 RID: 63138
+		// Token: 0x040103F1 RID: 66545
 		CoBathingEmptyVehicle,
-		// Token: 0x0400F6A3 RID: 63139
+		// Token: 0x040103F2 RID: 66546
 		Thunderbird,
-		// Token: 0x0400F6A4 RID: 63140
+		// Token: 0x040103F3 RID: 66547
 		CyberpunkShareEmptyVehicle,
-		// Token: 0x0400F6A5 RID: 63141
+		// Token: 0x040103F4 RID: 66548
 		WoodenOxenAndFlowingHorses,
-		// Token: 0x0400F6A6 RID: 63142
+		// Token: 0x040103F5 RID: 66549
 		AnnaVehicle
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x02005743 RID: 22339
+	// Token: 0x0200471A RID: 18202
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoAttributePanel : UiPanelBase
 	{
-		// Token: 0x06038C9E RID: 232606 RVA: 0x00D7BAD8 File Offset: 0x00D79CD8
+		// Token: 0x0602DBAE RID: 187310 RVA: 0x00CCA188 File Offset: 0x00CC8388
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038C9F RID: 232607 RVA: 0x00D7BBE4 File Offset: 0x00D79DE4
+		// Token: 0x0602DBAF RID: 187311 RVA: 0x00CCA294 File Offset: 0x00CC8494
 		protected override void OnStart()
 		{
 			this.CreateAttrList();
@@ -54,7 +53,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			KurotatoModel.Instance.BattleData.AssignAllPlayerAttrListen(this.AttrListenDelegate);
 		}
 
-		// Token: 0x06038CA0 RID: 232608 RVA: 0x00D7BC4C File Offset: 0x00D79E4C
+		// Token: 0x0602DBB0 RID: 187312 RVA: 0x00CCA2FC File Offset: 0x00CC84FC
 		public void HideAllChangeFx()
 		{
 			if (this.LoopScrollView == null)
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 		}
 
-		// Token: 0x06038CA1 RID: 232609 RVA: 0x00D7BCA4 File Offset: 0x00D79EA4
+		// Token: 0x0602DBB1 RID: 187313 RVA: 0x00CCA354 File Offset: 0x00CC8554
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<IDictionary<int, int>>(EEventName.KurotatoOnPropertyUpdate, new Action<IDictionary<int, int>>(this.OnPlayerAttrChanged));
@@ -85,19 +84,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 		}
 
-		// Token: 0x06038CA2 RID: 232610 RVA: 0x00D7BD02 File Offset: 0x00D79F02
+		// Token: 0x0602DBB2 RID: 187314 RVA: 0x00CCA3B2 File Offset: 0x00CC85B2
 		private void OnPlayerAttrChanged(IDictionary<int, int> propertyValues)
 		{
 			this.RefreshAttributeList();
 		}
 
-		// Token: 0x06038CA3 RID: 232611 RVA: 0x00D7BD0A File Offset: 0x00D79F0A
+		// Token: 0x0602DBB3 RID: 187315 RVA: 0x00CCA3BA File Offset: 0x00CC85BA
 		private void OnKscAttrChanged(EKSC_AttrType attrType, int oldValue, int newValue)
 		{
 			this.RefreshAttributeList();
 		}
 
-		// Token: 0x06038CA4 RID: 232612 RVA: 0x00D7BD12 File Offset: 0x00D79F12
+		// Token: 0x0602DBB4 RID: 187316 RVA: 0x00CCA3C2 File Offset: 0x00CC85C2
 		[NullableContext(2)]
 		public void SetSavePropertyMap(Dictionary<int, int> propertyMap)
 		{
@@ -108,7 +107,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 		}
 
-		// Token: 0x06038CA5 RID: 232613 RVA: 0x00D7BD2C File Offset: 0x00D79F2C
+		// Token: 0x0602DBB5 RID: 187317 RVA: 0x00CCA3DC File Offset: 0x00CC85DC
 		public void ShowPreview(IReadOnlyList<IKurotatoAttrPreviewDelta> deltas)
 		{
 			this.PreviewMap.Clear();
@@ -122,7 +121,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 		}
 
-		// Token: 0x06038CA6 RID: 232614 RVA: 0x00D7BD98 File Offset: 0x00D79F98
+		// Token: 0x0602DBB6 RID: 187318 RVA: 0x00CCA448 File Offset: 0x00CC8648
 		public void ClearPreview()
 		{
 			this.PreviewMap.Clear();
@@ -132,7 +131,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 		}
 
-		// Token: 0x06038CA7 RID: 232615 RVA: 0x00D7BDB4 File Offset: 0x00D79FB4
+		// Token: 0x0602DBB7 RID: 187319 RVA: 0x00CCA464 File Offset: 0x00CC8664
 		public void RefreshAttributeList()
 		{
 			if (this.LoopScrollView == null)
@@ -155,68 +154,77 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.LoopScrollView.RefreshByData(list, false, null, false);
 		}
 
-		// Token: 0x06038CA8 RID: 232616 RVA: 0x00D7BE61 File Offset: 0x00D7A061
+		// Token: 0x0602DBB8 RID: 187320 RVA: 0x00CCA511 File Offset: 0x00CC8711
 		protected bool OnCheckBattleChildViewPanelShowCondition()
 		{
 			return false;
 		}
 
-		// Token: 0x06038CA9 RID: 232617 RVA: 0x00D7BE64 File Offset: 0x00D7A064
+		// Token: 0x0602DBB9 RID: 187321 RVA: 0x00CCA514 File Offset: 0x00CC8714
 		private void CreateAttrList()
 		{
 			this.LoopScrollView = new LoopScrollView<AttributeItem, IAttributeListItem>(base.GetLoopScrollViewComponent(1), base.GetItem(2).GetOwner() as AUIBaseActor, () => new AttributeItem(), false);
 		}
 
-		// Token: 0x06038CAA RID: 232618 RVA: 0x00D7BEB4 File Offset: 0x00D7A0B4
+		// Token: 0x0602DBBA RID: 187322 RVA: 0x00CCA564 File Offset: 0x00CC8764
 		private void RefreshToggle()
 		{
 			base.GetExtendToggle(0).SetToggleState((this.SelectedType != EKurotatoPropertyType.Main) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06038CAB RID: 232619 RVA: 0x00D7BED3 File Offset: 0x00D7A0D3
+		// Token: 0x0602DBBB RID: 187323 RVA: 0x00CCA583 File Offset: 0x00CC8783
 		private void RefreshAttrList()
 		{
 			this.LoopScrollView.RefreshByData(this.BuildAttrList(), false, null, false);
 		}
 
-		// Token: 0x06038CAC RID: 232620 RVA: 0x00D7BEEC File Offset: 0x00D7A0EC
+		// Token: 0x0602DBBC RID: 187324 RVA: 0x00CCA59C File Offset: 0x00CC879C
 		private List<IAttributeListItem> BuildAttrList()
 		{
-			KurotatoModel model = KurotatoModel.Instance;
-			bool isSaveMode = this.SavePropertyMap != null;
-			return (from config in KurotatoConfig.Instance.GetAllProperty()
-			where config.RoleType == (int)this.SelectedType
-			orderby config.Priority
-			select config).Select(delegate(KurotatoProperty config)
+			KurotatoModel instance = KurotatoModel.Instance;
+			bool flag = this.SavePropertyMap != null;
+			List<KurotatoProperty> list = new List<KurotatoProperty>();
+			foreach (KurotatoProperty item in KurotatoConfig.Instance.GetAllProperty())
 			{
-				bool flag = !isSaveMode && model.IsPropertyLocked(config.Id);
+				if (item.RoleType == (int)this.SelectedType)
+				{
+					list.Add(item);
+				}
+			}
+			NoLinq.SortStable<KurotatoProperty>(list, (KurotatoProperty left, KurotatoProperty right) => left.Priority.CompareTo(right.Priority));
+			List<IAttributeListItem> list2 = new List<IAttributeListItem>(list.Count);
+			foreach (KurotatoProperty kurotatoProperty in list)
+			{
+				bool flag2 = !flag && instance.IsPropertyLocked(kurotatoProperty.Id);
+				List<IAttributeListItem> list3 = list2;
 				AttributeListItem attributeListItem = new AttributeListItem();
-				attributeListItem.AttrId = config.Id;
+				attributeListItem.AttrId = kurotatoProperty.Id;
 				Dictionary<int, int> savePropertyMap = this.SavePropertyMap;
-				attributeListItem.Value = ((savePropertyMap != null) ? savePropertyMap.GetValueOrDefault(config.Id, 0) : model.GetPropertyValue(config.Id));
+				attributeListItem.Value = ((savePropertyMap != null) ? savePropertyMap.GetValueOrDefault(kurotatoProperty.Id, 0) : instance.GetPropertyValue(kurotatoProperty.Id));
 				attributeListItem.IsRecommend = false;
-				attributeListItem.BaseValue = new int?(config.BasicValue);
-				attributeListItem.IsLocked = new bool?(flag);
-				attributeListItem.LockedValue = new int?(flag ? model.GetPropertyLockedValue(config.Id) : 0);
-				attributeListItem.Preview = this.PreviewMap.GetValueOrDefault(config.Id);
-				return attributeListItem;
-			}).ToList<IAttributeListItem>();
+				attributeListItem.BaseValue = new int?(kurotatoProperty.BasicValue);
+				attributeListItem.IsLocked = new bool?(flag2);
+				attributeListItem.LockedValue = new int?(flag2 ? instance.GetPropertyLockedValue(kurotatoProperty.Id) : 0);
+				attributeListItem.Preview = this.PreviewMap.GetValueOrDefault(kurotatoProperty.Id);
+				list3.Add(attributeListItem);
+			}
+			return list2;
 		}
 
-		// Token: 0x06038CAD RID: 232621 RVA: 0x00D7BF75 File Offset: 0x00D7A175
+		// Token: 0x0602DBBD RID: 187325 RVA: 0x00CCA740 File Offset: 0x00CC8940
 		private void OnClickToggle(EToggleState state)
 		{
 			this.SelectedType = ((state == EToggleState.ETT_Checked) ? EKurotatoPropertyType.Sub : EKurotatoPropertyType.Main);
 			this.RefreshAttrList();
 		}
 
-		// Token: 0x06038CAE RID: 232622 RVA: 0x00D7BF8B File Offset: 0x00D7A18B
+		// Token: 0x0602DBBE RID: 187326 RVA: 0x00CCA756 File Offset: 0x00CC8956
 		private void OnClickMore()
 		{
 			UiManager.Instance.OpenView(EUiViewName.KurotatoAttributeDetailView, null, null);
 		}
 
-		// Token: 0x0401DC94 RID: 122004
+		// Token: 0x0401872A RID: 100138
 		[Nullable(new byte[]
 		{
 			2,
@@ -225,31 +233,31 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 		})]
 		protected LoopScrollView<AttributeItem, IAttributeListItem> LoopScrollView;
 
-		// Token: 0x0401DC95 RID: 122005
+		// Token: 0x0401872B RID: 100139
 		private EKurotatoPropertyType SelectedType = EKurotatoPropertyType.Main;
 
-		// Token: 0x0401DC96 RID: 122006
+		// Token: 0x0401872C RID: 100140
 		[Nullable(2)]
 		private Dictionary<int, int> SavePropertyMap;
 
-		// Token: 0x0401DC97 RID: 122007
+		// Token: 0x0401872D RID: 100141
 		private readonly Dictionary<int, IKurotatoAttrPreviewDelta> PreviewMap = new Dictionary<int, IKurotatoAttrPreviewDelta>();
 
-		// Token: 0x0401DC98 RID: 122008
+		// Token: 0x0401872E RID: 100142
 		[Nullable(2)]
 		private FOnKSCAllAttrChange AttrListenDelegate;
 
-		// Token: 0x0200B92A RID: 47402
+		// Token: 0x0200A34B RID: 41803
 		[NullableContext(0)]
 		private enum EChildComp
 		{
-			// Token: 0x0403800C RID: 229388
+			// Token: 0x04032A1C RID: 207388
 			ToggleTab,
-			// Token: 0x0403800D RID: 229389
+			// Token: 0x04032A1D RID: 207389
 			LoopScroll,
-			// Token: 0x0403800E RID: 229390
+			// Token: 0x04032A1E RID: 207390
 			AttributeItem,
-			// Token: 0x0403800F RID: 229391
+			// Token: 0x04032A1F RID: 207391
 			ButtonMore
 		}
 	}

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006517 RID: 25879
+	// Token: 0x02006B85 RID: 27525
 	public class ICustomShowUiT
 	{
-		// Token: 0x1700C06C RID: 49260
-		// (get) Token: 0x0602CE47 RID: 183879 RVA: 0x0062A5A1 File Offset: 0x006287A1
-		// (set) Token: 0x0602CE48 RID: 183880 RVA: 0x0062A5A9 File Offset: 0x006287A9
+		// Token: 0x1700C9FC RID: 51708
+		// (get) Token: 0x0602F5DD RID: 194013 RVA: 0x00676841 File Offset: 0x00674A41
+		// (set) Token: 0x0602F5DE RID: 194014 RVA: 0x00676849 File Offset: 0x00674A49
 		public ICustomScreenTextSettingT TextSetting { get; set; }
 
-		// Token: 0x1700C06D RID: 49261
-		// (get) Token: 0x0602CE49 RID: 183881 RVA: 0x0062A5B2 File Offset: 0x006287B2
-		// (set) Token: 0x0602CE4A RID: 183882 RVA: 0x0062A5BA File Offset: 0x006287BA
+		// Token: 0x1700C9FD RID: 51709
+		// (get) Token: 0x0602F5DF RID: 194015 RVA: 0x00676852 File Offset: 0x00674A52
+		// (set) Token: 0x0602F5E0 RID: 194016 RVA: 0x0067685A File Offset: 0x00674A5A
 		public bool IsHideCircle { get; set; }
 
-		// Token: 0x1700C06E RID: 49262
-		// (get) Token: 0x0602CE4B RID: 183883 RVA: 0x0062A5C3 File Offset: 0x006287C3
-		// (set) Token: 0x0602CE4C RID: 183884 RVA: 0x0062A5CB File Offset: 0x006287CB
+		// Token: 0x1700C9FE RID: 51710
+		// (get) Token: 0x0602F5E1 RID: 194017 RVA: 0x00676863 File Offset: 0x00674A63
+		// (set) Token: 0x0602F5E2 RID: 194018 RVA: 0x0067686B File Offset: 0x00674A6B
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602CE4D RID: 183885 RVA: 0x0062A5D4 File Offset: 0x006287D4
+		// Token: 0x0602F5E3 RID: 194019 RVA: 0x00676874 File Offset: 0x00674A74
 		public ICustomShowUiT()
 		{
 			this.TextSetting = null;

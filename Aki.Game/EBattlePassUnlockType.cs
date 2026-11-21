@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002322 RID: 8994
+// Token: 0x02001807 RID: 6151
 public enum EBattlePassUnlockType
 {
-	// Token: 0x040086DE RID: 34526
+	// Token: 0x04008821 RID: 34849
 	Primary = 1,
-	// Token: 0x040086DF RID: 34527
+	// Token: 0x04008822 RID: 34850
 	High,
-	// Token: 0x040086E0 RID: 34528
+	// Token: 0x04008823 RID: 34851
 	Upgrade
 }

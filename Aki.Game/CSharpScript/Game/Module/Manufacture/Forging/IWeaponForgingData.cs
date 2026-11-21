@@ -2,52 +2,52 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Forging
 {
-	// Token: 0x0200564A RID: 22090
+	// Token: 0x02004620 RID: 17952
 	public class IWeaponForgingData
 	{
-		// Token: 0x0401D8AE RID: 121006
+		// Token: 0x04018339 RID: 99129
 		public EForgingListType MainType;
 
-		// Token: 0x0401D8AF RID: 121007
+		// Token: 0x0401833A RID: 99130
 		public int ItemId;
 
-		// Token: 0x0401D8B0 RID: 121008
+		// Token: 0x0401833B RID: 99131
 		public bool IsNew;
 
-		// Token: 0x0401D8B1 RID: 121009
+		// Token: 0x0401833C RID: 99132
 		public int Quality;
 
-		// Token: 0x0401D8B2 RID: 121010
+		// Token: 0x0401833D RID: 99133
 		public int UniqueId;
 
-		// Token: 0x0401D8B3 RID: 121011
+		// Token: 0x0401833E RID: 99134
 		public int FormulaItemId;
 
-		// Token: 0x0401D8B4 RID: 121012
+		// Token: 0x0401833F RID: 99135
 		public int LastRoleId;
 
-		// Token: 0x0401D8B5 RID: 121013
+		// Token: 0x04018340 RID: 99136
 		public int IsForging;
 
-		// Token: 0x0401D8B6 RID: 121014
+		// Token: 0x04018341 RID: 99137
 		public int IsUnlock;
 
-		// Token: 0x0401D8B7 RID: 121015
+		// Token: 0x04018342 RID: 99138
 		public int WeaponType;
 
-		// Token: 0x0401D8B8 RID: 121016
+		// Token: 0x04018343 RID: 99139
 		public double ExistStartTime;
 
-		// Token: 0x0401D8B9 RID: 121017
+		// Token: 0x04018344 RID: 99140
 		public double ExistEndTime;
 
-		// Token: 0x0401D8BA RID: 121018
+		// Token: 0x04018345 RID: 99141
 		public int MadeCountInLimitTime;
 
-		// Token: 0x0401D8BB RID: 121019
+		// Token: 0x04018346 RID: 99142
 		public int TotalMakeCountInLimitTime;
 
-		// Token: 0x0401D8BC RID: 121020
+		// Token: 0x04018347 RID: 99143
 		public int SortId;
 	}
 }

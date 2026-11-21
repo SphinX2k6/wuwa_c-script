@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200156F RID: 5487
+// Token: 0x02000A27 RID: 2599
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityVersionPreheatSubView : ActivitySubViewBase
 {
-	// Token: 0x06009CEB RID: 40171 RVA: 0x0021EF6C File Offset: 0x0021D16C
+	// Token: 0x060070C9 RID: 28873 RVA: 0x00228D1C File Offset: 0x00226F1C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -37,7 +37,7 @@ public class ActivityVersionPreheatSubView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009CEC RID: 40172 RVA: 0x0021F09C File Offset: 0x0021D29C
+	// Token: 0x060070CA RID: 28874 RVA: 0x00228E4C File Offset: 0x0022704C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityVersionPreheatSubView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,18 +48,18 @@ public class ActivityVersionPreheatSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009CED RID: 40173 RVA: 0x0021F0DF File Offset: 0x0021D2DF
+	// Token: 0x060070CB RID: 28875 RVA: 0x00228E8F File Offset: 0x0022708F
 	protected override void OnBeforeDestroy()
 	{
 		this.QuestItemList.Clear();
 	}
 
-	// Token: 0x06009CEE RID: 40174 RVA: 0x0021F0EC File Offset: 0x0021D2EC
+	// Token: 0x060070CC RID: 28876 RVA: 0x00228E9C File Offset: 0x0022709C
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06009CEF RID: 40175 RVA: 0x0021F0EE File Offset: 0x0021D2EE
+	// Token: 0x060070CD RID: 28877 RVA: 0x00228E9E File Offset: 0x0022709E
 	protected override void OnRefreshView()
 	{
 		this.RefreshQuests();
@@ -67,7 +67,7 @@ public class ActivityVersionPreheatSubView : ActivitySubViewBase
 		this.RefreshBonus();
 	}
 
-	// Token: 0x06009CF0 RID: 40176 RVA: 0x0021F104 File Offset: 0x0021D304
+	// Token: 0x060070CE RID: 28878 RVA: 0x00228EB4 File Offset: 0x002270B4
 	protected override void OnTimer(float gap)
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -76,7 +76,7 @@ public class ActivityVersionPreheatSubView : ActivitySubViewBase
 		this.ActivityInfoItem.RefreshSubTitleExternal(item, item2);
 	}
 
-	// Token: 0x06009CF1 RID: 40177 RVA: 0x0021F134 File Offset: 0x0021D334
+	// Token: 0x060070CF RID: 28879 RVA: 0x00228EE4 File Offset: 0x002270E4
 	private unsafe void RefreshQuests()
 	{
 		List<VersionPreheatQuestData> list = VersionPreheatModel.Instance.BuildQuestDataList();
@@ -103,14 +103,14 @@ public class ActivityVersionPreheatSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009CF2 RID: 40178 RVA: 0x0021F244 File Offset: 0x0021D444
+	// Token: 0x060070D0 RID: 28880 RVA: 0x00228FF4 File Offset: 0x002271F4
 	private void RefreshActivityInfo()
 	{
 		VersionPreheatActivityInfoData data = VersionPreheatModel.Instance.BuildActivityInfoData();
 		this.ActivityInfoItem.RefreshExternal(data);
 	}
 
-	// Token: 0x06009CF3 RID: 40179 RVA: 0x0021F268 File Offset: 0x0021D468
+	// Token: 0x060070D1 RID: 28881 RVA: 0x00229018 File Offset: 0x00227218
 	private void RefreshBonus()
 	{
 		VersionPreheatModel instance = VersionPreheatModel.Instance;
@@ -123,16 +123,16 @@ public class ActivityVersionPreheatSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x040044E1 RID: 17633
+	// Token: 0x04004587 RID: 17799
 	private List<VersionPreheatQuestItem> QuestItemList = new List<VersionPreheatQuestItem>();
 
-	// Token: 0x040044E2 RID: 17634
+	// Token: 0x04004588 RID: 17800
 	private VersionPreheatBonusItem BonusItem;
 
-	// Token: 0x040044E3 RID: 17635
+	// Token: 0x04004589 RID: 17801
 	private VersionPreheatActivityItem ActivityInfoItem;
 
-	// Token: 0x040044E4 RID: 17636
+	// Token: 0x0400458A RID: 17802
 	private readonly int[] PreheatItemIndexList = new int[]
 	{
 		0,
@@ -143,32 +143,32 @@ public class ActivityVersionPreheatSubView : ActivitySubViewBase
 		5
 	};
 
-	// Token: 0x02007B99 RID: 31641
+	// Token: 0x02006D24 RID: 27940
 	[NullableContext(0)]
 	internal class EComponent
 	{
-		// Token: 0x04028A0B RID: 166411
+		// Token: 0x04023D46 RID: 146758
 		public const int PreheatItem1 = 0;
 
-		// Token: 0x04028A0C RID: 166412
+		// Token: 0x04023D47 RID: 146759
 		public const int PreheatItem2 = 1;
 
-		// Token: 0x04028A0D RID: 166413
+		// Token: 0x04023D48 RID: 146760
 		public const int PreheatItem3 = 2;
 
-		// Token: 0x04028A0E RID: 166414
+		// Token: 0x04023D49 RID: 146761
 		public const int PreheatItem4 = 3;
 
-		// Token: 0x04028A0F RID: 166415
+		// Token: 0x04023D4A RID: 146762
 		public const int PreheatItem5 = 4;
 
-		// Token: 0x04028A10 RID: 166416
+		// Token: 0x04023D4B RID: 146763
 		public const int PreheatItem6 = 5;
 
-		// Token: 0x04028A11 RID: 166417
+		// Token: 0x04023D4C RID: 146764
 		public const int BonusItem = 6;
 
-		// Token: 0x04028A12 RID: 166418
+		// Token: 0x04023D4D RID: 146765
 		public const int ActivityInfoItem = 7;
 	}
 }

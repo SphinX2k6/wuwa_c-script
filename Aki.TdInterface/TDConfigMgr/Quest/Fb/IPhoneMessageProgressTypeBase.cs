@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001360 RID: 4960
+	// Token: 0x020014B0 RID: 5296
 	public class IPhoneMessageProgressTypeBase
 	{
-		// Token: 0x0600718C RID: 29068 RVA: 0x001119D0 File Offset: 0x0010FBD0
-		[NullableContext(1)]
+		// Token: 0x0600782C RID: 30764 RVA: 0x0011FF3C File Offset: 0x0011E13C
 		public static IPhoneMessageProgressTypeBase Create(IPhoneMessageProgressTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700249F RID: 9375
-		// (get) Token: 0x0600718D RID: 29069 RVA: 0x001119EF File Offset: 0x0010FBEF
+		// Token: 0x1700266E RID: 9838
+		// (get) Token: 0x0600782D RID: 30765 RVA: 0x0011FF5B File Offset: 0x0011E15B
 		public virtual EPhoneMessageProgressType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400419C RID: 16796
+		// Token: 0x04004518 RID: 17688
 		private IPhoneMessageProgressTypeBase Instance;
 	}
 }

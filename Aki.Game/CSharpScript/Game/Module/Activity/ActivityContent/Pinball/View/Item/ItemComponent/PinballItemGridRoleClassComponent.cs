@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.ItemComponent
 {
-	// Token: 0x02006359 RID: 25433
+	// Token: 0x020052D7 RID: 21207
 	public class PinballItemGridRoleClassComponent : PinballItemGridComponentBase
 	{
-		// Token: 0x0603FFFE RID: 262142 RVA: 0x00F7B8AC File Offset: 0x00F79AAC
+		// Token: 0x06034CBF RID: 216255 RVA: 0x00EC280C File Offset: 0x00EC0A0C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FFFF RID: 262143 RVA: 0x00F7B8F4 File Offset: 0x00F79AF4
+		// Token: 0x06034CC0 RID: 216256 RVA: 0x00EC2854 File Offset: 0x00EC0A54
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballItemGridRoleClassComponent.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040000 RID: 262144 RVA: 0x00F7B937 File Offset: 0x00F79B37
+		// Token: 0x06034CC1 RID: 216257 RVA: 0x00EC2897 File Offset: 0x00EC0A97
 		[NullableContext(2)]
 		protected override string OnGetResourceId()
 		{
 			return "UiItem_ItemBaseRoleJob";
 		}
 
-		// Token: 0x06040001 RID: 262145 RVA: 0x00F7B940 File Offset: 0x00F79B40
+		// Token: 0x06034CC2 RID: 216258 RVA: 0x00EC28A0 File Offset: 0x00EC0AA0
 		[NullableContext(1)]
 		protected override void OnRefresh(params object[] args)
 		{
@@ -60,14 +60,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			roleClassComponent.RefreshItem(num);
 		}
 
-		// Token: 0x040215D7 RID: 136663
+		// Token: 0x0401BF06 RID: 114438
 		[Nullable(2)]
 		private ClassComponent RoleClassComponent;
 
-		// Token: 0x0200C57A RID: 50554
+		// Token: 0x0200AF61 RID: 44897
 		private enum EComponent
 		{
-			// Token: 0x0403B9AD RID: 244141
+			// Token: 0x0403630F RID: 221967
 			Item
 		}
 	}

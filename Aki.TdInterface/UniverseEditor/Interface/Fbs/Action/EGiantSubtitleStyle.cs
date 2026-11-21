@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F7A RID: 24442
+	// Token: 0x020065C0 RID: 26048
 	public enum EGiantSubtitleStyle : byte
 	{
-		// Token: 0x0400FD95 RID: 64917
+		// Token: 0x04010B1C RID: 68380
 		Neutral,
-		// Token: 0x0400FD96 RID: 64918
+		// Token: 0x04010B1D RID: 68381
 		Happy,
-		// Token: 0x0400FD97 RID: 64919
+		// Token: 0x04010B1E RID: 68382
 		Sad,
-		// Token: 0x0400FD98 RID: 64920
+		// Token: 0x04010B1F RID: 68383
 		Angry,
-		// Token: 0x0400FD99 RID: 64921
+		// Token: 0x04010B20 RID: 68384
 		Curious
 	}
 }

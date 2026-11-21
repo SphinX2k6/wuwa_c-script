@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005064 RID: 20580
+	// Token: 0x020055C6 RID: 21958
 	public class ICyberpunkShareEmptyVehiclePerformT
 	{
-		// Token: 0x17009550 RID: 38224
-		// (get) Token: 0x06020FC3 RID: 135107 RVA: 0x004956BF File Offset: 0x004938BF
-		// (set) Token: 0x06020FC4 RID: 135108 RVA: 0x004956C7 File Offset: 0x004938C7
+		// Token: 0x17009D36 RID: 40246
+		// (get) Token: 0x06022EFD RID: 143101 RVA: 0x004CF373 File Offset: 0x004CD573
+		// (set) Token: 0x06022EFE RID: 143102 RVA: 0x004CF37B File Offset: 0x004CD57B
 		public EVehicleType Type { get; set; }
 
-		// Token: 0x17009551 RID: 38225
-		// (get) Token: 0x06020FC5 RID: 135109 RVA: 0x004956D0 File Offset: 0x004938D0
-		// (set) Token: 0x06020FC6 RID: 135110 RVA: 0x004956D8 File Offset: 0x004938D8
+		// Token: 0x17009D37 RID: 40247
+		// (get) Token: 0x06022EFF RID: 143103 RVA: 0x004CF384 File Offset: 0x004CD584
+		// (set) Token: 0x06022F00 RID: 143104 RVA: 0x004CF38C File Offset: 0x004CD58C
 		public string Montage { get; set; }
 
-		// Token: 0x06020FC7 RID: 135111 RVA: 0x004956E1 File Offset: 0x004938E1
+		// Token: 0x06022F01 RID: 143105 RVA: 0x004CF395 File Offset: 0x004CD595
 		public ICyberpunkShareEmptyVehiclePerformT()
 		{
 			this.Type = EVehicleType.Gongduola;

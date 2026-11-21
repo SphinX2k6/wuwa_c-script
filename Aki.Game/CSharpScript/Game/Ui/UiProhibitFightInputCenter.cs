@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004698 RID: 18072
+	// Token: 0x020035C9 RID: 13769
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiProhibitFightInputCenter : Singleton
 	{
-		// Token: 0x0602E9C0 RID: 190912 RVA: 0x00ACAAF8 File Offset: 0x00AC8CF8
+		// Token: 0x0602310C RID: 143628 RVA: 0x009F93CC File Offset: 0x009F75CC
 		public void RegisterExtraRefreshData(string tag, IUiProhibitRefreshData data)
 		{
 			this.ExtraUiProhibitRefreshDataMap[tag] = data;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E9C1 RID: 190913 RVA: 0x00ACAB3C File Offset: 0x00AC8D3C
+		// Token: 0x0602310D RID: 143629 RVA: 0x009F9410 File Offset: 0x009F7610
 		public void UnRegisterExtraRefreshData(string tag)
 		{
 			this.ExtraUiProhibitRefreshDataMap.Remove(tag);
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E9C2 RID: 190914 RVA: 0x00ACAB80 File Offset: 0x00AC8D80
+		// Token: 0x0602310E RID: 143630 RVA: 0x009F9454 File Offset: 0x009F7654
 		public string CheckExtraRefreshData()
 		{
 			foreach (KeyValuePair<string, IUiProhibitRefreshData> keyValuePair in this.ExtraUiProhibitRefreshDataMap)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Ui
 			return "";
 		}
 
-		// Token: 0x0602E9C3 RID: 190915 RVA: 0x00ACABF0 File Offset: 0x00AC8DF0
+		// Token: 0x0602310F RID: 143631 RVA: 0x009F94C4 File Offset: 0x009F76C4
 		[return: Nullable(2)]
 		public IUiProhibitRefreshData GetExtraRefreshData(string tag)
 		{
@@ -59,8 +59,8 @@ namespace CSharpScript.Game.Ui
 			return null;
 		}
 
-		// Token: 0x17007632 RID: 30258
-		// (get) Token: 0x0602E9C4 RID: 190916 RVA: 0x00ACAC10 File Offset: 0x00AC8E10
+		// Token: 0x170048EE RID: 18670
+		// (get) Token: 0x06023110 RID: 143632 RVA: 0x009F94E4 File Offset: 0x009F76E4
 		public static UiProhibitFightInputCenter Instance
 		{
 			get
@@ -74,12 +74,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E9C5 RID: 190917 RVA: 0x00ACAC33 File Offset: 0x00AC8E33
+		// Token: 0x06023111 RID: 143633 RVA: 0x009F9507 File Offset: 0x009F7707
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E9C6 RID: 190918 RVA: 0x00ACAC35 File Offset: 0x00AC8E35
+		// Token: 0x06023112 RID: 143634 RVA: 0x009F9509 File Offset: 0x009F7709
 		public static void ResetStaticDefaultValue()
 		{
 			UiProhibitFightInputCenter instance = UiProhibitFightInputCenter._instance;
@@ -90,16 +90,16 @@ namespace CSharpScript.Game.Ui
 			UiProhibitFightInputCenter._instance = null;
 		}
 
-		// Token: 0x0602E9C7 RID: 190919 RVA: 0x00ACAC4E File Offset: 0x00AC8E4E
+		// Token: 0x06023113 RID: 143635 RVA: 0x009F9522 File Offset: 0x009F7722
 		static UiProhibitFightInputCenter()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiProhibitFightInputCenter.CreateStaticDefaultValue), new Action(UiProhibitFightInputCenter.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401964C RID: 104012
+		// Token: 0x04013CF1 RID: 81137
 		private readonly Dictionary<string, IUiProhibitRefreshData> ExtraUiProhibitRefreshDataMap = new Dictionary<string, IUiProhibitRefreshData>();
 
-		// Token: 0x0401964D RID: 104013
+		// Token: 0x04013CF2 RID: 81138
 		[Nullable(2)]
 		private static UiProhibitFightInputCenter _instance;
 	}

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E28 RID: 7720
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200205B RID: 8283
 	public class ISetMonsterMoveTarget : IExecBattleActionType
 	{
-		// Token: 0x0600A51D RID: 42269 RVA: 0x00176238 File Offset: 0x00174438
+		// Token: 0x0600AFC5 RID: 44997 RVA: 0x0018BC40 File Offset: 0x00189E40
 		private ISetMonsterMoveTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A51E RID: 42270 RVA: 0x00176270 File Offset: 0x00174470
+		// Token: 0x0600AFC6 RID: 44998 RVA: 0x0018BC78 File Offset: 0x00189E78
 		public static ISetMonsterMoveTarget Create([Nullable(2)] ISetMonsterMoveTarget instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A51F RID: 42271 RVA: 0x00176283 File Offset: 0x00174483
+		// Token: 0x0600AFC7 RID: 44999 RVA: 0x0018BC8B File Offset: 0x00189E8B
 		public static ISetMonsterMoveTarget CreateFromSetValue([Nullable(2)] ISetMonsterMoveTarget_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A520 RID: 42272 RVA: 0x00176296 File Offset: 0x00174496
+		// Token: 0x0600AFC8 RID: 45000 RVA: 0x0018BC9E File Offset: 0x00189E9E
 		public new ISetMonsterMoveTarget_SetValue ToSetValue()
 		{
 			return new ISetMonsterMoveTarget_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032A9 RID: 12969
-		// (get) Token: 0x0600A521 RID: 42273 RVA: 0x001762CD File Offset: 0x001744CD
-		// (set) Token: 0x0600A522 RID: 42274 RVA: 0x001762F8 File Offset: 0x001744F8
+		// Token: 0x17003568 RID: 13672
+		// (get) Token: 0x0600AFC9 RID: 45001 RVA: 0x0018BCD5 File Offset: 0x00189ED5
+		// (set) Token: 0x0600AFCA RID: 45002 RVA: 0x0018BD00 File Offset: 0x00189F00
 		public override EExecBattleActionType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032AA RID: 12970
-		// (get) Token: 0x0600A523 RID: 42275 RVA: 0x00176306 File Offset: 0x00174506
-		// (set) Token: 0x0600A524 RID: 42276 RVA: 0x00176331 File Offset: 0x00174531
+		// Token: 0x17003569 RID: 13673
+		// (get) Token: 0x0600AFCB RID: 45003 RVA: 0x0018BD0E File Offset: 0x00189F0E
+		// (set) Token: 0x0600AFCC RID: 45004 RVA: 0x0018BD39 File Offset: 0x00189F39
 		public virtual int TargetEntityId
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032AB RID: 12971
-		// (get) Token: 0x0600A525 RID: 42277 RVA: 0x00176340 File Offset: 0x00174540
-		// (set) Token: 0x0600A526 RID: 42278 RVA: 0x0017637A File Offset: 0x0017457A
+		// Token: 0x1700356A RID: 13674
+		// (get) Token: 0x0600AFCD RID: 45005 RVA: 0x0018BD48 File Offset: 0x00189F48
+		// (set) Token: 0x0600AFCE RID: 45006 RVA: 0x0018BD82 File Offset: 0x00189F82
 		public virtual EMoveEvent? MoveEvent
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032AC RID: 12972
-		// (get) Token: 0x0600A527 RID: 42279 RVA: 0x00176388 File Offset: 0x00174588
-		// (set) Token: 0x0600A528 RID: 42280 RVA: 0x001763AF File Offset: 0x001745AF
+		// Token: 0x1700356B RID: 13675
+		// (get) Token: 0x0600AFCF RID: 45007 RVA: 0x0018BD90 File Offset: 0x00189F90
+		// (set) Token: 0x0600AFD0 RID: 45008 RVA: 0x0018BDB7 File Offset: 0x00189FB7
 		public virtual List<int> MonsterEntityIds
 		{
 			get
@@ -157,11 +155,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040062C4 RID: 25284
+		// Token: 0x0400689B RID: 26779
 		[Nullable(2)]
 		protected new ISetMonsterMoveTarget FbInstance;
 
-		// Token: 0x040062C5 RID: 25285
+		// Token: 0x0400689C RID: 26780
 		[Nullable(2)]
 		protected new ISetMonsterMoveTarget_SetValue PocoInterface;
 	}

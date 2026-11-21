@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005319 RID: 21273
+	// Token: 0x0200589F RID: 22687
 	public class IGraph3dNodeBaseT
 	{
-		// Token: 0x17009C34 RID: 39988
-		// (get) Token: 0x06022C12 RID: 142354 RVA: 0x004D0A27 File Offset: 0x004CEC27
-		// (set) Token: 0x06022C13 RID: 142355 RVA: 0x004D0A2F File Offset: 0x004CEC2F
+		// Token: 0x1700A46C RID: 42092
+		// (get) Token: 0x06024CC6 RID: 150726 RVA: 0x0050D8FB File Offset: 0x0050BAFB
+		// (set) Token: 0x06024CC7 RID: 150727 RVA: 0x0050D903 File Offset: 0x0050BB03
 		public int Id { get; set; }
 
-		// Token: 0x17009C35 RID: 39989
-		// (get) Token: 0x06022C14 RID: 142356 RVA: 0x004D0A38 File Offset: 0x004CEC38
-		// (set) Token: 0x06022C15 RID: 142357 RVA: 0x004D0A40 File Offset: 0x004CEC40
+		// Token: 0x1700A46D RID: 42093
+		// (get) Token: 0x06024CC8 RID: 150728 RVA: 0x0050D90C File Offset: 0x0050BB0C
+		// (set) Token: 0x06024CC9 RID: 150729 RVA: 0x0050D914 File Offset: 0x0050BB14
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x06022C16 RID: 142358 RVA: 0x004D0A49 File Offset: 0x004CEC49
+		// Token: 0x06024CCA RID: 150730 RVA: 0x0050D91D File Offset: 0x0050BB1D
 		public IGraph3dNodeBaseT()
 		{
 			this.Id = 0;

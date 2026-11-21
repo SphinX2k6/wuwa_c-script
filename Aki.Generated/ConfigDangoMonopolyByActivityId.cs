@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001E9 RID: 489
+	// Token: 0x020001FB RID: 507
 	public class ConfigDangoMonopolyByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000B79 RID: 2937 RVA: 0x0009A7FC File Offset: 0x000989FC
+		// Token: 0x06000BE5 RID: 3045 RVA: 0x000A0734 File Offset: 0x0009E934
 		static ConfigDangoMonopolyByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDangoMonopolyByActivityId.CreateStaticDefaultValue), new Action(ConfigDangoMonopolyByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000B7A RID: 2938 RVA: 0x0009A81C File Offset: 0x00098A1C
+		// Token: 0x06000BE6 RID: 3046 RVA: 0x000A0754 File Offset: 0x0009E954
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDangoMonopolyByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000B7B RID: 2939 RVA: 0x0009A89B File Offset: 0x00098A9B
+		// Token: 0x06000BE7 RID: 3047 RVA: 0x000A07D3 File Offset: 0x0009E9D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDangoMonopolyByActivityId.LogPair = null;
 			ConfigDangoMonopolyByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06000B7C RID: 2940 RVA: 0x0009A8A9 File Offset: 0x00098AA9
+		// Token: 0x06000BE8 RID: 3048 RVA: 0x000A07E1 File Offset: 0x0009E9E1
 		public static void Init()
 		{
 			ConfigDangoMonopolyByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigDangoMonopolyByActivityId.HandleId, "db_dangomonopoly.db", "select BinData from `DangoMonopoly` where ActivityId=?");
 		}
 
-		// Token: 0x06000B7D RID: 2941 RVA: 0x0009A8C4 File Offset: 0x00098AC4
+		// Token: 0x06000BE9 RID: 3049 RVA: 0x000A07FC File Offset: 0x0009E9FC
 		public static DangoMonopoly? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDangoMonopolyByActivityId.HandleId, ConfigDangoMonopolyByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DangoMonopoly?(rootAsDangoMonopoly);
 		}
 
-		// Token: 0x04000D43 RID: 3395
+		// Token: 0x04000DC1 RID: 3521
 		private const string DB = "db_dangomonopoly.db";
 
-		// Token: 0x04000D44 RID: 3396
+		// Token: 0x04000DC2 RID: 3522
 		private const string FILE = "t.团子大富翁.xlsx";
 
-		// Token: 0x04000D45 RID: 3397
+		// Token: 0x04000DC3 RID: 3523
 		private const string TABLE = "DangoMonopoly";
 
-		// Token: 0x04000D46 RID: 3398
+		// Token: 0x04000DC4 RID: 3524
 		private const string COMMAND = "select BinData from `DangoMonopoly` where ActivityId=?";
 
-		// Token: 0x04000D47 RID: 3399
+		// Token: 0x04000DC5 RID: 3525
 		private const string KEY_PREFIX = "DangoMonopolyByActivityId";
 
-		// Token: 0x04000D48 RID: 3400
+		// Token: 0x04000DC6 RID: 3526
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000D49 RID: 3401
+		// Token: 0x04000DC7 RID: 3527
 		private static int HandleId;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E94 RID: 28308
+	// Token: 0x02007618 RID: 30232
 	public struct IResetPlayerFocusToFixedDirection : IFlatbufferObject
 	{
-		// Token: 0x1700D2CA RID: 53962
-		// (get) Token: 0x06032083 RID: 204931 RVA: 0x006C4579 File Offset: 0x006C2779
+		// Token: 0x1700DE21 RID: 56865
+		// (get) Token: 0x060350C3 RID: 217283 RVA: 0x007202AD File Offset: 0x0071E4AD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032084 RID: 204932 RVA: 0x006C4586 File Offset: 0x006C2786
+		// Token: 0x060350C4 RID: 217284 RVA: 0x007202BA File Offset: 0x0071E4BA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032085 RID: 204933 RVA: 0x006C4590 File Offset: 0x006C2790
+		// Token: 0x060350C5 RID: 217285 RVA: 0x007202C4 File Offset: 0x0071E4C4
 		public static IResetPlayerFocusToFixedDirection GetRootAsIResetPlayerFocusToFixedDirection(ByteBuffer _bb)
 		{
 			return IResetPlayerFocusToFixedDirection.GetRootAsIResetPlayerFocusToFixedDirection(_bb, default(IResetPlayerFocusToFixedDirection));
 		}
 
-		// Token: 0x06032086 RID: 204934 RVA: 0x006C45AC File Offset: 0x006C27AC
+		// Token: 0x060350C6 RID: 217286 RVA: 0x007202E0 File Offset: 0x0071E4E0
 		public static IResetPlayerFocusToFixedDirection GetRootAsIResetPlayerFocusToFixedDirection(ByteBuffer _bb, IResetPlayerFocusToFixedDirection obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032087 RID: 204935 RVA: 0x006C45C9 File Offset: 0x006C27C9
+		// Token: 0x060350C7 RID: 217287 RVA: 0x007202FD File Offset: 0x0071E4FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032088 RID: 204936 RVA: 0x006C45D8 File Offset: 0x006C27D8
+		// Token: 0x060350C8 RID: 217288 RVA: 0x0072030C File Offset: 0x0071E50C
 		public IResetPlayerFocusToFixedDirection __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D2CB RID: 53963
-		// (get) Token: 0x06032089 RID: 204937 RVA: 0x006C45E8 File Offset: 0x006C27E8
+		// Token: 0x1700DE22 RID: 56866
+		// (get) Token: 0x060350C9 RID: 217289 RVA: 0x0072031C File Offset: 0x0071E51C
 		public EResetPlayerFocusType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D2CC RID: 53964
-		// (get) Token: 0x0603208A RID: 204938 RVA: 0x006C4624 File Offset: 0x006C2824
+		// Token: 0x1700DE23 RID: 56867
+		// (get) Token: 0x060350CA RID: 217290 RVA: 0x00720358 File Offset: 0x0071E558
 		public IVectorInfo? Direction
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603208B RID: 204939 RVA: 0x006C4681 File Offset: 0x006C2881
+		// Token: 0x060350CB RID: 217291 RVA: 0x007203B5 File Offset: 0x0071E5B5
 		public static Offset<IResetPlayerFocusToFixedDirection> CreateIResetPlayerFocusToFixedDirection(FlatBufferBuilder builder, EResetPlayerFocusType Type = EResetPlayerFocusType.ResetToDefaultDirection, Offset<IVectorInfo> DirectionOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetPlayerFocusToFixedDirection.EndIResetPlayerFocusToFixedDirection(builder);
 		}
 
-		// Token: 0x0603208C RID: 204940 RVA: 0x006C469E File Offset: 0x006C289E
+		// Token: 0x060350CC RID: 217292 RVA: 0x007203D2 File Offset: 0x0071E5D2
 		public static void StartIResetPlayerFocusToFixedDirection(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603208D RID: 204941 RVA: 0x006C46A7 File Offset: 0x006C28A7
+		// Token: 0x060350CD RID: 217293 RVA: 0x007203DB File Offset: 0x0071E5DB
 		public static void AddType(FlatBufferBuilder builder, EResetPlayerFocusType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603208E RID: 204942 RVA: 0x006C46B2 File Offset: 0x006C28B2
+		// Token: 0x060350CE RID: 217294 RVA: 0x007203E6 File Offset: 0x0071E5E6
 		public static void AddDirection(FlatBufferBuilder builder, Offset<IVectorInfo> directionOffset)
 		{
 			builder.AddOffset(1, directionOffset.Value, 0);
 		}
 
-		// Token: 0x0603208F RID: 204943 RVA: 0x006C46C2 File Offset: 0x006C28C2
+		// Token: 0x060350CF RID: 217295 RVA: 0x007203F6 File Offset: 0x0071E5F6
 		public static Offset<IResetPlayerFocusToFixedDirection> EndIResetPlayerFocusToFixedDirection(FlatBufferBuilder builder)
 		{
 			return new Offset<IResetPlayerFocusToFixedDirection>(builder.EndTable());
 		}
 
-		// Token: 0x06032090 RID: 204944 RVA: 0x006C46D0 File Offset: 0x006C28D0
+		// Token: 0x060350D0 RID: 217296 RVA: 0x00720404 File Offset: 0x0071E604
 		public IResetPlayerFocusToFixedDirectionT UnPack()
 		{
 			IResetPlayerFocusToFixedDirectionT resetPlayerFocusToFixedDirectionT = new IResetPlayerFocusToFixedDirectionT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return resetPlayerFocusToFixedDirectionT;
 		}
 
-		// Token: 0x06032091 RID: 204945 RVA: 0x006C46EC File Offset: 0x006C28EC
+		// Token: 0x060350D1 RID: 217297 RVA: 0x00720420 File Offset: 0x0071E620
 		public void UnPackTo(IResetPlayerFocusToFixedDirectionT _o)
 		{
 			_o.Type = this.Type;
 			_o.Direction = ((this.Direction != null) ? this.Direction.Value.UnPack() : null);
 		}
 
-		// Token: 0x06032092 RID: 204946 RVA: 0x006C4734 File Offset: 0x006C2934
+		// Token: 0x060350D2 RID: 217298 RVA: 0x00720468 File Offset: 0x0071E668
 		public static Offset<IResetPlayerFocusToFixedDirection> Pack(FlatBufferBuilder builder, IResetPlayerFocusToFixedDirectionT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetPlayerFocusToFixedDirection.CreateIResetPlayerFocusToFixedDirection(builder, _o.Type, directionOffset);
 		}
 
-		// Token: 0x04011882 RID: 71810
+		// Token: 0x04012807 RID: 75783
 		private Table __p;
 	}
 }

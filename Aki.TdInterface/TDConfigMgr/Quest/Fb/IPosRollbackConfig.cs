@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200144C RID: 5196
+	// Token: 0x020015A4 RID: 5540
 	public class IPosRollbackConfig
 	{
-		// Token: 0x06007623 RID: 30243 RVA: 0x0011A2BA File Offset: 0x001184BA
-		[NullableContext(1)]
+		// Token: 0x06007CEB RID: 31979 RVA: 0x00128D8E File Offset: 0x00126F8E
 		public static IPosRollbackConfig Create(IPosRollbackConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700275E RID: 10078
-		// (get) Token: 0x06007624 RID: 30244 RVA: 0x0011A2DC File Offset: 0x001184DC
+		// Token: 0x17002945 RID: 10565
+		// (get) Token: 0x06007CEC RID: 31980 RVA: 0x00128DB0 File Offset: 0x00126FB0
 		public virtual int? RangeEntityId
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700275F RID: 10079
-		// (get) Token: 0x06007625 RID: 30245 RVA: 0x0011A312 File Offset: 0x00118512
+		// Token: 0x17002946 RID: 10566
+		// (get) Token: 0x06007CED RID: 31981 RVA: 0x00128DE6 File Offset: 0x00126FE6
 		public virtual int PositionEntityId
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002760 RID: 10080
-		// (get) Token: 0x06007626 RID: 30246 RVA: 0x0011A320 File Offset: 0x00118520
+		// Token: 0x17002947 RID: 10567
+		// (get) Token: 0x06007CEE RID: 31982 RVA: 0x00128DF4 File Offset: 0x00126FF4
 		public virtual bool? GravityFlip
 		{
 			get
@@ -59,7 +57,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004496 RID: 17558
+		// Token: 0x0400482C RID: 18476
 		private IPosRollbackConfig Instance;
 	}
 }

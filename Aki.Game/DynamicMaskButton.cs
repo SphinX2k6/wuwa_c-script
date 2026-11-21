@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A86 RID: 6790
+// Token: 0x02000F45 RID: 3909
 [NullableContext(1)]
 [Nullable(0)]
 public class DynamicMaskButton : UiPanelBase
 {
-	// Token: 0x0600C852 RID: 51282 RVA: 0x002DB510 File Offset: 0x002D9710
+	// Token: 0x06009C63 RID: 40035 RVA: 0x002E66B8 File Offset: 0x002E48B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -31,7 +31,7 @@ public class DynamicMaskButton : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C853 RID: 51283 RVA: 0x002DB598 File Offset: 0x002D9798
+	// Token: 0x06009C64 RID: 40036 RVA: 0x002E6740 File Offset: 0x002E4940
 	protected override void OnAfterShow()
 	{
 		if (this.ChildItem == null || !this.ChildItem.IsValid())
@@ -48,7 +48,7 @@ public class DynamicMaskButton : UiPanelBase
 		this.ChildItem.K2_SetRelativeLocation(newLocation, false, ref fhitResult, false);
 	}
 
-	// Token: 0x0600C854 RID: 51284 RVA: 0x002DB64D File Offset: 0x002D984D
+	// Token: 0x06009C65 RID: 40037 RVA: 0x002E67F5 File Offset: 0x002E49F5
 	private void ButtonClick()
 	{
 		Action buttonFunction = this.ButtonFunction;
@@ -59,13 +59,13 @@ public class DynamicMaskButton : UiPanelBase
 		buttonFunction();
 	}
 
-	// Token: 0x0600C855 RID: 51285 RVA: 0x002DB65F File Offset: 0x002D985F
+	// Token: 0x06009C66 RID: 40038 RVA: 0x002E6807 File Offset: 0x002E4A07
 	public void SetButtonFunction(Action callback)
 	{
 		this.ButtonFunction = callback;
 	}
 
-	// Token: 0x0600C856 RID: 51286 RVA: 0x002DB668 File Offset: 0x002D9868
+	// Token: 0x06009C67 RID: 40039 RVA: 0x002E6810 File Offset: 0x002E4A10
 	public UniTask Init(UUIItem parent = null)
 	{
 		DynamicMaskButton.<Init>d__9 <Init>d__;
@@ -77,7 +77,7 @@ public class DynamicMaskButton : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C857 RID: 51287 RVA: 0x002DB6B3 File Offset: 0x002D98B3
+	// Token: 0x06009C68 RID: 40040 RVA: 0x002E685B File Offset: 0x002E4A5B
 	public void SetAttachChildItem(UUIItem uiItem)
 	{
 		this.ChildItem = uiItem;
@@ -85,7 +85,7 @@ public class DynamicMaskButton : UiPanelBase
 		this.OriginalRelativeTrans = uiItem.D_GetRelativeTransform();
 	}
 
-	// Token: 0x0600C858 RID: 51288 RVA: 0x002DB6D4 File Offset: 0x002D98D4
+	// Token: 0x06009C69 RID: 40041 RVA: 0x002E687C File Offset: 0x002E4A7C
 	public void ResetItemParent()
 	{
 		if (this.ChildItem == null || this.OriginalParentItem == null)
@@ -97,25 +97,25 @@ public class DynamicMaskButton : UiPanelBase
 		this.ChildItem.D_K2_SetRelativeTransform(this.OriginalRelativeTrans, false, ref fhitResult, false);
 	}
 
-	// Token: 0x04005C63 RID: 23651
+	// Token: 0x04005D32 RID: 23858
 	private Action ButtonFunction;
 
-	// Token: 0x04005C64 RID: 23652
+	// Token: 0x04005D33 RID: 23859
 	[Nullable(2)]
 	private UUIItem ChildItem;
 
-	// Token: 0x04005C65 RID: 23653
+	// Token: 0x04005D34 RID: 23860
 	[Nullable(2)]
 	private UUIItem OriginalParentItem;
 
-	// Token: 0x04005C66 RID: 23654
+	// Token: 0x04005D35 RID: 23861
 	private FTransformDouble OriginalRelativeTrans;
 
-	// Token: 0x02007FEC RID: 32748
+	// Token: 0x0200717B RID: 29051
 	[NullableContext(0)]
 	private class ECompDefine
 	{
-		// Token: 0x04029C41 RID: 171073
+		// Token: 0x04024F7B RID: 151419
 		public const int Button = 0;
 	}
 }

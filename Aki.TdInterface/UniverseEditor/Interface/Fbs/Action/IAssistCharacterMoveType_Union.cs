@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200619D RID: 24989
+	// Token: 0x02006808 RID: 26632
 	public enum IAssistCharacterMoveType_Union : byte
 	{
-		// Token: 0x040106AD RID: 67245
+		// Token: 0x040114BC RID: 70844
 		NONE,
-		// Token: 0x040106AE RID: 67246
+		// Token: 0x040114BD RID: 70845
 		IAssistCharacterMoveType,
-		// Token: 0x040106AF RID: 67247
+		// Token: 0x040114BE RID: 70846
 		IAssistCharacterNavigationMove,
-		// Token: 0x040106B0 RID: 67248
+		// Token: 0x040114BF RID: 70847
 		IAssistCharacterSplineMove
 	}
 }

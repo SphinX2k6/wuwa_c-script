@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D19 RID: 23833
+	// Token: 0x02004CFB RID: 19707
 	public class ChatRowDynamicItemInSide : UiPanelBase
 	{
-		// Token: 0x0603C67A RID: 247418 RVA: 0x00E7B0F0 File Offset: 0x00E792F0
+		// Token: 0x060315D3 RID: 202195 RVA: 0x00DCB770 File Offset: 0x00DC9970
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C67B RID: 247419 RVA: 0x00E7B1BC File Offset: 0x00E793BC
+		// Token: 0x060315D4 RID: 202196 RVA: 0x00DCB83C File Offset: 0x00DC9A3C
 		[NullableContext(1)]
 		public void Update(ChatRowData chatRowData, int index)
 		{
@@ -190,18 +190,18 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0200BF91 RID: 49041
+		// Token: 0x0200A997 RID: 43415
 		private enum EChild2
 		{
-			// Token: 0x04039CBB RID: 236731
+			// Token: 0x0403467D RID: 214653
 			PanelHorizon,
-			// Token: 0x04039CBC RID: 236732
+			// Token: 0x0403467E RID: 214654
 			PrivateTagBg,
-			// Token: 0x04039CBD RID: 236733
+			// Token: 0x0403467F RID: 214655
 			TeamTagBg,
-			// Token: 0x04039CBE RID: 236734
+			// Token: 0x04034680 RID: 214656
 			TagText,
-			// Token: 0x04039CBF RID: 236735
+			// Token: 0x04034681 RID: 214657
 			ChatText
 		}
 	}

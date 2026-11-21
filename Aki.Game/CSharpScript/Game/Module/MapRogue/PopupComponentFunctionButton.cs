@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200562E RID: 22062
+	// Token: 0x02004604 RID: 17924
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupComponentFunctionButton : UiPanelBase
 	{
-		// Token: 0x060381D2 RID: 229842 RVA: 0x00D4AFE2 File Offset: 0x00D491E2
+		// Token: 0x0602D0D0 RID: 184528 RVA: 0x00C98D2A File Offset: 0x00C96F2A
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381D3 RID: 229843 RVA: 0x00D4B008 File Offset: 0x00D49208
+		// Token: 0x0602D0D1 RID: 184529 RVA: 0x00C98D50 File Offset: 0x00C96F50
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PopupComponentFunctionButton.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -33,19 +33,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060381D4 RID: 229844 RVA: 0x00D4B04C File Offset: 0x00D4924C
+		// Token: 0x0602D0D2 RID: 184530 RVA: 0x00C98D94 File Offset: 0x00C96F94
 		public void SetButtonTextByTextId(string textId, params string[] args)
 		{
 			this.ButtonItem.SetLocalTextNew(textId, args);
 		}
 
-		// Token: 0x060381D5 RID: 229845 RVA: 0x00D4B068 File Offset: 0x00D49268
+		// Token: 0x0602D0D3 RID: 184531 RVA: 0x00C98DB0 File Offset: 0x00C96FB0
 		public void SetButtonFunction(Action<int> buttonFunction)
 		{
 			this.ButtonItem.SetFunction(buttonFunction);
 		}
 
-		// Token: 0x060381D6 RID: 229846 RVA: 0x00D4B078 File Offset: 0x00D49278
+		// Token: 0x0602D0D4 RID: 184532 RVA: 0x00C98DC0 File Offset: 0x00C96FC0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0401D855 RID: 120917
+		// Token: 0x040182E0 RID: 99040
 		protected ButtonItem ButtonItem;
 	}
 }

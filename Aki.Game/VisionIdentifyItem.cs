@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024C9 RID: 9417
+// Token: 0x020019B0 RID: 6576
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 {
-	// Token: 0x06012E83 RID: 77443 RVA: 0x004ACBE6 File Offset: 0x004AADE6
+	// Token: 0x06010342 RID: 66370 RVA: 0x004BA7E6 File Offset: 0x004B89E6
 	public override void Refresh(VisionSubPropViewData data, bool isSelected, int gridIndex)
 	{
 		if (data != null)
@@ -26,13 +26,13 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		}
 	}
 
-	// Token: 0x06012E84 RID: 77444 RVA: 0x004ACBF8 File Offset: 0x004AADF8
+	// Token: 0x06010343 RID: 66371 RVA: 0x004BA7F8 File Offset: 0x004B89F8
 	public override object GetKey(VisionSubPropViewData data, int displayIndex)
 	{
 		return base.GridIndex;
 	}
 
-	// Token: 0x06012E85 RID: 77445 RVA: 0x004ACC08 File Offset: 0x004AAE08
+	// Token: 0x06010344 RID: 66372 RVA: 0x004BA808 File Offset: 0x004B8A08
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -55,7 +55,7 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		};
 	}
 
-	// Token: 0x06012E86 RID: 77446 RVA: 0x004ACD38 File Offset: 0x004AAF38
+	// Token: 0x06010345 RID: 66373 RVA: 0x004BA938 File Offset: 0x004B8B38
 	private void OnClickButton()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.VisionIntensifyView))
@@ -74,13 +74,13 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		}
 	}
 
-	// Token: 0x06012E87 RID: 77447 RVA: 0x004ACDB5 File Offset: 0x004AAFB5
+	// Token: 0x06010346 RID: 66374 RVA: 0x004BA9B5 File Offset: 0x004B8BB5
 	protected override void OnStart()
 	{
 		this.LevelSequence = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x06012E88 RID: 77448 RVA: 0x004ACDC8 File Offset: 0x004AAFC8
+	// Token: 0x06010347 RID: 66375 RVA: 0x004BA9C8 File Offset: 0x004B8BC8
 	public UniTask PlaySequenceAndUpdate(float delayTime, float animateTime)
 	{
 		VisionIdentifyItem.<PlaySequenceAndUpdate>d__16 <PlaySequenceAndUpdate>d__;
@@ -93,7 +93,7 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		return <PlaySequenceAndUpdate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E89 RID: 77449 RVA: 0x004ACE1C File Offset: 0x004AB01C
+	// Token: 0x06010348 RID: 66376 RVA: 0x004BAA1C File Offset: 0x004B8C1C
 	public void Update(VisionSubPropViewData data, string sourceView)
 	{
 		this.ViewData = data;
@@ -114,7 +114,7 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		this.RefreshTextColor(data2);
 	}
 
-	// Token: 0x06012E8A RID: 77450 RVA: 0x004ACE8C File Offset: 0x004AB08C
+	// Token: 0x06010349 RID: 66377 RVA: 0x004BAA8C File Offset: 0x004B8C8C
 	private void RefreshButtonJumpState(VisionSubPropData data)
 	{
 		bool flag = data.SlotState == EVisionSlotState.UnlockAndNoProp && this.CheckCanJump();
@@ -122,14 +122,14 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		base.GetItem(2).SetUIActive(flag);
 	}
 
-	// Token: 0x06012E8B RID: 77451 RVA: 0x004ACED4 File Offset: 0x004AB0D4
+	// Token: 0x0601034A RID: 66378 RVA: 0x004BAAD4 File Offset: 0x004B8CD4
 	private bool CheckCanJump()
 	{
 		bool flag = PhantomBattleModel.Instance.GetVisionLevelUpIdentify() == EVisionLevelUpIdentify.EnableIdentify;
 		return (this.SourceViewName == "VisionLevelUpView" && !flag) || this.SourceViewName == "VisionEquipmentView";
 	}
 
-	// Token: 0x06012E8C RID: 77452 RVA: 0x004ACF18 File Offset: 0x004AB118
+	// Token: 0x0601034B RID: 66379 RVA: 0x004BAB18 File Offset: 0x004B8D18
 	private string GetColor(VisionSubPropData data)
 	{
 		string result = "";
@@ -167,7 +167,7 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		return result;
 	}
 
-	// Token: 0x06012E8D RID: 77453 RVA: 0x004ACFA0 File Offset: 0x004AB1A0
+	// Token: 0x0601034C RID: 66380 RVA: 0x004BABA0 File Offset: 0x004B8DA0
 	private void RefreshTextColor(VisionSubPropData data)
 	{
 		FColor color = FColor.FromHex(this.GetColor(data));
@@ -176,7 +176,7 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		base.GetItem(2).SetColor(color);
 	}
 
-	// Token: 0x06012E8E RID: 77454 RVA: 0x004ACFE4 File Offset: 0x004AB1E4
+	// Token: 0x0601034D RID: 66381 RVA: 0x004BABE4 File Offset: 0x004B8DE4
 	private void RefreshTransitionColor(VisionSubPropData data)
 	{
 		FColor fcolor = FColor.FromHex(this.GetColor(data));
@@ -200,7 +200,7 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		item3.SetColor(fcolor);
 	}
 
-	// Token: 0x06012E8F RID: 77455 RVA: 0x004AD0EC File Offset: 0x004AB2EC
+	// Token: 0x0601034E RID: 66382 RVA: 0x004BACEC File Offset: 0x004B8EEC
 	private void RefreshAttributeName(VisionSubPropData data)
 	{
 		bool flag = PhantomBattleModel.Instance.GetVisionLevelUpIdentify() == EVisionLevelUpIdentify.EnableIdentify;
@@ -236,7 +236,7 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textStringId, new <>z__ReadOnlySingleElementList<object>(num));
 	}
 
-	// Token: 0x06012E90 RID: 77456 RVA: 0x004AD1DC File Offset: 0x004AB3DC
+	// Token: 0x0601034F RID: 66383 RVA: 0x004BADDC File Offset: 0x004B8FDC
 	private void RefreshAttributeNum(VisionSubPropData data)
 	{
 		bool flag = data.SlotState == EVisionSlotState.UnlockAndHaveProp;
@@ -247,84 +247,84 @@ public class VisionIdentifyItem : GridProxyAbstract<VisionSubPropViewData>
 		}
 	}
 
-	// Token: 0x06012E91 RID: 77457 RVA: 0x004AD216 File Offset: 0x004AB416
+	// Token: 0x06010350 RID: 66384 RVA: 0x004BAE16 File Offset: 0x004B9016
 	private void RefreshHighLight(VisionSubPropViewData data)
 	{
 		base.GetItem(9).SetUIActive(data.NeedHighLight);
 	}
 
-	// Token: 0x06012E92 RID: 77458 RVA: 0x004AD22B File Offset: 0x004AB42B
+	// Token: 0x06010351 RID: 66385 RVA: 0x004BAE2B File Offset: 0x004B902B
 	private bool IfShowLikeLevelUpView()
 	{
 		return this.SourceViewName == "VisionLevelUpView" || this.SourceViewName == "VisionEquipmentView";
 	}
 
-	// Token: 0x06012E93 RID: 77459 RVA: 0x004AD251 File Offset: 0x004AB451
+	// Token: 0x06010352 RID: 66386 RVA: 0x004BAE51 File Offset: 0x004B9051
 	private void RefreshSpriteBg(VisionSubPropData data)
 	{
 		base.GetItem(3).SetUIActive(data.SlotState == EVisionSlotState.UnlockAndNoProp && this.IfShowLikeLevelUpView());
 	}
 
-	// Token: 0x04008E7F RID: 36479
+	// Token: 0x04008FC9 RID: 36809
 	private const string NORMALCOLOR = "F9FFFFCC";
 
-	// Token: 0x04008E80 RID: 36480
+	// Token: 0x04008FCA RID: 36810
 	private const string GREENCOLOR = "F7EBA6FF";
 
-	// Token: 0x04008E81 RID: 36481
+	// Token: 0x04008FCB RID: 36811
 	private const string WHITECOLOR = "F9FFFFCC";
 
-	// Token: 0x04008E82 RID: 36482
+	// Token: 0x04008FCC RID: 36812
 	private const string GRAYCOLOR = "F9FFFF66";
 
-	// Token: 0x04008E83 RID: 36483
+	// Token: 0x04008FCD RID: 36813
 	private string SourceViewName = "";
 
-	// Token: 0x04008E84 RID: 36484
+	// Token: 0x04008FCE RID: 36814
 	[Nullable(2)]
 	private VisionSubPropData CurrentData;
 
-	// Token: 0x04008E85 RID: 36485
+	// Token: 0x04008FCF RID: 36815
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequence;
 
-	// Token: 0x04008E86 RID: 36486
+	// Token: 0x04008FD0 RID: 36816
 	[Nullable(2)]
 	private CustomPromise AnimationCustomPromise;
 
-	// Token: 0x04008E87 RID: 36487
+	// Token: 0x04008FD1 RID: 36817
 	[Nullable(2)]
 	private PhantomDataBase VisionData;
 
-	// Token: 0x04008E88 RID: 36488
+	// Token: 0x04008FD2 RID: 36818
 	[Nullable(2)]
 	private VisionSubPropViewData ViewData;
 
-	// Token: 0x02008A4D RID: 35405
+	// Token: 0x02007BD6 RID: 31702
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CE7B RID: 183931
+		// Token: 0x04028199 RID: 164249
 		AttributeText,
-		// Token: 0x0402CE7C RID: 183932
+		// Token: 0x0402819A RID: 164250
 		NumText,
-		// Token: 0x0402CE7D RID: 183933
+		// Token: 0x0402819B RID: 164251
 		ArrowItem,
-		// Token: 0x0402CE7E RID: 183934
+		// Token: 0x0402819C RID: 164252
 		BgSprite,
-		// Token: 0x0402CE7F RID: 183935
+		// Token: 0x0402819D RID: 164253
 		PointText,
-		// Token: 0x0402CE80 RID: 183936
+		// Token: 0x0402819E RID: 164254
 		Button,
-		// Token: 0x0402CE81 RID: 183937
+		// Token: 0x0402819F RID: 164255
 		PointTextTransition,
-		// Token: 0x0402CE82 RID: 183938
+		// Token: 0x040281A0 RID: 164256
 		ArrowSpriteTransition,
-		// Token: 0x0402CE83 RID: 183939
+		// Token: 0x040281A1 RID: 164257
 		AttributeTextTransition,
-		// Token: 0x0402CE84 RID: 183940
+		// Token: 0x040281A2 RID: 164258
 		HighLightItem,
-		// Token: 0x0402CE85 RID: 183941
+		// Token: 0x040281A3 RID: 164259
 		SprPointTransition
 	}
 }

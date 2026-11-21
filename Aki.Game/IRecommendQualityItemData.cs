@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002742 RID: 10050
+// Token: 0x02001C2D RID: 7213
 [NullableContext(1)]
 public interface IRecommendQualityItemData
 {
-	// Token: 0x17001AFF RID: 6911
-	// (get) Token: 0x060149E0 RID: 84448
-	// (set) Token: 0x060149E1 RID: 84449
+	// Token: 0x17001B37 RID: 6967
+	// (get) Token: 0x06011EC2 RID: 73410
+	// (set) Token: 0x06011EC3 RID: 73411
 	EGameQualitySettingLevel Quality { get; set; }
 
-	// Token: 0x17001B00 RID: 6912
-	// (get) Token: 0x060149E2 RID: 84450
-	// (set) Token: 0x060149E3 RID: 84451
+	// Token: 0x17001B38 RID: 6968
+	// (get) Token: 0x06011EC4 RID: 73412
+	// (set) Token: 0x06011EC5 RID: 73413
 	string Name { get; set; }
 
-	// Token: 0x17001B01 RID: 6913
-	// (get) Token: 0x060149E4 RID: 84452
-	// (set) Token: 0x060149E5 RID: 84453
+	// Token: 0x17001B39 RID: 6969
+	// (get) Token: 0x06011EC6 RID: 73414
+	// (set) Token: 0x06011EC7 RID: 73415
 	bool IsRecommend { get; set; }
 
-	// Token: 0x17001B02 RID: 6914
-	// (get) Token: 0x060149E6 RID: 84454
-	// (set) Token: 0x060149E7 RID: 84455
+	// Token: 0x17001B3A RID: 6970
+	// (get) Token: 0x06011EC8 RID: 73416
+	// (set) Token: 0x06011EC9 RID: 73417
 	string Bg { get; set; }
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004324 RID: 17188
+	// Token: 0x02004786 RID: 18310
 	public class TTetrisPlayModeUnion
 	{
-		// Token: 0x1700797A RID: 31098
-		// (get) Token: 0x060197D1 RID: 104401 RVA: 0x003A6D1A File Offset: 0x003A4F1A
-		// (set) Token: 0x060197D2 RID: 104402 RVA: 0x003A6D22 File Offset: 0x003A4F22
+		// Token: 0x17007FAF RID: 32687
+		// (get) Token: 0x0601AF5F RID: 110431 RVA: 0x003D2742 File Offset: 0x003D0942
+		// (set) Token: 0x0601AF60 RID: 110432 RVA: 0x003D274A File Offset: 0x003D094A
 		public TTetrisPlayMode Type { get; set; }
 
-		// Token: 0x1700797B RID: 31099
-		// (get) Token: 0x060197D3 RID: 104403 RVA: 0x003A6D2B File Offset: 0x003A4F2B
-		// (set) Token: 0x060197D4 RID: 104404 RVA: 0x003A6D33 File Offset: 0x003A4F33
+		// Token: 0x17007FB0 RID: 32688
+		// (get) Token: 0x0601AF61 RID: 110433 RVA: 0x003D2753 File Offset: 0x003D0953
+		// (set) Token: 0x0601AF62 RID: 110434 RVA: 0x003D275B File Offset: 0x003D095B
 		public object Value { get; set; }
 
-		// Token: 0x060197D5 RID: 104405 RVA: 0x003A6D3C File Offset: 0x003A4F3C
+		// Token: 0x0601AF63 RID: 110435 RVA: 0x003D2764 File Offset: 0x003D0964
 		public TTetrisPlayModeUnion()
 		{
 			this.Type = TTetrisPlayMode.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060197D6 RID: 104406 RVA: 0x003A6D52 File Offset: 0x003A4F52
+		// Token: 0x0601AF64 RID: 110436 RVA: 0x003D277A File Offset: 0x003D097A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060197D7 RID: 104407 RVA: 0x003A6D64 File Offset: 0x003A4F64
+		// Token: 0x0601AF65 RID: 110437 RVA: 0x003D278C File Offset: 0x003D098C
 		public ITetrisPlayModeEndlessT AsITetrisPlayModeEndless()
 		{
 			return this.As<ITetrisPlayModeEndlessT>();
 		}
 
-		// Token: 0x060197D8 RID: 104408 RVA: 0x003A6D6C File Offset: 0x003A4F6C
+		// Token: 0x0601AF66 RID: 110438 RVA: 0x003D2794 File Offset: 0x003D0994
 		public static TTetrisPlayModeUnion FromITetrisPlayModeEndless(ITetrisPlayModeEndlessT _itetrisplaymodeendless)
 		{
 			return new TTetrisPlayModeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197D9 RID: 104409 RVA: 0x003A6D81 File Offset: 0x003A4F81
+		// Token: 0x0601AF67 RID: 110439 RVA: 0x003D27A9 File Offset: 0x003D09A9
 		public ITetrisPlayModeMainLineT AsITetrisPlayModeMainLine()
 		{
 			return this.As<ITetrisPlayModeMainLineT>();
 		}
 
-		// Token: 0x060197DA RID: 104410 RVA: 0x003A6D89 File Offset: 0x003A4F89
+		// Token: 0x0601AF68 RID: 110440 RVA: 0x003D27B1 File Offset: 0x003D09B1
 		public static TTetrisPlayModeUnion FromITetrisPlayModeMainLine(ITetrisPlayModeMainLineT _itetrisplaymodemainline)
 		{
 			return new TTetrisPlayModeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197DB RID: 104411 RVA: 0x003A6D9E File Offset: 0x003A4F9E
+		// Token: 0x0601AF69 RID: 110441 RVA: 0x003D27C6 File Offset: 0x003D09C6
 		public ITetrisPlayModeNormalT AsITetrisPlayModeNormal()
 		{
 			return this.As<ITetrisPlayModeNormalT>();
 		}
 
-		// Token: 0x060197DC RID: 104412 RVA: 0x003A6DA6 File Offset: 0x003A4FA6
+		// Token: 0x0601AF6A RID: 110442 RVA: 0x003D27CE File Offset: 0x003D09CE
 		public static TTetrisPlayModeUnion FromITetrisPlayModeNormal(ITetrisPlayModeNormalT _itetrisplaymodenormal)
 		{
 			return new TTetrisPlayModeUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197DD RID: 104413 RVA: 0x003A6DBC File Offset: 0x003A4FBC
+		// Token: 0x0601AF6B RID: 110443 RVA: 0x003D27E4 File Offset: 0x003D09E4
 		public static int Pack(FlatBufferBuilder builder, TTetrisPlayModeUnion _o)
 		{
 			switch (_o.Type)

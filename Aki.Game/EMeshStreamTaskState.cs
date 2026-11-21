@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x0200220D RID: 8717
+// Token: 0x020016F1 RID: 5873
 public enum EMeshStreamTaskState
 {
-	// Token: 0x0400815B RID: 33115
+	// Token: 0x04008299 RID: 33433
 	None,
-	// Token: 0x0400815C RID: 33116
+	// Token: 0x0400829A RID: 33434
 	Streaming,
-	// Token: 0x0400815D RID: 33117
+	// Token: 0x0400829B RID: 33435
 	StreamFinished,
-	// Token: 0x0400815E RID: 33118
+	// Token: 0x0400829C RID: 33436
 	TaskFinished,
-	// Token: 0x0400815F RID: 33119
+	// Token: 0x0400829D RID: 33437
 	Canceled
 }

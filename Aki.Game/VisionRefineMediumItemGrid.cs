@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x0200176E RID: 5998
+// Token: 0x02000C27 RID: 3111
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -12,21 +12,21 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 })]
 public class VisionRefineMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemData>
 {
-	// Token: 0x0600ADE9 RID: 44521 RVA: 0x00272FC7 File Offset: 0x002711C7
+	// Token: 0x060081D0 RID: 33232 RVA: 0x0027D48C File Offset: 0x0027B68C
 	protected override void OnStart()
 	{
 		base.OnStart();
 		this.GetItemGridExtendToggle().FocusListenerDelegate.Bind(new Action(this.ShowItemTips));
 	}
 
-	// Token: 0x0600ADEA RID: 44522 RVA: 0x00272FEB File Offset: 0x002711EB
+	// Token: 0x060081D1 RID: 33233 RVA: 0x0027D4B0 File Offset: 0x0027B6B0
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
 		this.GetItemGridExtendToggle().FocusListenerDelegate.Unbind();
 	}
 
-	// Token: 0x0600ADEB RID: 44523 RVA: 0x00273003 File Offset: 0x00271203
+	// Token: 0x060081D2 RID: 33234 RVA: 0x0027D4C8 File Offset: 0x0027B6C8
 	[NullableContext(1)]
 	protected override void OnRefresh(PhantomItemData data, bool isSelected, int gridIndex)
 	{
@@ -34,7 +34,7 @@ public class VisionRefineMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemDa
 		this.RefreshPrivate(data);
 	}
 
-	// Token: 0x0600ADEC RID: 44524 RVA: 0x00273014 File Offset: 0x00271214
+	// Token: 0x060081D3 RID: 33235 RVA: 0x0027D4D8 File Offset: 0x0027B6D8
 	[NullableContext(1)]
 	private void RefreshPrivate(PhantomItemData data)
 	{
@@ -132,14 +132,14 @@ public class VisionRefineMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemDa
 		base.Apply<PropMediumItemGrid>(propMediumItemGrid);
 	}
 
-	// Token: 0x0600ADED RID: 44525 RVA: 0x002732DB File Offset: 0x002714DB
+	// Token: 0x060081D4 RID: 33236 RVA: 0x0027D79F File Offset: 0x0027B99F
 	[NullableContext(1)]
 	public void RefreshByView(PhantomItemData data)
 	{
 		this.RefreshPrivate(data);
 	}
 
-	// Token: 0x0600ADEE RID: 44526 RVA: 0x002732E4 File Offset: 0x002714E4
+	// Token: 0x060081D5 RID: 33237 RVA: 0x0027D7A8 File Offset: 0x0027B9A8
 	private void ShowItemTips()
 	{
 		PhantomItemData itemData = this.ItemData;
@@ -150,8 +150,8 @@ public class VisionRefineMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemDa
 		EventSystem.Instance.Emit<int, int>(EEventName.OnSelectItemAdd, itemData.GetConfigId(), itemData.GetUniqueId());
 	}
 
-	// Token: 0x17000E70 RID: 3696
-	// (get) Token: 0x0600ADEF RID: 44527 RVA: 0x00273318 File Offset: 0x00271518
+	// Token: 0x17000E93 RID: 3731
+	// (get) Token: 0x060081D6 RID: 33238 RVA: 0x0027D7DC File Offset: 0x0027B9DC
 	private PhantomItemData ItemData
 	{
 		get
@@ -160,18 +160,18 @@ public class VisionRefineMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemDa
 		}
 	}
 
-	// Token: 0x04004F04 RID: 20228
+	// Token: 0x04004FAE RID: 20398
 	public Func<PhantomItemData, bool> CheckSelectByView;
 
-	// Token: 0x04004F05 RID: 20229
+	// Token: 0x04004FAF RID: 20399
 	public Func<PhantomItemData, bool> CheckFocusByView;
 
-	// Token: 0x04004F06 RID: 20230
+	// Token: 0x04004FB0 RID: 20400
 	public Func<PhantomItemData, bool> CheckWarningByView;
 
-	// Token: 0x04004F07 RID: 20231
+	// Token: 0x04004FB1 RID: 20401
 	public Func<PhantomItemData, int> GetSelectedCountByView;
 
-	// Token: 0x04004F08 RID: 20232
+	// Token: 0x04004FB2 RID: 20402
 	public Func<EVisionRefineRefineType> GetRefineType;
 }

@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.GamePlay.ElementalCasket
 {
-	// Token: 0x02003E68 RID: 15976
+	// Token: 0x02003157 RID: 12631
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,93 +14,86 @@ namespace AkiClient.Game.Aki.GamePlay.ElementalCasket
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class SPlayerElementalCoreAudioConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602830D RID: 164621 RVA: 0x009A640C File Offset: 0x009A460C
+		// Token: 0x0601F153 RID: 127315 RVA: 0x00925F88 File Offset: 0x00924188
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SPlayerElementalCoreAudioConfig._ScriptStructPtr != 0) ? SPlayerElementalCoreAudioConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/GamePlay/ElementalCasket/SPlayerElementalCoreAudioConfig.SPlayerElementalCoreAudioConfig", ref SPlayerElementalCoreAudioConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x17005C3D RID: 23613
-		// (get) Token: 0x0602830E RID: 164622 RVA: 0x009A6430 File Offset: 0x009A4630
-		// (set) Token: 0x0602830F RID: 164623 RVA: 0x009A6444 File Offset: 0x009A4644
+		// Token: 0x17003744 RID: 14148
+		// (get) Token: 0x0601F154 RID: 127316 RVA: 0x00925FAC File Offset: 0x009241AC
+		// (set) Token: 0x0601F155 RID: 127317 RVA: 0x00925FC0 File Offset: 0x009241C0
 		public unsafe string WhooshEventName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SPlayerElementalCoreAudioConfig.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SPlayerElementalCoreAudioConfig.__PropertyOffset_WhooshEventName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SPlayerElementalCoreAudioConfig.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SPlayerElementalCoreAudioConfig.__PropertyOffset_WhooshEventName)), value);
 			}
 		}
 
-		// Token: 0x17005C3E RID: 23614
-		// (get) Token: 0x06028310 RID: 164624 RVA: 0x009A6459 File Offset: 0x009A4659
-		// (set) Token: 0x06028311 RID: 164625 RVA: 0x009A646D File Offset: 0x009A466D
+		// Token: 0x17003745 RID: 14149
+		// (get) Token: 0x0601F156 RID: 127318 RVA: 0x00925FD5 File Offset: 0x009241D5
+		// (set) Token: 0x0601F157 RID: 127319 RVA: 0x00925FE9 File Offset: 0x009241E9
 		public unsafe string LoopEventName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SPlayerElementalCoreAudioConfig.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SPlayerElementalCoreAudioConfig.__PropertyOffset_LoopEventName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SPlayerElementalCoreAudioConfig.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SPlayerElementalCoreAudioConfig.__PropertyOffset_LoopEventName)), value);
 			}
 		}
 
-		// Token: 0x06028312 RID: 164626 RVA: 0x009A6482 File Offset: 0x009A4682
+		// Token: 0x0601F158 RID: 127320 RVA: 0x00925FFE File Offset: 0x009241FE
 		public SPlayerElementalCoreAudioConfig()
 		{
 		}
 
-		// Token: 0x06028313 RID: 164627 RVA: 0x009A648A File Offset: 0x009A468A
-		public SPlayerElementalCoreAudioConfig(string WhooshEventName, string LoopEventName)
-		{
-			this.WhooshEventName = WhooshEventName;
-			this.LoopEventName = LoopEventName;
-		}
-
-		// Token: 0x06028314 RID: 164628 RVA: 0x009A64A0 File Offset: 0x009A46A0
+		// Token: 0x0601F159 RID: 127321 RVA: 0x00926006 File Offset: 0x00924206
 		protected override IntPtr GetUStructPtr()
 		{
 			return SPlayerElementalCoreAudioConfig.StaticStruct();
 		}
 
-		// Token: 0x06028315 RID: 164629 RVA: 0x009A64AC File Offset: 0x009A46AC
+		// Token: 0x0601F15A RID: 127322 RVA: 0x00926012 File Offset: 0x00924212
 		[NullableContext(2)]
 		public SPlayerElementalCoreAudioConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028316 RID: 164630 RVA: 0x009A64B6 File Offset: 0x009A46B6
+		// Token: 0x0601F15B RID: 127323 RVA: 0x0092601C File Offset: 0x0092421C
 		public SPlayerElementalCoreAudioConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028317 RID: 164631 RVA: 0x009A64C1 File Offset: 0x009A46C1
+		// Token: 0x0601F15C RID: 127324 RVA: 0x00926027 File Offset: 0x00924227
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SPlayerElementalCoreAudioConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06028318 RID: 164632 RVA: 0x009A64CB File Offset: 0x009A46CB
+		// Token: 0x0601F15D RID: 127325 RVA: 0x00926031 File Offset: 0x00924231
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SPlayerElementalCoreAudioConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401475E RID: 83806
+		// Token: 0x040109BF RID: 68031
 		public const string __ObjectPath = "/Game/Aki/GamePlay/ElementalCasket/SPlayerElementalCoreAudioConfig.SPlayerElementalCoreAudioConfig";
 
-		// Token: 0x0401475F RID: 83807
+		// Token: 0x040109C0 RID: 68032
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014760 RID: 83808
-		internal static int __PropertyOffset_0;
+		// Token: 0x040109C1 RID: 68033
+		internal static int __PropertyOffset_WhooshEventName;
 
-		// Token: 0x04014761 RID: 83809
-		internal static int __PropertyOffset_1;
+		// Token: 0x040109C2 RID: 68034
+		internal static int __PropertyOffset_LoopEventName;
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.Views
 {
-	// Token: 0x0200540F RID: 21519
+	// Token: 0x020043F2 RID: 17394
 	public class MenuScrollSettingSliderItem : MenuScrollSettingBaseItem
 	{
-		// Token: 0x06037001 RID: 225281 RVA: 0x00D084A8 File Offset: 0x00D066A8
+		// Token: 0x0602BF4A RID: 180042 RVA: 0x00C578C4 File Offset: 0x00C55AC4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,14 +25,14 @@ namespace CSharpScript.Game.Module.Menu.Views
 			};
 		}
 
-		// Token: 0x06037002 RID: 225282 RVA: 0x00D0855A File Offset: 0x00D0675A
+		// Token: 0x0602BF4B RID: 180043 RVA: 0x00C57976 File Offset: 0x00C55B76
 		protected override void OnStart()
 		{
 			base.GetSlider(1).SetCanClickWhenDisable(true);
 			this.AddSliderEvent();
 		}
 
-		// Token: 0x06037003 RID: 225283 RVA: 0x00D0856F File Offset: 0x00D0676F
+		// Token: 0x0602BF4C RID: 180044 RVA: 0x00C5798B File Offset: 0x00C55B8B
 		protected override void OnClear()
 		{
 			FLGUISliderDynamicDelegate onValueChangeCb = base.GetSlider(1).OnValueChangeCb;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06037004 RID: 225284 RVA: 0x00D085AE File Offset: 0x00D067AE
+		// Token: 0x0602BF4D RID: 180045 RVA: 0x00C579CA File Offset: 0x00C55BCA
 		[NullableContext(1)]
 		public override void Update(MenuData data, bool bGameSettingsUpdate)
 		{
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.RefreshDetailSprite().Forget();
 		}
 
-		// Token: 0x06037005 RID: 225285 RVA: 0x00D085DD File Offset: 0x00D067DD
+		// Token: 0x0602BF4E RID: 180046 RVA: 0x00C579F9 File Offset: 0x00C55BF9
 		private void RefreshTitle()
 		{
 			base.GetText(0).ShowTextNew(this.Data.FunctionName ?? "");
 		}
 
-		// Token: 0x06037006 RID: 225286 RVA: 0x00D08600 File Offset: 0x00D06800
+		// Token: 0x0602BF4F RID: 180047 RVA: 0x00C57A1C File Offset: 0x00C55C1C
 		private void RefreshSlider()
 		{
 			float[] sliderRange = this.Data.SliderRange;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			float num2 = sliderRange[1];
 			MenuModel instance = MenuModel.Instance;
 			float? num3 = (instance != null) ? instance.GetDataCacheOrCurValueFloat(this.Data.FunctionId) : null;
-			float floatPointFloor = MathUtils.Instance.GetFloatPointFloor(num3.Value, this.Data.SliderDigits);
+			float floatPointFloor = MathUtils.Instance.GetFloatPointFloor(num3.GetValueOrDefault(), this.Data.SliderDigits);
 			UUISliderComponent slider = base.GetSlider(1);
 			UUIItem rootComponent = slider.GetRootComponent();
 			if (rootComponent != null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.SetSlider(MathUtils.Instance.Clamp(floatPointFloor, num, num2), false);
 		}
 
-		// Token: 0x06037007 RID: 225287 RVA: 0x00D086A0 File Offset: 0x00D068A0
+		// Token: 0x0602BF50 RID: 180048 RVA: 0x00C57ABC File Offset: 0x00C55CBC
 		private void AddSliderEvent()
 		{
 			UUISliderComponent slider = base.GetSlider(1);
@@ -108,13 +108,13 @@ namespace CSharpScript.Game.Module.Menu.Views
 			slider2.OnEndDragCb.Bind(new Action(this.OnSliderEndDragCallback));
 		}
 
-		// Token: 0x06037008 RID: 225288 RVA: 0x00D086F2 File Offset: 0x00D068F2
+		// Token: 0x0602BF51 RID: 180049 RVA: 0x00C57B0E File Offset: 0x00C55D0E
 		private void OnSliderChangeCallback(float position)
 		{
 			this.OnSliderChangeCallback(position, true);
 		}
 
-		// Token: 0x06037009 RID: 225289 RVA: 0x00D086FC File Offset: 0x00D068FC
+		// Token: 0x0602BF52 RID: 180050 RVA: 0x00C57B18 File Offset: 0x00C55D18
 		private void OnSliderChangeCallback(float position, bool fire = true)
 		{
 			if (base.GetItemClickLimit(base.GetSlider(1)))
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.SetSliderText(position, fire);
 		}
 
-		// Token: 0x0603700A RID: 225290 RVA: 0x00D08723 File Offset: 0x00D06923
+		// Token: 0x0602BF53 RID: 180051 RVA: 0x00C57B3F File Offset: 0x00C55D3F
 		private void OnSliderEndDragCallback()
 		{
 			if (base.GetItemClickLimit(base.GetSlider(1)))
@@ -135,14 +135,14 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.OnSliderEnd();
 		}
 
-		// Token: 0x0603700B RID: 225291 RVA: 0x00D0873B File Offset: 0x00D0693B
+		// Token: 0x0602BF54 RID: 180052 RVA: 0x00C57B57 File Offset: 0x00C55D57
 		private void SetSlider(float position, bool fire = true)
 		{
 			base.GetSlider(1).SetValue(position, fire);
 			this.SetSliderText(position, fire);
 		}
 
-		// Token: 0x0603700C RID: 225292 RVA: 0x00D08754 File Offset: 0x00D06954
+		// Token: 0x0602BF55 RID: 180053 RVA: 0x00C57B70 File Offset: 0x00C55D70
 		private void SetSliderText(float position, bool fire = true)
 		{
 			float sliderDisplayValue = FunctionItemViewTool.GetSliderDisplayValue(this.Data, position);
@@ -153,14 +153,14 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x0603700D RID: 225293 RVA: 0x00D08791 File Offset: 0x00D06991
+		// Token: 0x0602BF56 RID: 180054 RVA: 0x00C57BAD File Offset: 0x00C55DAD
 		private void OnSliderEnd()
 		{
 			MenuModel.Instance.IsEdited = true;
 			this.PlaySequenceByName("Flashing".ToString());
 		}
 
-		// Token: 0x0603700E RID: 225294 RVA: 0x00D087B3 File Offset: 0x00D069B3
+		// Token: 0x0602BF57 RID: 180055 RVA: 0x00C57BCF File Offset: 0x00C55DCF
 		public override void SetInteractionActive(bool val)
 		{
 			base.GetSlider(1).SetSelfInteractive(val);
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x0603700F RID: 225295 RVA: 0x00D087D8 File Offset: 0x00D069D8
+		// Token: 0x0602BF58 RID: 180056 RVA: 0x00C57BF4 File Offset: 0x00C55DF4
 		protected override void OnSetDetailVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(3);
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06037010 RID: 225296 RVA: 0x00D08888 File Offset: 0x00D06A88
+		// Token: 0x0602BF59 RID: 180057 RVA: 0x00C57CA4 File Offset: 0x00C55EA4
 		private void RefreshDetailText()
 		{
 			if (this.Data == null)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			LguiUtil.Instance.SetLocalTextNew(text, detailTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x06037011 RID: 225297 RVA: 0x00D088D1 File Offset: 0x00D06AD1
+		// Token: 0x0602BF5A RID: 180058 RVA: 0x00C57CED File Offset: 0x00C55EED
 		private void RefreshDetailSpriteVisible()
 		{
 			if (this.Data == null)
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			sprite.SetUIActive(this.Data.ShowHelpBtn());
 		}
 
-		// Token: 0x06037012 RID: 225298 RVA: 0x00D088F8 File Offset: 0x00D06AF8
+		// Token: 0x0602BF5B RID: 180059 RVA: 0x00C57D14 File Offset: 0x00C55F14
 		public UniTask RefreshDetailSprite()
 		{
 			MenuScrollSettingSliderItem.<RefreshDetailSprite>d__19 <RefreshDetailSprite>d__;
@@ -234,31 +234,31 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return <RefreshDetailSprite>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401D042 RID: 118850
+		// Token: 0x04017ADB RID: 96987
 		private float DisableValue;
 
-		// Token: 0x0200B6A6 RID: 46758
+		// Token: 0x0200A0DE RID: 41182
 		private class EComponents
 		{
-			// Token: 0x04037560 RID: 226656
+			// Token: 0x04031FB5 RID: 204725
 			public const int Title = 0;
 
-			// Token: 0x04037561 RID: 226657
+			// Token: 0x04031FB6 RID: 204726
 			public const int Slider = 1;
 
-			// Token: 0x04037562 RID: 226658
+			// Token: 0x04031FB7 RID: 204727
 			public const int SliderText = 2;
 
-			// Token: 0x04037563 RID: 226659
+			// Token: 0x04031FB8 RID: 204728
 			public const int DetailItem = 3;
 
-			// Token: 0x04037564 RID: 226660
+			// Token: 0x04031FB9 RID: 204729
 			public const int DetailText = 4;
 
-			// Token: 0x04037565 RID: 226661
+			// Token: 0x04031FBA RID: 204730
 			public const int DetailSprite = 5;
 
-			// Token: 0x04037566 RID: 226662
+			// Token: 0x04031FBB RID: 204731
 			public const int DetailToggleTransition = 6;
 		}
 	}

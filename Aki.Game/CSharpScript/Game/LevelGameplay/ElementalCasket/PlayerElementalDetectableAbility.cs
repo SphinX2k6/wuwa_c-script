@@ -6,29 +6,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E72 RID: 28274
+	// Token: 0x02005FF3 RID: 24563
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalDetectableAbility : LevelEntityAbilityBase
 	{
-		// Token: 0x06044E86 RID: 282246 RVA: 0x01104E2B File Offset: 0x0110302B
+		// Token: 0x0603B022 RID: 241698 RVA: 0x010AF443 File Offset: 0x010AD643
 		public PlayerElementalDetectableAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044E87 RID: 282247 RVA: 0x01104E38 File Offset: 0x01103038
+		// Token: 0x0603B023 RID: 241699 RVA: 0x010AF450 File Offset: 0x010AD650
 		public override bool OnAddAbility(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>() != null;
 		}
 
-		// Token: 0x06044E88 RID: 282248 RVA: 0x01104E43 File Offset: 0x01103043
+		// Token: 0x0603B024 RID: 241700 RVA: 0x010AF45B File Offset: 0x010AD65B
 		public override bool ShouldActivate(Entity entity)
 		{
 			return GameModeModel.Instance.WorldDone;
 		}
 
-		// Token: 0x06044E89 RID: 282249 RVA: 0x01104E50 File Offset: 0x01103050
+		// Token: 0x0603B025 RID: 241701 RVA: 0x010AF468 File Offset: 0x010AD668
 		public override void OnActivated(Entity entity)
 		{
 			UKuroFastCollisionShapeComponent detectableShapeComp = entity.GetComponent<PlayerElementalCasketComponent>().DetectableShapeComp;
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E8A RID: 282250 RVA: 0x01104E90 File Offset: 0x01103090
+		// Token: 0x0603B026 RID: 241702 RVA: 0x010AF4A8 File Offset: 0x010AD6A8
 		public override void OnDeactivated(Entity entity)
 		{
 			this.LastEntityId = 0;
 			ElementalCasketController.Instance.UnregisterDetectable(entity.Id);
 		}
 
-		// Token: 0x06044E8B RID: 282251 RVA: 0x01104EAC File Offset: 0x011030AC
+		// Token: 0x0603B027 RID: 241703 RVA: 0x010AF4C4 File Offset: 0x010AD6C4
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -96,7 +96,17 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.LastEntityId = getCurrentEntity.Id;
 		}
 
-		// Token: 0x04023E15 RID: 146965
+		// Token: 0x17006F72 RID: 28530
+		// (get) Token: 0x0603B028 RID: 241704 RVA: 0x010AF5C7 File Offset: 0x010AD7C7
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F0CD RID: 127181
 		private int LastEntityId;
 	}
 }

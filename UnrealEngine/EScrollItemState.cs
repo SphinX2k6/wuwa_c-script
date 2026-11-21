@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FF0 RID: 8176
+	// Token: 0x02000652 RID: 1618
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.EScrollItemState")]
 	public enum EScrollItemState : byte
 	{
-		// Token: 0x04010BE7 RID: 68583
+		// Token: 0x04003DEA RID: 15850
 		DeActive,
-		// Token: 0x04010BE8 RID: 68584
+		// Token: 0x04003DEB RID: 15851
 		Updating,
-		// Token: 0x04010BE9 RID: 68585
+		// Token: 0x04003DEC RID: 15852
 		Completed,
-		// Token: 0x04010BEA RID: 68586
+		// Token: 0x04003DED RID: 15853
 		EScrollItemState_MAX
 	}
 }

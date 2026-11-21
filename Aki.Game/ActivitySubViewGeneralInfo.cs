@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001688 RID: 5768
+// Token: 0x02000B40 RID: 2880
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 {
-	// Token: 0x0600A37E RID: 41854 RVA: 0x00242AF0 File Offset: 0x00240CF0
+	// Token: 0x0600775C RID: 30556 RVA: 0x0024CB58 File Offset: 0x0024AD58
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -30,12 +30,12 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A37F RID: 41855 RVA: 0x00242B9B File Offset: 0x00240D9B
+	// Token: 0x0600775D RID: 30557 RVA: 0x0024CC03 File Offset: 0x0024AE03
 	protected override void OnSetData()
 	{
 	}
 
-	// Token: 0x0600A380 RID: 41856 RVA: 0x00242BA0 File Offset: 0x00240DA0
+	// Token: 0x0600775E RID: 30558 RVA: 0x0024CC08 File Offset: 0x0024AE08
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewGeneralInfo.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A381 RID: 41857 RVA: 0x00242BE4 File Offset: 0x00240DE4
+	// Token: 0x0600775F RID: 30559 RVA: 0x0024CC4C File Offset: 0x0024AE4C
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -84,20 +84,20 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x0600A382 RID: 41858 RVA: 0x00242D58 File Offset: 0x00240F58
+	// Token: 0x06007760 RID: 30560 RVA: 0x0024CDC0 File Offset: 0x0024AFC0
 	public new void OnRefreshView()
 	{
 		this.RefreshFunction();
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x0600A383 RID: 41859 RVA: 0x00242D66 File Offset: 0x00240F66
+	// Token: 0x06007761 RID: 30561 RVA: 0x0024CDCE File Offset: 0x0024AFCE
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x0600A384 RID: 41860 RVA: 0x00242D70 File Offset: 0x00240F70
+	// Token: 0x06007762 RID: 30562 RVA: 0x0024CDD8 File Offset: 0x0024AFD8
 	public void RefreshFunction()
 	{
 		bool flag = this.ActivityBaseData.IsUnLock();
@@ -140,7 +140,7 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		titleComponent.SetTogActPlayTypeInteractive(togActPlayTypeInteractive);
 	}
 
-	// Token: 0x0600A385 RID: 41861 RVA: 0x00242E44 File Offset: 0x00241044
+	// Token: 0x06007763 RID: 30563 RVA: 0x0024CEAC File Offset: 0x0024B0AC
 	private void RefreshTimerText()
 	{
 		if (this.HideRemainTimeInternal)
@@ -158,14 +158,14 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600A386 RID: 41862 RVA: 0x00242E96 File Offset: 0x00241096
+	// Token: 0x06007764 RID: 30564 RVA: 0x0024CEFE File Offset: 0x0024B0FE
 	public void HideRemainTime()
 	{
 		this.HideRemainTimeInternal = true;
 		this.TitleComponent.SetTimeTextVisible(false);
 	}
 
-	// Token: 0x0600A387 RID: 41863 RVA: 0x00242EAB File Offset: 0x002410AB
+	// Token: 0x06007765 RID: 30565 RVA: 0x0024CF13 File Offset: 0x0024B113
 	[NullableContext(1)]
 	public void SetBtnText(string textId, params object[] args)
 	{
@@ -182,7 +182,7 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		functionButton.SetLocalTextNew(textId, args);
 	}
 
-	// Token: 0x0600A388 RID: 41864 RVA: 0x00242EC9 File Offset: 0x002410C9
+	// Token: 0x06007766 RID: 30566 RVA: 0x0024CF31 File Offset: 0x0024B131
 	public void SetClickFunc([Nullable(new byte[]
 	{
 		1,
@@ -192,14 +192,14 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		this.ClickFunc = clickFunc;
 	}
 
-	// Token: 0x0600A389 RID: 41865 RVA: 0x00242ED2 File Offset: 0x002410D2
+	// Token: 0x06007767 RID: 30567 RVA: 0x0024CF3A File Offset: 0x0024B13A
 	[NullableContext(1)]
 	public void SetShowReceivedCallBack(Func<TItem, bool> showReceivedCallBack)
 	{
 		this.ShowReceivedCallBack = showReceivedCallBack;
 	}
 
-	// Token: 0x0600A38A RID: 41866 RVA: 0x00242EDB File Offset: 0x002410DB
+	// Token: 0x06007768 RID: 30568 RVA: 0x0024CF43 File Offset: 0x0024B143
 	private void FunctionExecute()
 	{
 		Action<ActivityBaseData> clickFunc = this.ClickFunc;
@@ -210,7 +210,7 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		clickFunc(this.ActivityBaseData);
 	}
 
-	// Token: 0x0600A38B RID: 41867 RVA: 0x00242EF3 File Offset: 0x002410F3
+	// Token: 0x06007769 RID: 30569 RVA: 0x0024CF5B File Offset: 0x0024B15B
 	public void SetFunctionRedDotVisible(bool bVisible)
 	{
 		ActivityFunctionalTypeA functionalComponent = this.FunctionalComponent;
@@ -221,7 +221,7 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		functionalComponent.SetFunctionRedDotVisible(bVisible);
 	}
 
-	// Token: 0x0600A38C RID: 41868 RVA: 0x00242F06 File Offset: 0x00241106
+	// Token: 0x0600776A RID: 30570 RVA: 0x0024CF6E File Offset: 0x0024B16E
 	[NullableContext(1)]
 	public void SetRewardButtonFunction(Action buttonFunction)
 	{
@@ -233,7 +233,7 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		functionalComponent.SetRewardButtonFunction(buttonFunction);
 	}
 
-	// Token: 0x0600A38D RID: 41869 RVA: 0x00242F19 File Offset: 0x00241119
+	// Token: 0x0600776B RID: 30571 RVA: 0x0024CF81 File Offset: 0x0024B181
 	public void SetPanelTipVisible(bool bVisible)
 	{
 		ActivityFunctionalTypeA functionalComponent = this.FunctionalComponent;
@@ -244,7 +244,7 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		functionalComponent.SetPanelTipVisible(bVisible);
 	}
 
-	// Token: 0x0600A38E RID: 41870 RVA: 0x00242F2C File Offset: 0x0024112C
+	// Token: 0x0600776C RID: 30572 RVA: 0x0024CF94 File Offset: 0x0024B194
 	[NullableContext(1)]
 	public void SetSubTitleTextById(string textId)
 	{
@@ -252,13 +252,13 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		this.TitleComponent.SetSubTitleByTextId(textId, Array.Empty<string>());
 	}
 
-	// Token: 0x0600A38F RID: 41871 RVA: 0x00242F4B File Offset: 0x0024114B
+	// Token: 0x0600776D RID: 30573 RVA: 0x0024CFB3 File Offset: 0x0024B1B3
 	public ActivityFunctionalTypeA GetFunctional()
 	{
 		return this.FunctionalComponent;
 	}
 
-	// Token: 0x0600A390 RID: 41872 RVA: 0x00242F53 File Offset: 0x00241153
+	// Token: 0x0600776E RID: 30574 RVA: 0x0024CFBB File Offset: 0x0024B1BB
 	public UUIItem GetFunctionalButtonItem()
 	{
 		ActivityFunctionalTypeA functionalComponent = this.FunctionalComponent;
@@ -269,7 +269,7 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		return functionalComponent.GetFunctionButtonItem();
 	}
 
-	// Token: 0x0600A391 RID: 41873 RVA: 0x00242F66 File Offset: 0x00241166
+	// Token: 0x0600776F RID: 30575 RVA: 0x0024CFCE File Offset: 0x0024B1CE
 	public void SetRewardComponentVisible(bool visible)
 	{
 		UUIItem item = base.GetItem(2);
@@ -280,13 +280,13 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 		item.SetUIActive(visible);
 	}
 
-	// Token: 0x04004A43 RID: 19011
+	// Token: 0x04004AEA RID: 19178
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04004A44 RID: 19012
+	// Token: 0x04004AEB RID: 19179
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x04004A45 RID: 19013
+	// Token: 0x04004AEC RID: 19180
 	[Nullable(new byte[]
 	{
 		2,
@@ -294,32 +294,32 @@ public class ActivitySubViewGeneralInfo : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x04004A46 RID: 19014
+	// Token: 0x04004AED RID: 19181
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x04004A47 RID: 19015
+	// Token: 0x04004AEE RID: 19182
 	private Action<ActivityBaseData> ClickFunc;
 
-	// Token: 0x04004A48 RID: 19016
+	// Token: 0x04004AEF RID: 19183
 	private Func<TItem, bool> ShowReceivedCallBack;
 
-	// Token: 0x04004A49 RID: 19017
+	// Token: 0x04004AF0 RID: 19184
 	private bool HideRemainTimeInternal;
 
-	// Token: 0x02007C55 RID: 31829
+	// Token: 0x02006DDA RID: 28122
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04028CC5 RID: 167109
+		// Token: 0x04023FEF RID: 147439
 		public const int TitleItem = 0;
 
-		// Token: 0x04028CC6 RID: 167110
+		// Token: 0x04023FF0 RID: 147440
 		public const int DescriptionItem = 1;
 
-		// Token: 0x04028CC7 RID: 167111
+		// Token: 0x04023FF1 RID: 147441
 		public const int RewardListItem = 2;
 
-		// Token: 0x04028CC8 RID: 167112
+		// Token: 0x04023FF2 RID: 147442
 		public const int FunctionArea = 3;
 	}
 }

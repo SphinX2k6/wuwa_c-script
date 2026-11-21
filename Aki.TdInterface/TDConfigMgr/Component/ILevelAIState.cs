@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004BE RID: 1214
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000517 RID: 1303
 	public class ILevelAIState
 	{
-		// Token: 0x06001898 RID: 6296 RVA: 0x00049824 File Offset: 0x00047A24
+		// Token: 0x06001A32 RID: 6706 RVA: 0x0004D56C File Offset: 0x0004B76C
 		private ILevelAIState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001899 RID: 6297 RVA: 0x0004985C File Offset: 0x00047A5C
+		// Token: 0x06001A33 RID: 6707 RVA: 0x0004D5A4 File Offset: 0x0004B7A4
 		public static ILevelAIState Create([Nullable(2)] ILevelAIState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600189A RID: 6298 RVA: 0x0004986F File Offset: 0x00047A6F
+		// Token: 0x06001A34 RID: 6708 RVA: 0x0004D5B7 File Offset: 0x0004B7B7
 		public static ILevelAIState CreateFromSetValue([Nullable(2)] ILevelAIState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600189B RID: 6299 RVA: 0x00049882 File Offset: 0x00047A82
+		// Token: 0x06001A35 RID: 6709 RVA: 0x0004D5CA File Offset: 0x0004B7CA
 		public ILevelAIState_SetValue ToSetValue()
 		{
 			return new ILevelAIState_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700068E RID: 1678
-		// (get) Token: 0x0600189C RID: 6300 RVA: 0x000498B9 File Offset: 0x00047AB9
-		// (set) Token: 0x0600189D RID: 6301 RVA: 0x000498E4 File Offset: 0x00047AE4
+		// Token: 0x170006F5 RID: 1781
+		// (get) Token: 0x06001A36 RID: 6710 RVA: 0x0004D601 File Offset: 0x0004B801
+		// (set) Token: 0x06001A37 RID: 6711 RVA: 0x0004D62C File Offset: 0x0004B82C
 		public virtual int StateId
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700068F RID: 1679
-		// (get) Token: 0x0600189E RID: 6302 RVA: 0x000498F2 File Offset: 0x00047AF2
-		// (set) Token: 0x0600189F RID: 6303 RVA: 0x0004991D File Offset: 0x00047B1D
+		// Token: 0x170006F6 RID: 1782
+		// (get) Token: 0x06001A38 RID: 6712 RVA: 0x0004D63A File Offset: 0x0004B83A
+		// (set) Token: 0x06001A39 RID: 6713 RVA: 0x0004D665 File Offset: 0x0004B865
 		public virtual string StateName
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000690 RID: 1680
-		// (get) Token: 0x060018A0 RID: 6304 RVA: 0x0004992C File Offset: 0x00047B2C
-		// (set) Token: 0x060018A1 RID: 6305 RVA: 0x0004998D File Offset: 0x00047B8D
+		// Token: 0x170006F7 RID: 1783
+		// (get) Token: 0x06001A3A RID: 6714 RVA: 0x0004D674 File Offset: 0x0004B874
+		// (set) Token: 0x06001A3B RID: 6715 RVA: 0x0004D6D5 File Offset: 0x0004B8D5
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000691 RID: 1681
-		// (get) Token: 0x060018A2 RID: 6306 RVA: 0x000499A2 File Offset: 0x00047BA2
-		// (set) Token: 0x060018A3 RID: 6307 RVA: 0x000499C9 File Offset: 0x00047BC9
+		// Token: 0x170006F8 RID: 1784
+		// (get) Token: 0x06001A3C RID: 6716 RVA: 0x0004D6EA File Offset: 0x0004B8EA
+		// (set) Token: 0x06001A3D RID: 6717 RVA: 0x0004D711 File Offset: 0x0004B911
 		public virtual ILevelAIBehaviourBase Behaviour
 		{
 			get
@@ -163,18 +161,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400123C RID: 4668
+		// Token: 0x0400135E RID: 4958
 		[Nullable(2)]
 		protected ILevelAIState FbInstance;
 
-		// Token: 0x0400123D RID: 4669
+		// Token: 0x0400135F RID: 4959
 		[Nullable(2)]
 		protected ILevelAIState_SetValue PocoInterface;
 
-		// Token: 0x0400123E RID: 4670
+		// Token: 0x04001360 RID: 4960
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400123F RID: 4671
+		// Token: 0x04001361 RID: 4961
 		private bool _ConditionInited;
 	}
 }

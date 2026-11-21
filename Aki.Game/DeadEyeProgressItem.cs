@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A80 RID: 6784
+// Token: 0x02000F3F RID: 3903
 [NullableContext(2)]
 [Nullable(0)]
 public class DeadEyeProgressItem : UiPanelBase
 {
-	// Token: 0x0600C7DF RID: 51167 RVA: 0x002D8894 File Offset: 0x002D6A94
+	// Token: 0x06009BEF RID: 39919 RVA: 0x002E39B0 File Offset: 0x002E1BB0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -33,7 +33,7 @@ public class DeadEyeProgressItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C7E0 RID: 51168 RVA: 0x002D8960 File Offset: 0x002D6B60
+	// Token: 0x06009BF0 RID: 39920 RVA: 0x002E3A7C File Offset: 0x002E1C7C
 	protected override void OnStart()
 	{
 		this.RootSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -45,7 +45,7 @@ public class DeadEyeProgressItem : UiPanelBase
 		EventSystem.Instance.Add(EEventName.DeadEyeModeTargetPointLocked, new Action(this.OnLockedTarget));
 	}
 
-	// Token: 0x0600C7E1 RID: 51169 RVA: 0x002D89DC File Offset: 0x002D6BDC
+	// Token: 0x06009BF1 RID: 39921 RVA: 0x002E3AF8 File Offset: 0x002E1CF8
 	protected override void OnAfterShow()
 	{
 		if (this.RootSequencePlayer != null)
@@ -58,7 +58,7 @@ public class DeadEyeProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C7E2 RID: 51170 RVA: 0x002D8A28 File Offset: 0x002D6C28
+	// Token: 0x06009BF2 RID: 39922 RVA: 0x002E3B44 File Offset: 0x002E1D44
 	protected override UniTask OnBeforeHideAsync()
 	{
 		DeadEyeProgressItem.<OnBeforeHideAsync>d__11 <OnBeforeHideAsync>d__;
@@ -69,13 +69,13 @@ public class DeadEyeProgressItem : UiPanelBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7E3 RID: 51171 RVA: 0x002D8A6B File Offset: 0x002D6C6B
+	// Token: 0x06009BF3 RID: 39923 RVA: 0x002E3B87 File Offset: 0x002E1D87
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.DeadEyeModeTargetPointLocked, new Action(this.OnLockedTarget));
 	}
 
-	// Token: 0x0600C7E4 RID: 51172 RVA: 0x002D8A8C File Offset: 0x002D6C8C
+	// Token: 0x06009BF4 RID: 39924 RVA: 0x002E3BA8 File Offset: 0x002E1DA8
 	public void OnTick(float delta)
 	{
 		if (!this.StartSequenceFinished)
@@ -101,7 +101,7 @@ public class DeadEyeProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C7E5 RID: 51173 RVA: 0x002D8B5C File Offset: 0x002D6D5C
+	// Token: 0x06009BF5 RID: 39925 RVA: 0x002E3C78 File Offset: 0x002E1E78
 	private void OnLockedTarget()
 	{
 		DeadEyeModeModel instance = DeadEyeModeModel.Instance;
@@ -113,7 +113,7 @@ public class DeadEyeProgressItem : UiPanelBase
 		this.EnableReduceSlider(true);
 	}
 
-	// Token: 0x0600C7E6 RID: 51174 RVA: 0x002D8BCC File Offset: 0x002D6DCC
+	// Token: 0x06009BF6 RID: 39926 RVA: 0x002E3CE8 File Offset: 0x002E1EE8
 	private void EnableReduceSlider(bool enable)
 	{
 		UUISliderComponent reduceSlider = this.ReduceSlider;
@@ -129,31 +129,31 @@ public class DeadEyeProgressItem : UiPanelBase
 		item.SetUIActive(enable);
 	}
 
-	// Token: 0x0600C7E7 RID: 51175 RVA: 0x002D8C0A File Offset: 0x002D6E0A
+	// Token: 0x06009BF7 RID: 39927 RVA: 0x002E3D26 File Offset: 0x002E1F26
 	private void SetRealProgressByEnergy(float energy)
 	{
 		this.SetRealProgress(energy / (float)DeadEyeModeModel.Instance.MaxEnergy);
 	}
 
-	// Token: 0x0600C7E8 RID: 51176 RVA: 0x002D8C1F File Offset: 0x002D6E1F
+	// Token: 0x06009BF8 RID: 39928 RVA: 0x002E3D3B File Offset: 0x002E1F3B
 	private void SetReduceProgressByEnergy(float energy)
 	{
 		this.SetReduceProgress(energy / (float)DeadEyeModeModel.Instance.MaxEnergy);
 	}
 
-	// Token: 0x0600C7E9 RID: 51177 RVA: 0x002D8C34 File Offset: 0x002D6E34
+	// Token: 0x06009BF9 RID: 39929 RVA: 0x002E3D50 File Offset: 0x002E1F50
 	private void SetRealProgress(float value)
 	{
 		DeadEyeProgressItem.SetSliderValue(this.EnergySlider, value);
 	}
 
-	// Token: 0x0600C7EA RID: 51178 RVA: 0x002D8C42 File Offset: 0x002D6E42
+	// Token: 0x06009BFA RID: 39930 RVA: 0x002E3D5E File Offset: 0x002E1F5E
 	private void SetReduceProgress(float value)
 	{
 		DeadEyeProgressItem.SetSliderValue(this.ReduceSlider, value);
 	}
 
-	// Token: 0x0600C7EB RID: 51179 RVA: 0x002D8C50 File Offset: 0x002D6E50
+	// Token: 0x06009BFB RID: 39931 RVA: 0x002E3D6C File Offset: 0x002E1F6C
 	private static void SetSliderValue(UUISliderComponent slider, float value)
 	{
 		if (slider != null)
@@ -162,44 +162,44 @@ public class DeadEyeProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005C4C RID: 23628
+	// Token: 0x04005D1B RID: 23835
 	private const float LERP_TIME = 1000f;
 
-	// Token: 0x04005C4D RID: 23629
+	// Token: 0x04005D1C RID: 23836
 	private UUISliderComponent EnergySlider;
 
-	// Token: 0x04005C4E RID: 23630
+	// Token: 0x04005D1D RID: 23837
 	private UUISliderComponent ReduceSlider;
 
-	// Token: 0x04005C4F RID: 23631
+	// Token: 0x04005D1E RID: 23838
 	private LevelSequencePlayer RootSequencePlayer;
 
-	// Token: 0x04005C50 RID: 23632
+	// Token: 0x04005D1F RID: 23839
 	private float CurLerpTime = 1001f;
 
-	// Token: 0x04005C51 RID: 23633
+	// Token: 0x04005D20 RID: 23840
 	private float ReduceSliderLerpStartValue;
 
-	// Token: 0x04005C52 RID: 23634
+	// Token: 0x04005D21 RID: 23841
 	private bool StartSequenceFinished;
 
-	// Token: 0x02007FDC RID: 32732
+	// Token: 0x0200716B RID: 29035
 	[NullableContext(0)]
 	private class EViewComponent
 	{
-		// Token: 0x04029BD6 RID: 170966
+		// Token: 0x04024F13 RID: 151315
 		public const int TipsNode = 0;
 
-		// Token: 0x04029BD7 RID: 170967
+		// Token: 0x04024F14 RID: 151316
 		public const int TipsText = 1;
 
-		// Token: 0x04029BD8 RID: 170968
+		// Token: 0x04024F15 RID: 151317
 		public const int ReduceSlider = 2;
 
-		// Token: 0x04029BD9 RID: 170969
+		// Token: 0x04024F16 RID: 151318
 		public const int EnergySlider = 3;
 
-		// Token: 0x04029BDA RID: 170970
+		// Token: 0x04024F17 RID: 151319
 		public const int PanelReduceLength = 4;
 	}
 }

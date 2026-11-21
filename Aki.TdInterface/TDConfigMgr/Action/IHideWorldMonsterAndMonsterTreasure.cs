@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B0F RID: 6927
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CBE RID: 7358
 	public class IHideWorldMonsterAndMonsterTreasure : IHideRangeType
 	{
-		// Token: 0x06009458 RID: 37976 RVA: 0x001579A0 File Offset: 0x00155BA0
+		// Token: 0x06009C42 RID: 40002 RVA: 0x0016867C File Offset: 0x0016687C
 		private IHideWorldMonsterAndMonsterTreasure_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009459 RID: 37977 RVA: 0x001579D8 File Offset: 0x00155BD8
+		// Token: 0x06009C43 RID: 40003 RVA: 0x001686B4 File Offset: 0x001668B4
 		public static IHideWorldMonsterAndMonsterTreasure Create([Nullable(2)] IHideWorldMonsterAndMonsterTreasure instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600945A RID: 37978 RVA: 0x001579EB File Offset: 0x00155BEB
+		// Token: 0x06009C44 RID: 40004 RVA: 0x001686C7 File Offset: 0x001668C7
 		public static IHideWorldMonsterAndMonsterTreasure CreateFromSetValue([Nullable(2)] IHideWorldMonsterAndMonsterTreasure_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600945B RID: 37979 RVA: 0x001579FE File Offset: 0x00155BFE
+		// Token: 0x06009C45 RID: 40005 RVA: 0x001686DA File Offset: 0x001668DA
 		public new IHideWorldMonsterAndMonsterTreasure_SetValue ToSetValue()
 		{
 			return new IHideWorldMonsterAndMonsterTreasure_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EEB RID: 12011
-		// (get) Token: 0x0600945C RID: 37980 RVA: 0x00157A11 File Offset: 0x00155C11
-		// (set) Token: 0x0600945D RID: 37981 RVA: 0x00157A3C File Offset: 0x00155C3C
+		// Token: 0x17003111 RID: 12561
+		// (get) Token: 0x06009C46 RID: 40006 RVA: 0x001686ED File Offset: 0x001668ED
+		// (set) Token: 0x06009C47 RID: 40007 RVA: 0x00168718 File Offset: 0x00166918
 		public override EHideType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AF8 RID: 23288
+		// Token: 0x04005F96 RID: 24470
 		[Nullable(2)]
 		protected new IHideWorldMonsterAndMonsterTreasure FbInstance;
 
-		// Token: 0x04005AF9 RID: 23289
+		// Token: 0x04005F97 RID: 24471
 		[Nullable(2)]
 		protected new IHideWorldMonsterAndMonsterTreasure_SetValue PocoInterface;
 	}

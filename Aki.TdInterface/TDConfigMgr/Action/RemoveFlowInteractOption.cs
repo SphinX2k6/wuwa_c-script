@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200214C RID: 8524
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023AD RID: 9133
 	public class RemoveFlowInteractOption : ActionParams
 	{
-		// Token: 0x0600BB9E RID: 48030 RVA: 0x001B1144 File Offset: 0x001AF344
+		// Token: 0x0600C72C RID: 50988 RVA: 0x001C82F8 File Offset: 0x001C64F8
 		private RemoveFlowInteractOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB9F RID: 48031 RVA: 0x001B117C File Offset: 0x001AF37C
+		// Token: 0x0600C72D RID: 50989 RVA: 0x001C8330 File Offset: 0x001C6530
 		public static RemoveFlowInteractOption Create([Nullable(2)] RemoveFlowInteractOption instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBA0 RID: 48032 RVA: 0x001B118F File Offset: 0x001AF38F
+		// Token: 0x0600C72E RID: 50990 RVA: 0x001C8343 File Offset: 0x001C6543
 		public static RemoveFlowInteractOption CreateFromSetValue([Nullable(2)] RemoveFlowInteractOption_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBA1 RID: 48033 RVA: 0x001B11A2 File Offset: 0x001AF3A2
+		// Token: 0x0600C72F RID: 50991 RVA: 0x001C8356 File Offset: 0x001C6556
 		public RemoveFlowInteractOption_SetValue ToSetValue()
 		{
 			return new RemoveFlowInteractOption_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700393A RID: 14650
-		// (get) Token: 0x0600BBA2 RID: 48034 RVA: 0x001B11D0 File Offset: 0x001AF3D0
-		// (set) Token: 0x0600BBA3 RID: 48035 RVA: 0x001B1231 File Offset: 0x001AF431
+		// Token: 0x17003C27 RID: 15399
+		// (get) Token: 0x0600C730 RID: 50992 RVA: 0x001C8384 File Offset: 0x001C6584
+		// (set) Token: 0x0600C731 RID: 50993 RVA: 0x001C83E5 File Offset: 0x001C65E5
 		public virtual IFlowIndex Flow
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700393B RID: 14651
-		// (get) Token: 0x0600BBA4 RID: 48036 RVA: 0x001B1246 File Offset: 0x001AF446
-		// (set) Token: 0x0600BBA5 RID: 48037 RVA: 0x001B1271 File Offset: 0x001AF471
+		// Token: 0x17003C28 RID: 15400
+		// (get) Token: 0x0600C732 RID: 50994 RVA: 0x001C83FA File Offset: 0x001C65FA
+		// (set) Token: 0x0600C733 RID: 50995 RVA: 0x001C8425 File Offset: 0x001C6625
 		public virtual int EntityId
 		{
 			get
@@ -114,9 +112,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700393C RID: 14652
-		// (get) Token: 0x0600BBA6 RID: 48038 RVA: 0x001B127F File Offset: 0x001AF47F
-		// (set) Token: 0x0600BBA7 RID: 48039 RVA: 0x001B12A6 File Offset: 0x001AF4A6
+		// Token: 0x17003C29 RID: 15401
+		// (get) Token: 0x0600C734 RID: 50996 RVA: 0x001C8433 File Offset: 0x001C6633
+		// (set) Token: 0x0600C735 RID: 50997 RVA: 0x001C845A File Offset: 0x001C665A
 		[Nullable(2)]
 		public virtual string InteractToken
 		{
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400702A RID: 28714
+		// Token: 0x0400765F RID: 30303
 		[Nullable(2)]
 		protected new RemoveFlowInteractOption FbInstance;
 
-		// Token: 0x0400702B RID: 28715
+		// Token: 0x04007660 RID: 30304
 		[Nullable(2)]
 		protected RemoveFlowInteractOption_SetValue PocoInterface;
 
-		// Token: 0x0400702C RID: 28716
+		// Token: 0x04007661 RID: 30305
 		private IFlowIndex _FlowCache;
 
-		// Token: 0x0400702D RID: 28717
+		// Token: 0x04007662 RID: 30306
 		private bool _FlowInited;
 	}
 }

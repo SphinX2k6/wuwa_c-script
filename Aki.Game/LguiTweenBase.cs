@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CDC RID: 11484
+// Token: 0x02002235 RID: 8757
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class LguiTweenBase<[Nullable(2)] T>
 {
-	// Token: 0x06018189 RID: 98697 RVA: 0x00620ED5 File Offset: 0x0061F0D5
+	// Token: 0x06015A07 RID: 88583 RVA: 0x00646B41 File Offset: 0x00644D41
 	protected void PlayFillAmount(T value)
 	{
 		Action<T> updateTween = this.UpdateTween;
@@ -18,7 +18,7 @@ public abstract class LguiTweenBase<[Nullable(2)] T>
 		updateTween(value);
 	}
 
-	// Token: 0x0601818A RID: 98698 RVA: 0x00620EE8 File Offset: 0x0061F0E8
+	// Token: 0x06015A08 RID: 88584 RVA: 0x00646B54 File Offset: 0x00644D54
 	private void PlayTweenStart()
 	{
 		Action startTween = this.StartTween;
@@ -29,7 +29,7 @@ public abstract class LguiTweenBase<[Nullable(2)] T>
 		startTween();
 	}
 
-	// Token: 0x0601818B RID: 98699 RVA: 0x00620EFA File Offset: 0x0061F0FA
+	// Token: 0x06015A09 RID: 88585 RVA: 0x00646B66 File Offset: 0x00644D66
 	private void PlayTweenComplete()
 	{
 		this.IsFinished = true;
@@ -42,7 +42,7 @@ public abstract class LguiTweenBase<[Nullable(2)] T>
 		completeTween();
 	}
 
-	// Token: 0x0601818C RID: 98700 RVA: 0x00620F1C File Offset: 0x0061F11C
+	// Token: 0x06015A0A RID: 88586 RVA: 0x00646B88 File Offset: 0x00644D88
 	public void PlayTween(T start, T end, float time, [Nullable(2)] UCurveFloat curve = null)
 	{
 		this.IsFinished = false;
@@ -60,7 +60,7 @@ public abstract class LguiTweenBase<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x0601818D RID: 98701 RVA: 0x00620FA5 File Offset: 0x0061F1A5
+	// Token: 0x06015A0B RID: 88587 RVA: 0x00646C11 File Offset: 0x00644E11
 	public void SetCurrentEase(LTweenEase ease)
 	{
 		if (this.Tweener != null)
@@ -69,7 +69,14 @@ public abstract class LguiTweenBase<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x0601818E RID: 98702 RVA: 0x00620FBC File Offset: 0x0061F1BC
+	// Token: 0x06015A0C RID: 88588 RVA: 0x00646C28 File Offset: 0x00644E28
+	[NullableContext(2)]
+	public ULTweener GetTweener()
+	{
+		return this.Tweener;
+	}
+
+	// Token: 0x06015A0D RID: 88589 RVA: 0x00646C30 File Offset: 0x00644E30
 	public void KillTween()
 	{
 		if (this.Tweener != null)
@@ -81,48 +88,48 @@ public abstract class LguiTweenBase<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x0601818F RID: 98703 RVA: 0x00620FF9 File Offset: 0x0061F1F9
+	// Token: 0x06015A0E RID: 88590 RVA: 0x00646C6D File Offset: 0x00644E6D
 	public void BindStartTween(Action startTween)
 	{
 		this.StartTween = startTween;
 	}
 
-	// Token: 0x06018190 RID: 98704 RVA: 0x00621002 File Offset: 0x0061F202
+	// Token: 0x06015A0F RID: 88591 RVA: 0x00646C76 File Offset: 0x00644E76
 	public void BindUpdateTween(Action<T> updateTween)
 	{
 		this.UpdateTween = updateTween;
 	}
 
-	// Token: 0x06018191 RID: 98705 RVA: 0x0062100B File Offset: 0x0061F20B
+	// Token: 0x06015A10 RID: 88592 RVA: 0x00646C7F File Offset: 0x00644E7F
 	public void BindCompleteTween(Action completeTween)
 	{
 		this.CompleteTween = completeTween;
 	}
 
-	// Token: 0x06018192 RID: 98706 RVA: 0x00621014 File Offset: 0x0061F214
+	// Token: 0x06015A11 RID: 88593 RVA: 0x00646C88 File Offset: 0x00644E88
 	public void Destroy()
 	{
 		this.KillTween();
 		this.OnDestroy();
 	}
 
-	// Token: 0x06018193 RID: 98707 RVA: 0x00621022 File Offset: 0x0061F222
+	// Token: 0x06015A12 RID: 88594 RVA: 0x00646C96 File Offset: 0x00644E96
 	protected virtual void OnDestroy()
 	{
 	}
 
-	// Token: 0x06018194 RID: 98708
+	// Token: 0x06015A13 RID: 88595
 	[return: Nullable(2)]
 	protected abstract ULTweener CreateTween(T start, T end, float time);
 
-	// Token: 0x0400B344 RID: 45892
+	// Token: 0x0400B6B0 RID: 46768
 	public bool IsFinished;
 
-	// Token: 0x0400B345 RID: 45893
+	// Token: 0x0400B6B1 RID: 46769
 	[Nullable(2)]
 	protected ULTweener Tweener;
 
-	// Token: 0x0400B346 RID: 45894
+	// Token: 0x0400B6B2 RID: 46770
 	[Nullable(new byte[]
 	{
 		2,
@@ -130,11 +137,11 @@ public abstract class LguiTweenBase<[Nullable(2)] T>
 	})]
 	public Action<T> UpdateTween;
 
-	// Token: 0x0400B347 RID: 45895
+	// Token: 0x0400B6B3 RID: 46771
 	[Nullable(2)]
 	public Action StartTween;
 
-	// Token: 0x0400B348 RID: 45896
+	// Token: 0x0400B6B4 RID: 46772
 	[Nullable(2)]
 	public Action CompleteTween;
 }

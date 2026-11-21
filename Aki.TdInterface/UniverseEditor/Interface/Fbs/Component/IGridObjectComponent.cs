@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200532D RID: 21293
+	// Token: 0x020058B3 RID: 22707
 	public struct IGridObjectComponent : IFlatbufferObject
 	{
-		// Token: 0x17009C68 RID: 40040
-		// (get) Token: 0x06022CF4 RID: 142580 RVA: 0x004D2C68 File Offset: 0x004D0E68
+		// Token: 0x1700A4A0 RID: 42144
+		// (get) Token: 0x06024DA8 RID: 150952 RVA: 0x0050FB3C File Offset: 0x0050DD3C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022CF5 RID: 142581 RVA: 0x004D2C75 File Offset: 0x004D0E75
+		// Token: 0x06024DA9 RID: 150953 RVA: 0x0050FB49 File Offset: 0x0050DD49
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022CF6 RID: 142582 RVA: 0x004D2C7C File Offset: 0x004D0E7C
+		// Token: 0x06024DAA RID: 150954 RVA: 0x0050FB50 File Offset: 0x0050DD50
 		public static IGridObjectComponent GetRootAsIGridObjectComponent(ByteBuffer _bb)
 		{
 			return IGridObjectComponent.GetRootAsIGridObjectComponent(_bb, default(IGridObjectComponent));
 		}
 
-		// Token: 0x06022CF7 RID: 142583 RVA: 0x004D2C98 File Offset: 0x004D0E98
+		// Token: 0x06024DAB RID: 150955 RVA: 0x0050FB6C File Offset: 0x0050DD6C
 		public static IGridObjectComponent GetRootAsIGridObjectComponent(ByteBuffer _bb, IGridObjectComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022CF8 RID: 142584 RVA: 0x004D2CB5 File Offset: 0x004D0EB5
+		// Token: 0x06024DAC RID: 150956 RVA: 0x0050FB89 File Offset: 0x0050DD89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022CF9 RID: 142585 RVA: 0x004D2CC4 File Offset: 0x004D0EC4
+		// Token: 0x06024DAD RID: 150957 RVA: 0x0050FB98 File Offset: 0x0050DD98
 		public IGridObjectComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009C69 RID: 40041
-		// (get) Token: 0x06022CFA RID: 142586 RVA: 0x004D2CD4 File Offset: 0x004D0ED4
+		// Token: 0x1700A4A1 RID: 42145
+		// (get) Token: 0x06024DAE RID: 150958 RVA: 0x0050FBA8 File Offset: 0x0050DDA8
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C6A RID: 40042
-		// (get) Token: 0x06022CFB RID: 142587 RVA: 0x004D2D14 File Offset: 0x004D0F14
+		// Token: 0x1700A4A2 RID: 42146
+		// (get) Token: 0x06024DAF RID: 150959 RVA: 0x0050FBE8 File Offset: 0x0050DDE8
 		public IVector2? CellSize
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C6B RID: 40043
-		// (get) Token: 0x06022CFC RID: 142588 RVA: 0x004D2D74 File Offset: 0x004D0F74
+		// Token: 0x1700A4A3 RID: 42147
+		// (get) Token: 0x06024DB0 RID: 150960 RVA: 0x0050FC48 File Offset: 0x0050DE48
 		public byte NullMask
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022CFD RID: 142589 RVA: 0x004D2DB0 File Offset: 0x004D0FB0
+		// Token: 0x06024DB1 RID: 150961 RVA: 0x0050FC84 File Offset: 0x0050DE84
 		public static Offset<IGridObjectComponent> CreateIGridObjectComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IVector2> CellSizeOffset = default(Offset<IVector2>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -99,37 +99,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGridObjectComponent.EndIGridObjectComponent(builder);
 		}
 
-		// Token: 0x06022CFE RID: 142590 RVA: 0x004D2DD4 File Offset: 0x004D0FD4
+		// Token: 0x06024DB2 RID: 150962 RVA: 0x0050FCA8 File Offset: 0x0050DEA8
 		public static void StartIGridObjectComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022CFF RID: 142591 RVA: 0x004D2DDD File Offset: 0x004D0FDD
+		// Token: 0x06024DB3 RID: 150963 RVA: 0x0050FCB1 File Offset: 0x0050DEB1
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06022D00 RID: 142592 RVA: 0x004D2DE8 File Offset: 0x004D0FE8
+		// Token: 0x06024DB4 RID: 150964 RVA: 0x0050FCBC File Offset: 0x0050DEBC
 		public static void AddCellSize(FlatBufferBuilder builder, Offset<IVector2> cellSizeOffset)
 		{
 			builder.AddOffset(1, cellSizeOffset.Value, 0);
 		}
 
-		// Token: 0x06022D01 RID: 142593 RVA: 0x004D2DF8 File Offset: 0x004D0FF8
+		// Token: 0x06024DB5 RID: 150965 RVA: 0x0050FCCC File Offset: 0x0050DECC
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06022D02 RID: 142594 RVA: 0x004D2E03 File Offset: 0x004D1003
+		// Token: 0x06024DB6 RID: 150966 RVA: 0x0050FCD7 File Offset: 0x0050DED7
 		public static Offset<IGridObjectComponent> EndIGridObjectComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IGridObjectComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06022D03 RID: 142595 RVA: 0x004D2E10 File Offset: 0x004D1010
+		// Token: 0x06024DB7 RID: 150967 RVA: 0x0050FCE4 File Offset: 0x0050DEE4
 		public IGridObjectComponentT UnPack()
 		{
 			IGridObjectComponentT gridObjectComponentT = new IGridObjectComponentT();
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return gridObjectComponentT;
 		}
 
-		// Token: 0x06022D04 RID: 142596 RVA: 0x004D2E2C File Offset: 0x004D102C
+		// Token: 0x06024DB8 RID: 150968 RVA: 0x0050FD00 File Offset: 0x0050DF00
 		public void UnPackTo(IGridObjectComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022D05 RID: 142597 RVA: 0x004D2E80 File Offset: 0x004D1080
+		// Token: 0x06024DB9 RID: 150969 RVA: 0x0050FD54 File Offset: 0x0050DF54
 		public static Offset<IGridObjectComponent> Pack(FlatBufferBuilder builder, IGridObjectComponentT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGridObjectComponent.CreateIGridObjectComponent(builder, _o.Disabled, cellSizeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E4F0 RID: 58608
+		// Token: 0x0400F120 RID: 61728
 		private Table __p;
 	}
 }

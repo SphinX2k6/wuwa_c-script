@@ -8,23 +8,23 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002746 RID: 10054
+// Token: 0x02001C31 RID: 7217
 [NullableContext(1)]
 [Nullable(0)]
 public class RecommendQualityView : UiViewBase
 {
-	// Token: 0x06014A07 RID: 84487 RVA: 0x00537ECB File Offset: 0x005360CB
+	// Token: 0x06011EE9 RID: 73449 RVA: 0x00546C9F File Offset: 0x00544E9F
 	public RecommendQualityView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014A08 RID: 84488 RVA: 0x00537ED4 File Offset: 0x005360D4
+	// Token: 0x06011EEA RID: 73450 RVA: 0x00546CA8 File Offset: 0x00544EA8
 	protected override void OnBeforeCreate()
 	{
 		this.Model = RecommendQualityModel.Instance;
 	}
 
-	// Token: 0x06014A09 RID: 84489 RVA: 0x00537EE4 File Offset: 0x005360E4
+	// Token: 0x06011EEB RID: 73451 RVA: 0x00546CB8 File Offset: 0x00544EB8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -47,7 +47,7 @@ public class RecommendQualityView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014A0A RID: 84490 RVA: 0x00537FAC File Offset: 0x005361AC
+	// Token: 0x06011EEC RID: 73452 RVA: 0x00546D80 File Offset: 0x00544F80
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RecommendQualityView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -58,14 +58,14 @@ public class RecommendQualityView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014A0B RID: 84491 RVA: 0x00537FEF File Offset: 0x005361EF
+	// Token: 0x06011EED RID: 73453 RVA: 0x00546DC3 File Offset: 0x00544FC3
 	protected override void OnAfterDestroy()
 	{
 		this.AreaLayout = null;
 		UiManager.Instance.CloseView(EUiViewName.CreateCharacterView, null);
 	}
 
-	// Token: 0x06014A0C RID: 84492 RVA: 0x00538008 File Offset: 0x00536208
+	// Token: 0x06011EEE RID: 73454 RVA: 0x00546DDC File Offset: 0x00544FDC
 	protected override void OnAfterShow()
 	{
 		RecommendQualityModel model = this.Model;
@@ -76,7 +76,7 @@ public class RecommendQualityView : UiViewBase
 		model.FinishRecommendQualityShow();
 	}
 
-	// Token: 0x06014A0D RID: 84493 RVA: 0x0053801C File Offset: 0x0053621C
+	// Token: 0x06011EEF RID: 73455 RVA: 0x00546DF0 File Offset: 0x00544FF0
 	private void BtnSureClick()
 	{
 		if (this.AreaLayout == null)
@@ -93,16 +93,16 @@ public class RecommendQualityView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014A0E RID: 84494 RVA: 0x0053806E File Offset: 0x0053626E
+	// Token: 0x06011EF0 RID: 73456 RVA: 0x00546E42 File Offset: 0x00545042
 	private RecommendQualityItem InitItem()
 	{
 		return new RecommendQualityItem();
 	}
 
-	// Token: 0x04009AF0 RID: 39664
+	// Token: 0x04009C48 RID: 40008
 	private RecommendQualityModel Model;
 
-	// Token: 0x04009AF1 RID: 39665
+	// Token: 0x04009C49 RID: 40009
 	[Nullable(new byte[]
 	{
 		2,
@@ -111,17 +111,17 @@ public class RecommendQualityView : UiViewBase
 	})]
 	private GenericLayout<RecommendQualityItem, IRecommendQualityItemData> AreaLayout;
 
-	// Token: 0x02008DB3 RID: 36275
+	// Token: 0x02007F3C RID: 32572
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402DFEF RID: 188399
+		// Token: 0x04029306 RID: 168710
 		public const int ItemLayout = 0;
 
-		// Token: 0x0402DFF0 RID: 188400
+		// Token: 0x04029307 RID: 168711
 		public const int Item = 1;
 
-		// Token: 0x0402DFF1 RID: 188401
+		// Token: 0x04029308 RID: 168712
 		public const int BtnSure = 2;
 	}
 }

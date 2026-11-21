@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053B5 RID: 21429
+	// Token: 0x02004398 RID: 17304
 	public class MoralePrompt : GenericPromptFloatTipsBase
 	{
-		// Token: 0x06036C1B RID: 224283 RVA: 0x00CF5AA3 File Offset: 0x00CF3CA3
+		// Token: 0x0602BB61 RID: 179041 RVA: 0x00C44B4B File Offset: 0x00C42D4B
 		[NullableContext(1)]
 		public MoralePrompt(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036C1C RID: 224284 RVA: 0x00CF5AAC File Offset: 0x00CF3CAC
+		// Token: 0x0602BB62 RID: 179042 RVA: 0x00C44B54 File Offset: 0x00C42D54
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C1D RID: 224285 RVA: 0x00CF5B60 File Offset: 0x00CF3D60
+		// Token: 0x0602BB63 RID: 179043 RVA: 0x00C44C08 File Offset: 0x00C42E08
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Morale
 			EventSystem.Instance.Emit(EEventName.OnMoralePromptShow);
 		}
 
-		// Token: 0x06036C1E RID: 224286 RVA: 0x00CF5BAC File Offset: 0x00CF3DAC
+		// Token: 0x0602BB64 RID: 179044 RVA: 0x00C44C54 File Offset: 0x00C42E54
 		private void ShowArea(EMoraleAreaType areaId)
 		{
 			int? num = null;
@@ -72,28 +72,28 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x0200B651 RID: 46673
+		// Token: 0x0200A089 RID: 41097
 		private class EComponent
 		{
-			// Token: 0x040373BB RID: 226235
+			// Token: 0x04031E10 RID: 204304
 			public const int MainText = 0;
 
-			// Token: 0x040373BC RID: 226236
+			// Token: 0x04031E11 RID: 204305
 			public const int SubText = 1;
 
-			// Token: 0x040373BD RID: 226237
+			// Token: 0x04031E12 RID: 204306
 			public const int Area1 = 2;
 
-			// Token: 0x040373BE RID: 226238
+			// Token: 0x04031E13 RID: 204307
 			public const int Area2 = 3;
 
-			// Token: 0x040373BF RID: 226239
+			// Token: 0x04031E14 RID: 204308
 			public const int Area3 = 4;
 
-			// Token: 0x040373C0 RID: 226240
+			// Token: 0x04031E15 RID: 204309
 			public const int Area4 = 5;
 
-			// Token: 0x040373C1 RID: 226241
+			// Token: 0x04031E16 RID: 204310
 			public const int Area5 = 6;
 		}
 	}

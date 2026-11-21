@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200430E RID: 17166
+	// Token: 0x0200476D RID: 18285
 	public enum TRollBlockLaunchMethod : byte
 	{
-		// Token: 0x0400C09B RID: 49307
+		// Token: 0x0400CAB3 RID: 51891
 		NONE,
-		// Token: 0x0400C09C RID: 49308
+		// Token: 0x0400CAB4 RID: 51892
 		IRollBlockLaunchMethodInteract,
-		// Token: 0x0400C09D RID: 49309
+		// Token: 0x0400CAB5 RID: 51893
 		IRollBlockLaunchMethodRange
 	}
 }

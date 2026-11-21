@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007299 RID: 29337
+	// Token: 0x02007A6E RID: 31342
 	public class ITalkBackgroundIconT
 	{
-		// Token: 0x1700D996 RID: 55702
-		// (get) Token: 0x060340C9 RID: 213193 RVA: 0x006FF567 File Offset: 0x006FD767
-		// (set) Token: 0x060340CA RID: 213194 RVA: 0x006FF56F File Offset: 0x006FD76F
+		// Token: 0x1700E58F RID: 58767
+		// (get) Token: 0x060373CD RID: 226253 RVA: 0x00760903 File Offset: 0x0075EB03
+		// (set) Token: 0x060373CE RID: 226254 RVA: 0x0076090B File Offset: 0x0075EB0B
 		public ETalkBackgroundType Type { get; set; }
 
-		// Token: 0x1700D997 RID: 55703
-		// (get) Token: 0x060340CB RID: 213195 RVA: 0x006FF578 File Offset: 0x006FD778
-		// (set) Token: 0x060340CC RID: 213196 RVA: 0x006FF580 File Offset: 0x006FD780
+		// Token: 0x1700E590 RID: 58768
+		// (get) Token: 0x060373CF RID: 226255 RVA: 0x00760914 File Offset: 0x0075EB14
+		// (set) Token: 0x060373D0 RID: 226256 RVA: 0x0076091C File Offset: 0x0075EB1C
 		public string ImageAsset { get; set; }
 
-		// Token: 0x060340CD RID: 213197 RVA: 0x006FF589 File Offset: 0x006FD789
+		// Token: 0x060373D1 RID: 226257 RVA: 0x00760925 File Offset: 0x0075EB25
 		public ITalkBackgroundIconT()
 		{
 			this.Type = ETalkBackgroundType.Clean;

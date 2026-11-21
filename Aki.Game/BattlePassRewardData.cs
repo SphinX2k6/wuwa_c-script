@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200232B RID: 9003
+// Token: 0x02001810 RID: 6160
 [NullableContext(1)]
 [Nullable(0)]
 public class BattlePassRewardData
 {
-	// Token: 0x06011D38 RID: 73016 RVA: 0x0046427F File Offset: 0x0046247F
+	// Token: 0x0600F1E8 RID: 61928 RVA: 0x00471343 File Offset: 0x0046F543
 	public BattlePassRewardData(int? level)
 	{
 		this.Level = level;
 	}
 
-	// Token: 0x06011D39 RID: 73017 RVA: 0x004642B0 File Offset: 0x004624B0
+	// Token: 0x0600F1E9 RID: 61929 RVA: 0x00471374 File Offset: 0x0046F574
 	public bool IsThisType(EBattlePassItemType type)
 	{
 		foreach (BattlePassRewardItem battlePassRewardItem in this.FreeRewardItem)
@@ -36,7 +36,7 @@ public class BattlePassRewardData
 		return false;
 	}
 
-	// Token: 0x06011D3A RID: 73018 RVA: 0x00464378 File Offset: 0x00462578
+	// Token: 0x0600F1EA RID: 61930 RVA: 0x0047143C File Offset: 0x0046F63C
 	public int GetItemCount(BattlePassType type, int itemId)
 	{
 		if (type == BattlePassType.Free)
@@ -46,7 +46,7 @@ public class BattlePassRewardData
 		return this.GetPayRewardItem(itemId).Item.Value.Count;
 	}
 
-	// Token: 0x06011D3B RID: 73019 RVA: 0x004643AC File Offset: 0x004625AC
+	// Token: 0x0600F1EB RID: 61931 RVA: 0x00471470 File Offset: 0x0046F670
 	[NullableContext(2)]
 	public BattlePassRewardItem GetFreeRewardItem(int itemId)
 	{
@@ -60,7 +60,7 @@ public class BattlePassRewardData
 		return null;
 	}
 
-	// Token: 0x06011D3C RID: 73020 RVA: 0x00464418 File Offset: 0x00462618
+	// Token: 0x0600F1EC RID: 61932 RVA: 0x004714DC File Offset: 0x0046F6DC
 	[NullableContext(2)]
 	public BattlePassRewardItem GetPayRewardItem(int itemId)
 	{
@@ -74,12 +74,12 @@ public class BattlePassRewardData
 		return null;
 	}
 
-	// Token: 0x04008716 RID: 34582
+	// Token: 0x04008859 RID: 34905
 	public List<BattlePassRewardItem> FreeRewardItem = new List<BattlePassRewardItem>();
 
-	// Token: 0x04008717 RID: 34583
+	// Token: 0x0400885A RID: 34906
 	public List<BattlePassRewardItem> PayRewardItem = new List<BattlePassRewardItem>();
 
-	// Token: 0x04008718 RID: 34584
+	// Token: 0x0400885B RID: 34907
 	public int? Level = new int?(0);
 }

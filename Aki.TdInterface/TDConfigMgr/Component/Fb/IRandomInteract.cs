@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A75 RID: 2677
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B3F RID: 2879
 	public class IRandomInteract
 	{
-		// Token: 0x06003DAC RID: 15788 RVA: 0x0009E2DF File Offset: 0x0009C4DF
+		// Token: 0x060041D5 RID: 16853 RVA: 0x000A7897 File Offset: 0x000A5A97
 		public static IRandomInteract Create(IRandomInteract? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E7F RID: 3711
-		// (get) Token: 0x06003DAD RID: 15789 RVA: 0x0009E2FE File Offset: 0x0009C4FE
+		// Token: 0x17000F52 RID: 3922
+		// (get) Token: 0x060041D6 RID: 16854 RVA: 0x000A78B6 File Offset: 0x000A5AB6
 		public virtual int RandomCount
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E80 RID: 3712
-		// (get) Token: 0x06003DAE RID: 15790 RVA: 0x0009E30C File Offset: 0x0009C50C
+		// Token: 0x17000F53 RID: 3923
+		// (get) Token: 0x060041D7 RID: 16855 RVA: 0x000A78C4 File Offset: 0x000A5AC4
 		public virtual List<IRandomInteractOption> Options
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002258 RID: 8792
+		// Token: 0x04002474 RID: 9332
 		private IRandomInteract Instance;
 
-		// Token: 0x04002259 RID: 8793
+		// Token: 0x04002475 RID: 9333
 		private List<IRandomInteractOption> _OptionsCache;
 
-		// Token: 0x0400225A RID: 8794
+		// Token: 0x04002476 RID: 9334
 		private bool _OptionsInited;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AD3 RID: 10963
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DC7 RID: 11719
 	public class ExitMovieMode : ActionParams
 	{
-		// Token: 0x0600F072 RID: 61554 RVA: 0x0022E9F2 File Offset: 0x0022CBF2
+		// Token: 0x0600FF28 RID: 65320 RVA: 0x0024C6FE File Offset: 0x0024A8FE
 		public static ExitMovieMode Create(IExitMovieMode? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C8E RID: 19598
-		// (get) Token: 0x0600F073 RID: 61555 RVA: 0x0022EA14 File Offset: 0x0022CC14
+		// Token: 0x17005048 RID: 20552
+		// (get) Token: 0x0600FF29 RID: 65321 RVA: 0x0024C720 File Offset: 0x0024A920
 		public virtual float? BorderAnimDuration
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C8F RID: 19599
-		// (get) Token: 0x0600F074 RID: 61556 RVA: 0x0022EA4A File Offset: 0x0022CC4A
+		// Token: 0x17005049 RID: 20553
+		// (get) Token: 0x0600FF2A RID: 65322 RVA: 0x0024C756 File Offset: 0x0024A956
 		public virtual IEnterMovieModeDurationType DurationType
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C90 RID: 19600
-		// (get) Token: 0x0600F075 RID: 61557 RVA: 0x0022EA79 File Offset: 0x0022CC79
+		// Token: 0x1700504A RID: 20554
+		// (get) Token: 0x0600FF2B RID: 65323 RVA: 0x0024C785 File Offset: 0x0024A985
 		[Nullable(2)]
 		public virtual IMovieModeFadeOutMaskConfig FadeOutMaskConfig
 		{
@@ -70,20 +68,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008441 RID: 33857
+		// Token: 0x04008B45 RID: 35653
 		private IExitMovieMode Instance;
 
-		// Token: 0x04008442 RID: 33858
+		// Token: 0x04008B46 RID: 35654
 		private IEnterMovieModeDurationType _DurationTypeCache;
 
-		// Token: 0x04008443 RID: 33859
+		// Token: 0x04008B47 RID: 35655
 		private bool _DurationTypeInited;
 
-		// Token: 0x04008444 RID: 33860
+		// Token: 0x04008B48 RID: 35656
 		[Nullable(2)]
 		private IMovieModeFadeOutMaskConfig _FadeOutMaskConfigCache;
 
-		// Token: 0x04008445 RID: 33861
+		// Token: 0x04008B49 RID: 35657
 		private bool _FadeOutMaskConfigInited;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200613C RID: 24892
+	// Token: 0x020050BA RID: 20666
 	public class RoverlikeLootTipsStarItem : GridProxyAbstract<bool>
 	{
-		// Token: 0x0603EED7 RID: 257751 RVA: 0x00F332C0 File Offset: 0x00F314C0
+		// Token: 0x06033B97 RID: 211863 RVA: 0x00E7A1A0 File Offset: 0x00E783A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EED8 RID: 257752 RVA: 0x00F33329 File Offset: 0x00F31529
+		// Token: 0x06033B98 RID: 211864 RVA: 0x00E7A209 File Offset: 0x00E78409
 		public override void Refresh(bool data, bool isSelected, int gridIndex)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			sprite2.SetUIActive(!data);
 		}
 
-		// Token: 0x0200C398 RID: 50072
+		// Token: 0x0200AD7F RID: 44415
 		private class EComponents
 		{
-			// Token: 0x0403B05F RID: 241759
+			// Token: 0x040359C0 RID: 219584
 			public const int ImgStar = 0;
 
-			// Token: 0x0403B060 RID: 241760
+			// Token: 0x040359C1 RID: 219585
 			public const int ImgStarOff = 1;
 		}
 	}

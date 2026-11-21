@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E9E RID: 20126
+	// Token: 0x020053C7 RID: 21447
 	public struct IAngleWeight : IFlatbufferObject
 	{
-		// Token: 0x17009054 RID: 36948
-		// (get) Token: 0x0601FACA RID: 129738 RVA: 0x00469143 File Offset: 0x00467343
+		// Token: 0x170097B3 RID: 38835
+		// (get) Token: 0x060217BF RID: 137151 RVA: 0x0049E3A7 File Offset: 0x0049C5A7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FACB RID: 129739 RVA: 0x00469150 File Offset: 0x00467350
+		// Token: 0x060217C0 RID: 137152 RVA: 0x0049E3B4 File Offset: 0x0049C5B4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FACC RID: 129740 RVA: 0x00469158 File Offset: 0x00467358
+		// Token: 0x060217C1 RID: 137153 RVA: 0x0049E3BC File Offset: 0x0049C5BC
 		public static IAngleWeight GetRootAsIAngleWeight(ByteBuffer _bb)
 		{
 			return IAngleWeight.GetRootAsIAngleWeight(_bb, default(IAngleWeight));
 		}
 
-		// Token: 0x0601FACD RID: 129741 RVA: 0x00469174 File Offset: 0x00467374
+		// Token: 0x060217C2 RID: 137154 RVA: 0x0049E3D8 File Offset: 0x0049C5D8
 		public static IAngleWeight GetRootAsIAngleWeight(ByteBuffer _bb, IAngleWeight obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FACE RID: 129742 RVA: 0x00469191 File Offset: 0x00467391
+		// Token: 0x060217C3 RID: 137155 RVA: 0x0049E3F5 File Offset: 0x0049C5F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FACF RID: 129743 RVA: 0x004691A0 File Offset: 0x004673A0
+		// Token: 0x060217C4 RID: 137156 RVA: 0x0049E404 File Offset: 0x0049C604
 		public IAngleWeight __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009055 RID: 36949
-		// (get) Token: 0x0601FAD0 RID: 129744 RVA: 0x004691B0 File Offset: 0x004673B0
+		// Token: 0x170097B4 RID: 38836
+		// (get) Token: 0x060217C5 RID: 137157 RVA: 0x0049E414 File Offset: 0x0049C614
 		public EExploreSkillSearchTargetCfg Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FAD1 RID: 129745 RVA: 0x004691EC File Offset: 0x004673EC
+		// Token: 0x060217C6 RID: 137158 RVA: 0x0049E450 File Offset: 0x0049C650
 		public IEntityAngleWeight? AngleWeight(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IEntityAngleWeight?(default(IEntityAngleWeight).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009056 RID: 36950
-		// (get) Token: 0x0601FAD2 RID: 129746 RVA: 0x0046924C File Offset: 0x0046744C
+		// Token: 0x170097B5 RID: 38837
+		// (get) Token: 0x060217C7 RID: 137159 RVA: 0x0049E4B0 File Offset: 0x0049C6B0
 		public int AngleWeightLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FAD3 RID: 129747 RVA: 0x00469277 File Offset: 0x00467477
+		// Token: 0x060217C8 RID: 137160 RVA: 0x0049E4DB File Offset: 0x0049C6DB
 		public static Offset<IAngleWeight> CreateIAngleWeight(FlatBufferBuilder builder, EExploreSkillSearchTargetCfg Type = EExploreSkillSearchTargetCfg.AngleWeight, VectorOffset AngleWeightOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAngleWeight.EndIAngleWeight(builder);
 		}
 
-		// Token: 0x0601FAD4 RID: 129748 RVA: 0x00469294 File Offset: 0x00467494
+		// Token: 0x060217C9 RID: 137161 RVA: 0x0049E4F8 File Offset: 0x0049C6F8
 		public static void StartIAngleWeight(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601FAD5 RID: 129749 RVA: 0x0046929D File Offset: 0x0046749D
+		// Token: 0x060217CA RID: 137162 RVA: 0x0049E501 File Offset: 0x0049C701
 		public static void AddType(FlatBufferBuilder builder, EExploreSkillSearchTargetCfg type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601FAD6 RID: 129750 RVA: 0x004692A8 File Offset: 0x004674A8
+		// Token: 0x060217CB RID: 137163 RVA: 0x0049E50C File Offset: 0x0049C70C
 		public static void AddAngleWeight(FlatBufferBuilder builder, VectorOffset angleWeightOffset)
 		{
 			builder.AddOffset(1, angleWeightOffset.Value, 0);
 		}
 
-		// Token: 0x0601FAD7 RID: 129751 RVA: 0x004692B8 File Offset: 0x004674B8
+		// Token: 0x060217CC RID: 137164 RVA: 0x0049E51C File Offset: 0x0049C71C
 		public static VectorOffset CreateAngleWeightVector(FlatBufferBuilder builder, Offset<IEntityAngleWeight>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FAD8 RID: 129752 RVA: 0x004692F8 File Offset: 0x004674F8
+		// Token: 0x060217CD RID: 137165 RVA: 0x0049E55C File Offset: 0x0049C75C
 		public static VectorOffset CreateAngleWeightVectorBlock(FlatBufferBuilder builder, Offset<IEntityAngleWeight>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FAD9 RID: 129753 RVA: 0x00469312 File Offset: 0x00467512
+		// Token: 0x060217CE RID: 137166 RVA: 0x0049E576 File Offset: 0x0049C776
 		public static VectorOffset CreateAngleWeightVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IEntityAngleWeight>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FADA RID: 129754 RVA: 0x00469330 File Offset: 0x00467530
+		// Token: 0x060217CF RID: 137167 RVA: 0x0049E594 File Offset: 0x0049C794
 		public static VectorOffset CreateAngleWeightVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FADB RID: 129755 RVA: 0x00469349 File Offset: 0x00467549
+		// Token: 0x060217D0 RID: 137168 RVA: 0x0049E5AD File Offset: 0x0049C7AD
 		public static void StartAngleWeightVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601FADC RID: 129756 RVA: 0x00469354 File Offset: 0x00467554
+		// Token: 0x060217D1 RID: 137169 RVA: 0x0049E5B8 File Offset: 0x0049C7B8
 		public static Offset<IAngleWeight> EndIAngleWeight(FlatBufferBuilder builder)
 		{
 			return new Offset<IAngleWeight>(builder.EndTable());
 		}
 
-		// Token: 0x0601FADD RID: 129757 RVA: 0x00469364 File Offset: 0x00467564
+		// Token: 0x060217D2 RID: 137170 RVA: 0x0049E5C8 File Offset: 0x0049C7C8
 		public IAngleWeightT UnPack()
 		{
 			IAngleWeightT angleWeightT = new IAngleWeightT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return angleWeightT;
 		}
 
-		// Token: 0x0601FADE RID: 129758 RVA: 0x00469380 File Offset: 0x00467580
+		// Token: 0x060217D3 RID: 137171 RVA: 0x0049E5E4 File Offset: 0x0049C7E4
 		public void UnPackTo(IAngleWeightT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FADF RID: 129759 RVA: 0x004693EC File Offset: 0x004675EC
+		// Token: 0x060217D4 RID: 137172 RVA: 0x0049E650 File Offset: 0x0049C850
 		public static Offset<IAngleWeight> Pack(FlatBufferBuilder builder, IAngleWeightT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAngleWeight.CreateIAngleWeight(builder, _o.Type, angleWeightOffset);
 		}
 
-		// Token: 0x0400DC78 RID: 56440
+		// Token: 0x0400E813 RID: 59411
 		private Table __p;
 	}
 }

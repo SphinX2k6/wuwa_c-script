@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DC4 RID: 7620
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FDB RID: 8155
 	public class IRoguePrefabConfig : ICreatePrefabConfig
 	{
-		// Token: 0x0600A333 RID: 41779 RVA: 0x00172B34 File Offset: 0x00170D34
+		// Token: 0x0600AD3D RID: 44349 RVA: 0x0018725C File Offset: 0x0018545C
 		private IRoguePrefabConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A334 RID: 41780 RVA: 0x00172B6C File Offset: 0x00170D6C
+		// Token: 0x0600AD3E RID: 44350 RVA: 0x00187294 File Offset: 0x00185494
 		public static IRoguePrefabConfig Create([Nullable(2)] IRoguePrefabConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A335 RID: 41781 RVA: 0x00172B7F File Offset: 0x00170D7F
+		// Token: 0x0600AD3F RID: 44351 RVA: 0x001872A7 File Offset: 0x001854A7
 		public static IRoguePrefabConfig CreateFromSetValue([Nullable(2)] IRoguePrefabConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A336 RID: 41782 RVA: 0x00172B92 File Offset: 0x00170D92
+		// Token: 0x0600AD40 RID: 44352 RVA: 0x001872BA File Offset: 0x001854BA
 		public new IRoguePrefabConfig_SetValue ToSetValue()
 		{
 			return new IRoguePrefabConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700324A RID: 12874
-		// (get) Token: 0x0600A337 RID: 41783 RVA: 0x00172BB1 File Offset: 0x00170DB1
-		// (set) Token: 0x0600A338 RID: 41784 RVA: 0x00172BDC File Offset: 0x00170DDC
+		// Token: 0x170034E4 RID: 13540
+		// (get) Token: 0x0600AD41 RID: 44353 RVA: 0x001872D9 File Offset: 0x001854D9
+		// (set) Token: 0x0600AD42 RID: 44354 RVA: 0x00187304 File Offset: 0x00185504
 		public override ECreatePrefabType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700324B RID: 12875
-		// (get) Token: 0x0600A339 RID: 41785 RVA: 0x00172BEA File Offset: 0x00170DEA
-		// (set) Token: 0x0600A33A RID: 41786 RVA: 0x00172C15 File Offset: 0x00170E15
+		// Token: 0x170034E5 RID: 13541
+		// (get) Token: 0x0600AD43 RID: 44355 RVA: 0x00187312 File Offset: 0x00185512
+		// (set) Token: 0x0600AD44 RID: 44356 RVA: 0x0018733D File Offset: 0x0018553D
 		public virtual int Index
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061E3 RID: 25059
+		// Token: 0x0400676B RID: 26475
 		[Nullable(2)]
 		protected new IRoguePrefabConfig FbInstance;
 
-		// Token: 0x040061E4 RID: 25060
+		// Token: 0x0400676C RID: 26476
 		[Nullable(2)]
 		protected new IRoguePrefabConfig_SetValue PocoInterface;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002238 RID: 8760
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024A3 RID: 9379
 	public class TeleportToLatestResetPoint : ActionParams
 	{
-		// Token: 0x0600C03E RID: 49214 RVA: 0x001B9AC4 File Offset: 0x001B7CC4
+		// Token: 0x0600CBFC RID: 52220 RVA: 0x001D1190 File Offset: 0x001CF390
 		private TeleportToLatestResetPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C03F RID: 49215 RVA: 0x001B9AFC File Offset: 0x001B7CFC
+		// Token: 0x0600CBFD RID: 52221 RVA: 0x001D11C8 File Offset: 0x001CF3C8
 		public static TeleportToLatestResetPoint Create([Nullable(2)] TeleportToLatestResetPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C040 RID: 49216 RVA: 0x001B9B0F File Offset: 0x001B7D0F
+		// Token: 0x0600CBFE RID: 52222 RVA: 0x001D11DB File Offset: 0x001CF3DB
 		public static TeleportToLatestResetPoint CreateFromSetValue([Nullable(2)] TeleportToLatestResetPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C041 RID: 49217 RVA: 0x001B9B22 File Offset: 0x001B7D22
+		// Token: 0x0600CBFF RID: 52223 RVA: 0x001D11EE File Offset: 0x001CF3EE
 		public TeleportToLatestResetPoint_SetValue ToSetValue()
 		{
 			return new TeleportToLatestResetPoint_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A35 RID: 14901
-		// (get) Token: 0x0600C042 RID: 49218 RVA: 0x001B9B38 File Offset: 0x001B7D38
-		// (set) Token: 0x0600C043 RID: 49219 RVA: 0x001B9B99 File Offset: 0x001B7D99
+		// Token: 0x17003D2B RID: 15659
+		// (get) Token: 0x0600CC00 RID: 52224 RVA: 0x001D1204 File Offset: 0x001CF404
+		// (set) Token: 0x0600CC01 RID: 52225 RVA: 0x001D1265 File Offset: 0x001CF465
 		public virtual ITeleportToLatestResetPointDirectly Option
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072A1 RID: 29345
+		// Token: 0x040078EB RID: 30955
 		[Nullable(2)]
 		protected new TeleportToLatestResetPoint FbInstance;
 
-		// Token: 0x040072A2 RID: 29346
+		// Token: 0x040078EC RID: 30956
 		[Nullable(2)]
 		protected TeleportToLatestResetPoint_SetValue PocoInterface;
 
-		// Token: 0x040072A3 RID: 29347
+		// Token: 0x040078ED RID: 30957
 		private ITeleportToLatestResetPointDirectly _OptionCache;
 
-		// Token: 0x040072A4 RID: 29348
+		// Token: 0x040078EE RID: 30958
 		private bool _OptionInited;
 	}
 }

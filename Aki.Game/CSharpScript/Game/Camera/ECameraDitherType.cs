@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072A8 RID: 29352
+	// Token: 0x02006427 RID: 25639
 	public enum ECameraDitherType
 	{
-		// Token: 0x04025F55 RID: 155477
+		// Token: 0x04021228 RID: 135720
 		CameraDither,
-		// Token: 0x04025F56 RID: 155478
+		// Token: 0x04021229 RID: 135721
 		OcclusionDither
 	}
 }

@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A66 RID: 27238
+	// Token: 0x02007188 RID: 29064
 	public class ILoopSeasonChangeT
 	{
-		// Token: 0x1700CA15 RID: 51733
-		// (get) Token: 0x0602FB44 RID: 195396 RVA: 0x0067E05D File Offset: 0x0067C25D
-		// (set) Token: 0x0602FB45 RID: 195397 RVA: 0x0067E065 File Offset: 0x0067C265
+		// Token: 0x1700D4C0 RID: 54464
+		// (get) Token: 0x0603286A RID: 206954 RVA: 0x006D411D File Offset: 0x006D231D
+		// (set) Token: 0x0603286B RID: 206955 RVA: 0x006D4125 File Offset: 0x006D2325
 		public EClientSetSeasonStateType Type { get; set; }
 
-		// Token: 0x1700CA16 RID: 51734
-		// (get) Token: 0x0602FB46 RID: 195398 RVA: 0x0067E06E File Offset: 0x0067C26E
-		// (set) Token: 0x0602FB47 RID: 195399 RVA: 0x0067E076 File Offset: 0x0067C276
+		// Token: 0x1700D4C1 RID: 54465
+		// (get) Token: 0x0603286C RID: 206956 RVA: 0x006D412E File Offset: 0x006D232E
+		// (set) Token: 0x0603286D RID: 206957 RVA: 0x006D4136 File Offset: 0x006D2336
 		public bool EnableLoop { get; set; }
 
-		// Token: 0x1700CA17 RID: 51735
-		// (get) Token: 0x0602FB48 RID: 195400 RVA: 0x0067E07F File Offset: 0x0067C27F
-		// (set) Token: 0x0602FB49 RID: 195401 RVA: 0x0067E087 File Offset: 0x0067C287
+		// Token: 0x1700D4C2 RID: 54466
+		// (get) Token: 0x0603286E RID: 206958 RVA: 0x006D413F File Offset: 0x006D233F
+		// (set) Token: 0x0603286F RID: 206959 RVA: 0x006D4147 File Offset: 0x006D2347
 		public ISeasonLoopConfigT SpringConfig { get; set; }
 
-		// Token: 0x1700CA18 RID: 51736
-		// (get) Token: 0x0602FB4A RID: 195402 RVA: 0x0067E090 File Offset: 0x0067C290
-		// (set) Token: 0x0602FB4B RID: 195403 RVA: 0x0067E098 File Offset: 0x0067C298
+		// Token: 0x1700D4C3 RID: 54467
+		// (get) Token: 0x06032870 RID: 206960 RVA: 0x006D4150 File Offset: 0x006D2350
+		// (set) Token: 0x06032871 RID: 206961 RVA: 0x006D4158 File Offset: 0x006D2358
 		public ISeasonLoopConfigT SummerConfig { get; set; }
 
-		// Token: 0x1700CA19 RID: 51737
-		// (get) Token: 0x0602FB4C RID: 195404 RVA: 0x0067E0A1 File Offset: 0x0067C2A1
-		// (set) Token: 0x0602FB4D RID: 195405 RVA: 0x0067E0A9 File Offset: 0x0067C2A9
+		// Token: 0x1700D4C4 RID: 54468
+		// (get) Token: 0x06032872 RID: 206962 RVA: 0x006D4161 File Offset: 0x006D2361
+		// (set) Token: 0x06032873 RID: 206963 RVA: 0x006D4169 File Offset: 0x006D2369
 		public ISeasonLoopConfigT AutumnConfig { get; set; }
 
-		// Token: 0x1700CA1A RID: 51738
-		// (get) Token: 0x0602FB4E RID: 195406 RVA: 0x0067E0B2 File Offset: 0x0067C2B2
-		// (set) Token: 0x0602FB4F RID: 195407 RVA: 0x0067E0BA File Offset: 0x0067C2BA
+		// Token: 0x1700D4C5 RID: 54469
+		// (get) Token: 0x06032874 RID: 206964 RVA: 0x006D4172 File Offset: 0x006D2372
+		// (set) Token: 0x06032875 RID: 206965 RVA: 0x006D417A File Offset: 0x006D237A
 		public ISeasonLoopConfigT WinterConfig { get; set; }
 
-		// Token: 0x0602FB50 RID: 195408 RVA: 0x0067E0C3 File Offset: 0x0067C2C3
+		// Token: 0x06032876 RID: 206966 RVA: 0x006D4183 File Offset: 0x006D2383
 		public ILoopSeasonChangeT()
 		{
 			this.Type = EClientSetSeasonStateType.SwitchSeason;

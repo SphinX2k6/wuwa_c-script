@@ -6,10 +6,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 {
-	// Token: 0x0200688F RID: 26767
+	// Token: 0x020057DF RID: 22495
 	public class DangoBrawlRoundSettleState : ActivityGameplayTurnStateBase<EDangoBrawlFsmState>
 	{
-		// Token: 0x06042D03 RID: 273667 RVA: 0x01043798 File Offset: 0x01041998
+		// Token: 0x0603785B RID: 227419 RVA: 0x00F84D18 File Offset: 0x00F82F18
 		public override void Enter(EDangoBrawlFsmState? prev)
 		{
 			EventSystem.Instance.Emit(EEventName.OnDangoBrawlEnterRoundSettle);
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 			this.IsFinalRoundRecord = new bool?(battleManager.IsFinalRound());
 		}
 
-		// Token: 0x06042D04 RID: 273668 RVA: 0x01043828 File Offset: 0x01041A28
+		// Token: 0x0603785C RID: 227420 RVA: 0x00F84DA8 File Offset: 0x00F82FA8
 		public override void Tick(float delta)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 			battleReportPlayer.Tick(delta);
 		}
 
-		// Token: 0x06042D05 RID: 273669 RVA: 0x0104386E File Offset: 0x01041A6E
+		// Token: 0x0603785D RID: 227421 RVA: 0x00F84DEE File Offset: 0x00F82FEE
 		public override void Exit(EDangoBrawlFsmState? next)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 			battleManager.DestroyBattleReportPlayer();
 		}
 
-		// Token: 0x04022C43 RID: 142403
+		// Token: 0x0401D49F RID: 119967
 		protected bool? IsFinalRoundRecord;
 	}
 }

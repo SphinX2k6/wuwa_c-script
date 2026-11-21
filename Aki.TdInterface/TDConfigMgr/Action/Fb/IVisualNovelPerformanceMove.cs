@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002576 RID: 9590
+	// Token: 0x0200281F RID: 10271
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IVisualNovelPerformanceMove : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D737 RID: 55095 RVA: 0x00200F96 File Offset: 0x001FF196
-		[NullableContext(1)]
+		// Token: 0x0600E4A3 RID: 58531 RVA: 0x0021CBDA File Offset: 0x0021ADDA
+		[NullableContext(0)]
 		public static IVisualNovelPerformanceMove Create(IVisualNovelPerformanceMove? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E0D RID: 15885
-		// (get) Token: 0x0600D738 RID: 55096 RVA: 0x00200FB5 File Offset: 0x001FF1B5
+		// Token: 0x17004113 RID: 16659
+		// (get) Token: 0x0600E4A4 RID: 58532 RVA: 0x0021CBF9 File Offset: 0x0021ADF9
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E0E RID: 15886
-		// (get) Token: 0x0600D739 RID: 55097 RVA: 0x00200FC4 File Offset: 0x001FF1C4
+		// Token: 0x17004114 RID: 16660
+		// (get) Token: 0x0600E4A5 RID: 58533 RVA: 0x0021CC08 File Offset: 0x0021AE08
 		public override float? StartTime
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E0F RID: 15887
-		// (get) Token: 0x0600D73A RID: 55098 RVA: 0x00200FFA File Offset: 0x001FF1FA
+		// Token: 0x17004115 RID: 16661
+		// (get) Token: 0x0600E4A6 RID: 58534 RVA: 0x0021CC3E File Offset: 0x0021AE3E
 		public virtual int WhoId
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E10 RID: 15888
-		// (get) Token: 0x0600D73B RID: 55099 RVA: 0x00201007 File Offset: 0x001FF207
+		// Token: 0x17004116 RID: 16662
+		// (get) Token: 0x0600E4A7 RID: 58535 RVA: 0x0021CC4B File Offset: 0x0021AE4B
 		public virtual IVisualNovelPortraitTransform Transform
 		{
 			get
@@ -74,12 +74,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E11 RID: 15889
-		// (get) Token: 0x0600D73C RID: 55100 RVA: 0x0020103B File Offset: 0x001FF23B
-		[Nullable(1)]
+		// Token: 0x17004117 RID: 16663
+		// (get) Token: 0x0600E4A8 RID: 58536 RVA: 0x0021CC7F File Offset: 0x0021AE7F
+		[Nullable(0)]
 		public virtual IEaseCurveType EaseCurve
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._EaseCurveInited)
@@ -92,8 +92,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E12 RID: 15890
-		// (get) Token: 0x0600D73D RID: 55101 RVA: 0x0020106C File Offset: 0x001FF26C
+		// Token: 0x17004118 RID: 16664
+		// (get) Token: 0x0600E4A9 RID: 58537 RVA: 0x0021CCB0 File Offset: 0x0021AEB0
 		public virtual float? Duration
 		{
 			get
@@ -106,8 +106,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E13 RID: 15891
-		// (get) Token: 0x0600D73E RID: 55102 RVA: 0x002010A2 File Offset: 0x001FF2A2
+		// Token: 0x17004119 RID: 16665
+		// (get) Token: 0x0600E4AA RID: 58538 RVA: 0x0021CCE6 File Offset: 0x0021AEE6
 		public virtual IVisualNovelRoleConfig RoleConfig
 		{
 			get
@@ -122,26 +122,26 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400771E RID: 30494
+		// Token: 0x04007D7B RID: 32123
 		private IVisualNovelPerformanceMove Instance;
 
-		// Token: 0x0400771F RID: 30495
+		// Token: 0x04007D7C RID: 32124
 		private IVisualNovelPortraitTransform _TransformCache;
 
-		// Token: 0x04007720 RID: 30496
+		// Token: 0x04007D7D RID: 32125
 		private bool _TransformInited;
 
-		// Token: 0x04007721 RID: 30497
-		[Nullable(1)]
+		// Token: 0x04007D7E RID: 32126
+		[Nullable(0)]
 		private IEaseCurveType _EaseCurveCache;
 
-		// Token: 0x04007722 RID: 30498
+		// Token: 0x04007D7F RID: 32127
 		private bool _EaseCurveInited;
 
-		// Token: 0x04007723 RID: 30499
+		// Token: 0x04007D80 RID: 32128
 		private IVisualNovelRoleConfig _RoleConfigCache;
 
-		// Token: 0x04007724 RID: 30500
+		// Token: 0x04007D81 RID: 32129
 		private bool _RoleConfigInited;
 	}
 }

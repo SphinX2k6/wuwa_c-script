@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200231E RID: 8990
+	// Token: 0x0200258D RID: 9613
 	public class EEnableSubLevelTransitionTypeJsonConverter : JsonConverter<EEnableSubLevelTransitionType>
 	{
-		// Token: 0x0600C487 RID: 50311 RVA: 0x001CAF8C File Offset: 0x001C918C
+		// Token: 0x0600D056 RID: 53334 RVA: 0x001E2E54 File Offset: 0x001E1054
 		public override EEnableSubLevelTransitionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EEnableSubLevelTransitionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C488 RID: 50312 RVA: 0x001CAFB0 File Offset: 0x001C91B0
+		// Token: 0x0600D057 RID: 53335 RVA: 0x001E2E78 File Offset: 0x001E1078
 		public override void Write(Utf8JsonWriter writer, EEnableSubLevelTransitionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

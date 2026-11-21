@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002772 RID: 10098
+	// Token: 0x02002A44 RID: 10820
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFadeBackgroundSpine : IFadeBackgroundType
 	{
-		// Token: 0x0600E0DA RID: 57562 RVA: 0x00213977 File Offset: 0x00211B77
-		[NullableContext(1)]
+		// Token: 0x0600EEF8 RID: 61176 RVA: 0x0023070B File Offset: 0x0022E90B
+		[NullableContext(0)]
 		public static IFadeBackgroundSpine Create(IFadeBackgroundSpine? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043B8 RID: 17336
-		// (get) Token: 0x0600E0DB RID: 57563 RVA: 0x00213996 File Offset: 0x00211B96
+		// Token: 0x1700471E RID: 18206
+		// (get) Token: 0x0600EEF9 RID: 61177 RVA: 0x0023072A File Offset: 0x0022E92A
 		public override EFadeBackgroundType Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043B9 RID: 17337
-		// (get) Token: 0x0600E0DC RID: 57564 RVA: 0x002139A3 File Offset: 0x00211BA3
+		// Token: 0x1700471F RID: 18207
+		// (get) Token: 0x0600EEFA RID: 61178 RVA: 0x00230737 File Offset: 0x0022E937
 		public virtual int SpineId
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043BA RID: 17338
-		// (get) Token: 0x0600E0DD RID: 57565 RVA: 0x002139B0 File Offset: 0x00211BB0
+		// Token: 0x17004720 RID: 18208
+		// (get) Token: 0x0600EEFB RID: 61179 RVA: 0x00230744 File Offset: 0x0022E944
 		public virtual IFadeBackgroundFadeInEffect FadeInEffect
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043BB RID: 17339
-		// (get) Token: 0x0600E0DE RID: 57566 RVA: 0x002139E4 File Offset: 0x00211BE4
+		// Token: 0x17004721 RID: 18209
+		// (get) Token: 0x0600EEFC RID: 61180 RVA: 0x00230778 File Offset: 0x0022E978
 		public virtual IFadeBackgroundFadeOutEffect FadeOutEffect
 		{
 			get
@@ -75,19 +75,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C80 RID: 31872
+		// Token: 0x04008336 RID: 33590
 		private IFadeBackgroundSpine Instance;
 
-		// Token: 0x04007C81 RID: 31873
+		// Token: 0x04008337 RID: 33591
 		private IFadeBackgroundFadeInEffect _FadeInEffectCache;
 
-		// Token: 0x04007C82 RID: 31874
+		// Token: 0x04008338 RID: 33592
 		private bool _FadeInEffectInited;
 
-		// Token: 0x04007C83 RID: 31875
+		// Token: 0x04008339 RID: 33593
 		private IFadeBackgroundFadeOutEffect _FadeOutEffectCache;
 
-		// Token: 0x04007C84 RID: 31876
+		// Token: 0x0400833A RID: 33594
 		private bool _FadeOutEffectInited;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022FB RID: 8955
+	// Token: 0x0200256C RID: 9580
 	public static class EDeliverItemProbeCollectibleViewStyleExtensions
 	{
-		// Token: 0x0600C3E8 RID: 50152 RVA: 0x001C9C74 File Offset: 0x001C7E74
+		// Token: 0x0600CFC0 RID: 53184 RVA: 0x001E1C18 File Offset: 0x001DFE18
 		public static string ToEnumString(this EDeliverItemProbeCollectibleViewStyle value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3E9 RID: 50153 RVA: 0x001C9C9C File Offset: 0x001C7E9C
+		// Token: 0x0600CFC1 RID: 53185 RVA: 0x001E1C40 File Offset: 0x001DFE40
 		public static EDeliverItemProbeCollectibleViewStyle FromString(string name)
 		{
 			EDeliverItemProbeCollectibleViewStyle result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3EA RID: 50154 RVA: 0x001C9CC5 File Offset: 0x001C7EC5
+		// Token: 0x0600CFC2 RID: 53186 RVA: 0x001E1C69 File Offset: 0x001DFE69
 		public static bool TryFromString(string name, out EDeliverItemProbeCollectibleViewStyle value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C3EB RID: 50155 RVA: 0x001C9CEA File Offset: 0x001C7EEA
+		// Token: 0x0600CFC3 RID: 53187 RVA: 0x001E1C8E File Offset: 0x001DFE8E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C3EC RID: 50156 RVA: 0x001C9CFA File Offset: 0x001C7EFA
+		// Token: 0x0600CFC4 RID: 53188 RVA: 0x001E1C9E File Offset: 0x001DFE9E
 		public static EDeliverItemProbeCollectibleViewStyle[] GetValues()
 		{
 			return new EDeliverItemProbeCollectibleViewStyle[1];
 		}
 
-		// Token: 0x0600C3ED RID: 50157 RVA: 0x001C9D02 File Offset: 0x001C7F02
+		// Token: 0x0600CFC5 RID: 53189 RVA: 0x001E1CA6 File Offset: 0x001DFEA6
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -12,17 +12,17 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 {
-	// Token: 0x020059C4 RID: 22980
+	// Token: 0x0200499D RID: 18845
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ServerNotifyAssistant : ControllerAssistantBase
 	{
-		// Token: 0x0603A409 RID: 238601 RVA: 0x00DD8ED1 File Offset: 0x00DD70D1
+		// Token: 0x0602F330 RID: 193328 RVA: 0x00D283A9 File Offset: 0x00D265A9
 		protected override void OnDestroy()
 		{
 		}
 
-		// Token: 0x0603A40A RID: 238602 RVA: 0x00DD8ED4 File Offset: 0x00DD70D4
+		// Token: 0x0602F331 RID: 193329 RVA: 0x00D283AC File Offset: 0x00D265AC
 		public override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.UpdateNodeStatusNotify, new Action<IMessage, Net.CallbackStatus>(this.OnUpdateNodeStatusNotify));
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			Net.Instance.Register(ENotifyMessageId.QuestRollBackEndNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRollBackEndNotify));
 		}
 
-		// Token: 0x0603A40B RID: 238603 RVA: 0x00DD906C File Offset: 0x00DD726C
+		// Token: 0x0602F332 RID: 193330 RVA: 0x00D28544 File Offset: 0x00D26744
 		public override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.UpdateNodeStatusNotify);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			Net.Instance.UnRegister(ENotifyMessageId.QuestRollBackEndNotify);
 		}
 
-		// Token: 0x0603A40C RID: 238604 RVA: 0x00DD914C File Offset: 0x00DD734C
+		// Token: 0x0602F333 RID: 193331 RVA: 0x00D28624 File Offset: 0x00D26824
 		private unsafe void OnUpdateNodeStatusNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			UpdateNodeStatusNotify updateNodeStatusNotify = (UpdateNodeStatusNotify)msg;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			behaviorTree.UpdateNodeState(ENodeStatusUpdateReason.ServerUpdateNodeStatus, updateNodeStatusNotify.NodeId, updateNodeStatusNotify.Status);
 		}
 
-		// Token: 0x0603A40D RID: 238605 RVA: 0x00DD9250 File Offset: 0x00DD7450
+		// Token: 0x0602F334 RID: 193332 RVA: 0x00D28728 File Offset: 0x00D26928
 		private void OnUpdateNodeProgressNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			UpdateNodeProgressNotify updateNodeProgressNotify = (UpdateNodeProgressNotify)msg;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			behaviorTree.UpdateNodeProgress(updateNodeProgressNotify.NodeId, updateNodeProgressNotify.Progress);
 		}
 
-		// Token: 0x0603A40E RID: 238606 RVA: 0x00DD92C4 File Offset: 0x00DD74C4
+		// Token: 0x0602F335 RID: 193333 RVA: 0x00D2879C File Offset: 0x00D2699C
 		private unsafe void OnUpdateChildQuestNodeStatusNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			UpdateChildQuestNodeStatusNotify updateChildQuestNodeStatusNotify = (UpdateChildQuestNodeStatusNotify)msg;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			behaviorTree.UpdateChildQuestNodeState(updateChildQuestNodeStatusNotify.NodeId, updateChildQuestNodeStatusNotify.Status, ENodeStatusUpdateReason.ServerUpdateNodeStatus);
 		}
 
-		// Token: 0x0603A40F RID: 238607 RVA: 0x00DD93CC File Offset: 0x00DD75CC
+		// Token: 0x0602F336 RID: 193334 RVA: 0x00D288A4 File Offset: 0x00D26AA4
 		private void OnRollbackNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			BtRollbackNotify btRollbackNotify = (BtRollbackNotify)msg;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			behaviorTree.PrepareRollback(new FailReason?(btRollbackNotify.FailReason), new int?(btRollbackNotify.FailNodeId));
 		}
 
-		// Token: 0x0603A410 RID: 238608 RVA: 0x00DD9498 File Offset: 0x00DD7698
+		// Token: 0x0602F337 RID: 193335 RVA: 0x00D28970 File Offset: 0x00D26B70
 		private void OnBtRollbackStartNotify(IMessage msg, Net.CallbackStatus __)
 		{
 			BtRollbackStartNotify btRollbackStartNotify = (BtRollbackStartNotify)msg;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			TaskSystem.Instance.Run();
 		}
 
-		// Token: 0x0603A411 RID: 238609 RVA: 0x00DD9504 File Offset: 0x00DD7704
+		// Token: 0x0602F338 RID: 193336 RVA: 0x00D289DC File Offset: 0x00D26BDC
 		private void OnRollbackInfoNotify(IMessage msg, Net.CallbackStatus __)
 		{
 			BtRollbackInfoNotify btRollbackInfoNotify = (BtRollbackInfoNotify)msg;
@@ -232,14 +232,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			TaskSystem.Instance.Run();
 		}
 
-		// Token: 0x0603A412 RID: 238610 RVA: 0x00DD9644 File Offset: 0x00DD7844
+		// Token: 0x0602F339 RID: 193337 RVA: 0x00D28B1C File Offset: 0x00D26D1C
 		private void OnRollBackEndNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			QuestRollBackEndNotify questRollBackEndNotify = (QuestRollBackEndNotify)msg;
 			EventSystem.Instance.Emit<int>(EEventName.OnQuestRedDotStateChange, questRollBackEndNotify.QuestId);
 		}
 
-		// Token: 0x0603A413 RID: 238611 RVA: 0x00DD9670 File Offset: 0x00DD7870
+		// Token: 0x0602F33A RID: 193338 RVA: 0x00D28B48 File Offset: 0x00D26D48
 		private void OnBtSuspendNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			BtSuspendNotify btSuspendNotify = (BtSuspendNotify)msg;
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			behaviorTree.UpdateOccupations(btSuspendNotify.NodeId, btSuspendNotify.SuspendType, btSuspendNotify.OccupationInfo);
 		}
 
-		// Token: 0x0603A414 RID: 238612 RVA: 0x00DD96E8 File Offset: 0x00DD78E8
+		// Token: 0x0602F33B RID: 193339 RVA: 0x00D28BC0 File Offset: 0x00D26DC0
 		private void OnUpdateTimerInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			UpdateTimerInfoNotify updateTimerInfoNotify = (UpdateTimerInfoNotify)msg;
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			behaviorTree.UpdateTimer(updateTimerInfoNotify.TimerInfo);
 		}
 
-		// Token: 0x0603A415 RID: 238613 RVA: 0x00DD9754 File Offset: 0x00DD7954
+		// Token: 0x0602F33C RID: 193340 RVA: 0x00D28C2C File Offset: 0x00D26E2C
 		private void OnBtVarUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			BtVarUpdateNotify btVarUpdateNotify = (BtVarUpdateNotify)msg;
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			behaviorTree.UpdateTreeVars(btVarUpdateNotify);
 		}
 
-		// Token: 0x0603A416 RID: 238614 RVA: 0x00DD97BC File Offset: 0x00DD79BC
+		// Token: 0x0602F33D RID: 193341 RVA: 0x00D28C94 File Offset: 0x00D26E94
 		private void OnBehaviorTreeInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RepeatedField<TreeInfo> treeInfos = ((BehaviorTreeInfoNotify)msg).TreeInfos;
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}
 		}
 
-		// Token: 0x0603A417 RID: 238615 RVA: 0x00DD9824 File Offset: 0x00DD7A24
+		// Token: 0x0602F33E RID: 193342 RVA: 0x00D28CFC File Offset: 0x00D26EFC
 		private void OnBehaviorTreeDeleteNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RepeatedField<long> treeIncIds = ((BehaviorTreeDeleteNotify)msg).TreeIncIds;
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}
 		}
 
-		// Token: 0x0603A418 RID: 238616 RVA: 0x00DD988C File Offset: 0x00DD7A8C
+		// Token: 0x0602F33F RID: 193343 RVA: 0x00D28D64 File Offset: 0x00D26F64
 		private void OnGmStateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			AutoQuestNotify autoQuestNotify = (AutoQuestNotify)msg;
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			AutoRunModel.Instance.SetAutoRunState(autoQuestNotify.IsAuto ? EAutoRunState.Running : EAutoRunState.Stopped);
 		}
 
-		// Token: 0x0603A419 RID: 238617 RVA: 0x00DD98E0 File Offset: 0x00DD7AE0
+		// Token: 0x0602F340 RID: 193344 RVA: 0x00D28DB8 File Offset: 0x00D26FB8
 		private void OnActionOpenSystemBoardNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			ActionOpenSystemBoardNotify actionOpenSystemBoardNotify = (ActionOpenSystemBoardNotify)msg;
@@ -454,7 +454,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}
 		}
 
-		// Token: 0x0603A41A RID: 238618 RVA: 0x00DD9C60 File Offset: 0x00DD7E60
+		// Token: 0x0602F341 RID: 193345 RVA: 0x00D29138 File Offset: 0x00D27338
 		public void OpenSystemBoardResultRequest(int result, int incId)
 		{
 			int valueOrDefault = PlayerInfoModel.Instance.GetId().GetValueOrDefault();
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				OpenSystemBoardResultResponse openSystemBoardResultResponse = (OpenSystemBoardResultResponse)msg;
 				if (openSystemBoardResultResponse.Code != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(openSystemBoardResultResponse.Code, 17436, null, false, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(openSystemBoardResultResponse.Code, 23490, null, false, true);
 				}
 			}, 0);
 		}

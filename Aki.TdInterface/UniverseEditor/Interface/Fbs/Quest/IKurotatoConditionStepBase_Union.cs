@@ -2,28 +2,28 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003ED5 RID: 16085
+	// Token: 0x02004313 RID: 17171
 	public enum IKurotatoConditionStepBase_Union : byte
 	{
-		// Token: 0x0400B8B1 RID: 47281
+		// Token: 0x0400C28E RID: 49806
 		NONE,
-		// Token: 0x0400B8B2 RID: 47282
+		// Token: 0x0400C28F RID: 49807
 		IKurotatoConditionStepBase,
-		// Token: 0x0400B8B3 RID: 47283
+		// Token: 0x0400C290 RID: 49808
 		IKurotatoConditionStepPrepare,
-		// Token: 0x0400B8B4 RID: 47284
+		// Token: 0x0400C291 RID: 49809
 		IKurotatoConditionStepBattle,
-		// Token: 0x0400B8B5 RID: 47285
+		// Token: 0x0400C292 RID: 49810
 		IKurotatoConditionStepEnd,
-		// Token: 0x0400B8B6 RID: 47286
+		// Token: 0x0400C293 RID: 49811
 		IKurotatoConditionStepSaveRole,
-		// Token: 0x0400B8B7 RID: 47287
+		// Token: 0x0400C294 RID: 49812
 		IKurotatoConditionStepChestReward,
-		// Token: 0x0400B8B8 RID: 47288
+		// Token: 0x0400C295 RID: 49813
 		IKurotatoConditionStepUpgradeReward,
-		// Token: 0x0400B8B9 RID: 47289
+		// Token: 0x0400C296 RID: 49814
 		IKurotatoConditionStepShopping,
-		// Token: 0x0400B8BA RID: 47290
+		// Token: 0x0400C297 RID: 49815
 		IKurotatoConditionStepUpdateBatch
 	}
 }

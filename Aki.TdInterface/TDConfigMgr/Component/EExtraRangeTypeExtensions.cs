@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000942 RID: 2370
+	// Token: 0x020009F1 RID: 2545
 	public static class EExtraRangeTypeExtensions
 	{
-		// Token: 0x0600355A RID: 13658 RVA: 0x0008B658 File Offset: 0x00089858
+		// Token: 0x060038CF RID: 14543 RVA: 0x00093310 File Offset: 0x00091510
 		public static string ToEnumString(this EExtraRangeType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600355B RID: 13659 RVA: 0x0008B680 File Offset: 0x00089880
+		// Token: 0x060038D0 RID: 14544 RVA: 0x00093338 File Offset: 0x00091538
 		public static EExtraRangeType FromString(string name)
 		{
 			EExtraRangeType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600355C RID: 13660 RVA: 0x0008B6A9 File Offset: 0x000898A9
+		// Token: 0x060038D1 RID: 14545 RVA: 0x00093361 File Offset: 0x00091561
 		public static bool TryFromString(string name, out EExtraRangeType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600355D RID: 13661 RVA: 0x0008B6CE File Offset: 0x000898CE
+		// Token: 0x060038D2 RID: 14546 RVA: 0x00093386 File Offset: 0x00091586
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600355E RID: 13662 RVA: 0x0008B6DE File Offset: 0x000898DE
+		// Token: 0x060038D3 RID: 14547 RVA: 0x00093396 File Offset: 0x00091596
 		public static EExtraRangeType[] GetValues()
 		{
 			return new EExtraRangeType[1];
 		}
 
-		// Token: 0x0600355F RID: 13663 RVA: 0x0008B6E6 File Offset: 0x000898E6
+		// Token: 0x060038D4 RID: 14548 RVA: 0x0009339E File Offset: 0x0009159E
 		public static string[] GetNames()
 		{
 			return new string[]

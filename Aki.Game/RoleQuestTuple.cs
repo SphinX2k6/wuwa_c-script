@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002658 RID: 9816
+// Token: 0x02001B43 RID: 6979
 public class RoleQuestTuple : IRoleQuestTuple
 {
-	// Token: 0x17001999 RID: 6553
-	// (get) Token: 0x0601415A RID: 82266 RVA: 0x0050FFC3 File Offset: 0x0050E1C3
-	// (set) Token: 0x0601415B RID: 82267 RVA: 0x0050FFCB File Offset: 0x0050E1CB
+	// Token: 0x170019D1 RID: 6609
+	// (get) Token: 0x0601163C RID: 71228 RVA: 0x0051EC7A File Offset: 0x0051CE7A
+	// (set) Token: 0x0601163D RID: 71229 RVA: 0x0051EC82 File Offset: 0x0051CE82
 	public int RoleId { get; set; }
 
-	// Token: 0x1700199A RID: 6554
-	// (get) Token: 0x0601415C RID: 82268 RVA: 0x0050FFD4 File Offset: 0x0050E1D4
-	// (set) Token: 0x0601415D RID: 82269 RVA: 0x0050FFDC File Offset: 0x0050E1DC
+	// Token: 0x170019D2 RID: 6610
+	// (get) Token: 0x0601163E RID: 71230 RVA: 0x0051EC8B File Offset: 0x0051CE8B
+	// (set) Token: 0x0601163F RID: 71231 RVA: 0x0051EC93 File Offset: 0x0051CE93
 	public int QuestId { get; set; }
 
-	// Token: 0x1700199B RID: 6555
-	// (get) Token: 0x0601415E RID: 82270 RVA: 0x0050FFE5 File Offset: 0x0050E1E5
-	// (set) Token: 0x0601415F RID: 82271 RVA: 0x0050FFED File Offset: 0x0050E1ED
+	// Token: 0x170019D3 RID: 6611
+	// (get) Token: 0x06011640 RID: 71232 RVA: 0x0051EC9C File Offset: 0x0051CE9C
+	// (set) Token: 0x06011641 RID: 71233 RVA: 0x0051ECA4 File Offset: 0x0051CEA4
 	public int Id { get; set; }
 }

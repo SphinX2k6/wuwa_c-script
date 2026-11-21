@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006141 RID: 24897
+	// Token: 0x020050BF RID: 20671
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeSettleReinforcementPanel : UiPanelBase, IRoverlikeSettleSelectablePanel
 	{
-		// Token: 0x0603EEF5 RID: 257781 RVA: 0x00F33B8D File Offset: 0x00F31D8D
+		// Token: 0x06033BB5 RID: 211893 RVA: 0x00E7AA6D File Offset: 0x00E78C6D
 		public void BindOnItemClick(Action<int, int> callback)
 		{
 			this.OnItemClick = callback;
 		}
 
-		// Token: 0x0603EEF6 RID: 257782 RVA: 0x00F33B98 File Offset: 0x00F31D98
+		// Token: 0x06033BB6 RID: 211894 RVA: 0x00E7AA78 File Offset: 0x00E78C78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EEF7 RID: 257783 RVA: 0x00F33C43 File Offset: 0x00F31E43
+		// Token: 0x06033BB7 RID: 211895 RVA: 0x00E7AB23 File Offset: 0x00E78D23
 		protected override void OnStart()
 		{
 			this.ReinforcementLayout = new GenericLayout<RoverlikeEntrySmallGridItem, IRoverlikeEntrySmallGridData>(base.GetGridLayout(1), new Func<RoverlikeEntrySmallGridItem>(this.CreateReinforcementItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x0603EEF8 RID: 257784 RVA: 0x00F33C78 File Offset: 0x00F31E78
+		// Token: 0x06033BB8 RID: 211896 RVA: 0x00E7AB58 File Offset: 0x00E78D58
 		public void Refresh(List<int> configIdList)
 		{
 			base.GetText(0).SetText(configIdList.Count.ToString(), true);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EEF9 RID: 257785 RVA: 0x00F33D44 File Offset: 0x00F31F44
+		// Token: 0x06033BB9 RID: 211897 RVA: 0x00E7AC24 File Offset: 0x00E78E24
 		public void SelectByKey(int key)
 		{
 			GenericLayout<RoverlikeEntrySmallGridItem, IRoverlikeEntrySmallGridData> reinforcementLayout = this.ReinforcementLayout;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			reinforcementLayout.SelectGridProxyByKey(key, false);
 		}
 
-		// Token: 0x0603EEFA RID: 257786 RVA: 0x00F33D5D File Offset: 0x00F31F5D
+		// Token: 0x06033BBA RID: 211898 RVA: 0x00E7AC3D File Offset: 0x00E78E3D
 		public void ClearSelect()
 		{
 			GenericLayout<RoverlikeEntrySmallGridItem, IRoverlikeEntrySmallGridData> reinforcementLayout = this.ReinforcementLayout;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			reinforcementLayout.DeselectCurrentGridProxy();
 		}
 
-		// Token: 0x0603EEFB RID: 257787 RVA: 0x00F33D6F File Offset: 0x00F31F6F
+		// Token: 0x06033BBB RID: 211899 RVA: 0x00E7AC4F File Offset: 0x00E78E4F
 		private RoverlikeEntrySmallGridItem CreateReinforcementItem()
 		{
 			RoverlikeEntrySmallGridItem roverlikeEntrySmallGridItem = new RoverlikeEntrySmallGridItem();
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return roverlikeEntrySmallGridItem;
 		}
 
-		// Token: 0x0603EEFC RID: 257788 RVA: 0x00F33D88 File Offset: 0x00F31F88
+		// Token: 0x06033BBC RID: 211900 RVA: 0x00E7AC68 File Offset: 0x00E78E68
 		private void OnGridItemClick(IRoverlikeEntrySmallGridData data, int key)
 		{
 			Action<int, int> onItemClick = this.OnItemClick;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			onItemClick(data.ConfigId, key);
 		}
 
-		// Token: 0x04020D9A RID: 134554
+		// Token: 0x0401B6C7 RID: 112327
 		[Nullable(new byte[]
 		{
 			2,
@@ -125,24 +125,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeEntrySmallGridItem, IRoverlikeEntrySmallGridData> ReinforcementLayout;
 
-		// Token: 0x04020D9B RID: 134555
+		// Token: 0x0401B6C8 RID: 112328
 		[Nullable(2)]
 		private Action<int, int> OnItemClick;
 
-		// Token: 0x0200C39D RID: 50077
+		// Token: 0x0200AD84 RID: 44420
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B078 RID: 241784
+			// Token: 0x040359D9 RID: 219609
 			public const int TxtNum = 0;
 
-			// Token: 0x0403B079 RID: 241785
+			// Token: 0x040359DA RID: 219610
 			public const int LayoutReinforcement = 1;
 
-			// Token: 0x0403B07A RID: 241786
+			// Token: 0x040359DB RID: 219611
 			public const int ReinforcementItem = 2;
 
-			// Token: 0x0403B07B RID: 241787
+			// Token: 0x040359DC RID: 219612
 			public const int ItemEmpty = 3;
 		}
 	}

@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200196D RID: 6509
+	// Token: 0x02001AF8 RID: 6904
 	public class IDartMachineInteractType_SetValue
 	{
-		// Token: 0x040056FB RID: 22267
+		// Token: 0x04005B4F RID: 23375
 		public EDartInteractType Type;
 
-		// Token: 0x040056FC RID: 22268
-		[Nullable(1)]
+		// Token: 0x04005B50 RID: 23376
 		public List<int> CanInviteCompetitorIds;
 
-		// Token: 0x040056FD RID: 22269
+		// Token: 0x04005B51 RID: 23377
 		public int? ChampionId;
 	}
 }

@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Data.Entity.Struct;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020034A8 RID: 13480
+// Token: 0x02002A1C RID: 10780
 [NullableContext(1)]
 [Nullable(0)]
 public class ActorUtils
 {
-	// Token: 0x0601D591 RID: 120209 RVA: 0x0082E398 File Offset: 0x0082C598
+	// Token: 0x0601B28E RID: 111246 RVA: 0x008555A0 File Offset: 0x008537A0
 	[return: Nullable(2)]
 	public static AActor LoadActorByModelConfig(SModelConfig modelConfig, FTransformDouble transform)
 	{
@@ -48,7 +48,7 @@ public class ActorUtils
 		return aactor;
 	}
 
-	// Token: 0x0601D592 RID: 120210 RVA: 0x0082E474 File Offset: 0x0082C674
+	// Token: 0x0601B28F RID: 111247 RVA: 0x0085567C File Offset: 0x0085387C
 	[return: Nullable(2)]
 	public unsafe static AActor LoadActorByPath(string assetPathName, in FTransformDouble transform, int PbDataId)
 	{
@@ -87,7 +87,7 @@ public class ActorUtils
 		return aactor;
 	}
 
-	// Token: 0x0601D593 RID: 120211 RVA: 0x0082E570 File Offset: 0x0082C770
+	// Token: 0x0601B290 RID: 111248 RVA: 0x00855778 File Offset: 0x00853978
 	public static void LoadAndChangeMeshAnim(USkeletalMeshComponent meshComp, TSoftObjectPtr<USkeletalMesh> meshClass, TSoftClassPtr<UAnimInstance> animBlueprintClass)
 	{
 		string text = meshClass.ToAssetPathName();
@@ -110,7 +110,7 @@ public class ActorUtils
 		}
 	}
 
-	// Token: 0x0601D594 RID: 120212 RVA: 0x0082E60C File Offset: 0x0082C80C
+	// Token: 0x0601B291 RID: 111249 RVA: 0x00855814 File Offset: 0x00853A14
 	[NullableContext(2)]
 	public static EntityHandle GetEntityByActor(AActor actor, bool showLog = true)
 	{
@@ -126,7 +126,7 @@ public class ActorUtils
 		return CreatureModel.Instance.GetEntityById(ibpi_CreatureInterface_C.GetEntityId());
 	}
 
-	// Token: 0x0601D595 RID: 120213 RVA: 0x0082E654 File Offset: 0x0082C854
+	// Token: 0x0601B292 RID: 111250 RVA: 0x0085585C File Offset: 0x00853A5C
 	[NullableContext(2)]
 	public static FName? TryGetBoneSocket(AActor actor, string targetSocket)
 	{

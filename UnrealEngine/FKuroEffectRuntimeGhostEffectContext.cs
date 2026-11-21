@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018CE RID: 6350
+	// Token: 0x020003E8 RID: 1000
 	[UnrealObjectPath("/Script/KuroGameplay.KuroEffectRuntimeGhostEffectContext")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 88)]
 	public class FKuroEffectRuntimeGhostEffectContext : FKuroSkeletalMeshEffectContext, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060177E3 RID: 96227 RVA: 0x002265AC File Offset: 0x002247AC
+		// Token: 0x060061EB RID: 25067 RVA: 0x0008C0EA File Offset: 0x0008A2EA
 		public new static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroEffectRuntimeGhostEffectContext._ScriptStructPtr != 0) ? FKuroEffectRuntimeGhostEffectContext._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameplay.KuroEffectRuntimeGhostEffectContext", ref FKuroEffectRuntimeGhostEffectContext._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EE0 RID: 24288
-		// (get) Token: 0x060177E4 RID: 96228 RVA: 0x002265D0 File Offset: 0x002247D0
-		// (set) Token: 0x060177E5 RID: 96229 RVA: 0x002265E0 File Offset: 0x002247E0
+		// Token: 0x170013E5 RID: 5093
+		// (get) Token: 0x060061EC RID: 25068 RVA: 0x0008C10E File Offset: 0x0008A30E
+		// (set) Token: 0x060061ED RID: 25069 RVA: 0x0008C11E File Offset: 0x0008A31E
 		public unsafe float SpawnRate
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EE1 RID: 24289
-		// (get) Token: 0x060177E6 RID: 96230 RVA: 0x002265F1 File Offset: 0x002247F1
-		// (set) Token: 0x060177E7 RID: 96231 RVA: 0x00226601 File Offset: 0x00224801
+		// Token: 0x170013E6 RID: 5094
+		// (get) Token: 0x060061EE RID: 25070 RVA: 0x0008C12F File Offset: 0x0008A32F
+		// (set) Token: 0x060061EF RID: 25071 RVA: 0x0008C13F File Offset: 0x0008A33F
 		public unsafe bool UseSpawnRate
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EE2 RID: 24290
-		// (get) Token: 0x060177E8 RID: 96232 RVA: 0x00226612 File Offset: 0x00224812
-		// (set) Token: 0x060177E9 RID: 96233 RVA: 0x00226622 File Offset: 0x00224822
+		// Token: 0x170013E7 RID: 5095
+		// (get) Token: 0x060061F0 RID: 25072 RVA: 0x0008C150 File Offset: 0x0008A350
+		// (set) Token: 0x060061F1 RID: 25073 RVA: 0x0008C160 File Offset: 0x0008A360
 		public unsafe float SpawnInterval
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EE3 RID: 24291
-		// (get) Token: 0x060177EA RID: 96234 RVA: 0x00226633 File Offset: 0x00224833
-		// (set) Token: 0x060177EB RID: 96235 RVA: 0x00226643 File Offset: 0x00224843
+		// Token: 0x170013E8 RID: 5096
+		// (get) Token: 0x060061F2 RID: 25074 RVA: 0x0008C171 File Offset: 0x0008A371
+		// (set) Token: 0x060061F3 RID: 25075 RVA: 0x0008C181 File Offset: 0x0008A381
 		public unsafe float GhostLifeTime
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EE4 RID: 24292
-		// (get) Token: 0x060177EC RID: 96236 RVA: 0x00226654 File Offset: 0x00224854
-		// (set) Token: 0x060177ED RID: 96237 RVA: 0x00226664 File Offset: 0x00224864
+		// Token: 0x170013E9 RID: 5097
+		// (get) Token: 0x060061F4 RID: 25076 RVA: 0x0008C192 File Offset: 0x0008A392
+		// (set) Token: 0x060061F5 RID: 25077 RVA: 0x0008C1A2 File Offset: 0x0008A3A2
 		public unsafe bool UseBaseColorTex
 		{
 			get
@@ -91,85 +91,62 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060177EE RID: 96238 RVA: 0x00226675 File Offset: 0x00224875
+		// Token: 0x060061F6 RID: 25078 RVA: 0x0008C1B3 File Offset: 0x0008A3B3
 		public FKuroEffectRuntimeGhostEffectContext()
 		{
 		}
 
-		// Token: 0x060177EF RID: 96239 RVA: 0x00226680 File Offset: 0x00224880
-		[NullableContext(1)]
-		public FKuroEffectRuntimeGhostEffectContext(float SpawnRate, bool UseSpawnRate, float SpawnInterval, float GhostLifeTime, bool UseBaseColorTex, USkeletalMeshComponent SkeletalMeshComponent, bool IsSyncTimeDilation, bool IsSyncEventTimeToEffectTime, int EntityId, UObject SourceObject, bool DisablePostProcess, int CreateFromType, int PlayFlag, bool CreateFromBpEffectActor, byte ContextType, int HitEffectType, FName AnsSlotName)
-		{
-			this.SpawnRate = SpawnRate;
-			this.UseSpawnRate = UseSpawnRate;
-			this.SpawnInterval = SpawnInterval;
-			this.GhostLifeTime = GhostLifeTime;
-			this.UseBaseColorTex = UseBaseColorTex;
-			base.SkeletalMeshComponent = SkeletalMeshComponent;
-			base.IsSyncTimeDilation = IsSyncTimeDilation;
-			base.IsSyncEventTimeToEffectTime = IsSyncEventTimeToEffectTime;
-			base.EntityId = EntityId;
-			base.SourceObject = SourceObject;
-			base.DisablePostProcess = DisablePostProcess;
-			base.CreateFromType = CreateFromType;
-			base.PlayFlag = PlayFlag;
-			base.CreateFromBpEffectActor = CreateFromBpEffectActor;
-			base.ContextType = ContextType;
-			base.HitEffectType = HitEffectType;
-			base.AnsSlotName = AnsSlotName;
-		}
-
-		// Token: 0x060177F0 RID: 96240 RVA: 0x00226718 File Offset: 0x00224918
+		// Token: 0x060061F7 RID: 25079 RVA: 0x0008C1BB File Offset: 0x0008A3BB
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroEffectRuntimeGhostEffectContext.StaticStruct();
 		}
 
-		// Token: 0x060177F1 RID: 96241 RVA: 0x00226724 File Offset: 0x00224924
+		// Token: 0x060061F8 RID: 25080 RVA: 0x0008C1C7 File Offset: 0x0008A3C7
 		[NullableContext(2)]
 		public FKuroEffectRuntimeGhostEffectContext(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060177F2 RID: 96242 RVA: 0x0022672E File Offset: 0x0022492E
+		// Token: 0x060061F9 RID: 25081 RVA: 0x0008C1D1 File Offset: 0x0008A3D1
 		public FKuroEffectRuntimeGhostEffectContext(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060177F3 RID: 96243 RVA: 0x00226739 File Offset: 0x00224939
+		// Token: 0x060061FA RID: 25082 RVA: 0x0008C1DC File Offset: 0x0008A3DC
 		[NullableContext(1)]
 		public new static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroEffectRuntimeGhostEffectContext(Pointer, false, true);
 		}
 
-		// Token: 0x060177F4 RID: 96244 RVA: 0x00226743 File Offset: 0x00224943
+		// Token: 0x060061FB RID: 25083 RVA: 0x0008C1E6 File Offset: 0x0008A3E6
 		[NullableContext(1)]
 		public new static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroEffectRuntimeGhostEffectContext(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400CC7A RID: 52346
+		// Token: 0x040029B3 RID: 10675
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroEffectRuntimeGhostEffectContext";
 
-		// Token: 0x0400CC7B RID: 52347
+		// Token: 0x040029B4 RID: 10676
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400CC7C RID: 52348
+		// Token: 0x040029B5 RID: 10677
 		internal static int __PropertyOffset_SpawnRate;
 
-		// Token: 0x0400CC7D RID: 52349
+		// Token: 0x040029B6 RID: 10678
 		internal static int __PropertyOffset_UseSpawnRate;
 
-		// Token: 0x0400CC7E RID: 52350
+		// Token: 0x040029B7 RID: 10679
 		internal static int __PropertyOffset_SpawnInterval;
 
-		// Token: 0x0400CC7F RID: 52351
+		// Token: 0x040029B8 RID: 10680
 		internal static int __PropertyOffset_GhostLifeTime;
 
-		// Token: 0x0400CC80 RID: 52352
+		// Token: 0x040029B9 RID: 10681
 		internal static int __PropertyOffset_UseBaseColorTex;
 	}
 }

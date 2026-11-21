@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004104 RID: 16644
+	// Token: 0x02004545 RID: 17733
 	public class ISavePointT
 	{
-		// Token: 0x1700754E RID: 30030
-		// (get) Token: 0x06018447 RID: 99399 RVA: 0x0037E2A3 File Offset: 0x0037C4A3
-		// (set) Token: 0x06018448 RID: 99400 RVA: 0x0037E2AB File Offset: 0x0037C4AB
+		// Token: 0x17007B54 RID: 31572
+		// (get) Token: 0x06019AE8 RID: 105192 RVA: 0x003A81F3 File Offset: 0x003A63F3
+		// (set) Token: 0x06019AE9 RID: 105193 RVA: 0x003A81FB File Offset: 0x003A63FB
 		public ESaveConfig Type { get; set; }
 
-		// Token: 0x1700754F RID: 30031
-		// (get) Token: 0x06018449 RID: 99401 RVA: 0x0037E2B4 File Offset: 0x0037C4B4
-		// (set) Token: 0x0601844A RID: 99402 RVA: 0x0037E2BC File Offset: 0x0037C4BC
+		// Token: 0x17007B55 RID: 31573
+		// (get) Token: 0x06019AEA RID: 105194 RVA: 0x003A8204 File Offset: 0x003A6404
+		// (set) Token: 0x06019AEB RID: 105195 RVA: 0x003A820C File Offset: 0x003A640C
 		public bool RelinkRollback { get; set; }
 
-		// Token: 0x17007550 RID: 30032
-		// (get) Token: 0x0601844B RID: 99403 RVA: 0x0037E2C5 File Offset: 0x0037C4C5
-		// (set) Token: 0x0601844C RID: 99404 RVA: 0x0037E2CD File Offset: 0x0037C4CD
+		// Token: 0x17007B56 RID: 31574
+		// (get) Token: 0x06019AEC RID: 105196 RVA: 0x003A8215 File Offset: 0x003A6415
+		// (set) Token: 0x06019AED RID: 105197 RVA: 0x003A821D File Offset: 0x003A641D
 		public IPositionRollbackConfigT PosRollbackCfg { get; set; }
 
-		// Token: 0x17007551 RID: 30033
-		// (get) Token: 0x0601844D RID: 99405 RVA: 0x0037E2D6 File Offset: 0x0037C4D6
-		// (set) Token: 0x0601844E RID: 99406 RVA: 0x0037E2DE File Offset: 0x0037C4DE
+		// Token: 0x17007B57 RID: 31575
+		// (get) Token: 0x06019AEE RID: 105198 RVA: 0x003A8226 File Offset: 0x003A6426
+		// (set) Token: 0x06019AEF RID: 105199 RVA: 0x003A822E File Offset: 0x003A642E
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601844F RID: 99407 RVA: 0x0037E2E7 File Offset: 0x0037C4E7
+		// Token: 0x06019AF0 RID: 105200 RVA: 0x003A8237 File Offset: 0x003A6437
 		public ISavePointT()
 		{
 			this.Type = ESaveConfig.SaveNew;

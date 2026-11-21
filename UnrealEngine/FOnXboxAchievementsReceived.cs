@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EEF RID: 7919
+	// Token: 0x020005FC RID: 1532
 	public sealed class FOnXboxAchievementsReceived : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E170 RID: 123248 RVA: 0x002CB0C7 File Offset: 0x002C92C7
+		// Token: 0x060087BB RID: 34747 RVA: 0x000CC0CB File Offset: 0x000CA2CB
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnXboxAchievementsReceived.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E171 RID: 123249 RVA: 0x002CB0D3 File Offset: 0x002C92D3
+		// Token: 0x060087BC RID: 34748 RVA: 0x000CC0D7 File Offset: 0x000CA2D7
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnXboxAchievementsReceived._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnXboxAchievementsReceived._FunctionPtr;
 		}
 
-		// Token: 0x0601E172 RID: 123250 RVA: 0x002CB0F6 File Offset: 0x002C92F6
+		// Token: 0x060087BD RID: 34749 RVA: 0x000CC0FA File Offset: 0x000CA2FA
 		public FOnXboxAchievementsReceived()
 		{
 		}
 
-		// Token: 0x0601E173 RID: 123251 RVA: 0x002CB0FE File Offset: 0x002C92FE
+		// Token: 0x060087BE RID: 34750 RVA: 0x000CC102 File Offset: 0x000CA302
 		[NullableContext(2)]
 		public FOnXboxAchievementsReceived(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E174 RID: 123252 RVA: 0x002CB108 File Offset: 0x002C9308
+		// Token: 0x060087BF RID: 34751 RVA: 0x000CC10C File Offset: 0x000CA30C
 		public FOnXboxAchievementsReceived(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E175 RID: 123253 RVA: 0x002CB113 File Offset: 0x002C9313
+		// Token: 0x060087C0 RID: 34752 RVA: 0x000CC117 File Offset: 0x000CA317
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as FOnXboxAchievementsReceived.FOnXboxAchievementsReceived_ScriptDelegate) ?? ((FOnXboxAchievementsReceived.FOnXboxAchievementsReceived_ScriptDelegate)Delegate.CreateDelegate(typeof(FOnXboxAchievementsReceived.FOnXboxAchievementsReceived_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E176 RID: 123254 RVA: 0x002CB145 File Offset: 0x002C9345
+		// Token: 0x060087C1 RID: 34753 RVA: 0x000CC149 File Offset: 0x000CA349
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(FOnXboxAchievementsReceived.FOnXboxAchievementsReceived_ScriptDelegate Callback)
 		{
 			if (FOnXboxAchievementsReceived.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnXboxAchievementsReceived.RegisterId);
 		}
 
-		// Token: 0x0601E177 RID: 123255 RVA: 0x002CB180 File Offset: 0x002C9380
+		// Token: 0x060087C2 RID: 34754 RVA: 0x000CC184 File Offset: 0x000CA384
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool bSuccess, [Nullable(new byte[]
 		{
 			2,
@@ -91,10 +89,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnXboxAchievementsReceived._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601E178 RID: 123256 RVA: 0x002CB1F8 File Offset: 0x002C93F8
+		// Token: 0x060087C3 RID: 34755 RVA: 0x000CC1FC File Offset: 0x000CA3FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FOnXboxAchievementsReceived.FOnXboxAchievementsReceived_ScriptDelegate fonXboxAchievementsReceived_ScriptDelegate = target as FOnXboxAchievementsReceived.FOnXboxAchievementsReceived_ScriptDelegate;
@@ -110,43 +107,43 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04010427 RID: 66599
+		// Token: 0x04003AFF RID: 15103
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010428 RID: 66600
+		// Token: 0x04003B00 RID: 15104
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnXboxAchievementsReceived__DelegateSignature";
 
-		// Token: 0x04010429 RID: 66601
+		// Token: 0x04003B01 RID: 15105
 		private static int RegisterId;
 
-		// Token: 0x020033CA RID: 13258
-		// (Invoke) Token: 0x060285BA RID: 165306
+		// Token: 0x02000E17 RID: 3607
+		// (Invoke) Token: 0x0600BF23 RID: 48931
 		public delegate void FOnXboxAchievementsReceived_ScriptDelegate(bool bSuccess, [Nullable(new byte[]
 		{
 			2,
 			1
 		})] in TArray<FXboxAchievementInfo> Achievements);
 
-		// Token: 0x020033CB RID: 13259
+		// Token: 0x02000E18 RID: 3608
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FOnXboxAchievementsReceived_DelegateParams
+		private ref struct __FOnXboxAchievementsReceived_DelegateParams
 		{
-			// Token: 0x0401737F RID: 95103
+			// Token: 0x040061AC RID: 25004
 			[FieldOffset(0)]
 			public bool bSuccess;
 
-			// Token: 0x04017380 RID: 95104
+			// Token: 0x040061AD RID: 25005
 			[FieldOffset(8)]
 			public byte Achievements;
 		}
 
-		// Token: 0x020033CC RID: 13260
+		// Token: 0x02000E19 RID: 3609
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017381 RID: 95105
+			// Token: 0x040061AE RID: 25006
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

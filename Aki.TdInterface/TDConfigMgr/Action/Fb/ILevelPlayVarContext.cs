@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024EA RID: 9450
+	// Token: 0x0200278F RID: 10127
 	public class ILevelPlayVarContext : IVarContext
 	{
-		// Token: 0x0600D2F8 RID: 54008 RVA: 0x001F4ABF File Offset: 0x001F2CBF
-		[NullableContext(1)]
+		// Token: 0x0600E04E RID: 57422 RVA: 0x00210357 File Offset: 0x0020E557
 		public static ILevelPlayVarContext Create(ILevelPlayVarContext? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AE6 RID: 15078
-		// (get) Token: 0x0600D2F9 RID: 54009 RVA: 0x001F4ADE File Offset: 0x001F2CDE
+		// Token: 0x17003DDE RID: 15838
+		// (get) Token: 0x0600E04F RID: 57423 RVA: 0x00210376 File Offset: 0x0020E576
 		public override EVarContext Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AE7 RID: 15079
-		// (get) Token: 0x0600D2FA RID: 54010 RVA: 0x001F4AEB File Offset: 0x001F2CEB
+		// Token: 0x17003DDF RID: 15839
+		// (get) Token: 0x0600E050 RID: 57424 RVA: 0x00210383 File Offset: 0x0020E583
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073B4 RID: 29620
+		// Token: 0x04007A01 RID: 31233
 		private ILevelPlayVarContext Instance;
 	}
 }

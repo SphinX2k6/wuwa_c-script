@@ -4,69 +4,69 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D21 RID: 19745
+	// Token: 0x02003CDA RID: 15578
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopPhantomVisionSuitItemData : IRoleDevelopPhantomVisionSuitItemData
 	{
-		// Token: 0x17007E25 RID: 32293
-		// (get) Token: 0x06033052 RID: 208978 RVA: 0x00BE1CA0 File Offset: 0x00BDFEA0
-		// (set) Token: 0x06033053 RID: 208979 RVA: 0x00BE1CA8 File Offset: 0x00BDFEA8
+		// Token: 0x170051D5 RID: 20949
+		// (get) Token: 0x06027E3D RID: 163389 RVA: 0x00B27611 File Offset: 0x00B25811
+		// (set) Token: 0x06027E3E RID: 163390 RVA: 0x00B27619 File Offset: 0x00B25819
 		public string Name { get; set; }
 
-		// Token: 0x17007E26 RID: 32294
-		// (get) Token: 0x06033054 RID: 208980 RVA: 0x00BE1CB1 File Offset: 0x00BDFEB1
-		// (set) Token: 0x06033055 RID: 208981 RVA: 0x00BE1CB9 File Offset: 0x00BDFEB9
+		// Token: 0x170051D6 RID: 20950
+		// (get) Token: 0x06027E3F RID: 163391 RVA: 0x00B27622 File Offset: 0x00B25822
+		// (set) Token: 0x06027E40 RID: 163392 RVA: 0x00B2762A File Offset: 0x00B2582A
 		public string ButtonName { get; set; }
 
-		// Token: 0x17007E27 RID: 32295
-		// (get) Token: 0x06033056 RID: 208982 RVA: 0x00BE1CC2 File Offset: 0x00BDFEC2
-		// (set) Token: 0x06033057 RID: 208983 RVA: 0x00BE1CCA File Offset: 0x00BDFECA
+		// Token: 0x170051D7 RID: 20951
+		// (get) Token: 0x06027E41 RID: 163393 RVA: 0x00B27633 File Offset: 0x00B25833
+		// (set) Token: 0x06027E42 RID: 163394 RVA: 0x00B2763B File Offset: 0x00B2583B
 		public EPhantomSuitItemType ItemType { get; set; }
 
-		// Token: 0x17007E28 RID: 32296
-		// (get) Token: 0x06033058 RID: 208984 RVA: 0x00BE1CD3 File Offset: 0x00BDFED3
-		// (set) Token: 0x06033059 RID: 208985 RVA: 0x00BE1CDB File Offset: 0x00BDFEDB
+		// Token: 0x170051D8 RID: 20952
+		// (get) Token: 0x06027E43 RID: 163395 RVA: 0x00B27644 File Offset: 0x00B25844
+		// (set) Token: 0x06027E44 RID: 163396 RVA: 0x00B2764C File Offset: 0x00B2584C
 		public string TypeIcon { get; set; }
 
-		// Token: 0x17007E29 RID: 32297
-		// (get) Token: 0x0603305A RID: 208986 RVA: 0x00BE1CE4 File Offset: 0x00BDFEE4
-		// (set) Token: 0x0603305B RID: 208987 RVA: 0x00BE1CEC File Offset: 0x00BDFEEC
+		// Token: 0x170051D9 RID: 20953
+		// (get) Token: 0x06027E45 RID: 163397 RVA: 0x00B27655 File Offset: 0x00B25855
+		// (set) Token: 0x06027E46 RID: 163398 RVA: 0x00B2765D File Offset: 0x00B2585D
 		public List<PhantomMonsterItemData> MonsterDataList { get; set; }
 
-		// Token: 0x17007E2A RID: 32298
-		// (get) Token: 0x0603305C RID: 208988 RVA: 0x00BE1CF5 File Offset: 0x00BDFEF5
-		// (set) Token: 0x0603305D RID: 208989 RVA: 0x00BE1CFD File Offset: 0x00BDFEFD
+		// Token: 0x170051DA RID: 20954
+		// (get) Token: 0x06027E47 RID: 163399 RVA: 0x00B27666 File Offset: 0x00B25866
+		// (set) Token: 0x06027E48 RID: 163400 RVA: 0x00B2766E File Offset: 0x00B2586E
 		public List<DropRewardItemData> RewardDataList { get; set; }
 
-		// Token: 0x17007E2B RID: 32299
-		// (get) Token: 0x0603305E RID: 208990 RVA: 0x00BE1D06 File Offset: 0x00BDFF06
-		// (set) Token: 0x0603305F RID: 208991 RVA: 0x00BE1D0E File Offset: 0x00BDFF0E
+		// Token: 0x170051DB RID: 20955
+		// (get) Token: 0x06027E49 RID: 163401 RVA: 0x00B27677 File Offset: 0x00B25877
+		// (set) Token: 0x06027E4A RID: 163402 RVA: 0x00B2767F File Offset: 0x00B2587F
 		public int DungeonId { get; set; }
 
-		// Token: 0x17007E2C RID: 32300
-		// (get) Token: 0x06033060 RID: 208992 RVA: 0x00BE1D17 File Offset: 0x00BDFF17
-		// (set) Token: 0x06033061 RID: 208993 RVA: 0x00BE1D1F File Offset: 0x00BDFF1F
+		// Token: 0x170051DC RID: 20956
+		// (get) Token: 0x06027E4B RID: 163403 RVA: 0x00B27688 File Offset: 0x00B25888
+		// (set) Token: 0x06027E4C RID: 163404 RVA: 0x00B27690 File Offset: 0x00B25890
 		public int FetterGroupId { get; set; }
 
-		// Token: 0x17007E2D RID: 32301
-		// (get) Token: 0x06033062 RID: 208994 RVA: 0x00BE1D28 File Offset: 0x00BDFF28
-		// (set) Token: 0x06033063 RID: 208995 RVA: 0x00BE1D30 File Offset: 0x00BDFF30
+		// Token: 0x170051DD RID: 20957
+		// (get) Token: 0x06027E4D RID: 163405 RVA: 0x00B27699 File Offset: 0x00B25899
+		// (set) Token: 0x06027E4E RID: 163406 RVA: 0x00B276A1 File Offset: 0x00B258A1
 		public int RoleId { get; set; }
 
-		// Token: 0x17007E2E RID: 32302
-		// (get) Token: 0x06033064 RID: 208996 RVA: 0x00BE1D39 File Offset: 0x00BDFF39
-		// (set) Token: 0x06033065 RID: 208997 RVA: 0x00BE1D41 File Offset: 0x00BDFF41
+		// Token: 0x170051DE RID: 20958
+		// (get) Token: 0x06027E4F RID: 163407 RVA: 0x00B276AA File Offset: 0x00B258AA
+		// (set) Token: 0x06027E50 RID: 163408 RVA: 0x00B276B2 File Offset: 0x00B258B2
 		public int? LogRoleId { get; set; }
 
-		// Token: 0x17007E2F RID: 32303
-		// (get) Token: 0x06033066 RID: 208998 RVA: 0x00BE1D4A File Offset: 0x00BDFF4A
-		// (set) Token: 0x06033067 RID: 208999 RVA: 0x00BE1D52 File Offset: 0x00BDFF52
+		// Token: 0x170051DF RID: 20959
+		// (get) Token: 0x06027E51 RID: 163409 RVA: 0x00B276BB File Offset: 0x00B258BB
+		// (set) Token: 0x06027E52 RID: 163410 RVA: 0x00B276C3 File Offset: 0x00B258C3
 		public ERoleDevelopCategoryType? LogMainPage { get; set; }
 
-		// Token: 0x17007E30 RID: 32304
-		// (get) Token: 0x06033068 RID: 209000 RVA: 0x00BE1D5B File Offset: 0x00BDFF5B
-		// (set) Token: 0x06033069 RID: 209001 RVA: 0x00BE1D63 File Offset: 0x00BDFF63
+		// Token: 0x170051E0 RID: 20960
+		// (get) Token: 0x06027E53 RID: 163411 RVA: 0x00B276CC File Offset: 0x00B258CC
+		// (set) Token: 0x06027E54 RID: 163412 RVA: 0x00B276D4 File Offset: 0x00B258D4
 		public ERoleDevelopLogSubPage? LogSubPage { get; set; }
 	}
 }

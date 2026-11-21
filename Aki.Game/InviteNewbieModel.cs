@@ -4,20 +4,20 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200128C RID: 4748
+// Token: 0x02000740 RID: 1856
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class InviteNewbieModel : ModelBase
 {
-	// Token: 0x060081C2 RID: 33218 RVA: 0x001B861C File Offset: 0x001B681C
+	// Token: 0x06005559 RID: 21849 RVA: 0x001C12EC File Offset: 0x001BF4EC
 	protected override bool OnInit()
 	{
 		this.ProtocolContext = new InviteNewbieProtocolContext(this);
 		return true;
 	}
 
-	// Token: 0x060081C3 RID: 33219 RVA: 0x001B862B File Offset: 0x001B682B
+	// Token: 0x0600555A RID: 21850 RVA: 0x001C12FB File Offset: 0x001BF4FB
 	protected override bool OnClear()
 	{
 		InviteNewbieProtocolContext protocolContext = this.ProtocolContext;
@@ -29,8 +29,8 @@ public class InviteNewbieModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x17000B20 RID: 2848
-	// (get) Token: 0x060081C4 RID: 33220 RVA: 0x001B8646 File Offset: 0x001B6846
+	// Token: 0x17000B40 RID: 2880
+	// (get) Token: 0x0600555B RID: 21851 RVA: 0x001C1316 File Offset: 0x001BF516
 	public ActivityBaseData ActivityData
 	{
 		get
@@ -43,8 +43,8 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000B21 RID: 2849
-	// (get) Token: 0x060081C5 RID: 33221 RVA: 0x001B8662 File Offset: 0x001B6862
+	// Token: 0x17000B41 RID: 2881
+	// (get) Token: 0x0600555C RID: 21852 RVA: 0x001C1332 File Offset: 0x001BF532
 	public int CurrentActivityId
 	{
 		get
@@ -58,8 +58,8 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000B22 RID: 2850
-	// (get) Token: 0x060081C6 RID: 33222 RVA: 0x001B8675 File Offset: 0x001B6875
+	// Token: 0x17000B42 RID: 2882
+	// (get) Token: 0x0600555D RID: 21853 RVA: 0x001C1345 File Offset: 0x001BF545
 	public bool HasRedDot
 	{
 		get
@@ -69,7 +69,7 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x060081C7 RID: 33223 RVA: 0x001B8688 File Offset: 0x001B6888
+	// Token: 0x0600555E RID: 21854 RVA: 0x001C1358 File Offset: 0x001BF558
 	public void SaveClickState()
 	{
 		InviteNewbieProtocolContext protocolContext = this.ProtocolContext;
@@ -80,8 +80,8 @@ public class InviteNewbieModel : ModelBase
 		protocolContext.SaveClickRedDotState();
 	}
 
-	// Token: 0x17000B23 RID: 2851
-	// (get) Token: 0x060081C8 RID: 33224 RVA: 0x001B869A File Offset: 0x001B689A
+	// Token: 0x17000B43 RID: 2883
+	// (get) Token: 0x0600555F RID: 21855 RVA: 0x001C136A File Offset: 0x001BF56A
 	public int HelpId
 	{
 		get
@@ -95,8 +95,8 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000B24 RID: 2852
-	// (get) Token: 0x060081C9 RID: 33225 RVA: 0x001B86AD File Offset: 0x001B68AD
+	// Token: 0x17000B44 RID: 2884
+	// (get) Token: 0x06005560 RID: 21856 RVA: 0x001C137D File Offset: 0x001BF57D
 	public string InviteCode
 	{
 		get
@@ -106,8 +106,8 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000B25 RID: 2853
-	// (get) Token: 0x060081CA RID: 33226 RVA: 0x001B86CC File Offset: 0x001B68CC
+	// Token: 0x17000B45 RID: 2885
+	// (get) Token: 0x06005561 RID: 21857 RVA: 0x001C139C File Offset: 0x001BF59C
 	public string ScoreTextId
 	{
 		get
@@ -121,8 +121,8 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000B26 RID: 2854
-	// (get) Token: 0x060081CB RID: 33227 RVA: 0x001B871D File Offset: 0x001B691D
+	// Token: 0x17000B46 RID: 2886
+	// (get) Token: 0x06005562 RID: 21858 RVA: 0x001C13ED File Offset: 0x001BF5ED
 	public int Score
 	{
 		get
@@ -136,8 +136,8 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000B27 RID: 2855
-	// (get) Token: 0x060081CC RID: 33228 RVA: 0x001B8730 File Offset: 0x001B6930
+	// Token: 0x17000B47 RID: 2887
+	// (get) Token: 0x06005563 RID: 21859 RVA: 0x001C1400 File Offset: 0x001BF600
 	[Nullable(2)]
 	public string RootUrl
 	{
@@ -172,8 +172,8 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000B28 RID: 2856
-	// (get) Token: 0x060081CD RID: 33229 RVA: 0x001B87BC File Offset: 0x001B69BC
+	// Token: 0x17000B48 RID: 2888
+	// (get) Token: 0x06005564 RID: 21860 RVA: 0x001C148C File Offset: 0x001BF68C
 	public bool IsInternalBrowser
 	{
 		get
@@ -187,7 +187,7 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x060081CE RID: 33230 RVA: 0x001B8800 File Offset: 0x001B6A00
+	// Token: 0x06005565 RID: 21861 RVA: 0x001C14D0 File Offset: 0x001BF6D0
 	public void SyncActivityNotify(H5CircumFluenceActivityDataNotify notify)
 	{
 		H5CircumFluenceActivityData activityData = notify.ActivityData;
@@ -201,8 +201,8 @@ public class InviteNewbieModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.CurrentActivityId);
 	}
 
-	// Token: 0x17000B29 RID: 2857
-	// (get) Token: 0x060081CF RID: 33231 RVA: 0x001B888E File Offset: 0x001B6A8E
+	// Token: 0x17000B49 RID: 2889
+	// (get) Token: 0x06005566 RID: 21862 RVA: 0x001C155E File Offset: 0x001BF75E
 	public static InviteNewbieModel Instance
 	{
 		get
@@ -211,7 +211,7 @@ public class InviteNewbieModel : ModelBase
 		}
 	}
 
-	// Token: 0x060081D0 RID: 33232 RVA: 0x001B8895 File Offset: 0x001B6A95
+	// Token: 0x06005567 RID: 21863 RVA: 0x001C1565 File Offset: 0x001BF765
 	public static InviteNewbieModel GetOrCreateInstance()
 	{
 		if (InviteNewbieModel._Instance == null)
@@ -221,7 +221,7 @@ public class InviteNewbieModel : ModelBase
 		return InviteNewbieModel._Instance;
 	}
 
-	// Token: 0x060081D1 RID: 33233 RVA: 0x001B88A9 File Offset: 0x001B6AA9
+	// Token: 0x06005568 RID: 21864 RVA: 0x001C1579 File Offset: 0x001BF779
 	public static bool CreateInstance()
 	{
 		if (InviteNewbieModel._Instance != null)
@@ -232,32 +232,32 @@ public class InviteNewbieModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060081D2 RID: 33234 RVA: 0x001B88BF File Offset: 0x001B6ABF
+	// Token: 0x06005569 RID: 21865 RVA: 0x001C158F File Offset: 0x001BF78F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060081D3 RID: 33235 RVA: 0x001B88C1 File Offset: 0x001B6AC1
+	// Token: 0x0600556A RID: 21866 RVA: 0x001C1591 File Offset: 0x001BF791
 	public static void ResetStaticDefaultValue()
 	{
 		InviteNewbieModel._Instance = null;
 	}
 
-	// Token: 0x060081D4 RID: 33236 RVA: 0x001B88C9 File Offset: 0x001B6AC9
+	// Token: 0x0600556B RID: 21867 RVA: 0x001C1599 File Offset: 0x001BF799
 	static InviteNewbieModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InviteNewbieModel.CreateStaticDefaultValue), new Action(InviteNewbieModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003ABE RID: 15038
+	// Token: 0x04003B56 RID: 15190
 	[Nullable(2)]
 	public string GmUrl;
 
-	// Token: 0x04003ABF RID: 15039
+	// Token: 0x04003B57 RID: 15191
 	[Nullable(2)]
 	private InviteNewbieProtocolContext ProtocolContext;
 
-	// Token: 0x04003AC0 RID: 15040
+	// Token: 0x04003B58 RID: 15192
 	[Nullable(2)]
 	private static InviteNewbieModel _Instance;
 }

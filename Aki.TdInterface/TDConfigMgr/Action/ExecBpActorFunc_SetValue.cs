@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200170C RID: 5900
+	// Token: 0x02001889 RID: 6281
 	public class ExecBpActorFunc_SetValue
 	{
-		// Token: 0x04004FDE RID: 20446
-		[Nullable(1)]
+		// Token: 0x0400540D RID: 21517
 		public IBpActorFuncTypeBase ExecFuncType;
 	}
 }

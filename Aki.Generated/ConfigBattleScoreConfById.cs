@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000E9 RID: 233
+	// Token: 0x020000F8 RID: 248
 	public class ConfigBattleScoreConfById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000577 RID: 1399 RVA: 0x000788C4 File Offset: 0x00076AC4
+		// Token: 0x060005D1 RID: 1489 RVA: 0x0007E228 File Offset: 0x0007C428
 		static ConfigBattleScoreConfById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBattleScoreConfById.CreateStaticDefaultValue), new Action(ConfigBattleScoreConfById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000578 RID: 1400 RVA: 0x000788E4 File Offset: 0x00076AE4
+		// Token: 0x060005D2 RID: 1490 RVA: 0x0007E248 File Offset: 0x0007C448
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBattleScoreConfById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000579 RID: 1401 RVA: 0x00078963 File Offset: 0x00076B63
+		// Token: 0x060005D3 RID: 1491 RVA: 0x0007E2C7 File Offset: 0x0007C4C7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBattleScoreConfById.LogPair = null;
 			ConfigBattleScoreConfById.HandleId = 0;
 		}
 
-		// Token: 0x0600057A RID: 1402 RVA: 0x00078971 File Offset: 0x00076B71
+		// Token: 0x060005D4 RID: 1492 RVA: 0x0007E2D5 File Offset: 0x0007C4D5
 		public static void Init()
 		{
 			ConfigBattleScoreConfById.HandleId = ConfigCommon.InitDataStatement(ConfigBattleScoreConfById.HandleId, "db_battlescore.db", "select BinData from `BattleScoreConf` where Id=?");
 		}
 
-		// Token: 0x0600057B RID: 1403 RVA: 0x0007898C File Offset: 0x00076B8C
+		// Token: 0x060005D5 RID: 1493 RVA: 0x0007E2F0 File Offset: 0x0007C4F0
 		public static BattleScoreConf? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBattleScoreConfById.HandleId, ConfigBattleScoreConfById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BattleScoreConf?(rootAsBattleScoreConf);
 		}
 
-		// Token: 0x04000643 RID: 1603
+		// Token: 0x040006AC RID: 1708
 		private const string DB = "db_battlescore.db";
 
-		// Token: 0x04000644 RID: 1604
+		// Token: 0x040006AD RID: 1709
 		private const string FILE = "z.战斗评分.xlsx";
 
-		// Token: 0x04000645 RID: 1605
+		// Token: 0x040006AE RID: 1710
 		private const string TABLE = "BattleScoreConf";
 
-		// Token: 0x04000646 RID: 1606
+		// Token: 0x040006AF RID: 1711
 		private const string COMMAND = "select BinData from `BattleScoreConf` where Id=?";
 
-		// Token: 0x04000647 RID: 1607
+		// Token: 0x040006B0 RID: 1712
 		private const string KEY_PREFIX = "BattleScoreConfById";
 
-		// Token: 0x04000648 RID: 1608
+		// Token: 0x040006B1 RID: 1713
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000649 RID: 1609
+		// Token: 0x040006B2 RID: 1714
 		private static int HandleId;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PhantomArena.Battle.Model;
@@ -12,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 {
-	// Token: 0x0200526C RID: 21100
+	// Token: 0x0200423C RID: 16956
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaChooseCardPanel : UiPanelBase
 	{
-		// Token: 0x06035F32 RID: 220978 RVA: 0x00CC3670 File Offset: 0x00CC1870
+		// Token: 0x0602AE2D RID: 175661 RVA: 0x00C10D38 File Offset: 0x00C0EF38
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,13 +37,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			};
 		}
 
-		// Token: 0x06035F33 RID: 220979 RVA: 0x00CC3775 File Offset: 0x00CC1975
+		// Token: 0x0602AE2E RID: 175662 RVA: 0x00C10E3D File Offset: 0x00C0F03D
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<PhantomArenaChooseCardItem, PhantomCardData>(base.GetLayoutBase(0), new Func<PhantomArenaChooseCardItem>(this.InitItem), base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06035F34 RID: 220980 RVA: 0x00CC37A8 File Offset: 0x00CC19A8
+		// Token: 0x0602AE2F RID: 175663 RVA: 0x00C10E70 File Offset: 0x00C0F070
 		protected override UniTask OnBeforeShowAsyncImplement()
 		{
 			PhantomArenaChooseCardPanel.<OnBeforeShowAsyncImplement>d__10 <OnBeforeShowAsyncImplement>d__;
@@ -55,7 +54,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035F35 RID: 220981 RVA: 0x00CC37EC File Offset: 0x00CC19EC
+		// Token: 0x0602AE30 RID: 175664 RVA: 0x00C10EB4 File Offset: 0x00C0F0B4
 		protected override void OnAfterHide()
 		{
 			base.GetItem(2).SetUIActive(true);
@@ -66,13 +65,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			this.ViewProxy.SetInPanelInteractType(EPhantomArenaBattlePanelInteractType.MainView);
 		}
 
-		// Token: 0x06035F36 RID: 220982 RVA: 0x00CC3841 File Offset: 0x00CC1A41
+		// Token: 0x0602AE31 RID: 175665 RVA: 0x00C10F09 File Offset: 0x00C0F109
 		protected override void OnAfterShow()
 		{
 			EventSystem.Instance.Emit(EEventName.OnPhantomArenaChooseCardPanelShow);
 		}
 
-		// Token: 0x06035F37 RID: 220983 RVA: 0x00CC3853 File Offset: 0x00CC1A53
+		// Token: 0x0602AE32 RID: 175666 RVA: 0x00C10F1B File Offset: 0x00C0F11B
 		private PhantomArenaChooseCardItem InitItem()
 		{
 			return new PhantomArenaChooseCardItem
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			};
 		}
 
-		// Token: 0x06035F38 RID: 220984 RVA: 0x00CC386C File Offset: 0x00CC1A6C
+		// Token: 0x0602AE33 RID: 175667 RVA: 0x00C10F34 File Offset: 0x00C0F134
 		private void OnVisibleToggleClick(EToggleState state)
 		{
 			bool flag = state != EToggleState.ETT_Checked;
@@ -90,7 +89,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			base.GetItem(2).SetUIActive(flag);
 		}
 
-		// Token: 0x06035F39 RID: 220985 RVA: 0x00CC38A8 File Offset: 0x00CC1AA8
+		// Token: 0x0602AE34 RID: 175668 RVA: 0x00C10F70 File Offset: 0x00C0F170
 		private void OnConfirmBtnClick()
 		{
 			this.Data.ConfirmFunc(new List<int>(this.SelectedIdSet)).ContinueWith(delegate()
@@ -102,13 +101,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			});
 		}
 
-		// Token: 0x06035F3A RID: 220986 RVA: 0x00CC38D7 File Offset: 0x00CC1AD7
+		// Token: 0x0602AE35 RID: 175669 RVA: 0x00C10F9F File Offset: 0x00C0F19F
 		private void OnEmptyClick()
 		{
 			this.CancelSelectState();
 		}
 
-		// Token: 0x06035F3B RID: 220987 RVA: 0x00CC38E0 File Offset: 0x00CC1AE0
+		// Token: 0x0602AE36 RID: 175670 RVA: 0x00C10FA8 File Offset: 0x00C0F1A8
 		private void CardClick(PhantomCardData data, bool isSelected)
 		{
 			this.HandleSelectState(data.CardId);
@@ -133,7 +132,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			this.RefreshTitle();
 		}
 
-		// Token: 0x06035F3C RID: 220988 RVA: 0x00CC39A0 File Offset: 0x00CC1BA0
+		// Token: 0x0602AE37 RID: 175671 RVA: 0x00C11068 File Offset: 0x00C0F268
 		private void HandleChooseState(int selectId, bool isSelected)
 		{
 			PhantomArenaChooseCardItem layoutItemByKey = this.Layout.GetLayoutItemByKey(selectId);
@@ -149,14 +148,21 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			this.SelectedIdSet.Remove(selectId);
 		}
 
-		// Token: 0x06035F3D RID: 220989 RVA: 0x00CC39E8 File Offset: 0x00CC1BE8
+		// Token: 0x0602AE38 RID: 175672 RVA: 0x00C110B0 File Offset: 0x00C0F2B0
 		private void CancelChooseLastState()
 		{
 			if (this.SelectedIdSet.Count <= 0)
 			{
 				return;
 			}
-			int num = this.SelectedIdSet.First<int>();
+			int num = 0;
+			using (HashSet<int>.Enumerator enumerator = this.SelectedIdSet.GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					num = enumerator.Current;
+				}
+			}
 			if (num != 0)
 			{
 				this.HandleChooseState(num, false);
@@ -164,7 +170,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			}
 		}
 
-		// Token: 0x06035F3E RID: 220990 RVA: 0x00CC3A24 File Offset: 0x00CC1C24
+		// Token: 0x0602AE39 RID: 175673 RVA: 0x00C11124 File Offset: 0x00C0F324
 		private void HandleSelectState(int selectId)
 		{
 			if (this.CurrentSelectId == selectId)
@@ -188,7 +194,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			this.CurrentSelectId = selectId;
 		}
 
-		// Token: 0x06035F3F RID: 220991 RVA: 0x00CC3AA0 File Offset: 0x00CC1CA0
+		// Token: 0x0602AE3A RID: 175674 RVA: 0x00C111A0 File Offset: 0x00C0F3A0
 		private void CancelSelectState()
 		{
 			if (this.CurrentSelectId == -1)
@@ -204,7 +210,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			this.ViewProxy.HideCardTips();
 		}
 
-		// Token: 0x06035F40 RID: 220992 RVA: 0x00CC3AE0 File Offset: 0x00CC1CE0
+		// Token: 0x0602AE3B RID: 175675 RVA: 0x00C111E0 File Offset: 0x00C0F3E0
 		private void ResetToggleState(int selectId)
 		{
 			PhantomArenaChooseCardItem layoutItemByKey = this.Layout.GetLayoutItemByKey(selectId);
@@ -215,13 +221,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			layoutItemByKey.Card.SetToggleState(EToggleState.ETT_UnChecked, false);
 		}
 
-		// Token: 0x06035F41 RID: 220993 RVA: 0x00CC3B04 File Offset: 0x00CC1D04
+		// Token: 0x0602AE3C RID: 175676 RVA: 0x00C11204 File Offset: 0x00C0F404
 		private void RefreshConfirmInteractive()
 		{
 			base.GetButton(3).SetSelfInteractive(this.SelectedIdSet.Count >= this.LimitCount);
 		}
 
-		// Token: 0x06035F42 RID: 220994 RVA: 0x00CC3B28 File Offset: 0x00CC1D28
+		// Token: 0x0602AE3D RID: 175677 RVA: 0x00C11228 File Offset: 0x00C0F428
 		private void RefreshTitle()
 		{
 			UUIText text = base.GetText(6);
@@ -232,19 +238,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			}));
 		}
 
-		// Token: 0x06035F43 RID: 220995 RVA: 0x00CC3B79 File Offset: 0x00CC1D79
+		// Token: 0x0602AE3E RID: 175678 RVA: 0x00C11279 File Offset: 0x00C0F479
 		public void RegisterViewProxy(PhantomArenaBattleProxy proxy)
 		{
 			this.ViewProxy = proxy;
 		}
 
-		// Token: 0x06035F44 RID: 220996 RVA: 0x00CC3B82 File Offset: 0x00CC1D82
+		// Token: 0x0602AE3F RID: 175679 RVA: 0x00C11282 File Offset: 0x00C0F482
 		public void SetChooseCardData(IChooseCardPanelData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06035F45 RID: 220997 RVA: 0x00CC3B8C File Offset: 0x00CC1D8C
+		// Token: 0x0602AE40 RID: 175680 RVA: 0x00C1128C File Offset: 0x00C0F48C
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams.Length == 0)
@@ -273,50 +279,50 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			return null;
 		}
 
-		// Token: 0x0401C918 RID: 117016
+		// Token: 0x0401734D RID: 95053
 		protected IChooseCardPanelData Data;
 
-		// Token: 0x0401C919 RID: 117017
+		// Token: 0x0401734E RID: 95054
 		protected PhantomArenaBattleProxy ViewProxy;
 
-		// Token: 0x0401C91A RID: 117018
+		// Token: 0x0401734F RID: 95055
 		protected HashSet<int> SelectedIdSet = new HashSet<int>();
 
-		// Token: 0x0401C91B RID: 117019
+		// Token: 0x04017350 RID: 95056
 		protected int LimitCount;
 
-		// Token: 0x0401C91C RID: 117020
+		// Token: 0x04017351 RID: 95057
 		protected GenericLayout<PhantomArenaChooseCardItem, PhantomCardData> Layout;
 
-		// Token: 0x0401C91D RID: 117021
+		// Token: 0x04017352 RID: 95058
 		protected int CurrentSelectId = -1;
 
-		// Token: 0x0401C91E RID: 117022
+		// Token: 0x04017353 RID: 95059
 		public Action ConfirmFunc;
 
-		// Token: 0x0200B455 RID: 46165
+		// Token: 0x02009E8D RID: 40589
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04036A36 RID: 223798
+			// Token: 0x04031489 RID: 201865
 			public const int Layout = 0;
 
-			// Token: 0x04036A37 RID: 223799
+			// Token: 0x0403148A RID: 201866
 			public const int LayoutItem = 1;
 
-			// Token: 0x04036A38 RID: 223800
+			// Token: 0x0403148B RID: 201867
 			public const int ContentItem = 2;
 
-			// Token: 0x04036A39 RID: 223801
+			// Token: 0x0403148C RID: 201868
 			public const int ConfirmBtn = 3;
 
-			// Token: 0x04036A3A RID: 223802
+			// Token: 0x0403148D RID: 201869
 			public const int VisibleToggle = 4;
 
-			// Token: 0x04036A3B RID: 223803
+			// Token: 0x0403148E RID: 201870
 			public const int EmptyBtn = 5;
 
-			// Token: 0x04036A3C RID: 223804
+			// Token: 0x0403148F RID: 201871
 			public const int Title = 6;
 		}
 	}

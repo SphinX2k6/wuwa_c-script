@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002B7F RID: 11135
+// Token: 0x020020FB RID: 8443
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class SurvivorsRogueConfig : ConfigBase
 {
-	// Token: 0x06017105 RID: 94469 RVA: 0x005DB11A File Offset: 0x005D931A
+	// Token: 0x06014B36 RID: 84790 RVA: 0x00607CAD File Offset: 0x00605EAD
 	public SurvivorsActivityConfig? GetSurvivorsActivityConfigByActivityId(int activityId)
 	{
 		return ConfigSurvivorsActivityConfigByActivityId.GetConfig(activityId, true);
 	}
 
-	// Token: 0x06017106 RID: 94470 RVA: 0x005DB124 File Offset: 0x005D9324
+	// Token: 0x06014B37 RID: 84791 RVA: 0x00607CB8 File Offset: 0x00605EB8
 	public IReadOnlyList<SurvivorsLevel> GetAllSurvivorsLevelByActId(int actId)
 	{
 		IReadOnlyList<SurvivorsLevel> configList = ConfigSurvivorsLevelByActivityId.GetConfigList(actId, true);
@@ -26,13 +26,13 @@ public class SurvivorsRogueConfig : ConfigBase
 		return new List<SurvivorsLevel>();
 	}
 
-	// Token: 0x06017107 RID: 94471 RVA: 0x005DB143 File Offset: 0x005D9343
+	// Token: 0x06014B38 RID: 84792 RVA: 0x00607CD7 File Offset: 0x00605ED7
 	public SurvivorsLevel? GetSurvivorsLevel(int levelId)
 	{
 		return ConfigSurvivorsLevelById.GetConfig(levelId, true);
 	}
 
-	// Token: 0x06017108 RID: 94472 RVA: 0x005DB14C File Offset: 0x005D934C
+	// Token: 0x06014B39 RID: 84793 RVA: 0x00607CE0 File Offset: 0x00605EE0
 	public int GetMaxWaveNumByLevelId(int levelId)
 	{
 		IReadOnlyList<SurvivorsWave> configList = ConfigSurvivorsWaveByLevel.GetConfigList(levelId, true);
@@ -43,7 +43,7 @@ public class SurvivorsRogueConfig : ConfigBase
 		return configList.Count;
 	}
 
-	// Token: 0x06017109 RID: 94473 RVA: 0x005DB16C File Offset: 0x005D936C
+	// Token: 0x06014B3A RID: 84794 RVA: 0x00607D00 File Offset: 0x00605F00
 	public int GetWaveDuration(int levelId, int waveId)
 	{
 		IReadOnlyList<SurvivorsWave> configList = ConfigSurvivorsWaveByLevel.GetConfigList(levelId, true);
@@ -62,7 +62,7 @@ public class SurvivorsRogueConfig : ConfigBase
 		return 0;
 	}
 
-	// Token: 0x0601710A RID: 94474 RVA: 0x005DB1B4 File Offset: 0x005D93B4
+	// Token: 0x06014B3B RID: 84795 RVA: 0x00607D48 File Offset: 0x00605F48
 	public int GetWaveType(int levelId, int waveId)
 	{
 		IReadOnlyList<SurvivorsWave> configList = ConfigSurvivorsWaveByLevel.GetConfigList(levelId, true);
@@ -81,7 +81,7 @@ public class SurvivorsRogueConfig : ConfigBase
 		return 0;
 	}
 
-	// Token: 0x0601710B RID: 94475 RVA: 0x005DB1FC File Offset: 0x005D93FC
+	// Token: 0x06014B3C RID: 84796 RVA: 0x00607D90 File Offset: 0x00605F90
 	public bool IsBonusWave(int levelId, int waveId)
 	{
 		IReadOnlyList<SurvivorsWave> configList = ConfigSurvivorsWaveByLevel.GetConfigList(levelId, true);
@@ -100,14 +100,14 @@ public class SurvivorsRogueConfig : ConfigBase
 		return false;
 	}
 
-	// Token: 0x0601710C RID: 94476 RVA: 0x005DB248 File Offset: 0x005D9448
+	// Token: 0x06014B3D RID: 84797 RVA: 0x00607DDC File Offset: 0x00605FDC
 	public bool IsBoss(int templateId)
 	{
 		SurvivorsMonsterType? config = ConfigSurvivorsMonsterTypeByTemplateId.GetConfig(templateId, true);
 		return config != null && config.Value.RiskType == 3;
 	}
 
-	// Token: 0x0601710D RID: 94477 RVA: 0x005DB27C File Offset: 0x005D947C
+	// Token: 0x06014B3E RID: 84798 RVA: 0x00607E10 File Offset: 0x00606010
 	public IReadOnlyList<SurvivorsRole> GetAllSurvivorsRoleByActId(int actId)
 	{
 		IReadOnlyList<SurvivorsRole> configList = ConfigSurvivorsRoleByActivityId.GetConfigList(actId, true);
@@ -118,19 +118,19 @@ public class SurvivorsRogueConfig : ConfigBase
 		return new List<SurvivorsRole>();
 	}
 
-	// Token: 0x0601710E RID: 94478 RVA: 0x005DB29B File Offset: 0x005D949B
+	// Token: 0x06014B3F RID: 84799 RVA: 0x00607E2F File Offset: 0x0060602F
 	public SurvivorsRole? GetSurvivorsRole(int roleId)
 	{
 		return ConfigSurvivorsRoleById.GetConfig(roleId, true);
 	}
 
-	// Token: 0x0601710F RID: 94479 RVA: 0x005DB2A4 File Offset: 0x005D94A4
+	// Token: 0x06014B40 RID: 84800 RVA: 0x00607E38 File Offset: 0x00606038
 	public SurvivorsRoleLv? GetSurvivorsRoleLv(int lvId)
 	{
 		return ConfigSurvivorsRoleLvById.GetConfig(lvId, true);
 	}
 
-	// Token: 0x06017110 RID: 94480 RVA: 0x005DB2B0 File Offset: 0x005D94B0
+	// Token: 0x06014B41 RID: 84801 RVA: 0x00607E44 File Offset: 0x00606044
 	public IReadOnlyList<SurvivorsRoleLv> GetSurvivorsRoleLvListByRoleId(int roleId)
 	{
 		IReadOnlyList<SurvivorsRoleLv> configList = ConfigSurvivorsRoleLvByRoleId.GetConfigList(roleId, true);
@@ -141,13 +141,13 @@ public class SurvivorsRogueConfig : ConfigBase
 		return new List<SurvivorsRoleLv>();
 	}
 
-	// Token: 0x06017111 RID: 94481 RVA: 0x005DB2CF File Offset: 0x005D94CF
+	// Token: 0x06014B42 RID: 84802 RVA: 0x00607E63 File Offset: 0x00606063
 	public SurvivorsRoleEvolve? GetSurvivorsRoleEvolve(int evolveId)
 	{
 		return ConfigSurvivorsRoleEvolveById.GetConfig(evolveId, true);
 	}
 
-	// Token: 0x06017112 RID: 94482 RVA: 0x005DB2D8 File Offset: 0x005D94D8
+	// Token: 0x06014B43 RID: 84803 RVA: 0x00607E6C File Offset: 0x0060606C
 	public SurvivorsRoleEvolve? GetSurvivorsRoleDefaultEvolve(int roleId)
 	{
 		SurvivorsRole? survivorsRole = this.GetSurvivorsRole(roleId);
@@ -173,7 +173,7 @@ public class SurvivorsRogueConfig : ConfigBase
 		return this.GetSurvivorsRoleEvolve(num);
 	}
 
-	// Token: 0x06017113 RID: 94483 RVA: 0x005DB390 File Offset: 0x005D9590
+	// Token: 0x06014B44 RID: 84804 RVA: 0x00607F24 File Offset: 0x00606124
 	public IReadOnlyList<SurvivorsWeapon> GetAllSurvivorsWeaponByActId(int actId)
 	{
 		IReadOnlyList<SurvivorsWeapon> configList = ConfigSurvivorsWeaponByActivityId.GetConfigList(actId, true);
@@ -184,13 +184,13 @@ public class SurvivorsRogueConfig : ConfigBase
 		return new List<SurvivorsWeapon>();
 	}
 
-	// Token: 0x06017114 RID: 94484 RVA: 0x005DB3AF File Offset: 0x005D95AF
+	// Token: 0x06014B45 RID: 84805 RVA: 0x00607F43 File Offset: 0x00606143
 	public SurvivorsWeapon? GetSurvivorsWeapon(int weaponId)
 	{
 		return ConfigSurvivorsWeaponById.GetConfig(weaponId, true);
 	}
 
-	// Token: 0x06017115 RID: 94485 RVA: 0x005DB3B8 File Offset: 0x005D95B8
+	// Token: 0x06014B46 RID: 84806 RVA: 0x00607F4C File Offset: 0x0060614C
 	public SurvivorsWeaponEvolve? GetSurvivorsWeaponDefaultEvolve(int weaponId)
 	{
 		SurvivorsWeapon? survivorsWeapon = this.GetSurvivorsWeapon(weaponId);
@@ -216,13 +216,13 @@ public class SurvivorsRogueConfig : ConfigBase
 		return this.GetSurvivorsWeaponEvolve(num);
 	}
 
-	// Token: 0x06017116 RID: 94486 RVA: 0x005DB46D File Offset: 0x005D966D
+	// Token: 0x06014B47 RID: 84807 RVA: 0x00608001 File Offset: 0x00606201
 	public SurvivorsWeaponLv? GetSurvivorsWeaponLv(int lvId)
 	{
 		return ConfigSurvivorsWeaponLvById.GetConfig(lvId, true);
 	}
 
-	// Token: 0x06017117 RID: 94487 RVA: 0x005DB478 File Offset: 0x005D9678
+	// Token: 0x06014B48 RID: 84808 RVA: 0x0060800C File Offset: 0x0060620C
 	public IReadOnlyList<SurvivorsWeaponLv> GetSurvivorsWeaponLvListByWeaponId(int weaponId)
 	{
 		IReadOnlyList<SurvivorsWeaponLv> configList = ConfigSurvivorsWeaponLvByWeaponId.GetConfigList(weaponId, true);
@@ -233,13 +233,13 @@ public class SurvivorsRogueConfig : ConfigBase
 		return new List<SurvivorsWeaponLv>();
 	}
 
-	// Token: 0x06017118 RID: 94488 RVA: 0x005DB497 File Offset: 0x005D9697
+	// Token: 0x06014B49 RID: 84809 RVA: 0x0060802B File Offset: 0x0060622B
 	public SurvivorsWeaponEvolve? GetSurvivorsWeaponEvolve(int evolveId)
 	{
 		return ConfigSurvivorsWeaponEvolveById.GetConfig(evolveId, true);
 	}
 
-	// Token: 0x06017119 RID: 94489 RVA: 0x005DB4A0 File Offset: 0x005D96A0
+	// Token: 0x06014B4A RID: 84810 RVA: 0x00608034 File Offset: 0x00606234
 	public IReadOnlyList<SurvivorsTalentTree> GetAllTalentTreeNodeByActId(int actId)
 	{
 		IReadOnlyList<SurvivorsTalentTree> configList = ConfigSurvivorsTalentTreeByActivityId.GetConfigList(actId, true);
@@ -250,19 +250,19 @@ public class SurvivorsRogueConfig : ConfigBase
 		return new List<SurvivorsTalentTree>();
 	}
 
-	// Token: 0x0601711A RID: 94490 RVA: 0x005DB4BF File Offset: 0x005D96BF
+	// Token: 0x06014B4B RID: 84811 RVA: 0x00608053 File Offset: 0x00606253
 	public SurvivorsTalentTree? GetTalentTreeNode(int nodeId)
 	{
 		return ConfigSurvivorsTalentTreeById.GetConfig(nodeId, true);
 	}
 
-	// Token: 0x0601711B RID: 94491 RVA: 0x005DB4C8 File Offset: 0x005D96C8
+	// Token: 0x06014B4C RID: 84812 RVA: 0x0060805C File Offset: 0x0060625C
 	public SurvivorsTalentEffect? GetTalentTreeEffect(int effectId)
 	{
 		return ConfigSurvivorsTalentEffectById.GetConfig(effectId, true);
 	}
 
-	// Token: 0x0601711C RID: 94492 RVA: 0x005DB4D4 File Offset: 0x005D96D4
+	// Token: 0x06014B4D RID: 84813 RVA: 0x00608068 File Offset: 0x00606268
 	public IReadOnlyList<SurvivorsItem> GetAllSurvivorsItemByActId(int actId)
 	{
 		IReadOnlyList<SurvivorsItem> configList = ConfigSurvivorsItemByActivityId.GetConfigList(actId, true);
@@ -273,32 +273,32 @@ public class SurvivorsRogueConfig : ConfigBase
 		return new List<SurvivorsItem>();
 	}
 
-	// Token: 0x0601711D RID: 94493 RVA: 0x005DB4F3 File Offset: 0x005D96F3
+	// Token: 0x06014B4E RID: 84814 RVA: 0x00608087 File Offset: 0x00606287
 	public SurvivorsItem? GetSurvivorsItem(int weaponId)
 	{
 		return ConfigSurvivorsItemById.GetConfig(weaponId, true);
 	}
 
-	// Token: 0x0601711E RID: 94494 RVA: 0x005DB4FC File Offset: 0x005D96FC
+	// Token: 0x06014B4F RID: 84815 RVA: 0x00608090 File Offset: 0x00606290
 	public SurvivorsQuality? GetQualityConfig(int qualityId)
 	{
 		return ConfigSurvivorsQualityById.GetConfig(qualityId, true);
 	}
 
-	// Token: 0x0601711F RID: 94495 RVA: 0x005DB505 File Offset: 0x005D9705
+	// Token: 0x06014B50 RID: 84816 RVA: 0x00608099 File Offset: 0x00606299
 	public SurvivorsProperty? GetPropertyConfig(int propertyId)
 	{
 		return ConfigSurvivorsPropertyById.GetConfig(propertyId, true);
 	}
 
-	// Token: 0x06017120 RID: 94496 RVA: 0x005DB50E File Offset: 0x005D970E
+	// Token: 0x06014B51 RID: 84817 RVA: 0x006080A2 File Offset: 0x006062A2
 	[NullableContext(2)]
 	public IReadOnlyList<SkillGameplayButton> GetSkillButtonConfigByType(int type)
 	{
 		return ConfigSkillGameplayButtonByGameplayType.GetConfigList(type, true);
 	}
 
-	// Token: 0x06017121 RID: 94497 RVA: 0x005DB518 File Offset: 0x005D9718
+	// Token: 0x06014B52 RID: 84818 RVA: 0x006080AC File Offset: 0x006062AC
 	public SurvivorsCombo? GetComboConfig(int levelId)
 	{
 		SurvivorsLevel? survivorsLevel = this.GetSurvivorsLevel(levelId);
@@ -309,13 +309,13 @@ public class SurvivorsRogueConfig : ConfigBase
 		return ConfigSurvivorsComboById.GetConfig(survivorsLevel.Value.ComboCfgId, true);
 	}
 
-	// Token: 0x06017122 RID: 94498 RVA: 0x005DB555 File Offset: 0x005D9755
+	// Token: 0x06014B53 RID: 84819 RVA: 0x006080E9 File Offset: 0x006062E9
 	public SurvivorsTask? GetSurvivorsTask(int taskId)
 	{
 		return ConfigSurvivorsTaskById.GetConfig(taskId, true);
 	}
 
-	// Token: 0x06017123 RID: 94499 RVA: 0x005DB560 File Offset: 0x005D9760
+	// Token: 0x06014B54 RID: 84820 RVA: 0x006080F4 File Offset: 0x006062F4
 	public IReadOnlyList<SurvivorsTask> GetSurvivorsTaskByActId(int actId)
 	{
 		IReadOnlyList<SurvivorsTask> configList = ConfigSurvivorsTaskByActivityId.GetConfigList(actId, true);
@@ -326,7 +326,7 @@ public class SurvivorsRogueConfig : ConfigBase
 		return new List<SurvivorsTask>();
 	}
 
-	// Token: 0x06017124 RID: 94500 RVA: 0x005DB580 File Offset: 0x005D9780
+	// Token: 0x06014B55 RID: 84821 RVA: 0x00608114 File Offset: 0x00606314
 	public IReadOnlyList<SurvivorsScoreReward> GetAllSurvivorsScoreRewardByActId(int actId)
 	{
 		IReadOnlyList<SurvivorsScoreReward> configList = ConfigSurvivorsScoreRewardByActivity.GetConfigList(actId, true);
@@ -337,8 +337,8 @@ public class SurvivorsRogueConfig : ConfigBase
 		return new List<SurvivorsScoreReward>();
 	}
 
-	// Token: 0x17001EC6 RID: 7878
-	// (get) Token: 0x06017125 RID: 94501 RVA: 0x005DB59F File Offset: 0x005D979F
+	// Token: 0x17001F1E RID: 7966
+	// (get) Token: 0x06014B56 RID: 84822 RVA: 0x00608133 File Offset: 0x00606333
 	public static SurvivorsRogueConfig Instance
 	{
 		get
@@ -347,7 +347,7 @@ public class SurvivorsRogueConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06017126 RID: 94502 RVA: 0x005DB5A6 File Offset: 0x005D97A6
+	// Token: 0x06014B57 RID: 84823 RVA: 0x0060813A File Offset: 0x0060633A
 	public static SurvivorsRogueConfig GetOrCreateInstance()
 	{
 		if (SurvivorsRogueConfig._Instance == null)
@@ -357,7 +357,7 @@ public class SurvivorsRogueConfig : ConfigBase
 		return SurvivorsRogueConfig._Instance;
 	}
 
-	// Token: 0x06017127 RID: 94503 RVA: 0x005DB5BA File Offset: 0x005D97BA
+	// Token: 0x06014B58 RID: 84824 RVA: 0x0060814E File Offset: 0x0060634E
 	public static bool CreateInstance()
 	{
 		if (SurvivorsRogueConfig._Instance != null)
@@ -368,24 +368,24 @@ public class SurvivorsRogueConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06017128 RID: 94504 RVA: 0x005DB5D0 File Offset: 0x005D97D0
+	// Token: 0x06014B59 RID: 84825 RVA: 0x00608164 File Offset: 0x00606364
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017129 RID: 94505 RVA: 0x005DB5D2 File Offset: 0x005D97D2
+	// Token: 0x06014B5A RID: 84826 RVA: 0x00608166 File Offset: 0x00606366
 	public static void ResetStaticDefaultValue()
 	{
 		SurvivorsRogueConfig._Instance = null;
 	}
 
-	// Token: 0x0601712A RID: 94506 RVA: 0x005DB5DA File Offset: 0x005D97DA
+	// Token: 0x06014B5B RID: 84827 RVA: 0x0060816E File Offset: 0x0060636E
 	static SurvivorsRogueConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SurvivorsRogueConfig.CreateStaticDefaultValue), new Action(SurvivorsRogueConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400ACAE RID: 44206
+	// Token: 0x0400B0B5 RID: 45237
 	[Nullable(2)]
 	private static SurvivorsRogueConfig _Instance;
 }

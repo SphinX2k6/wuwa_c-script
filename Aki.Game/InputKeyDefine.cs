@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020018AF RID: 6319
+// Token: 0x02000D68 RID: 3432
 public class InputKeyDefine
 {
-	// Token: 0x040053DE RID: 21470
+	// Token: 0x04005489 RID: 21641
 	public const float DISABLE_ALPHA = 0.2f;
 }

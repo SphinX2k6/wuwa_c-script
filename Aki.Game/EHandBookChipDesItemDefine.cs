@@ -1,23 +1,23 @@
 ﻿using System;
 
-// Token: 0x02001DD6 RID: 7638
+// Token: 0x02001298 RID: 4760
 public class EHandBookChipDesItemDefine
 {
-	// Token: 0x04006B89 RID: 27529
+	// Token: 0x04006C6A RID: 27754
 	public const int Toggle = 0;
 
-	// Token: 0x04006B8A RID: 27530
+	// Token: 0x04006C6B RID: 27755
 	public const int NotFoundItem = 1;
 
-	// Token: 0x04006B8B RID: 27531
+	// Token: 0x04006C6C RID: 27756
 	public const int NameTxt = 2;
 
-	// Token: 0x04006B8C RID: 27532
+	// Token: 0x04006C6D RID: 27757
 	public const int LockText = 3;
 
-	// Token: 0x04006B8D RID: 27533
+	// Token: 0x04006C6E RID: 27758
 	public const int NewItem = 4;
 
-	// Token: 0x04006B8E RID: 27534
+	// Token: 0x04006C6F RID: 27759
 	public const int LockItem = 5;
 }

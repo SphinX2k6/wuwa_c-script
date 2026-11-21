@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F20 RID: 3872
+// Token: 0x020003D5 RID: 981
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementDetailView : UiViewBase
 {
-	// Token: 0x06006202 RID: 25090 RVA: 0x0013232C File Offset: 0x0013052C
+	// Token: 0x0600359A RID: 13722 RVA: 0x0013AC50 File Offset: 0x00138E50
 	public AchievementDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006203 RID: 25091 RVA: 0x00132340 File Offset: 0x00130540
+	// Token: 0x0600359B RID: 13723 RVA: 0x0013AC64 File Offset: 0x00138E64
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -52,7 +52,7 @@ public class AchievementDetailView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006204 RID: 25092 RVA: 0x001324D8 File Offset: 0x001306D8
+	// Token: 0x0600359C RID: 13724 RVA: 0x0013ADFC File Offset: 0x00138FFC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AchievementDetailView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ public class AchievementDetailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006205 RID: 25093 RVA: 0x0013251C File Offset: 0x0013071C
+	// Token: 0x0600359D RID: 13725 RVA: 0x0013AE40 File Offset: 0x00139040
 	private UniTask RefreshTabRedPoint()
 	{
 		AchievementDetailView.<RefreshTabRedPoint>d__12 <RefreshTabRedPoint>d__;
@@ -74,7 +74,7 @@ public class AchievementDetailView : UiViewBase
 		return <RefreshTabRedPoint>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006206 RID: 25094 RVA: 0x00132560 File Offset: 0x00130760
+	// Token: 0x0600359E RID: 13726 RVA: 0x0013AE84 File Offset: 0x00139084
 	protected override void OnBeforeShow()
 	{
 		AchievementGroupData selectGroupData = AchievementModel.Instance.CurrentSelectGroup;
@@ -98,7 +98,7 @@ public class AchievementDetailView : UiViewBase
 		captionItem.SelectToggleByIndex(achievementCategoryIndex, true);
 	}
 
-	// Token: 0x06006207 RID: 25095 RVA: 0x001325E8 File Offset: 0x001307E8
+	// Token: 0x0600359F RID: 13727 RVA: 0x0013AF0C File Offset: 0x0013910C
 	protected override void OnStart()
 	{
 		this.AchievementGroupTitleItem = new AchievementGroupTitleItem();
@@ -106,13 +106,13 @@ public class AchievementDetailView : UiViewBase
 		this.SearchComponent = new CommonSearchComponent(base.GetItem(7), new Action<string>(this.SearchResult), new Action(this.ResetSearch));
 	}
 
-	// Token: 0x06006208 RID: 25096 RVA: 0x0013263C File Offset: 0x0013083C
+	// Token: 0x060035A0 RID: 13728 RVA: 0x0013AF60 File Offset: 0x00139160
 	private CommonTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x06006209 RID: 25097 RVA: 0x00132644 File Offset: 0x00130844
+	// Token: 0x060035A1 RID: 13729 RVA: 0x0013AF68 File Offset: 0x00139168
 	private void ToggleCallBack(int index)
 	{
 		AchievementCategoryData achievementCategoryData = this.AchievementCategoryDataList[index];
@@ -134,7 +134,7 @@ public class AchievementDetailView : UiViewBase
 		this.RefreshSearchingItem();
 	}
 
-	// Token: 0x0600620A RID: 25098 RVA: 0x001326F1 File Offset: 0x001308F1
+	// Token: 0x060035A2 RID: 13730 RVA: 0x0013B015 File Offset: 0x00139215
 	private void ScrollToSelectGroup(int index)
 	{
 		if (index < 0)
@@ -144,28 +144,28 @@ public class AchievementDetailView : UiViewBase
 		this.AchievementGroupScroller.LateScrollTo(index);
 	}
 
-	// Token: 0x0600620B RID: 25099 RVA: 0x00132704 File Offset: 0x00130904
+	// Token: 0x060035A3 RID: 13731 RVA: 0x0013B028 File Offset: 0x00139228
 	private CommonTabData GetCommonData(int index)
 	{
 		AchievementCategoryData achievementCategoryData = this.AchievementCategoryDataList[index];
 		return new CommonTabData(achievementCategoryData.GetSprite(), new CommonTabTitleData(achievementCategoryData.GetOrignalTitle(), Array.Empty<object>()), null);
 	}
 
-	// Token: 0x0600620C RID: 25100 RVA: 0x0013273A File Offset: 0x0013093A
+	// Token: 0x060035A4 RID: 13732 RVA: 0x0013B05E File Offset: 0x0013925E
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnAchievementGroupChange, new Action(this.OnAchievementGroupChange));
 		EventSystem.Instance.Add(EEventName.OnAchievementDataNotify, new Action(this.OnAchievementDataNotify));
 	}
 
-	// Token: 0x0600620D RID: 25101 RVA: 0x00132774 File Offset: 0x00130974
+	// Token: 0x060035A5 RID: 13733 RVA: 0x0013B098 File Offset: 0x00139298
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAchievementGroupChange, new Action(this.OnAchievementGroupChange));
 		EventSystem.Instance.Remove(EEventName.OnAchievementDataNotify, new Action(this.OnAchievementDataNotify));
 	}
 
-	// Token: 0x0600620E RID: 25102 RVA: 0x001327B0 File Offset: 0x001309B0
+	// Token: 0x060035A6 RID: 13734 RVA: 0x0013B0D4 File Offset: 0x001392D4
 	protected override void OnBeforeDestroy()
 	{
 		if (this.CaptionItem != null)
@@ -200,20 +200,20 @@ public class AchievementDetailView : UiViewBase
 		this.SearchComponent.Destroy(null);
 	}
 
-	// Token: 0x0600620F RID: 25103 RVA: 0x00132862 File Offset: 0x00130A62
+	// Token: 0x060035A7 RID: 13735 RVA: 0x0013B186 File Offset: 0x00139386
 	private void OnAchievementGroupChange()
 	{
 		this.RefreshViewTypeSearchType();
 	}
 
-	// Token: 0x06006210 RID: 25104 RVA: 0x0013286A File Offset: 0x00130A6A
+	// Token: 0x060035A8 RID: 13736 RVA: 0x0013B18E File Offset: 0x0013938E
 	private void OnAchievementDataNotify()
 	{
 		AchievementModel.Instance.RefreshSearchResult();
 		this.RefreshViewTypeSearchType();
 	}
 
-	// Token: 0x06006211 RID: 25105 RVA: 0x0013287C File Offset: 0x00130A7C
+	// Token: 0x060035A9 RID: 13737 RVA: 0x0013B1A0 File Offset: 0x001393A0
 	private void SearchResult(string content)
 	{
 		AchievementModel.Instance.CurrentSearchText = content;
@@ -224,7 +224,7 @@ public class AchievementDetailView : UiViewBase
 		EventSystem.Instance.Emit(EEventName.OnGetAchievementSearchTextChange);
 	}
 
-	// Token: 0x06006212 RID: 25106 RVA: 0x001328D0 File Offset: 0x00130AD0
+	// Token: 0x060035AA RID: 13738 RVA: 0x0013B1F4 File Offset: 0x001393F4
 	private void ResetSearch()
 	{
 		bool achievementSearchState = AchievementModel.Instance.AchievementSearchState;
@@ -239,7 +239,7 @@ public class AchievementDetailView : UiViewBase
 		EventSystem.Instance.Emit(EEventName.OnGetAchievementSearchTextChange);
 	}
 
-	// Token: 0x06006213 RID: 25107 RVA: 0x0013292F File Offset: 0x00130B2F
+	// Token: 0x060035AB RID: 13739 RVA: 0x0013B253 File Offset: 0x00139453
 	private void ResetSearchComponent()
 	{
 		CommonSearchComponent searchComponent = this.SearchComponent;
@@ -250,7 +250,7 @@ public class AchievementDetailView : UiViewBase
 		searchComponent.ResetSearch(true);
 	}
 
-	// Token: 0x06006214 RID: 25108 RVA: 0x00132944 File Offset: 0x00130B44
+	// Token: 0x060035AC RID: 13740 RVA: 0x0013B268 File Offset: 0x00139468
 	private void RefreshGroupScroller()
 	{
 		AchievementModel instance = AchievementModel.Instance;
@@ -258,7 +258,7 @@ public class AchievementDetailView : UiViewBase
 		this.AchievementGroupScroller.RefreshByData(achievementCategoryGroups.ToArray(), false, false);
 	}
 
-	// Token: 0x06006215 RID: 25109 RVA: 0x0013297C File Offset: 0x00130B7C
+	// Token: 0x060035AD RID: 13741 RVA: 0x0013B2A0 File Offset: 0x001394A0
 	private void RefreshSearchingItem()
 	{
 		bool achievementSearchState = AchievementModel.Instance.AchievementSearchState;
@@ -266,7 +266,7 @@ public class AchievementDetailView : UiViewBase
 		base.GetItem(2).SetUIActive(achievementSearchState && !searchResultIfNull);
 	}
 
-	// Token: 0x06006216 RID: 25110 RVA: 0x001329B8 File Offset: 0x00130BB8
+	// Token: 0x060035AE RID: 13742 RVA: 0x0013B2DC File Offset: 0x001394DC
 	private void RefreshViewTypeSearchType()
 	{
 		bool achievementSearchState = AchievementModel.Instance.AchievementSearchState;
@@ -312,19 +312,19 @@ public class AchievementDetailView : UiViewBase
 		item4.SetUIActive(false);
 	}
 
-	// Token: 0x06006217 RID: 25111 RVA: 0x00132ABD File Offset: 0x00130CBD
+	// Token: 0x060035AF RID: 13743 RVA: 0x0013B3E1 File Offset: 0x001395E1
 	private AchievementGroupSmallItem OnSmallItemCreate(AchievementGroupData data, UUIItem uiItem, int index)
 	{
 		return new AchievementGroupSmallItem();
 	}
 
-	// Token: 0x06006218 RID: 25112 RVA: 0x00132AC4 File Offset: 0x00130CC4
+	// Token: 0x060035B0 RID: 13744 RVA: 0x0013B3E8 File Offset: 0x001395E8
 	private void OnClickBackBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04002C85 RID: 11397
+	// Token: 0x04002D1E RID: 11550
 	[Nullable(new byte[]
 	{
 		2,
@@ -332,30 +332,30 @@ public class AchievementDetailView : UiViewBase
 	})]
 	private TabComponentWithCaptionItem<CommonTabItem> CaptionItem;
 
-	// Token: 0x04002C86 RID: 11398
+	// Token: 0x04002D1F RID: 11551
 	[Nullable(2)]
 	private AchievementSearchItem AchievementSearchItem;
 
-	// Token: 0x04002C87 RID: 11399
+	// Token: 0x04002D20 RID: 11552
 	[Nullable(2)]
 	private AchievementGroupDataItem AchievementGroupDataItem;
 
-	// Token: 0x04002C88 RID: 11400
+	// Token: 0x04002D21 RID: 11553
 	[Nullable(2)]
 	private AchievementGroupTitleItem AchievementGroupTitleItem;
 
-	// Token: 0x04002C89 RID: 11401
+	// Token: 0x04002D22 RID: 11554
 	[Nullable(2)]
 	private AchievementGroupSmallDynItem AchievementGroupSmallDynItem;
 
-	// Token: 0x04002C8A RID: 11402
+	// Token: 0x04002D23 RID: 11555
 	[Nullable(2)]
 	private CommonSearchComponent SearchComponent;
 
-	// Token: 0x04002C8B RID: 11403
+	// Token: 0x04002D24 RID: 11556
 	private List<AchievementCategoryData> AchievementCategoryDataList = new List<AchievementCategoryData>();
 
-	// Token: 0x04002C8C RID: 11404
+	// Token: 0x04002D25 RID: 11557
 	[Nullable(new byte[]
 	{
 		2,
@@ -365,31 +365,31 @@ public class AchievementDetailView : UiViewBase
 	})]
 	private DynamicScrollView<AchievementGroupSmallItem, AchievementGroupSmallDynItem, AchievementGroupData> AchievementGroupScroller;
 
-	// Token: 0x02007566 RID: 30054
+	// Token: 0x020066FA RID: 26362
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04026D0E RID: 158990
+		// Token: 0x04022059 RID: 139353
 		CaptionItem,
-		// Token: 0x04026D0F RID: 158991
+		// Token: 0x0402205A RID: 139354
 		AchievementGroupScroller,
-		// Token: 0x04026D10 RID: 158992
+		// Token: 0x0402205B RID: 139355
 		SearchingItem,
-		// Token: 0x04026D11 RID: 158993
+		// Token: 0x0402205C RID: 139356
 		GroupTitleItem,
-		// Token: 0x04026D12 RID: 158994
+		// Token: 0x0402205D RID: 139357
 		GroupDataItem,
-		// Token: 0x04026D13 RID: 158995
+		// Token: 0x0402205E RID: 139358
 		SearchItem,
-		// Token: 0x04026D14 RID: 158996
+		// Token: 0x0402205F RID: 139359
 		AchievementGroupTemplate,
-		// Token: 0x04026D15 RID: 158997
+		// Token: 0x04022060 RID: 139360
 		SearchInput,
-		// Token: 0x04026D16 RID: 158998
+		// Token: 0x04022061 RID: 139361
 		LeftSearchTip,
-		// Token: 0x04026D17 RID: 158999
+		// Token: 0x04022062 RID: 139362
 		RightSearchTip,
-		// Token: 0x04026D18 RID: 159000
+		// Token: 0x04022063 RID: 139363
 		CategoryProgressText
 	}
 }

@@ -5,13 +5,13 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine.Extension;
 
-// Token: 0x020021EF RID: 8687
+// Token: 0x020016D3 RID: 5843
 [NullableContext(1)]
 [Nullable(0)]
 public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV>>, IEnumerable
 {
-	// Token: 0x17001574 RID: 5492
-	// (get) Token: 0x06010E71 RID: 69233 RVA: 0x0041CDBB File Offset: 0x0041AFBB
+	// Token: 0x170015AB RID: 5547
+	// (get) Token: 0x0600E304 RID: 58116 RVA: 0x0042974B File Offset: 0x0042794B
 	public int Count
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -21,13 +21,13 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		}
 	}
 
-	// Token: 0x06010E72 RID: 69234 RVA: 0x0041CDC8 File Offset: 0x0041AFC8
+	// Token: 0x0600E305 RID: 58117 RVA: 0x00429758 File Offset: 0x00427958
 	public PropertyMap<TK, TV> Add(TK key, TV value)
 	{
 		return this.Set(key, value);
 	}
 
-	// Token: 0x06010E73 RID: 69235 RVA: 0x0041CDD4 File Offset: 0x0041AFD4
+	// Token: 0x0600E306 RID: 58118 RVA: 0x00429764 File Offset: 0x00427964
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public PropertyMap<TK, TV> Set(TK key, TV value)
 	{
@@ -48,7 +48,7 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		return this;
 	}
 
-	// Token: 0x06010E74 RID: 69236 RVA: 0x0041CE2F File Offset: 0x0041B02F
+	// Token: 0x0600E307 RID: 58119 RVA: 0x004297BF File Offset: 0x004279BF
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public TV Get(TK key)
 	{
@@ -57,7 +57,7 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		return valueRefOrNullRef.Value;
 	}
 
-	// Token: 0x06010E75 RID: 69237 RVA: 0x0041CE4C File Offset: 0x0041B04C
+	// Token: 0x0600E308 RID: 58120 RVA: 0x004297DC File Offset: 0x004279DC
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public TV TryGet(TK key, TV defaultValue = default(TV), bool flushDirty = true)
 	{
@@ -73,7 +73,7 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		return valueRefOrNullRef.Value;
 	}
 
-	// Token: 0x06010E76 RID: 69238 RVA: 0x0041CE88 File Offset: 0x0041B088
+	// Token: 0x0600E309 RID: 58121 RVA: 0x00429818 File Offset: 0x00427A18
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public void CleanDirty(TK key)
 	{
@@ -84,7 +84,7 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		}
 	}
 
-	// Token: 0x06010E77 RID: 69239 RVA: 0x0041CEBC File Offset: 0x0041B0BC
+	// Token: 0x0600E30A RID: 58122 RVA: 0x0042984C File Offset: 0x00427A4C
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public void SetDirty(TK key)
 	{
@@ -95,7 +95,7 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		}
 	}
 
-	// Token: 0x06010E78 RID: 69240 RVA: 0x0041CEF0 File Offset: 0x0041B0F0
+	// Token: 0x0600E30B RID: 58123 RVA: 0x00429880 File Offset: 0x00427A80
 	public void SetAllDirty()
 	{
 		using (PoolArray<TK> poolArray = this.Entries.Keys.ToPoolArray<TK>())
@@ -111,7 +111,7 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		}
 	}
 
-	// Token: 0x06010E79 RID: 69241 RVA: 0x0041CF7C File Offset: 0x0041B17C
+	// Token: 0x0600E30C RID: 58124 RVA: 0x00429910 File Offset: 0x00427B10
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public bool IsDirty(TK key)
 	{
@@ -119,7 +119,7 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		return this.Entries.TryGetValue(key, out propertyEntry) && propertyEntry.IsDirty;
 	}
 
-	// Token: 0x17001575 RID: 5493
+	// Token: 0x170015AC RID: 5548
 	public TV this[TK key]
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -134,28 +134,28 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		}
 	}
 
-	// Token: 0x06010E7C RID: 69244 RVA: 0x0041CFB5 File Offset: 0x0041B1B5
+	// Token: 0x0600E30F RID: 58127 RVA: 0x00429949 File Offset: 0x00427B49
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public bool Remove(TK key)
 	{
 		return this.Entries.Remove(key);
 	}
 
-	// Token: 0x06010E7D RID: 69245 RVA: 0x0041CFC3 File Offset: 0x0041B1C3
+	// Token: 0x0600E310 RID: 58128 RVA: 0x00429957 File Offset: 0x00427B57
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public void Clear()
 	{
 		this.Entries.Clear();
 	}
 
-	// Token: 0x06010E7E RID: 69246 RVA: 0x0041CFD0 File Offset: 0x0041B1D0
+	// Token: 0x0600E311 RID: 58129 RVA: 0x00429964 File Offset: 0x00427B64
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public bool ContainsKey(TK key)
 	{
 		return this.Entries.ContainsKey(key);
 	}
 
-	// Token: 0x06010E7F RID: 69247 RVA: 0x0041CFE0 File Offset: 0x0041B1E0
+	// Token: 0x0600E312 RID: 58130 RVA: 0x00429974 File Offset: 0x00427B74
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public bool TryGetValue(TK key, [Nullable(2)] out TV value)
 	{
@@ -169,8 +169,8 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		return false;
 	}
 
-	// Token: 0x17001576 RID: 5494
-	// (get) Token: 0x06010E80 RID: 69248 RVA: 0x0041D013 File Offset: 0x0041B213
+	// Token: 0x170015AD RID: 5549
+	// (get) Token: 0x0600E313 RID: 58131 RVA: 0x004299A7 File Offset: 0x00427BA7
 	public IEnumerable<TK> Keys
 	{
 		get
@@ -179,8 +179,8 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		}
 	}
 
-	// Token: 0x17001577 RID: 5495
-	// (get) Token: 0x06010E81 RID: 69249 RVA: 0x0041D020 File Offset: 0x0041B220
+	// Token: 0x170015AE RID: 5550
+	// (get) Token: 0x0600E314 RID: 58132 RVA: 0x004299B4 File Offset: 0x00427BB4
 	public IEnumerable<TV> Values
 	{
 		get
@@ -191,7 +191,7 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		}
 	}
 
-	// Token: 0x06010E82 RID: 69250 RVA: 0x0041D030 File Offset: 0x0041B230
+	// Token: 0x0600E315 RID: 58133 RVA: 0x004299C4 File Offset: 0x00427BC4
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -206,13 +206,13 @@ public class PropertyMap<TK, [Nullable(2)] TV> : IEnumerable<KeyValuePair<TK, TV
 		return <GetEnumerator>d__;
 	}
 
-	// Token: 0x06010E83 RID: 69251 RVA: 0x0041D03F File Offset: 0x0041B23F
+	// Token: 0x0600E316 RID: 58134 RVA: 0x004299D3 File Offset: 0x00427BD3
 	IEnumerator IEnumerable.GetEnumerator()
 	{
 		return this.GetEnumerator();
 	}
 
-	// Token: 0x0400807A RID: 32890
+	// Token: 0x040081B8 RID: 33208
 	[Nullable(new byte[]
 	{
 		1,

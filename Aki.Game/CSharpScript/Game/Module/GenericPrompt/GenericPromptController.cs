@@ -7,13 +7,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.GenericPrompt
 {
-	// Token: 0x02005992 RID: 22930
+	// Token: 0x0200496B RID: 18795
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class GenericPromptController : UiControllerBase
 	{
-		// Token: 0x0603A2FB RID: 238331 RVA: 0x00DD47B8 File Offset: 0x00DD29B8
+		// Token: 0x0602F221 RID: 193057 RVA: 0x00D23C48 File Offset: 0x00D21E48
 		public void ShowPromptByCode(string promptId, params object[] param)
 		{
 			GenericPrompt? promptInfoByRawId = GenericPromptConfig.Instance.GetPromptInfoByRawId(promptId);
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			this.ShowPromptByItsType<object>((EPromptSubViewType)promptInfoByRawId.Value.TypeId, promptMainTextObjByRawId, null, param, null, null, null, null, null, false, null);
 		}
 
-		// Token: 0x0603A2FC RID: 238332 RVA: 0x00DD4840 File Offset: 0x00DD2A40
+		// Token: 0x0602F222 RID: 193058 RVA: 0x00D23CD0 File Offset: 0x00D21ED0
 		public void ShowPromptByCodeWithCallback(string promptId, Action callback, params object[] param)
 		{
 			GenericPrompt? promptInfoByRawId = GenericPromptConfig.Instance.GetPromptInfoByRawId(promptId);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			this.ShowPromptByItsType<object>((EPromptSubViewType)promptInfoByRawId.Value.TypeId, promptMainTextObjByRawId, null, param, null, new int?(int.Parse(promptId)), callback, null, null, false, null);
 		}
 
-		// Token: 0x0603A2FD RID: 238333 RVA: 0x00DD48C8 File Offset: 0x00DD2AC8
+		// Token: 0x0602F223 RID: 193059 RVA: 0x00D23D58 File Offset: 0x00D21F58
 		[NullableContext(2)]
 		public void ShowPromptByItsType(EPromptSubViewType typeId, TableTextArgNew mainTextObj = null, TableTextArgNew extraTextObj = null, [Nullable(new byte[]
 		{
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			this.ShowPromptByItsType<object>(typeId, mainTextObj, extraTextObj, mainTextParams, extraTextParams, promptId, callback, null, null, false, null);
 		}
 
-		// Token: 0x0603A2FE RID: 238334 RVA: 0x00DD48F4 File Offset: 0x00DD2AF4
+		// Token: 0x0602F224 RID: 193060 RVA: 0x00D23D84 File Offset: 0x00D21F84
 		[NullableContext(2)]
 		public void ShowPromptByItsType<T>(EPromptSubViewType typeId, TableTextArgNew mainTextObj = null, TableTextArgNew extraTextObj = null, [Nullable(new byte[]
 		{
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			UiManager.Instance.OpenView(name, promptParamHub2, null);
 		}
 
-		// Token: 0x0603A2FF RID: 238335 RVA: 0x00DD49E4 File Offset: 0x00DD2BE4
+		// Token: 0x0602F225 RID: 193061 RVA: 0x00D23E74 File Offset: 0x00D22074
 		public EUiViewName? GetViewNameByPromptId(string promptId)
 		{
 			GenericPrompt? promptInfoByRawId = GenericPromptConfig.Instance.GetPromptInfoByRawId(promptId);
@@ -141,21 +141,21 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			return new EUiViewName?(value);
 		}
 
-		// Token: 0x0603A300 RID: 238336 RVA: 0x00DD4AA2 File Offset: 0x00DD2CA2
+		// Token: 0x0602F226 RID: 193062 RVA: 0x00D23F32 File Offset: 0x00D22132
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.UiManagerInit, new Action(this.CreateGenericPromptView));
 			EventSystem.Instance.Add(EEventName.AfterLoadMap, new Action(this.CreateGenericPromptView));
 		}
 
-		// Token: 0x0603A301 RID: 238337 RVA: 0x00DD4AD9 File Offset: 0x00DD2CD9
+		// Token: 0x0602F227 RID: 193063 RVA: 0x00D23F69 File Offset: 0x00D22169
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.UiManagerInit, new Action(this.CreateGenericPromptView));
 			EventSystem.Instance.Remove(EEventName.AfterLoadMap, new Action(this.CreateGenericPromptView));
 		}
 
-		// Token: 0x0603A302 RID: 238338 RVA: 0x00DD4B10 File Offset: 0x00DD2D10
+		// Token: 0x0602F228 RID: 193064 RVA: 0x00D23FA0 File Offset: 0x00D221A0
 		private void CreateGenericPromptView()
 		{
 			if (!UiManager.Instance.IsViewOpen(EUiViewName.GenericPromptView))
@@ -164,14 +164,14 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			}
 		}
 
-		// Token: 0x0603A303 RID: 238339 RVA: 0x00DD4B34 File Offset: 0x00DD2D34
+		// Token: 0x0602F229 RID: 193065 RVA: 0x00D23FC4 File Offset: 0x00D221C4
 		public static void CancelPromptByPromptKey(string promptKey)
 		{
 			GenericPromptModel.Instance.RemovePromptParamHubByKey(promptKey);
 		}
 
-		// Token: 0x17008B74 RID: 35700
-		// (get) Token: 0x0603A304 RID: 238340 RVA: 0x00DD4B41 File Offset: 0x00DD2D41
+		// Token: 0x17005F41 RID: 24385
+		// (get) Token: 0x0602F22A RID: 193066 RVA: 0x00D23FD1 File Offset: 0x00D221D1
 		public static GenericPromptController Instance
 		{
 			get
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			}
 		}
 
-		// Token: 0x0603A305 RID: 238341 RVA: 0x00DD4B48 File Offset: 0x00DD2D48
+		// Token: 0x0602F22B RID: 193067 RVA: 0x00D23FD8 File Offset: 0x00D221D8
 		public static GenericPromptController GetOrCreateInstance()
 		{
 			if (GenericPromptController._Instance == null)
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			return GenericPromptController._Instance;
 		}
 
-		// Token: 0x0603A306 RID: 238342 RVA: 0x00DD4B5C File Offset: 0x00DD2D5C
+		// Token: 0x0602F22C RID: 193068 RVA: 0x00D23FEC File Offset: 0x00D221EC
 		public static bool CreateInstance()
 		{
 			if (GenericPromptController._Instance != null)
@@ -201,24 +201,24 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			return true;
 		}
 
-		// Token: 0x0603A307 RID: 238343 RVA: 0x00DD4B72 File Offset: 0x00DD2D72
+		// Token: 0x0602F22D RID: 193069 RVA: 0x00D24002 File Offset: 0x00D22202
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603A308 RID: 238344 RVA: 0x00DD4B74 File Offset: 0x00DD2D74
+		// Token: 0x0602F22E RID: 193070 RVA: 0x00D24004 File Offset: 0x00D22204
 		public static void ResetStaticDefaultValue()
 		{
 			GenericPromptController._Instance = null;
 		}
 
-		// Token: 0x0603A309 RID: 238345 RVA: 0x00DD4B7C File Offset: 0x00DD2D7C
+		// Token: 0x0602F22F RID: 193071 RVA: 0x00D2400C File Offset: 0x00D2220C
 		static GenericPromptController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GenericPromptController.CreateStaticDefaultValue), new Action(GenericPromptController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E5A3 RID: 124323
+		// Token: 0x04019041 RID: 102465
 		[Nullable(2)]
 		private static GenericPromptController _Instance;
 	}

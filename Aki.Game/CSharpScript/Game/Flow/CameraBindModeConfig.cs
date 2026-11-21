@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Flow
 {
-	// Token: 0x0200725E RID: 29278
+	// Token: 0x020063DD RID: 25565
 	public class CameraBindModeConfig
 	{
-		// Token: 0x04025B8A RID: 154506
+		// Token: 0x04020E48 RID: 134728
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<string, string> Config = new Dictionary<string, string>

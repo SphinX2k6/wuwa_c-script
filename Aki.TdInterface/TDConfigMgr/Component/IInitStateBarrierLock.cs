@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000466 RID: 1126
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004BF RID: 1215
 	public class IInitStateBarrierLock : IInitState
 	{
-		// Token: 0x060016B7 RID: 5815 RVA: 0x00045B54 File Offset: 0x00043D54
+		// Token: 0x06001851 RID: 6225 RVA: 0x0004989C File Offset: 0x00047A9C
 		private IInitStateBarrierLock_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060016B8 RID: 5816 RVA: 0x00045B8C File Offset: 0x00043D8C
+		// Token: 0x06001852 RID: 6226 RVA: 0x000498D4 File Offset: 0x00047AD4
 		public static IInitStateBarrierLock Create([Nullable(2)] IInitStateBarrierLock instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016B9 RID: 5817 RVA: 0x00045B9F File Offset: 0x00043D9F
+		// Token: 0x06001853 RID: 6227 RVA: 0x000498E7 File Offset: 0x00047AE7
 		public static IInitStateBarrierLock CreateFromSetValue([Nullable(2)] IInitStateBarrierLock_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016BA RID: 5818 RVA: 0x00045BB2 File Offset: 0x00043DB2
+		// Token: 0x06001854 RID: 6228 RVA: 0x000498FA File Offset: 0x00047AFA
 		public new IInitStateBarrierLock_SetValue ToSetValue()
 		{
 			return new IInitStateBarrierLock_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000620 RID: 1568
-		// (get) Token: 0x060016BB RID: 5819 RVA: 0x00045BC5 File Offset: 0x00043DC5
-		// (set) Token: 0x060016BC RID: 5820 RVA: 0x00045BF0 File Offset: 0x00043DF0
+		// Token: 0x17000687 RID: 1671
+		// (get) Token: 0x06001855 RID: 6229 RVA: 0x0004990D File Offset: 0x00047B0D
+		// (set) Token: 0x06001856 RID: 6230 RVA: 0x00049938 File Offset: 0x00047B38
 		public override EInitStateType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400113D RID: 4413
+		// Token: 0x0400125F RID: 4703
 		[Nullable(2)]
 		protected new IInitStateBarrierLock FbInstance;
 
-		// Token: 0x0400113E RID: 4414
+		// Token: 0x04001260 RID: 4704
 		[Nullable(2)]
 		protected new IInitStateBarrierLock_SetValue PocoInterface;
 	}

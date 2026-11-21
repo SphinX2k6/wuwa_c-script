@@ -6,22 +6,22 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 {
-	// Token: 0x02006DD3 RID: 28115
+	// Token: 0x02005F52 RID: 24402
 	public class LevelAiDecoratorQuestState : LevelAiDecorator
 	{
-		// Token: 0x0604491F RID: 280863 RVA: 0x010E9EE1 File Offset: 0x010E80E1
+		// Token: 0x0603AA83 RID: 240259 RVA: 0x01094131 File Offset: 0x01092331
 		protected override void OnExecutionStart()
 		{
 			EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x06044920 RID: 280864 RVA: 0x010E9EFF File Offset: 0x010E80FF
+		// Token: 0x0603AA84 RID: 240260 RVA: 0x0109414F File Offset: 0x0109234F
 		protected override void OnExecutionFinish(ELevelAiNodeResult result)
 		{
 			EventSystem.Instance.Remove<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x06044921 RID: 280865 RVA: 0x010E9F20 File Offset: 0x010E8120
+		// Token: 0x0603AA85 RID: 240261 RVA: 0x01094170 File Offset: 0x01092370
 		protected override bool CheckCondition(ELevelAiDecoratorCheckType checkType)
 		{
 			IQuestStateEqualCondition questStateEqualCondition = this.Params as IQuestStateEqualCondition;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 			return result;
 		}
 
-		// Token: 0x06044922 RID: 280866 RVA: 0x010E9FC8 File Offset: 0x010E81C8
+		// Token: 0x0603AA86 RID: 240262 RVA: 0x01094218 File Offset: 0x01092418
 		private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 		{
 			IQuestStateEqualCondition questStateEqualCondition = this.Params as IQuestStateEqualCondition;

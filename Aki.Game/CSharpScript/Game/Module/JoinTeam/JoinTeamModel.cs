@@ -4,27 +4,27 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.JoinTeam
 {
-	// Token: 0x020057AB RID: 22443
+	// Token: 0x02004782 RID: 18306
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class JoinTeamModel : ModelBase
 	{
-		// Token: 0x06039059 RID: 233561 RVA: 0x00D8D963 File Offset: 0x00D8BB63
+		// Token: 0x0602DF69 RID: 188265 RVA: 0x00CDC71F File Offset: 0x00CDA91F
 		public void SetRoleDescriptionId(int? roleDescriptionId)
 		{
 			this.RoleDescriptionId = roleDescriptionId;
 			EventSystem.Instance.Emit(EEventName.OnRefreshJoinTeamRole);
 		}
 
-		// Token: 0x0603905A RID: 233562 RVA: 0x00D8D97C File Offset: 0x00D8BB7C
+		// Token: 0x0602DF6A RID: 188266 RVA: 0x00CDC738 File Offset: 0x00CDA938
 		public int? GetRoleDescriptionId()
 		{
 			return this.RoleDescriptionId;
 		}
 
-		// Token: 0x170088D7 RID: 35031
-		// (get) Token: 0x0603905B RID: 233563 RVA: 0x00D8D984 File Offset: 0x00D8BB84
+		// Token: 0x17005C9F RID: 23711
+		// (get) Token: 0x0602DF6B RID: 188267 RVA: 0x00CDC740 File Offset: 0x00CDA940
 		public static JoinTeamModel Instance
 		{
 			get
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.JoinTeam
 			}
 		}
 
-		// Token: 0x0603905C RID: 233564 RVA: 0x00D8D98B File Offset: 0x00D8BB8B
+		// Token: 0x0602DF6C RID: 188268 RVA: 0x00CDC747 File Offset: 0x00CDA947
 		public static JoinTeamModel GetOrCreateInstance()
 		{
 			if (JoinTeamModel._Instance == null)
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.JoinTeam
 			return JoinTeamModel._Instance;
 		}
 
-		// Token: 0x0603905D RID: 233565 RVA: 0x00D8D99F File Offset: 0x00D8BB9F
+		// Token: 0x0602DF6D RID: 188269 RVA: 0x00CDC75B File Offset: 0x00CDA95B
 		public static bool CreateInstance()
 		{
 			if (JoinTeamModel._Instance != null)
@@ -54,27 +54,27 @@ namespace CSharpScript.Game.Module.JoinTeam
 			return true;
 		}
 
-		// Token: 0x0603905E RID: 233566 RVA: 0x00D8D9B5 File Offset: 0x00D8BBB5
+		// Token: 0x0602DF6E RID: 188270 RVA: 0x00CDC771 File Offset: 0x00CDA971
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603905F RID: 233567 RVA: 0x00D8D9B7 File Offset: 0x00D8BBB7
+		// Token: 0x0602DF6F RID: 188271 RVA: 0x00CDC773 File Offset: 0x00CDA973
 		public static void ResetStaticDefaultValue()
 		{
 			JoinTeamModel._Instance = null;
 		}
 
-		// Token: 0x06039060 RID: 233568 RVA: 0x00D8D9BF File Offset: 0x00D8BBBF
+		// Token: 0x0602DF70 RID: 188272 RVA: 0x00CDC77B File Offset: 0x00CDA97B
 		static JoinTeamModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(JoinTeamModel.CreateStaticDefaultValue), new Action(JoinTeamModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DDF7 RID: 122359
+		// Token: 0x0401888D RID: 100493
 		private int? RoleDescriptionId;
 
-		// Token: 0x0401DDF8 RID: 122360
+		// Token: 0x0401888E RID: 100494
 		[Nullable(2)]
 		private static JoinTeamModel _Instance;
 	}

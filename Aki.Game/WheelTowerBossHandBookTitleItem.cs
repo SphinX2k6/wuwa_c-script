@@ -6,12 +6,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200158F RID: 5519
+// Token: 0x02000A47 RID: 2631
 public class WheelTowerBossHandBookTitleItem : GridProxyAbstract<int>
 {
-	// Token: 0x17000D78 RID: 3448
-	// (get) Token: 0x06009D6A RID: 40298 RVA: 0x0022202C File Offset: 0x0022022C
-	// (set) Token: 0x06009D6B RID: 40299 RVA: 0x00222034 File Offset: 0x00220234
+	// Token: 0x17000D99 RID: 3481
+	// (get) Token: 0x06007148 RID: 29000 RVA: 0x0022BDDC File Offset: 0x00229FDC
+	// (set) Token: 0x06007149 RID: 29001 RVA: 0x0022BDE4 File Offset: 0x00229FE4
 	[Nullable(new byte[]
 	{
 		2,
@@ -27,7 +27,7 @@ public class WheelTowerBossHandBookTitleItem : GridProxyAbstract<int>
 		1
 	})] set; }
 
-	// Token: 0x06009D6C RID: 40300 RVA: 0x00222040 File Offset: 0x00220240
+	// Token: 0x0600714A RID: 29002 RVA: 0x0022BDF0 File Offset: 0x00229FF0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -50,7 +50,7 @@ public class WheelTowerBossHandBookTitleItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009D6D RID: 40301 RVA: 0x00222108 File Offset: 0x00220308
+	// Token: 0x0600714B RID: 29003 RVA: 0x0022BEB8 File Offset: 0x0022A0B8
 	public override void Refresh(int waveId, bool isSelected, int gridIndex)
 	{
 		NewTowerWave? waveConfigById = WheelTowerConfig.Instance.GetWaveConfigById(waveId);
@@ -63,13 +63,13 @@ public class WheelTowerBossHandBookTitleItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), waveConfigById.Value.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x06009D6E RID: 40302 RVA: 0x00222188 File Offset: 0x00220388
+	// Token: 0x0600714C RID: 29004 RVA: 0x0022BF38 File Offset: 0x0022A138
 	public override void OnSelected(bool fireEvent)
 	{
 		this.OnToggleClick(EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x06009D6F RID: 40303 RVA: 0x00222194 File Offset: 0x00220394
+	// Token: 0x0600714D RID: 29005 RVA: 0x0022BF44 File Offset: 0x0022A144
 	private void OnToggleClick(EToggleState state)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -84,6 +84,6 @@ public class WheelTowerBossHandBookTitleItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x04004539 RID: 17721
+	// Token: 0x040045DF RID: 17887
 	private NewTowerWave? WaveConfig;
 }

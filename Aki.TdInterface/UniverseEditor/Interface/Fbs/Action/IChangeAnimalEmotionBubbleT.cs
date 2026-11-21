@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062CD RID: 25293
+	// Token: 0x0200693E RID: 26942
 	public class IChangeAnimalEmotionBubbleT
 	{
-		// Token: 0x1700BCCF RID: 48335
-		// (get) Token: 0x0602BB83 RID: 179075 RVA: 0x006042D9 File Offset: 0x006024D9
-		// (set) Token: 0x0602BB84 RID: 179076 RVA: 0x006042E1 File Offset: 0x006024E1
+		// Token: 0x1700C659 RID: 50777
+		// (get) Token: 0x0602E2EC RID: 189164 RVA: 0x0064F2E5 File Offset: 0x0064D4E5
+		// (set) Token: 0x0602E2ED RID: 189165 RVA: 0x0064F2ED File Offset: 0x0064D4ED
 		public EExecClientBattleActionType Type { get; set; }
 
-		// Token: 0x1700BCD0 RID: 48336
-		// (get) Token: 0x0602BB85 RID: 179077 RVA: 0x006042EA File Offset: 0x006024EA
-		// (set) Token: 0x0602BB86 RID: 179078 RVA: 0x006042F2 File Offset: 0x006024F2
+		// Token: 0x1700C65A RID: 50778
+		// (get) Token: 0x0602E2EE RID: 189166 RVA: 0x0064F2F6 File Offset: 0x0064D4F6
+		// (set) Token: 0x0602E2EF RID: 189167 RVA: 0x0064F2FE File Offset: 0x0064D4FE
 		public List<int> AnimalEntityIds { get; set; }
 
-		// Token: 0x1700BCD1 RID: 48337
-		// (get) Token: 0x0602BB87 RID: 179079 RVA: 0x006042FB File Offset: 0x006024FB
-		// (set) Token: 0x0602BB88 RID: 179080 RVA: 0x00604303 File Offset: 0x00602503
+		// Token: 0x1700C65B RID: 50779
+		// (get) Token: 0x0602E2F0 RID: 189168 RVA: 0x0064F307 File Offset: 0x0064D507
+		// (set) Token: 0x0602E2F1 RID: 189169 RVA: 0x0064F30F File Offset: 0x0064D50F
 		public string MontagePath { get; set; }
 
-		// Token: 0x1700BCD2 RID: 48338
-		// (get) Token: 0x0602BB89 RID: 179081 RVA: 0x0060430C File Offset: 0x0060250C
-		// (set) Token: 0x0602BB8A RID: 179082 RVA: 0x00604314 File Offset: 0x00602514
+		// Token: 0x1700C65C RID: 50780
+		// (get) Token: 0x0602E2F2 RID: 189170 RVA: 0x0064F318 File Offset: 0x0064D518
+		// (set) Token: 0x0602E2F3 RID: 189171 RVA: 0x0064F320 File Offset: 0x0064D520
 		public string EmotionName { get; set; }
 
-		// Token: 0x0602BB8B RID: 179083 RVA: 0x0060431D File Offset: 0x0060251D
+		// Token: 0x0602E2F4 RID: 189172 RVA: 0x0064F329 File Offset: 0x0064D529
 		public IChangeAnimalEmotionBubbleT()
 		{
 			this.Type = EExecClientBattleActionType.SendTagEventToControlCharacter;

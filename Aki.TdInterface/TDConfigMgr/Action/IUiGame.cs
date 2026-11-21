@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200200E RID: 8206
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002257 RID: 8791
 	public class IUiGame
 	{
-		// Token: 0x0600B47A RID: 46202 RVA: 0x001A3A74 File Offset: 0x001A1C74
+		// Token: 0x0600BF9C RID: 49052 RVA: 0x001BA138 File Offset: 0x001B8338
 		private IUiGame_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B47B RID: 46203 RVA: 0x001A3AAC File Offset: 0x001A1CAC
+		// Token: 0x0600BF9D RID: 49053 RVA: 0x001BA170 File Offset: 0x001B8370
 		public static IUiGame Create([Nullable(2)] IUiGame instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B47C RID: 46204 RVA: 0x001A3ABF File Offset: 0x001A1CBF
+		// Token: 0x0600BF9E RID: 49054 RVA: 0x001BA183 File Offset: 0x001B8383
 		public static IUiGame CreateFromSetValue([Nullable(2)] IUiGame_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B47D RID: 46205 RVA: 0x001A3AD2 File Offset: 0x001A1CD2
+		// Token: 0x0600BF9F RID: 49055 RVA: 0x001BA196 File Offset: 0x001B8396
 		public IUiGame_SetValue ToSetValue()
 		{
 			return new IUiGame_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003780 RID: 14208
-		// (get) Token: 0x0600B47E RID: 46206 RVA: 0x001A3AE5 File Offset: 0x001A1CE5
-		// (set) Token: 0x0600B47F RID: 46207 RVA: 0x001A3B10 File Offset: 0x001A1D10
+		// Token: 0x17003A5B RID: 14939
+		// (get) Token: 0x0600BFA0 RID: 49056 RVA: 0x001BA1A9 File Offset: 0x001B83A9
+		// (set) Token: 0x0600BFA1 RID: 49057 RVA: 0x001BA1D4 File Offset: 0x001B83D4
 		public virtual ESimpleGameplayType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CC3 RID: 27843
+		// Token: 0x040072CA RID: 29386
 		[Nullable(2)]
 		protected IUiGame FbInstance;
 
-		// Token: 0x04006CC4 RID: 27844
+		// Token: 0x040072CB RID: 29387
 		[Nullable(2)]
 		protected IUiGame_SetValue PocoInterface;
 	}

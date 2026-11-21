@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007BE RID: 1982
+	// Token: 0x02000861 RID: 2145
 	public class IVehicleMontagePlayConfig_SetValue
 	{
-		// Token: 0x04001C98 RID: 7320
+		// Token: 0x04001EA4 RID: 7844
 		public float MinMontageSpeedFactor;
 
-		// Token: 0x04001C99 RID: 7321
+		// Token: 0x04001EA5 RID: 7845
 		public float MaxMontageSpeedFactor;
 
-		// Token: 0x04001C9A RID: 7322
+		// Token: 0x04001EA6 RID: 7846
 		public float MinVehicleSpeed;
 
-		// Token: 0x04001C9B RID: 7323
+		// Token: 0x04001EA7 RID: 7847
 		public float MaxVehicleSpeed;
 
-		// Token: 0x04001C9C RID: 7324
-		[Nullable(1)]
+		// Token: 0x04001EA8 RID: 7848
 		public string TargetState;
 	}
 }

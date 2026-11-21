@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200033A RID: 826
+	// Token: 0x0200034F RID: 847
 	public class ConfigFlowTextByIdAndFlowListId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001361 RID: 4961 RVA: 0x000C6D58 File Offset: 0x000C4F58
+		// Token: 0x060013DF RID: 5087 RVA: 0x000CD264 File Offset: 0x000CB464
 		static ConfigFlowTextByIdAndFlowListId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFlowTextByIdAndFlowListId.CreateStaticDefaultValue), new Action(ConfigFlowTextByIdAndFlowListId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001362 RID: 4962 RVA: 0x000C6D78 File Offset: 0x000C4F78
+		// Token: 0x060013E0 RID: 5088 RVA: 0x000CD284 File Offset: 0x000CB484
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFlowTextByIdAndFlowListId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001363 RID: 4963 RVA: 0x000C6DF7 File Offset: 0x000C4FF7
+		// Token: 0x060013E1 RID: 5089 RVA: 0x000CD303 File Offset: 0x000CB503
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFlowTextByIdAndFlowListId.LogPair = null;
 			ConfigFlowTextByIdAndFlowListId.HandleId = 0;
 		}
 
-		// Token: 0x06001364 RID: 4964 RVA: 0x000C6E05 File Offset: 0x000C5005
+		// Token: 0x060013E2 RID: 5090 RVA: 0x000CD311 File Offset: 0x000CB511
 		public static void Init()
 		{
 			ConfigFlowTextByIdAndFlowListId.HandleId = ConfigCommon.InitDataStatement(ConfigFlowTextByIdAndFlowListId.HandleId, "db_flow_text.db", "select BinData from `FlowText` where Id=? AND FlowListId=?");
 		}
 
-		// Token: 0x06001365 RID: 4965 RVA: 0x000C6E20 File Offset: 0x000C5020
+		// Token: 0x060013E3 RID: 5091 RVA: 0x000CD32C File Offset: 0x000CB52C
 		public static FlowText? GetConfig(int p0Id, string p1FlowListId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFlowTextByIdAndFlowListId.HandleId, ConfigFlowTextByIdAndFlowListId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new FlowText?(rootAsFlowText);
 		}
 
-		// Token: 0x0400167A RID: 5754
+		// Token: 0x0400170D RID: 5901
 		private const string DB = "db_flow_text.db";
 
-		// Token: 0x0400167B RID: 5755
+		// Token: 0x0400170E RID: 5902
 		private const string FILE = "k.可视化编辑/j.剧情/Text_剧情*";
 
-		// Token: 0x0400167C RID: 5756
+		// Token: 0x0400170F RID: 5903
 		private const string TABLE = "FlowText";
 
-		// Token: 0x0400167D RID: 5757
+		// Token: 0x04001710 RID: 5904
 		private const string COMMAND = "select BinData from `FlowText` where Id=? AND FlowListId=?";
 
-		// Token: 0x0400167E RID: 5758
+		// Token: 0x04001711 RID: 5905
 		private const string KEY_PREFIX = "FlowTextByIdAndFlowListId";
 
-		// Token: 0x0400167F RID: 5759
+		// Token: 0x04001712 RID: 5906
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001680 RID: 5760
+		// Token: 0x04001713 RID: 5907
 		private static int HandleId;
 	}
 }

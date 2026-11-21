@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C2B RID: 3115
+	// Token: 0x02000D0E RID: 3342
 	public struct EmotionBubbleConfig : IFlatbufferObject
 	{
-		// Token: 0x17000EDB RID: 3803
-		// (get) Token: 0x06006882 RID: 26754 RVA: 0x00221E31 File Offset: 0x00220031
+		// Token: 0x17000F34 RID: 3892
+		// (get) Token: 0x06006E84 RID: 28292 RVA: 0x0024135D File Offset: 0x0023F55D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006883 RID: 26755 RVA: 0x00221E3E File Offset: 0x0022003E
+		// Token: 0x06006E85 RID: 28293 RVA: 0x0024136A File Offset: 0x0023F56A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006884 RID: 26756 RVA: 0x00221E48 File Offset: 0x00220048
+		// Token: 0x06006E86 RID: 28294 RVA: 0x00241374 File Offset: 0x0023F574
 		public static EmotionBubbleConfig GetRootAsEmotionBubbleConfig(ByteBuffer _bb)
 		{
 			return EmotionBubbleConfig.GetRootAsEmotionBubbleConfig(_bb, default(EmotionBubbleConfig));
 		}
 
-		// Token: 0x06006885 RID: 26757 RVA: 0x00221E64 File Offset: 0x00220064
+		// Token: 0x06006E87 RID: 28295 RVA: 0x00241390 File Offset: 0x0023F590
 		public static EmotionBubbleConfig GetRootAsEmotionBubbleConfig(ByteBuffer _bb, EmotionBubbleConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006886 RID: 26758 RVA: 0x00221E81 File Offset: 0x00220081
+		// Token: 0x06006E88 RID: 28296 RVA: 0x002413AD File Offset: 0x0023F5AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006887 RID: 26759 RVA: 0x00221E90 File Offset: 0x00220090
+		// Token: 0x06006E89 RID: 28297 RVA: 0x002413BC File Offset: 0x0023F5BC
 		public EmotionBubbleConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000EDC RID: 3804
-		// (get) Token: 0x06006888 RID: 26760 RVA: 0x00221EA0 File Offset: 0x002200A0
+		// Token: 0x17000F35 RID: 3893
+		// (get) Token: 0x06006E8A RID: 28298 RVA: 0x002413CC File Offset: 0x0023F5CC
 		public string EmotionName
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006889 RID: 26761 RVA: 0x00221ED7 File Offset: 0x002200D7
+		// Token: 0x06006E8B RID: 28299 RVA: 0x00241403 File Offset: 0x0023F603
 		public Span<byte> GetEmotionNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0600688A RID: 26762 RVA: 0x00221EE6 File Offset: 0x002200E6
+		// Token: 0x06006E8C RID: 28300 RVA: 0x00241412 File Offset: 0x0023F612
 		public byte[] GetEmotionNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000EDD RID: 3805
-		// (get) Token: 0x0600688B RID: 26763 RVA: 0x00221F00 File Offset: 0x00220100
+		// Token: 0x17000F36 RID: 3894
+		// (get) Token: 0x06006E8D RID: 28301 RVA: 0x0024142C File Offset: 0x0023F62C
 		public string EmotionPath
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600688C RID: 26764 RVA: 0x00221F37 File Offset: 0x00220137
+		// Token: 0x06006E8E RID: 28302 RVA: 0x00241463 File Offset: 0x0023F663
 		public Span<byte> GetEmotionPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600688D RID: 26765 RVA: 0x00221F46 File Offset: 0x00220146
+		// Token: 0x06006E8F RID: 28303 RVA: 0x00241472 File Offset: 0x0023F672
 		public byte[] GetEmotionPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000EDE RID: 3806
-		// (get) Token: 0x0600688E RID: 26766 RVA: 0x00221F60 File Offset: 0x00220160
+		// Token: 0x17000F37 RID: 3895
+		// (get) Token: 0x06006E90 RID: 28304 RVA: 0x0024148C File Offset: 0x0023F68C
 		public string EmotionDesc
 		{
 			get
@@ -116,19 +116,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600688F RID: 26767 RVA: 0x00221F97 File Offset: 0x00220197
+		// Token: 0x06006E91 RID: 28305 RVA: 0x002414C3 File Offset: 0x0023F6C3
 		public Span<byte> GetEmotionDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06006890 RID: 26768 RVA: 0x00221FA6 File Offset: 0x002201A6
+		// Token: 0x06006E92 RID: 28306 RVA: 0x002414D2 File Offset: 0x0023F6D2
 		public byte[] GetEmotionDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004C6B RID: 19563
+		// Token: 0x0400524E RID: 21070
 		private Table __p;
 	}
 }

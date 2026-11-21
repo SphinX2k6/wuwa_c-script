@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F59 RID: 3929
+// Token: 0x0200040E RID: 1038
 public class DrinksFlavorValueItem : UiPanelBase
 {
-	// Token: 0x06006485 RID: 25733 RVA: 0x0013E1A4 File Offset: 0x0013C3A4
+	// Token: 0x0600381D RID: 14365 RVA: 0x00146A40 File Offset: 0x00144C40
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,13 +21,13 @@ public class DrinksFlavorValueItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006486 RID: 25734 RVA: 0x0013E240 File Offset: 0x0013C440
+	// Token: 0x0600381E RID: 14366 RVA: 0x00146ADC File Offset: 0x00144CDC
 	protected override void OnStart()
 	{
 		this.LevelSequence = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06006487 RID: 25735 RVA: 0x0013E253 File Offset: 0x0013C453
+	// Token: 0x0600381F RID: 14367 RVA: 0x00146AEF File Offset: 0x00144CEF
 	[NullableContext(1)]
 	public void RefreshState(bool isActive, string[] value, bool needAlpha)
 	{
@@ -35,7 +35,7 @@ public class DrinksFlavorValueItem : UiPanelBase
 		this.RefreshTxt(value, needAlpha);
 	}
 
-	// Token: 0x06006488 RID: 25736 RVA: 0x0013E264 File Offset: 0x0013C464
+	// Token: 0x06003820 RID: 14368 RVA: 0x00146B00 File Offset: 0x00144D00
 	[NullableContext(1)]
 	private void RefreshTxt(string[] value, bool needAlpha)
 	{
@@ -91,7 +91,7 @@ public class DrinksFlavorValueItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006489 RID: 25737 RVA: 0x0013E338 File Offset: 0x0013C538
+	// Token: 0x06003821 RID: 14369 RVA: 0x00146BD4 File Offset: 0x00144DD4
 	private void RefreshAnim(bool isActive)
 	{
 		if (isActive != this.OldActive || isActive)
@@ -137,32 +137,32 @@ public class DrinksFlavorValueItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04002DA1 RID: 11681
+	// Token: 0x04002E3A RID: 11834
 	protected bool OldActive;
 
-	// Token: 0x04002DA2 RID: 11682
+	// Token: 0x04002E3B RID: 11835
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequence;
 
-	// Token: 0x020075A5 RID: 30117
+	// Token: 0x02006739 RID: 26425
 	private class EValue
 	{
-		// Token: 0x04026E33 RID: 159283
+		// Token: 0x0402217E RID: 139646
 		public const int PanelOffset = 0;
 
-		// Token: 0x04026E34 RID: 159284
+		// Token: 0x0402217F RID: 139647
 		public const int TexIcon = 1;
 
-		// Token: 0x04026E35 RID: 159285
+		// Token: 0x04022180 RID: 139648
 		public const int TxtValue = 2;
 
-		// Token: 0x04026E36 RID: 159286
+		// Token: 0x04022181 RID: 139649
 		public const int PanelActive = 3;
 
-		// Token: 0x04026E37 RID: 159287
+		// Token: 0x04022182 RID: 139650
 		public const int TxtActive1 = 4;
 
-		// Token: 0x04026E38 RID: 159288
+		// Token: 0x04022183 RID: 139651
 		public const int TxtActive2 = 5;
 	}
 }

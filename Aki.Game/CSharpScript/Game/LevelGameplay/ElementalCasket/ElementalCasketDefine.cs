@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E61 RID: 28257
+	// Token: 0x02005FE2 RID: 24546
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElementalCasketDefine : IStaticVariableResetter
 	{
-		// Token: 0x06044DE9 RID: 282089 RVA: 0x010FFC38 File Offset: 0x010FDE38
+		// Token: 0x0603AF76 RID: 241526 RVA: 0x010AA198 File Offset: 0x010A8398
 		static ElementalCasketDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ElementalCasketDefine.CreateStaticDefaultValue), new Action(ElementalCasketDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06044DEA RID: 282090 RVA: 0x010FFDE4 File Offset: 0x010FDFE4
+		// Token: 0x0603AF77 RID: 241527 RVA: 0x010AA344 File Offset: 0x010A8544
 		public static void CreateStaticDefaultValue()
 		{
 			ElementalCasketDefine.PARAM_SPHERE_ENABLE = new List<string>
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			};
 		}
 
-		// Token: 0x06044DEB RID: 282091 RVA: 0x010FFF24 File Offset: 0x010FE124
+		// Token: 0x0603AF78 RID: 241528 RVA: 0x010AA484 File Offset: 0x010A8684
 		public static void ResetStaticDefaultValue()
 		{
 			ElementalCasketDefine.PARAM_SPHERE_ENABLE = null;
@@ -76,178 +76,178 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			ElementalCasketDefine.blockElementalTagList = null;
 		}
 
-		// Token: 0x04023D4D RID: 146765
+		// Token: 0x0401F002 RID: 126978
 		public static readonly ECollisionChannel playerFieldChannel = KuroCollisionChannel.KuroTrigger;
 
-		// Token: 0x04023D4E RID: 146766
+		// Token: 0x0401F003 RID: 126979
 		public static readonly ECollisionChannel playerDetectableChannel = KuroCollisionChannel.PawnPlayer;
 
-		// Token: 0x04023D4F RID: 146767
+		// Token: 0x0401F004 RID: 126980
 		public static readonly ECollisionChannel sceneItemFieldChannel = KuroCollisionChannel.Bullet;
 
-		// Token: 0x04023D50 RID: 146768
+		// Token: 0x0401F005 RID: 126981
 		public static readonly ECollisionChannel sceneItemDetectableChannel = KuroCollisionChannel.WorldStatic;
 
-		// Token: 0x04023D51 RID: 146769
+		// Token: 0x0401F006 RID: 126982
 		public static readonly ECollisionChannel monsterDetectableChannel = KuroCollisionChannel.PawnMonster;
 
-		// Token: 0x04023D52 RID: 146770
+		// Token: 0x0401F007 RID: 126983
 		public static readonly int PLAYER_FIELD_QUERY_MASK = 1 << (int)ElementalCasketDefine.sceneItemDetectableChannel | 1 << (int)ElementalCasketDefine.monsterDetectableChannel;
 
-		// Token: 0x04023D53 RID: 146771
+		// Token: 0x0401F008 RID: 126984
 		public static readonly int PLAYER_DETECTABLE_QUERY_MASK = 1 << (int)ElementalCasketDefine.sceneItemFieldChannel;
 
-		// Token: 0x04023D54 RID: 146772
+		// Token: 0x0401F009 RID: 126985
 		public static readonly int SCENE_ITEM_FIELD_QUERY_MASK = 1 << (int)ElementalCasketDefine.playerDetectableChannel | 1 << (int)ElementalCasketDefine.sceneItemDetectableChannel;
 
-		// Token: 0x04023D55 RID: 146773
+		// Token: 0x0401F00A RID: 126986
 		public static readonly int SCNE_ITEM_DETECTABLE_QUERY_MASK = 1 << (int)ElementalCasketDefine.playerFieldChannel | 1 << (int)ElementalCasketDefine.sceneItemFieldChannel;
 
-		// Token: 0x04023D56 RID: 146774
+		// Token: 0x0401F00B RID: 126987
 		public static readonly int MONSTER_DETECTABLE_QUERY_MASK = 1 << (int)ElementalCasketDefine.playerFieldChannel;
 
-		// Token: 0x04023D57 RID: 146775
+		// Token: 0x0401F00C RID: 126988
 		public const int CONE_TRACE_SPHERE_RADIUS = 3;
 
-		// Token: 0x04023D58 RID: 146776
+		// Token: 0x0401F00D RID: 126989
 		public static readonly ETraceTypeQuery coneTraceChannel = KuroTraceTypeQuery.AcrossBlock;
 
-		// Token: 0x04023D59 RID: 146777
+		// Token: 0x0401F00E RID: 126990
 		public static readonly ECollisionChannel coneTraceCollisionChannel = KuroCollisionChannel.AcrossBlock;
 
-		// Token: 0x04023D5A RID: 146778
+		// Token: 0x0401F00F RID: 126991
 		public const int MIN_CONE_HEIGHT = 1;
 
-		// Token: 0x04023D5B RID: 146779
+		// Token: 0x0401F010 RID: 126992
 		public const int MAX_SPHERE_COUNT = 2;
 
-		// Token: 0x04023D5C RID: 146780
+		// Token: 0x0401F011 RID: 126993
 		public static List<string> PARAM_SPHERE_ENABLE;
 
-		// Token: 0x04023D5D RID: 146781
+		// Token: 0x0401F012 RID: 126994
 		public static List<string> PARAM_SPHERE_RADIUS;
 
-		// Token: 0x04023D5E RID: 146782
+		// Token: 0x0401F013 RID: 126995
 		public static List<string> PARAM_SPHERE_CENTER;
 
-		// Token: 0x04023D5F RID: 146783
+		// Token: 0x0401F014 RID: 126996
 		public const string PARAM_CONE_ENABLE = "InfluenceCone_Enable";
 
-		// Token: 0x04023D60 RID: 146784
+		// Token: 0x0401F015 RID: 126997
 		public const string PARAM_CONE_HALF_ANGLE = "InfluenceCone_HalfAngle";
 
-		// Token: 0x04023D61 RID: 146785
+		// Token: 0x0401F016 RID: 126998
 		public const string PARAM_CONE_HEIGHT = "Range";
 
-		// Token: 0x04023D62 RID: 146786
+		// Token: 0x0401F017 RID: 126999
 		public const string PARAM_CONE_APEX = "LightPos";
 
-		// Token: 0x04023D63 RID: 146787
+		// Token: 0x0401F018 RID: 127000
 		public const string PARAM_CONE_AXIS = "LightDir";
 
-		// Token: 0x04023D64 RID: 146788
+		// Token: 0x0401F019 RID: 127001
 		public static readonly ECollisionChannel elementalFieldCameraBlockChannel = KuroCollisionChannel.Camera;
 
-		// Token: 0x04023D65 RID: 146789
+		// Token: 0x0401F01A RID: 127002
 		public static readonly EElementalType elementalFieldCameraBlockElementalType = EElementalType.Fire;
 
-		// Token: 0x04023D66 RID: 146790
+		// Token: 0x0401F01B RID: 127003
 		public const int ELEMENTAL_FIELD_CAMERA_BLOCK_TICK_INTERVAL = 4;
 
-		// Token: 0x04023D67 RID: 146791
+		// Token: 0x0401F01C RID: 127004
 		public const int ELEMENTAL_FIELD_CAMERA_BLOCK_APPLY_BATCH = 4;
 
-		// Token: 0x04023D68 RID: 146792
+		// Token: 0x0401F01D RID: 127005
 		public const string PROFILE_CONE_TRACE = "ElementalFieldConeTrace";
 
-		// Token: 0x04023D69 RID: 146793
+		// Token: 0x0401F01E RID: 127006
 		public const string ELEMENTAL_CASKET_DEBUG_KEY = "ElementalCasket";
 
-		// Token: 0x04023D6A RID: 146794
+		// Token: 0x0401F01F RID: 127007
 		public const string ELEMENTAL_FIELD_GRAPH_DEBUG_KEY = "ElementalFieldGraph";
 
-		// Token: 0x04023D6B RID: 146795
+		// Token: 0x0401F020 RID: 127008
 		public const string ELEMENTAL_FIELD_VOLUME_KEY = "ElementalFieldVolume";
 
-		// Token: 0x04023D6C RID: 146796
+		// Token: 0x0401F021 RID: 127009
 		public const float ELEMENTAL_FIELD_DEBUG_DRAW_DURATION = 0.2f;
 
-		// Token: 0x04023D6D RID: 146797
+		// Token: 0x0401F022 RID: 127010
 		public const int ELEMENTAL_FIELD_DEBUG_DRAW_THICKNESS = 1;
 
-		// Token: 0x04023D6E RID: 146798
+		// Token: 0x0401F023 RID: 127011
 		[StaticVariableRuleIgnore]
 		public static readonly FLinearColor snapshotDebugDrawColor = new FLinearColor(0f, 1f, 0.5f, 1f);
 
-		// Token: 0x04023D6F RID: 146799
+		// Token: 0x0401F024 RID: 127012
 		[StaticVariableRuleIgnore]
 		public static readonly FLinearColor activeVolumeDebugDrawColor = new FLinearColor(1f, 0.5f, 0f, 1f);
 
-		// Token: 0x04023D70 RID: 146800
+		// Token: 0x0401F025 RID: 127013
 		public const int SNAPSHOT_DEBUG_DRAW_SPHERE_SEGMENTS = 16;
 
-		// Token: 0x04023D71 RID: 146801
+		// Token: 0x0401F026 RID: 127014
 		public const int SNAPSHOT_DEBUG_DRAW_CONE_SIDES = 16;
 
-		// Token: 0x04023D72 RID: 146802
+		// Token: 0x0401F027 RID: 127015
 		[StaticVariableRuleIgnore]
 		public static readonly FColor elementalFieldDetectorDebugColor = new FColor(byte.MaxValue, 64, 0, byte.MaxValue);
 
-		// Token: 0x04023D73 RID: 146803
+		// Token: 0x0401F028 RID: 127016
 		[StaticVariableRuleIgnore]
 		public static readonly FColor elementalFieldDetectableDebugColor = new FColor(0, byte.MaxValue, 128, byte.MaxValue);
 
-		// Token: 0x04023D74 RID: 146804
+		// Token: 0x0401F029 RID: 127017
 		[StaticVariableRuleIgnore]
 		public static readonly FLinearColor elementalFieldDetectorDebugTextColor = new FLinearColor(1f, 0.25f, 0f, 1f);
 
-		// Token: 0x04023D75 RID: 146805
+		// Token: 0x0401F02A RID: 127018
 		[StaticVariableRuleIgnore]
 		public static readonly FLinearColor elementalFieldDetectableDebugTextColor = new FLinearColor(0f, 1f, 0.5f, 1f);
 
-		// Token: 0x04023D76 RID: 146806
+		// Token: 0x0401F02B RID: 127019
 		public const int ELEMENTAL_FIELD_DEBUG_TEXT_DURATION = 5;
 
-		// Token: 0x04023D77 RID: 146807
+		// Token: 0x0401F02C RID: 127020
 		public const int SHAPE_INFO_PRECISION = 1;
 
-		// Token: 0x04023D78 RID: 146808
+		// Token: 0x0401F02D RID: 127021
 		public const int SEGMENT_SAMPLE_MIN_STEP = 8;
 
-		// Token: 0x04023D79 RID: 146809
+		// Token: 0x0401F02E RID: 127022
 		public const int SEGMENT_SAMPLE_MAX_STEP = 64;
 
-		// Token: 0x04023D7A RID: 146810
+		// Token: 0x0401F02F RID: 127023
 		public const float SEGMENT_SAMPLE_SIZE_RATIO = 0.5f;
 
-		// Token: 0x04023D7B RID: 146811
+		// Token: 0x0401F030 RID: 127024
 		public const int REFRESH_INTERVAL_MS = 200;
 
-		// Token: 0x04023D7C RID: 146812
+		// Token: 0x0401F031 RID: 127025
 		public const int SCENE_ITEM_FIELD_RENDER_MASK_MAX_COUNT = 2;
 
-		// Token: 0x04023D7D RID: 146813
+		// Token: 0x0401F032 RID: 127026
 		public const int SCENE_ITEM_FIELD_RENDER_MASK_INTERVAL_MS = 100;
 
-		// Token: 0x04023D7E RID: 146814
+		// Token: 0x0401F033 RID: 127027
 		public static List<string> sceneItemFieldRadiusKeys;
 
-		// Token: 0x04023D7F RID: 146815
+		// Token: 0x0401F034 RID: 127028
 		public static List<string> sceneItemFieldLocationKeys;
 
-		// Token: 0x04023D80 RID: 146816
+		// Token: 0x0401F035 RID: 127029
 		public static List<string> sceneItemFieldOpenedKeys;
 
-		// Token: 0x04023D81 RID: 146817
+		// Token: 0x0401F036 RID: 127030
 		public const int PLAYER_ELEMENTAL_FIELD_BURST = 5000;
 
-		// Token: 0x04023D82 RID: 146818
+		// Token: 0x0401F037 RID: 127031
 		public static readonly int bossCustomElementalFieldTag = GameplayTagDefine.EGameplayTagId["关卡.Common.匣子能力按钮.BOSS追逐战定制能力"];
 
-		// Token: 0x04023D83 RID: 146819
+		// Token: 0x0401F038 RID: 127032
 		public static List<int> inFightAllowElementalTagList;
 
-		// Token: 0x04023D84 RID: 146820
+		// Token: 0x0401F039 RID: 127033
 		public static List<int> blockElementalTagList;
 	}
 }

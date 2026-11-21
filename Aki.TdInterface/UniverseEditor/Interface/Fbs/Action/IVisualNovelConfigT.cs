@@ -1,54 +1,67 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007575 RID: 30069
+	// Token: 0x02007D6B RID: 32107
 	public class IVisualNovelConfigT
 	{
-		// Token: 0x1700E40D RID: 58381
-		// (get) Token: 0x06036B3E RID: 224062 RVA: 0x0076D905 File Offset: 0x0076BB05
-		// (set) Token: 0x06036B3F RID: 224063 RVA: 0x0076D90D File Offset: 0x0076BB0D
+		// Token: 0x1700F03B RID: 61499
+		// (get) Token: 0x06039F62 RID: 237410 RVA: 0x007D0E47 File Offset: 0x007CF047
+		// (set) Token: 0x06039F63 RID: 237411 RVA: 0x007D0E4F File Offset: 0x007CF04F
 		public EVisualNovelSubType VisualNovelSubType { get; set; }
 
-		// Token: 0x1700E40E RID: 58382
-		// (get) Token: 0x06036B40 RID: 224064 RVA: 0x0076D916 File Offset: 0x0076BB16
-		// (set) Token: 0x06036B41 RID: 224065 RVA: 0x0076D91E File Offset: 0x0076BB1E
+		// Token: 0x1700F03C RID: 61500
+		// (get) Token: 0x06039F64 RID: 237412 RVA: 0x007D0E58 File Offset: 0x007CF058
+		// (set) Token: 0x06039F65 RID: 237413 RVA: 0x007D0E60 File Offset: 0x007CF060
 		public bool EnableReadRecord { get; set; }
 
-		// Token: 0x1700E40F RID: 58383
-		// (get) Token: 0x06036B42 RID: 224066 RVA: 0x0076D927 File Offset: 0x0076BB27
-		// (set) Token: 0x06036B43 RID: 224067 RVA: 0x0076D92F File Offset: 0x0076BB2F
+		// Token: 0x1700F03D RID: 61501
+		// (get) Token: 0x06039F66 RID: 237414 RVA: 0x007D0E69 File Offset: 0x007CF069
+		// (set) Token: 0x06039F67 RID: 237415 RVA: 0x007D0E71 File Offset: 0x007CF071
+		public bool EnableFastForward { get; set; }
+
+		// Token: 0x1700F03E RID: 61502
+		// (get) Token: 0x06039F68 RID: 237416 RVA: 0x007D0E7A File Offset: 0x007CF07A
+		// (set) Token: 0x06039F69 RID: 237417 RVA: 0x007D0E82 File Offset: 0x007CF082
 		public bool HideControlUi { get; set; }
 
-		// Token: 0x1700E410 RID: 58384
-		// (get) Token: 0x06036B44 RID: 224068 RVA: 0x0076D938 File Offset: 0x0076BB38
-		// (set) Token: 0x06036B45 RID: 224069 RVA: 0x0076D940 File Offset: 0x0076BB40
+		// Token: 0x1700F03F RID: 61503
+		// (get) Token: 0x06039F6A RID: 237418 RVA: 0x007D0E8B File Offset: 0x007CF08B
+		// (set) Token: 0x06039F6B RID: 237419 RVA: 0x007D0E93 File Offset: 0x007CF093
 		public int InitialBackgroundId { get; set; }
 
-		// Token: 0x1700E411 RID: 58385
-		// (get) Token: 0x06036B46 RID: 224070 RVA: 0x0076D949 File Offset: 0x0076BB49
-		// (set) Token: 0x06036B47 RID: 224071 RVA: 0x0076D951 File Offset: 0x0076BB51
-		public string InitialAudioEvent { get; set; }
+		// Token: 0x1700F040 RID: 61504
+		// (get) Token: 0x06039F6C RID: 237420 RVA: 0x007D0E9C File Offset: 0x007CF09C
+		// (set) Token: 0x06039F6D RID: 237421 RVA: 0x007D0EA4 File Offset: 0x007CF0A4
+		public List<string> InitialAudioEvents { get; set; }
 
-		// Token: 0x1700E412 RID: 58386
-		// (get) Token: 0x06036B48 RID: 224072 RVA: 0x0076D95A File Offset: 0x0076BB5A
-		// (set) Token: 0x06036B49 RID: 224073 RVA: 0x0076D962 File Offset: 0x0076BB62
+		// Token: 0x1700F041 RID: 61505
+		// (get) Token: 0x06039F6E RID: 237422 RVA: 0x007D0EAD File Offset: 0x007CF0AD
+		// (set) Token: 0x06039F6F RID: 237423 RVA: 0x007D0EB5 File Offset: 0x007CF0B5
 		public ISolarSchoolTimeT InitialTime { get; set; }
 
-		// Token: 0x1700E413 RID: 58387
-		// (get) Token: 0x06036B4A RID: 224074 RVA: 0x0076D96B File Offset: 0x0076BB6B
-		// (set) Token: 0x06036B4B RID: 224075 RVA: 0x0076D973 File Offset: 0x0076BB73
+		// Token: 0x1700F042 RID: 61506
+		// (get) Token: 0x06039F70 RID: 237424 RVA: 0x007D0EBE File Offset: 0x007CF0BE
+		// (set) Token: 0x06039F71 RID: 237425 RVA: 0x007D0EC6 File Offset: 0x007CF0C6
+		public float EndFadeOutTime { get; set; }
+
+		// Token: 0x1700F043 RID: 61507
+		// (get) Token: 0x06039F72 RID: 237426 RVA: 0x007D0ECF File Offset: 0x007CF0CF
+		// (set) Token: 0x06039F73 RID: 237427 RVA: 0x007D0ED7 File Offset: 0x007CF0D7
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036B4C RID: 224076 RVA: 0x0076D97C File Offset: 0x0076BB7C
+		// Token: 0x06039F74 RID: 237428 RVA: 0x007D0EE0 File Offset: 0x007CF0E0
 		public IVisualNovelConfigT()
 		{
 			this.VisualNovelSubType = EVisualNovelSubType.SolarSchool;
 			this.EnableReadRecord = false;
+			this.EnableFastForward = false;
 			this.HideControlUi = false;
 			this.InitialBackgroundId = 0;
-			this.InitialAudioEvent = null;
+			this.InitialAudioEvents = null;
 			this.InitialTime = null;
+			this.EndFadeOutTime = 0f;
 			this.NullMask = 0;
 		}
 	}

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005E8 RID: 1512
+	// Token: 0x02000600 RID: 1536
 	public class ConfigNewbieCourseV2All : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600237F RID: 9087 RVA: 0x00122420 File Offset: 0x00120620
+		// Token: 0x0600240F RID: 9231 RVA: 0x00128E9C File Offset: 0x0012709C
 		static ConfigNewbieCourseV2All()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewbieCourseV2All.CreateStaticDefaultValue), new Action(ConfigNewbieCourseV2All.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002380 RID: 9088 RVA: 0x00122440 File Offset: 0x00120640
+		// Token: 0x06002410 RID: 9232 RVA: 0x00128EBC File Offset: 0x001270BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewbieCourseV2All.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002381 RID: 9089 RVA: 0x001224BF File Offset: 0x001206BF
+		// Token: 0x06002411 RID: 9233 RVA: 0x00128F3B File Offset: 0x0012713B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewbieCourseV2All.LogPair = null;
 			ConfigNewbieCourseV2All.HandleId = 0;
 		}
 
-		// Token: 0x06002382 RID: 9090 RVA: 0x001224CD File Offset: 0x001206CD
+		// Token: 0x06002412 RID: 9234 RVA: 0x00128F49 File Offset: 0x00127149
 		public static void Init()
 		{
 			ConfigNewbieCourseV2All.HandleId = ConfigCommon.InitDataStatement(ConfigNewbieCourseV2All.HandleId, "db_newbiecourse.db", "select BinData from `NewbieCourseV2`");
 		}
 
-		// Token: 0x06002383 RID: 9091 RVA: 0x001224E8 File Offset: 0x001206E8
+		// Token: 0x06002413 RID: 9235 RVA: 0x00128F64 File Offset: 0x00127164
 		[NullableContext(2)]
 		public static IReadOnlyList<NewbieCourseV2> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400293E RID: 10558
+		// Token: 0x040029E6 RID: 10726
 		private const string DB = "db_newbiecourse.db";
 
-		// Token: 0x0400293F RID: 10559
+		// Token: 0x040029E7 RID: 10727
 		private const string FILE = "x.新手历程活动.xlsx";
 
-		// Token: 0x04002940 RID: 10560
+		// Token: 0x040029E8 RID: 10728
 		private const string TABLE = "NewbieCourseV2";
 
-		// Token: 0x04002941 RID: 10561
+		// Token: 0x040029E9 RID: 10729
 		private const string COMMAND = "select BinData from `NewbieCourseV2`";
 
-		// Token: 0x04002942 RID: 10562
+		// Token: 0x040029EA RID: 10730
 		private const string KEY_PREFIX = "NewbieCourseV2All";
 
-		// Token: 0x04002943 RID: 10563
+		// Token: 0x040029EB RID: 10731
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002944 RID: 10564
+		// Token: 0x040029EC RID: 10732
 		private static int HandleId;
 	}
 }

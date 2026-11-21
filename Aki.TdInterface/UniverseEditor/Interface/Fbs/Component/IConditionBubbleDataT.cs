@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FEF RID: 20463
+	// Token: 0x0200554E RID: 21838
 	public class IConditionBubbleDataT
 	{
-		// Token: 0x1700943F RID: 37951
-		// (get) Token: 0x06020B45 RID: 133957 RVA: 0x0048C1F3 File Offset: 0x0048A3F3
-		// (set) Token: 0x06020B46 RID: 133958 RVA: 0x0048C1FB File Offset: 0x0048A3FB
+		// Token: 0x17009C20 RID: 39968
+		// (get) Token: 0x06022A65 RID: 141925 RVA: 0x004C5C43 File Offset: 0x004C3E43
+		// (set) Token: 0x06022A66 RID: 141926 RVA: 0x004C5C4B File Offset: 0x004C3E4B
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17009440 RID: 37952
-		// (get) Token: 0x06020B47 RID: 133959 RVA: 0x0048C204 File Offset: 0x0048A404
-		// (set) Token: 0x06020B48 RID: 133960 RVA: 0x0048C20C File Offset: 0x0048A40C
+		// Token: 0x17009C21 RID: 39969
+		// (get) Token: 0x06022A67 RID: 141927 RVA: 0x004C5C54 File Offset: 0x004C3E54
+		// (set) Token: 0x06022A68 RID: 141928 RVA: 0x004C5C5C File Offset: 0x004C3E5C
 		public IBubbleDataT Flow { get; set; }
 
-		// Token: 0x06020B49 RID: 133961 RVA: 0x0048C215 File Offset: 0x0048A415
+		// Token: 0x06022A69 RID: 141929 RVA: 0x004C5C65 File Offset: 0x004C3E65
 		public IConditionBubbleDataT()
 		{
 			this.Condition = null;

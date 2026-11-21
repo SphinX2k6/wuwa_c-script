@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006645 RID: 26181
+	// Token: 0x02006CB6 RID: 27830
 	public struct IEnableAlertUi : IFlatbufferObject
 	{
-		// Token: 0x1700C288 RID: 49800
-		// (get) Token: 0x0602D79D RID: 186269 RVA: 0x0063A979 File Offset: 0x00638B79
+		// Token: 0x1700CC26 RID: 52262
+		// (get) Token: 0x0602FF6E RID: 196462 RVA: 0x006874E1 File Offset: 0x006856E1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D79E RID: 186270 RVA: 0x0063A986 File Offset: 0x00638B86
+		// Token: 0x0602FF6F RID: 196463 RVA: 0x006874EE File Offset: 0x006856EE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D79F RID: 186271 RVA: 0x0063A990 File Offset: 0x00638B90
+		// Token: 0x0602FF70 RID: 196464 RVA: 0x006874F8 File Offset: 0x006856F8
 		public static IEnableAlertUi GetRootAsIEnableAlertUi(ByteBuffer _bb)
 		{
 			return IEnableAlertUi.GetRootAsIEnableAlertUi(_bb, default(IEnableAlertUi));
 		}
 
-		// Token: 0x0602D7A0 RID: 186272 RVA: 0x0063A9AC File Offset: 0x00638BAC
+		// Token: 0x0602FF71 RID: 196465 RVA: 0x00687514 File Offset: 0x00685714
 		public static IEnableAlertUi GetRootAsIEnableAlertUi(ByteBuffer _bb, IEnableAlertUi obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D7A1 RID: 186273 RVA: 0x0063A9C9 File Offset: 0x00638BC9
+		// Token: 0x0602FF72 RID: 196466 RVA: 0x00687531 File Offset: 0x00685731
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D7A2 RID: 186274 RVA: 0x0063A9D8 File Offset: 0x00638BD8
+		// Token: 0x0602FF73 RID: 196467 RVA: 0x00687540 File Offset: 0x00685740
 		public IEnableAlertUi __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C289 RID: 49801
-		// (get) Token: 0x0602D7A3 RID: 186275 RVA: 0x0063A9E8 File Offset: 0x00638BE8
+		// Token: 0x1700CC27 RID: 52263
+		// (get) Token: 0x0602FF74 RID: 196468 RVA: 0x00687550 File Offset: 0x00685750
 		public EAlertSystemOption Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C28A RID: 49802
-		// (get) Token: 0x0602D7A4 RID: 186276 RVA: 0x0063AA24 File Offset: 0x00638C24
+		// Token: 0x1700CC28 RID: 52264
+		// (get) Token: 0x0602FF75 RID: 196469 RVA: 0x0068758C File Offset: 0x0068578C
 		public int AreaId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C28B RID: 49803
-		// (get) Token: 0x0602D7A5 RID: 186277 RVA: 0x0063AA60 File Offset: 0x00638C60
+		// Token: 0x1700CC29 RID: 52265
+		// (get) Token: 0x0602FF76 RID: 196470 RVA: 0x006875C8 File Offset: 0x006857C8
 		public bool IsEnable
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D7A6 RID: 186278 RVA: 0x0063AA9F File Offset: 0x00638C9F
+		// Token: 0x0602FF77 RID: 196471 RVA: 0x00687607 File Offset: 0x00685807
 		public static Offset<IEnableAlertUi> CreateIEnableAlertUi(FlatBufferBuilder builder, EAlertSystemOption Type = EAlertSystemOption.EnableAlertArea, int AreaId = 0, bool IsEnable = false)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableAlertUi.EndIEnableAlertUi(builder);
 		}
 
-		// Token: 0x0602D7A7 RID: 186279 RVA: 0x0063AAC3 File Offset: 0x00638CC3
+		// Token: 0x0602FF78 RID: 196472 RVA: 0x0068762B File Offset: 0x0068582B
 		public static void StartIEnableAlertUi(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602D7A8 RID: 186280 RVA: 0x0063AACC File Offset: 0x00638CCC
+		// Token: 0x0602FF79 RID: 196473 RVA: 0x00687634 File Offset: 0x00685834
 		public static void AddType(FlatBufferBuilder builder, EAlertSystemOption type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D7A9 RID: 186281 RVA: 0x0063AAD7 File Offset: 0x00638CD7
+		// Token: 0x0602FF7A RID: 196474 RVA: 0x0068763F File Offset: 0x0068583F
 		public static void AddAreaId(FlatBufferBuilder builder, int areaId)
 		{
 			builder.AddInt(1, areaId, 0);
 		}
 
-		// Token: 0x0602D7AA RID: 186282 RVA: 0x0063AAE2 File Offset: 0x00638CE2
+		// Token: 0x0602FF7B RID: 196475 RVA: 0x0068764A File Offset: 0x0068584A
 		public static void AddIsEnable(FlatBufferBuilder builder, bool isEnable)
 		{
 			builder.AddBool(2, isEnable, false);
 		}
 
-		// Token: 0x0602D7AB RID: 186283 RVA: 0x0063AAED File Offset: 0x00638CED
+		// Token: 0x0602FF7C RID: 196476 RVA: 0x00687655 File Offset: 0x00685855
 		public static Offset<IEnableAlertUi> EndIEnableAlertUi(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnableAlertUi>(builder.EndTable());
 		}
 
-		// Token: 0x0602D7AC RID: 186284 RVA: 0x0063AAFC File Offset: 0x00638CFC
+		// Token: 0x0602FF7D RID: 196477 RVA: 0x00687664 File Offset: 0x00685864
 		public IEnableAlertUiT UnPack()
 		{
 			IEnableAlertUiT enableAlertUiT = new IEnableAlertUiT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return enableAlertUiT;
 		}
 
-		// Token: 0x0602D7AD RID: 186285 RVA: 0x0063AB17 File Offset: 0x00638D17
+		// Token: 0x0602FF7E RID: 196478 RVA: 0x0068767F File Offset: 0x0068587F
 		public void UnPackTo(IEnableAlertUiT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.IsEnable = this.IsEnable;
 		}
 
-		// Token: 0x0602D7AE RID: 186286 RVA: 0x0063AB40 File Offset: 0x00638D40
+		// Token: 0x0602FF7F RID: 196479 RVA: 0x006876A8 File Offset: 0x006858A8
 		public static Offset<IEnableAlertUi> Pack(FlatBufferBuilder builder, IEnableAlertUiT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableAlertUi.CreateIEnableAlertUi(builder, _o.Type, _o.AreaId, _o.IsEnable);
 		}
 
-		// Token: 0x04010CE2 RID: 68834
+		// Token: 0x04011AFD RID: 72445
 		private Table __p;
 	}
 }

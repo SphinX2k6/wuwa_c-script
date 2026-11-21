@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020028D0 RID: 10448
+// Token: 0x02001E4B RID: 7755
 public class RoleTagSmallIconItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601591A RID: 88346 RVA: 0x00572725 File Offset: 0x00570925
+	// Token: 0x0601331A RID: 78618 RVA: 0x0059D5DD File Offset: 0x0059B7DD
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class RoleTagSmallIconItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0601591B RID: 88347 RVA: 0x00572748 File Offset: 0x00570948
+	// Token: 0x0601331B RID: 78619 RVA: 0x0059D600 File Offset: 0x0059B800
 	public override void Refresh(int tagId, bool isSelected, int gridIndex)
 	{
 		RoleTag? roleTagConfig = RoleConfig.Instance.GetRoleTagConfig(tagId);
@@ -39,10 +39,10 @@ public class RoleTagSmallIconItem : GridProxyAbstract<int>
 		});
 	}
 
-	// Token: 0x02008EE7 RID: 36583
+	// Token: 0x0200812F RID: 33071
 	private enum EComponent
 	{
-		// Token: 0x0402E56F RID: 189807
+		// Token: 0x04029C6A RID: 171114
 		TagIcon
 	}
 }

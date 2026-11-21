@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000096 RID: 150
+	// Token: 0x0200009E RID: 158
 	public class ConfigAnimalHandBookAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000384 RID: 900 RVA: 0x0006D7A8 File Offset: 0x0006B9A8
+		// Token: 0x060003B4 RID: 948 RVA: 0x0007205C File Offset: 0x0007025C
 		static ConfigAnimalHandBookAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAnimalHandBookAll.CreateStaticDefaultValue), new Action(ConfigAnimalHandBookAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000385 RID: 901 RVA: 0x0006D7C8 File Offset: 0x0006B9C8
+		// Token: 0x060003B5 RID: 949 RVA: 0x0007207C File Offset: 0x0007027C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAnimalHandBookAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000386 RID: 902 RVA: 0x0006D847 File Offset: 0x0006BA47
+		// Token: 0x060003B6 RID: 950 RVA: 0x000720FB File Offset: 0x000702FB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAnimalHandBookAll.LogPair = null;
 			ConfigAnimalHandBookAll.HandleId = 0;
 		}
 
-		// Token: 0x06000387 RID: 903 RVA: 0x0006D855 File Offset: 0x0006BA55
+		// Token: 0x060003B7 RID: 951 RVA: 0x00072109 File Offset: 0x00070309
 		public static void Init()
 		{
 			ConfigAnimalHandBookAll.HandleId = ConfigCommon.InitDataStatement(ConfigAnimalHandBookAll.HandleId, "db_handbook.db", "select BinData from `AnimalHandBook`");
 		}
 
-		// Token: 0x06000388 RID: 904 RVA: 0x0006D870 File Offset: 0x0006BA70
+		// Token: 0x060003B8 RID: 952 RVA: 0x00072124 File Offset: 0x00070324
 		[NullableContext(2)]
 		public static IReadOnlyList<AnimalHandBook> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040003FE RID: 1022
+		// Token: 0x04000436 RID: 1078
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x040003FF RID: 1023
+		// Token: 0x04000437 RID: 1079
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x04000400 RID: 1024
+		// Token: 0x04000438 RID: 1080
 		private const string TABLE = "AnimalHandBook";
 
-		// Token: 0x04000401 RID: 1025
+		// Token: 0x04000439 RID: 1081
 		private const string COMMAND = "select BinData from `AnimalHandBook`";
 
-		// Token: 0x04000402 RID: 1026
+		// Token: 0x0400043A RID: 1082
 		private const string KEY_PREFIX = "AnimalHandBookAll";
 
-		// Token: 0x04000403 RID: 1027
+		// Token: 0x0400043B RID: 1083
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000404 RID: 1028
+		// Token: 0x0400043C RID: 1084
 		private static int HandleId;
 	}
 }

@@ -7,30 +7,30 @@ using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003027 RID: 12327
+// Token: 0x0200257D RID: 9597
 [NullableContext(2)]
 [Nullable(0)]
 public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601A1E2 RID: 106978 RVA: 0x006DAF84 File Offset: 0x006D9184
+	// Token: 0x06017B39 RID: 97081 RVA: 0x00702E4D File Offset: 0x0070104D
 	public static void CreateStaticDefaultValue()
 	{
 		BaseCrowdAiComponent.MotorCollisionTag = new FName("DitherCollisionShape");
 	}
 
-	// Token: 0x0601A1E3 RID: 106979 RVA: 0x006DAF95 File Offset: 0x006D9195
+	// Token: 0x06017B3A RID: 97082 RVA: 0x00702E5E File Offset: 0x0070105E
 	public static void ResetStaticDefaultValue()
 	{
 		BaseCrowdAiComponent.MotorCollisionTag = null;
 	}
 
-	// Token: 0x0601A1E4 RID: 106980 RVA: 0x006DAFA2 File Offset: 0x006D91A2
+	// Token: 0x06017B3B RID: 97083 RVA: 0x00702E6B File Offset: 0x0070106B
 	static BaseCrowdAiComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BaseCrowdAiComponent.CreateStaticDefaultValue), new Action(BaseCrowdAiComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601A1E5 RID: 106981 RVA: 0x006DAFC4 File Offset: 0x006D91C4
+	// Token: 0x06017B3C RID: 97084 RVA: 0x00702E8C File Offset: 0x0070108C
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -47,7 +47,7 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A1E6 RID: 106982 RVA: 0x006DB045 File Offset: 0x006D9245
+	// Token: 0x06017B3D RID: 97085 RVA: 0x00702F0D File Offset: 0x0070110D
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.Remove(EEventName.ClearWorld, new Action(this.OnClearWorld));
@@ -55,7 +55,7 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A1E7 RID: 106983 RVA: 0x006DB080 File Offset: 0x006D9280
+	// Token: 0x06017B3E RID: 97086 RVA: 0x00702F48 File Offset: 0x00701148
 	[NullableContext(1)]
 	protected override void OnDisable(string reason)
 	{
@@ -67,7 +67,7 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		boidComponent.EnableBoidCollision(false);
 	}
 
-	// Token: 0x0601A1E8 RID: 106984 RVA: 0x006DB093 File Offset: 0x006D9293
+	// Token: 0x06017B3F RID: 97087 RVA: 0x00702F5B File Offset: 0x0070115B
 	protected override void OnEnable()
 	{
 		this.TryInitBoidComponent();
@@ -79,7 +79,7 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		boidComponent.EnableBoidCollision(true);
 	}
 
-	// Token: 0x0601A1E9 RID: 106985 RVA: 0x006DB0AC File Offset: 0x006D92AC
+	// Token: 0x06017B40 RID: 97088 RVA: 0x00702F74 File Offset: 0x00701174
 	protected void TryInitBoidComponent()
 	{
 		UKuroCrowdAiBoidComponent boidComponent = this.BoidComponent;
@@ -100,7 +100,7 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A1EA RID: 106986 RVA: 0x006DB10C File Offset: 0x006D930C
+	// Token: 0x06017B41 RID: 97089 RVA: 0x00702FD4 File Offset: 0x007011D4
 	protected bool CheckNeedCreateBoidComp()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -128,7 +128,7 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		return num > 1.0 && num2 > 1.0;
 	}
 
-	// Token: 0x0601A1EB RID: 106987 RVA: 0x006DB208 File Offset: 0x006D9408
+	// Token: 0x06017B42 RID: 97090 RVA: 0x007030D0 File Offset: 0x007012D0
 	protected virtual void OnBoidComponentCreated()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -211,7 +211,7 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A1EC RID: 106988 RVA: 0x006DB53C File Offset: 0x006D973C
+	// Token: 0x06017B43 RID: 97091 RVA: 0x00703404 File Offset: 0x00701604
 	protected UKuroCrowdAiBoidComponent FindOrAddBoidComponent()
 	{
 		BaseActorComponent actorComp = this.ActorComp;
@@ -237,13 +237,13 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		return ukuroCrowdAiBoidComponent;
 	}
 
-	// Token: 0x0601A1ED RID: 106989 RVA: 0x006DB5EA File Offset: 0x006D97EA
+	// Token: 0x06017B44 RID: 97092 RVA: 0x007034B2 File Offset: 0x007016B2
 	protected void OnEnableCrowdAiSystemWrapper(bool enable)
 	{
 		this.OnEnableCrowdAiSystem(enable);
 	}
 
-	// Token: 0x0601A1EE RID: 106990 RVA: 0x006DB5F4 File Offset: 0x006D97F4
+	// Token: 0x06017B45 RID: 97093 RVA: 0x007034BC File Offset: 0x007016BC
 	protected void OnEnableCrowdAiSystem(bool enable)
 	{
 		if (enable && this.DisableKey != null)
@@ -258,7 +258,7 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A1EF RID: 106991 RVA: 0x006DB660 File Offset: 0x006D9860
+	// Token: 0x06017B46 RID: 97094 RVA: 0x00703528 File Offset: 0x00701728
 	protected void OnClearWorld()
 	{
 		UKuroCrowdAiBoidComponent boidComponent = this.BoidComponent;
@@ -270,7 +270,7 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 		this.BoidComponent = null;
 	}
 
-	// Token: 0x0601A1F0 RID: 106992 RVA: 0x006DB68C File Offset: 0x006D988C
+	// Token: 0x06017B47 RID: 97095 RVA: 0x00703554 File Offset: 0x00701754
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -279,53 +279,84 @@ public class BaseCrowdAiComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		BaseCrowdAiComponent baseCrowdAiComponent = (BaseCrowdAiComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (baseCrowdAiComponent.ActorComp == null)
 		{
-			if (baseCrowdAiComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("DisableKey"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			this.DisableKey = baseCrowdAiComponent.DisableKey;
+			return false;
 		}
-		if (base.CanResetComponentProperty("BoidComponent"))
+		this.DisableKey = baseCrowdAiComponent.DisableKey;
+		if (baseCrowdAiComponent.BoidComponent == null)
 		{
-			if (baseCrowdAiComponent.BoidComponent == null)
-			{
-				this.BoidComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroCrowdAiBoidComponent>(this.BoidComponent), "BoidComponent"))
-			{
-				return false;
-			}
+			this.BoidComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BoidComponent), "BoidComponent"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400C626 RID: 50726
+	// Token: 0x170024D2 RID: 9426
+	// (get) Token: 0x06017B48 RID: 97096 RVA: 0x007035D6 File Offset: 0x007017D6
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024D3 RID: 9427
+	// (get) Token: 0x06017B49 RID: 97097 RVA: 0x007035D9 File Offset: 0x007017D9
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024D4 RID: 9428
+	// (get) Token: 0x06017B4A RID: 97098 RVA: 0x007035DC File Offset: 0x007017DC
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024D5 RID: 9429
+	// (get) Token: 0x06017B4B RID: 97099 RVA: 0x007035DF File Offset: 0x007017DF
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C9F5 RID: 51701
 	private const int MONSTER_EXTRA_RADIUS = 30;
 
-	// Token: 0x0400C627 RID: 50727
+	// Token: 0x0400C9F6 RID: 51702
 	private const int NPC_EXTRA_RADIUS = 10;
 
-	// Token: 0x0400C628 RID: 50728
+	// Token: 0x0400C9F7 RID: 51703
 	private const int DEFAULT_MIN_RADIUS = 1;
 
-	// Token: 0x0400C629 RID: 50729
+	// Token: 0x0400C9F8 RID: 51704
 	private static FName MotorCollisionTag;
 
-	// Token: 0x0400C62A RID: 50730
+	// Token: 0x0400C9F9 RID: 51705
 	protected BaseActorComponent ActorComp;
 
-	// Token: 0x0400C62B RID: 50731
+	// Token: 0x0400C9FA RID: 51706
 	protected int? DisableKey;
 
-	// Token: 0x0400C62C RID: 50732
+	// Token: 0x0400C9FB RID: 51707
 	public UKuroCrowdAiBoidComponent BoidComponent;
 }

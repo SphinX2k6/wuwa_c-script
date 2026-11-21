@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200646F RID: 25711
+	// Token: 0x02006AD7 RID: 27351
 	public class ICommonBtOverrideTaskInfoBaseT
 	{
-		// Token: 0x1700BF55 RID: 48981
-		// (get) Token: 0x0602C88D RID: 182413 RVA: 0x0061D576 File Offset: 0x0061B776
-		// (set) Token: 0x0602C88E RID: 182414 RVA: 0x0061D57E File Offset: 0x0061B77E
+		// Token: 0x1700C8D7 RID: 51415
+		// (get) Token: 0x0602EFDE RID: 192478 RVA: 0x00668B82 File Offset: 0x00666D82
+		// (set) Token: 0x0602EFDF RID: 192479 RVA: 0x00668B8A File Offset: 0x00666D8A
 		public ECommonBtPlaceholderTargetType Type { get; set; }
 
-		// Token: 0x0602C88F RID: 182415 RVA: 0x0061D587 File Offset: 0x0061B787
+		// Token: 0x0602EFE0 RID: 192480 RVA: 0x00668B93 File Offset: 0x00666D93
 		public ICommonBtOverrideTaskInfoBaseT()
 		{
 			this.Type = ECommonBtPlaceholderTargetType.Action;

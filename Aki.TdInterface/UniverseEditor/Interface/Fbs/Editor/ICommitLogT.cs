@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004839 RID: 18489
+	// Token: 0x02004CA1 RID: 19617
 	public class ICommitLogT
 	{
-		// Token: 0x170084AD RID: 33965
-		// (get) Token: 0x0601C951 RID: 117073 RVA: 0x0040A7AE File Offset: 0x004089AE
-		// (set) Token: 0x0601C952 RID: 117074 RVA: 0x0040A7B6 File Offset: 0x004089B6
+		// Token: 0x17008AF8 RID: 35576
+		// (get) Token: 0x0601E14E RID: 123214 RVA: 0x004370FE File Offset: 0x004352FE
+		// (set) Token: 0x0601E14F RID: 123215 RVA: 0x00437106 File Offset: 0x00435306
 		public string Date { get; set; }
 
-		// Token: 0x170084AE RID: 33966
-		// (get) Token: 0x0601C953 RID: 117075 RVA: 0x0040A7BF File Offset: 0x004089BF
-		// (set) Token: 0x0601C954 RID: 117076 RVA: 0x0040A7C7 File Offset: 0x004089C7
+		// Token: 0x17008AF9 RID: 35577
+		// (get) Token: 0x0601E150 RID: 123216 RVA: 0x0043710F File Offset: 0x0043530F
+		// (set) Token: 0x0601E151 RID: 123217 RVA: 0x00437117 File Offset: 0x00435317
 		public string Log { get; set; }
 
-		// Token: 0x0601C955 RID: 117077 RVA: 0x0040A7D0 File Offset: 0x004089D0
+		// Token: 0x0601E152 RID: 123218 RVA: 0x00437120 File Offset: 0x00435320
 		public ICommitLogT()
 		{
 			this.Date = null;

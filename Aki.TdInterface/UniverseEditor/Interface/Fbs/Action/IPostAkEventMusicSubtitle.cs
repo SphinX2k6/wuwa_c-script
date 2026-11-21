@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D77 RID: 28023
+	// Token: 0x020074F2 RID: 29938
 	public struct IPostAkEventMusicSubtitle : IFlatbufferObject
 	{
-		// Token: 0x1700D111 RID: 53521
-		// (get) Token: 0x060317F0 RID: 202736 RVA: 0x006B5D47 File Offset: 0x006B3F47
+		// Token: 0x1700DC59 RID: 56409
+		// (get) Token: 0x060347EC RID: 215020 RVA: 0x0071142F File Offset: 0x0070F62F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060317F1 RID: 202737 RVA: 0x006B5D54 File Offset: 0x006B3F54
+		// Token: 0x060347ED RID: 215021 RVA: 0x0071143C File Offset: 0x0070F63C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060317F2 RID: 202738 RVA: 0x006B5D5C File Offset: 0x006B3F5C
+		// Token: 0x060347EE RID: 215022 RVA: 0x00711444 File Offset: 0x0070F644
 		public static IPostAkEventMusicSubtitle GetRootAsIPostAkEventMusicSubtitle(ByteBuffer _bb)
 		{
 			return IPostAkEventMusicSubtitle.GetRootAsIPostAkEventMusicSubtitle(_bb, default(IPostAkEventMusicSubtitle));
 		}
 
-		// Token: 0x060317F3 RID: 202739 RVA: 0x006B5D78 File Offset: 0x006B3F78
+		// Token: 0x060347EF RID: 215023 RVA: 0x00711460 File Offset: 0x0070F660
 		public static IPostAkEventMusicSubtitle GetRootAsIPostAkEventMusicSubtitle(ByteBuffer _bb, IPostAkEventMusicSubtitle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060317F4 RID: 202740 RVA: 0x006B5D95 File Offset: 0x006B3F95
+		// Token: 0x060347F0 RID: 215024 RVA: 0x0071147D File Offset: 0x0070F67D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060317F5 RID: 202741 RVA: 0x006B5DA4 File Offset: 0x006B3FA4
+		// Token: 0x060347F1 RID: 215025 RVA: 0x0071148C File Offset: 0x0070F68C
 		public IPostAkEventMusicSubtitle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D112 RID: 53522
-		// (get) Token: 0x060317F6 RID: 202742 RVA: 0x006B5DB4 File Offset: 0x006B3FB4
+		// Token: 0x1700DC5A RID: 56410
+		// (get) Token: 0x060347F2 RID: 215026 RVA: 0x0071149C File Offset: 0x0070F69C
 		public EPostAkEvent Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D113 RID: 53523
-		// (get) Token: 0x060317F7 RID: 202743 RVA: 0x006B5DF0 File Offset: 0x006B3FF0
+		// Token: 0x1700DC5B RID: 56411
+		// (get) Token: 0x060347F3 RID: 215027 RVA: 0x007114D8 File Offset: 0x0070F6D8
 		public string MusicSubtitleGroupTag
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060317F8 RID: 202744 RVA: 0x006B5E27 File Offset: 0x006B4027
+		// Token: 0x060347F4 RID: 215028 RVA: 0x0071150F File Offset: 0x0070F70F
 		public Span<byte> GetMusicSubtitleGroupTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060317F9 RID: 202745 RVA: 0x006B5E36 File Offset: 0x006B4036
+		// Token: 0x060347F5 RID: 215029 RVA: 0x0071151E File Offset: 0x0070F71E
 		public byte[] GetMusicSubtitleGroupTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700D114 RID: 53524
-		// (get) Token: 0x060317FA RID: 202746 RVA: 0x006B5E44 File Offset: 0x006B4044
+		// Token: 0x1700DC5C RID: 56412
+		// (get) Token: 0x060347F6 RID: 215030 RVA: 0x0071152C File Offset: 0x0070F72C
 		public string AkEvent
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060317FB RID: 202747 RVA: 0x006B5E7B File Offset: 0x006B407B
+		// Token: 0x060347F7 RID: 215031 RVA: 0x00711563 File Offset: 0x0070F763
 		public Span<byte> GetAkEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060317FC RID: 202748 RVA: 0x006B5E8A File Offset: 0x006B408A
+		// Token: 0x060347F8 RID: 215032 RVA: 0x00711572 File Offset: 0x0070F772
 		public byte[] GetAkEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700D115 RID: 53525
-		// (get) Token: 0x060317FD RID: 202749 RVA: 0x006B5E98 File Offset: 0x006B4098
+		// Token: 0x1700DC5D RID: 56413
+		// (get) Token: 0x060347F9 RID: 215033 RVA: 0x00711580 File Offset: 0x0070F780
 		public bool IsLoop
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D116 RID: 53526
-		// (get) Token: 0x060317FE RID: 202750 RVA: 0x006B5ED8 File Offset: 0x006B40D8
+		// Token: 0x1700DC5E RID: 56414
+		// (get) Token: 0x060347FA RID: 215034 RVA: 0x007115C0 File Offset: 0x0070F7C0
 		public bool IsEndAkEvent
 		{
 			get
@@ -138,8 +138,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D117 RID: 53527
-		// (get) Token: 0x060317FF RID: 202751 RVA: 0x006B5F18 File Offset: 0x006B4118
+		// Token: 0x1700DC5F RID: 56415
+		// (get) Token: 0x060347FB RID: 215035 RVA: 0x00711600 File Offset: 0x0070F800
 		public byte NullMask
 		{
 			get
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031800 RID: 202752 RVA: 0x006B5F55 File Offset: 0x006B4155
+		// Token: 0x060347FC RID: 215036 RVA: 0x0071163D File Offset: 0x0070F83D
 		public static Offset<IPostAkEventMusicSubtitle> CreateIPostAkEventMusicSubtitle(FlatBufferBuilder builder, EPostAkEvent Type = EPostAkEvent.Global, StringOffset MusicSubtitleGroupTagOffset = default(StringOffset), StringOffset AkEventOffset = default(StringOffset), bool IsLoop = false, bool IsEndAkEvent = false, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -166,55 +166,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPostAkEventMusicSubtitle.EndIPostAkEventMusicSubtitle(builder);
 		}
 
-		// Token: 0x06031801 RID: 202753 RVA: 0x006B5F91 File Offset: 0x006B4191
+		// Token: 0x060347FD RID: 215037 RVA: 0x00711679 File Offset: 0x0070F879
 		public static void StartIPostAkEventMusicSubtitle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06031802 RID: 202754 RVA: 0x006B5F9A File Offset: 0x006B419A
+		// Token: 0x060347FE RID: 215038 RVA: 0x00711682 File Offset: 0x0070F882
 		public static void AddType(FlatBufferBuilder builder, EPostAkEvent type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031803 RID: 202755 RVA: 0x006B5FA5 File Offset: 0x006B41A5
+		// Token: 0x060347FF RID: 215039 RVA: 0x0071168D File Offset: 0x0070F88D
 		public static void AddMusicSubtitleGroupTag(FlatBufferBuilder builder, StringOffset musicSubtitleGroupTagOffset)
 		{
 			builder.AddOffset(1, musicSubtitleGroupTagOffset.Value, 0);
 		}
 
-		// Token: 0x06031804 RID: 202756 RVA: 0x006B5FB5 File Offset: 0x006B41B5
+		// Token: 0x06034800 RID: 215040 RVA: 0x0071169D File Offset: 0x0070F89D
 		public static void AddAkEvent(FlatBufferBuilder builder, StringOffset akEventOffset)
 		{
 			builder.AddOffset(2, akEventOffset.Value, 0);
 		}
 
-		// Token: 0x06031805 RID: 202757 RVA: 0x006B5FC5 File Offset: 0x006B41C5
+		// Token: 0x06034801 RID: 215041 RVA: 0x007116AD File Offset: 0x0070F8AD
 		public static void AddIsLoop(FlatBufferBuilder builder, bool isLoop)
 		{
 			builder.AddBool(3, isLoop, false);
 		}
 
-		// Token: 0x06031806 RID: 202758 RVA: 0x006B5FD0 File Offset: 0x006B41D0
+		// Token: 0x06034802 RID: 215042 RVA: 0x007116B8 File Offset: 0x0070F8B8
 		public static void AddIsEndAkEvent(FlatBufferBuilder builder, bool isEndAkEvent)
 		{
 			builder.AddBool(4, isEndAkEvent, false);
 		}
 
-		// Token: 0x06031807 RID: 202759 RVA: 0x006B5FDB File Offset: 0x006B41DB
+		// Token: 0x06034803 RID: 215043 RVA: 0x007116C3 File Offset: 0x0070F8C3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06031808 RID: 202760 RVA: 0x006B5FE6 File Offset: 0x006B41E6
+		// Token: 0x06034804 RID: 215044 RVA: 0x007116CE File Offset: 0x0070F8CE
 		public static Offset<IPostAkEventMusicSubtitle> EndIPostAkEventMusicSubtitle(FlatBufferBuilder builder)
 		{
 			return new Offset<IPostAkEventMusicSubtitle>(builder.EndTable());
 		}
 
-		// Token: 0x06031809 RID: 202761 RVA: 0x006B5FF4 File Offset: 0x006B41F4
+		// Token: 0x06034805 RID: 215045 RVA: 0x007116DC File Offset: 0x0070F8DC
 		public IPostAkEventMusicSubtitleT UnPack()
 		{
 			IPostAkEventMusicSubtitleT postAkEventMusicSubtitleT = new IPostAkEventMusicSubtitleT();
@@ -222,7 +222,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return postAkEventMusicSubtitleT;
 		}
 
-		// Token: 0x0603180A RID: 202762 RVA: 0x006B6010 File Offset: 0x006B4210
+		// Token: 0x06034806 RID: 215046 RVA: 0x007116F8 File Offset: 0x0070F8F8
 		public void UnPackTo(IPostAkEventMusicSubtitleT _o)
 		{
 			_o.Type = this.Type;
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603180B RID: 202763 RVA: 0x006B6068 File Offset: 0x006B4268
+		// Token: 0x06034807 RID: 215047 RVA: 0x00711750 File Offset: 0x0070F950
 		public static Offset<IPostAkEventMusicSubtitle> Pack(FlatBufferBuilder builder, IPostAkEventMusicSubtitleT _o)
 		{
 			if (_o == null)
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPostAkEventMusicSubtitle.CreateIPostAkEventMusicSubtitle(builder, _o.Type, musicSubtitleGroupTagOffset, akEventOffset, _o.IsLoop, _o.IsEndAkEvent, _o.NullMask);
 		}
 
-		// Token: 0x0401173B RID: 71483
+		// Token: 0x040126B7 RID: 75447
 		private Table __p;
 	}
 }

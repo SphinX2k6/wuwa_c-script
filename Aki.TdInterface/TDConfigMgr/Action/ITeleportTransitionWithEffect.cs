@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FB0 RID: 8112
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021F3 RID: 8691
 	public class ITeleportTransitionWithEffect : ITeleportTransitionType
 	{
-		// Token: 0x0600B268 RID: 45672 RVA: 0x0019FCA0 File Offset: 0x0019DEA0
+		// Token: 0x0600BD6C RID: 48492 RVA: 0x001B6050 File Offset: 0x001B4250
 		private ITeleportTransitionWithEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B269 RID: 45673 RVA: 0x0019FCD8 File Offset: 0x0019DED8
+		// Token: 0x0600BD6D RID: 48493 RVA: 0x001B6088 File Offset: 0x001B4288
 		public static ITeleportTransitionWithEffect Create([Nullable(2)] ITeleportTransitionWithEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B26A RID: 45674 RVA: 0x0019FCEB File Offset: 0x0019DEEB
+		// Token: 0x0600BD6E RID: 48494 RVA: 0x001B609B File Offset: 0x001B429B
 		public static ITeleportTransitionWithEffect CreateFromSetValue([Nullable(2)] ITeleportTransitionWithEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B26B RID: 45675 RVA: 0x0019FCFE File Offset: 0x0019DEFE
+		// Token: 0x0600BD6F RID: 48495 RVA: 0x001B60AE File Offset: 0x001B42AE
 		public new ITeleportTransitionWithEffect_SetValue ToSetValue()
 		{
 			return new ITeleportTransitionWithEffect_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003704 RID: 14084
-		// (get) Token: 0x0600B26C RID: 45676 RVA: 0x0019FD1D File Offset: 0x0019DF1D
-		// (set) Token: 0x0600B26D RID: 45677 RVA: 0x0019FD48 File Offset: 0x0019DF48
+		// Token: 0x170039D9 RID: 14809
+		// (get) Token: 0x0600BD70 RID: 48496 RVA: 0x001B60CD File Offset: 0x001B42CD
+		// (set) Token: 0x0600BD71 RID: 48497 RVA: 0x001B60F8 File Offset: 0x001B42F8
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003705 RID: 14085
-		// (get) Token: 0x0600B26E RID: 45678 RVA: 0x0019FD56 File Offset: 0x0019DF56
-		// (set) Token: 0x0600B26F RID: 45679 RVA: 0x0019FD81 File Offset: 0x0019DF81
+		// Token: 0x170039DA RID: 14810
+		// (get) Token: 0x0600BD72 RID: 48498 RVA: 0x001B6106 File Offset: 0x001B4306
+		// (set) Token: 0x0600BD73 RID: 48499 RVA: 0x001B6131 File Offset: 0x001B4331
 		public virtual string EffectDaPath
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006BBF RID: 27583
+		// Token: 0x040071BA RID: 29114
 		[Nullable(2)]
 		protected new ITeleportTransitionWithEffect FbInstance;
 
-		// Token: 0x04006BC0 RID: 27584
+		// Token: 0x040071BB RID: 29115
 		[Nullable(2)]
 		protected new ITeleportTransitionWithEffect_SetValue PocoInterface;
 	}

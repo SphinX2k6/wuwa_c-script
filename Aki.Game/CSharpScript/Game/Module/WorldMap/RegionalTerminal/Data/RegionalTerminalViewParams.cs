@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.Data
 {
-	// Token: 0x0200485D RID: 18525
+	// Token: 0x0200378E RID: 14222
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RegionalTerminalViewParams : IRegionalTerminalViewParams
 	{
-		// Token: 0x1700791D RID: 31005
-		// (get) Token: 0x060307BB RID: 198587 RVA: 0x00B42190 File Offset: 0x00B40390
-		// (set) Token: 0x060307BC RID: 198588 RVA: 0x00B42198 File Offset: 0x00B40398
+		// Token: 0x17004BDA RID: 19418
+		// (get) Token: 0x06024F8A RID: 151434 RVA: 0x00A723D4 File Offset: 0x00A705D4
+		// (set) Token: 0x06024F8B RID: 151435 RVA: 0x00A723DC File Offset: 0x00A705DC
 		public bool ShowLockPanel { get; set; }
 
-		// Token: 0x1700791E RID: 31006
-		// (get) Token: 0x060307BD RID: 198589 RVA: 0x00B421A1 File Offset: 0x00B403A1
-		// (set) Token: 0x060307BE RID: 198590 RVA: 0x00B421A9 File Offset: 0x00B403A9
+		// Token: 0x17004BDB RID: 19419
+		// (get) Token: 0x06024F8C RID: 151436 RVA: 0x00A723E5 File Offset: 0x00A705E5
+		// (set) Token: 0x06024F8D RID: 151437 RVA: 0x00A723ED File Offset: 0x00A705ED
 		public bool ShowButton { get; set; }
 
-		// Token: 0x1700791F RID: 31007
-		// (get) Token: 0x060307BF RID: 198591 RVA: 0x00B421B2 File Offset: 0x00B403B2
-		// (set) Token: 0x060307C0 RID: 198592 RVA: 0x00B421BA File Offset: 0x00B403BA
+		// Token: 0x17004BDC RID: 19420
+		// (get) Token: 0x06024F8E RID: 151438 RVA: 0x00A723F6 File Offset: 0x00A705F6
+		// (set) Token: 0x06024F8F RID: 151439 RVA: 0x00A723FE File Offset: 0x00A705FE
 		public Action LockClickFunc { get; set; }
 
-		// Token: 0x17007920 RID: 31008
-		// (get) Token: 0x060307C1 RID: 198593 RVA: 0x00B421C3 File Offset: 0x00B403C3
-		// (set) Token: 0x060307C2 RID: 198594 RVA: 0x00B421CB File Offset: 0x00B403CB
+		// Token: 0x17004BDD RID: 19421
+		// (get) Token: 0x06024F90 RID: 151440 RVA: 0x00A72407 File Offset: 0x00A70607
+		// (set) Token: 0x06024F91 RID: 151441 RVA: 0x00A7240F File Offset: 0x00A7060F
 		public string LockTxtId { get; set; }
 
-		// Token: 0x17007921 RID: 31009
-		// (get) Token: 0x060307C3 RID: 198595 RVA: 0x00B421D4 File Offset: 0x00B403D4
-		// (set) Token: 0x060307C4 RID: 198596 RVA: 0x00B421DC File Offset: 0x00B403DC
+		// Token: 0x17004BDE RID: 19422
+		// (get) Token: 0x06024F92 RID: 151442 RVA: 0x00A72418 File Offset: 0x00A70618
+		// (set) Token: 0x06024F93 RID: 151443 RVA: 0x00A72420 File Offset: 0x00A70620
 		public string ButtonTxtId { get; set; }
 	}
 }

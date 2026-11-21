@@ -3,11 +3,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072FC RID: 29436
+	// Token: 0x0200647F RID: 25727
 	[RegisterPhotoCameraComponent(EPhotoCameraComponent.Display)]
 	public class PhotoCameraDisplayComponent : PhotoCameraComponentBase
 	{
-		// Token: 0x060483B7 RID: 295863 RVA: 0x0128E388 File Offset: 0x0128C588
+		// Token: 0x0603E803 RID: 256003 RVA: 0x01230D3C File Offset: 0x0122EF3C
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.Host.CurrentConfig == null)

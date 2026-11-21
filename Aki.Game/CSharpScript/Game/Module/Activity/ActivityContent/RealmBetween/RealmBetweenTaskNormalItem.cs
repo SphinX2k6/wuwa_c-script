@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006284 RID: 25220
+	// Token: 0x02005202 RID: 20994
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,12 +17,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 	})]
 	public class RealmBetweenTaskNormalItem : RealmBetweenTaskItemBase<ActivityTaskData>
 	{
-		// Token: 0x0603F7A0 RID: 260000 RVA: 0x00F587AC File Offset: 0x00F569AC
+		// Token: 0x06034461 RID: 214113 RVA: 0x00E9F708 File Offset: 0x00E9D908
 		public RealmBetweenTaskNormalItem(ActivityRealmBetweenData activityBaseData) : base(activityBaseData)
 		{
 		}
 
-		// Token: 0x0603F7A1 RID: 260001 RVA: 0x00F587B8 File Offset: 0x00F569B8
+		// Token: 0x06034462 RID: 214114 RVA: 0x00E9F714 File Offset: 0x00E9D914
 		public override void Refresh(ActivityTaskData taskData, bool isSelected, int gridIndex)
 		{
 			this.TaskData = taskData;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			base.GetItem(5).SetUIActive(flag);
 		}
 
-		// Token: 0x0603F7A2 RID: 260002 RVA: 0x00F588D4 File Offset: 0x00F56AD4
+		// Token: 0x06034463 RID: 214115 RVA: 0x00E9F830 File Offset: 0x00E9DA30
 		private void RefreshRewardData(int rewardId)
 		{
 			List<IItemGridData> list = new List<IItemGridData>();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.RewardScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603F7A3 RID: 260003 RVA: 0x00F58964 File Offset: 0x00F56B64
+		// Token: 0x06034464 RID: 214116 RVA: 0x00E9F8C0 File Offset: 0x00E9DAC0
 		protected override void OnClickedButton()
 		{
 			RealmBetweenTask value = ActivityRealmBetweenConfig.Instance.GetRealmBetweenTaskConfig(this.TaskData.Id).Value;
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F7A4 RID: 260004 RVA: 0x00F589A5 File Offset: 0x00F56BA5
+		// Token: 0x06034465 RID: 214117 RVA: 0x00E9F901 File Offset: 0x00E9DB01
 		public void SetBtnClickCallback(Action callback)
 		{
 			this.ClickRewardBtnCb = callback;
 		}
 
-		// Token: 0x0603F7A5 RID: 260005 RVA: 0x00F589AE File Offset: 0x00F56BAE
+		// Token: 0x06034466 RID: 214118 RVA: 0x00E9F90A File Offset: 0x00E9DB0A
 		protected override void OnClickedRewardButton()
 		{
 			if (this.ClickRewardBtnCb != null)
@@ -90,10 +90,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			});
 		}
 
-		// Token: 0x040212CC RID: 135884
+		// Token: 0x0401BBFB RID: 113659
 		protected new ActivityTaskData TaskData;
 
-		// Token: 0x040212CD RID: 135885
+		// Token: 0x0401BBFC RID: 113660
 		[Nullable(2)]
 		private Action ClickRewardBtnCb;
 	}

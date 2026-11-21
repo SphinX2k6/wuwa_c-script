@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061CA RID: 25034
+	// Token: 0x02006838 RID: 26680
 	public struct IAvgShakeUi : IFlatbufferObject
 	{
-		// Token: 0x1700BAAB RID: 47787
-		// (get) Token: 0x0602B24A RID: 176714 RVA: 0x005F2908 File Offset: 0x005F0B08
+		// Token: 0x1700C42E RID: 50222
+		// (get) Token: 0x0602D991 RID: 186769 RVA: 0x0063D37C File Offset: 0x0063B57C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B24B RID: 176715 RVA: 0x005F2915 File Offset: 0x005F0B15
+		// Token: 0x0602D992 RID: 186770 RVA: 0x0063D389 File Offset: 0x0063B589
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B24C RID: 176716 RVA: 0x005F291C File Offset: 0x005F0B1C
+		// Token: 0x0602D993 RID: 186771 RVA: 0x0063D390 File Offset: 0x0063B590
 		public static IAvgShakeUi GetRootAsIAvgShakeUi(ByteBuffer _bb)
 		{
 			return IAvgShakeUi.GetRootAsIAvgShakeUi(_bb, default(IAvgShakeUi));
 		}
 
-		// Token: 0x0602B24D RID: 176717 RVA: 0x005F2938 File Offset: 0x005F0B38
+		// Token: 0x0602D994 RID: 186772 RVA: 0x0063D3AC File Offset: 0x0063B5AC
 		public static IAvgShakeUi GetRootAsIAvgShakeUi(ByteBuffer _bb, IAvgShakeUi obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B24E RID: 176718 RVA: 0x005F2955 File Offset: 0x005F0B55
+		// Token: 0x0602D995 RID: 186773 RVA: 0x0063D3C9 File Offset: 0x0063B5C9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B24F RID: 176719 RVA: 0x005F2964 File Offset: 0x005F0B64
+		// Token: 0x0602D996 RID: 186774 RVA: 0x0063D3D8 File Offset: 0x0063B5D8
 		public IAvgShakeUi __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BAAC RID: 47788
-		// (get) Token: 0x0602B250 RID: 176720 RVA: 0x005F2974 File Offset: 0x005F0B74
+		// Token: 0x1700C42F RID: 50223
+		// (get) Token: 0x0602D997 RID: 186775 RVA: 0x0063D3E8 File Offset: 0x0063B5E8
 		public EAvgShakeUiIntensity Intensity
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BAAD RID: 47789
-		// (get) Token: 0x0602B251 RID: 176721 RVA: 0x005F29B0 File Offset: 0x005F0BB0
+		// Token: 0x1700C430 RID: 50224
+		// (get) Token: 0x0602D998 RID: 186776 RVA: 0x0063D424 File Offset: 0x0063B624
 		public int RepeatCount
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B252 RID: 176722 RVA: 0x005F29EC File Offset: 0x005F0BEC
+		// Token: 0x0602D999 RID: 186777 RVA: 0x0063D460 File Offset: 0x0063B660
 		public static Offset<IAvgShakeUi> CreateIAvgShakeUi(FlatBufferBuilder builder, EAvgShakeUiIntensity Intensity = EAvgShakeUiIntensity.Weak, int RepeatCount = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAvgShakeUi.EndIAvgShakeUi(builder);
 		}
 
-		// Token: 0x0602B253 RID: 176723 RVA: 0x005F2A09 File Offset: 0x005F0C09
+		// Token: 0x0602D99A RID: 186778 RVA: 0x0063D47D File Offset: 0x0063B67D
 		public static void StartIAvgShakeUi(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602B254 RID: 176724 RVA: 0x005F2A12 File Offset: 0x005F0C12
+		// Token: 0x0602D99B RID: 186779 RVA: 0x0063D486 File Offset: 0x0063B686
 		public static void AddIntensity(FlatBufferBuilder builder, EAvgShakeUiIntensity intensity)
 		{
 			builder.AddByte(0, (byte)intensity, 0);
 		}
 
-		// Token: 0x0602B255 RID: 176725 RVA: 0x005F2A1D File Offset: 0x005F0C1D
+		// Token: 0x0602D99C RID: 186780 RVA: 0x0063D491 File Offset: 0x0063B691
 		public static void AddRepeatCount(FlatBufferBuilder builder, int repeatCount)
 		{
 			builder.AddInt(1, repeatCount, 0);
 		}
 
-		// Token: 0x0602B256 RID: 176726 RVA: 0x005F2A28 File Offset: 0x005F0C28
+		// Token: 0x0602D99D RID: 186781 RVA: 0x0063D49C File Offset: 0x0063B69C
 		public static Offset<IAvgShakeUi> EndIAvgShakeUi(FlatBufferBuilder builder)
 		{
 			return new Offset<IAvgShakeUi>(builder.EndTable());
 		}
 
-		// Token: 0x0602B257 RID: 176727 RVA: 0x005F2A38 File Offset: 0x005F0C38
+		// Token: 0x0602D99E RID: 186782 RVA: 0x0063D4AC File Offset: 0x0063B6AC
 		public IAvgShakeUiT UnPack()
 		{
 			IAvgShakeUiT avgShakeUiT = new IAvgShakeUiT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return avgShakeUiT;
 		}
 
-		// Token: 0x0602B258 RID: 176728 RVA: 0x005F2A53 File Offset: 0x005F0C53
+		// Token: 0x0602D99F RID: 186783 RVA: 0x0063D4C7 File Offset: 0x0063B6C7
 		public void UnPackTo(IAvgShakeUiT _o)
 		{
 			_o.Intensity = this.Intensity;
 			_o.RepeatCount = this.RepeatCount;
 		}
 
-		// Token: 0x0602B259 RID: 176729 RVA: 0x005F2A70 File Offset: 0x005F0C70
+		// Token: 0x0602D9A0 RID: 186784 RVA: 0x0063D4E4 File Offset: 0x0063B6E4
 		public static Offset<IAvgShakeUi> Pack(FlatBufferBuilder builder, IAvgShakeUiT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAvgShakeUi.CreateIAvgShakeUi(builder, _o.Intensity, _o.RepeatCount);
 		}
 
-		// Token: 0x040106F1 RID: 67313
+		// Token: 0x04011503 RID: 70915
 		private Table __p;
 	}
 }

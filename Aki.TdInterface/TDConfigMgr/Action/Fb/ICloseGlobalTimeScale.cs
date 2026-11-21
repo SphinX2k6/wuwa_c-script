@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024FE RID: 9470
+	// Token: 0x020027A4 RID: 10148
 	public class ICloseGlobalTimeScale : ISetGlobalTimeScaleType
 	{
-		// Token: 0x0600D362 RID: 54114 RVA: 0x001F56AC File Offset: 0x001F38AC
-		[NullableContext(1)]
+		// Token: 0x0600E0BE RID: 57534 RVA: 0x002110A4 File Offset: 0x0020F2A4
 		public static ICloseGlobalTimeScale Create(ICloseGlobalTimeScale? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B28 RID: 15144
-		// (get) Token: 0x0600D363 RID: 54115 RVA: 0x001F56CB File Offset: 0x001F38CB
+		// Token: 0x17003E24 RID: 15908
+		// (get) Token: 0x0600E0BF RID: 57535 RVA: 0x002110C3 File Offset: 0x0020F2C3
 		public override ESetTimeScaleType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B29 RID: 15145
-		// (get) Token: 0x0600D364 RID: 54116 RVA: 0x001F56D8 File Offset: 0x001F38D8
+		// Token: 0x17003E25 RID: 15909
+		// (get) Token: 0x0600E0C0 RID: 57536 RVA: 0x002110D0 File Offset: 0x0020F2D0
 		public virtual ETimeScaleCloseSource? TimeScaleCloseSource
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073E4 RID: 29668
+		// Token: 0x04007A36 RID: 31286
 		private ICloseGlobalTimeScale Instance;
 	}
 }

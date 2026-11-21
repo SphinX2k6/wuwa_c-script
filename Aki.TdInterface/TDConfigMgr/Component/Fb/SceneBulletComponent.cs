@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C72 RID: 3186
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D51 RID: 3409
 	public class SceneBulletComponent : IComponentBase
 	{
-		// Token: 0x06004905 RID: 18693 RVA: 0x000B753B File Offset: 0x000B573B
+		// Token: 0x06004DA4 RID: 19876 RVA: 0x000C1D3F File Offset: 0x000BFF3F
 		public static SceneBulletComponent Create(ISceneBulletComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015DE RID: 5598
-		// (get) Token: 0x06004906 RID: 18694 RVA: 0x000B755C File Offset: 0x000B575C
+		// Token: 0x170016FD RID: 5885
+		// (get) Token: 0x06004DA5 RID: 19877 RVA: 0x000C1D60 File Offset: 0x000BFF60
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015DF RID: 5599
-		// (get) Token: 0x06004907 RID: 18695 RVA: 0x000B7594 File Offset: 0x000B5794
+		// Token: 0x170016FE RID: 5886
+		// (get) Token: 0x06004DA6 RID: 19878 RVA: 0x000C1D98 File Offset: 0x000BFF98
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015E0 RID: 5600
-		// (get) Token: 0x06004908 RID: 18696 RVA: 0x000B75AC File Offset: 0x000B57AC
+		// Token: 0x170016FF RID: 5887
+		// (get) Token: 0x06004DA7 RID: 19879 RVA: 0x000C1DB0 File Offset: 0x000BFFB0
 		public virtual bool? DisableGenerateByRange
 		{
 			get
@@ -61,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015E1 RID: 5601
-		// (get) Token: 0x06004909 RID: 18697 RVA: 0x000B75E4 File Offset: 0x000B57E4
+		// Token: 0x17001700 RID: 5888
+		// (get) Token: 0x06004DA8 RID: 19880 RVA: 0x000C1DE8 File Offset: 0x000BFFE8
 		public virtual List<ISceneBulletGroup> BulletGroups
 		{
 			get
@@ -82,13 +79,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029AB RID: 10667
+		// Token: 0x04002C18 RID: 11288
 		private ISceneBulletComponent Instance;
 
-		// Token: 0x040029AC RID: 10668
+		// Token: 0x04002C19 RID: 11289
 		private List<ISceneBulletGroup> _BulletGroupsCache;
 
-		// Token: 0x040029AD RID: 10669
+		// Token: 0x04002C1A RID: 11290
 		private bool _BulletGroupsInited;
 	}
 }

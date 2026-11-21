@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001E98 RID: 7832
+// Token: 0x0200135A RID: 4954
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class HonamiStoryAttrItem : GridProxyAbstract<IHonamiStoryAttrData>
 {
-	// Token: 0x0600F07F RID: 61567 RVA: 0x0039AE64 File Offset: 0x00399064
+	// Token: 0x0600C49E RID: 50334 RVA: 0x003A6A20 File Offset: 0x003A4C20
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class HonamiStoryAttrItem : GridProxyAbstract<IHonamiStoryAttrData>
 		};
 	}
 
-	// Token: 0x0600F080 RID: 61568 RVA: 0x0039AF00 File Offset: 0x00399100
+	// Token: 0x0600C49F RID: 50335 RVA: 0x003A6ABC File Offset: 0x003A4CBC
 	[NullableContext(1)]
 	public override void Refresh(IHonamiStoryAttrData data, bool isSelected, int gridIndex)
 	{
@@ -67,23 +67,23 @@ public class HonamiStoryAttrItem : GridProxyAbstract<IHonamiStoryAttrData>
 		text.SetColor(FColor.FromHex("#ffffff"));
 	}
 
-	// Token: 0x04006F44 RID: 28484
+	// Token: 0x04007025 RID: 28709
 	private FColor? OriginColor;
 
-	// Token: 0x0200845F RID: 33887
+	// Token: 0x020075E4 RID: 30180
 	private enum EDefine
 	{
-		// Token: 0x0402B15A RID: 176474
+		// Token: 0x0402647E RID: 156798
 		TexIcon,
-		// Token: 0x0402B15B RID: 176475
+		// Token: 0x0402647F RID: 156799
 		TxtName,
-		// Token: 0x0402B15C RID: 176476
+		// Token: 0x04026480 RID: 156800
 		TxtOldValue,
-		// Token: 0x0402B15D RID: 176477
+		// Token: 0x04026481 RID: 156801
 		PnlNew,
-		// Token: 0x0402B15E RID: 176478
+		// Token: 0x04026482 RID: 156802
 		TxtNewValue,
-		// Token: 0x0402B15F RID: 176479
+		// Token: 0x04026483 RID: 156803
 		SprLine
 	}
 }

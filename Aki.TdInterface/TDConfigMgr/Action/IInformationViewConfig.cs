@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B27 RID: 6951
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CD6 RID: 7382
 	public class IInformationViewConfig
 	{
-		// Token: 0x060094CE RID: 38094 RVA: 0x00158560 File Offset: 0x00156760
+		// Token: 0x06009CB8 RID: 40120 RVA: 0x0016923C File Offset: 0x0016743C
 		private IInformationViewConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060094CF RID: 38095 RVA: 0x00158598 File Offset: 0x00156798
+		// Token: 0x06009CB9 RID: 40121 RVA: 0x00169274 File Offset: 0x00167474
 		public static IInformationViewConfig Create([Nullable(2)] IInformationViewConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094D0 RID: 38096 RVA: 0x001585AB File Offset: 0x001567AB
+		// Token: 0x06009CBA RID: 40122 RVA: 0x00169287 File Offset: 0x00167487
 		public static IInformationViewConfig CreateFromSetValue([Nullable(2)] IInformationViewConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094D1 RID: 38097 RVA: 0x001585BE File Offset: 0x001567BE
+		// Token: 0x06009CBB RID: 40123 RVA: 0x0016929A File Offset: 0x0016749A
 		public IInformationViewConfig_SetValue ToSetValue()
 		{
 			return new IInformationViewConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F02 RID: 12034
-		// (get) Token: 0x060094D2 RID: 38098 RVA: 0x001585D4 File Offset: 0x001567D4
-		// (set) Token: 0x060094D3 RID: 38099 RVA: 0x0015860E File Offset: 0x0015680E
+		// Token: 0x17003128 RID: 12584
+		// (get) Token: 0x06009CBC RID: 40124 RVA: 0x001692B0 File Offset: 0x001674B0
+		// (set) Token: 0x06009CBD RID: 40125 RVA: 0x001692EA File Offset: 0x001674EA
 		public virtual int? InfoDisplayGroup
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B27 RID: 23335
+		// Token: 0x04005FC5 RID: 24517
 		[Nullable(2)]
 		protected IInformationViewConfig FbInstance;
 
-		// Token: 0x04005B28 RID: 23336
+		// Token: 0x04005FC6 RID: 24518
 		[Nullable(2)]
 		protected IInformationViewConfig_SetValue PocoInterface;
 	}

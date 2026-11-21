@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200248A RID: 9354
+	// Token: 0x0200272D RID: 10029
 	public class ETuningStandBubbleTriggerTypeJsonConverter : JsonConverter<ETuningStandBubbleTriggerType>
 	{
-		// Token: 0x0600CAED RID: 51949 RVA: 0x001DDF64 File Offset: 0x001DC164
+		// Token: 0x0600D7A6 RID: 55206 RVA: 0x001F812C File Offset: 0x001F632C
 		public override ETuningStandBubbleTriggerType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ETuningStandBubbleTriggerTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CAEE RID: 51950 RVA: 0x001DDF88 File Offset: 0x001DC188
+		// Token: 0x0600D7A7 RID: 55207 RVA: 0x001F8150 File Offset: 0x001F6350
 		public override void Write(Utf8JsonWriter writer, ETuningStandBubbleTriggerType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

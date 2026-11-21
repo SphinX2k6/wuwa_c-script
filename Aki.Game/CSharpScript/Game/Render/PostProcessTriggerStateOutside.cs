@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045D6 RID: 17878
+	// Token: 0x020034FF RID: 13567
 	public class PostProcessTriggerStateOutside : PostProcessTriggerStateBase
 	{
-		// Token: 0x0602E141 RID: 188737 RVA: 0x00A9F4C9 File Offset: 0x00A9D6C9
+		// Token: 0x06022835 RID: 141365 RVA: 0x009CBB99 File Offset: 0x009C9D99
 		[NullableContext(1)]
 		public PostProcessTriggerStateOutside(PostProcessTrigger owner, EPostProcessTriggerState state, [Nullable(new byte[]
 		{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Render
 		{
 		}
 
-		// Token: 0x0602E142 RID: 188738 RVA: 0x00A9F4D4 File Offset: 0x00A9D6D4
+		// Token: 0x06022836 RID: 141366 RVA: 0x009CBBA4 File Offset: 0x009C9DA4
 		protected override void OnEnter(EPostProcessTriggerState? lastState)
 		{
 			this.Owner.GetPostProcessComponent().BlendWeight = 0f;

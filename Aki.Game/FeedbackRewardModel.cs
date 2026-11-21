@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x02001AD6 RID: 6870
+// Token: 0x02000F95 RID: 3989
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class FeedbackRewardModel : ModelBase
 {
-	// Token: 0x0600CBD3 RID: 52179 RVA: 0x002E8394 File Offset: 0x002E6594
+	// Token: 0x06009FE4 RID: 40932 RVA: 0x002F3508 File Offset: 0x002F1708
 	protected override bool OnInit()
 	{
 		foreach (GivebackScoreReward givebackScoreReward in (FeedbackRewardConfig.Instance.GetGivebackScoreRewardAll() ?? new List<GivebackScoreReward>()))
@@ -25,13 +25,13 @@ public class FeedbackRewardModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600CBD4 RID: 52180 RVA: 0x002E846C File Offset: 0x002E666C
+	// Token: 0x06009FE5 RID: 40933 RVA: 0x002F35E0 File Offset: 0x002F17E0
 	public List<int> GetAllRewardList()
 	{
 		return new List<int>(this.FeedbackRewardStateMap.Keys);
 	}
 
-	// Token: 0x0600CBD5 RID: 52181 RVA: 0x002E8480 File Offset: 0x002E6680
+	// Token: 0x06009FE6 RID: 40934 RVA: 0x002F35F4 File Offset: 0x002F17F4
 	public EFeedbackRewardState GetFeedbackRewardState(int id)
 	{
 		EFeedbackRewardState result;
@@ -42,7 +42,7 @@ public class FeedbackRewardModel : ModelBase
 		return EFeedbackRewardState.UnFinish;
 	}
 
-	// Token: 0x0600CBD6 RID: 52182 RVA: 0x002E84A0 File Offset: 0x002E66A0
+	// Token: 0x06009FE7 RID: 40935 RVA: 0x002F3614 File Offset: 0x002F1814
 	public int GetFeedbackTaskCurrentPoint(int id)
 	{
 		int result;
@@ -53,13 +53,13 @@ public class FeedbackRewardModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0600CBD7 RID: 52183 RVA: 0x002E84C0 File Offset: 0x002E66C0
+	// Token: 0x06009FE8 RID: 40936 RVA: 0x002F3634 File Offset: 0x002F1834
 	public List<int> GetFeedbackTaskList()
 	{
 		return new List<int>(this.FeedbackTaskMap.Keys);
 	}
 
-	// Token: 0x0600CBD8 RID: 52184 RVA: 0x002E84D4 File Offset: 0x002E66D4
+	// Token: 0x06009FE9 RID: 40937 RVA: 0x002F3648 File Offset: 0x002F1848
 	public List<int> GetFeedbackRewardCanClaim()
 	{
 		List<int> list = new List<int>();
@@ -73,7 +73,7 @@ public class FeedbackRewardModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600CBD9 RID: 52185 RVA: 0x002E8540 File Offset: 0x002E6740
+	// Token: 0x06009FEA RID: 40938 RVA: 0x002F36B4 File Offset: 0x002F18B4
 	public void RefreshFeedBackRewardMapState(int[] haveGetRewardIds)
 	{
 		foreach (KeyValuePair<int, EFeedbackRewardState> keyValuePair in this.FeedbackRewardStateMap)
@@ -90,8 +90,8 @@ public class FeedbackRewardModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CBDA RID: 52186 RVA: 0x002E85E4 File Offset: 0x002E67E4
-	public void RefreshFeedBackTask(GivebackTaskPb[] tasks)
+	// Token: 0x06009FEB RID: 40939 RVA: 0x002F3758 File Offset: 0x002F1958
+	public void RefreshFeedBackTask(IReadOnlyList<GivebackTaskPb> tasks)
 	{
 		foreach (GivebackTaskPb givebackTaskPb in tasks)
 		{
@@ -106,7 +106,7 @@ public class FeedbackRewardModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CBDB RID: 52187 RVA: 0x002E8648 File Offset: 0x002E6848
+	// Token: 0x06009FEC RID: 40940 RVA: 0x002F37DC File Offset: 0x002F19DC
 	public List<int> GetCanFinishRewardId()
 	{
 		List<int> list = new List<int>();
@@ -120,7 +120,7 @@ public class FeedbackRewardModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600CBDC RID: 52188 RVA: 0x002E86B4 File Offset: 0x002E68B4
+	// Token: 0x06009FED RID: 40941 RVA: 0x002F3848 File Offset: 0x002F1A48
 	public bool CheckRedDot()
 	{
 		foreach (KeyValuePair<int, EFeedbackRewardState> keyValuePair in this.FeedbackRewardStateMap)
@@ -133,7 +133,7 @@ public class FeedbackRewardModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600CBDD RID: 52189 RVA: 0x002E8714 File Offset: 0x002E6914
+	// Token: 0x06009FEE RID: 40942 RVA: 0x002F38A8 File Offset: 0x002F1AA8
 	public int GetMaxFinishRewardId()
 	{
 		int num = 0;
@@ -147,7 +147,7 @@ public class FeedbackRewardModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600CBDE RID: 52190 RVA: 0x002E8780 File Offset: 0x002E6980
+	// Token: 0x06009FEF RID: 40943 RVA: 0x002F3914 File Offset: 0x002F1B14
 	public List<int> GetCanClaimRewardIds()
 	{
 		List<int> list = new List<int>();
@@ -161,8 +161,8 @@ public class FeedbackRewardModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x170010D5 RID: 4309
-	// (get) Token: 0x0600CBDF RID: 52191 RVA: 0x002E87EC File Offset: 0x002E69EC
+	// Token: 0x170010FA RID: 4346
+	// (get) Token: 0x06009FF0 RID: 40944 RVA: 0x002F3980 File Offset: 0x002F1B80
 	public static FeedbackRewardModel Instance
 	{
 		get
@@ -171,7 +171,7 @@ public class FeedbackRewardModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CBE0 RID: 52192 RVA: 0x002E87F3 File Offset: 0x002E69F3
+	// Token: 0x06009FF1 RID: 40945 RVA: 0x002F3987 File Offset: 0x002F1B87
 	public static FeedbackRewardModel GetOrCreateInstance()
 	{
 		if (FeedbackRewardModel._Instance == null)
@@ -181,7 +181,7 @@ public class FeedbackRewardModel : ModelBase
 		return FeedbackRewardModel._Instance;
 	}
 
-	// Token: 0x0600CBE1 RID: 52193 RVA: 0x002E8807 File Offset: 0x002E6A07
+	// Token: 0x06009FF2 RID: 40946 RVA: 0x002F399B File Offset: 0x002F1B9B
 	public static bool CreateInstance()
 	{
 		if (FeedbackRewardModel._Instance != null)
@@ -192,39 +192,39 @@ public class FeedbackRewardModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600CBE2 RID: 52194 RVA: 0x002E881D File Offset: 0x002E6A1D
+	// Token: 0x06009FF3 RID: 40947 RVA: 0x002F39B1 File Offset: 0x002F1BB1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600CBE3 RID: 52195 RVA: 0x002E881F File Offset: 0x002E6A1F
+	// Token: 0x06009FF4 RID: 40948 RVA: 0x002F39B3 File Offset: 0x002F1BB3
 	public static void ResetStaticDefaultValue()
 	{
 		FeedbackRewardModel._Instance = null;
 	}
 
-	// Token: 0x0600CBE4 RID: 52196 RVA: 0x002E8827 File Offset: 0x002E6A27
+	// Token: 0x06009FF5 RID: 40949 RVA: 0x002F39BB File Offset: 0x002F1BBB
 	static FeedbackRewardModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FeedbackRewardModel.CreateStaticDefaultValue), new Action(FeedbackRewardModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005DB9 RID: 23993
+	// Token: 0x04005E88 RID: 24200
 	private readonly Dictionary<int, EFeedbackRewardState> FeedbackRewardStateMap = new Dictionary<int, EFeedbackRewardState>();
 
-	// Token: 0x04005DBA RID: 23994
+	// Token: 0x04005E89 RID: 24201
 	private readonly Dictionary<int, int> FeedbackTaskMap = new Dictionary<int, int>();
 
-	// Token: 0x04005DBB RID: 23995
+	// Token: 0x04005E8A RID: 24202
 	public int MaxShowScore;
 
-	// Token: 0x04005DBC RID: 23996
+	// Token: 0x04005E8B RID: 24203
 	public int CurrentPointCount;
 
-	// Token: 0x04005DBD RID: 23997
+	// Token: 0x04005E8C RID: 24204
 	public int CurrentLoginDayCount;
 
-	// Token: 0x04005DBE RID: 23998
+	// Token: 0x04005E8D RID: 24205
 	[Nullable(2)]
 	private static FeedbackRewardModel _Instance;
 }

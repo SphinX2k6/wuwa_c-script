@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200265B RID: 9819
+	// Token: 0x0200291F RID: 10527
 	public class IWriteLetterConfig
 	{
-		// Token: 0x0600DC1D RID: 56349 RVA: 0x0020C11A File Offset: 0x0020A31A
-		[NullableContext(1)]
+		// Token: 0x0600E9F9 RID: 59897 RVA: 0x002289F2 File Offset: 0x00226BF2
 		public static IWriteLetterConfig Create(IWriteLetterConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004129 RID: 16681
-		// (get) Token: 0x0600DC1E RID: 56350 RVA: 0x0020C139 File Offset: 0x0020A339
+		// Token: 0x17004469 RID: 17513
+		// (get) Token: 0x0600E9FA RID: 59898 RVA: 0x00228A11 File Offset: 0x00226C11
 		public virtual int LetterId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A59 RID: 31321
+		// Token: 0x040080FB RID: 33019
 		private IWriteLetterConfig Instance;
 	}
 }

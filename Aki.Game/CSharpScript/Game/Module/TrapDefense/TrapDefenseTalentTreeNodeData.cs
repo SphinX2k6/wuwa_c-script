@@ -5,13 +5,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A1C RID: 18972
+	// Token: 0x020039C4 RID: 14788
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseTalentTreeNodeData
 	{
-		// Token: 0x17007A1F RID: 31263
-		// (get) Token: 0x06031407 RID: 201735 RVA: 0x00B6C680 File Offset: 0x00B6A880
+		// Token: 0x17004DCC RID: 19916
+		// (get) Token: 0x06026197 RID: 156055 RVA: 0x00AB067C File Offset: 0x00AAE87C
 		public int Row
 		{
 			get
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A20 RID: 31264
-		// (get) Token: 0x06031408 RID: 201736 RVA: 0x00B6C68D File Offset: 0x00B6A88D
+		// Token: 0x17004DCD RID: 19917
+		// (get) Token: 0x06026198 RID: 156056 RVA: 0x00AB0689 File Offset: 0x00AAE889
 		public int Col
 		{
 			get
@@ -30,8 +30,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A21 RID: 31265
-		// (get) Token: 0x06031409 RID: 201737 RVA: 0x00B6C69A File Offset: 0x00B6A89A
+		// Token: 0x17004DCE RID: 19918
+		// (get) Token: 0x06026199 RID: 156057 RVA: 0x00AB0696 File Offset: 0x00AAE896
 		public ETrapDefenseTalentTreeType Type
 		{
 			get
@@ -40,8 +40,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A22 RID: 31266
-		// (get) Token: 0x0603140A RID: 201738 RVA: 0x00B6C6A7 File Offset: 0x00B6A8A7
+		// Token: 0x17004DCF RID: 19919
+		// (get) Token: 0x0602619A RID: 156058 RVA: 0x00AB06A3 File Offset: 0x00AAE8A3
 		public int Index
 		{
 			get
@@ -50,8 +50,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A23 RID: 31267
-		// (get) Token: 0x0603140B RID: 201739 RVA: 0x00B6C6BC File Offset: 0x00B6A8BC
+		// Token: 0x17004DD0 RID: 19920
+		// (get) Token: 0x0602619B RID: 156059 RVA: 0x00AB06B8 File Offset: 0x00AAE8B8
 		public string Icon
 		{
 			get
@@ -60,8 +60,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A24 RID: 31268
-		// (get) Token: 0x0603140C RID: 201740 RVA: 0x00B6C6C9 File Offset: 0x00B6A8C9
+		// Token: 0x17004DD1 RID: 19921
+		// (get) Token: 0x0602619C RID: 156060 RVA: 0x00AB06C5 File Offset: 0x00AAE8C5
 		public string IconBig
 		{
 			get
@@ -70,8 +70,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A25 RID: 31269
-		// (get) Token: 0x0603140D RID: 201741 RVA: 0x00B6C6D6 File Offset: 0x00B6A8D6
+		// Token: 0x17004DD2 RID: 19922
+		// (get) Token: 0x0602619D RID: 156061 RVA: 0x00AB06D2 File Offset: 0x00AAE8D2
 		public string Desc
 		{
 			get
@@ -80,8 +80,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A26 RID: 31270
-		// (get) Token: 0x0603140E RID: 201742 RVA: 0x00B6C6E3 File Offset: 0x00B6A8E3
+		// Token: 0x17004DD3 RID: 19923
+		// (get) Token: 0x0602619E RID: 156062 RVA: 0x00AB06DF File Offset: 0x00AAE8DF
 		public string Name
 		{
 			get
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603140F RID: 201743 RVA: 0x00B6C6F0 File Offset: 0x00B6A8F0
+		// Token: 0x0602619F RID: 156063 RVA: 0x00AB06EC File Offset: 0x00AAE8EC
 		public static TrapDefenseTalentTreeNodeData Create(TrapDefenseTech config)
 		{
 			return new TrapDefenseTalentTreeNodeData
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x06031410 RID: 201744 RVA: 0x00B6C70B File Offset: 0x00B6A90B
+		// Token: 0x060261A0 RID: 156064 RVA: 0x00AB0707 File Offset: 0x00AAE907
 		public void SetUnlock()
 		{
 			this.IsUnlock = true;
 		}
 
-		// Token: 0x06031411 RID: 201745 RVA: 0x00B6C714 File Offset: 0x00B6A914
+		// Token: 0x060261A1 RID: 156065 RVA: 0x00AB0710 File Offset: 0x00AAE910
 		public List<ICostData> GetCostData()
 		{
 			if (this.IsUnlock)
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x0401A557 RID: 107863
+		// Token: 0x04014EAE RID: 85678
 		public int Id;
 
-		// Token: 0x0401A558 RID: 107864
+		// Token: 0x04014EAF RID: 85679
 		public TrapDefenseTech Config;
 
-		// Token: 0x0401A559 RID: 107865
+		// Token: 0x04014EB0 RID: 85680
 		public bool IsUnlock;
 	}
 }

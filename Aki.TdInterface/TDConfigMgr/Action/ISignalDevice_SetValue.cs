@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E6E RID: 7790
+	// Token: 0x020020A3 RID: 8355
 	public class ISignalDevice_SetValue
 	{
-		// Token: 0x04006392 RID: 25490
+		// Token: 0x04006976 RID: 26998
 		public ESimpleGameplayType Type;
 
-		// Token: 0x04006393 RID: 25491
-		[Nullable(1)]
+		// Token: 0x04006977 RID: 26999
 		public List<IColorPiece> Config;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CDF RID: 19679
+	// Token: 0x02003C91 RID: 15505
 	public class RoleAttributeItem : UiPanelBase
 	{
-		// Token: 0x06032CC0 RID: 208064 RVA: 0x00BD6070 File Offset: 0x00BD4270
+		// Token: 0x06027A95 RID: 162453 RVA: 0x00B1B778 File Offset: 0x00B19978
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			};
 		}
 
-		// Token: 0x06032CC1 RID: 208065 RVA: 0x00BD610C File Offset: 0x00BD430C
+		// Token: 0x06027A96 RID: 162454 RVA: 0x00B1B814 File Offset: 0x00B19A14
 		[NullableContext(1)]
 		public void Refresh(IAttributeInfo attrInfo)
 		{
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CC2 RID: 208066 RVA: 0x00BD61C0 File Offset: 0x00BD43C0
+		// Token: 0x06027A97 RID: 162455 RVA: 0x00B1B8C8 File Offset: 0x00B19AC8
 		[NullableContext(2)]
 		private void RefreshIcon(string path)
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			base.GetTexture(4).SetUIActive(path != null);
 		}
 
-		// Token: 0x06032CC3 RID: 208067 RVA: 0x00BD61F8 File Offset: 0x00BD43F8
+		// Token: 0x06027A98 RID: 162456 RVA: 0x00B1B900 File Offset: 0x00B19B00
 		[NullableContext(2)]
 		private void RefreshName(string textId)
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			base.GetText(0).SetUIActive(textId != null);
 		}
 
-		// Token: 0x06032CC4 RID: 208068 RVA: 0x00BD621A File Offset: 0x00BD441A
+		// Token: 0x06027A99 RID: 162457 RVA: 0x00B1B922 File Offset: 0x00B19B22
 		[NullableContext(1)]
 		private void RefreshValueText(UUIText textItem, [Nullable(2)] string text)
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			textItem.SetUIActive(text != null);
 		}
 
-		// Token: 0x06032CC5 RID: 208069 RVA: 0x00BD6234 File Offset: 0x00BD4434
+		// Token: 0x06027A9A RID: 162458 RVA: 0x00B1B93C File Offset: 0x00B19B3C
 		private void RefreshBgActive(bool bActive)
 		{
 			UUIItem item = base.GetItem(5);
@@ -93,20 +93,20 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x0200AE5A RID: 44634
+		// Token: 0x02009879 RID: 39033
 		private enum EAttributeItemNode
 		{
-			// Token: 0x04034F07 RID: 216839
+			// Token: 0x0402F8AF RID: 194735
 			AttributeText,
-			// Token: 0x04034F08 RID: 216840
+			// Token: 0x0402F8B0 RID: 194736
 			ValueText,
-			// Token: 0x04034F09 RID: 216841
+			// Token: 0x0402F8B1 RID: 194737
 			ArrowItem,
-			// Token: 0x04034F0A RID: 216842
+			// Token: 0x0402F8B2 RID: 194738
 			PreValueText,
-			// Token: 0x04034F0B RID: 216843
+			// Token: 0x0402F8B3 RID: 194739
 			AttributeIcon,
-			// Token: 0x04034F0C RID: 216844
+			// Token: 0x0402F8B4 RID: 194740
 			Bg
 		}
 	}

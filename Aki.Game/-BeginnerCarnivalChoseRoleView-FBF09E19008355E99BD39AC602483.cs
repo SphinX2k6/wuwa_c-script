@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02001192 RID: 4498
+// Token: 0x02000646 RID: 1606
 internal enum <BeginnerCarnivalChoseRoleView>FBF09E19008355E99BD39AC6024833D9E2D3A1AED159EF57ABAA860FE0C287302__EComponentDefine
 {
-	// Token: 0x04003698 RID: 13976
+	// Token: 0x04003731 RID: 14129
 	TitleText,
-	// Token: 0x04003699 RID: 13977
+	// Token: 0x04003732 RID: 14130
 	SubTitleText,
-	// Token: 0x0400369A RID: 13978
+	// Token: 0x04003733 RID: 14131
 	ScrollView,
-	// Token: 0x0400369B RID: 13979
+	// Token: 0x04003734 RID: 14132
 	RoleItem,
-	// Token: 0x0400369C RID: 13980
+	// Token: 0x04003735 RID: 14133
 	RoleNameText,
-	// Token: 0x0400369D RID: 13981
+	// Token: 0x04003736 RID: 14134
 	ConfirmBtn
 }

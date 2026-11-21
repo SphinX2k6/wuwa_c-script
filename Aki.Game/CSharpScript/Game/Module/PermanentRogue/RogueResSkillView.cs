@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005336 RID: 21302
+	// Token: 0x02004306 RID: 17158
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueResSkillView : UiViewBase
 	{
-		// Token: 0x06036725 RID: 223013 RVA: 0x00CE3F97 File Offset: 0x00CE2197
+		// Token: 0x0602B621 RID: 177697 RVA: 0x00C31967 File Offset: 0x00C2FB67
 		public RogueResSkillView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036726 RID: 223014 RVA: 0x00CE3FC4 File Offset: 0x00CE21C4
+		// Token: 0x0602B622 RID: 177698 RVA: 0x00C31994 File Offset: 0x00C2FB94
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036727 RID: 223015 RVA: 0x00CE40B4 File Offset: 0x00CE22B4
+		// Token: 0x0602B623 RID: 177699 RVA: 0x00C31A84 File Offset: 0x00C2FC84
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueResSkillView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036728 RID: 223016 RVA: 0x00CE40F8 File Offset: 0x00CE22F8
+		// Token: 0x0602B624 RID: 177700 RVA: 0x00C31AC8 File Offset: 0x00C2FCC8
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			EventSystem.Instance.Emit<int>(EEventName.PermanentRogueSeasonRedDotUpdate, num);
 		}
 
-		// Token: 0x06036729 RID: 223017 RVA: 0x00CE4188 File Offset: 0x00CE2388
+		// Token: 0x0602B625 RID: 177701 RVA: 0x00C31B58 File Offset: 0x00C2FD58
 		protected override void OnBeforeShow()
 		{
 			if (this.SelectColumn > 0 && this.TotalColumn > 0)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0603672A RID: 223018 RVA: 0x00CE41B3 File Offset: 0x00CE23B3
+		// Token: 0x0602B626 RID: 177702 RVA: 0x00C31B83 File Offset: 0x00C2FD83
 		protected override void OnBeforeDestroy()
 		{
 			GenericScrollViewNew<RogueResSkillGridPanel, List<RogueResTalentTree>> scrollView = this.ScrollView;
@@ -104,27 +104,27 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			scrollView.UnBindLateUpdate();
 		}
 
-		// Token: 0x0603672B RID: 223019 RVA: 0x00CE41C5 File Offset: 0x00CE23C5
+		// Token: 0x0602B627 RID: 177703 RVA: 0x00C31B95 File Offset: 0x00C2FD95
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<RogueResSkillNode>(EEventName.RogueResSelectSkill, new Action<RogueResSkillNode>(this.OnSelectSkill));
 			EventSystem.Instance.Add<int>(EEventName.RogueResTalentLevelUp, new Action<int>(this.OnSkillLevelUp));
 		}
 
-		// Token: 0x0603672C RID: 223020 RVA: 0x00CE41FF File Offset: 0x00CE23FF
+		// Token: 0x0602B628 RID: 177704 RVA: 0x00C31BCF File Offset: 0x00C2FDCF
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueResSelectSkill, new Action<RogueResSkillNode>(this.OnSelectSkill));
 			EventSystem.Instance.Remove(EEventName.RogueResTalentLevelUp, new Action<int>(this.OnSkillLevelUp));
 		}
 
-		// Token: 0x0603672D RID: 223021 RVA: 0x00CE4239 File Offset: 0x00CE2439
+		// Token: 0x0602B629 RID: 177705 RVA: 0x00C31C09 File Offset: 0x00C2FE09
 		protected RogueResSkillGridPanel CreateGridPanel()
 		{
 			return new RogueResSkillGridPanel();
 		}
 
-		// Token: 0x0603672E RID: 223022 RVA: 0x00CE4240 File Offset: 0x00CE2440
+		// Token: 0x0602B62A RID: 177706 RVA: 0x00C31C10 File Offset: 0x00C2FE10
 		protected void OnSkillLevelUp(int skillId)
 		{
 			int p = (int)this.OpenParam;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0603672F RID: 223023 RVA: 0x00CE4348 File Offset: 0x00CE2548
+		// Token: 0x0602B62B RID: 177707 RVA: 0x00C31D18 File Offset: 0x00C2FF18
 		protected void OnBtnMaskClick()
 		{
 			(base.GetButton(6).GetOwner().GetComponentByClass(UUIItem.StaticClass()) as UUIItem).SetUIActive(false);
@@ -160,13 +160,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.CurSelectNode.SetToggleState(EToggleState.ETT_UnChecked);
 		}
 
-		// Token: 0x06036730 RID: 223024 RVA: 0x00CE4388 File Offset: 0x00CE2588
+		// Token: 0x0602B62C RID: 177708 RVA: 0x00C31D58 File Offset: 0x00C2FF58
 		protected void OnBtnSkillOverViewClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueResSkillOverView, this.OpenParam, null);
 		}
 
-		// Token: 0x06036731 RID: 223025 RVA: 0x00CE43A0 File Offset: 0x00CE25A0
+		// Token: 0x0602B62D RID: 177709 RVA: 0x00C31D70 File Offset: 0x00C2FF70
 		protected void OnSelectSkill(RogueResSkillNode skillNode)
 		{
 			if (this.CurSelectNode != null)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.SkillDetailPanel.SetActive(true);
 		}
 
-		// Token: 0x06036732 RID: 223026 RVA: 0x00CE4434 File Offset: 0x00CE2634
+		// Token: 0x0602B62E RID: 177710 RVA: 0x00C31E04 File Offset: 0x00C30004
 		public void BuildSkillTreeConfig()
 		{
 			int num = (int)this.OpenParam;
@@ -240,28 +240,28 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			ActivityPermanentRogueModel.Instance.SelectSkillId = ActivityPermanentRogueModel.Instance.GetNextCanUnlockSkillId(num);
 		}
 
-		// Token: 0x0401CCBC RID: 117948
+		// Token: 0x040176F2 RID: 95986
 		private const int ANIM_ENDCOUNT = 15;
 
-		// Token: 0x0401CCBD RID: 117949
+		// Token: 0x040176F3 RID: 95987
 		public List<List<RogueResTalentTree>> SkillTreeConfigList = new List<List<RogueResTalentTree>>();
 
-		// Token: 0x0401CCBE RID: 117950
+		// Token: 0x040176F4 RID: 95988
 		public List<RogueResSkillGridPanel> SkillGridList = new List<RogueResSkillGridPanel>();
 
-		// Token: 0x0401CCBF RID: 117951
+		// Token: 0x040176F5 RID: 95989
 		[Nullable(2)]
 		public PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401CCC0 RID: 117952
+		// Token: 0x040176F6 RID: 95990
 		[Nullable(2)]
 		public RogueResSkillNode CurSelectNode;
 
-		// Token: 0x0401CCC1 RID: 117953
+		// Token: 0x040176F7 RID: 95991
 		[Nullable(2)]
 		public RogueResSkillDetail SkillDetailPanel;
 
-		// Token: 0x0401CCC2 RID: 117954
+		// Token: 0x040176F8 RID: 95992
 		[Nullable(new byte[]
 		{
 			2,
@@ -270,13 +270,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 		})]
 		public GenericScrollViewNew<RogueResSkillGridPanel, List<RogueResTalentTree>> ScrollView;
 
-		// Token: 0x0401CCC3 RID: 117955
+		// Token: 0x040176F9 RID: 95993
 		public int SelectColumn;
 
-		// Token: 0x0401CCC4 RID: 117956
+		// Token: 0x040176FA RID: 95994
 		private int TotalColumn = -1;
 
-		// Token: 0x0401CCC5 RID: 117957
+		// Token: 0x040176FB RID: 95995
 		public int ExecuteCount = 1;
 	}
 }

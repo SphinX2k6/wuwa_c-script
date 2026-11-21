@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.PhantomArena;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BD1 RID: 19409
+	// Token: 0x02003B7B RID: 15227
 	public class SkipToMapWithPhantomAreaChallenge : SkipTask
 	{
-		// Token: 0x06032331 RID: 205617 RVA: 0x00BAA634 File Offset: 0x00BA8834
+		// Token: 0x060270C2 RID: 159938 RVA: 0x00AEE8EC File Offset: 0x00AECAEC
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

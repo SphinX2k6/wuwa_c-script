@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AE2 RID: 6882
+	// Token: 0x02001C89 RID: 7305
 	public class IGroupAiCommunicateMode_SetValue
 	{
-		// Token: 0x04005AA1 RID: 23201
+		// Token: 0x04005F2B RID: 24363
 		public EGroupAiCommunicateType Type;
 	}
 }

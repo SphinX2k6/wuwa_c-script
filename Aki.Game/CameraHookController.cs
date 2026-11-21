@@ -5,24 +5,24 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.NewWorld.Character.Custom.Components;
 using UnrealEngine;
 
-// Token: 0x0200020E RID: 526
+// Token: 0x02000212 RID: 530
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x060020A5 RID: 8357 RVA: 0x000B10E3 File Offset: 0x000AF2E3
+	// Token: 0x06002153 RID: 8531 RVA: 0x000B8403 File Offset: 0x000B6603
 	public CameraHookController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x060020A6 RID: 8358 RVA: 0x000B110D File Offset: 0x000AF30D
+	// Token: 0x06002154 RID: 8532 RVA: 0x000B842D File Offset: 0x000B662D
 	public override string Name()
 	{
 		return "HookController";
 	}
 
-	// Token: 0x060020A7 RID: 8359 RVA: 0x000B1114 File Offset: 0x000AF314
+	// Token: 0x06002155 RID: 8533 RVA: 0x000B8434 File Offset: 0x000B6634
 	public void ApplyCameraHook(GrapplingHookPointComponent point, [Nullable(2)] GrapplingHookPointComponent currentTarget = null)
 	{
 		this.LookAtPoint = point;
@@ -31,7 +31,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		this.OnEnter();
 	}
 
-	// Token: 0x060020A8 RID: 8360 RVA: 0x000B1143 File Offset: 0x000AF343
+	// Token: 0x06002156 RID: 8534 RVA: 0x000B8463 File Offset: 0x000B6663
 	public void ExitCameraHook(bool fadeOut = true)
 	{
 		this.Enable = false;
@@ -41,7 +41,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060020A9 RID: 8361 RVA: 0x000B115C File Offset: 0x000AF35C
+	// Token: 0x06002157 RID: 8535 RVA: 0x000B847C File Offset: 0x000B667C
 	private void OnEnter()
 	{
 		this.BlendState = CameraHookController.EBlendState.BlendIn;
@@ -55,13 +55,13 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060020AA RID: 8362 RVA: 0x000B11DF File Offset: 0x000AF3DF
+	// Token: 0x06002158 RID: 8536 RVA: 0x000B84FF File Offset: 0x000B66FF
 	protected override bool UpdateCustomEnableCondition()
 	{
 		return this.Enable;
 	}
 
-	// Token: 0x060020AB RID: 8363 RVA: 0x000B11E8 File Offset: 0x000AF3E8
+	// Token: 0x06002159 RID: 8537 RVA: 0x000B8508 File Offset: 0x000B6708
 	protected override void UpdateInternal(float delta)
 	{
 		if (!this.LookAtPoint.Valid)
@@ -124,7 +124,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060020AC RID: 8364 RVA: 0x000B13E0 File Offset: 0x000AF5E0
+	// Token: 0x0600215A RID: 8538 RVA: 0x000B8700 File Offset: 0x000B6900
 	protected override void UpdateDeactivateInternal(float delta)
 	{
 		if (this.BlendState == CameraHookController.EBlendState.BlendOut)
@@ -143,7 +143,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060020AD RID: 8365 RVA: 0x000B1490 File Offset: 0x000AF690
+	// Token: 0x0600215B RID: 8539 RVA: 0x000B87B0 File Offset: 0x000B69B0
 	private void UpdateFadeIn(float alpha)
 	{
 		Vector vector = Vector.Create();
@@ -154,7 +154,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		this.Camera.IsModifiedArmRotationYaw = true;
 	}
 
-	// Token: 0x060020AE RID: 8366 RVA: 0x000B14F8 File Offset: 0x000AF6F8
+	// Token: 0x0600215C RID: 8540 RVA: 0x000B8818 File Offset: 0x000B6A18
 	private void UpdateStaying()
 	{
 		FRotator frotator = this.LookAt.ToUeVector(false).Rotation();
@@ -163,7 +163,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		this.Camera.IsModifiedArmRotationYaw = true;
 	}
 
-	// Token: 0x060020AF RID: 8367 RVA: 0x000B154C File Offset: 0x000AF74C
+	// Token: 0x0600215D RID: 8541 RVA: 0x000B886C File Offset: 0x000B6A6C
 	private void UpdateFadeOut(float alpha)
 	{
 		Vector vector = Vector.Create();
@@ -174,7 +174,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		this.Camera.IsModifiedArmRotationYaw = true;
 	}
 
-	// Token: 0x060020B0 RID: 8368 RVA: 0x000B15B4 File Offset: 0x000AF7B4
+	// Token: 0x0600215E RID: 8542 RVA: 0x000B88D4 File Offset: 0x000B6AD4
 	private void CalcLookAt()
 	{
 		Vector hookLocation = this.LookAtPoint.HookLocation;
@@ -187,7 +187,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x060020B1 RID: 8369 RVA: 0x000B163C File Offset: 0x000AF83C
+	// Token: 0x0600215F RID: 8543 RVA: 0x000B895C File Offset: 0x000B6B5C
 	private void OnExit(bool fadeOut = true)
 	{
 		this.Enable = false;
@@ -212,13 +212,13 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		base.CameraModel.FightCamera.LogicComponent.CameraFocusController.Unlock(this);
 	}
 
-	// Token: 0x060020B2 RID: 8370 RVA: 0x000B1707 File Offset: 0x000AF907
+	// Token: 0x06002160 RID: 8544 RVA: 0x000B8A27 File Offset: 0x000B6C27
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x060020B3 RID: 8371 RVA: 0x000B1710 File Offset: 0x000AF910
+	// Token: 0x06002161 RID: 8545 RVA: 0x000B8A30 File Offset: 0x000B6C30
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -322,7 +322,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x060020B4 RID: 8372 RVA: 0x000B18C4 File Offset: 0x000AFAC4
+	// Token: 0x06002162 RID: 8546 RVA: 0x000B8BE4 File Offset: 0x000B6DE4
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -460,7 +460,7 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x060020B5 RID: 8373 RVA: 0x000B1B01 File Offset: 0x000AFD01
+	// Token: 0x06002163 RID: 8547 RVA: 0x000B8E21 File Offset: 0x000B7021
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -469,46 +469,46 @@ public class CameraHookController : CameraControllerBase, ICanGetConfigMapValue
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040014AA RID: 5290
+	// Token: 0x040014EC RID: 5356
 	[Nullable(2)]
 	private GrapplingHookPointComponent LookAtPoint;
 
-	// Token: 0x040014AB RID: 5291
+	// Token: 0x040014ED RID: 5357
 	[Nullable(2)]
 	private GazeParams GazeParams;
 
-	// Token: 0x040014AC RID: 5292
+	// Token: 0x040014EE RID: 5358
 	private CameraHookController.EBlendState BlendState;
 
-	// Token: 0x040014AD RID: 5293
+	// Token: 0x040014EF RID: 5359
 	private float ElapsedTime;
 
-	// Token: 0x040014AE RID: 5294
+	// Token: 0x040014F0 RID: 5360
 	private float FadeOutElapsedTime;
 
-	// Token: 0x040014AF RID: 5295
+	// Token: 0x040014F1 RID: 5361
 	private readonly Vector StartFadeInCameraLookAt = Vector.Create();
 
-	// Token: 0x040014B0 RID: 5296
+	// Token: 0x040014F2 RID: 5362
 	private readonly Vector StartFadeOutCameraLookAt = Vector.Create();
 
-	// Token: 0x040014B1 RID: 5297
+	// Token: 0x040014F3 RID: 5363
 	private Vector LookAt = Vector.Create();
 
-	// Token: 0x040014B2 RID: 5298
+	// Token: 0x040014F4 RID: 5364
 	private bool Enable;
 
-	// Token: 0x02007430 RID: 29744
+	// Token: 0x020065C1 RID: 26049
 	[NullableContext(0)]
 	internal enum EBlendState
 	{
-		// Token: 0x040267E5 RID: 157669
+		// Token: 0x04021B23 RID: 138019
 		Default,
-		// Token: 0x040267E6 RID: 157670
+		// Token: 0x04021B24 RID: 138020
 		BlendIn,
-		// Token: 0x040267E7 RID: 157671
+		// Token: 0x04021B25 RID: 138021
 		Staying,
-		// Token: 0x040267E8 RID: 157672
+		// Token: 0x04021B26 RID: 138022
 		BlendOut
 	}
 }

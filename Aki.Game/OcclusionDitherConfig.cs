@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Fight.Struct;
 using UnrealEngine;
 
-// Token: 0x0200303F RID: 12351
+// Token: 0x02002595 RID: 9621
 public class OcclusionDitherConfig
 {
-	// Token: 0x0601A319 RID: 107289 RVA: 0x006E3A98 File Offset: 0x006E1C98
+	// Token: 0x06017C83 RID: 97411 RVA: 0x0070B620 File Offset: 0x00709820
 	[NullableContext(1)]
 	public OcclusionDitherConfig(SOcclusionDitherConfig config)
 	{
@@ -16,15 +16,15 @@ public class OcclusionDitherConfig
 		this.IgnoreOcclusionDitherTag = ((config.IgnoreOcclusionDitherTag.TagName == "None") ? null : new FGameplayTag?(config.IgnoreOcclusionDitherTag));
 	}
 
-	// Token: 0x0400C737 RID: 50999
+	// Token: 0x0400CB10 RID: 51984
 	public bool IsEnableOcclusionDither;
 
-	// Token: 0x0400C738 RID: 51000
+	// Token: 0x0400CB11 RID: 51985
 	public float OcclusionDitherValue;
 
-	// Token: 0x0400C739 RID: 51001
+	// Token: 0x0400CB12 RID: 51986
 	public float OcclusionDitherInterpSpeed;
 
-	// Token: 0x0400C73A RID: 51002
+	// Token: 0x0400CB13 RID: 51987
 	public FGameplayTag? IgnoreOcclusionDitherTag;
 }

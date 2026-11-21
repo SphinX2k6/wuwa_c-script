@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B48 RID: 19272
+	// Token: 0x0200502F RID: 20527
 	public class ICheckSystemStateType_UnionUnion
 	{
-		// Token: 0x17008BCE RID: 35790
-		// (get) Token: 0x0601E55D RID: 124253 RVA: 0x0044016D File Offset: 0x0043E36D
-		// (set) Token: 0x0601E55E RID: 124254 RVA: 0x00440175 File Offset: 0x0043E375
+		// Token: 0x170092DE RID: 37598
+		// (get) Token: 0x060200E9 RID: 131305 RVA: 0x00472971 File Offset: 0x00470B71
+		// (set) Token: 0x060200EA RID: 131306 RVA: 0x00472979 File Offset: 0x00470B79
 		public ICheckSystemStateType_Union Type { get; set; }
 
-		// Token: 0x17008BCF RID: 35791
-		// (get) Token: 0x0601E55F RID: 124255 RVA: 0x0044017E File Offset: 0x0043E37E
-		// (set) Token: 0x0601E560 RID: 124256 RVA: 0x00440186 File Offset: 0x0043E386
+		// Token: 0x170092DF RID: 37599
+		// (get) Token: 0x060200EB RID: 131307 RVA: 0x00472982 File Offset: 0x00470B82
+		// (set) Token: 0x060200EC RID: 131308 RVA: 0x0047298A File Offset: 0x00470B8A
 		public object Value { get; set; }
 
-		// Token: 0x0601E561 RID: 124257 RVA: 0x0044018F File Offset: 0x0043E38F
+		// Token: 0x060200ED RID: 131309 RVA: 0x00472993 File Offset: 0x00470B93
 		public ICheckSystemStateType_UnionUnion()
 		{
 			this.Type = ICheckSystemStateType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601E562 RID: 124258 RVA: 0x004401A5 File Offset: 0x0043E3A5
+		// Token: 0x060200EE RID: 131310 RVA: 0x004729A9 File Offset: 0x00470BA9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601E563 RID: 124259 RVA: 0x004401B7 File Offset: 0x0043E3B7
+		// Token: 0x060200EF RID: 131311 RVA: 0x004729BB File Offset: 0x00470BBB
 		public ICheckSystemStateTypeT AsICheckSystemStateType()
 		{
 			return this.As<ICheckSystemStateTypeT>();
 		}
 
-		// Token: 0x0601E564 RID: 124260 RVA: 0x004401BF File Offset: 0x0043E3BF
+		// Token: 0x060200F0 RID: 131312 RVA: 0x004729C3 File Offset: 0x00470BC3
 		public static ICheckSystemStateType_UnionUnion FromICheckSystemStateType(ICheckSystemStateTypeT _ichecksystemstatetype)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E565 RID: 124261 RVA: 0x004401D4 File Offset: 0x0043E3D4
+		// Token: 0x060200F1 RID: 131313 RVA: 0x004729D8 File Offset: 0x00470BD8
 		public ICheckMoonBuildingStateT AsICheckMoonBuildingState()
 		{
 			return this.As<ICheckMoonBuildingStateT>();
 		}
 
-		// Token: 0x0601E566 RID: 124262 RVA: 0x004401DC File Offset: 0x0043E3DC
+		// Token: 0x060200F2 RID: 131314 RVA: 0x004729E0 File Offset: 0x00470BE0
 		public static ICheckSystemStateType_UnionUnion FromICheckMoonBuildingState(ICheckMoonBuildingStateT _icheckmoonbuildingstate)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E567 RID: 124263 RVA: 0x004401F1 File Offset: 0x0043E3F1
+		// Token: 0x060200F3 RID: 131315 RVA: 0x004729F5 File Offset: 0x00470BF5
 		public ICheckCollectionShopStateT AsICheckCollectionShopState()
 		{
 			return this.As<ICheckCollectionShopStateT>();
 		}
 
-		// Token: 0x0601E568 RID: 124264 RVA: 0x004401F9 File Offset: 0x0043E3F9
+		// Token: 0x060200F4 RID: 131316 RVA: 0x004729FD File Offset: 0x00470BFD
 		public static ICheckSystemStateType_UnionUnion FromICheckCollectionShopState(ICheckCollectionShopStateT _icheckcollectionshopstate)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E569 RID: 124265 RVA: 0x0044020E File Offset: 0x0043E40E
+		// Token: 0x060200F5 RID: 131317 RVA: 0x00472A12 File Offset: 0x00470C12
 		public ICheckTrackMoonPopularityT AsICheckTrackMoonPopularity()
 		{
 			return this.As<ICheckTrackMoonPopularityT>();
 		}
 
-		// Token: 0x0601E56A RID: 124266 RVA: 0x00440216 File Offset: 0x0043E416
+		// Token: 0x060200F6 RID: 131318 RVA: 0x00472A1A File Offset: 0x00470C1A
 		public static ICheckSystemStateType_UnionUnion FromICheckTrackMoonPopularity(ICheckTrackMoonPopularityT _ichecktrackmoonpopularity)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E56B RID: 124267 RVA: 0x0044022B File Offset: 0x0043E42B
+		// Token: 0x060200F7 RID: 131319 RVA: 0x00472A2F File Offset: 0x00470C2F
 		public ICheckInfrastructureStageT AsICheckInfrastructureStage()
 		{
 			return this.As<ICheckInfrastructureStageT>();
 		}
 
-		// Token: 0x0601E56C RID: 124268 RVA: 0x00440233 File Offset: 0x0043E433
+		// Token: 0x060200F8 RID: 131320 RVA: 0x00472A37 File Offset: 0x00470C37
 		public static ICheckSystemStateType_UnionUnion FromICheckInfrastructureStage(ICheckInfrastructureStageT _icheckinfrastructurestage)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E56D RID: 124269 RVA: 0x00440248 File Offset: 0x0043E448
+		// Token: 0x060200F9 RID: 131321 RVA: 0x00472A4C File Offset: 0x00470C4C
 		public ICheckRoadBuildStateT AsICheckRoadBuildState()
 		{
 			return this.As<ICheckRoadBuildStateT>();
 		}
 
-		// Token: 0x0601E56E RID: 124270 RVA: 0x00440250 File Offset: 0x0043E450
+		// Token: 0x060200FA RID: 131322 RVA: 0x00472A54 File Offset: 0x00470C54
 		public static ICheckSystemStateType_UnionUnion FromICheckRoadBuildState(ICheckRoadBuildStateT _icheckroadbuildstate)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E56F RID: 124271 RVA: 0x00440265 File Offset: 0x0043E465
+		// Token: 0x060200FB RID: 131323 RVA: 0x00472A69 File Offset: 0x00470C69
 		public ICheckInfrActivityExpT AsICheckInfrActivityExp()
 		{
 			return this.As<ICheckInfrActivityExpT>();
 		}
 
-		// Token: 0x0601E570 RID: 124272 RVA: 0x0044026D File Offset: 0x0043E46D
+		// Token: 0x060200FC RID: 131324 RVA: 0x00472A71 File Offset: 0x00470C71
 		public static ICheckSystemStateType_UnionUnion FromICheckInfrActivityExp(ICheckInfrActivityExpT _icheckinfractivityexp)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E571 RID: 124273 RVA: 0x00440282 File Offset: 0x0043E482
+		// Token: 0x060200FD RID: 131325 RVA: 0x00472A86 File Offset: 0x00470C86
 		public ICheckVillageInfrLevelT AsICheckVillageInfrLevel()
 		{
 			return this.As<ICheckVillageInfrLevelT>();
 		}
 
-		// Token: 0x0601E572 RID: 124274 RVA: 0x0044028A File Offset: 0x0043E48A
+		// Token: 0x060200FE RID: 131326 RVA: 0x00472A8E File Offset: 0x00470C8E
 		public static ICheckSystemStateType_UnionUnion FromICheckVillageInfrLevel(ICheckVillageInfrLevelT _icheckvillageinfrlevel)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E573 RID: 124275 RVA: 0x0044029F File Offset: 0x0043E49F
+		// Token: 0x060200FF RID: 131327 RVA: 0x00472AA3 File Offset: 0x00470CA3
 		public ICheckEncircleLevelCompleteT AsICheckEncircleLevelComplete()
 		{
 			return this.As<ICheckEncircleLevelCompleteT>();
 		}
 
-		// Token: 0x0601E574 RID: 124276 RVA: 0x004402A7 File Offset: 0x0043E4A7
+		// Token: 0x06020100 RID: 131328 RVA: 0x00472AAB File Offset: 0x00470CAB
 		public static ICheckSystemStateType_UnionUnion FromICheckEncircleLevelComplete(ICheckEncircleLevelCompleteT _icheckencirclelevelcomplete)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E575 RID: 124277 RVA: 0x004402BD File Offset: 0x0043E4BD
+		// Token: 0x06020101 RID: 131329 RVA: 0x00472AC1 File Offset: 0x00470CC1
 		public ICheckSpringFestivalAtmosphereLevelT AsICheckSpringFestivalAtmosphereLevel()
 		{
 			return this.As<ICheckSpringFestivalAtmosphereLevelT>();
 		}
 
-		// Token: 0x0601E576 RID: 124278 RVA: 0x004402C5 File Offset: 0x0043E4C5
+		// Token: 0x06020102 RID: 131330 RVA: 0x00472AC9 File Offset: 0x00470CC9
 		public static ICheckSystemStateType_UnionUnion FromICheckSpringFestivalAtmosphereLevel(ICheckSpringFestivalAtmosphereLevelT _icheckspringfestivalatmospherelevel)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -189,13 +189,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E577 RID: 124279 RVA: 0x004402DB File Offset: 0x0043E4DB
+		// Token: 0x06020103 RID: 131331 RVA: 0x00472ADF File Offset: 0x00470CDF
 		public ICheckSpringFestivalGuessJokerFirstCompleteT AsICheckSpringFestivalGuessJokerFirstComplete()
 		{
 			return this.As<ICheckSpringFestivalGuessJokerFirstCompleteT>();
 		}
 
-		// Token: 0x0601E578 RID: 124280 RVA: 0x004402E3 File Offset: 0x0043E4E3
+		// Token: 0x06020104 RID: 131332 RVA: 0x00472AE7 File Offset: 0x00470CE7
 		public static ICheckSystemStateType_UnionUnion FromICheckSpringFestivalGuessJokerFirstComplete(ICheckSpringFestivalGuessJokerFirstCompleteT _icheckspringfestivalguessjokerfirstcomplete)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -205,13 +205,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E579 RID: 124281 RVA: 0x004402F9 File Offset: 0x0043E4F9
+		// Token: 0x06020105 RID: 131333 RVA: 0x00472AFD File Offset: 0x00470CFD
 		public ICheckCoopRoleCoopLevelT AsICheckCoopRoleCoopLevel()
 		{
 			return this.As<ICheckCoopRoleCoopLevelT>();
 		}
 
-		// Token: 0x0601E57A RID: 124282 RVA: 0x00440301 File Offset: 0x0043E501
+		// Token: 0x06020106 RID: 131334 RVA: 0x00472B05 File Offset: 0x00470D05
 		public static ICheckSystemStateType_UnionUnion FromICheckCoopRoleCoopLevel(ICheckCoopRoleCoopLevelT _icheckcooprolecooplevel)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -221,13 +221,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E57B RID: 124283 RVA: 0x00440317 File Offset: 0x0043E517
+		// Token: 0x06020107 RID: 131335 RVA: 0x00472B1B File Offset: 0x00470D1B
 		public ICheckSunSpiritDeliveryLevelT AsICheckSunSpiritDeliveryLevel()
 		{
 			return this.As<ICheckSunSpiritDeliveryLevelT>();
 		}
 
-		// Token: 0x0601E57C RID: 124284 RVA: 0x0044031F File Offset: 0x0043E51F
+		// Token: 0x06020108 RID: 131336 RVA: 0x00472B23 File Offset: 0x00470D23
 		public static ICheckSystemStateType_UnionUnion FromICheckSunSpiritDeliveryLevel(ICheckSunSpiritDeliveryLevelT _ichecksunspiritdeliverylevel)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -237,13 +237,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E57D RID: 124285 RVA: 0x00440335 File Offset: 0x0043E535
+		// Token: 0x06020109 RID: 131337 RVA: 0x00472B39 File Offset: 0x00470D39
 		public ICheckRhythmSpaceshipReachLevelRankT AsICheckRhythmSpaceshipReachLevelRank()
 		{
 			return this.As<ICheckRhythmSpaceshipReachLevelRankT>();
 		}
 
-		// Token: 0x0601E57E RID: 124286 RVA: 0x0044033D File Offset: 0x0043E53D
+		// Token: 0x0602010A RID: 131338 RVA: 0x00472B41 File Offset: 0x00470D41
 		public static ICheckSystemStateType_UnionUnion FromICheckRhythmSpaceshipReachLevelRank(ICheckRhythmSpaceshipReachLevelRankT _icheckrhythmspaceshipreachlevelrank)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -253,13 +253,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E57F RID: 124287 RVA: 0x00440353 File Offset: 0x0043E553
+		// Token: 0x0602010B RID: 131339 RVA: 0x00472B57 File Offset: 0x00470D57
 		public ICheckDropCatchGameplayCompleteLevelT AsICheckDropCatchGameplayCompleteLevel()
 		{
 			return this.As<ICheckDropCatchGameplayCompleteLevelT>();
 		}
 
-		// Token: 0x0601E580 RID: 124288 RVA: 0x0044035B File Offset: 0x0043E55B
+		// Token: 0x0602010C RID: 131340 RVA: 0x00472B5F File Offset: 0x00470D5F
 		public static ICheckSystemStateType_UnionUnion FromICheckDropCatchGameplayCompleteLevel(ICheckDropCatchGameplayCompleteLevelT _icheckdropcatchgameplaycompletelevel)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -269,13 +269,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E581 RID: 124289 RVA: 0x00440371 File Offset: 0x0043E571
+		// Token: 0x0602010D RID: 131341 RVA: 0x00472B75 File Offset: 0x00470D75
 		public ICheckDangoBrawlChallengeCompleteT AsICheckDangoBrawlChallengeComplete()
 		{
 			return this.As<ICheckDangoBrawlChallengeCompleteT>();
 		}
 
-		// Token: 0x0601E582 RID: 124290 RVA: 0x00440379 File Offset: 0x0043E579
+		// Token: 0x0602010E RID: 131342 RVA: 0x00472B7D File Offset: 0x00470D7D
 		public static ICheckSystemStateType_UnionUnion FromICheckDangoBrawlChallengeComplete(ICheckDangoBrawlChallengeCompleteT _icheckdangobrawlchallengecomplete)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -285,13 +285,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E583 RID: 124291 RVA: 0x0044038F File Offset: 0x0043E58F
+		// Token: 0x0602010F RID: 131343 RVA: 0x00472B93 File Offset: 0x00470D93
+		public ICheckHandBookPageCompleteT AsICheckHandBookPageComplete()
+		{
+			return this.As<ICheckHandBookPageCompleteT>();
+		}
+
+		// Token: 0x06020110 RID: 131344 RVA: 0x00472B9B File Offset: 0x00470D9B
+		public static ICheckSystemStateType_UnionUnion FromICheckHandBookPageComplete(ICheckHandBookPageCompleteT _icheckhandbookpagecomplete)
+		{
+			return new ICheckSystemStateType_UnionUnion
+			{
+				Type = ICheckSystemStateType_Union.ICheckHandBookPageComplete,
+				Value = _icheckhandbookpagecomplete
+			};
+		}
+
+		// Token: 0x06020111 RID: 131345 RVA: 0x00472BB1 File Offset: 0x00470DB1
 		public ICheckRogueStateT AsICheckRogueState()
 		{
 			return this.As<ICheckRogueStateT>();
 		}
 
-		// Token: 0x0601E584 RID: 124292 RVA: 0x00440397 File Offset: 0x0043E597
+		// Token: 0x06020112 RID: 131346 RVA: 0x00472BB9 File Offset: 0x00470DB9
 		public static ICheckSystemStateType_UnionUnion FromICheckRogueState(ICheckRogueStateT _icheckroguestate)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -301,13 +317,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E585 RID: 124293 RVA: 0x004403AD File Offset: 0x0043E5AD
+		// Token: 0x06020113 RID: 131347 RVA: 0x00472BCF File Offset: 0x00470DCF
 		public ICheckVillageInfrTreeBuildStateT AsICheckVillageInfrTreeBuildState()
 		{
 			return this.As<ICheckVillageInfrTreeBuildStateT>();
 		}
 
-		// Token: 0x0601E586 RID: 124294 RVA: 0x004403B5 File Offset: 0x0043E5B5
+		// Token: 0x06020114 RID: 131348 RVA: 0x00472BD7 File Offset: 0x00470DD7
 		public static ICheckSystemStateType_UnionUnion FromICheckVillageInfrTreeBuildState(ICheckVillageInfrTreeBuildStateT _icheckvillageinfrtreebuildstate)
 		{
 			return new ICheckSystemStateType_UnionUnion
@@ -317,7 +333,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E587 RID: 124295 RVA: 0x004403CC File Offset: 0x0043E5CC
+		// Token: 0x06020115 RID: 131349 RVA: 0x00472BF0 File Offset: 0x00470DF0
 		public static int Pack(FlatBufferBuilder builder, ICheckSystemStateType_UnionUnion _o)
 		{
 			switch (_o.Type)
@@ -354,6 +370,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 				return ICheckDropCatchGameplayCompleteLevel.Pack(builder, _o.AsICheckDropCatchGameplayCompleteLevel()).Value;
 			case ICheckSystemStateType_Union.ICheckDangoBrawlChallengeComplete:
 				return ICheckDangoBrawlChallengeComplete.Pack(builder, _o.AsICheckDangoBrawlChallengeComplete()).Value;
+			case ICheckSystemStateType_Union.ICheckHandBookPageComplete:
+				return ICheckHandBookPageComplete.Pack(builder, _o.AsICheckHandBookPageComplete()).Value;
 			case ICheckSystemStateType_Union.ICheckRogueState:
 				return ICheckRogueState.Pack(builder, _o.AsICheckRogueState()).Value;
 			case ICheckSystemStateType_Union.ICheckVillageInfrTreeBuildState:

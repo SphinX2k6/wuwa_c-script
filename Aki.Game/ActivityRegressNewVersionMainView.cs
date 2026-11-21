@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001442 RID: 5186
+// Token: 0x020008F6 RID: 2294
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressNewVersionMainView : UiViewBase
 {
-	// Token: 0x06009273 RID: 37491 RVA: 0x001F5F60 File Offset: 0x001F4160
+	// Token: 0x06006608 RID: 26120 RVA: 0x001FEA9C File Offset: 0x001FCC9C
 	public ActivityRegressNewVersionMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06009274 RID: 37492 RVA: 0x001F5F80 File Offset: 0x001F4180
+	// Token: 0x06006609 RID: 26121 RVA: 0x001FEABC File Offset: 0x001FCCBC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x06009275 RID: 37493 RVA: 0x001F6008 File Offset: 0x001F4208
+	// Token: 0x0600660A RID: 26122 RVA: 0x001FEB44 File Offset: 0x001FCD44
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressNewVersionMainView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -41,13 +41,13 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009276 RID: 37494 RVA: 0x001F604B File Offset: 0x001F424B
+	// Token: 0x0600660B RID: 26123 RVA: 0x001FEB87 File Offset: 0x001FCD87
 	protected override void OnStart()
 	{
 		base.GetItem(4).SetUIActive(false);
 	}
 
-	// Token: 0x06009277 RID: 37495 RVA: 0x001F605C File Offset: 0x001F425C
+	// Token: 0x0600660C RID: 26124 RVA: 0x001FEB98 File Offset: 0x001FCD98
 	private UniTask CreateTabs()
 	{
 		ActivityRegressNewVersionMainView.<CreateTabs>d__11 <CreateTabs>d__;
@@ -58,7 +58,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return <CreateTabs>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009278 RID: 37496 RVA: 0x001F60A0 File Offset: 0x001F42A0
+	// Token: 0x0600660D RID: 26125 RVA: 0x001FEBDC File Offset: 0x001FCDDC
 	private UniTask RefreshTabs()
 	{
 		ActivityRegressNewVersionMainView.<RefreshTabs>d__12 <RefreshTabs>d__;
@@ -69,20 +69,20 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return <RefreshTabs>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009279 RID: 37497 RVA: 0x001F60E3 File Offset: 0x001F42E3
+	// Token: 0x0600660E RID: 26126 RVA: 0x001FEC1F File Offset: 0x001FCE1F
 	private ActivityRegressTabItemPanel ProxyCreateTabItem([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new ActivityRegressTabItemPanel();
 	}
 
-	// Token: 0x0600927A RID: 37498 RVA: 0x001F60EA File Offset: 0x001F42EA
+	// Token: 0x0600660F RID: 26127 RVA: 0x001FEC26 File Offset: 0x001FCE26
 	private void OnTabSelected(int index)
 	{
 		this.LastClickTime = Time.Instance.Now;
 		this.ChangeSubUi(this.TabTypeList[index], 0);
 	}
 
-	// Token: 0x0600927B RID: 37499 RVA: 0x001F6110 File Offset: 0x001F4310
+	// Token: 0x06006610 RID: 26128 RVA: 0x001FEC4C File Offset: 0x001FCE4C
 	private UniTask ChangeSubUi(EActivityNewVersionSubViewType subViewType, int subTabIndex = 0)
 	{
 		ActivityRegressNewVersionMainView.<ChangeSubUi>d__15 <ChangeSubUi>d__;
@@ -95,7 +95,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return <ChangeSubUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600927C RID: 37500 RVA: 0x001F6164 File Offset: 0x001F4364
+	// Token: 0x06006611 RID: 26129 RVA: 0x001FECA0 File Offset: 0x001FCEA0
 	private void UpdateTitle()
 	{
 		if (this.CurrentSubViewType == null)
@@ -108,7 +108,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		this.CaptionTabComponent.UpdateTitle(iconPath, new CommonTabTitleData(textId, Array.Empty<object>()));
 	}
 
-	// Token: 0x0600927D RID: 37501 RVA: 0x001F61F0 File Offset: 0x001F43F0
+	// Token: 0x06006612 RID: 26130 RVA: 0x001FED2C File Offset: 0x001FCF2C
 	private UniTask OpenSubUi(EActivityNewVersionSubViewType viewType, int subTabIndex)
 	{
 		ActivityRegressNewVersionMainView.<OpenSubUi>d__17 <OpenSubUi>d__;
@@ -120,7 +120,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return <OpenSubUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600927E RID: 37502 RVA: 0x001F623C File Offset: 0x001F443C
+	// Token: 0x06006613 RID: 26131 RVA: 0x001FED78 File Offset: 0x001FCF78
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -137,7 +137,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return <CreateSubUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600927F RID: 37503 RVA: 0x001F6288 File Offset: 0x001F4488
+	// Token: 0x06006614 RID: 26132 RVA: 0x001FEDC4 File Offset: 0x001FCFC4
 	private UniTask HideSubUi(EActivityNewVersionSubViewType viewType)
 	{
 		ActivityRegressNewVersionMainView.<HideSubUi>d__19 <HideSubUi>d__;
@@ -149,7 +149,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return <HideSubUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009280 RID: 37504 RVA: 0x001F62D4 File Offset: 0x001F44D4
+	// Token: 0x06006615 RID: 26133 RVA: 0x001FEE10 File Offset: 0x001FD010
 	private CommonTabData GetCommonData(int index)
 	{
 		EActivityNewVersionSubViewType type = this.TabTypeList[index];
@@ -158,7 +158,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return new CommonTabData((typeTitleIconPath != null && typeTitleIconPath != "") ? UiResourceConfig.Instance.GetResourcePath(typeTitleIconPath) : "", new CommonTabTitleData(textId, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x06009281 RID: 37505 RVA: 0x001F633A File Offset: 0x001F453A
+	// Token: 0x06006616 RID: 26134 RVA: 0x001FEE76 File Offset: 0x001FD076
 	[NullableContext(2)]
 	private string GetTypeTitle(EActivityNewVersionSubViewType type)
 	{
@@ -173,7 +173,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return "Regress_NewVersion_MainLine_Title";
 	}
 
-	// Token: 0x06009282 RID: 37506 RVA: 0x001F6352 File Offset: 0x001F4552
+	// Token: 0x06006617 RID: 26135 RVA: 0x001FEE8E File Offset: 0x001FD08E
 	[NullableContext(2)]
 	private string GetTypeTitleIconPath(EActivityNewVersionSubViewType type)
 	{
@@ -188,7 +188,7 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return "SP_FuncIconRenwu";
 	}
 
-	// Token: 0x06009283 RID: 37507 RVA: 0x001F636C File Offset: 0x001F456C
+	// Token: 0x06006618 RID: 26136 RVA: 0x001FEEA8 File Offset: 0x001FD0A8
 	protected bool CanToggleChange(int index, bool? _)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -199,42 +199,42 @@ public class ActivityRegressNewVersionMainView : UiViewBase
 		return this.LastClickTime == 0.0 || Time.Instance.Now - this.LastClickTime >= (double)num;
 	}
 
-	// Token: 0x040040E3 RID: 16611
+	// Token: 0x0400417B RID: 16763
 	private const int TAB_CD = 600;
 
-	// Token: 0x040040E4 RID: 16612
+	// Token: 0x0400417C RID: 16764
 	private readonly Dictionary<EActivityNewVersionSubViewType, UiPanelBase> SubViewMap = new Dictionary<EActivityNewVersionSubViewType, UiPanelBase>();
 
-	// Token: 0x040040E5 RID: 16613
+	// Token: 0x0400417D RID: 16765
 	private EActivityNewVersionSubViewType? CurrentSubViewType;
 
-	// Token: 0x040040E6 RID: 16614
+	// Token: 0x0400417E RID: 16766
 	private readonly List<EActivityNewVersionSubViewType> TabTypeList = new List<EActivityNewVersionSubViewType>();
 
-	// Token: 0x040040E7 RID: 16615
+	// Token: 0x0400417F RID: 16767
 	[Nullable(2)]
 	private ActivityRegressMainCaptionListPanel CaptionTabComponent;
 
-	// Token: 0x040040E8 RID: 16616
+	// Token: 0x04004180 RID: 16768
 	private double LastClickTime;
 
-	// Token: 0x02007A70 RID: 31344
+	// Token: 0x02006BF4 RID: 27636
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04028498 RID: 165016
+		// Token: 0x040237B2 RID: 145330
 		public const int CaptionNameList = 0;
 
-		// Token: 0x04028499 RID: 165017
+		// Token: 0x040237B3 RID: 145331
 		public const int Bg = 1;
 
-		// Token: 0x0402849A RID: 165018
+		// Token: 0x040237B4 RID: 145332
 		public const int SubViewRoot = 2;
 
-		// Token: 0x0402849B RID: 165019
+		// Token: 0x040237B5 RID: 145333
 		public const int Bg2 = 3;
 
-		// Token: 0x0402849C RID: 165020
+		// Token: 0x040237B6 RID: 145334
 		public const int TitleItem = 4;
 	}
 }

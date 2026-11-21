@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001DA3 RID: 7587
+// Token: 0x02001265 RID: 4709
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class QuestRewardItemGrid : GridProxyAbstract<RewardItemData>
 {
-	// Token: 0x0600E647 RID: 58951 RVA: 0x00364774 File Offset: 0x00362974
+	// Token: 0x0600BA65 RID: 47717 RVA: 0x003703D4 File Offset: 0x0036E5D4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -31,13 +31,13 @@ public class QuestRewardItemGrid : GridProxyAbstract<RewardItemData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E648 RID: 58952 RVA: 0x003647DD File Offset: 0x003629DD
+	// Token: 0x0600BA66 RID: 47718 RVA: 0x0037043D File Offset: 0x0036E63D
 	protected override void OnStart()
 	{
 		this.ItemGrid.Initialize(base.GetItem(0).GetOwner());
 	}
 
-	// Token: 0x0600E649 RID: 58953 RVA: 0x003647F8 File Offset: 0x003629F8
+	// Token: 0x0600BA67 RID: 47719 RVA: 0x00370458 File Offset: 0x0036E658
 	public override void Refresh(RewardItemData data, bool isSelected, int gridIndex)
 	{
 		ItemConfig config = data.GetConfig();
@@ -60,17 +60,17 @@ public class QuestRewardItemGrid : GridProxyAbstract<RewardItemData>
 		text.ShowTextNew(config.Name);
 	}
 
-	// Token: 0x04006A90 RID: 27280
+	// Token: 0x04006B71 RID: 27505
 	public MediumItemGrid ItemGrid = new MediumItemGrid();
 
-	// Token: 0x02008381 RID: 33665
+	// Token: 0x02007509 RID: 29961
 	[NullableContext(0)]
 	private static class EChildComponentType
 	{
-		// Token: 0x0402ADA2 RID: 175522
+		// Token: 0x040260C8 RID: 155848
 		public const int ItemGrid = 0;
 
-		// Token: 0x0402ADA3 RID: 175523
+		// Token: 0x040260C9 RID: 155849
 		public const int ItemNameText = 1;
 	}
 }

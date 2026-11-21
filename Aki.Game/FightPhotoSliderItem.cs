@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnrealEngine;
 
-// Token: 0x020025BF RID: 9663
+// Token: 0x02001AAA RID: 6826
 public class FightPhotoSliderItem : FightPhotoSetupBase
 {
-	// Token: 0x0601397A RID: 80250 RVA: 0x004E62D8 File Offset: 0x004E44D8
+	// Token: 0x06010E5A RID: 69210 RVA: 0x004F4ED8 File Offset: 0x004F30D8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,13 +23,13 @@ public class FightPhotoSliderItem : FightPhotoSetupBase
 		};
 	}
 
-	// Token: 0x0601397B RID: 80251 RVA: 0x004E6397 File Offset: 0x004E4597
+	// Token: 0x06010E5B RID: 69211 RVA: 0x004F4F97 File Offset: 0x004F3197
 	protected override void OnStart()
 	{
 		base.GetSlider(0).OnValueChangeCb.Bind(new Action<float>(this.OnValueChanged));
 	}
 
-	// Token: 0x0601397C RID: 80252 RVA: 0x004E63B8 File Offset: 0x004E45B8
+	// Token: 0x06010E5C RID: 69212 RVA: 0x004F4FB8 File Offset: 0x004F31B8
 	public override void Refresh()
 	{
 		if (this.SetupConfig == null)
@@ -51,19 +51,19 @@ public class FightPhotoSliderItem : FightPhotoSetupBase
 		this.SetNumText(num4);
 	}
 
-	// Token: 0x0601397D RID: 80253 RVA: 0x004E64E8 File Offset: 0x004E46E8
+	// Token: 0x06010E5D RID: 69213 RVA: 0x004F50E8 File Offset: 0x004F32E8
 	private void SetNumText(float value)
 	{
 		base.GetText(2).SetText(MathUtils.Instance.GetFloatPointFloorString((double)value, this.SetupConfig.Value.Digits) + this.SetupConfig.Value.Unit, true);
 	}
 
-	// Token: 0x0601397E RID: 80254 RVA: 0x004E6539 File Offset: 0x004E4739
+	// Token: 0x06010E5E RID: 69214 RVA: 0x004F5139 File Offset: 0x004F3339
 	protected override void OnBeforeDestroy()
 	{
 		base.GetSlider(0).OnValueChangeCb.Unbind();
 	}
 
-	// Token: 0x0601397F RID: 80255 RVA: 0x004E654C File Offset: 0x004E474C
+	// Token: 0x06010E5F RID: 69215 RVA: 0x004F514C File Offset: 0x004F334C
 	private void OnValueChanged(float value)
 	{
 		float num = this.SetupConfig.Value.ValueRange(0);
@@ -74,7 +74,7 @@ public class FightPhotoSliderItem : FightPhotoSetupBase
 		base.OnSetupValueChange((int)floatPointFloor);
 	}
 
-	// Token: 0x06013980 RID: 80256 RVA: 0x004E65E0 File Offset: 0x004E47E0
+	// Token: 0x06010E60 RID: 69216 RVA: 0x004F51E0 File Offset: 0x004F33E0
 	private void OnClickRefresh()
 	{
 		if (this.SetupConfig == null)
@@ -88,20 +88,20 @@ public class FightPhotoSliderItem : FightPhotoSetupBase
 		base.GetSlider(0).SetValue(inValue, true);
 	}
 
-	// Token: 0x02008BD0 RID: 35792
+	// Token: 0x02007D58 RID: 32088
 	private enum EChildType
 	{
-		// Token: 0x0402D61A RID: 185882
+		// Token: 0x0402892F RID: 166191
 		ValueSlider,
-		// Token: 0x0402D61B RID: 185883
+		// Token: 0x04028930 RID: 166192
 		SpriteHandle,
-		// Token: 0x0402D61C RID: 185884
+		// Token: 0x04028931 RID: 166193
 		TxtNum,
-		// Token: 0x0402D61D RID: 185885
+		// Token: 0x04028932 RID: 166194
 		ItemRedDot,
-		// Token: 0x0402D61E RID: 185886
+		// Token: 0x04028933 RID: 166195
 		BtnRefresh,
-		// Token: 0x0402D61F RID: 185887
+		// Token: 0x04028934 RID: 166196
 		TxtTitle
 	}
 }

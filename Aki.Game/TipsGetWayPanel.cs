@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
@@ -8,18 +7,18 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018EF RID: 6383
+// Token: 0x02000DA8 RID: 3496
 [NullableContext(1)]
 [Nullable(0)]
 public class TipsGetWayPanel : UiPanelBase
 {
-	// Token: 0x0600BB0D RID: 47885 RVA: 0x002A5A1D File Offset: 0x002A3C1D
+	// Token: 0x06008EF7 RID: 36599 RVA: 0x002B018D File Offset: 0x002AE38D
 	public TipsGetWayPanel(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600BB0E RID: 47886 RVA: 0x002A5A34 File Offset: 0x002A3C34
+	// Token: 0x06008EF8 RID: 36600 RVA: 0x002B01A4 File Offset: 0x002AE3A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -33,30 +32,41 @@ public class TipsGetWayPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BB0F RID: 47887 RVA: 0x002A5A9D File Offset: 0x002A3C9D
+	// Token: 0x06008EF9 RID: 36601 RVA: 0x002B020D File Offset: 0x002AE40D
 	protected override void OnStart()
 	{
 		this.GetWayLayout = new GenericLayoutNew<TipsGetWayItem>(base.GetVerticalLayout(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<TipsGetWayItem>(this.RefreshGetWayInfo), null);
 	}
 
-	// Token: 0x0600BB10 RID: 47888 RVA: 0x002A5ABE File Offset: 0x002A3CBE
+	// Token: 0x06008EFA RID: 36602 RVA: 0x002B022E File Offset: 0x002AE42E
 	protected override void OnBeforeDestroy()
 	{
 		this.GetWayData = new IGetWayItemData[0];
 	}
 
-	// Token: 0x0600BB11 RID: 47889 RVA: 0x002A5ACC File Offset: 0x002A3CCC
+	// Token: 0x06008EFB RID: 36603 RVA: 0x002B023C File Offset: 0x002AE43C
 	public void Refresh(IGetWayItemData[] data)
 	{
-		IGetWayItemData[] getWayData2 = (from getWayData in data
-		orderby getWayData.SortIndex descending, getWayData.Id descending
-		select getWayData).ToArray<IGetWayItemData>();
-		this.GetWayData = getWayData2;
+		IGetWayItemData[] array = new IGetWayItemData[data.Length];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = data[i];
+		}
+		Array.Sort<IGetWayItemData>(array, delegate(IGetWayItemData left, IGetWayItemData right)
+		{
+			int num = right.SortIndex.CompareTo(left.SortIndex);
+			if (num == 0)
+			{
+				return right.Id.CompareTo(left.Id);
+			}
+			return num;
+		});
+		this.GetWayData = array;
 		this.GetWayLayout.RebuildLayoutByDataNew<IGetWayItemData>(this.GetWayData, null);
 		this.SetActive(this.GetWayData.Length != 0);
 	}
 
-	// Token: 0x0600BB12 RID: 47890 RVA: 0x002A5B5C File Offset: 0x002A3D5C
+	// Token: 0x06008EFC RID: 36604 RVA: 0x002B02BC File Offset: 0x002AE4BC
 	private ILayoutItem<TipsGetWayItem> RefreshGetWayInfo(object data, UUIItem uiItem, int index)
 	{
 		TipsGetWayItem value = new TipsGetWayItem(uiItem, (IGetWayItemData)data);
@@ -67,7 +77,7 @@ public class TipsGetWayPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x040054F4 RID: 21748
+	// Token: 0x0400559F RID: 21919
 	[Nullable(new byte[]
 	{
 		2,
@@ -75,7 +85,7 @@ public class TipsGetWayPanel : UiPanelBase
 	})]
 	private IGetWayItemData[] GetWayData;
 
-	// Token: 0x040054F5 RID: 21749
+	// Token: 0x040055A0 RID: 21920
 	[Nullable(new byte[]
 	{
 		2,
@@ -83,14 +93,14 @@ public class TipsGetWayPanel : UiPanelBase
 	})]
 	private GenericLayoutNew<TipsGetWayItem> GetWayLayout;
 
-	// Token: 0x02007E64 RID: 32356
+	// Token: 0x02006FEB RID: 28651
 	[NullableContext(0)]
 	private class ETipsGetWayNode
 	{
-		// Token: 0x040295B5 RID: 169397
+		// Token: 0x040248E2 RID: 149730
 		public const int PanelLink = 0;
 
-		// Token: 0x040295B6 RID: 169398
+		// Token: 0x040248E3 RID: 149731
 		public const int ButtonLink = 1;
 	}
 }

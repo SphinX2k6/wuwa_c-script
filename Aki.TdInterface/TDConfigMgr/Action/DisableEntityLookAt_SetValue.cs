@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200156D RID: 5485
+	// Token: 0x020016CB RID: 5835
 	public class DisableEntityLookAt_SetValue
 	{
-		// Token: 0x04004746 RID: 18246
-		[Nullable(1)]
+		// Token: 0x04004AE6 RID: 19174
 		public string Key;
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029EC RID: 10732
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CD9 RID: 11481
 	public class RemovePreloadResourceAction : ActionParams
 	{
-		// Token: 0x0600ECFB RID: 60667 RVA: 0x002294FE File Offset: 0x002276FE
+		// Token: 0x0600FB92 RID: 64402 RVA: 0x00246E82 File Offset: 0x00245082
 		public static RemovePreloadResourceAction Create(IRemovePreloadResourceAction? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AE5 RID: 19173
-		// (get) Token: 0x0600ECFC RID: 60668 RVA: 0x0022951D File Offset: 0x0022771D
+		// Token: 0x17004E8E RID: 20110
+		// (get) Token: 0x0600FB93 RID: 64403 RVA: 0x00246EA1 File Offset: 0x002450A1
 		public virtual IRemovePreloadResourceCharacterType RemovePreloadResourceObjectType
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008282 RID: 33410
+		// Token: 0x04008973 RID: 35187
 		private IRemovePreloadResourceAction Instance;
 
-		// Token: 0x04008283 RID: 33411
+		// Token: 0x04008974 RID: 35188
 		private IRemovePreloadResourceCharacterType _RemovePreloadResourceObjectTypeCache;
 
-		// Token: 0x04008284 RID: 33412
+		// Token: 0x04008975 RID: 35189
 		private bool _RemovePreloadResourceObjectTypeInited;
 	}
 }

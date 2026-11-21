@@ -1,33 +1,33 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002ED2 RID: 11986
+// Token: 0x02002425 RID: 9253
 [NullableContext(1)]
 [Nullable(0)]
 public class TriggerConfigData : ITriggerConfig
 {
-	// Token: 0x17002368 RID: 9064
-	// (get) Token: 0x060199AD RID: 104877 RVA: 0x006A4F13 File Offset: 0x006A3113
-	// (set) Token: 0x060199AE RID: 104878 RVA: 0x006A4F1B File Offset: 0x006A311B
+	// Token: 0x17002418 RID: 9240
+	// (get) Token: 0x060172A7 RID: 94887 RVA: 0x006CB0DF File Offset: 0x006C92DF
+	// (set) Token: 0x060172A8 RID: 94888 RVA: 0x006CB0E7 File Offset: 0x006C92E7
 	public string Type { get; set; } = string.Empty;
 
-	// Token: 0x17002369 RID: 9065
-	// (get) Token: 0x060199AF RID: 104879 RVA: 0x006A4F24 File Offset: 0x006A3124
-	// (set) Token: 0x060199B0 RID: 104880 RVA: 0x006A4F2C File Offset: 0x006A312C
+	// Token: 0x17002419 RID: 9241
+	// (get) Token: 0x060172A9 RID: 94889 RVA: 0x006CB0F0 File Offset: 0x006C92F0
+	// (set) Token: 0x060172AA RID: 94890 RVA: 0x006CB0F8 File Offset: 0x006C92F8
 	public string[] Preset { get; set; } = Array.Empty<string>();
 
-	// Token: 0x1700236A RID: 9066
-	// (get) Token: 0x060199B1 RID: 104881 RVA: 0x006A4F35 File Offset: 0x006A3135
-	// (set) Token: 0x060199B2 RID: 104882 RVA: 0x006A4F3D File Offset: 0x006A313D
+	// Token: 0x1700241A RID: 9242
+	// (get) Token: 0x060172AB RID: 94891 RVA: 0x006CB101 File Offset: 0x006C9301
+	// (set) Token: 0x060172AC RID: 94892 RVA: 0x006CB109 File Offset: 0x006C9309
 	public string Params { get; set; } = string.Empty;
 
-	// Token: 0x1700236B RID: 9067
-	// (get) Token: 0x060199B3 RID: 104883 RVA: 0x006A4F46 File Offset: 0x006A3146
-	// (set) Token: 0x060199B4 RID: 104884 RVA: 0x006A4F4E File Offset: 0x006A314E
+	// Token: 0x1700241B RID: 9243
+	// (get) Token: 0x060172AD RID: 94893 RVA: 0x006CB112 File Offset: 0x006C9312
+	// (set) Token: 0x060172AE RID: 94894 RVA: 0x006CB11A File Offset: 0x006C931A
 	public string Formula { get; set; } = string.Empty;
 
-	// Token: 0x1700236C RID: 9068
-	// (get) Token: 0x060199B5 RID: 104885 RVA: 0x006A4F57 File Offset: 0x006A3157
-	// (set) Token: 0x060199B6 RID: 104886 RVA: 0x006A4F5F File Offset: 0x006A315F
+	// Token: 0x1700241C RID: 9244
+	// (get) Token: 0x060172AF RID: 94895 RVA: 0x006CB123 File Offset: 0x006C9323
+	// (set) Token: 0x060172B0 RID: 94896 RVA: 0x006CB12B File Offset: 0x006C932B
 	public EExecuteType ExecuteType { get; set; }
 }

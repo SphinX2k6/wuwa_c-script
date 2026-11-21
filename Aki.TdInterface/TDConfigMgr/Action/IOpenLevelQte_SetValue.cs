@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C9F RID: 7327
+	// Token: 0x02001EA4 RID: 7844
 	public class IOpenLevelQte_SetValue
 	{
-		// Token: 0x04005F36 RID: 24374
+		// Token: 0x0400648A RID: 25738
 		public EOpenQteType Type;
 
-		// Token: 0x04005F37 RID: 24375
-		[Nullable(1)]
+		// Token: 0x0400648B RID: 25739
 		public ITargetEntityType LevelQteEntity;
 	}
 }

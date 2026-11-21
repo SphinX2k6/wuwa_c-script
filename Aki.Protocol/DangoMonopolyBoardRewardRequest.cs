@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000382 RID: 898
+	// Token: 0x0200038A RID: 906
 	[NetMessage(EMessageId.DangoMonopolyBoardRewardRequest)]
 	public sealed class DangoMonopolyBoardRewardRequest : IMessage<DangoMonopolyBoardRewardRequest>, IMessage, IEquatable<DangoMonopolyBoardRewardRequest>, IDeepCloneable<DangoMonopolyBoardRewardRequest>, IBufferMessage
 	{
-		// Token: 0x060058F7 RID: 22775 RVA: 0x000D8E26 File Offset: 0x000D7026
+		// Token: 0x060059E4 RID: 23012 RVA: 0x000DB4AE File Offset: 0x000D96AE
 		[NullableContext(1)]
 		public static DangoMonopolyBoardRewardRequest Create()
 		{
 			return new DangoMonopolyBoardRewardRequest();
 		}
 
-		// Token: 0x17001068 RID: 4200
-		// (get) Token: 0x060058F8 RID: 22776 RVA: 0x000D8E2D File Offset: 0x000D702D
+		// Token: 0x17001099 RID: 4249
+		// (get) Token: 0x060059E5 RID: 23013 RVA: 0x000DB4B5 File Offset: 0x000D96B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001069 RID: 4201
-		// (get) Token: 0x060058F9 RID: 22777 RVA: 0x000D8E30 File Offset: 0x000D7030
+		// Token: 0x1700109A RID: 4250
+		// (get) Token: 0x060059E6 RID: 23014 RVA: 0x000DB4B8 File Offset: 0x000D96B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060058FA RID: 22778 RVA: 0x000D8E37 File Offset: 0x000D7037
+		// Token: 0x060059E7 RID: 23015 RVA: 0x000DB4BF File Offset: 0x000D96BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyBoardRewardRequest()
 		{
 		}
 
-		// Token: 0x060058FB RID: 22779 RVA: 0x000D8E4A File Offset: 0x000D704A
+		// Token: 0x060059E8 RID: 23016 RVA: 0x000DB4D2 File Offset: 0x000D96D2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyBoardRewardRequest(DangoMonopolyBoardRewardRequest other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060058FC RID: 22780 RVA: 0x000D8E80 File Offset: 0x000D7080
+		// Token: 0x060059E9 RID: 23017 RVA: 0x000DB508 File Offset: 0x000D9708
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyBoardRewardRequest Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new DangoMonopolyBoardRewardRequest(this);
 		}
 
-		// Token: 0x1700106A RID: 4202
-		// (get) Token: 0x060058FD RID: 22781 RVA: 0x000D8E88 File Offset: 0x000D7088
-		// (set) Token: 0x060058FE RID: 22782 RVA: 0x000D8E90 File Offset: 0x000D7090
+		// Token: 0x1700109B RID: 4251
+		// (get) Token: 0x060059EA RID: 23018 RVA: 0x000DB510 File Offset: 0x000D9710
+		// (set) Token: 0x060059EB RID: 23019 RVA: 0x000DB518 File Offset: 0x000D9718
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700106B RID: 4203
-		// (get) Token: 0x060058FF RID: 22783 RVA: 0x000D8E99 File Offset: 0x000D7099
+		// Token: 0x1700109C RID: 4252
+		// (get) Token: 0x060059EC RID: 23020 RVA: 0x000DB521 File Offset: 0x000D9721
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> BoardIds
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005900 RID: 22784 RVA: 0x000D8EA1 File Offset: 0x000D70A1
+		// Token: 0x060059ED RID: 23021 RVA: 0x000DB529 File Offset: 0x000D9729
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoMonopolyBoardRewardRequest);
 		}
 
-		// Token: 0x06005901 RID: 22785 RVA: 0x000D8EB0 File Offset: 0x000D70B0
+		// Token: 0x060059EE RID: 23022 RVA: 0x000DB538 File Offset: 0x000D9738
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoMonopolyBoardRewardRequest other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && this.boardIds_.Equals(other.boardIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005902 RID: 22786 RVA: 0x000D8F00 File Offset: 0x000D7100
+		// Token: 0x060059EF RID: 23023 RVA: 0x000DB588 File Offset: 0x000D9788
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005903 RID: 22787 RVA: 0x000D8F4D File Offset: 0x000D714D
+		// Token: 0x060059F0 RID: 23024 RVA: 0x000DB5D5 File Offset: 0x000D97D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005904 RID: 22788 RVA: 0x000D8F5A File Offset: 0x000D715A
+		// Token: 0x060059F1 RID: 23025 RVA: 0x000DB5E2 File Offset: 0x000D97E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06005905 RID: 22789 RVA: 0x000D8F64 File Offset: 0x000D7164
+		// Token: 0x060059F2 RID: 23026 RVA: 0x000DB5EC File Offset: 0x000D97EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			this.boardIds_.WriteTo(ref output, DangoMonopolyBoardRewardRequest._repeated_boardIds_codec);
 			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.ActivityId);
 			}
 			if (this._unknownFields != null)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005906 RID: 22790 RVA: 0x000D8FB4 File Offset: 0x000D71B4
+		// Token: 0x060059F3 RID: 23027 RVA: 0x000DB63C File Offset: 0x000D983C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005907 RID: 22791 RVA: 0x000D9008 File Offset: 0x000D7208
+		// Token: 0x060059F4 RID: 23028 RVA: 0x000DB690 File Offset: 0x000D9890
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoMonopolyBoardRewardRequest other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005908 RID: 22792 RVA: 0x000D9055 File Offset: 0x000D7255
+		// Token: 0x060059F5 RID: 23029 RVA: 0x000DB6DD File Offset: 0x000D98DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005909 RID: 22793 RVA: 0x000D9060 File Offset: 0x000D7260
+		// Token: 0x060059F6 RID: 23030 RVA: 0x000DB6E8 File Offset: 0x000D98E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 80U && num != 82U)
+				if (num != 40U && num != 42U)
 				{
-					if (num != 96U)
+					if (num != 56U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003546 RID: 13638
+		// Token: 0x040035E2 RID: 13794
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003547 RID: 13639
-		public const int ActivityIdFieldNumber = 12;
+		// Token: 0x040035E3 RID: 13795
+		public const int ActivityIdFieldNumber = 7;
 
-		// Token: 0x04003548 RID: 13640
+		// Token: 0x040035E4 RID: 13796
 		private int activityId_;
 
-		// Token: 0x04003549 RID: 13641
-		public const int BoardIdsFieldNumber = 10;
+		// Token: 0x040035E5 RID: 13797
+		public const int BoardIdsFieldNumber = 5;
 
-		// Token: 0x0400354A RID: 13642
-		private static readonly FieldCodec<int> _repeated_boardIds_codec = FieldCodec.ForInt32(82U);
+		// Token: 0x040035E6 RID: 13798
+		private static readonly FieldCodec<int> _repeated_boardIds_codec = FieldCodec.ForInt32(42U);
 
-		// Token: 0x0400354B RID: 13643
+		// Token: 0x040035E7 RID: 13799
 		private readonly RepeatedField<int> boardIds_ = new RepeatedField<int>();
 	}
 }

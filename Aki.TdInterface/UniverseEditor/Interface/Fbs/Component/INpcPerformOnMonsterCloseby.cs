@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005638 RID: 22072
+	// Token: 0x02005BD6 RID: 23510
 	public struct INpcPerformOnMonsterCloseby : IFlatbufferObject
 	{
-		// Token: 0x1700A37F RID: 41855
-		// (get) Token: 0x06024AE7 RID: 150247 RVA: 0x00510212 File Offset: 0x0050E412
+		// Token: 0x1700AC09 RID: 44041
+		// (get) Token: 0x06026D06 RID: 158982 RVA: 0x00550B36 File Offset: 0x0054ED36
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024AE8 RID: 150248 RVA: 0x0051021F File Offset: 0x0050E41F
+		// Token: 0x06026D07 RID: 158983 RVA: 0x00550B43 File Offset: 0x0054ED43
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024AE9 RID: 150249 RVA: 0x00510228 File Offset: 0x0050E428
+		// Token: 0x06026D08 RID: 158984 RVA: 0x00550B4C File Offset: 0x0054ED4C
 		public static INpcPerformOnMonsterCloseby GetRootAsINpcPerformOnMonsterCloseby(ByteBuffer _bb)
 		{
 			return INpcPerformOnMonsterCloseby.GetRootAsINpcPerformOnMonsterCloseby(_bb, default(INpcPerformOnMonsterCloseby));
 		}
 
-		// Token: 0x06024AEA RID: 150250 RVA: 0x00510244 File Offset: 0x0050E444
+		// Token: 0x06026D09 RID: 158985 RVA: 0x00550B68 File Offset: 0x0054ED68
 		public static INpcPerformOnMonsterCloseby GetRootAsINpcPerformOnMonsterCloseby(ByteBuffer _bb, INpcPerformOnMonsterCloseby obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024AEB RID: 150251 RVA: 0x00510261 File Offset: 0x0050E461
+		// Token: 0x06026D0A RID: 158986 RVA: 0x00550B85 File Offset: 0x0054ED85
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024AEC RID: 150252 RVA: 0x00510270 File Offset: 0x0050E470
+		// Token: 0x06026D0B RID: 158987 RVA: 0x00550B94 File Offset: 0x0054ED94
 		public INpcPerformOnMonsterCloseby __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A380 RID: 41856
-		// (get) Token: 0x06024AED RID: 150253 RVA: 0x00510280 File Offset: 0x0050E480
+		// Token: 0x1700AC0A RID: 44042
+		// (get) Token: 0x06026D0C RID: 158988 RVA: 0x00550BA4 File Offset: 0x0054EDA4
 		public float Range
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A381 RID: 41857
-		// (get) Token: 0x06024AEE RID: 150254 RVA: 0x005102C0 File Offset: 0x0050E4C0
+		// Token: 0x1700AC0B RID: 44043
+		// (get) Token: 0x06026D0D RID: 158989 RVA: 0x00550BE4 File Offset: 0x0054EDE4
 		public IMontageId? Montage
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A382 RID: 41858
-		// (get) Token: 0x06024AEF RID: 150255 RVA: 0x00510320 File Offset: 0x0050E520
+		// Token: 0x1700AC0C RID: 44044
+		// (get) Token: 0x06026D0E RID: 158990 RVA: 0x00550C44 File Offset: 0x0054EE44
 		public IBubbleIndex? Bubble
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A383 RID: 41859
-		// (get) Token: 0x06024AF0 RID: 150256 RVA: 0x00510380 File Offset: 0x0050E580
+		// Token: 0x1700AC0D RID: 44045
+		// (get) Token: 0x06026D0F RID: 158991 RVA: 0x00550CA4 File Offset: 0x0054EEA4
 		public int BubbleRate
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024AF1 RID: 150257 RVA: 0x005103BD File Offset: 0x0050E5BD
+		// Token: 0x06026D10 RID: 158992 RVA: 0x00550CE1 File Offset: 0x0054EEE1
 		public static Offset<INpcPerformOnMonsterCloseby> CreateINpcPerformOnMonsterCloseby(FlatBufferBuilder builder, float Range = 0f, Offset<IMontageId> MontageOffset = default(Offset<IMontageId>), Offset<IBubbleIndex> BubbleOffset = default(Offset<IBubbleIndex>), int BubbleRate = 0)
 		{
 			builder.StartTable(4);
@@ -119,43 +119,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcPerformOnMonsterCloseby.EndINpcPerformOnMonsterCloseby(builder);
 		}
 
-		// Token: 0x06024AF2 RID: 150258 RVA: 0x005103E9 File Offset: 0x0050E5E9
+		// Token: 0x06026D11 RID: 158993 RVA: 0x00550D0D File Offset: 0x0054EF0D
 		public static void StartINpcPerformOnMonsterCloseby(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06024AF3 RID: 150259 RVA: 0x005103F2 File Offset: 0x0050E5F2
+		// Token: 0x06026D12 RID: 158994 RVA: 0x00550D16 File Offset: 0x0054EF16
 		public static void AddRange(FlatBufferBuilder builder, float range)
 		{
 			builder.AddFloat(0, range, 0.0);
 		}
 
-		// Token: 0x06024AF4 RID: 150260 RVA: 0x00510405 File Offset: 0x0050E605
+		// Token: 0x06026D13 RID: 158995 RVA: 0x00550D29 File Offset: 0x0054EF29
 		public static void AddMontage(FlatBufferBuilder builder, Offset<IMontageId> montageOffset)
 		{
 			builder.AddOffset(1, montageOffset.Value, 0);
 		}
 
-		// Token: 0x06024AF5 RID: 150261 RVA: 0x00510415 File Offset: 0x0050E615
+		// Token: 0x06026D14 RID: 158996 RVA: 0x00550D39 File Offset: 0x0054EF39
 		public static void AddBubble(FlatBufferBuilder builder, Offset<IBubbleIndex> bubbleOffset)
 		{
 			builder.AddOffset(2, bubbleOffset.Value, 0);
 		}
 
-		// Token: 0x06024AF6 RID: 150262 RVA: 0x00510425 File Offset: 0x0050E625
+		// Token: 0x06026D15 RID: 158997 RVA: 0x00550D49 File Offset: 0x0054EF49
 		public static void AddBubbleRate(FlatBufferBuilder builder, int bubbleRate)
 		{
 			builder.AddInt(3, bubbleRate, 0);
 		}
 
-		// Token: 0x06024AF7 RID: 150263 RVA: 0x00510430 File Offset: 0x0050E630
+		// Token: 0x06026D16 RID: 158998 RVA: 0x00550D54 File Offset: 0x0054EF54
 		public static Offset<INpcPerformOnMonsterCloseby> EndINpcPerformOnMonsterCloseby(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcPerformOnMonsterCloseby>(builder.EndTable());
 		}
 
-		// Token: 0x06024AF8 RID: 150264 RVA: 0x00510440 File Offset: 0x0050E640
+		// Token: 0x06026D17 RID: 158999 RVA: 0x00550D64 File Offset: 0x0054EF64
 		public INpcPerformOnMonsterClosebyT UnPack()
 		{
 			INpcPerformOnMonsterClosebyT npcPerformOnMonsterClosebyT = new INpcPerformOnMonsterClosebyT();
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return npcPerformOnMonsterClosebyT;
 		}
 
-		// Token: 0x06024AF9 RID: 150265 RVA: 0x0051045C File Offset: 0x0050E65C
+		// Token: 0x06026D18 RID: 159000 RVA: 0x00550D80 File Offset: 0x0054EF80
 		public void UnPackTo(INpcPerformOnMonsterClosebyT _o)
 		{
 			_o.Range = this.Range;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.BubbleRate = this.BubbleRate;
 		}
 
-		// Token: 0x06024AFA RID: 150266 RVA: 0x005104E0 File Offset: 0x0050E6E0
+		// Token: 0x06026D19 RID: 159001 RVA: 0x00550E04 File Offset: 0x0054F004
 		public static Offset<INpcPerformOnMonsterCloseby> Pack(FlatBufferBuilder builder, INpcPerformOnMonsterClosebyT _o)
 		{
 			if (_o == null)
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcPerformOnMonsterCloseby.CreateINpcPerformOnMonsterCloseby(builder, _o.Range, montageOffset, bubbleOffset, _o.BubbleRate);
 		}
 
-		// Token: 0x0400E9DB RID: 59867
+		// Token: 0x0400F640 RID: 63040
 		private Table __p;
 	}
 }

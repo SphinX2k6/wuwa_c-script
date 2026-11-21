@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029C8 RID: 10696
+	// Token: 0x02002CB5 RID: 11445
 	public class IVehicleTeam : ITargetVehicle
 	{
-		// Token: 0x0600EC6E RID: 60526 RVA: 0x00228639 File Offset: 0x00226839
-		[NullableContext(1)]
+		// Token: 0x0600FB05 RID: 64261 RVA: 0x00245FBD File Offset: 0x002441BD
 		public static IVehicleTeam Create(IVehicleTeam? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AA0 RID: 19104
-		// (get) Token: 0x0600EC6F RID: 60527 RVA: 0x00228658 File Offset: 0x00226858
+		// Token: 0x17004E49 RID: 20041
+		// (get) Token: 0x0600FB06 RID: 64262 RVA: 0x00245FDC File Offset: 0x002441DC
 		public override ETargetVehicle Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AA1 RID: 19105
-		// (get) Token: 0x0600EC70 RID: 60528 RVA: 0x00228665 File Offset: 0x00226865
+		// Token: 0x17004E4A RID: 20042
+		// (get) Token: 0x0600FB07 RID: 64263 RVA: 0x00245FE9 File Offset: 0x002441E9
 		public virtual int TeamId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008228 RID: 33320
+		// Token: 0x04008919 RID: 35097
 		private IVehicleTeam Instance;
 	}
 }

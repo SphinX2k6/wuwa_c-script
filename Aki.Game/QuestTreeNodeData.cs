@@ -12,49 +12,49 @@ using CSharpScript.Game.Module.PhoneMessage;
 using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.WorldMap;
 
-// Token: 0x02002689 RID: 9865
+// Token: 0x02001B74 RID: 7028
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeNodeData
 {
-	// Token: 0x170019FF RID: 6655
-	// (get) Token: 0x0601436D RID: 82797 RVA: 0x0051B940 File Offset: 0x00519B40
-	// (set) Token: 0x0601436E RID: 82798 RVA: 0x0051B948 File Offset: 0x00519B48
+	// Token: 0x17001A37 RID: 6711
+	// (get) Token: 0x0601184F RID: 71759 RVA: 0x0052A678 File Offset: 0x00528878
+	// (set) Token: 0x06011850 RID: 71760 RVA: 0x0052A680 File Offset: 0x00528880
 	public int Id { get; private set; }
 
-	// Token: 0x17001A00 RID: 6656
-	// (get) Token: 0x0601436F RID: 82799 RVA: 0x0051B951 File Offset: 0x00519B51
-	// (set) Token: 0x06014370 RID: 82800 RVA: 0x0051B959 File Offset: 0x00519B59
+	// Token: 0x17001A38 RID: 6712
+	// (get) Token: 0x06011851 RID: 71761 RVA: 0x0052A689 File Offset: 0x00528889
+	// (set) Token: 0x06011852 RID: 71762 RVA: 0x0052A691 File Offset: 0x00528891
 	public QuestTreeNode Config { get; private set; }
 
-	// Token: 0x17001A01 RID: 6657
-	// (get) Token: 0x06014371 RID: 82801 RVA: 0x0051B962 File Offset: 0x00519B62
-	// (set) Token: 0x06014372 RID: 82802 RVA: 0x0051B96A File Offset: 0x00519B6A
+	// Token: 0x17001A39 RID: 6713
+	// (get) Token: 0x06011853 RID: 71763 RVA: 0x0052A69A File Offset: 0x0052889A
+	// (set) Token: 0x06011854 RID: 71764 RVA: 0x0052A6A2 File Offset: 0x005288A2
 	public int ChapterId { get; private set; }
 
-	// Token: 0x17001A02 RID: 6658
-	// (get) Token: 0x06014373 RID: 82803 RVA: 0x0051B973 File Offset: 0x00519B73
-	// (set) Token: 0x06014374 RID: 82804 RVA: 0x0051B97B File Offset: 0x00519B7B
+	// Token: 0x17001A3A RID: 6714
+	// (get) Token: 0x06011855 RID: 71765 RVA: 0x0052A6AB File Offset: 0x005288AB
+	// (set) Token: 0x06011856 RID: 71766 RVA: 0x0052A6B3 File Offset: 0x005288B3
 	public Dictionary<int, TItem> RewardItemMap { get; private set; } = new Dictionary<int, TItem>();
 
-	// Token: 0x17001A03 RID: 6659
-	// (get) Token: 0x06014375 RID: 82805 RVA: 0x0051B984 File Offset: 0x00519B84
-	// (set) Token: 0x06014376 RID: 82806 RVA: 0x0051B98C File Offset: 0x00519B8C
+	// Token: 0x17001A3B RID: 6715
+	// (get) Token: 0x06011857 RID: 71767 RVA: 0x0052A6BC File Offset: 0x005288BC
+	// (set) Token: 0x06011858 RID: 71768 RVA: 0x0052A6C4 File Offset: 0x005288C4
 	public List<int> QuestIdList { get; private set; } = new List<int>();
 
-	// Token: 0x17001A04 RID: 6660
-	// (get) Token: 0x06014377 RID: 82807 RVA: 0x0051B995 File Offset: 0x00519B95
-	// (set) Token: 0x06014378 RID: 82808 RVA: 0x0051B99D File Offset: 0x00519B9D
+	// Token: 0x17001A3C RID: 6716
+	// (get) Token: 0x06011859 RID: 71769 RVA: 0x0052A6CD File Offset: 0x005288CD
+	// (set) Token: 0x0601185A RID: 71770 RVA: 0x0052A6D5 File Offset: 0x005288D5
 	[Nullable(2)]
 	public QuestTreeNodeData BelongedNode { [NullableContext(2)] get; [NullableContext(2)] private set; }
 
-	// Token: 0x17001A05 RID: 6661
-	// (get) Token: 0x06014379 RID: 82809 RVA: 0x0051B9A6 File Offset: 0x00519BA6
-	// (set) Token: 0x0601437A RID: 82810 RVA: 0x0051B9AE File Offset: 0x00519BAE
+	// Token: 0x17001A3D RID: 6717
+	// (get) Token: 0x0601185B RID: 71771 RVA: 0x0052A6DE File Offset: 0x005288DE
+	// (set) Token: 0x0601185C RID: 71772 RVA: 0x0052A6E6 File Offset: 0x005288E6
 	public bool IsDummy { get; private set; }
 
-	// Token: 0x17001A06 RID: 6662
-	// (get) Token: 0x0601437B RID: 82811 RVA: 0x0051B9B7 File Offset: 0x00519BB7
+	// Token: 0x17001A3E RID: 6718
+	// (get) Token: 0x0601185D RID: 71773 RVA: 0x0052A6EF File Offset: 0x005288EF
 	public bool IsTracking
 	{
 		get
@@ -63,8 +63,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A07 RID: 6663
-	// (get) Token: 0x0601437C RID: 82812 RVA: 0x0051B9E0 File Offset: 0x00519BE0
+	// Token: 0x17001A3F RID: 6719
+	// (get) Token: 0x0601185E RID: 71774 RVA: 0x0052A718 File Offset: 0x00528918
 	public string Name
 	{
 		get
@@ -77,8 +77,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A08 RID: 6664
-	// (get) Token: 0x0601437D RID: 82813 RVA: 0x0051BA0C File Offset: 0x00519C0C
+	// Token: 0x17001A40 RID: 6720
+	// (get) Token: 0x0601185F RID: 71775 RVA: 0x0052A744 File Offset: 0x00528944
 	public int RecallId
 	{
 		get
@@ -91,8 +91,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A09 RID: 6665
-	// (get) Token: 0x0601437E RID: 82814 RVA: 0x0051BA34 File Offset: 0x00519C34
+	// Token: 0x17001A41 RID: 6721
+	// (get) Token: 0x06011860 RID: 71776 RVA: 0x0052A76C File Offset: 0x0052896C
 	public unsafe List<QuestTreeNodeData> PreQuestNodes
 	{
 		get
@@ -125,8 +125,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A0A RID: 6666
-	// (get) Token: 0x0601437F RID: 82815 RVA: 0x0051BAE8 File Offset: 0x00519CE8
+	// Token: 0x17001A42 RID: 6722
+	// (get) Token: 0x06011861 RID: 71777 RVA: 0x0052A820 File Offset: 0x00528A20
 	[Nullable(2)]
 	public QuestTreeNodeData NextQuestNode
 	{
@@ -148,8 +148,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A0B RID: 6667
-	// (get) Token: 0x06014380 RID: 82816 RVA: 0x0051BB5C File Offset: 0x00519D5C
+	// Token: 0x17001A43 RID: 6723
+	// (get) Token: 0x06011862 RID: 71778 RVA: 0x0052A894 File Offset: 0x00528A94
 	public EQuestTreeNodeState State
 	{
 		get
@@ -245,8 +245,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A0C RID: 6668
-	// (get) Token: 0x06014381 RID: 82817 RVA: 0x0051BE34 File Offset: 0x0051A034
+	// Token: 0x17001A44 RID: 6724
+	// (get) Token: 0x06011863 RID: 71779 RVA: 0x0052AB6C File Offset: 0x00528D6C
 	public EQuestTreeNodeState DisplayState
 	{
 		get
@@ -278,7 +278,7 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x06014382 RID: 82818 RVA: 0x0051BEB0 File Offset: 0x0051A0B0
+	// Token: 0x06011864 RID: 71780 RVA: 0x0052ABE8 File Offset: 0x00528DE8
 	public bool IsUnlockConditionsFinished()
 	{
 		if (this.Config.UnlockConditionsLength > 0)
@@ -316,8 +316,8 @@ public class QuestTreeNodeData
 		return true;
 	}
 
-	// Token: 0x17001A0D RID: 6669
-	// (get) Token: 0x06014383 RID: 82819 RVA: 0x0051BF90 File Offset: 0x0051A190
+	// Token: 0x17001A45 RID: 6725
+	// (get) Token: 0x06011865 RID: 71781 RVA: 0x0052ACC8 File Offset: 0x00528EC8
 	public EQuest? Type
 	{
 		get
@@ -335,8 +335,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A0E RID: 6670
-	// (get) Token: 0x06014384 RID: 82820 RVA: 0x0051BFE0 File Offset: 0x0051A1E0
+	// Token: 0x17001A46 RID: 6726
+	// (get) Token: 0x06011866 RID: 71782 RVA: 0x0052AD18 File Offset: 0x00528F18
 	public unsafe string TypeIconPath
 	{
 		get
@@ -358,8 +358,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A0F RID: 6671
-	// (get) Token: 0x06014385 RID: 82821 RVA: 0x0051C090 File Offset: 0x0051A290
+	// Token: 0x17001A47 RID: 6727
+	// (get) Token: 0x06011867 RID: 71783 RVA: 0x0052ADC8 File Offset: 0x00528FC8
 	public string StepText
 	{
 		get
@@ -389,8 +389,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A10 RID: 6672
-	// (get) Token: 0x06014386 RID: 82822 RVA: 0x0051C0FC File Offset: 0x0051A2FC
+	// Token: 0x17001A48 RID: 6728
+	// (get) Token: 0x06011868 RID: 71784 RVA: 0x0052AE34 File Offset: 0x00529034
 	public string Desc
 	{
 		get
@@ -408,8 +408,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A11 RID: 6673
-	// (get) Token: 0x06014387 RID: 82823 RVA: 0x0051C14C File Offset: 0x0051A34C
+	// Token: 0x17001A49 RID: 6729
+	// (get) Token: 0x06011869 RID: 71785 RVA: 0x0052AE84 File Offset: 0x00529084
 	public List<TItem> RewardList
 	{
 		get
@@ -423,8 +423,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A12 RID: 6674
-	// (get) Token: 0x06014388 RID: 82824 RVA: 0x0051C1AC File Offset: 0x0051A3AC
+	// Token: 0x17001A4A RID: 6730
+	// (get) Token: 0x0601186A RID: 71786 RVA: 0x0052AEE4 File Offset: 0x005290E4
 	public string ImageSmall
 	{
 		get
@@ -457,8 +457,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A13 RID: 6675
-	// (get) Token: 0x06014389 RID: 82825 RVA: 0x0051C258 File Offset: 0x0051A458
+	// Token: 0x17001A4B RID: 6731
+	// (get) Token: 0x0601186B RID: 71787 RVA: 0x0052AF90 File Offset: 0x00529190
 	public string ImageLarge
 	{
 		get
@@ -491,7 +491,7 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x0601438A RID: 82826 RVA: 0x0051C304 File Offset: 0x0051A504
+	// Token: 0x0601186C RID: 71788 RVA: 0x0052B03C File Offset: 0x0052923C
 	public unsafe static QuestTreeNodeData Create(QuestTreeNode config)
 	{
 		QuestTreeNodeData questTreeNodeData = new QuestTreeNodeData();
@@ -542,7 +542,7 @@ public class QuestTreeNodeData
 		return questTreeNodeData;
 	}
 
-	// Token: 0x0601438B RID: 82827 RVA: 0x0051C4F4 File Offset: 0x0051A6F4
+	// Token: 0x0601186D RID: 71789 RVA: 0x0052B22C File Offset: 0x0052942C
 	public static QuestTreeNodeData CreateDummyNode(QuestTreeNode copiedConfig)
 	{
 		return new QuestTreeNodeData
@@ -554,14 +554,14 @@ public class QuestTreeNodeData
 		};
 	}
 
-	// Token: 0x0601438C RID: 82828 RVA: 0x0051C51D File Offset: 0x0051A71D
+	// Token: 0x0601186E RID: 71790 RVA: 0x0052B255 File Offset: 0x00529455
 	public void Clear()
 	{
 		this.RewardItemMap.Clear();
 		this.QuestIdList.Clear();
 	}
 
-	// Token: 0x0601438D RID: 82829 RVA: 0x0051C538 File Offset: 0x0051A738
+	// Token: 0x0601186F RID: 71791 RVA: 0x0052B270 File Offset: 0x00529470
 	public unsafe List<QuestTreeNodeData> GetAllDirectChildrenInUpArea()
 	{
 		if (this.Config.QuestType != 1)
@@ -597,7 +597,7 @@ public class QuestTreeNodeData
 		return list;
 	}
 
-	// Token: 0x0601438E RID: 82830 RVA: 0x0051C634 File Offset: 0x0051A834
+	// Token: 0x06011870 RID: 71792 RVA: 0x0052B36C File Offset: 0x0052956C
 	public List<List<QuestTreeNodeData>> GetDirectChildrenGroupsInDownArea()
 	{
 		if (this.Config.QuestType != 1)
@@ -702,7 +702,7 @@ public class QuestTreeNodeData
 		return list4;
 	}
 
-	// Token: 0x0601438F RID: 82831 RVA: 0x0051CA04 File Offset: 0x0051AC04
+	// Token: 0x06011871 RID: 71793 RVA: 0x0052B73C File Offset: 0x0052993C
 	public List<List<QuestTreeNodeData>> GetDirectChildrenGroupsInUpArea()
 	{
 		if (this.Config.QuestType != 1)
@@ -749,13 +749,13 @@ public class QuestTreeNodeData
 		return list2;
 	}
 
-	// Token: 0x06014390 RID: 82832 RVA: 0x0051CBE8 File Offset: 0x0051ADE8
+	// Token: 0x06011872 RID: 71794 RVA: 0x0052B920 File Offset: 0x00529B20
 	public bool IsInPredecessorUnion()
 	{
 		return this.NextQuestNode != null && this.NextQuestNode.PreQuestNodes.Count > 1;
 	}
 
-	// Token: 0x06014391 RID: 82833 RVA: 0x0051CC08 File Offset: 0x0051AE08
+	// Token: 0x06011873 RID: 71795 RVA: 0x0052B940 File Offset: 0x00529B40
 	public bool IsFirstNodeOfPredecessorUnion()
 	{
 		if (this.NextQuestNode == null)
@@ -766,7 +766,7 @@ public class QuestTreeNodeData
 		return preQuestNodes.Count > 1 && preQuestNodes[0].Id == this.Id;
 	}
 
-	// Token: 0x06014392 RID: 82834 RVA: 0x0051CC4C File Offset: 0x0051AE4C
+	// Token: 0x06011874 RID: 71796 RVA: 0x0052B984 File Offset: 0x00529B84
 	public bool IsLastNodeOfPredecessorUnion()
 	{
 		if (this.NextQuestNode == null)
@@ -782,7 +782,7 @@ public class QuestTreeNodeData
 		return list[list.Count - 1].Id == this.Id;
 	}
 
-	// Token: 0x06014393 RID: 82835 RVA: 0x0051CC98 File Offset: 0x0051AE98
+	// Token: 0x06011875 RID: 71797 RVA: 0x0052B9D0 File Offset: 0x00529BD0
 	public bool IsLastNodeOfMainQuestChildren()
 	{
 		List<List<QuestTreeNodeData>> list = new List<List<QuestTreeNodeData>>();
@@ -813,13 +813,13 @@ public class QuestTreeNodeData
 		return list3[list3.Count - 1].Id == this.Id;
 	}
 
-	// Token: 0x06014394 RID: 82836 RVA: 0x0051CD68 File Offset: 0x0051AF68
+	// Token: 0x06011876 RID: 71798 RVA: 0x0052BAA0 File Offset: 0x00529CA0
 	public bool IsLastMainNodeOfChapter()
 	{
 		return this.Config.QuestType == 1 && (this.Config.IsChapterEnding || this.IsDummy);
 	}
 
-	// Token: 0x06014395 RID: 82837 RVA: 0x0051CDA4 File Offset: 0x0051AFA4
+	// Token: 0x06011877 RID: 71799 RVA: 0x0052BADC File Offset: 0x00529CDC
 	public unsafe List<QuestTreeNodeData> GetIncludeNodes(bool getAll = true)
 	{
 		if (this.Config.NodeType != 3)
@@ -845,7 +845,7 @@ public class QuestTreeNodeData
 		return list;
 	}
 
-	// Token: 0x06014396 RID: 82838 RVA: 0x0051CE48 File Offset: 0x0051B048
+	// Token: 0x06011878 RID: 71800 RVA: 0x0052BB80 File Offset: 0x00529D80
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetIncludeNodesProgress()
 	{
@@ -857,7 +857,7 @@ public class QuestTreeNodeData
 		return new ValueTuple<int, int>(this.GetIncludeNodes(false).Count, includeNodes.Count);
 	}
 
-	// Token: 0x06014397 RID: 82839 RVA: 0x0051CE90 File Offset: 0x0051B090
+	// Token: 0x06011879 RID: 71801 RVA: 0x0052BBC8 File Offset: 0x00529DC8
 	public List<IQuestTreeNodeTarget> GetTargetDataList()
 	{
 		List<IQuestTreeNodeTarget> list = new List<IQuestTreeNodeTarget>();
@@ -926,7 +926,7 @@ public class QuestTreeNodeData
 		return list;
 	}
 
-	// Token: 0x06014398 RID: 82840 RVA: 0x0051D068 File Offset: 0x0051B268
+	// Token: 0x0601187A RID: 71802 RVA: 0x0052BDA0 File Offset: 0x00529FA0
 	public List<IQuestTreeNodeTarget> GetCustomUnlockTargets()
 	{
 		List<IQuestTreeNodeTarget> list = new List<IQuestTreeNodeTarget>();
@@ -971,7 +971,7 @@ public class QuestTreeNodeData
 		return list;
 	}
 
-	// Token: 0x06014399 RID: 82841 RVA: 0x0051D1CB File Offset: 0x0051B3CB
+	// Token: 0x0601187B RID: 71803 RVA: 0x0052BF03 File Offset: 0x0052A103
 	public void SetBelongedNode(QuestTreeNodeData node)
 	{
 		if (this.BelongedNode != null)
@@ -981,8 +981,8 @@ public class QuestTreeNodeData
 		this.BelongedNode = node;
 	}
 
-	// Token: 0x17001A14 RID: 6676
-	// (get) Token: 0x0601439A RID: 82842 RVA: 0x0051D1DD File Offset: 0x0051B3DD
+	// Token: 0x17001A4C RID: 6732
+	// (get) Token: 0x0601187C RID: 71804 RVA: 0x0052BF15 File Offset: 0x0052A115
 	[Nullable(2)]
 	public IQuest QuestConfig
 	{
@@ -993,8 +993,8 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x17001A15 RID: 6677
-	// (get) Token: 0x0601439B RID: 82843 RVA: 0x0051D1F0 File Offset: 0x0051B3F0
+	// Token: 0x17001A4D RID: 6733
+	// (get) Token: 0x0601187D RID: 71805 RVA: 0x0052BF28 File Offset: 0x0052A128
 	public unsafe int QuestId
 	{
 		get
@@ -1052,7 +1052,7 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x0601439C RID: 82844 RVA: 0x0051D2C4 File Offset: 0x0051B4C4
+	// Token: 0x0601187E RID: 71806 RVA: 0x0052BFFC File Offset: 0x0052A1FC
 	[NullableContext(2)]
 	public Func<bool> GetOnAcceptGoto()
 	{
@@ -1108,20 +1108,20 @@ public class QuestTreeNodeData
 		}
 	}
 
-	// Token: 0x0601439D RID: 82845 RVA: 0x0051D3D0 File Offset: 0x0051B5D0
+	// Token: 0x0601187F RID: 71807 RVA: 0x0052C108 File Offset: 0x0052A308
 	public bool IsMoonChasingQuest()
 	{
 		int moonChasingQuestId = QuestTreeConfig.Instance.GetMoonChasingQuestId();
 		return this.Config.GetQuestArrayBytes().Contains(moonChasingQuestId);
 	}
 
-	// Token: 0x0601439E RID: 82846 RVA: 0x0051D3FC File Offset: 0x0051B5FC
+	// Token: 0x06011880 RID: 71808 RVA: 0x0052C134 File Offset: 0x0052A334
 	public bool HasNewTag()
 	{
 		return !this.IsDummy && !(LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.QuestTreeNodeNewTag, null) ?? new HashSet<int>()).Contains(this.Id);
 	}
 
-	// Token: 0x0601439F RID: 82847 RVA: 0x0051D42C File Offset: 0x0051B62C
+	// Token: 0x06011881 RID: 71809 RVA: 0x0052C164 File Offset: 0x0052A364
 	public void RemoveNewTag()
 	{
 		if (this.IsDummy)
@@ -1133,6 +1133,6 @@ public class QuestTreeNodeData
 		LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.QuestTreeNodeNewTag, hashSet);
 	}
 
-	// Token: 0x04009824 RID: 38948
+	// Token: 0x0400997C RID: 39292
 	public bool FinishCache;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008FE RID: 2302
+	// Token: 0x020009A7 RID: 2471
 	public static class EAudioTypeExtensions
 	{
-		// Token: 0x06003428 RID: 13352 RVA: 0x00085480 File Offset: 0x00083680
+		// Token: 0x06003782 RID: 14210 RVA: 0x0008CCF0 File Offset: 0x0008AEF0
 		public static string ToEnumString(this EAudioType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003429 RID: 13353 RVA: 0x000854B8 File Offset: 0x000836B8
+		// Token: 0x06003783 RID: 14211 RVA: 0x0008CD28 File Offset: 0x0008AF28
 		public static EAudioType FromString(string name)
 		{
 			EAudioType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600342A RID: 13354 RVA: 0x000854E1 File Offset: 0x000836E1
+		// Token: 0x06003784 RID: 14212 RVA: 0x0008CD51 File Offset: 0x0008AF51
 		public static bool TryFromString(string name, out EAudioType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600342B RID: 13355 RVA: 0x0008551A File Offset: 0x0008371A
+		// Token: 0x06003785 RID: 14213 RVA: 0x0008CD8A File Offset: 0x0008AF8A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600342C RID: 13356 RVA: 0x00085532 File Offset: 0x00083732
+		// Token: 0x06003786 RID: 14214 RVA: 0x0008CDA2 File Offset: 0x0008AFA2
 		public static EAudioType[] GetValues()
 		{
 			return new EAudioType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600342D RID: 13357 RVA: 0x0008553E File Offset: 0x0008373E
+		// Token: 0x06003787 RID: 14215 RVA: 0x0008CDAE File Offset: 0x0008AFAE
 		public static string[] GetNames()
 		{
 			return new string[]

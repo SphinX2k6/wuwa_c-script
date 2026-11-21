@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002768 RID: 10088
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A3A RID: 10810
 	public class IControlTrackingOther : IControlTrackingType
 	{
-		// Token: 0x0600E0B4 RID: 57524 RVA: 0x00213551 File Offset: 0x00211751
+		// Token: 0x0600EED2 RID: 61138 RVA: 0x002302E5 File Offset: 0x0022E4E5
 		public static IControlTrackingOther Create(IControlTrackingOther? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043A6 RID: 17318
-		// (get) Token: 0x0600E0B5 RID: 57525 RVA: 0x00213570 File Offset: 0x00211770
+		// Token: 0x1700470C RID: 18188
+		// (get) Token: 0x0600EED3 RID: 61139 RVA: 0x00230304 File Offset: 0x0022E504
 		public override EControlTrackingType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043A7 RID: 17319
-		// (get) Token: 0x0600E0B6 RID: 57526 RVA: 0x00213580 File Offset: 0x00211780
+		// Token: 0x1700470D RID: 18189
+		// (get) Token: 0x0600EED4 RID: 61140 RVA: 0x00230314 File Offset: 0x0022E514
 		public virtual List<int> Entities
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C6C RID: 31852
+		// Token: 0x04008322 RID: 33570
 		private IControlTrackingOther Instance;
 
-		// Token: 0x04007C6D RID: 31853
+		// Token: 0x04008323 RID: 33571
 		private List<int> _EntitiesCache;
 
-		// Token: 0x04007C6E RID: 31854
+		// Token: 0x04008324 RID: 33572
 		private bool _EntitiesInited;
 	}
 }

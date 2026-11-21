@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200104A RID: 4170
+// Token: 0x020004FE RID: 1278
 public enum EGuessJokerCardType
 {
-	// Token: 0x04003152 RID: 12626
+	// Token: 0x040031EB RID: 12779
 	Normal,
-	// Token: 0x04003153 RID: 12627
+	// Token: 0x040031EC RID: 12780
 	Joker,
-	// Token: 0x04003154 RID: 12628
+	// Token: 0x040031ED RID: 12781
 	Blank
 }

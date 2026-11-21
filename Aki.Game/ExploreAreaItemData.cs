@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,13 +11,13 @@ using CSharpScript.Game.Module.Map.MapDefine;
 using CSharpScript.Game.Module.Map.Mark;
 using CSharpScript.Game.Module.WorldMap;
 
-// Token: 0x02001A99 RID: 6809
+// Token: 0x02000F58 RID: 3928
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreAreaItemData
 {
-	// Token: 0x1700107B RID: 4219
-	// (get) Token: 0x0600C960 RID: 51552 RVA: 0x002DFB3E File Offset: 0x002DDD3E
+	// Token: 0x170010A0 RID: 4256
+	// (get) Token: 0x06009D71 RID: 40305 RVA: 0x002EAC8A File Offset: 0x002E8E8A
 	public bool IsShowProgressBar
 	{
 		get
@@ -27,8 +26,8 @@ public class ExploreAreaItemData
 		}
 	}
 
-	// Token: 0x1700107C RID: 4220
-	// (get) Token: 0x0600C961 RID: 51553 RVA: 0x002DFB5C File Offset: 0x002DDD5C
+	// Token: 0x170010A1 RID: 4257
+	// (get) Token: 0x06009D72 RID: 40306 RVA: 0x002EACA8 File Offset: 0x002E8EA8
 	public bool IsFinishedPlayPoint
 	{
 		get
@@ -37,8 +36,8 @@ public class ExploreAreaItemData
 		}
 	}
 
-	// Token: 0x1700107D RID: 4221
-	// (get) Token: 0x0600C962 RID: 51554 RVA: 0x002DFB6F File Offset: 0x002DDD6F
+	// Token: 0x170010A2 RID: 4258
+	// (get) Token: 0x06009D73 RID: 40307 RVA: 0x002EACBB File Offset: 0x002E8EBB
 	public bool IsShowRecommendPlayPoint
 	{
 		get
@@ -47,7 +46,7 @@ public class ExploreAreaItemData
 		}
 	}
 
-	// Token: 0x0600C963 RID: 51555 RVA: 0x002DFB94 File Offset: 0x002DDD94
+	// Token: 0x06009D74 RID: 40308 RVA: 0x002EACE0 File Offset: 0x002E8EE0
 	public void Initialize(ExploreProgress config)
 	{
 		this.AreaId = config.Area;
@@ -87,7 +86,7 @@ public class ExploreAreaItemData
 		this.DescId = value.DescId;
 	}
 
-	// Token: 0x0600C964 RID: 51556 RVA: 0x002DFD70 File Offset: 0x002DDF70
+	// Token: 0x06009D75 RID: 40309 RVA: 0x002EAEBC File Offset: 0x002E90BC
 	public void Refresh(OneExploreItem info)
 	{
 		this.ExploreProgress = info.ExplorePercent;
@@ -98,31 +97,31 @@ public class ExploreAreaItemData
 		this.UpdateDefaultPlayPointData();
 	}
 
-	// Token: 0x0600C965 RID: 51557 RVA: 0x002DFDBF File Offset: 0x002DDFBF
+	// Token: 0x06009D76 RID: 40310 RVA: 0x002EAF0B File Offset: 0x002E910B
 	public int GetProgress()
 	{
 		return this.ExploreProgress;
 	}
 
-	// Token: 0x0600C966 RID: 51558 RVA: 0x002DFDC7 File Offset: 0x002DDFC7
+	// Token: 0x06009D77 RID: 40311 RVA: 0x002EAF13 File Offset: 0x002E9113
 	public int GetCurrentCount()
 	{
 		return this.CurrentCount;
 	}
 
-	// Token: 0x0600C967 RID: 51559 RVA: 0x002DFDCF File Offset: 0x002DDFCF
+	// Token: 0x06009D78 RID: 40312 RVA: 0x002EAF1B File Offset: 0x002E911B
 	public int GetTotalCount()
 	{
 		return this.TotalCount;
 	}
 
-	// Token: 0x0600C968 RID: 51560 RVA: 0x002DFDD7 File Offset: 0x002DDFD7
+	// Token: 0x06009D79 RID: 40313 RVA: 0x002EAF23 File Offset: 0x002E9123
 	public string GetNameId()
 	{
 		return this.TypeNameId;
 	}
 
-	// Token: 0x0600C969 RID: 51561 RVA: 0x002DFDE0 File Offset: 0x002DDFE0
+	// Token: 0x06009D7A RID: 40314 RVA: 0x002EAF2C File Offset: 0x002E912C
 	public string GetPlayDetailTitle()
 	{
 		string text = "PrefabTextItem_1918495092_Text";
@@ -135,45 +134,45 @@ public class ExploreAreaItemData
 		});
 	}
 
-	// Token: 0x0600C96A RID: 51562 RVA: 0x002DFE22 File Offset: 0x002DE022
+	// Token: 0x06009D7B RID: 40315 RVA: 0x002EAF6E File Offset: 0x002E916E
 	public bool IsPercent()
 	{
 		return this.CountMode == 0;
 	}
 
-	// Token: 0x0600C96B RID: 51563 RVA: 0x002DFE2D File Offset: 0x002DE02D
+	// Token: 0x06009D7C RID: 40316 RVA: 0x002EAF79 File Offset: 0x002E9179
 	public bool IsCompleted()
 	{
 		return this.ExploreProgress >= 100 || (this.CurrentCount > 0 && this.TotalCount > 0 && this.CurrentCount >= this.TotalCount);
 	}
 
-	// Token: 0x0600C96C RID: 51564 RVA: 0x002DFE60 File Offset: 0x002DE060
+	// Token: 0x06009D7D RID: 40317 RVA: 0x002EAFAC File Offset: 0x002E91AC
 	public bool HasPhantomSkill()
 	{
 		return this.PhantomSkillId != 0;
 	}
 
-	// Token: 0x0600C96D RID: 51565 RVA: 0x002DFE6B File Offset: 0x002DE06B
+	// Token: 0x06009D7E RID: 40318 RVA: 0x002EAFB7 File Offset: 0x002E91B7
 	[NullableContext(2)]
 	public string GetUnlockTextId()
 	{
 		return this.UnlockTextId;
 	}
 
-	// Token: 0x0600C96E RID: 51566 RVA: 0x002DFE73 File Offset: 0x002DE073
+	// Token: 0x06009D7F RID: 40319 RVA: 0x002EAFBF File Offset: 0x002E91BF
 	[NullableContext(2)]
 	public string GetLockTextId()
 	{
 		return this.LockTextId;
 	}
 
-	// Token: 0x0600C96F RID: 51567 RVA: 0x002DFE7B File Offset: 0x002DE07B
+	// Token: 0x06009D80 RID: 40320 RVA: 0x002EAFC7 File Offset: 0x002E91C7
 	public bool GetIsPhantomSkillUnlock()
 	{
 		return this.IsPhantomSkillUnlock;
 	}
 
-	// Token: 0x0600C970 RID: 51568 RVA: 0x002DFE84 File Offset: 0x002DE084
+	// Token: 0x06009D81 RID: 40321 RVA: 0x002EAFD0 File Offset: 0x002E91D0
 	public int? GetPhantomSkillHelpId()
 	{
 		ExploreTools? exploreConfigById = RouletteConfig.Instance.GetExploreConfigById(this.PhantomSkillId);
@@ -184,13 +183,13 @@ public class ExploreAreaItemData
 		return new int?(exploreConfigById.GetValueOrDefault().HelpId);
 	}
 
-	// Token: 0x0600C971 RID: 51569 RVA: 0x002DFEC9 File Offset: 0x002DE0C9
+	// Token: 0x06009D82 RID: 40322 RVA: 0x002EB015 File Offset: 0x002E9215
 	public bool IsUnlocked()
 	{
 		return this.IsUnlock;
 	}
 
-	// Token: 0x0600C972 RID: 51570 RVA: 0x002DFED4 File Offset: 0x002DE0D4
+	// Token: 0x06009D83 RID: 40323 RVA: 0x002EB020 File Offset: 0x002E9220
 	public string GetLockDetailId()
 	{
 		if (this.UnlockConditionId == 0)
@@ -205,7 +204,7 @@ public class ExploreAreaItemData
 		return "";
 	}
 
-	// Token: 0x0600C973 RID: 51571 RVA: 0x002DFF20 File Offset: 0x002DE120
+	// Token: 0x06009D84 RID: 40324 RVA: 0x002EB06C File Offset: 0x002E926C
 	private void UpdateDefaultPlayPointData()
 	{
 		if (this.PlayProgressDataList.Count > 0)
@@ -231,13 +230,13 @@ public class ExploreAreaItemData
 		}
 	}
 
-	// Token: 0x0600C974 RID: 51572 RVA: 0x002DFFBE File Offset: 0x002DE1BE
+	// Token: 0x06009D85 RID: 40325 RVA: 0x002EB10A File Offset: 0x002E930A
 	public bool IsSubType(int subType)
 	{
-		return this.SubTypes.Contains(subType);
+		return Array.IndexOf<int>(this.SubTypes, subType) >= 0;
 	}
 
-	// Token: 0x0600C975 RID: 51573 RVA: 0x002DFFCC File Offset: 0x002DE1CC
+	// Token: 0x06009D86 RID: 40326 RVA: 0x002EB120 File Offset: 0x002E9320
 	public void AddPlayPointData(IPlayPointInfo info)
 	{
 		this.PlayIdMap.Add(info.PlayId, info);
@@ -267,7 +266,7 @@ public class ExploreAreaItemData
 		});
 	}
 
-	// Token: 0x0600C976 RID: 51574 RVA: 0x002E00B3 File Offset: 0x002DE2B3
+	// Token: 0x06009D87 RID: 40327 RVA: 0x002EB207 File Offset: 0x002E9407
 	public void ClearPlayPointData()
 	{
 		this.PlayIdMap.Clear();
@@ -278,7 +277,7 @@ public class ExploreAreaItemData
 		this.PlayProgressDataList.Clear();
 	}
 
-	// Token: 0x0600C977 RID: 51575 RVA: 0x002E00E8 File Offset: 0x002DE2E8
+	// Token: 0x06009D88 RID: 40328 RVA: 0x002EB23C File Offset: 0x002E943C
 	public void PlayPointDataAddFinish()
 	{
 		if (this.PlayProgressDataList.Count == 0)
@@ -297,7 +296,7 @@ public class ExploreAreaItemData
 		}
 	}
 
-	// Token: 0x0600C978 RID: 51576 RVA: 0x002E019C File Offset: 0x002DE39C
+	// Token: 0x06009D89 RID: 40329 RVA: 0x002EB2F0 File Offset: 0x002E94F0
 	public bool HasSpecialPlayPoint()
 	{
 		using (List<IExplorePlayProgressItemData>.Enumerator enumerator = this.PlayProgressDataList.GetEnumerator())
@@ -313,7 +312,7 @@ public class ExploreAreaItemData
 		return false;
 	}
 
-	// Token: 0x0600C979 RID: 51577 RVA: 0x002E01F8 File Offset: 0x002DE3F8
+	// Token: 0x06009D8A RID: 40330 RVA: 0x002EB34C File Offset: 0x002E954C
 	public bool IsNearestPlayPointUnlock()
 	{
 		MapMark? nearTrackMapMark = this.GetNearTrackMapMark();
@@ -329,7 +328,7 @@ public class ExploreAreaItemData
 		return result;
 	}
 
-	// Token: 0x0600C97A RID: 51578 RVA: 0x002E025F File Offset: 0x002DE45F
+	// Token: 0x06009D8B RID: 40331 RVA: 0x002EB3B3 File Offset: 0x002E95B3
 	public void TrackPoint()
 	{
 		if (this.PlayIdMap.Count > 0)
@@ -340,14 +339,14 @@ public class ExploreAreaItemData
 		this.TrackEntityPoint();
 	}
 
-	// Token: 0x0600C97B RID: 51579 RVA: 0x002E0280 File Offset: 0x002DE480
+	// Token: 0x06009D8C RID: 40332 RVA: 0x002EB3D4 File Offset: 0x002E95D4
 	private void TrackEntityPoint()
 	{
 		int exploratoryDegree = this.SubTypes[0];
 		ExploreProgressController.Instance.ExploreEntityTraceRequest(exploratoryDegree, this.AreaId);
 	}
 
-	// Token: 0x0600C97C RID: 51580 RVA: 0x002E02A8 File Offset: 0x002DE4A8
+	// Token: 0x06009D8D RID: 40333 RVA: 0x002EB3FC File Offset: 0x002E95FC
 	public bool TrackPlayPoint()
 	{
 		if (this.TrackExploreType())
@@ -395,7 +394,7 @@ public class ExploreAreaItemData
 		return true;
 	}
 
-	// Token: 0x0600C97D RID: 51581 RVA: 0x002E03CC File Offset: 0x002DE5CC
+	// Token: 0x06009D8E RID: 40334 RVA: 0x002EB520 File Offset: 0x002E9720
 	public MapMark? GetNearTrackMapMark()
 	{
 		if (this.PlayIdMap.Count <= 0)
@@ -415,7 +414,7 @@ public class ExploreAreaItemData
 		return this.GetMarkByPointState(trackPlayState, playPointIdsByState);
 	}
 
-	// Token: 0x0600C97E RID: 51582 RVA: 0x002E042C File Offset: 0x002DE62C
+	// Token: 0x06009D8F RID: 40335 RVA: 0x002EB580 File Offset: 0x002E9780
 	public MapMark? GetMarkByPointState(EPlayPointState state, List<IPlayPointInfo> playIds)
 	{
 		EExploreTrackType eexploreTrackType = (state == EPlayPointState.Locked) ? this.LockTrackType : this.UnlockTrackType;
@@ -430,14 +429,14 @@ public class ExploreAreaItemData
 		return this.GetMinMarkIdPlayPoint(playIds);
 	}
 
-	// Token: 0x0600C97F RID: 51583 RVA: 0x002E0470 File Offset: 0x002DE670
+	// Token: 0x06009D90 RID: 40336 RVA: 0x002EB5C4 File Offset: 0x002E97C4
 	public bool GetPlayIdIsUnlock(int playId)
 	{
 		IPlayPointInfo playPointInfo;
 		return !this.PlayIdMap.TryGetValue(playId, out playPointInfo) || playPointInfo.IsUnlock;
 	}
 
-	// Token: 0x0600C980 RID: 51584 RVA: 0x002E0498 File Offset: 0x002DE698
+	// Token: 0x06009D91 RID: 40337 RVA: 0x002EB5EC File Offset: 0x002E97EC
 	private void TrackLockedPlayPointMark(MapMark nearMark)
 	{
 		IPlayPointInfo findPlayIdInfo = this.FindPlayIdInfo;
@@ -458,7 +457,7 @@ public class ExploreAreaItemData
 		EventSystem.Instance.Emit<NavigateMarkShowRange>(EEventName.NavigateMarkAndShowRange, navigateMarkShowRange);
 	}
 
-	// Token: 0x0600C981 RID: 51585 RVA: 0x002E0530 File Offset: 0x002DE730
+	// Token: 0x06009D92 RID: 40338 RVA: 0x002EB684 File Offset: 0x002E9884
 	private void FindClearPlayPointMark()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ExploreClearPlayPointMark);
@@ -486,7 +485,7 @@ public class ExploreAreaItemData
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600C982 RID: 51586 RVA: 0x002E056C File Offset: 0x002DE76C
+	// Token: 0x06009D93 RID: 40339 RVA: 0x002EB6C0 File Offset: 0x002E98C0
 	private void FindQuestMark(string clearId)
 	{
 		int questId = int.Parse(clearId);
@@ -518,7 +517,7 @@ public class ExploreAreaItemData
 		this.CheckClearFindMarkIsHideRange(valueOrDefault2, EMarkType.Quest);
 	}
 
-	// Token: 0x0600C983 RID: 51587 RVA: 0x002E063C File Offset: 0x002DE83C
+	// Token: 0x06009D94 RID: 40340 RVA: 0x002EB790 File Offset: 0x002E9990
 	private void FindPlayPointMark(string clearId)
 	{
 		int playId = int.Parse(clearId);
@@ -537,7 +536,7 @@ public class ExploreAreaItemData
 		this.CheckClearFindMarkIsHideRange(mapMarkByPlayId.Value.MarkId, (EMarkType)mapMarkByPlayId.Value.ObjectType);
 	}
 
-	// Token: 0x0600C984 RID: 51588 RVA: 0x002E06E0 File Offset: 0x002DE8E0
+	// Token: 0x06009D95 RID: 40341 RVA: 0x002EB834 File Offset: 0x002E9A34
 	private void CheckClearFindMarkIsHideRange(int markId, EMarkType markType)
 	{
 		NavigateMarkShowRange navigateMarkShowRangeInfo = WorldMapModel.Instance.NavigateMarkShowRangeInfo;
@@ -547,7 +546,7 @@ public class ExploreAreaItemData
 		}
 	}
 
-	// Token: 0x0600C985 RID: 51589 RVA: 0x002E0720 File Offset: 0x002DE920
+	// Token: 0x06009D96 RID: 40342 RVA: 0x002EB874 File Offset: 0x002E9A74
 	private bool TrackExploreType()
 	{
 		if (this.PlayIdMap.Count > 0)
@@ -564,7 +563,7 @@ public class ExploreAreaItemData
 		return true;
 	}
 
-	// Token: 0x0600C986 RID: 51590 RVA: 0x002E078C File Offset: 0x002DE98C
+	// Token: 0x06009D97 RID: 40343 RVA: 0x002EB8E0 File Offset: 0x002E9AE0
 	private EPlayPointState GetTrackPlayState()
 	{
 		EPlayPointState result = EPlayPointState.Locked;
@@ -575,7 +574,7 @@ public class ExploreAreaItemData
 		return result;
 	}
 
-	// Token: 0x0600C987 RID: 51591 RVA: 0x002E07A8 File Offset: 0x002DE9A8
+	// Token: 0x06009D98 RID: 40344 RVA: 0x002EB8FC File Offset: 0x002E9AFC
 	private List<IPlayPointInfo> GetPlayPointIdsByState(EPlayPointState findState)
 	{
 		List<IPlayPointInfo> list = new List<IPlayPointInfo>();
@@ -590,7 +589,7 @@ public class ExploreAreaItemData
 		return list;
 	}
 
-	// Token: 0x0600C988 RID: 51592 RVA: 0x002E0818 File Offset: 0x002DEA18
+	// Token: 0x06009D99 RID: 40345 RVA: 0x002EB96C File Offset: 0x002E9B6C
 	private MapMark? GetNearMapMarkByPlayIds(List<IPlayPointInfo> infoList)
 	{
 		if (infoList.Count == 0)
@@ -633,8 +632,8 @@ public class ExploreAreaItemData
 		{
 			if (a.Item1.IsUnlock == b.Item1.IsUnlock)
 			{
-				global::Vector entityPosition = WorldMapModel.Instance.GetEntityPosition(a.Item2.Value.EntityConfigId, a.Item2.Value.MapId);
-				global::Vector entityPosition2 = WorldMapModel.Instance.GetEntityPosition(b.Item2.Value.EntityConfigId, b.Item2.Value.MapId);
+				global::Vector entityPosition = WorldMapModel.Instance.GetEntityPosition(a.Item2.Value.EntityConfigId, a.Item2.Value.MapId, false);
+				global::Vector entityPosition2 = WorldMapModel.Instance.GetEntityPosition(b.Item2.Value.EntityConfigId, b.Item2.Value.MapId, false);
 				entityPosition.DivisionEqual((double)(scale * 100));
 				entityPosition2.DivisionEqual((double)(scale * 100));
 				double num = global::Vector.DistSquared(myPos, entityPosition);
@@ -652,7 +651,7 @@ public class ExploreAreaItemData
 		return valueTuple.Item2;
 	}
 
-	// Token: 0x0600C989 RID: 51593 RVA: 0x002E0910 File Offset: 0x002DEB10
+	// Token: 0x06009D9A RID: 40346 RVA: 0x002EBA64 File Offset: 0x002E9C64
 	private MapMark? GetMinMarkIdPlayPoint(List<IPlayPointInfo> infoList)
 	{
 		if (infoList.Count == 0)
@@ -705,13 +704,13 @@ public class ExploreAreaItemData
 		return valueTuple.Item2;
 	}
 
-	// Token: 0x0600C98A RID: 51594 RVA: 0x002E09E4 File Offset: 0x002DEBE4
+	// Token: 0x06009D9B RID: 40347 RVA: 0x002EBB38 File Offset: 0x002E9D38
 	private MapMark? GetMapMarkByPlayInfo(IPlayPointInfo info)
 	{
 		return this.GetMapMarkByPlayId(info.PlayId);
 	}
 
-	// Token: 0x0600C98B RID: 51595 RVA: 0x002E09F4 File Offset: 0x002DEBF4
+	// Token: 0x06009D9C RID: 40348 RVA: 0x002EBB48 File Offset: 0x002E9D48
 	public MapMark? GetMapMarkByPlayId(int playId)
 	{
 		ExploreAreaData exploreAreaData = ExploreProgressModel.Instance.GetExploreAreaData(this.AreaId);
@@ -722,7 +721,7 @@ public class ExploreAreaItemData
 		return MapConfig.Instance.GetMapMarkByRelativeId(playId, exploreAreaData.GetSceneId());
 	}
 
-	// Token: 0x0600C98C RID: 51596 RVA: 0x002E0A30 File Offset: 0x002DEC30
+	// Token: 0x06009D9D RID: 40349 RVA: 0x002EBB84 File Offset: 0x002E9D84
 	public EPlayPointState[] GetPlayPointStateList()
 	{
 		EPlayPointState[] array = new EPlayPointState[this.PlayProgressDataList.Count];
@@ -733,31 +732,31 @@ public class ExploreAreaItemData
 		return array;
 	}
 
-	// Token: 0x0600C98D RID: 51597 RVA: 0x002E0A79 File Offset: 0x002DEC79
+	// Token: 0x06009D9E RID: 40350 RVA: 0x002EBBCD File Offset: 0x002E9DCD
 	public void LogInfo()
 	{
 	}
 
-	// Token: 0x0600C98E RID: 51598 RVA: 0x002E0A7B File Offset: 0x002DEC7B
+	// Token: 0x06009D9F RID: 40351 RVA: 0x002EBBCF File Offset: 0x002E9DCF
 	public void FinishNewRecommendPlay()
 	{
 		this.IsNewRecommendPlay = false;
 	}
 
-	// Token: 0x0600C98F RID: 51599 RVA: 0x002E0A84 File Offset: 0x002DEC84
+	// Token: 0x06009DA0 RID: 40352 RVA: 0x002EBBD8 File Offset: 0x002E9DD8
 	[NullableContext(2)]
 	public void SetSequenceData(ExploreAreaItemData data = null)
 	{
 		this.SequenceData = data;
 	}
 
-	// Token: 0x0600C990 RID: 51600 RVA: 0x002E0A8D File Offset: 0x002DEC8D
+	// Token: 0x06009DA1 RID: 40353 RVA: 0x002EBBE1 File Offset: 0x002E9DE1
 	public void SetFlagSequenceData(bool flag)
 	{
 		this.FlagSequenceData = flag;
 	}
 
-	// Token: 0x0600C991 RID: 51601 RVA: 0x002E0A96 File Offset: 0x002DEC96
+	// Token: 0x06009DA2 RID: 40354 RVA: 0x002EBBEA File Offset: 0x002E9DEA
 	public bool GetFlagSequenceDataAndClean()
 	{
 		bool flagSequenceData = this.FlagSequenceData;
@@ -765,7 +764,7 @@ public class ExploreAreaItemData
 		return flagSequenceData;
 	}
 
-	// Token: 0x0600C992 RID: 51602 RVA: 0x002E0AA8 File Offset: 0x002DECA8
+	// Token: 0x06009DA3 RID: 40355 RVA: 0x002EBBFC File Offset: 0x002E9DFC
 	public List<IExplorePlayProgressItemData> GetPlayProgressDataIgnoreHiddenList()
 	{
 		List<IExplorePlayProgressItemData> list = new List<IExplorePlayProgressItemData>();
@@ -789,7 +788,7 @@ public class ExploreAreaItemData
 		return list;
 	}
 
-	// Token: 0x0600C993 RID: 51603 RVA: 0x002E0B88 File Offset: 0x002DED88
+	// Token: 0x06009DA4 RID: 40356 RVA: 0x002EBCDC File Offset: 0x002E9EDC
 	public void SetEntityList(int[] entityList)
 	{
 		this.EntityList = entityList;
@@ -797,7 +796,7 @@ public class ExploreAreaItemData
 		this.CreateEntityMark();
 	}
 
-	// Token: 0x0600C994 RID: 51604 RVA: 0x002E0BA0 File Offset: 0x002DEDA0
+	// Token: 0x06009DA5 RID: 40357 RVA: 0x002EBCF4 File Offset: 0x002E9EF4
 	public void CalcEntityDistance()
 	{
 		if (this.EntityList == null || this.EntityList.Length < 2)
@@ -818,7 +817,7 @@ public class ExploreAreaItemData
 		for (int i = 0; i < this.EntityList.Length; i++)
 		{
 			int pbDataId = this.EntityList[i];
-			global::Vector entityPosition = WorldMapModel.Instance.GetEntityPosition(pbDataId, mapConfigId);
+			global::Vector entityPosition = WorldMapModel.Instance.GetEntityPosition(pbDataId, mapConfigId, false);
 			entityPosition.DivisionEqual((double)num);
 			double num4 = global::Vector.DistSquared(playerPosition, entityPosition);
 			if (num4 < num2)
@@ -837,7 +836,7 @@ public class ExploreAreaItemData
 		}
 	}
 
-	// Token: 0x0600C995 RID: 51605 RVA: 0x002E0CA8 File Offset: 0x002DEEA8
+	// Token: 0x06009DA6 RID: 40358 RVA: 0x002EBDFC File Offset: 0x002E9FFC
 	public void CreateEntityMark()
 	{
 		if (this.EntityList.Length == 0)
@@ -889,128 +888,128 @@ public class ExploreAreaItemData
 		});
 	}
 
-	// Token: 0x04005CB2 RID: 23730
+	// Token: 0x04005D81 RID: 23937
 	public int AreaId;
 
-	// Token: 0x04005CB3 RID: 23731
+	// Token: 0x04005D82 RID: 23938
 	public EExploreType ExploreType;
 
-	// Token: 0x04005CB4 RID: 23732
+	// Token: 0x04005D83 RID: 23939
 	public int ExploreProgressId;
 
-	// Token: 0x04005CB5 RID: 23733
+	// Token: 0x04005D84 RID: 23940
 	public int ConfigId;
 
-	// Token: 0x04005CB6 RID: 23734
+	// Token: 0x04005D85 RID: 23941
 	private int ExploreProgress;
 
-	// Token: 0x04005CB7 RID: 23735
+	// Token: 0x04005D86 RID: 23942
 	private int CurrentCount;
 
-	// Token: 0x04005CB8 RID: 23736
+	// Token: 0x04005D87 RID: 23943
 	private int TotalCount;
 
-	// Token: 0x04005CB9 RID: 23737
+	// Token: 0x04005D88 RID: 23944
 	[Nullable(2)]
 	private string TypeNameId;
 
-	// Token: 0x04005CBA RID: 23738
+	// Token: 0x04005D89 RID: 23945
 	private int PhantomSkillId;
 
-	// Token: 0x04005CBB RID: 23739
+	// Token: 0x04005D8A RID: 23946
 	[Nullable(2)]
 	private string UnlockTextId;
 
-	// Token: 0x04005CBC RID: 23740
+	// Token: 0x04005D8B RID: 23947
 	[Nullable(2)]
 	private string LockTextId;
 
-	// Token: 0x04005CBD RID: 23741
+	// Token: 0x04005D8C RID: 23948
 	private bool IsPhantomSkillUnlock;
 
-	// Token: 0x04005CBE RID: 23742
+	// Token: 0x04005D8D RID: 23949
 	private int CountMode;
 
-	// Token: 0x04005CBF RID: 23743
+	// Token: 0x04005D8E RID: 23950
 	public string Icon;
 
-	// Token: 0x04005CC0 RID: 23744
+	// Token: 0x04005D8F RID: 23951
 	public string DescBg;
 
-	// Token: 0x04005CC1 RID: 23745
+	// Token: 0x04005D90 RID: 23952
 	public int SortIndex;
 
-	// Token: 0x04005CC2 RID: 23746
+	// Token: 0x04005D91 RID: 23953
 	public string LockDescId;
 
-	// Token: 0x04005CC3 RID: 23747
+	// Token: 0x04005D92 RID: 23954
 	public string DescId;
 
-	// Token: 0x04005CC4 RID: 23748
+	// Token: 0x04005D93 RID: 23955
 	public int[] SubTypes;
 
-	// Token: 0x04005CC5 RID: 23749
+	// Token: 0x04005D94 RID: 23956
 	public int UnlockConditionId;
 
-	// Token: 0x04005CC6 RID: 23750
+	// Token: 0x04005D95 RID: 23957
 	public int AccessPathId;
 
-	// Token: 0x04005CC7 RID: 23751
+	// Token: 0x04005D96 RID: 23958
 	public Dictionary<int, int> SpecialPlayPointIndexMap = new Dictionary<int, int>();
 
-	// Token: 0x04005CC8 RID: 23752
+	// Token: 0x04005D97 RID: 23959
 	public bool IsRecommend;
 
-	// Token: 0x04005CC9 RID: 23753
+	// Token: 0x04005D98 RID: 23960
 	private bool IsShowProgress;
 
-	// Token: 0x04005CCA RID: 23754
+	// Token: 0x04005D99 RID: 23961
 	public bool IsShowTrackBtn;
 
-	// Token: 0x04005CCB RID: 23755
+	// Token: 0x04005D9A RID: 23962
 	public bool IsNewRecommendPlay;
 
-	// Token: 0x04005CCC RID: 23756
+	// Token: 0x04005D9B RID: 23963
 	[Nullable(2)]
 	public ExploreAreaItemData SequenceData;
 
-	// Token: 0x04005CCD RID: 23757
+	// Token: 0x04005D9C RID: 23964
 	public bool FlagSequenceData;
 
-	// Token: 0x04005CCE RID: 23758
+	// Token: 0x04005D9D RID: 23965
 	public readonly List<IExplorePlayProgressItemData> PlayProgressDataList = new List<IExplorePlayProgressItemData>();
 
-	// Token: 0x04005CCF RID: 23759
+	// Token: 0x04005D9E RID: 23966
 	public int PlayPointTotalCount;
 
-	// Token: 0x04005CD0 RID: 23760
+	// Token: 0x04005D9F RID: 23967
 	public int PlayPointCompletedCount;
 
-	// Token: 0x04005CD1 RID: 23761
+	// Token: 0x04005DA0 RID: 23968
 	public int PlayPointToBeCompletedCount;
 
-	// Token: 0x04005CD2 RID: 23762
+	// Token: 0x04005DA1 RID: 23969
 	public int PlayPointLockedCount;
 
-	// Token: 0x04005CD3 RID: 23763
+	// Token: 0x04005DA2 RID: 23970
 	public EExploreTrackType UnlockTrackType;
 
-	// Token: 0x04005CD4 RID: 23764
+	// Token: 0x04005DA3 RID: 23971
 	public EExploreTrackType LockTrackType;
 
-	// Token: 0x04005CD5 RID: 23765
+	// Token: 0x04005DA4 RID: 23972
 	public readonly Dictionary<int, IPlayPointInfo> PlayIdMap = new Dictionary<int, IPlayPointInfo>();
 
-	// Token: 0x04005CD6 RID: 23766
+	// Token: 0x04005DA5 RID: 23973
 	[Nullable(2)]
 	private IPlayPointInfo FindPlayIdInfo;
 
-	// Token: 0x04005CD7 RID: 23767
+	// Token: 0x04005DA6 RID: 23974
 	public string SpecialPlayerDesc;
 
-	// Token: 0x04005CD8 RID: 23768
+	// Token: 0x04005DA7 RID: 23975
 	private bool IsUnlock;
 
-	// Token: 0x04005CD9 RID: 23769
+	// Token: 0x04005DA8 RID: 23976
 	private int[] EntityList;
 }

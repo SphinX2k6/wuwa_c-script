@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200729F RID: 29343
+	// Token: 0x02007A74 RID: 31348
 	public class ITalkBackgroundImageByMcGenderT
 	{
-		// Token: 0x1700D9A1 RID: 55713
-		// (get) Token: 0x060340FD RID: 213245 RVA: 0x006FFA68 File Offset: 0x006FDC68
-		// (set) Token: 0x060340FE RID: 213246 RVA: 0x006FFA70 File Offset: 0x006FDC70
+		// Token: 0x1700E59A RID: 58778
+		// (get) Token: 0x06037401 RID: 226305 RVA: 0x00760E04 File Offset: 0x0075F004
+		// (set) Token: 0x06037402 RID: 226306 RVA: 0x00760E0C File Offset: 0x0075F00C
 		public ETalkBackgroundType Type { get; set; }
 
-		// Token: 0x1700D9A2 RID: 55714
-		// (get) Token: 0x060340FF RID: 213247 RVA: 0x006FFA79 File Offset: 0x006FDC79
-		// (set) Token: 0x06034100 RID: 213248 RVA: 0x006FFA81 File Offset: 0x006FDC81
+		// Token: 0x1700E59B RID: 58779
+		// (get) Token: 0x06037403 RID: 226307 RVA: 0x00760E15 File Offset: 0x0075F015
+		// (set) Token: 0x06037404 RID: 226308 RVA: 0x00760E1D File Offset: 0x0075F01D
 		public string ImageAssetMale { get; set; }
 
-		// Token: 0x1700D9A3 RID: 55715
-		// (get) Token: 0x06034101 RID: 213249 RVA: 0x006FFA8A File Offset: 0x006FDC8A
-		// (set) Token: 0x06034102 RID: 213250 RVA: 0x006FFA92 File Offset: 0x006FDC92
+		// Token: 0x1700E59C RID: 58780
+		// (get) Token: 0x06037405 RID: 226309 RVA: 0x00760E26 File Offset: 0x0075F026
+		// (set) Token: 0x06037406 RID: 226310 RVA: 0x00760E2E File Offset: 0x0075F02E
 		public string ImageAssetFemale { get; set; }
 
-		// Token: 0x06034103 RID: 213251 RVA: 0x006FFA9B File Offset: 0x006FDC9B
+		// Token: 0x06037407 RID: 226311 RVA: 0x00760E37 File Offset: 0x0075F037
 		public ITalkBackgroundImageByMcGenderT()
 		{
 			this.Type = ETalkBackgroundType.Clean;

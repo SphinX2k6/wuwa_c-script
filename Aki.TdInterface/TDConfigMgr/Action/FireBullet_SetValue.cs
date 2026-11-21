@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001726 RID: 5926
+	// Token: 0x020018A3 RID: 6307
 	public class FireBullet_SetValue
 	{
-		// Token: 0x04005013 RID: 20499
-		[Nullable(1)]
+		// Token: 0x04005442 RID: 21570
 		public IFireBulletType Type;
 
-		// Token: 0x04005014 RID: 20500
+		// Token: 0x04005443 RID: 21571
 		public EBulletLauncher? Launcher;
 	}
 }

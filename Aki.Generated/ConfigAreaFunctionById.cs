@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000A4 RID: 164
+	// Token: 0x020000AC RID: 172
 	public class ConfigAreaFunctionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003D9 RID: 985 RVA: 0x0006F6B7 File Offset: 0x0006D8B7
+		// Token: 0x06000409 RID: 1033 RVA: 0x00073F6B File Offset: 0x0007216B
 		static ConfigAreaFunctionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaFunctionById.CreateStaticDefaultValue), new Action(ConfigAreaFunctionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003DA RID: 986 RVA: 0x0006F6D8 File Offset: 0x0006D8D8
+		// Token: 0x0600040A RID: 1034 RVA: 0x00073F8C File Offset: 0x0007218C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaFunctionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003DB RID: 987 RVA: 0x0006F757 File Offset: 0x0006D957
+		// Token: 0x0600040B RID: 1035 RVA: 0x0007400B File Offset: 0x0007220B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaFunctionById.LogPair = null;
 			ConfigAreaFunctionById.HandleId = 0;
 		}
 
-		// Token: 0x060003DC RID: 988 RVA: 0x0006F765 File Offset: 0x0006D965
+		// Token: 0x0600040C RID: 1036 RVA: 0x00074019 File Offset: 0x00072219
 		public static void Init()
 		{
 			ConfigAreaFunctionById.HandleId = ConfigCommon.InitDataStatement(ConfigAreaFunctionById.HandleId, "db_areafunction.db", "select BinData from `AreaFunction` where Id=?");
 		}
 
-		// Token: 0x060003DD RID: 989 RVA: 0x0006F780 File Offset: 0x0006D980
+		// Token: 0x0600040D RID: 1037 RVA: 0x00074034 File Offset: 0x00072234
 		public static AreaFunction? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAreaFunctionById.HandleId, ConfigAreaFunctionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AreaFunction?(rootAsAreaFunction);
 		}
 
-		// Token: 0x04000460 RID: 1120
+		// Token: 0x04000498 RID: 1176
 		private const string DB = "db_areafunction.db";
 
-		// Token: 0x04000461 RID: 1121
+		// Token: 0x04000499 RID: 1177
 		private const string FILE = "k.可视化编辑/c.Csv/q.区域功能配置/*.csv*";
 
-		// Token: 0x04000462 RID: 1122
+		// Token: 0x0400049A RID: 1178
 		private const string TABLE = "AreaFunction";
 
-		// Token: 0x04000463 RID: 1123
+		// Token: 0x0400049B RID: 1179
 		private const string COMMAND = "select BinData from `AreaFunction` where Id=?";
 
-		// Token: 0x04000464 RID: 1124
+		// Token: 0x0400049C RID: 1180
 		private const string KEY_PREFIX = "AreaFunctionById";
 
-		// Token: 0x04000465 RID: 1125
+		// Token: 0x0400049D RID: 1181
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000466 RID: 1126
+		// Token: 0x0400049E RID: 1182
 		private static int HandleId;
 	}
 }

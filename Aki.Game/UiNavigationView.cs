@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002CD2 RID: 11474
+// Token: 0x0200222B RID: 8747
 public class UiNavigationView : UiPanelBase
 {
-	// Token: 0x0601812D RID: 98605 RVA: 0x0061F232 File Offset: 0x0061D432
+	// Token: 0x060159AA RID: 88490 RVA: 0x00644DEA File Offset: 0x00642FEA
 	protected override void OnBeforeShowImplement()
 	{
 		this.InitData();
 	}
 
-	// Token: 0x0601812E RID: 98606 RVA: 0x0061F23A File Offset: 0x0061D43A
+	// Token: 0x060159AB RID: 88491 RVA: 0x00644DF2 File Offset: 0x00642FF2
 	protected override void OnAfterShowImplement()
 	{
 		this.AfterActive();
 	}
 
-	// Token: 0x0601812F RID: 98607 RVA: 0x0061F242 File Offset: 0x0061D442
+	// Token: 0x060159AC RID: 88492 RVA: 0x00644DFA File Offset: 0x00642FFA
 	protected bool FindDefault()
 	{
 		return true;
 	}
 
-	// Token: 0x06018130 RID: 98608 RVA: 0x0061F245 File Offset: 0x0061D445
+	// Token: 0x060159AD RID: 88493 RVA: 0x00644DFD File Offset: 0x00642FFD
 	protected virtual void AfterActive()
 	{
 	}
 
-	// Token: 0x06018131 RID: 98609 RVA: 0x0061F247 File Offset: 0x0061D447
+	// Token: 0x060159AE RID: 88494 RVA: 0x00644DFF File Offset: 0x00642FFF
 	protected override void OnBeforeDestroyImplement()
 	{
 		UUIItem rootItem = this.RootItem;
@@ -39,13 +39,13 @@ public class UiNavigationView : UiPanelBase
 		}
 	}
 
-	// Token: 0x06018132 RID: 98610 RVA: 0x0061F264 File Offset: 0x0061D464
+	// Token: 0x060159AF RID: 88495 RVA: 0x00644E1C File Offset: 0x0064301C
 	private void InitData()
 	{
 		this.ViewName = base.GetRootItem().GetDisplayName();
 	}
 
-	// Token: 0x0400B314 RID: 45844
+	// Token: 0x0400B680 RID: 46720
 	[Nullable(1)]
 	protected string ViewName;
 }

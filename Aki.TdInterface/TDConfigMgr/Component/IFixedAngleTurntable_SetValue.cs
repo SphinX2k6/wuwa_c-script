@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000391 RID: 913
+	// Token: 0x020003DA RID: 986
 	public class IFixedAngleTurntable_SetValue
 	{
-		// Token: 0x04000EA5 RID: 3749
+		// Token: 0x04000F9C RID: 3996
 		public EControllerType Type;
 
-		// Token: 0x04000EA6 RID: 3750
+		// Token: 0x04000F9D RID: 3997
 		public int RotationSpeed;
 
-		// Token: 0x04000EA7 RID: 3751
-		[Nullable(1)]
+		// Token: 0x04000F9E RID: 3998
 		public List<IFixedAngleItem> ItemConfig;
 	}
 }

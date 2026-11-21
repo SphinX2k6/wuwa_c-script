@@ -7,18 +7,18 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x020044C2 RID: 17602
+	// Token: 0x02002F94 RID: 12180
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DecorationFollowerComponent : EntityComponent
 	{
-		// Token: 0x1700739B RID: 29595
-		// (get) Token: 0x0602D610 RID: 185872 RVA: 0x00A3D51D File Offset: 0x00A3B71D
-		// (set) Token: 0x0602D611 RID: 185873 RVA: 0x00A3D525 File Offset: 0x00A3B725
+		// Token: 0x17002DB9 RID: 11705
+		// (get) Token: 0x0601CE36 RID: 118326 RVA: 0x008D3C6D File Offset: 0x008D1E6D
+		// (set) Token: 0x0601CE37 RID: 118327 RVA: 0x008D3C75 File Offset: 0x008D1E75
 		public EFollowDecorationType? Type { get; private set; }
 
-		// Token: 0x1700739C RID: 29596
-		// (get) Token: 0x0602D612 RID: 185874 RVA: 0x00A3D530 File Offset: 0x00A3B730
+		// Token: 0x17002DBA RID: 11706
+		// (get) Token: 0x0601CE38 RID: 118328 RVA: 0x008D3C80 File Offset: 0x008D1E80
 		public bool IsChair
 		{
 			get
@@ -29,8 +29,8 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x1700739D RID: 29597
-		// (get) Token: 0x0602D613 RID: 185875 RVA: 0x00A3D558 File Offset: 0x00A3B758
+		// Token: 0x17002DBB RID: 11707
+		// (get) Token: 0x0601CE39 RID: 118329 RVA: 0x008D3CA8 File Offset: 0x008D1EA8
 		public ChairFollowerConfig ChairConfig
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x1700739E RID: 29598
-		// (get) Token: 0x0602D614 RID: 185876 RVA: 0x00A3D577 File Offset: 0x00A3B777
+		// Token: 0x17002DBC RID: 11708
+		// (get) Token: 0x0601CE3A RID: 118330 RVA: 0x008D3CC7 File Offset: 0x008D1EC7
 		public bool NeedExternalPerformanceControl
 		{
 			get
@@ -55,7 +55,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x0602D615 RID: 185877 RVA: 0x00A3D58C File Offset: 0x00A3B78C
+		// Token: 0x0601CE3B RID: 118331 RVA: 0x008D3CDC File Offset: 0x008D1EDC
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			FollowDecorationComponent followDecorationComponent = args.GetP1<CreateEntityData>().GetParam<DecorationFollowerComponent>() as FollowDecorationComponent;
@@ -69,7 +69,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x0602D616 RID: 185878 RVA: 0x00A3D5E8 File Offset: 0x00A3B7E8
+		// Token: 0x0601CE3C RID: 118332 RVA: 0x008D3D38 File Offset: 0x008D1F38
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private IDecorationFollowerConfig CreateTypeConfig(IFollowDecorationChairConfig decorationConfig)
@@ -84,7 +84,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return decorationFollowerConfig;
 		}
 
-		// Token: 0x0602D617 RID: 185879 RVA: 0x00A3D618 File Offset: 0x00A3B818
+		// Token: 0x0601CE3D RID: 118333 RVA: 0x008D3D68 File Offset: 0x008D1F68
 		protected override bool OnInit()
 		{
 			IDecorationFollowerConfig typeConfig = this.TypeConfig;
@@ -109,7 +109,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x0602D618 RID: 185880 RVA: 0x00A3D67C File Offset: 0x00A3B87C
+		// Token: 0x0601CE3E RID: 118334 RVA: 0x008D3DCC File Offset: 0x008D1FCC
 		protected override bool OnStart()
 		{
 			if (!this.IsChair)
@@ -129,14 +129,14 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x0602D619 RID: 185881 RVA: 0x00A3D6CB File Offset: 0x00A3B8CB
+		// Token: 0x0601CE3F RID: 118335 RVA: 0x008D3E1B File Offset: 0x008D201B
 		protected override bool OnClear()
 		{
 			this.ClearChairBindingRetry();
 			return base.OnClear();
 		}
 
-		// Token: 0x0602D61A RID: 185882 RVA: 0x00A3D6DC File Offset: 0x00A3B8DC
+		// Token: 0x0601CE40 RID: 118336 RVA: 0x008D3E2C File Offset: 0x008D202C
 		private void TryBindChairToOwnerHandler()
 		{
 			Entity entity = base.Entity;
@@ -216,7 +216,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x0602D61B RID: 185883 RVA: 0x00A3D838 File Offset: 0x00A3BA38
+		// Token: 0x0601CE41 RID: 118337 RVA: 0x008D3F88 File Offset: 0x008D2188
 		private void ScheduleChairBindingRetry()
 		{
 			if (this.ChairBindingRetryTimer != null)
@@ -231,7 +231,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}, (float)((this.ChairBindingRetryCount < 20) ? 500 : 5000), null, null, true, 1f);
 		}
 
-		// Token: 0x0602D61C RID: 185884 RVA: 0x00A3D889 File Offset: 0x00A3BA89
+		// Token: 0x0601CE42 RID: 118338 RVA: 0x008D3FD9 File Offset: 0x008D21D9
 		private void ClearChairBindingRetry()
 		{
 			if (this.ChairBindingRetryTimer != null)
@@ -242,7 +242,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ChairBindingRetryCount = 0;
 		}
 
-		// Token: 0x0602D61D RID: 185885 RVA: 0x00A3D8B4 File Offset: 0x00A3BAB4
+		// Token: 0x0601CE43 RID: 118339 RVA: 0x008D4004 File Offset: 0x008D2204
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -251,49 +251,67 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				return false;
 			}
 			DecorationFollowerComponent decorationFollowerComponent = (DecorationFollowerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ChairBindingRetryCount"))
+			this.ChairBindingRetryCount = decorationFollowerComponent.ChairBindingRetryCount;
+			if (decorationFollowerComponent.ChairBindingRetryTimer == null)
 			{
-				this.ChairBindingRetryCount = decorationFollowerComponent.ChairBindingRetryCount;
+				this.ChairBindingRetryTimer = null;
 			}
-			if (base.CanResetComponentProperty("ChairBindingRetryTimer"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChairBindingRetryTimer), "ChairBindingRetryTimer"))
 			{
-				if (decorationFollowerComponent.ChairBindingRetryTimer == null)
-				{
-					this.ChairBindingRetryTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.ChairBindingRetryTimer), "ChairBindingRetryTimer"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TypeConfig"))
+			if (decorationFollowerComponent.TypeConfig == null)
 			{
-				if (decorationFollowerComponent.TypeConfig == null)
-				{
-					this.TypeConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IDecorationFollowerConfig>(this.TypeConfig), "TypeConfig"))
-				{
-					return false;
-				}
+				this.TypeConfig = null;
 			}
-			if (base.CanResetComponentProperty("<Type>k__BackingField"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TypeConfig), "TypeConfig"))
 			{
-				this.Type = decorationFollowerComponent.Type;
+				return false;
 			}
+			this.Type = decorationFollowerComponent.Type;
 			return true;
 		}
 
-		// Token: 0x0401840D RID: 99341
+		// Token: 0x17002DBD RID: 11709
+		// (get) Token: 0x0601CE44 RID: 118340 RVA: 0x008D4092 File Offset: 0x008D2292
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17002DBE RID: 11710
+		// (get) Token: 0x0601CE45 RID: 118341 RVA: 0x008D4095 File Offset: 0x008D2295
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17002DBF RID: 11711
+		// (get) Token: 0x0601CE46 RID: 118342 RVA: 0x008D4098 File Offset: 0x008D2298
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0400F396 RID: 62358
 		private const int CHAIR_BINDING_FAST_RETRY_INTERVAL_MS = 500;
 
-		// Token: 0x0401840E RID: 99342
+		// Token: 0x0400F397 RID: 62359
 		private const int CHAIR_BINDING_FAST_RETRY_MAX_COUNT = 20;
 
-		// Token: 0x0401840F RID: 99343
+		// Token: 0x0400F398 RID: 62360
 		private const int CHAIR_BINDING_SLOW_RETRY_INTERVAL_MS = 5000;
 
-		// Token: 0x04018410 RID: 99344
+		// Token: 0x0400F399 RID: 62361
 		[Nullable(1)]
 		private static readonly Dictionary<EFollowDecorationType, Func<IDecorationFollowerConfig>> DecorationConfigFactory = new Dictionary<EFollowDecorationType, Func<IDecorationFollowerConfig>>
 		{
@@ -303,13 +321,13 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		};
 
-		// Token: 0x04018411 RID: 99345
+		// Token: 0x0400F39A RID: 62362
 		private int ChairBindingRetryCount;
 
-		// Token: 0x04018412 RID: 99346
+		// Token: 0x0400F39B RID: 62363
 		private TimerHandle ChairBindingRetryTimer;
 
-		// Token: 0x04018413 RID: 99347
+		// Token: 0x0400F39C RID: 62364
 		private IDecorationFollowerConfig TypeConfig;
 	}
 }

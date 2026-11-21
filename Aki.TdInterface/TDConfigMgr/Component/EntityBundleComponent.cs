@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000F9 RID: 249
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000102 RID: 258
 	public class EntityBundleComponent : IComponentBase
 	{
-		// Token: 0x060003E6 RID: 998 RVA: 0x0001CDBC File Offset: 0x0001AFBC
+		// Token: 0x060003EA RID: 1002 RVA: 0x0001D730 File Offset: 0x0001B930
 		private EntityBundleComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060003E7 RID: 999 RVA: 0x0001CDF4 File Offset: 0x0001AFF4
+		// Token: 0x060003EB RID: 1003 RVA: 0x0001D768 File Offset: 0x0001B968
 		public static EntityBundleComponent Create([Nullable(2)] EntityBundleComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060003E8 RID: 1000 RVA: 0x0001CE07 File Offset: 0x0001B007
+		// Token: 0x060003EC RID: 1004 RVA: 0x0001D77B File Offset: 0x0001B97B
 		public static EntityBundleComponent CreateFromSetValue([Nullable(2)] EntityBundleComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060003E9 RID: 1001 RVA: 0x0001CE1A File Offset: 0x0001B01A
+		// Token: 0x060003ED RID: 1005 RVA: 0x0001D78E File Offset: 0x0001B98E
 		public new EntityBundleComponent_SetValue ToSetValue()
 		{
 			return new EntityBundleComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700014E RID: 334
-		// (get) Token: 0x060003EA RID: 1002 RVA: 0x0001CE54 File Offset: 0x0001B054
-		// (set) Token: 0x060003EB RID: 1003 RVA: 0x0001CE8E File Offset: 0x0001B08E
+		// Token: 0x17000150 RID: 336
+		// (get) Token: 0x060003EE RID: 1006 RVA: 0x0001D7C8 File Offset: 0x0001B9C8
+		// (set) Token: 0x060003EF RID: 1007 RVA: 0x0001D802 File Offset: 0x0001BA02
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700014F RID: 335
-		// (get) Token: 0x060003EC RID: 1004 RVA: 0x0001CE9C File Offset: 0x0001B09C
-		// (set) Token: 0x060003ED RID: 1005 RVA: 0x0001CEC6 File Offset: 0x0001B0C6
+		// Token: 0x17000151 RID: 337
+		// (get) Token: 0x060003F0 RID: 1008 RVA: 0x0001D810 File Offset: 0x0001BA10
+		// (set) Token: 0x060003F1 RID: 1009 RVA: 0x0001D83A File Offset: 0x0001BA3A
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000150 RID: 336
-		// (get) Token: 0x060003EE RID: 1006 RVA: 0x0001CED4 File Offset: 0x0001B0D4
-		// (set) Token: 0x060003EF RID: 1007 RVA: 0x0001CEFF File Offset: 0x0001B0FF
+		// Token: 0x17000152 RID: 338
+		// (get) Token: 0x060003F2 RID: 1010 RVA: 0x0001D848 File Offset: 0x0001BA48
+		// (set) Token: 0x060003F3 RID: 1011 RVA: 0x0001D873 File Offset: 0x0001BA73
 		public virtual int BundleId
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000151 RID: 337
-		// (get) Token: 0x060003F0 RID: 1008 RVA: 0x0001CF10 File Offset: 0x0001B110
-		// (set) Token: 0x060003F1 RID: 1009 RVA: 0x0001CFA3 File Offset: 0x0001B1A3
+		// Token: 0x17000153 RID: 339
+		// (get) Token: 0x060003F4 RID: 1012 RVA: 0x0001D884 File Offset: 0x0001BA84
+		// (set) Token: 0x060003F5 RID: 1013 RVA: 0x0001D917 File Offset: 0x0001BB17
 		public virtual List<IEntityBundleChildInfo> ChildInfos
 		{
 			get
@@ -167,18 +165,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000538 RID: 1336
+		// Token: 0x04000562 RID: 1378
 		[Nullable(2)]
 		protected new EntityBundleComponent FbInstance;
 
-		// Token: 0x04000539 RID: 1337
+		// Token: 0x04000563 RID: 1379
 		[Nullable(2)]
 		protected new EntityBundleComponent_SetValue PocoInterface;
 
-		// Token: 0x0400053A RID: 1338
+		// Token: 0x04000564 RID: 1380
 		private List<IEntityBundleChildInfo> _ChildInfosCache;
 
-		// Token: 0x0400053B RID: 1339
+		// Token: 0x04000565 RID: 1381
 		private bool _ChildInfosInited;
 	}
 }

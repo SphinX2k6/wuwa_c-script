@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A1E RID: 27166
+	// Token: 0x020070CE RID: 28878
 	public class ILimitPlayerMoveT
 	{
-		// Token: 0x1700C984 RID: 51588
-		// (get) Token: 0x0602F897 RID: 194711 RVA: 0x00678C0E File Offset: 0x00676E0E
-		// (set) Token: 0x0602F898 RID: 194712 RVA: 0x00678C16 File Offset: 0x00676E16
+		// Token: 0x1700D384 RID: 54148
+		// (get) Token: 0x06032257 RID: 205399 RVA: 0x006C8F66 File Offset: 0x006C7166
+		// (set) Token: 0x06032258 RID: 205400 RVA: 0x006C8F6E File Offset: 0x006C716E
 		public ELimitPlayOperation Type { get; set; }
 
-		// Token: 0x1700C985 RID: 51589
-		// (get) Token: 0x0602F899 RID: 194713 RVA: 0x00678C1F File Offset: 0x00676E1F
-		// (set) Token: 0x0602F89A RID: 194714 RVA: 0x00678C27 File Offset: 0x00676E27
+		// Token: 0x1700D385 RID: 54149
+		// (get) Token: 0x06032259 RID: 205401 RVA: 0x006C8F77 File Offset: 0x006C7177
+		// (set) Token: 0x0603225A RID: 205402 RVA: 0x006C8F7F File Offset: 0x006C717F
 		public bool IsOnlyForward { get; set; }
 
-		// Token: 0x1700C986 RID: 51590
-		// (get) Token: 0x0602F89B RID: 194715 RVA: 0x00678C30 File Offset: 0x00676E30
-		// (set) Token: 0x0602F89C RID: 194716 RVA: 0x00678C38 File Offset: 0x00676E38
+		// Token: 0x1700D386 RID: 54150
+		// (get) Token: 0x0603225B RID: 205403 RVA: 0x006C8F88 File Offset: 0x006C7188
+		// (set) Token: 0x0603225C RID: 205404 RVA: 0x006C8F90 File Offset: 0x006C7190
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602F89D RID: 194717 RVA: 0x00678C41 File Offset: 0x00676E41
+		// Token: 0x0603225D RID: 205405 RVA: 0x006C8F99 File Offset: 0x006C7199
 		public ILimitPlayerMoveT()
 		{
 			this.Type = ELimitPlayOperation.AllowCamera;

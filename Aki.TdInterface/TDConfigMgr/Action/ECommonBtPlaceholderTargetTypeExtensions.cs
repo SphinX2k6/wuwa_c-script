@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022EB RID: 8939
+	// Token: 0x0200255A RID: 9562
 	public static class ECommonBtPlaceholderTargetTypeExtensions
 	{
-		// Token: 0x0600C3A0 RID: 50080 RVA: 0x001C9378 File Offset: 0x001C7578
+		// Token: 0x0600CF6F RID: 53103 RVA: 0x001E11C4 File Offset: 0x001DF3C4
 		public static string ToEnumString(this ECommonBtPlaceholderTargetType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3A1 RID: 50081 RVA: 0x001C93B0 File Offset: 0x001C75B0
+		// Token: 0x0600CF70 RID: 53104 RVA: 0x001E11FC File Offset: 0x001DF3FC
 		public static ECommonBtPlaceholderTargetType FromString(string name)
 		{
 			ECommonBtPlaceholderTargetType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3A2 RID: 50082 RVA: 0x001C93D9 File Offset: 0x001C75D9
+		// Token: 0x0600CF71 RID: 53105 RVA: 0x001E1225 File Offset: 0x001DF425
 		public static bool TryFromString(string name, out ECommonBtPlaceholderTargetType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C3A3 RID: 50083 RVA: 0x001C9412 File Offset: 0x001C7612
+		// Token: 0x0600CF72 RID: 53106 RVA: 0x001E125E File Offset: 0x001DF45E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C3A4 RID: 50084 RVA: 0x001C942A File Offset: 0x001C762A
+		// Token: 0x0600CF73 RID: 53107 RVA: 0x001E1276 File Offset: 0x001DF476
 		public static ECommonBtPlaceholderTargetType[] GetValues()
 		{
 			return new ECommonBtPlaceholderTargetType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C3A5 RID: 50085 RVA: 0x001C9436 File Offset: 0x001C7636
+		// Token: 0x0600CF74 RID: 53108 RVA: 0x001E1282 File Offset: 0x001DF482
 		public static string[] GetNames()
 		{
 			return new string[]

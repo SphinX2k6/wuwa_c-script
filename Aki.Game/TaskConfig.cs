@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001369 RID: 4969
+// Token: 0x0200081D RID: 2077
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class TaskConfig : ConfigBase
 {
-	// Token: 0x06008A88 RID: 35464 RVA: 0x001D9ABC File Offset: 0x001D7CBC
+	// Token: 0x06005E23 RID: 24099 RVA: 0x001E2918 File Offset: 0x001E0B18
 	public IReadOnlyList<MainLine> GetAllMainLineTask()
 	{
 		return ConfigMainLineAll.GetConfigList(true);
 	}
 
-	// Token: 0x06008A89 RID: 35465 RVA: 0x001D9AC4 File Offset: 0x001D7CC4
+	// Token: 0x06005E24 RID: 24100 RVA: 0x001E2920 File Offset: 0x001E0B20
 	public MainLine? GetMainLineTaskById(int taskId)
 	{
 		return ConfigMainLineById.GetConfig(taskId, true);
 	}
 
-	// Token: 0x06008A8A RID: 35466 RVA: 0x001D9ACD File Offset: 0x001D7CCD
+	// Token: 0x06005E25 RID: 24101 RVA: 0x001E2929 File Offset: 0x001E0B29
 	public IReadOnlyList<BranchLine> GetAllBranchLineTask()
 	{
 		return ConfigBranchLineAll.GetConfigList(true);
 	}
 
-	// Token: 0x06008A8B RID: 35467 RVA: 0x001D9AD5 File Offset: 0x001D7CD5
+	// Token: 0x06005E26 RID: 24102 RVA: 0x001E2931 File Offset: 0x001E0B31
 	public BranchLine? GetBranchLineTaskById(int taskId)
 	{
 		return ConfigBranchLineById.GetConfig(taskId, true);
 	}
 
-	// Token: 0x06008A8C RID: 35468 RVA: 0x001D9AE0 File Offset: 0x001D7CE0
+	// Token: 0x06005E27 RID: 24103 RVA: 0x001E293C File Offset: 0x001E0B3C
 	public BranchLine? GetBranchLineTaskByRealTaskId(int taskId)
 	{
 		IReadOnlyList<BranchLine> allBranchLineTask = this.GetAllBranchLineTask();
@@ -48,8 +48,8 @@ public class TaskConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x17000BC1 RID: 3009
-	// (get) Token: 0x06008A8D RID: 35469 RVA: 0x001D9B27 File Offset: 0x001D7D27
+	// Token: 0x17000BE1 RID: 3041
+	// (get) Token: 0x06005E28 RID: 24104 RVA: 0x001E2983 File Offset: 0x001E0B83
 	public static TaskConfig Instance
 	{
 		get
@@ -58,7 +58,7 @@ public class TaskConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06008A8E RID: 35470 RVA: 0x001D9B2E File Offset: 0x001D7D2E
+	// Token: 0x06005E29 RID: 24105 RVA: 0x001E298A File Offset: 0x001E0B8A
 	public static TaskConfig GetOrCreateInstance()
 	{
 		if (TaskConfig._Instance == null)
@@ -68,7 +68,7 @@ public class TaskConfig : ConfigBase
 		return TaskConfig._Instance;
 	}
 
-	// Token: 0x06008A8F RID: 35471 RVA: 0x001D9B42 File Offset: 0x001D7D42
+	// Token: 0x06005E2A RID: 24106 RVA: 0x001E299E File Offset: 0x001E0B9E
 	public static bool CreateInstance()
 	{
 		if (TaskConfig._Instance != null)
@@ -79,24 +79,24 @@ public class TaskConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06008A90 RID: 35472 RVA: 0x001D9B58 File Offset: 0x001D7D58
+	// Token: 0x06005E2B RID: 24107 RVA: 0x001E29B4 File Offset: 0x001E0BB4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008A91 RID: 35473 RVA: 0x001D9B5A File Offset: 0x001D7D5A
+	// Token: 0x06005E2C RID: 24108 RVA: 0x001E29B6 File Offset: 0x001E0BB6
 	public static void ResetStaticDefaultValue()
 	{
 		TaskConfig._Instance = null;
 	}
 
-	// Token: 0x06008A92 RID: 35474 RVA: 0x001D9B62 File Offset: 0x001D7D62
+	// Token: 0x06005E2D RID: 24109 RVA: 0x001E29BE File Offset: 0x001E0BBE
 	static TaskConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TaskConfig.CreateStaticDefaultValue), new Action(TaskConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003DB8 RID: 15800
+	// Token: 0x04003E50 RID: 15952
 	[Nullable(2)]
 	private static TaskConfig _Instance;
 }

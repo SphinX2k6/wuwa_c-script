@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003ECF RID: 16079
+	// Token: 0x0200430D RID: 17165
 	public struct IKuroSimpleCombatKillMonsterSystemConfig : IFlatbufferObject
 	{
-		// Token: 0x17006FA4 RID: 28580
-		// (get) Token: 0x06016BDD RID: 93149 RVA: 0x0034889A File Offset: 0x00346A9A
+		// Token: 0x17007593 RID: 30099
+		// (get) Token: 0x06018234 RID: 98868 RVA: 0x00371A66 File Offset: 0x0036FC66
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016BDE RID: 93150 RVA: 0x003488A7 File Offset: 0x00346AA7
+		// Token: 0x06018235 RID: 98869 RVA: 0x00371A73 File Offset: 0x0036FC73
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016BDF RID: 93151 RVA: 0x003488B0 File Offset: 0x00346AB0
+		// Token: 0x06018236 RID: 98870 RVA: 0x00371A7C File Offset: 0x0036FC7C
 		public static IKuroSimpleCombatKillMonsterSystemConfig GetRootAsIKuroSimpleCombatKillMonsterSystemConfig(ByteBuffer _bb)
 		{
 			return IKuroSimpleCombatKillMonsterSystemConfig.GetRootAsIKuroSimpleCombatKillMonsterSystemConfig(_bb, default(IKuroSimpleCombatKillMonsterSystemConfig));
 		}
 
-		// Token: 0x06016BE0 RID: 93152 RVA: 0x003488CC File Offset: 0x00346ACC
+		// Token: 0x06018237 RID: 98871 RVA: 0x00371A98 File Offset: 0x0036FC98
 		public static IKuroSimpleCombatKillMonsterSystemConfig GetRootAsIKuroSimpleCombatKillMonsterSystemConfig(ByteBuffer _bb, IKuroSimpleCombatKillMonsterSystemConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016BE1 RID: 93153 RVA: 0x003488E9 File Offset: 0x00346AE9
+		// Token: 0x06018238 RID: 98872 RVA: 0x00371AB5 File Offset: 0x0036FCB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016BE2 RID: 93154 RVA: 0x003488F8 File Offset: 0x00346AF8
+		// Token: 0x06018239 RID: 98873 RVA: 0x00371AC4 File Offset: 0x0036FCC4
 		public IKuroSimpleCombatKillMonsterSystemConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006FA5 RID: 28581
-		// (get) Token: 0x06016BE3 RID: 93155 RVA: 0x00348908 File Offset: 0x00346B08
+		// Token: 0x17007594 RID: 30100
+		// (get) Token: 0x0601823A RID: 98874 RVA: 0x00371AD4 File Offset: 0x0036FCD4
 		public EEnableSystemType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016BE4 RID: 93156 RVA: 0x00348944 File Offset: 0x00346B44
+		// Token: 0x0601823B RID: 98875 RVA: 0x00371B10 File Offset: 0x0036FD10
 		public static Offset<IKuroSimpleCombatKillMonsterSystemConfig> CreateIKuroSimpleCombatKillMonsterSystemConfig(FlatBufferBuilder builder, EEnableSystemType Type = EEnableSystemType.GradingSystem)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKuroSimpleCombatKillMonsterSystemConfig.EndIKuroSimpleCombatKillMonsterSystemConfig(builder);
 		}
 
-		// Token: 0x06016BE5 RID: 93157 RVA: 0x0034895A File Offset: 0x00346B5A
+		// Token: 0x0601823C RID: 98876 RVA: 0x00371B26 File Offset: 0x0036FD26
 		public static void StartIKuroSimpleCombatKillMonsterSystemConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06016BE6 RID: 93158 RVA: 0x00348963 File Offset: 0x00346B63
+		// Token: 0x0601823D RID: 98877 RVA: 0x00371B2F File Offset: 0x0036FD2F
 		public static void AddType(FlatBufferBuilder builder, EEnableSystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016BE7 RID: 93159 RVA: 0x0034896E File Offset: 0x00346B6E
+		// Token: 0x0601823E RID: 98878 RVA: 0x00371B3A File Offset: 0x0036FD3A
 		public static Offset<IKuroSimpleCombatKillMonsterSystemConfig> EndIKuroSimpleCombatKillMonsterSystemConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IKuroSimpleCombatKillMonsterSystemConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06016BE8 RID: 93160 RVA: 0x0034897C File Offset: 0x00346B7C
+		// Token: 0x0601823F RID: 98879 RVA: 0x00371B48 File Offset: 0x0036FD48
 		public IKuroSimpleCombatKillMonsterSystemConfigT UnPack()
 		{
 			IKuroSimpleCombatKillMonsterSystemConfigT kuroSimpleCombatKillMonsterSystemConfigT = new IKuroSimpleCombatKillMonsterSystemConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return kuroSimpleCombatKillMonsterSystemConfigT;
 		}
 
-		// Token: 0x06016BE9 RID: 93161 RVA: 0x00348997 File Offset: 0x00346B97
+		// Token: 0x06018240 RID: 98880 RVA: 0x00371B63 File Offset: 0x0036FD63
 		public void UnPackTo(IKuroSimpleCombatKillMonsterSystemConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06016BEA RID: 93162 RVA: 0x003489A8 File Offset: 0x00346BA8
+		// Token: 0x06018241 RID: 98881 RVA: 0x00371B74 File Offset: 0x0036FD74
 		public static Offset<IKuroSimpleCombatKillMonsterSystemConfig> Pack(FlatBufferBuilder builder, IKuroSimpleCombatKillMonsterSystemConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKuroSimpleCombatKillMonsterSystemConfig.CreateIKuroSimpleCombatKillMonsterSystemConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400B8AC RID: 47276
+		// Token: 0x0400C289 RID: 49801
 		private Table __p;
 	}
 }

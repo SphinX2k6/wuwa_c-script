@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000781 RID: 1921
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000822 RID: 2082
 	public class ITimeScheduleConfig
 	{
-		// Token: 0x060029AA RID: 10666 RVA: 0x0006DD84 File Offset: 0x0006BF84
+		// Token: 0x06002CCE RID: 11470 RVA: 0x00074F2C File Offset: 0x0007312C
 		private ITimeScheduleConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060029AB RID: 10667 RVA: 0x0006DDBC File Offset: 0x0006BFBC
+		// Token: 0x06002CCF RID: 11471 RVA: 0x00074F64 File Offset: 0x00073164
 		public static ITimeScheduleConfig Create([Nullable(2)] ITimeScheduleConfig instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060029AC RID: 10668 RVA: 0x0006DDCF File Offset: 0x0006BFCF
+		// Token: 0x06002CD0 RID: 11472 RVA: 0x00074F77 File Offset: 0x00073177
 		public static ITimeScheduleConfig CreateFromSetValue([Nullable(2)] ITimeScheduleConfig_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060029AD RID: 10669 RVA: 0x0006DDE2 File Offset: 0x0006BFE2
+		// Token: 0x06002CD1 RID: 11473 RVA: 0x00074F8A File Offset: 0x0007318A
 		public ITimeScheduleConfig_SetValue ToSetValue()
 		{
 			return new ITimeScheduleConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AF5 RID: 2805
-		// (get) Token: 0x060029AE RID: 10670 RVA: 0x0006DE19 File Offset: 0x0006C019
-		// (set) Token: 0x060029AF RID: 10671 RVA: 0x0006DE44 File Offset: 0x0006C044
+		// Token: 0x17000BB5 RID: 2997
+		// (get) Token: 0x06002CD2 RID: 11474 RVA: 0x00074FC1 File Offset: 0x000731C1
+		// (set) Token: 0x06002CD3 RID: 11475 RVA: 0x00074FEC File Offset: 0x000731EC
 		public virtual string TimeScheduleTag
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AF6 RID: 2806
-		// (get) Token: 0x060029B0 RID: 10672 RVA: 0x0006DE52 File Offset: 0x0006C052
-		// (set) Token: 0x060029B1 RID: 10673 RVA: 0x0006DE79 File Offset: 0x0006C079
+		// Token: 0x17000BB6 RID: 2998
+		// (get) Token: 0x06002CD4 RID: 11476 RVA: 0x00074FFA File Offset: 0x000731FA
+		// (set) Token: 0x06002CD5 RID: 11477 RVA: 0x00075021 File Offset: 0x00073221
 		public virtual List<int> TargetEntityIds
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AF7 RID: 2807
-		// (get) Token: 0x060029B2 RID: 10674 RVA: 0x0006DE88 File Offset: 0x0006C088
-		// (set) Token: 0x060029B3 RID: 10675 RVA: 0x0006DEE9 File Offset: 0x0006C0E9
+		// Token: 0x17000BB7 RID: 2999
+		// (get) Token: 0x06002CD6 RID: 11478 RVA: 0x00075030 File Offset: 0x00073230
+		// (set) Token: 0x06002CD7 RID: 11479 RVA: 0x00075091 File Offset: 0x00073291
 		[Nullable(2)]
 		public virtual ITimeScheduleGenerateDynamicEntity GenerateDynamicEntity
 		{
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AF8 RID: 2808
-		// (get) Token: 0x060029B4 RID: 10676 RVA: 0x0006DF00 File Offset: 0x0006C100
-		// (set) Token: 0x060029B5 RID: 10677 RVA: 0x0006DF61 File Offset: 0x0006C161
+		// Token: 0x17000BB8 RID: 3000
+		// (get) Token: 0x06002CD8 RID: 11480 RVA: 0x000750A8 File Offset: 0x000732A8
+		// (set) Token: 0x06002CD9 RID: 11481 RVA: 0x00075109 File Offset: 0x00073309
 		[Nullable(2)]
 		public virtual IConditionGroup Conditions
 		{
@@ -177,24 +175,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BEE RID: 7150
+		// Token: 0x04001DF3 RID: 7667
 		[Nullable(2)]
 		protected ITimeScheduleConfig FbInstance;
 
-		// Token: 0x04001BEF RID: 7151
+		// Token: 0x04001DF4 RID: 7668
 		[Nullable(2)]
 		protected ITimeScheduleConfig_SetValue PocoInterface;
 
-		// Token: 0x04001BF0 RID: 7152
+		// Token: 0x04001DF5 RID: 7669
 		private ITimeScheduleGenerateDynamicEntity _GenerateDynamicEntityCache;
 
-		// Token: 0x04001BF1 RID: 7153
+		// Token: 0x04001DF6 RID: 7670
 		private bool _GenerateDynamicEntityInited;
 
-		// Token: 0x04001BF2 RID: 7154
+		// Token: 0x04001DF7 RID: 7671
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x04001BF3 RID: 7155
+		// Token: 0x04001DF8 RID: 7672
 		private bool _ConditionsInited;
 	}
 }

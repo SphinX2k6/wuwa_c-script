@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 {
-	// Token: 0x020047DF RID: 18399
+	// Token: 0x02003710 RID: 14096
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 	})]
 	public class WorldMapNoteItemNew : GridProxyAbstract<WorldMapNoteItemData>
 	{
-		// Token: 0x06030329 RID: 197417 RVA: 0x00B2B92C File Offset: 0x00B29B2C
+		// Token: 0x06024AF9 RID: 150265 RVA: 0x00A5B7F8 File Offset: 0x00A599F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603032A RID: 197418 RVA: 0x00B2BA78 File Offset: 0x00B29C78
+		// Token: 0x06024AFA RID: 150266 RVA: 0x00A5B944 File Offset: 0x00A59B44
 		[NullableContext(1)]
 		public override void Refresh(WorldMapNoteItemData data, bool isSelected, int gridIndex)
 		{
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 			item4.SetUIActive(noteStyle == EMapNoteStyle.Available);
 		}
 
-		// Token: 0x0603032B RID: 197419 RVA: 0x00B2BB40 File Offset: 0x00B29D40
+		// Token: 0x06024AFB RID: 150267 RVA: 0x00A5BA0C File Offset: 0x00A59C0C
 		private void OnClick()
 		{
 			if (this.DataParam != null)
@@ -98,32 +98,32 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 			}
 		}
 
-		// Token: 0x04019F52 RID: 106322
+		// Token: 0x04014606 RID: 83462
 		[Nullable(2)]
 		private WorldMapNoteItemData DataParam;
 
-		// Token: 0x0200AA98 RID: 43672
+		// Token: 0x0200944A RID: 37962
 		public static class EChildType
 		{
-			// Token: 0x04033E68 RID: 212584
+			// Token: 0x0402E5EF RID: 189935
 			public const int SpriteIcon = 0;
 
-			// Token: 0x04033E69 RID: 212585
+			// Token: 0x0402E5F0 RID: 189936
 			public const int TxtDesc = 1;
 
-			// Token: 0x04033E6A RID: 212586
+			// Token: 0x0402E5F1 RID: 189937
 			public const int BtnNote = 2;
 
-			// Token: 0x04033E6B RID: 212587
+			// Token: 0x0402E5F2 RID: 189938
 			public const int ItemNormalBg = 3;
 
-			// Token: 0x04033E6C RID: 212588
+			// Token: 0x0402E5F3 RID: 189939
 			public const int ItemReceivedBg = 4;
 
-			// Token: 0x04033E6D RID: 212589
+			// Token: 0x0402E5F4 RID: 189940
 			public const int ItemAvailable = 5;
 
-			// Token: 0x04033E6E RID: 212590
+			// Token: 0x0402E5F5 RID: 189941
 			public const int ItemUnAvailable = 6;
 		}
 	}

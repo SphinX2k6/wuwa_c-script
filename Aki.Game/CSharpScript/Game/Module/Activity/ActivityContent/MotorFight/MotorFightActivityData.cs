@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x020063FE RID: 25598
+	// Token: 0x0200537C RID: 21372
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightActivityData : ActivityBaseData
 	{
-		// Token: 0x06040604 RID: 263684 RVA: 0x00F92C8C File Offset: 0x00F90E8C
+		// Token: 0x060352C5 RID: 217797 RVA: 0x00ED9C6C File Offset: 0x00ED7E6C
 		protected override void OnInit(ActivityData data)
 		{
 			if (data.MotorFightActivityPb == null)
@@ -29,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.InitRoleData();
 		}
 
-		// Token: 0x06040605 RID: 263685 RVA: 0x00F92D08 File Offset: 0x00F90F08
+		// Token: 0x060352C6 RID: 217798 RVA: 0x00ED9CE8 File Offset: 0x00ED7EE8
 		protected override void PhraseEx(ActivityData data)
 		{
 			MotorFightActivityPb motorFightActivityPb = data.MotorFightActivityPb;
@@ -48,13 +47,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.UpdateRoleData(motorFightActivityPb.UnlockedRole, false);
 		}
 
-		// Token: 0x06040606 RID: 263686 RVA: 0x00F92D8D File Offset: 0x00F90F8D
+		// Token: 0x060352C7 RID: 217799 RVA: 0x00ED9D6D File Offset: 0x00ED7F6D
 		public override bool GetExDataRedPointShowState()
 		{
 			return base.IsUnLock() && (this.IsLevelHasRedDot() || this.IsTaskHasRedDot() || this.IsTalentTreeHasRedDot() || this.IsHandBookHasRedDot());
 		}
 
-		// Token: 0x06040607 RID: 263687 RVA: 0x00F92DBC File Offset: 0x00F90FBC
+		// Token: 0x060352C8 RID: 217800 RVA: 0x00ED9D9C File Offset: 0x00ED7F9C
 		protected override bool GetExDataFinishShowState()
 		{
 			using (Dictionary<int, MotorFightLevelData>.ValueCollection.Enumerator enumerator = this.LevelDataMap.Values.GetEnumerator())
@@ -80,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return true;
 		}
 
-		// Token: 0x06040608 RID: 263688 RVA: 0x00F92E64 File Offset: 0x00F91064
+		// Token: 0x060352C9 RID: 217801 RVA: 0x00ED9E44 File Offset: 0x00ED8044
 		private void InitLevelData()
 		{
 			foreach (MotorFightLevel config in ConfigMotorFightLevelByActivityId.GetConfigList(base.Id, true))
@@ -109,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040609 RID: 263689 RVA: 0x00F92FD0 File Offset: 0x00F911D0
+		// Token: 0x060352CA RID: 217802 RVA: 0x00ED9FB0 File Offset: 0x00ED81B0
 		[NullableContext(2)]
 		public MotorFightLevelData GetLevelDataById(int id)
 		{
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return null;
 		}
 
-		// Token: 0x0604060A RID: 263690 RVA: 0x00F93020 File Offset: 0x00F91220
+		// Token: 0x060352CB RID: 217803 RVA: 0x00EDA000 File Offset: 0x00ED8200
 		public void UpdateLevelDataList(IReadOnlyList<MotorFightLevelPb> levelInfoList, bool needEmit = false)
 		{
 			foreach (MotorFightLevelPb motorFightLevelPb in levelInfoList)
@@ -147,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x0604060B RID: 263691 RVA: 0x00F930BC File Offset: 0x00F912BC
+		// Token: 0x060352CC RID: 217804 RVA: 0x00EDA09C File Offset: 0x00ED829C
 		public bool IsLevelHasRedDot()
 		{
 			using (Dictionary<int, MotorFightLevelData>.ValueCollection.Enumerator enumerator = this.LevelDataMap.Values.GetEnumerator())
@@ -163,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return false;
 		}
 
-		// Token: 0x0604060C RID: 263692 RVA: 0x00F9311C File Offset: 0x00F9131C
+		// Token: 0x060352CD RID: 217805 RVA: 0x00EDA0FC File Offset: 0x00ED82FC
 		public bool IsEndlessLevelUnlock()
 		{
 			foreach (MotorFightLevelData motorFightLevelData in this.LevelDataMap.Values)
@@ -176,32 +175,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return false;
 		}
 
-		// Token: 0x0604060D RID: 263693 RVA: 0x00F93188 File Offset: 0x00F91388
+		// Token: 0x060352CE RID: 217806 RVA: 0x00EDA168 File Offset: 0x00ED8368
 		public List<List<MotorFightLevelData>> GetLevelTreeList()
 		{
 			return this.LevelTreeList;
 		}
 
-		// Token: 0x0604060E RID: 263694 RVA: 0x00F93190 File Offset: 0x00F91390
+		// Token: 0x060352CF RID: 217807 RVA: 0x00EDA170 File Offset: 0x00ED8370
 		public void SetLastSavedLevelData(MotorFightLastSaveData lastSavedLevelData)
 		{
 			this.LastSavedLevelData = lastSavedLevelData;
 		}
 
-		// Token: 0x0604060F RID: 263695 RVA: 0x00F93199 File Offset: 0x00F91399
+		// Token: 0x060352D0 RID: 217808 RVA: 0x00EDA179 File Offset: 0x00ED8379
 		[NullableContext(2)]
 		public MotorFightLastSaveData GetLastSavedLevelData()
 		{
 			return this.LastSavedLevelData;
 		}
 
-		// Token: 0x06040610 RID: 263696 RVA: 0x00F931A1 File Offset: 0x00F913A1
+		// Token: 0x060352D1 RID: 217809 RVA: 0x00EDA181 File Offset: 0x00ED8381
 		public bool HasLastSavedLevelData()
 		{
 			return this.LastSavedLevelData != null;
 		}
 
-		// Token: 0x06040611 RID: 263697 RVA: 0x00F931AC File Offset: 0x00F913AC
+		// Token: 0x060352D2 RID: 217810 RVA: 0x00EDA18C File Offset: 0x00ED838C
 		private void InitTaskData()
 		{
 			foreach (MotorFightTask config in ConfigMotorFightTaskByActivityId.GetConfigList(base.Id, true))
@@ -216,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040612 RID: 263698 RVA: 0x00F93258 File Offset: 0x00F91458
+		// Token: 0x060352D3 RID: 217811 RVA: 0x00EDA238 File Offset: 0x00ED8438
 		[NullableContext(2)]
 		private MotorFightTaskData GetMotorFightTaskData(int taskId)
 		{
@@ -234,7 +233,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return null;
 		}
 
-		// Token: 0x06040613 RID: 263699 RVA: 0x00F932A8 File Offset: 0x00F914A8
+		// Token: 0x060352D4 RID: 217812 RVA: 0x00EDA288 File Offset: 0x00ED8488
 		public void UpdateTaskData(IReadOnlyList<ConditionTask> taskList, bool needEmit = false)
 		{
 			foreach (ConditionTask conditionTask in taskList)
@@ -250,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040614 RID: 263700 RVA: 0x00F9333C File Offset: 0x00F9153C
+		// Token: 0x060352D5 RID: 217813 RVA: 0x00EDA31C File Offset: 0x00ED851C
 		public void RequestTaskReward(int tabId)
 		{
 			List<MotorFightTaskData> taskDataList = this.GetTaskDataList(tabId);
@@ -265,7 +264,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			MotorFightController.Instance.RequestTaskReward(list);
 		}
 
-		// Token: 0x06040615 RID: 263701 RVA: 0x00F933B0 File Offset: 0x00F915B0
+		// Token: 0x060352D6 RID: 217814 RVA: 0x00EDA390 File Offset: 0x00ED8590
 		public void UpdateTaskRewardStatus(List<ConditionTask> taskInfoList, bool needEmit = false)
 		{
 			foreach (ConditionTask conditionTask in taskInfoList)
@@ -278,7 +277,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040616 RID: 263702 RVA: 0x00F93434 File Offset: 0x00F91634
+		// Token: 0x060352D7 RID: 217815 RVA: 0x00EDA414 File Offset: 0x00ED8614
 		public void GetTaskReward(List<int> taskIds)
 		{
 			foreach (int taskId in taskIds)
@@ -288,7 +287,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06040617 RID: 263703 RVA: 0x00F934A0 File Offset: 0x00F916A0
+		// Token: 0x060352D8 RID: 217816 RVA: 0x00EDA480 File Offset: 0x00ED8680
 		public bool IsTaskHasRedDot()
 		{
 			using (Dictionary<int, MotorFightTaskData>.ValueCollection.Enumerator enumerator = this.TaskDataMap.Values.GetEnumerator())
@@ -304,7 +303,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return false;
 		}
 
-		// Token: 0x06040618 RID: 263704 RVA: 0x00F93500 File Offset: 0x00F91700
+		// Token: 0x060352D9 RID: 217817 RVA: 0x00EDA4E0 File Offset: 0x00ED86E0
 		public bool IsTaskHasRedDotByTab(int tabId)
 		{
 			List<MotorFightTaskData> list;
@@ -321,7 +320,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return false;
 		}
 
-		// Token: 0x06040619 RID: 263705 RVA: 0x00F9356C File Offset: 0x00F9176C
+		// Token: 0x060352DA RID: 217818 RVA: 0x00EDA54C File Offset: 0x00ED874C
 		public List<MotorFightTaskData> GetTaskDataList(int tabId)
 		{
 			List<MotorFightTaskData> list2;
@@ -330,7 +329,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return list;
 		}
 
-		// Token: 0x0604061A RID: 263706 RVA: 0x00F935A3 File Offset: 0x00F917A3
+		// Token: 0x060352DB RID: 217819 RVA: 0x00EDA583 File Offset: 0x00ED8783
 		private int SortTaskData(MotorFightTaskData a, MotorFightTaskData b)
 		{
 			if (a.Status != b.Status)
@@ -340,13 +339,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return a.Id - b.Id;
 		}
 
-		// Token: 0x0604061B RID: 263707 RVA: 0x00F935CE File Offset: 0x00F917CE
+		// Token: 0x060352DC RID: 217820 RVA: 0x00EDA5AE File Offset: 0x00ED87AE
 		public int GetTotalTaskNum()
 		{
 			return this.TaskDataMap.Count;
 		}
 
-		// Token: 0x0604061C RID: 263708 RVA: 0x00F935DC File Offset: 0x00F917DC
+		// Token: 0x060352DD RID: 217821 RVA: 0x00EDA5BC File Offset: 0x00ED87BC
 		public int GetFinishedTaskNum()
 		{
 			int num = 0;
@@ -363,7 +362,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return num;
 		}
 
-		// Token: 0x0604061D RID: 263709 RVA: 0x00F9363C File Offset: 0x00F9183C
+		// Token: 0x060352DE RID: 217822 RVA: 0x00EDA61C File Offset: 0x00ED881C
 		public List<MotorFightTaskTab> GetMotorFightTaskTabList()
 		{
 			if (this.MotorFightTaskTabList.Count == 0)
@@ -374,7 +373,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return this.MotorFightTaskTabList;
 		}
 
-		// Token: 0x0604061E RID: 263710 RVA: 0x00F93678 File Offset: 0x00F91878
+		// Token: 0x060352DF RID: 217823 RVA: 0x00EDA658 File Offset: 0x00ED8858
 		private void InitMotorFightItemData()
 		{
 			foreach (MotorFightItem config in ConfigMotorFightItemByActivityId.GetConfigList(base.Id, true))
@@ -393,7 +392,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x0604061F RID: 263711 RVA: 0x00F9372C File Offset: 0x00F9192C
+		// Token: 0x060352E0 RID: 217824 RVA: 0x00EDA70C File Offset: 0x00ED890C
 		public void UpdateMotorFightItemDataList(IReadOnlyList<int> itemIdList, bool needEmit = false)
 		{
 			foreach (int itemId in itemIdList)
@@ -406,7 +405,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040620 RID: 263712 RVA: 0x00F93790 File Offset: 0x00F91990
+		// Token: 0x060352E1 RID: 217825 RVA: 0x00EDA770 File Offset: 0x00ED8970
 		public void UpdateMotorFightItemData(int itemId)
 		{
 			MotorFightItemData motorFightItemData = this.GetMotorFightItemData(itemId);
@@ -417,7 +416,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			motorFightItemData.IsUnLock = true;
 		}
 
-		// Token: 0x06040621 RID: 263713 RVA: 0x00F937B0 File Offset: 0x00F919B0
+		// Token: 0x060352E2 RID: 217826 RVA: 0x00EDA790 File Offset: 0x00ED8990
 		[NullableContext(2)]
 		public MotorFightItemData GetMotorFightItemData(int id)
 		{
@@ -438,7 +437,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return null;
 		}
 
-		// Token: 0x06040622 RID: 263714 RVA: 0x00F9381C File Offset: 0x00F91A1C
+		// Token: 0x060352E3 RID: 217827 RVA: 0x00EDA7FC File Offset: 0x00ED89FC
 		public Tuple<int, int> GetItemUnlockNum(int type)
 		{
 			int num = 0;
@@ -460,7 +459,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return new Tuple<int, int>(num, list.Count);
 		}
 
-		// Token: 0x06040623 RID: 263715 RVA: 0x00F93894 File Offset: 0x00F91A94
+		// Token: 0x060352E4 RID: 217828 RVA: 0x00EDA874 File Offset: 0x00ED8A74
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetAllItemUnlockNum()
 		{
@@ -478,7 +477,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return new ValueTuple<int, int>(num, this.ItemDataMap.Count);
 		}
 
-		// Token: 0x06040624 RID: 263716 RVA: 0x00F93904 File Offset: 0x00F91B04
+		// Token: 0x060352E5 RID: 217829 RVA: 0x00EDA8E4 File Offset: 0x00ED8AE4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -497,12 +496,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 				instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 				return null;
 			}
-			return (from x in source
-			orderby x.IsUnLock descending, x.Quality descending, x.Id
-			select x).ToList<MotorFightItemData>();
+			return NoLinq.SortToList<MotorFightItemData>(source, delegate(MotorFightItemData left, MotorFightItemData right)
+			{
+				int num = right.IsUnLock.CompareTo(left.IsUnLock);
+				if (num != 0)
+				{
+					return num;
+				}
+				num = right.Quality.CompareTo(left.Quality);
+				if (num == 0)
+				{
+					return left.Id.CompareTo(right.Id);
+				}
+				return num;
+			});
 		}
 
-		// Token: 0x06040625 RID: 263717 RVA: 0x00F939C4 File Offset: 0x00F91BC4
+		// Token: 0x060352E6 RID: 217830 RVA: 0x00EDA958 File Offset: 0x00ED8B58
 		public bool IsHandBookHasRedDot()
 		{
 			using (Dictionary<int, MotorFightItemData>.ValueCollection.Enumerator enumerator = this.ItemDataMap.Values.GetEnumerator())
@@ -518,7 +528,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return false;
 		}
 
-		// Token: 0x06040626 RID: 263718 RVA: 0x00F93A24 File Offset: 0x00F91C24
+		// Token: 0x060352E7 RID: 217831 RVA: 0x00EDA9B8 File Offset: 0x00ED8BB8
 		public void ReadHandBookRedDot()
 		{
 			foreach (MotorFightItemData motorFightItemData in this.ItemDataMap.Values)
@@ -531,7 +541,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06040627 RID: 263719 RVA: 0x00F93A9C File Offset: 0x00F91C9C
+		// Token: 0x060352E8 RID: 217832 RVA: 0x00EDAA30 File Offset: 0x00ED8C30
 		public List<MotorFightItemType> GetMotorFightItemTypeList()
 		{
 			if (this.MotorFightItemTypeList.Count == 0)
@@ -542,7 +552,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return this.MotorFightItemTypeList;
 		}
 
-		// Token: 0x06040628 RID: 263720 RVA: 0x00F93AD0 File Offset: 0x00F91CD0
+		// Token: 0x060352E9 RID: 217833 RVA: 0x00EDAA64 File Offset: 0x00ED8C64
 		private void InitMotorFightTalentData()
 		{
 			foreach (MotorFightTalent config in ConfigMotorFightTalentByActivityId.GetConfigList(base.Id, true))
@@ -566,7 +576,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.TalentList.Sort((MotorFightTalentData a, MotorFightTalentData b) => a.Id - b.Id);
 		}
 
-		// Token: 0x06040629 RID: 263721 RVA: 0x00F93C0C File Offset: 0x00F91E0C
+		// Token: 0x060352EA RID: 217834 RVA: 0x00EDABA0 File Offset: 0x00ED8DA0
 		public void UpdateMotorFightTalentDataList(IReadOnlyList<MotorFightTalentPb> talentInfoList, bool needEmit = false)
 		{
 			foreach (MotorFightTalentPb motorFightTalentPb in talentInfoList)
@@ -584,7 +594,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x0604062A RID: 263722 RVA: 0x00F93C90 File Offset: 0x00F91E90
+		// Token: 0x060352EB RID: 217835 RVA: 0x00EDAC24 File Offset: 0x00ED8E24
 		public void UpdateMotorFightTalentData(int talentId)
 		{
 			MotorFightTalentData motorFightTalentData = this.GetMotorFightTalentData(talentId);
@@ -596,7 +606,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0604062B RID: 263723 RVA: 0x00F93CC8 File Offset: 0x00F91EC8
+		// Token: 0x060352EC RID: 217836 RVA: 0x00EDAC5C File Offset: 0x00ED8E5C
 		[NullableContext(2)]
 		public MotorFightTalentData GetMotorFightTalentData(int id)
 		{
@@ -614,13 +624,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return null;
 		}
 
-		// Token: 0x0604062C RID: 263724 RVA: 0x00F93D17 File Offset: 0x00F91F17
+		// Token: 0x060352ED RID: 217837 RVA: 0x00EDACAB File Offset: 0x00ED8EAB
 		public List<List<MotorFightTalentData>> GetTalentTreeList()
 		{
 			return this.TalentTreeList;
 		}
 
-		// Token: 0x0604062D RID: 263725 RVA: 0x00F93D20 File Offset: 0x00F91F20
+		// Token: 0x060352EE RID: 217838 RVA: 0x00EDACB4 File Offset: 0x00ED8EB4
 		public string GetTalentProgress()
 		{
 			int count = this.TalentDataMap.Count;
@@ -642,13 +652,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0604062E RID: 263726 RVA: 0x00F93DB8 File Offset: 0x00F91FB8
+		// Token: 0x060352EF RID: 217839 RVA: 0x00EDAD4C File Offset: 0x00ED8F4C
 		public int GetTalentCoinNum()
 		{
 			return InventoryModel.Instance.GetItemCountByConfigId(this.TalentTreeItemId, 0);
 		}
 
-		// Token: 0x0604062F RID: 263727 RVA: 0x00F93DCC File Offset: 0x00F91FCC
+		// Token: 0x060352F0 RID: 217840 RVA: 0x00EDAD60 File Offset: 0x00ED8F60
 		public unsafe bool IsPreNodeAllUnlock(MotorFightTalentData data)
 		{
 			Span<int> preNode = data.PreNode;
@@ -664,13 +674,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return true;
 		}
 
-		// Token: 0x06040630 RID: 263728 RVA: 0x00F93E17 File Offset: 0x00F92017
+		// Token: 0x060352F1 RID: 217841 RVA: 0x00EDADAB File Offset: 0x00ED8FAB
 		public bool IsTalentCanUnlock(MotorFightTalentData data)
 		{
 			return !data.IsUnLock && data.IsFinishPreCondition && this.IsPreNodeAllUnlock(data) && this.GetTalentCoinNum() >= data.Cost;
 		}
 
-		// Token: 0x06040631 RID: 263729 RVA: 0x00F93E44 File Offset: 0x00F92044
+		// Token: 0x060352F2 RID: 217842 RVA: 0x00EDADD8 File Offset: 0x00ED8FD8
 		public bool IsTalentTreeHasRedDot()
 		{
 			foreach (MotorFightTalentData data in this.TalentDataMap.Values)
@@ -683,7 +693,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return false;
 		}
 
-		// Token: 0x06040632 RID: 263730 RVA: 0x00F93EA8 File Offset: 0x00F920A8
+		// Token: 0x060352F3 RID: 217843 RVA: 0x00EDAE3C File Offset: 0x00ED903C
 		public int GetNextCanUnlockTalentId()
 		{
 			int num = -1;
@@ -702,12 +712,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			{
 				return num;
 			}
-			return this.TalentList.Last<MotorFightTalentData>().Id;
+			return this.TalentList[this.TalentList.Count - 1].Id;
 		}
 
-		// Token: 0x17009431 RID: 37937
-		// (get) Token: 0x06040633 RID: 263731 RVA: 0x00F93F34 File Offset: 0x00F92134
-		// (set) Token: 0x06040634 RID: 263732 RVA: 0x00F93F50 File Offset: 0x00F92150
+		// Token: 0x17006793 RID: 26515
+		// (get) Token: 0x060352F4 RID: 217844 RVA: 0x00EDAED4 File Offset: 0x00ED90D4
+		// (set) Token: 0x060352F5 RID: 217845 RVA: 0x00EDAEF0 File Offset: 0x00ED90F0
 		public int SelectedTalentNodeId
 		{
 			get
@@ -724,7 +734,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040635 RID: 263733 RVA: 0x00F93F5C File Offset: 0x00F9215C
+		// Token: 0x060352F6 RID: 217846 RVA: 0x00EDAEFC File Offset: 0x00ED90FC
 		private void InitRoleData()
 		{
 			EPlayerGender playerGender = PlayerInfoModel.Instance.GetPlayerGender();
@@ -740,13 +750,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.RoleList.Sort((MotorFightRoleData a, MotorFightRoleData b) => a.Id - b.Id);
 		}
 
-		// Token: 0x06040636 RID: 263734 RVA: 0x00F94018 File Offset: 0x00F92218
+		// Token: 0x060352F7 RID: 217847 RVA: 0x00EDAFB8 File Offset: 0x00ED91B8
 		private bool CheckRoleIsValid(EMotorFightRoleType type, EPlayerGender gender)
 		{
 			return type == EMotorFightRoleType.Normal || (type == EMotorFightRoleType.MainRoleMale && gender == EPlayerGender.Male) || (type == EMotorFightRoleType.MainRoleFemale && gender == EPlayerGender.Female);
 		}
 
-		// Token: 0x06040637 RID: 263735 RVA: 0x00F94030 File Offset: 0x00F92230
+		// Token: 0x060352F8 RID: 217848 RVA: 0x00EDAFD0 File Offset: 0x00ED91D0
 		[NullableContext(2)]
 		public MotorFightRoleData GetMotorFightRoleData(int id)
 		{
@@ -764,7 +774,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return null;
 		}
 
-		// Token: 0x06040638 RID: 263736 RVA: 0x00F94080 File Offset: 0x00F92280
+		// Token: 0x060352F9 RID: 217849 RVA: 0x00EDB020 File Offset: 0x00ED9220
 		public void UpdateRoleData(IReadOnlyList<int> roleIds, bool needEmit = false)
 		{
 			foreach (int id in roleIds)
@@ -781,13 +791,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040639 RID: 263737 RVA: 0x00F940EC File Offset: 0x00F922EC
+		// Token: 0x060352FA RID: 217850 RVA: 0x00EDB08C File Offset: 0x00ED928C
 		public List<MotorFightRoleData> GetMotorFightRoleList()
 		{
 			return this.RoleList;
 		}
 
-		// Token: 0x0604063A RID: 263738 RVA: 0x00F940F4 File Offset: 0x00F922F4
+		// Token: 0x060352FB RID: 217851 RVA: 0x00EDB094 File Offset: 0x00ED9294
 		public int GetLevelUsedRole(int levelId)
 		{
 			int id = this.RoleList[0].Id;
@@ -809,7 +819,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return id;
 		}
 
-		// Token: 0x0604063B RID: 263739 RVA: 0x00F94168 File Offset: 0x00F92368
+		// Token: 0x060352FC RID: 217852 RVA: 0x00EDB108 File Offset: 0x00ED9308
 		public bool IsRoleHasRedDot()
 		{
 			using (Dictionary<int, MotorFightRoleData>.ValueCollection.Enumerator enumerator = this.RoleMap.Values.GetEnumerator())
@@ -825,7 +835,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return false;
 		}
 
-		// Token: 0x0604063C RID: 263740 RVA: 0x00F941C8 File Offset: 0x00F923C8
+		// Token: 0x060352FD RID: 217853 RVA: 0x00EDB168 File Offset: 0x00ED9368
 		public void UpdateFriendsRankList(IReadOnlyList<MotorFightPlayerRankingInfo> list)
 		{
 			this.MotorFightFriendsRankList = new List<MotorFightRankData>();
@@ -837,14 +847,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x0604063D RID: 263741 RVA: 0x00F94230 File Offset: 0x00F92430
+		// Token: 0x060352FE RID: 217854 RVA: 0x00EDB1D0 File Offset: 0x00ED93D0
 		[NullableContext(2)]
 		public void UpdateMyRank(MotorFightPlayerRankingInfo rankInfo)
 		{
 			this.MyRankData.SetDataByServerInfo(rankInfo);
 		}
 
-		// Token: 0x0604063E RID: 263742 RVA: 0x00F94240 File Offset: 0x00F92440
+		// Token: 0x060352FF RID: 217855 RVA: 0x00EDB1E0 File Offset: 0x00ED93E0
 		private List<MotorFightRankData> GetRobotRankList()
 		{
 			if (this.MotorFightRobotRankList.Count == 0)
@@ -859,7 +869,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return this.MotorFightRobotRankList;
 		}
 
-		// Token: 0x0604063F RID: 263743 RVA: 0x00F942B8 File Offset: 0x00F924B8
+		// Token: 0x06035300 RID: 217856 RVA: 0x00EDB258 File Offset: 0x00ED9458
 		public List<MotorFightRankData> GetRankList()
 		{
 			List<MotorFightRankData> list = new List<MotorFightRankData>(this.MotorFightFriendsRankList);
@@ -879,61 +889,61 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return list;
 		}
 
-		// Token: 0x040217B6 RID: 137142
+		// Token: 0x0401C0E5 RID: 114917
 		private readonly Dictionary<int, MotorFightLevelData> LevelDataMap = new Dictionary<int, MotorFightLevelData>();
 
-		// Token: 0x040217B7 RID: 137143
+		// Token: 0x0401C0E6 RID: 114918
 		private List<List<MotorFightLevelData>> LevelTreeList = new List<List<MotorFightLevelData>>();
 
-		// Token: 0x040217B8 RID: 137144
+		// Token: 0x0401C0E7 RID: 114919
 		private MotorFightLastSaveData LastSavedLevelData;
 
-		// Token: 0x040217B9 RID: 137145
+		// Token: 0x0401C0E8 RID: 114920
 		private readonly Dictionary<int, MotorFightTaskData> TaskDataMap = new Dictionary<int, MotorFightTaskData>();
 
-		// Token: 0x040217BA RID: 137146
+		// Token: 0x0401C0E9 RID: 114921
 		private readonly Dictionary<int, List<MotorFightTaskData>> TabToTaskDataListMap = new Dictionary<int, List<MotorFightTaskData>>();
 
-		// Token: 0x040217BB RID: 137147
+		// Token: 0x0401C0EA RID: 114922
 		private List<MotorFightTaskTab> MotorFightTaskTabList = new List<MotorFightTaskTab>();
 
-		// Token: 0x040217BC RID: 137148
+		// Token: 0x0401C0EB RID: 114923
 		private readonly Dictionary<int, MotorFightItemData> ItemDataMap = new Dictionary<int, MotorFightItemData>();
 
-		// Token: 0x040217BD RID: 137149
+		// Token: 0x0401C0EC RID: 114924
 		private readonly Dictionary<int, List<MotorFightItemData>> TypeToItemDataMap = new Dictionary<int, List<MotorFightItemData>>();
 
-		// Token: 0x040217BE RID: 137150
+		// Token: 0x0401C0ED RID: 114925
 		private List<MotorFightItemType> MotorFightItemTypeList = new List<MotorFightItemType>();
 
-		// Token: 0x040217BF RID: 137151
+		// Token: 0x0401C0EE RID: 114926
 		private readonly Dictionary<int, MotorFightTalentData> TalentDataMap = new Dictionary<int, MotorFightTalentData>();
 
-		// Token: 0x040217C0 RID: 137152
+		// Token: 0x0401C0EF RID: 114927
 		private readonly List<MotorFightTalentData> TalentList = new List<MotorFightTalentData>();
 
-		// Token: 0x040217C1 RID: 137153
+		// Token: 0x0401C0F0 RID: 114928
 		private List<List<MotorFightTalentData>> TalentTreeList = new List<List<MotorFightTalentData>>();
 
-		// Token: 0x040217C2 RID: 137154
+		// Token: 0x0401C0F1 RID: 114929
 		public int TalentTreeItemId;
 
-		// Token: 0x040217C3 RID: 137155
+		// Token: 0x0401C0F2 RID: 114930
 		private int SelectedTalentNodeIdInternal;
 
-		// Token: 0x040217C4 RID: 137156
+		// Token: 0x0401C0F3 RID: 114931
 		private readonly Dictionary<int, MotorFightRoleData> RoleMap = new Dictionary<int, MotorFightRoleData>();
 
-		// Token: 0x040217C5 RID: 137157
+		// Token: 0x0401C0F4 RID: 114932
 		private readonly List<MotorFightRoleData> RoleList = new List<MotorFightRoleData>();
 
-		// Token: 0x040217C6 RID: 137158
+		// Token: 0x0401C0F5 RID: 114933
 		private List<MotorFightRankData> MotorFightFriendsRankList = new List<MotorFightRankData>();
 
-		// Token: 0x040217C7 RID: 137159
+		// Token: 0x0401C0F6 RID: 114934
 		private readonly List<MotorFightRankData> MotorFightRobotRankList = new List<MotorFightRankData>();
 
-		// Token: 0x040217C8 RID: 137160
+		// Token: 0x0401C0F7 RID: 114935
 		public readonly MotorFightRankData MyRankData = new MotorFightRankData(true);
 	}
 }

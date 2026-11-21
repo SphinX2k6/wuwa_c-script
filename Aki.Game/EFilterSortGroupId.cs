@@ -1,124 +1,124 @@
 ﻿using System;
 
-// Token: 0x0200182A RID: 6186
+// Token: 0x02000CE3 RID: 3299
 public enum EFilterSortGroupId
 {
-	// Token: 0x04005208 RID: 21000
+	// Token: 0x040052B3 RID: 21171
 	None,
-	// Token: 0x04005209 RID: 21001
+	// Token: 0x040052B4 RID: 21172
 	Role,
-	// Token: 0x0400520A RID: 21002
+	// Token: 0x040052B5 RID: 21173
 	UseWayWeaponStrength,
-	// Token: 0x0400520B RID: 21003
+	// Token: 0x040052B6 RID: 21174
 	UseWayWeaponResonanceAndReplace,
-	// Token: 0x0400520C RID: 21004
+	// Token: 0x040052B7 RID: 21175
 	EditBattleTeam,
-	// Token: 0x0400520D RID: 21005
+	// Token: 0x040052B8 RID: 21176
 	EditFormation,
-	// Token: 0x0400520E RID: 21006
+	// Token: 0x040052B9 RID: 21177
 	Inventory,
-	// Token: 0x0400520F RID: 21007
+	// Token: 0x040052BA RID: 21178
 	InventoryStackAble,
-	// Token: 0x04005210 RID: 21008
+	// Token: 0x040052BB RID: 21179
 	InventoryMissionItem,
-	// Token: 0x04005211 RID: 21009
+	// Token: 0x040052BC RID: 21180
 	TapeTaskItem,
-	// Token: 0x04005212 RID: 21010
+	// Token: 0x040052BD RID: 21181
 	PhantomEquip,
-	// Token: 0x04005213 RID: 21011
+	// Token: 0x040052BE RID: 21182
 	PhantomBreach,
-	// Token: 0x04005214 RID: 21012
+	// Token: 0x040052BF RID: 21183
 	PhantomDecompose,
-	// Token: 0x04005215 RID: 21013
+	// Token: 0x040052C0 RID: 21184
 	PhantomBag,
-	// Token: 0x04005216 RID: 21014
+	// Token: 0x040052C1 RID: 21185
 	PhantomFetter,
-	// Token: 0x04005217 RID: 21015
+	// Token: 0x040052C2 RID: 21186
 	CalabashCollect,
-	// Token: 0x04005218 RID: 21016
+	// Token: 0x040052C3 RID: 21187
 	MonsterDetection,
-	// Token: 0x04005219 RID: 21017
+	// Token: 0x040052C4 RID: 21188
 	SilentAreaDetection,
-	// Token: 0x0400521A RID: 21018
+	// Token: 0x040052C5 RID: 21189
 	DungeonDetection,
-	// Token: 0x0400521B RID: 21019
+	// Token: 0x040052C6 RID: 21190
 	CookList,
-	// Token: 0x0400521C RID: 21020
+	// Token: 0x040052C7 RID: 21191
 	ReagentList,
-	// Token: 0x0400521D RID: 21021
+	// Token: 0x040052C8 RID: 21192
 	RoleHandBook,
-	// Token: 0x0400521E RID: 21022
+	// Token: 0x040052C9 RID: 21193
 	StructureList,
-	// Token: 0x0400521F RID: 21023
+	// Token: 0x040052CA RID: 21194
 	PurificationList,
-	// Token: 0x04005220 RID: 21024
+	// Token: 0x040052CB RID: 21195
 	ForgingList,
-	// Token: 0x04005221 RID: 21025
+	// Token: 0x040052CC RID: 21196
 	BagSupply,
-	// Token: 0x04005222 RID: 21026
+	// Token: 0x040052CD RID: 21197
 	VisionLevelUp,
-	// Token: 0x04005223 RID: 21027
+	// Token: 0x040052CE RID: 21198
 	CookMachiningList,
-	// Token: 0x04005224 RID: 21028
+	// Token: 0x040052CF RID: 21199
 	WeaponResonance,
-	// Token: 0x04005225 RID: 21029
+	// Token: 0x040052D0 RID: 21200
 	TowerFormation,
-	// Token: 0x04005226 RID: 21030
+	// Token: 0x040052D1 RID: 21201
 	RouletteAssemblyGrid,
-	// Token: 0x04005227 RID: 21031
+	// Token: 0x040052D2 RID: 21202
 	VisionRecovery = 33,
-	// Token: 0x04005228 RID: 21032
+	// Token: 0x040052D3 RID: 21203
 	RogueRole,
-	// Token: 0x04005229 RID: 21033
+	// Token: 0x040052D4 RID: 21204
 	ComposeExchange,
-	// Token: 0x0400522A RID: 21034
+	// Token: 0x040052D5 RID: 21205
 	VisionAssemble,
-	// Token: 0x0400522B RID: 21035
+	// Token: 0x040052D6 RID: 21206
 	FishingItem,
-	// Token: 0x0400522C RID: 21036
+	// Token: 0x040052D7 RID: 21207
 	ShipTower,
-	// Token: 0x0400522D RID: 21037
+	// Token: 0x040052D8 RID: 21208
 	WeeklyRogueEditFormation,
-	// Token: 0x0400522E RID: 21038
+	// Token: 0x040052D9 RID: 21209
 	VisionRefine,
-	// Token: 0x0400522F RID: 21039
+	// Token: 0x040052DA RID: 21210
 	DangoAbyssPluginEquip,
-	// Token: 0x04005230 RID: 21040
+	// Token: 0x040052DB RID: 21211
 	DangoAbyssPluginRecovery,
-	// Token: 0x04005231 RID: 21041
+	// Token: 0x040052DC RID: 21212
 	PhantomManage,
-	// Token: 0x04005232 RID: 21042
+	// Token: 0x040052DD RID: 21213
 	MonsterHandBook,
-	// Token: 0x04005233 RID: 21043
+	// Token: 0x040052DE RID: 21214
 	WeaponHandBook,
-	// Token: 0x04005234 RID: 21044
+	// Token: 0x040052DF RID: 21215
 	WeaponSkinHandBook,
-	// Token: 0x04005235 RID: 21045
+	// Token: 0x040052E0 RID: 21216
 	RoleDev,
-	// Token: 0x04005236 RID: 21046
+	// Token: 0x040052E1 RID: 21217
 	FightPhoto,
-	// Token: 0x04005237 RID: 21047
+	// Token: 0x040052E2 RID: 21218
 	VersionAim,
-	// Token: 0x04005238 RID: 21048
+	// Token: 0x040052E3 RID: 21219
 	SpringManorWeaponExhibit,
-	// Token: 0x04005239 RID: 21049
+	// Token: 0x040052E4 RID: 21220
 	VisionRefineSub,
-	// Token: 0x0400523A RID: 21050
+	// Token: 0x040052E5 RID: 21221
 	SpringManorPhantomExhibit,
-	// Token: 0x0400523B RID: 21051
+	// Token: 0x040052E6 RID: 21222
 	VisionRefineMainCost4C,
-	// Token: 0x0400523C RID: 21052
+	// Token: 0x040052E7 RID: 21223
 	VisionRefineMainCost3C,
-	// Token: 0x0400523D RID: 21053
+	// Token: 0x040052E8 RID: 21224
 	VisionRefineMainCost1C,
-	// Token: 0x0400523E RID: 21054
+	// Token: 0x040052E9 RID: 21225
 	PinballFormation,
-	// Token: 0x0400523F RID: 21055
+	// Token: 0x040052EA RID: 21226
 	PinballWeaponDecompose,
-	// Token: 0x04005240 RID: 21056
+	// Token: 0x040052EB RID: 21227
 	PinballRoleSelect,
-	// Token: 0x04005241 RID: 21057
+	// Token: 0x040052EC RID: 21228
 	PinballWeaponEquip,
-	// Token: 0x04005242 RID: 21058
+	// Token: 0x040052ED RID: 21229
 	InventoryItemNew
 }

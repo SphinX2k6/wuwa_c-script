@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Core.Framework;
@@ -12,14 +11,14 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BB1 RID: 23473
+	// Token: 0x02004B91 RID: 19345
 	[NullableContext(2)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class CiacconaGalController : ControllerBase
 	{
-		// Token: 0x17008CFB RID: 36091
-		// (get) Token: 0x0603B5E2 RID: 243170 RVA: 0x00E29388 File Offset: 0x00E27588
+		// Token: 0x170060CD RID: 24781
+		// (get) Token: 0x0603052F RID: 197935 RVA: 0x00D796EC File Offset: 0x00D778EC
 		protected override bool IsTickEvenPausedInternal
 		{
 			get
@@ -28,8 +27,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008CFC RID: 36092
-		// (get) Token: 0x0603B5E3 RID: 243171 RVA: 0x00E2938B File Offset: 0x00E2758B
+		// Token: 0x170060CE RID: 24782
+		// (get) Token: 0x06030530 RID: 197936 RVA: 0x00D796EF File Offset: 0x00D778EF
 		public CiacconaGalPlayer GalPlayer
 		{
 			get
@@ -38,7 +37,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5E4 RID: 243172 RVA: 0x00E29393 File Offset: 0x00E27593
+		// Token: 0x06030531 RID: 197937 RVA: 0x00D796F7 File Offset: 0x00D778F7
 		protected override bool OnInit()
 		{
 			this.InternalGalPlayer = CiacconaGalPlayer.Instance;
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return true;
 		}
 
-		// Token: 0x0603B5E5 RID: 243173 RVA: 0x00E293A7 File Offset: 0x00E275A7
+		// Token: 0x06030532 RID: 197938 RVA: 0x00D7970B File Offset: 0x00D7790B
 		protected override bool OnClear()
 		{
 			this.AvgDataUpdateDelegates = new List<Action<int>>();
@@ -55,14 +54,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return true;
 		}
 
-		// Token: 0x0603B5E6 RID: 243174 RVA: 0x00E293C6 File Offset: 0x00E275C6
+		// Token: 0x06030533 RID: 197939 RVA: 0x00D7972A File Offset: 0x00D7792A
 		protected override void OnTick(float delta)
 		{
 			this.TickAvg(delta);
 			this.TickDataUpdate(delta);
 		}
 
-		// Token: 0x0603B5E7 RID: 243175 RVA: 0x00E293D6 File Offset: 0x00E275D6
+		// Token: 0x06030534 RID: 197940 RVA: 0x00D7973A File Offset: 0x00D7793A
 		private void TickAvg(float delta)
 		{
 			if (!this.IsViewReady)
@@ -79,7 +78,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5E8 RID: 243176 RVA: 0x00E2940B File Offset: 0x00E2760B
+		// Token: 0x06030535 RID: 197941 RVA: 0x00D7976F File Offset: 0x00D7796F
 		private void TickDataUpdate(float delta)
 		{
 			if (CiacconaGalModel.Instance.DataUpdateMask != 0)
@@ -89,7 +88,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5E9 RID: 243177 RVA: 0x00E29434 File Offset: 0x00E27634
+		// Token: 0x06030536 RID: 197942 RVA: 0x00D79798 File Offset: 0x00D77998
 		private void AddNetListeners()
 		{
 			Net.Instance.Register(ENotifyMessageId.ChapterUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnProtoChapterUpdateNotify));
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			Net.Instance.Register(ENotifyMessageId.CiacconaActivityStateUnlockUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnActivityStateUpdateNotify));
 		}
 
-		// Token: 0x0603B5EA RID: 243178 RVA: 0x00E294D0 File Offset: 0x00E276D0
+		// Token: 0x06030537 RID: 197943 RVA: 0x00D79834 File Offset: 0x00D77A34
 		private void RemoveNetListeners()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.ChapterUpdateNotify);
@@ -109,7 +108,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			Net.Instance.UnRegister(ENotifyMessageId.CiacconaActivityStateUnlockUpdateNotify);
 		}
 
-		// Token: 0x0603B5EB RID: 243179 RVA: 0x00E29530 File Offset: 0x00E27730
+		// Token: 0x06030538 RID: 197944 RVA: 0x00D79894 File Offset: 0x00D77A94
 		private void NotifyActivityDataUpdate(int mask)
 		{
 			if ((mask & 1) != 0)
@@ -139,7 +138,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5EC RID: 243180 RVA: 0x00E295CC File Offset: 0x00E277CC
+		// Token: 0x06030539 RID: 197945 RVA: 0x00D79930 File Offset: 0x00D77B30
 		public void OpenGalViewByChapterId(int chapterId, EUiViewName? lastView = null)
 		{
 			CiacconaGalChapterData chapterDataById = CiacconaGalModel.Instance.GetChapterDataById(chapterId);
@@ -151,7 +150,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5ED RID: 243181 RVA: 0x00E2960C File Offset: 0x00E2780C
+		// Token: 0x0603053A RID: 197946 RVA: 0x00D79970 File Offset: 0x00D77B70
 		public void OpenGalViewByStepId(int stepId, int? chapterId = null, EUiViewName? lastView = null)
 		{
 			bool flag = this.InitGalData(stepId);
@@ -171,7 +170,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5EE RID: 243182 RVA: 0x00E29668 File Offset: 0x00E27868
+		// Token: 0x0603053B RID: 197947 RVA: 0x00D799CC File Offset: 0x00D77BCC
 		public void OpenChapterViewById(int chapterId, EUiViewName? lastView = null)
 		{
 			CiacconaGalChapterData chapterDataById = CiacconaGalModel.Instance.GetChapterDataById(chapterId);
@@ -188,7 +187,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5EF RID: 243183 RVA: 0x00E296BC File Offset: 0x00E278BC
+		// Token: 0x0603053C RID: 197948 RVA: 0x00D79A20 File Offset: 0x00D77C20
 		[NullableContext(0)]
 		public UniTask<bool> OpenChapterViewAsync(int chapterId)
 		{
@@ -201,13 +200,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OpenChapterViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B5F0 RID: 243184 RVA: 0x00E29707 File Offset: 0x00E27907
+		// Token: 0x0603053D RID: 197949 RVA: 0x00D79A6B File Offset: 0x00D77C6B
 		public void OpenEndingView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.CiacconaGalEndingView, null, null);
 		}
 
-		// Token: 0x0603B5F1 RID: 243185 RVA: 0x00E2971C File Offset: 0x00E2791C
+		// Token: 0x0603053E RID: 197950 RVA: 0x00D79A80 File Offset: 0x00D77C80
 		public void OpenEndingDetailView(int endingId, string labelTextId = null)
 		{
 			CiacconaGalEndingData endingDataById = CiacconaGalModel.Instance.GetEndingDataById(endingId);
@@ -222,7 +221,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5F2 RID: 243186 RVA: 0x00E29768 File Offset: 0x00E27968
+		// Token: 0x0603053F RID: 197951 RVA: 0x00D79ACC File Offset: 0x00D77CCC
 		public void OpenChapterEntryView(int activityId, ECiacconaEntryType from = ECiacconaEntryType.None)
 		{
 			CiacconaGalActivityData activityDataById = CiacconaGalModel.Instance.GetActivityDataById(activityId);
@@ -233,7 +232,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5F3 RID: 243187 RVA: 0x00E2979C File Offset: 0x00E2799C
+		// Token: 0x06030540 RID: 197952 RVA: 0x00D79B00 File Offset: 0x00D77D00
 		[NullableContext(0)]
 		public UniTask<bool> OpenChapterEntryViewAsync(int activityId, ECiacconaEntryType from = ECiacconaEntryType.None)
 		{
@@ -247,7 +246,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OpenChapterEntryViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B5F4 RID: 243188 RVA: 0x00E297F0 File Offset: 0x00E279F0
+		// Token: 0x06030541 RID: 197953 RVA: 0x00D79B54 File Offset: 0x00D77D54
 		public void OpenRewardViewByActivityId(int activityId)
 		{
 			CiacconaGalActivityData activityDataById = CiacconaGalModel.Instance.GetActivityDataById(activityId);
@@ -257,7 +256,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5F5 RID: 243189 RVA: 0x00E29828 File Offset: 0x00E27A28
+		// Token: 0x06030542 RID: 197954 RVA: 0x00D79B8C File Offset: 0x00D77D8C
 		public UniTask ExitAvg()
 		{
 			CiacconaGalController.<ExitAvg>d__24 <ExitAvg>d__;
@@ -268,14 +267,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <ExitAvg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B5F6 RID: 243190 RVA: 0x00E2986B File Offset: 0x00E27A6B
+		// Token: 0x06030543 RID: 197955 RVA: 0x00D79BCF File Offset: 0x00D77DCF
 		[NullableContext(1)]
 		public void AddOnStepDataUpdate(Action<int> @delegate)
 		{
 			this.AvgDataUpdateDelegates.Add(@delegate);
 		}
 
-		// Token: 0x0603B5F7 RID: 243191 RVA: 0x00E2987C File Offset: 0x00E27A7C
+		// Token: 0x06030544 RID: 197956 RVA: 0x00D79BE0 File Offset: 0x00D77DE0
 		[NullableContext(1)]
 		public void RemoveOnStepDataUpdate(Action<int> @delegate)
 		{
@@ -286,7 +285,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5F8 RID: 243192 RVA: 0x00E298A6 File Offset: 0x00E27AA6
+		// Token: 0x06030545 RID: 197957 RVA: 0x00D79C0A File Offset: 0x00D77E0A
 		public void SetGalViewReady(bool isReady)
 		{
 			this.IsViewReady = isReady;
@@ -296,7 +295,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B5F9 RID: 243193 RVA: 0x00E298C0 File Offset: 0x00E27AC0
+		// Token: 0x06030546 RID: 197958 RVA: 0x00D79C24 File Offset: 0x00D77E24
 		private void NotifyDataUpdate()
 		{
 			foreach (Action<int> action in this.AvgDataUpdateDelegates)
@@ -306,7 +305,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			CiacconaGalModel.Instance.IsCurStepDataListDirty = false;
 		}
 
-		// Token: 0x0603B5FA RID: 243194 RVA: 0x00E29928 File Offset: 0x00E27B28
+		// Token: 0x06030547 RID: 197959 RVA: 0x00D79C8C File Offset: 0x00D77E8C
 		private bool InitGalData(int targetStepId)
 		{
 			if (CiacconaGalModel.Instance.GetStepDataById(targetStepId) == null)
@@ -319,7 +318,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			{
 				return false;
 			}
-			CiacconaGalChapterData ciacconaGalChapterData = allChapterData.Find((CiacconaGalChapterData data) => data.StepIds.Contains(targetStepId));
+			CiacconaGalChapterData ciacconaGalChapterData = allChapterData.Find((CiacconaGalChapterData data) => Array.IndexOf<int>(data.StepIds, targetStepId) >= 0);
 			if (ciacconaGalChapterData == null)
 			{
 				return false;
@@ -341,7 +340,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return true;
 		}
 
-		// Token: 0x0603B5FB RID: 243195 RVA: 0x00E299F8 File Offset: 0x00E27BF8
+		// Token: 0x06030548 RID: 197960 RVA: 0x00D79D5C File Offset: 0x00D77F5C
 		public UniTask RequestFinishChapterSubEnding(int activityId, int chapterId, int subEndingId)
 		{
 			CiacconaGalController.<RequestFinishChapterSubEnding>d__30 <RequestFinishChapterSubEnding>d__;
@@ -354,7 +353,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <RequestFinishChapterSubEnding>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B5FC RID: 243196 RVA: 0x00E29A4C File Offset: 0x00E27C4C
+		// Token: 0x06030549 RID: 197961 RVA: 0x00D79DB0 File Offset: 0x00D77FB0
 		public UniTask RequestUnlockChoice(int activityId, int chapterId, int choiceId)
 		{
 			CiacconaGalController.<RequestUnlockChoice>d__31 <RequestUnlockChoice>d__;
@@ -367,7 +366,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <RequestUnlockChoice>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B5FD RID: 243197 RVA: 0x00E29AA0 File Offset: 0x00E27CA0
+		// Token: 0x0603054A RID: 197962 RVA: 0x00D79E04 File Offset: 0x00D78004
 		public UniTask RequestGetSubEndingReward(int activityId, int chapterId, int subEndingId)
 		{
 			CiacconaGalController.<RequestGetSubEndingReward>d__32 <RequestGetSubEndingReward>d__;
@@ -380,7 +379,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <RequestGetSubEndingReward>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B5FE RID: 243198 RVA: 0x00E29AF4 File Offset: 0x00E27CF4
+		// Token: 0x0603054B RID: 197963 RVA: 0x00D79E58 File Offset: 0x00D78058
 		public UniTask RequestGetActivityEndingReward(int activityId, int endingId)
 		{
 			CiacconaGalController.<RequestGetActivityEndingReward>d__33 <RequestGetActivityEndingReward>d__;
@@ -392,7 +391,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <RequestGetActivityEndingReward>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B5FF RID: 243199 RVA: 0x00E29B40 File Offset: 0x00E27D40
+		// Token: 0x0603054C RID: 197964 RVA: 0x00D79EA4 File Offset: 0x00D780A4
 		public UniTask RequestGetActivityProgressReward(int activityId, int rewardId)
 		{
 			CiacconaGalController.<RequestGetActivityProgressReward>d__34 <RequestGetActivityProgressReward>d__;
@@ -404,42 +403,42 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <RequestGetActivityProgressReward>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B600 RID: 243200 RVA: 0x00E29B8C File Offset: 0x00E27D8C
+		// Token: 0x0603054D RID: 197965 RVA: 0x00D79EF0 File Offset: 0x00D780F0
 		private void OnProtoChapterUpdateNotify(IMessage __msg, Net.CallbackStatus _)
 		{
 			ChapterUpdateNotify chapterUpdateNotify = (ChapterUpdateNotify)__msg;
-			CiacconaGalModel.Instance.UpdateAllChapterData(chapterUpdateNotify.ChapterDatas.ToArray<CiacconaChapterPbData>());
+			CiacconaGalModel.Instance.UpdateAllChapterData(chapterUpdateNotify.ChapterDatas);
 		}
 
-		// Token: 0x0603B601 RID: 243201 RVA: 0x00E29BB8 File Offset: 0x00E27DB8
+		// Token: 0x0603054E RID: 197966 RVA: 0x00D79F14 File Offset: 0x00D78114
 		private void OnInspirationDataUpdateNotify(IMessage __msg, Net.CallbackStatus _)
 		{
 			InspirationUpdateNotify inspirationUpdateNotify = (InspirationUpdateNotify)__msg;
 			CiacconaGalModel.Instance.UpdateInspirationData(inspirationUpdateNotify.InspirationData);
 		}
 
-		// Token: 0x0603B602 RID: 243202 RVA: 0x00E29BDC File Offset: 0x00E27DDC
+		// Token: 0x0603054F RID: 197967 RVA: 0x00D79F38 File Offset: 0x00D78138
 		private void OnProgressRewardUpdateNotify(IMessage __msg, Net.CallbackStatus _)
 		{
 			ScheduleRewardUpdateNotify scheduleRewardUpdateNotify = (ScheduleRewardUpdateNotify)__msg;
-			CiacconaGalModel.Instance.UpdateProgressRewardData(scheduleRewardUpdateNotify.ScheduleRewardDatas.ToArray<CiacconaScheduleRewardPbData>());
+			CiacconaGalModel.Instance.UpdateProgressRewardData(scheduleRewardUpdateNotify.ScheduleRewardDatas);
 		}
 
-		// Token: 0x0603B603 RID: 243203 RVA: 0x00E29C08 File Offset: 0x00E27E08
+		// Token: 0x06030550 RID: 197968 RVA: 0x00D79F5C File Offset: 0x00D7815C
 		private void OnActivityResultUpdateNotify(IMessage __msg, Net.CallbackStatus _)
 		{
 			ActivityResultUpdateNotify activityResultUpdateNotify = (ActivityResultUpdateNotify)__msg;
-			CiacconaGalModel.Instance.UpdateAllEndingData(activityResultUpdateNotify.ActivityResultDatas.ToArray<CiacconaActivityResultPbData>());
+			CiacconaGalModel.Instance.UpdateAllEndingData(activityResultUpdateNotify.ActivityResultDatas);
 		}
 
-		// Token: 0x0603B604 RID: 243204 RVA: 0x00E29C34 File Offset: 0x00E27E34
+		// Token: 0x06030551 RID: 197969 RVA: 0x00D79F80 File Offset: 0x00D78180
 		private void OnActivityStateUpdateNotify(IMessage __msg, Net.CallbackStatus _)
 		{
 			CiacconaActivityStateUnlockUpdateNotify data = (CiacconaActivityStateUnlockUpdateNotify)__msg;
 			CiacconaGalModel.Instance.UpdateActivityState(data);
 		}
 
-		// Token: 0x0603B605 RID: 243205 RVA: 0x00E29C54 File Offset: 0x00E27E54
+		// Token: 0x06030552 RID: 197970 RVA: 0x00D79FA0 File Offset: 0x00D781A0
 		public void ReportEnterChapterEntryView(ECiacconaEntryType from)
 		{
 			if (from != ECiacconaEntryType.None)
@@ -449,8 +448,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008CFD RID: 36093
-		// (get) Token: 0x0603B606 RID: 243206 RVA: 0x00E29C76 File Offset: 0x00E27E76
+		// Token: 0x170060CF RID: 24783
+		// (get) Token: 0x06030553 RID: 197971 RVA: 0x00D79FC2 File Offset: 0x00D781C2
 		[Nullable(1)]
 		public static CiacconaGalController Instance
 		{
@@ -461,7 +460,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B607 RID: 243207 RVA: 0x00E29C7D File Offset: 0x00E27E7D
+		// Token: 0x06030554 RID: 197972 RVA: 0x00D79FC9 File Offset: 0x00D781C9
 		[NullableContext(1)]
 		public static CiacconaGalController GetOrCreateInstance()
 		{
@@ -472,7 +471,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return CiacconaGalController._Instance;
 		}
 
-		// Token: 0x0603B608 RID: 243208 RVA: 0x00E29C91 File Offset: 0x00E27E91
+		// Token: 0x06030555 RID: 197973 RVA: 0x00D79FDD File Offset: 0x00D781DD
 		public static bool CreateInstance()
 		{
 			if (CiacconaGalController._Instance != null)
@@ -483,34 +482,34 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return true;
 		}
 
-		// Token: 0x0603B609 RID: 243209 RVA: 0x00E29CA7 File Offset: 0x00E27EA7
+		// Token: 0x06030556 RID: 197974 RVA: 0x00D79FF3 File Offset: 0x00D781F3
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B60A RID: 243210 RVA: 0x00E29CA9 File Offset: 0x00E27EA9
+		// Token: 0x06030557 RID: 197975 RVA: 0x00D79FF5 File Offset: 0x00D781F5
 		public static void ResetStaticDefaultValue()
 		{
 			CiacconaGalController._Instance = null;
 		}
 
-		// Token: 0x0603B60B RID: 243211 RVA: 0x00E29CB1 File Offset: 0x00E27EB1
+		// Token: 0x06030558 RID: 197976 RVA: 0x00D79FFD File Offset: 0x00D781FD
 		static CiacconaGalController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CiacconaGalController.CreateStaticDefaultValue), new Action(CiacconaGalController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EF03 RID: 126723
+		// Token: 0x040199B4 RID: 104884
 		private CiacconaGalPlayer InternalGalPlayer;
 
-		// Token: 0x0401EF04 RID: 126724
+		// Token: 0x040199B5 RID: 104885
 		private bool IsViewReady;
 
-		// Token: 0x0401EF05 RID: 126725
+		// Token: 0x040199B6 RID: 104886
 		[Nullable(1)]
 		private List<Action<int>> AvgDataUpdateDelegates = new List<Action<int>>();
 
-		// Token: 0x0401EF06 RID: 126726
+		// Token: 0x040199B7 RID: 104887
 		private static CiacconaGalController _Instance;
 	}
 }

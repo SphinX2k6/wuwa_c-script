@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051EA RID: 20970
+	// Token: 0x020041BA RID: 16826
 	public interface IEffectCountItemData
 	{
-		// Token: 0x170081CE RID: 33230
-		// (get) Token: 0x06035A59 RID: 219737
-		// (set) Token: 0x06035A5A RID: 219738
+		// Token: 0x1700558E RID: 21902
+		// (get) Token: 0x0602A954 RID: 174420
+		// (set) Token: 0x0602A955 RID: 174421
 		bool IsActive { get; set; }
 	}
 }

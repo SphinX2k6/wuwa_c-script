@@ -4,13 +4,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Weather
 {
-	// Token: 0x02004860 RID: 18528
+	// Token: 0x02003791 RID: 14225
 	internal class WeatherComponent
 	{
-		// Token: 0x0401A0C5 RID: 106693
+		// Token: 0x04014779 RID: 83833
 		public float BlendWeightNonScale = 1f;
 
-		// Token: 0x0401A0C6 RID: 106694
+		// Token: 0x0401477A RID: 83834
 		[Nullable(2)]
 		public UKuroPostProcessComponent Component;
 	}

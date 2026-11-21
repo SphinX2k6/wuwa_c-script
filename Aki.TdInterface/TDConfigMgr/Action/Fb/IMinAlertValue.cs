@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029F5 RID: 10741
+	// Token: 0x02002CE2 RID: 11490
 	public class IMinAlertValue : ISetAlertValueType
 	{
-		// Token: 0x0600ED1E RID: 60702 RVA: 0x0022977E File Offset: 0x0022797E
-		[NullableContext(1)]
+		// Token: 0x0600FBB5 RID: 64437 RVA: 0x00247102 File Offset: 0x00245302
 		public static IMinAlertValue Create(IMinAlertValue? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AF6 RID: 19190
-		// (get) Token: 0x0600ED1F RID: 60703 RVA: 0x0022979D File Offset: 0x0022799D
+		// Token: 0x17004E9F RID: 20127
+		// (get) Token: 0x0600FBB6 RID: 64438 RVA: 0x00247121 File Offset: 0x00245321
 		public override EValueChangeType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400828F RID: 33423
+		// Token: 0x04008980 RID: 35200
 		private IMinAlertValue Instance;
 	}
 }

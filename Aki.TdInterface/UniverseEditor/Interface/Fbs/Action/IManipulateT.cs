@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A6C RID: 27244
+	// Token: 0x0200718E RID: 29070
 	public class IManipulateT
 	{
-		// Token: 0x1700CA21 RID: 51745
-		// (get) Token: 0x0602FB74 RID: 195444 RVA: 0x0067E4E8 File Offset: 0x0067C6E8
-		// (set) Token: 0x0602FB75 RID: 195445 RVA: 0x0067E4F0 File Offset: 0x0067C6F0
+		// Token: 0x1700D4CC RID: 54476
+		// (get) Token: 0x0603289A RID: 207002 RVA: 0x006D45A8 File Offset: 0x006D27A8
+		// (set) Token: 0x0603289B RID: 207003 RVA: 0x006D45B0 File Offset: 0x006D27B0
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x1700CA22 RID: 51746
-		// (get) Token: 0x0602FB76 RID: 195446 RVA: 0x0067E4F9 File Offset: 0x0067C6F9
-		// (set) Token: 0x0602FB77 RID: 195447 RVA: 0x0067E501 File Offset: 0x0067C701
+		// Token: 0x1700D4CD RID: 54477
+		// (get) Token: 0x0603289C RID: 207004 RVA: 0x006D45B9 File Offset: 0x006D27B9
+		// (set) Token: 0x0603289D RID: 207005 RVA: 0x006D45C1 File Offset: 0x006D27C1
 		public int TargetEntityId { get; set; }
 
-		// Token: 0x0602FB78 RID: 195448 RVA: 0x0067E50A File Offset: 0x0067C70A
+		// Token: 0x0603289E RID: 207006 RVA: 0x006D45CA File Offset: 0x006D27CA
 		public IManipulateT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

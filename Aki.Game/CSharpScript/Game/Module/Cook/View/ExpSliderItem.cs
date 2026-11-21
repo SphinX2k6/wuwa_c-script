@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B27 RID: 23335
+	// Token: 0x02004B08 RID: 19208
 	public class ExpSliderItem : UiPanelBase
 	{
-		// Token: 0x0603B14E RID: 241998 RVA: 0x00E16722 File Offset: 0x00E14922
+		// Token: 0x060300C0 RID: 196800 RVA: 0x00D6743A File Offset: 0x00D6563A
 		[NullableContext(1)]
 		public ExpSliderItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B14F RID: 241999 RVA: 0x00E16738 File Offset: 0x00E14938
+		// Token: 0x060300C1 RID: 196801 RVA: 0x00D67450 File Offset: 0x00D65650
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B150 RID: 242000 RVA: 0x00E167C4 File Offset: 0x00E149C4
+		// Token: 0x060300C2 RID: 196802 RVA: 0x00D674DC File Offset: 0x00D656DC
 		public void Update()
 		{
 			ICookerInfoData cookerInfo = CookModel.Instance.GetCookerInfo();

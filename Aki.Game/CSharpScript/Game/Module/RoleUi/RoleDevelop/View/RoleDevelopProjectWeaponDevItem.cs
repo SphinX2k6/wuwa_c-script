@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D49 RID: 19785
+	// Token: 0x02003D12 RID: 15634
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopProjectWeaponDevItem : UiPanelBase
 	{
-		// Token: 0x060331DA RID: 209370 RVA: 0x00BEACF4 File Offset: 0x00BE8EF4
+		// Token: 0x0602803D RID: 163901 RVA: 0x00B34054 File Offset: 0x00B32254
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060331DB RID: 209371 RVA: 0x00BEAF30 File Offset: 0x00BE9130
+		// Token: 0x0602803E RID: 163902 RVA: 0x00B34290 File Offset: 0x00B32490
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleDevelopProjectWeaponDevItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060331DC RID: 209372 RVA: 0x00BEAF74 File Offset: 0x00BE9174
+		// Token: 0x0602803F RID: 163903 RVA: 0x00B342D4 File Offset: 0x00B324D4
 		private void InitWeaponItemGrid()
 		{
 			this.WeaponItemGrid = new SmallItemGrid();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.WeaponItemGrid.BindOnCanExecuteChange(new Func<object, bool, EToggleState, bool>(this.OnCanExecuteWeaponItemGridChange));
 		}
 
-		// Token: 0x060331DD RID: 209373 RVA: 0x00BEAFD4 File Offset: 0x00BE91D4
+		// Token: 0x06028040 RID: 163904 RVA: 0x00B34334 File Offset: 0x00B32534
 		private UniTask InitButtonItem()
 		{
 			RoleDevelopProjectWeaponDevItem.<InitButtonItem>d__11 <InitButtonItem>d__;
@@ -94,13 +94,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <InitButtonItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060331DE RID: 209374 RVA: 0x00BEB017 File Offset: 0x00BE9217
+		// Token: 0x06028041 RID: 163905 RVA: 0x00B34377 File Offset: 0x00B32577
 		private void InitLayout()
 		{
 			this.ItemLayout = new GenericLayout<RoleDevelopProjectMaterialItem, RoleDevelopProjectMaterialItemData>(base.GetVerticalLayout(9), new Func<RoleDevelopProjectMaterialItem>(this.CreateItem), null, false, true);
 		}
 
-		// Token: 0x060331DF RID: 209375 RVA: 0x00BEB03B File Offset: 0x00BE923B
+		// Token: 0x06028042 RID: 163906 RVA: 0x00B3439B File Offset: 0x00B3259B
 		public void RefreshByData(RoleDevelopData data)
 		{
 			this.Data = data;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.RefreshLayout();
 		}
 
-		// Token: 0x060331E0 RID: 209376 RVA: 0x00BEB050 File Offset: 0x00BE9250
+		// Token: 0x06028043 RID: 163907 RVA: 0x00B343B0 File Offset: 0x00B325B0
 		public void RefreshWeaponView()
 		{
 			if (this.Data == null)
@@ -126,17 +126,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			base.GetItem(12).SetUIActive(weaponInstance != null);
 			if (weaponInstance != null)
 			{
-				PropSmallItemGrid parameters = new PropSmallItemGrid
+				WeaponSmallItemGrid parameters = new WeaponSmallItemGrid
 				{
 					ItemConfigId = new int?(weaponInstance.GetItemId()),
-					BottomTextId = "Text_LevelShow_Text",
-					BottomTextParameter = new object[]
-					{
-						weaponLevel
-					},
+					Level = new int?(weaponLevel),
+					ResonanceLevel = new int?(weaponInstance.GetResonanceLevel()),
 					Data = this.Data
 				};
-				weaponItemGrid.Apply<PropSmallItemGrid>(parameters);
+				weaponItemGrid.Apply<WeaponSmallItemGrid>(parameters);
 				bool uiactive = WeaponModel.Instance.IsWeaponHighQuality(weaponInstance);
 				base.GetItem(0).SetUIActive(uiactive);
 				List<int> hotWeaponGachaIds = RoleDevelopUtil.GetHotWeaponGachaIds(weaponInstance.GetItemId(), true);
@@ -176,13 +173,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			int weaponType = this.Data.GetProjectData().GetWeaponType();
 			weaponItemGrid.SetIconByPath(RoleDevConfig.Instance.GetRoleDevWeaponItemConfig(weaponType).Value.WeaponTypeIcon);
 			weaponItemGrid.SetBottomTextVisible(false);
+			weaponItemGrid.SetWeaponResonanceLevel(null);
 			weaponItemGrid.SetQuality(null);
 			text.SetUIActive(false);
 			bool flag4 = RoleDevelopUtil.IsAnyProspectRole(this.Data.GetId());
 			base.GetItem(0).SetUIActive(!flag4);
 		}
 
-		// Token: 0x060331E1 RID: 209377 RVA: 0x00BEB2F8 File Offset: 0x00BE94F8
+		// Token: 0x06028044 RID: 163908 RVA: 0x00B3465C File Offset: 0x00B3285C
 		public void RefreshLayout()
 		{
 			if (this.Data == null)
@@ -204,20 +202,20 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.ItemLayout.RefreshByData(weaponDevelopProjectViewItems, null, false);
 		}
 
-		// Token: 0x060331E2 RID: 209378 RVA: 0x00BEB3B4 File Offset: 0x00BE95B4
+		// Token: 0x06028045 RID: 163909 RVA: 0x00B34718 File Offset: 0x00B32918
 		public void OnCommonItemCountAnyChange(int configId)
 		{
 			this.RefreshWeaponView();
 			this.ItemLayout.RefreshWithoutDataSync();
 		}
 
-		// Token: 0x060331E3 RID: 209379 RVA: 0x00BEB3C7 File Offset: 0x00BE95C7
+		// Token: 0x06028046 RID: 163910 RVA: 0x00B3472B File Offset: 0x00B3292B
 		public void SetClickSwitchCallback(Action callback)
 		{
 			this.OnClickSwitchCallback = callback;
 		}
 
-		// Token: 0x060331E4 RID: 209380 RVA: 0x00BEB3D0 File Offset: 0x00BE95D0
+		// Token: 0x06028047 RID: 163911 RVA: 0x00B34734 File Offset: 0x00B32934
 		private void OnClickSwitch()
 		{
 			Action onClickSwitchCallback = this.OnClickSwitchCallback;
@@ -231,7 +229,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x060331E5 RID: 209381 RVA: 0x00BEB418 File Offset: 0x00BE9618
+		// Token: 0x06028048 RID: 163912 RVA: 0x00B3477C File Offset: 0x00B3297C
 		private void OnClickCall()
 		{
 			if (this.Data == null)
@@ -250,20 +248,20 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x060331E6 RID: 209382 RVA: 0x00BEB475 File Offset: 0x00BE9675
+		// Token: 0x06028049 RID: 163913 RVA: 0x00B347D9 File Offset: 0x00B329D9
 		private RoleDevelopProjectMaterialItem CreateItem()
 		{
 			return new RoleDevelopProjectMaterialItem();
 		}
 
-		// Token: 0x060331E7 RID: 209383 RVA: 0x00BEB47C File Offset: 0x00BE967C
+		// Token: 0x0602804A RID: 163914 RVA: 0x00B347E0 File Offset: 0x00B329E0
 		[NullableContext(2)]
 		private bool OnCanExecuteWeaponItemGridChange(object data, bool isForceSelected, EToggleState state)
 		{
 			return false;
 		}
 
-		// Token: 0x060331E8 RID: 209384 RVA: 0x00BEB480 File Offset: 0x00BE9680
+		// Token: 0x0602804B RID: 163915 RVA: 0x00B347E4 File Offset: 0x00B329E4
 		private void OnClickWeaponItemGrid(MediumItemGridExtendCallback callbackParameter)
 		{
 			if (this.Data == null)
@@ -280,11 +278,11 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 					ItemController.Instance.OpenItemTipsByItemUid(valueOrDefault, itemId, true, null);
 					return;
 				}
-				ItemController.Instance.OpenItemTipsByItemId(itemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(itemId, true, null, false);
 			}
 		}
 
-		// Token: 0x060331E9 RID: 209385 RVA: 0x00BEB4E0 File Offset: 0x00BE96E0
+		// Token: 0x0602804C RID: 163916 RVA: 0x00B34848 File Offset: 0x00B32A48
 		private void OnClickWeaponJump(int value)
 		{
 			if (this.Data == null)
@@ -309,7 +307,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			RoleController.Instance.LogRoleDevelopClick(this.Data.GetId(), ERoleDevelopCategoryType.Weapon, subPage, null);
 		}
 
-		// Token: 0x0401B2B9 RID: 111289
+		// Token: 0x04015C8B RID: 89227
 		private readonly Dictionary<EItemMaterialType, ERoleDevelopLogSubPage> WeaponDevelopMaterialTypeToLogSubPageMap = new Dictionary<EItemMaterialType, ERoleDevelopLogSubPage>
 		{
 			{
@@ -326,68 +324,56 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		};
 
-		// Token: 0x0401B2BA RID: 111290
+		// Token: 0x04015C8C RID: 89228
 		[Nullable(2)]
 		private RoleDevelopData Data;
 
-		// Token: 0x0401B2BB RID: 111291
+		// Token: 0x04015C8D RID: 89229
 		[Nullable(2)]
 		private Action OnClickSwitchCallback;
 
-		// Token: 0x0401B2BC RID: 111292
+		// Token: 0x04015C8E RID: 89230
 		private SmallItemGrid WeaponItemGrid;
 
-		// Token: 0x0401B2BD RID: 111293
+		// Token: 0x04015C8F RID: 89231
 		private GenericLayout<RoleDevelopProjectMaterialItem, RoleDevelopProjectMaterialItemData> ItemLayout;
 
-		// Token: 0x0401B2BE RID: 111294
+		// Token: 0x04015C90 RID: 89232
 		private ButtonItem NormalButtonItem;
 
-		// Token: 0x0401B2BF RID: 111295
+		// Token: 0x04015C91 RID: 89233
 		private ButtonItem HighLightButtonItem;
 
-		// Token: 0x0200AEB5 RID: 44725
+		// Token: 0x020098E9 RID: 39145
 		[NullableContext(0)]
-		public static class EComponentType
+		private enum EComponentType
 		{
-			// Token: 0x040350E9 RID: 217321
-			public const int PanelSwitch = 0;
-
-			// Token: 0x040350EA RID: 217322
-			public const int BtnSwitch = 1;
-
-			// Token: 0x040350EB RID: 217323
-			public const int PanelWeaponType = 2;
-
-			// Token: 0x040350EC RID: 217324
-			public const int IconWeaponType = 3;
-
-			// Token: 0x040350ED RID: 217325
-			public const int WeaponItem = 4;
-
-			// Token: 0x040350EE RID: 217326
-			public const int TxtWeaponName = 5;
-
-			// Token: 0x040350EF RID: 217327
-			public const int TxtGoalLevel = 6;
-
-			// Token: 0x040350F0 RID: 217328
-			public const int BtnJump = 7;
-
-			// Token: 0x040350F1 RID: 217329
-			public const int BtnPerfectJump = 8;
-
-			// Token: 0x040350F2 RID: 217330
-			public const int PanelDetailLayout = 9;
-
-			// Token: 0x040350F3 RID: 217331
-			public const int PanelDetailItem = 10;
-
-			// Token: 0x040350F4 RID: 217332
-			public const int BtnCall = 11;
-
-			// Token: 0x040350F5 RID: 217333
-			public const int RightItem = 12;
+			// Token: 0x0402FB0F RID: 195343
+			PanelSwitch,
+			// Token: 0x0402FB10 RID: 195344
+			BtnSwitch,
+			// Token: 0x0402FB11 RID: 195345
+			PanelWeaponType,
+			// Token: 0x0402FB12 RID: 195346
+			IconWeaponType,
+			// Token: 0x0402FB13 RID: 195347
+			WeaponItem,
+			// Token: 0x0402FB14 RID: 195348
+			TxtWeaponName,
+			// Token: 0x0402FB15 RID: 195349
+			TxtGoalLevel,
+			// Token: 0x0402FB16 RID: 195350
+			BtnJump,
+			// Token: 0x0402FB17 RID: 195351
+			BtnPerfectJump,
+			// Token: 0x0402FB18 RID: 195352
+			PanelDetailLayout,
+			// Token: 0x0402FB19 RID: 195353
+			PanelDetailItem,
+			// Token: 0x0402FB1A RID: 195354
+			BtnCall,
+			// Token: 0x0402FB1B RID: 195355
+			RightItem
 		}
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062AF RID: 25263
+	// Token: 0x02006920 RID: 26912
 	public class ICaptureElementalBoxT
 	{
-		// Token: 0x1700BC97 RID: 48279
-		// (get) Token: 0x0602BA81 RID: 178817 RVA: 0x006025E9 File Offset: 0x006007E9
-		// (set) Token: 0x0602BA82 RID: 178818 RVA: 0x006025F1 File Offset: 0x006007F1
+		// Token: 0x1700C61F RID: 50719
+		// (get) Token: 0x0602E1E2 RID: 188898 RVA: 0x0064D3F1 File Offset: 0x0064B5F1
+		// (set) Token: 0x0602E1E3 RID: 188899 RVA: 0x0064D3F9 File Offset: 0x0064B5F9
 		public TControlElementalBoxTypeUnion CtrlConfig { get; set; }
 
-		// Token: 0x1700BC98 RID: 48280
-		// (get) Token: 0x0602BA83 RID: 178819 RVA: 0x006025FA File Offset: 0x006007FA
-		// (set) Token: 0x0602BA84 RID: 178820 RVA: 0x00602602 File Offset: 0x00600802
+		// Token: 0x1700C620 RID: 50720
+		// (get) Token: 0x0602E1E4 RID: 188900 RVA: 0x0064D402 File Offset: 0x0064B602
+		// (set) Token: 0x0602E1E5 RID: 188901 RVA: 0x0064D40A File Offset: 0x0064B60A
 		public TElementalBoxTargetPosTypeUnion TargetPosConfig { get; set; }
 
-		// Token: 0x1700BC99 RID: 48281
-		// (get) Token: 0x0602BA85 RID: 178821 RVA: 0x0060260B File Offset: 0x0060080B
-		// (set) Token: 0x0602BA86 RID: 178822 RVA: 0x00602613 File Offset: 0x00600813
+		// Token: 0x1700C621 RID: 50721
+		// (get) Token: 0x0602E1E6 RID: 188902 RVA: 0x0064D413 File Offset: 0x0064B613
+		// (set) Token: 0x0602E1E7 RID: 188903 RVA: 0x0064D41B File Offset: 0x0064B61B
 		public float MoveSpeed { get; set; }
 
-		// Token: 0x0602BA87 RID: 178823 RVA: 0x0060261C File Offset: 0x0060081C
+		// Token: 0x0602E1E8 RID: 188904 RVA: 0x0064D424 File Offset: 0x0064B624
 		public ICaptureElementalBoxT()
 		{
 			this.CtrlConfig = null;

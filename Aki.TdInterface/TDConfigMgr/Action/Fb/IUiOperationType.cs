@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002950 RID: 10576
+	// Token: 0x02002C32 RID: 11314
 	public class IUiOperationType
 	{
-		// Token: 0x0600EA83 RID: 60035 RVA: 0x0022570A File Offset: 0x0022390A
-		[NullableContext(1)]
+		// Token: 0x0600F8EE RID: 63726 RVA: 0x00242CEA File Offset: 0x00240EEA
 		public static IUiOperationType Create(IUiOperationType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049A5 RID: 18853
-		// (get) Token: 0x0600EA84 RID: 60036 RVA: 0x00225729 File Offset: 0x00223929
+		// Token: 0x17004D38 RID: 19768
+		// (get) Token: 0x0600F8EF RID: 63727 RVA: 0x00242D09 File Offset: 0x00240F09
 		public virtual EUiOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008140 RID: 33088
+		// Token: 0x0400881C RID: 34844
 		private IUiOperationType Instance;
 	}
 }

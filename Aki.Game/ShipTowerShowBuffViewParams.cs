@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020029D2 RID: 10706
+// Token: 0x02001F4D RID: 8013
 public class ShipTowerShowBuffViewParams
 {
-	// Token: 0x0400A52E RID: 42286
+	// Token: 0x0400A918 RID: 43288
 	public int BuffId;
 }

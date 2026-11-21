@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02002D2D RID: 11565
+// Token: 0x02002287 RID: 8839
 public static class WeeklyChallengeDefine
 {
-	// Token: 0x0400B48A RID: 46218
+	// Token: 0x0400B7FF RID: 47103
 	public const int MIN_SHOW_ITEM_COUNT = 3;
 }

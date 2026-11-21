@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200268A RID: 9866
+// Token: 0x02001B75 RID: 7029
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class QuestTreeConfig : ConfigBase
 {
-	// Token: 0x060143A0 RID: 82848 RVA: 0x0051D470 File Offset: 0x0051B670
+	// Token: 0x06011882 RID: 71810 RVA: 0x0052C1A8 File Offset: 0x0052A3A8
 	protected override bool OnClear()
 	{
 		this.CustomGotoConfigMap = null;
 		return true;
 	}
 
-	// Token: 0x060143A1 RID: 82849 RVA: 0x0051D47C File Offset: 0x0051B67C
+	// Token: 0x06011883 RID: 71811 RVA: 0x0052C1B4 File Offset: 0x0052A3B4
 	private Dictionary<int, Dictionary<string, Dictionary<int, QuestTreeCustomJumpConfig>>> GetCustomGotoConfigMap()
 	{
 		if (this.CustomGotoConfigMap == null)
@@ -43,55 +43,55 @@ public class QuestTreeConfig : ConfigBase
 		return this.CustomGotoConfigMap;
 	}
 
-	// Token: 0x060143A2 RID: 82850 RVA: 0x0051D53C File Offset: 0x0051B73C
+	// Token: 0x06011884 RID: 71812 RVA: 0x0052C274 File Offset: 0x0052A474
 	public IReadOnlyList<QuestTreeChapter> GetAllChapters()
 	{
 		return ConfigQuestTreeChapterAll.GetConfigList(true) ?? new List<QuestTreeChapter>();
 	}
 
-	// Token: 0x060143A3 RID: 82851 RVA: 0x0051D54D File Offset: 0x0051B74D
+	// Token: 0x06011885 RID: 71813 RVA: 0x0052C285 File Offset: 0x0052A485
 	public QuestTreeChapter? GetChapterById(int chapterId)
 	{
 		return ConfigQuestTreeChapterById.GetConfig(chapterId, true);
 	}
 
-	// Token: 0x060143A4 RID: 82852 RVA: 0x0051D556 File Offset: 0x0051B756
+	// Token: 0x06011886 RID: 71814 RVA: 0x0052C28E File Offset: 0x0052A48E
 	public IReadOnlyList<QuestTreeNode> GetNodeListByChapterId(int chapterId)
 	{
 		return ConfigQuestTreeNodeByChapterId.GetConfigList(chapterId, true) ?? new List<QuestTreeNode>();
 	}
 
-	// Token: 0x060143A5 RID: 82853 RVA: 0x0051D568 File Offset: 0x0051B768
+	// Token: 0x06011887 RID: 71815 RVA: 0x0052C2A0 File Offset: 0x0052A4A0
 	public QuestTreeNode? GetNodeById(int nodeId)
 	{
 		return ConfigQuestTreeNodeById.GetConfig(nodeId, true);
 	}
 
-	// Token: 0x060143A6 RID: 82854 RVA: 0x0051D571 File Offset: 0x0051B771
+	// Token: 0x06011888 RID: 71816 RVA: 0x0052C2A9 File Offset: 0x0052A4A9
 	public QuestTreeNodeUnlock? GetNodeUnlockConditionById(int unlockId)
 	{
 		return ConfigQuestTreeNodeUnlockById.GetConfig(unlockId, true);
 	}
 
-	// Token: 0x060143A7 RID: 82855 RVA: 0x0051D57A File Offset: 0x0051B77A
+	// Token: 0x06011889 RID: 71817 RVA: 0x0052C2B2 File Offset: 0x0052A4B2
 	public NodeUnlockDefault? GetNodeUnlockConditionDefaultConfigByType(string type)
 	{
 		return ConfigNodeUnlockDefaultById.GetConfig(type, true);
 	}
 
-	// Token: 0x060143A8 RID: 82856 RVA: 0x0051D584 File Offset: 0x0051B784
+	// Token: 0x0601188A RID: 71818 RVA: 0x0052C2BC File Offset: 0x0052A4BC
 	public int GetMoonChasingQuestId()
 	{
 		return ConfigCommonParamById.GetIntConfig("MoonChasingQuestId").GetValueOrDefault();
 	}
 
-	// Token: 0x060143A9 RID: 82857 RVA: 0x0051D5A4 File Offset: 0x0051B7A4
+	// Token: 0x0601188B RID: 71819 RVA: 0x0052C2DC File Offset: 0x0052A4DC
 	public float GetScrollingScaleDelta()
 	{
 		return ConfigCommonParamById.GetFloatConfig("QuestTreeScrollingScaleDelta").GetValueOrDefault(0.01f);
 	}
 
-	// Token: 0x060143AA RID: 82858 RVA: 0x0051D5C8 File Offset: 0x0051B7C8
+	// Token: 0x0601188C RID: 71820 RVA: 0x0052C300 File Offset: 0x0052A500
 	public QuestTreeCustomJumpConfig? GetCustomGotoConfigByQuestIdAndType(int questId, string type, int conditionIndex)
 	{
 		Dictionary<string, Dictionary<int, QuestTreeCustomJumpConfig>> dictionary;
@@ -112,14 +112,14 @@ public class QuestTreeConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x060143AB RID: 82859 RVA: 0x0051D61E File Offset: 0x0051B81E
+	// Token: 0x0601188D RID: 71821 RVA: 0x0052C356 File Offset: 0x0052A556
 	public IReadOnlyList<QuestTreeCustomJumpConfig> GetAllCustomGotoConfig()
 	{
 		return ConfigQuestTreeCustomJumpConfigAll.GetConfigList(true) ?? new List<QuestTreeCustomJumpConfig>();
 	}
 
-	// Token: 0x17001A16 RID: 6678
-	// (get) Token: 0x060143AC RID: 82860 RVA: 0x0051D62F File Offset: 0x0051B82F
+	// Token: 0x17001A4E RID: 6734
+	// (get) Token: 0x0601188E RID: 71822 RVA: 0x0052C367 File Offset: 0x0052A567
 	public static QuestTreeConfig Instance
 	{
 		get
@@ -128,7 +128,7 @@ public class QuestTreeConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060143AD RID: 82861 RVA: 0x0051D636 File Offset: 0x0051B836
+	// Token: 0x0601188F RID: 71823 RVA: 0x0052C36E File Offset: 0x0052A56E
 	public static QuestTreeConfig GetOrCreateInstance()
 	{
 		if (QuestTreeConfig._Instance == null)
@@ -138,7 +138,7 @@ public class QuestTreeConfig : ConfigBase
 		return QuestTreeConfig._Instance;
 	}
 
-	// Token: 0x060143AE RID: 82862 RVA: 0x0051D64A File Offset: 0x0051B84A
+	// Token: 0x06011890 RID: 71824 RVA: 0x0052C382 File Offset: 0x0052A582
 	public static bool CreateInstance()
 	{
 		if (QuestTreeConfig._Instance != null)
@@ -149,24 +149,24 @@ public class QuestTreeConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060143AF RID: 82863 RVA: 0x0051D660 File Offset: 0x0051B860
+	// Token: 0x06011891 RID: 71825 RVA: 0x0052C398 File Offset: 0x0052A598
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060143B0 RID: 82864 RVA: 0x0051D662 File Offset: 0x0051B862
+	// Token: 0x06011892 RID: 71826 RVA: 0x0052C39A File Offset: 0x0052A59A
 	public static void ResetStaticDefaultValue()
 	{
 		QuestTreeConfig._Instance = null;
 	}
 
-	// Token: 0x060143B1 RID: 82865 RVA: 0x0051D66A File Offset: 0x0051B86A
+	// Token: 0x06011893 RID: 71827 RVA: 0x0052C3A2 File Offset: 0x0052A5A2
 	static QuestTreeConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestTreeConfig.CreateStaticDefaultValue), new Action(QuestTreeConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009825 RID: 38949
+	// Token: 0x0400997D RID: 39293
 	[Nullable(new byte[]
 	{
 		2,
@@ -176,7 +176,7 @@ public class QuestTreeConfig : ConfigBase
 	})]
 	private Dictionary<int, Dictionary<string, Dictionary<int, QuestTreeCustomJumpConfig>>> CustomGotoConfigMap;
 
-	// Token: 0x04009826 RID: 38950
+	// Token: 0x0400997E RID: 39294
 	[Nullable(2)]
 	private static QuestTreeConfig _Instance;
 }

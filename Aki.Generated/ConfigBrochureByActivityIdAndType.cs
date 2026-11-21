@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200011D RID: 285
+	// Token: 0x0200012C RID: 300
 	public class ConfigBrochureByActivityIdAndType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060006AF RID: 1711 RVA: 0x0007F62C File Offset: 0x0007D82C
+		// Token: 0x06000709 RID: 1801 RVA: 0x00084F90 File Offset: 0x00083190
 		static ConfigBrochureByActivityIdAndType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBrochureByActivityIdAndType.CreateStaticDefaultValue), new Action(ConfigBrochureByActivityIdAndType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060006B0 RID: 1712 RVA: 0x0007F64C File Offset: 0x0007D84C
+		// Token: 0x0600070A RID: 1802 RVA: 0x00084FB0 File Offset: 0x000831B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBrochureByActivityIdAndType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060006B1 RID: 1713 RVA: 0x0007F6CB File Offset: 0x0007D8CB
+		// Token: 0x0600070B RID: 1803 RVA: 0x0008502F File Offset: 0x0008322F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBrochureByActivityIdAndType.LogPair = null;
 			ConfigBrochureByActivityIdAndType.HandleId = 0;
 		}
 
-		// Token: 0x060006B2 RID: 1714 RVA: 0x0007F6D9 File Offset: 0x0007D8D9
+		// Token: 0x0600070C RID: 1804 RVA: 0x0008503D File Offset: 0x0008323D
 		public static void Init()
 		{
 			ConfigBrochureByActivityIdAndType.HandleId = ConfigCommon.InitDataStatement(ConfigBrochureByActivityIdAndType.HandleId, "db_brochure.db", "select BinData from `Brochure` where ActivityId=? AND Type=?");
 		}
 
-		// Token: 0x060006B3 RID: 1715 RVA: 0x0007F6F4 File Offset: 0x0007D8F4
+		// Token: 0x0600070D RID: 1805 RVA: 0x00085058 File Offset: 0x00083258
 		public static Brochure? GetConfig(int p0ActivityId, int p1Type, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBrochureByActivityIdAndType.HandleId, ConfigBrochureByActivityIdAndType.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new Brochure?(rootAsBrochure);
 		}
 
-		// Token: 0x040007AF RID: 1967
+		// Token: 0x04000818 RID: 2072
 		private const string DB = "db_brochure.db";
 
-		// Token: 0x040007B0 RID: 1968
+		// Token: 0x04000819 RID: 2073
 		private const string FILE = "c.册子玩法.xlsx";
 
-		// Token: 0x040007B1 RID: 1969
+		// Token: 0x0400081A RID: 2074
 		private const string TABLE = "Brochure";
 
-		// Token: 0x040007B2 RID: 1970
+		// Token: 0x0400081B RID: 2075
 		private const string COMMAND = "select BinData from `Brochure` where ActivityId=? AND Type=?";
 
-		// Token: 0x040007B3 RID: 1971
+		// Token: 0x0400081C RID: 2076
 		private const string KEY_PREFIX = "BrochureByActivityIdAndType";
 
-		// Token: 0x040007B4 RID: 1972
+		// Token: 0x0400081D RID: 2077
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040007B5 RID: 1973
+		// Token: 0x0400081E RID: 2078
 		private static int HandleId;
 	}
 }

@@ -4,25 +4,25 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine.Extension;
 
-// Token: 0x0200005F RID: 95
+// Token: 0x02000061 RID: 97
 [NullableContext(1)]
 [Nullable(0)]
-public class Stack<[Nullable(2)] T> : IEnumerable<T>, IEnumerable, IClearable
+public class Stack<[Nullable(2)] T> : IEnumerable<!0>, IEnumerable, IClearable
 {
-	// Token: 0x060002C8 RID: 712 RVA: 0x0000F998 File Offset: 0x0000DB98
+	// Token: 0x06000303 RID: 771 RVA: 0x00010780 File Offset: 0x0000E980
 	public IEnumerator<T> GetEnumerator()
 	{
 		return this.List.GetEnumerator();
 	}
 
-	// Token: 0x060002C9 RID: 713 RVA: 0x0000F9AA File Offset: 0x0000DBAA
+	// Token: 0x06000304 RID: 772 RVA: 0x00010792 File Offset: 0x0000E992
 	IEnumerator IEnumerable.GetEnumerator()
 	{
 		return this.GetEnumerator();
 	}
 
-	// Token: 0x17000064 RID: 100
-	// (get) Token: 0x060002CA RID: 714 RVA: 0x0000F9B2 File Offset: 0x0000DBB2
+	// Token: 0x1700006B RID: 107
+	// (get) Token: 0x06000305 RID: 773 RVA: 0x0001079A File Offset: 0x0000E99A
 	public int Size
 	{
 		get
@@ -31,8 +31,8 @@ public class Stack<[Nullable(2)] T> : IEnumerable<T>, IEnumerable, IClearable
 		}
 	}
 
-	// Token: 0x17000065 RID: 101
-	// (get) Token: 0x060002CB RID: 715 RVA: 0x0000F9BF File Offset: 0x0000DBBF
+	// Token: 0x1700006C RID: 108
+	// (get) Token: 0x06000306 RID: 774 RVA: 0x000107A7 File Offset: 0x0000E9A7
 	public bool Empty
 	{
 		get
@@ -41,19 +41,19 @@ public class Stack<[Nullable(2)] T> : IEnumerable<T>, IEnumerable, IClearable
 		}
 	}
 
-	// Token: 0x060002CC RID: 716 RVA: 0x0000F9CA File Offset: 0x0000DBCA
+	// Token: 0x06000307 RID: 775 RVA: 0x000107B2 File Offset: 0x0000E9B2
 	public void Clear()
 	{
 		this.List.Clear();
 	}
 
-	// Token: 0x060002CD RID: 717 RVA: 0x0000F9D7 File Offset: 0x0000DBD7
+	// Token: 0x06000308 RID: 776 RVA: 0x000107BF File Offset: 0x0000E9BF
 	public void Push(T element)
 	{
 		this.List.Add(element);
 	}
 
-	// Token: 0x060002CE RID: 718 RVA: 0x0000F9E8 File Offset: 0x0000DBE8
+	// Token: 0x06000309 RID: 777 RVA: 0x000107D0 File Offset: 0x0000E9D0
 	[NullableContext(2)]
 	public T Peek()
 	{
@@ -64,7 +64,7 @@ public class Stack<[Nullable(2)] T> : IEnumerable<T>, IEnumerable, IClearable
 		return this.List[this.List.Count - 1];
 	}
 
-	// Token: 0x060002CF RID: 719 RVA: 0x0000FA20 File Offset: 0x0000DC20
+	// Token: 0x0600030A RID: 778 RVA: 0x00010808 File Offset: 0x0000EA08
 	[NullableContext(2)]
 	public T Pop()
 	{
@@ -77,7 +77,7 @@ public class Stack<[Nullable(2)] T> : IEnumerable<T>, IEnumerable, IClearable
 		return result;
 	}
 
-	// Token: 0x060002D0 RID: 720 RVA: 0x0000FA74 File Offset: 0x0000DC74
+	// Token: 0x0600030B RID: 779 RVA: 0x0001085C File Offset: 0x0000EA5C
 	public bool Delete(T element)
 	{
 		int num = this.List.IndexOf(element);
@@ -89,6 +89,6 @@ public class Stack<[Nullable(2)] T> : IEnumerable<T>, IEnumerable, IClearable
 		return false;
 	}
 
-	// Token: 0x040001FE RID: 510
+	// Token: 0x04000214 RID: 532
 	private readonly List<T> List = new List<T>();
 }

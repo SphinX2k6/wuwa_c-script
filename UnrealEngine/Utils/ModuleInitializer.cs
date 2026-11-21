@@ -6,10 +6,11 @@ using System.Runtime.Loader;
 
 namespace UnrealEngine.Utils
 {
-	// Token: 0x02002AF2 RID: 10994
+	// Token: 0x020008A2 RID: 2210
 	internal static class ModuleInitializer
 	{
-		// Token: 0x0602847A RID: 164986 RVA: 0x003D488C File Offset: 0x003D2A8C
+		// Token: 0x0600BE34 RID: 48692 RVA: 0x0012FBEC File Offset: 0x0012DDEC
+		[Obfuscation]
 		internal static void Initialize()
 		{
 			AssemblyLoadContext loadContext = AssemblyLoadContext.GetLoadContext(Assembly.GetExecutingAssembly());
@@ -22,7 +23,7 @@ namespace UnrealEngine.Utils
 					RuntimeHelpers.RunModuleConstructor(manifestModule.ModuleHandle);
 					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(15, 2);
 					defaultInterpolatedStringHandler.AppendLiteral("Assembly ");
-					defaultInterpolatedStringHandler.AppendFormatted(manifestModule.Name);
+					defaultInterpolatedStringHandler.AppendFormatted<Module>(manifestModule);
 					defaultInterpolatedStringHandler.AppendLiteral(" mvid ");
 					defaultInterpolatedStringHandler.AppendFormatted<Guid>(manifestModule.ModuleVersionId);
 					UnrealLogger.Info(defaultInterpolatedStringHandler.ToStringAndClear());

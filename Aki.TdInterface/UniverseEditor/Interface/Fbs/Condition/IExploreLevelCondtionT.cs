@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C20 RID: 19488
+	// Token: 0x0200510D RID: 20749
 	public class IExploreLevelCondtionT
 	{
-		// Token: 0x17008D91 RID: 36241
-		// (get) Token: 0x0601EDFF RID: 126463 RVA: 0x0045255C File Offset: 0x0045075C
-		// (set) Token: 0x0601EE00 RID: 126464 RVA: 0x00452564 File Offset: 0x00450764
+		// Token: 0x170094B5 RID: 38069
+		// (get) Token: 0x060209E5 RID: 133605 RVA: 0x00485BC4 File Offset: 0x00483DC4
+		// (set) Token: 0x060209E6 RID: 133606 RVA: 0x00485BCC File Offset: 0x00483DCC
 		public EAccessQuestCondition Type { get; set; }
 
-		// Token: 0x17008D92 RID: 36242
-		// (get) Token: 0x0601EE01 RID: 126465 RVA: 0x0045256D File Offset: 0x0045076D
-		// (set) Token: 0x0601EE02 RID: 126466 RVA: 0x00452575 File Offset: 0x00450775
+		// Token: 0x170094B6 RID: 38070
+		// (get) Token: 0x060209E7 RID: 133607 RVA: 0x00485BD5 File Offset: 0x00483DD5
+		// (set) Token: 0x060209E8 RID: 133608 RVA: 0x00485BDD File Offset: 0x00483DDD
 		public int ExploreLevel { get; set; }
 
-		// Token: 0x0601EE03 RID: 126467 RVA: 0x0045257E File Offset: 0x0045077E
+		// Token: 0x060209E9 RID: 133609 RVA: 0x00485BE6 File Offset: 0x00483DE6
 		public IExploreLevelCondtionT()
 		{
 			this.Type = EAccessQuestCondition.ExploreLevel;

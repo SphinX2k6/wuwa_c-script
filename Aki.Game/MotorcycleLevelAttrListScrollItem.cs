@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002238 RID: 8760
+// Token: 0x0200171C RID: 5916
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class MotorcycleLevelAttrListScrollItem : GridProxyAbstract<IMotorLevelAttrData>
 {
-	// Token: 0x0601117A RID: 70010 RVA: 0x0042B10C File Offset: 0x0042930C
+	// Token: 0x0600E610 RID: 58896 RVA: 0x00437CB0 File Offset: 0x00435EB0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class MotorcycleLevelAttrListScrollItem : GridProxyAbstract<IMotorLevelAt
 		};
 	}
 
-	// Token: 0x0601117B RID: 70011 RVA: 0x0042B210 File Offset: 0x00429410
+	// Token: 0x0600E611 RID: 58897 RVA: 0x00437DB4 File Offset: 0x00435FB4
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -46,7 +46,7 @@ public class MotorcycleLevelAttrListScrollItem : GridProxyAbstract<IMotorLevelAt
 		base.GetItem(7).SetUIActive(false);
 	}
 
-	// Token: 0x0601117C RID: 70012 RVA: 0x0042B277 File Offset: 0x00429477
+	// Token: 0x0600E612 RID: 58898 RVA: 0x00437E1B File Offset: 0x0043601B
 	protected override void OnBeforeDestroy()
 	{
 		if (this.LevelSequencePlayer != null)
@@ -56,7 +56,7 @@ public class MotorcycleLevelAttrListScrollItem : GridProxyAbstract<IMotorLevelAt
 		}
 	}
 
-	// Token: 0x0601117D RID: 70013 RVA: 0x0042B294 File Offset: 0x00429494
+	// Token: 0x0600E613 RID: 58899 RVA: 0x00437E38 File Offset: 0x00436038
 	public override void Refresh(IMotorLevelAttrData data, bool isSelected, int gridIndex)
 	{
 		MotorAttr? motorAttrConfig = MotorConfig.Instance.GetMotorAttrConfig(data.AttrId);
@@ -144,13 +144,13 @@ public class MotorcycleLevelAttrListScrollItem : GridProxyAbstract<IMotorLevelAt
 		base.SetTextureByPath(motorAttrConfig.Value.Icon, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x0601117E RID: 70014 RVA: 0x0042B641 File Offset: 0x00429841
+	// Token: 0x0600E614 RID: 58900 RVA: 0x004381E5 File Offset: 0x004363E5
 	private bool CanClickLikeToggle()
 	{
 		return !StringUtils.IsBlank(this.AttrDesc);
 	}
 
-	// Token: 0x0601117F RID: 70015 RVA: 0x0042B654 File Offset: 0x00429854
+	// Token: 0x0600E615 RID: 58901 RVA: 0x004381F8 File Offset: 0x004363F8
 	protected void ToggleEvent(EToggleState bState)
 	{
 		bool flag = bState == EToggleState.ETT_Checked;
@@ -164,42 +164,42 @@ public class MotorcycleLevelAttrListScrollItem : GridProxyAbstract<IMotorLevelAt
 		}
 	}
 
-	// Token: 0x04008231 RID: 33329
+	// Token: 0x0400836F RID: 33647
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04008232 RID: 33330
+	// Token: 0x04008370 RID: 33648
 	private string AttrDesc = "";
 
-	// Token: 0x0200876C RID: 34668
+	// Token: 0x020078F5 RID: 30965
 	[NullableContext(0)]
 	private class EAttrItemDefine
 	{
-		// Token: 0x0402C045 RID: 180293
+		// Token: 0x0402735D RID: 160605
 		public const int ToggleBase = 0;
 
-		// Token: 0x0402C046 RID: 180294
+		// Token: 0x0402735E RID: 160606
 		public const int SpriteBase = 1;
 
-		// Token: 0x0402C047 RID: 180295
+		// Token: 0x0402735F RID: 160607
 		public const int AttrIconTexture = 2;
 
-		// Token: 0x0402C048 RID: 180296
+		// Token: 0x04027360 RID: 160608
 		public const int AttrNameText = 3;
 
-		// Token: 0x0402C049 RID: 180297
+		// Token: 0x04027361 RID: 160609
 		public const int AttrBaseValue = 4;
 
-		// Token: 0x0402C04A RID: 180298
+		// Token: 0x04027362 RID: 160610
 		public const int AttrAddValue = 5;
 
-		// Token: 0x0402C04B RID: 180299
+		// Token: 0x04027363 RID: 160611
 		public const int Arrow = 6;
 
-		// Token: 0x0402C04C RID: 180300
+		// Token: 0x04027364 RID: 160612
 		public const int PanelDescription = 7;
 
-		// Token: 0x0402C04D RID: 180301
+		// Token: 0x04027365 RID: 160613
 		public const int TextDescription = 8;
 	}
 }

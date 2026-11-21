@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002CD RID: 717
+	// Token: 0x020002E2 RID: 738
 	public class ConfigFilterSortGroupById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060010D3 RID: 4307 RVA: 0x000B886C File Offset: 0x000B6A6C
+		// Token: 0x06001151 RID: 4433 RVA: 0x000BED78 File Offset: 0x000BCF78
 		static ConfigFilterSortGroupById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFilterSortGroupById.CreateStaticDefaultValue), new Action(ConfigFilterSortGroupById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060010D4 RID: 4308 RVA: 0x000B888C File Offset: 0x000B6A8C
+		// Token: 0x06001152 RID: 4434 RVA: 0x000BED98 File Offset: 0x000BCF98
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFilterSortGroupById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060010D5 RID: 4309 RVA: 0x000B890B File Offset: 0x000B6B0B
+		// Token: 0x06001153 RID: 4435 RVA: 0x000BEE17 File Offset: 0x000BD017
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFilterSortGroupById.LogPair = null;
 			ConfigFilterSortGroupById.HandleId = 0;
 		}
 
-		// Token: 0x060010D6 RID: 4310 RVA: 0x000B8919 File Offset: 0x000B6B19
+		// Token: 0x06001154 RID: 4436 RVA: 0x000BEE25 File Offset: 0x000BD025
 		public static void Init()
 		{
 			ConfigFilterSortGroupById.HandleId = ConfigCommon.InitDataStatement(ConfigFilterSortGroupById.HandleId, "db_filter_sort.db", "select BinData from `FilterSortGroup` where Id = ?");
 		}
 
-		// Token: 0x060010D7 RID: 4311 RVA: 0x000B8934 File Offset: 0x000B6B34
+		// Token: 0x06001155 RID: 4437 RVA: 0x000BEE40 File Offset: 0x000BD040
 		public static FilterSortGroup? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFilterSortGroupById.HandleId, ConfigFilterSortGroupById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FilterSortGroup?(rootAsFilterSortGroup);
 		}
 
-		// Token: 0x0400137F RID: 4991
+		// Token: 0x04001412 RID: 5138
 		private const string DB = "db_filter_sort.db";
 
-		// Token: 0x04001380 RID: 4992
+		// Token: 0x04001413 RID: 5139
 		private const string FILE = "s.筛选排序总表.xlsx";
 
-		// Token: 0x04001381 RID: 4993
+		// Token: 0x04001414 RID: 5140
 		private const string TABLE = "FilterSortGroup";
 
-		// Token: 0x04001382 RID: 4994
+		// Token: 0x04001415 RID: 5141
 		private const string COMMAND = "select BinData from `FilterSortGroup` where Id = ?";
 
-		// Token: 0x04001383 RID: 4995
+		// Token: 0x04001416 RID: 5142
 		private const string KEY_PREFIX = "FilterSortGroupById";
 
-		// Token: 0x04001384 RID: 4996
+		// Token: 0x04001417 RID: 5143
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001385 RID: 4997
+		// Token: 0x04001418 RID: 5144
 		private static int HandleId;
 	}
 }

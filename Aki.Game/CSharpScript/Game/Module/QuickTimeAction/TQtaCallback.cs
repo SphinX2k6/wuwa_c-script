@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F34 RID: 20276
-	// (Invoke) Token: 0x0603401C RID: 213020
+	// Token: 0x02003EFD RID: 16125
+	// (Invoke) Token: 0x06028E8A RID: 167562
 	public delegate void TQtaCallback(IQtaContext context, EQtaResult qtaResult);
 }

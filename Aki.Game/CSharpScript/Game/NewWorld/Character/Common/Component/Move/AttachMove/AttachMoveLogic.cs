@@ -6,29 +6,29 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 {
-	// Token: 0x02007106 RID: 28934
+	// Token: 0x020063B6 RID: 25526
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AttachMoveLogic
 	{
-		// Token: 0x06046A36 RID: 289334 RVA: 0x011C7677 File Offset: 0x011C5877
+		// Token: 0x0603DE35 RID: 253493 RVA: 0x011F6697 File Offset: 0x011F4897
 		public virtual bool IsMoving()
 		{
 			return this.InState;
 		}
 
-		// Token: 0x06046A37 RID: 289335 RVA: 0x011C767F File Offset: 0x011C587F
+		// Token: 0x0603DE36 RID: 253494 RVA: 0x011F669F File Offset: 0x011F489F
 		public virtual void UpdateMove(float deltaSeconds)
 		{
 		}
 
-		// Token: 0x06046A38 RID: 289336 RVA: 0x011C7681 File Offset: 0x011C5881
+		// Token: 0x0603DE37 RID: 253495 RVA: 0x011F66A1 File Offset: 0x011F48A1
 		public virtual void StopMoveWithCallback(ELevelEventState result)
 		{
 			this.StopMove();
 		}
 
-		// Token: 0x06046A39 RID: 289337 RVA: 0x011C768C File Offset: 0x011C588C
+		// Token: 0x0603DE38 RID: 253496 RVA: 0x011F66AC File Offset: 0x011F48AC
 		public virtual void StopMove()
 		{
 			if (!this.InState)
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			exitCallback();
 		}
 
-		// Token: 0x06046A3A RID: 289338 RVA: 0x011C7706 File Offset: 0x011C5906
+		// Token: 0x0603DE39 RID: 253497 RVA: 0x011F6726 File Offset: 0x011F4926
 		public virtual void Dispose()
 		{
 			this.StopMove();
 		}
 
-		// Token: 0x06046A3B RID: 289339 RVA: 0x011C770E File Offset: 0x011C590E
+		// Token: 0x0603DE3A RID: 253498 RVA: 0x011F672E File Offset: 0x011F492E
 		[NullableContext(1)]
 		public void StartHelpedAttachMoveWithData(Entity entity, CharacterActorComponent leader, BP_AttachMoveConfig_C data, [Nullable(2)] Action endCallback = null)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			this.ExecuteAttach(entity, leader);
 		}
 
-		// Token: 0x06046A3C RID: 289340 RVA: 0x011C7748 File Offset: 0x011C5948
+		// Token: 0x0603DE3B RID: 253499 RVA: 0x011F6768 File Offset: 0x011F4968
 		[NullableContext(1)]
 		protected void PrepareAttachMove(Entity entity, BP_AttachMoveConfig_C data, [Nullable(2)] Action endCallback = null)
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06046A3D RID: 289341 RVA: 0x011C77CC File Offset: 0x011C59CC
+		// Token: 0x0603DE3C RID: 253500 RVA: 0x011F67EC File Offset: 0x011F49EC
 		[NullableContext(1)]
 		protected bool ExecuteAttach(Entity entity, CharacterActorComponent leader)
 		{
@@ -124,27 +124,27 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			return true;
 		}
 
-		// Token: 0x06046A3E RID: 289342 RVA: 0x011C78DB File Offset: 0x011C5ADB
+		// Token: 0x0603DE3D RID: 253501 RVA: 0x011F68FB File Offset: 0x011F4AFB
 		public virtual void StartAssistedWalk()
 		{
 		}
 
-		// Token: 0x06046A3F RID: 289343 RVA: 0x011C78DD File Offset: 0x011C5ADD
+		// Token: 0x0603DE3E RID: 253502 RVA: 0x011F68FD File Offset: 0x011F4AFD
 		public virtual void EnterAssistedWalkIdle()
 		{
 		}
 
-		// Token: 0x06046A40 RID: 289344 RVA: 0x011C78DF File Offset: 0x011C5ADF
+		// Token: 0x0603DE3F RID: 253503 RVA: 0x011F68FF File Offset: 0x011F4AFF
 		public virtual void EnterAssistedWalking()
 		{
 		}
 
-		// Token: 0x06046A41 RID: 289345 RVA: 0x011C78E1 File Offset: 0x011C5AE1
+		// Token: 0x0603DE40 RID: 253504 RVA: 0x011F6901 File Offset: 0x011F4B01
 		public virtual void LeftAssistedWalking()
 		{
 		}
 
-		// Token: 0x06046A42 RID: 289346 RVA: 0x011C78E4 File Offset: 0x011C5AE4
+		// Token: 0x0603DE41 RID: 253505 RVA: 0x011F6904 File Offset: 0x011F4B04
 		protected void AddTags(BaseTagComponent tagComp, List<int> tagList)
 		{
 			if (tagComp == null || this.Params == null || tagList == null || tagList.Count == 0)
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			}
 		}
 
-		// Token: 0x06046A43 RID: 289347 RVA: 0x011C7950 File Offset: 0x011C5B50
+		// Token: 0x0603DE42 RID: 253506 RVA: 0x011F6970 File Offset: 0x011F4B70
 		protected void RemoveTags(BaseTagComponent tagComp, List<int> tagList)
 		{
 			if (tagComp == null || this.Params == null || tagList == null || tagList.Count == 0)
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			}
 		}
 
-		// Token: 0x06046A44 RID: 289348 RVA: 0x011C79BC File Offset: 0x011C5BBC
+		// Token: 0x0603DE43 RID: 253507 RVA: 0x011F69DC File Offset: 0x011F4BDC
 		[NullableContext(1)]
 		protected void SetOnlyTag([Nullable(2)] BaseTagComponent tagComp, int tagId, bool add, string context)
 		{
@@ -195,19 +195,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			}
 		}
 
-		// Token: 0x04025144 RID: 151876
+		// Token: 0x04020DD9 RID: 134617
 		protected bool InState;
 
-		// Token: 0x04025145 RID: 151877
+		// Token: 0x04020DDA RID: 134618
 		protected Action ExitCallback;
 
-		// Token: 0x04025146 RID: 151878
+		// Token: 0x04020DDB RID: 134619
 		protected AttachMoveParams Params;
 
-		// Token: 0x04025147 RID: 151879
+		// Token: 0x04020DDC RID: 134620
 		protected BaseTagComponent TagComp;
 
-		// Token: 0x04025148 RID: 151880
+		// Token: 0x04020DDD RID: 134621
 		protected FollowerAttachHelper AttachHelper;
 	}
 }

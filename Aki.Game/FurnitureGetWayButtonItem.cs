@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000FD1 RID: 4049
+// Token: 0x02000486 RID: 1158
 public class FurnitureGetWayButtonItem : UiPanelBase
 {
-	// Token: 0x06006802 RID: 26626 RVA: 0x0014A928 File Offset: 0x00148B28
+	// Token: 0x06003B9A RID: 15258 RVA: 0x001531EC File Offset: 0x001513EC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class FurnitureGetWayButtonItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006803 RID: 26627 RVA: 0x0014A9A8 File Offset: 0x00148BA8
+	// Token: 0x06003B9B RID: 15259 RVA: 0x0015326C File Offset: 0x0015146C
 	[NullableContext(1)]
 	public void Refresh(IFurnitureGetWayButtonItemData data)
 	{
@@ -38,7 +38,7 @@ public class FurnitureGetWayButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006804 RID: 26628 RVA: 0x0014AA1F File Offset: 0x00148C1F
+	// Token: 0x06003B9C RID: 15260 RVA: 0x001532E3 File Offset: 0x001514E3
 	private void OnClickJumpButton()
 	{
 		IFurnitureGetWayButtonItemData data = this.Data;
@@ -54,7 +54,7 @@ public class FurnitureGetWayButtonItem : UiPanelBase
 		jumpFunction();
 	}
 
-	// Token: 0x04002F6D RID: 12141
+	// Token: 0x04003006 RID: 12294
 	[Nullable(2)]
 	private IFurnitureGetWayButtonItemData Data;
 }

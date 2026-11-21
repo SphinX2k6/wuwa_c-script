@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009F8 RID: 2552
+	// Token: 0x02000ACD RID: 2765
 	public class ConfigTowerDefencePhantomAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003BE4 RID: 15332 RVA: 0x001AC6F0 File Offset: 0x001AA8F0
+		// Token: 0x060040E2 RID: 16610 RVA: 0x001CBA84 File Offset: 0x001C9C84
 		static ConfigTowerDefencePhantomAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTowerDefencePhantomAll.CreateStaticDefaultValue), new Action(ConfigTowerDefencePhantomAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003BE5 RID: 15333 RVA: 0x001AC710 File Offset: 0x001AA910
+		// Token: 0x060040E3 RID: 16611 RVA: 0x001CBAA4 File Offset: 0x001C9CA4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTowerDefencePhantomAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003BE6 RID: 15334 RVA: 0x001AC78F File Offset: 0x001AA98F
+		// Token: 0x060040E4 RID: 16612 RVA: 0x001CBB23 File Offset: 0x001C9D23
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTowerDefencePhantomAll.LogPair = null;
 			ConfigTowerDefencePhantomAll.HandleId = 0;
 		}
 
-		// Token: 0x06003BE7 RID: 15335 RVA: 0x001AC79D File Offset: 0x001AA99D
+		// Token: 0x060040E5 RID: 16613 RVA: 0x001CBB31 File Offset: 0x001C9D31
 		public static void Init()
 		{
 			ConfigTowerDefencePhantomAll.HandleId = ConfigCommon.InitDataStatement(ConfigTowerDefencePhantomAll.HandleId, "db_towerdefense.db", "select BinData from `TowerDefencePhantom`");
 		}
 
-		// Token: 0x06003BE8 RID: 15336 RVA: 0x001AC7B8 File Offset: 0x001AA9B8
+		// Token: 0x060040E6 RID: 16614 RVA: 0x001CBB4C File Offset: 0x001C9D4C
 		[NullableContext(2)]
 		public static IReadOnlyList<TowerDefencePhantom> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040045AE RID: 17838
+		// Token: 0x04004B81 RID: 19329
 		private const string DB = "db_towerdefense.db";
 
-		// Token: 0x040045AF RID: 17839
+		// Token: 0x04004B82 RID: 19330
 		private const string FILE = "l.联机塔防活动.xlsx";
 
-		// Token: 0x040045B0 RID: 17840
+		// Token: 0x04004B83 RID: 19331
 		private const string TABLE = "TowerDefencePhantom";
 
-		// Token: 0x040045B1 RID: 17841
+		// Token: 0x04004B84 RID: 19332
 		private const string COMMAND = "select BinData from `TowerDefencePhantom`";
 
-		// Token: 0x040045B2 RID: 17842
+		// Token: 0x04004B85 RID: 19333
 		private const string KEY_PREFIX = "TowerDefencePhantomAll";
 
-		// Token: 0x040045B3 RID: 17843
+		// Token: 0x04004B86 RID: 19334
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040045B4 RID: 17844
+		// Token: 0x04004B87 RID: 19335
 		private static int HandleId;
 	}
 }

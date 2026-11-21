@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006281 RID: 25217
+	// Token: 0x020051FF RID: 20991
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RealmBetweenTabDynamicItem : UiPanelBase, IDynamicScrollBaseItem<RealmBetweenAreaData>
 	{
-		// Token: 0x0603F792 RID: 259986 RVA: 0x00F58550 File Offset: 0x00F56750
+		// Token: 0x06034453 RID: 214099 RVA: 0x00E9F4AC File Offset: 0x00E9D6AC
 		public UniTask Init(UUIItem actor)
 		{
 			RealmBetweenTabDynamicItem.<Init>d__1 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F793 RID: 259987 RVA: 0x00F5859B File Offset: 0x00F5679B
+		// Token: 0x06034454 RID: 214100 RVA: 0x00E9F4F7 File Offset: 0x00E9D6F7
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F794 RID: 259988 RVA: 0x00F585D4 File Offset: 0x00F567D4
+		// Token: 0x06034455 RID: 214101 RVA: 0x00E9F530 File Offset: 0x00E9D730
 		public FVector2D GetItemSize(RealmBetweenAreaData itemData)
 		{
 			UUIItem rootItem = base.GetRootItem();
@@ -44,12 +44,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return this.VectorValue.ToUeVector2D(false);
 		}
 
-		// Token: 0x0603F795 RID: 259989 RVA: 0x00F5860D File Offset: 0x00F5680D
+		// Token: 0x06034456 RID: 214102 RVA: 0x00E9F569 File Offset: 0x00E9D769
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x040212BD RID: 135869
+		// Token: 0x0401BBEC RID: 113644
 		private Vector2D VectorValue;
 	}
 }

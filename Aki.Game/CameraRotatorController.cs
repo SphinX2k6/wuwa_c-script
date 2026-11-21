@@ -4,50 +4,50 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 
-// Token: 0x0200021E RID: 542
+// Token: 0x02000222 RID: 546
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x06002132 RID: 8498 RVA: 0x000BD8A0 File Offset: 0x000BBAA0
+	// Token: 0x060021E0 RID: 8672 RVA: 0x000C4BC0 File Offset: 0x000C2DC0
 	public CameraRotatorController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x06002133 RID: 8499 RVA: 0x000BD8F2 File Offset: 0x000BBAF2
+	// Token: 0x060021E1 RID: 8673 RVA: 0x000C4C12 File Offset: 0x000C2E12
 	public override string Name()
 	{
 		return "RotatorController";
 	}
 
-	// Token: 0x06002134 RID: 8500 RVA: 0x000BD8FC File Offset: 0x000BBAFC
+	// Token: 0x060021E2 RID: 8674 RVA: 0x000C4C1C File Offset: 0x000C2E1C
 	public void PlayCameraRotator(Vector lookAt1, Vector lookAt2, Rotator addRotator, float time, bool canBreakByInput = true, float stayTime = 0f)
 	{
 		this.BeginCameraRotator(lookAt1, lookAt2, addRotator, time, stayTime, 0f, 1f, canBreakByInput, null);
 	}
 
-	// Token: 0x06002135 RID: 8501 RVA: 0x000BD924 File Offset: 0x000BBB24
+	// Token: 0x060021E3 RID: 8675 RVA: 0x000C4C44 File Offset: 0x000C2E44
 	public void PlayCameraRotatorWithCurve(Vector lookAt1, Vector lookAt2, Rotator addRotator, float time, float minAlpha, float maxAlpha, CurveBase curve, bool canBreakByInput = true, float stayTime = 0f, [Nullable(2)] Action callback = null)
 	{
 		this.RotatorAlphaCurve = curve;
 		this.BeginCameraRotator(lookAt1, lookAt2, addRotator, time, stayTime, minAlpha, maxAlpha, canBreakByInput, callback);
 	}
 
-	// Token: 0x06002136 RID: 8502 RVA: 0x000BD94E File Offset: 0x000BBB4E
+	// Token: 0x060021E4 RID: 8676 RVA: 0x000C4C6E File Offset: 0x000C2E6E
 	public void PlayCameraEulerRotator(Rotator desRotator, float time, bool canBreakByInput = true, float stayTime = 0f)
 	{
 		this.BeginCameraEulerRotator(desRotator, time, stayTime, 0f, 1f, canBreakByInput);
 	}
 
-	// Token: 0x06002137 RID: 8503 RVA: 0x000BD965 File Offset: 0x000BBB65
+	// Token: 0x060021E5 RID: 8677 RVA: 0x000C4C85 File Offset: 0x000C2E85
 	public void PlayCameraEulerRotatorWithCurve(Rotator desRotator, float time, float minAlpha, float maxAlpha, CurveBase curve, bool canBreakByInput = true, float stayTime = 0f)
 	{
 		this.RotatorAlphaCurve = curve;
 		this.BeginCameraEulerRotator(desRotator, time, stayTime, minAlpha, maxAlpha, canBreakByInput);
 	}
 
-	// Token: 0x06002138 RID: 8504 RVA: 0x000BD980 File Offset: 0x000BBB80
+	// Token: 0x060021E6 RID: 8678 RVA: 0x000C4CA0 File Offset: 0x000C2EA0
 	private void UpdateArmRotationModifier(float deltaTime)
 	{
 		if (!this.IsActive)
@@ -97,7 +97,7 @@ public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapVal
 		this.CurrentTime += deltaTime;
 	}
 
-	// Token: 0x06002139 RID: 8505 RVA: 0x000BDB1C File Offset: 0x000BBD1C
+	// Token: 0x060021E7 RID: 8679 RVA: 0x000C4E3C File Offset: 0x000C303C
 	private void BeginCameraRotator(Vector lookAt1, Vector lookAt2, Rotator addRotator, float time, float stayTime, float minAlpha, float maxAlpha, bool canBreakByInput, [Nullable(2)] Action finishCallback = null)
 	{
 		this.IsActive = true;
@@ -128,7 +128,7 @@ public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapVal
 		this.UpdateCameraInputState();
 	}
 
-	// Token: 0x0600213A RID: 8506 RVA: 0x000BDC14 File Offset: 0x000BBE14
+	// Token: 0x060021E8 RID: 8680 RVA: 0x000C4F34 File Offset: 0x000C3134
 	public void BeginCameraSustainingRotator(Vector lookAtPosition, float time, float stayTime, int minAlpha, int maxAlpha, bool canBreakByInput, [Nullable(2)] Action callback = null)
 	{
 		this.IsActive = true;
@@ -153,7 +153,7 @@ public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapVal
 		this.UpdateCameraInputState();
 	}
 
-	// Token: 0x0600213B RID: 8507 RVA: 0x000BDCD0 File Offset: 0x000BBED0
+	// Token: 0x060021E9 RID: 8681 RVA: 0x000C4FF0 File Offset: 0x000C31F0
 	private void BeginCameraEulerRotator(Rotator desRotator, float time, float stayTime, float minAlpha, float maxAlpha, bool canBreakByInput)
 	{
 		this.IsActive = true;
@@ -177,7 +177,7 @@ public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapVal
 		this.UpdateCameraInputState();
 	}
 
-	// Token: 0x0600213C RID: 8508 RVA: 0x000BDD98 File Offset: 0x000BBF98
+	// Token: 0x060021EA RID: 8682 RVA: 0x000C50B8 File Offset: 0x000C32B8
 	private void FinishCameraRotator()
 	{
 		this.IsActive = false;
@@ -193,7 +193,7 @@ public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapVal
 		this.FinishCallback = null;
 	}
 
-	// Token: 0x0600213D RID: 8509 RVA: 0x000BDDF4 File Offset: 0x000BBFF4
+	// Token: 0x060021EB RID: 8683 RVA: 0x000C5114 File Offset: 0x000C3314
 	private void UpdateCameraInputState()
 	{
 		if (this.CanBreakByInput)
@@ -207,19 +207,19 @@ public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapVal
 		this.Camera.CameraRotationZone.Lock(this);
 	}
 
-	// Token: 0x0600213E RID: 8510 RVA: 0x000BDE33 File Offset: 0x000BC033
+	// Token: 0x060021EC RID: 8684 RVA: 0x000C5153 File Offset: 0x000C3353
 	protected override void UpdateInternal(float deltaTime)
 	{
 		this.UpdateArmRotationModifier(deltaTime);
 	}
 
-	// Token: 0x0600213F RID: 8511 RVA: 0x000BDE3C File Offset: 0x000BC03C
+	// Token: 0x060021ED RID: 8685 RVA: 0x000C515C File Offset: 0x000C335C
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x06002140 RID: 8512 RVA: 0x000BDE48 File Offset: 0x000BC048
+	// Token: 0x060021EE RID: 8686 RVA: 0x000C5168 File Offset: 0x000C3368
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -371,7 +371,7 @@ public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapVal
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x06002141 RID: 8513 RVA: 0x000BE148 File Offset: 0x000BC348
+	// Token: 0x060021EF RID: 8687 RVA: 0x000C5468 File Offset: 0x000C3668
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -651,7 +651,7 @@ public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapVal
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x06002142 RID: 8514 RVA: 0x000BE63D File Offset: 0x000BC83D
+	// Token: 0x060021F0 RID: 8688 RVA: 0x000C595D File Offset: 0x000C3B5D
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -660,53 +660,53 @@ public class CameraRotatorController : CameraControllerBase, ICanGetConfigMapVal
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040015CC RID: 5580
+	// Token: 0x0400160E RID: 5646
 	public readonly Rotator StartRotator = Rotator.Create();
 
-	// Token: 0x040015CD RID: 5581
+	// Token: 0x0400160F RID: 5647
 	public readonly Rotator DesRotator = Rotator.Create();
 
-	// Token: 0x040015CE RID: 5582
+	// Token: 0x04001610 RID: 5648
 	public readonly Rotator CurrentRotator = Rotator.Create();
 
-	// Token: 0x040015CF RID: 5583
+	// Token: 0x04001611 RID: 5649
 	private bool IsActive;
 
-	// Token: 0x040015D0 RID: 5584
+	// Token: 0x04001612 RID: 5650
 	private float Time;
 
-	// Token: 0x040015D1 RID: 5585
+	// Token: 0x04001613 RID: 5651
 	private float StayTime;
 
-	// Token: 0x040015D2 RID: 5586
+	// Token: 0x04001614 RID: 5652
 	private float CurrentTime;
 
-	// Token: 0x040015D3 RID: 5587
+	// Token: 0x04001615 RID: 5653
 	public float Alpha;
 
-	// Token: 0x040015D4 RID: 5588
+	// Token: 0x04001616 RID: 5654
 	private float MinAlpha;
 
-	// Token: 0x040015D5 RID: 5589
+	// Token: 0x04001617 RID: 5655
 	private float MaxAlpha;
 
-	// Token: 0x040015D6 RID: 5590
+	// Token: 0x04001618 RID: 5656
 	[Nullable(2)]
 	private CurveBase RotatorAlphaCurve;
 
-	// Token: 0x040015D7 RID: 5591
+	// Token: 0x04001619 RID: 5657
 	private bool CanBreakByInput = true;
 
-	// Token: 0x040015D8 RID: 5592
+	// Token: 0x0400161A RID: 5658
 	private Vector SustainingLookAt = Vector.Create();
 
-	// Token: 0x040015D9 RID: 5593
+	// Token: 0x0400161B RID: 5659
 	private Vector SustainingTemp = Vector.Create();
 
-	// Token: 0x040015DA RID: 5594
+	// Token: 0x0400161C RID: 5660
 	private bool IsSustainingMode;
 
-	// Token: 0x040015DB RID: 5595
+	// Token: 0x0400161D RID: 5661
 	[Nullable(2)]
 	private Action FinishCallback;
 }

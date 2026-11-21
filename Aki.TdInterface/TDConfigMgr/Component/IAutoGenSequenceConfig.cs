@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001E1 RID: 481
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000208 RID: 520
 	public class IAutoGenSequenceConfig
 	{
-		// Token: 0x060007C0 RID: 1984 RVA: 0x0002574C File Offset: 0x0002394C
+		// Token: 0x0600082E RID: 2094 RVA: 0x00026E2C File Offset: 0x0002502C
 		private IAutoGenSequenceConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060007C1 RID: 1985 RVA: 0x00025784 File Offset: 0x00023984
+		// Token: 0x0600082F RID: 2095 RVA: 0x00026E64 File Offset: 0x00025064
 		public static IAutoGenSequenceConfig Create([Nullable(2)] IAutoGenSequenceConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007C2 RID: 1986 RVA: 0x00025797 File Offset: 0x00023997
+		// Token: 0x06000830 RID: 2096 RVA: 0x00026E77 File Offset: 0x00025077
 		public static IAutoGenSequenceConfig CreateFromSetValue([Nullable(2)] IAutoGenSequenceConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007C3 RID: 1987 RVA: 0x000257AA File Offset: 0x000239AA
+		// Token: 0x06000831 RID: 2097 RVA: 0x00026E8A File Offset: 0x0002508A
 		public IAutoGenSequenceConfig_SetValue ToSetValue()
 		{
 			return new IAutoGenSequenceConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700026C RID: 620
-		// (get) Token: 0x060007C4 RID: 1988 RVA: 0x000257D5 File Offset: 0x000239D5
-		// (set) Token: 0x060007C5 RID: 1989 RVA: 0x000257FC File Offset: 0x000239FC
+		// Token: 0x17000288 RID: 648
+		// (get) Token: 0x06000832 RID: 2098 RVA: 0x00026EB5 File Offset: 0x000250B5
+		// (set) Token: 0x06000833 RID: 2099 RVA: 0x00026EDC File Offset: 0x000250DC
 		[Nullable(2)]
 		public virtual string SequencePath
 		{
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700026D RID: 621
-		// (get) Token: 0x060007C6 RID: 1990 RVA: 0x0002580C File Offset: 0x00023A0C
-		// (set) Token: 0x060007C7 RID: 1991 RVA: 0x0002586D File Offset: 0x00023A6D
+		// Token: 0x17000289 RID: 649
+		// (get) Token: 0x06000834 RID: 2100 RVA: 0x00026EEC File Offset: 0x000250EC
+		// (set) Token: 0x06000835 RID: 2101 RVA: 0x00026F4D File Offset: 0x0002514D
 		public virtual PlayLevelSequence SequenceConfig
 		{
 			get
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700026E RID: 622
-		// (get) Token: 0x060007C8 RID: 1992 RVA: 0x00025882 File Offset: 0x00023A82
-		// (set) Token: 0x060007C9 RID: 1993 RVA: 0x000258AD File Offset: 0x00023AAD
+		// Token: 0x1700028A RID: 650
+		// (get) Token: 0x06000836 RID: 2102 RVA: 0x00026F62 File Offset: 0x00025162
+		// (set) Token: 0x06000837 RID: 2103 RVA: 0x00026F8D File Offset: 0x0002518D
 		public virtual int Count
 		{
 			get
@@ -142,18 +140,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008C4 RID: 2244
+		// Token: 0x0400094B RID: 2379
 		[Nullable(2)]
 		protected IAutoGenSequenceConfig FbInstance;
 
-		// Token: 0x040008C5 RID: 2245
+		// Token: 0x0400094C RID: 2380
 		[Nullable(2)]
 		protected IAutoGenSequenceConfig_SetValue PocoInterface;
 
-		// Token: 0x040008C6 RID: 2246
+		// Token: 0x0400094D RID: 2381
 		private PlayLevelSequence _SequenceConfigCache;
 
-		// Token: 0x040008C7 RID: 2247
+		// Token: 0x0400094E RID: 2382
 		private bool _SequenceConfigInited;
 	}
 }

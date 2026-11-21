@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200222F RID: 8751
+	// Token: 0x0200249A RID: 9370
 	public class TakePlotPhoto : ActionParams
 	{
-		// Token: 0x0600C00C RID: 49164 RVA: 0x001B94DF File Offset: 0x001B76DF
-		[NullableContext(1)]
+		// Token: 0x0600CBCA RID: 52170 RVA: 0x001D0BAB File Offset: 0x001CEDAB
 		public static TakePlotPhoto Create([Nullable(2)] TakePlotPhoto instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x04007287 RID: 29319
+		// Token: 0x040078D1 RID: 30929
 		[Nullable(2)]
 		protected new TakePlotPhoto FbInstance;
 	}

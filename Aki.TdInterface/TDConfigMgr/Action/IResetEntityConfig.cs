@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DA4 RID: 7588
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FBB RID: 8123
 	public class IResetEntityConfig
 	{
-		// Token: 0x0600A29F RID: 41631 RVA: 0x00171C2C File Offset: 0x0016FE2C
+		// Token: 0x0600ACA9 RID: 44201 RVA: 0x00186354 File Offset: 0x00184554
 		private IResetEntityConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A2A0 RID: 41632 RVA: 0x00171C64 File Offset: 0x0016FE64
+		// Token: 0x0600ACAA RID: 44202 RVA: 0x0018638C File Offset: 0x0018458C
 		public static IResetEntityConfig Create([Nullable(2)] IResetEntityConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2A1 RID: 41633 RVA: 0x00171C77 File Offset: 0x0016FE77
+		// Token: 0x0600ACAB RID: 44203 RVA: 0x0018639F File Offset: 0x0018459F
 		public static IResetEntityConfig CreateFromSetValue([Nullable(2)] IResetEntityConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2A2 RID: 41634 RVA: 0x00171C8A File Offset: 0x0016FE8A
+		// Token: 0x0600ACAC RID: 44204 RVA: 0x001863B2 File Offset: 0x001845B2
 		public IResetEntityConfig_SetValue ToSetValue()
 		{
 			return new IResetEntityConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003230 RID: 12848
-		// (get) Token: 0x0600A2A3 RID: 41635 RVA: 0x00171C9D File Offset: 0x0016FE9D
-		// (set) Token: 0x0600A2A4 RID: 41636 RVA: 0x00171CC8 File Offset: 0x0016FEC8
+		// Token: 0x170034CA RID: 13514
+		// (get) Token: 0x0600ACAD RID: 44205 RVA: 0x001863C5 File Offset: 0x001845C5
+		// (set) Token: 0x0600ACAE RID: 44206 RVA: 0x001863F0 File Offset: 0x001845F0
 		public virtual EResetEntityType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061A5 RID: 24997
+		// Token: 0x0400672D RID: 26413
 		[Nullable(2)]
 		protected IResetEntityConfig FbInstance;
 
-		// Token: 0x040061A6 RID: 24998
+		// Token: 0x0400672E RID: 26414
 		[Nullable(2)]
 		protected IResetEntityConfig_SetValue PocoInterface;
 	}

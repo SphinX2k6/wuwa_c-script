@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B65 RID: 2917
+	// Token: 0x02000C33 RID: 3123
 	public class IPullingFoundationType
 	{
-		// Token: 0x0600432A RID: 17194 RVA: 0x000AB3D5 File Offset: 0x000A95D5
-		[NullableContext(1)]
+		// Token: 0x06004783 RID: 18307 RVA: 0x000B5499 File Offset: 0x000B3699
 		public static IPullingFoundationType Create(IPullingFoundationType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700121D RID: 4637
-		// (get) Token: 0x0600432B RID: 17195 RVA: 0x000AB3F4 File Offset: 0x000A95F4
+		// Token: 0x17001318 RID: 4888
+		// (get) Token: 0x06004784 RID: 18308 RVA: 0x000B54B8 File Offset: 0x000B36B8
 		public virtual EPullingFoundation Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025EE RID: 9710
+		// Token: 0x04002836 RID: 10294
 		private IPullingFoundationType Instance;
 	}
 }

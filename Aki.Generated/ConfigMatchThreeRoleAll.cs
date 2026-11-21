@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000535 RID: 1333
+	// Token: 0x0200054B RID: 1355
 	public class ConfigMatchThreeRoleAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F49 RID: 8009 RVA: 0x0010A2A4 File Offset: 0x001084A4
+		// Token: 0x06001FCD RID: 8141 RVA: 0x001109F8 File Offset: 0x0010EBF8
 		static ConfigMatchThreeRoleAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMatchThreeRoleAll.CreateStaticDefaultValue), new Action(ConfigMatchThreeRoleAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F4A RID: 8010 RVA: 0x0010A2C4 File Offset: 0x001084C4
+		// Token: 0x06001FCE RID: 8142 RVA: 0x00110A18 File Offset: 0x0010EC18
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMatchThreeRoleAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F4B RID: 8011 RVA: 0x0010A343 File Offset: 0x00108543
+		// Token: 0x06001FCF RID: 8143 RVA: 0x00110A97 File Offset: 0x0010EC97
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMatchThreeRoleAll.LogPair = null;
 			ConfigMatchThreeRoleAll.HandleId = 0;
 		}
 
-		// Token: 0x06001F4C RID: 8012 RVA: 0x0010A351 File Offset: 0x00108551
+		// Token: 0x06001FD0 RID: 8144 RVA: 0x00110AA5 File Offset: 0x0010ECA5
 		public static void Init()
 		{
 			ConfigMatchThreeRoleAll.HandleId = ConfigCommon.InitDataStatement(ConfigMatchThreeRoleAll.HandleId, "db_activitymatchthree.db", "select BinData from `MatchThreeRole`");
 		}
 
-		// Token: 0x06001F4D RID: 8013 RVA: 0x0010A36C File Offset: 0x0010856C
+		// Token: 0x06001FD1 RID: 8145 RVA: 0x00110AC0 File Offset: 0x0010ECC0
 		[NullableContext(2)]
 		public static IReadOnlyList<MatchThreeRole> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002457 RID: 9303
+		// Token: 0x040024F1 RID: 9457
 		private const string DB = "db_activitymatchthree.db";
 
-		// Token: 0x04002458 RID: 9304
+		// Token: 0x040024F2 RID: 9458
 		private const string FILE = "s.三消活动.xlsx";
 
-		// Token: 0x04002459 RID: 9305
+		// Token: 0x040024F3 RID: 9459
 		private const string TABLE = "MatchThreeRole";
 
-		// Token: 0x0400245A RID: 9306
+		// Token: 0x040024F4 RID: 9460
 		private const string COMMAND = "select BinData from `MatchThreeRole`";
 
-		// Token: 0x0400245B RID: 9307
+		// Token: 0x040024F5 RID: 9461
 		private const string KEY_PREFIX = "MatchThreeRoleAll";
 
-		// Token: 0x0400245C RID: 9308
+		// Token: 0x040024F6 RID: 9462
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400245D RID: 9309
+		// Token: 0x040024F7 RID: 9463
 		private static int HandleId;
 	}
 }

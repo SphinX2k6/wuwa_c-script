@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200294D RID: 10573
+	// Token: 0x02002C2F RID: 11311
 	public class ISceneInteractionOperationType
 	{
-		// Token: 0x0600EA7A RID: 60026 RVA: 0x0022566E File Offset: 0x0022386E
-		[NullableContext(1)]
+		// Token: 0x0600F8E5 RID: 63717 RVA: 0x00242C4E File Offset: 0x00240E4E
 		public static ISceneInteractionOperationType Create(ISceneInteractionOperationType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049A2 RID: 18850
-		// (get) Token: 0x0600EA7B RID: 60027 RVA: 0x0022568D File Offset: 0x0022388D
+		// Token: 0x17004D35 RID: 19765
+		// (get) Token: 0x0600F8E6 RID: 63718 RVA: 0x00242C6D File Offset: 0x00240E6D
 		public virtual ESceneInteractionOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400813D RID: 33085
+		// Token: 0x04008819 RID: 34841
 		private ISceneInteractionOperationType Instance;
 	}
 }

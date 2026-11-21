@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000ECC RID: 3788
+	// Token: 0x02000FB1 RID: 4017
 	public struct PhantomBattleCount : IFlatbufferObject
 	{
-		// Token: 0x17002622 RID: 9762
-		// (get) Token: 0x0600A6D6 RID: 42710 RVA: 0x002AF5F5 File Offset: 0x002AD7F5
+		// Token: 0x17002688 RID: 9864
+		// (get) Token: 0x0600ACF7 RID: 44279 RVA: 0x002CC716 File Offset: 0x002CA916
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A6D7 RID: 42711 RVA: 0x002AF602 File Offset: 0x002AD802
+		// Token: 0x0600ACF8 RID: 44280 RVA: 0x002CC723 File Offset: 0x002CA923
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A6D8 RID: 42712 RVA: 0x002AF60C File Offset: 0x002AD80C
+		// Token: 0x0600ACF9 RID: 44281 RVA: 0x002CC72C File Offset: 0x002CA92C
 		public static PhantomBattleCount GetRootAsPhantomBattleCount(ByteBuffer _bb)
 		{
 			return PhantomBattleCount.GetRootAsPhantomBattleCount(_bb, default(PhantomBattleCount));
 		}
 
-		// Token: 0x0600A6D9 RID: 42713 RVA: 0x002AF628 File Offset: 0x002AD828
+		// Token: 0x0600ACFA RID: 44282 RVA: 0x002CC748 File Offset: 0x002CA948
 		public static PhantomBattleCount GetRootAsPhantomBattleCount(ByteBuffer _bb, PhantomBattleCount obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A6DA RID: 42714 RVA: 0x002AF645 File Offset: 0x002AD845
+		// Token: 0x0600ACFB RID: 44283 RVA: 0x002CC765 File Offset: 0x002CA965
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A6DB RID: 42715 RVA: 0x002AF654 File Offset: 0x002AD854
+		// Token: 0x0600ACFC RID: 44284 RVA: 0x002CC774 File Offset: 0x002CA974
 		public PhantomBattleCount __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002623 RID: 9763
-		// (get) Token: 0x0600A6DC RID: 42716 RVA: 0x002AF664 File Offset: 0x002AD864
+		// Token: 0x17002689 RID: 9865
+		// (get) Token: 0x0600ACFD RID: 44285 RVA: 0x002CC784 File Offset: 0x002CA984
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002624 RID: 9764
-		// (get) Token: 0x0600A6DD RID: 42717 RVA: 0x002AF6A0 File Offset: 0x002AD8A0
+		// Token: 0x1700268A RID: 9866
+		// (get) Token: 0x0600ACFE RID: 44286 RVA: 0x002CC7C0 File Offset: 0x002CA9C0
 		public int CountType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002625 RID: 9765
-		// (get) Token: 0x0600A6DE RID: 42718 RVA: 0x002AF6DC File Offset: 0x002AD8DC
+		// Token: 0x1700268B RID: 9867
+		// (get) Token: 0x0600ACFF RID: 44287 RVA: 0x002CC7FC File Offset: 0x002CA9FC
 		public int TargetType
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002626 RID: 9766
-		// (get) Token: 0x0600A6DF RID: 42719 RVA: 0x002AF718 File Offset: 0x002AD918
+		// Token: 0x1700268C RID: 9868
+		// (get) Token: 0x0600AD00 RID: 44288 RVA: 0x002CC838 File Offset: 0x002CAA38
 		public int UnlockCount
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002627 RID: 9767
-		// (get) Token: 0x0600A6E0 RID: 42720 RVA: 0x002AF758 File Offset: 0x002AD958
+		// Token: 0x1700268D RID: 9869
+		// (get) Token: 0x0600AD01 RID: 44289 RVA: 0x002CC878 File Offset: 0x002CAA78
 		public int ReduceCount
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002628 RID: 9768
-		// (get) Token: 0x0600A6E1 RID: 42721 RVA: 0x002AF798 File Offset: 0x002AD998
+		// Token: 0x1700268E RID: 9870
+		// (get) Token: 0x0600AD02 RID: 44290 RVA: 0x002CC8B8 File Offset: 0x002CAAB8
 		public int CountSkillLimitNum
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004F8A RID: 20362
+		// Token: 0x0400556F RID: 21871
 		private Table __p;
 	}
 }

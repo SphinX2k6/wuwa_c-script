@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008A5 RID: 2213
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000948 RID: 2376
 	public class SpringComponent : IComponentBase
 	{
-		// Token: 0x0600318B RID: 12683 RVA: 0x0007F39C File Offset: 0x0007D59C
+		// Token: 0x060034C7 RID: 13511 RVA: 0x00086884 File Offset: 0x00084A84
 		private SpringComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600318C RID: 12684 RVA: 0x0007F3D4 File Offset: 0x0007D5D4
+		// Token: 0x060034C8 RID: 13512 RVA: 0x000868BC File Offset: 0x00084ABC
 		public static SpringComponent Create([Nullable(2)] SpringComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600318D RID: 12685 RVA: 0x0007F3E7 File Offset: 0x0007D5E7
+		// Token: 0x060034C9 RID: 13513 RVA: 0x000868CF File Offset: 0x00084ACF
 		public static SpringComponent CreateFromSetValue([Nullable(2)] SpringComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600318E RID: 12686 RVA: 0x0007F3FC File Offset: 0x0007D5FC
+		// Token: 0x060034CA RID: 13514 RVA: 0x000868E4 File Offset: 0x00084AE4
 		public new SpringComponent_SetValue ToSetValue()
 		{
 			return new SpringComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D31 RID: 3377
-		// (get) Token: 0x0600318F RID: 12687 RVA: 0x0007F458 File Offset: 0x0007D658
-		// (set) Token: 0x06003190 RID: 12688 RVA: 0x0007F492 File Offset: 0x0007D692
+		// Token: 0x17000DFA RID: 3578
+		// (get) Token: 0x060034CB RID: 13515 RVA: 0x00086940 File Offset: 0x00084B40
+		// (set) Token: 0x060034CC RID: 13516 RVA: 0x0008697A File Offset: 0x00084B7A
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D32 RID: 3378
-		// (get) Token: 0x06003191 RID: 12689 RVA: 0x0007F4A0 File Offset: 0x0007D6A0
-		// (set) Token: 0x06003192 RID: 12690 RVA: 0x0007F4CA File Offset: 0x0007D6CA
+		// Token: 0x17000DFB RID: 3579
+		// (get) Token: 0x060034CD RID: 13517 RVA: 0x00086988 File Offset: 0x00084B88
+		// (set) Token: 0x060034CE RID: 13518 RVA: 0x000869B2 File Offset: 0x00084BB2
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D33 RID: 3379
-		// (get) Token: 0x06003193 RID: 12691 RVA: 0x0007F4D8 File Offset: 0x0007D6D8
-		// (set) Token: 0x06003194 RID: 12692 RVA: 0x0007F503 File Offset: 0x0007D703
+		// Token: 0x17000DFC RID: 3580
+		// (get) Token: 0x060034CF RID: 13519 RVA: 0x000869C0 File Offset: 0x00084BC0
+		// (set) Token: 0x060034D0 RID: 13520 RVA: 0x000869EB File Offset: 0x00084BEB
 		public virtual bool IsNormalSpring
 		{
 			get
@@ -126,9 +124,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D34 RID: 3380
-		// (get) Token: 0x06003195 RID: 12693 RVA: 0x0007F511 File Offset: 0x0007D711
-		// (set) Token: 0x06003196 RID: 12694 RVA: 0x0007F53C File Offset: 0x0007D73C
+		// Token: 0x17000DFD RID: 3581
+		// (get) Token: 0x060034D1 RID: 13521 RVA: 0x000869F9 File Offset: 0x00084BF9
+		// (set) Token: 0x060034D2 RID: 13522 RVA: 0x00086A24 File Offset: 0x00084C24
 		public virtual bool IsHitNormalSpring
 		{
 			get
@@ -145,9 +143,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D35 RID: 3381
-		// (get) Token: 0x06003197 RID: 12695 RVA: 0x0007F54C File Offset: 0x0007D74C
-		// (set) Token: 0x06003198 RID: 12696 RVA: 0x0007F5AD File Offset: 0x0007D7AD
+		// Token: 0x17000DFE RID: 3582
+		// (get) Token: 0x060034D3 RID: 13523 RVA: 0x00086A34 File Offset: 0x00084C34
+		// (set) Token: 0x060034D4 RID: 13524 RVA: 0x00086A95 File Offset: 0x00084C95
 		public virtual ISettingSpringDir SettingDir
 		{
 			get
@@ -175,9 +173,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D36 RID: 3382
-		// (get) Token: 0x06003199 RID: 12697 RVA: 0x0007F5C2 File Offset: 0x0007D7C2
-		// (set) Token: 0x0600319A RID: 12698 RVA: 0x0007F5ED File Offset: 0x0007D7ED
+		// Token: 0x17000DFF RID: 3583
+		// (get) Token: 0x060034D5 RID: 13525 RVA: 0x00086AAA File Offset: 0x00084CAA
+		// (set) Token: 0x060034D6 RID: 13526 RVA: 0x00086AD5 File Offset: 0x00084CD5
 		public virtual int SpringPow
 		{
 			get
@@ -198,18 +196,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002087 RID: 8327
+		// Token: 0x04002299 RID: 8857
 		[Nullable(2)]
 		protected new SpringComponent FbInstance;
 
-		// Token: 0x04002088 RID: 8328
+		// Token: 0x0400229A RID: 8858
 		[Nullable(2)]
 		protected new SpringComponent_SetValue PocoInterface;
 
-		// Token: 0x04002089 RID: 8329
+		// Token: 0x0400229B RID: 8859
 		private ISettingSpringDir _SettingDirCache;
 
-		// Token: 0x0400208A RID: 8330
+		// Token: 0x0400229C RID: 8860
 		private bool _SettingDirInited;
 	}
 }

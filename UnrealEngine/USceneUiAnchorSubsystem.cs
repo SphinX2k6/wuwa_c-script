@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C87 RID: 7303
+	// Token: 0x02000521 RID: 1313
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSceneUI.SceneUiAnchorSubsystem")]
 	[UnrealStructLayout(152, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 152)]
 	public class USceneUiAnchorSubsystem : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601C585 RID: 116101 RVA: 0x0029C62D File Offset: 0x0029A82D
+		// Token: 0x06007ACD RID: 31437 RVA: 0x000B41B1 File Offset: 0x000B23B1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USceneUiAnchorSubsystem._ClassPtr;
 		}
 
-		// Token: 0x0601C586 RID: 116102 RVA: 0x0029C63C File Offset: 0x0029A83C
+		// Token: 0x06007ACE RID: 31438 RVA: 0x000B41C0 File Offset: 0x000B23C0
 		public USceneUiAnchorSubsystem() : this(BuiltinUtils.AllocNativeUObject(USceneUiAnchorSubsystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601C587 RID: 116103 RVA: 0x0029C664 File Offset: 0x0029A864
+		// Token: 0x06007ACF RID: 31439 RVA: 0x000B41E8 File Offset: 0x000B23E8
 		public USceneUiAnchorSubsystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USceneUiAnchorSubsystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007291 RID: 29329
-		// (get) Token: 0x0601C588 RID: 116104 RVA: 0x0029C698 File Offset: 0x0029A898
-		// (set) Token: 0x0601C589 RID: 116105 RVA: 0x0029C6D1 File Offset: 0x0029A8D1
+		// Token: 0x170017E2 RID: 6114
+		// (get) Token: 0x06007AD0 RID: 31440 RVA: 0x000B421C File Offset: 0x000B241C
+		// (set) Token: 0x06007AD1 RID: 31441 RVA: 0x000B4255 File Offset: 0x000B2455
 		public FSceneUiPreloadRequest OnPreloadRequest
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007292 RID: 29330
-		// (get) Token: 0x0601C58A RID: 116106 RVA: 0x0029C6F4 File Offset: 0x0029A8F4
-		// (set) Token: 0x0601C58B RID: 116107 RVA: 0x0029C72D File Offset: 0x0029A92D
+		// Token: 0x170017E3 RID: 6115
+		// (get) Token: 0x06007AD2 RID: 31442 RVA: 0x000B4278 File Offset: 0x000B2478
+		// (set) Token: 0x06007AD3 RID: 31443 RVA: 0x000B42B1 File Offset: 0x000B24B1
 		public FSceneUiOpenRequest OnOpenRequest
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007293 RID: 29331
-		// (get) Token: 0x0601C58C RID: 116108 RVA: 0x0029C750 File Offset: 0x0029A950
-		// (set) Token: 0x0601C58D RID: 116109 RVA: 0x0029C789 File Offset: 0x0029A989
+		// Token: 0x170017E4 RID: 6116
+		// (get) Token: 0x06007AD4 RID: 31444 RVA: 0x000B42D4 File Offset: 0x000B24D4
+		// (set) Token: 0x06007AD5 RID: 31445 RVA: 0x000B430D File Offset: 0x000B250D
 		public FSceneUiOpenWithMapRequest OnOpenWithMapRequest
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007294 RID: 29332
-		// (get) Token: 0x0601C58E RID: 116110 RVA: 0x0029C7AC File Offset: 0x0029A9AC
-		// (set) Token: 0x0601C58F RID: 116111 RVA: 0x0029C7E5 File Offset: 0x0029A9E5
+		// Token: 0x170017E5 RID: 6117
+		// (get) Token: 0x06007AD6 RID: 31446 RVA: 0x000B4330 File Offset: 0x000B2530
+		// (set) Token: 0x06007AD7 RID: 31447 RVA: 0x000B4369 File Offset: 0x000B2569
 		public FSceneUiAnchorRequest OnHideRequest
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007295 RID: 29333
-		// (get) Token: 0x0601C590 RID: 116112 RVA: 0x0029C808 File Offset: 0x0029AA08
-		// (set) Token: 0x0601C591 RID: 116113 RVA: 0x0029C841 File Offset: 0x0029AA41
+		// Token: 0x170017E6 RID: 6118
+		// (get) Token: 0x06007AD8 RID: 31448 RVA: 0x000B438C File Offset: 0x000B258C
+		// (set) Token: 0x06007AD9 RID: 31449 RVA: 0x000B43C5 File Offset: 0x000B25C5
 		public FSceneUiAnchorRequest OnCloseRequest
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007296 RID: 29334
-		// (get) Token: 0x0601C592 RID: 116114 RVA: 0x0029C864 File Offset: 0x0029AA64
-		// (set) Token: 0x0601C593 RID: 116115 RVA: 0x0029C89D File Offset: 0x0029AA9D
+		// Token: 0x170017E7 RID: 6119
+		// (get) Token: 0x06007ADA RID: 31450 RVA: 0x000B43E8 File Offset: 0x000B25E8
+		// (set) Token: 0x06007ADB RID: 31451 RVA: 0x000B4421 File Offset: 0x000B2621
 		public FSceneUiAnchorRequest OnAnchorEndPlay
 		{
 			get
@@ -155,65 +155,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C594 RID: 116116 RVA: 0x0029C8BE File Offset: 0x0029AABE
+		// Token: 0x06007ADC RID: 31452 RVA: 0x000B4442 File Offset: 0x000B2642
 		static USceneUiAnchorSubsystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSceneUI.SceneUiAnchorSubsystem");
 		}
 
-		// Token: 0x0601C595 RID: 116117 RVA: 0x0029C8CC File Offset: 0x0029AACC
+		// Token: 0x06007ADD RID: 31453 RVA: 0x000B4450 File Offset: 0x000B2650
 		protected USceneUiAnchorSubsystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F3C6 RID: 62406
+		// Token: 0x04003434 RID: 13364
 		public new const string __ObjectPath = "/Script/KuroSceneUI.SceneUiAnchorSubsystem";
 
-		// Token: 0x0400F3C7 RID: 62407
+		// Token: 0x04003435 RID: 13365
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F3C8 RID: 62408
+		// Token: 0x04003436 RID: 13366
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F3C9 RID: 62409
+		// Token: 0x04003437 RID: 13367
 		internal static int __PropertyOffset_OnPreloadRequest;
 
-		// Token: 0x0400F3CA RID: 62410
+		// Token: 0x04003438 RID: 13368
 		[Nullable(2)]
 		private FSceneUiPreloadRequest _OnPreloadRequest;
 
-		// Token: 0x0400F3CB RID: 62411
+		// Token: 0x04003439 RID: 13369
 		internal static int __PropertyOffset_OnOpenRequest;
 
-		// Token: 0x0400F3CC RID: 62412
+		// Token: 0x0400343A RID: 13370
 		[Nullable(2)]
 		private FSceneUiOpenRequest _OnOpenRequest;
 
-		// Token: 0x0400F3CD RID: 62413
+		// Token: 0x0400343B RID: 13371
 		internal static int __PropertyOffset_OnOpenWithMapRequest;
 
-		// Token: 0x0400F3CE RID: 62414
+		// Token: 0x0400343C RID: 13372
 		[Nullable(2)]
 		private FSceneUiOpenWithMapRequest _OnOpenWithMapRequest;
 
-		// Token: 0x0400F3CF RID: 62415
+		// Token: 0x0400343D RID: 13373
 		internal static int __PropertyOffset_OnHideRequest;
 
-		// Token: 0x0400F3D0 RID: 62416
+		// Token: 0x0400343E RID: 13374
 		[Nullable(2)]
 		private FSceneUiAnchorRequest _OnHideRequest;
 
-		// Token: 0x0400F3D1 RID: 62417
+		// Token: 0x0400343F RID: 13375
 		internal static int __PropertyOffset_OnCloseRequest;
 
-		// Token: 0x0400F3D2 RID: 62418
+		// Token: 0x04003440 RID: 13376
 		[Nullable(2)]
 		private FSceneUiAnchorRequest _OnCloseRequest;
 
-		// Token: 0x0400F3D3 RID: 62419
+		// Token: 0x04003441 RID: 13377
 		internal static int __PropertyOffset_OnAnchorEndPlay;
 
-		// Token: 0x0400F3D4 RID: 62420
+		// Token: 0x04003442 RID: 13378
 		[Nullable(2)]
 		private FSceneUiAnchorRequest _OnAnchorEndPlay;
 	}

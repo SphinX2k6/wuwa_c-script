@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x020028B1 RID: 10417
+// Token: 0x02001E2C RID: 7724
 public class RoleSkillInnerPassiveSkillAndOuterPassiveSkillItem : RoleSkillChainItem
 {
-	// Token: 0x060157C4 RID: 88004 RVA: 0x0056B1E0 File Offset: 0x005693E0
+	// Token: 0x060131C4 RID: 78276 RVA: 0x00596028 File Offset: 0x00594228
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -26,7 +26,7 @@ public class RoleSkillInnerPassiveSkillAndOuterPassiveSkillItem : RoleSkillChain
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060157C5 RID: 88005 RVA: 0x0056B2AC File Offset: 0x005694AC
+	// Token: 0x060131C5 RID: 78277 RVA: 0x005960F4 File Offset: 0x005942F4
 	protected override void OnStart()
 	{
 		RoleSkillInnerPassiveSkillItem roleSkillInnerPassiveSkillItem = new RoleSkillInnerPassiveSkillItem();
@@ -56,18 +56,18 @@ public class RoleSkillInnerPassiveSkillAndOuterPassiveSkillItem : RoleSkillChain
 		}
 	}
 
-	// Token: 0x02008EB2 RID: 36530
+	// Token: 0x020080F9 RID: 33017
 	private enum EComponent
 	{
-		// Token: 0x0402E44C RID: 189516
+		// Token: 0x04029B49 RID: 170825
 		InnerPassiveSkillItem,
-		// Token: 0x0402E44D RID: 189517
+		// Token: 0x04029B4A RID: 170826
 		OuterPassiveSkillItem1,
-		// Token: 0x0402E44E RID: 189518
+		// Token: 0x04029B4B RID: 170827
 		OuterPassiveSkillItem2,
-		// Token: 0x0402E44F RID: 189519
+		// Token: 0x04029B4C RID: 170828
 		LineItem1,
-		// Token: 0x0402E450 RID: 189520
+		// Token: 0x04029B4D RID: 170829
 		LineItem2
 	}
 }

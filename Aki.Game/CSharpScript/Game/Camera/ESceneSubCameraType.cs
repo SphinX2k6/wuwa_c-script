@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072D5 RID: 29397
+	// Token: 0x02006457 RID: 25687
 	public enum ESceneSubCameraType
 	{
-		// Token: 0x0402611A RID: 155930
+		// Token: 0x040213FD RID: 136189
 		Sequence,
-		// Token: 0x0402611B RID: 155931
+		// Token: 0x040213FE RID: 136190
 		Fix,
-		// Token: 0x0402611C RID: 155932
+		// Token: 0x040213FF RID: 136191
 		Gameplay,
-		// Token: 0x0402611D RID: 155933
+		// Token: 0x04021400 RID: 136192
 		Default
 	}
 }

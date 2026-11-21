@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020030B7 RID: 12471
+// Token: 0x0200260F RID: 9743
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 })]
 public class MotorFunctionDisableHandler : DisableHandler<InputFunctionContext>
 {
-	// Token: 0x0601AB6F RID: 109423 RVA: 0x007325D1 File Offset: 0x007307D1
+	// Token: 0x0601857E RID: 99710 RVA: 0x00757F3D File Offset: 0x0075613D
 	protected override bool ShouldStop(InputFunctionContext context)
 	{
 		return !VehicleController.Instance.CheckMotorAllowed(true);

@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 {
-	// Token: 0x020051BA RID: 20922
+	// Token: 0x0200418A RID: 16778
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 	})]
 	public class PhantomArenaChallengeDetailDeckItem : GridProxyAbstract<DeckInfo>
 	{
-		// Token: 0x0603592E RID: 219438 RVA: 0x00CB0E38 File Offset: 0x00CAF038
+		// Token: 0x0602A829 RID: 174121 RVA: 0x00BFE474 File Offset: 0x00BFC674
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			};
 		}
 
-		// Token: 0x0603592F RID: 219439 RVA: 0x00CB0FAC File Offset: 0x00CAF1AC
+		// Token: 0x0602A82A RID: 174122 RVA: 0x00BFE5E8 File Offset: 0x00BFC7E8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaChallengeDetailDeckItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035930 RID: 219440 RVA: 0x00CB0FEF File Offset: 0x00CAF1EF
+		// Token: 0x0602A82B RID: 174123 RVA: 0x00BFE62B File Offset: 0x00BFC82B
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06035931 RID: 219441 RVA: 0x00CB1004 File Offset: 0x00CAF204
+		// Token: 0x0602A82C RID: 174124 RVA: 0x00BFE640 File Offset: 0x00BFC840
 		public override void Refresh(DeckInfo data, bool isSelected, int gridIndex)
 		{
 			this.DeckInfo = data;
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			}
 		}
 
-		// Token: 0x06035932 RID: 219442 RVA: 0x00CB13B4 File Offset: 0x00CAF5B4
+		// Token: 0x0602A82D RID: 174125 RVA: 0x00BFE9F0 File Offset: 0x00BFCBF0
 		public void PlaySelectAnim()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			sequencePlayer.PlayLevelSequenceByName("In", false, null, false);
 		}
 
-		// Token: 0x06035933 RID: 219443 RVA: 0x00CB13E1 File Offset: 0x00CAF5E1
+		// Token: 0x0602A82E RID: 174126 RVA: 0x00BFEA1D File Offset: 0x00BFCC1D
 		private void OnItemButtonInternal()
 		{
 			Action onButtonClick = this.OnButtonClick;
@@ -211,63 +211,63 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			onButtonClick();
 		}
 
-		// Token: 0x0401C700 RID: 116480
+		// Token: 0x04017135 RID: 94517
 		protected DeckInfo DeckInfo;
 
-		// Token: 0x0401C701 RID: 116481
+		// Token: 0x04017136 RID: 94518
 		protected LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401C702 RID: 116482
+		// Token: 0x04017137 RID: 94519
 		[Nullable(1)]
 		protected List<CardElementItem> ElementList = new List<CardElementItem>();
 
-		// Token: 0x0401C703 RID: 116483
+		// Token: 0x04017138 RID: 94520
 		public Action OnButtonClick;
 
-		// Token: 0x0200B347 RID: 45895
+		// Token: 0x02009D7F RID: 40319
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403655C RID: 222556
+			// Token: 0x04030FAF RID: 200623
 			public const int ItemButton = 0;
 
-			// Token: 0x0403655D RID: 222557
+			// Token: 0x04030FB0 RID: 200624
 			public const int CardItem = 1;
 
-			// Token: 0x0403655E RID: 222558
+			// Token: 0x04030FB1 RID: 200625
 			public const int DeckFaceTexture = 2;
 
-			// Token: 0x0403655F RID: 222559
+			// Token: 0x04030FB2 RID: 200626
 			public const int IndexText = 3;
 
-			// Token: 0x04036560 RID: 222560
+			// Token: 0x04030FB3 RID: 200627
 			public const int NameText = 4;
 
-			// Token: 0x04036561 RID: 222561
+			// Token: 0x04030FB4 RID: 200628
 			public const int NormalCardCountText = 5;
 
-			// Token: 0x04036562 RID: 222562
+			// Token: 0x04030FB5 RID: 200629
 			public const int EmptyDeckItem = 6;
 
-			// Token: 0x04036563 RID: 222563
+			// Token: 0x04030FB6 RID: 200630
 			public const int CoreCardCountText = 7;
 
-			// Token: 0x04036564 RID: 222564
+			// Token: 0x04030FB7 RID: 200631
 			public const int CoreCardTagSprite = 8;
 
-			// Token: 0x04036565 RID: 222565
+			// Token: 0x04030FB8 RID: 200632
 			public const int FirstElementItem = 9;
 
-			// Token: 0x04036566 RID: 222566
+			// Token: 0x04030FB9 RID: 200633
 			public const int SecondElementItem = 10;
 
-			// Token: 0x04036567 RID: 222567
+			// Token: 0x04030FBA RID: 200634
 			public const int ItemFieldPanel = 11;
 
-			// Token: 0x04036568 RID: 222568
+			// Token: 0x04030FBB RID: 200635
 			public const int TextFieldNum = 12;
 
-			// Token: 0x04036569 RID: 222569
+			// Token: 0x04030FBC RID: 200636
 			public const int SpriteFieldTagIcon = 13;
 		}
 	}

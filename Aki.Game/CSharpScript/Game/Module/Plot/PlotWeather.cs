@@ -6,19 +6,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02005009 RID: 20489
+	// Token: 0x02003FD3 RID: 16339
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotWeather
 	{
-		// Token: 0x060346EE RID: 214766 RVA: 0x00C58CCE File Offset: 0x00C56ECE
+		// Token: 0x06029591 RID: 169361 RVA: 0x00BA41CE File Offset: 0x00BA23CE
 		public void Init()
 		{
 			this.WeatherId = 0;
 			this.IsInherit = false;
 		}
 
-		// Token: 0x060346EF RID: 214767 RVA: 0x00C58CDE File Offset: 0x00C56EDE
+		// Token: 0x06029592 RID: 169362 RVA: 0x00BA41DE File Offset: 0x00BA23DE
 		public void Clear()
 		{
 			this.WeatherId = 0;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.ClearAllWeather();
 		}
 
-		// Token: 0x060346F0 RID: 214768 RVA: 0x00C58CF4 File Offset: 0x00C56EF4
+		// Token: 0x06029593 RID: 169363 RVA: 0x00BA41F4 File Offset: 0x00BA23F4
 		public void OnPlotEnd()
 		{
 			if (this.IsInherit)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.ClearAllWeather();
 		}
 
-		// Token: 0x060346F1 RID: 214769 RVA: 0x00C58D2F File Offset: 0x00C56F2F
+		// Token: 0x06029594 RID: 169364 RVA: 0x00BA422F File Offset: 0x00BA242F
 		public void StopAllWeather()
 		{
 			if (!this.IsInherit)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Plot
 			lastActorInfo.Disable();
 		}
 
-		// Token: 0x060346F2 RID: 214770 RVA: 0x00C58D5B File Offset: 0x00C56F5B
+		// Token: 0x06029595 RID: 169365 RVA: 0x00BA425B File Offset: 0x00BA245B
 		private void ClearAllWeather()
 		{
 			PlotWeatherActorInfo curActorInfo = this.CurActorInfo;
@@ -74,14 +74,14 @@ namespace CSharpScript.Game.Module.Plot
 			this.LastActorInfo = null;
 		}
 
-		// Token: 0x060346F3 RID: 214771 RVA: 0x00C58D8D File Offset: 0x00C56F8D
+		// Token: 0x06029596 RID: 169366 RVA: 0x00BA428D File Offset: 0x00BA248D
 		public void OnTick(float delta)
 		{
 			this.UpdateBlendWeight(this.LastActorInfo, delta);
 			this.UpdateBlendWeight(this.CurActorInfo, delta);
 		}
 
-		// Token: 0x060346F4 RID: 214772 RVA: 0x00C58DAC File Offset: 0x00C56FAC
+		// Token: 0x06029597 RID: 169367 RVA: 0x00BA42AC File Offset: 0x00BA24AC
 		private void UpdateBlendWeight(PlotWeatherActorInfo actorInfo, float delta)
 		{
 			if (actorInfo == null || !actorInfo.IsLoadCompleted)
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060346F5 RID: 214773 RVA: 0x00C58F04 File Offset: 0x00C57104
+		// Token: 0x06029598 RID: 169368 RVA: 0x00BA4404 File Offset: 0x00BA2604
 		public void ChangeWeather(int weatherId, bool isInherit, float tweenTime, int priority = 100)
 		{
 			this.WeatherId = weatherId;
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.UpdateCurPriority(priority);
 		}
 
-		// Token: 0x060346F6 RID: 214774 RVA: 0x00C59124 File Offset: 0x00C57324
+		// Token: 0x06029599 RID: 169369 RVA: 0x00BA4624 File Offset: 0x00BA2824
 		private void UpdateCurWeatherActorInfo(Weather weatherConfig, float tweenTime)
 		{
 			this.CurActorInfo.WeatherConfig = new Weather?(weatherConfig);
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060346F7 RID: 214775 RVA: 0x00C59198 File Offset: 0x00C57398
+		// Token: 0x0602959A RID: 169370 RVA: 0x00BA4698 File Offset: 0x00BA2898
 		private void UpdateCurActorTransform()
 		{
 			if (this.CurActorInfo != null)
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060346F8 RID: 214776 RVA: 0x00C591F4 File Offset: 0x00C573F4
+		// Token: 0x0602959B RID: 169371 RVA: 0x00BA46F4 File Offset: 0x00BA28F4
 		private void CreateWeatherActor()
 		{
 			FTransformDouble? ftransformDouble = null;
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.LoadDaAsset();
 		}
 
-		// Token: 0x060346F9 RID: 214777 RVA: 0x00C592D8 File Offset: 0x00C574D8
+		// Token: 0x0602959C RID: 169372 RVA: 0x00BA47D8 File Offset: 0x00BA29D8
 		private void UpdateAtmosphereActor()
 		{
 			UKuroPostProcessComponent kuroPostProcessComponent = this.CurActorInfo.KuroPostProcessComponent;
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.LoadDaAsset();
 		}
 
-		// Token: 0x060346FA RID: 214778 RVA: 0x00C59348 File Offset: 0x00C57548
+		// Token: 0x0602959D RID: 169373 RVA: 0x00BA4848 File Offset: 0x00BA2A48
 		private void LoadDaAsset()
 		{
 			Weather? weatherConfig = this.CurActorInfo.WeatherConfig;
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Plot
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060346FB RID: 214779 RVA: 0x00C593B8 File Offset: 0x00C575B8
+		// Token: 0x0602959E RID: 169374 RVA: 0x00BA48B8 File Offset: 0x00BA2AB8
 		private void UpdateCurPriority(int priority)
 		{
 			if (this.CurActorInfo == null || this.CurActorInfo.Priority == priority)
@@ -307,19 +307,19 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0401BEE6 RID: 114406
+		// Token: 0x040168CF RID: 92367
 		private const int PLOT_WEATHER_PRIORITY = 100;
 
-		// Token: 0x0401BEE7 RID: 114407
+		// Token: 0x040168D0 RID: 92368
 		private int WeatherId;
 
-		// Token: 0x0401BEE8 RID: 114408
+		// Token: 0x040168D1 RID: 92369
 		private bool IsInherit;
 
-		// Token: 0x0401BEE9 RID: 114409
+		// Token: 0x040168D2 RID: 92370
 		private PlotWeatherActorInfo CurActorInfo;
 
-		// Token: 0x0401BEEA RID: 114410
+		// Token: 0x040168D3 RID: 92371
 		private PlotWeatherActorInfo LastActorInfo;
 	}
 }

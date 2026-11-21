@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200574F RID: 22351
+	// Token: 0x02005D56 RID: 23894
 	public class IPointAttachTargetT
 	{
-		// Token: 0x1700A6C5 RID: 42693
-		// (get) Token: 0x06025753 RID: 153427 RVA: 0x0052B297 File Offset: 0x00529497
-		// (set) Token: 0x06025754 RID: 153428 RVA: 0x0052B29F File Offset: 0x0052949F
+		// Token: 0x1700AFE9 RID: 45033
+		// (get) Token: 0x06027C73 RID: 162931 RVA: 0x00571423 File Offset: 0x0056F623
+		// (set) Token: 0x06027C74 RID: 162932 RVA: 0x0057142B File Offset: 0x0056F62B
 		public EAttachType Type { get; set; }
 
-		// Token: 0x1700A6C6 RID: 42694
-		// (get) Token: 0x06025755 RID: 153429 RVA: 0x0052B2A8 File Offset: 0x005294A8
-		// (set) Token: 0x06025756 RID: 153430 RVA: 0x0052B2B0 File Offset: 0x005294B0
+		// Token: 0x1700AFEA RID: 45034
+		// (get) Token: 0x06027C75 RID: 162933 RVA: 0x00571434 File Offset: 0x0056F634
+		// (set) Token: 0x06027C76 RID: 162934 RVA: 0x0057143C File Offset: 0x0056F63C
 		public IVectorInfoT RelativePoint { get; set; }
 
-		// Token: 0x06025757 RID: 153431 RVA: 0x0052B2B9 File Offset: 0x005294B9
+		// Token: 0x06027C77 RID: 162935 RVA: 0x00571445 File Offset: 0x0056F645
 		public IPointAttachTargetT()
 		{
 			this.Type = EAttachType.Actor;

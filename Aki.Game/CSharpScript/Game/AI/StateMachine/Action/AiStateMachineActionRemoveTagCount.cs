@@ -1,21 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Action
 {
-	// Token: 0x02007355 RID: 29525
+	// Token: 0x020064D8 RID: 25816
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineActionRemoveTagCount : AiStateMachineAction
 	{
-		// Token: 0x060486B8 RID: 296632 RVA: 0x012A0DAA File Offset: 0x0129EFAA
+		// Token: 0x0603EB05 RID: 256773 RVA: 0x01243832 File Offset: 0x01241A32
 		public AiStateMachineActionRemoveTagCount(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Action action) : base(stateMachineNode, action)
 		{
 		}
 
-		// Token: 0x060486B9 RID: 296633 RVA: 0x012A0DB4 File Offset: 0x0129EFB4
+		// Token: 0x0603EB06 RID: 256774 RVA: 0x0124383C File Offset: 0x01241A3C
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Action action)
 		{
 			CombatStateMachineDefine.Fsm.ActionRemoveTagCount actionRemoveTagCount = action.ActionRemoveTagCount;
@@ -25,7 +26,7 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			return true;
 		}
 
-		// Token: 0x060486BA RID: 296634 RVA: 0x012A0E0C File Offset: 0x0129F00C
+		// Token: 0x0603EB07 RID: 256775 RVA: 0x01243894 File Offset: 0x01241A94
 		public override void DoAction(long? contextId = null)
 		{
 			BaseTagComponent tagComponent = this.Node.TagComponent;
@@ -39,28 +40,45 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			}
 			if (this.Count.GetValueOrDefault() == -1)
 			{
-				int rawTagCount = tagComponent.TagContainer.GetRawTagCount(ETagChannel.Common, this.TagId.Value);
-				tagComponent.TagContainer.UpdateExactTag(ETagChannel.Common, this.TagId.Value, -rawTagCount);
-				return;
+				using (IEnumerator<ETagChannel> enumerator = AiStateMachineActionRemoveTagCount.RemoveChannels.GetEnumerator())
+				{
+					while (enumerator.MoveNext())
+					{
+						ETagChannel tagChannel = enumerator.Current;
+						tagComponent.TagContainer.RemoveExactTag(tagChannel, this.TagId.Value);
+					}
+					return;
+				}
 			}
 			int? count = this.Count;
 			int num = 0;
 			if (count.GetValueOrDefault() > num & count != null)
 			{
-				tagComponent.TagContainer.UpdateExactTag(ETagChannel.Common, this.TagId.Value, -this.Count.Value);
+				foreach (ETagChannel tagChannel2 in AiStateMachineActionRemoveTagCount.RemoveChannels)
+				{
+					tagComponent.TagContainer.UpdateExactTag(tagChannel2, this.TagId.Value, -this.Count.Value);
+				}
 			}
 		}
 
-		// Token: 0x060486BB RID: 296635 RVA: 0x012A0ECC File Offset: 0x0129F0CC
+		// Token: 0x0603EB08 RID: 256776 RVA: 0x012439AC File Offset: 0x01241BAC
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026482 RID: 156802
+		// Token: 0x0402176F RID: 137071
+		[StaticVariableRuleIgnore]
+		private static readonly IReadOnlyList<ETagChannel> RemoveChannels = new <>z__ReadOnlyArray<ETagChannel>(new ETagChannel[]
+		{
+			ETagChannel.Common,
+			ETagChannel.Anim
+		});
+
+		// Token: 0x04021770 RID: 137072
 		public int? TagId;
 
-		// Token: 0x04026483 RID: 156803
+		// Token: 0x04021771 RID: 137073
 		public int? Count;
 	}
 }

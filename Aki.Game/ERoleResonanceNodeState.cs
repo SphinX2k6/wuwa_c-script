@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020027C9 RID: 10185
+// Token: 0x02001D44 RID: 7492
 public enum ERoleResonanceNodeState
 {
-	// Token: 0x04009D68 RID: 40296
+	// Token: 0x0400A151 RID: 41297
 	NeedFrontActivated,
-	// Token: 0x04009D69 RID: 40297
+	// Token: 0x0400A152 RID: 41298
 	ToBeActivated,
-	// Token: 0x04009D6A RID: 40298
+	// Token: 0x0400A153 RID: 41299
 	Activated
 }

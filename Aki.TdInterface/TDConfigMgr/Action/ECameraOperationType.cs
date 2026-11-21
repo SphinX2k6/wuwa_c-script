@@ -4,16 +4,16 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015A0 RID: 5536
+	// Token: 0x020016FF RID: 5887
 	[JsonConverter(typeof(ECameraOperationTypeJsonConverter))]
 	[EnumExtensions]
 	public enum ECameraOperationType
 	{
-		// Token: 0x040049B5 RID: 18869
+		// Token: 0x04004D67 RID: 19815
 		Enable,
-		// Token: 0x040049B6 RID: 18870
+		// Token: 0x04004D68 RID: 19816
 		EnableSection,
-		// Token: 0x040049B7 RID: 18871
+		// Token: 0x04004D69 RID: 19817
 		Disable
 	}
 }

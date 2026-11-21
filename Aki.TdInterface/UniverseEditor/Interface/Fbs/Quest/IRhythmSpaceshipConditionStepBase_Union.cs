@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040A9 RID: 16553
+	// Token: 0x020044EA RID: 17642
 	public enum IRhythmSpaceshipConditionStepBase_Union : byte
 	{
-		// Token: 0x0400BC3F RID: 48191
+		// Token: 0x0400C628 RID: 50728
 		NONE,
-		// Token: 0x0400BC40 RID: 48192
+		// Token: 0x0400C629 RID: 50729
 		IRhythmSpaceshipConditionStepBase,
-		// Token: 0x0400BC41 RID: 48193
+		// Token: 0x0400C62A RID: 50730
 		IRhythmSpaceshipConditionStepInteract
 	}
 }

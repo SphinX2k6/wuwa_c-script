@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001113 RID: 4371
+	// Token: 0x02001241 RID: 4673
 	public class IRoleTowerConditionStepTeamUpgrade_SetValue
 	{
-		// Token: 0x04003B39 RID: 15161
+		// Token: 0x04003E87 RID: 16007
 		public ERoleTowerConditionStep Type;
 	}
 }

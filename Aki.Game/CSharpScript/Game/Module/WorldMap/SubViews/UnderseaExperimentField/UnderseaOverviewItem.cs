@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 {
-	// Token: 0x020047E5 RID: 18405
+	// Token: 0x02003716 RID: 14102
 	public class UnderseaOverviewItem : UiPanelBase
 	{
-		// Token: 0x06030359 RID: 197465 RVA: 0x00B2C948 File Offset: 0x00B2AB48
+		// Token: 0x06024B29 RID: 150313 RVA: 0x00A5C88C File Offset: 0x00A5AA8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603035A RID: 197466 RVA: 0x00B2C9EE File Offset: 0x00B2ABEE
+		// Token: 0x06024B2A RID: 150314 RVA: 0x00A5C932 File Offset: 0x00A5AB32
 		private void OnClickBtnMapShow(EToggleState toggleState)
 		{
 			this.ShowMap = !this.ShowMap;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			item.SetUIActive(this.ShowMap);
 		}
 
-		// Token: 0x0603035B RID: 197467 RVA: 0x00B2CA28 File Offset: 0x00B2AC28
+		// Token: 0x06024B2B RID: 150315 RVA: 0x00A5C96C File Offset: 0x00A5AB6C
 		[NullableContext(1)]
 		public UniTask Initialize(UUIItem uiItem, Action<int> checkedCallback)
 		{
@@ -61,20 +61,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04019F5D RID: 106333
+		// Token: 0x04014611 RID: 83473
 		private bool ShowMap;
 
-		// Token: 0x04019F5E RID: 106334
+		// Token: 0x04014612 RID: 83474
 		[Nullable(2)]
 		private UnderseaExperimentFieldPanel UnderseaOverviewPanel;
 
-		// Token: 0x0200AAA5 RID: 43685
+		// Token: 0x02009457 RID: 37975
 		public static class EComponents
 		{
-			// Token: 0x04033EA0 RID: 212640
+			// Token: 0x0402E626 RID: 189990
 			public const int BtnMapShow = 0;
 
-			// Token: 0x04033EA1 RID: 212641
+			// Token: 0x0402E627 RID: 189991
 			public const int MapLayout = 1;
 		}
 	}

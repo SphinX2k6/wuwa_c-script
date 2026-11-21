@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EF6 RID: 20214
+	// Token: 0x02003EBF RID: 16063
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleRandomEventView : UiViewBase
 	{
-		// Token: 0x06033DAD RID: 212397 RVA: 0x00C259F9 File Offset: 0x00C23BF9
+		// Token: 0x06028C18 RID: 166936 RVA: 0x00B6EFA1 File Offset: 0x00B6D1A1
 		public RogueBattleRandomEventView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033DAE RID: 212398 RVA: 0x00C25A04 File Offset: 0x00C23C04
+		// Token: 0x06028C19 RID: 166937 RVA: 0x00B6EFAC File Offset: 0x00B6D1AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DAF RID: 212399 RVA: 0x00C25A74 File Offset: 0x00C23C74
+		// Token: 0x06028C1A RID: 166938 RVA: 0x00B6F01C File Offset: 0x00B6D21C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleRandomEventView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -43,13 +43,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033DB0 RID: 212400 RVA: 0x00C25AB7 File Offset: 0x00C23CB7
+		// Token: 0x06028C1B RID: 166939 RVA: 0x00B6F05F File Offset: 0x00B6D25F
 		private RogueBattleRandomEventItem CreateItem()
 		{
 			return new RogueBattleRandomEventItem();
 		}
 
-		// Token: 0x0401B8D7 RID: 112855
+		// Token: 0x040162AA RID: 90794
 		[Nullable(new byte[]
 		{
 			2,

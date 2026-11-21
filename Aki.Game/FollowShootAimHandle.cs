@@ -11,12 +11,12 @@ using CSharpScript.Game.NewWorld.SceneItem;
 using CSharpScript.Game.NewWorld.SceneItem.Model;
 using UnrealEngine;
 
-// Token: 0x02001F2B RID: 7979
+// Token: 0x020013ED RID: 5101
 [NullableContext(1)]
 [Nullable(0)]
 public class FollowShootAimHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F5C4 RID: 62916 RVA: 0x003B4C50 File Offset: 0x003B2E50
+	// Token: 0x0600C9E3 RID: 51683 RVA: 0x003C073C File Offset: 0x003BE93C
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
@@ -27,7 +27,7 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.AimTraceDelegate = DelegateUtils.ToManualReleaseDelegate<FAsyncTraceDelegate>(new Action<bool, UTraceBaseElement, double, double>(this.AimTraceHitResultHandle));
 	}
 
-	// Token: 0x0600F5C5 RID: 62917 RVA: 0x003B4CB0 File Offset: 0x003B2EB0
+	// Token: 0x0600C9E4 RID: 51684 RVA: 0x003C079C File Offset: 0x003BE99C
 	[NullableContext(2)]
 	private void RefreshEntity(EntityHandle entityHandle)
 	{
@@ -50,7 +50,7 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.RefreshUnit();
 	}
 
-	// Token: 0x0600F5C6 RID: 62918 RVA: 0x003B4D34 File Offset: 0x003B2F34
+	// Token: 0x0600C9E5 RID: 51685 RVA: 0x003C0820 File Offset: 0x003BEA20
 	private void RefreshUnit()
 	{
 		if (this.AimUnit == null)
@@ -60,7 +60,7 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.AimUnit.RefreshState(this.IsYellow, false);
 	}
 
-	// Token: 0x0600F5C7 RID: 62919 RVA: 0x003B4D51 File Offset: 0x003B2F51
+	// Token: 0x0600C9E6 RID: 51686 RVA: 0x003C083D File Offset: 0x003BEA3D
 	protected override void OnDestroyed()
 	{
 		this.DestroyCameraAimUnit();
@@ -73,27 +73,27 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.AimedLineTraceElement = null;
 	}
 
-	// Token: 0x0600F5C8 RID: 62920 RVA: 0x003B4D82 File Offset: 0x003B2F82
+	// Token: 0x0600C9E7 RID: 51687 RVA: 0x003C086E File Offset: 0x003BEA6E
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.SetFollowShootAimVisible, new Action<bool>(this.OnSetAimVisible));
 	}
 
-	// Token: 0x0600F5C9 RID: 62921 RVA: 0x003B4DA0 File Offset: 0x003B2FA0
+	// Token: 0x0600C9E8 RID: 51688 RVA: 0x003C088C File Offset: 0x003BEA8C
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.RemoveAllTargetUseKey(this);
 		EventSystem.Instance.Remove<bool>(EEventName.SetFollowShootAimVisible, new Action<bool>(this.OnSetAimVisible));
 	}
 
-	// Token: 0x0600F5CA RID: 62922 RVA: 0x003B4DCA File Offset: 0x003B2FCA
+	// Token: 0x0600C9E9 RID: 51689 RVA: 0x003C08B6 File Offset: 0x003BEAB6
 	private void AddEntityEvents()
 	{
 		this.ListenForTagAddOrRemove(this.YellowTagId, new Action<int, bool>(this.OnColorTagChanged));
 		EventSystem.Instance.AddWithTargetUseHoldKey<ERemoveEntityType, EntityHandle>(this, this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 	}
 
-	// Token: 0x0600F5CB RID: 62923 RVA: 0x003B4E08 File Offset: 0x003B3008
+	// Token: 0x0600C9EA RID: 51690 RVA: 0x003C08F4 File Offset: 0x003BEAF4
 	private void RemoveEntityEvents()
 	{
 		foreach (ITagTask tagTask in this.TagTaskList)
@@ -110,13 +110,13 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F5CC RID: 62924 RVA: 0x003B4E94 File Offset: 0x003B3094
+	// Token: 0x0600C9EB RID: 51691 RVA: 0x003C0980 File Offset: 0x003BEB80
 	protected override void OnTick(float delta)
 	{
 		this.RefreshAimStatus();
 	}
 
-	// Token: 0x0600F5CD RID: 62925 RVA: 0x003B4E9C File Offset: 0x003B309C
+	// Token: 0x0600C9EC RID: 51692 RVA: 0x003C0988 File Offset: 0x003BEB88
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		if (this.EntityHandle == handle)
@@ -125,14 +125,14 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F5CE RID: 62926 RVA: 0x003B4EAD File Offset: 0x003B30AD
+	// Token: 0x0600C9ED RID: 51693 RVA: 0x003C0999 File Offset: 0x003BEB99
 	private void OnColorTagChanged(int tagId, bool tagExist)
 	{
 		this.IsYellow = tagExist;
 		this.RefreshUnit();
 	}
 
-	// Token: 0x0600F5CF RID: 62927 RVA: 0x003B4EBC File Offset: 0x003B30BC
+	// Token: 0x0600C9EE RID: 51694 RVA: 0x003C09A8 File Offset: 0x003BEBA8
 	private void ListenForTagAddOrRemove(int tagId, Action<int, bool> callback)
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -144,7 +144,7 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.TagTaskList.Add(tagTask);
 	}
 
-	// Token: 0x0600F5D0 RID: 62928 RVA: 0x003B4F00 File Offset: 0x003B3100
+	// Token: 0x0600C9EF RID: 51695 RVA: 0x003C09EC File Offset: 0x003BEBEC
 	private void OnSetAimVisible(bool bVisible)
 	{
 		if (bVisible)
@@ -165,7 +165,7 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.AimUnit.SetVisible(bVisible, 0);
 	}
 
-	// Token: 0x0600F5D1 RID: 62929 RVA: 0x003B4F53 File Offset: 0x003B3153
+	// Token: 0x0600C9F0 RID: 51696 RVA: 0x003C0A3F File Offset: 0x003BEC3F
 	private void NewCameraAimUnit()
 	{
 		base.NewHudUnitWithReturn<FollowShootAimUnit>(typeof(FollowShootAimUnit), "UiItem_AimTransmit", out this.AimUnit, true, delegate(FollowShootAimUnit _)
@@ -175,7 +175,7 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.AimUnit.SetVisible(true, 0);
 	}
 
-	// Token: 0x0600F5D2 RID: 62930 RVA: 0x003B4F8B File Offset: 0x003B318B
+	// Token: 0x0600C9F1 RID: 51697 RVA: 0x003C0A77 File Offset: 0x003BEC77
 	private void DestroyCameraAimUnit()
 	{
 		if (this.AimUnit == null)
@@ -186,7 +186,7 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.AimUnit = null;
 	}
 
-	// Token: 0x0600F5D3 RID: 62931 RVA: 0x003B4FA9 File Offset: 0x003B31A9
+	// Token: 0x0600C9F2 RID: 51698 RVA: 0x003C0A95 File Offset: 0x003BEC95
 	private void RefreshAimStatus()
 	{
 		FollowShootAimUnit aimUnit = this.AimUnit;
@@ -197,7 +197,7 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.AimTrace();
 	}
 
-	// Token: 0x0600F5D4 RID: 62932 RVA: 0x003B4FCC File Offset: 0x003B31CC
+	// Token: 0x0600C9F3 RID: 51699 RVA: 0x003C0AB8 File Offset: 0x003BECB8
 	private void AimTrace()
 	{
 		APlayerCameraManager characterCameraManager = Global.CharacterCameraManager;
@@ -219,7 +219,7 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		this.LastTraceIndex = traceHandle.Index;
 	}
 
-	// Token: 0x0600F5D5 RID: 62933 RVA: 0x003B50A4 File Offset: 0x003B32A4
+	// Token: 0x0600C9F4 RID: 51700 RVA: 0x003C0B90 File Offset: 0x003BED90
 	[NullableContext(2)]
 	private void AimTraceHitResultHandle(bool result, UTraceBaseElement element, double frame, double index)
 	{
@@ -310,54 +310,54 @@ public class FollowShootAimHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x040071B6 RID: 29110
+	// Token: 0x04007297 RID: 29335
 	private const int MAX_AIM_DISTANCE = 5000;
 
-	// Token: 0x040071B7 RID: 29111
+	// Token: 0x04007298 RID: 29336
 	private const string PROFILE_AIM_TRACE = "ProfileAimTrace";
 
-	// Token: 0x040071B8 RID: 29112
+	// Token: 0x04007299 RID: 29337
 	[StaticVariableRuleIgnore]
 	private static readonly Stat TickStatsObject = Stat.Create("[BattleView]FollowShootAimHandleTick", "", "");
 
-	// Token: 0x040071B9 RID: 29113
+	// Token: 0x0400729A RID: 29338
 	[Nullable(2)]
 	private FollowShootAimUnit AimUnit;
 
-	// Token: 0x040071BA RID: 29114
+	// Token: 0x0400729B RID: 29339
 	private int YellowTagId;
 
-	// Token: 0x040071BB RID: 29115
+	// Token: 0x0400729C RID: 29340
 	[Nullable(2)]
 	private EntityHandle EntityHandle;
 
-	// Token: 0x040071BC RID: 29116
+	// Token: 0x0400729D RID: 29341
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x040071BD RID: 29117
+	// Token: 0x0400729E RID: 29342
 	private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-	// Token: 0x040071BE RID: 29118
+	// Token: 0x0400729F RID: 29343
 	private bool IsYellow;
 
-	// Token: 0x040071BF RID: 29119
+	// Token: 0x040072A0 RID: 29344
 	private readonly global::Vector AimedTraceLineStart = global::Vector.Create();
 
-	// Token: 0x040071C0 RID: 29120
+	// Token: 0x040072A1 RID: 29345
 	private readonly global::Vector AimedTraceLineEnd = global::Vector.Create();
 
-	// Token: 0x040071C1 RID: 29121
+	// Token: 0x040072A2 RID: 29346
 	[Nullable(2)]
 	private UTraceLineElement AimedLineTraceElement;
 
-	// Token: 0x040071C2 RID: 29122
+	// Token: 0x040072A3 RID: 29347
 	private int LastTraceFrame;
 
-	// Token: 0x040071C3 RID: 29123
+	// Token: 0x040072A4 RID: 29348
 	private int LastTraceIndex;
 
-	// Token: 0x040071C4 RID: 29124
+	// Token: 0x040072A5 RID: 29349
 	[Nullable(2)]
 	private FAsyncTraceDelegate AimTraceDelegate;
 }

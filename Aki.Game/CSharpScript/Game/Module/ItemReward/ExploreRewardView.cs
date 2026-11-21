@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057F7 RID: 22519
+	// Token: 0x020047CE RID: 18382
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ExploreRewardView : UiViewBase
 	{
-		// Token: 0x060393E3 RID: 234467 RVA: 0x00D92BA7 File Offset: 0x00D90DA7
+		// Token: 0x0602E2F7 RID: 189175 RVA: 0x00CE19EF File Offset: 0x00CDFBEF
 		[NullableContext(1)]
 		public ExploreRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060393E4 RID: 234468 RVA: 0x00D92BBC File Offset: 0x00D90DBC
+		// Token: 0x0602E2F8 RID: 189176 RVA: 0x00CE1A04 File Offset: 0x00CDFC04
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x060393E5 RID: 234469 RVA: 0x00D92DA4 File Offset: 0x00D90FA4
+		// Token: 0x0602E2F9 RID: 189177 RVA: 0x00CE1BEC File Offset: 0x00CDFDEC
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IReadOnlyList<RewardItemData>>(EEventName.OnRefreshRewardViewItemList, new Action<IReadOnlyList<RewardItemData>>(this.OnRefreshRewardItemList));
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.UiViewSequence.AddSequenceFinishEvent("Fail", new Action<string>(this.OnRewardSequenceEnd), false);
 		}
 
-		// Token: 0x060393E6 RID: 234470 RVA: 0x00D92E78 File Offset: 0x00D91078
+		// Token: 0x0602E2FA RID: 189178 RVA: 0x00CE1CC0 File Offset: 0x00CDFEC0
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRefreshRewardViewItemList, new Action<IReadOnlyList<RewardItemData>>(this.OnRefreshRewardItemList));
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.UiViewSequence.RemoveSequenceFinishEvent("Fail", new Action<string>(this.OnRewardSequenceEnd));
 		}
 
-		// Token: 0x060393E7 RID: 234471 RVA: 0x00D92F4C File Offset: 0x00D9114C
+		// Token: 0x0602E2FB RID: 189179 RVA: 0x00CE1D94 File Offset: 0x00CDFF94
 		private void OnRefreshRewardButton()
 		{
 			List<IRewardExploreConfirmButton> buttonInfoList = this.ExtendRewardInfo.ButtonInfoList;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393E8 RID: 234472 RVA: 0x00D92FC4 File Offset: 0x00D911C4
+		// Token: 0x0602E2FC RID: 189180 RVA: 0x00CE1E0C File Offset: 0x00CE000C
 		private void OnRefreshFriendList()
 		{
 			List<IRewardExploreFriendData> exploreFriendDataList = ItemRewardController.Instance.BuildExploreFriendDataList();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RefreshFriendList();
 		}
 
-		// Token: 0x060393E9 RID: 234473 RVA: 0x00D92FF0 File Offset: 0x00D911F0
+		// Token: 0x0602E2FD RID: 189181 RVA: 0x00CE1E38 File Offset: 0x00CE0038
 		private void OnRefreshFriendApply()
 		{
 			List<int> list = ItemRewardController.Instance.BuildExploreFriendIdList();
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393EA RID: 234474 RVA: 0x00D9303C File Offset: 0x00D9123C
+		// Token: 0x0602E2FE RID: 189182 RVA: 0x00CE1E84 File Offset: 0x00CE0084
 		[NullableContext(1)]
 		private void OnRefreshRewardItemList(IReadOnlyList<RewardItemData> itemList)
 		{
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RewardItemList.Refresh(this.RewardData.GetItemList(), true);
 		}
 
-		// Token: 0x060393EB RID: 234475 RVA: 0x00D93060 File Offset: 0x00D91260
+		// Token: 0x0602E2FF RID: 189183 RVA: 0x00CE1EA8 File Offset: 0x00CE00A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ExploreRewardView.<OnBeforeStartAsync>d__31 <OnBeforeStartAsync>d__;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393EC RID: 234476 RVA: 0x00D930A3 File Offset: 0x00D912A3
+		// Token: 0x0602E300 RID: 189184 RVA: 0x00CE1EEB File Offset: 0x00CE00EB
 		protected override void OnStart()
 		{
 			this.RefreshTipText();
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393ED RID: 234477 RVA: 0x00D930CD File Offset: 0x00D912CD
+		// Token: 0x0602E301 RID: 189185 RVA: 0x00CE1F15 File Offset: 0x00CE0115
 		protected override void OnAfterShow()
 		{
 			if (this.ExtendRewardInfo.ExploreFriendDataList != null)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393EE RID: 234478 RVA: 0x00D930E4 File Offset: 0x00D912E4
+		// Token: 0x0602E302 RID: 189186 RVA: 0x00CE1F2C File Offset: 0x00CE012C
 		protected override void OnAfterPlayStartSequence()
 		{
 			if (this.RewardData.GetRewardInfo().IsSuccess)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.UiViewSequence.PlaySequence("Fail", true, null);
 		}
 
-		// Token: 0x060393EF RID: 234479 RVA: 0x00D93138 File Offset: 0x00D91338
+		// Token: 0x0602E303 RID: 189187 RVA: 0x00CE1F80 File Offset: 0x00CE0180
 		protected override void OnBeforeDestroy()
 		{
 			Action onCloseCallback = this.RewardInfo.OnCloseCallback;
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393F0 RID: 234480 RVA: 0x00D932C4 File Offset: 0x00D914C4
+		// Token: 0x0602E304 RID: 189188 RVA: 0x00CE210C File Offset: 0x00CE030C
 		private bool RefreshTitleVisible()
 		{
 			UUIItem item = base.GetItem(0);
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return flag;
 		}
 
-		// Token: 0x060393F1 RID: 234481 RVA: 0x00D932F4 File Offset: 0x00D914F4
+		// Token: 0x0602E305 RID: 189189 RVA: 0x00CE213C File Offset: 0x00CE033C
 		private void RefreshTitleText()
 		{
 			UUIText text = base.GetText(1);
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393F2 RID: 234482 RVA: 0x00D93330 File Offset: 0x00D91530
+		// Token: 0x0602E306 RID: 189190 RVA: 0x00CE2178 File Offset: 0x00CE0378
 		private void RefreshTipText()
 		{
 			base.GetItem(18).SetUIActive(this.RewardInfo.Tip != null);
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393F3 RID: 234483 RVA: 0x00D93380 File Offset: 0x00D91580
+		// Token: 0x0602E307 RID: 189191 RVA: 0x00CE21C8 File Offset: 0x00CE03C8
 		private void RefreshTitleColor()
 		{
 			UUIText text = base.GetText(1);
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			uuieffectOutline.SetOutlineColor(FColor.FromHex("B33100FF"));
 		}
 
-		// Token: 0x060393F4 RID: 234484 RVA: 0x00D93400 File Offset: 0x00D91600
+		// Token: 0x0602E308 RID: 189192 RVA: 0x00CE2248 File Offset: 0x00CE0448
 		private bool RefreshTitleTextureVisible()
 		{
 			UUIItem texture = base.GetTexture(2);
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return flag;
 		}
 
-		// Token: 0x060393F5 RID: 234485 RVA: 0x00D93430 File Offset: 0x00D91630
+		// Token: 0x0602E309 RID: 189193 RVA: 0x00CE2278 File Offset: 0x00CE0478
 		private void RefreshTitleTexture()
 		{
 			UUITexture titleTexture = base.GetTexture(2);
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393F6 RID: 234486 RVA: 0x00D934B8 File Offset: 0x00D916B8
+		// Token: 0x0602E30A RID: 189194 RVA: 0x00CE2300 File Offset: 0x00CE0500
 		private void RefreshFriendList()
 		{
 			List<IRewardExploreFriendData> exploreFriendDataList = this.ExtendRewardInfo.ExploreFriendDataList;
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393F7 RID: 234487 RVA: 0x00D934E8 File Offset: 0x00D916E8
+		// Token: 0x0602E30B RID: 189195 RVA: 0x00CE2330 File Offset: 0x00CE0530
 		private UniTask NewExploreRecord()
 		{
 			ExploreRewardView.<NewExploreRecord>d__43 <NewExploreRecord>d__;
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewExploreRecord>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393F8 RID: 234488 RVA: 0x00D9352C File Offset: 0x00D9172C
+		// Token: 0x0602E30C RID: 189196 RVA: 0x00CE2374 File Offset: 0x00CE0574
 		private UniTask NewRewardItemList()
 		{
 			ExploreRewardView.<NewRewardItemList>d__44 <NewRewardItemList>d__;
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewRewardItemList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393F9 RID: 234489 RVA: 0x00D93570 File Offset: 0x00D91770
+		// Token: 0x0602E30D RID: 189197 RVA: 0x00CE23B8 File Offset: 0x00CE05B8
 		private UniTask NewBagFullTip()
 		{
 			ExploreRewardView.<NewBagFullTip>d__45 <NewBagFullTip>d__;
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewBagFullTip>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393FA RID: 234490 RVA: 0x00D935B4 File Offset: 0x00D917B4
+		// Token: 0x0602E30E RID: 189198 RVA: 0x00CE23FC File Offset: 0x00CE05FC
 		private UniTask NewExploreBarList()
 		{
 			ExploreRewardView.<NewExploreBarList>d__46 <NewExploreBarList>d__;
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewExploreBarList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393FB RID: 234491 RVA: 0x00D935F8 File Offset: 0x00D917F8
+		// Token: 0x0602E30F RID: 189199 RVA: 0x00CE2440 File Offset: 0x00CE0640
 		private UniTask NewExploreDescription()
 		{
 			ExploreRewardView.<NewExploreDescription>d__47 <NewExploreDescription>d__;
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewExploreDescription>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393FC RID: 234492 RVA: 0x00D9363C File Offset: 0x00D9183C
+		// Token: 0x0602E310 RID: 189200 RVA: 0x00CE2484 File Offset: 0x00CE0684
 		private UniTask NewTargetReachedList()
 		{
 			ExploreRewardView.<NewTargetReachedList>d__48 <NewTargetReachedList>d__;
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewTargetReachedList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393FD RID: 234493 RVA: 0x00D93680 File Offset: 0x00D91880
+		// Token: 0x0602E311 RID: 189201 RVA: 0x00CE24C8 File Offset: 0x00CE06C8
 		private UniTask NewScoreSubTitle()
 		{
 			ExploreRewardView.<NewScoreSubTitle>d__49 <NewScoreSubTitle>d__;
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewScoreSubTitle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393FE RID: 234494 RVA: 0x00D936C4 File Offset: 0x00D918C4
+		// Token: 0x0602E312 RID: 189202 RVA: 0x00CE250C File Offset: 0x00CE070C
 		private UniTask NewOnlineChallengePlayer()
 		{
 			ExploreRewardView.<NewOnlineChallengePlayer>d__50 <NewOnlineChallengePlayer>d__;
@@ -429,7 +429,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewOnlineChallengePlayer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393FF RID: 234495 RVA: 0x00D93708 File Offset: 0x00D91908
+		// Token: 0x0602E313 RID: 189203 RVA: 0x00CE2550 File Offset: 0x00CE0750
 		private UniTask NewStateToggle()
 		{
 			ExploreRewardView.<NewStateToggle>d__51 <NewStateToggle>d__;
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewStateToggle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039400 RID: 234496 RVA: 0x00D9374C File Offset: 0x00D9194C
+		// Token: 0x0602E314 RID: 189204 RVA: 0x00CE2594 File Offset: 0x00CE0794
 		private UniTask NewScoreReach()
 		{
 			ExploreRewardView.<NewScoreReach>d__52 <NewScoreReach>d__;
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewScoreReach>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039401 RID: 234497 RVA: 0x00D93790 File Offset: 0x00D91990
+		// Token: 0x0602E315 RID: 189205 RVA: 0x00CE25D8 File Offset: 0x00CE07D8
 		private UniTask NewAccumulatedScoreItem()
 		{
 			ExploreRewardView.<NewAccumulatedScoreItem>d__53 <NewAccumulatedScoreItem>d__;
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewAccumulatedScoreItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039402 RID: 234498 RVA: 0x00D937D4 File Offset: 0x00D919D4
+		// Token: 0x0602E316 RID: 189206 RVA: 0x00CE261C File Offset: 0x00CE081C
 		private UniTask NewFriendList()
 		{
 			ExploreRewardView.<NewFriendList>d__54 <NewFriendList>d__;
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewFriendList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039403 RID: 234499 RVA: 0x00D93818 File Offset: 0x00D91A18
+		// Token: 0x0602E317 RID: 189207 RVA: 0x00CE2660 File Offset: 0x00CE0860
 		private UniTask NewBabelTowerSuccessItem()
 		{
 			ExploreRewardView.<NewBabelTowerSuccessItem>d__55 <NewBabelTowerSuccessItem>d__;
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewBabelTowerSuccessItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039404 RID: 234500 RVA: 0x00D9385C File Offset: 0x00D91A5C
+		// Token: 0x0602E318 RID: 189208 RVA: 0x00CE26A4 File Offset: 0x00CE08A4
 		private UniTask NewDangoAbyssSuccessItem()
 		{
 			ExploreRewardView.<NewDangoAbyssSuccessItem>d__56 <NewDangoAbyssSuccessItem>d__;
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewDangoAbyssSuccessItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039405 RID: 234501 RVA: 0x00D938A0 File Offset: 0x00D91AA0
+		// Token: 0x0602E319 RID: 189209 RVA: 0x00CE26E8 File Offset: 0x00CE08E8
 		private UniTask NewHonamiTowerSuccessItem()
 		{
 			ExploreRewardView.<NewHonamiTowerSuccessItem>d__57 <NewHonamiTowerSuccessItem>d__;
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewHonamiTowerSuccessItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039406 RID: 234502 RVA: 0x00D938E4 File Offset: 0x00D91AE4
+		// Token: 0x0602E31A RID: 189210 RVA: 0x00CE272C File Offset: 0x00CE092C
 		private UniTask NewRoguelikeBossChallengeItem()
 		{
 			ExploreRewardView.<NewRoguelikeBossChallengeItem>d__58 <NewRoguelikeBossChallengeItem>d__;
@@ -517,7 +517,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <NewRoguelikeBossChallengeItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039407 RID: 234503 RVA: 0x00D93928 File Offset: 0x00D91B28
+		// Token: 0x0602E31B RID: 189211 RVA: 0x00CE2770 File Offset: 0x00CE0970
 		[NullableContext(1)]
 		private RewardExploreConfirmButton NewButton(IRewardExploreConfirmButton buttonData, int buttonIndex)
 		{
@@ -530,14 +530,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			return rewardExploreConfirmButton;
 		}
 
-		// Token: 0x06039408 RID: 234504 RVA: 0x00D93978 File Offset: 0x00D91B78
+		// Token: 0x0602E31C RID: 189212 RVA: 0x00CE27C0 File Offset: 0x00CE09C0
 		[NullableContext(1)]
 		private RewardExploreFriendItem CreateFriendGrid()
 		{
 			return new RewardExploreFriendItem();
 		}
 
-		// Token: 0x06039409 RID: 234505 RVA: 0x00D93980 File Offset: 0x00D91B80
+		// Token: 0x0602E31D RID: 189213 RVA: 0x00CE27C8 File Offset: 0x00CE09C8
 		public EToggleState? GetBottomToggleState()
 		{
 			RewardExploreToggle rewardExploreToggle = this.RewardExploreToggle;
@@ -548,7 +548,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return rewardExploreToggle.GetToggleState();
 		}
 
-		// Token: 0x0603940A RID: 234506 RVA: 0x00D939A6 File Offset: 0x00D91BA6
+		// Token: 0x0602E31E RID: 189214 RVA: 0x00CE27EE File Offset: 0x00CE09EE
 		[NullableContext(1)]
 		private void OnRewardSequenceEnd(string seqName)
 		{
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			rewardExploreOnlineChallengePlayer.FullRefresh();
 		}
 
-		// Token: 0x0401DF17 RID: 122647
+		// Token: 0x040189AE RID: 100782
 		[Nullable(new byte[]
 		{
 			2,
@@ -568,34 +568,34 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private RewardData<IExploreRewardInfo> RewardData;
 
-		// Token: 0x0401DF18 RID: 122648
+		// Token: 0x040189AF RID: 100783
 		private IExploreRewardInfo RewardInfo;
 
-		// Token: 0x0401DF19 RID: 122649
+		// Token: 0x040189B0 RID: 100784
 		private IExtendRewardInfo ExtendRewardInfo;
 
-		// Token: 0x0401DF1A RID: 122650
+		// Token: 0x040189B1 RID: 100785
 		private RewardExploreRecord RewardExploreRecord;
 
-		// Token: 0x0401DF1B RID: 122651
+		// Token: 0x040189B2 RID: 100786
 		private RewardItemList RewardItemList;
 
-		// Token: 0x0401DF1C RID: 122652
+		// Token: 0x040189B3 RID: 100787
 		private RewardExploreBarList RewardExploreBarList;
 
-		// Token: 0x0401DF1D RID: 122653
+		// Token: 0x040189B4 RID: 100788
 		private RewardExploreDescription RewardExploreDescription;
 
-		// Token: 0x0401DF1E RID: 122654
+		// Token: 0x040189B5 RID: 100789
 		private RewardExploreTargetReachedList RewardExploreTargetReachedList;
 
-		// Token: 0x0401DF1F RID: 122655
+		// Token: 0x040189B6 RID: 100790
 		private RewardExploreScoreSubTitle RewardExploreScoreSubTitle;
 
-		// Token: 0x0401DF20 RID: 122656
+		// Token: 0x040189B7 RID: 100791
 		private RewardExploreOnlineChallengePlayer RewardExploreOnlineChallengePlayer;
 
-		// Token: 0x0401DF21 RID: 122657
+		// Token: 0x040189B8 RID: 100792
 		[Nullable(new byte[]
 		{
 			2,
@@ -604,83 +604,83 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private GenericLayout<RewardExploreFriendItem, IRewardExploreFriendData> RewardExploreFriendList;
 
-		// Token: 0x0401DF22 RID: 122658
+		// Token: 0x040189B9 RID: 100793
 		private BagFullTip BagFullTip;
 
-		// Token: 0x0401DF23 RID: 122659
+		// Token: 0x040189BA RID: 100794
 		private RewardExploreToggle RewardExploreToggle;
 
-		// Token: 0x0401DF24 RID: 122660
+		// Token: 0x040189BB RID: 100795
 		private RewardExploreScore RewardExploreScore;
 
-		// Token: 0x0401DF25 RID: 122661
+		// Token: 0x040189BC RID: 100796
 		private RewardExploreAccumulatedScoreItem RewardExploreAccumulatedScoreItem;
 
-		// Token: 0x0401DF26 RID: 122662
+		// Token: 0x040189BD RID: 100797
 		private RewardExploreBabelSuccessItem RewardExploreBabelSuccessItem;
 
-		// Token: 0x0401DF27 RID: 122663
+		// Token: 0x040189BE RID: 100798
 		private RewardExploreDangoAbyssSuccessItem RewardExploreDangoAbyssSuccessItem;
 
-		// Token: 0x0401DF28 RID: 122664
+		// Token: 0x040189BF RID: 100799
 		private RewardExploreHonamiTowerSuccessItem RewardExploreHonamiTowerSuccessItem;
 
-		// Token: 0x0401DF29 RID: 122665
+		// Token: 0x040189C0 RID: 100800
 		private RewardExploreRoguelikeBossChallengeItem RewardExploreRoguelikeBossChallengeItem;
 
-		// Token: 0x0401DF2A RID: 122666
+		// Token: 0x040189C1 RID: 100801
 		[Nullable(1)]
 		private readonly List<RewardExploreConfirmButton> ButtonList = new List<RewardExploreConfirmButton>();
 
-		// Token: 0x0401DF2B RID: 122667
+		// Token: 0x040189C2 RID: 100802
 		[Nullable(1)]
 		private const string SUCCESS_OUTLINE_COLOR = "C48B29FF";
 
-		// Token: 0x0401DF2C RID: 122668
+		// Token: 0x040189C3 RID: 100803
 		[Nullable(1)]
 		private const string FAIL_OUTLINE_COLOR = "B33100FF";
 
-		// Token: 0x0200B9D5 RID: 47573
+		// Token: 0x0200A3EB RID: 41963
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040382E7 RID: 230119
+			// Token: 0x04032CD4 RID: 208084
 			public const int TitleItem = 0;
 
-			// Token: 0x040382E8 RID: 230120
+			// Token: 0x04032CD5 RID: 208085
 			public const int TitleText = 1;
 
-			// Token: 0x040382E9 RID: 230121
+			// Token: 0x04032CD6 RID: 208086
 			public const int TitleTexture = 2;
 
-			// Token: 0x040382EA RID: 230122
+			// Token: 0x04032CD7 RID: 208087
 			public const int ContentItem = 3;
 
-			// Token: 0x040382EB RID: 230123
+			// Token: 0x04032CD8 RID: 208088
 			public const int ButtonHorizontalItem = 4;
 
-			// Token: 0x040382EC RID: 230124
+			// Token: 0x04032CD9 RID: 208089
 			public const int ButtonItem = 5;
 
-			// Token: 0x040382ED RID: 230125
+			// Token: 0x04032CDA RID: 208090
 			public const int ToggleItem = 6;
 
-			// Token: 0x040382EE RID: 230126
+			// Token: 0x04032CDB RID: 208091
 			public const int DoubleTip = 18;
 
-			// Token: 0x040382EF RID: 230127
+			// Token: 0x04032CDC RID: 208092
 			public const int DoubleTipTxt = 19;
 
-			// Token: 0x040382F0 RID: 230128
+			// Token: 0x04032CDD RID: 208093
 			public const int Content = 20;
 
-			// Token: 0x040382F1 RID: 230129
+			// Token: 0x04032CDE RID: 208094
 			public const int FriendItem = 21;
 
-			// Token: 0x040382F2 RID: 230130
+			// Token: 0x04032CDF RID: 208095
 			public const int FriendGrid = 22;
 
-			// Token: 0x040382F3 RID: 230131
+			// Token: 0x04032CE0 RID: 208096
 			public const int ItemTeam = 23;
 		}
 	}

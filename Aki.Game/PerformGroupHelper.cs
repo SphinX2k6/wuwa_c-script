@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003124 RID: 12580
+// Token: 0x0200267F RID: 9855
 public class PerformGroupHelper : IStaticVariableResetter
 {
-	// Token: 0x0601B081 RID: 110721 RVA: 0x00756422 File Offset: 0x00754622
+	// Token: 0x06018ADC RID: 101084 RVA: 0x0077C48E File Offset: 0x0077A68E
 	static PerformGroupHelper()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PerformGroupHelper.CreateStaticDefaultValue), new Action(PerformGroupHelper.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601B082 RID: 110722 RVA: 0x00756444 File Offset: 0x00754644
+	// Token: 0x06018ADD RID: 101085 RVA: 0x0077C4B0 File Offset: 0x0077A6B0
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<EPerformGroup, string> dictionary = new Dictionary<EPerformGroup, string>();
@@ -24,14 +24,14 @@ public class PerformGroupHelper : IStaticVariableResetter
 		PerformGroupHelper._slotGroupNameToPerformGroup = dictionary2;
 	}
 
-	// Token: 0x0601B083 RID: 110723 RVA: 0x00756495 File Offset: 0x00754695
+	// Token: 0x06018ADE RID: 101086 RVA: 0x0077C501 File Offset: 0x0077A701
 	public static void ResetStaticDefaultValue()
 	{
 		PerformGroupHelper._performGroupToSlotGroupName = null;
 		PerformGroupHelper._slotGroupNameToPerformGroup = null;
 	}
 
-	// Token: 0x0601B084 RID: 110724 RVA: 0x007564A4 File Offset: 0x007546A4
+	// Token: 0x06018ADF RID: 101087 RVA: 0x0077C510 File Offset: 0x0077A710
 	[NullableContext(2)]
 	public static string GetSlotGroupName(EPerformGroup group)
 	{
@@ -43,7 +43,7 @@ public class PerformGroupHelper : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601B085 RID: 110725 RVA: 0x007564C4 File Offset: 0x007546C4
+	// Token: 0x06018AE0 RID: 101088 RVA: 0x0077C530 File Offset: 0x0077A730
 	[NullableContext(1)]
 	public static EPerformGroup GetPerformGroup(string slotGroupName)
 	{
@@ -55,7 +55,7 @@ public class PerformGroupHelper : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0400D232 RID: 53810
+	// Token: 0x0400D654 RID: 54868
 	[Nullable(new byte[]
 	{
 		2,
@@ -63,7 +63,7 @@ public class PerformGroupHelper : IStaticVariableResetter
 	})]
 	private static Dictionary<EPerformGroup, string> _performGroupToSlotGroupName;
 
-	// Token: 0x0400D233 RID: 53811
+	// Token: 0x0400D655 RID: 54869
 	[Nullable(new byte[]
 	{
 		2,

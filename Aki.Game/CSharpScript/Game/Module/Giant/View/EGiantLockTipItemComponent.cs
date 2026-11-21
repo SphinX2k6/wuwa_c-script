@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x0200597E RID: 22910
+	// Token: 0x02004957 RID: 18775
 	internal enum EGiantLockTipItemComponent
 	{
-		// Token: 0x0401E558 RID: 124248
+		// Token: 0x04018FF6 RID: 102390
 		LockIcon,
-		// Token: 0x0401E559 RID: 124249
+		// Token: 0x04018FF7 RID: 102391
 		TipText,
-		// Token: 0x0401E55A RID: 124250
+		// Token: 0x04018FF8 RID: 102392
 		HelpBtn
 	}
 }

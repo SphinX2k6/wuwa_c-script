@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AFA RID: 11002
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DEE RID: 11758
 	public class IOpenQuickHackCameraConfig
 	{
-		// Token: 0x0600F101 RID: 61697 RVA: 0x0022F781 File Offset: 0x0022D981
+		// Token: 0x0600FFB7 RID: 65463 RVA: 0x0024D48D File Offset: 0x0024B68D
 		public static IOpenQuickHackCameraConfig Create(IOpenQuickHackCameraConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CCF RID: 19663
-		// (get) Token: 0x0600F102 RID: 61698 RVA: 0x0022F7A0 File Offset: 0x0022D9A0
+		// Token: 0x17005089 RID: 20617
+		// (get) Token: 0x0600FFB8 RID: 65464 RVA: 0x0024D4AC File Offset: 0x0024B6AC
 		public virtual bool? AutoOpenSystem
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CD0 RID: 19664
-		// (get) Token: 0x0600F103 RID: 61699 RVA: 0x0022F7D6 File Offset: 0x0022D9D6
+		// Token: 0x1700508A RID: 20618
+		// (get) Token: 0x0600FFB9 RID: 65465 RVA: 0x0024D4E2 File Offset: 0x0024B6E2
 		public virtual VectorInfo RelativePos
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CD1 RID: 19665
-		// (get) Token: 0x0600F104 RID: 61700 RVA: 0x0022F80A File Offset: 0x0022DA0A
+		// Token: 0x1700508B RID: 20619
+		// (get) Token: 0x0600FFBA RID: 65466 RVA: 0x0024D516 File Offset: 0x0024B716
 		public virtual IOpenQuickHackCameraFovConfig FovConfig
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CD2 RID: 19666
-		// (get) Token: 0x0600F105 RID: 61701 RVA: 0x0022F83E File Offset: 0x0022DA3E
+		// Token: 0x1700508C RID: 20620
+		// (get) Token: 0x0600FFBB RID: 65467 RVA: 0x0024D54A File Offset: 0x0024B74A
 		public virtual IAdjustFixedCameraRotateConfig RotateConfig
 		{
 			get
@@ -85,28 +83,28 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400848E RID: 33934
+		// Token: 0x04008B92 RID: 35730
 		private IOpenQuickHackCameraConfig Instance;
 
-		// Token: 0x0400848F RID: 33935
+		// Token: 0x04008B93 RID: 35731
 		[Nullable(2)]
 		private VectorInfo _RelativePosCache;
 
-		// Token: 0x04008490 RID: 33936
+		// Token: 0x04008B94 RID: 35732
 		private bool _RelativePosInited;
 
-		// Token: 0x04008491 RID: 33937
+		// Token: 0x04008B95 RID: 35733
 		[Nullable(2)]
 		private IOpenQuickHackCameraFovConfig _FovConfigCache;
 
-		// Token: 0x04008492 RID: 33938
+		// Token: 0x04008B96 RID: 35734
 		private bool _FovConfigInited;
 
-		// Token: 0x04008493 RID: 33939
+		// Token: 0x04008B97 RID: 35735
 		[Nullable(2)]
 		private IAdjustFixedCameraRotateConfig _RotateConfigCache;
 
-		// Token: 0x04008494 RID: 33940
+		// Token: 0x04008B98 RID: 35736
 		private bool _RotateConfigInited;
 	}
 }

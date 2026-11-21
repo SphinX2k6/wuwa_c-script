@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Plot.Avg;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 {
-	// Token: 0x0200631C RID: 25372
+	// Token: 0x0200529A RID: 21146
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballAvgUtils
 	{
-		// Token: 0x0603FD59 RID: 261465 RVA: 0x00F7193C File Offset: 0x00F6FB3C
+		// Token: 0x06034A1A RID: 215578 RVA: 0x00EB8898 File Offset: 0x00EB6A98
 		public static string GetSpineAnimation(EPlotAvgCharacterSpineDirection direction, EAvgRoleAnimationType animationType)
 		{
 			if (direction != EPlotAvgCharacterSpineDirection.Left)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			}
 		}
 
-		// Token: 0x0603FD5A RID: 261466 RVA: 0x00F719DC File Offset: 0x00F6FBDC
+		// Token: 0x06034A1B RID: 215579 RVA: 0x00EB8938 File Offset: 0x00EB6B38
 		public static string GetSpineAnimationAkEvent(string animation)
 		{
 			if (animation == "victor_B" || animation == "victor")
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return "";
 		}
 
-		// Token: 0x0603FD5B RID: 261467 RVA: 0x00F71A74 File Offset: 0x00F6FC74
+		// Token: 0x06034A1C RID: 215580 RVA: 0x00EB89D0 File Offset: 0x00EB6BD0
 		public static string GetMoveAkEvent(float moveSpeed)
 		{
 			if (moveSpeed < 313f)

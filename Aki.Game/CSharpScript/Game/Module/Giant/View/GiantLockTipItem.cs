@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x0200597F RID: 22911
+	// Token: 0x02004958 RID: 18776
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantLockTipItem : UiPanelBase
 	{
-		// Token: 0x0603A241 RID: 238145 RVA: 0x00DD30E8 File Offset: 0x00DD12E8
+		// Token: 0x0602F167 RID: 192871 RVA: 0x00D22578 File Offset: 0x00D20778
 		public UniTask Init(UUIItem item)
 		{
 			GiantLockTipItem.<Init>d__1 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A242 RID: 238146 RVA: 0x00DD3134 File Offset: 0x00DD1334
+		// Token: 0x0602F168 RID: 192872 RVA: 0x00D225C4 File Offset: 0x00D207C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.Giant.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A243 RID: 238147 RVA: 0x00DD31FB File Offset: 0x00DD13FB
+		// Token: 0x0602F169 RID: 192873 RVA: 0x00D2268B File Offset: 0x00D2088B
 		public void SetHelpCallback(Action call)
 		{
 			this.OnClickHelpCall = call;
 		}
 
-		// Token: 0x0603A244 RID: 238148 RVA: 0x00DD3204 File Offset: 0x00DD1404
+		// Token: 0x0602F16A RID: 192874 RVA: 0x00D22694 File Offset: 0x00D20894
 		public void SetTipText(string text)
 		{
 			if (text.Length <= 0)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			text2.SetText(text, true);
 		}
 
-		// Token: 0x0603A245 RID: 238149 RVA: 0x00DD3223 File Offset: 0x00DD1423
+		// Token: 0x0602F16B RID: 192875 RVA: 0x00D226B3 File Offset: 0x00D208B3
 		private void OnClickHelpBtn()
 		{
 			Action onClickHelpCall = this.OnClickHelpCall;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			onClickHelpCall();
 		}
 
-		// Token: 0x0401E55B RID: 124251
+		// Token: 0x04018FF9 RID: 102393
 		[Nullable(2)]
 		private Action OnClickHelpCall;
 	}

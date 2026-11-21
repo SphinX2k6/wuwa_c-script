@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DE3 RID: 7651
+	// Token: 0x02001FFC RID: 8188
 	public class ISceneItemMoveMotionType_SetValue
 	{
-		// Token: 0x0400622A RID: 25130
+		// Token: 0x040067B7 RID: 26551
 		public EMoveMotion Type;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007CC RID: 1996
+	// Token: 0x020007E8 RID: 2024
 	public class ConfigRegressDisposableRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002EDA RID: 11994 RVA: 0x001621B5 File Offset: 0x001603B5
+		// Token: 0x06002F82 RID: 12162 RVA: 0x0016949D File Offset: 0x0016769D
 		static ConfigRegressDisposableRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressDisposableRewardById.CreateStaticDefaultValue), new Action(ConfigRegressDisposableRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002EDB RID: 11995 RVA: 0x001621D4 File Offset: 0x001603D4
+		// Token: 0x06002F83 RID: 12163 RVA: 0x001694BC File Offset: 0x001676BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressDisposableRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002EDC RID: 11996 RVA: 0x00162253 File Offset: 0x00160453
+		// Token: 0x06002F84 RID: 12164 RVA: 0x0016953B File Offset: 0x0016773B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressDisposableRewardById.LogPair = null;
 			ConfigRegressDisposableRewardById.HandleId = 0;
 		}
 
-		// Token: 0x06002EDD RID: 11997 RVA: 0x00162261 File Offset: 0x00160461
+		// Token: 0x06002F85 RID: 12165 RVA: 0x00169549 File Offset: 0x00167749
 		public static void Init()
 		{
 			ConfigRegressDisposableRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigRegressDisposableRewardById.HandleId, "db_regressactivity.db", "select BinData from `RegressDisposableReward` where Id=?");
 		}
 
-		// Token: 0x06002EDE RID: 11998 RVA: 0x0016227C File Offset: 0x0016047C
+		// Token: 0x06002F86 RID: 12166 RVA: 0x00169564 File Offset: 0x00167764
 		public static RegressDisposableReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRegressDisposableRewardById.HandleId, ConfigRegressDisposableRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RegressDisposableReward?(rootAsRegressDisposableReward);
 		}
 
-		// Token: 0x0400367A RID: 13946
+		// Token: 0x0400373E RID: 14142
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x0400367B RID: 13947
+		// Token: 0x0400373F RID: 14143
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x0400367C RID: 13948
+		// Token: 0x04003740 RID: 14144
 		private const string TABLE = "RegressDisposableReward";
 
-		// Token: 0x0400367D RID: 13949
+		// Token: 0x04003741 RID: 14145
 		private const string COMMAND = "select BinData from `RegressDisposableReward` where Id=?";
 
-		// Token: 0x0400367E RID: 13950
+		// Token: 0x04003742 RID: 14146
 		private const string KEY_PREFIX = "RegressDisposableRewardById";
 
-		// Token: 0x0400367F RID: 13951
+		// Token: 0x04003743 RID: 14147
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003680 RID: 13952
+		// Token: 0x04003744 RID: 14148
 		private static int HandleId;
 	}
 }

@@ -5,17 +5,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B5F RID: 27487
+	// Token: 0x02005CD7 RID: 23767
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventRemoveBuffFromCreature : LevelEventBase
 	{
-		// Token: 0x060441E9 RID: 279017 RVA: 0x010C49A3 File Offset: 0x010C2BA3
+		// Token: 0x0603A33B RID: 238395 RVA: 0x0106E573 File Offset: 0x0106C773
 		public LevelEventRemoveBuffFromCreature(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441EA RID: 279018 RVA: 0x010C49AC File Offset: 0x010C2BAC
+		// Token: 0x0603A33C RID: 238396 RVA: 0x0106E57C File Offset: 0x0106C77C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			RemoveBuffFromEntity removeBuffFromEntity = inParams as RemoveBuffFromEntity;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(this.EntityIds);
 		}
 
-		// Token: 0x060441EB RID: 279019 RVA: 0x010C4A94 File Offset: 0x010C2C94
+		// Token: 0x0603A33D RID: 238397 RVA: 0x0106E664 File Offset: 0x0106C864
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			foreach (int pbDataId in this.EntityIds)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441EC RID: 279020 RVA: 0x010C4B88 File Offset: 0x010C2D88
+		// Token: 0x0603A33E RID: 238398 RVA: 0x0106E758 File Offset: 0x0106C958
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			RemoveBuffFromEntity removeBuffFromEntity = inParams as RemoveBuffFromEntity;
@@ -92,11 +92,11 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.ExecuteWhenEntitiesReady();
 		}
 
-		// Token: 0x0402393D RID: 145725
+		// Token: 0x0401EBDF RID: 125919
 		[Nullable(2)]
 		private RemoveBuffFromEntity EventParam;
 
-		// Token: 0x0402393E RID: 145726
+		// Token: 0x0401EBE0 RID: 125920
 		[Nullable(2)]
 		private List<int> EntityIds;
 	}

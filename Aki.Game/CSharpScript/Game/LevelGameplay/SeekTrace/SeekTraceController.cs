@@ -8,12 +8,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 {
-	// Token: 0x02006A58 RID: 27224
+	// Token: 0x02005BB5 RID: 23477
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeekTraceController : ControllerBase
 	{
-		// Token: 0x06043B2C RID: 277292 RVA: 0x01090EB8 File Offset: 0x0108F0B8
+		// Token: 0x06039B7A RID: 236410 RVA: 0x010356EC File Offset: 0x010338EC
 		public static void OpenSeekTrace(ITraceTracing config, int entityId, [Nullable(2)] Action<bool> onFinish = null)
 		{
 			SeekTraceModel instance = SeekTraceModel.Instance;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			UiManager.Instance.OpenView(EUiViewName.SeekTraceStartView, null, null);
 		}
 
-		// Token: 0x06043B2D RID: 277293 RVA: 0x01090FC4 File Offset: 0x0108F1C4
+		// Token: 0x06039B7B RID: 236411 RVA: 0x010357F8 File Offset: 0x010339F8
 		public static void ResetSeekTrace(Action onFinish)
 		{
 			SeekTraceModel model = SeekTraceModel.Instance;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06043B2E RID: 277294 RVA: 0x01091110 File Offset: 0x0108F310
+		// Token: 0x06039B7C RID: 236412 RVA: 0x01035944 File Offset: 0x01033B44
 		public static void FinishSeekTrace()
 		{
 			SeekTraceModel instance = SeekTraceModel.Instance;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			instance.MainItemMap = null;
 		}
 
-		// Token: 0x06043B2F RID: 277295 RVA: 0x010911DC File Offset: 0x0108F3DC
+		// Token: 0x06039B7D RID: 236413 RVA: 0x01035A10 File Offset: 0x01033C10
 		private static void InitSeekTrace()
 		{
 			SeekTraceModel instance = SeekTraceModel.Instance;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			}
 		}
 
-		// Token: 0x06043B30 RID: 277296 RVA: 0x01091418 File Offset: 0x0108F618
+		// Token: 0x06039B7E RID: 236414 RVA: 0x01035C4C File Offset: 0x01033E4C
 		private static void CheckAroundItemPosition(SeekTraceItemData mainItem, int[] checkPosition)
 		{
 			SeekTraceModel instance = SeekTraceModel.Instance;
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			}
 		}
 
-		// Token: 0x06043B31 RID: 277297 RVA: 0x01091648 File Offset: 0x0108F848
+		// Token: 0x06039B7F RID: 236415 RVA: 0x01035E7C File Offset: 0x0103407C
 		public static bool SelectItem(int[] targetPosition)
 		{
 			SeekTraceModel instance = SeekTraceModel.Instance;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			return true;
 		}
 
-		// Token: 0x06043B32 RID: 277298 RVA: 0x0109173C File Offset: 0x0108F93C
+		// Token: 0x06039B80 RID: 236416 RVA: 0x01035F70 File Offset: 0x01034170
 		public static void MoveSelectedItem(int[] targetPosition)
 		{
 			SeekTraceModel instance = SeekTraceModel.Instance;
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			}
 		}
 
-		// Token: 0x06043B33 RID: 277299 RVA: 0x01091814 File Offset: 0x0108FA14
+		// Token: 0x06039B81 RID: 236417 RVA: 0x01036048 File Offset: 0x01034248
 		public static ESeekTracePlaceResultType CheckCanPlaceSelectedItem()
 		{
 			SeekTraceModel instance = SeekTraceModel.Instance;
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			return ESeekTracePlaceResultType.Succeed;
 		}
 
-		// Token: 0x06043B34 RID: 277300 RVA: 0x010919C4 File Offset: 0x0108FBC4
+		// Token: 0x06039B82 RID: 236418 RVA: 0x010361F8 File Offset: 0x010343F8
 		public static ESeekTracePlaceResultType PlaceSelectedItem()
 		{
 			SeekTraceModel instance = SeekTraceModel.Instance;
@@ -514,7 +514,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			return ESeekTracePlaceResultType.Succeed;
 		}
 
-		// Token: 0x06043B35 RID: 277301 RVA: 0x01091D48 File Offset: 0x0108FF48
+		// Token: 0x06039B83 RID: 236419 RVA: 0x0103657C File Offset: 0x0103477C
 		private static void DestroyItemData(SeekTraceItemData item)
 		{
 			item.BasePosition[0] = 0;
@@ -524,8 +524,8 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			item.IsValid = false;
 		}
 
-		// Token: 0x1700991A RID: 39194
-		// (get) Token: 0x06043B36 RID: 277302 RVA: 0x01091D79 File Offset: 0x0108FF79
+		// Token: 0x17006DFF RID: 28159
+		// (get) Token: 0x06039B84 RID: 236420 RVA: 0x010365AD File Offset: 0x010347AD
 		public static SeekTraceController Instance
 		{
 			get
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			}
 		}
 
-		// Token: 0x06043B37 RID: 277303 RVA: 0x01091D80 File Offset: 0x0108FF80
+		// Token: 0x06039B85 RID: 236421 RVA: 0x010365B4 File Offset: 0x010347B4
 		public static SeekTraceController GetOrCreateInstance()
 		{
 			if (SeekTraceController._Instance == null)
@@ -544,7 +544,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			return SeekTraceController._Instance;
 		}
 
-		// Token: 0x06043B38 RID: 277304 RVA: 0x01091D94 File Offset: 0x0108FF94
+		// Token: 0x06039B86 RID: 236422 RVA: 0x010365C8 File Offset: 0x010347C8
 		public static bool CreateInstance()
 		{
 			if (SeekTraceController._Instance != null)
@@ -555,24 +555,24 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			return true;
 		}
 
-		// Token: 0x06043B39 RID: 277305 RVA: 0x01091DAA File Offset: 0x0108FFAA
+		// Token: 0x06039B87 RID: 236423 RVA: 0x010365DE File Offset: 0x010347DE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043B3A RID: 277306 RVA: 0x01091DAC File Offset: 0x0108FFAC
+		// Token: 0x06039B88 RID: 236424 RVA: 0x010365E0 File Offset: 0x010347E0
 		public static void ResetStaticDefaultValue()
 		{
 			SeekTraceController._Instance = null;
 		}
 
-		// Token: 0x06043B3B RID: 277307 RVA: 0x01091DB4 File Offset: 0x0108FFB4
+		// Token: 0x06039B89 RID: 236425 RVA: 0x010365E8 File Offset: 0x010347E8
 		static SeekTraceController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SeekTraceController.CreateStaticDefaultValue), new Action(SeekTraceController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040235A9 RID: 144809
+		// Token: 0x0401E79B RID: 124827
 		[Nullable(2)]
 		private static SeekTraceController _Instance;
 	}

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FD1 RID: 20433
+	// Token: 0x02005530 RID: 21808
 	public class ICommonSplineT
 	{
-		// Token: 0x17009402 RID: 37890
-		// (get) Token: 0x060208AD RID: 133293 RVA: 0x0048682F File Offset: 0x00484A2F
-		// (set) Token: 0x060208AE RID: 133294 RVA: 0x00486837 File Offset: 0x00484A37
+		// Token: 0x17009BE3 RID: 39907
+		// (get) Token: 0x060227C9 RID: 141257 RVA: 0x004C01EF File Offset: 0x004BE3EF
+		// (set) Token: 0x060227CA RID: 141258 RVA: 0x004C01F7 File Offset: 0x004BE3F7
 		public ESplineType Type { get; set; }
 
-		// Token: 0x17009403 RID: 37891
-		// (get) Token: 0x060208AF RID: 133295 RVA: 0x00486840 File Offset: 0x00484A40
-		// (set) Token: 0x060208B0 RID: 133296 RVA: 0x00486848 File Offset: 0x00484A48
+		// Token: 0x17009BE4 RID: 39908
+		// (get) Token: 0x060227CB RID: 141259 RVA: 0x004C0200 File Offset: 0x004BE400
+		// (set) Token: 0x060227CC RID: 141260 RVA: 0x004C0208 File Offset: 0x004BE408
 		public List<ICommonSplinePointT> Points { get; set; }
 
-		// Token: 0x060208B1 RID: 133297 RVA: 0x00486851 File Offset: 0x00484A51
+		// Token: 0x060227CD RID: 141261 RVA: 0x004C0211 File Offset: 0x004BE411
 		public ICommonSplineT()
 		{
 			this.Type = ESplineType.Common;

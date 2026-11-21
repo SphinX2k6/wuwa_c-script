@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x020023E0 RID: 9184
+// Token: 0x020018C5 RID: 6341
 public class PersonalQuickRoleSelectGrid : TeamRoleGrid
 {
-	// Token: 0x060125BF RID: 75199 RVA: 0x004865E4 File Offset: 0x004847E4
+	// Token: 0x0600FA71 RID: 64113 RVA: 0x00493AF0 File Offset: 0x00491CF0
 	[NullableContext(1)]
 	protected override void OnRefresh(RoleDataBase data, bool isSelected, int gridIndex)
 	{

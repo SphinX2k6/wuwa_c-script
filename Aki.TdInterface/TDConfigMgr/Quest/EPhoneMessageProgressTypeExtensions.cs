@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200125E RID: 4702
+	// Token: 0x0200139E RID: 5022
 	public static class EPhoneMessageProgressTypeExtensions
 	{
-		// Token: 0x06006A4E RID: 27214 RVA: 0x000FED24 File Offset: 0x000FCF24
+		// Token: 0x060070A1 RID: 28833 RVA: 0x0010C950 File Offset: 0x0010AB50
 		public static string ToEnumString(this EPhoneMessageProgressType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A4F RID: 27215 RVA: 0x000FED4C File Offset: 0x000FCF4C
+		// Token: 0x060070A2 RID: 28834 RVA: 0x0010C978 File Offset: 0x0010AB78
 		public static EPhoneMessageProgressType FromString(string name)
 		{
 			EPhoneMessageProgressType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A50 RID: 27216 RVA: 0x000FED75 File Offset: 0x000FCF75
+		// Token: 0x060070A3 RID: 28835 RVA: 0x0010C9A1 File Offset: 0x0010ABA1
 		public static bool TryFromString(string name, out EPhoneMessageProgressType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006A51 RID: 27217 RVA: 0x000FED9A File Offset: 0x000FCF9A
+		// Token: 0x060070A4 RID: 28836 RVA: 0x0010C9C6 File Offset: 0x0010ABC6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A52 RID: 27218 RVA: 0x000FEDAA File Offset: 0x000FCFAA
+		// Token: 0x060070A5 RID: 28837 RVA: 0x0010C9D6 File Offset: 0x0010ABD6
 		public static EPhoneMessageProgressType[] GetValues()
 		{
 			return new EPhoneMessageProgressType[1];
 		}
 
-		// Token: 0x06006A53 RID: 27219 RVA: 0x000FEDB2 File Offset: 0x000FCFB2
+		// Token: 0x060070A6 RID: 28838 RVA: 0x0010C9DE File Offset: 0x0010ABDE
 		public static string[] GetNames()
 		{
 			return new string[]

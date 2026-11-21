@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B32 RID: 2866
+	// Token: 0x02000C00 RID: 3072
 	public class IMismatchCastConfig
 	{
-		// Token: 0x0600422E RID: 16942 RVA: 0x000A988C File Offset: 0x000A7A8C
-		[NullableContext(1)]
+		// Token: 0x06004687 RID: 18055 RVA: 0x000B3950 File Offset: 0x000B1B50
 		public static IMismatchCastConfig Create(IMismatchCastConfig? instance)
 		{
 			if (instance == null)
@@ -22,19 +21,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001187 RID: 4487
-		// (get) Token: 0x0600422F RID: 16943 RVA: 0x000A98AC File Offset: 0x000A7AAC
+		// Token: 0x17001282 RID: 4738
+		// (get) Token: 0x06004688 RID: 18056 RVA: 0x000B3970 File Offset: 0x000B1B70
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMismatchSequence> MismatchSequence
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -57,18 +56,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002553 RID: 9555
+		// Token: 0x0400279B RID: 10139
 		private IMismatchCastConfig Instance;
 
-		// Token: 0x04002554 RID: 9556
+		// Token: 0x0400279C RID: 10140
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMismatchSequence> _MismatchSequenceCache;
 
-		// Token: 0x04002555 RID: 9557
+		// Token: 0x0400279D RID: 10141
 		private bool _MismatchSequenceInited;
 	}
 }

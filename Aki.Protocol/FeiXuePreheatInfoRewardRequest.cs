@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000533 RID: 1331
+	// Token: 0x0200051E RID: 1310
 	[NetMessage(EMessageId.FeiXuePreheatInfoRewardRequest)]
 	public sealed class FeiXuePreheatInfoRewardRequest : IMessage<FeiXuePreheatInfoRewardRequest>, IMessage, IEquatable<FeiXuePreheatInfoRewardRequest>, IDeepCloneable<FeiXuePreheatInfoRewardRequest>, IBufferMessage
 	{
-		// Token: 0x06007CAC RID: 31916 RVA: 0x0012DF36 File Offset: 0x0012C136
+		// Token: 0x06007B44 RID: 31556 RVA: 0x0012B332 File Offset: 0x00129532
 		[NullableContext(1)]
 		public static FeiXuePreheatInfoRewardRequest Create()
 		{
 			return new FeiXuePreheatInfoRewardRequest();
 		}
 
-		// Token: 0x17001832 RID: 6194
-		// (get) Token: 0x06007CAD RID: 31917 RVA: 0x0012DF3D File Offset: 0x0012C13D
+		// Token: 0x170017E5 RID: 6117
+		// (get) Token: 0x06007B45 RID: 31557 RVA: 0x0012B339 File Offset: 0x00129539
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001833 RID: 6195
-		// (get) Token: 0x06007CAE RID: 31918 RVA: 0x0012DF40 File Offset: 0x0012C140
+		// Token: 0x170017E6 RID: 6118
+		// (get) Token: 0x06007B46 RID: 31558 RVA: 0x0012B33C File Offset: 0x0012953C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007CAF RID: 31919 RVA: 0x0012DF47 File Offset: 0x0012C147
+		// Token: 0x06007B47 RID: 31559 RVA: 0x0012B343 File Offset: 0x00129543
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FeiXuePreheatInfoRewardRequest()
 		{
 		}
 
-		// Token: 0x06007CB0 RID: 31920 RVA: 0x0012DF5A File Offset: 0x0012C15A
+		// Token: 0x06007B48 RID: 31560 RVA: 0x0012B356 File Offset: 0x00129556
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FeiXuePreheatInfoRewardRequest(FeiXuePreheatInfoRewardRequest other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06007CB1 RID: 31921 RVA: 0x0012DF90 File Offset: 0x0012C190
+		// Token: 0x06007B49 RID: 31561 RVA: 0x0012B38C File Offset: 0x0012958C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FeiXuePreheatInfoRewardRequest Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new FeiXuePreheatInfoRewardRequest(this);
 		}
 
-		// Token: 0x17001834 RID: 6196
-		// (get) Token: 0x06007CB2 RID: 31922 RVA: 0x0012DF98 File Offset: 0x0012C198
-		// (set) Token: 0x06007CB3 RID: 31923 RVA: 0x0012DFA0 File Offset: 0x0012C1A0
+		// Token: 0x170017E7 RID: 6119
+		// (get) Token: 0x06007B4A RID: 31562 RVA: 0x0012B394 File Offset: 0x00129594
+		// (set) Token: 0x06007B4B RID: 31563 RVA: 0x0012B39C File Offset: 0x0012959C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001835 RID: 6197
-		// (get) Token: 0x06007CB4 RID: 31924 RVA: 0x0012DFA9 File Offset: 0x0012C1A9
+		// Token: 0x170017E8 RID: 6120
+		// (get) Token: 0x06007B4C RID: 31564 RVA: 0x0012B3A5 File Offset: 0x001295A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> FeiXuePreheatInfoIds
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007CB5 RID: 31925 RVA: 0x0012DFB1 File Offset: 0x0012C1B1
+		// Token: 0x06007B4D RID: 31565 RVA: 0x0012B3AD File Offset: 0x001295AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FeiXuePreheatInfoRewardRequest);
 		}
 
-		// Token: 0x06007CB6 RID: 31926 RVA: 0x0012DFC0 File Offset: 0x0012C1C0
+		// Token: 0x06007B4E RID: 31566 RVA: 0x0012B3BC File Offset: 0x001295BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FeiXuePreheatInfoRewardRequest other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && this.feiXuePreheatInfoIds_.Equals(other.feiXuePreheatInfoIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06007CB7 RID: 31927 RVA: 0x0012E010 File Offset: 0x0012C210
+		// Token: 0x06007B4F RID: 31567 RVA: 0x0012B40C File Offset: 0x0012960C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007CB8 RID: 31928 RVA: 0x0012E05D File Offset: 0x0012C25D
+		// Token: 0x06007B50 RID: 31568 RVA: 0x0012B459 File Offset: 0x00129659
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06007CB9 RID: 31929 RVA: 0x0012E06A File Offset: 0x0012C26A
+		// Token: 0x06007B51 RID: 31569 RVA: 0x0012B466 File Offset: 0x00129666
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,14 +147,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06007CBA RID: 31930 RVA: 0x0012E074 File Offset: 0x0012C274
+		// Token: 0x06007B52 RID: 31570 RVA: 0x0012B470 File Offset: 0x00129670
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(8);
+				output.WriteRawTag(32);
 				output.WriteInt32(this.ActivityId);
 			}
 			this.feiXuePreheatInfoIds_.WriteTo(ref output, FeiXuePreheatInfoRewardRequest._repeated_feiXuePreheatInfoIds_codec);
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007CBB RID: 31931 RVA: 0x0012E0C4 File Offset: 0x0012C2C4
+		// Token: 0x06007B53 RID: 31571 RVA: 0x0012B4C0 File Offset: 0x001296C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007CBC RID: 31932 RVA: 0x0012E118 File Offset: 0x0012C318
+		// Token: 0x06007B54 RID: 31572 RVA: 0x0012B514 File Offset: 0x00129714
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FeiXuePreheatInfoRewardRequest other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06007CBD RID: 31933 RVA: 0x0012E165 File Offset: 0x0012C365
+		// Token: 0x06007B55 RID: 31573 RVA: 0x0012B561 File Offset: 0x00129761
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06007CBE RID: 31934 RVA: 0x0012E170 File Offset: 0x0012C370
+		// Token: 0x06007B56 RID: 31574 RVA: 0x0012B56C File Offset: 0x0012976C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 8U)
+				if (num != 32U)
 				{
-					if (num != 48U && num != 50U)
+					if (num != 72U && num != 74U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003F7F RID: 16255
+		// Token: 0x04003F75 RID: 16245
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003F80 RID: 16256
-		public const int ActivityIdFieldNumber = 1;
+		// Token: 0x04003F76 RID: 16246
+		public const int ActivityIdFieldNumber = 4;
 
-		// Token: 0x04003F81 RID: 16257
+		// Token: 0x04003F77 RID: 16247
 		private int activityId_;
 
-		// Token: 0x04003F82 RID: 16258
-		public const int FeiXuePreheatInfoIdsFieldNumber = 6;
+		// Token: 0x04003F78 RID: 16248
+		public const int FeiXuePreheatInfoIdsFieldNumber = 9;
 
-		// Token: 0x04003F83 RID: 16259
-		private static readonly FieldCodec<int> _repeated_feiXuePreheatInfoIds_codec = FieldCodec.ForInt32(50U);
+		// Token: 0x04003F79 RID: 16249
+		private static readonly FieldCodec<int> _repeated_feiXuePreheatInfoIds_codec = FieldCodec.ForInt32(74U);
 
-		// Token: 0x04003F84 RID: 16260
+		// Token: 0x04003F7A RID: 16250
 		private readonly RepeatedField<int> feiXuePreheatInfoIds_ = new RepeatedField<int>();
 	}
 }

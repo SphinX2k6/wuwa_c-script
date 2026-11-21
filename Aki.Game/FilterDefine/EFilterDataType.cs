@@ -2,54 +2,54 @@
 
 namespace FilterDefine
 {
-	// Token: 0x020044CA RID: 17610
+	// Token: 0x02002F57 RID: 12119
 	public enum EFilterDataType
 	{
-		// Token: 0x04018422 RID: 99362
+		// Token: 0x0400F1CA RID: 61898
 		Role = 1,
-		// Token: 0x04018423 RID: 99363
+		// Token: 0x0400F1CB RID: 61899
 		Phantom,
-		// Token: 0x04018424 RID: 99364
+		// Token: 0x0400F1CC RID: 61900
 		PhantomFetter,
-		// Token: 0x04018425 RID: 99365
+		// Token: 0x0400F1CD RID: 61901
 		CalabashCollect,
-		// Token: 0x04018426 RID: 99366
+		// Token: 0x0400F1CE RID: 61902
 		ItemData,
-		// Token: 0x04018427 RID: 99367
+		// Token: 0x0400F1CF RID: 61903
 		MonsterDetect,
-		// Token: 0x04018428 RID: 99368
+		// Token: 0x0400F1D0 RID: 61904
 		SilentAreaDetect,
-		// Token: 0x04018429 RID: 99369
+		// Token: 0x0400F1D1 RID: 61905
 		DungeonDetect,
-		// Token: 0x0401842A RID: 99370
+		// Token: 0x0400F1D2 RID: 61906
 		Cook,
-		// Token: 0x0401842B RID: 99371
+		// Token: 0x0400F1D3 RID: 61907
 		Reagent,
-		// Token: 0x0401842C RID: 99372
+		// Token: 0x0400F1D4 RID: 61908
 		Structure,
-		// Token: 0x0401842D RID: 99373
+		// Token: 0x0400F1D5 RID: 61909
 		InventoryItem,
-		// Token: 0x0401842E RID: 99374
+		// Token: 0x0400F1D6 RID: 61910
 		VisionDestroy,
-		// Token: 0x0401842F RID: 99375
+		// Token: 0x0400F1D7 RID: 61911
 		VisionAssemble,
-		// Token: 0x04018430 RID: 99376
+		// Token: 0x0400F1D8 RID: 61912
 		FishingItem,
-		// Token: 0x04018431 RID: 99377
+		// Token: 0x0400F1D9 RID: 61913
 		EditFormationRole,
-		// Token: 0x04018432 RID: 99378
+		// Token: 0x0400F1DA RID: 61914
 		DangoAbyssPlugin,
-		// Token: 0x04018433 RID: 99379
+		// Token: 0x0400F1DB RID: 61915
 		MonsterHandBook,
-		// Token: 0x04018434 RID: 99380
+		// Token: 0x0400F1DC RID: 61916
 		WeaponHandBook,
-		// Token: 0x04018435 RID: 99381
+		// Token: 0x0400F1DD RID: 61917
 		WeaponSkinHandBook,
-		// Token: 0x04018436 RID: 99382
+		// Token: 0x0400F1DE RID: 61918
 		PinballFormation,
-		// Token: 0x04018437 RID: 99383
+		// Token: 0x0400F1DF RID: 61919
 		PinballWeapon,
-		// Token: 0x04018438 RID: 99384
+		// Token: 0x0400F1E0 RID: 61920
 		PinballRoleSelect
 	}
 }

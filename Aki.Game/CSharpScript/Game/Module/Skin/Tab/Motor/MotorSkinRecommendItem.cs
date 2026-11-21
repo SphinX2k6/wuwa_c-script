@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Tab.Motor
 {
-	// Token: 0x02004BEF RID: 19439
+	// Token: 0x02003BA0 RID: 15264
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorSkinRecommendItem : UiPanelBase
 	{
-		// Token: 0x0603243E RID: 205886 RVA: 0x00BAD678 File Offset: 0x00BAB878
+		// Token: 0x060271E2 RID: 160226 RVA: 0x00AF1BF8 File Offset: 0x00AEFDF8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			};
 		}
 
-		// Token: 0x0603243F RID: 205887 RVA: 0x00BAD81C File Offset: 0x00BABA1C
+		// Token: 0x060271E3 RID: 160227 RVA: 0x00AF1D9C File Offset: 0x00AEFF9C
 		private void OnClickBuyButton()
 		{
 			MotorSkinBuyDetailViewData motorSkinBuyDetailViewData = MotorSkinBuyDetailViewData.Create(new List<ShopMotorSkinData>
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			LogReportController.Instance.LogReport(onClickRecommendSkinButtonLogEvent);
 		}
 
-		// Token: 0x06032440 RID: 205888 RVA: 0x00BAD87C File Offset: 0x00BABA7C
+		// Token: 0x060271E4 RID: 160228 RVA: 0x00AF1DFC File Offset: 0x00AEFFFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorSkinRecommendItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -72,13 +72,13 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032441 RID: 205889 RVA: 0x00BAD8BF File Offset: 0x00BABABF
+		// Token: 0x060271E5 RID: 160229 RVA: 0x00AF1E3F File Offset: 0x00AF003F
 		protected override void OnStart()
 		{
 			this.ItemLayout = new GenericLayout<SkinRewardItemGrid, SkinRewardData>(base.GetHorizontalLayout(0), new Func<SkinRewardItemGrid>(this.InitGridItem), null, false, true);
 		}
 
-		// Token: 0x06032442 RID: 205890 RVA: 0x00BAD8E2 File Offset: 0x00BABAE2
+		// Token: 0x060271E6 RID: 160230 RVA: 0x00AF1E62 File Offset: 0x00AF0062
 		[NullableContext(1)]
 		private SkinRewardItemGrid InitGridItem()
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			return skinRewardItemGrid;
 		}
 
-		// Token: 0x06032443 RID: 205891 RVA: 0x00BAD910 File Offset: 0x00BABB10
+		// Token: 0x060271E7 RID: 160231 RVA: 0x00AF1E90 File Offset: 0x00AF0090
 		public void Refresh(int recommendId)
 		{
 			this.RecommendData = PayShopModel.Instance.GetRecommendDataById(recommendId);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			this.RefreshView();
 		}
 
-		// Token: 0x06032444 RID: 205892 RVA: 0x00BAD9A0 File Offset: 0x00BABBA0
+		// Token: 0x060271E8 RID: 160232 RVA: 0x00AF1F20 File Offset: 0x00AF0120
 		private void RefreshView()
 		{
 			this.RefreshTimeText(this.CurrentRoleSkinData);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			this.RefreshCouponDiscount(this.CurrentRoleSkinData);
 		}
 
-		// Token: 0x06032445 RID: 205893 RVA: 0x00BADA28 File Offset: 0x00BABC28
+		// Token: 0x060271E9 RID: 160233 RVA: 0x00AF1FA8 File Offset: 0x00AF01A8
 		private void RefreshTimeText(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			}
 		}
 
-		// Token: 0x06032446 RID: 205894 RVA: 0x00BADB38 File Offset: 0x00BABD38
+		// Token: 0x060271EA RID: 160234 RVA: 0x00AF20B8 File Offset: 0x00AF02B8
 		private void RefreshSkinName(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), name, Array.Empty<object>());
 		}
 
-		// Token: 0x06032447 RID: 205895 RVA: 0x00BADB80 File Offset: 0x00BABD80
+		// Token: 0x060271EB RID: 160235 RVA: 0x00AF2100 File Offset: 0x00AF0300
 		private void RefreshSubName(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), name, Array.Empty<object>());
 		}
 
-		// Token: 0x06032448 RID: 205896 RVA: 0x00BADBC8 File Offset: 0x00BABDC8
+		// Token: 0x060271EC RID: 160236 RVA: 0x00AF2148 File Offset: 0x00AF0348
 		private void RefreshBuyItemIcon(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			}
 		}
 
-		// Token: 0x06032449 RID: 205897 RVA: 0x00BADC28 File Offset: 0x00BABE28
+		// Token: 0x060271ED RID: 160237 RVA: 0x00AF21A8 File Offset: 0x00AF03A8
 		private void RefreshSourcePriceText(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			base.GetText(6).SetText("<s>" + originalPrice.Value.ToString() + "</s>", true);
 		}
 
-		// Token: 0x0603244A RID: 205898 RVA: 0x00BADCC4 File Offset: 0x00BABEC4
+		// Token: 0x060271EE RID: 160238 RVA: 0x00AF2244 File Offset: 0x00AF0444
 		private void RefreshNowPriceText(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			base.GetText(5).SetText(nowPrice.ToString(), true);
 		}
 
-		// Token: 0x0603244B RID: 205899 RVA: 0x00BADD28 File Offset: 0x00BABF28
+		// Token: 0x060271EF RID: 160239 RVA: 0x00AF22A8 File Offset: 0x00AF04A8
 		private void RefreshBuyButtonState(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			base.GetItem(15).SetUIActive(ifCanBuy);
 		}
 
-		// Token: 0x0603244C RID: 205900 RVA: 0x00BADD90 File Offset: 0x00BABF90
+		// Token: 0x060271F0 RID: 160240 RVA: 0x00AF2310 File Offset: 0x00AF0510
 		private void RefreshHaveItem(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			base.GetItem(8).SetUIActive(!ifCanBuy);
 		}
 
-		// Token: 0x0603244D RID: 205901 RVA: 0x00BADDC8 File Offset: 0x00BABFC8
+		// Token: 0x060271F1 RID: 160241 RVA: 0x00AF2348 File Offset: 0x00AF0548
 		private void RefreshLayout(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			}
 		}
 
-		// Token: 0x0603244E RID: 205902 RVA: 0x00BADEB0 File Offset: 0x00BAC0B0
+		// Token: 0x060271F2 RID: 160242 RVA: 0x00AF2430 File Offset: 0x00AF0630
 		private void RefreshCouponDiscount(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -370,13 +370,13 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			base.SetTextureByPath(availableCouponItem.GetConfig().As<ItemInfo>().Value.IconSmall, texture, null, null);
 		}
 
-		// Token: 0x0401ABD3 RID: 109523
+		// Token: 0x0401552E RID: 87342
 		private ShopMotorSkinData CurrentRoleSkinData;
 
-		// Token: 0x0401ABD4 RID: 109524
+		// Token: 0x0401552F RID: 87343
 		private PayShopRecommendData RecommendData;
 
-		// Token: 0x0401ABD5 RID: 109525
+		// Token: 0x04015530 RID: 87344
 		[Nullable(new byte[]
 		{
 			2,
@@ -385,44 +385,44 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 		})]
 		private GenericLayout<SkinRewardItemGrid, SkinRewardData> ItemLayout;
 
-		// Token: 0x0401ABD6 RID: 109526
+		// Token: 0x04015531 RID: 87345
 		private TotalTopUpPayAdditiveTagItem TotalTopUpTagItem;
 
-		// Token: 0x0200ADE5 RID: 44517
+		// Token: 0x02009804 RID: 38916
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04034CFF RID: 216319
+			// Token: 0x0402F6A6 RID: 194214
 			RewardHorizontalLayout,
-			// Token: 0x04034D00 RID: 216320
+			// Token: 0x0402F6A7 RID: 194215
 			RewardItem,
-			// Token: 0x04034D01 RID: 216321
+			// Token: 0x0402F6A8 RID: 194216
 			TimeText,
-			// Token: 0x04034D02 RID: 216322
+			// Token: 0x0402F6A9 RID: 194217
 			SkinNameText,
-			// Token: 0x04034D03 RID: 216323
+			// Token: 0x0402F6AA RID: 194218
 			SkinSubNameText,
-			// Token: 0x04034D04 RID: 216324
+			// Token: 0x0402F6AB RID: 194219
 			NowPrice,
-			// Token: 0x04034D05 RID: 216325
+			// Token: 0x0402F6AC RID: 194220
 			BeforePrice,
-			// Token: 0x04034D06 RID: 216326
+			// Token: 0x0402F6AD RID: 194221
 			BuyButton,
-			// Token: 0x04034D07 RID: 216327
+			// Token: 0x0402F6AE RID: 194222
 			HaveItem,
-			// Token: 0x04034D08 RID: 216328
+			// Token: 0x0402F6AF RID: 194223
 			BuyItemIcon,
-			// Token: 0x04034D09 RID: 216329
+			// Token: 0x0402F6B0 RID: 194224
 			TimeLimitBg,
-			// Token: 0x04034D0A RID: 216330
+			// Token: 0x0402F6B1 RID: 194225
 			TimeLimitItem,
-			// Token: 0x04034D0B RID: 216331
+			// Token: 0x0402F6B2 RID: 194226
 			ItemCoupon,
-			// Token: 0x04034D0C RID: 216332
+			// Token: 0x0402F6B3 RID: 194227
 			TextCouponDiscount,
-			// Token: 0x04034D0D RID: 216333
+			// Token: 0x0402F6B4 RID: 194228
 			TextureCouponIcon,
-			// Token: 0x04034D0E RID: 216334
+			// Token: 0x0402F6B5 RID: 194229
 			TotalTopUpTagRoot
 		}
 	}

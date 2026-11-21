@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021E5 RID: 8677
+	// Token: 0x02002450 RID: 9296
 	public class SetTimeLockState_SetValue
 	{
-		// Token: 0x040071BC RID: 29116
+		// Token: 0x04007805 RID: 30725
 		public ELockState LockState;
 	}
 }

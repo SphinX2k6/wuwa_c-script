@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02005003 RID: 20483
+	// Token: 0x02003FCD RID: 16333
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotSequenceInertiaKeeper : Singleton
 	{
-		// Token: 0x17007FEA RID: 32746
-		// (get) Token: 0x0603467A RID: 214650 RVA: 0x00C525B1 File Offset: 0x00C507B1
+		// Token: 0x1700539F RID: 21407
+		// (get) Token: 0x06029507 RID: 169223 RVA: 0x00B9C339 File Offset: 0x00B9A539
 		public bool Active
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0603467B RID: 214651 RVA: 0x00C525BC File Offset: 0x00C507BC
+		// Token: 0x06029508 RID: 169224 RVA: 0x00B9C344 File Offset: 0x00B9A544
 		public unsafe void Start(string reason)
 		{
 			if (this.IsActive)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.DebugPrintScreen(defaultInterpolatedStringHandler.ToStringAndClear(), new FLinearColor(0f, 1f, 0f, 1f));
 		}
 
-		// Token: 0x0603467C RID: 214652 RVA: 0x00C528F0 File Offset: 0x00C50AF0
+		// Token: 0x06029509 RID: 169225 RVA: 0x00B9C678 File Offset: 0x00B9A878
 		public unsafe void Stop(string reason)
 		{
 			if (!this.IsActive)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 			if (characterActorComponent != null)
 			{
-				characterActorComponent.SetInputDirect(Vector.ZeroVectorProxy, false);
+				characterActorComponent.SetInputDirect(Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 			}
 			if (this.InputCompDisableHandle != null)
 			{
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.DebugPrintScreen(defaultInterpolatedStringHandler.ToStringAndClear(), new FLinearColor(1f, 0.5f, 0f, 1f));
 		}
 
-		// Token: 0x0603467D RID: 214653 RVA: 0x00C52B24 File Offset: 0x00C50D24
+		// Token: 0x0602950A RID: 169226 RVA: 0x00B9C8AC File Offset: 0x00B9AAAC
 		private void DebugPrintScreen(string text, FLinearColor color)
 		{
 			if (!SequenceDefine.SHOW_SEAMLESS_SCREEN_DEBUG_INFO)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Plot
 			UKismetSystemLibrary.PrintString(world, "[PlotSequenceInertiaKeeper] " + text, true, false, new FLinearColor?(color), 10f);
 		}
 
-		// Token: 0x0603467E RID: 214654 RVA: 0x00C52B64 File Offset: 0x00C50D64
+		// Token: 0x0602950B RID: 169227 RVA: 0x00B9C8EC File Offset: 0x00B9AAEC
 		private void OnTick(float delta)
 		{
 			if (!this.IsActive)
@@ -212,11 +212,11 @@ namespace CSharpScript.Game.Module.Plot
 			}
 			this.TmpVector.Set(this.CachedHorizontalVelocity.X, this.CachedHorizontalVelocity.Y, (double)ucharacterMovementComponent.Velocity.Z);
 			characterActorComponent.MoveComp.SetForceSpeed(this.TmpVector);
-			characterActorComponent.SetInputDirect(this.CachedInputDirect, false);
+			characterActorComponent.SetInputDirect(this.CachedInputDirect, false, EInputDirectSpace.World);
 		}
 
-		// Token: 0x17007FEB RID: 32747
-		// (get) Token: 0x0603467F RID: 214655 RVA: 0x00C52C99 File Offset: 0x00C50E99
+		// Token: 0x170053A0 RID: 21408
+		// (get) Token: 0x0602950C RID: 169228 RVA: 0x00B9CA22 File Offset: 0x00B9AC22
 		public static PlotSequenceInertiaKeeper Instance
 		{
 			get
@@ -230,12 +230,12 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034680 RID: 214656 RVA: 0x00C52CBC File Offset: 0x00C50EBC
+		// Token: 0x0602950D RID: 169229 RVA: 0x00B9CA45 File Offset: 0x00B9AC45
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034681 RID: 214657 RVA: 0x00C52CBE File Offset: 0x00C50EBE
+		// Token: 0x0602950E RID: 169230 RVA: 0x00B9CA47 File Offset: 0x00B9AC47
 		public static void ResetStaticDefaultValue()
 		{
 			PlotSequenceInertiaKeeper instance = PlotSequenceInertiaKeeper._instance;
@@ -246,48 +246,48 @@ namespace CSharpScript.Game.Module.Plot
 			PlotSequenceInertiaKeeper._instance = null;
 		}
 
-		// Token: 0x06034682 RID: 214658 RVA: 0x00C52CD7 File Offset: 0x00C50ED7
+		// Token: 0x0602950F RID: 169231 RVA: 0x00B9CA60 File Offset: 0x00B9AC60
 		static PlotSequenceInertiaKeeper()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlotSequenceInertiaKeeper.CreateStaticDefaultValue), new Action(PlotSequenceInertiaKeeper.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BE86 RID: 114310
+		// Token: 0x04016863 RID: 92259
 		private const float INERTIA_DEBUG_DURATION = 10f;
 
-		// Token: 0x0401BE87 RID: 114311
+		// Token: 0x04016864 RID: 92260
 		private int TickHandleId = -1;
 
-		// Token: 0x0401BE88 RID: 114312
+		// Token: 0x04016865 RID: 92261
 		private bool IsActive;
 
-		// Token: 0x0401BE89 RID: 114313
+		// Token: 0x04016866 RID: 92262
 		private readonly Vector CachedHorizontalVelocity = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401BE8A RID: 114314
+		// Token: 0x04016867 RID: 92263
 		private readonly Vector CachedInputDirect = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401BE8B RID: 114315
+		// Token: 0x04016868 RID: 92264
 		private readonly Vector TmpVector = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401BE8C RID: 114316
+		// Token: 0x04016869 RID: 92265
 		private EMovementMode? CachedMovementMode;
 
-		// Token: 0x0401BE8D RID: 114317
+		// Token: 0x0401686A RID: 92266
 		private int? InputCompDisableHandle;
 
-		// Token: 0x0401BE8E RID: 114318
+		// Token: 0x0401686B RID: 92267
 		private int CachedEntityId = -1;
 
-		// Token: 0x0401BE8F RID: 114319
+		// Token: 0x0401686C RID: 92268
 		[Nullable(2)]
 		private CharacterActorComponent CachedActorComp;
 
-		// Token: 0x0401BE90 RID: 114320
+		// Token: 0x0401686D RID: 92269
 		[Nullable(2)]
 		private CharacterInputComponent CachedInputComp;
 
-		// Token: 0x0401BE91 RID: 114321
+		// Token: 0x0401686E RID: 92270
 		[Nullable(2)]
 		private static PlotSequenceInertiaKeeper _instance;
 	}

@@ -3,11 +3,11 @@ using Aki.Protocol;
 using Aki.TDConfigMgr.Quest;
 using CSharpScript.Game.Module.InstanceDungeon;
 
-// Token: 0x020034A3 RID: 13475
+// Token: 0x02002A17 RID: 10775
 public class UiInteractChatData
 {
-	// Token: 0x170028B7 RID: 10423
-	// (get) Token: 0x0601D56C RID: 120172 RVA: 0x0082D9B7 File Offset: 0x0082BBB7
+	// Token: 0x17002C4F RID: 11343
+	// (get) Token: 0x0601B269 RID: 111209 RVA: 0x00854B63 File Offset: 0x00852D63
 	public double DurationTime
 	{
 		get
@@ -16,7 +16,7 @@ public class UiInteractChatData
 		}
 	}
 
-	// Token: 0x0601D56D RID: 120173 RVA: 0x0082D9C6 File Offset: 0x0082BBC6
+	// Token: 0x0601B26A RID: 111210 RVA: 0x00854B72 File Offset: 0x00852D72
 	public void TriggerOpen()
 	{
 		this.Reset();
@@ -26,7 +26,7 @@ public class UiInteractChatData
 		this.UseSkillId = this.GetUseSkillId();
 	}
 
-	// Token: 0x0601D56E RID: 120174 RVA: 0x0082D9FD File Offset: 0x0082BBFD
+	// Token: 0x0601B26B RID: 111211 RVA: 0x00854BA9 File Offset: 0x00852DA9
 	public void TriggerClose()
 	{
 		this.CloseTime = Time.Instance.ServerTimeStamp;
@@ -34,7 +34,7 @@ public class UiInteractChatData
 		this.IsStart = false;
 	}
 
-	// Token: 0x0601D56F RID: 120175 RVA: 0x0082DA22 File Offset: 0x0082BC22
+	// Token: 0x0601B26C RID: 111212 RVA: 0x00854BCE File Offset: 0x00852DCE
 	public void Reset()
 	{
 		this.OpenTime = 0.0;
@@ -45,7 +45,7 @@ public class UiInteractChatData
 		this.IsStart = false;
 	}
 
-	// Token: 0x0601D570 RID: 120176 RVA: 0x0082DA60 File Offset: 0x0082BC60
+	// Token: 0x0601B26D RID: 111213 RVA: 0x00854C0C File Offset: 0x00852E0C
 	private int GetWaveCount()
 	{
 		InstanceDungeonInfo instanceDungeonInfo = InstanceDungeonModel.Instance.GetInstanceDungeonInfo();
@@ -61,7 +61,7 @@ public class UiInteractChatData
 		return (int)MathUtils.Instance.LongToNumber(treeVarByKey.Int);
 	}
 
-	// Token: 0x0601D571 RID: 120177 RVA: 0x0082DAB0 File Offset: 0x0082BCB0
+	// Token: 0x0601B26E RID: 111214 RVA: 0x00854C5C File Offset: 0x00852E5C
 	private long GetUseSkillId()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -83,21 +83,21 @@ public class UiInteractChatData
 		return (long)baseSkillComponent2.CurrentSkill.SkillId;
 	}
 
-	// Token: 0x0400E71D RID: 59165
+	// Token: 0x0400EBD1 RID: 60369
 	private double OpenTime;
 
-	// Token: 0x0400E71E RID: 59166
+	// Token: 0x0400EBD2 RID: 60370
 	private double CloseTime;
 
-	// Token: 0x0400E71F RID: 59167
+	// Token: 0x0400EBD3 RID: 60371
 	public int OldRound;
 
-	// Token: 0x0400E720 RID: 59168
+	// Token: 0x0400EBD4 RID: 60372
 	public int NewRound;
 
-	// Token: 0x0400E721 RID: 59169
+	// Token: 0x0400EBD5 RID: 60373
 	public bool IsStart;
 
-	// Token: 0x0400E722 RID: 59170
+	// Token: 0x0400EBD6 RID: 60374
 	public long UseSkillId;
 }

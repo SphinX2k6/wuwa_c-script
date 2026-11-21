@@ -6,12 +6,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02003144 RID: 12612
+// Token: 0x020026A6 RID: 9894
 [NullableContext(1)]
 [Nullable(0)]
 public class FightDataTableCollection
 {
-	// Token: 0x0601B202 RID: 111106 RVA: 0x0076082A File Offset: 0x0075EA2A
+	// Token: 0x06018C9A RID: 101530 RVA: 0x007870E7 File Offset: 0x007852E7
 	public FightDataTableCollection(int entityId)
 	{
 		this.EntityId = entityId;
@@ -20,7 +20,31 @@ public class FightDataTableCollection
 		this.HitEffectRepository = new HitEffectDataTableRepository(this);
 	}
 
-	// Token: 0x0601B203 RID: 111107 RVA: 0x0076085D File Offset: 0x0075EA5D
+	// Token: 0x06018C9B RID: 101531 RVA: 0x0078711A File Offset: 0x0078531A
+	[NullableContext(2)]
+	public void SetSkillTableChangeListener(ISkillTableChangeListener listener)
+	{
+		this.SkillTableChangeListener = listener;
+	}
+
+	// Token: 0x06018C9C RID: 101532 RVA: 0x00787123 File Offset: 0x00785323
+	public void NotifySkillIdsChanged(IReadOnlyList<int> candidateSkillIds)
+	{
+		ISkillTableChangeListener skillTableChangeListener = this.SkillTableChangeListener;
+		if (skillTableChangeListener == null)
+		{
+			return;
+		}
+		skillTableChangeListener.OnSkillIdsChanged(candidateSkillIds);
+	}
+
+	// Token: 0x06018C9D RID: 101533 RVA: 0x00787136 File Offset: 0x00785336
+	public void NotifyDebugSkillIdsChanged()
+	{
+		this.SkillRepository.NotifyDebugSkillIdsChanged();
+	}
+
+	// Token: 0x06018C9E RID: 101534 RVA: 0x00787143 File Offset: 0x00785343
 	[NullableContext(2)]
 	public void SetTable(EFightDataTableKind kind, UDataTable data, EFightDataTableSourceType tableSourceType)
 	{
@@ -30,30 +54,20 @@ public class FightDataTableCollection
 			if (kind == EFightDataTableKind.Bullet)
 			{
 				BulletConfig.Instance.EnqueueSelfPreload(this.EntityId, data);
-				return;
 			}
-		}
-		else if (tableSourceType == EFightDataTableSourceType.Common)
-		{
-			this.GetRepository(kind).SetCommonOverrideTable(data);
 		}
 	}
 
-	// Token: 0x0601B204 RID: 111108 RVA: 0x00760897 File Offset: 0x0075EA97
+	// Token: 0x06018C9F RID: 101535 RVA: 0x0078716B File Offset: 0x0078536B
 	public void ClearTables(EFightDataTableKind kind, EFightDataTableSourceType tableSourceType)
 	{
 		if (tableSourceType == EFightDataTableSourceType.Extra)
 		{
 			this.GetRepository(kind).ClearExtraTables();
-			return;
-		}
-		if (tableSourceType == EFightDataTableSourceType.Common)
-		{
-			this.GetRepository(kind).SetCommonOverrideTable(null);
 		}
 	}
 
-	// Token: 0x0601B205 RID: 111109 RVA: 0x007608BB File Offset: 0x0075EABB
+	// Token: 0x06018CA0 RID: 101536 RVA: 0x0078717D File Offset: 0x0078537D
 	[NullableContext(2)]
 	public void AddTable(EFightDataTableKind kind, UDataTable data, EFightDataTableSourceType tableSourceType = EFightDataTableSourceType.Extra)
 	{
@@ -63,7 +77,7 @@ public class FightDataTableCollection
 		}
 	}
 
-	// Token: 0x0601B206 RID: 111110 RVA: 0x007608CE File Offset: 0x0075EACE
+	// Token: 0x06018CA1 RID: 101537 RVA: 0x00787190 File Offset: 0x00785390
 	[NullableContext(2)]
 	public void RemoveTable(EFightDataTableKind kind, UDataTable data, EFightDataTableSourceType tableSourceType)
 	{
@@ -73,7 +87,17 @@ public class FightDataTableCollection
 		}
 	}
 
-	// Token: 0x0601B207 RID: 111111 RVA: 0x007608E4 File Offset: 0x0075EAE4
+	// Token: 0x06018CA2 RID: 101538 RVA: 0x007871A3 File Offset: 0x007853A3
+	[NullableContext(2)]
+	public void ReplaceTable(EFightDataTableKind kind, UDataTable oldData, UDataTable newData, EFightDataTableSourceType tableSourceType)
+	{
+		if (tableSourceType == EFightDataTableSourceType.Extra)
+		{
+			this.GetRepository(kind).ReplaceExtraTable(oldData, newData);
+		}
+	}
+
+	// Token: 0x06018CA3 RID: 101539 RVA: 0x007871B8 File Offset: 0x007853B8
 	[NullableContext(2)]
 	public UDataTable GetTable(EFightDataTableKind kind, EFightDataTableSourceType tableSourceType, EEntityType entityType)
 	{
@@ -90,7 +114,7 @@ public class FightDataTableCollection
 		}
 	}
 
-	// Token: 0x0601B208 RID: 111112 RVA: 0x00760945 File Offset: 0x0075EB45
+	// Token: 0x06018CA4 RID: 101540 RVA: 0x00787219 File Offset: 0x00785419
 	[NullableContext(2)]
 	public void SetDebugTable(EFightDataTableKind kind, ECharacterLoadType loadType, UDataTable data)
 	{
@@ -100,7 +124,7 @@ public class FightDataTableCollection
 		}
 	}
 
-	// Token: 0x0601B209 RID: 111113 RVA: 0x00760957 File Offset: 0x0075EB57
+	// Token: 0x06018CA5 RID: 101541 RVA: 0x0078722B File Offset: 0x0078542B
 	public Dictionary<ECharacterLoadType, UDataTable> GetDebugTables(EFightDataTableKind kind)
 	{
 		if (kind == EFightDataTableKind.Skill)
@@ -110,62 +134,46 @@ public class FightDataTableCollection
 		return FightDataTableCollection.EmptyDebugTables;
 	}
 
-	// Token: 0x0601B20A RID: 111114 RVA: 0x0076096D File Offset: 0x0075EB6D
+	// Token: 0x06018CA6 RID: 101542 RVA: 0x00787241 File Offset: 0x00785441
 	public IEnumerable<DataTableKeyRow<SSkillInfo>> EnumerateSkillInfoRows(EFightDataTableSourceType tableSourceType, EEntityType entityType)
 	{
 		return this.SkillRepository.EnumerateSkillInfoRows(tableSourceType, entityType);
 	}
 
-	// Token: 0x0601B20B RID: 111115 RVA: 0x0076097C File Offset: 0x0075EB7C
+	// Token: 0x06018CA7 RID: 101543 RVA: 0x00787250 File Offset: 0x00785450
 	public IEnumerable<int> EnumerateSkillIds(EFightDataTableSourceType tableSourceType, EEntityType entityType)
 	{
 		return this.SkillRepository.EnumerateSkillIds(tableSourceType, entityType);
 	}
 
-	// Token: 0x0601B20C RID: 111116 RVA: 0x0076098B File Offset: 0x0075EB8B
+	// Token: 0x06018CA8 RID: 101544 RVA: 0x0078725F File Offset: 0x0078545F
 	[NullableContext(2)]
-	public SSkillInfo FindSkillInfo(long skillId, EEntityType entityType)
+	public ResolvedSkillInfo FindSkillInfo(long skillId, EEntityType entityType)
 	{
 		return this.SkillRepository.FindSkillInfo(skillId, entityType);
 	}
 
-	// Token: 0x0601B20D RID: 111117 RVA: 0x0076099A File Offset: 0x0075EB9A
+	// Token: 0x06018CA9 RID: 101545 RVA: 0x0078726E File Offset: 0x0078546E
 	[return: Nullable(2)]
-	public SReBulletDataMain FindBulletDataMain(string rowName)
+	public ResolvedBulletDataMain FindBulletDataMain(string rowName)
 	{
 		return this.BulletRepository.FindBulletDataMain(rowName);
 	}
 
-	// Token: 0x0601B20E RID: 111118 RVA: 0x007609A8 File Offset: 0x0075EBA8
+	// Token: 0x06018CAA RID: 101546 RVA: 0x0078727C File Offset: 0x0078547C
 	public IEnumerable<long> EnumerateBulletIds(EFightDataTableSourceType tableSourceType)
 	{
 		return this.BulletRepository.EnumerateBulletIds(tableSourceType);
 	}
 
-	// Token: 0x0601B20F RID: 111119 RVA: 0x007609B6 File Offset: 0x0075EBB6
+	// Token: 0x06018CAB RID: 101547 RVA: 0x0078728A File Offset: 0x0078548A
 	[return: Nullable(2)]
 	public SHitEffect FindHitEffect(string rowName)
 	{
 		return this.HitEffectRepository.FindHitEffect(rowName);
 	}
 
-	// Token: 0x0601B210 RID: 111120 RVA: 0x007609C4 File Offset: 0x0075EBC4
-	public FightDataTableSnapshot CreateSnapshot(EFightDataTableKind kind, EEntityType entityType)
-	{
-		switch (kind)
-		{
-		case EFightDataTableKind.Skill:
-			return this.SkillRepository.CreateSnapshot(entityType);
-		case EFightDataTableKind.Bullet:
-			return this.BulletRepository.CreateSnapshot(entityType);
-		case EFightDataTableKind.HitEffect:
-			return this.HitEffectRepository.CreateSnapshot(entityType);
-		default:
-			return new FightDataTableSnapshot();
-		}
-	}
-
-	// Token: 0x0601B211 RID: 111121 RVA: 0x00760A11 File Offset: 0x0075EC11
+	// Token: 0x06018CAC RID: 101548 RVA: 0x00787298 File Offset: 0x00785498
 	private BaseFightDataTableRepository GetRepository(EFightDataTableKind kind)
 	{
 		switch (kind)
@@ -181,19 +189,23 @@ public class FightDataTableCollection
 		}
 	}
 
-	// Token: 0x0400D30E RID: 54030
+	// Token: 0x0400D74B RID: 55115
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<ECharacterLoadType, UDataTable> EmptyDebugTables = new Dictionary<ECharacterLoadType, UDataTable>();
 
-	// Token: 0x0400D30F RID: 54031
+	// Token: 0x0400D74C RID: 55116
 	private readonly SkillDataTableRepository SkillRepository;
 
-	// Token: 0x0400D310 RID: 54032
+	// Token: 0x0400D74D RID: 55117
 	private readonly BulletDataTableRepository BulletRepository;
 
-	// Token: 0x0400D311 RID: 54033
+	// Token: 0x0400D74E RID: 55118
 	private readonly HitEffectDataTableRepository HitEffectRepository;
 
-	// Token: 0x0400D312 RID: 54034
+	// Token: 0x0400D74F RID: 55119
+	[Nullable(2)]
+	private ISkillTableChangeListener SkillTableChangeListener;
+
+	// Token: 0x0400D750 RID: 55120
 	public readonly int EntityId;
 }

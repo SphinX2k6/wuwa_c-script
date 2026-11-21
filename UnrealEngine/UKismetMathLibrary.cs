@@ -7,61 +7,61 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000CD1 RID: 3281
+	// Token: 0x02000224 RID: 548
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.KismetMathLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKismetMathLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600A650 RID: 42576 RVA: 0x000ECE84 File Offset: 0x000EB084
+		// Token: 0x06002584 RID: 9604 RVA: 0x00035E27 File Offset: 0x00034027
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKismetMathLibrary._ClassPtr;
 		}
 
-		// Token: 0x0600A651 RID: 42577 RVA: 0x000ECE90 File Offset: 0x000EB090
+		// Token: 0x06002585 RID: 9605 RVA: 0x00035E34 File Offset: 0x00034034
 		public UKismetMathLibrary() : this(BuiltinUtils.AllocNativeUObject(UKismetMathLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600A652 RID: 42578 RVA: 0x000ECEB8 File Offset: 0x000EB0B8
+		// Token: 0x06002586 RID: 9606 RVA: 0x00035E5C File Offset: 0x0003405C
 		[NullableContext(1)]
 		public UKismetMathLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKismetMathLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0600A653 RID: 42579
+		// Token: 0x06002587 RID: 9607
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Xor_IntInt(int A, int B);
 
-		// Token: 0x0600A654 RID: 42580
+		// Token: 0x06002588 RID: 9608
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Xor_Int64Int64(long A, long B);
 
-		// Token: 0x0600A655 RID: 42581
+		// Token: 0x06002589 RID: 9609
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Wrap(int Value, int Min, int Max);
 
-		// Token: 0x0600A656 RID: 42582
+		// Token: 0x0600258A RID: 9610
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector WeightedMovingAverage_FVector(FVector CurrentSample, FVector PreviousSample, float Weight);
 
-		// Token: 0x0600A657 RID: 42583
+		// Token: 0x0600258B RID: 9611
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator WeightedMovingAverage_FRotator(FRotator CurrentSample, FRotator PreviousSample, float Weight);
 
-		// Token: 0x0600A658 RID: 42584
+		// Token: 0x0600258C RID: 9612
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float WeightedMovingAverage_Float(float CurrentSample, float PreviousSample, float Weight);
 
-		// Token: 0x0600A659 RID: 42585 RVA: 0x000ECEEB File Offset: 0x000EB0EB
+		// Token: 0x0600258D RID: 9613 RVA: 0x00035E8F File Offset: 0x0003408F
 		public static FVector WD_WorldToLocal(UObject WorldContextObject, FVectorDouble InVec)
 		{
 			return UKismetMathLibrary.__WD_WorldToLocal_Internal((WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero, InVec);
 		}
 
-		// Token: 0x0600A65A RID: 42586 RVA: 0x000ECF04 File Offset: 0x000EB104
+		// Token: 0x0600258E RID: 9614 RVA: 0x00035EA8 File Offset: 0x000340A8
 		public unsafe static FTransformDouble WD_TransformToTransformDouble(UObject WorldContextObject, FTransform InT)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -69,7 +69,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__WD_TransformToTransformDouble_Internal((WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero, ptr);
 		}
 
-		// Token: 0x0600A65B RID: 42587 RVA: 0x000ECF40 File Offset: 0x000EB140
+		// Token: 0x0600258F RID: 9615 RVA: 0x00035EE4 File Offset: 0x000340E4
 		public unsafe static FTransform WD_TransformDoubleToTransform(UObject WorldContextObject, FTransformDouble InT)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -77,115 +77,109 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__WD_TransformDoubleToTransform_Internal((WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero, ptr);
 		}
 
-		// Token: 0x0600A65C RID: 42588 RVA: 0x000ECF7A File Offset: 0x000EB17A
+		// Token: 0x06002590 RID: 9616 RVA: 0x00035F1E File Offset: 0x0003411E
 		public static FVectorDouble WD_LocalToWorld(UObject WorldContextObject, FVector InVec)
 		{
 			return UKismetMathLibrary.__WD_LocalToWorld_Internal((WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero, InVec);
 		}
 
-		// Token: 0x0600A65D RID: 42589
+		// Token: 0x06002591 RID: 9617
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float VSizeXYSquared(FVector A);
 
-		// Token: 0x0600A65E RID: 42590
+		// Token: 0x06002592 RID: 9618
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float VSizeXY(FVector A);
 
-		// Token: 0x0600A65F RID: 42591
+		// Token: 0x06002593 RID: 9619
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float VSizeSquared(FVector A);
 
-		// Token: 0x0600A660 RID: 42592
+		// Token: 0x06002594 RID: 9620
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float VSize2DSquared(FVector2D A);
 
-		// Token: 0x0600A661 RID: 42593
+		// Token: 0x06002595 RID: 9621
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float VSize2D(FVector2D A);
 
-		// Token: 0x0600A662 RID: 42594
+		// Token: 0x06002596 RID: 9622
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float VSize(FVector A);
 
-		// Token: 0x0600A663 RID: 42595
+		// Token: 0x06002597 RID: 9623
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector VLerp(FVector A, FVector B, float Alpha);
 
-		// Token: 0x0600A664 RID: 42596
+		// Token: 0x06002598 RID: 9624
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector VInterpTo_Constant(FVector Current, FVector Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A665 RID: 42597
+		// Token: 0x06002599 RID: 9625
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector VInterpTo(FVector Current, FVector Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A666 RID: 42598 RVA: 0x000ECF92 File Offset: 0x000EB192
-		public static FVector VectorSpringInterp(FVector Current, FVector Target, ref FVectorSpringState SpringState, float Stiffness, float CriticalDampingFactor, float DeltaTime, float Mass = 1f)
-		{
-			return UKismetMathLibrary.__VectorSpringInterp_Internal(Current, Target, (SpringState ?? new FVectorSpringState()).NativePtr, Stiffness, CriticalDampingFactor, DeltaTime, Mass);
-		}
-
-		// Token: 0x0600A667 RID: 42599
+		// Token: 0x0600259A RID: 9626
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_Zero();
 
-		// Token: 0x0600A668 RID: 42600
+		// Token: 0x0600259B RID: 9627
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_Up();
 
-		// Token: 0x0600A669 RID: 42601
+		// Token: 0x0600259C RID: 9628
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Vector_UnwindEuler(ref FVector A);
 
-		// Token: 0x0600A66A RID: 42602
+		// Token: 0x0600259D RID: 9629
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Vector_UnitCartesianToSpherical(FVector A);
 
-		// Token: 0x0600A66B RID: 42603
+		// Token: 0x0600259E RID: 9630
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_ToRadians(FVector A);
 
-		// Token: 0x0600A66C RID: 42604
+		// Token: 0x0600259F RID: 9631
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_ToDegrees(FVector A);
 
-		// Token: 0x0600A66D RID: 42605
+		// Token: 0x060025A0 RID: 9632
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_SnappedToGrid(FVector InVect, float InGridSize);
 
-		// Token: 0x0600A66E RID: 42606
+		// Token: 0x060025A1 RID: 9633
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Vector_Set(ref FVector A, float X, float Y, float Z);
 
-		// Token: 0x0600A66F RID: 42607
+		// Token: 0x060025A2 RID: 9634
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_Right();
 
-		// Token: 0x0600A670 RID: 42608
+		// Token: 0x060025A3 RID: 9635
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_Reciprocal(in FVector A);
 
-		// Token: 0x0600A671 RID: 42609
+		// Token: 0x060025A4 RID: 9636
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_ProjectOnToNormal(FVector V, FVector InNormal);
 
-		// Token: 0x0600A672 RID: 42610
+		// Token: 0x060025A5 RID: 9637
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_One();
 
-		// Token: 0x0600A673 RID: 42611
+		// Token: 0x060025A6 RID: 9638
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_NormalUnsafe(in FVector A);
 
-		// Token: 0x0600A674 RID: 42612
+		// Token: 0x060025A7 RID: 9639
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Vector_Normalize(ref FVector A, float Tolerance = 0f);
 
-		// Token: 0x0600A675 RID: 42613
+		// Token: 0x060025A8 RID: 9640
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_Normal2D(FVector A, float Tolerance = 0.0001f);
 
-		// Token: 0x0600A676 RID: 42614 RVA: 0x000ECFB4 File Offset: 0x000EB1B4
+		// Token: 0x060025A9 RID: 9641 RVA: 0x00035F38 File Offset: 0x00034138
 		public unsafe static FVector Vector_MirrorByPlane(FVector A, in FPlane InPlane)
 		{
 			ref FPlane ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -193,131 +187,131 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector_MirrorByPlane_Internal(A, ptr);
 		}
 
-		// Token: 0x0600A677 RID: 42615
+		// Token: 0x060025AA RID: 9642
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_Left();
 
-		// Token: 0x0600A678 RID: 42616
+		// Token: 0x060025AB RID: 9643
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Vector_IsZero(in FVector A);
 
-		// Token: 0x0600A679 RID: 42617
+		// Token: 0x060025AC RID: 9644
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Vector_IsUnit(in FVector A, float SquaredLenthTolerance = 0.0001f);
 
-		// Token: 0x0600A67A RID: 42618
+		// Token: 0x060025AD RID: 9645
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Vector_IsUniform(in FVector A, float Tolerance = 0.0001f);
 
-		// Token: 0x0600A67B RID: 42619
+		// Token: 0x060025AE RID: 9646
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Vector_IsNormal(in FVector A);
 
-		// Token: 0x0600A67C RID: 42620
+		// Token: 0x060025AF RID: 9647
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Vector_IsNearlyZero(in FVector A, float Tolerance = 0.0001f);
 
-		// Token: 0x0600A67D RID: 42621
+		// Token: 0x060025B0 RID: 9648
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Vector_IsNAN(in FVector A);
 
-		// Token: 0x0600A67E RID: 42622
+		// Token: 0x060025B1 RID: 9649
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Vector_HeadingAngle(FVector A);
 
-		// Token: 0x0600A67F RID: 42623
+		// Token: 0x060025B2 RID: 9650
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_GetSignVector(FVector A);
 
-		// Token: 0x0600A680 RID: 42624
+		// Token: 0x060025B3 RID: 9651
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_GetProjection(FVector A);
 
-		// Token: 0x0600A681 RID: 42625
+		// Token: 0x060025B4 RID: 9652
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Vector_GetAbsMin(FVector A);
 
-		// Token: 0x0600A682 RID: 42626
+		// Token: 0x060025B5 RID: 9653
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Vector_GetAbsMax(FVector A);
 
-		// Token: 0x0600A683 RID: 42627
+		// Token: 0x060025B6 RID: 9654
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_GetAbs(FVector A);
 
-		// Token: 0x0600A684 RID: 42628
+		// Token: 0x060025B7 RID: 9655
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_Forward();
 
-		// Token: 0x0600A685 RID: 42629
+		// Token: 0x060025B8 RID: 9656
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_Down();
 
-		// Token: 0x0600A686 RID: 42630
+		// Token: 0x060025B9 RID: 9657
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Vector_DistanceSquared(FVector V1, FVector V2);
 
-		// Token: 0x0600A687 RID: 42631
+		// Token: 0x060025BA RID: 9658
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Vector_Distance2DSquared(FVector V1, FVector V2);
 
-		// Token: 0x0600A688 RID: 42632
+		// Token: 0x060025BB RID: 9659
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Vector_Distance2D(FVector V1, FVector V2);
 
-		// Token: 0x0600A689 RID: 42633
+		// Token: 0x060025BC RID: 9660
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Vector_Distance(FVector V1, FVector V2);
 
-		// Token: 0x0600A68A RID: 42634
+		// Token: 0x060025BD RID: 9661
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Vector_CosineAngle2D(FVector A, FVector B);
 
-		// Token: 0x0600A68B RID: 42635
+		// Token: 0x060025BE RID: 9662
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_ComponentMin(FVector A, FVector B);
 
-		// Token: 0x0600A68C RID: 42636
+		// Token: 0x060025BF RID: 9663
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_ComponentMax(FVector A, FVector B);
 
-		// Token: 0x0600A68D RID: 42637
+		// Token: 0x060025C0 RID: 9664
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_ClampSizeMax2D(FVector A, float Max);
 
-		// Token: 0x0600A68E RID: 42638
+		// Token: 0x060025C1 RID: 9665
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_ClampSizeMax(FVector A, float Max);
 
-		// Token: 0x0600A68F RID: 42639
+		// Token: 0x060025C2 RID: 9666
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_ClampSize2D(FVector A, float Min, float Max);
 
-		// Token: 0x0600A690 RID: 42640
+		// Token: 0x060025C3 RID: 9667
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_BoundedToCube(FVector InVect, float InRadius);
 
-		// Token: 0x0600A691 RID: 42641
+		// Token: 0x060025C4 RID: 9668
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_BoundedToBox(FVector InVect, FVector InBoxMin, FVector InBoxMax);
 
-		// Token: 0x0600A692 RID: 42642
+		// Token: 0x060025C5 RID: 9669
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Vector_Backward();
 
-		// Token: 0x0600A693 RID: 42643
+		// Token: 0x060025C6 RID: 9670
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Vector_Assign(ref FVector A, in FVector InVector);
 
-		// Token: 0x0600A694 RID: 42644
+		// Token: 0x060025C7 RID: 9671
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Vector_AddBounded(ref FVector A, FVector InAddVect, float InRadius);
 
-		// Token: 0x0600A695 RID: 42645
+		// Token: 0x060025C8 RID: 9672
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector4 Vector4_Zero();
 
-		// Token: 0x0600A696 RID: 42646 RVA: 0x000ECFE4 File Offset: 0x000EB1E4
+		// Token: 0x060025C9 RID: 9673 RVA: 0x00035F68 File Offset: 0x00034168
 		public unsafe static float Vector4_SizeSquared3(in FVector4 A)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -325,7 +319,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_SizeSquared3_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A697 RID: 42647 RVA: 0x000ED014 File Offset: 0x000EB214
+		// Token: 0x060025CA RID: 9674 RVA: 0x00035F98 File Offset: 0x00034198
 		public unsafe static float Vector4_SizeSquared(in FVector4 A)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -333,7 +327,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_SizeSquared_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A698 RID: 42648 RVA: 0x000ED044 File Offset: 0x000EB244
+		// Token: 0x060025CB RID: 9675 RVA: 0x00035FC8 File Offset: 0x000341C8
 		public unsafe static float Vector4_Size3(in FVector4 A)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -341,7 +335,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_Size3_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A699 RID: 42649 RVA: 0x000ED074 File Offset: 0x000EB274
+		// Token: 0x060025CC RID: 9676 RVA: 0x00035FF8 File Offset: 0x000341F8
 		public unsafe static float Vector4_Size(in FVector4 A)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -349,7 +343,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_Size_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A69A RID: 42650 RVA: 0x000ED0A4 File Offset: 0x000EB2A4
+		// Token: 0x060025CD RID: 9677 RVA: 0x00036028 File Offset: 0x00034228
 		public unsafe static void Vector4_Set(ref FVector4 A, float X, float Y, float Z, float W)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -358,7 +352,7 @@ namespace UnrealEngine
 			A = ptr;
 		}
 
-		// Token: 0x0600A69B RID: 42651 RVA: 0x000ED0E4 File Offset: 0x000EB2E4
+		// Token: 0x060025CE RID: 9678 RVA: 0x00036068 File Offset: 0x00034268
 		public unsafe static FVector4 Vector4_NormalUnsafe3(in FVector4 A)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -366,7 +360,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_NormalUnsafe3_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A69C RID: 42652 RVA: 0x000ED114 File Offset: 0x000EB314
+		// Token: 0x060025CF RID: 9679 RVA: 0x00036098 File Offset: 0x00034298
 		public unsafe static void Vector4_Normalize3(ref FVector4 A, float Tolerance = 0f)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -375,7 +369,7 @@ namespace UnrealEngine
 			A = ptr;
 		}
 
-		// Token: 0x0600A69D RID: 42653 RVA: 0x000ED150 File Offset: 0x000EB350
+		// Token: 0x060025D0 RID: 9680 RVA: 0x000360D4 File Offset: 0x000342D4
 		public unsafe static FVector4 Vector4_Normal3(in FVector4 A, float Tolerance = 0.0001f)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -383,7 +377,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_Normal3_Internal(uintPtr, Tolerance);
 		}
 
-		// Token: 0x0600A69E RID: 42654 RVA: 0x000ED180 File Offset: 0x000EB380
+		// Token: 0x060025D1 RID: 9681 RVA: 0x00036104 File Offset: 0x00034304
 		public unsafe static FVector4 Vector4_Negated(in FVector4 A)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -391,7 +385,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_Negated_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A69F RID: 42655 RVA: 0x000ED1B0 File Offset: 0x000EB3B0
+		// Token: 0x060025D2 RID: 9682 RVA: 0x00036134 File Offset: 0x00034334
 		public unsafe static FVector4 Vector4_MirrorByVector3(in FVector4 Direction, in FVector4 SurfaceNormal)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -401,7 +395,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_MirrorByVector3_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A6A0 RID: 42656 RVA: 0x000ED1FC File Offset: 0x000EB3FC
+		// Token: 0x060025D3 RID: 9683 RVA: 0x00036180 File Offset: 0x00034380
 		public unsafe static bool Vector4_IsZero(in FVector4 A)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -409,7 +403,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_IsZero_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A6A1 RID: 42657 RVA: 0x000ED22C File Offset: 0x000EB42C
+		// Token: 0x060025D4 RID: 9684 RVA: 0x000361B0 File Offset: 0x000343B0
 		public unsafe static bool Vector4_IsUnit3(in FVector4 A, float SquaredLenthTolerance = 0.0001f)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -417,7 +411,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_IsUnit3_Internal(uintPtr, SquaredLenthTolerance);
 		}
 
-		// Token: 0x0600A6A2 RID: 42658 RVA: 0x000ED25C File Offset: 0x000EB45C
+		// Token: 0x060025D5 RID: 9685 RVA: 0x000361E0 File Offset: 0x000343E0
 		public unsafe static bool Vector4_IsNormal3(in FVector4 A)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -425,7 +419,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_IsNormal3_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A6A3 RID: 42659 RVA: 0x000ED28C File Offset: 0x000EB48C
+		// Token: 0x060025D6 RID: 9686 RVA: 0x00036210 File Offset: 0x00034410
 		public unsafe static bool Vector4_IsNearlyZero3(in FVector4 A, float Tolerance = 0.0001f)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -433,7 +427,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_IsNearlyZero3_Internal(uintPtr, Tolerance);
 		}
 
-		// Token: 0x0600A6A4 RID: 42660 RVA: 0x000ED2BC File Offset: 0x000EB4BC
+		// Token: 0x060025D7 RID: 9687 RVA: 0x00036240 File Offset: 0x00034440
 		public unsafe static bool Vector4_IsNAN(in FVector4 A)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -441,7 +435,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_IsNAN_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A6A5 RID: 42661 RVA: 0x000ED2EC File Offset: 0x000EB4EC
+		// Token: 0x060025D8 RID: 9688 RVA: 0x00036270 File Offset: 0x00034470
 		public unsafe static float Vector4_DotProduct3(in FVector4 A, in FVector4 B)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -451,7 +445,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_DotProduct3_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A6A6 RID: 42662 RVA: 0x000ED338 File Offset: 0x000EB538
+		// Token: 0x060025D9 RID: 9689 RVA: 0x000362BC File Offset: 0x000344BC
 		public unsafe static float Vector4_DotProduct(in FVector4 A, in FVector4 B)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -461,7 +455,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_DotProduct_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A6A7 RID: 42663 RVA: 0x000ED384 File Offset: 0x000EB584
+		// Token: 0x060025DA RID: 9690 RVA: 0x00036308 File Offset: 0x00034508
 		public unsafe static FVector4 Vector4_CrossProduct3(in FVector4 A, in FVector4 B)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -471,7 +465,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Vector4_CrossProduct3_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A6A8 RID: 42664 RVA: 0x000ED3D0 File Offset: 0x000EB5D0
+		// Token: 0x060025DB RID: 9691 RVA: 0x00036354 File Offset: 0x00034554
 		public unsafe static void Vector4_Assign(ref FVector4 A, in FVector4 InVector)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -482,38 +476,38 @@ namespace UnrealEngine
 			A = ptr;
 		}
 
-		// Token: 0x0600A6A9 RID: 42665
+		// Token: 0x060025DC RID: 9692
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Vector2DInterpTo_Constant(FVector2D Current, FVector2D Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A6AA RID: 42666
+		// Token: 0x060025DD RID: 9693
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Vector2DInterpTo(FVector2D Current, FVector2D Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A6AB RID: 42667
+		// Token: 0x060025DE RID: 9694
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Vector2D_Zero();
 
-		// Token: 0x0600A6AC RID: 42668
+		// Token: 0x060025DF RID: 9695
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Vector2D_Unit45Deg();
 
-		// Token: 0x0600A6AD RID: 42669
+		// Token: 0x060025E0 RID: 9696
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Vector2D_One();
 
-		// Token: 0x0600A6AE RID: 42670
+		// Token: 0x060025E1 RID: 9697
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector VEase(FVector A, FVector B, float Alpha, EEasingFunc EasingFunc, float BlendExp = 2f, int Steps = 2);
 
-		// Token: 0x0600A6AF RID: 42671 RVA: 0x000ED428 File Offset: 0x000EB628
+		// Token: 0x060025E2 RID: 9698 RVA: 0x000363AC File Offset: 0x000345AC
 		[NullableContext(1)]
 		public static FDateTime UtcNow()
 		{
 			return new FDateTime(UKismetMathLibrary.__UtcNow_Internal(), null);
 		}
 
-		// Token: 0x0600A6B0 RID: 42672 RVA: 0x000ED438 File Offset: 0x000EB638
+		// Token: 0x060025E3 RID: 9699 RVA: 0x000363BC File Offset: 0x000345BC
 		public unsafe static FVector4 TransformVector4(in FMatrix Matrix, in FVector4 Vec4)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -523,7 +517,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__TransformVector4_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A6B1 RID: 42673 RVA: 0x000ED484 File Offset: 0x000EB684
+		// Token: 0x060025E4 RID: 9700 RVA: 0x00036408 File Offset: 0x00034608
 		public unsafe static FRotator TransformRotation(in FTransform T, FRotator Rotation)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -531,7 +525,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__TransformRotation_Internal(uintPtr, Rotation);
 		}
 
-		// Token: 0x0600A6B2 RID: 42674 RVA: 0x000ED4B4 File Offset: 0x000EB6B4
+		// Token: 0x060025E5 RID: 9701 RVA: 0x00036438 File Offset: 0x00034638
 		public unsafe static FVector TransformLocation(in FTransform T, FVector Location)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -539,7 +533,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__TransformLocation_Internal(uintPtr, Location);
 		}
 
-		// Token: 0x0600A6B3 RID: 42675 RVA: 0x000ED4E4 File Offset: 0x000EB6E4
+		// Token: 0x060025E6 RID: 9702 RVA: 0x00036468 File Offset: 0x00034668
 		public unsafe static FVector TransformDirection(in FTransform T, FVector Direction)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -547,7 +541,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__TransformDirection_Internal(uintPtr, Direction);
 		}
 
-		// Token: 0x0600A6B4 RID: 42676 RVA: 0x000ED514 File Offset: 0x000EB714
+		// Token: 0x060025E7 RID: 9703 RVA: 0x00036498 File Offset: 0x00034698
 		public unsafe static float Transform_Determinant(in FTransform Transform)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -555,26 +549,26 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Transform_Determinant_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A6B5 RID: 42677
+		// Token: 0x060025E8 RID: 9704
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D ToSign2D(FVector2D A);
 
-		// Token: 0x0600A6B6 RID: 42678
+		// Token: 0x060025E9 RID: 9705
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D ToRounded2D(FVector2D A);
 
-		// Token: 0x0600A6B7 RID: 42679
+		// Token: 0x060025EA RID: 9706
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ToDirectionAndLength2D(FVector2D A, ref FVector2D OutDir, ref float OutLength);
 
-		// Token: 0x0600A6B8 RID: 42680 RVA: 0x000ED541 File Offset: 0x000EB741
+		// Token: 0x060025EB RID: 9707 RVA: 0x000364C5 File Offset: 0x000346C5
 		[NullableContext(1)]
 		public static FDateTime Today()
 		{
 			return new FDateTime(UKismetMathLibrary.__Today_Internal(), null);
 		}
 
-		// Token: 0x0600A6B9 RID: 42681 RVA: 0x000ED550 File Offset: 0x000EB750
+		// Token: 0x060025EC RID: 9708 RVA: 0x000364D4 File Offset: 0x000346D4
 		public unsafe static FTransform TLerp(in FTransform A, in FTransform B, float Alpha, ELerpInterpolationMode InterpMode = ELerpInterpolationMode.QuatInterp)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -584,7 +578,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__TLerp_Internal(ptr, ptr2, Alpha, InterpMode);
 		}
 
-		// Token: 0x0600A6BA RID: 42682 RVA: 0x000ED5A4 File Offset: 0x000EB7A4
+		// Token: 0x060025ED RID: 9709 RVA: 0x00036528 File Offset: 0x00034728
 		public unsafe static FTransform TInterpTo(in FTransform Current, in FTransform Target, float DeltaTime, float InterpSpeed)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -594,34 +588,34 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__TInterpTo_Internal(ptr, ptr2, DeltaTime, InterpSpeed);
 		}
 
-		// Token: 0x0600A6BB RID: 42683 RVA: 0x000ED5F2 File Offset: 0x000EB7F2
+		// Token: 0x060025EE RID: 9710 RVA: 0x00036576 File Offset: 0x00034776
 		[NullableContext(1)]
 		public static FTimespan TimespanZeroValue()
 		{
 			return new FTimespan(UKismetMathLibrary.__TimespanZeroValue_Internal(), null);
 		}
 
-		// Token: 0x0600A6BC RID: 42684 RVA: 0x000ED5FF File Offset: 0x000EB7FF
+		// Token: 0x060025EF RID: 9711 RVA: 0x00036583 File Offset: 0x00034783
 		public static float TimespanRatio(FTimespan A, FTimespan B)
 		{
 			return UKismetMathLibrary.__TimespanRatio_Internal((A ?? new FTimespan()).NativePtr, (B ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A6BD RID: 42685 RVA: 0x000ED624 File Offset: 0x000EB824
+		// Token: 0x060025F0 RID: 9712 RVA: 0x000365A8 File Offset: 0x000347A8
 		[NullableContext(1)]
 		public static FTimespan TimespanMinValue()
 		{
 			return new FTimespan(UKismetMathLibrary.__TimespanMinValue_Internal(), null);
 		}
 
-		// Token: 0x0600A6BE RID: 42686 RVA: 0x000ED631 File Offset: 0x000EB831
+		// Token: 0x060025F1 RID: 9713 RVA: 0x000365B5 File Offset: 0x000347B5
 		[NullableContext(1)]
 		public static FTimespan TimespanMaxValue()
 		{
 			return new FTimespan(UKismetMathLibrary.__TimespanMaxValue_Internal(), null);
 		}
 
-		// Token: 0x0600A6BF RID: 42687 RVA: 0x000ED640 File Offset: 0x000EB840
+		// Token: 0x060025F2 RID: 9714 RVA: 0x000365C4 File Offset: 0x000347C4
 		[NullableContext(1)]
 		public unsafe static bool TimespanFromString(string TimespanString, [Nullable(2)] ref FTimespan Result)
 		{
@@ -631,7 +625,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A6C0 RID: 42688 RVA: 0x000ED674 File Offset: 0x000EB874
+		// Token: 0x060025F3 RID: 9715 RVA: 0x000365F8 File Offset: 0x000347F8
 		public unsafe static FTransform TEase(in FTransform A, in FTransform B, float Alpha, EEasingFunc EasingFunc, float BlendExp = 2f, int Steps = 2)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -641,23 +635,23 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__TEase_Internal(ptr, ptr2, Alpha, EasingFunc, BlendExp, Steps);
 		}
 
-		// Token: 0x0600A6C1 RID: 42689
+		// Token: 0x060025F4 RID: 9716
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Tan(float A);
 
-		// Token: 0x0600A6C2 RID: 42690
+		// Token: 0x060025F5 RID: 9717
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Subtract_VectorVector(FVector A, FVector B);
 
-		// Token: 0x0600A6C3 RID: 42691
+		// Token: 0x060025F6 RID: 9718
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Subtract_VectorInt(FVector A, int B);
 
-		// Token: 0x0600A6C4 RID: 42692
+		// Token: 0x060025F7 RID: 9719
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Subtract_VectorFloat(FVector A, float B);
 
-		// Token: 0x0600A6C5 RID: 42693 RVA: 0x000ED6CC File Offset: 0x000EB8CC
+		// Token: 0x060025F8 RID: 9720 RVA: 0x00036650 File Offset: 0x00034850
 		public unsafe static FVector4 Subtract_Vector4Vector4(in FVector4 A, in FVector4 B)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -667,22 +661,22 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Subtract_Vector4Vector4_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A6C6 RID: 42694
+		// Token: 0x060025F9 RID: 9721
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Subtract_Vector2DVector2D(FVector2D A, FVector2D B);
 
-		// Token: 0x0600A6C7 RID: 42695
+		// Token: 0x060025FA RID: 9722
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Subtract_Vector2DFloat(FVector2D A, float B);
 
-		// Token: 0x0600A6C8 RID: 42696 RVA: 0x000ED718 File Offset: 0x000EB918
+		// Token: 0x060025FB RID: 9723 RVA: 0x0003669C File Offset: 0x0003489C
 		[return: Nullable(1)]
 		public static FTimespan Subtract_TimespanTimespan(FTimespan A, FTimespan B)
 		{
 			return new FTimespan(UKismetMathLibrary.__Subtract_TimespanTimespan_Internal((A ?? new FTimespan()).NativePtr, (B ?? new FTimespan()).NativePtr), null);
 		}
 
-		// Token: 0x0600A6C9 RID: 42697 RVA: 0x000ED744 File Offset: 0x000EB944
+		// Token: 0x060025FC RID: 9724 RVA: 0x000366C8 File Offset: 0x000348C8
 		public unsafe static FQuat Subtract_QuatQuat(in FQuat A, in FQuat B)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -692,89 +686,89 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Subtract_QuatQuat_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A6CA RID: 42698
+		// Token: 0x060025FD RID: 9725
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor Subtract_LinearColorLinearColor(FLinearColor A, FLinearColor B);
 
-		// Token: 0x0600A6CB RID: 42699
+		// Token: 0x060025FE RID: 9726
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint Subtract_IntPointIntPoint(FIntPoint A, FIntPoint B);
 
-		// Token: 0x0600A6CC RID: 42700
+		// Token: 0x060025FF RID: 9727
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint Subtract_IntPointInt(FIntPoint A, int B);
 
-		// Token: 0x0600A6CD RID: 42701
+		// Token: 0x06002600 RID: 9728
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Subtract_IntInt(int A, int B = 1);
 
-		// Token: 0x0600A6CE RID: 42702
+		// Token: 0x06002601 RID: 9729
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Subtract_Int64Int64(long A, long B = 1L);
 
-		// Token: 0x0600A6CF RID: 42703
+		// Token: 0x06002602 RID: 9730
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Subtract_FloatFloat(float A, float B = 1f);
 
-		// Token: 0x0600A6D0 RID: 42704 RVA: 0x000ED790 File Offset: 0x000EB990
+		// Token: 0x06002603 RID: 9731 RVA: 0x00036714 File Offset: 0x00034914
 		[return: Nullable(1)]
 		public static FDateTime Subtract_DateTimeTimespan(FDateTime A, FTimespan B)
 		{
 			return new FDateTime(UKismetMathLibrary.__Subtract_DateTimeTimespan_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FTimespan()).NativePtr), null);
 		}
 
-		// Token: 0x0600A6D1 RID: 42705 RVA: 0x000ED7BB File Offset: 0x000EB9BB
+		// Token: 0x06002604 RID: 9732 RVA: 0x0003673F File Offset: 0x0003493F
 		[return: Nullable(1)]
 		public static FTimespan Subtract_DateTimeDateTime(FDateTime A, FDateTime B)
 		{
 			return new FTimespan(UKismetMathLibrary.__Subtract_DateTimeDateTime_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FDateTime()).NativePtr), null);
 		}
 
-		// Token: 0x0600A6D2 RID: 42706
+		// Token: 0x06002605 RID: 9733
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte Subtract_ByteByte(byte A, byte B = 1);
 
-		// Token: 0x0600A6D3 RID: 42707
+		// Token: 0x06002606 RID: 9734
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Square(float A);
 
-		// Token: 0x0600A6D4 RID: 42708
+		// Token: 0x06002607 RID: 9735
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Sqrt(float A);
 
-		// Token: 0x0600A6D5 RID: 42709
+		// Token: 0x06002608 RID: 9736
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Spherical2DToUnitCartesian(FVector2D A);
 
-		// Token: 0x0600A6D6 RID: 42710
+		// Token: 0x06002609 RID: 9737
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Sin(float A);
 
-		// Token: 0x0600A6D7 RID: 42711
+		// Token: 0x0600260A RID: 9738
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long SignOfInteger64(long A);
 
-		// Token: 0x0600A6D8 RID: 42712
+		// Token: 0x0600260B RID: 9739
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int SignOfInteger(int A);
 
-		// Token: 0x0600A6D9 RID: 42713
+		// Token: 0x0600260C RID: 9740
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float SignOfFloat(float A);
 
-		// Token: 0x0600A6DA RID: 42714
+		// Token: 0x0600260D RID: 9741
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetRandomStreamSeed(ref FRandomStream Stream, int NewSeed);
 
-		// Token: 0x0600A6DB RID: 42715
+		// Token: 0x0600260E RID: 9742
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Set2D(ref FVector2D A, float X, float Y);
 
-		// Token: 0x0600A6DC RID: 42716
+		// Token: 0x0600260F RID: 9743
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector SelectVector(FVector A, FVector B, bool bPickA);
 
-		// Token: 0x0600A6DD RID: 42717 RVA: 0x000ED7E8 File Offset: 0x000EB9E8
+		// Token: 0x06002610 RID: 9744 RVA: 0x0003676C File Offset: 0x0003496C
 		public unsafe static FTransform SelectTransform(in FTransform A, in FTransform B, bool bPickA)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -784,7 +778,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__SelectTransform_Internal(ptr, ptr2, bPickA);
 		}
 
-		// Token: 0x0600A6DE RID: 42718 RVA: 0x000ED838 File Offset: 0x000EBA38
+		// Token: 0x06002611 RID: 9745 RVA: 0x000367BC File Offset: 0x000349BC
 		[NullableContext(1)]
 		public unsafe static string SelectString(string A, string B, bool bPickA)
 		{
@@ -796,213 +790,201 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A6DF RID: 42719
+		// Token: 0x06002612 RID: 9746
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator SelectRotator(FRotator A, FRotator B, bool bPickA);
 
-		// Token: 0x0600A6E0 RID: 42720 RVA: 0x000ED874 File Offset: 0x000EBA74
+		// Token: 0x06002613 RID: 9747 RVA: 0x000367F8 File Offset: 0x000349F8
 		public static UObject SelectObject(UObject A, UObject B, bool bSelectA)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(UKismetMathLibrary.__SelectObject_Internal((A != null) ? A.NativePtr : IntPtr.Zero, (B != null) ? B.NativePtr : IntPtr.Zero, bSelectA));
 		}
 
-		// Token: 0x0600A6E1 RID: 42721
+		// Token: 0x06002614 RID: 9748
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int SelectInt(int A, int B, bool bPickA);
 
-		// Token: 0x0600A6E2 RID: 42722
+		// Token: 0x06002615 RID: 9749
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float SelectFloat(float A, float B, bool bPickA);
 
-		// Token: 0x0600A6E3 RID: 42723
+		// Token: 0x06002616 RID: 9750
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor SelectColor(FLinearColor A, FLinearColor B, bool bPickA);
 
-		// Token: 0x0600A6E4 RID: 42724
+		// Token: 0x06002617 RID: 9751
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern UClassStackOnlyPtr SelectClass(UClassStackOnlyPtr A, UClassStackOnlyPtr B, bool bSelectA);
 
-		// Token: 0x0600A6E5 RID: 42725
+		// Token: 0x06002618 RID: 9752
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SeedRandomStream(ref FRandomStream Stream);
 
-		// Token: 0x0600A6E6 RID: 42726
+		// Token: 0x06002619 RID: 9753
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float SafeDivide(float A, float B);
 
-		// Token: 0x0600A6E7 RID: 42727
+		// Token: 0x0600261A RID: 9754
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Round64(float A);
 
-		// Token: 0x0600A6E8 RID: 42728
+		// Token: 0x0600261B RID: 9755
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Round(float A);
 
-		// Token: 0x0600A6E9 RID: 42729
+		// Token: 0x0600261C RID: 9756
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator RotatorFromAxisAndAngle(FVector Axis, float Angle);
 
-		// Token: 0x0600A6EA RID: 42730
+		// Token: 0x0600261D RID: 9757
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RotateAngleAxis(FVector InVect, float AngleDeg, FVector Axis);
 
-		// Token: 0x0600A6EB RID: 42731
+		// Token: 0x0600261E RID: 9758
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator RLerp(FRotator A, FRotator B, float Alpha, bool bShortestPath);
 
-		// Token: 0x0600A6EC RID: 42732
+		// Token: 0x0600261F RID: 9759
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator RInterpTo_Constant(FRotator Current, FRotator Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A6ED RID: 42733
+		// Token: 0x06002620 RID: 9760
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator RInterpTo(FRotator Current, FRotator Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A6EE RID: 42734
+		// Token: 0x06002621 RID: 9761
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void RGBToHSV_Vector(FLinearColor RGB, ref FLinearColor HSV);
 
-		// Token: 0x0600A6EF RID: 42735
+		// Token: 0x06002622 RID: 9762
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void RGBToHSV(FLinearColor InColor, ref float H, ref float S, ref float V, ref float A);
 
-		// Token: 0x0600A6F0 RID: 42736
+		// Token: 0x06002623 RID: 9763
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor RGBLinearToHSV(FLinearColor RGB);
 
-		// Token: 0x0600A6F1 RID: 42737 RVA: 0x000ED8A1 File Offset: 0x000EBAA1
-		public static void ResetVectorSpringState(ref FVectorSpringState SpringState)
-		{
-			UKismetMathLibrary.__ResetVectorSpringState_Internal((SpringState ?? new FVectorSpringState()).NativePtr);
-		}
-
-		// Token: 0x0600A6F2 RID: 42738
+		// Token: 0x06002624 RID: 9764
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ResetRandomStream(in FRandomStream Stream);
 
-		// Token: 0x0600A6F3 RID: 42739 RVA: 0x000ED8B8 File Offset: 0x000EBAB8
-		public static void ResetFloatSpringState(ref FFloatSpringState SpringState)
-		{
-			UKismetMathLibrary.__ResetFloatSpringState_Internal((SpringState ?? new FFloatSpringState()).NativePtr);
-		}
-
-		// Token: 0x0600A6F4 RID: 42740
+		// Token: 0x06002625 RID: 9765
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator REase(FRotator A, FRotator B, float Alpha, bool bShortestPath, EEasingFunc EasingFunc, float BlendExp = 2f, int Steps = 2);
 
-		// Token: 0x0600A6F5 RID: 42741
+		// Token: 0x06002626 RID: 9766
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVectorInEllipticalConeInRadiansFromStream(in FVector ConeDir, float MaxYawInRadians, float MaxPitchInRadians, in FRandomStream Stream);
 
-		// Token: 0x0600A6F6 RID: 42742
+		// Token: 0x06002627 RID: 9767
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVectorInEllipticalConeInRadians(FVector ConeDir, float MaxYawInRadians, float MaxPitchInRadians);
 
-		// Token: 0x0600A6F7 RID: 42743
+		// Token: 0x06002628 RID: 9768
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVectorInEllipticalConeInDegreesFromStream(in FVector ConeDir, float MaxYawInDegrees, float MaxPitchInDegrees, in FRandomStream Stream);
 
-		// Token: 0x0600A6F8 RID: 42744
+		// Token: 0x06002629 RID: 9769
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVectorInEllipticalConeInDegrees(FVector ConeDir, float MaxYawInDegrees, float MaxPitchInDegrees);
 
-		// Token: 0x0600A6F9 RID: 42745
+		// Token: 0x0600262A RID: 9770
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVectorInConeInRadiansFromStream(in FVector ConeDir, float ConeHalfAngleInRadians, in FRandomStream Stream);
 
-		// Token: 0x0600A6FA RID: 42746
+		// Token: 0x0600262B RID: 9771
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVectorInConeInRadians(FVector ConeDir, float ConeHalfAngleInRadians);
 
-		// Token: 0x0600A6FB RID: 42747
+		// Token: 0x0600262C RID: 9772
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVectorInConeInDegreesFromStream(in FVector ConeDir, float ConeHalfAngleInDegrees, in FRandomStream Stream);
 
-		// Token: 0x0600A6FC RID: 42748
+		// Token: 0x0600262D RID: 9773
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVectorInConeInDegrees(FVector ConeDir, float ConeHalfAngleInDegrees);
 
-		// Token: 0x0600A6FD RID: 42749
+		// Token: 0x0600262E RID: 9774
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVectorFromStream(in FRandomStream Stream);
 
-		// Token: 0x0600A6FE RID: 42750
+		// Token: 0x0600262F RID: 9775
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomUnitVector();
 
-		// Token: 0x0600A6FF RID: 42751
+		// Token: 0x06002630 RID: 9776
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator RandomRotatorFromStream(bool bRoll, in FRandomStream Stream);
 
-		// Token: 0x0600A700 RID: 42752
+		// Token: 0x06002631 RID: 9777
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator RandomRotator(bool bRoll = false);
 
-		// Token: 0x0600A701 RID: 42753
+		// Token: 0x06002632 RID: 9778
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector RandomPointInBoundingBox(FVector Origin, FVector BoxExtent);
 
-		// Token: 0x0600A702 RID: 42754
+		// Token: 0x06002633 RID: 9779
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int RandomIntegerInRangeFromStream(int Min, int Max, in FRandomStream Stream);
 
-		// Token: 0x0600A703 RID: 42755
+		// Token: 0x06002634 RID: 9780
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int RandomIntegerInRange(int Min, int Max);
 
-		// Token: 0x0600A704 RID: 42756
+		// Token: 0x06002635 RID: 9781
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int RandomIntegerFromStream(int Max, in FRandomStream Stream);
 
-		// Token: 0x0600A705 RID: 42757
+		// Token: 0x06002636 RID: 9782
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long RandomInteger64InRange(long Min, long Max);
 
-		// Token: 0x0600A706 RID: 42758
+		// Token: 0x06002637 RID: 9783
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long RandomInteger64(long Max);
 
-		// Token: 0x0600A707 RID: 42759
+		// Token: 0x06002638 RID: 9784
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int RandomInteger(int Max);
 
-		// Token: 0x0600A708 RID: 42760
+		// Token: 0x06002639 RID: 9785
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float RandomFloatInRangeFromStream(float Min, float Max, in FRandomStream Stream);
 
-		// Token: 0x0600A709 RID: 42761
+		// Token: 0x0600263A RID: 9786
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float RandomFloatInRange(float Min, float Max);
 
-		// Token: 0x0600A70A RID: 42762
+		// Token: 0x0600263B RID: 9787
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float RandomFloatFromStream(in FRandomStream Stream);
 
-		// Token: 0x0600A70B RID: 42763
+		// Token: 0x0600263C RID: 9788
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float RandomFloat();
 
-		// Token: 0x0600A70C RID: 42764
+		// Token: 0x0600263D RID: 9789
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool RandomBoolWithWeightFromStream(float Weight, in FRandomStream RandomStream);
 
-		// Token: 0x0600A70D RID: 42765
+		// Token: 0x0600263E RID: 9790
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool RandomBoolWithWeight(float Weight);
 
-		// Token: 0x0600A70E RID: 42766
+		// Token: 0x0600263F RID: 9791
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool RandomBoolFromStream(in FRandomStream Stream);
 
-		// Token: 0x0600A70F RID: 42767
+		// Token: 0x06002640 RID: 9792
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool RandomBool();
 
-		// Token: 0x0600A710 RID: 42768
+		// Token: 0x06002641 RID: 9793
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float RadiansToDegrees(float A);
 
-		// Token: 0x0600A711 RID: 42769 RVA: 0x000ED8D0 File Offset: 0x000EBAD0
+		// Token: 0x06002642 RID: 9794 RVA: 0x00036828 File Offset: 0x00034A28
 		public unsafe static FVector Quat_VectorUp(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1010,7 +992,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_VectorUp_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A712 RID: 42770 RVA: 0x000ED900 File Offset: 0x000EBB00
+		// Token: 0x06002643 RID: 9795 RVA: 0x00036858 File Offset: 0x00034A58
 		public unsafe static FVector Quat_VectorRight(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1018,7 +1000,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_VectorRight_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A713 RID: 42771 RVA: 0x000ED930 File Offset: 0x000EBB30
+		// Token: 0x06002644 RID: 9796 RVA: 0x00036888 File Offset: 0x00034A88
 		public unsafe static FVector Quat_VectorForward(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1026,7 +1008,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_VectorForward_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A714 RID: 42772 RVA: 0x000ED960 File Offset: 0x000EBB60
+		// Token: 0x06002645 RID: 9797 RVA: 0x000368B8 File Offset: 0x00034AB8
 		public unsafe static FVector Quat_UnrotateVector(in FQuat Q, in FVector V)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1034,7 +1016,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_UnrotateVector_Internal(uintPtr, V);
 		}
 
-		// Token: 0x0600A715 RID: 42773 RVA: 0x000ED990 File Offset: 0x000EBB90
+		// Token: 0x06002646 RID: 9798 RVA: 0x000368E8 File Offset: 0x00034AE8
 		public unsafe static float Quat_SizeSquared(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1042,7 +1024,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_SizeSquared_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A716 RID: 42774 RVA: 0x000ED9C0 File Offset: 0x000EBBC0
+		// Token: 0x06002647 RID: 9799 RVA: 0x00036918 File Offset: 0x00034B18
 		public unsafe static float Quat_Size(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1050,7 +1032,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_Size_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A717 RID: 42775 RVA: 0x000ED9F0 File Offset: 0x000EBBF0
+		// Token: 0x06002648 RID: 9800 RVA: 0x00036948 File Offset: 0x00034B48
 		public unsafe static void Quat_SetFromEuler(ref FQuat Q, in FVector Euler)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1059,7 +1041,7 @@ namespace UnrealEngine
 			Q = ptr;
 		}
 
-		// Token: 0x0600A718 RID: 42776 RVA: 0x000EDA2C File Offset: 0x000EBC2C
+		// Token: 0x06002649 RID: 9801 RVA: 0x00036984 File Offset: 0x00034B84
 		public unsafe static void Quat_SetComponents(ref FQuat Q, float X, float Y, float Z, float W)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1068,7 +1050,7 @@ namespace UnrealEngine
 			Q = ptr;
 		}
 
-		// Token: 0x0600A719 RID: 42777 RVA: 0x000EDA6C File Offset: 0x000EBC6C
+		// Token: 0x0600264A RID: 9802 RVA: 0x000369C4 File Offset: 0x00034BC4
 		public unsafe static FRotator Quat_Rotator(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1076,7 +1058,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_Rotator_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A71A RID: 42778 RVA: 0x000EDA9C File Offset: 0x000EBC9C
+		// Token: 0x0600264B RID: 9803 RVA: 0x000369F4 File Offset: 0x00034BF4
 		public unsafe static FVector Quat_RotateVector(in FQuat Q, in FVector V)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1084,7 +1066,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_RotateVector_Internal(uintPtr, V);
 		}
 
-		// Token: 0x0600A71B RID: 42779 RVA: 0x000EDACC File Offset: 0x000EBCCC
+		// Token: 0x0600264C RID: 9804 RVA: 0x00036A24 File Offset: 0x00034C24
 		public unsafe static FQuat Quat_Normalized(in FQuat Q, float Tolerance = 0.0001f)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1092,7 +1074,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_Normalized_Internal(uintPtr, Tolerance);
 		}
 
-		// Token: 0x0600A71C RID: 42780 RVA: 0x000EDAFC File Offset: 0x000EBCFC
+		// Token: 0x0600264D RID: 9805 RVA: 0x00036A54 File Offset: 0x00034C54
 		public unsafe static void Quat_Normalize(ref FQuat Q, float Tolerance = 0.0001f)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1101,11 +1083,11 @@ namespace UnrealEngine
 			Q = ptr;
 		}
 
-		// Token: 0x0600A71D RID: 42781
+		// Token: 0x0600264E RID: 9806
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FQuat Quat_MakeFromEuler(in FVector Euler);
 
-		// Token: 0x0600A71E RID: 42782 RVA: 0x000EDB38 File Offset: 0x000EBD38
+		// Token: 0x0600264F RID: 9807 RVA: 0x00036A90 File Offset: 0x00034C90
 		public unsafe static FQuat Quat_Log(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1113,7 +1095,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_Log_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A71F RID: 42783 RVA: 0x000EDB68 File Offset: 0x000EBD68
+		// Token: 0x06002650 RID: 9808 RVA: 0x00036AC0 File Offset: 0x00034CC0
 		public unsafe static bool Quat_IsNormalized(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1121,7 +1103,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_IsNormalized_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A720 RID: 42784 RVA: 0x000EDB98 File Offset: 0x000EBD98
+		// Token: 0x06002651 RID: 9809 RVA: 0x00036AF0 File Offset: 0x00034CF0
 		public unsafe static bool Quat_IsNonFinite(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1129,7 +1111,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_IsNonFinite_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A721 RID: 42785 RVA: 0x000EDBC8 File Offset: 0x000EBDC8
+		// Token: 0x06002652 RID: 9810 RVA: 0x00036B20 File Offset: 0x00034D20
 		public unsafe static bool Quat_IsIdentity(in FQuat Q, float Tolerance = 0.0001f)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1137,7 +1119,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_IsIdentity_Internal(uintPtr, Tolerance);
 		}
 
-		// Token: 0x0600A722 RID: 42786 RVA: 0x000EDBF8 File Offset: 0x000EBDF8
+		// Token: 0x06002653 RID: 9811 RVA: 0x00036B50 File Offset: 0x00034D50
 		public unsafe static bool Quat_IsFinite(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1145,7 +1127,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_IsFinite_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A723 RID: 42787 RVA: 0x000EDC28 File Offset: 0x000EBE28
+		// Token: 0x06002654 RID: 9812 RVA: 0x00036B80 File Offset: 0x00034D80
 		public unsafe static FQuat Quat_Inversed(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1153,11 +1135,11 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_Inversed_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A724 RID: 42788
+		// Token: 0x06002655 RID: 9813
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FQuat Quat_Identity();
 
-		// Token: 0x0600A725 RID: 42789 RVA: 0x000EDC58 File Offset: 0x000EBE58
+		// Token: 0x06002656 RID: 9814 RVA: 0x00036BB0 File Offset: 0x00034DB0
 		public unsafe static FVector Quat_GetRotationAxis(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1165,7 +1147,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_GetRotationAxis_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A726 RID: 42790 RVA: 0x000EDC88 File Offset: 0x000EBE88
+		// Token: 0x06002657 RID: 9815 RVA: 0x00036BE0 File Offset: 0x00034DE0
 		public unsafe static FVector Quat_GetAxisZ(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1173,7 +1155,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_GetAxisZ_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A727 RID: 42791 RVA: 0x000EDCB8 File Offset: 0x000EBEB8
+		// Token: 0x06002658 RID: 9816 RVA: 0x00036C10 File Offset: 0x00034E10
 		public unsafe static FVector Quat_GetAxisY(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1181,7 +1163,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_GetAxisY_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A728 RID: 42792 RVA: 0x000EDCE8 File Offset: 0x000EBEE8
+		// Token: 0x06002659 RID: 9817 RVA: 0x00036C40 File Offset: 0x00034E40
 		public unsafe static FVector Quat_GetAxisX(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1189,7 +1171,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_GetAxisX_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A729 RID: 42793 RVA: 0x000EDD18 File Offset: 0x000EBF18
+		// Token: 0x0600265A RID: 9818 RVA: 0x00036C70 File Offset: 0x00034E70
 		public unsafe static float Quat_GetAngle(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1197,11 +1179,11 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_GetAngle_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A72A RID: 42794
+		// Token: 0x0600265B RID: 9819
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FQuat Quat_FindBetween(in FVector V1, in FVector V2);
 
-		// Token: 0x0600A72B RID: 42795 RVA: 0x000EDD48 File Offset: 0x000EBF48
+		// Token: 0x0600265C RID: 9820 RVA: 0x00036CA0 File Offset: 0x00034EA0
 		public unsafe static FQuat Quat_Exp(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1209,7 +1191,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_Exp_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A72C RID: 42796 RVA: 0x000EDD78 File Offset: 0x000EBF78
+		// Token: 0x0600265D RID: 9821 RVA: 0x00036CD0 File Offset: 0x00034ED0
 		public unsafe static FVector Quat_Euler(in FQuat Q)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1217,7 +1199,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_Euler_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A72D RID: 42797 RVA: 0x000EDDA8 File Offset: 0x000EBFA8
+		// Token: 0x0600265E RID: 9822 RVA: 0x00036D00 File Offset: 0x00034F00
 		public unsafe static void Quat_EnforceShortestArcWith(ref FQuat A, in FQuat B)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1228,7 +1210,7 @@ namespace UnrealEngine
 			A = ptr;
 		}
 
-		// Token: 0x0600A72E RID: 42798 RVA: 0x000EDE00 File Offset: 0x000EC000
+		// Token: 0x0600265F RID: 9823 RVA: 0x00036D58 File Offset: 0x00034F58
 		public unsafe static float Quat_AngularDistance(in FQuat A, in FQuat B)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1238,69 +1220,68 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Quat_AngularDistance_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A72F RID: 42799
+		// Token: 0x06002660 RID: 9824
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector ProjectVectorOnToVector(FVector V, FVector Target);
 
-		// Token: 0x0600A730 RID: 42800
+		// Token: 0x06002661 RID: 9825
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector ProjectVectorOnToPlane(FVector V, FVector PlaneNormal);
 
-		// Token: 0x0600A731 RID: 42801
+		// Token: 0x06002662 RID: 9826
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector ProjectPointOnToPlane(FVector Point, FVector PlaneBase, FVector PlaneNormal);
 
-		// Token: 0x0600A732 RID: 42802 RVA: 0x000EDE4C File Offset: 0x000EC04C
+		// Token: 0x06002663 RID: 9827 RVA: 0x00036DA4 File Offset: 0x00034FA4
 		public static bool PointsAreCoplanar(in TArray<FVector> Points, float Tolerance = 0.1f)
 		{
 			return UKismetMathLibrary.__PointsAreCoplanar_Internal((Points ?? new TArray<FVector>()).NativePtr, Tolerance);
 		}
 
-		// Token: 0x0600A733 RID: 42803
+		// Token: 0x06002664 RID: 9828
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float PerlinNoise1D(float Value);
 
-		// Token: 0x0600A734 RID: 42804
+		// Token: 0x06002665 RID: 9829
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Percent_IntInt(int A, int B = 1);
 
-		// Token: 0x0600A735 RID: 42805 RVA: 0x000EDE64 File Offset: 0x000EC064
+		// Token: 0x06002666 RID: 9830 RVA: 0x00036DBC File Offset: 0x00034FBC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static float Percent_FloatFloat(float A, float B = 1f)
 		{
 			UKismetMathLibrary.__Percent_FloatFloat_FunctionParams* ptr = stackalloc UKismetMathLibrary.__Percent_FloatFloat_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UKismetMathLibrary.__Percent_FloatFloat_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKismetMathLibrary.__Percent_FloatFloat_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->A = A;
 			ptr->B = B;
-			UnrealReflectionUtils.CallUFunction(UKismetMathLibrary._ClassDefaultObjectPtr, UKismetMathLibrary.__Percent_FloatFloat_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKismetMathLibrary._ClassDefaultObjectPtr, UKismetMathLibrary.__Percent_FloatFloat_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0600A736 RID: 42806
+		// Token: 0x06002667 RID: 9831
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte Percent_ByteByte(byte A, byte B = 1);
 
-		// Token: 0x0600A737 RID: 42807
+		// Token: 0x06002668 RID: 9832
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Or_IntInt(int A, int B);
 
-		// Token: 0x0600A738 RID: 42808
+		// Token: 0x06002669 RID: 9833
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Or_Int64Int64(long A, long B);
 
-		// Token: 0x0600A739 RID: 42809 RVA: 0x000EDEB7 File Offset: 0x000EC0B7
+		// Token: 0x0600266A RID: 9834 RVA: 0x00036E0E File Offset: 0x0003500E
 		[NullableContext(1)]
 		public static FDateTime Now()
 		{
 			return new FDateTime(UKismetMathLibrary.__Now_Internal(), null);
 		}
 
-		// Token: 0x0600A73A RID: 42810
+		// Token: 0x0600266B RID: 9835
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqualExactly_VectorVector(FVector A, FVector B);
 
-		// Token: 0x0600A73B RID: 42811 RVA: 0x000EDEC4 File Offset: 0x000EC0C4
+		// Token: 0x0600266C RID: 9836 RVA: 0x00036E1C File Offset: 0x0003501C
 		public unsafe static bool NotEqualExactly_Vector4Vector4(in FVector4 A, in FVector4 B)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1310,15 +1291,15 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__NotEqualExactly_Vector4Vector4_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A73C RID: 42812
+		// Token: 0x0600266D RID: 9837
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqualExactly_Vector2DVector2D(FVector2D A, FVector2D B);
 
-		// Token: 0x0600A73D RID: 42813
+		// Token: 0x0600266E RID: 9838
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_VectorVector(FVector A, FVector B, float ErrorTolerance = 0.0001f);
 
-		// Token: 0x0600A73E RID: 42814 RVA: 0x000EDF10 File Offset: 0x000EC110
+		// Token: 0x0600266F RID: 9839 RVA: 0x00036E68 File Offset: 0x00035068
 		public unsafe static bool NotEqual_Vector4Vector4(in FVector4 A, in FVector4 B, float ErrorTolerance = 0.0001f)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1328,21 +1309,21 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__NotEqual_Vector4Vector4_Internal(ptr, ptr2, ErrorTolerance);
 		}
 
-		// Token: 0x0600A73F RID: 42815
+		// Token: 0x06002670 RID: 9840
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_Vector2DVector2D(FVector2D A, FVector2D B, float ErrorTolerance = 0.0001f);
 
-		// Token: 0x0600A740 RID: 42816 RVA: 0x000EDF5D File Offset: 0x000EC15D
+		// Token: 0x06002671 RID: 9841 RVA: 0x00036EB5 File Offset: 0x000350B5
 		public static bool NotEqual_TimespanTimespan(FTimespan A, FTimespan B)
 		{
 			return UKismetMathLibrary.__NotEqual_TimespanTimespan_Internal((A ?? new FTimespan()).NativePtr, (B ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A741 RID: 42817
+		// Token: 0x06002672 RID: 9842
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_RotatorRotator(FRotator A, FRotator B, float ErrorTolerance = 0.0001f);
 
-		// Token: 0x0600A742 RID: 42818 RVA: 0x000EDF84 File Offset: 0x000EC184
+		// Token: 0x06002673 RID: 9843 RVA: 0x00036EDC File Offset: 0x000350DC
 		public unsafe static bool NotEqual_QuatQuat(in FQuat A, in FQuat B, float ErrorTolerance = 0.0001f)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1352,17 +1333,17 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__NotEqual_QuatQuat_Internal(ptr, ptr2, ErrorTolerance);
 		}
 
-		// Token: 0x0600A743 RID: 42819 RVA: 0x000EDFD1 File Offset: 0x000EC1D1
+		// Token: 0x06002674 RID: 9844 RVA: 0x00036F29 File Offset: 0x00035129
 		public static bool NotEqual_ObjectObject(UObject A, UObject B)
 		{
 			return UKismetMathLibrary.__NotEqual_ObjectObject_Internal((A != null) ? A.NativePtr : IntPtr.Zero, (B != null) ? B.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600A744 RID: 42820
+		// Token: 0x06002675 RID: 9845
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_NameName(FName A, FName B);
 
-		// Token: 0x0600A745 RID: 42821 RVA: 0x000EDFF8 File Offset: 0x000EC1F8
+		// Token: 0x06002676 RID: 9846 RVA: 0x00036F50 File Offset: 0x00035150
 		public unsafe static bool NotEqual_MatrixMatrix(in FMatrix A, in FMatrix B, float Tolerance = 0.0001f)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1372,97 +1353,97 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__NotEqual_MatrixMatrix_Internal(ptr, ptr2, Tolerance);
 		}
 
-		// Token: 0x0600A746 RID: 42822
+		// Token: 0x06002677 RID: 9847
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_LinearColorLinearColor(FLinearColor A, FLinearColor B);
 
-		// Token: 0x0600A747 RID: 42823
+		// Token: 0x06002678 RID: 9848
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_IntPointIntPoint(FIntPoint A, FIntPoint B);
 
-		// Token: 0x0600A748 RID: 42824
+		// Token: 0x06002679 RID: 9849
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_IntInt(int A, int B);
 
-		// Token: 0x0600A749 RID: 42825
+		// Token: 0x0600267A RID: 9850
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_Int64Int64(long A, long B);
 
-		// Token: 0x0600A74A RID: 42826
+		// Token: 0x0600267B RID: 9851
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_FloatFloat(float A, float B);
 
-		// Token: 0x0600A74B RID: 42827 RVA: 0x000EE045 File Offset: 0x000EC245
+		// Token: 0x0600267C RID: 9852 RVA: 0x00036F9D File Offset: 0x0003519D
 		public static bool NotEqual_DateTimeDateTime(FDateTime A, FDateTime B)
 		{
 			return UKismetMathLibrary.__NotEqual_DateTimeDateTime_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A74C RID: 42828
+		// Token: 0x0600267D RID: 9853
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_ClassClass(UClassStackOnlyPtr A, UClassStackOnlyPtr B);
 
-		// Token: 0x0600A74D RID: 42829
+		// Token: 0x0600267E RID: 9854
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_ByteByte(byte A, byte B);
 
-		// Token: 0x0600A74E RID: 42830
+		// Token: 0x0600267F RID: 9855
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_BoolBool(bool A, bool B);
 
-		// Token: 0x0600A74F RID: 42831
+		// Token: 0x06002680 RID: 9856
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Not_PreBool(bool A);
 
-		// Token: 0x0600A750 RID: 42832
+		// Token: 0x06002681 RID: 9857
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Not_Int64(long A);
 
-		// Token: 0x0600A751 RID: 42833
+		// Token: 0x06002682 RID: 9858
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Not_Int(int A);
 
-		// Token: 0x0600A752 RID: 42834
+		// Token: 0x06002683 RID: 9859
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D NormalSafe2D(FVector2D A, float Tolerance = 0f);
 
-		// Token: 0x0600A753 RID: 42835
+		// Token: 0x06002684 RID: 9860
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float NormalizeToRange(float Value, float RangeMin, float RangeMax);
 
-		// Token: 0x0600A754 RID: 42836
+		// Token: 0x06002685 RID: 9861
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator NormalizedDeltaRotator(FRotator A, FRotator B);
 
-		// Token: 0x0600A755 RID: 42837
+		// Token: 0x06002686 RID: 9862
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float NormalizeAxis(float Angle);
 
-		// Token: 0x0600A756 RID: 42838
+		// Token: 0x06002687 RID: 9863
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Normalize2D(ref FVector2D A, float Tolerance = 0f);
 
-		// Token: 0x0600A757 RID: 42839
+		// Token: 0x06002688 RID: 9864
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Normal2D(FVector2D A);
 
-		// Token: 0x0600A758 RID: 42840
+		// Token: 0x06002689 RID: 9865
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Normal(FVector A, float Tolerance = 0.0001f);
 
-		// Token: 0x0600A759 RID: 42841
+		// Token: 0x0600268A RID: 9866
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector NegateVector(FVector A);
 
-		// Token: 0x0600A75A RID: 42842
+		// Token: 0x0600268B RID: 9867
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator NegateRotator(FRotator A);
 
-		// Token: 0x0600A75B RID: 42843
+		// Token: 0x0600268C RID: 9868
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Negated2D(in FVector2D A);
 
-		// Token: 0x0600A75C RID: 42844 RVA: 0x000EE06C File Offset: 0x000EC26C
+		// Token: 0x0600268D RID: 9869 RVA: 0x00036FC4 File Offset: 0x000351C4
 		public unsafe static bool NearlyEqual_TransformTransform(in FTransform A, in FTransform B, float LocationTolerance = 0.0001f, float RotationTolerance = 0.0001f, float Scale3DTolerance = 0.0001f)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -1472,31 +1453,31 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__NearlyEqual_TransformTransform_Internal(ptr, ptr2, LocationTolerance, RotationTolerance, Scale3DTolerance);
 		}
 
-		// Token: 0x0600A75D RID: 42845
+		// Token: 0x0600268E RID: 9870
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NearlyEqual_FloatFloat(float A, float B, float ErrorTolerance = 1E-06f);
 
-		// Token: 0x0600A75E RID: 42846
+		// Token: 0x0600268F RID: 9871
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float MultiplyMultiply_FloatFloat(float Base, float Exp);
 
-		// Token: 0x0600A75F RID: 42847
+		// Token: 0x06002690 RID: 9872
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float MultiplyByPi(float Value);
 
-		// Token: 0x0600A760 RID: 42848
+		// Token: 0x06002691 RID: 9873
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Multiply_VectorVector(FVector A, FVector B);
 
-		// Token: 0x0600A761 RID: 42849
+		// Token: 0x06002692 RID: 9874
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Multiply_VectorInt(FVector A, int B);
 
-		// Token: 0x0600A762 RID: 42850
+		// Token: 0x06002693 RID: 9875
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Multiply_VectorFloat(FVector A, float B);
 
-		// Token: 0x0600A763 RID: 42851 RVA: 0x000EE0BC File Offset: 0x000EC2BC
+		// Token: 0x06002694 RID: 9876 RVA: 0x00037014 File Offset: 0x00035214
 		public unsafe static FVector4 Multiply_Vector4Vector4(in FVector4 A, in FVector4 B)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1506,30 +1487,30 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Multiply_Vector4Vector4_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A764 RID: 42852
+		// Token: 0x06002695 RID: 9877
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Multiply_Vector2DVector2D(FVector2D A, FVector2D B);
 
-		// Token: 0x0600A765 RID: 42853
+		// Token: 0x06002696 RID: 9878
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Multiply_Vector2DFloat(FVector2D A, float B);
 
-		// Token: 0x0600A766 RID: 42854 RVA: 0x000EE108 File Offset: 0x000EC308
+		// Token: 0x06002697 RID: 9879 RVA: 0x00037060 File Offset: 0x00035260
 		[NullableContext(1)]
 		public static FTimespan Multiply_TimespanFloat([Nullable(2)] FTimespan A, float Scalar)
 		{
 			return new FTimespan(UKismetMathLibrary.__Multiply_TimespanFloat_Internal((A ?? new FTimespan()).NativePtr, Scalar), null);
 		}
 
-		// Token: 0x0600A767 RID: 42855
+		// Token: 0x06002698 RID: 9880
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator Multiply_RotatorInt(FRotator A, int B);
 
-		// Token: 0x0600A768 RID: 42856
+		// Token: 0x06002699 RID: 9881
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator Multiply_RotatorFloat(FRotator A, float B);
 
-		// Token: 0x0600A769 RID: 42857 RVA: 0x000EE128 File Offset: 0x000EC328
+		// Token: 0x0600269A RID: 9882 RVA: 0x00037080 File Offset: 0x00035280
 		public unsafe static FQuat Multiply_QuatQuat(in FQuat A, in FQuat B)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -1539,7 +1520,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Multiply_QuatQuat_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A76A RID: 42858 RVA: 0x000EE174 File Offset: 0x000EC374
+		// Token: 0x0600269B RID: 9883 RVA: 0x000370CC File Offset: 0x000352CC
 		public unsafe static FMatrix Multiply_MatrixMatrix(in FMatrix A, in FMatrix B)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1549,7 +1530,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Multiply_MatrixMatrix_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A76B RID: 42859 RVA: 0x000EE1C0 File Offset: 0x000EC3C0
+		// Token: 0x0600269C RID: 9884 RVA: 0x00037118 File Offset: 0x00035318
 		public unsafe static FMatrix Multiply_MatrixFloat(in FMatrix A, float B)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1557,47 +1538,47 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Multiply_MatrixFloat_Internal(uintPtr, B);
 		}
 
-		// Token: 0x0600A76C RID: 42860
+		// Token: 0x0600269D RID: 9885
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor Multiply_LinearColorLinearColor(FLinearColor A, FLinearColor B);
 
-		// Token: 0x0600A76D RID: 42861
+		// Token: 0x0600269E RID: 9886
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor Multiply_LinearColorFloat(FLinearColor A, float B);
 
-		// Token: 0x0600A76E RID: 42862
+		// Token: 0x0600269F RID: 9887
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint Multiply_IntPointIntPoint(FIntPoint A, FIntPoint B);
 
-		// Token: 0x0600A76F RID: 42863
+		// Token: 0x060026A0 RID: 9888
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint Multiply_IntPointInt(FIntPoint A, int B);
 
-		// Token: 0x0600A770 RID: 42864
+		// Token: 0x060026A1 RID: 9889
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Multiply_IntInt(int A, int B);
 
-		// Token: 0x0600A771 RID: 42865
+		// Token: 0x060026A2 RID: 9890
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Multiply_IntFloat(int A, float B);
 
-		// Token: 0x0600A772 RID: 42866
+		// Token: 0x060026A3 RID: 9891
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Multiply_Int64Int64(long A, long B);
 
-		// Token: 0x0600A773 RID: 42867
+		// Token: 0x060026A4 RID: 9892
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Multiply_FloatFloat(float A, float B);
 
-		// Token: 0x0600A774 RID: 42868
+		// Token: 0x060026A5 RID: 9893
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte Multiply_ByteByte(byte A, byte B);
 
-		// Token: 0x0600A775 RID: 42869
+		// Token: 0x060026A6 RID: 9894
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector MirrorVectorByNormal(FVector InVect, FVector InNormal);
 
-		// Token: 0x0600A776 RID: 42870 RVA: 0x000EE1F0 File Offset: 0x000EC3F0
+		// Token: 0x060026A7 RID: 9895 RVA: 0x00037148 File Offset: 0x00035348
 		public unsafe static void MinOfIntArray(in TArray<int> IntArray, ref int IndexOfMinValue, ref int MinValue)
 		{
 			fixed (int* ptr = &IndexOfMinValue)
@@ -1612,7 +1593,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A777 RID: 42871 RVA: 0x000EE224 File Offset: 0x000EC424
+		// Token: 0x060026A8 RID: 9896 RVA: 0x0003717C File Offset: 0x0003537C
 		public unsafe static void MinOfFloatArray(in TArray<float> FloatArray, ref int IndexOfMinValue, ref float MinValue)
 		{
 			fixed (int* ptr = &IndexOfMinValue)
@@ -1627,7 +1608,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A778 RID: 42872 RVA: 0x000EE258 File Offset: 0x000EC458
+		// Token: 0x060026A9 RID: 9897 RVA: 0x000371B0 File Offset: 0x000353B0
 		public unsafe static void MinOfByteArray(in TArray<byte> ByteArray, ref int IndexOfMinValue, ref byte MinValue)
 		{
 			fixed (int* ptr = &IndexOfMinValue)
@@ -1642,11 +1623,11 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A779 RID: 42873
+		// Token: 0x060026AA RID: 9898
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long MinInt64(long A, long B);
 
-		// Token: 0x0600A77A RID: 42874 RVA: 0x000EE28C File Offset: 0x000EC48C
+		// Token: 0x060026AB RID: 9899 RVA: 0x000371E4 File Offset: 0x000353E4
 		public unsafe static void MinimumAreaRectangle(UObject WorldContextObject, in TArray<FVector> InVerts, in FVector SampleSurfaceNormal, ref FVector OutRectCenter, ref FRotator OutRectRotation, ref float OutSideLengthX, ref float OutSideLengthY, bool bDebugDraw = false)
 		{
 			fixed (FVector* ptr = &OutRectCenter)
@@ -1671,11 +1652,11 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A77B RID: 42875
+		// Token: 0x060026AC RID: 9900
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Min(int A, int B);
 
-		// Token: 0x0600A77C RID: 42876 RVA: 0x000EE2F8 File Offset: 0x000EC4F8
+		// Token: 0x060026AD RID: 9901 RVA: 0x00037250 File Offset: 0x00035450
 		public unsafe static void MaxOfIntArray(in TArray<int> IntArray, ref int IndexOfMaxValue, ref int MaxValue)
 		{
 			fixed (int* ptr = &IndexOfMaxValue)
@@ -1690,7 +1671,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A77D RID: 42877 RVA: 0x000EE32C File Offset: 0x000EC52C
+		// Token: 0x060026AE RID: 9902 RVA: 0x00037284 File Offset: 0x00035484
 		public unsafe static void MaxOfFloatArray(in TArray<float> FloatArray, ref int IndexOfMaxValue, ref float MaxValue)
 		{
 			fixed (int* ptr = &IndexOfMaxValue)
@@ -1705,7 +1686,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A77E RID: 42878 RVA: 0x000EE360 File Offset: 0x000EC560
+		// Token: 0x060026AF RID: 9903 RVA: 0x000372B8 File Offset: 0x000354B8
 		public unsafe static void MaxOfByteArray(in TArray<byte> ByteArray, ref int IndexOfMaxValue, ref byte MaxValue)
 		{
 			fixed (int* ptr = &IndexOfMaxValue)
@@ -1720,15 +1701,15 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A77F RID: 42879
+		// Token: 0x060026B0 RID: 9904
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long MaxInt64(long A, long B);
 
-		// Token: 0x0600A780 RID: 42880
+		// Token: 0x060026B1 RID: 9905
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Max(int A, int B);
 
-		// Token: 0x0600A781 RID: 42881 RVA: 0x000EE394 File Offset: 0x000EC594
+		// Token: 0x060026B2 RID: 9906 RVA: 0x000372EC File Offset: 0x000354EC
 		public unsafe static FVector4 Matrix_TransformVector4(in FMatrix M, FVector4 V)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1738,7 +1719,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_TransformVector4_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A782 RID: 42882 RVA: 0x000EE3DC File Offset: 0x000EC5DC
+		// Token: 0x060026B3 RID: 9907 RVA: 0x00037334 File Offset: 0x00035534
 		public unsafe static FVector4 Matrix_TransformVector(in FMatrix M, FVector V)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1746,7 +1727,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_TransformVector_Internal(uintPtr, V);
 		}
 
-		// Token: 0x0600A783 RID: 42883 RVA: 0x000EE40C File Offset: 0x000EC60C
+		// Token: 0x060026B4 RID: 9908 RVA: 0x00037364 File Offset: 0x00035564
 		public unsafe static FVector4 Matrix_TransformPosition(in FMatrix M, FVector V)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1754,7 +1735,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_TransformPosition_Internal(uintPtr, V);
 		}
 
-		// Token: 0x0600A784 RID: 42884 RVA: 0x000EE43C File Offset: 0x000EC63C
+		// Token: 0x060026B5 RID: 9909 RVA: 0x00037394 File Offset: 0x00035594
 		public unsafe static FQuat Matrix_ToQuat(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1762,7 +1743,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_ToQuat_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A785 RID: 42885 RVA: 0x000EE46C File Offset: 0x000EC66C
+		// Token: 0x060026B6 RID: 9910 RVA: 0x000373C4 File Offset: 0x000355C4
 		public unsafe static void Matrix_SetOrigin(ref FMatrix M, FVector NewOrigin)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1771,16 +1752,7 @@ namespace UnrealEngine
 			M = ptr;
 		}
 
-		// Token: 0x0600A786 RID: 42886 RVA: 0x000EE4A8 File Offset: 0x000EC6A8
-		public unsafe static void Matrix_SetColumn(ref FMatrix M, EMatrixColumns Column, FVector Value)
-		{
-			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
-			ptr = M;
-			UKismetMathLibrary.__Matrix_SetColumn_Internal(ref ptr, Column, Value);
-			M = ptr;
-		}
-
-		// Token: 0x0600A787 RID: 42887 RVA: 0x000EE4EC File Offset: 0x000EC6EC
+		// Token: 0x060026B7 RID: 9911 RVA: 0x00037400 File Offset: 0x00035600
 		public unsafe static void Matrix_SetAxis(ref FMatrix M, EAxis Axis, FVector AxisVector)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1789,7 +1761,7 @@ namespace UnrealEngine
 			M = ptr;
 		}
 
-		// Token: 0x0600A788 RID: 42888 RVA: 0x000EE530 File Offset: 0x000EC730
+		// Token: 0x060026B8 RID: 9912 RVA: 0x00037444 File Offset: 0x00035644
 		public unsafe static FMatrix Matrix_ScaleTranslation(in FMatrix M, FVector Scale3D)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1797,7 +1769,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_ScaleTranslation_Internal(uintPtr, Scale3D);
 		}
 
-		// Token: 0x0600A789 RID: 42889 RVA: 0x000EE560 File Offset: 0x000EC760
+		// Token: 0x060026B9 RID: 9913 RVA: 0x00037474 File Offset: 0x00035674
 		public unsafe static FMatrix Matrix_RemoveTranslation(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1805,7 +1777,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_RemoveTranslation_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A78A RID: 42890 RVA: 0x000EE590 File Offset: 0x000EC790
+		// Token: 0x060026BA RID: 9914 RVA: 0x000374A4 File Offset: 0x000356A4
 		public unsafe static void Matrix_RemoveScaling(ref FMatrix M, float Tolerance = 0f)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1814,7 +1786,7 @@ namespace UnrealEngine
 			M = ptr;
 		}
 
-		// Token: 0x0600A78B RID: 42891 RVA: 0x000EE5CC File Offset: 0x000EC7CC
+		// Token: 0x060026BB RID: 9915 RVA: 0x000374E0 File Offset: 0x000356E0
 		public unsafe static FMatrix Matrix_Mirror(in FMatrix M, EAxis MirrorAxis, EAxis FlipAxis)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1822,7 +1794,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_Mirror_Internal(uintPtr, MirrorAxis, FlipAxis);
 		}
 
-		// Token: 0x0600A78C RID: 42892 RVA: 0x000EE608 File Offset: 0x000EC808
+		// Token: 0x060026BC RID: 9916 RVA: 0x0003751C File Offset: 0x0003571C
 		public unsafe static FVector Matrix_InverseTransformVector(in FMatrix M, FVector V)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1830,7 +1802,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_InverseTransformVector_Internal(uintPtr, V);
 		}
 
-		// Token: 0x0600A78D RID: 42893 RVA: 0x000EE638 File Offset: 0x000EC838
+		// Token: 0x060026BD RID: 9917 RVA: 0x0003754C File Offset: 0x0003574C
 		public unsafe static FVector Matrix_InverseTransformPosition(in FMatrix M, FVector V)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1838,11 +1810,11 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_InverseTransformPosition_Internal(uintPtr, V);
 		}
 
-		// Token: 0x0600A78E RID: 42894
+		// Token: 0x060026BE RID: 9918
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FMatrix Matrix_Identity();
 
-		// Token: 0x0600A78F RID: 42895 RVA: 0x000EE668 File Offset: 0x000EC868
+		// Token: 0x060026BF RID: 9919 RVA: 0x0003757C File Offset: 0x0003577C
 		public unsafe static FVector Matrix_GetUnitAxis(in FMatrix M, EAxis Axis)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1850,7 +1822,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetUnitAxis_Internal(uintPtr, Axis);
 		}
 
-		// Token: 0x0600A790 RID: 42896 RVA: 0x000EE69C File Offset: 0x000EC89C
+		// Token: 0x060026C0 RID: 9920 RVA: 0x000375B0 File Offset: 0x000357B0
 		public unsafe static void Matrix_GetUnitAxes(in FMatrix M, ref FVector X, ref FVector Y, ref FVector Z)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1872,7 +1844,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A791 RID: 42897 RVA: 0x000EE6EC File Offset: 0x000EC8EC
+		// Token: 0x060026C1 RID: 9921 RVA: 0x00037600 File Offset: 0x00035800
 		public unsafe static FMatrix Matrix_GetTransposed(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1880,7 +1852,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetTransposed_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A792 RID: 42898 RVA: 0x000EE71C File Offset: 0x000EC91C
+		// Token: 0x060026C2 RID: 9922 RVA: 0x00037630 File Offset: 0x00035830
 		public unsafe static FMatrix Matrix_GetTransposeAdjoint(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1888,7 +1860,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetTransposeAdjoint_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A793 RID: 42899 RVA: 0x000EE74C File Offset: 0x000EC94C
+		// Token: 0x060026C3 RID: 9923 RVA: 0x00037660 File Offset: 0x00035860
 		public unsafe static FVector Matrix_GetScaleVector(in FMatrix M, float Tolerance = 0f)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1896,7 +1868,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetScaleVector_Internal(uintPtr, Tolerance);
 		}
 
-		// Token: 0x0600A794 RID: 42900 RVA: 0x000EE77C File Offset: 0x000EC97C
+		// Token: 0x060026C4 RID: 9924 RVA: 0x00037690 File Offset: 0x00035890
 		public unsafe static FVector Matrix_GetScaledAxis(in FMatrix M, EAxis Axis)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1904,7 +1876,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetScaledAxis_Internal(uintPtr, Axis);
 		}
 
-		// Token: 0x0600A795 RID: 42901 RVA: 0x000EE7B0 File Offset: 0x000EC9B0
+		// Token: 0x060026C5 RID: 9925 RVA: 0x000376C4 File Offset: 0x000358C4
 		public unsafe static void Matrix_GetScaledAxes(in FMatrix M, ref FVector X, ref FVector Y, ref FVector Z)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1926,7 +1898,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A796 RID: 42902 RVA: 0x000EE800 File Offset: 0x000ECA00
+		// Token: 0x060026C6 RID: 9926 RVA: 0x00037714 File Offset: 0x00035914
 		public unsafe static float Matrix_GetRotDeterminant(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1934,7 +1906,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetRotDeterminant_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A797 RID: 42903 RVA: 0x000EE830 File Offset: 0x000ECA30
+		// Token: 0x060026C7 RID: 9927 RVA: 0x00037744 File Offset: 0x00035944
 		public unsafe static FRotator Matrix_GetRotator(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1942,7 +1914,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetRotator_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A798 RID: 42904 RVA: 0x000EE860 File Offset: 0x000ECA60
+		// Token: 0x060026C8 RID: 9928 RVA: 0x00037774 File Offset: 0x00035974
 		public unsafe static FVector Matrix_GetOrigin(in FMatrix InMatrix)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1950,7 +1922,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetOrigin_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A799 RID: 42905 RVA: 0x000EE890 File Offset: 0x000ECA90
+		// Token: 0x060026C9 RID: 9929 RVA: 0x000377A4 File Offset: 0x000359A4
 		public unsafe static float Matrix_GetMaximumAxisScale(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1958,7 +1930,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetMaximumAxisScale_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A79A RID: 42906 RVA: 0x000EE8C0 File Offset: 0x000ECAC0
+		// Token: 0x060026CA RID: 9930 RVA: 0x000377D4 File Offset: 0x000359D4
 		public unsafe static FMatrix Matrix_GetMatrixWithoutScale(in FMatrix M, float Tolerance = 0f)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1966,7 +1938,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetMatrixWithoutScale_Internal(uintPtr, Tolerance);
 		}
 
-		// Token: 0x0600A79B RID: 42907 RVA: 0x000EE8F0 File Offset: 0x000ECAF0
+		// Token: 0x060026CB RID: 9931 RVA: 0x00037804 File Offset: 0x00035A04
 		public unsafe static FMatrix Matrix_GetInverse(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1974,7 +1946,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetInverse_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A79C RID: 42908 RVA: 0x000EE920 File Offset: 0x000ECB20
+		// Token: 0x060026CC RID: 9932 RVA: 0x00037834 File Offset: 0x00035A34
 		public unsafe static bool Matrix_GetFrustumTopPlane(in FMatrix M, ref FPlane OutPlane)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1986,7 +1958,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A79D RID: 42909 RVA: 0x000EE978 File Offset: 0x000ECB78
+		// Token: 0x060026CD RID: 9933 RVA: 0x0003788C File Offset: 0x00035A8C
 		public unsafe static bool Matrix_GetFrustumRightPlane(in FMatrix M, ref FPlane OutPlane)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -1998,7 +1970,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A79E RID: 42910 RVA: 0x000EE9D0 File Offset: 0x000ECBD0
+		// Token: 0x060026CE RID: 9934 RVA: 0x000378E4 File Offset: 0x00035AE4
 		public unsafe static bool Matrix_GetFrustumNearPlane(in FMatrix M, ref FPlane OutPlane)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2010,7 +1982,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A79F RID: 42911 RVA: 0x000EEA28 File Offset: 0x000ECC28
+		// Token: 0x060026CF RID: 9935 RVA: 0x0003793C File Offset: 0x00035B3C
 		public unsafe static bool Matrix_GetFrustumLeftPlane(in FMatrix M, ref FPlane OutPlane)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2022,7 +1994,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A7A0 RID: 42912 RVA: 0x000EEA80 File Offset: 0x000ECC80
+		// Token: 0x060026D0 RID: 9936 RVA: 0x00037994 File Offset: 0x00035B94
 		public unsafe static bool Matrix_GetFrustumFarPlane(in FMatrix M, ref FPlane OutPlane)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2034,7 +2006,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A7A1 RID: 42913 RVA: 0x000EEAD8 File Offset: 0x000ECCD8
+		// Token: 0x060026D1 RID: 9937 RVA: 0x000379EC File Offset: 0x00035BEC
 		public unsafe static bool Matrix_GetFrustumBottomPlane(in FMatrix M, ref FPlane OutPlane)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2046,7 +2018,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A7A2 RID: 42914 RVA: 0x000EEB30 File Offset: 0x000ECD30
+		// Token: 0x060026D2 RID: 9938 RVA: 0x00037A44 File Offset: 0x00035C44
 		public unsafe static float Matrix_GetDeterminant(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2054,15 +2026,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_GetDeterminant_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A7A3 RID: 42915 RVA: 0x000EEB60 File Offset: 0x000ECD60
-		public unsafe static FVector Matrix_GetColumn(in FMatrix M, EMatrixColumns Column)
-		{
-			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
-			*uintPtr = M;
-			return UKismetMathLibrary.__Matrix_GetColumn_Internal(uintPtr, Column);
-		}
-
-		// Token: 0x0600A7A4 RID: 42916 RVA: 0x000EEB94 File Offset: 0x000ECD94
+		// Token: 0x060026D3 RID: 9939 RVA: 0x00037A74 File Offset: 0x00035C74
 		public unsafe static bool Matrix_ContainsNaN(in FMatrix M)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2070,7 +2034,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_ContainsNaN_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A7A5 RID: 42917 RVA: 0x000EEBC4 File Offset: 0x000ECDC4
+		// Token: 0x060026D4 RID: 9940 RVA: 0x00037AA4 File Offset: 0x00035CA4
 		public unsafe static FMatrix Matrix_ConcatenateTranslation(in FMatrix M, FVector Translation)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2078,7 +2042,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_ConcatenateTranslation_Internal(uintPtr, Translation);
 		}
 
-		// Token: 0x0600A7A6 RID: 42918 RVA: 0x000EEBF4 File Offset: 0x000ECDF4
+		// Token: 0x060026D5 RID: 9941 RVA: 0x00037AD4 File Offset: 0x00035CD4
 		public unsafe static FMatrix Matrix_ApplyScale(in FMatrix M, float Scale)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2086,101 +2050,101 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Matrix_ApplyScale_Internal(uintPtr, Scale);
 		}
 
-		// Token: 0x0600A7A7 RID: 42919
+		// Token: 0x060026D6 RID: 9942
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float MapRangeUnclamped(float Value, float InRangeA, float InRangeB, float OutRangeA, float OutRangeB);
 
-		// Token: 0x0600A7A8 RID: 42920
+		// Token: 0x060026D7 RID: 9943
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float MapRangeClamped(float Value, float InRangeA, float InRangeB, float OutRangeA, float OutRangeB);
 
-		// Token: 0x0600A7A9 RID: 42921
+		// Token: 0x060026D8 RID: 9944
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble MakeVectorDouble(double X, double Y, double Z);
 
-		// Token: 0x0600A7AA RID: 42922
+		// Token: 0x060026D9 RID: 9945
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector4 MakeVector4(float X, float Y, float Z, float W);
 
-		// Token: 0x0600A7AB RID: 42923
+		// Token: 0x060026DA RID: 9946
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble MakeVector2DDouble(double X, double Y);
 
-		// Token: 0x0600A7AC RID: 42924
+		// Token: 0x060026DB RID: 9947
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D MakeVector2D(float X, float Y);
 
-		// Token: 0x0600A7AD RID: 42925
+		// Token: 0x060026DC RID: 9948
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector MakeVector(float X, float Y, float Z);
 
-		// Token: 0x0600A7AE RID: 42926
+		// Token: 0x060026DD RID: 9949
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FTransformDouble MakeTransformDouble(FVectorDouble Location, FRotator Rotation, FVector Scale);
 
-		// Token: 0x0600A7AF RID: 42927
+		// Token: 0x060026DE RID: 9950
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FTransform MakeTransform(FVector Location, FRotator Rotation, FVector Scale);
 
-		// Token: 0x0600A7B0 RID: 42928 RVA: 0x000EEC22 File Offset: 0x000ECE22
+		// Token: 0x060026DF RID: 9951 RVA: 0x00037B02 File Offset: 0x00035D02
 		[NullableContext(1)]
 		public static FTimespan MakeTimespan2(int Days, int Hours, int Minutes, int Seconds, int FractionNano)
 		{
 			return new FTimespan(UKismetMathLibrary.__MakeTimespan2_Internal(Days, Hours, Minutes, Seconds, FractionNano), null);
 		}
 
-		// Token: 0x0600A7B1 RID: 42929 RVA: 0x000EEC35 File Offset: 0x000ECE35
+		// Token: 0x060026E0 RID: 9952 RVA: 0x00037B15 File Offset: 0x00035D15
 		[NullableContext(1)]
 		public static FTimespan MakeTimespan(int Days, int Hours, int Minutes, int Seconds, int Milliseconds)
 		{
 			return new FTimespan(UKismetMathLibrary.__MakeTimespan_Internal(Days, Hours, Minutes, Seconds, Milliseconds), null);
 		}
 
-		// Token: 0x0600A7B2 RID: 42930
+		// Token: 0x060026E1 RID: 9953
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotFromZY(in FVector Z, in FVector Y);
 
-		// Token: 0x0600A7B3 RID: 42931
+		// Token: 0x060026E2 RID: 9954
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotFromZX(in FVector Z, in FVector X);
 
-		// Token: 0x0600A7B4 RID: 42932
+		// Token: 0x060026E3 RID: 9955
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotFromZ(in FVector Z);
 
-		// Token: 0x0600A7B5 RID: 42933
+		// Token: 0x060026E4 RID: 9956
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotFromYZ(in FVector Y, in FVector Z);
 
-		// Token: 0x0600A7B6 RID: 42934
+		// Token: 0x060026E5 RID: 9957
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotFromYX(in FVector Y, in FVector X);
 
-		// Token: 0x0600A7B7 RID: 42935
+		// Token: 0x060026E6 RID: 9958
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotFromY(in FVector Y);
 
-		// Token: 0x0600A7B8 RID: 42936
+		// Token: 0x060026E7 RID: 9959
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotFromXZ(in FVector X, in FVector Z);
 
-		// Token: 0x0600A7B9 RID: 42937
+		// Token: 0x060026E8 RID: 9960
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotFromXY(in FVector X, in FVector Y);
 
-		// Token: 0x0600A7BA RID: 42938
+		// Token: 0x060026E9 RID: 9961
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotFromX(in FVector X);
 
-		// Token: 0x0600A7BB RID: 42939
+		// Token: 0x060026EA RID: 9962
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotator(float Roll, float Pitch, float Yaw);
 
-		// Token: 0x0600A7BC RID: 42940
+		// Token: 0x060026EB RID: 9963
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator MakeRotationFromAxes(FVector Forward, FVector Right, FVector Up);
 
-		// Token: 0x0600A7BD RID: 42941 RVA: 0x000EEC48 File Offset: 0x000ECE48
+		// Token: 0x060026EC RID: 9964 RVA: 0x00037B28 File Offset: 0x00035D28
 		public unsafe static FTransform MakeRelativeTransform(in FTransform A, in FTransform RelativeTo)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2190,61 +2154,61 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__MakeRelativeTransform_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A7BE RID: 42942
+		// Token: 0x060026ED RID: 9965
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRandomStream MakeRandomStream(int InitialSeed);
 
-		// Token: 0x0600A7BF RID: 42943 RVA: 0x000EEC94 File Offset: 0x000ECE94
+		// Token: 0x060026EE RID: 9966 RVA: 0x00037B74 File Offset: 0x00035D74
 		[NullableContext(1)]
 		public static FQualifiedFrameTime MakeQualifiedFrameTime([Nullable(2)] FFrameNumber Frame, FFrameRate FrameRate, float SubFrame = 0f)
 		{
 			return new FQualifiedFrameTime(UKismetMathLibrary.__MakeQualifiedFrameTime_Internal((Frame ?? new FFrameNumber()).NativePtr, FrameRate, SubFrame), null);
 		}
 
-		// Token: 0x0600A7C0 RID: 42944
+		// Token: 0x060026EF RID: 9967
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float MakePulsatingValue(float InCurrentTime, float InPulsesPerSecond = 1f, float InPhase = 0f);
 
-		// Token: 0x0600A7C1 RID: 42945
+		// Token: 0x060026F0 RID: 9968
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FPlane MakePlaneFromPointAndNormal(FVector Point, FVector Normal);
 
-		// Token: 0x0600A7C2 RID: 42946
+		// Token: 0x060026F1 RID: 9969
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FFrameRate MakeFrameRate(int Numerator, int Denominator = 1);
 
-		// Token: 0x0600A7C3 RID: 42947 RVA: 0x000EECB2 File Offset: 0x000ECEB2
+		// Token: 0x060026F2 RID: 9970 RVA: 0x00037B92 File Offset: 0x00035D92
 		[NullableContext(1)]
 		public static FDateTime MakeDateTime(int Year, int Month, int Day, int Hour = 0, int Minute = 0, int Second = 0, int Millisecond = 0)
 		{
 			return new FDateTime(UKismetMathLibrary.__MakeDateTime_Internal(Year, Month, Day, Hour, Minute, Second, Millisecond), null);
 		}
 
-		// Token: 0x0600A7C4 RID: 42948
+		// Token: 0x060026F3 RID: 9971
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor MakeColor(float R, float G, float B, float A = 1f);
 
-		// Token: 0x0600A7C5 RID: 42949
+		// Token: 0x060026F4 RID: 9972
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FBox2D MakeBox2D(FVector2D Min, FVector2D Max);
 
-		// Token: 0x0600A7C6 RID: 42950
+		// Token: 0x060026F5 RID: 9973
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FBox MakeBox(FVector Min, FVector Max);
 
-		// Token: 0x0600A7C7 RID: 42951
+		// Token: 0x060026F6 RID: 9974
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Loge(float A);
 
-		// Token: 0x0600A7C8 RID: 42952
+		// Token: 0x060026F7 RID: 9975
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Log(float A, float Base = 1f);
 
-		// Token: 0x0600A7C9 RID: 42953
+		// Token: 0x060026F8 RID: 9976
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool LinePlaneIntersection_OriginNormal(in FVector LineStart, in FVector LineEnd, FVector PlaneOrigin, FVector PlaneNormal, ref float T, ref FVector Intersection);
 
-		// Token: 0x0600A7CA RID: 42954 RVA: 0x000EECCC File Offset: 0x000ECECC
+		// Token: 0x060026F9 RID: 9977 RVA: 0x00037BAC File Offset: 0x00035DAC
 		public unsafe static bool LinePlaneIntersection(in FVector LineStart, in FVector LineEnd, in FPlane APlane, ref float T, ref FVector Intersection)
 		{
 			ref FPlane ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -2260,183 +2224,183 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A7CB RID: 42955
+		// Token: 0x060026FA RID: 9978
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColorLerpUsingHSV(FLinearColor A, FLinearColor B, float Alpha);
 
-		// Token: 0x0600A7CC RID: 42956
+		// Token: 0x060026FB RID: 9979
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColorLerp(FLinearColor A, FLinearColor B, float Alpha);
 
-		// Token: 0x0600A7CD RID: 42957
+		// Token: 0x060026FC RID: 9980
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_Yellow();
 
-		// Token: 0x0600A7CE RID: 42958
+		// Token: 0x060026FD RID: 9981
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_White();
 
-		// Token: 0x0600A7CF RID: 42959
+		// Token: 0x060026FE RID: 9982
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_Transparent();
 
-		// Token: 0x0600A7D0 RID: 42960
+		// Token: 0x060026FF RID: 9983
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FColor LinearColor_ToRGBE(FLinearColor InLinearColor);
 
-		// Token: 0x0600A7D1 RID: 42961
+		// Token: 0x06002700 RID: 9984
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_ToNewOpacity(FLinearColor InColor, float InOpacity);
 
-		// Token: 0x0600A7D2 RID: 42962
+		// Token: 0x06002701 RID: 9985
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void LinearColor_SetTemperature(ref FLinearColor InOutColor, float InTemperature);
 
-		// Token: 0x0600A7D3 RID: 42963
+		// Token: 0x06002702 RID: 9986
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void LinearColor_SetRGBA(ref FLinearColor InOutColor, float R, float G, float B, float A = 1f);
 
-		// Token: 0x0600A7D4 RID: 42964
+		// Token: 0x06002703 RID: 9987
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void LinearColor_SetRandomHue(ref FLinearColor InOutColor);
 
-		// Token: 0x0600A7D5 RID: 42965
+		// Token: 0x06002704 RID: 9988
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void LinearColor_SetFromSRGB(ref FLinearColor InOutColor, in FColor InSRGB);
 
-		// Token: 0x0600A7D6 RID: 42966
+		// Token: 0x06002705 RID: 9989
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void LinearColor_SetFromPow22(ref FLinearColor InOutColor, in FColor InColor);
 
-		// Token: 0x0600A7D7 RID: 42967
+		// Token: 0x06002706 RID: 9990
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void LinearColor_SetFromHSV(ref FLinearColor InOutColor, float H, float S, float V, float A = 1f);
 
-		// Token: 0x0600A7D8 RID: 42968
+		// Token: 0x06002707 RID: 9991
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void LinearColor_Set(ref FLinearColor InOutColor, FLinearColor InColor);
 
-		// Token: 0x0600A7D9 RID: 42969
+		// Token: 0x06002708 RID: 9992
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_Red();
 
-		// Token: 0x0600A7DA RID: 42970
+		// Token: 0x06002709 RID: 9993
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FColor LinearColor_QuantizeRound(FLinearColor InColor);
 
-		// Token: 0x0600A7DB RID: 42971
+		// Token: 0x0600270A RID: 9994
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FColor LinearColor_Quantize(FLinearColor InColor);
 
-		// Token: 0x0600A7DC RID: 42972
+		// Token: 0x0600270B RID: 9995
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool LinearColor_IsNearEqual(FLinearColor A, FLinearColor B, float Tolerance = 0.0001f);
 
-		// Token: 0x0600A7DD RID: 42973
+		// Token: 0x0600270C RID: 9996
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_Green();
 
-		// Token: 0x0600A7DE RID: 42974
+		// Token: 0x0600270D RID: 9997
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_Gray();
 
-		// Token: 0x0600A7DF RID: 42975
+		// Token: 0x0600270E RID: 9998
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float LinearColor_GetMin(FLinearColor InColor);
 
-		// Token: 0x0600A7E0 RID: 42976
+		// Token: 0x0600270F RID: 9999
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float LinearColor_GetMax(FLinearColor InColor);
 
-		// Token: 0x0600A7E1 RID: 42977
+		// Token: 0x06002710 RID: 10000
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float LinearColor_GetLuminance(FLinearColor InColor);
 
-		// Token: 0x0600A7E2 RID: 42978
+		// Token: 0x06002711 RID: 10001
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float LinearColor_Distance(FLinearColor C1, FLinearColor C2);
 
-		// Token: 0x0600A7E3 RID: 42979
+		// Token: 0x06002712 RID: 10002
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_Desaturated(FLinearColor InColor, float InDesaturation);
 
-		// Token: 0x0600A7E4 RID: 42980
+		// Token: 0x06002713 RID: 10003
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_Blue();
 
-		// Token: 0x0600A7E5 RID: 42981
+		// Token: 0x06002714 RID: 10004
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor LinearColor_Black();
 
-		// Token: 0x0600A7E6 RID: 42982
+		// Token: 0x06002715 RID: 10005
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector LessLess_VectorRotator(FVector A, FRotator B);
 
-		// Token: 0x0600A7E7 RID: 42983 RVA: 0x000EED0D File Offset: 0x000ECF0D
+		// Token: 0x06002716 RID: 10006 RVA: 0x00037BED File Offset: 0x00035DED
 		public static bool LessEqual_TimespanTimespan(FTimespan A, FTimespan B)
 		{
 			return UKismetMathLibrary.__LessEqual_TimespanTimespan_Internal((A ?? new FTimespan()).NativePtr, (B ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A7E8 RID: 42984
+		// Token: 0x06002717 RID: 10007
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool LessEqual_IntInt(int A, int B);
 
-		// Token: 0x0600A7E9 RID: 42985
+		// Token: 0x06002718 RID: 10008
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool LessEqual_Int64Int64(long A, long B);
 
-		// Token: 0x0600A7EA RID: 42986
+		// Token: 0x06002719 RID: 10009
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool LessEqual_FloatFloat(float A, float B);
 
-		// Token: 0x0600A7EB RID: 42987 RVA: 0x000EED32 File Offset: 0x000ECF32
+		// Token: 0x0600271A RID: 10010 RVA: 0x00037C12 File Offset: 0x00035E12
 		public static bool LessEqual_DateTimeDateTime(FDateTime A, FDateTime B)
 		{
 			return UKismetMathLibrary.__LessEqual_DateTimeDateTime_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A7EC RID: 42988
+		// Token: 0x0600271B RID: 10011
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool LessEqual_ByteByte(byte A, byte B);
 
-		// Token: 0x0600A7ED RID: 42989 RVA: 0x000EED57 File Offset: 0x000ECF57
+		// Token: 0x0600271C RID: 10012 RVA: 0x00037C37 File Offset: 0x00035E37
 		public static bool Less_TimespanTimespan(FTimespan A, FTimespan B)
 		{
 			return UKismetMathLibrary.__Less_TimespanTimespan_Internal((A ?? new FTimespan()).NativePtr, (B ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A7EE RID: 42990
+		// Token: 0x0600271D RID: 10013
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Less_IntInt(int A, int B);
 
-		// Token: 0x0600A7EF RID: 42991
+		// Token: 0x0600271E RID: 10014
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Less_Int64Int64(long A, long B);
 
-		// Token: 0x0600A7F0 RID: 42992
+		// Token: 0x0600271F RID: 10015
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Less_FloatFloat(float A, float B);
 
-		// Token: 0x0600A7F1 RID: 42993 RVA: 0x000EED7C File Offset: 0x000ECF7C
+		// Token: 0x06002720 RID: 10016 RVA: 0x00037C5C File Offset: 0x00035E5C
 		public static bool Less_DateTimeDateTime(FDateTime A, FDateTime B)
 		{
 			return UKismetMathLibrary.__Less_DateTimeDateTime_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A7F2 RID: 42994
+		// Token: 0x06002721 RID: 10017
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Less_ByteByte(byte A, byte B);
 
-		// Token: 0x0600A7F3 RID: 42995
+		// Token: 0x06002722 RID: 10018
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Lerp(float A, float B, float Alpha);
 
-		// Token: 0x0600A7F4 RID: 42996
+		// Token: 0x06002723 RID: 10019
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsZero2D(in FVector2D A);
 
-		// Token: 0x0600A7F5 RID: 42997 RVA: 0x000EEDA4 File Offset: 0x000ECFA4
+		// Token: 0x06002724 RID: 10020 RVA: 0x00037C84 File Offset: 0x00035E84
 		public unsafe static bool IsPointInBoxWithTransform(FVector Point, in FTransform BoxWorldTransform, FVector BoxExtent)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2444,31 +2408,31 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__IsPointInBoxWithTransform_Internal(Point, ptr, BoxExtent);
 		}
 
-		// Token: 0x0600A7F6 RID: 42998
+		// Token: 0x06002725 RID: 10021
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsPointInBox(FVector Point, FVector BoxOrigin, FVector BoxExtent);
 
-		// Token: 0x0600A7F7 RID: 42999
+		// Token: 0x06002726 RID: 10022
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsNearlyZero2D(in FVector2D A, float Tolerance = 0.0001f);
 
-		// Token: 0x0600A7F8 RID: 43000 RVA: 0x000EEDD5 File Offset: 0x000ECFD5
+		// Token: 0x06002727 RID: 10023 RVA: 0x00037CB5 File Offset: 0x00035EB5
 		public static bool IsMorning(FDateTime A)
 		{
 			return UKismetMathLibrary.__IsMorning_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A7F9 RID: 43001
+		// Token: 0x06002728 RID: 10024
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsLeapYear(int Year);
 
-		// Token: 0x0600A7FA RID: 43002 RVA: 0x000EEDEB File Offset: 0x000ECFEB
+		// Token: 0x06002729 RID: 10025 RVA: 0x00037CCB File Offset: 0x00035ECB
 		public static bool IsAfternoon(FDateTime A)
 		{
 			return UKismetMathLibrary.__IsAfternoon_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A7FB RID: 43003 RVA: 0x000EEE04 File Offset: 0x000ED004
+		// Token: 0x0600272A RID: 10026 RVA: 0x00037CE4 File Offset: 0x00035EE4
 		public unsafe static FTransform InvertTransform(in FTransform T)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2476,7 +2440,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__InvertTransform_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A7FC RID: 43004 RVA: 0x000EEE34 File Offset: 0x000ED034
+		// Token: 0x0600272B RID: 10027 RVA: 0x00037D14 File Offset: 0x00035F14
 		public unsafe static FRotator InverseTransformRotation(in FTransform T, FRotator Rotation)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2484,7 +2448,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__InverseTransformRotation_Internal(uintPtr, Rotation);
 		}
 
-		// Token: 0x0600A7FD RID: 43005 RVA: 0x000EEE64 File Offset: 0x000ED064
+		// Token: 0x0600272C RID: 10028 RVA: 0x00037D44 File Offset: 0x00035F44
 		public unsafe static FVector InverseTransformLocation(in FTransform T, FVector Location)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2492,7 +2456,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__InverseTransformLocation_Internal(uintPtr, Location);
 		}
 
-		// Token: 0x0600A7FE RID: 43006 RVA: 0x000EEE94 File Offset: 0x000ED094
+		// Token: 0x0600272D RID: 10029 RVA: 0x00037D74 File Offset: 0x00035F74
 		public unsafe static FVector InverseTransformDirection(in FTransform T, FVector Direction)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2500,328 +2464,328 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__InverseTransformDirection_Internal(uintPtr, Direction);
 		}
 
-		// Token: 0x0600A7FF RID: 43007
+		// Token: 0x0600272E RID: 10030
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint IntPoint_Zero();
 
-		// Token: 0x0600A800 RID: 43008
+		// Token: 0x0600272F RID: 10031
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint IntPoint_Up();
 
-		// Token: 0x0600A801 RID: 43009
+		// Token: 0x06002730 RID: 10032
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint IntPoint_Right();
 
-		// Token: 0x0600A802 RID: 43010
+		// Token: 0x06002731 RID: 10033
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint IntPoint_One();
 
-		// Token: 0x0600A803 RID: 43011
+		// Token: 0x06002732 RID: 10034
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint IntPoint_Left();
 
-		// Token: 0x0600A804 RID: 43012
+		// Token: 0x06002733 RID: 10035
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint IntPoint_Down();
 
-		// Token: 0x0600A805 RID: 43013
+		// Token: 0x06002734 RID: 10036
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool InRange_IntInt(int Value, int Min, int Max, bool InclusiveMin = true, bool InclusiveMax = true);
 
-		// Token: 0x0600A806 RID: 43014
+		// Token: 0x06002735 RID: 10037
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool InRange_Int64Int64(long Value, long Min, long Max, bool InclusiveMin = true, bool InclusiveMax = true);
 
-		// Token: 0x0600A807 RID: 43015
+		// Token: 0x06002736 RID: 10038
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool InRange_FloatFloat(float Value, float Min, float Max, bool InclusiveMin = true, bool InclusiveMax = true);
 
-		// Token: 0x0600A808 RID: 43016
+		// Token: 0x06002737 RID: 10039
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Hypotenuse(float Width, float Height);
 
-		// Token: 0x0600A809 RID: 43017
+		// Token: 0x06002738 RID: 10040
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor HSVToRGBLinear(FLinearColor HSV);
 
-		// Token: 0x0600A80A RID: 43018
+		// Token: 0x06002739 RID: 10041
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void HSVToRGB_Vector(FLinearColor HSV, ref FLinearColor RGB);
 
-		// Token: 0x0600A80B RID: 43019
+		// Token: 0x0600273A RID: 10042
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor HSVToRGB(float H, float S, float V, float A = 1f);
 
-		// Token: 0x0600A80C RID: 43020
+		// Token: 0x0600273B RID: 10043
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GridSnap_Float(float Location, float GridSize);
 
-		// Token: 0x0600A80D RID: 43021
+		// Token: 0x0600273C RID: 10044
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector GreaterGreater_VectorRotator(FVector A, FRotator B);
 
-		// Token: 0x0600A80E RID: 43022 RVA: 0x000EEEC2 File Offset: 0x000ED0C2
+		// Token: 0x0600273D RID: 10045 RVA: 0x00037DA2 File Offset: 0x00035FA2
 		public static bool GreaterEqual_TimespanTimespan(FTimespan A, FTimespan B)
 		{
 			return UKismetMathLibrary.__GreaterEqual_TimespanTimespan_Internal((A ?? new FTimespan()).NativePtr, (B ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A80F RID: 43023
+		// Token: 0x0600273E RID: 10046
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool GreaterEqual_IntInt(int A, int B);
 
-		// Token: 0x0600A810 RID: 43024
+		// Token: 0x0600273F RID: 10047
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool GreaterEqual_Int64Int64(long A, long B);
 
-		// Token: 0x0600A811 RID: 43025
+		// Token: 0x06002740 RID: 10048
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool GreaterEqual_FloatFloat(float A, float B);
 
-		// Token: 0x0600A812 RID: 43026 RVA: 0x000EEEE7 File Offset: 0x000ED0E7
+		// Token: 0x06002741 RID: 10049 RVA: 0x00037DC7 File Offset: 0x00035FC7
 		public static bool GreaterEqual_DateTimeDateTime(FDateTime A, FDateTime B)
 		{
 			return UKismetMathLibrary.__GreaterEqual_DateTimeDateTime_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A813 RID: 43027
+		// Token: 0x06002742 RID: 10050
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool GreaterEqual_ByteByte(byte A, byte B);
 
-		// Token: 0x0600A814 RID: 43028 RVA: 0x000EEF0C File Offset: 0x000ED10C
+		// Token: 0x06002743 RID: 10051 RVA: 0x00037DEC File Offset: 0x00035FEC
 		public static bool Greater_TimespanTimespan(FTimespan A, FTimespan B)
 		{
 			return UKismetMathLibrary.__Greater_TimespanTimespan_Internal((A ?? new FTimespan()).NativePtr, (B ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A815 RID: 43029
+		// Token: 0x06002744 RID: 10052
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Greater_IntInt(int A, int B);
 
-		// Token: 0x0600A816 RID: 43030
+		// Token: 0x06002745 RID: 10053
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Greater_Int64Int64(long A, long B);
 
-		// Token: 0x0600A817 RID: 43031
+		// Token: 0x06002746 RID: 10054
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Greater_FloatFloat(float A, float B);
 
-		// Token: 0x0600A818 RID: 43032 RVA: 0x000EEF31 File Offset: 0x000ED131
+		// Token: 0x06002747 RID: 10055 RVA: 0x00037E11 File Offset: 0x00036011
 		public static bool Greater_DateTimeDateTime(FDateTime A, FDateTime B)
 		{
 			return UKismetMathLibrary.__Greater_DateTimeDateTime_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A819 RID: 43033
+		// Token: 0x06002748 RID: 10056
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Greater_ByteByte(byte A, byte B);
 
-		// Token: 0x0600A81A RID: 43034 RVA: 0x000EEF56 File Offset: 0x000ED156
+		// Token: 0x06002749 RID: 10057 RVA: 0x00037E36 File Offset: 0x00036036
 		public static int GetYear(FDateTime A)
 		{
 			return UKismetMathLibrary.__GetYear_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A81B RID: 43035
+		// Token: 0x0600274A RID: 10058
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void GetYawPitchFromVector(FVector InVec, ref float Yaw, ref float Pitch);
 
-		// Token: 0x0600A81C RID: 43036 RVA: 0x000EEF6C File Offset: 0x000ED16C
+		// Token: 0x0600274B RID: 10059 RVA: 0x00037E4C File Offset: 0x0003604C
 		public static FVector GetVectorArrayAverage(in TArray<FVector> Vectors)
 		{
 			return UKismetMathLibrary.__GetVectorArrayAverage_Internal((Vectors ?? new TArray<FVector>()).NativePtr);
 		}
 
-		// Token: 0x0600A81D RID: 43037
+		// Token: 0x0600274C RID: 10060
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector GetUpVector(FRotator InRot);
 
-		// Token: 0x0600A81E RID: 43038 RVA: 0x000EEF83 File Offset: 0x000ED183
+		// Token: 0x0600274D RID: 10061 RVA: 0x00037E63 File Offset: 0x00036063
 		public static float GetTotalSeconds(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetTotalSeconds_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A81F RID: 43039 RVA: 0x000EEF99 File Offset: 0x000ED199
+		// Token: 0x0600274E RID: 10062 RVA: 0x00037E79 File Offset: 0x00036079
 		public static float GetTotalMinutes(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetTotalMinutes_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A820 RID: 43040 RVA: 0x000EEFAF File Offset: 0x000ED1AF
+		// Token: 0x0600274F RID: 10063 RVA: 0x00037E8F File Offset: 0x0003608F
 		public static float GetTotalMilliseconds(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetTotalMilliseconds_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A821 RID: 43041 RVA: 0x000EEFC5 File Offset: 0x000ED1C5
+		// Token: 0x06002750 RID: 10064 RVA: 0x00037EA5 File Offset: 0x000360A5
 		public static float GetTotalHours(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetTotalHours_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A822 RID: 43042 RVA: 0x000EEFDB File Offset: 0x000ED1DB
+		// Token: 0x06002751 RID: 10065 RVA: 0x00037EBB File Offset: 0x000360BB
 		public static float GetTotalDays(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetTotalDays_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A823 RID: 43043 RVA: 0x000EEFF1 File Offset: 0x000ED1F1
+		// Token: 0x06002752 RID: 10066 RVA: 0x00037ED1 File Offset: 0x000360D1
 		[NullableContext(1)]
 		public static FTimespan GetTimeOfDay([Nullable(2)] FDateTime A)
 		{
 			return new FTimespan(UKismetMathLibrary.__GetTimeOfDay_Internal((A ?? new FDateTime()).NativePtr), null);
 		}
 
-		// Token: 0x0600A824 RID: 43044
+		// Token: 0x06002753 RID: 10067
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetTAU();
 
-		// Token: 0x0600A825 RID: 43045
+		// Token: 0x06002754 RID: 10068
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void GetSlopeDegreeAngles(in FVector MyRightYAxis, in FVector FloorNormal, in FVector UpVector, ref float OutSlopePitchDegreeAngle, ref float OutSlopeRollDegreeAngle);
 
-		// Token: 0x0600A826 RID: 43046 RVA: 0x000EF00D File Offset: 0x000ED20D
+		// Token: 0x06002755 RID: 10069 RVA: 0x00037EED File Offset: 0x000360ED
 		public static int GetSeconds(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetSeconds_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A827 RID: 43047 RVA: 0x000EF023 File Offset: 0x000ED223
+		// Token: 0x06002756 RID: 10070 RVA: 0x00037F03 File Offset: 0x00036103
 		public static int GetSecond(FDateTime A)
 		{
 			return UKismetMathLibrary.__GetSecond_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A828 RID: 43048
+		// Token: 0x06002757 RID: 10071
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D GetRotated2D(FVector2D A, float AngleDeg);
 
-		// Token: 0x0600A829 RID: 43049
+		// Token: 0x06002758 RID: 10072
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector GetRightVector(FRotator InRot);
 
-		// Token: 0x0600A82A RID: 43050
+		// Token: 0x06002759 RID: 10073
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector GetReflectionVector(FVector Direction, FVector SurfaceNormal);
 
-		// Token: 0x0600A82B RID: 43051
+		// Token: 0x0600275A RID: 10074
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetPointDistanceToSegment(FVector Point, FVector SegmentStart, FVector SegmentEnd);
 
-		// Token: 0x0600A82C RID: 43052
+		// Token: 0x0600275B RID: 10075
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetPointDistanceToLine(FVector Point, FVector LineOrigin, FVector LineDirection);
 
-		// Token: 0x0600A82D RID: 43053
+		// Token: 0x0600275C RID: 10076
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetPI();
 
-		// Token: 0x0600A82E RID: 43054 RVA: 0x000EF039 File Offset: 0x000ED239
+		// Token: 0x0600275D RID: 10077 RVA: 0x00037F19 File Offset: 0x00036119
 		public static int GetMonth(FDateTime A)
 		{
 			return UKismetMathLibrary.__GetMonth_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A82F RID: 43055 RVA: 0x000EF04F File Offset: 0x000ED24F
+		// Token: 0x0600275E RID: 10078 RVA: 0x00037F2F File Offset: 0x0003612F
 		public static int GetMinutes(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetMinutes_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A830 RID: 43056 RVA: 0x000EF065 File Offset: 0x000ED265
+		// Token: 0x0600275F RID: 10079 RVA: 0x00037F45 File Offset: 0x00036145
 		public static int GetMinute(FDateTime A)
 		{
 			return UKismetMathLibrary.__GetMinute_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A831 RID: 43057
+		// Token: 0x06002760 RID: 10080
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetMinElement(FVector A);
 
-		// Token: 0x0600A832 RID: 43058
+		// Token: 0x06002761 RID: 10081
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetMin2D(FVector2D A);
 
-		// Token: 0x0600A833 RID: 43059 RVA: 0x000EF07B File Offset: 0x000ED27B
+		// Token: 0x06002762 RID: 10082 RVA: 0x00037F5B File Offset: 0x0003615B
 		public static int GetMilliseconds(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetMilliseconds_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A834 RID: 43060 RVA: 0x000EF091 File Offset: 0x000ED291
+		// Token: 0x06002763 RID: 10083 RVA: 0x00037F71 File Offset: 0x00036171
 		public static int GetMillisecond(FDateTime A)
 		{
 			return UKismetMathLibrary.__GetMillisecond_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A835 RID: 43061
+		// Token: 0x06002764 RID: 10084
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetMaxElement(FVector A);
 
-		// Token: 0x0600A836 RID: 43062
+		// Token: 0x06002765 RID: 10085
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetMax2D(FVector2D A);
 
-		// Token: 0x0600A837 RID: 43063 RVA: 0x000EF0A7 File Offset: 0x000ED2A7
+		// Token: 0x06002766 RID: 10086 RVA: 0x00037F87 File Offset: 0x00036187
 		public static int GetHours(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetHours_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A838 RID: 43064 RVA: 0x000EF0BD File Offset: 0x000ED2BD
+		// Token: 0x06002767 RID: 10087 RVA: 0x00037F9D File Offset: 0x0003619D
 		public static int GetHour12(FDateTime A)
 		{
 			return UKismetMathLibrary.__GetHour12_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A839 RID: 43065 RVA: 0x000EF0D3 File Offset: 0x000ED2D3
+		// Token: 0x06002768 RID: 10088 RVA: 0x00037FB3 File Offset: 0x000361B3
 		public static int GetHour(FDateTime A)
 		{
 			return UKismetMathLibrary.__GetHour_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A83A RID: 43066
+		// Token: 0x06002769 RID: 10089
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector GetForwardVector(FRotator InRot);
 
-		// Token: 0x0600A83B RID: 43067 RVA: 0x000EF0E9 File Offset: 0x000ED2E9
+		// Token: 0x0600276A RID: 10090 RVA: 0x00037FC9 File Offset: 0x000361C9
 		[NullableContext(1)]
 		public static FTimespan GetDuration([Nullable(2)] FTimespan A)
 		{
 			return new FTimespan(UKismetMathLibrary.__GetDuration_Internal((A ?? new FTimespan()).NativePtr), null);
 		}
 
-		// Token: 0x0600A83C RID: 43068
+		// Token: 0x0600276B RID: 10091
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector GetDirectionUnitVector(FVector From, FVector To);
 
-		// Token: 0x0600A83D RID: 43069 RVA: 0x000EF105 File Offset: 0x000ED305
+		// Token: 0x0600276C RID: 10092 RVA: 0x00037FE5 File Offset: 0x000361E5
 		public static int GetDays(FTimespan A)
 		{
 			return UKismetMathLibrary.__GetDays_Internal((A ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A83E RID: 43070 RVA: 0x000EF11B File Offset: 0x000ED31B
+		// Token: 0x0600276D RID: 10093 RVA: 0x00037FFB File Offset: 0x000361FB
 		public static int GetDayOfYear(FDateTime A)
 		{
 			return UKismetMathLibrary.__GetDayOfYear_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A83F RID: 43071 RVA: 0x000EF131 File Offset: 0x000ED331
+		// Token: 0x0600276E RID: 10094 RVA: 0x00038011 File Offset: 0x00036211
 		public static int GetDay(FDateTime A)
 		{
 			return UKismetMathLibrary.__GetDay_Internal((A ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A840 RID: 43072 RVA: 0x000EF147 File Offset: 0x000ED347
+		// Token: 0x0600276F RID: 10095 RVA: 0x00038027 File Offset: 0x00036227
 		[NullableContext(1)]
 		public static FDateTime GetDate([Nullable(2)] FDateTime A)
 		{
 			return new FDateTime(UKismetMathLibrary.__GetDate_Internal((A ?? new FDateTime()).NativePtr), null);
 		}
 
-		// Token: 0x0600A841 RID: 43073 RVA: 0x000EF164 File Offset: 0x000ED364
+		// Token: 0x06002770 RID: 10096 RVA: 0x00038044 File Offset: 0x00036244
 		public unsafe static void GetAzimuthAndElevation(FVector InDirection, in FTransform ReferenceFrame, ref float Azimuth, ref float Elevation)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2838,152 +2802,146 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A842 RID: 43074
+		// Token: 0x06002771 RID: 10097
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void GetAxes(FRotator A, ref FVector X, ref FVector Y, ref FVector Z);
 
-		// Token: 0x0600A843 RID: 43075
+		// Token: 0x06002772 RID: 10098
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetAbsMax2D(FVector2D A);
 
-		// Token: 0x0600A844 RID: 43076
+		// Token: 0x06002773 RID: 10099
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D GetAbs2D(FVector2D A);
 
-		// Token: 0x0600A845 RID: 43077
+		// Token: 0x06002774 RID: 10100
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float FWrap(float Value, float Min, float Max);
 
-		// Token: 0x0600A846 RID: 43078
+		// Token: 0x06002775 RID: 10101
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntVector FTruncVector(in FVector InVector);
 
-		// Token: 0x0600A847 RID: 43079
+		// Token: 0x06002776 RID: 10102
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long FTrunc64(float A);
 
-		// Token: 0x0600A848 RID: 43080
+		// Token: 0x06002777 RID: 10103
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int FTrunc(float A);
 
-		// Token: 0x0600A849 RID: 43081 RVA: 0x000EF1A9 File Offset: 0x000ED3A9
+		// Token: 0x06002778 RID: 10104 RVA: 0x00038089 File Offset: 0x00036289
 		[NullableContext(1)]
 		public static FTimespan FromSeconds(float Seconds)
 		{
 			return new FTimespan(UKismetMathLibrary.__FromSeconds_Internal(Seconds), null);
 		}
 
-		// Token: 0x0600A84A RID: 43082 RVA: 0x000EF1B7 File Offset: 0x000ED3B7
+		// Token: 0x06002779 RID: 10105 RVA: 0x00038097 File Offset: 0x00036297
 		[NullableContext(1)]
 		public static FTimespan FromMinutes(float Minutes)
 		{
 			return new FTimespan(UKismetMathLibrary.__FromMinutes_Internal(Minutes), null);
 		}
 
-		// Token: 0x0600A84B RID: 43083 RVA: 0x000EF1C5 File Offset: 0x000ED3C5
+		// Token: 0x0600277A RID: 10106 RVA: 0x000380A5 File Offset: 0x000362A5
 		[NullableContext(1)]
 		public static FTimespan FromMilliseconds(float Milliseconds)
 		{
 			return new FTimespan(UKismetMathLibrary.__FromMilliseconds_Internal(Milliseconds), null);
 		}
 
-		// Token: 0x0600A84C RID: 43084 RVA: 0x000EF1D3 File Offset: 0x000ED3D3
+		// Token: 0x0600277B RID: 10107 RVA: 0x000380B3 File Offset: 0x000362B3
 		[NullableContext(1)]
 		public static FTimespan FromHours(float Hours)
 		{
 			return new FTimespan(UKismetMathLibrary.__FromHours_Internal(Hours), null);
 		}
 
-		// Token: 0x0600A84D RID: 43085 RVA: 0x000EF1E1 File Offset: 0x000ED3E1
+		// Token: 0x0600277C RID: 10108 RVA: 0x000380C1 File Offset: 0x000362C1
 		[NullableContext(1)]
 		public static FTimespan FromDays(float Days)
 		{
 			return new FTimespan(UKismetMathLibrary.__FromDays_Internal(Days), null);
 		}
 
-		// Token: 0x0600A84E RID: 43086
+		// Token: 0x0600277D RID: 10109
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Fraction(float A);
 
-		// Token: 0x0600A84F RID: 43087
+		// Token: 0x0600277E RID: 10110
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int FMod(float Dividend, float Divisor, ref float Remainder);
 
-		// Token: 0x0600A850 RID: 43088
+		// Token: 0x0600277F RID: 10111
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float FMin(float A, float B);
 
-		// Token: 0x0600A851 RID: 43089
+		// Token: 0x06002780 RID: 10112
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float FMax(float A, float B);
 
-		// Token: 0x0600A852 RID: 43090 RVA: 0x000EF1EF File Offset: 0x000ED3EF
-		public static float FloatSpringInterp(float Current, float Target, ref FFloatSpringState SpringState, float Stiffness, float CriticalDampingFactor, float DeltaTime, float Mass = 1f)
-		{
-			return UKismetMathLibrary.__FloatSpringInterp_Internal(Current, Target, (SpringState ?? new FFloatSpringState()).NativePtr, Stiffness, CriticalDampingFactor, DeltaTime, Mass);
-		}
-
-		// Token: 0x0600A853 RID: 43091
+		// Token: 0x06002781 RID: 10113
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float FixedTurn(float InCurrent, float InDesired, float InDeltaRate);
 
-		// Token: 0x0600A854 RID: 43092
+		// Token: 0x06002782 RID: 10114
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float FInterpTo_Constant(float Current, float Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A855 RID: 43093
+		// Token: 0x06002783 RID: 10115
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float FInterpTo(float Current, float Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A856 RID: 43094
+		// Token: 0x06002784 RID: 10116
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float FInterpEaseInOut(float A, float B, float Alpha, float Exponent);
 
-		// Token: 0x0600A857 RID: 43095
+		// Token: 0x06002785 RID: 10117
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void FindNearestPointsOnLineSegments(FVector Segment1Start, FVector Segment1End, FVector Segment2Start, FVector Segment2End, ref FVector Segment1Point, ref FVector Segment2Point);
 
-		// Token: 0x0600A858 RID: 43096
+		// Token: 0x06002786 RID: 10118
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator FindLookAtRotation(in FVector Start, in FVector Target);
 
-		// Token: 0x0600A859 RID: 43097
+		// Token: 0x06002787 RID: 10119
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector FindClosestPointOnSegment(FVector Point, FVector SegmentStart, FVector SegmentEnd);
 
-		// Token: 0x0600A85A RID: 43098
+		// Token: 0x06002788 RID: 10120
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector FindClosestPointOnLine(FVector Point, FVector LineOrigin, FVector LineDirection);
 
-		// Token: 0x0600A85B RID: 43099
+		// Token: 0x06002789 RID: 10121
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long FFloor64(float A);
 
-		// Token: 0x0600A85C RID: 43100
+		// Token: 0x0600278A RID: 10122
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int FFloor(float A);
 
-		// Token: 0x0600A85D RID: 43101
+		// Token: 0x0600278B RID: 10123
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float FClamp(float Value, float Min, float Max);
 
-		// Token: 0x0600A85E RID: 43102
+		// Token: 0x0600278C RID: 10124
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long FCeil64(float A);
 
-		// Token: 0x0600A85F RID: 43103
+		// Token: 0x0600278D RID: 10125
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int FCeil(float A);
 
-		// Token: 0x0600A860 RID: 43104
+		// Token: 0x0600278E RID: 10126
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Exp(float A);
 
-		// Token: 0x0600A861 RID: 43105
+		// Token: 0x0600278F RID: 10127
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualExactly_VectorVector(FVector A, FVector B);
 
-		// Token: 0x0600A862 RID: 43106 RVA: 0x000EF210 File Offset: 0x000ED410
+		// Token: 0x06002790 RID: 10128 RVA: 0x000380D0 File Offset: 0x000362D0
 		public unsafe static bool EqualExactly_Vector4Vector4(in FVector4 A, in FVector4 B)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -2993,15 +2951,15 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__EqualExactly_Vector4Vector4_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A863 RID: 43107
+		// Token: 0x06002791 RID: 10129
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualExactly_Vector2DVector2D(FVector2D A, FVector2D B);
 
-		// Token: 0x0600A864 RID: 43108
+		// Token: 0x06002792 RID: 10130
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_VectorVector(FVector A, FVector B, float ErrorTolerance = 0.0001f);
 
-		// Token: 0x0600A865 RID: 43109 RVA: 0x000EF25C File Offset: 0x000ED45C
+		// Token: 0x06002793 RID: 10131 RVA: 0x0003811C File Offset: 0x0003631C
 		public unsafe static bool EqualEqual_Vector4Vector4(in FVector4 A, in FVector4 B, float ErrorTolerance = 0.0001f)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -3011,11 +2969,11 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__EqualEqual_Vector4Vector4_Internal(ptr, ptr2, ErrorTolerance);
 		}
 
-		// Token: 0x0600A866 RID: 43110
+		// Token: 0x06002794 RID: 10132
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_Vector2DVector2D(FVector2D A, FVector2D B, float ErrorTolerance = 0.0001f);
 
-		// Token: 0x0600A867 RID: 43111 RVA: 0x000EF2AC File Offset: 0x000ED4AC
+		// Token: 0x06002795 RID: 10133 RVA: 0x0003816C File Offset: 0x0003636C
 		public unsafe static bool EqualEqual_TransformTransform(in FTransform A, in FTransform B)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -3025,17 +2983,17 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__EqualEqual_TransformTransform_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A868 RID: 43112 RVA: 0x000EF2F8 File Offset: 0x000ED4F8
+		// Token: 0x06002796 RID: 10134 RVA: 0x000381B8 File Offset: 0x000363B8
 		public static bool EqualEqual_TimespanTimespan(FTimespan A, FTimespan B)
 		{
 			return UKismetMathLibrary.__EqualEqual_TimespanTimespan_Internal((A ?? new FTimespan()).NativePtr, (B ?? new FTimespan()).NativePtr);
 		}
 
-		// Token: 0x0600A869 RID: 43113
+		// Token: 0x06002797 RID: 10135
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_RotatorRotator(FRotator A, FRotator B, float ErrorTolerance = 0.0001f);
 
-		// Token: 0x0600A86A RID: 43114 RVA: 0x000EF320 File Offset: 0x000ED520
+		// Token: 0x06002798 RID: 10136 RVA: 0x000381E0 File Offset: 0x000363E0
 		public unsafe static bool EqualEqual_QuatQuat(in FQuat A, in FQuat B, float Tolerance = 0.0001f)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -3045,17 +3003,17 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__EqualEqual_QuatQuat_Internal(ptr, ptr2, Tolerance);
 		}
 
-		// Token: 0x0600A86B RID: 43115 RVA: 0x000EF36D File Offset: 0x000ED56D
+		// Token: 0x06002799 RID: 10137 RVA: 0x0003822D File Offset: 0x0003642D
 		public static bool EqualEqual_ObjectObject(UObject A, UObject B)
 		{
 			return UKismetMathLibrary.__EqualEqual_ObjectObject_Internal((A != null) ? A.NativePtr : IntPtr.Zero, (B != null) ? B.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600A86C RID: 43116
+		// Token: 0x0600279A RID: 10138
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_NameName(FName A, FName B);
 
-		// Token: 0x0600A86D RID: 43117 RVA: 0x000EF394 File Offset: 0x000ED594
+		// Token: 0x0600279B RID: 10139 RVA: 0x00038254 File Offset: 0x00036454
 		public unsafe static bool EqualEqual_MatrixMatrix(in FMatrix A, in FMatrix B, float Tolerance = 0.0001f)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3065,81 +3023,81 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__EqualEqual_MatrixMatrix_Internal(ptr, ptr2, Tolerance);
 		}
 
-		// Token: 0x0600A86E RID: 43118
+		// Token: 0x0600279C RID: 10140
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_LinearColorLinearColor(FLinearColor A, FLinearColor B);
 
-		// Token: 0x0600A86F RID: 43119
+		// Token: 0x0600279D RID: 10141
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_IntInt(int A, int B);
 
-		// Token: 0x0600A870 RID: 43120
+		// Token: 0x0600279E RID: 10142
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_Int64Int64(long A, long B);
 
-		// Token: 0x0600A871 RID: 43121
+		// Token: 0x0600279F RID: 10143
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_FloatFloat(float A, float B);
 
-		// Token: 0x0600A872 RID: 43122 RVA: 0x000EF3E1 File Offset: 0x000ED5E1
+		// Token: 0x060027A0 RID: 10144 RVA: 0x000382A1 File Offset: 0x000364A1
 		public static bool EqualEqual_DateTimeDateTime(FDateTime A, FDateTime B)
 		{
 			return UKismetMathLibrary.__EqualEqual_DateTimeDateTime_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FDateTime()).NativePtr);
 		}
 
-		// Token: 0x0600A873 RID: 43123
+		// Token: 0x060027A1 RID: 10145
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_ClassClass(UClassStackOnlyPtr A, UClassStackOnlyPtr B);
 
-		// Token: 0x0600A874 RID: 43124
+		// Token: 0x060027A2 RID: 10146
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_ByteByte(byte A, byte B);
 
-		// Token: 0x0600A875 RID: 43125
+		// Token: 0x060027A3 RID: 10147
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_BoolBool(bool A, bool B);
 
-		// Token: 0x0600A876 RID: 43126
+		// Token: 0x060027A4 RID: 10148
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Equal_IntPointIntPoint(FIntPoint A, FIntPoint B);
 
-		// Token: 0x0600A877 RID: 43127
+		// Token: 0x060027A5 RID: 10149
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Ease(float A, float B, float Alpha, EEasingFunc EasingFunc, float BlendExp = 2f, int Steps = 2);
 
-		// Token: 0x0600A878 RID: 43128
+		// Token: 0x060027A6 RID: 10150
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector DynamicWeightedMovingAverage_FVector(FVector CurrentSample, FVector PreviousSample, float MaxDistance, float MinWeight, float MaxWeight);
 
-		// Token: 0x0600A879 RID: 43129
+		// Token: 0x060027A7 RID: 10151
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator DynamicWeightedMovingAverage_FRotator(FRotator CurrentSample, FRotator PreviousSample, float MaxDistance, float MinWeight, float MaxWeight);
 
-		// Token: 0x0600A87A RID: 43130
+		// Token: 0x060027A8 RID: 10152
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DynamicWeightedMovingAverage_Float(float CurrentSample, float PreviousSample, float MaxDistance, float MinWeight, float MaxWeight);
 
-		// Token: 0x0600A87B RID: 43131
+		// Token: 0x060027A9 RID: 10153
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DotProduct2D(FVector2D A, FVector2D B);
 
-		// Token: 0x0600A87C RID: 43132
+		// Token: 0x060027AA RID: 10154
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Dot_VectorVector(FVector A, FVector B);
 
-		// Token: 0x0600A87D RID: 43133
+		// Token: 0x060027AB RID: 10155
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Divide_VectorVector(FVector A, FVector? B = null);
 
-		// Token: 0x0600A87E RID: 43134
+		// Token: 0x060027AC RID: 10156
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Divide_VectorInt(FVector A, int B = 1);
 
-		// Token: 0x0600A87F RID: 43135
+		// Token: 0x060027AD RID: 10157
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Divide_VectorFloat(FVector A, float B = 1f);
 
-		// Token: 0x0600A880 RID: 43136 RVA: 0x000EF408 File Offset: 0x000ED608
+		// Token: 0x060027AE RID: 10158 RVA: 0x000382C8 File Offset: 0x000364C8
 		public unsafe static FVector4 Divide_Vector4Vector4(in FVector4 A, in FVector4 B)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -3149,121 +3107,120 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Divide_Vector4Vector4_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A881 RID: 43137
+		// Token: 0x060027AF RID: 10159
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Divide_Vector2DVector2D(FVector2D A, FVector2D B);
 
-		// Token: 0x0600A882 RID: 43138
+		// Token: 0x060027B0 RID: 10160
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Divide_Vector2DFloat(FVector2D A, float B = 1f);
 
-		// Token: 0x0600A883 RID: 43139 RVA: 0x000EF454 File Offset: 0x000ED654
+		// Token: 0x060027B1 RID: 10161 RVA: 0x00038314 File Offset: 0x00036514
 		[NullableContext(1)]
 		public static FTimespan Divide_TimespanFloat([Nullable(2)] FTimespan A, float Scalar)
 		{
 			return new FTimespan(UKismetMathLibrary.__Divide_TimespanFloat_Internal((A ?? new FTimespan()).NativePtr, Scalar), null);
 		}
 
-		// Token: 0x0600A884 RID: 43140
+		// Token: 0x060027B2 RID: 10162
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor Divide_LinearColorLinearColor(FLinearColor A, FLinearColor B);
 
-		// Token: 0x0600A885 RID: 43141
+		// Token: 0x060027B3 RID: 10163
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint Divide_IntPointIntPoint(FIntPoint A, FIntPoint B);
 
-		// Token: 0x0600A886 RID: 43142
+		// Token: 0x060027B4 RID: 10164
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint Divide_IntPointInt(FIntPoint A, int B);
 
-		// Token: 0x0600A887 RID: 43143
+		// Token: 0x060027B5 RID: 10165
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Divide_IntInt(int A, int B = 1);
 
-		// Token: 0x0600A888 RID: 43144
+		// Token: 0x060027B6 RID: 10166
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Divide_Int64Int64(long A, long B = 1L);
 
-		// Token: 0x0600A889 RID: 43145 RVA: 0x000EF474 File Offset: 0x000ED674
+		// Token: 0x060027B7 RID: 10167 RVA: 0x00038334 File Offset: 0x00036534
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static float Divide_FloatFloat(float A, float B = 1f)
 		{
 			UKismetMathLibrary.__Divide_FloatFloat_FunctionParams* ptr = stackalloc UKismetMathLibrary.__Divide_FloatFloat_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UKismetMathLibrary.__Divide_FloatFloat_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKismetMathLibrary.__Divide_FloatFloat_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->A = A;
 			ptr->B = B;
-			UnrealReflectionUtils.CallUFunction(UKismetMathLibrary._ClassDefaultObjectPtr, UKismetMathLibrary.__Divide_FloatFloat_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKismetMathLibrary._ClassDefaultObjectPtr, UKismetMathLibrary.__Divide_FloatFloat_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0600A88A RID: 43146
+		// Token: 0x060027B8 RID: 10168
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte Divide_ByteByte(byte A, byte B = 1);
 
-		// Token: 0x0600A88B RID: 43147
+		// Token: 0x060027B9 RID: 10169
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DistanceSquared2D(FVector2D V1, FVector2D V2);
 
-		// Token: 0x0600A88C RID: 43148
+		// Token: 0x060027BA RID: 10170
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Distance2D(FVector2D V1, FVector2D V2);
 
-		// Token: 0x0600A88D RID: 43149
+		// Token: 0x060027BB RID: 10171
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DegTan(float A);
 
-		// Token: 0x0600A88E RID: 43150
+		// Token: 0x060027BC RID: 10172
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DegSin(float A);
 
-		// Token: 0x0600A88F RID: 43151
+		// Token: 0x060027BD RID: 10173
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DegreesToRadians(float A);
 
-		// Token: 0x0600A890 RID: 43152
+		// Token: 0x060027BE RID: 10174
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DegCos(float A);
 
-		// Token: 0x0600A891 RID: 43153
+		// Token: 0x060027BF RID: 10175
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DegAtan2(float Y, float X);
 
-		// Token: 0x0600A892 RID: 43154
+		// Token: 0x060027C0 RID: 10176
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DegAtan(float A);
 
-		// Token: 0x0600A893 RID: 43155
+		// Token: 0x060027C1 RID: 10177
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DegAsin(float A);
 
-		// Token: 0x0600A894 RID: 43156
+		// Token: 0x060027C2 RID: 10178
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float DegAcos(float A);
 
-		// Token: 0x0600A895 RID: 43157
+		// Token: 0x060027C3 RID: 10179
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int DaysInYear(int Year);
 
-		// Token: 0x0600A896 RID: 43158
+		// Token: 0x060027C4 RID: 10180
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int DaysInMonth(int Year, int Month);
 
-		// Token: 0x0600A897 RID: 43159 RVA: 0x000EF4C7 File Offset: 0x000ED6C7
+		// Token: 0x060027C5 RID: 10181 RVA: 0x00038386 File Offset: 0x00036586
 		[NullableContext(1)]
 		public static FDateTime DateTimeMinValue()
 		{
 			return new FDateTime(UKismetMathLibrary.__DateTimeMinValue_Internal(), null);
 		}
 
-		// Token: 0x0600A898 RID: 43160 RVA: 0x000EF4D4 File Offset: 0x000ED6D4
+		// Token: 0x060027C6 RID: 10182 RVA: 0x00038393 File Offset: 0x00036593
 		[NullableContext(1)]
 		public static FDateTime DateTimeMaxValue()
 		{
 			return new FDateTime(UKismetMathLibrary.__DateTimeMaxValue_Internal(), null);
 		}
 
-		// Token: 0x0600A899 RID: 43161 RVA: 0x000EF4E4 File Offset: 0x000ED6E4
+		// Token: 0x060027C7 RID: 10183 RVA: 0x000383A0 File Offset: 0x000365A0
 		[NullableContext(1)]
 		public unsafe static bool DateTimeFromString(string DateTimeString, [Nullable(2)] ref FDateTime Result)
 		{
@@ -3273,7 +3230,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A89A RID: 43162 RVA: 0x000EF518 File Offset: 0x000ED718
+		// Token: 0x060027C8 RID: 10184 RVA: 0x000383D4 File Offset: 0x000365D4
 		[NullableContext(1)]
 		public unsafe static bool DateTimeFromIsoString(string IsoString, [Nullable(2)] ref FDateTime Result)
 		{
@@ -3283,131 +3240,131 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A89B RID: 43163
+		// Token: 0x060027C9 RID: 10185
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_VSizeXYSquared(FVectorDouble A);
 
-		// Token: 0x0600A89C RID: 43164
+		// Token: 0x060027CA RID: 10186
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_VSizeXY(FVectorDouble A);
 
-		// Token: 0x0600A89D RID: 43165
+		// Token: 0x060027CB RID: 10187
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_VSizeSquared(FVectorDouble A);
 
-		// Token: 0x0600A89E RID: 43166
+		// Token: 0x060027CC RID: 10188
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_VSize2DSquared(FVector2DDouble A);
 
-		// Token: 0x0600A89F RID: 43167
+		// Token: 0x060027CD RID: 10189
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_VSize2D(FVector2DDouble A);
 
-		// Token: 0x0600A8A0 RID: 43168
+		// Token: 0x060027CE RID: 10190
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_VSize(FVectorDouble A);
 
-		// Token: 0x0600A8A1 RID: 43169
+		// Token: 0x060027CF RID: 10191
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_VLerp(FVectorDouble A, FVectorDouble B, double Alpha);
 
-		// Token: 0x0600A8A2 RID: 43170
+		// Token: 0x060027D0 RID: 10192
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_VInterpTo_Constant(FVectorDouble Current, FVectorDouble Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A8A3 RID: 43171
+		// Token: 0x060027D1 RID: 10193
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_VInterpTo(FVectorDouble Current, FVectorDouble Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A8A4 RID: 43172
+		// Token: 0x060027D2 RID: 10194
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_Zero();
 
-		// Token: 0x0600A8A5 RID: 43173
+		// Token: 0x060027D3 RID: 10195
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_Up();
 
-		// Token: 0x0600A8A6 RID: 43174
+		// Token: 0x060027D4 RID: 10196
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_Right();
 
-		// Token: 0x0600A8A7 RID: 43175
+		// Token: 0x060027D5 RID: 10197
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_One();
 
-		// Token: 0x0600A8A8 RID: 43176
+		// Token: 0x060027D6 RID: 10198
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_Normal2D(FVectorDouble A, double Tolerance = 0.0001);
 
-		// Token: 0x0600A8A9 RID: 43177
+		// Token: 0x060027D7 RID: 10199
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_Left();
 
-		// Token: 0x0600A8AA RID: 43178
+		// Token: 0x060027D8 RID: 10200
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_Vector_IsZero(in FVectorDouble A);
 
-		// Token: 0x0600A8AB RID: 43179
+		// Token: 0x060027D9 RID: 10201
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Vector_HeadingAngle(FVectorDouble A);
 
-		// Token: 0x0600A8AC RID: 43180
+		// Token: 0x060027DA RID: 10202
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_GetSignVector(FVectorDouble A);
 
-		// Token: 0x0600A8AD RID: 43181
+		// Token: 0x060027DB RID: 10203
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Vector_GetAbsMin(FVectorDouble A);
 
-		// Token: 0x0600A8AE RID: 43182
+		// Token: 0x060027DC RID: 10204
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Vector_GetAbsMax(FVectorDouble A);
 
-		// Token: 0x0600A8AF RID: 43183
+		// Token: 0x060027DD RID: 10205
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_GetAbs(FVectorDouble A);
 
-		// Token: 0x0600A8B0 RID: 43184
+		// Token: 0x060027DE RID: 10206
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_Forward();
 
-		// Token: 0x0600A8B1 RID: 43185
+		// Token: 0x060027DF RID: 10207
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_Down();
 
-		// Token: 0x0600A8B2 RID: 43186
+		// Token: 0x060027E0 RID: 10208
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Vector_DistanceSquared(FVectorDouble V1, FVectorDouble V2);
 
-		// Token: 0x0600A8B3 RID: 43187
+		// Token: 0x060027E1 RID: 10209
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Vector_Distance2D(FVectorDouble V1, FVectorDouble V2);
 
-		// Token: 0x0600A8B4 RID: 43188
+		// Token: 0x060027E2 RID: 10210
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Vector_Distance(FVectorDouble V1, FVectorDouble V2);
 
-		// Token: 0x0600A8B5 RID: 43189
+		// Token: 0x060027E3 RID: 10211
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Vector_CosineAngle2D(FVectorDouble A, FVectorDouble B);
 
-		// Token: 0x0600A8B6 RID: 43190
+		// Token: 0x060027E4 RID: 10212
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_ClampSizeMax(FVectorDouble A, double Max);
 
-		// Token: 0x0600A8B7 RID: 43191
+		// Token: 0x060027E5 RID: 10213
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Vector_Backward();
 
-		// Token: 0x0600A8B8 RID: 43192
+		// Token: 0x060027E6 RID: 10214
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Vector2DInterpTo_Constant(FVector2DDouble Current, FVector2DDouble Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A8B9 RID: 43193
+		// Token: 0x060027E7 RID: 10215
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Vector2DInterpTo(FVector2DDouble Current, FVector2DDouble Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A8BA RID: 43194 RVA: 0x000EF54C File Offset: 0x000ED74C
+		// Token: 0x060027E8 RID: 10216 RVA: 0x00038408 File Offset: 0x00036608
 		public unsafe static FRotator D_TransformRotation(in FTransformDouble T, FRotator Rotation)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3415,7 +3372,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_TransformRotation_Internal(uintPtr, Rotation);
 		}
 
-		// Token: 0x0600A8BB RID: 43195 RVA: 0x000EF57C File Offset: 0x000ED77C
+		// Token: 0x060027E9 RID: 10217 RVA: 0x00038438 File Offset: 0x00036638
 		public unsafe static FVectorDouble D_TransformLocation(in FTransformDouble T, FVectorDouble Location)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3423,7 +3380,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_TransformLocation_Internal(uintPtr, Location);
 		}
 
-		// Token: 0x0600A8BC RID: 43196 RVA: 0x000EF5AC File Offset: 0x000ED7AC
+		// Token: 0x060027EA RID: 10218 RVA: 0x00038468 File Offset: 0x00036668
 		public unsafe static FVectorDouble D_TransformDirection(in FTransformDouble T, FVectorDouble Direction)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3431,19 +3388,19 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_TransformDirection_Internal(uintPtr, Direction);
 		}
 
-		// Token: 0x0600A8BD RID: 43197
+		// Token: 0x060027EB RID: 10219
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_ToSign2D(FVector2DDouble A);
 
-		// Token: 0x0600A8BE RID: 43198
+		// Token: 0x060027EC RID: 10220
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_ToRounded2D(FVector2DDouble A);
 
-		// Token: 0x0600A8BF RID: 43199
+		// Token: 0x060027ED RID: 10221
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void D_ToDirectionAndLength2D(FVector2DDouble A, ref FVector2DDouble OutDir, ref double OutLength);
 
-		// Token: 0x0600A8C0 RID: 43200 RVA: 0x000EF5DC File Offset: 0x000ED7DC
+		// Token: 0x060027EE RID: 10222 RVA: 0x00038498 File Offset: 0x00036698
 		public unsafe static FTransformDouble D_TLerp(in FTransformDouble A, in FTransformDouble B, float Alpha, ELerpInterpolationMode InterpMode = ELerpInterpolationMode.QuatInterp)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3453,7 +3410,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_TLerp_Internal(ptr, ptr2, Alpha, InterpMode);
 		}
 
-		// Token: 0x0600A8C1 RID: 43201 RVA: 0x000EF630 File Offset: 0x000ED830
+		// Token: 0x060027EF RID: 10223 RVA: 0x000384EC File Offset: 0x000366EC
 		public unsafe static FTransformDouble D_TInterpTo(in FTransformDouble Current, in FTransformDouble Target, float DeltaTime, float InterpSpeed)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3463,212 +3420,211 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_TInterpTo_Internal(ptr, ptr2, DeltaTime, InterpSpeed);
 		}
 
-		// Token: 0x0600A8C2 RID: 43202
+		// Token: 0x060027F0 RID: 10224
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Tan(double A);
 
-		// Token: 0x0600A8C3 RID: 43203
+		// Token: 0x060027F1 RID: 10225
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Subtract_VectorVector(FVectorDouble A, FVectorDouble B);
 
-		// Token: 0x0600A8C4 RID: 43204
+		// Token: 0x060027F2 RID: 10226
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Subtract_VectorFloat(FVectorDouble A, double B);
 
-		// Token: 0x0600A8C5 RID: 43205
+		// Token: 0x060027F3 RID: 10227
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Subtract_Vector2DVector2D(FVector2DDouble A, FVector2DDouble B);
 
-		// Token: 0x0600A8C6 RID: 43206
+		// Token: 0x060027F4 RID: 10228
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Subtract_Vector2DFloat(FVector2DDouble A, double B);
 
-		// Token: 0x0600A8C7 RID: 43207
+		// Token: 0x060027F5 RID: 10229
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Subtract_FloatFloat(double A, double B = 1.0);
 
-		// Token: 0x0600A8C8 RID: 43208
+		// Token: 0x060027F6 RID: 10230
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Square(double A);
 
-		// Token: 0x0600A8C9 RID: 43209
+		// Token: 0x060027F7 RID: 10231
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Sqrt(double A);
 
-		// Token: 0x0600A8CA RID: 43210
+		// Token: 0x060027F8 RID: 10232
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Spherical2DToUnitCartesian(FVector2DDouble A);
 
-		// Token: 0x0600A8CB RID: 43211
+		// Token: 0x060027F9 RID: 10233
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Sin(double A);
 
-		// Token: 0x0600A8CC RID: 43212
+		// Token: 0x060027FA RID: 10234
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_SignOfFloat(double A);
 
-		// Token: 0x0600A8CD RID: 43213
+		// Token: 0x060027FB RID: 10235
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void D_Set2D(ref FVector2DDouble A, double X, double Y);
 
-		// Token: 0x0600A8CE RID: 43214
+		// Token: 0x060027FC RID: 10236
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_SelectVector(FVectorDouble A, FVectorDouble B, bool bPickA);
 
-		// Token: 0x0600A8CF RID: 43215
+		// Token: 0x060027FD RID: 10237
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_SafeDivide(double A, double B);
 
-		// Token: 0x0600A8D0 RID: 43216
+		// Token: 0x060027FE RID: 10238
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long D_Round64(double A);
 
-		// Token: 0x0600A8D1 RID: 43217
+		// Token: 0x060027FF RID: 10239
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int D_Round(double A);
 
-		// Token: 0x0600A8D2 RID: 43218
+		// Token: 0x06002800 RID: 10240
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_RotatorFromAxisAndAngle(FVectorDouble Axis, float Angle);
 
-		// Token: 0x0600A8D3 RID: 43219
+		// Token: 0x06002801 RID: 10241
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_RotateAngleAxis(FVectorDouble InVect, float AngleDeg, FVectorDouble Axis);
 
-		// Token: 0x0600A8D4 RID: 43220
+		// Token: 0x06002802 RID: 10242
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_RandomPointInBoundingBox(FVectorDouble Origin, FVectorDouble BoxExtent);
 
-		// Token: 0x0600A8D5 RID: 43221
+		// Token: 0x06002803 RID: 10243
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_RandomFloatInRange(double Min, double Max);
 
-		// Token: 0x0600A8D6 RID: 43222
+		// Token: 0x06002804 RID: 10244
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_RandomFloat();
 
-		// Token: 0x0600A8D7 RID: 43223
+		// Token: 0x06002805 RID: 10245
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_RandomBoolWithWeight(double Weight);
 
-		// Token: 0x0600A8D8 RID: 43224
+		// Token: 0x06002806 RID: 10246
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_RadiansToDegrees(double A);
 
-		// Token: 0x0600A8D9 RID: 43225
+		// Token: 0x06002807 RID: 10247
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_ProjectVectorOnToVector(FVectorDouble V, FVectorDouble Target);
 
-		// Token: 0x0600A8DA RID: 43226
+		// Token: 0x06002808 RID: 10248
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_ProjectVectorOnToPlane(FVectorDouble V, FVectorDouble PlaneNormal);
 
-		// Token: 0x0600A8DB RID: 43227
+		// Token: 0x06002809 RID: 10249
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_ProjectPointOnToPlane(FVectorDouble Point, FVectorDouble PlaneBase, FVectorDouble PlaneNormal);
 
-		// Token: 0x0600A8DC RID: 43228 RVA: 0x000EF680 File Offset: 0x000ED880
+		// Token: 0x0600280A RID: 10250 RVA: 0x0003853C File Offset: 0x0003673C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static double D_Percent_FloatFloat(double A, double B = 1.0)
 		{
 			UKismetMathLibrary.__D_Percent_FloatFloat_FunctionParams* ptr = stackalloc UKismetMathLibrary.__D_Percent_FloatFloat_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(UKismetMathLibrary.__D_Percent_FloatFloat_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKismetMathLibrary.__D_Percent_FloatFloat_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->A = A;
 			ptr->B = B;
-			UnrealReflectionUtils.CallUFunction(UKismetMathLibrary._ClassDefaultObjectPtr, UKismetMathLibrary.__D_Percent_FloatFloat_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKismetMathLibrary._ClassDefaultObjectPtr, UKismetMathLibrary.__D_Percent_FloatFloat_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0600A8DD RID: 43229
+		// Token: 0x0600280B RID: 10251
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_NotEqualExactly_VectorVector(FVectorDouble A, FVectorDouble B);
 
-		// Token: 0x0600A8DE RID: 43230
+		// Token: 0x0600280C RID: 10252
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_NotEqualExactly_Vector2DVector2D(FVector2DDouble A, FVector2DDouble B);
 
-		// Token: 0x0600A8DF RID: 43231
+		// Token: 0x0600280D RID: 10253
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_NotEqual_VectorVector(FVectorDouble A, FVectorDouble B, float ErrorTolerance = 0.0001f);
 
-		// Token: 0x0600A8E0 RID: 43232
+		// Token: 0x0600280E RID: 10254
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_NotEqual_Vector2DVector2D(FVector2DDouble A, FVector2DDouble B, double ErrorTolerance = 0.0001);
 
-		// Token: 0x0600A8E1 RID: 43233
+		// Token: 0x0600280F RID: 10255
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_NotEqual_FloatFloat(double A, double B);
 
-		// Token: 0x0600A8E2 RID: 43234
+		// Token: 0x06002810 RID: 10256
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_NormalSafe2D(FVector2DDouble A, double Tolerance = 0.0);
 
-		// Token: 0x0600A8E3 RID: 43235
+		// Token: 0x06002811 RID: 10257
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_NormalizeToRange(double Value, double RangeMin, double RangeMax);
 
-		// Token: 0x0600A8E4 RID: 43236
+		// Token: 0x06002812 RID: 10258
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void D_Normalize2D(ref FVector2DDouble A, double Tolerance = 0.0);
 
-		// Token: 0x0600A8E5 RID: 43237
+		// Token: 0x06002813 RID: 10259
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Normal2D(FVector2DDouble A);
 
-		// Token: 0x0600A8E6 RID: 43238
+		// Token: 0x06002814 RID: 10260
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Normal(FVectorDouble A, double Tolerance = 0.0001);
 
-		// Token: 0x0600A8E7 RID: 43239
+		// Token: 0x06002815 RID: 10261
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_NegateVector(FVectorDouble A);
 
-		// Token: 0x0600A8E8 RID: 43240
+		// Token: 0x06002816 RID: 10262
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Negated2D(in FVector2DDouble A);
 
-		// Token: 0x0600A8E9 RID: 43241
+		// Token: 0x06002817 RID: 10263
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_NearlyEqual_FloatFloat(double A, double B, double ErrorTolerance = 1E-06);
 
-		// Token: 0x0600A8EA RID: 43242
+		// Token: 0x06002818 RID: 10264
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_MultiplyMultiply_FloatFloat(double Base, double Exp);
 
-		// Token: 0x0600A8EB RID: 43243
+		// Token: 0x06002819 RID: 10265
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_MultiplyByPi(double Value);
 
-		// Token: 0x0600A8EC RID: 43244
+		// Token: 0x0600281A RID: 10266
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Multiply_VectorVector(FVectorDouble A, FVectorDouble B);
 
-		// Token: 0x0600A8ED RID: 43245
+		// Token: 0x0600281B RID: 10267
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Multiply_VectorInt(FVectorDouble A, int B);
 
-		// Token: 0x0600A8EE RID: 43246
+		// Token: 0x0600281C RID: 10268
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Multiply_VectorFloat(FVectorDouble A, double B);
 
-		// Token: 0x0600A8EF RID: 43247
+		// Token: 0x0600281D RID: 10269
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Multiply_Vector2DVector2D(FVector2DDouble A, FVector2DDouble B);
 
-		// Token: 0x0600A8F0 RID: 43248
+		// Token: 0x0600281E RID: 10270
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Multiply_Vector2DFloat(FVector2DDouble A, double B);
 
-		// Token: 0x0600A8F1 RID: 43249
+		// Token: 0x0600281F RID: 10271
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Multiply_IntFloat(int A, double B);
 
-		// Token: 0x0600A8F2 RID: 43250
+		// Token: 0x06002820 RID: 10272
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Multiply_FloatFloat(double A, double B);
 
-		// Token: 0x0600A8F3 RID: 43251 RVA: 0x000EF6D4 File Offset: 0x000ED8D4
+		// Token: 0x06002821 RID: 10273 RVA: 0x00038590 File Offset: 0x00036790
 		public unsafe static void D_MinOfFloatArray(in TArray<double> FloatArray, ref int IndexOfMinValue, ref double MinValue)
 		{
 			fixed (int* ptr = &IndexOfMinValue)
@@ -3683,7 +3639,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A8F4 RID: 43252 RVA: 0x000EF708 File Offset: 0x000ED908
+		// Token: 0x06002822 RID: 10274 RVA: 0x000385C4 File Offset: 0x000367C4
 		public unsafe static void D_MaxOfFloatArray(in TArray<double> FloatArray, ref int IndexOfMaxValue, ref double MaxValue)
 		{
 			fixed (int* ptr = &IndexOfMaxValue)
@@ -3698,55 +3654,55 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A8F5 RID: 43253
+		// Token: 0x06002823 RID: 10275
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_MapRangeUnclamped(double Value, double InRangeA, double InRangeB, double OutRangeA, double OutRangeB);
 
-		// Token: 0x0600A8F6 RID: 43254
+		// Token: 0x06002824 RID: 10276
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_MapRangeClamped(double Value, double InRangeA, double InRangeB, double OutRangeA, double OutRangeB);
 
-		// Token: 0x0600A8F7 RID: 43255
+		// Token: 0x06002825 RID: 10277
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotFromZY(in FVectorDouble Z, in FVectorDouble Y);
 
-		// Token: 0x0600A8F8 RID: 43256
+		// Token: 0x06002826 RID: 10278
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotFromZX(in FVectorDouble Z, in FVectorDouble X);
 
-		// Token: 0x0600A8F9 RID: 43257
+		// Token: 0x06002827 RID: 10279
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotFromZ(in FVectorDouble Z);
 
-		// Token: 0x0600A8FA RID: 43258
+		// Token: 0x06002828 RID: 10280
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotFromYZ(in FVectorDouble Y, in FVectorDouble Z);
 
-		// Token: 0x0600A8FB RID: 43259
+		// Token: 0x06002829 RID: 10281
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotFromYX(in FVectorDouble Y, in FVectorDouble X);
 
-		// Token: 0x0600A8FC RID: 43260
+		// Token: 0x0600282A RID: 10282
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotFromY(in FVectorDouble Y);
 
-		// Token: 0x0600A8FD RID: 43261
+		// Token: 0x0600282B RID: 10283
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotFromXZ(in FVectorDouble X, in FVectorDouble Z);
 
-		// Token: 0x0600A8FE RID: 43262
+		// Token: 0x0600282C RID: 10284
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotFromXY(in FVectorDouble X, in FVectorDouble Y);
 
-		// Token: 0x0600A8FF RID: 43263
+		// Token: 0x0600282D RID: 10285
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotFromX(in FVectorDouble X);
 
-		// Token: 0x0600A900 RID: 43264
+		// Token: 0x0600282E RID: 10286
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_MakeRotationFromAxes(FVectorDouble Forward, FVectorDouble Right, FVectorDouble Up);
 
-		// Token: 0x0600A901 RID: 43265 RVA: 0x000EF73C File Offset: 0x000ED93C
+		// Token: 0x0600282F RID: 10287 RVA: 0x000385F8 File Offset: 0x000367F8
 		public unsafe static FTransformDouble D_MakeRelativeTransform(in FTransformDouble A, in FTransformDouble RelativeTo)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3756,39 +3712,39 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_MakeRelativeTransform_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A902 RID: 43266
+		// Token: 0x06002830 RID: 10288
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_MakePulsatingValue(double InCurrentTime, double InPulsesPerSecond = 1.0, double InPhase = 0.0);
 
-		// Token: 0x0600A903 RID: 43267
+		// Token: 0x06002831 RID: 10289
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Loge(double A);
 
-		// Token: 0x0600A904 RID: 43268
+		// Token: 0x06002832 RID: 10290
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Log(double A, double Base = 1.0);
 
-		// Token: 0x0600A905 RID: 43269
+		// Token: 0x06002833 RID: 10291
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_LessEqual_FloatFloat(double A, double B);
 
-		// Token: 0x0600A906 RID: 43270
+		// Token: 0x06002834 RID: 10292
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_Less_FloatFloat(double A, double B);
 
-		// Token: 0x0600A907 RID: 43271
+		// Token: 0x06002835 RID: 10293
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Lerp(double A, double B, double Alpha);
 
-		// Token: 0x0600A908 RID: 43272
+		// Token: 0x06002836 RID: 10294
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_IsZero2D(in FVector2DDouble A);
 
-		// Token: 0x0600A909 RID: 43273
+		// Token: 0x06002837 RID: 10295
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_IsNearlyZero2D(in FVector2DDouble A, double Tolerance = 0.0001);
 
-		// Token: 0x0600A90A RID: 43274 RVA: 0x000EF788 File Offset: 0x000ED988
+		// Token: 0x06002838 RID: 10296 RVA: 0x00038644 File Offset: 0x00036844
 		public unsafe static FTransformDouble D_InvertTransform(in FTransformDouble T)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3796,7 +3752,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_InvertTransform_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A90B RID: 43275 RVA: 0x000EF7B8 File Offset: 0x000ED9B8
+		// Token: 0x06002839 RID: 10297 RVA: 0x00038674 File Offset: 0x00036874
 		public unsafe static FRotator D_InverseTransformRotation(in FTransformDouble T, FRotator Rotation)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3804,7 +3760,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_InverseTransformRotation_Internal(uintPtr, Rotation);
 		}
 
-		// Token: 0x0600A90C RID: 43276 RVA: 0x000EF7E8 File Offset: 0x000ED9E8
+		// Token: 0x0600283A RID: 10298 RVA: 0x000386A4 File Offset: 0x000368A4
 		public unsafe static FVectorDouble D_InverseTransformLocation(in FTransformDouble T, FVectorDouble Location)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3812,7 +3768,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_InverseTransformLocation_Internal(uintPtr, Location);
 		}
 
-		// Token: 0x0600A90D RID: 43277 RVA: 0x000EF818 File Offset: 0x000EDA18
+		// Token: 0x0600283B RID: 10299 RVA: 0x000386D4 File Offset: 0x000368D4
 		public unsafe static FVectorDouble D_InverseTransformDirection(in FTransformDouble T, FVectorDouble Direction)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -3820,310 +3776,309 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_InverseTransformDirection_Internal(uintPtr, Direction);
 		}
 
-		// Token: 0x0600A90E RID: 43278
+		// Token: 0x0600283C RID: 10300
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_InRange_FloatFloat(double Value, double Min, double Max, bool InclusiveMin = true, bool InclusiveMax = true);
 
-		// Token: 0x0600A90F RID: 43279
+		// Token: 0x0600283D RID: 10301
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Hypotenuse(double Width, double Height);
 
-		// Token: 0x0600A910 RID: 43280
+		// Token: 0x0600283E RID: 10302
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_GridSnap_Float(double Location, double GridSize);
 
-		// Token: 0x0600A911 RID: 43281
+		// Token: 0x0600283F RID: 10303
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_GreaterGreater_VectorRotator(FVectorDouble A, FRotator B);
 
-		// Token: 0x0600A912 RID: 43282
+		// Token: 0x06002840 RID: 10304
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_GreaterEqual_FloatFloat(double A, double B);
 
-		// Token: 0x0600A913 RID: 43283
+		// Token: 0x06002841 RID: 10305
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_Greater_FloatFloat(double A, double B);
 
-		// Token: 0x0600A914 RID: 43284 RVA: 0x000EF846 File Offset: 0x000EDA46
+		// Token: 0x06002842 RID: 10306 RVA: 0x00038702 File Offset: 0x00036902
 		public static FVectorDouble D_GetVectorArrayAverage(in TArray<FVectorDouble> Vectors)
 		{
 			return UKismetMathLibrary.__D_GetVectorArrayAverage_Internal((Vectors ?? new TArray<FVectorDouble>()).NativePtr);
 		}
 
-		// Token: 0x0600A915 RID: 43285
+		// Token: 0x06002843 RID: 10307
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_GetUpVector(FRotator InRot);
 
-		// Token: 0x0600A916 RID: 43286
+		// Token: 0x06002844 RID: 10308
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_GetTAU();
 
-		// Token: 0x0600A917 RID: 43287
+		// Token: 0x06002845 RID: 10309
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_GetRotated2D(FVector2DDouble A, double AngleDeg);
 
-		// Token: 0x0600A918 RID: 43288
+		// Token: 0x06002846 RID: 10310
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_GetRightVector(FRotator InRot);
 
-		// Token: 0x0600A919 RID: 43289
+		// Token: 0x06002847 RID: 10311
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_GetPI();
 
-		// Token: 0x0600A91A RID: 43290
+		// Token: 0x06002848 RID: 10312
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_GetMinElement(FVectorDouble A);
 
-		// Token: 0x0600A91B RID: 43291
+		// Token: 0x06002849 RID: 10313
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_GetMin2D(FVector2DDouble A);
 
-		// Token: 0x0600A91C RID: 43292
+		// Token: 0x0600284A RID: 10314
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_GetMaxElement(FVectorDouble A);
 
-		// Token: 0x0600A91D RID: 43293
+		// Token: 0x0600284B RID: 10315
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_GetMax2D(FVector2DDouble A);
 
-		// Token: 0x0600A91E RID: 43294
+		// Token: 0x0600284C RID: 10316
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_GetForwardVector(FRotator InRot);
 
-		// Token: 0x0600A91F RID: 43295
+		// Token: 0x0600284D RID: 10317
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_GetDirectionUnitVector(FVectorDouble From, FVectorDouble To);
 
-		// Token: 0x0600A920 RID: 43296
+		// Token: 0x0600284E RID: 10318
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_GetAbsMax2D(FVector2DDouble A);
 
-		// Token: 0x0600A921 RID: 43297
+		// Token: 0x0600284F RID: 10319
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_GetAbs2D(FVector2DDouble A);
 
-		// Token: 0x0600A922 RID: 43298
+		// Token: 0x06002850 RID: 10320
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_FWrap(double Value, double Min, double Max);
 
-		// Token: 0x0600A923 RID: 43299
+		// Token: 0x06002851 RID: 10321
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntVector D_FTruncVector(in FVectorDouble InVector);
 
-		// Token: 0x0600A924 RID: 43300
+		// Token: 0x06002852 RID: 10322
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long D_FTrunc64(double A);
 
-		// Token: 0x0600A925 RID: 43301
+		// Token: 0x06002853 RID: 10323
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int D_FTrunc(double A);
 
-		// Token: 0x0600A926 RID: 43302
+		// Token: 0x06002854 RID: 10324
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Fraction(double A);
 
-		// Token: 0x0600A927 RID: 43303
+		// Token: 0x06002855 RID: 10325
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int D_FMod(double Dividend, double Divisor, ref double Remainder);
 
-		// Token: 0x0600A928 RID: 43304
+		// Token: 0x06002856 RID: 10326
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_FMin(double A, double B);
 
-		// Token: 0x0600A929 RID: 43305
+		// Token: 0x06002857 RID: 10327
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_FMax(double A, double B);
 
-		// Token: 0x0600A92A RID: 43306
+		// Token: 0x06002858 RID: 10328
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_FixedTurn(double InCurrent, double InDesired, double InDeltaRate);
 
-		// Token: 0x0600A92B RID: 43307
+		// Token: 0x06002859 RID: 10329
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_FInterpTo_Constant(double Current, double Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A92C RID: 43308
+		// Token: 0x0600285A RID: 10330
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_FInterpTo(double Current, double Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A92D RID: 43309
+		// Token: 0x0600285B RID: 10331
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_FInterpEaseInOut(double A, double B, double Alpha, double Exponent);
 
-		// Token: 0x0600A92E RID: 43310
+		// Token: 0x0600285C RID: 10332
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator D_FindLookAtRotation(in FVectorDouble Start, in FVectorDouble Target);
 
-		// Token: 0x0600A92F RID: 43311
+		// Token: 0x0600285D RID: 10333
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_FindClosestPointOnSegment(FVectorDouble Point, FVectorDouble SegmentStart, FVectorDouble SegmentEnd);
 
-		// Token: 0x0600A930 RID: 43312
+		// Token: 0x0600285E RID: 10334
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_FindClosestPointOnLine(FVectorDouble Point, FVectorDouble LineOrigin, FVectorDouble LineDirection);
 
-		// Token: 0x0600A931 RID: 43313
+		// Token: 0x0600285F RID: 10335
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long D_FFloor64(double A);
 
-		// Token: 0x0600A932 RID: 43314
+		// Token: 0x06002860 RID: 10336
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int D_FFloor(double A);
 
-		// Token: 0x0600A933 RID: 43315
+		// Token: 0x06002861 RID: 10337
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_FClamp(double Value, double Min, double Max);
 
-		// Token: 0x0600A934 RID: 43316
+		// Token: 0x06002862 RID: 10338
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long D_FCeil64(double A);
 
-		// Token: 0x0600A935 RID: 43317
+		// Token: 0x06002863 RID: 10339
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int D_FCeil(double A);
 
-		// Token: 0x0600A936 RID: 43318
+		// Token: 0x06002864 RID: 10340
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Exp(double A);
 
-		// Token: 0x0600A937 RID: 43319
+		// Token: 0x06002865 RID: 10341
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_EqualExactly_VectorVector(FVectorDouble A, FVectorDouble B);
 
-		// Token: 0x0600A938 RID: 43320
+		// Token: 0x06002866 RID: 10342
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_EqualExactly_Vector2DVector2D(FVector2DDouble A, FVector2DDouble B);
 
-		// Token: 0x0600A939 RID: 43321
+		// Token: 0x06002867 RID: 10343
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_EqualEqual_VectorVector(FVectorDouble A, FVectorDouble B, double ErrorTolerance = 0.0001);
 
-		// Token: 0x0600A93A RID: 43322
+		// Token: 0x06002868 RID: 10344
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_EqualEqual_Vector2DVector2D(FVector2DDouble A, FVector2DDouble B, double ErrorTolerance = 0.0001);
 
-		// Token: 0x0600A93B RID: 43323
+		// Token: 0x06002869 RID: 10345
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool D_EqualEqual_FloatFloat(double A, double B);
 
-		// Token: 0x0600A93C RID: 43324
+		// Token: 0x0600286A RID: 10346
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Ease(double A, double B, double Alpha, EEasingFunc EasingFunc, double BlendExp = 2.0, int Steps = 2);
 
-		// Token: 0x0600A93D RID: 43325
+		// Token: 0x0600286B RID: 10347
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DotProduct2D(FVector2DDouble A, FVector2DDouble B);
 
-		// Token: 0x0600A93E RID: 43326
+		// Token: 0x0600286C RID: 10348
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Dot_VectorVector(FVectorDouble A, FVectorDouble B);
 
-		// Token: 0x0600A93F RID: 43327
+		// Token: 0x0600286D RID: 10349
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Divide_VectorVector(FVectorDouble A, FVectorDouble? B = null);
 
-		// Token: 0x0600A940 RID: 43328
+		// Token: 0x0600286E RID: 10350
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Divide_VectorFloat(FVectorDouble A, double B = 1.0);
 
-		// Token: 0x0600A941 RID: 43329
+		// Token: 0x0600286F RID: 10351
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Divide_Vector2DVector2D(FVector2DDouble A, FVector2DDouble B);
 
-		// Token: 0x0600A942 RID: 43330
+		// Token: 0x06002870 RID: 10352
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Divide_Vector2DFloat(FVector2DDouble A, double B = 1.0);
 
-		// Token: 0x0600A943 RID: 43331 RVA: 0x000EF860 File Offset: 0x000EDA60
+		// Token: 0x06002871 RID: 10353 RVA: 0x0003871C File Offset: 0x0003691C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static double D_Divide_FloatFloat(double A, double B = 1.0)
 		{
 			UKismetMathLibrary.__D_Divide_FloatFloat_FunctionParams* ptr = stackalloc UKismetMathLibrary.__D_Divide_FloatFloat_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(UKismetMathLibrary.__D_Divide_FloatFloat_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKismetMathLibrary.__D_Divide_FloatFloat_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->A = A;
 			ptr->B = B;
-			UnrealReflectionUtils.CallUFunction(UKismetMathLibrary._ClassDefaultObjectPtr, UKismetMathLibrary.__D_Divide_FloatFloat_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKismetMathLibrary._ClassDefaultObjectPtr, UKismetMathLibrary.__D_Divide_FloatFloat_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0600A944 RID: 43332
+		// Token: 0x06002872 RID: 10354
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DistanceSquared2D(FVector2DDouble V1, FVector2DDouble V2);
 
-		// Token: 0x0600A945 RID: 43333
+		// Token: 0x06002873 RID: 10355
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Distance2D(FVector2DDouble V1, FVector2DDouble V2);
 
-		// Token: 0x0600A946 RID: 43334
+		// Token: 0x06002874 RID: 10356
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DegTan(double A);
 
-		// Token: 0x0600A947 RID: 43335
+		// Token: 0x06002875 RID: 10357
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DegSin(double A);
 
-		// Token: 0x0600A948 RID: 43336
+		// Token: 0x06002876 RID: 10358
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DegreesToRadians(double A);
 
-		// Token: 0x0600A949 RID: 43337
+		// Token: 0x06002877 RID: 10359
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DegCos(double A);
 
-		// Token: 0x0600A94A RID: 43338
+		// Token: 0x06002878 RID: 10360
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DegAtan2(double Y, double X);
 
-		// Token: 0x0600A94B RID: 43339
+		// Token: 0x06002879 RID: 10361
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DegAtan(double A);
 
-		// Token: 0x0600A94C RID: 43340
+		// Token: 0x0600287A RID: 10362
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DegAsin(double A);
 
-		// Token: 0x0600A94D RID: 43341
+		// Token: 0x0600287B RID: 10363
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_DegAcos(double A);
 
-		// Token: 0x0600A94E RID: 43342
+		// Token: 0x0600287C RID: 10364
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_CrossProduct2D(FVector2DDouble A, FVector2DDouble B);
 
-		// Token: 0x0600A94F RID: 43343
+		// Token: 0x0600287D RID: 10365
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Cross_VectorVector(FVectorDouble A, FVectorDouble B);
 
-		// Token: 0x0600A950 RID: 43344
+		// Token: 0x0600287E RID: 10366
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Cos(double A);
 
-		// Token: 0x0600A951 RID: 43345
+		// Token: 0x0600287F RID: 10367
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Conv_VectorToVector2D(FVectorDouble InVector);
 
-		// Token: 0x0600A952 RID: 43346
+		// Token: 0x06002880 RID: 10368
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FTransformDouble D_Conv_VectorToTransform(FVectorDouble InLocation);
 
-		// Token: 0x0600A953 RID: 43347
+		// Token: 0x06002881 RID: 10369
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Conv_Vector2DToVector(FVector2DDouble InVector2D, double Z = 0.0);
 
-		// Token: 0x0600A954 RID: 43348
+		// Token: 0x06002882 RID: 10370
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint D_Conv_Vector2DToIntPoint(FVector2DDouble InVector2D);
 
-		// Token: 0x0600A955 RID: 43349
+		// Token: 0x06002883 RID: 10371
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Conv_IntToFloat(int InInt);
 
-		// Token: 0x0600A956 RID: 43350
+		// Token: 0x06002884 RID: 10372
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Conv_FloatToVector(double InFloat);
 
-		// Token: 0x0600A957 RID: 43351 RVA: 0x000EF8B4 File Offset: 0x000EDAB4
+		// Token: 0x06002885 RID: 10373 RVA: 0x00038770 File Offset: 0x00036970
 		public unsafe static FTransformDouble D_ComposeTransforms(in FTransformDouble A, in FTransformDouble B)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -4133,75 +4088,75 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__D_ComposeTransforms_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A958 RID: 43352
+		// Token: 0x06002886 RID: 10374
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_ClampVectorSize(FVectorDouble A, double Min, double Max);
 
-		// Token: 0x0600A959 RID: 43353
+		// Token: 0x06002887 RID: 10375
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_ClampAxes2D(FVector2DDouble A, double MinAxisVal, double MaxAxisVal);
 
-		// Token: 0x0600A95A RID: 43354
+		// Token: 0x06002888 RID: 10376
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_ClampAngle(double AngleDegrees, double MinAngleDegrees, double MaxAngleDegrees);
 
-		// Token: 0x0600A95B RID: 43355
+		// Token: 0x06002889 RID: 10377
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Atan2(double Y, double X);
 
-		// Token: 0x0600A95C RID: 43356
+		// Token: 0x0600288A RID: 10378
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Atan(double A);
 
-		// Token: 0x0600A95D RID: 43357
+		// Token: 0x0600288B RID: 10379
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Asin(double A);
 
-		// Token: 0x0600A95E RID: 43358
+		// Token: 0x0600288C RID: 10380
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Add_VectorVector(FVectorDouble A, FVectorDouble B);
 
-		// Token: 0x0600A95F RID: 43359
+		// Token: 0x0600288D RID: 10381
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble D_Add_VectorFloat(FVectorDouble A, double B);
 
-		// Token: 0x0600A960 RID: 43360
+		// Token: 0x0600288E RID: 10382
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Add_Vector2DVector2D(FVector2DDouble A, FVector2DDouble B);
 
-		// Token: 0x0600A961 RID: 43361
+		// Token: 0x0600288F RID: 10383
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2DDouble D_Add_Vector2DFloat(FVector2DDouble A, double B);
 
-		// Token: 0x0600A962 RID: 43362
+		// Token: 0x06002890 RID: 10384
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Add_FloatFloat(double A, double B = 1.0);
 
-		// Token: 0x0600A963 RID: 43363
+		// Token: 0x06002891 RID: 10385
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Acos(double A);
 
-		// Token: 0x0600A964 RID: 43364
+		// Token: 0x06002892 RID: 10386
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double D_Abs(double A);
 
-		// Token: 0x0600A965 RID: 43365
+		// Token: 0x06002893 RID: 10387
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float CrossProduct2D(FVector2D A, FVector2D B);
 
-		// Token: 0x0600A966 RID: 43366
+		// Token: 0x06002894 RID: 10388
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Cross_VectorVector(FVector A, FVector B);
 
-		// Token: 0x0600A967 RID: 43367
+		// Token: 0x06002895 RID: 10389
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector CreateVectorFromYawPitch(float Yaw, float Pitch, float Length = 1f);
 
-		// Token: 0x0600A968 RID: 43368
+		// Token: 0x06002896 RID: 10390
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Cos(float A);
 
-		// Token: 0x0600A969 RID: 43369 RVA: 0x000EF900 File Offset: 0x000EDB00
+		// Token: 0x06002897 RID: 10391 RVA: 0x000387BC File Offset: 0x000369BC
 		public unsafe static FTransform ConvertTransformToRelative(in FTransform Transform, in FTransform ParentTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -4211,43 +4166,43 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__ConvertTransformToRelative_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A96A RID: 43370
+		// Token: 0x06002898 RID: 10392
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVectorDouble Conv_VectorToVectorDouble(FVector InVec);
 
-		// Token: 0x0600A96B RID: 43371
+		// Token: 0x06002899 RID: 10393
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Conv_VectorToVector2D(FVector InVector);
 
-		// Token: 0x0600A96C RID: 43372
+		// Token: 0x0600289A RID: 10394
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FTransform Conv_VectorToTransform(FVector InLocation);
 
-		// Token: 0x0600A96D RID: 43373
+		// Token: 0x0600289B RID: 10395
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator Conv_VectorToRotator(FVector InVec);
 
-		// Token: 0x0600A96E RID: 43374
+		// Token: 0x0600289C RID: 10396
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FQuat Conv_VectorToQuaternion(FVector InVec);
 
-		// Token: 0x0600A96F RID: 43375
+		// Token: 0x0600289D RID: 10397
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor Conv_VectorToLinearColor(FVector InVec);
 
-		// Token: 0x0600A970 RID: 43376
+		// Token: 0x0600289E RID: 10398
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Conv_VectorDoubleToVector(FVectorDouble InVec);
 
-		// Token: 0x0600A971 RID: 43377
+		// Token: 0x0600289F RID: 10399
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator Conv_VectorDoubleToRotator(FVectorDouble InVec);
 
-		// Token: 0x0600A972 RID: 43378
+		// Token: 0x060028A0 RID: 10400
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor Conv_VectorDoubleToLinearColor(FVectorDouble InVec);
 
-		// Token: 0x0600A973 RID: 43379 RVA: 0x000EF94C File Offset: 0x000EDB4C
+		// Token: 0x060028A1 RID: 10401 RVA: 0x00038808 File Offset: 0x00036A08
 		public unsafe static FVector Conv_Vector4ToVector(in FVector4 InVector4)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -4255,7 +4210,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Conv_Vector4ToVector_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A974 RID: 43380 RVA: 0x000EF97C File Offset: 0x000EDB7C
+		// Token: 0x060028A2 RID: 10402 RVA: 0x00038838 File Offset: 0x00036A38
 		public unsafe static FRotator Conv_Vector4ToRotator(in FVector4 InVec)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -4263,7 +4218,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Conv_Vector4ToRotator_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A975 RID: 43381 RVA: 0x000EF9AC File Offset: 0x000EDBAC
+		// Token: 0x060028A3 RID: 10403 RVA: 0x00038868 File Offset: 0x00036A68
 		public unsafe static FQuat Conv_Vector4ToQuaternion(in FVector4 InVec)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -4271,15 +4226,15 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Conv_Vector4ToQuaternion_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A976 RID: 43382
+		// Token: 0x060028A4 RID: 10404
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Conv_Vector2DToVector(FVector2D InVector2D, float Z = 0f);
 
-		// Token: 0x0600A977 RID: 43383
+		// Token: 0x060028A5 RID: 10405
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint Conv_Vector2DToIntPoint(FVector2D InVector2D);
 
-		// Token: 0x0600A978 RID: 43384 RVA: 0x000EF9DC File Offset: 0x000EDBDC
+		// Token: 0x060028A6 RID: 10406 RVA: 0x00038898 File Offset: 0x00036A98
 		public unsafe static FTransformDouble Conv_TransformToTransformDouble(FTransform InT)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -4287,7 +4242,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Conv_TransformToTransformDouble_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A979 RID: 43385 RVA: 0x000EFA04 File Offset: 0x000EDC04
+		// Token: 0x060028A7 RID: 10407 RVA: 0x000388C0 File Offset: 0x00036AC0
 		public unsafe static FMatrix Conv_TransformToMatrix(in FTransform Transform)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -4295,7 +4250,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Conv_TransformToMatrix_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A97A RID: 43386 RVA: 0x000EFA34 File Offset: 0x000EDC34
+		// Token: 0x060028A8 RID: 10408 RVA: 0x000388F0 File Offset: 0x00036AF0
 		public unsafe static FTransform Conv_TransformDoubleToTransform(FTransformDouble InT)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -4303,15 +4258,15 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Conv_TransformDoubleToTransform_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A97B RID: 43387
+		// Token: 0x060028A9 RID: 10409
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Conv_RotatorToVector(FRotator InRot);
 
-		// Token: 0x0600A97C RID: 43388
+		// Token: 0x060028AA RID: 10410
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FTransform Conv_RotatorToTransform(in FRotator InRotator);
 
-		// Token: 0x0600A97D RID: 43389 RVA: 0x000EFA5C File Offset: 0x000EDC5C
+		// Token: 0x060028AB RID: 10411 RVA: 0x00038918 File Offset: 0x00036B18
 		public unsafe static FTransform Conv_MatrixToTransform(in FMatrix InMatrix)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -4319,7 +4274,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Conv_MatrixToTransform_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A97E RID: 43390 RVA: 0x000EFA8C File Offset: 0x000EDC8C
+		// Token: 0x060028AC RID: 10412 RVA: 0x00038948 File Offset: 0x00036B48
 		public unsafe static FRotator Conv_MatrixToRotator(in FMatrix InMatrix)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -4327,91 +4282,91 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Conv_MatrixToRotator_Internal(uintPtr);
 		}
 
-		// Token: 0x0600A97F RID: 43391
+		// Token: 0x060028AD RID: 10413
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Conv_LinearColorToVector(FLinearColor InLinearColor);
 
-		// Token: 0x0600A980 RID: 43392
+		// Token: 0x060028AE RID: 10414
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FColor Conv_LinearColorToColor(FLinearColor InLinearColor, bool InUseSRGB = true);
 
-		// Token: 0x0600A981 RID: 43393
+		// Token: 0x060028AF RID: 10415
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Conv_IntVectorToVector(in FIntVector InIntVector);
 
-		// Token: 0x0600A982 RID: 43394
+		// Token: 0x060028B0 RID: 10416
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntVector Conv_IntToIntVector(int InInt);
 
-		// Token: 0x0600A983 RID: 43395
+		// Token: 0x060028B1 RID: 10417
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Conv_IntToInt64(int InInt);
 
-		// Token: 0x0600A984 RID: 43396
+		// Token: 0x060028B2 RID: 10418
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Conv_IntToFloat(int InInt);
 
-		// Token: 0x0600A985 RID: 43397
+		// Token: 0x060028B3 RID: 10419
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte Conv_IntToByte(int InInt);
 
-		// Token: 0x0600A986 RID: 43398
+		// Token: 0x060028B4 RID: 10420
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Conv_IntToBool(int InInt);
 
-		// Token: 0x0600A987 RID: 43399
+		// Token: 0x060028B5 RID: 10421
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Conv_IntPointToVector2D(FIntPoint InIntPoint);
 
-		// Token: 0x0600A988 RID: 43400
+		// Token: 0x060028B6 RID: 10422
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Conv_Int64ToInt(long InInt);
 
-		// Token: 0x0600A989 RID: 43401
+		// Token: 0x060028B7 RID: 10423
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte Conv_Int64ToByte(long InInt);
 
-		// Token: 0x0600A98A RID: 43402
+		// Token: 0x060028B8 RID: 10424
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Conv_FloatToVector(float InFloat);
 
-		// Token: 0x0600A98B RID: 43403
+		// Token: 0x060028B9 RID: 10425
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor Conv_FloatToLinearColor(float InFloat);
 
-		// Token: 0x0600A98C RID: 43404
+		// Token: 0x060028BA RID: 10426
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double Conv_FloatToDouble(float A);
 
-		// Token: 0x0600A98D RID: 43405
+		// Token: 0x060028BB RID: 10427
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Conv_DoubleToFloat(double A);
 
-		// Token: 0x0600A98E RID: 43406
+		// Token: 0x060028BC RID: 10428
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor Conv_ColorToLinearColor(FColor InColor);
 
-		// Token: 0x0600A98F RID: 43407
+		// Token: 0x060028BD RID: 10429
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Conv_ByteToInt(byte InByte);
 
-		// Token: 0x0600A990 RID: 43408
+		// Token: 0x060028BE RID: 10430
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Conv_ByteToFloat(byte InByte);
 
-		// Token: 0x0600A991 RID: 43409
+		// Token: 0x060028BF RID: 10431
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Conv_BoolToInt(bool InBool);
 
-		// Token: 0x0600A992 RID: 43410
+		// Token: 0x060028C0 RID: 10432
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Conv_BoolToFloat(bool InBool);
 
-		// Token: 0x0600A993 RID: 43411
+		// Token: 0x060028C1 RID: 10433
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte Conv_BoolToByte(bool InBool);
 
-		// Token: 0x0600A994 RID: 43412 RVA: 0x000EFABC File Offset: 0x000EDCBC
+		// Token: 0x060028C2 RID: 10434 RVA: 0x00038978 File Offset: 0x00036B78
 		public unsafe static FTransform ComposeTransforms(in FTransform A, in FTransform B)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -4421,47 +4376,47 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__ComposeTransforms_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A995 RID: 43413
+		// Token: 0x060028C3 RID: 10435
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator ComposeRotators(FRotator A, FRotator B);
 
-		// Token: 0x0600A996 RID: 43414
+		// Token: 0x060028C4 RID: 10436
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool ClassIsChildOf(UClassStackOnlyPtr TestClass, UClassStackOnlyPtr ParentClass);
 
-		// Token: 0x0600A997 RID: 43415
+		// Token: 0x060028C5 RID: 10437
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector ClampVectorSize(FVector A, float Min, float Max);
 
-		// Token: 0x0600A998 RID: 43416
+		// Token: 0x060028C6 RID: 10438
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long ClampInt64(long Value, long Min, long Max);
 
-		// Token: 0x0600A999 RID: 43417
+		// Token: 0x060028C7 RID: 10439
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float ClampAxis(float Angle);
 
-		// Token: 0x0600A99A RID: 43418
+		// Token: 0x060028C8 RID: 10440
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D ClampAxes2D(FVector2D A, float MinAxisVal, float MaxAxisVal);
 
-		// Token: 0x0600A99B RID: 43419
+		// Token: 0x060028C9 RID: 10441
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float ClampAngle(float AngleDegrees, float MinAngleDegrees, float MaxAngleDegrees);
 
-		// Token: 0x0600A99C RID: 43420
+		// Token: 0x060028CA RID: 10442
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Clamp(int Value, int Min, int Max);
 
-		// Token: 0x0600A99D RID: 43421
+		// Token: 0x060028CB RID: 10443
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor CInterpTo(FLinearColor Current, FLinearColor Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A99E RID: 43422
+		// Token: 0x060028CC RID: 10444
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BreakVectorDouble(FVectorDouble InVec, ref double X, ref double Y, ref double Z);
 
-		// Token: 0x0600A99F RID: 43423 RVA: 0x000EFB08 File Offset: 0x000EDD08
+		// Token: 0x060028CD RID: 10445 RVA: 0x000389C4 File Offset: 0x00036BC4
 		public unsafe static void BreakVector4(in FVector4 InVec, ref float X, ref float Y, ref float Z, ref float W)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -4488,19 +4443,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A9A0 RID: 43424
+		// Token: 0x060028CE RID: 10446
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BreakVector2DDouble(FVector2DDouble InVec, ref double X, ref double Y);
 
-		// Token: 0x0600A9A1 RID: 43425
+		// Token: 0x060028CF RID: 10447
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BreakVector2D(FVector2D InVec, ref float X, ref float Y);
 
-		// Token: 0x0600A9A2 RID: 43426
+		// Token: 0x060028D0 RID: 10448
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BreakVector(FVector InVec, ref float X, ref float Y, ref float Z);
 
-		// Token: 0x0600A9A3 RID: 43427 RVA: 0x000EFB68 File Offset: 0x000EDD68
+		// Token: 0x060028D1 RID: 10449 RVA: 0x00038A24 File Offset: 0x00036C24
 		public unsafe static void BreakTransformDouble(in FTransformDouble InTransform, ref FVectorDouble Location, ref FRotator Rotation, ref FVector Scale)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -4522,7 +4477,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A9A4 RID: 43428 RVA: 0x000EFBB8 File Offset: 0x000EDDB8
+		// Token: 0x060028D2 RID: 10450 RVA: 0x00038A74 File Offset: 0x00036C74
 		public unsafe static void BreakTransform(in FTransform InTransform, ref FVector Location, ref FRotator Rotation, ref FVector Scale)
 		{
 			UIntPtr uintPtr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -4544,7 +4499,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A9A5 RID: 43429 RVA: 0x000EFC08 File Offset: 0x000EDE08
+		// Token: 0x060028D3 RID: 10451 RVA: 0x00038AC4 File Offset: 0x00036CC4
 		public unsafe static void BreakTimespan2(FTimespan InTimespan, ref int Days, ref int Hours, ref int Minutes, ref int Seconds, ref int FractionNano)
 		{
 			fixed (int* ptr = &Days)
@@ -4574,7 +4529,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A9A6 RID: 43430 RVA: 0x000EFC6C File Offset: 0x000EDE6C
+		// Token: 0x060028D4 RID: 10452 RVA: 0x00038B28 File Offset: 0x00036D28
 		public unsafe static void BreakTimespan(FTimespan InTimespan, ref int Days, ref int Hours, ref int Minutes, ref int Seconds, ref int Milliseconds)
 		{
 			fixed (int* ptr = &Days)
@@ -4604,19 +4559,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A9A7 RID: 43431
+		// Token: 0x060028D5 RID: 10453
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BreakRotIntoAxes(in FRotator InRot, ref FVector X, ref FVector Y, ref FVector Z);
 
-		// Token: 0x0600A9A8 RID: 43432
+		// Token: 0x060028D6 RID: 10454
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BreakRotator(FRotator InRot, ref float Roll, ref float Pitch, ref float Yaw);
 
-		// Token: 0x0600A9A9 RID: 43433
+		// Token: 0x060028D7 RID: 10455
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BreakRandomStream(in FRandomStream InRandomStream, ref int InitialSeed);
 
-		// Token: 0x0600A9AA RID: 43434 RVA: 0x000EFCD0 File Offset: 0x000EDED0
+		// Token: 0x060028D8 RID: 10456 RVA: 0x00038B8C File Offset: 0x00036D8C
 		public unsafe static void BreakQualifiedFrameTime(in FQualifiedFrameTime InFrameTime, ref FFrameNumber Frame, ref FFrameRate FrameRate, ref float SubFrame)
 		{
 			fixed (FFrameRate* ptr = &FrameRate)
@@ -4631,11 +4586,11 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A9AB RID: 43435
+		// Token: 0x060028D9 RID: 10457
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BreakFrameRate(in FFrameRate InFrameRate, ref int Numerator, ref int Denominator);
 
-		// Token: 0x0600A9AC RID: 43436 RVA: 0x000EFD14 File Offset: 0x000EDF14
+		// Token: 0x060028DA RID: 10458 RVA: 0x00038BD0 File Offset: 0x00036DD0
 		public unsafe static void BreakDateTime(FDateTime InDateTime, ref int Year, ref int Month, ref int Day, ref int Hour, ref int Minute, ref int Second, ref int Millisecond)
 		{
 			fixed (int* ptr = &Year)
@@ -4675,71 +4630,71 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A9AD RID: 43437
+		// Token: 0x060028DB RID: 10459
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BreakColor(FLinearColor InColor, ref float R, ref float G, ref float B, ref float A);
 
-		// Token: 0x0600A9AE RID: 43438
+		// Token: 0x060028DC RID: 10460
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool BooleanXOR(bool A, bool B);
 
-		// Token: 0x0600A9AF RID: 43439
+		// Token: 0x060028DD RID: 10461
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool BooleanOR(bool A, bool B);
 
-		// Token: 0x0600A9B0 RID: 43440
+		// Token: 0x060028DE RID: 10462
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool BooleanNOR(bool A, bool B);
 
-		// Token: 0x0600A9B1 RID: 43441
+		// Token: 0x060028DF RID: 10463
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool BooleanNAND(bool A, bool B);
 
-		// Token: 0x0600A9B2 RID: 43442
+		// Token: 0x060028E0 RID: 10464
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool BooleanAND(bool A, bool B);
 
-		// Token: 0x0600A9B3 RID: 43443
+		// Token: 0x060028E1 RID: 10465
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte BMin(byte A, byte B);
 
-		// Token: 0x0600A9B4 RID: 43444
+		// Token: 0x060028E2 RID: 10466
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte BMax(byte A, byte B);
 
-		// Token: 0x0600A9B5 RID: 43445
+		// Token: 0x060028E3 RID: 10467
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Atan2(float Y, float X);
 
-		// Token: 0x0600A9B6 RID: 43446
+		// Token: 0x060028E4 RID: 10468
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Atan(float A);
 
-		// Token: 0x0600A9B7 RID: 43447
+		// Token: 0x060028E5 RID: 10469
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Asin(float A);
 
-		// Token: 0x0600A9B8 RID: 43448
+		// Token: 0x060028E6 RID: 10470
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int And_IntInt(int A, int B);
 
-		// Token: 0x0600A9B9 RID: 43449
+		// Token: 0x060028E7 RID: 10471
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long And_Int64Int64(long A, long B);
 
-		// Token: 0x0600A9BA RID: 43450
+		// Token: 0x060028E8 RID: 10472
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Add_VectorVector(FVector A, FVector B);
 
-		// Token: 0x0600A9BB RID: 43451
+		// Token: 0x060028E9 RID: 10473
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Add_VectorInt(FVector A, int B);
 
-		// Token: 0x0600A9BC RID: 43452
+		// Token: 0x060028EA RID: 10474
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector Add_VectorFloat(FVector A, float B);
 
-		// Token: 0x0600A9BD RID: 43453 RVA: 0x000EFD94 File Offset: 0x000EDF94
+		// Token: 0x060028EB RID: 10475 RVA: 0x00038C50 File Offset: 0x00036E50
 		public unsafe static FVector4 Add_Vector4Vector4(in FVector4 A, in FVector4 B)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -4749,22 +4704,22 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Add_Vector4Vector4_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A9BE RID: 43454
+		// Token: 0x060028EC RID: 10476
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Add_Vector2DVector2D(FVector2D A, FVector2D B);
 
-		// Token: 0x0600A9BF RID: 43455
+		// Token: 0x060028ED RID: 10477
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D Add_Vector2DFloat(FVector2D A, float B);
 
-		// Token: 0x0600A9C0 RID: 43456 RVA: 0x000EFDE0 File Offset: 0x000EDFE0
+		// Token: 0x060028EE RID: 10478 RVA: 0x00038C9C File Offset: 0x00036E9C
 		[return: Nullable(1)]
 		public static FTimespan Add_TimespanTimespan(FTimespan A, FTimespan B)
 		{
 			return new FTimespan(UKismetMathLibrary.__Add_TimespanTimespan_Internal((A ?? new FTimespan()).NativePtr, (B ?? new FTimespan()).NativePtr), null);
 		}
 
-		// Token: 0x0600A9C1 RID: 43457 RVA: 0x000EFE0C File Offset: 0x000EE00C
+		// Token: 0x060028EF RID: 10479 RVA: 0x00038CC8 File Offset: 0x00036EC8
 		public unsafe static FQuat Add_QuatQuat(in FQuat A, in FQuat B)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -4774,7 +4729,7 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Add_QuatQuat_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A9C2 RID: 43458 RVA: 0x000EFE58 File Offset: 0x000EE058
+		// Token: 0x060028F0 RID: 10480 RVA: 0x00038D14 File Offset: 0x00036F14
 		public unsafe static FMatrix Add_MatrixMatrix(in FMatrix A, in FMatrix B)
 		{
 			ref FMatrix ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -4784,1131 +4739,1105 @@ namespace UnrealEngine
 			return UKismetMathLibrary.__Add_MatrixMatrix_Internal(ptr, ptr2);
 		}
 
-		// Token: 0x0600A9C3 RID: 43459
+		// Token: 0x060028F1 RID: 10481
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FLinearColor Add_LinearColorLinearColor(FLinearColor A, FLinearColor B);
 
-		// Token: 0x0600A9C4 RID: 43460
+		// Token: 0x060028F2 RID: 10482
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint Add_IntPointIntPoint(FIntPoint A, FIntPoint B);
 
-		// Token: 0x0600A9C5 RID: 43461
+		// Token: 0x060028F3 RID: 10483
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FIntPoint Add_IntPointInt(FIntPoint A, int B);
 
-		// Token: 0x0600A9C6 RID: 43462
+		// Token: 0x060028F4 RID: 10484
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Add_IntInt(int A, int B = 1);
 
-		// Token: 0x0600A9C7 RID: 43463
+		// Token: 0x060028F5 RID: 10485
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Add_Int64Int64(long A, long B = 1L);
 
-		// Token: 0x0600A9C8 RID: 43464
+		// Token: 0x060028F6 RID: 10486
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Add_FloatFloat(float A, float B = 1f);
 
-		// Token: 0x0600A9C9 RID: 43465 RVA: 0x000EFEA4 File Offset: 0x000EE0A4
+		// Token: 0x060028F7 RID: 10487 RVA: 0x00038D60 File Offset: 0x00036F60
 		[return: Nullable(1)]
 		public static FDateTime Add_DateTimeTimespan(FDateTime A, FTimespan B)
 		{
 			return new FDateTime(UKismetMathLibrary.__Add_DateTimeTimespan_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FTimespan()).NativePtr), null);
 		}
 
-		// Token: 0x0600A9CA RID: 43466 RVA: 0x000EFECF File Offset: 0x000EE0CF
+		// Token: 0x060028F8 RID: 10488 RVA: 0x00038D8B File Offset: 0x00036F8B
 		[return: Nullable(1)]
 		public static FDateTime Add_DateTimeDateTime(FDateTime A, FDateTime B)
 		{
 			return new FDateTime(UKismetMathLibrary.__Add_DateTimeDateTime_Internal((A ?? new FDateTime()).NativePtr, (B ?? new FDateTime()).NativePtr), null);
 		}
 
-		// Token: 0x0600A9CB RID: 43467
+		// Token: 0x060028F9 RID: 10489
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte Add_ByteByte(byte A, byte B = 1);
 
-		// Token: 0x0600A9CC RID: 43468
+		// Token: 0x060028FA RID: 10490
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Acos(float A);
 
-		// Token: 0x0600A9CD RID: 43469
+		// Token: 0x060028FB RID: 10491
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long Abs_Int64(long A);
 
-		// Token: 0x0600A9CE RID: 43470
+		// Token: 0x060028FC RID: 10492
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int Abs_Int(int A);
 
-		// Token: 0x0600A9CF RID: 43471
+		// Token: 0x060028FD RID: 10493
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Abs(float A);
 
-		// Token: 0x0600A9D0 RID: 43472
+		// Token: 0x060028FE RID: 10494
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __WD_WorldToLocal_Internal(IntPtr WorldContextObject, FVectorDouble InVec);
 
-		// Token: 0x0600A9D1 RID: 43473
+		// Token: 0x060028FF RID: 10495
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __WD_TransformToTransformDouble_Internal(IntPtr WorldContextObject, in FTransform InT);
 
-		// Token: 0x0600A9D2 RID: 43474
+		// Token: 0x06002900 RID: 10496
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __WD_TransformDoubleToTransform_Internal(IntPtr WorldContextObject, in FTransformDouble InT);
 
-		// Token: 0x0600A9D3 RID: 43475
+		// Token: 0x06002901 RID: 10497
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __WD_LocalToWorld_Internal(IntPtr WorldContextObject, FVector InVec);
 
-		// Token: 0x0600A9D4 RID: 43476
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern FVector __VectorSpringInterp_Internal(FVector Current, FVector Target, IntPtr SpringState, float Stiffness, float CriticalDampingFactor, float DeltaTime, float Mass);
-
-		// Token: 0x0600A9D5 RID: 43477
+		// Token: 0x06002902 RID: 10498
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Vector_MirrorByPlane_Internal(FVector A, in FPlane InPlane);
 
-		// Token: 0x0600A9D6 RID: 43478
+		// Token: 0x06002903 RID: 10499
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Vector4_SizeSquared3_Internal(in FVector4 A);
 
-		// Token: 0x0600A9D7 RID: 43479
+		// Token: 0x06002904 RID: 10500
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Vector4_SizeSquared_Internal(in FVector4 A);
 
-		// Token: 0x0600A9D8 RID: 43480
+		// Token: 0x06002905 RID: 10501
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Vector4_Size3_Internal(in FVector4 A);
 
-		// Token: 0x0600A9D9 RID: 43481
+		// Token: 0x06002906 RID: 10502
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Vector4_Size_Internal(in FVector4 A);
 
-		// Token: 0x0600A9DA RID: 43482
+		// Token: 0x06002907 RID: 10503
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Vector4_Set_Internal(ref FVector4 A, float X, float Y, float Z, float W);
 
-		// Token: 0x0600A9DB RID: 43483
+		// Token: 0x06002908 RID: 10504
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Vector4_NormalUnsafe3_Internal(in FVector4 A);
 
-		// Token: 0x0600A9DC RID: 43484
+		// Token: 0x06002909 RID: 10505
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Vector4_Normalize3_Internal(ref FVector4 A, float Tolerance);
 
-		// Token: 0x0600A9DD RID: 43485
+		// Token: 0x0600290A RID: 10506
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Vector4_Normal3_Internal(in FVector4 A, float Tolerance);
 
-		// Token: 0x0600A9DE RID: 43486
+		// Token: 0x0600290B RID: 10507
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Vector4_Negated_Internal(in FVector4 A);
 
-		// Token: 0x0600A9DF RID: 43487
+		// Token: 0x0600290C RID: 10508
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Vector4_MirrorByVector3_Internal(in FVector4 Direction, in FVector4 SurfaceNormal);
 
-		// Token: 0x0600A9E0 RID: 43488
+		// Token: 0x0600290D RID: 10509
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Vector4_IsZero_Internal(in FVector4 A);
 
-		// Token: 0x0600A9E1 RID: 43489
+		// Token: 0x0600290E RID: 10510
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Vector4_IsUnit3_Internal(in FVector4 A, float SquaredLenthTolerance);
 
-		// Token: 0x0600A9E2 RID: 43490
+		// Token: 0x0600290F RID: 10511
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Vector4_IsNormal3_Internal(in FVector4 A);
 
-		// Token: 0x0600A9E3 RID: 43491
+		// Token: 0x06002910 RID: 10512
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Vector4_IsNearlyZero3_Internal(in FVector4 A, float Tolerance);
 
-		// Token: 0x0600A9E4 RID: 43492
+		// Token: 0x06002911 RID: 10513
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Vector4_IsNAN_Internal(in FVector4 A);
 
-		// Token: 0x0600A9E5 RID: 43493
+		// Token: 0x06002912 RID: 10514
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Vector4_DotProduct3_Internal(in FVector4 A, in FVector4 B);
 
-		// Token: 0x0600A9E6 RID: 43494
+		// Token: 0x06002913 RID: 10515
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Vector4_DotProduct_Internal(in FVector4 A, in FVector4 B);
 
-		// Token: 0x0600A9E7 RID: 43495
+		// Token: 0x06002914 RID: 10516
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Vector4_CrossProduct3_Internal(in FVector4 A, in FVector4 B);
 
-		// Token: 0x0600A9E8 RID: 43496
+		// Token: 0x06002915 RID: 10517
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Vector4_Assign_Internal(ref FVector4 A, in FVector4 InVector);
 
-		// Token: 0x0600A9E9 RID: 43497
+		// Token: 0x06002916 RID: 10518
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __UtcNow_Internal();
 
-		// Token: 0x0600A9EA RID: 43498
+		// Token: 0x06002917 RID: 10519
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __TransformVector4_Internal(in FMatrix Matrix, in FVector4 Vec4);
 
-		// Token: 0x0600A9EB RID: 43499
+		// Token: 0x06002918 RID: 10520
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __TransformRotation_Internal(in FTransform T, FRotator Rotation);
 
-		// Token: 0x0600A9EC RID: 43500
+		// Token: 0x06002919 RID: 10521
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __TransformLocation_Internal(in FTransform T, FVector Location);
 
-		// Token: 0x0600A9ED RID: 43501
+		// Token: 0x0600291A RID: 10522
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __TransformDirection_Internal(in FTransform T, FVector Direction);
 
-		// Token: 0x0600A9EE RID: 43502
+		// Token: 0x0600291B RID: 10523
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Transform_Determinant_Internal(in FTransform Transform);
 
-		// Token: 0x0600A9EF RID: 43503
+		// Token: 0x0600291C RID: 10524
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Today_Internal();
 
-		// Token: 0x0600A9F0 RID: 43504
+		// Token: 0x0600291D RID: 10525
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __TLerp_Internal(in FTransform A, in FTransform B, float Alpha, TEnumAsByte<ELerpInterpolationMode> InterpMode);
 
-		// Token: 0x0600A9F1 RID: 43505
+		// Token: 0x0600291E RID: 10526
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __TInterpTo_Internal(in FTransform Current, in FTransform Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600A9F2 RID: 43506
+		// Token: 0x0600291F RID: 10527
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __TimespanZeroValue_Internal();
 
-		// Token: 0x0600A9F3 RID: 43507
+		// Token: 0x06002920 RID: 10528
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __TimespanRatio_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600A9F4 RID: 43508
+		// Token: 0x06002921 RID: 10529
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __TimespanMinValue_Internal();
 
-		// Token: 0x0600A9F5 RID: 43509
+		// Token: 0x06002922 RID: 10530
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __TimespanMaxValue_Internal();
 
-		// Token: 0x0600A9F6 RID: 43510
+		// Token: 0x06002923 RID: 10531
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __TimespanFromString_Internal(in FString TimespanString, IntPtr Result);
 
-		// Token: 0x0600A9F7 RID: 43511
+		// Token: 0x06002924 RID: 10532
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __TEase_Internal(in FTransform A, in FTransform B, float Alpha, TEnumAsByte<EEasingFunc> EasingFunc, float BlendExp, int Steps);
 
-		// Token: 0x0600A9F8 RID: 43512
+		// Token: 0x06002925 RID: 10533
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Subtract_Vector4Vector4_Internal(in FVector4 A, in FVector4 B);
 
-		// Token: 0x0600A9F9 RID: 43513
+		// Token: 0x06002926 RID: 10534
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Subtract_TimespanTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600A9FA RID: 43514
+		// Token: 0x06002927 RID: 10535
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __Subtract_QuatQuat_Internal(in FQuat A, in FQuat B);
 
-		// Token: 0x0600A9FB RID: 43515
+		// Token: 0x06002928 RID: 10536
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Subtract_DateTimeTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600A9FC RID: 43516
+		// Token: 0x06002929 RID: 10537
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Subtract_DateTimeDateTime_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600A9FD RID: 43517
+		// Token: 0x0600292A RID: 10538
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __SelectTransform_Internal(in FTransform A, in FTransform B, bool bPickA);
 
-		// Token: 0x0600A9FE RID: 43518
+		// Token: 0x0600292B RID: 10539
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __SelectString_Internal(in FString A, in FString B, bool bPickA);
 
-		// Token: 0x0600A9FF RID: 43519
+		// Token: 0x0600292C RID: 10540
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SelectObject_Internal(IntPtr A, IntPtr B, bool bSelectA);
 
-		// Token: 0x0600AA00 RID: 43520
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __ResetVectorSpringState_Internal(IntPtr SpringState);
-
-		// Token: 0x0600AA01 RID: 43521
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __ResetFloatSpringState_Internal(IntPtr SpringState);
-
-		// Token: 0x0600AA02 RID: 43522
+		// Token: 0x0600292D RID: 10541
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_VectorUp_Internal(in FQuat Q);
 
-		// Token: 0x0600AA03 RID: 43523
+		// Token: 0x0600292E RID: 10542
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_VectorRight_Internal(in FQuat Q);
 
-		// Token: 0x0600AA04 RID: 43524
+		// Token: 0x0600292F RID: 10543
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_VectorForward_Internal(in FQuat Q);
 
-		// Token: 0x0600AA05 RID: 43525
+		// Token: 0x06002930 RID: 10544
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_UnrotateVector_Internal(in FQuat Q, in FVector V);
 
-		// Token: 0x0600AA06 RID: 43526
+		// Token: 0x06002931 RID: 10545
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Quat_SizeSquared_Internal(in FQuat Q);
 
-		// Token: 0x0600AA07 RID: 43527
+		// Token: 0x06002932 RID: 10546
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Quat_Size_Internal(in FQuat Q);
 
-		// Token: 0x0600AA08 RID: 43528
+		// Token: 0x06002933 RID: 10547
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Quat_SetFromEuler_Internal(ref FQuat Q, in FVector Euler);
 
-		// Token: 0x0600AA09 RID: 43529
+		// Token: 0x06002934 RID: 10548
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Quat_SetComponents_Internal(ref FQuat Q, float X, float Y, float Z, float W);
 
-		// Token: 0x0600AA0A RID: 43530
+		// Token: 0x06002935 RID: 10549
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __Quat_Rotator_Internal(in FQuat Q);
 
-		// Token: 0x0600AA0B RID: 43531
+		// Token: 0x06002936 RID: 10550
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_RotateVector_Internal(in FQuat Q, in FVector V);
 
-		// Token: 0x0600AA0C RID: 43532
+		// Token: 0x06002937 RID: 10551
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __Quat_Normalized_Internal(in FQuat Q, float Tolerance);
 
-		// Token: 0x0600AA0D RID: 43533
+		// Token: 0x06002938 RID: 10552
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Quat_Normalize_Internal(ref FQuat Q, float Tolerance);
 
-		// Token: 0x0600AA0E RID: 43534
+		// Token: 0x06002939 RID: 10553
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __Quat_Log_Internal(in FQuat Q);
 
-		// Token: 0x0600AA0F RID: 43535
+		// Token: 0x0600293A RID: 10554
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Quat_IsNormalized_Internal(in FQuat Q);
 
-		// Token: 0x0600AA10 RID: 43536
+		// Token: 0x0600293B RID: 10555
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Quat_IsNonFinite_Internal(in FQuat Q);
 
-		// Token: 0x0600AA11 RID: 43537
+		// Token: 0x0600293C RID: 10556
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Quat_IsIdentity_Internal(in FQuat Q, float Tolerance);
 
-		// Token: 0x0600AA12 RID: 43538
+		// Token: 0x0600293D RID: 10557
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Quat_IsFinite_Internal(in FQuat Q);
 
-		// Token: 0x0600AA13 RID: 43539
+		// Token: 0x0600293E RID: 10558
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __Quat_Inversed_Internal(in FQuat Q);
 
-		// Token: 0x0600AA14 RID: 43540
+		// Token: 0x0600293F RID: 10559
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_GetRotationAxis_Internal(in FQuat Q);
 
-		// Token: 0x0600AA15 RID: 43541
+		// Token: 0x06002940 RID: 10560
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_GetAxisZ_Internal(in FQuat Q);
 
-		// Token: 0x0600AA16 RID: 43542
+		// Token: 0x06002941 RID: 10561
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_GetAxisY_Internal(in FQuat Q);
 
-		// Token: 0x0600AA17 RID: 43543
+		// Token: 0x06002942 RID: 10562
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_GetAxisX_Internal(in FQuat Q);
 
-		// Token: 0x0600AA18 RID: 43544
+		// Token: 0x06002943 RID: 10563
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Quat_GetAngle_Internal(in FQuat Q);
 
-		// Token: 0x0600AA19 RID: 43545
+		// Token: 0x06002944 RID: 10564
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __Quat_Exp_Internal(in FQuat Q);
 
-		// Token: 0x0600AA1A RID: 43546
+		// Token: 0x06002945 RID: 10565
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Quat_Euler_Internal(in FQuat Q);
 
-		// Token: 0x0600AA1B RID: 43547
+		// Token: 0x06002946 RID: 10566
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Quat_EnforceShortestArcWith_Internal(ref FQuat A, in FQuat B);
 
-		// Token: 0x0600AA1C RID: 43548
+		// Token: 0x06002947 RID: 10567
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Quat_AngularDistance_Internal(in FQuat A, in FQuat B);
 
-		// Token: 0x0600AA1D RID: 43549
+		// Token: 0x06002948 RID: 10568
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __PointsAreCoplanar_Internal(IntPtr Points, float Tolerance);
 
-		// Token: 0x0600AA1E RID: 43550
+		// Token: 0x06002949 RID: 10569
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Now_Internal();
 
-		// Token: 0x0600AA1F RID: 43551
+		// Token: 0x0600294A RID: 10570
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __NotEqualExactly_Vector4Vector4_Internal(in FVector4 A, in FVector4 B);
 
-		// Token: 0x0600AA20 RID: 43552
+		// Token: 0x0600294B RID: 10571
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __NotEqual_Vector4Vector4_Internal(in FVector4 A, in FVector4 B, float ErrorTolerance);
 
-		// Token: 0x0600AA21 RID: 43553
+		// Token: 0x0600294C RID: 10572
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __NotEqual_TimespanTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA22 RID: 43554
+		// Token: 0x0600294D RID: 10573
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __NotEqual_QuatQuat_Internal(in FQuat A, in FQuat B, float ErrorTolerance);
 
-		// Token: 0x0600AA23 RID: 43555
+		// Token: 0x0600294E RID: 10574
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __NotEqual_ObjectObject_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA24 RID: 43556
+		// Token: 0x0600294F RID: 10575
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __NotEqual_MatrixMatrix_Internal(in FMatrix A, in FMatrix B, float Tolerance);
 
-		// Token: 0x0600AA25 RID: 43557
+		// Token: 0x06002950 RID: 10576
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __NotEqual_DateTimeDateTime_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA26 RID: 43558
+		// Token: 0x06002951 RID: 10577
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __NearlyEqual_TransformTransform_Internal(in FTransform A, in FTransform B, float LocationTolerance, float RotationTolerance, float Scale3DTolerance);
 
-		// Token: 0x0600AA27 RID: 43559
+		// Token: 0x06002952 RID: 10578
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Multiply_Vector4Vector4_Internal(in FVector4 A, in FVector4 B);
 
-		// Token: 0x0600AA28 RID: 43560
+		// Token: 0x06002953 RID: 10579
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Multiply_TimespanFloat_Internal(IntPtr A, float Scalar);
 
-		// Token: 0x0600AA29 RID: 43561
+		// Token: 0x06002954 RID: 10580
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __Multiply_QuatQuat_Internal(in FQuat A, in FQuat B);
 
-		// Token: 0x0600AA2A RID: 43562
+		// Token: 0x06002955 RID: 10581
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Multiply_MatrixMatrix_Internal(in FMatrix A, in FMatrix B);
 
-		// Token: 0x0600AA2B RID: 43563
+		// Token: 0x06002956 RID: 10582
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Multiply_MatrixFloat_Internal(in FMatrix A, float B);
 
-		// Token: 0x0600AA2C RID: 43564
+		// Token: 0x06002957 RID: 10583
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MinOfIntArray_Internal(IntPtr IntArray, ref int IndexOfMinValue, ref int MinValue);
 
-		// Token: 0x0600AA2D RID: 43565
+		// Token: 0x06002958 RID: 10584
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MinOfFloatArray_Internal(IntPtr FloatArray, ref int IndexOfMinValue, ref float MinValue);
 
-		// Token: 0x0600AA2E RID: 43566
+		// Token: 0x06002959 RID: 10585
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MinOfByteArray_Internal(IntPtr ByteArray, ref int IndexOfMinValue, ref byte MinValue);
 
-		// Token: 0x0600AA2F RID: 43567
+		// Token: 0x0600295A RID: 10586
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MinimumAreaRectangle_Internal(IntPtr WorldContextObject, IntPtr InVerts, in FVector SampleSurfaceNormal, ref FVector OutRectCenter, ref FRotator OutRectRotation, ref float OutSideLengthX, ref float OutSideLengthY, bool bDebugDraw);
 
-		// Token: 0x0600AA30 RID: 43568
+		// Token: 0x0600295B RID: 10587
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MaxOfIntArray_Internal(IntPtr IntArray, ref int IndexOfMaxValue, ref int MaxValue);
 
-		// Token: 0x0600AA31 RID: 43569
+		// Token: 0x0600295C RID: 10588
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MaxOfFloatArray_Internal(IntPtr FloatArray, ref int IndexOfMaxValue, ref float MaxValue);
 
-		// Token: 0x0600AA32 RID: 43570
+		// Token: 0x0600295D RID: 10589
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MaxOfByteArray_Internal(IntPtr ByteArray, ref int IndexOfMaxValue, ref byte MaxValue);
 
-		// Token: 0x0600AA33 RID: 43571
+		// Token: 0x0600295E RID: 10590
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Matrix_TransformVector4_Internal(in FMatrix M, in FVector4 V);
 
-		// Token: 0x0600AA34 RID: 43572
+		// Token: 0x0600295F RID: 10591
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Matrix_TransformVector_Internal(in FMatrix M, FVector V);
 
-		// Token: 0x0600AA35 RID: 43573
+		// Token: 0x06002960 RID: 10592
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Matrix_TransformPosition_Internal(in FMatrix M, FVector V);
 
-		// Token: 0x0600AA36 RID: 43574
+		// Token: 0x06002961 RID: 10593
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __Matrix_ToQuat_Internal(in FMatrix M);
 
-		// Token: 0x0600AA37 RID: 43575
+		// Token: 0x06002962 RID: 10594
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Matrix_SetOrigin_Internal(ref FMatrix M, FVector NewOrigin);
 
-		// Token: 0x0600AA38 RID: 43576
-		[NullableContext(0)]
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __Matrix_SetColumn_Internal(ref FMatrix M, TEnumAsByte<EMatrixColumns> Column, FVector Value);
-
-		// Token: 0x0600AA39 RID: 43577
+		// Token: 0x06002963 RID: 10595
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Matrix_SetAxis_Internal(ref FMatrix M, TEnumAsByte<EAxis> Axis, FVector AxisVector);
 
-		// Token: 0x0600AA3A RID: 43578
+		// Token: 0x06002964 RID: 10596
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Matrix_ScaleTranslation_Internal(in FMatrix M, FVector Scale3D);
 
-		// Token: 0x0600AA3B RID: 43579
+		// Token: 0x06002965 RID: 10597
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Matrix_RemoveTranslation_Internal(in FMatrix M);
 
-		// Token: 0x0600AA3C RID: 43580
+		// Token: 0x06002966 RID: 10598
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Matrix_RemoveScaling_Internal(ref FMatrix M, float Tolerance);
 
-		// Token: 0x0600AA3D RID: 43581
+		// Token: 0x06002967 RID: 10599
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Matrix_Mirror_Internal(in FMatrix M, TEnumAsByte<EAxis> MirrorAxis, TEnumAsByte<EAxis> FlipAxis);
 
-		// Token: 0x0600AA3E RID: 43582
+		// Token: 0x06002968 RID: 10600
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Matrix_InverseTransformVector_Internal(in FMatrix M, FVector V);
 
-		// Token: 0x0600AA3F RID: 43583
+		// Token: 0x06002969 RID: 10601
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Matrix_InverseTransformPosition_Internal(in FMatrix M, FVector V);
 
-		// Token: 0x0600AA40 RID: 43584
+		// Token: 0x0600296A RID: 10602
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Matrix_GetUnitAxis_Internal(in FMatrix M, TEnumAsByte<EAxis> Axis);
 
-		// Token: 0x0600AA41 RID: 43585
+		// Token: 0x0600296B RID: 10603
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Matrix_GetUnitAxes_Internal(in FMatrix M, ref FVector X, ref FVector Y, ref FVector Z);
 
-		// Token: 0x0600AA42 RID: 43586
+		// Token: 0x0600296C RID: 10604
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Matrix_GetTransposed_Internal(in FMatrix M);
 
-		// Token: 0x0600AA43 RID: 43587
+		// Token: 0x0600296D RID: 10605
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Matrix_GetTransposeAdjoint_Internal(in FMatrix M);
 
-		// Token: 0x0600AA44 RID: 43588
+		// Token: 0x0600296E RID: 10606
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Matrix_GetScaleVector_Internal(in FMatrix M, float Tolerance);
 
-		// Token: 0x0600AA45 RID: 43589
+		// Token: 0x0600296F RID: 10607
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Matrix_GetScaledAxis_Internal(in FMatrix M, TEnumAsByte<EAxis> Axis);
 
-		// Token: 0x0600AA46 RID: 43590
+		// Token: 0x06002970 RID: 10608
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Matrix_GetScaledAxes_Internal(in FMatrix M, ref FVector X, ref FVector Y, ref FVector Z);
 
-		// Token: 0x0600AA47 RID: 43591
+		// Token: 0x06002971 RID: 10609
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Matrix_GetRotDeterminant_Internal(in FMatrix M);
 
-		// Token: 0x0600AA48 RID: 43592
+		// Token: 0x06002972 RID: 10610
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __Matrix_GetRotator_Internal(in FMatrix M);
 
-		// Token: 0x0600AA49 RID: 43593
+		// Token: 0x06002973 RID: 10611
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Matrix_GetOrigin_Internal(in FMatrix InMatrix);
 
-		// Token: 0x0600AA4A RID: 43594
+		// Token: 0x06002974 RID: 10612
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Matrix_GetMaximumAxisScale_Internal(in FMatrix M);
 
-		// Token: 0x0600AA4B RID: 43595
+		// Token: 0x06002975 RID: 10613
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Matrix_GetMatrixWithoutScale_Internal(in FMatrix M, float Tolerance);
 
-		// Token: 0x0600AA4C RID: 43596
+		// Token: 0x06002976 RID: 10614
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Matrix_GetInverse_Internal(in FMatrix M);
 
-		// Token: 0x0600AA4D RID: 43597
+		// Token: 0x06002977 RID: 10615
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Matrix_GetFrustumTopPlane_Internal(in FMatrix M, ref FPlane OutPlane);
 
-		// Token: 0x0600AA4E RID: 43598
+		// Token: 0x06002978 RID: 10616
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Matrix_GetFrustumRightPlane_Internal(in FMatrix M, ref FPlane OutPlane);
 
-		// Token: 0x0600AA4F RID: 43599
+		// Token: 0x06002979 RID: 10617
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Matrix_GetFrustumNearPlane_Internal(in FMatrix M, ref FPlane OutPlane);
 
-		// Token: 0x0600AA50 RID: 43600
+		// Token: 0x0600297A RID: 10618
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Matrix_GetFrustumLeftPlane_Internal(in FMatrix M, ref FPlane OutPlane);
 
-		// Token: 0x0600AA51 RID: 43601
+		// Token: 0x0600297B RID: 10619
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Matrix_GetFrustumFarPlane_Internal(in FMatrix M, ref FPlane OutPlane);
 
-		// Token: 0x0600AA52 RID: 43602
+		// Token: 0x0600297C RID: 10620
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Matrix_GetFrustumBottomPlane_Internal(in FMatrix M, ref FPlane OutPlane);
 
-		// Token: 0x0600AA53 RID: 43603
+		// Token: 0x0600297D RID: 10621
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __Matrix_GetDeterminant_Internal(in FMatrix M);
 
-		// Token: 0x0600AA54 RID: 43604
-		[NullableContext(0)]
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern FVector __Matrix_GetColumn_Internal(in FMatrix M, TEnumAsByte<EMatrixColumns> Column);
-
-		// Token: 0x0600AA55 RID: 43605
+		// Token: 0x0600297E RID: 10622
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Matrix_ContainsNaN_Internal(in FMatrix M);
 
-		// Token: 0x0600AA56 RID: 43606
+		// Token: 0x0600297F RID: 10623
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Matrix_ConcatenateTranslation_Internal(in FMatrix M, FVector Translation);
 
-		// Token: 0x0600AA57 RID: 43607
+		// Token: 0x06002980 RID: 10624
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Matrix_ApplyScale_Internal(in FMatrix M, float Scale);
 
-		// Token: 0x0600AA58 RID: 43608
+		// Token: 0x06002981 RID: 10625
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __MakeTimespan2_Internal(int Days, int Hours, int Minutes, int Seconds, int FractionNano);
 
-		// Token: 0x0600AA59 RID: 43609
+		// Token: 0x06002982 RID: 10626
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __MakeTimespan_Internal(int Days, int Hours, int Minutes, int Seconds, int Milliseconds);
 
-		// Token: 0x0600AA5A RID: 43610
+		// Token: 0x06002983 RID: 10627
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __MakeRelativeTransform_Internal(in FTransform A, in FTransform RelativeTo);
 
-		// Token: 0x0600AA5B RID: 43611
+		// Token: 0x06002984 RID: 10628
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __MakeQualifiedFrameTime_Internal(IntPtr Frame, FFrameRate FrameRate, float SubFrame);
 
-		// Token: 0x0600AA5C RID: 43612
+		// Token: 0x06002985 RID: 10629
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __MakeDateTime_Internal(int Year, int Month, int Day, int Hour, int Minute, int Second, int Millisecond);
 
-		// Token: 0x0600AA5D RID: 43613
+		// Token: 0x06002986 RID: 10630
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __LinePlaneIntersection_Internal(in FVector LineStart, in FVector LineEnd, in FPlane APlane, ref float T, ref FVector Intersection);
 
-		// Token: 0x0600AA5E RID: 43614
+		// Token: 0x06002987 RID: 10631
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __LessEqual_TimespanTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA5F RID: 43615
+		// Token: 0x06002988 RID: 10632
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __LessEqual_DateTimeDateTime_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA60 RID: 43616
+		// Token: 0x06002989 RID: 10633
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Less_TimespanTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA61 RID: 43617
+		// Token: 0x0600298A RID: 10634
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Less_DateTimeDateTime_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA62 RID: 43618
+		// Token: 0x0600298B RID: 10635
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsPointInBoxWithTransform_Internal(FVector Point, in FTransform BoxWorldTransform, FVector BoxExtent);
 
-		// Token: 0x0600AA63 RID: 43619
+		// Token: 0x0600298C RID: 10636
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsMorning_Internal(IntPtr A);
 
-		// Token: 0x0600AA64 RID: 43620
+		// Token: 0x0600298D RID: 10637
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsAfternoon_Internal(IntPtr A);
 
-		// Token: 0x0600AA65 RID: 43621
+		// Token: 0x0600298E RID: 10638
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __InvertTransform_Internal(in FTransform T);
 
-		// Token: 0x0600AA66 RID: 43622
+		// Token: 0x0600298F RID: 10639
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __InverseTransformRotation_Internal(in FTransform T, FRotator Rotation);
 
-		// Token: 0x0600AA67 RID: 43623
+		// Token: 0x06002990 RID: 10640
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __InverseTransformLocation_Internal(in FTransform T, FVector Location);
 
-		// Token: 0x0600AA68 RID: 43624
+		// Token: 0x06002991 RID: 10641
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __InverseTransformDirection_Internal(in FTransform T, FVector Direction);
 
-		// Token: 0x0600AA69 RID: 43625
+		// Token: 0x06002992 RID: 10642
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GreaterEqual_TimespanTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA6A RID: 43626
+		// Token: 0x06002993 RID: 10643
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GreaterEqual_DateTimeDateTime_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA6B RID: 43627
+		// Token: 0x06002994 RID: 10644
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Greater_TimespanTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA6C RID: 43628
+		// Token: 0x06002995 RID: 10645
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Greater_DateTimeDateTime_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA6D RID: 43629
+		// Token: 0x06002996 RID: 10646
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetYear_Internal(IntPtr A);
 
-		// Token: 0x0600AA6E RID: 43630
+		// Token: 0x06002997 RID: 10647
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetVectorArrayAverage_Internal(IntPtr Vectors);
 
-		// Token: 0x0600AA6F RID: 43631
+		// Token: 0x06002998 RID: 10648
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetTotalSeconds_Internal(IntPtr A);
 
-		// Token: 0x0600AA70 RID: 43632
+		// Token: 0x06002999 RID: 10649
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetTotalMinutes_Internal(IntPtr A);
 
-		// Token: 0x0600AA71 RID: 43633
+		// Token: 0x0600299A RID: 10650
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetTotalMilliseconds_Internal(IntPtr A);
 
-		// Token: 0x0600AA72 RID: 43634
+		// Token: 0x0600299B RID: 10651
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetTotalHours_Internal(IntPtr A);
 
-		// Token: 0x0600AA73 RID: 43635
+		// Token: 0x0600299C RID: 10652
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetTotalDays_Internal(IntPtr A);
 
-		// Token: 0x0600AA74 RID: 43636
+		// Token: 0x0600299D RID: 10653
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetTimeOfDay_Internal(IntPtr A);
 
-		// Token: 0x0600AA75 RID: 43637
+		// Token: 0x0600299E RID: 10654
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetSeconds_Internal(IntPtr A);
 
-		// Token: 0x0600AA76 RID: 43638
+		// Token: 0x0600299F RID: 10655
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetSecond_Internal(IntPtr A);
 
-		// Token: 0x0600AA77 RID: 43639
+		// Token: 0x060029A0 RID: 10656
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMonth_Internal(IntPtr A);
 
-		// Token: 0x0600AA78 RID: 43640
+		// Token: 0x060029A1 RID: 10657
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMinutes_Internal(IntPtr A);
 
-		// Token: 0x0600AA79 RID: 43641
+		// Token: 0x060029A2 RID: 10658
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMinute_Internal(IntPtr A);
 
-		// Token: 0x0600AA7A RID: 43642
+		// Token: 0x060029A3 RID: 10659
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMilliseconds_Internal(IntPtr A);
 
-		// Token: 0x0600AA7B RID: 43643
+		// Token: 0x060029A4 RID: 10660
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMillisecond_Internal(IntPtr A);
 
-		// Token: 0x0600AA7C RID: 43644
+		// Token: 0x060029A5 RID: 10661
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetHours_Internal(IntPtr A);
 
-		// Token: 0x0600AA7D RID: 43645
+		// Token: 0x060029A6 RID: 10662
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetHour12_Internal(IntPtr A);
 
-		// Token: 0x0600AA7E RID: 43646
+		// Token: 0x060029A7 RID: 10663
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetHour_Internal(IntPtr A);
 
-		// Token: 0x0600AA7F RID: 43647
+		// Token: 0x060029A8 RID: 10664
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDuration_Internal(IntPtr A);
 
-		// Token: 0x0600AA80 RID: 43648
+		// Token: 0x060029A9 RID: 10665
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetDays_Internal(IntPtr A);
 
-		// Token: 0x0600AA81 RID: 43649
+		// Token: 0x060029AA RID: 10666
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetDayOfYear_Internal(IntPtr A);
 
-		// Token: 0x0600AA82 RID: 43650
+		// Token: 0x060029AB RID: 10667
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetDay_Internal(IntPtr A);
 
-		// Token: 0x0600AA83 RID: 43651
+		// Token: 0x060029AC RID: 10668
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDate_Internal(IntPtr A);
 
-		// Token: 0x0600AA84 RID: 43652
+		// Token: 0x060029AD RID: 10669
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetAzimuthAndElevation_Internal(FVector InDirection, in FTransform ReferenceFrame, ref float Azimuth, ref float Elevation);
 
-		// Token: 0x0600AA85 RID: 43653
+		// Token: 0x060029AE RID: 10670
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FromSeconds_Internal(float Seconds);
 
-		// Token: 0x0600AA86 RID: 43654
+		// Token: 0x060029AF RID: 10671
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FromMinutes_Internal(float Minutes);
 
-		// Token: 0x0600AA87 RID: 43655
+		// Token: 0x060029B0 RID: 10672
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FromMilliseconds_Internal(float Milliseconds);
 
-		// Token: 0x0600AA88 RID: 43656
+		// Token: 0x060029B1 RID: 10673
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FromHours_Internal(float Hours);
 
-		// Token: 0x0600AA89 RID: 43657
+		// Token: 0x060029B2 RID: 10674
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FromDays_Internal(float Days);
 
-		// Token: 0x0600AA8A RID: 43658
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern float __FloatSpringInterp_Internal(float Current, float Target, IntPtr SpringState, float Stiffness, float CriticalDampingFactor, float DeltaTime, float Mass);
-
-		// Token: 0x0600AA8B RID: 43659
+		// Token: 0x060029B3 RID: 10675
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __EqualExactly_Vector4Vector4_Internal(in FVector4 A, in FVector4 B);
 
-		// Token: 0x0600AA8C RID: 43660
+		// Token: 0x060029B4 RID: 10676
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __EqualEqual_Vector4Vector4_Internal(in FVector4 A, in FVector4 B, float ErrorTolerance);
 
-		// Token: 0x0600AA8D RID: 43661
+		// Token: 0x060029B5 RID: 10677
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __EqualEqual_TransformTransform_Internal(in FTransform A, in FTransform B);
 
-		// Token: 0x0600AA8E RID: 43662
+		// Token: 0x060029B6 RID: 10678
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __EqualEqual_TimespanTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA8F RID: 43663
+		// Token: 0x060029B7 RID: 10679
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __EqualEqual_QuatQuat_Internal(in FQuat A, in FQuat B, float Tolerance);
 
-		// Token: 0x0600AA90 RID: 43664
+		// Token: 0x060029B8 RID: 10680
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __EqualEqual_ObjectObject_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA91 RID: 43665
+		// Token: 0x060029B9 RID: 10681
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __EqualEqual_MatrixMatrix_Internal(in FMatrix A, in FMatrix B, float Tolerance);
 
-		// Token: 0x0600AA92 RID: 43666
+		// Token: 0x060029BA RID: 10682
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __EqualEqual_DateTimeDateTime_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AA93 RID: 43667
+		// Token: 0x060029BB RID: 10683
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Divide_Vector4Vector4_Internal(in FVector4 A, in FVector4 B);
 
-		// Token: 0x0600AA94 RID: 43668
+		// Token: 0x060029BC RID: 10684
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Divide_TimespanFloat_Internal(IntPtr A, float Scalar);
 
-		// Token: 0x0600AA95 RID: 43669
+		// Token: 0x060029BD RID: 10685
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __DateTimeMinValue_Internal();
 
-		// Token: 0x0600AA96 RID: 43670
+		// Token: 0x060029BE RID: 10686
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __DateTimeMaxValue_Internal();
 
-		// Token: 0x0600AA97 RID: 43671
+		// Token: 0x060029BF RID: 10687
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __DateTimeFromString_Internal(in FString DateTimeString, IntPtr Result);
 
-		// Token: 0x0600AA98 RID: 43672
+		// Token: 0x060029C0 RID: 10688
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __DateTimeFromIsoString_Internal(in FString IsoString, IntPtr Result);
 
-		// Token: 0x0600AA99 RID: 43673
+		// Token: 0x060029C1 RID: 10689
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __D_TransformRotation_Internal(in FTransformDouble T, FRotator Rotation);
 
-		// Token: 0x0600AA9A RID: 43674
+		// Token: 0x060029C2 RID: 10690
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_TransformLocation_Internal(in FTransformDouble T, FVectorDouble Location);
 
-		// Token: 0x0600AA9B RID: 43675
+		// Token: 0x060029C3 RID: 10691
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_TransformDirection_Internal(in FTransformDouble T, FVectorDouble Direction);
 
-		// Token: 0x0600AA9C RID: 43676
+		// Token: 0x060029C4 RID: 10692
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_TLerp_Internal(in FTransformDouble A, in FTransformDouble B, float Alpha, TEnumAsByte<ELerpInterpolationMode> InterpMode);
 
-		// Token: 0x0600AA9D RID: 43677
+		// Token: 0x060029C5 RID: 10693
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_TInterpTo_Internal(in FTransformDouble Current, in FTransformDouble Target, float DeltaTime, float InterpSpeed);
 
-		// Token: 0x0600AA9E RID: 43678
+		// Token: 0x060029C6 RID: 10694
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_MinOfFloatArray_Internal(IntPtr FloatArray, ref int IndexOfMinValue, ref double MinValue);
 
-		// Token: 0x0600AA9F RID: 43679
+		// Token: 0x060029C7 RID: 10695
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_MaxOfFloatArray_Internal(IntPtr FloatArray, ref int IndexOfMaxValue, ref double MaxValue);
 
-		// Token: 0x0600AAA0 RID: 43680
+		// Token: 0x060029C8 RID: 10696
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_MakeRelativeTransform_Internal(in FTransformDouble A, in FTransformDouble RelativeTo);
 
-		// Token: 0x0600AAA1 RID: 43681
+		// Token: 0x060029C9 RID: 10697
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_InvertTransform_Internal(in FTransformDouble T);
 
-		// Token: 0x0600AAA2 RID: 43682
+		// Token: 0x060029CA RID: 10698
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __D_InverseTransformRotation_Internal(in FTransformDouble T, FRotator Rotation);
 
-		// Token: 0x0600AAA3 RID: 43683
+		// Token: 0x060029CB RID: 10699
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_InverseTransformLocation_Internal(in FTransformDouble T, FVectorDouble Location);
 
-		// Token: 0x0600AAA4 RID: 43684
+		// Token: 0x060029CC RID: 10700
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_InverseTransformDirection_Internal(in FTransformDouble T, FVectorDouble Direction);
 
-		// Token: 0x0600AAA5 RID: 43685
+		// Token: 0x060029CD RID: 10701
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetVectorArrayAverage_Internal(IntPtr Vectors);
 
-		// Token: 0x0600AAA6 RID: 43686
+		// Token: 0x060029CE RID: 10702
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_ComposeTransforms_Internal(in FTransformDouble A, in FTransformDouble B);
 
-		// Token: 0x0600AAA7 RID: 43687
+		// Token: 0x060029CF RID: 10703
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __ConvertTransformToRelative_Internal(in FTransform Transform, in FTransform ParentTransform);
 
-		// Token: 0x0600AAA8 RID: 43688
+		// Token: 0x060029D0 RID: 10704
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __Conv_Vector4ToVector_Internal(in FVector4 InVector4);
 
-		// Token: 0x0600AAA9 RID: 43689
+		// Token: 0x060029D1 RID: 10705
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __Conv_Vector4ToRotator_Internal(in FVector4 InVec);
 
-		// Token: 0x0600AAAA RID: 43690
+		// Token: 0x060029D2 RID: 10706
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __Conv_Vector4ToQuaternion_Internal(in FVector4 InVec);
 
-		// Token: 0x0600AAAB RID: 43691
+		// Token: 0x060029D3 RID: 10707
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __Conv_TransformToTransformDouble_Internal(in FTransform InT);
 
-		// Token: 0x0600AAAC RID: 43692
+		// Token: 0x060029D4 RID: 10708
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Conv_TransformToMatrix_Internal(in FTransform Transform);
 
-		// Token: 0x0600AAAD RID: 43693
+		// Token: 0x060029D5 RID: 10709
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __Conv_TransformDoubleToTransform_Internal(in FTransformDouble InT);
 
-		// Token: 0x0600AAAE RID: 43694
+		// Token: 0x060029D6 RID: 10710
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __Conv_MatrixToTransform_Internal(in FMatrix InMatrix);
 
-		// Token: 0x0600AAAF RID: 43695
+		// Token: 0x060029D7 RID: 10711
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __Conv_MatrixToRotator_Internal(in FMatrix InMatrix);
 
-		// Token: 0x0600AAB0 RID: 43696
+		// Token: 0x060029D8 RID: 10712
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __ComposeTransforms_Internal(in FTransform A, in FTransform B);
 
-		// Token: 0x0600AAB1 RID: 43697
+		// Token: 0x060029D9 RID: 10713
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BreakVector4_Internal(in FVector4 InVec, ref float X, ref float Y, ref float Z, ref float W);
 
-		// Token: 0x0600AAB2 RID: 43698
+		// Token: 0x060029DA RID: 10714
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BreakTransformDouble_Internal(in FTransformDouble InTransform, ref FVectorDouble Location, ref FRotator Rotation, ref FVector Scale);
 
-		// Token: 0x0600AAB3 RID: 43699
+		// Token: 0x060029DB RID: 10715
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BreakTransform_Internal(in FTransform InTransform, ref FVector Location, ref FRotator Rotation, ref FVector Scale);
 
-		// Token: 0x0600AAB4 RID: 43700
+		// Token: 0x060029DC RID: 10716
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BreakTimespan2_Internal(IntPtr InTimespan, ref int Days, ref int Hours, ref int Minutes, ref int Seconds, ref int FractionNano);
 
-		// Token: 0x0600AAB5 RID: 43701
+		// Token: 0x060029DD RID: 10717
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BreakTimespan_Internal(IntPtr InTimespan, ref int Days, ref int Hours, ref int Minutes, ref int Seconds, ref int Milliseconds);
 
-		// Token: 0x0600AAB6 RID: 43702
+		// Token: 0x060029DE RID: 10718
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BreakQualifiedFrameTime_Internal(IntPtr InFrameTime, IntPtr Frame, ref FFrameRate FrameRate, ref float SubFrame);
 
-		// Token: 0x0600AAB7 RID: 43703
+		// Token: 0x060029DF RID: 10719
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BreakDateTime_Internal(IntPtr InDateTime, ref int Year, ref int Month, ref int Day, ref int Hour, ref int Minute, ref int Second, ref int Millisecond);
 
-		// Token: 0x0600AAB8 RID: 43704
+		// Token: 0x060029E0 RID: 10720
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 __Add_Vector4Vector4_Internal(in FVector4 A, in FVector4 B);
 
-		// Token: 0x0600AAB9 RID: 43705
+		// Token: 0x060029E1 RID: 10721
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Add_TimespanTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AABA RID: 43706
+		// Token: 0x060029E2 RID: 10722
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __Add_QuatQuat_Internal(in FQuat A, in FQuat B);
 
-		// Token: 0x0600AABB RID: 43707
+		// Token: 0x060029E3 RID: 10723
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix __Add_MatrixMatrix_Internal(in FMatrix A, in FMatrix B);
 
-		// Token: 0x0600AABC RID: 43708
+		// Token: 0x060029E4 RID: 10724
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Add_DateTimeTimespan_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AABD RID: 43709
+		// Token: 0x060029E5 RID: 10725
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Add_DateTimeDateTime_Internal(IntPtr A, IntPtr B);
 
-		// Token: 0x0600AABE RID: 43710 RVA: 0x000EFEFA File Offset: 0x000EE0FA
+		// Token: 0x060029E6 RID: 10726 RVA: 0x00038DB6 File Offset: 0x00036FB6
 		static UKismetMathLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.KismetMathLibrary");
 		}
 
-		// Token: 0x0600AABF RID: 43711 RVA: 0x000EFF08 File Offset: 0x000EE108
+		// Token: 0x060029E7 RID: 10727 RVA: 0x00038DC4 File Offset: 0x00036FC4
 		protected UKismetMathLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005B36 RID: 23350
+		// Token: 0x04000E10 RID: 3600
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.KismetMathLibrary";
 
-		// Token: 0x04005B37 RID: 23351
+		// Token: 0x04000E11 RID: 3601
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005B38 RID: 23352
+		// Token: 0x04000E12 RID: 3602
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04005B39 RID: 23353
+		// Token: 0x04000E13 RID: 3603
 		private static IntPtr __Percent_FloatFloat_NativeFunctionPtr;
 
-		// Token: 0x04005B3A RID: 23354
+		// Token: 0x04000E14 RID: 3604
 		private static IntPtr __Divide_FloatFloat_NativeFunctionPtr;
 
-		// Token: 0x04005B3B RID: 23355
+		// Token: 0x04000E15 RID: 3605
 		private static IntPtr __D_Percent_FloatFloat_NativeFunctionPtr;
 
-		// Token: 0x04005B3C RID: 23356
+		// Token: 0x04000E16 RID: 3606
 		private static IntPtr __D_Divide_FloatFloat_NativeFunctionPtr;
 
-		// Token: 0x02002D30 RID: 11568
+		// Token: 0x020009B0 RID: 2480
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __Percent_FloatFloat_FunctionParams
 		{
-			// Token: 0x04016722 RID: 91938
+			// Token: 0x04005929 RID: 22825
 			[FieldOffset(0)]
 			public float A;
 
-			// Token: 0x04016723 RID: 91939
+			// Token: 0x0400592A RID: 22826
 			[FieldOffset(4)]
 			public float B;
 
-			// Token: 0x04016724 RID: 91940
+			// Token: 0x0400592B RID: 22827
 			[FieldOffset(8)]
 			public float __Result;
 		}
 
-		// Token: 0x02002D31 RID: 11569
+		// Token: 0x020009B1 RID: 2481
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __Divide_FloatFloat_FunctionParams
 		{
-			// Token: 0x04016725 RID: 91941
+			// Token: 0x0400592C RID: 22828
 			[FieldOffset(0)]
 			public float A;
 
-			// Token: 0x04016726 RID: 91942
+			// Token: 0x0400592D RID: 22829
 			[FieldOffset(4)]
 			public float B;
 
-			// Token: 0x04016727 RID: 91943
+			// Token: 0x0400592E RID: 22830
 			[FieldOffset(8)]
 			public float __Result;
 		}
 
-		// Token: 0x02002D32 RID: 11570
+		// Token: 0x020009B2 RID: 2482
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __D_Percent_FloatFloat_FunctionParams
 		{
-			// Token: 0x04016728 RID: 91944
+			// Token: 0x0400592F RID: 22831
 			[FieldOffset(0)]
 			public double A;
 
-			// Token: 0x04016729 RID: 91945
+			// Token: 0x04005930 RID: 22832
 			[FieldOffset(8)]
 			public double B;
 
-			// Token: 0x0401672A RID: 91946
+			// Token: 0x04005931 RID: 22833
 			[FieldOffset(16)]
 			public double __Result;
 		}
 
-		// Token: 0x02002D33 RID: 11571
+		// Token: 0x020009B3 RID: 2483
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __D_Divide_FloatFloat_FunctionParams
 		{
-			// Token: 0x0401672B RID: 91947
+			// Token: 0x04005932 RID: 22834
 			[FieldOffset(0)]
 			public double A;
 
-			// Token: 0x0401672C RID: 91948
+			// Token: 0x04005933 RID: 22835
 			[FieldOffset(8)]
 			public double B;
 
-			// Token: 0x0401672D RID: 91949
+			// Token: 0x04005934 RID: 22836
 			[FieldOffset(16)]
 			public double __Result;
 		}

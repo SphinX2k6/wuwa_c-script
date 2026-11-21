@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001564 RID: 5476
+	// Token: 0x020016C2 RID: 5826
 	public class DestroyQuest_SetValue
 	{
-		// Token: 0x04004734 RID: 18228
+		// Token: 0x04004AD4 RID: 19156
 		public int QuestId;
 
-		// Token: 0x04004735 RID: 18229
+		// Token: 0x04004AD5 RID: 19157
 		public bool? IsDestroy;
 	}
 }

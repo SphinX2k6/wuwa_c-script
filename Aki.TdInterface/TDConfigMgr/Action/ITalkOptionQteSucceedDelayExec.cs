@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F80 RID: 8064
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021BB RID: 8635
 	public class ITalkOptionQteSucceedDelayExec : ITalkOptionParamType
 	{
-		// Token: 0x0600B162 RID: 45410 RVA: 0x0019DF60 File Offset: 0x0019C160
+		// Token: 0x0600BC3C RID: 48188 RVA: 0x001B3EB4 File Offset: 0x001B20B4
 		private ITalkOptionQteSucceedDelayExec_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B163 RID: 45411 RVA: 0x0019DF98 File Offset: 0x0019C198
+		// Token: 0x0600BC3D RID: 48189 RVA: 0x001B3EEC File Offset: 0x001B20EC
 		public static ITalkOptionQteSucceedDelayExec Create([Nullable(2)] ITalkOptionQteSucceedDelayExec instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B164 RID: 45412 RVA: 0x0019DFAB File Offset: 0x0019C1AB
+		// Token: 0x0600BC3E RID: 48190 RVA: 0x001B3EFF File Offset: 0x001B20FF
 		public static ITalkOptionQteSucceedDelayExec CreateFromSetValue([Nullable(2)] ITalkOptionQteSucceedDelayExec_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B165 RID: 45413 RVA: 0x0019DFBE File Offset: 0x0019C1BE
+		// Token: 0x0600BC3F RID: 48191 RVA: 0x001B3F12 File Offset: 0x001B2112
 		public new ITalkOptionQteSucceedDelayExec_SetValue ToSetValue()
 		{
 			return new ITalkOptionQteSucceedDelayExec_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036C9 RID: 14025
-		// (get) Token: 0x0600B166 RID: 45414 RVA: 0x0019DFD1 File Offset: 0x0019C1D1
-		// (set) Token: 0x0600B167 RID: 45415 RVA: 0x0019DFFC File Offset: 0x0019C1FC
+		// Token: 0x17003995 RID: 14741
+		// (get) Token: 0x0600BC40 RID: 48192 RVA: 0x001B3F25 File Offset: 0x001B2125
+		// (set) Token: 0x0600BC41 RID: 48193 RVA: 0x001B3F50 File Offset: 0x001B2150
 		public override ETalkOptionParamType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B46 RID: 27462
+		// Token: 0x0400712E RID: 28974
 		[Nullable(2)]
 		protected new ITalkOptionQteSucceedDelayExec FbInstance;
 
-		// Token: 0x04006B47 RID: 27463
+		// Token: 0x0400712F RID: 28975
 		[Nullable(2)]
 		protected new ITalkOptionQteSucceedDelayExec_SetValue PocoInterface;
 	}

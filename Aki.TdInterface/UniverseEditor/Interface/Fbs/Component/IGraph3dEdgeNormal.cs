@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200530C RID: 21260
+	// Token: 0x02005892 RID: 22674
 	public struct IGraph3dEdgeNormal : IFlatbufferObject
 	{
-		// Token: 0x17009C1C RID: 39964
-		// (get) Token: 0x06022BAC RID: 142252 RVA: 0x004CFF80 File Offset: 0x004CE180
+		// Token: 0x1700A454 RID: 42068
+		// (get) Token: 0x06024C60 RID: 150624 RVA: 0x0050CE54 File Offset: 0x0050B054
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022BAD RID: 142253 RVA: 0x004CFF8D File Offset: 0x004CE18D
+		// Token: 0x06024C61 RID: 150625 RVA: 0x0050CE61 File Offset: 0x0050B061
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022BAE RID: 142254 RVA: 0x004CFF94 File Offset: 0x004CE194
+		// Token: 0x06024C62 RID: 150626 RVA: 0x0050CE68 File Offset: 0x0050B068
 		public static IGraph3dEdgeNormal GetRootAsIGraph3dEdgeNormal(ByteBuffer _bb)
 		{
 			return IGraph3dEdgeNormal.GetRootAsIGraph3dEdgeNormal(_bb, default(IGraph3dEdgeNormal));
 		}
 
-		// Token: 0x06022BAF RID: 142255 RVA: 0x004CFFB0 File Offset: 0x004CE1B0
+		// Token: 0x06024C63 RID: 150627 RVA: 0x0050CE84 File Offset: 0x0050B084
 		public static IGraph3dEdgeNormal GetRootAsIGraph3dEdgeNormal(ByteBuffer _bb, IGraph3dEdgeNormal obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022BB0 RID: 142256 RVA: 0x004CFFCD File Offset: 0x004CE1CD
+		// Token: 0x06024C64 RID: 150628 RVA: 0x0050CEA1 File Offset: 0x0050B0A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022BB1 RID: 142257 RVA: 0x004CFFDC File Offset: 0x004CE1DC
+		// Token: 0x06024C65 RID: 150629 RVA: 0x0050CEB0 File Offset: 0x0050B0B0
 		public IGraph3dEdgeNormal __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009C1D RID: 39965
-		// (get) Token: 0x06022BB2 RID: 142258 RVA: 0x004CFFEC File Offset: 0x004CE1EC
+		// Token: 0x1700A455 RID: 42069
+		// (get) Token: 0x06024C66 RID: 150630 RVA: 0x0050CEC0 File Offset: 0x0050B0C0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C1E RID: 39966
-		// (get) Token: 0x06022BB3 RID: 142259 RVA: 0x004D0028 File Offset: 0x004CE228
+		// Token: 0x1700A456 RID: 42070
+		// (get) Token: 0x06024C67 RID: 150631 RVA: 0x0050CEFC File Offset: 0x0050B0FC
 		public int From
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C1F RID: 39967
-		// (get) Token: 0x06022BB4 RID: 142260 RVA: 0x004D0064 File Offset: 0x004CE264
+		// Token: 0x1700A457 RID: 42071
+		// (get) Token: 0x06024C68 RID: 150632 RVA: 0x0050CF38 File Offset: 0x0050B138
 		public int To
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022BB5 RID: 142261 RVA: 0x004D00A0 File Offset: 0x004CE2A0
+		// Token: 0x06024C69 RID: 150633 RVA: 0x0050CF74 File Offset: 0x0050B174
 		public static Offset<IGraph3dEdgeNormal> CreateIGraph3dEdgeNormal(FlatBufferBuilder builder, int Id = 0, int From = 0, int To = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGraph3dEdgeNormal.EndIGraph3dEdgeNormal(builder);
 		}
 
-		// Token: 0x06022BB6 RID: 142262 RVA: 0x004D00C4 File Offset: 0x004CE2C4
+		// Token: 0x06024C6A RID: 150634 RVA: 0x0050CF98 File Offset: 0x0050B198
 		public static void StartIGraph3dEdgeNormal(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022BB7 RID: 142263 RVA: 0x004D00CD File Offset: 0x004CE2CD
+		// Token: 0x06024C6B RID: 150635 RVA: 0x0050CFA1 File Offset: 0x0050B1A1
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x06022BB8 RID: 142264 RVA: 0x004D00D8 File Offset: 0x004CE2D8
+		// Token: 0x06024C6C RID: 150636 RVA: 0x0050CFAC File Offset: 0x0050B1AC
 		public static void AddFrom(FlatBufferBuilder builder, int from)
 		{
 			builder.AddInt(1, from, 0);
 		}
 
-		// Token: 0x06022BB9 RID: 142265 RVA: 0x004D00E3 File Offset: 0x004CE2E3
+		// Token: 0x06024C6D RID: 150637 RVA: 0x0050CFB7 File Offset: 0x0050B1B7
 		public static void AddTo(FlatBufferBuilder builder, int to)
 		{
 			builder.AddInt(2, to, 0);
 		}
 
-		// Token: 0x06022BBA RID: 142266 RVA: 0x004D00EE File Offset: 0x004CE2EE
+		// Token: 0x06024C6E RID: 150638 RVA: 0x0050CFC2 File Offset: 0x0050B1C2
 		public static Offset<IGraph3dEdgeNormal> EndIGraph3dEdgeNormal(FlatBufferBuilder builder)
 		{
 			return new Offset<IGraph3dEdgeNormal>(builder.EndTable());
 		}
 
-		// Token: 0x06022BBB RID: 142267 RVA: 0x004D00FC File Offset: 0x004CE2FC
+		// Token: 0x06024C6F RID: 150639 RVA: 0x0050CFD0 File Offset: 0x0050B1D0
 		public IGraph3dEdgeNormalT UnPack()
 		{
 			IGraph3dEdgeNormalT graph3dEdgeNormalT = new IGraph3dEdgeNormalT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return graph3dEdgeNormalT;
 		}
 
-		// Token: 0x06022BBC RID: 142268 RVA: 0x004D0117 File Offset: 0x004CE317
+		// Token: 0x06024C70 RID: 150640 RVA: 0x0050CFEB File Offset: 0x0050B1EB
 		public void UnPackTo(IGraph3dEdgeNormalT _o)
 		{
 			_o.Id = this.Id;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.To = this.To;
 		}
 
-		// Token: 0x06022BBD RID: 142269 RVA: 0x004D0140 File Offset: 0x004CE340
+		// Token: 0x06024C71 RID: 150641 RVA: 0x0050D014 File Offset: 0x0050B214
 		public static Offset<IGraph3dEdgeNormal> Pack(FlatBufferBuilder builder, IGraph3dEdgeNormalT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGraph3dEdgeNormal.CreateIGraph3dEdgeNormal(builder, _o.Id, _o.From, _o.To);
 		}
 
-		// Token: 0x0400E4C0 RID: 58560
+		// Token: 0x0400F0F0 RID: 61680
 		private Table __p;
 	}
 }

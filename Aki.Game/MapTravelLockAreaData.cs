@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x020012D7 RID: 4823
+// Token: 0x0200078B RID: 1931
 public class MapTravelLockAreaData
 {
-	// Token: 0x060084FD RID: 34045 RVA: 0x001C488C File Offset: 0x001C2A8C
+	// Token: 0x06005898 RID: 22680 RVA: 0x001CD6E8 File Offset: 0x001CB8E8
 	public MapTravelLockAreaData(int areaId)
 	{
 		this.AreaId = areaId;
 	}
 
-	// Token: 0x17000B6F RID: 2927
-	// (get) Token: 0x060084FE RID: 34046 RVA: 0x001C489B File Offset: 0x001C2A9B
+	// Token: 0x17000B8F RID: 2959
+	// (get) Token: 0x06005899 RID: 22681 RVA: 0x001CD6F7 File Offset: 0x001CB8F7
 	public int AreaId { get; }
 
-	// Token: 0x17000B70 RID: 2928
-	// (get) Token: 0x060084FF RID: 34047 RVA: 0x001C48A3 File Offset: 0x001C2AA3
-	// (set) Token: 0x06008500 RID: 34048 RVA: 0x001C48AB File Offset: 0x001C2AAB
+	// Token: 0x17000B90 RID: 2960
+	// (get) Token: 0x0600589A RID: 22682 RVA: 0x001CD6FF File Offset: 0x001CB8FF
+	// (set) Token: 0x0600589B RID: 22683 RVA: 0x001CD707 File Offset: 0x001CB907
 	public int ConditionGroupId { get; set; }
 
-	// Token: 0x17000B71 RID: 2929
-	// (get) Token: 0x06008501 RID: 34049 RVA: 0x001C48B4 File Offset: 0x001C2AB4
-	// (set) Token: 0x06008502 RID: 34050 RVA: 0x001C48BC File Offset: 0x001C2ABC
+	// Token: 0x17000B91 RID: 2961
+	// (get) Token: 0x0600589C RID: 22684 RVA: 0x001CD710 File Offset: 0x001CB910
+	// (set) Token: 0x0600589D RID: 22685 RVA: 0x001CD718 File Offset: 0x001CB918
 	public int JumpId { get; set; }
 }

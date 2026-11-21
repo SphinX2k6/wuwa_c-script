@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007583 RID: 30083
+	// Token: 0x02007D79 RID: 32121
 	public struct IVisualNovelDisplayItemImage : IFlatbufferObject
 	{
-		// Token: 0x1700E421 RID: 58401
-		// (get) Token: 0x06036B98 RID: 224152 RVA: 0x0076E0D5 File Offset: 0x0076C2D5
+		// Token: 0x1700F051 RID: 61521
+		// (get) Token: 0x06039FC0 RID: 237504 RVA: 0x007D1679 File Offset: 0x007CF879
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036B99 RID: 224153 RVA: 0x0076E0E2 File Offset: 0x0076C2E2
+		// Token: 0x06039FC1 RID: 237505 RVA: 0x007D1686 File Offset: 0x007CF886
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036B9A RID: 224154 RVA: 0x0076E0EC File Offset: 0x0076C2EC
+		// Token: 0x06039FC2 RID: 237506 RVA: 0x007D1690 File Offset: 0x007CF890
 		public static IVisualNovelDisplayItemImage GetRootAsIVisualNovelDisplayItemImage(ByteBuffer _bb)
 		{
 			return IVisualNovelDisplayItemImage.GetRootAsIVisualNovelDisplayItemImage(_bb, default(IVisualNovelDisplayItemImage));
 		}
 
-		// Token: 0x06036B9B RID: 224155 RVA: 0x0076E108 File Offset: 0x0076C308
+		// Token: 0x06039FC3 RID: 237507 RVA: 0x007D16AC File Offset: 0x007CF8AC
 		public static IVisualNovelDisplayItemImage GetRootAsIVisualNovelDisplayItemImage(ByteBuffer _bb, IVisualNovelDisplayItemImage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036B9C RID: 224156 RVA: 0x0076E125 File Offset: 0x0076C325
+		// Token: 0x06039FC4 RID: 237508 RVA: 0x007D16C9 File Offset: 0x007CF8C9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036B9D RID: 224157 RVA: 0x0076E134 File Offset: 0x0076C334
+		// Token: 0x06039FC5 RID: 237509 RVA: 0x007D16D8 File Offset: 0x007CF8D8
 		public IVisualNovelDisplayItemImage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E422 RID: 58402
-		// (get) Token: 0x06036B9E RID: 224158 RVA: 0x0076E144 File Offset: 0x0076C344
+		// Token: 0x1700F052 RID: 61522
+		// (get) Token: 0x06039FC6 RID: 237510 RVA: 0x007D16E8 File Offset: 0x007CF8E8
 		public EVisualNovelDisplayItemType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E423 RID: 58403
-		// (get) Token: 0x06036B9F RID: 224159 RVA: 0x0076E180 File Offset: 0x0076C380
+		// Token: 0x1700F053 RID: 61523
+		// (get) Token: 0x06039FC7 RID: 237511 RVA: 0x007D1724 File Offset: 0x007CF924
 		public int DisplayImageId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036BA0 RID: 224160 RVA: 0x0076E1BC File Offset: 0x0076C3BC
+		// Token: 0x06039FC8 RID: 237512 RVA: 0x007D1760 File Offset: 0x007CF960
 		public static Offset<IVisualNovelDisplayItemImage> CreateIVisualNovelDisplayItemImage(FlatBufferBuilder builder, EVisualNovelDisplayItemType Type = EVisualNovelDisplayItemType.Image, int DisplayImageId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelDisplayItemImage.EndIVisualNovelDisplayItemImage(builder);
 		}
 
-		// Token: 0x06036BA1 RID: 224161 RVA: 0x0076E1D9 File Offset: 0x0076C3D9
+		// Token: 0x06039FC9 RID: 237513 RVA: 0x007D177D File Offset: 0x007CF97D
 		public static void StartIVisualNovelDisplayItemImage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06036BA2 RID: 224162 RVA: 0x0076E1E2 File Offset: 0x0076C3E2
+		// Token: 0x06039FCA RID: 237514 RVA: 0x007D1786 File Offset: 0x007CF986
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelDisplayItemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036BA3 RID: 224163 RVA: 0x0076E1ED File Offset: 0x0076C3ED
+		// Token: 0x06039FCB RID: 237515 RVA: 0x007D1791 File Offset: 0x007CF991
 		public static void AddDisplayImageId(FlatBufferBuilder builder, int displayImageId)
 		{
 			builder.AddInt(1, displayImageId, 0);
 		}
 
-		// Token: 0x06036BA4 RID: 224164 RVA: 0x0076E1F8 File Offset: 0x0076C3F8
+		// Token: 0x06039FCC RID: 237516 RVA: 0x007D179C File Offset: 0x007CF99C
 		public static Offset<IVisualNovelDisplayItemImage> EndIVisualNovelDisplayItemImage(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelDisplayItemImage>(builder.EndTable());
 		}
 
-		// Token: 0x06036BA5 RID: 224165 RVA: 0x0076E208 File Offset: 0x0076C408
+		// Token: 0x06039FCD RID: 237517 RVA: 0x007D17AC File Offset: 0x007CF9AC
 		public IVisualNovelDisplayItemImageT UnPack()
 		{
 			IVisualNovelDisplayItemImageT visualNovelDisplayItemImageT = new IVisualNovelDisplayItemImageT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelDisplayItemImageT;
 		}
 
-		// Token: 0x06036BA6 RID: 224166 RVA: 0x0076E223 File Offset: 0x0076C423
+		// Token: 0x06039FCE RID: 237518 RVA: 0x007D17C7 File Offset: 0x007CF9C7
 		public void UnPackTo(IVisualNovelDisplayItemImageT _o)
 		{
 			_o.Type = this.Type;
 			_o.DisplayImageId = this.DisplayImageId;
 		}
 
-		// Token: 0x06036BA7 RID: 224167 RVA: 0x0076E240 File Offset: 0x0076C440
+		// Token: 0x06039FCF RID: 237519 RVA: 0x007D17E4 File Offset: 0x007CF9E4
 		public static Offset<IVisualNovelDisplayItemImage> Pack(FlatBufferBuilder builder, IVisualNovelDisplayItemImageT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelDisplayItemImage.CreateIVisualNovelDisplayItemImage(builder, _o.Type, _o.DisplayImageId);
 		}
 
-		// Token: 0x0401248A RID: 74890
+		// Token: 0x040134BE RID: 79038
 		private Table __p;
 	}
 }

@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap
 {
-	// Token: 0x0200548C RID: 21644
+	// Token: 0x0200446F RID: 17519
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BaseMapStatic : Singleton
 	{
-		// Token: 0x17008481 RID: 33921
-		// (get) Token: 0x0603746A RID: 226410 RVA: 0x00D1E09A File Offset: 0x00D1C29A
+		// Token: 0x1700584D RID: 22605
+		// (get) Token: 0x0602C3B4 RID: 181172 RVA: 0x00C6D775 File Offset: 0x00C6B975
 		public static BaseMapStatic Instance
 		{
 			get
@@ -23,12 +23,12 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			}
 		}
 
-		// Token: 0x0603746B RID: 226411 RVA: 0x00D1E0BD File Offset: 0x00D1C2BD
+		// Token: 0x0602C3B5 RID: 181173 RVA: 0x00C6D798 File Offset: 0x00C6B998
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603746C RID: 226412 RVA: 0x00D1E0BF File Offset: 0x00D1C2BF
+		// Token: 0x0602C3B6 RID: 181174 RVA: 0x00C6D79A File Offset: 0x00C6B99A
 		public static void ResetStaticDefaultValue()
 		{
 			BaseMapStatic instance = BaseMapStatic._instance;
@@ -39,16 +39,16 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			BaseMapStatic._instance = null;
 		}
 
-		// Token: 0x0603746D RID: 226413 RVA: 0x00D1E0D8 File Offset: 0x00D1C2D8
+		// Token: 0x0602C3B7 RID: 181175 RVA: 0x00C6D7B3 File Offset: 0x00C6B9B3
 		static BaseMapStatic()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BaseMapStatic.CreateStaticDefaultValue), new Action(BaseMapStatic.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D209 RID: 119305
+		// Token: 0x04017CA2 RID: 97442
 		public int MapMaterialVersion = 2;
 
-		// Token: 0x0401D20A RID: 119306
+		// Token: 0x04017CA3 RID: 97443
 		[Nullable(2)]
 		private static BaseMapStatic _instance;
 	}

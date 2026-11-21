@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EB0 RID: 3760
+	// Token: 0x02000F95 RID: 3989
 	public struct PayShop : IFlatbufferObject
 	{
-		// Token: 0x170024AF RID: 9391
-		// (get) Token: 0x0600A2F8 RID: 41720 RVA: 0x002A65A5 File Offset: 0x002A47A5
+		// Token: 0x17002514 RID: 9492
+		// (get) Token: 0x0600A918 RID: 43288 RVA: 0x002C3921 File Offset: 0x002C1B21
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A2F9 RID: 41721 RVA: 0x002A65B2 File Offset: 0x002A47B2
+		// Token: 0x0600A919 RID: 43289 RVA: 0x002C392E File Offset: 0x002C1B2E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A2FA RID: 41722 RVA: 0x002A65BC File Offset: 0x002A47BC
+		// Token: 0x0600A91A RID: 43290 RVA: 0x002C3938 File Offset: 0x002C1B38
 		public static PayShop GetRootAsPayShop(ByteBuffer _bb)
 		{
 			return PayShop.GetRootAsPayShop(_bb, default(PayShop));
 		}
 
-		// Token: 0x0600A2FB RID: 41723 RVA: 0x002A65D8 File Offset: 0x002A47D8
+		// Token: 0x0600A91B RID: 43291 RVA: 0x002C3954 File Offset: 0x002C1B54
 		public static PayShop GetRootAsPayShop(ByteBuffer _bb, PayShop obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A2FC RID: 41724 RVA: 0x002A65F5 File Offset: 0x002A47F5
+		// Token: 0x0600A91C RID: 43292 RVA: 0x002C3971 File Offset: 0x002C1B71
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A2FD RID: 41725 RVA: 0x002A6604 File Offset: 0x002A4804
+		// Token: 0x0600A91D RID: 43293 RVA: 0x002C3980 File Offset: 0x002C1B80
 		public PayShop __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170024B0 RID: 9392
-		// (get) Token: 0x0600A2FE RID: 41726 RVA: 0x002A6614 File Offset: 0x002A4814
+		// Token: 0x17002515 RID: 9493
+		// (get) Token: 0x0600A91E RID: 43294 RVA: 0x002C3990 File Offset: 0x002C1B90
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170024B1 RID: 9393
-		// (get) Token: 0x0600A2FF RID: 41727 RVA: 0x002A6650 File Offset: 0x002A4850
+		// Token: 0x17002516 RID: 9494
+		// (get) Token: 0x0600A91F RID: 43295 RVA: 0x002C39CC File Offset: 0x002C1BCC
 		public int ShopTabViewType
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170024B2 RID: 9394
-		// (get) Token: 0x0600A300 RID: 41728 RVA: 0x002A668C File Offset: 0x002A488C
+		// Token: 0x17002517 RID: 9495
+		// (get) Token: 0x0600A920 RID: 43296 RVA: 0x002C3A08 File Offset: 0x002C1C08
 		public int DynamicTabId
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170024B3 RID: 9395
-		// (get) Token: 0x0600A301 RID: 41729 RVA: 0x002A66C8 File Offset: 0x002A48C8
+		// Token: 0x17002518 RID: 9496
+		// (get) Token: 0x0600A921 RID: 43297 RVA: 0x002C3A44 File Offset: 0x002C1C44
 		public int Sort
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170024B4 RID: 9396
-		// (get) Token: 0x0600A302 RID: 41730 RVA: 0x002A6708 File Offset: 0x002A4908
+		// Token: 0x17002519 RID: 9497
+		// (get) Token: 0x0600A922 RID: 43298 RVA: 0x002C3A84 File Offset: 0x002C1C84
 		public string Name
 		{
 			get
@@ -124,19 +124,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A303 RID: 41731 RVA: 0x002A6740 File Offset: 0x002A4940
+		// Token: 0x0600A923 RID: 43299 RVA: 0x002C3ABC File Offset: 0x002C1CBC
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600A304 RID: 41732 RVA: 0x002A6750 File Offset: 0x002A4950
+		// Token: 0x0600A924 RID: 43300 RVA: 0x002C3ACC File Offset: 0x002C1CCC
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600A305 RID: 41733 RVA: 0x002A6768 File Offset: 0x002A4968
+		// Token: 0x0600A925 RID: 43301 RVA: 0x002C3AE4 File Offset: 0x002C1CE4
 		public int Money(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -147,8 +147,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170024B5 RID: 9397
-		// (get) Token: 0x0600A306 RID: 41734 RVA: 0x002A67A8 File Offset: 0x002A49A8
+		// Token: 0x1700251A RID: 9498
+		// (get) Token: 0x0600A926 RID: 43302 RVA: 0x002C3B24 File Offset: 0x002C1D24
 		public int MoneyLength
 		{
 			get
@@ -162,20 +162,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A307 RID: 41735 RVA: 0x002A67D4 File Offset: 0x002A49D4
+		// Token: 0x0600A927 RID: 43303 RVA: 0x002C3B50 File Offset: 0x002C1D50
 		public Span<int> GetMoneyBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x0600A308 RID: 41736 RVA: 0x002A67E4 File Offset: 0x002A49E4
+		// Token: 0x0600A928 RID: 43304 RVA: 0x002C3B60 File Offset: 0x002C1D60
 		public int[] GetMoneyArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170024B6 RID: 9398
-		// (get) Token: 0x0600A309 RID: 41737 RVA: 0x002A67FC File Offset: 0x002A49FC
+		// Token: 0x1700251B RID: 9499
+		// (get) Token: 0x0600A929 RID: 43305 RVA: 0x002C3B78 File Offset: 0x002C1D78
 		public string Notice
 		{
 			get
@@ -189,20 +189,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A30A RID: 41738 RVA: 0x002A6834 File Offset: 0x002A4A34
+		// Token: 0x0600A92A RID: 43306 RVA: 0x002C3BB0 File Offset: 0x002C1DB0
 		public Span<byte> GetNoticeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600A30B RID: 41739 RVA: 0x002A6844 File Offset: 0x002A4A44
+		// Token: 0x0600A92B RID: 43307 RVA: 0x002C3BC0 File Offset: 0x002C1DC0
 		public byte[] GetNoticeArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170024B7 RID: 9399
-		// (get) Token: 0x0600A30C RID: 41740 RVA: 0x002A685C File Offset: 0x002A4A5C
+		// Token: 0x1700251C RID: 9500
+		// (get) Token: 0x0600A92C RID: 43308 RVA: 0x002C3BD8 File Offset: 0x002C1DD8
 		public bool Enable
 		{
 			get
@@ -212,8 +212,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170024B8 RID: 9400
-		// (get) Token: 0x0600A30D RID: 41741 RVA: 0x002A689C File Offset: 0x002A4A9C
+		// Token: 0x1700251D RID: 9501
+		// (get) Token: 0x0600A92D RID: 43309 RVA: 0x002C3C18 File Offset: 0x002C1E18
 		public string Icon
 		{
 			get
@@ -227,20 +227,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A30E RID: 41742 RVA: 0x002A68D4 File Offset: 0x002A4AD4
+		// Token: 0x0600A92E RID: 43310 RVA: 0x002C3C50 File Offset: 0x002C1E50
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x0600A30F RID: 41743 RVA: 0x002A68E4 File Offset: 0x002A4AE4
+		// Token: 0x0600A92F RID: 43311 RVA: 0x002C3C60 File Offset: 0x002C1E60
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170024B9 RID: 9401
-		// (get) Token: 0x0600A310 RID: 41744 RVA: 0x002A68FC File Offset: 0x002A4AFC
+		// Token: 0x1700251E RID: 9502
+		// (get) Token: 0x0600A930 RID: 43312 RVA: 0x002C3C78 File Offset: 0x002C1E78
 		public int SortRule
 		{
 			get
@@ -254,25 +254,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A311 RID: 41745 RVA: 0x002A693C File Offset: 0x002A4B3C
+		// Token: 0x0600A931 RID: 43313 RVA: 0x002C3CB5 File Offset: 0x002C1EB5
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MoneyIter()或GetMoneyBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Money()
+		public int[] Money()
 		{
-			PayShop payShop = this;
-			return payShop.GetMoneyArray() ?? Array.Empty<int>();
+			return this.GetMoneyArray();
 		}
 
-		// Token: 0x0600A312 RID: 41746 RVA: 0x002A6960 File Offset: 0x002A4B60
+		// Token: 0x0600A932 RID: 43314 RVA: 0x002C3CBD File Offset: 0x002C1EBD
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MoneyIter()
+		public IEnumerable<int> MoneyIter()
 		{
 			PayShop.<MoneyIter>d__38 <MoneyIter>d__ = new PayShop.<MoneyIter>d__38(-2);
 			<MoneyIter>d__.<>3__<>4__this = this;
 			return <MoneyIter>d__;
 		}
 
-		// Token: 0x04004F66 RID: 20326
+		// Token: 0x0400554B RID: 21835
 		private Table __p;
 	}
 }

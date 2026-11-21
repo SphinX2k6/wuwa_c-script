@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000F0B RID: 3851
+// Token: 0x020003C0 RID: 960
 public enum ELockEnemyMode
 {
-	// Token: 0x04002C2C RID: 11308
+	// Token: 0x04002CC5 RID: 11461
 	ClickChange,
-	// Token: 0x04002C2D RID: 11309
+	// Token: 0x04002CC6 RID: 11462
 	SliderChange
 }

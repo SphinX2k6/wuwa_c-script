@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003502 RID: 13570
+// Token: 0x02002A77 RID: 10871
 [NullableContext(1)]
 [Nullable(0)]
 public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfigPlatformCreator
 {
-	// Token: 0x0601DC15 RID: 121877 RVA: 0x00855690 File Offset: 0x00853890
+	// Token: 0x0601B92D RID: 112941 RVA: 0x0087DAE4 File Offset: 0x0087BCE4
 	public GameBudgetAllocatorConfig CreateNormalEntityConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -24,7 +24,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC16 RID: 121878 RVA: 0x00855764 File Offset: 0x00853964
+	// Token: 0x0601B92E RID: 112942 RVA: 0x0087DBB8 File Offset: 0x0087BDB8
 	public GameBudgetAllocatorConfig CreateBossEntityConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -42,7 +42,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC17 RID: 121879 RVA: 0x008558C8 File Offset: 0x00853AC8
+	// Token: 0x0601B92F RID: 112943 RVA: 0x0087DD1C File Offset: 0x0087BF1C
 	public GameBudgetAllocatorConfig CreateCharacterEntityConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -59,7 +59,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC18 RID: 121880 RVA: 0x00855A0C File Offset: 0x00853C0C
+	// Token: 0x0601B930 RID: 112944 RVA: 0x0087DE60 File Offset: 0x0087C060
 	public GameBudgetAllocatorConfig CreateNormalNpcEntityConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -77,7 +77,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC19 RID: 121881 RVA: 0x00855AB8 File Offset: 0x00853CB8
+	// Token: 0x0601B931 RID: 112945 RVA: 0x0087DF0C File Offset: 0x0087C10C
 	public GameBudgetAllocatorConfig CreateSimpleNpcEntityConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -95,13 +95,13 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC1A RID: 121882 RVA: 0x00855B42 File Offset: 0x00853D42
+	// Token: 0x0601B932 RID: 112946 RVA: 0x0087DF96 File Offset: 0x0087C196
 	public TsGameBudgetAllocatorTickIntervalDetailConfig CreateFightEffectConfig()
 	{
 		return new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 1U, 1U, 1U, 0f, 0f);
 	}
 
-	// Token: 0x0601DC1B RID: 121883 RVA: 0x00855B58 File Offset: 0x00853D58
+	// Token: 0x0601B933 RID: 112947 RVA: 0x0087DFAC File Offset: 0x0087C1AC
 	public GameBudgetAllocatorConfig CreateEffectConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -119,7 +119,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC1C RID: 121884 RVA: 0x00855C74 File Offset: 0x00853E74
+	// Token: 0x0601B934 RID: 112948 RVA: 0x0087E0C8 File Offset: 0x0087C2C8
 	public GameBudgetAllocatorConfig CreateEffectImportanceConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -137,7 +137,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC1D RID: 121885 RVA: 0x00855DAC File Offset: 0x00853FAC
+	// Token: 0x0601B935 RID: 112949 RVA: 0x0087E200 File Offset: 0x0087C400
 	public GameBudgetAllocatorConfig CreateStabilizeLowEntityConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -155,7 +155,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC1E RID: 121886 RVA: 0x00855E18 File Offset: 0x00854018
+	// Token: 0x0601B936 RID: 112950 RVA: 0x0087E26C File Offset: 0x0087C46C
 	public GameBudgetAllocatorConfig CreateAlwaysTickHotfixConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -173,7 +173,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC1F RID: 121887 RVA: 0x00855E84 File Offset: 0x00854084
+	// Token: 0x0601B937 RID: 112951 RVA: 0x0087E2D8 File Offset: 0x0087C4D8
 	public GameBudgetAllocatorConfig CreateMoveSceneItemEntityConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -191,13 +191,13 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC20 RID: 121888 RVA: 0x00855F2B File Offset: 0x0085412B
+	// Token: 0x0601B938 RID: 112952 RVA: 0x0087E37F File Offset: 0x0087C57F
 	public TsGameBudgetAllocatorTickIntervalDetailConfig CreatePlayerAlwaysTickConfig()
 	{
 		return new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 1U, 1U, 1U, 0f, 0f);
 	}
 
-	// Token: 0x0601DC21 RID: 121889 RVA: 0x00855F44 File Offset: 0x00854144
+	// Token: 0x0601B939 RID: 112953 RVA: 0x0087E398 File Offset: 0x0087C598
 	public GameBudgetAllocatorConfig CreateNormalEntityAlwaysTickConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -215,7 +215,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC22 RID: 121890 RVA: 0x00855FB0 File Offset: 0x008541B0
+	// Token: 0x0601B93A RID: 112954 RVA: 0x0087E404 File Offset: 0x0087C604
 	public GameBudgetAllocatorConfig CreateNormalEntityAlwaysTickWithoutNotRenderedConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -233,31 +233,31 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC23 RID: 121891 RVA: 0x00856037 File Offset: 0x00854237
+	// Token: 0x0601B93B RID: 112955 RVA: 0x0087E48B File Offset: 0x0087C68B
 	public TsGameBudgetAllocatorTickIntervalDetailConfig CreateAlwaysTickConfig()
 	{
 		return new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 1U, 1U, 1U, 0f, 0f);
 	}
 
-	// Token: 0x0601DC24 RID: 121892 RVA: 0x0085604D File Offset: 0x0085424D
+	// Token: 0x0601B93C RID: 112956 RVA: 0x0087E4A1 File Offset: 0x0087C6A1
 	public TsGameBudgetAllocatorTickIntervalDetailConfig CreateCameraAlwaysTickConfig()
 	{
 		return new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 1U, 1U, 1U, 0f, 0f);
 	}
 
-	// Token: 0x0601DC25 RID: 121893 RVA: 0x00856063 File Offset: 0x00854263
+	// Token: 0x0601B93D RID: 112957 RVA: 0x0087E4B7 File Offset: 0x0087C6B7
 	public TsGameBudgetAllocatorTickIntervalDetailConfig CreateIdleExecConfig()
 	{
 		return new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 30U, 1U, 1U, 0f, 0f);
 	}
 
-	// Token: 0x0601DC26 RID: 121894 RVA: 0x0085607A File Offset: 0x0085427A
+	// Token: 0x0601B93E RID: 112958 RVA: 0x0087E4CE File Offset: 0x0087C6CE
 	public TsGameBudgetAllocatorTickIntervalDetailConfig CreateHUDTickConfig()
 	{
 		return new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 5U, 2000U, 300U, 0f, 0f);
 	}
 
-	// Token: 0x0601DC27 RID: 121895 RVA: 0x00856098 File Offset: 0x00854298
+	// Token: 0x0601B93F RID: 112959 RVA: 0x0087E4EC File Offset: 0x0087C6EC
 	public GameBudgetAllocatorConfig CreateCharacterRenderConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -274,7 +274,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC28 RID: 121896 RVA: 0x008561C8 File Offset: 0x008543C8
+	// Token: 0x0601B940 RID: 112960 RVA: 0x0087E61C File Offset: 0x0087C81C
 	public GameBudgetAllocatorConfig CreateNpcRenderConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -292,13 +292,13 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC29 RID: 121897 RVA: 0x008562F3 File Offset: 0x008544F3
+	// Token: 0x0601B941 RID: 112961 RVA: 0x0087E747 File Offset: 0x0087C947
 	public TsGameBudgetAllocatorTickIntervalDetailConfig CreateBattleHeadViewConfig()
 	{
 		return new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 5U, 2000U, 300U, 0f, 0f);
 	}
 
-	// Token: 0x0601DC2A RID: 121898 RVA: 0x00856314 File Offset: 0x00854514
+	// Token: 0x0601B942 RID: 112962 RVA: 0x0087E768 File Offset: 0x0087C968
 	public GameBudgetAllocatorConfig CreateCollisionPlantConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -316,13 +316,13 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC2B RID: 121899 RVA: 0x008563AF File Offset: 0x008545AF
+	// Token: 0x0601B943 RID: 112963 RVA: 0x0087E803 File Offset: 0x0087CA03
 	public TsGameBudgetAllocatorTickIntervalDetailConfig CreateBlueprintSingletonConfig()
 	{
 		return new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 1U, 1U, 1U, 0f, 0f);
 	}
 
-	// Token: 0x0601DC2C RID: 121900 RVA: 0x008563C8 File Offset: 0x008545C8
+	// Token: 0x0601B944 RID: 112964 RVA: 0x0087E81C File Offset: 0x0087CA1C
 	public GameBudgetAllocatorConfig CreateSceneBlueprintActorConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -340,7 +340,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC2D RID: 121901 RVA: 0x00856474 File Offset: 0x00854674
+	// Token: 0x0601B945 RID: 112965 RVA: 0x0087E8C8 File Offset: 0x0087CAC8
 	public GameBudgetAllocatorConfig CreateFarBlueprintActorConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -358,7 +358,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC2E RID: 121902 RVA: 0x00856520 File Offset: 0x00854720
+	// Token: 0x0601B946 RID: 112966 RVA: 0x0087E974 File Offset: 0x0087CB74
 	public GameBudgetAllocatorConfig CreateSuperFarBlueprintActorConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -376,7 +376,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC2F RID: 121903 RVA: 0x008565CC File Offset: 0x008547CC
+	// Token: 0x0601B947 RID: 112967 RVA: 0x0087EA20 File Offset: 0x0087CC20
 	public GameBudgetAllocatorConfig CreateDynamicPhysicsInteractionActorConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -394,7 +394,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC30 RID: 121904 RVA: 0x00856674 File Offset: 0x00854874
+	// Token: 0x0601B948 RID: 112968 RVA: 0x0087EAC8 File Offset: 0x0087CCC8
 	public GameBudgetAllocatorConfig CreateStaticPhysicsInteractionActorConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -412,7 +412,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC31 RID: 121905 RVA: 0x00856718 File Offset: 0x00854918
+	// Token: 0x0601B949 RID: 112969 RVA: 0x0087EB6C File Offset: 0x0087CD6C
 	public GameBudgetAllocatorConfig CreateHighPriorityPhysicsInteractionActorConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -430,7 +430,7 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 		};
 	}
 
-	// Token: 0x0601DC32 RID: 121906 RVA: 0x008567C4 File Offset: 0x008549C4
+	// Token: 0x0601B94A RID: 112970 RVA: 0x0087EC18 File Offset: 0x0087CE18
 	public GameBudgetAllocatorConfig CreateSpecialBlueprintActorConfig()
 	{
 		return new GameBudgetAllocatorConfig
@@ -444,6 +444,24 @@ public class GameBudgetAllocatorConfigMobileCreator : IGamebudgetAllocatorConfig
 			Fighting_Fighting = null,
 			Cutscene_Rendered = null,
 			Cutscene_NotRendered = null,
+			Cutscene_Fighting = null
+		};
+	}
+
+	// Token: 0x0601B94B RID: 112971 RVA: 0x0087EC84 File Offset: 0x0087CE84
+	public GameBudgetAllocatorConfig CreateScreenDecalActorConfig()
+	{
+		return new GameBudgetAllocatorConfig
+		{
+			Default = new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 1U, 1U, 1U, 0f, 0f),
+			Normal_Render = new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 1U, 1U, 1U, 0f, 0f),
+			Normal_NotRendered = new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Normal, EGameBudgetAllocatorActorMode.GBA_ActorMode_NotRendered, 10U, 1U, 1U, 0f, 0f),
+			Normal_Fighting = null,
+			Fighting_Rendered = null,
+			Fighting_NotRendered = null,
+			Fighting_Fighting = null,
+			Cutscene_Rendered = new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Cutscene, EGameBudgetAllocatorActorMode.GBA_ActorMode_Rendered, 1U, 1U, 1U, 0f, 0f),
+			Cutscene_NotRendered = new TsGameBudgetAllocatorTickIntervalDetailConfig(EGameBudgetAllocatorGlobalMode.GBA_GlobalMode_Cutscene, EGameBudgetAllocatorActorMode.GBA_ActorMode_NotRendered, 10U, 1U, 1U, 0f, 0f),
 			Cutscene_Fighting = null
 		};
 	}

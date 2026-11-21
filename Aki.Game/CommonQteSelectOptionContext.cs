@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Qte;
 
-// Token: 0x0200260A RID: 9738
+// Token: 0x02001AF5 RID: 6901
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonQteSelectOptionContext : CommonQteContextBase
 {
-	// Token: 0x06013DAD RID: 81325 RVA: 0x004FBE32 File Offset: 0x004FA032
+	// Token: 0x0601128F RID: 70287 RVA: 0x0050AC6E File Offset: 0x00508E6E
 	public CommonQteSelectOptionContext()
 	{
 		this.Type = new ECommonQteContextType?(ECommonQteContextType.SelectOption);
 	}
 
-	// Token: 0x06013DAE RID: 81326 RVA: 0x004FBE5B File Offset: 0x004FA05B
+	// Token: 0x06011290 RID: 70288 RVA: 0x0050AC97 File Offset: 0x00508E97
 	[NullableContext(1)]
 	protected override void OnSetConfig(SCommonQte config)
 	{
@@ -21,7 +21,7 @@ public class CommonQteSelectOptionContext : CommonQteContextBase
 		this.DefaultOption = config.BaseConfig.SelectOptionConfig.DefaultOption;
 	}
 
-	// Token: 0x06013DAF RID: 81327 RVA: 0x004FBE7C File Offset: 0x004FA07C
+	// Token: 0x06011291 RID: 70289 RVA: 0x0050ACB8 File Offset: 0x00508EB8
 	protected override void OnResponse()
 	{
 		if (this.Config == null)
@@ -47,13 +47,13 @@ public class CommonQteSelectOptionContext : CommonQteContextBase
 		}
 	}
 
-	// Token: 0x06013DB0 RID: 81328 RVA: 0x004FBEE2 File Offset: 0x004FA0E2
+	// Token: 0x06011292 RID: 70290 RVA: 0x0050AD1E File Offset: 0x00508F1E
 	protected override void OnQteFail()
 	{
 		this.SelectOption = this.DefaultOption;
 	}
 
-	// Token: 0x06013DB1 RID: 81329 RVA: 0x004FBEF0 File Offset: 0x004FA0F0
+	// Token: 0x06011293 RID: 70291 RVA: 0x0050AD2C File Offset: 0x00508F2C
 	protected override void OnUpdateTime(float delta)
 	{
 		if (this.Config == null)
@@ -84,13 +84,13 @@ public class CommonQteSelectOptionContext : CommonQteContextBase
 		base.QteSuccess();
 	}
 
-	// Token: 0x06013DB2 RID: 81330 RVA: 0x004FBF98 File Offset: 0x004FA198
+	// Token: 0x06011294 RID: 70292 RVA: 0x0050ADD4 File Offset: 0x00508FD4
 	public override string GetAction(int? index = null)
 	{
 		return this.OnGetAction(index);
 	}
 
-	// Token: 0x06013DB3 RID: 81331 RVA: 0x004FBFA4 File Offset: 0x004FA1A4
+	// Token: 0x06011295 RID: 70293 RVA: 0x0050ADE0 File Offset: 0x00508FE0
 	protected override string OnGetAction(int? index)
 	{
 		if (this.Config == null)
@@ -101,7 +101,7 @@ public class CommonQteSelectOptionContext : CommonQteContextBase
 		return CommonQteContextBase.GetQteActionNameByActionId((scommonQteButton.ActionId > 0) ? scommonQteButton.ActionId : ((int)scommonQteButton.Action), new int?(this.QteId));
 	}
 
-	// Token: 0x06013DB4 RID: 81332 RVA: 0x004FC00F File Offset: 0x004FA20F
+	// Token: 0x06011296 RID: 70294 RVA: 0x0050AE4B File Offset: 0x0050904B
 	[PreserveBaseOverrides]
 	protected new virtual SCommonQte_SelectOption OnGetUiConfig()
 	{
@@ -112,20 +112,20 @@ public class CommonQteSelectOptionContext : CommonQteContextBase
 		return this.Config.BaseConfig.SelectOptionConfig;
 	}
 
-	// Token: 0x06013DB5 RID: 81333 RVA: 0x004FC031 File Offset: 0x004FA231
+	// Token: 0x06011297 RID: 70295 RVA: 0x0050AE6D File Offset: 0x0050906D
 	public override bool CheckQteConditionMatch()
 	{
 		return this.ResponseCount >= this.TargetCount;
 	}
 
-	// Token: 0x06013DB6 RID: 81334 RVA: 0x004FC044 File Offset: 0x004FA244
+	// Token: 0x06011298 RID: 70296 RVA: 0x0050AE80 File Offset: 0x00509080
 	public override bool IsAttachToActor()
 	{
 		SCommonQte config = this.Config;
 		return config != null && config.BaseConfig.SelectOptionConfig.IsAttachToActor;
 	}
 
-	// Token: 0x06013DB7 RID: 81335 RVA: 0x004FC064 File Offset: 0x004FA264
+	// Token: 0x06011299 RID: 70297 RVA: 0x0050AEA0 File Offset: 0x005090A0
 	public override SCommonQte_Attach? GetAttachConfig()
 	{
 		SCommonQte config = this.Config;
@@ -136,21 +136,21 @@ public class CommonQteSelectOptionContext : CommonQteContextBase
 		return new SCommonQte_Attach?(config.BaseConfig.SelectOptionConfig.AttachConfig);
 	}
 
-	// Token: 0x06013DB8 RID: 81336 RVA: 0x004FC099 File Offset: 0x004FA299
+	// Token: 0x0601129A RID: 70298 RVA: 0x0050AED5 File Offset: 0x005090D5
 	public override bool VerifyConfig()
 	{
 		return true;
 	}
 
-	// Token: 0x04009598 RID: 38296
+	// Token: 0x040096EF RID: 38639
 	public int ResponseCount;
 
-	// Token: 0x04009599 RID: 38297
+	// Token: 0x040096F0 RID: 38640
 	public int TargetCount = -1;
 
-	// Token: 0x0400959A RID: 38298
+	// Token: 0x040096F1 RID: 38641
 	public int SelectOption = -1;
 
-	// Token: 0x0400959B RID: 38299
+	// Token: 0x040096F2 RID: 38642
 	public int DefaultOption = -1;
 }

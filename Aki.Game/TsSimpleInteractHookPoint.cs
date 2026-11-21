@@ -7,20 +7,20 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020032B0 RID: 12976
+// Token: 0x02002821 RID: 10273
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/TsSimpleInteractHookPoint.TsSimpleInteractHookPoint_C")]
 public class TsSimpleInteractHookPoint : TsSimpleInteractBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601C1DE RID: 115166 RVA: 0x007D2A51 File Offset: 0x007D0C51
+	// Token: 0x06019E1F RID: 106015 RVA: 0x007F9B4D File Offset: 0x007F7D4D
 	protected override bool CheckLegal()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C1DF RID: 115167 RVA: 0x007D2A54 File Offset: 0x007D0C54
+	// Token: 0x06019E20 RID: 106016 RVA: 0x007F9B50 File Offset: 0x007F7D50
 	protected override void OnDraw()
 	{
 		FVectorDouble lineStart = base.D_K2_GetActorLocation();
@@ -29,7 +29,7 @@ public class TsSimpleInteractHookPoint : TsSimpleInteractBase, IUnrealUObject, I
 		UKismetSystemLibrary.D_DrawDebugArrow(this, lineStart, ftransformDouble.TransformPosition(TsSimpleInteractHookPoint.upOffset), 20f, TsSimpleInteractHookPoint.blueColor, 0.05f, 4f);
 	}
 
-	// Token: 0x0601C1E0 RID: 115168 RVA: 0x007D2AC0 File Offset: 0x007D0CC0
+	// Token: 0x06019E21 RID: 106017 RVA: 0x007F9BBC File Offset: 0x007F7DBC
 	protected override void SetText(FVector offset)
 	{
 		base.Text.HorizontalAlignment = EHorizTextAligment.EHTA_Center;
@@ -42,7 +42,7 @@ public class TsSimpleInteractHookPoint : TsSimpleInteractBase, IUnrealUObject, I
 		text.Text = defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0601C1E1 RID: 115169 RVA: 0x007D2B38 File Offset: 0x007D0D38
+	// Token: 0x06019E22 RID: 106018 RVA: 0x007F9C34 File Offset: 0x007F7E34
 	protected override SSimpleInteractResult OnGetBestTransform(AActor actor, FVector moveOffset, float halfHeight, float radius)
 	{
 		Vector actorLocation = this.ActorLocation;
@@ -67,7 +67,7 @@ public class TsSimpleInteractHookPoint : TsSimpleInteractBase, IUnrealUObject, I
 		return this.TmpResult;
 	}
 
-	// Token: 0x0601C1E2 RID: 115170 RVA: 0x007D2C6A File Offset: 0x007D0E6A
+	// Token: 0x06019E23 RID: 106019 RVA: 0x007F9D66 File Offset: 0x007F7F66
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsSimpleInteractHookPoint._ClassPtr == IntPtr.Zero)
@@ -77,64 +77,64 @@ public class TsSimpleInteractHookPoint : TsSimpleInteractBase, IUnrealUObject, I
 		return TsSimpleInteractHookPoint._ClassPtr;
 	}
 
-	// Token: 0x0601C1E3 RID: 115171 RVA: 0x007D2C90 File Offset: 0x007D0E90
+	// Token: 0x06019E24 RID: 106020 RVA: 0x007F9D8C File Offset: 0x007F7F8C
 	public TsSimpleInteractHookPoint() : this(BuiltinUtils.AllocNativeUObject(TsSimpleInteractHookPoint.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601C1E4 RID: 115172 RVA: 0x007D2CB8 File Offset: 0x007D0EB8
+	// Token: 0x06019E25 RID: 106021 RVA: 0x007F9DB4 File Offset: 0x007F7FB4
 	public TsSimpleInteractHookPoint(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsSimpleInteractHookPoint.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601C1E5 RID: 115173 RVA: 0x007D2CEB File Offset: 0x007D0EEB
+	// Token: 0x06019E26 RID: 106022 RVA: 0x007F9DE7 File Offset: 0x007F7FE7
 	protected TsSimpleInteractHookPoint(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400DE47 RID: 56903
+	// Token: 0x0400E2ED RID: 58093
 	private static readonly FLinearColor redColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x0400DE48 RID: 56904
+	// Token: 0x0400E2EE RID: 58094
 	private static readonly FLinearColor blueColor = new FLinearColor(0f, 0f, 1f, 1f);
 
-	// Token: 0x0400DE49 RID: 56905
+	// Token: 0x0400E2EF RID: 58095
 	private const float DRAW_TIME = 0.05f;
 
-	// Token: 0x0400DE4A RID: 56906
+	// Token: 0x0400E2F0 RID: 58096
 	private const float DEFAULT_THICKNESS = 4f;
 
-	// Token: 0x0400DE4B RID: 56907
+	// Token: 0x0400E2F1 RID: 58097
 	private const float DEFAULT_ARROW_SIZE = 20f;
 
-	// Token: 0x0400DE4C RID: 56908
+	// Token: 0x0400E2F2 RID: 58098
 	private const float DRAW_LENGTH = 100f;
 
-	// Token: 0x0400DE4D RID: 56909
+	// Token: 0x0400E2F3 RID: 58099
 	private static readonly FVectorDouble forwardOffset = new FVectorDouble(100.0, 0.0, 0.0);
 
-	// Token: 0x0400DE4E RID: 56910
+	// Token: 0x0400E2F4 RID: 58100
 	private static readonly FVectorDouble upOffset = new FVectorDouble(0.0, 0.0, 100.0);
 
-	// Token: 0x0400DE4F RID: 56911
+	// Token: 0x0400E2F5 RID: 58101
 	private static readonly FColor textColor = new FColor(byte.MaxValue, 128, 128, byte.MaxValue);
 
-	// Token: 0x0400DE50 RID: 56912
+	// Token: 0x0400E2F6 RID: 58102
 	private const float TEXT_SIZE = 80f;
 
-	// Token: 0x0400DE51 RID: 56913
+	// Token: 0x0400E2F7 RID: 58103
 	private const string PROFILE_KEY = "TsSimpleInteractHookPoint_GetBestTransform";
 
-	// Token: 0x0400DE52 RID: 56914
+	// Token: 0x0400E2F8 RID: 58104
 	[Nullable(2)]
 	private Vector TmpLocation;
 
-	// Token: 0x0400DE53 RID: 56915
+	// Token: 0x0400E2F9 RID: 58105
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/TsSimpleInteractHookPoint.TsSimpleInteractHookPoint_C";
 
-	// Token: 0x0400DE54 RID: 56916
+	// Token: 0x0400E2FA RID: 58106
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400DE55 RID: 56917
+	// Token: 0x0400E2FB RID: 58107
 	private static IntPtr _ClassDefaultObjectPtr;
 }

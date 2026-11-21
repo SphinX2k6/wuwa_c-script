@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002871 RID: 10353
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B47 RID: 11079
 	public class IDartMachineInteractType : IDartInteractTypeBase
 	{
-		// Token: 0x0600E566 RID: 58726 RVA: 0x0021BA6A File Offset: 0x00219C6A
+		// Token: 0x0600F396 RID: 62358 RVA: 0x00238986 File Offset: 0x00236B86
 		public static IDartMachineInteractType Create(IDartMachineInteractType? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004646 RID: 17990
-		// (get) Token: 0x0600E567 RID: 58727 RVA: 0x0021BA89 File Offset: 0x00219C89
+		// Token: 0x170049B6 RID: 18870
+		// (get) Token: 0x0600F397 RID: 62359 RVA: 0x002389A5 File Offset: 0x00236BA5
 		public override EDartInteractType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004647 RID: 17991
-		// (get) Token: 0x0600E568 RID: 58728 RVA: 0x0021BA98 File Offset: 0x00219C98
+		// Token: 0x170049B7 RID: 18871
+		// (get) Token: 0x0600F398 RID: 62360 RVA: 0x002389B4 File Offset: 0x00236BB4
 		public virtual List<int> CanInviteCompetitorIds
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004648 RID: 17992
-		// (get) Token: 0x0600E569 RID: 58729 RVA: 0x0021BAFC File Offset: 0x00219CFC
+		// Token: 0x170049B8 RID: 18872
+		// (get) Token: 0x0600F399 RID: 62361 RVA: 0x00238A18 File Offset: 0x00236C18
 		public virtual int? ChampionId
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ED7 RID: 32471
+		// Token: 0x04008597 RID: 34199
 		private IDartMachineInteractType Instance;
 
-		// Token: 0x04007ED8 RID: 32472
+		// Token: 0x04008598 RID: 34200
 		private List<int> _CanInviteCompetitorIdsCache;
 
-		// Token: 0x04007ED9 RID: 32473
+		// Token: 0x04008599 RID: 34201
 		private bool _CanInviteCompetitorIdsInited;
 	}
 }

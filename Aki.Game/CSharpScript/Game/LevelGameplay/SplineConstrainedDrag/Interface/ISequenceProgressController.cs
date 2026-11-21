@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Interface
 {
-	// Token: 0x02006A34 RID: 27188
+	// Token: 0x02005B91 RID: 23441
 	public interface ISequenceProgressController
 	{
-		// Token: 0x06043A23 RID: 277027
+		// Token: 0x06039A71 RID: 236145
 		void SetSequenceProgress(float progress);
 
-		// Token: 0x06043A24 RID: 277028
+		// Token: 0x06039A72 RID: 236146
 		void Destroy();
 	}
 }

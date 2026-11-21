@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006756 RID: 26454
+	// Token: 0x02006DD6 RID: 28118
 	public struct IFaceExpressionTextureMultiSlotConfig : IFlatbufferObject
 	{
-		// Token: 0x1700C462 RID: 50274
-		// (get) Token: 0x0602E047 RID: 188487 RVA: 0x00649EAA File Offset: 0x006480AA
+		// Token: 0x1700CE18 RID: 52760
+		// (get) Token: 0x0603088D RID: 198797 RVA: 0x006975EE File Offset: 0x006957EE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E048 RID: 188488 RVA: 0x00649EB7 File Offset: 0x006480B7
+		// Token: 0x0603088E RID: 198798 RVA: 0x006975FB File Offset: 0x006957FB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E049 RID: 188489 RVA: 0x00649EC0 File Offset: 0x006480C0
+		// Token: 0x0603088F RID: 198799 RVA: 0x00697604 File Offset: 0x00695804
 		public static IFaceExpressionTextureMultiSlotConfig GetRootAsIFaceExpressionTextureMultiSlotConfig(ByteBuffer _bb)
 		{
 			return IFaceExpressionTextureMultiSlotConfig.GetRootAsIFaceExpressionTextureMultiSlotConfig(_bb, default(IFaceExpressionTextureMultiSlotConfig));
 		}
 
-		// Token: 0x0602E04A RID: 188490 RVA: 0x00649EDC File Offset: 0x006480DC
+		// Token: 0x06030890 RID: 198800 RVA: 0x00697620 File Offset: 0x00695820
 		public static IFaceExpressionTextureMultiSlotConfig GetRootAsIFaceExpressionTextureMultiSlotConfig(ByteBuffer _bb, IFaceExpressionTextureMultiSlotConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E04B RID: 188491 RVA: 0x00649EF9 File Offset: 0x006480F9
+		// Token: 0x06030891 RID: 198801 RVA: 0x0069763D File Offset: 0x0069583D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E04C RID: 188492 RVA: 0x00649F08 File Offset: 0x00648108
+		// Token: 0x06030892 RID: 198802 RVA: 0x0069764C File Offset: 0x0069584C
 		public IFaceExpressionTextureMultiSlotConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C463 RID: 50275
-		// (get) Token: 0x0602E04D RID: 188493 RVA: 0x00649F18 File Offset: 0x00648118
+		// Token: 0x1700CE19 RID: 52761
+		// (get) Token: 0x06030893 RID: 198803 RVA: 0x0069765C File Offset: 0x0069585C
 		public EFaceExpressionConfigType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C464 RID: 50276
-		// (get) Token: 0x0602E04E RID: 188494 RVA: 0x00649F54 File Offset: 0x00648154
+		// Token: 0x1700CE1A RID: 52762
+		// (get) Token: 0x06030894 RID: 198804 RVA: 0x00697698 File Offset: 0x00695898
 		public int SlotIndex
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C465 RID: 50277
-		// (get) Token: 0x0602E04F RID: 188495 RVA: 0x00649F90 File Offset: 0x00648190
+		// Token: 0x1700CE1B RID: 52763
+		// (get) Token: 0x06030895 RID: 198805 RVA: 0x006976D4 File Offset: 0x006958D4
 		public int FaceIndex
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E050 RID: 188496 RVA: 0x00649FCC File Offset: 0x006481CC
+		// Token: 0x06030896 RID: 198806 RVA: 0x00697710 File Offset: 0x00695910
 		public static Offset<IFaceExpressionTextureMultiSlotConfig> CreateIFaceExpressionTextureMultiSlotConfig(FlatBufferBuilder builder, EFaceExpressionConfigType Type = EFaceExpressionConfigType.Morph, int SlotIndex = 0, int FaceIndex = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaceExpressionTextureMultiSlotConfig.EndIFaceExpressionTextureMultiSlotConfig(builder);
 		}
 
-		// Token: 0x0602E051 RID: 188497 RVA: 0x00649FF0 File Offset: 0x006481F0
+		// Token: 0x06030897 RID: 198807 RVA: 0x00697734 File Offset: 0x00695934
 		public static void StartIFaceExpressionTextureMultiSlotConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602E052 RID: 188498 RVA: 0x00649FF9 File Offset: 0x006481F9
+		// Token: 0x06030898 RID: 198808 RVA: 0x0069773D File Offset: 0x0069593D
 		public static void AddType(FlatBufferBuilder builder, EFaceExpressionConfigType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E053 RID: 188499 RVA: 0x0064A004 File Offset: 0x00648204
+		// Token: 0x06030899 RID: 198809 RVA: 0x00697748 File Offset: 0x00695948
 		public static void AddSlotIndex(FlatBufferBuilder builder, int slotIndex)
 		{
 			builder.AddInt(1, slotIndex, 0);
 		}
 
-		// Token: 0x0602E054 RID: 188500 RVA: 0x0064A00F File Offset: 0x0064820F
+		// Token: 0x0603089A RID: 198810 RVA: 0x00697753 File Offset: 0x00695953
 		public static void AddFaceIndex(FlatBufferBuilder builder, int faceIndex)
 		{
 			builder.AddInt(2, faceIndex, 0);
 		}
 
-		// Token: 0x0602E055 RID: 188501 RVA: 0x0064A01A File Offset: 0x0064821A
+		// Token: 0x0603089B RID: 198811 RVA: 0x0069775E File Offset: 0x0069595E
 		public static Offset<IFaceExpressionTextureMultiSlotConfig> EndIFaceExpressionTextureMultiSlotConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IFaceExpressionTextureMultiSlotConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602E056 RID: 188502 RVA: 0x0064A028 File Offset: 0x00648228
+		// Token: 0x0603089C RID: 198812 RVA: 0x0069776C File Offset: 0x0069596C
 		public IFaceExpressionTextureMultiSlotConfigT UnPack()
 		{
 			IFaceExpressionTextureMultiSlotConfigT faceExpressionTextureMultiSlotConfigT = new IFaceExpressionTextureMultiSlotConfigT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return faceExpressionTextureMultiSlotConfigT;
 		}
 
-		// Token: 0x0602E057 RID: 188503 RVA: 0x0064A043 File Offset: 0x00648243
+		// Token: 0x0603089D RID: 198813 RVA: 0x00697787 File Offset: 0x00695987
 		public void UnPackTo(IFaceExpressionTextureMultiSlotConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.FaceIndex = this.FaceIndex;
 		}
 
-		// Token: 0x0602E058 RID: 188504 RVA: 0x0064A06C File Offset: 0x0064826C
+		// Token: 0x0603089E RID: 198814 RVA: 0x006977B0 File Offset: 0x006959B0
 		public static Offset<IFaceExpressionTextureMultiSlotConfig> Pack(FlatBufferBuilder builder, IFaceExpressionTextureMultiSlotConfigT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaceExpressionTextureMultiSlotConfig.CreateIFaceExpressionTextureMultiSlotConfig(builder, _o.Type, _o.SlotIndex, _o.FaceIndex);
 		}
 
-		// Token: 0x04010E48 RID: 69192
+		// Token: 0x04011C7A RID: 72826
 		private Table __p;
 	}
 }

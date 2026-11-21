@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 {
-	// Token: 0x0200588D RID: 22669
+	// Token: 0x02004865 RID: 18533
 	public class BaseInstanceDungeonViewModel : InstanceDungeonViewModelBase
 	{
 	}

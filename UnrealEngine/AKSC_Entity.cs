@@ -6,48 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001DDC RID: 7644
+	// Token: 0x02000578 RID: 1400
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_Entity")]
 	[UnrealStructLayout(1272, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1272)]
 	public class AKSC_Entity : AKSC_BaseActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D338 RID: 119608 RVA: 0x002B21E6 File Offset: 0x002B03E6
+		// Token: 0x06007F49 RID: 32585 RVA: 0x000BC6F4 File Offset: 0x000BA8F4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKSC_Entity._ClassPtr;
 		}
 
-		// Token: 0x0601D339 RID: 119609 RVA: 0x002B21F4 File Offset: 0x002B03F4
+		// Token: 0x06007F4A RID: 32586 RVA: 0x000BC700 File Offset: 0x000BA900
 		public AKSC_Entity() : this(BuiltinUtils.AllocNativeUObject(AKSC_Entity.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D33A RID: 119610 RVA: 0x002B221C File Offset: 0x002B041C
+		// Token: 0x06007F4B RID: 32587 RVA: 0x000BC728 File Offset: 0x000BA928
 		[NullableContext(1)]
 		public AKSC_Entity(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKSC_Entity.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170075F0 RID: 30192
-		// (get) Token: 0x0601D33B RID: 119611 RVA: 0x002B224F File Offset: 0x002B044F
-		// (set) Token: 0x0601D33C RID: 119612 RVA: 0x002B2263 File Offset: 0x002B0463
-		public unsafe UKSC_SceneComp SceneComp_
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKSC_SceneComp>(base.NativePtr / (IntPtr)sizeof(void*) + AKSC_Entity.__PropertyOffset_SceneComp_);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + AKSC_Entity.__PropertyOffset_SceneComp_, value);
-			}
-		}
-
-		// Token: 0x170075F1 RID: 30193
-		// (get) Token: 0x0601D33D RID: 119613 RVA: 0x002B2278 File Offset: 0x002B0478
-		// (set) Token: 0x0601D33E RID: 119614 RVA: 0x002B228C File Offset: 0x002B048C
+		// Token: 0x170018CA RID: 6346
+		// (get) Token: 0x06007F4C RID: 32588 RVA: 0x000BC75B File Offset: 0x000BA95B
+		// (set) Token: 0x06007F4D RID: 32589 RVA: 0x000BC76F File Offset: 0x000BA96F
 		public unsafe UKSC_Move Move_
 		{
 			get
@@ -60,24 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170075F2 RID: 30194
-		// (get) Token: 0x0601D33F RID: 119615 RVA: 0x002B22A1 File Offset: 0x002B04A1
-		// (set) Token: 0x0601D340 RID: 119616 RVA: 0x002B22B5 File Offset: 0x002B04B5
-		public unsafe UKSC_Anim Anim_
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKSC_Anim>(base.NativePtr / (IntPtr)sizeof(void*) + AKSC_Entity.__PropertyOffset_Anim_);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + AKSC_Entity.__PropertyOffset_Anim_, value);
-			}
-		}
-
-		// Token: 0x170075F3 RID: 30195
-		// (get) Token: 0x0601D341 RID: 119617 RVA: 0x002B22CA File Offset: 0x002B04CA
-		// (set) Token: 0x0601D342 RID: 119618 RVA: 0x002B22DE File Offset: 0x002B04DE
+		// Token: 0x170018CB RID: 6347
+		// (get) Token: 0x06007F4E RID: 32590 RVA: 0x000BC784 File Offset: 0x000BA984
+		// (set) Token: 0x06007F4F RID: 32591 RVA: 0x000BC798 File Offset: 0x000BA998
 		public unsafe UKSC_SkillComp SkillComp_
 		{
 			get
@@ -90,24 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170075F4 RID: 30196
-		// (get) Token: 0x0601D343 RID: 119619 RVA: 0x002B22F3 File Offset: 0x002B04F3
-		// (set) Token: 0x0601D344 RID: 119620 RVA: 0x002B2307 File Offset: 0x002B0507
-		public unsafe UKSC_TimeScaleComp TimeScaleComp_
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKSC_TimeScaleComp>(base.NativePtr / (IntPtr)sizeof(void*) + AKSC_Entity.__PropertyOffset_TimeScaleComp_);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + AKSC_Entity.__PropertyOffset_TimeScaleComp_, value);
-			}
-		}
-
-		// Token: 0x170075F5 RID: 30197
-		// (get) Token: 0x0601D345 RID: 119621 RVA: 0x002B231C File Offset: 0x002B051C
-		// (set) Token: 0x0601D346 RID: 119622 RVA: 0x002B2330 File Offset: 0x002B0530
+		// Token: 0x170018CC RID: 6348
+		// (get) Token: 0x06007F50 RID: 32592 RVA: 0x000BC7AD File Offset: 0x000BA9AD
+		// (set) Token: 0x06007F51 RID: 32593 RVA: 0x000BC7C1 File Offset: 0x000BA9C1
 		public unsafe UKSC_DA_Entity DaEntity_
 		{
 			get
@@ -120,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170075F6 RID: 30198
-		// (get) Token: 0x0601D347 RID: 119623 RVA: 0x002B2348 File Offset: 0x002B0548
-		// (set) Token: 0x0601D348 RID: 119624 RVA: 0x002B2381 File Offset: 0x002B0581
+		// Token: 0x170018CD RID: 6349
+		// (get) Token: 0x06007F52 RID: 32594 RVA: 0x000BC7D8 File Offset: 0x000BA9D8
+		// (set) Token: 0x06007F53 RID: 32595 RVA: 0x000BC811 File Offset: 0x000BAA11
 		[Nullable(1)]
 		public TMap<FName, FVector> SocketOffsets
 		{
@@ -144,9 +99,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170075F7 RID: 30199
-		// (get) Token: 0x0601D349 RID: 119625 RVA: 0x002B238F File Offset: 0x002B058F
-		// (set) Token: 0x0601D34A RID: 119626 RVA: 0x002B239F File Offset: 0x002B059F
+		// Token: 0x170018CE RID: 6350
+		// (get) Token: 0x06007F54 RID: 32596 RVA: 0x000BC81F File Offset: 0x000BAA1F
+		// (set) Token: 0x06007F55 RID: 32597 RVA: 0x000BC82F File Offset: 0x000BAA2F
 		public unsafe int EntityId_
 		{
 			get
@@ -159,9 +114,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170075F8 RID: 30200
-		// (get) Token: 0x0601D34B RID: 119627 RVA: 0x002B23B0 File Offset: 0x002B05B0
-		// (set) Token: 0x0601D34C RID: 119628 RVA: 0x002B23C0 File Offset: 0x002B05C0
+		// Token: 0x170018CF RID: 6351
+		// (get) Token: 0x06007F56 RID: 32598 RVA: 0x000BC840 File Offset: 0x000BAA40
+		// (set) Token: 0x06007F57 RID: 32599 RVA: 0x000BC850 File Offset: 0x000BAA50
 		public unsafe bool IsKscEnable
 		{
 			get
@@ -174,24 +129,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170075F9 RID: 30201
-		// (get) Token: 0x0601D34D RID: 119629 RVA: 0x002B23D1 File Offset: 0x002B05D1
-		// (set) Token: 0x0601D34E RID: 119630 RVA: 0x002B23EB File Offset: 0x002B05EB
-		public unsafe IKSC_HeadUiHandle HeadUiHandle
-		{
-			get
-			{
-				return (IKSC_HeadUiHandle)BuiltinUtils.GetOrCreateUObjectByNativePointer(*(base.NativePtr + (IntPtr)AKSC_Entity.__PropertyOffset_HeadUiHandle));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)AKSC_Entity.__PropertyOffset_HeadUiHandle) = new FScriptInterface(value, (value != null) ? value.InterfaceOffset() : 0);
-			}
-		}
-
-		// Token: 0x170075FA RID: 30202
-		// (get) Token: 0x0601D34F RID: 119631 RVA: 0x002B2411 File Offset: 0x002B0611
-		// (set) Token: 0x0601D350 RID: 119632 RVA: 0x002B2425 File Offset: 0x002B0625
+		// Token: 0x170018D0 RID: 6352
+		// (get) Token: 0x06007F58 RID: 32600 RVA: 0x000BC861 File Offset: 0x000BAA61
+		// (set) Token: 0x06007F59 RID: 32601 RVA: 0x000BC875 File Offset: 0x000BAA75
 		public unsafe AActor RenderActor_
 		{
 			get
@@ -204,19 +144,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D351 RID: 119633 RVA: 0x002B243A File Offset: 0x002B063A
+		// Token: 0x06007F5A RID: 32602 RVA: 0x000BC88A File Offset: 0x000BAA8A
 		public void UpdateBuffWithStackNumSelf(UKSC_DA_Buff DaBuff, int StackNum)
 		{
 			AKSC_Entity.__UpdateBuffWithStackNumSelf_Internal(base.NativePtr, (DaBuff != null) ? DaBuff.NativePtr : IntPtr.Zero, StackNum);
 		}
 
-		// Token: 0x0601D352 RID: 119634 RVA: 0x002B2458 File Offset: 0x002B0658
+		// Token: 0x06007F5B RID: 32603 RVA: 0x000BC8A8 File Offset: 0x000BAAA8
 		public void TryActiveSKill(int SkillIndex)
 		{
 			AKSC_Entity.__TryActiveSKill_Internal(base.NativePtr, SkillIndex);
 		}
 
-		// Token: 0x0601D353 RID: 119635 RVA: 0x002B2468 File Offset: 0x002B0668
+		// Token: 0x06007F5C RID: 32604 RVA: 0x000BC8B8 File Offset: 0x000BAAB8
 		public unsafe void SetTransformByWorld(in FTransformDouble D_Transform)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -224,253 +164,221 @@ namespace UnrealEngine
 			AKSC_Entity.__SetTransformByWorld_Internal(base.NativePtr, ptr);
 		}
 
-		// Token: 0x0601D354 RID: 119636 RVA: 0x002B249D File Offset: 0x002B069D
+		// Token: 0x06007F5D RID: 32605 RVA: 0x000BC8ED File Offset: 0x000BAAED
 		public void SetRenderActor(AActor RenderActor)
 		{
 			AKSC_Entity.__SetRenderActor_Internal(base.NativePtr, (RenderActor != null) ? RenderActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601D355 RID: 119637 RVA: 0x002B24BA File Offset: 0x002B06BA
+		// Token: 0x06007F5E RID: 32606 RVA: 0x000BC90A File Offset: 0x000BAB0A
 		public void SetLocationByWorld(in FVectorDouble D_Location)
 		{
 			AKSC_Entity.__SetLocationByWorld_Internal(base.NativePtr, D_Location);
 		}
 
-		// Token: 0x0601D356 RID: 119638 RVA: 0x002B24C8 File Offset: 0x002B06C8
+		// Token: 0x06007F5F RID: 32607 RVA: 0x000BC918 File Offset: 0x000BAB18
 		public void SetIgnoreFactions(in TArray<EKSC_Faction> Factions)
 		{
 			AKSC_Entity.__SetIgnoreFactions_Internal(base.NativePtr, (Factions ?? new TArray<EKSC_Faction>()).NativePtr);
 		}
 
-		// Token: 0x0601D357 RID: 119639 RVA: 0x002B24E5 File Offset: 0x002B06E5
+		// Token: 0x06007F60 RID: 32608 RVA: 0x000BC935 File Offset: 0x000BAB35
 		public void SetFaction(EKSC_Faction Faction)
 		{
 			AKSC_Entity.__SetFaction_Internal(base.NativePtr, Faction);
 		}
 
-		// Token: 0x0601D358 RID: 119640 RVA: 0x002B24F3 File Offset: 0x002B06F3
+		// Token: 0x06007F61 RID: 32609 RVA: 0x000BC943 File Offset: 0x000BAB43
 		public bool SetEntityActive(bool InActive)
 		{
 			return AKSC_Entity.__SetEntityActive_Internal(base.NativePtr, InActive);
 		}
 
-		// Token: 0x0601D359 RID: 119641 RVA: 0x002B2501 File Offset: 0x002B0701
+		// Token: 0x06007F62 RID: 32610 RVA: 0x000BC951 File Offset: 0x000BAB51
 		public void SetAttr(EKSC_AttrType Type, int Value)
 		{
 			AKSC_Entity.__SetAttr_Internal(base.NativePtr, Type, Value);
 		}
 
-		// Token: 0x0601D35A RID: 119642 RVA: 0x002B2510 File Offset: 0x002B0710
+		// Token: 0x06007F63 RID: 32611 RVA: 0x000BC960 File Offset: 0x000BAB60
 		public void RemoveDaBuffImmediately(UKSC_DA_Buff DaBuff)
 		{
 			AKSC_Entity.__RemoveDaBuffImmediately_Internal(base.NativePtr, (DaBuff != null) ? DaBuff.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601D35B RID: 119643 RVA: 0x002B252D File Offset: 0x002B072D
+		// Token: 0x06007F64 RID: 32612 RVA: 0x000BC97D File Offset: 0x000BAB7D
 		public void RemoveBuffSelf(UKSC_DA_Buff DaBuff)
 		{
 			AKSC_Entity.__RemoveBuffSelf_Internal(base.NativePtr, (DaBuff != null) ? DaBuff.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601D35C RID: 119644 RVA: 0x002B254A File Offset: 0x002B074A
+		// Token: 0x06007F65 RID: 32613 RVA: 0x000BC99A File Offset: 0x000BAB9A
 		public float GetTimeScale()
 		{
 			return AKSC_Entity.__GetTimeScale_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601D35D RID: 119645 RVA: 0x002B2557 File Offset: 0x002B0757
+		// Token: 0x06007F66 RID: 32614 RVA: 0x000BC9A7 File Offset: 0x000BABA7
 		public UKSC_SkillComp GetSkillComp()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKSC_SkillComp>(AKSC_Entity.__GetSkillComp_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601D35E RID: 119646 RVA: 0x002B2569 File Offset: 0x002B0769
-		public UKSC_SceneComp GetSceneComp()
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKSC_SceneComp>(AKSC_Entity.__GetSceneComp_Internal(base.NativePtr));
-		}
-
-		// Token: 0x0601D35F RID: 119647 RVA: 0x002B257B File Offset: 0x002B077B
+		// Token: 0x06007F67 RID: 32615 RVA: 0x000BC9B9 File Offset: 0x000BABB9
 		public AActor GetRenderActor()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(AKSC_Entity.__GetRenderActor_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601D360 RID: 119648 RVA: 0x002B258D File Offset: 0x002B078D
+		// Token: 0x06007F68 RID: 32616 RVA: 0x000BC9CB File Offset: 0x000BABCB
 		public UKSC_Move GetMoveComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKSC_Move>(AKSC_Entity.__GetMoveComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601D361 RID: 119649 RVA: 0x002B259F File Offset: 0x002B079F
-		public UKSC_Anim GetAnimComponent()
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKSC_Anim>(AKSC_Entity.__GetAnimComponent_Internal(base.NativePtr));
-		}
-
-		// Token: 0x0601D362 RID: 119650 RVA: 0x002B25B1 File Offset: 0x002B07B1
+		// Token: 0x06007F69 RID: 32617 RVA: 0x000BC9DD File Offset: 0x000BABDD
 		public void Dead(int KillBy)
 		{
 			AKSC_Entity.__Dead_Internal(base.NativePtr, KillBy);
 		}
 
-		// Token: 0x0601D363 RID: 119651 RVA: 0x002B25BF File Offset: 0x002B07BF
+		// Token: 0x06007F6A RID: 32618 RVA: 0x000BC9EB File Offset: 0x000BABEB
 		public void ApplyBuffSelf(UKSC_DA_Buff DaBuff)
 		{
 			AKSC_Entity.__ApplyBuffSelf_Internal(base.NativePtr, (DaBuff != null) ? DaBuff.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601D364 RID: 119652 RVA: 0x002B25DC File Offset: 0x002B07DC
+		// Token: 0x06007F6B RID: 32619 RVA: 0x000BCA08 File Offset: 0x000BAC08
 		public void ApplyBuffByOther(UKSC_DA_Buff DaBuff, int EntityId)
 		{
 			AKSC_Entity.__ApplyBuffByOther_Internal(base.NativePtr, (DaBuff != null) ? DaBuff.NativePtr : IntPtr.Zero, EntityId);
 		}
 
-		// Token: 0x0601D365 RID: 119653 RVA: 0x002B25FA File Offset: 0x002B07FA
+		// Token: 0x06007F6C RID: 32620 RVA: 0x000BCA26 File Offset: 0x000BAC26
 		public void AddAttr(EKSC_AttrType Type, int Delta)
 		{
 			AKSC_Entity.__AddAttr_Internal(base.NativePtr, Type, Delta);
 		}
 
-		// Token: 0x0601D366 RID: 119654
+		// Token: 0x06007F6D RID: 32621
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateBuffWithStackNumSelf_Internal(IntPtr @this, IntPtr DaBuff, int StackNum);
 
-		// Token: 0x0601D367 RID: 119655
+		// Token: 0x06007F6E RID: 32622
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TryActiveSKill_Internal(IntPtr @this, int SkillIndex);
 
-		// Token: 0x0601D368 RID: 119656
+		// Token: 0x06007F6F RID: 32623
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTransformByWorld_Internal(IntPtr @this, in FTransformDouble D_Transform);
 
-		// Token: 0x0601D369 RID: 119657
+		// Token: 0x06007F70 RID: 32624
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetRenderActor_Internal(IntPtr @this, IntPtr RenderActor);
 
-		// Token: 0x0601D36A RID: 119658
+		// Token: 0x06007F71 RID: 32625
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLocationByWorld_Internal(IntPtr @this, in FVectorDouble D_Location);
 
-		// Token: 0x0601D36B RID: 119659
+		// Token: 0x06007F72 RID: 32626
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetIgnoreFactions_Internal(IntPtr @this, IntPtr Factions);
 
-		// Token: 0x0601D36C RID: 119660
+		// Token: 0x06007F73 RID: 32627
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetFaction_Internal(IntPtr @this, EKSC_Faction Faction);
 
-		// Token: 0x0601D36D RID: 119661
+		// Token: 0x06007F74 RID: 32628
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetEntityActive_Internal(IntPtr @this, bool InActive);
 
-		// Token: 0x0601D36E RID: 119662
+		// Token: 0x06007F75 RID: 32629
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAttr_Internal(IntPtr @this, EKSC_AttrType Type, int Value);
 
-		// Token: 0x0601D36F RID: 119663
+		// Token: 0x06007F76 RID: 32630
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveDaBuffImmediately_Internal(IntPtr @this, IntPtr DaBuff);
 
-		// Token: 0x0601D370 RID: 119664
+		// Token: 0x06007F77 RID: 32631
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveBuffSelf_Internal(IntPtr @this, IntPtr DaBuff);
 
-		// Token: 0x0601D371 RID: 119665
+		// Token: 0x06007F78 RID: 32632
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetTimeScale_Internal(IntPtr @this);
 
-		// Token: 0x0601D372 RID: 119666
+		// Token: 0x06007F79 RID: 32633
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSkillComp_Internal(IntPtr @this);
 
-		// Token: 0x0601D373 RID: 119667
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetSceneComp_Internal(IntPtr @this);
-
-		// Token: 0x0601D374 RID: 119668
+		// Token: 0x06007F7A RID: 32634
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetRenderActor_Internal(IntPtr @this);
 
-		// Token: 0x0601D375 RID: 119669
+		// Token: 0x06007F7B RID: 32635
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetMoveComponent_Internal(IntPtr @this);
 
-		// Token: 0x0601D376 RID: 119670
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetAnimComponent_Internal(IntPtr @this);
-
-		// Token: 0x0601D377 RID: 119671
+		// Token: 0x06007F7C RID: 32636
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Dead_Internal(IntPtr @this, int KillBy);
 
-		// Token: 0x0601D378 RID: 119672
+		// Token: 0x06007F7D RID: 32637
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyBuffSelf_Internal(IntPtr @this, IntPtr DaBuff);
 
-		// Token: 0x0601D379 RID: 119673
+		// Token: 0x06007F7E RID: 32638
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyBuffByOther_Internal(IntPtr @this, IntPtr DaBuff, int EntityId);
 
-		// Token: 0x0601D37A RID: 119674
+		// Token: 0x06007F7F RID: 32639
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddAttr_Internal(IntPtr @this, EKSC_AttrType Type, int Delta);
 
-		// Token: 0x0601D37B RID: 119675 RVA: 0x002B2609 File Offset: 0x002B0809
+		// Token: 0x06007F80 RID: 32640 RVA: 0x000BCA35 File Offset: 0x000BAC35
 		static AKSC_Entity()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_Entity");
 		}
 
-		// Token: 0x0601D37C RID: 119676 RVA: 0x002B2617 File Offset: 0x002B0817
+		// Token: 0x06007F81 RID: 32641 RVA: 0x000BCA43 File Offset: 0x000BAC43
 		protected AKSC_Entity(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FD9F RID: 64927
+		// Token: 0x040037A3 RID: 14243
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Entity";
 
-		// Token: 0x0400FDA0 RID: 64928
+		// Token: 0x040037A4 RID: 14244
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FDA1 RID: 64929
+		// Token: 0x040037A5 RID: 14245
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FDA2 RID: 64930
-		internal static int __PropertyOffset_SceneComp_;
-
-		// Token: 0x0400FDA3 RID: 64931
+		// Token: 0x040037A6 RID: 14246
 		internal static int __PropertyOffset_Move_;
 
-		// Token: 0x0400FDA4 RID: 64932
-		internal static int __PropertyOffset_Anim_;
-
-		// Token: 0x0400FDA5 RID: 64933
+		// Token: 0x040037A7 RID: 14247
 		internal static int __PropertyOffset_SkillComp_;
 
-		// Token: 0x0400FDA6 RID: 64934
-		internal static int __PropertyOffset_TimeScaleComp_;
-
-		// Token: 0x0400FDA7 RID: 64935
+		// Token: 0x040037A8 RID: 14248
 		internal static int __PropertyOffset_DaEntity_;
 
-		// Token: 0x0400FDA8 RID: 64936
+		// Token: 0x040037A9 RID: 14249
 		internal static int __PropertyOffset_SocketOffsets;
 
-		// Token: 0x0400FDA9 RID: 64937
+		// Token: 0x040037AA RID: 14250
 		private TMap<FName, FVector> _SocketOffsets;
 
-		// Token: 0x0400FDAA RID: 64938
+		// Token: 0x040037AB RID: 14251
 		internal static int __PropertyOffset_EntityId_;
 
-		// Token: 0x0400FDAB RID: 64939
+		// Token: 0x040037AC RID: 14252
 		internal static int __PropertyOffset_IsKscEnable;
 
-		// Token: 0x0400FDAC RID: 64940
-		internal static int __PropertyOffset_HeadUiHandle;
-
-		// Token: 0x0400FDAD RID: 64941
+		// Token: 0x040037AD RID: 14253
 		internal static int __PropertyOffset_RenderActor_;
 	}
 }

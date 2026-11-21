@@ -3,106 +3,106 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200159E RID: 5534
+	// Token: 0x02001610 RID: 5648
 	public enum ECharMoveState
 	{
-		// Token: 0x0400A7F3 RID: 42995
+		// Token: 0x0400AC72 RID: 44146
 		[OriginalName("MoveStateOther")]
 		MoveStateOther,
-		// Token: 0x0400A7F4 RID: 42996
+		// Token: 0x0400AC73 RID: 44147
 		[OriginalName("MoveStateStand")]
 		MoveStateStand,
-		// Token: 0x0400A7F5 RID: 42997
+		// Token: 0x0400AC74 RID: 44148
 		[OriginalName("MoveStateWalk")]
 		MoveStateWalk,
-		// Token: 0x0400A7F6 RID: 42998
+		// Token: 0x0400AC75 RID: 44149
 		[OriginalName("MoveStateWalkStop")]
 		MoveStateWalkStop,
-		// Token: 0x0400A7F7 RID: 42999
+		// Token: 0x0400AC76 RID: 44150
 		[OriginalName("MoveStateRun")]
 		MoveStateRun,
-		// Token: 0x0400A7F8 RID: 43000
+		// Token: 0x0400AC77 RID: 44151
 		[OriginalName("MoveStateRunStop")]
 		MoveStateRunStop,
-		// Token: 0x0400A7F9 RID: 43001
+		// Token: 0x0400AC78 RID: 44152
 		[OriginalName("MoveStateSprint")]
 		MoveStateSprint,
-		// Token: 0x0400A7FA RID: 43002
+		// Token: 0x0400AC79 RID: 44153
 		[OriginalName("MoveStateSprintStop")]
 		MoveStateSprintStop,
-		// Token: 0x0400A7FB RID: 43003
+		// Token: 0x0400AC7A RID: 44154
 		[OriginalName("MoveStateDodge")]
 		MoveStateDodge,
-		// Token: 0x0400A7FC RID: 43004
+		// Token: 0x0400AC7B RID: 44155
 		[OriginalName("MoveStateLandRoll")]
 		MoveStateLandRoll,
-		// Token: 0x0400A7FD RID: 43005
+		// Token: 0x0400AC7C RID: 44156
 		[OriginalName("MoveStateKnockDown")]
 		MoveStateKnockDown,
-		// Token: 0x0400A7FE RID: 43006
+		// Token: 0x0400AC7D RID: 44157
 		[OriginalName("MoveStateParry")]
 		MoveStateParry,
-		// Token: 0x0400A7FF RID: 43007
+		// Token: 0x0400AC7E RID: 44158
 		[OriginalName("MoveStateSoftKnock")]
 		MoveStateSoftKnock,
-		// Token: 0x0400A800 RID: 43008
+		// Token: 0x0400AC7F RID: 44159
 		[OriginalName("MoveStateHeavyKnock")]
 		MoveStateHeavyKnock,
-		// Token: 0x0400A801 RID: 43009
+		// Token: 0x0400AC80 RID: 44160
 		[OriginalName("MoveStateNormalClimb")]
 		MoveStateNormalClimb,
-		// Token: 0x0400A802 RID: 43010
+		// Token: 0x0400AC81 RID: 44161
 		[OriginalName("MoveStateFastClimb")]
 		MoveStateFastClimb,
-		// Token: 0x0400A803 RID: 43011
+		// Token: 0x0400AC82 RID: 44162
 		[OriginalName("MoveStateGlide")]
 		MoveStateGlide,
-		// Token: 0x0400A804 RID: 43012
+		// Token: 0x0400AC83 RID: 44163
 		[OriginalName("MoveStateKnockUp")]
 		MoveStateKnockUp,
-		// Token: 0x0400A805 RID: 43013
+		// Token: 0x0400AC84 RID: 44164
 		[OriginalName("MoveStateFastSwim")]
 		MoveStateFastSwim,
-		// Token: 0x0400A806 RID: 43014
+		// Token: 0x0400AC85 RID: 44165
 		[OriginalName("MoveStateNormalSwim")]
 		MoveStateNormalSwim,
-		// Token: 0x0400A807 RID: 43015
+		// Token: 0x0400AC86 RID: 44166
 		[OriginalName("MoveStateSwing")]
 		MoveStateSwing,
-		// Token: 0x0400A808 RID: 43016
+		// Token: 0x0400AC87 RID: 44167
 		[OriginalName("MoveStateCaptured")]
 		MoveStateCaptured,
-		// Token: 0x0400A809 RID: 43017
+		// Token: 0x0400AC88 RID: 44168
 		[OriginalName("MoveStateSlide")]
 		MoveStateSlide,
-		// Token: 0x0400A80A RID: 43018
+		// Token: 0x0400AC89 RID: 44169
 		[OriginalName("MoveStateFlying")]
 		MoveStateFlying,
-		// Token: 0x0400A80B RID: 43019
+		// Token: 0x0400AC8A RID: 44170
 		[OriginalName("MoveStateEnterClimb")]
 		MoveStateEnterClimb,
-		// Token: 0x0400A80C RID: 43020
+		// Token: 0x0400AC8B RID: 44171
 		[OriginalName("MoveStateExitClimb")]
 		MoveStateExitClimb,
-		// Token: 0x0400A80D RID: 43021
+		// Token: 0x0400AC8C RID: 44172
 		[OriginalName("MoveStateNormalSki")]
 		MoveStateNormalSki,
-		// Token: 0x0400A80E RID: 43022
+		// Token: 0x0400AC8D RID: 44173
 		[OriginalName("MoveStateStandUp")]
 		MoveStateStandUp,
-		// Token: 0x0400A80F RID: 43023
+		// Token: 0x0400AC8E RID: 44174
 		[OriginalName("MoveStateSoar")]
 		MoveStateSoar,
-		// Token: 0x0400A810 RID: 43024
+		// Token: 0x0400AC8F RID: 44175
 		[OriginalName("MoveRoll")]
 		MoveRoll,
-		// Token: 0x0400A811 RID: 43025
+		// Token: 0x0400AC90 RID: 44176
 		[OriginalName("MoveKite")]
 		MoveKite,
-		// Token: 0x0400A812 RID: 43026
+		// Token: 0x0400AC91 RID: 44177
 		[OriginalName("MoveGongduola")]
 		MoveGongduola,
-		// Token: 0x0400A813 RID: 43027
+		// Token: 0x0400AC92 RID: 44178
 		[OriginalName("MoveVehicle")]
 		MoveVehicle
 	}

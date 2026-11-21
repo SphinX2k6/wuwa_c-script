@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AD7 RID: 10967
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DCB RID: 11723
 	public class SetWayOccupancyState : ActionParams
 	{
-		// Token: 0x0600F083 RID: 61571 RVA: 0x0022EBED File Offset: 0x0022CDED
+		// Token: 0x0600FF39 RID: 65337 RVA: 0x0024C8F9 File Offset: 0x0024AAF9
 		public static SetWayOccupancyState Create(ISetWayOccupancyState? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C97 RID: 19607
-		// (get) Token: 0x0600F084 RID: 61572 RVA: 0x0022EC0C File Offset: 0x0022CE0C
+		// Token: 0x17005051 RID: 20561
+		// (get) Token: 0x0600FF3A RID: 65338 RVA: 0x0024C918 File Offset: 0x0024AB18
 		public virtual bool Occupy
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C98 RID: 19608
-		// (get) Token: 0x0600F085 RID: 61573 RVA: 0x0022EC1C File Offset: 0x0022CE1C
+		// Token: 0x17005052 RID: 20562
+		// (get) Token: 0x0600FF3B RID: 65339 RVA: 0x0024C928 File Offset: 0x0024AB28
 		public virtual List<int> TargetWay
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400844F RID: 33871
+		// Token: 0x04008B53 RID: 35667
 		private ISetWayOccupancyState Instance;
 
-		// Token: 0x04008450 RID: 33872
+		// Token: 0x04008B54 RID: 35668
 		private List<int> _TargetWayCache;
 
-		// Token: 0x04008451 RID: 33873
+		// Token: 0x04008B55 RID: 35669
 		private bool _TargetWayInited;
 	}
 }

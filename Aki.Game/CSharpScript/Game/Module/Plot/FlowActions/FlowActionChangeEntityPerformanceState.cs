@@ -5,10 +5,10 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050AD RID: 20653
+	// Token: 0x0200407D RID: 16509
 	public class FlowActionChangeEntityPerformanceState : FlowActionBase
 	{
-		// Token: 0x06034EB1 RID: 216753 RVA: 0x00C888C0 File Offset: 0x00C86AC0
+		// Token: 0x06029DAA RID: 171434 RVA: 0x00BD5B7C File Offset: 0x00BD3D7C
 		protected unsafe override void OnExecute()
 		{
 			ChangeEntityPrefabPerformance changeEntityPrefabPerformance = this.ActionInfo.Params as ChangeEntityPrefabPerformance;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			sceneItemStateComponent2.ChangePerformanceState(tagIdByName, false, true);
 		}
 
-		// Token: 0x06034EB2 RID: 216754 RVA: 0x00C88A94 File Offset: 0x00C86C94
+		// Token: 0x06029DAB RID: 171435 RVA: 0x00BD5D50 File Offset: 0x00BD3F50
 		private int GetSelfEntityId()
 		{
 			int? num = null;

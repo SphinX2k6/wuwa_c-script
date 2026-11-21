@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023D6 RID: 9174
+	// Token: 0x0200266D RID: 9837
 	public class EPlayLevelSequenceTypeJsonConverter : JsonConverter<EPlayLevelSequenceType>
 	{
-		// Token: 0x0600C7C3 RID: 51139 RVA: 0x001D3ED8 File Offset: 0x001D20D8
+		// Token: 0x0600D446 RID: 54342 RVA: 0x001ED684 File Offset: 0x001EB884
 		public override EPlayLevelSequenceType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EPlayLevelSequenceTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C7C4 RID: 51140 RVA: 0x001D3EFC File Offset: 0x001D20FC
+		// Token: 0x0600D447 RID: 54343 RVA: 0x001ED6A8 File Offset: 0x001EB8A8
 		public override void Write(Utf8JsonWriter writer, EPlayLevelSequenceType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

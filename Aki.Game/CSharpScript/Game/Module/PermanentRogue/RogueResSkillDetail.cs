@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200532A RID: 21290
+	// Token: 0x020042FA RID: 17146
 	public class RogueResSkillDetail : UiPanelBase
 	{
-		// Token: 0x060366FA RID: 222970 RVA: 0x00CE2C34 File Offset: 0x00CE0E34
+		// Token: 0x0602B5F6 RID: 177654 RVA: 0x00C30604 File Offset: 0x00C2E804
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x060366FB RID: 222971 RVA: 0x00CE2DF0 File Offset: 0x00CE0FF0
+		// Token: 0x0602B5F7 RID: 177655 RVA: 0x00C307C0 File Offset: 0x00C2E9C0
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(2);
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			text6.SetText("", true);
 		}
 
-		// Token: 0x060366FC RID: 222972 RVA: 0x00CE2EB4 File Offset: 0x00CE10B4
+		// Token: 0x0602B5F8 RID: 177656 RVA: 0x00C30884 File Offset: 0x00C2EA84
 		private void OnClickBtnUpgrade()
 		{
 			RogueResTheme value = ConfigRogueResThemeById.GetConfig(ConfigRogueResTalentTreeById.GetConfig(this.Data.Value.Id, true).Value.SeasonId, true).Value;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			});
 		}
 
-		// Token: 0x060366FD RID: 222973 RVA: 0x00CE2FB8 File Offset: 0x00CE11B8
+		// Token: 0x0602B5F9 RID: 177657 RVA: 0x00C30988 File Offset: 0x00C2EB88
 		public void Refresh(RogueResTalentTree data)
 		{
 			this.Data = new RogueResTalentTree?(data);
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.UpdateDetail(skillLevelById, flag);
 		}
 
-		// Token: 0x060366FE RID: 222974 RVA: 0x00CE320C File Offset: 0x00CE140C
+		// Token: 0x0602B5FA RID: 177658 RVA: 0x00C30BDC File Offset: 0x00C2EDDC
 		public void UpdateDetail(int level, bool isMax)
 		{
 			if (level < 0)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			base.GetItem(13).SetUIActive(isMax);
 		}
 
-		// Token: 0x0401CC81 RID: 117889
+		// Token: 0x040176B7 RID: 95927
 		public RogueResTalentTree? Data;
 	}
 }

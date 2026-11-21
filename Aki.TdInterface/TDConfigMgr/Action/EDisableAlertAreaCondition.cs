@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015C4 RID: 5572
+	// Token: 0x02001723 RID: 5923
 	public enum EDisableAlertAreaCondition
 	{
-		// Token: 0x04004A43 RID: 19011
+		// Token: 0x04004DFD RID: 19965
 		DungeonCondition,
-		// Token: 0x04004A44 RID: 19012
+		// Token: 0x04004DFE RID: 19966
 		QuestCondition
 	}
 }

@@ -9,13 +9,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012BB RID: 4795
+// Token: 0x0200076F RID: 1903
 [NullableContext(2)]
 [Nullable(0)]
 public class LordGymActivitySubView : ActivitySubViewBase
 {
-	// Token: 0x17000B34 RID: 2868
-	// (get) Token: 0x060083C2 RID: 33730 RVA: 0x001C0DED File Offset: 0x001BEFED
+	// Token: 0x17000B54 RID: 2900
+	// (get) Token: 0x0600575D RID: 22365 RVA: 0x001C9C49 File Offset: 0x001C7E49
 	protected new LordGymActivityData ActivityBaseData
 	{
 		get
@@ -24,7 +24,7 @@ public class LordGymActivitySubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060083C3 RID: 33731 RVA: 0x001C0DFC File Offset: 0x001BEFFC
+	// Token: 0x0600575E RID: 22366 RVA: 0x001C9C58 File Offset: 0x001C7E58
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -38,7 +38,7 @@ public class LordGymActivitySubView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060083C4 RID: 33732 RVA: 0x001C0E68 File Offset: 0x001BF068
+	// Token: 0x0600575F RID: 22367 RVA: 0x001C9CC4 File Offset: 0x001C7EC4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LordGymActivitySubView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class LordGymActivitySubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060083C5 RID: 33733 RVA: 0x001C0EAC File Offset: 0x001BF0AC
+	// Token: 0x06005760 RID: 22368 RVA: 0x001C9D08 File Offset: 0x001C7F08
 	protected override void OnRefreshView()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.RefreshActivityTab, this.ActivityBaseData.Id);
@@ -73,7 +73,7 @@ public class LordGymActivitySubView : ActivitySubViewBase
 		bossCard.Refresh(lordGymEntranceWithNewTag);
 	}
 
-	// Token: 0x060083C6 RID: 33734 RVA: 0x001C0F2D File Offset: 0x001BF12D
+	// Token: 0x06005761 RID: 22369 RVA: 0x001C9D89 File Offset: 0x001C7F89
 	private void OnConfirmBtnClick(ActivityBaseData _)
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -98,20 +98,20 @@ public class LordGymActivitySubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x04003B42 RID: 15170
+	// Token: 0x04003BDA RID: 15322
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x04003B43 RID: 15171
+	// Token: 0x04003BDB RID: 15323
 	protected LordGymBossCard BossCard;
 
-	// Token: 0x020078D7 RID: 30935
+	// Token: 0x02006A61 RID: 27233
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027D04 RID: 163076
+		// Token: 0x04023032 RID: 143410
 		public const int CommonActionInfo = 0;
 
-		// Token: 0x04027D05 RID: 163077
+		// Token: 0x04023033 RID: 143411
 		public const int BossCard = 1;
 	}
 }

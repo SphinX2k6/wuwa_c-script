@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002559 RID: 9561
+	// Token: 0x02002802 RID: 10242
 	public class ITalkItemAvgRoleConfig
 	{
-		// Token: 0x0600D5F8 RID: 54776 RVA: 0x001FCBF2 File Offset: 0x001FADF2
-		[NullableContext(1)]
+		// Token: 0x0600E362 RID: 58210 RVA: 0x002187EE File Offset: 0x002169EE
 		public static ITalkItemAvgRoleConfig Create(ITalkItemAvgRoleConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003D08 RID: 15624
-		// (get) Token: 0x0600D5F9 RID: 54777 RVA: 0x001FCC14 File Offset: 0x001FAE14
+		// Token: 0x1700400C RID: 16396
+		// (get) Token: 0x0600E363 RID: 58211 RVA: 0x00218810 File Offset: 0x00216A10
 		public virtual EAvgVisualEffect? VisualEffect
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003D09 RID: 15625
-		// (get) Token: 0x0600D5FA RID: 54778 RVA: 0x001FCC4A File Offset: 0x001FAE4A
+		// Token: 0x1700400D RID: 16397
+		// (get) Token: 0x0600E364 RID: 58212 RVA: 0x00218846 File Offset: 0x00216A46
 		public virtual EAvgRoleAnimationType AnimationType
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003D0A RID: 15626
-		// (get) Token: 0x0600D5FB RID: 54779 RVA: 0x001FCC58 File Offset: 0x001FAE58
+		// Token: 0x1700400E RID: 16398
+		// (get) Token: 0x0600E365 RID: 58213 RVA: 0x00218854 File Offset: 0x00216A54
 		public virtual bool? IsAnimationLoop
 		{
 			get
@@ -59,7 +57,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040075F5 RID: 30197
+		// Token: 0x04007C52 RID: 31826
 		private ITalkItemAvgRoleConfig Instance;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020031C4 RID: 12740
+// Token: 0x02002733 RID: 10035
 internal enum EPlayerGroupPatrolState
 {
-	// Token: 0x0400D752 RID: 55122
+	// Token: 0x0400DBD9 RID: 56281
 	None,
-	// Token: 0x0400D753 RID: 55123
+	// Token: 0x0400DBDA RID: 56282
 	MovingToPlaceholder,
-	// Token: 0x0400D754 RID: 55124
+	// Token: 0x0400DBDB RID: 56283
 	Following
 }

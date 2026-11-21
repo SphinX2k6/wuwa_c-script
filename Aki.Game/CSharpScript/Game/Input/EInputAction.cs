@@ -5,31 +5,31 @@ using AkiClient.Game.Aki.Character.Input.Enum;
 
 namespace CSharpScript.Game.Input
 {
-	// Token: 0x02006FC9 RID: 28617
+	// Token: 0x0200614A RID: 24906
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct EInputAction : IEquatable<EInputAction>
 	{
-		// Token: 0x060459A3 RID: 285091 RVA: 0x0114960E File Offset: 0x0114780E
+		// Token: 0x0603BB53 RID: 244563 RVA: 0x010F3406 File Offset: 0x010F1606
 		private EInputAction(string Name, byte Value)
 		{
 			this.Name = Name;
 			this.Value = Value;
 		}
 
-		// Token: 0x060459A4 RID: 285092 RVA: 0x0114961E File Offset: 0x0114781E
+		// Token: 0x0603BB54 RID: 244564 RVA: 0x010F3416 File Offset: 0x010F1616
 		public override string ToString()
 		{
 			return this.Name;
 		}
 
-		// Token: 0x060459A5 RID: 285093 RVA: 0x01149626 File Offset: 0x01147826
+		// Token: 0x0603BB55 RID: 244565 RVA: 0x010F341E File Offset: 0x010F161E
 		public bool Equals(EInputAction other)
 		{
 			return this.Value == other.Value;
 		}
 
-		// Token: 0x060459A6 RID: 285094 RVA: 0x01149638 File Offset: 0x01147838
+		// Token: 0x0603BB56 RID: 244566 RVA: 0x010F3430 File Offset: 0x010F1630
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Input
 			return false;
 		}
 
-		// Token: 0x060459A7 RID: 285095 RVA: 0x0114965D File Offset: 0x0114785D
+		// Token: 0x0603BB57 RID: 244567 RVA: 0x010F3455 File Offset: 0x010F1655
 		public override int GetHashCode()
 		{
 			string name = this.Name;
@@ -52,31 +52,31 @@ namespace CSharpScript.Game.Input
 			return name.GetHashCode();
 		}
 
-		// Token: 0x060459A8 RID: 285096 RVA: 0x01149670 File Offset: 0x01147870
+		// Token: 0x0603BB58 RID: 244568 RVA: 0x010F3468 File Offset: 0x010F1668
 		public static bool operator ==(EInputAction left, EInputAction right)
 		{
 			return left.Value == right.Value;
 		}
 
-		// Token: 0x060459A9 RID: 285097 RVA: 0x01149680 File Offset: 0x01147880
+		// Token: 0x0603BB59 RID: 244569 RVA: 0x010F3478 File Offset: 0x010F1678
 		public static bool operator !=(EInputAction left, EInputAction right)
 		{
 			return !left.Equals(right);
 		}
 
-		// Token: 0x060459AA RID: 285098 RVA: 0x0114968D File Offset: 0x0114788D
+		// Token: 0x0603BB5A RID: 244570 RVA: 0x010F3485 File Offset: 0x010F1685
 		public static implicit operator byte(EInputAction action)
 		{
 			return action.Value;
 		}
 
-		// Token: 0x060459AB RID: 285099 RVA: 0x01149695 File Offset: 0x01147895
+		// Token: 0x0603BB5B RID: 244571 RVA: 0x010F348D File Offset: 0x010F168D
 		public static implicit operator EInputAction(EInputAction action)
 		{
 			return (EInputAction)action.Value;
 		}
 
-		// Token: 0x060459AC RID: 285100 RVA: 0x011496A0 File Offset: 0x011478A0
+		// Token: 0x0603BB5C RID: 244572 RVA: 0x010F3498 File Offset: 0x010F1698
 		public static explicit operator EInputAction(byte value)
 		{
 			switch (value)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x060459AD RID: 285101 RVA: 0x0114977C File Offset: 0x0114797C
+		// Token: 0x0603BB5D RID: 244573 RVA: 0x010F3574 File Offset: 0x010F1774
 		public static implicit operator EInputAction(EInputAction action)
 		{
 			switch (action)
@@ -170,127 +170,127 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x0402450D RID: 148749
+		// Token: 0x0401F7C2 RID: 128962
 		public readonly string Name;
 
-		// Token: 0x0402450E RID: 148750
+		// Token: 0x0401F7C3 RID: 128963
 		public readonly byte Value;
 
-		// Token: 0x0402450F RID: 148751
+		// Token: 0x0401F7C4 RID: 128964
 		public const byte NoneValue = 0;
 
-		// Token: 0x04024510 RID: 148752
+		// Token: 0x0401F7C5 RID: 128965
 		public static readonly EInputAction None = new EInputAction("None", 0);
 
-		// Token: 0x04024511 RID: 148753
+		// Token: 0x0401F7C6 RID: 128966
 		public const byte 跳跃Value = 1;
 
-		// Token: 0x04024512 RID: 148754
+		// Token: 0x0401F7C7 RID: 128967
 		public static readonly EInputAction 跳跃 = new EInputAction("跳跃", 1);
 
-		// Token: 0x04024513 RID: 148755
+		// Token: 0x0401F7C8 RID: 128968
 		public const byte 攀爬Value = 2;
 
-		// Token: 0x04024514 RID: 148756
+		// Token: 0x0401F7C9 RID: 128969
 		public static readonly EInputAction 攀爬 = new EInputAction("攀爬", 2);
 
-		// Token: 0x04024515 RID: 148757
+		// Token: 0x0401F7CA RID: 128970
 		public const byte 走跑切换Value = 3;
 
-		// Token: 0x04024516 RID: 148758
+		// Token: 0x0401F7CB RID: 128971
 		public static readonly EInputAction 走跑切换 = new EInputAction("走跑切换", 3);
 
-		// Token: 0x04024517 RID: 148759
+		// Token: 0x0401F7CC RID: 128972
 		public const byte 攻击Value = 4;
 
-		// Token: 0x04024518 RID: 148760
+		// Token: 0x0401F7CD RID: 128973
 		public static readonly EInputAction 攻击 = new EInputAction("攻击", 4);
 
-		// Token: 0x04024519 RID: 148761
+		// Token: 0x0401F7CE RID: 128974
 		public const byte 闪避Value = 5;
 
-		// Token: 0x0402451A RID: 148762
+		// Token: 0x0401F7CF RID: 128975
 		public static readonly EInputAction 闪避 = new EInputAction("闪避", 5);
 
-		// Token: 0x0402451B RID: 148763
+		// Token: 0x0401F7D0 RID: 128976
 		public const byte 技能1Value = 6;
 
-		// Token: 0x0402451C RID: 148764
+		// Token: 0x0401F7D1 RID: 128977
 		public static readonly EInputAction 技能1 = new EInputAction("技能1", 6);
 
-		// Token: 0x0402451D RID: 148765
+		// Token: 0x0401F7D2 RID: 128978
 		public const byte 幻象1Value = 7;
 
-		// Token: 0x0402451E RID: 148766
+		// Token: 0x0401F7D3 RID: 128979
 		public static readonly EInputAction 幻象1 = new EInputAction("幻象1", 7);
 
-		// Token: 0x0402451F RID: 148767
+		// Token: 0x0401F7D4 RID: 128980
 		public const byte 大招Value = 8;
 
-		// Token: 0x04024520 RID: 148768
+		// Token: 0x0401F7D5 RID: 128981
 		public static readonly EInputAction 大招 = new EInputAction("大招", 8);
 
-		// Token: 0x04024521 RID: 148769
+		// Token: 0x0401F7D6 RID: 128982
 		public const byte 幻象2Value = 9;
 
-		// Token: 0x04024522 RID: 148770
+		// Token: 0x0401F7D7 RID: 128983
 		public static readonly EInputAction 幻象2 = new EInputAction("幻象2", 9);
 
-		// Token: 0x04024523 RID: 148771
+		// Token: 0x0401F7D8 RID: 128984
 		public const byte 切换角色1Value = 10;
 
-		// Token: 0x04024524 RID: 148772
+		// Token: 0x0401F7D9 RID: 128985
 		public static readonly EInputAction 切换角色1 = new EInputAction("切换角色1", 10);
 
-		// Token: 0x04024525 RID: 148773
+		// Token: 0x0401F7DA RID: 128986
 		public const byte 切换角色2Value = 11;
 
-		// Token: 0x04024526 RID: 148774
+		// Token: 0x0401F7DB RID: 128987
 		public static readonly EInputAction 切换角色2 = new EInputAction("切换角色2", 11);
 
-		// Token: 0x04024527 RID: 148775
+		// Token: 0x0401F7DC RID: 128988
 		public const byte 切换角色3Value = 12;
 
-		// Token: 0x04024528 RID: 148776
+		// Token: 0x0401F7DD RID: 128989
 		public static readonly EInputAction 切换角色3 = new EInputAction("切换角色3", 12);
 
-		// Token: 0x04024529 RID: 148777
+		// Token: 0x0401F7DE RID: 128990
 		public const byte 锁定目标Value = 13;
 
-		// Token: 0x0402452A RID: 148778
+		// Token: 0x0401F7DF RID: 128991
 		public static readonly EInputAction 锁定目标 = new EInputAction("锁定目标", 13);
 
-		// Token: 0x0402452B RID: 148779
+		// Token: 0x0401F7E0 RID: 128992
 		public const byte 瞄准Value = 14;
 
-		// Token: 0x0402452C RID: 148780
+		// Token: 0x0401F7E1 RID: 128993
 		public static readonly EInputAction 瞄准 = new EInputAction("瞄准", 14);
 
-		// Token: 0x0402452D RID: 148781
+		// Token: 0x0401F7E2 RID: 128994
 		public const byte 通用交互Value = 15;
 
-		// Token: 0x0402452E RID: 148782
+		// Token: 0x0401F7E3 RID: 128995
 		public static readonly EInputAction 通用交互 = new EInputAction("通用交互", 15);
 
-		// Token: 0x0402452F RID: 148783
+		// Token: 0x0401F7E4 RID: 128996
 		public const byte 下降Value = 16;
 
-		// Token: 0x04024530 RID: 148784
+		// Token: 0x0401F7E5 RID: 128997
 		public static readonly EInputAction 下降 = new EInputAction("下降", 16);
 
-		// Token: 0x04024531 RID: 148785
+		// Token: 0x0401F7E6 RID: 128998
 		public const byte 移动输入按键事件Value = 17;
 
-		// Token: 0x04024532 RID: 148786
+		// Token: 0x0401F7E7 RID: 128999
 		public static readonly EInputAction 移动输入按键事件 = new EInputAction("移动输入按键事件", 17);
 
-		// Token: 0x04024533 RID: 148787
+		// Token: 0x0401F7E8 RID: 129000
 		public const byte MaxCountValue = 18;
 
-		// Token: 0x04024534 RID: 148788
+		// Token: 0x0401F7E9 RID: 129001
 		public static readonly EInputAction MaxCount = new EInputAction("MaxCount", 18);
 
-		// Token: 0x04024535 RID: 148789
+		// Token: 0x0401F7EA RID: 129002
 		[StaticVariableRuleIgnore]
 		public static IReadOnlyList<EInputAction> Defines = new List<EInputAction>
 		{

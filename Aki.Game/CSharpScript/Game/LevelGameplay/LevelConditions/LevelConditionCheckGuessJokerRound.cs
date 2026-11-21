@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CA1 RID: 27809
+	// Token: 0x02005E1B RID: 24091
 	public class LevelConditionCheckGuessJokerRound : LevelConditionBase
 	{
-		// Token: 0x060445D4 RID: 280020 RVA: 0x010DBB90 File Offset: 0x010D9D90
+		// Token: 0x0603A72E RID: 239406 RVA: 0x01085B3C File Offset: 0x01083D3C
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

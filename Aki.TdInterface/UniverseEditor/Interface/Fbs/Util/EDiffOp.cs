@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Util
 {
-	// Token: 0x02003B6B RID: 15211
+	// Token: 0x02003F73 RID: 16243
 	public enum EDiffOp : byte
 	{
-		// Token: 0x0400B0A0 RID: 45216
+		// Token: 0x0400BA1D RID: 47645
 		Same,
-		// Token: 0x0400B0A1 RID: 45217
+		// Token: 0x0400BA1E RID: 47646
 		Add,
-		// Token: 0x0400B0A2 RID: 45218
+		// Token: 0x0400BA1F RID: 47647
 		Remove
 	}
 }

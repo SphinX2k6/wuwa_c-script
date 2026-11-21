@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FC2 RID: 24514
+	// Token: 0x02004FA9 RID: 20393
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TotalTopUpPickRoleRewardView : UiViewBase
 	{
-		// Token: 0x0603E21E RID: 254494 RVA: 0x00F0176D File Offset: 0x00EFF96D
+		// Token: 0x060331B8 RID: 209336 RVA: 0x00E53429 File Offset: 0x00E51629
 		[NullableContext(1)]
 		public TotalTopUpPickRoleRewardView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E21F RID: 254495 RVA: 0x00F01780 File Offset: 0x00EFF980
+		// Token: 0x060331B9 RID: 209337 RVA: 0x00E5343C File Offset: 0x00E5163C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E220 RID: 254496 RVA: 0x00F01858 File Offset: 0x00EFFA58
+		// Token: 0x060331BA RID: 209338 RVA: 0x00E53514 File Offset: 0x00E51714
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TotalTopUpPickRoleRewardView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E221 RID: 254497 RVA: 0x00F0189B File Offset: 0x00EFFA9B
+		// Token: 0x060331BB RID: 209339 RVA: 0x00E53557 File Offset: 0x00E51757
 		protected override void OnStart()
 		{
 			TotalTopUpPickRoleChoicePanel choicePanel = this.ChoicePanel;
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			choicePanel.SelectItem((viewModel != null) ? viewModel.FirstCanClaimIndex : 0);
 		}
 
-		// Token: 0x0603E222 RID: 254498 RVA: 0x00F018BF File Offset: 0x00EFFABF
+		// Token: 0x060331BC RID: 209340 RVA: 0x00E5357B File Offset: 0x00E5177B
 		private void OnClickedCloseButton()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603E223 RID: 254499 RVA: 0x00F018C8 File Offset: 0x00EFFAC8
+		// Token: 0x060331BD RID: 209341 RVA: 0x00E53584 File Offset: 0x00E51784
 		private void OnClickConfirmButton()
 		{
 			TotalTopUpPickRoleViewModel viewModel = this.ViewModel;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			});
 		}
 
-		// Token: 0x0603E224 RID: 254500 RVA: 0x00F018E8 File Offset: 0x00EFFAE8
+		// Token: 0x060331BE RID: 209342 RVA: 0x00E535A4 File Offset: 0x00E517A4
 		[NullableContext(1)]
 		private void OnSelectItemCallback(ITotalTopUpPickRoleRewardItemData data)
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E225 RID: 254501 RVA: 0x00F01954 File Offset: 0x00EFFB54
+		// Token: 0x060331BF RID: 209343 RVA: 0x00E53610 File Offset: 0x00E51810
 		private void Refresh()
 		{
 			if (this.ViewModel == null)
@@ -126,26 +126,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			itemPanel.Refresh(this.ViewModel);
 		}
 
-		// Token: 0x04020755 RID: 132949
+		// Token: 0x0401B227 RID: 111143
 		[Nullable(1)]
 		private const string SWITCH_SEQUENCE_NAME = "Switch";
 
-		// Token: 0x04020756 RID: 132950
+		// Token: 0x0401B228 RID: 111144
 		private TotalTopUpPickRoleViewModel ViewModel;
 
-		// Token: 0x04020757 RID: 132951
+		// Token: 0x0401B229 RID: 111145
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020758 RID: 132952
+		// Token: 0x0401B22A RID: 111146
 		private TotalTopUpPickRoleChoicePanel ChoicePanel;
 
-		// Token: 0x04020759 RID: 132953
+		// Token: 0x0401B22B RID: 111147
 		private TotalTopUpPickRoleRolePanel RolePanel;
 
-		// Token: 0x0402075A RID: 132954
+		// Token: 0x0401B22C RID: 111148
 		private TotalTopUpPickRoleItemPanel ItemPanel;
 
-		// Token: 0x0402075B RID: 132955
+		// Token: 0x0401B22D RID: 111149
 		private int CurrentSelectedIndex = -1;
 	}
 }

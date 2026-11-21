@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002DA RID: 730
+	// Token: 0x02000321 RID: 801
 	public class IDurabilityWorn_SetValue
 	{
-		// Token: 0x04000C78 RID: 3192
+		// Token: 0x04000D62 RID: 3426
 		public int? SlightWear;
 
-		// Token: 0x04000C79 RID: 3193
+		// Token: 0x04000D63 RID: 3427
 		public int? SevereWear;
 	}
 }

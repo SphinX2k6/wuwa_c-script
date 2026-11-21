@@ -6,22 +6,22 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Area
 {
-	// Token: 0x02005EA3 RID: 24227
+	// Token: 0x02004E88 RID: 20104
 	public class AreaTags
 	{
-		// Token: 0x0603DA6D RID: 252525 RVA: 0x00EE32B9 File Offset: 0x00EE14B9
+		// Token: 0x060329FD RID: 207357 RVA: 0x00E34805 File Offset: 0x00E32A05
 		public void Init()
 		{
 			this.AddEventListener();
 		}
 
-		// Token: 0x0603DA6E RID: 252526 RVA: 0x00EE32C1 File Offset: 0x00EE14C1
+		// Token: 0x060329FE RID: 207358 RVA: 0x00E3480D File Offset: 0x00E32A0D
 		public void Destroy()
 		{
 			this.RemoveEventListener();
 		}
 
-		// Token: 0x0603DA6F RID: 252527 RVA: 0x00EE32CC File Offset: 0x00EE14CC
+		// Token: 0x060329FF RID: 207359 RVA: 0x00E34818 File Offset: 0x00E32A18
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Area
 			EventSystem.Instance.Add(EEventName.ChangeModeFinish, new Action(this.OnChangeModeFinish));
 		}
 
-		// Token: 0x0603DA70 RID: 252528 RVA: 0x00EE3330 File Offset: 0x00EE1530
+		// Token: 0x06032A00 RID: 207360 RVA: 0x00E3487C File Offset: 0x00E32A7C
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Area
 			EventSystem.Instance.Remove(EEventName.ChangeModeFinish, new Action(this.OnChangeModeFinish));
 		}
 
-		// Token: 0x0603DA71 RID: 252529 RVA: 0x00EE3394 File Offset: 0x00EE1594
+		// Token: 0x06032A01 RID: 207361 RVA: 0x00E348E0 File Offset: 0x00E32AE0
 		private void OnWorldDone()
 		{
 			if (!EventSystem.Instance.Has<int?, int>(EEventName.ChangeArea, new Action<int?, int>(this.OnChangeAreaEvent)))
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Area
 			this.OnChangeArea(null, new int?(AreaModel.Instance.AreaInfo.Value.AreaId));
 		}
 
-		// Token: 0x0603DA72 RID: 252530 RVA: 0x00EE3420 File Offset: 0x00EE1620
+		// Token: 0x06032A02 RID: 207362 RVA: 0x00E3496C File Offset: 0x00E32B6C
 		private void OnClearWorld()
 		{
 			if (EventSystem.Instance.Has<int?, int>(EEventName.ChangeArea, new Action<int?, int>(this.OnChangeAreaEvent)))
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Area
 			this.OnChangeArea(new int?(AreaModel.Instance.AreaInfo.Value.AreaId), null);
 		}
 
-		// Token: 0x0603DA73 RID: 252531 RVA: 0x00EE34AC File Offset: 0x00EE16AC
+		// Token: 0x06032A03 RID: 207363 RVA: 0x00E349F8 File Offset: 0x00E32BF8
 		private void OnChangeModeFinish()
 		{
 			if (AreaModel.Instance.AreaInfo == null)
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.Area
 			this.OnChangeArea(null, new int?(AreaModel.Instance.AreaInfo.Value.AreaId));
 		}
 
-		// Token: 0x0603DA74 RID: 252532 RVA: 0x00EE34FC File Offset: 0x00EE16FC
+		// Token: 0x06032A04 RID: 207364 RVA: 0x00E34A48 File Offset: 0x00E32C48
 		private void OnChangeAreaEvent(int? preAreaId, int curAreaId)
 		{
 			this.OnChangeArea(preAreaId, new int?(curAreaId));
 		}
 
-		// Token: 0x0603DA75 RID: 252533 RVA: 0x00EE350C File Offset: 0x00EE170C
+		// Token: 0x06032A05 RID: 207365 RVA: 0x00E34A58 File Offset: 0x00E32C58
 		private void OnChangeArea(int? preAreaId, int? curAreaId)
 		{
 			Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Area
 			this.ApplyAreaTagsModifyInfo(dictionary);
 		}
 
-		// Token: 0x0603DA76 RID: 252534 RVA: 0x00EE36CC File Offset: 0x00EE18CC
+		// Token: 0x06032A06 RID: 207366 RVA: 0x00E34C18 File Offset: 0x00E32E18
 		[NullableContext(1)]
 		private void ApplyAreaTagsModifyInfo(Dictionary<int, int> tagsToModify)
 		{

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019D7 RID: 6615
+	// Token: 0x02001B64 RID: 7012
 	public class IElementalBoxTargetPrefabPos_SetValue
 	{
-		// Token: 0x040057F8 RID: 22520
+		// Token: 0x04005C4D RID: 23629
 		public EElementalBoxTargetPosType Type;
 
-		// Token: 0x040057F9 RID: 22521
-		[Nullable(1)]
+		// Token: 0x04005C4E RID: 23630
 		public string TargetKey;
 	}
 }

@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002AD2 RID: 10962
+// Token: 0x0200204E RID: 8270
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsRogueCardDataFactory
 {
-	// Token: 0x06016D02 RID: 93442 RVA: 0x005CAFB0 File Offset: 0x005C91B0
+	// Token: 0x06014733 RID: 83763 RVA: 0x005F7B04 File Offset: 0x005F5D04
 	public static SurvivorsRogueItemCard CreateGeneralItem(int itemId)
 	{
 		SurvivorsItem? survivorsItem = SurvivorsRogueConfig.Instance.GetSurvivorsItem(itemId);
@@ -32,7 +32,7 @@ public class SurvivorsRogueCardDataFactory
 		};
 	}
 
-	// Token: 0x06016D03 RID: 93443 RVA: 0x005CB068 File Offset: 0x005C9268
+	// Token: 0x06014734 RID: 83764 RVA: 0x005F7BBC File Offset: 0x005F5DBC
 	public static SurvivorsRogueCharacterCard CreateGeneralCharacter(int roleId)
 	{
 		SurvivorsRole? survivorsRole = SurvivorsRogueConfig.Instance.GetSurvivorsRole(roleId);
@@ -79,7 +79,7 @@ public class SurvivorsRogueCardDataFactory
 		};
 	}
 
-	// Token: 0x06016D04 RID: 93444 RVA: 0x005CB1B8 File Offset: 0x005C93B8
+	// Token: 0x06014735 RID: 83765 RVA: 0x005F7D0C File Offset: 0x005F5F0C
 	public static SurvivorsRogueWeaponCard CreateGeneralWeapon(int weaponId)
 	{
 		SurvivorsWeapon? survivorsWeapon = SurvivorsRogueConfig.Instance.GetSurvivorsWeapon(weaponId);

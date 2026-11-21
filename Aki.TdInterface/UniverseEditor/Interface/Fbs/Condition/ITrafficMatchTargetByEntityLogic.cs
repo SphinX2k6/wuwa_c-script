@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CFD RID: 19709
+	// Token: 0x020051F9 RID: 20985
 	public struct ITrafficMatchTargetByEntityLogic : IFlatbufferObject
 	{
-		// Token: 0x17008F01 RID: 36609
-		// (get) Token: 0x0601F484 RID: 128132 RVA: 0x0045D404 File Offset: 0x0045B604
+		// Token: 0x1700963A RID: 38458
+		// (get) Token: 0x060210C9 RID: 135369 RVA: 0x00491354 File Offset: 0x0048F554
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F485 RID: 128133 RVA: 0x0045D411 File Offset: 0x0045B611
+		// Token: 0x060210CA RID: 135370 RVA: 0x00491361 File Offset: 0x0048F561
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F486 RID: 128134 RVA: 0x0045D418 File Offset: 0x0045B618
+		// Token: 0x060210CB RID: 135371 RVA: 0x00491368 File Offset: 0x0048F568
 		public static ITrafficMatchTargetByEntityLogic GetRootAsITrafficMatchTargetByEntityLogic(ByteBuffer _bb)
 		{
 			return ITrafficMatchTargetByEntityLogic.GetRootAsITrafficMatchTargetByEntityLogic(_bb, default(ITrafficMatchTargetByEntityLogic));
 		}
 
-		// Token: 0x0601F487 RID: 128135 RVA: 0x0045D434 File Offset: 0x0045B634
+		// Token: 0x060210CC RID: 135372 RVA: 0x00491384 File Offset: 0x0048F584
 		public static ITrafficMatchTargetByEntityLogic GetRootAsITrafficMatchTargetByEntityLogic(ByteBuffer _bb, ITrafficMatchTargetByEntityLogic obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F488 RID: 128136 RVA: 0x0045D451 File Offset: 0x0045B651
+		// Token: 0x060210CD RID: 135373 RVA: 0x004913A1 File Offset: 0x0048F5A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F489 RID: 128137 RVA: 0x0045D460 File Offset: 0x0045B660
+		// Token: 0x060210CE RID: 135374 RVA: 0x004913B0 File Offset: 0x0048F5B0
 		public ITrafficMatchTargetByEntityLogic __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008F02 RID: 36610
-		// (get) Token: 0x0601F48A RID: 128138 RVA: 0x0045D470 File Offset: 0x0045B670
+		// Token: 0x1700963B RID: 38459
+		// (get) Token: 0x060210CF RID: 135375 RVA: 0x004913C0 File Offset: 0x0048F5C0
 		public ETrafficMatchTargetType Type
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F48B RID: 128139 RVA: 0x0045D4AC File Offset: 0x0045B6AC
+		// Token: 0x060210D0 RID: 135376 RVA: 0x004913FC File Offset: 0x0048F5FC
 		public EEntityLogic EntityLogicTypes(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return (EEntityLogic)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17008F03 RID: 36611
-		// (get) Token: 0x0601F48C RID: 128140 RVA: 0x0045D4EC File Offset: 0x0045B6EC
+		// Token: 0x1700963C RID: 38460
+		// (get) Token: 0x060210D1 RID: 135377 RVA: 0x0049143C File Offset: 0x0048F63C
 		public int EntityLogicTypesLength
 		{
 			get
@@ -90,13 +90,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F48D RID: 128141 RVA: 0x0045D517 File Offset: 0x0045B717
+		// Token: 0x060210D2 RID: 135378 RVA: 0x00491467 File Offset: 0x0048F667
 		public Span<EEntityLogic> GetEntityLogicTypesBytes()
 		{
 			return this.__p.__vector_as_span<EEntityLogic>(6, 1);
 		}
 
-		// Token: 0x0601F48E RID: 128142 RVA: 0x0045D528 File Offset: 0x0045B728
+		// Token: 0x060210D3 RID: 135379 RVA: 0x00491478 File Offset: 0x0048F678
 		public EEntityLogic[] GetEntityLogicTypesArray()
 		{
 			int num = this.__p.__offset(6);
@@ -114,7 +114,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return array;
 		}
 
-		// Token: 0x0601F48F RID: 128143 RVA: 0x0045D591 File Offset: 0x0045B791
+		// Token: 0x060210D4 RID: 135380 RVA: 0x004914E1 File Offset: 0x0048F6E1
 		public static Offset<ITrafficMatchTargetByEntityLogic> CreateITrafficMatchTargetByEntityLogic(FlatBufferBuilder builder, ETrafficMatchTargetType Type = ETrafficMatchTargetType.MatchByEntityLogic, VectorOffset EntityLogicTypesOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -123,25 +123,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ITrafficMatchTargetByEntityLogic.EndITrafficMatchTargetByEntityLogic(builder);
 		}
 
-		// Token: 0x0601F490 RID: 128144 RVA: 0x0045D5AE File Offset: 0x0045B7AE
+		// Token: 0x060210D5 RID: 135381 RVA: 0x004914FE File Offset: 0x0048F6FE
 		public static void StartITrafficMatchTargetByEntityLogic(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601F491 RID: 128145 RVA: 0x0045D5B7 File Offset: 0x0045B7B7
+		// Token: 0x060210D6 RID: 135382 RVA: 0x00491507 File Offset: 0x0048F707
 		public static void AddType(FlatBufferBuilder builder, ETrafficMatchTargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F492 RID: 128146 RVA: 0x0045D5C2 File Offset: 0x0045B7C2
+		// Token: 0x060210D7 RID: 135383 RVA: 0x00491512 File Offset: 0x0048F712
 		public static void AddEntityLogicTypes(FlatBufferBuilder builder, VectorOffset entityLogicTypesOffset)
 		{
 			builder.AddOffset(1, entityLogicTypesOffset.Value, 0);
 		}
 
-		// Token: 0x0601F493 RID: 128147 RVA: 0x0045D5D4 File Offset: 0x0045B7D4
+		// Token: 0x060210D8 RID: 135384 RVA: 0x00491524 File Offset: 0x0048F724
 		public static VectorOffset CreateEntityLogicTypesVector(FlatBufferBuilder builder, EEntityLogic[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F494 RID: 128148 RVA: 0x0045D60B File Offset: 0x0045B80B
+		// Token: 0x060210D9 RID: 135385 RVA: 0x0049155B File Offset: 0x0048F75B
 		public static VectorOffset CreateEntityLogicTypesVectorBlock(FlatBufferBuilder builder, EEntityLogic[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F495 RID: 128149 RVA: 0x0045D625 File Offset: 0x0045B825
+		// Token: 0x060210DA RID: 135386 RVA: 0x00491575 File Offset: 0x0048F775
 		public static VectorOffset CreateEntityLogicTypesVectorBlock(FlatBufferBuilder builder, ArraySegment<EEntityLogic> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -168,7 +168,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F496 RID: 128150 RVA: 0x0045D643 File Offset: 0x0045B843
+		// Token: 0x060210DB RID: 135387 RVA: 0x00491593 File Offset: 0x0048F793
 		public static VectorOffset CreateEntityLogicTypesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -176,19 +176,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F497 RID: 128151 RVA: 0x0045D65C File Offset: 0x0045B85C
+		// Token: 0x060210DC RID: 135388 RVA: 0x004915AC File Offset: 0x0048F7AC
 		public static void StartEntityLogicTypesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601F498 RID: 128152 RVA: 0x0045D667 File Offset: 0x0045B867
+		// Token: 0x060210DD RID: 135389 RVA: 0x004915B7 File Offset: 0x0048F7B7
 		public static Offset<ITrafficMatchTargetByEntityLogic> EndITrafficMatchTargetByEntityLogic(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrafficMatchTargetByEntityLogic>(builder.EndTable());
 		}
 
-		// Token: 0x0601F499 RID: 128153 RVA: 0x0045D674 File Offset: 0x0045B874
+		// Token: 0x060210DE RID: 135390 RVA: 0x004915C4 File Offset: 0x0048F7C4
 		public ITrafficMatchTargetByEntityLogicT UnPack()
 		{
 			ITrafficMatchTargetByEntityLogicT trafficMatchTargetByEntityLogicT = new ITrafficMatchTargetByEntityLogicT();
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return trafficMatchTargetByEntityLogicT;
 		}
 
-		// Token: 0x0601F49A RID: 128154 RVA: 0x0045D690 File Offset: 0x0045B890
+		// Token: 0x060210DF RID: 135391 RVA: 0x004915E0 File Offset: 0x0048F7E0
 		public void UnPackTo(ITrafficMatchTargetByEntityLogicT _o)
 		{
 			_o.Type = this.Type;
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F49B RID: 128155 RVA: 0x0045D6D8 File Offset: 0x0045B8D8
+		// Token: 0x060210E0 RID: 135392 RVA: 0x00491628 File Offset: 0x0048F828
 		public static Offset<ITrafficMatchTargetByEntityLogic> Pack(FlatBufferBuilder builder, ITrafficMatchTargetByEntityLogicT _o)
 		{
 			if (_o == null)
@@ -223,7 +223,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ITrafficMatchTargetByEntityLogic.CreateITrafficMatchTargetByEntityLogic(builder, _o.Type, entityLogicTypesOffset);
 		}
 
-		// Token: 0x0400D6D9 RID: 55001
+		// Token: 0x0400E206 RID: 57862
 		private Table __p;
 	}
 }

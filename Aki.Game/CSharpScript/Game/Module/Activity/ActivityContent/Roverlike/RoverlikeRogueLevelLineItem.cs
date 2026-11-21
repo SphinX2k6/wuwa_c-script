@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200613E RID: 24894
+	// Token: 0x020050BC RID: 20668
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeRogueLevelLineItem : GridProxyAbstract<IRoverlikeRogueLevelLineData>
 	{
-		// Token: 0x0603EEDD RID: 257757 RVA: 0x00F33454 File Offset: 0x00F31654
+		// Token: 0x06033B9D RID: 211869 RVA: 0x00E7A334 File Offset: 0x00E78534
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EEDE RID: 257758 RVA: 0x00F3360B File Offset: 0x00F3180B
+		// Token: 0x06033B9E RID: 211870 RVA: 0x00E7A4EB File Offset: 0x00E786EB
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x0603EEDF RID: 257759 RVA: 0x00F33620 File Offset: 0x00F31820
+		// Token: 0x06033B9F RID: 211871 RVA: 0x00E7A500 File Offset: 0x00E78700
 		public void PlayCurrentNodeSequence(string sequenceName)
 		{
 			UUIItem item = base.GetItem(2);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			levelSequencePlayer.PlayOrReplaySequenceByName(sequenceName, false, null);
 		}
 
-		// Token: 0x0603EEE0 RID: 257760 RVA: 0x00F33684 File Offset: 0x00F31884
+		// Token: 0x06033BA0 RID: 211872 RVA: 0x00E7A564 File Offset: 0x00E78764
 		public override void Refresh(IRoverlikeRogueLevelLineData data, bool isSelected, int gridIndex)
 		{
 			bool isPassed = data.IsPassed;
@@ -154,54 +154,54 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item12.SetUIActive(data.IsPassed);
 		}
 
-		// Token: 0x0603EEE1 RID: 257761 RVA: 0x00F337CC File Offset: 0x00F319CC
+		// Token: 0x06033BA1 RID: 211873 RVA: 0x00E7A6AC File Offset: 0x00E788AC
 		public override object GetKey(IRoverlikeRogueLevelLineData data, int gridIndex)
 		{
 			return gridIndex;
 		}
 
-		// Token: 0x04020D95 RID: 134549
+		// Token: 0x0401B6C2 RID: 112322
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C39A RID: 50074
+		// Token: 0x0200AD81 RID: 44417
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B064 RID: 241764
+			// Token: 0x040359C5 RID: 219589
 			public const int SpriteLight = 0;
 
-			// Token: 0x0403B065 RID: 241765
+			// Token: 0x040359C6 RID: 219590
 			public const int PanelPos = 1;
 
-			// Token: 0x0403B066 RID: 241766
+			// Token: 0x040359C7 RID: 219591
 			public const int SpritePosLight = 2;
 
-			// Token: 0x0403B067 RID: 241767
+			// Token: 0x040359C8 RID: 219592
 			public const int PanelMonster = 3;
 
-			// Token: 0x0403B068 RID: 241768
+			// Token: 0x040359C9 RID: 219593
 			public const int PanelMonsterDark = 4;
 
-			// Token: 0x0403B069 RID: 241769
+			// Token: 0x040359CA RID: 219594
 			public const int PanelMonsterLight = 5;
 
-			// Token: 0x0403B06A RID: 241770
+			// Token: 0x040359CB RID: 219595
 			public const int PanelMonsterBoss = 6;
 
-			// Token: 0x0403B06B RID: 241771
+			// Token: 0x040359CC RID: 219596
 			public const int PanelBossDark = 7;
 
-			// Token: 0x0403B06C RID: 241772
+			// Token: 0x040359CD RID: 219597
 			public const int PanelBossLight = 8;
 
-			// Token: 0x0403B06D RID: 241773
+			// Token: 0x040359CE RID: 219598
 			public const int SpritePosDone = 9;
 
-			// Token: 0x0403B06E RID: 241774
+			// Token: 0x040359CF RID: 219599
 			public const int PanelMonsterDone = 10;
 
-			// Token: 0x0403B06F RID: 241775
+			// Token: 0x040359D0 RID: 219600
 			public const int PanelBossDone = 11;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017E6 RID: 6118
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200196F RID: 6511
 	public class IAudioState
 	{
-		// Token: 0x06008369 RID: 33641 RVA: 0x00139CF8 File Offset: 0x00137EF8
+		// Token: 0x06008A85 RID: 35461 RVA: 0x001493E0 File Offset: 0x001475E0
 		private IAudioState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600836A RID: 33642 RVA: 0x00139D30 File Offset: 0x00137F30
+		// Token: 0x06008A86 RID: 35462 RVA: 0x00149418 File Offset: 0x00147618
 		public static IAudioState Create([Nullable(2)] IAudioState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600836B RID: 33643 RVA: 0x00139D43 File Offset: 0x00137F43
+		// Token: 0x06008A87 RID: 35463 RVA: 0x0014942B File Offset: 0x0014762B
 		public static IAudioState CreateFromSetValue([Nullable(2)] IAudioState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600836C RID: 33644 RVA: 0x00139D56 File Offset: 0x00137F56
+		// Token: 0x06008A88 RID: 35464 RVA: 0x0014943E File Offset: 0x0014763E
 		public IAudioState_SetValue ToSetValue()
 		{
 			return new IAudioState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B30 RID: 11056
-		// (get) Token: 0x0600836D RID: 33645 RVA: 0x00139D75 File Offset: 0x00137F75
-		// (set) Token: 0x0600836E RID: 33646 RVA: 0x00139DA0 File Offset: 0x00137FA0
+		// Token: 0x17002D28 RID: 11560
+		// (get) Token: 0x06008A89 RID: 35465 RVA: 0x0014945D File Offset: 0x0014765D
+		// (set) Token: 0x06008A8A RID: 35466 RVA: 0x00149488 File Offset: 0x00147688
 		public virtual string Group
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B31 RID: 11057
-		// (get) Token: 0x0600836F RID: 33647 RVA: 0x00139DAE File Offset: 0x00137FAE
-		// (set) Token: 0x06008370 RID: 33648 RVA: 0x00139DD9 File Offset: 0x00137FD9
+		// Token: 0x17002D29 RID: 11561
+		// (get) Token: 0x06008A8B RID: 35467 RVA: 0x00149496 File Offset: 0x00147696
+		// (set) Token: 0x06008A8C RID: 35468 RVA: 0x001494C1 File Offset: 0x001476C1
 		public virtual string State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005365 RID: 21349
+		// Token: 0x040057AD RID: 22445
 		[Nullable(2)]
 		protected IAudioState FbInstance;
 
-		// Token: 0x04005366 RID: 21350
+		// Token: 0x040057AE RID: 22446
 		[Nullable(2)]
 		protected IAudioState_SetValue PocoInterface;
 	}

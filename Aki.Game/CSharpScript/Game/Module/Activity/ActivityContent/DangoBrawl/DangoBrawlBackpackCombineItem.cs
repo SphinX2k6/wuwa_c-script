@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067E1 RID: 26593
+	// Token: 0x02005731 RID: 22321
 	public class DangoBrawlBackpackCombineItem : GridProxyAbstract<DangoBrawlCombineRowData>
 	{
-		// Token: 0x06042394 RID: 271252 RVA: 0x010115E4 File Offset: 0x0100F7E4
+		// Token: 0x06036EEA RID: 225002 RVA: 0x00F52A7C File Offset: 0x00F50C7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,22 +30,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042395 RID: 271253 RVA: 0x0101168A File Offset: 0x0100F88A
+		// Token: 0x06036EEB RID: 225003 RVA: 0x00F52B22 File Offset: 0x00F50D22
 		public override void Refresh(DangoBrawlCombineRowData data, bool isSelected, int gridIndex)
 		{
 		}
 
-		// Token: 0x06042396 RID: 271254 RVA: 0x0101168C File Offset: 0x0100F88C
+		// Token: 0x06036EEC RID: 225004 RVA: 0x00F52B24 File Offset: 0x00F50D24
 		private void OnClickCombine()
 		{
 		}
 
-		// Token: 0x0200C8F5 RID: 51445
+		// Token: 0x0200B2C5 RID: 45765
 		private enum EComponents
 		{
-			// Token: 0x0403CAAC RID: 248492
+			// Token: 0x040373A1 RID: 226209
 			BtnCombine,
-			// Token: 0x0403CAAD RID: 248493
+			// Token: 0x040373A2 RID: 226210
 			TextureCombine
 		}
 	}

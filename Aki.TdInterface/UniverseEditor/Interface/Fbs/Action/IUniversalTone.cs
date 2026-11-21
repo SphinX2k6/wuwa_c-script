@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074BA RID: 29882
+	// Token: 0x02007CB0 RID: 31920
 	public struct IUniversalTone : IFlatbufferObject
 	{
-		// Token: 0x1700E2D2 RID: 58066
-		// (get) Token: 0x0603653C RID: 222524 RVA: 0x007621FA File Offset: 0x007603FA
+		// Token: 0x1700EEFC RID: 61180
+		// (get) Token: 0x06039951 RID: 235857 RVA: 0x007C544A File Offset: 0x007C364A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603653D RID: 222525 RVA: 0x00762207 File Offset: 0x00760407
+		// Token: 0x06039952 RID: 235858 RVA: 0x007C5457 File Offset: 0x007C3657
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603653E RID: 222526 RVA: 0x00762210 File Offset: 0x00760410
+		// Token: 0x06039953 RID: 235859 RVA: 0x007C5460 File Offset: 0x007C3660
 		public static IUniversalTone GetRootAsIUniversalTone(ByteBuffer _bb)
 		{
 			return IUniversalTone.GetRootAsIUniversalTone(_bb, default(IUniversalTone));
 		}
 
-		// Token: 0x0603653F RID: 222527 RVA: 0x0076222C File Offset: 0x0076042C
+		// Token: 0x06039954 RID: 235860 RVA: 0x007C547C File Offset: 0x007C367C
 		public static IUniversalTone GetRootAsIUniversalTone(ByteBuffer _bb, IUniversalTone obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036540 RID: 222528 RVA: 0x00762249 File Offset: 0x00760449
+		// Token: 0x06039955 RID: 235861 RVA: 0x007C5499 File Offset: 0x007C3699
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036541 RID: 222529 RVA: 0x00762258 File Offset: 0x00760458
+		// Token: 0x06039956 RID: 235862 RVA: 0x007C54A8 File Offset: 0x007C36A8
 		public IUniversalTone __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E2D3 RID: 58067
-		// (get) Token: 0x06036542 RID: 222530 RVA: 0x00762268 File Offset: 0x00760468
+		// Token: 0x1700EEFD RID: 61181
+		// (get) Token: 0x06039957 RID: 235863 RVA: 0x007C54B8 File Offset: 0x007C36B8
 		public int UniversalToneId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E2D4 RID: 58068
-		// (get) Token: 0x06036543 RID: 222531 RVA: 0x007622A4 File Offset: 0x007604A4
+		// Token: 0x1700EEFE RID: 61182
+		// (get) Token: 0x06039958 RID: 235864 RVA: 0x007C54F4 File Offset: 0x007C36F4
 		public int TimberId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E2D5 RID: 58069
-		// (get) Token: 0x06036544 RID: 222532 RVA: 0x007622E0 File Offset: 0x007604E0
+		// Token: 0x1700EEFF RID: 61183
+		// (get) Token: 0x06039959 RID: 235865 RVA: 0x007C5530 File Offset: 0x007C3730
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036545 RID: 222533 RVA: 0x0076231C File Offset: 0x0076051C
+		// Token: 0x0603995A RID: 235866 RVA: 0x007C556C File Offset: 0x007C376C
 		public static Offset<IUniversalTone> CreateIUniversalTone(FlatBufferBuilder builder, int UniversalToneId = 0, int TimberId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IUniversalTone.EndIUniversalTone(builder);
 		}
 
-		// Token: 0x06036546 RID: 222534 RVA: 0x00762340 File Offset: 0x00760540
+		// Token: 0x0603995B RID: 235867 RVA: 0x007C5590 File Offset: 0x007C3790
 		public static void StartIUniversalTone(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06036547 RID: 222535 RVA: 0x00762349 File Offset: 0x00760549
+		// Token: 0x0603995C RID: 235868 RVA: 0x007C5599 File Offset: 0x007C3799
 		public static void AddUniversalToneId(FlatBufferBuilder builder, int universalToneId)
 		{
 			builder.AddInt(0, universalToneId, 0);
 		}
 
-		// Token: 0x06036548 RID: 222536 RVA: 0x00762354 File Offset: 0x00760554
+		// Token: 0x0603995D RID: 235869 RVA: 0x007C55A4 File Offset: 0x007C37A4
 		public static void AddTimberId(FlatBufferBuilder builder, int timberId)
 		{
 			builder.AddInt(1, timberId, 0);
 		}
 
-		// Token: 0x06036549 RID: 222537 RVA: 0x0076235F File Offset: 0x0076055F
+		// Token: 0x0603995E RID: 235870 RVA: 0x007C55AF File Offset: 0x007C37AF
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0603654A RID: 222538 RVA: 0x0076236A File Offset: 0x0076056A
+		// Token: 0x0603995F RID: 235871 RVA: 0x007C55BA File Offset: 0x007C37BA
 		public static Offset<IUniversalTone> EndIUniversalTone(FlatBufferBuilder builder)
 		{
 			return new Offset<IUniversalTone>(builder.EndTable());
 		}
 
-		// Token: 0x0603654B RID: 222539 RVA: 0x00762378 File Offset: 0x00760578
+		// Token: 0x06039960 RID: 235872 RVA: 0x007C55C8 File Offset: 0x007C37C8
 		public IUniversalToneT UnPack()
 		{
 			IUniversalToneT universalToneT = new IUniversalToneT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return universalToneT;
 		}
 
-		// Token: 0x0603654C RID: 222540 RVA: 0x00762393 File Offset: 0x00760593
+		// Token: 0x06039961 RID: 235873 RVA: 0x007C55E3 File Offset: 0x007C37E3
 		public void UnPackTo(IUniversalToneT _o)
 		{
 			_o.UniversalToneId = this.UniversalToneId;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603654D RID: 222541 RVA: 0x007623BC File Offset: 0x007605BC
+		// Token: 0x06039962 RID: 235874 RVA: 0x007C560C File Offset: 0x007C380C
 		public static Offset<IUniversalTone> Pack(FlatBufferBuilder builder, IUniversalToneT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IUniversalTone.CreateIUniversalTone(builder, _o.UniversalToneId, _o.TimberId, _o.NullMask);
 		}
 
-		// Token: 0x04012383 RID: 74627
+		// Token: 0x040133B4 RID: 78772
 		private Table __p;
 	}
 }

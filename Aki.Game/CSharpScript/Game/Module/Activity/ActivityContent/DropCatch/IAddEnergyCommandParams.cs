@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x0200668D RID: 26253
+	// Token: 0x020055DD RID: 21981
 	public class IAddEnergyCommandParams
 	{
-		// Token: 0x040223A5 RID: 140197
+		// Token: 0x0401CBFE RID: 117758
 		public float Energy;
 
-		// Token: 0x040223A6 RID: 140198
+		// Token: 0x0401CBFF RID: 117759
 		public bool IsCalRate;
 	}
 }

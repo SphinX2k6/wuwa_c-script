@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 {
-	// Token: 0x02005A11 RID: 23057
+	// Token: 0x020049ED RID: 18925
 	public class DangoBrawlBattleLogToggle : UiPanelBase
 	{
-		// Token: 0x0603A78C RID: 239500 RVA: 0x00DEA02F File Offset: 0x00DE822F
+		// Token: 0x0602F6D5 RID: 194261 RVA: 0x00D3A5C7 File Offset: 0x00D387C7
 		public DangoBrawlBattleLogToggle(bool isSelf)
 		{
 			this.IsSelf = isSelf;
 		}
 
-		// Token: 0x0603A78D RID: 239501 RVA: 0x00DEA040 File Offset: 0x00DE8240
+		// Token: 0x0602F6D6 RID: 194262 RVA: 0x00D3A5D8 File Offset: 0x00D387D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A78E RID: 239502 RVA: 0x00DEA107 File Offset: 0x00DE8307
+		// Token: 0x0602F6D7 RID: 194263 RVA: 0x00D3A69F File Offset: 0x00D3889F
 		[NullableContext(1)]
 		public void SetOnToggleCallback(Action<EToggleState> callback)
 		{
 			this.OnToggleCallback = callback;
 		}
 
-		// Token: 0x0603A78F RID: 239503 RVA: 0x00DEA110 File Offset: 0x00DE8310
+		// Token: 0x0602F6D8 RID: 194264 RVA: 0x00D3A6A8 File Offset: 0x00D388A8
 		public void SetSelected(bool isSelected)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			extendToggle.SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603A790 RID: 239504 RVA: 0x00DEA130 File Offset: 0x00DE8330
+		// Token: 0x0602F6D9 RID: 194265 RVA: 0x00D3A6C8 File Offset: 0x00D388C8
 		public void Refresh(bool isSelf)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.SetSelected(isSelf == this.IsSelf);
 		}
 
-		// Token: 0x0603A791 RID: 239505 RVA: 0x00DEA215 File Offset: 0x00DE8415
+		// Token: 0x0602F6DA RID: 194266 RVA: 0x00D3A7AD File Offset: 0x00D389AD
 		private void OnToggleTab(EToggleState state)
 		{
 			Action<EToggleState> onToggleCallback = this.OnToggleCallback;
@@ -105,24 +105,24 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			onToggleCallback(state);
 		}
 
-		// Token: 0x0401E76E RID: 124782
+		// Token: 0x04019215 RID: 102933
 		private readonly bool IsSelf;
 
-		// Token: 0x0401E76F RID: 124783
+		// Token: 0x04019216 RID: 102934
 		private int CurDangoId;
 
-		// Token: 0x0401E770 RID: 124784
+		// Token: 0x04019217 RID: 102935
 		[Nullable(2)]
 		private Action<EToggleState> OnToggleCallback;
 
-		// Token: 0x0200BC81 RID: 48257
+		// Token: 0x0200A68A RID: 42634
 		private enum EComp
 		{
-			// Token: 0x04038DF9 RID: 232953
+			// Token: 0x040337C4 RID: 210884
 			TogTab,
-			// Token: 0x04038DFA RID: 232954
+			// Token: 0x040337C5 RID: 210885
 			TexIcon,
-			// Token: 0x04038DFB RID: 232955
+			// Token: 0x040337C6 RID: 210886
 			TexIconMask
 		}
 	}

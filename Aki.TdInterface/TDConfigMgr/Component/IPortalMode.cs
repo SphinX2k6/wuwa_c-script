@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000616 RID: 1558
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006B3 RID: 1715
 	public class IPortalMode
 	{
-		// Token: 0x0600213A RID: 8506 RVA: 0x0005C138 File Offset: 0x0005A338
+		// Token: 0x06002440 RID: 9280 RVA: 0x00062E4C File Offset: 0x0006104C
 		private IPortalMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600213B RID: 8507 RVA: 0x0005C170 File Offset: 0x0005A370
+		// Token: 0x06002441 RID: 9281 RVA: 0x00062E84 File Offset: 0x00061084
 		public static IPortalMode Create([Nullable(2)] IPortalMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600213C RID: 8508 RVA: 0x0005C183 File Offset: 0x0005A383
+		// Token: 0x06002442 RID: 9282 RVA: 0x00062E97 File Offset: 0x00061097
 		public static IPortalMode CreateFromSetValue([Nullable(2)] IPortalMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600213D RID: 8509 RVA: 0x0005C196 File Offset: 0x0005A396
+		// Token: 0x06002443 RID: 9283 RVA: 0x00062EAA File Offset: 0x000610AA
 		public IPortalMode_SetValue ToSetValue()
 		{
 			return new IPortalMode_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008DB RID: 2267
-		// (get) Token: 0x0600213E RID: 8510 RVA: 0x0005C1C1 File Offset: 0x0005A3C1
-		// (set) Token: 0x0600213F RID: 8511 RVA: 0x0005C1EC File Offset: 0x0005A3EC
+		// Token: 0x17000992 RID: 2450
+		// (get) Token: 0x06002444 RID: 9284 RVA: 0x00062ED5 File Offset: 0x000610D5
+		// (set) Token: 0x06002445 RID: 9285 RVA: 0x00062F00 File Offset: 0x00061100
 		public virtual EPortalType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008DC RID: 2268
-		// (get) Token: 0x06002140 RID: 8512 RVA: 0x0005C1FA File Offset: 0x0005A3FA
-		// (set) Token: 0x06002141 RID: 8513 RVA: 0x0005C225 File Offset: 0x0005A425
+		// Token: 0x17000993 RID: 2451
+		// (get) Token: 0x06002446 RID: 9286 RVA: 0x00062F0E File Offset: 0x0006110E
+		// (set) Token: 0x06002447 RID: 9287 RVA: 0x00062F39 File Offset: 0x00061139
 		public virtual EPortalModel PortalModel
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008DD RID: 2269
-		// (get) Token: 0x06002142 RID: 8514 RVA: 0x0005C234 File Offset: 0x0005A434
-		// (set) Token: 0x06002143 RID: 8515 RVA: 0x0005C295 File Offset: 0x0005A495
+		// Token: 0x17000994 RID: 2452
+		// (get) Token: 0x06002448 RID: 9288 RVA: 0x00062F48 File Offset: 0x00061148
+		// (set) Token: 0x06002449 RID: 9289 RVA: 0x00062FA9 File Offset: 0x000611A9
 		[Nullable(2)]
 		public virtual IPortalRenderConfig RenderConfig
 		{
@@ -140,18 +138,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001739 RID: 5945
+		// Token: 0x0400192B RID: 6443
 		[Nullable(2)]
 		protected IPortalMode FbInstance;
 
-		// Token: 0x0400173A RID: 5946
+		// Token: 0x0400192C RID: 6444
 		[Nullable(2)]
 		protected IPortalMode_SetValue PocoInterface;
 
-		// Token: 0x0400173B RID: 5947
+		// Token: 0x0400192D RID: 6445
 		private IPortalRenderConfig _RenderConfigCache;
 
-		// Token: 0x0400173C RID: 5948
+		// Token: 0x0400192E RID: 6446
 		private bool _RenderConfigInited;
 	}
 }

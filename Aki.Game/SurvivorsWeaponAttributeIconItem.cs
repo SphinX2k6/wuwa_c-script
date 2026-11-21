@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B09 RID: 11017
+// Token: 0x02002085 RID: 8325
 public class SurvivorsWeaponAttributeIconItem : GridProxyAbstract<int>
 {
-	// Token: 0x06016E7E RID: 93822 RVA: 0x005CFFA0 File Offset: 0x005CE1A0
+	// Token: 0x060148AF RID: 84143 RVA: 0x005FCB20 File Offset: 0x005FAD20
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ public class SurvivorsWeaponAttributeIconItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06016E7F RID: 93823 RVA: 0x005CFFC4 File Offset: 0x005CE1C4
+	// Token: 0x060148B0 RID: 84144 RVA: 0x005FCB44 File Offset: 0x005FAD44
 	public override void Refresh(int attributeId, bool isSelected, int gridIndex)
 	{
 		SurvivorsProperty? propertyConfig = SurvivorsRogueConfig.Instance.GetPropertyConfig(attributeId);
@@ -27,10 +27,10 @@ public class SurvivorsWeaponAttributeIconItem : GridProxyAbstract<int>
 		base.SetTextureShowUntilLoaded(propertyConfig.Value.Icon, base.GetTexture(0), null);
 	}
 
-	// Token: 0x02009114 RID: 37140
+	// Token: 0x02008357 RID: 33623
 	private static class EComponents
 	{
-		// Token: 0x0402EFDB RID: 192475
+		// Token: 0x0402A6E0 RID: 173792
 		public const int TexAttribute = 0;
 	}
 }

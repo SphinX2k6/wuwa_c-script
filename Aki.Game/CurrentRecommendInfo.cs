@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020A1 RID: 8353
+// Token: 0x02001578 RID: 5496
 public class CurrentRecommendInfo
 {
-	// Token: 0x040079E1 RID: 31201
+	// Token: 0x04007ADF RID: 31455
 	public int Index;
 
-	// Token: 0x040079E2 RID: 31202
+	// Token: 0x04007AE0 RID: 31456
 	[Nullable(1)]
 	public string Ip = string.Empty;
 }

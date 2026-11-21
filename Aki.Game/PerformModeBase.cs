@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003127 RID: 12583
+// Token: 0x02002682 RID: 9858
 [NullableContext(1)]
 [Nullable(0)]
 public class PerformModeBase
 {
-	// Token: 0x0601B094 RID: 110740 RVA: 0x00756976 File Offset: 0x00754B76
+	// Token: 0x06018AEF RID: 101103 RVA: 0x0077C9E2 File Offset: 0x0077ABE2
 	public PerformModeBase(EPerformMode mode, BasePerformComponent performComp, PerformMachine machine)
 	{
 		this.Mode = mode;
@@ -14,7 +14,7 @@ public class PerformModeBase
 		this.Machine = machine;
 	}
 
-	// Token: 0x0601B095 RID: 110741 RVA: 0x0075699F File Offset: 0x00754B9F
+	// Token: 0x06018AF0 RID: 101104 RVA: 0x0077CA0B File Offset: 0x0077AC0B
 	public void PushAction(IPerformActionBase actionInfo, bool bRestore)
 	{
 		if (bRestore)
@@ -25,7 +25,7 @@ public class PerformModeBase
 		this.CachePerformAction.AddRear(actionInfo);
 	}
 
-	// Token: 0x0601B096 RID: 110742 RVA: 0x007569BD File Offset: 0x00754BBD
+	// Token: 0x06018AF1 RID: 101105 RVA: 0x0077CA29 File Offset: 0x0077AC29
 	[NullableContext(2)]
 	public IPerformActionBase PopAction()
 	{
@@ -36,33 +36,33 @@ public class PerformModeBase
 		return this.CachePerformAction.RemoveFront();
 	}
 
-	// Token: 0x0601B097 RID: 110743 RVA: 0x007569D9 File Offset: 0x00754BD9
+	// Token: 0x06018AF2 RID: 101106 RVA: 0x0077CA45 File Offset: 0x0077AC45
 	public virtual bool CheckEnter()
 	{
 		return false;
 	}
 
-	// Token: 0x0601B098 RID: 110744 RVA: 0x007569DC File Offset: 0x00754BDC
+	// Token: 0x06018AF3 RID: 101107 RVA: 0x0077CA48 File Offset: 0x0077AC48
 	public virtual bool CheckExit()
 	{
 		return false;
 	}
 
-	// Token: 0x0601B099 RID: 110745 RVA: 0x007569DF File Offset: 0x00754BDF
+	// Token: 0x06018AF4 RID: 101108 RVA: 0x0077CA4B File Offset: 0x0077AC4B
 	public void Clear()
 	{
 		this.CachePerformAction.Clear();
 	}
 
-	// Token: 0x0400D244 RID: 53828
+	// Token: 0x0400D666 RID: 54886
 	public readonly EPerformMode Mode;
 
-	// Token: 0x0400D245 RID: 53829
+	// Token: 0x0400D667 RID: 54887
 	protected readonly BasePerformComponent PerformComp;
 
-	// Token: 0x0400D246 RID: 53830
+	// Token: 0x0400D668 RID: 54888
 	protected readonly PerformMachine Machine;
 
-	// Token: 0x0400D247 RID: 53831
+	// Token: 0x0400D669 RID: 54889
 	protected readonly Deque<IPerformActionBase> CachePerformAction = new Deque<IPerformActionBase>(4);
 }

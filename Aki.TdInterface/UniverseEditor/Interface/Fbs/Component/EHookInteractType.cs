@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DB3 RID: 19891
+	// Token: 0x020052B7 RID: 21175
 	public enum EHookInteractType : byte
 	{
-		// Token: 0x0400D9CB RID: 55755
+		// Token: 0x0400E51A RID: 58650
 		FixedPointHook,
-		// Token: 0x0400D9CC RID: 55756
+		// Token: 0x0400E51B RID: 58651
 		MovementPointHook,
-		// Token: 0x0400D9CD RID: 55757
+		// Token: 0x0400E51C RID: 58652
 		SuiGuangHook,
-		// Token: 0x0400D9CE RID: 55758
+		// Token: 0x0400E51D RID: 58653
 		KiteHook,
-		// Token: 0x0400D9CF RID: 55759
+		// Token: 0x0400E51E RID: 58654
 		RagDollJumpingPoint,
-		// Token: 0x0400D9D0 RID: 55760
+		// Token: 0x0400E51F RID: 58655
 		RagDollClimbingPoint,
-		// Token: 0x0400D9D1 RID: 55761
+		// Token: 0x0400E520 RID: 58656
 		SlashHook,
-		// Token: 0x0400D9D2 RID: 55762
+		// Token: 0x0400E521 RID: 58657
 		ChargeSlashHook,
-		// Token: 0x0400D9D3 RID: 55763
+		// Token: 0x0400E522 RID: 58658
 		GravityHook,
-		// Token: 0x0400D9D4 RID: 55764
+		// Token: 0x0400E523 RID: 58659
 		FlyingFeather,
-		// Token: 0x0400D9D5 RID: 55765
+		// Token: 0x0400E524 RID: 58660
 		PilotThrow,
-		// Token: 0x0400D9D6 RID: 55766
+		// Token: 0x0400E525 RID: 58661
 		SunSpiritLauncher,
-		// Token: 0x0400D9D7 RID: 55767
+		// Token: 0x0400E526 RID: 58662
 		CableWay,
-		// Token: 0x0400D9D8 RID: 55768
+		// Token: 0x0400E527 RID: 58663
 		FollowerShoot,
-		// Token: 0x0400D9D9 RID: 55769
+		// Token: 0x0400E528 RID: 58664
 		MotorPullInteract,
-		// Token: 0x0400D9DA RID: 55770
+		// Token: 0x0400E529 RID: 58665
 		SpaceStationEnergyCore,
-		// Token: 0x0400D9DB RID: 55771
+		// Token: 0x0400E52A RID: 58666
 		MotorEject,
-		// Token: 0x0400D9DC RID: 55772
+		// Token: 0x0400E52B RID: 58667
 		FoxJumpingPoint,
-		// Token: 0x0400D9DD RID: 55773
+		// Token: 0x0400E52C RID: 58668
 		WaterBoxBigWeapon,
-		// Token: 0x0400D9DE RID: 55774
-		MechHook,
-		// Token: 0x0400D9DF RID: 55775
-		MechPullInteract
+		// Token: 0x0400E52D RID: 58669
+		MechTransformHook,
+		// Token: 0x0400E52E RID: 58670
+		ChongLouHook
 	}
 }

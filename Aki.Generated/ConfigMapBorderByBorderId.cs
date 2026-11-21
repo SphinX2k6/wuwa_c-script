@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200050F RID: 1295
+	// Token: 0x02000525 RID: 1317
 	public class ConfigMapBorderByBorderId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E65 RID: 7781 RVA: 0x00104EC3 File Offset: 0x001030C3
+		// Token: 0x06001EE9 RID: 7913 RVA: 0x0010B617 File Offset: 0x00109817
 		static ConfigMapBorderByBorderId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMapBorderByBorderId.CreateStaticDefaultValue), new Action(ConfigMapBorderByBorderId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E66 RID: 7782 RVA: 0x00104EE4 File Offset: 0x001030E4
+		// Token: 0x06001EEA RID: 7914 RVA: 0x0010B638 File Offset: 0x00109838
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMapBorderByBorderId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E67 RID: 7783 RVA: 0x00104F63 File Offset: 0x00103163
+		// Token: 0x06001EEB RID: 7915 RVA: 0x0010B6B7 File Offset: 0x001098B7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMapBorderByBorderId.LogPair = null;
 			ConfigMapBorderByBorderId.HandleId = 0;
 		}
 
-		// Token: 0x06001E68 RID: 7784 RVA: 0x00104F71 File Offset: 0x00103171
+		// Token: 0x06001EEC RID: 7916 RVA: 0x0010B6C5 File Offset: 0x001098C5
 		public static void Init()
 		{
 			ConfigMapBorderByBorderId.HandleId = ConfigCommon.InitDataStatement(ConfigMapBorderByBorderId.HandleId, "db_map.db", "select BinData from `MapBorder` where BorderId=?");
 		}
 
-		// Token: 0x06001E69 RID: 7785 RVA: 0x00104F8C File Offset: 0x0010318C
+		// Token: 0x06001EED RID: 7917 RVA: 0x0010B6E0 File Offset: 0x001098E0
 		public static MapBorder? GetConfig(int p0BorderId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMapBorderByBorderId.HandleId, ConfigMapBorderByBorderId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MapBorder?(rootAsMapBorder);
 		}
 
-		// Token: 0x0400234D RID: 9037
+		// Token: 0x040023E7 RID: 9191
 		private const string DB = "db_map.db";
 
-		// Token: 0x0400234E RID: 9038
+		// Token: 0x040023E8 RID: 9192
 		private const string FILE = "d.地图.xlsx";
 
-		// Token: 0x0400234F RID: 9039
+		// Token: 0x040023E9 RID: 9193
 		private const string TABLE = "MapBorder";
 
-		// Token: 0x04002350 RID: 9040
+		// Token: 0x040023EA RID: 9194
 		private const string COMMAND = "select BinData from `MapBorder` where BorderId=?";
 
-		// Token: 0x04002351 RID: 9041
+		// Token: 0x040023EB RID: 9195
 		private const string KEY_PREFIX = "MapBorderByBorderId";
 
-		// Token: 0x04002352 RID: 9042
+		// Token: 0x040023EC RID: 9196
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002353 RID: 9043
+		// Token: 0x040023ED RID: 9197
 		private static int HandleId;
 	}
 }

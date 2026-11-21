@@ -1,34 +1,34 @@
 ﻿using System;
 
-// Token: 0x020015BF RID: 5567
+// Token: 0x02000A77 RID: 2679
 internal enum <WheelTowerNewTeamItem>FE837C8146F904ABB07529E09ED196A86DCF8DD4E4397A9BB9419079101D9942C__EWheelTowerNewTeamItemComponent
 {
-	// Token: 0x040045E2 RID: 17890
+	// Token: 0x04004688 RID: 18056
 	TextNum,
-	// Token: 0x040045E3 RID: 17891
+	// Token: 0x04004689 RID: 18057
 	LayoutRole,
-	// Token: 0x040045E4 RID: 17892
+	// Token: 0x0400468A RID: 18058
 	ItemRole,
-	// Token: 0x040045E5 RID: 17893
+	// Token: 0x0400468B RID: 18059
 	TextureSkillIcon,
-	// Token: 0x040045E6 RID: 17894
+	// Token: 0x0400468C RID: 18060
 	TextRoundNum,
-	// Token: 0x040045E7 RID: 17895
+	// Token: 0x0400468D RID: 18061
 	TextBossProgress,
-	// Token: 0x040045E8 RID: 17896
+	// Token: 0x0400468E RID: 18062
 	TextScore,
-	// Token: 0x040045E9 RID: 17897
+	// Token: 0x0400468F RID: 18063
 	ToggleRoot,
-	// Token: 0x040045EA RID: 17898
+	// Token: 0x04004690 RID: 18064
 	ItemSkillEmptyPanel,
-	// Token: 0x040045EB RID: 17899
+	// Token: 0x04004691 RID: 18065
 	ItemSkillPanel,
-	// Token: 0x040045EC RID: 17900
+	// Token: 0x04004692 RID: 18066
 	ItemRoundEmptyPanel,
-	// Token: 0x040045ED RID: 17901
+	// Token: 0x04004693 RID: 18067
 	ItemRoundPanel,
-	// Token: 0x040045EE RID: 17902
+	// Token: 0x04004694 RID: 18068
 	ItemScoreEmptyPanel,
-	// Token: 0x040045EF RID: 17903
+	// Token: 0x04004695 RID: 18069
 	ItemScorePanel
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019CA RID: 6602
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B57 RID: 6999
 	public class IDynamicSettlementConfig
 	{
-		// Token: 0x06008D69 RID: 36201 RVA: 0x0014B560 File Offset: 0x00149760
+		// Token: 0x060094AB RID: 38059 RVA: 0x0015B06C File Offset: 0x0015926C
 		private IDynamicSettlementConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008D6A RID: 36202 RVA: 0x0014B598 File Offset: 0x00149798
+		// Token: 0x060094AC RID: 38060 RVA: 0x0015B0A4 File Offset: 0x001592A4
 		public static IDynamicSettlementConfig Create([Nullable(2)] IDynamicSettlementConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D6B RID: 36203 RVA: 0x0014B5AB File Offset: 0x001497AB
+		// Token: 0x060094AD RID: 38061 RVA: 0x0015B0B7 File Offset: 0x001592B7
 		public static IDynamicSettlementConfig CreateFromSetValue([Nullable(2)] IDynamicSettlementConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D6C RID: 36204 RVA: 0x0014B5BE File Offset: 0x001497BE
+		// Token: 0x060094AE RID: 38062 RVA: 0x0015B0CA File Offset: 0x001592CA
 		public IDynamicSettlementConfig_SetValue ToSetValue()
 		{
 			return new IDynamicSettlementConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D5A RID: 11610
-		// (get) Token: 0x06008D6D RID: 36205 RVA: 0x0014B5D1 File Offset: 0x001497D1
-		// (set) Token: 0x06008D6E RID: 36206 RVA: 0x0014B5FC File Offset: 0x001497FC
+		// Token: 0x17002F5F RID: 12127
+		// (get) Token: 0x060094AF RID: 38063 RVA: 0x0015B0DD File Offset: 0x001592DD
+		// (set) Token: 0x060094B0 RID: 38064 RVA: 0x0015B108 File Offset: 0x00159308
 		public virtual EDynamicSettlementType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040057D9 RID: 22489
+		// Token: 0x04005C2E RID: 23598
 		[Nullable(2)]
 		protected IDynamicSettlementConfig FbInstance;
 
-		// Token: 0x040057DA RID: 22490
+		// Token: 0x04005C2F RID: 23599
 		[Nullable(2)]
 		protected IDynamicSettlementConfig_SetValue PocoInterface;
 	}

@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045EA RID: 17898
+	// Token: 0x02003513 RID: 13587
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ItemMaterialActorController : ItemMaterialControllerBase
 	{
-		// Token: 0x0602E280 RID: 189056 RVA: 0x00AAA1F6 File Offset: 0x00AA83F6
+		// Token: 0x06022975 RID: 141685 RVA: 0x009D698E File Offset: 0x009D4B8E
 		public bool IsValid()
 		{
 			return this.LifeTimeController != null && this.Actor.IsValid() && this.Data.IsValid();
 		}
 
-		// Token: 0x0602E281 RID: 189057 RVA: 0x00AAA21C File Offset: 0x00AA841C
+		// Token: 0x06022976 RID: 141686 RVA: 0x009D69B4 File Offset: 0x009D4BB4
 		[NullableContext(1)]
 		public ItemMaterialActorController(AActor actor, ItemMaterialControllerActorData data)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Render
 			this.Play();
 		}
 
-		// Token: 0x0602E282 RID: 189058 RVA: 0x00AAA2CF File Offset: 0x00AA84CF
+		// Token: 0x06022977 RID: 141687 RVA: 0x009D6A67 File Offset: 0x009D4C67
 		public AActor GetActor()
 		{
 			if (!this.Actor.IsValid())
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Render
 			return this.Actor;
 		}
 
-		// Token: 0x0602E283 RID: 189059 RVA: 0x00AAA2E6 File Offset: 0x00AA84E6
+		// Token: 0x06022978 RID: 141688 RVA: 0x009D6A7E File Offset: 0x009D4C7E
 		public ItemMaterialControllerActorData GetData()
 		{
 			if (!this.Data.IsValid())
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Render
 			return this.Data;
 		}
 
-		// Token: 0x0602E284 RID: 189060 RVA: 0x00AAA2FD File Offset: 0x00AA84FD
+		// Token: 0x06022979 RID: 141689 RVA: 0x009D6A95 File Offset: 0x009D4C95
 		public EffectLifeTimeController GetLifeTimeController()
 		{
 			return this.LifeTimeController;
 		}
 
-		// Token: 0x0602E285 RID: 189061 RVA: 0x00AAA308 File Offset: 0x00AA8508
+		// Token: 0x0602297A RID: 141690 RVA: 0x009D6AA0 File Offset: 0x009D4CA0
 		public void CollectParameter()
 		{
 			RenderStats.Init();
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateCustomCurvePar();
 		}
 
-		// Token: 0x0602E286 RID: 189062 RVA: 0x00AAAA0C File Offset: 0x00AA8C0C
+		// Token: 0x0602297B RID: 141691 RVA: 0x009D71A4 File Offset: 0x009D53A4
 		public void UpdateCustomCurvePar()
 		{
 			ItemMaterialControllerActorData data = this.Data;
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E287 RID: 189063 RVA: 0x00AAAAE8 File Offset: 0x00AA8CE8
+		// Token: 0x0602297C RID: 141692 RVA: 0x009D7280 File Offset: 0x009D5480
 		public void ApplyCustomTexPar()
 		{
 			ItemMaterialControllerActorData data = this.Data;
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E288 RID: 189064 RVA: 0x00AAACD4 File Offset: 0x00AA8ED4
+		// Token: 0x0602297D RID: 141693 RVA: 0x009D7470 File Offset: 0x009D5670
 		public void RevertCustomTexPar()
 		{
 			for (int i = this.CachedOriginTexPar.Count - 1; i >= 0; i--)
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Render
 			this.CachedOriginTexPar.Clear();
 		}
 
-		// Token: 0x0602E289 RID: 189065 RVA: 0x00AAAD4C File Offset: 0x00AA8F4C
+		// Token: 0x0602297E RID: 141694 RVA: 0x009D74E8 File Offset: 0x009D56E8
 		public void UpdateParameters(bool forceUpdate)
 		{
 			if (this.LifeTimeController == null)
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E28A RID: 189066 RVA: 0x00AAAE7C File Offset: 0x00AA907C
+		// Token: 0x0602297F RID: 141695 RVA: 0x009D7618 File Offset: 0x009D5818
 		public void Play()
 		{
 			EffectLifeTimeController lifeTimeController = this.LifeTimeController;
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateParameters(true);
 		}
 
-		// Token: 0x0602E28B RID: 189067 RVA: 0x00AAAE9C File Offset: 0x00AA909C
+		// Token: 0x06022980 RID: 141696 RVA: 0x009D7638 File Offset: 0x009D5838
 		public void Update(float deltaSecond)
 		{
 			if (!this.IsValid())
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateParameters(false);
 		}
 
-		// Token: 0x0602E28C RID: 189068 RVA: 0x00AAAEC0 File Offset: 0x00AA90C0
+		// Token: 0x06022981 RID: 141697 RVA: 0x009D765C File Offset: 0x009D585C
 		public void Destroy()
 		{
 			try
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E28D RID: 189069 RVA: 0x00AAAF34 File Offset: 0x00AA9134
+		// Token: 0x06022982 RID: 141698 RVA: 0x009D76D0 File Offset: 0x009D58D0
 		public void Stop(bool immediately = false)
 		{
 			EffectLifeTimeController lifeTimeController = this.LifeTimeController;
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Render
 			lifeTimeController.Stop(immediately);
 		}
 
-		// Token: 0x0602E28E RID: 189070 RVA: 0x00AAAF48 File Offset: 0x00AA9148
+		// Token: 0x06022983 RID: 141699 RVA: 0x009D76E4 File Offset: 0x009D58E4
 		[NullableContext(1)]
 		public void ForEachComponent([Nullable(2)] AActor actor, Action<UPrimitiveComponent> exec)
 		{
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E28F RID: 189071 RVA: 0x00AAAF9C File Offset: 0x00AA919C
+		// Token: 0x06022984 RID: 141700 RVA: 0x009D7738 File Offset: 0x009D5938
 		[NullableContext(1)]
 		public void ForEachDecalComponent([Nullable(2)] AActor actor, Action<UDecalComponent> exec)
 		{
@@ -423,7 +423,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E290 RID: 189072 RVA: 0x00AAAFF0 File Offset: 0x00AA91F0
+		// Token: 0x06022985 RID: 141701 RVA: 0x009D778C File Offset: 0x009D598C
 		public bool CheckMaterial(UPrimitiveComponent component)
 		{
 			if (component == null || !component.IsValid())
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E291 RID: 189073 RVA: 0x00AAB054 File Offset: 0x00AA9254
+		// Token: 0x06022986 RID: 141702 RVA: 0x009D77F0 File Offset: 0x009D59F0
 		public bool CheckDecalMaterial(UDecalComponent component)
 		{
 			if (component == null || !component.IsValid())
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E292 RID: 189074 RVA: 0x00AAB0A4 File Offset: 0x00AA92A4
+		// Token: 0x06022987 RID: 141703 RVA: 0x009D7840 File Offset: 0x009D5A40
 		public void CachedComponentMaterials(UPrimitiveComponent component)
 		{
 			if (component == null || !component.IsValid())
@@ -523,7 +523,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E293 RID: 189075 RVA: 0x00AAB224 File Offset: 0x00AA9424
+		// Token: 0x06022988 RID: 141704 RVA: 0x009D79C0 File Offset: 0x009D5BC0
 		public void CachedDecalComponentMaterials(UDecalComponent component)
 		{
 			if (component == null || !component.IsValid())
@@ -569,7 +569,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E294 RID: 189076 RVA: 0x00AAB2EC File Offset: 0x00AA94EC
+		// Token: 0x06022989 RID: 141705 RVA: 0x009D7A88 File Offset: 0x009D5C88
 		public void ResetComponentMaterials(UPrimitiveComponent component)
 		{
 			if (component == null)
@@ -595,25 +595,25 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018C4B RID: 101451
+		// Token: 0x0401328A RID: 78474
 		[Nullable(1)]
 		private const string DENG_LONG_MATERIAL_DATA_PATH = "/Game/Aki/Effect/MaterialController/ItemMaterial/3_7_MSTL/DA_Fx_3_7_MSTL_DengLong.DA_Fx_3_7_MSTL_DengLong";
 
-		// Token: 0x04018C4C RID: 101452
+		// Token: 0x0401328B RID: 78475
 		protected EffectLifeTimeController LifeTimeController;
 
-		// Token: 0x04018C4D RID: 101453
+		// Token: 0x0401328C RID: 78476
 		[Nullable(1)]
 		protected AActor Actor;
 
-		// Token: 0x04018C4E RID: 101454
+		// Token: 0x0401328D RID: 78477
 		[Nullable(1)]
 		protected ItemMaterialControllerActorData Data;
 
-		// Token: 0x04018C4F RID: 101455
+		// Token: 0x0401328E RID: 78478
 		protected EffectMaterialParameters ModelParameters;
 
-		// Token: 0x04018C50 RID: 101456
+		// Token: 0x0401328F RID: 78479
 		[Nullable(new byte[]
 		{
 			1,
@@ -626,7 +626,7 @@ namespace CSharpScript.Game.Render
 		})]
 		protected List<Tuple<UPrimitiveComponent, List<UMaterialInterface>, List<UMaterialInstanceDynamic>>> CachedMaterials = new List<Tuple<UPrimitiveComponent, List<UMaterialInterface>, List<UMaterialInstanceDynamic>>>();
 
-		// Token: 0x04018C51 RID: 101457
+		// Token: 0x04013290 RID: 78480
 		[Nullable(new byte[]
 		{
 			1,
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.Render
 		})]
 		protected List<Tuple<UDecalComponent, UMaterialInterface, UMaterialInstanceDynamic>> CachedDecalMaterials = new List<Tuple<UDecalComponent, UMaterialInterface, UMaterialInstanceDynamic>>();
 
-		// Token: 0x04018C52 RID: 101458
+		// Token: 0x04013291 RID: 78481
 		[Nullable(new byte[]
 		{
 			1,

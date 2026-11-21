@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CE8 RID: 3304
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DE0 RID: 3552
 	public class IAnimalModel : IModelConfig
 	{
-		// Token: 0x06004B75 RID: 19317 RVA: 0x000BC6E4 File Offset: 0x000BA8E4
+		// Token: 0x06005082 RID: 20610 RVA: 0x000C7B98 File Offset: 0x000C5D98
 		public static IAnimalModel Create(IAnimalModel? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001762 RID: 5986
-		// (get) Token: 0x06004B76 RID: 19318 RVA: 0x000BC703 File Offset: 0x000BA903
+		// Token: 0x170018BD RID: 6333
+		// (get) Token: 0x06005083 RID: 20611 RVA: 0x000C7BB7 File Offset: 0x000C5DB7
 		public override EModelType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001763 RID: 5987
-		// (get) Token: 0x06004B77 RID: 19319 RVA: 0x000BC710 File Offset: 0x000BA910
+		// Token: 0x170018BE RID: 6334
+		// (get) Token: 0x06005084 RID: 20612 RVA: 0x000C7BC4 File Offset: 0x000C5DC4
 		public virtual string BlueprintPath
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001764 RID: 5988
-		// (get) Token: 0x06004B78 RID: 19320 RVA: 0x000BC71D File Offset: 0x000BA91D
+		// Token: 0x170018BF RID: 6335
+		// (get) Token: 0x06005085 RID: 20613 RVA: 0x000C7BD1 File Offset: 0x000C5DD1
 		[Nullable(2)]
 		public virtual IMeshAnimalModel AnimalModel
 		{
@@ -60,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001765 RID: 5989
-		// (get) Token: 0x06004B79 RID: 19321 RVA: 0x000BC751 File Offset: 0x000BA951
+		// Token: 0x170018C0 RID: 6336
+		// (get) Token: 0x06005086 RID: 20614 RVA: 0x000C7C05 File Offset: 0x000C5E05
 		public virtual string Abp
 		{
 			get
@@ -70,14 +68,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B25 RID: 11045
+		// Token: 0x04002DDD RID: 11741
 		private IAnimalModel Instance;
 
-		// Token: 0x04002B26 RID: 11046
+		// Token: 0x04002DDE RID: 11742
 		[Nullable(2)]
 		private IMeshAnimalModel _AnimalModelCache;
 
-		// Token: 0x04002B27 RID: 11047
+		// Token: 0x04002DDF RID: 11743
 		private bool _AnimalModelInited;
 	}
 }

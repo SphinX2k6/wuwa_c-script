@@ -8,24 +8,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F9D RID: 24477
+	// Token: 0x02004F84 RID: 20356
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPickRoleChoicePanel : UiPanelBase
 	{
-		// Token: 0x0603E15B RID: 254299 RVA: 0x00EFE16B File Offset: 0x00EFC36B
+		// Token: 0x060330F5 RID: 209141 RVA: 0x00E4FE23 File Offset: 0x00E4E023
 		public TotalTopUpPickRoleChoicePanel(List<ITotalTopUpPickRoleRewardItemData> rewardDataList)
 		{
 			this.RewardDataList = rewardDataList;
 		}
 
-		// Token: 0x0603E15C RID: 254300 RVA: 0x00EFE19C File Offset: 0x00EFC39C
+		// Token: 0x060330F6 RID: 209142 RVA: 0x00E4FE54 File Offset: 0x00E4E054
 		public void SetSelectCallback(Action<ITotalTopUpPickRoleRewardItemData> callback)
 		{
 			this.SelectCallBack = callback;
 		}
 
-		// Token: 0x0603E15D RID: 254301 RVA: 0x00EFE1A8 File Offset: 0x00EFC3A8
+		// Token: 0x060330F7 RID: 209143 RVA: 0x00E4FE60 File Offset: 0x00E4E060
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E15E RID: 254302 RVA: 0x00EFE1F4 File Offset: 0x00EFC3F4
+		// Token: 0x060330F8 RID: 209144 RVA: 0x00E4FEAC File Offset: 0x00E4E0AC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TotalTopUpPickRoleChoicePanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E15F RID: 254303 RVA: 0x00EFE237 File Offset: 0x00EFC437
+		// Token: 0x060330F9 RID: 209145 RVA: 0x00E4FEEF File Offset: 0x00E4E0EF
 		private void OnClickItemCallback(ITotalTopUpPickRoleRewardItemData data)
 		{
 			this.SelectItem(data.Index);
 		}
 
-		// Token: 0x0603E160 RID: 254304 RVA: 0x00EFE248 File Offset: 0x00EFC448
+		// Token: 0x060330FA RID: 209146 RVA: 0x00E4FF00 File Offset: 0x00E4E100
 		public void SelectItem(int index)
 		{
 			for (int i = 0; i < this.RewardItems.Count; i++)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x040206E0 RID: 132832
+		// Token: 0x0401B1B2 RID: 111026
 		private readonly int[] PosNodeList = new int[]
 		{
 			0,
@@ -77,10 +77,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			3
 		};
 
-		// Token: 0x040206E1 RID: 132833
+		// Token: 0x0401B1B3 RID: 111027
 		private readonly List<TotalTopUpPickRoleRewardItem> RewardItems = new List<TotalTopUpPickRoleRewardItem>();
 
-		// Token: 0x040206E2 RID: 132834
+		// Token: 0x0401B1B4 RID: 111028
 		[Nullable(new byte[]
 		{
 			2,
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 		})]
 		private Action<ITotalTopUpPickRoleRewardItemData> SelectCallBack;
 
-		// Token: 0x040206E3 RID: 132835
+		// Token: 0x0401B1B5 RID: 111029
 		private readonly List<ITotalTopUpPickRoleRewardItemData> RewardDataList;
 	}
 }

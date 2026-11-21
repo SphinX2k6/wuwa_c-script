@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007173 RID: 29043
+	// Token: 0x02006227 RID: 25127
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemChessmanComponent : EntityComponent
 	{
-		// Token: 0x06046EB2 RID: 290482 RVA: 0x011E8B74 File Offset: 0x011E6D74
+		// Token: 0x0603C71E RID: 247582 RVA: 0x01143EF8 File Offset: 0x011420F8
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			ChessmanComponent config = args.GetP1<CreateEntityData>().GetParam<SceneItemChessmanComponent>() as ChessmanComponent;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EB3 RID: 290483 RVA: 0x011E8B9C File Offset: 0x011E6D9C
+		// Token: 0x0603C71F RID: 247583 RVA: 0x01143F20 File Offset: 0x01142120
 		protected override bool OnStart()
 		{
 			this.ItemComponent = base.Entity.GetComponent<SceneItemJigsawItemComponent>();
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EB4 RID: 290484 RVA: 0x011E8C30 File Offset: 0x011E6E30
+		// Token: 0x0603C720 RID: 247584 RVA: 0x01143FB4 File Offset: 0x011421B4
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnSceneInteractionShowCompleted, new Action(this.OnSceneInteractionLoadCompleted));
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EB5 RID: 290485 RVA: 0x011E8C7D File Offset: 0x011E6E7D
+		// Token: 0x0603C721 RID: 247585 RVA: 0x01144001 File Offset: 0x01142201
 		[NullableContext(1)]
 		public bool RegisterOnSceneInteractionLoadCompleted(Action callback)
 		{
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EB6 RID: 290486 RVA: 0x011E8C9D File Offset: 0x011E6E9D
+		// Token: 0x0603C722 RID: 247586 RVA: 0x01144021 File Offset: 0x01142221
 		private void OnSceneInteractionLoadCompleted()
 		{
 			if (this.SceneInteractionLoadCompletedCallback != null)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EB7 RID: 290487 RVA: 0x011E8CB4 File Offset: 0x011E6EB4
+		// Token: 0x0603C723 RID: 247587 RVA: 0x01144038 File Offset: 0x01142238
 		private void OnPieceMoveStart()
 		{
 			LevelTagComponent tagComponent = this.TagComponent;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			LevelGeneralController.Instance.ExecuteActionsNew(this.Config.StartMovingActions, context, null);
 		}
 
-		// Token: 0x06046EB8 RID: 290488 RVA: 0x011E8D2C File Offset: 0x011E6F2C
+		// Token: 0x0603C724 RID: 247588 RVA: 0x011440B0 File Offset: 0x011422B0
 		private void OnTicTacToePieceMoveEnd()
 		{
 			if (this.OnPieceMoveEnd != null)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			tagComponent.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["关卡.Common.表现.棋子.移动中"]));
 		}
 
-		// Token: 0x06046EB9 RID: 290489 RVA: 0x011E8DE8 File Offset: 0x011E6FE8
+		// Token: 0x0603C725 RID: 247589 RVA: 0x0114416C File Offset: 0x0114236C
 		public void OnTicTacToePieceMove([Nullable(1)] JigsawIndex target, [Nullable(1)] Action<AActor, SceneItemJigsawItemComponent, JigsawIndex> onPieceMoveEnd, Vector movePoint0 = null, Vector movePoint1 = null, Vector movePoint2 = null)
 		{
 			SceneItemJigsawItemComponent itemComponent = this.ItemComponent;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EBA RID: 290490 RVA: 0x011E8F2C File Offset: 0x011E712C
+		// Token: 0x0603C726 RID: 247590 RVA: 0x011442B0 File Offset: 0x011424B0
 		[NullableContext(1)]
 		public void SetTicTacToePieceLocation(JigsawIndex target, [Nullable(new byte[]
 		{
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EBB RID: 290491 RVA: 0x011E901C File Offset: 0x011E721C
+		// Token: 0x0603C727 RID: 247591 RVA: 0x011443A0 File Offset: 0x011425A0
 		private void ChessmanSetLocationPerformance(float _)
 		{
 			LevelTagComponent tagComponent = this.TagComponent;
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.RefreshPickBoundsEvent = null;
 		}
 
-		// Token: 0x06046EBC RID: 290492 RVA: 0x011E90FC File Offset: 0x011E72FC
+		// Token: 0x0603C728 RID: 247592 RVA: 0x01144480 File Offset: 0x01142680
 		public void OnTicTacToePieceMovingChange(bool moving)
 		{
 			if (moving)
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EBD RID: 290493 RVA: 0x011E917C File Offset: 0x011E737C
+		// Token: 0x0603C729 RID: 247593 RVA: 0x01144500 File Offset: 0x01142700
 		public void OnTicTacToePieceSelect(bool select, bool controller)
 		{
 			if (select)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EBE RID: 290494 RVA: 0x011E9228 File Offset: 0x011E7428
+		// Token: 0x0603C72A RID: 247594 RVA: 0x011445AC File Offset: 0x011427AC
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -341,152 +341,139 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemChessmanComponent sceneItemChessmanComponent = (SceneItemChessmanComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ItemComponent"))
+			if (sceneItemChessmanComponent.ItemComponent == null)
 			{
-				if (sceneItemChessmanComponent.ItemComponent == null)
-				{
-					this.ItemComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemJigsawItemComponent>(this.ItemComponent), "ItemComponent"))
-				{
-					return false;
-				}
+				this.ItemComponent = null;
 			}
-			if (base.CanResetComponentProperty("MoveComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ItemComponent), "ItemComponent"))
 			{
-				if (sceneItemChessmanComponent.MoveComponent == null)
-				{
-					this.MoveComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent>(this.MoveComponent), "MoveComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComponent"))
+			if (sceneItemChessmanComponent.MoveComponent == null)
 			{
-				if (sceneItemChessmanComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
+				this.MoveComponent = null;
 			}
-			if (base.CanResetComponentProperty("TagComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComponent), "MoveComponent"))
 			{
-				if (sceneItemChessmanComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemChessmanComponent.ActorComponent == null)
 			{
-				if (sceneItemChessmanComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ChessmanComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.ActorComponent = null;
 			}
-			if (base.CanResetComponentProperty("SceneInteractionLoadCompletedCallback"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 			{
-				if (sceneItemChessmanComponent.SceneInteractionLoadCompletedCallback == null)
-				{
-					this.SceneInteractionLoadCompletedCallback = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.SceneInteractionLoadCompletedCallback), "SceneInteractionLoadCompletedCallback"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("OnPieceMoveEnd"))
+			if (sceneItemChessmanComponent.TagComponent == null)
 			{
-				if (sceneItemChessmanComponent.OnPieceMoveEnd == null)
-				{
-					this.OnPieceMoveEnd = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<AActor, SceneItemJigsawItemComponent, JigsawIndex>>(this.OnPieceMoveEnd), "OnPieceMoveEnd"))
-				{
-					return false;
-				}
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("TargetJigsawIndex"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
-				if (sceneItemChessmanComponent.TargetJigsawIndex == null)
-				{
-					this.TargetJigsawIndex = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawIndex>(this.TargetJigsawIndex), "TargetJigsawIndex"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetLocation"))
+			if (sceneItemChessmanComponent.Config == null)
 			{
-				if (sceneItemChessmanComponent.TargetLocation == null)
-				{
-					this.TargetLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TargetLocation), "TargetLocation"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("SetLocationPerformanceTimerHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemChessmanComponent.SetLocationPerformanceTimerHandle == null)
-				{
-					this.SetLocationPerformanceTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.SetLocationPerformanceTimerHandle), "SetLocationPerformanceTimerHandle"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RefreshPickBoundsEvent"))
+			if (sceneItemChessmanComponent.SceneInteractionLoadCompletedCallback == null)
 			{
-				if (sceneItemChessmanComponent.RefreshPickBoundsEvent == null)
-				{
-					this.RefreshPickBoundsEvent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<AActor>>(this.RefreshPickBoundsEvent), "RefreshPickBoundsEvent"))
-				{
-					return false;
-				}
+				this.SceneInteractionLoadCompletedCallback = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneInteractionLoadCompletedCallback), "SceneInteractionLoadCompletedCallback"))
+			{
+				return false;
+			}
+			if (sceneItemChessmanComponent.OnPieceMoveEnd == null)
+			{
+				this.OnPieceMoveEnd = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnPieceMoveEnd), "OnPieceMoveEnd"))
+			{
+				return false;
+			}
+			if (sceneItemChessmanComponent.TargetJigsawIndex == null)
+			{
+				this.TargetJigsawIndex = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetJigsawIndex), "TargetJigsawIndex"))
+			{
+				return false;
+			}
+			if (sceneItemChessmanComponent.TargetLocation == null)
+			{
+				this.TargetLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetLocation), "TargetLocation"))
+			{
+				return false;
+			}
+			if (sceneItemChessmanComponent.SetLocationPerformanceTimerHandle == null)
+			{
+				this.SetLocationPerformanceTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SetLocationPerformanceTimerHandle), "SetLocationPerformanceTimerHandle"))
+			{
+				return false;
+			}
+			if (sceneItemChessmanComponent.RefreshPickBoundsEvent == null)
+			{
+				this.RefreshPickBoundsEvent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RefreshPickBoundsEvent), "RefreshPickBoundsEvent"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040253D9 RID: 152537
+		// Token: 0x1700722B RID: 29227
+		// (get) Token: 0x0603C72B RID: 247595 RVA: 0x011447A5 File Offset: 0x011429A5
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700722C RID: 29228
+		// (get) Token: 0x0603C72C RID: 247596 RVA: 0x011447A8 File Offset: 0x011429A8
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020040 RID: 131136
 		private const int CHESSMAN_SETLOCATION_PERFORMANCE_TIME = 1000;
 
-		// Token: 0x040253DA RID: 152538
+		// Token: 0x04020041 RID: 131137
 		private SceneItemJigsawItemComponent ItemComponent;
 
-		// Token: 0x040253DB RID: 152539
+		// Token: 0x04020042 RID: 131138
 		private SceneItemMoveComponent MoveComponent;
 
-		// Token: 0x040253DC RID: 152540
+		// Token: 0x04020043 RID: 131139
 		private SceneItemActorComponent ActorComponent;
 
-		// Token: 0x040253DD RID: 152541
+		// Token: 0x04020044 RID: 131140
 		private LevelTagComponent TagComponent;
 
-		// Token: 0x040253DE RID: 152542
+		// Token: 0x04020045 RID: 131141
 		private ChessmanComponent Config;
 
-		// Token: 0x040253DF RID: 152543
+		// Token: 0x04020046 RID: 131142
 		private Action SceneInteractionLoadCompletedCallback;
 
-		// Token: 0x040253E0 RID: 152544
+		// Token: 0x04020047 RID: 131143
 		[Nullable(new byte[]
 		{
 			2,
@@ -496,16 +483,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Action<AActor, SceneItemJigsawItemComponent, JigsawIndex> OnPieceMoveEnd;
 
-		// Token: 0x040253E1 RID: 152545
+		// Token: 0x04020048 RID: 131144
 		private JigsawIndex TargetJigsawIndex;
 
-		// Token: 0x040253E2 RID: 152546
+		// Token: 0x04020049 RID: 131145
 		private Vector TargetLocation;
 
-		// Token: 0x040253E3 RID: 152547
+		// Token: 0x0402004A RID: 131146
 		private TimerHandle SetLocationPerformanceTimerHandle;
 
-		// Token: 0x040253E4 RID: 152548
+		// Token: 0x0402004B RID: 131147
 		[Nullable(new byte[]
 		{
 			2,

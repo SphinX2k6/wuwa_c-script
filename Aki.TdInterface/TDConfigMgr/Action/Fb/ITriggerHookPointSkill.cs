@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026F2 RID: 9970
+	// Token: 0x020029B8 RID: 10680
 	public class ITriggerHookPointSkill : IExecClientBattleActionType
 	{
-		// Token: 0x0600DEA2 RID: 56994 RVA: 0x002106C8 File Offset: 0x0020E8C8
-		[NullableContext(1)]
+		// Token: 0x0600EC89 RID: 60553 RVA: 0x0022CFFC File Offset: 0x0022B1FC
 		public static ITriggerHookPointSkill Create(ITriggerHookPointSkill? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004280 RID: 17024
-		// (get) Token: 0x0600DEA3 RID: 56995 RVA: 0x002106E7 File Offset: 0x0020E8E7
+		// Token: 0x170045C7 RID: 17863
+		// (get) Token: 0x0600EC8A RID: 60554 RVA: 0x0022D01B File Offset: 0x0022B21B
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -31,8 +29,22 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004281 RID: 17025
-		// (get) Token: 0x0600DEA4 RID: 56996 RVA: 0x002106F4 File Offset: 0x0020E8F4
+		// Token: 0x170045C8 RID: 17864
+		// (get) Token: 0x0600EC8B RID: 60555 RVA: 0x0022D028 File Offset: 0x0022B228
+		public virtual int? AssistCharacterId
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 1) == 0)
+				{
+					return null;
+				}
+				return new int?(this.Instance.AssistCharacterId);
+			}
+		}
+
+		// Token: 0x170045C9 RID: 17865
+		// (get) Token: 0x0600EC8C RID: 60556 RVA: 0x0022D05E File Offset: 0x0022B25E
 		public virtual int HookEntityId
 		{
 			get
@@ -41,13 +53,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004282 RID: 17026
-		// (get) Token: 0x0600DEA5 RID: 56997 RVA: 0x00210704 File Offset: 0x0020E904
+		// Token: 0x170045CA RID: 17866
+		// (get) Token: 0x0600EC8D RID: 60557 RVA: 0x0022D06C File Offset: 0x0022B26C
 		public virtual EHookTriggerType? SpecTriggerType
 		{
 			get
 			{
-				if ((this.Instance.NullMask & 1) == 0)
+				if ((this.Instance.NullMask & 2) == 0)
 				{
 					return null;
 				}
@@ -55,7 +67,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B96 RID: 31638
+		// Token: 0x0400823A RID: 33338
 		private ITriggerHookPointSkill Instance;
 	}
 }

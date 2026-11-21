@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200774A RID: 30538
+	// Token: 0x02007F73 RID: 32627
 	public class TPerformerAiMoveToConfigUnion
 	{
-		// Token: 0x1700E675 RID: 58997
-		// (get) Token: 0x060377B0 RID: 227248 RVA: 0x00782986 File Offset: 0x00780B86
-		// (set) Token: 0x060377B1 RID: 227249 RVA: 0x0078298E File Offset: 0x00780B8E
+		// Token: 0x1700F2C5 RID: 62149
+		// (get) Token: 0x0603ACED RID: 240877 RVA: 0x007E795A File Offset: 0x007E5B5A
+		// (set) Token: 0x0603ACEE RID: 240878 RVA: 0x007E7962 File Offset: 0x007E5B62
 		public TPerformerAiMoveToConfig Type { get; set; }
 
-		// Token: 0x1700E676 RID: 58998
-		// (get) Token: 0x060377B2 RID: 227250 RVA: 0x00782997 File Offset: 0x00780B97
-		// (set) Token: 0x060377B3 RID: 227251 RVA: 0x0078299F File Offset: 0x00780B9F
+		// Token: 0x1700F2C6 RID: 62150
+		// (get) Token: 0x0603ACEF RID: 240879 RVA: 0x007E796B File Offset: 0x007E5B6B
+		// (set) Token: 0x0603ACF0 RID: 240880 RVA: 0x007E7973 File Offset: 0x007E5B73
 		public object Value { get; set; }
 
-		// Token: 0x060377B4 RID: 227252 RVA: 0x007829A8 File Offset: 0x00780BA8
+		// Token: 0x0603ACF1 RID: 240881 RVA: 0x007E797C File Offset: 0x007E5B7C
 		public TPerformerAiMoveToConfigUnion()
 		{
 			this.Type = TPerformerAiMoveToConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060377B5 RID: 227253 RVA: 0x007829BE File Offset: 0x00780BBE
+		// Token: 0x0603ACF2 RID: 240882 RVA: 0x007E7992 File Offset: 0x007E5B92
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060377B6 RID: 227254 RVA: 0x007829D0 File Offset: 0x00780BD0
+		// Token: 0x0603ACF3 RID: 240883 RVA: 0x007E79A4 File Offset: 0x007E5BA4
 		public IPerformerAiMoveToEntityT AsIPerformerAiMoveToEntity()
 		{
 			return this.As<IPerformerAiMoveToEntityT>();
 		}
 
-		// Token: 0x060377B7 RID: 227255 RVA: 0x007829D8 File Offset: 0x00780BD8
+		// Token: 0x0603ACF4 RID: 240884 RVA: 0x007E79AC File Offset: 0x007E5BAC
 		public static TPerformerAiMoveToConfigUnion FromIPerformerAiMoveToEntity(IPerformerAiMoveToEntityT _iperformeraimovetoentity)
 		{
 			return new TPerformerAiMoveToConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377B8 RID: 227256 RVA: 0x007829ED File Offset: 0x00780BED
+		// Token: 0x0603ACF5 RID: 240885 RVA: 0x007E79C1 File Offset: 0x007E5BC1
 		public IPerformerAiMoveToPlayerT AsIPerformerAiMoveToPlayer()
 		{
 			return this.As<IPerformerAiMoveToPlayerT>();
 		}
 
-		// Token: 0x060377B9 RID: 227257 RVA: 0x007829F5 File Offset: 0x00780BF5
+		// Token: 0x0603ACF6 RID: 240886 RVA: 0x007E79C9 File Offset: 0x007E5BC9
 		public static TPerformerAiMoveToConfigUnion FromIPerformerAiMoveToPlayer(IPerformerAiMoveToPlayerT _iperformeraimovetoplayer)
 		{
 			return new TPerformerAiMoveToConfigUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377BA RID: 227258 RVA: 0x00782A0A File Offset: 0x00780C0A
+		// Token: 0x0603ACF7 RID: 240887 RVA: 0x007E79DE File Offset: 0x007E5BDE
 		public IPerformerAiMoveToPositionT AsIPerformerAiMoveToPosition()
 		{
 			return this.As<IPerformerAiMoveToPositionT>();
 		}
 
-		// Token: 0x060377BB RID: 227259 RVA: 0x00782A12 File Offset: 0x00780C12
+		// Token: 0x0603ACF8 RID: 240888 RVA: 0x007E79E6 File Offset: 0x007E5BE6
 		public static TPerformerAiMoveToConfigUnion FromIPerformerAiMoveToPosition(IPerformerAiMoveToPositionT _iperformeraimovetoposition)
 		{
 			return new TPerformerAiMoveToConfigUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377BC RID: 227260 RVA: 0x00782A28 File Offset: 0x00780C28
+		// Token: 0x0603ACF9 RID: 240889 RVA: 0x007E79FC File Offset: 0x007E5BFC
 		public static int Pack(FlatBufferBuilder builder, TPerformerAiMoveToConfigUnion _o)
 		{
 			switch (_o.Type)

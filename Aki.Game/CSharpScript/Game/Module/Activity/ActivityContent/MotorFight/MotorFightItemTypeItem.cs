@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200641F RID: 25631
+	// Token: 0x0200539D RID: 21405
 	public class MotorFightItemTypeItem : SyncGridProxyAbstract<MotorFightItemType>
 	{
-		// Token: 0x06040744 RID: 264004 RVA: 0x00F98B40 File Offset: 0x00F96D40
+		// Token: 0x06035405 RID: 218117 RVA: 0x00EDFAE0 File Offset: 0x00EDDCE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040745 RID: 264005 RVA: 0x00F98BCC File Offset: 0x00F96DCC
+		// Token: 0x06035406 RID: 218118 RVA: 0x00EDFB6C File Offset: 0x00EDDD6C
 		public override void Refresh(MotorFightItemType data)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.Name, Array.Empty<object>());
@@ -41,20 +41,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}));
 		}
 
-		// Token: 0x04021829 RID: 137257
+		// Token: 0x0401C158 RID: 115032
 		[Nullable(1)]
 		public Func<int, Tuple<int, int>> GetUnlockNum = (int type) => new Tuple<int, int>(0, 0);
 
-		// Token: 0x0200C64B RID: 50763
+		// Token: 0x0200B032 RID: 45106
 		private class EComponents
 		{
-			// Token: 0x0403BDDC RID: 245212
+			// Token: 0x04036739 RID: 223033
 			public const int TextTypeName = 0;
 
-			// Token: 0x0403BDDD RID: 245213
+			// Token: 0x0403673A RID: 223034
 			public const int SpriteIcon = 1;
 
-			// Token: 0x0403BDDE RID: 245214
+			// Token: 0x0403673B RID: 223035
 			public const int TextUnlockNum = 2;
 		}
 	}

@@ -13,10 +13,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028B9 RID: 10425
+// Token: 0x02001E34 RID: 7732
 public class RoleSkillInputPanel : UiPanelBase
 {
-	// Token: 0x060157F7 RID: 88055 RVA: 0x0056BE60 File Offset: 0x0056A060
+	// Token: 0x060131F7 RID: 78327 RVA: 0x00596CA8 File Offset: 0x00594EA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -61,21 +61,21 @@ public class RoleSkillInputPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060157F8 RID: 88056 RVA: 0x0056C099 File Offset: 0x0056A299
+	// Token: 0x060131F8 RID: 78328 RVA: 0x00596EE1 File Offset: 0x005950E1
 	protected override void OnStart()
 	{
 		this.FeatureDescLayout = new GenericLayout<RoleSkillInputDescItem, string>(base.GetVerticalLayout(1), new Func<RoleSkillInputDescItem>(this.InitSkillDescItem), null, false, true);
 		this.BaseEmptyHeight = base.GetItem(13).Height;
 	}
 
-	// Token: 0x060157F9 RID: 88057 RVA: 0x0056C0CF File Offset: 0x0056A2CF
+	// Token: 0x060131F9 RID: 78329 RVA: 0x00596F17 File Offset: 0x00595117
 	[NullableContext(1)]
 	private RoleSkillInputDescItem InitSkillDescItem()
 	{
 		return new RoleSkillInputDescItem();
 	}
 
-	// Token: 0x060157FA RID: 88058 RVA: 0x0056C0D8 File Offset: 0x0056A2D8
+	// Token: 0x060131FA RID: 78330 RVA: 0x00596F20 File Offset: 0x00595120
 	private void OnClickTrailBtn()
 	{
 		if (GameModeController.Instance.IsInInstance())
@@ -132,7 +132,7 @@ public class RoleSkillInputPanel : UiPanelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060157FB RID: 88059 RVA: 0x0056C1EC File Offset: 0x0056A3EC
+	// Token: 0x060131FB RID: 78331 RVA: 0x00597034 File Offset: 0x00595234
 	public void Refresh(int roleId, bool isTrial, bool showSkipButton = false)
 	{
 		RoleSkillInputPanel.<>c__DisplayClass9_0 CS$<>8__locals1 = new RoleSkillInputPanel.<>c__DisplayClass9_0();
@@ -152,7 +152,7 @@ public class RoleSkillInputPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x060157FC RID: 88060 RVA: 0x0056C23C File Offset: 0x0056A43C
+	// Token: 0x060131FC RID: 78332 RVA: 0x00597084 File Offset: 0x00595284
 	public UniTask RefreshUiAsync(int roleId, bool isTrial, bool showSkipButton = false)
 	{
 		RoleSkillInputPanel.<RefreshUiAsync>d__10 <RefreshUiAsync>d__;
@@ -166,21 +166,21 @@ public class RoleSkillInputPanel : UiPanelBase
 		return <RefreshUiAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060157FD RID: 88061 RVA: 0x0056C297 File Offset: 0x0056A497
+	// Token: 0x060131FD RID: 78333 RVA: 0x005970DF File Offset: 0x005952DF
 	public void SetFeatureActive(bool isShow)
 	{
 		base.GetItem(0).SetUIActive(isShow);
 		base.GetItem(10).SetUIActive(isShow);
 	}
 
-	// Token: 0x060157FE RID: 88062 RVA: 0x0056C2B4 File Offset: 0x0056A4B4
+	// Token: 0x060131FE RID: 78334 RVA: 0x005970FC File Offset: 0x005952FC
 	public void SetTrickActive(bool isShow)
 	{
 		base.GetItem(12).SetUIActive(isShow);
 		base.GetVerticalLayout(2).RootUIComp.Get().SetUIActive(isShow);
 	}
 
-	// Token: 0x060157FF RID: 88063 RVA: 0x0056C2E9 File Offset: 0x0056A4E9
+	// Token: 0x060131FF RID: 78335 RVA: 0x00597131 File Offset: 0x00595331
 	public void SetEmptyActive(bool isShow)
 	{
 		if (isShow)
@@ -203,13 +203,13 @@ public class RoleSkillInputPanel : UiPanelBase
 		base.GetItem(13).SetUIActive(isShow);
 	}
 
-	// Token: 0x0400A039 RID: 41017
+	// Token: 0x0400A422 RID: 42018
 	private int RoleId;
 
-	// Token: 0x0400A03A RID: 41018
+	// Token: 0x0400A423 RID: 42019
 	private float BaseEmptyHeight;
 
-	// Token: 0x0400A03B RID: 41019
+	// Token: 0x0400A424 RID: 42020
 	[Nullable(new byte[]
 	{
 		2,
@@ -218,39 +218,39 @@ public class RoleSkillInputPanel : UiPanelBase
 	})]
 	private GenericLayout<RoleSkillInputDescItem, string> FeatureDescLayout;
 
-	// Token: 0x0400A03C RID: 41020
+	// Token: 0x0400A425 RID: 42021
 	private bool HasRefresh;
 
-	// Token: 0x02008EB9 RID: 36537
+	// Token: 0x02008100 RID: 33024
 	private enum EComponent
 	{
-		// Token: 0x0402E474 RID: 189556
+		// Token: 0x04029B71 RID: 170865
 		FeatureTitleItem,
-		// Token: 0x0402E475 RID: 189557
+		// Token: 0x04029B72 RID: 170866
 		FeatureDescLayout,
-		// Token: 0x0402E476 RID: 189558
+		// Token: 0x04029B73 RID: 170867
 		TrickLayout,
-		// Token: 0x0402E477 RID: 189559
+		// Token: 0x04029B74 RID: 170868
 		TrickSmallTitleItem,
-		// Token: 0x0402E478 RID: 189560
+		// Token: 0x04029B75 RID: 170869
 		TrickSkillTexItem,
-		// Token: 0x0402E479 RID: 189561
+		// Token: 0x04029B76 RID: 170870
 		TrickSkillDescItem,
-		// Token: 0x0402E47A RID: 189562
+		// Token: 0x04029B77 RID: 170871
 		TrickSkillInputItem,
-		// Token: 0x0402E47B RID: 189563
+		// Token: 0x04029B78 RID: 170872
 		TrickLineItem,
-		// Token: 0x0402E47C RID: 189564
+		// Token: 0x04029B79 RID: 170873
 		TrailItem,
-		// Token: 0x0402E47D RID: 189565
+		// Token: 0x04029B7A RID: 170874
 		TrailBtn,
-		// Token: 0x0402E47E RID: 189566
+		// Token: 0x04029B7B RID: 170875
 		FeatureDescItem,
-		// Token: 0x0402E47F RID: 189567
+		// Token: 0x04029B7C RID: 170876
 		TrickItem,
-		// Token: 0x0402E480 RID: 189568
+		// Token: 0x04029B7D RID: 170877
 		TrickTitleItem,
-		// Token: 0x0402E481 RID: 189569
+		// Token: 0x04029B7E RID: 170878
 		EmptyItem
 	}
 }

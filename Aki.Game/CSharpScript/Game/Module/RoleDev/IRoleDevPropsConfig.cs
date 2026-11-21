@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CA8 RID: 19624
+	// Token: 0x02003C59 RID: 15449
 	public interface IRoleDevPropsConfig
 	{
-		// Token: 0x17007D0D RID: 32013
-		// (get) Token: 0x06032B52 RID: 207698
-		// (set) Token: 0x06032B53 RID: 207699
+		// Token: 0x170050B7 RID: 20663
+		// (get) Token: 0x06027906 RID: 162054
+		// (set) Token: 0x06027907 RID: 162055
 		int Id { get; set; }
 
-		// Token: 0x17007D0E RID: 32014
-		// (get) Token: 0x06032B54 RID: 207700
-		// (set) Token: 0x06032B55 RID: 207701
+		// Token: 0x170050B8 RID: 20664
+		// (get) Token: 0x06027908 RID: 162056
+		// (set) Token: 0x06027909 RID: 162057
 		long ProspectBeginTime { get; set; }
 
-		// Token: 0x17007D0F RID: 32015
-		// (get) Token: 0x06032B56 RID: 207702
-		// (set) Token: 0x06032B57 RID: 207703
+		// Token: 0x170050B9 RID: 20665
+		// (get) Token: 0x0602790A RID: 162058
+		// (set) Token: 0x0602790B RID: 162059
 		long ProspectEndTime { get; set; }
 	}
 }

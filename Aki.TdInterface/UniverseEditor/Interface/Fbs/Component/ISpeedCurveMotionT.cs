@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005978 RID: 22904
+	// Token: 0x02005F85 RID: 24453
 	public class ISpeedCurveMotionT
 	{
-		// Token: 0x1700ABDB RID: 43995
-		// (get) Token: 0x06026C4F RID: 158799 RVA: 0x005563A1 File Offset: 0x005545A1
-		// (set) Token: 0x06026C50 RID: 158800 RVA: 0x005563A9 File Offset: 0x005545A9
+		// Token: 0x1700B50F RID: 46351
+		// (get) Token: 0x060291B9 RID: 168377 RVA: 0x0059D00D File Offset: 0x0059B20D
+		// (set) Token: 0x060291BA RID: 168378 RVA: 0x0059D015 File Offset: 0x0059B215
 		public string SpeedCurve { get; set; }
 
-		// Token: 0x06026C51 RID: 158801 RVA: 0x005563B2 File Offset: 0x005545B2
+		// Token: 0x060291BB RID: 168379 RVA: 0x0059D01E File Offset: 0x0059B21E
 		public ISpeedCurveMotionT()
 		{
 			this.SpeedCurve = null;

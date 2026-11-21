@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200196A RID: 6506
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AF5 RID: 6901
 	public class IDartInteractTypeBase
 	{
-		// Token: 0x06008B5F RID: 35679 RVA: 0x00147BC0 File Offset: 0x00145DC0
+		// Token: 0x06009295 RID: 37525 RVA: 0x001575FC File Offset: 0x001557FC
 		private IDartInteractTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008B60 RID: 35680 RVA: 0x00147BF8 File Offset: 0x00145DF8
+		// Token: 0x06009296 RID: 37526 RVA: 0x00157634 File Offset: 0x00155834
 		public static IDartInteractTypeBase Create([Nullable(2)] IDartInteractTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B61 RID: 35681 RVA: 0x00147C0B File Offset: 0x00145E0B
+		// Token: 0x06009297 RID: 37527 RVA: 0x00157647 File Offset: 0x00155847
 		public static IDartInteractTypeBase CreateFromSetValue([Nullable(2)] IDartInteractTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B62 RID: 35682 RVA: 0x00147C1E File Offset: 0x00145E1E
+		// Token: 0x06009298 RID: 37528 RVA: 0x0015765A File Offset: 0x0015585A
 		public IDartInteractTypeBase_SetValue ToSetValue()
 		{
 			return new IDartInteractTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CE5 RID: 11493
-		// (get) Token: 0x06008B63 RID: 35683 RVA: 0x00147C31 File Offset: 0x00145E31
-		// (set) Token: 0x06008B64 RID: 35684 RVA: 0x00147C5C File Offset: 0x00145E5C
+		// Token: 0x17002EE7 RID: 12007
+		// (get) Token: 0x06009299 RID: 37529 RVA: 0x0015766D File Offset: 0x0015586D
+		// (set) Token: 0x0600929A RID: 37530 RVA: 0x00157698 File Offset: 0x00155898
 		public virtual EDartInteractType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056F6 RID: 22262
+		// Token: 0x04005B4A RID: 23370
 		[Nullable(2)]
 		protected IDartInteractTypeBase FbInstance;
 
-		// Token: 0x040056F7 RID: 22263
+		// Token: 0x04005B4B RID: 23371
 		[Nullable(2)]
 		protected IDartInteractTypeBase_SetValue PocoInterface;
 	}

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060D7 RID: 24791
+	// Token: 0x02005055 RID: 20565
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 	})]
 	internal class TowerDefenseRoleDescItem : GridProxyAbstract<ITowerDefenseRoleDescData>
 	{
-		// Token: 0x0603EAAC RID: 256684 RVA: 0x00F22A90 File Offset: 0x00F20C90
+		// Token: 0x06033770 RID: 210800 RVA: 0x00E69858 File Offset: 0x00E67A58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EAAD RID: 256685 RVA: 0x00F22B1C File Offset: 0x00F20D1C
+		// Token: 0x06033771 RID: 210801 RVA: 0x00E698E4 File Offset: 0x00E67AE4
 		[NullableContext(1)]
 		public override void Refresh(ITowerDefenseRoleDescData data, bool isSelected, int gridIndex)
 		{
@@ -65,16 +65,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0200C32C RID: 49964
+		// Token: 0x0200AD17 RID: 44311
 		private class EDescItem
 		{
-			// Token: 0x0403AEDC RID: 241372
+			// Token: 0x04035844 RID: 219204
 			public const int Bg = 0;
 
-			// Token: 0x0403AEDD RID: 241373
+			// Token: 0x04035845 RID: 219205
 			public const int Name = 1;
 
-			// Token: 0x0403AEDE RID: 241374
+			// Token: 0x04035846 RID: 219206
 			public const int NumText = 2;
 		}
 	}

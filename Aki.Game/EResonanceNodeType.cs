@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020028D9 RID: 10457
+// Token: 0x02001E54 RID: 7764
 public enum EResonanceNodeType
 {
-	// Token: 0x0400A0B0 RID: 41136
+	// Token: 0x0400A49A RID: 42138
 	Small,
-	// Token: 0x0400A0B1 RID: 41137
+	// Token: 0x0400A49B RID: 42139
 	Big
 }

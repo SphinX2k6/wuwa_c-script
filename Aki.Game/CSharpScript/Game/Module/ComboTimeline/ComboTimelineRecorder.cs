@@ -5,30 +5,30 @@ using CSharpScript.Game.Module.ComboTimeline.Entry;
 
 namespace CSharpScript.Game.Module.ComboTimeline
 {
-	// Token: 0x02005B92 RID: 23442
+	// Token: 0x02004B72 RID: 19314
 	public class ComboTimelineRecorder : IStaticVariableResetter
 	{
-		// Token: 0x0603B4D9 RID: 242905 RVA: 0x00E21F71 File Offset: 0x00E20171
+		// Token: 0x06030426 RID: 197670 RVA: 0x00D724C1 File Offset: 0x00D706C1
 		static ComboTimelineRecorder()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ComboTimelineRecorder.CreateStaticDefaultValue), new Action(ComboTimelineRecorder.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603B4DA RID: 242906 RVA: 0x00E21F90 File Offset: 0x00E20190
+		// Token: 0x06030427 RID: 197671 RVA: 0x00D724E0 File Offset: 0x00D706E0
 		public static void CreateStaticDefaultValue()
 		{
 			ComboTimelineRecorder.IsRecording = false;
 			ComboTimelineRecorder.Timeline = null;
 		}
 
-		// Token: 0x0603B4DB RID: 242907 RVA: 0x00E21F9E File Offset: 0x00E2019E
+		// Token: 0x06030428 RID: 197672 RVA: 0x00D724EE File Offset: 0x00D706EE
 		public static void ResetStaticDefaultValue()
 		{
 			ComboTimelineRecorder.IsRecording = false;
 			ComboTimelineRecorder.Timeline = null;
 		}
 
-		// Token: 0x0603B4DC RID: 242908 RVA: 0x00E21FAC File Offset: 0x00E201AC
+		// Token: 0x06030429 RID: 197673 RVA: 0x00D724FC File Offset: 0x00D706FC
 		[NullableContext(1)]
 		public static bool Start(string fileId)
 		{
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.ComboTimeline
 			return true;
 		}
 
-		// Token: 0x0603B4DD RID: 242909 RVA: 0x00E220B0 File Offset: 0x00E202B0
+		// Token: 0x0603042A RID: 197674 RVA: 0x00D72600 File Offset: 0x00D70800
 		public unsafe static bool Stop()
 		{
 			if (!ComboTimelineRecorder.IsRecording || ComboTimelineRecorder.Timeline == null)
@@ -97,10 +97,10 @@ namespace CSharpScript.Game.Module.ComboTimeline
 			return flag;
 		}
 
-		// Token: 0x0401EE92 RID: 126610
+		// Token: 0x04019943 RID: 104771
 		private static bool IsRecording;
 
-		// Token: 0x0401EE93 RID: 126611
+		// Token: 0x04019944 RID: 104772
 		[Nullable(2)]
 		private static ComboTimeline Timeline;
 	}

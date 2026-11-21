@@ -8,13 +8,13 @@ namespace Aki.Config
 	// Token: 0x02000009 RID: 9
 	public class ConfigAbnormalDamageConfigByLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000036 RID: 54 RVA: 0x0005B416 File Offset: 0x00059616
+		// Token: 0x06000036 RID: 54 RVA: 0x0005ECB6 File Offset: 0x0005CEB6
 		static ConfigAbnormalDamageConfigByLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAbnormalDamageConfigByLevel.CreateStaticDefaultValue), new Action(ConfigAbnormalDamageConfigByLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000037 RID: 55 RVA: 0x0005B438 File Offset: 0x00059638
+		// Token: 0x06000037 RID: 55 RVA: 0x0005ECD8 File Offset: 0x0005CED8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAbnormalDamageConfigByLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000038 RID: 56 RVA: 0x0005B4B7 File Offset: 0x000596B7
+		// Token: 0x06000038 RID: 56 RVA: 0x0005ED57 File Offset: 0x0005CF57
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAbnormalDamageConfigByLevel.LogPair = null;
 			ConfigAbnormalDamageConfigByLevel.HandleId = 0;
 		}
 
-		// Token: 0x06000039 RID: 57 RVA: 0x0005B4C5 File Offset: 0x000596C5
+		// Token: 0x06000039 RID: 57 RVA: 0x0005ED65 File Offset: 0x0005CF65
 		public static void Init()
 		{
 			ConfigAbnormalDamageConfigByLevel.HandleId = ConfigCommon.InitDataStatement(ConfigAbnormalDamageConfigByLevel.HandleId, "db_abnormaldamage.db", "select BinData from `AbnormalDamageConfig` where Level=?");
 		}
 
-		// Token: 0x0600003A RID: 58 RVA: 0x0005B4E0 File Offset: 0x000596E0
+		// Token: 0x0600003A RID: 58 RVA: 0x0005ED80 File Offset: 0x0005CF80
 		public static AbnormalDamageConfig? GetConfig(int p0Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAbnormalDamageConfigByLevel.HandleId, ConfigAbnormalDamageConfigByLevel.LogPair))

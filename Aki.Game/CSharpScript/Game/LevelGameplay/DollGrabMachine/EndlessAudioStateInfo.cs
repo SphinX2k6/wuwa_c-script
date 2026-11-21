@@ -4,12 +4,12 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006ECA RID: 28362
+	// Token: 0x0200604A RID: 24650
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EndlessAudioStateInfo
 	{
-		// Token: 0x060450E5 RID: 282853 RVA: 0x0110F0AC File Offset: 0x0110D2AC
+		// Token: 0x0603B286 RID: 242310 RVA: 0x010B9188 File Offset: 0x010B7388
 		[NullableContext(1)]
 		public EndlessAudioStateInfo(float duration, IDollGrabStageAudioState audioState)
 		{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.AudioState = audioState;
 		}
 
-		// Token: 0x060450E6 RID: 282854 RVA: 0x0110F0C4 File Offset: 0x0110D2C4
+		// Token: 0x0603B287 RID: 242311 RVA: 0x010B91A0 File Offset: 0x010B73A0
 		public void StartAudio()
 		{
 			if (this.Duration != 0f)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			AudioSystem.Instance.SetState(this.AudioState.Group, this.AudioState.State, true);
 		}
 
-		// Token: 0x060450E7 RID: 282855 RVA: 0x0110F130 File Offset: 0x0110D330
+		// Token: 0x0603B288 RID: 242312 RVA: 0x010B920C File Offset: 0x010B740C
 		public void StopAudio()
 		{
 			if (this.AudioTimerHandle != null)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x060450E8 RID: 282856 RVA: 0x0110F152 File Offset: 0x0110D352
+		// Token: 0x0603B289 RID: 242313 RVA: 0x010B922E File Offset: 0x010B742E
 		public void PauseAudio()
 		{
 			if (this.AudioTimerHandle != null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x060450E9 RID: 282857 RVA: 0x0110F16E File Offset: 0x0110D36E
+		// Token: 0x0603B28A RID: 242314 RVA: 0x010B924A File Offset: 0x010B744A
 		public void ResumeAudio()
 		{
 			if (this.AudioTimerHandle != null)
@@ -60,13 +60,13 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x04023F65 RID: 147301
+		// Token: 0x0401F218 RID: 127512
 		public float Duration;
 
-		// Token: 0x04023F66 RID: 147302
+		// Token: 0x0401F219 RID: 127513
 		public IDollGrabStageAudioState AudioState;
 
-		// Token: 0x04023F67 RID: 147303
+		// Token: 0x0401F21A RID: 127514
 		public TimerHandle AudioTimerHandle;
 	}
 }

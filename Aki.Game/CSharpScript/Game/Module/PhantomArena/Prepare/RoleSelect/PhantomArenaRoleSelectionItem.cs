@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.RoleUi;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 {
-	// Token: 0x02005152 RID: 20818
+	// Token: 0x02004122 RID: 16674
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 	})]
 	public class PhantomArenaRoleSelectionItem : LoopScrollSmallItemGrid<IPhantomArenaRoleSelectionItemData>
 	{
-		// Token: 0x0603538B RID: 217995 RVA: 0x00C99A20 File Offset: 0x00C97C20
+		// Token: 0x0602A287 RID: 172679 RVA: 0x00BE6F20 File Offset: 0x00BE5120
 		protected override void OnRefresh(IPhantomArenaRoleSelectionItemData data, bool isSelected, int gridIndex)
 		{
 			int roleConfigId = PhantomArenaConfig.Instance.GetPhantomBattleCardRole(data.CardRoleId).RoleConfigId;
@@ -32,19 +32,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			this.SetSelected(isSelected, false);
 		}
 
-		// Token: 0x0603538C RID: 217996 RVA: 0x00C99ADF File Offset: 0x00C97CDF
+		// Token: 0x0602A288 RID: 172680 RVA: 0x00BE6FDF File Offset: 0x00BE51DF
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, true);
 		}
 
-		// Token: 0x0603538D RID: 217997 RVA: 0x00C99AE9 File Offset: 0x00C97CE9
+		// Token: 0x0602A289 RID: 172681 RVA: 0x00BE6FE9 File Offset: 0x00BE51E9
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, true);
 		}
 
-		// Token: 0x0603538E RID: 217998 RVA: 0x00C99AF3 File Offset: 0x00C97CF3
+		// Token: 0x0602A28A RID: 172682 RVA: 0x00BE6FF3 File Offset: 0x00BE51F3
 		[return: Nullable(2)]
 		public override object GetKey(IPhantomArenaRoleSelectionItemData data, int gridIndex)
 		{

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200250E RID: 9486
+	// Token: 0x020027B4 RID: 10164
 	public class ITalkOptionConditionSolarSchool : ITalkOptionConditionSystemConfigBase
 	{
-		// Token: 0x0600D39A RID: 54170 RVA: 0x001F5B68 File Offset: 0x001F3D68
-		[NullableContext(1)]
+		// Token: 0x0600E0F6 RID: 57590 RVA: 0x00211560 File Offset: 0x0020F760
 		public static ITalkOptionConditionSolarSchool Create(ITalkOptionConditionSolarSchool? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B40 RID: 15168
-		// (get) Token: 0x0600D39B RID: 54171 RVA: 0x001F5B87 File Offset: 0x001F3D87
+		// Token: 0x17003E3C RID: 15932
+		// (get) Token: 0x0600E0F7 RID: 57591 RVA: 0x0021157F File Offset: 0x0020F77F
 		public override ETalkOptionConditionSystem Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B41 RID: 15169
-		// (get) Token: 0x0600D39C RID: 54172 RVA: 0x001F5B94 File Offset: 0x001F3D94
+		// Token: 0x17003E3D RID: 15933
+		// (get) Token: 0x0600E0F8 RID: 57592 RVA: 0x0021158C File Offset: 0x0020F78C
 		public virtual int ConditionGroupId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073FE RID: 29694
+		// Token: 0x04007A50 RID: 31312
 		private ITalkOptionConditionSolarSchool Instance;
 	}
 }

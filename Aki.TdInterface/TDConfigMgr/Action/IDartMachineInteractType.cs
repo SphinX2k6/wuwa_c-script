@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200196C RID: 6508
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AF7 RID: 6903
 	public class IDartMachineInteractType : IDartInteractTypeBase
 	{
-		// Token: 0x06008B67 RID: 35687 RVA: 0x00147C7C File Offset: 0x00145E7C
+		// Token: 0x0600929D RID: 37533 RVA: 0x001576B8 File Offset: 0x001558B8
 		private IDartMachineInteractType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008B68 RID: 35688 RVA: 0x00147CB4 File Offset: 0x00145EB4
+		// Token: 0x0600929E RID: 37534 RVA: 0x001576F0 File Offset: 0x001558F0
 		public static IDartMachineInteractType Create([Nullable(2)] IDartMachineInteractType instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B69 RID: 35689 RVA: 0x00147CC7 File Offset: 0x00145EC7
+		// Token: 0x0600929F RID: 37535 RVA: 0x00157703 File Offset: 0x00155903
 		public static IDartMachineInteractType CreateFromSetValue([Nullable(2)] IDartMachineInteractType_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B6A RID: 35690 RVA: 0x00147CDA File Offset: 0x00145EDA
+		// Token: 0x060092A0 RID: 37536 RVA: 0x00157716 File Offset: 0x00155916
 		public new IDartMachineInteractType_SetValue ToSetValue()
 		{
 			return new IDartMachineInteractType_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CE6 RID: 11494
-		// (get) Token: 0x06008B6B RID: 35691 RVA: 0x00147D05 File Offset: 0x00145F05
-		// (set) Token: 0x06008B6C RID: 35692 RVA: 0x00147D30 File Offset: 0x00145F30
+		// Token: 0x17002EE8 RID: 12008
+		// (get) Token: 0x060092A1 RID: 37537 RVA: 0x00157741 File Offset: 0x00155941
+		// (set) Token: 0x060092A2 RID: 37538 RVA: 0x0015776C File Offset: 0x0015596C
 		public override EDartInteractType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CE7 RID: 11495
-		// (get) Token: 0x06008B6D RID: 35693 RVA: 0x00147D3E File Offset: 0x00145F3E
-		// (set) Token: 0x06008B6E RID: 35694 RVA: 0x00147D65 File Offset: 0x00145F65
+		// Token: 0x17002EE9 RID: 12009
+		// (get) Token: 0x060092A3 RID: 37539 RVA: 0x0015777A File Offset: 0x0015597A
+		// (set) Token: 0x060092A4 RID: 37540 RVA: 0x001577A1 File Offset: 0x001559A1
 		public virtual List<int> CanInviteCompetitorIds
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CE8 RID: 11496
-		// (get) Token: 0x06008B6F RID: 35695 RVA: 0x00147D74 File Offset: 0x00145F74
-		// (set) Token: 0x06008B70 RID: 35696 RVA: 0x00147DAE File Offset: 0x00145FAE
+		// Token: 0x17002EEA RID: 12010
+		// (get) Token: 0x060092A5 RID: 37541 RVA: 0x001577B0 File Offset: 0x001559B0
+		// (set) Token: 0x060092A6 RID: 37542 RVA: 0x001577EA File Offset: 0x001559EA
 		public virtual int? ChampionId
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056F9 RID: 22265
+		// Token: 0x04005B4D RID: 23373
 		[Nullable(2)]
 		protected new IDartMachineInteractType FbInstance;
 
-		// Token: 0x040056FA RID: 22266
+		// Token: 0x04005B4E RID: 23374
 		[Nullable(2)]
 		protected new IDartMachineInteractType_SetValue PocoInterface;
 	}

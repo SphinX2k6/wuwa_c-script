@@ -15,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068A8 RID: 26792
+	// Token: 0x020057F8 RID: 22520
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AdamSmasherSelectView : UiViewBase
 	{
-		// Token: 0x06042DAB RID: 273835 RVA: 0x01046A38 File Offset: 0x01044C38
+		// Token: 0x06037903 RID: 227587 RVA: 0x00F88048 File Offset: 0x00F86248
 		public AdamSmasherSelectView(UiViewInfo viewInfo)
 		{
 			FRotator frotator = new FRotator(0f, 0f, 0f);
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			base..ctor(viewInfo);
 		}
 
-		// Token: 0x06042DAC RID: 273836 RVA: 0x01046AE4 File Offset: 0x01044CE4
+		// Token: 0x06037904 RID: 227588 RVA: 0x00F880F4 File Offset: 0x00F862F4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042DAD RID: 273837 RVA: 0x01046C4C File Offset: 0x01044E4C
+		// Token: 0x06037905 RID: 227589 RVA: 0x00F8825C File Offset: 0x00F8645C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AdamSmasherSelectView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042DAE RID: 273838 RVA: 0x01046C90 File Offset: 0x01044E90
+		// Token: 0x06037906 RID: 227590 RVA: 0x00F882A0 File Offset: 0x00F864A0
 		protected override void OnStart()
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.MarkBossEntranceFirstClicked();
 		}
 
-		// Token: 0x06042DAF RID: 273839 RVA: 0x01046D8D File Offset: 0x01044F8D
+		// Token: 0x06037907 RID: 227591 RVA: 0x00F8839D File Offset: 0x00F8659D
 		private void MarkBossEntranceFirstClicked()
 		{
 			if (LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.CyberPunkBossEntranceFirstClicked, false))
@@ -99,26 +99,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, CyberPunkController.Instance.CurrentActivityId);
 		}
 
-		// Token: 0x06042DB0 RID: 273840 RVA: 0x01046DC3 File Offset: 0x01044FC3
+		// Token: 0x06037908 RID: 227592 RVA: 0x00F883D3 File Offset: 0x00F865D3
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 		}
 
-		// Token: 0x06042DB1 RID: 273841 RVA: 0x01046DE1 File Offset: 0x01044FE1
+		// Token: 0x06037909 RID: 227593 RVA: 0x00F883F1 File Offset: 0x00F865F1
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 		}
 
-		// Token: 0x06042DB2 RID: 273842 RVA: 0x01046DFF File Offset: 0x01044FFF
+		// Token: 0x0603790A RID: 227594 RVA: 0x00F8840F File Offset: 0x00F8660F
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearMaterialControllers();
 			this.ClearSceneEffects("[AdamSmasherSelectView.OnBeforeDestroy]");
 		}
 
-		// Token: 0x06042DB3 RID: 273843 RVA: 0x01046E14 File Offset: 0x01045014
+		// Token: 0x0603790B RID: 227595 RVA: 0x00F88424 File Offset: 0x00F86624
 		private void InitStageList()
 		{
 			CyberPunkConfig instance = CyberPunkConfig.Instance;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.SelectedStageId = num;
 		}
 
-		// Token: 0x06042DB4 RID: 273844 RVA: 0x01046EEC File Offset: 0x010450EC
+		// Token: 0x0603790C RID: 227596 RVA: 0x00F884FC File Offset: 0x00F866FC
 		protected override void OnHandleLoadScene()
 		{
 			if (!UiSceneManager.Instance.HasAdamSmasherSkeletalHandle())
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshStageScenePresentation().Forget();
 		}
 
-		// Token: 0x06042DB5 RID: 273845 RVA: 0x01046F48 File Offset: 0x01045148
+		// Token: 0x0603790D RID: 227597 RVA: 0x00F88558 File Offset: 0x00F86758
 		protected override void OnHandleReleaseScene()
 		{
 			this.ClearMaterialControllers();
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			UiSceneManager.Instance.DestroyAdamSmasherSkeletalHandle();
 		}
 
-		// Token: 0x06042DB6 RID: 273846 RVA: 0x01046F65 File Offset: 0x01045165
+		// Token: 0x0603790E RID: 227598 RVA: 0x00F88575 File Offset: 0x00F86775
 		private void RefreshView()
 		{
 			this.RefreshStageList();
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshRemainTime();
 		}
 
-		// Token: 0x06042DB7 RID: 273847 RVA: 0x01046F7C File Offset: 0x0104517C
+		// Token: 0x0603790F RID: 227599 RVA: 0x00F8858C File Offset: 0x00F8678C
 		private void RefreshStageList()
 		{
 			List<IAdamSmasherStageItemData> list = new List<IAdamSmasherStageItemData>();
@@ -198,13 +198,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}, false);
 		}
 
-		// Token: 0x06042DB8 RID: 273848 RVA: 0x01047034 File Offset: 0x01045234
+		// Token: 0x06037910 RID: 227600 RVA: 0x00F88644 File Offset: 0x00F86844
 		private void RefreshSelectedStage()
 		{
 			this.RefreshRightPanel();
 		}
 
-		// Token: 0x06042DB9 RID: 273849 RVA: 0x0104703C File Offset: 0x0104523C
+		// Token: 0x06037911 RID: 227601 RVA: 0x00F8864C File Offset: 0x00F8684C
 		private void RefreshRightPanel()
 		{
 			CyberPunkConfig instance = CyberPunkConfig.Instance;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshChallengeButtonState();
 		}
 
-		// Token: 0x06042DBA RID: 273850 RVA: 0x010471E4 File Offset: 0x010453E4
+		// Token: 0x06037912 RID: 227602 RVA: 0x00F887F4 File Offset: 0x00F869F4
 		private void RefreshRewardList()
 		{
 			List<TItem> selectedStageRewardPreview = AdamSmasherController.Instance.GetSelectedStageRewardPreview(this.SelectedStageId);
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042DBB RID: 273851 RVA: 0x0104721C File Offset: 0x0104541C
+		// Token: 0x06037913 RID: 227603 RVA: 0x00F8882C File Offset: 0x00F86A2C
 		private void RefreshChallengeButtonState()
 		{
 			bool flag = AdamSmasherController.Instance.IsStageUnlocked(this.SelectedStageId);
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			lockBtnItem.SetUiActive(!flag);
 		}
 
-		// Token: 0x06042DBC RID: 273852 RVA: 0x01047284 File Offset: 0x01045484
+		// Token: 0x06037914 RID: 227604 RVA: 0x00F88894 File Offset: 0x00F86A94
 		private void RefreshRemainTime()
 		{
 			CyberPunkController instance = CyberPunkController.Instance;
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042DBD RID: 273853 RVA: 0x010472C0 File Offset: 0x010454C0
+		// Token: 0x06037915 RID: 227605 RVA: 0x00F888D0 File Offset: 0x00F86AD0
 		private void RefreshAllStageToggleState()
 		{
 			GenericLayout<AdamSmasherStageItem, IAdamSmasherStageItemData> stageListLayout = this.StageListLayout;
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042DBE RID: 273854 RVA: 0x01047330 File Offset: 0x01045530
+		// Token: 0x06037916 RID: 227606 RVA: 0x00F88940 File Offset: 0x00F86B40
 		public void ChangeStageId(int stageId)
 		{
 			this.SelectedStageId = stageId;
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshStageScenePresentation().Forget();
 		}
 
-		// Token: 0x06042DBF RID: 273855 RVA: 0x01047350 File Offset: 0x01045550
+		// Token: 0x06037917 RID: 227607 RVA: 0x00F88960 File Offset: 0x00F86B60
 		private UniTask RefreshStageScenePresentation()
 		{
 			AdamSmasherSelectView.<RefreshStageScenePresentation>d__31 <RefreshStageScenePresentation>d__;
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <RefreshStageScenePresentation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042DC0 RID: 273856 RVA: 0x01047394 File Offset: 0x01045594
+		// Token: 0x06037918 RID: 227608 RVA: 0x00F889A4 File Offset: 0x00F86BA4
 		private EdgeRunnerLordGym? GetSelectedStageConfig()
 		{
 			CyberPunkConfig instance = CyberPunkConfig.Instance;
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return instance.GetStageConfig(this.SelectedStageId);
 		}
 
-		// Token: 0x06042DC1 RID: 273857 RVA: 0x010473C0 File Offset: 0x010455C0
+		// Token: 0x06037919 RID: 227609 RVA: 0x00F889D0 File Offset: 0x00F86BD0
 		private void RefreshSceneEffects(EdgeRunnerLordGym stageConfig)
 		{
 			string text = stageConfig.LordUISceneEffect ?? "";
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			sceneEffectHandleList.Add(instance.SpawnEffect(world, ftransformDouble, text, "AdamSmasherSceneEffect", null, EEffectType.UiScene3D, null, null, null, false, false));
 		}
 
-		// Token: 0x06042DC2 RID: 273858 RVA: 0x01047428 File Offset: 0x01045628
+		// Token: 0x0603791A RID: 227610 RVA: 0x00F88A38 File Offset: 0x00F86C38
 		private UniTask LoadStageModel(EdgeRunnerLordGym stageConfig)
 		{
 			AdamSmasherSelectView.<LoadStageModel>d__34 <LoadStageModel>d__;
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <LoadStageModel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042DC3 RID: 273859 RVA: 0x01047474 File Offset: 0x01045674
+		// Token: 0x0603791B RID: 227611 RVA: 0x00F88A84 File Offset: 0x00F86C84
 		private void ApplyModelTransform(EdgeRunnerLordGym stageConfig, UiModelActorComponent actorComponent)
 		{
 			float[] locationArray = stageConfig.GetLocationArray();
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			actorComponent.SetAllMeshComponentRelativeTransform(newTransform, false, ref fhitResult, false);
 		}
 
-		// Token: 0x06042DC4 RID: 273860 RVA: 0x01047504 File Offset: 0x01045704
+		// Token: 0x0603791C RID: 227612 RVA: 0x00F88B14 File Offset: 0x00F86D14
 		private void ApplyModelMaterialController(string materialControllerPath, UiModelLoadComponent loadComponent)
 		{
 			this.ClearMaterialControllers();
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042DC5 RID: 273861 RVA: 0x010475B8 File Offset: 0x010457B8
+		// Token: 0x0603791D RID: 227613 RVA: 0x00F88BC8 File Offset: 0x00F86DC8
 		private void ClearSceneEffects(string reason)
 		{
 			foreach (int num in this.SceneEffectHandleList)
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.SceneEffectHandleList.Clear();
 		}
 
-		// Token: 0x06042DC6 RID: 273862 RVA: 0x01047634 File Offset: 0x01045834
+		// Token: 0x0603791E RID: 227614 RVA: 0x00F88C44 File Offset: 0x00F86E44
 		private void ClearMaterialControllers()
 		{
 			if (this.MaterialControllerHandleList.Count <= 0)
@@ -463,19 +463,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.MaterialControllerHandleList.Clear();
 		}
 
-		// Token: 0x06042DC7 RID: 273863 RVA: 0x010476C8 File Offset: 0x010458C8
+		// Token: 0x0603791F RID: 227615 RVA: 0x00F88CD8 File Offset: 0x00F86ED8
 		private void OnClickChallenge(int a)
 		{
 			UiManager.Instance.OpenView(EUiViewName.AdamSmasherFormationView, this.SelectedStageId, null);
 		}
 
-		// Token: 0x06042DC8 RID: 273864 RVA: 0x010476E5 File Offset: 0x010458E5
+		// Token: 0x06037920 RID: 227616 RVA: 0x00F88CF5 File Offset: 0x00F86EF5
 		private void OnClickHelp()
 		{
 			HelpController.Instance.OpenHelpById(0);
 		}
 
-		// Token: 0x06042DC9 RID: 273865 RVA: 0x010476F4 File Offset: 0x010458F4
+		// Token: 0x06037921 RID: 227617 RVA: 0x00F88D04 File Offset: 0x00F86F04
 		private void OnClickClose()
 		{
 			if (AdamSmasherController.Instance.IsInAdamSmasherDungeon())
@@ -494,7 +494,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06042DCA RID: 273866 RVA: 0x01047744 File Offset: 0x01045944
+		// Token: 0x06037922 RID: 227618 RVA: 0x00F88D54 File Offset: 0x00F86F54
 		private void OnActivityClose(IReadOnlySet<int> closeActivities)
 		{
 			if (closeActivities.Contains(CyberPunkController.Instance.CurrentActivityId))
@@ -508,7 +508,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042DCB RID: 273867 RVA: 0x01047780 File Offset: 0x01045980
+		// Token: 0x06037923 RID: 227619 RVA: 0x00F88D90 File Offset: 0x00F86F90
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -543,13 +543,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042DCC RID: 273868 RVA: 0x01047802 File Offset: 0x01045A02
+		// Token: 0x06037924 RID: 227620 RVA: 0x00F88E12 File Offset: 0x00F87012
 		private AdamSmasherStageItem CreateStageItem()
 		{
 			return new AdamSmasherStageItem();
 		}
 
-		// Token: 0x06042DCD RID: 273869 RVA: 0x01047809 File Offset: 0x01045A09
+		// Token: 0x06037925 RID: 227621 RVA: 0x00F88E19 File Offset: 0x00F87019
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -558,19 +558,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x04022CA3 RID: 142499
+		// Token: 0x0401D4FF RID: 120063
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022CA4 RID: 142500
+		// Token: 0x0401D500 RID: 120064
 		[Nullable(2)]
 		private ButtonItem ChallengeButtonItem;
 
-		// Token: 0x04022CA5 RID: 142501
+		// Token: 0x0401D501 RID: 120065
 		[Nullable(2)]
 		private AdamSmasherLockBtnPanel LockBtnItem;
 
-		// Token: 0x04022CA6 RID: 142502
+		// Token: 0x0401D502 RID: 120066
 		[Nullable(new byte[]
 		{
 			2,
@@ -579,7 +579,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		private GenericLayout<AdamSmasherStageItem, IAdamSmasherStageItemData> StageListLayout;
 
-		// Token: 0x04022CA7 RID: 142503
+		// Token: 0x0401D503 RID: 120067
 		[Nullable(new byte[]
 		{
 			2,
@@ -587,54 +587,54 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x04022CA8 RID: 142504
+		// Token: 0x0401D504 RID: 120068
 		private IReadOnlyList<EdgeRunnerLordGym> CachedStageList = Array.Empty<EdgeRunnerLordGym>();
 
-		// Token: 0x04022CA9 RID: 142505
+		// Token: 0x0401D505 RID: 120069
 		private int SelectedStageId = 1;
 
-		// Token: 0x04022CAA RID: 142506
+		// Token: 0x0401D506 RID: 120070
 		private readonly List<int> SceneEffectHandleList = new List<int>();
 
-		// Token: 0x04022CAB RID: 142507
+		// Token: 0x0401D507 RID: 120071
 		private readonly List<int> MaterialControllerHandleList = new List<int>();
 
-		// Token: 0x04022CAC RID: 142508
+		// Token: 0x0401D508 RID: 120072
 		private readonly FTransformDouble CacheTransform;
 
-		// Token: 0x0200CA77 RID: 51831
+		// Token: 0x0200B43F RID: 46143
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403D32A RID: 250666
+			// Token: 0x04037C05 RID: 228357
 			Caption,
-			// Token: 0x0403D32B RID: 250667
+			// Token: 0x04037C06 RID: 228358
 			StageList,
-			// Token: 0x0403D32C RID: 250668
+			// Token: 0x04037C07 RID: 228359
 			SpStageItem,
-			// Token: 0x0403D32D RID: 250669
+			// Token: 0x04037C08 RID: 228360
 			RemainTimeText,
-			// Token: 0x0403D32E RID: 250670
+			// Token: 0x04037C09 RID: 228361
 			BossNameText,
-			// Token: 0x0403D32F RID: 250671
+			// Token: 0x04037C0A RID: 228362
 			BossLevelText,
-			// Token: 0x0403D330 RID: 250672
+			// Token: 0x04037C0B RID: 228363
 			BuffTitleText,
-			// Token: 0x0403D331 RID: 250673
+			// Token: 0x04037C0C RID: 228364
 			BuffDescScroll,
-			// Token: 0x0403D332 RID: 250674
+			// Token: 0x04037C0D RID: 228365
 			BuffDescText,
-			// Token: 0x0403D333 RID: 250675
+			// Token: 0x04037C0E RID: 228366
 			RecordTitleText,
-			// Token: 0x0403D334 RID: 250676
+			// Token: 0x04037C0F RID: 228367
 			RecordValueText,
-			// Token: 0x0403D335 RID: 250677
+			// Token: 0x04037C10 RID: 228368
 			RewardScroll,
-			// Token: 0x0403D336 RID: 250678
+			// Token: 0x04037C11 RID: 228369
 			RewardItem,
-			// Token: 0x0403D337 RID: 250679
+			// Token: 0x04037C12 RID: 228370
 			ChallengeButton,
-			// Token: 0x0403D338 RID: 250680
+			// Token: 0x04037C13 RID: 228371
 			LockButton
 		}
 	}

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B29 RID: 2857
+	// Token: 0x02000BF7 RID: 3063
 	public class ResetSelfPosComponent : IComponentBase
 	{
-		// Token: 0x060041F7 RID: 16887 RVA: 0x000A932C File Offset: 0x000A752C
-		[NullableContext(1)]
+		// Token: 0x06004650 RID: 18000 RVA: 0x000B33F0 File Offset: 0x000B15F0
 		public static ResetSelfPosComponent Create(IResetSelfPosComponent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001162 RID: 4450
-		// (get) Token: 0x060041F8 RID: 16888 RVA: 0x000A934C File Offset: 0x000A754C
+		// Token: 0x1700125D RID: 4701
+		// (get) Token: 0x06004651 RID: 18001 RVA: 0x000B3410 File Offset: 0x000B1610
 		public override bool? Disabled
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001163 RID: 4451
-		// (get) Token: 0x060041F9 RID: 16889 RVA: 0x000A9384 File Offset: 0x000A7584
+		// Token: 0x1700125E RID: 4702
+		// (get) Token: 0x06004652 RID: 18002 RVA: 0x000B3448 File Offset: 0x000B1648
 		public override bool? EdIsLocked
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001164 RID: 4452
-		// (get) Token: 0x060041FA RID: 16890 RVA: 0x000A939A File Offset: 0x000A759A
+		// Token: 0x1700125F RID: 4703
+		// (get) Token: 0x06004653 RID: 18003 RVA: 0x000B345E File Offset: 0x000B165E
 		public virtual float ResetRadius
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001165 RID: 4453
-		// (get) Token: 0x060041FB RID: 16891 RVA: 0x000A93A8 File Offset: 0x000A75A8
+		// Token: 0x17001260 RID: 4704
+		// (get) Token: 0x06004654 RID: 18004 RVA: 0x000B346C File Offset: 0x000B166C
 		public virtual bool? IsDisableResetPosAfterThrow
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001166 RID: 4454
-		// (get) Token: 0x060041FC RID: 16892 RVA: 0x000A93E0 File Offset: 0x000A75E0
+		// Token: 0x17001261 RID: 4705
+		// (get) Token: 0x06004655 RID: 18005 RVA: 0x000B34A4 File Offset: 0x000B16A4
 		public virtual bool? IsResetPosAfterThrow
 		{
 			get
@@ -83,8 +81,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001167 RID: 4455
-		// (get) Token: 0x060041FD RID: 16893 RVA: 0x000A9418 File Offset: 0x000A7618
+		// Token: 0x17001262 RID: 4706
+		// (get) Token: 0x06004656 RID: 18006 RVA: 0x000B34DC File Offset: 0x000B16DC
 		public virtual float? ResetPosDelayTime
 		{
 			get
@@ -97,7 +95,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002540 RID: 9536
+		// Token: 0x04002788 RID: 10120
 		private IResetSelfPosComponent Instance;
 	}
 }

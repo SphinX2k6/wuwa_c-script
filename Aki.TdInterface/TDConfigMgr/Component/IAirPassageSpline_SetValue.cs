@@ -1,48 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001B8 RID: 440
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001CF RID: 463
 	public class IAirPassageSpline_SetValue
 	{
-		// Token: 0x04000858 RID: 2136
+		// Token: 0x040008B1 RID: 2225
 		public ESplineType Type;
 
-		// Token: 0x04000859 RID: 2137
+		// Token: 0x040008B2 RID: 2226
 		public string MiddleLineEffect;
 
-		// Token: 0x0400085A RID: 2138
+		// Token: 0x040008B3 RID: 2227
 		public string TailCircleEffect;
 
-		// Token: 0x0400085B RID: 2139
+		// Token: 0x040008B4 RID: 2228
 		public string MiddleCircleEffect;
 
-		// Token: 0x0400085C RID: 2140
+		// Token: 0x040008B5 RID: 2229
 		public string MiddleCircleOverlyingEffect;
 
-		// Token: 0x0400085D RID: 2141
+		// Token: 0x040008B6 RID: 2230
 		public float MiddleCircleSpace;
 
-		// Token: 0x0400085E RID: 2142
+		// Token: 0x040008B7 RID: 2231
 		public float MiddleCircleRadius;
 
-		// Token: 0x0400085F RID: 2143
+		// Token: 0x040008B8 RID: 2232
 		public float MovableRadius;
 
-		// Token: 0x04000860 RID: 2144
+		// Token: 0x040008B9 RID: 2233
 		public float Resistance;
 
-		// Token: 0x04000861 RID: 2145
+		// Token: 0x040008BA RID: 2234
 		public float SpeedLimit;
 
-		// Token: 0x04000862 RID: 2146
+		// Token: 0x040008BB RID: 2235
 		public float SprintSpeedLimit;
 
-		// Token: 0x04000863 RID: 2147
+		// Token: 0x040008BC RID: 2236
 		public List<ICommonSplinePoint> Points;
 	}
 }

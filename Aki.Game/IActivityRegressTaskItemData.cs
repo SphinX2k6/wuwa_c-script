@@ -1,16 +1,16 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x020014A5 RID: 5285
+// Token: 0x02000959 RID: 2393
 public struct IActivityRegressTaskItemData
 {
-	// Token: 0x17000CFA RID: 3322
-	// (get) Token: 0x060095B6 RID: 38326 RVA: 0x00204B6E File Offset: 0x00202D6E
-	// (set) Token: 0x060095B7 RID: 38327 RVA: 0x00204B76 File Offset: 0x00202D76
+	// Token: 0x17000D1A RID: 3354
+	// (get) Token: 0x0600694B RID: 26955 RVA: 0x0020DAD6 File Offset: 0x0020BCD6
+	// (set) Token: 0x0600694C RID: 26956 RVA: 0x0020DADE File Offset: 0x0020BCDE
 	public EActivityRegressDoubleDropEntryType Type { readonly get; set; }
 
-	// Token: 0x17000CFB RID: 3323
-	// (get) Token: 0x060095B8 RID: 38328 RVA: 0x00204B7F File Offset: 0x00202D7F
-	// (set) Token: 0x060095B9 RID: 38329 RVA: 0x00204B87 File Offset: 0x00202D87
+	// Token: 0x17000D1B RID: 3355
+	// (get) Token: 0x0600694D RID: 26957 RVA: 0x0020DAE7 File Offset: 0x0020BCE7
+	// (set) Token: 0x0600694E RID: 26958 RVA: 0x0020DAEF File Offset: 0x0020BCEF
 	public RegressDoubleDrop Config { readonly get; set; }
 }

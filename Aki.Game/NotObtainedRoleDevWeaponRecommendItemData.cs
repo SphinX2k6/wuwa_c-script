@@ -2,22 +2,22 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200282C RID: 10284
+// Token: 0x02001DA7 RID: 7591
 public class NotObtainedRoleDevWeaponRecommendItemData : RoleDevWeaponRecommendItemDataBase
 {
-	// Token: 0x06015300 RID: 86784 RVA: 0x0055C0D3 File Offset: 0x0055A2D3
+	// Token: 0x06012CFE RID: 77054 RVA: 0x00586E0B File Offset: 0x0058500B
 	protected override void InitByRoleType(int roleId)
 	{
 		base.InitSubRecommendItems(roleId);
 	}
 
-	// Token: 0x06015301 RID: 86785 RVA: 0x0055C0DC File Offset: 0x0055A2DC
+	// Token: 0x06012CFF RID: 77055 RVA: 0x00586E14 File Offset: 0x00585014
 	protected override int GetWeaponConfigId()
 	{
 		return 0;
 	}
 
-	// Token: 0x06015302 RID: 86786 RVA: 0x0055C0E0 File Offset: 0x0055A2E0
+	// Token: 0x06012D00 RID: 77056 RVA: 0x00586E18 File Offset: 0x00585018
 	[NullableContext(1)]
 	protected override string GetWeaponName()
 	{
@@ -34,13 +34,13 @@ public class NotObtainedRoleDevWeaponRecommendItemData : RoleDevWeaponRecommendI
 		return roleDevWeaponItemConfig.Value.WeaponTypeDescribe;
 	}
 
-	// Token: 0x06015303 RID: 86787 RVA: 0x0055C145 File Offset: 0x0055A345
+	// Token: 0x06012D01 RID: 77057 RVA: 0x00586E7D File Offset: 0x0058507D
 	protected override int GetWeaponLevel()
 	{
 		return 1;
 	}
 
-	// Token: 0x06015304 RID: 86788 RVA: 0x0055C148 File Offset: 0x0055A348
+	// Token: 0x06012D02 RID: 77058 RVA: 0x00586E80 File Offset: 0x00585080
 	protected override int GetWeaponGoalUpgradeLevel()
 	{
 		RoleDevCultivateProject? cultivateProject = RoleDevUtils.GetCultivateProject(base.RoleId);
@@ -51,31 +51,31 @@ public class NotObtainedRoleDevWeaponRecommendItemData : RoleDevWeaponRecommendI
 		return cultivateProject.Value.WeaponLevel;
 	}
 
-	// Token: 0x06015305 RID: 86789 RVA: 0x0055C17B File Offset: 0x0055A37B
+	// Token: 0x06012D03 RID: 77059 RVA: 0x00586EB3 File Offset: 0x005850B3
 	protected override bool GetIsCall()
 	{
 		return false;
 	}
 
-	// Token: 0x06015306 RID: 86790 RVA: 0x0055C17E File Offset: 0x0055A37E
+	// Token: 0x06012D04 RID: 77060 RVA: 0x00586EB6 File Offset: 0x005850B6
 	protected override int GetGachaId()
 	{
 		return 0;
 	}
 
-	// Token: 0x06015307 RID: 86791 RVA: 0x0055C181 File Offset: 0x0055A381
+	// Token: 0x06012D05 RID: 77061 RVA: 0x00586EB9 File Offset: 0x005850B9
 	protected override bool GetIsWeaponHighQuality()
 	{
 		return true;
 	}
 
-	// Token: 0x06015308 RID: 86792 RVA: 0x0055C184 File Offset: 0x0055A384
+	// Token: 0x06012D06 RID: 77062 RVA: 0x00586EBC File Offset: 0x005850BC
 	protected override bool GetIsObtained()
 	{
 		return false;
 	}
 
-	// Token: 0x06015309 RID: 86793 RVA: 0x0055C187 File Offset: 0x0055A387
+	// Token: 0x06012D07 RID: 77063 RVA: 0x00586EBF File Offset: 0x005850BF
 	protected override bool GetIsForecast()
 	{
 		return false;

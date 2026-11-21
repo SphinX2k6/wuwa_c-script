@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FEB RID: 24555
+	// Token: 0x02006645 RID: 26181
 	public enum ERogueRewardReceiveType : byte
 	{
-		// Token: 0x0400FFA3 RID: 65443
+		// Token: 0x04010D74 RID: 68980
 		ReceiveByCount,
-		// Token: 0x0400FFA4 RID: 65444
+		// Token: 0x04010D75 RID: 68981
 		ReceiveByEnergy
 	}
 }

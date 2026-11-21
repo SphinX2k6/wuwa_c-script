@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BA4 RID: 15268
+	// Token: 0x02003FAC RID: 16300
 	public enum IShowTimelineActionOptionBase_Union : byte
 	{
-		// Token: 0x0400B117 RID: 45335
+		// Token: 0x0400BA94 RID: 47764
 		NONE,
-		// Token: 0x0400B118 RID: 45336
+		// Token: 0x0400BA95 RID: 47765
 		IShowTimelineActionOptionBase,
-		// Token: 0x0400B119 RID: 45337
+		// Token: 0x0400BA96 RID: 47766
 		IShowTimelineCastSkill,
-		// Token: 0x0400B11A RID: 45338
+		// Token: 0x0400BA97 RID: 47767
 		IShowTimelineJump,
-		// Token: 0x0400B11B RID: 45339
+		// Token: 0x0400BA98 RID: 47768
 		IShowTimelineSwitchRole
 	}
 }

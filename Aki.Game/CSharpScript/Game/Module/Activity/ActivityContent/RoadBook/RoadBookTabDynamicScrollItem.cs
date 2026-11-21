@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061E2 RID: 25058
+	// Token: 0x02005160 RID: 20832
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookTabDynamicScrollItem : UiPanelBase, IDynamicScrollItem<RoadBookAreaData>
 	{
-		// Token: 0x0603F41E RID: 259102 RVA: 0x00F4917A File Offset: 0x00F4737A
+		// Token: 0x060340DF RID: 213215 RVA: 0x00E900D2 File Offset: 0x00E8E2D2
 		public RoadBookTabDynamicScrollItem(ActivityRoadBookData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0603F41F RID: 259103 RVA: 0x00F4918C File Offset: 0x00F4738C
+		// Token: 0x060340E0 RID: 213216 RVA: 0x00E900E4 File Offset: 0x00E8E2E4
 		public UniTask Init(UUIItem actor)
 		{
 			RoadBookTabDynamicScrollItem.<Init>d__7 <Init>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F420 RID: 259104 RVA: 0x00F491D7 File Offset: 0x00F473D7
+		// Token: 0x060340E1 RID: 213217 RVA: 0x00E9012F File Offset: 0x00E8E32F
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F421 RID: 259105 RVA: 0x00F49210 File Offset: 0x00F47410
+		// Token: 0x060340E2 RID: 213218 RVA: 0x00E90168 File Offset: 0x00E8E368
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoadBookTabDynamicScrollItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F422 RID: 259106 RVA: 0x00F49253 File Offset: 0x00F47453
+		// Token: 0x060340E3 RID: 213219 RVA: 0x00E901AB File Offset: 0x00E8E3AB
 		[return: Nullable(2)]
 		public AUIBaseActor GetUsingItem(RoadBookAreaData data)
 		{
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return this.GetItemActor(EComponents.NormalItem);
 		}
 
-		// Token: 0x0603F423 RID: 259107 RVA: 0x00F4926C File Offset: 0x00F4746C
+		// Token: 0x060340E4 RID: 213220 RVA: 0x00E901C4 File Offset: 0x00E8E3C4
 		private AUIBaseActor GetItemActor(EComponents key)
 		{
 			return base.GetItem((int)key).GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x0603F424 RID: 259108 RVA: 0x00F49280 File Offset: 0x00F47480
+		// Token: 0x060340E5 RID: 213221 RVA: 0x00E901D8 File Offset: 0x00E8E3D8
 		public void Update(RoadBookAreaData data, int index)
 		{
 			this.Data = data;
@@ -93,44 +93,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x0603F425 RID: 259109 RVA: 0x00F49304 File Offset: 0x00F47504
+		// Token: 0x060340E6 RID: 213222 RVA: 0x00E9025C File Offset: 0x00E8E45C
 		public void SetSelected(bool bOn, bool bFireEvent)
 		{
 			this.LockItem.SetToggleState(bOn, bFireEvent && !this.Data.IsUnlock);
 			this.NormalItem.SetToggleState(bOn, bFireEvent && this.Data.IsUnlock);
 		}
 
-		// Token: 0x0603F426 RID: 259110 RVA: 0x00F49343 File Offset: 0x00F47543
+		// Token: 0x060340E7 RID: 213223 RVA: 0x00E9029B File Offset: 0x00E8E49B
 		public void BindSelectedCallBack(Action<RoadBookAreaData, int> selectCallback)
 		{
 			this.SelectedCallBack = selectCallback;
 		}
 
-		// Token: 0x0603F427 RID: 259111 RVA: 0x00F4934C File Offset: 0x00F4754C
+		// Token: 0x060340E8 RID: 213224 RVA: 0x00E902A4 File Offset: 0x00E8E4A4
 		public void BindIsSelectedOn(Func<RoadBookAreaData, int, bool> isSelectedOn)
 		{
 			this.IsSelectedOn = isSelectedOn;
 		}
 
-		// Token: 0x0603F428 RID: 259112 RVA: 0x00F49355 File Offset: 0x00F47555
+		// Token: 0x060340E9 RID: 213225 RVA: 0x00E902AD File Offset: 0x00E8E4AD
 		public void ClearItem()
 		{
 			base.Destroy(null);
 		}
 
-		// Token: 0x04020FC2 RID: 135106
+		// Token: 0x0401B8F1 RID: 112881
 		[Nullable(2)]
 		private RoadBookTabItem NormalItem;
 
-		// Token: 0x04020FC3 RID: 135107
+		// Token: 0x0401B8F2 RID: 112882
 		[Nullable(2)]
 		private RoadBookTabItemLock LockItem;
 
-		// Token: 0x04020FC4 RID: 135108
+		// Token: 0x0401B8F3 RID: 112883
 		[Nullable(2)]
 		protected RoadBookAreaData Data;
 
-		// Token: 0x04020FC5 RID: 135109
+		// Token: 0x0401B8F4 RID: 112884
 		[Nullable(new byte[]
 		{
 			2,
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 		})]
 		protected Action<RoadBookAreaData, int> SelectedCallBack;
 
-		// Token: 0x04020FC6 RID: 135110
+		// Token: 0x0401B8F5 RID: 112885
 		[Nullable(new byte[]
 		{
 			2,
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 		})]
 		protected Func<RoadBookAreaData, int, bool> IsSelectedOn;
 
-		// Token: 0x04020FC7 RID: 135111
+		// Token: 0x0401B8F6 RID: 112886
 		protected ActivityRoadBookData ActivityBaseData;
 	}
 }

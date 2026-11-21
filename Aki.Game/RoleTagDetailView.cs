@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028CE RID: 10446
+// Token: 0x02001E49 RID: 7753
 public class RoleTagDetailView : UiViewBase
 {
-	// Token: 0x06015912 RID: 88338 RVA: 0x00572443 File Offset: 0x00570643
+	// Token: 0x06013312 RID: 78610 RVA: 0x0059D2FB File Offset: 0x0059B4FB
 	[NullableContext(1)]
 	public RoleTagDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015913 RID: 88339 RVA: 0x0057244C File Offset: 0x0057064C
+	// Token: 0x06013313 RID: 78611 RVA: 0x0059D304 File Offset: 0x0059B504
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class RoleTagDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x06015914 RID: 88340 RVA: 0x005724BC File Offset: 0x005706BC
+	// Token: 0x06013314 RID: 78612 RVA: 0x0059D374 File Offset: 0x0059B574
 	protected override void OnStart()
 	{
 		int[] array = this.OpenParam as int[];
@@ -45,24 +45,24 @@ public class RoleTagDetailView : UiViewBase
 		this.OtherTagLayout.RefreshByData(allRoleTagList, null, false);
 	}
 
-	// Token: 0x06015915 RID: 88341 RVA: 0x005725AC File Offset: 0x005707AC
+	// Token: 0x06013315 RID: 78613 RVA: 0x0059D464 File Offset: 0x0059B664
 	[NullableContext(1)]
 	private RoleTagDetailItem InitRoleTagItem()
 	{
 		return new RoleTagDetailItem();
 	}
 
-	// Token: 0x06015916 RID: 88342 RVA: 0x005725B3 File Offset: 0x005707B3
+	// Token: 0x06013316 RID: 78614 RVA: 0x0059D46B File Offset: 0x0059B66B
 	private void OnCloseCallBack()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400A08D RID: 41101
+	// Token: 0x0400A476 RID: 42102
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A08E RID: 41102
+	// Token: 0x0400A477 RID: 42103
 	[Nullable(new byte[]
 	{
 		2,
@@ -70,7 +70,7 @@ public class RoleTagDetailView : UiViewBase
 	})]
 	private GenericLayout<RoleTagDetailItem, int> RoleTagLayout;
 
-	// Token: 0x0400A08F RID: 41103
+	// Token: 0x0400A478 RID: 42104
 	[Nullable(new byte[]
 	{
 		2,
@@ -78,16 +78,16 @@ public class RoleTagDetailView : UiViewBase
 	})]
 	private GenericLayout<RoleTagDetailItem, int> OtherTagLayout;
 
-	// Token: 0x02008EE4 RID: 36580
+	// Token: 0x0200812C RID: 33068
 	private enum EComponent
 	{
-		// Token: 0x0402E565 RID: 189797
+		// Token: 0x04029C60 RID: 171104
 		CaptionItem,
-		// Token: 0x0402E566 RID: 189798
+		// Token: 0x04029C61 RID: 171105
 		RoleTagRoot,
-		// Token: 0x0402E567 RID: 189799
+		// Token: 0x04029C62 RID: 171106
 		OtherTagRoot,
-		// Token: 0x0402E568 RID: 189800
+		// Token: 0x04029C63 RID: 171107
 		TagItem
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DDF RID: 24031
+	// Token: 0x0200641C RID: 25628
 	public enum IGiantStableValueType_Union : byte
 	{
-		// Token: 0x0400F7C6 RID: 63430
+		// Token: 0x04010521 RID: 66849
 		NONE,
-		// Token: 0x0400F7C7 RID: 63431
+		// Token: 0x04010522 RID: 66850
 		IGiantStableValueType,
-		// Token: 0x0400F7C8 RID: 63432
+		// Token: 0x04010523 RID: 66851
 		IGiantStableValueRegion,
-		// Token: 0x0400F7C9 RID: 63433
+		// Token: 0x04010524 RID: 66852
 		IGiantStableValueTotal
 	}
 }

@@ -8,16 +8,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001171 RID: 4465
+// Token: 0x02000625 RID: 1573
 public class BabelTowerItemInfoView : UiViewBase
 {
-	// Token: 0x060075DF RID: 30175 RVA: 0x00185CCA File Offset: 0x00183ECA
+	// Token: 0x06004976 RID: 18806 RVA: 0x0018E872 File Offset: 0x0018CA72
 	[NullableContext(1)]
 	public BabelTowerItemInfoView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060075E0 RID: 30176 RVA: 0x00185CD4 File Offset: 0x00183ED4
+	// Token: 0x06004977 RID: 18807 RVA: 0x0018E87C File Offset: 0x0018CA7C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -64,13 +64,13 @@ public class BabelTowerItemInfoView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060075E1 RID: 30177 RVA: 0x00185F30 File Offset: 0x00184130
+	// Token: 0x06004978 RID: 18808 RVA: 0x0018EAD8 File Offset: 0x0018CCD8
 	protected override void OnStart()
 	{
 		this.ScrollView = new GenericScrollViewNew<JumpToItem, IJumpToItemData>(base.GetScrollViewWithScrollbar(9), new Func<JumpToItem>(this.InitItem), null, false, null);
 	}
 
-	// Token: 0x060075E2 RID: 30178 RVA: 0x00185F54 File Offset: 0x00184154
+	// Token: 0x06004979 RID: 18809 RVA: 0x0018EAFC File Offset: 0x0018CCFC
 	protected override void OnBeforeShow()
 	{
 		IBabelTowerItemInfoViewInfo babelTowerItemInfoViewInfo = this.OpenParam as IBabelTowerItemInfoViewInfo;
@@ -85,7 +85,7 @@ public class BabelTowerItemInfoView : UiViewBase
 		this.RefreshViewByBuff();
 	}
 
-	// Token: 0x060075E3 RID: 30179 RVA: 0x00185FB0 File Offset: 0x001841B0
+	// Token: 0x0600497A RID: 18810 RVA: 0x0018EB58 File Offset: 0x0018CD58
 	private void RefreshViewByDeTerm()
 	{
 		IBabelTowerItemInfoViewInfo data = this.Data;
@@ -136,7 +136,7 @@ public class BabelTowerItemInfoView : UiViewBase
 		scrollView.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x060075E4 RID: 30180 RVA: 0x001861E4 File Offset: 0x001843E4
+	// Token: 0x0600497B RID: 18811 RVA: 0x0018ED8C File Offset: 0x0018CF8C
 	private void RefreshViewByBuff()
 	{
 		IBabelTowerItemInfoViewInfo data = this.Data;
@@ -186,13 +186,13 @@ public class BabelTowerItemInfoView : UiViewBase
 		scrollView.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x060075E5 RID: 30181 RVA: 0x001863EF File Offset: 0x001845EF
+	// Token: 0x0600497C RID: 18812 RVA: 0x0018EF97 File Offset: 0x0018D197
 	private void OnClickBackBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060075E6 RID: 30182 RVA: 0x001863F8 File Offset: 0x001845F8
+	// Token: 0x0600497D RID: 18813 RVA: 0x0018EFA0 File Offset: 0x0018D1A0
 	private void OnClickJumpTo(int levelId)
 	{
 		base.CloseMe(null);
@@ -225,7 +225,7 @@ public class BabelTowerItemInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x060075E7 RID: 30183 RVA: 0x001864D1 File Offset: 0x001846D1
+	// Token: 0x0600497E RID: 18814 RVA: 0x0018F079 File Offset: 0x0018D279
 	[NullableContext(1)]
 	private JumpToItem InitItem()
 	{
@@ -235,11 +235,11 @@ public class BabelTowerItemInfoView : UiViewBase
 		};
 	}
 
-	// Token: 0x04003616 RID: 13846
+	// Token: 0x040036AF RID: 13999
 	[Nullable(2)]
 	private IBabelTowerItemInfoViewInfo Data;
 
-	// Token: 0x04003617 RID: 13847
+	// Token: 0x040036B0 RID: 14000
 	[Nullable(new byte[]
 	{
 		2,
@@ -248,49 +248,49 @@ public class BabelTowerItemInfoView : UiViewBase
 	})]
 	private GenericScrollViewNew<JumpToItem, IJumpToItemData> ScrollView;
 
-	// Token: 0x02007741 RID: 30529
+	// Token: 0x020068CE RID: 26830
 	private class EComponentDefine
 	{
-		// Token: 0x0402755B RID: 161115
+		// Token: 0x04022894 RID: 141460
 		public const int BackBtn = 0;
 
-		// Token: 0x0402755C RID: 161116
+		// Token: 0x04022895 RID: 141461
 		public const int DeTermItem = 1;
 
-		// Token: 0x0402755D RID: 161117
+		// Token: 0x04022896 RID: 141462
 		public const int BuffItem = 2;
 
-		// Token: 0x0402755E RID: 161118
+		// Token: 0x04022897 RID: 141463
 		public const int DeTermTexture = 3;
 
-		// Token: 0x0402755F RID: 161119
+		// Token: 0x04022898 RID: 141464
 		public const int DeTermStarText = 4;
 
-		// Token: 0x04027560 RID: 161120
+		// Token: 0x04022899 RID: 141465
 		public const int BuffTexture = 5;
 
-		// Token: 0x04027561 RID: 161121
+		// Token: 0x0402289A RID: 141466
 		public const int TitleText = 6;
 
-		// Token: 0x04027562 RID: 161122
+		// Token: 0x0402289B RID: 141467
 		public const int DesText = 7;
 
-		// Token: 0x04027563 RID: 161123
+		// Token: 0x0402289C RID: 141468
 		public const int JumpToItem = 8;
 
-		// Token: 0x04027564 RID: 161124
+		// Token: 0x0402289D RID: 141469
 		public const int JumpToScrollView = 9;
 
-		// Token: 0x04027565 RID: 161125
+		// Token: 0x0402289E RID: 141470
 		public const int JumpToBtn = 10;
 
-		// Token: 0x04027566 RID: 161126
+		// Token: 0x0402289F RID: 141471
 		public const int NameSprite = 11;
 
-		// Token: 0x04027567 RID: 161127
+		// Token: 0x040228A0 RID: 141472
 		public const int NameText = 12;
 
-		// Token: 0x04027568 RID: 161128
+		// Token: 0x040228A1 RID: 141473
 		public const int ExitBtn = 13;
 	}
 }

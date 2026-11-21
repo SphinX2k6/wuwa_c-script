@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 {
-	// Token: 0x02004816 RID: 18454
+	// Token: 0x02003747 RID: 14151
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrastructureObservatoryPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030521 RID: 197921 RVA: 0x00B36B16 File Offset: 0x00B34D16
+		// Token: 0x06024CF1 RID: 150769 RVA: 0x00A66A8A File Offset: 0x00A64C8A
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030522 RID: 197922 RVA: 0x00B36B20 File Offset: 0x00B34D20
+		// Token: 0x06024CF2 RID: 150770 RVA: 0x00A66A94 File Offset: 0x00A64C94
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrastructureObservatoryPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030523 RID: 197923 RVA: 0x00B36B64 File Offset: 0x00B34D64
+		// Token: 0x06024CF3 RID: 150771 RVA: 0x00A66AD8 File Offset: 0x00A64CD8
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -64,7 +63,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			verticalLayout2.RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x06030524 RID: 197924 RVA: 0x00B36BE0 File Offset: 0x00B34DE0
+		// Token: 0x06024CF4 RID: 150772 RVA: 0x00A66B54 File Offset: 0x00A64D54
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -102,7 +101,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			}
 		}
 
-		// Token: 0x06030525 RID: 197925 RVA: 0x00B36CA0 File Offset: 0x00B34EA0
+		// Token: 0x06024CF5 RID: 150773 RVA: 0x00A66C14 File Offset: 0x00A64E14
 		private void UpdateConfirmButtonEnableClickByTeleportState()
 		{
 			InfrObservatoryMarkItem infrObservatoryMarkItem = this.LayoutContext.MarkItem as InfrObservatoryMarkItem;
@@ -114,7 +113,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			layoutContext.SetConfirmBtnEnableClick(infrObservatoryMarkItem == null || !infrObservatoryMarkItem.IsLocked);
 		}
 
-		// Token: 0x06030526 RID: 197926 RVA: 0x00B36CE0 File Offset: 0x00B34EE0
+		// Token: 0x06024CF6 RID: 150774 RVA: 0x00A66C54 File Offset: 0x00A64E54
 		private void RefreshGiftTip()
 		{
 			int fireLevel = InfrastructureModel.Instance.FireLevel;
@@ -126,14 +125,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			}
 			InfrastructureConfig instance2 = InfrastructureConfig.Instance;
 			int num = (instance2 != null) ? instance2.GetMaxLevel() : 0;
-			InventoryModel inventoryModel = InventoryModel.Instance;
-			bool flag = infrLevel.Value.RequirementIter().All(delegate(DicIntInt r)
+			InventoryModel instance3 = InventoryModel.Instance;
+			InfrLevel value = infrLevel.Value;
+			bool flag = true;
+			foreach (DicIntInt dicIntInt in value.RequirementIter())
 			{
-				InventoryModel inventoryModel = inventoryModel;
-				int? num2 = (inventoryModel != null) ? new int?(inventoryModel.GetItemCountByConfigId(r.Key, 0)) : null;
-				int value = r.Value;
-				return num2.GetValueOrDefault() >= value & num2 != null;
-			});
+				int? num2 = (instance3 != null) ? new int?(instance3.GetItemCountByConfigId(dicIntInt.Key, 0)) : null;
+				int value2 = dicIntInt.Value;
+				if (!(num2.GetValueOrDefault() >= value2 & num2 != null))
+				{
+					flag = false;
+					break;
+				}
+			}
 			if (fireLevel < num && InfrastructureModel.Instance.FireStatus == InfrStatusPb.InfrStatusProgress && flag)
 			{
 				UUIItem item = base.GetItem(25);
@@ -150,7 +154,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			}
 		}
 
-		// Token: 0x06030527 RID: 197927 RVA: 0x00B36DA8 File Offset: 0x00B34FA8
+		// Token: 0x06024CF7 RID: 150775 RVA: 0x00A66D84 File Offset: 0x00A64F84
 		private unsafe List<IMapSubViewListItemData> GetVerticalLayoutData()
 		{
 			int fireLevel = InfrastructureModel.Instance.FireLevel;
@@ -178,7 +182,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			return list;
 		}
 
-		// Token: 0x0401A003 RID: 106499
+		// Token: 0x040146B7 RID: 83639
 		[Nullable(new byte[]
 		{
 			2,
@@ -187,11 +191,11 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 		})]
 		private GenericLayout<MapVerticalLayoutItem, IMapSubViewListItemData> VerticalLayout;
 
-		// Token: 0x0200AAE6 RID: 43750
+		// Token: 0x02009497 RID: 38039
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F6B RID: 212843
+			// Token: 0x0402E6EE RID: 190190
 			public const int InfrObservatoryPanel = 0;
 		}
 	}

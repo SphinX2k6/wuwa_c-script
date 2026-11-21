@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B00 RID: 23296
+	// Token: 0x02006116 RID: 24854
 	public class IUndergroundStateInfoT
 	{
-		// Token: 0x1700AFC3 RID: 44995
-		// (get) Token: 0x06027C70 RID: 162928 RVA: 0x00578A07 File Offset: 0x00576C07
-		// (set) Token: 0x06027C71 RID: 162929 RVA: 0x00578A0F File Offset: 0x00576C0F
+		// Token: 0x1700B90B RID: 47371
+		// (get) Token: 0x0602A234 RID: 172596 RVA: 0x005C045B File Offset: 0x005BE65B
+		// (set) Token: 0x0602A235 RID: 172597 RVA: 0x005C0463 File Offset: 0x005BE663
 		public int StateId { get; set; }
 
-		// Token: 0x1700AFC4 RID: 44996
-		// (get) Token: 0x06027C72 RID: 162930 RVA: 0x00578A18 File Offset: 0x00576C18
-		// (set) Token: 0x06027C73 RID: 162931 RVA: 0x00578A20 File Offset: 0x00576C20
+		// Token: 0x1700B90C RID: 47372
+		// (get) Token: 0x0602A236 RID: 172598 RVA: 0x005C046C File Offset: 0x005BE66C
+		// (set) Token: 0x0602A237 RID: 172599 RVA: 0x005C0474 File Offset: 0x005BE674
 		public IVectorInfoT RestartPos { get; set; }
 
-		// Token: 0x06027C74 RID: 162932 RVA: 0x00578A29 File Offset: 0x00576C29
+		// Token: 0x0602A238 RID: 172600 RVA: 0x005C047D File Offset: 0x005BE67D
 		public IUndergroundStateInfoT()
 		{
 			this.StateId = 0;

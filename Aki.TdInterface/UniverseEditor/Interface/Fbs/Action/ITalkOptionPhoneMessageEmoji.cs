@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007337 RID: 29495
+	// Token: 0x02007B0F RID: 31503
 	public struct ITalkOptionPhoneMessageEmoji : IFlatbufferObject
 	{
-		// Token: 0x1700E003 RID: 57347
-		// (get) Token: 0x06035868 RID: 219240 RVA: 0x0074A9B6 File Offset: 0x00748BB6
+		// Token: 0x1700EBFF RID: 60415
+		// (get) Token: 0x06038B9B RID: 232347 RVA: 0x007AC53E File Offset: 0x007AA73E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035869 RID: 219241 RVA: 0x0074A9C3 File Offset: 0x00748BC3
+		// Token: 0x06038B9C RID: 232348 RVA: 0x007AC54B File Offset: 0x007AA74B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603586A RID: 219242 RVA: 0x0074A9CC File Offset: 0x00748BCC
+		// Token: 0x06038B9D RID: 232349 RVA: 0x007AC554 File Offset: 0x007AA754
 		public static ITalkOptionPhoneMessageEmoji GetRootAsITalkOptionPhoneMessageEmoji(ByteBuffer _bb)
 		{
 			return ITalkOptionPhoneMessageEmoji.GetRootAsITalkOptionPhoneMessageEmoji(_bb, default(ITalkOptionPhoneMessageEmoji));
 		}
 
-		// Token: 0x0603586B RID: 219243 RVA: 0x0074A9E8 File Offset: 0x00748BE8
+		// Token: 0x06038B9E RID: 232350 RVA: 0x007AC570 File Offset: 0x007AA770
 		public static ITalkOptionPhoneMessageEmoji GetRootAsITalkOptionPhoneMessageEmoji(ByteBuffer _bb, ITalkOptionPhoneMessageEmoji obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603586C RID: 219244 RVA: 0x0074AA05 File Offset: 0x00748C05
+		// Token: 0x06038B9F RID: 232351 RVA: 0x007AC58D File Offset: 0x007AA78D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603586D RID: 219245 RVA: 0x0074AA14 File Offset: 0x00748C14
+		// Token: 0x06038BA0 RID: 232352 RVA: 0x007AC59C File Offset: 0x007AA79C
 		public ITalkOptionPhoneMessageEmoji __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E004 RID: 57348
-		// (get) Token: 0x0603586E RID: 219246 RVA: 0x0074AA24 File Offset: 0x00748C24
+		// Token: 0x1700EC00 RID: 60416
+		// (get) Token: 0x06038BA1 RID: 232353 RVA: 0x007AC5AC File Offset: 0x007AA7AC
 		public ETalkOptionParamType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E005 RID: 57349
-		// (get) Token: 0x0603586F RID: 219247 RVA: 0x0074AA60 File Offset: 0x00748C60
+		// Token: 0x1700EC01 RID: 60417
+		// (get) Token: 0x06038BA2 RID: 232354 RVA: 0x007AC5E8 File Offset: 0x007AA7E8
 		public int EmojiId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E006 RID: 57350
-		// (get) Token: 0x06035870 RID: 219248 RVA: 0x0074AA9C File Offset: 0x00748C9C
+		// Token: 0x1700EC02 RID: 60418
+		// (get) Token: 0x06038BA3 RID: 232355 RVA: 0x007AC624 File Offset: 0x007AA824
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035871 RID: 219249 RVA: 0x0074AAD8 File Offset: 0x00748CD8
+		// Token: 0x06038BA4 RID: 232356 RVA: 0x007AC660 File Offset: 0x007AA860
 		public static Offset<ITalkOptionPhoneMessageEmoji> CreateITalkOptionPhoneMessageEmoji(FlatBufferBuilder builder, ETalkOptionParamType Type = ETalkOptionParamType.QteSucceed, int EmojiId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkOptionPhoneMessageEmoji.EndITalkOptionPhoneMessageEmoji(builder);
 		}
 
-		// Token: 0x06035872 RID: 219250 RVA: 0x0074AAFC File Offset: 0x00748CFC
+		// Token: 0x06038BA5 RID: 232357 RVA: 0x007AC684 File Offset: 0x007AA884
 		public static void StartITalkOptionPhoneMessageEmoji(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06035873 RID: 219251 RVA: 0x0074AB05 File Offset: 0x00748D05
+		// Token: 0x06038BA6 RID: 232358 RVA: 0x007AC68D File Offset: 0x007AA88D
 		public static void AddType(FlatBufferBuilder builder, ETalkOptionParamType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035874 RID: 219252 RVA: 0x0074AB10 File Offset: 0x00748D10
+		// Token: 0x06038BA7 RID: 232359 RVA: 0x007AC698 File Offset: 0x007AA898
 		public static void AddEmojiId(FlatBufferBuilder builder, int emojiId)
 		{
 			builder.AddInt(1, emojiId, 0);
 		}
 
-		// Token: 0x06035875 RID: 219253 RVA: 0x0074AB1B File Offset: 0x00748D1B
+		// Token: 0x06038BA8 RID: 232360 RVA: 0x007AC6A3 File Offset: 0x007AA8A3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06035876 RID: 219254 RVA: 0x0074AB26 File Offset: 0x00748D26
+		// Token: 0x06038BA9 RID: 232361 RVA: 0x007AC6AE File Offset: 0x007AA8AE
 		public static Offset<ITalkOptionPhoneMessageEmoji> EndITalkOptionPhoneMessageEmoji(FlatBufferBuilder builder)
 		{
 			return new Offset<ITalkOptionPhoneMessageEmoji>(builder.EndTable());
 		}
 
-		// Token: 0x06035877 RID: 219255 RVA: 0x0074AB34 File Offset: 0x00748D34
+		// Token: 0x06038BAA RID: 232362 RVA: 0x007AC6BC File Offset: 0x007AA8BC
 		public ITalkOptionPhoneMessageEmojiT UnPack()
 		{
 			ITalkOptionPhoneMessageEmojiT talkOptionPhoneMessageEmojiT = new ITalkOptionPhoneMessageEmojiT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return talkOptionPhoneMessageEmojiT;
 		}
 
-		// Token: 0x06035878 RID: 219256 RVA: 0x0074AB4F File Offset: 0x00748D4F
+		// Token: 0x06038BAB RID: 232363 RVA: 0x007AC6D7 File Offset: 0x007AA8D7
 		public void UnPackTo(ITalkOptionPhoneMessageEmojiT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06035879 RID: 219257 RVA: 0x0074AB78 File Offset: 0x00748D78
+		// Token: 0x06038BAC RID: 232364 RVA: 0x007AC700 File Offset: 0x007AA900
 		public static Offset<ITalkOptionPhoneMessageEmoji> Pack(FlatBufferBuilder builder, ITalkOptionPhoneMessageEmojiT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkOptionPhoneMessageEmoji.CreateITalkOptionPhoneMessageEmoji(builder, _o.Type, _o.EmojiId, _o.NullMask);
 		}
 
-		// Token: 0x0401212C RID: 74028
+		// Token: 0x04013132 RID: 78130
 		private Table __p;
 	}
 }

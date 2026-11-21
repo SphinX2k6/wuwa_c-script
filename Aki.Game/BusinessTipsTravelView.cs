@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001331 RID: 4913
+// Token: 0x020007E5 RID: 2021
 [NullableContext(2)]
 [Nullable(0)]
 public class BusinessTipsTravelView : UiViewBase
 {
-	// Token: 0x060088A7 RID: 34983 RVA: 0x001D323B File Offset: 0x001D143B
+	// Token: 0x06005C42 RID: 23618 RVA: 0x001DC0A7 File Offset: 0x001DA2A7
 	[NullableContext(1)]
 	public BusinessTipsTravelView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x060088A8 RID: 34984 RVA: 0x001D3264 File Offset: 0x001D1464
+	// Token: 0x06005C43 RID: 23619 RVA: 0x001DC0D0 File Offset: 0x001DA2D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class BusinessTipsTravelView : UiViewBase
 		};
 	}
 
-	// Token: 0x060088A9 RID: 34985 RVA: 0x001D3310 File Offset: 0x001D1510
+	// Token: 0x06005C44 RID: 23620 RVA: 0x001DC17C File Offset: 0x001DA37C
 	private UniTask InitCharacterListModule()
 	{
 		BusinessTipsTravelView.<InitCharacterListModule>d__24 <InitCharacterListModule>d__;
@@ -47,7 +47,7 @@ public class BusinessTipsTravelView : UiViewBase
 		return <InitCharacterListModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060088AA RID: 34986 RVA: 0x001D3354 File Offset: 0x001D1554
+	// Token: 0x06005C45 RID: 23621 RVA: 0x001DC1C0 File Offset: 0x001DA3C0
 	private UniTask InitRoleItemList()
 	{
 		BusinessTipsTravelView.<InitRoleItemList>d__25 <InitRoleItemList>d__;
@@ -58,7 +58,7 @@ public class BusinessTipsTravelView : UiViewBase
 		return <InitRoleItemList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060088AB RID: 34987 RVA: 0x001D3398 File Offset: 0x001D1598
+	// Token: 0x06005C46 RID: 23622 RVA: 0x001DC204 File Offset: 0x001DA404
 	private UniTask InitRoleList()
 	{
 		BusinessTipsTravelView.<InitRoleList>d__26 <InitRoleList>d__;
@@ -69,7 +69,7 @@ public class BusinessTipsTravelView : UiViewBase
 		return <InitRoleList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060088AC RID: 34988 RVA: 0x001D33DC File Offset: 0x001D15DC
+	// Token: 0x06005C47 RID: 23623 RVA: 0x001DC248 File Offset: 0x001DA448
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessTipsTravelView.<OnBeforeStartAsync>d__27 <OnBeforeStartAsync>d__;
@@ -80,7 +80,7 @@ public class BusinessTipsTravelView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060088AD RID: 34989 RVA: 0x001D3420 File Offset: 0x001D1620
+	// Token: 0x06005C48 RID: 23624 RVA: 0x001DC28C File Offset: 0x001DA48C
 	protected override UniTask OnBeforeShowAsyncImplementImplement()
 	{
 		BusinessTipsTravelView.<OnBeforeShowAsyncImplementImplement>d__28 <OnBeforeShowAsyncImplementImplement>d__;
@@ -91,13 +91,13 @@ public class BusinessTipsTravelView : UiViewBase
 		return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060088AE RID: 34990 RVA: 0x001D3463 File Offset: 0x001D1663
+	// Token: 0x06005C49 RID: 23625 RVA: 0x001DC2CF File Offset: 0x001DA4CF
 	protected override void OnAfterPlayStartSequence()
 	{
 		this.ShowAddCharacter();
 	}
 
-	// Token: 0x060088AF RID: 34991 RVA: 0x001D346C File Offset: 0x001D166C
+	// Token: 0x06005C4A RID: 23626 RVA: 0x001DC2D8 File Offset: 0x001DA4D8
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveTimerHandle();
@@ -117,7 +117,7 @@ public class BusinessTipsTravelView : UiViewBase
 		this.RemoveSkipResultTimeHandle();
 	}
 
-	// Token: 0x060088B0 RID: 34992 RVA: 0x001D34DC File Offset: 0x001D16DC
+	// Token: 0x06005C4B RID: 23627 RVA: 0x001DC348 File Offset: 0x001DA548
 	protected void ShowAddCharacter()
 	{
 		if (this.IsFinishShowLastRole())
@@ -140,21 +140,21 @@ public class BusinessTipsTravelView : UiViewBase
 		this.AddRunTimerHandle();
 	}
 
-	// Token: 0x060088B1 RID: 34993 RVA: 0x001D3588 File Offset: 0x001D1788
+	// Token: 0x06005C4C RID: 23628 RVA: 0x001DC3F4 File Offset: 0x001DA5F4
 	[NullableContext(1)]
 	private CharacterItemWithAdd InitCharacterItemWithAdd()
 	{
 		return new CharacterItemWithAdd();
 	}
 
-	// Token: 0x060088B2 RID: 34994 RVA: 0x001D358F File Offset: 0x001D178F
+	// Token: 0x06005C4D RID: 23629 RVA: 0x001DC3FB File Offset: 0x001DA5FB
 	[NullableContext(1)]
 	private BusinessTravelRoleItem InitRoleItem()
 	{
 		return new BusinessTravelRoleItem();
 	}
 
-	// Token: 0x060088B3 RID: 34995 RVA: 0x001D3598 File Offset: 0x001D1798
+	// Token: 0x06005C4E RID: 23630 RVA: 0x001DC404 File Offset: 0x001DA604
 	private UniTask OnPreparingFestival()
 	{
 		BusinessTipsTravelView.<OnPreparingFestival>d__34 <OnPreparingFestival>d__;
@@ -165,7 +165,7 @@ public class BusinessTipsTravelView : UiViewBase
 		return <OnPreparingFestival>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060088B4 RID: 34996 RVA: 0x001D35DC File Offset: 0x001D17DC
+	// Token: 0x06005C4F RID: 23631 RVA: 0x001DC448 File Offset: 0x001DA648
 	private void PlayFillAmount(float value)
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -179,7 +179,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088B5 RID: 34997 RVA: 0x001D364C File Offset: 0x001D184C
+	// Token: 0x06005C50 RID: 23632 RVA: 0x001DC4B8 File Offset: 0x001DA6B8
 	private void PlayCurrentValue(float value)
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -188,7 +188,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088B6 RID: 34998 RVA: 0x001D36A4 File Offset: 0x001D18A4
+	// Token: 0x06005C51 RID: 23633 RVA: 0x001DC510 File Offset: 0x001DA710
 	private void StopTween()
 	{
 		if (this.ExpTweener != null)
@@ -198,7 +198,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088B7 RID: 34999 RVA: 0x001D36C1 File Offset: 0x001D18C1
+	// Token: 0x06005C52 RID: 23634 RVA: 0x001DC52D File Offset: 0x001DA72D
 	private void PlayStartAction()
 	{
 		BusinessTravelRoleItem layoutItemByKey = this.RoleLayout.GetLayoutItemByKey(this.ShowIndex);
@@ -209,7 +209,7 @@ public class BusinessTipsTravelView : UiViewBase
 		layoutItemByKey.PlayStartAction();
 	}
 
-	// Token: 0x060088B8 RID: 35000 RVA: 0x001D36E4 File Offset: 0x001D18E4
+	// Token: 0x06005C53 RID: 23635 RVA: 0x001DC550 File Offset: 0x001DA750
 	private void PlayCharacterStartAction()
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -218,7 +218,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088B9 RID: 35001 RVA: 0x001D373C File Offset: 0x001D193C
+	// Token: 0x06005C54 RID: 23636 RVA: 0x001DC5A8 File Offset: 0x001DA7A8
 	private void PlayRunFinishAction()
 	{
 		BusinessTravelRoleItem layoutItemByKey = this.RoleLayout.GetLayoutItemByKey(this.ShowIndex);
@@ -233,7 +233,7 @@ public class BusinessTipsTravelView : UiViewBase
 		this.AddSkipResultTimeHandle();
 	}
 
-	// Token: 0x060088BA RID: 35002 RVA: 0x001D37AA File Offset: 0x001D19AA
+	// Token: 0x06005C55 RID: 23637 RVA: 0x001DC616 File Offset: 0x001DA816
 	private void PlayStopRunAction()
 	{
 		BusinessTravelRoleItem layoutItemByKey = this.RoleLayout.GetLayoutItemByKey(this.ShowIndex);
@@ -244,7 +244,7 @@ public class BusinessTipsTravelView : UiViewBase
 		layoutItemByKey.StopRunToLastFrame();
 	}
 
-	// Token: 0x060088BB RID: 35003 RVA: 0x001D37CC File Offset: 0x001D19CC
+	// Token: 0x06005C56 RID: 23638 RVA: 0x001DC638 File Offset: 0x001DA838
 	private void PlayCharacterRunFinishAction()
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -254,7 +254,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088BC RID: 35004 RVA: 0x001D3828 File Offset: 0x001D1A28
+	// Token: 0x06005C57 RID: 23639 RVA: 0x001DC694 File Offset: 0x001DA894
 	private void PlayEndAction()
 	{
 		this.IsInResult = false;
@@ -266,7 +266,7 @@ public class BusinessTipsTravelView : UiViewBase
 		layoutItemByKey.PlayEndAction();
 	}
 
-	// Token: 0x060088BD RID: 35005 RVA: 0x001D3854 File Offset: 0x001D1A54
+	// Token: 0x06005C58 RID: 23640 RVA: 0x001DC6C0 File Offset: 0x001DA8C0
 	private void PlayCharacterEndAction()
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -275,14 +275,14 @@ public class BusinessTipsTravelView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088BE RID: 35006 RVA: 0x001D38AC File Offset: 0x001D1AAC
+	// Token: 0x06005C59 RID: 23641 RVA: 0x001DC718 File Offset: 0x001DA918
 	private bool IsFinishShowLastRole()
 	{
 		List<int> roleIdList = MoonChasingBusinessModel.Instance.GetResultData().GetRoleIdList();
 		return this.ShowIndex >= roleIdList.Count - 1;
 	}
 
-	// Token: 0x060088BF RID: 35007 RVA: 0x001D38DC File Offset: 0x001D1ADC
+	// Token: 0x06005C5A RID: 23642 RVA: 0x001DC748 File Offset: 0x001DA948
 	private void SkipToNextStep()
 	{
 		UUIButtonComponent button = base.GetButton(2);
@@ -294,7 +294,7 @@ public class BusinessTipsTravelView : UiViewBase
 		MoonChasingController.Instance.TipsTravelSkipToNextStep();
 	}
 
-	// Token: 0x060088C0 RID: 35008 RVA: 0x001D3928 File Offset: 0x001D1B28
+	// Token: 0x06005C5B RID: 23643 RVA: 0x001DC794 File Offset: 0x001DA994
 	private void AddSkipAnimDelayTimerHandle()
 	{
 		UUIButtonComponent button = base.GetButton(2);
@@ -314,7 +314,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}, (float)skipAnimDelayTime, null, null, true, 1f);
 	}
 
-	// Token: 0x060088C1 RID: 35009 RVA: 0x001D3986 File Offset: 0x001D1B86
+	// Token: 0x06005C5C RID: 23644 RVA: 0x001DC7F2 File Offset: 0x001DA9F2
 	private void RemoveSkipAnimDelayTimerHandle()
 	{
 		if (this.SkipAnimDelayTimerHandle != null)
@@ -324,7 +324,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088C2 RID: 35010 RVA: 0x001D39A8 File Offset: 0x001D1BA8
+	// Token: 0x06005C5D RID: 23645 RVA: 0x001DC814 File Offset: 0x001DAA14
 	private void AddRunTimerHandle()
 	{
 		this.RunTimerHandle = TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -333,7 +333,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}, 2000f, null, null, true, 1f);
 	}
 
-	// Token: 0x060088C3 RID: 35011 RVA: 0x001D39D3 File Offset: 0x001D1BD3
+	// Token: 0x06005C5E RID: 23646 RVA: 0x001DC83F File Offset: 0x001DAA3F
 	private bool RemoveRunTimerHandle()
 	{
 		if (this.RunTimerHandle != null)
@@ -345,7 +345,7 @@ public class BusinessTipsTravelView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x060088C4 RID: 35012 RVA: 0x001D39F8 File Offset: 0x001D1BF8
+	// Token: 0x06005C5F RID: 23647 RVA: 0x001DC864 File Offset: 0x001DAA64
 	private void AddSkipResultTimeHandle()
 	{
 		this.SkipResultTimeHandle = TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -355,7 +355,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}, 800f, null, null, true, 1f);
 	}
 
-	// Token: 0x060088C5 RID: 35013 RVA: 0x001D3A23 File Offset: 0x001D1C23
+	// Token: 0x06005C60 RID: 23648 RVA: 0x001DC88F File Offset: 0x001DAA8F
 	private bool RemoveSkipResultTimeHandle()
 	{
 		if (this.SkipResultTimeHandle != null)
@@ -367,7 +367,7 @@ public class BusinessTipsTravelView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x060088C6 RID: 35014 RVA: 0x001D3A48 File Offset: 0x001D1C48
+	// Token: 0x06005C61 RID: 23649 RVA: 0x001DC8B4 File Offset: 0x001DAAB4
 	private void RunFinishCallback()
 	{
 		this.RunTimerHandle = null;
@@ -382,19 +382,19 @@ public class BusinessTipsTravelView : UiViewBase
 		AudioSystem.Instance.PostEvent("play_ui_figure_up_1s");
 	}
 
-	// Token: 0x060088C7 RID: 35015 RVA: 0x001D3AC5 File Offset: 0x001D1CC5
+	// Token: 0x06005C62 RID: 23650 RVA: 0x001DC931 File Offset: 0x001DAB31
 	private void PlayCurrentValueTween()
 	{
 		this.ExpTweener = ULTweenBPLibrary.FloatTo(GlobalData.World, this.ValueDelegate, 0f, 1f, 0.5f, 0f, LTweenEase.OutCubic);
 	}
 
-	// Token: 0x060088C8 RID: 35016 RVA: 0x001D3AF2 File Offset: 0x001D1CF2
+	// Token: 0x06005C63 RID: 23651 RVA: 0x001DC95E File Offset: 0x001DAB5E
 	private void OnCompleteDelegate()
 	{
 		this.OnComplete(false);
 	}
 
-	// Token: 0x060088C9 RID: 35017 RVA: 0x001D3AFC File Offset: 0x001D1CFC
+	// Token: 0x06005C64 RID: 23652 RVA: 0x001DC968 File Offset: 0x001DAB68
 	private void OnComplete(bool isSkip)
 	{
 		this.PlayCharacterEndAction();
@@ -424,7 +424,7 @@ public class BusinessTipsTravelView : UiViewBase
 		this.ShowAddCharacter();
 	}
 
-	// Token: 0x060088CA RID: 35018 RVA: 0x001D3B64 File Offset: 0x001D1D64
+	// Token: 0x06005C65 RID: 23653 RVA: 0x001DC9D0 File Offset: 0x001DABD0
 	private void DelayToSkipToNextStep()
 	{
 		this.IsLastFinishShow = true;
@@ -436,7 +436,7 @@ public class BusinessTipsTravelView : UiViewBase
 		}, 2000f, null, null, true, 1f);
 	}
 
-	// Token: 0x060088CB RID: 35019 RVA: 0x001D3B9D File Offset: 0x001D1D9D
+	// Token: 0x06005C66 RID: 23654 RVA: 0x001DCA09 File Offset: 0x001DAC09
 	private bool RemoveTimerHandle()
 	{
 		if (this.TimerHandle != null)
@@ -448,7 +448,7 @@ public class BusinessTipsTravelView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x060088CC RID: 35020 RVA: 0x001D3BC4 File Offset: 0x001D1DC4
+	// Token: 0x06005C67 RID: 23655 RVA: 0x001DCA30 File Offset: 0x001DAC30
 	private void OnSkip()
 	{
 		if (this.IsLastFinishShow)
@@ -485,7 +485,7 @@ public class BusinessTipsTravelView : UiViewBase
 		this.ShowAddCharacter();
 	}
 
-	// Token: 0x04003CEA RID: 15594
+	// Token: 0x04003D82 RID: 15746
 	[Nullable(new byte[]
 	{
 		2,
@@ -493,7 +493,7 @@ public class BusinessTipsTravelView : UiViewBase
 	})]
 	protected CharacterListModule<CharacterItemWithAdd> CharacterListModule;
 
-	// Token: 0x04003CEB RID: 15595
+	// Token: 0x04003D83 RID: 15747
 	[Nullable(new byte[]
 	{
 		2,
@@ -501,82 +501,82 @@ public class BusinessTipsTravelView : UiViewBase
 	})]
 	protected GenericLayout<BusinessTravelRoleItem, int> RoleLayout;
 
-	// Token: 0x04003CEC RID: 15596
+	// Token: 0x04003D84 RID: 15748
 	[Nullable(1)]
 	protected List<int> RoleIdList = new List<int>();
 
-	// Token: 0x04003CED RID: 15597
+	// Token: 0x04003D85 RID: 15749
 	protected int DelegateId;
 
-	// Token: 0x04003CEE RID: 15598
+	// Token: 0x04003D86 RID: 15750
 	protected int ShowIndex = -1;
 
-	// Token: 0x04003CEF RID: 15599
+	// Token: 0x04003D87 RID: 15751
 	[Nullable(1)]
 	private List<CharacterData> CharacterList = new List<CharacterData>();
 
-	// Token: 0x04003CF0 RID: 15600
+	// Token: 0x04003D88 RID: 15752
 	protected ULTweener ExpTweener;
 
-	// Token: 0x04003CF1 RID: 15601
+	// Token: 0x04003D89 RID: 15753
 	protected FLTweenFloatSetterDynamic Delegate;
 
-	// Token: 0x04003CF2 RID: 15602
+	// Token: 0x04003D8A RID: 15754
 	protected FLTweenFloatSetterDynamic ValueDelegate;
 
-	// Token: 0x04003CF3 RID: 15603
+	// Token: 0x04003D8B RID: 15755
 	protected TimerHandle SkipAnimDelayTimerHandle;
 
-	// Token: 0x04003CF4 RID: 15604
+	// Token: 0x04003D8C RID: 15756
 	protected TimerHandle RunTimerHandle;
 
-	// Token: 0x04003CF5 RID: 15605
+	// Token: 0x04003D8D RID: 15757
 	protected bool IsLastFinishShow;
 
-	// Token: 0x04003CF6 RID: 15606
+	// Token: 0x04003D8E RID: 15758
 	protected bool IsInResult;
 
-	// Token: 0x04003CF7 RID: 15607
+	// Token: 0x04003D8F RID: 15759
 	protected TimerHandle SkipResultTimeHandle;
 
-	// Token: 0x04003CF8 RID: 15608
+	// Token: 0x04003D90 RID: 15760
 	protected TimerHandle TimerHandle;
 
-	// Token: 0x04003CF9 RID: 15609
+	// Token: 0x04003D91 RID: 15761
 	private const float TWEEN_TIME = 1f;
 
-	// Token: 0x04003CFA RID: 15610
+	// Token: 0x04003D92 RID: 15762
 	private const float VALUE_TIME = 0.5f;
 
-	// Token: 0x04003CFB RID: 15611
+	// Token: 0x04003D93 RID: 15763
 	private const int RUN_TIME = 2000;
 
-	// Token: 0x04003CFC RID: 15612
+	// Token: 0x04003D94 RID: 15764
 	private const int LAST_SHOW = 2000;
 
-	// Token: 0x04003CFD RID: 15613
+	// Token: 0x04003D95 RID: 15765
 	private const int NORMAL_SHOW = 1000;
 
-	// Token: 0x04003CFE RID: 15614
+	// Token: 0x04003D96 RID: 15766
 	private const int SKIP_RESULT_DELAY = 800;
 
-	// Token: 0x02007998 RID: 31128
+	// Token: 0x02006B22 RID: 27426
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402809F RID: 163999
+		// Token: 0x040233CC RID: 144332
 		public const int Title = 0;
 
-		// Token: 0x040280A0 RID: 164000
+		// Token: 0x040233CD RID: 144333
 		public const int CharacterListItem = 1;
 
-		// Token: 0x040280A1 RID: 164001
+		// Token: 0x040233CE RID: 144334
 		public const int SkipBtn = 2;
 
-		// Token: 0x040280A2 RID: 164002
+		// Token: 0x040233CF RID: 144335
 		public const int RoleLayout = 3;
 
-		// Token: 0x040280A3 RID: 164003
+		// Token: 0x040233D0 RID: 144336
 		public const int RoleItem = 4;
 	}
 }

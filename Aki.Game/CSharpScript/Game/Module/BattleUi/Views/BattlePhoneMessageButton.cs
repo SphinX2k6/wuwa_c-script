@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CD9 RID: 23769
+	// Token: 0x02004CBB RID: 19643
 	public class BattlePhoneMessageButton : BattleEntranceButton, IPhoneMessageButtonImplement
 	{
-		// Token: 0x0603C25A RID: 246362 RVA: 0x00E66194 File Offset: 0x00E64394
+		// Token: 0x060311B0 RID: 201136 RVA: 0x00DB6748 File Offset: 0x00DB4948
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(7, typeof(UUINiagara)));
 		}
 
-		// Token: 0x0603C25B RID: 246363 RVA: 0x00E6624C File Offset: 0x00E6444C
+		// Token: 0x060311B1 RID: 201137 RVA: 0x00DB6800 File Offset: 0x00DB4A00
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Helper.Init();
 		}
 
-		// Token: 0x0603C25C RID: 246364 RVA: 0x00E662B7 File Offset: 0x00E644B7
+		// Token: 0x060311B2 RID: 201138 RVA: 0x00DB686B File Offset: 0x00DB4A6B
 		protected override void OnShowBattleChildView()
 		{
 			base.OnShowBattleChildView();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.OnShowBattleChildView();
 		}
 
-		// Token: 0x0603C25D RID: 246365 RVA: 0x00E662CF File Offset: 0x00E644CF
+		// Token: 0x060311B3 RID: 201139 RVA: 0x00DB6883 File Offset: 0x00DB4A83
 		protected override void OnHideBattleChildView()
 		{
 			base.OnHideBattleChildView();
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.OnHideBattleChildView();
 		}
 
-		// Token: 0x0603C25E RID: 246366 RVA: 0x00E662E7 File Offset: 0x00E644E7
+		// Token: 0x060311B4 RID: 201140 RVA: 0x00DB689B File Offset: 0x00DB4A9B
 		public override void Reset()
 		{
 			base.Reset();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.Clear();
 		}
 
-		// Token: 0x0603C25F RID: 246367 RVA: 0x00E662FF File Offset: 0x00E644FF
+		// Token: 0x060311B5 RID: 201141 RVA: 0x00DB68B3 File Offset: 0x00DB4AB3
 		public void CheckAndPlayPhoneSequence()
 		{
 			PhoneMessageButtonHelper helper = this.Helper;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.CheckAndPlayPhoneSequence();
 		}
 
-		// Token: 0x0603C260 RID: 246368 RVA: 0x00E66311 File Offset: 0x00E64511
+		// Token: 0x060311B6 RID: 201142 RVA: 0x00DB68C5 File Offset: 0x00DB4AC5
 		public void PopShowHeadIcon()
 		{
 			PhoneMessageButtonHelper helper = this.Helper;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.PopShowHeadIcon();
 		}
 
-		// Token: 0x0603C261 RID: 246369 RVA: 0x00E66323 File Offset: 0x00E64523
+		// Token: 0x060311B7 RID: 201143 RVA: 0x00DB68D7 File Offset: 0x00DB4AD7
 		public void HideHeadIcon()
 		{
 			PhoneMessageButtonHelper helper = this.Helper;
@@ -100,28 +100,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.HideHeadIcon();
 		}
 
-		// Token: 0x0401F5BC RID: 128444
+		// Token: 0x0401A075 RID: 106613
 		[Nullable(2)]
 		private PhoneMessageButtonHelper Helper;
 
-		// Token: 0x0200BF31 RID: 48945
+		// Token: 0x0200A937 RID: 43319
 		private enum EChildType
 		{
-			// Token: 0x04039AB9 RID: 236217
+			// Token: 0x0403447B RID: 214139
 			Button,
-			// Token: 0x04039ABA RID: 236218
+			// Token: 0x0403447C RID: 214140
 			RedDotItem,
-			// Token: 0x04039ABB RID: 236219
+			// Token: 0x0403447D RID: 214141
 			SpriteEnterIcon,
-			// Token: 0x04039ABC RID: 236220
+			// Token: 0x0403447E RID: 214142
 			TexPhoneBlue,
-			// Token: 0x04039ABD RID: 236221
+			// Token: 0x0403447F RID: 214143
 			PanelPrefabHead,
-			// Token: 0x04039ABE RID: 236222
+			// Token: 0x04034480 RID: 214144
 			TexIconHead,
-			// Token: 0x04039ABF RID: 236223
+			// Token: 0x04034481 RID: 214145
 			BubbleItem,
-			// Token: 0x04039AC0 RID: 236224
+			// Token: 0x04034482 RID: 214146
 			NiagaraItem
 		}
 	}

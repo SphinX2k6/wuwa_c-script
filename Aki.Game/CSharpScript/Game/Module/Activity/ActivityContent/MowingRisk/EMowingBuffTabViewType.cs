@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063AC RID: 25516
+	// Token: 0x0200532A RID: 21290
 	public enum EMowingBuffTabViewType
 	{
-		// Token: 0x040216E3 RID: 136931
+		// Token: 0x0401C012 RID: 114706
 		Overview,
-		// Token: 0x040216E4 RID: 136932
+		// Token: 0x0401C013 RID: 114707
 		Progress
 	}
 }

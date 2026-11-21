@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200205B RID: 8283
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022A4 RID: 8868
 	public class IVisualNovelBackgroundClean : IVisualNovelBackgroundBase
 	{
-		// Token: 0x0600B600 RID: 46592 RVA: 0x001A6384 File Offset: 0x001A4584
+		// Token: 0x0600C126 RID: 49446 RVA: 0x001BCAF0 File Offset: 0x001BACF0
 		private IVisualNovelBackgroundClean_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B601 RID: 46593 RVA: 0x001A63BC File Offset: 0x001A45BC
+		// Token: 0x0600C127 RID: 49447 RVA: 0x001BCB28 File Offset: 0x001BAD28
 		public static IVisualNovelBackgroundClean Create([Nullable(2)] IVisualNovelBackgroundClean instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B602 RID: 46594 RVA: 0x001A63CF File Offset: 0x001A45CF
+		// Token: 0x0600C128 RID: 49448 RVA: 0x001BCB3B File Offset: 0x001BAD3B
 		public static IVisualNovelBackgroundClean CreateFromSetValue([Nullable(2)] IVisualNovelBackgroundClean_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B603 RID: 46595 RVA: 0x001A63E2 File Offset: 0x001A45E2
+		// Token: 0x0600C129 RID: 49449 RVA: 0x001BCB4E File Offset: 0x001BAD4E
 		public new IVisualNovelBackgroundClean_SetValue ToSetValue()
 		{
 			return new IVisualNovelBackgroundClean_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037D0 RID: 14288
-		// (get) Token: 0x0600B604 RID: 46596 RVA: 0x001A63F5 File Offset: 0x001A45F5
-		// (set) Token: 0x0600B605 RID: 46597 RVA: 0x001A6420 File Offset: 0x001A4620
+		// Token: 0x17003AAD RID: 15021
+		// (get) Token: 0x0600C12A RID: 49450 RVA: 0x001BCB61 File Offset: 0x001BAD61
+		// (set) Token: 0x0600C12B RID: 49451 RVA: 0x001BCB8C File Offset: 0x001BAD8C
 		public override EVisualNovelBackgroundType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D67 RID: 28007
+		// Token: 0x04007370 RID: 29552
 		[Nullable(2)]
 		protected new IVisualNovelBackgroundClean FbInstance;
 
-		// Token: 0x04006D68 RID: 28008
+		// Token: 0x04007371 RID: 29553
 		[Nullable(2)]
 		protected new IVisualNovelBackgroundClean_SetValue PocoInterface;
 	}

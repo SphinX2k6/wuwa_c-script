@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MingSu
 {
-	// Token: 0x020053CC RID: 21452
+	// Token: 0x020043AF RID: 17327
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DarkCoastDeliveryLevelUpViewData
 	{
-		// Token: 0x06036D33 RID: 224563 RVA: 0x00CFC2B2 File Offset: 0x00CFA4B2
+		// Token: 0x0602BC79 RID: 179321 RVA: 0x00C4B35A File Offset: 0x00C4955A
 		public DarkCoastDeliveryLevelUpViewData(int preLevel, int curLevel)
 		{
 			this.PreLevel = preLevel;
 			this.CurLevel = curLevel;
 		}
 
-		// Token: 0x06036D34 RID: 224564 RVA: 0x00CFC2C8 File Offset: 0x00CFA4C8
+		// Token: 0x0602BC7A RID: 179322 RVA: 0x00C4B370 File Offset: 0x00C49570
 		public string GetLevelTexture(int level)
 		{
 			DarkCoastDeliveryData darkCoastDeliveryData = MingSuModel.Instance.GetDragonPoolInstanceById(3) as DarkCoastDeliveryData;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.MingSu
 			return darkCoastDeliveryData.GetLevelTexturePath(level);
 		}
 
-		// Token: 0x06036D35 RID: 224565 RVA: 0x00CFC2F8 File Offset: 0x00CFA4F8
+		// Token: 0x0602BC7B RID: 179323 RVA: 0x00C4B3A0 File Offset: 0x00C495A0
 		public List<DarkCoastDeliveryLevelData> GetLevelDataList()
 		{
 			DarkCoastDeliveryData darkCoastDeliveryData = MingSuModel.Instance.GetDragonPoolInstanceById(3) as DarkCoastDeliveryData;
@@ -47,10 +47,10 @@ namespace CSharpScript.Game.Module.MingSu
 			return list;
 		}
 
-		// Token: 0x0401CF0B RID: 118539
+		// Token: 0x040179A3 RID: 96675
 		public readonly int PreLevel;
 
-		// Token: 0x0401CF0C RID: 118540
+		// Token: 0x040179A4 RID: 96676
 		public readonly int CurLevel;
 	}
 }

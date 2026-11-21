@@ -22,17 +22,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubItems
 {
-	// Token: 0x0200484A RID: 18506
+	// Token: 0x0200377B RID: 14203
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ExploreInfoItem : UiPanelBase, IWorldMapItemVisibleControlInterface
 	{
-		// Token: 0x1700790D RID: 30989
-		// (get) Token: 0x060306B7 RID: 198327 RVA: 0x00B3D4F8 File Offset: 0x00B3B6F8
-		// (set) Token: 0x060306B8 RID: 198328 RVA: 0x00B3D500 File Offset: 0x00B3B700
+		// Token: 0x17004BCA RID: 19402
+		// (get) Token: 0x06024E86 RID: 151174 RVA: 0x00A6D73C File Offset: 0x00A6B93C
+		// (set) Token: 0x06024E87 RID: 151175 RVA: 0x00A6D744 File Offset: 0x00A6B944
 		public EWorldMapShowMode ShowMode { get; set; }
 
-		// Token: 0x060306B9 RID: 198329 RVA: 0x00B3D50C File Offset: 0x00B3B70C
+		// Token: 0x06024E88 RID: 151176 RVA: 0x00A6D750 File Offset: 0x00A6B950
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060306BA RID: 198330 RVA: 0x00B3D658 File Offset: 0x00B3B858
+		// Token: 0x06024E89 RID: 151177 RVA: 0x00A6D89C File Offset: 0x00A6BA9C
 		[NullableContext(1)]
 		public UniTask Init(UUIItem uiItem, int? jumpAreaId, UUIItem parentView)
 		{
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060306BB RID: 198331 RVA: 0x00B3D6B3 File Offset: 0x00B3B8B3
+		// Token: 0x06024E8A RID: 151178 RVA: 0x00A6D8F7 File Offset: 0x00A6BAF7
 		public void SetInfo(WorldMapUiEntity worldMapUiEntity, [Nullable(new byte[]
 		{
 			1,
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.OnClickTaskTagBtnCb = onClickTaskTagCb;
 		}
 
-		// Token: 0x060306BC RID: 198332 RVA: 0x00B3D6C4 File Offset: 0x00B3B8C4
+		// Token: 0x06024E8B RID: 151179 RVA: 0x00A6D908 File Offset: 0x00A6BB08
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ExploreInfoItem.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -100,14 +100,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060306BD RID: 198333 RVA: 0x00B3D707 File Offset: 0x00B3B907
+		// Token: 0x06024E8C RID: 151180 RVA: 0x00A6D94B File Offset: 0x00A6BB4B
 		protected override void OnStart()
 		{
 			base.GetItem(1).SetUIActive(false);
 			base.GetItem(4).SetUIActive(false);
 		}
 
-		// Token: 0x060306BE RID: 198334 RVA: 0x00B3D723 File Offset: 0x00B3B923
+		// Token: 0x06024E8D RID: 151181 RVA: 0x00A6D967 File Offset: 0x00A6BB67
 		public void UpdateNoteOrPlayProgress()
 		{
 			this.HideAllMapNote();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.SetBtnTaskActive(false);
 		}
 
-		// Token: 0x060306BF RID: 198335 RVA: 0x00B3D760 File Offset: 0x00B3B960
+		// Token: 0x06024E8E RID: 151182 RVA: 0x00A6D9A4 File Offset: 0x00A6BBA4
 		private void SetBtnTaskActive(bool isActive)
 		{
 			UUIButtonComponent button = base.GetButton(3);
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			uuiitem.SetUIActive(isActive);
 		}
 
-		// Token: 0x060306C0 RID: 198336 RVA: 0x00B3D794 File Offset: 0x00B3B994
+		// Token: 0x06024E8F RID: 151183 RVA: 0x00A6D9D8 File Offset: 0x00A6BBD8
 		private void SetBtnTaskLineActive(bool isActive)
 		{
 			UUIButtonComponent button = base.GetButton(3);
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			obj2.SetUIActive(isActive);
 		}
 
-		// Token: 0x060306C1 RID: 198337 RVA: 0x00B3D7D4 File Offset: 0x00B3B9D4
+		// Token: 0x06024E90 RID: 151184 RVA: 0x00A6DA18 File Offset: 0x00A6BC18
 		private void UpdateBtnTaskRed()
 		{
 			List<Func<IMapNoteParams>> mapNoteCreateFuncList = this.GetMapNoteCreateFuncList();
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.SetBtnTaskActive(btnTaskActive);
 		}
 
-		// Token: 0x060306C2 RID: 198338 RVA: 0x00B3D890 File Offset: 0x00B3BA90
+		// Token: 0x06024E91 RID: 151185 RVA: 0x00A6DAD4 File Offset: 0x00A6BCD4
 		public void UpdateBtnRedOrNew(bool isRed, bool isNew)
 		{
 			base.GetItem(6).SetUIActive(isRed);
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			}
 		}
 
-		// Token: 0x060306C3 RID: 198339 RVA: 0x00B3D8D0 File Offset: 0x00B3BAD0
+		// Token: 0x06024E92 RID: 151186 RVA: 0x00A6DB14 File Offset: 0x00A6BD14
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return list;
 		}
 
-		// Token: 0x060306C4 RID: 198340 RVA: 0x00B3DAD0 File Offset: 0x00B3BCD0
+		// Token: 0x06024E93 RID: 151187 RVA: 0x00A6DD14 File Offset: 0x00A6BF14
 		private bool NoteConditionIsOk(MapNote mapNoteConfig)
 		{
 			if (mapNoteConfig.Disable)
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return conditionId == 0 || LevelGeneralController.Instance.CheckCondition(conditionId.ToString(), null, true, Array.Empty<object>());
 		}
 
-		// Token: 0x060306C5 RID: 198341 RVA: 0x00B3DB10 File Offset: 0x00B3BD10
+		// Token: 0x06024E94 RID: 151188 RVA: 0x00A6DD54 File Offset: 0x00A6BF54
 		private void UpdateRecommendPlayPoint()
 		{
 			ExploreItem exploreItem = this.ExploreItem;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.UpdateRecommendPlayList((exploreAreaData != null) ? exploreAreaData.GetShowRecommendExploreItemDataList() : null);
 		}
 
-		// Token: 0x060306C6 RID: 198342 RVA: 0x00B3DB44 File Offset: 0x00B3BD44
+		// Token: 0x06024E95 RID: 151189 RVA: 0x00A6DD88 File Offset: 0x00A6BF88
 		private void UpdateRecommendPlayList([Nullable(new byte[]
 		{
 			2,
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			}
 		}
 
-		// Token: 0x060306C7 RID: 198343 RVA: 0x00B3DBD8 File Offset: 0x00B3BDD8
+		// Token: 0x06024E96 RID: 151190 RVA: 0x00A6DE1C File Offset: 0x00A6C01C
 		public UniTask ResumeRecommendSequence()
 		{
 			ExploreInfoItem.<ResumeRecommendSequence>d__27 <ResumeRecommendSequence>d__;
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return <ResumeRecommendSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060306C8 RID: 198344 RVA: 0x00B3DC1C File Offset: 0x00B3BE1C
+		// Token: 0x06024E97 RID: 151191 RVA: 0x00A6DE60 File Offset: 0x00A6C060
 		private UniTask CheckExplorePlayData(int? jumpAreaId)
 		{
 			ExploreInfoItem.<CheckExplorePlayData>d__28 <CheckExplorePlayData>d__;
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return <CheckExplorePlayData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060306C9 RID: 198345 RVA: 0x00B3DC60 File Offset: 0x00B3BE60
+		// Token: 0x06024E98 RID: 151192 RVA: 0x00A6DEA4 File Offset: 0x00A6C0A4
 		private void HideAllMapNote()
 		{
 			foreach (WorldMapNoteItem worldMapNoteItem in this.MapNoteArray)
@@ -336,7 +336,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			}
 		}
 
-		// Token: 0x060306CA RID: 198346 RVA: 0x00B3DCB8 File Offset: 0x00B3BEB8
+		// Token: 0x06024E99 RID: 151193 RVA: 0x00A6DEFC File Offset: 0x00A6C0FC
 		private void HideAllMapPlayPoint()
 		{
 			foreach (WorldMapPlayPointItem worldMapPlayPointItem in this.MapPlayPointArray)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			}
 		}
 
-		// Token: 0x060306CB RID: 198347 RVA: 0x00B3DD08 File Offset: 0x00B3BF08
+		// Token: 0x06024E9A RID: 151194 RVA: 0x00A6DF4C File Offset: 0x00A6C14C
 		private void UpdateMapNotes()
 		{
 			List<IMapNoteParams> mapNoteParamsList = this.GetMapNoteParamsList();
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.SetBtnTaskLineActive(flag);
 		}
 
-		// Token: 0x060306CC RID: 198348 RVA: 0x00B3DD70 File Offset: 0x00B3BF70
+		// Token: 0x06024E9B RID: 151195 RVA: 0x00A6DFB4 File Offset: 0x00A6C1B4
 		private void PlayMapNoteSequenceToPause()
 		{
 			foreach (WorldMapNoteItem worldMapNoteItem in this.MapNoteArray)
@@ -372,7 +372,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			}
 		}
 
-		// Token: 0x060306CD RID: 198349 RVA: 0x00B3DDC0 File Offset: 0x00B3BFC0
+		// Token: 0x06024E9C RID: 151196 RVA: 0x00A6E004 File Offset: 0x00A6C204
 		private void CheckFinishRecommendPlay()
 		{
 			ExploreItem exploreItem = this.ExploreItem;
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			}
 		}
 
-		// Token: 0x060306CE RID: 198350 RVA: 0x00B3DE08 File Offset: 0x00B3C008
+		// Token: 0x06024E9D RID: 151197 RVA: 0x00A6E04C File Offset: 0x00A6C24C
 		public UniTask ResumeMapNoteSequence()
 		{
 			ExploreInfoItem.<ResumeMapNoteSequence>d__34 <ResumeMapNoteSequence>d__;
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return <ResumeMapNoteSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060306CF RID: 198351 RVA: 0x00B3DE4C File Offset: 0x00B3C04C
+		// Token: 0x06024E9E RID: 151198 RVA: 0x00A6E090 File Offset: 0x00A6C290
 		[NullableContext(1)]
 		private List<IMapNoteParams> GetMapNoteParamsList()
 		{
@@ -413,20 +413,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return list;
 		}
 
-		// Token: 0x060306D0 RID: 198352 RVA: 0x00B3DED0 File Offset: 0x00B3C0D0
+		// Token: 0x06024E9F RID: 151199 RVA: 0x00A6E114 File Offset: 0x00A6C314
 		[NullableContext(1)]
 		private int SortMapNote(IMapNoteParams paramA, IMapNoteParams paramB)
 		{
 			return paramB.MapNoteConfig.Rank - paramA.MapNoteConfig.Rank;
 		}
 
-		// Token: 0x060306D1 RID: 198353 RVA: 0x00B3DEFA File Offset: 0x00B3C0FA
+		// Token: 0x06024EA0 RID: 151200 RVA: 0x00A6E13E File Offset: 0x00A6C33E
 		private void ClickMarkItemByNote(int markId)
 		{
 			this.WorldMapUiEntity.QuickNavigateComponent.NavigateTo(markId, EMarkType.None, true, true, false);
 		}
 
-		// Token: 0x060306D2 RID: 198354 RVA: 0x00B3DF14 File Offset: 0x00B3C114
+		// Token: 0x06024EA1 RID: 151201 RVA: 0x00A6E158 File Offset: 0x00A6C358
 		private bool CanShowMapNoteInThisMap(MapNote noteConfig)
 		{
 			int mapId = noteConfig.MapId;
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return mapId == num || mapId == this.WorldMapUiEntity.MapId;
 		}
 
-		// Token: 0x060306D3 RID: 198355 RVA: 0x00B3DF40 File Offset: 0x00B3C140
+		// Token: 0x06024EA2 RID: 151202 RVA: 0x00A6E184 File Offset: 0x00A6C384
 		private bool CheckNoteQuestFinish(MapNote noteConfig)
 		{
 			int questIdListLength = noteConfig.QuestIdListLength;
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return true;
 		}
 
-		// Token: 0x060306D4 RID: 198356 RVA: 0x00B3DF80 File Offset: 0x00B3C180
+		// Token: 0x06024EA3 RID: 151203 RVA: 0x00A6E1C4 File Offset: 0x00A6C3C4
 		private static int? FindMarkIdMapValue(MapNote noteConfig, int key)
 		{
 			for (int i = 0; i < noteConfig.MarkIdMapLength; i++)
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return null;
 		}
 
-		// Token: 0x060306D5 RID: 198357 RVA: 0x00B3DFE4 File Offset: 0x00B3C1E4
+		// Token: 0x06024EA4 RID: 151204 RVA: 0x00A6E228 File Offset: 0x00A6C428
 		private IMapNoteParams AddMapNoteRogue()
 		{
 			MapNote? config = ConfigMapNoteById.GetConfig(9, true);
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return null;
 		}
 
-		// Token: 0x060306D6 RID: 198358 RVA: 0x00B3E080 File Offset: 0x00B3C280
+		// Token: 0x06024EA5 RID: 151205 RVA: 0x00A6E2C4 File Offset: 0x00A6C4C4
 		private IMapNoteParams AddMapNoteRogueRes()
 		{
 			MapNote? config = ConfigMapNoteById.GetConfig(13, true);
@@ -519,7 +519,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			};
 		}
 
-		// Token: 0x060306D7 RID: 198359 RVA: 0x00B3E11C File Offset: 0x00B3C31C
+		// Token: 0x06024EA6 RID: 151206 RVA: 0x00A6E360 File Offset: 0x00A6C560
 		private IMapNoteParams AddMapNoteWeeklyRogue()
 		{
 			MapNote? config = ConfigMapNoteById.GetConfig(14, true);
@@ -545,43 +545,43 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return mapNoteParams;
 		}
 
-		// Token: 0x060306D8 RID: 198360 RVA: 0x00B3E1D5 File Offset: 0x00B3C3D5
+		// Token: 0x06024EA7 RID: 151207 RVA: 0x00A6E419 File Offset: 0x00A6C619
 		private IMapNoteParams AddMapNoteDarkCoastDelivery()
 		{
 			return this.AddMapNotePool(EMapNoteId.DarkCoastDelivery, 3);
 		}
 
-		// Token: 0x060306D9 RID: 198361 RVA: 0x00B3E1E0 File Offset: 0x00B3C3E0
+		// Token: 0x06024EA8 RID: 151208 RVA: 0x00A6E424 File Offset: 0x00A6C624
 		private IMapNoteParams AddMapNoteMingSu()
 		{
 			return this.AddMapNotePool(EMapNoteId.MingSu, 1);
 		}
 
-		// Token: 0x060306DA RID: 198362 RVA: 0x00B3E1EA File Offset: 0x00B3C3EA
+		// Token: 0x06024EA9 RID: 151209 RVA: 0x00A6E42E File Offset: 0x00A6C62E
 		private IMapNoteParams AddMapNotePupuVillage()
 		{
 			return this.AddMapNotePool(EMapNoteId.PupuVillage, 4);
 		}
 
-		// Token: 0x060306DB RID: 198363 RVA: 0x00B3E1F5 File Offset: 0x00B3C3F5
+		// Token: 0x06024EAA RID: 151210 RVA: 0x00A6E439 File Offset: 0x00A6C639
 		private IMapNoteParams AddmapNotePupuQiQiuVillage()
 		{
 			return this.AddMapNotePool(EMapNoteId.PupuVillageQiQiu, 5);
 		}
 
-		// Token: 0x060306DC RID: 198364 RVA: 0x00B3E200 File Offset: 0x00B3C400
+		// Token: 0x06024EAB RID: 151211 RVA: 0x00A6E444 File Offset: 0x00A6C644
 		private IMapNoteParams AddmapNoteLahailuoShengXia()
 		{
 			return this.AddMapNotePool(EMapNoteId.LahailuoShengXia, 6);
 		}
 
-		// Token: 0x060306DD RID: 198365 RVA: 0x00B3E20B File Offset: 0x00B3C40B
+		// Token: 0x06024EAC RID: 151212 RVA: 0x00A6E44F File Offset: 0x00A6C64F
 		private IMapNoteParams AddMapNoteRiLing()
 		{
 			return this.AddMapNotePool(EMapNoteId.RiLing, 7);
 		}
 
-		// Token: 0x060306DE RID: 198366 RVA: 0x00B3E218 File Offset: 0x00B3C418
+		// Token: 0x06024EAD RID: 151213 RVA: 0x00A6E45C File Offset: 0x00A6C65C
 		private IMapNoteParams AddMapNoteVillageInfr()
 		{
 			MapNote? config = ConfigMapNoteById.GetConfig(19, true);
@@ -606,7 +606,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return null;
 		}
 
-		// Token: 0x060306DF RID: 198367 RVA: 0x00B3E2A8 File Offset: 0x00B3C4A8
+		// Token: 0x06024EAE RID: 151214 RVA: 0x00A6E4EC File Offset: 0x00A6C6EC
 		private IMapNoteParams AddMapNoteVillageInfrTree()
 		{
 			MapNote? config = ConfigMapNoteById.GetConfig(18, true);
@@ -639,7 +639,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return null;
 		}
 
-		// Token: 0x060306E0 RID: 198368 RVA: 0x00B3E3AC File Offset: 0x00B3C5AC
+		// Token: 0x06024EAF RID: 151215 RVA: 0x00A6E5F0 File Offset: 0x00A6C7F0
 		private IMapNoteParams AddMapNoteSheriff()
 		{
 			if (!FunctionModel.Instance.IsOpen(EFunctionType.SheriffAnomaly))
@@ -674,7 +674,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return null;
 		}
 
-		// Token: 0x060306E1 RID: 198369 RVA: 0x00B3E48C File Offset: 0x00B3C68C
+		// Token: 0x06024EB0 RID: 151216 RVA: 0x00A6E6D0 File Offset: 0x00A6C8D0
 		private IMapNoteParams AddMapNoteDollGrabMachine()
 		{
 			MapNote? config = ConfigMapNoteById.GetConfig(21, true);
@@ -715,13 +715,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			};
 		}
 
-		// Token: 0x060306E2 RID: 198370 RVA: 0x00B3E5A3 File Offset: 0x00B3C7A3
+		// Token: 0x06024EB1 RID: 151217 RVA: 0x00A6E7E7 File Offset: 0x00A6C9E7
 		private IMapNoteParams AddMapNoteMengZhou()
 		{
 			return this.AddMapNotePool(EMapNoteId.MengZhou, 8);
 		}
 
-		// Token: 0x060306E3 RID: 198371 RVA: 0x00B3E5B0 File Offset: 0x00B3C7B0
+		// Token: 0x06024EB2 RID: 151218 RVA: 0x00A6E7F4 File Offset: 0x00A6C9F4
 		private IMapNoteParams AddMapNotePool(EMapNoteId mapNoteId, int poolConfigId)
 		{
 			MapNote? config = ConfigMapNoteById.GetConfig((int)mapNoteId, true);
@@ -759,7 +759,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return null;
 		}
 
-		// Token: 0x060306E4 RID: 198372 RVA: 0x00B3E66C File Offset: 0x00B3C86C
+		// Token: 0x06024EB3 RID: 151219 RVA: 0x00A6E8B0 File Offset: 0x00A6CAB0
 		private IMapNoteParams AddMapNoteTowerReward()
 		{
 			MapNote? config = ConfigMapNoteById.GetConfig(3, true);
@@ -784,7 +784,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return null;
 		}
 
-		// Token: 0x060306E5 RID: 198373 RVA: 0x00B3E6EC File Offset: 0x00B3C8EC
+		// Token: 0x06024EB4 RID: 151220 RVA: 0x00A6E930 File Offset: 0x00A6CB30
 		private IMapNoteParams AddMapNoteHuangLongExploreLevelReward()
 		{
 			CountryExploreLevelData countryExploreLevelData = ExploreLevelModel.Instance.GetCountryExploreLevelData(1);
@@ -814,7 +814,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			};
 		}
 
-		// Token: 0x060306E6 RID: 198374 RVA: 0x00B3E778 File Offset: 0x00B3C978
+		// Token: 0x06024EB5 RID: 151221 RVA: 0x00A6E9BC File Offset: 0x00A6CBBC
 		private IMapNoteParams AddMapNoteLordGym()
 		{
 			int canFightLordGym = LordGymModel.Instance.GetCanFightLordGym(false);
@@ -841,7 +841,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			};
 		}
 
-		// Token: 0x060306E7 RID: 198375 RVA: 0x00B3E7F8 File Offset: 0x00B3C9F8
+		// Token: 0x06024EB6 RID: 151222 RVA: 0x00A6EA3C File Offset: 0x00A6CC3C
 		private IMapNoteParams AddMapNoteNewLordGym()
 		{
 			MapNote? config = ConfigMapNoteById.GetConfig(11, true);
@@ -895,7 +895,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			};
 		}
 
-		// Token: 0x060306E8 RID: 198376 RVA: 0x00B3E958 File Offset: 0x00B3CB58
+		// Token: 0x06024EB7 RID: 151223 RVA: 0x00A6EB9C File Offset: 0x00A6CD9C
 		private IMapNoteParams AddMapNoteWorldLevel()
 		{
 			ExploreInfoItem.<>c__DisplayClass60_0 CS$<>8__locals1 = new ExploreInfoItem.<>c__DisplayClass60_0();
@@ -935,7 +935,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return null;
 		}
 
-		// Token: 0x060306E9 RID: 198377 RVA: 0x00B3EA28 File Offset: 0x00B3CC28
+		// Token: 0x06024EB8 RID: 151224 RVA: 0x00A6EC6C File Offset: 0x00A6CE6C
 		[NullableContext(1)]
 		private void AddMapNote(IMapNoteParams mapNoteParam, int index)
 		{
@@ -950,7 +950,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			worldMapNoteItem.UpdateNoteItem((int)mapNoteParam.MapNoteId, mapNoteParam.ClickCallBack, mapNoteParam.MapMarkId, mapNoteParam.CustomDesc);
 		}
 
-		// Token: 0x060306EA RID: 198378 RVA: 0x00B3EACC File Offset: 0x00B3CCCC
+		// Token: 0x06024EB9 RID: 151225 RVA: 0x00A6ED10 File Offset: 0x00A6CF10
 		public void DestroyMapNotes()
 		{
 			foreach (WorldMapNoteItem worldMapNoteItem in this.MapNoteArray)
@@ -960,7 +960,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.MapNoteArray.Clear();
 		}
 
-		// Token: 0x060306EB RID: 198379 RVA: 0x00B3EB28 File Offset: 0x00B3CD28
+		// Token: 0x06024EBA RID: 151226 RVA: 0x00A6ED6C File Offset: 0x00A6CF6C
 		public void DestroyMapPlayPoints()
 		{
 			foreach (WorldMapPlayPointItem worldMapPlayPointItem in this.MapPlayPointArray)
@@ -970,7 +970,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.MapPlayPointArray.Clear();
 		}
 
-		// Token: 0x060306EC RID: 198380 RVA: 0x00B3EB84 File Offset: 0x00B3CD84
+		// Token: 0x06024EBB RID: 151227 RVA: 0x00A6EDC8 File Offset: 0x00A6CFC8
 		public void SetMapNotesState(bool bIsShow)
 		{
 			if (bIsShow == this.IsMapNotesShowInternal)
@@ -981,7 +981,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			base.GetItem(0).SetUIActive(bIsShow);
 		}
 
-		// Token: 0x060306ED RID: 198381 RVA: 0x00B3EBA4 File Offset: 0x00B3CDA4
+		// Token: 0x06024EBC RID: 151228 RVA: 0x00A6EDE8 File Offset: 0x00A6CFE8
 		private void OnTaskTagBtnClick()
 		{
 			Action<Action, bool> onClickTaskTagBtnCb = this.OnClickTaskTagBtnCb;
@@ -1005,19 +1005,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			}, false);
 		}
 
-		// Token: 0x060306EE RID: 198382 RVA: 0x00B3EBC3 File Offset: 0x00B3CDC3
+		// Token: 0x06024EBD RID: 151229 RVA: 0x00A6EE07 File Offset: 0x00A6D007
 		public void SetWorldMapSelfShow(EWorldMapShowMode showMode)
 		{
 			this.ShowMode = showMode;
 		}
 
-		// Token: 0x060306EF RID: 198383 RVA: 0x00B3EBCC File Offset: 0x00B3CDCC
+		// Token: 0x06024EBE RID: 151230 RVA: 0x00A6EE10 File Offset: 0x00A6D010
 		public void RefreshWorldMapSelfShow(EWorldMapShowMode showMode)
 		{
 			this.RefreshSelfCanShow();
 		}
 
-		// Token: 0x060306F0 RID: 198384 RVA: 0x00B3EBD4 File Offset: 0x00B3CDD4
+		// Token: 0x06024EBF RID: 151231 RVA: 0x00A6EE18 File Offset: 0x00A6D018
 		public void UpdateAreaProgress()
 		{
 			int worldMapLevelOneAreaId = MapUtil.GetWorldMapLevelOneAreaId();
@@ -1031,13 +1031,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.ExploreItem.Update(worldMapLevelOneAreaId);
 		}
 
-		// Token: 0x060306F1 RID: 198385 RVA: 0x00B3EC16 File Offset: 0x00B3CE16
+		// Token: 0x06024EC0 RID: 151232 RVA: 0x00A6EE5A File Offset: 0x00A6D05A
 		private void RefreshSelfCanShow()
 		{
 			base.SetUiActive(this.ShowMode == EWorldMapShowMode.Default);
 		}
 
-		// Token: 0x060306F3 RID: 198387 RVA: 0x00B3EC50 File Offset: 0x00B3CE50
+		// Token: 0x06024EC2 RID: 151234 RVA: 0x00A6EE94 File Offset: 0x00A6D094
 		[CompilerGenerated]
 		private void <AddMapNoteSheriff>g__openSheriffMap|52_0(int markId)
 		{
@@ -1052,56 +1052,56 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			}, false);
 		}
 
-		// Token: 0x0401A064 RID: 106596
+		// Token: 0x04014718 RID: 83736
 		[Nullable(1)]
 		public readonly ExploreItem ExploreItem = new ExploreItem();
 
-		// Token: 0x0401A065 RID: 106597
+		// Token: 0x04014719 RID: 83737
 		[Nullable(1)]
 		private readonly List<WorldMapNoteItem> MapNoteArray = new List<WorldMapNoteItem>();
 
-		// Token: 0x0401A066 RID: 106598
+		// Token: 0x0401471A RID: 83738
 		[Nullable(1)]
 		private readonly List<WorldMapPlayPointItem> MapPlayPointArray = new List<WorldMapPlayPointItem>();
 
-		// Token: 0x0401A067 RID: 106599
+		// Token: 0x0401471B RID: 83739
 		protected WorldMapUiEntity WorldMapUiEntity;
 
-		// Token: 0x0401A069 RID: 106601
+		// Token: 0x0401471D RID: 83741
 		private bool BtnTaskNewTag;
 
-		// Token: 0x0401A06A RID: 106602
+		// Token: 0x0401471E RID: 83742
 		private bool IsMapNotesShowInternal;
 
-		// Token: 0x0401A06B RID: 106603
+		// Token: 0x0401471F RID: 83743
 		private UUIItem ParentView;
 
-		// Token: 0x0401A06C RID: 106604
+		// Token: 0x04014720 RID: 83744
 		private Action<Action, bool> OnClickTaskTagBtnCb;
 
-		// Token: 0x0200AB29 RID: 43817
+		// Token: 0x020094D7 RID: 38103
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04034039 RID: 213049
+			// Token: 0x0402E7B3 RID: 190387
 			public const int MapNoteParent = 0;
 
-			// Token: 0x0403403A RID: 213050
+			// Token: 0x0402E7B4 RID: 190388
 			public const int NoteItem = 1;
 
-			// Token: 0x0403403B RID: 213051
+			// Token: 0x0402E7B5 RID: 190389
 			public const int ExploreItem = 2;
 
-			// Token: 0x0403403C RID: 213052
+			// Token: 0x0402E7B6 RID: 190390
 			public const int BtnTaskTag = 3;
 
-			// Token: 0x0403403D RID: 213053
+			// Token: 0x0402E7B7 RID: 190391
 			public const int ItemExplorePlay = 4;
 
-			// Token: 0x0403403E RID: 213054
+			// Token: 0x0402E7B8 RID: 190392
 			public const int ItemRedDotTaskTag = 5;
 
-			// Token: 0x0403403F RID: 213055
+			// Token: 0x0402E7B9 RID: 190393
 			public const int PanelTipRedDot = 6;
 		}
 	}

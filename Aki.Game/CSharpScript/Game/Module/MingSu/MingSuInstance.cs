@@ -5,12 +5,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.MingSu
 {
-	// Token: 0x020053CF RID: 21455
+	// Token: 0x020043B2 RID: 17330
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MingSuInstance
 	{
-		// Token: 0x06036D48 RID: 224584 RVA: 0x00CFC8BC File Offset: 0x00CFAABC
+		// Token: 0x0602BC8F RID: 179343 RVA: 0x00C4B988 File Offset: 0x00C49B88
 		public MingSuInstance(int id)
 		{
 			this.DragonPoolId = id;
@@ -20,50 +20,50 @@ namespace CSharpScript.Game.Module.MingSu
 			this.HadCoreCount = 0;
 		}
 
-		// Token: 0x06036D49 RID: 224585 RVA: 0x00CFC8F2 File Offset: 0x00CFAAF2
+		// Token: 0x0602BC90 RID: 179344 RVA: 0x00C4B9BE File Offset: 0x00C49BBE
 		public virtual void SetDragonPoolLevel(int level)
 		{
 			this.DragonPoolLevel = level;
 		}
 
-		// Token: 0x06036D4A RID: 224586 RVA: 0x00CFC8FB File Offset: 0x00CFAAFB
+		// Token: 0x0602BC91 RID: 179345 RVA: 0x00C4B9C7 File Offset: 0x00C49BC7
 		public int GetDragonPoolLevel()
 		{
 			return this.DragonPoolLevel;
 		}
 
-		// Token: 0x06036D4B RID: 224587 RVA: 0x00CFC904 File Offset: 0x00CFAB04
+		// Token: 0x0602BC92 RID: 179346 RVA: 0x00C4B9D0 File Offset: 0x00C49BD0
 		public void SetDragonPoolState(int finishedLevel)
 		{
 			int dragonPoolMaxLevel = this.GetDragonPoolMaxLevel();
 			this.DragonPoolState = ((finishedLevel >= dragonPoolMaxLevel) ? 2 : 1);
 		}
 
-		// Token: 0x06036D4C RID: 224588 RVA: 0x00CFC926 File Offset: 0x00CFAB26
+		// Token: 0x0602BC93 RID: 179347 RVA: 0x00C4B9F2 File Offset: 0x00C49BF2
 		public int GetDragonPoolState()
 		{
 			return this.DragonPoolState;
 		}
 
-		// Token: 0x06036D4D RID: 224589 RVA: 0x00CFC92E File Offset: 0x00CFAB2E
+		// Token: 0x0602BC94 RID: 179348 RVA: 0x00C4B9FA File Offset: 0x00C49BFA
 		public void SetHadCoreCount(int count)
 		{
 			this.HadCoreCount = count;
 		}
 
-		// Token: 0x06036D4E RID: 224590 RVA: 0x00CFC937 File Offset: 0x00CFAB37
+		// Token: 0x0602BC95 RID: 179349 RVA: 0x00C4BA03 File Offset: 0x00C49C03
 		public int GetHadCoreCount()
 		{
 			return this.HadCoreCount;
 		}
 
-		// Token: 0x06036D4F RID: 224591 RVA: 0x00CFC940 File Offset: 0x00CFAB40
+		// Token: 0x0602BC96 RID: 179350 RVA: 0x00C4BA0C File Offset: 0x00C49C0C
 		public int GetDragonPoolMaxLevel()
 		{
 			return this.DragonPoolConfig.Value.GetGoalArray().Length;
 		}
 
-		// Token: 0x06036D50 RID: 224592 RVA: 0x00CFC964 File Offset: 0x00CFAB64
+		// Token: 0x0602BC97 RID: 179351 RVA: 0x00C4BA30 File Offset: 0x00C49C30
 		public int GetNeedCoreCount(int level)
 		{
 			int[] goalArray = this.DragonPoolConfig.Value.GetGoalArray();
@@ -74,42 +74,42 @@ namespace CSharpScript.Game.Module.MingSu
 			return goalArray[level];
 		}
 
-		// Token: 0x06036D51 RID: 224593 RVA: 0x00CFC990 File Offset: 0x00CFAB90
+		// Token: 0x0602BC98 RID: 179352 RVA: 0x00C4BA5C File Offset: 0x00C49C5C
 		public bool IsMaxLevel()
 		{
 			return this.GetDragonPoolLevel() >= this.GetDragonPoolMaxLevel();
 		}
 
-		// Token: 0x06036D52 RID: 224594 RVA: 0x00CFC9A4 File Offset: 0x00CFABA4
+		// Token: 0x0602BC99 RID: 179353 RVA: 0x00C4BA70 File Offset: 0x00C49C70
 		public int[] GetGoalList()
 		{
 			return this.DragonPoolConfig.Value.GetGoalArray();
 		}
 
-		// Token: 0x06036D53 RID: 224595 RVA: 0x00CFC9C4 File Offset: 0x00CFABC4
+		// Token: 0x0602BC9A RID: 179354 RVA: 0x00C4BA90 File Offset: 0x00C49C90
 		public int GetRewardId(int level)
 		{
 			return this.DragonPoolConfig.Value.GetDropIdsArray()[level];
 		}
 
-		// Token: 0x06036D54 RID: 224596 RVA: 0x00CFC9E8 File Offset: 0x00CFABE8
+		// Token: 0x0602BC9B RID: 179355 RVA: 0x00C4BAB4 File Offset: 0x00C49CB4
 		public int GetCoreId()
 		{
 			return this.DragonPoolConfig.Value.CoreId;
 		}
 
-		// Token: 0x06036D55 RID: 224597 RVA: 0x00CFCA08 File Offset: 0x00CFAC08
+		// Token: 0x0602BC9C RID: 179356 RVA: 0x00C4BAD4 File Offset: 0x00C49CD4
 		public virtual void SetLevelGainList(int levelGain)
 		{
 		}
 
-		// Token: 0x06036D56 RID: 224598 RVA: 0x00CFCA0A File Offset: 0x00CFAC0A
+		// Token: 0x0602BC9D RID: 179357 RVA: 0x00C4BAD6 File Offset: 0x00C49CD6
 		public void SetDropItemList(ItemDict[] items)
 		{
 			this.DropItemList = items;
 		}
 
-		// Token: 0x06036D57 RID: 224599 RVA: 0x00CFCA13 File Offset: 0x00CFAC13
+		// Token: 0x0602BC9E RID: 179358 RVA: 0x00C4BADF File Offset: 0x00C49CDF
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -120,19 +120,19 @@ namespace CSharpScript.Game.Module.MingSu
 			return this.DropItemList;
 		}
 
-		// Token: 0x0401CF1A RID: 118554
+		// Token: 0x040179B2 RID: 96690
 		public readonly int DragonPoolId;
 
-		// Token: 0x0401CF1B RID: 118555
+		// Token: 0x040179B3 RID: 96691
 		protected int DragonPoolState;
 
-		// Token: 0x0401CF1C RID: 118556
+		// Token: 0x040179B4 RID: 96692
 		protected int DragonPoolLevel;
 
-		// Token: 0x0401CF1D RID: 118557
+		// Token: 0x040179B5 RID: 96693
 		protected int HadCoreCount;
 
-		// Token: 0x0401CF1E RID: 118558
+		// Token: 0x040179B6 RID: 96694
 		[Nullable(new byte[]
 		{
 			2,
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.MingSu
 		})]
 		protected ItemDict[] DropItemList;
 
-		// Token: 0x0401CF1F RID: 118559
+		// Token: 0x040179B7 RID: 96695
 		protected readonly DragonPool? DragonPoolConfig;
 	}
 }

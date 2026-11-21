@@ -3,49 +3,49 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005580 RID: 21888
+	// Token: 0x02004553 RID: 17747
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapTeleportQueryInfo
 	{
-		// Token: 0x17008642 RID: 34370
-		// (get) Token: 0x06037C90 RID: 228496 RVA: 0x00D39364 File Offset: 0x00D37564
-		// (set) Token: 0x06037C91 RID: 228497 RVA: 0x00D3936C File Offset: 0x00D3756C
+		// Token: 0x170059EB RID: 23019
+		// (get) Token: 0x0602CB6A RID: 183146 RVA: 0x00C86E38 File Offset: 0x00C85038
+		// (set) Token: 0x0602CB6B RID: 183147 RVA: 0x00C86E40 File Offset: 0x00C85040
 		public int MarkId { get; set; }
 
-		// Token: 0x17008643 RID: 34371
-		// (get) Token: 0x06037C92 RID: 228498 RVA: 0x00D39375 File Offset: 0x00D37575
-		// (set) Token: 0x06037C93 RID: 228499 RVA: 0x00D3937D File Offset: 0x00D3757D
+		// Token: 0x170059EC RID: 23020
+		// (get) Token: 0x0602CB6C RID: 183148 RVA: 0x00C86E49 File Offset: 0x00C85049
+		// (set) Token: 0x0602CB6D RID: 183149 RVA: 0x00C86E51 File Offset: 0x00C85051
 		public EMarkType MarkType { get; set; }
 
-		// Token: 0x17008644 RID: 34372
-		// (get) Token: 0x06037C94 RID: 228500 RVA: 0x00D39386 File Offset: 0x00D37586
-		// (set) Token: 0x06037C95 RID: 228501 RVA: 0x00D3938E File Offset: 0x00D3758E
+		// Token: 0x170059ED RID: 23021
+		// (get) Token: 0x0602CB6E RID: 183150 RVA: 0x00C86E5A File Offset: 0x00C8505A
+		// (set) Token: 0x0602CB6F RID: 183151 RVA: 0x00C86E62 File Offset: 0x00C85062
 		public int MapId { get; set; }
 
-		// Token: 0x17008645 RID: 34373
-		// (get) Token: 0x06037C96 RID: 228502 RVA: 0x00D39397 File Offset: 0x00D37597
-		// (set) Token: 0x06037C97 RID: 228503 RVA: 0x00D3939F File Offset: 0x00D3759F
+		// Token: 0x170059EE RID: 23022
+		// (get) Token: 0x0602CB70 RID: 183152 RVA: 0x00C86E6B File Offset: 0x00C8506B
+		// (set) Token: 0x0602CB71 RID: 183153 RVA: 0x00C86E73 File Offset: 0x00C85073
 		public int InstanceDungeonId { get; set; }
 
-		// Token: 0x17008646 RID: 34374
-		// (get) Token: 0x06037C98 RID: 228504 RVA: 0x00D393A8 File Offset: 0x00D375A8
-		// (set) Token: 0x06037C99 RID: 228505 RVA: 0x00D393B0 File Offset: 0x00D375B0
+		// Token: 0x170059EF RID: 23023
+		// (get) Token: 0x0602CB72 RID: 183154 RVA: 0x00C86E7C File Offset: 0x00C8507C
+		// (set) Token: 0x0602CB73 RID: 183155 RVA: 0x00C86E84 File Offset: 0x00C85084
 		public EMapGravityDirection Gravity { get; set; }
 
-		// Token: 0x17008647 RID: 34375
-		// (get) Token: 0x06037C9A RID: 228506 RVA: 0x00D393B9 File Offset: 0x00D375B9
-		// (set) Token: 0x06037C9B RID: 228507 RVA: 0x00D393C1 File Offset: 0x00D375C1
+		// Token: 0x170059F0 RID: 23024
+		// (get) Token: 0x0602CB74 RID: 183156 RVA: 0x00C86E8D File Offset: 0x00C8508D
+		// (set) Token: 0x0602CB75 RID: 183157 RVA: 0x00C86E95 File Offset: 0x00C85095
 		public int MultiMapId { get; set; }
 
-		// Token: 0x17008648 RID: 34376
-		// (get) Token: 0x06037C9C RID: 228508 RVA: 0x00D393CA File Offset: 0x00D375CA
-		// (set) Token: 0x06037C9D RID: 228509 RVA: 0x00D393D2 File Offset: 0x00D375D2
+		// Token: 0x170059F1 RID: 23025
+		// (get) Token: 0x0602CB76 RID: 183158 RVA: 0x00C86E9E File Offset: 0x00C8509E
+		// (set) Token: 0x0602CB77 RID: 183159 RVA: 0x00C86EA6 File Offset: 0x00C850A6
 		public int[] ConnectMultiMapIds { get; set; } = Array.Empty<int>();
 
-		// Token: 0x17008649 RID: 34377
-		// (get) Token: 0x06037C9E RID: 228510 RVA: 0x00D393DB File Offset: 0x00D375DB
-		// (set) Token: 0x06037C9F RID: 228511 RVA: 0x00D393E3 File Offset: 0x00D375E3
+		// Token: 0x170059F2 RID: 23026
+		// (get) Token: 0x0602CB78 RID: 183160 RVA: 0x00C86EAF File Offset: 0x00C850AF
+		// (set) Token: 0x0602CB79 RID: 183161 RVA: 0x00C86EB7 File Offset: 0x00C850B7
 		public Vector WorldPosition { get; set; }
 	}
 }

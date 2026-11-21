@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D66 RID: 23910
+	// Token: 0x02004D48 RID: 19784
 	public class BattleDefendCreatureView : BattleEntityChildView
 	{
-		// Token: 0x0603CB50 RID: 248656 RVA: 0x00E93764 File Offset: 0x00E91964
+		// Token: 0x06031AAC RID: 203436 RVA: 0x00DE3FAC File Offset: 0x00DE21AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CB51 RID: 248657 RVA: 0x00E93854 File Offset: 0x00E91A54
+		// Token: 0x06031AAD RID: 203437 RVA: 0x00DE409C File Offset: 0x00DE229C
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -43,21 +43,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetHpPercentageText(1f);
 		}
 
-		// Token: 0x0603CB52 RID: 248658 RVA: 0x00E938A8 File Offset: 0x00E91AA8
+		// Token: 0x06031AAE RID: 203438 RVA: 0x00DE40F0 File Offset: 0x00DE22F0
 		[NullableContext(1)]
 		protected override void AddEntityEvents(Entity entity)
 		{
 			base.ListenForAttributeChanged(entity, EAttributeType.Life, new Action<EAttributeType, float, float>(this.OnDefendCreatureHealthChanged));
 		}
 
-		// Token: 0x0603CB53 RID: 248659 RVA: 0x00E938C0 File Offset: 0x00E91AC0
+		// Token: 0x06031AAF RID: 203439 RVA: 0x00DE4108 File Offset: 0x00DE2308
 		private void SetHpPercentageText(float percentage)
 		{
 			string str = (percentage * 100f).ToString("F0");
 			LguiUtil.Instance.SetLocalText(base.GetText(1), "InstanceDungeonDefendCreatureNumber", new <>z__ReadOnlySingleElementList<object>(str + "%"));
 		}
 
-		// Token: 0x0603CB54 RID: 248660 RVA: 0x00E93908 File Offset: 0x00E91B08
+		// Token: 0x06031AB0 RID: 203440 RVA: 0x00DE4150 File Offset: 0x00DE2350
 		private void OnDefendCreatureHealthChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			if (!this.IsValid())
@@ -71,20 +71,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetHpPercentageText(hpPercentageText);
 		}
 
-		// Token: 0x0200C017 RID: 49175
+		// Token: 0x0200AA1D RID: 43549
 		private enum EChildComponentType
 		{
-			// Token: 0x04039F6D RID: 237421
+			// Token: 0x04034930 RID: 215344
 			TextDescription,
-			// Token: 0x04039F6E RID: 237422
+			// Token: 0x04034931 RID: 215345
 			TextProgress,
-			// Token: 0x04039F6F RID: 237423
+			// Token: 0x04034932 RID: 215346
 			TextAddProgress,
-			// Token: 0x04039F70 RID: 237424
+			// Token: 0x04034933 RID: 215347
 			SpriteYes,
-			// Token: 0x04039F71 RID: 237425
+			// Token: 0x04034934 RID: 215348
 			SpriteNo,
-			// Token: 0x04039F72 RID: 237426
+			// Token: 0x04034935 RID: 215349
 			PanelState
 		}
 	}

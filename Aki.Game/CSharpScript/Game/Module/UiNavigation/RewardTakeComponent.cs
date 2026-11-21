@@ -6,23 +6,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049BA RID: 18874
+	// Token: 0x02003934 RID: 14644
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardTakeComponent : HotKeyComponent
 	{
-		// Token: 0x060311B9 RID: 201145 RVA: 0x00B64B20 File Offset: 0x00B62D20
+		// Token: 0x06025CEF RID: 154863 RVA: 0x00A9FA70 File Offset: 0x00A9DC70
 		public RewardTakeComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311BA RID: 201146 RVA: 0x00B64B2C File Offset: 0x00B62D2C
-		public override void SetDataCallback(Func<object> callback)
+		// Token: 0x06025CF0 RID: 154864 RVA: 0x00A9FA7C File Offset: 0x00A9DC7C
+		public void SetDataCallback(Func<object> callback)
 		{
 			this.LastNotTakenFunc = (() => (int)callback());
 		}
 
-		// Token: 0x060311BB RID: 201147 RVA: 0x00B64B58 File Offset: 0x00B62D58
+		// Token: 0x06025CF1 RID: 154865 RVA: 0x00A9FAA8 File Offset: 0x00A9DCA8
 		protected override void OnPress(HotKeyMap config)
 		{
 			if (this.Listener != null)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x060311BC RID: 201148 RVA: 0x00B64B9C File Offset: 0x00B62D9C
+		// Token: 0x06025CF2 RID: 154866 RVA: 0x00A9FAEC File Offset: 0x00A9DCEC
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			string bindButtonTag = base.GetBindButtonTag();
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, this.IndexReward == num, false);
 		}
 
-		// Token: 0x060311BD RID: 201149 RVA: 0x00B64C5C File Offset: 0x00B62E5C
+		// Token: 0x06025CF3 RID: 154867 RVA: 0x00A9FBAC File Offset: 0x00A9DDAC
 		protected override void OnClear()
 		{
 			base.OnClear();
@@ -79,14 +79,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.Listener = null;
 		}
 
-		// Token: 0x0401A4BD RID: 107709
+		// Token: 0x04014D2F RID: 85295
 		private int IndexReward;
 
-		// Token: 0x0401A4BE RID: 107710
+		// Token: 0x04014D30 RID: 85296
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener Listener;
 
-		// Token: 0x0401A4BF RID: 107711
+		// Token: 0x04014D31 RID: 85297
 		[Nullable(2)]
 		private RewardTakeDataCallback LastNotTakenFunc;
 	}

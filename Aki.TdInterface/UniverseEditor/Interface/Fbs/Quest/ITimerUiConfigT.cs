@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041DF RID: 16863
+	// Token: 0x02004638 RID: 17976
 	public class ITimerUiConfigT
 	{
-		// Token: 0x1700779E RID: 30622
-		// (get) Token: 0x06018DBA RID: 101818 RVA: 0x00393ACF File Offset: 0x00391CCF
-		// (set) Token: 0x06018DBB RID: 101819 RVA: 0x00393AD7 File Offset: 0x00391CD7
+		// Token: 0x17007DCA RID: 32202
+		// (get) Token: 0x0601A510 RID: 107792 RVA: 0x003BEF23 File Offset: 0x003BD123
+		// (set) Token: 0x0601A511 RID: 107793 RVA: 0x003BEF2B File Offset: 0x003BD12B
 		public ETimerUiType UiType { get; set; }
 
-		// Token: 0x1700779F RID: 30623
-		// (get) Token: 0x06018DBC RID: 101820 RVA: 0x00393AE0 File Offset: 0x00391CE0
-		// (set) Token: 0x06018DBD RID: 101821 RVA: 0x00393AE8 File Offset: 0x00391CE8
+		// Token: 0x17007DCB RID: 32203
+		// (get) Token: 0x0601A512 RID: 107794 RVA: 0x003BEF34 File Offset: 0x003BD134
+		// (set) Token: 0x0601A513 RID: 107795 RVA: 0x003BEF3C File Offset: 0x003BD13C
 		public string TidTitle { get; set; }
 
-		// Token: 0x06018DBE RID: 101822 RVA: 0x00393AF1 File Offset: 0x00391CF1
+		// Token: 0x0601A514 RID: 107796 RVA: 0x003BEF45 File Offset: 0x003BD145
 		public ITimerUiConfigT()
 		{
 			this.UiType = ETimerUiType.Default;

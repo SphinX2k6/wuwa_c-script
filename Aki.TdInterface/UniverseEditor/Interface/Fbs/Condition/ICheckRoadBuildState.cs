@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B0B RID: 19211
+	// Token: 0x02004FF2 RID: 20466
 	public struct ICheckRoadBuildState : IFlatbufferObject
 	{
-		// Token: 0x17008B5B RID: 35675
-		// (get) Token: 0x0601E362 RID: 123746 RVA: 0x0043C800 File Offset: 0x0043AA00
+		// Token: 0x1700926B RID: 37483
+		// (get) Token: 0x0601FEED RID: 130797 RVA: 0x0046EFAC File Offset: 0x0046D1AC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E363 RID: 123747 RVA: 0x0043C80D File Offset: 0x0043AA0D
+		// Token: 0x0601FEEE RID: 130798 RVA: 0x0046EFB9 File Offset: 0x0046D1B9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E364 RID: 123748 RVA: 0x0043C814 File Offset: 0x0043AA14
+		// Token: 0x0601FEEF RID: 130799 RVA: 0x0046EFC0 File Offset: 0x0046D1C0
 		public static ICheckRoadBuildState GetRootAsICheckRoadBuildState(ByteBuffer _bb)
 		{
 			return ICheckRoadBuildState.GetRootAsICheckRoadBuildState(_bb, default(ICheckRoadBuildState));
 		}
 
-		// Token: 0x0601E365 RID: 123749 RVA: 0x0043C830 File Offset: 0x0043AA30
+		// Token: 0x0601FEF0 RID: 130800 RVA: 0x0046EFDC File Offset: 0x0046D1DC
 		public static ICheckRoadBuildState GetRootAsICheckRoadBuildState(ByteBuffer _bb, ICheckRoadBuildState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E366 RID: 123750 RVA: 0x0043C84D File Offset: 0x0043AA4D
+		// Token: 0x0601FEF1 RID: 130801 RVA: 0x0046EFF9 File Offset: 0x0046D1F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E367 RID: 123751 RVA: 0x0043C85C File Offset: 0x0043AA5C
+		// Token: 0x0601FEF2 RID: 130802 RVA: 0x0046F008 File Offset: 0x0046D208
 		public ICheckRoadBuildState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B5C RID: 35676
-		// (get) Token: 0x0601E368 RID: 123752 RVA: 0x0043C86C File Offset: 0x0043AA6C
+		// Token: 0x1700926C RID: 37484
+		// (get) Token: 0x0601FEF3 RID: 130803 RVA: 0x0046F018 File Offset: 0x0046D218
 		public ECheckSystemStateType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B5D RID: 35677
-		// (get) Token: 0x0601E369 RID: 123753 RVA: 0x0043C8A8 File Offset: 0x0043AAA8
+		// Token: 0x1700926D RID: 37485
+		// (get) Token: 0x0601FEF4 RID: 130804 RVA: 0x0046F054 File Offset: 0x0046D254
 		public int RoadId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B5E RID: 35678
-		// (get) Token: 0x0601E36A RID: 123754 RVA: 0x0043C8E4 File Offset: 0x0043AAE4
+		// Token: 0x1700926E RID: 37486
+		// (get) Token: 0x0601FEF5 RID: 130805 RVA: 0x0046F090 File Offset: 0x0046D290
 		public bool IsBuilt
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E36B RID: 123755 RVA: 0x0043C923 File Offset: 0x0043AB23
+		// Token: 0x0601FEF6 RID: 130806 RVA: 0x0046F0CF File Offset: 0x0046D2CF
 		public static Offset<ICheckRoadBuildState> CreateICheckRoadBuildState(FlatBufferBuilder builder, ECheckSystemStateType Type = ECheckSystemStateType.TrackMoonBuilding, int RoadId = 0, bool IsBuilt = false)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckRoadBuildState.EndICheckRoadBuildState(builder);
 		}
 
-		// Token: 0x0601E36C RID: 123756 RVA: 0x0043C947 File Offset: 0x0043AB47
+		// Token: 0x0601FEF7 RID: 130807 RVA: 0x0046F0F3 File Offset: 0x0046D2F3
 		public static void StartICheckRoadBuildState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E36D RID: 123757 RVA: 0x0043C950 File Offset: 0x0043AB50
+		// Token: 0x0601FEF8 RID: 130808 RVA: 0x0046F0FC File Offset: 0x0046D2FC
 		public static void AddType(FlatBufferBuilder builder, ECheckSystemStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E36E RID: 123758 RVA: 0x0043C95B File Offset: 0x0043AB5B
+		// Token: 0x0601FEF9 RID: 130809 RVA: 0x0046F107 File Offset: 0x0046D307
 		public static void AddRoadId(FlatBufferBuilder builder, int roadId)
 		{
 			builder.AddInt(1, roadId, 0);
 		}
 
-		// Token: 0x0601E36F RID: 123759 RVA: 0x0043C966 File Offset: 0x0043AB66
+		// Token: 0x0601FEFA RID: 130810 RVA: 0x0046F112 File Offset: 0x0046D312
 		public static void AddIsBuilt(FlatBufferBuilder builder, bool isBuilt)
 		{
 			builder.AddBool(2, isBuilt, false);
 		}
 
-		// Token: 0x0601E370 RID: 123760 RVA: 0x0043C971 File Offset: 0x0043AB71
+		// Token: 0x0601FEFB RID: 130811 RVA: 0x0046F11D File Offset: 0x0046D31D
 		public static Offset<ICheckRoadBuildState> EndICheckRoadBuildState(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckRoadBuildState>(builder.EndTable());
 		}
 
-		// Token: 0x0601E371 RID: 123761 RVA: 0x0043C980 File Offset: 0x0043AB80
+		// Token: 0x0601FEFC RID: 130812 RVA: 0x0046F12C File Offset: 0x0046D32C
 		public ICheckRoadBuildStateT UnPack()
 		{
 			ICheckRoadBuildStateT checkRoadBuildStateT = new ICheckRoadBuildStateT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkRoadBuildStateT;
 		}
 
-		// Token: 0x0601E372 RID: 123762 RVA: 0x0043C99B File Offset: 0x0043AB9B
+		// Token: 0x0601FEFD RID: 130813 RVA: 0x0046F147 File Offset: 0x0046D347
 		public void UnPackTo(ICheckRoadBuildStateT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.IsBuilt = this.IsBuilt;
 		}
 
-		// Token: 0x0601E373 RID: 123763 RVA: 0x0043C9C4 File Offset: 0x0043ABC4
+		// Token: 0x0601FEFE RID: 130814 RVA: 0x0046F170 File Offset: 0x0046D370
 		public static Offset<ICheckRoadBuildState> Pack(FlatBufferBuilder builder, ICheckRoadBuildStateT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckRoadBuildState.CreateICheckRoadBuildState(builder, _o.Type, _o.RoadId, _o.IsBuilt);
 		}
 
-		// Token: 0x0400D3A6 RID: 54182
+		// Token: 0x0400DEA5 RID: 56997
 		private Table __p;
 	}
 }

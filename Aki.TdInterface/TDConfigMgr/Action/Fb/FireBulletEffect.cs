@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026B4 RID: 9908
+	// Token: 0x02002977 RID: 10615
 	public class FireBulletEffect : ActionParams
 	{
-		// Token: 0x0600DDAD RID: 56749 RVA: 0x0020EB4A File Offset: 0x0020CD4A
-		[NullableContext(1)]
+		// Token: 0x0600EB84 RID: 60292 RVA: 0x0022B2EA File Offset: 0x002294EA
 		public static FireBulletEffect Create(IFireBulletEffect? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004207 RID: 16903
-		// (get) Token: 0x0600DDAE RID: 56750 RVA: 0x0020EB69 File Offset: 0x0020CD69
+		// Token: 0x17004544 RID: 17732
+		// (get) Token: 0x0600EB85 RID: 60293 RVA: 0x0022B309 File Offset: 0x00229509
 		public virtual int Id
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004208 RID: 16904
-		// (get) Token: 0x0600DDAF RID: 56751 RVA: 0x0020EB76 File Offset: 0x0020CD76
+		// Token: 0x17004545 RID: 17733
+		// (get) Token: 0x0600EB86 RID: 60294 RVA: 0x0022B316 File Offset: 0x00229516
 		public virtual int X
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004209 RID: 16905
-		// (get) Token: 0x0600DDB0 RID: 56752 RVA: 0x0020EB83 File Offset: 0x0020CD83
+		// Token: 0x17004546 RID: 17734
+		// (get) Token: 0x0600EB87 RID: 60295 RVA: 0x0022B323 File Offset: 0x00229523
 		public virtual int Y
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700420A RID: 16906
-		// (get) Token: 0x0600DDB1 RID: 56753 RVA: 0x0020EB90 File Offset: 0x0020CD90
+		// Token: 0x17004547 RID: 17735
+		// (get) Token: 0x0600EB88 RID: 60296 RVA: 0x0022B330 File Offset: 0x00229530
 		public virtual int Z
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700420B RID: 16907
-		// (get) Token: 0x0600DDB2 RID: 56754 RVA: 0x0020EBA0 File Offset: 0x0020CDA0
+		// Token: 0x17004548 RID: 17736
+		// (get) Token: 0x0600EB89 RID: 60297 RVA: 0x0022B340 File Offset: 0x00229540
 		public virtual EBulletLauncher? Launcher
 		{
 			get
@@ -75,7 +73,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B16 RID: 31510
+		// Token: 0x040081B3 RID: 33203
 		private IFireBulletEffect Instance;
 	}
 }

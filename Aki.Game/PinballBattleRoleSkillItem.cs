@@ -12,18 +12,18 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CF4 RID: 7412
+// Token: 0x020011B6 RID: 4534
 [NullableContext(2)]
 [Nullable(0)]
 public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 {
-	// Token: 0x0600E082 RID: 57474 RVA: 0x00349E08 File Offset: 0x00348008
+	// Token: 0x0600B49F RID: 46239 RVA: 0x00355830 File Offset: 0x00353A30
 	static PinballBattleRoleSkillItem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PinballBattleRoleSkillItem.CreateStaticDefaultValue), new Action(PinballBattleRoleSkillItem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600E083 RID: 57475 RVA: 0x00349E27 File Offset: 0x00348027
+	// Token: 0x0600B4A0 RID: 46240 RVA: 0x0035584F File Offset: 0x00353A4F
 	public static void CreateStaticDefaultValue()
 	{
 		PinballBattleRoleSkillItem.ChargeBarRange = new float[]
@@ -33,13 +33,13 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0600E084 RID: 57476 RVA: 0x00349E44 File Offset: 0x00348044
+	// Token: 0x0600B4A1 RID: 46241 RVA: 0x0035586C File Offset: 0x00353A6C
 	public static void ResetStaticDefaultValue()
 	{
 		PinballBattleRoleSkillItem.ChargeBarRange = null;
 	}
 
-	// Token: 0x0600E085 RID: 57477 RVA: 0x00349E4C File Offset: 0x0034804C
+	// Token: 0x0600B4A2 RID: 46242 RVA: 0x00355874 File Offset: 0x00353A74
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 18;
@@ -92,7 +92,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600E086 RID: 57478 RVA: 0x0034A10C File Offset: 0x0034830C
+	// Token: 0x0600B4A3 RID: 46243 RVA: 0x00355B34 File Offset: 0x00353D34
 	protected override void OnStart()
 	{
 		this.TexHpBar = base.GetTexture(15);
@@ -102,7 +102,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		EventSystem.Instance.Add<int, bool>(EEventName.OnPinballRoleStateChange, new Action<int, bool>(this.OnRoleStateChange));
 	}
 
-	// Token: 0x0600E087 RID: 57479 RVA: 0x0034A196 File Offset: 0x00348396
+	// Token: 0x0600B4A4 RID: 46244 RVA: 0x00355BBE File Offset: 0x00353DBE
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearDelegate();
@@ -114,7 +114,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		EventSystem.Instance.Remove(EEventName.OnPinballRoleStateChange, new Action<int, bool>(this.OnRoleStateChange));
 	}
 
-	// Token: 0x0600E088 RID: 57480 RVA: 0x0034A1CC File Offset: 0x003483CC
+	// Token: 0x0600B4A5 RID: 46245 RVA: 0x00355BF4 File Offset: 0x00353DF4
 	public void Refresh(int roleId)
 	{
 		this.RoleId = roleId;
@@ -185,7 +185,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		this.RefreshBuff();
 	}
 
-	// Token: 0x0600E089 RID: 57481 RVA: 0x0034A39A File Offset: 0x0034859A
+	// Token: 0x0600B4A6 RID: 46246 RVA: 0x00355DC2 File Offset: 0x00353FC2
 	private void OnRoleStateChange(int roleId, bool isAlive)
 	{
 		if (this.RoleId == roleId)
@@ -194,7 +194,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E08A RID: 57482 RVA: 0x0034A3AC File Offset: 0x003485AC
+	// Token: 0x0600B4A7 RID: 46247 RVA: 0x00355DD4 File Offset: 0x00353FD4
 	private void OnSkillClick()
 	{
 		if (Time.Instance.ServerTimeStamp - this.LastSkillClickTime < 500.0)
@@ -259,20 +259,20 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E08B RID: 57483 RVA: 0x0034A4DF File Offset: 0x003486DF
+	// Token: 0x0600B4A8 RID: 46248 RVA: 0x00355F07 File Offset: 0x00354107
 	public void StartClickCooldown()
 	{
 		this.LastSkillClickTime = Time.Instance.ServerTimeStamp;
 	}
 
-	// Token: 0x0600E08C RID: 57484 RVA: 0x0034A4F1 File Offset: 0x003486F1
+	// Token: 0x0600B4A9 RID: 46249 RVA: 0x00355F19 File Offset: 0x00354119
 	public void ClearDelegate()
 	{
 		this.UnBindAttrDelegate();
 		this.UnBindBuffDelegate();
 	}
 
-	// Token: 0x0600E08D RID: 57485 RVA: 0x0034A500 File Offset: 0x00348700
+	// Token: 0x0600B4AA RID: 46250 RVA: 0x00355F28 File Offset: 0x00354128
 	[NullableContext(1)]
 	public void BindAttrDelegate(UKSC_AttrSet attrSet)
 	{
@@ -303,7 +303,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		ownerAttrSet4.AssignAttrListen(<PinballBattleRoleSkillItem>F84489B893D508BEF487B2C64570D01B6752BE307C8FE69A23023DDF42E28A491__RoleSkillConst.MaxHpType, this.HpDelegate);
 	}
 
-	// Token: 0x0600E08E RID: 57486 RVA: 0x0034A5B8 File Offset: 0x003487B8
+	// Token: 0x0600B4AB RID: 46251 RVA: 0x00355FE0 File Offset: 0x003541E0
 	public void UnBindAttrDelegate()
 	{
 		if (this.OwnerAttrSet == null)
@@ -337,21 +337,21 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		this.OwnerAttrSet = null;
 	}
 
-	// Token: 0x0600E08F RID: 57487 RVA: 0x0034A675 File Offset: 0x00348875
+	// Token: 0x0600B4AC RID: 46252 RVA: 0x0035609D File Offset: 0x0035429D
 	private void OnChargeChange(EKSC_AttrType attrType, int value)
 	{
 		this.UpdateChargeChange();
 		this.RefreshPerformance();
 	}
 
-	// Token: 0x0600E090 RID: 57488 RVA: 0x0034A683 File Offset: 0x00348883
+	// Token: 0x0600B4AD RID: 46253 RVA: 0x003560AB File Offset: 0x003542AB
 	private void OnHpChange(EKSC_AttrType attrType, int value)
 	{
 		this.UpdateHpChange();
 		this.RefreshPerformance();
 	}
 
-	// Token: 0x0600E091 RID: 57489 RVA: 0x0034A694 File Offset: 0x00348894
+	// Token: 0x0600B4AE RID: 46254 RVA: 0x003560BC File Offset: 0x003542BC
 	private void UpdateChargeChange()
 	{
 		UKSC_AttrSet ownerAttrSet = this.OwnerAttrSet;
@@ -403,7 +403,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E092 RID: 57490 RVA: 0x0034A7A4 File Offset: 0x003489A4
+	// Token: 0x0600B4AF RID: 46255 RVA: 0x003561CC File Offset: 0x003543CC
 	private void UpdateHpChange()
 	{
 		UKSC_AttrSet ownerAttrSet = this.OwnerAttrSet;
@@ -440,7 +440,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		texHpBar.SetCustomMaterialScalarParameter(this.NamePercent.Value, (float)valueOrDefault / (float)valueOrDefault2);
 	}
 
-	// Token: 0x0600E093 RID: 57491 RVA: 0x0034A84C File Offset: 0x00348A4C
+	// Token: 0x0600B4B0 RID: 46256 RVA: 0x00356274 File Offset: 0x00354474
 	[NullableContext(1)]
 	private void BindBuffDelegate(UKSC_SkillComp skillComp)
 	{
@@ -471,7 +471,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		skillComp.OnKSCBuffChange.Add(new Action<UKSC_DA_Buff, int>(this.OnBuffChange));
 	}
 
-	// Token: 0x0600E094 RID: 57492 RVA: 0x0034A920 File Offset: 0x00348B20
+	// Token: 0x0600B4B1 RID: 46257 RVA: 0x00356350 File Offset: 0x00354550
 	private void UnBindBuffDelegate()
 	{
 		if (this.OwnerSkillComp == null)
@@ -481,14 +481,14 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		this.OwnerSkillComp.OnKSCBuffChange.Remove(new Action<UKSC_DA_Buff, int>(this.OnBuffChange));
 	}
 
-	// Token: 0x0600E095 RID: 57493 RVA: 0x0034A947 File Offset: 0x00348B47
+	// Token: 0x0600B4B2 RID: 46258 RVA: 0x00356377 File Offset: 0x00354577
 	[NullableContext(1)]
 	private void SetBuffViewList(List<IBuffView> buffIds)
 	{
 		this.CurBuffViewList = buffIds;
 	}
 
-	// Token: 0x0600E096 RID: 57494 RVA: 0x0034A950 File Offset: 0x00348B50
+	// Token: 0x0600B4B3 RID: 46259 RVA: 0x00356380 File Offset: 0x00354580
 	public void RefreshBuff()
 	{
 		if (this.CurBuffViewList == null)
@@ -505,7 +505,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		item.SetUIActive(this.CurBuffViewList.Count > 4);
 	}
 
-	// Token: 0x0600E097 RID: 57495 RVA: 0x0034A9A8 File Offset: 0x00348BA8
+	// Token: 0x0600B4B4 RID: 46260 RVA: 0x003563D8 File Offset: 0x003545D8
 	private void OnBuffChange(UKSC_DA_Buff buffDa, int count)
 	{
 		if (this.CurBuffViewList == null)
@@ -550,7 +550,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		this.RefreshBuff();
 	}
 
-	// Token: 0x0600E098 RID: 57496 RVA: 0x0034AA80 File Offset: 0x00348C80
+	// Token: 0x0600B4B5 RID: 46261 RVA: 0x003564B0 File Offset: 0x003546B0
 	[NullableContext(1)]
 	private int? GetBuffId(UKSC_DA_Buff buffDa)
 	{
@@ -573,7 +573,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		return new int?(value);
 	}
 
-	// Token: 0x0600E099 RID: 57497 RVA: 0x0034AAE0 File Offset: 0x00348CE0
+	// Token: 0x0600B4B6 RID: 46262 RVA: 0x00356510 File Offset: 0x00354710
 	public void RefreshPerformance()
 	{
 		if (this.OwnerAttrSet == null)
@@ -595,7 +595,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		this.RefreshPerformanceByState(PinballBattleRoleSkillItem.EState.Normal);
 	}
 
-	// Token: 0x0600E09A RID: 57498 RVA: 0x0034AB68 File Offset: 0x00348D68
+	// Token: 0x0600B4B7 RID: 46263 RVA: 0x00356598 File Offset: 0x00354798
 	private void RefreshPerformanceByState(PinballBattleRoleSkillItem.EState state)
 	{
 		PinballBattleRoleSkillItem.EState? curState = this.CurState;
@@ -671,7 +671,7 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		this.CurState = new PinballBattleRoleSkillItem.EState?(state);
 	}
 
-	// Token: 0x0600E09B RID: 57499 RVA: 0x0034ACD0 File Offset: 0x00348ED0
+	// Token: 0x0600B4B8 RID: 46264 RVA: 0x00356700 File Offset: 0x00354900
 	private void RefreshAnimation(PinballBattleRoleSkillItem.EState newState)
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -700,22 +700,22 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 		seqPlayer3.PlayOrReplaySequenceByName("Charge_Done", false, null);
 	}
 
-	// Token: 0x0400679A RID: 26522
+	// Token: 0x04006879 RID: 26745
 	private static float[] ChargeBarRange;
 
-	// Token: 0x0400679B RID: 26523
+	// Token: 0x0400687A RID: 26746
 	private const int INVALID_VALUE = -1;
 
-	// Token: 0x0400679C RID: 26524
+	// Token: 0x0400687B RID: 26747
 	private int RoleId = -1;
 
-	// Token: 0x0400679D RID: 26525
+	// Token: 0x0400687C RID: 26748
 	private UUITexture TexHpBar;
 
-	// Token: 0x0400679E RID: 26526
+	// Token: 0x0400687D RID: 26749
 	private UUISprite ChargeBar;
 
-	// Token: 0x0400679F RID: 26527
+	// Token: 0x0400687E RID: 26750
 	[Nullable(new byte[]
 	{
 		2,
@@ -724,31 +724,31 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 	})]
 	private GenericLayout<PinballBattleBuffItem, IBuffView> BuffLayout;
 
-	// Token: 0x040067A0 RID: 26528
+	// Token: 0x0400687F RID: 26751
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x040067A1 RID: 26529
+	// Token: 0x04006880 RID: 26752
 	private AKSC_Shape2D_Entity_Player OwnerEntity;
 
-	// Token: 0x040067A2 RID: 26530
+	// Token: 0x04006881 RID: 26753
 	private UKSC_SkillComp OwnerSkillComp;
 
-	// Token: 0x040067A3 RID: 26531
+	// Token: 0x04006882 RID: 26754
 	private UKSC_AttrSet OwnerAttrSet;
 
-	// Token: 0x040067A4 RID: 26532
+	// Token: 0x04006883 RID: 26755
 	private bool IsPlayedChargeTips;
 
-	// Token: 0x040067A5 RID: 26533
+	// Token: 0x04006884 RID: 26756
 	private PinballBattleRoleSkillItem.EState? CurState;
 
-	// Token: 0x040067A6 RID: 26534
+	// Token: 0x04006885 RID: 26757
 	private FOnKSCAttrChange ChargeDelegate;
 
-	// Token: 0x040067A7 RID: 26535
+	// Token: 0x04006886 RID: 26758
 	private FOnKSCAttrChange HpDelegate;
 
-	// Token: 0x040067A8 RID: 26536
+	// Token: 0x04006887 RID: 26759
 	[Nullable(new byte[]
 	{
 		2,
@@ -756,26 +756,26 @@ public class PinballBattleRoleSkillItem : UiPanelBase, IStaticVariableResetter
 	})]
 	private List<IBuffView> CurBuffViewList;
 
-	// Token: 0x040067A9 RID: 26537
+	// Token: 0x04006888 RID: 26760
 	private readonly FName? NamePercent = FNameUtil.GetDynamicFName("percent");
 
-	// Token: 0x040067AA RID: 26538
+	// Token: 0x04006889 RID: 26761
 	public Action<int> OnSkillClickCallback;
 
-	// Token: 0x040067AB RID: 26539
+	// Token: 0x0400688A RID: 26762
 	private double LastSkillClickTime;
 
-	// Token: 0x020082F2 RID: 33522
+	// Token: 0x0200747B RID: 29819
 	[NullableContext(0)]
 	private enum EState
 	{
-		// Token: 0x0402AB6D RID: 174957
+		// Token: 0x04025E95 RID: 155285
 		None,
-		// Token: 0x0402AB6E RID: 174958
+		// Token: 0x04025E96 RID: 155286
 		Normal,
-		// Token: 0x0402AB6F RID: 174959
+		// Token: 0x04025E97 RID: 155287
 		Charge,
-		// Token: 0x0402AB70 RID: 174960
+		// Token: 0x04025E98 RID: 155288
 		Dead
 	}
 }

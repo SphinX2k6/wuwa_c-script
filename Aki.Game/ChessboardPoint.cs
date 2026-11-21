@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020011CB RID: 4555
+// Token: 0x0200067F RID: 1663
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class ChessboardPoint
 {
-	// Token: 0x06007955 RID: 31061 RVA: 0x00199AC4 File Offset: 0x00197CC4
+	// Token: 0x06004CEC RID: 19692 RVA: 0x001A2774 File Offset: 0x001A0974
 	public void Init(int id, Vector location, Rotator rotator, [Nullable(2)] Rotator backwardRotator, int sortIndex)
 	{
 		this.Id = id;
@@ -20,19 +20,19 @@ public abstract class ChessboardPoint
 		}
 	}
 
-	// Token: 0x06007956 RID: 31062 RVA: 0x00199B14 File Offset: 0x00197D14
+	// Token: 0x06004CED RID: 19693 RVA: 0x001A27C4 File Offset: 0x001A09C4
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06007957 RID: 31063 RVA: 0x00199B1C File Offset: 0x00197D1C
+	// Token: 0x06004CEE RID: 19694 RVA: 0x001A27CC File Offset: 0x001A09CC
 	public int GetSortIndex()
 	{
 		return this.SortIndex;
 	}
 
-	// Token: 0x06007958 RID: 31064 RVA: 0x00199B24 File Offset: 0x00197D24
+	// Token: 0x06004CEF RID: 19695 RVA: 0x001A27D4 File Offset: 0x001A09D4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -44,13 +44,13 @@ public abstract class ChessboardPoint
 		return new ValueTuple<Vector, Rotator>(this.Location, this.GetPointRotator(rotationIsForward));
 	}
 
-	// Token: 0x06007959 RID: 31065 RVA: 0x00199B38 File Offset: 0x00197D38
+	// Token: 0x06004CF0 RID: 19696 RVA: 0x001A27E8 File Offset: 0x001A09E8
 	public Vector GetPointLocation()
 	{
 		return this.Location;
 	}
 
-	// Token: 0x0600795A RID: 31066 RVA: 0x00199B40 File Offset: 0x00197D40
+	// Token: 0x06004CF1 RID: 19697 RVA: 0x001A27F0 File Offset: 0x001A09F0
 	public Rotator GetPointRotator(bool rotationIsForward = true)
 	{
 		if (rotationIsForward || this.BackwardRotator == null)
@@ -60,31 +60,31 @@ public abstract class ChessboardPoint
 		return this.BackwardRotator;
 	}
 
-	// Token: 0x0600795B RID: 31067
+	// Token: 0x06004CF2 RID: 19698
 	public abstract void ItemEnter(ChessItem chessItem);
 
-	// Token: 0x0600795C RID: 31068
+	// Token: 0x06004CF3 RID: 19699
 	public abstract void ItemLeave(ChessItem chessItem);
 
-	// Token: 0x0600795D RID: 31069
+	// Token: 0x06004CF4 RID: 19700
 	public abstract void ChangeItemToMaxPriority(ChessItem chessItem);
 
-	// Token: 0x0600795E RID: 31070
+	// Token: 0x06004CF5 RID: 19701
 	public abstract int ComparePriority(ChessItem a, ChessItem b);
 
-	// Token: 0x040037D5 RID: 14293
+	// Token: 0x0400386E RID: 14446
 	private int Id;
 
-	// Token: 0x040037D6 RID: 14294
+	// Token: 0x0400386F RID: 14447
 	private int SortIndex;
 
-	// Token: 0x040037D7 RID: 14295
+	// Token: 0x04003870 RID: 14448
 	private readonly Vector Location = Vector.Create();
 
-	// Token: 0x040037D8 RID: 14296
+	// Token: 0x04003871 RID: 14449
 	private readonly Rotator Rotator = Rotator.Create();
 
-	// Token: 0x040037D9 RID: 14297
+	// Token: 0x04003872 RID: 14450
 	[Nullable(2)]
 	private Rotator BackwardRotator;
 }

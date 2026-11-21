@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004181 RID: 16769
+	// Token: 0x020045D4 RID: 17876
 	public struct ITakePhoto2PhotoTargetEntityTarget : IFlatbufferObject
 	{
-		// Token: 0x170076DB RID: 30427
-		// (get) Token: 0x06018A79 RID: 100985 RVA: 0x0038D3A9 File Offset: 0x0038B5A9
+		// Token: 0x17007D02 RID: 32002
+		// (get) Token: 0x0601A1AF RID: 106927 RVA: 0x003B853E File Offset: 0x003B673E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018A7A RID: 100986 RVA: 0x0038D3B6 File Offset: 0x0038B5B6
+		// Token: 0x0601A1B0 RID: 106928 RVA: 0x003B854B File Offset: 0x003B674B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018A7B RID: 100987 RVA: 0x0038D3C0 File Offset: 0x0038B5C0
+		// Token: 0x0601A1B1 RID: 106929 RVA: 0x003B8554 File Offset: 0x003B6754
 		public static ITakePhoto2PhotoTargetEntityTarget GetRootAsITakePhoto2PhotoTargetEntityTarget(ByteBuffer _bb)
 		{
 			return ITakePhoto2PhotoTargetEntityTarget.GetRootAsITakePhoto2PhotoTargetEntityTarget(_bb, default(ITakePhoto2PhotoTargetEntityTarget));
 		}
 
-		// Token: 0x06018A7C RID: 100988 RVA: 0x0038D3DC File Offset: 0x0038B5DC
+		// Token: 0x0601A1B2 RID: 106930 RVA: 0x003B8570 File Offset: 0x003B6770
 		public static ITakePhoto2PhotoTargetEntityTarget GetRootAsITakePhoto2PhotoTargetEntityTarget(ByteBuffer _bb, ITakePhoto2PhotoTargetEntityTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018A7D RID: 100989 RVA: 0x0038D3F9 File Offset: 0x0038B5F9
+		// Token: 0x0601A1B3 RID: 106931 RVA: 0x003B858D File Offset: 0x003B678D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018A7E RID: 100990 RVA: 0x0038D408 File Offset: 0x0038B608
+		// Token: 0x0601A1B4 RID: 106932 RVA: 0x003B859C File Offset: 0x003B679C
 		public ITakePhoto2PhotoTargetEntityTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170076DC RID: 30428
-		// (get) Token: 0x06018A7F RID: 100991 RVA: 0x0038D418 File Offset: 0x0038B618
+		// Token: 0x17007D03 RID: 32003
+		// (get) Token: 0x0601A1B5 RID: 106933 RVA: 0x003B85AC File Offset: 0x003B67AC
 		public ETakePhoto2TargetType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170076DD RID: 30429
-		// (get) Token: 0x06018A80 RID: 100992 RVA: 0x0038D454 File Offset: 0x0038B654
+		// Token: 0x17007D04 RID: 32004
+		// (get) Token: 0x0601A1B6 RID: 106934 RVA: 0x003B85E8 File Offset: 0x003B67E8
 		public bool IsOptionalTarget
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170076DE RID: 30430
-		// (get) Token: 0x06018A81 RID: 100993 RVA: 0x0038D494 File Offset: 0x0038B694
+		// Token: 0x17007D05 RID: 32005
+		// (get) Token: 0x0601A1B7 RID: 106935 RVA: 0x003B8628 File Offset: 0x003B6828
 		public ITakePhoto2TargetCameraDistanceCondition? TargetCameraDistanceCondition
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170076DF RID: 30431
-		// (get) Token: 0x06018A82 RID: 100994 RVA: 0x0038D4F4 File Offset: 0x0038B6F4
+		// Token: 0x17007D06 RID: 32006
+		// (get) Token: 0x0601A1B8 RID: 106936 RVA: 0x003B8688 File Offset: 0x003B6888
 		public int EntityId
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170076E0 RID: 30432
-		// (get) Token: 0x06018A83 RID: 100995 RVA: 0x0038D534 File Offset: 0x0038B734
+		// Token: 0x17007D07 RID: 32007
+		// (get) Token: 0x0601A1B9 RID: 106937 RVA: 0x003B86C8 File Offset: 0x003B68C8
 		public ITakePhoto2TargetPosByRangeCondition? TargetPosCondition
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170076E1 RID: 30433
-		// (get) Token: 0x06018A84 RID: 100996 RVA: 0x0038D594 File Offset: 0x0038B794
+		// Token: 0x17007D08 RID: 32008
+		// (get) Token: 0x0601A1BA RID: 106938 RVA: 0x003B8728 File Offset: 0x003B6928
 		public byte NullMask
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018A85 RID: 100997 RVA: 0x0038D5D1 File Offset: 0x0038B7D1
+		// Token: 0x0601A1BB RID: 106939 RVA: 0x003B8765 File Offset: 0x003B6965
 		public static Offset<ITakePhoto2PhotoTargetEntityTarget> CreateITakePhoto2PhotoTargetEntityTarget(FlatBufferBuilder builder, ETakePhoto2TargetType Type = ETakePhoto2TargetType.Entity, bool IsOptionalTarget = false, Offset<ITakePhoto2TargetCameraDistanceCondition> TargetCameraDistanceConditionOffset = default(Offset<ITakePhoto2TargetCameraDistanceCondition>), int EntityId = 0, Offset<ITakePhoto2TargetPosByRangeCondition> TargetPosConditionOffset = default(Offset<ITakePhoto2TargetPosByRangeCondition>), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -146,55 +146,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITakePhoto2PhotoTargetEntityTarget.EndITakePhoto2PhotoTargetEntityTarget(builder);
 		}
 
-		// Token: 0x06018A86 RID: 100998 RVA: 0x0038D60D File Offset: 0x0038B80D
+		// Token: 0x0601A1BC RID: 106940 RVA: 0x003B87A1 File Offset: 0x003B69A1
 		public static void StartITakePhoto2PhotoTargetEntityTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06018A87 RID: 100999 RVA: 0x0038D616 File Offset: 0x0038B816
+		// Token: 0x0601A1BD RID: 106941 RVA: 0x003B87AA File Offset: 0x003B69AA
 		public static void AddType(FlatBufferBuilder builder, ETakePhoto2TargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06018A88 RID: 101000 RVA: 0x0038D621 File Offset: 0x0038B821
+		// Token: 0x0601A1BE RID: 106942 RVA: 0x003B87B5 File Offset: 0x003B69B5
 		public static void AddIsOptionalTarget(FlatBufferBuilder builder, bool isOptionalTarget)
 		{
 			builder.AddBool(1, isOptionalTarget, false);
 		}
 
-		// Token: 0x06018A89 RID: 101001 RVA: 0x0038D62C File Offset: 0x0038B82C
+		// Token: 0x0601A1BF RID: 106943 RVA: 0x003B87C0 File Offset: 0x003B69C0
 		public static void AddTargetCameraDistanceCondition(FlatBufferBuilder builder, Offset<ITakePhoto2TargetCameraDistanceCondition> targetCameraDistanceConditionOffset)
 		{
 			builder.AddOffset(2, targetCameraDistanceConditionOffset.Value, 0);
 		}
 
-		// Token: 0x06018A8A RID: 101002 RVA: 0x0038D63C File Offset: 0x0038B83C
+		// Token: 0x0601A1C0 RID: 106944 RVA: 0x003B87D0 File Offset: 0x003B69D0
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(3, entityId, 0);
 		}
 
-		// Token: 0x06018A8B RID: 101003 RVA: 0x0038D647 File Offset: 0x0038B847
+		// Token: 0x0601A1C1 RID: 106945 RVA: 0x003B87DB File Offset: 0x003B69DB
 		public static void AddTargetPosCondition(FlatBufferBuilder builder, Offset<ITakePhoto2TargetPosByRangeCondition> targetPosConditionOffset)
 		{
 			builder.AddOffset(4, targetPosConditionOffset.Value, 0);
 		}
 
-		// Token: 0x06018A8C RID: 101004 RVA: 0x0038D657 File Offset: 0x0038B857
+		// Token: 0x0601A1C2 RID: 106946 RVA: 0x003B87EB File Offset: 0x003B69EB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06018A8D RID: 101005 RVA: 0x0038D662 File Offset: 0x0038B862
+		// Token: 0x0601A1C3 RID: 106947 RVA: 0x003B87F6 File Offset: 0x003B69F6
 		public static Offset<ITakePhoto2PhotoTargetEntityTarget> EndITakePhoto2PhotoTargetEntityTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<ITakePhoto2PhotoTargetEntityTarget>(builder.EndTable());
 		}
 
-		// Token: 0x06018A8E RID: 101006 RVA: 0x0038D670 File Offset: 0x0038B870
+		// Token: 0x0601A1C4 RID: 106948 RVA: 0x003B8804 File Offset: 0x003B6A04
 		public ITakePhoto2PhotoTargetEntityTargetT UnPack()
 		{
 			ITakePhoto2PhotoTargetEntityTargetT takePhoto2PhotoTargetEntityTargetT = new ITakePhoto2PhotoTargetEntityTargetT();
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return takePhoto2PhotoTargetEntityTargetT;
 		}
 
-		// Token: 0x06018A8F RID: 101007 RVA: 0x0038D68C File Offset: 0x0038B88C
+		// Token: 0x0601A1C5 RID: 106949 RVA: 0x003B8820 File Offset: 0x003B6A20
 		public void UnPackTo(ITakePhoto2PhotoTargetEntityTargetT _o)
 		{
 			_o.Type = this.Type;
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06018A90 RID: 101008 RVA: 0x0038D728 File Offset: 0x0038B928
+		// Token: 0x0601A1C6 RID: 106950 RVA: 0x003B88BC File Offset: 0x003B6ABC
 		public static Offset<ITakePhoto2PhotoTargetEntityTarget> Pack(FlatBufferBuilder builder, ITakePhoto2PhotoTargetEntityTargetT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITakePhoto2PhotoTargetEntityTarget.CreateITakePhoto2PhotoTargetEntityTarget(builder, _o.Type, _o.IsOptionalTarget, targetCameraDistanceConditionOffset, _o.EntityId, targetPosConditionOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400BDAD RID: 48557
+		// Token: 0x0400C7AE RID: 51118
 		private Table __p;
 	}
 }

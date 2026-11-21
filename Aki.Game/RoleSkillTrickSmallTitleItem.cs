@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028CB RID: 10443
+// Token: 0x02001E46 RID: 7750
 public class RoleSkillTrickSmallTitleItem : UiPanelBase
 {
-	// Token: 0x06015909 RID: 88329 RVA: 0x005721C4 File Offset: 0x005703C4
+	// Token: 0x06013309 RID: 78601 RVA: 0x0059D07C File Offset: 0x0059B27C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,17 +20,17 @@ public class RoleSkillTrickSmallTitleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601590A RID: 88330 RVA: 0x0057220C File Offset: 0x0057040C
+	// Token: 0x0601330A RID: 78602 RVA: 0x0059D0C4 File Offset: 0x0059B2C4
 	[NullableContext(1)]
 	public void SetText(string textId)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x02008EE0 RID: 36576
+	// Token: 0x02008128 RID: 33064
 	private enum ETitleComponent
 	{
-		// Token: 0x0402E556 RID: 189782
+		// Token: 0x04029C51 RID: 171089
 		TitleText
 	}
 }

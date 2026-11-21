@@ -7,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200265B RID: 9819
+// Token: 0x02001B46 RID: 6982
 [NullableContext(1)]
 [Nullable(0)]
 public class LockReasonItem : UiPanelBase
 {
-	// Token: 0x06014176 RID: 82294 RVA: 0x0051080C File Offset: 0x0050EA0C
+	// Token: 0x06011658 RID: 71256 RVA: 0x0051F4C4 File Offset: 0x0051D6C4
 	public LockReasonItem(IOccupationInfo occupationInfo)
 	{
 		this.QuestName = GeneralLogicTreeModel.Instance.GetBehaviorTreeName(occupationInfo.TreeIncId);
@@ -21,7 +21,7 @@ public class LockReasonItem : UiPanelBase
 		this.TreeIncId = occupationInfo.TreeIncId;
 	}
 
-	// Token: 0x06014177 RID: 82295 RVA: 0x00510890 File Offset: 0x0050EA90
+	// Token: 0x06011659 RID: 71257 RVA: 0x0051F548 File Offset: 0x0051D748
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -44,13 +44,13 @@ public class LockReasonItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014178 RID: 82296 RVA: 0x00510957 File Offset: 0x0050EB57
+	// Token: 0x0601165A RID: 71258 RVA: 0x0051F60F File Offset: 0x0051D80F
 	protected override void OnStart()
 	{
 		this.UpdateItem();
 	}
 
-	// Token: 0x06014179 RID: 82297 RVA: 0x00510960 File Offset: 0x0050EB60
+	// Token: 0x0601165B RID: 71259 RVA: 0x0051F618 File Offset: 0x0051D818
 	public void UpdateItem()
 	{
 		UUIText text = base.GetText(0);
@@ -76,7 +76,7 @@ public class LockReasonItem : UiPanelBase
 		text2.SetText(newText, true);
 	}
 
-	// Token: 0x0601417A RID: 82298 RVA: 0x005109F0 File Offset: 0x0050EBF0
+	// Token: 0x0601165C RID: 71260 RVA: 0x0051F6A8 File Offset: 0x0051D8A8
 	private void OnClickBtn()
 	{
 		BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(this.TreeIncId), false);
@@ -95,29 +95,29 @@ public class LockReasonItem : UiPanelBase
 		UiManager.Instance.CloseView(EUiViewName.QuestLockPreview, null);
 	}
 
-	// Token: 0x04009777 RID: 38775
+	// Token: 0x040098CF RID: 39119
 	private readonly string QuestName = string.Empty;
 
-	// Token: 0x04009778 RID: 38776
+	// Token: 0x040098D0 RID: 39120
 	private readonly string ResourceName = string.Empty;
 
-	// Token: 0x04009779 RID: 38777
+	// Token: 0x040098D1 RID: 39121
 	private readonly string OccupationType = string.Empty;
 
-	// Token: 0x0400977A RID: 38778
+	// Token: 0x040098D2 RID: 39122
 	private readonly long TreeIncId;
 
-	// Token: 0x02008C96 RID: 35990
+	// Token: 0x02007E1F RID: 32287
 	[NullableContext(0)]
 	private class EChildComponent
 	{
-		// Token: 0x0402DA13 RID: 186899
+		// Token: 0x04028D2A RID: 167210
 		public const int QuestNameText = 0;
 
-		// Token: 0x0402DA14 RID: 186900
+		// Token: 0x04028D2B RID: 167211
 		public const int OccupationSourceText = 1;
 
-		// Token: 0x0402DA15 RID: 186901
+		// Token: 0x04028D2C RID: 167212
 		public const int GoToTaskBtn = 2;
 	}
 }

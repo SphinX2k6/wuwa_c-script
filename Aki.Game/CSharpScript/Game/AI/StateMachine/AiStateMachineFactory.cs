@@ -8,12 +8,12 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine
 {
-	// Token: 0x02007312 RID: 29458
+	// Token: 0x02006495 RID: 25749
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineFactory
 	{
-		// Token: 0x060484CD RID: 296141 RVA: 0x01296424 File Offset: 0x01294624
+		// Token: 0x0603E91A RID: 256282 RVA: 0x01238EA4 File Offset: 0x012370A4
 		[return: Nullable(2)]
 		public AiStateMachineTask CreateTask(AiStateMachineBase node, CombatStateMachineDefine.Fsm.Task task)
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.AI.StateMachine
 			return aiStateMachineTask;
 		}
 
-		// Token: 0x060484CE RID: 296142 RVA: 0x01296554 File Offset: 0x01294754
+		// Token: 0x0603E91B RID: 256283 RVA: 0x01238FD4 File Offset: 0x012371D4
 		[return: Nullable(2)]
 		public AiStateMachineState CreateState(AiStateMachineBase node, CombatStateMachineDefine.Fsm.State state)
 		{
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.AI.StateMachine
 			return aiStateMachineState;
 		}
 
-		// Token: 0x060484CF RID: 296143 RVA: 0x012966F8 File Offset: 0x012948F8
+		// Token: 0x0603E91C RID: 256284 RVA: 0x01239178 File Offset: 0x01237378
 		[return: Nullable(2)]
 		public AiStateMachineAction CreateAction(AiStateMachineBase node, CombatStateMachineDefine.Fsm.Action action)
 		{
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.AI.StateMachine
 			return aiStateMachineAction;
 		}
 
-		// Token: 0x060484D0 RID: 296144 RVA: 0x012968D0 File Offset: 0x01294AD0
+		// Token: 0x0603E91D RID: 256285 RVA: 0x01239350 File Offset: 0x01237550
 		public AiStateMachineCondition CreateCondition(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index, [Nullable(2)] AiStateMachineCondition parentCondition = null)
 		{
 			AiStateMachineCondition aiStateMachineCondition = null;

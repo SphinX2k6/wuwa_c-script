@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F36 RID: 3894
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200104C RID: 4172
 	public class IDangoAbyssInformationView : IInformationViewType
 	{
-		// Token: 0x06005686 RID: 22150 RVA: 0x000D402C File Offset: 0x000D222C
+		// Token: 0x06005C02 RID: 23554 RVA: 0x000E01D4 File Offset: 0x000DE3D4
 		private IDangoAbyssInformationView_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005687 RID: 22151 RVA: 0x000D4064 File Offset: 0x000D2264
+		// Token: 0x06005C03 RID: 23555 RVA: 0x000E020C File Offset: 0x000DE40C
 		public static IDangoAbyssInformationView Create([Nullable(2)] IDangoAbyssInformationView instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005688 RID: 22152 RVA: 0x000D4077 File Offset: 0x000D2277
+		// Token: 0x06005C04 RID: 23556 RVA: 0x000E021F File Offset: 0x000DE41F
 		public static IDangoAbyssInformationView CreateFromSetValue([Nullable(2)] IDangoAbyssInformationView_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005689 RID: 22153 RVA: 0x000D408A File Offset: 0x000D228A
+		// Token: 0x06005C05 RID: 23557 RVA: 0x000E0232 File Offset: 0x000DE432
 		public new IDangoAbyssInformationView_SetValue ToSetValue()
 		{
 			return new IDangoAbyssInformationView_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001CF3 RID: 7411
-		// (get) Token: 0x0600568A RID: 22154 RVA: 0x000D409D File Offset: 0x000D229D
-		// (set) Token: 0x0600568B RID: 22155 RVA: 0x000D40C8 File Offset: 0x000D22C8
+		// Token: 0x17001E8B RID: 7819
+		// (get) Token: 0x06005C06 RID: 23558 RVA: 0x000E0245 File Offset: 0x000DE445
+		// (set) Token: 0x06005C07 RID: 23559 RVA: 0x000E0270 File Offset: 0x000DE470
 		public override EInformationViewType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003472 RID: 13426
+		// Token: 0x0400377F RID: 14207
 		[Nullable(2)]
 		protected new IDangoAbyssInformationView FbInstance;
 
-		// Token: 0x04003473 RID: 13427
+		// Token: 0x04003780 RID: 14208
 		[Nullable(2)]
 		protected new IDangoAbyssInformationView_SetValue PocoInterface;
 	}

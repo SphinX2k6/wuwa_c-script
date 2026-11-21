@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 {
-	// Token: 0x0200715B RID: 29019
+	// Token: 0x0200631A RID: 25370
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EntityDebugUtils : Singleton
 	{
-		// Token: 0x06046D5B RID: 290139 RVA: 0x011DA12F File Offset: 0x011D832F
+		// Token: 0x0603D693 RID: 251539 RVA: 0x011C09E7 File Offset: 0x011BEBE7
 		protected override bool OnInit()
 		{
 			this.EntityNameList = new TArray<string>();
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return true;
 		}
 
-		// Token: 0x06046D5C RID: 290140 RVA: 0x011DA153 File Offset: 0x011D8353
+		// Token: 0x0603D694 RID: 251540 RVA: 0x011C0A0B File Offset: 0x011BEC0B
 		public TArray<string> GetDebugEntityNameList()
 		{
 			this.FindEntities();
 			return this.EntityNameList;
 		}
 
-		// Token: 0x06046D5D RID: 290141 RVA: 0x011DA164 File Offset: 0x011D8364
+		// Token: 0x0603D695 RID: 251541 RVA: 0x011C0A1C File Offset: 0x011BEC1C
 		private void FindEntities()
 		{
 			this.EntityNameList.Empty(true);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			}
 		}
 
-		// Token: 0x06046D5E RID: 290142 RVA: 0x011DA394 File Offset: 0x011D8594
+		// Token: 0x0603D696 RID: 251542 RVA: 0x011C0C4C File Offset: 0x011BEE4C
 		private void AddMatchEntity(Entity entity)
 		{
 			BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			this.EntityNameMap[entity.Id] = text2;
 		}
 
-		// Token: 0x06046D5F RID: 290143 RVA: 0x011DA49C File Offset: 0x011D869C
+		// Token: 0x0603D697 RID: 251543 RVA: 0x011C0D54 File Offset: 0x011BEF54
 		public int GetSelectedEntityId(string label)
 		{
 			if (string.IsNullOrEmpty(label))
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return result;
 		}
 
-		// Token: 0x06046D60 RID: 290144 RVA: 0x011DA4D0 File Offset: 0x011D86D0
+		// Token: 0x0603D698 RID: 251544 RVA: 0x011C0D88 File Offset: 0x011BEF88
 		public string GetDebugBaseInfo(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -458,7 +458,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return text;
 		}
 
-		// Token: 0x06046D61 RID: 290145 RVA: 0x011DAF74 File Offset: 0x011D9174
+		// Token: 0x0603D699 RID: 251545 RVA: 0x011C182C File Offset: 0x011BFA2C
 		private string GetChildActorVelocity(AActor actor, int tier = 1)
 		{
 			string text = "";
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return text;
 		}
 
-		// Token: 0x06046D62 RID: 290146 RVA: 0x011DB080 File Offset: 0x011D9280
+		// Token: 0x0603D69A RID: 251546 RVA: 0x011C1938 File Offset: 0x011BFB38
 		public string GetInteractionDebugInfos(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -523,7 +523,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return text + interactController.GetInteractionDebugInfos();
 		}
 
-		// Token: 0x06046D63 RID: 290147 RVA: 0x011DB10C File Offset: 0x011D930C
+		// Token: 0x0603D69B RID: 251547 RVA: 0x011C19C4 File Offset: 0x011BFBC4
 		public string GetEntityCommonTagDebugString(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -550,7 +550,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return text2;
 		}
 
-		// Token: 0x06046D64 RID: 290148 RVA: 0x011DB15C File Offset: 0x011D935C
+		// Token: 0x0603D69C RID: 251548 RVA: 0x011C1A14 File Offset: 0x011BFC14
 		public string GetInRangeLocalEntityListDebugString(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -559,51 +559,65 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 				return "无";
 			}
 			CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent component = entity.GetComponent<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>();
-			IReadOnlyDictionary<int, EntityHandle> readOnlyDictionary = (component != null) ? component.GetEntitiesInRangeLocal() : null;
+			IEnumerable<KeyValuePair<int, EntityHandle>> enumerable = (component != null) ? component.GetEntitiesInRangeLocal() : null;
 			string text = "";
-			if (readOnlyDictionary != null && readOnlyDictionary.Count > 0)
+			if (enumerable != null)
 			{
-				foreach (KeyValuePair<int, EntityHandle> keyValuePair in readOnlyDictionary)
+				foreach (KeyValuePair<int, EntityHandle> keyValuePair in enumerable)
 				{
-					WorldEntity entity2 = keyValuePair.Value.Entity;
+					int valueOrDefault;
+					EntityHandle entityHandle;
+					keyValuePair.Deconstruct(out valueOrDefault, out entityHandle);
+					EntityHandle entityHandle2 = entityHandle;
+					WorldEntity entity2 = entityHandle2.Entity;
 					BaseActorComponent baseActorComponent = (entity2 != null) ? entity2.GetComponent<BaseActorComponent>() : null;
-					WorldEntity entity3 = keyValuePair.Value.Entity;
+					WorldEntity entity3 = entityHandle2.Entity;
 					CreatureDataComponent creatureDataComponent = (entity3 != null) ? entity3.GetComponent<CreatureDataComponent>() : null;
 					int? num = (creatureDataComponent != null) ? new int?(creatureDataComponent.GetPbDataId()) : null;
 					string str = "[";
-					string str2 = ((num != null) ? num.GetValueOrDefault().ToString() : null) ?? "?";
-					string str3 = "] ";
 					string text2;
-					if (baseActorComponent == null)
+					if (num == null)
 					{
 						text2 = null;
 					}
 					else
 					{
-						AActor owner = baseActorComponent.Owner;
-						text2 = ((owner != null) ? owner.GetName() : null);
+						valueOrDefault = num.GetValueOrDefault();
+						text2 = valueOrDefault.ToString();
 					}
-					string text3 = str + str2 + str3 + (text2 ?? "?");
+					string str2 = text2 ?? "?";
+					string str3 = "] ";
+					string text3;
+					if (baseActorComponent == null)
+					{
+						text3 = null;
+					}
+					else
+					{
+						AActor owner = baseActorComponent.Owner;
+						text3 = ((owner != null) ? owner.GetName() : null);
+					}
+					string text4 = str + str2 + str3 + (text3 ?? "?");
 					PawnInfoManageComponent component2 = entity.GetComponent<PawnInfoManageComponent>();
-					string str4 = text3;
+					string str4 = text4;
 					string str5 = " (";
 					string str6;
 					if ((str6 = ((component2 != null) ? component2.PawnName : null)) == null)
 					{
-						string text4;
+						string text5;
 						if (creatureDataComponent == null)
 						{
-							text4 = null;
+							text5 = null;
 						}
 						else
 						{
 							BaseInfoComponent baseInfo = creatureDataComponent.GetBaseInfo();
-							text4 = ((baseInfo != null) ? baseInfo.TidName : null);
+							text5 = ((baseInfo != null) ? baseInfo.TidName : null);
 						}
-						str6 = (text4 ?? "无名字");
+						str6 = (text5 ?? "无名字");
 					}
-					text3 = str4 + str5 + str6 + ")";
-					text = text + text3 + "\n";
+					text4 = str4 + str5 + str6 + ")";
+					text = text + text4 + "\n";
 				}
 				text = text.TrimEnd();
 			}
@@ -614,7 +628,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return text;
 		}
 
-		// Token: 0x06046D65 RID: 290149 RVA: 0x011DB310 File Offset: 0x011D9510
+		// Token: 0x0603D69D RID: 251549 RVA: 0x011C1BBC File Offset: 0x011BFDBC
 		public string GetInRangeOnlineEntityListDebugString(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -678,7 +692,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return text;
 		}
 
-		// Token: 0x06046D66 RID: 290150 RVA: 0x011DB4C4 File Offset: 0x011D96C4
+		// Token: 0x0603D69E RID: 251550 RVA: 0x011C1D70 File Offset: 0x011BFF70
 		public string GetInRangeActorListDebugString(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -687,11 +701,11 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 				return "无";
 			}
 			CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent component = entity.GetComponent<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>();
-			IReadOnlyCollection<AActor> readOnlyCollection = (component != null) ? component.GetActorsInRangeLocal() : null;
+			IEnumerable<AActor> enumerable = (component != null) ? component.GetActorsInRangeLocal() : null;
 			string text = "";
-			if (readOnlyCollection != null && readOnlyCollection.Count > 0)
+			if (enumerable != null)
 			{
-				foreach (AActor aactor in readOnlyCollection)
+				foreach (AActor aactor in enumerable)
 				{
 					if (aactor != null && aactor.IsValid())
 					{
@@ -707,7 +721,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return text;
 		}
 
-		// Token: 0x06046D67 RID: 290151 RVA: 0x011DB57C File Offset: 0x011D977C
+		// Token: 0x0603D69F RID: 251551 RVA: 0x011C1E20 File Offset: 0x011C0020
 		[NullableContext(2)]
 		public AActor GetDebugEntityActor(int entityId)
 		{
@@ -724,7 +738,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return component.Owner;
 		}
 
-		// Token: 0x06046D68 RID: 290152 RVA: 0x011DB5AC File Offset: 0x011D97AC
+		// Token: 0x0603D6A0 RID: 251552 RVA: 0x011C1E50 File Offset: 0x011C0050
 		[NullableContext(2)]
 		public string GetDebugEntityName(int entityId)
 		{
@@ -740,7 +754,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return result;
 		}
 
-		// Token: 0x06046D69 RID: 290153 RVA: 0x011DB5DC File Offset: 0x011D97DC
+		// Token: 0x0603D6A1 RID: 251553 RVA: 0x011C1E80 File Offset: 0x011C0080
 		public int GetEntityPbDataId(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -756,7 +770,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return component.GetPbDataId();
 		}
 
-		// Token: 0x06046D6A RID: 290154 RVA: 0x011DB60C File Offset: 0x011D980C
+		// Token: 0x0603D6A2 RID: 251554 RVA: 0x011C1EB0 File Offset: 0x011C00B0
 		public float GetEntityTimeScale(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -772,7 +786,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			return component.CurrentTimeScale;
 		}
 
-		// Token: 0x06046D6B RID: 290155 RVA: 0x011DB644 File Offset: 0x011D9844
+		// Token: 0x0603D6A3 RID: 251555 RVA: 0x011C1EE8 File Offset: 0x011C00E8
 		public void SetEntityTimeScale(int entityId, float timeScale)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -795,8 +809,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			this.EntityTimeScaleHandleIdMap[entityId] = num;
 		}
 
-		// Token: 0x17009D52 RID: 40274
-		// (get) Token: 0x06046D6C RID: 290156 RVA: 0x011DB6B3 File Offset: 0x011D98B3
+		// Token: 0x1700747A RID: 29818
+		// (get) Token: 0x0603D6A4 RID: 251556 RVA: 0x011C1F57 File Offset: 0x011C0157
 		public static EntityDebugUtils Instance
 		{
 			get
@@ -810,12 +824,12 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			}
 		}
 
-		// Token: 0x06046D6D RID: 290157 RVA: 0x011DB6D6 File Offset: 0x011D98D6
+		// Token: 0x0603D6A5 RID: 251557 RVA: 0x011C1F7A File Offset: 0x011C017A
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06046D6E RID: 290158 RVA: 0x011DB6D8 File Offset: 0x011D98D8
+		// Token: 0x0603D6A6 RID: 251558 RVA: 0x011C1F7C File Offset: 0x011C017C
 		public static void ResetStaticDefaultValue()
 		{
 			EntityDebugUtils instance = EntityDebugUtils._instance;
@@ -826,13 +840,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 			EntityDebugUtils._instance = null;
 		}
 
-		// Token: 0x06046D6F RID: 290159 RVA: 0x011DB6F1 File Offset: 0x011D98F1
+		// Token: 0x0603D6A7 RID: 251559 RVA: 0x011C1F95 File Offset: 0x011C0195
 		static EntityDebugUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(EntityDebugUtils.CreateStaticDefaultValue), new Action(EntityDebugUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040252D0 RID: 152272
+		// Token: 0x0402090D RID: 133389
 		[Nullable(new byte[]
 		{
 			2,
@@ -840,7 +854,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 		})]
 		private TArray<string> EntityNameList;
 
-		// Token: 0x040252D1 RID: 152273
+		// Token: 0x0402090E RID: 133390
 		[Nullable(new byte[]
 		{
 			2,
@@ -848,7 +862,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 		})]
 		private Dictionary<string, int> EntityIdMap;
 
-		// Token: 0x040252D2 RID: 152274
+		// Token: 0x0402090F RID: 133391
 		[Nullable(new byte[]
 		{
 			2,
@@ -856,10 +870,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 		})]
 		private Dictionary<int, string> EntityNameMap;
 
-		// Token: 0x040252D3 RID: 152275
+		// Token: 0x04020910 RID: 133392
 		private readonly Dictionary<int, int> EntityTimeScaleHandleIdMap = new Dictionary<int, int>();
 
-		// Token: 0x040252D4 RID: 152276
+		// Token: 0x04020911 RID: 133393
 		[Nullable(2)]
 		private static EntityDebugUtils _instance;
 	}

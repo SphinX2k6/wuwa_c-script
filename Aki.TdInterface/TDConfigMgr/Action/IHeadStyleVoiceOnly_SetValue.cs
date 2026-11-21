@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AF4 RID: 6900
+	// Token: 0x02001CA1 RID: 7329
 	public class IHeadStyleVoiceOnly_SetValue
 	{
-		// Token: 0x04005AC0 RID: 23232
+		// Token: 0x04005F57 RID: 24407
 		public EHeadStyle Type;
 
-		// Token: 0x04005AC1 RID: 23233
+		// Token: 0x04005F58 RID: 24408
 		public int WhoId;
 	}
 }

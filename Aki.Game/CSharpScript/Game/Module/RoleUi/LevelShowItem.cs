@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CDC RID: 19676
+	// Token: 0x02003C8E RID: 15502
 	public class LevelShowItem : UiPanelBase
 	{
-		// Token: 0x06032CB0 RID: 208048 RVA: 0x00BD5D70 File Offset: 0x00BD3F70
+		// Token: 0x06027A85 RID: 162437 RVA: 0x00B1B478 File Offset: 0x00B19678
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			};
 		}
 
-		// Token: 0x06032CB1 RID: 208049 RVA: 0x00BD5DCA File Offset: 0x00BD3FCA
+		// Token: 0x06027A86 RID: 162438 RVA: 0x00B1B4D2 File Offset: 0x00B196D2
 		[NullableContext(2)]
 		public void Refresh(int lvPreUpgrade, int lvUpgrade, string formatId, bool? isMax)
 		{
@@ -29,14 +29,14 @@ namespace CSharpScript.Game.Module.RoleUi
 			base.GetItem(2).SetUIActive(isMax.GetValueOrDefault());
 		}
 
-		// Token: 0x0200AE56 RID: 44630
+		// Token: 0x02009875 RID: 39029
 		private enum ELevelPanelNode
 		{
-			// Token: 0x04034EF4 RID: 216820
+			// Token: 0x0402F89C RID: 194716
 			PreUpgradeLevel,
-			// Token: 0x04034EF5 RID: 216821
+			// Token: 0x0402F89D RID: 194717
 			UpgradeLevel,
-			// Token: 0x04034EF6 RID: 216822
+			// Token: 0x0402F89E RID: 194718
 			SpriteMax
 		}
 	}

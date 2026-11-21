@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E27 RID: 3623
+	// Token: 0x02000F0C RID: 3852
 	public struct MoraleLevelDiff : IFlatbufferObject
 	{
-		// Token: 0x17001FD9 RID: 8153
-		// (get) Token: 0x06009632 RID: 38450 RVA: 0x00289E39 File Offset: 0x00288039
+		// Token: 0x1700203E RID: 8254
+		// (get) Token: 0x06009C52 RID: 40018 RVA: 0x002A7B4E File Offset: 0x002A5D4E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009633 RID: 38451 RVA: 0x00289E46 File Offset: 0x00288046
+		// Token: 0x06009C53 RID: 40019 RVA: 0x002A7B5B File Offset: 0x002A5D5B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009634 RID: 38452 RVA: 0x00289E50 File Offset: 0x00288050
+		// Token: 0x06009C54 RID: 40020 RVA: 0x002A7B64 File Offset: 0x002A5D64
 		public static MoraleLevelDiff GetRootAsMoraleLevelDiff(ByteBuffer _bb)
 		{
 			return MoraleLevelDiff.GetRootAsMoraleLevelDiff(_bb, default(MoraleLevelDiff));
 		}
 
-		// Token: 0x06009635 RID: 38453 RVA: 0x00289E6C File Offset: 0x0028806C
+		// Token: 0x06009C55 RID: 40021 RVA: 0x002A7B80 File Offset: 0x002A5D80
 		public static MoraleLevelDiff GetRootAsMoraleLevelDiff(ByteBuffer _bb, MoraleLevelDiff obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009636 RID: 38454 RVA: 0x00289E89 File Offset: 0x00288089
+		// Token: 0x06009C56 RID: 40022 RVA: 0x002A7B9D File Offset: 0x002A5D9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009637 RID: 38455 RVA: 0x00289E98 File Offset: 0x00288098
+		// Token: 0x06009C57 RID: 40023 RVA: 0x002A7BAC File Offset: 0x002A5DAC
 		public MoraleLevelDiff __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001FDA RID: 8154
-		// (get) Token: 0x06009638 RID: 38456 RVA: 0x00289EA8 File Offset: 0x002880A8
+		// Token: 0x1700203F RID: 8255
+		// (get) Token: 0x06009C58 RID: 40024 RVA: 0x002A7BBC File Offset: 0x002A5DBC
 		public int Level
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001FDB RID: 8155
-		// (get) Token: 0x06009639 RID: 38457 RVA: 0x00289EE4 File Offset: 0x002880E4
+		// Token: 0x17002040 RID: 8256
+		// (get) Token: 0x06009C59 RID: 40025 RVA: 0x002A7BF8 File Offset: 0x002A5DF8
 		public int DamageRatio
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001FDC RID: 8156
-		// (get) Token: 0x0600963A RID: 38458 RVA: 0x00289F20 File Offset: 0x00288120
+		// Token: 0x17002041 RID: 8257
+		// (get) Token: 0x06009C5A RID: 40026 RVA: 0x002A7C34 File Offset: 0x002A5E34
 		public int DropRatio
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004ECC RID: 20172
+		// Token: 0x040054B1 RID: 21681
 		private Table __p;
 	}
 }

@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001979 RID: 6521
+	// Token: 0x02001B04 RID: 6916
 	public class IDeadeyeFollowShooterConfig_SetValue
 	{
-		// Token: 0x04005716 RID: 22294
-		[Nullable(1)]
+		// Token: 0x04005B6B RID: 23403
 		public string DeadeyeShooterDa;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006694 RID: 26260
+	// Token: 0x02006D0E RID: 27918
 	public class IEnableSystemT
 	{
-		// Token: 0x1700C32C RID: 49964
-		// (get) Token: 0x0602DA51 RID: 186961 RVA: 0x0063F464 File Offset: 0x0063D664
-		// (set) Token: 0x0602DA52 RID: 186962 RVA: 0x0063F46C File Offset: 0x0063D66C
+		// Token: 0x1700CCDD RID: 52445
+		// (get) Token: 0x0603026E RID: 197230 RVA: 0x0068C718 File Offset: 0x0068A918
+		// (set) Token: 0x0603026F RID: 197231 RVA: 0x0068C720 File Offset: 0x0068A920
 		public ESystem SystemType { get; set; }
 
-		// Token: 0x1700C32D RID: 49965
-		// (get) Token: 0x0602DA53 RID: 186963 RVA: 0x0063F475 File Offset: 0x0063D675
-		// (set) Token: 0x0602DA54 RID: 186964 RVA: 0x0063F47D File Offset: 0x0063D67D
+		// Token: 0x1700CCDE RID: 52446
+		// (get) Token: 0x06030270 RID: 197232 RVA: 0x0068C729 File Offset: 0x0068A929
+		// (set) Token: 0x06030271 RID: 197233 RVA: 0x0068C731 File Offset: 0x0068A931
 		public bool IsEnable { get; set; }
 
-		// Token: 0x0602DA55 RID: 186965 RVA: 0x0063F486 File Offset: 0x0063D686
+		// Token: 0x06030272 RID: 197234 RVA: 0x0068C73A File Offset: 0x0068A93A
 		public IEnableSystemT()
 		{
 			this.SystemType = ESystem.None;

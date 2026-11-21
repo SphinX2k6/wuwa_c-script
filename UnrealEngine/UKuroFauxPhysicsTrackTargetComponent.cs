@@ -7,43 +7,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001846 RID: 6214
+	// Token: 0x0200038A RID: 906
+	[NullableContext(1)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroFauxPhysics.KuroFauxPhysicsTrackTargetComponent")]
 	[UnrealStructLayout(912, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 912)]
-	public class UKuroFauxPhysicsTrackTargetComponent : UKuroFauxPhysicsComponentBase, IUnrealUObject, IUnrealObject, IKuroPrimitiveVisualizedInterface, IUnrealNativeInterface, IUnrealInterface, IKuroVisualizedInterface
+	public class UKuroFauxPhysicsTrackTargetComponent : UKuroFauxPhysicsComponentBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016E85 RID: 93829 RVA: 0x00216DA9 File Offset: 0x00214FA9
+		// Token: 0x06005ACF RID: 23247 RVA: 0x0008040D File Offset: 0x0007E60D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroFauxPhysicsTrackTargetComponent._ClassPtr;
 		}
 
-		// Token: 0x06016E86 RID: 93830 RVA: 0x00216DB5 File Offset: 0x00214FB5
-		int IKuroPrimitiveVisualizedInterface.InterfaceOffset()
-		{
-			return UKuroFauxPhysicsTrackTargetComponent.__InterfaceOffset_IKuroPrimitiveVisualizedInterface;
-		}
-
-		// Token: 0x06016E87 RID: 93831 RVA: 0x00216DBC File Offset: 0x00214FBC
-		int IKuroVisualizedInterface.InterfaceOffset()
-		{
-			return UKuroFauxPhysicsTrackTargetComponent.__InterfaceOffset_IKuroVisualizedInterface;
-		}
-
-		// Token: 0x06016E88 RID: 93832 RVA: 0x00216DC4 File Offset: 0x00214FC4
+		// Token: 0x06005AD0 RID: 23248 RVA: 0x0008041C File Offset: 0x0007E61C
 		public UKuroFauxPhysicsTrackTargetComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroFauxPhysicsTrackTargetComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016E89 RID: 93833 RVA: 0x00216DEC File Offset: 0x00214FEC
-		[NullableContext(1)]
+		// Token: 0x06005AD1 RID: 23249 RVA: 0x00080444 File Offset: 0x0007E644
 		public UKuroFauxPhysicsTrackTargetComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroFauxPhysicsTrackTargetComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005C65 RID: 23653
-		// (get) Token: 0x06016E8A RID: 93834 RVA: 0x00216E1F File Offset: 0x0021501F
-		// (set) Token: 0x06016E8B RID: 93835 RVA: 0x00216E2F File Offset: 0x0021502F
+		// Token: 0x170011F8 RID: 4600
+		// (get) Token: 0x06005AD2 RID: 23250 RVA: 0x00080477 File Offset: 0x0007E677
+		// (set) Token: 0x06005AD3 RID: 23251 RVA: 0x00080487 File Offset: 0x0007E687
 		public unsafe float PredictionFactor
 		{
 			get
@@ -56,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C66 RID: 23654
-		// (get) Token: 0x06016E8C RID: 93836 RVA: 0x00216E40 File Offset: 0x00215040
-		// (set) Token: 0x06016E8D RID: 93837 RVA: 0x00216E50 File Offset: 0x00215050
+		// Token: 0x170011F9 RID: 4601
+		// (get) Token: 0x06005AD4 RID: 23252 RVA: 0x00080498 File Offset: 0x0007E698
+		// (set) Token: 0x06005AD5 RID: 23253 RVA: 0x000804A8 File Offset: 0x0007E6A8
 		public unsafe float InitLinearSpeed
 		{
 			get
@@ -71,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C67 RID: 23655
-		// (get) Token: 0x06016E8E RID: 93838 RVA: 0x00216E61 File Offset: 0x00215061
-		// (set) Token: 0x06016E8F RID: 93839 RVA: 0x00216E71 File Offset: 0x00215071
+		// Token: 0x170011FA RID: 4602
+		// (get) Token: 0x06005AD6 RID: 23254 RVA: 0x000804B9 File Offset: 0x0007E6B9
+		// (set) Token: 0x06005AD7 RID: 23255 RVA: 0x000804C9 File Offset: 0x0007E6C9
 		public unsafe float StopTrackTargetDistance
 		{
 			get
@@ -86,13 +75,11 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C68 RID: 23656
-		// (get) Token: 0x06016E90 RID: 93840 RVA: 0x00216E84 File Offset: 0x00215084
-		// (set) Token: 0x06016E91 RID: 93841 RVA: 0x00216EBD File Offset: 0x002150BD
-		[Nullable(1)]
+		// Token: 0x170011FB RID: 4603
+		// (get) Token: 0x06005AD8 RID: 23256 RVA: 0x000804DC File Offset: 0x0007E6DC
+		// (set) Token: 0x06005AD9 RID: 23257 RVA: 0x00080515 File Offset: 0x0007E715
 		public FOnStopTrackTarget OnStopTrackTarget
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -103,16 +90,15 @@ namespace UnrealEngine
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)UKuroFauxPhysicsTrackTargetComponent.__PropertyOffset_OnStopTrackTarget, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x17005C69 RID: 23657
-		// (get) Token: 0x06016E92 RID: 93842 RVA: 0x00216EDE File Offset: 0x002150DE
-		// (set) Token: 0x06016E93 RID: 93843 RVA: 0x00216EF2 File Offset: 0x002150F2
+		// Token: 0x170011FC RID: 4604
+		// (get) Token: 0x06005ADA RID: 23258 RVA: 0x00080536 File Offset: 0x0007E736
+		// (set) Token: 0x06005ADB RID: 23259 RVA: 0x0008054A File Offset: 0x0007E74A
 		public unsafe FVector CurrentLinearVelocity
 		{
 			get
@@ -125,9 +111,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C6A RID: 23658
-		// (get) Token: 0x06016E94 RID: 93844 RVA: 0x00216F07 File Offset: 0x00215107
-		// (set) Token: 0x06016E95 RID: 93845 RVA: 0x00216F17 File Offset: 0x00215117
+		// Token: 0x170011FD RID: 4605
+		// (get) Token: 0x06005ADC RID: 23260 RVA: 0x0008055F File Offset: 0x0007E75F
+		// (set) Token: 0x06005ADD RID: 23261 RVA: 0x0008056F File Offset: 0x0007E76F
 		public unsafe float MinTimeToIntercept
 		{
 			get
@@ -140,9 +126,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C6B RID: 23659
-		// (get) Token: 0x06016E96 RID: 93846 RVA: 0x00216F28 File Offset: 0x00215128
-		// (set) Token: 0x06016E97 RID: 93847 RVA: 0x00216F38 File Offset: 0x00215138
+		// Token: 0x170011FE RID: 4606
+		// (get) Token: 0x06005ADE RID: 23262 RVA: 0x00080580 File Offset: 0x0007E780
+		// (set) Token: 0x06005ADF RID: 23263 RVA: 0x00080590 File Offset: 0x0007E790
 		public unsafe float MaxTimeToIntercept
 		{
 			get
@@ -155,9 +141,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C6C RID: 23660
-		// (get) Token: 0x06016E98 RID: 93848 RVA: 0x00216F49 File Offset: 0x00215149
-		// (set) Token: 0x06016E99 RID: 93849 RVA: 0x00216F59 File Offset: 0x00215159
+		// Token: 0x170011FF RID: 4607
+		// (get) Token: 0x06005AE0 RID: 23264 RVA: 0x000805A1 File Offset: 0x0007E7A1
+		// (set) Token: 0x06005AE1 RID: 23265 RVA: 0x000805B1 File Offset: 0x0007E7B1
 		public unsafe float ForwardOffsetRatio
 		{
 			get
@@ -170,9 +156,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C6D RID: 23661
-		// (get) Token: 0x06016E9A RID: 93850 RVA: 0x00216F6A File Offset: 0x0021516A
-		// (set) Token: 0x06016E9B RID: 93851 RVA: 0x00216F7A File Offset: 0x0021517A
+		// Token: 0x17001200 RID: 4608
+		// (get) Token: 0x06005AE2 RID: 23266 RVA: 0x000805C2 File Offset: 0x0007E7C2
+		// (set) Token: 0x06005AE3 RID: 23267 RVA: 0x000805D2 File Offset: 0x0007E7D2
 		public unsafe ETrackMethod TrackMethod
 		{
 			get
@@ -185,117 +171,111 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016E9C RID: 93852 RVA: 0x00216F8B File Offset: 0x0021518B
+		// Token: 0x06005AE4 RID: 23268 RVA: 0x000805E3 File Offset: 0x0007E7E3
 		[NullableContext(2)]
 		public void StartTrackTarget(APawn Target)
 		{
 			UKuroFauxPhysicsTrackTargetComponent.__StartTrackTarget_Internal(base.NativePtr, (Target != null) ? Target.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06016E9D RID: 93853 RVA: 0x00216FA8 File Offset: 0x002151A8
+		// Token: 0x06005AE5 RID: 23269 RVA: 0x00080600 File Offset: 0x0007E800
 		public virtual FVector CustomGetDirection(in FVector PosA, in FVector VelA, in FVector PosB, float SpeedB)
 		{
 			return UKuroFauxPhysicsTrackTargetComponent.__CustomGetDirection_Internal(base.NativePtr, PosA, VelA, PosB, SpeedB);
 		}
 
-		// Token: 0x06016E9E RID: 93854 RVA: 0x00216FBA File Offset: 0x002151BA
+		// Token: 0x06005AE6 RID: 23270 RVA: 0x00080612 File Offset: 0x0007E812
 		protected virtual FVector CustomGetDirection_Implementation(in FVector PosA, in FVector VelA, in FVector PosB, float SpeedB)
 		{
 			return UKuroFauxPhysicsTrackTargetComponent.__CustomGetDirection_Implementation_Internal(base.NativePtr, PosA, VelA, PosB, SpeedB);
 		}
 
-		// Token: 0x06016E9F RID: 93855
+		// Token: 0x06005AE7 RID: 23271
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StartTrackTarget_Internal(IntPtr @this, IntPtr Target);
 
-		// Token: 0x06016EA0 RID: 93856
+		// Token: 0x06005AE8 RID: 23272
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __CustomGetDirection_Internal(IntPtr @this, in FVector PosA, in FVector VelA, in FVector PosB, float SpeedB);
 
-		// Token: 0x06016EA1 RID: 93857
+		// Token: 0x06005AE9 RID: 23273
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __CustomGetDirection_Implementation_Internal(IntPtr @this, in FVector PosA, in FVector VelA, in FVector PosB, float SpeedB);
 
-		// Token: 0x06016EA2 RID: 93858 RVA: 0x00216FCC File Offset: 0x002151CC
+		// Token: 0x06005AEA RID: 23274 RVA: 0x00080624 File Offset: 0x0007E824
 		static UKuroFauxPhysicsTrackTargetComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroFauxPhysics.KuroFauxPhysicsTrackTargetComponent");
 		}
 
-		// Token: 0x06016EA3 RID: 93859 RVA: 0x00216FDA File Offset: 0x002151DA
+		// Token: 0x06005AEB RID: 23275 RVA: 0x00080632 File Offset: 0x0007E832
 		protected UKuroFauxPhysicsTrackTargetComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C72D RID: 50989
-		internal static int __InterfaceOffset_IKuroPrimitiveVisualizedInterface;
-
-		// Token: 0x0400C72E RID: 50990
-		internal static int __InterfaceOffset_IKuroVisualizedInterface;
-
-		// Token: 0x0400C72F RID: 50991
-		[Nullable(1)]
+		// Token: 0x040025BE RID: 9662
 		public new const string __ObjectPath = "/Script/KuroFauxPhysics.KuroFauxPhysicsTrackTargetComponent";
 
-		// Token: 0x0400C730 RID: 50992
+		// Token: 0x040025BF RID: 9663
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C731 RID: 50993
+		// Token: 0x040025C0 RID: 9664
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C732 RID: 50994
+		// Token: 0x040025C1 RID: 9665
 		internal static int __PropertyOffset_PredictionFactor;
 
-		// Token: 0x0400C733 RID: 50995
+		// Token: 0x040025C2 RID: 9666
 		internal static int __PropertyOffset_InitLinearSpeed;
 
-		// Token: 0x0400C734 RID: 50996
+		// Token: 0x040025C3 RID: 9667
 		internal static int __PropertyOffset_StopTrackTargetDistance;
 
-		// Token: 0x0400C735 RID: 50997
+		// Token: 0x040025C4 RID: 9668
 		internal static int __PropertyOffset_OnStopTrackTarget;
 
-		// Token: 0x0400C736 RID: 50998
+		// Token: 0x040025C5 RID: 9669
 		[Nullable(2)]
 		private FOnStopTrackTarget _OnStopTrackTarget;
 
-		// Token: 0x0400C737 RID: 50999
+		// Token: 0x040025C6 RID: 9670
 		internal static int __PropertyOffset_CurrentLinearVelocity;
 
-		// Token: 0x0400C738 RID: 51000
+		// Token: 0x040025C7 RID: 9671
 		internal static int __PropertyOffset_MinTimeToIntercept;
 
-		// Token: 0x0400C739 RID: 51001
+		// Token: 0x040025C8 RID: 9672
 		internal static int __PropertyOffset_MaxTimeToIntercept;
 
-		// Token: 0x0400C73A RID: 51002
+		// Token: 0x040025C9 RID: 9673
 		internal static int __PropertyOffset_ForwardOffsetRatio;
 
-		// Token: 0x0400C73B RID: 51003
+		// Token: 0x040025CA RID: 9674
 		internal static int __PropertyOffset_TrackMethod;
 
-		// Token: 0x02002F6B RID: 12139
+		// Token: 0x02000A94 RID: 2708
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 52)]
 		protected ref struct __CustomGetDirection_FunctionParams
 		{
-			// Token: 0x04016B22 RID: 92962
+			// Token: 0x04005AE4 RID: 23268
 			[FieldOffset(0)]
 			public FVector PosA;
 
-			// Token: 0x04016B23 RID: 92963
+			// Token: 0x04005AE5 RID: 23269
 			[FieldOffset(12)]
 			public FVector VelA;
 
-			// Token: 0x04016B24 RID: 92964
+			// Token: 0x04005AE6 RID: 23270
 			[FieldOffset(24)]
 			public FVector PosB;
 
-			// Token: 0x04016B25 RID: 92965
+			// Token: 0x04005AE7 RID: 23271
 			[FieldOffset(36)]
 			public float SpeedB;
 
-			// Token: 0x04016B26 RID: 92966
+			// Token: 0x04005AE8 RID: 23272
 			[FieldOffset(40)]
 			public FVector __Result;
 		}

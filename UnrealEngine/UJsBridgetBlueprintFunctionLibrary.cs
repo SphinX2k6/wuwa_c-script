@@ -7,31 +7,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200275F RID: 10079
+	// Token: 0x0200080C RID: 2060
 	[UnrealObjectPath("/Script/Sharphereal.JsBridgetBlueprintFunctionLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UJsBridgetBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06025AE3 RID: 154339 RVA: 0x00391A22 File Offset: 0x0038FC22
+		// Token: 0x0600B535 RID: 46389 RVA: 0x00120271 File Offset: 0x0011E471
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UJsBridgetBlueprintFunctionLibrary._ClassPtr;
 		}
 
-		// Token: 0x06025AE4 RID: 154340 RVA: 0x00391A30 File Offset: 0x0038FC30
+		// Token: 0x0600B536 RID: 46390 RVA: 0x00120280 File Offset: 0x0011E480
 		public UJsBridgetBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(UJsBridgetBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06025AE5 RID: 154341 RVA: 0x00391A58 File Offset: 0x0038FC58
+		// Token: 0x0600B537 RID: 46391 RVA: 0x001202A8 File Offset: 0x0011E4A8
 		[NullableContext(1)]
 		public UJsBridgetBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UJsBridgetBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06025AE6 RID: 154342 RVA: 0x00391A8C File Offset: 0x0038FC8C
+		// Token: 0x0600B538 RID: 46392 RVA: 0x001202DC File Offset: 0x0011E4DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void CSharpCallJavascript(uint EventId, int TargetId, byte ParameterCount, ulong ParameterBufferPtr)
 		{
 			UJsBridgetBlueprintFunctionLibrary.__CSharpCallJavascript_FunctionParams* ptr = stackalloc UJsBridgetBlueprintFunctionLibrary.__CSharpCallJavascript_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(UJsBridgetBlueprintFunctionLibrary.__CSharpCallJavascript_FunctionParams) & -16L;
@@ -40,51 +39,51 @@ namespace UnrealEngine
 			ptr->TargetId = TargetId;
 			ptr->ParameterCount = ParameterCount;
 			ptr->ParameterBufferPtr = ParameterBufferPtr;
-			UnrealReflectionUtils.CallUFunction(UJsBridgetBlueprintFunctionLibrary._ClassDefaultObjectPtr, UJsBridgetBlueprintFunctionLibrary.__CSharpCallJavascript_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UJsBridgetBlueprintFunctionLibrary._ClassDefaultObjectPtr, UJsBridgetBlueprintFunctionLibrary.__CSharpCallJavascript_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06025AE7 RID: 154343 RVA: 0x00391AE7 File Offset: 0x0038FCE7
+		// Token: 0x0600B539 RID: 46393 RVA: 0x00120336 File Offset: 0x0011E536
 		static UJsBridgetBlueprintFunctionLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Sharphereal.JsBridgetBlueprintFunctionLibrary");
 		}
 
-		// Token: 0x06025AE8 RID: 154344 RVA: 0x00391AF5 File Offset: 0x0038FCF5
+		// Token: 0x0600B53A RID: 46394 RVA: 0x00120344 File Offset: 0x0011E544
 		protected UJsBridgetBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401482A RID: 84010
+		// Token: 0x040051C8 RID: 20936
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Sharphereal.JsBridgetBlueprintFunctionLibrary";
 
-		// Token: 0x0401482B RID: 84011
+		// Token: 0x040051C9 RID: 20937
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401482C RID: 84012
+		// Token: 0x040051CA RID: 20938
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401482D RID: 84013
+		// Token: 0x040051CB RID: 20939
 		private static IntPtr __CSharpCallJavascript_NativeFunctionPtr;
 
-		// Token: 0x02003A58 RID: 14936
+		// Token: 0x0200132A RID: 4906
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __CSharpCallJavascript_FunctionParams
 		{
-			// Token: 0x04017BAF RID: 97199
+			// Token: 0x04006762 RID: 26466
 			[FieldOffset(0)]
 			public uint EventId;
 
-			// Token: 0x04017BB0 RID: 97200
+			// Token: 0x04006763 RID: 26467
 			[FieldOffset(4)]
 			public int TargetId;
 
-			// Token: 0x04017BB1 RID: 97201
+			// Token: 0x04006764 RID: 26468
 			[FieldOffset(8)]
 			public byte ParameterCount;
 
-			// Token: 0x04017BB2 RID: 97202
+			// Token: 0x04006765 RID: 26469
 			[FieldOffset(16)]
 			public ulong ParameterBufferPtr;
 		}

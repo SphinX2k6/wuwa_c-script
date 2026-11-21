@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AC1 RID: 2753
+	// Token: 0x02000B8B RID: 2955
 	public class IEntityBatchType
 	{
-		// Token: 0x06003F6C RID: 16236 RVA: 0x000A204E File Offset: 0x000A024E
-		[NullableContext(1)]
+		// Token: 0x06004396 RID: 17302 RVA: 0x000AB642 File Offset: 0x000A9842
 		public static IEntityBatchType Create(IEntityBatchType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FA7 RID: 4007
-		// (get) Token: 0x06003F6D RID: 16237 RVA: 0x000A206D File Offset: 0x000A026D
+		// Token: 0x1700107B RID: 4219
+		// (get) Token: 0x06004397 RID: 17303 RVA: 0x000AB661 File Offset: 0x000A9861
 		public virtual EEntityBatchType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400233C RID: 9020
+		// Token: 0x04002558 RID: 9560
 		private IEntityBatchType Instance;
 	}
 }

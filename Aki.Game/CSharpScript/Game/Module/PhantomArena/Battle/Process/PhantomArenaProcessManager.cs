@@ -7,13 +7,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 {
-	// Token: 0x0200528C RID: 21132
+	// Token: 0x0200425C RID: 16988
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaProcessManager
 	{
-		// Token: 0x1700827D RID: 33405
-		// (get) Token: 0x06036063 RID: 221283 RVA: 0x00CC90E9 File Offset: 0x00CC72E9
+		// Token: 0x1700563D RID: 22077
+		// (get) Token: 0x0602AF5E RID: 175966 RVA: 0x00C167ED File Offset: 0x00C149ED
 		public EPlayingCardProcessState State
 		{
 			get
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 			}
 		}
 
-		// Token: 0x1700827E RID: 33406
-		// (get) Token: 0x06036064 RID: 221284 RVA: 0x00CC90F1 File Offset: 0x00CC72F1
+		// Token: 0x1700563E RID: 22078
+		// (get) Token: 0x0602AF5F RID: 175967 RVA: 0x00C167F5 File Offset: 0x00C149F5
 		public bool IsInOwnPlaying
 		{
 			get
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 			}
 		}
 
-		// Token: 0x1700827F RID: 33407
-		// (get) Token: 0x06036065 RID: 221285 RVA: 0x00CC90FD File Offset: 0x00CC72FD
+		// Token: 0x1700563F RID: 22079
+		// (get) Token: 0x0602AF60 RID: 175968 RVA: 0x00C16801 File Offset: 0x00C14A01
 		public bool IsNotInOwnPlaying
 		{
 			get
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 			}
 		}
 
-		// Token: 0x06036066 RID: 221286 RVA: 0x00CC910C File Offset: 0x00CC730C
+		// Token: 0x0602AF61 RID: 175969 RVA: 0x00C16810 File Offset: 0x00C14A10
 		public PhantomArenaProcessManager(PhantomArenaBattleProxy proxy)
 		{
 			Dictionary<EPlayingCardProcessState, List<EPlayingCardProcessState>> dictionary = new Dictionary<EPlayingCardProcessState, List<EPlayingCardProcessState>>();
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 			this.Proxy = proxy;
 		}
 
-		// Token: 0x06036067 RID: 221287 RVA: 0x00CC9220 File Offset: 0x00CC7420
+		// Token: 0x0602AF62 RID: 175970 RVA: 0x00C16924 File Offset: 0x00C14B24
 		public void InitStateMap()
 		{
 			this.StateMap[EPlayingCardProcessState.TimeStart] = delegate()
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 			};
 		}
 
-		// Token: 0x06036068 RID: 221288 RVA: 0x00CC9338 File Offset: 0x00CC7538
+		// Token: 0x0602AF63 RID: 175971 RVA: 0x00C16A3C File Offset: 0x00C14C3C
 		private UniTask SetStateAsync(EPlayingCardProcessState state)
 		{
 			PhantomArenaProcessManager.<SetStateAsync>d__15 <SetStateAsync>d__;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 			return <SetStateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036069 RID: 221289 RVA: 0x00CC9384 File Offset: 0x00CC7584
+		// Token: 0x0602AF64 RID: 175972 RVA: 0x00C16A88 File Offset: 0x00C14C88
 		private UniTask HandleStateList()
 		{
 			PhantomArenaProcessManager.<HandleStateList>d__16 <HandleStateList>d__;
@@ -165,13 +165,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 			return <HandleStateList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603606A RID: 221290 RVA: 0x00CC93C7 File Offset: 0x00CC75C7
+		// Token: 0x0602AF65 RID: 175973 RVA: 0x00C16ACB File Offset: 0x00C14CCB
 		public void SetState(EPlayingCardProcessState state)
 		{
 			this.SetStateAsync(state).Forget();
 		}
 
-		// Token: 0x0603606B RID: 221291 RVA: 0x00CC93D5 File Offset: 0x00CC75D5
+		// Token: 0x0602AF66 RID: 175974 RVA: 0x00C16AD9 File Offset: 0x00C14CD9
 		public void Clear()
 		{
 			this.PendingList.Clear();
@@ -179,25 +179,25 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 			this.IsClear = true;
 		}
 
-		// Token: 0x0401C9CB RID: 117195
+		// Token: 0x04017400 RID: 95232
 		private readonly Dictionary<EPlayingCardProcessState, Func<UniTask>> StateMap = new Dictionary<EPlayingCardProcessState, Func<UniTask>>();
 
-		// Token: 0x0401C9CC RID: 117196
+		// Token: 0x04017401 RID: 95233
 		private readonly List<EPlayingCardProcessState> PendingList = new List<EPlayingCardProcessState>();
 
-		// Token: 0x0401C9CD RID: 117197
+		// Token: 0x04017402 RID: 95234
 		private bool IsInPending;
 
-		// Token: 0x0401C9CE RID: 117198
+		// Token: 0x04017403 RID: 95235
 		private bool IsClear;
 
-		// Token: 0x0401C9CF RID: 117199
+		// Token: 0x04017404 RID: 95236
 		private readonly Dictionary<EPlayingCardProcessState, List<EPlayingCardProcessState>> StateParentMap;
 
-		// Token: 0x0401C9D0 RID: 117200
+		// Token: 0x04017405 RID: 95237
 		private EPlayingCardProcessState StateInternal;
 
-		// Token: 0x0401C9D1 RID: 117201
+		// Token: 0x04017406 RID: 95238
 		protected PhantomArenaBattleProxy Proxy;
 	}
 }

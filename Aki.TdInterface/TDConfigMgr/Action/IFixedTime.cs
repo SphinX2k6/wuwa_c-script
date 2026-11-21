@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A71 RID: 6769
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C06 RID: 7174
 	public class IFixedTime
 	{
-		// Token: 0x060090F4 RID: 37108 RVA: 0x00151AF8 File Offset: 0x0014FCF8
+		// Token: 0x0600985E RID: 39006 RVA: 0x00161A24 File Offset: 0x0015FC24
 		private IFixedTime_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060090F5 RID: 37109 RVA: 0x00151B30 File Offset: 0x0014FD30
+		// Token: 0x0600985F RID: 39007 RVA: 0x00161A5C File Offset: 0x0015FC5C
 		public static IFixedTime Create([Nullable(2)] IFixedTime instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060090F6 RID: 37110 RVA: 0x00151B43 File Offset: 0x0014FD43
+		// Token: 0x06009860 RID: 39008 RVA: 0x00161A6F File Offset: 0x0015FC6F
 		public static IFixedTime CreateFromSetValue([Nullable(2)] IFixedTime_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060090F7 RID: 37111 RVA: 0x00151B56 File Offset: 0x0014FD56
+		// Token: 0x06009861 RID: 39009 RVA: 0x00161A82 File Offset: 0x0015FC82
 		public IFixedTime_SetValue ToSetValue()
 		{
 			return new IFixedTime_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E26 RID: 11814
-		// (get) Token: 0x060090F8 RID: 37112 RVA: 0x00151B75 File Offset: 0x0014FD75
-		// (set) Token: 0x060090F9 RID: 37113 RVA: 0x00151BA0 File Offset: 0x0014FDA0
+		// Token: 0x17003033 RID: 12339
+		// (get) Token: 0x06009862 RID: 39010 RVA: 0x00161AA1 File Offset: 0x0015FCA1
+		// (set) Token: 0x06009863 RID: 39011 RVA: 0x00161ACC File Offset: 0x0015FCCC
 		public virtual int Hour
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E27 RID: 11815
-		// (get) Token: 0x060090FA RID: 37114 RVA: 0x00151BAE File Offset: 0x0014FDAE
-		// (set) Token: 0x060090FB RID: 37115 RVA: 0x00151BD9 File Offset: 0x0014FDD9
+		// Token: 0x17003034 RID: 12340
+		// (get) Token: 0x06009864 RID: 39012 RVA: 0x00161ADA File Offset: 0x0015FCDA
+		// (set) Token: 0x06009865 RID: 39013 RVA: 0x00161B05 File Offset: 0x0015FD05
 		public virtual int Minutes
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005977 RID: 22903
+		// Token: 0x04005DDC RID: 24028
 		[Nullable(2)]
 		protected IFixedTime FbInstance;
 
-		// Token: 0x04005978 RID: 22904
+		// Token: 0x04005DDD RID: 24029
 		[Nullable(2)]
 		protected IFixedTime_SetValue PocoInterface;
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023C9 RID: 9161
+	// Token: 0x0200265E RID: 9822
 	public static class EPhotographCameraTransformExtensions
 	{
-		// Token: 0x0600C787 RID: 51079 RVA: 0x001D3580 File Offset: 0x001D1780
+		// Token: 0x0600D401 RID: 54273 RVA: 0x001ECC18 File Offset: 0x001EAE18
 		public static string ToEnumString(this EPhotographCameraTransform value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C788 RID: 51080 RVA: 0x001D35A8 File Offset: 0x001D17A8
+		// Token: 0x0600D402 RID: 54274 RVA: 0x001ECC40 File Offset: 0x001EAE40
 		public static EPhotographCameraTransform FromString(string name)
 		{
 			EPhotographCameraTransform result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C789 RID: 51081 RVA: 0x001D35D1 File Offset: 0x001D17D1
+		// Token: 0x0600D403 RID: 54275 RVA: 0x001ECC69 File Offset: 0x001EAE69
 		public static bool TryFromString(string name, out EPhotographCameraTransform value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C78A RID: 51082 RVA: 0x001D35F6 File Offset: 0x001D17F6
+		// Token: 0x0600D404 RID: 54276 RVA: 0x001ECC8E File Offset: 0x001EAE8E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C78B RID: 51083 RVA: 0x001D3606 File Offset: 0x001D1806
+		// Token: 0x0600D405 RID: 54277 RVA: 0x001ECC9E File Offset: 0x001EAE9E
 		public static EPhotographCameraTransform[] GetValues()
 		{
 			return new EPhotographCameraTransform[1];
 		}
 
-		// Token: 0x0600C78C RID: 51084 RVA: 0x001D360E File Offset: 0x001D180E
+		// Token: 0x0600D406 RID: 54278 RVA: 0x001ECCA6 File Offset: 0x001EAEA6
 		public static string[] GetNames()
 		{
 			return new string[]

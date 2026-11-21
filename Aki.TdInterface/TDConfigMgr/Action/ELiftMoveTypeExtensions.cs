@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200236F RID: 9071
+	// Token: 0x020025E4 RID: 9700
 	public static class ELiftMoveTypeExtensions
 	{
-		// Token: 0x0600C5F2 RID: 50674 RVA: 0x001CFEF8 File Offset: 0x001CE0F8
+		// Token: 0x0600D1DC RID: 53724 RVA: 0x001E81D8 File Offset: 0x001E63D8
 		public static string ToEnumString(this ELiftMoveType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5F3 RID: 50675 RVA: 0x001CFF4C File Offset: 0x001CE14C
+		// Token: 0x0600D1DD RID: 53725 RVA: 0x001E822C File Offset: 0x001E642C
 		public static ELiftMoveType FromString(string name)
 		{
 			ELiftMoveType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5F4 RID: 50676 RVA: 0x001CFF78 File Offset: 0x001CE178
+		// Token: 0x0600D1DE RID: 53726 RVA: 0x001E8258 File Offset: 0x001E6458
 		public static bool TryFromString(string name, out ELiftMoveType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C5F5 RID: 50677 RVA: 0x001CFFE0 File Offset: 0x001CE1E0
+		// Token: 0x0600D1DF RID: 53727 RVA: 0x001E82C0 File Offset: 0x001E64C0
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5F6 RID: 50678 RVA: 0x001D0008 File Offset: 0x001CE208
+		// Token: 0x0600D1E0 RID: 53728 RVA: 0x001E82E8 File Offset: 0x001E64E8
 		public static ELiftMoveType[] GetValues()
 		{
 			return new ELiftMoveType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5F7 RID: 50679 RVA: 0x001D001B File Offset: 0x001CE21B
+		// Token: 0x0600D1E1 RID: 53729 RVA: 0x001E82FB File Offset: 0x001E64FB
 		public static string[] GetNames()
 		{
 			return new string[]

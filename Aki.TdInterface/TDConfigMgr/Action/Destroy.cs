@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001559 RID: 5465
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020016B7 RID: 5815
 	public class Destroy : ActionParams
 	{
-		// Token: 0x06007B7F RID: 31615 RVA: 0x001298EC File Offset: 0x00127AEC
+		// Token: 0x0600825D RID: 33373 RVA: 0x00138998 File Offset: 0x00136B98
 		private Destroy_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B80 RID: 31616 RVA: 0x00129924 File Offset: 0x00127B24
+		// Token: 0x0600825E RID: 33374 RVA: 0x001389D0 File Offset: 0x00136BD0
 		public static Destroy Create([Nullable(2)] Destroy instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007B81 RID: 31617 RVA: 0x00129937 File Offset: 0x00127B37
+		// Token: 0x0600825F RID: 33375 RVA: 0x001389E3 File Offset: 0x00136BE3
 		public static Destroy CreateFromSetValue([Nullable(2)] Destroy_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007B82 RID: 31618 RVA: 0x0012994A File Offset: 0x00127B4A
+		// Token: 0x06008260 RID: 33376 RVA: 0x001389F6 File Offset: 0x00136BF6
 		public Destroy_SetValue ToSetValue()
 		{
 			return new Destroy_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028F4 RID: 10484
-		// (get) Token: 0x06007B83 RID: 31619 RVA: 0x00129960 File Offset: 0x00127B60
-		// (set) Token: 0x06007B84 RID: 31620 RVA: 0x0012999A File Offset: 0x00127B9A
+		// Token: 0x17002ADF RID: 10975
+		// (get) Token: 0x06008261 RID: 33377 RVA: 0x00138A0C File Offset: 0x00136C0C
+		// (set) Token: 0x06008262 RID: 33378 RVA: 0x00138A46 File Offset: 0x00136C46
 		public virtual bool? DelayDestroy
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004721 RID: 18209
+		// Token: 0x04004AC1 RID: 19137
 		[Nullable(2)]
 		protected new Destroy FbInstance;
 
-		// Token: 0x04004722 RID: 18210
+		// Token: 0x04004AC2 RID: 19138
 		[Nullable(2)]
 		protected Destroy_SetValue PocoInterface;
 	}

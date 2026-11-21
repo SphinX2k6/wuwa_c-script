@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CF5 RID: 15605
+	// Token: 0x0200410C RID: 16652
 	public struct IAddTimeConfig : IFlatbufferObject
 	{
-		// Token: 0x17006AFB RID: 27387
-		// (get) Token: 0x060157ED RID: 88045 RVA: 0x0031AE8B File Offset: 0x0031908B
+		// Token: 0x170070B5 RID: 28853
+		// (get) Token: 0x06016D25 RID: 93477 RVA: 0x00342103 File Offset: 0x00340303
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060157EE RID: 88046 RVA: 0x0031AE98 File Offset: 0x00319098
+		// Token: 0x06016D26 RID: 93478 RVA: 0x00342110 File Offset: 0x00340310
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060157EF RID: 88047 RVA: 0x0031AEA0 File Offset: 0x003190A0
+		// Token: 0x06016D27 RID: 93479 RVA: 0x00342118 File Offset: 0x00340318
 		public static IAddTimeConfig GetRootAsIAddTimeConfig(ByteBuffer _bb)
 		{
 			return IAddTimeConfig.GetRootAsIAddTimeConfig(_bb, default(IAddTimeConfig));
 		}
 
-		// Token: 0x060157F0 RID: 88048 RVA: 0x0031AEBC File Offset: 0x003190BC
+		// Token: 0x06016D28 RID: 93480 RVA: 0x00342134 File Offset: 0x00340334
 		public static IAddTimeConfig GetRootAsIAddTimeConfig(ByteBuffer _bb, IAddTimeConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060157F1 RID: 88049 RVA: 0x0031AED9 File Offset: 0x003190D9
+		// Token: 0x06016D29 RID: 93481 RVA: 0x00342151 File Offset: 0x00340351
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060157F2 RID: 88050 RVA: 0x0031AEE8 File Offset: 0x003190E8
+		// Token: 0x06016D2A RID: 93482 RVA: 0x00342160 File Offset: 0x00340360
 		public IAddTimeConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006AFC RID: 27388
-		// (get) Token: 0x060157F3 RID: 88051 RVA: 0x0031AEF8 File Offset: 0x003190F8
+		// Token: 0x170070B6 RID: 28854
+		// (get) Token: 0x06016D2B RID: 93483 RVA: 0x00342170 File Offset: 0x00340370
 		public IKillMonster? MonsterConfig
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060157F4 RID: 88052 RVA: 0x0031AF58 File Offset: 0x00319158
+		// Token: 0x06016D2C RID: 93484 RVA: 0x003421D0 File Offset: 0x003403D0
 		public IAddTimeStateCondition? StateConfig(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new IAddTimeStateCondition?(default(IAddTimeStateCondition).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17006AFD RID: 27389
-		// (get) Token: 0x060157F5 RID: 88053 RVA: 0x0031AFB8 File Offset: 0x003191B8
+		// Token: 0x170070B7 RID: 28855
+		// (get) Token: 0x06016D2D RID: 93485 RVA: 0x00342230 File Offset: 0x00340430
 		public int StateConfigLength
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006AFE RID: 27390
-		// (get) Token: 0x060157F6 RID: 88054 RVA: 0x0031AFE4 File Offset: 0x003191E4
+		// Token: 0x170070B8 RID: 28856
+		// (get) Token: 0x06016D2E RID: 93486 RVA: 0x0034225C File Offset: 0x0034045C
 		public byte NullMask
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060157F7 RID: 88055 RVA: 0x0031B020 File Offset: 0x00319220
+		// Token: 0x06016D2F RID: 93487 RVA: 0x00342298 File Offset: 0x00340498
 		public static Offset<IAddTimeConfig> CreateIAddTimeConfig(FlatBufferBuilder builder, Offset<IKillMonster> MonsterConfigOffset = default(Offset<IKillMonster>), VectorOffset StateConfigOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -114,25 +114,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAddTimeConfig.EndIAddTimeConfig(builder);
 		}
 
-		// Token: 0x060157F8 RID: 88056 RVA: 0x0031B044 File Offset: 0x00319244
+		// Token: 0x06016D30 RID: 93488 RVA: 0x003422BC File Offset: 0x003404BC
 		public static void StartIAddTimeConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060157F9 RID: 88057 RVA: 0x0031B04D File Offset: 0x0031924D
+		// Token: 0x06016D31 RID: 93489 RVA: 0x003422C5 File Offset: 0x003404C5
 		public static void AddMonsterConfig(FlatBufferBuilder builder, Offset<IKillMonster> monsterConfigOffset)
 		{
 			builder.AddOffset(0, monsterConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060157FA RID: 88058 RVA: 0x0031B05D File Offset: 0x0031925D
+		// Token: 0x06016D32 RID: 93490 RVA: 0x003422D5 File Offset: 0x003404D5
 		public static void AddStateConfig(FlatBufferBuilder builder, VectorOffset stateConfigOffset)
 		{
 			builder.AddOffset(1, stateConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060157FB RID: 88059 RVA: 0x0031B070 File Offset: 0x00319270
+		// Token: 0x06016D33 RID: 93491 RVA: 0x003422E8 File Offset: 0x003404E8
 		public static VectorOffset CreateStateConfigVector(FlatBufferBuilder builder, Offset<IAddTimeStateCondition>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060157FC RID: 88060 RVA: 0x0031B0B0 File Offset: 0x003192B0
+		// Token: 0x06016D34 RID: 93492 RVA: 0x00342328 File Offset: 0x00340528
 		public static VectorOffset CreateStateConfigVectorBlock(FlatBufferBuilder builder, Offset<IAddTimeStateCondition>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -151,7 +151,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060157FD RID: 88061 RVA: 0x0031B0CA File Offset: 0x003192CA
+		// Token: 0x06016D35 RID: 93493 RVA: 0x00342342 File Offset: 0x00340542
 		public static VectorOffset CreateStateConfigVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IAddTimeStateCondition>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060157FE RID: 88062 RVA: 0x0031B0E8 File Offset: 0x003192E8
+		// Token: 0x06016D36 RID: 93494 RVA: 0x00342360 File Offset: 0x00340560
 		public static VectorOffset CreateStateConfigVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -167,25 +167,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060157FF RID: 88063 RVA: 0x0031B101 File Offset: 0x00319301
+		// Token: 0x06016D37 RID: 93495 RVA: 0x00342379 File Offset: 0x00340579
 		public static void StartStateConfigVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06015800 RID: 88064 RVA: 0x0031B10C File Offset: 0x0031930C
+		// Token: 0x06016D38 RID: 93496 RVA: 0x00342384 File Offset: 0x00340584
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06015801 RID: 88065 RVA: 0x0031B117 File Offset: 0x00319317
+		// Token: 0x06016D39 RID: 93497 RVA: 0x0034238F File Offset: 0x0034058F
 		public static Offset<IAddTimeConfig> EndIAddTimeConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IAddTimeConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06015802 RID: 88066 RVA: 0x0031B124 File Offset: 0x00319324
+		// Token: 0x06016D3A RID: 93498 RVA: 0x0034239C File Offset: 0x0034059C
 		public IAddTimeConfigT UnPack()
 		{
 			IAddTimeConfigT addTimeConfigT = new IAddTimeConfigT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return addTimeConfigT;
 		}
 
-		// Token: 0x06015803 RID: 88067 RVA: 0x0031B140 File Offset: 0x00319340
+		// Token: 0x06016D3B RID: 93499 RVA: 0x003423B8 File Offset: 0x003405B8
 		public void UnPackTo(IAddTimeConfigT _o)
 		{
 			_o.MonsterConfig = ((this.MonsterConfig != null) ? this.MonsterConfig.Value.UnPack() : null);
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06015804 RID: 88068 RVA: 0x0031B1DC File Offset: 0x003193DC
+		// Token: 0x06016D3C RID: 93500 RVA: 0x00342454 File Offset: 0x00340654
 		public static Offset<IAddTimeConfig> Pack(FlatBufferBuilder builder, IAddTimeConfigT _o)
 		{
 			if (_o == null)
@@ -226,7 +226,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAddTimeConfig.CreateIAddTimeConfig(builder, monsterConfigOffset, stateConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400B599 RID: 46489
+		// Token: 0x0400BF46 RID: 48966
 		private Table __p;
 	}
 }

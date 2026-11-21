@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006419 RID: 25625
+	// Token: 0x02005397 RID: 21399
 	public class MotorFightSummaryAttrItem : GridProxyAbstract<EMotorFightAttrShowType>
 	{
-		// Token: 0x0604071B RID: 263963 RVA: 0x00F97BEC File Offset: 0x00F95DEC
+		// Token: 0x060353DC RID: 218076 RVA: 0x00EDEB8C File Offset: 0x00EDCD8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604071C RID: 263964 RVA: 0x00F97CDC File Offset: 0x00F95EDC
+		// Token: 0x060353DD RID: 218077 RVA: 0x00EDEC7C File Offset: 0x00EDCE7C
 		public override void Refresh(EMotorFightAttrShowType type, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), MotorFightDefine.motorFightAttrShowTypeToName[type], Array.Empty<object>());
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x0604071D RID: 263965 RVA: 0x00F97ED4 File Offset: 0x00F960D4
+		// Token: 0x060353DE RID: 218078 RVA: 0x00EDEE74 File Offset: 0x00EDD074
 		[NullableContext(1)]
 		private void SetAttrText(TMap<EKSC_AttrType, int> attrs)
 		{
@@ -152,28 +152,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			text3.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x04021819 RID: 137241
+		// Token: 0x0401C148 RID: 115016
 		public const int WINGMAN_ATTACK_SPEED_ID = 1019;
 
-		// Token: 0x0200C63E RID: 50750
+		// Token: 0x0200B025 RID: 45093
 		private class EComponent
 		{
-			// Token: 0x0403BDA8 RID: 245160
+			// Token: 0x04036705 RID: 222981
 			public const int TextAttrName = 0;
 
-			// Token: 0x0403BDA9 RID: 245161
+			// Token: 0x04036706 RID: 222982
 			public const int TextAttack = 1;
 
-			// Token: 0x0403BDAA RID: 245162
+			// Token: 0x04036707 RID: 222983
 			public const int TextAttackSpeed = 2;
 
-			// Token: 0x0403BDAB RID: 245163
+			// Token: 0x04036708 RID: 222984
 			public const int TextCrit = 3;
 
-			// Token: 0x0403BDAC RID: 245164
+			// Token: 0x04036709 RID: 222985
 			public const int TextCritDamage = 4;
 
-			// Token: 0x0403BDAD RID: 245165
+			// Token: 0x0403670A RID: 222986
 			public const int TextAttackSpeedTitle = 5;
 		}
 	}

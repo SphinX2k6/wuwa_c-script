@@ -6,8 +6,8 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class LinkedList<[Nullable(2)] T>
 {
-	// Token: 0x17000049 RID: 73
-	// (get) Token: 0x06000245 RID: 581 RVA: 0x0000CD62 File Offset: 0x0000AF62
+	// Token: 0x17000048 RID: 72
+	// (get) Token: 0x06000246 RID: 582 RVA: 0x0000CA46 File Offset: 0x0000AC46
 	public int Count
 	{
 		get
@@ -16,8 +16,8 @@ public class LinkedList<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x1700004A RID: 74
-	// (get) Token: 0x06000246 RID: 582 RVA: 0x0000CD6C File Offset: 0x0000AF6C
+	// Token: 0x17000049 RID: 73
+	// (get) Token: 0x06000247 RID: 583 RVA: 0x0000CA50 File Offset: 0x0000AC50
 	[Nullable(new byte[]
 	{
 		2,
@@ -36,7 +36,7 @@ public class LinkedList<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x06000247 RID: 583 RVA: 0x0000CD74 File Offset: 0x0000AF74
+	// Token: 0x06000248 RID: 584 RVA: 0x0000CA58 File Offset: 0x0000AC58
 	public LinkedList(T element)
 	{
 		this.Head = new LinkedNode<T>(element);
@@ -44,7 +44,7 @@ public class LinkedList<[Nullable(2)] T>
 		this.Length = 1;
 	}
 
-	// Token: 0x06000248 RID: 584 RVA: 0x0000CD9C File Offset: 0x0000AF9C
+	// Token: 0x06000249 RID: 585 RVA: 0x0000CA80 File Offset: 0x0000AC80
 	public LinkedNode<T> AddTail(T newElement)
 	{
 		LinkedNode<T> linkedNode = new LinkedNode<T>(newElement);
@@ -54,7 +54,7 @@ public class LinkedList<[Nullable(2)] T>
 		return linkedNode;
 	}
 
-	// Token: 0x06000249 RID: 585 RVA: 0x0000CDD4 File Offset: 0x0000AFD4
+	// Token: 0x0600024A RID: 586 RVA: 0x0000CAB8 File Offset: 0x0000ACB8
 	public void RemoveNodesBeforeThis(LinkedNode<T> removeNode, bool includeThis)
 	{
 		if (removeNode == this.Head)
@@ -106,7 +106,7 @@ public class LinkedList<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x0600024A RID: 586 RVA: 0x0000CEBC File Offset: 0x0000B0BC
+	// Token: 0x0600024B RID: 587 RVA: 0x0000CBA0 File Offset: 0x0000ADA0
 	public void RemoveNode(LinkedNode<T> removeNode)
 	{
 		if (removeNode == this.Head)
@@ -129,7 +129,7 @@ public class LinkedList<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x0600024B RID: 587 RVA: 0x0000CF28 File Offset: 0x0000B128
+	// Token: 0x0600024C RID: 588 RVA: 0x0000CC0C File Offset: 0x0000AE0C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -140,7 +140,7 @@ public class LinkedList<[Nullable(2)] T>
 		return this.Head.Next;
 	}
 
-	// Token: 0x0600024C RID: 588 RVA: 0x0000CF35 File Offset: 0x0000B135
+	// Token: 0x0600024D RID: 589 RVA: 0x0000CC19 File Offset: 0x0000AE19
 	public void RemoveAllNodeWithoutHead()
 	{
 		this.Head.Next = null;
@@ -148,7 +148,7 @@ public class LinkedList<[Nullable(2)] T>
 		this.Length = 1;
 	}
 
-	// Token: 0x040001C2 RID: 450
+	// Token: 0x040001C4 RID: 452
 	[Nullable(new byte[]
 	{
 		2,
@@ -156,7 +156,7 @@ public class LinkedList<[Nullable(2)] T>
 	})]
 	private readonly LinkedNode<T> Head;
 
-	// Token: 0x040001C3 RID: 451
+	// Token: 0x040001C5 RID: 453
 	[Nullable(new byte[]
 	{
 		2,
@@ -164,6 +164,6 @@ public class LinkedList<[Nullable(2)] T>
 	})]
 	private LinkedNode<T> Tail;
 
-	// Token: 0x040001C4 RID: 452
+	// Token: 0x040001C6 RID: 454
 	private int Length;
 }

@@ -2,34 +2,34 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E1F RID: 19999
+	// Token: 0x0200532E RID: 21294
 	public enum ESplineType : byte
 	{
-		// Token: 0x0400DB4C RID: 56140
+		// Token: 0x0400E6BE RID: 59070
 		Common,
-		// Token: 0x0400DB4D RID: 56141
+		// Token: 0x0400E6BF RID: 59071
 		Parkour,
-		// Token: 0x0400DB4E RID: 56142
+		// Token: 0x0400E6C0 RID: 59072
 		Butterfly,
-		// Token: 0x0400DB4F RID: 56143
+		// Token: 0x0400E6C1 RID: 59073
 		Effect,
-		// Token: 0x0400DB50 RID: 56144
+		// Token: 0x0400E6C2 RID: 59074
 		Patrol,
-		// Token: 0x0400DB51 RID: 56145
+		// Token: 0x0400E6C3 RID: 59075
 		LevelAI,
-		// Token: 0x0400DB52 RID: 56146
+		// Token: 0x0400E6C4 RID: 59076
 		AirPassage,
-		// Token: 0x0400DB53 RID: 56147
+		// Token: 0x0400E6C5 RID: 59077
 		ContinuesVariableSpeedMovement,
-		// Token: 0x0400DB54 RID: 56148
+		// Token: 0x0400E6C6 RID: 59078
 		TimePatrol,
-		// Token: 0x0400DB55 RID: 56149
+		// Token: 0x0400E6C7 RID: 59079
 		Range,
-		// Token: 0x0400DB56 RID: 56150
+		// Token: 0x0400E6C8 RID: 59080
 		Way,
-		// Token: 0x0400DB57 RID: 56151
+		// Token: 0x0400E6C9 RID: 59081
 		MotorSlide,
-		// Token: 0x0400DB58 RID: 56152
+		// Token: 0x0400E6CA RID: 59082
 		SwordRiderRail
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 {
-	// Token: 0x02005EAC RID: 24236
+	// Token: 0x02004E91 RID: 20113
 	public static class HandlerRegistration
 	{
-		// Token: 0x0603DAA4 RID: 252580 RVA: 0x00EE466A File Offset: 0x00EE286A
+		// Token: 0x06032A34 RID: 207412 RVA: 0x00E35BB6 File Offset: 0x00E33DB6
 		public static void RegisterAllAreaFunctionHandlers()
 		{
 			AreaFunctionRegistry.RegisterFunctionHandler(new AirCurrentHandler());

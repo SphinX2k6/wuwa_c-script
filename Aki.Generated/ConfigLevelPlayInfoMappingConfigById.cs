@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004D0 RID: 1232
+	// Token: 0x020004E6 RID: 1254
 	public class ConfigLevelPlayInfoMappingConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CEB RID: 7403 RVA: 0x000FC90F File Offset: 0x000FAB0F
+		// Token: 0x06001D6F RID: 7535 RVA: 0x00103063 File Offset: 0x00101263
 		static ConfigLevelPlayInfoMappingConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLevelPlayInfoMappingConfigById.CreateStaticDefaultValue), new Action(ConfigLevelPlayInfoMappingConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CEC RID: 7404 RVA: 0x000FC930 File Offset: 0x000FAB30
+		// Token: 0x06001D70 RID: 7536 RVA: 0x00103084 File Offset: 0x00101284
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLevelPlayInfoMappingConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CED RID: 7405 RVA: 0x000FC9AF File Offset: 0x000FABAF
+		// Token: 0x06001D71 RID: 7537 RVA: 0x00103103 File Offset: 0x00101303
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLevelPlayInfoMappingConfigById.LogPair = null;
 			ConfigLevelPlayInfoMappingConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06001CEE RID: 7406 RVA: 0x000FC9BD File Offset: 0x000FABBD
+		// Token: 0x06001D72 RID: 7538 RVA: 0x00103111 File Offset: 0x00101311
 		public static void Init()
 		{
 			ConfigLevelPlayInfoMappingConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigLevelPlayInfoMappingConfigById.HandleId, "db_levelplayinfomappingconfig.db", "select BinData from `LevelPlayInfoMappingConfig` where Id=?");
 		}
 
-		// Token: 0x06001CEF RID: 7407 RVA: 0x000FC9D8 File Offset: 0x000FABD8
+		// Token: 0x06001D73 RID: 7539 RVA: 0x0010312C File Offset: 0x0010132C
 		public static LevelPlayInfoMappingConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLevelPlayInfoMappingConfigById.HandleId, ConfigLevelPlayInfoMappingConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LevelPlayInfoMappingConfig?(rootAsLevelPlayInfoMappingConfig);
 		}
 
-		// Token: 0x04002194 RID: 8596
+		// Token: 0x0400222E RID: 8750
 		private const string DB = "db_levelplayinfomappingconfig.db";
 
-		// Token: 0x04002195 RID: 8597
+		// Token: 0x0400222F RID: 8751
 		private const string FILE = "k.可视化编辑/c.Csv/w.玩法信息映射/*.csv*";
 
-		// Token: 0x04002196 RID: 8598
+		// Token: 0x04002230 RID: 8752
 		private const string TABLE = "LevelPlayInfoMappingConfig";
 
-		// Token: 0x04002197 RID: 8599
+		// Token: 0x04002231 RID: 8753
 		private const string COMMAND = "select BinData from `LevelPlayInfoMappingConfig` where Id=?";
 
-		// Token: 0x04002198 RID: 8600
+		// Token: 0x04002232 RID: 8754
 		private const string KEY_PREFIX = "LevelPlayInfoMappingConfigById";
 
-		// Token: 0x04002199 RID: 8601
+		// Token: 0x04002233 RID: 8755
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400219A RID: 8602
+		// Token: 0x04002234 RID: 8756
 		private static int HandleId;
 	}
 }

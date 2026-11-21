@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000814 RID: 2068
+	// Token: 0x020008B7 RID: 2231
 	public class IWuWaGoPullRod_SetValue
 	{
-		// Token: 0x04001DBA RID: 7610
+		// Token: 0x04001FC6 RID: 8134
 		public EWuWaGoEntityType Type;
 
-		// Token: 0x04001DBB RID: 7611
-		[Nullable(1)]
+		// Token: 0x04001FC7 RID: 8135
 		public List<IWuWaGoInteractStateAction> InteractConfig;
 	}
 }

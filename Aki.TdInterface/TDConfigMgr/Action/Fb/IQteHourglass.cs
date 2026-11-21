@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200286D RID: 10349
+	// Token: 0x02002B43 RID: 11075
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IQteHourglass : IUiGame
 	{
-		// Token: 0x0600E554 RID: 58708 RVA: 0x0021B874 File Offset: 0x00219A74
-		[NullableContext(1)]
+		// Token: 0x0600F384 RID: 62340 RVA: 0x0023878E File Offset: 0x0023698E
+		[NullableContext(0)]
 		public static IQteHourglass Create(IQteHourglass? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700463C RID: 17980
-		// (get) Token: 0x0600E555 RID: 58709 RVA: 0x0021B893 File Offset: 0x00219A93
+		// Token: 0x170049AC RID: 18860
+		// (get) Token: 0x0600F385 RID: 62341 RVA: 0x002387AD File Offset: 0x002369AD
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700463D RID: 17981
-		// (get) Token: 0x0600E556 RID: 58710 RVA: 0x0021B8A0 File Offset: 0x00219AA0
+		// Token: 0x170049AD RID: 18861
+		// (get) Token: 0x0600F386 RID: 62342 RVA: 0x002387BC File Offset: 0x002369BC
 		public virtual List<int> QteIds
 		{
 			get
@@ -59,19 +59,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700463E RID: 17982
-		// (get) Token: 0x0600E557 RID: 58711 RVA: 0x0021B918 File Offset: 0x00219B18
+		// Token: 0x170049AE RID: 18862
+		// (get) Token: 0x0600F387 RID: 62343 RVA: 0x00238834 File Offset: 0x00236A34
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IQteHourglassConfig> QteConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -94,24 +94,24 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ECF RID: 32463
+		// Token: 0x0400858F RID: 34191
 		private IQteHourglass Instance;
 
-		// Token: 0x04007ED0 RID: 32464
+		// Token: 0x04008590 RID: 34192
 		private List<int> _QteIdsCache;
 
-		// Token: 0x04007ED1 RID: 32465
+		// Token: 0x04008591 RID: 34193
 		private bool _QteIdsInited;
 
-		// Token: 0x04007ED2 RID: 32466
+		// Token: 0x04008592 RID: 34194
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IQteHourglassConfig> _QteConfigsCache;
 
-		// Token: 0x04007ED3 RID: 32467
+		// Token: 0x04008593 RID: 34195
 		private bool _QteConfigsInited;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001C4A RID: 7242
+// Token: 0x02001109 RID: 4361
 public enum ELevelFuncFlagId
 {
-	// Token: 0x040063F9 RID: 25593
+	// Token: 0x040064CB RID: 25803
 	TempTeleporterPlacement,
-	// Token: 0x040063FA RID: 25594
+	// Token: 0x040064CC RID: 25804
 	ExploreSkillRoulette
 }

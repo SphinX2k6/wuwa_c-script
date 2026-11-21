@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029F8 RID: 10744
+	// Token: 0x02002CE5 RID: 11493
 	public class IAddOrSubAlertValueChangeSpeed : IAlertValueSpeedChangeType
 	{
-		// Token: 0x0600ED27 RID: 60711 RVA: 0x0022981A File Offset: 0x00227A1A
-		[NullableContext(1)]
+		// Token: 0x0600FBBE RID: 64446 RVA: 0x0024719E File Offset: 0x0024539E
 		public static IAddOrSubAlertValueChangeSpeed Create(IAddOrSubAlertValueChangeSpeed? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AF9 RID: 19193
-		// (get) Token: 0x0600ED28 RID: 60712 RVA: 0x00229839 File Offset: 0x00227A39
+		// Token: 0x17004EA2 RID: 20130
+		// (get) Token: 0x0600FBBF RID: 64447 RVA: 0x002471BD File Offset: 0x002453BD
 		public override EValueChangeType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AFA RID: 19194
-		// (get) Token: 0x0600ED29 RID: 60713 RVA: 0x00229846 File Offset: 0x00227A46
+		// Token: 0x17004EA3 RID: 20131
+		// (get) Token: 0x0600FBC0 RID: 64448 RVA: 0x002471CA File Offset: 0x002453CA
 		public virtual float DeltaValue
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008292 RID: 33426
+		// Token: 0x04008983 RID: 35203
 		private IAddOrSubAlertValueChangeSpeed Instance;
 	}
 }

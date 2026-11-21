@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006BEC RID: 27628
+	// Token: 0x02005D65 RID: 23909
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemHiddenBossWindow : OpenSystemBase
 	{
-		// Token: 0x060443D8 RID: 279512 RVA: 0x010D151A File Offset: 0x010CF71A
+		// Token: 0x0603A530 RID: 238896 RVA: 0x0107B46E File Offset: 0x0107966E
 		public OpenSystemHiddenBossWindow(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x060443D9 RID: 279513 RVA: 0x010D1524 File Offset: 0x010CF724
+		// Token: 0x0603A531 RID: 238897 RVA: 0x0107B478 File Offset: 0x01079678
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060443DA RID: 279514 RVA: 0x010D1567 File Offset: 0x010CF767
+		// Token: 0x0603A532 RID: 238898 RVA: 0x0107B4BB File Offset: 0x010796BB
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

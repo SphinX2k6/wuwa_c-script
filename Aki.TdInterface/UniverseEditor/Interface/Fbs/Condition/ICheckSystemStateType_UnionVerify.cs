@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B49 RID: 19273
+	// Token: 0x02005030 RID: 20528
 	public static class ICheckSystemStateType_UnionVerify
 	{
-		// Token: 0x0601E588 RID: 124296 RVA: 0x00440578 File Offset: 0x0043E778
+		// Token: 0x06020116 RID: 131350 RVA: 0x00472DB0 File Offset: 0x00470FB0
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -61,9 +61,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 				result = ICheckDangoBrawlChallengeCompleteVerify.Verify(verifier, tablePos);
 				break;
 			case 17:
-				result = ICheckRogueStateVerify.Verify(verifier, tablePos);
+				result = ICheckHandBookPageCompleteVerify.Verify(verifier, tablePos);
 				break;
 			case 18:
+				result = ICheckRogueStateVerify.Verify(verifier, tablePos);
+				break;
+			case 19:
 				result = ICheckVillageInfrTreeBuildStateVerify.Verify(verifier, tablePos);
 				break;
 			default:

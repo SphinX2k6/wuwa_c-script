@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DA1 RID: 7585
+// Token: 0x02001263 RID: 4707
 [NullableContext(1)]
 [Nullable(0)]
 public class PunishReportSettlementConditionItem : UiPanelBase
 {
-	// Token: 0x0600E63C RID: 58940 RVA: 0x003644BC File Offset: 0x003626BC
+	// Token: 0x0600BA5A RID: 47706 RVA: 0x0037011C File Offset: 0x0036E31C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -27,7 +27,7 @@ public class PunishReportSettlementConditionItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E63D RID: 58941 RVA: 0x00364525 File Offset: 0x00362725
+	// Token: 0x0600BA5B RID: 47707 RVA: 0x00370185 File Offset: 0x0036E385
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -35,7 +35,7 @@ public class PunishReportSettlementConditionItem : UiPanelBase
 		this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 	}
 
-	// Token: 0x0600E63E RID: 58942 RVA: 0x00364558 File Offset: 0x00362758
+	// Token: 0x0600BA5C RID: 47708 RVA: 0x003701B8 File Offset: 0x0036E3B8
 	public void Init(string conditionTextId, EPunishReportTargetState historyState, EPunishReportTargetState state)
 	{
 		UUIText text = base.GetText(1);
@@ -48,7 +48,7 @@ public class PunishReportSettlementConditionItem : UiPanelBase
 		this.StateChanged = (historyState != state && state == EPunishReportTargetState.Achieve);
 	}
 
-	// Token: 0x0600E63F RID: 58943 RVA: 0x003645A8 File Offset: 0x003627A8
+	// Token: 0x0600BA5D RID: 47709 RVA: 0x00370208 File Offset: 0x0036E408
 	public UniTask PlaySequence()
 	{
 		PunishReportSettlementConditionItem.<PlaySequence>d__7 <PlaySequence>d__;
@@ -59,7 +59,7 @@ public class PunishReportSettlementConditionItem : UiPanelBase
 		return <PlaySequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E640 RID: 58944 RVA: 0x003645EB File Offset: 0x003627EB
+	// Token: 0x0600BA5E RID: 47710 RVA: 0x0037024B File Offset: 0x0036E44B
 	private void OnSequenceClose(string sequenceName)
 	{
 		if (sequenceName == "Finish")
@@ -68,24 +68,24 @@ public class PunishReportSettlementConditionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006A8A RID: 27274
+	// Token: 0x04006B6B RID: 27499
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006A8B RID: 27275
+	// Token: 0x04006B6C RID: 27500
 	private readonly CustomPromise<bool> CustomPromise = new CustomPromise<bool>();
 
-	// Token: 0x04006A8C RID: 27276
+	// Token: 0x04006B6D RID: 27501
 	private bool StateChanged;
 
-	// Token: 0x0200837E RID: 33662
+	// Token: 0x02007506 RID: 29958
 	[NullableContext(0)]
 	private static class EViewComponent
 	{
-		// Token: 0x0402AD9B RID: 175515
+		// Token: 0x040260C1 RID: 155841
 		public const int CorrectSprite = 0;
 
-		// Token: 0x0402AD9C RID: 175516
+		// Token: 0x040260C2 RID: 155842
 		public const int ConditionText = 1;
 	}
 }

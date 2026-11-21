@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200463C RID: 17980
+	// Token: 0x0200356D RID: 13677
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiViewInfoForTimeDilation : IUiViewInfoForTimeDilation
 	{
-		// Token: 0x170075ED RID: 30189
-		// (get) Token: 0x0602E5CB RID: 189899 RVA: 0x00AB68BC File Offset: 0x00AB4ABC
-		// (set) Token: 0x0602E5CC RID: 189900 RVA: 0x00AB68C4 File Offset: 0x00AB4AC4
+		// Token: 0x170048A9 RID: 18601
+		// (get) Token: 0x06022D15 RID: 142613 RVA: 0x009E3EFC File Offset: 0x009E20FC
+		// (set) Token: 0x06022D16 RID: 142614 RVA: 0x009E3F04 File Offset: 0x009E2104
 		public float TimeDilation { get; set; }
 
-		// Token: 0x170075EE RID: 30190
-		// (get) Token: 0x0602E5CD RID: 189901 RVA: 0x00AB68CD File Offset: 0x00AB4ACD
-		// (set) Token: 0x0602E5CE RID: 189902 RVA: 0x00AB68D5 File Offset: 0x00AB4AD5
+		// Token: 0x170048AA RID: 18602
+		// (get) Token: 0x06022D17 RID: 142615 RVA: 0x009E3F0D File Offset: 0x009E210D
+		// (set) Token: 0x06022D18 RID: 142616 RVA: 0x009E3F15 File Offset: 0x009E2115
 		public int ViewId { get; set; }
 
-		// Token: 0x170075EF RID: 30191
-		// (get) Token: 0x0602E5CF RID: 189903 RVA: 0x00AB68DE File Offset: 0x00AB4ADE
-		// (set) Token: 0x0602E5D0 RID: 189904 RVA: 0x00AB68E6 File Offset: 0x00AB4AE6
+		// Token: 0x170048AB RID: 18603
+		// (get) Token: 0x06022D19 RID: 142617 RVA: 0x009E3F1E File Offset: 0x009E211E
+		// (set) Token: 0x06022D1A RID: 142618 RVA: 0x009E3F26 File Offset: 0x009E2126
 		public EUiViewName? DebugName { get; set; }
 
-		// Token: 0x170075F0 RID: 30192
-		// (get) Token: 0x0602E5D1 RID: 189905 RVA: 0x00AB68EF File Offset: 0x00AB4AEF
-		// (set) Token: 0x0602E5D2 RID: 189906 RVA: 0x00AB68F7 File Offset: 0x00AB4AF7
+		// Token: 0x170048AC RID: 18604
+		// (get) Token: 0x06022D1B RID: 142619 RVA: 0x009E3F2F File Offset: 0x009E212F
+		// (set) Token: 0x06022D1C RID: 142620 RVA: 0x009E3F37 File Offset: 0x009E2137
 		public string Reason { get; set; }
 	}
 }

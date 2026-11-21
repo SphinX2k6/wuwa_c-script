@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007EA RID: 2026
+	// Token: 0x02000806 RID: 2054
 	public class ConfigRewardViewFromSourceAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F8E RID: 12174 RVA: 0x0016616C File Offset: 0x0016436C
+		// Token: 0x06003036 RID: 12342 RVA: 0x0016D454 File Offset: 0x0016B654
 		static ConfigRewardViewFromSourceAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRewardViewFromSourceAll.CreateStaticDefaultValue), new Action(ConfigRewardViewFromSourceAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F8F RID: 12175 RVA: 0x0016618C File Offset: 0x0016438C
+		// Token: 0x06003037 RID: 12343 RVA: 0x0016D474 File Offset: 0x0016B674
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRewardViewFromSourceAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F90 RID: 12176 RVA: 0x0016620B File Offset: 0x0016440B
+		// Token: 0x06003038 RID: 12344 RVA: 0x0016D4F3 File Offset: 0x0016B6F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRewardViewFromSourceAll.LogPair = null;
 			ConfigRewardViewFromSourceAll.HandleId = 0;
 		}
 
-		// Token: 0x06002F91 RID: 12177 RVA: 0x00166219 File Offset: 0x00164419
+		// Token: 0x06003039 RID: 12345 RVA: 0x0016D501 File Offset: 0x0016B701
 		public static void Init()
 		{
 			ConfigRewardViewFromSourceAll.HandleId = ConfigCommon.InitDataStatement(ConfigRewardViewFromSourceAll.HandleId, "db_rewardui.db", "select BinData from `RewardViewFromSource`");
 		}
 
-		// Token: 0x06002F92 RID: 12178 RVA: 0x00166234 File Offset: 0x00164434
+		// Token: 0x0600303A RID: 12346 RVA: 0x0016D51C File Offset: 0x0016B71C
 		[NullableContext(2)]
 		public static IReadOnlyList<RewardViewFromSource> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400374C RID: 14156
+		// Token: 0x04003810 RID: 14352
 		private const string DB = "db_rewardui.db";
 
-		// Token: 0x0400374D RID: 14157
+		// Token: 0x04003811 RID: 14353
 		private const string FILE = "j.奖励界面表现.xlsx";
 
-		// Token: 0x0400374E RID: 14158
+		// Token: 0x04003812 RID: 14354
 		private const string TABLE = "RewardViewFromSource";
 
-		// Token: 0x0400374F RID: 14159
+		// Token: 0x04003813 RID: 14355
 		private const string COMMAND = "select BinData from `RewardViewFromSource`";
 
-		// Token: 0x04003750 RID: 14160
+		// Token: 0x04003814 RID: 14356
 		private const string KEY_PREFIX = "RewardViewFromSourceAll";
 
-		// Token: 0x04003751 RID: 14161
+		// Token: 0x04003815 RID: 14357
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003752 RID: 14162
+		// Token: 0x04003816 RID: 14358
 		private static int HandleId;
 	}
 }

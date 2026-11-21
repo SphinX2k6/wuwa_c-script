@@ -20,13 +20,13 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Launcher/TsSplash.TsSplash_C")]
 public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06000078 RID: 120 RVA: 0x00006969 File Offset: 0x00004B69
+	// Token: 0x06000078 RID: 120 RVA: 0x000069A1 File Offset: 0x00004BA1
 	static TsSplash()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsSplash.CreateStaticDefaultValue), new Action(TsSplash.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000079 RID: 121 RVA: 0x00006988 File Offset: 0x00004B88
+	// Token: 0x06000079 RID: 121 RVA: 0x000069C0 File Offset: 0x00004BC0
 	public static void CreateStaticDefaultValue()
 	{
 		TsSplash.CurrentPhase = SplashPhase.SplashPhaseOne;
@@ -34,7 +34,7 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		TsSplash.KuroSplashVideo = null;
 	}
 
-	// Token: 0x0600007A RID: 122 RVA: 0x0000699C File Offset: 0x00004B9C
+	// Token: 0x0600007A RID: 122 RVA: 0x000069D4 File Offset: 0x00004BD4
 	public static void ResetStaticDefaultValue()
 	{
 		TsSplash.CurrentPhase = SplashPhase.SplashPhaseOne;
@@ -42,7 +42,7 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		TsSplash.KuroSplashVideo = null;
 	}
 
-	// Token: 0x0600007B RID: 123 RVA: 0x000069B0 File Offset: 0x00004BB0
+	// Token: 0x0600007B RID: 123 RVA: 0x000069E8 File Offset: 0x00004BE8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public void Init(UObject worldContext)
@@ -58,14 +58,14 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		this.ShowSplashView();
 	}
 
-	// Token: 0x0600007C RID: 124 RVA: 0x00006A08 File Offset: 0x00004C08
+	// Token: 0x0600007C RID: 124 RVA: 0x00006A40 File Offset: 0x00004C40
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public float GetDelay()
 	{
 		return 0f;
 	}
 
-	// Token: 0x0600007D RID: 125 RVA: 0x00006A10 File Offset: 0x00004C10
+	// Token: 0x0600007D RID: 125 RVA: 0x00006A48 File Offset: 0x00004C48
 	[UFunction(EFunctionFlags.FUNC_None)]
 	private void ChangeToPhaseOne()
 	{
@@ -91,7 +91,7 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		this.ChangeToPhaseThree();
 	}
 
-	// Token: 0x0600007E RID: 126 RVA: 0x00006A64 File Offset: 0x00004C64
+	// Token: 0x0600007E RID: 126 RVA: 0x00006A9C File Offset: 0x00004C9C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	private void ChangeToPhaseSpecial()
 	{
@@ -99,7 +99,7 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		TsSplash.KuroSplashVideo.PlayPreventAddictionAnimation(new Action(this.ChangeToPhaseThree));
 	}
 
-	// Token: 0x0600007F RID: 127 RVA: 0x00006A82 File Offset: 0x00004C82
+	// Token: 0x0600007F RID: 127 RVA: 0x00006ABA File Offset: 0x00004CBA
 	[UFunction(EFunctionFlags.FUNC_None)]
 	private void ChangeToPhaseThree()
 	{
@@ -107,7 +107,7 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		TsSplash.KuroSplashVideo.PlayCautionAnimation(new Action(this.ChangeScene));
 	}
 
-	// Token: 0x06000080 RID: 128 RVA: 0x00006AA0 File Offset: 0x00004CA0
+	// Token: 0x06000080 RID: 128 RVA: 0x00006AD8 File Offset: 0x00004CD8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public void ShowSplashView()
 	{
@@ -115,7 +115,7 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		this.<ShowSplashView>g__InitAndPrepareAsync|11_0();
 	}
 
-	// Token: 0x06000081 RID: 129 RVA: 0x00006AB3 File Offset: 0x00004CB3
+	// Token: 0x06000081 RID: 129 RVA: 0x00006AEB File Offset: 0x00004CEB
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public void ChangeScene()
 	{
@@ -124,7 +124,7 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		UGameplayStatics.OpenLevel(TsSplash.WorldContext, new FName("/Game/Aki/Map/Launch/Bootstrap"), true, "");
 	}
 
-	// Token: 0x06000082 RID: 130 RVA: 0x00006AE4 File Offset: 0x00004CE4
+	// Token: 0x06000082 RID: 130 RVA: 0x00006B1C File Offset: 0x00004D1C
 	[NullableContext(1)]
 	private static void DoInit(UObject worldContext)
 	{
@@ -138,7 +138,7 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		SplashRegionBlockLib.Initialize();
 	}
 
-	// Token: 0x06000083 RID: 131 RVA: 0x00006B3E File Offset: 0x00004D3E
+	// Token: 0x06000083 RID: 131 RVA: 0x00006B76 File Offset: 0x00004D76
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsSplash._ClassPtr == IntPtr.Zero)
@@ -148,66 +148,66 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		return TsSplash._ClassPtr;
 	}
 
-	// Token: 0x06000084 RID: 132 RVA: 0x00006B64 File Offset: 0x00004D64
+	// Token: 0x06000084 RID: 132 RVA: 0x00006B9C File Offset: 0x00004D9C
 	public TsSplash() : this(BuiltinUtils.AllocNativeUObject(TsSplash.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000085 RID: 133 RVA: 0x00006B8C File Offset: 0x00004D8C
+	// Token: 0x06000085 RID: 133 RVA: 0x00006BC4 File Offset: 0x00004DC4
 	[NullableContext(1)]
 	public TsSplash(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsSplash.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000086 RID: 134 RVA: 0x00006BBF File Offset: 0x00004DBF
+	// Token: 0x06000086 RID: 134 RVA: 0x00006BF7 File Offset: 0x00004DF7
 	protected TsSplash(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000087 RID: 135 RVA: 0x00006BC8 File Offset: 0x00004DC8
+	// Token: 0x06000087 RID: 135 RVA: 0x00006C00 File Offset: 0x00004E00
 	protected unsafe virtual void __CPPCALL_Init_Implementation(TsSplash.__Init_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->worldContext);
 		this.Init(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06000088 RID: 136 RVA: 0x00006BE8 File Offset: 0x00004DE8
+	// Token: 0x06000088 RID: 136 RVA: 0x00006C20 File Offset: 0x00004E20
 	protected unsafe virtual void __CPPCALL_GetDelay_Implementation(TsSplash.__GetDelay_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetDelay();
 	}
 
-	// Token: 0x06000089 RID: 137 RVA: 0x00006BF6 File Offset: 0x00004DF6
+	// Token: 0x06000089 RID: 137 RVA: 0x00006C2E File Offset: 0x00004E2E
 	protected virtual void __CPPCALL_ChangeToPhaseOne_Implementation()
 	{
 		this.ChangeToPhaseOne();
 	}
 
-	// Token: 0x0600008A RID: 138 RVA: 0x00006BFE File Offset: 0x00004DFE
+	// Token: 0x0600008A RID: 138 RVA: 0x00006C36 File Offset: 0x00004E36
 	protected virtual void __CPPCALL_ChangeToPhaseSpecial_Implementation()
 	{
 		this.ChangeToPhaseSpecial();
 	}
 
-	// Token: 0x0600008B RID: 139 RVA: 0x00006C06 File Offset: 0x00004E06
+	// Token: 0x0600008B RID: 139 RVA: 0x00006C3E File Offset: 0x00004E3E
 	protected virtual void __CPPCALL_ChangeToPhaseThree_Implementation()
 	{
 		this.ChangeToPhaseThree();
 	}
 
-	// Token: 0x0600008C RID: 140 RVA: 0x00006C0E File Offset: 0x00004E0E
+	// Token: 0x0600008C RID: 140 RVA: 0x00006C46 File Offset: 0x00004E46
 	protected virtual void __CPPCALL_ShowSplashView_Implementation()
 	{
 		this.ShowSplashView();
 	}
 
-	// Token: 0x0600008D RID: 141 RVA: 0x00006C16 File Offset: 0x00004E16
+	// Token: 0x0600008D RID: 141 RVA: 0x00006C4E File Offset: 0x00004E4E
 	protected virtual void __CPPCALL_ChangeScene_Implementation()
 	{
 		this.ChangeScene();
 	}
 
-	// Token: 0x0600008F RID: 143 RVA: 0x00006C44 File Offset: 0x00004E44
+	// Token: 0x0600008F RID: 143 RVA: 0x00006C7C File Offset: 0x00004E7C
 	[CompilerGenerated]
 	private UniTask <ShowSplashView>g__InitAndPrepareAsync|11_0()
 	{
@@ -219,43 +219,43 @@ public class TsSplash : UObject, IStaticVariableResetter, IUnrealUObject, IUnrea
 		return <<ShowSplashView>g__InitAndPrepareAsync|11_0>d.<>t__builder.Task;
 	}
 
-	// Token: 0x04000049 RID: 73
-	public static SplashPhase CurrentPhase;
-
 	// Token: 0x0400004A RID: 74
-	[Nullable(2)]
-	public static UObject WorldContext;
+	public static SplashPhase CurrentPhase;
 
 	// Token: 0x0400004B RID: 75
 	[Nullable(2)]
-	private static SplashUiView KuroSplashVideo;
+	public static UObject WorldContext;
 
 	// Token: 0x0400004C RID: 76
+	[Nullable(2)]
+	private static SplashUiView KuroSplashVideo;
+
+	// Token: 0x0400004D RID: 77
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Launcher/TsSplash.TsSplash_C";
 
-	// Token: 0x0400004D RID: 77
+	// Token: 0x0400004E RID: 78
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400004E RID: 78
+	// Token: 0x0400004F RID: 79
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02000283 RID: 643
+	// Token: 0x0200028C RID: 652
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __Init_FunctionParams
 	{
-		// Token: 0x04000A37 RID: 2615
+		// Token: 0x04000A87 RID: 2695
 		[FieldOffset(0)]
 		public IntPtr worldContext;
 	}
 
-	// Token: 0x02000284 RID: 644
+	// Token: 0x0200028D RID: 653
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __GetDelay_FunctionParams
 	{
-		// Token: 0x04000A38 RID: 2616
+		// Token: 0x04000A88 RID: 2696
 		[FieldOffset(0)]
 		public float __Result;
 	}

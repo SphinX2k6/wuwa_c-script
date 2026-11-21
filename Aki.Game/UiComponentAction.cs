@@ -1,7 +1,7 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200349F RID: 13471
+// Token: 0x02002A13 RID: 10771
 public class UiComponentAction : UiPanelBase
 {
 }

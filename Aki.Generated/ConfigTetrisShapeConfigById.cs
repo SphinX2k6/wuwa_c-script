@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009DC RID: 2524
+	// Token: 0x02000AB1 RID: 2737
 	public class ConfigTetrisShapeConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003B3C RID: 15164 RVA: 0x001A8C68 File Offset: 0x001A6E68
+		// Token: 0x0600403A RID: 16442 RVA: 0x001C7FFC File Offset: 0x001C61FC
 		static ConfigTetrisShapeConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTetrisShapeConfigById.CreateStaticDefaultValue), new Action(ConfigTetrisShapeConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003B3D RID: 15165 RVA: 0x001A8C88 File Offset: 0x001A6E88
+		// Token: 0x0600403B RID: 16443 RVA: 0x001C801C File Offset: 0x001C621C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTetrisShapeConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003B3E RID: 15166 RVA: 0x001A8D07 File Offset: 0x001A6F07
+		// Token: 0x0600403C RID: 16444 RVA: 0x001C809B File Offset: 0x001C629B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTetrisShapeConfigById.LogPair = null;
 			ConfigTetrisShapeConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06003B3F RID: 15167 RVA: 0x001A8D15 File Offset: 0x001A6F15
+		// Token: 0x0600403D RID: 16445 RVA: 0x001C80A9 File Offset: 0x001C62A9
 		public static void Init()
 		{
 			ConfigTetrisShapeConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigTetrisShapeConfigById.HandleId, "db_tetrisshapeconfig.db", "select BinData from `TetrisShapeConfig` where Id=?");
 		}
 
-		// Token: 0x06003B40 RID: 15168 RVA: 0x001A8D30 File Offset: 0x001A6F30
+		// Token: 0x0600403E RID: 16446 RVA: 0x001C80C4 File Offset: 0x001C62C4
 		public static TetrisShapeConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTetrisShapeConfigById.HandleId, ConfigTetrisShapeConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TetrisShapeConfig?(rootAsTetrisShapeConfig);
 		}
 
-		// Token: 0x040044EA RID: 17642
+		// Token: 0x04004ABD RID: 19133
 		private const string DB = "db_tetrisshapeconfig.db";
 
-		// Token: 0x040044EB RID: 17643
+		// Token: 0x04004ABE RID: 19134
 		private const string FILE = "k.可视化编辑/c.Csv/e.俄罗斯方块形状表/*.csv*";
 
-		// Token: 0x040044EC RID: 17644
+		// Token: 0x04004ABF RID: 19135
 		private const string TABLE = "TetrisShapeConfig";
 
-		// Token: 0x040044ED RID: 17645
+		// Token: 0x04004AC0 RID: 19136
 		private const string COMMAND = "select BinData from `TetrisShapeConfig` where Id=?";
 
-		// Token: 0x040044EE RID: 17646
+		// Token: 0x04004AC1 RID: 19137
 		private const string KEY_PREFIX = "TetrisShapeConfigById";
 
-		// Token: 0x040044EF RID: 17647
+		// Token: 0x04004AC2 RID: 19138
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040044F0 RID: 17648
+		// Token: 0x04004AC3 RID: 19139
 		private static int HandleId;
 	}
 }

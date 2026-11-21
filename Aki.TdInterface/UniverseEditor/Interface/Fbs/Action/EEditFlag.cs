@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F5A RID: 24410
+	// Token: 0x0200659E RID: 26014
 	public enum EEditFlag : byte
 	{
-		// Token: 0x0400FD11 RID: 64785
+		// Token: 0x04010A8F RID: 68239
 		Add,
-		// Token: 0x0400FD12 RID: 64786
+		// Token: 0x04010A90 RID: 68240
 		Modify,
-		// Token: 0x0400FD13 RID: 64787
+		// Token: 0x04010A91 RID: 68241
 		Delete
 	}
 }

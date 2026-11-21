@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ECF RID: 7887
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002108 RID: 8456
 	public class ISubPlotModePromptWithProfilePic : ISubPlotModeBase
 	{
-		// Token: 0x0600A8C6 RID: 43206 RVA: 0x0017CE18 File Offset: 0x0017B018
+		// Token: 0x0600B398 RID: 45976 RVA: 0x00192E10 File Offset: 0x00191010
 		private ISubPlotModePromptWithProfilePic_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A8C7 RID: 43207 RVA: 0x0017CE50 File Offset: 0x0017B050
+		// Token: 0x0600B399 RID: 45977 RVA: 0x00192E48 File Offset: 0x00191048
 		public static ISubPlotModePromptWithProfilePic Create([Nullable(2)] ISubPlotModePromptWithProfilePic instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A8C8 RID: 43208 RVA: 0x0017CE63 File Offset: 0x0017B063
+		// Token: 0x0600B39A RID: 45978 RVA: 0x00192E5B File Offset: 0x0019105B
 		public static ISubPlotModePromptWithProfilePic CreateFromSetValue([Nullable(2)] ISubPlotModePromptWithProfilePic_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A8C9 RID: 43209 RVA: 0x0017CE76 File Offset: 0x0017B076
+		// Token: 0x0600B39B RID: 45979 RVA: 0x00192E6E File Offset: 0x0019106E
 		public new ISubPlotModePromptWithProfilePic_SetValue ToSetValue()
 		{
 			return new ISubPlotModePromptWithProfilePic_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003384 RID: 13188
-		// (get) Token: 0x0600A8CA RID: 43210 RVA: 0x0017CE89 File Offset: 0x0017B089
-		// (set) Token: 0x0600A8CB RID: 43211 RVA: 0x0017CEB4 File Offset: 0x0017B0B4
+		// Token: 0x1700364F RID: 13903
+		// (get) Token: 0x0600B39C RID: 45980 RVA: 0x00192E81 File Offset: 0x00191081
+		// (set) Token: 0x0600B39D RID: 45981 RVA: 0x00192EAC File Offset: 0x001910AC
 		public override ESubPlotModeType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400647F RID: 25727
+		// Token: 0x04006A6E RID: 27246
 		[Nullable(2)]
 		protected new ISubPlotModePromptWithProfilePic FbInstance;
 
-		// Token: 0x04006480 RID: 25728
+		// Token: 0x04006A6F RID: 27247
 		[Nullable(2)]
 		protected new ISubPlotModePromptWithProfilePic_SetValue PocoInterface;
 	}

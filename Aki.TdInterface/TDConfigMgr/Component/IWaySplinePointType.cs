@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007D7 RID: 2007
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200087A RID: 2170
 	public class IWaySplinePointType
 	{
-		// Token: 0x06002B95 RID: 11157 RVA: 0x00071A5C File Offset: 0x0006FC5C
+		// Token: 0x06002EC5 RID: 11973 RVA: 0x00078DC0 File Offset: 0x00076FC0
 		private IWaySplinePointType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002B96 RID: 11158 RVA: 0x00071A94 File Offset: 0x0006FC94
+		// Token: 0x06002EC6 RID: 11974 RVA: 0x00078DF8 File Offset: 0x00076FF8
 		public static IWaySplinePointType Create([Nullable(2)] IWaySplinePointType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B97 RID: 11159 RVA: 0x00071AA7 File Offset: 0x0006FCA7
+		// Token: 0x06002EC7 RID: 11975 RVA: 0x00078E0B File Offset: 0x0007700B
 		public static IWaySplinePointType CreateFromSetValue([Nullable(2)] IWaySplinePointType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B98 RID: 11160 RVA: 0x00071ABA File Offset: 0x0006FCBA
+		// Token: 0x06002EC8 RID: 11976 RVA: 0x00078E1E File Offset: 0x0007701E
 		public IWaySplinePointType_SetValue ToSetValue()
 		{
 			return new IWaySplinePointType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B6B RID: 2923
-		// (get) Token: 0x06002B99 RID: 11161 RVA: 0x00071ACD File Offset: 0x0006FCCD
-		// (set) Token: 0x06002B9A RID: 11162 RVA: 0x00071AF8 File Offset: 0x0006FCF8
+		// Token: 0x17000C2E RID: 3118
+		// (get) Token: 0x06002EC9 RID: 11977 RVA: 0x00078E31 File Offset: 0x00077031
+		// (set) Token: 0x06002ECA RID: 11978 RVA: 0x00078E5C File Offset: 0x0007705C
 		public virtual EWaySplinePointType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001CEF RID: 7407
+		// Token: 0x04001EFB RID: 7931
 		[Nullable(2)]
 		protected IWaySplinePointType FbInstance;
 
-		// Token: 0x04001CF0 RID: 7408
+		// Token: 0x04001EFC RID: 7932
 		[Nullable(2)]
 		protected IWaySplinePointType_SetValue PocoInterface;
 	}

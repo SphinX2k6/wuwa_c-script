@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -12,27 +11,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005F01 RID: 24321
+	// Token: 0x02004EE8 RID: 20200
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySwitchToggle : UiPanelBase, IDynamicScrollItem<IActivityCategoryTabData>
 	{
-		// Token: 0x17008EEF RID: 36591
-		// (get) Token: 0x0603DCC1 RID: 253121 RVA: 0x00EF08B3 File Offset: 0x00EEEAB3
-		// (set) Token: 0x0603DCC2 RID: 253122 RVA: 0x00EF08BB File Offset: 0x00EEEABB
+		// Token: 0x170062C1 RID: 25281
+		// (get) Token: 0x06032C5C RID: 207964 RVA: 0x00E42577 File Offset: 0x00E40777
+		// (set) Token: 0x06032C5D RID: 207965 RVA: 0x00E4257F File Offset: 0x00E4077F
 		private IActivityCategoryTabData Data { get; set; }
 
-		// Token: 0x17008EF0 RID: 36592
-		// (get) Token: 0x0603DCC3 RID: 253123 RVA: 0x00EF08C4 File Offset: 0x00EEEAC4
-		// (set) Token: 0x0603DCC4 RID: 253124 RVA: 0x00EF08CC File Offset: 0x00EEEACC
+		// Token: 0x170062C2 RID: 25282
+		// (get) Token: 0x06032C5E RID: 207966 RVA: 0x00E42588 File Offset: 0x00E40788
+		// (set) Token: 0x06032C5F RID: 207967 RVA: 0x00E42590 File Offset: 0x00E40790
 		private TOnToggleClickCb OnToggleClick { get; set; }
 
-		// Token: 0x17008EF1 RID: 36593
-		// (get) Token: 0x0603DCC5 RID: 253125 RVA: 0x00EF08D5 File Offset: 0x00EEEAD5
-		// (set) Token: 0x0603DCC6 RID: 253126 RVA: 0x00EF08DD File Offset: 0x00EEEADD
+		// Token: 0x170062C3 RID: 25283
+		// (get) Token: 0x06032C60 RID: 207968 RVA: 0x00E42599 File Offset: 0x00E40799
+		// (set) Token: 0x06032C61 RID: 207969 RVA: 0x00E425A1 File Offset: 0x00E407A1
 		private CategoryToggleItem TabItem { get; set; }
 
-		// Token: 0x0603DCC7 RID: 253127 RVA: 0x00EF08E8 File Offset: 0x00EEEAE8
+		// Token: 0x06032C62 RID: 207970 RVA: 0x00E425AC File Offset: 0x00E407AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DCC8 RID: 253128 RVA: 0x00EF0954 File Offset: 0x00EEEB54
+		// Token: 0x06032C63 RID: 207971 RVA: 0x00E42618 File Offset: 0x00E40818
 		[NullableContext(1)]
 		public UniTask Init(UUIItem actor)
 		{
@@ -59,20 +58,20 @@ namespace CSharpScript.Game.Module.Activity
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DCC9 RID: 253129 RVA: 0x00EF099F File Offset: 0x00EEEB9F
+		// Token: 0x06032C64 RID: 207972 RVA: 0x00E42663 File Offset: 0x00E40863
 		protected override void OnBeforeShow()
 		{
 			this.RefreshRedDotIds();
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.RefreshRedDot));
 		}
 
-		// Token: 0x0603DCCA RID: 253130 RVA: 0x00EF09C3 File Offset: 0x00EEEBC3
+		// Token: 0x06032C65 RID: 207973 RVA: 0x00E42687 File Offset: 0x00E40887
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.RefreshRedDot));
 		}
 
-		// Token: 0x0603DCCB RID: 253131 RVA: 0x00EF09E1 File Offset: 0x00EEEBE1
+		// Token: 0x06032C66 RID: 207974 RVA: 0x00E426A5 File Offset: 0x00E408A5
 		protected override void OnBeforeDestroy()
 		{
 			if (this.Data != null)
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.RedDotStateMap.Clear();
 		}
 
-		// Token: 0x0603DCCC RID: 253132 RVA: 0x00EF09FD File Offset: 0x00EEEBFD
+		// Token: 0x06032C67 RID: 207975 RVA: 0x00E426C1 File Offset: 0x00E408C1
 		private void OnTabItemClicked(EToggleState state)
 		{
 			TOnToggleClickCb onToggleClick = this.OnToggleClick;
@@ -93,12 +92,12 @@ namespace CSharpScript.Game.Module.Activity
 			onToggleClick(this.Data, this.TabItem.GetTabToggle(), state);
 		}
 
-		// Token: 0x0603DCCD RID: 253133 RVA: 0x00EF0A21 File Offset: 0x00EEEC21
+		// Token: 0x06032C68 RID: 207976 RVA: 0x00E426E5 File Offset: 0x00E408E5
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0603DCCE RID: 253134 RVA: 0x00EF0A23 File Offset: 0x00EEEC23
+		// Token: 0x06032C69 RID: 207977 RVA: 0x00E426E7 File Offset: 0x00E408E7
 		[NullableContext(1)]
 		public AUIBaseActor GetUsingItem(IActivityCategoryTabData data)
 		{
@@ -109,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity
 			return base.GetRootItem().GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x0603DCCF RID: 253135 RVA: 0x00EF0A50 File Offset: 0x00EEEC50
+		// Token: 0x06032C6A RID: 207978 RVA: 0x00E42714 File Offset: 0x00E40914
 		[NullableContext(1)]
 		public void Update(IActivityCategoryTabData data, int index)
 		{
@@ -120,25 +119,29 @@ namespace CSharpScript.Game.Module.Activity
 				return;
 			}
 			this.RefreshTabItem();
-			this.BindRedDotIds((from x in data.Activities
-			select x.Id).ToArray<int>());
+			List<int> list = new List<int>();
+			foreach (ActivityBaseData activityBaseData in data.Activities)
+			{
+				list.Add(activityBaseData.Id);
+			}
+			this.BindRedDotIds(list);
 		}
 
-		// Token: 0x0603DCD0 RID: 253136 RVA: 0x00EF0AAE File Offset: 0x00EEECAE
+		// Token: 0x06032C6B RID: 207979 RVA: 0x00E42798 File Offset: 0x00E40998
 		[NullableContext(1)]
 		public void InitData(IActivityCategoryTabData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x0603DCD1 RID: 253137 RVA: 0x00EF0AB7 File Offset: 0x00EEECB7
+		// Token: 0x06032C6C RID: 207980 RVA: 0x00E427A1 File Offset: 0x00E409A1
 		[NullableContext(1)]
 		public void SetOnToggleClicked(TOnToggleClickCb onToggleSelected)
 		{
 			this.OnToggleClick = onToggleSelected;
 		}
 
-		// Token: 0x0603DCD2 RID: 253138 RVA: 0x00EF0AC0 File Offset: 0x00EEECC0
+		// Token: 0x06032C6D RID: 207981 RVA: 0x00E427AA File Offset: 0x00E409AA
 		private void RefreshLineItem()
 		{
 			base.GetItem(1).SetUIActive(true);
@@ -150,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity
 			tabItem.SetUiActive(false);
 		}
 
-		// Token: 0x0603DCD3 RID: 253139 RVA: 0x00EF0AE0 File Offset: 0x00EEECE0
+		// Token: 0x06032C6E RID: 207982 RVA: 0x00E427CA File Offset: 0x00E409CA
 		private void RefreshTabItem()
 		{
 			base.GetItem(1).SetUIActive(false);
@@ -167,7 +170,7 @@ namespace CSharpScript.Game.Module.Activity
 			tabItem2.SetIcon(this.Data.IconPath);
 		}
 
-		// Token: 0x0603DCD4 RID: 253140 RVA: 0x00EF0B1C File Offset: 0x00EEED1C
+		// Token: 0x06032C6F RID: 207983 RVA: 0x00E42806 File Offset: 0x00E40A06
 		public void OnSelected(bool fireEvent)
 		{
 			CategoryToggleItem tabItem = this.TabItem;
@@ -178,18 +181,18 @@ namespace CSharpScript.Game.Module.Activity
 			tabItem.GetTabToggle().SetToggleStateForce(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x17008EF2 RID: 36594
-		// (get) Token: 0x0603DCD5 RID: 253141 RVA: 0x00EF0B37 File Offset: 0x00EEED37
-		// (set) Token: 0x0603DCD6 RID: 253142 RVA: 0x00EF0B3F File Offset: 0x00EEED3F
+		// Token: 0x170062C4 RID: 25284
+		// (get) Token: 0x06032C70 RID: 207984 RVA: 0x00E42821 File Offset: 0x00E40A21
+		// (set) Token: 0x06032C71 RID: 207985 RVA: 0x00E42829 File Offset: 0x00E40A29
 		[Nullable(1)]
 		private Dictionary<int, bool> RedDotStateMap { [NullableContext(1)] get; [NullableContext(1)] set; } = new Dictionary<int, bool>();
 
-		// Token: 0x17008EF3 RID: 36595
-		// (get) Token: 0x0603DCD7 RID: 253143 RVA: 0x00EF0B48 File Offset: 0x00EEED48
-		// (set) Token: 0x0603DCD8 RID: 253144 RVA: 0x00EF0B50 File Offset: 0x00EEED50
+		// Token: 0x170062C5 RID: 25285
+		// (get) Token: 0x06032C72 RID: 207986 RVA: 0x00E42832 File Offset: 0x00E40A32
+		// (set) Token: 0x06032C73 RID: 207987 RVA: 0x00E4283A File Offset: 0x00E40A3A
 		private int RedDotCount { get; set; }
 
-		// Token: 0x0603DCD9 RID: 253145 RVA: 0x00EF0B5C File Offset: 0x00EEED5C
+		// Token: 0x06032C74 RID: 207988 RVA: 0x00E42844 File Offset: 0x00E40A44
 		private void RefreshRedDotIds()
 		{
 			foreach (int activityId in this.RedDotStateMap.Keys)
@@ -198,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DCDA RID: 253146 RVA: 0x00EF0BB4 File Offset: 0x00EEEDB4
+		// Token: 0x06032C75 RID: 207989 RVA: 0x00E4289C File Offset: 0x00E40A9C
 		private void ChangeRedDotCount(bool addOrRemove)
 		{
 			int redDotCount = this.RedDotCount;
@@ -218,13 +221,13 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DCDB RID: 253147 RVA: 0x00EF0C14 File Offset: 0x00EEEE14
+		// Token: 0x06032C76 RID: 207990 RVA: 0x00E428FC File Offset: 0x00E40AFC
 		public void SetRedDotState(bool bVisible)
 		{
 			this.TabItem.SetRedDotState(bVisible);
 		}
 
-		// Token: 0x0603DCDC RID: 253148 RVA: 0x00EF0C24 File Offset: 0x00EEEE24
+		// Token: 0x06032C77 RID: 207991 RVA: 0x00E4290C File Offset: 0x00E40B0C
 		private void RefreshRedDot(int activityId)
 		{
 			bool flag;
@@ -244,15 +247,15 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DCDD RID: 253149 RVA: 0x00EF0C73 File Offset: 0x00EEEE73
+		// Token: 0x06032C78 RID: 207992 RVA: 0x00E4295B File Offset: 0x00E40B5B
 		private bool GetActivityRedDotState(int id)
 		{
 			return ActivityModel.Instance.GetActivityRedDotState(id);
 		}
 
-		// Token: 0x0603DCDE RID: 253150 RVA: 0x00EF0C80 File Offset: 0x00EEEE80
+		// Token: 0x06032C79 RID: 207993 RVA: 0x00E42968 File Offset: 0x00E40B68
 		[NullableContext(1)]
-		public void BindRedDotIds(int[] redDotIds)
+		public void BindRedDotIds(IEnumerable<int> redDotIds)
 		{
 			this.RedDotStateMap = new Dictionary<int, bool>();
 			this.RedDotCount = 0;
@@ -269,14 +272,14 @@ namespace CSharpScript.Game.Module.Activity
 			this.SetRedDotState(this.RedDotCount > 0);
 		}
 
-		// Token: 0x0200C234 RID: 49716
+		// Token: 0x0200AC42 RID: 44098
 		[NullableContext(0)]
 		private class ECategoryComponents
 		{
-			// Token: 0x0403AAD5 RID: 240341
+			// Token: 0x040354C9 RID: 218313
 			public const int ItemTypeTitle = 1;
 
-			// Token: 0x0403AAD6 RID: 240342
+			// Token: 0x040354CA RID: 218314
 			public const int PanelTab = 0;
 		}
 	}

@@ -3,61 +3,61 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Common;
 
-// Token: 0x020019AD RID: 6573
+// Token: 0x02000E6B RID: 3691
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonSuccessData
 {
-	// Token: 0x0600BFB1 RID: 49073 RVA: 0x002B4387 File Offset: 0x002B2587
+	// Token: 0x060093BB RID: 37819 RVA: 0x002BF317 File Offset: 0x002BD517
 	public void SetTitleText(string text)
 	{
 		this.TitleText = text;
 	}
 
-	// Token: 0x0600BFB2 RID: 49074 RVA: 0x002B4390 File Offset: 0x002B2590
+	// Token: 0x060093BC RID: 37820 RVA: 0x002BF320 File Offset: 0x002BD520
 	public void SetSubTitleText(string text)
 	{
 		this.SubTitleText = text;
 	}
 
-	// Token: 0x0600BFB3 RID: 49075 RVA: 0x002B4399 File Offset: 0x002B2599
+	// Token: 0x060093BD RID: 37821 RVA: 0x002BF329 File Offset: 0x002BD529
 	public void SetClickText(string text)
 	{
 		this.ClickText = text;
 	}
 
-	// Token: 0x0600BFB4 RID: 49076 RVA: 0x002B43A2 File Offset: 0x002B25A2
+	// Token: 0x060093BE RID: 37822 RVA: 0x002BF332 File Offset: 0x002BD532
 	public string GetTitleText()
 	{
 		return this.TitleText;
 	}
 
-	// Token: 0x0600BFB5 RID: 49077 RVA: 0x002B43AA File Offset: 0x002B25AA
+	// Token: 0x060093BF RID: 37823 RVA: 0x002BF33A File Offset: 0x002BD53A
 	public string GetSubTitleText()
 	{
 		return this.SubTitleText;
 	}
 
-	// Token: 0x0600BFB6 RID: 49078 RVA: 0x002B43B2 File Offset: 0x002B25B2
+	// Token: 0x060093C0 RID: 37824 RVA: 0x002BF342 File Offset: 0x002BD542
 	public string GetClickText()
 	{
 		return this.ClickText;
 	}
 
-	// Token: 0x0600BFB7 RID: 49079 RVA: 0x002B43BA File Offset: 0x002B25BA
+	// Token: 0x060093C1 RID: 37825 RVA: 0x002BF34A File Offset: 0x002BD54A
 	public void SetClickFunction(Action clickFunction)
 	{
 		this.ClickFunction = clickFunction;
 	}
 
-	// Token: 0x0600BFB8 RID: 49080 RVA: 0x002B43C3 File Offset: 0x002B25C3
+	// Token: 0x060093C2 RID: 37826 RVA: 0x002BF353 File Offset: 0x002BD553
 	[NullableContext(2)]
 	public Action GetClickFunction()
 	{
 		return this.ClickFunction;
 	}
 
-	// Token: 0x0600BFB9 RID: 49081 RVA: 0x002B43CC File Offset: 0x002B25CC
+	// Token: 0x060093C3 RID: 37827 RVA: 0x002BF35C File Offset: 0x002BD55C
 	public void SetAudioId(string audioId)
 	{
 		Audio? audioPath = AudioConfig.Instance.GetAudioPath(audioId);
@@ -67,40 +67,40 @@ public class CommonSuccessData
 		}
 	}
 
-	// Token: 0x0600BFBA RID: 49082 RVA: 0x002B4403 File Offset: 0x002B2603
+	// Token: 0x060093C4 RID: 37828 RVA: 0x002BF393 File Offset: 0x002BD593
 	public string GetAudioPath()
 	{
 		return this.AudioPath;
 	}
 
-	// Token: 0x0600BFBB RID: 49083 RVA: 0x002B440B File Offset: 0x002B260B
+	// Token: 0x060093C5 RID: 37829 RVA: 0x002BF39B File Offset: 0x002BD59B
 	public void SetNeedDelay(bool needDelay)
 	{
 		this.NeedDelay = needDelay;
 	}
 
-	// Token: 0x0600BFBC RID: 49084 RVA: 0x002B4414 File Offset: 0x002B2614
+	// Token: 0x060093C6 RID: 37830 RVA: 0x002BF3A4 File Offset: 0x002BD5A4
 	public bool GetNeedDelay()
 	{
 		return this.NeedDelay;
 	}
 
-	// Token: 0x04005636 RID: 22070
+	// Token: 0x040056E8 RID: 22248
 	private string TitleText = "";
 
-	// Token: 0x04005637 RID: 22071
+	// Token: 0x040056E9 RID: 22249
 	private string SubTitleText = "";
 
-	// Token: 0x04005638 RID: 22072
+	// Token: 0x040056EA RID: 22250
 	private string ClickText = "";
 
-	// Token: 0x04005639 RID: 22073
+	// Token: 0x040056EB RID: 22251
 	[Nullable(2)]
 	private Action ClickFunction;
 
-	// Token: 0x0400563A RID: 22074
+	// Token: 0x040056EC RID: 22252
 	private string AudioPath = "";
 
-	// Token: 0x0400563B RID: 22075
+	// Token: 0x040056ED RID: 22253
 	private bool NeedDelay = true;
 }

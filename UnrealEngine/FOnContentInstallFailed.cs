@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020022F9 RID: 8953
+	// Token: 0x0200075A RID: 1882
 	public sealed class FOnContentInstallFailed : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06021EFA RID: 139002 RVA: 0x00322E35 File Offset: 0x00321035
+		// Token: 0x0600A42E RID: 42030 RVA: 0x000F2555 File Offset: 0x000F0755
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnContentInstallFailed.StaticFunctionPtr();
 		}
 
-		// Token: 0x06021EFB RID: 139003 RVA: 0x00322E41 File Offset: 0x00321041
+		// Token: 0x0600A42F RID: 42031 RVA: 0x000F2561 File Offset: 0x000F0761
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnContentInstallFailed._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnContentInstallFailed._FunctionPtr;
 		}
 
-		// Token: 0x06021EFC RID: 139004 RVA: 0x00322E64 File Offset: 0x00321064
+		// Token: 0x0600A430 RID: 42032 RVA: 0x000F2584 File Offset: 0x000F0784
 		public FOnContentInstallFailed()
 		{
 		}
 
-		// Token: 0x06021EFD RID: 139005 RVA: 0x00322E6C File Offset: 0x0032106C
+		// Token: 0x0600A431 RID: 42033 RVA: 0x000F258C File Offset: 0x000F078C
 		[NullableContext(2)]
 		public FOnContentInstallFailed(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06021EFE RID: 139006 RVA: 0x00322E76 File Offset: 0x00321076
+		// Token: 0x0600A432 RID: 42034 RVA: 0x000F2596 File Offset: 0x000F0796
 		public FOnContentInstallFailed(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06021EFF RID: 139007 RVA: 0x00322E81 File Offset: 0x00321081
+		// Token: 0x0600A433 RID: 42035 RVA: 0x000F25A1 File Offset: 0x000F07A1
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FText, int>) ?? ((Action<FText, int>)Delegate.CreateDelegate(typeof(Action<FText, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06021F00 RID: 139008 RVA: 0x00322EB3 File Offset: 0x003210B3
+		// Token: 0x0600A434 RID: 42036 RVA: 0x000F25D3 File Offset: 0x000F07D3
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FText, int> Callback)
 		{
 			if (FOnContentInstallFailed.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnContentInstallFailed.RegisterId);
 		}
 
-		// Token: 0x06021F01 RID: 139009 RVA: 0x00322EF0 File Offset: 0x003210F0
+		// Token: 0x0600A435 RID: 42037 RVA: 0x000F2610 File Offset: 0x000F0810
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FText ErrorText, int ErrorCode)
 		{
 			FOnContentInstallFailed.__FOnContentInstallFailed_DelegateParams* ptr = stackalloc FOnContentInstallFailed.__FOnContentInstallFailed_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FOnContentInstallFailed.__FOnContentInstallFailed_DelegateParams) & -16L;
@@ -79,10 +77,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnContentInstallFailed._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06021F02 RID: 139010 RVA: 0x00322F54 File Offset: 0x00321154
+		// Token: 0x0600A436 RID: 42038 RVA: 0x000F2674 File Offset: 0x000F0874
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FText, int> action = target as Action<FText, int>;
@@ -94,35 +91,35 @@ namespace UnrealEngine
 			action(arg, ((FOnContentInstallFailed.__FOnContentInstallFailed_DelegateParams*)__Parameters)->ErrorCode);
 		}
 
-		// Token: 0x040121A4 RID: 74148
+		// Token: 0x040045FF RID: 17919
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040121A5 RID: 74149
+		// Token: 0x04004600 RID: 17920
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/MobilePatchingUtils.OnContentInstallFailed__DelegateSignature";
 
-		// Token: 0x040121A6 RID: 74150
+		// Token: 0x04004601 RID: 17921
 		private static int RegisterId;
 
-		// Token: 0x0200363E RID: 13886
+		// Token: 0x02000F44 RID: 3908
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FOnContentInstallFailed_DelegateParams
+		private ref struct __FOnContentInstallFailed_DelegateParams
 		{
-			// Token: 0x04017704 RID: 96004
+			// Token: 0x04006318 RID: 25368
 			[FieldOffset(0)]
 			public byte ErrorText;
 
-			// Token: 0x04017705 RID: 96005
+			// Token: 0x04006319 RID: 25369
 			[FieldOffset(24)]
 			public int ErrorCode;
 		}
 
-		// Token: 0x0200363F RID: 13887
+		// Token: 0x02000F45 RID: 3909
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017706 RID: 96006
+			// Token: 0x0400631A RID: 25370
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

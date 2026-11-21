@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AC7 RID: 15047
+	// Token: 0x02003EC9 RID: 16073
 	public class IScoreDisplayParamsT
 	{
-		// Token: 0x1700673D RID: 26429
-		// (get) Token: 0x0601477C RID: 83836 RVA: 0x002FB65E File Offset: 0x002F985E
-		// (set) Token: 0x0601477D RID: 83837 RVA: 0x002FB666 File Offset: 0x002F9866
+		// Token: 0x17006CD8 RID: 27864
+		// (get) Token: 0x06015C26 RID: 89126 RVA: 0x003218EE File Offset: 0x0031FAEE
+		// (set) Token: 0x06015C27 RID: 89127 RVA: 0x003218F6 File Offset: 0x0031FAF6
 		public EScoreDisplayDataSource Type { get; set; }
 
-		// Token: 0x0601477E RID: 83838 RVA: 0x002FB66F File Offset: 0x002F986F
+		// Token: 0x06015C28 RID: 89128 RVA: 0x003218FF File Offset: 0x0031FAFF
 		public IScoreDisplayParamsT()
 		{
 			this.Type = EScoreDisplayDataSource.Var;

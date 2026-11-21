@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BE0 RID: 3040
+	// Token: 0x02000CAF RID: 3247
 	public class IFollowTrackEndType
 	{
-		// Token: 0x060045DA RID: 17882 RVA: 0x000B0B21 File Offset: 0x000AED21
-		[NullableContext(1)]
+		// Token: 0x06004A38 RID: 19000 RVA: 0x000BAC9D File Offset: 0x000B8E9D
 		public static IFollowTrackEndType Create(IFollowTrackEndType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013D7 RID: 5079
-		// (get) Token: 0x060045DB RID: 17883 RVA: 0x000B0B40 File Offset: 0x000AED40
+		// Token: 0x170014D5 RID: 5333
+		// (get) Token: 0x06004A39 RID: 19001 RVA: 0x000BACBC File Offset: 0x000B8EBC
 		public virtual EFollowTrackEndType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027C7 RID: 10183
+		// Token: 0x04002A12 RID: 10770
 		private IFollowTrackEndType Instance;
 	}
 }

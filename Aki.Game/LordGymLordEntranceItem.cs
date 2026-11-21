@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020021A9 RID: 8617
+// Token: 0x0200168D RID: 5773
 public class LordGymLordEntranceItem : GridProxyAbstract<int>
 {
-	// Token: 0x06010C2F RID: 68655 RVA: 0x00412970 File Offset: 0x00410B70
+	// Token: 0x0600E0C0 RID: 57536 RVA: 0x0041F258 File Offset: 0x0041D458
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class LordGymLordEntranceItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06010C30 RID: 68656 RVA: 0x00412A0C File Offset: 0x00410C0C
+	// Token: 0x0600E0C1 RID: 57537 RVA: 0x0041F2F4 File Offset: 0x0041D4F4
 	protected override void OnStart()
 	{
 		if (this.CanExecuteChangeCallBack != null)
@@ -45,7 +45,7 @@ public class LordGymLordEntranceItem : GridProxyAbstract<int>
 		this.StarLayout = new GenericLayout<LordGymLordStarItem, bool>(base.GetHorizontalLayout(1), new Func<LordGymLordStarItem>(this.CreateStarItem), null, false, true);
 	}
 
-	// Token: 0x06010C31 RID: 68657 RVA: 0x00412A68 File Offset: 0x00410C68
+	// Token: 0x0600E0C2 RID: 57538 RVA: 0x0041F350 File Offset: 0x0041D550
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.LordEntranceId = data;
@@ -95,7 +95,7 @@ public class LordGymLordEntranceItem : GridProxyAbstract<int>
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06010C32 RID: 68658 RVA: 0x00412BA5 File Offset: 0x00410DA5
+	// Token: 0x0600E0C3 RID: 57539 RVA: 0x0041F48D File Offset: 0x0041D68D
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -106,7 +106,7 @@ public class LordGymLordEntranceItem : GridProxyAbstract<int>
 		extendToggle.SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06010C33 RID: 68659 RVA: 0x00412BBD File Offset: 0x00410DBD
+	// Token: 0x0600E0C4 RID: 57540 RVA: 0x0041F4A5 File Offset: 0x0041D6A5
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -117,20 +117,20 @@ public class LordGymLordEntranceItem : GridProxyAbstract<int>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06010C34 RID: 68660 RVA: 0x00412BD5 File Offset: 0x00410DD5
+	// Token: 0x0600E0C5 RID: 57541 RVA: 0x0041F4BD File Offset: 0x0041D6BD
 	[NullableContext(1)]
 	private LordGymLordStarItem CreateStarItem()
 	{
 		return new LordGymLordStarItem();
 	}
 
-	// Token: 0x06010C35 RID: 68661 RVA: 0x00412BDC File Offset: 0x00410DDC
+	// Token: 0x0600E0C6 RID: 57542 RVA: 0x0041F4C4 File Offset: 0x0041D6C4
 	public int GetLordEntranceId()
 	{
 		return this.LordEntranceId;
 	}
 
-	// Token: 0x06010C37 RID: 68663 RVA: 0x00412BEC File Offset: 0x00410DEC
+	// Token: 0x0600E0C8 RID: 57544 RVA: 0x0041F4D4 File Offset: 0x0041D6D4
 	[CompilerGenerated]
 	private void <OnRegisterComponent>g__CallBack|5_0(EToggleState state)
 	{
@@ -142,18 +142,18 @@ public class LordGymLordEntranceItem : GridProxyAbstract<int>
 		onToggleClick(base.GridIndex);
 	}
 
-	// Token: 0x04007F89 RID: 32649
+	// Token: 0x040080D0 RID: 32976
 	private int LordEntranceId;
 
-	// Token: 0x04007F8A RID: 32650
+	// Token: 0x040080D1 RID: 32977
 	[Nullable(2)]
 	public Action<int> OnToggleClick;
 
-	// Token: 0x04007F8B RID: 32651
+	// Token: 0x040080D2 RID: 32978
 	[Nullable(2)]
 	public Func<int, bool> CanExecuteChangeCallBack;
 
-	// Token: 0x04007F8C RID: 32652
+	// Token: 0x040080D3 RID: 32979
 	[Nullable(new byte[]
 	{
 		2,
@@ -161,19 +161,19 @@ public class LordGymLordEntranceItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<LordGymLordStarItem, bool> StarLayout;
 
-	// Token: 0x020086E1 RID: 34529
+	// Token: 0x0200786C RID: 30828
 	private class EComponent
 	{
-		// Token: 0x0402BE2D RID: 179757
+		// Token: 0x0402714E RID: 160078
 		public const int NameText = 0;
 
-		// Token: 0x0402BE2E RID: 179758
+		// Token: 0x0402714F RID: 160079
 		public const int StarLayout = 1;
 
-		// Token: 0x0402BE2F RID: 179759
+		// Token: 0x04027150 RID: 160080
 		public const int LordTexture = 2;
 
-		// Token: 0x0402BE30 RID: 179760
+		// Token: 0x04027151 RID: 160081
 		public const int ItemToggle = 3;
 	}
 }

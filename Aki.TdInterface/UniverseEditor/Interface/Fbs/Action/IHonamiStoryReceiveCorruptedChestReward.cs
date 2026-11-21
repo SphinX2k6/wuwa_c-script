@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200692D RID: 26925
+	// Token: 0x02006FE0 RID: 28640
 	public struct IHonamiStoryReceiveCorruptedChestReward : IFlatbufferObject
 	{
-		// Token: 0x1700C7BD RID: 51133
-		// (get) Token: 0x0602F00A RID: 192522 RVA: 0x00668744 File Offset: 0x00666944
+		// Token: 0x1700D1C0 RID: 53696
+		// (get) Token: 0x060319DA RID: 203226 RVA: 0x006B8C2C File Offset: 0x006B6E2C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F00B RID: 192523 RVA: 0x00668751 File Offset: 0x00666951
+		// Token: 0x060319DB RID: 203227 RVA: 0x006B8C39 File Offset: 0x006B6E39
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F00C RID: 192524 RVA: 0x00668758 File Offset: 0x00666958
+		// Token: 0x060319DC RID: 203228 RVA: 0x006B8C40 File Offset: 0x006B6E40
 		public static IHonamiStoryReceiveCorruptedChestReward GetRootAsIHonamiStoryReceiveCorruptedChestReward(ByteBuffer _bb)
 		{
 			return IHonamiStoryReceiveCorruptedChestReward.GetRootAsIHonamiStoryReceiveCorruptedChestReward(_bb, default(IHonamiStoryReceiveCorruptedChestReward));
 		}
 
-		// Token: 0x0602F00D RID: 192525 RVA: 0x00668774 File Offset: 0x00666974
+		// Token: 0x060319DD RID: 203229 RVA: 0x006B8C5C File Offset: 0x006B6E5C
 		public static IHonamiStoryReceiveCorruptedChestReward GetRootAsIHonamiStoryReceiveCorruptedChestReward(ByteBuffer _bb, IHonamiStoryReceiveCorruptedChestReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F00E RID: 192526 RVA: 0x00668791 File Offset: 0x00666991
+		// Token: 0x060319DE RID: 203230 RVA: 0x006B8C79 File Offset: 0x006B6E79
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F00F RID: 192527 RVA: 0x006687A0 File Offset: 0x006669A0
+		// Token: 0x060319DF RID: 203231 RVA: 0x006B8C88 File Offset: 0x006B6E88
 		public IHonamiStoryReceiveCorruptedChestReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C7BE RID: 51134
-		// (get) Token: 0x0602F010 RID: 192528 RVA: 0x006687B0 File Offset: 0x006669B0
+		// Token: 0x1700D1C1 RID: 53697
+		// (get) Token: 0x060319E0 RID: 203232 RVA: 0x006B8C98 File Offset: 0x006B6E98
 		public int Cost
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C7BF RID: 51135
-		// (get) Token: 0x0602F011 RID: 192529 RVA: 0x006687EC File Offset: 0x006669EC
+		// Token: 0x1700D1C2 RID: 53698
+		// (get) Token: 0x060319E1 RID: 203233 RVA: 0x006B8CD4 File Offset: 0x006B6ED4
 		public int CostGroup
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C7C0 RID: 51136
-		// (get) Token: 0x0602F012 RID: 192530 RVA: 0x00668828 File Offset: 0x00666A28
+		// Token: 0x1700D1C3 RID: 53699
+		// (get) Token: 0x060319E2 RID: 203234 RVA: 0x006B8D10 File Offset: 0x006B6F10
 		public string ChangeSelfEntityStateAfterReceived
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F013 RID: 192531 RVA: 0x0066885F File Offset: 0x00666A5F
+		// Token: 0x060319E3 RID: 203235 RVA: 0x006B8D47 File Offset: 0x006B6F47
 		public Span<byte> GetChangeSelfEntityStateAfterReceivedBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0602F014 RID: 192532 RVA: 0x0066886E File Offset: 0x00666A6E
+		// Token: 0x060319E4 RID: 203236 RVA: 0x006B8D56 File Offset: 0x006B6F56
 		public byte[] GetChangeSelfEntityStateAfterReceivedArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700C7C1 RID: 51137
-		// (get) Token: 0x0602F015 RID: 192533 RVA: 0x0066887C File Offset: 0x00666A7C
+		// Token: 0x1700D1C4 RID: 53700
+		// (get) Token: 0x060319E5 RID: 203237 RVA: 0x006B8D64 File Offset: 0x006B6F64
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F016 RID: 192534 RVA: 0x006688B9 File Offset: 0x00666AB9
+		// Token: 0x060319E6 RID: 203238 RVA: 0x006B8DA1 File Offset: 0x006B6FA1
 		public static Offset<IHonamiStoryReceiveCorruptedChestReward> CreateIHonamiStoryReceiveCorruptedChestReward(FlatBufferBuilder builder, int Cost = 0, int CostGroup = 0, StringOffset ChangeSelfEntityStateAfterReceivedOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -130,43 +130,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHonamiStoryReceiveCorruptedChestReward.EndIHonamiStoryReceiveCorruptedChestReward(builder);
 		}
 
-		// Token: 0x0602F017 RID: 192535 RVA: 0x006688E5 File Offset: 0x00666AE5
+		// Token: 0x060319E7 RID: 203239 RVA: 0x006B8DCD File Offset: 0x006B6FCD
 		public static void StartIHonamiStoryReceiveCorruptedChestReward(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602F018 RID: 192536 RVA: 0x006688EE File Offset: 0x00666AEE
+		// Token: 0x060319E8 RID: 203240 RVA: 0x006B8DD6 File Offset: 0x006B6FD6
 		public static void AddCost(FlatBufferBuilder builder, int cost)
 		{
 			builder.AddInt(0, cost, 0);
 		}
 
-		// Token: 0x0602F019 RID: 192537 RVA: 0x006688F9 File Offset: 0x00666AF9
+		// Token: 0x060319E9 RID: 203241 RVA: 0x006B8DE1 File Offset: 0x006B6FE1
 		public static void AddCostGroup(FlatBufferBuilder builder, int costGroup)
 		{
 			builder.AddInt(1, costGroup, 0);
 		}
 
-		// Token: 0x0602F01A RID: 192538 RVA: 0x00668904 File Offset: 0x00666B04
+		// Token: 0x060319EA RID: 203242 RVA: 0x006B8DEC File Offset: 0x006B6FEC
 		public static void AddChangeSelfEntityStateAfterReceived(FlatBufferBuilder builder, StringOffset changeSelfEntityStateAfterReceivedOffset)
 		{
 			builder.AddOffset(2, changeSelfEntityStateAfterReceivedOffset.Value, 0);
 		}
 
-		// Token: 0x0602F01B RID: 192539 RVA: 0x00668914 File Offset: 0x00666B14
+		// Token: 0x060319EB RID: 203243 RVA: 0x006B8DFC File Offset: 0x006B6FFC
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0602F01C RID: 192540 RVA: 0x0066891F File Offset: 0x00666B1F
+		// Token: 0x060319EC RID: 203244 RVA: 0x006B8E07 File Offset: 0x006B7007
 		public static Offset<IHonamiStoryReceiveCorruptedChestReward> EndIHonamiStoryReceiveCorruptedChestReward(FlatBufferBuilder builder)
 		{
 			return new Offset<IHonamiStoryReceiveCorruptedChestReward>(builder.EndTable());
 		}
 
-		// Token: 0x0602F01D RID: 192541 RVA: 0x0066892C File Offset: 0x00666B2C
+		// Token: 0x060319ED RID: 203245 RVA: 0x006B8E14 File Offset: 0x006B7014
 		public IHonamiStoryReceiveCorruptedChestRewardT UnPack()
 		{
 			IHonamiStoryReceiveCorruptedChestRewardT honamiStoryReceiveCorruptedChestRewardT = new IHonamiStoryReceiveCorruptedChestRewardT();
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return honamiStoryReceiveCorruptedChestRewardT;
 		}
 
-		// Token: 0x0602F01E RID: 192542 RVA: 0x00668947 File Offset: 0x00666B47
+		// Token: 0x060319EE RID: 203246 RVA: 0x006B8E2F File Offset: 0x006B702F
 		public void UnPackTo(IHonamiStoryReceiveCorruptedChestRewardT _o)
 		{
 			_o.Cost = this.Cost;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602F01F RID: 192543 RVA: 0x0066897C File Offset: 0x00666B7C
+		// Token: 0x060319EF RID: 203247 RVA: 0x006B8E64 File Offset: 0x006B7064
 		public static Offset<IHonamiStoryReceiveCorruptedChestReward> Pack(FlatBufferBuilder builder, IHonamiStoryReceiveCorruptedChestRewardT _o)
 		{
 			if (_o == null)
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHonamiStoryReceiveCorruptedChestReward.CreateIHonamiStoryReceiveCorruptedChestReward(builder, _o.Cost, _o.CostGroup, changeSelfEntityStateAfterReceivedOffset, _o.NullMask);
 		}
 
-		// Token: 0x040110A6 RID: 69798
+		// Token: 0x04011F12 RID: 73490
 		private Table __p;
 	}
 }

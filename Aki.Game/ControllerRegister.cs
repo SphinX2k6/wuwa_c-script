@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Aki.Game.LevelGamePlay.ElementalCasket.ElementalField;
+using Aki.Game.Module.Activity.ActivityContent.Encircle;
+using Aki.Game.Module.Activity.ActivityContent.Tetris;
+using Aki.Game.Module.Activity.ActivityContent.Tetris.Activity;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Capability;
 using CSharpScript.Game.Input;
@@ -25,6 +29,7 @@ using CSharpScript.Game.LevelGamePlay.ItemInspect;
 using CSharpScript.Game.LevelGamePlay.LevelPickControl;
 using CSharpScript.Game.LevelGamePlay.LivingCharMeteor;
 using CSharpScript.Game.LevelGamePlay.Parkour;
+using CSharpScript.Game.LevelGamePlay.PianoGameplay;
 using CSharpScript.Game.LevelGamePlay.ResetPlayer;
 using CSharpScript.Game.LevelGamePlay.RollBlock;
 using CSharpScript.Game.LevelGamePlay.SeekTrace;
@@ -33,6 +38,7 @@ using CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag;
 using CSharpScript.Game.LevelGamePlay.SplineMoveTask;
 using CSharpScript.Game.LevelGamePlay.SundialControl;
 using CSharpScript.Game.LevelGamePlay.SunSpirit;
+using CSharpScript.Game.LevelGamePlay.TempActorManager;
 using CSharpScript.Game.LevelGamePlay.TimeTrackControl;
 using CSharpScript.Game.LevelGamePlay.TurntableControl;
 using CSharpScript.Game.LevelGamePlay.UnopenedArea;
@@ -48,7 +54,6 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain;
 using CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity;
 using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch;
 using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay;
-using CSharpScript.Game.Module.Activity.ActivityContent.Encircle;
 using CSharpScript.Game.Module.Activity.ActivityContent.FarmGold;
 using CSharpScript.Game.Module.Activity.ActivityContent.FeiXue;
 using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
@@ -78,7 +83,6 @@ using CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity;
 using CSharpScript.Game.Module.Activity.ActivityContent.Roverlike;
 using CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed;
 using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
-using CSharpScript.Game.Module.Activity.ActivityContent.Tetris;
 using CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp;
 using CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity;
 using CSharpScript.Game.Module.ActorFxEmote;
@@ -137,6 +141,7 @@ using CSharpScript.Game.Module.MingSu;
 using CSharpScript.Game.Module.Movement;
 using CSharpScript.Game.Module.MovieMode;
 using CSharpScript.Game.Module.MusicalInstrument;
+using CSharpScript.Game.Module.PerformanceExceed;
 using CSharpScript.Game.Module.PermanentRogue;
 using CSharpScript.Game.Module.PhantomArena;
 using CSharpScript.Game.Module.Plot;
@@ -159,11 +164,13 @@ using CSharpScript.Game.Module.SkillButtonUi;
 using CSharpScript.Game.Module.Skin.Tab.Weapon;
 using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.SlidingBlocks;
+using CSharpScript.Game.Module.SolarSchool;
 using CSharpScript.Game.Module.Teleport;
 using CSharpScript.Game.Module.TowerDefenseEvent;
 using CSharpScript.Game.Module.TowerDefenseUi;
 using CSharpScript.Game.Module.Transport;
 using CSharpScript.Game.Module.TreasureHunt;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.UiComponent.UiHomeButton;
 using CSharpScript.Game.Module.VehicleStream;
 using CSharpScript.Game.Module.VillageInfr;
@@ -186,10 +193,10 @@ using CSharpScript.Game.Utils.LevelRangeDebug;
 using CSharpScript.Game.World.Controller;
 using Kuro.Game.Module.Audio;
 
-// Token: 0x02003562 RID: 13666
+// Token: 0x02002AD7 RID: 10967
 public class ControllerRegister
 {
-	// Token: 0x0601DFD7 RID: 122839 RVA: 0x00875630 File Offset: 0x00873830
+	// Token: 0x0601BCFF RID: 113919 RVA: 0x0089D534 File Offset: 0x0089B734
 	public static bool CreateInstance()
 	{
 		ControllerRegister.Controllers.Clear();
@@ -201,6 +208,13 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(AiModelController.Instance);
 		ControllerRegister.TickControllers.Add(AiModelController.Instance);
+		if (!PhotographController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PhotographController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(PhotographController.Instance);
+		ControllerRegister.TickControllers.Add(PhotographController.Instance);
 		if (!PhotographQuickController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PhotographQuickController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -274,6 +288,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(PersonalController.Instance);
+		if (!PhotoSnapshotController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PhotoSnapshotController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(PhotoSnapshotController.Instance);
 		if (!ActivityPermanentRogueController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.PermanentRogue.ActivityPermanentRogueController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -322,6 +342,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ParallelPackageController.Instance);
+		if (!ConsoleParallelVersionController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ConsoleParallelVersionController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(ConsoleParallelVersionController.Instance);
 		if (!PanoramicUiDeferController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PanoramicUiDeferController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -354,6 +380,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(MusicalInstrumentController.Instance);
+		if (!PerfExceedFramework.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.PerformanceExceed.PerfExceedFramework 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(PerfExceedFramework.Instance);
 		if (!MovieModeController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.MovieMode.MovieModeController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -361,25 +393,6 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(MovieModeController.Instance);
 		ControllerRegister.TickControllers.Add(MovieModeController.Instance);
-		if (!MoveTriggerController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Movement.MoveTriggerController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(MoveTriggerController.Instance);
-		if (!PhotographController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PhotographController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(PhotographController.Instance);
-		ControllerRegister.TickControllers.Add(PhotographController.Instance);
-		if (!PhotoSnapshotController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PhotoSnapshotController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(PhotoSnapshotController.Instance);
 		if (!PilotThrowController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PilotThrowController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -387,18 +400,12 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(PilotThrowController.Instance);
 		ControllerRegister.TickControllers.Add(PilotThrowController.Instance);
-		if (!PlatformController.CreateInstance())
+		if (!PlayerInfoController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PlatformController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PlayerInfoController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(PlatformController.Instance);
-		if (!RoleDevController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleDevController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(RoleDevController.Instance);
+		ControllerRegister.Controllers.Add(PlayerInfoController.Instance);
 		if (!RoleController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -411,6 +418,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(MainRoleController.Instance);
+		if (!RoleTowerController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleTowerController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(RoleTowerController.Instance);
 		if (!RoleMorphController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.RoleMorph.RoleMorphController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -472,12 +485,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(RacingBetsController.Instance);
-		if (!MovementLockController.CreateInstance())
+		if (!PlatformController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MovementLockController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PlatformController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(MovementLockController.Instance);
+		ControllerRegister.Controllers.Add(PlatformController.Instance);
 		if (!QtaController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.QuickTimeAction.QtaController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -560,36 +573,42 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(FlowController.Instance);
 		ControllerRegister.TickControllers.Add(FlowController.Instance);
-		if (!PlayerInfoController.CreateInstance())
+		if (!AnimatedScreenTextController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PlayerInfoController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.AnimatedScreenTextController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(PlayerInfoController.Instance);
+		ControllerRegister.Controllers.Add(AnimatedScreenTextController.Instance);
 		if (!QuickHackController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.QuickHack.QuickHackController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(QuickHackController.Instance);
+		if (!MoveTriggerController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Movement.MoveTriggerController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(MoveTriggerController.Instance);
+		if (!MovementLockController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MovementLockController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(MovementLockController.Instance);
 		if (!MotorcycleMusicPlayerController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleMusicPlayerController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(MotorcycleMusicPlayerController.Instance);
-		if (!MotorcycleDiyController.CreateInstance())
+		if (!KurotatoActivityController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleDiyController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Kurotato.KurotatoActivityController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(MotorcycleDiyController.Instance);
-		if (!MotorcycleDevelopController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleDevelopController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(MotorcycleDevelopController.Instance);
+		ControllerRegister.Controllers.Add(KurotatoActivityController.Instance);
 		if (!KuroPerformanceController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::KuroPerformanceController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -666,24 +685,24 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(InventoryController.Instance);
+		if (!KurotatoController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Kurotato.KurotatoController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(KurotatoController.Instance);
 		if (!InteractionController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Interaction.InteractionController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(InteractionController.Instance);
-		if (!KurotatoActivityController.CreateInstance())
+		if (!InstanceDungeonGuideController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Kurotato.KurotatoActivityController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonGuideController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(KurotatoActivityController.Instance);
-		if (!InstanceGameplayModeController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InstanceGameplayModeController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(InstanceGameplayModeController.Instance);
+		ControllerRegister.Controllers.Add(InstanceDungeonGuideController.Instance);
 		if (!InstanceDungeonEntranceController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonEntranceController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -759,30 +778,18 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(HelpController.Instance);
-		if (!HandBookController.CreateInstance())
+		if (!InstanceGameplayModeController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::HandBookController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InstanceGameplayModeController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(HandBookController.Instance);
-		if (!InstanceDungeonGuideController.CreateInstance())
+		ControllerRegister.Controllers.Add(InstanceGameplayModeController.Instance);
+		if (!LanguageController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonGuideController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Language.LanguageController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(InstanceDungeonGuideController.Instance);
-		if (!RoleLevelUpSuccessController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleLevelUpSuccessController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(RoleLevelUpSuccessController.Instance);
-		if (!KurotatoController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Kurotato.KurotatoController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(KurotatoController.Instance);
+		ControllerRegister.Controllers.Add(LanguageController.Instance);
 		if (!LevelLoadingController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.LevelLoading.LevelLoadingController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -790,6 +797,24 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(LevelLoadingController.Instance);
 		ControllerRegister.TickControllers.Add(LevelLoadingController.Instance);
+		if (!LevelPlayReportController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LevelPlayReportController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(LevelPlayReportController.Instance);
+		if (!MotorcycleDiyController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleDiyController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(MotorcycleDiyController.Instance);
+		if (!MotorcycleDevelopController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleDevelopController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(MotorcycleDevelopController.Instance);
 		if (!MotionController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotionController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -869,18 +894,18 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(MapExploreToolController.Instance);
-		if (!LanguageController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Language.LanguageController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(LanguageController.Instance);
 		if (!ForgingController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Manufacture.Forging.ForgingController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ForgingController.Instance);
+		if (!ComposeController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Manufacture.Compose.ComposeController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(ComposeController.Instance);
 		if (!MailController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MailController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -955,37 +980,30 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(LevelPlayController.Instance);
 		ControllerRegister.TickControllers.Add(LevelPlayController.Instance);
-		if (!LevelPlayReportController.CreateInstance())
+		if (!RoleDevController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LevelPlayReportController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleDevController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(LevelPlayReportController.Instance);
-		if (!ComposeController.CreateInstance())
+		ControllerRegister.Controllers.Add(RoleDevController.Instance);
+		if (!HandBookController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Manufacture.Compose.ComposeController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::HandBookController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(ComposeController.Instance);
-		if (!GuideController.CreateInstance())
+		ControllerRegister.Controllers.Add(HandBookController.Instance);
+		if (!RoleLevelUpSuccessController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GuideController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleLevelUpSuccessController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(GuideController.Instance);
-		if (!RouletteController.CreateInstance())
+		ControllerRegister.Controllers.Add(RoleLevelUpSuccessController.Instance);
+		if (!RouletteExploreSkillController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RouletteController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RouletteExploreSkillController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(RouletteController.Instance);
-		if (!ScanController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Scan.ScanController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(ScanController.Instance);
-		ControllerRegister.TickControllers.Add(ScanController.Instance);
+		ControllerRegister.Controllers.Add(RouletteExploreSkillController.Instance);
 		if (!LguiEventSystemController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.LguiEventSystemController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1004,6 +1022,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(HudOnlyPopupController.Instance);
+		if (!UiAudioSystem.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.UiAudioSystem 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(UiAudioSystem.Instance);
 		if (!ServerStorageController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.ServerStorage.ServerStorageController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1060,18 +1084,18 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(SceneItemMoveController.Instance);
+		if (!SceneUiController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.SceneUiController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(SceneUiController.Instance);
 		if (!SceneItemGraphController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Controller.SceneItemGraphController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(SceneItemGraphController.Instance);
-		if (!SceneItemCaptureController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SceneItemCaptureController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(SceneItemCaptureController.Instance);
 		if (!SceneItemBuffController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Controller.SceneItemBuffController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1155,24 +1179,25 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(CrowdAiController.Instance);
 		ControllerRegister.TickControllers.Add(CrowdAiController.Instance);
-		if (!SceneUiController.CreateInstance())
+		if (!SceneItemCaptureController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Ui.SceneUiController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SceneItemCaptureController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(SceneUiController.Instance);
+		ControllerRegister.Controllers.Add(SceneItemCaptureController.Instance);
+		if (!MonsterGroupPatrolController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MonsterGroupPatrolController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(MonsterGroupPatrolController.Instance);
+		ControllerRegister.TickControllers.Add(MonsterGroupPatrolController.Instance);
 		if (!CombatDebugController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Utils.CombatDebugController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(CombatDebugController.Instance);
-		if (!CombatDebugDrawController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CombatDebugDrawController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(CombatDebugDrawController.Instance);
 		if (!LevelRangeDebugDrawController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Utils.LevelRangeDebug.LevelRangeDebugDrawController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1263,13 +1288,12 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(MultiInteractionActorController.Instance);
 		ControllerRegister.TickControllers.Add(MultiInteractionActorController.Instance);
-		if (!MonsterGroupPatrolController.CreateInstance())
+		if (!CombatDebugDrawController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MonsterGroupPatrolController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CombatDebugDrawController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(MonsterGroupPatrolController.Instance);
-		ControllerRegister.TickControllers.Add(MonsterGroupPatrolController.Instance);
+		ControllerRegister.Controllers.Add(CombatDebugDrawController.Instance);
 		if (!LowMemoryScalabilityController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.World.Controller.LowMemoryScalabilityController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1383,19 +1407,6 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(CharacterEmotionBubbleController.Instance);
-		if (!TowerDefenseEventController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.TowerDefenseEvent.TowerDefenseEventController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(TowerDefenseEventController.Instance);
-		ControllerRegister.TickControllers.Add(TowerDefenseEventController.Instance);
-		if (!TowerDefenseController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TowerDefenseController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(TowerDefenseController.Instance);
 		if (!TimeOfDayController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TimeOfDayController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1453,6 +1464,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(SoundAreaPlayTipsController.Instance);
+		if (!SolarSchoolController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SolarSchool.SolarSchoolController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(SolarSchoolController.Instance);
 		if (!SlidingBlocksController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SlidingBlocks.SlidingBlocksController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1466,25 +1483,24 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(SkipInterfaceController.Instance);
-		if (!TowerDefenseUiController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.TowerDefenseUi.TowerDefenseUiController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(TowerDefenseUiController.Instance);
-		ControllerRegister.TickControllers.Add(TowerDefenseUiController.Instance);
 		if (!WeaponSkinController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Skin.Tab.Weapon.WeaponSkinController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(WeaponSkinController.Instance);
-		if (!CalabashSkinController.CreateInstance())
+		if (!TowerDefenseController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CalabashSkinController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TowerDefenseController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(CalabashSkinController.Instance);
+		ControllerRegister.Controllers.Add(TowerDefenseController.Instance);
+		if (!FlySkinController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FlySkinController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(FlySkinController.Instance);
 		if (!SkinController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SkinController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1560,30 +1576,39 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(SceneBattleInteractController.Instance);
 		ControllerRegister.TickControllers.Add(SceneBattleInteractController.Instance);
-		if (!FlySkinController.CreateInstance())
+		if (!ScanController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FlySkinController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Scan.ScanController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(FlySkinController.Instance);
-		if (!RouletteExploreSkillController.CreateInstance())
+		ControllerRegister.Controllers.Add(ScanController.Instance);
+		ControllerRegister.TickControllers.Add(ScanController.Instance);
+		if (!CalabashSkinController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RouletteExploreSkillController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CalabashSkinController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(RouletteExploreSkillController.Instance);
+		ControllerRegister.Controllers.Add(CalabashSkinController.Instance);
+		if (!TowerDefenseEventController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.TowerDefenseEvent.TowerDefenseEventController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(TowerDefenseEventController.Instance);
+		ControllerRegister.TickControllers.Add(TowerDefenseEventController.Instance);
+		if (!TowerDefenseUiController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.TowerDefenseUi.TowerDefenseUiController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(TowerDefenseUiController.Instance);
+		ControllerRegister.TickControllers.Add(TowerDefenseUiController.Instance);
 		if (!TowerController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TowerController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(TowerController.Instance);
-		if (!TransportNetworkController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Transport.TransportNetworkController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(TransportNetworkController.Instance);
 		if (!PerformController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PerformController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1667,18 +1692,18 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(WeeklyChallengeController.Instance);
-		if (!TrackController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TrackController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(TrackController.Instance);
 		if (!WeatherController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Weather.WeatherController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(WeatherController.Instance);
+		if (!WeaponController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WeaponController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(WeaponController.Instance);
 		if (WaterMaskView.ShouldRegister())
 		{
 			if (!WaterMaskView.CreateInstance())
@@ -1734,16 +1759,10 @@ public class ControllerRegister
 		ControllerRegister.Controllers.Add(HomeBtnController.Instance);
 		if (!UiCameraController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::UiCameraController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.UiCamera.UiCameraController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(UiCameraController.Instance);
-		if (!UiCameraAnimationController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::UiCameraAnimationController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(UiCameraAnimationController.Instance);
 		if (!TutorialController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TutorialController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1762,30 +1781,42 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(TrapDefenseController.Instance);
-		if (!WeaponController.CreateInstance())
+		if (!TransportNetworkController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WeaponController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Transport.TransportNetworkController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(WeaponController.Instance);
+		ControllerRegister.Controllers.Add(TransportNetworkController.Instance);
+		if (!TrackController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TrackController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(TrackController.Instance);
+		if (!RouletteController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RouletteController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(RouletteController.Instance);
 		if (!WorldDebugController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.World.Controller.WorldDebugController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(WorldDebugController.Instance);
-		if (!GreatSwordController.CreateInstance())
+		if (!GuideController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GreatSwordController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GuideController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(GreatSwordController.Instance);
-		if (!GiantActivityController.CreateInstance())
+		ControllerRegister.Controllers.Add(GuideController.Instance);
+		if (!GiantController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Giant.Activity.GiantActivityController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Giant.GiantController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(GiantActivityController.Instance);
+		ControllerRegister.Controllers.Add(GiantController.Instance);
 		if (!DropCatchActivityController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.DropCatchActivityController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1864,18 +1895,18 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ActivityCorniceMeetingController.Instance);
+		if (!DropCatchGameplayController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.DropCatchGameplayController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(DropCatchGameplayController.Instance);
 		if (!CoopActivityController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Coop.CoopActivityController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(CoopActivityController.Instance);
-		if (!CommonH5Controller.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.CommonH5.CommonH5Controller 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(CommonH5Controller.Instance);
 		if (!ActivityCollectionController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityCollectionController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1948,24 +1979,30 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(AdvanceNoticeController.Instance);
-		if (!DropCatchGameplayController.CreateInstance())
+		if (!ActivityPoiController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.DropCatchGameplayController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI.ActivityPoiController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(DropCatchGameplayController.Instance);
+		ControllerRegister.Controllers.Add(ActivityPoiController.Instance);
+		if (!CommonH5Controller.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.CommonH5.CommonH5Controller 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(CommonH5Controller.Instance);
+		if (!ActivityLinkageController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityLinkageController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(ActivityLinkageController.Instance);
 		if (!ActivityEncircleController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Encircle.ActivityEncircleController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::Aki.Game.Module.Activity.ActivityContent.Encircle.ActivityEncircleController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ActivityEncircleController.Instance);
-		if (!FarmGoldController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.FarmGold.FarmGoldController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(FarmGoldController.Instance);
 		if (!ActivityFeiXuePreheatController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.FeiXue.ActivityFeiXuePreheatController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2050,12 +2087,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ActivityMatchThreeController.Instance);
-		if (!ActivityPoiController.CreateInstance())
+		if (!FarmGoldController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI.ActivityPoiController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.FarmGold.FarmGoldController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(ActivityPoiController.Instance);
+		ControllerRegister.Controllers.Add(FarmGoldController.Instance);
 		if (!ActivityMapTravelController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityMapTravelController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2146,12 +2183,6 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ActivityMapExploreController.Instance);
-		if (!ActivityLinkageController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityLinkageController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(ActivityLinkageController.Instance);
 		if (!ActivityRecommendController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityRecommendController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2164,6 +2195,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(RhythmGameShipController.Instance);
+		if (!RhythmGameController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RhythmGameController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(RhythmGameController.Instance);
 		if (!ElementalFieldVolumeController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField.ElementalFieldVolumeController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2185,7 +2222,7 @@ public class ControllerRegister
 		ControllerRegister.TickControllers.Add(ElementalFieldDebugDrawController.Instance);
 		if (!ElementalFieldCameraBlockController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField.ElementalFieldCameraBlockController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::Aki.Game.LevelGamePlay.ElementalCasket.ElementalField.ElementalFieldCameraBlockController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ElementalFieldCameraBlockController.Instance);
@@ -2347,30 +2384,24 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(OpenHarmonySdkController.Instance);
-		if (!MowingTowerController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MowingTowerController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(MowingTowerController.Instance);
 		if (!FishingQteController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.FishingQte.FishingQteController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(FishingQteController.Instance);
+		if (!FollowShooterHackController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.FollowShooterHack.FollowShooterHackController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(FollowShooterHackController.Instance);
 		if (!GongduolaSummonController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.GongduolaSummon.GongduolaSummonController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(GongduolaSummonController.Instance);
-		if (!RhythmGameController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RhythmGameController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(RhythmGameController.Instance);
 		if (!GuessJokerController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GuessJokerController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2434,6 +2465,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(TimeTrackController.Instance);
+		if (!TempActorController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.TempActorManager.TempActorController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(TempActorController.Instance);
 		if (!SunSpiritController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2447,12 +2484,6 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(SundialControlController.Instance);
-		if (!FollowShooterHackController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.FollowShooterHack.FollowShooterHackController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(FollowShooterHackController.Instance);
 		if (!SplineMoveTaskController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.SplineMoveTask.SplineMoveTaskController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2460,6 +2491,13 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(SplineMoveTaskController.Instance);
 		ControllerRegister.TickControllers.Add(SplineMoveTaskController.Instance);
+		if (!SplineConstrainedDragController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.SplineConstrainedDragController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(SplineConstrainedDragController.Instance);
+		ControllerRegister.TickControllers.Add(SplineConstrainedDragController.Instance);
 		if (!SignalDeviceController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SignalDeviceController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2490,6 +2528,13 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ProjectionPhotoController.Instance);
+		if (!PianoGameplayController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.PianoGameplay.PianoGameplayController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(PianoGameplayController.Instance);
+		ControllerRegister.TickControllers.Add(PianoGameplayController.Instance);
 		if (!ParkourController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.Parkour.ParkourController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2541,19 +2586,18 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(GravityFlipController.Instance);
-		if (!SplineConstrainedDragController.CreateInstance())
+		if (!MowingTowerController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.SplineConstrainedDragController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MowingTowerController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(SplineConstrainedDragController.Instance);
-		ControllerRegister.TickControllers.Add(SplineConstrainedDragController.Instance);
-		if (!GiantController.CreateInstance())
+		ControllerRegister.Controllers.Add(MowingTowerController.Instance);
+		if (!GreatSwordController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Giant.GiantController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GreatSwordController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(GiantController.Instance);
+		ControllerRegister.Controllers.Add(GreatSwordController.Instance);
 		if (!ActivityMowingController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Mowing.ActivityMowingController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2566,6 +2610,13 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ActivityNewbieCourseV2Controller.Instance);
+		if (!DamageUiController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DamageUiController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(DamageUiController.Instance);
+		ControllerRegister.TickControllers.Add(DamageUiController.Instance);
 		if (!DailyActivityController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DailyActivityController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2639,18 +2690,18 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(ComboTimelineReplayController.Instance);
 		ControllerRegister.TickControllers.Add(ComboTimelineReplayController.Instance);
+		if (!DangoAbyssController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DangoAbyssController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(DangoAbyssController.Instance);
 		if (!ComboTeachingController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ComboTeachingController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ComboTeachingController.Instance);
-		if (!SkillMessageController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.CombatMessage.SkillMessageController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(SkillMessageController.Instance);
 		if (!RoleSceneInteractController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleSceneInteractController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2731,31 +2782,37 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(BirthdayController.Instance);
-		if (!DamageUiController.CreateInstance())
+		if (!SkillMessageController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DamageUiController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.CombatMessage.SkillMessageController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(DamageUiController.Instance);
-		ControllerRegister.TickControllers.Add(DamageUiController.Instance);
-		if (!DangoAbyssController.CreateInstance())
+		ControllerRegister.Controllers.Add(SkillMessageController.Instance);
+		if (!SkillCdController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DangoAbyssController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Battle.SkillCdController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(DangoAbyssController.Instance);
+		ControllerRegister.Controllers.Add(SkillCdController.Instance);
+		ControllerRegister.TickControllers.Add(SkillCdController.Instance);
 		if (!DangoGlobalController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DangoGlobalController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(DangoGlobalController.Instance);
-		if (!DeadEyeModeController.CreateInstance())
+		if (!DeadReviveController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DeadEyeModeController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.DeadRevive.DeadReviveController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(DeadEyeModeController.Instance);
+		ControllerRegister.Controllers.Add(DeadReviveController.Instance);
+		if (!GiantActivityController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Giant.Activity.GiantActivityController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(GiantActivityController.Instance);
 		if (!GenericPromptController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.GenericPrompt.GenericPromptController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2829,25 +2886,24 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(FragmentMemoryController.Instance);
+		if (!DeadEyeModeController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DeadEyeModeController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(DeadEyeModeController.Instance);
 		if (!FragmentMemoryActivityController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FragmentMemoryActivityController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(FragmentMemoryActivityController.Instance);
-		if (!SkillCdController.CreateInstance())
+		if (!FormationEditSortController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Battle.SkillCdController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FormationEditSortController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(SkillCdController.Instance);
-		ControllerRegister.TickControllers.Add(SkillCdController.Instance);
-		if (!FormationViewDragController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FormationViewDragController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(FormationViewDragController.Instance);
+		ControllerRegister.Controllers.Add(FormationEditSortController.Instance);
 		if (!FormationController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FormationController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2920,18 +2976,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(DreamLinkController.Instance);
-		if (!DeadReviveController.CreateInstance())
+		if (!FormationViewDragController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.DeadRevive.DeadReviveController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FormationViewDragController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(DeadReviveController.Instance);
-		if (!FormationEditSortController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FormationEditSortController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(FormationEditSortController.Instance);
+		ControllerRegister.Controllers.Add(FormationViewDragController.Instance);
 		if (!BattleScoreController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Battle.BattleScoreController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2950,12 +3000,6 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(BattleLinkController.Instance);
-		if (!ActivitySolarSpeedController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed.ActivitySolarSpeedController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(ActivitySolarSpeedController.Instance);
 		if (!ActivitySoarController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivitySoarController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -3010,6 +3054,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ActivityRoleTrialController.Instance);
+		if (!ActivityRoleTowerController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityRoleTowerController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(ActivityRoleTowerController.Instance);
 		if (!RoleSkinTrialController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleSkinTrialController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -3028,12 +3078,12 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ActivityRoleGuideController.Instance);
-		if (!ActivitySpring25Controller.CreateInstance())
+		if (!ActivitySolarSpeedController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivitySpring25Controller 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed.ActivitySolarSpeedController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(ActivitySpring25Controller.Instance);
+		ControllerRegister.Controllers.Add(ActivitySolarSpeedController.Instance);
 		if (!ActivityRoleGiveController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityRoleGiveController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -3124,24 +3174,24 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(RoleGiftController.Instance);
-		if (!MultiMotorController.CreateInstance())
+		if (!ActivitySpring25Controller.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor.MultiMotorController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivitySpring25Controller 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(MultiMotorController.Instance);
+		ControllerRegister.Controllers.Add(ActivitySpring25Controller.Instance);
 		if (!SpringManorController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.SpringManor.SpringManorController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ControllerRegister.Controllers.Add(SpringManorController.Instance);
-		if (!TetrisController.CreateInstance())
+		if (!ActivityTetrisController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Tetris.TetrisController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::Aki.Game.Module.Activity.ActivityContent.Tetris.Activity.ActivityTetrisController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(TetrisController.Instance);
+		ControllerRegister.Controllers.Add(ActivityTetrisController.Instance);
 		if (!FlagChallengeBattleController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Battle.FlagChallengeBattleController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -3223,12 +3273,6 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(AntiCheatController.Instance);
-		if (!ActivityTetrisController.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.Tetris.ActivityTetrisController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ControllerRegister.Controllers.Add(ActivityTetrisController.Instance);
 		if (!AnimController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AnimController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -3236,6 +3280,12 @@ public class ControllerRegister
 		}
 		ControllerRegister.Controllers.Add(AnimController.Instance);
 		ControllerRegister.TickControllers.Add(AnimController.Instance);
+		if (!AndroidBackController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AndroidBackController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(AndroidBackController.Instance);
 		if (!AdviceController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AdviceController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -3314,12 +3364,18 @@ public class ControllerRegister
 			return false;
 		}
 		ControllerRegister.Controllers.Add(ActivityTimePointRewardController.Instance);
-		if (!AndroidBackController.CreateInstance())
+		if (!TetrisController.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AndroidBackController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::Aki.Game.Module.Activity.ActivityContent.Tetris.TetrisController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ControllerRegister.Controllers.Add(AndroidBackController.Instance);
+		ControllerRegister.Controllers.Add(TetrisController.Instance);
+		if (!MultiMotorController.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor.MultiMotorController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ControllerRegister.Controllers.Add(MultiMotorController.Instance);
 		if (!EnvironmentalPerceptionController.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::EnvironmentalPerceptionController 创建控制器单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -3330,7 +3386,7 @@ public class ControllerRegister
 		return true;
 	}
 
-	// Token: 0x0601DFD8 RID: 122840 RVA: 0x0087C280 File Offset: 0x0087A480
+	// Token: 0x0601BD00 RID: 113920 RVA: 0x008A4330 File Offset: 0x008A2530
 	public static bool RegisterTick()
 	{
 		for (int i = 0; i < ControllerRegister.TickControllers.Count; i++)
@@ -3341,19 +3397,10 @@ public class ControllerRegister
 				return false;
 			}
 		}
-		if (!Stat.Enable)
-		{
-			return true;
-		}
-		for (int j = 0; j < ControllerRegister.TickControllers.Count; j++)
-		{
-			ControllerBase controllerBase = ControllerRegister.TickControllers[j];
-			controllerBase.SetPerformanceStateObject(controllerBase.GetType().Name, "", "");
-		}
 		return true;
 	}
 
-	// Token: 0x0601DFD9 RID: 122841 RVA: 0x0087C314 File Offset: 0x0087A514
+	// Token: 0x0601BD01 RID: 113921 RVA: 0x008A4380 File Offset: 0x008A2580
 	public static bool Init()
 	{
 		for (int i = 0; i < ControllerRegister.Controllers.Count; i++)
@@ -3368,7 +3415,7 @@ public class ControllerRegister
 		return true;
 	}
 
-	// Token: 0x0601DFDA RID: 122842 RVA: 0x0087C37C File Offset: 0x0087A57C
+	// Token: 0x0601BD02 RID: 113922 RVA: 0x008A43E8 File Offset: 0x008A25E8
 	public static bool Clear()
 	{
 		bool result = true;
@@ -3397,7 +3444,7 @@ public class ControllerRegister
 		return result;
 	}
 
-	// Token: 0x0601DFDB RID: 122843 RVA: 0x0087C440 File Offset: 0x0087A640
+	// Token: 0x0601BD03 RID: 113923 RVA: 0x008A44AC File Offset: 0x008A26AC
 	public static bool LeaveLevel()
 	{
 		bool result = true;
@@ -3426,7 +3473,7 @@ public class ControllerRegister
 		return result;
 	}
 
-	// Token: 0x0601DFDC RID: 122844 RVA: 0x0087C504 File Offset: 0x0087A704
+	// Token: 0x0601BD04 RID: 113924 RVA: 0x008A4570 File Offset: 0x008A2770
 	public static bool ChangeMode()
 	{
 		bool result = true;
@@ -3455,7 +3502,7 @@ public class ControllerRegister
 		return result;
 	}
 
-	// Token: 0x0601DFDD RID: 122845 RVA: 0x0087C5C8 File Offset: 0x0087A7C8
+	// Token: 0x0601BD05 RID: 113925 RVA: 0x008A4634 File Offset: 0x008A2834
 	public static List<ValueTuple<string, CustomPromise<bool>>> Preload()
 	{
 		List<ValueTuple<string, CustomPromise<bool>>> list = new List<ValueTuple<string, CustomPromise<bool>>>();
@@ -3471,7 +3518,7 @@ public class ControllerRegister
 		return list;
 	}
 
-	// Token: 0x0601DFDE RID: 122846 RVA: 0x0087C620 File Offset: 0x0087A820
+	// Token: 0x0601BD06 RID: 113926 RVA: 0x008A468C File Offset: 0x008A288C
 	public static void Tick(float delta, bool isInFight)
 	{
 		foreach (ControllerBase controllerBase in ControllerRegister.TickControllers)
@@ -3484,15 +3531,15 @@ public class ControllerRegister
 		}
 	}
 
-	// Token: 0x0601DFDF RID: 122847 RVA: 0x0087C698 File Offset: 0x0087A898
+	// Token: 0x0601BD07 RID: 113927 RVA: 0x008A4704 File Offset: 0x008A2904
 	public static void ClearTick()
 	{
 		ControllerRegister.TickControllers.Clear();
 	}
 
-	// Token: 0x0400ECF2 RID: 60658
-	private static List<ControllerBase> Controllers = new List<ControllerBase>(507);
+	// Token: 0x0400F1B2 RID: 61874
+	private static List<ControllerBase> Controllers = new List<ControllerBase>(515);
 
-	// Token: 0x0400ECF3 RID: 60659
-	private static List<ControllerBase> TickControllers = new List<ControllerBase>(88);
+	// Token: 0x0400F1B3 RID: 61875
+	private static List<ControllerBase> TickControllers = new List<ControllerBase>(89);
 }

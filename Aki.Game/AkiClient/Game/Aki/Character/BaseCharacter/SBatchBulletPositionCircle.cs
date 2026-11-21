@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042EF RID: 17135
+	// Token: 0x02003337 RID: 13111
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,229 +14,215 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 	[UnrealStructLayout(112, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 112)]
 	public class SBatchBulletPositionCircle : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C3DC RID: 181212 RVA: 0x00A1B30A File Offset: 0x00A1950A
+		// Token: 0x060211F3 RID: 135667 RVA: 0x00959C49 File Offset: 0x00957E49
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SBatchBulletPositionCircle._ScriptStructPtr != 0) ? SBatchBulletPositionCircle._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SBatchBulletPositionCircle.SBatchBulletPositionCircle", ref SBatchBulletPositionCircle._ScriptStructPtr);
 		}
 
-		// Token: 0x17006E4A RID: 28234
-		// (get) Token: 0x0602C3DD RID: 181213 RVA: 0x00A1B32E File Offset: 0x00A1952E
-		// (set) Token: 0x0602C3DE RID: 181214 RVA: 0x00A1B342 File Offset: 0x00A19542
+		// Token: 0x170042B1 RID: 17073
+		// (get) Token: 0x060211F4 RID: 135668 RVA: 0x00959C6D File Offset: 0x00957E6D
+		// (set) Token: 0x060211F5 RID: 135669 RVA: 0x00959C81 File Offset: 0x00957E81
 		public unsafe string CenterKey
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_CenterKey)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_CenterKey)), value);
 			}
 		}
 
-		// Token: 0x17006E4B RID: 28235
-		// (get) Token: 0x0602C3DF RID: 181215 RVA: 0x00A1B357 File Offset: 0x00A19557
-		// (set) Token: 0x0602C3E0 RID: 181216 RVA: 0x00A1B36B File Offset: 0x00A1956B
+		// Token: 0x170042B2 RID: 17074
+		// (get) Token: 0x060211F6 RID: 135670 RVA: 0x00959C96 File Offset: 0x00957E96
+		// (set) Token: 0x060211F7 RID: 135671 RVA: 0x00959CAA File Offset: 0x00957EAA
 		public unsafe string RadiusKey
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_RadiusKey)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_RadiusKey)), value);
 			}
 		}
 
-		// Token: 0x17006E4C RID: 28236
-		// (get) Token: 0x0602C3E1 RID: 181217 RVA: 0x00A1B380 File Offset: 0x00A19580
-		// (set) Token: 0x0602C3E2 RID: 181218 RVA: 0x00A1B394 File Offset: 0x00A19594
+		// Token: 0x170042B3 RID: 17075
+		// (get) Token: 0x060211F8 RID: 135672 RVA: 0x00959CBF File Offset: 0x00957EBF
+		// (set) Token: 0x060211F9 RID: 135673 RVA: 0x00959CD3 File Offset: 0x00957ED3
 		public unsafe string ForwardKey
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_2)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_ForwardKey)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_2)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_ForwardKey)), value);
 			}
 		}
 
-		// Token: 0x17006E4D RID: 28237
-		// (get) Token: 0x0602C3E3 RID: 181219 RVA: 0x00A1B3A9 File Offset: 0x00A195A9
-		// (set) Token: 0x0602C3E4 RID: 181220 RVA: 0x00A1B3B9 File Offset: 0x00A195B9
+		// Token: 0x170042B4 RID: 17076
+		// (get) Token: 0x060211FA RID: 135674 RVA: 0x00959CE8 File Offset: 0x00957EE8
+		// (set) Token: 0x060211FB RID: 135675 RVA: 0x00959CF8 File Offset: 0x00957EF8
 		public unsafe bool Clockwise
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_Clockwise) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_Clockwise) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006E4E RID: 28238
-		// (get) Token: 0x0602C3E5 RID: 181221 RVA: 0x00A1B3CA File Offset: 0x00A195CA
-		// (set) Token: 0x0602C3E6 RID: 181222 RVA: 0x00A1B3DA File Offset: 0x00A195DA
+		// Token: 0x170042B5 RID: 17077
+		// (get) Token: 0x060211FC RID: 135676 RVA: 0x00959D09 File Offset: 0x00957F09
+		// (set) Token: 0x060211FD RID: 135677 RVA: 0x00959D19 File Offset: 0x00957F19
 		public unsafe float BeginAngle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_BeginAngle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_BeginAngle) = value;
 			}
 		}
 
-		// Token: 0x17006E4F RID: 28239
-		// (get) Token: 0x0602C3E7 RID: 181223 RVA: 0x00A1B3EB File Offset: 0x00A195EB
-		// (set) Token: 0x0602C3E8 RID: 181224 RVA: 0x00A1B3FF File Offset: 0x00A195FF
+		// Token: 0x170042B6 RID: 17078
+		// (get) Token: 0x060211FE RID: 135678 RVA: 0x00959D2A File Offset: 0x00957F2A
+		// (set) Token: 0x060211FF RID: 135679 RVA: 0x00959D3E File Offset: 0x00957F3E
 		public unsafe string AngleIntervalKey
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_5)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_AngleIntervalKey)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_5)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_AngleIntervalKey)), value);
 			}
 		}
 
-		// Token: 0x17006E50 RID: 28240
-		// (get) Token: 0x0602C3E9 RID: 181225 RVA: 0x00A1B414 File Offset: 0x00A19614
-		// (set) Token: 0x0602C3EA RID: 181226 RVA: 0x00A1B428 File Offset: 0x00A19628
+		// Token: 0x170042B7 RID: 17079
+		// (get) Token: 0x06021200 RID: 135680 RVA: 0x00959D53 File Offset: 0x00957F53
+		// (set) Token: 0x06021201 RID: 135681 RVA: 0x00959D67 File Offset: 0x00957F67
 		[Nullable(0)]
 		public unsafe TEnumAsByte<EBatchBulletBeginRotator> BeginRotator
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_BeginRotator);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SBatchBulletPositionCircle.__PropertyOffset_BeginRotator) = value;
 			}
 		}
 
-		// Token: 0x17006E51 RID: 28241
-		// (get) Token: 0x0602C3EB RID: 181227 RVA: 0x00A1B43D File Offset: 0x00A1963D
-		// (set) Token: 0x0602C3EC RID: 181228 RVA: 0x00A1B451 File Offset: 0x00A19651
+		// Token: 0x170042B8 RID: 17080
+		// (get) Token: 0x06021202 RID: 135682 RVA: 0x00959D7C File Offset: 0x00957F7C
+		// (set) Token: 0x06021203 RID: 135683 RVA: 0x00959D90 File Offset: 0x00957F90
 		public unsafe string StartPosKey
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_7)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_StartPosKey)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_7)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_StartPosKey)), value);
 			}
 		}
 
-		// Token: 0x17006E52 RID: 28242
-		// (get) Token: 0x0602C3ED RID: 181229 RVA: 0x00A1B466 File Offset: 0x00A19666
-		// (set) Token: 0x0602C3EE RID: 181230 RVA: 0x00A1B47A File Offset: 0x00A1967A
+		// Token: 0x170042B9 RID: 17081
+		// (get) Token: 0x06021204 RID: 135684 RVA: 0x00959DA5 File Offset: 0x00957FA5
+		// (set) Token: 0x06021205 RID: 135685 RVA: 0x00959DB9 File Offset: 0x00957FB9
 		public unsafe string DistToTarget
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_8)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_DistToTarget)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_8)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionCircle.__PropertyOffset_DistToTarget)), value);
 			}
 		}
 
-		// Token: 0x0602C3EF RID: 181231 RVA: 0x00A1B48F File Offset: 0x00A1968F
+		// Token: 0x06021206 RID: 135686 RVA: 0x00959DCE File Offset: 0x00957FCE
 		public SBatchBulletPositionCircle()
 		{
 		}
 
-		// Token: 0x0602C3F0 RID: 181232 RVA: 0x00A1B498 File Offset: 0x00A19698
-		public SBatchBulletPositionCircle(string CenterKey, string RadiusKey, string ForwardKey, bool Clockwise, float BeginAngle, string AngleIntervalKey, [Nullable(0)] TEnumAsByte<EBatchBulletBeginRotator> BeginRotator, string StartPosKey, string DistToTarget)
-		{
-			this.CenterKey = CenterKey;
-			this.RadiusKey = RadiusKey;
-			this.ForwardKey = ForwardKey;
-			this.Clockwise = Clockwise;
-			this.BeginAngle = BeginAngle;
-			this.AngleIntervalKey = AngleIntervalKey;
-			this.BeginRotator = BeginRotator;
-			this.StartPosKey = StartPosKey;
-			this.DistToTarget = DistToTarget;
-		}
-
-		// Token: 0x0602C3F1 RID: 181233 RVA: 0x00A1B4F0 File Offset: 0x00A196F0
+		// Token: 0x06021207 RID: 135687 RVA: 0x00959DD6 File Offset: 0x00957FD6
 		protected override IntPtr GetUStructPtr()
 		{
 			return SBatchBulletPositionCircle.StaticStruct();
 		}
 
-		// Token: 0x0602C3F2 RID: 181234 RVA: 0x00A1B4FC File Offset: 0x00A196FC
+		// Token: 0x06021208 RID: 135688 RVA: 0x00959DE2 File Offset: 0x00957FE2
 		[NullableContext(2)]
 		public SBatchBulletPositionCircle(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C3F3 RID: 181235 RVA: 0x00A1B506 File Offset: 0x00A19706
+		// Token: 0x06021209 RID: 135689 RVA: 0x00959DEC File Offset: 0x00957FEC
 		public SBatchBulletPositionCircle(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C3F4 RID: 181236 RVA: 0x00A1B511 File Offset: 0x00A19711
+		// Token: 0x0602120A RID: 135690 RVA: 0x00959DF7 File Offset: 0x00957FF7
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SBatchBulletPositionCircle(Pointer, false, true);
 		}
 
-		// Token: 0x0602C3F5 RID: 181237 RVA: 0x00A1B51B File Offset: 0x00A1971B
+		// Token: 0x0602120B RID: 135691 RVA: 0x00959E01 File Offset: 0x00958001
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SBatchBulletPositionCircle(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017553 RID: 95571
+		// Token: 0x040121C7 RID: 74183
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SBatchBulletPositionCircle.SBatchBulletPositionCircle";
 
-		// Token: 0x04017554 RID: 95572
+		// Token: 0x040121C8 RID: 74184
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017555 RID: 95573
-		internal static int __PropertyOffset_0;
+		// Token: 0x040121C9 RID: 74185
+		internal static int __PropertyOffset_CenterKey;
 
-		// Token: 0x04017556 RID: 95574
-		internal static int __PropertyOffset_1;
+		// Token: 0x040121CA RID: 74186
+		internal static int __PropertyOffset_RadiusKey;
 
-		// Token: 0x04017557 RID: 95575
-		internal static int __PropertyOffset_2;
+		// Token: 0x040121CB RID: 74187
+		internal static int __PropertyOffset_ForwardKey;
 
-		// Token: 0x04017558 RID: 95576
-		internal static int __PropertyOffset_3;
+		// Token: 0x040121CC RID: 74188
+		internal static int __PropertyOffset_Clockwise;
 
-		// Token: 0x04017559 RID: 95577
-		internal static int __PropertyOffset_4;
+		// Token: 0x040121CD RID: 74189
+		internal static int __PropertyOffset_BeginAngle;
 
-		// Token: 0x0401755A RID: 95578
-		internal static int __PropertyOffset_5;
+		// Token: 0x040121CE RID: 74190
+		internal static int __PropertyOffset_AngleIntervalKey;
 
-		// Token: 0x0401755B RID: 95579
-		internal static int __PropertyOffset_6;
+		// Token: 0x040121CF RID: 74191
+		internal static int __PropertyOffset_BeginRotator;
 
-		// Token: 0x0401755C RID: 95580
-		internal static int __PropertyOffset_7;
+		// Token: 0x040121D0 RID: 74192
+		internal static int __PropertyOffset_StartPosKey;
 
-		// Token: 0x0401755D RID: 95581
-		internal static int __PropertyOffset_8;
+		// Token: 0x040121D1 RID: 74193
+		internal static int __PropertyOffset_DistToTarget;
 	}
 }

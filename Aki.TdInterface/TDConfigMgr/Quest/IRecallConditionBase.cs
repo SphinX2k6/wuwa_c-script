@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010D6 RID: 4310
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001204 RID: 4612
 	public class IRecallConditionBase
 	{
-		// Token: 0x0600617A RID: 24954 RVA: 0x000EB5E4 File Offset: 0x000E97E4
+		// Token: 0x06006773 RID: 26483 RVA: 0x000F8704 File Offset: 0x000F6904
 		private IRecallConditionBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600617B RID: 24955 RVA: 0x000EB61C File Offset: 0x000E981C
+		// Token: 0x06006774 RID: 26484 RVA: 0x000F873C File Offset: 0x000F693C
 		public static IRecallConditionBase Create([Nullable(2)] IRecallConditionBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600617C RID: 24956 RVA: 0x000EB62F File Offset: 0x000E982F
+		// Token: 0x06006775 RID: 26485 RVA: 0x000F874F File Offset: 0x000F694F
 		public static IRecallConditionBase CreateFromSetValue([Nullable(2)] IRecallConditionBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600617D RID: 24957 RVA: 0x000EB642 File Offset: 0x000E9842
+		// Token: 0x06006776 RID: 26486 RVA: 0x000F8762 File Offset: 0x000F6962
 		public IRecallConditionBase_SetValue ToSetValue()
 		{
 			return new IRecallConditionBase_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002000 RID: 8192
-		// (get) Token: 0x0600617E RID: 24958 RVA: 0x000EB661 File Offset: 0x000E9861
-		// (set) Token: 0x0600617F RID: 24959 RVA: 0x000EB68C File Offset: 0x000E988C
+		// Token: 0x170021B2 RID: 8626
+		// (get) Token: 0x06006777 RID: 26487 RVA: 0x000F8781 File Offset: 0x000F6981
+		// (set) Token: 0x06006778 RID: 26488 RVA: 0x000F87AC File Offset: 0x000F69AC
 		public virtual ERecallConditionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002001 RID: 8193
-		// (get) Token: 0x06006180 RID: 24960 RVA: 0x000EB69A File Offset: 0x000E989A
-		// (set) Token: 0x06006181 RID: 24961 RVA: 0x000EB6C5 File Offset: 0x000E98C5
+		// Token: 0x170021B3 RID: 8627
+		// (get) Token: 0x06006779 RID: 26489 RVA: 0x000F87BA File Offset: 0x000F69BA
+		// (set) Token: 0x0600677A RID: 26490 RVA: 0x000F87E5 File Offset: 0x000F69E5
 		public virtual ERecallOperation Operation
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003AAD RID: 15021
+		// Token: 0x04003DFA RID: 15866
 		[Nullable(2)]
 		protected IRecallConditionBase FbInstance;
 
-		// Token: 0x04003AAE RID: 15022
+		// Token: 0x04003DFB RID: 15867
 		[Nullable(2)]
 		protected IRecallConditionBase_SetValue PocoInterface;
 	}

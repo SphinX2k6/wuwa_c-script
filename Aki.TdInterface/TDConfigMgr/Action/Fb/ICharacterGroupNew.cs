@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027B0 RID: 10160
+	// Token: 0x02002A83 RID: 10883
 	public class ICharacterGroupNew
 	{
-		// Token: 0x0600E206 RID: 57862 RVA: 0x00216252 File Offset: 0x00214452
-		[NullableContext(1)]
+		// Token: 0x0600F028 RID: 61480 RVA: 0x00233026 File Offset: 0x00231226
 		public static ICharacterGroupNew Create(ICharacterGroupNew? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004468 RID: 17512
-		// (get) Token: 0x0600E207 RID: 57863 RVA: 0x00216271 File Offset: 0x00214471
+		// Token: 0x170047D0 RID: 18384
+		// (get) Token: 0x0600F029 RID: 61481 RVA: 0x00233045 File Offset: 0x00231245
 		public virtual int CharacterId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004469 RID: 17513
-		// (get) Token: 0x0600E208 RID: 57864 RVA: 0x0021627E File Offset: 0x0021447E
+		// Token: 0x170047D1 RID: 18385
+		// (get) Token: 0x0600F02A RID: 61482 RVA: 0x00233052 File Offset: 0x00231252
 		public virtual bool IsAiCharacter
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D56 RID: 32086
+		// Token: 0x0400840D RID: 33805
 		private ICharacterGroupNew Instance;
 	}
 }

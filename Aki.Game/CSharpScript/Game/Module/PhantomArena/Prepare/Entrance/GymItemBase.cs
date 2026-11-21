@@ -4,12 +4,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200515B RID: 20827
+	// Token: 0x0200412B RID: 16683
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GymItemBase : UiPanelBase
 	{
-		// Token: 0x060353EA RID: 218090 RVA: 0x00C9B864 File Offset: 0x00C99A64
+		// Token: 0x0602A2E6 RID: 172774 RVA: 0x00BE8D64 File Offset: 0x00BE6F64
 		protected void OnClickLevel()
 		{
 			if (this.Level > 0 && this.CallbackOnClick != null)
@@ -23,18 +23,18 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353EB RID: 218091 RVA: 0x00C9B8C0 File Offset: 0x00C99AC0
+		// Token: 0x0602A2E7 RID: 172775 RVA: 0x00BE8DC0 File Offset: 0x00BE6FC0
 		public double GetAnchorOffsetX()
 		{
 			return (double)this.RootItem.GetAnchorOffsetX();
 		}
 
-		// Token: 0x060353EC RID: 218092 RVA: 0x00C9B8CE File Offset: 0x00C99ACE
+		// Token: 0x0602A2E8 RID: 172776 RVA: 0x00BE8DCE File Offset: 0x00BE6FCE
 		public virtual void Refresh()
 		{
 		}
 
-		// Token: 0x060353ED RID: 218093 RVA: 0x00C9B8D0 File Offset: 0x00C99AD0
+		// Token: 0x0602A2E9 RID: 172777 RVA: 0x00BE8DD0 File Offset: 0x00BE6FD0
 		protected void OnFocus()
 		{
 			if (this.Level > 0 && this.CallbackOnFocus != null)
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353EE RID: 218094 RVA: 0x00C9B8F4 File Offset: 0x00C99AF4
+		// Token: 0x0602A2EA RID: 172778 RVA: 0x00BE8DF4 File Offset: 0x00BE6FF4
 		protected void OnHover()
 		{
 			if (this.Level > 0 && this.CallbackOnHover != null)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353EF RID: 218095 RVA: 0x00C9B918 File Offset: 0x00C99B18
+		// Token: 0x0602A2EB RID: 172779 RVA: 0x00BE8E18 File Offset: 0x00BE7018
 		protected void OnUnHover()
 		{
 			if (this.Level > 0 && this.CallbackOnUnHover != null)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353F0 RID: 218096 RVA: 0x00C9B93C File Offset: 0x00C99B3C
+		// Token: 0x0602A2EC RID: 172780 RVA: 0x00BE8E3C File Offset: 0x00BE703C
 		public void PlayUnlock()
 		{
 			if (this.Level <= 0)
@@ -82,36 +82,36 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353F1 RID: 218097 RVA: 0x00C9B9BC File Offset: 0x00C99BBC
+		// Token: 0x0602A2ED RID: 172781 RVA: 0x00BE8EBC File Offset: 0x00BE70BC
 		protected bool GetRedDotState()
 		{
 			return this.Level > 0 && PhantomArenaModel.Instance.GetGymRedDotById(this.Level, this.ActivityId);
 		}
 
-		// Token: 0x060353F2 RID: 218098 RVA: 0x00C9B9DF File Offset: 0x00C99BDF
+		// Token: 0x0602A2EE RID: 172782 RVA: 0x00BE8EDF File Offset: 0x00BE70DF
 		public virtual void RefreshRedDot()
 		{
 		}
 
-		// Token: 0x0401C54E RID: 116046
+		// Token: 0x04016F83 RID: 94083
 		public int Level = -1;
 
-		// Token: 0x0401C54F RID: 116047
+		// Token: 0x04016F84 RID: 94084
 		public int ActivityId;
 
-		// Token: 0x0401C550 RID: 116048
+		// Token: 0x04016F85 RID: 94085
 		public Action<int> CallbackOnClick;
 
-		// Token: 0x0401C551 RID: 116049
+		// Token: 0x04016F86 RID: 94086
 		public Action<int> CallbackOnHover;
 
-		// Token: 0x0401C552 RID: 116050
+		// Token: 0x04016F87 RID: 94087
 		public Action<int> CallbackOnFocus;
 
-		// Token: 0x0401C553 RID: 116051
+		// Token: 0x04016F88 RID: 94088
 		public Action<int> CallbackOnUnHover;
 
-		// Token: 0x0401C554 RID: 116052
+		// Token: 0x04016F89 RID: 94089
 		protected UiSequencePlayer SequencePlayer;
 	}
 }

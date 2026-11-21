@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006080 RID: 24704
+	// Token: 0x02004FFE RID: 20478
 	public class GetWayItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603E776 RID: 255862 RVA: 0x00F187FC File Offset: 0x00F169FC
+		// Token: 0x0603343A RID: 209978 RVA: 0x00E5F5C0 File Offset: 0x00E5D7C0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E777 RID: 255863 RVA: 0x00F188BB File Offset: 0x00F16ABB
+		// Token: 0x0603343B RID: 209979 RVA: 0x00E5F67F File Offset: 0x00E5D87F
 		private void OnButtonClick()
 		{
 			if (this.State != EGetWayState.Normal || this.SkipEntryId <= 0)
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			instance.ExecuteSkipEntry(this.SkipEntryId, this.OnTrackPositionCallback);
 		}
 
-		// Token: 0x0603E778 RID: 255864 RVA: 0x00F188EC File Offset: 0x00F16AEC
+		// Token: 0x0603343C RID: 209980 RVA: 0x00E5F6B0 File Offset: 0x00E5D8B0
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.SkipEntryId = data;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshState((flag || flag2) ? EGetWayState.Normal : EGetWayState.CantJump);
 		}
 
-		// Token: 0x0603E779 RID: 255865 RVA: 0x00F189A0 File Offset: 0x00F16BA0
+		// Token: 0x0603343D RID: 209981 RVA: 0x00E5F764 File Offset: 0x00E5D964
 		private void RefreshState(EGetWayState state)
 		{
 			this.State = state;
@@ -99,13 +99,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item3.SetUIActive(state == EGetWayState.Finish);
 		}
 
-		// Token: 0x04020AD2 RID: 133842
+		// Token: 0x0401B3FF RID: 111615
 		private int SkipEntryId;
 
-		// Token: 0x04020AD3 RID: 133843
+		// Token: 0x0401B400 RID: 111616
 		private EGetWayState State;
 
-		// Token: 0x04020AD4 RID: 133844
+		// Token: 0x0401B401 RID: 111617
 		[Nullable(2)]
 		public Action OnTrackPositionCallback;
 	}

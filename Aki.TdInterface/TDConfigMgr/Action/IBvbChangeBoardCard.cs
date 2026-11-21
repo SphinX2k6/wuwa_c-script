@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001824 RID: 6180
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020019AF RID: 6575
 	public class IBvbChangeBoardCard : IBvbPlayerOperationType
 	{
-		// Token: 0x0600849F RID: 33951 RVA: 0x0013BD88 File Offset: 0x00139F88
-		[NullableContext(1)]
+		// Token: 0x06008BC5 RID: 35781 RVA: 0x0014B57C File Offset: 0x0014977C
 		private IBvbChangeBoardCard_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060084A0 RID: 33952 RVA: 0x0013BDC0 File Offset: 0x00139FC0
-		[NullableContext(1)]
+		// Token: 0x06008BC6 RID: 35782 RVA: 0x0014B5B4 File Offset: 0x001497B4
 		public static IBvbChangeBoardCard Create([Nullable(2)] IBvbChangeBoardCard instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060084A1 RID: 33953 RVA: 0x0013BDD3 File Offset: 0x00139FD3
-		[NullableContext(1)]
+		// Token: 0x06008BC7 RID: 35783 RVA: 0x0014B5C7 File Offset: 0x001497C7
 		public static IBvbChangeBoardCard CreateFromSetValue([Nullable(2)] IBvbChangeBoardCard_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060084A2 RID: 33954 RVA: 0x0013BDE6 File Offset: 0x00139FE6
-		[NullableContext(1)]
+		// Token: 0x06008BC8 RID: 35784 RVA: 0x0014B5DA File Offset: 0x001497DA
 		public new IBvbChangeBoardCard_SetValue ToSetValue()
 		{
 			return new IBvbChangeBoardCard_SetValue
@@ -66,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B6E RID: 11118
-		// (get) Token: 0x060084A3 RID: 33955 RVA: 0x0013BE11 File Offset: 0x0013A011
-		// (set) Token: 0x060084A4 RID: 33956 RVA: 0x0013BE3C File Offset: 0x0013A03C
+		// Token: 0x17002D68 RID: 11624
+		// (get) Token: 0x06008BC9 RID: 35785 RVA: 0x0014B605 File Offset: 0x00149805
+		// (set) Token: 0x06008BCA RID: 35786 RVA: 0x0014B630 File Offset: 0x00149830
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -89,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B6F RID: 11119
-		// (get) Token: 0x060084A5 RID: 33957 RVA: 0x0013BE4C File Offset: 0x0013A04C
-		// (set) Token: 0x060084A6 RID: 33958 RVA: 0x0013BE86 File Offset: 0x0013A086
+		// Token: 0x17002D69 RID: 11625
+		// (get) Token: 0x06008BCB RID: 35787 RVA: 0x0014B640 File Offset: 0x00149840
+		// (set) Token: 0x06008BCC RID: 35788 RVA: 0x0014B67A File Offset: 0x0014987A
 		public virtual int? BoardPosIndex
 		{
 			get
@@ -113,11 +107,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B70 RID: 11120
-		// (get) Token: 0x060084A7 RID: 33959 RVA: 0x0013BE94 File Offset: 0x0013A094
-		// (set) Token: 0x060084A8 RID: 33960 RVA: 0x0013BEBB File Offset: 0x0013A0BB
+		// Token: 0x17002D6A RID: 11626
+		// (get) Token: 0x06008BCD RID: 35789 RVA: 0x0014B688 File Offset: 0x00149888
+		// (set) Token: 0x06008BCE RID: 35790 RVA: 0x0014B6AF File Offset: 0x001498AF
+		[Nullable(2)]
 		public virtual List<int> BoardPosIndexList
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -131,16 +127,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.BoardPosIndexList;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().BoardPosIndexList = value;
 			}
 		}
 
-		// Token: 0x040053E9 RID: 21481
+		// Token: 0x04005835 RID: 22581
+		[Nullable(2)]
 		protected new IBvbChangeBoardCard FbInstance;
 
-		// Token: 0x040053EA RID: 21482
+		// Token: 0x04005836 RID: 22582
+		[Nullable(2)]
 		protected new IBvbChangeBoardCard_SetValue PocoInterface;
 	}
 }

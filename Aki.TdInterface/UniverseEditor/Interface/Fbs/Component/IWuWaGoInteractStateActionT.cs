@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BBF RID: 23487
+	// Token: 0x020061D5 RID: 25045
 	public class IWuWaGoInteractStateActionT
 	{
-		// Token: 0x1700B173 RID: 45427
-		// (get) Token: 0x06028397 RID: 164759 RVA: 0x00586DC0 File Offset: 0x00584FC0
-		// (set) Token: 0x06028398 RID: 164760 RVA: 0x00586DC8 File Offset: 0x00584FC8
+		// Token: 0x1700BABB RID: 47803
+		// (get) Token: 0x0602A95B RID: 174427 RVA: 0x005CE850 File Offset: 0x005CCA50
+		// (set) Token: 0x0602A95C RID: 174428 RVA: 0x005CE858 File Offset: 0x005CCA58
 		public string EntityState { get; set; }
 
-		// Token: 0x1700B174 RID: 45428
-		// (get) Token: 0x06028399 RID: 164761 RVA: 0x00586DD1 File Offset: 0x00584FD1
-		// (set) Token: 0x0602839A RID: 164762 RVA: 0x00586DD9 File Offset: 0x00584FD9
+		// Token: 0x1700BABC RID: 47804
+		// (get) Token: 0x0602A95D RID: 174429 RVA: 0x005CE861 File Offset: 0x005CCA61
+		// (set) Token: 0x0602A95E RID: 174430 RVA: 0x005CE869 File Offset: 0x005CCA69
 		public List<IActionInfoT> ActionList { get; set; }
 
-		// Token: 0x0602839B RID: 164763 RVA: 0x00586DE2 File Offset: 0x00584FE2
+		// Token: 0x0602A95F RID: 174431 RVA: 0x005CE872 File Offset: 0x005CCA72
 		public IWuWaGoInteractStateActionT()
 		{
 			this.EntityState = null;

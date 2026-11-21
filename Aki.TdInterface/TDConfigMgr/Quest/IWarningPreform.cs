@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001208 RID: 4616
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001344 RID: 4932
 	public class IWarningPreform
 	{
-		// Token: 0x060068C8 RID: 26824 RVA: 0x000FA064 File Offset: 0x000F8264
+		// Token: 0x06006F09 RID: 28425 RVA: 0x00107970 File Offset: 0x00105B70
 		private IWarningPreform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060068C9 RID: 26825 RVA: 0x000FA09C File Offset: 0x000F829C
+		// Token: 0x06006F0A RID: 28426 RVA: 0x001079A8 File Offset: 0x00105BA8
 		public static IWarningPreform Create([Nullable(2)] IWarningPreform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068CA RID: 26826 RVA: 0x000FA0AF File Offset: 0x000F82AF
+		// Token: 0x06006F0B RID: 28427 RVA: 0x001079BB File Offset: 0x00105BBB
 		public static IWarningPreform CreateFromSetValue([Nullable(2)] IWarningPreform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068CB RID: 26827 RVA: 0x000FA0C2 File Offset: 0x000F82C2
+		// Token: 0x06006F0C RID: 28428 RVA: 0x001079CE File Offset: 0x00105BCE
 		public IWarningPreform_SetValue ToSetValue()
 		{
 			return new IWarningPreform_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021DD RID: 8669
-		// (get) Token: 0x060068CC RID: 26828 RVA: 0x000FA0D5 File Offset: 0x000F82D5
-		// (set) Token: 0x060068CD RID: 26829 RVA: 0x000FA0FC File Offset: 0x000F82FC
+		// Token: 0x1700239E RID: 9118
+		// (get) Token: 0x06006F0D RID: 28429 RVA: 0x001079E1 File Offset: 0x00105BE1
+		// (set) Token: 0x06006F0E RID: 28430 RVA: 0x00107A08 File Offset: 0x00105C08
 		public virtual IWarningPreformType Type
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003EB4 RID: 16052
+		// Token: 0x04004222 RID: 16930
 		[Nullable(2)]
 		protected IWarningPreform FbInstance;
 
-		// Token: 0x04003EB5 RID: 16053
+		// Token: 0x04004223 RID: 16931
 		[Nullable(2)]
 		protected IWarningPreform_SetValue PocoInterface;
 	}

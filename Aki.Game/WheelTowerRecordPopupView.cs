@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200162C RID: 5676
+// Token: 0x02000AE4 RID: 2788
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerRecordPopupView : UiViewBase
 {
-	// Token: 0x06009FB1 RID: 40881 RVA: 0x002313CF File Offset: 0x0022F5CF
+	// Token: 0x0600738F RID: 29583 RVA: 0x0023B21B File Offset: 0x0023941B
 	[NullableContext(1)]
 	public WheelTowerRecordPopupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009FB2 RID: 40882 RVA: 0x002313D8 File Offset: 0x0022F5D8
+	// Token: 0x06007390 RID: 29584 RVA: 0x0023B224 File Offset: 0x00239424
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -56,7 +56,7 @@ public class WheelTowerRecordPopupView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009FB3 RID: 40883 RVA: 0x00231568 File Offset: 0x0022F768
+	// Token: 0x06007391 RID: 29585 RVA: 0x0023B3B4 File Offset: 0x002395B4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerRecordPopupView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ public class WheelTowerRecordPopupView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009FB4 RID: 40884 RVA: 0x002315AC File Offset: 0x0022F7AC
+	// Token: 0x06007392 RID: 29586 RVA: 0x0023B3F8 File Offset: 0x002395F8
 	protected override void OnStart()
 	{
 		IWheelTowerRecordPopupViewData wheelTowerRecordPopupViewData = this.OpenParam as IWheelTowerRecordPopupViewData;
@@ -97,7 +97,7 @@ public class WheelTowerRecordPopupView : UiViewBase
 		WheelTowerModel.Instance.BlockEndlessUnlockTips = false;
 	}
 
-	// Token: 0x06009FB5 RID: 40885 RVA: 0x00231694 File Offset: 0x0022F894
+	// Token: 0x06007393 RID: 29587 RVA: 0x0023B4E0 File Offset: 0x002396E0
 	[NullableContext(1)]
 	private void RefreshScoreLayout(IWheelTowerRecordPopupViewData data)
 	{
@@ -133,7 +133,7 @@ public class WheelTowerRecordPopupView : UiViewBase
 		scoreLayout.RefreshByData(data2, null, false);
 	}
 
-	// Token: 0x06009FB6 RID: 40886 RVA: 0x00231777 File Offset: 0x0022F977
+	// Token: 0x06007394 RID: 29588 RVA: 0x0023B5C3 File Offset: 0x002397C3
 	private void OnClickCancel()
 	{
 		Action cancelCallback = this.CancelCallback;
@@ -144,7 +144,7 @@ public class WheelTowerRecordPopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009FB7 RID: 40887 RVA: 0x00231791 File Offset: 0x0022F991
+	// Token: 0x06007395 RID: 29589 RVA: 0x0023B5DD File Offset: 0x002397DD
 	private void OnClickConfirm()
 	{
 		Action confirmCallback = this.ConfirmCallback;
@@ -155,7 +155,7 @@ public class WheelTowerRecordPopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04004858 RID: 18520
+	// Token: 0x040048FE RID: 18686
 	[Nullable(new byte[]
 	{
 		2,
@@ -164,19 +164,19 @@ public class WheelTowerRecordPopupView : UiViewBase
 	})]
 	private GenericLayout<WheelTowerRecordPopupView.ScoreItem, WheelTowerRecordPopupScoreItemData> ScoreLayout;
 
-	// Token: 0x04004859 RID: 18521
+	// Token: 0x040048FF RID: 18687
 	private WheelTowerRecordPopupView.TeamItem OldTeamItem;
 
-	// Token: 0x0400485A RID: 18522
+	// Token: 0x04004900 RID: 18688
 	private WheelTowerRecordPopupView.TeamItem NewTeamItem;
 
-	// Token: 0x0400485B RID: 18523
+	// Token: 0x04004901 RID: 18689
 	private Action ConfirmCallback;
 
-	// Token: 0x0400485C RID: 18524
+	// Token: 0x04004902 RID: 18690
 	private Action CancelCallback;
 
-	// Token: 0x02007BF3 RID: 31731
+	// Token: 0x02006D7B RID: 28027
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -185,7 +185,7 @@ public class WheelTowerRecordPopupView : UiViewBase
 	})]
 	private class ScoreItem : GridProxyAbstract<WheelTowerRecordPopupScoreItemData>
 	{
-		// Token: 0x060497FC RID: 301052 RVA: 0x01305F0C File Offset: 0x0130410C
+		// Token: 0x0603FC18 RID: 261144 RVA: 0x012A91B4 File Offset: 0x012A73B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -205,7 +205,7 @@ public class WheelTowerRecordPopupView : UiViewBase
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060497FD RID: 301053 RVA: 0x01305FD8 File Offset: 0x013041D8
+		// Token: 0x0603FC19 RID: 261145 RVA: 0x012A9280 File Offset: 0x012A7480
 		public override void Refresh(WheelTowerRecordPopupScoreItemData data, bool isSelected, int gridIndex)
 		{
 			UUIText text = base.GetText(0);
@@ -239,11 +239,11 @@ public class WheelTowerRecordPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x02007BF4 RID: 31732
+	// Token: 0x02006D7C RID: 28028
 	[NullableContext(0)]
 	private class TeamItem : UiPanelBase
 	{
-		// Token: 0x060497FF RID: 301055 RVA: 0x0130609C File Offset: 0x0130429C
+		// Token: 0x0603FC1B RID: 261147 RVA: 0x012A9344 File Offset: 0x012A7544
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -259,13 +259,13 @@ public class WheelTowerRecordPopupView : UiViewBase
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06049800 RID: 301056 RVA: 0x01306126 File Offset: 0x01304326
+		// Token: 0x0603FC1C RID: 261148 RVA: 0x012A93CE File Offset: 0x012A75CE
 		protected override void OnStart()
 		{
 			this.RoleLayout = new GenericLayout<WheelTowerRecordPopupView.RoleGridItem, int>(base.GetHorizontalLayout(0), () => new WheelTowerRecordPopupView.RoleGridItem(), null, false, true);
 		}
 
-		// Token: 0x06049801 RID: 301057 RVA: 0x0130615C File Offset: 0x0130435C
+		// Token: 0x0603FC1D RID: 261149 RVA: 0x012A9404 File Offset: 0x012A7604
 		[NullableContext(1)]
 		public void Refresh(List<int> roleIdList, int buffId)
 		{
@@ -281,7 +281,7 @@ public class WheelTowerRecordPopupView : UiViewBase
 			}
 		}
 
-		// Token: 0x04028B70 RID: 166768
+		// Token: 0x04023EA3 RID: 147107
 		[Nullable(new byte[]
 		{
 			2,
@@ -290,17 +290,17 @@ public class WheelTowerRecordPopupView : UiViewBase
 		private GenericLayout<WheelTowerRecordPopupView.RoleGridItem, int> RoleLayout;
 	}
 
-	// Token: 0x02007BF5 RID: 31733
+	// Token: 0x02006D7D RID: 28029
 	[NullableContext(0)]
 	private class RoleGridItem : LoopScrollSmallItemGrid<int>
 	{
-		// Token: 0x06049803 RID: 301059 RVA: 0x013061B7 File Offset: 0x013043B7
+		// Token: 0x0603FC1F RID: 261151 RVA: 0x012A945F File Offset: 0x012A765F
 		protected override void OnStart()
 		{
 			base.BindOnCanExecuteChange((object _, bool _, EToggleState _) => false);
 		}
 
-		// Token: 0x06049804 RID: 301060 RVA: 0x013061E0 File Offset: 0x013043E0
+		// Token: 0x0603FC20 RID: 261152 RVA: 0x012A9488 File Offset: 0x012A7688
 		protected override void OnRefresh(int roleId, bool isSelected, int gridIndex)
 		{
 			int num = WheelTowerModel.Instance.TryGetRealRoleId(roleId);

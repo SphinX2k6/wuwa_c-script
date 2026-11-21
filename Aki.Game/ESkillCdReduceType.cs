@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002F8A RID: 12170
+// Token: 0x020024DE RID: 9438
 public enum ESkillCdReduceType
 {
-	// Token: 0x0400C332 RID: 49970
+	// Token: 0x0400C6DB RID: 50907
 	SpecifiedSkillId,
-	// Token: 0x0400C333 RID: 49971
+	// Token: 0x0400C6DC RID: 50908
 	SpecifiedSkillGenre
 }

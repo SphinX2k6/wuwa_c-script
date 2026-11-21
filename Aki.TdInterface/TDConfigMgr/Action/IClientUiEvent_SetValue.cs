@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018D3 RID: 6355
+	// Token: 0x02001A64 RID: 6756
 	public class IClientUiEvent_SetValue
 	{
-		// Token: 0x040055A0 RID: 21920
+		// Token: 0x040059FA RID: 23034
 		public EClientEventTarget Type;
 
-		// Token: 0x040055A1 RID: 21921
-		[Nullable(1)]
+		// Token: 0x040059FB RID: 23035
 		public IClientEventUi Ui;
 	}
 }

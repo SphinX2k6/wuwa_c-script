@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200319E RID: 12702
+// Token: 0x0200270C RID: 9996
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialSkillXigelika : SpecialSkillBase
 {
-	// Token: 0x0601B5C5 RID: 112069 RVA: 0x00779E78 File Offset: 0x00778078
+	// Token: 0x060190E5 RID: 102629 RVA: 0x007A2104 File Offset: 0x007A0304
 	public SpecialSkillXigelika(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B5C6 RID: 112070 RVA: 0x0077A000 File Offset: 0x00778200
+	// Token: 0x060190E6 RID: 102630 RVA: 0x007A228C File Offset: 0x007A048C
 	public override void OnStart()
 	{
 		this.Entity = this.SpecialSkillComponent.Entity;
@@ -23,7 +23,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		this.ResetTagListener = ((tagComponent != null) ? tagComponent.ListenForTagAddOrRemove(new int?(this.resetTag), new BaseTagComponent.TTagSwitchedCallback(this.OnTagChange), null) : null);
 	}
 
-	// Token: 0x0601B5C7 RID: 112071 RVA: 0x0077A094 File Offset: 0x00778294
+	// Token: 0x060190E7 RID: 102631 RVA: 0x007A2320 File Offset: 0x007A0520
 	public override void OnEnd()
 	{
 		if (this.Entity != null)
@@ -38,18 +38,18 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		this.ResetTagListener = null;
 	}
 
-	// Token: 0x0601B5C8 RID: 112072 RVA: 0x0077A0E3 File Offset: 0x007782E3
+	// Token: 0x060190E8 RID: 102632 RVA: 0x007A236F File Offset: 0x007A056F
 	public override void OnDisable()
 	{
 	}
 
-	// Token: 0x0601B5C9 RID: 112073 RVA: 0x0077A0E5 File Offset: 0x007782E5
+	// Token: 0x060190E9 RID: 102633 RVA: 0x007A2371 File Offset: 0x007A0571
 	private void OnRoleDead()
 	{
 		this.ResetBean();
 	}
 
-	// Token: 0x0601B5CA RID: 112074 RVA: 0x0077A0ED File Offset: 0x007782ED
+	// Token: 0x060190EA RID: 102634 RVA: 0x007A2379 File Offset: 0x007A0579
 	private void OnTagChange(int tagId, bool tagExists)
 	{
 		if (tagExists)
@@ -58,7 +58,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5CB RID: 112075 RVA: 0x0077A0F8 File Offset: 0x007782F8
+	// Token: 0x060190EB RID: 102635 RVA: 0x007A2384 File Offset: 0x007A0584
 	public int AddBean(string bean)
 	{
 		if (this.BeanFull)
@@ -123,7 +123,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		return this.BeanQueue.Size - size;
 	}
 
-	// Token: 0x0601B5CC RID: 112076 RVA: 0x0077A2DF File Offset: 0x007784DF
+	// Token: 0x060190EC RID: 102636 RVA: 0x007A256B File Offset: 0x007A076B
 	private void PushBean(string bean)
 	{
 		if (this.BeanQueue.Size == 2)
@@ -133,7 +133,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		this.BeanQueue.Push(bean);
 	}
 
-	// Token: 0x0601B5CD RID: 112077 RVA: 0x0077A308 File Offset: 0x00778508
+	// Token: 0x060190ED RID: 102637 RVA: 0x007A2594 File Offset: 0x007A0794
 	public int GetBeanResultant()
 	{
 		RoleTagComponent tagComponent = this.TagComponent;
@@ -184,7 +184,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		return num;
 	}
 
-	// Token: 0x0601B5CE RID: 112078 RVA: 0x0077A420 File Offset: 0x00778620
+	// Token: 0x060190EE RID: 102638 RVA: 0x007A26AC File Offset: 0x007A08AC
 	public void ConsumeBean()
 	{
 		Log.Instance.Info(ELogModule.Battle, ELogAuthor.ZFJ, "[SpecialSkillXigelika]消耗印记", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -233,7 +233,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		this.BeanUsing = true;
 	}
 
-	// Token: 0x0601B5CF RID: 112079 RVA: 0x0077A590 File Offset: 0x00778790
+	// Token: 0x060190EF RID: 102639 RVA: 0x007A281C File Offset: 0x007A0A1C
 	private void RefreshBeanTag()
 	{
 		int num = this.BeanUsing ? 2 : 0;
@@ -262,7 +262,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5D0 RID: 112080 RVA: 0x0077A67C File Offset: 0x0077887C
+	// Token: 0x060190F0 RID: 102640 RVA: 0x007A2908 File Offset: 0x007A0B08
 	public void ResetBean()
 	{
 		Log.Instance.Info(ELogModule.Battle, ELogAuthor.ZFJ, "[SpecialSkillXigelika]重置印记", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -303,34 +303,34 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		this.BeanUsing = false;
 	}
 
-	// Token: 0x0400D636 RID: 54838
+	// Token: 0x0400DAB9 RID: 55993
 	private const int QUEUE_MAX_LENGTH = 2;
 
-	// Token: 0x0400D637 RID: 54839
+	// Token: 0x0400DABA RID: 55994
 	private const string BEAN_A = "A";
 
-	// Token: 0x0400D638 RID: 54840
+	// Token: 0x0400DABB RID: 55995
 	private const string BEAN_B = "B";
 
-	// Token: 0x0400D639 RID: 54841
+	// Token: 0x0400DABC RID: 55996
 	private const long FUDU_BUFF = 1412301005L;
 
-	// Token: 0x0400D63A RID: 54842
+	// Token: 0x0400DABD RID: 55997
 	private const long SUDU_BUFF = 1412401001L;
 
-	// Token: 0x0400D63B RID: 54843
+	// Token: 0x0400DABE RID: 55998
 	private const int AA = 1;
 
-	// Token: 0x0400D63C RID: 54844
+	// Token: 0x0400DABF RID: 55999
 	private const int BB = 2;
 
-	// Token: 0x0400D63D RID: 54845
+	// Token: 0x0400DAC0 RID: 56000
 	private const int AB = 3;
 
-	// Token: 0x0400D63E RID: 54846
+	// Token: 0x0400DAC1 RID: 56001
 	private readonly int resetTag = GameplayTagDefine.EGameplayTagId["角色.R2T1XigelikaMd10011.状态标识.两符文已使用"];
 
-	// Token: 0x0400D63F RID: 54847
+	// Token: 0x0400DAC2 RID: 56002
 	private readonly int[] locTagA = new int[]
 	{
 		GameplayTagDefine.EGameplayTagId["角色.R2T1XigelikaMd10011.状态标识.A印记1"],
@@ -339,7 +339,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		GameplayTagDefine.EGameplayTagId["角色.R2T1XigelikaMd10011.状态标识.A印记4"]
 	};
 
-	// Token: 0x0400D640 RID: 54848
+	// Token: 0x0400DAC3 RID: 56003
 	private readonly int[] locTagB = new int[]
 	{
 		GameplayTagDefine.EGameplayTagId["角色.R2T1XigelikaMd10011.状态标识.B印记1"],
@@ -348,7 +348,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		GameplayTagDefine.EGameplayTagId["角色.R2T1XigelikaMd10011.状态标识.B印记4"]
 	};
 
-	// Token: 0x0400D641 RID: 54849
+	// Token: 0x0400DAC4 RID: 56004
 	private readonly int[] locUsedTagA = new int[]
 	{
 		GameplayTagDefine.EGameplayTagId["角色.R2T1XigelikaMd10011.状态标识.已使用A印记1"],
@@ -357,7 +357,7 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		GameplayTagDefine.EGameplayTagId["角色.R2T1XigelikaMd10011.状态标识.已使用A印记4"]
 	};
 
-	// Token: 0x0400D642 RID: 54850
+	// Token: 0x0400DAC5 RID: 56005
 	private readonly int[] locUsedTagB = new int[]
 	{
 		GameplayTagDefine.EGameplayTagId["角色.R2T1XigelikaMd10011.状态标识.已使用B印记1"],
@@ -366,28 +366,28 @@ public class SpecialSkillXigelika : SpecialSkillBase
 		GameplayTagDefine.EGameplayTagId["角色.R2T1XigelikaMd10011.状态标识.已使用B印记4"]
 	};
 
-	// Token: 0x0400D643 RID: 54851
+	// Token: 0x0400DAC6 RID: 56006
 	private readonly Queue<string> BeanQueue = new Queue<string>(4);
 
-	// Token: 0x0400D644 RID: 54852
+	// Token: 0x0400DAC7 RID: 56007
 	private bool BeanUsing;
 
-	// Token: 0x0400D645 RID: 54853
+	// Token: 0x0400DAC8 RID: 56008
 	private bool BeanFull;
 
-	// Token: 0x0400D646 RID: 54854
+	// Token: 0x0400DAC9 RID: 56009
 	[Nullable(2)]
 	private Entity Entity;
 
-	// Token: 0x0400D647 RID: 54855
+	// Token: 0x0400DACA RID: 56010
 	[Nullable(2)]
 	private RoleTagComponent TagComponent;
 
-	// Token: 0x0400D648 RID: 54856
+	// Token: 0x0400DACB RID: 56011
 	[Nullable(2)]
 	private RoleBuffComponent BuffComponent;
 
-	// Token: 0x0400D649 RID: 54857
+	// Token: 0x0400DACC RID: 56012
 	[Nullable(2)]
 	private ITagTask ResetTagListener;
 }

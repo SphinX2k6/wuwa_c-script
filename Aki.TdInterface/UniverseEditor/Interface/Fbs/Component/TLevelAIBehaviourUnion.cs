@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C55 RID: 23637
+	// Token: 0x0200627A RID: 25210
 	public class TLevelAIBehaviourUnion
 	{
-		// Token: 0x1700B216 RID: 45590
-		// (get) Token: 0x06028845 RID: 165957 RVA: 0x00592AFE File Offset: 0x00590CFE
-		// (set) Token: 0x06028846 RID: 165958 RVA: 0x00592B06 File Offset: 0x00590D06
+		// Token: 0x1700BB68 RID: 47976
+		// (get) Token: 0x0602AE53 RID: 175699 RVA: 0x005DAD16 File Offset: 0x005D8F16
+		// (set) Token: 0x0602AE54 RID: 175700 RVA: 0x005DAD1E File Offset: 0x005D8F1E
 		public TLevelAIBehaviour Type { get; set; }
 
-		// Token: 0x1700B217 RID: 45591
-		// (get) Token: 0x06028847 RID: 165959 RVA: 0x00592B0F File Offset: 0x00590D0F
-		// (set) Token: 0x06028848 RID: 165960 RVA: 0x00592B17 File Offset: 0x00590D17
+		// Token: 0x1700BB69 RID: 47977
+		// (get) Token: 0x0602AE55 RID: 175701 RVA: 0x005DAD27 File Offset: 0x005D8F27
+		// (set) Token: 0x0602AE56 RID: 175702 RVA: 0x005DAD2F File Offset: 0x005D8F2F
 		public object Value { get; set; }
 
-		// Token: 0x06028849 RID: 165961 RVA: 0x00592B20 File Offset: 0x00590D20
+		// Token: 0x0602AE57 RID: 175703 RVA: 0x005DAD38 File Offset: 0x005D8F38
 		public TLevelAIBehaviourUnion()
 		{
 			this.Type = TLevelAIBehaviour.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602884A RID: 165962 RVA: 0x00592B36 File Offset: 0x00590D36
+		// Token: 0x0602AE58 RID: 175704 RVA: 0x005DAD4E File Offset: 0x005D8F4E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602884B RID: 165963 RVA: 0x00592B48 File Offset: 0x00590D48
+		// Token: 0x0602AE59 RID: 175705 RVA: 0x005DAD60 File Offset: 0x005D8F60
 		public IInteractBehaviourActionsT AsIInteractBehaviourActions()
 		{
 			return this.As<IInteractBehaviourActionsT>();
 		}
 
-		// Token: 0x0602884C RID: 165964 RVA: 0x00592B50 File Offset: 0x00590D50
+		// Token: 0x0602AE5A RID: 175706 RVA: 0x005DAD68 File Offset: 0x005D8F68
 		public static TLevelAIBehaviourUnion FromIInteractBehaviourActions(IInteractBehaviourActionsT _iinteractbehaviouractions)
 		{
 			return new TLevelAIBehaviourUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602884D RID: 165965 RVA: 0x00592B65 File Offset: 0x00590D65
+		// Token: 0x0602AE5B RID: 175707 RVA: 0x005DAD7D File Offset: 0x005D8F7D
 		public ILevelAIBehaviourSplineT AsILevelAIBehaviourSpline()
 		{
 			return this.As<ILevelAIBehaviourSplineT>();
 		}
 
-		// Token: 0x0602884E RID: 165966 RVA: 0x00592B6D File Offset: 0x00590D6D
+		// Token: 0x0602AE5C RID: 175708 RVA: 0x005DAD85 File Offset: 0x005D8F85
 		public static TLevelAIBehaviourUnion FromILevelAIBehaviourSpline(ILevelAIBehaviourSplineT _ilevelaibehaviourspline)
 		{
 			return new TLevelAIBehaviourUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602884F RID: 165967 RVA: 0x00592B84 File Offset: 0x00590D84
+		// Token: 0x0602AE5D RID: 175709 RVA: 0x005DAD9C File Offset: 0x005D8F9C
 		public static int Pack(FlatBufferBuilder builder, TLevelAIBehaviourUnion _o)
 		{
 			TLevelAIBehaviour type = _o.Type;

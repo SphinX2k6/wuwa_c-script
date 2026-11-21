@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B6D RID: 2925
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C3B RID: 3131
 	public class IDurabilityStateConfig
 	{
-		// Token: 0x0600435D RID: 17245 RVA: 0x000ABBA0 File Offset: 0x000A9DA0
+		// Token: 0x060047B6 RID: 18358 RVA: 0x000B5C64 File Offset: 0x000B3E64
 		public static IDurabilityStateConfig Create(IDurabilityStateConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001240 RID: 4672
-		// (get) Token: 0x0600435E RID: 17246 RVA: 0x000ABBC0 File Offset: 0x000A9DC0
+		// Token: 0x1700133B RID: 4923
+		// (get) Token: 0x060047B7 RID: 18359 RVA: 0x000B5C84 File Offset: 0x000B3E84
 		public virtual bool? NonDestructable
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001241 RID: 4673
-		// (get) Token: 0x0600435F RID: 17247 RVA: 0x000ABBF8 File Offset: 0x000A9DF8
+		// Token: 0x1700133C RID: 4924
+		// (get) Token: 0x060047B8 RID: 18360 RVA: 0x000B5CBC File Offset: 0x000B3EBC
 		public virtual List<IDurabilityState> DurabilityStates
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025FA RID: 9722
+		// Token: 0x04002842 RID: 10306
 		private IDurabilityStateConfig Instance;
 
-		// Token: 0x040025FB RID: 9723
+		// Token: 0x04002843 RID: 10307
 		private List<IDurabilityState> _DurabilityStatesCache;
 
-		// Token: 0x040025FC RID: 9724
+		// Token: 0x04002844 RID: 10308
 		private bool _DurabilityStatesInited;
 	}
 }

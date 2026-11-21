@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 [Nullable(0)]
 public static class StringUtils
 {
-	// Token: 0x060009B9 RID: 2489 RVA: 0x00031C6C File Offset: 0x0002FE6C
+	// Token: 0x06000A0A RID: 2570 RVA: 0x000325C8 File Offset: 0x000307C8
 	public static string Format(string inString, [Nullable(new byte[]
 	{
 		1,
@@ -49,7 +49,7 @@ public static class StringUtils
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x060009BA RID: 2490 RVA: 0x00031DA0 File Offset: 0x0002FFA0
+	// Token: 0x06000A0B RID: 2571 RVA: 0x000326FC File Offset: 0x000308FC
 	public static string FormatStaticBuilder(string inString, params object[] args)
 	{
 		string[] array = StringUtils.FormatRegex.Split(inString);
@@ -84,7 +84,7 @@ public static class StringUtils
 		return staticBuilder.ToString();
 	}
 
-	// Token: 0x060009BB RID: 2491 RVA: 0x00031E3C File Offset: 0x0003003C
+	// Token: 0x06000A0C RID: 2572 RVA: 0x00032798 File Offset: 0x00030998
 	public static string Uint8ArrayToString(byte[] array)
 	{
 		List<string> list = new List<string>();
@@ -128,7 +128,7 @@ public static class StringUtils
 		return string.Join("", list);
 	}
 
-	// Token: 0x060009BC RID: 2492 RVA: 0x00031F3C File Offset: 0x0003013C
+	// Token: 0x06000A0D RID: 2573 RVA: 0x00032898 File Offset: 0x00030A98
 	public static int GetStringRealCount(string src)
 	{
 		int num = 0;
@@ -148,40 +148,40 @@ public static class StringUtils
 		return num;
 	}
 
-	// Token: 0x060009BD RID: 2493 RVA: 0x00031F7F File Offset: 0x0003017F
+	// Token: 0x06000A0E RID: 2574 RVA: 0x000328DB File Offset: 0x00030ADB
 	[NullableContext(2)]
 	public static bool IsEmpty([NotNullWhen(false)] string content)
 	{
 		return string.IsNullOrEmpty(content);
 	}
 
-	// Token: 0x060009BE RID: 2494 RVA: 0x00031F87 File Offset: 0x00030187
+	// Token: 0x06000A0F RID: 2575 RVA: 0x000328E3 File Offset: 0x00030AE3
 	public static string ParseTabAndLine(string content)
 	{
 		return content.Replace("\\n", "\n").Replace("\\r", "").Replace("\\t", "\t");
 	}
 
-	// Token: 0x060009BF RID: 2495 RVA: 0x00031FB8 File Offset: 0x000301B8
+	// Token: 0x06000A10 RID: 2576 RVA: 0x00032914 File Offset: 0x00030B14
 	public static bool IsIpAddress(string serverIp)
 	{
 		string pattern = "((\\d|[1-9]\\d|1\\d\\d|2[0-4]\\d|25[0-5])\\.){3}(\\d|[1-9]\\d|1\\d\\d|2[0-4]\\d|25[0-5])";
 		return Regex.IsMatch(serverIp, pattern);
 	}
 
-	// Token: 0x060009C0 RID: 2496 RVA: 0x00031FD2 File Offset: 0x000301D2
+	// Token: 0x06000A11 RID: 2577 RVA: 0x0003292E File Offset: 0x00030B2E
 	[NullableContext(2)]
 	public static bool IsBlank(string content)
 	{
 		return string.IsNullOrWhiteSpace(content);
 	}
 
-	// Token: 0x060009C1 RID: 2497 RVA: 0x00031FDA File Offset: 0x000301DA
+	// Token: 0x06000A12 RID: 2578 RVA: 0x00032936 File Offset: 0x00030B36
 	public static bool IsNothing(string content)
 	{
 		return StringUtils.IsEmpty(content) || content == "None";
 	}
 
-	// Token: 0x060009C2 RID: 2498 RVA: 0x00031FF4 File Offset: 0x000301F4
+	// Token: 0x06000A13 RID: 2579 RVA: 0x00032950 File Offset: 0x00030B50
 	public static List<List<string>> ParseCsvContent(string content)
 	{
 		string text = "";
@@ -251,19 +251,19 @@ public static class StringUtils
 		return list2;
 	}
 
-	// Token: 0x060009C3 RID: 2499 RVA: 0x000321C0 File Offset: 0x000303C0
+	// Token: 0x06000A14 RID: 2580 RVA: 0x00032B1C File Offset: 0x00030D1C
 	public static bool CheckIsOnlyLettersAndNumbers(string content)
 	{
 		return Regex.IsMatch(content, "^[A-Za-z0-9]*$");
 	}
 
-	// Token: 0x060009C4 RID: 2500 RVA: 0x000321CD File Offset: 0x000303CD
+	// Token: 0x06000A15 RID: 2581 RVA: 0x00032B29 File Offset: 0x00030D29
 	public static bool CheckIsOnlyBlank(string content)
 	{
 		return Regex.IsMatch(content, "^\\s*$");
 	}
 
-	// Token: 0x060009C5 RID: 2501 RVA: 0x000321DC File Offset: 0x000303DC
+	// Token: 0x06000A16 RID: 2582 RVA: 0x00032B38 File Offset: 0x00030D38
 	public static Dictionary<string, string> ParseCSVStringToMap(string content)
 	{
 		Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -284,66 +284,66 @@ public static class StringUtils
 		return dictionary;
 	}
 
-	// Token: 0x0400066D RID: 1645
+	// Token: 0x04000678 RID: 1656
 	public const string ZERO_STRING = "0";
 
-	// Token: 0x0400066E RID: 1646
+	// Token: 0x04000679 RID: 1657
 	public const string ONE_STRING = "1";
 
-	// Token: 0x0400066F RID: 1647
+	// Token: 0x0400067A RID: 1658
 	public const string EMPTY_STRING = "";
 
-	// Token: 0x04000670 RID: 1648
+	// Token: 0x0400067B RID: 1659
 	public const string LINE_BREAK_STRING = "\n";
 
-	// Token: 0x04000671 RID: 1649
+	// Token: 0x0400067C RID: 1660
 	public const string TAB_STRING = "\t";
 
-	// Token: 0x04000672 RID: 1650
+	// Token: 0x0400067D RID: 1661
 	public const string SLASH_STRING = "/";
 
-	// Token: 0x04000673 RID: 1651
+	// Token: 0x0400067E RID: 1662
 	public const string SPEED_STRING = "/s";
 
-	// Token: 0x04000674 RID: 1652
+	// Token: 0x0400067F RID: 1663
 	public const string NONE_STRING = "None";
 
-	// Token: 0x04000675 RID: 1653
+	// Token: 0x04000680 RID: 1664
 	public const string EQUAL = "=";
 
-	// Token: 0x04000676 RID: 1654
+	// Token: 0x04000681 RID: 1665
 	public const string NOT_EQUAL = "!=";
 
-	// Token: 0x04000677 RID: 1655
+	// Token: 0x04000682 RID: 1666
 	public const string LESS_THAN = "<";
 
-	// Token: 0x04000678 RID: 1656
+	// Token: 0x04000683 RID: 1667
 	public const string LESS_EQUAL_THAN = "<=";
 
-	// Token: 0x04000679 RID: 1657
+	// Token: 0x04000684 RID: 1668
 	public const string GRATHER_THAN = ">";
 
-	// Token: 0x0400067A RID: 1658
+	// Token: 0x04000685 RID: 1669
 	public const string GRATHER_EQUAL_THAN = ">=";
 
-	// Token: 0x0400067B RID: 1659
+	// Token: 0x04000686 RID: 1670
 	private const string REG_PATTERN = "{[0-9]+}";
 
-	// Token: 0x0400067C RID: 1660
+	// Token: 0x04000687 RID: 1671
 	private const string REG_FLAGS = "g";
 
-	// Token: 0x0400067D RID: 1661
+	// Token: 0x04000688 RID: 1672
 	private const string UTF8_BOM_HEAD = "﻿";
 
-	// Token: 0x0400067E RID: 1662
+	// Token: 0x04000689 RID: 1673
 	[StaticVariableRuleIgnore]
 	private static readonly Regex FormatRegex = new Regex("{[0-9]+}", RegexOptions.None);
 
-	// Token: 0x0400067F RID: 1663
+	// Token: 0x0400068A RID: 1674
 	[StaticVariableRuleIgnore]
 	private static readonly StringBuilder StaticBuilder = new StringBuilder();
 
-	// Token: 0x04000680 RID: 1664
+	// Token: 0x0400068B RID: 1675
 	[StaticVariableRuleIgnore]
 	private static readonly Regex FormatRegexNew = new Regex("\\{(\\d+)\\}", RegexOptions.None);
 }

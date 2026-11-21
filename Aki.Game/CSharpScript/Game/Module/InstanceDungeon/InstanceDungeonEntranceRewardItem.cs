@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200586F RID: 22639
+	// Token: 0x02004847 RID: 18503
 	public class InstanceDungeonEntranceRewardItem : UiPanelBase
 	{
-		// Token: 0x0603994A RID: 235850 RVA: 0x00DADC1C File Offset: 0x00DABE1C
+		// Token: 0x0602E86B RID: 190571 RVA: 0x00CFCAE8 File Offset: 0x00CFACE8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603994B RID: 235851 RVA: 0x00DADD88 File Offset: 0x00DABF88
+		// Token: 0x0602E86C RID: 190572 RVA: 0x00CFCC54 File Offset: 0x00CFAE54
 		protected override void OnStart()
 		{
 			this.RewardLoopScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(0), new Func<CommonItemSmallItemGrid>(this.CreateRewardGrid), null, false, null);
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0603994C RID: 235852 RVA: 0x00DADDC4 File Offset: 0x00DABFC4
+		// Token: 0x0602E86D RID: 190573 RVA: 0x00CFCC90 File Offset: 0x00CFAE90
 		protected override void OnBeforeDestroy()
 		{
 			this.RewardLoopScroll = null;
 		}
 
-		// Token: 0x0603994D RID: 235853 RVA: 0x00DADDD0 File Offset: 0x00DABFD0
+		// Token: 0x0602E86E RID: 190574 RVA: 0x00CFCC9C File Offset: 0x00CFAE9C
 		public void RefreshItem(int instanceId)
 		{
 			if (base.InAsyncLoading())
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.SetDoubleReward(instanceId);
 		}
 
-		// Token: 0x0603994E RID: 235854 RVA: 0x00DADF9B File Offset: 0x00DAC19B
+		// Token: 0x0602E86F RID: 190575 RVA: 0x00CFCE67 File Offset: 0x00CFB067
 		[NullableContext(1)]
 		public void RefreshReward(List<TItem> dataList, bool isFinishInstance)
 		{
@@ -133,26 +133,26 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}, false);
 		}
 
-		// Token: 0x0603994F RID: 235855 RVA: 0x00DADFC0 File Offset: 0x00DAC1C0
+		// Token: 0x0602E870 RID: 190576 RVA: 0x00CFCE8C File Offset: 0x00CFB08C
 		public void RefreshRewardText(bool? isFirstGet)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "Text_RewardPreview_Text", Array.Empty<object>());
 		}
 
-		// Token: 0x06039950 RID: 235856 RVA: 0x00DADFDD File Offset: 0x00DAC1DD
+		// Token: 0x0602E871 RID: 190577 RVA: 0x00CFCEA9 File Offset: 0x00CFB0A9
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid CreateRewardGrid()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x06039951 RID: 235857 RVA: 0x00DADFE4 File Offset: 0x00DAC1E4
+		// Token: 0x0602E872 RID: 190578 RVA: 0x00CFCEB0 File Offset: 0x00CFB0B0
 		private void OnClickBtnReward()
 		{
 			UiManager.Instance.OpenView(EUiViewName.InstanceDungeonReward, null, null);
 		}
 
-		// Token: 0x06039952 RID: 235858 RVA: 0x00DADFF7 File Offset: 0x00DAC1F7
+		// Token: 0x0602E873 RID: 190579 RVA: 0x00CFCEC3 File Offset: 0x00CFB0C3
 		public void SetRewardBtnActive(bool isActive)
 		{
 			(base.GetButton(1).GetOwner() as AUIBaseActor).GetUIItem().SetUIActive(isActive);
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			item.SetUIActive(isActive);
 		}
 
-		// Token: 0x06039953 RID: 235859 RVA: 0x00DAE028 File Offset: 0x00DAC228
+		// Token: 0x0602E874 RID: 190580 RVA: 0x00CFCEF4 File Offset: 0x00CFB0F4
 		public void SetDoubleReward(int instanceId)
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(instanceId);
@@ -200,23 +200,23 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039954 RID: 235860 RVA: 0x00DAE188 File Offset: 0x00DAC388
+		// Token: 0x0602E875 RID: 190581 RVA: 0x00CFD054 File Offset: 0x00CFB254
 		public void SetFirstRewardLength(int length)
 		{
 			this.FirstRewardLength = length;
 		}
 
-		// Token: 0x06039955 RID: 235861 RVA: 0x00DAE191 File Offset: 0x00DAC391
+		// Token: 0x0602E876 RID: 190582 RVA: 0x00CFD05D File Offset: 0x00CFB25D
 		public void SetExchangeRewardLength(int length)
 		{
 			this.ExchangeRewardLength = length;
 		}
 
-		// Token: 0x0401E1AE RID: 123310
+		// Token: 0x04018C4B RID: 101451
 		[Nullable(2)]
 		private IInstanceDungeonEntranceRewardItem ItemDataHandle;
 
-		// Token: 0x0401E1AF RID: 123311
+		// Token: 0x04018C4C RID: 101452
 		[Nullable(new byte[]
 		{
 			2,
@@ -224,33 +224,33 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardLoopScroll;
 
-		// Token: 0x0401E1B0 RID: 123312
+		// Token: 0x04018C4D RID: 101453
 		private bool CanExchangeReward = true;
 
-		// Token: 0x0401E1B1 RID: 123313
+		// Token: 0x04018C4E RID: 101454
 		private int FirstRewardLength;
 
-		// Token: 0x0401E1B2 RID: 123314
+		// Token: 0x04018C4F RID: 101455
 		private int ExchangeRewardLength;
 
-		// Token: 0x0200BAAF RID: 47791
+		// Token: 0x0200A4C8 RID: 42184
 		private enum EChildType
 		{
-			// Token: 0x040386A6 RID: 231078
+			// Token: 0x040330A7 RID: 209063
 			LoopScrollReward,
-			// Token: 0x040386A7 RID: 231079
+			// Token: 0x040330A8 RID: 209064
 			BtnReward,
-			// Token: 0x040386A8 RID: 231080
+			// Token: 0x040330A9 RID: 209065
 			RewardText,
-			// Token: 0x040386A9 RID: 231081
+			// Token: 0x040330AA RID: 209066
 			DoubleTip,
-			// Token: 0x040386AA RID: 231082
+			// Token: 0x040330AB RID: 209067
 			DoubleTipTxt,
-			// Token: 0x040386AB RID: 231083
+			// Token: 0x040330AC RID: 209068
 			DoubleIcon,
-			// Token: 0x040386AC RID: 231084
+			// Token: 0x040330AD RID: 209069
 			RewardDesText,
-			// Token: 0x040386AD RID: 231085
+			// Token: 0x040330AE RID: 209070
 			DoubleTitleText
 		}
 	}

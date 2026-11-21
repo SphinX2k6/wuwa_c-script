@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017DE RID: 6110
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001965 RID: 6501
 	public class IAssistCharacterSplineMove : IAssistCharacterMoveType
 	{
-		// Token: 0x0600832D RID: 33581 RVA: 0x00139630 File Offset: 0x00137830
+		// Token: 0x06008A3F RID: 35391 RVA: 0x00148C18 File Offset: 0x00146E18
 		private IAssistCharacterSplineMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600832E RID: 33582 RVA: 0x00139668 File Offset: 0x00137868
+		// Token: 0x06008A40 RID: 35392 RVA: 0x00148C50 File Offset: 0x00146E50
 		public static IAssistCharacterSplineMove Create([Nullable(2)] IAssistCharacterSplineMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600832F RID: 33583 RVA: 0x0013967B File Offset: 0x0013787B
+		// Token: 0x06008A41 RID: 35393 RVA: 0x00148C63 File Offset: 0x00146E63
 		public static IAssistCharacterSplineMove CreateFromSetValue([Nullable(2)] IAssistCharacterSplineMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008330 RID: 33584 RVA: 0x0013968E File Offset: 0x0013788E
+		// Token: 0x06008A42 RID: 35394 RVA: 0x00148C76 File Offset: 0x00146E76
 		public new IAssistCharacterSplineMove_SetValue ToSetValue()
 		{
 			return new IAssistCharacterSplineMove_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B1E RID: 11038
-		// (get) Token: 0x06008331 RID: 33585 RVA: 0x001396AD File Offset: 0x001378AD
-		// (set) Token: 0x06008332 RID: 33586 RVA: 0x001396D8 File Offset: 0x001378D8
+		// Token: 0x17002D14 RID: 11540
+		// (get) Token: 0x06008A43 RID: 35395 RVA: 0x00148C95 File Offset: 0x00146E95
+		// (set) Token: 0x06008A44 RID: 35396 RVA: 0x00148CC0 File Offset: 0x00146EC0
 		public override EAssistCharacterMoveType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B1F RID: 11039
-		// (get) Token: 0x06008333 RID: 33587 RVA: 0x001396E6 File Offset: 0x001378E6
-		// (set) Token: 0x06008334 RID: 33588 RVA: 0x00139711 File Offset: 0x00137911
+		// Token: 0x17002D15 RID: 11541
+		// (get) Token: 0x06008A45 RID: 35397 RVA: 0x00148CCE File Offset: 0x00146ECE
+		// (set) Token: 0x06008A46 RID: 35398 RVA: 0x00148CF9 File Offset: 0x00146EF9
 		public virtual int SplineId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400534B RID: 21323
+		// Token: 0x0400578F RID: 22415
 		[Nullable(2)]
 		protected new IAssistCharacterSplineMove FbInstance;
 
-		// Token: 0x0400534C RID: 21324
+		// Token: 0x04005790 RID: 22416
 		[Nullable(2)]
 		protected new IAssistCharacterSplineMove_SetValue PocoInterface;
 	}

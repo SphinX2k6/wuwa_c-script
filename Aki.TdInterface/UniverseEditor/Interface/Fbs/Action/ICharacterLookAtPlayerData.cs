@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006349 RID: 25417
+	// Token: 0x020069BA RID: 27066
 	public struct ICharacterLookAtPlayerData : IFlatbufferObject
 	{
-		// Token: 0x1700BDA5 RID: 48549
-		// (get) Token: 0x0602BF6E RID: 180078 RVA: 0x0060AC62 File Offset: 0x00608E62
+		// Token: 0x1700C72D RID: 50989
+		// (get) Token: 0x0602E6D8 RID: 190168 RVA: 0x00655DB6 File Offset: 0x00653FB6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BF6F RID: 180079 RVA: 0x0060AC6F File Offset: 0x00608E6F
+		// Token: 0x0602E6D9 RID: 190169 RVA: 0x00655DC3 File Offset: 0x00653FC3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BF70 RID: 180080 RVA: 0x0060AC78 File Offset: 0x00608E78
+		// Token: 0x0602E6DA RID: 190170 RVA: 0x00655DCC File Offset: 0x00653FCC
 		public static ICharacterLookAtPlayerData GetRootAsICharacterLookAtPlayerData(ByteBuffer _bb)
 		{
 			return ICharacterLookAtPlayerData.GetRootAsICharacterLookAtPlayerData(_bb, default(ICharacterLookAtPlayerData));
 		}
 
-		// Token: 0x0602BF71 RID: 180081 RVA: 0x0060AC94 File Offset: 0x00608E94
+		// Token: 0x0602E6DB RID: 190171 RVA: 0x00655DE8 File Offset: 0x00653FE8
 		public static ICharacterLookAtPlayerData GetRootAsICharacterLookAtPlayerData(ByteBuffer _bb, ICharacterLookAtPlayerData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BF72 RID: 180082 RVA: 0x0060ACB1 File Offset: 0x00608EB1
+		// Token: 0x0602E6DC RID: 190172 RVA: 0x00655E05 File Offset: 0x00654005
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BF73 RID: 180083 RVA: 0x0060ACC0 File Offset: 0x00608EC0
+		// Token: 0x0602E6DD RID: 190173 RVA: 0x00655E14 File Offset: 0x00654014
 		public ICharacterLookAtPlayerData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BDA6 RID: 48550
-		// (get) Token: 0x0602BF74 RID: 180084 RVA: 0x0060ACD0 File Offset: 0x00608ED0
+		// Token: 0x1700C72E RID: 50990
+		// (get) Token: 0x0602E6DE RID: 190174 RVA: 0x00655E24 File Offset: 0x00654024
 		public ECharacterLookAt Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BF75 RID: 180085 RVA: 0x0060AD0C File Offset: 0x00608F0C
+		// Token: 0x0602E6DF RID: 190175 RVA: 0x00655E60 File Offset: 0x00654060
 		public static Offset<ICharacterLookAtPlayerData> CreateICharacterLookAtPlayerData(FlatBufferBuilder builder, ECharacterLookAt Type = ECharacterLookAt.Empty)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICharacterLookAtPlayerData.EndICharacterLookAtPlayerData(builder);
 		}
 
-		// Token: 0x0602BF76 RID: 180086 RVA: 0x0060AD22 File Offset: 0x00608F22
+		// Token: 0x0602E6E0 RID: 190176 RVA: 0x00655E76 File Offset: 0x00654076
 		public static void StartICharacterLookAtPlayerData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602BF77 RID: 180087 RVA: 0x0060AD2B File Offset: 0x00608F2B
+		// Token: 0x0602E6E1 RID: 190177 RVA: 0x00655E7F File Offset: 0x0065407F
 		public static void AddType(FlatBufferBuilder builder, ECharacterLookAt type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602BF78 RID: 180088 RVA: 0x0060AD36 File Offset: 0x00608F36
+		// Token: 0x0602E6E2 RID: 190178 RVA: 0x00655E8A File Offset: 0x0065408A
 		public static Offset<ICharacterLookAtPlayerData> EndICharacterLookAtPlayerData(FlatBufferBuilder builder)
 		{
 			return new Offset<ICharacterLookAtPlayerData>(builder.EndTable());
 		}
 
-		// Token: 0x0602BF79 RID: 180089 RVA: 0x0060AD44 File Offset: 0x00608F44
+		// Token: 0x0602E6E3 RID: 190179 RVA: 0x00655E98 File Offset: 0x00654098
 		public ICharacterLookAtPlayerDataT UnPack()
 		{
 			ICharacterLookAtPlayerDataT characterLookAtPlayerDataT = new ICharacterLookAtPlayerDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return characterLookAtPlayerDataT;
 		}
 
-		// Token: 0x0602BF7A RID: 180090 RVA: 0x0060AD5F File Offset: 0x00608F5F
+		// Token: 0x0602E6E4 RID: 190180 RVA: 0x00655EB3 File Offset: 0x006540B3
 		public void UnPackTo(ICharacterLookAtPlayerDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602BF7B RID: 180091 RVA: 0x0060AD70 File Offset: 0x00608F70
+		// Token: 0x0602E6E5 RID: 190181 RVA: 0x00655EC4 File Offset: 0x006540C4
 		public static Offset<ICharacterLookAtPlayerData> Pack(FlatBufferBuilder builder, ICharacterLookAtPlayerDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICharacterLookAtPlayerData.CreateICharacterLookAtPlayerData(builder, _o.Type);
 		}
 
-		// Token: 0x04010915 RID: 67861
+		// Token: 0x0401172A RID: 71466
 		private Table __p;
 	}
 }

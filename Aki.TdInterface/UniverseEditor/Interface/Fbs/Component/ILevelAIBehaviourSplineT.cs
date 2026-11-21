@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054C5 RID: 21701
+	// Token: 0x02005A4B RID: 23115
 	public class ILevelAIBehaviourSplineT
 	{
-		// Token: 0x17009FE7 RID: 40935
-		// (get) Token: 0x06023C2A RID: 146474 RVA: 0x004F1AC6 File Offset: 0x004EFCC6
-		// (set) Token: 0x06023C2B RID: 146475 RVA: 0x004F1ACE File Offset: 0x004EFCCE
+		// Token: 0x1700A821 RID: 43041
+		// (get) Token: 0x06025CE2 RID: 154850 RVA: 0x0052EB3A File Offset: 0x0052CD3A
+		// (set) Token: 0x06025CE3 RID: 154851 RVA: 0x0052EB42 File Offset: 0x0052CD42
 		public ELevelAIBehaviourType Type { get; set; }
 
-		// Token: 0x17009FE8 RID: 40936
-		// (get) Token: 0x06023C2C RID: 146476 RVA: 0x004F1AD7 File Offset: 0x004EFCD7
-		// (set) Token: 0x06023C2D RID: 146477 RVA: 0x004F1ADF File Offset: 0x004EFCDF
+		// Token: 0x1700A822 RID: 43042
+		// (get) Token: 0x06025CE4 RID: 154852 RVA: 0x0052EB4B File Offset: 0x0052CD4B
+		// (set) Token: 0x06025CE5 RID: 154853 RVA: 0x0052EB53 File Offset: 0x0052CD53
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x17009FE9 RID: 40937
-		// (get) Token: 0x06023C2E RID: 146478 RVA: 0x004F1AE8 File Offset: 0x004EFCE8
-		// (set) Token: 0x06023C2F RID: 146479 RVA: 0x004F1AF0 File Offset: 0x004EFCF0
+		// Token: 0x1700A823 RID: 43043
+		// (get) Token: 0x06025CE6 RID: 154854 RVA: 0x0052EB5C File Offset: 0x0052CD5C
+		// (set) Token: 0x06025CE7 RID: 154855 RVA: 0x0052EB64 File Offset: 0x0052CD64
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023C30 RID: 146480 RVA: 0x004F1AF9 File Offset: 0x004EFCF9
+		// Token: 0x06025CE8 RID: 154856 RVA: 0x0052EB6D File Offset: 0x0052CD6D
 		public ILevelAIBehaviourSplineT()
 		{
 			this.Type = ELevelAIBehaviourType.Spline;

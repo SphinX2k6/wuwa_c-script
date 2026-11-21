@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200019F RID: 415
+	// Token: 0x020001A3 RID: 419
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UniversalDataSystemManager
 	{
-		// Token: 0x06000B64 RID: 2916 RVA: 0x000484EC File Offset: 0x000466EC
+		// Token: 0x06000B9B RID: 2971 RVA: 0x0004ACDC File Offset: 0x00048EDC
 		public void Initialize(string userId)
 		{
 			this.UserId = userId;
@@ -17,7 +17,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.IsRegistered = false;
 		}
 
-		// Token: 0x06000B65 RID: 2917 RVA: 0x00048508 File Offset: 0x00046708
+		// Token: 0x06000B9C RID: 2972 RVA: 0x0004ACF8 File Offset: 0x00048EF8
 		public void Start()
 		{
 			this.CreateContext();
@@ -25,7 +25,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.RegisterContext();
 		}
 
-		// Token: 0x06000B66 RID: 2918 RVA: 0x0004851C File Offset: 0x0004671C
+		// Token: 0x06000B9D RID: 2973 RVA: 0x0004AD0C File Offset: 0x00048F0C
 		public void Stop()
 		{
 			this.AbortHandle();
@@ -33,7 +33,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.DestroyContext();
 		}
 
-		// Token: 0x06000B67 RID: 2919 RVA: 0x00048530 File Offset: 0x00046730
+		// Token: 0x06000B9E RID: 2974 RVA: 0x0004AD20 File Offset: 0x00048F20
 		private void CreateHandle()
 		{
 			if (this.UserId == null)
@@ -54,7 +54,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.Handle = handle;
 		}
 
-		// Token: 0x06000B68 RID: 2920 RVA: 0x0004859C File Offset: 0x0004679C
+		// Token: 0x06000B9F RID: 2975 RVA: 0x0004AD8C File Offset: 0x00048F8C
 		private void AbortHandle()
 		{
 			int num = UKuroStaticPS5Library.AbortUdsHandle(this.Handle);
@@ -67,7 +67,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x06000B69 RID: 2921 RVA: 0x000485E0 File Offset: 0x000467E0
+		// Token: 0x06000BA0 RID: 2976 RVA: 0x0004ADD0 File Offset: 0x00048FD0
 		private void DestroyHandle()
 		{
 			int num = UKuroStaticPS5Library.DestroyUdsHandle(this.Handle);
@@ -82,7 +82,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.Handle = -1;
 		}
 
-		// Token: 0x06000B6A RID: 2922 RVA: 0x0004862C File Offset: 0x0004682C
+		// Token: 0x06000BA1 RID: 2977 RVA: 0x0004AE1C File Offset: 0x0004901C
 		private void RegisterContext()
 		{
 			int num = UKuroStaticPS5Library.RegisterUdsContext(this.Context, this.Handle);
@@ -97,7 +97,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.IsRegistered = true;
 		}
 
-		// Token: 0x06000B6B RID: 2923 RVA: 0x00048680 File Offset: 0x00046880
+		// Token: 0x06000BA2 RID: 2978 RVA: 0x0004AE70 File Offset: 0x00049070
 		private void CreateContext()
 		{
 			if (this.UserId == null)
@@ -117,7 +117,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.Context = context;
 		}
 
-		// Token: 0x06000B6C RID: 2924 RVA: 0x000486F8 File Offset: 0x000468F8
+		// Token: 0x06000BA3 RID: 2979 RVA: 0x0004AEE8 File Offset: 0x000490E8
 		private void DestroyContext()
 		{
 			if (this.Context == -1)
@@ -136,7 +136,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.IsRegistered = false;
 		}
 
-		// Token: 0x06000B6D RID: 2925 RVA: 0x00048768 File Offset: 0x00046968
+		// Token: 0x06000BA4 RID: 2980 RVA: 0x0004AF58 File Offset: 0x00049158
 		[return: Nullable(2)]
 		private EventData CreateEvent(string eventName)
 		{
@@ -162,7 +162,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return eventData;
 		}
 
-		// Token: 0x06000B6E RID: 2926 RVA: 0x000487F4 File Offset: 0x000469F4
+		// Token: 0x06000BA5 RID: 2981 RVA: 0x0004AFE4 File Offset: 0x000491E4
 		private unsafe void PostEvent(EventData eventData)
 		{
 			int num = UKuroStaticPS5Library.PostUdsEvent(this.Context, this.Handle, eventData.EventPtr);
@@ -182,7 +182,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			instance2.Debug(message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06000B6F RID: 2927 RVA: 0x000488A0 File Offset: 0x00046AA0
+		// Token: 0x06000BA6 RID: 2982 RVA: 0x0004B090 File Offset: 0x00049290
 		private void DestroyEvent(EventData eventData)
 		{
 			int num = UKuroStaticPS5Library.DestroyUdsEvent(eventData.EventPtr);
@@ -200,7 +200,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			instance2.Debug(message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x06000B70 RID: 2928 RVA: 0x00048910 File Offset: 0x00046B10
+		// Token: 0x06000BA7 RID: 2983 RVA: 0x0004B100 File Offset: 0x00049300
 		private unsafe void EventPropertyObjectSetString(EventData eventData, string key, string value)
 		{
 			int num = UKuroStaticPS5Library.UdsEventPropertyObjectSetString(eventData.ProPtr, ref key, ref value);
@@ -224,7 +224,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			instance2.Debug(message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 		}
 
-		// Token: 0x06000B71 RID: 2929 RVA: 0x00048A0C File Offset: 0x00046C0C
+		// Token: 0x06000BA8 RID: 2984 RVA: 0x0004B1FC File Offset: 0x000493FC
 		private unsafe void EventPropertyArraySetString(EventData eventData, string key, TArray<string> value)
 		{
 			int num = UKuroStaticPS5Library.UdsEventPropertyArraySetString(eventData.ProPtr, ref key, ref value);
@@ -248,7 +248,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			instance2.Debug(message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 		}
 
-		// Token: 0x06000B72 RID: 2930 RVA: 0x00048B08 File Offset: 0x00046D08
+		// Token: 0x06000BA9 RID: 2985 RVA: 0x0004B2F8 File Offset: 0x000494F8
 		public void StartActivity(string activityId)
 		{
 			EventData eventData = this.CreateEvent("activityStart");
@@ -260,7 +260,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x06000B73 RID: 2931 RVA: 0x00048B40 File Offset: 0x00046D40
+		// Token: 0x06000BAA RID: 2986 RVA: 0x0004B330 File Offset: 0x00049530
 		public void EndActivity(string activityId, EPsActivityEndActivityOutcome outcome = EPsActivityEndActivityOutcome.Completed)
 		{
 			EventData eventData = this.CreateEvent("activityEnd");
@@ -273,7 +273,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x06000B74 RID: 2932 RVA: 0x00048B8C File Offset: 0x00046D8C
+		// Token: 0x06000BAB RID: 2987 RVA: 0x0004B37C File Offset: 0x0004957C
 		public void ChangeActivityAvailability([Nullable(new byte[]
 		{
 			2,
@@ -301,49 +301,49 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x06000B75 RID: 2933 RVA: 0x00048BE7 File Offset: 0x00046DE7
+		// Token: 0x06000BAC RID: 2988 RVA: 0x0004B3D7 File Offset: 0x000495D7
 		public int GetHandle()
 		{
 			return this.Handle;
 		}
 
-		// Token: 0x06000B76 RID: 2934 RVA: 0x00048BEF File Offset: 0x00046DEF
+		// Token: 0x06000BAD RID: 2989 RVA: 0x0004B3DF File Offset: 0x000495DF
 		public int GetContext()
 		{
 			return this.Context;
 		}
 
-		// Token: 0x06000B77 RID: 2935 RVA: 0x00048BF7 File Offset: 0x00046DF7
+		// Token: 0x06000BAE RID: 2990 RVA: 0x0004B3E7 File Offset: 0x000495E7
 		public bool GetIsRegistered()
 		{
 			return this.IsRegistered;
 		}
 
-		// Token: 0x04000728 RID: 1832
+		// Token: 0x04000764 RID: 1892
 		private const int SCE_NP_UNIVERSAL_DATA_SYSTEM_INVALID_CONTEXT = -1;
 
-		// Token: 0x04000729 RID: 1833
+		// Token: 0x04000765 RID: 1893
 		private const int SCE_NP_UNIVERSAL_DATA_SYSTEM_INVALID_HANDLE = -1;
 
-		// Token: 0x0400072A RID: 1834
+		// Token: 0x04000766 RID: 1894
 		private const int UNIVERSAL_DATA_SYSTEM_MEMORY_POOL_SIZE = 262144;
 
-		// Token: 0x0400072B RID: 1835
+		// Token: 0x04000767 RID: 1895
 		private const int SCE_OK = 0;
 
-		// Token: 0x0400072C RID: 1836
+		// Token: 0x04000768 RID: 1896
 		private int Context = -1;
 
-		// Token: 0x0400072D RID: 1837
+		// Token: 0x04000769 RID: 1897
 		private int Handle = -1;
 
-		// Token: 0x0400072E RID: 1838
+		// Token: 0x0400076A RID: 1898
 		private readonly int PoolSize = 262144;
 
-		// Token: 0x0400072F RID: 1839
+		// Token: 0x0400076B RID: 1899
 		private bool IsRegistered;
 
-		// Token: 0x04000730 RID: 1840
+		// Token: 0x0400076C RID: 1900
 		[Nullable(2)]
 		private string UserId;
 	}

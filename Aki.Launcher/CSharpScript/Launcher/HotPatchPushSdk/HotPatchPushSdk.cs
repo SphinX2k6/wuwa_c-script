@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.HotPatchPushSdk
 {
-	// Token: 0x020001D1 RID: 465
+	// Token: 0x020001D5 RID: 469
 	public class HotPatchPushSdk
 	{
-		// Token: 0x06000C56 RID: 3158 RVA: 0x0004BDEF File Offset: 0x00049FEF
+		// Token: 0x06000C8D RID: 3213 RVA: 0x0004E603 File Offset: 0x0004C803
 		public static bool IfCanUsePush()
 		{
 			return false;
 		}
 
-		// Token: 0x06000C57 RID: 3159 RVA: 0x0004BDF4 File Offset: 0x00049FF4
+		// Token: 0x06000C8E RID: 3214 RVA: 0x0004E608 File Offset: 0x0004C808
 		public static void StartPush()
 		{
 			if (!HotPatchPushSdk.IfCanUsePush())
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.HotPatchPushSdk
 			LauncherStorageLib.Instance.SetGlobal<bool>(ELauncherStorageGlobalKey.NotFirstTimeOpenPush, true);
 		}
 
-		// Token: 0x06000C58 RID: 3160 RVA: 0x0004BED4 File Offset: 0x0004A0D4
+		// Token: 0x06000C8F RID: 3215 RVA: 0x0004E6E8 File Offset: 0x0004C8E8
 		[NullableContext(1)]
 		public static void SendLocalPush(string title, string desc, string exData)
 		{
@@ -48,7 +48,7 @@ namespace CSharpScript.Launcher.HotPatchPushSdk
 			}
 		}
 
-		// Token: 0x06000C59 RID: 3161 RVA: 0x0004BF00 File Offset: 0x0004A100
+		// Token: 0x06000C90 RID: 3216 RVA: 0x0004E714 File Offset: 0x0004C914
 		[Conditional("KURO_PUSH_SDK")]
 		public static void TurnOnPush()
 		{
@@ -60,7 +60,7 @@ namespace CSharpScript.Launcher.HotPatchPushSdk
 			LauncherStorageLib.Instance.SetGlobal<bool>(ELauncherStorageGlobalKey.CachePushOpenState, true);
 		}
 
-		// Token: 0x06000C5A RID: 3162 RVA: 0x0004BF1C File Offset: 0x0004A11C
+		// Token: 0x06000C91 RID: 3217 RVA: 0x0004E730 File Offset: 0x0004C930
 		[Conditional("KURO_PUSH_SDK")]
 		public static void TurnOffPush()
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Launcher.HotPatchPushSdk
 			LauncherStorageLib.Instance.SetGlobal<bool>(ELauncherStorageGlobalKey.CachePushOpenState, false);
 		}
 
-		// Token: 0x06000C5B RID: 3163 RVA: 0x0004BF38 File Offset: 0x0004A138
+		// Token: 0x06000C92 RID: 3218 RVA: 0x0004E74C File Offset: 0x0004C94C
 		public static bool GetPushState()
 		{
 			HotPatchPushSdk.IfCanUsePush();

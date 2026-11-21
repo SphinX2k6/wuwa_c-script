@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200108C RID: 4236
+	// Token: 0x020011BA RID: 4538
 	public class IQuestPlayerBeDamage_SetValue
 	{
-		// Token: 0x040039A3 RID: 14755
+		// Token: 0x04003CF0 RID: 15600
 		public EPlayerHitStatisticsType Type;
 
-		// Token: 0x040039A4 RID: 14756
+		// Token: 0x04003CF1 RID: 15601
 		public EPlayerDamageInfoType StatisticsType;
 	}
 }

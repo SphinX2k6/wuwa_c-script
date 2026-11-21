@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001FD9 RID: 8153
+// Token: 0x020014AC RID: 5292
 [NullableContext(1)]
 [Nullable(0)]
 public class ViewModelBase<[Nullable(0)] T> where T : Enum
 {
-	// Token: 0x0600FF8B RID: 65419 RVA: 0x003E3E58 File Offset: 0x003E2058
+	// Token: 0x0600D3F3 RID: 54259 RVA: 0x003F0458 File Offset: 0x003EE658
 	protected void SetData(T key, object value, bool? notNotify = false)
 	{
 		if (this.DataMap.ContainsKey(key))
@@ -26,7 +26,7 @@ public class ViewModelBase<[Nullable(0)] T> where T : Enum
 		}
 	}
 
-	// Token: 0x0600FF8C RID: 65420 RVA: 0x003E3EB0 File Offset: 0x003E20B0
+	// Token: 0x0600D3F4 RID: 54260 RVA: 0x003F04B0 File Offset: 0x003EE6B0
 	[return: Nullable(2)]
 	protected object GetData(T key)
 	{
@@ -38,7 +38,7 @@ public class ViewModelBase<[Nullable(0)] T> where T : Enum
 		return null;
 	}
 
-	// Token: 0x0600FF8D RID: 65421 RVA: 0x003E3ED0 File Offset: 0x003E20D0
+	// Token: 0x0600D3F5 RID: 54261 RVA: 0x003F04D0 File Offset: 0x003EE6D0
 	public void Bind(Action<T> callback)
 	{
 		if (!this.CallbackList.Contains(callback))
@@ -47,7 +47,7 @@ public class ViewModelBase<[Nullable(0)] T> where T : Enum
 		}
 	}
 
-	// Token: 0x0600FF8E RID: 65422 RVA: 0x003E3EEC File Offset: 0x003E20EC
+	// Token: 0x0600D3F6 RID: 54262 RVA: 0x003F04EC File Offset: 0x003EE6EC
 	public void UnBind(Action<T> callback)
 	{
 		int num = this.CallbackList.IndexOf(callback);
@@ -57,13 +57,13 @@ public class ViewModelBase<[Nullable(0)] T> where T : Enum
 		}
 	}
 
-	// Token: 0x0600FF8F RID: 65423 RVA: 0x003E3F16 File Offset: 0x003E2116
+	// Token: 0x0600D3F7 RID: 54263 RVA: 0x003F0516 File Offset: 0x003EE716
 	public void Clear()
 	{
 		this.CallbackList = new List<Action<T>>();
 	}
 
-	// Token: 0x0600FF90 RID: 65424 RVA: 0x003E3F24 File Offset: 0x003E2124
+	// Token: 0x0600D3F8 RID: 54264 RVA: 0x003F0524 File Offset: 0x003EE724
 	protected void Notify(T key)
 	{
 		foreach (Action<T> action in this.CallbackList)
@@ -72,9 +72,9 @@ public class ViewModelBase<[Nullable(0)] T> where T : Enum
 		}
 	}
 
-	// Token: 0x0400763F RID: 30271
+	// Token: 0x04007728 RID: 30504
 	protected readonly Dictionary<T, object> DataMap = new Dictionary<T, object>();
 
-	// Token: 0x04007640 RID: 30272
+	// Token: 0x04007729 RID: 30505
 	protected List<Action<T>> CallbackList = new List<Action<T>>();
 }

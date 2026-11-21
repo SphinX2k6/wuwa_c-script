@@ -5,7 +5,7 @@ using Aki.Config;
 using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Skin.Skip;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 {
-	// Token: 0x02004BE7 RID: 19431
+	// Token: 0x02003B98 RID: 15256
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WeaponSkinTabView : UiTabViewBase
 	{
-		// Token: 0x060323DE RID: 205790 RVA: 0x00BABA18 File Offset: 0x00BA9C18
+		// Token: 0x06027182 RID: 160130 RVA: 0x00AEFFB8 File Offset: 0x00AEE1B8
 		protected override void OnRegisterComponent()
 		{
 			this.RootViewModel = (SkinRootViewModel)this.ExtraParams;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			};
 		}
 
-		// Token: 0x060323DF RID: 205791 RVA: 0x00BABBC8 File Offset: 0x00BA9DC8
+		// Token: 0x06027183 RID: 160131 RVA: 0x00AF0168 File Offset: 0x00AEE368
 		private UniTask InitGrid()
 		{
 			WeaponSkinTabView.<InitGrid>d__9 <InitGrid>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			return <InitGrid>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060323E0 RID: 205792 RVA: 0x00BABC0C File Offset: 0x00BA9E0C
+		// Token: 0x06027184 RID: 160132 RVA: 0x00AF01AC File Offset: 0x00AEE3AC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WeaponSkinTabView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060323E1 RID: 205793 RVA: 0x00BABC50 File Offset: 0x00BA9E50
+		// Token: 0x06027185 RID: 160133 RVA: 0x00AF01F0 File Offset: 0x00AEE3F0
 		protected override void OnStart()
 		{
 			this.ObtainLayout = new GenericLayout<SkinObtainItem, ISkinSkipData>(base.GetLayoutBase(6), new Func<SkinObtainItem>(this.InitObtainItem), base.GetItem(7).GetOwner() as AUIBaseActor, false, true);
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			extendToggle2.SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x060323E2 RID: 205794 RVA: 0x00BABCCD File Offset: 0x00BA9ECD
+		// Token: 0x06027186 RID: 160134 RVA: 0x00AF026D File Offset: 0x00AEE46D
 		protected override void AddEventListener()
 		{
 			WeaponSkinViewModel viewModel = this.ViewModel;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			viewModel.AddEventListener();
 		}
 
-		// Token: 0x060323E3 RID: 205795 RVA: 0x00BABCDF File Offset: 0x00BA9EDF
+		// Token: 0x06027187 RID: 160135 RVA: 0x00AF027F File Offset: 0x00AEE47F
 		protected override void RemoveEventListener()
 		{
 			WeaponSkinViewModel viewModel = this.ViewModel;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			viewModel.RemoveEventListener();
 		}
 
-		// Token: 0x060323E4 RID: 205796 RVA: 0x00BABCF4 File Offset: 0x00BA9EF4
+		// Token: 0x06027188 RID: 160136 RVA: 0x00AF0294 File Offset: 0x00AEE494
 		protected override void OnBeforeShow()
 		{
 			this.ViewModel.RefreshEquipSkinId();
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			this.RootViewModel.SetModelState(EModelStateInSkinView.ShowRole, false);
 		}
 
-		// Token: 0x060323E5 RID: 205797 RVA: 0x00BABDB0 File Offset: 0x00BA9FB0
+		// Token: 0x06027189 RID: 160137 RVA: 0x00AF0350 File Offset: 0x00AEE550
 		protected override void OnBeforeHide()
 		{
 			if (this.ViewModel.GetIsInShowWeapon())
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}
 		}
 
-		// Token: 0x060323E6 RID: 205798 RVA: 0x00BABE18 File Offset: 0x00BAA018
+		// Token: 0x0602718A RID: 160138 RVA: 0x00AF03B8 File Offset: 0x00AEE5B8
 		protected override void OnBeforeDestroy()
 		{
 			this.ViewModel.UnBind(new Action<EWeaponSkinTabViewData>(this.OnViewModelUpdate));
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}
 		}
 
-		// Token: 0x060323E7 RID: 205799 RVA: 0x00BABE8C File Offset: 0x00BAA08C
+		// Token: 0x0602718B RID: 160139 RVA: 0x00AF042C File Offset: 0x00AEE62C
 		private void UpdateGridSelected()
 		{
 			int selectedSkinId = this.ViewModel.GetSelectedSkinId();
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			this.SelectedGrid(dataIndexBySkinId);
 		}
 
-		// Token: 0x060323E8 RID: 205800 RVA: 0x00BABEF2 File Offset: 0x00BAA0F2
+		// Token: 0x0602718C RID: 160140 RVA: 0x00AF0492 File Offset: 0x00AEE692
 		private void WeaponHideUiClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -190,19 +190,19 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			this.RootViewModel.SetRootUiVisible(false, false);
 		}
 
-		// Token: 0x060323E9 RID: 205801 RVA: 0x00BABF2D File Offset: 0x00BAA12D
+		// Token: 0x0602718D RID: 160141 RVA: 0x00AF04CD File Offset: 0x00AEE6CD
 		private void WeaponSwitchShowClick(EToggleState state)
 		{
 			this.ViewModel.SetIsInShowWeapon(state == EToggleState.ETT_Checked, false);
 		}
 
-		// Token: 0x060323EA RID: 205802 RVA: 0x00BABF3F File Offset: 0x00BAA13F
+		// Token: 0x0602718E RID: 160142 RVA: 0x00AF04DF File Offset: 0x00AEE6DF
 		public void WeaponConfirmClick()
 		{
 			this.TrySendPbEquipTakeOnRequest(this.RootViewModel.RoleId, this.ViewModel.GetSelectedSkinId());
 		}
 
-		// Token: 0x060323EB RID: 205803 RVA: 0x00BABF60 File Offset: 0x00BAA160
+		// Token: 0x0602718F RID: 160143 RVA: 0x00AF0500 File Offset: 0x00AEE700
 		private void OnViewModelUpdate(EWeaponSkinTabViewData data)
 		{
 			switch (data)
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}
 		}
 
-		// Token: 0x060323EC RID: 205804 RVA: 0x00BAC04A File Offset: 0x00BAA24A
+		// Token: 0x06027190 RID: 160144 RVA: 0x00AF05EA File Offset: 0x00AEE7EA
 		private WeaponSkinGridItem InitGridItem()
 		{
 			WeaponSkinGridItem weaponSkinGridItem = new WeaponSkinGridItem();
@@ -259,14 +259,14 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			return weaponSkinGridItem;
 		}
 
-		// Token: 0x060323ED RID: 205805 RVA: 0x00BAC078 File Offset: 0x00BAA278
+		// Token: 0x06027191 RID: 160145 RVA: 0x00AF0618 File Offset: 0x00AEE818
 		private void GridItemClick(MediumItemGridExtendCallback parameters)
 		{
 			int skinId = ((WeaponSkinData)parameters.Data).SkinId;
 			this.ViewModel.SetSelectedSkinId(skinId, false);
 		}
 
-		// Token: 0x060323EE RID: 205806 RVA: 0x00BAC0A3 File Offset: 0x00BAA2A3
+		// Token: 0x06027192 RID: 160146 RVA: 0x00AF0643 File Offset: 0x00AEE843
 		private void HideWeaponObserver()
 		{
 			if (this.WeaponObserver != null)
@@ -279,19 +279,19 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}
 		}
 
-		// Token: 0x060323EF RID: 205807 RVA: 0x00BAC0DF File Offset: 0x00BAA2DF
+		// Token: 0x06027193 RID: 160147 RVA: 0x00AF067F File Offset: 0x00AEE87F
 		private void ShowWeaponObserver(int weaponIncId, int skinId)
 		{
 			WeaponController.Instance.SelectedWeaponSkinChange(weaponIncId, skinId, this.WeaponObserver, this.WeaponScabbardObserver, false);
 		}
 
-		// Token: 0x060323F0 RID: 205808 RVA: 0x00BAC0FA File Offset: 0x00BAA2FA
+		// Token: 0x06027194 RID: 160148 RVA: 0x00AF069A File Offset: 0x00AEE89A
 		private SkinObtainItem InitObtainItem()
 		{
 			return new SkinObtainItem();
 		}
 
-		// Token: 0x060323F1 RID: 205809 RVA: 0x00BAC104 File Offset: 0x00BAA304
+		// Token: 0x06027195 RID: 160149 RVA: 0x00AF06A4 File Offset: 0x00AEE8A4
 		public void ReleaseWeaponObserver()
 		{
 			if (this.WeaponObserver != null)
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}
 		}
 
-		// Token: 0x060323F2 RID: 205810 RVA: 0x00BAC18C File Offset: 0x00BAA38C
+		// Token: 0x06027196 RID: 160150 RVA: 0x00AF072C File Offset: 0x00AEE92C
 		public void RecoverySceneRoleActor()
 		{
 			if (this.ViewModel.GetIsInShowWeapon())
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			uiRoleWeaponComponent.Refresh();
 		}
 
-		// Token: 0x060323F3 RID: 205811 RVA: 0x00BAC1DC File Offset: 0x00BAA3DC
+		// Token: 0x06027197 RID: 160151 RVA: 0x00AF077C File Offset: 0x00AEE97C
 		public void RecoverySceneRoleActorBySkin(int weaponIncId, int skinId)
 		{
 			if (this.ViewModel.GetIsInShowWeapon())
@@ -361,21 +361,21 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			uiRoleWeaponComponent.SetWeaponByWeaponData(weaponDataByIncId, skinId);
 		}
 
-		// Token: 0x060323F4 RID: 205812 RVA: 0x00BAC23A File Offset: 0x00BAA43A
+		// Token: 0x06027198 RID: 160152 RVA: 0x00AF07DA File Offset: 0x00AEE9DA
 		public void SelectedGrid(int index)
 		{
 			this.GridLayout.DeselectCurrentGridProxy();
 			this.GridLayout.SelectGridProxy(index, true);
 		}
 
-		// Token: 0x060323F5 RID: 205813 RVA: 0x00BAC254 File Offset: 0x00BAA454
+		// Token: 0x06027199 RID: 160153 RVA: 0x00AF07F4 File Offset: 0x00AEE9F4
 		public void RefreshText(string name, string bgDescription)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(8), name, Array.Empty<object>());
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(9), bgDescription, Array.Empty<object>());
 		}
 
-		// Token: 0x060323F6 RID: 205814 RVA: 0x00BAC285 File Offset: 0x00BAA485
+		// Token: 0x0602719A RID: 160154 RVA: 0x00AF0825 File Offset: 0x00AEEA25
 		public void RefreshConfirmBox(bool isSame)
 		{
 			UUIButtonComponent button = base.GetButton(5);
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			button.SetSelfInteractive(!isSame);
 		}
 
-		// Token: 0x060323F7 RID: 205815 RVA: 0x00BAC29C File Offset: 0x00BAA49C
+		// Token: 0x0602719B RID: 160155 RVA: 0x00AF083C File Offset: 0x00AEEA3C
 		public void RefreshGridSelect(int lastIndex, int nowIndex)
 		{
 			WeaponSkinGridItem layoutItemByIndex = this.GridLayout.GetLayoutItemByIndex(lastIndex);
@@ -402,7 +402,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			layoutItemByIndex2.RefreshVisible();
 		}
 
-		// Token: 0x060323F8 RID: 205816 RVA: 0x00BAC2CC File Offset: 0x00BAA4CC
+		// Token: 0x0602719C RID: 160156 RVA: 0x00AF086C File Offset: 0x00AEEA6C
 		public void RefreshBottom(WeaponSkinData data, bool isSame)
 		{
 			bool isLock = data.GetIsLock();
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}
 		}
 
-		// Token: 0x060323F9 RID: 205817 RVA: 0x00BAC380 File Offset: 0x00BAA580
+		// Token: 0x0602719D RID: 160157 RVA: 0x00AF0920 File Offset: 0x00AEEB20
 		public void HideView()
 		{
 			UUIItem item = base.GetItem(0);
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			extendToggle.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x060323FA RID: 205818 RVA: 0x00BAC3C0 File Offset: 0x00BAA5C0
+		// Token: 0x0602719E RID: 160158 RVA: 0x00AF0960 File Offset: 0x00AEEB60
 		public void ShowView()
 		{
 			UUIItem item = base.GetItem(0);
@@ -466,7 +466,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			extendToggle.RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x060323FB RID: 205819 RVA: 0x00BAC400 File Offset: 0x00BAA600
+		// Token: 0x0602719F RID: 160159 RVA: 0x00AF09A0 File Offset: 0x00AEEBA0
 		public void SwitchRoleWeaponShow(int skinId)
 		{
 			if (skinId == -1)
@@ -504,29 +504,29 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}
 			this.RootViewModel.SetModelState(EModelStateInSkinView.ShowRole, false);
 			this.HideWeaponObserver();
-			UiCameraHandleData newHandleData = UiCameraHandleData.NewByView(EUiTabViewName.WeaponSkinTabView, null, null);
+			UiCameraHandleData handleData = UiCameraUtil.CreateHandleDataByView(EUiTabViewName.WeaponSkinTabView);
 			UiLayer.Instance.SetShowMaskLayer("WeaponSkinCamera", true);
-			UiCameraAnimationManager.Instance.PushCameraHandle(newHandleData, true, true, "1001", true, delegate(UiCameraAnimationDefine.IFinishData _)
+			UiCameraModel.Instance.PushCameraHandle(handleData, true, true, "1001", true, delegate(UiCameraDefine.IFinishData _)
 			{
 				UiLayer.Instance.SetShowMaskLayer("WeaponSkinCamera", false);
 			});
 			WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.RoleWeaponTabView);
 		}
 
-		// Token: 0x060323FC RID: 205820 RVA: 0x00BAC504 File Offset: 0x00BAA704
+		// Token: 0x060271A0 RID: 160160 RVA: 0x00AF0A8C File Offset: 0x00AEEC8C
 		public void SwitchWeaponShow(int weaponIncId, int skinId)
 		{
 			this.RootViewModel.SetModelState(EModelStateInSkinView.ShowWeapon, false);
 			UiLayer.Instance.SetShowMaskLayer("WeaponSkinCamera", true);
-			UiCameraAnimationManager.Instance.PushCameraHandleByHandleName("1072", true, true, "1001", true, delegate(UiCameraAnimationDefine.IFinishData _)
+			UiCameraModel.Instance.PushCameraHandleByHandleName("1072", true, true, "1001", true, delegate(UiCameraDefine.IFinishData _)
 			{
 				UiLayer.Instance.SetShowMaskLayer("WeaponSkinCamera", false);
 				WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.WeaponLevelUpView);
 				this.ShowWeaponObserver(weaponIncId, skinId);
-			}, null);
+			});
 		}
 
-		// Token: 0x060323FD RID: 205821 RVA: 0x00BAC578 File Offset: 0x00BAA778
+		// Token: 0x060271A1 RID: 160161 RVA: 0x00AF0AF8 File Offset: 0x00AEECF8
 		private void InitWeaponObserver(int weaponIncId)
 		{
 			WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(weaponIncId);
@@ -545,7 +545,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			uiModelDataComponent.SetLoadingIconFollowState(false);
 		}
 
-		// Token: 0x060323FE RID: 205822 RVA: 0x00BAC5D0 File Offset: 0x00BAA7D0
+		// Token: 0x060271A2 RID: 160162 RVA: 0x00AF0B50 File Offset: 0x00AEED50
 		private void InitWeaponScabbardObserver(int weaponIncId)
 		{
 			WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(weaponIncId);
@@ -553,14 +553,14 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			this.WeaponScabbardObserver.Model.CheckGetComponent<UiWeaponDataComponent>().SetWeaponData(weaponDataByIncId);
 		}
 
-		// Token: 0x060323FF RID: 205823 RVA: 0x00BAC60F File Offset: 0x00BAA80F
+		// Token: 0x060271A3 RID: 160163 RVA: 0x00AF0B8F File Offset: 0x00AEED8F
 		public void InitWeaponModel(int weaponIncId, int skinId)
 		{
 			this.InitWeaponObserver(weaponIncId);
 			this.InitWeaponScabbardObserver(weaponIncId);
 		}
 
-		// Token: 0x06032400 RID: 205824 RVA: 0x00BAC620 File Offset: 0x00BAA820
+		// Token: 0x060271A4 RID: 160164 RVA: 0x00AF0BA0 File Offset: 0x00AEEDA0
 		public void SwitchWeaponSkinModel(int weaponIncId, int skinId, bool isInShowWeapon)
 		{
 			if (isInShowWeapon)
@@ -612,13 +612,13 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			}
 		}
 
-		// Token: 0x06032401 RID: 205825 RVA: 0x00BAC6D6 File Offset: 0x00BAA8D6
+		// Token: 0x060271A5 RID: 160165 RVA: 0x00AF0C56 File Offset: 0x00AEEE56
 		public void ShowEquipTips()
 		{
 			ScrollingTipsController.Instance.ShowTipsById("WeaponSkinReplaceTip", Array.Empty<object>());
 		}
 
-		// Token: 0x06032402 RID: 205826 RVA: 0x00BAC6EC File Offset: 0x00BAA8EC
+		// Token: 0x060271A6 RID: 160166 RVA: 0x00AF0C6C File Offset: 0x00AEEE6C
 		public void TrySendPbEquipTakeOnRequest(int roleId, int skinId)
 		{
 			int? roleIdBySkinId = WeaponSkinModel.Instance.GetRoleIdBySkinId(skinId);
@@ -643,52 +643,52 @@ namespace CSharpScript.Game.Module.Skin.Tab.Weapon
 			action();
 		}
 
-		// Token: 0x0401ABBA RID: 109498
+		// Token: 0x04015515 RID: 87317
 		private SkinRootViewModel RootViewModel;
 
-		// Token: 0x0401ABBB RID: 109499
+		// Token: 0x04015516 RID: 87318
 		private WeaponSkinViewModel ViewModel;
 
-		// Token: 0x0401ABBC RID: 109500
+		// Token: 0x04015517 RID: 87319
 		protected GenericLayout<WeaponSkinGridItem, WeaponSkinData> GridLayout;
 
-		// Token: 0x0401ABBD RID: 109501
+		// Token: 0x04015518 RID: 87320
 		protected GenericLayout<SkinObtainItem, ISkinSkipData> ObtainLayout;
 
-		// Token: 0x0401ABBE RID: 109502
+		// Token: 0x04015519 RID: 87321
 		[Nullable(2)]
 		private SkeletalObserverHandle WeaponObserver;
 
-		// Token: 0x0401ABBF RID: 109503
+		// Token: 0x0401551A RID: 87322
 		[Nullable(2)]
 		private SkeletalObserverHandle WeaponScabbardObserver;
 
-		// Token: 0x0401ABC0 RID: 109504
+		// Token: 0x0401551B RID: 87323
 		private bool IsFirstRefresh = true;
 
-		// Token: 0x0200ADD6 RID: 44502
+		// Token: 0x020097F5 RID: 38901
 		[NullableContext(0)]
 		private enum EComponentDefine
 		{
-			// Token: 0x04034CBC RID: 216252
+			// Token: 0x0402F663 RID: 194147
 			TopAndRightItem,
-			// Token: 0x04034CBD RID: 216253
+			// Token: 0x0402F664 RID: 194148
 			GridLayout,
-			// Token: 0x04034CBE RID: 216254
+			// Token: 0x0402F665 RID: 194149
 			GridItem,
-			// Token: 0x04034CBF RID: 216255
+			// Token: 0x0402F666 RID: 194150
 			HideUiToggle,
-			// Token: 0x04034CC0 RID: 216256
+			// Token: 0x0402F667 RID: 194151
 			SwitchShowToggle,
-			// Token: 0x04034CC1 RID: 216257
+			// Token: 0x0402F668 RID: 194152
 			ConfirmBtn,
-			// Token: 0x04034CC2 RID: 216258
+			// Token: 0x0402F669 RID: 194153
 			ObtainLayout,
-			// Token: 0x04034CC3 RID: 216259
+			// Token: 0x0402F66A RID: 194154
 			ObtainItem,
-			// Token: 0x04034CC4 RID: 216260
+			// Token: 0x0402F66B RID: 194155
 			WeaponName,
-			// Token: 0x04034CC5 RID: 216261
+			// Token: 0x0402F66C RID: 194156
 			WeaponDesc
 		}
 	}

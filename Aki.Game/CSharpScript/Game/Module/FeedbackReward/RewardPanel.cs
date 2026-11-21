@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FeedbackReward
 {
-	// Token: 0x02005A87 RID: 23175
+	// Token: 0x02004A63 RID: 19043
 	public class RewardPanel : UiPanelBase
 	{
-		// Token: 0x0603AB3A RID: 240442 RVA: 0x00DFB810 File Offset: 0x00DF9A10
+		// Token: 0x0602FA83 RID: 195203 RVA: 0x00D4BDA4 File Offset: 0x00D49FA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AB3B RID: 240443 RVA: 0x00DFB87C File Offset: 0x00DF9A7C
+		// Token: 0x0602FA84 RID: 195204 RVA: 0x00D4BE10 File Offset: 0x00D4A010
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RewardPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AB3C RID: 240444 RVA: 0x00DFB8C0 File Offset: 0x00DF9AC0
+		// Token: 0x0602FA85 RID: 195205 RVA: 0x00D4BE54 File Offset: 0x00D4A054
 		[NullableContext(2)]
 		public void RefreshItem(string texturePath, int? playerTitleId)
 		{
@@ -68,16 +68,16 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			playerTitleItem3.Refresh(playerTitleId, null, new int?((int)playerGender));
 		}
 
-		// Token: 0x0401EA42 RID: 125506
+		// Token: 0x040194E9 RID: 103657
 		[Nullable(2)]
 		private PlayerTitleItem PlayerTitleItem;
 
-		// Token: 0x0200BCBC RID: 48316
+		// Token: 0x0200A6C5 RID: 42693
 		private enum ERewardPanel
 		{
-			// Token: 0x04038F02 RID: 233218
+			// Token: 0x040338CD RID: 211149
 			Texture,
-			// Token: 0x04038F03 RID: 233219
+			// Token: 0x040338CE RID: 211150
 			PlayerTitleItem
 		}
 	}

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200033B RID: 827
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000382 RID: 898
 	public class IEntityTrackControl : ITimelineTrackControlData
 	{
-		// Token: 0x06001054 RID: 4180 RVA: 0x00038A54 File Offset: 0x00036C54
+		// Token: 0x06001186 RID: 4486 RVA: 0x0003BA20 File Offset: 0x00039C20
 		private IEntityTrackControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001055 RID: 4181 RVA: 0x00038A8C File Offset: 0x00036C8C
+		// Token: 0x06001187 RID: 4487 RVA: 0x0003BA58 File Offset: 0x00039C58
 		public static IEntityTrackControl Create([Nullable(2)] IEntityTrackControl instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001056 RID: 4182 RVA: 0x00038A9F File Offset: 0x00036C9F
+		// Token: 0x06001188 RID: 4488 RVA: 0x0003BA6B File Offset: 0x00039C6B
 		public static IEntityTrackControl CreateFromSetValue([Nullable(2)] IEntityTrackControl_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001057 RID: 4183 RVA: 0x00038AB2 File Offset: 0x00036CB2
+		// Token: 0x06001189 RID: 4489 RVA: 0x0003BA7E File Offset: 0x00039C7E
 		public new IEntityTrackControl_SetValue ToSetValue()
 		{
 			return new IEntityTrackControl_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004AE RID: 1198
-		// (get) Token: 0x06001058 RID: 4184 RVA: 0x00038ADD File Offset: 0x00036CDD
-		// (set) Token: 0x06001059 RID: 4185 RVA: 0x00038B08 File Offset: 0x00036D08
+		// Token: 0x170004FC RID: 1276
+		// (get) Token: 0x0600118A RID: 4490 RVA: 0x0003BAA9 File Offset: 0x00039CA9
+		// (set) Token: 0x0600118B RID: 4491 RVA: 0x0003BAD4 File Offset: 0x00039CD4
 		public override ETrackControlMode Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004AF RID: 1199
-		// (get) Token: 0x0600105A RID: 4186 RVA: 0x00038B16 File Offset: 0x00036D16
-		// (set) Token: 0x0600105B RID: 4187 RVA: 0x00038B41 File Offset: 0x00036D41
+		// Token: 0x170004FD RID: 1277
+		// (get) Token: 0x0600118C RID: 4492 RVA: 0x0003BAE2 File Offset: 0x00039CE2
+		// (set) Token: 0x0600118D RID: 4493 RVA: 0x0003BB0D File Offset: 0x00039D0D
 		public virtual int EntityId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004B0 RID: 1200
-		// (get) Token: 0x0600105C RID: 4188 RVA: 0x00038B50 File Offset: 0x00036D50
-		// (set) Token: 0x0600105D RID: 4189 RVA: 0x00038BE3 File Offset: 0x00036DE3
+		// Token: 0x170004FE RID: 1278
+		// (get) Token: 0x0600118E RID: 4494 RVA: 0x0003BB1C File Offset: 0x00039D1C
+		// (set) Token: 0x0600118F RID: 4495 RVA: 0x0003BBAF File Offset: 0x00039DAF
 		public virtual List<IEntityTrackControlPoint> ControlPoints
 		{
 			get
@@ -146,18 +144,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000DBD RID: 3517
+		// Token: 0x04000EA8 RID: 3752
 		[Nullable(2)]
 		protected new IEntityTrackControl FbInstance;
 
-		// Token: 0x04000DBE RID: 3518
+		// Token: 0x04000EA9 RID: 3753
 		[Nullable(2)]
 		protected new IEntityTrackControl_SetValue PocoInterface;
 
-		// Token: 0x04000DBF RID: 3519
+		// Token: 0x04000EAA RID: 3754
 		private List<IEntityTrackControlPoint> _ControlPointsCache;
 
-		// Token: 0x04000DC0 RID: 3520
+		// Token: 0x04000EAB RID: 3755
 		private bool _ControlPointsInited;
 	}
 }

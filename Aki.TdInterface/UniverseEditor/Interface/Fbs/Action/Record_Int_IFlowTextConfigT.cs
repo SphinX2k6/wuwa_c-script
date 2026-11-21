@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007620 RID: 30240
+	// Token: 0x02007E2E RID: 32302
 	public class Record_Int_IFlowTextConfigT
 	{
-		// Token: 0x1700E5A3 RID: 58787
-		// (get) Token: 0x0603714A RID: 225610 RVA: 0x00778723 File Offset: 0x00776923
-		// (set) Token: 0x0603714B RID: 225611 RVA: 0x0077872B File Offset: 0x0077692B
+		// Token: 0x1700F1E1 RID: 61921
+		// (get) Token: 0x0603A5EF RID: 239087 RVA: 0x007DC81F File Offset: 0x007DAA1F
+		// (set) Token: 0x0603A5F0 RID: 239088 RVA: 0x007DC827 File Offset: 0x007DAA27
 		public int Key { get; set; }
 
-		// Token: 0x1700E5A4 RID: 58788
-		// (get) Token: 0x0603714C RID: 225612 RVA: 0x00778734 File Offset: 0x00776934
-		// (set) Token: 0x0603714D RID: 225613 RVA: 0x0077873C File Offset: 0x0077693C
+		// Token: 0x1700F1E2 RID: 61922
+		// (get) Token: 0x0603A5F1 RID: 239089 RVA: 0x007DC830 File Offset: 0x007DAA30
+		// (set) Token: 0x0603A5F2 RID: 239090 RVA: 0x007DC838 File Offset: 0x007DAA38
 		public IFlowTextConfigT Value { get; set; }
 
-		// Token: 0x0603714E RID: 225614 RVA: 0x00778745 File Offset: 0x00776945
+		// Token: 0x0603A5F3 RID: 239091 RVA: 0x007DC841 File Offset: 0x007DAA41
 		public Record_Int_IFlowTextConfigT()
 		{
 			this.Key = 0;

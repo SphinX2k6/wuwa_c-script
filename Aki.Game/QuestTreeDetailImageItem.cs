@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026B8 RID: 9912
+// Token: 0x02001BA3 RID: 7075
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeDetailImageItem : UiPanelBase
 {
-	// Token: 0x0601451D RID: 83229 RVA: 0x00523CD5 File Offset: 0x00521ED5
+	// Token: 0x060119FF RID: 72191 RVA: 0x00532A0D File Offset: 0x00530C0D
 	public QuestTreeDetailImageItem(QuestTreeNodeData data)
 	{
 	}
 
-	// Token: 0x0601451E RID: 83230 RVA: 0x00523CE4 File Offset: 0x00521EE4
+	// Token: 0x06011A00 RID: 72192 RVA: 0x00532A1C File Offset: 0x00530C1C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -46,7 +46,7 @@ public class QuestTreeDetailImageItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601451F RID: 83231 RVA: 0x00523E10 File Offset: 0x00522010
+	// Token: 0x06011A01 RID: 72193 RVA: 0x00532B48 File Offset: 0x00530D48
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestTreeDetailImageItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -57,19 +57,19 @@ public class QuestTreeDetailImageItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014520 RID: 83232 RVA: 0x00523E53 File Offset: 0x00522053
+	// Token: 0x06011A02 RID: 72194 RVA: 0x00532B8B File Offset: 0x00530D8B
 	protected override void OnStart()
 	{
 		this.RefreshBtnState();
 	}
 
-	// Token: 0x06014521 RID: 83233 RVA: 0x00523E5B File Offset: 0x0052205B
+	// Token: 0x06011A03 RID: 72195 RVA: 0x00532B93 File Offset: 0x00530D93
 	public void RefreshInfo(QuestTreeNodeData data)
 	{
 		this.RefreshInfoAsync(data);
 	}
 
-	// Token: 0x06014522 RID: 83234 RVA: 0x00523E68 File Offset: 0x00522068
+	// Token: 0x06011A04 RID: 72196 RVA: 0x00532BA0 File Offset: 0x00530DA0
 	public UniTask RefreshInfoAsync(QuestTreeNodeData data)
 	{
 		QuestTreeDetailImageItem.<RefreshInfoAsync>d__9 <RefreshInfoAsync>d__;
@@ -81,7 +81,7 @@ public class QuestTreeDetailImageItem : UiPanelBase
 		return <RefreshInfoAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014523 RID: 83235 RVA: 0x00523EB4 File Offset: 0x005220B4
+	// Token: 0x06011A05 RID: 72197 RVA: 0x00532BEC File Offset: 0x00530DEC
 	private void RefreshBtnState()
 	{
 		base.GetItem(2).SetUIActive(this.Data.State == EQuestTreeNodeState.Locked);
@@ -89,7 +89,7 @@ public class QuestTreeDetailImageItem : UiPanelBase
 		base.GetItem(5).SetUIActive(this.Data.State >= EQuestTreeNodeState.Finished);
 	}
 
-	// Token: 0x06014524 RID: 83236 RVA: 0x00523F14 File Offset: 0x00522114
+	// Token: 0x06011A06 RID: 72198 RVA: 0x00532C4C File Offset: 0x00530E4C
 	private void FixTextureSize()
 	{
 		UUITexture texture = base.GetTexture(1);
@@ -108,7 +108,7 @@ public class QuestTreeDetailImageItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014525 RID: 83237 RVA: 0x00523F80 File Offset: 0x00522180
+	// Token: 0x06011A07 RID: 72199 RVA: 0x00532CB8 File Offset: 0x00530EB8
 	private void OnClickImage()
 	{
 		if (this.Data.State < EQuestTreeNodeState.Finished)
@@ -118,35 +118,35 @@ public class QuestTreeDetailImageItem : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.QuestTreeNodeImageView, this.Data, null);
 	}
 
-	// Token: 0x040098CD RID: 39117
+	// Token: 0x04009A25 RID: 39461
 	private float OriginalWidth;
 
-	// Token: 0x040098CE RID: 39118
+	// Token: 0x04009A26 RID: 39462
 	private float OriginalHeight;
 
-	// Token: 0x040098CF RID: 39119
+	// Token: 0x04009A27 RID: 39463
 	private QuestTreeNodeData Data = data;
 
-	// Token: 0x02008D0E RID: 36110
+	// Token: 0x02007E97 RID: 32407
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DC80 RID: 187520
+		// Token: 0x04028F97 RID: 167831
 		public const int ItemSelf = 0;
 
-		// Token: 0x0402DC81 RID: 187521
+		// Token: 0x04028F98 RID: 167832
 		public const int TextureImage = 1;
 
-		// Token: 0x0402DC82 RID: 187522
+		// Token: 0x04028F99 RID: 167833
 		public const int ItemLock = 2;
 
-		// Token: 0x0402DC83 RID: 187523
+		// Token: 0x04028F9A RID: 167834
 		public const int BtnImage = 3;
 
-		// Token: 0x0402DC84 RID: 187524
+		// Token: 0x04028F9B RID: 167835
 		public const int ItemInProgress = 4;
 
-		// Token: 0x0402DC85 RID: 187525
+		// Token: 0x04028F9C RID: 167836
 		public const int ItemIcon = 5;
 	}
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F87 RID: 12167
+// Token: 0x020024DB RID: 9435
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifyFormationAttributeExecution : PeriodExecution
 {
-	// Token: 0x06019D88 RID: 105864 RVA: 0x006BEBBE File Offset: 0x006BCDBE
+	// Token: 0x0601769A RID: 95898 RVA: 0x006E549E File Offset: 0x006E369E
 	public ModifyFormationAttributeExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019D89 RID: 105865 RVA: 0x006BEBC8 File Offset: 0x006BCDC8
+	// Token: 0x0601769B RID: 95899 RVA: 0x006E54A8 File Offset: 0x006E36A8
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -21,7 +21,7 @@ public class ModifyFormationAttributeExecution : PeriodExecution
 		this.Overlay = (extraEffectParameters_ != null && extraEffectParameters_.Length > 1 && int.Parse(extraEffectParameters_[1]) == 1);
 	}
 
-	// Token: 0x06019D8A RID: 105866 RVA: 0x006BEC50 File Offset: 0x006BCE50
+	// Token: 0x0601769C RID: 95900 RVA: 0x006E5530 File Offset: 0x006E3730
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -38,15 +38,15 @@ public class ModifyFormationAttributeExecution : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x0400C32B RID: 49963
+	// Token: 0x0400C6D4 RID: 50900
 	public int AttributeId;
 
-	// Token: 0x0400C32C RID: 49964
+	// Token: 0x0400C6D5 RID: 50901
 	public float Rate;
 
-	// Token: 0x0400C32D RID: 49965
+	// Token: 0x0400C6D6 RID: 50902
 	public float Value;
 
-	// Token: 0x0400C32E RID: 49966
+	// Token: 0x0400C6D7 RID: 50903
 	public bool Overlay;
 }

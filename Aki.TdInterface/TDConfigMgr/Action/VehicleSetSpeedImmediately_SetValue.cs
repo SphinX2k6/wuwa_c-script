@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002278 RID: 8824
+	// Token: 0x020024E5 RID: 9445
 	public class VehicleSetSpeedImmediately_SetValue
 	{
-		// Token: 0x04007351 RID: 29521
-		[Nullable(1)]
+		// Token: 0x0400799E RID: 31134
 		public ISetVehicleSpeedImmediatelyType SetSpeedConfig;
 	}
 }

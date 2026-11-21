@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200414F RID: 16719
+	// Token: 0x02004593 RID: 17811
 	public class ISunSpiritProcessT
 	{
-		// Token: 0x17007681 RID: 30337
-		// (get) Token: 0x060188DE RID: 100574 RVA: 0x0038A16A File Offset: 0x0038836A
-		// (set) Token: 0x060188DF RID: 100575 RVA: 0x0038A172 File Offset: 0x00388372
+		// Token: 0x17007C90 RID: 31888
+		// (get) Token: 0x06019FA6 RID: 106406 RVA: 0x003B4726 File Offset: 0x003B2926
+		// (set) Token: 0x06019FA7 RID: 106407 RVA: 0x003B472E File Offset: 0x003B292E
 		public int LauncherId { get; set; }
 
-		// Token: 0x17007682 RID: 30338
-		// (get) Token: 0x060188E0 RID: 100576 RVA: 0x0038A17B File Offset: 0x0038837B
-		// (set) Token: 0x060188E1 RID: 100577 RVA: 0x0038A183 File Offset: 0x00388383
+		// Token: 0x17007C91 RID: 31889
+		// (get) Token: 0x06019FA8 RID: 106408 RVA: 0x003B4737 File Offset: 0x003B2937
+		// (set) Token: 0x06019FA9 RID: 106409 RVA: 0x003B473F File Offset: 0x003B293F
 		public bool IsRecycle { get; set; }
 
-		// Token: 0x17007683 RID: 30339
-		// (get) Token: 0x060188E2 RID: 100578 RVA: 0x0038A18C File Offset: 0x0038838C
-		// (set) Token: 0x060188E3 RID: 100579 RVA: 0x0038A194 File Offset: 0x00388394
+		// Token: 0x17007C92 RID: 31890
+		// (get) Token: 0x06019FAA RID: 106410 RVA: 0x003B4748 File Offset: 0x003B2948
+		// (set) Token: 0x06019FAB RID: 106411 RVA: 0x003B4750 File Offset: 0x003B2950
 		public byte NullMask { get; set; }
 
-		// Token: 0x060188E4 RID: 100580 RVA: 0x0038A19D File Offset: 0x0038839D
+		// Token: 0x06019FAC RID: 106412 RVA: 0x003B4759 File Offset: 0x003B2959
 		public ISunSpiritProcessT()
 		{
 			this.LauncherId = 0;

@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049FE RID: 18942
+	// Token: 0x02004EBE RID: 20158
 	public class ICheckEntityDistanceConditionT
 	{
-		// Token: 0x17008909 RID: 35081
-		// (get) Token: 0x0601D9C6 RID: 121286 RVA: 0x0042ADB5 File Offset: 0x00428FB5
-		// (set) Token: 0x0601D9C7 RID: 121287 RVA: 0x0042ADBD File Offset: 0x00428FBD
+		// Token: 0x17008FD9 RID: 36825
+		// (get) Token: 0x0601F439 RID: 128057 RVA: 0x0045BA21 File Offset: 0x00459C21
+		// (set) Token: 0x0601F43A RID: 128058 RVA: 0x0045BA29 File Offset: 0x00459C29
 		public ECondition Type { get; set; }
 
-		// Token: 0x1700890A RID: 35082
-		// (get) Token: 0x0601D9C8 RID: 121288 RVA: 0x0042ADC6 File Offset: 0x00428FC6
-		// (set) Token: 0x0601D9C9 RID: 121289 RVA: 0x0042ADCE File Offset: 0x00428FCE
+		// Token: 0x17008FDA RID: 36826
+		// (get) Token: 0x0601F43B RID: 128059 RVA: 0x0045BA32 File Offset: 0x00459C32
+		// (set) Token: 0x0601F43C RID: 128060 RVA: 0x0045BA3A File Offset: 0x00459C3A
 		public TTargetEntityUnion TargetA { get; set; }
 
-		// Token: 0x1700890B RID: 35083
-		// (get) Token: 0x0601D9CA RID: 121290 RVA: 0x0042ADD7 File Offset: 0x00428FD7
-		// (set) Token: 0x0601D9CB RID: 121291 RVA: 0x0042ADDF File Offset: 0x00428FDF
+		// Token: 0x17008FDB RID: 36827
+		// (get) Token: 0x0601F43D RID: 128061 RVA: 0x0045BA43 File Offset: 0x00459C43
+		// (set) Token: 0x0601F43E RID: 128062 RVA: 0x0045BA4B File Offset: 0x00459C4B
 		public TTargetEntityUnion TargetB { get; set; }
 
-		// Token: 0x1700890C RID: 35084
-		// (get) Token: 0x0601D9CC RID: 121292 RVA: 0x0042ADE8 File Offset: 0x00428FE8
-		// (set) Token: 0x0601D9CD RID: 121293 RVA: 0x0042ADF0 File Offset: 0x00428FF0
+		// Token: 0x17008FDC RID: 36828
+		// (get) Token: 0x0601F43F RID: 128063 RVA: 0x0045BA54 File Offset: 0x00459C54
+		// (set) Token: 0x0601F440 RID: 128064 RVA: 0x0045BA5C File Offset: 0x00459C5C
 		public ECompare Compare { get; set; }
 
-		// Token: 0x1700890D RID: 35085
-		// (get) Token: 0x0601D9CE RID: 121294 RVA: 0x0042ADF9 File Offset: 0x00428FF9
-		// (set) Token: 0x0601D9CF RID: 121295 RVA: 0x0042AE01 File Offset: 0x00429001
+		// Token: 0x17008FDD RID: 36829
+		// (get) Token: 0x0601F441 RID: 128065 RVA: 0x0045BA65 File Offset: 0x00459C65
+		// (set) Token: 0x0601F442 RID: 128066 RVA: 0x0045BA6D File Offset: 0x00459C6D
 		public int Distance { get; set; }
 
-		// Token: 0x0601D9D0 RID: 121296 RVA: 0x0042AE0A File Offset: 0x0042900A
+		// Token: 0x0601F443 RID: 128067 RVA: 0x0045BA76 File Offset: 0x00459C76
 		public ICheckEntityDistanceConditionT()
 		{
 			this.Type = ECondition.CompareVar;

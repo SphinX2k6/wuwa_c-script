@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200591B RID: 22811
+	// Token: 0x02005F28 RID: 24360
 	public class ISkyboxComponentT
 	{
-		// Token: 0x1700AB17 RID: 43799
-		// (get) Token: 0x06026922 RID: 157986 RVA: 0x005502C0 File Offset: 0x0054E4C0
-		// (set) Token: 0x06026923 RID: 157987 RVA: 0x005502C8 File Offset: 0x0054E4C8
+		// Token: 0x1700B44B RID: 46155
+		// (get) Token: 0x06028E8C RID: 167564 RVA: 0x00596F2C File Offset: 0x0059512C
+		// (set) Token: 0x06028E8D RID: 167565 RVA: 0x00596F34 File Offset: 0x00595134
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AB18 RID: 43800
-		// (get) Token: 0x06026924 RID: 157988 RVA: 0x005502D1 File Offset: 0x0054E4D1
-		// (set) Token: 0x06026925 RID: 157989 RVA: 0x005502D9 File Offset: 0x0054E4D9
+		// Token: 0x1700B44C RID: 46156
+		// (get) Token: 0x06028E8E RID: 167566 RVA: 0x00596F3D File Offset: 0x0059513D
+		// (set) Token: 0x06028E8F RID: 167567 RVA: 0x00596F45 File Offset: 0x00595145
 		public string WeatherDataAsset { get; set; }
 
-		// Token: 0x1700AB19 RID: 43801
-		// (get) Token: 0x06026926 RID: 157990 RVA: 0x005502E2 File Offset: 0x0054E4E2
-		// (set) Token: 0x06026927 RID: 157991 RVA: 0x005502EA File Offset: 0x0054E4EA
+		// Token: 0x1700B44D RID: 46157
+		// (get) Token: 0x06028E90 RID: 167568 RVA: 0x00596F4E File Offset: 0x0059514E
+		// (set) Token: 0x06028E91 RID: 167569 RVA: 0x00596F56 File Offset: 0x00595156
 		public string PPTODDataAsset { get; set; }
 
-		// Token: 0x1700AB1A RID: 43802
-		// (get) Token: 0x06026928 RID: 157992 RVA: 0x005502F3 File Offset: 0x0054E4F3
-		// (set) Token: 0x06026929 RID: 157993 RVA: 0x005502FB File Offset: 0x0054E4FB
+		// Token: 0x1700B44E RID: 46158
+		// (get) Token: 0x06028E92 RID: 167570 RVA: 0x00596F5F File Offset: 0x0059515F
+		// (set) Token: 0x06028E93 RID: 167571 RVA: 0x00596F67 File Offset: 0x00595167
 		public int SkyboxSetting { get; set; }
 
-		// Token: 0x1700AB1B RID: 43803
-		// (get) Token: 0x0602692A RID: 157994 RVA: 0x00550304 File Offset: 0x0054E504
-		// (set) Token: 0x0602692B RID: 157995 RVA: 0x0055030C File Offset: 0x0054E50C
+		// Token: 0x1700B44F RID: 46159
+		// (get) Token: 0x06028E94 RID: 167572 RVA: 0x00596F70 File Offset: 0x00595170
+		// (set) Token: 0x06028E95 RID: 167573 RVA: 0x00596F78 File Offset: 0x00595178
 		public float FadeTime { get; set; }
 
-		// Token: 0x1700AB1C RID: 43804
-		// (get) Token: 0x0602692C RID: 157996 RVA: 0x00550315 File Offset: 0x0054E515
-		// (set) Token: 0x0602692D RID: 157997 RVA: 0x0055031D File Offset: 0x0054E51D
+		// Token: 0x1700B450 RID: 46160
+		// (get) Token: 0x06028E96 RID: 167574 RVA: 0x00596F81 File Offset: 0x00595181
+		// (set) Token: 0x06028E97 RID: 167575 RVA: 0x00596F89 File Offset: 0x00595189
 		public float Priority { get; set; }
 
-		// Token: 0x1700AB1D RID: 43805
-		// (get) Token: 0x0602692E RID: 157998 RVA: 0x00550326 File Offset: 0x0054E526
-		// (set) Token: 0x0602692F RID: 157999 RVA: 0x0055032E File Offset: 0x0054E52E
+		// Token: 0x1700B451 RID: 46161
+		// (get) Token: 0x06028E98 RID: 167576 RVA: 0x00596F92 File Offset: 0x00595192
+		// (set) Token: 0x06028E99 RID: 167577 RVA: 0x00596F9A File Offset: 0x0059519A
 		public TTriggerModeUnion TriggerMode { get; set; }
 
-		// Token: 0x1700AB1E RID: 43806
-		// (get) Token: 0x06026930 RID: 158000 RVA: 0x00550337 File Offset: 0x0054E537
-		// (set) Token: 0x06026931 RID: 158001 RVA: 0x0055033F File Offset: 0x0054E53F
+		// Token: 0x1700B452 RID: 46162
+		// (get) Token: 0x06028E9A RID: 167578 RVA: 0x00596FA3 File Offset: 0x005951A3
+		// (set) Token: 0x06028E9B RID: 167579 RVA: 0x00596FAB File Offset: 0x005951AB
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026932 RID: 158002 RVA: 0x00550348 File Offset: 0x0054E548
+		// Token: 0x06028E9C RID: 167580 RVA: 0x00596FB4 File Offset: 0x005951B4
 		public ISkyboxComponentT()
 		{
 			this.Disabled = false;

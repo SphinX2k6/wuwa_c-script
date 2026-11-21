@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076A2 RID: 30370
+	// Token: 0x02007EAD RID: 32429
 	public class TDartInteractTypeUnion
 	{
-		// Token: 0x1700E605 RID: 58885
-		// (get) Token: 0x06037420 RID: 226336 RVA: 0x0077D1B8 File Offset: 0x0077B3B8
-		// (set) Token: 0x06037421 RID: 226337 RVA: 0x0077D1C0 File Offset: 0x0077B3C0
+		// Token: 0x1700F241 RID: 62017
+		// (get) Token: 0x0603A8C3 RID: 239811 RVA: 0x007E130C File Offset: 0x007DF50C
+		// (set) Token: 0x0603A8C4 RID: 239812 RVA: 0x007E1314 File Offset: 0x007DF514
 		public TDartInteractType Type { get; set; }
 
-		// Token: 0x1700E606 RID: 58886
-		// (get) Token: 0x06037422 RID: 226338 RVA: 0x0077D1C9 File Offset: 0x0077B3C9
-		// (set) Token: 0x06037423 RID: 226339 RVA: 0x0077D1D1 File Offset: 0x0077B3D1
+		// Token: 0x1700F242 RID: 62018
+		// (get) Token: 0x0603A8C5 RID: 239813 RVA: 0x007E131D File Offset: 0x007DF51D
+		// (set) Token: 0x0603A8C6 RID: 239814 RVA: 0x007E1325 File Offset: 0x007DF525
 		public object Value { get; set; }
 
-		// Token: 0x06037424 RID: 226340 RVA: 0x0077D1DA File Offset: 0x0077B3DA
+		// Token: 0x0603A8C7 RID: 239815 RVA: 0x007E132E File Offset: 0x007DF52E
 		public TDartInteractTypeUnion()
 		{
 			this.Type = TDartInteractType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037425 RID: 226341 RVA: 0x0077D1F0 File Offset: 0x0077B3F0
+		// Token: 0x0603A8C8 RID: 239816 RVA: 0x007E1344 File Offset: 0x007DF544
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037426 RID: 226342 RVA: 0x0077D202 File Offset: 0x0077B402
+		// Token: 0x0603A8C9 RID: 239817 RVA: 0x007E1356 File Offset: 0x007DF556
 		public IDartChampionOwnerInteractTypeT AsIDartChampionOwnerInteractType()
 		{
 			return this.As<IDartChampionOwnerInteractTypeT>();
 		}
 
-		// Token: 0x06037427 RID: 226343 RVA: 0x0077D20A File Offset: 0x0077B40A
+		// Token: 0x0603A8CA RID: 239818 RVA: 0x007E135E File Offset: 0x007DF55E
 		public static TDartInteractTypeUnion FromIDartChampionOwnerInteractType(IDartChampionOwnerInteractTypeT _idartchampionownerinteracttype)
 		{
 			return new TDartInteractTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037428 RID: 226344 RVA: 0x0077D21F File Offset: 0x0077B41F
+		// Token: 0x0603A8CB RID: 239819 RVA: 0x007E1373 File Offset: 0x007DF573
 		public IDartMachineInteractTypeT AsIDartMachineInteractType()
 		{
 			return this.As<IDartMachineInteractTypeT>();
 		}
 
-		// Token: 0x06037429 RID: 226345 RVA: 0x0077D227 File Offset: 0x0077B427
+		// Token: 0x0603A8CC RID: 239820 RVA: 0x007E137B File Offset: 0x007DF57B
 		public static TDartInteractTypeUnion FromIDartMachineInteractType(IDartMachineInteractTypeT _idartmachineinteracttype)
 		{
 			return new TDartInteractTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603742A RID: 226346 RVA: 0x0077D23C File Offset: 0x0077B43C
+		// Token: 0x0603A8CD RID: 239821 RVA: 0x007E1390 File Offset: 0x007DF590
 		public IDartPlayableRoleInteractTypeT AsIDartPlayableRoleInteractType()
 		{
 			return this.As<IDartPlayableRoleInteractTypeT>();
 		}
 
-		// Token: 0x0603742B RID: 226347 RVA: 0x0077D244 File Offset: 0x0077B444
+		// Token: 0x0603A8CE RID: 239822 RVA: 0x007E1398 File Offset: 0x007DF598
 		public static TDartInteractTypeUnion FromIDartPlayableRoleInteractType(IDartPlayableRoleInteractTypeT _idartplayableroleinteracttype)
 		{
 			return new TDartInteractTypeUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603742C RID: 226348 RVA: 0x0077D25C File Offset: 0x0077B45C
+		// Token: 0x0603A8CF RID: 239823 RVA: 0x007E13B0 File Offset: 0x007DF5B0
 		public static int Pack(FlatBufferBuilder builder, TDartInteractTypeUnion _o)
 		{
 			switch (_o.Type)

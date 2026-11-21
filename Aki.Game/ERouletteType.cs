@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002905 RID: 10501
+// Token: 0x02001E80 RID: 7808
 public enum ERouletteType
 {
-	// Token: 0x0400A161 RID: 41313
+	// Token: 0x0400A54C RID: 42316
 	Explore,
-	// Token: 0x0400A162 RID: 41314
+	// Token: 0x0400A54D RID: 42317
 	Function,
-	// Token: 0x0400A163 RID: 41315
+	// Token: 0x0400A54E RID: 42318
 	Motor = 3
 }

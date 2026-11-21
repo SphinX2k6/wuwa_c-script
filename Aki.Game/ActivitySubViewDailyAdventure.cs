@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001212 RID: 4626
+// Token: 0x020006C6 RID: 1734
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 {
-	// Token: 0x06007BD7 RID: 31703 RVA: 0x001A200C File Offset: 0x001A020C
+	// Token: 0x06004F6D RID: 20333 RVA: 0x001AAC84 File Offset: 0x001A8E84
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -54,14 +54,14 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007BD8 RID: 31704 RVA: 0x001A2229 File Offset: 0x001A0429
+	// Token: 0x06004F6E RID: 20334 RVA: 0x001AAEA1 File Offset: 0x001A90A1
 	protected override void OnSetData()
 	{
 		this.DailyAdventureData = (this.ActivityBaseData as ActivityDailyAdventureData);
 		this.ProgressPoint = this.DailyAdventureData.ProgressPoint;
 	}
 
-	// Token: 0x06007BD9 RID: 31705 RVA: 0x001A2250 File Offset: 0x001A0450
+	// Token: 0x06004F6F RID: 20335 RVA: 0x001AAEC8 File Offset: 0x001A90C8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewDailyAdventure.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007BDA RID: 31706 RVA: 0x001A2294 File Offset: 0x001A0494
+	// Token: 0x06004F70 RID: 20336 RVA: 0x001AAF0C File Offset: 0x001A910C
 	[NullableContext(1)]
 	private UniTask CreateRewardItem(AActor itemActor)
 	{
@@ -85,7 +85,7 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		return <CreateRewardItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007BDB RID: 31707 RVA: 0x001A22DF File Offset: 0x001A04DF
+	// Token: 0x06004F71 RID: 20337 RVA: 0x001AAF57 File Offset: 0x001A9157
 	protected override void OnStart()
 	{
 		this.PanelTime = base.GetItem(5);
@@ -95,35 +95,35 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		this.RefreshInfo();
 	}
 
-	// Token: 0x06007BDC RID: 31708 RVA: 0x001A231B File Offset: 0x001A051B
+	// Token: 0x06004F72 RID: 20338 RVA: 0x001AAF93 File Offset: 0x001A9193
 	protected override void OnBeforeDestroy()
 	{
 		this.NiagaraProgressItem.DeactivateSystem();
 		this.NiagaraProgressItem.SetUIActive(false);
 	}
 
-	// Token: 0x06007BDD RID: 31709 RVA: 0x001A2334 File Offset: 0x001A0534
+	// Token: 0x06004F73 RID: 20339 RVA: 0x001AAFAC File Offset: 0x001A91AC
 	[NullableContext(1)]
 	private DailyAdventureTaskItem InitQuestItem()
 	{
 		return new DailyAdventureTaskItem();
 	}
 
-	// Token: 0x06007BDE RID: 31710 RVA: 0x001A233B File Offset: 0x001A053B
+	// Token: 0x06004F74 RID: 20340 RVA: 0x001AAFB3 File Offset: 0x001A91B3
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		EventSystem.Instance.Add(EEventName.ActivityCrossDayRefresh, new Action(this.OnActivityCrossDayRefresh));
 	}
 
-	// Token: 0x06007BDF RID: 31711 RVA: 0x001A2375 File Offset: 0x001A0575
+	// Token: 0x06004F75 RID: 20341 RVA: 0x001AAFED File Offset: 0x001A91ED
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		EventSystem.Instance.Remove(EEventName.ActivityCrossDayRefresh, new Action(this.OnActivityCrossDayRefresh));
 	}
 
-	// Token: 0x06007BE0 RID: 31712 RVA: 0x001A23AF File Offset: 0x001A05AF
+	// Token: 0x06004F76 RID: 20342 RVA: 0x001AB027 File Offset: 0x001A9227
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (id == this.ActivityBaseData.Id)
@@ -133,7 +133,7 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007BE1 RID: 31713 RVA: 0x001A23CB File Offset: 0x001A05CB
+	// Token: 0x06004F77 RID: 20343 RVA: 0x001AB043 File Offset: 0x001A9243
 	protected override void OnRefreshView()
 	{
 		this.RefreshTimerText();
@@ -142,7 +142,7 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		this.DailyAdventureData.ReadDailyTips();
 	}
 
-	// Token: 0x06007BE2 RID: 31714 RVA: 0x001A23EC File Offset: 0x001A05EC
+	// Token: 0x06004F78 RID: 20344 RVA: 0x001AB064 File Offset: 0x001A9264
 	private void RefreshInfo()
 	{
 		base.GetText(4).SetText(this.DailyAdventureData.GetTitle(), true);
@@ -157,14 +157,14 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06007BE3 RID: 31715 RVA: 0x001A24C0 File Offset: 0x001A06C0
+	// Token: 0x06004F79 RID: 20345 RVA: 0x001AB138 File Offset: 0x001A9338
 	private void RefreshTask()
 	{
 		List<DailyAdventureTaskData> allTaskInfo = this.DailyAdventureData.GetAllTaskInfo();
 		this.TaskLayout.RefreshByData(allTaskInfo, null, false);
 	}
 
-	// Token: 0x06007BE4 RID: 31716 RVA: 0x001A24E8 File Offset: 0x001A06E8
+	// Token: 0x06004F7A RID: 20346 RVA: 0x001AB160 File Offset: 0x001A9360
 	private void RefreshReward()
 	{
 		base.GetText(7).SetText(this.DailyAdventureData.ProgressPoint.ToString(), true);
@@ -183,13 +183,13 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007BE5 RID: 31717 RVA: 0x001A2591 File Offset: 0x001A0791
+	// Token: 0x06004F7B RID: 20347 RVA: 0x001AB209 File Offset: 0x001A9409
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06007BE6 RID: 31718 RVA: 0x001A259C File Offset: 0x001A079C
+	// Token: 0x06004F7C RID: 20348 RVA: 0x001AB214 File Offset: 0x001A9414
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -202,7 +202,7 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007BE7 RID: 31719 RVA: 0x001A25D8 File Offset: 0x001A07D8
+	// Token: 0x06004F7D RID: 20349 RVA: 0x001AB250 File Offset: 0x001A9450
 	private void OnActivityCrossDayRefresh()
 	{
 		if (!this.DailyAdventureData.CheckIfInShowTime())
@@ -213,10 +213,10 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x040038BE RID: 14526
+	// Token: 0x04003957 RID: 14679
 	protected ActivityDailyAdventureData DailyAdventureData;
 
-	// Token: 0x040038BF RID: 14527
+	// Token: 0x04003958 RID: 14680
 	[Nullable(new byte[]
 	{
 		2,
@@ -225,69 +225,69 @@ public class ActivitySubViewDailyAdventure : ActivitySubViewBase
 	})]
 	protected GenericLayout<DailyAdventureTaskItem, DailyAdventureTaskData> TaskLayout;
 
-	// Token: 0x040038C0 RID: 14528
+	// Token: 0x04003959 RID: 14681
 	[Nullable(1)]
 	protected List<DailyAdventureRewardItem> RewardItemList = new List<DailyAdventureRewardItem>();
 
-	// Token: 0x040038C1 RID: 14529
+	// Token: 0x0400395A RID: 14682
 	private UUIItem PanelTime;
 
-	// Token: 0x040038C2 RID: 14530
+	// Token: 0x0400395B RID: 14683
 	private UUIText TextTime;
 
-	// Token: 0x040038C3 RID: 14531
+	// Token: 0x0400395C RID: 14684
 	private UUINiagara NiagaraProgressItem;
 
-	// Token: 0x040038C4 RID: 14532
+	// Token: 0x0400395D RID: 14685
 	private int ProgressPoint;
 
-	// Token: 0x020077F0 RID: 30704
+	// Token: 0x0200697B RID: 27003
 	[NullableContext(0)]
 	private class ESubViewComponents
 	{
-		// Token: 0x04027886 RID: 161926
+		// Token: 0x04022BB7 RID: 142263
 		public const int TxtName = 0;
 
-		// Token: 0x04027887 RID: 161927
+		// Token: 0x04022BB8 RID: 142264
 		public const int TxtInfo = 1;
 
-		// Token: 0x04027888 RID: 161928
+		// Token: 0x04022BB9 RID: 142265
 		public const int TexMap = 2;
 
-		// Token: 0x04027889 RID: 161929
+		// Token: 0x04022BBA RID: 142266
 		public const int PanelQuest = 3;
 
-		// Token: 0x0402788A RID: 161930
+		// Token: 0x04022BBB RID: 142267
 		public const int TxtTitle = 4;
 
-		// Token: 0x0402788B RID: 161931
+		// Token: 0x04022BBC RID: 142268
 		public const int PanelTime = 5;
 
-		// Token: 0x0402788C RID: 161932
+		// Token: 0x04022BBD RID: 142269
 		public const int TxtTime = 6;
 
-		// Token: 0x0402788D RID: 161933
+		// Token: 0x04022BBE RID: 142270
 		public const int TxtProgress = 7;
 
-		// Token: 0x0402788E RID: 161934
+		// Token: 0x04022BBF RID: 142271
 		public const int PanelReward = 8;
 
-		// Token: 0x0402788F RID: 161935
+		// Token: 0x04022BC0 RID: 142272
 		public const int Reward1 = 9;
 
-		// Token: 0x04027890 RID: 161936
+		// Token: 0x04022BC1 RID: 142273
 		public const int Reward2 = 10;
 
-		// Token: 0x04027891 RID: 161937
+		// Token: 0x04022BC2 RID: 142274
 		public const int Reward3 = 11;
 
-		// Token: 0x04027892 RID: 161938
+		// Token: 0x04022BC3 RID: 142275
 		public const int Reward4 = 12;
 
-		// Token: 0x04027893 RID: 161939
+		// Token: 0x04022BC4 RID: 142276
 		public const int Reward5 = 13;
 
-		// Token: 0x04027894 RID: 161940
+		// Token: 0x04022BC5 RID: 142277
 		public const int ProgressNiagara = 14;
 	}
 }

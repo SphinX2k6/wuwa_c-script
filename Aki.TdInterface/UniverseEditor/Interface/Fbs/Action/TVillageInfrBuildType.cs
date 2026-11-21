@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007807 RID: 30727
+	// Token: 0x02008045 RID: 32837
 	public enum TVillageInfrBuildType : byte
 	{
-		// Token: 0x04012A8B RID: 76427
+		// Token: 0x04013B55 RID: 80725
 		NONE,
-		// Token: 0x04012A8C RID: 76428
+		// Token: 0x04013B56 RID: 80726
 		IVillageInfrTreeProcess,
-		// Token: 0x04012A8D RID: 76429
+		// Token: 0x04013B57 RID: 80727
 		IVillageInfrVillageLevel
 	}
 }

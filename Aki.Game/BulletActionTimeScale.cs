@@ -5,15 +5,15 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.Utils;
 
-// Token: 0x02002D99 RID: 11673
+// Token: 0x020022F3 RID: 8947
 public class BulletActionTimeScale : BulletActionBase
 {
-	// Token: 0x06018852 RID: 100434 RVA: 0x00642F03 File Offset: 0x00641103
+	// Token: 0x060160F6 RID: 90358 RVA: 0x00668CBF File Offset: 0x00666EBF
 	public BulletActionTimeScale(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x06018853 RID: 100435 RVA: 0x00642F0C File Offset: 0x0064110C
+	// Token: 0x060160F7 RID: 90359 RVA: 0x00668CC8 File Offset: 0x00666EC8
 	protected override void OnExecute()
 	{
 		if (this.BulletInfo.BulletDataMain.TimeScale.TimeScaleWithAttacker)
@@ -54,7 +54,7 @@ public class BulletActionTimeScale : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018854 RID: 100436 RVA: 0x006430C8 File Offset: 0x006412C8
+	// Token: 0x060160F8 RID: 90360 RVA: 0x00668E84 File Offset: 0x00667084
 	protected override void OnTick(float delta)
 	{
 		float num = this.BulletInfo.Entity.TimeDilation;
@@ -114,7 +114,7 @@ public class BulletActionTimeScale : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018855 RID: 100437 RVA: 0x006432F8 File Offset: 0x006414F8
+	// Token: 0x060160F9 RID: 90361 RVA: 0x006690B4 File Offset: 0x006672B4
 	public override void Clear()
 	{
 		base.Clear();
@@ -124,24 +124,24 @@ public class BulletActionTimeScale : BulletActionBase
 		this.LastTopForeverTimeScale = 0f;
 	}
 
-	// Token: 0x0400B5E2 RID: 46562
+	// Token: 0x0400B958 RID: 47448
 	private float CurrentTimeScaleValue;
 
-	// Token: 0x0400B5E3 RID: 46563
+	// Token: 0x0400B959 RID: 47449
 	[Nullable(2)]
 	private PawnTimeScaleComponent BulletAttackerTimeScaleComponent;
 
-	// Token: 0x0400B5E4 RID: 46564
+	// Token: 0x0400B95A RID: 47450
 	private float LastSetTimeScale;
 
-	// Token: 0x0400B5E5 RID: 46565
+	// Token: 0x0400B95B RID: 47451
 	private float LastTopForeverTimeScale;
 
-	// Token: 0x02009314 RID: 37652
+	// Token: 0x0200853B RID: 34107
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402F869 RID: 194665
+		// Token: 0x0402AEF1 RID: 175857
 		[Nullable(new byte[]
 		{
 			0,

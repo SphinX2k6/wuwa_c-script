@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067AF RID: 26543
+	// Token: 0x020056FF RID: 22271
 	public enum EDangoBrawlHandBookTab
 	{
-		// Token: 0x04022861 RID: 141409
+		// Token: 0x0401D0BE RID: 118974
 		Item,
-		// Token: 0x04022862 RID: 141410
+		// Token: 0x0401D0BF RID: 118975
 		Occupation
 	}
 }

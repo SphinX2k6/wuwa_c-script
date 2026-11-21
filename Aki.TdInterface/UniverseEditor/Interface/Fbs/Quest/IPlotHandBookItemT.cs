@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FA8 RID: 16296
+	// Token: 0x020043E9 RID: 17385
 	public class IPlotHandBookItemT
 	{
-		// Token: 0x170071C9 RID: 29129
-		// (get) Token: 0x060174A6 RID: 95398 RVA: 0x0035BB17 File Offset: 0x00359D17
-		// (set) Token: 0x060174A7 RID: 95399 RVA: 0x0035BB1F File Offset: 0x00359D1F
+		// Token: 0x170077C7 RID: 30663
+		// (get) Token: 0x06018B35 RID: 101173 RVA: 0x0038572F File Offset: 0x0038392F
+		// (set) Token: 0x06018B36 RID: 101174 RVA: 0x00385737 File Offset: 0x00383937
 		public int Id { get; set; }
 
-		// Token: 0x170071CA RID: 29130
-		// (get) Token: 0x060174A8 RID: 95400 RVA: 0x0035BB28 File Offset: 0x00359D28
-		// (set) Token: 0x060174A9 RID: 95401 RVA: 0x0035BB30 File Offset: 0x00359D30
+		// Token: 0x170077C8 RID: 30664
+		// (get) Token: 0x06018B37 RID: 101175 RVA: 0x00385740 File Offset: 0x00383940
+		// (set) Token: 0x06018B38 RID: 101176 RVA: 0x00385748 File Offset: 0x00383948
 		public List<IPlotHandBookNodeT> Nodes { get; set; }
 
-		// Token: 0x060174AA RID: 95402 RVA: 0x0035BB39 File Offset: 0x00359D39
+		// Token: 0x06018B39 RID: 101177 RVA: 0x00385751 File Offset: 0x00383951
 		public IPlotHandBookItemT()
 		{
 			this.Id = 0;

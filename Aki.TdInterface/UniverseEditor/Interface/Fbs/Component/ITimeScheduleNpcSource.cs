@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AA8 RID: 23208
+	// Token: 0x020060B5 RID: 24757
 	public struct ITimeScheduleNpcSource : IFlatbufferObject
 	{
-		// Token: 0x1700AED3 RID: 44755
-		// (get) Token: 0x060278B8 RID: 161976 RVA: 0x00570B92 File Offset: 0x0056ED92
+		// Token: 0x1700B80D RID: 47117
+		// (get) Token: 0x06029E3A RID: 171578 RVA: 0x005B7DD2 File Offset: 0x005B5FD2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060278B9 RID: 161977 RVA: 0x00570B9F File Offset: 0x0056ED9F
+		// Token: 0x06029E3B RID: 171579 RVA: 0x005B7DDF File Offset: 0x005B5FDF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060278BA RID: 161978 RVA: 0x00570BA8 File Offset: 0x0056EDA8
+		// Token: 0x06029E3C RID: 171580 RVA: 0x005B7DE8 File Offset: 0x005B5FE8
 		public static ITimeScheduleNpcSource GetRootAsITimeScheduleNpcSource(ByteBuffer _bb)
 		{
 			return ITimeScheduleNpcSource.GetRootAsITimeScheduleNpcSource(_bb, default(ITimeScheduleNpcSource));
 		}
 
-		// Token: 0x060278BB RID: 161979 RVA: 0x00570BC4 File Offset: 0x0056EDC4
+		// Token: 0x06029E3D RID: 171581 RVA: 0x005B7E04 File Offset: 0x005B6004
 		public static ITimeScheduleNpcSource GetRootAsITimeScheduleNpcSource(ByteBuffer _bb, ITimeScheduleNpcSource obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060278BC RID: 161980 RVA: 0x00570BE1 File Offset: 0x0056EDE1
+		// Token: 0x06029E3E RID: 171582 RVA: 0x005B7E21 File Offset: 0x005B6021
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060278BD RID: 161981 RVA: 0x00570BF0 File Offset: 0x0056EDF0
+		// Token: 0x06029E3F RID: 171583 RVA: 0x005B7E30 File Offset: 0x005B6030
 		public ITimeScheduleNpcSource __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AED4 RID: 44756
-		// (get) Token: 0x060278BE RID: 161982 RVA: 0x00570C00 File Offset: 0x0056EE00
+		// Token: 0x1700B80E RID: 47118
+		// (get) Token: 0x06029E40 RID: 171584 RVA: 0x005B7E40 File Offset: 0x005B6040
 		public ETimeScheduleNpcSourceType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060278BF RID: 161983 RVA: 0x00570C3C File Offset: 0x0056EE3C
+		// Token: 0x06029E41 RID: 171585 RVA: 0x005B7E7C File Offset: 0x005B607C
 		public static Offset<ITimeScheduleNpcSource> CreateITimeScheduleNpcSource(FlatBufferBuilder builder, ETimeScheduleNpcSourceType Type = ETimeScheduleNpcSourceType.EntityTemplate)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimeScheduleNpcSource.EndITimeScheduleNpcSource(builder);
 		}
 
-		// Token: 0x060278C0 RID: 161984 RVA: 0x00570C52 File Offset: 0x0056EE52
+		// Token: 0x06029E42 RID: 171586 RVA: 0x005B7E92 File Offset: 0x005B6092
 		public static void StartITimeScheduleNpcSource(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060278C1 RID: 161985 RVA: 0x00570C5B File Offset: 0x0056EE5B
+		// Token: 0x06029E43 RID: 171587 RVA: 0x005B7E9B File Offset: 0x005B609B
 		public static void AddType(FlatBufferBuilder builder, ETimeScheduleNpcSourceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060278C2 RID: 161986 RVA: 0x00570C66 File Offset: 0x0056EE66
+		// Token: 0x06029E44 RID: 171588 RVA: 0x005B7EA6 File Offset: 0x005B60A6
 		public static Offset<ITimeScheduleNpcSource> EndITimeScheduleNpcSource(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimeScheduleNpcSource>(builder.EndTable());
 		}
 
-		// Token: 0x060278C3 RID: 161987 RVA: 0x00570C74 File Offset: 0x0056EE74
+		// Token: 0x06029E45 RID: 171589 RVA: 0x005B7EB4 File Offset: 0x005B60B4
 		public ITimeScheduleNpcSourceT UnPack()
 		{
 			ITimeScheduleNpcSourceT timeScheduleNpcSourceT = new ITimeScheduleNpcSourceT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return timeScheduleNpcSourceT;
 		}
 
-		// Token: 0x060278C4 RID: 161988 RVA: 0x00570C8F File Offset: 0x0056EE8F
+		// Token: 0x06029E46 RID: 171590 RVA: 0x005B7ECF File Offset: 0x005B60CF
 		public void UnPackTo(ITimeScheduleNpcSourceT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060278C5 RID: 161989 RVA: 0x00570CA0 File Offset: 0x0056EEA0
+		// Token: 0x06029E47 RID: 171591 RVA: 0x005B7EE0 File Offset: 0x005B60E0
 		public static Offset<ITimeScheduleNpcSource> Pack(FlatBufferBuilder builder, ITimeScheduleNpcSourceT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimeScheduleNpcSource.CreateITimeScheduleNpcSource(builder, _o.Type);
 		}
 
-		// Token: 0x0400F16B RID: 61803
+		// Token: 0x0400FE63 RID: 65123
 		private Table __p;
 	}
 }

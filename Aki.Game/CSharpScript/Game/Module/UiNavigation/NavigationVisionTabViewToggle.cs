@@ -5,22 +5,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004937 RID: 18743
+	// Token: 0x020038AE RID: 14510
 	public class NavigationVisionTabViewToggle : NavigationDragComponent, INavigationInteractClick, INavigationInteractFailClick
 	{
-		// Token: 0x06030EE3 RID: 200419 RVA: 0x00B5C0EB File Offset: 0x00B5A2EB
+		// Token: 0x06025A10 RID: 154128 RVA: 0x00A96F5B File Offset: 0x00A9515B
 		[NullableContext(1)]
 		public NavigationVisionTabViewToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030EE4 RID: 200420 RVA: 0x00B5C0F6 File Offset: 0x00B5A2F6
+		// Token: 0x06025A11 RID: 154129 RVA: 0x00A96F66 File Offset: 0x00A95166
 		public void InteractClickFailHandle()
 		{
 			UiNavigationGlobalData.VisionReplaceViewFindDefault = false;
 		}
 
-		// Token: 0x06030EE5 RID: 200421 RVA: 0x00B5C0FE File Offset: 0x00B5A2FE
+		// Token: 0x06025A12 RID: 154130 RVA: 0x00A96F6E File Offset: 0x00A9516E
 		public void InteractClickHandle()
 		{
 			UiNavigationGlobalData.VisionReplaceViewFindDefault = false;

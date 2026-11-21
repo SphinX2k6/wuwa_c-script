@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.NetworkDetection
 {
-	// Token: 0x020001B5 RID: 437
+	// Token: 0x020001B9 RID: 441
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class LauncherNetworkDetectionDefine
 	{
-		// Token: 0x0400077A RID: 1914
+		// Token: 0x040007B7 RID: 1975
 		[StaticVariableRuleIgnore]
 		public static readonly INetworkDetectionEntry[] networkDetectionEntries = new INetworkDetectionEntry[]
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			}
 		};
 
-		// Token: 0x0400077B RID: 1915
+		// Token: 0x040007B8 RID: 1976
 		[StaticVariableRuleIgnore]
 		public static Dictionary<ESendState, int> SendStateToCustomServiceLogMap = new Dictionary<ESendState, int>
 		{
@@ -75,10 +75,10 @@ namespace CSharpScript.Launcher.NetworkDetection
 			}
 		};
 
-		// Token: 0x0400077C RID: 1916
+		// Token: 0x040007B9 RID: 1977
 		public const int DOUBLE_CHECK_INTERVAL = 5;
 
-		// Token: 0x0400077D RID: 1917
+		// Token: 0x040007BA RID: 1978
 		public const float MS_TO_SECONDS = 0.001f;
 	}
 }

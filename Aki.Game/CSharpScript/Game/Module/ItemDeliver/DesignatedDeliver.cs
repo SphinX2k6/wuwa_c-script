@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemDeliver
 {
-	// Token: 0x02005818 RID: 22552
+	// Token: 0x020047EF RID: 18415
 	public class DesignatedDeliver : Deliver
 	{
-		// Token: 0x060394F4 RID: 234740 RVA: 0x00D977F4 File Offset: 0x00D959F4
+		// Token: 0x0602E408 RID: 189448 RVA: 0x00CE6684 File Offset: 0x00CE4884
 		public DesignatedDeliver()
 		{
 			this.Type = EDeliverType.DesignatedDeliver;
 			this.ItemSlotInfo = new List<DesignatedDeliverSlot>();
 		}
 
-		// Token: 0x0401DF82 RID: 122754
+		// Token: 0x04018A19 RID: 100889
 		[Nullable(1)]
 		public List<DesignatedDeliverSlot> ItemSlotInfo;
 	}

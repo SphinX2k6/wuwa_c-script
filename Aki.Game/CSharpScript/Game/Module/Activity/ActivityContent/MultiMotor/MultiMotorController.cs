@@ -12,13 +12,13 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x0200638F RID: 25487
+	// Token: 0x0200530D RID: 21261
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MultiMotorController : ActivityControllerBase
 	{
-		// Token: 0x06040189 RID: 262537 RVA: 0x00F830C8 File Offset: 0x00F812C8
+		// Token: 0x06034E4A RID: 216650 RVA: 0x00ECA03C File Offset: 0x00EC823C
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.OnlineMotorSettleNotify, new Action<IMessage, Net.CallbackStatus>(this.OnlineMotorSettleNotify));
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			Net.Instance.Register(ENotifyMessageId.MotorOnlineRankRuleIdsNotify, new Action<IMessage, Net.CallbackStatus>(this.MotorOnlineRankRuleIdsNotify));
 		}
 
-		// Token: 0x0604018A RID: 262538 RVA: 0x00F83180 File Offset: 0x00F81380
+		// Token: 0x06034E4B RID: 216651 RVA: 0x00ECA0F4 File Offset: 0x00EC82F4
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.OnlineMotorSettleNotify);
@@ -40,19 +40,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			Net.Instance.UnRegister(ENotifyMessageId.MotorOnlineRankRuleIdsNotify);
 		}
 
-		// Token: 0x0604018B RID: 262539 RVA: 0x00F831ED File Offset: 0x00F813ED
+		// Token: 0x06034E4C RID: 216652 RVA: 0x00ECA161 File Offset: 0x00EC8361
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x0604018C RID: 262540 RVA: 0x00F8320B File Offset: 0x00F8140B
+		// Token: 0x06034E4D RID: 216653 RVA: 0x00ECA17F File Offset: 0x00EC837F
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x0604018D RID: 262541 RVA: 0x00F83229 File Offset: 0x00F81429
+		// Token: 0x06034E4E RID: 216654 RVA: 0x00ECA19D File Offset: 0x00EC839D
 		public void OnMultiMotorDataInit()
 		{
 			if (!this.IsPendingWorldDoneHandle)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.OnWorldDone();
 		}
 
-		// Token: 0x0604018E RID: 262542 RVA: 0x00F83241 File Offset: 0x00F81441
+		// Token: 0x06034E4F RID: 216655 RVA: 0x00ECA1B5 File Offset: 0x00EC83B5
 		public void OnMultiMotorMainViewOpened()
 		{
 			if (!this.HasPendingStartNotify)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			EventSystem.Instance.Emit(EEventName.MultiMotorStart);
 		}
 
-		// Token: 0x0604018F RID: 262543 RVA: 0x00F83264 File Offset: 0x00F81464
+		// Token: 0x06034E50 RID: 216656 RVA: 0x00ECA1D8 File Offset: 0x00EC83D8
 		private void OnWorldDone()
 		{
 			if (this.CheckInMultiMotorParkourDungeon())
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x06040190 RID: 262544 RVA: 0x00F832FC File Offset: 0x00F814FC
+		// Token: 0x06034E51 RID: 216657 RVA: 0x00ECA270 File Offset: 0x00EC8470
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040191 RID: 262545 RVA: 0x00F83340 File Offset: 0x00F81540
+		// Token: 0x06034E52 RID: 216658 RVA: 0x00ECA2B4 File Offset: 0x00EC84B4
 		public bool CheckInMultiMotorParkourDungeon()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -122,13 +122,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return false;
 		}
 
-		// Token: 0x06040192 RID: 262546 RVA: 0x00F83390 File Offset: 0x00F81590
+		// Token: 0x06034E53 RID: 216659 RVA: 0x00ECA304 File Offset: 0x00EC8504
 		private MultiMotorData GetActivityDataById(int activityId)
 		{
 			return ActivityModel.Instance.GetActivityById(activityId) as MultiMotorData;
 		}
 
-		// Token: 0x06040193 RID: 262547 RVA: 0x00F833A4 File Offset: 0x00F815A4
+		// Token: 0x06034E54 RID: 216660 RVA: 0x00ECA318 File Offset: 0x00EC8518
 		[NullableContext(2)]
 		private void OnlineMotorSettleNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x06040194 RID: 262548 RVA: 0x00F833F0 File Offset: 0x00F815F0
+		// Token: 0x06034E55 RID: 216661 RVA: 0x00ECA364 File Offset: 0x00EC8564
 		[NullableContext(2)]
 		private void MotorOnlineRankSnapshotNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			EventSystem.Instance.Emit(EEventName.MultiMotorRankInfoRefresh);
 		}
 
-		// Token: 0x06040195 RID: 262549 RVA: 0x00F83470 File Offset: 0x00F81670
+		// Token: 0x06034E56 RID: 216662 RVA: 0x00ECA3E4 File Offset: 0x00EC85E4
 		public void MotorOnlineProgressReportPush(int instId, float progress)
 		{
 			MotorOnlineProgressReportPush motorOnlineProgressReportPush = Aki.Protocol.MotorOnlineProgressReportPush.Create();
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			Net.Instance.Send(EPushMessageId.MotorOnlineProgressReportPush, motorOnlineProgressReportPush);
 		}
 
-		// Token: 0x06040196 RID: 262550 RVA: 0x00F834A4 File Offset: 0x00F816A4
+		// Token: 0x06034E57 RID: 216663 RVA: 0x00ECA418 File Offset: 0x00EC8618
 		public void MotorOnlineRewardRequest(int levelId)
 		{
 			bool isGlobalTask = levelId < 0;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 				}
 				if (onlineMotorActivityLevelResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(onlineMotorActivityLevelResponse.ErrorCode, 22472, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(onlineMotorActivityLevelResponse.ErrorCode, 18856, null, true, true);
 					return;
 				}
 				foreach (int num in taskList)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}, 0);
 		}
 
-		// Token: 0x06040197 RID: 262551 RVA: 0x00F8362C File Offset: 0x00F8182C
+		// Token: 0x06034E58 RID: 216664 RVA: 0x00ECA5A0 File Offset: 0x00EC87A0
 		[NullableContext(2)]
 		private void OnlineMotorUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, multiMotorData.Id);
 		}
 
-		// Token: 0x06040198 RID: 262552 RVA: 0x00F8383C File Offset: 0x00F81A3C
+		// Token: 0x06034E59 RID: 216665 RVA: 0x00ECA7B0 File Offset: 0x00EC89B0
 		[NullableContext(2)]
 		private void OnlineMotorStartNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			EventSystem.Instance.Emit(EEventName.MultiMotorStart);
 		}
 
-		// Token: 0x06040199 RID: 262553 RVA: 0x00F83894 File Offset: 0x00F81A94
+		// Token: 0x06034E5A RID: 216666 RVA: 0x00ECA808 File Offset: 0x00EC8A08
 		[NullableContext(2)]
 		private void OnlineMotorEndNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			EventSystem.Instance.Emit<int>(EEventName.MultiMotorPassLine, onlineMotorEndNotify.PlayerId);
 		}
 
-		// Token: 0x0604019A RID: 262554 RVA: 0x00F838C0 File Offset: 0x00F81AC0
+		// Token: 0x06034E5B RID: 216667 RVA: 0x00ECA834 File Offset: 0x00EC8A34
 		[NullableContext(2)]
 		private void MotorOnlineRankRuleIdsNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -314,38 +314,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x0604019B RID: 262555 RVA: 0x00F83958 File Offset: 0x00F81B58
+		// Token: 0x06034E5C RID: 216668 RVA: 0x00ECA8CC File Offset: 0x00EC8ACC
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x0604019C RID: 262556 RVA: 0x00F8395A File Offset: 0x00F81B5A
+		// Token: 0x06034E5D RID: 216669 RVA: 0x00ECA8CE File Offset: 0x00EC8ACE
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiView_ActivityMotorRace";
 		}
 
-		// Token: 0x0604019D RID: 262557 RVA: 0x00F83961 File Offset: 0x00F81B61
+		// Token: 0x06034E5E RID: 216670 RVA: 0x00ECA8D5 File Offset: 0x00EC8AD5
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new MultiMotorSubView();
 		}
 
-		// Token: 0x0604019E RID: 262558 RVA: 0x00F83968 File Offset: 0x00F81B68
+		// Token: 0x06034E5F RID: 216671 RVA: 0x00ECA8DC File Offset: 0x00EC8ADC
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			MultiMotorModel.Instance.ActivityId = data.Id;
 			return new MultiMotorData();
 		}
 
-		// Token: 0x0604019F RID: 262559 RVA: 0x00F8397F File Offset: 0x00F81B7F
+		// Token: 0x06034E60 RID: 216672 RVA: 0x00ECA8F3 File Offset: 0x00EC8AF3
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x17009354 RID: 37716
-		// (get) Token: 0x060401A0 RID: 262560 RVA: 0x00F83982 File Offset: 0x00F81B82
+		// Token: 0x170066B6 RID: 26294
+		// (get) Token: 0x06034E61 RID: 216673 RVA: 0x00ECA8F6 File Offset: 0x00EC8AF6
 		public static MultiMotorController Instance
 		{
 			get
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401A1 RID: 262561 RVA: 0x00F83989 File Offset: 0x00F81B89
+		// Token: 0x06034E62 RID: 216674 RVA: 0x00ECA8FD File Offset: 0x00EC8AFD
 		public static MultiMotorController GetOrCreateInstance()
 		{
 			if (MultiMotorController._Instance == null)
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return MultiMotorController._Instance;
 		}
 
-		// Token: 0x060401A2 RID: 262562 RVA: 0x00F8399D File Offset: 0x00F81B9D
+		// Token: 0x06034E63 RID: 216675 RVA: 0x00ECA911 File Offset: 0x00EC8B11
 		public static bool CreateInstance()
 		{
 			if (MultiMotorController._Instance != null)
@@ -375,30 +375,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return true;
 		}
 
-		// Token: 0x060401A3 RID: 262563 RVA: 0x00F839B3 File Offset: 0x00F81BB3
+		// Token: 0x06034E64 RID: 216676 RVA: 0x00ECA927 File Offset: 0x00EC8B27
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060401A4 RID: 262564 RVA: 0x00F839B5 File Offset: 0x00F81BB5
+		// Token: 0x06034E65 RID: 216677 RVA: 0x00ECA929 File Offset: 0x00EC8B29
 		public static void ResetStaticDefaultValue()
 		{
 			MultiMotorController._Instance = null;
 		}
 
-		// Token: 0x060401A5 RID: 262565 RVA: 0x00F839BD File Offset: 0x00F81BBD
+		// Token: 0x06034E66 RID: 216678 RVA: 0x00ECA931 File Offset: 0x00EC8B31
 		static MultiMotorController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MultiMotorController.CreateStaticDefaultValue), new Action(MultiMotorController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021653 RID: 136787
+		// Token: 0x0401BF82 RID: 114562
 		private bool IsPendingWorldDoneHandle;
 
-		// Token: 0x04021654 RID: 136788
+		// Token: 0x0401BF83 RID: 114563
 		private bool HasPendingStartNotify;
 
-		// Token: 0x04021655 RID: 136789
+		// Token: 0x0401BF84 RID: 114564
 		[Nullable(2)]
 		private static MultiMotorController _Instance;
 	}

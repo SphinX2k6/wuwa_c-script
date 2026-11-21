@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010D4 RID: 4308
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001202 RID: 4610
 	public class IReadPhoneMessageQuestCondition : IQuestCondition
 	{
-		// Token: 0x0600616C RID: 24940 RVA: 0x000EB3CC File Offset: 0x000E95CC
+		// Token: 0x06006765 RID: 26469 RVA: 0x000F84EC File Offset: 0x000F66EC
 		private IReadPhoneMessageQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600616D RID: 24941 RVA: 0x000EB404 File Offset: 0x000E9604
+		// Token: 0x06006766 RID: 26470 RVA: 0x000F8524 File Offset: 0x000F6724
 		public static IReadPhoneMessageQuestCondition Create([Nullable(2)] IReadPhoneMessageQuestCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600616E RID: 24942 RVA: 0x000EB417 File Offset: 0x000E9617
+		// Token: 0x06006767 RID: 26471 RVA: 0x000F8537 File Offset: 0x000F6737
 		public static IReadPhoneMessageQuestCondition CreateFromSetValue([Nullable(2)] IReadPhoneMessageQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600616F RID: 24943 RVA: 0x000EB42A File Offset: 0x000E962A
+		// Token: 0x06006768 RID: 26472 RVA: 0x000F854A File Offset: 0x000F674A
 		public new IReadPhoneMessageQuestCondition_SetValue ToSetValue()
 		{
 			return new IReadPhoneMessageQuestCondition_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001FFC RID: 8188
-		// (get) Token: 0x06006170 RID: 24944 RVA: 0x000EB461 File Offset: 0x000E9661
-		// (set) Token: 0x06006171 RID: 24945 RVA: 0x000EB48C File Offset: 0x000E968C
+		// Token: 0x170021AE RID: 8622
+		// (get) Token: 0x06006769 RID: 26473 RVA: 0x000F8581 File Offset: 0x000F6781
+		// (set) Token: 0x0600676A RID: 26474 RVA: 0x000F85AC File Offset: 0x000F67AC
 		public override EChildQuest Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FFD RID: 8189
-		// (get) Token: 0x06006172 RID: 24946 RVA: 0x000EB49C File Offset: 0x000E969C
-		// (set) Token: 0x06006173 RID: 24947 RVA: 0x000EB4FD File Offset: 0x000E96FD
+		// Token: 0x170021AF RID: 8623
+		// (get) Token: 0x0600676B RID: 26475 RVA: 0x000F85BC File Offset: 0x000F67BC
+		// (set) Token: 0x0600676C RID: 26476 RVA: 0x000F861D File Offset: 0x000F681D
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FFE RID: 8190
-		// (get) Token: 0x06006174 RID: 24948 RVA: 0x000EB514 File Offset: 0x000E9714
-		// (set) Token: 0x06006175 RID: 24949 RVA: 0x000EB54E File Offset: 0x000E974E
+		// Token: 0x170021B0 RID: 8624
+		// (get) Token: 0x0600676D RID: 26477 RVA: 0x000F8634 File Offset: 0x000F6834
+		// (set) Token: 0x0600676E RID: 26478 RVA: 0x000F866E File Offset: 0x000F686E
 		public virtual int? PhoneMessageId
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FFF RID: 8191
-		// (get) Token: 0x06006176 RID: 24950 RVA: 0x000EB55C File Offset: 0x000E975C
-		// (set) Token: 0x06006177 RID: 24951 RVA: 0x000EB5BD File Offset: 0x000E97BD
+		// Token: 0x170021B1 RID: 8625
+		// (get) Token: 0x0600676F RID: 26479 RVA: 0x000F867C File Offset: 0x000F687C
+		// (set) Token: 0x06006770 RID: 26480 RVA: 0x000F86DD File Offset: 0x000F68DD
 		public virtual ICompleteMessageQuestCondition ProgressType
 		{
 			get
@@ -173,24 +171,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003AA3 RID: 15011
+		// Token: 0x04003DF0 RID: 15856
 		[Nullable(2)]
 		protected new IReadPhoneMessageQuestCondition FbInstance;
 
-		// Token: 0x04003AA4 RID: 15012
+		// Token: 0x04003DF1 RID: 15857
 		[Nullable(2)]
 		protected new IReadPhoneMessageQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x04003AA5 RID: 15013
+		// Token: 0x04003DF2 RID: 15858
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003AA6 RID: 15014
+		// Token: 0x04003DF3 RID: 15859
 		private bool _PreConditionsInited;
 
-		// Token: 0x04003AA7 RID: 15015
+		// Token: 0x04003DF4 RID: 15860
 		private ICompleteMessageQuestCondition _ProgressTypeCache;
 
-		// Token: 0x04003AA8 RID: 15016
+		// Token: 0x04003DF5 RID: 15861
 		private bool _ProgressTypeInited;
 	}
 }

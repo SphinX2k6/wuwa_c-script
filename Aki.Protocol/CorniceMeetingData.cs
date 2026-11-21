@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000306 RID: 774
+	// Token: 0x0200030D RID: 781
 	public sealed class CorniceMeetingData : IMessage<CorniceMeetingData>, IMessage, IEquatable<CorniceMeetingData>, IDeepCloneable<CorniceMeetingData>, IBufferMessage
 	{
-		// Token: 0x06004E1E RID: 19998 RVA: 0x000BDCBE File Offset: 0x000BBEBE
+		// Token: 0x06004EF7 RID: 20215 RVA: 0x000C00AA File Offset: 0x000BE2AA
 		[NullableContext(1)]
 		public static CorniceMeetingData Create()
 		{
 			return new CorniceMeetingData();
 		}
 
-		// Token: 0x17000DD8 RID: 3544
-		// (get) Token: 0x06004E1F RID: 19999 RVA: 0x000BDCC5 File Offset: 0x000BBEC5
+		// Token: 0x17000E05 RID: 3589
+		// (get) Token: 0x06004EF8 RID: 20216 RVA: 0x000C00B1 File Offset: 0x000BE2B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000DD9 RID: 3545
-		// (get) Token: 0x06004E20 RID: 20000 RVA: 0x000BDCC8 File Offset: 0x000BBEC8
+		// Token: 0x17000E06 RID: 3590
+		// (get) Token: 0x06004EF9 RID: 20217 RVA: 0x000C00B4 File Offset: 0x000BE2B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004E21 RID: 20001 RVA: 0x000BDCCF File Offset: 0x000BBECF
+		// Token: 0x06004EFA RID: 20218 RVA: 0x000C00BB File Offset: 0x000BE2BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CorniceMeetingData()
 		{
 		}
 
-		// Token: 0x06004E22 RID: 20002 RVA: 0x000BDCE2 File Offset: 0x000BBEE2
+		// Token: 0x06004EFB RID: 20219 RVA: 0x000C00CE File Offset: 0x000BE2CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CorniceMeetingData(CorniceMeetingData other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06004E23 RID: 20003 RVA: 0x000BDD18 File Offset: 0x000BBF18
+		// Token: 0x06004EFC RID: 20220 RVA: 0x000C0104 File Offset: 0x000BE304
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CorniceMeetingData Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new CorniceMeetingData(this);
 		}
 
-		// Token: 0x17000DDA RID: 3546
-		// (get) Token: 0x06004E24 RID: 20004 RVA: 0x000BDD20 File Offset: 0x000BBF20
-		// (set) Token: 0x06004E25 RID: 20005 RVA: 0x000BDD28 File Offset: 0x000BBF28
+		// Token: 0x17000E07 RID: 3591
+		// (get) Token: 0x06004EFD RID: 20221 RVA: 0x000C010C File Offset: 0x000BE30C
+		// (set) Token: 0x06004EFE RID: 20222 RVA: 0x000C0114 File Offset: 0x000BE314
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long QuestUnlockTime
@@ -84,8 +84,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000DDB RID: 3547
-		// (get) Token: 0x06004E26 RID: 20006 RVA: 0x000BDD31 File Offset: 0x000BBF31
+		// Token: 0x17000E08 RID: 3592
+		// (get) Token: 0x06004EFF RID: 20223 RVA: 0x000C011D File Offset: 0x000BE31D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, CorniceLevelPlayEnrty> CorninceDataList
@@ -96,7 +96,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004E27 RID: 20007 RVA: 0x000BDD39 File Offset: 0x000BBF39
+		// Token: 0x06004F00 RID: 20224 RVA: 0x000C0125 File Offset: 0x000BE325
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -104,7 +104,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CorniceMeetingData);
 		}
 
-		// Token: 0x06004E28 RID: 20008 RVA: 0x000BDD48 File Offset: 0x000BBF48
+		// Token: 0x06004F01 RID: 20225 RVA: 0x000C0134 File Offset: 0x000BE334
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CorniceMeetingData other)
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.QuestUnlockTime == other.QuestUnlockTime && this.CorninceDataList.Equals(other.CorninceDataList) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06004E29 RID: 20009 RVA: 0x000BDD98 File Offset: 0x000BBF98
+		// Token: 0x06004F02 RID: 20226 RVA: 0x000C0184 File Offset: 0x000BE384
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004E2A RID: 20010 RVA: 0x000BDDE5 File Offset: 0x000BBFE5
+		// Token: 0x06004F03 RID: 20227 RVA: 0x000C01D1 File Offset: 0x000BE3D1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004E2B RID: 20011 RVA: 0x000BDDF2 File Offset: 0x000BBFF2
+		// Token: 0x06004F04 RID: 20228 RVA: 0x000C01DE File Offset: 0x000BE3DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06004E2C RID: 20012 RVA: 0x000BDDFC File Offset: 0x000BBFFC
+		// Token: 0x06004F05 RID: 20229 RVA: 0x000C01E8 File Offset: 0x000BE3E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004E2D RID: 20013 RVA: 0x000BDE4C File Offset: 0x000BC04C
+		// Token: 0x06004F06 RID: 20230 RVA: 0x000C0238 File Offset: 0x000BE438
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004E2E RID: 20014 RVA: 0x000BDEA0 File Offset: 0x000BC0A0
+		// Token: 0x06004F07 RID: 20231 RVA: 0x000C028C File Offset: 0x000BE48C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CorniceMeetingData other)
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06004E2F RID: 20015 RVA: 0x000BDEED File Offset: 0x000BC0ED
+		// Token: 0x06004F08 RID: 20232 RVA: 0x000C02D9 File Offset: 0x000BE4D9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -206,7 +206,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06004E30 RID: 20016 RVA: 0x000BDEF8 File Offset: 0x000BC0F8
+		// Token: 0x06004F09 RID: 20233 RVA: 0x000C02E4 File Offset: 0x000BE4E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,22 +236,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003180 RID: 12672
+		// Token: 0x04003217 RID: 12823
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003181 RID: 12673
+		// Token: 0x04003218 RID: 12824
 		public const int QuestUnlockTimeFieldNumber = 1;
 
-		// Token: 0x04003182 RID: 12674
+		// Token: 0x04003219 RID: 12825
 		private long questUnlockTime_;
 
-		// Token: 0x04003183 RID: 12675
+		// Token: 0x0400321A RID: 12826
 		public const int CorninceDataListFieldNumber = 2;
 
-		// Token: 0x04003184 RID: 12676
+		// Token: 0x0400321B RID: 12827
 		private static readonly MapField<int, CorniceLevelPlayEnrty>.Codec _map_corninceDataList_codec = new MapField<int, CorniceLevelPlayEnrty>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForMessage<CorniceLevelPlayEnrty>(18U, CorniceLevelPlayEnrty.Parser), 18U);
 
-		// Token: 0x04003185 RID: 12677
+		// Token: 0x0400321C RID: 12828
 		private readonly MapField<int, CorniceLevelPlayEnrty> corninceDataList_ = new MapField<int, CorniceLevelPlayEnrty>();
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005962 RID: 22882
+	// Token: 0x02005F6F RID: 24431
 	public struct ISpawnMonsterStartCondition : IFlatbufferObject
 	{
-		// Token: 0x1700ABBF RID: 43967
-		// (get) Token: 0x06026BB7 RID: 158647 RVA: 0x00555427 File Offset: 0x00553627
+		// Token: 0x1700B4F3 RID: 46323
+		// (get) Token: 0x06029121 RID: 168225 RVA: 0x0059C093 File Offset: 0x0059A293
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026BB8 RID: 158648 RVA: 0x00555434 File Offset: 0x00553634
+		// Token: 0x06029122 RID: 168226 RVA: 0x0059C0A0 File Offset: 0x0059A2A0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026BB9 RID: 158649 RVA: 0x0055543C File Offset: 0x0055363C
+		// Token: 0x06029123 RID: 168227 RVA: 0x0059C0A8 File Offset: 0x0059A2A8
 		public static ISpawnMonsterStartCondition GetRootAsISpawnMonsterStartCondition(ByteBuffer _bb)
 		{
 			return ISpawnMonsterStartCondition.GetRootAsISpawnMonsterStartCondition(_bb, default(ISpawnMonsterStartCondition));
 		}
 
-		// Token: 0x06026BBA RID: 158650 RVA: 0x00555458 File Offset: 0x00553658
+		// Token: 0x06029124 RID: 168228 RVA: 0x0059C0C4 File Offset: 0x0059A2C4
 		public static ISpawnMonsterStartCondition GetRootAsISpawnMonsterStartCondition(ByteBuffer _bb, ISpawnMonsterStartCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026BBB RID: 158651 RVA: 0x00555475 File Offset: 0x00553675
+		// Token: 0x06029125 RID: 168229 RVA: 0x0059C0E1 File Offset: 0x0059A2E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026BBC RID: 158652 RVA: 0x00555484 File Offset: 0x00553684
+		// Token: 0x06029126 RID: 168230 RVA: 0x0059C0F0 File Offset: 0x0059A2F0
 		public ISpawnMonsterStartCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ABC0 RID: 43968
-		// (get) Token: 0x06026BBD RID: 158653 RVA: 0x00555494 File Offset: 0x00553694
+		// Token: 0x1700B4F4 RID: 46324
+		// (get) Token: 0x06029127 RID: 168231 RVA: 0x0059C100 File Offset: 0x0059A300
 		public ESpawnMonsterStartCondition Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026BBE RID: 158654 RVA: 0x005554D0 File Offset: 0x005536D0
+		// Token: 0x06029128 RID: 168232 RVA: 0x0059C13C File Offset: 0x0059A33C
 		public static Offset<ISpawnMonsterStartCondition> CreateISpawnMonsterStartCondition(FlatBufferBuilder builder, ESpawnMonsterStartCondition Type = ESpawnMonsterStartCondition.Immediate)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpawnMonsterStartCondition.EndISpawnMonsterStartCondition(builder);
 		}
 
-		// Token: 0x06026BBF RID: 158655 RVA: 0x005554E6 File Offset: 0x005536E6
+		// Token: 0x06029129 RID: 168233 RVA: 0x0059C152 File Offset: 0x0059A352
 		public static void StartISpawnMonsterStartCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06026BC0 RID: 158656 RVA: 0x005554EF File Offset: 0x005536EF
+		// Token: 0x0602912A RID: 168234 RVA: 0x0059C15B File Offset: 0x0059A35B
 		public static void AddType(FlatBufferBuilder builder, ESpawnMonsterStartCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026BC1 RID: 158657 RVA: 0x005554FA File Offset: 0x005536FA
+		// Token: 0x0602912B RID: 168235 RVA: 0x0059C166 File Offset: 0x0059A366
 		public static Offset<ISpawnMonsterStartCondition> EndISpawnMonsterStartCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpawnMonsterStartCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06026BC2 RID: 158658 RVA: 0x00555508 File Offset: 0x00553708
+		// Token: 0x0602912C RID: 168236 RVA: 0x0059C174 File Offset: 0x0059A374
 		public ISpawnMonsterStartConditionT UnPack()
 		{
 			ISpawnMonsterStartConditionT spawnMonsterStartConditionT = new ISpawnMonsterStartConditionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return spawnMonsterStartConditionT;
 		}
 
-		// Token: 0x06026BC3 RID: 158659 RVA: 0x00555523 File Offset: 0x00553723
+		// Token: 0x0602912D RID: 168237 RVA: 0x0059C18F File Offset: 0x0059A38F
 		public void UnPackTo(ISpawnMonsterStartConditionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06026BC4 RID: 158660 RVA: 0x00555534 File Offset: 0x00553734
+		// Token: 0x0602912E RID: 168238 RVA: 0x0059C1A0 File Offset: 0x0059A3A0
 		public static Offset<ISpawnMonsterStartCondition> Pack(FlatBufferBuilder builder, ISpawnMonsterStartConditionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpawnMonsterStartCondition.CreateISpawnMonsterStartCondition(builder, _o.Type);
 		}
 
-		// Token: 0x0400EF46 RID: 61254
+		// Token: 0x0400FC3B RID: 64571
 		private Table __p;
 	}
 }

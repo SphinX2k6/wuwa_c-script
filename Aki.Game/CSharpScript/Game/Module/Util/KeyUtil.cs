@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048C8 RID: 18632
+	// Token: 0x0200383F RID: 14399
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KeyUtil
 	{
-		// Token: 0x06030B38 RID: 199480 RVA: 0x00B4EE88 File Offset: 0x00B4D088
+		// Token: 0x06025664 RID: 153188 RVA: 0x00A89C90 File Offset: 0x00A87E90
 		public static TArray<FInputActionKeyMapping> GetActionMappingByName(string actionName)
 		{
 			UInputSettings inputSettings = UInputSettings.GetInputSettings();
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Util
 			return result;
 		}
 
-		// Token: 0x06030B39 RID: 199481 RVA: 0x00B4EEB8 File Offset: 0x00B4D0B8
+		// Token: 0x06025665 RID: 153189 RVA: 0x00A89CC0 File Offset: 0x00A87EC0
 		public static TArray<FInputAxisKeyMapping> GetAxisMappingByName(string axisName)
 		{
 			UInputSettings inputSettings = UInputSettings.GetInputSettings();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Util
 			return result;
 		}
 
-		// Token: 0x06030B3A RID: 199482 RVA: 0x00B4EEE8 File Offset: 0x00B4D0E8
+		// Token: 0x06025666 RID: 153190 RVA: 0x00A89CF0 File Offset: 0x00A87EF0
 		[return: Nullable(2)]
 		public static string GetKeyName(string actionOrAxisName)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Util
 			return null;
 		}
 
-		// Token: 0x06030B3B RID: 199483 RVA: 0x00B4EF08 File Offset: 0x00B4D108
+		// Token: 0x06025667 RID: 153191 RVA: 0x00A89D10 File Offset: 0x00A87F10
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Util
 			return array;
 		}
 
-		// Token: 0x06030B3C RID: 199484 RVA: 0x00B4EF38 File Offset: 0x00B4D138
+		// Token: 0x06025668 RID: 153192 RVA: 0x00A89D40 File Offset: 0x00A87F40
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Util
 			return list.ToArray();
 		}
 
-		// Token: 0x06030B3D RID: 199485 RVA: 0x00B4EFF4 File Offset: 0x00B4D1F4
+		// Token: 0x06025669 RID: 153193 RVA: 0x00A89DFC File Offset: 0x00A87FFC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Util
 			return list.ToArray();
 		}
 
-		// Token: 0x06030B3E RID: 199486 RVA: 0x00B4F140 File Offset: 0x00B4D340
+		// Token: 0x0602566A RID: 153194 RVA: 0x00A89F48 File Offset: 0x00A88148
 		[return: Nullable(new byte[]
 		{
 			2,

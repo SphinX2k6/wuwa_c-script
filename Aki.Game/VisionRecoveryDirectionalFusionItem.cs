@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200175A RID: 5978
+// Token: 0x02000C13 RID: 3091
 public class VisionRecoveryDirectionalFusionItem : UiPanelBase
 {
-	// Token: 0x0600AD00 RID: 44288 RVA: 0x0026E3F0 File Offset: 0x0026C5F0
+	// Token: 0x060080E7 RID: 32999 RVA: 0x0027886C File Offset: 0x00276A6C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class VisionRecoveryDirectionalFusionItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600AD01 RID: 44289 RVA: 0x0026E484 File Offset: 0x0026C684
+	// Token: 0x060080E8 RID: 33000 RVA: 0x00278900 File Offset: 0x00276B00
 	public void RefreshItem()
 	{
 		UUITexture texture = base.GetTexture(2);
@@ -47,7 +47,7 @@ public class VisionRecoveryDirectionalFusionItem : UiPanelBase
 		base.SetTextureByPath(aimModelElementPath, texture, null, null);
 	}
 
-	// Token: 0x0600AD02 RID: 44290 RVA: 0x0026E52D File Offset: 0x0026C72D
+	// Token: 0x060080E9 RID: 33001 RVA: 0x002789A9 File Offset: 0x00276BA9
 	private void OnClickButton()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.VisionDirectionalFusionSelectTargetView))
@@ -57,16 +57,16 @@ public class VisionRecoveryDirectionalFusionItem : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.VisionDirectionalFusionSelectTargetView, null, null);
 	}
 
-	// Token: 0x02007D40 RID: 32064
+	// Token: 0x02006EC6 RID: 28358
 	private enum EComponent
 	{
-		// Token: 0x04029037 RID: 167991
+		// Token: 0x04024362 RID: 148322
 		Button,
-		// Token: 0x04029038 RID: 167992
+		// Token: 0x04024363 RID: 148323
 		BgSprite,
-		// Token: 0x04029039 RID: 167993
+		// Token: 0x04024364 RID: 148324
 		IconTexture,
-		// Token: 0x0402903A RID: 167994
+		// Token: 0x04024365 RID: 148325
 		NameText
 	}
 }

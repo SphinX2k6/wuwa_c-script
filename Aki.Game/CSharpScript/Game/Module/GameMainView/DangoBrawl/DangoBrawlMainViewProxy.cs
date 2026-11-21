@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl;
 using CSharpScript.Game.Module.BattleUi;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -9,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 {
-	// Token: 0x02005A08 RID: 23048
+	// Token: 0x020049E4 RID: 18916
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlMainViewProxy : GameMainViewProxy
 	{
-		// Token: 0x17008BC2 RID: 35778
-		// (get) Token: 0x0603A6EA RID: 239338 RVA: 0x00DE6FC5 File Offset: 0x00DE51C5
+		// Token: 0x17005F90 RID: 24464
+		// (get) Token: 0x0602F633 RID: 194099 RVA: 0x00D375A1 File Offset: 0x00D357A1
 		protected override bool NeedForceShowCursor
 		{
 			get
@@ -24,8 +25,8 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			}
 		}
 
-		// Token: 0x17008BC3 RID: 35779
-		// (get) Token: 0x0603A6EB RID: 239339 RVA: 0x00DE6FC8 File Offset: 0x00DE51C8
+		// Token: 0x17005F91 RID: 24465
+		// (get) Token: 0x0602F634 RID: 194100 RVA: 0x00D375A4 File Offset: 0x00D357A4
 		protected override EBattleUiCommonChildVisibleReason? BattleUiCommonChildVisibleReason
 		{
 			get
@@ -34,13 +35,13 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			}
 		}
 
-		// Token: 0x0603A6EC RID: 239340 RVA: 0x00DE6FDE File Offset: 0x00DE51DE
+		// Token: 0x0602F635 RID: 194101 RVA: 0x00D375BA File Offset: 0x00D357BA
 		protected override bool ShouldCreateJoystickPanel()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A6ED RID: 239341 RVA: 0x00DE6FE4 File Offset: 0x00DE51E4
+		// Token: 0x0602F636 RID: 194102 RVA: 0x00D375C0 File Offset: 0x00D357C0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlMainViewProxy.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -51,7 +52,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A6EE RID: 239342 RVA: 0x00DE7028 File Offset: 0x00DE5228
+		// Token: 0x0602F637 RID: 194103 RVA: 0x00D37604 File Offset: 0x00D35804
 		private UniTask CreateMainPanel()
 		{
 			DangoBrawlMainViewProxy.<CreateMainPanel>d__7 <CreateMainPanel>d__;
@@ -62,20 +63,20 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			return <CreateMainPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A6EF RID: 239343 RVA: 0x00DE706B File Offset: 0x00DE526B
+		// Token: 0x0602F638 RID: 194104 RVA: 0x00D37647 File Offset: 0x00D35847
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x0603A6F0 RID: 239344 RVA: 0x00DE706D File Offset: 0x00DE526D
+		// Token: 0x0602F639 RID: 194105 RVA: 0x00D37649 File Offset: 0x00D35849
 		protected override void OnBeforeShow(bool isFirstShow)
 		{
 		}
 
-		// Token: 0x0603A6F1 RID: 239345 RVA: 0x00DE7070 File Offset: 0x00DE5270
+		// Token: 0x0602F63A RID: 194106 RVA: 0x00D3764B File Offset: 0x00D3584B
 		protected override void OnAfterShow()
 		{
-			UiAudioModel.Instance.SetLoopAudioEventShow(this.View.GetViewId(), this.View.GetRootActor(), "play_music_ui_3_7_tuanzi_battle");
+			UiAudioSystem.Instance.PlayViewBgm(this.View, "play_music_ui_3_7_tuanzi_battle");
 			BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
 			if (childViewData == null)
 			{
@@ -84,10 +85,10 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			childViewData.SetChildVisible(EBattleUiVisibleReason.Default, EBattleUiChild.BattleFloat, true, true, 0);
 		}
 
-		// Token: 0x0603A6F2 RID: 239346 RVA: 0x00DE70C0 File Offset: 0x00DE52C0
+		// Token: 0x0602F63B RID: 194107 RVA: 0x00D3767D File Offset: 0x00D3587D
 		protected override void OnBeforeHide()
 		{
-			UiAudioModel.Instance.SetLoopAudioEventHide(this.View.GetViewId(), this.View.GetRootActor(), "play_music_ui_3_7_tuanzi_battle");
+			UiAudioSystem.Instance.StopViewBgm(this.View);
 			DangoBrawlModel.Instance.ResetPlayRate();
 			BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
 			if (childViewData == null)
@@ -97,30 +98,30 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			childViewData.SetChildVisible(EBattleUiVisibleReason.Default, EBattleUiChild.BattleFloat, false, true, 0);
 		}
 
-		// Token: 0x0603A6F3 RID: 239347 RVA: 0x00DE7117 File Offset: 0x00DE5317
+		// Token: 0x0602F63C RID: 194108 RVA: 0x00D376B4 File Offset: 0x00D358B4
 		protected override void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x0603A6F4 RID: 239348 RVA: 0x00DE7119 File Offset: 0x00DE5319
+		// Token: 0x0602F63D RID: 194109 RVA: 0x00D376B6 File Offset: 0x00D358B6
 		protected override void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x0603A6F5 RID: 239349 RVA: 0x00DE711B File Offset: 0x00DE531B
+		// Token: 0x0602F63E RID: 194110 RVA: 0x00D376B8 File Offset: 0x00D358B8
 		protected override void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x0603A6F6 RID: 239350 RVA: 0x00DE7120 File Offset: 0x00DE5320
+		// Token: 0x0602F63F RID: 194111 RVA: 0x00D376BC File Offset: 0x00D358BC
 		protected override void OnBeforeDestroy()
 		{
 			Log.Instance.Info(ELogModule.DangoBrawl, ELogAuthor.WHJ, "[DangoBrawlMainViewProxy] OnBeforeDestroy", default(ReadOnlySpan<ValueTuple<string, object>>));
-			UiAudioModel.Instance.SetLoopAudioEventDestroy(this.View.GetViewId(), this.View.GetRootActor(), "play_music_ui_3_7_tuanzi_battle");
+			UiAudioSystem.Instance.StopViewBgm(this.View);
 			DangoBrawlModel.Instance.ResetPlayRate();
 		}
 
-		// Token: 0x0603A6F7 RID: 239351 RVA: 0x00DE717C File Offset: 0x00DE537C
+		// Token: 0x0602F640 RID: 194112 RVA: 0x00D37704 File Offset: 0x00D35904
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -145,28 +146,28 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl
 			};
 		}
 
-		// Token: 0x0603A6F8 RID: 239352 RVA: 0x00DE71C6 File Offset: 0x00DE53C6
+		// Token: 0x0602F641 RID: 194113 RVA: 0x00D3774E File Offset: 0x00D3594E
 		public override bool NeedUiCameraBehavior()
 		{
 			return true;
 		}
 
-		// Token: 0x0603A6F9 RID: 239353 RVA: 0x00DE71C9 File Offset: 0x00DE53C9
-		public override void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+		// Token: 0x0602F642 RID: 194114 RVA: 0x00D37751 File Offset: 0x00D35951
+		public override void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 		{
-			UiCameraAnimationController.Instance.PushCameraHandle((EUiViewName)"DangoBrawlCameraBattle", new int?(viewId), isBlend);
+			UiCameraController.Instance.PushCameraHandleByOpenView((EUiViewName)"DangoBrawlCameraBattle", viewId, operationType);
 		}
 
-		// Token: 0x0603A6FA RID: 239354 RVA: 0x00DE71E6 File Offset: 0x00DE53E6
-		public override void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+		// Token: 0x0602F643 RID: 194115 RVA: 0x00D37769 File Offset: 0x00D35969
+		public override void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 		{
-			UiCameraAnimationController.Instance.PopCameraHandle((EUiViewName)"DangoBrawlCameraBattle", stackTopInfo, closeViewId, popOrDelete);
+			UiCameraController.Instance.PopCameraHandleByCloseView((EUiViewName)"DangoBrawlCameraBattle", nextViewName, closeViewId, operationType);
 		}
 
-		// Token: 0x0401E736 RID: 124726
+		// Token: 0x040191DD RID: 102877
 		public DangoBrawlMainBattlePanel MainBattlePanel;
 
-		// Token: 0x0401E737 RID: 124727
+		// Token: 0x040191DE RID: 102878
 		private const string DANGOBRAWL_BATTLE_CAMERA = "DangoBrawlCameraBattle";
 	}
 }

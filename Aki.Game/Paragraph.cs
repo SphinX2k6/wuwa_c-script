@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E55 RID: 7765
+// Token: 0x02001317 RID: 4887
 public class Paragraph : UiPanelBase
 {
-	// Token: 0x0600EC15 RID: 60437 RVA: 0x00380B30 File Offset: 0x0037ED30
+	// Token: 0x0600C034 RID: 49204 RVA: 0x0038C7E0 File Offset: 0x0038A9E0
 	[NullableContext(2)]
 	public Paragraph(AActor commonItemActor = null)
 	{
@@ -19,7 +19,7 @@ public class Paragraph : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600EC16 RID: 60438 RVA: 0x00380B44 File Offset: 0x0037ED44
+	// Token: 0x0600C035 RID: 49205 RVA: 0x0038C7F4 File Offset: 0x0038A9F4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -33,7 +33,7 @@ public class Paragraph : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600EC17 RID: 60439 RVA: 0x00380BB0 File Offset: 0x0037EDB0
+	// Token: 0x0600C036 RID: 49206 RVA: 0x0038C860 File Offset: 0x0038AA60
 	public void Refresh(HelpText helpTextConfig)
 	{
 		if (helpTextConfig.Picture == string.Empty)
@@ -52,12 +52,12 @@ public class Paragraph : UiPanelBase
 		base.GetText(1).ShowTextNew(helpTextConfig.Content);
 	}
 
-	// Token: 0x02008408 RID: 33800
+	// Token: 0x0200758D RID: 30093
 	private enum EParagraphComponents
 	{
-		// Token: 0x0402AF9E RID: 176030
+		// Token: 0x040262C2 RID: 156354
 		Image,
-		// Token: 0x0402AF9F RID: 176031
+		// Token: 0x040262C3 RID: 156355
 		Text
 	}
 }

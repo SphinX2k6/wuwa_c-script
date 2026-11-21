@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018CB RID: 6347
+// Token: 0x02000D84 RID: 3460
 public class ItemInteractionPanelMainTypeItem : UiPanelBase
 {
-	// Token: 0x0600BA36 RID: 47670 RVA: 0x002A2C0C File Offset: 0x002A0E0C
+	// Token: 0x06008E1F RID: 36383 RVA: 0x002AD364 File Offset: 0x002AB564
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class ItemInteractionPanelMainTypeItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600BA37 RID: 47671 RVA: 0x002A2C8C File Offset: 0x002A0E8C
+	// Token: 0x06008E20 RID: 36384 RVA: 0x002AD3E4 File Offset: 0x002AB5E4
 	protected override void OnStart()
 	{
 		this.MainTypeId = (int)this.OpenParam;
@@ -38,13 +38,13 @@ public class ItemInteractionPanelMainTypeItem : UiPanelBase
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BA38 RID: 47672 RVA: 0x002A2D02 File Offset: 0x002A0F02
+	// Token: 0x06008E21 RID: 36385 RVA: 0x002AD45A File Offset: 0x002AB65A
 	protected override void OnBeforeDestroy()
 	{
 		this.OnExtendToggleStateChangedCallback = null;
 	}
 
-	// Token: 0x0600BA39 RID: 47673 RVA: 0x002A2D0B File Offset: 0x002A0F0B
+	// Token: 0x06008E22 RID: 36386 RVA: 0x002AD463 File Offset: 0x002AB663
 	public void SetSelected(bool bSelected)
 	{
 		if (bSelected)
@@ -55,7 +55,7 @@ public class ItemInteractionPanelMainTypeItem : UiPanelBase
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600BA3A RID: 47674 RVA: 0x002A2D33 File Offset: 0x002A0F33
+	// Token: 0x06008E23 RID: 36387 RVA: 0x002AD48B File Offset: 0x002AB68B
 	public void SetRedDotVisible(bool bVisible)
 	{
 		UUIItem item = base.GetItem(2);
@@ -66,14 +66,14 @@ public class ItemInteractionPanelMainTypeItem : UiPanelBase
 		item.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600BA3B RID: 47675 RVA: 0x002A2D47 File Offset: 0x002A0F47
+	// Token: 0x06008E24 RID: 36388 RVA: 0x002AD49F File Offset: 0x002AB69F
 	[NullableContext(1)]
 	public void BindOnExtendToggleStateChanged(Action<int> onExtendToggleStateChanged)
 	{
 		this.OnExtendToggleStateChangedCallback = onExtendToggleStateChanged;
 	}
 
-	// Token: 0x0600BA3C RID: 47676 RVA: 0x002A2D50 File Offset: 0x002A0F50
+	// Token: 0x06008E25 RID: 36389 RVA: 0x002AD4A8 File Offset: 0x002AB6A8
 	private void OnExtendToggleStateChanged(EToggleState toggleState)
 	{
 		if (this.OnExtendToggleStateChangedCallback != null)
@@ -82,21 +82,21 @@ public class ItemInteractionPanelMainTypeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400545C RID: 21596
+	// Token: 0x04005507 RID: 21767
 	public int MainTypeId;
 
-	// Token: 0x0400545D RID: 21597
+	// Token: 0x04005508 RID: 21768
 	[Nullable(2)]
 	private Action<int> OnExtendToggleStateChangedCallback;
 
-	// Token: 0x02007E52 RID: 32338
+	// Token: 0x02006FD9 RID: 28633
 	private enum EChildType
 	{
-		// Token: 0x0402956E RID: 169326
+		// Token: 0x0402489B RID: 149659
 		MainTypeSprite,
-		// Token: 0x0402956F RID: 169327
+		// Token: 0x0402489C RID: 149660
 		ExtendToggle,
-		// Token: 0x04029570 RID: 169328
+		// Token: 0x0402489D RID: 149661
 		RedDotItem
 	}
 }

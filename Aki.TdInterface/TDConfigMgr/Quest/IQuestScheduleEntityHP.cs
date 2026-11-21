@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010A3 RID: 4259
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011D1 RID: 4561
 	public class IQuestScheduleEntityHP : IQuestScheduleType
 	{
-		// Token: 0x06006018 RID: 24600 RVA: 0x000E88D0 File Offset: 0x000E6AD0
+		// Token: 0x06006611 RID: 26129 RVA: 0x000F59F0 File Offset: 0x000F3BF0
 		private IQuestScheduleEntityHP_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006019 RID: 24601 RVA: 0x000E8908 File Offset: 0x000E6B08
+		// Token: 0x06006612 RID: 26130 RVA: 0x000F5A28 File Offset: 0x000F3C28
 		public static IQuestScheduleEntityHP Create([Nullable(2)] IQuestScheduleEntityHP instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600601A RID: 24602 RVA: 0x000E891B File Offset: 0x000E6B1B
+		// Token: 0x06006613 RID: 26131 RVA: 0x000F5A3B File Offset: 0x000F3C3B
 		public static IQuestScheduleEntityHP CreateFromSetValue([Nullable(2)] IQuestScheduleEntityHP_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600601B RID: 24603 RVA: 0x000E892E File Offset: 0x000E6B2E
+		// Token: 0x06006614 RID: 26132 RVA: 0x000F5A4E File Offset: 0x000F3C4E
 		public new IQuestScheduleEntityHP_SetValue ToSetValue()
 		{
 			return new IQuestScheduleEntityHP_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F9B RID: 8091
-		// (get) Token: 0x0600601C RID: 24604 RVA: 0x000E894D File Offset: 0x000E6B4D
-		// (set) Token: 0x0600601D RID: 24605 RVA: 0x000E8978 File Offset: 0x000E6B78
+		// Token: 0x1700214D RID: 8525
+		// (get) Token: 0x06006615 RID: 26133 RVA: 0x000F5A6D File Offset: 0x000F3C6D
+		// (set) Token: 0x06006616 RID: 26134 RVA: 0x000F5A98 File Offset: 0x000F3C98
 		public override EQuestScheduleType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F9C RID: 8092
-		// (get) Token: 0x0600601E RID: 24606 RVA: 0x000E8986 File Offset: 0x000E6B86
-		// (set) Token: 0x0600601F RID: 24607 RVA: 0x000E89B1 File Offset: 0x000E6BB1
+		// Token: 0x1700214E RID: 8526
+		// (get) Token: 0x06006617 RID: 26135 RVA: 0x000F5AA6 File Offset: 0x000F3CA6
+		// (set) Token: 0x06006618 RID: 26136 RVA: 0x000F5AD1 File Offset: 0x000F3CD1
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040039F4 RID: 14836
+		// Token: 0x04003D41 RID: 15681
 		[Nullable(2)]
 		protected new IQuestScheduleEntityHP FbInstance;
 
-		// Token: 0x040039F5 RID: 14837
+		// Token: 0x04003D42 RID: 15682
 		[Nullable(2)]
 		protected new IQuestScheduleEntityHP_SetValue PocoInterface;
 	}

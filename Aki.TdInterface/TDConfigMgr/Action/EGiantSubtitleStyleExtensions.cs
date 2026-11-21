@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002349 RID: 9033
+	// Token: 0x020025BC RID: 9660
 	public static class EGiantSubtitleStyleExtensions
 	{
-		// Token: 0x0600C547 RID: 50503 RVA: 0x001CCB5C File Offset: 0x001CAD5C
+		// Token: 0x0600D128 RID: 53544 RVA: 0x001E4D28 File Offset: 0x001E2F28
 		public static string ToEnumString(this EGiantSubtitleStyle value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C548 RID: 50504 RVA: 0x001CCBBC File Offset: 0x001CADBC
+		// Token: 0x0600D129 RID: 53545 RVA: 0x001E4D88 File Offset: 0x001E2F88
 		public static EGiantSubtitleStyle FromString(string name)
 		{
 			EGiantSubtitleStyle result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C549 RID: 50505 RVA: 0x001CCBE8 File Offset: 0x001CADE8
+		// Token: 0x0600D12A RID: 53546 RVA: 0x001E4DB4 File Offset: 0x001E2FB4
 		public static bool TryFromString(string name, out EGiantSubtitleStyle value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C54A RID: 50506 RVA: 0x001CCC62 File Offset: 0x001CAE62
+		// Token: 0x0600D12B RID: 53547 RVA: 0x001E4E2E File Offset: 0x001E302E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C54B RID: 50507 RVA: 0x001CCC92 File Offset: 0x001CAE92
+		// Token: 0x0600D12C RID: 53548 RVA: 0x001E4E5E File Offset: 0x001E305E
 		public static EGiantSubtitleStyle[] GetValues()
 		{
 			return new EGiantSubtitleStyle[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C54C RID: 50508 RVA: 0x001CCCA5 File Offset: 0x001CAEA5
+		// Token: 0x0600D12D RID: 53549 RVA: 0x001E4E71 File Offset: 0x001E3071
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004995 RID: 18837
+	// Token: 0x0200390F RID: 14607
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MatchThreeSwapPieceComponent : HotKeyComponent
 	{
-		// Token: 0x0603112A RID: 201002 RVA: 0x00B6382B File Offset: 0x00B61A2B
+		// Token: 0x06025C60 RID: 154720 RVA: 0x00A9E77B File Offset: 0x00A9C97B
 		public MatchThreeSwapPieceComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603112B RID: 201003 RVA: 0x00B63834 File Offset: 0x00B61A34
+		// Token: 0x06025C61 RID: 154721 RVA: 0x00A9E784 File Offset: 0x00A9C984
 		protected override void OnInit()
 		{
 			string axisName = base.GetAxisName();
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.AxisConsumed = (Math.Abs(axisValue) > 0.2f);
 		}
 
-		// Token: 0x0603112C RID: 201004 RVA: 0x00B63877 File Offset: 0x00B61A77
+		// Token: 0x06025C62 RID: 154722 RVA: 0x00A9E7C7 File Offset: 0x00A9C9C7
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 		}
 
-		// Token: 0x0603112D RID: 201005 RVA: 0x00B63884 File Offset: 0x00B61A84
+		// Token: 0x06025C63 RID: 154723 RVA: 0x00A9E7D4 File Offset: 0x00A9C9D4
 		protected override void OnInputAxis(string axisName, float value)
 		{
 			float num = Math.Abs(value);
@@ -79,25 +79,25 @@ namespace CSharpScript.Game.Module.UiNavigation
 			EventSystem.Instance.Emit<ELGUINavigationDirection>(EEventName.MatchThreeSwapPieceInput, p);
 		}
 
-		// Token: 0x0603112E RID: 201006 RVA: 0x00B6390C File Offset: 0x00B61B0C
+		// Token: 0x06025C64 RID: 154724 RVA: 0x00A9E85C File Offset: 0x00A9CA5C
 		protected override void OnClear()
 		{
 			this.AxisConsumed = false;
 		}
 
-		// Token: 0x0603112F RID: 201007 RVA: 0x00B63915 File Offset: 0x00B61B15
+		// Token: 0x06025C65 RID: 154725 RVA: 0x00A9E865 File Offset: 0x00A9CA65
 		protected override void OnFinishInputAxis(string axisName)
 		{
 			this.AxisConsumed = false;
 		}
 
-		// Token: 0x0401A4AD RID: 107693
+		// Token: 0x04014D1F RID: 85279
 		private const float AXIS_TRIGGER_THRESHOLD = 0.6f;
 
-		// Token: 0x0401A4AE RID: 107694
+		// Token: 0x04014D20 RID: 85280
 		private const float AXIS_RELEASE_THRESHOLD = 0.2f;
 
-		// Token: 0x0401A4AF RID: 107695
+		// Token: 0x04014D21 RID: 85281
 		private bool AxisConsumed;
 	}
 }

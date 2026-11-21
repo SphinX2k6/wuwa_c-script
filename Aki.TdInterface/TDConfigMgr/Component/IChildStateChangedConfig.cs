@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200023F RID: 575
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000266 RID: 614
 	public class IChildStateChangedConfig
 	{
-		// Token: 0x06000A42 RID: 2626 RVA: 0x0002B0A8 File Offset: 0x000292A8
+		// Token: 0x06000AB6 RID: 2742 RVA: 0x0002C868 File Offset: 0x0002AA68
 		private IChildStateChangedConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000A43 RID: 2627 RVA: 0x0002B0E0 File Offset: 0x000292E0
+		// Token: 0x06000AB7 RID: 2743 RVA: 0x0002C8A0 File Offset: 0x0002AAA0
 		public static IChildStateChangedConfig Create([Nullable(2)] IChildStateChangedConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A44 RID: 2628 RVA: 0x0002B0F3 File Offset: 0x000292F3
+		// Token: 0x06000AB8 RID: 2744 RVA: 0x0002C8B3 File Offset: 0x0002AAB3
 		public static IChildStateChangedConfig CreateFromSetValue([Nullable(2)] IChildStateChangedConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A45 RID: 2629 RVA: 0x0002B106 File Offset: 0x00029306
+		// Token: 0x06000AB9 RID: 2745 RVA: 0x0002C8C6 File Offset: 0x0002AAC6
 		public IChildStateChangedConfig_SetValue ToSetValue()
 		{
 			return new IChildStateChangedConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000320 RID: 800
-		// (get) Token: 0x06000A46 RID: 2630 RVA: 0x0002B125 File Offset: 0x00029325
-		// (set) Token: 0x06000A47 RID: 2631 RVA: 0x0002B150 File Offset: 0x00029350
+		// Token: 0x1700033F RID: 831
+		// (get) Token: 0x06000ABA RID: 2746 RVA: 0x0002C8E5 File Offset: 0x0002AAE5
+		// (set) Token: 0x06000ABB RID: 2747 RVA: 0x0002C910 File Offset: 0x0002AB10
 		public virtual string State
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000321 RID: 801
-		// (get) Token: 0x06000A48 RID: 2632 RVA: 0x0002B160 File Offset: 0x00029360
-		// (set) Token: 0x06000A49 RID: 2633 RVA: 0x0002B1C1 File Offset: 0x000293C1
+		// Token: 0x17000340 RID: 832
+		// (get) Token: 0x06000ABC RID: 2748 RVA: 0x0002C920 File Offset: 0x0002AB20
+		// (set) Token: 0x06000ABD RID: 2749 RVA: 0x0002C981 File Offset: 0x0002AB81
 		[Nullable(2)]
 		public virtual IDelayChangeState DelayChangeState
 		{
@@ -116,18 +114,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A4C RID: 2636
+		// Token: 0x04000AD6 RID: 2774
 		[Nullable(2)]
 		protected IChildStateChangedConfig FbInstance;
 
-		// Token: 0x04000A4D RID: 2637
+		// Token: 0x04000AD7 RID: 2775
 		[Nullable(2)]
 		protected IChildStateChangedConfig_SetValue PocoInterface;
 
-		// Token: 0x04000A4E RID: 2638
+		// Token: 0x04000AD8 RID: 2776
 		private IDelayChangeState _DelayChangeStateCache;
 
-		// Token: 0x04000A4F RID: 2639
+		// Token: 0x04000AD9 RID: 2777
 		private bool _DelayChangeStateInited;
 	}
 }

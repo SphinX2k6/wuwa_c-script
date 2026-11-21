@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200164A RID: 5706
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017B7 RID: 6071
 	public class EnableTakePhotoClip : ActionParams
 	{
-		// Token: 0x06007C8F RID: 31887 RVA: 0x0012B6A4 File Offset: 0x001298A4
+		// Token: 0x0600836D RID: 33645 RVA: 0x0013A750 File Offset: 0x00138950
 		private EnableTakePhotoClip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C90 RID: 31888 RVA: 0x0012B6DC File Offset: 0x001298DC
+		// Token: 0x0600836E RID: 33646 RVA: 0x0013A788 File Offset: 0x00138988
 		public static EnableTakePhotoClip Create([Nullable(2)] EnableTakePhotoClip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C91 RID: 31889 RVA: 0x0012B6EF File Offset: 0x001298EF
+		// Token: 0x0600836F RID: 33647 RVA: 0x0013A79B File Offset: 0x0013899B
 		public static EnableTakePhotoClip CreateFromSetValue([Nullable(2)] EnableTakePhotoClip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C92 RID: 31890 RVA: 0x0012B702 File Offset: 0x00129902
+		// Token: 0x06008370 RID: 33648 RVA: 0x0013A7AE File Offset: 0x001389AE
 		public EnableTakePhotoClip_SetValue ToSetValue()
 		{
 			return new EnableTakePhotoClip_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700292B RID: 10539
-		// (get) Token: 0x06007C93 RID: 31891 RVA: 0x0012B715 File Offset: 0x00129915
-		// (set) Token: 0x06007C94 RID: 31892 RVA: 0x0012B740 File Offset: 0x00129940
+		// Token: 0x17002B16 RID: 11030
+		// (get) Token: 0x06008371 RID: 33649 RVA: 0x0013A7C1 File Offset: 0x001389C1
+		// (set) Token: 0x06008372 RID: 33650 RVA: 0x0013A7EC File Offset: 0x001389EC
 		public virtual bool Enable
 		{
 			get
@@ -78,11 +76,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C7B RID: 19579
+		// Token: 0x0400506F RID: 20591
 		[Nullable(2)]
 		protected new EnableTakePhotoClip FbInstance;
 
-		// Token: 0x04004C7C RID: 19580
+		// Token: 0x04005070 RID: 20592
 		[Nullable(2)]
 		protected EnableTakePhotoClip_SetValue PocoInterface;
 	}

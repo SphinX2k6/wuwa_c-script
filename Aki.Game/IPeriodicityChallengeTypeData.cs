@@ -1,37 +1,37 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020016B5 RID: 5813
+// Token: 0x02000B6D RID: 2925
 [NullableContext(1)]
 public interface IPeriodicityChallengeTypeData
 {
-	// Token: 0x17000DDE RID: 3550
-	// (get) Token: 0x0600A5C4 RID: 42436
-	// (set) Token: 0x0600A5C5 RID: 42437
+	// Token: 0x17000DFF RID: 3583
+	// (get) Token: 0x060079A4 RID: 31140
+	// (set) Token: 0x060079A5 RID: 31141
 	float LeftTime { get; set; }
 
-	// Token: 0x17000DDF RID: 3551
-	// (get) Token: 0x0600A5C6 RID: 42438
-	// (set) Token: 0x0600A5C7 RID: 42439
+	// Token: 0x17000E00 RID: 3584
+	// (get) Token: 0x060079A6 RID: 31142
+	// (set) Token: 0x060079A7 RID: 31143
 	int CurrentNum { get; set; }
 
-	// Token: 0x17000DE0 RID: 3552
-	// (get) Token: 0x0600A5C8 RID: 42440
-	// (set) Token: 0x0600A5C9 RID: 42441
+	// Token: 0x17000E01 RID: 3585
+	// (get) Token: 0x060079A8 RID: 31144
+	// (set) Token: 0x060079A9 RID: 31145
 	int TotalNum { get; set; }
 
-	// Token: 0x17000DE1 RID: 3553
-	// (get) Token: 0x0600A5CA RID: 42442
-	// (set) Token: 0x0600A5CB RID: 42443
+	// Token: 0x17000E02 RID: 3586
+	// (get) Token: 0x060079AA RID: 31146
+	// (set) Token: 0x060079AB RID: 31147
 	bool IsFinish { get; set; }
 
-	// Token: 0x17000DE2 RID: 3554
-	// (get) Token: 0x0600A5CC RID: 42444
-	// (set) Token: 0x0600A5CD RID: 42445
+	// Token: 0x17000E03 RID: 3587
+	// (get) Token: 0x060079AC RID: 31148
+	// (set) Token: 0x060079AD RID: 31149
 	bool RedPoint { get; set; }
 
-	// Token: 0x17000DE3 RID: 3555
-	// (get) Token: 0x0600A5CE RID: 42446
-	// (set) Token: 0x0600A5CF RID: 42447
+	// Token: 0x17000E04 RID: 3588
+	// (get) Token: 0x060079AE RID: 31150
+	// (set) Token: 0x060079AF RID: 31151
 	string SubText { get; set; }
 }

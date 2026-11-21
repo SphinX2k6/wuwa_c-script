@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x0200580A RID: 22538
+	// Token: 0x020047E1 RID: 18401
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreTargetReachedList : UiPanelBase
 	{
-		// Token: 0x060394A1 RID: 234657 RVA: 0x00D963A4 File Offset: 0x00D945A4
+		// Token: 0x0602E3B5 RID: 189365 RVA: 0x00CE520C File Offset: 0x00CE340C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060394A2 RID: 234658 RVA: 0x00D9640D File Offset: 0x00D9460D
+		// Token: 0x0602E3B6 RID: 189366 RVA: 0x00CE5275 File Offset: 0x00CE3475
 		protected override void OnStart()
 		{
 			this.BarVerticalItem = base.GetItem(0);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			rewardExploreBarItem.SetUIActive(false);
 		}
 
-		// Token: 0x060394A3 RID: 234659 RVA: 0x00D9643A File Offset: 0x00D9463A
+		// Token: 0x0602E3B7 RID: 189367 RVA: 0x00CE52A2 File Offset: 0x00CE34A2
 		protected override void OnBeforeDestroy()
 		{
 			this.BarVerticalItem = null;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ClearAllRewardExploreBar();
 		}
 
-		// Token: 0x060394A4 RID: 234660 RVA: 0x00D96450 File Offset: 0x00D94650
+		// Token: 0x0602E3B8 RID: 189368 RVA: 0x00CE52B8 File Offset: 0x00CE34B8
 		public void SetBarList(IRewardExploreTargetReached[] exploreBarDataList)
 		{
 			this.ClearAllRewardExploreBar();
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060394A5 RID: 234661 RVA: 0x00D964A4 File Offset: 0x00D946A4
+		// Token: 0x0602E3B9 RID: 189369 RVA: 0x00CE530C File Offset: 0x00CE350C
 		private void NewRewardExploreBar(IRewardExploreTargetReached rewardTargetReachedData)
 		{
 			LguiUtil instance = LguiUtil.Instance;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RewardExploreBarList.Add(rewardExploreTargetReached);
 		}
 
-		// Token: 0x060394A6 RID: 234662 RVA: 0x00D964F4 File Offset: 0x00D946F4
+		// Token: 0x0602E3BA RID: 189370 RVA: 0x00CE535C File Offset: 0x00CE355C
 		private void ClearAllRewardExploreBar()
 		{
 			foreach (RewardExploreTargetReached rewardExploreTargetReached in this.RewardExploreBarList)
@@ -91,23 +91,23 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RewardExploreBarList.Clear();
 		}
 
-		// Token: 0x0401DF57 RID: 122711
+		// Token: 0x040189EE RID: 100846
 		private UUIItem RewardExploreBarItem;
 
-		// Token: 0x0401DF58 RID: 122712
+		// Token: 0x040189EF RID: 100847
 		private UUIItem BarVerticalItem;
 
-		// Token: 0x0401DF59 RID: 122713
+		// Token: 0x040189F0 RID: 100848
 		private readonly List<RewardExploreTargetReached> RewardExploreBarList = new List<RewardExploreTargetReached>();
 
-		// Token: 0x0200BA0B RID: 47627
+		// Token: 0x0200A421 RID: 42017
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040383C2 RID: 230338
+			// Token: 0x04032DAF RID: 208303
 			public const int BarVerticalItem = 0;
 
-			// Token: 0x040383C3 RID: 230339
+			// Token: 0x04032DB0 RID: 208304
 			public const int RewardTargetReachedItem = 1;
 		}
 	}

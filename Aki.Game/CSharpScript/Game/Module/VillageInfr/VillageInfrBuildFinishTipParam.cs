@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200489E RID: 18590
+	// Token: 0x02003815 RID: 14357
 	public class VillageInfrBuildFinishTipParam : IVillageInfrBuildFinishTipParam
 	{
-		// Token: 0x17007950 RID: 31056
-		// (get) Token: 0x060309B7 RID: 199095 RVA: 0x00B4911D File Offset: 0x00B4731D
-		// (set) Token: 0x060309B8 RID: 199096 RVA: 0x00B49125 File Offset: 0x00B47325
+		// Token: 0x17004CB8 RID: 19640
+		// (get) Token: 0x060254E3 RID: 152803 RVA: 0x00A83F25 File Offset: 0x00A82125
+		// (set) Token: 0x060254E4 RID: 152804 RVA: 0x00A83F2D File Offset: 0x00A8212D
 		public EVillageInfrSelectType SelectType { get; set; }
 
-		// Token: 0x17007951 RID: 31057
-		// (get) Token: 0x060309B9 RID: 199097 RVA: 0x00B4912E File Offset: 0x00B4732E
-		// (set) Token: 0x060309BA RID: 199098 RVA: 0x00B49136 File Offset: 0x00B47336
+		// Token: 0x17004CB9 RID: 19641
+		// (get) Token: 0x060254E5 RID: 152805 RVA: 0x00A83F36 File Offset: 0x00A82136
+		// (set) Token: 0x060254E6 RID: 152806 RVA: 0x00A83F3E File Offset: 0x00A8213E
 		public int SelectId { get; set; }
 	}
 }

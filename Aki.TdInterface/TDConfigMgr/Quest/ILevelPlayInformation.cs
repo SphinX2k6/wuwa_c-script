@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FEF RID: 4079
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200111B RID: 4379
 	public class ILevelPlayInformation
 	{
-		// Token: 0x06005AC2 RID: 23234 RVA: 0x000DC4BC File Offset: 0x000DA6BC
+		// Token: 0x060060A2 RID: 24738 RVA: 0x000E90FC File Offset: 0x000E72FC
 		private ILevelPlayInformation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005AC3 RID: 23235 RVA: 0x000DC4F4 File Offset: 0x000DA6F4
+		// Token: 0x060060A3 RID: 24739 RVA: 0x000E9134 File Offset: 0x000E7334
 		public static ILevelPlayInformation Create([Nullable(2)] ILevelPlayInformation instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AC4 RID: 23236 RVA: 0x000DC507 File Offset: 0x000DA707
+		// Token: 0x060060A4 RID: 24740 RVA: 0x000E9147 File Offset: 0x000E7347
 		public static ILevelPlayInformation CreateFromSetValue([Nullable(2)] ILevelPlayInformation_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AC5 RID: 23237 RVA: 0x000DC51A File Offset: 0x000DA71A
+		// Token: 0x060060A5 RID: 24741 RVA: 0x000E915A File Offset: 0x000E735A
 		public ILevelPlayInformation_SetValue ToSetValue()
 		{
 			return new ILevelPlayInformation_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DFC RID: 7676
-		// (get) Token: 0x06005AC6 RID: 23238 RVA: 0x000DC545 File Offset: 0x000DA745
-		// (set) Token: 0x06005AC7 RID: 23239 RVA: 0x000DC570 File Offset: 0x000DA770
+		// Token: 0x17001FA5 RID: 8101
+		// (get) Token: 0x060060A6 RID: 24742 RVA: 0x000E9185 File Offset: 0x000E7385
+		// (set) Token: 0x060060A7 RID: 24743 RVA: 0x000E91B0 File Offset: 0x000E73B0
 		public virtual string TidMainTitle
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DFD RID: 7677
-		// (get) Token: 0x06005AC8 RID: 23240 RVA: 0x000DC580 File Offset: 0x000DA780
-		// (set) Token: 0x06005AC9 RID: 23241 RVA: 0x000DC613 File Offset: 0x000DA813
+		// Token: 0x17001FA6 RID: 8102
+		// (get) Token: 0x060060A8 RID: 24744 RVA: 0x000E91C0 File Offset: 0x000E73C0
+		// (set) Token: 0x060060A9 RID: 24745 RVA: 0x000E9253 File Offset: 0x000E7453
 		public virtual List<IInformationSubTitle> SubTitles
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DFE RID: 7678
-		// (get) Token: 0x06005ACA RID: 23242 RVA: 0x000DC628 File Offset: 0x000DA828
-		// (set) Token: 0x06005ACB RID: 23243 RVA: 0x000DC63F File Offset: 0x000DA83F
+		// Token: 0x17001FA7 RID: 8103
+		// (get) Token: 0x060060AA RID: 24746 RVA: 0x000E9268 File Offset: 0x000E7468
+		// (set) Token: 0x060060AB RID: 24747 RVA: 0x000E927F File Offset: 0x000E747F
 		[Nullable(2)]
 		public virtual string EdTidMainTitle
 		{
@@ -145,18 +143,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400369F RID: 13983
+		// Token: 0x040039D7 RID: 14807
 		[Nullable(2)]
 		protected ILevelPlayInformation FbInstance;
 
-		// Token: 0x040036A0 RID: 13984
+		// Token: 0x040039D8 RID: 14808
 		[Nullable(2)]
 		protected ILevelPlayInformation_SetValue PocoInterface;
 
-		// Token: 0x040036A1 RID: 13985
+		// Token: 0x040039D9 RID: 14809
 		private List<IInformationSubTitle> _SubTitlesCache;
 
-		// Token: 0x040036A2 RID: 13986
+		// Token: 0x040039DA RID: 14810
 		private bool _SubTitlesInited;
 	}
 }

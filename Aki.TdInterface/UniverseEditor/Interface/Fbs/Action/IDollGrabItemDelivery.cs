@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006600 RID: 26112
+	// Token: 0x02006C71 RID: 27761
 	public struct IDollGrabItemDelivery : IFlatbufferObject
 	{
-		// Token: 0x1700C204 RID: 49668
-		// (get) Token: 0x0602D563 RID: 185699 RVA: 0x00636C6E File Offset: 0x00634E6E
+		// Token: 0x1700CBA2 RID: 52130
+		// (get) Token: 0x0602FD34 RID: 195892 RVA: 0x006837D6 File Offset: 0x006819D6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D564 RID: 185700 RVA: 0x00636C7B File Offset: 0x00634E7B
+		// Token: 0x0602FD35 RID: 195893 RVA: 0x006837E3 File Offset: 0x006819E3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D565 RID: 185701 RVA: 0x00636C84 File Offset: 0x00634E84
+		// Token: 0x0602FD36 RID: 195894 RVA: 0x006837EC File Offset: 0x006819EC
 		public static IDollGrabItemDelivery GetRootAsIDollGrabItemDelivery(ByteBuffer _bb)
 		{
 			return IDollGrabItemDelivery.GetRootAsIDollGrabItemDelivery(_bb, default(IDollGrabItemDelivery));
 		}
 
-		// Token: 0x0602D566 RID: 185702 RVA: 0x00636CA0 File Offset: 0x00634EA0
+		// Token: 0x0602FD37 RID: 195895 RVA: 0x00683808 File Offset: 0x00681A08
 		public static IDollGrabItemDelivery GetRootAsIDollGrabItemDelivery(ByteBuffer _bb, IDollGrabItemDelivery obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D567 RID: 185703 RVA: 0x00636CBD File Offset: 0x00634EBD
+		// Token: 0x0602FD38 RID: 195896 RVA: 0x00683825 File Offset: 0x00681A25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D568 RID: 185704 RVA: 0x00636CCC File Offset: 0x00634ECC
+		// Token: 0x0602FD39 RID: 195897 RVA: 0x00683834 File Offset: 0x00681A34
 		public IDollGrabItemDelivery __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C205 RID: 49669
-		// (get) Token: 0x0602D569 RID: 185705 RVA: 0x00636CDC File Offset: 0x00634EDC
+		// Token: 0x1700CBA3 RID: 52131
+		// (get) Token: 0x0602FD3A RID: 195898 RVA: 0x00683844 File Offset: 0x00681A44
 		public int ShowcaseId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D56A RID: 185706 RVA: 0x00636D18 File Offset: 0x00634F18
+		// Token: 0x0602FD3B RID: 195899 RVA: 0x00683880 File Offset: 0x00681A80
 		public static Offset<IDollGrabItemDelivery> CreateIDollGrabItemDelivery(FlatBufferBuilder builder, int ShowcaseId = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDollGrabItemDelivery.EndIDollGrabItemDelivery(builder);
 		}
 
-		// Token: 0x0602D56B RID: 185707 RVA: 0x00636D2E File Offset: 0x00634F2E
+		// Token: 0x0602FD3C RID: 195900 RVA: 0x00683896 File Offset: 0x00681A96
 		public static void StartIDollGrabItemDelivery(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602D56C RID: 185708 RVA: 0x00636D37 File Offset: 0x00634F37
+		// Token: 0x0602FD3D RID: 195901 RVA: 0x0068389F File Offset: 0x00681A9F
 		public static void AddShowcaseId(FlatBufferBuilder builder, int showcaseId)
 		{
 			builder.AddInt(0, showcaseId, 0);
 		}
 
-		// Token: 0x0602D56D RID: 185709 RVA: 0x00636D42 File Offset: 0x00634F42
+		// Token: 0x0602FD3E RID: 195902 RVA: 0x006838AA File Offset: 0x00681AAA
 		public static Offset<IDollGrabItemDelivery> EndIDollGrabItemDelivery(FlatBufferBuilder builder)
 		{
 			return new Offset<IDollGrabItemDelivery>(builder.EndTable());
 		}
 
-		// Token: 0x0602D56E RID: 185710 RVA: 0x00636D50 File Offset: 0x00634F50
+		// Token: 0x0602FD3F RID: 195903 RVA: 0x006838B8 File Offset: 0x00681AB8
 		public IDollGrabItemDeliveryT UnPack()
 		{
 			IDollGrabItemDeliveryT dollGrabItemDeliveryT = new IDollGrabItemDeliveryT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return dollGrabItemDeliveryT;
 		}
 
-		// Token: 0x0602D56F RID: 185711 RVA: 0x00636D6B File Offset: 0x00634F6B
+		// Token: 0x0602FD40 RID: 195904 RVA: 0x006838D3 File Offset: 0x00681AD3
 		public void UnPackTo(IDollGrabItemDeliveryT _o)
 		{
 			_o.ShowcaseId = this.ShowcaseId;
 		}
 
-		// Token: 0x0602D570 RID: 185712 RVA: 0x00636D7C File Offset: 0x00634F7C
+		// Token: 0x0602FD41 RID: 195905 RVA: 0x006838E4 File Offset: 0x00681AE4
 		public static Offset<IDollGrabItemDelivery> Pack(FlatBufferBuilder builder, IDollGrabItemDeliveryT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDollGrabItemDelivery.CreateIDollGrabItemDelivery(builder, _o.ShowcaseId);
 		}
 
-		// Token: 0x04010C85 RID: 68741
+		// Token: 0x04011AA0 RID: 72352
 		private Table __p;
 	}
 }

@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Input.Blueprints
 {
-	// Token: 0x02004265 RID: 16997
+	// Token: 0x020032D6 RID: 13014
 	[UnrealObjectPath("/Game/Aki/Character/Input/Blueprints/BP_CameraDrivenAutoFlightData.BP_CameraDrivenAutoFlightData_C")]
 	[UnrealStructLayout(112, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 108)]
 	public class BP_CameraDrivenAutoFlightData_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602C0B0 RID: 180400 RVA: 0x00A128C1 File Offset: 0x00A10AC1
+		// Token: 0x06020F6E RID: 135022 RVA: 0x00953A30 File Offset: 0x00951C30
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_CameraDrivenAutoFlightData_C._ClassPtr == IntPtr.Zero)
@@ -22,156 +22,156 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return BP_CameraDrivenAutoFlightData_C._ClassPtr;
 		}
 
-		// Token: 0x0602C0B1 RID: 180401 RVA: 0x00A128E8 File Offset: 0x00A10AE8
+		// Token: 0x06020F6F RID: 135023 RVA: 0x00953A54 File Offset: 0x00951C54
 		public BP_CameraDrivenAutoFlightData_C() : this(BuiltinUtils.AllocNativeUObject(BP_CameraDrivenAutoFlightData_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602C0B2 RID: 180402 RVA: 0x00A12910 File Offset: 0x00A10B10
+		// Token: 0x06020F70 RID: 135024 RVA: 0x00953A7C File Offset: 0x00951C7C
 		[NullableContext(1)]
 		public BP_CameraDrivenAutoFlightData_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_CameraDrivenAutoFlightData_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006D6E RID: 28014
-		// (get) Token: 0x0602C0B3 RID: 180403 RVA: 0x00A12943 File Offset: 0x00A10B43
-		// (set) Token: 0x0602C0B4 RID: 180404 RVA: 0x00A12953 File Offset: 0x00A10B53
+		// Token: 0x170041F2 RID: 16882
+		// (get) Token: 0x06020F71 RID: 135025 RVA: 0x00953AAF File Offset: 0x00951CAF
+		// (set) Token: 0x06020F72 RID: 135026 RVA: 0x00953ABF File Offset: 0x00951CBF
 		public unsafe float 自动驾驶开始时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶开始时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶开始时间) = value;
 			}
 		}
 
-		// Token: 0x17006D6F RID: 28015
-		// (get) Token: 0x0602C0B5 RID: 180405 RVA: 0x00A12964 File Offset: 0x00A10B64
-		// (set) Token: 0x0602C0B6 RID: 180406 RVA: 0x00A12974 File Offset: 0x00A10B74
+		// Token: 0x170041F3 RID: 16883
+		// (get) Token: 0x06020F73 RID: 135027 RVA: 0x00953AD0 File Offset: 0x00951CD0
+		// (set) Token: 0x06020F74 RID: 135028 RVA: 0x00953AE0 File Offset: 0x00951CE0
 		public unsafe float 自动驾驶启动输入
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶启动输入);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶启动输入) = value;
 			}
 		}
 
-		// Token: 0x17006D70 RID: 28016
-		// (get) Token: 0x0602C0B7 RID: 180407 RVA: 0x00A12985 File Offset: 0x00A10B85
-		// (set) Token: 0x0602C0B8 RID: 180408 RVA: 0x00A12995 File Offset: 0x00A10B95
+		// Token: 0x170041F4 RID: 16884
+		// (get) Token: 0x06020F75 RID: 135029 RVA: 0x00953AF1 File Offset: 0x00951CF1
+		// (set) Token: 0x06020F76 RID: 135030 RVA: 0x00953B01 File Offset: 0x00951D01
 		public unsafe float 自动驾驶完成角度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶完成角度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶完成角度) = value;
 			}
 		}
 
-		// Token: 0x17006D71 RID: 28017
-		// (get) Token: 0x0602C0B9 RID: 180409 RVA: 0x00A129A6 File Offset: 0x00A10BA6
-		// (set) Token: 0x0602C0BA RID: 180410 RVA: 0x00A129B6 File Offset: 0x00A10BB6
+		// Token: 0x170041F5 RID: 16885
+		// (get) Token: 0x06020F77 RID: 135031 RVA: 0x00953B12 File Offset: 0x00951D12
+		// (set) Token: 0x06020F78 RID: 135032 RVA: 0x00953B22 File Offset: 0x00951D22
 		public unsafe float 自动驾驶归正角度Min
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶归正角度Min);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶归正角度Min) = value;
 			}
 		}
 
-		// Token: 0x17006D72 RID: 28018
-		// (get) Token: 0x0602C0BB RID: 180411 RVA: 0x00A129C7 File Offset: 0x00A10BC7
-		// (set) Token: 0x0602C0BC RID: 180412 RVA: 0x00A129D7 File Offset: 0x00A10BD7
+		// Token: 0x170041F6 RID: 16886
+		// (get) Token: 0x06020F79 RID: 135033 RVA: 0x00953B33 File Offset: 0x00951D33
+		// (set) Token: 0x06020F7A RID: 135034 RVA: 0x00953B43 File Offset: 0x00951D43
 		public unsafe float 自动驾驶归正角度Max
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶归正角度Max);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶归正角度Max) = value;
 			}
 		}
 
-		// Token: 0x17006D73 RID: 28019
-		// (get) Token: 0x0602C0BD RID: 180413 RVA: 0x00A129E8 File Offset: 0x00A10BE8
-		// (set) Token: 0x0602C0BE RID: 180414 RVA: 0x00A129F8 File Offset: 0x00A10BF8
+		// Token: 0x170041F7 RID: 16887
+		// (get) Token: 0x06020F7B RID: 135035 RVA: 0x00953B54 File Offset: 0x00951D54
+		// (set) Token: 0x06020F7C RID: 135036 RVA: 0x00953B64 File Offset: 0x00951D64
 		public unsafe float 自动驾驶归正角度模拟输入Min
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶归正角度模拟输入Min);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶归正角度模拟输入Min) = value;
 			}
 		}
 
-		// Token: 0x17006D74 RID: 28020
-		// (get) Token: 0x0602C0BF RID: 180415 RVA: 0x00A12A09 File Offset: 0x00A10C09
-		// (set) Token: 0x0602C0C0 RID: 180416 RVA: 0x00A12A19 File Offset: 0x00A10C19
+		// Token: 0x170041F8 RID: 16888
+		// (get) Token: 0x06020F7D RID: 135037 RVA: 0x00953B75 File Offset: 0x00951D75
+		// (set) Token: 0x06020F7E RID: 135038 RVA: 0x00953B85 File Offset: 0x00951D85
 		public unsafe float 自动驾驶归正角度模拟输入Max
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶归正角度模拟输入Max);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraDrivenAutoFlightData_C.__PropertyOffset_自动驾驶归正角度模拟输入Max) = value;
 			}
 		}
 
-		// Token: 0x0602C0C1 RID: 180417 RVA: 0x00A12A2A File Offset: 0x00A10C2A
+		// Token: 0x06020F7F RID: 135039 RVA: 0x00953B96 File Offset: 0x00951D96
 		protected BP_CameraDrivenAutoFlightData_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017052 RID: 94290
+		// Token: 0x04011DE5 RID: 73189
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/Input/Blueprints/BP_CameraDrivenAutoFlightData.BP_CameraDrivenAutoFlightData_C";
 
-		// Token: 0x04017053 RID: 94291
+		// Token: 0x04011DE6 RID: 73190
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017054 RID: 94292
+		// Token: 0x04011DE7 RID: 73191
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017055 RID: 94293
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011DE8 RID: 73192
+		internal static int __PropertyOffset_自动驾驶开始时间;
 
-		// Token: 0x04017056 RID: 94294
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011DE9 RID: 73193
+		internal static int __PropertyOffset_自动驾驶启动输入;
 
-		// Token: 0x04017057 RID: 94295
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011DEA RID: 73194
+		internal static int __PropertyOffset_自动驾驶完成角度;
 
-		// Token: 0x04017058 RID: 94296
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011DEB RID: 73195
+		internal static int __PropertyOffset_自动驾驶归正角度Min;
 
-		// Token: 0x04017059 RID: 94297
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011DEC RID: 73196
+		internal static int __PropertyOffset_自动驾驶归正角度Max;
 
-		// Token: 0x0401705A RID: 94298
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011DED RID: 73197
+		internal static int __PropertyOffset_自动驾驶归正角度模拟输入Min;
 
-		// Token: 0x0401705B RID: 94299
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011DEE RID: 73198
+		internal static int __PropertyOffset_自动驾驶归正角度模拟输入Max;
 	}
 }

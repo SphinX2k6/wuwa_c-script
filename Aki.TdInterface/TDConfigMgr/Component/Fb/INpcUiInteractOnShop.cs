@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BBE RID: 3006
+	// Token: 0x02000C8C RID: 3212
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcUiInteractOnShop : INpcUiInteractType
 	{
-		// Token: 0x060044EB RID: 17643 RVA: 0x000AECDD File Offset: 0x000ACEDD
-		[NullableContext(1)]
+		// Token: 0x06004944 RID: 18756 RVA: 0x000B8DA1 File Offset: 0x000B6FA1
+		[NullableContext(0)]
 		public static INpcUiInteractOnShop Create(INpcUiInteractOnShop? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700132C RID: 4908
-		// (get) Token: 0x060044EC RID: 17644 RVA: 0x000AECFC File Offset: 0x000ACEFC
+		// Token: 0x17001427 RID: 5159
+		// (get) Token: 0x06004945 RID: 18757 RVA: 0x000B8DC0 File Offset: 0x000B6FC0
 		public override ENpcUiInteractType Type
 		{
 			get
@@ -35,44 +35,44 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700132D RID: 4909
-		// (get) Token: 0x060044ED RID: 17645 RVA: 0x000AED09 File Offset: 0x000ACF09
-		[Nullable(1)]
+		// Token: 0x17001428 RID: 5160
+		// (get) Token: 0x06004946 RID: 18758 RVA: 0x000B8DCD File Offset: 0x000B6FCD
+		[Nullable(0)]
 		public virtual string EnterMontage
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.EnterMontage;
 			}
 		}
 
-		// Token: 0x1700132E RID: 4910
-		// (get) Token: 0x060044EE RID: 17646 RVA: 0x000AED16 File Offset: 0x000ACF16
-		[Nullable(1)]
+		// Token: 0x17001429 RID: 5161
+		// (get) Token: 0x06004947 RID: 18759 RVA: 0x000B8DDA File Offset: 0x000B6FDA
+		[Nullable(0)]
 		public virtual string StandByMontage
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.StandByMontage;
 			}
 		}
 
-		// Token: 0x1700132F RID: 4911
-		// (get) Token: 0x060044EF RID: 17647 RVA: 0x000AED23 File Offset: 0x000ACF23
-		[Nullable(1)]
+		// Token: 0x1700142A RID: 5162
+		// (get) Token: 0x06004948 RID: 18760 RVA: 0x000B8DE7 File Offset: 0x000B6FE7
+		[Nullable(0)]
 		public virtual string ShopSuccessMontage
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.ShopSuccessMontage;
 			}
 		}
 
-		// Token: 0x17001330 RID: 4912
-		// (get) Token: 0x060044F0 RID: 17648 RVA: 0x000AED30 File Offset: 0x000ACF30
+		// Token: 0x1700142B RID: 5163
+		// (get) Token: 0x06004949 RID: 18761 RVA: 0x000B8DF4 File Offset: 0x000B6FF4
 		public virtual Aki.TDConfigMgr.Action.Fb.PlayFlow EnterFlow
 		{
 			get
@@ -87,8 +87,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001331 RID: 4913
-		// (get) Token: 0x060044F1 RID: 17649 RVA: 0x000AED64 File Offset: 0x000ACF64
+		// Token: 0x1700142C RID: 5164
+		// (get) Token: 0x0600494A RID: 18762 RVA: 0x000B8E28 File Offset: 0x000B7028
 		public virtual Aki.TDConfigMgr.Action.Fb.PlayFlow ShopSuccessFlow
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001332 RID: 4914
-		// (get) Token: 0x060044F2 RID: 17650 RVA: 0x000AED98 File Offset: 0x000ACF98
+		// Token: 0x1700142D RID: 5165
+		// (get) Token: 0x0600494B RID: 18763 RVA: 0x000B8E5C File Offset: 0x000B705C
 		public virtual Aki.TDConfigMgr.Action.Fb.PlayFlow ShopFailedFlow
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001333 RID: 4915
-		// (get) Token: 0x060044F3 RID: 17651 RVA: 0x000AEDCC File Offset: 0x000ACFCC
+		// Token: 0x1700142E RID: 5166
+		// (get) Token: 0x0600494C RID: 18764 RVA: 0x000B8E90 File Offset: 0x000B7090
 		public virtual Aki.TDConfigMgr.Action.Fb.PlayFlow WorkingFlow
 		{
 			get
@@ -135,12 +135,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001334 RID: 4916
-		// (get) Token: 0x060044F4 RID: 17652 RVA: 0x000AEE00 File Offset: 0x000AD000
-		[Nullable(1)]
+		// Token: 0x1700142F RID: 5167
+		// (get) Token: 0x0600494D RID: 18765 RVA: 0x000B8EC4 File Offset: 0x000B70C4
+		[Nullable(0)]
 		public virtual Aki.TDConfigMgr.Action.IMontageConfig ExitMontage
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ExitMontageInited)
@@ -153,8 +153,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001335 RID: 4917
-		// (get) Token: 0x060044F5 RID: 17653 RVA: 0x000AEE2F File Offset: 0x000AD02F
+		// Token: 0x17001430 RID: 5168
+		// (get) Token: 0x0600494E RID: 18766 RVA: 0x000B8EF3 File Offset: 0x000B70F3
 		public virtual Aki.TDConfigMgr.Action.Fb.PlayFlow ExitFlow
 		{
 			get
@@ -169,44 +169,44 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026FB RID: 9979
+		// Token: 0x04002943 RID: 10563
 		private INpcUiInteractOnShop Instance;
 
-		// Token: 0x040026FC RID: 9980
+		// Token: 0x04002944 RID: 10564
 		private Aki.TDConfigMgr.Action.Fb.PlayFlow _EnterFlowCache;
 
-		// Token: 0x040026FD RID: 9981
+		// Token: 0x04002945 RID: 10565
 		private bool _EnterFlowInited;
 
-		// Token: 0x040026FE RID: 9982
+		// Token: 0x04002946 RID: 10566
 		private Aki.TDConfigMgr.Action.Fb.PlayFlow _ShopSuccessFlowCache;
 
-		// Token: 0x040026FF RID: 9983
+		// Token: 0x04002947 RID: 10567
 		private bool _ShopSuccessFlowInited;
 
-		// Token: 0x04002700 RID: 9984
+		// Token: 0x04002948 RID: 10568
 		private Aki.TDConfigMgr.Action.Fb.PlayFlow _ShopFailedFlowCache;
 
-		// Token: 0x04002701 RID: 9985
+		// Token: 0x04002949 RID: 10569
 		private bool _ShopFailedFlowInited;
 
-		// Token: 0x04002702 RID: 9986
+		// Token: 0x0400294A RID: 10570
 		private Aki.TDConfigMgr.Action.Fb.PlayFlow _WorkingFlowCache;
 
-		// Token: 0x04002703 RID: 9987
+		// Token: 0x0400294B RID: 10571
 		private bool _WorkingFlowInited;
 
-		// Token: 0x04002704 RID: 9988
-		[Nullable(1)]
+		// Token: 0x0400294C RID: 10572
+		[Nullable(0)]
 		private Aki.TDConfigMgr.Action.IMontageConfig _ExitMontageCache;
 
-		// Token: 0x04002705 RID: 9989
+		// Token: 0x0400294D RID: 10573
 		private bool _ExitMontageInited;
 
-		// Token: 0x04002706 RID: 9990
+		// Token: 0x0400294E RID: 10574
 		private Aki.TDConfigMgr.Action.Fb.PlayFlow _ExitFlowCache;
 
-		// Token: 0x04002707 RID: 9991
+		// Token: 0x0400294F RID: 10575
 		private bool _ExitFlowInited;
 	}
 }

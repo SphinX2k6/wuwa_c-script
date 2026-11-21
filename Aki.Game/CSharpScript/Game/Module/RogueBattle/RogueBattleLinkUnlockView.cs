@@ -12,16 +12,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EE8 RID: 20200
+	// Token: 0x02003EB1 RID: 16049
 	public class RogueBattleLinkUnlockView : UiViewBase
 	{
-		// Token: 0x06033D64 RID: 212324 RVA: 0x00C240A7 File Offset: 0x00C222A7
+		// Token: 0x06028BCF RID: 166863 RVA: 0x00B6D64F File Offset: 0x00B6B84F
 		[NullableContext(1)]
 		public RogueBattleLinkUnlockView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033D65 RID: 212325 RVA: 0x00C240B0 File Offset: 0x00C222B0
+		// Token: 0x06028BD0 RID: 166864 RVA: 0x00B6D658 File Offset: 0x00B6B858
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033D66 RID: 212326 RVA: 0x00C24170 File Offset: 0x00C22370
+		// Token: 0x06028BD1 RID: 166865 RVA: 0x00B6D718 File Offset: 0x00B6B918
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleLinkUnlockView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033D67 RID: 212327 RVA: 0x00C241B3 File Offset: 0x00C223B3
+		// Token: 0x06028BD2 RID: 166866 RVA: 0x00B6D75B File Offset: 0x00B6B95B
 		protected override void OnBeforeHide()
 		{
 			if (this.UiViewSequence.HasSequenceNameInPlaying("Start"))
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D68 RID: 212328 RVA: 0x00C241DC File Offset: 0x00C223DC
+		// Token: 0x06028BD3 RID: 166867 RVA: 0x00B6D784 File Offset: 0x00B6B984
 		protected void RefreshLinkInfo()
 		{
 			MapRogueOpRoleBuffBondLinkId mapRogueOpRoleBuffBondLinkId = (MapRogueOpRoleBuffBondLinkId)MapRogueModel.Instance.GetOpData((int)this.OpenParam);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D69 RID: 212329 RVA: 0x00C24300 File Offset: 0x00C22500
+		// Token: 0x06028BD4 RID: 166868 RVA: 0x00B6D8A8 File Offset: 0x00B6BAA8
 		protected void OnClickConfirm()
 		{
 			MapRogueOpRoleBuffBondLinkId mapRogueOpRoleBuffBondLinkId = (MapRogueOpRoleBuffBondLinkId)MapRogueModel.Instance.GetOpData((int)this.OpenParam);
@@ -119,11 +119,11 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.UiViewSequence.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x0401B891 RID: 112785
+		// Token: 0x04016264 RID: 90724
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B892 RID: 112786
+		// Token: 0x04016265 RID: 90725
 		private int CurrentIndex;
 	}
 }

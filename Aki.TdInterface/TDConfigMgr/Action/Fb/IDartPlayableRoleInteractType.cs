@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002873 RID: 10355
+	// Token: 0x02002B49 RID: 11081
 	public class IDartPlayableRoleInteractType : IDartInteractTypeBase
 	{
-		// Token: 0x0600E56F RID: 58735 RVA: 0x0021BB7B File Offset: 0x00219D7B
-		[NullableContext(1)]
+		// Token: 0x0600F39F RID: 62367 RVA: 0x00238A97 File Offset: 0x00236C97
 		public static IDartPlayableRoleInteractType Create(IDartPlayableRoleInteractType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700464B RID: 17995
-		// (get) Token: 0x0600E570 RID: 58736 RVA: 0x0021BB9A File Offset: 0x00219D9A
+		// Token: 0x170049BB RID: 18875
+		// (get) Token: 0x0600F3A0 RID: 62368 RVA: 0x00238AB6 File Offset: 0x00236CB6
 		public override EDartInteractType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700464C RID: 17996
-		// (get) Token: 0x0600E571 RID: 58737 RVA: 0x0021BBA7 File Offset: 0x00219DA7
+		// Token: 0x170049BC RID: 18876
+		// (get) Token: 0x0600F3A1 RID: 62369 RVA: 0x00238AC3 File Offset: 0x00236CC3
 		public virtual int CompetitorId
 		{
 			get
@@ -41,7 +39,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EDB RID: 32475
+		// Token: 0x170049BD RID: 18877
+		// (get) Token: 0x0600F3A2 RID: 62370 RVA: 0x00238AD0 File Offset: 0x00236CD0
+		public virtual int? TargetEntityId
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 1) == 0)
+				{
+					return null;
+				}
+				return new int?(this.Instance.TargetEntityId);
+			}
+		}
+
+		// Token: 0x0400859B RID: 34203
 		private IDartPlayableRoleInteractType Instance;
 	}
 }

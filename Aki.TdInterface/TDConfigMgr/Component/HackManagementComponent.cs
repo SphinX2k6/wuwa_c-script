@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000191 RID: 401
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001A8 RID: 424
 	public class HackManagementComponent : IComponentBase
 	{
-		// Token: 0x060005C4 RID: 1476 RVA: 0x000212F8 File Offset: 0x0001F4F8
+		// Token: 0x060005D8 RID: 1496 RVA: 0x00021ED4 File Offset: 0x000200D4
 		private HackManagementComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060005C5 RID: 1477 RVA: 0x00021330 File Offset: 0x0001F530
+		// Token: 0x060005D9 RID: 1497 RVA: 0x00021F0C File Offset: 0x0002010C
 		public static HackManagementComponent Create([Nullable(2)] HackManagementComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060005C6 RID: 1478 RVA: 0x00021343 File Offset: 0x0001F543
+		// Token: 0x060005DA RID: 1498 RVA: 0x00021F1F File Offset: 0x0002011F
 		public static HackManagementComponent CreateFromSetValue([Nullable(2)] HackManagementComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060005C7 RID: 1479 RVA: 0x00021356 File Offset: 0x0001F556
+		// Token: 0x060005DB RID: 1499 RVA: 0x00021F32 File Offset: 0x00020132
 		public new HackManagementComponent_SetValue ToSetValue()
 		{
 			return new HackManagementComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001E6 RID: 486
-		// (get) Token: 0x060005C8 RID: 1480 RVA: 0x00021390 File Offset: 0x0001F590
-		// (set) Token: 0x060005C9 RID: 1481 RVA: 0x000213CA File Offset: 0x0001F5CA
+		// Token: 0x170001ED RID: 493
+		// (get) Token: 0x060005DC RID: 1500 RVA: 0x00021F6C File Offset: 0x0002016C
+		// (set) Token: 0x060005DD RID: 1501 RVA: 0x00021FA6 File Offset: 0x000201A6
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001E7 RID: 487
-		// (get) Token: 0x060005CA RID: 1482 RVA: 0x000213D8 File Offset: 0x0001F5D8
-		// (set) Token: 0x060005CB RID: 1483 RVA: 0x00021402 File Offset: 0x0001F602
+		// Token: 0x170001EE RID: 494
+		// (get) Token: 0x060005DE RID: 1502 RVA: 0x00021FB4 File Offset: 0x000201B4
+		// (set) Token: 0x060005DF RID: 1503 RVA: 0x00021FDE File Offset: 0x000201DE
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001E8 RID: 488
-		// (get) Token: 0x060005CC RID: 1484 RVA: 0x00021410 File Offset: 0x0001F610
-		// (set) Token: 0x060005CD RID: 1485 RVA: 0x0002143B File Offset: 0x0001F63B
+		// Token: 0x170001EF RID: 495
+		// (get) Token: 0x060005E0 RID: 1504 RVA: 0x00021FEC File Offset: 0x000201EC
+		// (set) Token: 0x060005E1 RID: 1505 RVA: 0x00022017 File Offset: 0x00020217
 		public virtual int MaxHackingCount
 		{
 			get
@@ -128,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001E9 RID: 489
-		// (get) Token: 0x060005CE RID: 1486 RVA: 0x00021449 File Offset: 0x0001F649
-		// (set) Token: 0x060005CF RID: 1487 RVA: 0x00021478 File Offset: 0x0001F678
+		// Token: 0x170001F0 RID: 496
+		// (get) Token: 0x060005E2 RID: 1506 RVA: 0x00022025 File Offset: 0x00020225
+		// (set) Token: 0x060005E3 RID: 1507 RVA: 0x00022054 File Offset: 0x00020254
 		public virtual float ValidDistance
 		{
 			get
@@ -151,11 +149,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400079A RID: 1946
+		// Token: 0x040007F0 RID: 2032
 		[Nullable(2)]
 		protected new HackManagementComponent FbInstance;
 
-		// Token: 0x0400079B RID: 1947
+		// Token: 0x040007F1 RID: 2033
 		[Nullable(2)]
 		protected new HackManagementComponent_SetValue PocoInterface;
 	}

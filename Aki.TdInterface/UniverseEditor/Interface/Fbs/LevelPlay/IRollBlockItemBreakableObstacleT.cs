@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004597 RID: 17815
+	// Token: 0x020049FF RID: 18943
 	public class IRollBlockItemBreakableObstacleT
 	{
-		// Token: 0x17007E8E RID: 32398
-		// (get) Token: 0x0601AE9D RID: 110237 RVA: 0x003D6F61 File Offset: 0x003D5161
-		// (set) Token: 0x0601AE9E RID: 110238 RVA: 0x003D6F69 File Offset: 0x003D5169
+		// Token: 0x170084CF RID: 33999
+		// (get) Token: 0x0601C672 RID: 116338 RVA: 0x004031FD File Offset: 0x004013FD
+		// (set) Token: 0x0601C673 RID: 116339 RVA: 0x00403205 File Offset: 0x00401405
 		public ERollBlockItemType Type { get; set; }
 
-		// Token: 0x17007E8F RID: 32399
-		// (get) Token: 0x0601AE9F RID: 110239 RVA: 0x003D6F72 File Offset: 0x003D5172
-		// (set) Token: 0x0601AEA0 RID: 110240 RVA: 0x003D6F7A File Offset: 0x003D517A
+		// Token: 0x170084D0 RID: 34000
+		// (get) Token: 0x0601C674 RID: 116340 RVA: 0x0040320E File Offset: 0x0040140E
+		// (set) Token: 0x0601C675 RID: 116341 RVA: 0x00403216 File Offset: 0x00401416
 		public int Key { get; set; }
 
-		// Token: 0x17007E90 RID: 32400
-		// (get) Token: 0x0601AEA1 RID: 110241 RVA: 0x003D6F83 File Offset: 0x003D5183
-		// (set) Token: 0x0601AEA2 RID: 110242 RVA: 0x003D6F8B File Offset: 0x003D518B
+		// Token: 0x170084D1 RID: 34001
+		// (get) Token: 0x0601C676 RID: 116342 RVA: 0x0040321F File Offset: 0x0040141F
+		// (set) Token: 0x0601C677 RID: 116343 RVA: 0x00403227 File Offset: 0x00401427
 		public IRollBlockPathT Path { get; set; }
 
-		// Token: 0x0601AEA3 RID: 110243 RVA: 0x003D6F94 File Offset: 0x003D5194
+		// Token: 0x0601C678 RID: 116344 RVA: 0x00403230 File Offset: 0x00401430
 		public IRollBlockItemBreakableObstacleT()
 		{
 			this.Type = ERollBlockItemType.BreakableObstacle;

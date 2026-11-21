@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CF7 RID: 27895
+	// Token: 0x02005E74 RID: 24180
 	public class LevelConditionCheckTodTimePeriod : LevelConditionBase
 	{
-		// Token: 0x06044691 RID: 280209 RVA: 0x010DFAAC File Offset: 0x010DDCAC
+		// Token: 0x0603A7F1 RID: 239601 RVA: 0x01089C38 File Offset: 0x01087E38
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -37,16 +37,16 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return !flag;
 		}
 
-		// Token: 0x040239D2 RID: 145874
+		// Token: 0x0401EC74 RID: 126068
 		private const int DAYTIME_HOUR_START = 6;
 
-		// Token: 0x040239D3 RID: 145875
+		// Token: 0x0401EC75 RID: 126069
 		private const int DAYTIME_HOUR_END = 18;
 
-		// Token: 0x040239D4 RID: 145876
+		// Token: 0x0401EC76 RID: 126070
 		private const int NIGHT_HOUR_START = 18;
 
-		// Token: 0x040239D5 RID: 145877
+		// Token: 0x0401EC77 RID: 126071
 		private const int NIGHT_HOUR_END = 6;
 	}
 }

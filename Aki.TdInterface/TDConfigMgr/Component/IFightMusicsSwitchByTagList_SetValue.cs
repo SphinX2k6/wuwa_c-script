@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200037D RID: 893
+	// Token: 0x020003C6 RID: 966
 	public class IFightMusicsSwitchByTagList_SetValue
 	{
-		// Token: 0x04000E79 RID: 3705
+		// Token: 0x04000F70 RID: 3952
 		public EFightMusicsSwitchType Type;
 
-		// Token: 0x04000E7A RID: 3706
-		[Nullable(1)]
+		// Token: 0x04000F71 RID: 3953
 		public List<IFightMusicSwitchByTag> Element;
 	}
 }

@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F1E RID: 7966
+	// Token: 0x02000627 RID: 1575
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.XboxUserStoreIdResult")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FXboxUserStoreIdResult : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E39A RID: 123802 RVA: 0x002CECC8 File Offset: 0x002CCEC8
+		// Token: 0x06008997 RID: 35223 RVA: 0x000CF611 File Offset: 0x000CD811
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FXboxUserStoreIdResult._ScriptStructPtr != 0) ? FXboxUserStoreIdResult._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.XboxUserStoreIdResult", ref FXboxUserStoreIdResult._ScriptStructPtr);
 		}
 
-		// Token: 0x17007808 RID: 30728
-		// (get) Token: 0x0601E39B RID: 123803 RVA: 0x002CECEC File Offset: 0x002CCEEC
-		// (set) Token: 0x0601E39C RID: 123804 RVA: 0x002CECFC File Offset: 0x002CCEFC
+		// Token: 0x170019B0 RID: 6576
+		// (get) Token: 0x06008998 RID: 35224 RVA: 0x000CF635 File Offset: 0x000CD835
+		// (set) Token: 0x06008999 RID: 35225 RVA: 0x000CF645 File Offset: 0x000CD845
 		public unsafe bool bSuccess
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007809 RID: 30729
-		// (get) Token: 0x0601E39D RID: 123805 RVA: 0x002CED0D File Offset: 0x002CCF0D
-		// (set) Token: 0x0601E39E RID: 123806 RVA: 0x002CED21 File Offset: 0x002CCF21
+		// Token: 0x170019B1 RID: 6577
+		// (get) Token: 0x0600899A RID: 35226 RVA: 0x000CF656 File Offset: 0x000CD856
+		// (set) Token: 0x0600899B RID: 35227 RVA: 0x000CF66A File Offset: 0x000CD86A
 		public unsafe string UserStoreId
 		{
 			get
@@ -48,57 +48,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E39F RID: 123807 RVA: 0x002CED36 File Offset: 0x002CCF36
+		// Token: 0x0600899C RID: 35228 RVA: 0x000CF67F File Offset: 0x000CD87F
 		public FXboxUserStoreIdResult()
 		{
 		}
 
-		// Token: 0x0601E3A0 RID: 123808 RVA: 0x002CED3E File Offset: 0x002CCF3E
-		public FXboxUserStoreIdResult(bool bSuccess, string UserStoreId)
-		{
-			this.bSuccess = bSuccess;
-			this.UserStoreId = UserStoreId;
-		}
-
-		// Token: 0x0601E3A1 RID: 123809 RVA: 0x002CED54 File Offset: 0x002CCF54
+		// Token: 0x0600899D RID: 35229 RVA: 0x000CF687 File Offset: 0x000CD887
 		protected override IntPtr GetUStructPtr()
 		{
 			return FXboxUserStoreIdResult.StaticStruct();
 		}
 
-		// Token: 0x0601E3A2 RID: 123810 RVA: 0x002CED60 File Offset: 0x002CCF60
+		// Token: 0x0600899E RID: 35230 RVA: 0x000CF693 File Offset: 0x000CD893
 		[NullableContext(2)]
 		public FXboxUserStoreIdResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E3A3 RID: 123811 RVA: 0x002CED6A File Offset: 0x002CCF6A
+		// Token: 0x0600899F RID: 35231 RVA: 0x000CF69D File Offset: 0x000CD89D
 		public FXboxUserStoreIdResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E3A4 RID: 123812 RVA: 0x002CED75 File Offset: 0x002CCF75
+		// Token: 0x060089A0 RID: 35232 RVA: 0x000CF6A8 File Offset: 0x000CD8A8
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FXboxUserStoreIdResult(Pointer, false, true);
 		}
 
-		// Token: 0x0601E3A5 RID: 123813 RVA: 0x002CED7F File Offset: 0x002CCF7F
+		// Token: 0x060089A1 RID: 35233 RVA: 0x000CF6B2 File Offset: 0x000CD8B2
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FXboxUserStoreIdResult(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040104F5 RID: 66805
+		// Token: 0x04003BB4 RID: 15284
 		public const string __ObjectPath = "/Script/KuroUtility.XboxUserStoreIdResult";
 
-		// Token: 0x040104F6 RID: 66806
+		// Token: 0x04003BB5 RID: 15285
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040104F7 RID: 66807
+		// Token: 0x04003BB6 RID: 15286
 		internal static int __PropertyOffset_bSuccess;
 
-		// Token: 0x040104F8 RID: 66808
+		// Token: 0x04003BB7 RID: 15287
 		internal static int __PropertyOffset_UserStoreId;
 	}
 }

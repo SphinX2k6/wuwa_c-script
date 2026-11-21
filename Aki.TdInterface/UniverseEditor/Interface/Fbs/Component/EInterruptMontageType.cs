@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DC0 RID: 19904
+	// Token: 0x020052C4 RID: 21188
 	public enum EInterruptMontageType : byte
 	{
-		// Token: 0x0400DA0A RID: 55818
+		// Token: 0x0400E559 RID: 58713
 		InterruptAtEnd,
-		// Token: 0x0400DA0B RID: 55819
+		// Token: 0x0400E55A RID: 58714
 		InterruptAtLoopEnd
 	}
 }

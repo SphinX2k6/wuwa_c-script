@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014D6 RID: 5334
+	// Token: 0x0200162F RID: 5679
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChangeInteractOptionText : ActionParams
 	{
-		// Token: 0x0600796E RID: 31086 RVA: 0x00122A70 File Offset: 0x00120C70
-		[NullableContext(1)]
+		// Token: 0x0600803B RID: 32827 RVA: 0x001316BC File Offset: 0x0012F8BC
+		[NullableContext(0)]
 		private ChangeInteractOptionText_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600796F RID: 31087 RVA: 0x00122AA8 File Offset: 0x00120CA8
-		[NullableContext(1)]
+		// Token: 0x0600803C RID: 32828 RVA: 0x001316F4 File Offset: 0x0012F8F4
+		[NullableContext(0)]
 		public static ChangeInteractOptionText Create([Nullable(2)] ChangeInteractOptionText instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007970 RID: 31088 RVA: 0x00122ABB File Offset: 0x00120CBB
-		[NullableContext(1)]
+		// Token: 0x0600803D RID: 32829 RVA: 0x00131707 File Offset: 0x0012F907
+		[NullableContext(0)]
 		public static ChangeInteractOptionText CreateFromSetValue([Nullable(2)] ChangeInteractOptionText_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007971 RID: 31089 RVA: 0x00122ACE File Offset: 0x00120CCE
-		[NullableContext(1)]
+		// Token: 0x0600803E RID: 32830 RVA: 0x0013171A File Offset: 0x0012F91A
+		[NullableContext(0)]
 		public ChangeInteractOptionText_SetValue ToSetValue()
 		{
 			return new ChangeInteractOptionText_SetValue
@@ -64,9 +64,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028AC RID: 10412
-		// (get) Token: 0x06007972 RID: 31090 RVA: 0x00122AED File Offset: 0x00120CED
-		// (set) Token: 0x06007973 RID: 31091 RVA: 0x00122B14 File Offset: 0x00120D14
+		// Token: 0x17002A96 RID: 10902
+		// (get) Token: 0x0600803F RID: 32831 RVA: 0x00131739 File Offset: 0x0012F939
+		// (set) Token: 0x06008040 RID: 32832 RVA: 0x00131760 File Offset: 0x0012F960
 		public virtual string TidContent
 		{
 			get
@@ -88,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028AD RID: 10413
-		// (get) Token: 0x06007974 RID: 31092 RVA: 0x00122B22 File Offset: 0x00120D22
-		// (set) Token: 0x06007975 RID: 31093 RVA: 0x00122B39 File Offset: 0x00120D39
+		// Token: 0x17002A97 RID: 10903
+		// (get) Token: 0x06008041 RID: 32833 RVA: 0x0013176E File Offset: 0x0012F96E
+		// (set) Token: 0x06008042 RID: 32834 RVA: 0x00131785 File Offset: 0x0012F985
 		public virtual string EdTidContent
 		{
 			get
@@ -107,10 +107,10 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004679 RID: 18041
+		// Token: 0x04004A14 RID: 18964
 		protected new ChangeInteractOptionText FbInstance;
 
-		// Token: 0x0400467A RID: 18042
+		// Token: 0x04004A15 RID: 18965
 		protected ChangeInteractOptionText_SetValue PocoInterface;
 	}
 }

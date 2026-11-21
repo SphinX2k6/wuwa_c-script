@@ -8,17 +8,17 @@ using CSharpScript.Game.LevelGamePlay.Guarantee;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 {
-	// Token: 0x020059C2 RID: 22978
+	// Token: 0x0200499B RID: 18843
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GuaranteeAssistant : ControllerAssistantBase
 	{
-		// Token: 0x0603A3E8 RID: 238568 RVA: 0x00DD7E77 File Offset: 0x00DD6077
+		// Token: 0x0602F30F RID: 193295 RVA: 0x00D2734F File Offset: 0x00D2554F
 		protected override void OnDestroy()
 		{
 		}
 
-		// Token: 0x0603A3E9 RID: 238569 RVA: 0x00DD7E7C File Offset: 0x00DD607C
+		// Token: 0x0602F310 RID: 193296 RVA: 0x00D27354 File Offset: 0x00D25554
 		public override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.AddGuaranteeAction, new Action<string, GeneralContext, GuaranteeActionInfo, bool?>(this.AddGuaranteeAction));
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			EventSystem.Instance.Add<long, int, EBehaviorTreeSuspendType>(EEventName.GeneralLogicTreeSuspend, new Action<long, int, EBehaviorTreeSuspendType>(this.OnGeneralLogicTreeSuspend));
 		}
 
-		// Token: 0x0603A3EA RID: 238570 RVA: 0x00DD7F18 File Offset: 0x00DD6118
+		// Token: 0x0602F311 RID: 193297 RVA: 0x00D273F0 File Offset: 0x00D255F0
 		public override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.AddGuaranteeAction, new Action<string, GeneralContext, GuaranteeActionInfo, bool?>(this.AddGuaranteeAction));
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			EventSystem.Instance.Remove<long, int, EBehaviorTreeSuspendType>(EEventName.GeneralLogicTreeSuspend, new Action<long, int, EBehaviorTreeSuspendType>(this.OnGeneralLogicTreeSuspend));
 		}
 
-		// Token: 0x0603A3EB RID: 238571 RVA: 0x00DD7FB4 File Offset: 0x00DD61B4
+		// Token: 0x0602F312 RID: 193298 RVA: 0x00D2748C File Offset: 0x00D2568C
 		private void AddGuaranteeAction(string instigatorName, [Nullable(2)] GeneralContext instigatorContext, GuaranteeActionInfo guaranteeActionInfo, bool? bNeedGuaranteeInQuest = false)
 		{
 			GeneralContext generalContext = instigatorContext;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			behaviorTree.AddGuaranteeActionInfo(instigatorName, generalLogicTreeContext.NodeId, guaranteeActionInfo, actionFilterMode);
 		}
 
-		// Token: 0x0603A3EC RID: 238572 RVA: 0x00DD8024 File Offset: 0x00DD6224
+		// Token: 0x0602F313 RID: 193299 RVA: 0x00D274FC File Offset: 0x00D256FC
 		private void RemGuaranteeAction(string instigatorName, [Nullable(2)] GeneralContext instigatorContext, GuaranteeActionInfo guaranteeActionInfo, bool? bNeedGuaranteeInQuest = false)
 		{
 			GeneralContext generalContext = instigatorContext;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			GeneralLogicTreeModel.Instance.PopGuaranteeActionsWhenLogicTreeRemove(generalLogicTreeContext.TreeIncId, guaranteeActionInfo);
 		}
 
-		// Token: 0x0603A3ED RID: 238573 RVA: 0x00DD80A4 File Offset: 0x00DD62A4
+		// Token: 0x0602F314 RID: 193300 RVA: 0x00D2757C File Offset: 0x00D2577C
 		private void OnNodeStatusUpdate(GeneralContext context, NodeStatus oldStatus, NodeStatus newStatus, ENodeStatusUpdateReason reason)
 		{
 			GeneralLogicTreeContext generalLogicTreeContext = context as GeneralLogicTreeContext;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}
 		}
 
-		// Token: 0x0603A3EE RID: 238574 RVA: 0x00DD8114 File Offset: 0x00DD6314
+		// Token: 0x0602F315 RID: 193301 RVA: 0x00D275EC File Offset: 0x00D257EC
 		private void OnGeneralLogicTreeRemove(long treeIncId, ETreeRemoveReason removeReason)
 		{
 			BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}
 		}
 
-		// Token: 0x0603A3EF RID: 238575 RVA: 0x00DD8194 File Offset: 0x00DD6394
+		// Token: 0x0602F316 RID: 193302 RVA: 0x00D2766C File Offset: 0x00D2586C
 		private void OnGeneralLogicTreeSuspend(long treeId, int nodeId, EBehaviorTreeSuspendType suspendType)
 		{
 			BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeId), false);

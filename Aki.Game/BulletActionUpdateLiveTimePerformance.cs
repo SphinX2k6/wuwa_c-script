@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002D9E RID: 11678
+// Token: 0x020022F8 RID: 8952
 public class BulletActionUpdateLiveTimePerformance : BulletActionUpdateLiveTime
 {
-	// Token: 0x06018864 RID: 100452 RVA: 0x00643CD9 File Offset: 0x00641ED9
+	// Token: 0x06016109 RID: 90377 RVA: 0x00669B15 File Offset: 0x00667D15
 	public BulletActionUpdateLiveTimePerformance(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x06018865 RID: 100453 RVA: 0x00643CE4 File Offset: 0x00641EE4
+	// Token: 0x0601610A RID: 90378 RVA: 0x00669B20 File Offset: 0x00667D20
 	protected override void OnExecute()
 	{
 		base.OnExecute();
@@ -23,7 +23,7 @@ public class BulletActionUpdateLiveTimePerformance : BulletActionUpdateLiveTime
 		}
 	}
 
-	// Token: 0x06018866 RID: 100454 RVA: 0x00643D21 File Offset: 0x00641F21
+	// Token: 0x0601610B RID: 90379 RVA: 0x00669B5D File Offset: 0x00667D5D
 	public override void AfterTick(float delta)
 	{
 		base.AfterTick(delta);
@@ -34,7 +34,7 @@ public class BulletActionUpdateLiveTimePerformance : BulletActionUpdateLiveTime
 		this.CheckPerformanceCollision();
 	}
 
-	// Token: 0x06018867 RID: 100455 RVA: 0x00643D40 File Offset: 0x00641F40
+	// Token: 0x0601610C RID: 90380 RVA: 0x00669B7C File Offset: 0x00667D7C
 	private void CheckPerformanceCollision()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -49,7 +49,7 @@ public class BulletActionUpdateLiveTimePerformance : BulletActionUpdateLiveTime
 		}
 	}
 
-	// Token: 0x06018868 RID: 100456 RVA: 0x00643D90 File Offset: 0x00641F90
+	// Token: 0x0601610D RID: 90381 RVA: 0x00669BCC File Offset: 0x00667DCC
 	private void ProcessHitGround()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -70,7 +70,7 @@ public class BulletActionUpdateLiveTimePerformance : BulletActionUpdateLiveTime
 		BulletController.Instance.DestroyBullet(bulletInfo.BulletEntityId, false, EBulletDestroyReason.Normal, false);
 	}
 
-	// Token: 0x06018869 RID: 100457 RVA: 0x00643E20 File Offset: 0x00642020
+	// Token: 0x0601610E RID: 90382 RVA: 0x00669C5C File Offset: 0x00667E5C
 	private void CheckRebound()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;

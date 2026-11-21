@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006977 RID: 26999
+	// Token: 0x0200702A RID: 28714
 	public static class IInstrumentQteConfig_QteSequenceRowVerify
 	{
-		// Token: 0x0602F265 RID: 193125 RVA: 0x0066C68D File Offset: 0x0066A88D
+		// Token: 0x06031C35 RID: 203829 RVA: 0x006BCB75 File Offset: 0x006BAD75
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			return verifier.VerifyTableStart(tablePos) && verifier.VerifyVectorOfData(tablePos, 4, 4UL, false) && verifier.VerifyTableEnd(tablePos);

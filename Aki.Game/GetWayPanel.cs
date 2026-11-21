@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200246D RID: 9325
+// Token: 0x02001952 RID: 6482
 [NullableContext(1)]
 [Nullable(0)]
 internal class GetWayPanel : UiPanelBase
 {
-	// Token: 0x06012B96 RID: 76694 RVA: 0x0049E7F4 File Offset: 0x0049C9F4
+	// Token: 0x0601004E RID: 65614 RVA: 0x004ABF60 File Offset: 0x004AA160
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ internal class GetWayPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012B97 RID: 76695 RVA: 0x0049E871 File Offset: 0x0049CA71
+	// Token: 0x0601004F RID: 65615 RVA: 0x004ABFDD File Offset: 0x004AA1DD
 	private void OnButtonClicked()
 	{
 		if (this.ButtonFunction != null)
@@ -33,20 +33,20 @@ internal class GetWayPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012B98 RID: 76696 RVA: 0x0049E886 File Offset: 0x0049CA86
+	// Token: 0x06010050 RID: 65616 RVA: 0x004ABFF2 File Offset: 0x004AA1F2
 	public void SetButtonFunction(Action func)
 	{
 		this.ButtonFunction = func;
 	}
 
-	// Token: 0x06012B99 RID: 76697 RVA: 0x0049E890 File Offset: 0x0049CA90
+	// Token: 0x06010051 RID: 65617 RVA: 0x004ABFFC File Offset: 0x004AA1FC
 	public void SetText(string textId)
 	{
 		UUIText text = base.GetText(2);
 		LguiUtil.Instance.SetLocalTextNew(text, textId, Array.Empty<object>());
 	}
 
-	// Token: 0x04008D05 RID: 36101
+	// Token: 0x04008E4C RID: 36428
 	[Nullable(2)]
 	private Action ButtonFunction;
 }

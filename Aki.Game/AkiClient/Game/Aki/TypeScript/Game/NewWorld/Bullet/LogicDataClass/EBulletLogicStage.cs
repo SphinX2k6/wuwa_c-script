@@ -4,28 +4,28 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.TypeScript.Game.NewWorld.Bullet.LogicDataClass
 {
-	// Token: 0x02003A1A RID: 14874
+	// Token: 0x02003069 RID: 12393
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/EBulletLogicStage.EBulletLogicStage")]
 	public enum EBulletLogicStage : byte
 	{
-		// Token: 0x0400EF4C RID: 61260
+		// Token: 0x0400F802 RID: 63490
 		OnBegin,
-		// Token: 0x0400EF4D RID: 61261
+		// Token: 0x0400F803 RID: 63491
 		OnHit,
-		// Token: 0x0400EF4E RID: 61262
+		// Token: 0x0400F804 RID: 63492
 		OnDestroy,
-		// Token: 0x0400EF4F RID: 61263
+		// Token: 0x0400F805 RID: 63493
 		OnRebound,
-		// Token: 0x0400EF50 RID: 61264
+		// Token: 0x0400F806 RID: 63494
 		OnSupport,
-		// Token: 0x0400EF51 RID: 61265
+		// Token: 0x0400F807 RID: 63495
 		ReplaceMove,
-		// Token: 0x0400EF52 RID: 61266
+		// Token: 0x0400F808 RID: 63496
 		OnHitBullet,
-		// Token: 0x0400EF53 RID: 61267
+		// Token: 0x0400F809 RID: 63497
 		OnBulletCollision,
-		// Token: 0x0400EF54 RID: 61268
+		// Token: 0x0400F80A RID: 63498
 		EBulletLogicStage_MAX
 	}
 }

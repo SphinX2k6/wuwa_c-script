@@ -14,17 +14,17 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056D5 RID: 22229
+	// Token: 0x020046AC RID: 18092
 	[Controller(0)]
 	public class KurotatoController : UiControllerBase
 	{
-		// Token: 0x06038900 RID: 231680 RVA: 0x00D6F2DA File Offset: 0x00D6D4DA
+		// Token: 0x0602D810 RID: 186384 RVA: 0x00CBD8C2 File Offset: 0x00CBBAC2
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06038901 RID: 231681 RVA: 0x00D6F2E0 File Offset: 0x00D6D4E0
+		// Token: 0x0602D811 RID: 186385 RVA: 0x00CBD8C8 File Offset: 0x00CBBAC8
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.KurotatoStepUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnKurotatoStepUpdateNotify));
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			Net.Instance.Register(ENotifyMessageId.KurotatoNextWaveTypeNotify, new Action<IMessage, Net.CallbackStatus>(this.OnKurotatoNextWaveTypeNotify));
 		}
 
-		// Token: 0x06038902 RID: 231682 RVA: 0x00D6F494 File Offset: 0x00D6D694
+		// Token: 0x0602D812 RID: 186386 RVA: 0x00CBDA7C File Offset: 0x00CBBC7C
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.KurotatoStepUpdateNotify);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			Net.Instance.UnRegister(ENotifyMessageId.KurotatoNextWaveTypeNotify);
 		}
 
-		// Token: 0x06038903 RID: 231683 RVA: 0x00D6F594 File Offset: 0x00D6D794
+		// Token: 0x0602D813 RID: 186387 RVA: 0x00CBDB7C File Offset: 0x00CBBD7C
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		}
 
-		// Token: 0x06038904 RID: 231684 RVA: 0x00D6F5F4 File Offset: 0x00D6D7F4
+		// Token: 0x0602D814 RID: 186388 RVA: 0x00CBDBDC File Offset: 0x00CBBDDC
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		}
 
-		// Token: 0x06038905 RID: 231685 RVA: 0x00D6F652 File Offset: 0x00D6D852
+		// Token: 0x0602D815 RID: 186389 RVA: 0x00CBDC3A File Offset: 0x00CBBE3A
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName == EUiViewName.KurotatoPauseView)
@@ -89,19 +89,19 @@ namespace CSharpScript.Game.Module.Kurotato
 			}
 		}
 
-		// Token: 0x06038906 RID: 231686 RVA: 0x00D6F667 File Offset: 0x00D6D867
+		// Token: 0x0602D816 RID: 186390 RVA: 0x00CBDC4F File Offset: 0x00CBBE4F
 		protected override void OnAddOpenViewCheckFunction()
 		{
 			UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.LevelUpView, new Func<EUiViewName, object, bool>(this.CheckCanOpenLevelUpView), "KurotatoController.CheckCanOpenLevelUpView");
 		}
 
-		// Token: 0x06038907 RID: 231687 RVA: 0x00D6F689 File Offset: 0x00D6D889
+		// Token: 0x0602D817 RID: 186391 RVA: 0x00CBDC71 File Offset: 0x00CBBE71
 		protected override void OnRemoveOpenViewCheckFunction()
 		{
 			UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.LevelUpView, new Func<EUiViewName, object, bool>(this.CheckCanOpenLevelUpView));
 		}
 
-		// Token: 0x06038908 RID: 231688 RVA: 0x00D6F6A8 File Offset: 0x00D6D8A8
+		// Token: 0x0602D818 RID: 186392 RVA: 0x00CBDC90 File Offset: 0x00CBBE90
 		public void RequestEnterInst(int levelId, int roleId, bool isContinue)
 		{
 			KurotatoCtx kurotatoCtx = new KurotatoCtx
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			}, 0, 0, null, null).Forget<bool>();
 		}
 
-		// Token: 0x06038909 RID: 231689 RVA: 0x00D6F738 File Offset: 0x00D6D938
+		// Token: 0x0602D819 RID: 186393 RVA: 0x00CBDD20 File Offset: 0x00CBBF20
 		public UniTask<bool> RequestKurotatoLevelRecordDelete(int levelId)
 		{
 			KurotatoController.<RequestKurotatoLevelRecordDelete>d__12 <RequestKurotatoLevelRecordDelete>d__;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoLevelRecordDelete>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603890A RID: 231690 RVA: 0x00D6F77C File Offset: 0x00D6D97C
+		// Token: 0x0602D81A RID: 186394 RVA: 0x00CBDD64 File Offset: 0x00CBBF64
 		public UniTask<bool> RequestKurotatoChestRewardSelect(bool willSold)
 		{
 			KurotatoController.<RequestKurotatoChestRewardSelect>d__13 <RequestKurotatoChestRewardSelect>d__;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoChestRewardSelect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603890B RID: 231691 RVA: 0x00D6F7C0 File Offset: 0x00D6D9C0
+		// Token: 0x0602D81B RID: 186395 RVA: 0x00CBDDA8 File Offset: 0x00CBBFA8
 		public UniTask<bool> RequestKurotatoUpgradeRewardSelect(int selectionId)
 		{
 			KurotatoController.<RequestKurotatoUpgradeRewardSelect>d__14 <RequestKurotatoUpgradeRewardSelect>d__;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoUpgradeRewardSelect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603890C RID: 231692 RVA: 0x00D6F804 File Offset: 0x00D6DA04
+		// Token: 0x0602D81C RID: 186396 RVA: 0x00CBDDEC File Offset: 0x00CBBFEC
 		public UniTask<bool> RequestKurotatoUpgradeRewardRefresh()
 		{
 			KurotatoController.<RequestKurotatoUpgradeRewardRefresh>d__15 <RequestKurotatoUpgradeRewardRefresh>d__;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoUpgradeRewardRefresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603890D RID: 231693 RVA: 0x00D6F840 File Offset: 0x00D6DA40
+		// Token: 0x0602D81D RID: 186397 RVA: 0x00CBDE28 File Offset: 0x00CBC028
 		public UniTask<bool> RequestKurotatoShopProductSelect(int selectionId)
 		{
 			KurotatoController.<RequestKurotatoShopProductSelect>d__16 <RequestKurotatoShopProductSelect>d__;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoShopProductSelect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603890E RID: 231694 RVA: 0x00D6F884 File Offset: 0x00D6DA84
+		// Token: 0x0602D81E RID: 186398 RVA: 0x00CBDE6C File Offset: 0x00CBC06C
 		public UniTask<bool> RequestKurotatoShopRewardLock(int selectionId)
 		{
 			KurotatoController.<RequestKurotatoShopRewardLock>d__17 <RequestKurotatoShopRewardLock>d__;
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoShopRewardLock>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603890F RID: 231695 RVA: 0x00D6F8C8 File Offset: 0x00D6DAC8
+		// Token: 0x0602D81F RID: 186399 RVA: 0x00CBDEB0 File Offset: 0x00CBC0B0
 		public UniTask<bool> RequestKurotatoShopRewardRefresh()
 		{
 			KurotatoController.<RequestKurotatoShopRewardRefresh>d__18 <RequestKurotatoShopRewardRefresh>d__;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoShopRewardRefresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038910 RID: 231696 RVA: 0x00D6F904 File Offset: 0x00D6DB04
+		// Token: 0x0602D820 RID: 186400 RVA: 0x00CBDEEC File Offset: 0x00CBC0EC
 		public UniTask<bool> RequestKurotatoEndShopStep(bool isEndLess)
 		{
 			KurotatoController.<RequestKurotatoEndShopStep>d__19 <RequestKurotatoEndShopStep>d__;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoEndShopStep>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038911 RID: 231697 RVA: 0x00D6F948 File Offset: 0x00D6DB48
+		// Token: 0x0602D821 RID: 186401 RVA: 0x00CBDF30 File Offset: 0x00CBC130
 		public UniTask<bool> RequestKurotatoStepAdvance()
 		{
 			KurotatoController.<RequestKurotatoStepAdvance>d__20 <RequestKurotatoStepAdvance>d__;
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoStepAdvance>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038912 RID: 231698 RVA: 0x00D6F984 File Offset: 0x00D6DB84
+		// Token: 0x0602D822 RID: 186402 RVA: 0x00CBDF6C File Offset: 0x00CBC16C
 		public bool CheckInKurotatoInstance()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -232,14 +232,14 @@ namespace CSharpScript.Game.Module.Kurotato
 			return config != null && config.Value.InstSubType == 51;
 		}
 
-		// Token: 0x06038913 RID: 231699 RVA: 0x00D6F9D5 File Offset: 0x00D6DBD5
+		// Token: 0x0602D823 RID: 186403 RVA: 0x00CBDFBD File Offset: 0x00CBC1BD
 		[NullableContext(1)]
 		private bool CheckCanOpenLevelUpView(EUiViewName viewName, object param)
 		{
 			return !this.CheckInKurotatoInstance();
 		}
 
-		// Token: 0x06038914 RID: 231700 RVA: 0x00D6F9E0 File Offset: 0x00D6DBE0
+		// Token: 0x0602D824 RID: 186404 RVA: 0x00CBDFC8 File Offset: 0x00CBC1C8
 		public UniTask<bool> RequestKurotatoRefineWeapon(int weaponIncId)
 		{
 			KurotatoController.<RequestKurotatoRefineWeapon>d__23 <RequestKurotatoRefineWeapon>d__;
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoRefineWeapon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038915 RID: 231701 RVA: 0x00D6FA24 File Offset: 0x00D6DC24
+		// Token: 0x0602D825 RID: 186405 RVA: 0x00CBE00C File Offset: 0x00CBC20C
 		public UniTask<bool> RequestKurotatoRoleRecord()
 		{
 			KurotatoController.<RequestKurotatoRoleRecord>d__24 <RequestKurotatoRoleRecord>d__;
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoRoleRecord>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038916 RID: 231702 RVA: 0x00D6FA60 File Offset: 0x00D6DC60
+		// Token: 0x0602D826 RID: 186406 RVA: 0x00CBE048 File Offset: 0x00CBC248
 		public UniTask<bool> RequestKurotatoSettlement()
 		{
 			KurotatoController.<RequestKurotatoSettlement>d__25 <RequestKurotatoSettlement>d__;
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoSettlement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038917 RID: 231703 RVA: 0x00D6FA9C File Offset: 0x00D6DC9C
+		// Token: 0x0602D827 RID: 186407 RVA: 0x00CBE084 File Offset: 0x00CBC284
 		public UniTask<bool> RequestKurotatoEndSpecialWaveCombat()
 		{
 			KurotatoController.<RequestKurotatoEndSpecialWaveCombat>d__26 <RequestKurotatoEndSpecialWaveCombat>d__;
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoEndSpecialWaveCombat>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038918 RID: 231704 RVA: 0x00D6FAD8 File Offset: 0x00D6DCD8
+		// Token: 0x0602D828 RID: 186408 RVA: 0x00CBE0C0 File Offset: 0x00CBC2C0
 		public UniTask<bool> RequestKurotatoReChallenge(bool isFromCurWave)
 		{
 			KurotatoController.<RequestKurotatoReChallenge>d__27 <RequestKurotatoReChallenge>d__;
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoReChallenge>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038919 RID: 231705 RVA: 0x00D6FB1C File Offset: 0x00D6DD1C
+		// Token: 0x0602D829 RID: 186409 RVA: 0x00CBE104 File Offset: 0x00CBC304
 		public UniTask<bool> RequestKurotatoGoldAdd(int goldCount)
 		{
 			KurotatoController.<RequestKurotatoGoldAdd>d__28 <RequestKurotatoGoldAdd>d__;
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoGoldAdd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603891A RID: 231706 RVA: 0x00D6FB60 File Offset: 0x00D6DD60
+		// Token: 0x0602D82A RID: 186410 RVA: 0x00CBE148 File Offset: 0x00CBC348
 		public UniTask<bool> RequestKurotatoSellWeapon(int weaponIncId)
 		{
 			KurotatoController.<RequestKurotatoSellWeapon>d__29 <RequestKurotatoSellWeapon>d__;
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoSellWeapon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603891B RID: 231707 RVA: 0x00D6FBA4 File Offset: 0x00D6DDA4
+		// Token: 0x0602D82B RID: 186411 RVA: 0x00CBE18C File Offset: 0x00CBC38C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return <RequestKurotatoConditionGroupState>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603891C RID: 231708 RVA: 0x00D6FBE8 File Offset: 0x00D6DDE8
+		// Token: 0x0602D82C RID: 186412 RVA: 0x00CBE1D0 File Offset: 0x00CBC3D0
 		[NullableContext(2)]
 		private void OnKurotatoStepUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			this.ReconcileStepView();
 		}
 
-		// Token: 0x0603891D RID: 231709 RVA: 0x00D6FCAC File Offset: 0x00D6DEAC
+		// Token: 0x0602D82D RID: 186413 RVA: 0x00CBE294 File Offset: 0x00CBC494
 		private void ReconcileStepView()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.KurotatoPauseView))
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			}
 		}
 
-		// Token: 0x0603891E RID: 231710 RVA: 0x00D6FDF4 File Offset: 0x00D6DFF4
+		// Token: 0x0602D82E RID: 186414 RVA: 0x00CBE3DC File Offset: 0x00CBC5DC
 		[NullableContext(2)]
 		private void OnKurotatoChestRewardNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -406,7 +406,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			this.ReconcileStepView();
 		}
 
-		// Token: 0x0603891F RID: 231711 RVA: 0x00D6FE30 File Offset: 0x00D6E030
+		// Token: 0x0602D82F RID: 186415 RVA: 0x00CBE418 File Offset: 0x00CBC618
 		[NullableContext(2)]
 		private void OnKurotatoUpgradeRewardNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			this.ReconcileStepView();
 		}
 
-		// Token: 0x06038920 RID: 231712 RVA: 0x00D6FE5C File Offset: 0x00D6E05C
+		// Token: 0x0602D830 RID: 186416 RVA: 0x00CBE444 File Offset: 0x00CBC644
 		[NullableContext(2)]
 		private void OnKurotatoSystemInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			EventSystem.Instance.Emit(EEventName.KurotatoOnSystemInfoUpdate);
 		}
 
-		// Token: 0x06038921 RID: 231713 RVA: 0x00D6FF00 File Offset: 0x00D6E100
+		// Token: 0x0602D831 RID: 186417 RVA: 0x00CBE4E8 File Offset: 0x00CBC6E8
 		[NullableContext(2)]
 		private void OnKurotatoShopRewardNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			KurotatoModel.Instance.SetShopData(kurotatoShopRewardNotify.PanelPbData);
 		}
 
-		// Token: 0x06038922 RID: 231714 RVA: 0x00D6FF24 File Offset: 0x00D6E124
+		// Token: 0x0602D832 RID: 186418 RVA: 0x00CBE50C File Offset: 0x00CBC70C
 		[NullableContext(2)]
 		private void OnKurotatoItemUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -454,7 +454,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			}, kurotatoItemUpdateNotify.IsAdd);
 		}
 
-		// Token: 0x06038923 RID: 231715 RVA: 0x00D6FF70 File Offset: 0x00D6E170
+		// Token: 0x0602D833 RID: 186419 RVA: 0x00CBE558 File Offset: 0x00CBC758
 		[NullableContext(2)]
 		private void OnKurotatoAllItemUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			KurotatoModel.Instance.UpdateItemPanel(kurotatoAllItemUpdateNotify.PanelPbData);
 		}
 
-		// Token: 0x06038924 RID: 231716 RVA: 0x00D6FF94 File Offset: 0x00D6E194
+		// Token: 0x0602D834 RID: 186420 RVA: 0x00CBE57C File Offset: 0x00CBC77C
 		[NullableContext(2)]
 		private void OnKurotatoWeaponUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -470,7 +470,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			KurotatoModel.Instance.UpdateWeapon(kurotatoWeaponUpdateNotify.PanelPbData);
 		}
 
-		// Token: 0x06038925 RID: 231717 RVA: 0x00D6FFB8 File Offset: 0x00D6E1B8
+		// Token: 0x0602D835 RID: 186421 RVA: 0x00CBE5A0 File Offset: 0x00CBC7A0
 		[NullableContext(2)]
 		private void OnKurotatoSettlementNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -480,7 +480,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			UiManager.Instance.OpenView(EUiViewName.KurotatoSettleView, null, null);
 		}
 
-		// Token: 0x06038926 RID: 231718 RVA: 0x00D6FFF0 File Offset: 0x00D6E1F0
+		// Token: 0x0602D836 RID: 186422 RVA: 0x00CBE5D8 File Offset: 0x00CBC7D8
 		[NullableContext(2)]
 		private void OnKurotatoRoleRecordNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -496,7 +496,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			}
 		}
 
-		// Token: 0x06038927 RID: 231719 RVA: 0x00D70068 File Offset: 0x00D6E268
+		// Token: 0x0602D837 RID: 186423 RVA: 0x00CBE650 File Offset: 0x00CBC850
 		private void OnWorldDone()
 		{
 			if (this.IsNeedShowMainViewInternal)
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			}
 		}
 
-		// Token: 0x06038928 RID: 231720 RVA: 0x00D70080 File Offset: 0x00D6E280
+		// Token: 0x0602D838 RID: 186424 RVA: 0x00CBE668 File Offset: 0x00CBC868
 		private void AddMainViewSplashTask()
 		{
 			KurotatoController.<>c__DisplayClass43_0 CS$<>8__locals1 = new KurotatoController.<>c__DisplayClass43_0();
@@ -524,7 +524,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, false);
 		}
 
-		// Token: 0x06038929 RID: 231721 RVA: 0x00D700D4 File Offset: 0x00D6E2D4
+		// Token: 0x0602D839 RID: 186425 RVA: 0x00CBE6BC File Offset: 0x00CBC8BC
 		private void OnInstanceChange(int lastInstanceId, int newInstanceId)
 		{
 			InstanceDungeon? instanceDungeon = (lastInstanceId > 0) ? InstanceDungeonConfig.Instance.GetConfig(lastInstanceId) : null;
@@ -549,7 +549,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			}
 		}
 
-		// Token: 0x0603892A RID: 231722 RVA: 0x00D701A0 File Offset: 0x00D6E3A0
+		// Token: 0x0602D83A RID: 186426 RVA: 0x00CBE788 File Offset: 0x00CBC988
 		[NullableContext(2)]
 		private void OnKurotatoPropertyUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -558,7 +558,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			KurotatoModel.Instance.UpdateSystemPropertyValues(kurotatoPropertyUpdateNotify.PropertyValues, kurotatoPropertyUpdateNotify.LockedPropertyValues);
 		}
 
-		// Token: 0x0603892B RID: 231723 RVA: 0x00D701E0 File Offset: 0x00D6E3E0
+		// Token: 0x0602D83B RID: 186427 RVA: 0x00CBE7C8 File Offset: 0x00CBC9C8
 		[NullableContext(2)]
 		private void OnKurotatoRefineWeaponNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			EventSystem.Instance.Emit<int>(EEventName.KurotatoOnWeaponRefined, kurotatoRefineWeaponNotify.NewWeaponIncId);
 		}
 
-		// Token: 0x0603892C RID: 231724 RVA: 0x00D7021E File Offset: 0x00D6E41E
+		// Token: 0x0602D83C RID: 186428 RVA: 0x00CBE806 File Offset: 0x00CBCA06
 		[NullableContext(2)]
 		private void OnKurotatoDieNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -575,7 +575,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			EventSystem.Instance.Emit(EEventName.KurotatoOnPlayerDie);
 		}
 
-		// Token: 0x0603892D RID: 231725 RVA: 0x00D70238 File Offset: 0x00D6E438
+		// Token: 0x0602D83D RID: 186429 RVA: 0x00CBE820 File Offset: 0x00CBCA20
 		private void StopBattleMusic()
 		{
 			KurotatoModel instance = KurotatoModel.Instance;
@@ -587,7 +587,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			AudioSystem.Instance.PostEvent("stop_ui_music_3_5_wuyinweiji");
 		}
 
-		// Token: 0x0603892E RID: 231726 RVA: 0x00D7026C File Offset: 0x00D6E46C
+		// Token: 0x0602D83E RID: 186430 RVA: 0x00CBE854 File Offset: 0x00CBCA54
 		[NullableContext(2)]
 		private void OnKurotatoReChallengeCountNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -595,7 +595,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			KurotatoModel.Instance.SetReChallengeCount(kurotatoReChallengeCountNotify.MaxReChallengeCount, kurotatoReChallengeCountNotify.UsedReChallengeCount);
 		}
 
-		// Token: 0x0603892F RID: 231727 RVA: 0x00D70298 File Offset: 0x00D6E498
+		// Token: 0x0602D83F RID: 186431 RVA: 0x00CBE880 File Offset: 0x00CBCA80
 		[NullableContext(2)]
 		private void OnKurotatoNextWaveTypeNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -604,7 +604,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			EventSystem.Instance.Emit(EEventName.KurotatoOnNextWaveTypeUpdate);
 		}
 
-		// Token: 0x06038930 RID: 231728 RVA: 0x00D702D4 File Offset: 0x00D6E4D4
+		// Token: 0x0602D840 RID: 186432 RVA: 0x00CBE8BC File Offset: 0x00CBCABC
 		public void LeaveInstanceDungeon()
 		{
 			this.StopBattleMusic();
@@ -617,8 +617,8 @@ namespace CSharpScript.Game.Module.Kurotato
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon().Forget<bool>();
 		}
 
-		// Token: 0x170087AD RID: 34733
-		// (get) Token: 0x06038931 RID: 231729 RVA: 0x00D7031A File Offset: 0x00D6E51A
+		// Token: 0x17005B75 RID: 23413
+		// (get) Token: 0x0602D841 RID: 186433 RVA: 0x00CBE902 File Offset: 0x00CBCB02
 		[Nullable(1)]
 		public static KurotatoController Instance
 		{
@@ -629,7 +629,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			}
 		}
 
-		// Token: 0x06038932 RID: 231730 RVA: 0x00D70321 File Offset: 0x00D6E521
+		// Token: 0x0602D842 RID: 186434 RVA: 0x00CBE909 File Offset: 0x00CBCB09
 		[NullableContext(1)]
 		public static KurotatoController GetOrCreateInstance()
 		{
@@ -640,7 +640,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return KurotatoController._Instance;
 		}
 
-		// Token: 0x06038933 RID: 231731 RVA: 0x00D70335 File Offset: 0x00D6E535
+		// Token: 0x0602D843 RID: 186435 RVA: 0x00CBE91D File Offset: 0x00CBCB1D
 		public static bool CreateInstance()
 		{
 			if (KurotatoController._Instance != null)
@@ -651,35 +651,35 @@ namespace CSharpScript.Game.Module.Kurotato
 			return true;
 		}
 
-		// Token: 0x06038934 RID: 231732 RVA: 0x00D7034B File Offset: 0x00D6E54B
+		// Token: 0x0602D844 RID: 186436 RVA: 0x00CBE933 File Offset: 0x00CBCB33
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06038935 RID: 231733 RVA: 0x00D7034D File Offset: 0x00D6E54D
+		// Token: 0x0602D845 RID: 186437 RVA: 0x00CBE935 File Offset: 0x00CBCB35
 		public static void ResetStaticDefaultValue()
 		{
 			KurotatoController._Instance = null;
 		}
 
-		// Token: 0x06038936 RID: 231734 RVA: 0x00D70355 File Offset: 0x00D6E555
+		// Token: 0x0602D846 RID: 186438 RVA: 0x00CBE93D File Offset: 0x00CBCB3D
 		static KurotatoController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(KurotatoController.CreateStaticDefaultValue), new Action(KurotatoController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DB28 RID: 121640
+		// Token: 0x040185BE RID: 99774
 		private bool IsNeedShowMainViewInternal;
 
-		// Token: 0x0401DB29 RID: 121641
+		// Token: 0x040185BF RID: 99775
 		[Nullable(1)]
 		private const string KUROTATO_BATTLE_MUSIC_PLAY = "play_ui_music_3_5_wuyinweiji";
 
-		// Token: 0x0401DB2A RID: 121642
+		// Token: 0x040185C0 RID: 99776
 		[Nullable(1)]
 		private const string KUROTATO_BATTLE_MUSIC_STOP = "stop_ui_music_3_5_wuyinweiji";
 
-		// Token: 0x0401DB2B RID: 121643
+		// Token: 0x040185C1 RID: 99777
 		[Nullable(2)]
 		private static KurotatoController _Instance;
 	}

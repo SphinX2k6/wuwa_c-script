@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B6C RID: 2924
+	// Token: 0x02000C4C RID: 3148
 	public struct ChatExpressionGroup : IFlatbufferObject
 	{
-		// Token: 0x1700077E RID: 1918
-		// (get) Token: 0x060053D1 RID: 21457 RVA: 0x001F2668 File Offset: 0x001F0868
+		// Token: 0x170007BE RID: 1982
+		// (get) Token: 0x06005993 RID: 22931 RVA: 0x002123A0 File Offset: 0x002105A0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060053D2 RID: 21458 RVA: 0x001F2675 File Offset: 0x001F0875
+		// Token: 0x06005994 RID: 22932 RVA: 0x002123AD File Offset: 0x002105AD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060053D3 RID: 21459 RVA: 0x001F267C File Offset: 0x001F087C
+		// Token: 0x06005995 RID: 22933 RVA: 0x002123B4 File Offset: 0x002105B4
 		public static ChatExpressionGroup GetRootAsChatExpressionGroup(ByteBuffer _bb)
 		{
 			return ChatExpressionGroup.GetRootAsChatExpressionGroup(_bb, default(ChatExpressionGroup));
 		}
 
-		// Token: 0x060053D4 RID: 21460 RVA: 0x001F2698 File Offset: 0x001F0898
+		// Token: 0x06005996 RID: 22934 RVA: 0x002123D0 File Offset: 0x002105D0
 		public static ChatExpressionGroup GetRootAsChatExpressionGroup(ByteBuffer _bb, ChatExpressionGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060053D5 RID: 21461 RVA: 0x001F26B5 File Offset: 0x001F08B5
+		// Token: 0x06005997 RID: 22935 RVA: 0x002123ED File Offset: 0x002105ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060053D6 RID: 21462 RVA: 0x001F26C4 File Offset: 0x001F08C4
+		// Token: 0x06005998 RID: 22936 RVA: 0x002123FC File Offset: 0x002105FC
 		public ChatExpressionGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700077F RID: 1919
-		// (get) Token: 0x060053D7 RID: 21463 RVA: 0x001F26D4 File Offset: 0x001F08D4
+		// Token: 0x170007BF RID: 1983
+		// (get) Token: 0x06005999 RID: 22937 RVA: 0x0021240C File Offset: 0x0021060C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000780 RID: 1920
-		// (get) Token: 0x060053D8 RID: 21464 RVA: 0x001F2710 File Offset: 0x001F0910
+		// Token: 0x170007C0 RID: 1984
+		// (get) Token: 0x0600599A RID: 22938 RVA: 0x00212448 File Offset: 0x00210648
 		public string Name
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060053D9 RID: 21465 RVA: 0x001F2747 File Offset: 0x001F0947
+		// Token: 0x0600599B RID: 22939 RVA: 0x0021247F File Offset: 0x0021067F
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060053DA RID: 21466 RVA: 0x001F2756 File Offset: 0x001F0956
+		// Token: 0x0600599C RID: 22940 RVA: 0x0021248E File Offset: 0x0021068E
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000781 RID: 1921
-		// (get) Token: 0x060053DB RID: 21467 RVA: 0x001F2770 File Offset: 0x001F0970
+		// Token: 0x170007C1 RID: 1985
+		// (get) Token: 0x0600599D RID: 22941 RVA: 0x002124A8 File Offset: 0x002106A8
 		public string GroupTexturePath
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060053DC RID: 21468 RVA: 0x001F27A7 File Offset: 0x001F09A7
+		// Token: 0x0600599E RID: 22942 RVA: 0x002124DF File Offset: 0x002106DF
 		public Span<byte> GetGroupTexturePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060053DD RID: 21469 RVA: 0x001F27B6 File Offset: 0x001F09B6
+		// Token: 0x0600599F RID: 22943 RVA: 0x002124EE File Offset: 0x002106EE
 		public byte[] GetGroupTexturePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004B6E RID: 19310
+		// Token: 0x0400514E RID: 20814
 		private Table __p;
 	}
 }

@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 {
-	// Token: 0x0200685E RID: 26718
+	// Token: 0x020057AE RID: 22446
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBattleBuffEffectManager
 	{
-		// Token: 0x06042B76 RID: 273270 RVA: 0x0103A051 File Offset: 0x01038251
+		// Token: 0x060376CB RID: 227019 RVA: 0x00F7B59D File Offset: 0x00F7979D
 		public void Init()
 		{
 		}
 
-		// Token: 0x06042B77 RID: 273271 RVA: 0x0103A054 File Offset: 0x01038254
+		// Token: 0x060376CC RID: 227020 RVA: 0x00F7B5A0 File Offset: 0x00F797A0
 		public void PlayEffectByDelta(BuffVisualDelta delta)
 		{
 			EDangoBrawlBuffVisualOp op = delta.Op;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.RemoveBuffEffect(delta.BuffUId);
 		}
 
-		// Token: 0x06042B78 RID: 273272 RVA: 0x0103A088 File Offset: 0x01038288
+		// Token: 0x060376CD RID: 227021 RVA: 0x00F7B5D4 File Offset: 0x00F797D4
 		public void ClearAllEffects()
 		{
 			foreach (DangoBrawlBattleBuffEffectManager.BuffEffectHandle buffEffectHandle in this.EffectMap.Values.ToArray<DangoBrawlBattleBuffEffectManager.BuffEffectHandle>())
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042B79 RID: 273273 RVA: 0x0103A0C4 File Offset: 0x010382C4
+		// Token: 0x060376CE RID: 227022 RVA: 0x00F7B610 File Offset: 0x00F79810
 		public void Destroy()
 		{
 			this.ClearAllEffects();
 		}
 
-		// Token: 0x06042B7A RID: 273274 RVA: 0x0103A0CC File Offset: 0x010382CC
+		// Token: 0x060376CF RID: 227023 RVA: 0x00F7B618 File Offset: 0x00F79818
 		private unsafe void SpawnBuffEffect(BuffVisualDelta delta)
 		{
 			DangoBrawlBuff? buffConfigById = DangoBrawlConfig.Instance.GetBuffConfigById(delta.BuffConfigId);
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.EffectMap[delta.BuffUId] = buffEffectHandle;
 		}
 
-		// Token: 0x06042B7B RID: 273275 RVA: 0x0103A234 File Offset: 0x01038434
+		// Token: 0x060376D0 RID: 227024 RVA: 0x00F7B780 File Offset: 0x00F79980
 		private void RemoveBuffEffect(int buffUId)
 		{
 			DangoBrawlBattleBuffEffectManager.BuffEffectHandle effectHandle;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.StopEffect(effectHandle);
 		}
 
-		// Token: 0x06042B7C RID: 273276 RVA: 0x0103A25C File Offset: 0x0103845C
+		// Token: 0x060376D1 RID: 227025 RVA: 0x00F7B7A8 File Offset: 0x00F799A8
 		private void StopEffect(DangoBrawlBattleBuffEffectManager.BuffEffectHandle effectHandle)
 		{
 			foreach (int num in effectHandle.Handles)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			effectHandle.Handles.Clear();
 		}
 
-		// Token: 0x06042B7D RID: 273277 RVA: 0x0103A2DC File Offset: 0x010384DC
+		// Token: 0x060376D2 RID: 227026 RVA: 0x00F7B828 File Offset: 0x00F79A28
 		[NullableContext(2)]
 		private AActor ResolveTargetActor(int targetFighterUId)
 		{
@@ -147,20 +147,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return component.SpawnedActor;
 		}
 
-		// Token: 0x04022BAE RID: 142254
+		// Token: 0x0401D40B RID: 119819
 		private const string EFFECT_REASON = "DangoBrawlBuff";
 
-		// Token: 0x04022BAF RID: 142255
+		// Token: 0x0401D40C RID: 119820
 		private readonly Dictionary<int, DangoBrawlBattleBuffEffectManager.BuffEffectHandle> EffectMap = new Dictionary<int, DangoBrawlBattleBuffEffectManager.BuffEffectHandle>();
 
-		// Token: 0x0200CA32 RID: 51762
+		// Token: 0x0200B3FC RID: 46076
 		[NullableContext(0)]
 		private class BuffEffectHandle
 		{
-			// Token: 0x0403D1DC RID: 250332
+			// Token: 0x04037AC1 RID: 228033
 			public int ConfigId;
 
-			// Token: 0x0403D1DD RID: 250333
+			// Token: 0x04037AC2 RID: 228034
 			[Nullable(1)]
 			public HashSet<int> Handles = new HashSet<int>();
 		}

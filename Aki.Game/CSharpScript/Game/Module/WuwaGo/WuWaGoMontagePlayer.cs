@@ -6,22 +6,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x0200471D RID: 18205
+	// Token: 0x0200364D RID: 13901
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class WuWaGoMontagePlayer : IWuWaGoTimeStopParticipant
 	{
-		// Token: 0x0602F93F RID: 194879 RVA: 0x00B05311 File Offset: 0x00B03511
+		// Token: 0x06024105 RID: 147717 RVA: 0x00A34FE1 File Offset: 0x00A331E1
 		public WuWaGoMontagePlayer(UAnimInstance animInstance, UAnimMontage montage, EWuWaGoMontageWaitMode waitMode)
 		{
 		}
 
-		// Token: 0x170076F2 RID: 30450
-		// (get) Token: 0x0602F940 RID: 194880 RVA: 0x00B05339 File Offset: 0x00B03539
-		// (set) Token: 0x0602F941 RID: 194881 RVA: 0x00B05341 File Offset: 0x00B03541
+		// Token: 0x170049AE RID: 18862
+		// (get) Token: 0x06024106 RID: 147718 RVA: 0x00A35009 File Offset: 0x00A33209
+		// (set) Token: 0x06024107 RID: 147719 RVA: 0x00A35011 File Offset: 0x00A33211
 		public bool PausedByTimeStop { get; set; }
 
-		// Token: 0x0602F942 RID: 194882 RVA: 0x00B0534C File Offset: 0x00B0354C
+		// Token: 0x06024108 RID: 147720 RVA: 0x00A3501C File Offset: 0x00A3321C
 		public UniTask Play()
 		{
 			WuWaGoMontagePlayer.<Play>d__12 <Play>d__;
@@ -32,31 +32,31 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <Play>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F943 RID: 194883 RVA: 0x00B0538F File Offset: 0x00B0358F
+		// Token: 0x06024109 RID: 147721 RVA: 0x00A3505F File Offset: 0x00A3325F
 		public void PauseByTimeStop()
 		{
 			WuWaGoTimeStop.PauseTimerHandle(this.TimerHandle);
 		}
 
-		// Token: 0x0602F944 RID: 194884 RVA: 0x00B0539C File Offset: 0x00B0359C
+		// Token: 0x0602410A RID: 147722 RVA: 0x00A3506C File Offset: 0x00A3326C
 		public void ResumeByTimeStop()
 		{
 			WuWaGoTimeStop.ResumeTimerHandle(this.TimerHandle);
 		}
 
-		// Token: 0x0602F945 RID: 194885 RVA: 0x00B053A9 File Offset: 0x00B035A9
+		// Token: 0x0602410B RID: 147723 RVA: 0x00A35079 File Offset: 0x00A33279
 		public void CancelByTimeStop(string reason)
 		{
 			this.Finish();
 		}
 
-		// Token: 0x0602F946 RID: 194886 RVA: 0x00B053B1 File Offset: 0x00B035B1
+		// Token: 0x0602410C RID: 147724 RVA: 0x00A35081 File Offset: 0x00A33281
 		private float GetMontagePlayRate()
 		{
 			return WuWaGoUtil.GetMontagePlayRate();
 		}
 
-		// Token: 0x0602F947 RID: 194887 RVA: 0x00B053B8 File Offset: 0x00B035B8
+		// Token: 0x0602410D RID: 147725 RVA: 0x00A35088 File Offset: 0x00A33288
 		[NullableContext(2)]
 		private void OnMontageBlendingOut(UAnimMontage montage1, bool bInterrupted)
 		{
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			this.Finish();
 		}
 
-		// Token: 0x0602F948 RID: 194888 RVA: 0x00B053CA File Offset: 0x00B035CA
+		// Token: 0x0602410E RID: 147726 RVA: 0x00A3509A File Offset: 0x00A3329A
 		[NullableContext(2)]
 		private void OnMontageEnded(UAnimMontage montage1, bool bInterrupted)
 		{
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			this.Finish();
 		}
 
-		// Token: 0x0602F949 RID: 194889 RVA: 0x00B053DC File Offset: 0x00B035DC
+		// Token: 0x0602410F RID: 147727 RVA: 0x00A350AC File Offset: 0x00A332AC
 		private void OnTimeout(float delta)
 		{
 			Log instance = Log.Instance;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			this.Finish();
 		}
 
-		// Token: 0x0602F94A RID: 194890 RVA: 0x00B05420 File Offset: 0x00B03620
+		// Token: 0x06024110 RID: 147728 RVA: 0x00A350F0 File Offset: 0x00A332F0
 		private void Finish()
 		{
 			if (this.Resolved)
@@ -114,30 +114,30 @@ namespace CSharpScript.Game.Module.WuwaGo
 			this.Done.SetResult(default(UniTaskVoid));
 		}
 
-		// Token: 0x04019B19 RID: 105241
+		// Token: 0x040141C8 RID: 82376
 		[CompilerGenerated]
 		private UAnimInstance <animInstance>P = animInstance;
 
-		// Token: 0x04019B1A RID: 105242
+		// Token: 0x040141C9 RID: 82377
 		[CompilerGenerated]
 		private UAnimMontage <montage>P = montage;
 
-		// Token: 0x04019B1B RID: 105243
+		// Token: 0x040141CA RID: 82378
 		[CompilerGenerated]
 		private EWuWaGoMontageWaitMode <waitMode>P = waitMode;
 
-		// Token: 0x04019B1D RID: 105245
+		// Token: 0x040141CC RID: 82380
 		private readonly CustomPromise<UniTaskVoid> Done = new CustomPromise<UniTaskVoid>();
 
-		// Token: 0x04019B1E RID: 105246
+		// Token: 0x040141CD RID: 82381
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 
-		// Token: 0x04019B1F RID: 105247
+		// Token: 0x040141CE RID: 82382
 		[Nullable(2)]
 		private Action UnregisterTimeStop;
 
-		// Token: 0x04019B20 RID: 105248
+		// Token: 0x040141CF RID: 82383
 		private bool Resolved;
 	}
 }

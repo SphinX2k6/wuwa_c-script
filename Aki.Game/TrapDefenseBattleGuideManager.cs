@@ -3,39 +3,39 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x02001D41 RID: 7489
+// Token: 0x02001203 RID: 4611
 public class TrapDefenseBattleGuideManager : IStaticVariableResetter
 {
-	// Token: 0x0600E326 RID: 58150 RVA: 0x003561ED File Offset: 0x003543ED
+	// Token: 0x0600B743 RID: 46915 RVA: 0x00361C1D File Offset: 0x0035FE1D
 	static TrapDefenseBattleGuideManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TrapDefenseBattleGuideManager.CreateStaticDefaultValue), new Action(TrapDefenseBattleGuideManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600E327 RID: 58151 RVA: 0x0035620C File Offset: 0x0035440C
+	// Token: 0x0600B744 RID: 46916 RVA: 0x00361C3C File Offset: 0x0035FE3C
 	public static void CreateStaticDefaultValue()
 	{
 		TrapDefenseBattleGuideManager.CurrentDataMap = new Dictionary<ETrapDefensePlayerOperationType, TrapDefenseBattleGuideData>();
 	}
 
-	// Token: 0x0600E328 RID: 58152 RVA: 0x00356218 File Offset: 0x00354418
+	// Token: 0x0600B745 RID: 46917 RVA: 0x00361C48 File Offset: 0x0035FE48
 	public static void ResetStaticDefaultValue()
 	{
 		TrapDefenseBattleGuideManager.CurrentDataMap = null;
 	}
 
-	// Token: 0x0600E329 RID: 58153 RVA: 0x00356220 File Offset: 0x00354420
+	// Token: 0x0600B746 RID: 46918 RVA: 0x00361C50 File Offset: 0x0035FE50
 	public static void Initialize()
 	{
 	}
 
-	// Token: 0x0600E32A RID: 58154 RVA: 0x00356222 File Offset: 0x00354422
+	// Token: 0x0600B747 RID: 46919 RVA: 0x00361C52 File Offset: 0x0035FE52
 	public static void Clear()
 	{
 		TrapDefenseBattleGuideManager.CurrentDataMap.Clear();
 	}
 
-	// Token: 0x0600E32B RID: 58155 RVA: 0x00356230 File Offset: 0x00354430
+	// Token: 0x0600B748 RID: 46920 RVA: 0x00361C60 File Offset: 0x0035FE60
 	[NullableContext(1)]
 	public static void RegisterBehaviorTreeGuideData(TrapDefensePlayerOperationConstraint param)
 	{
@@ -62,7 +62,7 @@ public class TrapDefenseBattleGuideManager : IStaticVariableResetter
 		TrapDefenseBattleGuideManager.CurrentDataMap.Remove(param.DisableOperation.Type);
 	}
 
-	// Token: 0x0600E32C RID: 58156 RVA: 0x00356308 File Offset: 0x00354508
+	// Token: 0x0600B749 RID: 46921 RVA: 0x00361D38 File Offset: 0x0035FF38
 	public static bool CheckCanExecuteAndShowFailTips(ETrapDefensePlayerOperationType type)
 	{
 		if (TrapDefenseBattleGuideManager.CurrentDataMap.Count <= 0)
@@ -78,7 +78,7 @@ public class TrapDefenseBattleGuideManager : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x040068E9 RID: 26857
+	// Token: 0x040069C8 RID: 27080
 	[Nullable(1)]
 	private static Dictionary<ETrapDefensePlayerOperationType, TrapDefenseBattleGuideData> CurrentDataMap;
 }

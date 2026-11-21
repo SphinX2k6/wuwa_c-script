@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050C4 RID: 20676
+	// Token: 0x02005629 RID: 22057
 	public class IDungeonEntryComponentT
 	{
-		// Token: 0x17009677 RID: 38519
-		// (get) Token: 0x0602141F RID: 136223 RVA: 0x0049EC20 File Offset: 0x0049CE20
-		// (set) Token: 0x06021420 RID: 136224 RVA: 0x0049EC28 File Offset: 0x0049CE28
+		// Token: 0x17009E64 RID: 40548
+		// (get) Token: 0x06023373 RID: 144243 RVA: 0x004D8BAC File Offset: 0x004D6DAC
+		// (set) Token: 0x06023374 RID: 144244 RVA: 0x004D8BB4 File Offset: 0x004D6DB4
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009678 RID: 38520
-		// (get) Token: 0x06021421 RID: 136225 RVA: 0x0049EC31 File Offset: 0x0049CE31
-		// (set) Token: 0x06021422 RID: 136226 RVA: 0x0049EC39 File Offset: 0x0049CE39
+		// Token: 0x17009E65 RID: 40549
+		// (get) Token: 0x06023375 RID: 144245 RVA: 0x004D8BBD File Offset: 0x004D6DBD
+		// (set) Token: 0x06023376 RID: 144246 RVA: 0x004D8BC5 File Offset: 0x004D6DC5
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021423 RID: 136227 RVA: 0x0049EC42 File Offset: 0x0049CE42
+		// Token: 0x06023377 RID: 144247 RVA: 0x004D8BCE File Offset: 0x004D6DCE
 		public IDungeonEntryComponentT()
 		{
 			this.Disabled = false;

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000075 RID: 117
+	// Token: 0x02000078 RID: 120
 	[EnumExtensions]
 	public enum EAudioType
 	{
-		// Token: 0x0400024E RID: 590
+		// Token: 0x0400025D RID: 605
 		AudioAMB,
-		// Token: 0x0400024F RID: 591
+		// Token: 0x0400025E RID: 606
 		AudioBGM
 	}
 }

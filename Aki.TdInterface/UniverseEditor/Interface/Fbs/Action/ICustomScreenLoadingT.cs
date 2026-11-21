@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064FF RID: 25855
+	// Token: 0x02006B6D RID: 27501
 	public class ICustomScreenLoadingT
 	{
-		// Token: 0x1700C04D RID: 49229
-		// (get) Token: 0x0602CDAB RID: 183723 RVA: 0x00629703 File Offset: 0x00627903
-		// (set) Token: 0x0602CDAC RID: 183724 RVA: 0x0062970B File Offset: 0x0062790B
+		// Token: 0x1700C9DD RID: 51677
+		// (get) Token: 0x0602F541 RID: 193857 RVA: 0x006759A3 File Offset: 0x00673BA3
+		// (set) Token: 0x0602F542 RID: 193858 RVA: 0x006759AB File Offset: 0x00673BAB
 		public ECustomScreenType Type { get; set; }
 
-		// Token: 0x1700C04E RID: 49230
-		// (get) Token: 0x0602CDAD RID: 183725 RVA: 0x00629714 File Offset: 0x00627914
-		// (set) Token: 0x0602CDAE RID: 183726 RVA: 0x0062971C File Offset: 0x0062791C
+		// Token: 0x1700C9DE RID: 51678
+		// (get) Token: 0x0602F543 RID: 193859 RVA: 0x006759B4 File Offset: 0x00673BB4
+		// (set) Token: 0x0602F544 RID: 193860 RVA: 0x006759BC File Offset: 0x00673BBC
 		public ICustomScreenLoadingCyberpunkT LoadingType { get; set; }
 
-		// Token: 0x0602CDAF RID: 183727 RVA: 0x00629725 File Offset: 0x00627925
+		// Token: 0x0602F545 RID: 193861 RVA: 0x006759C5 File Offset: 0x00673BC5
 		public ICustomScreenLoadingT()
 		{
 			this.Type = ECustomScreenType.Spine;

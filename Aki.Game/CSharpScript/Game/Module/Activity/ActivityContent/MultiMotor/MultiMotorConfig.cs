@@ -5,76 +5,76 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x0200638E RID: 25486
+	// Token: 0x0200530C RID: 21260
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class MultiMotorConfig : ConfigBase
 	{
-		// Token: 0x06040178 RID: 262520 RVA: 0x00F82FEE File Offset: 0x00F811EE
+		// Token: 0x06034E39 RID: 216633 RVA: 0x00EC9F62 File Offset: 0x00EC8162
 		[NullableContext(2)]
 		public IReadOnlyList<OnlineMotorLevel> GetAllMotorMultiParkourLevel()
 		{
 			return ConfigOnlineMotorLevelAll.GetConfigList(true);
 		}
 
-		// Token: 0x06040179 RID: 262521 RVA: 0x00F82FF6 File Offset: 0x00F811F6
+		// Token: 0x06034E3A RID: 216634 RVA: 0x00EC9F6A File Offset: 0x00EC816A
 		public OnlineMotorLevel? GetMotorMultiParkourLevelById(int levelId)
 		{
 			return ConfigOnlineMotorLevelById.GetConfig(levelId, true);
 		}
 
-		// Token: 0x0604017A RID: 262522 RVA: 0x00F82FFF File Offset: 0x00F811FF
+		// Token: 0x06034E3B RID: 216635 RVA: 0x00EC9F73 File Offset: 0x00EC8173
 		public OnlineMotorLevel? GetMotorMultiParkourLevelByInstId(int instId)
 		{
 			return ConfigOnlineMotorLevelByInstId.GetConfig(instId, true);
 		}
 
-		// Token: 0x0604017B RID: 262523 RVA: 0x00F83008 File Offset: 0x00F81208
+		// Token: 0x06034E3C RID: 216636 RVA: 0x00EC9F7C File Offset: 0x00EC817C
 		public OnlineMotorLevelTask? GetMotorLevelTaskByTaskId(int taskId)
 		{
 			return ConfigOnlineMotorLevelTaskById.GetConfig(taskId, true);
 		}
 
-		// Token: 0x0604017C RID: 262524 RVA: 0x00F83011 File Offset: 0x00F81211
+		// Token: 0x06034E3D RID: 216637 RVA: 0x00EC9F85 File Offset: 0x00EC8185
 		public OnlineMotorGlobalTask? GetMotorGlobalTaskByTaskId(int taskId)
 		{
 			return ConfigOnlineMotorGlobalTaskById.GetConfig(taskId, true);
 		}
 
-		// Token: 0x0604017D RID: 262525 RVA: 0x00F8301A File Offset: 0x00F8121A
+		// Token: 0x06034E3E RID: 216638 RVA: 0x00EC9F8E File Offset: 0x00EC818E
 		public OnlineMotorBroadcast? GetMotorBroadcastById(int id)
 		{
 			return ConfigOnlineMotorBroadcastById.GetConfig(id, true);
 		}
 
-		// Token: 0x0604017E RID: 262526 RVA: 0x00F83023 File Offset: 0x00F81223
+		// Token: 0x06034E3F RID: 216639 RVA: 0x00EC9F97 File Offset: 0x00EC8197
 		[NullableContext(2)]
 		public IReadOnlyList<OnlineMotorBroadcast> GetMotorBroadcastByGroup(int group)
 		{
 			return ConfigOnlineMotorBroadcastByBroadcastGroup.GetConfigList(group, true);
 		}
 
-		// Token: 0x0604017F RID: 262527 RVA: 0x00F8302C File Offset: 0x00F8122C
+		// Token: 0x06034E40 RID: 216640 RVA: 0x00EC9FA0 File Offset: 0x00EC81A0
 		public MotorOnlineBuff? GetMotorBuffById(int id)
 		{
 			return ConfigMotorOnlineBuffById.GetConfig(id, true);
 		}
 
-		// Token: 0x06040180 RID: 262528 RVA: 0x00F83035 File Offset: 0x00F81235
+		// Token: 0x06034E41 RID: 216641 RVA: 0x00EC9FA9 File Offset: 0x00EC81A9
 		public MotorOnlineRoleSkin? GetMotorOnlineRoleSkinBySkinId(int skinId)
 		{
 			return ConfigMotorOnlineRoleSkinByRoleSkinId.GetConfig(skinId, true);
 		}
 
-		// Token: 0x06040181 RID: 262529 RVA: 0x00F83040 File Offset: 0x00F81240
+		// Token: 0x06034E42 RID: 216642 RVA: 0x00EC9FB4 File Offset: 0x00EC81B4
 		public int GetHostExitProtectTime()
 		{
 			return ConfigCommonParamById.GetIntConfig("MultiMotorHostExitProtectTime").GetValueOrDefault(300);
 		}
 
-		// Token: 0x17009353 RID: 37715
-		// (get) Token: 0x06040182 RID: 262530 RVA: 0x00F83064 File Offset: 0x00F81264
+		// Token: 0x170066B5 RID: 26293
+		// (get) Token: 0x06034E43 RID: 216643 RVA: 0x00EC9FD8 File Offset: 0x00EC81D8
 		public static MultiMotorConfig Instance
 		{
 			get
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x06040183 RID: 262531 RVA: 0x00F8306B File Offset: 0x00F8126B
+		// Token: 0x06034E44 RID: 216644 RVA: 0x00EC9FDF File Offset: 0x00EC81DF
 		public static MultiMotorConfig GetOrCreateInstance()
 		{
 			if (MultiMotorConfig._Instance == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return MultiMotorConfig._Instance;
 		}
 
-		// Token: 0x06040184 RID: 262532 RVA: 0x00F8307F File Offset: 0x00F8127F
+		// Token: 0x06034E45 RID: 216645 RVA: 0x00EC9FF3 File Offset: 0x00EC81F3
 		public static bool CreateInstance()
 		{
 			if (MultiMotorConfig._Instance != null)
@@ -104,27 +104,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return true;
 		}
 
-		// Token: 0x06040185 RID: 262533 RVA: 0x00F83095 File Offset: 0x00F81295
+		// Token: 0x06034E46 RID: 216646 RVA: 0x00ECA009 File Offset: 0x00EC8209
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06040186 RID: 262534 RVA: 0x00F83097 File Offset: 0x00F81297
+		// Token: 0x06034E47 RID: 216647 RVA: 0x00ECA00B File Offset: 0x00EC820B
 		public static void ResetStaticDefaultValue()
 		{
 			MultiMotorConfig._Instance = null;
 		}
 
-		// Token: 0x06040187 RID: 262535 RVA: 0x00F8309F File Offset: 0x00F8129F
+		// Token: 0x06034E48 RID: 216648 RVA: 0x00ECA013 File Offset: 0x00EC8213
 		static MultiMotorConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MultiMotorConfig.CreateStaticDefaultValue), new Action(MultiMotorConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021651 RID: 136785
+		// Token: 0x0401BF80 RID: 114560
 		private const int DefaultExitHandleTime = 300;
 
-		// Token: 0x04021652 RID: 136786
+		// Token: 0x0401BF81 RID: 114561
 		[Nullable(2)]
 		private static MultiMotorConfig _Instance;
 	}

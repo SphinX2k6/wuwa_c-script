@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007B2 RID: 1970
+	// Token: 0x02000855 RID: 2133
 	public class IVehicleAudioConfig_SetValue
 	{
-		// Token: 0x04001C76 RID: 7286
+		// Token: 0x04001E82 RID: 7810
 		public float MinVehicleSpeed;
 
-		// Token: 0x04001C77 RID: 7287
+		// Token: 0x04001E83 RID: 7811
 		public float MaxVehicleSpeed;
 
-		// Token: 0x04001C78 RID: 7288
-		[Nullable(1)]
+		// Token: 0x04001E84 RID: 7812
 		public string AudioEvent;
 	}
 }

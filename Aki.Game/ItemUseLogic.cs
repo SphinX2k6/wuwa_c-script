@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Aki.Config;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
@@ -14,10 +13,10 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001FC0 RID: 8128
+// Token: 0x02001482 RID: 5250
 public class ItemUseLogic
 {
-	// Token: 0x0600FE29 RID: 65065 RVA: 0x003DA970 File Offset: 0x003D8B70
+	// Token: 0x0600D24F RID: 53839 RVA: 0x003E6348 File Offset: 0x003E4548
 	public static bool TryUseParameterItem(int itemId, int num = 1)
 	{
 		ItemInfo? itemConfig = InventoryConfig.Instance.GetItemConfig(itemId);
@@ -39,7 +38,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE2A RID: 65066 RVA: 0x003DA9E8 File Offset: 0x003D8BE8
+	// Token: 0x0600D250 RID: 53840 RVA: 0x003E63C0 File Offset: 0x003E45C0
 	public static bool TryUseUiPlayItem(int itemId, int num = 1)
 	{
 		ItemInfo? config = ConfigItemInfoById.GetConfig(itemId, true);
@@ -67,7 +66,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE2B RID: 65067 RVA: 0x003DAA88 File Offset: 0x003D8C88
+	// Token: 0x0600D251 RID: 53841 RVA: 0x003E6460 File Offset: 0x003E4660
 	public static bool TryUseBattlePassItem(int itemId, int num = 1)
 	{
 		ItemUseLogic.<>c__DisplayClass2_0 CS$<>8__locals1 = new ItemUseLogic.<>c__DisplayClass2_0();
@@ -82,13 +81,13 @@ public class ItemUseLogic
 		return false;
 	}
 
-	// Token: 0x0600FE2C RID: 65068 RVA: 0x003DAB03 File Offset: 0x003D8D03
+	// Token: 0x0600D252 RID: 53842 RVA: 0x003E64DB File Offset: 0x003E46DB
 	public static bool TryUseBuffItem(int itemId, int num = 1)
 	{
 		return ItemUseLogic.TryUseBuffItem(itemId, num, false, 0);
 	}
 
-	// Token: 0x0600FE2D RID: 65069 RVA: 0x003DAB10 File Offset: 0x003D8D10
+	// Token: 0x0600D253 RID: 53843 RVA: 0x003E64E8 File Offset: 0x003E46E8
 	public static bool TryUseBuffItem(int itemId, int num = 1, bool isDirect = false, int roleConfigId = 0)
 	{
 		if (!BuffItemConfig.Instance.IsBuffItem(itemId))
@@ -129,7 +128,7 @@ public class ItemUseLogic
 		return ItemUseLogic.TryUseSingleBuffItemDirectly(itemId, num, roleConfigId);
 	}
 
-	// Token: 0x0600FE2E RID: 65070 RVA: 0x003DAC24 File Offset: 0x003D8E24
+	// Token: 0x0600D254 RID: 53844 RVA: 0x003E65FC File Offset: 0x003E47FC
 	private static bool TryUseSingleBuffItemDirectly(int itemId, int num = 1, int roleConfigId = 0)
 	{
 		SceneTeamItem teamItem = SceneTeamModel.Instance.GetTeamItem((long)roleConfigId, new GetTeamItemOptions
@@ -173,7 +172,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE2F RID: 65071 RVA: 0x003DACE5 File Offset: 0x003D8EE5
+	// Token: 0x0600D255 RID: 53845 RVA: 0x003E66BD File Offset: 0x003E48BD
 	public static bool TryUsePowerItem(int itemId, int num = 1)
 	{
 		if (itemId == 10800)
@@ -184,7 +183,7 @@ public class ItemUseLogic
 		return false;
 	}
 
-	// Token: 0x0600FE30 RID: 65072 RVA: 0x003DAD00 File Offset: 0x003D8F00
+	// Token: 0x0600D256 RID: 53846 RVA: 0x003E66D8 File Offset: 0x003E48D8
 	public static bool TryUseMonthCardItem(int itemId, int num = 1)
 	{
 		ItemUseLogic.<>c__DisplayClass7_0 CS$<>8__locals1 = new ItemUseLogic.<>c__DisplayClass7_0();
@@ -207,7 +206,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE31 RID: 65073 RVA: 0x003DADE8 File Offset: 0x003D8FE8
+	// Token: 0x0600D257 RID: 53847 RVA: 0x003E67C0 File Offset: 0x003E49C0
 	public static bool TryUseGiftItem(int itemId, int num = 1)
 	{
 		CommonItemData commonItemData = InventoryModel.Instance.GetCommonItemData(itemId, 0);
@@ -271,7 +270,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE32 RID: 65074 RVA: 0x003DAFF4 File Offset: 0x003D91F4
+	// Token: 0x0600D258 RID: 53848 RVA: 0x003E69CC File Offset: 0x003E4BCC
 	public static bool TryUseGiftItemWithSelectedItem(int giftItemId, int itemId, int num = 1)
 	{
 		CommonItemData commonItemData = InventoryModel.Instance.GetCommonItemData(giftItemId, 0);
@@ -297,7 +296,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE33 RID: 65075 RVA: 0x003DB088 File Offset: 0x003D9288
+	// Token: 0x0600D259 RID: 53849 RVA: 0x003E6A60 File Offset: 0x003E4C60
 	public static bool TryUseShipTowerItem(int itemId, int num = 1)
 	{
 		CommonItemData commonItemData = InventoryModel.Instance.GetCommonItemData(itemId, 0);
@@ -313,7 +312,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE34 RID: 65076 RVA: 0x003DB0CF File Offset: 0x003D92CF
+	// Token: 0x0600D25A RID: 53850 RVA: 0x003E6AA7 File Offset: 0x003E4CA7
 	public static bool TryUseStudentCardItem(int itemId, int num = 1)
 	{
 		if (itemId != 70290000)
@@ -324,7 +323,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE35 RID: 65077 RVA: 0x003DB0F0 File Offset: 0x003D92F0
+	// Token: 0x0600D25B RID: 53851 RVA: 0x003E6AC8 File Offset: 0x003E4CC8
 	public static bool TryUsePayShopCouponItem(int itemId, int num = 1)
 	{
 		CommonItemData commonItemData = InventoryModel.Instance.GetCommonItemData(itemId, 0);
@@ -342,7 +341,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE36 RID: 65078 RVA: 0x003DB140 File Offset: 0x003D9340
+	// Token: 0x0600D25C RID: 53852 RVA: 0x003E6B18 File Offset: 0x003E4D18
 	private static void OnClickedUseMultiGift(int itemConfigId, int count)
 	{
 		if (count > 0)
@@ -353,7 +352,7 @@ public class ItemUseLogic
 		ScrollingTipsController.Instance.ShowTipsById("NotEnoughItem", Array.Empty<object>());
 	}
 
-	// Token: 0x0600FE37 RID: 65079 RVA: 0x003DB168 File Offset: 0x003D9368
+	// Token: 0x0600D25D RID: 53853 RVA: 0x003E6B40 File Offset: 0x003E4D40
 	public static bool TryUseBirthdayItem(int itemId, int num = 1)
 	{
 		CommonItemData commonItemData = InventoryModel.Instance.GetCommonItemData(itemId, 0);
@@ -369,7 +368,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE38 RID: 65080 RVA: 0x003DB1AC File Offset: 0x003D93AC
+	// Token: 0x0600D25E RID: 53854 RVA: 0x003E6B84 File Offset: 0x003E4D84
 	public static bool TryUseVisionRefineItem(int itemId, int num = 1)
 	{
 		CommonItemData commonItemData = InventoryModel.Instance.GetCommonItemData(itemId, 0);
@@ -377,7 +376,7 @@ public class ItemUseLogic
 		{
 			return false;
 		}
-		if (!commonItemData.GetConfig().ShowTypes.Contains(54))
+		if (Array.IndexOf<int>(commonItemData.GetConfig().ShowTypes, 54) < 0)
 		{
 			return false;
 		}
@@ -390,7 +389,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE39 RID: 65081 RVA: 0x003DB20C File Offset: 0x003D940C
+	// Token: 0x0600D25F RID: 53855 RVA: 0x003E6BE4 File Offset: 0x003E4DE4
 	public static bool TryUseVisionRefineSubItem(int itemId, int num = 1)
 	{
 		CommonItemData commonItemData = InventoryModel.Instance.GetCommonItemData(itemId, 0);
@@ -398,7 +397,7 @@ public class ItemUseLogic
 		{
 			return false;
 		}
-		if (!commonItemData.GetConfig().ShowTypes.Contains(58))
+		if (Array.IndexOf<int>(commonItemData.GetConfig().ShowTypes, 58) < 0)
 		{
 			return false;
 		}
@@ -411,7 +410,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE3A RID: 65082 RVA: 0x003DB26C File Offset: 0x003D946C
+	// Token: 0x0600D260 RID: 53856 RVA: 0x003E6C44 File Offset: 0x003E4E44
 	public static bool TryUseBuffEquipItem(int itemId, int num = 1)
 	{
 		ItemUseLogic.<>c__DisplayClass17_0 CS$<>8__locals1 = new ItemUseLogic.<>c__DisplayClass17_0();
@@ -457,7 +456,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE3B RID: 65083 RVA: 0x003DB3F0 File Offset: 0x003D95F0
+	// Token: 0x0600D261 RID: 53857 RVA: 0x003E6DC8 File Offset: 0x003E4FC8
 	public static bool TryUseTotalTopUpRolePickItem(int itemId, int num = 1)
 	{
 		TotalTopUpRolePackageData totalTopUpRolePackageData = TotalTopUpRolePackageData.TryParsePackageData(itemId);
@@ -471,7 +470,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE3C RID: 65084 RVA: 0x003DB428 File Offset: 0x003D9628
+	// Token: 0x0600D262 RID: 53858 RVA: 0x003E6E00 File Offset: 0x003E5000
 	public static bool TryUseOrnamentItem(int itemId, int num = 1)
 	{
 		if (!RoleOrnamentModel.Instance.IsOwnOrnament(itemId))
@@ -482,7 +481,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE3D RID: 65085 RVA: 0x003DB448 File Offset: 0x003D9648
+	// Token: 0x0600D263 RID: 53859 RVA: 0x003E6E20 File Offset: 0x003E5020
 	public static bool TryUseBrochureItem(int itemId, int num = 1)
 	{
 		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("SpringManorBrochureItemId");
@@ -504,7 +503,7 @@ public class ItemUseLogic
 		return true;
 	}
 
-	// Token: 0x0600FE3E RID: 65086 RVA: 0x003DB49F File Offset: 0x003D969F
+	// Token: 0x0600D264 RID: 53860 RVA: 0x003E6E77 File Offset: 0x003E5077
 	public static void ParametersItemUse(int configId, int count, int parametersType, int parametersValue)
 	{
 		if (parametersType == 26)
@@ -513,13 +512,13 @@ public class ItemUseLogic
 		}
 	}
 
-	// Token: 0x0600FE3F RID: 65087 RVA: 0x003DB4AE File Offset: 0x003D96AE
+	// Token: 0x0600D265 RID: 53861 RVA: 0x003E6E86 File Offset: 0x003E5086
 	private static void ParametersItemUseSkipTask(int itemId, int count, int parametersValue)
 	{
 		SkipTaskManager.RunByConfigId(parametersValue, null);
 	}
 
-	// Token: 0x0600FE40 RID: 65088 RVA: 0x003DB4B8 File Offset: 0x003D96B8
+	// Token: 0x0600D266 RID: 53862 RVA: 0x003E6E90 File Offset: 0x003E5090
 	public static bool TryUseResonantChainOptionalItem(int itemId, int num = 1)
 	{
 		ItemInfo? itemConfig = InventoryConfig.Instance.GetItemConfig(itemId);

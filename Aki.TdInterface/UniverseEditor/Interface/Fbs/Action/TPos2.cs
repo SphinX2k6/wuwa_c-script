@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007756 RID: 30550
+	// Token: 0x02007F82 RID: 32642
 	public enum TPos2 : byte
 	{
-		// Token: 0x040128BF RID: 75967
+		// Token: 0x0401395B RID: 80219
 		NONE,
-		// Token: 0x040128C0 RID: 75968
+		// Token: 0x0401395C RID: 80220
 		IAbsolutePos2,
-		// Token: 0x040128C1 RID: 75969
+		// Token: 0x0401395D RID: 80221
 		IEntityPos2,
-		// Token: 0x040128C2 RID: 75970
+		// Token: 0x0401395E RID: 80222
 		IPlayerPos2,
-		// Token: 0x040128C3 RID: 75971
+		// Token: 0x0401395F RID: 80223
 		IEffectPlayerPos2,
-		// Token: 0x040128C4 RID: 75972
+		// Token: 0x04013960 RID: 80224
 		IEffectEntityPos2
 	}
 }

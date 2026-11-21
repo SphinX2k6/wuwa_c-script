@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x020022C5 RID: 8901
+// Token: 0x020017A9 RID: 6057
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -14,13 +14,13 @@ using UnrealEngine;
 })]
 internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVariableResetter
 {
-	// Token: 0x060117AB RID: 71595 RVA: 0x00449451 File Offset: 0x00447651
+	// Token: 0x0600EC42 RID: 60482 RVA: 0x00456179 File Offset: 0x00454379
 	static MotorcycleAlbumItemGrid()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleAlbumItemGrid.CreateStaticDefaultValue), new Action(MotorcycleAlbumItemGrid.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060117AC RID: 71596 RVA: 0x00449470 File Offset: 0x00447670
+	// Token: 0x0600EC43 RID: 60483 RVA: 0x00456198 File Offset: 0x00454398
 	public static void CreateStaticDefaultValue()
 	{
 		MotorcycleAlbumItemGrid.RotateCurve = null;
@@ -28,7 +28,7 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		MotorcycleAlbumItemGrid.AlphaCurve = null;
 	}
 
-	// Token: 0x060117AD RID: 71597 RVA: 0x00449484 File Offset: 0x00447684
+	// Token: 0x0600EC44 RID: 60484 RVA: 0x004561AC File Offset: 0x004543AC
 	public static void ResetStaticDefaultValue()
 	{
 		MotorcycleAlbumItemGrid.RotateCurve = null;
@@ -36,13 +36,13 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		MotorcycleAlbumItemGrid.AlphaCurve = null;
 	}
 
-	// Token: 0x060117AE RID: 71598 RVA: 0x00449498 File Offset: 0x00447698
+	// Token: 0x0600EC45 RID: 60485 RVA: 0x004561C0 File Offset: 0x004543C0
 	[NullableContext(1)]
 	public MotorcycleAlbumItemGrid(AActor actor) : base(actor)
 	{
 	}
 
-	// Token: 0x060117AF RID: 71599 RVA: 0x004494EC File Offset: 0x004476EC
+	// Token: 0x0600EC46 RID: 60486 RVA: 0x00456214 File Offset: 0x00454414
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -69,13 +69,13 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		};
 	}
 
-	// Token: 0x060117B0 RID: 71600 RVA: 0x00449678 File Offset: 0x00447878
+	// Token: 0x0600EC47 RID: 60487 RVA: 0x004563A0 File Offset: 0x004545A0
 	public IAlbumUiData GetAlbumData()
 	{
 		return this.AlbumData;
 	}
 
-	// Token: 0x060117B1 RID: 71601 RVA: 0x00449680 File Offset: 0x00447880
+	// Token: 0x0600EC48 RID: 60488 RVA: 0x004563A8 File Offset: 0x004545A8
 	private void OnExtendTogglePanelLike(EToggleState state)
 	{
 		if (this.AlbumData != null)
@@ -89,7 +89,7 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		}
 	}
 
-	// Token: 0x060117B2 RID: 71602 RVA: 0x004496A6 File Offset: 0x004478A6
+	// Token: 0x0600EC49 RID: 60489 RVA: 0x004563CE File Offset: 0x004545CE
 	private void OnClickPanelPlaying()
 	{
 		if (this.AlbumData != null)
@@ -103,7 +103,7 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		}
 	}
 
-	// Token: 0x060117B3 RID: 71603 RVA: 0x004496CC File Offset: 0x004478CC
+	// Token: 0x0600EC4A RID: 60490 RVA: 0x004563F4 File Offset: 0x004545F4
 	private int GetAlbumUnlockMusicNum()
 	{
 		if (this.AlbumData == null)
@@ -117,7 +117,7 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		return this.AlbumData.UnlockMusicNum;
 	}
 
-	// Token: 0x060117B4 RID: 71604 RVA: 0x0044970C File Offset: 0x0044790C
+	// Token: 0x0600EC4B RID: 60491 RVA: 0x00456434 File Offset: 0x00454634
 	private void RefreshState()
 	{
 		if (this.AlbumData == null)
@@ -152,7 +152,7 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		}
 	}
 
-	// Token: 0x060117B5 RID: 71605 RVA: 0x00449804 File Offset: 0x00447A04
+	// Token: 0x0600EC4C RID: 60492 RVA: 0x0045652C File Offset: 0x0045472C
 	protected override void OnRefreshItem(IAlbumUiData data)
 	{
 		if (data == null)
@@ -202,7 +202,7 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		this.RefreshState();
 	}
 
-	// Token: 0x060117B6 RID: 71606 RVA: 0x00449955 File Offset: 0x00447B55
+	// Token: 0x0600EC4D RID: 60493 RVA: 0x0045667D File Offset: 0x0045487D
 	public override void OnSelect()
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
@@ -217,13 +217,13 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		}
 	}
 
-	// Token: 0x060117B7 RID: 71607 RVA: 0x0044998A File Offset: 0x00447B8A
+	// Token: 0x0600EC4E RID: 60494 RVA: 0x004566B2 File Offset: 0x004548B2
 	protected override void OnUnSelect()
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060117B8 RID: 71608 RVA: 0x0044999C File Offset: 0x00447B9C
+	// Token: 0x0600EC4F RID: 60495 RVA: 0x004566C4 File Offset: 0x004548C4
 	protected override void OnMoveItem()
 	{
 		float currentMovePercentage = base.GetCurrentMovePercentage();
@@ -299,10 +299,10 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 		}
 	}
 
-	// Token: 0x040084BE RID: 33982
+	// Token: 0x040085FC RID: 34300
 	public Action<int> OnSelectAlbumItem;
 
-	// Token: 0x040084BF RID: 33983
+	// Token: 0x040085FD RID: 34301
 	[Nullable(new byte[]
 	{
 		2,
@@ -310,7 +310,7 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 	})]
 	public Action<MotorcycleAlbumItemGrid, int> OnClickAlbumItem;
 
-	// Token: 0x040084C0 RID: 33984
+	// Token: 0x040085FE RID: 34302
 	[Nullable(new byte[]
 	{
 		2,
@@ -318,70 +318,70 @@ internal class MotorcycleAlbumItemGrid : AutoAttachItem<IAlbumUiData>, IStaticVa
 	})]
 	public Action<MotorcycleAlbumItemGrid, int> OnClickBtnPlay;
 
-	// Token: 0x040084C1 RID: 33985
+	// Token: 0x040085FF RID: 34303
 	private IAlbumUiData AlbumData;
 
-	// Token: 0x040084C2 RID: 33986
+	// Token: 0x04008600 RID: 34304
 	[Nullable(1)]
 	protected global::Vector TmpVector = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x040084C3 RID: 33987
+	// Token: 0x04008601 RID: 34305
 	[Nullable(1)]
 	protected Rotator TmpRotate = Rotator.Create(0f, 0f, 0f);
 
-	// Token: 0x040084C4 RID: 33988
+	// Token: 0x04008602 RID: 34306
 	public static UCurveFloat RotateCurve;
 
-	// Token: 0x040084C5 RID: 33989
+	// Token: 0x04008603 RID: 34307
 	public static UCurveFloat ScaleCurve;
 
-	// Token: 0x040084C6 RID: 33990
+	// Token: 0x04008604 RID: 34308
 	public static UCurveFloat AlphaCurve;
 
-	// Token: 0x02008841 RID: 34881
+	// Token: 0x020079C5 RID: 31173
 	[NullableContext(0)]
 	private class EAlbumComponents
 	{
-		// Token: 0x0402C453 RID: 181331
+		// Token: 0x04027755 RID: 161621
 		public const int TogAlbum = 0;
 
-		// Token: 0x0402C454 RID: 181332
+		// Token: 0x04027756 RID: 161622
 		public const int PanelLike = 1;
 
-		// Token: 0x0402C455 RID: 181333
+		// Token: 0x04027757 RID: 161623
 		public const int TxtAlbumName = 2;
 
-		// Token: 0x0402C456 RID: 181334
+		// Token: 0x04027758 RID: 161624
 		public const int TxtDiscNum = 3;
 
-		// Token: 0x0402C457 RID: 181335
+		// Token: 0x04027759 RID: 161625
 		public const int BtnPlay = 4;
 
-		// Token: 0x0402C458 RID: 181336
+		// Token: 0x0402775A RID: 161626
 		public const int PanelPlaying = 5;
 
-		// Token: 0x0402C459 RID: 181337
+		// Token: 0x0402775B RID: 161627
 		public const int TexMaskL = 6;
 
-		// Token: 0x0402C45A RID: 181338
+		// Token: 0x0402775C RID: 161628
 		public const int TexMaskR = 7;
 
-		// Token: 0x0402C45B RID: 181339
+		// Token: 0x0402775D RID: 161629
 		public const int TexIcon = 8;
 
-		// Token: 0x0402C45C RID: 181340
+		// Token: 0x0402775E RID: 161630
 		public const int PanelOffset = 9;
 
-		// Token: 0x0402C45D RID: 181341
+		// Token: 0x0402775F RID: 161631
 		public const int ItemNew = 10;
 
-		// Token: 0x0402C45E RID: 181342
+		// Token: 0x04027760 RID: 161632
 		public const int PanelPause = 11;
 
-		// Token: 0x0402C45F RID: 181343
+		// Token: 0x04027761 RID: 161633
 		public const int PnlTimeLimit = 12;
 
-		// Token: 0x0402C460 RID: 181344
+		// Token: 0x04027762 RID: 161634
 		public const int UITextActor = 13;
 	}
 }

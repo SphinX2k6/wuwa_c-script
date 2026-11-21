@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200097E RID: 2430
+	// Token: 0x02000A31 RID: 2609
 	public static class EInterruptMontageTypeExtensions
 	{
-		// Token: 0x06003668 RID: 13928 RVA: 0x0008DD24 File Offset: 0x0008BF24
+		// Token: 0x060039EF RID: 14831 RVA: 0x00095C90 File Offset: 0x00093E90
 		public static string ToEnumString(this EInterruptMontageType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003669 RID: 13929 RVA: 0x0008DD5C File Offset: 0x0008BF5C
+		// Token: 0x060039F0 RID: 14832 RVA: 0x00095CC8 File Offset: 0x00093EC8
 		public static EInterruptMontageType FromString(string name)
 		{
 			EInterruptMontageType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600366A RID: 13930 RVA: 0x0008DD85 File Offset: 0x0008BF85
+		// Token: 0x060039F1 RID: 14833 RVA: 0x00095CF1 File Offset: 0x00093EF1
 		public static bool TryFromString(string name, out EInterruptMontageType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600366B RID: 13931 RVA: 0x0008DDBE File Offset: 0x0008BFBE
+		// Token: 0x060039F2 RID: 14834 RVA: 0x00095D2A File Offset: 0x00093F2A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600366C RID: 13932 RVA: 0x0008DDD6 File Offset: 0x0008BFD6
+		// Token: 0x060039F3 RID: 14835 RVA: 0x00095D42 File Offset: 0x00093F42
 		public static EInterruptMontageType[] GetValues()
 		{
 			return new EInterruptMontageType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600366D RID: 13933 RVA: 0x0008DDE2 File Offset: 0x0008BFE2
+		// Token: 0x060039F4 RID: 14836 RVA: 0x00095D4E File Offset: 0x00093F4E
 		public static string[] GetNames()
 		{
 			return new string[]

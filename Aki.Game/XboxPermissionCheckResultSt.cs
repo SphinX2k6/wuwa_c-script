@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02000E69 RID: 3689
+// Token: 0x0200031E RID: 798
 public sealed class XboxPermissionCheckResultSt
 {
-	// Token: 0x040028F7 RID: 10487
+	// Token: 0x04002992 RID: 10642
 	public ESdkPermission Permission;
 
-	// Token: 0x040028F8 RID: 10488
+	// Token: 0x04002993 RID: 10643
 	public bool Result;
 }

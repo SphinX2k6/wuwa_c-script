@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021D2 RID: 8658
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200243D RID: 9277
 	public class SetPosA : ActionParams
 	{
-		// Token: 0x0600BE49 RID: 48713 RVA: 0x001B62E8 File Offset: 0x001B44E8
+		// Token: 0x0600CA05 RID: 51717 RVA: 0x001CD974 File Offset: 0x001CBB74
 		private SetPosA_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE4A RID: 48714 RVA: 0x001B6320 File Offset: 0x001B4520
+		// Token: 0x0600CA06 RID: 51718 RVA: 0x001CD9AC File Offset: 0x001CBBAC
 		public static SetPosA Create([Nullable(2)] SetPosA instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE4B RID: 48715 RVA: 0x001B6333 File Offset: 0x001B4533
+		// Token: 0x0600CA07 RID: 51719 RVA: 0x001CD9BF File Offset: 0x001CBBBF
 		public static SetPosA CreateFromSetValue([Nullable(2)] SetPosA_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE4C RID: 48716 RVA: 0x001B6346 File Offset: 0x001B4546
+		// Token: 0x0600CA08 RID: 51720 RVA: 0x001CD9D2 File Offset: 0x001CBBD2
 		public SetPosA_SetValue ToSetValue()
 		{
 			return new SetPosA_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039CB RID: 14795
-		// (get) Token: 0x0600BE4D RID: 48717 RVA: 0x001B635C File Offset: 0x001B455C
-		// (set) Token: 0x0600BE4E RID: 48718 RVA: 0x001B63BD File Offset: 0x001B45BD
+		// Token: 0x17003CC0 RID: 15552
+		// (get) Token: 0x0600CA09 RID: 51721 RVA: 0x001CD9E8 File Offset: 0x001CBBE8
+		// (set) Token: 0x0600CA0A RID: 51722 RVA: 0x001CDA49 File Offset: 0x001CBC49
 		public virtual PosA Pos
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007193 RID: 29075
+		// Token: 0x040077DC RID: 30684
 		[Nullable(2)]
 		protected new SetPosA FbInstance;
 
-		// Token: 0x04007194 RID: 29076
+		// Token: 0x040077DD RID: 30685
 		[Nullable(2)]
 		protected SetPosA_SetValue PocoInterface;
 
-		// Token: 0x04007195 RID: 29077
+		// Token: 0x040077DE RID: 30686
 		private PosA _PosCache;
 
-		// Token: 0x04007196 RID: 29078
+		// Token: 0x040077DF RID: 30687
 		private bool _PosInited;
 	}
 }

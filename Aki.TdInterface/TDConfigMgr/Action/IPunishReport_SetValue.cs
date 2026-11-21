@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D69 RID: 7529
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F7A RID: 8058
 	public class IPunishReport_SetValue
 	{
-		// Token: 0x04006123 RID: 24867
+		// Token: 0x0400669F RID: 26271
 		public ECommonTipType Type;
 
-		// Token: 0x04006124 RID: 24868
+		// Token: 0x040066A0 RID: 26272
 		public string MainText;
 
-		// Token: 0x04006125 RID: 24869
+		// Token: 0x040066A1 RID: 26273
 		public string SubText;
 
-		// Token: 0x04006126 RID: 24870
+		// Token: 0x040066A2 RID: 26274
 		public EPunishReportShowType? ShowType;
 	}
 }

@@ -8,19 +8,19 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E80 RID: 28288
+	// Token: 0x02006001 RID: 24577
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElementalFieldCollision
 	{
-		// Token: 0x06044F0A RID: 282378 RVA: 0x01107DE0 File Offset: 0x01105FE0
+		// Token: 0x0603B0BA RID: 241850 RVA: 0x010B2348 File Offset: 0x010B0548
 		public ElementalFieldCollision(Action<EntityHandle, List<ElementalFieldTarget>> OnEnter, Action<EntityHandle, List<ElementalFieldTarget>> OnLeave)
 		{
 			this.OnEnter = OnEnter;
 			this.OnLeave = OnLeave;
 		}
 
-		// Token: 0x06044F0B RID: 282379 RVA: 0x01107E30 File Offset: 0x01106030
+		// Token: 0x0603B0BB RID: 241851 RVA: 0x010B2398 File Offset: 0x010B0598
 		public void RegisterDetector(EntityHandle owner, UKuroFastCollisionShapeComponent shape)
 		{
 			if (this.DetectorEntries.ContainsKey(owner.Id))
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			});
 		}
 
-		// Token: 0x06044F0C RID: 282380 RVA: 0x01107EFC File Offset: 0x011060FC
+		// Token: 0x0603B0BC RID: 241852 RVA: 0x010B2464 File Offset: 0x010B0664
 		public void UnregisterDetector(int ownerId)
 		{
 			FieldEntry fieldEntry;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.TryDestroyEnvironment();
 		}
 
-		// Token: 0x06044F0D RID: 282381 RVA: 0x01107F84 File Offset: 0x01106184
+		// Token: 0x0603B0BD RID: 241853 RVA: 0x010B24EC File Offset: 0x010B06EC
 		public void RegisterDetectable(EntityHandle owner, List<UObject> shapes)
 		{
 			if (shapes.Count == 0)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			};
 		}
 
-		// Token: 0x06044F0E RID: 282382 RVA: 0x0110805C File Offset: 0x0110625C
+		// Token: 0x0603B0BE RID: 241854 RVA: 0x010B25C4 File Offset: 0x010B07C4
 		public void UnregisterDetectable(int ownerId)
 		{
 			DetectableEntry detectableEntry;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.TryDestroyEnvironment();
 		}
 
-		// Token: 0x06044F0F RID: 282383 RVA: 0x011081B4 File Offset: 0x011063B4
+		// Token: 0x0603B0BF RID: 241855 RVA: 0x010B271C File Offset: 0x010B091C
 		public void AddDetectableShape(EntityHandle owner, UKuroFastCollisionShapeComponent shape)
 		{
 			if (!this.EnsureEnvironment())
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			});
 		}
 
-		// Token: 0x06044F10 RID: 282384 RVA: 0x01108268 File Offset: 0x01106468
+		// Token: 0x0603B0C0 RID: 241856 RVA: 0x010B27D0 File Offset: 0x010B09D0
 		public void RemoveDetectableShape(int ownerId, UKuroFastCollisionShapeComponent shape)
 		{
 			DetectableEntry detectableEntry;
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F11 RID: 282385 RVA: 0x011083B4 File Offset: 0x011065B4
+		// Token: 0x0603B0C1 RID: 241857 RVA: 0x010B291C File Offset: 0x010B0B1C
 		public IEnumerable<ElementalFieldTarget> GetOverlappingTargetList(int detectorOwnerId)
 		{
 			ElementalFieldCollision.<GetOverlappingTargetList>d__14 <GetOverlappingTargetList>d__ = new ElementalFieldCollision.<GetOverlappingTargetList>d__14(-2);
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return <GetOverlappingTargetList>d__;
 		}
 
-		// Token: 0x06044F12 RID: 282386 RVA: 0x011083CB File Offset: 0x011065CB
+		// Token: 0x0603B0C2 RID: 241858 RVA: 0x010B2933 File Offset: 0x010B0B33
 		[return: TupleElementNames(new string[]
 		{
 			"Detector",
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return <GetOverlappingFieldList>d__;
 		}
 
-		// Token: 0x06044F13 RID: 282387 RVA: 0x011083E4 File Offset: 0x011065E4
+		// Token: 0x0603B0C3 RID: 241859 RVA: 0x010B294C File Offset: 0x010B0B4C
 		[NullableContext(2)]
 		public ElementalFieldTarget GetDetectable(int detectableId)
 		{
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			};
 		}
 
-		// Token: 0x06044F14 RID: 282388 RVA: 0x01108420 File Offset: 0x01106620
+		// Token: 0x0603B0C4 RID: 241860 RVA: 0x010B2988 File Offset: 0x010B0B88
 		public void Clear()
 		{
 			foreach (KeyValuePair<int, FieldEntry> keyValuePair in this.DetectorEntries)
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.DestroyEnvironment();
 		}
 
-		// Token: 0x06044F15 RID: 282389 RVA: 0x0110857C File Offset: 0x0110677C
+		// Token: 0x0603B0C5 RID: 241861 RVA: 0x010B2AE4 File Offset: 0x010B0CE4
 		[NullableContext(2)]
 		private void OnBeginOverlap(UKuroFastCollisionShapeComponent overlappedComponent, [Nullable(new byte[]
 		{
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F16 RID: 282390 RVA: 0x01108698 File Offset: 0x01106898
+		// Token: 0x0603B0C6 RID: 241862 RVA: 0x010B2C00 File Offset: 0x010B0E00
 		[NullableContext(2)]
 		private void OnEndOverlap(UKuroFastCollisionShapeComponent overlappedComponent, [Nullable(new byte[]
 		{
@@ -449,7 +449,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F17 RID: 282391 RVA: 0x011087A7 File Offset: 0x011069A7
+		// Token: 0x0603B0C7 RID: 241863 RVA: 0x010B2D0F File Offset: 0x010B0F0F
 		private void RemoveDetectorDelegates(UKuroFastCollisionShapeComponent shape)
 		{
 			if (!shape.IsValid())
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			shape.OnKFCEndOverlap.Remove(new FKuroFastCollisionOverlapSignature.FKuroFastCollisionOverlapSignature_ScriptDelegate(this.OnEndOverlap));
 		}
 
-		// Token: 0x06044F18 RID: 282392 RVA: 0x011087E0 File Offset: 0x011069E0
+		// Token: 0x0603B0C8 RID: 241864 RVA: 0x010B2D48 File Offset: 0x010B0F48
 		private bool EnsureEnvironment()
 		{
 			if (this.Algorithm != null)
@@ -471,7 +471,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return this.Algorithm != null;
 		}
 
-		// Token: 0x06044F19 RID: 282393 RVA: 0x01108815 File Offset: 0x01106A15
+		// Token: 0x0603B0C9 RID: 241865 RVA: 0x010B2D7D File Offset: 0x010B0F7D
 		private void TryDestroyEnvironment()
 		{
 			if (this.Algorithm == null)
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.DestroyEnvironment();
 		}
 
-		// Token: 0x06044F1A RID: 282394 RVA: 0x01108843 File Offset: 0x01106A43
+		// Token: 0x0603B0CA RID: 241866 RVA: 0x010B2DAB File Offset: 0x010B0FAB
 		private void DestroyEnvironment()
 		{
 			if (this.Algorithm != null)
@@ -495,26 +495,26 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x04023E55 RID: 147029
+		// Token: 0x0401F10D RID: 127245
 		[Nullable(2)]
 		private UKuroFastCollisionAlgorithm Algorithm;
 
-		// Token: 0x04023E56 RID: 147030
+		// Token: 0x0401F10E RID: 127246
 		private readonly Dictionary<int, FieldEntry> DetectorEntries = new Dictionary<int, FieldEntry>();
 
-		// Token: 0x04023E57 RID: 147031
+		// Token: 0x0401F10F RID: 127247
 		private readonly Dictionary<UKuroFastCollisionShapeComponent, FieldEntry> DetectorShapeEntry = new Dictionary<UKuroFastCollisionShapeComponent, FieldEntry>();
 
-		// Token: 0x04023E58 RID: 147032
+		// Token: 0x0401F110 RID: 127248
 		private readonly Dictionary<int, DetectableEntry> DetectableEntries = new Dictionary<int, DetectableEntry>();
 
-		// Token: 0x04023E59 RID: 147033
+		// Token: 0x0401F111 RID: 127249
 		private readonly Dictionary<UObject, EntityHandle> DetectableShapeOwner = new Dictionary<UObject, EntityHandle>();
 
-		// Token: 0x04023E5A RID: 147034
+		// Token: 0x0401F112 RID: 127250
 		private readonly Action<EntityHandle, List<ElementalFieldTarget>> OnEnter;
 
-		// Token: 0x04023E5B RID: 147035
+		// Token: 0x0401F113 RID: 127251
 		private readonly Action<EntityHandle, List<ElementalFieldTarget>> OnLeave;
 	}
 }

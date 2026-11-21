@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 {
-	// Token: 0x020071F3 RID: 29171
+	// Token: 0x020062A8 RID: 25256
 	public enum EJigsawItemDirectionBit
 	{
-		// Token: 0x040258E9 RID: 153833
+		// Token: 0x04020558 RID: 132440
 		W = 1,
-		// Token: 0x040258EA RID: 153834
+		// Token: 0x04020559 RID: 132441
 		S,
-		// Token: 0x040258EB RID: 153835
+		// Token: 0x0402055A RID: 132442
 		A,
-		// Token: 0x040258EC RID: 153836
+		// Token: 0x0402055B RID: 132443
 		D
 	}
 }

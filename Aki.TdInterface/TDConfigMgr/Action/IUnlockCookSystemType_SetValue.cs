@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002026 RID: 8230
+	// Token: 0x0200226F RID: 8815
 	public class IUnlockCookSystemType_SetValue
 	{
-		// Token: 0x04006CF7 RID: 27895
+		// Token: 0x04007300 RID: 29440
 		public EUnlockCookSystemType Type;
 	}
 }

@@ -8,12 +8,12 @@ using CSharpScript.Game.NewWorld.Character.Common.Capability;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 using UnrealEngine;
 
-// Token: 0x0200309A RID: 12442
+// Token: 0x020025F1 RID: 9713
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependency
+public class CharacterWalkOnWaterComponent : EntityComponent
 {
-	// Token: 0x0601A963 RID: 108899 RVA: 0x00722C2C File Offset: 0x00720E2C
+	// Token: 0x0601835C RID: 99164 RVA: 0x00748C3C File Offset: 0x00746E3C
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -40,7 +40,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return true;
 	}
 
-	// Token: 0x0601A964 RID: 108900 RVA: 0x00722D14 File Offset: 0x00720F14
+	// Token: 0x0601835D RID: 99165 RVA: 0x00748D24 File Offset: 0x00746F24
 	protected override bool OnEnd()
 	{
 		this.UnregisterEvent();
@@ -53,19 +53,19 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return true;
 	}
 
-	// Token: 0x0601A965 RID: 108901 RVA: 0x00722D7C File Offset: 0x00720F7C
+	// Token: 0x0601835E RID: 99166 RVA: 0x00748D8C File Offset: 0x00746F8C
 	protected override void OnEnable()
 	{
 		this.PrePlayerLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
 	}
 
-	// Token: 0x0601A966 RID: 108902 RVA: 0x00722D94 File Offset: 0x00720F94
+	// Token: 0x0601835F RID: 99167 RVA: 0x00748DA4 File Offset: 0x00746FA4
 	protected override void OnDisable(string reason)
 	{
 		this.SetWalkOnWaterStage(EWalkOnWaterStage.None);
 	}
 
-	// Token: 0x0601A967 RID: 108903 RVA: 0x00722DA0 File Offset: 0x00720FA0
+	// Token: 0x06018360 RID: 99168 RVA: 0x00748DB0 File Offset: 0x00746FB0
 	private void RegisterEvent()
 	{
 		this.OnStateTagsChanged(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.不会入水"], this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.不会入水"]));
@@ -80,7 +80,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 	}
 
-	// Token: 0x0601A968 RID: 108904 RVA: 0x00722F18 File Offset: 0x00721118
+	// Token: 0x06018361 RID: 99169 RVA: 0x00748F28 File Offset: 0x00747128
 	private void UnregisterEvent()
 	{
 		this.OnGameplayTagNewOrRemove.EndTask();
@@ -92,7 +92,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		EventSystem.Instance.Remove<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 	}
 
-	// Token: 0x0601A969 RID: 108905 RVA: 0x00722FF4 File Offset: 0x007211F4
+	// Token: 0x06018362 RID: 99170 RVA: 0x00749004 File Offset: 0x00747204
 	private void CreateTempVector()
 	{
 		this.TempVector = global::Vector.Create(0.0, 0.0, 0.0);
@@ -102,7 +102,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.TempNormalPoint = global::Vector.Create(0.0, 0.0, 0.0);
 	}
 
-	// Token: 0x0601A96A RID: 108906 RVA: 0x007230BF File Offset: 0x007212BF
+	// Token: 0x06018363 RID: 99171 RVA: 0x007490CF File Offset: 0x007472CF
 	private void ClearTempVector()
 	{
 		this.TempVector = null;
@@ -112,9 +112,9 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.TempNormalPoint = null;
 	}
 
-	// Token: 0x1700248F RID: 9359
-	// (get) Token: 0x0601A96B RID: 108907 RVA: 0x007230E4 File Offset: 0x007212E4
-	public static Type[] Dependencies
+	// Token: 0x170025FC RID: 9724
+	// (get) Token: 0x06018364 RID: 99172 RVA: 0x007490F4 File Offset: 0x007472F4
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -127,7 +127,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A96C RID: 108908 RVA: 0x00723114 File Offset: 0x00721314
+	// Token: 0x06018365 RID: 99173 RVA: 0x00749124 File Offset: 0x00747324
 	private void InitTraceElements()
 	{
 		this.WaterTrace = new UTraceSphereElement();
@@ -167,7 +167,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		TraceElementCommon.Instance.SetTraceHitColor(this.GroundTrace, <CharacterWalkOnWaterComponent>FF096F69A2837D2CDA7523166AE83A46BA9B4E363B82D7E806D54E74C1F5B702F__CharacterSwimUtils.DebugColor2);
 	}
 
-	// Token: 0x0601A96D RID: 108909 RVA: 0x00723388 File Offset: 0x00721588
+	// Token: 0x06018366 RID: 99174 RVA: 0x00749398 File Offset: 0x00747598
 	private void AddFreezeWaterCapabilities()
 	{
 		if (this.GameCapabilities.Count > 0)
@@ -209,7 +209,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A96E RID: 108910 RVA: 0x007234A8 File Offset: 0x007216A8
+	// Token: 0x06018367 RID: 99175 RVA: 0x007494B8 File Offset: 0x007476B8
 	private float GetMaxSpeed(ECharMoveState state)
 	{
 		switch (state)
@@ -224,7 +224,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return 0f;
 	}
 
-	// Token: 0x0601A96F RID: 108911 RVA: 0x007234FC File Offset: 0x007216FC
+	// Token: 0x06018368 RID: 99176 RVA: 0x0074950C File Offset: 0x0074770C
 	private void OnMoveStateChange(ECharMoveState oldMoveState, ECharMoveState newMoveState)
 	{
 		if (this.WalkOnWaterStage == EWalkOnWaterStage.UpToWaterSurface && this.GetMaxSpeed(newMoveState) > 0f)
@@ -233,13 +233,13 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A970 RID: 108912 RVA: 0x0072352C File Offset: 0x0072172C
+	// Token: 0x06018369 RID: 99177 RVA: 0x0074953C File Offset: 0x0074773C
 	private void ReceiveWalkOnWaterEvent(float deltaTime)
 	{
 		this.MoveComp.CharacterMovement.KuroFlying(deltaTime, 0f, 0f, 0f, this.MoveComp.CurrentMovementSettings.Acceleration, this.GetMaxSpeed(this.StateComp.MoveState), 1f);
 	}
 
-	// Token: 0x0601A971 RID: 108913 RVA: 0x00723580 File Offset: 0x00721780
+	// Token: 0x0601836A RID: 99178 RVA: 0x00749590 File Offset: 0x00747790
 	private void OnStateInherit(Entity other, bool notInheritMoveAndAnim)
 	{
 		if (other == null || !other.Valid)
@@ -253,7 +253,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A972 RID: 108914 RVA: 0x007235CE File Offset: 0x007217CE
+	// Token: 0x0601836B RID: 99179 RVA: 0x007495DE File Offset: 0x007477DE
 	private void OnFreezeWaterTagChanged(int tagId, bool tagExists)
 	{
 		if (tagExists)
@@ -264,7 +264,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.BroadcastWaterDetectedEnd();
 	}
 
-	// Token: 0x0601A973 RID: 108915 RVA: 0x007235E0 File Offset: 0x007217E0
+	// Token: 0x0601836C RID: 99180 RVA: 0x007495F0 File Offset: 0x007477F0
 	private void OnStateTagsChanged(int tagId, bool tagExists)
 	{
 		if (tagExists)
@@ -286,7 +286,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A974 RID: 108916 RVA: 0x00723644 File Offset: 0x00721844
+	// Token: 0x0601836D RID: 99181 RVA: 0x00749654 File Offset: 0x00747854
 	private void OnPositionStateChanged(ECharPositionState oldPositionState, ECharPositionState newPositionState)
 	{
 		if (!this.IsActive)
@@ -304,13 +304,13 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A975 RID: 108917 RVA: 0x00723690 File Offset: 0x00721890
+	// Token: 0x0601836E RID: 99182 RVA: 0x007496A0 File Offset: 0x007478A0
 	private void OnCharacterCapsuleChanged(Entity entity, float radius, float halfHeight, bool bUpdateOverlaps)
 	{
 		this.CharacterHalfHeight = halfHeight + 3f;
 	}
 
-	// Token: 0x0601A976 RID: 108918 RVA: 0x007236A0 File Offset: 0x007218A0
+	// Token: 0x0601836F RID: 99183 RVA: 0x007496B0 File Offset: 0x007478B0
 	[NullableContext(2)]
 	private void OnTeleportComplete(TeleportContext teleportContext)
 	{
@@ -325,19 +325,19 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A977 RID: 108919 RVA: 0x007236F2 File Offset: 0x007218F2
+	// Token: 0x06018370 RID: 99184 RVA: 0x00749702 File Offset: 0x00747902
 	public bool BlockMoveModeInherit(UCharacterMovementComponent otherCharacterMovement)
 	{
 		return !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.不会入水"]) && otherCharacterMovement.MovementMode == EMovementMode.MOVE_Custom && otherCharacterMovement.CustomMovementMode == 5;
 	}
 
-	// Token: 0x0601A978 RID: 108920 RVA: 0x0072372F File Offset: 0x0072192F
+	// Token: 0x06018371 RID: 99185 RVA: 0x0074973F File Offset: 0x0074793F
 	private bool IsNormalAccepted(global::Vector normal)
 	{
 		return Math.Abs(MathUtils.Instance.DotProduct(normal, this.ActorComp.ActorUpProxy)) > 0.17299999296665192;
 	}
 
-	// Token: 0x0601A979 RID: 108921 RVA: 0x00723758 File Offset: 0x00721958
+	// Token: 0x06018372 RID: 99186 RVA: 0x00749768 File Offset: 0x00747968
 	private bool CheckUpWaterSurface()
 	{
 		global::Vector tempStartPoint = this.TempStartPoint;
@@ -367,7 +367,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return flag;
 	}
 
-	// Token: 0x0601A97A RID: 108922 RVA: 0x007238CC File Offset: 0x00721ACC
+	// Token: 0x06018373 RID: 99187 RVA: 0x007498DC File Offset: 0x00747ADC
 	private bool CheckEnterWater()
 	{
 		global::Vector tempStartPoint = this.TempStartPoint;
@@ -398,7 +398,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return this.CheckIntoWater(tempStartPoint, tempEndPoint);
 	}
 
-	// Token: 0x0601A97B RID: 108923 RVA: 0x00723A50 File Offset: 0x00721C50
+	// Token: 0x06018374 RID: 99188 RVA: 0x00749A60 File Offset: 0x00747C60
 	private bool CheckWaterEdge()
 	{
 		global::Vector tempVector = this.TempVector;
@@ -410,7 +410,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return this.SimpleWaterEdgeTrace(tempStartPoint, tempEndPoint);
 	}
 
-	// Token: 0x0601A97C RID: 108924 RVA: 0x00723ABC File Offset: 0x00721CBC
+	// Token: 0x06018375 RID: 99189 RVA: 0x00749ACC File Offset: 0x00747CCC
 	private bool CheckIntoWater(global::Vector start, global::Vector end)
 	{
 		this.Depth = this.DetectWaterDepth(start, end);
@@ -422,7 +422,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return this.IsNormalAccepted(this.TempNormalPoint);
 	}
 
-	// Token: 0x0601A97D RID: 108925 RVA: 0x00723B14 File Offset: 0x00721D14
+	// Token: 0x06018376 RID: 99190 RVA: 0x00749B24 File Offset: 0x00747D24
 	private float DetectWaterDepth(global::Vector start, global::Vector end)
 	{
 		bool flag = this.SimpleWaterTrace(start, end);
@@ -440,7 +440,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return 0f;
 	}
 
-	// Token: 0x0601A97E RID: 108926 RVA: 0x00723BAC File Offset: 0x00721DAC
+	// Token: 0x06018377 RID: 99191 RVA: 0x00749BBC File Offset: 0x00747DBC
 	private void FixedEnterWaterDepth(float deltaTime)
 	{
 		if (this.Depth < 4f)
@@ -456,7 +456,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.ActorComp.SetActorLocation(tempVector.ToUeVector(false), "修正在水中的Z轴", true);
 	}
 
-	// Token: 0x0601A97F RID: 108927 RVA: 0x00723C8C File Offset: 0x00721E8C
+	// Token: 0x06018378 RID: 99192 RVA: 0x00749C9C File Offset: 0x00747E9C
 	private void EnterUpToWalkOnWater()
 	{
 		this.TempVector.DeepCopy(this.ActorComp.ActorVelocityProxy);
@@ -477,13 +477,13 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.OriginMaxSpeed = this.MoveComp.CharacterMovement.MaxCustomMovementSpeed;
 	}
 
-	// Token: 0x0601A980 RID: 108928 RVA: 0x00723D52 File Offset: 0x00721F52
+	// Token: 0x06018379 RID: 99193 RVA: 0x00749D62 File Offset: 0x00747F62
 	private void ExitUpToWalkOnWater()
 	{
 		this.MoveComp.CharacterMovement.MaxCustomMovementSpeed = this.OriginMaxSpeed;
 	}
 
-	// Token: 0x0601A981 RID: 108929 RVA: 0x00723D6C File Offset: 0x00721F6C
+	// Token: 0x0601837A RID: 99194 RVA: 0x00749D7C File Offset: 0x00747F7C
 	private void EnterWalkOnWater()
 	{
 		this.TempVector.DeepCopy(this.ActorComp.ActorVelocityProxy);
@@ -502,7 +502,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		});
 	}
 
-	// Token: 0x0601A982 RID: 108930 RVA: 0x00723DF0 File Offset: 0x00721FF0
+	// Token: 0x0601837B RID: 99195 RVA: 0x00749E00 File Offset: 0x00748000
 	private void ExitWalkOnWater(bool isBuffEnd = false)
 	{
 		if (isBuffEnd && this.CheckUpWaterSurface())
@@ -512,7 +512,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.EnableOrDisableWalkOnWater(false, "CharWalkOnWaterComp", false);
 	}
 
-	// Token: 0x0601A983 RID: 108931 RVA: 0x00723E1C File Offset: 0x0072201C
+	// Token: 0x0601837C RID: 99196 RVA: 0x00749E2C File Offset: 0x0074802C
 	private bool SimpleWaterTrace(global::Vector start, global::Vector end)
 	{
 		TraceElementCommon.Instance.SetStartLocation(this.WaterTrace, start);
@@ -527,7 +527,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return false;
 	}
 
-	// Token: 0x0601A984 RID: 108932 RVA: 0x00723ECC File Offset: 0x007220CC
+	// Token: 0x0601837D RID: 99197 RVA: 0x00749EDC File Offset: 0x007480DC
 	private bool SimpleWaterEdgeTrace(global::Vector start, global::Vector end)
 	{
 		TraceElementCommon.Instance.SetStartLocation(this.WaterEdgeTrace, start);
@@ -535,7 +535,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return TraceElementCommon.Instance.SphereTrace(this.WaterEdgeTrace, "CharacterWalkOnWaterComponent_DetectWaterDepth") && this.WaterEdgeTrace.HitResult.bBlockingHit;
 	}
 
-	// Token: 0x0601A985 RID: 108933 RVA: 0x00723F24 File Offset: 0x00722124
+	// Token: 0x0601837E RID: 99198 RVA: 0x00749F34 File Offset: 0x00748134
 	private void SetWalkOnWaterStage(EWalkOnWaterStage stage)
 	{
 		if (this.InChangeStateProcess)
@@ -564,7 +564,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A986 RID: 108934 RVA: 0x00723FC4 File Offset: 0x007221C4
+	// Token: 0x0601837F RID: 99199 RVA: 0x00749FD4 File Offset: 0x007481D4
 	private void EnterStage(EWalkOnWaterStage newStage)
 	{
 		this.WalkOnWaterStage = newStage;
@@ -609,7 +609,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A987 RID: 108935 RVA: 0x007240B5 File Offset: 0x007222B5
+	// Token: 0x06018380 RID: 99200 RVA: 0x0074A0C5 File Offset: 0x007482C5
 	private void ExitStage(EWalkOnWaterStage oldStage)
 	{
 		switch (oldStage)
@@ -628,7 +628,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A988 RID: 108936 RVA: 0x007240F0 File Offset: 0x007222F0
+	// Token: 0x06018381 RID: 99201 RVA: 0x0074A100 File Offset: 0x00748300
 	private void TickWalkOnWaterStage(float deltaTime)
 	{
 		switch (this.WalkOnWaterStage)
@@ -644,7 +644,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A989 RID: 108937 RVA: 0x00724120 File Offset: 0x00722320
+	// Token: 0x06018382 RID: 99202 RVA: 0x0074A130 File Offset: 0x00748330
 	protected override void OnTick(float deltaTime)
 	{
 		EWalkOnWaterStage walkOnWaterStage = EWalkOnWaterStage.None;
@@ -700,7 +700,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.PrePlayerLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
 	}
 
-	// Token: 0x0601A98A RID: 108938 RVA: 0x00724204 File Offset: 0x00722404
+	// Token: 0x06018383 RID: 99203 RVA: 0x0074A214 File Offset: 0x00748414
 	private void CheckWaterDepthType(float deltaTime)
 	{
 		global::Vector tempStartPoint = this.TempStartPoint;
@@ -773,7 +773,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.SetWaterDepthType(EWaterDepthType.None);
 	}
 
-	// Token: 0x0601A98B RID: 108939 RVA: 0x00724470 File Offset: 0x00722670
+	// Token: 0x06018384 RID: 99204 RVA: 0x0074A480 File Offset: 0x00748680
 	private void ChangeWaterDepthTypeTag(EWaterDepthType type, bool isAdd)
 	{
 		int? tagId = null;
@@ -811,7 +811,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A98C RID: 108940 RVA: 0x007244E4 File Offset: 0x007226E4
+	// Token: 0x06018385 RID: 99205 RVA: 0x0074A4F4 File Offset: 0x007486F4
 	private void BroadcastWaterDetectedStart()
 	{
 		if (this.WaterDetected)
@@ -830,7 +830,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.WaterDetected = true;
 	}
 
-	// Token: 0x0601A98D RID: 108941 RVA: 0x00724564 File Offset: 0x00722764
+	// Token: 0x06018386 RID: 99206 RVA: 0x0074A574 File Offset: 0x00748774
 	private void BroadcastWaterDetectedEnd()
 	{
 		if (!this.WaterDetected)
@@ -849,7 +849,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.WaterDetected = false;
 	}
 
-	// Token: 0x0601A98E RID: 108942 RVA: 0x007245E4 File Offset: 0x007227E4
+	// Token: 0x06018387 RID: 99207 RVA: 0x0074A5F4 File Offset: 0x007487F4
 	private void BroadcastWaterDetectedTick(float deltaTime, global::Vector hitWaterPoint)
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -863,7 +863,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A98F RID: 108943 RVA: 0x00724668 File Offset: 0x00722868
+	// Token: 0x06018388 RID: 99208 RVA: 0x0074A678 File Offset: 0x00748878
 	private bool CheckWaterNormal(float deltaTime)
 	{
 		if (!this.ActorComp)
@@ -882,7 +882,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		return true;
 	}
 
-	// Token: 0x0601A990 RID: 108944 RVA: 0x007246E4 File Offset: 0x007228E4
+	// Token: 0x06018389 RID: 99209 RVA: 0x0074A6F4 File Offset: 0x007488F4
 	private void SetWaterDepthType(EWaterDepthType newType)
 	{
 		if (this.WaterDepthType == newType)
@@ -894,7 +894,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		this.ChangeWaterDepthTypeTag(newType, true);
 	}
 
-	// Token: 0x0601A991 RID: 108945 RVA: 0x0072470C File Offset: 0x0072290C
+	// Token: 0x0601838A RID: 99210 RVA: 0x0074A71C File Offset: 0x0074891C
 	public void EnableOrDisableWalkOnWater(bool enable, string key, bool fixLocation = false)
 	{
 		if (enable)
@@ -941,7 +941,7 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601A992 RID: 108946 RVA: 0x00724838 File Offset: 0x00722A38
+	// Token: 0x0601838B RID: 99211 RVA: 0x0074A848 File Offset: 0x00748A48
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -949,487 +949,429 @@ public class CharacterWalkOnWaterComponent : EntityComponent, IComponentDependen
 			return false;
 		}
 		CharacterWalkOnWaterComponent characterWalkOnWaterComponent = (CharacterWalkOnWaterComponent)componentTemplate;
-		if (base.CanResetComponentProperty("freeWaterStateTag"))
+		this.freeWaterStateTag = characterWalkOnWaterComponent.freeWaterStateTag;
+		this.IsDebug = characterWalkOnWaterComponent.IsDebug;
+		if (characterWalkOnWaterComponent.WaterUpTrace == null)
 		{
-			this.freeWaterStateTag = characterWalkOnWaterComponent.freeWaterStateTag;
+			this.WaterUpTrace = null;
 		}
-		if (base.CanResetComponentProperty("IsDebug"))
-		{
-			this.IsDebug = characterWalkOnWaterComponent.IsDebug;
-		}
-		if (base.CanResetComponentProperty("WaterUpTrace"))
-		{
-			if (characterWalkOnWaterComponent.WaterUpTrace == null)
-			{
-				this.WaterUpTrace = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.WaterUpTrace), "WaterUpTrace"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("GroundTrace"))
-		{
-			if (characterWalkOnWaterComponent.GroundTrace == null)
-			{
-				this.GroundTrace = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.GroundTrace), "GroundTrace"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("WaterTrace"))
-		{
-			if (characterWalkOnWaterComponent.WaterTrace == null)
-			{
-				this.WaterTrace = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.WaterTrace), "WaterTrace"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("WaterEdgeTrace"))
-		{
-			if (characterWalkOnWaterComponent.WaterEdgeTrace == null)
-			{
-				this.WaterEdgeTrace = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.WaterEdgeTrace), "WaterEdgeTrace"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (characterWalkOnWaterComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (characterWalkOnWaterComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (characterWalkOnWaterComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StateComp"))
-		{
-			if (characterWalkOnWaterComponent.StateComp == null)
-			{
-				this.StateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.StateComp), "StateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FloatingComp"))
-		{
-			if (characterWalkOnWaterComponent.FloatingComp == null)
-			{
-				this.FloatingComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterFloatingComponent>(this.FloatingComp), "FloatingComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnGameplayTagNewOrRemove"))
-		{
-			if (characterWalkOnWaterComponent.OnGameplayTagNewOrRemove == null)
-			{
-				this.OnGameplayTagNewOrRemove = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnGameplayTagNewOrRemove), "OnGameplayTagNewOrRemove"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnFreezeWaterTagAddOrRemove"))
-		{
-			if (characterWalkOnWaterComponent.OnFreezeWaterTagAddOrRemove == null)
-			{
-				this.OnFreezeWaterTagAddOrRemove = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnFreezeWaterTagAddOrRemove), "OnFreezeWaterTagAddOrRemove"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsActive"))
-		{
-			this.IsActive = characterWalkOnWaterComponent.IsActive;
-		}
-		if (base.CanResetComponentProperty("CharacterHalfHeight"))
-		{
-			this.CharacterHalfHeight = characterWalkOnWaterComponent.CharacterHalfHeight;
-		}
-		if (base.CanResetComponentProperty("TempVector"))
-		{
-			if (characterWalkOnWaterComponent.TempVector == null)
-			{
-				this.TempVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector), "TempVector"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TempVector2"))
-		{
-			if (characterWalkOnWaterComponent.TempVector2 == null)
-			{
-				this.TempVector2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector2), "TempVector2"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TempStartPoint"))
-		{
-			if (characterWalkOnWaterComponent.TempStartPoint == null)
-			{
-				this.TempStartPoint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempStartPoint), "TempStartPoint"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TempEndPoint"))
-		{
-			if (characterWalkOnWaterComponent.TempEndPoint == null)
-			{
-				this.TempEndPoint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempEndPoint), "TempEndPoint"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("Depth"))
-		{
-			this.Depth = characterWalkOnWaterComponent.Depth;
-		}
-		if (base.CanResetComponentProperty("OriginMaxSpeed"))
-		{
-			this.OriginMaxSpeed = characterWalkOnWaterComponent.OriginMaxSpeed;
-		}
-		if (base.CanResetComponentProperty("PrePlayerLocation") && characterWalkOnWaterComponent.PrePlayerLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PrePlayerLocation), "PrePlayerLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterUpTrace), "WaterUpTrace"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempNormalPoint"))
+		if (characterWalkOnWaterComponent.GroundTrace == null)
 		{
-			if (characterWalkOnWaterComponent.TempNormalPoint == null)
-			{
-				this.TempNormalPoint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempNormalPoint), "TempNormalPoint"))
-			{
-				return false;
-			}
+			this.GroundTrace = null;
 		}
-		if (base.CanResetComponentProperty("WalkOnWaterStage"))
-		{
-			this.WalkOnWaterStage = characterWalkOnWaterComponent.WalkOnWaterStage;
-		}
-		if (base.CanResetComponentProperty("WaterDepthType"))
-		{
-			this.WaterDepthType = characterWalkOnWaterComponent.WaterDepthType;
-		}
-		if (base.CanResetComponentProperty("OriginChannelResponse"))
-		{
-			this.OriginChannelResponse = characterWalkOnWaterComponent.OriginChannelResponse;
-		}
-		if (base.CanResetComponentProperty("InChangeStateProcess"))
-		{
-			this.InChangeStateProcess = characterWalkOnWaterComponent.InChangeStateProcess;
-		}
-		if (base.CanResetComponentProperty("CacheWalkOnWaterStage"))
-		{
-			this.CacheWalkOnWaterStage = characterWalkOnWaterComponent.CacheWalkOnWaterStage;
-		}
-		if (base.CanResetComponentProperty("WaterHeight"))
-		{
-			this.WaterHeight = characterWalkOnWaterComponent.WaterHeight;
-		}
-		if (base.CanResetComponentProperty("WalkOnWaterSet") && characterWalkOnWaterComponent.WalkOnWaterSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.WalkOnWaterSet), "WalkOnWaterSet"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GroundTrace), "GroundTrace"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DisableKey"))
+		if (characterWalkOnWaterComponent.WaterTrace == null)
 		{
-			this.DisableKey = characterWalkOnWaterComponent.DisableKey;
+			this.WaterTrace = null;
 		}
-		if (base.CanResetComponentProperty("FreezeWaterRenderCapability"))
-		{
-			if (characterWalkOnWaterComponent.FreezeWaterRenderCapability == null)
-			{
-				this.FreezeWaterRenderCapability = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WaterDetectedCapability>(this.FreezeWaterRenderCapability), "FreezeWaterRenderCapability"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MovementTrailCollisionCapability"))
-		{
-			if (characterWalkOnWaterComponent.MovementTrailCollisionCapability == null)
-			{
-				this.MovementTrailCollisionCapability = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WaterDetectedCapability>(this.MovementTrailCollisionCapability), "MovementTrailCollisionCapability"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("GameCapabilities") && characterWalkOnWaterComponent.GameCapabilities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<WaterDetectedCapability>>(this.GameCapabilities), "GameCapabilities"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterTrace), "WaterTrace"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InteractionComp"))
+		if (characterWalkOnWaterComponent.WaterEdgeTrace == null)
 		{
-			if (characterWalkOnWaterComponent.InteractionComp == null)
-			{
-				this.InteractionComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroEnviInteractionComponent>(this.InteractionComp), "InteractionComp"))
-			{
-				return false;
-			}
+			this.WaterEdgeTrace = null;
 		}
-		if (base.CanResetComponentProperty("WaterDetected"))
-		{
-			this.WaterDetected = characterWalkOnWaterComponent.WaterDetected;
-		}
-		if (base.CanResetComponentProperty("WaterNormal") && characterWalkOnWaterComponent.WaterNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.WaterNormal), "WaterNormal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterEdgeTrace), "WaterEdgeTrace"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("WaterImpactPoint") && characterWalkOnWaterComponent.WaterImpactPoint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.WaterImpactPoint), "WaterImpactPoint"))
+		if (characterWalkOnWaterComponent.ActorComp == null)
+		{
+			this.ActorComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StartUpZ"))
+		if (characterWalkOnWaterComponent.TagComp == null)
 		{
-			this.StartUpZ = characterWalkOnWaterComponent.StartUpZ;
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("UpTime"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			this.UpTime = characterWalkOnWaterComponent.UpTime;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CheckInGroundTime"))
+		if (characterWalkOnWaterComponent.MoveComp == null)
 		{
-			this.CheckInGroundTime = characterWalkOnWaterComponent.CheckInGroundTime;
+			this.MoveComp = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.StateComp == null)
+		{
+			this.StateComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.FloatingComp == null)
+		{
+			this.FloatingComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FloatingComp), "FloatingComp"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.OnGameplayTagNewOrRemove == null)
+		{
+			this.OnGameplayTagNewOrRemove = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnGameplayTagNewOrRemove), "OnGameplayTagNewOrRemove"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.OnFreezeWaterTagAddOrRemove == null)
+		{
+			this.OnFreezeWaterTagAddOrRemove = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnFreezeWaterTagAddOrRemove), "OnFreezeWaterTagAddOrRemove"))
+		{
+			return false;
+		}
+		this.IsActive = characterWalkOnWaterComponent.IsActive;
+		this.CharacterHalfHeight = characterWalkOnWaterComponent.CharacterHalfHeight;
+		if (characterWalkOnWaterComponent.TempVector == null)
+		{
+			this.TempVector = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.TempVector2 == null)
+		{
+			this.TempVector2 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.TempStartPoint == null)
+		{
+			this.TempStartPoint = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempStartPoint), "TempStartPoint"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.TempEndPoint == null)
+		{
+			this.TempEndPoint = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempEndPoint), "TempEndPoint"))
+		{
+			return false;
+		}
+		this.Depth = characterWalkOnWaterComponent.Depth;
+		this.OriginMaxSpeed = characterWalkOnWaterComponent.OriginMaxSpeed;
+		if (characterWalkOnWaterComponent.PrePlayerLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PrePlayerLocation), "PrePlayerLocation"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.TempNormalPoint == null)
+		{
+			this.TempNormalPoint = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempNormalPoint), "TempNormalPoint"))
+		{
+			return false;
+		}
+		this.WalkOnWaterStage = characterWalkOnWaterComponent.WalkOnWaterStage;
+		this.WaterDepthType = characterWalkOnWaterComponent.WaterDepthType;
+		this.OriginChannelResponse = characterWalkOnWaterComponent.OriginChannelResponse;
+		this.InChangeStateProcess = characterWalkOnWaterComponent.InChangeStateProcess;
+		this.CacheWalkOnWaterStage = characterWalkOnWaterComponent.CacheWalkOnWaterStage;
+		this.WaterHeight = characterWalkOnWaterComponent.WaterHeight;
+		if (characterWalkOnWaterComponent.WalkOnWaterSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.WalkOnWaterSet), "WalkOnWaterSet"))
+		{
+			return false;
+		}
+		this.DisableKey = characterWalkOnWaterComponent.DisableKey;
+		if (characterWalkOnWaterComponent.FreezeWaterRenderCapability == null)
+		{
+			this.FreezeWaterRenderCapability = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FreezeWaterRenderCapability), "FreezeWaterRenderCapability"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.MovementTrailCollisionCapability == null)
+		{
+			this.MovementTrailCollisionCapability = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovementTrailCollisionCapability), "MovementTrailCollisionCapability"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.GameCapabilities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.GameCapabilities), "GameCapabilities"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.InteractionComp == null)
+		{
+			this.InteractionComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractionComp), "InteractionComp"))
+		{
+			return false;
+		}
+		this.WaterDetected = characterWalkOnWaterComponent.WaterDetected;
+		if (characterWalkOnWaterComponent.WaterNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterNormal), "WaterNormal"))
+		{
+			return false;
+		}
+		if (characterWalkOnWaterComponent.WaterImpactPoint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterImpactPoint), "WaterImpactPoint"))
+		{
+			return false;
+		}
+		this.StartUpZ = characterWalkOnWaterComponent.StartUpZ;
+		this.UpTime = characterWalkOnWaterComponent.UpTime;
+		this.CheckInGroundTime = characterWalkOnWaterComponent.CheckInGroundTime;
 		return true;
 	}
 
-	// Token: 0x0400CCA5 RID: 52389
+	// Token: 0x170025FD RID: 9725
+	// (get) Token: 0x0601838C RID: 99212 RVA: 0x0074AD0F File Offset: 0x00748F0F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025FE RID: 9726
+	// (get) Token: 0x0601838D RID: 99213 RVA: 0x0074AD12 File Offset: 0x00748F12
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025FF RID: 9727
+	// (get) Token: 0x0601838E RID: 99214 RVA: 0x0074AD15 File Offset: 0x00748F15
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002600 RID: 9728
+	// (get) Token: 0x0601838F RID: 99215 RVA: 0x0074AD18 File Offset: 0x00748F18
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002601 RID: 9729
+	// (get) Token: 0x06018390 RID: 99216 RVA: 0x0074AD1B File Offset: 0x00748F1B
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D088 RID: 53384
 	private const float COS_EIGHTY = 0.173f;
 
-	// Token: 0x0400CCA6 RID: 52390
+	// Token: 0x0400D089 RID: 53385
 	private const string PROFILE_DETECT_WATER_DEPTH = "CharacterWalkOnWaterComponent_DetectWaterDepth";
 
-	// Token: 0x0400CCA7 RID: 52391
+	// Token: 0x0400D08A RID: 53386
 	private const string PROFILE_DETECT_WATER_UP_BLOCK = "CharacterWalkOnWaterComponent_WaterUpBlock";
 
-	// Token: 0x0400CCA8 RID: 52392
+	// Token: 0x0400D08B RID: 53387
 	private const int ENTER_WALK_ON_WATER_DEPTH = 4;
 
-	// Token: 0x0400CCA9 RID: 52393
+	// Token: 0x0400D08C RID: 53388
 	private const int PRE_FRAME_POSITION_MAX_DISTANCE = 1000;
 
-	// Token: 0x0400CCAA RID: 52394
+	// Token: 0x0400D08D RID: 53389
 	private const int PRE_FRAME_POSITION_MAX_DISTANCE_SQUARED = 1000000;
 
-	// Token: 0x0400CCAB RID: 52395
+	// Token: 0x0400D08E RID: 53390
 	private const int UP_TO_WATER_SURFACE_SPEED = 500;
 
-	// Token: 0x0400CCAC RID: 52396
+	// Token: 0x0400D08F RID: 53391
 	private const int CHECK_IN_GROUND_INTERVAL = 1000;
 
-	// Token: 0x0400CCAD RID: 52397
+	// Token: 0x0400D090 RID: 53392
 	private const int FIVE_HUNDRED_TO_FIND_SURFACE = 1000;
 
-	// Token: 0x0400CCAE RID: 52398
+	// Token: 0x0400D091 RID: 53393
 	private const int WALK_ON_WATER_HALF_HEIGHT_OFFSET = 3;
 
-	// Token: 0x0400CCAF RID: 52399
+	// Token: 0x0400D092 RID: 53394
 	private const int WALK_ON_WATER_RADIUS_OFFSET = 20;
 
-	// Token: 0x0400CCB0 RID: 52400
+	// Token: 0x0400D093 RID: 53395
 	private const int WALK_ON_WATER_MOVEDIR_OFFSET = 3;
 
-	// Token: 0x0400CCB1 RID: 52401
+	// Token: 0x0400D094 RID: 53396
 	private const int MODEL_BUFFER_TIME_LENGTH = 300;
 
-	// Token: 0x0400CCB2 RID: 52402
+	// Token: 0x0400D095 RID: 53397
 	private const float SHALLOW_WATER_THRESOLD = 1.5f;
 
-	// Token: 0x0400CCB3 RID: 52403
+	// Token: 0x0400D096 RID: 53398
 	private int freeWaterStateTag = GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.冻结水面"];
 
-	// Token: 0x0400CCB4 RID: 52404
+	// Token: 0x0400D097 RID: 53399
 	public bool IsDebug;
 
-	// Token: 0x0400CCB5 RID: 52405
+	// Token: 0x0400D098 RID: 53400
 	[Nullable(2)]
 	private UTraceLineElement WaterUpTrace;
 
-	// Token: 0x0400CCB6 RID: 52406
+	// Token: 0x0400D099 RID: 53401
 	[Nullable(2)]
 	private UTraceSphereElement GroundTrace;
 
-	// Token: 0x0400CCB7 RID: 52407
+	// Token: 0x0400D09A RID: 53402
 	[Nullable(2)]
 	private UTraceSphereElement WaterTrace;
 
-	// Token: 0x0400CCB8 RID: 52408
+	// Token: 0x0400D09B RID: 53403
 	[Nullable(2)]
 	private UTraceSphereElement WaterEdgeTrace;
 
-	// Token: 0x0400CCB9 RID: 52409
+	// Token: 0x0400D09C RID: 53404
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CCBA RID: 52410
+	// Token: 0x0400D09D RID: 53405
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CCBB RID: 52411
+	// Token: 0x0400D09E RID: 53406
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400CCBC RID: 52412
+	// Token: 0x0400D09F RID: 53407
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent StateComp;
 
-	// Token: 0x0400CCBD RID: 52413
+	// Token: 0x0400D0A0 RID: 53408
 	[Nullable(2)]
 	private CharacterFloatingComponent FloatingComp;
 
-	// Token: 0x0400CCBE RID: 52414
+	// Token: 0x0400D0A1 RID: 53409
 	[Nullable(2)]
 	private ITagTask OnGameplayTagNewOrRemove;
 
-	// Token: 0x0400CCBF RID: 52415
+	// Token: 0x0400D0A2 RID: 53410
 	[Nullable(2)]
 	private ITagTask OnFreezeWaterTagAddOrRemove;
 
-	// Token: 0x0400CCC0 RID: 52416
+	// Token: 0x0400D0A3 RID: 53411
 	public bool IsActive;
 
-	// Token: 0x0400CCC1 RID: 52417
+	// Token: 0x0400D0A4 RID: 53412
 	private float CharacterHalfHeight;
 
-	// Token: 0x0400CCC2 RID: 52418
+	// Token: 0x0400D0A5 RID: 53413
 	[Nullable(2)]
 	private global::Vector TempVector;
 
-	// Token: 0x0400CCC3 RID: 52419
+	// Token: 0x0400D0A6 RID: 53414
 	[Nullable(2)]
 	private global::Vector TempVector2;
 
-	// Token: 0x0400CCC4 RID: 52420
+	// Token: 0x0400D0A7 RID: 53415
 	[Nullable(2)]
 	private global::Vector TempStartPoint;
 
-	// Token: 0x0400CCC5 RID: 52421
+	// Token: 0x0400D0A8 RID: 53416
 	[Nullable(2)]
 	private global::Vector TempEndPoint;
 
-	// Token: 0x0400CCC6 RID: 52422
+	// Token: 0x0400D0A9 RID: 53417
 	private float Depth;
 
-	// Token: 0x0400CCC7 RID: 52423
+	// Token: 0x0400D0AA RID: 53418
 	private float OriginMaxSpeed;
 
-	// Token: 0x0400CCC8 RID: 52424
+	// Token: 0x0400D0AB RID: 53419
 	private readonly global::Vector PrePlayerLocation = global::Vector.Create();
 
-	// Token: 0x0400CCC9 RID: 52425
+	// Token: 0x0400D0AC RID: 53420
 	[Nullable(2)]
 	private global::Vector TempNormalPoint;
 
-	// Token: 0x0400CCCA RID: 52426
+	// Token: 0x0400D0AD RID: 53421
 	public EWalkOnWaterStage WalkOnWaterStage;
 
-	// Token: 0x0400CCCB RID: 52427
+	// Token: 0x0400D0AE RID: 53422
 	public EWaterDepthType WaterDepthType;
 
-	// Token: 0x0400CCCC RID: 52428
+	// Token: 0x0400D0AF RID: 53423
 	private ECollisionResponse? OriginChannelResponse;
 
-	// Token: 0x0400CCCD RID: 52429
+	// Token: 0x0400D0B0 RID: 53424
 	private bool InChangeStateProcess;
 
-	// Token: 0x0400CCCE RID: 52430
+	// Token: 0x0400D0B1 RID: 53425
 	private EWalkOnWaterStage? CacheWalkOnWaterStage;
 
-	// Token: 0x0400CCCF RID: 52431
+	// Token: 0x0400D0B2 RID: 53426
 	private float WaterHeight;
 
-	// Token: 0x0400CCD0 RID: 52432
+	// Token: 0x0400D0B3 RID: 53427
 	private readonly HashSet<string> WalkOnWaterSet = new HashSet<string>();
 
-	// Token: 0x0400CCD1 RID: 52433
+	// Token: 0x0400D0B4 RID: 53428
 	private int DisableKey;
 
-	// Token: 0x0400CCD2 RID: 52434
+	// Token: 0x0400D0B5 RID: 53429
 	[Nullable(2)]
 	private WaterDetectedCapability FreezeWaterRenderCapability;
 
-	// Token: 0x0400CCD3 RID: 52435
+	// Token: 0x0400D0B6 RID: 53430
 	[Nullable(2)]
 	private WaterDetectedCapability MovementTrailCollisionCapability;
 
-	// Token: 0x0400CCD4 RID: 52436
+	// Token: 0x0400D0B7 RID: 53431
 	private readonly List<WaterDetectedCapability> GameCapabilities = new List<WaterDetectedCapability>();
 
-	// Token: 0x0400CCD5 RID: 52437
+	// Token: 0x0400D0B8 RID: 53432
 	[Nullable(2)]
 	private UKuroEnviInteractionComponent InteractionComp;
 
-	// Token: 0x0400CCD6 RID: 52438
+	// Token: 0x0400D0B9 RID: 53433
 	private bool WaterDetected;
 
-	// Token: 0x0400CCD7 RID: 52439
+	// Token: 0x0400D0BA RID: 53434
 	private readonly global::Vector WaterNormal = global::Vector.Create();
 
-	// Token: 0x0400CCD8 RID: 52440
+	// Token: 0x0400D0BB RID: 53435
 	private readonly global::Vector WaterImpactPoint = global::Vector.Create();
 
-	// Token: 0x0400CCD9 RID: 52441
+	// Token: 0x0400D0BC RID: 53436
 	private float StartUpZ;
 
-	// Token: 0x0400CCDA RID: 52442
+	// Token: 0x0400D0BD RID: 53437
 	private double UpTime;
 
-	// Token: 0x0400CCDB RID: 52443
+	// Token: 0x0400D0BE RID: 53438
 	private float CheckInGroundTime = 1000f;
 }

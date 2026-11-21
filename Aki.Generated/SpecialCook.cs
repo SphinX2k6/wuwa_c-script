@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010DD RID: 4317
+	// Token: 0x02001213 RID: 4627
 	public struct SpecialCook : IFlatbufferObject
 	{
-		// Token: 0x170037C1 RID: 14273
-		// (get) Token: 0x0600D7BD RID: 55229 RVA: 0x0031DA51 File Offset: 0x0031BC51
+		// Token: 0x17003B17 RID: 15127
+		// (get) Token: 0x0600E508 RID: 58632 RVA: 0x003490C5 File Offset: 0x003472C5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D7BE RID: 55230 RVA: 0x0031DA5E File Offset: 0x0031BC5E
+		// Token: 0x0600E509 RID: 58633 RVA: 0x003490D2 File Offset: 0x003472D2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D7BF RID: 55231 RVA: 0x0031DA68 File Offset: 0x0031BC68
+		// Token: 0x0600E50A RID: 58634 RVA: 0x003490DC File Offset: 0x003472DC
 		public static SpecialCook GetRootAsSpecialCook(ByteBuffer _bb)
 		{
 			return SpecialCook.GetRootAsSpecialCook(_bb, default(SpecialCook));
 		}
 
-		// Token: 0x0600D7C0 RID: 55232 RVA: 0x0031DA84 File Offset: 0x0031BC84
+		// Token: 0x0600E50B RID: 58635 RVA: 0x003490F8 File Offset: 0x003472F8
 		public static SpecialCook GetRootAsSpecialCook(ByteBuffer _bb, SpecialCook obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D7C1 RID: 55233 RVA: 0x0031DAA1 File Offset: 0x0031BCA1
+		// Token: 0x0600E50C RID: 58636 RVA: 0x00349115 File Offset: 0x00347315
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D7C2 RID: 55234 RVA: 0x0031DAB0 File Offset: 0x0031BCB0
+		// Token: 0x0600E50D RID: 58637 RVA: 0x00349124 File Offset: 0x00347324
 		public SpecialCook __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170037C2 RID: 14274
-		// (get) Token: 0x0600D7C3 RID: 55235 RVA: 0x0031DAC0 File Offset: 0x0031BCC0
+		// Token: 0x17003B18 RID: 15128
+		// (get) Token: 0x0600E50E RID: 58638 RVA: 0x00349134 File Offset: 0x00347334
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037C3 RID: 14275
-		// (get) Token: 0x0600D7C4 RID: 55236 RVA: 0x0031DAFC File Offset: 0x0031BCFC
+		// Token: 0x17003B19 RID: 15129
+		// (get) Token: 0x0600E50F RID: 58639 RVA: 0x00349170 File Offset: 0x00347370
 		public int RoleId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037C4 RID: 14276
-		// (get) Token: 0x0600D7C5 RID: 55237 RVA: 0x0031DB38 File Offset: 0x0031BD38
+		// Token: 0x17003B1A RID: 15130
+		// (get) Token: 0x0600E510 RID: 58640 RVA: 0x003491AC File Offset: 0x003473AC
 		public int FormulaId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037C5 RID: 14277
-		// (get) Token: 0x0600D7C6 RID: 55238 RVA: 0x0031DB74 File Offset: 0x0031BD74
+		// Token: 0x17003B1B RID: 15131
+		// (get) Token: 0x0600E511 RID: 58641 RVA: 0x003491E8 File Offset: 0x003473E8
 		public int CookProbability
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037C6 RID: 14278
-		// (get) Token: 0x0600D7C7 RID: 55239 RVA: 0x0031DBB4 File Offset: 0x0031BDB4
+		// Token: 0x17003B1C RID: 15132
+		// (get) Token: 0x0600E512 RID: 58642 RVA: 0x00349228 File Offset: 0x00347428
 		public int ItemId
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037C7 RID: 14279
-		// (get) Token: 0x0600D7C8 RID: 55240 RVA: 0x0031DBF4 File Offset: 0x0031BDF4
+		// Token: 0x17003B1D RID: 15133
+		// (get) Token: 0x0600E513 RID: 58643 RVA: 0x00349268 File Offset: 0x00347468
 		public string AttributesDescription
 		{
 			get
@@ -137,19 +137,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D7C9 RID: 55241 RVA: 0x0031DC2C File Offset: 0x0031BE2C
+		// Token: 0x0600E514 RID: 58644 RVA: 0x003492A0 File Offset: 0x003474A0
 		public Span<byte> GetAttributesDescriptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600D7CA RID: 55242 RVA: 0x0031DC3C File Offset: 0x0031BE3C
+		// Token: 0x0600E515 RID: 58645 RVA: 0x003492B0 File Offset: 0x003474B0
 		public byte[] GetAttributesDescriptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005210 RID: 21008
+		// Token: 0x04005853 RID: 22611
 		private Table __p;
 	}
 }

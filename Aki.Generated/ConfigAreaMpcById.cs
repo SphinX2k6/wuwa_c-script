@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000A7 RID: 167
+	// Token: 0x020000AF RID: 175
 	public class ConfigAreaMpcById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003EB RID: 1003 RVA: 0x0006FCDC File Offset: 0x0006DEDC
+		// Token: 0x0600041B RID: 1051 RVA: 0x00074590 File Offset: 0x00072790
 		static ConfigAreaMpcById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaMpcById.CreateStaticDefaultValue), new Action(ConfigAreaMpcById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003EC RID: 1004 RVA: 0x0006FCFC File Offset: 0x0006DEFC
+		// Token: 0x0600041C RID: 1052 RVA: 0x000745B0 File Offset: 0x000727B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaMpcById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003ED RID: 1005 RVA: 0x0006FD7B File Offset: 0x0006DF7B
+		// Token: 0x0600041D RID: 1053 RVA: 0x0007462F File Offset: 0x0007282F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaMpcById.LogPair = null;
 			ConfigAreaMpcById.HandleId = 0;
 		}
 
-		// Token: 0x060003EE RID: 1006 RVA: 0x0006FD89 File Offset: 0x0006DF89
+		// Token: 0x0600041E RID: 1054 RVA: 0x0007463D File Offset: 0x0007283D
 		public static void Init()
 		{
 			ConfigAreaMpcById.HandleId = ConfigCommon.InitDataStatement(ConfigAreaMpcById.HandleId, "db_areampc.db", "select BinData from `AreaMpc` where Id=?");
 		}
 
-		// Token: 0x060003EF RID: 1007 RVA: 0x0006FDA4 File Offset: 0x0006DFA4
+		// Token: 0x0600041F RID: 1055 RVA: 0x00074658 File Offset: 0x00072858
 		public static AreaMpc? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAreaMpcById.HandleId, ConfigAreaMpcById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AreaMpc?(rootAsAreaMpc);
 		}
 
-		// Token: 0x04000475 RID: 1141
+		// Token: 0x040004AD RID: 1197
 		private const string DB = "db_areampc.db";
 
-		// Token: 0x04000476 RID: 1142
+		// Token: 0x040004AE RID: 1198
 		private const string FILE = "k.可视化编辑/c.Csv/q.区域Mpc/*.csv*";
 
-		// Token: 0x04000477 RID: 1143
+		// Token: 0x040004AF RID: 1199
 		private const string TABLE = "AreaMpc";
 
-		// Token: 0x04000478 RID: 1144
+		// Token: 0x040004B0 RID: 1200
 		private const string COMMAND = "select BinData from `AreaMpc` where Id=?";
 
-		// Token: 0x04000479 RID: 1145
+		// Token: 0x040004B1 RID: 1201
 		private const string KEY_PREFIX = "AreaMpcById";
 
-		// Token: 0x0400047A RID: 1146
+		// Token: 0x040004B2 RID: 1202
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400047B RID: 1147
+		// Token: 0x040004B3 RID: 1203
 		private static int HandleId;
 	}
 }

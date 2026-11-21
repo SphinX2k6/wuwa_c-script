@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001321 RID: 4897
+	// Token: 0x02001471 RID: 5233
 	public class IRoleTowerChallengeTitleKillProgress : IRoleTowerChallengeTitleTypeBase
 	{
-		// Token: 0x06007063 RID: 28771 RVA: 0x0010F748 File Offset: 0x0010D948
-		[NullableContext(1)]
+		// Token: 0x06007703 RID: 30467 RVA: 0x0011DCB4 File Offset: 0x0011BEB4
 		public static IRoleTowerChallengeTitleKillProgress Create(IRoleTowerChallengeTitleKillProgress? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023F4 RID: 9204
-		// (get) Token: 0x06007064 RID: 28772 RVA: 0x0010F767 File Offset: 0x0010D967
+		// Token: 0x170025C3 RID: 9667
+		// (get) Token: 0x06007704 RID: 30468 RVA: 0x0011DCD3 File Offset: 0x0011BED3
 		public override ERoleTowerChallengeTitleType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040D3 RID: 16595
+		// Token: 0x0400444F RID: 17487
 		private IRoleTowerChallengeTitleKillProgress Instance;
 	}
 }

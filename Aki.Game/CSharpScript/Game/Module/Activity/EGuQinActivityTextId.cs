@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005EF6 RID: 24310
+	// Token: 0x02004EDD RID: 20189
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EGuQinActivityTextId
 	{
-		// Token: 0x04020466 RID: 132198
+		// Token: 0x0401AF38 RID: 110392
 		public const string PreQuestUnfinishedTips = "GuQinActivity_PreQuestUnfinishedTips";
 
-		// Token: 0x04020467 RID: 132199
+		// Token: 0x0401AF39 RID: 110393
 		public const string UnlockTimeTips = "GuQinActivity_UnlockTimeTips";
 	}
 }

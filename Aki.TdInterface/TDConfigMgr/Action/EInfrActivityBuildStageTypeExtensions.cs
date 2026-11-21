@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200235B RID: 9051
+	// Token: 0x020025D0 RID: 9680
 	public static class EInfrActivityBuildStageTypeExtensions
 	{
-		// Token: 0x0600C598 RID: 50584 RVA: 0x001CD62C File Offset: 0x001CB82C
+		// Token: 0x0600D182 RID: 53634 RVA: 0x001E590C File Offset: 0x001E3B0C
 		public static string ToEnumString(this EInfrActivityBuildStageType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C599 RID: 50585 RVA: 0x001CD664 File Offset: 0x001CB864
+		// Token: 0x0600D183 RID: 53635 RVA: 0x001E5944 File Offset: 0x001E3B44
 		public static EInfrActivityBuildStageType FromString(string name)
 		{
 			EInfrActivityBuildStageType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C59A RID: 50586 RVA: 0x001CD68D File Offset: 0x001CB88D
+		// Token: 0x0600D184 RID: 53636 RVA: 0x001E596D File Offset: 0x001E3B6D
 		public static bool TryFromString(string name, out EInfrActivityBuildStageType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C59B RID: 50587 RVA: 0x001CD6C6 File Offset: 0x001CB8C6
+		// Token: 0x0600D185 RID: 53637 RVA: 0x001E59A6 File Offset: 0x001E3BA6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C59C RID: 50588 RVA: 0x001CD6DE File Offset: 0x001CB8DE
+		// Token: 0x0600D186 RID: 53638 RVA: 0x001E59BE File Offset: 0x001E3BBE
 		public static EInfrActivityBuildStageType[] GetValues()
 		{
 			return new EInfrActivityBuildStageType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C59D RID: 50589 RVA: 0x001CD6EA File Offset: 0x001CB8EA
+		// Token: 0x0600D187 RID: 53639 RVA: 0x001E59CA File Offset: 0x001E3BCA
 		public static string[] GetNames()
 		{
 			return new string[]

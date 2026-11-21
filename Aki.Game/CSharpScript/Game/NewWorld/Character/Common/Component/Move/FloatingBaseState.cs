@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070DE RID: 28894
+	// Token: 0x0200638E RID: 25486
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 	})]
 	internal class FloatingBaseState : StateBase<CharacterFloatingComponent, EFloatingMovementType>
 	{
-		// Token: 0x0604682F RID: 288815 RVA: 0x011B8A89 File Offset: 0x011B6C89
+		// Token: 0x0603DC1C RID: 252956 RVA: 0x011E815D File Offset: 0x011E635D
 		public FloatingBaseState(CharacterFloatingComponent owner, EFloatingMovementType state, [Nullable(new byte[]
 		{
 			2,
@@ -24,39 +24,39 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 		{
 		}
 
-		// Token: 0x06046830 RID: 288816 RVA: 0x011B8A94 File Offset: 0x011B6C94
+		// Token: 0x0603DC1D RID: 252957 RVA: 0x011E8168 File Offset: 0x011E6368
 		protected override void OnEnter(EFloatingMovementType? lastState)
 		{
 			base.OnEnter(lastState);
 			this.OnEnterInternal();
 		}
 
-		// Token: 0x06046831 RID: 288817 RVA: 0x011B8AA3 File Offset: 0x011B6CA3
+		// Token: 0x0603DC1E RID: 252958 RVA: 0x011E8177 File Offset: 0x011E6377
 		protected override void OnReEnter()
 		{
 			base.OnReEnter();
 			this.OnEnterInternal();
 		}
 
-		// Token: 0x06046832 RID: 288818 RVA: 0x011B8AB1 File Offset: 0x011B6CB1
+		// Token: 0x0603DC1F RID: 252959 RVA: 0x011E8185 File Offset: 0x011E6385
 		public override bool CanReEnter()
 		{
 			return true;
 		}
 
-		// Token: 0x06046833 RID: 288819 RVA: 0x011B8AB4 File Offset: 0x011B6CB4
+		// Token: 0x0603DC20 RID: 252960 RVA: 0x011E8188 File Offset: 0x011E6388
 		protected virtual bool CanContinueState()
 		{
 			return !this.Owner.TagComp.HasAnyTag(this.GetBannedStateConfigTagList());
 		}
 
-		// Token: 0x06046834 RID: 288820 RVA: 0x011B8ACF File Offset: 0x011B6CCF
+		// Token: 0x0603DC21 RID: 252961 RVA: 0x011E81A3 File Offset: 0x011E63A3
 		public override bool CanChangeFrom(EFloatingMovementType fromState)
 		{
 			return base.CanChangeFrom(fromState) && this.CanContinueState();
 		}
 
-		// Token: 0x06046835 RID: 288821 RVA: 0x011B8AE2 File Offset: 0x011B6CE2
+		// Token: 0x0603DC22 RID: 252962 RVA: 0x011E81B6 File Offset: 0x011E63B6
 		protected virtual void OnEnterInternal()
 		{
 			this.Owner.FloatingMoveType = this.State;
@@ -65,19 +65,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			bool debug = CharacterFloatingComponent.Debug;
 		}
 
-		// Token: 0x06046836 RID: 288822 RVA: 0x011B8B07 File Offset: 0x011B6D07
+		// Token: 0x0603DC23 RID: 252963 RVA: 0x011E81DB File Offset: 0x011E63DB
 		protected virtual void SetMoveState()
 		{
 			this.Owner.StateComp.SetMoveState(this.GetMoveState());
 		}
 
-		// Token: 0x06046837 RID: 288823 RVA: 0x011B8B1F File Offset: 0x011B6D1F
+		// Token: 0x0603DC24 RID: 252964 RVA: 0x011E81F3 File Offset: 0x011E63F3
 		protected virtual ECharMoveState GetMoveState()
 		{
 			return ECharMoveState.Other;
 		}
 
-		// Token: 0x06046838 RID: 288824 RVA: 0x011B8B24 File Offset: 0x011B6D24
+		// Token: 0x0603DC25 RID: 252965 RVA: 0x011E81F8 File Offset: 0x011E63F8
 		protected override void OnUpdate(float deltaSeconds)
 		{
 			base.OnUpdate(deltaSeconds);
@@ -122,55 +122,55 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.PostUpdate();
 		}
 
-		// Token: 0x06046839 RID: 288825 RVA: 0x011B8D1A File Offset: 0x011B6F1A
+		// Token: 0x0603DC26 RID: 252966 RVA: 0x011E83EE File Offset: 0x011E65EE
 		protected virtual void PostUpdate()
 		{
 		}
 
-		// Token: 0x0604683A RID: 288826 RVA: 0x011B8D1C File Offset: 0x011B6F1C
+		// Token: 0x0603DC27 RID: 252967 RVA: 0x011E83F0 File Offset: 0x011E65F0
 		protected override void OnExit(EFloatingMovementType nextState)
 		{
 			base.OnExit(nextState);
 			this.OnExitInternal();
 		}
 
-		// Token: 0x0604683B RID: 288827 RVA: 0x011B8D2B File Offset: 0x011B6F2B
+		// Token: 0x0603DC28 RID: 252968 RVA: 0x011E83FF File Offset: 0x011E65FF
 		protected void OnExitInternal()
 		{
 			this.RemoveTagList();
 			this.RemoveMovementTagList();
 		}
 
-		// Token: 0x0604683C RID: 288828 RVA: 0x011B8D39 File Offset: 0x011B6F39
+		// Token: 0x0603DC29 RID: 252969 RVA: 0x011E840D File Offset: 0x011E660D
 		protected virtual List<int> GetInStateConfigTagList()
 		{
 			return CharacterFloatingComponent.EmptyArray;
 		}
 
-		// Token: 0x0604683D RID: 288829 RVA: 0x011B8D40 File Offset: 0x011B6F40
+		// Token: 0x0603DC2A RID: 252970 RVA: 0x011E8414 File Offset: 0x011E6614
 		protected virtual List<int> GetBannedStateConfigTagList()
 		{
 			return CharacterFloatingComponent.EmptyArray;
 		}
 
-		// Token: 0x0604683E RID: 288830 RVA: 0x011B8D47 File Offset: 0x011B6F47
+		// Token: 0x0603DC2B RID: 252971 RVA: 0x011E841B File Offset: 0x011E661B
 		protected virtual List<int> GetMoveConfigTagList()
 		{
 			return CharacterFloatingComponent.EmptyArray;
 		}
 
-		// Token: 0x0604683F RID: 288831 RVA: 0x011B8D4E File Offset: 0x011B6F4E
+		// Token: 0x0603DC2C RID: 252972 RVA: 0x011E8422 File Offset: 0x011E6622
 		protected virtual List<int> GetStandConfigTagList()
 		{
 			return CharacterFloatingComponent.EmptyArray;
 		}
 
-		// Token: 0x06046840 RID: 288832 RVA: 0x011B8D55 File Offset: 0x011B6F55
+		// Token: 0x0603DC2D RID: 252973 RVA: 0x011E8429 File Offset: 0x011E6629
 		protected void UpdateActorRotation(float deltaSeconds)
 		{
 		}
 
-		// Token: 0x06046841 RID: 288833 RVA: 0x011B8D58 File Offset: 0x011B6F58
+		// Token: 0x0603DC2E RID: 252974 RVA: 0x011E842C File Offset: 0x011E662C
 		protected virtual void UpdateActorLocation(float deltaSeconds)
 		{
 			this.Owner.UpdateMove(deltaSeconds, this.Owner.MoveDelta);
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046842 RID: 288834 RVA: 0x011B8DCC File Offset: 0x011B6FCC
+		// Token: 0x0603DC2F RID: 252975 RVA: 0x011E84A0 File Offset: 0x011E66A0
 		protected void AddTagList()
 		{
 			List<int> inStateConfigTagList = this.GetInStateConfigTagList();
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046843 RID: 288835 RVA: 0x011B8E3C File Offset: 0x011B703C
+		// Token: 0x0603DC30 RID: 252976 RVA: 0x011E8510 File Offset: 0x011E6710
 		protected void RemoveTagList()
 		{
 			List<int> inStateConfigTagList = this.GetInStateConfigTagList();
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046844 RID: 288836 RVA: 0x011B8EAC File Offset: 0x011B70AC
+		// Token: 0x0603DC31 RID: 252977 RVA: 0x011E8580 File Offset: 0x011E6780
 		private void UpdateMovementTagList(bool isMove)
 		{
 			if (this.Owner.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.技能中"]))
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.UpdateStandTagList(!isMove);
 		}
 
-		// Token: 0x06046845 RID: 288837 RVA: 0x011B8F1C File Offset: 0x011B711C
+		// Token: 0x0603DC32 RID: 252978 RVA: 0x011E85F0 File Offset: 0x011E67F0
 		private void RemoveMovementTagList()
 		{
 			this.UpdateMoveTagList(false);
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.IsMoved = null;
 		}
 
-		// Token: 0x06046846 RID: 288838 RVA: 0x011B8F38 File Offset: 0x011B7138
+		// Token: 0x0603DC33 RID: 252979 RVA: 0x011E860C File Offset: 0x011E680C
 		private void UpdateMoveTagList(bool isAdd)
 		{
 			List<int> moveConfigTagList = this.GetMoveConfigTagList();
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046847 RID: 288839 RVA: 0x011B8FC4 File Offset: 0x011B71C4
+		// Token: 0x0603DC34 RID: 252980 RVA: 0x011E8698 File Offset: 0x011E6898
 		private void UpdateStandTagList(bool isAdd)
 		{
 			List<int> standConfigTagList = this.GetStandConfigTagList();
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x04024FBF RID: 151487
+		// Token: 0x04020C54 RID: 134228
 		protected bool? IsMoved;
 	}
 }

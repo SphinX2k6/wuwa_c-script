@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200463F RID: 17983
+	// Token: 0x02004AA7 RID: 19111
 	public struct ICustomTextGm : IFlatbufferObject
 	{
-		// Token: 0x17007F99 RID: 32665
-		// (get) Token: 0x0601B3C9 RID: 111561 RVA: 0x003E0675 File Offset: 0x003DE875
+		// Token: 0x170085DA RID: 34266
+		// (get) Token: 0x0601CB9E RID: 117662 RVA: 0x0040C911 File Offset: 0x0040AB11
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B3CA RID: 111562 RVA: 0x003E0682 File Offset: 0x003DE882
+		// Token: 0x0601CB9F RID: 117663 RVA: 0x0040C91E File Offset: 0x0040AB1E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B3CB RID: 111563 RVA: 0x003E068C File Offset: 0x003DE88C
+		// Token: 0x0601CBA0 RID: 117664 RVA: 0x0040C928 File Offset: 0x0040AB28
 		public static ICustomTextGm GetRootAsICustomTextGm(ByteBuffer _bb)
 		{
 			return ICustomTextGm.GetRootAsICustomTextGm(_bb, default(ICustomTextGm));
 		}
 
-		// Token: 0x0601B3CC RID: 111564 RVA: 0x003E06A8 File Offset: 0x003DE8A8
+		// Token: 0x0601CBA1 RID: 117665 RVA: 0x0040C944 File Offset: 0x0040AB44
 		public static ICustomTextGm GetRootAsICustomTextGm(ByteBuffer _bb, ICustomTextGm obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B3CD RID: 111565 RVA: 0x003E06C5 File Offset: 0x003DE8C5
+		// Token: 0x0601CBA2 RID: 117666 RVA: 0x0040C961 File Offset: 0x0040AB61
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B3CE RID: 111566 RVA: 0x003E06D4 File Offset: 0x003DE8D4
+		// Token: 0x0601CBA3 RID: 117667 RVA: 0x0040C970 File Offset: 0x0040AB70
 		public ICustomTextGm __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007F9A RID: 32666
-		// (get) Token: 0x0601B3CF RID: 111567 RVA: 0x003E06E4 File Offset: 0x003DE8E4
+		// Token: 0x170085DB RID: 34267
+		// (get) Token: 0x0601CBA4 RID: 117668 RVA: 0x0040C980 File Offset: 0x0040AB80
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17007F9B RID: 32667
-		// (get) Token: 0x0601B3D0 RID: 111568 RVA: 0x003E0720 File Offset: 0x003DE920
+		// Token: 0x170085DC RID: 34268
+		// (get) Token: 0x0601CBA5 RID: 117669 RVA: 0x0040C9BC File Offset: 0x0040ABBC
 		public string Text
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B3D1 RID: 111569 RVA: 0x003E0757 File Offset: 0x003DE957
+		// Token: 0x0601CBA6 RID: 117670 RVA: 0x0040C9F3 File Offset: 0x0040ABF3
 		public Span<byte> GetTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601B3D2 RID: 111570 RVA: 0x003E0766 File Offset: 0x003DE966
+		// Token: 0x0601CBA7 RID: 117671 RVA: 0x0040CA02 File Offset: 0x0040AC02
 		public byte[] GetTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601B3D3 RID: 111571 RVA: 0x003E0774 File Offset: 0x003DE974
+		// Token: 0x0601CBA8 RID: 117672 RVA: 0x0040CA10 File Offset: 0x0040AC10
 		public static Offset<ICustomTextGm> CreateICustomTextGm(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, StringOffset TextOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return ICustomTextGm.EndICustomTextGm(builder);
 		}
 
-		// Token: 0x0601B3D4 RID: 111572 RVA: 0x003E0791 File Offset: 0x003DE991
+		// Token: 0x0601CBA9 RID: 117673 RVA: 0x0040CA2D File Offset: 0x0040AC2D
 		public static void StartICustomTextGm(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601B3D5 RID: 111573 RVA: 0x003E079A File Offset: 0x003DE99A
+		// Token: 0x0601CBAA RID: 117674 RVA: 0x0040CA36 File Offset: 0x0040AC36
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B3D6 RID: 111574 RVA: 0x003E07A5 File Offset: 0x003DE9A5
+		// Token: 0x0601CBAB RID: 117675 RVA: 0x0040CA41 File Offset: 0x0040AC41
 		public static void AddText(FlatBufferBuilder builder, StringOffset textOffset)
 		{
 			builder.AddOffset(1, textOffset.Value, 0);
 		}
 
-		// Token: 0x0601B3D7 RID: 111575 RVA: 0x003E07B5 File Offset: 0x003DE9B5
+		// Token: 0x0601CBAC RID: 117676 RVA: 0x0040CA51 File Offset: 0x0040AC51
 		public static Offset<ICustomTextGm> EndICustomTextGm(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomTextGm>(builder.EndTable());
 		}
 
-		// Token: 0x0601B3D8 RID: 111576 RVA: 0x003E07C4 File Offset: 0x003DE9C4
+		// Token: 0x0601CBAD RID: 117677 RVA: 0x0040CA60 File Offset: 0x0040AC60
 		public ICustomTextGmT UnPack()
 		{
 			ICustomTextGmT customTextGmT = new ICustomTextGmT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return customTextGmT;
 		}
 
-		// Token: 0x0601B3D9 RID: 111577 RVA: 0x003E07DF File Offset: 0x003DE9DF
+		// Token: 0x0601CBAE RID: 117678 RVA: 0x0040CA7B File Offset: 0x0040AC7B
 		public void UnPackTo(ICustomTextGmT _o)
 		{
 			_o.Type = this.Type;
 			_o.Text = this.Text;
 		}
 
-		// Token: 0x0601B3DA RID: 111578 RVA: 0x003E07FC File Offset: 0x003DE9FC
+		// Token: 0x0601CBAF RID: 117679 RVA: 0x0040CA98 File Offset: 0x0040AC98
 		public static Offset<ICustomTextGm> Pack(FlatBufferBuilder builder, ICustomTextGmT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return ICustomTextGm.CreateICustomTextGm(builder, _o.Type, textOffset);
 		}
 
-		// Token: 0x0400C7B5 RID: 51125
+		// Token: 0x0400D1E4 RID: 53732
 		private Table __p;
 	}
 }

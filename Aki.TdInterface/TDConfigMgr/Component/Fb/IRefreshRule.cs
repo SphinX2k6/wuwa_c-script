@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AB4 RID: 2740
+	// Token: 0x02000B7E RID: 2942
 	public class IRefreshRule
 	{
-		// Token: 0x06003F2A RID: 16170 RVA: 0x000A1882 File Offset: 0x0009FA82
-		[NullableContext(1)]
+		// Token: 0x06004354 RID: 17236 RVA: 0x000AAE76 File Offset: 0x000A9076
 		public static IRefreshRule Create(IRefreshRule? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F7F RID: 3967
-		// (get) Token: 0x06003F2B RID: 16171 RVA: 0x000A18A1 File Offset: 0x0009FAA1
+		// Token: 0x17001053 RID: 4179
+		// (get) Token: 0x06004355 RID: 17237 RVA: 0x000AAE95 File Offset: 0x000A9095
 		public virtual ERefreshRule Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002317 RID: 8983
+		// Token: 0x04002533 RID: 9523
 		private IRefreshRule Instance;
 	}
 }

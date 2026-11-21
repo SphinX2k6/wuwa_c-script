@@ -6,20 +6,20 @@ namespace CSharpScript.Launcher
 	// Token: 0x02000058 RID: 88
 	public class LauncherVersionFirstDownloadTypeLog
 	{
-		// Token: 0x04000169 RID: 361
+		// Token: 0x04000170 RID: 368
 		[Nullable(1)]
 		public string event_id = "1709";
 
-		// Token: 0x0400016A RID: 362
+		// Token: 0x04000171 RID: 369
 		public int i_download_type;
 
-		// Token: 0x0400016B RID: 363
+		// Token: 0x04000172 RID: 370
 		public int i_required_space_add;
 
-		// Token: 0x0400016C RID: 364
+		// Token: 0x04000173 RID: 371
 		public int i_required_space_all;
 
-		// Token: 0x0400016D RID: 365
+		// Token: 0x04000174 RID: 372
 		public int i_required_space;
 	}
 }

@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUiSet
 {
-	// Token: 0x02005E60 RID: 24160
+	// Token: 0x02004E45 RID: 20037
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PanelItemParams
 	{
-		// Token: 0x040200CD RID: 131277
+		// Token: 0x0401AB94 RID: 109460
 		public BattleUiSetPanelItemData PanelItemData;
 
-		// Token: 0x040200CE RID: 131278
+		// Token: 0x0401AB95 RID: 109461
 		public UUIItem PanelItem;
 
-		// Token: 0x040200CF RID: 131279
+		// Token: 0x0401AB96 RID: 109462
 		public AUIBaseActor BattleViewBaseActor;
 	}
 }

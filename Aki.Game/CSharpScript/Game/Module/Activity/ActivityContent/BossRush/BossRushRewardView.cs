@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x02006909 RID: 26889
+	// Token: 0x02005859 RID: 22617
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossRushRewardView : UiTabViewBase
 	{
-		// Token: 0x060430D0 RID: 274640 RVA: 0x010561FC File Offset: 0x010543FC
+		// Token: 0x06037C28 RID: 228392 RVA: 0x00F97830 File Offset: 0x00F95A30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -33,19 +33,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060430D1 RID: 274641 RVA: 0x010562A7 File Offset: 0x010544A7
+		// Token: 0x06037C29 RID: 228393 RVA: 0x00F978DB File Offset: 0x00F95ADB
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.BossRefreshBossRushReward, new Action(this.RefreshRewardLayout));
 		}
 
-		// Token: 0x060430D2 RID: 274642 RVA: 0x010562C5 File Offset: 0x010544C5
+		// Token: 0x06037C2A RID: 228394 RVA: 0x00F978F9 File Offset: 0x00F95AF9
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.BossRefreshBossRushReward, new Action(this.RefreshRewardLayout));
 		}
 
-		// Token: 0x060430D3 RID: 274643 RVA: 0x010562E4 File Offset: 0x010544E4
+		// Token: 0x06037C2B RID: 228395 RVA: 0x00F97918 File Offset: 0x00F95B18
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.BossRushData = bossRushData;
 		}
 
-		// Token: 0x060430D4 RID: 274644 RVA: 0x01056368 File Offset: 0x01054568
+		// Token: 0x06037C2C RID: 228396 RVA: 0x00F9799C File Offset: 0x00F95B9C
 		protected override void OnBeforeShow()
 		{
 			this.RefreshTabLayout();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x060430D5 RID: 274645 RVA: 0x0105639B File Offset: 0x0105459B
+		// Token: 0x06037C2D RID: 228397 RVA: 0x00F979CF File Offset: 0x00F95BCF
 		private void RefreshTabLayout()
 		{
 			GenericLayout<BossRushRewardTabItem, BossRushTaskTab> tabDataLayout = this.TabDataLayout;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			tabDataLayout.RefreshByData(this.BossRushData.GetBossRushAllTabData(), null, false);
 		}
 
-		// Token: 0x060430D6 RID: 274646 RVA: 0x010563BA File Offset: 0x010545BA
+		// Token: 0x06037C2E RID: 228398 RVA: 0x00F979EE File Offset: 0x00F95BEE
 		private BossRushRewardTabItem CreateBossRushRewardTabItem()
 		{
 			BossRushRewardTabItem bossRushRewardTabItem = new BossRushRewardTabItem();
@@ -86,13 +86,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return bossRushRewardTabItem;
 		}
 
-		// Token: 0x060430D7 RID: 274647 RVA: 0x010563D3 File Offset: 0x010545D3
+		// Token: 0x06037C2F RID: 228399 RVA: 0x00F97A07 File Offset: 0x00F95C07
 		private BossRushRewardItem CreateBossRushRewardItem()
 		{
 			return new BossRushRewardItem();
 		}
 
-		// Token: 0x060430D8 RID: 274648 RVA: 0x010563DA File Offset: 0x010545DA
+		// Token: 0x06037C30 RID: 228400 RVA: 0x00F97A0E File Offset: 0x00F95C0E
 		private void ClickTabToggle(BossRushRewardTabItem item)
 		{
 			BossRushRewardTabItem currentSelectTabItem = this.CurrentSelectTabItem;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshRewardLayout();
 		}
 
-		// Token: 0x060430D9 RID: 274649 RVA: 0x010563FC File Offset: 0x010545FC
+		// Token: 0x06037C31 RID: 228401 RVA: 0x00F97A30 File Offset: 0x00F95C30
 		private void RefreshRewardLayout()
 		{
 			BossRushData bossRushData = this.BossRushData;
@@ -145,40 +145,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x060430DA RID: 274650 RVA: 0x01056508 File Offset: 0x01054708
+		// Token: 0x06037C32 RID: 228402 RVA: 0x00F97B3C File Offset: 0x00F95D3C
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x04022E7E RID: 142974
+		// Token: 0x0401D6DA RID: 120538
 		private GenericLayout<BossRushRewardTabItem, BossRushTaskTab> TabDataLayout;
 
-		// Token: 0x04022E7F RID: 142975
+		// Token: 0x0401D6DB RID: 120539
 		private BossRushRewardTabItem CurrentSelectTabItem;
 
-		// Token: 0x04022E80 RID: 142976
+		// Token: 0x0401D6DC RID: 120540
 		private GenericLayout<BossRushRewardItem, RewardContentData> RewardLayout;
 
-		// Token: 0x04022E81 RID: 142977
+		// Token: 0x0401D6DD RID: 120541
 		private BossRushData BossRushData;
 
-		// Token: 0x04022E82 RID: 142978
+		// Token: 0x0401D6DE RID: 120542
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200CAB9 RID: 51897
+		// Token: 0x0200B481 RID: 46209
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403D449 RID: 250953
+			// Token: 0x04037D23 RID: 228643
 			public const int TabContentItem = 0;
 
-			// Token: 0x0403D44A RID: 250954
+			// Token: 0x04037D24 RID: 228644
 			public const int TabItem = 1;
 
-			// Token: 0x0403D44B RID: 250955
+			// Token: 0x04037D25 RID: 228645
 			public const int RewardContentItem = 2;
 
-			// Token: 0x0403D44C RID: 250956
+			// Token: 0x04037D26 RID: 228646
 			public const int RewardItem = 3;
 		}
 	}

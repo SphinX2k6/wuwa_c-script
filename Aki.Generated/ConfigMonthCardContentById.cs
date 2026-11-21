@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200055D RID: 1373
+	// Token: 0x02000573 RID: 1395
 	public class ConfigMonthCardContentById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600203B RID: 8251 RVA: 0x0010F954 File Offset: 0x0010DB54
+		// Token: 0x060020BF RID: 8383 RVA: 0x001160A8 File Offset: 0x001142A8
 		static ConfigMonthCardContentById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMonthCardContentById.CreateStaticDefaultValue), new Action(ConfigMonthCardContentById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600203C RID: 8252 RVA: 0x0010F974 File Offset: 0x0010DB74
+		// Token: 0x060020C0 RID: 8384 RVA: 0x001160C8 File Offset: 0x001142C8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMonthCardContentById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600203D RID: 8253 RVA: 0x0010F9F3 File Offset: 0x0010DBF3
+		// Token: 0x060020C1 RID: 8385 RVA: 0x00116147 File Offset: 0x00114347
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMonthCardContentById.LogPair = null;
 			ConfigMonthCardContentById.HandleId = 0;
 		}
 
-		// Token: 0x0600203E RID: 8254 RVA: 0x0010FA01 File Offset: 0x0010DC01
+		// Token: 0x060020C2 RID: 8386 RVA: 0x00116155 File Offset: 0x00114355
 		public static void Init()
 		{
 			ConfigMonthCardContentById.HandleId = ConfigCommon.InitDataStatement(ConfigMonthCardContentById.HandleId, "db_monthcardcontent.db", "select BinData from `MonthCardContent` where Id=?");
 		}
 
-		// Token: 0x0600203F RID: 8255 RVA: 0x0010FA1C File Offset: 0x0010DC1C
+		// Token: 0x060020C3 RID: 8387 RVA: 0x00116170 File Offset: 0x00114370
 		public static MonthCardContent? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMonthCardContentById.HandleId, ConfigMonthCardContentById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MonthCardContent?(rootAsMonthCardContent);
 		}
 
-		// Token: 0x0400256F RID: 9583
+		// Token: 0x04002609 RID: 9737
 		private const string DB = "db_monthcardcontent.db";
 
-		// Token: 0x04002570 RID: 9584
+		// Token: 0x0400260A RID: 9738
 		private const string FILE = "y.月卡.xlsx";
 
-		// Token: 0x04002571 RID: 9585
+		// Token: 0x0400260B RID: 9739
 		private const string TABLE = "MonthCardContent";
 
-		// Token: 0x04002572 RID: 9586
+		// Token: 0x0400260C RID: 9740
 		private const string COMMAND = "select BinData from `MonthCardContent` where Id=?";
 
-		// Token: 0x04002573 RID: 9587
+		// Token: 0x0400260D RID: 9741
 		private const string KEY_PREFIX = "MonthCardContentById";
 
-		// Token: 0x04002574 RID: 9588
+		// Token: 0x0400260E RID: 9742
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002575 RID: 9589
+		// Token: 0x0400260F RID: 9743
 		private static int HandleId;
 	}
 }

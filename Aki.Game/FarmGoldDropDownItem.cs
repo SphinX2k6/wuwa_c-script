@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Activity.ActivityContent.FarmGold;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001264 RID: 4708
+// Token: 0x02000718 RID: 1816
 [NullableContext(2)]
 [Nullable(0)]
 public class FarmGoldDropDownItem : GridProxyAbstract<FarmGoldDifficulty>
 {
-	// Token: 0x06008017 RID: 32791 RVA: 0x001B1770 File Offset: 0x001AF970
+	// Token: 0x060053AE RID: 21422 RVA: 0x001BA440 File Offset: 0x001B8640
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -33,7 +33,7 @@ public class FarmGoldDropDownItem : GridProxyAbstract<FarmGoldDifficulty>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008018 RID: 32792 RVA: 0x001B1818 File Offset: 0x001AFA18
+	// Token: 0x060053AF RID: 21423 RVA: 0x001BA4E8 File Offset: 0x001B86E8
 	private void OnClickItem(EToggleState toggleState)
 	{
 		if (this.Data != null)
@@ -47,20 +47,20 @@ public class FarmGoldDropDownItem : GridProxyAbstract<FarmGoldDifficulty>
 		}
 	}
 
-	// Token: 0x06008019 RID: 32793 RVA: 0x001B185B File Offset: 0x001AFA5B
+	// Token: 0x060053B0 RID: 21424 RVA: 0x001BA52B File Offset: 0x001B872B
 	public void SetClickCallback(Action<int, int> callback)
 	{
 		this.Callback = callback;
 	}
 
-	// Token: 0x0600801A RID: 32794 RVA: 0x001B1864 File Offset: 0x001AFA64
+	// Token: 0x060053B1 RID: 21425 RVA: 0x001BA534 File Offset: 0x001B8734
 	[NullableContext(1)]
 	public void SetActivityData(FarmGoldData data)
 	{
 		this.ActivityData = data;
 	}
 
-	// Token: 0x0600801B RID: 32795 RVA: 0x001B186D File Offset: 0x001AFA6D
+	// Token: 0x060053B2 RID: 21426 RVA: 0x001BA53D File Offset: 0x001B873D
 	public override void Refresh(FarmGoldDifficulty config, bool isSelected, int gridIndex)
 	{
 		this.Data = new FarmGoldDifficulty?(config);
@@ -69,41 +69,41 @@ public class FarmGoldDropDownItem : GridProxyAbstract<FarmGoldDifficulty>
 		this.SetToggleState(isSelected);
 	}
 
-	// Token: 0x0600801C RID: 32796 RVA: 0x001B18A8 File Offset: 0x001AFAA8
+	// Token: 0x060053B3 RID: 21427 RVA: 0x001BA578 File Offset: 0x001B8778
 	private void SetToggleState(bool isSelected)
 	{
 		EToggleState state = isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(1).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600801D RID: 32797 RVA: 0x001B18CE File Offset: 0x001AFACE
+	// Token: 0x060053B4 RID: 21428 RVA: 0x001BA59E File Offset: 0x001B879E
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
 	}
 
-	// Token: 0x0600801E RID: 32798 RVA: 0x001B18D7 File Offset: 0x001AFAD7
+	// Token: 0x060053B5 RID: 21429 RVA: 0x001BA5A7 File Offset: 0x001B87A7
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x04003A2E RID: 14894
+	// Token: 0x04003AC6 RID: 15046
 	private Action<int, int> Callback;
 
-	// Token: 0x04003A2F RID: 14895
+	// Token: 0x04003AC7 RID: 15047
 	private FarmGoldDifficulty? Data;
 
-	// Token: 0x04003A30 RID: 14896
+	// Token: 0x04003AC8 RID: 15048
 	private FarmGoldData ActivityData;
 
-	// Token: 0x02007877 RID: 30839
+	// Token: 0x02006A02 RID: 27138
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04027B11 RID: 162577
+		// Token: 0x04022E42 RID: 142914
 		Text,
-		// Token: 0x04027B12 RID: 162578
+		// Token: 0x04022E43 RID: 142915
 		Toggle
 	}
 }

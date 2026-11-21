@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E7C RID: 20092
+	// Token: 0x02003E45 RID: 15941
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleMapRoleLayoutItem : GridProxyAbstract<List<int>>
 	{
-		// Token: 0x06033B32 RID: 211762 RVA: 0x00C1BB50 File Offset: 0x00C19D50
+		// Token: 0x0602899D RID: 166301 RVA: 0x00B65074 File Offset: 0x00B63274
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B33 RID: 211763 RVA: 0x00C1BBC0 File Offset: 0x00C19DC0
+		// Token: 0x0602899E RID: 166302 RVA: 0x00B650E4 File Offset: 0x00B632E4
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add(EEventName.RogueResMapSummaryTeamUpdate, new Action<int>(this.OnClickSelected));
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.RoleLayout = new GenericLayout<RogueBattleMapRoleLayoutGrid, IRogueBattleMapRoleGridInfo>(base.GetGridLayout(2), new Func<RogueBattleMapRoleLayoutGrid>(this.CreateRoleItem), null, false, true);
 		}
 
-		// Token: 0x06033B34 RID: 211764 RVA: 0x00C1BC26 File Offset: 0x00C19E26
+		// Token: 0x0602899F RID: 166303 RVA: 0x00B6514A File Offset: 0x00B6334A
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueResMapSummaryTeamUpdate, new Action<int>(this.OnClickSelected));
 			EventSystem.Instance.Remove(EEventName.RogueResMapSummaryTeamShowAgain, new Action(this.OnShowAgain));
 		}
 
-		// Token: 0x06033B35 RID: 211765 RVA: 0x00C1BC60 File Offset: 0x00C19E60
+		// Token: 0x060289A0 RID: 166304 RVA: 0x00B65184 File Offset: 0x00B63384
 		private RogueBattleMapRoleLayoutGrid CreateRoleItem()
 		{
 			RogueBattleMapRoleLayoutGrid rogueBattleMapRoleLayoutGrid = new RogueBattleMapRoleLayoutGrid();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return rogueBattleMapRoleLayoutGrid;
 		}
 
-		// Token: 0x06033B36 RID: 211766 RVA: 0x00C1BC7C File Offset: 0x00C19E7C
+		// Token: 0x060289A1 RID: 166305 RVA: 0x00B651A0 File Offset: 0x00B633A0
 		private bool CanExecuteChangeFunction(object data, bool isForceSelected, EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return true;
 		}
 
-		// Token: 0x06033B37 RID: 211767 RVA: 0x00C1BCB8 File Offset: 0x00C19EB8
+		// Token: 0x060289A2 RID: 166306 RVA: 0x00B651DC File Offset: 0x00B633DC
 		private void OnClickSelected(int roleId)
 		{
 			int? currentSelected = this.CurrentSelected;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			RoleController.Instance.OnSelectedRoleChangeByConfig(roleId, roleConfig.Value.SkinId, null);
 		}
 
-		// Token: 0x06033B38 RID: 211768 RVA: 0x00C1BD78 File Offset: 0x00C19F78
+		// Token: 0x060289A3 RID: 166307 RVA: 0x00B6529C File Offset: 0x00B6349C
 		public override void Refresh(List<int> data, bool isSelected, int gridIndex)
 		{
 			this.RoleList = data;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}, false);
 		}
 
-		// Token: 0x06033B39 RID: 211769 RVA: 0x00C1BE44 File Offset: 0x00C1A044
+		// Token: 0x060289A4 RID: 166308 RVA: 0x00B65368 File Offset: 0x00B63568
 		private void OnShowAgain()
 		{
 			if (this.CurrentSelected == null)
@@ -131,13 +131,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			RoleController.Instance.OnSelectedRoleChangeByConfig(this.CurrentSelected.Value, roleConfig.Value.SkinId, null);
 		}
 
-		// Token: 0x0401B704 RID: 112388
+		// Token: 0x040160D7 RID: 90327
 		private GenericLayout<RogueBattleMapRoleLayoutGrid, IRogueBattleMapRoleGridInfo> RoleLayout;
 
-		// Token: 0x0401B705 RID: 112389
+		// Token: 0x040160D8 RID: 90328
 		private List<int> RoleList = new List<int>();
 
-		// Token: 0x0401B706 RID: 112390
+		// Token: 0x040160D9 RID: 90329
 		private int? CurrentSelected;
 	}
 }

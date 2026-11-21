@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006910 RID: 26896
+	// Token: 0x02006FC3 RID: 28611
 	public class IHideWorldEntityAndLevelPlayGroupT
 	{
-		// Token: 0x1700C793 RID: 51091
-		// (get) Token: 0x0602EF3A RID: 192314 RVA: 0x00667466 File Offset: 0x00665666
-		// (set) Token: 0x0602EF3B RID: 192315 RVA: 0x0066746E File Offset: 0x0066566E
+		// Token: 0x1700D196 RID: 53654
+		// (get) Token: 0x0603190A RID: 203018 RVA: 0x006B794E File Offset: 0x006B5B4E
+		// (set) Token: 0x0603190B RID: 203019 RVA: 0x006B7956 File Offset: 0x006B5B56
 		public EHideType Type { get; set; }
 
-		// Token: 0x1700C794 RID: 51092
-		// (get) Token: 0x0602EF3C RID: 192316 RVA: 0x00667477 File Offset: 0x00665677
-		// (set) Token: 0x0602EF3D RID: 192317 RVA: 0x0066747F File Offset: 0x0066567F
+		// Token: 0x1700D197 RID: 53655
+		// (get) Token: 0x0603190C RID: 203020 RVA: 0x006B795F File Offset: 0x006B5B5F
+		// (set) Token: 0x0603190D RID: 203021 RVA: 0x006B7967 File Offset: 0x006B5B67
 		public List<int> HideRangeEntities { get; set; }
 
-		// Token: 0x1700C795 RID: 51093
-		// (get) Token: 0x0602EF3E RID: 192318 RVA: 0x00667488 File Offset: 0x00665688
-		// (set) Token: 0x0602EF3F RID: 192319 RVA: 0x00667490 File Offset: 0x00665690
+		// Token: 0x1700D198 RID: 53656
+		// (get) Token: 0x0603190E RID: 203022 RVA: 0x006B7970 File Offset: 0x006B5B70
+		// (set) Token: 0x0603190F RID: 203023 RVA: 0x006B7978 File Offset: 0x006B5B78
 		public List<int> ExcludeEntities { get; set; }
 
-		// Token: 0x1700C796 RID: 51094
-		// (get) Token: 0x0602EF40 RID: 192320 RVA: 0x00667499 File Offset: 0x00665699
-		// (set) Token: 0x0602EF41 RID: 192321 RVA: 0x006674A1 File Offset: 0x006656A1
+		// Token: 0x1700D199 RID: 53657
+		// (get) Token: 0x06031910 RID: 203024 RVA: 0x006B7981 File Offset: 0x006B5B81
+		// (set) Token: 0x06031911 RID: 203025 RVA: 0x006B7989 File Offset: 0x006B5B89
 		public List<int> ExcludeLevelPlays { get; set; }
 
-		// Token: 0x1700C797 RID: 51095
-		// (get) Token: 0x0602EF42 RID: 192322 RVA: 0x006674AA File Offset: 0x006656AA
-		// (set) Token: 0x0602EF43 RID: 192323 RVA: 0x006674B2 File Offset: 0x006656B2
+		// Token: 0x1700D19A RID: 53658
+		// (get) Token: 0x06031912 RID: 203026 RVA: 0x006B7992 File Offset: 0x006B5B92
+		// (set) Token: 0x06031913 RID: 203027 RVA: 0x006B799A File Offset: 0x006B5B9A
 		public List<int> AppendEntities { get; set; }
 
-		// Token: 0x1700C798 RID: 51096
-		// (get) Token: 0x0602EF44 RID: 192324 RVA: 0x006674BB File Offset: 0x006656BB
-		// (set) Token: 0x0602EF45 RID: 192325 RVA: 0x006674C3 File Offset: 0x006656C3
+		// Token: 0x1700D19B RID: 53659
+		// (get) Token: 0x06031914 RID: 203028 RVA: 0x006B79A3 File Offset: 0x006B5BA3
+		// (set) Token: 0x06031915 RID: 203029 RVA: 0x006B79AB File Offset: 0x006B5BAB
 		public List<int> AppendLevelPlays { get; set; }
 
-		// Token: 0x1700C799 RID: 51097
-		// (get) Token: 0x0602EF46 RID: 192326 RVA: 0x006674CC File Offset: 0x006656CC
-		// (set) Token: 0x0602EF47 RID: 192327 RVA: 0x006674D4 File Offset: 0x006656D4
+		// Token: 0x1700D19C RID: 53660
+		// (get) Token: 0x06031916 RID: 203030 RVA: 0x006B79B4 File Offset: 0x006B5BB4
+		// (set) Token: 0x06031917 RID: 203031 RVA: 0x006B79BC File Offset: 0x006B5BBC
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602EF48 RID: 192328 RVA: 0x006674DD File Offset: 0x006656DD
+		// Token: 0x06031918 RID: 203032 RVA: 0x006B79C5 File Offset: 0x006B5BC5
 		public IHideWorldEntityAndLevelPlayGroupT()
 		{
 			this.Type = EHideType.WorldMonsterAndMonsterTreasure;

@@ -13,18 +13,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005622 RID: 22050
+	// Token: 0x020045F8 RID: 17912
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueMapModule : UiPanelBase
 	{
-		// Token: 0x06038167 RID: 229735 RVA: 0x00D48F4C File Offset: 0x00D4714C
+		// Token: 0x0602D065 RID: 184421 RVA: 0x00C96C94 File Offset: 0x00C94E94
 		public MapRogueMapModule(MapRogueGameInfo gameInfo)
 		{
 			this.GameInfo = gameInfo;
 		}
 
-		// Token: 0x06038168 RID: 229736 RVA: 0x00D49068 File Offset: 0x00D47268
+		// Token: 0x0602D066 RID: 184422 RVA: 0x00C96DB0 File Offset: 0x00C94FB0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06038169 RID: 229737 RVA: 0x00D49250 File Offset: 0x00D47450
+		// Token: 0x0602D067 RID: 184423 RVA: 0x00C96F98 File Offset: 0x00C95198
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MapRogueMapModule.<OnBeforeStartAsync>d__32 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603816A RID: 229738 RVA: 0x00D49294 File Offset: 0x00D47494
+		// Token: 0x0602D068 RID: 184424 RVA: 0x00C96FDC File Offset: 0x00C951DC
 		private UniTask InitMap()
 		{
 			MapRogueMapModule.<InitMap>d__33 <InitMap>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitMap>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603816B RID: 229739 RVA: 0x00D492D8 File Offset: 0x00D474D8
+		// Token: 0x0602D069 RID: 184425 RVA: 0x00C97020 File Offset: 0x00C95220
 		private void InitMoveComponent()
 		{
 			RogueResInstGrid? insGridConfigByInstId = MapRogueConfig.Instance.GetInsGridConfigByInstId(this.GameInfo.InstanceId);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GameInfo.TriggerGuideEventOnFocusEnd();
 		}
 
-		// Token: 0x0603816C RID: 229740 RVA: 0x00D4947C File Offset: 0x00D4767C
+		// Token: 0x0602D06A RID: 184426 RVA: 0x00C971C4 File Offset: 0x00C953C4
 		private void RefreshMoveComponent()
 		{
 			if (Info.Instance.IsInGamepad())
@@ -118,18 +118,18 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0603816D RID: 229741 RVA: 0x00D494DC File Offset: 0x00D476DC
+		// Token: 0x0602D06B RID: 184427 RVA: 0x00C97224 File Offset: 0x00C95424
 		public void MapShow()
 		{
 			this.ResetAllPath();
 			this.MoveComponent.BindTouch();
 			this.MoveComponent.AddGamepadEvent();
-			this.MoveComponent.AddMoveListener(this.GameInfo.CanInteract);
+			this.MoveComponent.AddMoveListener(this.GameInfo.CanInteract, false);
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 			InputDistributeController.Instance.BindAction("UI左键点击", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x0603816E RID: 229742 RVA: 0x00D49554 File Offset: 0x00D47754
+		// Token: 0x0602D06C RID: 184428 RVA: 0x00C9729C File Offset: 0x00C9549C
 		public void MapHide()
 		{
 			this.MoveComponent.UnbindTouch();
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			InputDistributeController.Instance.UnBindAction("UI左键点击", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x0603816F RID: 229743 RVA: 0x00D495BC File Offset: 0x00D477BC
+		// Token: 0x0602D06D RID: 184429 RVA: 0x00C97304 File Offset: 0x00C95504
 		protected override void OnBeforeDestroy()
 		{
 			this.GridEventItemMap.Clear();
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.CancelSingleClickTimer();
 		}
 
-		// Token: 0x06038170 RID: 229744 RVA: 0x00D49620 File Offset: 0x00D47820
+		// Token: 0x0602D06E RID: 184430 RVA: 0x00C97368 File Offset: 0x00C95568
 		public UniTask PlaySequence(string seqName)
 		{
 			MapRogueMapModule.<PlaySequence>d__39 <PlaySequence>d__;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <PlaySequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038171 RID: 229745 RVA: 0x00D4966B File Offset: 0x00D4786B
+		// Token: 0x0602D06F RID: 184431 RVA: 0x00C973B3 File Offset: 0x00C955B3
 		public void OnTick(float delta)
 		{
 			MapRoguePanelRole rolePanel = this.RolePanel;
@@ -183,14 +183,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.TickPendingList(delta);
 		}
 
-		// Token: 0x06038172 RID: 229746 RVA: 0x00D49694 File Offset: 0x00D47894
+		// Token: 0x0602D070 RID: 184432 RVA: 0x00C973DC File Offset: 0x00C955DC
 		private bool IsMapMoveOffsetDiff()
 		{
 			Vector2D b = Vector2D.Create(this.MoveComponent.GetMapItem().GetAnchorOffset());
 			return !this.MapTempPos.Equals(b, (double)this.ClickTolerance);
 		}
 
-		// Token: 0x06038173 RID: 229747 RVA: 0x00D496D4 File Offset: 0x00D478D4
+		// Token: 0x0602D071 RID: 184433 RVA: 0x00C9741C File Offset: 0x00C9561C
 		private void SetAnchorOffset(int id, UUIItem item)
 		{
 			ValueTuple<double, double> gridAnchorOffset = this.GetGridAnchorOffset(id, null);
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			item.SetAnchorOffset(this.PosTempVector.ToUeVector2D(false));
 		}
 
-		// Token: 0x06038174 RID: 229748 RVA: 0x00D49718 File Offset: 0x00D47918
+		// Token: 0x0602D072 RID: 184434 RVA: 0x00C97460 File Offset: 0x00C95660
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return new ValueTuple<double, double>(item, item2);
 		}
 
-		// Token: 0x06038175 RID: 229749 RVA: 0x00D49784 File Offset: 0x00D47984
+		// Token: 0x0602D073 RID: 184435 RVA: 0x00C974CC File Offset: 0x00C956CC
 		private double GetGridCreatePriority(int gridIndex)
 		{
 			MapRogueMapPoint gridPos = this.GameInfo.GetGridPos(this.GameInfo.PlayerGridIndex);
@@ -240,13 +240,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			return item3 + item4;
 		}
 
-		// Token: 0x06038176 RID: 229750 RVA: 0x00D497FF File Offset: 0x00D479FF
+		// Token: 0x0602D074 RID: 184436 RVA: 0x00C97547 File Offset: 0x00C95747
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.RefreshMoveComponent();
 		}
 
-		// Token: 0x06038177 RID: 229751 RVA: 0x00D49808 File Offset: 0x00D47A08
+		// Token: 0x0602D075 RID: 184437 RVA: 0x00C97550 File Offset: 0x00C95750
 		[NullableContext(2)]
 		public void FocusOnGrid(int gridId, bool needTween = true, Action callback = null, float? focusTweenTime = null)
 		{
@@ -271,14 +271,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			}, LTweenEase.InOutSine, tweenTime, callback);
 		}
 
-		// Token: 0x06038178 RID: 229752 RVA: 0x00D49874 File Offset: 0x00D47A74
+		// Token: 0x0602D076 RID: 184438 RVA: 0x00C975BC File Offset: 0x00C957BC
 		public void SetInteractAvailable(bool bAvailable)
 		{
 			base.GetButton(5).RootUIComp.Get().SetUIActive(!bAvailable);
 			this.MoveComponent.SwitchOnMove(bAvailable);
 		}
 
-		// Token: 0x06038179 RID: 229753 RVA: 0x00D498AC File Offset: 0x00D47AAC
+		// Token: 0x0602D077 RID: 184439 RVA: 0x00C975F4 File Offset: 0x00C957F4
 		public void SetInteractState(bool move, bool check, int? gridIndex = null)
 		{
 			this.CanMove = move;
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.GetItem(12).SetUIActive((move || check) && !this.MoveComponent.IsInDrag);
 		}
 
-		// Token: 0x0603817A RID: 229754 RVA: 0x00D49924 File Offset: 0x00D47B24
+		// Token: 0x0602D078 RID: 184440 RVA: 0x00C9766C File Offset: 0x00C9586C
 		protected void TickPendingList(float delta)
 		{
 			if (!this.InCreating)
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x0603817B RID: 229755 RVA: 0x00D49984 File Offset: 0x00D47B84
+		// Token: 0x0602D079 RID: 184441 RVA: 0x00C976CC File Offset: 0x00C958CC
 		private UniTask HandleCreatePending()
 		{
 			MapRogueMapModule.<HandleCreatePending>d__55 <HandleCreatePending>d__;
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <HandleCreatePending>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603817C RID: 229756 RVA: 0x00D499C8 File Offset: 0x00D47BC8
+		// Token: 0x0602D07A RID: 184442 RVA: 0x00C97710 File Offset: 0x00C95910
 		private void CheckViewLoadDone()
 		{
 			if (this.InCreating)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GameInfo.SetTipsItemProxy(false, null);
 		}
 
-		// Token: 0x0603817D RID: 229757 RVA: 0x00D49A20 File Offset: 0x00D47C20
+		// Token: 0x0602D07B RID: 184443 RVA: 0x00C97768 File Offset: 0x00C95968
 		private UniTask HandlePendingItem(IGridCreateInfo info)
 		{
 			MapRogueMapModule.<HandlePendingItem>d__57 <HandlePendingItem>d__;
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <HandlePendingItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603817E RID: 229758 RVA: 0x00D49A6C File Offset: 0x00D47C6C
+		// Token: 0x0602D07C RID: 184444 RVA: 0x00C977B4 File Offset: 0x00C959B4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <GetActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603817F RID: 229759 RVA: 0x00D49AC0 File Offset: 0x00D47CC0
+		// Token: 0x0602D07D RID: 184445 RVA: 0x00C97808 File Offset: 0x00C95A08
 		public void RecycleAllActor()
 		{
 			foreach (UiPoolActor uiPoolActor in this.UiPoolActorHandle)
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.UiPoolActorHandle.Clear();
 		}
 
-		// Token: 0x06038180 RID: 229760 RVA: 0x00D49B20 File Offset: 0x00D47D20
+		// Token: 0x0602D07E RID: 184446 RVA: 0x00C97868 File Offset: 0x00C95A68
 		protected void RecycleActor(UiPoolActor uiPoolActor)
 		{
 			if (this.GameInfo == null)
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038181 RID: 229761 RVA: 0x00D49B5C File Offset: 0x00D47D5C
+		// Token: 0x0602D07F RID: 184447 RVA: 0x00C978A4 File Offset: 0x00C95AA4
 		private UUIItem CreateMapGridPosItem(UUIItem rootItem, UUIItem parentItem, MapGridData data)
 		{
 			UUIItem uuiitem = LguiUtil.Instance.CopyItem(rootItem, parentItem);
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return uuiitem;
 		}
 
-		// Token: 0x06038182 RID: 229762 RVA: 0x00D49B8C File Offset: 0x00D47D8C
+		// Token: 0x0602D080 RID: 184448 RVA: 0x00C978D4 File Offset: 0x00C95AD4
 		protected UniTask CreateMapGridBg(MapGridData data)
 		{
 			MapRogueMapModule.<CreateMapGridBg>d__68 <CreateMapGridBg>d__;
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <CreateMapGridBg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038183 RID: 229763 RVA: 0x00D49BD8 File Offset: 0x00D47DD8
+		// Token: 0x0602D081 RID: 184449 RVA: 0x00C97920 File Offset: 0x00C95B20
 		protected UniTask CreateMapGridFog(int gridIndex)
 		{
 			MapRogueMapModule.<CreateMapGridFog>d__69 <CreateMapGridFog>d__;
@@ -431,7 +431,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <CreateMapGridFog>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038184 RID: 229764 RVA: 0x00D49C24 File Offset: 0x00D47E24
+		// Token: 0x0602D082 RID: 184450 RVA: 0x00C9796C File Offset: 0x00C95B6C
 		protected UniTask RefreshMapGridFogVision(int gridIndex, bool bHasVision)
 		{
 			MapRogueMapModule.<RefreshMapGridFogVision>d__70 <RefreshMapGridFogVision>d__;
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <RefreshMapGridFogVision>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038185 RID: 229765 RVA: 0x00D49C78 File Offset: 0x00D47E78
+		// Token: 0x0602D083 RID: 184451 RVA: 0x00C979C0 File Offset: 0x00C95BC0
 		public void RefreshMapGrid(MapGridData data)
 		{
 			MapRogueMapModule.<>c__DisplayClass71_0 CS$<>8__locals1 = new MapRogueMapModule.<>c__DisplayClass71_0();
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x06038186 RID: 229766 RVA: 0x00D49CE0 File Offset: 0x00D47EE0
+		// Token: 0x0602D084 RID: 184452 RVA: 0x00C97A28 File Offset: 0x00C95C28
 		public void SetMapGridBgVision(int gridIndex, bool bHasVision)
 		{
 			MapRogueMapModule.<>c__DisplayClass72_0 CS$<>8__locals1 = new MapRogueMapModule.<>c__DisplayClass72_0();
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x06038187 RID: 229767 RVA: 0x00D49D28 File Offset: 0x00D47F28
+		// Token: 0x0602D085 RID: 184453 RVA: 0x00C97A70 File Offset: 0x00C95C70
 		public void SetMapGridBgState(int gridIndex, bool bSelectOn, bool? bFireEvent = null)
 		{
 			MapRogueGrid mapRogueGrid = null;
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038188 RID: 229768 RVA: 0x00D49D58 File Offset: 0x00D47F58
+		// Token: 0x0602D086 RID: 184454 RVA: 0x00C97AA0 File Offset: 0x00C95CA0
 		public void SetMapGridMoveEnable(int gridIndex, bool bEnable)
 		{
 			MapRogueGrid mapRogueGrid = null;
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038189 RID: 229769 RVA: 0x00D49D80 File Offset: 0x00D47F80
+		// Token: 0x0602D087 RID: 184455 RVA: 0x00C97AC8 File Offset: 0x00C95CC8
 		public void SetPerspectiveMode(int gridIndex, bool bOn)
 		{
 			if (this.MoveComponent.IsInDrag)
@@ -521,7 +521,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0603818A RID: 229770 RVA: 0x00D49DB8 File Offset: 0x00D47FB8
+		// Token: 0x0602D088 RID: 184456 RVA: 0x00C97B00 File Offset: 0x00C95D00
 		[NullableContext(2)]
 		public IGridRangeInfo GetGridRangeInfo(int gridIndex)
 		{
@@ -542,8 +542,8 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x1700872C RID: 34604
-		// (get) Token: 0x0603818B RID: 229771 RVA: 0x00D49E89 File Offset: 0x00D48089
+		// Token: 0x17005AF3 RID: 23283
+		// (get) Token: 0x0602D089 RID: 184457 RVA: 0x00C97BD1 File Offset: 0x00C95DD1
 		private bool NeedDoubleClick
 		{
 			get
@@ -552,8 +552,8 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x1700872D RID: 34605
-		// (get) Token: 0x0603818C RID: 229772 RVA: 0x00D49E95 File Offset: 0x00D48095
+		// Token: 0x17005AF4 RID: 23284
+		// (get) Token: 0x0602D08A RID: 184458 RVA: 0x00C97BDD File Offset: 0x00C95DDD
 		private bool InClick
 		{
 			get
@@ -562,12 +562,12 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0603818D RID: 229773 RVA: 0x00D49EA3 File Offset: 0x00D480A3
+		// Token: 0x0602D08B RID: 184459 RVA: 0x00C97BEB File Offset: 0x00C95DEB
 		private void OnMaskBtnClick()
 		{
 		}
 
-		// Token: 0x0603818E RID: 229774 RVA: 0x00D49EA5 File Offset: 0x00D480A5
+		// Token: 0x0602D08C RID: 184460 RVA: 0x00C97BED File Offset: 0x00C95DED
 		private void CancelSingleClickTimer()
 		{
 			if (this.SingleClickTimerHandle != null && TimerSystem.GameplayTimeInstance.Has(this.SingleClickTimerHandle))
@@ -578,7 +578,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.InClickGridId = -1;
 		}
 
-		// Token: 0x0603818F RID: 229775 RVA: 0x00D49EE0 File Offset: 0x00D480E0
+		// Token: 0x0602D08D RID: 184461 RVA: 0x00C97C28 File Offset: 0x00C95E28
 		private void OnInputAction(string name, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (!this.NeedDoubleClick)
@@ -620,7 +620,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.CancelSingleClickTimer();
 		}
 
-		// Token: 0x06038190 RID: 229776 RVA: 0x00D49F88 File Offset: 0x00D48188
+		// Token: 0x0602D08E RID: 184462 RVA: 0x00C97CD0 File Offset: 0x00C95ED0
 		private bool OnGridBgExtendToggleCanExecute(EToggleState state, MapGridData data)
 		{
 			if (this.InClick)
@@ -638,20 +638,20 @@ namespace CSharpScript.Game.Module.MapRogue
 			return state == EToggleState.ETT_UnChecked && this.CanCheck;
 		}
 
-		// Token: 0x06038191 RID: 229777 RVA: 0x00D49FD9 File Offset: 0x00D481D9
+		// Token: 0x0602D08F RID: 184463 RVA: 0x00C97D21 File Offset: 0x00C95F21
 		private void OnGridBgPointerDown(EToggleState state, MapGridData data)
 		{
 			this.MapTempPos.FromUeVector2D(this.MoveComponent.GetMapItem().GetAnchorOffset());
 			this.MoveComponent.EmitPointerDown();
 		}
 
-		// Token: 0x06038192 RID: 229778 RVA: 0x00D4A006 File Offset: 0x00D48206
+		// Token: 0x0602D090 RID: 184464 RVA: 0x00C97D4E File Offset: 0x00C95F4E
 		private void OnGridBgExtendToggleStateChanged(EToggleState state, MapGridData data)
 		{
 			this.GameInfo.OnCheck(data.GridIndex);
 		}
 
-		// Token: 0x06038193 RID: 229779 RVA: 0x00D4A01C File Offset: 0x00D4821C
+		// Token: 0x0602D091 RID: 184465 RVA: 0x00C97D64 File Offset: 0x00C95F64
 		private void OnGridBgHover(MapGridData data)
 		{
 			this.SetSelectPanel(data);
@@ -666,7 +666,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GameInfo.HoverOnTarget(data.GridIndex, !Info.Instance.IsInTouch());
 		}
 
-		// Token: 0x06038194 RID: 229780 RVA: 0x00D4A06A File Offset: 0x00D4826A
+		// Token: 0x0602D092 RID: 184466 RVA: 0x00C97DB2 File Offset: 0x00C95FB2
 		private void OnGridBgUnHover(MapGridData data)
 		{
 			if (Info.Instance.IsInTouch())
@@ -676,7 +676,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GameInfo.UnHoverOnTarget(data.GridIndex);
 		}
 
-		// Token: 0x06038195 RID: 229781 RVA: 0x00D4A08A File Offset: 0x00D4828A
+		// Token: 0x0602D093 RID: 184467 RVA: 0x00C97DD2 File Offset: 0x00C95FD2
 		private void OnBackPlaneEnter()
 		{
 			if (this.InClick)
@@ -686,27 +686,27 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GameInfo.BlankPlaneEnter();
 		}
 
-		// Token: 0x06038196 RID: 229782 RVA: 0x00D4A0A5 File Offset: 0x00D482A5
+		// Token: 0x0602D094 RID: 184468 RVA: 0x00C97DED File Offset: 0x00C95FED
 		private void OnBackPlanePointerDown()
 		{
 			this.MoveComponent.EmitPointerDown();
 		}
 
-		// Token: 0x06038197 RID: 229783 RVA: 0x00D4A0B4 File Offset: 0x00D482B4
+		// Token: 0x0602D095 RID: 184469 RVA: 0x00C97DFC File Offset: 0x00C95FFC
 		private void OnBeginDrag(ULGUIPointerEventData _)
 		{
 			base.GetButton(16).RootUIComp.Get().SetUIActive(true);
 			base.GetItem(12).SetUIActive(false);
 		}
 
-		// Token: 0x06038198 RID: 229784 RVA: 0x00D4A0EC File Offset: 0x00D482EC
+		// Token: 0x0602D096 RID: 184470 RVA: 0x00C97E34 File Offset: 0x00C96034
 		private void OnEndDrag(ULGUIPointerEventData _)
 		{
 			base.GetButton(16).RootUIComp.Get().SetUIActive(false);
 			this.SetInteractState(this.CanMove, this.CanCheck, new int?(this.GameInfo.CurHoverIndex));
 		}
 
-		// Token: 0x06038199 RID: 229785 RVA: 0x00D4A138 File Offset: 0x00D48338
+		// Token: 0x0602D097 RID: 184471 RVA: 0x00C97E80 File Offset: 0x00C96080
 		protected UniTask CreateMapGridEvent(MapGridData data, bool bHasVision = true)
 		{
 			MapRogueMapModule.<CreateMapGridEvent>d__93 <CreateMapGridEvent>d__;
@@ -719,7 +719,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <CreateMapGridEvent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603819A RID: 229786 RVA: 0x00D4A18C File Offset: 0x00D4838C
+		// Token: 0x0602D098 RID: 184472 RVA: 0x00C97ED4 File Offset: 0x00C960D4
 		protected UniTask RefreshMapGridEventVision(MapGridData data, bool bHasVision)
 		{
 			MapRogueMapModule.<RefreshMapGridEventVision>d__94 <RefreshMapGridEventVision>d__;
@@ -732,7 +732,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <RefreshMapGridEventVision>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603819B RID: 229787 RVA: 0x00D4A1E0 File Offset: 0x00D483E0
+		// Token: 0x0602D099 RID: 184473 RVA: 0x00C97F28 File Offset: 0x00C96128
 		public void RefreshAllEventLv()
 		{
 			foreach (MapRogueGridEvent mapRogueGridEvent in this.GridEventItemMap.Values)
@@ -741,7 +741,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0603819C RID: 229788 RVA: 0x00D4A238 File Offset: 0x00D48438
+		// Token: 0x0602D09A RID: 184474 RVA: 0x00C97F80 File Offset: 0x00C96180
 		public void CreateAllMapGridPath(List<int> lastGridIdList, List<int> gridIdList)
 		{
 			MapRogueMapModule.<>c__DisplayClass96_0 CS$<>8__locals1 = new MapRogueMapModule.<>c__DisplayClass96_0();
@@ -760,7 +760,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x0603819D RID: 229789 RVA: 0x00D4A280 File Offset: 0x00D48480
+		// Token: 0x0602D09B RID: 184475 RVA: 0x00C97FC8 File Offset: 0x00C961C8
 		public UniTask CreateAllMapGridPathAsync(List<int> lastGridIdList, List<int> gridIdList)
 		{
 			MapRogueMapModule.<CreateAllMapGridPathAsync>d__97 <CreateAllMapGridPathAsync>d__;
@@ -773,7 +773,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <CreateAllMapGridPathAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603819E RID: 229790 RVA: 0x00D4A2D4 File Offset: 0x00D484D4
+		// Token: 0x0602D09C RID: 184476 RVA: 0x00C9801C File Offset: 0x00C9621C
 		protected UniTask CreateMapGridPath(int gridId, EShapeType shape, bool isLast, bool isCreate)
 		{
 			MapRogueMapModule.<CreateMapGridPath>d__98 <CreateMapGridPath>d__;
@@ -788,7 +788,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <CreateMapGridPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603819F RID: 229791 RVA: 0x00D4A338 File Offset: 0x00D48538
+		// Token: 0x0602D09D RID: 184477 RVA: 0x00C98080 File Offset: 0x00C96280
 		protected EShapeType GetShapeType(int curId, int preId, int nextId)
 		{
 			EShapeType eshapeType = (EShapeType)MapRogueMapModule.<GetShapeType>g__directionFunc|99_0(curId, preId);
@@ -796,7 +796,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return eshapeType * (EShapeType)10 + num;
 		}
 
-		// Token: 0x060381A0 RID: 229792 RVA: 0x00D4A35C File Offset: 0x00D4855C
+		// Token: 0x0602D09E RID: 184478 RVA: 0x00C980A4 File Offset: 0x00C962A4
 		public void ResetPath(int index)
 		{
 			MapRogueGridPath mapRogueGridPath = null;
@@ -810,7 +810,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GridPathItemMap.Remove(index);
 		}
 
-		// Token: 0x060381A1 RID: 229793 RVA: 0x00D4A3A0 File Offset: 0x00D485A0
+		// Token: 0x0602D09F RID: 184479 RVA: 0x00C980E8 File Offset: 0x00C962E8
 		public void ResetAllPath()
 		{
 			foreach (MapRogueGridPath mapRogueGridPath in this.GridPathItemMap.Values)
@@ -821,7 +821,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GridPathItemMap.Clear();
 		}
 
-		// Token: 0x060381A2 RID: 229794 RVA: 0x00D4A410 File Offset: 0x00D48610
+		// Token: 0x0602D0A0 RID: 184480 RVA: 0x00C98158 File Offset: 0x00C96358
 		private UniTask InitRole()
 		{
 			MapRogueMapModule.<InitRole>d__102 <InitRole>d__;
@@ -832,14 +832,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitRole>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060381A3 RID: 229795 RVA: 0x00D4A454 File Offset: 0x00D48654
+		// Token: 0x0602D0A1 RID: 184481 RVA: 0x00C9819C File Offset: 0x00C9639C
 		public void SetRolePos(int gridId)
 		{
 			UUIItem item = base.GetItem(4);
 			this.SetAnchorOffset(gridId, item);
 		}
 
-		// Token: 0x060381A4 RID: 229796 RVA: 0x00D4A474 File Offset: 0x00D48674
+		// Token: 0x0602D0A2 RID: 184482 RVA: 0x00C981BC File Offset: 0x00C963BC
 		public void SetRolePosByGrid(float progress, int lastGridId, int curGridId)
 		{
 			UUIItem item = base.GetItem(4);
@@ -855,7 +855,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			item.SetAnchorOffset(this.PosTempVector.ToUeVector2D(false));
 		}
 
-		// Token: 0x060381A5 RID: 229797 RVA: 0x00D4A4F4 File Offset: 0x00D486F4
+		// Token: 0x0602D0A3 RID: 184483 RVA: 0x00C9823C File Offset: 0x00C9643C
 		private void InitScaleSlider()
 		{
 			UUISliderComponent slider = base.GetSlider(9);
@@ -867,25 +867,25 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.ScaleDown = new LongPressButton(base.GetButton(8), new Action<float>(this.OnScaleDown), 100);
 		}
 
-		// Token: 0x060381A6 RID: 229798 RVA: 0x00D4A5A4 File Offset: 0x00D487A4
+		// Token: 0x0602D0A4 RID: 184484 RVA: 0x00C982EC File Offset: 0x00C964EC
 		private void OnScaleDown(float _)
 		{
 			this.MoveComponent.LongPressScroll((float)(-(float)this.MoveComponent.ScaleStep));
 		}
 
-		// Token: 0x060381A7 RID: 229799 RVA: 0x00D4A5BE File Offset: 0x00D487BE
+		// Token: 0x0602D0A5 RID: 184485 RVA: 0x00C98306 File Offset: 0x00C96506
 		private void OnScaleUp(float _)
 		{
 			this.MoveComponent.LongPressScroll((float)this.MoveComponent.ScaleStep);
 		}
 
-		// Token: 0x060381A8 RID: 229800 RVA: 0x00D4A5D7 File Offset: 0x00D487D7
+		// Token: 0x0602D0A6 RID: 184486 RVA: 0x00C9831F File Offset: 0x00C9651F
 		private void OnSliderValueChange(float value)
 		{
 			this.MoveComponent.SliderScroll(value);
 		}
 
-		// Token: 0x060381A9 RID: 229801 RVA: 0x00D4A5E8 File Offset: 0x00D487E8
+		// Token: 0x0602D0A7 RID: 184487 RVA: 0x00C98330 File Offset: 0x00C96530
 		private void OnChangeScale(ESetScaleSource source)
 		{
 			this.GameInfo.MapScale = this.MoveComponent.MapScale;
@@ -909,7 +909,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x060381AA RID: 229802 RVA: 0x00D4A700 File Offset: 0x00D48900
+		// Token: 0x0602D0A8 RID: 184488 RVA: 0x00C98448 File Offset: 0x00C96648
 		private UniTask InitSelectPanel()
 		{
 			MapRogueMapModule.<InitSelectPanel>d__115 <InitSelectPanel>d__;
@@ -920,7 +920,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitSelectPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060381AB RID: 229803 RVA: 0x00D4A744 File Offset: 0x00D48944
+		// Token: 0x0602D0A9 RID: 184489 RVA: 0x00C9848C File Offset: 0x00C9668C
 		protected void SetSelectPanel(MapGridData gridData)
 		{
 			int gridIndex = gridData.GridIndex;
@@ -963,7 +963,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x060381AC RID: 229804 RVA: 0x00D4A830 File Offset: 0x00D48A30
+		// Token: 0x0602D0AA RID: 184490 RVA: 0x00C98578 File Offset: 0x00C96778
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -983,7 +983,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return null;
 		}
 
-		// Token: 0x060381AD RID: 229805 RVA: 0x00D4A874 File Offset: 0x00D48A74
+		// Token: 0x0602D0AB RID: 184491 RVA: 0x00C985BC File Offset: 0x00C967BC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1009,7 +1009,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381B0 RID: 229808 RVA: 0x00D4A92A File Offset: 0x00D48B2A
+		// Token: 0x0602D0AE RID: 184494 RVA: 0x00C98672 File Offset: 0x00C96872
 		[CompilerGenerated]
 		internal static EWayType <GetShapeType>g__directionFunc|99_0(int g0, int g1)
 		{
@@ -1031,140 +1031,140 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0401D804 RID: 120836
+		// Token: 0x0401828F RID: 98959
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401D805 RID: 120837
+		// Token: 0x04018290 RID: 98960
 		protected BuildingMapMoveComponent MoveComponent;
 
-		// Token: 0x0401D806 RID: 120838
+		// Token: 0x04018291 RID: 98961
 		public MapRoguePanelRole RolePanel;
 
-		// Token: 0x0401D807 RID: 120839
+		// Token: 0x04018292 RID: 98962
 		protected readonly Dictionary<int, MapRogueGrid> GridItemMap = new Dictionary<int, MapRogueGrid>();
 
-		// Token: 0x0401D808 RID: 120840
+		// Token: 0x04018293 RID: 98963
 		protected readonly Dictionary<int, MapRogueGridEvent> GridEventItemMap = new Dictionary<int, MapRogueGridEvent>();
 
-		// Token: 0x0401D809 RID: 120841
+		// Token: 0x04018294 RID: 98964
 		protected readonly Dictionary<int, MapRogueGridPath> GridPathItemMap = new Dictionary<int, MapRogueGridPath>();
 
-		// Token: 0x0401D80A RID: 120842
+		// Token: 0x04018295 RID: 98965
 		protected readonly Dictionary<int, MapRogueGridFog> GridFogItemMap = new Dictionary<int, MapRogueGridFog>();
 
-		// Token: 0x0401D80B RID: 120843
+		// Token: 0x04018296 RID: 98966
 		protected readonly Dictionary<int, UUIItem> GridPosItemMap = new Dictionary<int, UUIItem>();
 
-		// Token: 0x0401D80C RID: 120844
+		// Token: 0x04018297 RID: 98967
 		protected readonly Dictionary<int, UUIItem> GridFogPosItemMap = new Dictionary<int, UUIItem>();
 
-		// Token: 0x0401D80D RID: 120845
+		// Token: 0x04018298 RID: 98968
 		protected readonly List<MapRogueGridPath> CachedPathItemList = new List<MapRogueGridPath>();
 
-		// Token: 0x0401D80E RID: 120846
+		// Token: 0x04018299 RID: 98969
 		protected Vector2D PosTempVector = Vector2D.Create();
 
-		// Token: 0x0401D80F RID: 120847
+		// Token: 0x0401829A RID: 98970
 		protected Vector2D MapTempPos = Vector2D.Create();
 
-		// Token: 0x0401D810 RID: 120848
+		// Token: 0x0401829B RID: 98971
 		protected global::Vector MapTempScaleVector = global::Vector.Create();
 
-		// Token: 0x0401D811 RID: 120849
+		// Token: 0x0401829C RID: 98972
 		private readonly int ClickTolerance = ConfigCommonParamById.GetIntConfig("MapRogueClickOffsetTolerance").GetValueOrDefault(10);
 
-		// Token: 0x0401D812 RID: 120850
+		// Token: 0x0401829D RID: 98973
 		private readonly double FocusTweenTime = (double)MapRogueConfig.Instance.GetGlobalParamConfig().Value.FocusTime / 1000.0;
 
-		// Token: 0x0401D813 RID: 120851
+		// Token: 0x0401829E RID: 98974
 		private const double X_BIAS = 110.0;
 
-		// Token: 0x0401D814 RID: 120852
+		// Token: 0x0401829F RID: 98975
 		private const double Y_BIAS = -64.0;
 
-		// Token: 0x0401D815 RID: 120853
+		// Token: 0x040182A0 RID: 98976
 		private const double CENTER_Y_BIAS = 16.0;
 
-		// Token: 0x0401D816 RID: 120854
+		// Token: 0x040182A1 RID: 98977
 		private const double RANGE_X = 110.0;
 
-		// Token: 0x0401D817 RID: 120855
+		// Token: 0x040182A2 RID: 98978
 		private const double RANGE_Y = 62.0;
 
-		// Token: 0x0401D818 RID: 120856
+		// Token: 0x040182A3 RID: 98979
 		private const double BG_MIN_SCALE = 1.0;
 
-		// Token: 0x0401D819 RID: 120857
+		// Token: 0x040182A4 RID: 98980
 		private const double BG_MAX_SCALE = 1.2999999523162842;
 
-		// Token: 0x0401D81A RID: 120858
+		// Token: 0x040182A5 RID: 98981
 		private const double VIEWPORT_PRIORITY_RATIO = 1.2999999523162842;
 
-		// Token: 0x0401D81B RID: 120859
+		// Token: 0x040182A6 RID: 98982
 		private const double THOUSANDTH_RATIO = 1000.0;
 
-		// Token: 0x0401D81C RID: 120860
+		// Token: 0x040182A7 RID: 98983
 		private const int PROCESSING_CREATE_COUNT = 120;
 
-		// Token: 0x0401D81D RID: 120861
+		// Token: 0x040182A8 RID: 98984
 		private const float PROCESSING_INTERVAL = 100f;
 
-		// Token: 0x0401D81E RID: 120862
+		// Token: 0x040182A9 RID: 98985
 		private const int CACHED_SELECT_PANEL_COUNT = 5;
 
-		// Token: 0x0401D81F RID: 120863
+		// Token: 0x040182AA RID: 98986
 		private const string RESOURCE_FRONT_PATH = "/Game/Aki/UI/UIResources/UiRogue/Prefabs/RogueMap/PnlMapPieceFront.PnlMapPieceFront";
 
-		// Token: 0x0401D820 RID: 120864
+		// Token: 0x040182AB RID: 98987
 		private const string RESOURCE_BACK_PATH = "/Game/Aki/UI/UIResources/UiRogue/Prefabs/RogueMap/PnlMapPieceBack.PnlMapPieceBack";
 
-		// Token: 0x0401D821 RID: 120865
+		// Token: 0x040182AC RID: 98988
 		protected MapRogueGameInfo GameInfo;
 
-		// Token: 0x0401D822 RID: 120866
+		// Token: 0x040182AD RID: 98989
 		protected List<UiPoolActor> UiPoolActorHandle = new List<UiPoolActor>();
 
-		// Token: 0x0401D823 RID: 120867
+		// Token: 0x040182AE RID: 98990
 		protected List<IGridCreateInfo> CreatePendingList = new List<IGridCreateInfo>();
 
-		// Token: 0x0401D824 RID: 120868
+		// Token: 0x040182AF RID: 98991
 		private int CurrentProcessingCount;
 
-		// Token: 0x0401D825 RID: 120869
+		// Token: 0x040182B0 RID: 98992
 		private float CreateDeltaTime;
 
-		// Token: 0x0401D826 RID: 120870
+		// Token: 0x040182B1 RID: 98993
 		private bool InCreating;
 
-		// Token: 0x0401D827 RID: 120871
+		// Token: 0x040182B2 RID: 98994
 		private readonly int DoubleClickIntervalTime = ConfigCommonParamById.GetIntConfig("MapRogueDoubleClickInterval").Value;
 
-		// Token: 0x0401D828 RID: 120872
+		// Token: 0x040182B3 RID: 98995
 		[Nullable(2)]
 		private TimerHandle SingleClickTimerHandle;
 
-		// Token: 0x0401D829 RID: 120873
+		// Token: 0x040182B4 RID: 98996
 		private int InClickGridId = -1;
 
-		// Token: 0x0401D82A RID: 120874
+		// Token: 0x040182B5 RID: 98997
 		private bool IsClickUp;
 
-		// Token: 0x0401D82B RID: 120875
+		// Token: 0x040182B6 RID: 98998
 		private bool CanMove;
 
-		// Token: 0x0401D82C RID: 120876
+		// Token: 0x040182B7 RID: 98999
 		private bool CanCheck;
 
-		// Token: 0x0401D82D RID: 120877
+		// Token: 0x040182B8 RID: 99000
 		[Nullable(2)]
 		protected LongPressButton ScaleUp;
 
-		// Token: 0x0401D82E RID: 120878
+		// Token: 0x040182B9 RID: 99001
 		[Nullable(2)]
 		protected LongPressButton ScaleDown;
 
-		// Token: 0x0401D82F RID: 120879
+		// Token: 0x040182BA RID: 99002
 		[Nullable(new byte[]
 		{
 			1,
@@ -1174,10 +1174,10 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		protected readonly List<ValueTuple<MapRogueGridSelectBase, MapRogueGridSelectBase>> CachedSelectPanelList = new List<ValueTuple<MapRogueGridSelectBase, MapRogueGridSelectBase>>();
 
-		// Token: 0x0401D830 RID: 120880
+		// Token: 0x040182BB RID: 99003
 		private readonly int[] OccupiedSelectPanelIndex = new int[5];
 
-		// Token: 0x0401D831 RID: 120881
+		// Token: 0x040182BC RID: 99004
 		private int LatestSelectPanelIndex;
 	}
 }

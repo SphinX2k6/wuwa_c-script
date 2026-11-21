@@ -8,16 +8,16 @@ using CSharpScript.Launcher.Platform;
 using CSharpScript.Launcher.Platform.PlatformSdk;
 using UnrealEngine;
 
-// Token: 0x02002755 RID: 10069
+// Token: 0x02001C40 RID: 7232
 public class PlayStationNetWorkMaskView : UiTickViewBase
 {
-	// Token: 0x06014A71 RID: 84593 RVA: 0x00539A6E File Offset: 0x00537C6E
+	// Token: 0x06011F54 RID: 73556 RVA: 0x00548902 File Offset: 0x00546B02
 	[NullableContext(1)]
 	public PlayStationNetWorkMaskView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014A72 RID: 84594 RVA: 0x00539A8C File Offset: 0x00537C8C
+	// Token: 0x06011F55 RID: 73557 RVA: 0x00548920 File Offset: 0x00546B20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,7 +33,7 @@ public class PlayStationNetWorkMaskView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014A73 RID: 84595 RVA: 0x00539B18 File Offset: 0x00537D18
+	// Token: 0x06011F56 RID: 73558 RVA: 0x005489AC File Offset: 0x00546BAC
 	protected override void OnStart()
 	{
 		this.TotalTime = 0f;
@@ -42,13 +42,13 @@ public class PlayStationNetWorkMaskView : UiTickViewBase
 		base.GetItem(0).SetUIActive(false);
 	}
 
-	// Token: 0x06014A74 RID: 84596 RVA: 0x00539B5D File Offset: 0x00537D5D
+	// Token: 0x06011F57 RID: 73559 RVA: 0x005489F1 File Offset: 0x00546BF1
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearConfirmId();
 	}
 
-	// Token: 0x06014A75 RID: 84597 RVA: 0x00539B65 File Offset: 0x00537D65
+	// Token: 0x06011F58 RID: 73560 RVA: 0x005489F9 File Offset: 0x00546BF9
 	private void ClearConfirmId()
 	{
 		if (this.ConfirmBoxId != null)
@@ -58,7 +58,7 @@ public class PlayStationNetWorkMaskView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014A76 RID: 84598 RVA: 0x00539B96 File Offset: 0x00537D96
+	// Token: 0x06011F59 RID: 73561 RVA: 0x00548A2A File Offset: 0x00546C2A
 	protected override void OnTick(float delta)
 	{
 		if (!this.CurrentTryReConnectState)
@@ -70,7 +70,7 @@ public class PlayStationNetWorkMaskView : UiTickViewBase
 		this.CheckPlayStationNetWork(delta);
 	}
 
-	// Token: 0x06014A77 RID: 84599 RVA: 0x00539BB8 File Offset: 0x00537DB8
+	// Token: 0x06011F5A RID: 73562 RVA: 0x00548A4C File Offset: 0x00546C4C
 	private void CheckPlayStationNetWork(float delta)
 	{
 		this.CheckPlayStationNetWorkTime += delta;
@@ -93,20 +93,20 @@ public class PlayStationNetWorkMaskView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014A78 RID: 84600 RVA: 0x00539C18 File Offset: 0x00537E18
+	// Token: 0x06011F5B RID: 73563 RVA: 0x00548AAC File Offset: 0x00546CAC
 	private void OnReConnectSuccess()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014A79 RID: 84601 RVA: 0x00539C21 File Offset: 0x00537E21
+	// Token: 0x06011F5C RID: 73564 RVA: 0x00548AB5 File Offset: 0x00546CB5
 	private void OnReConnectFail()
 	{
 		this.CurrentTryReConnectState = false;
 		this.InitBoxItem();
 	}
 
-	// Token: 0x06014A7A RID: 84602 RVA: 0x00539C30 File Offset: 0x00537E30
+	// Token: 0x06011F5D RID: 73565 RVA: 0x00548AC4 File Offset: 0x00546CC4
 	private void InitBoxItem()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PlayStationConnectFail);
@@ -120,13 +120,13 @@ public class PlayStationNetWorkMaskView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06014A7B RID: 84603 RVA: 0x00539CAE File Offset: 0x00537EAE
+	// Token: 0x06011F5E RID: 73566 RVA: 0x00548B42 File Offset: 0x00546D42
 	private void BackBtn()
 	{
 		ReConnectController.Instance.Logout(ELogoutReason.PsnUnAvailable);
 	}
 
-	// Token: 0x06014A7C RID: 84604 RVA: 0x00539CBB File Offset: 0x00537EBB
+	// Token: 0x06011F5F RID: 73567 RVA: 0x00548B4F File Offset: 0x00546D4F
 	private void OkBtn()
 	{
 		this.CurrentTryCount = 0;
@@ -134,7 +134,7 @@ public class PlayStationNetWorkMaskView : UiTickViewBase
 		this.ClearConfirmId();
 	}
 
-	// Token: 0x06014A7D RID: 84605 RVA: 0x00539CD4 File Offset: 0x00537ED4
+	// Token: 0x06011F60 RID: 73568 RVA: 0x00548B68 File Offset: 0x00546D68
 	private void RefreshNumberText(float delta)
 	{
 		this.TotalTime += delta;
@@ -149,7 +149,7 @@ public class PlayStationNetWorkMaskView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014A7E RID: 84606 RVA: 0x00539D60 File Offset: 0x00537F60
+	// Token: 0x06011F61 RID: 73569 RVA: 0x00548BF4 File Offset: 0x00546DF4
 	private void TickTipsTimeVisible(float deltaTime)
 	{
 		if (this.DelayTime < 0f)
@@ -163,49 +163,49 @@ public class PlayStationNetWorkMaskView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014A7F RID: 84607 RVA: 0x00539D98 File Offset: 0x00537F98
+	// Token: 0x06011F62 RID: 73570 RVA: 0x00548C2C File Offset: 0x00546E2C
 	private bool CheckPlayStationNetWorkState()
 	{
 		return Platform.Instance.IsPs5Platform() && PlatformSdkManagerNew.Instance.GetPlatformSdk().IsPlatformNetworkReachable();
 	}
 
-	// Token: 0x04009B3F RID: 39743
+	// Token: 0x04009C98 RID: 40088
 	private const int RETRYMAXCOUNT = 15;
 
-	// Token: 0x04009B40 RID: 39744
+	// Token: 0x04009C99 RID: 40089
 	private const int CHECKGAP = 1000;
 
-	// Token: 0x04009B41 RID: 39745
+	// Token: 0x04009C9A RID: 40090
 	private int? ConfirmBoxId;
 
-	// Token: 0x04009B42 RID: 39746
+	// Token: 0x04009C9B RID: 40091
 	private int Number;
 
-	// Token: 0x04009B43 RID: 39747
+	// Token: 0x04009C9C RID: 40092
 	private float TotalTime;
 
-	// Token: 0x04009B44 RID: 39748
+	// Token: 0x04009C9D RID: 40093
 	private float DelayTime;
 
-	// Token: 0x04009B45 RID: 39749
+	// Token: 0x04009C9E RID: 40094
 	private float CheckPlayStationNetWorkTime = 1000f;
 
-	// Token: 0x04009B46 RID: 39750
+	// Token: 0x04009C9F RID: 40095
 	private int CurrentTryCount;
 
-	// Token: 0x04009B47 RID: 39751
+	// Token: 0x04009CA0 RID: 40096
 	private bool CurrentTryReConnectState = true;
 
-	// Token: 0x02008DBE RID: 36286
+	// Token: 0x02007F47 RID: 32583
 	private static class EComponent
 	{
-		// Token: 0x0402E00F RID: 188431
+		// Token: 0x04029326 RID: 168742
 		public const int TipsItem = 0;
 
-		// Token: 0x0402E010 RID: 188432
+		// Token: 0x04029327 RID: 168743
 		public const int TipsTxt = 1;
 
-		// Token: 0x0402E011 RID: 188433
+		// Token: 0x04029328 RID: 168744
 		public const int TipsBgSpr = 2;
 	}
 }

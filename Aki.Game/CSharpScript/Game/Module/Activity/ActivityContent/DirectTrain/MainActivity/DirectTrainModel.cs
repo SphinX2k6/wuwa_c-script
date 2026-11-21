@@ -10,25 +10,25 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity
 {
-	// Token: 0x02006750 RID: 26448
+	// Token: 0x020056A0 RID: 22176
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class DirectTrainModel : ModelBase
 	{
-		// Token: 0x06042015 RID: 270357 RVA: 0x01002CEE File Offset: 0x01000EEE
+		// Token: 0x06036B67 RID: 224103 RVA: 0x00F44129 File Offset: 0x00F42329
 		public IReadOnlyList<int> GetMainSubActivityIds()
 		{
 			return this.MainSubActivityIds;
 		}
 
-		// Token: 0x06042016 RID: 270358 RVA: 0x01002CF6 File Offset: 0x01000EF6
+		// Token: 0x06036B68 RID: 224104 RVA: 0x00F44131 File Offset: 0x00F42331
 		public IReadOnlyList<int> GetProSubActivityIds()
 		{
 			return this.ProSubActivityIds;
 		}
 
-		// Token: 0x06042017 RID: 270359 RVA: 0x01002CFE File Offset: 0x01000EFE
+		// Token: 0x06036B69 RID: 224105 RVA: 0x00F44139 File Offset: 0x00F42339
 		[NullableContext(2)]
 		public void SetMainSubActivityIds(IReadOnlyList<int> ids)
 		{
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x06042018 RID: 270360 RVA: 0x01002D1A File Offset: 0x01000F1A
+		// Token: 0x06036B6A RID: 224106 RVA: 0x00F44155 File Offset: 0x00F42355
 		public int GetProMainActivityId()
 		{
 			return this.ProMainActivityId;
 		}
 
-		// Token: 0x06042019 RID: 270361 RVA: 0x01002D24 File Offset: 0x01000F24
+		// Token: 0x06036B6B RID: 224107 RVA: 0x00F44160 File Offset: 0x00F42360
 		public int GetProMainActivityHelpId()
 		{
 			if (this.ProMainActivityId == 0)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			return activityConfig.Value.HelpId;
 		}
 
-		// Token: 0x0604201A RID: 270362 RVA: 0x01002D68 File Offset: 0x01000F68
+		// Token: 0x06036B6C RID: 224108 RVA: 0x00F441A4 File Offset: 0x00F423A4
 		[NullableContext(2)]
 		public IDirectTrainSubActivityCache GetSubActivityCache(int subActivityId)
 		{
@@ -72,19 +72,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			return result;
 		}
 
-		// Token: 0x0604201B RID: 270363 RVA: 0x01002D88 File Offset: 0x01000F88
+		// Token: 0x06036B6D RID: 224109 RVA: 0x00F441C4 File Offset: 0x00F423C4
 		public IReadOnlyDictionary<int, IDirectTrainSubActivityCache> GetAllSubActivityCaches()
 		{
 			return this.SubActivityCacheMap;
 		}
 
-		// Token: 0x0604201C RID: 270364 RVA: 0x01002D90 File Offset: 0x01000F90
+		// Token: 0x06036B6E RID: 224110 RVA: 0x00F441CC File Offset: 0x00F423CC
 		public IReadOnlyDictionary<int, IDirectTrainSubActivityCache> GetAllProSubActivityCaches()
 		{
 			return this.ProSubActivityCacheMap;
 		}
 
-		// Token: 0x0604201D RID: 270365 RVA: 0x01002D98 File Offset: 0x01000F98
+		// Token: 0x06036B6F RID: 224111 RVA: 0x00F441D4 File Offset: 0x00F423D4
 		[NullableContext(2)]
 		public DirectTrainSubActivityViewModel BuildSubActivityViewModel(int subActivityId)
 		{
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			return directTrainSubActivityViewModel;
 		}
 
-		// Token: 0x0604201E RID: 270366 RVA: 0x01002DD4 File Offset: 0x01000FD4
+		// Token: 0x06036B70 RID: 224112 RVA: 0x00F44210 File Offset: 0x00F42410
 		public IReadOnlyList<DirectTrainSubActivityViewModel> BuildSubActivityViewModels(IReadOnlyList<int> subActivityIdOrder, IReadOnlyDictionary<int, IDirectTrainSubActivityCache> cacheSource, int mainActivityId)
 		{
 			Dictionary<int, int> orderIndex = new Dictionary<int, int>();
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			return list;
 		}
 
-		// Token: 0x0604201F RID: 270367 RVA: 0x01002E5C File Offset: 0x0100105C
+		// Token: 0x06036B71 RID: 224113 RVA: 0x00F44298 File Offset: 0x00F42498
 		public void RefreshSubActivityCache(int subActivityId)
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			this.SubActivityCacheMap[subActivityId] = value;
 		}
 
-		// Token: 0x06042020 RID: 270368 RVA: 0x01002EC0 File Offset: 0x010010C0
+		// Token: 0x06036B72 RID: 224114 RVA: 0x00F442FC File Offset: 0x00F424FC
 		public void RefreshProSubActivityCache(int subActivityId)
 		{
 			ActivityDirectTrainModel instance = ActivityDirectTrainModel.Instance;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			};
 		}
 
-		// Token: 0x06042021 RID: 270369 RVA: 0x01002F64 File Offset: 0x01001164
+		// Token: 0x06036B73 RID: 224115 RVA: 0x00F443A0 File Offset: 0x00F425A0
 		[NullableContext(2)]
 		public void LoadFromProInfoProto(DirectTrainInfoResponse proto)
 		{
@@ -246,14 +246,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x06042022 RID: 270370 RVA: 0x01003130 File Offset: 0x01001330
+		// Token: 0x06036B74 RID: 224116 RVA: 0x00F4456C File Offset: 0x00F4276C
 		[NullableContext(2)]
 		private ServerStorageSet GetFirstCheckSet()
 		{
 			return ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ThroughTrainFirstCheck) as ServerStorageSet;
 		}
 
-		// Token: 0x06042023 RID: 270371 RVA: 0x01003144 File Offset: 0x01001344
+		// Token: 0x06036B75 RID: 224117 RVA: 0x00F44580 File Offset: 0x00F42780
 		public bool HasUnReadSubActivity()
 		{
 			foreach (int subActivityId in this.SubActivityCacheMap.Keys)
@@ -273,21 +273,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			return false;
 		}
 
-		// Token: 0x06042024 RID: 270372 RVA: 0x010031F4 File Offset: 0x010013F4
+		// Token: 0x06036B76 RID: 224118 RVA: 0x00F44630 File Offset: 0x00F42830
 		public bool IsSubActivityUnRead(int subActivityId)
 		{
 			ServerStorageSet firstCheckSet = this.GetFirstCheckSet();
 			return firstCheckSet != null && !firstCheckSet.Has(subActivityId);
 		}
 
-		// Token: 0x06042025 RID: 270373 RVA: 0x01003218 File Offset: 0x01001418
+		// Token: 0x06036B77 RID: 224119 RVA: 0x00F44654 File Offset: 0x00F42854
 		public bool IsSubActivityRedDotOn(int subActivityId)
 		{
 			IDirectTrainSubActivityCache directTrainSubActivityCache;
 			return (this.SubActivityCacheMap.TryGetValue(subActivityId, out directTrainSubActivityCache) || this.ProSubActivityCacheMap.TryGetValue(subActivityId, out directTrainSubActivityCache)) && !directTrainSubActivityCache.IsFinish && directTrainSubActivityCache.IsUnLock && this.IsSubActivityUnRead(subActivityId);
 		}
 
-		// Token: 0x06042026 RID: 270374 RVA: 0x01003260 File Offset: 0x01001460
+		// Token: 0x06036B78 RID: 224120 RVA: 0x00F4469C File Offset: 0x00F4289C
 		public void MarkSubActivityAsRead(int subActivityId)
 		{
 			IDirectTrainSubActivityCache directTrainSubActivityCache;
@@ -308,8 +308,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			EventSystem.Instance.Emit<int>(EEventName.ActivityDirectTrainRedDotUpdate, 0);
 		}
 
-		// Token: 0x17009665 RID: 38501
-		// (get) Token: 0x06042027 RID: 270375 RVA: 0x010032C3 File Offset: 0x010014C3
+		// Token: 0x170069A4 RID: 27044
+		// (get) Token: 0x06036B79 RID: 224121 RVA: 0x00F446FF File Offset: 0x00F428FF
 		public static DirectTrainModel Instance
 		{
 			get
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x06042028 RID: 270376 RVA: 0x010032CA File Offset: 0x010014CA
+		// Token: 0x06036B7A RID: 224122 RVA: 0x00F44706 File Offset: 0x00F42906
 		public static DirectTrainModel GetOrCreateInstance()
 		{
 			if (DirectTrainModel._Instance == null)
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			return DirectTrainModel._Instance;
 		}
 
-		// Token: 0x06042029 RID: 270377 RVA: 0x010032DE File Offset: 0x010014DE
+		// Token: 0x06036B7B RID: 224123 RVA: 0x00F4471A File Offset: 0x00F4291A
 		public static bool CreateInstance()
 		{
 			if (DirectTrainModel._Instance != null)
@@ -339,39 +339,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			return true;
 		}
 
-		// Token: 0x0604202A RID: 270378 RVA: 0x010032F4 File Offset: 0x010014F4
+		// Token: 0x06036B7C RID: 224124 RVA: 0x00F44730 File Offset: 0x00F42930
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604202B RID: 270379 RVA: 0x010032F6 File Offset: 0x010014F6
+		// Token: 0x06036B7D RID: 224125 RVA: 0x00F44732 File Offset: 0x00F42932
 		public static void ResetStaticDefaultValue()
 		{
 			DirectTrainModel._Instance = null;
 		}
 
-		// Token: 0x0604202C RID: 270380 RVA: 0x010032FE File Offset: 0x010014FE
+		// Token: 0x06036B7E RID: 224126 RVA: 0x00F4473A File Offset: 0x00F4293A
 		static DirectTrainModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DirectTrainModel.CreateStaticDefaultValue), new Action(DirectTrainModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022617 RID: 140823
+		// Token: 0x0401CE70 RID: 118384
 		private readonly Dictionary<int, IDirectTrainSubActivityCache> SubActivityCacheMap = new Dictionary<int, IDirectTrainSubActivityCache>();
 
-		// Token: 0x04022618 RID: 140824
+		// Token: 0x0401CE71 RID: 118385
 		private readonly Dictionary<int, IDirectTrainSubActivityCache> ProSubActivityCacheMap = new Dictionary<int, IDirectTrainSubActivityCache>();
 
-		// Token: 0x04022619 RID: 140825
+		// Token: 0x0401CE72 RID: 118386
 		private int ProMainActivityId;
 
-		// Token: 0x0402261A RID: 140826
+		// Token: 0x0401CE73 RID: 118387
 		private readonly List<int> MainSubActivityIds = new List<int>();
 
-		// Token: 0x0402261B RID: 140827
+		// Token: 0x0401CE74 RID: 118388
 		private readonly List<int> ProSubActivityIds = new List<int>();
 
-		// Token: 0x0402261C RID: 140828
+		// Token: 0x0401CE75 RID: 118389
 		[Nullable(2)]
 		private static DirectTrainModel _Instance;
 	}

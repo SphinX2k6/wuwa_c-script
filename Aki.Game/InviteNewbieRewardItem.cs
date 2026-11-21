@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001290 RID: 4752
+// Token: 0x02000744 RID: 1860
 public class InviteNewbieRewardItem : UiPanelBase
 {
-	// Token: 0x060081EC RID: 33260 RVA: 0x001B8D1C File Offset: 0x001B6F1C
+	// Token: 0x06005583 RID: 21891 RVA: 0x001C19EC File Offset: 0x001BFBEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,20 +31,20 @@ public class InviteNewbieRewardItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060081ED RID: 33261 RVA: 0x001B8DE3 File Offset: 0x001B6FE3
+	// Token: 0x06005584 RID: 21892 RVA: 0x001C1AB3 File Offset: 0x001BFCB3
 	[NullableContext(1)]
 	public void SetActivityData(InviteNewbieProtocolContext data)
 	{
 		this.CurrentData = data;
 	}
 
-	// Token: 0x060081EE RID: 33262 RVA: 0x001B8DEC File Offset: 0x001B6FEC
+	// Token: 0x06005585 RID: 21893 RVA: 0x001C1ABC File Offset: 0x001BFCBC
 	private void OnClickRewardButton()
 	{
 		ActivityInviteNewbieController.Instance.HandleOnRewardClick(this.CurrentData);
 	}
 
-	// Token: 0x060081EF RID: 33263 RVA: 0x001B8DFE File Offset: 0x001B6FFE
+	// Token: 0x06005586 RID: 21894 RVA: 0x001C1ACE File Offset: 0x001BFCCE
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(2);
@@ -55,27 +55,27 @@ public class InviteNewbieRewardItem : UiPanelBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x060081F0 RID: 33264 RVA: 0x001B8E12 File Offset: 0x001B7012
+	// Token: 0x06005587 RID: 21895 RVA: 0x001C1AE2 File Offset: 0x001BFCE2
 	[NullableContext(1)]
 	public void RefreshByDataExternal(string textId, string score)
 	{
 		LguiUtil.Instance.TrySetLocalTextNew(base.GetText(1), textId, new <>z__ReadOnlySingleElementList<object>(score));
 	}
 
-	// Token: 0x04003ACD RID: 15053
+	// Token: 0x04003B65 RID: 15205
 	[Nullable(2)]
 	private InviteNewbieProtocolContext CurrentData;
 
-	// Token: 0x020078A6 RID: 30886
+	// Token: 0x02006A31 RID: 27185
 	private class EComponent
 	{
-		// Token: 0x04027BF9 RID: 162809
+		// Token: 0x04022F2A RID: 143146
 		public const int ConfirmButton = 0;
 
-		// Token: 0x04027BFA RID: 162810
+		// Token: 0x04022F2B RID: 143147
 		public const int ScoreText = 1;
 
-		// Token: 0x04027BFB RID: 162811
+		// Token: 0x04022F2C RID: 143148
 		public const int RedDotItem = 2;
 	}
 }

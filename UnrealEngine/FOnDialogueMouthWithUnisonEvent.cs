@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002703 RID: 9987
+	// Token: 0x020007D8 RID: 2008
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnDialogueMouthWithUnisonEvent : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06025089 RID: 151689 RVA: 0x0036CBA5 File Offset: 0x0036ADA5
+		// Token: 0x0600ACEE RID: 44270 RVA: 0x000FF701 File Offset: 0x000FD901
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnDialogueMouthWithUnisonEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x0602508A RID: 151690 RVA: 0x0036CBB1 File Offset: 0x0036ADB1
+		// Token: 0x0600ACEF RID: 44271 RVA: 0x000FF70D File Offset: 0x000FD90D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnDialogueMouthWithUnisonEvent._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnDialogueMouthWithUnisonEvent._FunctionPtr;
 		}
 
-		// Token: 0x0602508B RID: 151691 RVA: 0x0036CBD4 File Offset: 0x0036ADD4
+		// Token: 0x0600ACF0 RID: 44272 RVA: 0x000FF730 File Offset: 0x000FD930
 		public FOnDialogueMouthWithUnisonEvent()
 		{
 		}
 
-		// Token: 0x0602508C RID: 151692 RVA: 0x0036CBDC File Offset: 0x0036ADDC
+		// Token: 0x0600ACF1 RID: 44273 RVA: 0x000FF738 File Offset: 0x000FD938
 		[NullableContext(2)]
 		public FOnDialogueMouthWithUnisonEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602508D RID: 151693 RVA: 0x0036CBE6 File Offset: 0x0036ADE6
+		// Token: 0x0600ACF2 RID: 44274 RVA: 0x000FF742 File Offset: 0x000FD942
 		public FOnDialogueMouthWithUnisonEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602508E RID: 151694 RVA: 0x0036CBF1 File Offset: 0x0036ADF1
+		// Token: 0x0600ACF3 RID: 44275 RVA: 0x000FF74D File Offset: 0x000FD94D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as FOnDialogueMouthWithUnisonEvent.FOnDialogueMouthWithUnisonEvent_ScriptDelegate) ?? ((FOnDialogueMouthWithUnisonEvent.FOnDialogueMouthWithUnisonEvent_ScriptDelegate)Delegate.CreateDelegate(typeof(FOnDialogueMouthWithUnisonEvent.FOnDialogueMouthWithUnisonEvent_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0602508F RID: 151695 RVA: 0x0036CC23 File Offset: 0x0036AE23
+		// Token: 0x0600ACF4 RID: 44276 RVA: 0x000FF77F File Offset: 0x000FD97F
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(FOnDialogueMouthWithUnisonEvent.FOnDialogueMouthWithUnisonEvent_ScriptDelegate Callback)
 		{
 			if (FOnDialogueMouthWithUnisonEvent.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FOnDialogueMouthWithUnisonEvent.RegisterId);
 		}
 
-		// Token: 0x06025090 RID: 151696 RVA: 0x0036CC5D File Offset: 0x0036AE5D
+		// Token: 0x0600ACF5 RID: 44277 RVA: 0x000FF7B9 File Offset: 0x000FD9B9
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(FOnDialogueMouthWithUnisonEvent.FOnDialogueMouthWithUnisonEvent_ScriptDelegate Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06025091 RID: 151697 RVA: 0x0036CC68 File Offset: 0x0036AE68
+		// Token: 0x0600ACF6 RID: 44278 RVA: 0x000FF7C4 File Offset: 0x000FD9C4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool bShow, in FText SpeakerName, in FText DialogueKey, in int SpeakerId, [Nullable(2)] in TArray<int> UnisonIdList)
 		{
 			FOnDialogueMouthWithUnisonEvent.__FOnDialogueMouthWithUnisonEvent_DelegateParams* ptr = stackalloc FOnDialogueMouthWithUnisonEvent.__FOnDialogueMouthWithUnisonEvent_DelegateParams[(UIntPtr)95] + 15L / (long)sizeof(FOnDialogueMouthWithUnisonEvent.__FOnDialogueMouthWithUnisonEvent_DelegateParams) & -16L;
@@ -101,10 +98,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnDialogueMouthWithUnisonEvent._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025092 RID: 151698 RVA: 0x0036CD10 File Offset: 0x0036AF10
+		// Token: 0x0600ACF7 RID: 44279 RVA: 0x000FF86C File Offset: 0x000FDA6C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FOnDialogueMouthWithUnisonEvent.FOnDialogueMouthWithUnisonEvent_ScriptDelegate fonDialogueMouthWithUnisonEvent_ScriptDelegate = target as FOnDialogueMouthWithUnisonEvent.FOnDialogueMouthWithUnisonEvent_ScriptDelegate;
@@ -124,51 +120,51 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04013F41 RID: 81729
+		// Token: 0x04004A91 RID: 19089
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04013F42 RID: 81730
+		// Token: 0x04004A92 RID: 19090
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SequenceDialogue.OnDialogueMouthWithUnisonEvent__DelegateSignature";
 
-		// Token: 0x04013F43 RID: 81731
+		// Token: 0x04004A93 RID: 19091
 		private static int RegisterId;
 
-		// Token: 0x020036A0 RID: 13984
-		// (Invoke) Token: 0x060285C6 RID: 165318
+		// Token: 0x02000F7B RID: 3963
+		// (Invoke) Token: 0x0600BF2B RID: 48939
 		public delegate void FOnDialogueMouthWithUnisonEvent_ScriptDelegate(bool bShow, in FText SpeakerName, in FText DialogueKey, in int SpeakerId, [Nullable(2)] in TArray<int> UnisonIdList);
 
-		// Token: 0x020036A1 RID: 13985
+		// Token: 0x02000F7C RID: 3964
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
-		protected ref struct __FOnDialogueMouthWithUnisonEvent_DelegateParams
+		private ref struct __FOnDialogueMouthWithUnisonEvent_DelegateParams
 		{
-			// Token: 0x040177AA RID: 96170
+			// Token: 0x0400636C RID: 25452
 			[FieldOffset(0)]
 			public bool bShow;
 
-			// Token: 0x040177AB RID: 96171
+			// Token: 0x0400636D RID: 25453
 			[FieldOffset(8)]
 			public byte SpeakerName;
 
-			// Token: 0x040177AC RID: 96172
+			// Token: 0x0400636E RID: 25454
 			[FieldOffset(32)]
 			public byte DialogueKey;
 
-			// Token: 0x040177AD RID: 96173
+			// Token: 0x0400636F RID: 25455
 			[FieldOffset(56)]
 			public int SpeakerId;
 
-			// Token: 0x040177AE RID: 96174
+			// Token: 0x04006370 RID: 25456
 			[FieldOffset(64)]
 			public byte UnisonIdList;
 		}
 
-		// Token: 0x020036A2 RID: 13986
+		// Token: 0x02000F7D RID: 3965
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040177AF RID: 96175
+			// Token: 0x04006371 RID: 25457
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

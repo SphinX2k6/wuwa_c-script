@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MonsterGroup
 {
-	// Token: 0x020053C2 RID: 21442
+	// Token: 0x020043A5 RID: 17317
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MonsterEcologyInfo
 	{
-		// Token: 0x06036C82 RID: 224386 RVA: 0x00CF7278 File Offset: 0x00CF5478
+		// Token: 0x0602BBC8 RID: 179144 RVA: 0x00C46320 File Offset: 0x00C44520
 		public MonsterEcologyInfo(int id, CharacterActorComponent actorComp, MonsterGroupEcologyInfo group, bool isCaptain)
 		{
 			this.PbDataId = id;
@@ -20,9 +20,9 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.IsCaptain = isCaptain;
 		}
 
-		// Token: 0x170083B6 RID: 33718
-		// (get) Token: 0x06036C83 RID: 224387 RVA: 0x00CF72FB File Offset: 0x00CF54FB
-		// (set) Token: 0x06036C84 RID: 224388 RVA: 0x00CF7304 File Offset: 0x00CF5504
+		// Token: 0x17005782 RID: 22402
+		// (get) Token: 0x0602BBC9 RID: 179145 RVA: 0x00C463A3 File Offset: 0x00C445A3
+		// (set) Token: 0x0602BBCA RID: 179146 RVA: 0x00C463AC File Offset: 0x00C445AC
 		public EGroupEcologyState GroupEcologyState
 		{
 			get
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036C85 RID: 224389 RVA: 0x00CF7338 File Offset: 0x00CF5538
+		// Token: 0x0602BBCB RID: 179147 RVA: 0x00C463E0 File Offset: 0x00C445E0
 		public static string StateToString(EGroupEcologyState state)
 		{
 			switch (state)
@@ -71,41 +71,41 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x0401CE9B RID: 118427
+		// Token: 0x04017933 RID: 96563
 		private const float TARGET_END_DISTANCE = 30f;
 
-		// Token: 0x0401CE9C RID: 118428
+		// Token: 0x04017934 RID: 96564
 		public readonly int PbDataId;
 
-		// Token: 0x0401CE9D RID: 118429
+		// Token: 0x04017935 RID: 96565
 		public readonly int EntityId;
 
-		// Token: 0x0401CE9E RID: 118430
+		// Token: 0x04017936 RID: 96566
 		[Nullable(2)]
 		public CharacterActorComponent ActorComp;
 
-		// Token: 0x0401CE9F RID: 118431
+		// Token: 0x04017937 RID: 96567
 		[Nullable(2)]
 		public BaseMoveComponent MoveComp;
 
-		// Token: 0x0401CEA0 RID: 118432
+		// Token: 0x04017938 RID: 96568
 		[Nullable(2)]
 		public BaseGroupAiComponent GroupAiComp;
 
-		// Token: 0x0401CEA1 RID: 118433
+		// Token: 0x04017939 RID: 96569
 		[Nullable(2)]
 		public MonsterGroupEcologyInfo Group;
 
-		// Token: 0x0401CEA2 RID: 118434
+		// Token: 0x0401793A RID: 96570
 		public bool IsCaptain;
 
-		// Token: 0x0401CEA3 RID: 118435
+		// Token: 0x0401793B RID: 96571
 		public Vector TargetLocation = Vector.Create();
 
-		// Token: 0x0401CEA4 RID: 118436
+		// Token: 0x0401793C RID: 96572
 		public Rotator TargetRotator = Rotator.Create();
 
-		// Token: 0x0401CEA5 RID: 118437
+		// Token: 0x0401793D RID: 96573
 		private EGroupEcologyState GroupEcologyStateInternal;
 	}
 }

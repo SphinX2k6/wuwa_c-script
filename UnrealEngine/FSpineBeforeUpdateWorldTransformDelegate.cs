@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028AC RID: 10412
+	// Token: 0x0200083E RID: 2110
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FSpineBeforeUpdateWorldTransformDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060269A7 RID: 158119 RVA: 0x003AE908 File Offset: 0x003ACB08
+		// Token: 0x0600B7CD RID: 47053 RVA: 0x00126ACC File Offset: 0x00124CCC
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSpineBeforeUpdateWorldTransformDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x060269A8 RID: 158120 RVA: 0x003AE914 File Offset: 0x003ACB14
+		// Token: 0x0600B7CE RID: 47054 RVA: 0x00126AD8 File Offset: 0x00124CD8
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSpineBeforeUpdateWorldTransformDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FSpineBeforeUpdateWorldTransformDelegate._FunctionPtr;
 		}
 
-		// Token: 0x060269A9 RID: 158121 RVA: 0x003AE937 File Offset: 0x003ACB37
+		// Token: 0x0600B7CF RID: 47055 RVA: 0x00126AFB File Offset: 0x00124CFB
 		public FSpineBeforeUpdateWorldTransformDelegate()
 		{
 		}
 
-		// Token: 0x060269AA RID: 158122 RVA: 0x003AE93F File Offset: 0x003ACB3F
+		// Token: 0x0600B7D0 RID: 47056 RVA: 0x00126B03 File Offset: 0x00124D03
 		[NullableContext(2)]
 		public FSpineBeforeUpdateWorldTransformDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060269AB RID: 158123 RVA: 0x003AE949 File Offset: 0x003ACB49
+		// Token: 0x0600B7D1 RID: 47057 RVA: 0x00126B0D File Offset: 0x00124D0D
 		public FSpineBeforeUpdateWorldTransformDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060269AC RID: 158124 RVA: 0x003AE954 File Offset: 0x003ACB54
+		// Token: 0x0600B7D2 RID: 47058 RVA: 0x00126B18 File Offset: 0x00124D18
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<USpineSkeletonComponent>) ?? ((Action<USpineSkeletonComponent>)Delegate.CreateDelegate(typeof(Action<USpineSkeletonComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060269AD RID: 158125 RVA: 0x003AE986 File Offset: 0x003ACB86
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600B7D3 RID: 47059 RVA: 0x00126B4A File Offset: 0x00124D4A
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FSpineBeforeUpdateWorldTransformDelegate.RegisterId);
 		}
 
-		// Token: 0x060269AE RID: 158126 RVA: 0x003AE9C0 File Offset: 0x003ACBC0
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600B7D4 RID: 47060 RVA: 0x00126B84 File Offset: 0x00124D84
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060269AF RID: 158127 RVA: 0x003AE9CC File Offset: 0x003ACBCC
+		// Token: 0x0600B7D5 RID: 47061 RVA: 0x00126B90 File Offset: 0x00124D90
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(USpineSkeletonComponent skeleton)
 		{
 			FSpineBeforeUpdateWorldTransformDelegate.__FSpineBeforeUpdateWorldTransformDelegate_DelegateParams* ptr = stackalloc FSpineBeforeUpdateWorldTransformDelegate.__FSpineBeforeUpdateWorldTransformDelegate_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FSpineBeforeUpdateWorldTransformDelegate.__FSpineBeforeUpdateWorldTransformDelegate_DelegateParams) & -16L;
@@ -93,10 +90,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x060269B0 RID: 158128 RVA: 0x003AEA18 File Offset: 0x003ACC18
+		// Token: 0x0600B7D6 RID: 47062 RVA: 0x00126BDC File Offset: 0x00124DDC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<USpineSkeletonComponent> action = target as Action<USpineSkeletonComponent>;
@@ -108,31 +104,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0401533F RID: 86847
+		// Token: 0x04005384 RID: 21380
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04015340 RID: 86848
+		// Token: 0x04005385 RID: 21381
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SpinePlugin.SpineBeforeUpdateWorldTransformDelegate__DelegateSignature";
 
-		// Token: 0x04015341 RID: 86849
+		// Token: 0x04005386 RID: 21382
 		private static int RegisterId;
 
-		// Token: 0x02003B46 RID: 15174
+		// Token: 0x020013D6 RID: 5078
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FSpineBeforeUpdateWorldTransformDelegate_DelegateParams
+		private ref struct __FSpineBeforeUpdateWorldTransformDelegate_DelegateParams
 		{
-			// Token: 0x04017CEB RID: 97515
+			// Token: 0x04006841 RID: 26689
 			[FieldOffset(0)]
 			public IntPtr skeleton;
 		}
 
-		// Token: 0x02003B47 RID: 15175
+		// Token: 0x020013D7 RID: 5079
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017CEC RID: 97516
+			// Token: 0x04006842 RID: 26690
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

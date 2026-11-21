@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020013F9 RID: 5113
+// Token: 0x020008AD RID: 2221
 public interface IPinballRoleTabViewRoleChange
 {
-	// Token: 0x06009088 RID: 37000
+	// Token: 0x0600641D RID: 25629
 	void RefreshByRoleChange();
 }

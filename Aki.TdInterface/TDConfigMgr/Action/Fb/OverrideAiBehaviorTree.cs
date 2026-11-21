@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A7E RID: 10878
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D72 RID: 11634
 	public class OverrideAiBehaviorTree : ActionParams
 	{
-		// Token: 0x0600EF1E RID: 61214 RVA: 0x0022C789 File Offset: 0x0022A989
+		// Token: 0x0600FDD4 RID: 64980 RVA: 0x0024A495 File Offset: 0x00248695
 		public static OverrideAiBehaviorTree Create(IOverrideAiBehaviorTree? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BE4 RID: 19428
-		// (get) Token: 0x0600EF1F RID: 61215 RVA: 0x0022C7A8 File Offset: 0x0022A9A8
+		// Token: 0x17004F9E RID: 20382
+		// (get) Token: 0x0600FDD5 RID: 64981 RVA: 0x0024A4B4 File Offset: 0x002486B4
 		public virtual string Key
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BE5 RID: 19429
-		// (get) Token: 0x0600EF20 RID: 61216 RVA: 0x0022C7B8 File Offset: 0x0022A9B8
+		// Token: 0x17004F9F RID: 20383
+		// (get) Token: 0x0600FDD6 RID: 64982 RVA: 0x0024A4C4 File Offset: 0x002486C4
 		public virtual List<int> EntityIds
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BE6 RID: 19430
-		// (get) Token: 0x0600EF21 RID: 61217 RVA: 0x0022C81C File Offset: 0x0022AA1C
+		// Token: 0x17004FA0 RID: 20384
+		// (get) Token: 0x0600FDD7 RID: 64983 RVA: 0x0024A528 File Offset: 0x00248728
 		public virtual int BehaviorTree
 		{
 			get
@@ -65,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BE7 RID: 19431
-		// (get) Token: 0x0600EF22 RID: 61218 RVA: 0x0022C829 File Offset: 0x0022AA29
+		// Token: 0x17004FA1 RID: 20385
+		// (get) Token: 0x0600FDD8 RID: 64984 RVA: 0x0024A535 File Offset: 0x00248735
 		[Nullable(2)]
 		public virtual ICommonBtOverride CommonBtOverride
 		{
@@ -83,8 +81,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BE8 RID: 19432
-		// (get) Token: 0x0600EF23 RID: 61219 RVA: 0x0022C85D File Offset: 0x0022AA5D
+		// Token: 0x17004FA2 RID: 20386
+		// (get) Token: 0x0600FDD9 RID: 64985 RVA: 0x0024A569 File Offset: 0x00248769
 		[Nullable(2)]
 		public virtual IConditionGroup RemoveCondition
 		{
@@ -101,27 +99,27 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008394 RID: 33684
+		// Token: 0x04008A98 RID: 35480
 		private IOverrideAiBehaviorTree Instance;
 
-		// Token: 0x04008395 RID: 33685
+		// Token: 0x04008A99 RID: 35481
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04008396 RID: 33686
+		// Token: 0x04008A9A RID: 35482
 		private bool _EntityIdsInited;
 
-		// Token: 0x04008397 RID: 33687
+		// Token: 0x04008A9B RID: 35483
 		[Nullable(2)]
 		private ICommonBtOverride _CommonBtOverrideCache;
 
-		// Token: 0x04008398 RID: 33688
+		// Token: 0x04008A9C RID: 35484
 		private bool _CommonBtOverrideInited;
 
-		// Token: 0x04008399 RID: 33689
+		// Token: 0x04008A9D RID: 35485
 		[Nullable(2)]
 		private IConditionGroup _RemoveConditionCache;
 
-		// Token: 0x0400839A RID: 33690
+		// Token: 0x04008A9E RID: 35486
 		private bool _RemoveConditionInited;
 	}
 }

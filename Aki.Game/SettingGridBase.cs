@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Util;
 
-// Token: 0x02001FBB RID: 8123
+// Token: 0x0200147D RID: 5245
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,18 +12,18 @@ using CSharpScript.Game.Module.Util;
 })]
 public class SettingGridBase : GridProxyAbstract<InventoryDefine.IManageConfigSettingGridData>
 {
-	// Token: 0x0600FDFD RID: 65021 RVA: 0x003D9CAA File Offset: 0x003D7EAA
+	// Token: 0x0600D223 RID: 53795 RVA: 0x003E5686 File Offset: 0x003E3886
 	public override void Refresh(InventoryDefine.IManageConfigSettingGridData data, bool isSelected, int gridIndex)
 	{
 	}
 
-	// Token: 0x0600FDFE RID: 65022 RVA: 0x003D9CAC File Offset: 0x003D7EAC
+	// Token: 0x0600D224 RID: 53796 RVA: 0x003E5688 File Offset: 0x003E3888
 	public override object GetKey(InventoryDefine.IManageConfigSettingGridData data, int displayIndex)
 	{
 		return base.GridIndex;
 	}
 
-	// Token: 0x0400759D RID: 30109
+	// Token: 0x0400767F RID: 30335
 	[Nullable(new byte[]
 	{
 		2,

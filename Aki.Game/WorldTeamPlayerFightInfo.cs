@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 
-// Token: 0x020022E0 RID: 8928
+// Token: 0x020017C4 RID: 6084
 [NullableContext(1)]
 [Nullable(0)]
 public class WorldTeamPlayerFightInfo
 {
-	// Token: 0x0601194C RID: 72012 RVA: 0x0044F578 File Offset: 0x0044D778
+	// Token: 0x0600EDE4 RID: 60900 RVA: 0x0045C244 File Offset: 0x0045A444
 	public WorldTeamPlayerFightInfo(string name, int playerId, int curRoleId, string playStationOnlineName, string playStationAccountId, string xboxUserId, string xboxOnlineName, List<WorldTeamRoleInfo> roleInfos)
 	{
 		this.NameInternal = name;
@@ -25,8 +25,8 @@ public class WorldTeamPlayerFightInfo
 		this.ThirdPartyOnlineNameInternal = xboxOnlineName;
 	}
 
-	// Token: 0x1700168E RID: 5774
-	// (get) Token: 0x0601194D RID: 72013 RVA: 0x0044F5D5 File Offset: 0x0044D7D5
+	// Token: 0x170016C5 RID: 5829
+	// (get) Token: 0x0600EDE5 RID: 60901 RVA: 0x0045C2A1 File Offset: 0x0045A4A1
 	public int PlayerId
 	{
 		get
@@ -35,9 +35,9 @@ public class WorldTeamPlayerFightInfo
 		}
 	}
 
-	// Token: 0x1700168F RID: 5775
-	// (get) Token: 0x0601194E RID: 72014 RVA: 0x0044F5DD File Offset: 0x0044D7DD
-	// (set) Token: 0x0601194F RID: 72015 RVA: 0x0044F5E5 File Offset: 0x0044D7E5
+	// Token: 0x170016C6 RID: 5830
+	// (get) Token: 0x0600EDE6 RID: 60902 RVA: 0x0045C2A9 File Offset: 0x0045A4A9
+	// (set) Token: 0x0600EDE7 RID: 60903 RVA: 0x0045C2B1 File Offset: 0x0045A4B1
 	public int CurRoleId
 	{
 		get
@@ -50,9 +50,9 @@ public class WorldTeamPlayerFightInfo
 		}
 	}
 
-	// Token: 0x17001690 RID: 5776
-	// (get) Token: 0x06011950 RID: 72016 RVA: 0x0044F5EE File Offset: 0x0044D7EE
-	// (set) Token: 0x06011951 RID: 72017 RVA: 0x0044F5F6 File Offset: 0x0044D7F6
+	// Token: 0x170016C7 RID: 5831
+	// (get) Token: 0x0600EDE8 RID: 60904 RVA: 0x0045C2BA File Offset: 0x0045A4BA
+	// (set) Token: 0x0600EDE9 RID: 60905 RVA: 0x0045C2C2 File Offset: 0x0045A4C2
 	public List<WorldTeamRoleInfo> RoleInfos
 	{
 		get
@@ -65,7 +65,7 @@ public class WorldTeamPlayerFightInfo
 		}
 	}
 
-	// Token: 0x06011952 RID: 72018 RVA: 0x0044F600 File Offset: 0x0044D800
+	// Token: 0x0600EDEA RID: 60906 RVA: 0x0045C2CC File Offset: 0x0045A4CC
 	[NullableContext(2)]
 	public WorldTeamRoleInfo GetRoleInfoByConfigId(int configId)
 	{
@@ -79,9 +79,9 @@ public class WorldTeamPlayerFightInfo
 		return null;
 	}
 
-	// Token: 0x17001691 RID: 5777
-	// (get) Token: 0x06011953 RID: 72019 RVA: 0x0044F65C File Offset: 0x0044D85C
-	// (set) Token: 0x06011954 RID: 72020 RVA: 0x0044F664 File Offset: 0x0044D864
+	// Token: 0x170016C8 RID: 5832
+	// (get) Token: 0x0600EDEB RID: 60907 RVA: 0x0045C328 File Offset: 0x0045A528
+	// (set) Token: 0x0600EDEC RID: 60908 RVA: 0x0045C330 File Offset: 0x0045A530
 	public string Name
 	{
 		get
@@ -94,8 +94,8 @@ public class WorldTeamPlayerFightInfo
 		}
 	}
 
-	// Token: 0x17001692 RID: 5778
-	// (get) Token: 0x06011955 RID: 72021 RVA: 0x0044F66D File Offset: 0x0044D86D
+	// Token: 0x170016C9 RID: 5833
+	// (get) Token: 0x0600EDED RID: 60909 RVA: 0x0045C339 File Offset: 0x0045A539
 	public string ThirdPartyOnlineName
 	{
 		get
@@ -104,8 +104,8 @@ public class WorldTeamPlayerFightInfo
 		}
 	}
 
-	// Token: 0x17001693 RID: 5779
-	// (get) Token: 0x06011956 RID: 72022 RVA: 0x0044F675 File Offset: 0x0044D875
+	// Token: 0x170016CA RID: 5834
+	// (get) Token: 0x0600EDEE RID: 60910 RVA: 0x0045C341 File Offset: 0x0045A541
 	public string ThirdPartyId
 	{
 		get
@@ -114,21 +114,21 @@ public class WorldTeamPlayerFightInfo
 		}
 	}
 
-	// Token: 0x0400856E RID: 34158
+	// Token: 0x040086AC RID: 34476
 	private readonly int PlayerIdInternal;
 
-	// Token: 0x0400856F RID: 34159
+	// Token: 0x040086AD RID: 34477
 	private string NameInternal;
 
-	// Token: 0x04008570 RID: 34160
+	// Token: 0x040086AE RID: 34478
 	private int CurRoleIdInternal;
 
-	// Token: 0x04008571 RID: 34161
+	// Token: 0x040086AF RID: 34479
 	private List<WorldTeamRoleInfo> RoleInfosInternal;
 
-	// Token: 0x04008572 RID: 34162
+	// Token: 0x040086B0 RID: 34480
 	private readonly string ThirdPartyIdInternal;
 
-	// Token: 0x04008573 RID: 34163
+	// Token: 0x040086B1 RID: 34481
 	private readonly string ThirdPartyOnlineNameInternal;
 }

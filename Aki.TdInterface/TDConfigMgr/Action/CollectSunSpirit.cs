@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001515 RID: 5397
+	// Token: 0x0200166E RID: 5742
 	public class CollectSunSpirit : ActionParams
 	{
-		// Token: 0x06007A9C RID: 31388 RVA: 0x00124A38 File Offset: 0x00122C38
-		[NullableContext(1)]
+		// Token: 0x06008167 RID: 33127 RVA: 0x00133660 File Offset: 0x00131860
 		public static CollectSunSpirit Create([Nullable(2)] CollectSunSpirit instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x04004700 RID: 18176
+		// Token: 0x04004A9C RID: 19100
 		[Nullable(2)]
 		protected new CollectSunSpirit FbInstance;
 	}

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DE2 RID: 24034
+	// Token: 0x02004DC6 RID: 19910
 	public class SpecialEnergyBarKanTeLeiLaSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D18D RID: 250253 RVA: 0x00EB4104 File Offset: 0x00EB2304
+		// Token: 0x06032104 RID: 205060 RVA: 0x00E05004 File Offset: 0x00E03204
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable, isStart);
 		}
 
-		// Token: 0x0401FD70 RID: 130416
+		// Token: 0x0401A82D RID: 108589
 		public bool FullEffectForceDisable;
 	}
 }

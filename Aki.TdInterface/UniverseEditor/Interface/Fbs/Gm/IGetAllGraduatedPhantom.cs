@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004654 RID: 18004
+	// Token: 0x02004ABC RID: 19132
 	public struct IGetAllGraduatedPhantom : IFlatbufferObject
 	{
-		// Token: 0x17007FCC RID: 32716
-		// (get) Token: 0x0601B48B RID: 111755 RVA: 0x003E1AD8 File Offset: 0x003DFCD8
+		// Token: 0x1700860D RID: 34317
+		// (get) Token: 0x0601CC60 RID: 117856 RVA: 0x0040DD74 File Offset: 0x0040BF74
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B48C RID: 111756 RVA: 0x003E1AE5 File Offset: 0x003DFCE5
+		// Token: 0x0601CC61 RID: 117857 RVA: 0x0040DD81 File Offset: 0x0040BF81
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B48D RID: 111757 RVA: 0x003E1AEC File Offset: 0x003DFCEC
+		// Token: 0x0601CC62 RID: 117858 RVA: 0x0040DD88 File Offset: 0x0040BF88
 		public static IGetAllGraduatedPhantom GetRootAsIGetAllGraduatedPhantom(ByteBuffer _bb)
 		{
 			return IGetAllGraduatedPhantom.GetRootAsIGetAllGraduatedPhantom(_bb, default(IGetAllGraduatedPhantom));
 		}
 
-		// Token: 0x0601B48E RID: 111758 RVA: 0x003E1B08 File Offset: 0x003DFD08
+		// Token: 0x0601CC63 RID: 117859 RVA: 0x0040DDA4 File Offset: 0x0040BFA4
 		public static IGetAllGraduatedPhantom GetRootAsIGetAllGraduatedPhantom(ByteBuffer _bb, IGetAllGraduatedPhantom obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B48F RID: 111759 RVA: 0x003E1B25 File Offset: 0x003DFD25
+		// Token: 0x0601CC64 RID: 117860 RVA: 0x0040DDC1 File Offset: 0x0040BFC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B490 RID: 111760 RVA: 0x003E1B34 File Offset: 0x003DFD34
+		// Token: 0x0601CC65 RID: 117861 RVA: 0x0040DDD0 File Offset: 0x0040BFD0
 		public IGetAllGraduatedPhantom __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007FCD RID: 32717
-		// (get) Token: 0x0601B491 RID: 111761 RVA: 0x003E1B44 File Offset: 0x003DFD44
+		// Token: 0x1700860E RID: 34318
+		// (get) Token: 0x0601CC66 RID: 117862 RVA: 0x0040DDE0 File Offset: 0x0040BFE0
 		public EGmCommand Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B492 RID: 111762 RVA: 0x003E1B80 File Offset: 0x003DFD80
+		// Token: 0x0601CC67 RID: 117863 RVA: 0x0040DE1C File Offset: 0x0040C01C
 		public static Offset<IGetAllGraduatedPhantom> CreateIGetAllGraduatedPhantom(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IGetAllGraduatedPhantom.EndIGetAllGraduatedPhantom(builder);
 		}
 
-		// Token: 0x0601B493 RID: 111763 RVA: 0x003E1B96 File Offset: 0x003DFD96
+		// Token: 0x0601CC68 RID: 117864 RVA: 0x0040DE32 File Offset: 0x0040C032
 		public static void StartIGetAllGraduatedPhantom(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601B494 RID: 111764 RVA: 0x003E1B9F File Offset: 0x003DFD9F
+		// Token: 0x0601CC69 RID: 117865 RVA: 0x0040DE3B File Offset: 0x0040C03B
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B495 RID: 111765 RVA: 0x003E1BAA File Offset: 0x003DFDAA
+		// Token: 0x0601CC6A RID: 117866 RVA: 0x0040DE46 File Offset: 0x0040C046
 		public static Offset<IGetAllGraduatedPhantom> EndIGetAllGraduatedPhantom(FlatBufferBuilder builder)
 		{
 			return new Offset<IGetAllGraduatedPhantom>(builder.EndTable());
 		}
 
-		// Token: 0x0601B496 RID: 111766 RVA: 0x003E1BB8 File Offset: 0x003DFDB8
+		// Token: 0x0601CC6B RID: 117867 RVA: 0x0040DE54 File Offset: 0x0040C054
 		public IGetAllGraduatedPhantomT UnPack()
 		{
 			IGetAllGraduatedPhantomT getAllGraduatedPhantomT = new IGetAllGraduatedPhantomT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return getAllGraduatedPhantomT;
 		}
 
-		// Token: 0x0601B497 RID: 111767 RVA: 0x003E1BD3 File Offset: 0x003DFDD3
+		// Token: 0x0601CC6C RID: 117868 RVA: 0x0040DE6F File Offset: 0x0040C06F
 		public void UnPackTo(IGetAllGraduatedPhantomT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601B498 RID: 111768 RVA: 0x003E1BE4 File Offset: 0x003DFDE4
+		// Token: 0x0601CC6D RID: 117869 RVA: 0x0040DE80 File Offset: 0x0040C080
 		public static Offset<IGetAllGraduatedPhantom> Pack(FlatBufferBuilder builder, IGetAllGraduatedPhantomT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IGetAllGraduatedPhantom.CreateIGetAllGraduatedPhantom(builder, _o.Type);
 		}
 
-		// Token: 0x0400C7D2 RID: 51154
+		// Token: 0x0400D201 RID: 53761
 		private Table __p;
 	}
 }

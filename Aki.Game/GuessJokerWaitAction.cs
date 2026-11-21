@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200102A RID: 4138
+// Token: 0x020004DE RID: 1246
 public class GuessJokerWaitAction : GuessJokerActionBase
 {
-	// Token: 0x06006A36 RID: 27190 RVA: 0x00155008 File Offset: 0x00153208
+	// Token: 0x06003DCB RID: 15819 RVA: 0x0015D930 File Offset: 0x0015BB30
 	public GuessJokerWaitAction(float waitTime)
 	{
 		this.Duration = waitTime;
 	}
 
-	// Token: 0x06006A37 RID: 27191 RVA: 0x00155017 File Offset: 0x00153217
+	// Token: 0x06003DCC RID: 15820 RVA: 0x0015D93F File Offset: 0x0015BB3F
 	protected override void OnStart()
 	{
 	}

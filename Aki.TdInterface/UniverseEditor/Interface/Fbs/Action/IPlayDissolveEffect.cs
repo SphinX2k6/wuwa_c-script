@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CDE RID: 27870
+	// Token: 0x02007451 RID: 29777
 	public struct IPlayDissolveEffect : IFlatbufferObject
 	{
-		// Token: 0x1700CF8F RID: 53135
-		// (get) Token: 0x06031226 RID: 201254 RVA: 0x006AABF2 File Offset: 0x006A8DF2
+		// Token: 0x1700DAC9 RID: 56009
+		// (get) Token: 0x060341EB RID: 213483 RVA: 0x00705CAE File Offset: 0x00703EAE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031227 RID: 201255 RVA: 0x006AABFF File Offset: 0x006A8DFF
+		// Token: 0x060341EC RID: 213484 RVA: 0x00705CBB File Offset: 0x00703EBB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031228 RID: 201256 RVA: 0x006AAC08 File Offset: 0x006A8E08
+		// Token: 0x060341ED RID: 213485 RVA: 0x00705CC4 File Offset: 0x00703EC4
 		public static IPlayDissolveEffect GetRootAsIPlayDissolveEffect(ByteBuffer _bb)
 		{
 			return IPlayDissolveEffect.GetRootAsIPlayDissolveEffect(_bb, default(IPlayDissolveEffect));
 		}
 
-		// Token: 0x06031229 RID: 201257 RVA: 0x006AAC24 File Offset: 0x006A8E24
+		// Token: 0x060341EE RID: 213486 RVA: 0x00705CE0 File Offset: 0x00703EE0
 		public static IPlayDissolveEffect GetRootAsIPlayDissolveEffect(ByteBuffer _bb, IPlayDissolveEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603122A RID: 201258 RVA: 0x006AAC41 File Offset: 0x006A8E41
+		// Token: 0x060341EF RID: 213487 RVA: 0x00705CFD File Offset: 0x00703EFD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603122B RID: 201259 RVA: 0x006AAC50 File Offset: 0x006A8E50
+		// Token: 0x060341F0 RID: 213488 RVA: 0x00705D0C File Offset: 0x00703F0C
 		public IPlayDissolveEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CF90 RID: 53136
-		// (get) Token: 0x0603122C RID: 201260 RVA: 0x006AAC60 File Offset: 0x006A8E60
+		// Token: 0x1700DACA RID: 56010
+		// (get) Token: 0x060341F1 RID: 213489 RVA: 0x00705D1C File Offset: 0x00703F1C
 		public EEffectType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF91 RID: 53137
-		// (get) Token: 0x0603122D RID: 201261 RVA: 0x006AAC9C File Offset: 0x006A8E9C
+		// Token: 0x1700DACB RID: 56011
+		// (get) Token: 0x060341F2 RID: 213490 RVA: 0x00705D58 File Offset: 0x00703F58
 		public string Path
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603122E RID: 201262 RVA: 0x006AACD3 File Offset: 0x006A8ED3
+		// Token: 0x060341F3 RID: 213491 RVA: 0x00705D8F File Offset: 0x00703F8F
 		public Span<byte> GetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0603122F RID: 201263 RVA: 0x006AACE2 File Offset: 0x006A8EE2
+		// Token: 0x060341F4 RID: 213492 RVA: 0x00705D9E File Offset: 0x00703F9E
 		public byte[] GetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700CF92 RID: 53138
-		// (get) Token: 0x06031230 RID: 201264 RVA: 0x006AACF0 File Offset: 0x006A8EF0
+		// Token: 0x1700DACC RID: 56012
+		// (get) Token: 0x060341F5 RID: 213493 RVA: 0x00705DAC File Offset: 0x00703FAC
 		public IVector2? ScreenPos
 		{
 			get
@@ -105,24 +105,24 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF93 RID: 53139
-		// (get) Token: 0x06031231 RID: 201265 RVA: 0x006AAD50 File Offset: 0x006A8F50
-		public float Scale
+		// Token: 0x1700DACD RID: 56013
+		// (get) Token: 0x060341F6 RID: 213494 RVA: 0x00705E0C File Offset: 0x0070400C
+		public IPlayDissolveEffectInActorPosConfig? PlayInActorPos
 		{
 			get
 			{
 				int num = this.__p.__offset(10);
 				if (num == 0)
 				{
-					return 0f;
+					return null;
 				}
-				return this.__p.bb.GetFloat(num + this.__p.bb_pos);
+				return new IPlayDissolveEffectInActorPosConfig?(default(IPlayDissolveEffectInActorPosConfig).__assign(num + this.__p.bb_pos, this.__p.bb));
 			}
 		}
 
-		// Token: 0x1700CF94 RID: 53140
-		// (get) Token: 0x06031232 RID: 201266 RVA: 0x006AAD94 File Offset: 0x006A8F94
-		public float DissolveParam
+		// Token: 0x1700DACE RID: 56014
+		// (get) Token: 0x060341F7 RID: 213495 RVA: 0x00705E60 File Offset: 0x00704060
+		public float Scale
 		{
 			get
 			{
@@ -135,9 +135,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF95 RID: 53141
-		// (get) Token: 0x06031233 RID: 201267 RVA: 0x006AADD8 File Offset: 0x006A8FD8
-		public float FadeInTime
+		// Token: 0x1700DACF RID: 56015
+		// (get) Token: 0x060341F8 RID: 213496 RVA: 0x00705EA4 File Offset: 0x007040A4
+		public float DissolveParam
 		{
 			get
 			{
@@ -150,9 +150,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF96 RID: 53142
-		// (get) Token: 0x06031234 RID: 201268 RVA: 0x006AAE1C File Offset: 0x006A901C
-		public float FadeOutTime
+		// Token: 0x1700DAD0 RID: 56016
+		// (get) Token: 0x060341F9 RID: 213497 RVA: 0x00705EE8 File Offset: 0x007040E8
+		public float FadeInTime
 		{
 			get
 			{
@@ -165,24 +165,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF97 RID: 53143
-		// (get) Token: 0x06031235 RID: 201269 RVA: 0x006AAE60 File Offset: 0x006A9060
-		public bool IsFullScreenMask
+		// Token: 0x1700DAD1 RID: 56017
+		// (get) Token: 0x060341FA RID: 213498 RVA: 0x00705F2C File Offset: 0x0070412C
+		public float FadeOutTime
 		{
 			get
 			{
 				int num = this.__p.__offset(18);
-				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+				if (num == 0)
+				{
+					return 0f;
+				}
+				return this.__p.bb.GetFloat(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x1700CF98 RID: 53144
-		// (get) Token: 0x06031236 RID: 201270 RVA: 0x006AAEA0 File Offset: 0x006A90A0
-		public byte NullMask
+		// Token: 0x1700DAD2 RID: 56018
+		// (get) Token: 0x060341FB RID: 213499 RVA: 0x00705F70 File Offset: 0x00704170
+		public bool IsFullScreenMask
 		{
 			get
 			{
 				int num = this.__p.__offset(20);
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+			}
+		}
+
+		// Token: 0x1700DAD3 RID: 56019
+		// (get) Token: 0x060341FC RID: 213500 RVA: 0x00705FB0 File Offset: 0x007041B0
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(22);
 				if (num == 0)
 				{
 					return 0;
@@ -191,14 +206,15 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031237 RID: 201271 RVA: 0x006AAEE0 File Offset: 0x006A90E0
-		public static Offset<IPlayDissolveEffect> CreateIPlayDissolveEffect(FlatBufferBuilder builder, EEffectType Type = EEffectType.Effect, StringOffset PathOffset = default(StringOffset), Offset<IVector2> ScreenPosOffset = default(Offset<IVector2>), float Scale = 0f, float DissolveParam = 0f, float FadeInTime = 0f, float FadeOutTime = 0f, bool IsFullScreenMask = false, byte NullMask = 0)
+		// Token: 0x060341FD RID: 213501 RVA: 0x00705FF0 File Offset: 0x007041F0
+		public static Offset<IPlayDissolveEffect> CreateIPlayDissolveEffect(FlatBufferBuilder builder, EEffectType Type = EEffectType.Effect, StringOffset PathOffset = default(StringOffset), Offset<IVector2> ScreenPosOffset = default(Offset<IVector2>), IPlayDissolveEffectInActorPosConfigT PlayInActorPos = null, float Scale = 0f, float DissolveParam = 0f, float FadeInTime = 0f, float FadeOutTime = 0f, bool IsFullScreenMask = false, byte NullMask = 0)
 		{
-			builder.StartTable(9);
+			builder.StartTable(10);
 			IPlayDissolveEffect.AddFadeOutTime(builder, FadeOutTime);
 			IPlayDissolveEffect.AddFadeInTime(builder, FadeInTime);
 			IPlayDissolveEffect.AddDissolveParam(builder, DissolveParam);
 			IPlayDissolveEffect.AddScale(builder, Scale);
+			IPlayDissolveEffect.AddPlayInActorPos(builder, IPlayDissolveEffectInActorPosConfig.Pack(builder, PlayInActorPos));
 			IPlayDissolveEffect.AddScreenPos(builder, ScreenPosOffset);
 			IPlayDissolveEffect.AddPath(builder, PathOffset);
 			IPlayDissolveEffect.AddNullMask(builder, NullMask);
@@ -207,73 +223,79 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayDissolveEffect.EndIPlayDissolveEffect(builder);
 		}
 
-		// Token: 0x06031238 RID: 201272 RVA: 0x006AAF40 File Offset: 0x006A9140
+		// Token: 0x060341FE RID: 213502 RVA: 0x0070605E File Offset: 0x0070425E
 		public static void StartIPlayDissolveEffect(FlatBufferBuilder builder)
 		{
-			builder.StartTable(9);
+			builder.StartTable(10);
 		}
 
-		// Token: 0x06031239 RID: 201273 RVA: 0x006AAF4A File Offset: 0x006A914A
+		// Token: 0x060341FF RID: 213503 RVA: 0x00706068 File Offset: 0x00704268
 		public static void AddType(FlatBufferBuilder builder, EEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603123A RID: 201274 RVA: 0x006AAF55 File Offset: 0x006A9155
+		// Token: 0x06034200 RID: 213504 RVA: 0x00706073 File Offset: 0x00704273
 		public static void AddPath(FlatBufferBuilder builder, StringOffset pathOffset)
 		{
 			builder.AddOffset(1, pathOffset.Value, 0);
 		}
 
-		// Token: 0x0603123B RID: 201275 RVA: 0x006AAF65 File Offset: 0x006A9165
+		// Token: 0x06034201 RID: 213505 RVA: 0x00706083 File Offset: 0x00704283
 		public static void AddScreenPos(FlatBufferBuilder builder, Offset<IVector2> screenPosOffset)
 		{
 			builder.AddOffset(2, screenPosOffset.Value, 0);
 		}
 
-		// Token: 0x0603123C RID: 201276 RVA: 0x006AAF75 File Offset: 0x006A9175
+		// Token: 0x06034202 RID: 213506 RVA: 0x00706093 File Offset: 0x00704293
+		public static void AddPlayInActorPos(FlatBufferBuilder builder, Offset<IPlayDissolveEffectInActorPosConfig> playInActorPosOffset)
+		{
+			builder.AddStruct(3, playInActorPosOffset.Value, 0);
+		}
+
+		// Token: 0x06034203 RID: 213507 RVA: 0x007060A3 File Offset: 0x007042A3
 		public static void AddScale(FlatBufferBuilder builder, float scale)
 		{
-			builder.AddFloat(3, scale, 0.0);
+			builder.AddFloat(4, scale, 0.0);
 		}
 
-		// Token: 0x0603123D RID: 201277 RVA: 0x006AAF88 File Offset: 0x006A9188
+		// Token: 0x06034204 RID: 213508 RVA: 0x007060B6 File Offset: 0x007042B6
 		public static void AddDissolveParam(FlatBufferBuilder builder, float dissolveParam)
 		{
-			builder.AddFloat(4, dissolveParam, 0.0);
+			builder.AddFloat(5, dissolveParam, 0.0);
 		}
 
-		// Token: 0x0603123E RID: 201278 RVA: 0x006AAF9B File Offset: 0x006A919B
+		// Token: 0x06034205 RID: 213509 RVA: 0x007060C9 File Offset: 0x007042C9
 		public static void AddFadeInTime(FlatBufferBuilder builder, float fadeInTime)
 		{
-			builder.AddFloat(5, fadeInTime, 0.0);
+			builder.AddFloat(6, fadeInTime, 0.0);
 		}
 
-		// Token: 0x0603123F RID: 201279 RVA: 0x006AAFAE File Offset: 0x006A91AE
+		// Token: 0x06034206 RID: 213510 RVA: 0x007060DC File Offset: 0x007042DC
 		public static void AddFadeOutTime(FlatBufferBuilder builder, float fadeOutTime)
 		{
-			builder.AddFloat(6, fadeOutTime, 0.0);
+			builder.AddFloat(7, fadeOutTime, 0.0);
 		}
 
-		// Token: 0x06031240 RID: 201280 RVA: 0x006AAFC1 File Offset: 0x006A91C1
+		// Token: 0x06034207 RID: 213511 RVA: 0x007060EF File Offset: 0x007042EF
 		public static void AddIsFullScreenMask(FlatBufferBuilder builder, bool isFullScreenMask)
 		{
-			builder.AddBool(7, isFullScreenMask, false);
+			builder.AddBool(8, isFullScreenMask, false);
 		}
 
-		// Token: 0x06031241 RID: 201281 RVA: 0x006AAFCC File Offset: 0x006A91CC
+		// Token: 0x06034208 RID: 213512 RVA: 0x007060FA File Offset: 0x007042FA
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
-			builder.AddByte(8, nullMask, 0);
+			builder.AddByte(9, nullMask, 0);
 		}
 
-		// Token: 0x06031242 RID: 201282 RVA: 0x006AAFD7 File Offset: 0x006A91D7
+		// Token: 0x06034209 RID: 213513 RVA: 0x00706106 File Offset: 0x00704306
 		public static Offset<IPlayDissolveEffect> EndIPlayDissolveEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlayDissolveEffect>(builder.EndTable());
 		}
 
-		// Token: 0x06031243 RID: 201283 RVA: 0x006AAFE4 File Offset: 0x006A91E4
+		// Token: 0x0603420A RID: 213514 RVA: 0x00706114 File Offset: 0x00704314
 		public IPlayDissolveEffectT UnPack()
 		{
 			IPlayDissolveEffectT playDissolveEffectT = new IPlayDissolveEffectT();
@@ -281,12 +303,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return playDissolveEffectT;
 		}
 
-		// Token: 0x06031244 RID: 201284 RVA: 0x006AB000 File Offset: 0x006A9200
+		// Token: 0x0603420B RID: 213515 RVA: 0x00706130 File Offset: 0x00704330
 		public void UnPackTo(IPlayDissolveEffectT _o)
 		{
 			_o.Type = this.Type;
 			_o.Path = this.Path;
 			_o.ScreenPos = ((this.ScreenPos != null) ? this.ScreenPos.Value.UnPack() : null);
+			_o.PlayInActorPos = ((this.PlayInActorPos != null) ? this.PlayInActorPos.Value.UnPack() : null);
 			_o.Scale = this.Scale;
 			_o.DissolveParam = this.DissolveParam;
 			_o.FadeInTime = this.FadeInTime;
@@ -295,7 +318,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06031245 RID: 201285 RVA: 0x006AB09C File Offset: 0x006A929C
+		// Token: 0x0603420C RID: 213516 RVA: 0x007061FC File Offset: 0x007043FC
 		public static Offset<IPlayDissolveEffect> Pack(FlatBufferBuilder builder, IPlayDissolveEffectT _o)
 		{
 			if (_o == null)
@@ -304,10 +327,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 			StringOffset pathOffset = (_o.Path == null) ? default(StringOffset) : builder.CreateString(_o.Path);
 			Offset<IVector2> screenPosOffset = (_o.ScreenPos == null) ? default(Offset<IVector2>) : IVector2.Pack(builder, _o.ScreenPos);
-			return IPlayDissolveEffect.CreateIPlayDissolveEffect(builder, _o.Type, pathOffset, screenPosOffset, _o.Scale, _o.DissolveParam, _o.FadeInTime, _o.FadeOutTime, _o.IsFullScreenMask, _o.NullMask);
+			return IPlayDissolveEffect.CreateIPlayDissolveEffect(builder, _o.Type, pathOffset, screenPosOffset, _o.PlayInActorPos, _o.Scale, _o.DissolveParam, _o.FadeInTime, _o.FadeOutTime, _o.IsFullScreenMask, _o.NullMask);
 		}
 
-		// Token: 0x0401164F RID: 71247
+		// Token: 0x040125BD RID: 75197
 		private Table __p;
 	}
 }

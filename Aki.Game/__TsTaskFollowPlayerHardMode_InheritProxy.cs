@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200367E RID: 13950
+// Token: 0x02002BF3 RID: 11251
 public class __TsTaskFollowPlayerHardMode_InheritProxy : TsTaskFollowPlayerHardMode
 {
-	// Token: 0x0601E2DC RID: 123612 RVA: 0x00883AC4 File Offset: 0x00881CC4
+	// Token: 0x0601BFF6 RID: 114678 RVA: 0x008AB538 File Offset: 0x008A9738
 	[NullableContext(1)]
 	public __TsTaskFollowPlayerHardMode_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskFollowPlayerHardMode.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E2DD RID: 123613 RVA: 0x00883AF7 File Offset: 0x00881CF7
+	// Token: 0x0601BFF7 RID: 114679 RVA: 0x008AB56B File Offset: 0x008A976B
 	protected __TsTaskFollowPlayerHardMode_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E2DE RID: 123614 RVA: 0x00883B00 File Offset: 0x00881D00
+	// Token: 0x0601BFF8 RID: 114680 RVA: 0x008AB574 File Offset: 0x008A9774
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -25,7 +25,7 @@ public class __TsTaskFollowPlayerHardMode_InheritProxy : TsTaskFollowPlayerHardM
 		base.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601E2DF RID: 123615 RVA: 0x00883B30 File Offset: 0x00881D30
+	// Token: 0x0601BFF9 RID: 114681 RVA: 0x008AB5A4 File Offset: 0x008A97A4
 	protected unsafe override void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

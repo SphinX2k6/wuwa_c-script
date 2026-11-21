@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200269D RID: 9885
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002960 RID: 10592
 	public class ICustomScreenBackgroundImage : ICustomScreenTypeBase
 	{
-		// Token: 0x0600DD3E RID: 56638 RVA: 0x0020DFBB File Offset: 0x0020C1BB
+		// Token: 0x0600EB15 RID: 60181 RVA: 0x0022A75B File Offset: 0x0022895B
 		public static ICustomScreenBackgroundImage Create(ICustomScreenBackgroundImage? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041C6 RID: 16838
-		// (get) Token: 0x0600DD3F RID: 56639 RVA: 0x0020DFDA File Offset: 0x0020C1DA
+		// Token: 0x17004503 RID: 17667
+		// (get) Token: 0x0600EB16 RID: 60182 RVA: 0x0022A77A File Offset: 0x0022897A
 		public override ECustomScreenType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041C7 RID: 16839
-		// (get) Token: 0x0600DD40 RID: 56640 RVA: 0x0020DFE7 File Offset: 0x0020C1E7
+		// Token: 0x17004504 RID: 17668
+		// (get) Token: 0x0600EB17 RID: 60183 RVA: 0x0022A787 File Offset: 0x00228987
 		public virtual string BackgroundImagePath
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AE1 RID: 31457
+		// Token: 0x0400817E RID: 33150
 		private ICustomScreenBackgroundImage Instance;
 	}
 }

@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D4A RID: 19786
+	// Token: 0x02003D13 RID: 15635
 	public class RoleDevelopProjectWeaponPanel : RoleDevelopProjectBasePanel
 	{
-		// Token: 0x060331EB RID: 209387 RVA: 0x00BEB5CC File Offset: 0x00BE97CC
+		// Token: 0x0602804E RID: 163918 RVA: 0x00B34934 File Offset: 0x00B32B34
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060331EC RID: 209388 RVA: 0x00BEB638 File Offset: 0x00BE9838
+		// Token: 0x0602804F RID: 163919 RVA: 0x00B349A0 File Offset: 0x00B32BA0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleDevelopProjectWeaponPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -37,20 +37,20 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060331ED RID: 209389 RVA: 0x00BEB67B File Offset: 0x00BE987B
+		// Token: 0x06028050 RID: 163920 RVA: 0x00B349E3 File Offset: 0x00B32BE3
 		public override void OnCommonItemCountAnyChange(int configId)
 		{
 			this.WeaponDevItem.OnCommonItemCountAnyChange(configId);
 		}
 
-		// Token: 0x060331EE RID: 209390 RVA: 0x00BEB689 File Offset: 0x00BE9889
+		// Token: 0x06028051 RID: 163921 RVA: 0x00B349F1 File Offset: 0x00B32BF1
 		protected override void OnRefreshView(bool forceRefresh)
 		{
 			this.InitSelectWeaponType(forceRefresh);
 			this.RefreshWeaponView();
 		}
 
-		// Token: 0x060331EF RID: 209391 RVA: 0x00BEB698 File Offset: 0x00BE9898
+		// Token: 0x06028052 RID: 163922 RVA: 0x00B34A00 File Offset: 0x00B32C00
 		private void InitSelectWeaponType(bool reset = false)
 		{
 			if (this.CurSelectWeaponType != null && !reset)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.CurSelectWeaponType = new ERoleDevelopWeaponType?(ERoleDevelopWeaponType.Develop);
 		}
 
-		// Token: 0x060331F0 RID: 209392 RVA: 0x00BEB6F0 File Offset: 0x00BE98F0
+		// Token: 0x06028053 RID: 163923 RVA: 0x00B34A58 File Offset: 0x00B32C58
 		private void RefreshWeaponView()
 		{
 			RoleDevelopData data = this.Data;
@@ -80,32 +80,31 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.WeaponRecommendItem.RefreshByData(data);
 		}
 
-		// Token: 0x060331F1 RID: 209393 RVA: 0x00BEB75D File Offset: 0x00BE995D
+		// Token: 0x06028054 RID: 163924 RVA: 0x00B34AC5 File Offset: 0x00B32CC5
 		private void OnClickSwitchButton()
 		{
 			this.CurSelectWeaponType = new ERoleDevelopWeaponType?((this.CurSelectWeaponType.GetValueOrDefault() == ERoleDevelopWeaponType.Develop) ? ERoleDevelopWeaponType.Recommend : ERoleDevelopWeaponType.Develop);
 			this.RefreshWeaponView();
 		}
 
-		// Token: 0x0401B2C0 RID: 111296
+		// Token: 0x04015C92 RID: 89234
 		private ERoleDevelopWeaponType? CurSelectWeaponType;
 
-		// Token: 0x0401B2C1 RID: 111297
+		// Token: 0x04015C93 RID: 89235
 		[Nullable(1)]
 		private RoleDevelopProjectWeaponDevItem WeaponDevItem;
 
-		// Token: 0x0401B2C2 RID: 111298
+		// Token: 0x04015C94 RID: 89236
 		[Nullable(1)]
 		private RoleDevelopProjectWeaponRecommendItem WeaponRecommendItem;
 
-		// Token: 0x0200AEB8 RID: 44728
-		public static class EComponentType
+		// Token: 0x020098EC RID: 39148
+		private enum EComponentType
 		{
-			// Token: 0x040350FE RID: 217342
-			public const int PlanWeaponDevelop = 0;
-
-			// Token: 0x040350FF RID: 217343
-			public const int PlanWeaponRecommend = 1;
+			// Token: 0x0402FB25 RID: 195365
+			PlanWeaponDevelop,
+			// Token: 0x0402FB26 RID: 195366
+			PlanWeaponRecommend
 		}
 	}
 }

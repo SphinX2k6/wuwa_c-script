@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200267A RID: 9850
+	// Token: 0x02002939 RID: 10553
 	public class SetPlayerMoveControl : ActionParams
 	{
-		// Token: 0x0600DCB6 RID: 56502 RVA: 0x0020D36E File Offset: 0x0020B56E
-		[NullableContext(1)]
+		// Token: 0x0600EA82 RID: 60034 RVA: 0x00229A7E File Offset: 0x00227C7E
 		public static SetPlayerMoveControl Create(ISetPlayerMoveControl? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004184 RID: 16772
-		// (get) Token: 0x0600DCB7 RID: 56503 RVA: 0x0020D38D File Offset: 0x0020B58D
+		// Token: 0x170044BE RID: 17598
+		// (get) Token: 0x0600EA83 RID: 60035 RVA: 0x00229A9D File Offset: 0x00227C9D
 		public virtual int Left
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004185 RID: 16773
-		// (get) Token: 0x0600DCB8 RID: 56504 RVA: 0x0020D39A File Offset: 0x0020B59A
+		// Token: 0x170044BF RID: 17599
+		// (get) Token: 0x0600EA84 RID: 60036 RVA: 0x00229AAA File Offset: 0x00227CAA
 		public virtual int Right
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004186 RID: 16774
-		// (get) Token: 0x0600DCB9 RID: 56505 RVA: 0x0020D3A7 File Offset: 0x0020B5A7
+		// Token: 0x170044C0 RID: 17600
+		// (get) Token: 0x0600EA85 RID: 60037 RVA: 0x00229AB7 File Offset: 0x00227CB7
 		public virtual int Forward
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004187 RID: 16775
-		// (get) Token: 0x0600DCBA RID: 56506 RVA: 0x0020D3B4 File Offset: 0x0020B5B4
+		// Token: 0x170044C1 RID: 17601
+		// (get) Token: 0x0600EA86 RID: 60038 RVA: 0x00229AC4 File Offset: 0x00227CC4
 		public virtual int Back
 		{
 			get
@@ -61,7 +59,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AAA RID: 31402
+		// Token: 0x04008141 RID: 33089
 		private ISetPlayerMoveControl Instance;
 	}
 }

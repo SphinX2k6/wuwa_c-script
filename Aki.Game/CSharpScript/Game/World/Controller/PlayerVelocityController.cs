@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.World.Controller
 {
-	// Token: 0x0200453B RID: 17723
+	// Token: 0x02003463 RID: 13411
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class PlayerVelocityController : ControllerBase
 	{
-		// Token: 0x0602DCC5 RID: 187589 RVA: 0x00A8648A File Offset: 0x00A8468A
+		// Token: 0x060223A7 RID: 140199 RVA: 0x009B1CB2 File Offset: 0x009AFEB2
 		protected override bool OnInit()
 		{
 			this.PlayerVelocityFilter = EntityToLoadFilter.Create();
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.World.Controller
 			return base.OnInit();
 		}
 
-		// Token: 0x0602DCC6 RID: 187590 RVA: 0x00A864C3 File Offset: 0x00A846C3
+		// Token: 0x060223A8 RID: 140200 RVA: 0x009B1CEB File Offset: 0x009AFEEB
 		private void InitConsoleVariables()
 		{
 			this.ImposterUpdateBatch = UKismetSystemLibrary.GetConsoleVariableIntValue("r.imp.UpdateBatch");
 		}
 
-		// Token: 0x0602DCC7 RID: 187591 RVA: 0x00A864D5 File Offset: 0x00A846D5
+		// Token: 0x060223A9 RID: 140201 RVA: 0x009B1CFD File Offset: 0x009AFEFD
 		protected override bool OnClear()
 		{
 			this.OnRemoveEvents();
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.World.Controller
 			return base.OnClear();
 		}
 
-		// Token: 0x0602DCC8 RID: 187592 RVA: 0x00A86504 File Offset: 0x00A84704
+		// Token: 0x060223AA RID: 140202 RVA: 0x009B1D2C File Offset: 0x009AFF2C
 		private void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDone));
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.World.Controller
 			EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportEnd));
 		}
 
-		// Token: 0x0602DCC9 RID: 187593 RVA: 0x00A86584 File Offset: 0x00A84784
+		// Token: 0x060223AB RID: 140203 RVA: 0x009B1DAC File Offset: 0x009AFFAC
 		private void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDone));
@@ -59,64 +59,64 @@ namespace CSharpScript.Game.World.Controller
 			EventSystem.Instance.Remove<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportEnd));
 		}
 
-		// Token: 0x0602DCCA RID: 187594 RVA: 0x00A86601 File Offset: 0x00A84801
+		// Token: 0x060223AC RID: 140204 RVA: 0x009B1E29 File Offset: 0x009B0029
 		private void OnWorldDone()
 		{
 			this.Start();
 		}
 
-		// Token: 0x0602DCCB RID: 187595 RVA: 0x00A86609 File Offset: 0x00A84809
+		// Token: 0x060223AD RID: 140205 RVA: 0x009B1E31 File Offset: 0x009B0031
 		private void OnBeforeLoadMap()
 		{
 			this.Stop();
 		}
 
-		// Token: 0x0602DCCC RID: 187596 RVA: 0x00A86611 File Offset: 0x00A84811
+		// Token: 0x060223AE RID: 140206 RVA: 0x009B1E39 File Offset: 0x009B0039
 		private void OnTeleportStart(bool loading)
 		{
 			this.Stop();
 		}
 
-		// Token: 0x0602DCCD RID: 187597 RVA: 0x00A86619 File Offset: 0x00A84819
+		// Token: 0x060223AF RID: 140207 RVA: 0x009B1E41 File Offset: 0x009B0041
 		[NullableContext(2)]
 		private void OnTeleportEnd(TeleportContext teleportContext)
 		{
 			this.Start();
 		}
 
-		// Token: 0x0602DCCE RID: 187598 RVA: 0x00A86621 File Offset: 0x00A84821
+		// Token: 0x060223B0 RID: 140208 RVA: 0x009B1E49 File Offset: 0x009B0049
 		private void Start()
 		{
 			base.ResumeTick();
 			this.Reset();
 		}
 
-		// Token: 0x0602DCCF RID: 187599 RVA: 0x00A8662F File Offset: 0x00A8482F
+		// Token: 0x060223B1 RID: 140209 RVA: 0x009B1E57 File Offset: 0x009B0057
 		private void Stop()
 		{
 			base.PauseTick();
 		}
 
-		// Token: 0x0602DCD0 RID: 187600 RVA: 0x00A86637 File Offset: 0x00A84837
+		// Token: 0x060223B2 RID: 140210 RVA: 0x009B1E5F File Offset: 0x009B005F
 		private void Reset()
 		{
 			this.LastPosition.DeepCopy(this.GetPlayerPosition());
 			this.ResetVelocity();
 		}
 
-		// Token: 0x0602DCD1 RID: 187601 RVA: 0x00A86650 File Offset: 0x00A84850
+		// Token: 0x060223B3 RID: 140211 RVA: 0x009B1E78 File Offset: 0x009B0078
 		private void ResetVelocity()
 		{
 			this.AvgVelocity.Set(0.0, 0.0, 0.0);
 		}
 
-		// Token: 0x0602DCD2 RID: 187602 RVA: 0x00A86678 File Offset: 0x00A84878
+		// Token: 0x060223B4 RID: 140212 RVA: 0x009B1EA0 File Offset: 0x009B00A0
 		protected override void OnTick(float delta)
 		{
 			this.CalculateVelocity(delta * 0.001f);
 		}
 
-		// Token: 0x0602DCD3 RID: 187603 RVA: 0x00A86688 File Offset: 0x00A84888
+		// Token: 0x060223B5 RID: 140213 RVA: 0x009B1EB0 File Offset: 0x009B00B0
 		private Vector GetPlayerPosition()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.World.Controller
 			return characterActorComponent2.ActorLocationProxy;
 		}
 
-		// Token: 0x0602DCD4 RID: 187604 RVA: 0x00A866C8 File Offset: 0x00A848C8
+		// Token: 0x060223B6 RID: 140214 RVA: 0x009B1EF0 File Offset: 0x009B00F0
 		private void CalculateVelocity(float delta)
 		{
 			if (delta <= 0f)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.World.Controller
 			this.UpdateHighSpeedMode();
 		}
 
-		// Token: 0x0602DCD5 RID: 187605 RVA: 0x00A867F0 File Offset: 0x00A849F0
+		// Token: 0x060223B7 RID: 140215 RVA: 0x009B2018 File Offset: 0x009B0218
 		private unsafe void UpdateHighSpeedMode()
 		{
 			double num = this.AvgVelocity.SizeSquared();
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.World.Controller
 			EventSystem.Instance.Emit<bool>(EEventName.OnHighSpeedModeChanged, this.IsHighSpeed);
 		}
 
-		// Token: 0x0602DCD6 RID: 187606 RVA: 0x00A868BD File Offset: 0x00A84ABD
+		// Token: 0x060223B8 RID: 140216 RVA: 0x009B20E5 File Offset: 0x009B02E5
 		private void UpdateConsoleVariables()
 		{
 			if (this.IsHighSpeed)
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.World.Controller
 			this.UpdateImposterUpdateBatch(this.ImposterUpdateBatch);
 		}
 
-		// Token: 0x0602DCD7 RID: 187607 RVA: 0x00A868EE File Offset: 0x00A84AEE
+		// Token: 0x060223B9 RID: 140217 RVA: 0x009B2116 File Offset: 0x009B0316
 		private void UpdateImposterUpdateBatch(int batch)
 		{
 			this.TempStringArray[0] = "r.imp.UpdateBatch";
@@ -228,20 +228,20 @@ namespace CSharpScript.Game.World.Controller
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, string.Join(" ", this.TempStringArray), null);
 		}
 
-		// Token: 0x0602DCD8 RID: 187608 RVA: 0x00A86927 File Offset: 0x00A84B27
+		// Token: 0x060223BA RID: 140218 RVA: 0x009B214F File Offset: 0x009B034F
 		public Vector GetAvgVelocity()
 		{
 			return this.AvgVelocity;
 		}
 
-		// Token: 0x0602DCD9 RID: 187609 RVA: 0x00A8692F File Offset: 0x00A84B2F
+		// Token: 0x060223BB RID: 140219 RVA: 0x009B2157 File Offset: 0x009B0357
 		public bool IsHighSpeedMode()
 		{
 			return this.IsHighSpeed;
 		}
 
-		// Token: 0x17007545 RID: 30021
-		// (get) Token: 0x0602DCDA RID: 187610 RVA: 0x00A86937 File Offset: 0x00A84B37
+		// Token: 0x170047FC RID: 18428
+		// (get) Token: 0x060223BC RID: 140220 RVA: 0x009B215F File Offset: 0x009B035F
 		public static PlayerVelocityController Instance
 		{
 			get
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCDB RID: 187611 RVA: 0x00A8693E File Offset: 0x00A84B3E
+		// Token: 0x060223BD RID: 140221 RVA: 0x009B2166 File Offset: 0x009B0366
 		public static PlayerVelocityController GetOrCreateInstance()
 		{
 			if (PlayerVelocityController._Instance == null)
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.World.Controller
 			return PlayerVelocityController._Instance;
 		}
 
-		// Token: 0x0602DCDC RID: 187612 RVA: 0x00A86952 File Offset: 0x00A84B52
+		// Token: 0x060223BE RID: 140222 RVA: 0x009B217A File Offset: 0x009B037A
 		public static bool CreateInstance()
 		{
 			if (PlayerVelocityController._Instance != null)
@@ -271,61 +271,61 @@ namespace CSharpScript.Game.World.Controller
 			return true;
 		}
 
-		// Token: 0x0602DCDD RID: 187613 RVA: 0x00A86968 File Offset: 0x00A84B68
+		// Token: 0x060223BF RID: 140223 RVA: 0x009B2190 File Offset: 0x009B0390
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DCDE RID: 187614 RVA: 0x00A8696A File Offset: 0x00A84B6A
+		// Token: 0x060223C0 RID: 140224 RVA: 0x009B2192 File Offset: 0x009B0392
 		public static void ResetStaticDefaultValue()
 		{
 			PlayerVelocityController._Instance = null;
 		}
 
-		// Token: 0x0602DCDF RID: 187615 RVA: 0x00A86972 File Offset: 0x00A84B72
+		// Token: 0x060223C1 RID: 140225 RVA: 0x009B219A File Offset: 0x009B039A
 		static PlayerVelocityController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlayerVelocityController.CreateStaticDefaultValue), new Action(PlayerVelocityController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018755 RID: 100181
+		// Token: 0x04012D8F RID: 77199
 		private const float MAX_DELTA_TIME = 5f;
 
-		// Token: 0x04018756 RID: 100182
+		// Token: 0x04012D90 RID: 77200
 		private const int HIGH_SPEED_SQUARED = 640000;
 
-		// Token: 0x04018757 RID: 100183
+		// Token: 0x04012D91 RID: 77201
 		private const string IMPOSTER_UPDATE_BATCH = "r.imp.UpdateBatch";
 
-		// Token: 0x04018758 RID: 100184
+		// Token: 0x04012D92 RID: 77202
 		private readonly Vector LastPosition = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04018759 RID: 100185
+		// Token: 0x04012D93 RID: 77203
 		private readonly Vector AbsVelocity = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401875A RID: 100186
+		// Token: 0x04012D94 RID: 77204
 		private readonly Vector AvgVelocity = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401875B RID: 100187
+		// Token: 0x04012D95 RID: 77205
 		private bool IsHighSpeed;
 
-		// Token: 0x0401875C RID: 100188
+		// Token: 0x04012D96 RID: 77206
 		private int ImposterUpdateBatch = 128;
 
-		// Token: 0x0401875D RID: 100189
+		// Token: 0x04012D97 RID: 77207
 		private readonly string[] TempStringArray = new string[]
 		{
 			"",
 			"0"
 		};
 
-		// Token: 0x0401875E RID: 100190
+		// Token: 0x04012D98 RID: 77208
 		private readonly Stat CalculateVelocityStat = Stat.Create("PlayerVelocityController.CalculateVelocity", "", "");
 
-		// Token: 0x0401875F RID: 100191
+		// Token: 0x04012D99 RID: 77209
 		private EntityToLoadFilter PlayerVelocityFilter;
 
-		// Token: 0x04018760 RID: 100192
+		// Token: 0x04012D9A RID: 77210
 		[Nullable(2)]
 		private static PlayerVelocityController _Instance;
 	}

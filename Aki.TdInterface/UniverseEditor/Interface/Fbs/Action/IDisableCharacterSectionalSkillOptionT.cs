@@ -2,75 +2,75 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065DD RID: 26077
+	// Token: 0x02006C45 RID: 27717
 	public class IDisableCharacterSectionalSkillOptionT
 	{
-		// Token: 0x1700C192 RID: 49554
-		// (get) Token: 0x0602D3BE RID: 185278 RVA: 0x00633302 File Offset: 0x00631502
-		// (set) Token: 0x0602D3BF RID: 185279 RVA: 0x0063330A File Offset: 0x0063150A
+		// Token: 0x1700CB21 RID: 52001
+		// (get) Token: 0x0602FB42 RID: 195394 RVA: 0x0067F4C6 File Offset: 0x0067D6C6
+		// (set) Token: 0x0602FB43 RID: 195395 RVA: 0x0067F4CE File Offset: 0x0067D6CE
 		public bool DisableJump { get; set; }
 
-		// Token: 0x1700C193 RID: 49555
-		// (get) Token: 0x0602D3C0 RID: 185280 RVA: 0x00633313 File Offset: 0x00631513
-		// (set) Token: 0x0602D3C1 RID: 185281 RVA: 0x0063331B File Offset: 0x0063151B
+		// Token: 0x1700CB22 RID: 52002
+		// (get) Token: 0x0602FB44 RID: 195396 RVA: 0x0067F4D7 File Offset: 0x0067D6D7
+		// (set) Token: 0x0602FB45 RID: 195397 RVA: 0x0067F4DF File Offset: 0x0067D6DF
 		public bool DisableShowClimb { get; set; }
 
-		// Token: 0x1700C194 RID: 49556
-		// (get) Token: 0x0602D3C2 RID: 185282 RVA: 0x00633324 File Offset: 0x00631524
-		// (set) Token: 0x0602D3C3 RID: 185283 RVA: 0x0063332C File Offset: 0x0063152C
+		// Token: 0x1700CB23 RID: 52003
+		// (get) Token: 0x0602FB46 RID: 195398 RVA: 0x0067F4E8 File Offset: 0x0067D6E8
+		// (set) Token: 0x0602FB47 RID: 195399 RVA: 0x0067F4F0 File Offset: 0x0067D6F0
 		public bool DisableAttack { get; set; }
 
-		// Token: 0x1700C195 RID: 49557
-		// (get) Token: 0x0602D3C4 RID: 185284 RVA: 0x00633335 File Offset: 0x00631535
-		// (set) Token: 0x0602D3C5 RID: 185285 RVA: 0x0063333D File Offset: 0x0063153D
+		// Token: 0x1700CB24 RID: 52004
+		// (get) Token: 0x0602FB48 RID: 195400 RVA: 0x0067F4F9 File Offset: 0x0067D6F9
+		// (set) Token: 0x0602FB49 RID: 195401 RVA: 0x0067F501 File Offset: 0x0067D701
 		public bool DisableDodge { get; set; }
 
-		// Token: 0x1700C196 RID: 49558
-		// (get) Token: 0x0602D3C6 RID: 185286 RVA: 0x00633346 File Offset: 0x00631546
-		// (set) Token: 0x0602D3C7 RID: 185287 RVA: 0x0063334E File Offset: 0x0063154E
+		// Token: 0x1700CB25 RID: 52005
+		// (get) Token: 0x0602FB4A RID: 195402 RVA: 0x0067F50A File Offset: 0x0067D70A
+		// (set) Token: 0x0602FB4B RID: 195403 RVA: 0x0067F512 File Offset: 0x0067D712
 		public bool DisableSkill1 { get; set; }
 
-		// Token: 0x1700C197 RID: 49559
-		// (get) Token: 0x0602D3C8 RID: 185288 RVA: 0x00633357 File Offset: 0x00631557
-		// (set) Token: 0x0602D3C9 RID: 185289 RVA: 0x0063335F File Offset: 0x0063155F
+		// Token: 0x1700CB26 RID: 52006
+		// (get) Token: 0x0602FB4C RID: 195404 RVA: 0x0067F51B File Offset: 0x0067D71B
+		// (set) Token: 0x0602FB4D RID: 195405 RVA: 0x0067F523 File Offset: 0x0067D723
 		public bool DisableUltimateSkill { get; set; }
 
-		// Token: 0x1700C198 RID: 49560
-		// (get) Token: 0x0602D3CA RID: 185290 RVA: 0x00633368 File Offset: 0x00631568
-		// (set) Token: 0x0602D3CB RID: 185291 RVA: 0x00633370 File Offset: 0x00631570
+		// Token: 0x1700CB27 RID: 52007
+		// (get) Token: 0x0602FB4E RID: 195406 RVA: 0x0067F52C File Offset: 0x0067D72C
+		// (set) Token: 0x0602FB4F RID: 195407 RVA: 0x0067F534 File Offset: 0x0067D734
 		public bool DisableExploreInput { get; set; }
 
-		// Token: 0x1700C199 RID: 49561
-		// (get) Token: 0x0602D3CC RID: 185292 RVA: 0x00633379 File Offset: 0x00631579
-		// (set) Token: 0x0602D3CD RID: 185293 RVA: 0x00633381 File Offset: 0x00631581
+		// Token: 0x1700CB28 RID: 52008
+		// (get) Token: 0x0602FB50 RID: 195408 RVA: 0x0067F53D File Offset: 0x0067D73D
+		// (set) Token: 0x0602FB51 RID: 195409 RVA: 0x0067F545 File Offset: 0x0067D745
 		public bool DisableSwitchRole1 { get; set; }
 
-		// Token: 0x1700C19A RID: 49562
-		// (get) Token: 0x0602D3CE RID: 185294 RVA: 0x0063338A File Offset: 0x0063158A
-		// (set) Token: 0x0602D3CF RID: 185295 RVA: 0x00633392 File Offset: 0x00631592
+		// Token: 0x1700CB29 RID: 52009
+		// (get) Token: 0x0602FB52 RID: 195410 RVA: 0x0067F54E File Offset: 0x0067D74E
+		// (set) Token: 0x0602FB53 RID: 195411 RVA: 0x0067F556 File Offset: 0x0067D756
 		public bool DisableSwitchRole2 { get; set; }
 
-		// Token: 0x1700C19B RID: 49563
-		// (get) Token: 0x0602D3D0 RID: 185296 RVA: 0x0063339B File Offset: 0x0063159B
-		// (set) Token: 0x0602D3D1 RID: 185297 RVA: 0x006333A3 File Offset: 0x006315A3
+		// Token: 0x1700CB2A RID: 52010
+		// (get) Token: 0x0602FB54 RID: 195412 RVA: 0x0067F55F File Offset: 0x0067D75F
+		// (set) Token: 0x0602FB55 RID: 195413 RVA: 0x0067F567 File Offset: 0x0067D767
 		public bool DisableSwitchRole3 { get; set; }
 
-		// Token: 0x1700C19C RID: 49564
-		// (get) Token: 0x0602D3D2 RID: 185298 RVA: 0x006333AC File Offset: 0x006315AC
-		// (set) Token: 0x0602D3D3 RID: 185299 RVA: 0x006333B4 File Offset: 0x006315B4
+		// Token: 0x1700CB2B RID: 52011
+		// (get) Token: 0x0602FB56 RID: 195414 RVA: 0x0067F570 File Offset: 0x0067D770
+		// (set) Token: 0x0602FB57 RID: 195415 RVA: 0x0067F578 File Offset: 0x0067D778
 		public bool DisableLock { get; set; }
 
-		// Token: 0x1700C19D RID: 49565
-		// (get) Token: 0x0602D3D4 RID: 185300 RVA: 0x006333BD File Offset: 0x006315BD
-		// (set) Token: 0x0602D3D5 RID: 185301 RVA: 0x006333C5 File Offset: 0x006315C5
+		// Token: 0x1700CB2C RID: 52012
+		// (get) Token: 0x0602FB58 RID: 195416 RVA: 0x0067F581 File Offset: 0x0067D781
+		// (set) Token: 0x0602FB59 RID: 195417 RVA: 0x0067F589 File Offset: 0x0067D789
 		public bool DisableAim { get; set; }
 
-		// Token: 0x1700C19E RID: 49566
-		// (get) Token: 0x0602D3D6 RID: 185302 RVA: 0x006333CE File Offset: 0x006315CE
-		// (set) Token: 0x0602D3D7 RID: 185303 RVA: 0x006333D6 File Offset: 0x006315D6
+		// Token: 0x1700CB2D RID: 52013
+		// (get) Token: 0x0602FB5A RID: 195418 RVA: 0x0067F592 File Offset: 0x0067D792
+		// (set) Token: 0x0602FB5B RID: 195419 RVA: 0x0067F59A File Offset: 0x0067D79A
 		public ushort NullMask { get; set; }
 
-		// Token: 0x0602D3D8 RID: 185304 RVA: 0x006333E0 File Offset: 0x006315E0
+		// Token: 0x0602FB5C RID: 195420 RVA: 0x0067F5A4 File Offset: 0x0067D7A4
 		public IDisableCharacterSectionalSkillOptionT()
 		{
 			this.DisableJump = false;

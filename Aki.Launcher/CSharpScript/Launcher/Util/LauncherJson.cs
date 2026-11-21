@@ -5,22 +5,22 @@ using CSharpScript.Launcher.Util.Json;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x0200006B RID: 107
+	// Token: 0x0200006D RID: 109
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class LauncherJson
 	{
-		// Token: 0x060002DB RID: 731 RVA: 0x0000EE38 File Offset: 0x0000D038
-		public static string Stringify<T>([Nullable(1)] T value, JsonSerializerOptions options = null)
+		// Token: 0x060002DF RID: 735 RVA: 0x0000F360 File Offset: 0x0000D560
+		public static string Stringify(object value, JsonSerializerOptions options = null)
 		{
 			string result;
 			try
 			{
 				if (options == null)
 				{
-					options = LauncherJsonSettings.GetSerializerOptions<T>();
+					options = LauncherJsonSettings.GetSerializerOptions<object>();
 				}
-				result = JsonSerializer.Serialize<T>(value, options);
+				result = JsonSerializer.Serialize<object>(value, options);
 			}
 			catch (Exception error)
 			{
@@ -30,7 +30,7 @@ namespace CSharpScript.Launcher.Util
 			return result;
 		}
 
-		// Token: 0x060002DC RID: 732 RVA: 0x0000EE88 File Offset: 0x0000D088
+		// Token: 0x060002E0 RID: 736 RVA: 0x0000F3B0 File Offset: 0x0000D5B0
 		public static T Parse<T>([Nullable(1)] string text, JsonSerializerOptions options = null)
 		{
 			T result;
@@ -50,7 +50,7 @@ namespace CSharpScript.Launcher.Util
 			return result;
 		}
 
-		// Token: 0x060002DD RID: 733 RVA: 0x0000EEE0 File Offset: 0x0000D0E0
+		// Token: 0x060002E1 RID: 737 RVA: 0x0000F408 File Offset: 0x0000D608
 		public static T Parse<T>(JsonElement jsonElement, JsonSerializerOptions options = null)
 		{
 			T result;

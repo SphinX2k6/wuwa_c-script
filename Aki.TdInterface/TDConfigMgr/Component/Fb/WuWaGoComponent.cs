@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E14 RID: 3604
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F10 RID: 3856
 	public class WuWaGoComponent : IComponentBase
 	{
-		// Token: 0x06005183 RID: 20867 RVA: 0x000C9050 File Offset: 0x000C7250
+		// Token: 0x060056AA RID: 22186 RVA: 0x000D4918 File Offset: 0x000D2B18
 		public static WuWaGoComponent Create(IWuWaGoComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B18 RID: 6936
-		// (get) Token: 0x06005184 RID: 20868 RVA: 0x000C9070 File Offset: 0x000C7270
+		// Token: 0x17001C85 RID: 7301
+		// (get) Token: 0x060056AB RID: 22187 RVA: 0x000D4938 File Offset: 0x000D2B38
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B19 RID: 6937
-		// (get) Token: 0x06005185 RID: 20869 RVA: 0x000C90A8 File Offset: 0x000C72A8
+		// Token: 0x17001C86 RID: 7302
+		// (get) Token: 0x060056AC RID: 22188 RVA: 0x000D4970 File Offset: 0x000D2B70
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B1A RID: 6938
-		// (get) Token: 0x06005186 RID: 20870 RVA: 0x000C90BE File Offset: 0x000C72BE
+		// Token: 0x17001C87 RID: 7303
+		// (get) Token: 0x060056AD RID: 22189 RVA: 0x000D4986 File Offset: 0x000D2B86
 		public virtual IWuWaGoEntityBase WuWaGoEntity
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B1B RID: 6939
-		// (get) Token: 0x06005187 RID: 20871 RVA: 0x000C90F0 File Offset: 0x000C72F0
+		// Token: 0x17001C88 RID: 7304
+		// (get) Token: 0x060056AE RID: 22190 RVA: 0x000D49B8 File Offset: 0x000D2BB8
 		[Nullable(2)]
 		public virtual List<int> OpenAddClientTags
 		{
@@ -90,20 +88,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EF5 RID: 12021
+		// Token: 0x040031BD RID: 12733
 		private IWuWaGoComponent Instance;
 
-		// Token: 0x04002EF6 RID: 12022
+		// Token: 0x040031BE RID: 12734
 		private IWuWaGoEntityBase _WuWaGoEntityCache;
 
-		// Token: 0x04002EF7 RID: 12023
+		// Token: 0x040031BF RID: 12735
 		private bool _WuWaGoEntityInited;
 
-		// Token: 0x04002EF8 RID: 12024
+		// Token: 0x040031C0 RID: 12736
 		[Nullable(2)]
 		private List<int> _OpenAddClientTagsCache;
 
-		// Token: 0x04002EF9 RID: 12025
+		// Token: 0x040031C1 RID: 12737
 		private bool _OpenAddClientTagsInited;
 	}
 }

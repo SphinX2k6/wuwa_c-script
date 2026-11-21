@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DFC RID: 11772
+// Token: 0x02002357 RID: 9047
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataManipulatableTagsChange.LogicDataManipulatableTagsChange_C")]
 public class LogicDataManipulatableTagsChange : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002200 RID: 8704
-	// (get) Token: 0x06018BC9 RID: 101321 RVA: 0x00658C58 File Offset: 0x00656E58
-	// (set) Token: 0x06018BCA RID: 101322 RVA: 0x00658C91 File Offset: 0x00656E91
+	// Token: 0x17002264 RID: 8804
+	// (get) Token: 0x0601647E RID: 91262 RVA: 0x0067ECDC File Offset: 0x0067CEDC
+	// (set) Token: 0x0601647F RID: 91263 RVA: 0x0067ED15 File Offset: 0x0067CF15
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FGameplayTagContainer ExistTagsCondition
 	{
@@ -35,9 +35,9 @@ public class LogicDataManipulatableTagsChange : LogicDataBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17002201 RID: 8705
-	// (get) Token: 0x06018BCB RID: 101323 RVA: 0x00658CBC File Offset: 0x00656EBC
-	// (set) Token: 0x06018BCC RID: 101324 RVA: 0x00658CF5 File Offset: 0x00656EF5
+	// Token: 0x17002265 RID: 8805
+	// (get) Token: 0x06016480 RID: 91264 RVA: 0x0067ED40 File Offset: 0x0067CF40
+	// (set) Token: 0x06016481 RID: 91265 RVA: 0x0067ED79 File Offset: 0x0067CF79
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FGameplayTagContainer UnExistTagsCondition
 	{
@@ -57,9 +57,9 @@ public class LogicDataManipulatableTagsChange : LogicDataBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17002202 RID: 8706
-	// (get) Token: 0x06018BCD RID: 101325 RVA: 0x00658D20 File Offset: 0x00656F20
-	// (set) Token: 0x06018BCE RID: 101326 RVA: 0x00658D59 File Offset: 0x00656F59
+	// Token: 0x17002266 RID: 8806
+	// (get) Token: 0x06016482 RID: 91266 RVA: 0x0067EDA4 File Offset: 0x0067CFA4
+	// (set) Token: 0x06016483 RID: 91267 RVA: 0x0067EDDD File Offset: 0x0067CFDD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FGameplayTagContainer AddTags
 	{
@@ -79,9 +79,9 @@ public class LogicDataManipulatableTagsChange : LogicDataBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17002203 RID: 8707
-	// (get) Token: 0x06018BCF RID: 101327 RVA: 0x00658D84 File Offset: 0x00656F84
-	// (set) Token: 0x06018BD0 RID: 101328 RVA: 0x00658DBD File Offset: 0x00656FBD
+	// Token: 0x17002267 RID: 8807
+	// (get) Token: 0x06016484 RID: 91268 RVA: 0x0067EE08 File Offset: 0x0067D008
+	// (set) Token: 0x06016485 RID: 91269 RVA: 0x0067EE41 File Offset: 0x0067D041
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FGameplayTagContainer RemoveTags
 	{
@@ -101,7 +101,7 @@ public class LogicDataManipulatableTagsChange : LogicDataBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x06018BD1 RID: 101329 RVA: 0x00658DE5 File Offset: 0x00656FE5
+	// Token: 0x06016486 RID: 91270 RVA: 0x0067EE69 File Offset: 0x0067D069
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataManipulatableTagsChange._ClassPtr == IntPtr.Zero)
@@ -111,55 +111,55 @@ public class LogicDataManipulatableTagsChange : LogicDataBase, IUnrealUObject, I
 		return LogicDataManipulatableTagsChange._ClassPtr;
 	}
 
-	// Token: 0x06018BD2 RID: 101330 RVA: 0x00658E0C File Offset: 0x0065700C
+	// Token: 0x06016487 RID: 91271 RVA: 0x0067EE90 File Offset: 0x0067D090
 	public LogicDataManipulatableTagsChange() : this(BuiltinUtils.AllocNativeUObject(LogicDataManipulatableTagsChange.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018BD3 RID: 101331 RVA: 0x00658E34 File Offset: 0x00657034
+	// Token: 0x06016488 RID: 91272 RVA: 0x0067EEB8 File Offset: 0x0067D0B8
 	public LogicDataManipulatableTagsChange(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataManipulatableTagsChange.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018BD4 RID: 101332 RVA: 0x00658E67 File Offset: 0x00657067
+	// Token: 0x06016489 RID: 91273 RVA: 0x0067EEEB File Offset: 0x0067D0EB
 	protected LogicDataManipulatableTagsChange(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B891 RID: 47249
+	// Token: 0x0400BC17 RID: 48151
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataManipulatableTagsChange.LogicDataManipulatableTagsChange_C";
 
-	// Token: 0x0400B892 RID: 47250
+	// Token: 0x0400BC18 RID: 48152
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B893 RID: 47251
+	// Token: 0x0400BC19 RID: 48153
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B894 RID: 47252
+	// Token: 0x0400BC1A RID: 48154
 	private static int __PropertyOffset_ExistTagsCondition;
 
-	// Token: 0x0400B895 RID: 47253
+	// Token: 0x0400BC1B RID: 48155
 	[Nullable(2)]
 	private FGameplayTagContainer _ExistTagsCondition;
 
-	// Token: 0x0400B896 RID: 47254
+	// Token: 0x0400BC1C RID: 48156
 	private static int __PropertyOffset_UnExistTagsCondition;
 
-	// Token: 0x0400B897 RID: 47255
+	// Token: 0x0400BC1D RID: 48157
 	[Nullable(2)]
 	private FGameplayTagContainer _UnExistTagsCondition;
 
-	// Token: 0x0400B898 RID: 47256
+	// Token: 0x0400BC1E RID: 48158
 	private static int __PropertyOffset_AddTags;
 
-	// Token: 0x0400B899 RID: 47257
+	// Token: 0x0400BC1F RID: 48159
 	[Nullable(2)]
 	private FGameplayTagContainer _AddTags;
 
-	// Token: 0x0400B89A RID: 47258
+	// Token: 0x0400BC20 RID: 48160
 	private static int __PropertyOffset_RemoveTags;
 
-	// Token: 0x0400B89B RID: 47259
+	// Token: 0x0400BC21 RID: 48161
 	[Nullable(2)]
 	private FGameplayTagContainer _RemoveTags;
 }

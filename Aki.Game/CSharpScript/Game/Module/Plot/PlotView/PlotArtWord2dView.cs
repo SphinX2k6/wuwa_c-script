@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200504A RID: 20554
+	// Token: 0x02004019 RID: 16409
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotArtWord2dView : UiViewBase
 	{
-		// Token: 0x060349A1 RID: 215457 RVA: 0x00C6CB60 File Offset: 0x00C6AD60
+		// Token: 0x06029883 RID: 170115 RVA: 0x00BB9CCC File Offset: 0x00BB7ECC
 		public PlotArtWord2dView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060349A2 RID: 215458 RVA: 0x00C6CBB0 File Offset: 0x00C6ADB0
+		// Token: 0x06029884 RID: 170116 RVA: 0x00BB9D1C File Offset: 0x00BB7F1C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060349A3 RID: 215459 RVA: 0x00C6CC1C File Offset: 0x00C6AE1C
+		// Token: 0x06029885 RID: 170117 RVA: 0x00BB9D88 File Offset: 0x00BB7F88
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PlotArtWord2dView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349A4 RID: 215460 RVA: 0x00C6CC60 File Offset: 0x00C6AE60
+		// Token: 0x06029886 RID: 170118 RVA: 0x00BB9DCC File Offset: 0x00BB7FCC
 		protected override void OnStart()
 		{
 			if (string.IsNullOrEmpty(this.SequenceName))
@@ -93,7 +93,11 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 				ULevelSequencePlayer sequencePlayer = this.SequenceActor.SequencePlayer;
 				if (sequencePlayer != null)
 				{
-					sequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams(new FFrameTime(), 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Play));
+					sequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams
+					{
+						PositionType = EMovieScenePositionType.Frame,
+						UpdateMethod = EUpdatePositionMethod.Play
+					});
 				}
 			}
 			if (this.Segments.Count > 0)
@@ -103,7 +107,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349A5 RID: 215461 RVA: 0x00C6CDE8 File Offset: 0x00C6AFE8
+		// Token: 0x06029887 RID: 170119 RVA: 0x00BB9F54 File Offset: 0x00BB8154
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -120,7 +124,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <LoadSequenceAssetAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349A6 RID: 215462 RVA: 0x00C6CE33 File Offset: 0x00C6B033
+		// Token: 0x06029888 RID: 170120 RVA: 0x00BB9F9F File Offset: 0x00BB819F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OpenView, new Action<EUiViewName, int>(this.OnOpenView));
@@ -128,14 +132,14 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.RefreshContentVisible();
 		}
 
-		// Token: 0x060349A7 RID: 215463 RVA: 0x00C6CE6C File Offset: 0x00C6B06C
+		// Token: 0x06029889 RID: 170121 RVA: 0x00BB9FD8 File Offset: 0x00BB81D8
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OpenView, new Action<EUiViewName, int>(this.OnOpenView));
 			EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		}
 
-		// Token: 0x060349A8 RID: 215464 RVA: 0x00C6CE9F File Offset: 0x00C6B09F
+		// Token: 0x0602988A RID: 170122 RVA: 0x00BBA00B File Offset: 0x00BB820B
 		protected override void OnBeforeDestroy()
 		{
 			ALevelSequenceActor sequenceActor = this.SequenceActor;
@@ -151,26 +155,26 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.PendingBindings.Clear();
 		}
 
-		// Token: 0x060349A9 RID: 215465 RVA: 0x00C6CED3 File Offset: 0x00C6B0D3
+		// Token: 0x0602988B RID: 170123 RVA: 0x00BBA03F File Offset: 0x00BB823F
 		private void OnOpenView(EUiViewName viewName, int viewId)
 		{
 			this.RefreshContentVisible();
 		}
 
-		// Token: 0x060349AA RID: 215466 RVA: 0x00C6CEDB File Offset: 0x00C6B0DB
+		// Token: 0x0602988C RID: 170124 RVA: 0x00BBA047 File Offset: 0x00BB8247
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			this.RefreshContentVisible();
 		}
 
-		// Token: 0x060349AB RID: 215467 RVA: 0x00C6CEE4 File Offset: 0x00C6B0E4
+		// Token: 0x0602988D RID: 170125 RVA: 0x00BBA050 File Offset: 0x00BB8250
 		private bool IsUiClean()
 		{
 			UiViewBase topView = UiModel.Instance.GetTopView(ELayerType.Normal);
 			return (topView == null || UiModel.Instance.CanShowPlotViewWhiteList.Contains(topView.ViewInfo.Name)) && UiModel.Instance.PopList.Count == 0;
 		}
 
-		// Token: 0x060349AC RID: 215468 RVA: 0x00C6CF30 File Offset: 0x00C6B130
+		// Token: 0x0602988E RID: 170126 RVA: 0x00BBA09C File Offset: 0x00BB829C
 		private void RefreshContentVisible()
 		{
 			bool flag = this.IsUiClean();
@@ -187,7 +191,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			item.SetUIActive(flag);
 		}
 
-		// Token: 0x060349AD RID: 215469 RVA: 0x00C6CF68 File Offset: 0x00C6B168
+		// Token: 0x0602988F RID: 170127 RVA: 0x00BBA0D4 File Offset: 0x00BB82D4
 		public void SwitchToNextMark()
 		{
 			if (this.CurSegmentIndex + 1 >= this.Segments.Count)
@@ -204,7 +208,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.PlaySegment(this.CurSegmentIndex);
 		}
 
-		// Token: 0x060349AE RID: 215470 RVA: 0x00C6CFD8 File Offset: 0x00C6B1D8
+		// Token: 0x06029890 RID: 170128 RVA: 0x00BBA144 File Offset: 0x00BB8344
 		private void CollectLoopSegments(UMovieScene movieScene)
 		{
 			TArray<FMovieSceneMarkedFrame> markedFrames = movieScene.MarkedFrames;
@@ -249,7 +253,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349AF RID: 215471 RVA: 0x00C6D0D8 File Offset: 0x00C6B2D8
+		// Token: 0x06029891 RID: 170129 RVA: 0x00BBA244 File Offset: 0x00BB8444
 		private UniTask CreateTextPanelsAsync(UMovieScene movieScene)
 		{
 			PlotArtWord2dView.<CreateTextPanelsAsync>d__22 <CreateTextPanelsAsync>d__;
@@ -261,7 +265,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <CreateTextPanelsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349B0 RID: 215472 RVA: 0x00C6D124 File Offset: 0x00C6B324
+		// Token: 0x06029892 RID: 170130 RVA: 0x00BBA290 File Offset: 0x00BB8490
 		private HashSet<string> CollectBindingGuidsByTag(TMap<FName, FMovieSceneObjectBindingIDs> bindingGroups, string tag)
 		{
 			HashSet<string> hashSet = new HashSet<string>();
@@ -287,7 +291,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return hashSet;
 		}
 
-		// Token: 0x060349B1 RID: 215473 RVA: 0x00C6D1F0 File Offset: 0x00C6B3F0
+		// Token: 0x06029893 RID: 170131 RVA: 0x00BBA35C File Offset: 0x00BB855C
 		private UniTask CreateTextPanelAsync(PlotArtWord2dTextPanel panel, AActor copyActor, string tag, FMovieSceneObjectBindingID bindingId, float languageScale)
 		{
 			PlotArtWord2dView.<CreateTextPanelAsync>d__24 <CreateTextPanelAsync>d__;
@@ -303,7 +307,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <CreateTextPanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349B2 RID: 215474 RVA: 0x00C6D260 File Offset: 0x00C6B460
+		// Token: 0x06029894 RID: 170132 RVA: 0x00BBA3CC File Offset: 0x00BB85CC
 		private void PlaySegment(int index)
 		{
 			if (index < 0 || index >= this.Segments.Count)
@@ -317,20 +321,25 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 				return;
 			}
 			ValueTuple<string, string> valueTuple = this.Segments[index];
-			ulevelSequencePlayer.PlayTo_Loop(new FMovieSceneSequencePlaybackParams(new FFrameTime(), 0f, valueTuple.Item2, EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play), valueTuple.Item1);
+			ulevelSequencePlayer.PlayTo_Loop(new FMovieSceneSequencePlaybackParams
+			{
+				MarkedFrame = valueTuple.Item2,
+				PositionType = EMovieScenePositionType.MarkedFrame,
+				UpdateMethod = EUpdatePositionMethod.Play
+			}, valueTuple.Item1);
 		}
 
-		// Token: 0x0401C089 RID: 114825
+		// Token: 0x04016AAC RID: 92844
 		private readonly List<PlotArtWord2dTextPanel> TextPanels = new List<PlotArtWord2dTextPanel>();
 
-		// Token: 0x0401C08A RID: 114826
+		// Token: 0x04016AAD RID: 92845
 		[Nullable(2)]
 		private ALevelSequenceActor SequenceActor;
 
-		// Token: 0x0401C08B RID: 114827
+		// Token: 0x04016AAE RID: 92846
 		private string SequenceName = string.Empty;
 
-		// Token: 0x0401C08C RID: 114828
+		// Token: 0x04016AAF RID: 92847
 		[TupleElementNames(new string[]
 		{
 			"BindingId",
@@ -345,7 +354,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 		})]
 		private readonly List<ValueTuple<FMovieSceneObjectBindingID, AActor>> PendingBindings = new List<ValueTuple<FMovieSceneObjectBindingID, AActor>>();
 
-		// Token: 0x0401C08D RID: 114829
+		// Token: 0x04016AB0 RID: 92848
 		[TupleElementNames(new string[]
 		{
 			"StartLabel",
@@ -360,19 +369,19 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 		})]
 		private List<ValueTuple<string, string>> Segments = new List<ValueTuple<string, string>>();
 
-		// Token: 0x0401C08E RID: 114830
+		// Token: 0x04016AB1 RID: 92849
 		private int CurSegmentIndex = -1;
 
-		// Token: 0x0401C08F RID: 114831
+		// Token: 0x04016AB2 RID: 92850
 		private bool ContentVisible = true;
 
-		// Token: 0x0200B19E RID: 45470
+		// Token: 0x02009BD8 RID: 39896
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04035DE0 RID: 220640
+			// Token: 0x04030835 RID: 198709
 			ItemContent,
-			// Token: 0x04035DE1 RID: 220641
+			// Token: 0x04030836 RID: 198710
 			ItemText
 		}
 	}

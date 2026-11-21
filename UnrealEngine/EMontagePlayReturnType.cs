@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000ADA RID: 2778
+	// Token: 0x020001EC RID: 492
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EMontagePlayReturnType")]
 	public enum EMontagePlayReturnType : byte
 	{
-		// Token: 0x04004AF7 RID: 19191
+		// Token: 0x04000C2A RID: 3114
 		MontageLength,
-		// Token: 0x04004AF8 RID: 19192
+		// Token: 0x04000C2B RID: 3115
 		Duration,
-		// Token: 0x04004AF9 RID: 19193
+		// Token: 0x04000C2C RID: 3116
 		EMontagePlayReturnType_MAX
 	}
 }

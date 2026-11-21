@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021A7 RID: 8615
+	// Token: 0x0200071F RID: 1823
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIScrollViewWithScrollbarComponent")]
 	[UnrealStructLayout(728, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 728)]
 	public class UUIScrollViewWithScrollbarComponent : UUIScrollViewComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020B2B RID: 133931 RVA: 0x00305DA7 File Offset: 0x00303FA7
+		// Token: 0x06009D48 RID: 40264 RVA: 0x000EA732 File Offset: 0x000E8932
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIScrollViewWithScrollbarComponent._ClassPtr;
 		}
 
-		// Token: 0x06020B2C RID: 133932 RVA: 0x00305DB4 File Offset: 0x00303FB4
+		// Token: 0x06009D49 RID: 40265 RVA: 0x000EA740 File Offset: 0x000E8940
 		public UUIScrollViewWithScrollbarComponent() : this(BuiltinUtils.AllocNativeUObject(UUIScrollViewWithScrollbarComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020B2D RID: 133933 RVA: 0x00305DDC File Offset: 0x00303FDC
+		// Token: 0x06009D4A RID: 40266 RVA: 0x000EA768 File Offset: 0x000E8968
 		[NullableContext(1)]
 		public UUIScrollViewWithScrollbarComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIScrollViewWithScrollbarComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007FC9 RID: 32713
-		// (get) Token: 0x06020B2E RID: 133934 RVA: 0x00305E0F File Offset: 0x0030400F
-		// (set) Token: 0x06020B2F RID: 133935 RVA: 0x00305E23 File Offset: 0x00304023
+		// Token: 0x17001D31 RID: 7473
+		// (get) Token: 0x06009D4B RID: 40267 RVA: 0x000EA79B File Offset: 0x000E899B
+		// (set) Token: 0x06009D4C RID: 40268 RVA: 0x000EA7AF File Offset: 0x000E89AF
 		[Nullable(new byte[]
 		{
 			0,
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FCA RID: 32714
-		// (get) Token: 0x06020B30 RID: 133936 RVA: 0x00305E38 File Offset: 0x00304038
-		// (set) Token: 0x06020B31 RID: 133937 RVA: 0x00305E4C File Offset: 0x0030404C
+		// Token: 0x17001D32 RID: 7474
+		// (get) Token: 0x06009D4D RID: 40269 RVA: 0x000EA7C4 File Offset: 0x000E89C4
+		// (set) Token: 0x06009D4E RID: 40270 RVA: 0x000EA7D8 File Offset: 0x000E89D8
 		[Nullable(new byte[]
 		{
 			0,
@@ -90,24 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FCB RID: 32715
-		// (get) Token: 0x06020B32 RID: 133938 RVA: 0x00305E61 File Offset: 0x00304061
-		// (set) Token: 0x06020B33 RID: 133939 RVA: 0x00305E71 File Offset: 0x00304071
-		public unsafe EScrollViewScrollbarVisibility HorizontalScrollbarVisibility
-		{
-			get
-			{
-				return (EScrollViewScrollbarVisibility)(*(base.NativePtr + (IntPtr)UUIScrollViewWithScrollbarComponent.__PropertyOffset_HorizontalScrollbarVisibility));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIScrollViewWithScrollbarComponent.__PropertyOffset_HorizontalScrollbarVisibility) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007FCC RID: 32716
-		// (get) Token: 0x06020B34 RID: 133940 RVA: 0x00305E82 File Offset: 0x00304082
-		// (set) Token: 0x06020B35 RID: 133941 RVA: 0x00305E96 File Offset: 0x00304096
+		// Token: 0x17001D33 RID: 7475
+		// (get) Token: 0x06009D4F RID: 40271 RVA: 0x000EA7ED File Offset: 0x000E89ED
+		// (set) Token: 0x06009D50 RID: 40272 RVA: 0x000EA801 File Offset: 0x000E8A01
 		[Nullable(new byte[]
 		{
 			0,
@@ -135,24 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FCD RID: 32717
-		// (get) Token: 0x06020B36 RID: 133942 RVA: 0x00305EAB File Offset: 0x003040AB
-		// (set) Token: 0x06020B37 RID: 133943 RVA: 0x00305EBB File Offset: 0x003040BB
-		public unsafe EScrollViewScrollbarVisibility VerticalScrollbarVisibility
-		{
-			get
-			{
-				return (EScrollViewScrollbarVisibility)(*(base.NativePtr + (IntPtr)UUIScrollViewWithScrollbarComponent.__PropertyOffset_VerticalScrollbarVisibility));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIScrollViewWithScrollbarComponent.__PropertyOffset_VerticalScrollbarVisibility) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007FCE RID: 32718
-		// (get) Token: 0x06020B38 RID: 133944 RVA: 0x00305ECC File Offset: 0x003040CC
-		// (set) Token: 0x06020B39 RID: 133945 RVA: 0x00305EE0 File Offset: 0x003040E0
+		// Token: 0x17001D34 RID: 7476
+		// (get) Token: 0x06009D51 RID: 40273 RVA: 0x000EA816 File Offset: 0x000E8A16
+		// (set) Token: 0x06009D52 RID: 40274 RVA: 0x000EA82A File Offset: 0x000E8A2A
 		[Nullable(new byte[]
 		{
 			0,
@@ -180,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FCF RID: 32719
-		// (get) Token: 0x06020B3A RID: 133946 RVA: 0x00305EF5 File Offset: 0x003040F5
-		// (set) Token: 0x06020B3B RID: 133947 RVA: 0x00305F09 File Offset: 0x00304109
+		// Token: 0x17001D35 RID: 7477
+		// (get) Token: 0x06009D53 RID: 40275 RVA: 0x000EA83F File Offset: 0x000E8A3F
+		// (set) Token: 0x06009D54 RID: 40276 RVA: 0x000EA853 File Offset: 0x000E8A53
 		[Nullable(new byte[]
 		{
 			0,
@@ -210,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FD0 RID: 32720
-		// (get) Token: 0x06020B3C RID: 133948 RVA: 0x00305F1E File Offset: 0x0030411E
-		// (set) Token: 0x06020B3D RID: 133949 RVA: 0x00305F2E File Offset: 0x0030412E
+		// Token: 0x17001D36 RID: 7478
+		// (get) Token: 0x06009D55 RID: 40277 RVA: 0x000EA868 File Offset: 0x000E8A68
+		// (set) Token: 0x06009D56 RID: 40278 RVA: 0x000EA878 File Offset: 0x000E8A78
 		public unsafe bool IsChangeNavigation
 		{
 			get
@@ -225,9 +195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FD1 RID: 32721
-		// (get) Token: 0x06020B3E RID: 133950 RVA: 0x00305F3F File Offset: 0x0030413F
-		// (set) Token: 0x06020B3F RID: 133951 RVA: 0x00305F4F File Offset: 0x0030414F
+		// Token: 0x17001D37 RID: 7479
+		// (get) Token: 0x06009D57 RID: 40279 RVA: 0x000EA889 File Offset: 0x000E8A89
+		// (set) Token: 0x06009D58 RID: 40280 RVA: 0x000EA899 File Offset: 0x000E8A99
 		public unsafe bool AllowScrollEventBubbleUp
 		{
 			get
@@ -240,31 +210,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020B40 RID: 133952 RVA: 0x00305F60 File Offset: 0x00304160
+		// Token: 0x06009D59 RID: 40281 RVA: 0x000EA8AA File Offset: 0x000E8AAA
 		public void UnBindParentUIItem(UUISelectableComponent Component)
 		{
 			UUIScrollViewWithScrollbarComponent.__UnBindParentUIItem_Internal(base.NativePtr, (Component != null) ? Component.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06020B41 RID: 133953 RVA: 0x00305F7D File Offset: 0x0030417D
-		public void SetVerticalScrollbarVisibility(EScrollViewScrollbarVisibility value)
-		{
-			UUIScrollViewWithScrollbarComponent.__SetVerticalScrollbarVisibility_Internal(base.NativePtr, value);
-		}
-
-		// Token: 0x06020B42 RID: 133954 RVA: 0x00305F8B File Offset: 0x0030418B
-		public void SetHorizontalScrollbarVisibility(EScrollViewScrollbarVisibility value)
-		{
-			UUIScrollViewWithScrollbarComponent.__SetHorizontalScrollbarVisibility_Internal(base.NativePtr, value);
-		}
-
-		// Token: 0x06020B43 RID: 133955 RVA: 0x00305F99 File Offset: 0x00304199
+		// Token: 0x06009D5A RID: 40282 RVA: 0x000EA8C7 File Offset: 0x000E8AC7
 		public void ScrollToTopLater(UUIItem UIItem, bool bTweenAnim = false)
 		{
 			UUIScrollViewWithScrollbarComponent.__ScrollToTopLater_Internal(base.NativePtr, (UIItem != null) ? UIItem.NativePtr : IntPtr.Zero, bTweenAnim);
 		}
 
-		// Token: 0x06020B44 RID: 133956 RVA: 0x00305FB8 File Offset: 0x003041B8
+		// Token: 0x06009D5B RID: 40283 RVA: 0x000EA8E8 File Offset: 0x000E8AE8
 		public unsafe void ScrollToTop(ref FVector2D NewPosition, UUIItem UIItem, bool bTweenAnim = false)
 		{
 			fixed (FVector2D* ptr = &NewPosition)
@@ -274,19 +232,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020B45 RID: 133957 RVA: 0x00305FEA File Offset: 0x003041EA
+		// Token: 0x06009D5C RID: 40284 RVA: 0x000EA91A File Offset: 0x000E8B1A
 		public void ScrollToSelectableComponent(UUISelectableComponent Component)
 		{
 			UUIScrollViewWithScrollbarComponent.__ScrollToSelectableComponent_Internal(base.NativePtr, (Component != null) ? Component.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06020B46 RID: 133958 RVA: 0x00306007 File Offset: 0x00304207
+		// Token: 0x06009D5D RID: 40285 RVA: 0x000EA937 File Offset: 0x000E8B37
 		public void ScrollToRightLater(UUIItem UIItem, bool bTweenAnim = false)
 		{
 			UUIScrollViewWithScrollbarComponent.__ScrollToRightLater_Internal(base.NativePtr, (UIItem != null) ? UIItem.NativePtr : IntPtr.Zero, bTweenAnim);
 		}
 
-		// Token: 0x06020B47 RID: 133959 RVA: 0x00306028 File Offset: 0x00304228
+		// Token: 0x06009D5E RID: 40286 RVA: 0x000EA958 File Offset: 0x000E8B58
 		public unsafe void ScrollToRight(ref FVector2D NewPosition, UUIItem UIItem, bool bTweenAnim = false)
 		{
 			fixed (FVector2D* ptr = &NewPosition)
@@ -296,13 +254,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020B48 RID: 133960 RVA: 0x0030605A File Offset: 0x0030425A
+		// Token: 0x06009D5F RID: 40287 RVA: 0x000EA98A File Offset: 0x000E8B8A
 		public void ScrollToLeftLater(UUIItem UIItem, bool bTweenAnim = false)
 		{
 			UUIScrollViewWithScrollbarComponent.__ScrollToLeftLater_Internal(base.NativePtr, (UIItem != null) ? UIItem.NativePtr : IntPtr.Zero, bTweenAnim);
 		}
 
-		// Token: 0x06020B49 RID: 133961 RVA: 0x00306078 File Offset: 0x00304278
+		// Token: 0x06009D60 RID: 40288 RVA: 0x000EA9A8 File Offset: 0x000E8BA8
 		public unsafe void ScrollToLeft(ref FVector2D NewPosition, UUIItem UIItem, bool bTweenAnim = false)
 		{
 			fixed (FVector2D* ptr = &NewPosition)
@@ -312,19 +270,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020B4A RID: 133962 RVA: 0x003060AA File Offset: 0x003042AA
+		// Token: 0x06009D61 RID: 40289 RVA: 0x000EA9DA File Offset: 0x000E8BDA
 		public void ScrollToEnd()
 		{
 			UUIScrollViewWithScrollbarComponent.__ScrollToEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020B4B RID: 133963 RVA: 0x003060B7 File Offset: 0x003042B7
+		// Token: 0x06009D62 RID: 40290 RVA: 0x000EA9E7 File Offset: 0x000E8BE7
 		public void ScrollToBottomLater(UUIItem UIItem, bool bTweenAnim = false)
 		{
 			UUIScrollViewWithScrollbarComponent.__ScrollToBottomLater_Internal(base.NativePtr, (UIItem != null) ? UIItem.NativePtr : IntPtr.Zero, bTweenAnim);
 		}
 
-		// Token: 0x06020B4C RID: 133964 RVA: 0x003060D8 File Offset: 0x003042D8
+		// Token: 0x06009D63 RID: 40291 RVA: 0x000EAA08 File Offset: 0x000E8C08
 		public unsafe void ScrollToBottom(ref FVector2D NewPosition, UUIItem UIItem, bool bTweenAnim = false)
 		{
 			fixed (FVector2D* ptr = &NewPosition)
@@ -334,37 +292,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020B4D RID: 133965 RVA: 0x0030610A File Offset: 0x0030430A
+		// Token: 0x06009D64 RID: 40292 RVA: 0x000EAA3A File Offset: 0x000E8C3A
 		public void ScrollTo(UUIItem UIItem, bool bTweenAnim = false)
 		{
 			UUIScrollViewWithScrollbarComponent.__ScrollTo_Internal(base.NativePtr, (UIItem != null) ? UIItem.NativePtr : IntPtr.Zero, bTweenAnim);
 		}
 
-		// Token: 0x06020B4E RID: 133966 RVA: 0x00306128 File Offset: 0x00304328
+		// Token: 0x06009D65 RID: 40293 RVA: 0x000EAA58 File Offset: 0x000E8C58
 		public void ResetIsChangeNavigation()
 		{
 			UUIScrollViewWithScrollbarComponent.__ResetIsChangeNavigation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020B4F RID: 133967 RVA: 0x00306135 File Offset: 0x00304335
+		// Token: 0x06009D66 RID: 40294 RVA: 0x000EAA65 File Offset: 0x000E8C65
 		public AUIBaseActor GetViewport()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AUIBaseActor>(UUIScrollViewWithScrollbarComponent.__GetViewport_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06020B50 RID: 133968 RVA: 0x00306147 File Offset: 0x00304347
-		public EScrollViewScrollbarVisibility GetVerticalScrollbarVisibility()
-		{
-			return UUIScrollViewWithScrollbarComponent.__GetVerticalScrollbarVisibility_Internal(base.NativePtr);
-		}
-
-		// Token: 0x06020B51 RID: 133969 RVA: 0x00306154 File Offset: 0x00304354
+		// Token: 0x06009D67 RID: 40295 RVA: 0x000EAA77 File Offset: 0x000E8C77
 		public AUIBaseActor GetVerticalScrollbar()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AUIBaseActor>(UUIScrollViewWithScrollbarComponent.__GetVerticalScrollbar_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06020B52 RID: 133970 RVA: 0x00306168 File Offset: 0x00304368
+		// Token: 0x06009D68 RID: 40296 RVA: 0x000EAA8C File Offset: 0x000E8C8C
 		public unsafe void GetOutOfBottomBoundsType(UUIItem UIItem, ref EOutOfBoundsType OutOfTopOrBottomType, ref EOutOfBoundsType OutOfLeftOrRightType, float ErrorTolerance = 0f)
 		{
 			fixed (EOutOfBoundsType* ptr = &OutOfTopOrBottomType)
@@ -379,168 +331,140 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020B53 RID: 133971 RVA: 0x003061A4 File Offset: 0x003043A4
-		public EScrollViewScrollbarVisibility GetHorizontalScrollbarVisibility()
-		{
-			return UUIScrollViewWithScrollbarComponent.__GetHorizontalScrollbarVisibility_Internal(base.NativePtr);
-		}
-
-		// Token: 0x06020B54 RID: 133972 RVA: 0x003061B1 File Offset: 0x003043B1
+		// Token: 0x06009D69 RID: 40297 RVA: 0x000EAAC8 File Offset: 0x000E8CC8
 		public AUIBaseActor GetHorizontalScrollbar()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AUIBaseActor>(UUIScrollViewWithScrollbarComponent.__GetHorizontalScrollbar_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06020B55 RID: 133973 RVA: 0x003061C3 File Offset: 0x003043C3
+		// Token: 0x06009D6A RID: 40298 RVA: 0x000EAADA File Offset: 0x000E8CDA
 		public UUISelectableComponent FindNavigationComponent(UUISelectableComponent Component, FVector Direction, UINavigationWrapMode Mode, bool bHasOtherNode = false)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUISelectableComponent>(UUIScrollViewWithScrollbarComponent.__FindNavigationComponent_Internal(base.NativePtr, (Component != null) ? Component.NativePtr : IntPtr.Zero, Direction, Mode, bHasOtherNode));
 		}
 
-		// Token: 0x06020B56 RID: 133974 RVA: 0x003061E9 File Offset: 0x003043E9
+		// Token: 0x06009D6B RID: 40299 RVA: 0x000EAB00 File Offset: 0x000E8D00
 		public void BindParentUIItem(UUISelectableComponent Component)
 		{
 			UUIScrollViewWithScrollbarComponent.__BindParentUIItem_Internal(base.NativePtr, (Component != null) ? Component.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06020B57 RID: 133975
+		// Token: 0x06009D6C RID: 40300
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnBindParentUIItem_Internal(IntPtr @this, IntPtr Component);
 
-		// Token: 0x06020B58 RID: 133976
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetVerticalScrollbarVisibility_Internal(IntPtr @this, EScrollViewScrollbarVisibility value);
-
-		// Token: 0x06020B59 RID: 133977
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetHorizontalScrollbarVisibility_Internal(IntPtr @this, EScrollViewScrollbarVisibility value);
-
-		// Token: 0x06020B5A RID: 133978
+		// Token: 0x06009D6D RID: 40301
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToTopLater_Internal(IntPtr @this, IntPtr UIItem, bool bTweenAnim);
 
-		// Token: 0x06020B5B RID: 133979
+		// Token: 0x06009D6E RID: 40302
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToTop_Internal(IntPtr @this, ref FVector2D NewPosition, IntPtr UIItem, bool bTweenAnim);
 
-		// Token: 0x06020B5C RID: 133980
+		// Token: 0x06009D6F RID: 40303
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToSelectableComponent_Internal(IntPtr @this, IntPtr Component);
 
-		// Token: 0x06020B5D RID: 133981
+		// Token: 0x06009D70 RID: 40304
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToRightLater_Internal(IntPtr @this, IntPtr UIItem, bool bTweenAnim);
 
-		// Token: 0x06020B5E RID: 133982
+		// Token: 0x06009D71 RID: 40305
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToRight_Internal(IntPtr @this, ref FVector2D NewPosition, IntPtr UIItem, bool bTweenAnim);
 
-		// Token: 0x06020B5F RID: 133983
+		// Token: 0x06009D72 RID: 40306
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToLeftLater_Internal(IntPtr @this, IntPtr UIItem, bool bTweenAnim);
 
-		// Token: 0x06020B60 RID: 133984
+		// Token: 0x06009D73 RID: 40307
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToLeft_Internal(IntPtr @this, ref FVector2D NewPosition, IntPtr UIItem, bool bTweenAnim);
 
-		// Token: 0x06020B61 RID: 133985
+		// Token: 0x06009D74 RID: 40308
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToEnd_Internal(IntPtr @this);
 
-		// Token: 0x06020B62 RID: 133986
+		// Token: 0x06009D75 RID: 40309
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToBottomLater_Internal(IntPtr @this, IntPtr UIItem, bool bTweenAnim);
 
-		// Token: 0x06020B63 RID: 133987
+		// Token: 0x06009D76 RID: 40310
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToBottom_Internal(IntPtr @this, ref FVector2D NewPosition, IntPtr UIItem, bool bTweenAnim);
 
-		// Token: 0x06020B64 RID: 133988
+		// Token: 0x06009D77 RID: 40311
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollTo_Internal(IntPtr @this, IntPtr UIItem, bool bTweenAnim);
 
-		// Token: 0x06020B65 RID: 133989
+		// Token: 0x06009D78 RID: 40312
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetIsChangeNavigation_Internal(IntPtr @this);
 
-		// Token: 0x06020B66 RID: 133990
+		// Token: 0x06009D79 RID: 40313
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetViewport_Internal(IntPtr @this);
 
-		// Token: 0x06020B67 RID: 133991
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern EScrollViewScrollbarVisibility __GetVerticalScrollbarVisibility_Internal(IntPtr @this);
-
-		// Token: 0x06020B68 RID: 133992
+		// Token: 0x06009D7A RID: 40314
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetVerticalScrollbar_Internal(IntPtr @this);
 
-		// Token: 0x06020B69 RID: 133993
+		// Token: 0x06009D7B RID: 40315
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetOutOfBottomBoundsType_Internal(IntPtr @this, IntPtr UIItem, ref EOutOfBoundsType OutOfTopOrBottomType, ref EOutOfBoundsType OutOfLeftOrRightType, float ErrorTolerance);
 
-		// Token: 0x06020B6A RID: 133994
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern EScrollViewScrollbarVisibility __GetHorizontalScrollbarVisibility_Internal(IntPtr @this);
-
-		// Token: 0x06020B6B RID: 133995
+		// Token: 0x06009D7C RID: 40316
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetHorizontalScrollbar_Internal(IntPtr @this);
 
-		// Token: 0x06020B6C RID: 133996
+		// Token: 0x06009D7D RID: 40317
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindNavigationComponent_Internal(IntPtr @this, IntPtr Component, FVector Direction, UINavigationWrapMode Mode, bool bHasOtherNode);
 
-		// Token: 0x06020B6D RID: 133997
+		// Token: 0x06009D7E RID: 40318
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BindParentUIItem_Internal(IntPtr @this, IntPtr Component);
 
-		// Token: 0x06020B6E RID: 133998 RVA: 0x00306206 File Offset: 0x00304406
+		// Token: 0x06009D7F RID: 40319 RVA: 0x000EAB1D File Offset: 0x000E8D1D
 		static UUIScrollViewWithScrollbarComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIScrollViewWithScrollbarComponent");
 		}
 
-		// Token: 0x06020B6F RID: 133999 RVA: 0x00306214 File Offset: 0x00304414
+		// Token: 0x06009D80 RID: 40320 RVA: 0x000EAB2B File Offset: 0x000E8D2B
 		protected UUIScrollViewWithScrollbarComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040117D3 RID: 71635
+		// Token: 0x040043BC RID: 17340
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIScrollViewWithScrollbarComponent";
 
-		// Token: 0x040117D4 RID: 71636
+		// Token: 0x040043BD RID: 17341
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040117D5 RID: 71637
+		// Token: 0x040043BE RID: 17342
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040117D6 RID: 71638
+		// Token: 0x040043BF RID: 17343
 		internal static int __PropertyOffset_Viewport;
 
-		// Token: 0x040117D7 RID: 71639
+		// Token: 0x040043C0 RID: 17344
 		internal static int __PropertyOffset_HorizontalScrollbar;
 
-		// Token: 0x040117D8 RID: 71640
-		internal static int __PropertyOffset_HorizontalScrollbarVisibility;
-
-		// Token: 0x040117D9 RID: 71641
+		// Token: 0x040043C1 RID: 17345
 		internal static int __PropertyOffset_VerticalScrollbar;
 
-		// Token: 0x040117DA RID: 71642
-		internal static int __PropertyOffset_VerticalScrollbarVisibility;
-
-		// Token: 0x040117DB RID: 71643
+		// Token: 0x040043C2 RID: 17346
 		internal static int __PropertyOffset_HorizontalScrollbarComp;
 
-		// Token: 0x040117DC RID: 71644
+		// Token: 0x040043C3 RID: 17347
 		internal static int __PropertyOffset_VerticalScrollbarComp;
 
-		// Token: 0x040117DD RID: 71645
+		// Token: 0x040043C4 RID: 17348
 		internal static int __PropertyOffset_IsChangeNavigation;
 
-		// Token: 0x040117DE RID: 71646
+		// Token: 0x040043C5 RID: 17349
 		internal static int __PropertyOffset_AllowScrollEventBubbleUp;
 	}
 }

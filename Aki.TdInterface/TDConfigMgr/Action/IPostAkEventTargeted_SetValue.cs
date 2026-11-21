@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D3D RID: 7485
+	// Token: 0x02001F4E RID: 8014
 	public class IPostAkEventTargeted_SetValue
 	{
-		// Token: 0x040060C8 RID: 24776
+		// Token: 0x04006644 RID: 26180
 		public EPostAkEvent Type;
 
-		// Token: 0x040060C9 RID: 24777
+		// Token: 0x04006645 RID: 26181
 		public int EntityId;
 
-		// Token: 0x040060CA RID: 24778
-		[Nullable(1)]
+		// Token: 0x04006646 RID: 26182
 		public string AkEvent;
 	}
 }

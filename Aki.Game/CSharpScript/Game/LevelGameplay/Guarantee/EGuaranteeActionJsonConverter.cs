@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee
 {
-	// Token: 0x02006E0C RID: 28172
+	// Token: 0x02005F8C RID: 24460
 	public class EGuaranteeActionJsonConverter : JsonConverter<EGuaranteeAction>
 	{
-		// Token: 0x06044B58 RID: 281432 RVA: 0x010F5784 File Offset: 0x010F3984
+		// Token: 0x0603ACBE RID: 240830 RVA: 0x0109FB44 File Offset: 0x0109DD44
 		public override EGuaranteeAction Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			return EGuaranteeActionExtensions.FromString(@string);
 		}
 
-		// Token: 0x06044B59 RID: 281433 RVA: 0x010F57A8 File Offset: 0x010F39A8
+		// Token: 0x0603ACBF RID: 240831 RVA: 0x0109FB68 File Offset: 0x0109DD68
 		public override void Write(Utf8JsonWriter writer, EGuaranteeAction value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

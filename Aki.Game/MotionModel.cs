@@ -5,13 +5,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf.Collections;
 
-// Token: 0x0200222E RID: 8750
+// Token: 0x02001712 RID: 5906
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MotionModel : ModelBase
 {
-	// Token: 0x0601111F RID: 69919 RVA: 0x0042932D File Offset: 0x0042752D
+	// Token: 0x0600E5B5 RID: 58805 RVA: 0x00435ED1 File Offset: 0x004340D1
 	public void OnMotionUnlock(int roleId, int motionId)
 	{
 		this.ClearRoleMapMotion(roleId, motionId);
@@ -20,14 +20,14 @@ public class MotionModel : ModelBase
 		EventSystem.Instance.Emit<int, int>(EEventName.UnLockRoleFavorItem, roleId, motionId);
 	}
 
-	// Token: 0x06011120 RID: 69920 RVA: 0x00429362 File Offset: 0x00427562
+	// Token: 0x0600E5B6 RID: 58806 RVA: 0x00435F06 File Offset: 0x00434106
 	public void OnNewMotionCanUnlock(int roleId, int motionId)
 	{
 		this.ClearRoleMapMotion(roleId, motionId);
 		this.TryAddCanUnLockMotion(roleId, motionId);
 	}
 
-	// Token: 0x06011121 RID: 69921 RVA: 0x00429374 File Offset: 0x00427574
+	// Token: 0x0600E5B7 RID: 58807 RVA: 0x00435F18 File Offset: 0x00434118
 	public void OnRoleMotionActive(RoleMotionActiveNotify message)
 	{
 		RoleMotion roleMotionInfo = message.RoleMotionInfo;
@@ -53,7 +53,7 @@ public class MotionModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011122 RID: 69922 RVA: 0x00429434 File Offset: 0x00427634
+	// Token: 0x0600E5B8 RID: 58808 RVA: 0x00435FD8 File Offset: 0x004341D8
 	public void OnGetAllRoleMotionInfo(RoleMotionListNotify message)
 	{
 		this.CurrentUnlockMotionsMap.Clear();
@@ -88,7 +88,7 @@ public class MotionModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011123 RID: 69923 RVA: 0x0042959C File Offset: 0x0042779C
+	// Token: 0x0600E5B9 RID: 58809 RVA: 0x00436140 File Offset: 0x00434340
 	public void OnMotionFinishCondition(RoleMotionFinishConditionNotify message)
 	{
 		foreach (KeyValuePair<int, ConditionInfo> keyValuePair in message.RoleConditionInfoMap)
@@ -98,7 +98,7 @@ public class MotionModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011124 RID: 69924 RVA: 0x004295F8 File Offset: 0x004277F8
+	// Token: 0x0600E5BA RID: 58810 RVA: 0x0043619C File Offset: 0x0043439C
 	public MotionModel.EMotionState GetRoleMotionState(int roleId, int motionId)
 	{
 		HashSet<int> hashSet;
@@ -117,7 +117,7 @@ public class MotionModel : ModelBase
 		return MotionModel.EMotionState.Lock;
 	}
 
-	// Token: 0x06011125 RID: 69925 RVA: 0x00429658 File Offset: 0x00427858
+	// Token: 0x0600E5BB RID: 58811 RVA: 0x004361FC File Offset: 0x004343FC
 	public bool IsCondtionFinish(int roleId, int id, int conditionId)
 	{
 		Dictionary<int, Dictionary<int, List<int>>> dictionary;
@@ -146,7 +146,7 @@ public class MotionModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06011126 RID: 69926 RVA: 0x004296B8 File Offset: 0x004278B8
+	// Token: 0x0600E5BC RID: 58812 RVA: 0x0043625C File Offset: 0x0043445C
 	public void UpdateCondition(int roleId, ConditionInfo conditionInfo)
 	{
 		Dictionary<int, Dictionary<int, List<int>>> dictionary;
@@ -185,7 +185,7 @@ public class MotionModel : ModelBase
 		this.RoleFavorConditionMap[roleId] = dictionary;
 	}
 
-	// Token: 0x06011127 RID: 69927 RVA: 0x004297F0 File Offset: 0x004279F0
+	// Token: 0x0600E5BD RID: 58813 RVA: 0x00436394 File Offset: 0x00434594
 	private void ClearRoleMapMotion(int roleId, int motionId)
 	{
 		HashSet<int> hashSet;
@@ -205,7 +205,7 @@ public class MotionModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011128 RID: 69928 RVA: 0x00429848 File Offset: 0x00427A48
+	// Token: 0x0600E5BE RID: 58814 RVA: 0x004363EC File Offset: 0x004345EC
 	private void TryAddUnLockMotion(int roleId, int motionId)
 	{
 		HashSet<int> hashSet;
@@ -219,7 +219,7 @@ public class MotionModel : ModelBase
 		this.CurrentUnlockMotionsMap[roleId] = hashSet2;
 	}
 
-	// Token: 0x06011129 RID: 69929 RVA: 0x0042988C File Offset: 0x00427A8C
+	// Token: 0x0600E5BF RID: 58815 RVA: 0x00436430 File Offset: 0x00434630
 	private void TryAddCanUnLockMotion(int roleId, int motionId)
 	{
 		HashSet<int> hashSet;
@@ -233,7 +233,7 @@ public class MotionModel : ModelBase
 		this.CurrentCanUnlockMotionMap[roleId] = hashSet2;
 	}
 
-	// Token: 0x0601112A RID: 69930 RVA: 0x004298D0 File Offset: 0x00427AD0
+	// Token: 0x0600E5C0 RID: 58816 RVA: 0x00436474 File Offset: 0x00434674
 	private void TryAddLockMotion(int roleId, int motionId)
 	{
 		HashSet<int> hashSet;
@@ -247,15 +247,15 @@ public class MotionModel : ModelBase
 		this.CurrentLockMotionMap[roleId] = hashSet2;
 	}
 
-	// Token: 0x0601112B RID: 69931 RVA: 0x00429914 File Offset: 0x00427B14
+	// Token: 0x0600E5C1 RID: 58817 RVA: 0x004364B8 File Offset: 0x004346B8
 	public bool IfRoleMotionCanUnlock(int roleId)
 	{
 		HashSet<int> hashSet;
 		return this.CurrentCanUnlockMotionMap.TryGetValue(roleId, out hashSet) && hashSet.Count > 0;
 	}
 
-	// Token: 0x170015AD RID: 5549
-	// (get) Token: 0x0601112C RID: 69932 RVA: 0x0042993C File Offset: 0x00427B3C
+	// Token: 0x170015E4 RID: 5604
+	// (get) Token: 0x0600E5C2 RID: 58818 RVA: 0x004364E0 File Offset: 0x004346E0
 	public static MotionModel Instance
 	{
 		get
@@ -264,7 +264,7 @@ public class MotionModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601112D RID: 69933 RVA: 0x00429943 File Offset: 0x00427B43
+	// Token: 0x0600E5C3 RID: 58819 RVA: 0x004364E7 File Offset: 0x004346E7
 	public static MotionModel GetOrCreateInstance()
 	{
 		if (MotionModel._Instance == null)
@@ -274,7 +274,7 @@ public class MotionModel : ModelBase
 		return MotionModel._Instance;
 	}
 
-	// Token: 0x0601112E RID: 69934 RVA: 0x00429957 File Offset: 0x00427B57
+	// Token: 0x0600E5C4 RID: 58820 RVA: 0x004364FB File Offset: 0x004346FB
 	public static bool CreateInstance()
 	{
 		if (MotionModel._Instance != null)
@@ -285,48 +285,48 @@ public class MotionModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601112F RID: 69935 RVA: 0x0042996D File Offset: 0x00427B6D
+	// Token: 0x0600E5C5 RID: 58821 RVA: 0x00436511 File Offset: 0x00434711
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011130 RID: 69936 RVA: 0x0042996F File Offset: 0x00427B6F
+	// Token: 0x0600E5C6 RID: 58822 RVA: 0x00436513 File Offset: 0x00434713
 	public static void ResetStaticDefaultValue()
 	{
 		MotionModel._Instance = null;
 	}
 
-	// Token: 0x06011131 RID: 69937 RVA: 0x00429977 File Offset: 0x00427B77
+	// Token: 0x0600E5C7 RID: 58823 RVA: 0x0043651B File Offset: 0x0043471B
 	static MotionModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotionModel.CreateStaticDefaultValue), new Action(MotionModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008213 RID: 33299
+	// Token: 0x04008351 RID: 33617
 	private readonly Dictionary<int, HashSet<int>> CurrentUnlockMotionsMap = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x04008214 RID: 33300
+	// Token: 0x04008352 RID: 33618
 	private readonly Dictionary<int, HashSet<int>> CurrentCanUnlockMotionMap = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x04008215 RID: 33301
+	// Token: 0x04008353 RID: 33619
 	private readonly Dictionary<int, HashSet<int>> CurrentLockMotionMap = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x04008216 RID: 33302
+	// Token: 0x04008354 RID: 33620
 	private readonly Dictionary<int, Dictionary<int, Dictionary<int, List<int>>>> RoleFavorConditionMap = new Dictionary<int, Dictionary<int, Dictionary<int, List<int>>>>();
 
-	// Token: 0x04008217 RID: 33303
+	// Token: 0x04008355 RID: 33621
 	[Nullable(2)]
 	private static MotionModel _Instance;
 
-	// Token: 0x0200875C RID: 34652
+	// Token: 0x020078E5 RID: 30949
 	[NullableContext(0)]
 	public enum EMotionState
 	{
-		// Token: 0x0402C004 RID: 180228
+		// Token: 0x0402731C RID: 160540
 		Lock,
-		// Token: 0x0402C005 RID: 180229
+		// Token: 0x0402731D RID: 160541
 		CanUnlock,
-		// Token: 0x0402C006 RID: 180230
+		// Token: 0x0402731E RID: 160542
 		Unlock
 	}
 }

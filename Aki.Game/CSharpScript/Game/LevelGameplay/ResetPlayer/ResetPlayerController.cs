@@ -12,40 +12,40 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 {
-	// Token: 0x02006AB3 RID: 27315
+	// Token: 0x02005C10 RID: 23568
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ResetPlayerController : ControllerBase
 	{
-		// Token: 0x06043DB2 RID: 277938 RVA: 0x010A1434 File Offset: 0x0109F634
+		// Token: 0x06039E09 RID: 237065 RVA: 0x01045B54 File Offset: 0x01043D54
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.ActionResetPosPrePerformanceNotify, new Action<IMessage, Net.CallbackStatus>(this.ActionResetPosPrePerformanceNotify));
 			return true;
 		}
 
-		// Token: 0x06043DB3 RID: 277939 RVA: 0x010A1453 File Offset: 0x0109F653
+		// Token: 0x06039E0A RID: 237066 RVA: 0x01045B73 File Offset: 0x01043D73
 		protected override bool OnLeaveLevel()
 		{
 			this.StopReset();
 			return true;
 		}
 
-		// Token: 0x06043DB4 RID: 277940 RVA: 0x010A145C File Offset: 0x0109F65C
+		// Token: 0x06039E0B RID: 237067 RVA: 0x01045B7C File Offset: 0x01043D7C
 		protected override bool OnChangeMode()
 		{
 			this.StopReset();
 			return true;
 		}
 
-		// Token: 0x06043DB5 RID: 277941 RVA: 0x010A1465 File Offset: 0x0109F665
+		// Token: 0x06039E0C RID: 237068 RVA: 0x01045B85 File Offset: 0x01043D85
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.ActionResetPosPrePerformanceNotify);
 			return true;
 		}
 
-		// Token: 0x06043DB6 RID: 277942 RVA: 0x010A1478 File Offset: 0x0109F678
+		// Token: 0x06039E0D RID: 237069 RVA: 0x01045B98 File Offset: 0x01043D98
 		[NullableContext(2)]
 		private void ActionResetPosPrePerformanceNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			}, resetPresentationFailure.Duration * 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06043DB7 RID: 277943 RVA: 0x010A1700 File Offset: 0x0109F900
+		// Token: 0x06039E0E RID: 237070 RVA: 0x01045E20 File Offset: 0x01044020
 		private void InterruptExecuteRequest(IActionResetReplyData data)
 		{
 			ActionResetPosPrePerformanceEndRequest actionResetPosPrePerformanceEndRequest = new ActionResetPosPrePerformanceEndRequest();
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			Net.Instance.Call(ERequestMessageId.ActionResetPosPrePerformanceEndRequest, actionResetPosPrePerformanceEndRequest, null, 0);
 		}
 
-		// Token: 0x06043DB8 RID: 277944 RVA: 0x010A1750 File Offset: 0x0109F950
+		// Token: 0x06039E0F RID: 237071 RVA: 0x01045E70 File Offset: 0x01044070
 		private void ContinueExecuteRequest(IActionResetReplyData data)
 		{
 			ActionResetPosPrePerformanceEndRequest actionResetPosPrePerformanceEndRequest = new ActionResetPosPrePerformanceEndRequest();
@@ -184,14 +184,14 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			}, 0);
 		}
 
-		// Token: 0x06043DB9 RID: 277945 RVA: 0x010A17AB File Offset: 0x0109F9AB
+		// Token: 0x06039E10 RID: 237072 RVA: 0x01045ECB File Offset: 0x010440CB
 		private void OnTeleportOpenLoadingEnd()
 		{
 			EventSystem.Instance.Remove(EEventName.TeleportOpenLoadingEnd, new Action(this.OnTeleportOpenLoadingEnd));
 			this.RemovePlayerCue();
 		}
 
-		// Token: 0x06043DBA RID: 277946 RVA: 0x010A17CF File Offset: 0x0109F9CF
+		// Token: 0x06039E11 RID: 237073 RVA: 0x01045EEF File Offset: 0x010440EF
 		[NullableContext(2)]
 		private void OnTeleportComplete(TeleportContext _)
 		{
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			this.StopReset();
 		}
 
-		// Token: 0x06043DBB RID: 277947 RVA: 0x010A17F4 File Offset: 0x0109F9F4
+		// Token: 0x06039E12 RID: 237074 RVA: 0x01045F14 File Offset: 0x01044114
 		private void StopReset()
 		{
 			ResetPlayerModel instance = ResetPlayerModel.Instance;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			instance.DisableMoveEntityHandle = null;
 		}
 
-		// Token: 0x06043DBC RID: 277948 RVA: 0x010A186C File Offset: 0x0109FA6C
+		// Token: 0x06039E13 RID: 237075 RVA: 0x01045F8C File Offset: 0x0104418C
 		private void RemovePlayerCue()
 		{
 			ResetPlayerModel instance = ResetPlayerModel.Instance;
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			}
 		}
 
-		// Token: 0x06043DBD RID: 277949 RVA: 0x010A18EC File Offset: 0x0109FAEC
+		// Token: 0x06039E14 RID: 237076 RVA: 0x0104600C File Offset: 0x0104420C
 		[NullableContext(2)]
 		private BaseGameplayCueComponent GetPlayerCueComp()
 		{
@@ -257,8 +257,8 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			return playerEntity.GetComponent<PlayerGameplayCueComponent>();
 		}
 
-		// Token: 0x1700994E RID: 39246
-		// (get) Token: 0x06043DBE RID: 277950 RVA: 0x010A191A File Offset: 0x0109FB1A
+		// Token: 0x17006E3C RID: 28220
+		// (get) Token: 0x06039E15 RID: 237077 RVA: 0x0104603A File Offset: 0x0104423A
 		public static ResetPlayerController Instance
 		{
 			get
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			}
 		}
 
-		// Token: 0x06043DBF RID: 277951 RVA: 0x010A1921 File Offset: 0x0109FB21
+		// Token: 0x06039E16 RID: 237078 RVA: 0x01046041 File Offset: 0x01044241
 		public static ResetPlayerController GetOrCreateInstance()
 		{
 			if (ResetPlayerController._Instance == null)
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			return ResetPlayerController._Instance;
 		}
 
-		// Token: 0x06043DC0 RID: 277952 RVA: 0x010A1935 File Offset: 0x0109FB35
+		// Token: 0x06039E17 RID: 237079 RVA: 0x01046055 File Offset: 0x01044255
 		public static bool CreateInstance()
 		{
 			if (ResetPlayerController._Instance != null)
@@ -288,24 +288,24 @@ namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 			return true;
 		}
 
-		// Token: 0x06043DC1 RID: 277953 RVA: 0x010A194B File Offset: 0x0109FB4B
+		// Token: 0x06039E18 RID: 237080 RVA: 0x0104606B File Offset: 0x0104426B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043DC2 RID: 277954 RVA: 0x010A194D File Offset: 0x0109FB4D
+		// Token: 0x06039E19 RID: 237081 RVA: 0x0104606D File Offset: 0x0104426D
 		public static void ResetStaticDefaultValue()
 		{
 			ResetPlayerController._Instance = null;
 		}
 
-		// Token: 0x06043DC3 RID: 277955 RVA: 0x010A1955 File Offset: 0x0109FB55
+		// Token: 0x06039E1A RID: 237082 RVA: 0x01046075 File Offset: 0x01044275
 		static ResetPlayerController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ResetPlayerController.CreateStaticDefaultValue), new Action(ResetPlayerController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402376E RID: 145262
+		// Token: 0x0401E960 RID: 125280
 		[Nullable(2)]
 		private static ResetPlayerController _Instance;
 	}

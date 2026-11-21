@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073E5 RID: 29669
+	// Token: 0x02007BCF RID: 31695
 	public struct ITimeScaleType : IFlatbufferObject
 	{
-		// Token: 0x1700E15E RID: 57694
-		// (get) Token: 0x06035E57 RID: 220759 RVA: 0x00755D28 File Offset: 0x00753F28
+		// Token: 0x1700ED73 RID: 60787
+		// (get) Token: 0x0603920A RID: 233994 RVA: 0x007B849C File Offset: 0x007B669C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035E58 RID: 220760 RVA: 0x00755D35 File Offset: 0x00753F35
+		// Token: 0x0603920B RID: 233995 RVA: 0x007B84A9 File Offset: 0x007B66A9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035E59 RID: 220761 RVA: 0x00755D3C File Offset: 0x00753F3C
+		// Token: 0x0603920C RID: 233996 RVA: 0x007B84B0 File Offset: 0x007B66B0
 		public static ITimeScaleType GetRootAsITimeScaleType(ByteBuffer _bb)
 		{
 			return ITimeScaleType.GetRootAsITimeScaleType(_bb, default(ITimeScaleType));
 		}
 
-		// Token: 0x06035E5A RID: 220762 RVA: 0x00755D58 File Offset: 0x00753F58
+		// Token: 0x0603920D RID: 233997 RVA: 0x007B84CC File Offset: 0x007B66CC
 		public static ITimeScaleType GetRootAsITimeScaleType(ByteBuffer _bb, ITimeScaleType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035E5B RID: 220763 RVA: 0x00755D75 File Offset: 0x00753F75
+		// Token: 0x0603920E RID: 233998 RVA: 0x007B84E9 File Offset: 0x007B66E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035E5C RID: 220764 RVA: 0x00755D84 File Offset: 0x00753F84
+		// Token: 0x0603920F RID: 233999 RVA: 0x007B84F8 File Offset: 0x007B66F8
 		public ITimeScaleType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E15F RID: 57695
-		// (get) Token: 0x06035E5D RID: 220765 RVA: 0x00755D94 File Offset: 0x00753F94
+		// Token: 0x1700ED74 RID: 60788
+		// (get) Token: 0x06039210 RID: 234000 RVA: 0x007B8508 File Offset: 0x007B6708
 		public ETimeScaleType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035E5E RID: 220766 RVA: 0x00755DD0 File Offset: 0x00753FD0
+		// Token: 0x06039211 RID: 234001 RVA: 0x007B8544 File Offset: 0x007B6744
 		public static Offset<ITimeScaleType> CreateITimeScaleType(FlatBufferBuilder builder, ETimeScaleType Type = ETimeScaleType.Global)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITimeScaleType.EndITimeScaleType(builder);
 		}
 
-		// Token: 0x06035E5F RID: 220767 RVA: 0x00755DE6 File Offset: 0x00753FE6
+		// Token: 0x06039212 RID: 234002 RVA: 0x007B855A File Offset: 0x007B675A
 		public static void StartITimeScaleType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06035E60 RID: 220768 RVA: 0x00755DEF File Offset: 0x00753FEF
+		// Token: 0x06039213 RID: 234003 RVA: 0x007B8563 File Offset: 0x007B6763
 		public static void AddType(FlatBufferBuilder builder, ETimeScaleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035E61 RID: 220769 RVA: 0x00755DFA File Offset: 0x00753FFA
+		// Token: 0x06039214 RID: 234004 RVA: 0x007B856E File Offset: 0x007B676E
 		public static Offset<ITimeScaleType> EndITimeScaleType(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimeScaleType>(builder.EndTable());
 		}
 
-		// Token: 0x06035E62 RID: 220770 RVA: 0x00755E08 File Offset: 0x00754008
+		// Token: 0x06039215 RID: 234005 RVA: 0x007B857C File Offset: 0x007B677C
 		public ITimeScaleTypeT UnPack()
 		{
 			ITimeScaleTypeT timeScaleTypeT = new ITimeScaleTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return timeScaleTypeT;
 		}
 
-		// Token: 0x06035E63 RID: 220771 RVA: 0x00755E23 File Offset: 0x00754023
+		// Token: 0x06039216 RID: 234006 RVA: 0x007B8597 File Offset: 0x007B6797
 		public void UnPackTo(ITimeScaleTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06035E64 RID: 220772 RVA: 0x00755E34 File Offset: 0x00754034
+		// Token: 0x06039217 RID: 234007 RVA: 0x007B85A8 File Offset: 0x007B67A8
 		public static Offset<ITimeScaleType> Pack(FlatBufferBuilder builder, ITimeScaleTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITimeScaleType.CreateITimeScaleType(builder, _o.Type);
 		}
 
-		// Token: 0x0401223D RID: 74301
+		// Token: 0x04013259 RID: 78425
 		private Table __p;
 	}
 }

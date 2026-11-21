@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DC9 RID: 7625
+	// Token: 0x02001FE0 RID: 8160
 	public class IRogueRoleSelectRoom_SetValue
 	{
-		// Token: 0x040061F1 RID: 25073
+		// Token: 0x04006779 RID: 26489
 		public ERogueSelectRoomType Type;
 	}
 }

@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002889 RID: 10377
+// Token: 0x02001E04 RID: 7684
 [NullableContext(2)]
 [Nullable(0)]
 public class LevelUpSuccessEffectData : ILevelUpSuccessEffectData
 {
-	// Token: 0x17001C9E RID: 7326
-	// (get) Token: 0x060155BE RID: 87486 RVA: 0x005634BB File Offset: 0x005616BB
-	// (set) Token: 0x060155BF RID: 87487 RVA: 0x005634C3 File Offset: 0x005616C3
+	// Token: 0x17001CF6 RID: 7414
+	// (get) Token: 0x06012FBC RID: 77756 RVA: 0x0058E217 File Offset: 0x0058C417
+	// (set) Token: 0x06012FBD RID: 77757 RVA: 0x0058E21F File Offset: 0x0058C41F
 	public string Title { get; set; }
 
-	// Token: 0x17001C9F RID: 7327
-	// (get) Token: 0x060155C0 RID: 87488 RVA: 0x005634CC File Offset: 0x005616CC
-	// (set) Token: 0x060155C1 RID: 87489 RVA: 0x005634D4 File Offset: 0x005616D4
+	// Token: 0x17001CF7 RID: 7415
+	// (get) Token: 0x06012FBE RID: 77758 RVA: 0x0058E228 File Offset: 0x0058C428
+	// (set) Token: 0x06012FBF RID: 77759 RVA: 0x0058E230 File Offset: 0x0058C430
 	public string AudioId { get; set; }
 
-	// Token: 0x17001CA0 RID: 7328
-	// (get) Token: 0x060155C2 RID: 87490 RVA: 0x005634DD File Offset: 0x005616DD
-	// (set) Token: 0x060155C3 RID: 87491 RVA: 0x005634E5 File Offset: 0x005616E5
+	// Token: 0x17001CF8 RID: 7416
+	// (get) Token: 0x06012FC0 RID: 77760 RVA: 0x0058E239 File Offset: 0x0058C439
+	// (set) Token: 0x06012FC1 RID: 77761 RVA: 0x0058E241 File Offset: 0x0058C441
 	[Nullable(new byte[]
 	{
 		2,
@@ -35,13 +35,13 @@ public class LevelUpSuccessEffectData : ILevelUpSuccessEffectData
 		1
 	})] set; }
 
-	// Token: 0x17001CA1 RID: 7329
-	// (get) Token: 0x060155C4 RID: 87492 RVA: 0x005634EE File Offset: 0x005616EE
-	// (set) Token: 0x060155C5 RID: 87493 RVA: 0x005634F6 File Offset: 0x005616F6
+	// Token: 0x17001CF9 RID: 7417
+	// (get) Token: 0x06012FC2 RID: 77762 RVA: 0x0058E24A File Offset: 0x0058C44A
+	// (set) Token: 0x06012FC3 RID: 77763 RVA: 0x0058E252 File Offset: 0x0058C452
 	public string ClickText { get; set; }
 
-	// Token: 0x17001CA2 RID: 7330
-	// (get) Token: 0x060155C6 RID: 87494 RVA: 0x005634FF File Offset: 0x005616FF
-	// (set) Token: 0x060155C7 RID: 87495 RVA: 0x00563507 File Offset: 0x00561707
+	// Token: 0x17001CFA RID: 7418
+	// (get) Token: 0x06012FC4 RID: 77764 RVA: 0x0058E25B File Offset: 0x0058C45B
+	// (set) Token: 0x06012FC5 RID: 77765 RVA: 0x0058E263 File Offset: 0x0058C463
 	public Action ClickFunction { get; set; }
 }

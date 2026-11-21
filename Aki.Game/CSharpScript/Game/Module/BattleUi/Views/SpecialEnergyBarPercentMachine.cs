@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E22 RID: 24098
+	// Token: 0x02004E07 RID: 19975
 	public class SpecialEnergyBarPercentMachine
 	{
-		// Token: 0x0603D499 RID: 251033 RVA: 0x00EC524F File Offset: 0x00EC344F
+		// Token: 0x06032428 RID: 205864 RVA: 0x00E167AF File Offset: 0x00E149AF
 		public void Init(float percent)
 		{
 			this.CurPercent = percent;
 			this.TargetPercent = percent;
 		}
 
-		// Token: 0x0603D49A RID: 251034 RVA: 0x00EC5260 File Offset: 0x00EC3460
+		// Token: 0x06032429 RID: 205865 RVA: 0x00E167C0 File Offset: 0x00E149C0
 		public void SetTargetPercent(float percent)
 		{
 			if (percent == this.TargetPercent)
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Speed = 0f;
 		}
 
-		// Token: 0x0603D49B RID: 251035 RVA: 0x00EC52C8 File Offset: 0x00EC34C8
+		// Token: 0x0603242A RID: 205866 RVA: 0x00E16828 File Offset: 0x00E14A28
 		public bool Update(float delta)
 		{
 			if (this.Speed == 0f)
@@ -47,28 +47,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603D49C RID: 251036 RVA: 0x00EC531F File Offset: 0x00EC351F
+		// Token: 0x0603242B RID: 205867 RVA: 0x00E1687F File Offset: 0x00E14A7F
 		public float GetCurPercent()
 		{
 			return this.CurPercent;
 		}
 
-		// Token: 0x0603D49D RID: 251037 RVA: 0x00EC5327 File Offset: 0x00EC3527
+		// Token: 0x0603242C RID: 205868 RVA: 0x00E16887 File Offset: 0x00E14A87
 		public float GetTargetPercent()
 		{
 			return this.TargetPercent;
 		}
 
-		// Token: 0x0401FF59 RID: 130905
+		// Token: 0x0401AA20 RID: 109088
 		private const int DURATION = 100;
 
-		// Token: 0x0401FF5A RID: 130906
+		// Token: 0x0401AA21 RID: 109089
 		private float TargetPercent;
 
-		// Token: 0x0401FF5B RID: 130907
+		// Token: 0x0401AA22 RID: 109090
 		private float CurPercent;
 
-		// Token: 0x0401FF5C RID: 130908
+		// Token: 0x0401AA23 RID: 109091
 		private float Speed;
 	}
 }

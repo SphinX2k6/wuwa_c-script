@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200525E RID: 21086
+	// Token: 0x020057C6 RID: 22470
 	public struct IFireElementalMatch : IFlatbufferObject
 	{
-		// Token: 0x17009A72 RID: 39538
-		// (get) Token: 0x060224D1 RID: 140497 RVA: 0x004C180F File Offset: 0x004BFA0F
+		// Token: 0x1700A26E RID: 41582
+		// (get) Token: 0x06024467 RID: 148583 RVA: 0x004FC2D3 File Offset: 0x004FA4D3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060224D2 RID: 140498 RVA: 0x004C181C File Offset: 0x004BFA1C
+		// Token: 0x06024468 RID: 148584 RVA: 0x004FC2E0 File Offset: 0x004FA4E0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060224D3 RID: 140499 RVA: 0x004C1824 File Offset: 0x004BFA24
+		// Token: 0x06024469 RID: 148585 RVA: 0x004FC2E8 File Offset: 0x004FA4E8
 		public static IFireElementalMatch GetRootAsIFireElementalMatch(ByteBuffer _bb)
 		{
 			return IFireElementalMatch.GetRootAsIFireElementalMatch(_bb, default(IFireElementalMatch));
 		}
 
-		// Token: 0x060224D4 RID: 140500 RVA: 0x004C1840 File Offset: 0x004BFA40
+		// Token: 0x0602446A RID: 148586 RVA: 0x004FC304 File Offset: 0x004FA504
 		public static IFireElementalMatch GetRootAsIFireElementalMatch(ByteBuffer _bb, IFireElementalMatch obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060224D5 RID: 140501 RVA: 0x004C185D File Offset: 0x004BFA5D
+		// Token: 0x0602446B RID: 148587 RVA: 0x004FC321 File Offset: 0x004FA521
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060224D6 RID: 140502 RVA: 0x004C186C File Offset: 0x004BFA6C
+		// Token: 0x0602446C RID: 148588 RVA: 0x004FC330 File Offset: 0x004FA530
 		public IFireElementalMatch __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009A73 RID: 39539
-		// (get) Token: 0x060224D7 RID: 140503 RVA: 0x004C187C File Offset: 0x004BFA7C
+		// Token: 0x1700A26F RID: 41583
+		// (get) Token: 0x0602446D RID: 148589 RVA: 0x004FC340 File Offset: 0x004FA540
 		public EElementalType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060224D8 RID: 140504 RVA: 0x004C18B8 File Offset: 0x004BFAB8
+		// Token: 0x0602446E RID: 148590 RVA: 0x004FC37C File Offset: 0x004FA57C
 		public static Offset<IFireElementalMatch> CreateIFireElementalMatch(FlatBufferBuilder builder, EElementalType Type = EElementalType.Fire)
 		{
 			builder.StartTable(1);
@@ -71,25 +71,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFireElementalMatch.EndIFireElementalMatch(builder);
 		}
 
-		// Token: 0x060224D9 RID: 140505 RVA: 0x004C18CE File Offset: 0x004BFACE
+		// Token: 0x0602446F RID: 148591 RVA: 0x004FC392 File Offset: 0x004FA592
 		public static void StartIFireElementalMatch(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060224DA RID: 140506 RVA: 0x004C18D7 File Offset: 0x004BFAD7
+		// Token: 0x06024470 RID: 148592 RVA: 0x004FC39B File Offset: 0x004FA59B
 		public static void AddType(FlatBufferBuilder builder, EElementalType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060224DB RID: 140507 RVA: 0x004C18E2 File Offset: 0x004BFAE2
+		// Token: 0x06024471 RID: 148593 RVA: 0x004FC3A6 File Offset: 0x004FA5A6
 		public static Offset<IFireElementalMatch> EndIFireElementalMatch(FlatBufferBuilder builder)
 		{
 			return new Offset<IFireElementalMatch>(builder.EndTable());
 		}
 
-		// Token: 0x060224DC RID: 140508 RVA: 0x004C18F0 File Offset: 0x004BFAF0
+		// Token: 0x06024472 RID: 148594 RVA: 0x004FC3B4 File Offset: 0x004FA5B4
 		public IFireElementalMatchT UnPack()
 		{
 			IFireElementalMatchT fireElementalMatchT = new IFireElementalMatchT();
@@ -97,13 +97,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fireElementalMatchT;
 		}
 
-		// Token: 0x060224DD RID: 140509 RVA: 0x004C190B File Offset: 0x004BFB0B
+		// Token: 0x06024473 RID: 148595 RVA: 0x004FC3CF File Offset: 0x004FA5CF
 		public void UnPackTo(IFireElementalMatchT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060224DE RID: 140510 RVA: 0x004C191C File Offset: 0x004BFB1C
+		// Token: 0x06024474 RID: 148596 RVA: 0x004FC3E0 File Offset: 0x004FA5E0
 		public static Offset<IFireElementalMatch> Pack(FlatBufferBuilder builder, IFireElementalMatchT _o)
 		{
 			if (_o == null)
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFireElementalMatch.CreateIFireElementalMatch(builder, _o.Type);
 		}
 
-		// Token: 0x0400E3B0 RID: 58288
+		// Token: 0x0400EFB6 RID: 61366
 		private Table __p;
 	}
 }

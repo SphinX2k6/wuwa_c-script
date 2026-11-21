@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062C1 RID: 25281
+	// Token: 0x02006932 RID: 26930
 	public class IChangeActorMaterialDataT
 	{
-		// Token: 0x1700BCBA RID: 48314
-		// (get) Token: 0x0602BB19 RID: 178969 RVA: 0x00603852 File Offset: 0x00601A52
-		// (set) Token: 0x0602BB1A RID: 178970 RVA: 0x0060385A File Offset: 0x00601A5A
+		// Token: 0x1700C644 RID: 50756
+		// (get) Token: 0x0602E282 RID: 189058 RVA: 0x0064E85E File Offset: 0x0064CA5E
+		// (set) Token: 0x0602E283 RID: 189059 RVA: 0x0064E866 File Offset: 0x0064CA66
 		public EModifyActorMaterialType Type { get; set; }
 
-		// Token: 0x1700BCBB RID: 48315
-		// (get) Token: 0x0602BB1B RID: 178971 RVA: 0x00603863 File Offset: 0x00601A63
-		// (set) Token: 0x0602BB1C RID: 178972 RVA: 0x0060386B File Offset: 0x00601A6B
+		// Token: 0x1700C645 RID: 50757
+		// (get) Token: 0x0602E284 RID: 189060 RVA: 0x0064E86F File Offset: 0x0064CA6F
+		// (set) Token: 0x0602E285 RID: 189061 RVA: 0x0064E877 File Offset: 0x0064CA77
 		public string MaterialData { get; set; }
 
-		// Token: 0x1700BCBC RID: 48316
-		// (get) Token: 0x0602BB1D RID: 178973 RVA: 0x00603874 File Offset: 0x00601A74
-		// (set) Token: 0x0602BB1E RID: 178974 RVA: 0x0060387C File Offset: 0x00601A7C
+		// Token: 0x1700C646 RID: 50758
+		// (get) Token: 0x0602E286 RID: 189062 RVA: 0x0064E880 File Offset: 0x0064CA80
+		// (set) Token: 0x0602E287 RID: 189063 RVA: 0x0064E888 File Offset: 0x0064CA88
 		public List<IActorRefT> ActorRefs { get; set; }
 
-		// Token: 0x0602BB1F RID: 178975 RVA: 0x00603885 File Offset: 0x00601A85
+		// Token: 0x0602E288 RID: 189064 RVA: 0x0064E891 File Offset: 0x0064CA91
 		public IChangeActorMaterialDataT()
 		{
 			this.Type = EModifyActorMaterialType.ChangeMaterialData;

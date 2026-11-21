@@ -4,57 +4,57 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.KeySetting
 {
-	// Token: 0x020057A4 RID: 22436
+	// Token: 0x0200477B RID: 18299
 	[NullableContext(2)]
 	public interface IKeySettingItem
 	{
-		// Token: 0x0603902F RID: 233519
+		// Token: 0x0602DF3F RID: 188223
 		[NullableContext(1)]
 		UUIText GetTitleUiText();
 
-		// Token: 0x06039030 RID: 233520
+		// Token: 0x0602DF40 RID: 188224
 		[NullableContext(1)]
 		UUIExtendToggle GetKeySetToggle();
 
-		// Token: 0x06039031 RID: 233521
+		// Token: 0x0602DF41 RID: 188225
 		[NullableContext(1)]
 		UUIText GetKeyNameUiText();
 
-		// Token: 0x06039032 RID: 233522
+		// Token: 0x0602DF42 RID: 188226
 		[NullableContext(1)]
 		UUIItem GetCursorItem();
 
-		// Token: 0x06039033 RID: 233523 RVA: 0x00D8D5CE File Offset: 0x00D8B7CE
+		// Token: 0x0602DF43 RID: 188227 RVA: 0x00CDC38A File Offset: 0x00CDA58A
 		UUIItem GetDetailUiItem()
 		{
 			return null;
 		}
 
-		// Token: 0x06039034 RID: 233524 RVA: 0x00D8D5D1 File Offset: 0x00D8B7D1
+		// Token: 0x0602DF44 RID: 188228 RVA: 0x00CDC38D File Offset: 0x00CDA58D
 		UUIText GetDetailUiText()
 		{
 			return null;
 		}
 
-		// Token: 0x06039035 RID: 233525 RVA: 0x00D8D5D4 File Offset: 0x00D8B7D4
+		// Token: 0x0602DF45 RID: 188229 RVA: 0x00CDC390 File Offset: 0x00CDA590
 		UUISprite GetDetailSprite()
 		{
 			return null;
 		}
 
-		// Token: 0x06039036 RID: 233526 RVA: 0x00D8D5D7 File Offset: 0x00D8B7D7
+		// Token: 0x0602DF46 RID: 188230 RVA: 0x00CDC393 File Offset: 0x00CDA593
 		UUISprite GetLockSprite()
 		{
 			return null;
 		}
 
-		// Token: 0x06039037 RID: 233527 RVA: 0x00D8D5DA File Offset: 0x00D8B7DA
+		// Token: 0x0602DF47 RID: 188231 RVA: 0x00CDC396 File Offset: 0x00CDA596
 		UUISprite GetSelectSprite()
 		{
 			return null;
 		}
 
-		// Token: 0x06039038 RID: 233528 RVA: 0x00D8D5DD File Offset: 0x00D8B7DD
+		// Token: 0x0602DF48 RID: 188232 RVA: 0x00CDC399 File Offset: 0x00CDA599
 		UUIButtonComponent GetCancelButton()
 		{
 			return null;

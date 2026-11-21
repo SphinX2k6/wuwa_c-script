@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001103 RID: 4355
+// Token: 0x020005B7 RID: 1463
 [NullableContext(2)]
 [Nullable(0)]
 public class ArtemisQteRingBgSingleItem : UiPanelBase
 {
-	// Token: 0x06007196 RID: 29078 RVA: 0x00173BD4 File Offset: 0x00171DD4
+	// Token: 0x0600452C RID: 17708 RVA: 0x0017C590 File Offset: 0x0017A790
 	public ArtemisQteRingBgSingleItem(int startIndex, int endIndex, bool isWholeRing)
 	{
 		this.StartIndex = startIndex;
@@ -19,7 +19,7 @@ public class ArtemisQteRingBgSingleItem : UiPanelBase
 		this.IsWholeRing = isWholeRing;
 	}
 
-	// Token: 0x06007197 RID: 29079 RVA: 0x00173BF4 File Offset: 0x00171DF4
+	// Token: 0x0600452D RID: 17709 RVA: 0x0017C5B0 File Offset: 0x0017A7B0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class ArtemisQteRingBgSingleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007198 RID: 29080 RVA: 0x00173C64 File Offset: 0x00171E64
+	// Token: 0x0600452E RID: 17710 RVA: 0x0017C620 File Offset: 0x0017A820
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ArtemisQteRingBgSingleItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -42,13 +42,13 @@ public class ArtemisQteRingBgSingleItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007199 RID: 29081 RVA: 0x00173CA7 File Offset: 0x00171EA7
+	// Token: 0x0600452F RID: 17711 RVA: 0x0017C663 File Offset: 0x0017A863
 	protected override void OnStart()
 	{
 		this.Init();
 	}
 
-	// Token: 0x0600719A RID: 29082 RVA: 0x00173CB0 File Offset: 0x00171EB0
+	// Token: 0x06004530 RID: 17712 RVA: 0x0017C66C File Offset: 0x0017A86C
 	private void Init()
 	{
 		UUIItem item = base.GetItem(1);
@@ -62,7 +62,7 @@ public class ArtemisQteRingBgSingleItem : UiPanelBase
 		this.MissItem.SetFillAmount(fillAmount);
 	}
 
-	// Token: 0x0600719B RID: 29083 RVA: 0x00173D38 File Offset: 0x00171F38
+	// Token: 0x06004531 RID: 17713 RVA: 0x0017C6F4 File Offset: 0x0017A8F4
 	public void SetType(EArtemisAreaType type)
 	{
 		switch (type)
@@ -81,38 +81,38 @@ public class ArtemisQteRingBgSingleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x040034BE RID: 13502
+	// Token: 0x04003557 RID: 13655
 	protected int StartIndex;
 
-	// Token: 0x040034BF RID: 13503
+	// Token: 0x04003558 RID: 13656
 	protected int EndIndex;
 
-	// Token: 0x040034C0 RID: 13504
+	// Token: 0x04003559 RID: 13657
 	protected bool IsWholeRing;
 
-	// Token: 0x040034C1 RID: 13505
+	// Token: 0x0400355A RID: 13658
 	private ArtemisQteRingSingleAreaItem NormalItem;
 
-	// Token: 0x040034C2 RID: 13506
+	// Token: 0x0400355B RID: 13659
 	private ArtemisQteRingSingleAreaItem MissItem;
 
-	// Token: 0x040034C3 RID: 13507
+	// Token: 0x0400355C RID: 13660
 	private ArtemisQteRingSingleAreaItem PerfectItem;
 
-	// Token: 0x020076C4 RID: 30404
+	// Token: 0x02006858 RID: 26712
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402732D RID: 160557
+		// Token: 0x04022676 RID: 140918
 		public const int PanelCircleTop = 0;
 
-		// Token: 0x0402732E RID: 160558
+		// Token: 0x04022677 RID: 140919
 		public const int PanelAreaNormal = 1;
 
-		// Token: 0x0402732F RID: 160559
+		// Token: 0x04022678 RID: 140920
 		public const int PanelAreaMiss = 2;
 
-		// Token: 0x04027330 RID: 160560
+		// Token: 0x04022679 RID: 140921
 		public const int PanelAreaPerfect = 3;
 	}
 }

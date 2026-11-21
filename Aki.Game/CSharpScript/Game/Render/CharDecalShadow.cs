@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x0200459E RID: 17822
+	// Token: 0x020034C6 RID: 13510
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharDecalShadow : CharRenderBase, IStaticVariableResetter
 	{
-		// Token: 0x0602DF32 RID: 188210 RVA: 0x00A915B4 File Offset: 0x00A8F7B4
+		// Token: 0x0602261C RID: 140828 RVA: 0x009BD7D4 File Offset: 0x009BB9D4
 		public static void OnSetDecalShadowEnabled(int enable)
 		{
 			if (enable > 0)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF33 RID: 188211 RVA: 0x00A91648 File Offset: 0x00A8F848
+		// Token: 0x0602261D RID: 140829 RVA: 0x009BD868 File Offset: 0x009BBA68
 		public override void Start()
 		{
 			this.CachedOwner = base.GetRenderingComponent().GetOwner();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Render
 			base.OnInitSuccess();
 		}
 
-		// Token: 0x0602DF34 RID: 188212 RVA: 0x00A916E8 File Offset: 0x00A8F8E8
+		// Token: 0x0602261E RID: 140830 RVA: 0x009BD908 File Offset: 0x009BBB08
 		public override void Destroy()
 		{
 			AActor decalShadowActor = this.DecalShadowActor;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Render
 			this.DynamicDecalShadowMaterial = null;
 		}
 
-		// Token: 0x0602DF35 RID: 188213 RVA: 0x00A91728 File Offset: 0x00A8F928
+		// Token: 0x0602261F RID: 140831 RVA: 0x009BD948 File Offset: 0x009BBB48
 		private void CollectPrimitives()
 		{
 			TArray<UActorComponent> tarray = this.CachedOwner.K2_GetComponentsByClass(UPrimitiveComponent.StaticClass());
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF36 RID: 188214 RVA: 0x00A91788 File Offset: 0x00A8F988
+		// Token: 0x06022620 RID: 140832 RVA: 0x009BD9A8 File Offset: 0x009BBBA8
 		public void AddPrimitiveComponent(string name, UPrimitiveComponent comp)
 		{
 			this.RemovePrimitiveComponent(name);
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF37 RID: 188215 RVA: 0x00A917C0 File Offset: 0x00A8F9C0
+		// Token: 0x06022621 RID: 140833 RVA: 0x009BD9E0 File Offset: 0x009BBBE0
 		public void RemovePrimitiveComponent(string name)
 		{
 			UPrimitiveComponent uprimitiveComponent;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF38 RID: 188216 RVA: 0x00A917F9 File Offset: 0x00A8F9F9
+		// Token: 0x06022622 RID: 140834 RVA: 0x009BDA19 File Offset: 0x009BBC19
 		public void EnableDecalShadow()
 		{
 			if (this.DecalShadowEnabled)
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF39 RID: 188217 RVA: 0x00A91823 File Offset: 0x00A8FA23
+		// Token: 0x06022623 RID: 140835 RVA: 0x009BDA43 File Offset: 0x009BBC43
 		public void DisableDecalShadow()
 		{
 			if (!this.DecalShadowEnabled)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF3A RID: 188218 RVA: 0x00A91844 File Offset: 0x00A8FA44
+		// Token: 0x06022624 RID: 140836 RVA: 0x009BDA64 File Offset: 0x009BBC64
 		public void UpdateDecalShadow(bool visible)
 		{
 			if (visible)
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Render
 			this.SetDecalShadowOpacity(this.ShadowOpacity);
 		}
 
-		// Token: 0x0602DF3B RID: 188219 RVA: 0x00A919FA File Offset: 0x00A8FBFA
+		// Token: 0x06022625 RID: 140837 RVA: 0x009BDC1A File Offset: 0x009BBE1A
 		public void EnableRealTimeShadow()
 		{
 			if (this.RealTimeShadowEnabled)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF3C RID: 188220 RVA: 0x00A91A1B File Offset: 0x00A8FC1B
+		// Token: 0x06022626 RID: 140838 RVA: 0x009BDC3B File Offset: 0x009BBE3B
 		public void DisableRealTimeShadow()
 		{
 			if (!this.RealTimeShadowEnabled)
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF3D RID: 188221 RVA: 0x00A91A3C File Offset: 0x00A8FC3C
+		// Token: 0x06022627 RID: 140839 RVA: 0x009BDC5C File Offset: 0x009BBE5C
 		public void UpdateRealTimeShadow(bool visible)
 		{
 			if (visible)
@@ -274,14 +274,14 @@ namespace CSharpScript.Game.Render
 			this.SetRealTimeShadowOpacity(this.ShadowOpacity);
 		}
 
-		// Token: 0x0602DF3E RID: 188222 RVA: 0x00A91B30 File Offset: 0x00A8FD30
+		// Token: 0x06022628 RID: 140840 RVA: 0x009BDD50 File Offset: 0x009BBF50
 		public void DisableAllShadow()
 		{
 			this.DisableDecalShadow();
 			this.DisableRealTimeShadow();
 		}
 
-		// Token: 0x0602DF3F RID: 188223 RVA: 0x00A91B40 File Offset: 0x00A8FD40
+		// Token: 0x06022629 RID: 140841 RVA: 0x009BDD60 File Offset: 0x009BBF60
 		public unsafe void SetShouldCastShadow(bool castShadow)
 		{
 			if (castShadow == this.ShouldCastShadow)
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateRealTimeShadow(false);
 		}
 
-		// Token: 0x0602DF40 RID: 188224 RVA: 0x00A91BF4 File Offset: 0x00A8FDF4
+		// Token: 0x0602262A RID: 140842 RVA: 0x009BDE14 File Offset: 0x009BC014
 		public void SetDecalShadowOpacity(float opacity)
 		{
 			this.ShadowOpacity = opacity;
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF41 RID: 188225 RVA: 0x00A91C6C File Offset: 0x00A8FE6C
+		// Token: 0x0602262B RID: 140843 RVA: 0x009BDE8C File Offset: 0x009BC08C
 		public void SetRealTimeShadowOpacity(float opacity)
 		{
 			this.ShadowOpacity = opacity;
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF42 RID: 188226 RVA: 0x00A91D0C File Offset: 0x00A8FF0C
+		// Token: 0x0602262C RID: 140844 RVA: 0x009BDF2C File Offset: 0x009BC12C
 		private void SetDecalShadowConfig(PDA_DecalShadowConfig_C config, float capsuleRadius, float capsuleHalfHeight)
 		{
 			if (this.DecalShadowComponent == null)
@@ -366,87 +366,87 @@ namespace CSharpScript.Game.Render
 			this.DecalShadowComponent.D_SetWorldScale3D(new FVectorDouble((double)num2, num, num));
 		}
 
-		// Token: 0x0602DF43 RID: 188227 RVA: 0x00A91DA5 File Offset: 0x00A8FFA5
+		// Token: 0x0602262D RID: 140845 RVA: 0x009BDFC5 File Offset: 0x009BC1C5
 		public override string GetStatName()
 		{
 			return "CharDecalShadow";
 		}
 
-		// Token: 0x0602DF44 RID: 188228 RVA: 0x00A91DAC File Offset: 0x00A8FFAC
+		// Token: 0x0602262E RID: 140846 RVA: 0x009BDFCC File Offset: 0x009BC1CC
 		public override int GetComponentId()
 		{
 			return 10;
 		}
 
-		// Token: 0x0602DF45 RID: 188229 RVA: 0x00A91DB0 File Offset: 0x00A8FFB0
+		// Token: 0x0602262F RID: 140847 RVA: 0x009BDFD0 File Offset: 0x009BC1D0
 		static CharDecalShadow()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CharDecalShadow.CreateStaticDefaultValue), new Action(CharDecalShadow.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602DF46 RID: 188230 RVA: 0x00A91DDF File Offset: 0x00A8FFDF
+		// Token: 0x06022630 RID: 140848 RVA: 0x009BDFFF File Offset: 0x009BC1FF
 		public static void CreateStaticDefaultValue()
 		{
 			CharDecalShadow.ComponentsSet = new HashSet<CharDecalShadow>();
 			CharDecalShadow.GlobalEventRegistered = false;
 		}
 
-		// Token: 0x0602DF47 RID: 188231 RVA: 0x00A91DF1 File Offset: 0x00A8FFF1
+		// Token: 0x06022631 RID: 140849 RVA: 0x009BE011 File Offset: 0x009BC211
 		public static void ResetStaticDefaultValue()
 		{
 			CharDecalShadow.ComponentsSet = null;
 			CharDecalShadow.GlobalEventRegistered = false;
 		}
 
-		// Token: 0x04018884 RID: 100484
+		// Token: 0x04012EBF RID: 77503
 		private static bool GlobalEventRegistered = false;
 
-		// Token: 0x04018885 RID: 100485
+		// Token: 0x04012EC0 RID: 77504
 		private static HashSet<CharDecalShadow> ComponentsSet;
 
-		// Token: 0x04018886 RID: 100486
+		// Token: 0x04012EC1 RID: 77505
 		private bool ShouldCastShadow = true;
 
-		// Token: 0x04018887 RID: 100487
+		// Token: 0x04012EC2 RID: 77506
 		private bool DecalShadowEnabled;
 
-		// Token: 0x04018888 RID: 100488
+		// Token: 0x04012EC3 RID: 77507
 		private bool RealTimeShadowEnabled = true;
 
-		// Token: 0x04018889 RID: 100489
+		// Token: 0x04012EC4 RID: 77508
 		[Nullable(2)]
 		private AActor CachedOwner;
 
-		// Token: 0x0401888A RID: 100490
+		// Token: 0x04012EC5 RID: 77509
 		[Nullable(2)]
 		private PDA_DecalShadowConfig_C Config;
 
-		// Token: 0x0401888B RID: 100491
+		// Token: 0x04012EC6 RID: 77510
 		private readonly Dictionary<string, UPrimitiveComponent> PrimitiveComponents = new Dictionary<string, UPrimitiveComponent>();
 
-		// Token: 0x0401888C RID: 100492
+		// Token: 0x04012EC7 RID: 77511
 		[Nullable(2)]
 		private AActor DecalShadowActor;
 
-		// Token: 0x0401888D RID: 100493
+		// Token: 0x04012EC8 RID: 77512
 		[Nullable(2)]
 		private UDecalComponent DecalShadowComponent;
 
-		// Token: 0x0401888E RID: 100494
+		// Token: 0x04012EC9 RID: 77513
 		[Nullable(2)]
 		private UMaterialInstanceDynamic DynamicDecalShadowMaterial;
 
-		// Token: 0x0401888F RID: 100495
+		// Token: 0x04012ECA RID: 77514
 		private float ShadowOpacity = 1f;
 
-		// Token: 0x04018890 RID: 100496
+		// Token: 0x04012ECB RID: 77515
 		private static readonly float OpacityThresholdToDisableShadow = 0.2f;
 
-		// Token: 0x0200A830 RID: 43056
+		// Token: 0x020091E7 RID: 37351
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403336F RID: 209775
+			// Token: 0x0402DAFB RID: 187131
 			[Nullable(0)]
 			public static Action<int> <0>__OnSetDecalShadowEnabled;
 		}

@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200526E RID: 21102
+	// Token: 0x020057D6 RID: 22486
 	public class IFixedDateTimeRefreshRuleT
 	{
-		// Token: 0x17009A95 RID: 39573
-		// (get) Token: 0x06022563 RID: 140643 RVA: 0x004C2855 File Offset: 0x004C0A55
-		// (set) Token: 0x06022564 RID: 140644 RVA: 0x004C285D File Offset: 0x004C0A5D
+		// Token: 0x1700A291 RID: 41617
+		// (get) Token: 0x060244F9 RID: 148729 RVA: 0x004FD319 File Offset: 0x004FB519
+		// (set) Token: 0x060244FA RID: 148730 RVA: 0x004FD321 File Offset: 0x004FB521
 		public ERefreshRule Type { get; set; }
 
-		// Token: 0x17009A96 RID: 39574
-		// (get) Token: 0x06022565 RID: 140645 RVA: 0x004C2866 File Offset: 0x004C0A66
-		// (set) Token: 0x06022566 RID: 140646 RVA: 0x004C286E File Offset: 0x004C0A6E
+		// Token: 0x1700A292 RID: 41618
+		// (get) Token: 0x060244FB RID: 148731 RVA: 0x004FD32A File Offset: 0x004FB52A
+		// (set) Token: 0x060244FC RID: 148732 RVA: 0x004FD332 File Offset: 0x004FB532
 		public int Hours { get; set; }
 
-		// Token: 0x17009A97 RID: 39575
-		// (get) Token: 0x06022567 RID: 140647 RVA: 0x004C2877 File Offset: 0x004C0A77
-		// (set) Token: 0x06022568 RID: 140648 RVA: 0x004C287F File Offset: 0x004C0A7F
+		// Token: 0x1700A293 RID: 41619
+		// (get) Token: 0x060244FD RID: 148733 RVA: 0x004FD33B File Offset: 0x004FB53B
+		// (set) Token: 0x060244FE RID: 148734 RVA: 0x004FD343 File Offset: 0x004FB543
 		public int Minutes { get; set; }
 
-		// Token: 0x17009A98 RID: 39576
-		// (get) Token: 0x06022569 RID: 140649 RVA: 0x004C2888 File Offset: 0x004C0A88
-		// (set) Token: 0x0602256A RID: 140650 RVA: 0x004C2890 File Offset: 0x004C0A90
+		// Token: 0x1700A294 RID: 41620
+		// (get) Token: 0x060244FF RID: 148735 RVA: 0x004FD34C File Offset: 0x004FB54C
+		// (set) Token: 0x06024500 RID: 148736 RVA: 0x004FD354 File Offset: 0x004FB554
 		public int Seconds { get; set; }
 
-		// Token: 0x17009A99 RID: 39577
-		// (get) Token: 0x0602256B RID: 140651 RVA: 0x004C2899 File Offset: 0x004C0A99
-		// (set) Token: 0x0602256C RID: 140652 RVA: 0x004C28A1 File Offset: 0x004C0AA1
+		// Token: 0x1700A295 RID: 41621
+		// (get) Token: 0x06024501 RID: 148737 RVA: 0x004FD35D File Offset: 0x004FB55D
+		// (set) Token: 0x06024502 RID: 148738 RVA: 0x004FD365 File Offset: 0x004FB565
 		public int RefreshRate { get; set; }
 
-		// Token: 0x17009A9A RID: 39578
-		// (get) Token: 0x0602256D RID: 140653 RVA: 0x004C28AA File Offset: 0x004C0AAA
-		// (set) Token: 0x0602256E RID: 140654 RVA: 0x004C28B2 File Offset: 0x004C0AB2
+		// Token: 0x1700A296 RID: 41622
+		// (get) Token: 0x06024503 RID: 148739 RVA: 0x004FD36E File Offset: 0x004FB56E
+		// (set) Token: 0x06024504 RID: 148740 RVA: 0x004FD376 File Offset: 0x004FB576
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17009A9B RID: 39579
-		// (get) Token: 0x0602256F RID: 140655 RVA: 0x004C28BB File Offset: 0x004C0ABB
-		// (set) Token: 0x06022570 RID: 140656 RVA: 0x004C28C3 File Offset: 0x004C0AC3
+		// Token: 0x1700A297 RID: 41623
+		// (get) Token: 0x06024505 RID: 148741 RVA: 0x004FD37F File Offset: 0x004FB57F
+		// (set) Token: 0x06024506 RID: 148742 RVA: 0x004FD387 File Offset: 0x004FB587
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022571 RID: 140657 RVA: 0x004C28CC File Offset: 0x004C0ACC
+		// Token: 0x06024507 RID: 148743 RVA: 0x004FD390 File Offset: 0x004FB590
 		public IFixedDateTimeRefreshRuleT()
 		{
 			this.Type = ERefreshRule.CD;

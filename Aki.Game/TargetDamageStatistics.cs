@@ -4,12 +4,12 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02002EDF RID: 11999
+// Token: 0x02002432 RID: 9266
 [NullableContext(1)]
 [Nullable(0)]
 public class TargetDamageStatistics
 {
-	// Token: 0x060199FD RID: 104957 RVA: 0x006A7C78 File Offset: 0x006A5E78
+	// Token: 0x060172FC RID: 94972 RVA: 0x006CDE1C File Offset: 0x006CC01C
 	public TargetDamageStatistics(int inTargetId)
 	{
 		this.TargetId = inTargetId;
@@ -40,13 +40,13 @@ public class TargetDamageStatistics
 		}
 	}
 
-	// Token: 0x060199FE RID: 104958 RVA: 0x006A7D7A File Offset: 0x006A5F7A
+	// Token: 0x060172FD RID: 94973 RVA: 0x006CDF1E File Offset: 0x006CC11E
 	public void AddDamageValue(int damage)
 	{
 		this.DamageTotal += damage;
 	}
 
-	// Token: 0x060199FF RID: 104959 RVA: 0x006A7D8C File Offset: 0x006A5F8C
+	// Token: 0x060172FE RID: 94974 RVA: 0x006CDF30 File Offset: 0x006CC130
 	public override string ToString()
 	{
 		return StringUtils.Format(",{0},{1},{2},{3},{4}", new string[]
@@ -59,24 +59,24 @@ public class TargetDamageStatistics
 		});
 	}
 
-	// Token: 0x0400BFE8 RID: 49128
+	// Token: 0x0400C383 RID: 50051
 	private int DamageTotal;
 
-	// Token: 0x0400BFE9 RID: 49129
+	// Token: 0x0400C384 RID: 50052
 	private readonly bool IsMonster;
 
-	// Token: 0x0400BFEA RID: 49130
+	// Token: 0x0400C385 RID: 50053
 	private readonly bool IsRole;
 
-	// Token: 0x0400BFEB RID: 49131
+	// Token: 0x0400C386 RID: 50054
 	private readonly int ConfigId;
 
-	// Token: 0x0400BFEC RID: 49132
+	// Token: 0x0400C387 RID: 50055
 	public readonly int TargetId;
 
-	// Token: 0x0400BFED RID: 49133
+	// Token: 0x0400C388 RID: 50056
 	private readonly string TargetName;
 
-	// Token: 0x0400BFEE RID: 49134
+	// Token: 0x0400C389 RID: 50057
 	public bool IsValid = true;
 }

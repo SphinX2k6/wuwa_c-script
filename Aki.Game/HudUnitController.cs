@@ -8,19 +8,19 @@ using CSharpScript.Game.Module.TreasureHunt;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F1C RID: 7964
+// Token: 0x020013DE RID: 5086
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class HudUnitController : UiControllerBase
 {
-	// Token: 0x0600F557 RID: 62807 RVA: 0x003B2F63 File Offset: 0x003B1163
+	// Token: 0x0600C976 RID: 51574 RVA: 0x003BEA4F File Offset: 0x003BCC4F
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0600F558 RID: 62808 RVA: 0x003B2F66 File Offset: 0x003B1166
+	// Token: 0x0600C977 RID: 51575 RVA: 0x003BEA52 File Offset: 0x003BCC52
 	protected override bool OnClear()
 	{
 		HudUnitManager.Instance.Clear();
@@ -28,7 +28,7 @@ public class HudUnitController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600F559 RID: 62809 RVA: 0x003B2F7E File Offset: 0x003B117E
+	// Token: 0x0600C978 RID: 51576 RVA: 0x003BEA6A File Offset: 0x003BCC6A
 	protected override bool OnLeaveLevel()
 	{
 		HudUnitManager.Instance.Clear();
@@ -36,19 +36,19 @@ public class HudUnitController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600F55A RID: 62810 RVA: 0x003B2F96 File Offset: 0x003B1196
+	// Token: 0x0600C979 RID: 51577 RVA: 0x003BEA82 File Offset: 0x003BCC82
 	protected override void OnTick(float delta)
 	{
 		HudUnitManager.Instance.Tick(delta);
 	}
 
-	// Token: 0x0600F55B RID: 62811 RVA: 0x003B2FA3 File Offset: 0x003B11A3
+	// Token: 0x0600C97A RID: 51578 RVA: 0x003BEA8F File Offset: 0x003BCC8F
 	protected override void OnAfterTick(float delta)
 	{
 		HudUnitManager.Instance.AfterTick(delta);
 	}
 
-	// Token: 0x0600F55C RID: 62812 RVA: 0x003B2FB0 File Offset: 0x003B11B0
+	// Token: 0x0600C97B RID: 51579 RVA: 0x003BEA9C File Offset: 0x003BCC9C
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
@@ -57,7 +57,7 @@ public class HudUnitController : UiControllerBase
 		BattleUiModel.Instance.ChildViewData.AddCallback(EBattleUiChild.BattleHud, new Action(this.OnBattleUiChildVisibleChanged));
 	}
 
-	// Token: 0x0600F55D RID: 62813 RVA: 0x003B3030 File Offset: 0x003B1230
+	// Token: 0x0600C97C RID: 51580 RVA: 0x003BEB1C File Offset: 0x003BCD1C
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
@@ -66,7 +66,7 @@ public class HudUnitController : UiControllerBase
 		BattleUiModel.Instance.ChildViewData.RemoveCallback(EBattleUiChild.BattleHud, new Action(this.OnBattleUiChildVisibleChanged));
 	}
 
-	// Token: 0x0600F55E RID: 62814 RVA: 0x003B30B0 File Offset: 0x003B12B0
+	// Token: 0x0600C97D RID: 51581 RVA: 0x003BEB9C File Offset: 0x003BCD9C
 	private void OnBattleUiChildVisibleChanged()
 	{
 		UUIItem battleViewUnit = UiLayer.Instance.GetBattleViewUnit(1);
@@ -103,13 +103,13 @@ public class HudUnitController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600F55F RID: 62815 RVA: 0x003B31BC File Offset: 0x003B13BC
+	// Token: 0x0600C97E RID: 51582 RVA: 0x003BECA8 File Offset: 0x003BCEA8
 	public void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 	{
 		HudUnitManager.Instance.RefreshHudOnInputControllerChanged(last, now);
 	}
 
-	// Token: 0x0600F560 RID: 62816 RVA: 0x003B31CA File Offset: 0x003B13CA
+	// Token: 0x0600C97F RID: 51583 RVA: 0x003BECB6 File Offset: 0x003BCEB6
 	public void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (info.IsRolePassenger(true) && TreasureHuntModel.Instance.IsEnableCompassTrack(info.VehicleType))
@@ -118,7 +118,7 @@ public class HudUnitController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600F561 RID: 62817 RVA: 0x003B31EE File Offset: 0x003B13EE
+	// Token: 0x0600C980 RID: 51584 RVA: 0x003BECDA File Offset: 0x003BCEDA
 	public void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (info.IsRolePassenger(true) && TreasureHuntModel.Instance.IsEnableCompassTrack(info.VehicleType))
@@ -127,7 +127,7 @@ public class HudUnitController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600F562 RID: 62818 RVA: 0x003B3214 File Offset: 0x003B1414
+	// Token: 0x0600C981 RID: 51585 RVA: 0x003BED00 File Offset: 0x003BCF00
 	public void TryCreateHud(EHudUnitType type)
 	{
 		if (!GameModeModel.Instance.WorldDone)
@@ -144,7 +144,7 @@ public class HudUnitController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600F563 RID: 62819 RVA: 0x003B3280 File Offset: 0x003B1480
+	// Token: 0x0600C982 RID: 51586 RVA: 0x003BED6C File Offset: 0x003BCF6C
 	public void TryDestroyHud(EHudUnitType type)
 	{
 		if (this.DelayCreateHudList.Remove(type))
@@ -159,14 +159,14 @@ public class HudUnitController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600F564 RID: 62820 RVA: 0x003B32C3 File Offset: 0x003B14C3
+	// Token: 0x0600C983 RID: 51587 RVA: 0x003BEDAF File Offset: 0x003BCFAF
 	public bool GetIsInitHud()
 	{
 		return HudUnitManager.Instance.GetIsInitHud();
 	}
 
-	// Token: 0x17001337 RID: 4919
-	// (get) Token: 0x0600F565 RID: 62821 RVA: 0x003B32CF File Offset: 0x003B14CF
+	// Token: 0x17001361 RID: 4961
+	// (get) Token: 0x0600C984 RID: 51588 RVA: 0x003BEDBB File Offset: 0x003BCFBB
 	public static HudUnitController Instance
 	{
 		get
@@ -175,7 +175,7 @@ public class HudUnitController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600F566 RID: 62822 RVA: 0x003B32D6 File Offset: 0x003B14D6
+	// Token: 0x0600C985 RID: 51589 RVA: 0x003BEDC2 File Offset: 0x003BCFC2
 	public static HudUnitController GetOrCreateInstance()
 	{
 		if (HudUnitController._Instance == null)
@@ -185,7 +185,7 @@ public class HudUnitController : UiControllerBase
 		return HudUnitController._Instance;
 	}
 
-	// Token: 0x0600F567 RID: 62823 RVA: 0x003B32EA File Offset: 0x003B14EA
+	// Token: 0x0600C986 RID: 51590 RVA: 0x003BEDD6 File Offset: 0x003BCFD6
 	public static bool CreateInstance()
 	{
 		if (HudUnitController._Instance != null)
@@ -196,27 +196,27 @@ public class HudUnitController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600F568 RID: 62824 RVA: 0x003B3300 File Offset: 0x003B1500
+	// Token: 0x0600C987 RID: 51591 RVA: 0x003BEDEC File Offset: 0x003BCFEC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600F569 RID: 62825 RVA: 0x003B3302 File Offset: 0x003B1502
+	// Token: 0x0600C988 RID: 51592 RVA: 0x003BEDEE File Offset: 0x003BCFEE
 	public static void ResetStaticDefaultValue()
 	{
 		HudUnitController._Instance = null;
 	}
 
-	// Token: 0x0600F56A RID: 62826 RVA: 0x003B330A File Offset: 0x003B150A
+	// Token: 0x0600C989 RID: 51593 RVA: 0x003BEDF6 File Offset: 0x003BCFF6
 	static HudUnitController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HudUnitController.CreateStaticDefaultValue), new Action(HudUnitController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400716F RID: 29039
+	// Token: 0x04007250 RID: 29264
 	private readonly HashSet<EHudUnitType> DelayCreateHudList = new HashSet<EHudUnitType>();
 
-	// Token: 0x04007170 RID: 29040
+	// Token: 0x04007251 RID: 29265
 	[Nullable(2)]
 	private static HudUnitController _Instance;
 }

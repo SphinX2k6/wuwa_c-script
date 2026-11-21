@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BA1 RID: 19361
+	// Token: 0x0200508B RID: 20619
 	public struct ICompareFishingBoatState : IFlatbufferObject
 	{
-		// Token: 0x17008C84 RID: 35972
-		// (get) Token: 0x0601E868 RID: 125032 RVA: 0x00445824 File Offset: 0x00443A24
+		// Token: 0x1700939D RID: 37789
+		// (get) Token: 0x06020414 RID: 132116 RVA: 0x00478388 File Offset: 0x00476588
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E869 RID: 125033 RVA: 0x00445831 File Offset: 0x00443A31
+		// Token: 0x06020415 RID: 132117 RVA: 0x00478395 File Offset: 0x00476595
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E86A RID: 125034 RVA: 0x00445838 File Offset: 0x00443A38
+		// Token: 0x06020416 RID: 132118 RVA: 0x0047839C File Offset: 0x0047659C
 		public static ICompareFishingBoatState GetRootAsICompareFishingBoatState(ByteBuffer _bb)
 		{
 			return ICompareFishingBoatState.GetRootAsICompareFishingBoatState(_bb, default(ICompareFishingBoatState));
 		}
 
-		// Token: 0x0601E86B RID: 125035 RVA: 0x00445854 File Offset: 0x00443A54
+		// Token: 0x06020417 RID: 132119 RVA: 0x004783B8 File Offset: 0x004765B8
 		public static ICompareFishingBoatState GetRootAsICompareFishingBoatState(ByteBuffer _bb, ICompareFishingBoatState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E86C RID: 125036 RVA: 0x00445871 File Offset: 0x00443A71
+		// Token: 0x06020418 RID: 132120 RVA: 0x004783D5 File Offset: 0x004765D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E86D RID: 125037 RVA: 0x00445880 File Offset: 0x00443A80
+		// Token: 0x06020419 RID: 132121 RVA: 0x004783E4 File Offset: 0x004765E4
 		public ICompareFishingBoatState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008C85 RID: 35973
-		// (get) Token: 0x0601E86E RID: 125038 RVA: 0x00445890 File Offset: 0x00443A90
+		// Token: 0x1700939E RID: 37790
+		// (get) Token: 0x0602041A RID: 132122 RVA: 0x004783F4 File Offset: 0x004765F4
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C86 RID: 35974
-		// (get) Token: 0x0601E86F RID: 125039 RVA: 0x004458CC File Offset: 0x00443ACC
+		// Token: 0x1700939F RID: 37791
+		// (get) Token: 0x0602041B RID: 132123 RVA: 0x00478430 File Offset: 0x00476630
 		public bool IsStop
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C87 RID: 35975
-		// (get) Token: 0x0601E870 RID: 125040 RVA: 0x0044590C File Offset: 0x00443B0C
+		// Token: 0x170093A0 RID: 37792
+		// (get) Token: 0x0602041C RID: 132124 RVA: 0x00478470 File Offset: 0x00476670
 		public int FishingPort
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C88 RID: 35976
-		// (get) Token: 0x0601E871 RID: 125041 RVA: 0x00445948 File Offset: 0x00443B48
+		// Token: 0x170093A1 RID: 37793
+		// (get) Token: 0x0602041D RID: 132125 RVA: 0x004784AC File Offset: 0x004766AC
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E872 RID: 125042 RVA: 0x00445985 File Offset: 0x00443B85
+		// Token: 0x0602041E RID: 132126 RVA: 0x004784E9 File Offset: 0x004766E9
 		public static Offset<ICompareFishingBoatState> CreateICompareFishingBoatState(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, bool IsStop = false, int FishingPort = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareFishingBoatState.EndICompareFishingBoatState(builder);
 		}
 
-		// Token: 0x0601E873 RID: 125043 RVA: 0x004459B1 File Offset: 0x00443BB1
+		// Token: 0x0602041F RID: 132127 RVA: 0x00478515 File Offset: 0x00476715
 		public static void StartICompareFishingBoatState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601E874 RID: 125044 RVA: 0x004459BA File Offset: 0x00443BBA
+		// Token: 0x06020420 RID: 132128 RVA: 0x0047851E File Offset: 0x0047671E
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E875 RID: 125045 RVA: 0x004459C5 File Offset: 0x00443BC5
+		// Token: 0x06020421 RID: 132129 RVA: 0x00478529 File Offset: 0x00476729
 		public static void AddIsStop(FlatBufferBuilder builder, bool isStop)
 		{
 			builder.AddBool(1, isStop, false);
 		}
 
-		// Token: 0x0601E876 RID: 125046 RVA: 0x004459D0 File Offset: 0x00443BD0
+		// Token: 0x06020422 RID: 132130 RVA: 0x00478534 File Offset: 0x00476734
 		public static void AddFishingPort(FlatBufferBuilder builder, int fishingPort)
 		{
 			builder.AddInt(2, fishingPort, 0);
 		}
 
-		// Token: 0x0601E877 RID: 125047 RVA: 0x004459DB File Offset: 0x00443BDB
+		// Token: 0x06020423 RID: 132131 RVA: 0x0047853F File Offset: 0x0047673F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0601E878 RID: 125048 RVA: 0x004459E6 File Offset: 0x00443BE6
+		// Token: 0x06020424 RID: 132132 RVA: 0x0047854A File Offset: 0x0047674A
 		public static Offset<ICompareFishingBoatState> EndICompareFishingBoatState(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompareFishingBoatState>(builder.EndTable());
 		}
 
-		// Token: 0x0601E879 RID: 125049 RVA: 0x004459F4 File Offset: 0x00443BF4
+		// Token: 0x06020425 RID: 132133 RVA: 0x00478558 File Offset: 0x00476758
 		public ICompareFishingBoatStateT UnPack()
 		{
 			ICompareFishingBoatStateT compareFishingBoatStateT = new ICompareFishingBoatStateT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return compareFishingBoatStateT;
 		}
 
-		// Token: 0x0601E87A RID: 125050 RVA: 0x00445A0F File Offset: 0x00443C0F
+		// Token: 0x06020426 RID: 132134 RVA: 0x00478573 File Offset: 0x00476773
 		public void UnPackTo(ICompareFishingBoatStateT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601E87B RID: 125051 RVA: 0x00445A44 File Offset: 0x00443C44
+		// Token: 0x06020427 RID: 132135 RVA: 0x004785A8 File Offset: 0x004767A8
 		public static Offset<ICompareFishingBoatState> Pack(FlatBufferBuilder builder, ICompareFishingBoatStateT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareFishingBoatState.CreateICompareFishingBoatState(builder, _o.Type, _o.IsStop, _o.FishingPort, _o.NullMask);
 		}
 
-		// Token: 0x0400D47D RID: 54397
+		// Token: 0x0400DF82 RID: 57218
 		private Table __p;
 	}
 }

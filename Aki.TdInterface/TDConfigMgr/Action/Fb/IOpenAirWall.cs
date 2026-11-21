@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002910 RID: 10512
+	// Token: 0x02002BEC RID: 11244
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IOpenAirWall : IToggleAirWallType
 	{
-		// Token: 0x0600E958 RID: 59736 RVA: 0x002236CF File Offset: 0x002218CF
-		[NullableContext(1)]
+		// Token: 0x0600F7A9 RID: 63401 RVA: 0x002409EF File Offset: 0x0023EBEF
+		[NullableContext(0)]
 		public static IOpenAirWall Create(IOpenAirWall? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048FA RID: 18682
-		// (get) Token: 0x0600E959 RID: 59737 RVA: 0x002236EE File Offset: 0x002218EE
+		// Token: 0x17004C7F RID: 19583
+		// (get) Token: 0x0600F7AA RID: 63402 RVA: 0x00240A0E File Offset: 0x0023EC0E
 		public override EToggleAirWall Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048FB RID: 18683
-		// (get) Token: 0x0600E95A RID: 59738 RVA: 0x002236FB File Offset: 0x002218FB
+		// Token: 0x17004C80 RID: 19584
+		// (get) Token: 0x0600F7AB RID: 63403 RVA: 0x00240A1B File Offset: 0x0023EC1B
 		public virtual string HitEffectData
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048FC RID: 18684
-		// (get) Token: 0x0600E95B RID: 59739 RVA: 0x00223708 File Offset: 0x00221908
+		// Token: 0x17004C81 RID: 19585
+		// (get) Token: 0x0600F7AC RID: 63404 RVA: 0x00240A28 File Offset: 0x0023EC28
 		public virtual float? HitCd
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048FD RID: 18685
-		// (get) Token: 0x0600E95C RID: 59740 RVA: 0x0022373E File Offset: 0x0022193E
+		// Token: 0x17004C82 RID: 19586
+		// (get) Token: 0x0600F7AD RID: 63405 RVA: 0x00240A5E File Offset: 0x0023EC5E
 		public virtual string AirWallEffectData
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048FE RID: 18686
-		// (get) Token: 0x0600E95D RID: 59741 RVA: 0x0022374B File Offset: 0x0022194B
+		// Token: 0x17004C83 RID: 19587
+		// (get) Token: 0x0600F7AE RID: 63406 RVA: 0x00240A6B File Offset: 0x0023EC6B
 		public virtual string VectorArrayAirWallEffectData
 		{
 			get
@@ -77,9 +77,9 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048FF RID: 18687
-		// (get) Token: 0x0600E95E RID: 59742 RVA: 0x00223758 File Offset: 0x00221958
-		public virtual float? AirWallEffectHeight
+		// Token: 0x17004C84 RID: 19588
+		// (get) Token: 0x0600F7AF RID: 63407 RVA: 0x00240A78 File Offset: 0x0023EC78
+		public virtual int? AirWallEffectSplineEntityId
 		{
 			get
 			{
@@ -87,13 +87,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 				{
 					return null;
 				}
-				return new float?(this.Instance.AirWallEffectHeight);
+				return new int?(this.Instance.AirWallEffectSplineEntityId);
 			}
 		}
 
-		// Token: 0x17004900 RID: 18688
-		// (get) Token: 0x0600E95F RID: 59743 RVA: 0x00223790 File Offset: 0x00221990
-		public virtual float? AirWallEffectThickness
+		// Token: 0x17004C85 RID: 19589
+		// (get) Token: 0x0600F7B0 RID: 63408 RVA: 0x00240AB0 File Offset: 0x0023ECB0
+		public virtual float? AirWallEffectHeight
 		{
 			get
 			{
@@ -101,12 +101,26 @@ namespace Aki.TDConfigMgr.Action.Fb
 				{
 					return null;
 				}
+				return new float?(this.Instance.AirWallEffectHeight);
+			}
+		}
+
+		// Token: 0x17004C86 RID: 19590
+		// (get) Token: 0x0600F7B1 RID: 63409 RVA: 0x00240AE8 File Offset: 0x0023ECE8
+		public virtual float? AirWallEffectThickness
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 8) == 0)
+				{
+					return null;
+				}
 				return new float?(this.Instance.AirWallEffectThickness);
 			}
 		}
 
-		// Token: 0x17004901 RID: 18689
-		// (get) Token: 0x0600E960 RID: 59744 RVA: 0x002237C6 File Offset: 0x002219C6
+		// Token: 0x17004C87 RID: 19591
+		// (get) Token: 0x0600F7B2 RID: 63410 RVA: 0x00240B1E File Offset: 0x0023ED1E
 		public virtual EAirWallCollisionPreset CollisionPreset
 		{
 			get
@@ -115,7 +129,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080D0 RID: 32976
+		// Token: 0x0400879E RID: 34718
 		private IOpenAirWall Instance;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002FF RID: 767
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000346 RID: 838
 	public class IElementalMatchBase
 	{
-		// Token: 0x06000ED1 RID: 3793 RVA: 0x0003518C File Offset: 0x0003338C
+		// Token: 0x06001001 RID: 4097 RVA: 0x000380C0 File Offset: 0x000362C0
 		private IElementalMatchBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000ED2 RID: 3794 RVA: 0x000351C4 File Offset: 0x000333C4
+		// Token: 0x06001002 RID: 4098 RVA: 0x000380F8 File Offset: 0x000362F8
 		public static IElementalMatchBase Create([Nullable(2)] IElementalMatchBase instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000ED3 RID: 3795 RVA: 0x000351D7 File Offset: 0x000333D7
+		// Token: 0x06001003 RID: 4099 RVA: 0x0003810B File Offset: 0x0003630B
 		public static IElementalMatchBase CreateFromSetValue([Nullable(2)] IElementalMatchBase_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000ED4 RID: 3796 RVA: 0x000351EA File Offset: 0x000333EA
+		// Token: 0x06001004 RID: 4100 RVA: 0x0003811E File Offset: 0x0003631E
 		public IElementalMatchBase_SetValue ToSetValue()
 		{
 			return new IElementalMatchBase_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000447 RID: 1095
-		// (get) Token: 0x06000ED5 RID: 3797 RVA: 0x000351FD File Offset: 0x000333FD
-		// (set) Token: 0x06000ED6 RID: 3798 RVA: 0x00035228 File Offset: 0x00033428
+		// Token: 0x17000494 RID: 1172
+		// (get) Token: 0x06001005 RID: 4101 RVA: 0x00038131 File Offset: 0x00036331
+		// (set) Token: 0x06001006 RID: 4102 RVA: 0x0003815C File Offset: 0x0003635C
 		public virtual EElementalType Type
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000CFA RID: 3322
+		// Token: 0x04000DE4 RID: 3556
 		[Nullable(2)]
 		protected IElementalMatchBase FbInstance;
 
-		// Token: 0x04000CFB RID: 3323
+		// Token: 0x04000DE5 RID: 3557
 		[Nullable(2)]
 		protected IElementalMatchBase_SetValue PocoInterface;
 	}

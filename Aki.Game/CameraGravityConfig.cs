@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 using UnrealEngine;
 
-// Token: 0x020001FF RID: 511
+// Token: 0x02000203 RID: 515
 [NullableContext(1)]
 [Nullable(0)]
 public class CameraGravityConfig
 {
-	// Token: 0x06002031 RID: 8241 RVA: 0x000ABC40 File Offset: 0x000A9E40
+	// Token: 0x060020DF RID: 8415 RVA: 0x000B2F94 File Offset: 0x000B1194
 	public void SetConfig(SCamera_ChangeGravity config)
 	{
 		if (config == null)
@@ -27,7 +27,7 @@ public class CameraGravityConfig
 		this.LerpAngleWhenFinish = config.LerpAngleWhenFinish;
 	}
 
-	// Token: 0x06002032 RID: 8242 RVA: 0x000ABCC8 File Offset: 0x000A9EC8
+	// Token: 0x060020E0 RID: 8416 RVA: 0x000B301C File Offset: 0x000B121C
 	public void DeepCopy(CameraGravityConfig config)
 	{
 		if (config == null)
@@ -43,7 +43,7 @@ public class CameraGravityConfig
 		this.LerpAngleWhenFinish = config.LerpAngleWhenFinish;
 	}
 
-	// Token: 0x06002033 RID: 8243 RVA: 0x000ABD34 File Offset: 0x000A9F34
+	// Token: 0x060020E1 RID: 8417 RVA: 0x000B3088 File Offset: 0x000B1288
 	public void Reset()
 	{
 		this.GravityMode = ECameraGravityMode.CameraTargetGravityDirect;
@@ -57,7 +57,7 @@ public class CameraGravityConfig
 		this.LerpAngleWhenFinish = false;
 	}
 
-	// Token: 0x06002034 RID: 8244 RVA: 0x000ABD8C File Offset: 0x000A9F8C
+	// Token: 0x060020E2 RID: 8418 RVA: 0x000B30E0 File Offset: 0x000B12E0
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(75, 5);
@@ -74,25 +74,25 @@ public class CameraGravityConfig
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400142F RID: 5167
+	// Token: 0x04001471 RID: 5233
 	public ECameraGravityMode GravityMode;
 
-	// Token: 0x04001430 RID: 5168
+	// Token: 0x04001472 RID: 5234
 	public Vector TargetGravity = Vector.Create();
 
-	// Token: 0x04001431 RID: 5169
+	// Token: 0x04001473 RID: 5235
 	public ECameraGravityLerpMode LerpMode;
 
-	// Token: 0x04001432 RID: 5170
+	// Token: 0x04001474 RID: 5236
 	public float LerpTime;
 
-	// Token: 0x04001433 RID: 5171
+	// Token: 0x04001475 RID: 5237
 	[Nullable(2)]
 	public UCurveFloat LerpTimeCurve;
 
-	// Token: 0x04001434 RID: 5172
+	// Token: 0x04001476 RID: 5238
 	public float LerpAngleVelocity;
 
-	// Token: 0x04001435 RID: 5173
+	// Token: 0x04001477 RID: 5239
 	public bool LerpAngleWhenFinish;
 }

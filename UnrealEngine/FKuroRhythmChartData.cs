@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C46 RID: 7238
+	// Token: 0x020004FD RID: 1277
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRhythmGame.KuroRhythmChartData")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 72)]
 	public class FKuroRhythmChartData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601C0A8 RID: 114856 RVA: 0x002944DE File Offset: 0x002926DE
+		// Token: 0x06007776 RID: 30582 RVA: 0x000AE92E File Offset: 0x000ACB2E
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroRhythmChartData._ScriptStructPtr != 0) ? FKuroRhythmChartData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroRhythmGame.KuroRhythmChartData", ref FKuroRhythmChartData._ScriptStructPtr);
 		}
 
-		// Token: 0x1700715C RID: 29020
-		// (get) Token: 0x0601C0A9 RID: 114857 RVA: 0x00294502 File Offset: 0x00292702
-		// (set) Token: 0x0601C0AA RID: 114858 RVA: 0x00294516 File Offset: 0x00292716
+		// Token: 0x17001704 RID: 5892
+		// (get) Token: 0x06007777 RID: 30583 RVA: 0x000AE952 File Offset: 0x000ACB52
+		// (set) Token: 0x06007778 RID: 30584 RVA: 0x000AE966 File Offset: 0x000ACB66
 		public unsafe string ChartName
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700715D RID: 29021
-		// (get) Token: 0x0601C0AB RID: 114859 RVA: 0x0029452B File Offset: 0x0029272B
-		// (set) Token: 0x0601C0AC RID: 114860 RVA: 0x0029453B File Offset: 0x0029273B
+		// Token: 0x17001705 RID: 5893
+		// (get) Token: 0x06007779 RID: 30585 RVA: 0x000AE97B File Offset: 0x000ACB7B
+		// (set) Token: 0x0600777A RID: 30586 RVA: 0x000AE98B File Offset: 0x000ACB8B
 		public unsafe float BPM
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700715E RID: 29022
-		// (get) Token: 0x0601C0AD RID: 114861 RVA: 0x0029454C File Offset: 0x0029274C
-		// (set) Token: 0x0601C0AE RID: 114862 RVA: 0x0029455C File Offset: 0x0029275C
+		// Token: 0x17001706 RID: 5894
+		// (get) Token: 0x0600777B RID: 30587 RVA: 0x000AE99C File Offset: 0x000ACB9C
+		// (set) Token: 0x0600777C RID: 30588 RVA: 0x000AE9AC File Offset: 0x000ACBAC
 		public unsafe float Duration
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700715F RID: 29023
-		// (get) Token: 0x0601C0AF RID: 114863 RVA: 0x0029456D File Offset: 0x0029276D
-		// (set) Token: 0x0601C0B0 RID: 114864 RVA: 0x00294581 File Offset: 0x00292781
+		// Token: 0x17001707 RID: 5895
+		// (get) Token: 0x0600777D RID: 30589 RVA: 0x000AE9BD File Offset: 0x000ACBBD
+		// (set) Token: 0x0600777E RID: 30590 RVA: 0x000AE9D1 File Offset: 0x000ACBD1
 		public unsafe string MusicPath
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007160 RID: 29024
-		// (get) Token: 0x0601C0B1 RID: 114865 RVA: 0x00294598 File Offset: 0x00292798
-		// (set) Token: 0x0601C0B2 RID: 114866 RVA: 0x002945DB File Offset: 0x002927DB
+		// Token: 0x17001708 RID: 5896
+		// (get) Token: 0x0600777F RID: 30591 RVA: 0x000AE9E8 File Offset: 0x000ACBE8
+		// (set) Token: 0x06007780 RID: 30592 RVA: 0x000AEA2B File Offset: 0x000ACC2B
 		public TArray<FKuroRhythmGameNote> Notes
 		{
 			get
@@ -99,110 +99,67 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007161 RID: 29025
-		// (get) Token: 0x0601C0B3 RID: 114867 RVA: 0x002945EC File Offset: 0x002927EC
-		// (set) Token: 0x0601C0B4 RID: 114868 RVA: 0x0029462F File Offset: 0x0029282F
-		public TArray<FKuroRhythmChartEvent> Events
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKuroRhythmChartEvent> result;
-				if ((result = this._Events) == null)
-				{
-					result = (this._Events = new TArray<FKuroRhythmChartEvent>(base.NativePtr + (IntPtr)FKuroRhythmChartData.__PropertyOffset_Events, base.MemoryOwner ?? this));
-				}
-				return result;
-			}
-			set
-			{
-				this.Events.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x0601C0B5 RID: 114869 RVA: 0x0029463D File Offset: 0x0029283D
+		// Token: 0x06007781 RID: 30593 RVA: 0x000AEA39 File Offset: 0x000ACC39
 		public FKuroRhythmChartData()
 		{
 		}
 
-		// Token: 0x0601C0B6 RID: 114870 RVA: 0x00294645 File Offset: 0x00292845
-		public FKuroRhythmChartData(string ChartName, float BPM, float Duration, string MusicPath, TArray<FKuroRhythmGameNote> Notes, TArray<FKuroRhythmChartEvent> Events)
-		{
-			this.ChartName = ChartName;
-			this.BPM = BPM;
-			this.Duration = Duration;
-			this.MusicPath = MusicPath;
-			this.Notes = Notes;
-			this.Events = Events;
-		}
-
-		// Token: 0x0601C0B7 RID: 114871 RVA: 0x0029467A File Offset: 0x0029287A
+		// Token: 0x06007782 RID: 30594 RVA: 0x000AEA41 File Offset: 0x000ACC41
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroRhythmChartData.StaticStruct();
 		}
 
-		// Token: 0x0601C0B8 RID: 114872 RVA: 0x00294686 File Offset: 0x00292886
+		// Token: 0x06007783 RID: 30595 RVA: 0x000AEA4D File Offset: 0x000ACC4D
 		[NullableContext(2)]
 		public FKuroRhythmChartData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C0B9 RID: 114873 RVA: 0x00294690 File Offset: 0x00292890
+		// Token: 0x06007784 RID: 30596 RVA: 0x000AEA57 File Offset: 0x000ACC57
 		public FKuroRhythmChartData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C0BA RID: 114874 RVA: 0x0029469B File Offset: 0x0029289B
+		// Token: 0x06007785 RID: 30597 RVA: 0x000AEA62 File Offset: 0x000ACC62
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroRhythmChartData(Pointer, false, true);
 		}
 
-		// Token: 0x0601C0BB RID: 114875 RVA: 0x002946A5 File Offset: 0x002928A5
+		// Token: 0x06007786 RID: 30598 RVA: 0x000AEA6C File Offset: 0x000ACC6C
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroRhythmChartData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400F144 RID: 61764
+		// Token: 0x04003289 RID: 12937
 		public const string __ObjectPath = "/Script/KuroRhythmGame.KuroRhythmChartData";
 
-		// Token: 0x0400F145 RID: 61765
+		// Token: 0x0400328A RID: 12938
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400F146 RID: 61766
+		// Token: 0x0400328B RID: 12939
 		internal static int __PropertyOffset_ChartName;
 
-		// Token: 0x0400F147 RID: 61767
+		// Token: 0x0400328C RID: 12940
 		internal static int __PropertyOffset_BPM;
 
-		// Token: 0x0400F148 RID: 61768
+		// Token: 0x0400328D RID: 12941
 		internal static int __PropertyOffset_Duration;
 
-		// Token: 0x0400F149 RID: 61769
+		// Token: 0x0400328E RID: 12942
 		internal static int __PropertyOffset_MusicPath;
 
-		// Token: 0x0400F14A RID: 61770
+		// Token: 0x0400328F RID: 12943
 		internal static int __PropertyOffset_Notes;
 
-		// Token: 0x0400F14B RID: 61771
+		// Token: 0x04003290 RID: 12944
 		[Nullable(new byte[]
 		{
 			2,
 			1
 		})]
 		private TArray<FKuroRhythmGameNote> _Notes;
-
-		// Token: 0x0400F14C RID: 61772
-		internal static int __PropertyOffset_Events;
-
-		// Token: 0x0400F14D RID: 61773
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKuroRhythmChartEvent> _Events;
 	}
 }

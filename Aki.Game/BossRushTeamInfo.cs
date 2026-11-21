@@ -1,65 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Activity.ActivityContent.BossRush;
 
-// Token: 0x020011BD RID: 4541
+// Token: 0x02000671 RID: 1649
 [NullableContext(1)]
 [Nullable(0)]
 public class BossRushTeamInfo
 {
-	// Token: 0x060078CE RID: 30926 RVA: 0x00196252 File Offset: 0x00194452
+	// Token: 0x06004C65 RID: 19557 RVA: 0x0019EF00 File Offset: 0x0019D100
 	[NullableContext(2)]
 	public BossRushLevelDetailInfo GetCurrentSelectLevel()
 	{
 		return this.CurrentSelectLevelDetailInfo;
 	}
 
-	// Token: 0x060078CF RID: 30927 RVA: 0x0019625A File Offset: 0x0019445A
+	// Token: 0x06004C66 RID: 19558 RVA: 0x0019EF08 File Offset: 0x0019D108
 	public List<BossRushBuffInfo> GetCurrentSelectBuff()
 	{
 		return this.CurrentSelectBuff;
 	}
 
-	// Token: 0x060078D0 RID: 30928 RVA: 0x00196262 File Offset: 0x00194462
+	// Token: 0x06004C67 RID: 19559 RVA: 0x0019EF10 File Offset: 0x0019D110
 	public List<BossRushBuffInfo> GetPrepareSelectBuff()
 	{
 		return this.PrepareSelectBuff;
 	}
 
-	// Token: 0x060078D1 RID: 30929 RVA: 0x0019626A File Offset: 0x0019446A
+	// Token: 0x06004C68 RID: 19560 RVA: 0x0019EF18 File Offset: 0x0019D118
 	public List<BossRushBuffInfo> GetCurrentSelectScoreBuff()
 	{
 		return this.CurrentSelectScoreBuff;
 	}
 
-	// Token: 0x060078D2 RID: 30930 RVA: 0x00196272 File Offset: 0x00194472
+	// Token: 0x06004C69 RID: 19561 RVA: 0x0019EF20 File Offset: 0x0019D120
 	public List<BossRushBuffInfo> GetCurrentOptionScoreBuff()
 	{
 		return this.CurrentOptionScoreBuff;
 	}
 
-	// Token: 0x060078D3 RID: 30931 RVA: 0x0019627A File Offset: 0x0019447A
+	// Token: 0x06004C6A RID: 19562 RVA: 0x0019EF28 File Offset: 0x0019D128
 	public List<BossRushBuffInfo> GetPrepareSelectScoreBuff()
 	{
 		return this.PrepareSelectScoreBuff;
 	}
 
-	// Token: 0x060078D4 RID: 30932 RVA: 0x00196282 File Offset: 0x00194482
+	// Token: 0x06004C6B RID: 19563 RVA: 0x0019EF30 File Offset: 0x0019D130
 	public int[] GetCurrentTeamMembers()
 	{
 		return this.CurrentTeamMembers.ToArray();
 	}
 
-	// Token: 0x060078D5 RID: 30933 RVA: 0x0019628F File Offset: 0x0019448F
+	// Token: 0x06004C6C RID: 19564 RVA: 0x0019EF3D File Offset: 0x0019D13D
 	public void SetCurrentSelectLevel(BossRushLevelDetailInfo info)
 	{
 		this.CurrentSelectLevelDetailInfo = info;
 	}
 
-	// Token: 0x060078D6 RID: 30934 RVA: 0x00196298 File Offset: 0x00194498
+	// Token: 0x06004C6D RID: 19565 RVA: 0x0019EF48 File Offset: 0x0019D148
 	public void InitLevelBuff(BossRushBuffInfo[] buff, BossRushBuffInfo[] unlockBuffs, BossRushBuffInfo[] optionBuffs, BossRushBuffInfo[] scoreBuffs, BossRushBuffInfo[] allScoreBuffs)
 	{
 		this.CurrentSelectBuff = new List<BossRushBuffInfo>();
@@ -111,7 +110,7 @@ public class BossRushTeamInfo
 		}
 	}
 
-	// Token: 0x060078D7 RID: 30935 RVA: 0x00196419 File Offset: 0x00194619
+	// Token: 0x06004C6E RID: 19566 RVA: 0x0019F0C9 File Offset: 0x0019D2C9
 	[NullableContext(2)]
 	public BossRushBuffInfo GetIndexBuff(int index)
 	{
@@ -122,7 +121,7 @@ public class BossRushTeamInfo
 		return this.CurrentSelectBuff[index];
 	}
 
-	// Token: 0x060078D8 RID: 30936 RVA: 0x00196438 File Offset: 0x00194638
+	// Token: 0x06004C6F RID: 19567 RVA: 0x0019F0E8 File Offset: 0x0019D2E8
 	public List<BossRushBuffInfo> GetOptionBuff()
 	{
 		List<BossRushBuffInfo> list = new List<BossRushBuffInfo>();
@@ -133,7 +132,7 @@ public class BossRushTeamInfo
 				while (enumerator.MoveNext())
 				{
 					BossRushBuffInfo item = enumerator.Current;
-					if (((item.BuffId > 0 && item.State == BossRushBuffSelectionStatus.BuffLocked) || item.Slot < 0) && !list.Any((BossRushBuffInfo x) => x.BuffId == item.BuffId))
+					if (((item.BuffId > 0 && item.State == BossRushBuffSelectionStatus.BuffLocked) || item.Slot < 0) && !list.Exists((BossRushBuffInfo x) => x.BuffId == item.BuffId))
 					{
 						list.Add(item);
 					}
@@ -146,7 +145,7 @@ public class BossRushTeamInfo
 			while (enumerator.MoveNext())
 			{
 				BossRushBuffInfo item = enumerator.Current;
-				if (!list.Any((BossRushBuffInfo x) => x.BuffId == item.BuffId))
+				if (!list.Exists((BossRushBuffInfo x) => x.BuffId == item.BuffId))
 				{
 					list.Add(item);
 				}
@@ -155,7 +154,7 @@ public class BossRushTeamInfo
 		return list;
 	}
 
-	// Token: 0x060078D9 RID: 30937 RVA: 0x00196558 File Offset: 0x00194758
+	// Token: 0x06004C70 RID: 19568 RVA: 0x0019F208 File Offset: 0x0019D408
 	public void InitPrepareSelectBuff()
 	{
 		this.PrepareSelectBuff = new List<BossRushBuffInfo>();
@@ -165,7 +164,7 @@ public class BossRushTeamInfo
 		}
 	}
 
-	// Token: 0x060078DA RID: 30938 RVA: 0x001965BC File Offset: 0x001947BC
+	// Token: 0x06004C71 RID: 19569 RVA: 0x0019F26C File Offset: 0x0019D46C
 	public void InitPrepareSelectScoreBuff()
 	{
 		this.PrepareSelectScoreBuff = new List<BossRushBuffInfo>();
@@ -175,7 +174,7 @@ public class BossRushTeamInfo
 		}
 	}
 
-	// Token: 0x060078DB RID: 30939 RVA: 0x00196620 File Offset: 0x00194820
+	// Token: 0x06004C72 RID: 19570 RVA: 0x0019F2D0 File Offset: 0x0019D4D0
 	public void SetIndexPrepareSelectBuff(int index, BossRushBuffInfo buff)
 	{
 		if (index < this.PrepareSelectBuff.Count)
@@ -190,7 +189,7 @@ public class BossRushTeamInfo
 		this.PrepareSelectBuff[index] = buff;
 	}
 
-	// Token: 0x060078DC RID: 30940 RVA: 0x00196674 File Offset: 0x00194874
+	// Token: 0x06004C73 RID: 19571 RVA: 0x0019F324 File Offset: 0x0019D524
 	[NullableContext(2)]
 	public BossRushBuffInfo GetIndexPrepareSelectBuff(int index)
 	{
@@ -201,7 +200,7 @@ public class BossRushTeamInfo
 		return this.PrepareSelectBuff[index];
 	}
 
-	// Token: 0x060078DD RID: 30941 RVA: 0x00196692 File Offset: 0x00194892
+	// Token: 0x06004C74 RID: 19572 RVA: 0x0019F342 File Offset: 0x0019D542
 	[NullableContext(2)]
 	public BossRushBuffInfo GetIndexPrepareSelectScoreBuff(int index)
 	{
@@ -212,7 +211,7 @@ public class BossRushTeamInfo
 		return this.PrepareSelectScoreBuff[index];
 	}
 
-	// Token: 0x060078DE RID: 30942 RVA: 0x001966B0 File Offset: 0x001948B0
+	// Token: 0x06004C75 RID: 19573 RVA: 0x0019F360 File Offset: 0x0019D560
 	public void SetPrepareSelectBuff(BossRushBuffInfo[] buff)
 	{
 		this.PrepareSelectBuff = new List<BossRushBuffInfo>();
@@ -222,7 +221,7 @@ public class BossRushTeamInfo
 		}
 	}
 
-	// Token: 0x060078DF RID: 30943 RVA: 0x001966E8 File Offset: 0x001948E8
+	// Token: 0x06004C76 RID: 19574 RVA: 0x0019F398 File Offset: 0x0019D598
 	public void SetPrepareSelectScoreBuff(BossRushBuffInfo[] buff)
 	{
 		this.PrepareSelectScoreBuff = new List<BossRushBuffInfo>();
@@ -232,13 +231,13 @@ public class BossRushTeamInfo
 		}
 	}
 
-	// Token: 0x060078E0 RID: 30944 RVA: 0x00196720 File Offset: 0x00194920
+	// Token: 0x06004C77 RID: 19575 RVA: 0x0019F3D0 File Offset: 0x0019D5D0
 	public int GetBuffMaxCount()
 	{
 		return this.CurrentSelectBuff.Count;
 	}
 
-	// Token: 0x060078E1 RID: 30945 RVA: 0x00196730 File Offset: 0x00194930
+	// Token: 0x06004C78 RID: 19576 RVA: 0x0019F3E0 File Offset: 0x0019D5E0
 	public void SetIndexTeamMembers(int index, int roleId)
 	{
 		if (this.CurrentTeamMembers.Count <= index)
@@ -253,7 +252,7 @@ public class BossRushTeamInfo
 		this.CurrentTeamMembers[index] = roleId;
 	}
 
-	// Token: 0x060078E2 RID: 30946 RVA: 0x00196784 File Offset: 0x00194984
+	// Token: 0x06004C79 RID: 19577 RVA: 0x0019F434 File Offset: 0x0019D634
 	public void ReSortTeamMembers()
 	{
 		List<int> list = new List<int>();
@@ -280,13 +279,13 @@ public class BossRushTeamInfo
 		goto IL_40;
 	}
 
-	// Token: 0x060078E3 RID: 30947 RVA: 0x00196804 File Offset: 0x00194A04
+	// Token: 0x06004C7A RID: 19578 RVA: 0x0019F4B4 File Offset: 0x0019D6B4
 	public void SetCurrentTeamMembers(int[] members)
 	{
 		this.CurrentTeamMembers = new List<int>(members);
 	}
 
-	// Token: 0x060078E4 RID: 30948 RVA: 0x00196814 File Offset: 0x00194A14
+	// Token: 0x06004C7B RID: 19579 RVA: 0x0019F4C4 File Offset: 0x0019D6C4
 	public int GetRecommendLevel()
 	{
 		if (this.LevelInfo == null || this.LevelInfo.GetConfig() == null)
@@ -296,7 +295,7 @@ public class BossRushTeamInfo
 		return InstanceDungeonConfig.Instance.GetRecommendLevel(this.LevelInfo.GetConfig().Value.InstId, WorldLevelModel.Instance.CurWorldLevel);
 	}
 
-	// Token: 0x060078E5 RID: 30949 RVA: 0x00196870 File Offset: 0x00194A70
+	// Token: 0x06004C7C RID: 19580 RVA: 0x0019F520 File Offset: 0x0019D720
 	public bool GetIfLevelTooLow()
 	{
 		int num = 0;
@@ -319,48 +318,48 @@ public class BossRushTeamInfo
 		return num2 == 0 || (float)num / (float)num2 < (float)this.GetRecommendLevel();
 	}
 
-	// Token: 0x060078E6 RID: 30950 RVA: 0x00196920 File Offset: 0x00194B20
+	// Token: 0x06004C7D RID: 19581 RVA: 0x0019F5D0 File Offset: 0x0019D7D0
 	public void Clear()
 	{
 		this.CurrentSelectBuff = new List<BossRushBuffInfo>();
 		this.CurrentTeamMembers = new List<int>();
 	}
 
-	// Token: 0x060078E7 RID: 30951 RVA: 0x00196938 File Offset: 0x00194B38
+	// Token: 0x06004C7E RID: 19582 RVA: 0x0019F5E8 File Offset: 0x0019D7E8
 	public void ClearTeamInfo()
 	{
 		this.CurrentTeamMembers = new List<int>();
 	}
 
-	// Token: 0x04003787 RID: 14215
+	// Token: 0x04003820 RID: 14368
 	public int ActivityId;
 
-	// Token: 0x04003788 RID: 14216
+	// Token: 0x04003821 RID: 14369
 	[Nullable(2)]
 	private BossRushLevelDetailInfo CurrentSelectLevelDetailInfo;
 
-	// Token: 0x04003789 RID: 14217
+	// Token: 0x04003822 RID: 14370
 	private List<BossRushBuffInfo> CurrentSelectBuff = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400378A RID: 14218
+	// Token: 0x04003823 RID: 14371
 	private readonly List<BossRushBuffInfo> CurrentOptionBuff = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400378B RID: 14219
+	// Token: 0x04003824 RID: 14372
 	private List<BossRushBuffInfo> PrepareSelectBuff = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400378C RID: 14220
+	// Token: 0x04003825 RID: 14373
 	private readonly List<BossRushBuffInfo> CurrentSelectScoreBuff = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400378D RID: 14221
+	// Token: 0x04003826 RID: 14374
 	private readonly List<BossRushBuffInfo> CurrentOptionScoreBuff = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400378E RID: 14222
+	// Token: 0x04003827 RID: 14375
 	private List<BossRushBuffInfo> PrepareSelectScoreBuff = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400378F RID: 14223
+	// Token: 0x04003828 RID: 14376
 	private List<int> CurrentTeamMembers = new List<int>();
 
-	// Token: 0x04003790 RID: 14224
+	// Token: 0x04003829 RID: 14377
 	[Nullable(2)]
 	public BossRushLevelDetailInfo LevelInfo;
 }

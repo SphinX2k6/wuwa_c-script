@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02001F2A RID: 7978
+// Token: 0x020013EC RID: 5100
 public class FlyRaceStrengthHandle : RaceStrengthHandle
 {
-	// Token: 0x0600F5C2 RID: 62914 RVA: 0x003B4C13 File Offset: 0x003B2E13
+	// Token: 0x0600C9E1 RID: 51681 RVA: 0x003C06FF File Offset: 0x003BE8FF
 	protected override void InitTagAndAttributeId()
 	{
 		this.FormationAttributeId = EFormationAttributeId.FlameRaceStrength;

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074DC RID: 29916
+	// Token: 0x02007CD2 RID: 31954
 	public class IUnlockPhotoMemoryCollectSystemItemT
 	{
-		// Token: 0x1700E301 RID: 58113
-		// (get) Token: 0x06036631 RID: 222769 RVA: 0x00763A58 File Offset: 0x00761C58
-		// (set) Token: 0x06036632 RID: 222770 RVA: 0x00763A60 File Offset: 0x00761C60
+		// Token: 0x1700EF2B RID: 61227
+		// (get) Token: 0x06039A46 RID: 236102 RVA: 0x007C6CA8 File Offset: 0x007C4EA8
+		// (set) Token: 0x06039A47 RID: 236103 RVA: 0x007C6CB0 File Offset: 0x007C4EB0
 		public EUnlockSystemItemType Type { get; set; }
 
-		// Token: 0x1700E302 RID: 58114
-		// (get) Token: 0x06036633 RID: 222771 RVA: 0x00763A69 File Offset: 0x00761C69
-		// (set) Token: 0x06036634 RID: 222772 RVA: 0x00763A71 File Offset: 0x00761C71
+		// Token: 0x1700EF2C RID: 61228
+		// (get) Token: 0x06039A48 RID: 236104 RVA: 0x007C6CB9 File Offset: 0x007C4EB9
+		// (set) Token: 0x06039A49 RID: 236105 RVA: 0x007C6CC1 File Offset: 0x007C4EC1
 		public int Id { get; set; }
 
-		// Token: 0x06036635 RID: 222773 RVA: 0x00763A7A File Offset: 0x00761C7A
+		// Token: 0x06039A4A RID: 236106 RVA: 0x007C6CCA File Offset: 0x007C4ECA
 		public IUnlockPhotoMemoryCollectSystemItemT()
 		{
 			this.Type = EUnlockSystemItemType.CookSystem;

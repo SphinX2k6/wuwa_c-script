@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
-using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.Module.RoleUi;
@@ -13,14 +10,14 @@ using CSharpScript.Game.Ui;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x020013B4 RID: 5044
+// Token: 0x02000868 RID: 2152
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityNewPlayerSupportController : ActivityControllerBase
 {
-	// Token: 0x17000BEF RID: 3055
-	// (get) Token: 0x06008E15 RID: 36373 RVA: 0x001EA5E7 File Offset: 0x001E87E7
+	// Token: 0x17000C0F RID: 3087
+	// (get) Token: 0x060061AA RID: 25002 RVA: 0x001F314F File Offset: 0x001F134F
 	[Nullable(2)]
 	public ActivityNewPlayerSupportData ActivityData
 	{
@@ -31,78 +28,74 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008E16 RID: 36374 RVA: 0x001EA5F0 File Offset: 0x001E87F0
+	// Token: 0x060061AB RID: 25003 RVA: 0x001F3158 File Offset: 0x001F1358
 	protected override bool OnInit()
 	{
 		bool flag = false;
-		if (!Info.Instance.IsBuildShipping)
-		{
-			flag = LocalStorage.GetGlobal<bool>(ELocalStorageGlobalKey.NewPlayerSupportForbidStartView, false);
-		}
 		this.ActivityStartConditionMap[ENewPlayerSupportStartCondition.UnForbidStart] = !flag;
 		return true;
 	}
 
-	// Token: 0x06008E17 RID: 36375 RVA: 0x001EA628 File Offset: 0x001E8828
+	// Token: 0x060061AC RID: 25004 RVA: 0x001F3178 File Offset: 0x001F1378
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Add(EEventName.OnActivityNewPlayerSupportInfoUpdate, new Action(this.OnActivityInfoUpdate));
 	}
 
-	// Token: 0x06008E18 RID: 36376 RVA: 0x001EA662 File Offset: 0x001E8862
+	// Token: 0x060061AD RID: 25005 RVA: 0x001F31B2 File Offset: 0x001F13B2
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Remove(EEventName.OnActivityNewPlayerSupportInfoUpdate, new Action(this.OnActivityInfoUpdate));
 	}
 
-	// Token: 0x06008E19 RID: 36377 RVA: 0x001EA69C File Offset: 0x001E889C
+	// Token: 0x060061AE RID: 25006 RVA: 0x001F31EC File Offset: 0x001F13EC
 	protected override bool OnClear()
 	{
 		this.ActivityStartConditionMap.Clear();
 		return true;
 	}
 
-	// Token: 0x06008E1A RID: 36378 RVA: 0x001EA6AA File Offset: 0x001E88AA
+	// Token: 0x060061AF RID: 25007 RVA: 0x001F31FA File Offset: 0x001F13FA
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.NewPlayerSupportActivityTaskUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTaskUpdateNotify));
 		Net.Instance.Register(ENotifyMessageId.NewPlayerSupportActivityTrialRoleUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTrialRoleUpdateNotify));
 	}
 
-	// Token: 0x06008E1B RID: 36379 RVA: 0x001EA6E4 File Offset: 0x001E88E4
+	// Token: 0x060061B0 RID: 25008 RVA: 0x001F3234 File Offset: 0x001F1434
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.NewPlayerSupportActivityTaskUpdateNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.NewPlayerSupportActivityTrialRoleUpdateNotify);
 	}
 
-	// Token: 0x06008E1C RID: 36380 RVA: 0x001EA706 File Offset: 0x001E8906
+	// Token: 0x060061B1 RID: 25009 RVA: 0x001F3256 File Offset: 0x001F1456
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06008E1D RID: 36381 RVA: 0x001EA708 File Offset: 0x001E8908
+	// Token: 0x060061B2 RID: 25010 RVA: 0x001F3258 File Offset: 0x001F1458
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_BeginnerSupportGuideView";
 	}
 
-	// Token: 0x06008E1E RID: 36382 RVA: 0x001EA70F File Offset: 0x001E890F
+	// Token: 0x060061B3 RID: 25011 RVA: 0x001F325F File Offset: 0x001F145F
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivityNewPlayerSupportSubView();
 	}
 
-	// Token: 0x06008E1F RID: 36383 RVA: 0x001EA716 File Offset: 0x001E8916
+	// Token: 0x060061B4 RID: 25012 RVA: 0x001F3266 File Offset: 0x001F1466
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.ActivityDataInternal = new ActivityNewPlayerSupportData();
 		return this.ActivityDataInternal;
 	}
 
-	// Token: 0x06008E20 RID: 36384 RVA: 0x001EA72C File Offset: 0x001E892C
+	// Token: 0x060061B5 RID: 25013 RVA: 0x001F327C File Offset: 0x001F147C
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		foreach (EUiViewName viewName in new EUiViewName[]
@@ -118,7 +111,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		return false;
 	}
 
-	// Token: 0x06008E21 RID: 36385 RVA: 0x001EA774 File Offset: 0x001E8974
+	// Token: 0x060061B6 RID: 25014 RVA: 0x001F32C4 File Offset: 0x001F14C4
 	[NullableContext(2)]
 	private void OnTaskUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -131,7 +124,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		EventSystem.Instance.Emit(EEventName.OnActivityNewPlayerSupportTaskUpdate);
 	}
 
-	// Token: 0x06008E22 RID: 36386 RVA: 0x001EA7CC File Offset: 0x001E89CC
+	// Token: 0x060061B7 RID: 25015 RVA: 0x001F331C File Offset: 0x001F151C
 	[NullableContext(2)]
 	private void OnTrialRoleUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -152,14 +145,14 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityDataInternal.Id);
 	}
 
-	// Token: 0x06008E23 RID: 36387 RVA: 0x001EA85C File Offset: 0x001E8A5C
+	// Token: 0x060061B8 RID: 25016 RVA: 0x001F33AC File Offset: 0x001F15AC
 	private void OnWorldDone()
 	{
 		this.ActivityStartConditionMap[ENewPlayerSupportStartCondition.WorldDone] = true;
 		this.CheckIsStart(false);
 	}
 
-	// Token: 0x06008E24 RID: 36388 RVA: 0x001EA874 File Offset: 0x001E8A74
+	// Token: 0x060061B9 RID: 25017 RVA: 0x001F33C4 File Offset: 0x001F15C4
 	private void OnActivityInfoUpdate()
 	{
 		bool worldDone = GameModeModel.Instance.WorldDone;
@@ -170,7 +163,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		this.CheckIsStart(true);
 	}
 
-	// Token: 0x06008E25 RID: 36389 RVA: 0x001EA8C0 File Offset: 0x001E8AC0
+	// Token: 0x060061BA RID: 25018 RVA: 0x001F3410 File Offset: 0x001F1610
 	private void CheckIsStart(bool isInstantly = false)
 	{
 		if (!PublicUtil.Instance.GetIsSilentLogin())
@@ -205,13 +198,13 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		this.ResetCondition();
 	}
 
-	// Token: 0x06008E26 RID: 36390 RVA: 0x001EA99C File Offset: 0x001E8B9C
+	// Token: 0x060061BB RID: 25019 RVA: 0x001F34EC File Offset: 0x001F16EC
 	private void ResetCondition()
 	{
 		this.ActivityStartConditionMap[ENewPlayerSupportStartCondition.WorldDone] = false;
 	}
 
-	// Token: 0x06008E27 RID: 36391 RVA: 0x001EA9AC File Offset: 0x001E8BAC
+	// Token: 0x060061BC RID: 25020 RVA: 0x001F34FC File Offset: 0x001F16FC
 	public void RequestRewardTask(int taskId, bool receiveAll = false)
 	{
 		ActivityNewPlayerSupportController.<>c__DisplayClass21_0 CS$<>8__locals1 = new ActivityNewPlayerSupportController.<>c__DisplayClass21_0();
@@ -240,7 +233,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 			NewPlayerSupportRewardTaskResponse newPlayerSupportRewardTaskResponse = (NewPlayerSupportRewardTaskResponse)msg;
 			if (newPlayerSupportRewardTaskResponse.Code != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportRewardTaskResponse.Code, 15261, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportRewardTaskResponse.Code, 25832, null, true, true);
 				return;
 			}
 			Dictionary<int, RewardItemData> dictionary = new Dictionary<int, RewardItemData>();
@@ -276,11 +269,11 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 			{
 				CS$<>8__locals1.<>4__this.UpdateActivatedTrialRoleInternal(roleId2, null);
 			}
-			CS$<>8__locals1.<>4__this.OpenRewardView(list, roleId.ToList<int>());
+			CS$<>8__locals1.<>4__this.OpenRewardView(list, new List<int>(roleId));
 		}, 0);
 	}
 
-	// Token: 0x06008E28 RID: 36392 RVA: 0x001EAA4C File Offset: 0x001E8C4C
+	// Token: 0x060061BD RID: 25021 RVA: 0x001F359C File Offset: 0x001F179C
 	public void RequestTrialRoleLvUp(int trialRoleId)
 	{
 		NewPlayerSupportTrialRoleLvUpRequest newPlayerSupportTrialRoleLvUpRequest = NewPlayerSupportTrialRoleLvUpRequest.Create();
@@ -290,7 +283,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 			NewPlayerSupportTrialRoleLvUpResponse newPlayerSupportTrialRoleLvUpResponse = (NewPlayerSupportTrialRoleLvUpResponse)msg;
 			if (newPlayerSupportTrialRoleLvUpResponse.Code != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportTrialRoleLvUpResponse.Code, 24698, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportTrialRoleLvUpResponse.Code, 22280, null, true, true);
 				return;
 			}
 			this.UpdateActivatedTrialRoleInternal(newPlayerSupportTrialRoleLvUpResponse.RoleId, newPlayerSupportTrialRoleLvUpResponse.CurUseRoleInfo);
@@ -298,7 +291,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06008E29 RID: 36393 RVA: 0x001EAA84 File Offset: 0x001E8C84
+	// Token: 0x060061BE RID: 25022 RVA: 0x001F35D4 File Offset: 0x001F17D4
 	[NullableContext(2)]
 	public void RequestSetCurUseTrialRole(int trialRoleId, Action<int> callback)
 	{
@@ -313,7 +306,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 			NewPlayerSupportSetCurUseTrialRoleResponse newPlayerSupportSetCurUseTrialRoleResponse = (NewPlayerSupportSetCurUseTrialRoleResponse)msg;
 			if (newPlayerSupportSetCurUseTrialRoleResponse.Code != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportSetCurUseTrialRoleResponse.Code, 22287, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportSetCurUseTrialRoleResponse.Code, 29875, null, true, true);
 				return;
 			}
 			int roleId = newPlayerSupportSetCurUseTrialRoleResponse.RoleId;
@@ -332,7 +325,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06008E2A RID: 36394 RVA: 0x001EAADC File Offset: 0x001E8CDC
+	// Token: 0x060061BF RID: 25023 RVA: 0x001F362C File Offset: 0x001F182C
 	public void OpenTrialRoleView(int? selectedGroupId = null)
 	{
 		NewPlayerSupportTrialRoleViewModel newPlayerSupportTrialRoleViewModel = new NewPlayerSupportTrialRoleViewModel(ETrialRoleType.NewbieSupportTrial, ConfigCommonParamById.GetStringConfig("NewPlayerSupportTrialRoleIcon"), ConfigCommonParamById.GetStringConfig("NewPlayerSupportTrialRoleTitle"), 465, selectedGroupId);
@@ -344,7 +337,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.ActivityNewPlayerSupportTrialRoleView, newPlayerSupportTrialRoleViewModel, null);
 	}
 
-	// Token: 0x06008E2B RID: 36395 RVA: 0x001EAB60 File Offset: 0x001E8D60
+	// Token: 0x060061C0 RID: 25024 RVA: 0x001F36B0 File Offset: 0x001F18B0
 	public void OpenRewardView(List<RewardItemData> rewardDataList, List<int> trialRoleList)
 	{
 		RewardData<ICommonRewardInfo> rewardData = ItemRewardModel.Instance.RefreshCommonRewardDataFromConfig(1009, EUiViewName.ActivityNewPlayerSupportRewardView, rewardDataList, null, null, null, null, null, true, false);
@@ -360,7 +353,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.ActivityNewPlayerSupportRewardView, param, null);
 	}
 
-	// Token: 0x06008E2C RID: 36396 RVA: 0x001EABB4 File Offset: 0x001E8DB4
+	// Token: 0x060061C1 RID: 25025 RVA: 0x001F3704 File Offset: 0x001F1904
 	[NullableContext(2)]
 	private void UpdateActivatedTrialRoleInternal(int roleId, roleInfo trialRoleInfo = null)
 	{
@@ -372,7 +365,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		this.ActivityData.UpdateActivatedTrialRole(roleId, trialRoleInfo);
 	}
 
-	// Token: 0x06008E2D RID: 36397 RVA: 0x001EABFE File Offset: 0x001E8DFE
+	// Token: 0x060061C2 RID: 25026 RVA: 0x001F374E File Offset: 0x001F194E
 	public void NotifyRedDotRefresh()
 	{
 		if (this.ActivityDataInternal != null)
@@ -381,31 +374,13 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008E2E RID: 36398 RVA: 0x001EAC24 File Offset: 0x001E8E24
+	// Token: 0x060061C3 RID: 25027 RVA: 0x001F3773 File Offset: 0x001F1973
 	public void SetForbidActivityStart(bool isForbid)
 	{
-		if (Info.Instance.IsBuildShipping)
-		{
-			return;
-		}
-		this.ActivityStartConditionMap[ENewPlayerSupportStartCondition.UnForbidStart] = !isForbid;
-		LocalStorage.SetGlobal<bool>(ELocalStorageGlobalKey.NewPlayerSupportForbidStartView, isForbid);
-		if (isForbid)
-		{
-			if (UiManager.Instance.IsViewOpen(EUiViewName.ActivityNewPlayerSupportStartupView))
-			{
-				UiManager.Instance.CloseView(EUiViewName.ActivityNewPlayerSupportStartupView, null);
-				return;
-			}
-		}
-		else
-		{
-			this.CheckIsStart(false);
-		}
 	}
 
-	// Token: 0x17000BF0 RID: 3056
-	// (get) Token: 0x06008E2F RID: 36399 RVA: 0x001EAC86 File Offset: 0x001E8E86
+	// Token: 0x17000C10 RID: 3088
+	// (get) Token: 0x060061C4 RID: 25028 RVA: 0x001F3775 File Offset: 0x001F1975
 	public static ActivityNewPlayerSupportController Instance
 	{
 		get
@@ -414,7 +389,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008E30 RID: 36400 RVA: 0x001EAC8D File Offset: 0x001E8E8D
+	// Token: 0x060061C5 RID: 25029 RVA: 0x001F377C File Offset: 0x001F197C
 	public static ActivityNewPlayerSupportController GetOrCreateInstance()
 	{
 		if (ActivityNewPlayerSupportController._Instance == null)
@@ -424,7 +399,7 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		return ActivityNewPlayerSupportController._Instance;
 	}
 
-	// Token: 0x06008E31 RID: 36401 RVA: 0x001EACA1 File Offset: 0x001E8EA1
+	// Token: 0x060061C6 RID: 25030 RVA: 0x001F3790 File Offset: 0x001F1990
 	public static bool CreateInstance()
 	{
 		if (ActivityNewPlayerSupportController._Instance != null)
@@ -435,31 +410,31 @@ public class ActivityNewPlayerSupportController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06008E32 RID: 36402 RVA: 0x001EACB7 File Offset: 0x001E8EB7
+	// Token: 0x060061C7 RID: 25031 RVA: 0x001F37A6 File Offset: 0x001F19A6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008E33 RID: 36403 RVA: 0x001EACB9 File Offset: 0x001E8EB9
+	// Token: 0x060061C8 RID: 25032 RVA: 0x001F37A8 File Offset: 0x001F19A8
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityNewPlayerSupportController._Instance = null;
 	}
 
-	// Token: 0x06008E34 RID: 36404 RVA: 0x001EACC1 File Offset: 0x001E8EC1
+	// Token: 0x060061C9 RID: 25033 RVA: 0x001F37B0 File Offset: 0x001F19B0
 	static ActivityNewPlayerSupportController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityNewPlayerSupportController.CreateStaticDefaultValue), new Action(ActivityNewPlayerSupportController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003EF4 RID: 16116
+	// Token: 0x04003F8C RID: 16268
 	[Nullable(2)]
 	private ActivityNewPlayerSupportData ActivityDataInternal;
 
-	// Token: 0x04003EF5 RID: 16117
+	// Token: 0x04003F8D RID: 16269
 	private readonly Dictionary<ENewPlayerSupportStartCondition, bool> ActivityStartConditionMap = new Dictionary<ENewPlayerSupportStartCondition, bool>();
 
-	// Token: 0x04003EF6 RID: 16118
+	// Token: 0x04003F8E RID: 16270
 	[Nullable(2)]
 	private static ActivityNewPlayerSupportController _Instance;
 }

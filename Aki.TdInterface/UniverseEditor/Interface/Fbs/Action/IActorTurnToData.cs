@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060FB RID: 24827
+	// Token: 0x0200675D RID: 26461
 	public struct IActorTurnToData : IFlatbufferObject
 	{
-		// Token: 0x1700B703 RID: 46851
-		// (get) Token: 0x0602A6B7 RID: 173751 RVA: 0x005D8417 File Offset: 0x005D6617
+		// Token: 0x1700C06E RID: 49262
+		// (get) Token: 0x0602CD98 RID: 183704 RVA: 0x006223BF File Offset: 0x006205BF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A6B8 RID: 173752 RVA: 0x005D8424 File Offset: 0x005D6624
+		// Token: 0x0602CD99 RID: 183705 RVA: 0x006223CC File Offset: 0x006205CC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A6B9 RID: 173753 RVA: 0x005D842C File Offset: 0x005D662C
+		// Token: 0x0602CD9A RID: 183706 RVA: 0x006223D4 File Offset: 0x006205D4
 		public static IActorTurnToData GetRootAsIActorTurnToData(ByteBuffer _bb)
 		{
 			return IActorTurnToData.GetRootAsIActorTurnToData(_bb, default(IActorTurnToData));
 		}
 
-		// Token: 0x0602A6BA RID: 173754 RVA: 0x005D8448 File Offset: 0x005D6648
+		// Token: 0x0602CD9B RID: 183707 RVA: 0x006223F0 File Offset: 0x006205F0
 		public static IActorTurnToData GetRootAsIActorTurnToData(ByteBuffer _bb, IActorTurnToData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A6BB RID: 173755 RVA: 0x005D8465 File Offset: 0x005D6665
+		// Token: 0x0602CD9C RID: 183708 RVA: 0x0062240D File Offset: 0x0062060D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A6BC RID: 173756 RVA: 0x005D8474 File Offset: 0x005D6674
+		// Token: 0x0602CD9D RID: 183709 RVA: 0x0062241C File Offset: 0x0062061C
 		public IActorTurnToData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B704 RID: 46852
-		// (get) Token: 0x0602A6BD RID: 173757 RVA: 0x005D8484 File Offset: 0x005D6684
+		// Token: 0x1700C06F RID: 49263
+		// (get) Token: 0x0602CD9E RID: 183710 RVA: 0x0062242C File Offset: 0x0062062C
 		public EActorTurnToMode Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A6BE RID: 173758 RVA: 0x005D84C0 File Offset: 0x005D66C0
+		// Token: 0x0602CD9F RID: 183711 RVA: 0x00622468 File Offset: 0x00620668
 		public static Offset<IActorTurnToData> CreateIActorTurnToData(FlatBufferBuilder builder, EActorTurnToMode Type = EActorTurnToMode.Talker)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorTurnToData.EndIActorTurnToData(builder);
 		}
 
-		// Token: 0x0602A6BF RID: 173759 RVA: 0x005D84D6 File Offset: 0x005D66D6
+		// Token: 0x0602CDA0 RID: 183712 RVA: 0x0062247E File Offset: 0x0062067E
 		public static void StartIActorTurnToData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602A6C0 RID: 173760 RVA: 0x005D84DF File Offset: 0x005D66DF
+		// Token: 0x0602CDA1 RID: 183713 RVA: 0x00622487 File Offset: 0x00620687
 		public static void AddType(FlatBufferBuilder builder, EActorTurnToMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602A6C1 RID: 173761 RVA: 0x005D84EA File Offset: 0x005D66EA
+		// Token: 0x0602CDA2 RID: 183714 RVA: 0x00622492 File Offset: 0x00620692
 		public static Offset<IActorTurnToData> EndIActorTurnToData(FlatBufferBuilder builder)
 		{
 			return new Offset<IActorTurnToData>(builder.EndTable());
 		}
 
-		// Token: 0x0602A6C2 RID: 173762 RVA: 0x005D84F8 File Offset: 0x005D66F8
+		// Token: 0x0602CDA3 RID: 183715 RVA: 0x006224A0 File Offset: 0x006206A0
 		public IActorTurnToDataT UnPack()
 		{
 			IActorTurnToDataT actorTurnToDataT = new IActorTurnToDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return actorTurnToDataT;
 		}
 
-		// Token: 0x0602A6C3 RID: 173763 RVA: 0x005D8513 File Offset: 0x005D6713
+		// Token: 0x0602CDA4 RID: 183716 RVA: 0x006224BB File Offset: 0x006206BB
 		public void UnPackTo(IActorTurnToDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602A6C4 RID: 173764 RVA: 0x005D8524 File Offset: 0x005D6724
+		// Token: 0x0602CDA5 RID: 183717 RVA: 0x006224CC File Offset: 0x006206CC
 		public static Offset<IActorTurnToData> Pack(FlatBufferBuilder builder, IActorTurnToDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorTurnToData.CreateIActorTurnToData(builder, _o.Type);
 		}
 
-		// Token: 0x040104C1 RID: 66753
+		// Token: 0x040112C5 RID: 70341
 		private Table __p;
 	}
 }

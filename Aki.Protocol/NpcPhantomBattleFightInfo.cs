@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B73 RID: 2931
+	// Token: 0x02000B63 RID: 2915
 	public sealed class NpcPhantomBattleFightInfo : IMessage<NpcPhantomBattleFightInfo>, IMessage, IEquatable<NpcPhantomBattleFightInfo>, IDeepCloneable<NpcPhantomBattleFightInfo>, IBufferMessage
 	{
-		// Token: 0x0600FDF6 RID: 65014 RVA: 0x0024FEFB File Offset: 0x0024E0FB
+		// Token: 0x0600FCF2 RID: 64754 RVA: 0x0024E02B File Offset: 0x0024C22B
 		[NullableContext(1)]
 		public static NpcPhantomBattleFightInfo Create()
 		{
 			return new NpcPhantomBattleFightInfo();
 		}
 
-		// Token: 0x170033CE RID: 13262
-		// (get) Token: 0x0600FDF7 RID: 65015 RVA: 0x0024FF02 File Offset: 0x0024E102
+		// Token: 0x17003395 RID: 13205
+		// (get) Token: 0x0600FCF3 RID: 64755 RVA: 0x0024E032 File Offset: 0x0024C232
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<NpcPhantomBattleFightInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033CF RID: 13263
-		// (get) Token: 0x0600FDF8 RID: 65016 RVA: 0x0024FF09 File Offset: 0x0024E109
+		// Token: 0x17003396 RID: 13206
+		// (get) Token: 0x0600FCF4 RID: 64756 RVA: 0x0024E039 File Offset: 0x0024C239
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033D0 RID: 13264
-		// (get) Token: 0x0600FDF9 RID: 65017 RVA: 0x0024FF0C File Offset: 0x0024E10C
+		// Token: 0x17003397 RID: 13207
+		// (get) Token: 0x0600FCF5 RID: 64757 RVA: 0x0024E03C File Offset: 0x0024C23C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FDFA RID: 65018 RVA: 0x0024FF13 File Offset: 0x0024E113
+		// Token: 0x0600FCF6 RID: 64758 RVA: 0x0024E043 File Offset: 0x0024C243
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleFightInfo()
 		{
 		}
 
-		// Token: 0x0600FDFB RID: 65019 RVA: 0x0024FF1C File Offset: 0x0024E11C
+		// Token: 0x0600FCF7 RID: 64759 RVA: 0x0024E04C File Offset: 0x0024C24C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleFightInfo(NpcPhantomBattleFightInfo other) : this()
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600FDFC RID: 65020 RVA: 0x00250115 File Offset: 0x0024E315
+		// Token: 0x0600FCF8 RID: 64760 RVA: 0x0024E245 File Offset: 0x0024C445
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleFightInfo Clone()
@@ -133,9 +133,9 @@ namespace Aki.Protocol
 			return new NpcPhantomBattleFightInfo(this);
 		}
 
-		// Token: 0x170033D1 RID: 13265
-		// (get) Token: 0x0600FDFD RID: 65021 RVA: 0x0025011D File Offset: 0x0024E31D
-		// (set) Token: 0x0600FDFE RID: 65022 RVA: 0x00250135 File Offset: 0x0024E335
+		// Token: 0x17003398 RID: 13208
+		// (get) Token: 0x0600FCF9 RID: 64761 RVA: 0x0024E24D File Offset: 0x0024C44D
+		// (set) Token: 0x0600FCFA RID: 64762 RVA: 0x0024E265 File Offset: 0x0024C465
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleEvolveInfo PhantomBattleEvolveInfo
@@ -155,9 +155,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033D2 RID: 13266
-		// (get) Token: 0x0600FDFF RID: 65023 RVA: 0x0025014B File Offset: 0x0024E34B
-		// (set) Token: 0x0600FE00 RID: 65024 RVA: 0x00250163 File Offset: 0x0024E363
+		// Token: 0x17003399 RID: 13209
+		// (get) Token: 0x0600FCFB RID: 64763 RVA: 0x0024E27B File Offset: 0x0024C47B
+		// (set) Token: 0x0600FCFC RID: 64764 RVA: 0x0024E293 File Offset: 0x0024C493
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleSlotInsteadInfo PhantomBattleSlotInsteadInfo
@@ -177,9 +177,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033D3 RID: 13267
-		// (get) Token: 0x0600FE01 RID: 65025 RVA: 0x00250179 File Offset: 0x0024E379
-		// (set) Token: 0x0600FE02 RID: 65026 RVA: 0x00250191 File Offset: 0x0024E391
+		// Token: 0x1700339A RID: 13210
+		// (get) Token: 0x0600FCFD RID: 64765 RVA: 0x0024E2A9 File Offset: 0x0024C4A9
+		// (set) Token: 0x0600FCFE RID: 64766 RVA: 0x0024E2C1 File Offset: 0x0024C4C1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleSkillTriggerInfo PhantomBattleSkillTriggerInfo
@@ -199,9 +199,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033D4 RID: 13268
-		// (get) Token: 0x0600FE03 RID: 65027 RVA: 0x002501A7 File Offset: 0x0024E3A7
-		// (set) Token: 0x0600FE04 RID: 65028 RVA: 0x002501BF File Offset: 0x0024E3BF
+		// Token: 0x1700339B RID: 13211
+		// (get) Token: 0x0600FCFF RID: 64767 RVA: 0x0024E2D7 File Offset: 0x0024C4D7
+		// (set) Token: 0x0600FD00 RID: 64768 RVA: 0x0024E2EF File Offset: 0x0024C4EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleBuffTriggerInfo PhantomBattleBuffTriggerInfo
@@ -221,9 +221,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033D5 RID: 13269
-		// (get) Token: 0x0600FE05 RID: 65029 RVA: 0x002501D5 File Offset: 0x0024E3D5
-		// (set) Token: 0x0600FE06 RID: 65030 RVA: 0x002501ED File Offset: 0x0024E3ED
+		// Token: 0x1700339C RID: 13212
+		// (get) Token: 0x0600FD01 RID: 64769 RVA: 0x0024E305 File Offset: 0x0024C505
+		// (set) Token: 0x0600FD02 RID: 64770 RVA: 0x0024E31D File Offset: 0x0024C51D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleCardSkillInfo NpcPhantomBattleCardSkillInfo
@@ -243,9 +243,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033D6 RID: 13270
-		// (get) Token: 0x0600FE07 RID: 65031 RVA: 0x00250203 File Offset: 0x0024E403
-		// (set) Token: 0x0600FE08 RID: 65032 RVA: 0x0025021B File Offset: 0x0024E41B
+		// Token: 0x1700339D RID: 13213
+		// (get) Token: 0x0600FD03 RID: 64771 RVA: 0x0024E333 File Offset: 0x0024C533
+		// (set) Token: 0x0600FD04 RID: 64772 RVA: 0x0024E34B File Offset: 0x0024C54B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleCardRoleSkillInfo NpcPhantomBattleCardRoleSkillInfo
@@ -265,9 +265,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033D7 RID: 13271
-		// (get) Token: 0x0600FE09 RID: 65033 RVA: 0x00250231 File Offset: 0x0024E431
-		// (set) Token: 0x0600FE0A RID: 65034 RVA: 0x00250249 File Offset: 0x0024E449
+		// Token: 0x1700339E RID: 13214
+		// (get) Token: 0x0600FD05 RID: 64773 RVA: 0x0024E361 File Offset: 0x0024C561
+		// (set) Token: 0x0600FD06 RID: 64774 RVA: 0x0024E379 File Offset: 0x0024C579
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleGamerStatusInfo NpcPhantomBattleGamerStatusInfo
@@ -287,9 +287,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033D8 RID: 13272
-		// (get) Token: 0x0600FE0B RID: 65035 RVA: 0x0025025F File Offset: 0x0024E45F
-		// (set) Token: 0x0600FE0C RID: 65036 RVA: 0x00250277 File Offset: 0x0024E477
+		// Token: 0x1700339F RID: 13215
+		// (get) Token: 0x0600FD07 RID: 64775 RVA: 0x0024E38F File Offset: 0x0024C58F
+		// (set) Token: 0x0600FD08 RID: 64776 RVA: 0x0024E3A7 File Offset: 0x0024C5A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleCardAttrInfo NpcPhantomBattleCardAttrInfo
@@ -309,9 +309,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033D9 RID: 13273
-		// (get) Token: 0x0600FE0D RID: 65037 RVA: 0x0025028D File Offset: 0x0024E48D
-		// (set) Token: 0x0600FE0E RID: 65038 RVA: 0x002502A6 File Offset: 0x0024E4A6
+		// Token: 0x170033A0 RID: 13216
+		// (get) Token: 0x0600FD09 RID: 64777 RVA: 0x0024E3BD File Offset: 0x0024C5BD
+		// (set) Token: 0x0600FD0A RID: 64778 RVA: 0x0024E3D6 File Offset: 0x0024C5D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleEnterSlotInfo NpcPhantomBattleEnterSlotInfo
@@ -331,9 +331,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033DA RID: 13274
-		// (get) Token: 0x0600FE0F RID: 65039 RVA: 0x002502BD File Offset: 0x0024E4BD
-		// (set) Token: 0x0600FE10 RID: 65040 RVA: 0x002502D6 File Offset: 0x0024E4D6
+		// Token: 0x170033A1 RID: 13217
+		// (get) Token: 0x0600FD0B RID: 64779 RVA: 0x0024E3ED File Offset: 0x0024C5ED
+		// (set) Token: 0x0600FD0C RID: 64780 RVA: 0x0024E406 File Offset: 0x0024C606
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleBackCardLibrary NpcPhantomBattleBackCardLibrary
@@ -353,9 +353,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033DB RID: 13275
-		// (get) Token: 0x0600FE11 RID: 65041 RVA: 0x002502ED File Offset: 0x0024E4ED
-		// (set) Token: 0x0600FE12 RID: 65042 RVA: 0x00250306 File Offset: 0x0024E506
+		// Token: 0x170033A2 RID: 13218
+		// (get) Token: 0x0600FD0D RID: 64781 RVA: 0x0024E41D File Offset: 0x0024C61D
+		// (set) Token: 0x0600FD0E RID: 64782 RVA: 0x0024E436 File Offset: 0x0024C636
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleDiscardInfo NpcPhantomBattleDiscardInfo
@@ -375,9 +375,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033DC RID: 13276
-		// (get) Token: 0x0600FE13 RID: 65043 RVA: 0x0025031D File Offset: 0x0024E51D
-		// (set) Token: 0x0600FE14 RID: 65044 RVA: 0x00250336 File Offset: 0x0024E536
+		// Token: 0x170033A3 RID: 13219
+		// (get) Token: 0x0600FD0F RID: 64783 RVA: 0x0024E44D File Offset: 0x0024C64D
+		// (set) Token: 0x0600FD10 RID: 64784 RVA: 0x0024E466 File Offset: 0x0024C666
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomFourCTaskDealCardInfo NpcPhantomFourCTaskDealCardInfo
@@ -397,9 +397,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033DD RID: 13277
-		// (get) Token: 0x0600FE15 RID: 65045 RVA: 0x0025034D File Offset: 0x0024E54D
-		// (set) Token: 0x0600FE16 RID: 65046 RVA: 0x00250366 File Offset: 0x0024E566
+		// Token: 0x170033A4 RID: 13220
+		// (get) Token: 0x0600FD11 RID: 64785 RVA: 0x0024E47D File Offset: 0x0024C67D
+		// (set) Token: 0x0600FD12 RID: 64786 RVA: 0x0024E496 File Offset: 0x0024C696
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomLeaveSlot NpcPhantomLeaveSlot
@@ -419,9 +419,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033DE RID: 13278
-		// (get) Token: 0x0600FE17 RID: 65047 RVA: 0x0025037D File Offset: 0x0024E57D
-		// (set) Token: 0x0600FE18 RID: 65048 RVA: 0x00250396 File Offset: 0x0024E596
+		// Token: 0x170033A5 RID: 13221
+		// (get) Token: 0x0600FD13 RID: 64787 RVA: 0x0024E4AD File Offset: 0x0024C6AD
+		// (set) Token: 0x0600FD14 RID: 64788 RVA: 0x0024E4C6 File Offset: 0x0024C6C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleBackSlotCardLibrary NpcPhantomBattleBackSlotCardLibrary
@@ -441,9 +441,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033DF RID: 13279
-		// (get) Token: 0x0600FE19 RID: 65049 RVA: 0x002503AD File Offset: 0x0024E5AD
-		// (set) Token: 0x0600FE1A RID: 65050 RVA: 0x002503C6 File Offset: 0x0024E5C6
+		// Token: 0x170033A6 RID: 13222
+		// (get) Token: 0x0600FD15 RID: 64789 RVA: 0x0024E4DD File Offset: 0x0024C6DD
+		// (set) Token: 0x0600FD16 RID: 64790 RVA: 0x0024E4F6 File Offset: 0x0024C6F6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleReserveCardInfo NpcPhantomBattleReserveCardInfo
@@ -463,9 +463,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033E0 RID: 13280
-		// (get) Token: 0x0600FE1B RID: 65051 RVA: 0x002503DD File Offset: 0x0024E5DD
-		// (set) Token: 0x0600FE1C RID: 65052 RVA: 0x002503F6 File Offset: 0x0024E5F6
+		// Token: 0x170033A7 RID: 13223
+		// (get) Token: 0x0600FD17 RID: 64791 RVA: 0x0024E50D File Offset: 0x0024C70D
+		// (set) Token: 0x0600FD18 RID: 64792 RVA: 0x0024E526 File Offset: 0x0024C726
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleNpcCardUpdateInfo PhantomBattleNpcCardUpdateInfo
@@ -485,9 +485,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033E1 RID: 13281
-		// (get) Token: 0x0600FE1D RID: 65053 RVA: 0x0025040D File Offset: 0x0024E60D
-		// (set) Token: 0x0600FE1E RID: 65054 RVA: 0x00250426 File Offset: 0x0024E626
+		// Token: 0x170033A8 RID: 13224
+		// (get) Token: 0x0600FD19 RID: 64793 RVA: 0x0024E53D File Offset: 0x0024C73D
+		// (set) Token: 0x0600FD1A RID: 64794 RVA: 0x0024E556 File Offset: 0x0024C756
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleDurableEmptyInfo NpcPhantomBattleDurableEmptyInfo
@@ -507,9 +507,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033E2 RID: 13282
-		// (get) Token: 0x0600FE1F RID: 65055 RVA: 0x0025043D File Offset: 0x0024E63D
-		// (set) Token: 0x0600FE20 RID: 65056 RVA: 0x00250456 File Offset: 0x0024E656
+		// Token: 0x170033A9 RID: 13225
+		// (get) Token: 0x0600FD1B RID: 64795 RVA: 0x0024E56D File Offset: 0x0024C76D
+		// (set) Token: 0x0600FD1C RID: 64796 RVA: 0x0024E586 File Offset: 0x0024C786
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleCardDurableSkillInfo NpcPhantomBattleCardDurableSkillInfo
@@ -529,8 +529,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033E3 RID: 13283
-		// (get) Token: 0x0600FE21 RID: 65057 RVA: 0x0025046D File Offset: 0x0024E66D
+		// Token: 0x170033AA RID: 13226
+		// (get) Token: 0x0600FD1D RID: 64797 RVA: 0x0024E59D File Offset: 0x0024C79D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleFightInfo.NpcPhantomBattleFightInfoCtxOneofCase NpcPhantomBattleFightInfoCtxCase
@@ -541,7 +541,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FE22 RID: 65058 RVA: 0x00250475 File Offset: 0x0024E675
+		// Token: 0x0600FD1E RID: 64798 RVA: 0x0024E5A5 File Offset: 0x0024C7A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearNpcPhantomBattleFightInfoCtx()
@@ -550,7 +550,7 @@ namespace Aki.Protocol
 			this.npcPhantomBattleFightInfoCtx_ = null;
 		}
 
-		// Token: 0x0600FE23 RID: 65059 RVA: 0x00250485 File Offset: 0x0024E685
+		// Token: 0x0600FD1F RID: 64799 RVA: 0x0024E5B5 File Offset: 0x0024C7B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -558,7 +558,7 @@ namespace Aki.Protocol
 			return this.Equals(other as NpcPhantomBattleFightInfo);
 		}
 
-		// Token: 0x0600FE24 RID: 65060 RVA: 0x00250494 File Offset: 0x0024E694
+		// Token: 0x0600FD20 RID: 64800 RVA: 0x0024E5C4 File Offset: 0x0024C7C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(NpcPhantomBattleFightInfo other)
@@ -566,7 +566,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.PhantomBattleEvolveInfo, other.PhantomBattleEvolveInfo) && object.Equals(this.PhantomBattleSlotInsteadInfo, other.PhantomBattleSlotInsteadInfo) && object.Equals(this.PhantomBattleSkillTriggerInfo, other.PhantomBattleSkillTriggerInfo) && object.Equals(this.PhantomBattleBuffTriggerInfo, other.PhantomBattleBuffTriggerInfo) && object.Equals(this.NpcPhantomBattleCardSkillInfo, other.NpcPhantomBattleCardSkillInfo) && object.Equals(this.NpcPhantomBattleCardRoleSkillInfo, other.NpcPhantomBattleCardRoleSkillInfo) && object.Equals(this.NpcPhantomBattleGamerStatusInfo, other.NpcPhantomBattleGamerStatusInfo) && object.Equals(this.NpcPhantomBattleCardAttrInfo, other.NpcPhantomBattleCardAttrInfo) && object.Equals(this.NpcPhantomBattleEnterSlotInfo, other.NpcPhantomBattleEnterSlotInfo) && object.Equals(this.NpcPhantomBattleBackCardLibrary, other.NpcPhantomBattleBackCardLibrary) && object.Equals(this.NpcPhantomBattleDiscardInfo, other.NpcPhantomBattleDiscardInfo) && object.Equals(this.NpcPhantomFourCTaskDealCardInfo, other.NpcPhantomFourCTaskDealCardInfo) && object.Equals(this.NpcPhantomLeaveSlot, other.NpcPhantomLeaveSlot) && object.Equals(this.NpcPhantomBattleBackSlotCardLibrary, other.NpcPhantomBattleBackSlotCardLibrary) && object.Equals(this.NpcPhantomBattleReserveCardInfo, other.NpcPhantomBattleReserveCardInfo) && object.Equals(this.PhantomBattleNpcCardUpdateInfo, other.PhantomBattleNpcCardUpdateInfo) && object.Equals(this.NpcPhantomBattleDurableEmptyInfo, other.NpcPhantomBattleDurableEmptyInfo) && object.Equals(this.NpcPhantomBattleCardDurableSkillInfo, other.NpcPhantomBattleCardDurableSkillInfo) && this.NpcPhantomBattleFightInfoCtxCase == other.NpcPhantomBattleFightInfoCtxCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600FE25 RID: 65061 RVA: 0x00250648 File Offset: 0x0024E848
+		// Token: 0x0600FD21 RID: 64801 RVA: 0x0024E778 File Offset: 0x0024C978
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -652,7 +652,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FE26 RID: 65062 RVA: 0x0025081F File Offset: 0x0024EA1F
+		// Token: 0x0600FD22 RID: 64802 RVA: 0x0024E94F File Offset: 0x0024CB4F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -660,7 +660,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600FE27 RID: 65063 RVA: 0x0025082C File Offset: 0x0024EA2C
+		// Token: 0x0600FD23 RID: 64803 RVA: 0x0024E95C File Offset: 0x0024CB5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -668,7 +668,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600FE28 RID: 65064 RVA: 0x00250838 File Offset: 0x0024EA38
+		// Token: 0x0600FD24 RID: 64804 RVA: 0x0024E968 File Offset: 0x0024CB68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -769,7 +769,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FE29 RID: 65065 RVA: 0x00250A7C File Offset: 0x0024EC7C
+		// Token: 0x0600FD25 RID: 64805 RVA: 0x0024EBAC File Offset: 0x0024CDAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -854,7 +854,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FE2A RID: 65066 RVA: 0x00250C70 File Offset: 0x0024EE70
+		// Token: 0x0600FD26 RID: 64806 RVA: 0x0024EDA0 File Offset: 0x0024CFA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(NpcPhantomBattleFightInfo other)
@@ -995,7 +995,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600FE2B RID: 65067 RVA: 0x00250FCC File Offset: 0x0024F1CC
+		// Token: 0x0600FD27 RID: 64807 RVA: 0x0024F0FC File Offset: 0x0024D2FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -1003,7 +1003,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600FE2C RID: 65068 RVA: 0x00250FD8 File Offset: 0x0024F1D8
+		// Token: 0x0600FD28 RID: 64808 RVA: 0x0024F108 File Offset: 0x0024D308
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -1250,112 +1250,112 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006546 RID: 25926
+		// Token: 0x04006556 RID: 25942
 		private static readonly MessageParser<NpcPhantomBattleFightInfo> _parser = new MessageParser<NpcPhantomBattleFightInfo>(() => new NpcPhantomBattleFightInfo());
 
-		// Token: 0x04006547 RID: 25927
+		// Token: 0x04006557 RID: 25943
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006548 RID: 25928
+		// Token: 0x04006558 RID: 25944
 		public const int PhantomBattleEvolveInfoFieldNumber = 1;
 
-		// Token: 0x04006549 RID: 25929
+		// Token: 0x04006559 RID: 25945
 		public const int PhantomBattleSlotInsteadInfoFieldNumber = 2;
 
-		// Token: 0x0400654A RID: 25930
+		// Token: 0x0400655A RID: 25946
 		public const int PhantomBattleSkillTriggerInfoFieldNumber = 3;
 
-		// Token: 0x0400654B RID: 25931
+		// Token: 0x0400655B RID: 25947
 		public const int PhantomBattleBuffTriggerInfoFieldNumber = 4;
 
-		// Token: 0x0400654C RID: 25932
+		// Token: 0x0400655C RID: 25948
 		public const int NpcPhantomBattleCardSkillInfoFieldNumber = 5;
 
-		// Token: 0x0400654D RID: 25933
+		// Token: 0x0400655D RID: 25949
 		public const int NpcPhantomBattleCardRoleSkillInfoFieldNumber = 6;
 
-		// Token: 0x0400654E RID: 25934
+		// Token: 0x0400655E RID: 25950
 		public const int NpcPhantomBattleGamerStatusInfoFieldNumber = 7;
 
-		// Token: 0x0400654F RID: 25935
+		// Token: 0x0400655F RID: 25951
 		public const int NpcPhantomBattleCardAttrInfoFieldNumber = 8;
 
-		// Token: 0x04006550 RID: 25936
+		// Token: 0x04006560 RID: 25952
 		public const int NpcPhantomBattleEnterSlotInfoFieldNumber = 9;
 
-		// Token: 0x04006551 RID: 25937
+		// Token: 0x04006561 RID: 25953
 		public const int NpcPhantomBattleBackCardLibraryFieldNumber = 10;
 
-		// Token: 0x04006552 RID: 25938
+		// Token: 0x04006562 RID: 25954
 		public const int NpcPhantomBattleDiscardInfoFieldNumber = 11;
 
-		// Token: 0x04006553 RID: 25939
+		// Token: 0x04006563 RID: 25955
 		public const int NpcPhantomFourCTaskDealCardInfoFieldNumber = 12;
 
-		// Token: 0x04006554 RID: 25940
+		// Token: 0x04006564 RID: 25956
 		public const int NpcPhantomLeaveSlotFieldNumber = 13;
 
-		// Token: 0x04006555 RID: 25941
+		// Token: 0x04006565 RID: 25957
 		public const int NpcPhantomBattleBackSlotCardLibraryFieldNumber = 14;
 
-		// Token: 0x04006556 RID: 25942
+		// Token: 0x04006566 RID: 25958
 		public const int NpcPhantomBattleReserveCardInfoFieldNumber = 15;
 
-		// Token: 0x04006557 RID: 25943
+		// Token: 0x04006567 RID: 25959
 		public const int PhantomBattleNpcCardUpdateInfoFieldNumber = 17;
 
-		// Token: 0x04006558 RID: 25944
+		// Token: 0x04006568 RID: 25960
 		public const int NpcPhantomBattleDurableEmptyInfoFieldNumber = 18;
 
-		// Token: 0x04006559 RID: 25945
+		// Token: 0x04006569 RID: 25961
 		public const int NpcPhantomBattleCardDurableSkillInfoFieldNumber = 19;
 
-		// Token: 0x0400655A RID: 25946
+		// Token: 0x0400656A RID: 25962
 		private object npcPhantomBattleFightInfoCtx_;
 
-		// Token: 0x0400655B RID: 25947
+		// Token: 0x0400656B RID: 25963
 		private NpcPhantomBattleFightInfo.NpcPhantomBattleFightInfoCtxOneofCase npcPhantomBattleFightInfoCtxCase_;
 
-		// Token: 0x0200186B RID: 6251
+		// Token: 0x020018E3 RID: 6371
 		public enum NpcPhantomBattleFightInfoCtxOneofCase
 		{
-			// Token: 0x0400C848 RID: 51272
+			// Token: 0x0400CD73 RID: 52595
 			None,
-			// Token: 0x0400C849 RID: 51273
+			// Token: 0x0400CD74 RID: 52596
 			PhantomBattleEvolveInfo,
-			// Token: 0x0400C84A RID: 51274
+			// Token: 0x0400CD75 RID: 52597
 			PhantomBattleSlotInsteadInfo,
-			// Token: 0x0400C84B RID: 51275
+			// Token: 0x0400CD76 RID: 52598
 			PhantomBattleSkillTriggerInfo,
-			// Token: 0x0400C84C RID: 51276
+			// Token: 0x0400CD77 RID: 52599
 			PhantomBattleBuffTriggerInfo,
-			// Token: 0x0400C84D RID: 51277
+			// Token: 0x0400CD78 RID: 52600
 			NpcPhantomBattleCardSkillInfo,
-			// Token: 0x0400C84E RID: 51278
+			// Token: 0x0400CD79 RID: 52601
 			NpcPhantomBattleCardRoleSkillInfo,
-			// Token: 0x0400C84F RID: 51279
+			// Token: 0x0400CD7A RID: 52602
 			NpcPhantomBattleGamerStatusInfo,
-			// Token: 0x0400C850 RID: 51280
+			// Token: 0x0400CD7B RID: 52603
 			NpcPhantomBattleCardAttrInfo,
-			// Token: 0x0400C851 RID: 51281
+			// Token: 0x0400CD7C RID: 52604
 			NpcPhantomBattleEnterSlotInfo,
-			// Token: 0x0400C852 RID: 51282
+			// Token: 0x0400CD7D RID: 52605
 			NpcPhantomBattleBackCardLibrary,
-			// Token: 0x0400C853 RID: 51283
+			// Token: 0x0400CD7E RID: 52606
 			NpcPhantomBattleDiscardInfo,
-			// Token: 0x0400C854 RID: 51284
+			// Token: 0x0400CD7F RID: 52607
 			NpcPhantomFourCTaskDealCardInfo,
-			// Token: 0x0400C855 RID: 51285
+			// Token: 0x0400CD80 RID: 52608
 			NpcPhantomLeaveSlot,
-			// Token: 0x0400C856 RID: 51286
+			// Token: 0x0400CD81 RID: 52609
 			NpcPhantomBattleBackSlotCardLibrary,
-			// Token: 0x0400C857 RID: 51287
+			// Token: 0x0400CD82 RID: 52610
 			NpcPhantomBattleReserveCardInfo,
-			// Token: 0x0400C858 RID: 51288
+			// Token: 0x0400CD83 RID: 52611
 			PhantomBattleNpcCardUpdateInfo = 17,
-			// Token: 0x0400C859 RID: 51289
+			// Token: 0x0400CD84 RID: 52612
 			NpcPhantomBattleDurableEmptyInfo,
-			// Token: 0x0400C85A RID: 51290
+			// Token: 0x0400CD85 RID: 52613
 			NpcPhantomBattleCardDurableSkillInfo
 		}
 	}

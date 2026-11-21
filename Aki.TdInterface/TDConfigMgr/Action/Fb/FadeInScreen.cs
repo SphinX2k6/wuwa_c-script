@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002777 RID: 10103
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A49 RID: 10825
 	public class FadeInScreen : ActionParams
 	{
-		// Token: 0x0600E0F3 RID: 57587 RVA: 0x00213BC0 File Offset: 0x00211DC0
+		// Token: 0x0600EF11 RID: 61201 RVA: 0x00230954 File Offset: 0x0022EB54
 		public static FadeInScreen Create(IFadeInScreen? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043C7 RID: 17351
-		// (get) Token: 0x0600E0F4 RID: 57588 RVA: 0x00213BE0 File Offset: 0x00211DE0
+		// Token: 0x1700472D RID: 18221
+		// (get) Token: 0x0600EF12 RID: 61202 RVA: 0x00230974 File Offset: 0x0022EB74
 		public virtual EFadeUiOverride? TypeOverride
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043C8 RID: 17352
-		// (get) Token: 0x0600E0F5 RID: 57589 RVA: 0x00213C16 File Offset: 0x00211E16
+		// Token: 0x1700472E RID: 18222
+		// (get) Token: 0x0600EF13 RID: 61203 RVA: 0x002309AA File Offset: 0x0022EBAA
 		[Nullable(2)]
 		public virtual IEaseData Ease
 		{
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043C9 RID: 17353
-		// (get) Token: 0x0600E0F6 RID: 57590 RVA: 0x00213C4C File Offset: 0x00211E4C
+		// Token: 0x1700472F RID: 18223
+		// (get) Token: 0x0600EF14 RID: 61204 RVA: 0x002309E0 File Offset: 0x0022EBE0
 		public virtual EFadeInScreenShowType? ScreenType
 		{
 			get
@@ -68,8 +66,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043CA RID: 17354
-		// (get) Token: 0x0600E0F7 RID: 57591 RVA: 0x00213C84 File Offset: 0x00211E84
+		// Token: 0x17004730 RID: 18224
+		// (get) Token: 0x0600EF15 RID: 61205 RVA: 0x00230A18 File Offset: 0x0022EC18
 		public virtual bool? KeepFadeAfterTreeEnd
 		{
 			get
@@ -82,8 +80,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043CB RID: 17355
-		// (get) Token: 0x0600E0F8 RID: 57592 RVA: 0x00213CBC File Offset: 0x00211EBC
+		// Token: 0x17004731 RID: 18225
+		// (get) Token: 0x0600EF16 RID: 61206 RVA: 0x00230A50 File Offset: 0x0022EC50
 		public virtual bool? KeepFadeAfterTreeRollBack
 		{
 			get
@@ -96,8 +94,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043CC RID: 17356
-		// (get) Token: 0x0600E0F9 RID: 57593 RVA: 0x00213CF2 File Offset: 0x00211EF2
+		// Token: 0x17004732 RID: 18226
+		// (get) Token: 0x0600EF17 RID: 61207 RVA: 0x00230A86 File Offset: 0x0022EC86
 		public virtual IFadeBackgroundType FadeBackground
 		{
 			get
@@ -112,8 +110,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043CD RID: 17357
-		// (get) Token: 0x0600E0FA RID: 57594 RVA: 0x00213D24 File Offset: 0x00211F24
+		// Token: 0x17004733 RID: 18227
+		// (get) Token: 0x0600EF18 RID: 61208 RVA: 0x00230AB8 File Offset: 0x0022ECB8
 		public virtual bool? OnlyLowMemoryDeviceExecute
 		{
 			get
@@ -126,20 +124,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C8F RID: 31887
+		// Token: 0x04008345 RID: 33605
 		private IFadeInScreen Instance;
 
-		// Token: 0x04007C90 RID: 31888
+		// Token: 0x04008346 RID: 33606
 		[Nullable(2)]
 		private IEaseData _EaseCache;
 
-		// Token: 0x04007C91 RID: 31889
+		// Token: 0x04008347 RID: 33607
 		private bool _EaseInited;
 
-		// Token: 0x04007C92 RID: 31890
+		// Token: 0x04008348 RID: 33608
 		private IFadeBackgroundType _FadeBackgroundCache;
 
-		// Token: 0x04007C93 RID: 31891
+		// Token: 0x04008349 RID: 33609
 		private bool _FadeBackgroundInited;
 	}
 }

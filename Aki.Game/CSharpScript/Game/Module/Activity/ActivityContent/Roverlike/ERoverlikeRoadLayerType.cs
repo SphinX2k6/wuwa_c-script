@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060E8 RID: 24808
+	// Token: 0x02005066 RID: 20582
 	public enum ERoverlikeRoadLayerType
 	{
-		// Token: 0x04020CA1 RID: 134305
+		// Token: 0x0401B5CE RID: 112078
 		Normal = 1,
-		// Token: 0x04020CA2 RID: 134306
+		// Token: 0x0401B5CF RID: 112079
 		Elite,
-		// Token: 0x04020CA3 RID: 134307
+		// Token: 0x0401B5D0 RID: 112080
 		Boss
 	}
 }

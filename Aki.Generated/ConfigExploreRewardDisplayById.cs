@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200029C RID: 668
+	// Token: 0x020002B0 RID: 688
 	public class ConfigExploreRewardDisplayById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000FAD RID: 4013 RVA: 0x000B226C File Offset: 0x000B046C
+		// Token: 0x06001025 RID: 4133 RVA: 0x000B8530 File Offset: 0x000B6730
 		static ConfigExploreRewardDisplayById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExploreRewardDisplayById.CreateStaticDefaultValue), new Action(ConfigExploreRewardDisplayById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000FAE RID: 4014 RVA: 0x000B228C File Offset: 0x000B048C
+		// Token: 0x06001026 RID: 4134 RVA: 0x000B8550 File Offset: 0x000B6750
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExploreRewardDisplayById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000FAF RID: 4015 RVA: 0x000B230B File Offset: 0x000B050B
+		// Token: 0x06001027 RID: 4135 RVA: 0x000B85CF File Offset: 0x000B67CF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExploreRewardDisplayById.LogPair = null;
 			ConfigExploreRewardDisplayById.HandleId = 0;
 		}
 
-		// Token: 0x06000FB0 RID: 4016 RVA: 0x000B2319 File Offset: 0x000B0519
+		// Token: 0x06001028 RID: 4136 RVA: 0x000B85DD File Offset: 0x000B67DD
 		public static void Init()
 		{
 			ConfigExploreRewardDisplayById.HandleId = ConfigCommon.InitDataStatement(ConfigExploreRewardDisplayById.HandleId, "db_rewardui.db", "select BinData from `ExploreRewardDisplay` where Id=?");
 		}
 
-		// Token: 0x06000FB1 RID: 4017 RVA: 0x000B2334 File Offset: 0x000B0534
+		// Token: 0x06001029 RID: 4137 RVA: 0x000B85F8 File Offset: 0x000B67F8
 		public static ExploreRewardDisplay? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExploreRewardDisplayById.HandleId, ConfigExploreRewardDisplayById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ExploreRewardDisplay?(rootAsExploreRewardDisplay);
 		}
 
-		// Token: 0x04001228 RID: 4648
+		// Token: 0x040012B4 RID: 4788
 		private const string DB = "db_rewardui.db";
 
-		// Token: 0x04001229 RID: 4649
+		// Token: 0x040012B5 RID: 4789
 		private const string FILE = "j.奖励界面表现.xlsx";
 
-		// Token: 0x0400122A RID: 4650
+		// Token: 0x040012B6 RID: 4790
 		private const string TABLE = "ExploreRewardDisplay";
 
-		// Token: 0x0400122B RID: 4651
+		// Token: 0x040012B7 RID: 4791
 		private const string COMMAND = "select BinData from `ExploreRewardDisplay` where Id=?";
 
-		// Token: 0x0400122C RID: 4652
+		// Token: 0x040012B8 RID: 4792
 		private const string KEY_PREFIX = "ExploreRewardDisplayById";
 
-		// Token: 0x0400122D RID: 4653
+		// Token: 0x040012B9 RID: 4793
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400122E RID: 4654
+		// Token: 0x040012BA RID: 4794
 		private static int HandleId;
 	}
 }

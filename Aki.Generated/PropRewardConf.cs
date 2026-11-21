@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F5D RID: 3933
+	// Token: 0x02001044 RID: 4164
 	public struct PropRewardConf : IFlatbufferObject
 	{
-		// Token: 0x17002B13 RID: 11027
-		// (get) Token: 0x0600B3AA RID: 45994 RVA: 0x002CBF78 File Offset: 0x002CA178
+		// Token: 0x17002B8B RID: 11147
+		// (get) Token: 0x0600B9E7 RID: 47591 RVA: 0x002E8C2C File Offset: 0x002E6E2C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B3AB RID: 45995 RVA: 0x002CBF85 File Offset: 0x002CA185
+		// Token: 0x0600B9E8 RID: 47592 RVA: 0x002E8C39 File Offset: 0x002E6E39
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B3AC RID: 45996 RVA: 0x002CBF8C File Offset: 0x002CA18C
+		// Token: 0x0600B9E9 RID: 47593 RVA: 0x002E8C40 File Offset: 0x002E6E40
 		public static PropRewardConf GetRootAsPropRewardConf(ByteBuffer _bb)
 		{
 			return PropRewardConf.GetRootAsPropRewardConf(_bb, default(PropRewardConf));
 		}
 
-		// Token: 0x0600B3AD RID: 45997 RVA: 0x002CBFA8 File Offset: 0x002CA1A8
+		// Token: 0x0600B9EA RID: 47594 RVA: 0x002E8C5C File Offset: 0x002E6E5C
 		public static PropRewardConf GetRootAsPropRewardConf(ByteBuffer _bb, PropRewardConf obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B3AE RID: 45998 RVA: 0x002CBFC5 File Offset: 0x002CA1C5
+		// Token: 0x0600B9EB RID: 47595 RVA: 0x002E8C79 File Offset: 0x002E6E79
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B3AF RID: 45999 RVA: 0x002CBFD4 File Offset: 0x002CA1D4
+		// Token: 0x0600B9EC RID: 47596 RVA: 0x002E8C88 File Offset: 0x002E6E88
 		public PropRewardConf __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002B14 RID: 11028
-		// (get) Token: 0x0600B3B0 RID: 46000 RVA: 0x002CBFE4 File Offset: 0x002CA1E4
+		// Token: 0x17002B8C RID: 11148
+		// (get) Token: 0x0600B9ED RID: 47597 RVA: 0x002E8C98 File Offset: 0x002E6E98
 		public int Id
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B3B1 RID: 46001 RVA: 0x002CC020 File Offset: 0x002CA220
+		// Token: 0x0600B9EE RID: 47598 RVA: 0x002E8CD4 File Offset: 0x002E6ED4
 		public ConfigPropValue? Props(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return new ConfigPropValue?(default(ConfigPropValue).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002B15 RID: 11029
-		// (get) Token: 0x0600B3B2 RID: 46002 RVA: 0x002CC080 File Offset: 0x002CA280
+		// Token: 0x17002B8D RID: 11149
+		// (get) Token: 0x0600B9EF RID: 47599 RVA: 0x002E8D34 File Offset: 0x002E6F34
 		public int PropsLength
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B3B3 RID: 46003 RVA: 0x002CC0AC File Offset: 0x002CA2AC
+		// Token: 0x0600B9F0 RID: 47600 RVA: 0x002E8D60 File Offset: 0x002E6F60
 		public DicStringInt? Tips(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -103,8 +103,8 @@ namespace Aki.Config
 			return new DicStringInt?(default(DicStringInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002B16 RID: 11030
-		// (get) Token: 0x0600B3B4 RID: 46004 RVA: 0x002CC10C File Offset: 0x002CA30C
+		// Token: 0x17002B8E RID: 11150
+		// (get) Token: 0x0600B9F1 RID: 47601 RVA: 0x002E8DC0 File Offset: 0x002E6FC0
 		public int TipsLength
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002B17 RID: 11031
-		// (get) Token: 0x0600B3B5 RID: 46005 RVA: 0x002CC138 File Offset: 0x002CA338
+		// Token: 0x17002B8F RID: 11151
+		// (get) Token: 0x0600B9F2 RID: 47602 RVA: 0x002E8DEC File Offset: 0x002E6FEC
 		public bool IsFormation
 		{
 			get
@@ -129,41 +129,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B3B6 RID: 46006 RVA: 0x002CC178 File Offset: 0x002CA378
+		// Token: 0x0600B9F3 RID: 47603 RVA: 0x002E8E2C File Offset: 0x002E702C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PropsIter()或GetPropsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly ConfigPropValue[] Props()
+		public ConfigPropValue[] Props()
 		{
 			return this.PropsIter().ToArray<ConfigPropValue>();
 		}
 
-		// Token: 0x0600B3B7 RID: 46007 RVA: 0x002CC185 File Offset: 0x002CA385
+		// Token: 0x0600B9F4 RID: 47604 RVA: 0x002E8E39 File Offset: 0x002E7039
 		[NullableContext(1)]
-		public readonly IEnumerable<ConfigPropValue> PropsIter()
+		public IEnumerable<ConfigPropValue> PropsIter()
 		{
 			PropRewardConf.<PropsIter>d__19 <PropsIter>d__ = new PropRewardConf.<PropsIter>d__19(-2);
 			<PropsIter>d__.<>3__<>4__this = this;
 			return <PropsIter>d__;
 		}
 
-		// Token: 0x0600B3B8 RID: 46008 RVA: 0x002CC19C File Offset: 0x002CA39C
+		// Token: 0x0600B9F5 RID: 47605 RVA: 0x002E8E50 File Offset: 0x002E7050
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用TipsFrozenDict()缓存字典，遍历请使用TipsIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, int> Tips()
+		public Dictionary<string, int> Tips()
 		{
 			return this.TipsIter().ToDictionary((DicStringInt element) => element.Key, (DicStringInt element) => element.Value);
 		}
 
-		// Token: 0x0600B3B9 RID: 46009 RVA: 0x002CC1F2 File Offset: 0x002CA3F2
+		// Token: 0x0600B9F6 RID: 47606 RVA: 0x002E8EA6 File Offset: 0x002E70A6
 		[NullableContext(1)]
-		public readonly IEnumerable<DicStringInt> TipsIter()
+		public IEnumerable<DicStringInt> TipsIter()
 		{
 			PropRewardConf.<TipsIter>d__21 <TipsIter>d__ = new PropRewardConf.<TipsIter>d__21(-2);
 			<TipsIter>d__.<>3__<>4__this = this;
 			return <TipsIter>d__;
 		}
 
-		// Token: 0x0600B3BA RID: 46010 RVA: 0x002CC208 File Offset: 0x002CA408
+		// Token: 0x0600B9F7 RID: 47607 RVA: 0x002E8EBC File Offset: 0x002E70BC
 		[NullableContext(1)]
 		public int? GetTips(string key)
 		{
@@ -176,7 +174,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600B3BB RID: 46011 RVA: 0x002CC23C File Offset: 0x002CA43C
+		// Token: 0x0600B9F8 RID: 47608 RVA: 0x002E8EF0 File Offset: 0x002E70F0
 		private void EnsureTipsCacheIfNeeded()
 		{
 			if (this.TipsCache != null)
@@ -186,23 +184,18 @@ namespace Aki.Config
 			this.TipsCache = this.TipsIter().ToFrozenDictionary((DicStringInt kvp) => kvp.Key, (DicStringInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600B3BC RID: 46012 RVA: 0x002CC2A2 File Offset: 0x002CA4A2
+		// Token: 0x0600B9F9 RID: 47609 RVA: 0x002E8F56 File Offset: 0x002E7156
 		[NullableContext(1)]
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<string, int> GetTipsFrozenDict(string key)
+		public FrozenDictionary<string, int> GetTipsFrozenDict()
 		{
 			this.EnsureTipsCacheIfNeeded();
 			return this.TipsCache;
 		}
 
-		// Token: 0x0400502A RID: 20522
+		// Token: 0x04005611 RID: 22033
 		private Table __p;
 
-		// Token: 0x0400502B RID: 20523
+		// Token: 0x04005612 RID: 22034
 		[Nullable(new byte[]
 		{
 			2,

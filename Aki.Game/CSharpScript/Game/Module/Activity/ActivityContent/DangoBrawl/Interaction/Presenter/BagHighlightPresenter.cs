@@ -6,19 +6,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Presenter
 {
-	// Token: 0x0200686D RID: 26733
+	// Token: 0x020057BD RID: 22461
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BagHighlightPresenter
 	{
-		// Token: 0x06042C22 RID: 273442 RVA: 0x0103F873 File Offset: 0x0103DA73
+		// Token: 0x06037779 RID: 227193 RVA: 0x00F80D53 File Offset: 0x00F7EF53
 		public BagHighlightPresenter(ActivityDangoBrawlData data, DropResolver resolver)
 		{
 			this.Data = data;
 			this.Resolver = resolver;
 		}
 
-		// Token: 0x06042C23 RID: 273443 RVA: 0x0103F88C File Offset: 0x0103DA8C
+		// Token: 0x0603777A RID: 227194 RVA: 0x00F80D6C File Offset: 0x00F7EF6C
 		public void Update(IDragVisual visual, DragTarget target)
 		{
 			DangoBrawlDropZone zone = this.Resolver.GetZone(EDragTargetKind.Bag);
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			zone.BagExtra.HighlightGrids(list.ToArray(), list2.ToArray());
 		}
 
-		// Token: 0x06042C24 RID: 273444 RVA: 0x0103FA38 File Offset: 0x0103DC38
+		// Token: 0x0603777B RID: 227195 RVA: 0x00F80F18 File Offset: 0x00F7F118
 		public void UpdateFromPointer(IDragVisual visual, FVector pointerPos)
 		{
 			DangoBrawlDropZone zone = this.Resolver.GetZone(EDragTargetKind.Bag);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.Update(visual, dragTarget);
 		}
 
-		// Token: 0x06042C25 RID: 273445 RVA: 0x0103FAD1 File Offset: 0x0103DCD1
+		// Token: 0x0603777C RID: 227196 RVA: 0x00F80FB1 File Offset: 0x00F7F1B1
 		public void Clear()
 		{
 			IDangoBrawlBagDropZoneExtra lastHighlightedSink = this.LastHighlightedSink;
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.LastHighlightedSink = null;
 		}
 
-		// Token: 0x04022C09 RID: 142345
+		// Token: 0x0401D466 RID: 119910
 		private readonly ActivityDangoBrawlData Data;
 
-		// Token: 0x04022C0A RID: 142346
+		// Token: 0x0401D467 RID: 119911
 		private readonly DropResolver Resolver;
 
-		// Token: 0x04022C0B RID: 142347
+		// Token: 0x0401D468 RID: 119912
 		[Nullable(2)]
 		private IDangoBrawlBagDropZoneExtra LastHighlightedSink;
 	}

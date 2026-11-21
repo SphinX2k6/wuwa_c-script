@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02000EEA RID: 3818
+// Token: 0x0200039F RID: 927
 [NullableContext(2)]
 [Nullable(0)]
 public class ProjectionPhotoShowItem : UiPanelBase
 {
-	// Token: 0x06005FAE RID: 24494 RVA: 0x0011E800 File Offset: 0x0011CA00
+	// Token: 0x06003344 RID: 13124 RVA: 0x00126658 File Offset: 0x00124858
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06005FAF RID: 24495 RVA: 0x0011E888 File Offset: 0x0011CA88
+	// Token: 0x06003345 RID: 13125 RVA: 0x001266E0 File Offset: 0x001248E0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		this.ButtonRoot = base.GetButton(0);
@@ -37,7 +37,7 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		return base.OnBeforeStartAsync();
 	}
 
-	// Token: 0x06005FB0 RID: 24496 RVA: 0x0011E8FC File Offset: 0x0011CAFC
+	// Token: 0x06003346 RID: 13126 RVA: 0x00126754 File Offset: 0x00124954
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -50,7 +50,7 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.OnViewPortSizeChanged));
 	}
 
-	// Token: 0x06005FB1 RID: 24497 RVA: 0x0011E9BC File Offset: 0x0011CBBC
+	// Token: 0x06003347 RID: 13127 RVA: 0x00126814 File Offset: 0x00124A14
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -62,14 +62,14 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		EventSystem.Instance.Remove(EEventName.UIViewPortSizeChanged, new Action(this.OnViewPortSizeChanged));
 	}
 
-	// Token: 0x06005FB2 RID: 24498 RVA: 0x0011EA5C File Offset: 0x0011CC5C
+	// Token: 0x06003348 RID: 13128 RVA: 0x001268B4 File Offset: 0x00124AB4
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
 		this.SetHidden(this.IsHidden);
 	}
 
-	// Token: 0x06005FB3 RID: 24499 RVA: 0x0011EA70 File Offset: 0x0011CC70
+	// Token: 0x06003349 RID: 13129 RVA: 0x001268C8 File Offset: 0x00124AC8
 	private void OnFinishDrag(bool inRange)
 	{
 		if (inRange)
@@ -81,7 +81,7 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		this.SetState(ProjectionPhotoShowItem.State.Normal);
 	}
 
-	// Token: 0x06005FB4 RID: 24500 RVA: 0x0011EA94 File Offset: 0x0011CC94
+	// Token: 0x0600334A RID: 13130 RVA: 0x001268EC File Offset: 0x00124AEC
 	private void OnPointEnter()
 	{
 		if (!this.IsDragging)
@@ -93,7 +93,7 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		Log.Instance.Info(ELogModule.LevelPlay, ELogAuthor.CH, "[ProjectionPhotoShowItem] OnPointEnter", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06005FB5 RID: 24501 RVA: 0x0011EAD4 File Offset: 0x0011CCD4
+	// Token: 0x0600334B RID: 13131 RVA: 0x0012692C File Offset: 0x00124B2C
 	private void OnPointExit()
 	{
 		if (!this.IsDragging)
@@ -105,20 +105,20 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		Log.Instance.Info(ELogModule.LevelPlay, ELogAuthor.CH, "[ProjectionPhotoShowItem] OnPointExit", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06005FB6 RID: 24502 RVA: 0x0011EB14 File Offset: 0x0011CD14
+	// Token: 0x0600334C RID: 13132 RVA: 0x0012696C File Offset: 0x00124B6C
 	public void SetHidden(bool isHidden)
 	{
 		this.IsHidden = isHidden;
 		(this.ButtonRoot.GetOwner().GetComponentByClass(UUIItem.StaticClass()) as UUIItem).SetUIActive(!this.IsHidden);
 	}
 
-	// Token: 0x06005FB7 RID: 24503 RVA: 0x0011EB4A File Offset: 0x0011CD4A
+	// Token: 0x0600334D RID: 13133 RVA: 0x001269A2 File Offset: 0x00124BA2
 	private void OnProjectionPhotoItemStartDrag()
 	{
 		this.IsDragging = true;
 	}
 
-	// Token: 0x06005FB8 RID: 24504 RVA: 0x0011EB53 File Offset: 0x0011CD53
+	// Token: 0x0600334E RID: 13134 RVA: 0x001269AB File Offset: 0x00124BAB
 	private void OnProjectionPhotoItemEndDrag()
 	{
 		this.OnFinishDrag(this.InRange);
@@ -126,7 +126,7 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		this.IsDragging = false;
 	}
 
-	// Token: 0x06005FB9 RID: 24505 RVA: 0x0011EB70 File Offset: 0x0011CD70
+	// Token: 0x0600334F RID: 13135 RVA: 0x001269C8 File Offset: 0x00124BC8
 	private void SetState(ProjectionPhotoShowItem.State state)
 	{
 		switch (state)
@@ -151,13 +151,13 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06005FBA RID: 24506 RVA: 0x0011EBFE File Offset: 0x0011CDFE
+	// Token: 0x06003350 RID: 13136 RVA: 0x00126A56 File Offset: 0x00124C56
 	private void OnViewPortSizeChanged()
 	{
 		this.UpdateRootScaleToMatch3D();
 	}
 
-	// Token: 0x06005FBB RID: 24507 RVA: 0x0011EC08 File Offset: 0x0011CE08
+	// Token: 0x06003351 RID: 13137 RVA: 0x00126A60 File Offset: 0x00124C60
 	private unsafe void UpdateRootScaleToMatch3D()
 	{
 		if (this.RootItem == null)
@@ -212,65 +212,65 @@ public class ProjectionPhotoShowItem : UiPanelBase
 		UKismetSystemLibrary.PrintString(world, inString, true, false, new FLinearColor?(new FLinearColor(1f, 1f, 0f, 1f)), 5f);
 	}
 
-	// Token: 0x04002B57 RID: 11095
+	// Token: 0x04002BF0 RID: 11248
 	private const float BaselineWidth = 1920f;
 
-	// Token: 0x04002B58 RID: 11096
+	// Token: 0x04002BF1 RID: 11249
 	private const float BaselineHeight = 1080f;
 
-	// Token: 0x04002B59 RID: 11097
+	// Token: 0x04002BF2 RID: 11250
 	private const float DebugPrintDurationSec = 5f;
 
-	// Token: 0x04002B5A RID: 11098
+	// Token: 0x04002BF3 RID: 11251
 	[Nullable(1)]
 	private const string DebugPrintDecimals = "F3";
 
-	// Token: 0x04002B5B RID: 11099
+	// Token: 0x04002BF4 RID: 11252
 	private UUIButtonComponent ButtonRoot;
 
-	// Token: 0x04002B5C RID: 11100
+	// Token: 0x04002BF5 RID: 11253
 	private UUISprite NormalSprite;
 
-	// Token: 0x04002B5D RID: 11101
+	// Token: 0x04002BF6 RID: 11254
 	private UUISprite DragInSprite;
 
-	// Token: 0x04002B5E RID: 11102
+	// Token: 0x04002BF7 RID: 11255
 	private UUISprite PutSprite;
 
-	// Token: 0x04002B5F RID: 11103
+	// Token: 0x04002BF8 RID: 11256
 	private bool IsHidden = true;
 
-	// Token: 0x04002B60 RID: 11104
+	// Token: 0x04002BF9 RID: 11257
 	private bool InRange;
 
-	// Token: 0x04002B61 RID: 11105
+	// Token: 0x04002BFA RID: 11258
 	private bool IsDragging;
 
-	// Token: 0x0200754B RID: 30027
+	// Token: 0x020066DF RID: 26335
 	[NullableContext(0)]
 	private enum EViewComponent
 	{
-		// Token: 0x04026C8D RID: 158861
+		// Token: 0x04021FD8 RID: 139224
 		Root,
-		// Token: 0x04026C8E RID: 158862
+		// Token: 0x04021FD9 RID: 139225
 		TexPhoto,
-		// Token: 0x04026C8F RID: 158863
+		// Token: 0x04021FDA RID: 139226
 		SprNormal,
-		// Token: 0x04026C90 RID: 158864
+		// Token: 0x04021FDB RID: 139227
 		SprDragIn,
-		// Token: 0x04026C91 RID: 158865
+		// Token: 0x04021FDC RID: 139228
 		SprPut
 	}
 
-	// Token: 0x0200754C RID: 30028
+	// Token: 0x020066E0 RID: 26336
 	[NullableContext(0)]
 	private enum State
 	{
-		// Token: 0x04026C93 RID: 158867
+		// Token: 0x04021FDE RID: 139230
 		Normal,
-		// Token: 0x04026C94 RID: 158868
+		// Token: 0x04021FDF RID: 139231
 		DragIn,
-		// Token: 0x04026C95 RID: 158869
+		// Token: 0x04021FE0 RID: 139232
 		Put
 	}
 }

@@ -6,7 +6,7 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B91 RID: 7057
+// Token: 0x02001050 RID: 4176
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FloroRanchGoodsItem : GridProxyAbstract<FloroRanchShopItemDataBase>
 {
-	// Token: 0x0600D21E RID: 53790 RVA: 0x00303384 File Offset: 0x00301584
+	// Token: 0x0600A62F RID: 42543 RVA: 0x0030E45C File Offset: 0x0030C65C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -58,7 +58,7 @@ public class FloroRanchGoodsItem : GridProxyAbstract<FloroRanchShopItemDataBase>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D21F RID: 53791 RVA: 0x0030359C File Offset: 0x0030179C
+	// Token: 0x0600A630 RID: 42544 RVA: 0x0030E674 File Offset: 0x0030C874
 	public override void Refresh(FloroRanchShopItemDataBase data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -144,13 +144,13 @@ public class FloroRanchGoodsItem : GridProxyAbstract<FloroRanchShopItemDataBase>
 		}
 	}
 
-	// Token: 0x0600D220 RID: 53792 RVA: 0x003037C6 File Offset: 0x003019C6
+	// Token: 0x0600A631 RID: 42545 RVA: 0x0030E89E File Offset: 0x0030CA9E
 	public void BindClickCallback(Action<FloroRanchShopItemDataBase> callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x0600D221 RID: 53793 RVA: 0x003037CF File Offset: 0x003019CF
+	// Token: 0x0600A632 RID: 42546 RVA: 0x0030E8A7 File Offset: 0x0030CAA7
 	private void OnClickGoodsItem(EToggleState toggleState)
 	{
 		Action<FloroRanchShopItemDataBase> clickCallback = this.ClickCallback;
@@ -161,7 +161,7 @@ public class FloroRanchGoodsItem : GridProxyAbstract<FloroRanchShopItemDataBase>
 		clickCallback(this.Data);
 	}
 
-	// Token: 0x0600D222 RID: 53794 RVA: 0x003037E7 File Offset: 0x003019E7
+	// Token: 0x0600A633 RID: 42547 RVA: 0x0030E8BF File Offset: 0x0030CABF
 	public void SetSelectState(bool isSelect)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -172,10 +172,10 @@ public class FloroRanchGoodsItem : GridProxyAbstract<FloroRanchShopItemDataBase>
 		extendToggle.SetToggleState(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0400604C RID: 24652
+	// Token: 0x0400611B RID: 24859
 	public FloroRanchShopItemDataBase Data;
 
-	// Token: 0x0400604D RID: 24653
+	// Token: 0x0400611C RID: 24860
 	[Nullable(new byte[]
 	{
 		2,
@@ -183,47 +183,47 @@ public class FloroRanchGoodsItem : GridProxyAbstract<FloroRanchShopItemDataBase>
 	})]
 	private Action<FloroRanchShopItemDataBase> ClickCallback;
 
-	// Token: 0x02008118 RID: 33048
+	// Token: 0x020072A6 RID: 29350
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A229 RID: 172585
+		// Token: 0x0402555D RID: 152925
 		public const int Toggle = 0;
 
-		// Token: 0x0402A22A RID: 172586
+		// Token: 0x0402555E RID: 152926
 		public const int GoodsItem = 1;
 
-		// Token: 0x0402A22B RID: 172587
+		// Token: 0x0402555F RID: 152927
 		public const int GoodsIconTexture = 2;
 
-		// Token: 0x0402A22C RID: 172588
+		// Token: 0x04025560 RID: 152928
 		public const int GoodsQualitySprite = 3;
 
-		// Token: 0x0402A22D RID: 172589
+		// Token: 0x04025561 RID: 152929
 		public const int PriceIconTexture = 4;
 
-		// Token: 0x0402A22E RID: 172590
+		// Token: 0x04025562 RID: 152930
 		public const int CurPrice = 5;
 
-		// Token: 0x0402A22F RID: 172591
+		// Token: 0x04025563 RID: 152931
 		public const int OldPrice = 6;
 
-		// Token: 0x0402A230 RID: 172592
+		// Token: 0x04025564 RID: 152932
 		public const int RedDot = 7;
 
-		// Token: 0x0402A231 RID: 172593
+		// Token: 0x04025565 RID: 152933
 		public const int SoldMask = 8;
 
-		// Token: 0x0402A232 RID: 172594
+		// Token: 0x04025566 RID: 152934
 		public const int ToyRaceItem = 9;
 
-		// Token: 0x0402A233 RID: 172595
+		// Token: 0x04025567 RID: 152935
 		public const int ToyRaceIcon = 10;
 
-		// Token: 0x0402A234 RID: 172596
+		// Token: 0x04025568 RID: 152936
 		public const int ItemPhantomIcon = 11;
 
-		// Token: 0x0402A235 RID: 172597
+		// Token: 0x04025569 RID: 152937
 		public const int RecommendSprite = 12;
 	}
 }

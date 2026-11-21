@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ABC RID: 10940
+	// Token: 0x02002DB0 RID: 11696
 	public class ISplineWayPoint
 	{
-		// Token: 0x0600F01D RID: 61469 RVA: 0x0022E127 File Offset: 0x0022C327
-		[NullableContext(1)]
+		// Token: 0x0600FED3 RID: 65235 RVA: 0x0024BE33 File Offset: 0x0024A033
 		public static ISplineWayPoint Create(ISplineWayPoint? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C67 RID: 19559
-		// (get) Token: 0x0600F01E RID: 61470 RVA: 0x0022E146 File Offset: 0x0022C346
+		// Token: 0x17005021 RID: 20513
+		// (get) Token: 0x0600FED4 RID: 65236 RVA: 0x0024BE52 File Offset: 0x0024A052
 		public virtual int Spline
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C68 RID: 19560
-		// (get) Token: 0x0600F01F RID: 61471 RVA: 0x0022E153 File Offset: 0x0022C353
+		// Token: 0x17005022 RID: 20514
+		// (get) Token: 0x0600FED5 RID: 65237 RVA: 0x0024BE5F File Offset: 0x0024A05F
 		public virtual int PointId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008416 RID: 33814
+		// Token: 0x04008B1A RID: 35610
 		private ISplineWayPoint Instance;
 	}
 }

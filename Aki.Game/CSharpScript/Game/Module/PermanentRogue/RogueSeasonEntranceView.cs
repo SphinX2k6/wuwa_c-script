@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005340 RID: 21312
+	// Token: 0x02004310 RID: 17168
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueSeasonEntranceView : UiTickViewBase
 	{
-		// Token: 0x06036747 RID: 223047 RVA: 0x00CE4B60 File Offset: 0x00CE2D60
+		// Token: 0x0602B643 RID: 177731 RVA: 0x00C32530 File Offset: 0x00C30730
 		[NullableContext(1)]
 		public RogueSeasonEntranceView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036748 RID: 223048 RVA: 0x00CE4B6C File Offset: 0x00CE2D6C
+		// Token: 0x0602B644 RID: 177732 RVA: 0x00C3253C File Offset: 0x00C3073C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -59,7 +58,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036749 RID: 223049 RVA: 0x00CE4DB8 File Offset: 0x00CE2FB8
+		// Token: 0x0602B645 RID: 177733 RVA: 0x00C32788 File Offset: 0x00C30988
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueSeasonEntranceView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -70,7 +69,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603674A RID: 223050 RVA: 0x00CE4DFC File Offset: 0x00CE2FFC
+		// Token: 0x0602B646 RID: 177734 RVA: 0x00C327CC File Offset: 0x00C309CC
 		protected UniTask CheckDungeonProgress()
 		{
 			RogueSeasonEntranceView.<CheckDungeonProgress>d__12 <CheckDungeonProgress>d__;
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <CheckDungeonProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603674B RID: 223051 RVA: 0x00CE4E40 File Offset: 0x00CE3040
+		// Token: 0x0602B647 RID: 177735 RVA: 0x00C32810 File Offset: 0x00C30A10
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			item.SetUIActive(trailEndTime != cacheTrailOpen);
 		}
 
-		// Token: 0x0603674C RID: 223052 RVA: 0x00CE4ED8 File Offset: 0x00CE30D8
+		// Token: 0x0602B648 RID: 177736 RVA: 0x00C328A8 File Offset: 0x00C30AA8
 		protected override void OnBeforeShow()
 		{
 			RogueResTheme? config = ConfigRogueResThemeById.GetConfig(this.SeasonId, true);
@@ -109,7 +108,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			RedDotController.Instance.BindRedDot(ERedDotName.RogueResInst, base.GetItem(16), null, this.SeasonId);
 		}
 
-		// Token: 0x0603674D RID: 223053 RVA: 0x00CE4F44 File Offset: 0x00CE3144
+		// Token: 0x0602B649 RID: 177737 RVA: 0x00C32914 File Offset: 0x00C30B14
 		protected override UniTask OnBeforeShowAsyncImplement()
 		{
 			RogueSeasonEntranceView.<OnBeforeShowAsyncImplement>d__15 <OnBeforeShowAsyncImplement>d__;
@@ -120,14 +119,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603674E RID: 223054 RVA: 0x00CE4F87 File Offset: 0x00CE3187
+		// Token: 0x0602B64A RID: 177738 RVA: 0x00C32957 File Offset: 0x00C30B57
 		protected override void OnBeforeHide()
 		{
 			this.UnbindRedDot();
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RogueResInst, base.GetItem(16), 0);
 		}
 
-		// Token: 0x0603674F RID: 223055 RVA: 0x00CE4FA7 File Offset: 0x00CE31A7
+		// Token: 0x0602B64B RID: 177739 RVA: 0x00C32977 File Offset: 0x00C30B77
 		protected override void OnBeforeDestroy()
 		{
 			this.CaptionItem = null;
@@ -138,17 +137,17 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.EndingBtnComp = null;
 		}
 
-		// Token: 0x06036750 RID: 223056 RVA: 0x00CE4FD3 File Offset: 0x00CE31D3
+		// Token: 0x0602B64C RID: 177740 RVA: 0x00C329A3 File Offset: 0x00C30BA3
 		protected override void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x06036751 RID: 223057 RVA: 0x00CE4FD5 File Offset: 0x00CE31D5
+		// Token: 0x0602B64D RID: 177741 RVA: 0x00C329A5 File Offset: 0x00C30BA5
 		protected override void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x06036752 RID: 223058 RVA: 0x00CE4FD8 File Offset: 0x00CE31D8
+		// Token: 0x0602B64E RID: 177742 RVA: 0x00C329A8 File Offset: 0x00C30BA8
 		protected override void OnTick(float delta)
 		{
 			bool taskIsEnd = ActivityPermanentRogueModel.Instance.GetTaskIsEnd();
@@ -168,7 +167,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036753 RID: 223059 RVA: 0x00CE5020 File Offset: 0x00CE3220
+		// Token: 0x0602B64F RID: 177743 RVA: 0x00C329F0 File Offset: 0x00C30BF0
 		[NullableContext(1)]
 		protected string GetRemainTime()
 		{
@@ -176,13 +175,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return ActivityModel.Instance.GetRemainTimeText(endTime, "{0}") ?? "";
 		}
 
-		// Token: 0x06036754 RID: 223060 RVA: 0x00CE505B File Offset: 0x00CE325B
+		// Token: 0x0602B650 RID: 177744 RVA: 0x00C32A2B File Offset: 0x00C30C2B
 		private void OnClickBack()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06036755 RID: 223061 RVA: 0x00CE5064 File Offset: 0x00CE3264
+		// Token: 0x0602B651 RID: 177745 RVA: 0x00C32A34 File Offset: 0x00C30C34
 		private void OnClickHelpInfo()
 		{
 			int? seasonHelpId = ActivityPermanentRogueModel.Instance.GetSeasonHelpId(this.SeasonId);
@@ -192,13 +191,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036756 RID: 223062 RVA: 0x00CE509C File Offset: 0x00CE329C
+		// Token: 0x0602B652 RID: 177746 RVA: 0x00C32A6C File Offset: 0x00C30C6C
 		private void OnClickIllustrate()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueIllustratedView, null, null);
 		}
 
-		// Token: 0x06036757 RID: 223063 RVA: 0x00CE50B0 File Offset: 0x00CE32B0
+		// Token: 0x0602B653 RID: 177747 RVA: 0x00C32A80 File Offset: 0x00C30C80
 		private void OnClickTask()
 		{
 			long cacheTaskOpen = ActivityPermanentRogueModel.Instance.GetCacheTaskOpen();
@@ -210,7 +209,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			UiManager.Instance.OpenView(EUiViewName.RogueTaskView, null, null);
 		}
 
-		// Token: 0x06036758 RID: 223064 RVA: 0x00CE5104 File Offset: 0x00CE3304
+		// Token: 0x0602B654 RID: 177748 RVA: 0x00C32AD4 File Offset: 0x00C30CD4
 		private void OnClickShop()
 		{
 			if (ActivityPermanentRogueModel.Instance.CheckShopRedDot(this.SeasonId))
@@ -238,19 +237,19 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			});
 		}
 
-		// Token: 0x06036759 RID: 223065 RVA: 0x00CE5186 File Offset: 0x00CE3386
+		// Token: 0x0602B655 RID: 177749 RVA: 0x00C32B56 File Offset: 0x00C30D56
 		private void OnClickSkillTree()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueResSkillView, this.SeasonId, null);
 		}
 
-		// Token: 0x0603675A RID: 223066 RVA: 0x00CE51A3 File Offset: 0x00CE33A3
+		// Token: 0x0602B656 RID: 177750 RVA: 0x00C32B73 File Offset: 0x00C30D73
 		private void OnClickAchievement()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueResEndingView, this.SeasonId, null);
 		}
 
-		// Token: 0x0603675B RID: 223067 RVA: 0x00CE51C0 File Offset: 0x00CE33C0
+		// Token: 0x0602B657 RID: 177751 RVA: 0x00C32B90 File Offset: 0x00C30D90
 		private void OnClickCancel()
 		{
 			if (this.CancelDungeonClicked)
@@ -263,7 +262,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603675C RID: 223068 RVA: 0x00CE520C File Offset: 0x00CE340C
+		// Token: 0x0602B658 RID: 177752 RVA: 0x00C32BDC File Offset: 0x00C30DDC
 		private void ClickedCancelConfirmFunc()
 		{
 			this.CancelDungeonClicked = true;
@@ -279,7 +278,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			});
 		}
 
-		// Token: 0x0603675D RID: 223069 RVA: 0x00CE5234 File Offset: 0x00CE3434
+		// Token: 0x0602B659 RID: 177753 RVA: 0x00C32C04 File Offset: 0x00C30E04
 		private void OnClickEntry()
 		{
 			if (this.CancelDungeonClicked)
@@ -306,7 +305,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			RogueResTheme? config = ConfigRogueResThemeById.GetConfig(this.SeasonId, true);
 			RogueDungeonParam rogueDungeonParam = new RogueDungeonParam();
 			rogueDungeonParam.SeasonId = this.SeasonId;
-			rogueDungeonParam.DungeonList = config.Value.InstsIter().ToArray<int>();
+			rogueDungeonParam.DungeonList = NoLinq.ToArray<int>(config.Value.InstsIter());
 			int? cacheDungeonNewest = ActivityPermanentRogueModel.Instance.GetCacheDungeonNewest(this.SeasonId);
 			int latestDungeon = ActivityPermanentRogueModel.Instance.GetLatestDungeon(this.SeasonId);
 			num = cacheDungeonNewest;
@@ -320,7 +319,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			UiManager.Instance.OpenView(EUiViewName.RogueDungeonEntryView, rogueDungeonParam, null);
 		}
 
-		// Token: 0x0603675E RID: 223070 RVA: 0x00CE53A4 File Offset: 0x00CE35A4
+		// Token: 0x0602B65A RID: 177754 RVA: 0x00C32D74 File Offset: 0x00C30F74
 		private void OnClickTrial()
 		{
 			UUIItem item = base.GetItem(15);
@@ -337,7 +336,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			UiManager.Instance.OpenView(EUiViewName.RogueResTrialView, this.SeasonId, null);
 		}
 
-		// Token: 0x0603675F RID: 223071 RVA: 0x00CE5414 File Offset: 0x00CE3614
+		// Token: 0x0602B65B RID: 177755 RVA: 0x00C32DE4 File Offset: 0x00C30FE4
 		private void RefreshButton()
 		{
 			ActivityPermanentRogueModel instance = ActivityPermanentRogueModel.Instance;
@@ -403,7 +402,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			endingBtnComp.SetNum(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06036760 RID: 223072 RVA: 0x00CE559C File Offset: 0x00CE379C
+		// Token: 0x0602B65C RID: 177756 RVA: 0x00C32F6C File Offset: 0x00C3116C
 		private void BindRedDot()
 		{
 			RogueButtonItemA illustratedBtnComp = this.IllustratedBtnComp;
@@ -434,7 +433,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			endingBtnComp.BindRedDot(ERedDotName.RogueResEnding, new int?(this.SeasonId));
 		}
 
-		// Token: 0x06036761 RID: 223073 RVA: 0x00CE564C File Offset: 0x00CE384C
+		// Token: 0x0602B65D RID: 177757 RVA: 0x00C3301C File Offset: 0x00C3121C
 		private void UnbindRedDot()
 		{
 			RogueButtonItemA illustratedBtnComp = this.IllustratedBtnComp;
@@ -465,37 +464,37 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			skillTreeBtnComp.UnBindRedDot();
 		}
 
-		// Token: 0x06036762 RID: 223074 RVA: 0x00CE56AD File Offset: 0x00CE38AD
+		// Token: 0x0602B65E RID: 177758 RVA: 0x00C3307D File Offset: 0x00C3127D
 		private void OnConfirmDungeonEntry()
 		{
 			(ActivityManager.GetActivityController(ActivityType.RogueRes) as ActivityPermanentRogueController).RequestEnterDungeon(this.CurrentDungeon.Value);
 		}
 
-		// Token: 0x0401CCEC RID: 117996
+		// Token: 0x04017722 RID: 96034
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401CCED RID: 117997
+		// Token: 0x04017723 RID: 96035
 		private int SeasonId;
 
-		// Token: 0x0401CCEE RID: 117998
+		// Token: 0x04017724 RID: 96036
 		private RogueButtonItemA IllustratedBtnComp;
 
-		// Token: 0x0401CCEF RID: 117999
+		// Token: 0x04017725 RID: 96037
 		private RogueButtonItemA TaskBtnComp;
 
-		// Token: 0x0401CCF0 RID: 118000
+		// Token: 0x04017726 RID: 96038
 		private RogueButtonItemA ShopBtnComp;
 
-		// Token: 0x0401CCF1 RID: 118001
+		// Token: 0x04017727 RID: 96039
 		private RogueButtonItemA SkillTreeBtnComp;
 
-		// Token: 0x0401CCF2 RID: 118002
+		// Token: 0x04017728 RID: 96040
 		private RogueButtonItemA EndingBtnComp;
 
-		// Token: 0x0401CCF3 RID: 118003
+		// Token: 0x04017729 RID: 96041
 		private int? CurrentDungeon;
 
-		// Token: 0x0401CCF4 RID: 118004
+		// Token: 0x0401772A RID: 96042
 		private bool CancelDungeonClicked;
 	}
 }

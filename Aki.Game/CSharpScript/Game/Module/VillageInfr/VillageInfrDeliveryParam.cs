@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004896 RID: 18582
+	// Token: 0x0200380D RID: 14349
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VillageInfrDeliveryParam : IVillageInfrDeliveryParam
 	{
-		// Token: 0x17007941 RID: 31041
-		// (get) Token: 0x06030995 RID: 199061 RVA: 0x00B49075 File Offset: 0x00B47275
-		// (set) Token: 0x06030996 RID: 199062 RVA: 0x00B4907D File Offset: 0x00B4727D
+		// Token: 0x17004CA9 RID: 19625
+		// (get) Token: 0x060254C1 RID: 152769 RVA: 0x00A83E7D File Offset: 0x00A8207D
+		// (set) Token: 0x060254C2 RID: 152770 RVA: 0x00A83E85 File Offset: 0x00A82085
 		public EVillageInfrSelectType SelectType { get; set; }
 
-		// Token: 0x17007942 RID: 31042
-		// (get) Token: 0x06030997 RID: 199063 RVA: 0x00B49086 File Offset: 0x00B47286
-		// (set) Token: 0x06030998 RID: 199064 RVA: 0x00B4908E File Offset: 0x00B4728E
+		// Token: 0x17004CAA RID: 19626
+		// (get) Token: 0x060254C3 RID: 152771 RVA: 0x00A83E8E File Offset: 0x00A8208E
+		// (set) Token: 0x060254C4 RID: 152772 RVA: 0x00A83E96 File Offset: 0x00A82096
 		public int SelectId { get; set; }
 
-		// Token: 0x17007943 RID: 31043
-		// (get) Token: 0x06030999 RID: 199065 RVA: 0x00B49097 File Offset: 0x00B47297
-		// (set) Token: 0x0603099A RID: 199066 RVA: 0x00B4909F File Offset: 0x00B4729F
+		// Token: 0x17004CAB RID: 19627
+		// (get) Token: 0x060254C5 RID: 152773 RVA: 0x00A83E9F File Offset: 0x00A8209F
+		// (set) Token: 0x060254C6 RID: 152774 RVA: 0x00A83EA7 File Offset: 0x00A820A7
 		public string UiCameraName { get; set; }
 	}
 }

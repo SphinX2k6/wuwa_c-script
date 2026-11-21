@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200460F RID: 17935
+	// Token: 0x02004A77 RID: 19063
 	public class TLevelPlayRewardUnion
 	{
-		// Token: 0x17007F69 RID: 32617
-		// (get) Token: 0x0601B2B5 RID: 111285 RVA: 0x003DED38 File Offset: 0x003DCF38
-		// (set) Token: 0x0601B2B6 RID: 111286 RVA: 0x003DED40 File Offset: 0x003DCF40
+		// Token: 0x170085AA RID: 34218
+		// (get) Token: 0x0601CA8A RID: 117386 RVA: 0x0040AFD4 File Offset: 0x004091D4
+		// (set) Token: 0x0601CA8B RID: 117387 RVA: 0x0040AFDC File Offset: 0x004091DC
 		public TLevelPlayReward Type { get; set; }
 
-		// Token: 0x17007F6A RID: 32618
-		// (get) Token: 0x0601B2B7 RID: 111287 RVA: 0x003DED49 File Offset: 0x003DCF49
-		// (set) Token: 0x0601B2B8 RID: 111288 RVA: 0x003DED51 File Offset: 0x003DCF51
+		// Token: 0x170085AB RID: 34219
+		// (get) Token: 0x0601CA8C RID: 117388 RVA: 0x0040AFE5 File Offset: 0x004091E5
+		// (set) Token: 0x0601CA8D RID: 117389 RVA: 0x0040AFED File Offset: 0x004091ED
 		public object Value { get; set; }
 
-		// Token: 0x0601B2B9 RID: 111289 RVA: 0x003DED5A File Offset: 0x003DCF5A
+		// Token: 0x0601CA8E RID: 117390 RVA: 0x0040AFF6 File Offset: 0x004091F6
 		public TLevelPlayRewardUnion()
 		{
 			this.Type = TLevelPlayReward.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601B2BA RID: 111290 RVA: 0x003DED70 File Offset: 0x003DCF70
+		// Token: 0x0601CA8F RID: 117391 RVA: 0x0040B00C File Offset: 0x0040920C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601B2BB RID: 111291 RVA: 0x003DED82 File Offset: 0x003DCF82
+		// Token: 0x0601CA90 RID: 117392 RVA: 0x0040B01E File Offset: 0x0040921E
 		public IAutomaticRewardParamT AsIAutomaticRewardParam()
 		{
 			return this.As<IAutomaticRewardParamT>();
 		}
 
-		// Token: 0x0601B2BC RID: 111292 RVA: 0x003DED8A File Offset: 0x003DCF8A
+		// Token: 0x0601CA91 RID: 117393 RVA: 0x0040B026 File Offset: 0x00409226
 		public static TLevelPlayRewardUnion FromIAutomaticRewardParam(IAutomaticRewardParamT _iautomaticrewardparam)
 		{
 			return new TLevelPlayRewardUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2BD RID: 111293 RVA: 0x003DED9F File Offset: 0x003DCF9F
+		// Token: 0x0601CA92 RID: 117394 RVA: 0x0040B03B File Offset: 0x0040923B
 		public IInteractRewardParamT AsIInteractRewardParam()
 		{
 			return this.As<IInteractRewardParamT>();
 		}
 
-		// Token: 0x0601B2BE RID: 111294 RVA: 0x003DEDA7 File Offset: 0x003DCFA7
+		// Token: 0x0601CA93 RID: 117395 RVA: 0x0040B043 File Offset: 0x00409243
 		public static TLevelPlayRewardUnion FromIInteractRewardParam(IInteractRewardParamT _iinteractrewardparam)
 		{
 			return new TLevelPlayRewardUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2BF RID: 111295 RVA: 0x003DEDBC File Offset: 0x003DCFBC
+		// Token: 0x0601CA94 RID: 117396 RVA: 0x0040B058 File Offset: 0x00409258
 		public INoneRewardParamT AsINoneRewardParam()
 		{
 			return this.As<INoneRewardParamT>();
 		}
 
-		// Token: 0x0601B2C0 RID: 111296 RVA: 0x003DEDC4 File Offset: 0x003DCFC4
+		// Token: 0x0601CA95 RID: 117397 RVA: 0x0040B060 File Offset: 0x00409260
 		public static TLevelPlayRewardUnion FromINoneRewardParam(INoneRewardParamT _inonerewardparam)
 		{
 			return new TLevelPlayRewardUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2C1 RID: 111297 RVA: 0x003DEDD9 File Offset: 0x003DCFD9
+		// Token: 0x0601CA96 RID: 117398 RVA: 0x0040B075 File Offset: 0x00409275
 		public IVariableRewardParamT AsIVariableRewardParam()
 		{
 			return this.As<IVariableRewardParamT>();
 		}
 
-		// Token: 0x0601B2C2 RID: 111298 RVA: 0x003DEDE1 File Offset: 0x003DCFE1
+		// Token: 0x0601CA97 RID: 117399 RVA: 0x0040B07D File Offset: 0x0040927D
 		public static TLevelPlayRewardUnion FromIVariableRewardParam(IVariableRewardParamT _ivariablerewardparam)
 		{
 			return new TLevelPlayRewardUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2C3 RID: 111299 RVA: 0x003DEDF8 File Offset: 0x003DCFF8
+		// Token: 0x0601CA98 RID: 117400 RVA: 0x0040B094 File Offset: 0x00409294
 		public static int Pack(FlatBufferBuilder builder, TLevelPlayRewardUnion _o)
 		{
 			switch (_o.Type)

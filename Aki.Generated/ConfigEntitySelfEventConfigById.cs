@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200027B RID: 635
+	// Token: 0x0200028F RID: 655
 	public class ConfigEntitySelfEventConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000EE7 RID: 3815 RVA: 0x000ADB05 File Offset: 0x000ABD05
+		// Token: 0x06000F5F RID: 3935 RVA: 0x000B3DC9 File Offset: 0x000B1FC9
 		static ConfigEntitySelfEventConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntitySelfEventConfigById.CreateStaticDefaultValue), new Action(ConfigEntitySelfEventConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000EE8 RID: 3816 RVA: 0x000ADB24 File Offset: 0x000ABD24
+		// Token: 0x06000F60 RID: 3936 RVA: 0x000B3DE8 File Offset: 0x000B1FE8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntitySelfEventConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000EE9 RID: 3817 RVA: 0x000ADBA3 File Offset: 0x000ABDA3
+		// Token: 0x06000F61 RID: 3937 RVA: 0x000B3E67 File Offset: 0x000B2067
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntitySelfEventConfigById.LogPair = null;
 			ConfigEntitySelfEventConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06000EEA RID: 3818 RVA: 0x000ADBB1 File Offset: 0x000ABDB1
+		// Token: 0x06000F62 RID: 3938 RVA: 0x000B3E75 File Offset: 0x000B2075
 		public static void Init()
 		{
 			ConfigEntitySelfEventConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigEntitySelfEventConfigById.HandleId, "db_entityselfeventconfig.db", "select BinData from `EntitySelfEventConfig` where Id=?");
 		}
 
-		// Token: 0x06000EEB RID: 3819 RVA: 0x000ADBCC File Offset: 0x000ABDCC
+		// Token: 0x06000F63 RID: 3939 RVA: 0x000B3E90 File Offset: 0x000B2090
 		public static EntitySelfEventConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEntitySelfEventConfigById.HandleId, ConfigEntitySelfEventConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new EntitySelfEventConfig?(rootAsEntitySelfEventConfig);
 		}
 
-		// Token: 0x04001141 RID: 4417
+		// Token: 0x040011CD RID: 4557
 		private const string DB = "db_entityselfeventconfig.db";
 
-		// Token: 0x04001142 RID: 4418
+		// Token: 0x040011CE RID: 4558
 		private const string FILE = "k.可视化编辑/c.Csv/s.实体自身事件/*.csv*";
 
-		// Token: 0x04001143 RID: 4419
+		// Token: 0x040011CF RID: 4559
 		private const string TABLE = "EntitySelfEventConfig";
 
-		// Token: 0x04001144 RID: 4420
+		// Token: 0x040011D0 RID: 4560
 		private const string COMMAND = "select BinData from `EntitySelfEventConfig` where Id=?";
 
-		// Token: 0x04001145 RID: 4421
+		// Token: 0x040011D1 RID: 4561
 		private const string KEY_PREFIX = "EntitySelfEventConfigById";
 
-		// Token: 0x04001146 RID: 4422
+		// Token: 0x040011D2 RID: 4562
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001147 RID: 4423
+		// Token: 0x040011D3 RID: 4563
 		private static int HandleId;
 	}
 }

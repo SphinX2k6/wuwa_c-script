@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001D76 RID: 7542
+// Token: 0x02001238 RID: 4664
 [RequiredMember]
 public class BtPendingUpdateSetTrack : BehaviorTreePendingProcess
 {
-	// Token: 0x0600E547 RID: 58695 RVA: 0x00360201 File Offset: 0x0035E401
+	// Token: 0x0600B965 RID: 47461 RVA: 0x0036BE55 File Offset: 0x0036A055
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public BtPendingUpdateSetTrack()
 	{
 	}
 
-	// Token: 0x040069C5 RID: 27077
+	// Token: 0x04006AA5 RID: 27301
 	[RequiredMember]
 	public bool Value;
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AA2 RID: 23202
+	// Token: 0x020060AC RID: 24748
 	public struct ITimeScheduleGenerateDynamicEntity : IFlatbufferObject
 	{
-		// Token: 0x1700AEC3 RID: 44739
-		// (get) Token: 0x06027880 RID: 161920 RVA: 0x00570355 File Offset: 0x0056E555
+		// Token: 0x1700B801 RID: 47105
+		// (get) Token: 0x06029E02 RID: 171522 RVA: 0x005B7744 File Offset: 0x005B5944
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,40 +17,40 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027881 RID: 161921 RVA: 0x00570362 File Offset: 0x0056E562
+		// Token: 0x06029E03 RID: 171523 RVA: 0x005B7751 File Offset: 0x005B5951
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027882 RID: 161922 RVA: 0x0057036C File Offset: 0x0056E56C
+		// Token: 0x06029E04 RID: 171524 RVA: 0x005B7758 File Offset: 0x005B5958
 		public static ITimeScheduleGenerateDynamicEntity GetRootAsITimeScheduleGenerateDynamicEntity(ByteBuffer _bb)
 		{
 			return ITimeScheduleGenerateDynamicEntity.GetRootAsITimeScheduleGenerateDynamicEntity(_bb, default(ITimeScheduleGenerateDynamicEntity));
 		}
 
-		// Token: 0x06027883 RID: 161923 RVA: 0x00570388 File Offset: 0x0056E588
+		// Token: 0x06029E05 RID: 171525 RVA: 0x005B7774 File Offset: 0x005B5974
 		public static ITimeScheduleGenerateDynamicEntity GetRootAsITimeScheduleGenerateDynamicEntity(ByteBuffer _bb, ITimeScheduleGenerateDynamicEntity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027884 RID: 161924 RVA: 0x005703A5 File Offset: 0x0056E5A5
+		// Token: 0x06029E06 RID: 171526 RVA: 0x005B7791 File Offset: 0x005B5991
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027885 RID: 161925 RVA: 0x005703B4 File Offset: 0x0056E5B4
+		// Token: 0x06029E07 RID: 171527 RVA: 0x005B77A0 File Offset: 0x005B59A0
 		public ITimeScheduleGenerateDynamicEntity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AEC4 RID: 44740
-		// (get) Token: 0x06027886 RID: 161926 RVA: 0x005703C4 File Offset: 0x0056E5C4
-		public ITimeScheduleGenerateParams? GenerateParams
+		// Token: 0x1700B802 RID: 47106
+		// (get) Token: 0x06029E08 RID: 171528 RVA: 0x005B77B0 File Offset: 0x005B59B0
+		public ITimeScheduleFixedIntervalRefresh? GenerateParams
 		{
 			get
 			{
@@ -59,12 +59,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				{
 					return null;
 				}
-				return new ITimeScheduleGenerateParams?(default(ITimeScheduleGenerateParams).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return new ITimeScheduleFixedIntervalRefresh?(default(ITimeScheduleFixedIntervalRefresh).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x1700AEC5 RID: 44741
-		// (get) Token: 0x06027887 RID: 161927 RVA: 0x00570424 File Offset: 0x0056E624
+		// Token: 0x1700B803 RID: 47107
+		// (get) Token: 0x06029E09 RID: 171529 RVA: 0x005B7810 File Offset: 0x005B5A10
 		public ITimeScheduleEntityTemplateNpcSource? NpcSource
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AEC6 RID: 44742
-		// (get) Token: 0x06027888 RID: 161928 RVA: 0x00570484 File Offset: 0x0056E684
+		// Token: 0x1700B804 RID: 47108
+		// (get) Token: 0x06029E0A RID: 171530 RVA: 0x005B7870 File Offset: 0x005B5A70
 		public IConditionGroup? Conditions
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027889 RID: 161929 RVA: 0x005704E1 File Offset: 0x0056E6E1
-		public static Offset<ITimeScheduleGenerateDynamicEntity> CreateITimeScheduleGenerateDynamicEntity(FlatBufferBuilder builder, Offset<ITimeScheduleGenerateParams> GenerateParamsOffset = default(Offset<ITimeScheduleGenerateParams>), Offset<ITimeScheduleEntityTemplateNpcSource> NpcSourceOffset = default(Offset<ITimeScheduleEntityTemplateNpcSource>), Offset<IConditionGroup> ConditionsOffset = default(Offset<IConditionGroup>))
+		// Token: 0x06029E0B RID: 171531 RVA: 0x005B78CD File Offset: 0x005B5ACD
+		public static Offset<ITimeScheduleGenerateDynamicEntity> CreateITimeScheduleGenerateDynamicEntity(FlatBufferBuilder builder, Offset<ITimeScheduleFixedIntervalRefresh> GenerateParamsOffset = default(Offset<ITimeScheduleFixedIntervalRefresh>), Offset<ITimeScheduleEntityTemplateNpcSource> NpcSourceOffset = default(Offset<ITimeScheduleEntityTemplateNpcSource>), Offset<IConditionGroup> ConditionsOffset = default(Offset<IConditionGroup>))
 		{
 			builder.StartTable(3);
 			ITimeScheduleGenerateDynamicEntity.AddConditions(builder, ConditionsOffset);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimeScheduleGenerateDynamicEntity.EndITimeScheduleGenerateDynamicEntity(builder);
 		}
 
-		// Token: 0x0602788A RID: 161930 RVA: 0x00570505 File Offset: 0x0056E705
+		// Token: 0x06029E0C RID: 171532 RVA: 0x005B78F1 File Offset: 0x005B5AF1
 		public static void StartITimeScheduleGenerateDynamicEntity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602788B RID: 161931 RVA: 0x0057050E File Offset: 0x0056E70E
-		public static void AddGenerateParams(FlatBufferBuilder builder, Offset<ITimeScheduleGenerateParams> generateParamsOffset)
+		// Token: 0x06029E0D RID: 171533 RVA: 0x005B78FA File Offset: 0x005B5AFA
+		public static void AddGenerateParams(FlatBufferBuilder builder, Offset<ITimeScheduleFixedIntervalRefresh> generateParamsOffset)
 		{
 			builder.AddOffset(0, generateParamsOffset.Value, 0);
 		}
 
-		// Token: 0x0602788C RID: 161932 RVA: 0x0057051E File Offset: 0x0056E71E
+		// Token: 0x06029E0E RID: 171534 RVA: 0x005B790A File Offset: 0x005B5B0A
 		public static void AddNpcSource(FlatBufferBuilder builder, Offset<ITimeScheduleEntityTemplateNpcSource> npcSourceOffset)
 		{
 			builder.AddOffset(1, npcSourceOffset.Value, 0);
 		}
 
-		// Token: 0x0602788D RID: 161933 RVA: 0x0057052E File Offset: 0x0056E72E
+		// Token: 0x06029E0F RID: 171535 RVA: 0x005B791A File Offset: 0x005B5B1A
 		public static void AddConditions(FlatBufferBuilder builder, Offset<IConditionGroup> conditionsOffset)
 		{
 			builder.AddOffset(2, conditionsOffset.Value, 0);
 		}
 
-		// Token: 0x0602788E RID: 161934 RVA: 0x0057053E File Offset: 0x0056E73E
+		// Token: 0x06029E10 RID: 171536 RVA: 0x005B792A File Offset: 0x005B5B2A
 		public static Offset<ITimeScheduleGenerateDynamicEntity> EndITimeScheduleGenerateDynamicEntity(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimeScheduleGenerateDynamicEntity>(builder.EndTable());
 		}
 
-		// Token: 0x0602788F RID: 161935 RVA: 0x0057054C File Offset: 0x0056E74C
+		// Token: 0x06029E11 RID: 171537 RVA: 0x005B7938 File Offset: 0x005B5B38
 		public ITimeScheduleGenerateDynamicEntityT UnPack()
 		{
 			ITimeScheduleGenerateDynamicEntityT timeScheduleGenerateDynamicEntityT = new ITimeScheduleGenerateDynamicEntityT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return timeScheduleGenerateDynamicEntityT;
 		}
 
-		// Token: 0x06027890 RID: 161936 RVA: 0x00570568 File Offset: 0x0056E768
+		// Token: 0x06029E12 RID: 171538 RVA: 0x005B7954 File Offset: 0x005B5B54
 		public void UnPackTo(ITimeScheduleGenerateDynamicEntityT _o)
 		{
 			_o.GenerateParams = ((this.GenerateParams != null) ? this.GenerateParams.Value.UnPack() : null);
@@ -149,20 +149,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Conditions = ((this.Conditions != null) ? this.Conditions.Value.UnPack() : null);
 		}
 
-		// Token: 0x06027891 RID: 161937 RVA: 0x00570608 File Offset: 0x0056E808
+		// Token: 0x06029E13 RID: 171539 RVA: 0x005B79F4 File Offset: 0x005B5BF4
 		public static Offset<ITimeScheduleGenerateDynamicEntity> Pack(FlatBufferBuilder builder, ITimeScheduleGenerateDynamicEntityT _o)
 		{
 			if (_o == null)
 			{
 				return default(Offset<ITimeScheduleGenerateDynamicEntity>);
 			}
-			Offset<ITimeScheduleGenerateParams> generateParamsOffset = (_o.GenerateParams == null) ? default(Offset<ITimeScheduleGenerateParams>) : ITimeScheduleGenerateParams.Pack(builder, _o.GenerateParams);
+			Offset<ITimeScheduleFixedIntervalRefresh> generateParamsOffset = (_o.GenerateParams == null) ? default(Offset<ITimeScheduleFixedIntervalRefresh>) : ITimeScheduleFixedIntervalRefresh.Pack(builder, _o.GenerateParams);
 			Offset<ITimeScheduleEntityTemplateNpcSource> npcSourceOffset = (_o.NpcSource == null) ? default(Offset<ITimeScheduleEntityTemplateNpcSource>) : ITimeScheduleEntityTemplateNpcSource.Pack(builder, _o.NpcSource);
 			Offset<IConditionGroup> conditionsOffset = (_o.Conditions == null) ? default(Offset<IConditionGroup>) : IConditionGroup.Pack(builder, _o.Conditions);
 			return ITimeScheduleGenerateDynamicEntity.CreateITimeScheduleGenerateDynamicEntity(builder, generateParamsOffset, npcSourceOffset, conditionsOffset);
 		}
 
-		// Token: 0x0400F162 RID: 61794
+		// Token: 0x0400FE57 RID: 65111
 		private Table __p;
 	}
 }

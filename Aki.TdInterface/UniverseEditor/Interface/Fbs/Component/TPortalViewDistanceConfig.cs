@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C8A RID: 23690
+	// Token: 0x020062BB RID: 25275
 	public enum TPortalViewDistanceConfig : byte
 	{
-		// Token: 0x0400F503 RID: 62723
+		// Token: 0x04010249 RID: 66121
 		NONE,
-		// Token: 0x0400F504 RID: 62724
+		// Token: 0x0401024A RID: 66122
 		ICustomViewDistance,
-		// Token: 0x0400F505 RID: 62725
+		// Token: 0x0401024B RID: 66123
 		IHighViewDistance,
-		// Token: 0x0400F506 RID: 62726
+		// Token: 0x0401024C RID: 66124
 		ILowViewDistance,
-		// Token: 0x0400F507 RID: 62727
+		// Token: 0x0401024D RID: 66125
 		IMidViewDistance
 	}
 }

@@ -6,12 +6,12 @@ using CSharpScript.Game.Common;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FEB RID: 28651
+	// Token: 0x0200616C RID: 24940
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputKeyUtils
 	{
-		// Token: 0x06045B1F RID: 285471 RVA: 0x0114FDC4 File Offset: 0x0114DFC4
+		// Token: 0x0603BCD0 RID: 244944 RVA: 0x010F9BB8 File Offset: 0x010F7DB8
 		public static string GetGamepadKeyIconPath(string keyName)
 		{
 			GamepadKey? gamepadKeyConfig = InputSettingsConfig.Instance.GetGamepadKeyConfig(keyName);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.InputSetting
 			return valueOrDefault.KeyIconPath;
 		}
 
-		// Token: 0x06045B20 RID: 285472 RVA: 0x0114FE3C File Offset: 0x0114E03C
+		// Token: 0x0603BCD1 RID: 244945 RVA: 0x010F9C30 File Offset: 0x010F7E30
 		public static string GetGamepadKeyIconPathByType(string keyName, EInputControllerType type)
 		{
 			GamepadKey? gamepadKeyConfig = InputSettingsConfig.Instance.GetGamepadKeyConfig(keyName);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.InputSetting
 			return "";
 		}
 
-		// Token: 0x06045B21 RID: 285473 RVA: 0x0114FEA8 File Offset: 0x0114E0A8
+		// Token: 0x0603BCD2 RID: 244946 RVA: 0x010F9C9C File Offset: 0x010F7E9C
 		[return: Nullable(2)]
 		public static string GetPcKeyIconPathByCurrentPlatform(string keyName)
 		{
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.InputSetting
 			return LanguageKeyTransUtils.GetKeyTrans(InputSettingsManager.Instance.CurrentDeviceLang).GetPcKeyIconPath(valueOrDefault);
 		}
 
-		// Token: 0x06045B22 RID: 285474 RVA: 0x0114FF22 File Offset: 0x0114E122
+		// Token: 0x0603BCD3 RID: 244947 RVA: 0x010F9D16 File Offset: 0x010F7F16
 		public static EInputControllerType GetLastGamepadEnum()
 		{
 			if (Info.Instance.IsPs5Platform())
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.InputSetting
 			return LocalStorage.GetGlobal<EInputControllerType>(ELocalStorageGlobalKey.LastGamepadEnum, EInputControllerType.XboxOne);
 		}
 
-		// Token: 0x06045B23 RID: 285475 RVA: 0x0114FF40 File Offset: 0x0114E140
+		// Token: 0x0603BCD4 RID: 244948 RVA: 0x010F9D34 File Offset: 0x010F7F34
 		public static string ConvertKeyToActionOrAxis(string keyName, bool isActionOrAxis)
 		{
 			if (isActionOrAxis && keyName == EKey.Gamepad_LeftTriggerAxis)

@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001873 RID: 6259
+	// Token: 0x0200039F RID: 927
 	[UnrealObjectPath("/Script/KuroGamePartition.GamePartitionObject")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 88)]
 	public class FGamePartitionObject : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060170CC RID: 94412 RVA: 0x002196BA File Offset: 0x002178BA
+		// Token: 0x06005BE2 RID: 23522 RVA: 0x00081719 File Offset: 0x0007F919
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FGamePartitionObject._ScriptStructPtr != 0) ? FGamePartitionObject._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGamePartition.GamePartitionObject", ref FGamePartitionObject._ScriptStructPtr);
 		}
 
-		// Token: 0x17005CAE RID: 23726
-		// (get) Token: 0x060170CD RID: 94413 RVA: 0x002196DE File Offset: 0x002178DE
-		// (set) Token: 0x060170CE RID: 94414 RVA: 0x002196F2 File Offset: 0x002178F2
+		// Token: 0x1700120F RID: 4623
+		// (get) Token: 0x06005BE3 RID: 23523 RVA: 0x0008173D File Offset: 0x0007F93D
+		// (set) Token: 0x06005BE4 RID: 23524 RVA: 0x00081751 File Offset: 0x0007F951
 		[Nullable(new byte[]
 		{
 			0,
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CAF RID: 23727
-		// (get) Token: 0x060170CF RID: 94415 RVA: 0x00219707 File Offset: 0x00217907
-		// (set) Token: 0x060170D0 RID: 94416 RVA: 0x0021971B File Offset: 0x0021791B
+		// Token: 0x17001210 RID: 4624
+		// (get) Token: 0x06005BE5 RID: 23525 RVA: 0x00081766 File Offset: 0x0007F966
+		// (set) Token: 0x06005BE6 RID: 23526 RVA: 0x0008177A File Offset: 0x0007F97A
 		public unsafe FVectorDouble Location
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CB0 RID: 23728
-		// (get) Token: 0x060170D1 RID: 94417 RVA: 0x00219730 File Offset: 0x00217930
-		// (set) Token: 0x060170D2 RID: 94418 RVA: 0x00219744 File Offset: 0x00217944
+		// Token: 0x17001211 RID: 4625
+		// (get) Token: 0x06005BE7 RID: 23527 RVA: 0x0008178F File Offset: 0x0007F98F
+		// (set) Token: 0x06005BE8 RID: 23528 RVA: 0x000817A3 File Offset: 0x0007F9A3
 		public unsafe FBox Bounds
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CB1 RID: 23729
-		// (get) Token: 0x060170D3 RID: 94419 RVA: 0x00219759 File Offset: 0x00217959
-		// (set) Token: 0x060170D4 RID: 94420 RVA: 0x00219769 File Offset: 0x00217969
+		// Token: 0x17001212 RID: 4626
+		// (get) Token: 0x06005BE9 RID: 23529 RVA: 0x000817B8 File Offset: 0x0007F9B8
+		// (set) Token: 0x06005BEA RID: 23530 RVA: 0x000817C8 File Offset: 0x0007F9C8
 		public unsafe int ObjectID
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CB2 RID: 23730
-		// (get) Token: 0x060170D5 RID: 94421 RVA: 0x0021977A File Offset: 0x0021797A
-		// (set) Token: 0x060170D6 RID: 94422 RVA: 0x0021978A File Offset: 0x0021798A
+		// Token: 0x17001213 RID: 4627
+		// (get) Token: 0x06005BEB RID: 23531 RVA: 0x000817D9 File Offset: 0x0007F9D9
+		// (set) Token: 0x06005BEC RID: 23532 RVA: 0x000817E9 File Offset: 0x0007F9E9
 		public unsafe int Type
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CB3 RID: 23731
-		// (get) Token: 0x060170D7 RID: 94423 RVA: 0x0021979B File Offset: 0x0021799B
-		// (set) Token: 0x060170D8 RID: 94424 RVA: 0x002197AB File Offset: 0x002179AB
+		// Token: 0x17001214 RID: 4628
+		// (get) Token: 0x06005BED RID: 23533 RVA: 0x000817FA File Offset: 0x0007F9FA
+		// (set) Token: 0x06005BEE RID: 23534 RVA: 0x0008180A File Offset: 0x0007FA0A
 		public unsafe int SubType
 		{
 			get
@@ -121,80 +121,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060170D9 RID: 94425 RVA: 0x002197BC File Offset: 0x002179BC
+		// Token: 0x06005BEF RID: 23535 RVA: 0x0008181B File Offset: 0x0007FA1B
 		public FGamePartitionObject()
 		{
 		}
 
-		// Token: 0x060170DA RID: 94426 RVA: 0x002197C4 File Offset: 0x002179C4
-		public FGamePartitionObject([Nullable(new byte[]
-		{
-			0,
-			1
-		})] TWeakObjectPtr<AActor> Actor, FVectorDouble Location, FBox Bounds, int ObjectID, int Type, int SubType)
-		{
-			this.Actor = Actor;
-			this.Location = Location;
-			this.Bounds = Bounds;
-			this.ObjectID = ObjectID;
-			this.Type = Type;
-			this.SubType = SubType;
-		}
-
-		// Token: 0x060170DB RID: 94427 RVA: 0x002197F9 File Offset: 0x002179F9
+		// Token: 0x06005BF0 RID: 23536 RVA: 0x00081823 File Offset: 0x0007FA23
 		protected override IntPtr GetUStructPtr()
 		{
 			return FGamePartitionObject.StaticStruct();
 		}
 
-		// Token: 0x060170DC RID: 94428 RVA: 0x00219805 File Offset: 0x00217A05
+		// Token: 0x06005BF1 RID: 23537 RVA: 0x0008182F File Offset: 0x0007FA2F
 		[NullableContext(2)]
 		public FGamePartitionObject(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060170DD RID: 94429 RVA: 0x0021980F File Offset: 0x00217A0F
+		// Token: 0x06005BF2 RID: 23538 RVA: 0x00081839 File Offset: 0x0007FA39
 		public FGamePartitionObject(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060170DE RID: 94430 RVA: 0x0021981A File Offset: 0x00217A1A
+		// Token: 0x06005BF3 RID: 23539 RVA: 0x00081844 File Offset: 0x0007FA44
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FGamePartitionObject(Pointer, false, true);
 		}
 
-		// Token: 0x060170DF RID: 94431 RVA: 0x00219824 File Offset: 0x00217A24
+		// Token: 0x06005BF4 RID: 23540 RVA: 0x0008184E File Offset: 0x0007FA4E
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FGamePartitionObject(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400C81F RID: 51231
+		// Token: 0x0400263C RID: 9788
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGamePartition.GamePartitionObject";
 
-		// Token: 0x0400C820 RID: 51232
+		// Token: 0x0400263D RID: 9789
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400C821 RID: 51233
+		// Token: 0x0400263E RID: 9790
 		internal static int __PropertyOffset_Actor;
 
-		// Token: 0x0400C822 RID: 51234
+		// Token: 0x0400263F RID: 9791
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400C823 RID: 51235
+		// Token: 0x04002640 RID: 9792
 		internal static int __PropertyOffset_Bounds;
 
-		// Token: 0x0400C824 RID: 51236
+		// Token: 0x04002641 RID: 9793
 		internal static int __PropertyOffset_ObjectID;
 
-		// Token: 0x0400C825 RID: 51237
+		// Token: 0x04002642 RID: 9794
 		internal static int __PropertyOffset_Type;
 
-		// Token: 0x0400C826 RID: 51238
+		// Token: 0x04002643 RID: 9795
 		internal static int __PropertyOffset_SubType;
 	}
 }

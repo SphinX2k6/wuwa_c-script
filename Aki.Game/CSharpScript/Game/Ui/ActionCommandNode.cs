@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004619 RID: 17945
+	// Token: 0x02003542 RID: 13634
 	internal class ActionCommandNode : IActionCommandNode
 	{
-		// Token: 0x170075C3 RID: 30147
-		// (get) Token: 0x0602E3D4 RID: 189396 RVA: 0x00AB15F4 File Offset: 0x00AAF7F4
-		// (set) Token: 0x0602E3D5 RID: 189397 RVA: 0x00AB15FC File Offset: 0x00AAF7FC
+		// Token: 0x1700487B RID: 18555
+		// (get) Token: 0x06022AC9 RID: 142025 RVA: 0x009DDCE8 File Offset: 0x009DBEE8
+		// (set) Token: 0x06022ACA RID: 142026 RVA: 0x009DDCF0 File Offset: 0x009DBEF0
 		public EActionCommandType ActionCommand { get; set; }
 
-		// Token: 0x170075C4 RID: 30148
-		// (get) Token: 0x0602E3D6 RID: 189398 RVA: 0x00AB1605 File Offset: 0x00AAF805
-		// (set) Token: 0x0602E3D7 RID: 189399 RVA: 0x00AB160D File Offset: 0x00AAF80D
+		// Token: 0x1700487C RID: 18556
+		// (get) Token: 0x06022ACB RID: 142027 RVA: 0x009DDCF9 File Offset: 0x009DBEF9
+		// (set) Token: 0x06022ACC RID: 142028 RVA: 0x009DDD01 File Offset: 0x009DBF01
 		public bool Processed { get; set; }
 	}
 }

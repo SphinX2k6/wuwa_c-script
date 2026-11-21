@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02000F0F RID: 3855
+// Token: 0x020003C4 RID: 964
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class AchievementController : ControllerBase
 {
-	// Token: 0x0600612A RID: 24874 RVA: 0x0012F206 File Offset: 0x0012D406
+	// Token: 0x060034C2 RID: 13506 RVA: 0x00137B2A File Offset: 0x00135D2A
 	protected override bool OnInit()
 	{
 		this.OnAddEvents();
@@ -22,7 +22,7 @@ public class AchievementController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600612B RID: 24875 RVA: 0x0012F215 File Offset: 0x0012D415
+	// Token: 0x060034C3 RID: 13507 RVA: 0x00137B39 File Offset: 0x00135D39
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
@@ -30,7 +30,7 @@ public class AchievementController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600612C RID: 24876 RVA: 0x0012F224 File Offset: 0x0012D424
+	// Token: 0x060034C4 RID: 13508 RVA: 0x00137B48 File Offset: 0x00135D48
 	protected void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnLoadingNetDataDone));
@@ -38,7 +38,7 @@ public class AchievementController : ControllerBase
 		EventSystem.Instance.Add<IReadOnlyList<int>, IReadOnlyList<int>, IReadOnlyList<int>, int, int>(EEventName.TsSyncAchievementFinish, new Action<IReadOnlyList<int>, IReadOnlyList<int>, IReadOnlyList<int>, int, int>(this.TsSyncAchievementFinish));
 	}
 
-	// Token: 0x0600612D RID: 24877 RVA: 0x0012F288 File Offset: 0x0012D488
+	// Token: 0x060034C5 RID: 13509 RVA: 0x00137BAC File Offset: 0x00135DAC
 	protected void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnLoadingNetDataDone));
@@ -46,7 +46,7 @@ public class AchievementController : ControllerBase
 		EventSystem.Instance.Remove(EEventName.TsSyncAchievementFinish, new Action<IReadOnlyList<int>, IReadOnlyList<int>, IReadOnlyList<int>, int, int>(this.TsSyncAchievementFinish));
 	}
 
-	// Token: 0x0600612E RID: 24878 RVA: 0x0012F2EC File Offset: 0x0012D4EC
+	// Token: 0x060034C6 RID: 13510 RVA: 0x00137C10 File Offset: 0x00135E10
 	protected void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.AchievementProgressNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAchievementProgressNotify));
@@ -55,7 +55,7 @@ public class AchievementController : ControllerBase
 		Net.Instance.Register(ENotifyMessageId.AchievementCountChangeNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAchievementCountChangeNotify));
 	}
 
-	// Token: 0x0600612F RID: 24879 RVA: 0x0012F36C File Offset: 0x0012D56C
+	// Token: 0x060034C7 RID: 13511 RVA: 0x00137C90 File Offset: 0x00135E90
 	protected void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.AchievementProgressNotify);
@@ -64,19 +64,19 @@ public class AchievementController : ControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.AchievementCountChangeNotify);
 	}
 
-	// Token: 0x06006130 RID: 24880 RVA: 0x0012F3B9 File Offset: 0x0012D5B9
+	// Token: 0x060034C8 RID: 13512 RVA: 0x00137CDD File Offset: 0x00135EDD
 	public void OpenAchievementMainView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.AchievementMainView, null, null);
 	}
 
-	// Token: 0x06006131 RID: 24881 RVA: 0x0012F3CC File Offset: 0x0012D5CC
+	// Token: 0x060034C9 RID: 13513 RVA: 0x00137CF0 File Offset: 0x00135EF0
 	public void ChangeAchievementPopViewShowState()
 	{
 		this.AchievementPopViewShowState = !this.AchievementPopViewShowState;
 	}
 
-	// Token: 0x06006132 RID: 24882 RVA: 0x0012F3E0 File Offset: 0x0012D5E0
+	// Token: 0x060034CA RID: 13514 RVA: 0x00137D04 File Offset: 0x00135F04
 	public void OpenAchievementDetailView(int categoryId, int? groupId, int achievementId = -1)
 	{
 		AchievementGroupData achievementGroupData = AchievementModel.Instance.GetAchievementGroupData(groupId);
@@ -89,13 +89,13 @@ public class AchievementController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.AchievementDetailView, null, null);
 	}
 
-	// Token: 0x06006133 RID: 24883 RVA: 0x0012F451 File Offset: 0x0012D651
+	// Token: 0x060034CB RID: 13515 RVA: 0x00137D75 File Offset: 0x00135F75
 	private void OnLoadingNetDataDone()
 	{
 		this.RequestAchievementBasicInfo();
 	}
 
-	// Token: 0x06006134 RID: 24884 RVA: 0x0012F45C File Offset: 0x0012D65C
+	// Token: 0x060034CC RID: 13516 RVA: 0x00137D80 File Offset: 0x00135F80
 	private UniTask RequestAchievementBasicInfo()
 	{
 		AchievementController.<RequestAchievementBasicInfo>d__11 <RequestAchievementBasicInfo>d__;
@@ -105,7 +105,7 @@ public class AchievementController : ControllerBase
 		return <RequestAchievementBasicInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006135 RID: 24885 RVA: 0x0012F498 File Offset: 0x0012D698
+	// Token: 0x060034CD RID: 13517 RVA: 0x00137DBC File Offset: 0x00135FBC
 	public UniTask RequestUpdateAchievementInfo()
 	{
 		AchievementController.<RequestUpdateAchievementInfo>d__12 <RequestUpdateAchievementInfo>d__;
@@ -115,7 +115,7 @@ public class AchievementController : ControllerBase
 		return <RequestUpdateAchievementInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006136 RID: 24886 RVA: 0x0012F4D4 File Offset: 0x0012D6D4
+	// Token: 0x060034CE RID: 13518 RVA: 0x00137DF8 File Offset: 0x00135FF8
 	public void RequestGetAchievementReward(bool isGroup, int id)
 	{
 		AchievementReceiveRequest achievementReceiveRequest = AchievementReceiveRequest.Create();
@@ -126,12 +126,12 @@ public class AchievementController : ControllerBase
 			AchievementReceiveResponse achievementReceiveResponse = (AchievementReceiveResponse)msg;
 			if (achievementReceiveResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(achievementReceiveResponse.ErrorCode, 22908, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(achievementReceiveResponse.ErrorCode, 25408, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06006137 RID: 24887 RVA: 0x0012F528 File Offset: 0x0012D728
+	// Token: 0x060034CF RID: 13519 RVA: 0x00137E4C File Offset: 0x0013604C
 	[NullableContext(1)]
 	public void RequestGetMultiAchievementReward(int[] ids, int[] groupIds)
 	{
@@ -143,12 +143,12 @@ public class AchievementController : ControllerBase
 			MulAchievementReceiveResponse mulAchievementReceiveResponse = (MulAchievementReceiveResponse)msg;
 			if (mulAchievementReceiveResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mulAchievementReceiveResponse.ErrorCode, 29250, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mulAchievementReceiveResponse.ErrorCode, 19770, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06006138 RID: 24888 RVA: 0x0012F584 File Offset: 0x0012D784
+	// Token: 0x060034D0 RID: 13520 RVA: 0x00137EA8 File Offset: 0x001360A8
 	public void RequestAchievementFinish(int id)
 	{
 		AchievementFinishRequest achievementFinishRequest = AchievementFinishRequest.Create();
@@ -158,19 +158,19 @@ public class AchievementController : ControllerBase
 			AchievementFinishResponse achievementFinishResponse = (AchievementFinishResponse)msg;
 			if (achievementFinishResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(achievementFinishResponse.ErrorCode, 21914, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(achievementFinishResponse.ErrorCode, 19182, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06006139 RID: 24889 RVA: 0x0012F5D0 File Offset: 0x0012D7D0
+	// Token: 0x060034D1 RID: 13521 RVA: 0x00137EF4 File Offset: 0x001360F4
 	private void OnAchievementProgressNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		AchievementProgressNotify achievementProgressNotify = (AchievementProgressNotify)msg;
 		this.UpdateAchievement(achievementProgressNotify.AchievementEntry);
 	}
 
-	// Token: 0x0600613A RID: 24890 RVA: 0x0012F5F0 File Offset: 0x0012D7F0
+	// Token: 0x060034D2 RID: 13522 RVA: 0x00137F14 File Offset: 0x00136114
 	private void UpdateAchievement(AchievementEntry data)
 	{
 		EAchievementStateEnum finishState = AchievementModel.Instance.GetAchievementData(data.Id).GetFinishState();
@@ -187,13 +187,13 @@ public class AchievementController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600613B RID: 24891 RVA: 0x0012F67B File Offset: 0x0012D87B
+	// Token: 0x060034D3 RID: 13523 RVA: 0x00137F9F File Offset: 0x0013619F
 	private void OnBattleViewShow()
 	{
 		this.TryOpenAchievementFinishView();
 	}
 
-	// Token: 0x0600613C RID: 24892 RVA: 0x0012F684 File Offset: 0x0012D884
+	// Token: 0x060034D4 RID: 13524 RVA: 0x00137FA8 File Offset: 0x001361A8
 	private void TryOpenAchievementFinishView()
 	{
 		if (!this.AchievementPopViewShowState)
@@ -210,7 +210,7 @@ public class AchievementController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600613D RID: 24893 RVA: 0x0012F6DC File Offset: 0x0012D8DC
+	// Token: 0x060034D5 RID: 13525 RVA: 0x00138000 File Offset: 0x00136200
 	private void OnAchievementListProgressNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		AchievementListProgressNotify achievementListProgressNotify = (AchievementListProgressNotify)msg;
@@ -221,29 +221,29 @@ public class AchievementController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600613E RID: 24894 RVA: 0x0012F71C File Offset: 0x0012D91C
+	// Token: 0x060034D6 RID: 13526 RVA: 0x00138040 File Offset: 0x00136240
 	private void OnAchievementCountChangeNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		AchievementCountChangeNotify message = (AchievementCountChangeNotify)msg;
 		AchievementModel.Instance.OnAchievementCountChangeNotify(message);
 	}
 
-	// Token: 0x0600613F RID: 24895 RVA: 0x0012F73C File Offset: 0x0012D93C
+	// Token: 0x060034D7 RID: 13527 RVA: 0x00138060 File Offset: 0x00136260
 	private void OnAchievementGroupProgressNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		AchievementGroupProgressNotify message = (AchievementGroupProgressNotify)msg;
 		AchievementModel.Instance.OnAchievementGroupProgressNotify(message);
 	}
 
-	// Token: 0x06006140 RID: 24896 RVA: 0x0012F75B File Offset: 0x0012D95B
+	// Token: 0x060034D8 RID: 13528 RVA: 0x0013807F File Offset: 0x0013627F
 	[NullableContext(1)]
 	private void TsSyncAchievementFinish(IReadOnlyList<int> categoryIds, IReadOnlyList<int> groupIds, IReadOnlyList<int> achievementIds, int startCount, int finishCount)
 	{
 		AchievementModel.Instance.OnTsDataReady(categoryIds, groupIds, achievementIds, startCount, finishCount);
 	}
 
-	// Token: 0x17000793 RID: 1939
-	// (get) Token: 0x06006141 RID: 24897 RVA: 0x0012F76E File Offset: 0x0012D96E
+	// Token: 0x170007B5 RID: 1973
+	// (get) Token: 0x060034D9 RID: 13529 RVA: 0x00138092 File Offset: 0x00136292
 	[Nullable(1)]
 	public static AchievementController Instance
 	{
@@ -254,7 +254,7 @@ public class AchievementController : ControllerBase
 		}
 	}
 
-	// Token: 0x06006142 RID: 24898 RVA: 0x0012F775 File Offset: 0x0012D975
+	// Token: 0x060034DA RID: 13530 RVA: 0x00138099 File Offset: 0x00136299
 	[NullableContext(1)]
 	public static AchievementController GetOrCreateInstance()
 	{
@@ -265,7 +265,7 @@ public class AchievementController : ControllerBase
 		return AchievementController._Instance;
 	}
 
-	// Token: 0x06006143 RID: 24899 RVA: 0x0012F789 File Offset: 0x0012D989
+	// Token: 0x060034DB RID: 13531 RVA: 0x001380AD File Offset: 0x001362AD
 	public static bool CreateInstance()
 	{
 		if (AchievementController._Instance != null)
@@ -276,26 +276,26 @@ public class AchievementController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06006144 RID: 24900 RVA: 0x0012F79F File Offset: 0x0012D99F
+	// Token: 0x060034DC RID: 13532 RVA: 0x001380C3 File Offset: 0x001362C3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006145 RID: 24901 RVA: 0x0012F7A1 File Offset: 0x0012D9A1
+	// Token: 0x060034DD RID: 13533 RVA: 0x001380C5 File Offset: 0x001362C5
 	public static void ResetStaticDefaultValue()
 	{
 		AchievementController._Instance = null;
 	}
 
-	// Token: 0x06006146 RID: 24902 RVA: 0x0012F7A9 File Offset: 0x0012D9A9
+	// Token: 0x060034DE RID: 13534 RVA: 0x001380CD File Offset: 0x001362CD
 	static AchievementController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AchievementController.CreateStaticDefaultValue), new Action(AchievementController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002C3B RID: 11323
+	// Token: 0x04002CD4 RID: 11476
 	private bool AchievementPopViewShowState = true;
 
-	// Token: 0x04002C3C RID: 11324
+	// Token: 0x04002CD5 RID: 11477
 	private static AchievementController _Instance;
 }

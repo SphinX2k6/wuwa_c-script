@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D9E RID: 7582
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FB3 RID: 8115
 	public class IRemovePreloadResourceTrialCharacter : IRemovePreloadResourceCharacterType
 	{
-		// Token: 0x0600A27F RID: 41599 RVA: 0x001718F0 File Offset: 0x0016FAF0
+		// Token: 0x0600AC7F RID: 44159 RVA: 0x00185F18 File Offset: 0x00184118
 		private IRemovePreloadResourceTrialCharacter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A280 RID: 41600 RVA: 0x00171928 File Offset: 0x0016FB28
+		// Token: 0x0600AC80 RID: 44160 RVA: 0x00185F50 File Offset: 0x00184150
 		public static IRemovePreloadResourceTrialCharacter Create([Nullable(2)] IRemovePreloadResourceTrialCharacter instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A281 RID: 41601 RVA: 0x0017193B File Offset: 0x0016FB3B
+		// Token: 0x0600AC81 RID: 44161 RVA: 0x00185F63 File Offset: 0x00184163
 		public static IRemovePreloadResourceTrialCharacter CreateFromSetValue([Nullable(2)] IRemovePreloadResourceTrialCharacter_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A282 RID: 41602 RVA: 0x0017194E File Offset: 0x0016FB4E
+		// Token: 0x0600AC82 RID: 44162 RVA: 0x00185F76 File Offset: 0x00184176
 		public new IRemovePreloadResourceTrialCharacter_SetValue ToSetValue()
 		{
 			return new IRemovePreloadResourceTrialCharacter_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003229 RID: 12841
-		// (get) Token: 0x0600A283 RID: 41603 RVA: 0x0017196D File Offset: 0x0016FB6D
-		// (set) Token: 0x0600A284 RID: 41604 RVA: 0x00171998 File Offset: 0x0016FB98
+		// Token: 0x170034C1 RID: 13505
+		// (get) Token: 0x0600AC83 RID: 44163 RVA: 0x00185F95 File Offset: 0x00184195
+		// (set) Token: 0x0600AC84 RID: 44164 RVA: 0x00185FC0 File Offset: 0x001841C0
 		public override ERemovePreloadResourceObjectType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700322A RID: 12842
-		// (get) Token: 0x0600A285 RID: 41605 RVA: 0x001719A6 File Offset: 0x0016FBA6
-		// (set) Token: 0x0600A286 RID: 41606 RVA: 0x001719CD File Offset: 0x0016FBCD
+		// Token: 0x170034C2 RID: 13506
+		// (get) Token: 0x0600AC85 RID: 44165 RVA: 0x00185FCE File Offset: 0x001841CE
+		// (set) Token: 0x0600AC86 RID: 44166 RVA: 0x00185FF5 File Offset: 0x001841F5
 		public virtual List<int> CharacterGroup
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006198 RID: 24984
+		// Token: 0x0400671C RID: 26396
 		[Nullable(2)]
 		protected new IRemovePreloadResourceTrialCharacter FbInstance;
 
-		// Token: 0x04006199 RID: 24985
+		// Token: 0x0400671D RID: 26397
 		[Nullable(2)]
 		protected new IRemovePreloadResourceTrialCharacter_SetValue PocoInterface;
 	}

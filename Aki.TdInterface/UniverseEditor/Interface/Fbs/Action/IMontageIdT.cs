@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AFE RID: 27390
+	// Token: 0x02007235 RID: 29237
 	public class IMontageIdT
 	{
-		// Token: 0x1700CB56 RID: 52054
-		// (get) Token: 0x0603008E RID: 196750 RVA: 0x00687E1A File Offset: 0x0068601A
-		// (set) Token: 0x0603008F RID: 196751 RVA: 0x00687E22 File Offset: 0x00686022
+		// Token: 0x1700D625 RID: 54821
+		// (get) Token: 0x06032E62 RID: 208482 RVA: 0x006DF4D2 File Offset: 0x006DD6D2
+		// (set) Token: 0x06032E63 RID: 208483 RVA: 0x006DF4DA File Offset: 0x006DD6DA
 		public int MontageId { get; set; }
 
-		// Token: 0x1700CB57 RID: 52055
-		// (get) Token: 0x06030090 RID: 196752 RVA: 0x00687E2B File Offset: 0x0068602B
-		// (set) Token: 0x06030091 RID: 196753 RVA: 0x00687E33 File Offset: 0x00686033
+		// Token: 0x1700D626 RID: 54822
+		// (get) Token: 0x06032E64 RID: 208484 RVA: 0x006DF4E3 File Offset: 0x006DD6E3
+		// (set) Token: 0x06032E65 RID: 208485 RVA: 0x006DF4EB File Offset: 0x006DD6EB
 		public bool IsAbp { get; set; }
 
-		// Token: 0x1700CB58 RID: 52056
-		// (get) Token: 0x06030092 RID: 196754 RVA: 0x00687E3C File Offset: 0x0068603C
-		// (set) Token: 0x06030093 RID: 196755 RVA: 0x00687E44 File Offset: 0x00686044
+		// Token: 0x1700D627 RID: 54823
+		// (get) Token: 0x06032E66 RID: 208486 RVA: 0x006DF4F4 File Offset: 0x006DD6F4
+		// (set) Token: 0x06032E67 RID: 208487 RVA: 0x006DF4FC File Offset: 0x006DD6FC
 		public byte NullMask { get; set; }
 
-		// Token: 0x06030094 RID: 196756 RVA: 0x00687E4D File Offset: 0x0068604D
+		// Token: 0x06032E68 RID: 208488 RVA: 0x006DF505 File Offset: 0x006DD705
 		public IMontageIdT()
 		{
 			this.MontageId = 0;

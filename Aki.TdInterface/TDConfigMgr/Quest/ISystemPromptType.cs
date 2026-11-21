@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001166 RID: 4454
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001296 RID: 4758
 	public class ISystemPromptType
 	{
-		// Token: 0x06006516 RID: 25878 RVA: 0x000F2A04 File Offset: 0x000F0C04
+		// Token: 0x06006B1D RID: 27421 RVA: 0x000FFCC8 File Offset: 0x000FDEC8
 		private ISystemPromptType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006517 RID: 25879 RVA: 0x000F2A3C File Offset: 0x000F0C3C
+		// Token: 0x06006B1E RID: 27422 RVA: 0x000FFD00 File Offset: 0x000FDF00
 		public static ISystemPromptType Create([Nullable(2)] ISystemPromptType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006518 RID: 25880 RVA: 0x000F2A4F File Offset: 0x000F0C4F
+		// Token: 0x06006B1F RID: 27423 RVA: 0x000FFD13 File Offset: 0x000FDF13
 		public static ISystemPromptType CreateFromSetValue([Nullable(2)] ISystemPromptType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006519 RID: 25881 RVA: 0x000F2A62 File Offset: 0x000F0C62
+		// Token: 0x06006B20 RID: 27424 RVA: 0x000FFD26 File Offset: 0x000FDF26
 		public ISystemPromptType_SetValue ToSetValue()
 		{
 			return new ISystemPromptType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020F7 RID: 8439
-		// (get) Token: 0x0600651A RID: 25882 RVA: 0x000F2A75 File Offset: 0x000F0C75
-		// (set) Token: 0x0600651B RID: 25883 RVA: 0x000F2AA0 File Offset: 0x000F0CA0
+		// Token: 0x170022AD RID: 8877
+		// (get) Token: 0x06006B21 RID: 27425 RVA: 0x000FFD39 File Offset: 0x000FDF39
+		// (set) Token: 0x06006B22 RID: 27426 RVA: 0x000FFD64 File Offset: 0x000FDF64
 		public virtual ESystemPromptType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003CA4 RID: 15524
+		// Token: 0x04003FF7 RID: 16375
 		[Nullable(2)]
 		protected ISystemPromptType FbInstance;
 
-		// Token: 0x04003CA5 RID: 15525
+		// Token: 0x04003FF8 RID: 16376
 		[Nullable(2)]
 		protected ISystemPromptType_SetValue PocoInterface;
 	}

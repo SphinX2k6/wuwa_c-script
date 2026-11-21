@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CA2 RID: 7330
+// Token: 0x02001161 RID: 4449
 public class GachaShareTenPanel : UiPanelBase
 {
-	// Token: 0x0600DD56 RID: 56662 RVA: 0x0033C6B4 File Offset: 0x0033A8B4
+	// Token: 0x0600B16C RID: 45420 RVA: 0x00347B00 File Offset: 0x00345D00
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaShareTenPanel.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -22,7 +22,7 @@ public class GachaShareTenPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DD57 RID: 56663 RVA: 0x0033C6F8 File Offset: 0x0033A8F8
+	// Token: 0x0600B16D RID: 45421 RVA: 0x00347B44 File Offset: 0x00345D44
 	[NullableContext(1)]
 	public void Refresh(GachaResult[] dataList)
 	{
@@ -47,7 +47,7 @@ public class GachaShareTenPanel : UiPanelBase
 		this.GachaResultLayout.RefreshByData(list.ToArray(), null, false);
 	}
 
-	// Token: 0x0600DD58 RID: 56664 RVA: 0x0033C744 File Offset: 0x0033A944
+	// Token: 0x0600B16E RID: 45422 RVA: 0x00347B90 File Offset: 0x00345D90
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -56,21 +56,21 @@ public class GachaShareTenPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DD59 RID: 56665 RVA: 0x0033C767 File Offset: 0x0033A967
+	// Token: 0x0600B16F RID: 45423 RVA: 0x00347BB3 File Offset: 0x00345DB3
 	[NullableContext(2)]
 	public UUIGridLayout GetGachaResultItemLayout()
 	{
 		return base.GetGridLayout(0);
 	}
 
-	// Token: 0x0600DD5A RID: 56666 RVA: 0x0033C770 File Offset: 0x0033A970
+	// Token: 0x0600B170 RID: 45424 RVA: 0x00347BBC File Offset: 0x00345DBC
 	[NullableContext(1)]
 	private GachaShareResultItem InitGachaResultItem()
 	{
 		return new GachaShareResultItem();
 	}
 
-	// Token: 0x0600DD5B RID: 56667 RVA: 0x0033C777 File Offset: 0x0033A977
+	// Token: 0x0600B171 RID: 45425 RVA: 0x00347BC3 File Offset: 0x00345DC3
 	protected override void OnBeforeDestroy()
 	{
 		GenericLayout<GachaShareResultItem, GachaResult> gachaResultLayout = this.GachaResultLayout;
@@ -81,7 +81,7 @@ public class GachaShareTenPanel : UiPanelBase
 		gachaResultLayout.ClearChildren();
 	}
 
-	// Token: 0x0600DD5D RID: 56669 RVA: 0x0033C791 File Offset: 0x0033A991
+	// Token: 0x0600B173 RID: 45427 RVA: 0x00347BDD File Offset: 0x00345DDD
 	[CompilerGenerated]
 	internal static int <Refresh>g__RevertType|3_0(InventoryDefine.EItemDataType type)
 	{
@@ -95,7 +95,7 @@ public class GachaShareTenPanel : UiPanelBase
 		return 0;
 	}
 
-	// Token: 0x04006597 RID: 26007
+	// Token: 0x04006668 RID: 26216
 	[Nullable(new byte[]
 	{
 		2,
@@ -104,10 +104,10 @@ public class GachaShareTenPanel : UiPanelBase
 	})]
 	private GenericLayout<GachaShareResultItem, GachaResult> GachaResultLayout;
 
-	// Token: 0x02008288 RID: 33416
+	// Token: 0x0200740F RID: 29711
 	private enum EComponent
 	{
-		// Token: 0x0402A96D RID: 174445
+		// Token: 0x04025C8B RID: 154763
 		GachaResultGridLayout
 	}
 }

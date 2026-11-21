@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002747 RID: 10055
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A13 RID: 10771
 	public class ICommonTipMissionCompleteNew : ICommonTipType
 	{
-		// Token: 0x0600E012 RID: 57362 RVA: 0x00212AE1 File Offset: 0x00210CE1
+		// Token: 0x0600EE12 RID: 60946 RVA: 0x0022F619 File Offset: 0x0022D819
 		public static ICommonTipMissionCompleteNew Create(ICommonTipMissionCompleteNew? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004346 RID: 17222
-		// (get) Token: 0x0600E013 RID: 57363 RVA: 0x00212B00 File Offset: 0x00210D00
+		// Token: 0x1700469A RID: 18074
+		// (get) Token: 0x0600EE13 RID: 60947 RVA: 0x0022F638 File Offset: 0x0022D838
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004347 RID: 17223
-		// (get) Token: 0x0600E014 RID: 57364 RVA: 0x00212B0D File Offset: 0x00210D0D
+		// Token: 0x1700469B RID: 18075
+		// (get) Token: 0x0600EE14 RID: 60948 RVA: 0x0022F645 File Offset: 0x0022D845
 		public virtual EQuestCommonTipType QuestType
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004348 RID: 17224
-		// (get) Token: 0x0600E015 RID: 57365 RVA: 0x00212B1A File Offset: 0x00210D1A
+		// Token: 0x1700469C RID: 18076
+		// (get) Token: 0x0600EE15 RID: 60949 RVA: 0x0022F652 File Offset: 0x0022D852
 		public virtual string TipTextKey
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C45 RID: 31813
+		// Token: 0x040082F3 RID: 33523
 		private ICommonTipMissionCompleteNew Instance;
 	}
 }

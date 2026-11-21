@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.TowerDefenseEvent;
 using CSharpScript.Game.Module.TrapDefense;
 using UnrealEngine;
 
-// Token: 0x02001D30 RID: 7472
+// Token: 0x020011F2 RID: 4594
 public class TrapDefenseMonsterMarkView : TrapDefenseMarkView
 {
-	// Token: 0x0600E249 RID: 57929 RVA: 0x00352950 File Offset: 0x00350B50
+	// Token: 0x0600B666 RID: 46694 RVA: 0x0035E380 File Offset: 0x0035C580
 	public TrapDefenseMonsterMarkView(int markId) : base(markId)
 	{
 		this.NeedUpdatePositionInner = true;
 	}
 
-	// Token: 0x0600E24A RID: 57930 RVA: 0x00352960 File Offset: 0x00350B60
+	// Token: 0x0600B667 RID: 46695 RVA: 0x0035E390 File Offset: 0x0035C590
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,14 +24,14 @@ public class TrapDefenseMonsterMarkView : TrapDefenseMarkView
 		};
 	}
 
-	// Token: 0x0600E24B RID: 57931 RVA: 0x00352983 File Offset: 0x00350B83
+	// Token: 0x0600B668 RID: 46696 RVA: 0x0035E3B3 File Offset: 0x0035C5B3
 	protected override void OnStart()
 	{
 		base.GetRootItem().SetAlpha(0f);
 		this.RefreshIcon();
 	}
 
-	// Token: 0x0600E24C RID: 57932 RVA: 0x0035299C File Offset: 0x00350B9C
+	// Token: 0x0600B669 RID: 46697 RVA: 0x0035E3CC File Offset: 0x0035C5CC
 	private void RefreshIcon()
 	{
 		TrapDefenseMonsterMarkItem trapDefenseMonsterMarkItem = base.GetMarkData() as TrapDefenseMonsterMarkItem;
@@ -55,7 +55,7 @@ public class TrapDefenseMonsterMarkView : TrapDefenseMarkView
 		});
 	}
 
-	// Token: 0x0600E24D RID: 57933 RVA: 0x00352A58 File Offset: 0x00350C58
+	// Token: 0x0600B66A RID: 46698 RVA: 0x0035E488 File Offset: 0x0035C688
 	[NullableContext(1)]
 	public override void UpdatePosition(float scale, Vector2D centerOffset)
 	{
@@ -63,13 +63,13 @@ public class TrapDefenseMonsterMarkView : TrapDefenseMarkView
 		base.UpdatePosition(scale, centerOffset);
 	}
 
-	// Token: 0x040068AE RID: 26798
+	// Token: 0x0400698D RID: 27021
 	private ETrapDefenseEnemyType CurrentEnemyType;
 
-	// Token: 0x02008334 RID: 33588
+	// Token: 0x020074BD RID: 29885
 	private static class EChildComponent
 	{
-		// Token: 0x0402AC93 RID: 175251
+		// Token: 0x04025FBB RID: 155579
 		public const int Icon = 0;
 	}
 }

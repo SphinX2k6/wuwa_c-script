@@ -8,12 +8,12 @@ using CSharpScript.Game.NewWorld.Character.Common.Controller;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070F9 RID: 28921
+	// Token: 0x020063A9 RID: 25513
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RailData
 	{
-		// Token: 0x060469AD RID: 289197 RVA: 0x011C32D0 File Offset: 0x011C14D0
+		// Token: 0x0603DDA6 RID: 253350 RVA: 0x011F2484 File Offset: 0x011F0684
 		[NullableContext(1)]
 		public RailData(RailSlideParams config, SplineCurve spline, float start, float end, IRailParam @params, int pbDataId = 0)
 		{
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.InAir = (@params.RailType == ERailMoveType.JumpProjectile || @params.RailType == ERailMoveType.JumpEndPointProjectile || (@params.RailType == ERailMoveType.HorizontalProjectile && config.LandBlendTime != 0));
 		}
 
-		// Token: 0x060469AE RID: 289198 RVA: 0x011C334E File Offset: 0x011C154E
+		// Token: 0x0603DDA7 RID: 253351 RVA: 0x011F2502 File Offset: 0x011F0702
 		public bool CheckEnd()
 		{
 			return this.LastDistance >= this.EndDistance;
 		}
 
-		// Token: 0x060469AF RID: 289199 RVA: 0x011C3364 File Offset: 0x011C1564
+		// Token: 0x0603DDA8 RID: 253352 RVA: 0x011F2518 File Offset: 0x011F0718
 		public float GetRate(float delta, bool update = true, float extraDist = 0f)
 		{
 			float splineLength = this.Spline.GetSplineLength();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return result;
 		}
 
-		// Token: 0x060469B0 RID: 289200 RVA: 0x011C3448 File Offset: 0x011C1648
+		// Token: 0x0603DDA9 RID: 253353 RVA: 0x011F25FC File Offset: 0x011F07FC
 		public float GetHeightOffset()
 		{
 			if (this.Params.RailType == ERailMoveType.JumpProjectile || this.Params.RailType == ERailMoveType.JumpEndPointProjectile)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return 0f;
 		}
 
-		// Token: 0x060469B1 RID: 289201 RVA: 0x011C34A4 File Offset: 0x011C16A4
+		// Token: 0x0603DDAA RID: 253354 RVA: 0x011F2658 File Offset: 0x011F0858
 		public void SetRailInfo(IRailData info, float speed, RailData lastData = null)
 		{
 			this.RailInfo = info;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469B2 RID: 289202 RVA: 0x011C3654 File Offset: 0x011C1854
+		// Token: 0x0603DDAB RID: 253355 RVA: 0x011F2808 File Offset: 0x011F0A08
 		public void SetChangeJumpState()
 		{
 			this.ChangeJumpTime = Time.Instance.Now;
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.InAir = true;
 		}
 
-		// Token: 0x060469B3 RID: 289203 RVA: 0x011C3674 File Offset: 0x011C1874
+		// Token: 0x0603DDAC RID: 253356 RVA: 0x011F2828 File Offset: 0x011F0A28
 		[NullableContext(1)]
 		public void UpdateRotatorSpeed(Rotator cur, Rotator rot)
 		{
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469B4 RID: 289204 RVA: 0x011C3818 File Offset: 0x011C1A18
+		// Token: 0x0603DDAD RID: 253357 RVA: 0x011F29CC File Offset: 0x011F0BCC
 		public ETriggerKey? GetDefaultTriggerKey()
 		{
 			IRailParam @params = this.Params;
@@ -208,13 +208,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return new ETriggerKey?((this.Params as ISplineRailData).DefaultTriggerKey);
 		}
 
-		// Token: 0x060469B5 RID: 289205 RVA: 0x011C385C File Offset: 0x011C1A5C
+		// Token: 0x0603DDAE RID: 253358 RVA: 0x011F2A10 File Offset: 0x011F0C10
 		public float GetAccelerationSpeed(float angle, float dot)
 		{
 			return (float)(this.InChangeJumpState ? this.Config.JumpAcceleration : ((angle < 1f) ? this.Config.BaseAcceleration : ((dot > 0f) ? this.Config.AccelerationForUp : this.Config.AccelerationForDown)));
 		}
 
-		// Token: 0x060469B6 RID: 289206 RVA: 0x011C38B4 File Offset: 0x011C1AB4
+		// Token: 0x0603DDAF RID: 253359 RVA: 0x011F2A68 File Offset: 0x011F0C68
 		public float GetTargetSpeed(float angle, float dot)
 		{
 			if (this.InChangeJumpState)
@@ -256,46 +256,46 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x040250B2 RID: 151730
+		// Token: 0x04020D47 RID: 134471
 		public SplineCurve Spline;
 
-		// Token: 0x040250B3 RID: 151731
+		// Token: 0x04020D48 RID: 134472
 		public RailSlideParams Config;
 
-		// Token: 0x040250B4 RID: 151732
+		// Token: 0x04020D49 RID: 134473
 		public IRailParam Params;
 
-		// Token: 0x040250B5 RID: 151733
+		// Token: 0x04020D4A RID: 134474
 		private readonly int PbDataId;
 
-		// Token: 0x040250B6 RID: 151734
+		// Token: 0x04020D4B RID: 134475
 		public bool InAir;
 
-		// Token: 0x040250B7 RID: 151735
+		// Token: 0x04020D4C RID: 134476
 		public bool AllowInputChangeRail;
 
-		// Token: 0x040250B8 RID: 151736
+		// Token: 0x04020D4D RID: 134477
 		public float Speed;
 
-		// Token: 0x040250B9 RID: 151737
+		// Token: 0x04020D4E RID: 134478
 		public IRailData RailInfo;
 
-		// Token: 0x040250BA RID: 151738
+		// Token: 0x04020D4F RID: 134479
 		public Vector FallbackLandingPoint;
 
-		// Token: 0x040250BB RID: 151739
+		// Token: 0x04020D50 RID: 134480
 		public bool InChangeJumpState;
 
-		// Token: 0x040250BC RID: 151740
+		// Token: 0x04020D51 RID: 134481
 		public float LastDistance;
 
-		// Token: 0x040250BD RID: 151741
+		// Token: 0x04020D52 RID: 134482
 		public float EndDistance;
 
-		// Token: 0x040250BE RID: 151742
+		// Token: 0x04020D53 RID: 134483
 		public float RotatorSpeed = 1f;
 
-		// Token: 0x040250BF RID: 151743
+		// Token: 0x04020D54 RID: 134484
 		public double ChangeJumpTime;
 	}
 }

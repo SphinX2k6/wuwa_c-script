@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004557 RID: 17751
+	// Token: 0x0200347F RID: 13439
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class TsActorExtension
 	{
-		// Token: 0x0602DDB2 RID: 187826 RVA: 0x00A8BF84 File Offset: 0x00A8A184
+		// Token: 0x06022494 RID: 140436 RVA: 0x009B769C File Offset: 0x009B589C
 		public static Entity GetEntityNoBlueprint(this ABaseCharacter a)
 		{
 			TsBaseCharacter tsBaseCharacter = a as TsBaseCharacter;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Utils
 			return null;
 		}
 
-		// Token: 0x0602DDB3 RID: 187827 RVA: 0x00A8BFB4 File Offset: 0x00A8A1B4
+		// Token: 0x06022495 RID: 140437 RVA: 0x009B76CC File Offset: 0x009B58CC
 		public static void SetDitherEffect(this ABaseCharacter a, float dither, ECharacterDitherType ditherType = ECharacterDitherType.Temporary)
 		{
 			TsBaseCharacter tsBaseCharacter = a as TsBaseCharacter;

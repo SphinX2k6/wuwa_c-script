@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D3D RID: 23869
+	// Token: 0x02004D1F RID: 19743
 	public class HeadIconEnergyBarXigelika : HeadIconEnergyBarBase
 	{
-		// Token: 0x0603C89E RID: 247966 RVA: 0x00E86378 File Offset: 0x00E84578
+		// Token: 0x060317F7 RID: 202743 RVA: 0x00DD6B18 File Offset: 0x00DD4D18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C89F RID: 247967 RVA: 0x00E86402 File Offset: 0x00E84602
+		// Token: 0x060317F8 RID: 202744 RVA: 0x00DD6BA2 File Offset: 0x00DD4DA2
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(true);
 		}
 
-		// Token: 0x0603C8A0 RID: 247968 RVA: 0x00E8641E File Offset: 0x00E8461E
+		// Token: 0x060317F9 RID: 202745 RVA: 0x00DD6BBE File Offset: 0x00DD4DBE
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603C8A1 RID: 247969 RVA: 0x00E86428 File Offset: 0x00E84628
+		// Token: 0x060317FA RID: 202746 RVA: 0x00DD6BC8 File Offset: 0x00DD4DC8
 		private void RefreshBarPercent(bool bForce = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -54,14 +54,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSprite(2).SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0200BFDC RID: 49116
+		// Token: 0x0200A9E2 RID: 43490
 		private enum EChildType
 		{
-			// Token: 0x04039E1F RID: 237087
+			// Token: 0x040347E1 RID: 215009
 			PnlBar,
-			// Token: 0x04039E20 RID: 237088
+			// Token: 0x040347E2 RID: 215010
 			SprBar1,
-			// Token: 0x04039E21 RID: 237089
+			// Token: 0x040347E3 RID: 215011
 			SprBar2
 		}
 	}

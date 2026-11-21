@@ -9,16 +9,16 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Module.InstanceDungeon;
 using UnrealEngine;
 
-// Token: 0x020022F1 RID: 8945
+// Token: 0x020017D5 RID: 6101
 public class OnlineMatchSuccessView : UiTickViewBase
 {
-	// Token: 0x06011A1C RID: 72220 RVA: 0x00453D19 File Offset: 0x00451F19
+	// Token: 0x0600EEB4 RID: 61108 RVA: 0x004609E5 File Offset: 0x0045EBE5
 	[NullableContext(1)]
 	public OnlineMatchSuccessView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011A1D RID: 72221 RVA: 0x00453D3C File Offset: 0x00451F3C
+	// Token: 0x0600EEB5 RID: 61109 RVA: 0x00460A08 File Offset: 0x0045EC08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -61,7 +61,7 @@ public class OnlineMatchSuccessView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011A1E RID: 72222 RVA: 0x00453F54 File Offset: 0x00452154
+	// Token: 0x0600EEB6 RID: 61110 RVA: 0x00460C20 File Offset: 0x0045EE20
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(11);
@@ -80,19 +80,19 @@ public class OnlineMatchSuccessView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06011A1F RID: 72223 RVA: 0x00453FE5 File Offset: 0x004521E5
+	// Token: 0x0600EEB7 RID: 61111 RVA: 0x00460CB1 File Offset: 0x0045EEB1
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
 	}
 
-	// Token: 0x06011A20 RID: 72224 RVA: 0x00454003 File Offset: 0x00452203
+	// Token: 0x0600EEB8 RID: 61112 RVA: 0x00460CCF File Offset: 0x0045EECF
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
 	}
 
-	// Token: 0x06011A21 RID: 72225 RVA: 0x00454024 File Offset: 0x00452224
+	// Token: 0x0600EEB9 RID: 61113 RVA: 0x00460CF0 File Offset: 0x0045EEF0
 	protected override void OnTick(float delta)
 	{
 		if (!this.IsTick)
@@ -110,7 +110,7 @@ public class OnlineMatchSuccessView : UiTickViewBase
 		this.CountDownBar.SetFillAmount(this.CountDownNumber / (float)this.CountDownNumberMax);
 	}
 
-	// Token: 0x06011A22 RID: 72226 RVA: 0x004540A8 File Offset: 0x004522A8
+	// Token: 0x0600EEBA RID: 61114 RVA: 0x00460D74 File Offset: 0x0045EF74
 	private void RefreshView()
 	{
 		UUIItem item = base.GetItem(3);
@@ -127,7 +127,7 @@ public class OnlineMatchSuccessView : UiTickViewBase
 		this.CountDownBar.SetFillAmount(this.CountDownNumber / (float)this.CountDownNumberMax);
 	}
 
-	// Token: 0x06011A23 RID: 72227 RVA: 0x00454164 File Offset: 0x00452364
+	// Token: 0x0600EEBB RID: 61115 RVA: 0x00460E30 File Offset: 0x0045F030
 	private void ShowMatchSuccess()
 	{
 		base.GetButton(8).GetRootComponent().SetUIActive(false);
@@ -139,7 +139,7 @@ public class OnlineMatchSuccessView : UiTickViewBase
 		this.CountDownBar.SetUIActive(false);
 	}
 
-	// Token: 0x06011A24 RID: 72228 RVA: 0x004541D8 File Offset: 0x004523D8
+	// Token: 0x0600EEBC RID: 61116 RVA: 0x00460EA4 File Offset: 0x0045F0A4
 	private void OnMatchingChange()
 	{
 		EInstanceMatchState matchingState = InstanceDungeonEntranceModel.Instance.GetMatchingState();
@@ -159,7 +159,7 @@ public class OnlineMatchSuccessView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011A25 RID: 72229 RVA: 0x00454230 File Offset: 0x00452430
+	// Token: 0x0600EEBD RID: 61117 RVA: 0x00460EFC File Offset: 0x0045F0FC
 	private void OnClickHandleBtn()
 	{
 		InstanceDungeonEntranceController.Instance.MatchConfirmRequest(true);
@@ -167,7 +167,7 @@ public class OnlineMatchSuccessView : UiTickViewBase
 		this.ShowMatchSuccess();
 	}
 
-	// Token: 0x06011A26 RID: 72230 RVA: 0x0045424A File Offset: 0x0045244A
+	// Token: 0x0600EEBE RID: 61118 RVA: 0x00460F16 File Offset: 0x0045F116
 	private void OnClickCancelBtn()
 	{
 		InstanceDungeonEntranceController.Instance.MatchConfirmRequest(false);
@@ -175,49 +175,49 @@ public class OnlineMatchSuccessView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040085CD RID: 34253
+	// Token: 0x0400870B RID: 34571
 	private float CountDownNumber = -1f;
 
-	// Token: 0x040085CE RID: 34254
+	// Token: 0x0400870C RID: 34572
 	private int CountDownNumberMax = -1;
 
-	// Token: 0x040085CF RID: 34255
+	// Token: 0x0400870D RID: 34573
 	[Nullable(2)]
 	private UUIText CountDown;
 
-	// Token: 0x040085D0 RID: 34256
+	// Token: 0x0400870E RID: 34574
 	[Nullable(2)]
 	private UUISprite CountDownBar;
 
-	// Token: 0x040085D1 RID: 34257
+	// Token: 0x0400870F RID: 34575
 	private bool IsTick = true;
 
-	// Token: 0x02008871 RID: 34929
+	// Token: 0x020079F5 RID: 31221
 	private enum EOnlineMatchSuccessView
 	{
-		// Token: 0x0402C56D RID: 181613
+		// Token: 0x0402786F RID: 161903
 		RoleTexture,
-		// Token: 0x0402C56E RID: 181614
+		// Token: 0x04027870 RID: 161904
 		PlayerName,
-		// Token: 0x0402C56F RID: 181615
+		// Token: 0x04027871 RID: 161905
 		HandleBtn,
-		// Token: 0x0402C570 RID: 181616
+		// Token: 0x04027872 RID: 161906
 		ApplySprite,
-		// Token: 0x0402C571 RID: 181617
+		// Token: 0x04027873 RID: 161907
 		MoreSprite,
-		// Token: 0x0402C572 RID: 181618
+		// Token: 0x04027874 RID: 161908
 		CountDown,
-		// Token: 0x0402C573 RID: 181619
+		// Token: 0x04027875 RID: 161909
 		CountDownProgressBar,
-		// Token: 0x0402C574 RID: 181620
+		// Token: 0x04027876 RID: 161910
 		MultipleApplyText,
-		// Token: 0x0402C575 RID: 181621
+		// Token: 0x04027877 RID: 161911
 		CancelBtn,
-		// Token: 0x0402C576 RID: 181622
+		// Token: 0x04027878 RID: 161912
 		ApplyItem,
-		// Token: 0x0402C577 RID: 181623
+		// Token: 0x04027879 RID: 161913
 		RoleTItem,
-		// Token: 0x0402C578 RID: 181624
+		// Token: 0x0402787A RID: 161914
 		ProgressBarItem
 	}
 }

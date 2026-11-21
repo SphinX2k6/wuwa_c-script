@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000589 RID: 1417
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005F2 RID: 1522
 	public class INpcUiInteractOnDollGrabDelivery_SetValue
 	{
-		// Token: 0x040014CD RID: 5325
+		// Token: 0x0400163B RID: 5691
 		public ENpcUiInteractType Type;
 
-		// Token: 0x040014CE RID: 5326
+		// Token: 0x0400163C RID: 5692
 		public IOnDollGrabDeliveryPerform OnFirstAchievementPerform;
 
-		// Token: 0x040014CF RID: 5327
+		// Token: 0x0400163D RID: 5693
 		public IOnDollGrabDeliveryPerform OnSubsequentAchievementPerform;
 
-		// Token: 0x040014D0 RID: 5328
+		// Token: 0x0400163E RID: 5694
 		public IOnDollGrabDeliveryPerform OnNeverAchievementPerform;
 
-		// Token: 0x040014D1 RID: 5329
+		// Token: 0x0400163F RID: 5695
 		public IOnDollGrabDeliveryPerform OnAlreadyAchievementPerform;
 	}
 }

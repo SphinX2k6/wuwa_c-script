@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02003407 RID: 13319
+// Token: 0x02002979 RID: 10617
 public class RedDotBattleViewMenu : RedDotBase
 {
 }

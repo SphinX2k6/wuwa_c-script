@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FC0 RID: 24512
+	// Token: 0x02004FA7 RID: 20391
 	public class TotalTopUpPayShopTagItem : PayShopExtraTagItem
 	{
-		// Token: 0x0603E21A RID: 254490 RVA: 0x00F01640 File Offset: 0x00EFF840
+		// Token: 0x060331B4 RID: 209332 RVA: 0x00E532FC File Offset: 0x00E514FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E21B RID: 254491 RVA: 0x00F016AC File Offset: 0x00EFF8AC
+		// Token: 0x060331B5 RID: 209333 RVA: 0x00E53368 File Offset: 0x00E51568
 		protected override void OnStart()
 		{
 			TotalTopUpController instance = TotalTopUpController.Instance;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E21C RID: 254492 RVA: 0x00F016F0 File Offset: 0x00EFF8F0
+		// Token: 0x060331B6 RID: 209334 RVA: 0x00E533AC File Offset: 0x00E515AC
 		[NullableContext(1)]
 		public override void Refresh(IPayShopUnionData data)
 		{
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			text.SetText(num.ToString(), true);
 		}
 
-		// Token: 0x0200C298 RID: 49816
+		// Token: 0x0200ACA3 RID: 44195
 		private class ENode
 		{
-			// Token: 0x0403AC8F RID: 240783
+			// Token: 0x0403566B RID: 218731
 			public const int Text = 0;
 
-			// Token: 0x0403AC90 RID: 240784
+			// Token: 0x0403566C RID: 218732
 			public const int TextureIcon = 1;
 		}
 	}

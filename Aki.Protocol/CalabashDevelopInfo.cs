@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200021B RID: 539
+	// Token: 0x02000220 RID: 544
 	public sealed class CalabashDevelopInfo : IMessage<CalabashDevelopInfo>, IMessage, IEquatable<CalabashDevelopInfo>, IDeepCloneable<CalabashDevelopInfo>, IBufferMessage
 	{
-		// Token: 0x06003B07 RID: 15111 RVA: 0x00092F9F File Offset: 0x0009119F
+		// Token: 0x06003BAC RID: 15276 RVA: 0x00094BB7 File Offset: 0x00092DB7
 		[NullableContext(1)]
 		public static CalabashDevelopInfo Create()
 		{
 			return new CalabashDevelopInfo();
 		}
 
-		// Token: 0x170009C1 RID: 2497
-		// (get) Token: 0x06003B08 RID: 15112 RVA: 0x00092FA6 File Offset: 0x000911A6
+		// Token: 0x170009E0 RID: 2528
+		// (get) Token: 0x06003BAD RID: 15277 RVA: 0x00094BBE File Offset: 0x00092DBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<CalabashDevelopInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009C2 RID: 2498
-		// (get) Token: 0x06003B09 RID: 15113 RVA: 0x00092FAD File Offset: 0x000911AD
+		// Token: 0x170009E1 RID: 2529
+		// (get) Token: 0x06003BAE RID: 15278 RVA: 0x00094BC5 File Offset: 0x00092DC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009C3 RID: 2499
-		// (get) Token: 0x06003B0A RID: 15114 RVA: 0x00092FB0 File Offset: 0x000911B0
+		// Token: 0x170009E2 RID: 2530
+		// (get) Token: 0x06003BAF RID: 15279 RVA: 0x00094BC8 File Offset: 0x00092DC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003B0B RID: 15115 RVA: 0x00092FB7 File Offset: 0x000911B7
+		// Token: 0x06003BB0 RID: 15280 RVA: 0x00094BCF File Offset: 0x00092DCF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CalabashDevelopInfo()
 		{
 		}
 
-		// Token: 0x06003B0C RID: 15116 RVA: 0x00092FCA File Offset: 0x000911CA
+		// Token: 0x06003BB1 RID: 15281 RVA: 0x00094BE2 File Offset: 0x00092DE2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CalabashDevelopInfo(CalabashDevelopInfo other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06003B0D RID: 15117 RVA: 0x00093000 File Offset: 0x00091200
+		// Token: 0x06003BB2 RID: 15282 RVA: 0x00094C18 File Offset: 0x00092E18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CalabashDevelopInfo Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new CalabashDevelopInfo(this);
 		}
 
-		// Token: 0x170009C4 RID: 2500
-		// (get) Token: 0x06003B0E RID: 15118 RVA: 0x00093008 File Offset: 0x00091208
-		// (set) Token: 0x06003B0F RID: 15119 RVA: 0x00093010 File Offset: 0x00091210
+		// Token: 0x170009E3 RID: 2531
+		// (get) Token: 0x06003BB3 RID: 15283 RVA: 0x00094C20 File Offset: 0x00092E20
+		// (set) Token: 0x06003BB4 RID: 15284 RVA: 0x00094C28 File Offset: 0x00092E28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MonsterId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009C5 RID: 2501
-		// (get) Token: 0x06003B10 RID: 15120 RVA: 0x00093019 File Offset: 0x00091219
+		// Token: 0x170009E4 RID: 2532
+		// (get) Token: 0x06003BB5 RID: 15285 RVA: 0x00094C31 File Offset: 0x00092E31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<CalabashDevelopConditionState> UnlockConditions
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003B11 RID: 15121 RVA: 0x00093021 File Offset: 0x00091221
+		// Token: 0x06003BB6 RID: 15286 RVA: 0x00094C39 File Offset: 0x00092E39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CalabashDevelopInfo);
 		}
 
-		// Token: 0x06003B12 RID: 15122 RVA: 0x00093030 File Offset: 0x00091230
+		// Token: 0x06003BB7 RID: 15287 RVA: 0x00094C48 File Offset: 0x00092E48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CalabashDevelopInfo other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.MonsterId == other.MonsterId && this.unlockConditions_.Equals(other.unlockConditions_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06003B13 RID: 15123 RVA: 0x00093080 File Offset: 0x00091280
+		// Token: 0x06003BB8 RID: 15288 RVA: 0x00094C98 File Offset: 0x00092E98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003B14 RID: 15124 RVA: 0x000930CD File Offset: 0x000912CD
+		// Token: 0x06003BB9 RID: 15289 RVA: 0x00094CE5 File Offset: 0x00092EE5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06003B15 RID: 15125 RVA: 0x000930DA File Offset: 0x000912DA
+		// Token: 0x06003BBA RID: 15290 RVA: 0x00094CF2 File Offset: 0x00092EF2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06003B16 RID: 15126 RVA: 0x000930E4 File Offset: 0x000912E4
+		// Token: 0x06003BBB RID: 15291 RVA: 0x00094CFC File Offset: 0x00092EFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003B17 RID: 15127 RVA: 0x00093134 File Offset: 0x00091334
+		// Token: 0x06003BBC RID: 15292 RVA: 0x00094D4C File Offset: 0x00092F4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003B18 RID: 15128 RVA: 0x00093188 File Offset: 0x00091388
+		// Token: 0x06003BBD RID: 15293 RVA: 0x00094DA0 File Offset: 0x00092FA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CalabashDevelopInfo other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06003B19 RID: 15129 RVA: 0x000931D5 File Offset: 0x000913D5
+		// Token: 0x06003BBE RID: 15294 RVA: 0x00094DED File Offset: 0x00092FED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06003B1A RID: 15130 RVA: 0x000931E0 File Offset: 0x000913E0
+		// Token: 0x06003BBF RID: 15295 RVA: 0x00094DF8 File Offset: 0x00092FF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002C08 RID: 11272
+		// Token: 0x04002C8A RID: 11402
 		private static readonly MessageParser<CalabashDevelopInfo> _parser = new MessageParser<CalabashDevelopInfo>(() => new CalabashDevelopInfo());
 
-		// Token: 0x04002C09 RID: 11273
+		// Token: 0x04002C8B RID: 11403
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002C0A RID: 11274
+		// Token: 0x04002C8C RID: 11404
 		public const int MonsterIdFieldNumber = 1;
 
-		// Token: 0x04002C0B RID: 11275
+		// Token: 0x04002C8D RID: 11405
 		private int monsterId_;
 
-		// Token: 0x04002C0C RID: 11276
+		// Token: 0x04002C8E RID: 11406
 		public const int UnlockConditionsFieldNumber = 2;
 
-		// Token: 0x04002C0D RID: 11277
+		// Token: 0x04002C8F RID: 11407
 		private static readonly FieldCodec<CalabashDevelopConditionState> _repeated_unlockConditions_codec = FieldCodec.ForMessage<CalabashDevelopConditionState>(18U, CalabashDevelopConditionState.Parser);
 
-		// Token: 0x04002C0E RID: 11278
+		// Token: 0x04002C90 RID: 11408
 		private readonly RepeatedField<CalabashDevelopConditionState> unlockConditions_ = new RepeatedField<CalabashDevelopConditionState>();
 	}
 }

@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A4A RID: 19018
+	// Token: 0x020039F2 RID: 14834
 	[NullableContext(1)]
 	public interface ITrapDefenseBuildingDevelopTabData
 	{
-		// Token: 0x17007A50 RID: 31312
-		// (get) Token: 0x06031597 RID: 202135
-		// (set) Token: 0x06031598 RID: 202136
+		// Token: 0x17004DFD RID: 19965
+		// (get) Token: 0x06026327 RID: 156455
+		// (set) Token: 0x06026328 RID: 156456
 		ETrapDefenseBuildingDevelopTab TabType { get; set; }
 
-		// Token: 0x17007A51 RID: 31313
-		// (get) Token: 0x06031599 RID: 202137
-		// (set) Token: 0x0603159A RID: 202138
+		// Token: 0x17004DFE RID: 19966
+		// (get) Token: 0x06026329 RID: 156457
+		// (set) Token: 0x0602632A RID: 156458
 		string Icon { get; set; }
 
-		// Token: 0x17007A52 RID: 31314
-		// (get) Token: 0x0603159B RID: 202139
-		// (set) Token: 0x0603159C RID: 202140
+		// Token: 0x17004DFF RID: 19967
+		// (get) Token: 0x0602632B RID: 156459
+		// (set) Token: 0x0602632C RID: 156460
 		string TabName { get; set; }
 
-		// Token: 0x17007A53 RID: 31315
-		// (get) Token: 0x0603159D RID: 202141
-		// (set) Token: 0x0603159E RID: 202142
+		// Token: 0x17004E00 RID: 19968
+		// (get) Token: 0x0602632D RID: 156461
+		// (set) Token: 0x0602632E RID: 156462
 		ERedDotName? RedDot { get; set; }
 	}
 }

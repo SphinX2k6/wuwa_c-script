@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x0200288F RID: 10383
+// Token: 0x02001E0A RID: 7690
 public enum ERoleBreachState
 {
-	// Token: 0x04009FB2 RID: 40882
+	// Token: 0x0400A39B RID: 41883
 	NoEnoughMaterial,
-	// Token: 0x04009FB3 RID: 40883
+	// Token: 0x0400A39C RID: 41884
 	NoEnoughMoney,
-	// Token: 0x04009FB4 RID: 40884
+	// Token: 0x0400A39D RID: 41885
 	CanBreach,
-	// Token: 0x04009FB5 RID: 40885
+	// Token: 0x0400A39E RID: 41886
 	MaxLevel,
-	// Token: 0x04009FB6 RID: 40886
+	// Token: 0x0400A39F RID: 41887
 	NoEnoughCondition
 }

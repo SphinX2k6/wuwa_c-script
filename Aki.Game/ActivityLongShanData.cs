@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,18 +10,18 @@ using CSharpScript.Game.Module.Map.MapDefine;
 using CSharpScript.Game.Module.SkipInterface;
 using Google.Protobuf.Collections;
 
-// Token: 0x020012A0 RID: 4768
+// Token: 0x02000754 RID: 1876
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityLongShanData : ActivityBaseData
 {
-	// Token: 0x060082B2 RID: 33458 RVA: 0x001BBE3A File Offset: 0x001BA03A
+	// Token: 0x06005649 RID: 22089 RVA: 0x001C4B6A File Offset: 0x001C2D6A
 	protected override void OnInit(ActivityData data)
 	{
 		this.InitScoreReward();
 	}
 
-	// Token: 0x060082B3 RID: 33459 RVA: 0x001BBE44 File Offset: 0x001BA044
+	// Token: 0x0600564A RID: 22090 RVA: 0x001C4B74 File Offset: 0x001C2D74
 	protected unsafe override void PhraseEx(ActivityData data)
 	{
 		Dictionary<int, CSharpScript.Game.Module.Activity.ActivityContent.LongShan.LongShanStageInfo> stages = this.Stages;
@@ -36,29 +35,26 @@ public class ActivityLongShanData : ActivityBaseData
 		if (configList != null)
 		{
 			List<int> list = new List<int>();
-			using (IEnumerator<LongShanStage> enumerator = configList.GetEnumerator())
+			foreach (LongShanStage longShanStage in configList)
 			{
-				while (enumerator.MoveNext())
+				list.Add(longShanStage.Id);
+				Aki.Protocol.LongShanStageInfo longShanStageInfo = null;
+				LongShanActivity longShanActivityData = data.LongShanActivityData;
+				if (((longShanActivityData != null) ? longShanActivityData.Stages : null) != null)
 				{
-					LongShanStage config = enumerator.Current;
-					list.Add(config.Id);
-					LongShanActivity longShanActivityData = data.LongShanActivityData;
-					Aki.Protocol.LongShanStageInfo longShanStageInfo;
-					if (longShanActivityData == null)
+					foreach (Aki.Protocol.LongShanStageInfo longShanStageInfo2 in data.LongShanActivityData.Stages)
 					{
-						longShanStageInfo = null;
+						if (longShanStageInfo2.Id == longShanStage.Id)
+						{
+							longShanStageInfo = longShanStageInfo2;
+							break;
+						}
 					}
-					else
-					{
-						RepeatedField<Aki.Protocol.LongShanStageInfo> stages2 = longShanActivityData.Stages;
-						longShanStageInfo = ((stages2 != null) ? stages2.FirstOrDefault((Aki.Protocol.LongShanStageInfo x) => x.Id == config.Id) : null);
-					}
-					Aki.Protocol.LongShanStageInfo longShanStageInfo2 = longShanStageInfo;
-					if (longShanStageInfo2 != null)
-					{
-						CSharpScript.Game.Module.Activity.ActivityContent.LongShan.LongShanStageInfo value = new CSharpScript.Game.Module.Activity.ActivityContent.LongShan.LongShanStageInfo(longShanStageInfo2);
-						this.Stages[config.Id] = value;
-					}
+				}
+				if (longShanStageInfo != null)
+				{
+					CSharpScript.Game.Module.Activity.ActivityContent.LongShan.LongShanStageInfo value = new CSharpScript.Game.Module.Activity.ActivityContent.LongShan.LongShanStageInfo(longShanStageInfo);
+					this.Stages[longShanStage.Id] = value;
 				}
 			}
 			this.StageIds = list.ToArray();
@@ -90,7 +86,7 @@ public class ActivityLongShanData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060082B4 RID: 33460 RVA: 0x001BC028 File Offset: 0x001BA228
+	// Token: 0x0600564B RID: 22091 RVA: 0x001C4D84 File Offset: 0x001C2F84
 	public void InitScoreReward()
 	{
 		this.ScoreRewards.Clear();
@@ -112,8 +108,8 @@ public class ActivityLongShanData : ActivityBaseData
 		this.ScoreRewardIds = list.ToArray();
 	}
 
-	// Token: 0x060082B5 RID: 33461 RVA: 0x001BC130 File Offset: 0x001BA330
-	public void UpdateStage(Aki.Protocol.LongShanStageInfo[] stageInfos)
+	// Token: 0x0600564C RID: 22092 RVA: 0x001C4E8C File Offset: 0x001C308C
+	public void UpdateStage(IReadOnlyList<Aki.Protocol.LongShanStageInfo> stageInfos)
 	{
 		foreach (Aki.Protocol.LongShanStageInfo longShanStageInfo in stageInfos)
 		{
@@ -129,7 +125,7 @@ public class ActivityLongShanData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x060082B6 RID: 33462 RVA: 0x001BC1B4 File Offset: 0x001BA3B4
+	// Token: 0x0600564D RID: 22093 RVA: 0x001C4F2C File Offset: 0x001C312C
 	public void OnStageInfoChange(CSharpScript.Game.Module.Activity.ActivityContent.LongShan.LongShanStageInfo oldStage, CSharpScript.Game.Module.Activity.ActivityContent.LongShan.LongShanStageInfo newStage)
 	{
 		foreach (KeyValuePair<int, LongShanTaskInfo> keyValuePair in oldStage.TaskInfoMap)
@@ -144,7 +140,7 @@ public class ActivityLongShanData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060082B7 RID: 33463 RVA: 0x001BC22C File Offset: 0x001BA42C
+	// Token: 0x0600564E RID: 22094 RVA: 0x001C4FA4 File Offset: 0x001C31A4
 	public void OnStageTaskInfoChange(int taskId, LongShanTaskInfo oldTask, LongShanTaskInfo newTask)
 	{
 		if (!oldTask.IsFinished && newTask.IsFinished)
@@ -162,8 +158,8 @@ public class ActivityLongShanData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060082B8 RID: 33464 RVA: 0x001BC2BC File Offset: 0x001BA4BC
-	public void UpdateScoreRewardStatus(int[] ids)
+	// Token: 0x0600564F RID: 22095 RVA: 0x001C5034 File Offset: 0x001C3234
+	public void UpdateScoreRewardStatus(IReadOnlyList<int> ids)
 	{
 		foreach (int id in ids)
 		{
@@ -176,13 +172,13 @@ public class ActivityLongShanData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x060082B9 RID: 33465 RVA: 0x001BC305 File Offset: 0x001BA505
+	// Token: 0x06005650 RID: 22096 RVA: 0x001C50A0 File Offset: 0x001C32A0
 	public override bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x060082BA RID: 33466 RVA: 0x001BC308 File Offset: 0x001BA508
+	// Token: 0x06005651 RID: 22097 RVA: 0x001C50A4 File Offset: 0x001C32A4
 	[NullableContext(2)]
 	public Aki.Protocol.LongShanStageInfo GetStageInfoById(int id)
 	{
@@ -208,7 +204,7 @@ public class ActivityLongShanData : ActivityBaseData
 		return longShanStageInfo.ProtoStageInfo;
 	}
 
-	// Token: 0x060082BB RID: 33467 RVA: 0x001BC380 File Offset: 0x001BA580
+	// Token: 0x06005652 RID: 22098 RVA: 0x001C511C File Offset: 0x001C331C
 	public Aki.Protocol.LongShanStageInfo GetStageInfoByIdIncludeLock(int id)
 	{
 		CSharpScript.Game.Module.Activity.ActivityContent.LongShan.LongShanStageInfo longShanStageInfo;
@@ -225,7 +221,7 @@ public class ActivityLongShanData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x060082BC RID: 33468 RVA: 0x001BC3E8 File Offset: 0x001BA5E8
+	// Token: 0x06005653 RID: 22099 RVA: 0x001C5184 File Offset: 0x001C3384
 	public List<int> GetFinishedAndUnclaimedTasksByStageId(int stageId)
 	{
 		Aki.Protocol.LongShanStageInfo stageInfoById = this.GetStageInfoById(stageId);
@@ -244,7 +240,7 @@ public class ActivityLongShanData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x060082BD RID: 33469 RVA: 0x001BC464 File Offset: 0x001BA664
+	// Token: 0x06005654 RID: 22100 RVA: 0x001C5200 File Offset: 0x001C3400
 	public int TaskSort(LongShanTaskInfo a, LongShanTaskInfo b)
 	{
 		if (a.IsTaken != b.IsTaken)
@@ -275,7 +271,7 @@ public class ActivityLongShanData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060082BE RID: 33470 RVA: 0x001BC4F4 File Offset: 0x001BA6F4
+	// Token: 0x06005655 RID: 22101 RVA: 0x001C5290 File Offset: 0x001C3490
 	public int GetProgress(int id)
 	{
 		Aki.Protocol.LongShanStageInfo stageInfoById = this.GetStageInfoById(id);
@@ -283,20 +279,24 @@ public class ActivityLongShanData : ActivityBaseData
 		{
 			return 0;
 		}
-		RepeatedField<LongShanTaskInfo> tasks = stageInfoById.Tasks;
-		float num;
-		if (tasks == null)
+		int num = 0;
+		if (stageInfoById.Tasks != null)
 		{
-			num = (float)0;
+			using (IEnumerator<LongShanTaskInfo> enumerator = stageInfoById.Tasks.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.IsTaken)
+					{
+						num++;
+					}
+				}
+			}
 		}
-		else
-		{
-			num = (float)tasks.Count((LongShanTaskInfo x) => x.IsTaken);
-		}
-		return (int)Math.Ceiling((double)(num * 1f / (float)stageInfoById.Tasks.Count * 100f));
+		return (int)Math.Ceiling((double)((float)num * 1f / (float)stageInfoById.Tasks.Count * 100f));
 	}
 
-	// Token: 0x060082BF RID: 33471 RVA: 0x001BC560 File Offset: 0x001BA760
+	// Token: 0x06005656 RID: 22102 RVA: 0x001C531C File Offset: 0x001C351C
 	public bool IsStageUnlock(int stageId)
 	{
 		bool flag = this.IsStageReachOpenTime(stageId);
@@ -304,7 +304,7 @@ public class ActivityLongShanData : ActivityBaseData
 		return stageInfoByIdIncludeLock != null && stageInfoByIdIncludeLock.Unlock && flag;
 	}
 
-	// Token: 0x060082C0 RID: 33472 RVA: 0x001BC58C File Offset: 0x001BA78C
+	// Token: 0x06005657 RID: 22103 RVA: 0x001C5348 File Offset: 0x001C3548
 	public bool IsStageReachOpenTime(int stageId)
 	{
 		Aki.Protocol.LongShanStageInfo stageInfoByIdIncludeLock = this.GetStageInfoByIdIncludeLock(stageId);
@@ -323,7 +323,7 @@ public class ActivityLongShanData : ActivityBaseData
 		return beginOpenTime == 0L || (double)beginOpenTime < serverTimeStamp;
 	}
 
-	// Token: 0x060082C1 RID: 33473 RVA: 0x001BC5F4 File Offset: 0x001BA7F4
+	// Token: 0x06005658 RID: 22104 RVA: 0x001C53B0 File Offset: 0x001C35B0
 	public float GetScoreRewardRelativeProgress(int scoreRewardId)
 	{
 		List<LongShanScoreRewardData> allScoreRewardData = this.GetAllScoreRewardData();
@@ -338,7 +338,7 @@ public class ActivityLongShanData : ActivityBaseData
 		return (float)(this.GetScoreItemCount() - num3) / (float)(goal - num3);
 	}
 
-	// Token: 0x060082C2 RID: 33474 RVA: 0x001BC664 File Offset: 0x001BA864
+	// Token: 0x06005659 RID: 22105 RVA: 0x001C5420 File Offset: 0x001C3620
 	public bool CheckStageRed(int id)
 	{
 		Aki.Protocol.LongShanStageInfo stageInfoById = this.GetStageInfoById(id);
@@ -352,19 +352,26 @@ public class ActivityLongShanData : ActivityBaseData
 		}
 		if (stageInfoById.Tasks != null)
 		{
-			return stageInfoById.Tasks.Any((LongShanTaskInfo x) => x.IsFinished && !x.IsTaken);
+			foreach (LongShanTaskInfo longShanTaskInfo in stageInfoById.Tasks)
+			{
+				if (longShanTaskInfo.IsFinished && !longShanTaskInfo.IsTaken)
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 		return false;
 	}
 
-	// Token: 0x060082C3 RID: 33475 RVA: 0x001BC6CA File Offset: 0x001BA8CA
+	// Token: 0x0600565A RID: 22106 RVA: 0x001C54AC File Offset: 0x001C36AC
 	public void SaveNewStageFlag(int stageId)
 	{
 		ActivityModel.Instance.SaveActivityData(base.Id, stageId, 0, 0, 1);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x060082C4 RID: 33476 RVA: 0x001BC6F8 File Offset: 0x001BA8F8
+	// Token: 0x0600565B RID: 22107 RVA: 0x001C54D8 File Offset: 0x001C36D8
 	public bool CheckAnyStageRed()
 	{
 		if (this.StageIds != null)
@@ -380,40 +387,24 @@ public class ActivityLongShanData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060082C5 RID: 33477 RVA: 0x001BC734 File Offset: 0x001BA934
+	// Token: 0x0600565C RID: 22108 RVA: 0x001C5512 File Offset: 0x001C3712
 	public bool CheckScoreRewardRedDot()
 	{
-		using (List<LongShanScoreRewardData>.Enumerator enumerator = this.GetAllScoreRewardData().GetEnumerator())
-		{
-			while (enumerator.MoveNext())
-			{
-				if (enumerator.Current.GetState() == EActivityTaskState.FinishedAndUnclaimed)
-				{
-					return true;
-				}
-			}
-		}
-		return false;
+		return NoLinq.Any<LongShanScoreRewardData>(this.ScoreRewards.Values, (LongShanScoreRewardData data) => data.GetState() == EActivityTaskState.FinishedAndUnclaimed);
 	}
 
-	// Token: 0x060082C6 RID: 33478 RVA: 0x001BC790 File Offset: 0x001BA990
+	// Token: 0x0600565D RID: 22109 RVA: 0x001C5543 File Offset: 0x001C3743
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.CheckAnyStageRed() || this.CheckScoreRewardRedDot();
 	}
 
-	// Token: 0x060082C7 RID: 33479 RVA: 0x001BC7A4 File Offset: 0x001BA9A4
+	// Token: 0x0600565E RID: 22110 RVA: 0x001C5558 File Offset: 0x001C3758
 	protected override bool GetExDataFinishShowState()
 	{
-		using (List<LongShanScoreRewardData>.Enumerator enumerator = this.GetAllScoreRewardData().GetEnumerator())
+		if (!NoLinq.All<LongShanScoreRewardData>(this.ScoreRewards.Values, (LongShanScoreRewardData data) => data.GetState() == EActivityTaskState.FinishedAndClaimed))
 		{
-			while (enumerator.MoveNext())
-			{
-				if (enumerator.Current.GetState() != EActivityTaskState.FinishedAndClaimed)
-				{
-					return false;
-				}
-			}
+			return false;
 		}
 		if (this.StageIds != null)
 		{
@@ -428,15 +419,13 @@ public class ActivityLongShanData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x060082C8 RID: 33480 RVA: 0x001BC830 File Offset: 0x001BAA30
+	// Token: 0x0600565F RID: 22111 RVA: 0x001C55C7 File Offset: 0x001C37C7
 	public List<LongShanScoreRewardData> GetAllScoreRewardData()
 	{
-		return (from a in this.ScoreRewards.Values
-		orderby a.Goal
-		select a).ToList<LongShanScoreRewardData>();
+		return NoLinq.SortToList<LongShanScoreRewardData>(this.ScoreRewards.Values, (LongShanScoreRewardData left, LongShanScoreRewardData right) => left.Goal.CompareTo(right.Goal));
 	}
 
-	// Token: 0x060082C9 RID: 33481 RVA: 0x001BC868 File Offset: 0x001BAA68
+	// Token: 0x06005660 RID: 22112 RVA: 0x001C55F8 File Offset: 0x001C37F8
 	public LongShanScoreRewardData GetScoreRewardDataById(int id)
 	{
 		LongShanScoreRewardData result;
@@ -444,13 +433,13 @@ public class ActivityLongShanData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060082CA RID: 33482 RVA: 0x001BC885 File Offset: 0x001BAA85
+	// Token: 0x06005661 RID: 22113 RVA: 0x001C5615 File Offset: 0x001C3815
 	public int GetScoreItemCount()
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(this.ScoreItemId, 0);
 	}
 
-	// Token: 0x060082CB RID: 33483 RVA: 0x001BC898 File Offset: 0x001BAA98
+	// Token: 0x06005662 RID: 22114 RVA: 0x001C5628 File Offset: 0x001C3828
 	public int[] GetAllAvailableScoreRewardIds()
 	{
 		List<int> list = new List<int>();
@@ -464,14 +453,14 @@ public class ActivityLongShanData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x04003AF0 RID: 15088
+	// Token: 0x04003B88 RID: 15240
 	private const int TASK_FINISH_PERCENT = 100;
 
-	// Token: 0x04003AF1 RID: 15089
+	// Token: 0x04003B89 RID: 15241
 	[Nullable(2)]
 	public int[] StageIds;
 
-	// Token: 0x04003AF2 RID: 15090
+	// Token: 0x04003B8A RID: 15242
 	[Nullable(new byte[]
 	{
 		2,
@@ -479,15 +468,15 @@ public class ActivityLongShanData : ActivityBaseData
 	})]
 	private Dictionary<int, CSharpScript.Game.Module.Activity.ActivityContent.LongShan.LongShanStageInfo> Stages;
 
-	// Token: 0x04003AF3 RID: 15091
+	// Token: 0x04003B8B RID: 15243
 	public int[] ScoreRewardIds = Array.Empty<int>();
 
-	// Token: 0x04003AF4 RID: 15092
+	// Token: 0x04003B8C RID: 15244
 	private readonly Dictionary<int, LongShanScoreRewardData> ScoreRewards = new Dictionary<int, LongShanScoreRewardData>();
 
-	// Token: 0x04003AF5 RID: 15093
+	// Token: 0x04003B8D RID: 15245
 	public int ScoreItemId;
 
-	// Token: 0x04003AF6 RID: 15094
+	// Token: 0x04003B8E RID: 15246
 	public int ScoreItemTotal;
 }

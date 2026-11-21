@@ -6,7 +6,7 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000BC RID: 188
+	// Token: 0x020000BF RID: 191
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,25 +15,25 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 	})]
 	public class RecallConfigTable : TableReader<RecallConfigRow>
 	{
-		// Token: 0x0600063B RID: 1595 RVA: 0x00036F24 File Offset: 0x00035124
+		// Token: 0x06000656 RID: 1622 RVA: 0x00038A24 File Offset: 0x00036C24
 		protected override string GetTableName()
 		{
 			return "RecallConfig";
 		}
 
-		// Token: 0x0600063C RID: 1596 RVA: 0x00036F2B File Offset: 0x0003512B
+		// Token: 0x06000657 RID: 1623 RVA: 0x00038A2B File Offset: 0x00036C2B
 		protected override string GetDbFile()
 		{
 			return "db_questrecall.db";
 		}
 
-		// Token: 0x0600063D RID: 1597 RVA: 0x00036F32 File Offset: 0x00035132
+		// Token: 0x06000658 RID: 1624 RVA: 0x00038A32 File Offset: 0x00036C32
 		protected override string GetIdString()
 		{
 			return "RecallId";
 		}
 
-		// Token: 0x0600063E RID: 1598 RVA: 0x00036F3C File Offset: 0x0003513C
+		// Token: 0x06000659 RID: 1625 RVA: 0x00038A3C File Offset: 0x00036C3C
 		public override RecallConfigRow Parse(ByteBuffer byteBuffer)
 		{
 			RecallConfigRow recallConfigRow = new RecallConfigRow();

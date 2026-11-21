@@ -4,24 +4,24 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A6B RID: 6763
+	// Token: 0x020004A5 RID: 1189
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.ECharacterControllerUVSwitch")]
 	public enum ECharacterControllerUVSwitch : byte
 	{
-		// Token: 0x0400D8CD RID: 55501
+		// Token: 0x04002F85 RID: 12165
 		UV1,
-		// Token: 0x0400D8CE RID: 55502
+		// Token: 0x04002F86 RID: 12166
 		UV2,
-		// Token: 0x0400D8CF RID: 55503
+		// Token: 0x04002F87 RID: 12167
 		UV3,
-		// Token: 0x0400D8D0 RID: 55504
+		// Token: 0x04002F88 RID: 12168
 		UV4,
-		// Token: 0x0400D8D1 RID: 55505
+		// Token: 0x04002F89 RID: 12169
 		ScreenUV,
-		// Token: 0x0400D8D2 RID: 55506
+		// Token: 0x04002F8A RID: 12170
 		ECharacterControllerUVSwitch_Max,
-		// Token: 0x0400D8D3 RID: 55507
+		// Token: 0x04002F8B RID: 12171
 		ECharacterControllerUVSwitch_MAX
 	}
 }

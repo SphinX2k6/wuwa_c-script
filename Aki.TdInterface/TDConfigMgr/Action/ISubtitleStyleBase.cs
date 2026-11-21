@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EE5 RID: 7909
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200211E RID: 8478
 	public class ISubtitleStyleBase
 	{
-		// Token: 0x0600A936 RID: 43318 RVA: 0x0017DB0C File Offset: 0x0017BD0C
+		// Token: 0x0600B408 RID: 46088 RVA: 0x00193B04 File Offset: 0x00191D04
 		private ISubtitleStyleBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A937 RID: 43319 RVA: 0x0017DB44 File Offset: 0x0017BD44
+		// Token: 0x0600B409 RID: 46089 RVA: 0x00193B3C File Offset: 0x00191D3C
 		public static ISubtitleStyleBase Create([Nullable(2)] ISubtitleStyleBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A938 RID: 43320 RVA: 0x0017DB57 File Offset: 0x0017BD57
+		// Token: 0x0600B40A RID: 46090 RVA: 0x00193B4F File Offset: 0x00191D4F
 		public static ISubtitleStyleBase CreateFromSetValue([Nullable(2)] ISubtitleStyleBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A939 RID: 43321 RVA: 0x0017DB6A File Offset: 0x0017BD6A
+		// Token: 0x0600B40B RID: 46091 RVA: 0x00193B62 File Offset: 0x00191D62
 		public ISubtitleStyleBase_SetValue ToSetValue()
 		{
 			return new ISubtitleStyleBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700339B RID: 13211
-		// (get) Token: 0x0600A93A RID: 43322 RVA: 0x0017DB7D File Offset: 0x0017BD7D
-		// (set) Token: 0x0600A93B RID: 43323 RVA: 0x0017DBA8 File Offset: 0x0017BDA8
+		// Token: 0x17003666 RID: 13926
+		// (get) Token: 0x0600B40C RID: 46092 RVA: 0x00193B75 File Offset: 0x00191D75
+		// (set) Token: 0x0600B40D RID: 46093 RVA: 0x00193BA0 File Offset: 0x00191DA0
 		public virtual ESubtitleStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064B6 RID: 25782
+		// Token: 0x04006AA5 RID: 27301
 		[Nullable(2)]
 		protected ISubtitleStyleBase FbInstance;
 
-		// Token: 0x040064B7 RID: 25783
+		// Token: 0x04006AA6 RID: 27302
 		[Nullable(2)]
 		protected ISubtitleStyleBase_SetValue PocoInterface;
 	}

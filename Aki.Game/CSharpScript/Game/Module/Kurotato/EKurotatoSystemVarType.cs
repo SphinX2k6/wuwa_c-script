@@ -3,37 +3,37 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056D6 RID: 22230
+	// Token: 0x020046AD RID: 18093
 	[EnumExtensions]
 	public enum EKurotatoSystemVarType
 	{
-		// Token: 0x0401DB2D RID: 121645
+		// Token: 0x040185C3 RID: 99779
 		Gold,
-		// Token: 0x0401DB2E RID: 121646
+		// Token: 0x040185C4 RID: 99780
 		SpareGold,
-		// Token: 0x0401DB2F RID: 121647
+		// Token: 0x040185C5 RID: 99781
 		RoleLevel,
-		// Token: 0x0401DB30 RID: 121648
+		// Token: 0x040185C6 RID: 99782
 		TotalRoleExp,
-		// Token: 0x0401DB31 RID: 121649
+		// Token: 0x040185C7 RID: 99783
 		Batch,
-		// Token: 0x0401DB32 RID: 121650
+		// Token: 0x040185C8 RID: 99784
 		RealBatch,
-		// Token: 0x0401DB33 RID: 121651
+		// Token: 0x040185C9 RID: 99785
 		BatchType,
-		// Token: 0x0401DB34 RID: 121652
+		// Token: 0x040185CA RID: 99786
 		BatchConfigId,
-		// Token: 0x0401DB35 RID: 121653
+		// Token: 0x040185CB RID: 99787
 		MaxBatch,
-		// Token: 0x0401DB36 RID: 121654
+		// Token: 0x040185CC RID: 99788
 		TreasureBoxCount,
-		// Token: 0x0401DB37 RID: 121655
+		// Token: 0x040185CD RID: 99789
 		UpgradeCount,
-		// Token: 0x0401DB38 RID: 121656
+		// Token: 0x040185CE RID: 99790
 		ConsecutiveKillCount,
-		// Token: 0x0401DB39 RID: 121657
+		// Token: 0x040185CF RID: 99791
 		GoldGainEfficiency,
-		// Token: 0x0401DB3A RID: 121658
+		// Token: 0x040185D0 RID: 99792
 		NeedRollback
 	}
 }

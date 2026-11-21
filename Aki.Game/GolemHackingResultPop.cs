@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200100E RID: 4110
+// Token: 0x020004C2 RID: 1218
 public class GolemHackingResultPop : UiViewBase
 {
-	// Token: 0x0600696D RID: 26989 RVA: 0x00150811 File Offset: 0x0014EA11
+	// Token: 0x06003D02 RID: 15618 RVA: 0x00159139 File Offset: 0x00157339
 	[NullableContext(1)]
 	public GolemHackingResultPop(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600696E RID: 26990 RVA: 0x0015081C File Offset: 0x0014EA1C
+	// Token: 0x06003D03 RID: 15619 RVA: 0x00159144 File Offset: 0x00157344
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,7 +26,7 @@ public class GolemHackingResultPop : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600696F RID: 26991 RVA: 0x00150864 File Offset: 0x0014EA64
+	// Token: 0x06003D04 RID: 15620 RVA: 0x0015918C File Offset: 0x0015738C
 	protected override void OnStart()
 	{
 		GolemHackingResultInfo golemHackingResultInfo = (GolemHackingResultInfo)this.OpenParam;
@@ -42,7 +42,7 @@ public class GolemHackingResultPop : UiViewBase
 		text.ShowTextNew(this.IsSuccess ? "IntrusionProtocol_SucceedTips" : "IntrusionProtocol_FailTips");
 	}
 
-	// Token: 0x06006970 RID: 26992 RVA: 0x001508DB File Offset: 0x0014EADB
+	// Token: 0x06003D05 RID: 15621 RVA: 0x00159203 File Offset: 0x00157403
 	protected override void OnFinishShow()
 	{
 		base.CloseMe(delegate(bool _)
@@ -56,17 +56,17 @@ public class GolemHackingResultPop : UiViewBase
 		});
 	}
 
-	// Token: 0x04003098 RID: 12440
+	// Token: 0x04003131 RID: 12593
 	[Nullable(2)]
 	protected Action CloseCallback;
 
-	// Token: 0x04003099 RID: 12441
+	// Token: 0x04003132 RID: 12594
 	protected bool IsSuccess;
 
-	// Token: 0x02007608 RID: 30216
+	// Token: 0x0200679C RID: 26524
 	private enum EDefine
 	{
-		// Token: 0x04026FE8 RID: 159720
+		// Token: 0x04022333 RID: 140083
 		Txt
 	}
 }

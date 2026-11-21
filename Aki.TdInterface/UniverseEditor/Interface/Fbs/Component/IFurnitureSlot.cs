@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052DC RID: 21212
+	// Token: 0x0200585F RID: 22623
 	public struct IFurnitureSlot : IFlatbufferObject
 	{
-		// Token: 0x17009BAA RID: 39850
-		// (get) Token: 0x060229E5 RID: 141797 RVA: 0x004CC717 File Offset: 0x004CA917
+		// Token: 0x1700A3DB RID: 41947
+		// (get) Token: 0x06024A7F RID: 150143 RVA: 0x00509243 File Offset: 0x00507443
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060229E6 RID: 141798 RVA: 0x004CC724 File Offset: 0x004CA924
+		// Token: 0x06024A80 RID: 150144 RVA: 0x00509250 File Offset: 0x00507450
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060229E7 RID: 141799 RVA: 0x004CC72C File Offset: 0x004CA92C
+		// Token: 0x06024A81 RID: 150145 RVA: 0x00509258 File Offset: 0x00507458
 		public static IFurnitureSlot GetRootAsIFurnitureSlot(ByteBuffer _bb)
 		{
 			return IFurnitureSlot.GetRootAsIFurnitureSlot(_bb, default(IFurnitureSlot));
 		}
 
-		// Token: 0x060229E8 RID: 141800 RVA: 0x004CC748 File Offset: 0x004CA948
+		// Token: 0x06024A82 RID: 150146 RVA: 0x00509274 File Offset: 0x00507474
 		public static IFurnitureSlot GetRootAsIFurnitureSlot(ByteBuffer _bb, IFurnitureSlot obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060229E9 RID: 141801 RVA: 0x004CC765 File Offset: 0x004CA965
+		// Token: 0x06024A83 RID: 150147 RVA: 0x00509291 File Offset: 0x00507491
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060229EA RID: 141802 RVA: 0x004CC774 File Offset: 0x004CA974
+		// Token: 0x06024A84 RID: 150148 RVA: 0x005092A0 File Offset: 0x005074A0
 		public IFurnitureSlot __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009BAB RID: 39851
-		// (get) Token: 0x060229EB RID: 141803 RVA: 0x004CC784 File Offset: 0x004CA984
+		// Token: 0x1700A3DC RID: 41948
+		// (get) Token: 0x06024A85 RID: 150149 RVA: 0x005092B0 File Offset: 0x005074B0
 		public IFurnitureCamera? SlotCamera
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BAC RID: 39852
-		// (get) Token: 0x060229EC RID: 141804 RVA: 0x004CC7E4 File Offset: 0x004CA9E4
+		// Token: 0x1700A3DD RID: 41949
+		// (get) Token: 0x06024A86 RID: 150150 RVA: 0x00509310 File Offset: 0x00507510
 		public ISlotShape? SlotShape
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BAD RID: 39853
-		// (get) Token: 0x060229ED RID: 141805 RVA: 0x004CC844 File Offset: 0x004CAA44
+		// Token: 0x1700A3DE RID: 41950
+		// (get) Token: 0x06024A87 RID: 150151 RVA: 0x00509370 File Offset: 0x00507570
 		public int FurnitureTag
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060229EE RID: 141806 RVA: 0x004CC880 File Offset: 0x004CAA80
+		// Token: 0x06024A88 RID: 150152 RVA: 0x005093AC File Offset: 0x005075AC
 		public int ExcludedFurnitureIds(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17009BAE RID: 39854
-		// (get) Token: 0x060229EF RID: 141807 RVA: 0x004CC8C0 File Offset: 0x004CAAC0
+		// Token: 0x1700A3DF RID: 41951
+		// (get) Token: 0x06024A89 RID: 150153 RVA: 0x005093EC File Offset: 0x005075EC
 		public int ExcludedFurnitureIdsLength
 		{
 			get
@@ -119,20 +119,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060229F0 RID: 141808 RVA: 0x004CC8EC File Offset: 0x004CAAEC
+		// Token: 0x06024A8A RID: 150154 RVA: 0x00509418 File Offset: 0x00507618
 		public Span<int> GetExcludedFurnitureIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x060229F1 RID: 141809 RVA: 0x004CC8FC File Offset: 0x004CAAFC
+		// Token: 0x06024A8B RID: 150155 RVA: 0x00509428 File Offset: 0x00507628
 		public int[] GetExcludedFurnitureIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(10);
 		}
 
-		// Token: 0x17009BAF RID: 39855
-		// (get) Token: 0x060229F2 RID: 141810 RVA: 0x004CC90C File Offset: 0x004CAB0C
+		// Token: 0x1700A3E0 RID: 41952
+		// (get) Token: 0x06024A8C RID: 150156 RVA: 0x00509438 File Offset: 0x00507638
 		public byte NullMask
 		{
 			get
@@ -146,7 +146,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060229F3 RID: 141811 RVA: 0x004CC949 File Offset: 0x004CAB49
+		// Token: 0x06024A8D RID: 150157 RVA: 0x00509475 File Offset: 0x00507675
 		public static Offset<IFurnitureSlot> CreateIFurnitureSlot(FlatBufferBuilder builder, Offset<IFurnitureCamera> SlotCameraOffset = default(Offset<IFurnitureCamera>), Offset<ISlotShape> SlotShapeOffset = default(Offset<ISlotShape>), int FurnitureTag = 0, VectorOffset ExcludedFurnitureIdsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -158,37 +158,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFurnitureSlot.EndIFurnitureSlot(builder);
 		}
 
-		// Token: 0x060229F4 RID: 141812 RVA: 0x004CC97D File Offset: 0x004CAB7D
+		// Token: 0x06024A8E RID: 150158 RVA: 0x005094A9 File Offset: 0x005076A9
 		public static void StartIFurnitureSlot(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x060229F5 RID: 141813 RVA: 0x004CC986 File Offset: 0x004CAB86
+		// Token: 0x06024A8F RID: 150159 RVA: 0x005094B2 File Offset: 0x005076B2
 		public static void AddSlotCamera(FlatBufferBuilder builder, Offset<IFurnitureCamera> slotCameraOffset)
 		{
 			builder.AddOffset(0, slotCameraOffset.Value, 0);
 		}
 
-		// Token: 0x060229F6 RID: 141814 RVA: 0x004CC996 File Offset: 0x004CAB96
+		// Token: 0x06024A90 RID: 150160 RVA: 0x005094C2 File Offset: 0x005076C2
 		public static void AddSlotShape(FlatBufferBuilder builder, Offset<ISlotShape> slotShapeOffset)
 		{
 			builder.AddOffset(1, slotShapeOffset.Value, 0);
 		}
 
-		// Token: 0x060229F7 RID: 141815 RVA: 0x004CC9A6 File Offset: 0x004CABA6
+		// Token: 0x06024A91 RID: 150161 RVA: 0x005094D2 File Offset: 0x005076D2
 		public static void AddFurnitureTag(FlatBufferBuilder builder, int furnitureTag)
 		{
 			builder.AddInt(2, furnitureTag, 0);
 		}
 
-		// Token: 0x060229F8 RID: 141816 RVA: 0x004CC9B1 File Offset: 0x004CABB1
+		// Token: 0x06024A92 RID: 150162 RVA: 0x005094DD File Offset: 0x005076DD
 		public static void AddExcludedFurnitureIds(FlatBufferBuilder builder, VectorOffset excludedFurnitureIdsOffset)
 		{
 			builder.AddOffset(3, excludedFurnitureIdsOffset.Value, 0);
 		}
 
-		// Token: 0x060229F9 RID: 141817 RVA: 0x004CC9C4 File Offset: 0x004CABC4
+		// Token: 0x06024A93 RID: 150163 RVA: 0x005094F0 File Offset: 0x005076F0
 		public static VectorOffset CreateExcludedFurnitureIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060229FA RID: 141818 RVA: 0x004CC9FB File Offset: 0x004CABFB
+		// Token: 0x06024A94 RID: 150164 RVA: 0x00509527 File Offset: 0x00507727
 		public static VectorOffset CreateExcludedFurnitureIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060229FB RID: 141819 RVA: 0x004CCA15 File Offset: 0x004CAC15
+		// Token: 0x06024A95 RID: 150165 RVA: 0x00509541 File Offset: 0x00507741
 		public static VectorOffset CreateExcludedFurnitureIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -215,7 +215,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060229FC RID: 141820 RVA: 0x004CCA33 File Offset: 0x004CAC33
+		// Token: 0x06024A96 RID: 150166 RVA: 0x0050955F File Offset: 0x0050775F
 		public static VectorOffset CreateExcludedFurnitureIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -223,25 +223,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060229FD RID: 141821 RVA: 0x004CCA4C File Offset: 0x004CAC4C
+		// Token: 0x06024A97 RID: 150167 RVA: 0x00509578 File Offset: 0x00507778
 		public static void StartExcludedFurnitureIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060229FE RID: 141822 RVA: 0x004CCA57 File Offset: 0x004CAC57
+		// Token: 0x06024A98 RID: 150168 RVA: 0x00509583 File Offset: 0x00507783
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x060229FF RID: 141823 RVA: 0x004CCA62 File Offset: 0x004CAC62
+		// Token: 0x06024A99 RID: 150169 RVA: 0x0050958E File Offset: 0x0050778E
 		public static Offset<IFurnitureSlot> EndIFurnitureSlot(FlatBufferBuilder builder)
 		{
 			return new Offset<IFurnitureSlot>(builder.EndTable());
 		}
 
-		// Token: 0x06022A00 RID: 141824 RVA: 0x004CCA70 File Offset: 0x004CAC70
+		// Token: 0x06024A9A RID: 150170 RVA: 0x0050959C File Offset: 0x0050779C
 		public IFurnitureSlotT UnPack()
 		{
 			IFurnitureSlotT furnitureSlotT = new IFurnitureSlotT();
@@ -249,7 +249,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return furnitureSlotT;
 		}
 
-		// Token: 0x06022A01 RID: 141825 RVA: 0x004CCA8C File Offset: 0x004CAC8C
+		// Token: 0x06024A9B RID: 150171 RVA: 0x005095B8 File Offset: 0x005077B8
 		public void UnPackTo(IFurnitureSlotT _o)
 		{
 			_o.SlotCamera = ((this.SlotCamera != null) ? this.SlotCamera.Value.UnPack() : null);
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022A02 RID: 141826 RVA: 0x004CCB44 File Offset: 0x004CAD44
+		// Token: 0x06024A9C RID: 150172 RVA: 0x00509670 File Offset: 0x00507870
 		public static Offset<IFurnitureSlot> Pack(FlatBufferBuilder builder, IFurnitureSlotT _o)
 		{
 			if (_o == null)
@@ -281,7 +281,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFurnitureSlot.CreateIFurnitureSlot(builder, slotCameraOffset, slotShapeOffset, _o.FurnitureTag, excludedFurnitureIdsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E476 RID: 58486
+		// Token: 0x0400F0A2 RID: 61602
 		private Table __p;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023F8 RID: 9208
+	// Token: 0x0200268F RID: 9871
 	public class ERogueSelectRoomTypeJsonConverter : JsonConverter<ERogueSelectRoomType>
 	{
-		// Token: 0x0600C85C RID: 51292 RVA: 0x001D52D8 File Offset: 0x001D34D8
+		// Token: 0x0600D4DF RID: 54495 RVA: 0x001EEA84 File Offset: 0x001ECC84
 		public override ERogueSelectRoomType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ERogueSelectRoomTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C85D RID: 51293 RVA: 0x001D52FC File Offset: 0x001D34FC
+		// Token: 0x0600D4E0 RID: 54496 RVA: 0x001EEAA8 File Offset: 0x001ECCA8
 		public override void Write(Utf8JsonWriter writer, ERogueSelectRoomType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

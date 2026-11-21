@@ -18,9 +18,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskLookForSceneItem.TsTaskLookForSceneItem_C")]
 public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000181 RID: 385
-	// (get) Token: 0x060008E2 RID: 2274 RVA: 0x0002D171 File Offset: 0x0002B371
-	// (set) Token: 0x060008E3 RID: 2275 RVA: 0x0002D185 File Offset: 0x0002B385
+	// Token: 0x17000183 RID: 387
+	// (get) Token: 0x060008E6 RID: 2278 RVA: 0x0002E0DD File Offset: 0x0002C2DD
+	// (set) Token: 0x060008E7 RID: 2279 RVA: 0x0002E0F1 File Offset: 0x0002C2F1
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe string OutBlackboardKey
 	{
@@ -34,9 +34,9 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000182 RID: 386
-	// (get) Token: 0x060008E4 RID: 2276 RVA: 0x0002D19A File Offset: 0x0002B39A
-	// (set) Token: 0x060008E5 RID: 2277 RVA: 0x0002D1AA File Offset: 0x0002B3AA
+	// Token: 0x17000184 RID: 388
+	// (get) Token: 0x060008E8 RID: 2280 RVA: 0x0002E106 File Offset: 0x0002C306
+	// (set) Token: 0x060008E9 RID: 2281 RVA: 0x0002E116 File Offset: 0x0002C316
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe float DetectDistance
 	{
@@ -50,9 +50,9 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000183 RID: 387
-	// (get) Token: 0x060008E6 RID: 2278 RVA: 0x0002D1BB File Offset: 0x0002B3BB
-	// (set) Token: 0x060008E7 RID: 2279 RVA: 0x0002D1CB File Offset: 0x0002B3CB
+	// Token: 0x17000185 RID: 389
+	// (get) Token: 0x060008EA RID: 2282 RVA: 0x0002E127 File Offset: 0x0002C327
+	// (set) Token: 0x060008EB RID: 2283 RVA: 0x0002E137 File Offset: 0x0002C337
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe bool NavigationOn
 	{
@@ -66,9 +66,9 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000184 RID: 388
-	// (get) Token: 0x060008E8 RID: 2280 RVA: 0x0002D1DC File Offset: 0x0002B3DC
-	// (set) Token: 0x060008E9 RID: 2281 RVA: 0x0002D1EC File Offset: 0x0002B3EC
+	// Token: 0x17000186 RID: 390
+	// (get) Token: 0x060008EC RID: 2284 RVA: 0x0002E148 File Offset: 0x0002C348
+	// (set) Token: 0x060008ED RID: 2285 RVA: 0x0002E158 File Offset: 0x0002C358
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe bool BotanyItem
 	{
@@ -82,9 +82,9 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000185 RID: 389
-	// (get) Token: 0x060008EA RID: 2282 RVA: 0x0002D1FD File Offset: 0x0002B3FD
-	// (set) Token: 0x060008EB RID: 2283 RVA: 0x0002D20D File Offset: 0x0002B40D
+	// Token: 0x17000187 RID: 391
+	// (get) Token: 0x060008EE RID: 2286 RVA: 0x0002E169 File Offset: 0x0002C369
+	// (set) Token: 0x060008EF RID: 2287 RVA: 0x0002E179 File Offset: 0x0002C379
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe bool MineralItem
 	{
@@ -98,9 +98,9 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000186 RID: 390
-	// (get) Token: 0x060008EC RID: 2284 RVA: 0x0002D21E File Offset: 0x0002B41E
-	// (set) Token: 0x060008ED RID: 2285 RVA: 0x0002D22E File Offset: 0x0002B42E
+	// Token: 0x17000188 RID: 392
+	// (get) Token: 0x060008F0 RID: 2288 RVA: 0x0002E18A File Offset: 0x0002C38A
+	// (set) Token: 0x060008F1 RID: 2289 RVA: 0x0002E19A File Offset: 0x0002C39A
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe bool DropItem
 	{
@@ -114,9 +114,9 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000187 RID: 391
-	// (get) Token: 0x060008EE RID: 2286 RVA: 0x0002D23F File Offset: 0x0002B43F
-	// (set) Token: 0x060008EF RID: 2287 RVA: 0x0002D24F File Offset: 0x0002B44F
+	// Token: 0x17000189 RID: 393
+	// (get) Token: 0x060008F2 RID: 2290 RVA: 0x0002E1AB File Offset: 0x0002C3AB
+	// (set) Token: 0x060008F3 RID: 2291 RVA: 0x0002E1BB File Offset: 0x0002C3BB
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe bool RecognizableMeteorite
 	{
@@ -130,9 +130,9 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17000188 RID: 392
-	// (get) Token: 0x060008F0 RID: 2288 RVA: 0x0002D260 File Offset: 0x0002B460
-	// (set) Token: 0x060008F1 RID: 2289 RVA: 0x0002D274 File Offset: 0x0002B474
+	// Token: 0x1700018A RID: 394
+	// (get) Token: 0x060008F4 RID: 2292 RVA: 0x0002E1CC File Offset: 0x0002C3CC
+	// (set) Token: 0x060008F5 RID: 2293 RVA: 0x0002E1E0 File Offset: 0x0002C3E0
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe string State
 	{
@@ -146,7 +146,7 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x060008F2 RID: 2290 RVA: 0x0002D28C File Offset: 0x0002B48C
+	// Token: 0x060008F6 RID: 2294 RVA: 0x0002E1F8 File Offset: 0x0002C3F8
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -163,31 +163,28 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x060008F3 RID: 2291 RVA: 0x0002D310 File Offset: 0x0002B510
+	// Token: 0x060008F7 RID: 2295 RVA: 0x0002E27C File Offset: 0x0002C47C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskLookForSceneItem) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskLookForSceneItem.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060008F4 RID: 2292 RVA: 0x0002D3B0 File Offset: 0x0002B5B0
+	// Token: 0x060008F8 RID: 2296 RVA: 0x0002E334 File Offset: 0x0002C534
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -316,7 +313,7 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		base.FinishExecute(false);
 	}
 
-	// Token: 0x060008F5 RID: 2293 RVA: 0x0002D6F0 File Offset: 0x0002B8F0
+	// Token: 0x060008F9 RID: 2297 RVA: 0x0002E674 File Offset: 0x0002C874
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskLookForSceneItem._ClassPtr == IntPtr.Zero)
@@ -326,22 +323,22 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		return TsTaskLookForSceneItem._ClassPtr;
 	}
 
-	// Token: 0x060008F6 RID: 2294 RVA: 0x0002D714 File Offset: 0x0002B914
+	// Token: 0x060008FA RID: 2298 RVA: 0x0002E698 File Offset: 0x0002C898
 	public TsTaskLookForSceneItem() : this(BuiltinUtils.AllocNativeUObject(TsTaskLookForSceneItem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060008F7 RID: 2295 RVA: 0x0002D73C File Offset: 0x0002B93C
+	// Token: 0x060008FB RID: 2299 RVA: 0x0002E6C0 File Offset: 0x0002C8C0
 	public TsTaskLookForSceneItem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskLookForSceneItem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060008F8 RID: 2296 RVA: 0x0002D76F File Offset: 0x0002B96F
+	// Token: 0x060008FC RID: 2300 RVA: 0x0002E6F3 File Offset: 0x0002C8F3
 	protected TsTaskLookForSceneItem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060008F9 RID: 2297 RVA: 0x0002D79C File Offset: 0x0002B99C
+	// Token: 0x060008FD RID: 2301 RVA: 0x0002E720 File Offset: 0x0002C920
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -350,63 +347,63 @@ public class TsTaskLookForSceneItem : TsTaskAbortImmediatelyBase, IUnrealUObject
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x040006CE RID: 1742
+	// Token: 0x040006D2 RID: 1746
 	private bool IsInitTsVariables;
 
-	// Token: 0x040006CF RID: 1743
+	// Token: 0x040006D3 RID: 1747
 	private string TsOutBlackboardKey = "";
 
-	// Token: 0x040006D0 RID: 1744
+	// Token: 0x040006D4 RID: 1748
 	private float TsDetectDistance;
 
-	// Token: 0x040006D1 RID: 1745
+	// Token: 0x040006D5 RID: 1749
 	private bool TsNavigationOn;
 
-	// Token: 0x040006D2 RID: 1746
+	// Token: 0x040006D6 RID: 1750
 	private bool TsBotanyItem;
 
-	// Token: 0x040006D3 RID: 1747
+	// Token: 0x040006D7 RID: 1751
 	private bool TsMineralItem;
 
-	// Token: 0x040006D4 RID: 1748
+	// Token: 0x040006D8 RID: 1752
 	private bool TsDropItem;
 
-	// Token: 0x040006D5 RID: 1749
+	// Token: 0x040006D9 RID: 1753
 	private List<EntityHandle> TmpHandles = new List<EntityHandle>();
 
-	// Token: 0x040006D6 RID: 1750
+	// Token: 0x040006DA RID: 1754
 	private string TsState = "";
 
-	// Token: 0x040006D7 RID: 1751
+	// Token: 0x040006DB RID: 1755
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskLookForSceneItem.TsTaskLookForSceneItem_C";
 
-	// Token: 0x040006D8 RID: 1752
+	// Token: 0x040006DC RID: 1756
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040006D9 RID: 1753
+	// Token: 0x040006DD RID: 1757
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040006DA RID: 1754
+	// Token: 0x040006DE RID: 1758
 	private static int __PropertyOffset_OutBlackboardKey;
 
-	// Token: 0x040006DB RID: 1755
+	// Token: 0x040006DF RID: 1759
 	private static int __PropertyOffset_DetectDistance;
 
-	// Token: 0x040006DC RID: 1756
+	// Token: 0x040006E0 RID: 1760
 	private static int __PropertyOffset_NavigationOn;
 
-	// Token: 0x040006DD RID: 1757
+	// Token: 0x040006E1 RID: 1761
 	private static int __PropertyOffset_BotanyItem;
 
-	// Token: 0x040006DE RID: 1758
+	// Token: 0x040006E2 RID: 1762
 	private static int __PropertyOffset_MineralItem;
 
-	// Token: 0x040006DF RID: 1759
+	// Token: 0x040006E3 RID: 1763
 	private static int __PropertyOffset_DropItem;
 
-	// Token: 0x040006E0 RID: 1760
+	// Token: 0x040006E4 RID: 1764
 	private static int __PropertyOffset_RecognizableMeteorite;
 
-	// Token: 0x040006E1 RID: 1761
+	// Token: 0x040006E5 RID: 1765
 	private static int __PropertyOffset_State;
 }

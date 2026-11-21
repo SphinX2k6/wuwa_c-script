@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001132 RID: 4402
+// Token: 0x020005E6 RID: 1510
 [NullableContext(1)]
 public interface IBabelTowerDeTermSelectItemInfo
 {
-	// Token: 0x170009DB RID: 2523
-	// (get) Token: 0x0600738A RID: 29578
-	// (set) Token: 0x0600738B RID: 29579
+	// Token: 0x170009FB RID: 2555
+	// (get) Token: 0x06004721 RID: 18209
+	// (set) Token: 0x06004722 RID: 18210
 	bool IsNecessary { get; set; }
 
-	// Token: 0x170009DC RID: 2524
-	// (get) Token: 0x0600738C RID: 29580
-	// (set) Token: 0x0600738D RID: 29581
+	// Token: 0x170009FC RID: 2556
+	// (get) Token: 0x06004723 RID: 18211
+	// (set) Token: 0x06004724 RID: 18212
 	List<int> AllDeTerm { get; set; }
 
-	// Token: 0x170009DD RID: 2525
-	// (get) Token: 0x0600738E RID: 29582
-	// (set) Token: 0x0600738F RID: 29583
+	// Token: 0x170009FD RID: 2557
+	// (get) Token: 0x06004725 RID: 18213
+	// (set) Token: 0x06004726 RID: 18214
 	List<int> DailyDeTerm { get; set; }
 
-	// Token: 0x170009DE RID: 2526
-	// (get) Token: 0x06007390 RID: 29584
-	// (set) Token: 0x06007391 RID: 29585
+	// Token: 0x170009FE RID: 2558
+	// (get) Token: 0x06004727 RID: 18215
+	// (set) Token: 0x06004728 RID: 18216
 	Action<int> OnChangeSelectDeTerm { get; set; }
 }

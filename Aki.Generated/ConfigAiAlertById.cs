@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200007F RID: 127
+	// Token: 0x02000087 RID: 135
 	public class ConfigAiAlertById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060002FA RID: 762 RVA: 0x0006A434 File Offset: 0x00068634
+		// Token: 0x0600032A RID: 810 RVA: 0x0006ECE8 File Offset: 0x0006CEE8
 		static ConfigAiAlertById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiAlertById.CreateStaticDefaultValue), new Action(ConfigAiAlertById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060002FB RID: 763 RVA: 0x0006A454 File Offset: 0x00068654
+		// Token: 0x0600032B RID: 811 RVA: 0x0006ED08 File Offset: 0x0006CF08
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiAlertById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060002FC RID: 764 RVA: 0x0006A4D3 File Offset: 0x000686D3
+		// Token: 0x0600032C RID: 812 RVA: 0x0006ED87 File Offset: 0x0006CF87
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiAlertById.LogPair = null;
 			ConfigAiAlertById.HandleId = 0;
 		}
 
-		// Token: 0x060002FD RID: 765 RVA: 0x0006A4E1 File Offset: 0x000686E1
+		// Token: 0x0600032D RID: 813 RVA: 0x0006ED95 File Offset: 0x0006CF95
 		public static void Init()
 		{
 			ConfigAiAlertById.HandleId = ConfigCommon.InitDataStatement(ConfigAiAlertById.HandleId, "db_ai.db", "select BinData from `AiAlert` where Id=?");
 		}
 
-		// Token: 0x060002FE RID: 766 RVA: 0x0006A4FC File Offset: 0x000686FC
+		// Token: 0x0600032E RID: 814 RVA: 0x0006EDB0 File Offset: 0x0006CFB0
 		public static AiAlert? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiAlertById.HandleId, ConfigAiAlertById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AiAlert?(rootAsAiAlert);
 		}
 
-		// Token: 0x0400035D RID: 861
+		// Token: 0x04000395 RID: 917
 		private const string DB = "db_ai.db";
 
-		// Token: 0x0400035E RID: 862
+		// Token: 0x04000396 RID: 918
 		private const string FILE = "a.AI警戒.xlsx";
 
-		// Token: 0x0400035F RID: 863
+		// Token: 0x04000397 RID: 919
 		private const string TABLE = "AiAlert";
 
-		// Token: 0x04000360 RID: 864
+		// Token: 0x04000398 RID: 920
 		private const string COMMAND = "select BinData from `AiAlert` where Id=?";
 
-		// Token: 0x04000361 RID: 865
+		// Token: 0x04000399 RID: 921
 		private const string KEY_PREFIX = "AiAlertById";
 
-		// Token: 0x04000362 RID: 866
+		// Token: 0x0400039A RID: 922
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000363 RID: 867
+		// Token: 0x0400039B RID: 923
 		private static int HandleId;
 	}
 }

@@ -6,12 +6,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000E82 RID: 3714
+// Token: 0x02000337 RID: 823
 [UClass("/Game/Aki/TypeScript/Game/KuroSimpleCombat/KSCDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/KuroSimpleCombat/KSCDataClass/KscBpDataBase.KscBpDataBase_C")]
 public class KscBpDataBase : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06005AB9 RID: 23225 RVA: 0x00108954 File Offset: 0x00106B54
+	// Token: 0x06002E50 RID: 11856 RVA: 0x00110604 File Offset: 0x0010E804
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (KscBpDataBase._ClassPtr == IntPtr.Zero)
@@ -21,29 +21,29 @@ public class KscBpDataBase : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 		return KscBpDataBase._ClassPtr;
 	}
 
-	// Token: 0x06005ABA RID: 23226 RVA: 0x00108978 File Offset: 0x00106B78
+	// Token: 0x06002E51 RID: 11857 RVA: 0x00110628 File Offset: 0x0010E828
 	public KscBpDataBase() : this(BuiltinUtils.AllocNativeUObject(KscBpDataBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06005ABB RID: 23227 RVA: 0x001089A0 File Offset: 0x00106BA0
+	// Token: 0x06002E52 RID: 11858 RVA: 0x00110650 File Offset: 0x0010E850
 	[NullableContext(1)]
 	public KscBpDataBase(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(KscBpDataBase.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06005ABC RID: 23228 RVA: 0x001089D3 File Offset: 0x00106BD3
+	// Token: 0x06002E53 RID: 11859 RVA: 0x00110683 File Offset: 0x0010E883
 	protected KscBpDataBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x04002974 RID: 10612
+	// Token: 0x04002A0F RID: 10767
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/KuroSimpleCombat/KSCDataClass/KscBpDataBase.KscBpDataBase_C";
 
-	// Token: 0x04002975 RID: 10613
+	// Token: 0x04002A10 RID: 10768
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04002976 RID: 10614
+	// Token: 0x04002A11 RID: 10769
 	private static IntPtr _ClassDefaultObjectPtr;
 }

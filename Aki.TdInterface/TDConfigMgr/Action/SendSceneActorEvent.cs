@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200218B RID: 8587
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023F4 RID: 9204
 	public class SendSceneActorEvent : ActionParams
 	{
-		// Token: 0x0600BCAE RID: 48302 RVA: 0x001B2DCC File Offset: 0x001B0FCC
+		// Token: 0x0600C85E RID: 51294 RVA: 0x001CA2C4 File Offset: 0x001C84C4
 		private SendSceneActorEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BCAF RID: 48303 RVA: 0x001B2E04 File Offset: 0x001B1004
+		// Token: 0x0600C85F RID: 51295 RVA: 0x001CA2FC File Offset: 0x001C84FC
 		public static SendSceneActorEvent Create([Nullable(2)] SendSceneActorEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCB0 RID: 48304 RVA: 0x001B2E17 File Offset: 0x001B1017
+		// Token: 0x0600C860 RID: 51296 RVA: 0x001CA30F File Offset: 0x001C850F
 		public static SendSceneActorEvent CreateFromSetValue([Nullable(2)] SendSceneActorEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCB1 RID: 48305 RVA: 0x001B2E2A File Offset: 0x001B102A
+		// Token: 0x0600C861 RID: 51297 RVA: 0x001CA322 File Offset: 0x001C8522
 		public SendSceneActorEvent_SetValue ToSetValue()
 		{
 			return new SendSceneActorEvent_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003967 RID: 14695
-		// (get) Token: 0x0600BCB2 RID: 48306 RVA: 0x001B2E3D File Offset: 0x001B103D
-		// (set) Token: 0x0600BCB3 RID: 48307 RVA: 0x001B2E64 File Offset: 0x001B1064
+		// Token: 0x17003C59 RID: 15449
+		// (get) Token: 0x0600C862 RID: 51298 RVA: 0x001CA335 File Offset: 0x001C8535
+		// (set) Token: 0x0600C863 RID: 51299 RVA: 0x001CA35C File Offset: 0x001C855C
 		public virtual ISceneActorEvent ActorEvent
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070A6 RID: 28838
+		// Token: 0x040076E8 RID: 30440
 		[Nullable(2)]
 		protected new SendSceneActorEvent FbInstance;
 
-		// Token: 0x040070A7 RID: 28839
+		// Token: 0x040076E9 RID: 30441
 		[Nullable(2)]
 		protected SendSceneActorEvent_SetValue PocoInterface;
 	}

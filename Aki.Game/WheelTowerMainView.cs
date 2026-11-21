@@ -4,8 +4,6 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
-using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season;
@@ -17,18 +15,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200161B RID: 5659
+// Token: 0x02000AD3 RID: 2771
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerMainView : UiTickViewBase
 {
-	// Token: 0x06009F2B RID: 40747 RVA: 0x0022D95C File Offset: 0x0022BB5C
+	// Token: 0x06007309 RID: 29449 RVA: 0x0023778C File Offset: 0x0023598C
 	[NullableContext(1)]
 	public WheelTowerMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009F2C RID: 40748 RVA: 0x0022D968 File Offset: 0x0022BB68
+	// Token: 0x0600730A RID: 29450 RVA: 0x00237798 File Offset: 0x00235998
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 16;
@@ -79,7 +77,7 @@ public class WheelTowerMainView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009F2D RID: 40749 RVA: 0x0022DC0C File Offset: 0x0022BE0C
+	// Token: 0x0600730B RID: 29451 RVA: 0x00237A3C File Offset: 0x00235C3C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerMainView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -90,19 +88,19 @@ public class WheelTowerMainView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F2E RID: 40750 RVA: 0x0022DC4F File Offset: 0x0022BE4F
+	// Token: 0x0600730C RID: 29452 RVA: 0x00237A7F File Offset: 0x00235C7F
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 	}
 
-	// Token: 0x06009F2F RID: 40751 RVA: 0x0022DC6D File Offset: 0x0022BE6D
+	// Token: 0x0600730D RID: 29453 RVA: 0x00237A9D File Offset: 0x00235C9D
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 	}
 
-	// Token: 0x06009F30 RID: 40752 RVA: 0x0022DC8C File Offset: 0x0022BE8C
+	// Token: 0x0600730E RID: 29454 RVA: 0x00237ABC File Offset: 0x00235CBC
 	protected override void OnStart()
 	{
 		UiSequencePlayer bgSequencePlayer = this.BgSequencePlayer;
@@ -113,7 +111,7 @@ public class WheelTowerMainView : UiTickViewBase
 		bgSequencePlayer.PlayOrReplaySequenceByName("SpineStart", false, null);
 	}
 
-	// Token: 0x06009F31 RID: 40753 RVA: 0x0022DCB8 File Offset: 0x0022BEB8
+	// Token: 0x0600730F RID: 29455 RVA: 0x00237AE8 File Offset: 0x00235CE8
 	protected override void OnBeforeShow()
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -163,7 +161,7 @@ public class WheelTowerMainView : UiTickViewBase
 		this.RefreshSeasonMedalRedDot();
 	}
 
-	// Token: 0x06009F32 RID: 40754 RVA: 0x0022DE1C File Offset: 0x0022C01C
+	// Token: 0x06007310 RID: 29456 RVA: 0x00237C4C File Offset: 0x00235E4C
 	private void RefreshSeasonMedalRedDot()
 	{
 		WheelTowerData activityData = WheelTowerModel.Instance.ActivityData;
@@ -177,7 +175,7 @@ public class WheelTowerMainView : UiTickViewBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06009F33 RID: 40755 RVA: 0x0022DE60 File Offset: 0x0022C060
+	// Token: 0x06007311 RID: 29457 RVA: 0x00237C90 File Offset: 0x00235E90
 	protected override void OnTick(float delta)
 	{
 		WheelTowerData activityData = WheelTowerModel.Instance.ActivityData;
@@ -191,7 +189,7 @@ public class WheelTowerMainView : UiTickViewBase
 		text2.SetText(remainTimeText, true);
 	}
 
-	// Token: 0x06009F34 RID: 40756 RVA: 0x0022DEB4 File Offset: 0x0022C0B4
+	// Token: 0x06007312 RID: 29458 RVA: 0x00237CE4 File Offset: 0x00235EE4
 	private void RefreshRewardBtn()
 	{
 		WheelTowerData activityData = WheelTowerModel.Instance.ActivityData;
@@ -230,7 +228,7 @@ public class WheelTowerMainView : UiTickViewBase
 		rewardButton2.SetRedDotVisible(activityData.ShouldShowRewardRedDot());
 	}
 
-	// Token: 0x06009F35 RID: 40757 RVA: 0x0022DF9D File Offset: 0x0022C19D
+	// Token: 0x06007313 RID: 29459 RVA: 0x00237DCD File Offset: 0x00235FCD
 	private void OnSeasonRewardBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerSeasonRewardView, null, delegate(bool success, int viewId)
@@ -242,7 +240,7 @@ public class WheelTowerMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06009F36 RID: 40758 RVA: 0x0022DFBB File Offset: 0x0022C1BB
+	// Token: 0x06007314 RID: 29460 RVA: 0x00237DEB File Offset: 0x00235FEB
 	private void OnRewardBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerLimitRewardView, null, delegate(bool success, int viewId)
@@ -254,7 +252,7 @@ public class WheelTowerMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06009F37 RID: 40759 RVA: 0x0022DFD9 File Offset: 0x0022C1D9
+	// Token: 0x06007315 RID: 29461 RVA: 0x00237E09 File Offset: 0x00236009
 	private void OnCloseBtnClick()
 	{
 		if (WheelTowerModel.Instance.CheckInInstanceDungeon())
@@ -265,20 +263,20 @@ public class WheelTowerMainView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009F38 RID: 40760 RVA: 0x0022DFFC File Offset: 0x0022C1FC
+	// Token: 0x06007316 RID: 29462 RVA: 0x00237E2C File Offset: 0x0023602C
 	private void OnBossHandBookBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerBossHandBookView, null, null);
 		WheelTowerModel.Instance.ActivityData.RecordOpenBossHandBook();
 	}
 
-	// Token: 0x06009F39 RID: 40761 RVA: 0x0022E01E File Offset: 0x0022C21E
+	// Token: 0x06007317 RID: 29463 RVA: 0x00237E4E File Offset: 0x0023604E
 	private void OnRoleBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerEnhanceRoleView, null, null);
 	}
 
-	// Token: 0x06009F3A RID: 40762 RVA: 0x0022E034 File Offset: 0x0022C234
+	// Token: 0x06007318 RID: 29464 RVA: 0x00237E64 File Offset: 0x00236064
 	private void OnSeasonTipsBtnClick()
 	{
 		WheelTowerData activityData = WheelTowerModel.Instance.ActivityData;
@@ -291,13 +289,13 @@ public class WheelTowerMainView : UiTickViewBase
 		HelpController.Instance.OpenHelpById(seasonConfig.Value.InfoDisplayId);
 	}
 
-	// Token: 0x06009F3B RID: 40763 RVA: 0x0022E087 File Offset: 0x0022C287
+	// Token: 0x06007319 RID: 29465 RVA: 0x00237EB7 File Offset: 0x002360B7
 	private void OnSeasonMedalsBtnClick()
 	{
 		WheelTowerController.Instance.OpenSeasonMedalView(0, false);
 	}
 
-	// Token: 0x06009F3C RID: 40764 RVA: 0x0022E095 File Offset: 0x0022C295
+	// Token: 0x0600731A RID: 29466 RVA: 0x00237EC5 File Offset: 0x002360C5
 	private void OnRedDotRefresh(int activityId)
 	{
 		if (activityId != WheelTowerModel.Instance.ActivityData.Id)
@@ -308,7 +306,7 @@ public class WheelTowerMainView : UiTickViewBase
 		this.RefreshSeasonMedalRedDot();
 	}
 
-	// Token: 0x06009F3D RID: 40765 RVA: 0x0022E0B6 File Offset: 0x0022C2B6
+	// Token: 0x0600731B RID: 29467 RVA: 0x00237EE6 File Offset: 0x002360E6
 	private void AddHomeBtnExtraCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -326,7 +324,7 @@ public class WheelTowerMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06009F3E RID: 40766 RVA: 0x0022E0E8 File Offset: 0x0022C2E8
+	// Token: 0x0600731C RID: 29468 RVA: 0x00237F18 File Offset: 0x00236118
 	private void TryTriggerSeasonReview()
 	{
 		if (base.IsDestroyOrDestroying)
@@ -357,7 +355,7 @@ public class WheelTowerMainView : UiTickViewBase
 			return;
 		}
 		bool flag = WheelTowerModel.Instance.GetSeasonMedalGroupList(num2, EWheelTowerMedalType.Season).Count > 0;
-		bool flag2 = Info.Instance.IsBuildDevelopmentOrDebug && LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.IgnoreWheelTowerSeasonReviewMedalCheck, false);
+		bool flag2 = false;
 		if (!flag && !flag2)
 		{
 			return;
@@ -382,27 +380,27 @@ public class WheelTowerMainView : UiTickViewBase
 		WheelTowerModel.Instance.CleanOldSeasonMedalsStorage(num);
 	}
 
-	// Token: 0x040047AF RID: 18351
+	// Token: 0x04004855 RID: 18517
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040047B0 RID: 18352
+	// Token: 0x04004856 RID: 18518
 	private ActivityCircleButtonItem SeasonRewardButton;
 
-	// Token: 0x040047B1 RID: 18353
+	// Token: 0x04004857 RID: 18519
 	private ActivityCircleButtonItem RewardButton;
 
-	// Token: 0x040047B2 RID: 18354
+	// Token: 0x04004858 RID: 18520
 	private ActivityCircleButtonItem BossHandBookButton;
 
-	// Token: 0x040047B3 RID: 18355
+	// Token: 0x04004859 RID: 18521
 	private ActivityCircleButtonItem RoleButton;
 
-	// Token: 0x040047B4 RID: 18356
+	// Token: 0x0400485A RID: 18522
 	private WheelTowerNormalModeBtn NormalModeBtn;
 
-	// Token: 0x040047B5 RID: 18357
+	// Token: 0x0400485B RID: 18523
 	private WheelTowerEndlessModeBtn EndlessModeBtn;
 
-	// Token: 0x040047B6 RID: 18358
+	// Token: 0x0400485C RID: 18524
 	private UiSequencePlayer BgSequencePlayer;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B46 RID: 6982
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CF5 RID: 7413
 	public class IInteractEffect
 	{
-		// Token: 0x0600956B RID: 38251 RVA: 0x0015974C File Offset: 0x0015794C
+		// Token: 0x06009D55 RID: 40277 RVA: 0x0016A428 File Offset: 0x00168628
 		private IInteractEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600956C RID: 38252 RVA: 0x00159784 File Offset: 0x00157984
+		// Token: 0x06009D56 RID: 40278 RVA: 0x0016A460 File Offset: 0x00168660
 		public static IInteractEffect Create([Nullable(2)] IInteractEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600956D RID: 38253 RVA: 0x00159797 File Offset: 0x00157997
+		// Token: 0x06009D57 RID: 40279 RVA: 0x0016A473 File Offset: 0x00168673
 		public static IInteractEffect CreateFromSetValue([Nullable(2)] IInteractEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600956E RID: 38254 RVA: 0x001597AA File Offset: 0x001579AA
+		// Token: 0x06009D58 RID: 40280 RVA: 0x0016A486 File Offset: 0x00168686
 		public IInteractEffect_SetValue ToSetValue()
 		{
 			return new IInteractEffect_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F23 RID: 12067
-		// (get) Token: 0x0600956F RID: 38255 RVA: 0x001597C9 File Offset: 0x001579C9
-		// (set) Token: 0x06009570 RID: 38256 RVA: 0x001597F4 File Offset: 0x001579F4
+		// Token: 0x17003149 RID: 12617
+		// (get) Token: 0x06009D59 RID: 40281 RVA: 0x0016A4A5 File Offset: 0x001686A5
+		// (set) Token: 0x06009D5A RID: 40282 RVA: 0x0016A4D0 File Offset: 0x001686D0
 		public virtual EInteractEffectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F24 RID: 12068
-		// (get) Token: 0x06009571 RID: 38257 RVA: 0x00159804 File Offset: 0x00157A04
-		// (set) Token: 0x06009572 RID: 38258 RVA: 0x0015983E File Offset: 0x00157A3E
+		// Token: 0x1700314A RID: 12618
+		// (get) Token: 0x06009D5B RID: 40283 RVA: 0x0016A4E0 File Offset: 0x001686E0
+		// (set) Token: 0x06009D5C RID: 40284 RVA: 0x0016A51A File Offset: 0x0016871A
 		public virtual float? DelayTime
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B70 RID: 23408
+		// Token: 0x0400600E RID: 24590
 		[Nullable(2)]
 		protected IInteractEffect FbInstance;
 
-		// Token: 0x04005B71 RID: 23409
+		// Token: 0x0400600F RID: 24591
 		[Nullable(2)]
 		protected IInteractEffect_SetValue PocoInterface;
 	}

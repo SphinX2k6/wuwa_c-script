@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C1B RID: 3099
+	// Token: 0x02000C0B RID: 3083
 	[NetMessage(EMessageId.PhantomAutoPutResponse)]
 	public sealed class PhantomAutoPutResponse : IMessage<PhantomAutoPutResponse>, IMessage, IEquatable<PhantomAutoPutResponse>, IDeepCloneable<PhantomAutoPutResponse>, IBufferMessage
 	{
-		// Token: 0x06010D23 RID: 68899 RVA: 0x002769BC File Offset: 0x00274BBC
+		// Token: 0x06010C23 RID: 68643 RVA: 0x00274C58 File Offset: 0x00272E58
 		[NullableContext(1)]
 		public static PhantomAutoPutResponse Create()
 		{
 			return new PhantomAutoPutResponse();
 		}
 
-		// Token: 0x17003786 RID: 14214
-		// (get) Token: 0x06010D24 RID: 68900 RVA: 0x002769C3 File Offset: 0x00274BC3
+		// Token: 0x1700374F RID: 14159
+		// (get) Token: 0x06010C24 RID: 68644 RVA: 0x00274C5F File Offset: 0x00272E5F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003787 RID: 14215
-		// (get) Token: 0x06010D25 RID: 68901 RVA: 0x002769C6 File Offset: 0x00274BC6
+		// Token: 0x17003750 RID: 14160
+		// (get) Token: 0x06010C25 RID: 68645 RVA: 0x00274C62 File Offset: 0x00272E62
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010D26 RID: 68902 RVA: 0x002769CD File Offset: 0x00274BCD
+		// Token: 0x06010C26 RID: 68646 RVA: 0x00274C69 File Offset: 0x00272E69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomAutoPutResponse()
 		{
 		}
 
-		// Token: 0x06010D27 RID: 68903 RVA: 0x002769F8 File Offset: 0x00274BF8
+		// Token: 0x06010C27 RID: 68647 RVA: 0x00274C94 File Offset: 0x00272E94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomAutoPutResponse(PhantomAutoPutResponse other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06010D28 RID: 68904 RVA: 0x00276A5B File Offset: 0x00274C5B
+		// Token: 0x06010C28 RID: 68648 RVA: 0x00274CF7 File Offset: 0x00272EF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomAutoPutResponse Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new PhantomAutoPutResponse(this);
 		}
 
-		// Token: 0x17003788 RID: 14216
-		// (get) Token: 0x06010D29 RID: 68905 RVA: 0x00276A63 File Offset: 0x00274C63
-		// (set) Token: 0x06010D2A RID: 68906 RVA: 0x00276A6B File Offset: 0x00274C6B
+		// Token: 0x17003751 RID: 14161
+		// (get) Token: 0x06010C29 RID: 68649 RVA: 0x00274CFF File Offset: 0x00272EFF
+		// (set) Token: 0x06010C2A RID: 68650 RVA: 0x00274D07 File Offset: 0x00272F07
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -87,8 +87,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003789 RID: 14217
-		// (get) Token: 0x06010D2B RID: 68907 RVA: 0x00276A74 File Offset: 0x00274C74
+		// Token: 0x17003752 RID: 14162
+		// (get) Token: 0x06010C2B RID: 68651 RVA: 0x00274D10 File Offset: 0x00272F10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RolePhantomEquipInfo> EquipInfoList
@@ -99,8 +99,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700378A RID: 14218
-		// (get) Token: 0x06010D2C RID: 68908 RVA: 0x00276A7C File Offset: 0x00274C7C
+		// Token: 0x17003753 RID: 14163
+		// (get) Token: 0x06010C2C RID: 68652 RVA: 0x00274D18 File Offset: 0x00272F18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PhantomStackSplitInfo> StackSplitInfos
@@ -111,8 +111,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700378B RID: 14219
-		// (get) Token: 0x06010D2D RID: 68909 RVA: 0x00276A84 File Offset: 0x00274C84
+		// Token: 0x17003754 RID: 14164
+		// (get) Token: 0x06010C2D RID: 68653 RVA: 0x00274D20 File Offset: 0x00272F20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PhantomStackMergeInfo> StackMergeInfos
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010D2E RID: 68910 RVA: 0x00276A8C File Offset: 0x00274C8C
+		// Token: 0x06010C2E RID: 68654 RVA: 0x00274D28 File Offset: 0x00272F28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomAutoPutResponse);
 		}
 
-		// Token: 0x06010D2F RID: 68911 RVA: 0x00276A9C File Offset: 0x00274C9C
+		// Token: 0x06010C2F RID: 68655 RVA: 0x00274D38 File Offset: 0x00272F38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomAutoPutResponse other)
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.equipInfoList_.Equals(other.equipInfoList_) && this.stackSplitInfos_.Equals(other.stackSplitInfos_) && this.stackMergeInfos_.Equals(other.stackMergeInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06010D30 RID: 68912 RVA: 0x00276B14 File Offset: 0x00274D14
+		// Token: 0x06010C30 RID: 68656 RVA: 0x00274DB0 File Offset: 0x00272FB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -159,7 +159,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010D31 RID: 68913 RVA: 0x00276B83 File Offset: 0x00274D83
+		// Token: 0x06010C31 RID: 68657 RVA: 0x00274E1F File Offset: 0x0027301F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06010D32 RID: 68914 RVA: 0x00276B90 File Offset: 0x00274D90
+		// Token: 0x06010C32 RID: 68658 RVA: 0x00274E2C File Offset: 0x0027302C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -175,26 +175,26 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06010D33 RID: 68915 RVA: 0x00276B9C File Offset: 0x00274D9C
+		// Token: 0x06010C33 RID: 68659 RVA: 0x00274E38 File Offset: 0x00273038
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			this.stackMergeInfos_.WriteTo(ref output, PhantomAutoPutResponse._repeated_stackMergeInfos_codec);
+			this.equipInfoList_.WriteTo(ref output, PhantomAutoPutResponse._repeated_equipInfoList_codec);
+			this.stackSplitInfos_.WriteTo(ref output, PhantomAutoPutResponse._repeated_stackSplitInfos_codec);
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(112);
 				output.WriteEnum((int)this.ErrorCode);
 			}
-			this.equipInfoList_.WriteTo(ref output, PhantomAutoPutResponse._repeated_equipInfoList_codec);
-			this.stackMergeInfos_.WriteTo(ref output, PhantomAutoPutResponse._repeated_stackMergeInfos_codec);
-			this.stackSplitInfos_.WriteTo(ref output, PhantomAutoPutResponse._repeated_stackSplitInfos_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06010D34 RID: 68916 RVA: 0x00276C0C File Offset: 0x00274E0C
+		// Token: 0x06010C34 RID: 68660 RVA: 0x00274EA8 File Offset: 0x002730A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -214,7 +214,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010D35 RID: 68917 RVA: 0x00276C84 File Offset: 0x00274E84
+		// Token: 0x06010C35 RID: 68661 RVA: 0x00274F20 File Offset: 0x00273120
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomAutoPutResponse other)
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06010D36 RID: 68918 RVA: 0x00276CF3 File Offset: 0x00274EF3
+		// Token: 0x06010C36 RID: 68662 RVA: 0x00274F8F File Offset: 0x0027318F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06010D37 RID: 68919 RVA: 0x00276CFC File Offset: 0x00274EFC
+		// Token: 0x06010C37 RID: 68663 RVA: 0x00274F98 File Offset: 0x00273198
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -253,14 +253,14 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 34U)
+				if (num <= 42U)
 				{
-					if (num == 24U)
+					if (num == 26U)
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						this.stackMergeInfos_.AddEntriesFrom(ref input, PhantomAutoPutResponse._repeated_stackMergeInfos_codec);
 						continue;
 					}
-					if (num == 34U)
+					if (num == 42U)
 					{
 						this.equipInfoList_.AddEntriesFrom(ref input, PhantomAutoPutResponse._repeated_equipInfoList_codec);
 						continue;
@@ -268,14 +268,14 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 42U)
-					{
-						this.stackMergeInfos_.AddEntriesFrom(ref input, PhantomAutoPutResponse._repeated_stackMergeInfos_codec);
-						continue;
-					}
-					if (num == 122U)
+					if (num == 90U)
 					{
 						this.stackSplitInfos_.AddEntriesFrom(ref input, PhantomAutoPutResponse._repeated_stackSplitInfos_codec);
+						continue;
+					}
+					if (num == 112U)
+					{
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
 				}
@@ -283,40 +283,40 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006AC9 RID: 27337
+		// Token: 0x04006ADD RID: 27357
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006ACA RID: 27338
-		public const int ErrorCodeFieldNumber = 3;
+		// Token: 0x04006ADE RID: 27358
+		public const int ErrorCodeFieldNumber = 14;
 
-		// Token: 0x04006ACB RID: 27339
+		// Token: 0x04006ADF RID: 27359
 		private ErrorCode errorCode_;
 
-		// Token: 0x04006ACC RID: 27340
-		public const int EquipInfoListFieldNumber = 4;
+		// Token: 0x04006AE0 RID: 27360
+		public const int EquipInfoListFieldNumber = 5;
 
-		// Token: 0x04006ACD RID: 27341
-		private static readonly FieldCodec<RolePhantomEquipInfo> _repeated_equipInfoList_codec = FieldCodec.ForMessage<RolePhantomEquipInfo>(34U, RolePhantomEquipInfo.Parser);
+		// Token: 0x04006AE1 RID: 27361
+		private static readonly FieldCodec<RolePhantomEquipInfo> _repeated_equipInfoList_codec = FieldCodec.ForMessage<RolePhantomEquipInfo>(42U, RolePhantomEquipInfo.Parser);
 
-		// Token: 0x04006ACE RID: 27342
+		// Token: 0x04006AE2 RID: 27362
 		private readonly RepeatedField<RolePhantomEquipInfo> equipInfoList_ = new RepeatedField<RolePhantomEquipInfo>();
 
-		// Token: 0x04006ACF RID: 27343
-		public const int StackSplitInfosFieldNumber = 15;
+		// Token: 0x04006AE3 RID: 27363
+		public const int StackSplitInfosFieldNumber = 11;
 
-		// Token: 0x04006AD0 RID: 27344
-		private static readonly FieldCodec<PhantomStackSplitInfo> _repeated_stackSplitInfos_codec = FieldCodec.ForMessage<PhantomStackSplitInfo>(122U, PhantomStackSplitInfo.Parser);
+		// Token: 0x04006AE4 RID: 27364
+		private static readonly FieldCodec<PhantomStackSplitInfo> _repeated_stackSplitInfos_codec = FieldCodec.ForMessage<PhantomStackSplitInfo>(90U, PhantomStackSplitInfo.Parser);
 
-		// Token: 0x04006AD1 RID: 27345
+		// Token: 0x04006AE5 RID: 27365
 		private readonly RepeatedField<PhantomStackSplitInfo> stackSplitInfos_ = new RepeatedField<PhantomStackSplitInfo>();
 
-		// Token: 0x04006AD2 RID: 27346
-		public const int StackMergeInfosFieldNumber = 5;
+		// Token: 0x04006AE6 RID: 27366
+		public const int StackMergeInfosFieldNumber = 3;
 
-		// Token: 0x04006AD3 RID: 27347
-		private static readonly FieldCodec<PhantomStackMergeInfo> _repeated_stackMergeInfos_codec = FieldCodec.ForMessage<PhantomStackMergeInfo>(42U, PhantomStackMergeInfo.Parser);
+		// Token: 0x04006AE7 RID: 27367
+		private static readonly FieldCodec<PhantomStackMergeInfo> _repeated_stackMergeInfos_codec = FieldCodec.ForMessage<PhantomStackMergeInfo>(26U, PhantomStackMergeInfo.Parser);
 
-		// Token: 0x04006AD4 RID: 27348
+		// Token: 0x04006AE8 RID: 27368
 		private readonly RepeatedField<PhantomStackMergeInfo> stackMergeInfos_ = new RepeatedField<PhantomStackMergeInfo>();
 	}
 }

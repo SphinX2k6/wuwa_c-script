@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F6D RID: 24429
+	// Token: 0x02004F54 RID: 20308
 	public class WheelTowerSeasonReviewViewData
 	{
-		// Token: 0x04020622 RID: 132642
+		// Token: 0x0401B0F4 RID: 110836
 		public int SeasonId;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D41 RID: 27969
+	// Token: 0x020074BC RID: 29884
 	public struct IPlaySpineAnimation : IFlatbufferObject
 	{
-		// Token: 0x1700D092 RID: 53394
-		// (get) Token: 0x06031607 RID: 202247 RVA: 0x006B25CA File Offset: 0x006B07CA
+		// Token: 0x1700DBDA RID: 56282
+		// (get) Token: 0x06034603 RID: 214531 RVA: 0x0070DCB2 File Offset: 0x0070BEB2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031608 RID: 202248 RVA: 0x006B25D7 File Offset: 0x006B07D7
+		// Token: 0x06034604 RID: 214532 RVA: 0x0070DCBF File Offset: 0x0070BEBF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031609 RID: 202249 RVA: 0x006B25E0 File Offset: 0x006B07E0
+		// Token: 0x06034605 RID: 214533 RVA: 0x0070DCC8 File Offset: 0x0070BEC8
 		public static IPlaySpineAnimation GetRootAsIPlaySpineAnimation(ByteBuffer _bb)
 		{
 			return IPlaySpineAnimation.GetRootAsIPlaySpineAnimation(_bb, default(IPlaySpineAnimation));
 		}
 
-		// Token: 0x0603160A RID: 202250 RVA: 0x006B25FC File Offset: 0x006B07FC
+		// Token: 0x06034606 RID: 214534 RVA: 0x0070DCE4 File Offset: 0x0070BEE4
 		public static IPlaySpineAnimation GetRootAsIPlaySpineAnimation(ByteBuffer _bb, IPlaySpineAnimation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603160B RID: 202251 RVA: 0x006B2619 File Offset: 0x006B0819
+		// Token: 0x06034607 RID: 214535 RVA: 0x0070DD01 File Offset: 0x0070BF01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603160C RID: 202252 RVA: 0x006B2628 File Offset: 0x006B0828
+		// Token: 0x06034608 RID: 214536 RVA: 0x0070DD10 File Offset: 0x0070BF10
 		public IPlaySpineAnimation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D093 RID: 53395
-		// (get) Token: 0x0603160D RID: 202253 RVA: 0x006B2638 File Offset: 0x006B0838
+		// Token: 0x1700DBDB RID: 56283
+		// (get) Token: 0x06034609 RID: 214537 RVA: 0x0070DD20 File Offset: 0x0070BF20
 		public ESetSpineAnimation Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D094 RID: 53396
-		// (get) Token: 0x0603160E RID: 202254 RVA: 0x006B2674 File Offset: 0x006B0874
+		// Token: 0x1700DBDC RID: 56284
+		// (get) Token: 0x0603460A RID: 214538 RVA: 0x0070DD5C File Offset: 0x0070BF5C
 		public string Name
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603160F RID: 202255 RVA: 0x006B26AB File Offset: 0x006B08AB
+		// Token: 0x0603460B RID: 214539 RVA: 0x0070DD93 File Offset: 0x0070BF93
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06031610 RID: 202256 RVA: 0x006B26BA File Offset: 0x006B08BA
+		// Token: 0x0603460C RID: 214540 RVA: 0x0070DDA2 File Offset: 0x0070BFA2
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700D095 RID: 53397
-		// (get) Token: 0x06031611 RID: 202257 RVA: 0x006B26C8 File Offset: 0x006B08C8
+		// Token: 0x1700DBDD RID: 56285
+		// (get) Token: 0x0603460D RID: 214541 RVA: 0x0070DDB0 File Offset: 0x0070BFB0
 		public bool IsLoop
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031612 RID: 202258 RVA: 0x006B2707 File Offset: 0x006B0907
+		// Token: 0x0603460E RID: 214542 RVA: 0x0070DDEF File Offset: 0x0070BFEF
 		public static Offset<IPlaySpineAnimation> CreateIPlaySpineAnimation(FlatBufferBuilder builder, ESetSpineAnimation Type = ESetSpineAnimation.Play, StringOffset NameOffset = default(StringOffset), bool IsLoop = false)
 		{
 			builder.StartTable(3);
@@ -110,37 +110,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlaySpineAnimation.EndIPlaySpineAnimation(builder);
 		}
 
-		// Token: 0x06031613 RID: 202259 RVA: 0x006B272B File Offset: 0x006B092B
+		// Token: 0x0603460F RID: 214543 RVA: 0x0070DE13 File Offset: 0x0070C013
 		public static void StartIPlaySpineAnimation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06031614 RID: 202260 RVA: 0x006B2734 File Offset: 0x006B0934
+		// Token: 0x06034610 RID: 214544 RVA: 0x0070DE1C File Offset: 0x0070C01C
 		public static void AddType(FlatBufferBuilder builder, ESetSpineAnimation type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031615 RID: 202261 RVA: 0x006B273F File Offset: 0x006B093F
+		// Token: 0x06034611 RID: 214545 RVA: 0x0070DE27 File Offset: 0x0070C027
 		public static void AddName(FlatBufferBuilder builder, StringOffset nameOffset)
 		{
 			builder.AddOffset(1, nameOffset.Value, 0);
 		}
 
-		// Token: 0x06031616 RID: 202262 RVA: 0x006B274F File Offset: 0x006B094F
+		// Token: 0x06034612 RID: 214546 RVA: 0x0070DE37 File Offset: 0x0070C037
 		public static void AddIsLoop(FlatBufferBuilder builder, bool isLoop)
 		{
 			builder.AddBool(2, isLoop, false);
 		}
 
-		// Token: 0x06031617 RID: 202263 RVA: 0x006B275A File Offset: 0x006B095A
+		// Token: 0x06034613 RID: 214547 RVA: 0x0070DE42 File Offset: 0x0070C042
 		public static Offset<IPlaySpineAnimation> EndIPlaySpineAnimation(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlaySpineAnimation>(builder.EndTable());
 		}
 
-		// Token: 0x06031618 RID: 202264 RVA: 0x006B2768 File Offset: 0x006B0968
+		// Token: 0x06034614 RID: 214548 RVA: 0x0070DE50 File Offset: 0x0070C050
 		public IPlaySpineAnimationT UnPack()
 		{
 			IPlaySpineAnimationT playSpineAnimationT = new IPlaySpineAnimationT();
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return playSpineAnimationT;
 		}
 
-		// Token: 0x06031619 RID: 202265 RVA: 0x006B2783 File Offset: 0x006B0983
+		// Token: 0x06034615 RID: 214549 RVA: 0x0070DE6B File Offset: 0x0070C06B
 		public void UnPackTo(IPlaySpineAnimationT _o)
 		{
 			_o.Type = this.Type;
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.IsLoop = this.IsLoop;
 		}
 
-		// Token: 0x0603161A RID: 202266 RVA: 0x006B27AC File Offset: 0x006B09AC
+		// Token: 0x06034616 RID: 214550 RVA: 0x0070DE94 File Offset: 0x0070C094
 		public static Offset<IPlaySpineAnimation> Pack(FlatBufferBuilder builder, IPlaySpineAnimationT _o)
 		{
 			if (_o == null)
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlaySpineAnimation.CreateIPlaySpineAnimation(builder, _o.Type, nameOffset, _o.IsLoop);
 		}
 
-		// Token: 0x040116EE RID: 71406
+		// Token: 0x0401266A RID: 75370
 		private Table __p;
 	}
 }

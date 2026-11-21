@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F12 RID: 24338
+	// Token: 0x02006555 RID: 25941
 	public enum EAirWallCollisionPreset : byte
 	{
-		// Token: 0x0400FBEC RID: 64492
+		// Token: 0x0401095F RID: 67935
 		Normal,
-		// Token: 0x0400FBED RID: 64493
+		// Token: 0x04010960 RID: 67936
 		HugeBoss,
-		// Token: 0x0400FBEE RID: 64494
+		// Token: 0x04010961 RID: 67937
 		OnlyBullet,
-		// Token: 0x0400FBEF RID: 64495
+		// Token: 0x04010962 RID: 67938
 		OnlyMonster,
-		// Token: 0x0400FBF0 RID: 64496
+		// Token: 0x04010963 RID: 67939
 		OnlyBlockPlayer,
-		// Token: 0x0400FBF1 RID: 64497
+		// Token: 0x04010964 RID: 67940
 		PlayerOverlap,
-		// Token: 0x0400FBF2 RID: 64498
+		// Token: 0x04010965 RID: 67941
 		OnlyPlayer
 	}
 }

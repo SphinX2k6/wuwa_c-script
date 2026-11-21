@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.LevelGamePlay.ResetPlayer
 {
-	// Token: 0x02006AB2 RID: 27314
+	// Token: 0x02005C0F RID: 23567
 	public class IActionResetReplyData
 	{
-		// Token: 0x1700994B RID: 39243
-		// (get) Token: 0x06043DAB RID: 277931 RVA: 0x010A13F9 File Offset: 0x0109F5F9
-		// (set) Token: 0x06043DAC RID: 277932 RVA: 0x010A1401 File Offset: 0x0109F601
+		// Token: 0x17006E39 RID: 28217
+		// (get) Token: 0x06039E02 RID: 237058 RVA: 0x01045B19 File Offset: 0x01043D19
+		// (set) Token: 0x06039E03 RID: 237059 RVA: 0x01045B21 File Offset: 0x01043D21
 		public int PlayerId { get; set; }
 
-		// Token: 0x1700994C RID: 39244
-		// (get) Token: 0x06043DAD RID: 277933 RVA: 0x010A140A File Offset: 0x0109F60A
-		// (set) Token: 0x06043DAE RID: 277934 RVA: 0x010A1412 File Offset: 0x0109F612
+		// Token: 0x17006E3A RID: 28218
+		// (get) Token: 0x06039E04 RID: 237060 RVA: 0x01045B2A File Offset: 0x01043D2A
+		// (set) Token: 0x06039E05 RID: 237061 RVA: 0x01045B32 File Offset: 0x01043D32
 		public int IncId { get; set; }
 
-		// Token: 0x1700994D RID: 39245
-		// (get) Token: 0x06043DAF RID: 277935 RVA: 0x010A141B File Offset: 0x0109F61B
-		// (set) Token: 0x06043DB0 RID: 277936 RVA: 0x010A1423 File Offset: 0x0109F623
+		// Token: 0x17006E3B RID: 28219
+		// (get) Token: 0x06039E06 RID: 237062 RVA: 0x01045B3B File Offset: 0x01043D3B
+		// (set) Token: 0x06039E07 RID: 237063 RVA: 0x01045B43 File Offset: 0x01043D43
 		public int Index { get; set; }
 	}
 }

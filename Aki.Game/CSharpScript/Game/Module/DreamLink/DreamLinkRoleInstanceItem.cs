@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AA5 RID: 23205
+	// Token: 0x02004A81 RID: 19073
 	public class DreamLinkRoleInstanceItem : UiPanelBase
 	{
-		// Token: 0x0603AC60 RID: 240736 RVA: 0x00DFF99C File Offset: 0x00DFDB9C
+		// Token: 0x0602FBAC RID: 195500 RVA: 0x00D4FF50 File Offset: 0x00D4E150
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603AC61 RID: 240737 RVA: 0x00DFFB4C File Offset: 0x00DFDD4C
+		// Token: 0x0602FBAD RID: 195501 RVA: 0x00D50100 File Offset: 0x00D4E300
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).OnStateChange.Add(delegate(EToggleState state)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			});
 		}
 
-		// Token: 0x0603AC62 RID: 240738 RVA: 0x00DFFB6B File Offset: 0x00DFDD6B
+		// Token: 0x0602FBAE RID: 195502 RVA: 0x00D5011F File Offset: 0x00D4E31F
 		private void ToggleClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshHandler(this.Index);
 		}
 
-		// Token: 0x0603AC63 RID: 240739 RVA: 0x00DFFBA0 File Offset: 0x00DFDDA0
+		// Token: 0x0602FBAF RID: 195503 RVA: 0x00D50154 File Offset: 0x00D4E354
 		[NullableContext(1)]
 		public void Refresh(RogueRoleInstData roleInstData, bool isSelect)
 		{
@@ -158,56 +158,56 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetItem(4).SetUIActive(activityData.CheckDungeonRedDotStateByInstId(roleInstData.InstId));
 		}
 
-		// Token: 0x0603AC64 RID: 240740 RVA: 0x00DFFE3A File Offset: 0x00DFE03A
+		// Token: 0x0602FBB0 RID: 195504 RVA: 0x00D503EE File Offset: 0x00D4E5EE
 		public void SetToggleState(bool isSelect)
 		{
 			base.GetExtendToggle(0).SetToggleState(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0401EABE RID: 125630
+		// Token: 0x04019565 RID: 103781
 		[Nullable(2)]
 		private RogueRoleInstData Data;
 
-		// Token: 0x0401EABF RID: 125631
+		// Token: 0x04019566 RID: 103782
 		[Nullable(1)]
 		public Action<int> RefreshHandler = delegate(int index)
 		{
 		};
 
-		// Token: 0x0401EAC0 RID: 125632
+		// Token: 0x04019567 RID: 103783
 		public int Index;
 
-		// Token: 0x0200BCD3 RID: 48339
+		// Token: 0x0200A6DC RID: 42716
 		private class EChildComponentDefine
 		{
-			// Token: 0x04038F46 RID: 233286
+			// Token: 0x04033911 RID: 211217
 			public const int ExtendToggleSelf = 0;
 
-			// Token: 0x04038F47 RID: 233287
+			// Token: 0x04033912 RID: 211218
 			public const int SpriteEmpty = 1;
 
-			// Token: 0x04038F48 RID: 233288
+			// Token: 0x04033913 RID: 211219
 			public const int TextureRoleIcon = 2;
 
-			// Token: 0x04038F49 RID: 233289
+			// Token: 0x04033914 RID: 211220
 			public const int PanelLock = 3;
 
-			// Token: 0x04038F4A RID: 233290
+			// Token: 0x04033915 RID: 211221
 			public const int RedDotItem = 4;
 
-			// Token: 0x04038F4B RID: 233291
+			// Token: 0x04033916 RID: 211222
 			public const int PanelDone = 5;
 
-			// Token: 0x04038F4C RID: 233292
+			// Token: 0x04033917 RID: 211223
 			public const int EffectItem = 6;
 
-			// Token: 0x04038F4D RID: 233293
+			// Token: 0x04033918 RID: 211224
 			public const int SpriteNum = 7;
 
-			// Token: 0x04038F4E RID: 233294
+			// Token: 0x04033919 RID: 211225
 			public const int TextureBg = 8;
 
-			// Token: 0x04038F4F RID: 233295
+			// Token: 0x0403391A RID: 211226
 			public const int TextureLight = 9;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000203 RID: 515
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200022C RID: 556
 	public class IBuildingBlockFoundation : IItemFoundationType
 	{
-		// Token: 0x06000888 RID: 2184 RVA: 0x00027030 File Offset: 0x00025230
+		// Token: 0x06000908 RID: 2312 RVA: 0x00028984 File Offset: 0x00026B84
 		private IBuildingBlockFoundation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000889 RID: 2185 RVA: 0x00027068 File Offset: 0x00025268
+		// Token: 0x06000909 RID: 2313 RVA: 0x000289BC File Offset: 0x00026BBC
 		public static IBuildingBlockFoundation Create([Nullable(2)] IBuildingBlockFoundation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600088A RID: 2186 RVA: 0x0002707B File Offset: 0x0002527B
+		// Token: 0x0600090A RID: 2314 RVA: 0x000289CF File Offset: 0x00026BCF
 		public static IBuildingBlockFoundation CreateFromSetValue([Nullable(2)] IBuildingBlockFoundation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600088B RID: 2187 RVA: 0x0002708E File Offset: 0x0002528E
+		// Token: 0x0600090B RID: 2315 RVA: 0x000289E2 File Offset: 0x00026BE2
 		public new IBuildingBlockFoundation_SetValue ToSetValue()
 		{
 			return new IBuildingBlockFoundation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700029D RID: 669
-		// (get) Token: 0x0600088C RID: 2188 RVA: 0x000270A1 File Offset: 0x000252A1
-		// (set) Token: 0x0600088D RID: 2189 RVA: 0x000270CC File Offset: 0x000252CC
+		// Token: 0x170002BF RID: 703
+		// (get) Token: 0x0600090C RID: 2316 RVA: 0x000289F5 File Offset: 0x00026BF5
+		// (set) Token: 0x0600090D RID: 2317 RVA: 0x00028A20 File Offset: 0x00026C20
 		public override EItemFoundation Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000931 RID: 2353
+		// Token: 0x040009C2 RID: 2498
 		[Nullable(2)]
 		protected new IBuildingBlockFoundation FbInstance;
 
-		// Token: 0x04000932 RID: 2354
+		// Token: 0x040009C3 RID: 2499
 		[Nullable(2)]
 		protected new IBuildingBlockFoundation_SetValue PocoInterface;
 	}

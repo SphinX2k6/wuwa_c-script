@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006513 RID: 25875
+	// Token: 0x02006B81 RID: 27521
 	public enum ICustomScreenTypeBase_Union : byte
 	{
-		// Token: 0x04010B58 RID: 68440
+		// Token: 0x04011970 RID: 72048
 		NONE,
-		// Token: 0x04010B59 RID: 68441
+		// Token: 0x04011971 RID: 72049
 		ICustomScreenTypeBase,
-		// Token: 0x04010B5A RID: 68442
+		// Token: 0x04011972 RID: 72050
 		ICustomScreenSpine,
-		// Token: 0x04010B5B RID: 68443
+		// Token: 0x04011973 RID: 72051
 		ICustomScreenBackgroundImage,
-		// Token: 0x04010B5C RID: 68444
+		// Token: 0x04011974 RID: 72052
 		ICustomScreenLoading
 	}
 }

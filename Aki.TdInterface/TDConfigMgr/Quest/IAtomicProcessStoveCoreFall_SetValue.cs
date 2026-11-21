@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000ED3 RID: 3795
+	// Token: 0x02000FE9 RID: 4073
 	public class IAtomicProcessStoveCoreFall_SetValue
 	{
-		// Token: 0x040032B8 RID: 12984
+		// Token: 0x040035C5 RID: 13765
 		public EAtomicProcess Type;
 
-		// Token: 0x040032B9 RID: 12985
-		[Nullable(1)]
+		// Token: 0x040035C6 RID: 13766
 		public List<int> SplineEntityIds;
 	}
 }

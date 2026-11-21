@@ -1,21 +1,21 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x02000FD9 RID: 4057
+// Token: 0x0200048E RID: 1166
 public class FurnitureHandBookItemData : IFurnitureHandBookItemData
 {
-	// Token: 0x17000870 RID: 2160
-	// (get) Token: 0x06006835 RID: 26677 RVA: 0x0014B0F0 File Offset: 0x001492F0
-	// (set) Token: 0x06006836 RID: 26678 RVA: 0x0014B0F8 File Offset: 0x001492F8
+	// Token: 0x17000892 RID: 2194
+	// (get) Token: 0x06003BCD RID: 15309 RVA: 0x001539B4 File Offset: 0x00151BB4
+	// (set) Token: 0x06003BCE RID: 15310 RVA: 0x001539BC File Offset: 0x00151BBC
 	public Furniture FurnitureConfig { get; set; }
 
-	// Token: 0x17000871 RID: 2161
-	// (get) Token: 0x06006837 RID: 26679 RVA: 0x0014B101 File Offset: 0x00149301
-	// (set) Token: 0x06006838 RID: 26680 RVA: 0x0014B109 File Offset: 0x00149309
+	// Token: 0x17000893 RID: 2195
+	// (get) Token: 0x06003BCF RID: 15311 RVA: 0x001539C5 File Offset: 0x00151BC5
+	// (set) Token: 0x06003BD0 RID: 15312 RVA: 0x001539CD File Offset: 0x00151BCD
 	public bool IsLock { get; set; }
 
-	// Token: 0x17000872 RID: 2162
-	// (get) Token: 0x06006839 RID: 26681 RVA: 0x0014B112 File Offset: 0x00149312
-	// (set) Token: 0x0600683A RID: 26682 RVA: 0x0014B11A File Offset: 0x0014931A
+	// Token: 0x17000894 RID: 2196
+	// (get) Token: 0x06003BD1 RID: 15313 RVA: 0x001539D6 File Offset: 0x00151BD6
+	// (set) Token: 0x06003BD2 RID: 15314 RVA: 0x001539DE File Offset: 0x00151BDE
 	public bool RedDotVisible { get; set; }
 }

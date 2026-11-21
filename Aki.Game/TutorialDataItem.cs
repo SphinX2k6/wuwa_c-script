@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C21 RID: 11297
+// Token: 0x0200219C RID: 8604
 [NullableContext(1)]
 [Nullable(0)]
 public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData>
 {
-	// Token: 0x0601789E RID: 96414 RVA: 0x005FC4D0 File Offset: 0x005FA6D0
+	// Token: 0x060152D0 RID: 86736 RVA: 0x00628EF4 File Offset: 0x006270F4
 	public UniTask Init(UUIItem actor)
 	{
 		TutorialDataItem.<Init>d__3 <Init>d__;
@@ -24,12 +24,12 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601789F RID: 96415 RVA: 0x005FC51B File Offset: 0x005FA71B
+	// Token: 0x060152D1 RID: 86737 RVA: 0x00628F3F File Offset: 0x0062713F
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x060178A0 RID: 96416 RVA: 0x005FC51D File Offset: 0x005FA71D
+	// Token: 0x060152D2 RID: 86738 RVA: 0x00628F41 File Offset: 0x00627141
 	public AUIBaseActor GetUsingItem(TutorialItemData data)
 	{
 		if (data.IsTypeTitle)
@@ -39,7 +39,7 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 		return base.GetRootItem().GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x060178A1 RID: 96417 RVA: 0x005FC549 File Offset: 0x005FA749
+	// Token: 0x060152D3 RID: 86739 RVA: 0x00628F6D File Offset: 0x0062716D
 	public void Update(TutorialItemData data, int index)
 	{
 		this.TutorialItemData = data;
@@ -51,13 +51,13 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 		this.RefreshTutorialItem();
 	}
 
-	// Token: 0x060178A2 RID: 96418 RVA: 0x005FC567 File Offset: 0x005FA767
+	// Token: 0x060152D4 RID: 86740 RVA: 0x00628F8B File Offset: 0x0062718B
 	public void InitData(TutorialItemData data)
 	{
 		this.TutorialItemData = data;
 	}
 
-	// Token: 0x060178A3 RID: 96419 RVA: 0x005FC570 File Offset: 0x005FA770
+	// Token: 0x060152D5 RID: 86741 RVA: 0x00628F94 File Offset: 0x00627194
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -74,7 +74,7 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 		};
 	}
 
-	// Token: 0x060178A4 RID: 96420 RVA: 0x005FC61C File Offset: 0x005FA81C
+	// Token: 0x060152D6 RID: 86742 RVA: 0x00629040 File Offset: 0x00627240
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -84,13 +84,13 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 		}
 	}
 
-	// Token: 0x060178A5 RID: 96421 RVA: 0x005FC647 File Offset: 0x005FA847
+	// Token: 0x060152D7 RID: 86743 RVA: 0x0062906B File Offset: 0x0062726B
 	public void SetOnToggleSelected(Action<TutorialItemData, UUIExtendToggle> onToggleSelected)
 	{
 		this.OnToggleSelected = onToggleSelected;
 	}
 
-	// Token: 0x060178A6 RID: 96422 RVA: 0x005FC650 File Offset: 0x005FA850
+	// Token: 0x060152D8 RID: 86744 RVA: 0x00629074 File Offset: 0x00627274
 	private void RefreshTitleItem()
 	{
 		base.GetItem(0).SetUIActive(true);
@@ -104,7 +104,7 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 		text.SetText(this.TutorialItemData.Text, true);
 	}
 
-	// Token: 0x060178A7 RID: 96423 RVA: 0x005FC6CC File Offset: 0x005FA8CC
+	// Token: 0x060152D9 RID: 86745 RVA: 0x006290F0 File Offset: 0x006272F0
 	private void RefreshTutorialItem()
 	{
 		base.GetItem(0).SetUIActive(false);
@@ -127,7 +127,7 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 		}
 	}
 
-	// Token: 0x060178A8 RID: 96424 RVA: 0x005FC773 File Offset: 0x005FA973
+	// Token: 0x060152DA RID: 86746 RVA: 0x00629197 File Offset: 0x00627397
 	public void RefreshRed()
 	{
 		if (!this.TutorialItemData.IsTypeTitle)
@@ -136,14 +136,14 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 		}
 	}
 
-	// Token: 0x060178A9 RID: 96425 RVA: 0x005FC79E File Offset: 0x005FA99E
+	// Token: 0x060152DB RID: 86747 RVA: 0x006291C2 File Offset: 0x006273C2
 	public void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(2).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		this.OnToggleClick(EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x060178AA RID: 96426 RVA: 0x005FC7B8 File Offset: 0x005FA9B8
+	// Token: 0x060152DC RID: 86748 RVA: 0x006291DC File Offset: 0x006273DC
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TutorialItemData != null)
@@ -152,11 +152,11 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 		}
 	}
 
-	// Token: 0x0400AF9F RID: 44959
+	// Token: 0x0400B3A4 RID: 45988
 	[Nullable(2)]
 	private TutorialItemData TutorialItemData;
 
-	// Token: 0x0400AFA0 RID: 44960
+	// Token: 0x0400B3A5 RID: 45989
 	[Nullable(new byte[]
 	{
 		2,
@@ -165,19 +165,19 @@ public class TutorialDataItem : UiPanelBase, IDynamicScrollItem<TutorialItemData
 	})]
 	private Action<TutorialItemData, UUIExtendToggle> OnToggleSelected;
 
-	// Token: 0x02009216 RID: 37398
+	// Token: 0x02008459 RID: 33881
 	[NullableContext(0)]
 	public enum EComponents
 	{
-		// Token: 0x0402F415 RID: 193557
+		// Token: 0x0402AB16 RID: 174870
 		ItemTypeTitle,
-		// Token: 0x0402F416 RID: 193558
+		// Token: 0x0402AB17 RID: 174871
 		TxtTypeTitle,
-		// Token: 0x0402F417 RID: 193559
+		// Token: 0x0402AB18 RID: 174872
 		UUIItemStripD,
-		// Token: 0x0402F418 RID: 193560
+		// Token: 0x0402AB19 RID: 174873
 		PnlRedPoint,
-		// Token: 0x0402F419 RID: 193561
+		// Token: 0x0402AB1A RID: 174874
 		TxtList
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007B1 RID: 1969
+	// Token: 0x020007CB RID: 1995
 	public class ConfigRealmBetweenAreaById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E38 RID: 11832 RVA: 0x0015E973 File Offset: 0x0015CB73
+		// Token: 0x06002ED4 RID: 11988 RVA: 0x0016587F File Offset: 0x00163A7F
 		static ConfigRealmBetweenAreaById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRealmBetweenAreaById.CreateStaticDefaultValue), new Action(ConfigRealmBetweenAreaById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E39 RID: 11833 RVA: 0x0015E994 File Offset: 0x0015CB94
+		// Token: 0x06002ED5 RID: 11989 RVA: 0x001658A0 File Offset: 0x00163AA0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRealmBetweenAreaById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E3A RID: 11834 RVA: 0x0015EA13 File Offset: 0x0015CC13
+		// Token: 0x06002ED6 RID: 11990 RVA: 0x0016591F File Offset: 0x00163B1F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRealmBetweenAreaById.LogPair = null;
 			ConfigRealmBetweenAreaById.HandleId = 0;
 		}
 
-		// Token: 0x06002E3B RID: 11835 RVA: 0x0015EA21 File Offset: 0x0015CC21
+		// Token: 0x06002ED7 RID: 11991 RVA: 0x0016592D File Offset: 0x00163B2D
 		public static void Init()
 		{
 			ConfigRealmBetweenAreaById.HandleId = ConfigCommon.InitDataStatement(ConfigRealmBetweenAreaById.HandleId, "db_realmbetween.db", "select BinData from `RealmBetweenArea` where Id=?");
 		}
 
-		// Token: 0x06002E3C RID: 11836 RVA: 0x0015EA3C File Offset: 0x0015CC3C
+		// Token: 0x06002ED8 RID: 11992 RVA: 0x00165948 File Offset: 0x00163B48
 		public static RealmBetweenArea? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRealmBetweenAreaById.HandleId, ConfigRealmBetweenAreaById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RealmBetweenArea?(rootAsRealmBetweenArea);
 		}
 
-		// Token: 0x040035BD RID: 13757
+		// Token: 0x04003673 RID: 13939
 		private const string DB = "db_realmbetween.db";
 
-		// Token: 0x040035BE RID: 13758
+		// Token: 0x04003674 RID: 13940
 		private const string FILE = "q.千岛路书3.5.xlsx";
 
-		// Token: 0x040035BF RID: 13759
+		// Token: 0x04003675 RID: 13941
 		private const string TABLE = "RealmBetweenArea";
 
-		// Token: 0x040035C0 RID: 13760
+		// Token: 0x04003676 RID: 13942
 		private const string COMMAND = "select BinData from `RealmBetweenArea` where Id=?";
 
-		// Token: 0x040035C1 RID: 13761
+		// Token: 0x04003677 RID: 13943
 		private const string KEY_PREFIX = "RealmBetweenAreaById";
 
-		// Token: 0x040035C2 RID: 13762
+		// Token: 0x04003678 RID: 13944
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040035C3 RID: 13763
+		// Token: 0x04003679 RID: 13945
 		private static int HandleId;
 	}
 }

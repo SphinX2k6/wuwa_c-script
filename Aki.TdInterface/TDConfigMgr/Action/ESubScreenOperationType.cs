@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016B6 RID: 5814
+	// Token: 0x02001830 RID: 6192
 	[EnumExtensions]
 	public enum ESubScreenOperationType
 	{
-		// Token: 0x04004E09 RID: 19977
+		// Token: 0x04005228 RID: 21032
 		Init,
-		// Token: 0x04004E0A RID: 19978
+		// Token: 0x04005229 RID: 21033
 		Adjust,
-		// Token: 0x04004E0B RID: 19979
+		// Token: 0x0400522A RID: 21034
 		Exit
 	}
 }

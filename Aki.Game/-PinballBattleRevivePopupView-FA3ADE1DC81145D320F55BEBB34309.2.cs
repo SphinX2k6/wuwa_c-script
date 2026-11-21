@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001D12 RID: 7442
+// Token: 0x020011D4 RID: 4564
 internal enum <PinballBattleRevivePopupView>FA3ADE1DC81145D320F55BEBB343090DED5159A77DC7E7499E22FAD8523335C8D__ERoleHead
 {
-	// Token: 0x040067EB RID: 26603
+	// Token: 0x040068CA RID: 26826
 	HeadIcon
 }

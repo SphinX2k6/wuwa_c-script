@@ -1,40 +1,40 @@
 ﻿using System;
 
-// Token: 0x0200124A RID: 4682
+// Token: 0x020006FE RID: 1790
 public class DangoMonopolyRoundRewardItemData : IDangoMonopolyRoundRewardItemData
 {
-	// Token: 0x17000AC7 RID: 2759
-	// (get) Token: 0x06007F1A RID: 32538 RVA: 0x001AEE4A File Offset: 0x001AD04A
-	// (set) Token: 0x06007F1B RID: 32539 RVA: 0x001AEE52 File Offset: 0x001AD052
+	// Token: 0x17000AE7 RID: 2791
+	// (get) Token: 0x060052B1 RID: 21169 RVA: 0x001B7B02 File Offset: 0x001B5D02
+	// (set) Token: 0x060052B2 RID: 21170 RVA: 0x001B7B0A File Offset: 0x001B5D0A
 	public bool IsReceived { get; set; }
 
-	// Token: 0x17000AC8 RID: 2760
-	// (get) Token: 0x06007F1C RID: 32540 RVA: 0x001AEE5B File Offset: 0x001AD05B
-	// (set) Token: 0x06007F1D RID: 32541 RVA: 0x001AEE63 File Offset: 0x001AD063
+	// Token: 0x17000AE8 RID: 2792
+	// (get) Token: 0x060052B3 RID: 21171 RVA: 0x001B7B13 File Offset: 0x001B5D13
+	// (set) Token: 0x060052B4 RID: 21172 RVA: 0x001B7B1B File Offset: 0x001B5D1B
 	public bool IsCanReceived { get; set; }
 
-	// Token: 0x17000AC9 RID: 2761
-	// (get) Token: 0x06007F1E RID: 32542 RVA: 0x001AEE6C File Offset: 0x001AD06C
-	// (set) Token: 0x06007F1F RID: 32543 RVA: 0x001AEE74 File Offset: 0x001AD074
+	// Token: 0x17000AE9 RID: 2793
+	// (get) Token: 0x060052B5 RID: 21173 RVA: 0x001B7B24 File Offset: 0x001B5D24
+	// (set) Token: 0x060052B6 RID: 21174 RVA: 0x001B7B2C File Offset: 0x001B5D2C
 	public int ItemId { get; set; }
 
-	// Token: 0x17000ACA RID: 2762
-	// (get) Token: 0x06007F20 RID: 32544 RVA: 0x001AEE7D File Offset: 0x001AD07D
-	// (set) Token: 0x06007F21 RID: 32545 RVA: 0x001AEE85 File Offset: 0x001AD085
+	// Token: 0x17000AEA RID: 2794
+	// (get) Token: 0x060052B7 RID: 21175 RVA: 0x001B7B35 File Offset: 0x001B5D35
+	// (set) Token: 0x060052B8 RID: 21176 RVA: 0x001B7B3D File Offset: 0x001B5D3D
 	public int Count { get; set; }
 
-	// Token: 0x17000ACB RID: 2763
-	// (get) Token: 0x06007F22 RID: 32546 RVA: 0x001AEE8E File Offset: 0x001AD08E
-	// (set) Token: 0x06007F23 RID: 32547 RVA: 0x001AEE96 File Offset: 0x001AD096
+	// Token: 0x17000AEB RID: 2795
+	// (get) Token: 0x060052B9 RID: 21177 RVA: 0x001B7B46 File Offset: 0x001B5D46
+	// (set) Token: 0x060052BA RID: 21178 RVA: 0x001B7B4E File Offset: 0x001B5D4E
 	public int BoardId { get; set; }
 
-	// Token: 0x17000ACC RID: 2764
-	// (get) Token: 0x06007F24 RID: 32548 RVA: 0x001AEE9F File Offset: 0x001AD09F
-	// (set) Token: 0x06007F25 RID: 32549 RVA: 0x001AEEA7 File Offset: 0x001AD0A7
+	// Token: 0x17000AEC RID: 2796
+	// (get) Token: 0x060052BB RID: 21179 RVA: 0x001B7B57 File Offset: 0x001B5D57
+	// (set) Token: 0x060052BC RID: 21180 RVA: 0x001B7B5F File Offset: 0x001B5D5F
 	public bool IsCurrent { get; set; }
 
-	// Token: 0x17000ACD RID: 2765
-	// (get) Token: 0x06007F26 RID: 32550 RVA: 0x001AEEB0 File Offset: 0x001AD0B0
-	// (set) Token: 0x06007F27 RID: 32551 RVA: 0x001AEEB8 File Offset: 0x001AD0B8
+	// Token: 0x17000AED RID: 2797
+	// (get) Token: 0x060052BD RID: 21181 RVA: 0x001B7B68 File Offset: 0x001B5D68
+	// (set) Token: 0x060052BE RID: 21182 RVA: 0x001B7B70 File Offset: 0x001B5D70
 	public int Position { get; set; }
 }

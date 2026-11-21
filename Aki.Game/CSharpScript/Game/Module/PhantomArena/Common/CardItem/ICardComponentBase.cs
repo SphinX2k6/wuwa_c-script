@@ -5,14 +5,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem
 {
-	// Token: 0x020051C5 RID: 20933
+	// Token: 0x02004195 RID: 16789
 	[NullableContext(1)]
 	public interface ICardComponentBase
 	{
-		// Token: 0x06035997 RID: 219543
+		// Token: 0x0602A892 RID: 174226
 		UniTask CreateByActorAsync(AActor actor, [Nullable(2)] object parameters = null, bool usePool = false);
 
-		// Token: 0x06035998 RID: 219544
+		// Token: 0x0602A893 RID: 174227
 		UniTask CreateByResourceIdAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null, bool usePool = false);
 	}
 }

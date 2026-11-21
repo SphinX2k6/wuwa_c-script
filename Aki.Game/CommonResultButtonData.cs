@@ -1,58 +1,58 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001961 RID: 6497
+// Token: 0x02000E1E RID: 3614
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonResultButtonData
 {
-	// Token: 0x0600BE0E RID: 48654 RVA: 0x002AFCBA File Offset: 0x002ADEBA
+	// Token: 0x06009211 RID: 37393 RVA: 0x002BAAFE File Offset: 0x002B8CFE
 	public Action<int, CommonResultButton> GetButtonTimerCallBack()
 	{
 		return this.ButtonTimerCallBack;
 	}
 
-	// Token: 0x0600BE0F RID: 48655 RVA: 0x002AFCC2 File Offset: 0x002ADEC2
+	// Token: 0x06009212 RID: 37394 RVA: 0x002BAB06 File Offset: 0x002B8D06
 	public Action GetButtonClickCallBack()
 	{
 		return this.ButtonClickCallBack;
 	}
 
-	// Token: 0x0600BE10 RID: 48656 RVA: 0x002AFCCA File Offset: 0x002ADECA
+	// Token: 0x06009213 RID: 37395 RVA: 0x002BAB0E File Offset: 0x002B8D0E
 	public Action<CommonResultButton> GetButtonRefreshCallBack()
 	{
 		return this.ButtonRefreshCallBack;
 	}
 
-	// Token: 0x0600BE11 RID: 48657 RVA: 0x002AFCD2 File Offset: 0x002ADED2
+	// Token: 0x06009214 RID: 37396 RVA: 0x002BAB16 File Offset: 0x002B8D16
 	public void SetTimerCallBack(Action<int, CommonResultButton> call)
 	{
 		this.ButtonTimerCallBack = call;
 	}
 
-	// Token: 0x0600BE12 RID: 48658 RVA: 0x002AFCDB File Offset: 0x002ADEDB
+	// Token: 0x06009215 RID: 37397 RVA: 0x002BAB1F File Offset: 0x002B8D1F
 	public void SetClickCallBack(Action call)
 	{
 		this.ButtonClickCallBack = call;
 	}
 
-	// Token: 0x0600BE13 RID: 48659 RVA: 0x002AFCE4 File Offset: 0x002ADEE4
+	// Token: 0x06009216 RID: 37398 RVA: 0x002BAB28 File Offset: 0x002B8D28
 	public void SetRefreshCallBack(Action<CommonResultButton> call)
 	{
 		this.ButtonRefreshCallBack = call;
 	}
 
-	// Token: 0x040055B0 RID: 21936
+	// Token: 0x0400565D RID: 22109
 	private Action<int, CommonResultButton> ButtonTimerCallBack = delegate(int hasRunTime, CommonResultButton button)
 	{
 	};
 
-	// Token: 0x040055B1 RID: 21937
+	// Token: 0x0400565E RID: 22110
 	private Action ButtonClickCallBack = delegate()
 	{
 	};
 
-	// Token: 0x040055B2 RID: 21938
+	// Token: 0x0400565F RID: 22111
 	private Action<CommonResultButton> ButtonRefreshCallBack = delegate(CommonResultButton button)
 	{
 	};

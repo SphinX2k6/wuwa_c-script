@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AF6 RID: 6902
+	// Token: 0x02001CA3 RID: 7331
 	public class IHeadStyleWarning_SetValue
 	{
-		// Token: 0x04005AC4 RID: 23236
+		// Token: 0x04005F5B RID: 24411
 		public EHeadStyle Type;
 	}
 }

@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Activity.ActivityContent.BossRush;
 
-// Token: 0x020011BE RID: 4542
+// Token: 0x02000672 RID: 1650
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class BossRushModel : ModelBase
 {
-	// Token: 0x060078E9 RID: 30953 RVA: 0x001969A8 File Offset: 0x00194BA8
+	// Token: 0x06004C80 RID: 19584 RVA: 0x0019F658 File Offset: 0x0019D858
 	public int GetFullScore(int activityId)
 	{
 		BossRushData bossRushData = ActivityModel.Instance.GetActivityById(activityId) as BossRushData;
@@ -26,7 +26,7 @@ public class BossRushModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x060078EA RID: 30954 RVA: 0x00196A18 File Offset: 0x00194C18
+	// Token: 0x06004C81 RID: 19585 RVA: 0x0019F6C8 File Offset: 0x0019D8C8
 	public BossRushTeamInfo GetBossRushTeamInfoByActivityId(int activityId)
 	{
 		BossRushTeamInfo bossRushTeamInfo;
@@ -38,7 +38,7 @@ public class BossRushModel : ModelBase
 		return bossRushTeamInfo;
 	}
 
-	// Token: 0x060078EB RID: 30955 RVA: 0x00196A4C File Offset: 0x00194C4C
+	// Token: 0x06004C82 RID: 19586 RVA: 0x0019F6FC File Offset: 0x0019D8FC
 	public int[] GetHaveUnTakeRewardIds(int activityId)
 	{
 		List<int> list = new List<int>();
@@ -56,13 +56,13 @@ public class BossRushModel : ModelBase
 		return list2.ToArray();
 	}
 
-	// Token: 0x060078EC RID: 30956 RVA: 0x00196AD4 File Offset: 0x00194CD4
+	// Token: 0x06004C83 RID: 19587 RVA: 0x0019F784 File Offset: 0x0019D984
 	public int[] GetLevelSelectRoleIds(BossRushTeamInfo data)
 	{
 		return data.GetCurrentTeamMembers();
 	}
 
-	// Token: 0x060078ED RID: 30957 RVA: 0x00196ADC File Offset: 0x00194CDC
+	// Token: 0x06004C84 RID: 19588 RVA: 0x0019F78C File Offset: 0x0019D98C
 	public bool CheckInBossRush()
 	{
 		int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -70,8 +70,8 @@ public class BossRushModel : ModelBase
 		return config != null && config.Value.InstSubType == 20 && GameModeController.Instance.IsInInstance();
 	}
 
-	// Token: 0x17000A4D RID: 2637
-	// (get) Token: 0x060078EE RID: 30958 RVA: 0x00196B2A File Offset: 0x00194D2A
+	// Token: 0x17000A6D RID: 2669
+	// (get) Token: 0x06004C85 RID: 19589 RVA: 0x0019F7DA File Offset: 0x0019D9DA
 	public static BossRushModel Instance
 	{
 		get
@@ -80,7 +80,7 @@ public class BossRushModel : ModelBase
 		}
 	}
 
-	// Token: 0x060078EF RID: 30959 RVA: 0x00196B31 File Offset: 0x00194D31
+	// Token: 0x06004C86 RID: 19590 RVA: 0x0019F7E1 File Offset: 0x0019D9E1
 	public static BossRushModel GetOrCreateInstance()
 	{
 		if (BossRushModel._Instance == null)
@@ -90,7 +90,7 @@ public class BossRushModel : ModelBase
 		return BossRushModel._Instance;
 	}
 
-	// Token: 0x060078F0 RID: 30960 RVA: 0x00196B45 File Offset: 0x00194D45
+	// Token: 0x06004C87 RID: 19591 RVA: 0x0019F7F5 File Offset: 0x0019D9F5
 	public static bool CreateInstance()
 	{
 		if (BossRushModel._Instance != null)
@@ -101,59 +101,59 @@ public class BossRushModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060078F1 RID: 30961 RVA: 0x00196B5B File Offset: 0x00194D5B
+	// Token: 0x06004C88 RID: 19592 RVA: 0x0019F80B File Offset: 0x0019DA0B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060078F2 RID: 30962 RVA: 0x00196B5D File Offset: 0x00194D5D
+	// Token: 0x06004C89 RID: 19593 RVA: 0x0019F80D File Offset: 0x0019DA0D
 	public static void ResetStaticDefaultValue()
 	{
 		BossRushModel._Instance = null;
 	}
 
-	// Token: 0x060078F3 RID: 30963 RVA: 0x00196B65 File Offset: 0x00194D65
+	// Token: 0x06004C8A RID: 19594 RVA: 0x0019F815 File Offset: 0x0019DA15
 	static BossRushModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BossRushModel.CreateStaticDefaultValue), new Action(BossRushModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003791 RID: 14225
+	// Token: 0x0400382A RID: 14378
 	[Nullable(2)]
 	public BossRushLevelDetailInfo CurrentSelectLevelDetailData;
 
-	// Token: 0x04003792 RID: 14226
+	// Token: 0x0400382B RID: 14379
 	[Nullable(2)]
 	public BossRushTeamInfo CurrentTeamInfo;
 
-	// Token: 0x04003793 RID: 14227
+	// Token: 0x0400382C RID: 14380
 	public int CurrentChangeBuffSlot;
 
-	// Token: 0x04003794 RID: 14228
+	// Token: 0x0400382D RID: 14381
 	public bool PlayBackAnimation;
 
-	// Token: 0x04003795 RID: 14229
+	// Token: 0x0400382E RID: 14382
 	public List<int> CurrentOpenBossRushActivityIds = new List<int>();
 
-	// Token: 0x04003796 RID: 14230
+	// Token: 0x0400382F RID: 14383
 	public int CurrentSelectActivityId;
 
-	// Token: 0x04003797 RID: 14231
+	// Token: 0x04003830 RID: 14384
 	private readonly Dictionary<int, BossRushTeamInfo> TeamInfoMap = new Dictionary<int, BossRushTeamInfo>();
 
-	// Token: 0x04003798 RID: 14232
+	// Token: 0x04003831 RID: 14385
 	private readonly Dictionary<int, List<int>> CurrentTakeRewardsMap = new Dictionary<int, List<int>>();
 
-	// Token: 0x04003799 RID: 14233
+	// Token: 0x04003832 RID: 14386
 	public EBuffTabName CurrentSelectBuffTabName;
 
-	// Token: 0x0400379A RID: 14234
+	// Token: 0x04003833 RID: 14387
 	public bool OnlyOpenRewardView;
 
-	// Token: 0x0400379B RID: 14235
+	// Token: 0x04003834 RID: 14388
 	public List<int> ChoseBuffInGameHandleList = new List<int>();
 
-	// Token: 0x0400379C RID: 14236
+	// Token: 0x04003835 RID: 14389
 	[Nullable(2)]
 	private static BossRushModel _Instance;
 }

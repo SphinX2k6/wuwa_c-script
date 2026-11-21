@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200097D RID: 2429
+	// Token: 0x0200096C RID: 2412
 	[NetMessage(EMessageId.MailInfosNotify)]
 	public sealed class MailInfosNotify : IMessage<MailInfosNotify>, IMessage, IEquatable<MailInfosNotify>, IDeepCloneable<MailInfosNotify>, IBufferMessage
 	{
-		// Token: 0x0600D5A6 RID: 54694 RVA: 0x001F6DEF File Offset: 0x001F4FEF
+		// Token: 0x0600D48C RID: 54412 RVA: 0x001F4C07 File Offset: 0x001F2E07
 		[NullableContext(1)]
 		public static MailInfosNotify Create()
 		{
 			return new MailInfosNotify();
 		}
 
-		// Token: 0x17002B3F RID: 11071
-		// (get) Token: 0x0600D5A7 RID: 54695 RVA: 0x001F6DF6 File Offset: 0x001F4FF6
+		// Token: 0x17002B01 RID: 11009
+		// (get) Token: 0x0600D48D RID: 54413 RVA: 0x001F4C0E File Offset: 0x001F2E0E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002B40 RID: 11072
-		// (get) Token: 0x0600D5A8 RID: 54696 RVA: 0x001F6DF9 File Offset: 0x001F4FF9
+		// Token: 0x17002B02 RID: 11010
+		// (get) Token: 0x0600D48E RID: 54414 RVA: 0x001F4C11 File Offset: 0x001F2E11
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D5A9 RID: 54697 RVA: 0x001F6E00 File Offset: 0x001F5000
+		// Token: 0x0600D48F RID: 54415 RVA: 0x001F4C18 File Offset: 0x001F2E18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailInfosNotify()
 		{
 		}
 
-		// Token: 0x0600D5AA RID: 54698 RVA: 0x001F6E13 File Offset: 0x001F5013
+		// Token: 0x0600D490 RID: 54416 RVA: 0x001F4C2B File Offset: 0x001F2E2B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailInfosNotify(MailInfosNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D5AB RID: 54699 RVA: 0x001F6E3D File Offset: 0x001F503D
+		// Token: 0x0600D491 RID: 54417 RVA: 0x001F4C55 File Offset: 0x001F2E55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailInfosNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new MailInfosNotify(this);
 		}
 
-		// Token: 0x17002B41 RID: 11073
-		// (get) Token: 0x0600D5AC RID: 54700 RVA: 0x001F6E45 File Offset: 0x001F5045
+		// Token: 0x17002B03 RID: 11011
+		// (get) Token: 0x0600D492 RID: 54418 RVA: 0x001F4C5D File Offset: 0x001F2E5D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PbMailInfo> MailInfos
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D5AD RID: 54701 RVA: 0x001F6E4D File Offset: 0x001F504D
+		// Token: 0x0600D493 RID: 54419 RVA: 0x001F4C65 File Offset: 0x001F2E65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MailInfosNotify);
 		}
 
-		// Token: 0x0600D5AE RID: 54702 RVA: 0x001F6E5B File Offset: 0x001F505B
+		// Token: 0x0600D494 RID: 54420 RVA: 0x001F4C73 File Offset: 0x001F2E73
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MailInfosNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.mailInfos_.Equals(other.mailInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600D5AF RID: 54703 RVA: 0x001F6E90 File Offset: 0x001F5090
+		// Token: 0x0600D495 RID: 54421 RVA: 0x001F4CA8 File Offset: 0x001F2EA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D5B0 RID: 54704 RVA: 0x001F6EC4 File Offset: 0x001F50C4
+		// Token: 0x0600D496 RID: 54422 RVA: 0x001F4CDC File Offset: 0x001F2EDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D5B1 RID: 54705 RVA: 0x001F6ED1 File Offset: 0x001F50D1
+		// Token: 0x0600D497 RID: 54423 RVA: 0x001F4CE9 File Offset: 0x001F2EE9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D5B2 RID: 54706 RVA: 0x001F6EDA File Offset: 0x001F50DA
+		// Token: 0x0600D498 RID: 54424 RVA: 0x001F4CF2 File Offset: 0x001F2EF2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D5B3 RID: 54707 RVA: 0x001F6F04 File Offset: 0x001F5104
+		// Token: 0x0600D499 RID: 54425 RVA: 0x001F4D1C File Offset: 0x001F2F1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D5B4 RID: 54708 RVA: 0x001F6F3D File Offset: 0x001F513D
+		// Token: 0x0600D49A RID: 54426 RVA: 0x001F4D55 File Offset: 0x001F2F55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MailInfosNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D5B5 RID: 54709 RVA: 0x001F6F6B File Offset: 0x001F516B
+		// Token: 0x0600D49B RID: 54427 RVA: 0x001F4D83 File Offset: 0x001F2F83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D5B6 RID: 54710 RVA: 0x001F6F74 File Offset: 0x001F5174
+		// Token: 0x0600D49C RID: 54428 RVA: 0x001F4D8C File Offset: 0x001F2F8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 42U)
+				if (num != 58U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005967 RID: 22887
+		// Token: 0x04005970 RID: 22896
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005968 RID: 22888
-		public const int MailInfosFieldNumber = 5;
+		// Token: 0x04005971 RID: 22897
+		public const int MailInfosFieldNumber = 7;
 
-		// Token: 0x04005969 RID: 22889
-		private static readonly FieldCodec<PbMailInfo> _repeated_mailInfos_codec = FieldCodec.ForMessage<PbMailInfo>(42U, PbMailInfo.Parser);
+		// Token: 0x04005972 RID: 22898
+		private static readonly FieldCodec<PbMailInfo> _repeated_mailInfos_codec = FieldCodec.ForMessage<PbMailInfo>(58U, PbMailInfo.Parser);
 
-		// Token: 0x0400596A RID: 22890
+		// Token: 0x04005973 RID: 22899
 		private readonly RepeatedField<PbMailInfo> mailInfos_ = new RepeatedField<PbMailInfo>();
 	}
 }

@@ -4,36 +4,34 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000CF RID: 207
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020000D7 RID: 215
 	public class ElementalEffectComponent_SetValue
 	{
-		// Token: 0x0400048C RID: 1164
+		// Token: 0x040004B0 RID: 1200
 		public bool? Disabled;
 
-		// Token: 0x0400048D RID: 1165
+		// Token: 0x040004B1 RID: 1201
 		public bool? EdIsLocked;
 
-		// Token: 0x0400048E RID: 1166
+		// Token: 0x040004B2 RID: 1202
 		public IElementalMatchBase MatchConfig;
 
-		// Token: 0x0400048F RID: 1167
+		// Token: 0x040004B3 RID: 1203
 		public IElementalRangeTypeBase Range;
 
-		// Token: 0x04000490 RID: 1168
+		// Token: 0x040004B4 RID: 1204
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IElementalMatchActions> OnActiveEffectActions;
 
-		// Token: 0x04000491 RID: 1169
+		// Token: 0x040004B5 RID: 1205
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IElementalMatchActions> OnLoseEffectActions;
 	}

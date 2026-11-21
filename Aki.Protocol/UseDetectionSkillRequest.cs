@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020014B0 RID: 5296
+	// Token: 0x02001526 RID: 5414
 	[NetMessage(EMessageId.UseDetectionSkillRequest)]
 	public sealed class UseDetectionSkillRequest : IMessage<UseDetectionSkillRequest>, IMessage, IEquatable<UseDetectionSkillRequest>, IDeepCloneable<UseDetectionSkillRequest>, IBufferMessage
 	{
-		// Token: 0x0601C019 RID: 114713 RVA: 0x0040C2C3 File Offset: 0x0040A4C3
+		// Token: 0x0601CAE0 RID: 117472 RVA: 0x00427D7B File Offset: 0x00425F7B
 		[NullableContext(1)]
 		public static UseDetectionSkillRequest Create()
 		{
 			return new UseDetectionSkillRequest();
 		}
 
-		// Token: 0x17005E60 RID: 24160
-		// (get) Token: 0x0601C01A RID: 114714 RVA: 0x0040C2CA File Offset: 0x0040A4CA
+		// Token: 0x17006101 RID: 24833
+		// (get) Token: 0x0601CAE1 RID: 117473 RVA: 0x00427D82 File Offset: 0x00425F82
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005E61 RID: 24161
-		// (get) Token: 0x0601C01B RID: 114715 RVA: 0x0040C2CD File Offset: 0x0040A4CD
+		// Token: 0x17006102 RID: 24834
+		// (get) Token: 0x0601CAE2 RID: 117474 RVA: 0x00427D85 File Offset: 0x00425F85
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C01C RID: 114716 RVA: 0x0040C2D4 File Offset: 0x0040A4D4
+		// Token: 0x0601CAE3 RID: 117475 RVA: 0x00427D8C File Offset: 0x00425F8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UseDetectionSkillRequest()
 		{
 		}
 
-		// Token: 0x0601C01D RID: 114717 RVA: 0x0040C2DC File Offset: 0x0040A4DC
+		// Token: 0x0601CAE4 RID: 117476 RVA: 0x00427D94 File Offset: 0x00425F94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UseDetectionSkillRequest(UseDetectionSkillRequest other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601C01E RID: 114718 RVA: 0x0040C350 File Offset: 0x0040A550
+		// Token: 0x0601CAE5 RID: 117477 RVA: 0x00427E08 File Offset: 0x00426008
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UseDetectionSkillRequest Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new UseDetectionSkillRequest(this);
 		}
 
-		// Token: 0x17005E62 RID: 24162
-		// (get) Token: 0x0601C01F RID: 114719 RVA: 0x0040C358 File Offset: 0x0040A558
-		// (set) Token: 0x0601C020 RID: 114720 RVA: 0x0040C360 File Offset: 0x0040A560
+		// Token: 0x17006103 RID: 24835
+		// (get) Token: 0x0601CAE6 RID: 117478 RVA: 0x00427E10 File Offset: 0x00426010
+		// (set) Token: 0x0601CAE7 RID: 117479 RVA: 0x00427E18 File Offset: 0x00426018
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SkillId
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005E63 RID: 24163
-		// (get) Token: 0x0601C021 RID: 114721 RVA: 0x0040C369 File Offset: 0x0040A569
-		// (set) Token: 0x0601C022 RID: 114722 RVA: 0x0040C371 File Offset: 0x0040A571
+		// Token: 0x17006104 RID: 24836
+		// (get) Token: 0x0601CAE8 RID: 117480 RVA: 0x00427E21 File Offset: 0x00426021
+		// (set) Token: 0x0601CAE9 RID: 117481 RVA: 0x00427E29 File Offset: 0x00426029
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector Pos
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005E64 RID: 24164
-		// (get) Token: 0x0601C023 RID: 114723 RVA: 0x0040C37A File Offset: 0x0040A57A
-		// (set) Token: 0x0601C024 RID: 114724 RVA: 0x0040C382 File Offset: 0x0040A582
+		// Token: 0x17006105 RID: 24837
+		// (get) Token: 0x0601CAEA RID: 117482 RVA: 0x00427E32 File Offset: 0x00426032
+		// (set) Token: 0x0601CAEB RID: 117483 RVA: 0x00427E3A File Offset: 0x0042603A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Rotator Rot
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005E65 RID: 24165
-		// (get) Token: 0x0601C025 RID: 114725 RVA: 0x0040C38B File Offset: 0x0040A58B
-		// (set) Token: 0x0601C026 RID: 114726 RVA: 0x0040C393 File Offset: 0x0040A593
+		// Token: 0x17006106 RID: 24838
+		// (get) Token: 0x0601CAEC RID: 117484 RVA: 0x00427E43 File Offset: 0x00426043
+		// (set) Token: 0x0601CAED RID: 117485 RVA: 0x00427E4B File Offset: 0x0042604B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool ConfirmUseDetectionSkill
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C027 RID: 114727 RVA: 0x0040C39C File Offset: 0x0040A59C
+		// Token: 0x0601CAEE RID: 117486 RVA: 0x00427E54 File Offset: 0x00426054
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as UseDetectionSkillRequest);
 		}
 
-		// Token: 0x0601C028 RID: 114728 RVA: 0x0040C3AC File Offset: 0x0040A5AC
+		// Token: 0x0601CAEF RID: 117487 RVA: 0x00427E64 File Offset: 0x00426064
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(UseDetectionSkillRequest other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.SkillId == other.SkillId && object.Equals(this.Pos, other.Pos) && object.Equals(this.Rot, other.Rot) && this.ConfirmUseDetectionSkill == other.ConfirmUseDetectionSkill && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601C029 RID: 114729 RVA: 0x0040C420 File Offset: 0x0040A620
+		// Token: 0x0601CAF0 RID: 117488 RVA: 0x00427ED8 File Offset: 0x004260D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C02A RID: 114730 RVA: 0x0040C4A4 File Offset: 0x0040A6A4
+		// Token: 0x0601CAF1 RID: 117489 RVA: 0x00427F5C File Offset: 0x0042615C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601C02B RID: 114731 RVA: 0x0040C4B1 File Offset: 0x0040A6B1
+		// Token: 0x0601CAF2 RID: 117490 RVA: 0x00427F69 File Offset: 0x00426169
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601C02C RID: 114732 RVA: 0x0040C4BC File Offset: 0x0040A6BC
+		// Token: 0x0601CAF3 RID: 117491 RVA: 0x00427F74 File Offset: 0x00426174
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.SkillId != 0)
+			if (this.rot_ != null)
 			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.SkillId);
-			}
-			if (this.ConfirmUseDetectionSkill)
-			{
-				output.WriteRawTag(32);
-				output.WriteBool(this.ConfirmUseDetectionSkill);
+				output.WriteRawTag(18);
+				output.WriteMessage(this.Rot);
 			}
 			if (this.pos_ != null)
 			{
-				output.WriteRawTag(58);
+				output.WriteRawTag(50);
 				output.WriteMessage(this.Pos);
 			}
-			if (this.rot_ != null)
+			if (this.ConfirmUseDetectionSkill)
 			{
-				output.WriteRawTag(98);
-				output.WriteMessage(this.Rot);
+				output.WriteRawTag(64);
+				output.WriteBool(this.ConfirmUseDetectionSkill);
+			}
+			if (this.SkillId != 0)
+			{
+				output.WriteRawTag(104);
+				output.WriteInt32(this.SkillId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C02D RID: 114733 RVA: 0x0040C550 File Offset: 0x0040A750
+		// Token: 0x0601CAF4 RID: 117492 RVA: 0x00428008 File Offset: 0x00426208
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C02E RID: 114734 RVA: 0x0040C5CC File Offset: 0x0040A7CC
+		// Token: 0x0601CAF5 RID: 117493 RVA: 0x00428084 File Offset: 0x00426284
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(UseDetectionSkillRequest other)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601C02F RID: 114735 RVA: 0x0040C674 File Offset: 0x0040A874
+		// Token: 0x0601CAF6 RID: 117494 RVA: 0x0042812C File Offset: 0x0042632C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -302,7 +302,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601C030 RID: 114736 RVA: 0x0040C680 File Offset: 0x0040A880
+		// Token: 0x0601CAF7 RID: 117495 RVA: 0x00428138 File Offset: 0x00426338
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -314,31 +314,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 32U)
+				if (num <= 50U)
 				{
-					if (num == 24U)
-					{
-						this.SkillId = input.ReadInt32();
-						continue;
-					}
-					if (num == 32U)
-					{
-						this.ConfirmUseDetectionSkill = input.ReadBool();
-						continue;
-					}
-				}
-				else
-				{
-					if (num == 58U)
-					{
-						if (this.pos_ == null)
-						{
-							this.Pos = new Vector();
-						}
-						input.ReadMessage(this.Pos);
-						continue;
-					}
-					if (num == 98U)
+					if (num == 18U)
 					{
 						if (this.rot_ == null)
 						{
@@ -347,36 +325,58 @@ namespace Aki.Protocol
 						input.ReadMessage(this.Rot);
 						continue;
 					}
+					if (num == 50U)
+					{
+						if (this.pos_ == null)
+						{
+							this.Pos = new Vector();
+						}
+						input.ReadMessage(this.Pos);
+						continue;
+					}
+				}
+				else
+				{
+					if (num == 64U)
+					{
+						this.ConfirmUseDetectionSkill = input.ReadBool();
+						continue;
+					}
+					if (num == 104U)
+					{
+						this.SkillId = input.ReadInt32();
+						continue;
+					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x0400A0D6 RID: 41174
+		// Token: 0x0400A52F RID: 42287
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400A0D7 RID: 41175
-		public const int SkillIdFieldNumber = 3;
+		// Token: 0x0400A530 RID: 42288
+		public const int SkillIdFieldNumber = 13;
 
-		// Token: 0x0400A0D8 RID: 41176
+		// Token: 0x0400A531 RID: 42289
 		private int skillId_;
 
-		// Token: 0x0400A0D9 RID: 41177
-		public const int PosFieldNumber = 7;
+		// Token: 0x0400A532 RID: 42290
+		public const int PosFieldNumber = 6;
 
-		// Token: 0x0400A0DA RID: 41178
+		// Token: 0x0400A533 RID: 42291
 		private Vector pos_;
 
-		// Token: 0x0400A0DB RID: 41179
-		public const int RotFieldNumber = 12;
+		// Token: 0x0400A534 RID: 42292
+		public const int RotFieldNumber = 2;
 
-		// Token: 0x0400A0DC RID: 41180
+		// Token: 0x0400A535 RID: 42293
 		private Rotator rot_;
 
-		// Token: 0x0400A0DD RID: 41181
-		public const int ConfirmUseDetectionSkillFieldNumber = 4;
+		// Token: 0x0400A536 RID: 42294
+		public const int ConfirmUseDetectionSkillFieldNumber = 8;
 
-		// Token: 0x0400A0DE RID: 41182
+		// Token: 0x0400A537 RID: 42295
 		private bool confirmUseDetectionSkill_;
 	}
 }

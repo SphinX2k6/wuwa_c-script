@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062EF RID: 25327
+	// Token: 0x0200526D RID: 21101
 	public class PinballSettleDialogView : UiPanelBase
 	{
-		// Token: 0x0603FBC1 RID: 261057 RVA: 0x00F6BD98 File Offset: 0x00F69F98
+		// Token: 0x06034882 RID: 215170 RVA: 0x00EB2CF4 File Offset: 0x00EB0EF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,17 +22,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FBC2 RID: 261058 RVA: 0x00F6BDE0 File Offset: 0x00F69FE0
+		// Token: 0x06034883 RID: 215171 RVA: 0x00EB2D3C File Offset: 0x00EB0F3C
 		[NullableContext(1)]
 		public void ShowTxt(string textId)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(0), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0200C4E5 RID: 50405
+		// Token: 0x0200AECC RID: 44748
 		private enum EComponent
 		{
-			// Token: 0x0403B6B1 RID: 243377
+			// Token: 0x04036013 RID: 221203
 			TextDialog
 		}
 	}

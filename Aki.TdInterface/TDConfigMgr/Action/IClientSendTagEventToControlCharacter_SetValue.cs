@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018C7 RID: 6343
+	// Token: 0x02001A58 RID: 6744
 	public class IClientSendTagEventToControlCharacter_SetValue
 	{
-		// Token: 0x04005581 RID: 21889
+		// Token: 0x040059DB RID: 23003
 		public EExecClientBattleActionType Type;
 
-		// Token: 0x04005582 RID: 21890
-		[Nullable(1)]
+		// Token: 0x040059DC RID: 23004
 		public List<string> EventTags;
 	}
 }

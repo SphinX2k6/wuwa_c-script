@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Personal;
@@ -10,13 +9,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023D6 RID: 9174
+// Token: 0x020018BB RID: 6331
 [NullableContext(1)]
 [Nullable(0)]
 public class PersonalHeadPhotoComponent : UiPanelBase
 {
-	// Token: 0x170017CA RID: 6090
-	// (get) Token: 0x06012563 RID: 75107 RVA: 0x00484468 File Offset: 0x00482668
+	// Token: 0x17001804 RID: 6148
+	// (get) Token: 0x0600FA15 RID: 64021 RVA: 0x00491974 File Offset: 0x0048FB74
 	[Nullable(2)]
 	private PlayerHeadData CurSelectPlayerHead
 	{
@@ -32,7 +31,7 @@ public class PersonalHeadPhotoComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012564 RID: 75108 RVA: 0x004844A8 File Offset: 0x004826A8
+	// Token: 0x0600FA16 RID: 64022 RVA: 0x004919B4 File Offset: 0x0048FBB4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +43,7 @@ public class PersonalHeadPhotoComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012565 RID: 75109 RVA: 0x00484518 File Offset: 0x00482718
+	// Token: 0x0600FA17 RID: 64023 RVA: 0x00491A24 File Offset: 0x0048FC24
 	protected override void OnStart()
 	{
 		this.PlayerHeadDataList = PersonalModel.Instance.GetPlayerShowHeadDataList();
@@ -52,7 +51,7 @@ public class PersonalHeadPhotoComponent : UiPanelBase
 		this.AddEventListener();
 	}
 
-	// Token: 0x06012566 RID: 75110 RVA: 0x00484554 File Offset: 0x00482754
+	// Token: 0x0600FA18 RID: 64024 RVA: 0x00491A60 File Offset: 0x0048FC60
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		PersonalHeadPhotoComponent.<OnBeforeShowAsyncImplement>d__7 <OnBeforeShowAsyncImplement>d__;
@@ -63,37 +62,37 @@ public class PersonalHeadPhotoComponent : UiPanelBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012567 RID: 75111 RVA: 0x00484597 File Offset: 0x00482797
+	// Token: 0x0600FA19 RID: 64025 RVA: 0x00491AA3 File Offset: 0x0048FCA3
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x06012568 RID: 75112 RVA: 0x0048459F File Offset: 0x0048279F
+	// Token: 0x0600FA1A RID: 64026 RVA: 0x00491AAB File Offset: 0x0048FCAB
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnHeadIconChange, new Action<int>(this.RefreshView));
 	}
 
-	// Token: 0x06012569 RID: 75113 RVA: 0x004845BD File Offset: 0x004827BD
+	// Token: 0x0600FA1B RID: 64027 RVA: 0x00491AC9 File Offset: 0x0048FCC9
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHeadIconChange, new Action<int>(this.RefreshView));
 	}
 
-	// Token: 0x0601256A RID: 75114 RVA: 0x004845DB File Offset: 0x004827DB
+	// Token: 0x0600FA1C RID: 64028 RVA: 0x00491AE7 File Offset: 0x0048FCE7
 	public void OnClickConfirm(int _)
 	{
 		PersonalController.Instance.SendChangeHeadPhotoRequest(this.CurSelectPlayerHead.Id);
 	}
 
-	// Token: 0x0601256B RID: 75115 RVA: 0x004845F2 File Offset: 0x004827F2
+	// Token: 0x0600FA1D RID: 64029 RVA: 0x00491AFE File Offset: 0x0048FCFE
 	public void SetRefreshConfirmBtn(Action<bool, bool> refreshConfirmBtn)
 	{
 		this.RefreshConfirmBtn = refreshConfirmBtn;
 	}
 
-	// Token: 0x0601256C RID: 75116 RVA: 0x004845FC File Offset: 0x004827FC
+	// Token: 0x0600FA1E RID: 64030 RVA: 0x00491B08 File Offset: 0x0048FD08
 	private void RefreshView(int roleId)
 	{
 		this.PlayerHeadDataList = this.GetSortedList();
@@ -107,7 +106,7 @@ public class PersonalHeadPhotoComponent : UiPanelBase
 		this.SelectByRoleId(this.PlayerHeadDataList[index]);
 	}
 
-	// Token: 0x0601256D RID: 75117 RVA: 0x0048467B File Offset: 0x0048287B
+	// Token: 0x0600FA1F RID: 64031 RVA: 0x00491B87 File Offset: 0x0048FD87
 	private PersonalRoleSmallItemGrid CreateCardItem()
 	{
 		PersonalRoleSmallItemGrid personalRoleSmallItemGrid = new PersonalRoleSmallItemGrid();
@@ -115,13 +114,13 @@ public class PersonalHeadPhotoComponent : UiPanelBase
 		return personalRoleSmallItemGrid;
 	}
 
-	// Token: 0x0601256E RID: 75118 RVA: 0x00484694 File Offset: 0x00482894
+	// Token: 0x0600FA20 RID: 64032 RVA: 0x00491BA0 File Offset: 0x0048FDA0
 	private void RoleItemToggleClick(PlayerHeadData playerHeadData)
 	{
 		this.SelectByRoleId(playerHeadData);
 	}
 
-	// Token: 0x0601256F RID: 75119 RVA: 0x004846A0 File Offset: 0x004828A0
+	// Token: 0x0600FA21 RID: 64033 RVA: 0x00491BAC File Offset: 0x0048FDAC
 	private void SelectByRoleId(PlayerHeadData playerHeadData)
 	{
 		int num = this.PlayerHeadDataList.FindIndex((PlayerHeadData data) => data == playerHeadData);
@@ -153,10 +152,10 @@ public class PersonalHeadPhotoComponent : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(text, playerHeadData.Config.Tips, Array.Empty<object>());
 	}
 
-	// Token: 0x06012570 RID: 75120 RVA: 0x004847EC File Offset: 0x004829EC
+	// Token: 0x0600FA22 RID: 64034 RVA: 0x00491CF8 File Offset: 0x0048FEF8
 	private List<PlayerHeadData> GetSortedList()
 	{
-		List<PlayerHeadData> list = PersonalModel.Instance.GetPlayerShowHeadDataList().ToList<PlayerHeadData>();
+		List<PlayerHeadData> list = new List<PlayerHeadData>(PersonalModel.Instance.GetPlayerShowHeadDataList());
 		int num = list.FindIndex((PlayerHeadData data) => data.Id == PersonalModel.Instance.GetHeadPhotoId());
 		if (num <= 0 || num >= list.Count)
 		{
@@ -171,7 +170,7 @@ public class PersonalHeadPhotoComponent : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x04008AAC RID: 35500
+	// Token: 0x04008BF3 RID: 35827
 	[Nullable(new byte[]
 	{
 		2,
@@ -180,10 +179,10 @@ public class PersonalHeadPhotoComponent : UiPanelBase
 	})]
 	private GenericScrollViewNew<PersonalRoleSmallItemGrid, PlayerHeadData> ScrollView;
 
-	// Token: 0x04008AAD RID: 35501
+	// Token: 0x04008BF4 RID: 35828
 	protected List<PlayerHeadData> PlayerHeadDataList = new List<PlayerHeadData>();
 
-	// Token: 0x04008AAE RID: 35502
+	// Token: 0x04008BF5 RID: 35829
 	[Nullable(2)]
 	private Action<bool, bool> RefreshConfirmBtn;
 }

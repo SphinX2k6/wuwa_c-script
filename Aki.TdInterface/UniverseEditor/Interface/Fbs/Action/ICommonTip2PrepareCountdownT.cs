@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006484 RID: 25732
+	// Token: 0x02006AEF RID: 27375
 	public class ICommonTip2PrepareCountdownT
 	{
-		// Token: 0x1700BF82 RID: 49026
-		// (get) Token: 0x0602C984 RID: 182660 RVA: 0x0061FF0F File Offset: 0x0061E10F
-		// (set) Token: 0x0602C985 RID: 182661 RVA: 0x0061FF17 File Offset: 0x0061E117
+		// Token: 0x1700C90F RID: 51471
+		// (get) Token: 0x0602F0FE RID: 192766 RVA: 0x0066BAE3 File Offset: 0x00669CE3
+		// (set) Token: 0x0602F0FF RID: 192767 RVA: 0x0066BAEB File Offset: 0x00669CEB
 		public ECommonTip2Type Type { get; set; }
 
-		// Token: 0x1700BF83 RID: 49027
-		// (get) Token: 0x0602C986 RID: 182662 RVA: 0x0061FF20 File Offset: 0x0061E120
-		// (set) Token: 0x0602C987 RID: 182663 RVA: 0x0061FF28 File Offset: 0x0061E128
+		// Token: 0x1700C910 RID: 51472
+		// (get) Token: 0x0602F100 RID: 192768 RVA: 0x0066BAF4 File Offset: 0x00669CF4
+		// (set) Token: 0x0602F101 RID: 192769 RVA: 0x0066BAFC File Offset: 0x00669CFC
 		public int CountDownNum { get; set; }
 
-		// Token: 0x1700BF84 RID: 49028
-		// (get) Token: 0x0602C988 RID: 182664 RVA: 0x0061FF31 File Offset: 0x0061E131
-		// (set) Token: 0x0602C989 RID: 182665 RVA: 0x0061FF39 File Offset: 0x0061E139
+		// Token: 0x1700C911 RID: 51473
+		// (get) Token: 0x0602F102 RID: 192770 RVA: 0x0066BB05 File Offset: 0x00669D05
+		// (set) Token: 0x0602F103 RID: 192771 RVA: 0x0066BB0D File Offset: 0x00669D0D
 		public string TidCountDownTxt { get; set; }
 
-		// Token: 0x1700BF85 RID: 49029
-		// (get) Token: 0x0602C98A RID: 182666 RVA: 0x0061FF42 File Offset: 0x0061E142
-		// (set) Token: 0x0602C98B RID: 182667 RVA: 0x0061FF4A File Offset: 0x0061E14A
+		// Token: 0x1700C912 RID: 51474
+		// (get) Token: 0x0602F104 RID: 192772 RVA: 0x0066BB16 File Offset: 0x00669D16
+		// (set) Token: 0x0602F105 RID: 192773 RVA: 0x0066BB1E File Offset: 0x00669D1E
 		public ECountDownUiStyle UiStyle { get; set; }
 
-		// Token: 0x1700BF86 RID: 49030
-		// (get) Token: 0x0602C98C RID: 182668 RVA: 0x0061FF53 File Offset: 0x0061E153
-		// (set) Token: 0x0602C98D RID: 182669 RVA: 0x0061FF5B File Offset: 0x0061E15B
+		// Token: 0x1700C913 RID: 51475
+		// (get) Token: 0x0602F106 RID: 192774 RVA: 0x0066BB27 File Offset: 0x00669D27
+		// (set) Token: 0x0602F107 RID: 192775 RVA: 0x0066BB2F File Offset: 0x00669D2F
 		public bool IsBlockPlayer { get; set; }
 
-		// Token: 0x1700BF87 RID: 49031
-		// (get) Token: 0x0602C98E RID: 182670 RVA: 0x0061FF64 File Offset: 0x0061E164
-		// (set) Token: 0x0602C98F RID: 182671 RVA: 0x0061FF6C File Offset: 0x0061E16C
+		// Token: 0x1700C914 RID: 51476
+		// (get) Token: 0x0602F108 RID: 192776 RVA: 0x0066BB38 File Offset: 0x00669D38
+		// (set) Token: 0x0602F109 RID: 192777 RVA: 0x0066BB40 File Offset: 0x00669D40
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602C990 RID: 182672 RVA: 0x0061FF75 File Offset: 0x0061E175
+		// Token: 0x0602F10A RID: 192778 RVA: 0x0066BB49 File Offset: 0x00669D49
 		public ICommonTip2PrepareCountdownT()
 		{
 			this.Type = ECommonTip2Type.PrepareCountdown;

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048EB RID: 18667
+	// Token: 0x02003862 RID: 14434
 	public enum EComponentDefine
 	{
-		// Token: 0x0401A35F RID: 107359
+		// Token: 0x04014BD2 RID: 84946
 		BarSprite
 	}
 }

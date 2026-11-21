@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012E3 RID: 4835
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001429 RID: 5161
 	public class IKurotatoSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006E72 RID: 28274 RVA: 0x0010AE3C File Offset: 0x0010903C
+		// Token: 0x060074F2 RID: 29938 RVA: 0x0011913C File Offset: 0x0011733C
 		public static IKurotatoSystemConfig Create(IKurotatoSystemConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700227F RID: 8831
-		// (get) Token: 0x06006E73 RID: 28275 RVA: 0x0010AE5B File Offset: 0x0010905B
+		// Token: 0x17002442 RID: 9282
+		// (get) Token: 0x060074F3 RID: 29939 RVA: 0x0011915B File Offset: 0x0011735B
 		public override EEnableSystemType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002280 RID: 8832
-		// (get) Token: 0x06006E74 RID: 28276 RVA: 0x0010AE68 File Offset: 0x00109068
+		// Token: 0x17002443 RID: 9283
+		// (get) Token: 0x060074F4 RID: 29940 RVA: 0x00119168 File Offset: 0x00117368
 		public virtual List<IKurotatoSystemVar> Vars
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F47 RID: 16199
+		// Token: 0x040042B5 RID: 17077
 		private IKurotatoSystemConfig Instance;
 
-		// Token: 0x04003F48 RID: 16200
+		// Token: 0x040042B6 RID: 17078
 		private List<IKurotatoSystemVar> _VarsCache;
 
-		// Token: 0x04003F49 RID: 16201
+		// Token: 0x040042B7 RID: 17079
 		private bool _VarsInited;
 	}
 }

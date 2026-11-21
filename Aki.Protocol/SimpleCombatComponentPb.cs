@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200121E RID: 4638
+	// Token: 0x0200125A RID: 4698
 	public sealed class SimpleCombatComponentPb : IMessage<SimpleCombatComponentPb>, IMessage, IEquatable<SimpleCombatComponentPb>, IDeepCloneable<SimpleCombatComponentPb>, IBufferMessage
 	{
-		// Token: 0x06018B63 RID: 101219 RVA: 0x00397C76 File Offset: 0x00395E76
+		// Token: 0x0601913D RID: 102717 RVA: 0x003A7B1E File Offset: 0x003A5D1E
 		[NullableContext(1)]
 		public static SimpleCombatComponentPb Create()
 		{
 			return new SimpleCombatComponentPb();
 		}
 
-		// Token: 0x1700533E RID: 21310
-		// (get) Token: 0x06018B64 RID: 101220 RVA: 0x00397C7D File Offset: 0x00395E7D
+		// Token: 0x170054BB RID: 21691
+		// (get) Token: 0x0601913E RID: 102718 RVA: 0x003A7B25 File Offset: 0x003A5D25
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700533F RID: 21311
-		// (get) Token: 0x06018B65 RID: 101221 RVA: 0x00397C80 File Offset: 0x00395E80
+		// Token: 0x170054BC RID: 21692
+		// (get) Token: 0x0601913F RID: 102719 RVA: 0x003A7B28 File Offset: 0x003A5D28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018B66 RID: 101222 RVA: 0x00397C87 File Offset: 0x00395E87
+		// Token: 0x06019140 RID: 102720 RVA: 0x003A7B2F File Offset: 0x003A5D2F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatComponentPb()
 		{
 		}
 
-		// Token: 0x06018B67 RID: 101223 RVA: 0x00397CB0 File Offset: 0x00395EB0
+		// Token: 0x06019141 RID: 102721 RVA: 0x003A7B58 File Offset: 0x003A5D58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatComponentPb(SimpleCombatComponentPb other) : this()
@@ -67,7 +67,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06018B68 RID: 101224 RVA: 0x00397D45 File Offset: 0x00395F45
+		// Token: 0x06019142 RID: 102722 RVA: 0x003A7BED File Offset: 0x003A5DED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatComponentPb Clone()
@@ -75,9 +75,9 @@ namespace Aki.Protocol
 			return new SimpleCombatComponentPb(this);
 		}
 
-		// Token: 0x17005340 RID: 21312
-		// (get) Token: 0x06018B69 RID: 101225 RVA: 0x00397D4D File Offset: 0x00395F4D
-		// (set) Token: 0x06018B6A RID: 101226 RVA: 0x00397D55 File Offset: 0x00395F55
+		// Token: 0x170054BD RID: 21693
+		// (get) Token: 0x06019143 RID: 102723 RVA: 0x003A7BF5 File Offset: 0x003A5DF5
+		// (set) Token: 0x06019144 RID: 102724 RVA: 0x003A7BFD File Offset: 0x003A5DFD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SubTypeId
@@ -92,9 +92,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005341 RID: 21313
-		// (get) Token: 0x06018B6B RID: 101227 RVA: 0x00397D5E File Offset: 0x00395F5E
-		// (set) Token: 0x06018B6C RID: 101228 RVA: 0x00397D76 File Offset: 0x00395F76
+		// Token: 0x170054BE RID: 21694
+		// (get) Token: 0x06019145 RID: 102725 RVA: 0x003A7C06 File Offset: 0x003A5E06
+		// (set) Token: 0x06019146 RID: 102726 RVA: 0x003A7C1E File Offset: 0x003A5E1E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SplineConfigId
@@ -114,8 +114,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005342 RID: 21314
-		// (get) Token: 0x06018B6D RID: 101229 RVA: 0x00397D8D File Offset: 0x00395F8D
+		// Token: 0x170054BF RID: 21695
+		// (get) Token: 0x06019147 RID: 102727 RVA: 0x003A7C35 File Offset: 0x003A5E35
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasSplineConfigId
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018B6E RID: 101230 RVA: 0x00397D9A File Offset: 0x00395F9A
+		// Token: 0x06019148 RID: 102728 RVA: 0x003A7C42 File Offset: 0x003A5E42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearSplineConfigId()
@@ -134,8 +134,8 @@ namespace Aki.Protocol
 			this._hasBits0 &= -2;
 		}
 
-		// Token: 0x17005343 RID: 21315
-		// (get) Token: 0x06018B6F RID: 101231 RVA: 0x00397DAB File Offset: 0x00395FAB
+		// Token: 0x170054C0 RID: 21696
+		// (get) Token: 0x06019149 RID: 102729 RVA: 0x003A7C53 File Offset: 0x003A5E53
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> BuffLayers
@@ -146,8 +146,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005344 RID: 21316
-		// (get) Token: 0x06018B70 RID: 101232 RVA: 0x00397DB3 File Offset: 0x00395FB3
+		// Token: 0x170054C1 RID: 21697
+		// (get) Token: 0x0601914A RID: 102730 RVA: 0x003A7C5B File Offset: 0x003A5E5B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> AttributeMap
@@ -158,8 +158,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005345 RID: 21317
-		// (get) Token: 0x06018B71 RID: 101233 RVA: 0x00397DBB File Offset: 0x00395FBB
+		// Token: 0x170054C2 RID: 21698
+		// (get) Token: 0x0601914B RID: 102731 RVA: 0x003A7C63 File Offset: 0x003A5E63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> LockedAttributeMap
@@ -170,9 +170,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005346 RID: 21318
-		// (get) Token: 0x06018B72 RID: 101234 RVA: 0x00397DC3 File Offset: 0x00395FC3
-		// (set) Token: 0x06018B73 RID: 101235 RVA: 0x00397DDB File Offset: 0x00395FDB
+		// Token: 0x170054C3 RID: 21699
+		// (get) Token: 0x0601914C RID: 102732 RVA: 0x003A7C6B File Offset: 0x003A5E6B
+		// (set) Token: 0x0601914D RID: 102733 RVA: 0x003A7C83 File Offset: 0x003A5E83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatSplineMovePbType SplineMoveType
@@ -192,8 +192,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005347 RID: 21319
-		// (get) Token: 0x06018B74 RID: 101236 RVA: 0x00397DF1 File Offset: 0x00395FF1
+		// Token: 0x170054C4 RID: 21700
+		// (get) Token: 0x0601914E RID: 102734 RVA: 0x003A7C99 File Offset: 0x003A5E99
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatComponentPb.MoveTypeOneofCase MoveTypeCase
@@ -204,7 +204,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018B75 RID: 101237 RVA: 0x00397DF9 File Offset: 0x00395FF9
+		// Token: 0x0601914F RID: 102735 RVA: 0x003A7CA1 File Offset: 0x003A5EA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearMoveType()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			this.moveType_ = null;
 		}
 
-		// Token: 0x06018B76 RID: 101238 RVA: 0x00397E09 File Offset: 0x00396009
+		// Token: 0x06019150 RID: 102736 RVA: 0x003A7CB1 File Offset: 0x003A5EB1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -221,7 +221,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SimpleCombatComponentPb);
 		}
 
-		// Token: 0x06018B77 RID: 101239 RVA: 0x00397E18 File Offset: 0x00396018
+		// Token: 0x06019151 RID: 102737 RVA: 0x003A7CC0 File Offset: 0x003A5EC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SimpleCombatComponentPb other)
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.SubTypeId == other.SubTypeId && this.SplineConfigId == other.SplineConfigId && this.BuffLayers.Equals(other.BuffLayers) && this.AttributeMap.Equals(other.AttributeMap) && this.LockedAttributeMap.Equals(other.LockedAttributeMap) && object.Equals(this.SplineMoveType, other.SplineMoveType) && this.MoveTypeCase == other.MoveTypeCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018B78 RID: 101240 RVA: 0x00397EC8 File Offset: 0x003960C8
+		// Token: 0x06019152 RID: 102738 RVA: 0x003A7D70 File Offset: 0x003A5F70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018B79 RID: 101241 RVA: 0x00397F6A File Offset: 0x0039616A
+		// Token: 0x06019153 RID: 102739 RVA: 0x003A7E12 File Offset: 0x003A6012
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -266,7 +266,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018B7A RID: 101242 RVA: 0x00397F77 File Offset: 0x00396177
+		// Token: 0x06019154 RID: 102740 RVA: 0x003A7E1F File Offset: 0x003A601F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -274,7 +274,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018B7B RID: 101243 RVA: 0x00397F80 File Offset: 0x00396180
+		// Token: 0x06019155 RID: 102741 RVA: 0x003A7E28 File Offset: 0x003A6028
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -303,7 +303,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018B7C RID: 101244 RVA: 0x00398028 File Offset: 0x00396228
+		// Token: 0x06019156 RID: 102742 RVA: 0x003A7ED0 File Offset: 0x003A60D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -331,7 +331,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018B7D RID: 101245 RVA: 0x003980D0 File Offset: 0x003962D0
+		// Token: 0x06019157 RID: 102743 RVA: 0x003A7F78 File Offset: 0x003A6178
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SimpleCombatComponentPb other)
@@ -362,7 +362,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06018B7E RID: 101246 RVA: 0x00398180 File Offset: 0x00396380
+		// Token: 0x06019158 RID: 102744 RVA: 0x003A8028 File Offset: 0x003A6228
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -370,7 +370,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06018B7F RID: 101247 RVA: 0x0039818C File Offset: 0x0039638C
+		// Token: 0x06019159 RID: 102745 RVA: 0x003A8034 File Offset: 0x003A6234
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -428,69 +428,69 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040091DA RID: 37338
+		// Token: 0x0400948B RID: 38027
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040091DB RID: 37339
+		// Token: 0x0400948C RID: 38028
 		private int _hasBits0;
 
-		// Token: 0x040091DC RID: 37340
+		// Token: 0x0400948D RID: 38029
 		public const int SubTypeIdFieldNumber = 1;
 
-		// Token: 0x040091DD RID: 37341
+		// Token: 0x0400948E RID: 38030
 		private int subTypeId_;
 
-		// Token: 0x040091DE RID: 37342
+		// Token: 0x0400948F RID: 38031
 		public const int SplineConfigIdFieldNumber = 3;
 
-		// Token: 0x040091DF RID: 37343
+		// Token: 0x04009490 RID: 38032
 		private static readonly int SplineConfigIdDefaultValue = 0;
 
-		// Token: 0x040091E0 RID: 37344
+		// Token: 0x04009491 RID: 38033
 		private int splineConfigId_;
 
-		// Token: 0x040091E1 RID: 37345
+		// Token: 0x04009492 RID: 38034
 		public const int BuffLayersFieldNumber = 4;
 
-		// Token: 0x040091E2 RID: 37346
+		// Token: 0x04009493 RID: 38035
 		private static readonly MapField<int, int>.Codec _map_buffLayers_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 34U);
 
-		// Token: 0x040091E3 RID: 37347
+		// Token: 0x04009494 RID: 38036
 		private readonly MapField<int, int> buffLayers_ = new MapField<int, int>();
 
-		// Token: 0x040091E4 RID: 37348
+		// Token: 0x04009495 RID: 38037
 		public const int AttributeMapFieldNumber = 5;
 
-		// Token: 0x040091E5 RID: 37349
+		// Token: 0x04009496 RID: 38038
 		private static readonly MapField<int, int>.Codec _map_attributeMap_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 42U);
 
-		// Token: 0x040091E6 RID: 37350
+		// Token: 0x04009497 RID: 38039
 		private readonly MapField<int, int> attributeMap_ = new MapField<int, int>();
 
-		// Token: 0x040091E7 RID: 37351
+		// Token: 0x04009498 RID: 38040
 		public const int LockedAttributeMapFieldNumber = 6;
 
-		// Token: 0x040091E8 RID: 37352
+		// Token: 0x04009499 RID: 38041
 		private static readonly MapField<int, int>.Codec _map_lockedAttributeMap_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 50U);
 
-		// Token: 0x040091E9 RID: 37353
+		// Token: 0x0400949A RID: 38042
 		private readonly MapField<int, int> lockedAttributeMap_ = new MapField<int, int>();
 
-		// Token: 0x040091EA RID: 37354
+		// Token: 0x0400949B RID: 38043
 		public const int SplineMoveTypeFieldNumber = 7;
 
-		// Token: 0x040091EB RID: 37355
+		// Token: 0x0400949C RID: 38044
 		private object moveType_;
 
-		// Token: 0x040091EC RID: 37356
+		// Token: 0x0400949D RID: 38045
 		private SimpleCombatComponentPb.MoveTypeOneofCase moveTypeCase_;
 
-		// Token: 0x02001993 RID: 6547
+		// Token: 0x02001A1F RID: 6687
 		public enum MoveTypeOneofCase
 		{
-			// Token: 0x0400CA10 RID: 51728
+			// Token: 0x0400CF5B RID: 53083
 			None,
-			// Token: 0x0400CA11 RID: 51729
+			// Token: 0x0400CF5C RID: 53084
 			SplineMoveType = 7
 		}
 	}

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E85 RID: 24197
+	// Token: 0x02004E6A RID: 20074
 	public class AudioCoolDownInfo : IAudioCoolDownInfo
 	{
-		// Token: 0x17008E89 RID: 36489
-		// (get) Token: 0x0603D8E9 RID: 252137 RVA: 0x00EDB1BA File Offset: 0x00ED93BA
-		// (set) Token: 0x0603D8EA RID: 252138 RVA: 0x00EDB1C2 File Offset: 0x00ED93C2
+		// Token: 0x1700625B RID: 25179
+		// (get) Token: 0x06032879 RID: 206969 RVA: 0x00E2C746 File Offset: 0x00E2A946
+		// (set) Token: 0x0603287A RID: 206970 RVA: 0x00E2C74E File Offset: 0x00E2A94E
 		public int DefaultCooldownTime { get; set; }
 
-		// Token: 0x17008E8A RID: 36490
-		// (get) Token: 0x0603D8EB RID: 252139 RVA: 0x00EDB1CB File Offset: 0x00ED93CB
-		// (set) Token: 0x0603D8EC RID: 252140 RVA: 0x00EDB1D3 File Offset: 0x00ED93D3
+		// Token: 0x1700625C RID: 25180
+		// (get) Token: 0x0603287B RID: 206971 RVA: 0x00E2C757 File Offset: 0x00E2A957
+		// (set) Token: 0x0603287C RID: 206972 RVA: 0x00E2C75F File Offset: 0x00E2A95F
 		public double DefaultProbability { get; set; }
 	}
 }

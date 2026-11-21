@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Context
 {
-	// Token: 0x02004F49 RID: 20297
+	// Token: 0x02003F12 RID: 16146
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QtaCzBgAnchor
 	{
-		// Token: 0x060340A7 RID: 213159 RVA: 0x00C34648 File Offset: 0x00C32848
+		// Token: 0x06028F15 RID: 167701 RVA: 0x00B7DDE8 File Offset: 0x00B7BFE8
 		public void InitParam(QtaCzBgBarValue bgValue, float angleScale = 1f)
 		{
 			List<float> list = new List<float>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			this.AngleScale = angleScale;
 		}
 
-		// Token: 0x060340A8 RID: 213160 RVA: 0x00C3474C File Offset: 0x00C3294C
+		// Token: 0x06028F16 RID: 167702 RVA: 0x00B7DEEC File Offset: 0x00B7C0EC
 		public bool CheckIsValid(float mainPct, float bgPct)
 		{
 			if (bgPct >= 1f)
@@ -54,19 +54,19 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			return false;
 		}
 
-		// Token: 0x0401BA44 RID: 113220
+		// Token: 0x04016419 RID: 91161
 		private List<float> Segments = new List<float>();
 
-		// Token: 0x0401BA45 RID: 113221
+		// Token: 0x0401641A RID: 91162
 		private float BgPctMax;
 
-		// Token: 0x0401BA46 RID: 113222
+		// Token: 0x0401641B RID: 91163
 		private readonly float BgOffset = 0.25f;
 
-		// Token: 0x0401BA47 RID: 113223
+		// Token: 0x0401641C RID: 91164
 		private float AngleOffset;
 
-		// Token: 0x0401BA48 RID: 113224
+		// Token: 0x0401641D RID: 91165
 		private float AngleScale = 1f;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007FF RID: 2047
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008A2 RID: 2210
 	public class IWuWaGoGridLinkData
 	{
-		// Token: 0x06002C75 RID: 11381 RVA: 0x00073760 File Offset: 0x00071960
+		// Token: 0x06002FA5 RID: 12197 RVA: 0x0007AAC4 File Offset: 0x00078CC4
 		private IWuWaGoGridLinkData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C76 RID: 11382 RVA: 0x00073798 File Offset: 0x00071998
+		// Token: 0x06002FA6 RID: 12198 RVA: 0x0007AAFC File Offset: 0x00078CFC
 		public static IWuWaGoGridLinkData Create([Nullable(2)] IWuWaGoGridLinkData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C77 RID: 11383 RVA: 0x000737AB File Offset: 0x000719AB
+		// Token: 0x06002FA7 RID: 12199 RVA: 0x0007AB0F File Offset: 0x00078D0F
 		public static IWuWaGoGridLinkData CreateFromSetValue([Nullable(2)] IWuWaGoGridLinkData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C78 RID: 11384 RVA: 0x000737BE File Offset: 0x000719BE
+		// Token: 0x06002FA8 RID: 12200 RVA: 0x0007AB22 File Offset: 0x00078D22
 		public IWuWaGoGridLinkData_SetValue ToSetValue()
 		{
 			return new IWuWaGoGridLinkData_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B9F RID: 2975
-		// (get) Token: 0x06002C79 RID: 11385 RVA: 0x000737DD File Offset: 0x000719DD
-		// (set) Token: 0x06002C7A RID: 11386 RVA: 0x00073808 File Offset: 0x00071A08
+		// Token: 0x17000C62 RID: 3170
+		// (get) Token: 0x06002FA9 RID: 12201 RVA: 0x0007AB41 File Offset: 0x00078D41
+		// (set) Token: 0x06002FAA RID: 12202 RVA: 0x0007AB6C File Offset: 0x00078D6C
 		public virtual EWuWaGoGridLinkType GridLinkType
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BA0 RID: 2976
-		// (get) Token: 0x06002C7B RID: 11387 RVA: 0x00073816 File Offset: 0x00071A16
-		// (set) Token: 0x06002C7C RID: 11388 RVA: 0x00073841 File Offset: 0x00071A41
+		// Token: 0x17000C63 RID: 3171
+		// (get) Token: 0x06002FAB RID: 12203 RVA: 0x0007AB7A File Offset: 0x00078D7A
+		// (set) Token: 0x06002FAC RID: 12204 RVA: 0x0007ABA5 File Offset: 0x00078DA5
 		public virtual EWuWaGoGridRotationType RotationType
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D73 RID: 7539
+		// Token: 0x04001F7F RID: 8063
 		[Nullable(2)]
 		protected IWuWaGoGridLinkData FbInstance;
 
-		// Token: 0x04001D74 RID: 7540
+		// Token: 0x04001F80 RID: 8064
 		[Nullable(2)]
 		protected IWuWaGoGridLinkData_SetValue PocoInterface;
 	}

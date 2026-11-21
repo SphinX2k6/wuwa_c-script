@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D2A RID: 3370
+	// Token: 0x02000E0F RID: 3599
 	public struct HiddenQuestWhite : IFlatbufferObject
 	{
-		// Token: 0x1700170C RID: 5900
-		// (get) Token: 0x06007E7A RID: 32378 RVA: 0x00253FF0 File Offset: 0x002521F0
+		// Token: 0x1700176F RID: 5999
+		// (get) Token: 0x06008494 RID: 33940 RVA: 0x00272848 File Offset: 0x00270A48
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007E7B RID: 32379 RVA: 0x00253FFD File Offset: 0x002521FD
+		// Token: 0x06008495 RID: 33941 RVA: 0x00272855 File Offset: 0x00270A55
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007E7C RID: 32380 RVA: 0x00254004 File Offset: 0x00252204
+		// Token: 0x06008496 RID: 33942 RVA: 0x0027285C File Offset: 0x00270A5C
 		public static HiddenQuestWhite GetRootAsHiddenQuestWhite(ByteBuffer _bb)
 		{
 			return HiddenQuestWhite.GetRootAsHiddenQuestWhite(_bb, default(HiddenQuestWhite));
 		}
 
-		// Token: 0x06007E7D RID: 32381 RVA: 0x00254020 File Offset: 0x00252220
+		// Token: 0x06008497 RID: 33943 RVA: 0x00272878 File Offset: 0x00270A78
 		public static HiddenQuestWhite GetRootAsHiddenQuestWhite(ByteBuffer _bb, HiddenQuestWhite obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007E7E RID: 32382 RVA: 0x0025403D File Offset: 0x0025223D
+		// Token: 0x06008498 RID: 33944 RVA: 0x00272895 File Offset: 0x00270A95
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007E7F RID: 32383 RVA: 0x0025404C File Offset: 0x0025224C
+		// Token: 0x06008499 RID: 33945 RVA: 0x002728A4 File Offset: 0x00270AA4
 		public HiddenQuestWhite __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700170D RID: 5901
-		// (get) Token: 0x06007E80 RID: 32384 RVA: 0x0025405C File Offset: 0x0025225C
+		// Token: 0x17001770 RID: 6000
+		// (get) Token: 0x0600849A RID: 33946 RVA: 0x002728B4 File Offset: 0x00270AB4
 		public int QuestId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004DA2 RID: 19874
+		// Token: 0x04005387 RID: 21383
 		private Table __p;
 	}
 }

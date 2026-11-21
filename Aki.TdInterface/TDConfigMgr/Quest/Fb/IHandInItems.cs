@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001377 RID: 4983
+	// Token: 0x020014C8 RID: 5320
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IHandInItems
 	{
-		// Token: 0x06007209 RID: 29193 RVA: 0x00112986 File Offset: 0x00110B86
-		[NullableContext(1)]
+		// Token: 0x060078AF RID: 30895 RVA: 0x0012100A File Offset: 0x0011F20A
+		[NullableContext(0)]
 		public static IHandInItems Create(IHandInItems? instance)
 		{
 			if (instance == null)
@@ -24,19 +24,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024EE RID: 9454
-		// (get) Token: 0x0600720A RID: 29194 RVA: 0x001129A8 File Offset: 0x00110BA8
+		// Token: 0x170026C1 RID: 9921
+		// (get) Token: 0x060078B0 RID: 30896 RVA: 0x0012102C File Offset: 0x0011F22C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHandInItem> Items
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024EF RID: 9455
-		// (get) Token: 0x0600720B RID: 29195 RVA: 0x00112A22 File Offset: 0x00110C22
+		// Token: 0x170026C2 RID: 9922
+		// (get) Token: 0x060078B1 RID: 30897 RVA: 0x001210A6 File Offset: 0x0011F2A6
 		public virtual IHandInGroup GroupConfig
 		{
 			get
@@ -75,8 +75,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024F0 RID: 9456
-		// (get) Token: 0x0600720C RID: 29196 RVA: 0x00112A56 File Offset: 0x00110C56
+		// Token: 0x170026C3 RID: 9923
+		// (get) Token: 0x060078B2 RID: 30898 RVA: 0x001210DA File Offset: 0x0011F2DA
 		public virtual string TidTitleText
 		{
 			get
@@ -85,20 +85,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024F1 RID: 9457
-		// (get) Token: 0x0600720D RID: 29197 RVA: 0x00112A63 File Offset: 0x00110C63
-		[Nullable(1)]
+		// Token: 0x170026C4 RID: 9924
+		// (get) Token: 0x060078B3 RID: 30899 RVA: 0x001210E7 File Offset: 0x0011F2E7
+		[Nullable(0)]
 		public virtual string TidDescText
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.TidDescText;
 			}
 		}
 
-		// Token: 0x170024F2 RID: 9458
-		// (get) Token: 0x0600720E RID: 29198 RVA: 0x00112A70 File Offset: 0x00110C70
+		// Token: 0x170026C5 RID: 9925
+		// (get) Token: 0x060078B4 RID: 30900 RVA: 0x001210F4 File Offset: 0x0011F2F4
 		public virtual bool RepeatItems
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024F3 RID: 9459
-		// (get) Token: 0x0600720F RID: 29199 RVA: 0x00112A7D File Offset: 0x00110C7D
+		// Token: 0x170026C6 RID: 9926
+		// (get) Token: 0x060078B5 RID: 30901 RVA: 0x00121101 File Offset: 0x0011F301
 		public virtual string EdTidTitleText
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024F4 RID: 9460
-		// (get) Token: 0x06007210 RID: 29200 RVA: 0x00112A80 File Offset: 0x00110C80
+		// Token: 0x170026C7 RID: 9927
+		// (get) Token: 0x060078B6 RID: 30902 RVA: 0x00121104 File Offset: 0x0011F304
 		public virtual string EdTidDescText
 		{
 			get
@@ -127,24 +127,24 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041E9 RID: 16873
+		// Token: 0x0400456A RID: 17770
 		private IHandInItems Instance;
 
-		// Token: 0x040041EA RID: 16874
+		// Token: 0x0400456B RID: 17771
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHandInItem> _ItemsCache;
 
-		// Token: 0x040041EB RID: 16875
+		// Token: 0x0400456C RID: 17772
 		private bool _ItemsInited;
 
-		// Token: 0x040041EC RID: 16876
+		// Token: 0x0400456D RID: 17773
 		private IHandInGroup _GroupConfigCache;
 
-		// Token: 0x040041ED RID: 16877
+		// Token: 0x0400456E RID: 17774
 		private bool _GroupConfigInited;
 	}
 }

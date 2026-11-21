@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016A4 RID: 5796
+	// Token: 0x0200181D RID: 6173
 	[EnumExtensions]
 	public enum ESkillBtnEffectType
 	{
-		// Token: 0x04004DC3 RID: 19907
+		// Token: 0x040051DD RID: 20957
 		MusicBattleBtnEffect
 	}
 }

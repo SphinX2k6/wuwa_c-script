@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D41 RID: 23873
+	// Token: 0x02004D23 RID: 19747
 	public class DurabilityDamageHeadState : HeadStateViewBase
 	{
-		// Token: 0x0603C8FB RID: 248059 RVA: 0x00E885DC File Offset: 0x00E867DC
+		// Token: 0x06031854 RID: 202836 RVA: 0x00DD8D84 File Offset: 0x00DD6F84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C8FC RID: 248060 RVA: 0x00E886EA File Offset: 0x00E868EA
+		// Token: 0x06031855 RID: 202837 RVA: 0x00DD8E92 File Offset: 0x00DD7092
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_BarSandBag";
 		}
 
-		// Token: 0x0603C8FD RID: 248061 RVA: 0x00E886F4 File Offset: 0x00E868F4
+		// Token: 0x06031856 RID: 202838 RVA: 0x00DD8E9C File Offset: 0x00DD709C
 		[NullableContext(1)]
 		protected override void ActiveBattleHeadState(HeadStateData headStateData)
 		{
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshDurability(this.GetHpPercent(), true);
 		}
 
-		// Token: 0x0603C8FE RID: 248062 RVA: 0x00E887C1 File Offset: 0x00E869C1
+		// Token: 0x06031857 RID: 202839 RVA: 0x00DD8F69 File Offset: 0x00DD7169
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603C8FF RID: 248063 RVA: 0x00E887D4 File Offset: 0x00E869D4
+		// Token: 0x06031858 RID: 202840 RVA: 0x00DD8F7C File Offset: 0x00DD717C
 		protected override void BindCallback()
 		{
 			base.BindCallback();
@@ -80,13 +80,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HeadStateData.BindOnSceneItemEntityHit(new Action(this.OnSceneItemEntityHit));
 		}
 
-		// Token: 0x0603C900 RID: 248064 RVA: 0x00E8880A File Offset: 0x00E86A0A
+		// Token: 0x06031859 RID: 202841 RVA: 0x00DD8FB2 File Offset: 0x00DD71B2
 		private void OnSceneItemDurabilityChange(int durability)
 		{
 			this.RefreshDurability(this.GetHpPercent(), true);
 		}
 
-		// Token: 0x0603C901 RID: 248065 RVA: 0x00E8881C File Offset: 0x00E86A1C
+		// Token: 0x0603185A RID: 202842 RVA: 0x00DD8FC4 File Offset: 0x00DD71C4
 		private void OnSceneItemEntityHit()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(5);
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C902 RID: 248066 RVA: 0x00E88864 File Offset: 0x00E86A64
+		// Token: 0x0603185B RID: 202843 RVA: 0x00DD900C File Offset: 0x00DD720C
 		private void RefreshDurability(float hpPercent, bool bPlayBarAnimation = false)
 		{
 			if (hpPercent <= 0f)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			headStateData.SetOriginalHp(this.GetHp());
 		}
 
-		// Token: 0x0603C903 RID: 248067 RVA: 0x00E888FB File Offset: 0x00E86AFB
+		// Token: 0x0603185C RID: 202844 RVA: 0x00DD90A3 File Offset: 0x00DD72A3
 		protected override void StopBarLerpAnimation()
 		{
 			base.StopBarLerpAnimation();
@@ -150,13 +150,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer.StopSequenceByKey("Increase", true, true);
 		}
 
-		// Token: 0x0603C904 RID: 248068 RVA: 0x00E88927 File Offset: 0x00E86B27
+		// Token: 0x0603185D RID: 202845 RVA: 0x00DD90CF File Offset: 0x00DD72CF
 		protected override void OnLerpBarBufferPercent(float percent)
 		{
 			this.SetBufferLeft(percent);
 		}
 
-		// Token: 0x0603C905 RID: 248069 RVA: 0x00E88930 File Offset: 0x00E86B30
+		// Token: 0x0603185E RID: 202846 RVA: 0x00DD90D8 File Offset: 0x00DD72D8
 		private void SetBarDirectly(float hpPercent)
 		{
 			this.SetBufferRight(hpPercent);
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StopBarLerpAnimation();
 		}
 
-		// Token: 0x0603C906 RID: 248070 RVA: 0x00E88948 File Offset: 0x00E86B48
+		// Token: 0x0603185F RID: 202847 RVA: 0x00DD90F0 File Offset: 0x00DD72F0
 		private void SetBufferRight(float hpPercent)
 		{
 			float fillAmount = 1f - hpPercent;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C907 RID: 248071 RVA: 0x00E88998 File Offset: 0x00E86B98
+		// Token: 0x06031860 RID: 202848 RVA: 0x00DD9140 File Offset: 0x00DD7340
 		private void SetBufferLeft(float hpLerpPercent)
 		{
 			float num = 1f - hpLerpPercent;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C908 RID: 248072 RVA: 0x00E889FC File Offset: 0x00E86BFC
+		// Token: 0x06031861 RID: 202849 RVA: 0x00DD91A4 File Offset: 0x00DD73A4
 		private void OnHpPercentEmpty(bool firstTime)
 		{
 			if (base.HeadStateType == EHeadStateViewType.MultiDurability1)
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C909 RID: 248073 RVA: 0x00E88A80 File Offset: 0x00E86C80
+		// Token: 0x06031862 RID: 202850 RVA: 0x00DD9228 File Offset: 0x00DD7428
 		private float GetHpPercent()
 		{
 			float hp = this.GetHp();
@@ -231,44 +231,44 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return hp / maxHp;
 		}
 
-		// Token: 0x0603C90A RID: 248074 RVA: 0x00E88A9C File Offset: 0x00E86C9C
+		// Token: 0x06031863 RID: 202851 RVA: 0x00DD9244 File Offset: 0x00DD7444
 		protected override float GetMaxHp()
 		{
 			return this.HeadStateData.GetMaxDurable();
 		}
 
-		// Token: 0x0603C90B RID: 248075 RVA: 0x00E88AA9 File Offset: 0x00E86CA9
+		// Token: 0x06031864 RID: 202852 RVA: 0x00DD9251 File Offset: 0x00DD7451
 		protected override float GetHp()
 		{
 			return this.HeadStateData.GetDurable();
 		}
 
-		// Token: 0x0401F8B8 RID: 129208
+		// Token: 0x0401A371 RID: 107377
 		private float BarFullWidth;
 
-		// Token: 0x0401F8B9 RID: 129209
+		// Token: 0x0401A372 RID: 107378
 		private bool IsWaitingOverHit;
 
-		// Token: 0x0401F8BA RID: 129210
+		// Token: 0x0401A373 RID: 107379
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200BFE4 RID: 49124
+		// Token: 0x0200A9EA RID: 43498
 		private enum EChildComponentType
 		{
-			// Token: 0x04039E47 RID: 237127
+			// Token: 0x04034809 RID: 215049
 			BarBg,
-			// Token: 0x04039E48 RID: 237128
+			// Token: 0x0403480A RID: 215050
 			BarBuffer,
-			// Token: 0x04039E49 RID: 237129
+			// Token: 0x0403480B RID: 215051
 			BufferLight,
-			// Token: 0x04039E4A RID: 237130
+			// Token: 0x0403480C RID: 215052
 			BarProgress,
-			// Token: 0x04039E4B RID: 237131
+			// Token: 0x0403480D RID: 215053
 			BarFull,
-			// Token: 0x04039E4C RID: 237132
+			// Token: 0x0403480E RID: 215054
 			HitEffect,
-			// Token: 0x04039E4D RID: 237133
+			// Token: 0x0403480F RID: 215055
 			DisappearEffect
 		}
 	}

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BDD RID: 15325
+	// Token: 0x02003FE9 RID: 16361
 	public struct IAbsoluteTipActorTransform : IFlatbufferObject
 	{
-		// Token: 0x1700691B RID: 26907
-		// (get) Token: 0x060150F9 RID: 86265 RVA: 0x0030D7C4 File Offset: 0x0030B9C4
+		// Token: 0x17006EC3 RID: 28355
+		// (get) Token: 0x060165EF RID: 91631 RVA: 0x0033434C File Offset: 0x0033254C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060150FA RID: 86266 RVA: 0x0030D7D1 File Offset: 0x0030B9D1
+		// Token: 0x060165F0 RID: 91632 RVA: 0x00334359 File Offset: 0x00332559
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060150FB RID: 86267 RVA: 0x0030D7D8 File Offset: 0x0030B9D8
+		// Token: 0x060165F1 RID: 91633 RVA: 0x00334360 File Offset: 0x00332560
 		public static IAbsoluteTipActorTransform GetRootAsIAbsoluteTipActorTransform(ByteBuffer _bb)
 		{
 			return IAbsoluteTipActorTransform.GetRootAsIAbsoluteTipActorTransform(_bb, default(IAbsoluteTipActorTransform));
 		}
 
-		// Token: 0x060150FC RID: 86268 RVA: 0x0030D7F4 File Offset: 0x0030B9F4
+		// Token: 0x060165F2 RID: 91634 RVA: 0x0033437C File Offset: 0x0033257C
 		public static IAbsoluteTipActorTransform GetRootAsIAbsoluteTipActorTransform(ByteBuffer _bb, IAbsoluteTipActorTransform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060150FD RID: 86269 RVA: 0x0030D811 File Offset: 0x0030BA11
+		// Token: 0x060165F3 RID: 91635 RVA: 0x00334399 File Offset: 0x00332599
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060150FE RID: 86270 RVA: 0x0030D820 File Offset: 0x0030BA20
+		// Token: 0x060165F4 RID: 91636 RVA: 0x003343A8 File Offset: 0x003325A8
 		public IAbsoluteTipActorTransform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700691C RID: 26908
-		// (get) Token: 0x060150FF RID: 86271 RVA: 0x0030D830 File Offset: 0x0030BA30
+		// Token: 0x17006EC4 RID: 28356
+		// (get) Token: 0x060165F5 RID: 91637 RVA: 0x003343B8 File Offset: 0x003325B8
 		public ETipsActorTransformType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x1700691D RID: 26909
-		// (get) Token: 0x06015100 RID: 86272 RVA: 0x0030D86C File Offset: 0x0030BA6C
+		// Token: 0x17006EC5 RID: 28357
+		// (get) Token: 0x060165F6 RID: 91638 RVA: 0x003343F4 File Offset: 0x003325F4
 		public IVectorInfo? Pos
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x1700691E RID: 26910
-		// (get) Token: 0x06015101 RID: 86273 RVA: 0x0030D8CC File Offset: 0x0030BACC
+		// Token: 0x17006EC6 RID: 28358
+		// (get) Token: 0x060165F7 RID: 91639 RVA: 0x00334454 File Offset: 0x00332654
 		public IVectorInfo? Rot
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015102 RID: 86274 RVA: 0x0030D929 File Offset: 0x0030BB29
+		// Token: 0x060165F8 RID: 91640 RVA: 0x003344B1 File Offset: 0x003326B1
 		public static Offset<IAbsoluteTipActorTransform> CreateIAbsoluteTipActorTransform(FlatBufferBuilder builder, ETipsActorTransformType Type = ETipsActorTransformType.Absolute, Offset<IVectorInfo> PosOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IAbsoluteTipActorTransform.EndIAbsoluteTipActorTransform(builder);
 		}
 
-		// Token: 0x06015103 RID: 86275 RVA: 0x0030D94D File Offset: 0x0030BB4D
+		// Token: 0x060165F9 RID: 91641 RVA: 0x003344D5 File Offset: 0x003326D5
 		public static void StartIAbsoluteTipActorTransform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06015104 RID: 86276 RVA: 0x0030D956 File Offset: 0x0030BB56
+		// Token: 0x060165FA RID: 91642 RVA: 0x003344DE File Offset: 0x003326DE
 		public static void AddType(FlatBufferBuilder builder, ETipsActorTransformType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015105 RID: 86277 RVA: 0x0030D961 File Offset: 0x0030BB61
+		// Token: 0x060165FB RID: 91643 RVA: 0x003344E9 File Offset: 0x003326E9
 		public static void AddPos(FlatBufferBuilder builder, Offset<IVectorInfo> posOffset)
 		{
 			builder.AddOffset(1, posOffset.Value, 0);
 		}
 
-		// Token: 0x06015106 RID: 86278 RVA: 0x0030D971 File Offset: 0x0030BB71
+		// Token: 0x060165FC RID: 91644 RVA: 0x003344F9 File Offset: 0x003326F9
 		public static void AddRot(FlatBufferBuilder builder, Offset<IVectorInfo> rotOffset)
 		{
 			builder.AddOffset(2, rotOffset.Value, 0);
 		}
 
-		// Token: 0x06015107 RID: 86279 RVA: 0x0030D981 File Offset: 0x0030BB81
+		// Token: 0x060165FD RID: 91645 RVA: 0x00334509 File Offset: 0x00332709
 		public static Offset<IAbsoluteTipActorTransform> EndIAbsoluteTipActorTransform(FlatBufferBuilder builder)
 		{
 			return new Offset<IAbsoluteTipActorTransform>(builder.EndTable());
 		}
 
-		// Token: 0x06015108 RID: 86280 RVA: 0x0030D990 File Offset: 0x0030BB90
+		// Token: 0x060165FE RID: 91646 RVA: 0x00334518 File Offset: 0x00332718
 		public IAbsoluteTipActorTransformT UnPack()
 		{
 			IAbsoluteTipActorTransformT absoluteTipActorTransformT = new IAbsoluteTipActorTransformT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return absoluteTipActorTransformT;
 		}
 
-		// Token: 0x06015109 RID: 86281 RVA: 0x0030D9AC File Offset: 0x0030BBAC
+		// Token: 0x060165FF RID: 91647 RVA: 0x00334534 File Offset: 0x00332734
 		public void UnPackTo(IAbsoluteTipActorTransformT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.Rot = ((this.Rot != null) ? this.Rot.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601510A RID: 86282 RVA: 0x0030DA24 File Offset: 0x0030BC24
+		// Token: 0x06016600 RID: 91648 RVA: 0x003345AC File Offset: 0x003327AC
 		public static Offset<IAbsoluteTipActorTransform> Pack(FlatBufferBuilder builder, IAbsoluteTipActorTransformT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IAbsoluteTipActorTransform.CreateIAbsoluteTipActorTransform(builder, _o.Type, posOffset, rotOffset);
 		}
 
-		// Token: 0x0400B19C RID: 45468
+		// Token: 0x0400BB27 RID: 47911
 		private Table __p;
 	}
 }

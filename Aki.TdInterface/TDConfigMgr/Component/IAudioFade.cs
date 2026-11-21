@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001D7 RID: 471
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001FE RID: 510
 	public class IAudioFade
 	{
-		// Token: 0x0600078C RID: 1932 RVA: 0x000251C4 File Offset: 0x000233C4
+		// Token: 0x060007FA RID: 2042 RVA: 0x000268A4 File Offset: 0x00024AA4
 		private IAudioFade_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600078D RID: 1933 RVA: 0x000251FC File Offset: 0x000233FC
+		// Token: 0x060007FB RID: 2043 RVA: 0x000268DC File Offset: 0x00024ADC
 		public static IAudioFade Create([Nullable(2)] IAudioFade instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600078E RID: 1934 RVA: 0x0002520F File Offset: 0x0002340F
+		// Token: 0x060007FC RID: 2044 RVA: 0x000268EF File Offset: 0x00024AEF
 		public static IAudioFade CreateFromSetValue([Nullable(2)] IAudioFade_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600078F RID: 1935 RVA: 0x00025222 File Offset: 0x00023422
+		// Token: 0x060007FD RID: 2045 RVA: 0x00026902 File Offset: 0x00024B02
 		public IAudioFade_SetValue ToSetValue()
 		{
 			return new IAudioFade_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000261 RID: 609
-		// (get) Token: 0x06000790 RID: 1936 RVA: 0x00025241 File Offset: 0x00023441
-		// (set) Token: 0x06000791 RID: 1937 RVA: 0x0002526C File Offset: 0x0002346C
+		// Token: 0x1700027D RID: 637
+		// (get) Token: 0x060007FE RID: 2046 RVA: 0x00026921 File Offset: 0x00024B21
+		// (set) Token: 0x060007FF RID: 2047 RVA: 0x0002694C File Offset: 0x00024B4C
 		public virtual EAudioFadeCurveType FadeCurve
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000262 RID: 610
-		// (get) Token: 0x06000792 RID: 1938 RVA: 0x0002527A File Offset: 0x0002347A
-		// (set) Token: 0x06000793 RID: 1939 RVA: 0x000252A5 File Offset: 0x000234A5
+		// Token: 0x1700027E RID: 638
+		// (get) Token: 0x06000800 RID: 2048 RVA: 0x0002695A File Offset: 0x00024B5A
+		// (set) Token: 0x06000801 RID: 2049 RVA: 0x00026985 File Offset: 0x00024B85
 		public virtual int FadeDuration
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008AD RID: 2221
+		// Token: 0x04000934 RID: 2356
 		[Nullable(2)]
 		protected IAudioFade FbInstance;
 
-		// Token: 0x040008AE RID: 2222
+		// Token: 0x04000935 RID: 2357
 		[Nullable(2)]
 		protected IAudioFade_SetValue PocoInterface;
 	}

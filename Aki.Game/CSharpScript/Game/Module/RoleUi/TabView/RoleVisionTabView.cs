@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.TabView
 {
-	// Token: 0x02004CEB RID: 19691
+	// Token: 0x02003C9D RID: 15517
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleVisionTabView : UiTabViewBase
 	{
-		// Token: 0x06032DC7 RID: 208327 RVA: 0x00BDAB24 File Offset: 0x00BD8D24
+		// Token: 0x06027BA2 RID: 162722 RVA: 0x00B2042C File Offset: 0x00B1E62C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			};
 		}
 
-		// Token: 0x06032DC8 RID: 208328 RVA: 0x00BDAC6C File Offset: 0x00BD8E6C
+		// Token: 0x06027BA3 RID: 162723 RVA: 0x00B20574 File Offset: 0x00B1E774
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RoleSystemChangeRole, new Action<int>(this.OnChangeRole));
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			EventSystem.Instance.Add(EEventName.HideVisionTabRole, new Action(this.HideVisionTabRole));
 		}
 
-		// Token: 0x06032DC9 RID: 208329 RVA: 0x00BDAD24 File Offset: 0x00BD8F24
+		// Token: 0x06027BA4 RID: 162724 RVA: 0x00B2062C File Offset: 0x00B1E82C
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RoleSystemChangeRole, new Action<int>(this.OnChangeRole));
@@ -62,31 +62,31 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			EventSystem.Instance.Remove(EEventName.HideVisionTabRole, new Action(this.HideVisionTabRole));
 		}
 
-		// Token: 0x06032DCA RID: 208330 RVA: 0x00BDADD9 File Offset: 0x00BD8FD9
+		// Token: 0x06027BA5 RID: 162725 RVA: 0x00B206E1 File Offset: 0x00B1E8E1
 		private void HideVisionTabRole()
 		{
 			this.HideRole(true);
 		}
 
-		// Token: 0x06032DCB RID: 208331 RVA: 0x00BDADE2 File Offset: 0x00BD8FE2
+		// Token: 0x06027BA6 RID: 162726 RVA: 0x00B206EA File Offset: 0x00B1E8EA
 		private void ResetRoleFlag()
 		{
 			this.HasUpdateRole = false;
 		}
 
-		// Token: 0x06032DCC RID: 208332 RVA: 0x00BDADEB File Offset: 0x00BD8FEB
+		// Token: 0x06027BA7 RID: 162727 RVA: 0x00B206F3 File Offset: 0x00B1E8F3
 		private void OnShowCalabash()
 		{
 			this.OpenCalabashView().Forget();
 		}
 
-		// Token: 0x06032DCD RID: 208333 RVA: 0x00BDADF8 File Offset: 0x00BD8FF8
+		// Token: 0x06027BA8 RID: 162728 RVA: 0x00B20700 File Offset: 0x00B1E900
 		private void OnVisionGroupButton()
 		{
 			this.OnClickVisionGroupButton();
 		}
 
-		// Token: 0x06032DCE RID: 208334 RVA: 0x00BDAE00 File Offset: 0x00BD9000
+		// Token: 0x06027BA9 RID: 162729 RVA: 0x00B20708 File Offset: 0x00B1E908
 		private UniTask OpenCalabashView()
 		{
 			RoleVisionTabView.<OpenCalabashView>d__24 <OpenCalabashView>d__;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			return <OpenCalabashView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032DCF RID: 208335 RVA: 0x00BDAE44 File Offset: 0x00BD9044
+		// Token: 0x06027BAA RID: 162730 RVA: 0x00B2074C File Offset: 0x00B1E94C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleVisionTabView.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032DD0 RID: 208336 RVA: 0x00BDAE88 File Offset: 0x00BD9088
+		// Token: 0x06027BAB RID: 162731 RVA: 0x00B20790 File Offset: 0x00B1E990
 		private void OnClickVisionGroupButton()
 		{
 			int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			UiManager.Instance.OpenView(EUiViewName.VisionAssembleView, curSelectRoleId, null);
 		}
 
-		// Token: 0x06032DD1 RID: 208337 RVA: 0x00BDAEC0 File Offset: 0x00BD90C0
+		// Token: 0x06027BAC RID: 162732 RVA: 0x00B207C8 File Offset: 0x00B1E9C8
 		protected override void OnStart()
 		{
 			base.GetItem(7).SetUIActive(true);
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			EventSystem.Instance.Emit(EEventName.OnVisionRefineSubNeedAck);
 		}
 
-		// Token: 0x06032DD2 RID: 208338 RVA: 0x00BDAF44 File Offset: 0x00BD9144
+		// Token: 0x06027BAD RID: 162733 RVA: 0x00B2084C File Offset: 0x00B1EA4C
 		private UniTask InitVisionHeadItem()
 		{
 			RoleVisionTabView.<InitVisionHeadItem>d__28 <InitVisionHeadItem>d__;
@@ -142,13 +142,13 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			return <InitVisionHeadItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032DD3 RID: 208339 RVA: 0x00BDAF87 File Offset: 0x00BD9187
+		// Token: 0x06027BAE RID: 162734 RVA: 0x00B2088F File Offset: 0x00B1EA8F
 		protected void PlayMontageStart(bool reLoop = false)
 		{
 			RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Chip, reLoop, false, false);
 		}
 
-		// Token: 0x06032DD4 RID: 208340 RVA: 0x00BDAF98 File Offset: 0x00BD9198
+		// Token: 0x06027BAF RID: 162735 RVA: 0x00B208A0 File Offset: 0x00B1EAA0
 		protected override void OnBeforeShow()
 		{
 			PhantomBattleModel.Instance.ClearCurrentDragIndex();
@@ -179,14 +179,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			EventSystem.Instance.Emit<int>(EEventName.RefreshVisionEquipRedPoint, curSelectRoleId);
 		}
 
-		// Token: 0x06032DD5 RID: 208341 RVA: 0x00BDB048 File Offset: 0x00BD9248
+		// Token: 0x06027BB0 RID: 162736 RVA: 0x00B20950 File Offset: 0x00B1EB50
 		private void RefreshGroupRedDot()
 		{
 			bool visionGroupFirstOpenState = VisionEquipGroupModel.Instance.GetVisionGroupFirstOpenState();
 			base.GetItem(10).SetUIActive(visionGroupFirstOpenState);
 		}
 
-		// Token: 0x06032DD6 RID: 208342 RVA: 0x00BDB06E File Offset: 0x00BD926E
+		// Token: 0x06027BB1 RID: 162737 RVA: 0x00B20976 File Offset: 0x00B1EB76
 		protected void OnChangeRole(int roleId)
 		{
 			this.RefreshView();
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			EventSystem.Instance.Emit<int>(EEventName.RefreshVisionEquipRedPoint, roleId);
 		}
 
-		// Token: 0x06032DD7 RID: 208343 RVA: 0x00BDB098 File Offset: 0x00BD9298
+		// Token: 0x06027BB2 RID: 162738 RVA: 0x00B209A0 File Offset: 0x00B1EBA0
 		private void RefreshView()
 		{
 			this.RefreshPhantom();
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.RefreshCost();
 		}
 
-		// Token: 0x06032DD8 RID: 208344 RVA: 0x00BDB104 File Offset: 0x00BD9304
+		// Token: 0x06027BB3 RID: 162739 RVA: 0x00B20A0C File Offset: 0x00B1EC0C
 		private void RefreshCost()
 		{
 			RoleDataBase curSelectRoleData = this.RoleViewAgent.GetCurSelectRoleData();
@@ -232,19 +232,19 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			EventSystem.Instance.Emit<int>(EEventName.RefreshVisionEquipRedPoint, roleId);
 		}
 
-		// Token: 0x06032DD9 RID: 208345 RVA: 0x00BDB1AB File Offset: 0x00BD93AB
+		// Token: 0x06027BB4 RID: 162740 RVA: 0x00B20AB3 File Offset: 0x00B1ECB3
 		private int GetCostMax()
 		{
 			return PhantomBattleModel.Instance.GetMaxCost();
 		}
 
-		// Token: 0x06032DDA RID: 208346 RVA: 0x00BDB1B7 File Offset: 0x00BD93B7
+		// Token: 0x06027BB5 RID: 162741 RVA: 0x00B20ABF File Offset: 0x00B1ECBF
 		private void OnPhantomPersonalSkillActive(int uniqueId)
 		{
 			this.RefreshPhantom();
 		}
 
-		// Token: 0x06032DDB RID: 208347 RVA: 0x00BDB1C0 File Offset: 0x00BD93C0
+		// Token: 0x06027BB6 RID: 162742 RVA: 0x00B20AC8 File Offset: 0x00B1ECC8
 		protected void RefreshPhantom()
 		{
 			RoleViewAgent roleViewAgent = this.RoleViewAgent;
@@ -260,13 +260,13 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.RefreshCost();
 		}
 
-		// Token: 0x06032DDC RID: 208348 RVA: 0x00BDB24C File Offset: 0x00BD944C
+		// Token: 0x06027BB7 RID: 162743 RVA: 0x00B20B54 File Offset: 0x00B1ED54
 		protected void OnEquipError()
 		{
 			this.ResetVisionPosition(true).Forget();
 		}
 
-		// Token: 0x06032DDD RID: 208349 RVA: 0x00BDB25A File Offset: 0x00BD945A
+		// Token: 0x06027BB8 RID: 162744 RVA: 0x00B20B62 File Offset: 0x00B1ED62
 		protected override void OnBeforeHide()
 		{
 			this.CancelPendingDragAndAnimation();
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			UiLayer.Instance.SetShowMaskLayer("OnEquipVision", false);
 		}
 
-		// Token: 0x06032DDE RID: 208350 RVA: 0x00BDB284 File Offset: 0x00BD9484
+		// Token: 0x06027BB9 RID: 162745 RVA: 0x00B20B8C File Offset: 0x00B1ED8C
 		private void CancelPendingDragAndAnimation()
 		{
 			CustomPromise<bool> failAnimationPromise = this.FailAnimationPromise;
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.ResetVisionPosition(false).Forget();
 		}
 
-		// Token: 0x06032DDF RID: 208351 RVA: 0x00BDB31C File Offset: 0x00BD951C
+		// Token: 0x06027BBA RID: 162746 RVA: 0x00B20C24 File Offset: 0x00B1EE24
 		protected void OnClickFailVision(int index)
 		{
 			if (!this.IfCanClick())
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.ResetVisionPosition(true).Forget();
 		}
 
-		// Token: 0x06032DE0 RID: 208352 RVA: 0x00BDB334 File Offset: 0x00BD9534
+		// Token: 0x06027BBB RID: 162747 RVA: 0x00B20C3C File Offset: 0x00B1EE3C
 		protected void OnClickVision(int index)
 		{
 			if (!this.IfCanClick())
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.UiViewSequence.PlaySequencePurely("HideView", false, false);
 		}
 
-		// Token: 0x06032DE1 RID: 208353 RVA: 0x00BDB414 File Offset: 0x00BD9614
+		// Token: 0x06027BBC RID: 162748 RVA: 0x00B20D1C File Offset: 0x00B1EF1C
 		private void RefreshGroupButtonShowState()
 		{
 			bool flag = this.RoleViewAgent.GetCurSelectRoleData().IsTrialRole();
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			base.GetButton(9).RootUIComp.Get().SetUIActive(flag2 && !flag);
 		}
 
-		// Token: 0x06032DE2 RID: 208354 RVA: 0x00BDB468 File Offset: 0x00BD9668
+		// Token: 0x06027BBD RID: 162749 RVA: 0x00B20D70 File Offset: 0x00B1EF70
 		private void ResetClickState()
 		{
 			int count = this.RoleVisionItem.Count;
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DE3 RID: 208355 RVA: 0x00BDB4A4 File Offset: 0x00BD96A4
+		// Token: 0x06027BBE RID: 162750 RVA: 0x00B20DAC File Offset: 0x00B1EFAC
 		private void RefreshPhantomClickState()
 		{
 			int count = this.RoleVisionItem.Count;
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DE4 RID: 208356 RVA: 0x00BDB4E0 File Offset: 0x00BD96E0
+		// Token: 0x06027BBF RID: 162751 RVA: 0x00B20DE8 File Offset: 0x00B1EFE8
 		protected void OnPointerDownCallBack(int index)
 		{
 			if (!this.IfCanClick())
@@ -374,13 +374,13 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.CurrentDragIndex = 999;
 		}
 
-		// Token: 0x06032DE5 RID: 208357 RVA: 0x00BDB537 File Offset: 0x00BD9737
+		// Token: 0x06027BC0 RID: 162752 RVA: 0x00B20E3F File Offset: 0x00B1F03F
 		protected void OnPointerUpCallBack(int index)
 		{
 			base.GetItem(7).SetRaycastTarget(false);
 		}
 
-		// Token: 0x06032DE6 RID: 208358 RVA: 0x00BDB548 File Offset: 0x00BD9748
+		// Token: 0x06027BC1 RID: 162753 RVA: 0x00B20E50 File Offset: 0x00B1F050
 		protected void OnBeginDrag(int index)
 		{
 			this.CurrentDragIndex = index;
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			AudioSystem.Instance.PostEvent("ui_vision_item_drag");
 		}
 
-		// Token: 0x06032DE7 RID: 208359 RVA: 0x00BDB61C File Offset: 0x00BD981C
+		// Token: 0x06027BC2 RID: 162754 RVA: 0x00B20F24 File Offset: 0x00B1F124
 		protected void OnDragEndCallBack(VisionCommonDragItem self, List<VisionCommonDragItem> targets, bool _)
 		{
 			if (targets.Count >= 1)
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			AudioSystem.Instance.PostEvent("ui_vision_item_drop");
 		}
 
-		// Token: 0x06032DE8 RID: 208360 RVA: 0x00BDB6BC File Offset: 0x00BD98BC
+		// Token: 0x06027BC3 RID: 162755 RVA: 0x00B20FC4 File Offset: 0x00B1F1C4
 		private void OnEquipEquipment(int selfIndex, int targetIndex, bool fromDrag)
 		{
 			if (!fromDrag)
@@ -449,7 +449,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			AudioSystem.Instance.PostEvent("ui_vision_equip_on");
 		}
 
-		// Token: 0x06032DE9 RID: 208361 RVA: 0x00BDB796 File Offset: 0x00BD9996
+		// Token: 0x06027BC4 RID: 162756 RVA: 0x00B2109E File Offset: 0x00B1F29E
 		private void SetIndexVisionMoveState(int index, bool state)
 		{
 			if (index >= 0)
@@ -458,7 +458,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DEA RID: 208362 RVA: 0x00BDB7AE File Offset: 0x00BD99AE
+		// Token: 0x06027BC5 RID: 162757 RVA: 0x00B210B6 File Offset: 0x00B1F2B6
 		private void SetIndexVisionAnimateState(int index, bool state)
 		{
 			if (index >= 0)
@@ -467,14 +467,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DEB RID: 208363 RVA: 0x00BDB7C6 File Offset: 0x00BD99C6
+		// Token: 0x06027BC6 RID: 162758 RVA: 0x00B210CE File Offset: 0x00B1F2CE
 		protected override void OnTickUiTabViewBase(float deltaTime)
 		{
 			this.CheckPlayMoveFailAnimation(deltaTime);
 			this.CheckPlayMoveSuccessAnimation(deltaTime);
 		}
 
-		// Token: 0x06032DEC RID: 208364 RVA: 0x00BDB7D8 File Offset: 0x00BD99D8
+		// Token: 0x06027BC7 RID: 162759 RVA: 0x00B210E0 File Offset: 0x00B1F2E0
 		private void CheckPlayMoveSuccessAnimation(float deltaTime)
 		{
 			if (!this.IsAnimationOn)
@@ -496,7 +496,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DED RID: 208365 RVA: 0x00BDB864 File Offset: 0x00BD9A64
+		// Token: 0x06027BC8 RID: 162760 RVA: 0x00B2116C File Offset: 0x00B1F36C
 		private void CheckPlayMoveFailAnimation(float deltaTime)
 		{
 			if (!this.IsFailAnimation)
@@ -517,13 +517,13 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DEE RID: 208366 RVA: 0x00BDB8DD File Offset: 0x00BD9ADD
+		// Token: 0x06027BC9 RID: 162761 RVA: 0x00B211E5 File Offset: 0x00B1F3E5
 		private bool IfCanClick()
 		{
 			return !this.IsAnimationOn && !this.IsFailAnimation && !this.CeaseAnimationState;
 		}
 
-		// Token: 0x06032DEF RID: 208367 RVA: 0x00BDB8FC File Offset: 0x00BD9AFC
+		// Token: 0x06027BCA RID: 162762 RVA: 0x00B21204 File Offset: 0x00B1F404
 		private UniTask DoCeaseAnimationAndResetView()
 		{
 			RoleVisionTabView.<DoCeaseAnimationAndResetView>d__58 <DoCeaseAnimationAndResetView>d__;
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			return <DoCeaseAnimationAndResetView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032DF0 RID: 208368 RVA: 0x00BDB940 File Offset: 0x00BD9B40
+		// Token: 0x06027BCB RID: 162763 RVA: 0x00B21248 File Offset: 0x00B1F448
 		private UniTask DoFailCeaseAnimation(int index)
 		{
 			RoleVisionTabView.<DoFailCeaseAnimation>d__59 <DoFailCeaseAnimation>d__;
@@ -546,7 +546,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			return <DoFailCeaseAnimation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032DF1 RID: 208369 RVA: 0x00BDB98C File Offset: 0x00BD9B8C
+		// Token: 0x06027BCC RID: 162764 RVA: 0x00B21294 File Offset: 0x00B1F494
 		private UniTask PlayCeaseAnimation(int index)
 		{
 			RoleVisionTabView.<PlayCeaseAnimation>d__60 <PlayCeaseAnimation>d__;
@@ -558,7 +558,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			return <PlayCeaseAnimation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032DF2 RID: 208370 RVA: 0x00BDB9D8 File Offset: 0x00BD9BD8
+		// Token: 0x06027BCD RID: 162765 RVA: 0x00B212E0 File Offset: 0x00B1F4E0
 		private UniTask ResetVisionPosition(bool playBackToStartPositionAnimation = true)
 		{
 			RoleVisionTabView.<ResetVisionPosition>d__61 <ResetVisionPosition>d__;
@@ -570,7 +570,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			return <ResetVisionPosition>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032DF3 RID: 208371 RVA: 0x00BDBA23 File Offset: 0x00BD9C23
+		// Token: 0x06027BCE RID: 162766 RVA: 0x00B2132B File Offset: 0x00B1F52B
 		private void HideRole(bool isHide)
 		{
 			if (isHide)
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DF4 RID: 208372 RVA: 0x00BDBA3C File Offset: 0x00BD9C3C
+		// Token: 0x06027BCF RID: 162767 RVA: 0x00B21344 File Offset: 0x00B1F544
 		private void ShowRoleModel()
 		{
 			TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -594,7 +594,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			UiModelUtil.Instance.SetVisible(model, true);
 		}
 
-		// Token: 0x06032DF5 RID: 208373 RVA: 0x00BDBA88 File Offset: 0x00BD9C88
+		// Token: 0x06027BD0 RID: 162768 RVA: 0x00B21390 File Offset: 0x00B1F590
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -632,7 +632,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			return null;
 		}
 
-		// Token: 0x06032DF6 RID: 208374 RVA: 0x00BDBAE4 File Offset: 0x00BD9CE4
+		// Token: 0x06027BD1 RID: 162769 RVA: 0x00B213EC File Offset: 0x00B1F5EC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -675,91 +675,91 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			return null;
 		}
 
-		// Token: 0x06032DF7 RID: 208375 RVA: 0x00BDBB94 File Offset: 0x00BD9D94
+		// Token: 0x06027BD2 RID: 162770 RVA: 0x00B2149C File Offset: 0x00B1F69C
 		protected override void OnBeforeDestroy()
 		{
 			this.IsAnimationOn = false;
 		}
 
-		// Token: 0x0401B0ED RID: 110829
+		// Token: 0x04015A72 RID: 88690
 		private const int INVALIDINDEX = 999;
 
-		// Token: 0x0401B0EE RID: 110830
+		// Token: 0x04015A73 RID: 88691
 		[Nullable(2)]
 		private CustomPromise<bool> FailAnimationPromise;
 
-		// Token: 0x0401B0EF RID: 110831
+		// Token: 0x04015A74 RID: 88692
 		private bool IsAnimationOn;
 
-		// Token: 0x0401B0F0 RID: 110832
+		// Token: 0x04015A75 RID: 88693
 		private bool IsFailAnimation;
 
-		// Token: 0x0401B0F1 RID: 110833
+		// Token: 0x04015A76 RID: 88694
 		private bool CeaseAnimationState;
 
-		// Token: 0x0401B0F2 RID: 110834
+		// Token: 0x04015A77 RID: 88695
 		private int CurrentAnimationSourceIndex = -1;
 
-		// Token: 0x0401B0F3 RID: 110835
+		// Token: 0x04015A78 RID: 88696
 		private int CurrentAnimationTargetIndex = -1;
 
-		// Token: 0x0401B0F4 RID: 110836
+		// Token: 0x04015A79 RID: 88697
 		private int AnimationTime;
 
-		// Token: 0x0401B0F5 RID: 110837
+		// Token: 0x04015A7A RID: 88698
 		private float CurrentRunningTime;
 
-		// Token: 0x0401B0F6 RID: 110838
+		// Token: 0x04015A7B RID: 88699
 		private int CurrentDragIndex = 999;
 
-		// Token: 0x0401B0F7 RID: 110839
+		// Token: 0x04015A7C RID: 88700
 		[Nullable(2)]
 		private RoleVisionInfoPanel RoleVisionInfoPanel;
 
-		// Token: 0x0401B0F8 RID: 110840
+		// Token: 0x04015A7D RID: 88701
 		[Nullable(2)]
 		private RoleViewAgent RoleViewAgent;
 
-		// Token: 0x0401B0F9 RID: 110841
+		// Token: 0x04015A7E RID: 88702
 		private readonly List<RoleVisionCommonItem> RoleVisionItem = new List<RoleVisionCommonItem>();
 
-		// Token: 0x0401B0FA RID: 110842
+		// Token: 0x04015A7F RID: 88703
 		private readonly List<VisionCommonDragItem> VisionDragItem = new List<VisionCommonDragItem>();
 
-		// Token: 0x0401B0FB RID: 110843
+		// Token: 0x04015A80 RID: 88704
 		private int CurrentSelectIndex;
 
-		// Token: 0x0401B0FC RID: 110844
+		// Token: 0x04015A81 RID: 88705
 		private bool IfHiddenRole;
 
-		// Token: 0x0401B0FD RID: 110845
+		// Token: 0x04015A82 RID: 88706
 		private bool HasUpdateRole;
 
-		// Token: 0x0200AE73 RID: 44659
+		// Token: 0x02009891 RID: 39057
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04034F7B RID: 216955
+			// Token: 0x0402F923 RID: 194851
 			MainVisionItem,
-			// Token: 0x04034F7C RID: 216956
+			// Token: 0x0402F924 RID: 194852
 			SubVisionItem1,
-			// Token: 0x04034F7D RID: 216957
+			// Token: 0x0402F925 RID: 194853
 			SubVisionItem2,
-			// Token: 0x04034F7E RID: 216958
+			// Token: 0x0402F926 RID: 194854
 			SubVisionItem3,
-			// Token: 0x04034F7F RID: 216959
+			// Token: 0x0402F927 RID: 194855
 			SubVisionItem4,
-			// Token: 0x04034F80 RID: 216960
+			// Token: 0x0402F928 RID: 194856
 			VisionInfoPanel,
-			// Token: 0x04034F81 RID: 216961
+			// Token: 0x0402F929 RID: 194857
 			CalabashBtn,
-			// Token: 0x04034F82 RID: 216962
+			// Token: 0x0402F92A RID: 194858
 			DragPanel,
-			// Token: 0x04034F83 RID: 216963
+			// Token: 0x0402F92B RID: 194859
 			CurrentCostText,
-			// Token: 0x04034F84 RID: 216964
+			// Token: 0x0402F92C RID: 194860
 			VisionGroupButton,
-			// Token: 0x04034F85 RID: 216965
+			// Token: 0x0402F92D RID: 194861
 			VisionGroupRedDot
 		}
 	}

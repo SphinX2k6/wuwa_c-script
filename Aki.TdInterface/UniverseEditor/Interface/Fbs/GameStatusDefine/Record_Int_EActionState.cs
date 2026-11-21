@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x02004712 RID: 18194
+	// Token: 0x02004B7A RID: 19322
 	public struct Record_Int_EActionState : IFlatbufferObject
 	{
-		// Token: 0x1700825C RID: 33372
-		// (get) Token: 0x0601BEE7 RID: 114407 RVA: 0x003F5B3E File Offset: 0x003F3D3E
+		// Token: 0x1700889D RID: 34973
+		// (get) Token: 0x0601D6BC RID: 120508 RVA: 0x00421DDA File Offset: 0x0041FFDA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BEE8 RID: 114408 RVA: 0x003F5B4B File Offset: 0x003F3D4B
+		// Token: 0x0601D6BD RID: 120509 RVA: 0x00421DE7 File Offset: 0x0041FFE7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601BEE9 RID: 114409 RVA: 0x003F5B54 File Offset: 0x003F3D54
+		// Token: 0x0601D6BE RID: 120510 RVA: 0x00421DF0 File Offset: 0x0041FFF0
 		public static Record_Int_EActionState GetRootAsRecord_Int_EActionState(ByteBuffer _bb)
 		{
 			return Record_Int_EActionState.GetRootAsRecord_Int_EActionState(_bb, default(Record_Int_EActionState));
 		}
 
-		// Token: 0x0601BEEA RID: 114410 RVA: 0x003F5B70 File Offset: 0x003F3D70
+		// Token: 0x0601D6BF RID: 120511 RVA: 0x00421E0C File Offset: 0x0042000C
 		public static Record_Int_EActionState GetRootAsRecord_Int_EActionState(ByteBuffer _bb, Record_Int_EActionState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601BEEB RID: 114411 RVA: 0x003F5B8D File Offset: 0x003F3D8D
+		// Token: 0x0601D6C0 RID: 120512 RVA: 0x00421E29 File Offset: 0x00420029
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601BEEC RID: 114412 RVA: 0x003F5B9C File Offset: 0x003F3D9C
+		// Token: 0x0601D6C1 RID: 120513 RVA: 0x00421E38 File Offset: 0x00420038
 		public Record_Int_EActionState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700825D RID: 33373
-		// (get) Token: 0x0601BEED RID: 114413 RVA: 0x003F5BAC File Offset: 0x003F3DAC
+		// Token: 0x1700889E RID: 34974
+		// (get) Token: 0x0601D6C2 RID: 120514 RVA: 0x00421E48 File Offset: 0x00420048
 		public int Key
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x1700825E RID: 33374
-		// (get) Token: 0x0601BEEE RID: 114414 RVA: 0x003F5BE8 File Offset: 0x003F3DE8
+		// Token: 0x1700889F RID: 34975
+		// (get) Token: 0x0601D6C3 RID: 120515 RVA: 0x00421E84 File Offset: 0x00420084
 		public EActionState Value
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BEEF RID: 114415 RVA: 0x003F5C24 File Offset: 0x003F3E24
+		// Token: 0x0601D6C4 RID: 120516 RVA: 0x00421EC0 File Offset: 0x004200C0
 		public static Offset<Record_Int_EActionState> CreateRecord_Int_EActionState(FlatBufferBuilder builder, int Key = 0, EActionState Value = EActionState.Inactive)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return Record_Int_EActionState.EndRecord_Int_EActionState(builder);
 		}
 
-		// Token: 0x0601BEF0 RID: 114416 RVA: 0x003F5C41 File Offset: 0x003F3E41
+		// Token: 0x0601D6C5 RID: 120517 RVA: 0x00421EDD File Offset: 0x004200DD
 		public static void StartRecord_Int_EActionState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601BEF1 RID: 114417 RVA: 0x003F5C4A File Offset: 0x003F3E4A
+		// Token: 0x0601D6C6 RID: 120518 RVA: 0x00421EE6 File Offset: 0x004200E6
 		public static void AddKey(FlatBufferBuilder builder, int key)
 		{
 			builder.AddInt(0, key, 0);
 		}
 
-		// Token: 0x0601BEF2 RID: 114418 RVA: 0x003F5C55 File Offset: 0x003F3E55
+		// Token: 0x0601D6C7 RID: 120519 RVA: 0x00421EF1 File Offset: 0x004200F1
 		public static void AddValue(FlatBufferBuilder builder, EActionState value)
 		{
 			builder.AddByte(1, (byte)value, 0);
 		}
 
-		// Token: 0x0601BEF3 RID: 114419 RVA: 0x003F5C60 File Offset: 0x003F3E60
+		// Token: 0x0601D6C8 RID: 120520 RVA: 0x00421EFC File Offset: 0x004200FC
 		public static Offset<Record_Int_EActionState> EndRecord_Int_EActionState(FlatBufferBuilder builder)
 		{
 			return new Offset<Record_Int_EActionState>(builder.EndTable());
 		}
 
-		// Token: 0x0601BEF4 RID: 114420 RVA: 0x003F5C70 File Offset: 0x003F3E70
+		// Token: 0x0601D6C9 RID: 120521 RVA: 0x00421F0C File Offset: 0x0042010C
 		public Record_Int_EActionStateT UnPack()
 		{
 			Record_Int_EActionStateT record_Int_EActionStateT = new Record_Int_EActionStateT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return record_Int_EActionStateT;
 		}
 
-		// Token: 0x0601BEF5 RID: 114421 RVA: 0x003F5C8B File Offset: 0x003F3E8B
+		// Token: 0x0601D6CA RID: 120522 RVA: 0x00421F27 File Offset: 0x00420127
 		public void UnPackTo(Record_Int_EActionStateT _o)
 		{
 			_o.Key = this.Key;
 			_o.Value = this.Value;
 		}
 
-		// Token: 0x0601BEF6 RID: 114422 RVA: 0x003F5CA8 File Offset: 0x003F3EA8
+		// Token: 0x0601D6CB RID: 120523 RVA: 0x00421F44 File Offset: 0x00420144
 		public static Offset<Record_Int_EActionState> Pack(FlatBufferBuilder builder, Record_Int_EActionStateT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return Record_Int_EActionState.CreateRecord_Int_EActionState(builder, _o.Key, _o.Value);
 		}
 
-		// Token: 0x0400C9E4 RID: 51684
+		// Token: 0x0400D413 RID: 54291
 		private Table __p;
 	}
 }

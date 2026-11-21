@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055AA RID: 21930
+	// Token: 0x02004580 RID: 17792
 	public class GridRangeInfo : IGridRangeInfo
 	{
-		// Token: 0x17008690 RID: 34448
-		// (get) Token: 0x06037E22 RID: 228898 RVA: 0x00D3DC73 File Offset: 0x00D3BE73
-		// (set) Token: 0x06037E23 RID: 228899 RVA: 0x00D3DC7B File Offset: 0x00D3BE7B
+		// Token: 0x17005A57 RID: 23127
+		// (get) Token: 0x0602CD20 RID: 183584 RVA: 0x00C8B9BB File Offset: 0x00C89BBB
+		// (set) Token: 0x0602CD21 RID: 183585 RVA: 0x00C8B9C3 File Offset: 0x00C89BC3
 		public double CenterX { get; set; }
 
-		// Token: 0x17008691 RID: 34449
-		// (get) Token: 0x06037E24 RID: 228900 RVA: 0x00D3DC84 File Offset: 0x00D3BE84
-		// (set) Token: 0x06037E25 RID: 228901 RVA: 0x00D3DC8C File Offset: 0x00D3BE8C
+		// Token: 0x17005A58 RID: 23128
+		// (get) Token: 0x0602CD22 RID: 183586 RVA: 0x00C8B9CC File Offset: 0x00C89BCC
+		// (set) Token: 0x0602CD23 RID: 183587 RVA: 0x00C8B9D4 File Offset: 0x00C89BD4
 		public double CenterY { get; set; }
 
-		// Token: 0x17008692 RID: 34450
-		// (get) Token: 0x06037E26 RID: 228902 RVA: 0x00D3DC95 File Offset: 0x00D3BE95
-		// (set) Token: 0x06037E27 RID: 228903 RVA: 0x00D3DC9D File Offset: 0x00D3BE9D
+		// Token: 0x17005A59 RID: 23129
+		// (get) Token: 0x0602CD24 RID: 183588 RVA: 0x00C8B9DD File Offset: 0x00C89BDD
+		// (set) Token: 0x0602CD25 RID: 183589 RVA: 0x00C8B9E5 File Offset: 0x00C89BE5
 		public double RadiusX { get; set; }
 
-		// Token: 0x17008693 RID: 34451
-		// (get) Token: 0x06037E28 RID: 228904 RVA: 0x00D3DCA6 File Offset: 0x00D3BEA6
-		// (set) Token: 0x06037E29 RID: 228905 RVA: 0x00D3DCAE File Offset: 0x00D3BEAE
+		// Token: 0x17005A5A RID: 23130
+		// (get) Token: 0x0602CD26 RID: 183590 RVA: 0x00C8B9EE File Offset: 0x00C89BEE
+		// (set) Token: 0x0602CD27 RID: 183591 RVA: 0x00C8B9F6 File Offset: 0x00C89BF6
 		public double RadiusY { get; set; }
 	}
 }

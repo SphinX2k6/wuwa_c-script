@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C5E RID: 7262
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E57 RID: 7767
 	public class INightmareLordTip : ICommonTipType
 	{
-		// Token: 0x06009BB9 RID: 39865 RVA: 0x001657E8 File Offset: 0x001639E8
+		// Token: 0x0600A519 RID: 42265 RVA: 0x00178BE4 File Offset: 0x00176DE4
 		private INightmareLordTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009BBA RID: 39866 RVA: 0x00165820 File Offset: 0x00163A20
+		// Token: 0x0600A51A RID: 42266 RVA: 0x00178C1C File Offset: 0x00176E1C
 		public static INightmareLordTip Create([Nullable(2)] INightmareLordTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BBB RID: 39867 RVA: 0x00165833 File Offset: 0x00163A33
+		// Token: 0x0600A51B RID: 42267 RVA: 0x00178C2F File Offset: 0x00176E2F
 		public static INightmareLordTip CreateFromSetValue([Nullable(2)] INightmareLordTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BBC RID: 39868 RVA: 0x00165848 File Offset: 0x00163A48
+		// Token: 0x0600A51C RID: 42268 RVA: 0x00178C44 File Offset: 0x00176E44
 		public new INightmareLordTip_SetValue ToSetValue()
 		{
 			return new INightmareLordTip_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030A6 RID: 12454
-		// (get) Token: 0x06009BBD RID: 39869 RVA: 0x00165896 File Offset: 0x00163A96
-		// (set) Token: 0x06009BBE RID: 39870 RVA: 0x001658C1 File Offset: 0x00163AC1
+		// Token: 0x17003318 RID: 13080
+		// (get) Token: 0x0600A51D RID: 42269 RVA: 0x00178C92 File Offset: 0x00176E92
+		// (set) Token: 0x0600A51E RID: 42270 RVA: 0x00178CBD File Offset: 0x00176EBD
 		public override ECommonTipType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030A7 RID: 12455
-		// (get) Token: 0x06009BBF RID: 39871 RVA: 0x001658CF File Offset: 0x00163ACF
-		// (set) Token: 0x06009BC0 RID: 39872 RVA: 0x001658FA File Offset: 0x00163AFA
+		// Token: 0x17003319 RID: 13081
+		// (get) Token: 0x0600A51F RID: 42271 RVA: 0x00178CCB File Offset: 0x00176ECB
+		// (set) Token: 0x0600A520 RID: 42272 RVA: 0x00178CF6 File Offset: 0x00176EF6
 		public virtual string TidMainText
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030A8 RID: 12456
-		// (get) Token: 0x06009BC1 RID: 39873 RVA: 0x00165908 File Offset: 0x00163B08
-		// (set) Token: 0x06009BC2 RID: 39874 RVA: 0x00165933 File Offset: 0x00163B33
+		// Token: 0x1700331A RID: 13082
+		// (get) Token: 0x0600A521 RID: 42273 RVA: 0x00178D04 File Offset: 0x00176F04
+		// (set) Token: 0x0600A522 RID: 42274 RVA: 0x00178D2F File Offset: 0x00176F2F
 		public virtual string TidSubText
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030A9 RID: 12457
-		// (get) Token: 0x06009BC3 RID: 39875 RVA: 0x00165941 File Offset: 0x00163B41
-		// (set) Token: 0x06009BC4 RID: 39876 RVA: 0x00165958 File Offset: 0x00163B58
+		// Token: 0x1700331B RID: 13083
+		// (get) Token: 0x0600A523 RID: 42275 RVA: 0x00178D3D File Offset: 0x00176F3D
+		// (set) Token: 0x0600A524 RID: 42276 RVA: 0x00178D54 File Offset: 0x00176F54
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030AA RID: 12458
-		// (get) Token: 0x06009BC5 RID: 39877 RVA: 0x00165966 File Offset: 0x00163B66
-		// (set) Token: 0x06009BC6 RID: 39878 RVA: 0x0016597D File Offset: 0x00163B7D
+		// Token: 0x1700331C RID: 13084
+		// (get) Token: 0x0600A525 RID: 42277 RVA: 0x00178D62 File Offset: 0x00176F62
+		// (set) Token: 0x0600A526 RID: 42278 RVA: 0x00178D79 File Offset: 0x00176F79
 		[Nullable(2)]
 		public virtual string EdTidSubText
 		{
@@ -176,11 +174,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E87 RID: 24199
+		// Token: 0x040063C1 RID: 25537
 		[Nullable(2)]
 		protected new INightmareLordTip FbInstance;
 
-		// Token: 0x04005E88 RID: 24200
+		// Token: 0x040063C2 RID: 25538
 		[Nullable(2)]
 		protected new INightmareLordTip_SetValue PocoInterface;
 	}

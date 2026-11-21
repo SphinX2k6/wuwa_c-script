@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002378 RID: 9080
+// Token: 0x0200185D RID: 6237
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 {
-	// Token: 0x06012230 RID: 74288 RVA: 0x00474A54 File Offset: 0x00472C54
+	// Token: 0x0600F6E0 RID: 63200 RVA: 0x00481BD4 File Offset: 0x0047FDD4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,7 +51,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		};
 	}
 
-	// Token: 0x06012231 RID: 74289 RVA: 0x00474CB0 File Offset: 0x00472EB0
+	// Token: 0x0600F6E1 RID: 63201 RVA: 0x00481E30 File Offset: 0x00480030
 	private void OnClickBuyButton()
 	{
 		List<PayShopGoods> allData = this.CurrentShopFlySkinData.AllData;
@@ -74,7 +74,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		UiManager.Instance.OpenView(EUiViewName.FlySkinBuyDetailView, flySkinBuyDetailViewData, null);
 	}
 
-	// Token: 0x06012232 RID: 74290 RVA: 0x00474D84 File Offset: 0x00472F84
+	// Token: 0x0600F6E2 RID: 63202 RVA: 0x00481F04 File Offset: 0x00480104
 	[NullableContext(1)]
 	public override void Refresh(FlySkinItemContentData data, bool isSelected, int gridIndex)
 	{
@@ -99,7 +99,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		this.RefreshExtraReward(shopFlySkinData);
 	}
 
-	// Token: 0x06012233 RID: 74291 RVA: 0x00474E18 File Offset: 0x00473018
+	// Token: 0x0600F6E3 RID: 63203 RVA: 0x00481F98 File Offset: 0x00480198
 	[NullableContext(1)]
 	private void RefreshEffectItem(ShopFlySkinData data)
 	{
@@ -108,7 +108,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.GetItem(16).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06012234 RID: 74292 RVA: 0x00474E50 File Offset: 0x00473050
+	// Token: 0x0600F6E4 RID: 63204 RVA: 0x00481FD0 File Offset: 0x004801D0
 	[NullableContext(1)]
 	private void RefreshRedDotState(ShopFlySkinData data)
 	{
@@ -116,7 +116,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.GetItem(13).SetUIActive(ifNeedRemind);
 	}
 
-	// Token: 0x06012235 RID: 74293 RVA: 0x00474E78 File Offset: 0x00473078
+	// Token: 0x0600F6E5 RID: 63205 RVA: 0x00481FF8 File Offset: 0x004801F8
 	[NullableContext(1)]
 	private void RefreshBuyLimitItemState(ShopFlySkinData data)
 	{
@@ -124,7 +124,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.GetItem(11).SetUIActive(ifCanBuy);
 	}
 
-	// Token: 0x06012236 RID: 74294 RVA: 0x00474E9C File Offset: 0x0047309C
+	// Token: 0x0600F6E6 RID: 63206 RVA: 0x0048201C File Offset: 0x0048021C
 	[NullableContext(1)]
 	private void RefreshFinishBuyItemState(ShopFlySkinData data)
 	{
@@ -132,7 +132,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.GetItem(12).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06012237 RID: 74295 RVA: 0x00474EC4 File Offset: 0x004730C4
+	// Token: 0x0600F6E7 RID: 63207 RVA: 0x00482044 File Offset: 0x00480244
 	[NullableContext(1)]
 	private void RefreshRoleTexture(ShopFlySkinData data)
 	{
@@ -140,7 +140,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.SetTextureByPath(previewTextureInPayShop, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x06012238 RID: 74296 RVA: 0x00474EF0 File Offset: 0x004730F0
+	// Token: 0x0600F6E8 RID: 63208 RVA: 0x00482070 File Offset: 0x00480270
 	private void RefreshWeaponTexture()
 	{
 		UUITexture texture = base.GetTexture(2);
@@ -151,7 +151,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		texture.SetUIActive(false);
 	}
 
-	// Token: 0x06012239 RID: 74297 RVA: 0x00474F04 File Offset: 0x00473104
+	// Token: 0x0600F6E9 RID: 63209 RVA: 0x00482084 File Offset: 0x00480284
 	private void RefreshSourcePriceText(ShopFlySkinData data)
 	{
 		if (data == null)
@@ -174,7 +174,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.GetText(6).SetText("<s>" + originalPrice.ToString() + "</s>", true);
 	}
 
-	// Token: 0x0601223A RID: 74298 RVA: 0x00474F98 File Offset: 0x00473198
+	// Token: 0x0600F6EA RID: 63210 RVA: 0x00482118 File Offset: 0x00480318
 	private void RefreshNowPriceText(ShopFlySkinData data)
 	{
 		if (data == null)
@@ -192,7 +192,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.GetText(5).SetText(nowPrice.ToString(), true);
 	}
 
-	// Token: 0x0601223B RID: 74299 RVA: 0x00474FFC File Offset: 0x004731FC
+	// Token: 0x0600F6EB RID: 63211 RVA: 0x0048217C File Offset: 0x0048037C
 	private void RefreshBuyItemIcon(ShopFlySkinData data)
 	{
 		if (data == null)
@@ -209,7 +209,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		}
 	}
 
-	// Token: 0x0601223C RID: 74300 RVA: 0x0047505C File Offset: 0x0047325C
+	// Token: 0x0600F6EC RID: 63212 RVA: 0x004821DC File Offset: 0x004803DC
 	[NullableContext(1)]
 	private void RefreshBuyLimitText(ShopFlySkinData data)
 	{
@@ -217,7 +217,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.GetText(3).SetText(shopTipsText, true);
 	}
 
-	// Token: 0x0601223D RID: 74301 RVA: 0x00475084 File Offset: 0x00473284
+	// Token: 0x0600F6ED RID: 63213 RVA: 0x00482204 File Offset: 0x00480404
 	[NullableContext(1)]
 	private void RefreshSubNameText(ShopFlySkinData data)
 	{
@@ -225,7 +225,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), name, Array.Empty<object>());
 	}
 
-	// Token: 0x0601223E RID: 74302 RVA: 0x004750BC File Offset: 0x004732BC
+	// Token: 0x0600F6EE RID: 63214 RVA: 0x0048223C File Offset: 0x0048043C
 	private void RefreshDiscountTimeText(ShopFlySkinData data)
 	{
 		if (data == null)
@@ -254,7 +254,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		}
 	}
 
-	// Token: 0x0601223F RID: 74303 RVA: 0x00475148 File Offset: 0x00473348
+	// Token: 0x0600F6EF RID: 63215 RVA: 0x004822C8 File Offset: 0x004804C8
 	private void RefreshDiscountText(ShopFlySkinData data)
 	{
 		if (data == null)
@@ -267,7 +267,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.GetText(8).SetText(discountText, true);
 	}
 
-	// Token: 0x06012240 RID: 74304 RVA: 0x00475194 File Offset: 0x00473394
+	// Token: 0x0600F6F0 RID: 63216 RVA: 0x00482314 File Offset: 0x00480514
 	private void RefreshTextureBg(ShopFlySkinData data)
 	{
 		if (data == null)
@@ -280,7 +280,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.SetTextureByPath(resourcePath, base.GetTexture(14), null, null);
 	}
 
-	// Token: 0x06012241 RID: 74305 RVA: 0x004751F8 File Offset: 0x004733F8
+	// Token: 0x0600F6F1 RID: 63217 RVA: 0x00482378 File Offset: 0x00480578
 	private void RefreshTextureTopBg(ShopFlySkinData data)
 	{
 		if (data == null)
@@ -293,7 +293,7 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.SetTextureByPath(resourcePath, base.GetTexture(15), null, null);
 	}
 
-	// Token: 0x06012242 RID: 74306 RVA: 0x0047525C File Offset: 0x0047345C
+	// Token: 0x0600F6F2 RID: 63218 RVA: 0x004823DC File Offset: 0x004805DC
 	private void RefreshExtraReward(ShopFlySkinData data)
 	{
 		UUITexture texture = base.GetTexture(26);
@@ -327,63 +327,63 @@ public class FlySkinItemContent : GridProxyAbstract<FlySkinItemContentData>
 		base.GetText(23).SetText(newText, true);
 	}
 
-	// Token: 0x0400891F RID: 35103
+	// Token: 0x04008A64 RID: 35428
 	private FlySkinItemContentData CurrentShopFlySkinData;
 
-	// Token: 0x04008920 RID: 35104
+	// Token: 0x04008A65 RID: 35429
 	private int CurrentIndex;
 
-	// Token: 0x02008914 RID: 35092
+	// Token: 0x02007A9E RID: 31390
 	[NullableContext(0)]
 	private enum ESkinItemComponent
 	{
-		// Token: 0x0402C8BE RID: 182462
+		// Token: 0x04027BD6 RID: 162774
 		BuyButton,
-		// Token: 0x0402C8BF RID: 182463
+		// Token: 0x04027BD7 RID: 162775
 		RoleTexture,
-		// Token: 0x0402C8C0 RID: 182464
+		// Token: 0x04027BD8 RID: 162776
 		TextureWeapon,
-		// Token: 0x0402C8C1 RID: 182465
+		// Token: 0x04027BD9 RID: 162777
 		BuyLimitText,
-		// Token: 0x0402C8C2 RID: 182466
+		// Token: 0x04027BDA RID: 162778
 		SubNameText,
-		// Token: 0x0402C8C3 RID: 182467
+		// Token: 0x04027BDB RID: 162779
 		NowPrice,
-		// Token: 0x0402C8C4 RID: 182468
+		// Token: 0x04027BDC RID: 162780
 		BeforePrice,
-		// Token: 0x0402C8C5 RID: 182469
+		// Token: 0x04027BDD RID: 162781
 		DiscountItem,
-		// Token: 0x0402C8C6 RID: 182470
+		// Token: 0x04027BDE RID: 162782
 		DiscountText,
-		// Token: 0x0402C8C7 RID: 182471
+		// Token: 0x04027BDF RID: 162783
 		TimeText,
-		// Token: 0x0402C8C8 RID: 182472
+		// Token: 0x04027BE0 RID: 162784
 		BuyItemIcon,
-		// Token: 0x0402C8C9 RID: 182473
+		// Token: 0x04027BE1 RID: 162785
 		LimitBuyItem,
-		// Token: 0x0402C8CA RID: 182474
+		// Token: 0x04027BE2 RID: 162786
 		FinishBuyItem,
-		// Token: 0x0402C8CB RID: 182475
+		// Token: 0x04027BE3 RID: 162787
 		NewItem,
-		// Token: 0x0402C8CC RID: 182476
+		// Token: 0x04027BE4 RID: 162788
 		TextureBg,
-		// Token: 0x0402C8CD RID: 182477
+		// Token: 0x04027BE5 RID: 162789
 		TextureTopBg,
-		// Token: 0x0402C8CE RID: 182478
+		// Token: 0x04027BE6 RID: 162790
 		EffectBItem,
-		// Token: 0x0402C8CF RID: 182479
+		// Token: 0x04027BE7 RID: 162791
 		EffectAItem,
-		// Token: 0x0402C8D0 RID: 182480
+		// Token: 0x04027BE8 RID: 162792
 		ExtraItemRoot = 21,
-		// Token: 0x0402C8D1 RID: 182481
+		// Token: 0x04027BE9 RID: 162793
 		TextureExtraReward,
-		// Token: 0x0402C8D2 RID: 182482
+		// Token: 0x04027BEA RID: 162794
 		TextExtraReward,
-		// Token: 0x0402C8D3 RID: 182483
+		// Token: 0x04027BEB RID: 162795
 		ItemTypeIcon = 25,
-		// Token: 0x0402C8D4 RID: 182484
+		// Token: 0x04027BEC RID: 162796
 		TextureTypeIcon,
-		// Token: 0x0402C8D5 RID: 182485
+		// Token: 0x04027BED RID: 162797
 		ItemExtraReward
 	}
 }

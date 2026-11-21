@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014A3 RID: 5283
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015FC RID: 5628
 	public class AvgMoveRole : ActionParams
 	{
-		// Token: 0x0600784A RID: 30794 RVA: 0x00120750 File Offset: 0x0011E950
+		// Token: 0x06007F17 RID: 32535 RVA: 0x0012F39C File Offset: 0x0012D59C
 		private AvgMoveRole_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600784B RID: 30795 RVA: 0x00120788 File Offset: 0x0011E988
+		// Token: 0x06007F18 RID: 32536 RVA: 0x0012F3D4 File Offset: 0x0012D5D4
 		public static AvgMoveRole Create([Nullable(2)] AvgMoveRole instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600784C RID: 30796 RVA: 0x0012079B File Offset: 0x0011E99B
+		// Token: 0x06007F19 RID: 32537 RVA: 0x0012F3E7 File Offset: 0x0012D5E7
 		public static AvgMoveRole CreateFromSetValue([Nullable(2)] AvgMoveRole_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600784D RID: 30797 RVA: 0x001207B0 File Offset: 0x0011E9B0
+		// Token: 0x06007F1A RID: 32538 RVA: 0x0012F3FC File Offset: 0x0012D5FC
 		public AvgMoveRole_SetValue ToSetValue()
 		{
 			return new AvgMoveRole_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002866 RID: 10342
-		// (get) Token: 0x0600784E RID: 30798 RVA: 0x001207FE File Offset: 0x0011E9FE
-		// (set) Token: 0x0600784F RID: 30799 RVA: 0x00120829 File Offset: 0x0011EA29
+		// Token: 0x17002A50 RID: 10832
+		// (get) Token: 0x06007F1B RID: 32539 RVA: 0x0012F44A File Offset: 0x0012D64A
+		// (set) Token: 0x06007F1C RID: 32540 RVA: 0x0012F475 File Offset: 0x0012D675
 		public virtual int RoleId
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002867 RID: 10343
-		// (get) Token: 0x06007850 RID: 30800 RVA: 0x00120837 File Offset: 0x0011EA37
-		// (set) Token: 0x06007851 RID: 30801 RVA: 0x00120862 File Offset: 0x0011EA62
+		// Token: 0x17002A51 RID: 10833
+		// (get) Token: 0x06007F1D RID: 32541 RVA: 0x0012F483 File Offset: 0x0012D683
+		// (set) Token: 0x06007F1E RID: 32542 RVA: 0x0012F4AE File Offset: 0x0012D6AE
 		public virtual EAvgRoleAnimationType AnimationType
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002868 RID: 10344
-		// (get) Token: 0x06007852 RID: 30802 RVA: 0x00120870 File Offset: 0x0011EA70
-		// (set) Token: 0x06007853 RID: 30803 RVA: 0x001208AA File Offset: 0x0011EAAA
+		// Token: 0x17002A52 RID: 10834
+		// (get) Token: 0x06007F1F RID: 32543 RVA: 0x0012F4BC File Offset: 0x0012D6BC
+		// (set) Token: 0x06007F20 RID: 32544 RVA: 0x0012F4F6 File Offset: 0x0012D6F6
 		public virtual bool? IsAnimationLoop
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002869 RID: 10345
-		// (get) Token: 0x06007854 RID: 30804 RVA: 0x001208B8 File Offset: 0x0011EAB8
-		// (set) Token: 0x06007855 RID: 30805 RVA: 0x001208E3 File Offset: 0x0011EAE3
+		// Token: 0x17002A53 RID: 10835
+		// (get) Token: 0x06007F21 RID: 32545 RVA: 0x0012F504 File Offset: 0x0012D704
+		// (set) Token: 0x06007F22 RID: 32546 RVA: 0x0012F52F File Offset: 0x0012D72F
 		public virtual EAvgRolePosition TargetPosition
 		{
 			get
@@ -156,9 +154,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700286A RID: 10346
-		// (get) Token: 0x06007856 RID: 30806 RVA: 0x001208F4 File Offset: 0x0011EAF4
-		// (set) Token: 0x06007857 RID: 30807 RVA: 0x00120955 File Offset: 0x0011EB55
+		// Token: 0x17002A54 RID: 10836
+		// (get) Token: 0x06007F23 RID: 32547 RVA: 0x0012F540 File Offset: 0x0012D740
+		// (set) Token: 0x06007F24 RID: 32548 RVA: 0x0012F5A1 File Offset: 0x0012D7A1
 		public virtual IEaseData EaseCurve
 		{
 			get
@@ -186,18 +184,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040045EA RID: 17898
+		// Token: 0x04004985 RID: 18821
 		[Nullable(2)]
 		protected new AvgMoveRole FbInstance;
 
-		// Token: 0x040045EB RID: 17899
+		// Token: 0x04004986 RID: 18822
 		[Nullable(2)]
 		protected AvgMoveRole_SetValue PocoInterface;
 
-		// Token: 0x040045EC RID: 17900
+		// Token: 0x04004987 RID: 18823
 		private IEaseData _EaseCurveCache;
 
-		// Token: 0x040045ED RID: 17901
+		// Token: 0x04004988 RID: 18824
 		private bool _EaseCurveInited;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EF3 RID: 28403
+	// Token: 0x02006073 RID: 24691
 	internal enum EDollPlayDescriptionComponents
 	{
-		// Token: 0x04024072 RID: 147570
+		// Token: 0x0401F325 RID: 127781
 		TexTitle,
-		// Token: 0x04024073 RID: 147571
+		// Token: 0x0401F326 RID: 127782
 		TexContent
 	}
 }

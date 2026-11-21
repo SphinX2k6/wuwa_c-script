@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200643D RID: 25661
+	// Token: 0x02006AB1 RID: 27313
 	public class ICloseSplineMovePattern_UnionUnion
 	{
-		// Token: 0x1700BF13 RID: 48915
-		// (get) Token: 0x0602C696 RID: 181910 RVA: 0x00617E1C File Offset: 0x0061601C
-		// (set) Token: 0x0602C697 RID: 181911 RVA: 0x00617E24 File Offset: 0x00616024
+		// Token: 0x1700C89F RID: 51359
+		// (get) Token: 0x0602EE1B RID: 192027 RVA: 0x00663460 File Offset: 0x00661660
+		// (set) Token: 0x0602EE1C RID: 192028 RVA: 0x00663468 File Offset: 0x00661668
 		public ICloseSplineMovePattern_Union Type { get; set; }
 
-		// Token: 0x1700BF14 RID: 48916
-		// (get) Token: 0x0602C698 RID: 181912 RVA: 0x00617E2D File Offset: 0x0061602D
-		// (set) Token: 0x0602C699 RID: 181913 RVA: 0x00617E35 File Offset: 0x00616035
+		// Token: 0x1700C8A0 RID: 51360
+		// (get) Token: 0x0602EE1D RID: 192029 RVA: 0x00663471 File Offset: 0x00661671
+		// (set) Token: 0x0602EE1E RID: 192030 RVA: 0x00663479 File Offset: 0x00661679
 		public object Value { get; set; }
 
-		// Token: 0x0602C69A RID: 181914 RVA: 0x00617E3E File Offset: 0x0061603E
+		// Token: 0x0602EE1F RID: 192031 RVA: 0x00663482 File Offset: 0x00661682
 		public ICloseSplineMovePattern_UnionUnion()
 		{
 			this.Type = ICloseSplineMovePattern_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602C69B RID: 181915 RVA: 0x00617E54 File Offset: 0x00616054
+		// Token: 0x0602EE20 RID: 192032 RVA: 0x00663498 File Offset: 0x00661698
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602C69C RID: 181916 RVA: 0x00617E66 File Offset: 0x00616066
+		// Token: 0x0602EE21 RID: 192033 RVA: 0x006634AA File Offset: 0x006616AA
 		public ICloseSplineMovePatternT AsICloseSplineMovePattern()
 		{
 			return this.As<ICloseSplineMovePatternT>();
 		}
 
-		// Token: 0x0602C69D RID: 181917 RVA: 0x00617E6E File Offset: 0x0061606E
+		// Token: 0x0602EE22 RID: 192034 RVA: 0x006634B2 File Offset: 0x006616B2
 		public static ICloseSplineMovePattern_UnionUnion FromICloseSplineMovePattern(ICloseSplineMovePatternT _iclosesplinemovepattern)
 		{
 			return new ICloseSplineMovePattern_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C69E RID: 181918 RVA: 0x00617E83 File Offset: 0x00616083
+		// Token: 0x0602EE23 RID: 192035 RVA: 0x006634C7 File Offset: 0x006616C7
 		public ICloseAirPassageMoveT AsICloseAirPassageMove()
 		{
 			return this.As<ICloseAirPassageMoveT>();
 		}
 
-		// Token: 0x0602C69F RID: 181919 RVA: 0x00617E8B File Offset: 0x0061608B
+		// Token: 0x0602EE24 RID: 192036 RVA: 0x006634CF File Offset: 0x006616CF
 		public static ICloseSplineMovePattern_UnionUnion FromICloseAirPassageMove(ICloseAirPassageMoveT _icloseairpassagemove)
 		{
 			return new ICloseSplineMovePattern_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C6A0 RID: 181920 RVA: 0x00617EA0 File Offset: 0x006160A0
+		// Token: 0x0602EE25 RID: 192037 RVA: 0x006634E4 File Offset: 0x006616E4
 		public ICloseMotorcycleTrackMoveT AsICloseMotorcycleTrackMove()
 		{
 			return this.As<ICloseMotorcycleTrackMoveT>();
 		}
 
-		// Token: 0x0602C6A1 RID: 181921 RVA: 0x00617EA8 File Offset: 0x006160A8
+		// Token: 0x0602EE26 RID: 192038 RVA: 0x006634EC File Offset: 0x006616EC
 		public static ICloseSplineMovePattern_UnionUnion FromICloseMotorcycleTrackMove(ICloseMotorcycleTrackMoveT _iclosemotorcycletrackmove)
 		{
 			return new ICloseSplineMovePattern_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C6A2 RID: 181922 RVA: 0x00617EBD File Offset: 0x006160BD
+		// Token: 0x0602EE27 RID: 192039 RVA: 0x00663501 File Offset: 0x00661701
 		public IClosePathLineMoveT AsIClosePathLineMove()
 		{
 			return this.As<IClosePathLineMoveT>();
 		}
 
-		// Token: 0x0602C6A3 RID: 181923 RVA: 0x00617EC5 File Offset: 0x006160C5
+		// Token: 0x0602EE28 RID: 192040 RVA: 0x00663509 File Offset: 0x00661709
 		public static ICloseSplineMovePattern_UnionUnion FromIClosePathLineMove(IClosePathLineMoveT _iclosepathlinemove)
 		{
 			return new ICloseSplineMovePattern_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C6A4 RID: 181924 RVA: 0x00617EDA File Offset: 0x006160DA
+		// Token: 0x0602EE29 RID: 192041 RVA: 0x0066351E File Offset: 0x0066171E
 		public ICloseRacingTrackMoveT AsICloseRacingTrackMove()
 		{
 			return this.As<ICloseRacingTrackMoveT>();
 		}
 
-		// Token: 0x0602C6A5 RID: 181925 RVA: 0x00617EE2 File Offset: 0x006160E2
+		// Token: 0x0602EE2A RID: 192042 RVA: 0x00663526 File Offset: 0x00661726
 		public static ICloseSplineMovePattern_UnionUnion FromICloseRacingTrackMove(ICloseRacingTrackMoveT _icloseracingtrackmove)
 		{
 			return new ICloseSplineMovePattern_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C6A6 RID: 181926 RVA: 0x00617EF7 File Offset: 0x006160F7
+		// Token: 0x0602EE2B RID: 192043 RVA: 0x0066353B File Offset: 0x0066173B
 		public ICloseSlideTrackMoveT AsICloseSlideTrackMove()
 		{
 			return this.As<ICloseSlideTrackMoveT>();
 		}
 
-		// Token: 0x0602C6A7 RID: 181927 RVA: 0x00617EFF File Offset: 0x006160FF
+		// Token: 0x0602EE2C RID: 192044 RVA: 0x00663543 File Offset: 0x00661743
 		public static ICloseSplineMovePattern_UnionUnion FromICloseSlideTrackMove(ICloseSlideTrackMoveT _icloseslidetrackmove)
 		{
 			return new ICloseSplineMovePattern_UnionUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C6A8 RID: 181928 RVA: 0x00617F14 File Offset: 0x00616114
+		// Token: 0x0602EE2D RID: 192045 RVA: 0x00663558 File Offset: 0x00661758
 		public static int Pack(FlatBufferBuilder builder, ICloseSplineMovePattern_UnionUnion _o)
 		{
 			switch (_o.Type)

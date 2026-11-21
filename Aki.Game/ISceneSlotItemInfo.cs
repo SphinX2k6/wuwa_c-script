@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FB3 RID: 4019
+// Token: 0x02000468 RID: 1128
 [NullableContext(1)]
 public interface ISceneSlotItemInfo
 {
-	// Token: 0x1700083F RID: 2111
-	// (get) Token: 0x060066F8 RID: 26360
-	// (set) Token: 0x060066F9 RID: 26361
+	// Token: 0x17000861 RID: 2145
+	// (get) Token: 0x06003A90 RID: 14992
+	// (set) Token: 0x06003A91 RID: 14993
 	int SlotEntityId { get; set; }
 
-	// Token: 0x17000840 RID: 2112
-	// (get) Token: 0x060066FA RID: 26362
-	// (set) Token: 0x060066FB RID: 26363
+	// Token: 0x17000862 RID: 2146
+	// (get) Token: 0x06003A92 RID: 14994
+	// (set) Token: 0x06003A93 RID: 14995
 	[Nullable(2)]
 	FurnitureSceneItemBase RootFurnitureSceneItem { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000841 RID: 2113
-	// (get) Token: 0x060066FC RID: 26364
-	// (set) Token: 0x060066FD RID: 26365
+	// Token: 0x17000863 RID: 2147
+	// (get) Token: 0x06003A94 RID: 14996
+	// (set) Token: 0x06003A95 RID: 14997
 	Dictionary<int, FurnitureSceneItemBase> SubFurnitureSceneItemMap { get; set; }
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000851 RID: 2129
+	// Token: 0x0200086D RID: 2157
 	public class ConfigRogueResPokemonById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060031F8 RID: 12792 RVA: 0x00174064 File Offset: 0x00172264
+		// Token: 0x060032A0 RID: 12960 RVA: 0x0017B34C File Offset: 0x0017954C
 		static ConfigRogueResPokemonById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueResPokemonById.CreateStaticDefaultValue), new Action(ConfigRogueResPokemonById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060031F9 RID: 12793 RVA: 0x00174084 File Offset: 0x00172284
+		// Token: 0x060032A1 RID: 12961 RVA: 0x0017B36C File Offset: 0x0017956C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueResPokemonById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060031FA RID: 12794 RVA: 0x00174103 File Offset: 0x00172303
+		// Token: 0x060032A2 RID: 12962 RVA: 0x0017B3EB File Offset: 0x001795EB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueResPokemonById.LogPair = null;
 			ConfigRogueResPokemonById.HandleId = 0;
 		}
 
-		// Token: 0x060031FB RID: 12795 RVA: 0x00174111 File Offset: 0x00172311
+		// Token: 0x060032A3 RID: 12963 RVA: 0x0017B3F9 File Offset: 0x001795F9
 		public static void Init()
 		{
 			ConfigRogueResPokemonById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueResPokemonById.HandleId, "db_permanentrogue.db", "select BinData from `RogueResPokemon` where Id=?");
 		}
 
-		// Token: 0x060031FC RID: 12796 RVA: 0x0017412C File Offset: 0x0017232C
+		// Token: 0x060032A4 RID: 12964 RVA: 0x0017B414 File Offset: 0x00179614
 		public static RogueResPokemon? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueResPokemonById.HandleId, ConfigRogueResPokemonById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueResPokemon?(rootAsRogueResPokemon);
 		}
 
-		// Token: 0x04003A1D RID: 14877
+		// Token: 0x04003AE1 RID: 15073
 		private const string DB = "db_permanentrogue.db";
 
-		// Token: 0x04003A1E RID: 14878
+		// Token: 0x04003AE2 RID: 15074
 		private const string FILE = "c.常驻肉鸽.xlsx";
 
-		// Token: 0x04003A1F RID: 14879
+		// Token: 0x04003AE3 RID: 15075
 		private const string TABLE = "RogueResPokemon";
 
-		// Token: 0x04003A20 RID: 14880
+		// Token: 0x04003AE4 RID: 15076
 		private const string COMMAND = "select BinData from `RogueResPokemon` where Id=?";
 
-		// Token: 0x04003A21 RID: 14881
+		// Token: 0x04003AE5 RID: 15077
 		private const string KEY_PREFIX = "RogueResPokemonById";
 
-		// Token: 0x04003A22 RID: 14882
+		// Token: 0x04003AE6 RID: 15078
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003A23 RID: 14883
+		// Token: 0x04003AE7 RID: 15079
 		private static int HandleId;
 	}
 }

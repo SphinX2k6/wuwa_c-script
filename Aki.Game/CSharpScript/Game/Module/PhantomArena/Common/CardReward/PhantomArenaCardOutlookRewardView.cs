@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 {
-	// Token: 0x020051C2 RID: 20930
+	// Token: 0x02004192 RID: 16786
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaCardOutlookRewardView : UiViewBase
 	{
-		// Token: 0x06035978 RID: 219512 RVA: 0x00CB2C0A File Offset: 0x00CB0E0A
+		// Token: 0x0602A873 RID: 174195 RVA: 0x00C00246 File Offset: 0x00BFE446
 		public PhantomArenaCardOutlookRewardView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 		{
 		}
 
-		// Token: 0x06035979 RID: 219513 RVA: 0x00CB2C14 File Offset: 0x00CB0E14
+		// Token: 0x0602A874 RID: 174196 RVA: 0x00C00250 File Offset: 0x00BFE450
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 			};
 		}
 
-		// Token: 0x0603597A RID: 219514 RVA: 0x00CB2CC0 File Offset: 0x00CB0EC0
+		// Token: 0x0602A875 RID: 174197 RVA: 0x00C002FC File Offset: 0x00BFE4FC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaCardOutlookRewardView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603597B RID: 219515 RVA: 0x00CB2D04 File Offset: 0x00CB0F04
+		// Token: 0x0602A876 RID: 174198 RVA: 0x00C00340 File Offset: 0x00BFE540
 		protected override void OnStart()
 		{
 			base.GetItem(3).SetUIActive(true);
@@ -58,25 +58,25 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 			this.RefreshByCardId(this.CardId);
 		}
 
-		// Token: 0x0603597C RID: 219516 RVA: 0x00CB2D5D File Offset: 0x00CB0F5D
+		// Token: 0x0602A877 RID: 174199 RVA: 0x00C00399 File Offset: 0x00BFE599
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnSeqEvent));
 		}
 
-		// Token: 0x0603597D RID: 219517 RVA: 0x00CB2D7B File Offset: 0x00CB0F7B
+		// Token: 0x0602A878 RID: 174200 RVA: 0x00C003B7 File Offset: 0x00BFE5B7
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnSeqEvent));
 		}
 
-		// Token: 0x0603597E RID: 219518 RVA: 0x00CB2D99 File Offset: 0x00CB0F99
+		// Token: 0x0602A879 RID: 174201 RVA: 0x00C003D5 File Offset: 0x00BFE5D5
 		public void RefreshByCardId(int cardId)
 		{
 			this.CardItem.Refresh(cardId);
 		}
 
-		// Token: 0x0603597F RID: 219519 RVA: 0x00CB2DA8 File Offset: 0x00CB0FA8
+		// Token: 0x0602A87A RID: 174202 RVA: 0x00C003E4 File Offset: 0x00BFE5E4
 		public void ShowNext()
 		{
 			UiAsyncTask task = new UiAsyncTask("PhantomArenaCardOutlookRewardView", delegate()
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x06035980 RID: 219520 RVA: 0x00CB2DDC File Offset: 0x00CB0FDC
+		// Token: 0x0602A87B RID: 174203 RVA: 0x00C00418 File Offset: 0x00BFE618
 		public UniTask ShowNextAsync()
 		{
 			PhantomArenaCardOutlookRewardView.<ShowNextAsync>d__12 <ShowNextAsync>d__;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 			return <ShowNextAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035981 RID: 219521 RVA: 0x00CB2E1F File Offset: 0x00CB101F
+		// Token: 0x0602A87C RID: 174204 RVA: 0x00C0045B File Offset: 0x00BFE65B
 		private void OnCloseButtonClick()
 		{
 			if (PhantomArenaModel.Instance.CardOutlookUnlockQueue.Count > 0)
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06035982 RID: 219522 RVA: 0x00CB2E41 File Offset: 0x00CB1041
+		// Token: 0x0602A87D RID: 174205 RVA: 0x00C0047D File Offset: 0x00BFE67D
 		protected override void OnAfterDestroy()
 		{
 			PhantomArenaController.Instance.PostUnlockView();
 		}
 
-		// Token: 0x06035983 RID: 219523 RVA: 0x00CB2E4E File Offset: 0x00CB104E
+		// Token: 0x0602A87E RID: 174206 RVA: 0x00C0048A File Offset: 0x00BFE68A
 		private void OnSeqEvent(string seqName)
 		{
 			if (seqName == "Change" && this.IsWaitingChange)
@@ -128,32 +128,32 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 			}
 		}
 
-		// Token: 0x0401C720 RID: 116512
+		// Token: 0x04017155 RID: 94549
 		private UnlockViewCardItem CardItem;
 
-		// Token: 0x0401C721 RID: 116513
+		// Token: 0x04017156 RID: 94550
 		protected int CardId;
 
-		// Token: 0x0401C722 RID: 116514
+		// Token: 0x04017157 RID: 94551
 		protected bool IsWaitingChange;
 
-		// Token: 0x0200B354 RID: 45908
+		// Token: 0x02009D8C RID: 40332
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x040365BD RID: 222653
+			// Token: 0x04031010 RID: 200720
 			public const int TitleText = 0;
 
-			// Token: 0x040365BE RID: 222654
+			// Token: 0x04031011 RID: 200721
 			public const int CloseButton = 1;
 
-			// Token: 0x040365BF RID: 222655
+			// Token: 0x04031012 RID: 200722
 			public const int CardItem = 2;
 
-			// Token: 0x040365C0 RID: 222656
+			// Token: 0x04031013 RID: 200723
 			public const int PanelCard = 3;
 
-			// Token: 0x040365C1 RID: 222657
+			// Token: 0x04031014 RID: 200724
 			public const int PanelCards = 4;
 		}
 	}

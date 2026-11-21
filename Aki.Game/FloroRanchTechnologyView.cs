@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B7A RID: 7034
+// Token: 0x02001039 RID: 4153
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchTechnologyView : UiViewBase
 {
-	// Token: 0x0600D14C RID: 53580 RVA: 0x002FF104 File Offset: 0x002FD304
+	// Token: 0x0600A55D RID: 42333 RVA: 0x0030A1DC File Offset: 0x003083DC
 	public FloroRanchTechnologyView(UiViewInfo info) : base(info)
 	{
 		this.TechnologyCoinData = new FloroRanchCurrencyData(ECurrencyType.TechnologyCoin);
 	}
 
-	// Token: 0x0600D14D RID: 53581 RVA: 0x002FF124 File Offset: 0x002FD324
+	// Token: 0x0600A55E RID: 42334 RVA: 0x0030A1FC File Offset: 0x003083FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -56,7 +56,7 @@ public class FloroRanchTechnologyView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D14E RID: 53582 RVA: 0x002FF2B4 File Offset: 0x002FD4B4
+	// Token: 0x0600A55F RID: 42335 RVA: 0x0030A38C File Offset: 0x0030858C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchTechnologyView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ public class FloroRanchTechnologyView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D14F RID: 53583 RVA: 0x002FF2F8 File Offset: 0x002FD4F8
+	// Token: 0x0600A560 RID: 42336 RVA: 0x0030A3D0 File Offset: 0x003085D0
 	private void RefreshCurrencyNum()
 	{
 		int technologyCoinNum = this.ActivityData.GetTechnologyCoinNum();
@@ -80,7 +80,7 @@ public class FloroRanchTechnologyView : UiViewBase
 		costItem.SetCurrencyData(this.TechnologyCoinData);
 	}
 
-	// Token: 0x0600D150 RID: 53584 RVA: 0x002FF334 File Offset: 0x002FD534
+	// Token: 0x0600A561 RID: 42337 RVA: 0x0030A40C File Offset: 0x0030860C
 	private void UnlockSuccessCallback(string textId)
 	{
 		FloroRanchUnlockSuccessPanel unlockSuccessPanel = this.UnlockSuccessPanel;
@@ -96,7 +96,7 @@ public class FloroRanchTechnologyView : UiViewBase
 		this.RefreshCurrencyNum();
 	}
 
-	// Token: 0x0600D151 RID: 53585 RVA: 0x002FF367 File Offset: 0x002FD567
+	// Token: 0x0600A562 RID: 42338 RVA: 0x0030A43F File Offset: 0x0030863F
 	public void TrySelectTechNode(FloroRanchTechNodeItem technologyNode)
 	{
 		if (this.CurSelectNode == null)
@@ -106,7 +106,7 @@ public class FloroRanchTechnologyView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D152 RID: 53586 RVA: 0x002FF380 File Offset: 0x002FD580
+	// Token: 0x0600A563 RID: 42339 RVA: 0x0030A458 File Offset: 0x00308658
 	private void OnSelectTechNode(FloroRanchTechNodeItem technologyNode)
 	{
 		if (this.CurSelectNode != null)
@@ -125,14 +125,14 @@ public class FloroRanchTechnologyView : UiViewBase
 		item.SetUIActive(true);
 	}
 
-	// Token: 0x0600D153 RID: 53587 RVA: 0x002FF3E3 File Offset: 0x002FD5E3
+	// Token: 0x0600A564 RID: 42340 RVA: 0x0030A4BB File Offset: 0x003086BB
 	private void OnBtnCloseClick()
 	{
 		EventSystem.Instance.Emit(EEventName.FloroRanchDataRedDot);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D154 RID: 53588 RVA: 0x002FF3FC File Offset: 0x002FD5FC
+	// Token: 0x0600A565 RID: 42341 RVA: 0x0030A4D4 File Offset: 0x003086D4
 	private FloroRanchTechGridPanel CreateGridPanel()
 	{
 		return new FloroRanchTechGridPanel
@@ -141,33 +141,33 @@ public class FloroRanchTechnologyView : UiViewBase
 		};
 	}
 
-	// Token: 0x0400600C RID: 24588
+	// Token: 0x040060DB RID: 24795
 	[Nullable(2)]
 	private FloroRanchActivityData ActivityData;
 
-	// Token: 0x0400600D RID: 24589
+	// Token: 0x040060DC RID: 24796
 	private List<List<FloroRanchTechnologyData>> TechnologyTreeList = new List<List<FloroRanchTechnologyData>>();
 
-	// Token: 0x0400600E RID: 24590
+	// Token: 0x040060DD RID: 24797
 	[Nullable(2)]
 	public FloroRanchTechNodeItem CurSelectNode;
 
-	// Token: 0x0400600F RID: 24591
+	// Token: 0x040060DE RID: 24798
 	[Nullable(2)]
 	public FloroRanchTechDetailPanel TechDetailPanel;
 
-	// Token: 0x04006010 RID: 24592
+	// Token: 0x040060DF RID: 24799
 	[Nullable(2)]
 	public FloroRanchUnlockSuccessPanel UnlockSuccessPanel;
 
-	// Token: 0x04006011 RID: 24593
+	// Token: 0x040060E0 RID: 24800
 	public FloroRanchCurrencyData TechnologyCoinData;
 
-	// Token: 0x04006012 RID: 24594
+	// Token: 0x040060E1 RID: 24801
 	[Nullable(2)]
 	private FloroRanchCurrencyItem CostItem;
 
-	// Token: 0x04006013 RID: 24595
+	// Token: 0x040060E2 RID: 24802
 	[Nullable(new byte[]
 	{
 		2,
@@ -177,35 +177,35 @@ public class FloroRanchTechnologyView : UiViewBase
 	})]
 	public GenericScrollViewNew<FloroRanchTechGridPanel, List<FloroRanchTechnologyData>> ScrollView;
 
-	// Token: 0x020080FB RID: 33019
+	// Token: 0x02007289 RID: 29321
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A16B RID: 172395
+		// Token: 0x0402549F RID: 152735
 		public const int BtnClose = 0;
 
-		// Token: 0x0402A16C RID: 172396
+		// Token: 0x040254A0 RID: 152736
 		public const int ItemCost = 1;
 
-		// Token: 0x0402A16D RID: 172397
+		// Token: 0x040254A1 RID: 152737
 		public const int ItemTechDetailPanel = 2;
 
-		// Token: 0x0402A16E RID: 172398
+		// Token: 0x040254A2 RID: 152738
 		public const int LoopScrollView = 3;
 
-		// Token: 0x0402A16F RID: 172399
+		// Token: 0x040254A3 RID: 152739
 		public const int LayoutTechGrid = 4;
 
-		// Token: 0x0402A170 RID: 172400
+		// Token: 0x040254A4 RID: 152740
 		public const int ItemTechGrid = 5;
 
-		// Token: 0x0402A171 RID: 172401
+		// Token: 0x040254A5 RID: 152741
 		public const int BtnMask = 6;
 
-		// Token: 0x0402A172 RID: 172402
+		// Token: 0x040254A6 RID: 152742
 		public const int ItemMask = 7;
 
-		// Token: 0x0402A173 RID: 172403
+		// Token: 0x040254A7 RID: 152743
 		public const int ItemUnlockSuccessPanel = 8;
 	}
 }

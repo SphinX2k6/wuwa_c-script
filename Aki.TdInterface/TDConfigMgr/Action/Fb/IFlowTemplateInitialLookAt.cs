@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002787 RID: 10119
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A59 RID: 10841
 	public class IFlowTemplateInitialLookAt
 	{
-		// Token: 0x0600E147 RID: 57671 RVA: 0x002148ED File Offset: 0x00212AED
+		// Token: 0x0600EF65 RID: 61285 RVA: 0x00231681 File Offset: 0x0022F881
 		public static IFlowTemplateInitialLookAt Create(IFlowTemplateInitialLookAt? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043FB RID: 17403
-		// (get) Token: 0x0600E148 RID: 57672 RVA: 0x0021490C File Offset: 0x00212B0C
+		// Token: 0x17004761 RID: 18273
+		// (get) Token: 0x0600EF66 RID: 61286 RVA: 0x002316A0 File Offset: 0x0022F8A0
 		public virtual int ActorIndex
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043FC RID: 17404
-		// (get) Token: 0x0600E149 RID: 57673 RVA: 0x00214919 File Offset: 0x00212B19
+		// Token: 0x17004762 RID: 18274
+		// (get) Token: 0x0600EF67 RID: 61287 RVA: 0x002316AD File Offset: 0x0022F8AD
 		public virtual IActorLookAtData Target
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CD1 RID: 31953
+		// Token: 0x04008387 RID: 33671
 		private IFlowTemplateInitialLookAt Instance;
 
-		// Token: 0x04007CD2 RID: 31954
+		// Token: 0x04008388 RID: 33672
 		private IActorLookAtData _TargetCache;
 
-		// Token: 0x04007CD3 RID: 31955
+		// Token: 0x04008389 RID: 33673
 		private bool _TargetInited;
 	}
 }

@@ -7,31 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200274D RID: 10061
+	// Token: 0x02000801 RID: 2049
 	[UnrealObjectPath("/Script/SharpherealTest.TestClass_UFunction_Direct_UObject")]
 	[UnrealStructLayout(992, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 992)]
 	public class UTestClass_UFunction_Direct_UObject : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060257F2 RID: 153586 RVA: 0x00385BC6 File Offset: 0x00383DC6
+		// Token: 0x0600B2CF RID: 45775 RVA: 0x001151ED File Offset: 0x001133ED
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTestClass_UFunction_Direct_UObject._ClassPtr;
 		}
 
-		// Token: 0x060257F3 RID: 153587 RVA: 0x00385BD4 File Offset: 0x00383DD4
+		// Token: 0x0600B2D0 RID: 45776 RVA: 0x001151FC File Offset: 0x001133FC
 		public UTestClass_UFunction_Direct_UObject() : this(BuiltinUtils.AllocNativeUObject(UTestClass_UFunction_Direct_UObject.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060257F4 RID: 153588 RVA: 0x00385BFC File Offset: 0x00383DFC
+		// Token: 0x0600B2D1 RID: 45777 RVA: 0x00115224 File Offset: 0x00113424
 		[NullableContext(1)]
 		public UTestClass_UFunction_Direct_UObject(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UTestClass_UFunction_Direct_UObject.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170090A4 RID: 37028
-		// (get) Token: 0x060257F5 RID: 153589 RVA: 0x00385C2F File Offset: 0x00383E2F
-		// (set) Token: 0x060257F6 RID: 153590 RVA: 0x00385C43 File Offset: 0x00383E43
+		// Token: 0x1700218C RID: 8588
+		// (get) Token: 0x0600B2D2 RID: 45778 RVA: 0x00115257 File Offset: 0x00113457
+		// (set) Token: 0x0600B2D3 RID: 45779 RVA: 0x0011526B File Offset: 0x0011346B
 		[Nullable(2)]
 		public unsafe USharpherealTestSimpleClass ObjectBase
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090A5 RID: 37029
-		// (get) Token: 0x060257F7 RID: 153591 RVA: 0x00385C58 File Offset: 0x00383E58
-		// (set) Token: 0x060257F8 RID: 153592 RVA: 0x00385C6C File Offset: 0x00383E6C
+		// Token: 0x1700218D RID: 8589
+		// (get) Token: 0x0600B2D4 RID: 45780 RVA: 0x00115280 File Offset: 0x00113480
+		// (set) Token: 0x0600B2D5 RID: 45781 RVA: 0x00115294 File Offset: 0x00113494
 		[Nullable(2)]
 		public unsafe USharpherealTestSimpleClass ObjectCmp
 		{
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090A6 RID: 37030
-		// (get) Token: 0x060257F9 RID: 153593 RVA: 0x00385C81 File Offset: 0x00383E81
-		// (set) Token: 0x060257FA RID: 153594 RVA: 0x00385C95 File Offset: 0x00383E95
+		// Token: 0x1700218E RID: 8590
+		// (get) Token: 0x0600B2D6 RID: 45782 RVA: 0x001152A9 File Offset: 0x001134A9
+		// (set) Token: 0x0600B2D7 RID: 45783 RVA: 0x001152BD File Offset: 0x001134BD
 		[Nullable(2)]
 		public unsafe USharpherealTestSimpleClass SimpleObjectBase
 		{
@@ -83,9 +83,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090A7 RID: 37031
-		// (get) Token: 0x060257FB RID: 153595 RVA: 0x00385CAA File Offset: 0x00383EAA
-		// (set) Token: 0x060257FC RID: 153596 RVA: 0x00385CBE File Offset: 0x00383EBE
+		// Token: 0x1700218F RID: 8591
+		// (get) Token: 0x0600B2D8 RID: 45784 RVA: 0x001152D2 File Offset: 0x001134D2
+		// (set) Token: 0x0600B2D9 RID: 45785 RVA: 0x001152E6 File Offset: 0x001134E6
 		[Nullable(2)]
 		public unsafe USharpherealTestSimpleClass SimpleObjectCmp
 		{
@@ -101,9 +101,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090A8 RID: 37032
-		// (get) Token: 0x060257FD RID: 153597 RVA: 0x00385CD3 File Offset: 0x00383ED3
-		// (set) Token: 0x060257FE RID: 153598 RVA: 0x00385CE7 File Offset: 0x00383EE7
+		// Token: 0x17002190 RID: 8592
+		// (get) Token: 0x0600B2DA RID: 45786 RVA: 0x001152FB File Offset: 0x001134FB
+		// (set) Token: 0x0600B2DB RID: 45787 RVA: 0x0011530F File Offset: 0x0011350F
 		[Nullable(new byte[]
 		{
 			0,
@@ -131,9 +131,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090A9 RID: 37033
-		// (get) Token: 0x060257FF RID: 153599 RVA: 0x00385CFC File Offset: 0x00383EFC
-		// (set) Token: 0x06025800 RID: 153600 RVA: 0x00385D10 File Offset: 0x00383F10
+		// Token: 0x17002191 RID: 8593
+		// (get) Token: 0x0600B2DC RID: 45788 RVA: 0x00115324 File Offset: 0x00113524
+		// (set) Token: 0x0600B2DD RID: 45789 RVA: 0x00115338 File Offset: 0x00113538
 		[Nullable(new byte[]
 		{
 			0,
@@ -161,9 +161,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090AA RID: 37034
-		// (get) Token: 0x06025801 RID: 153601 RVA: 0x00385D25 File Offset: 0x00383F25
-		// (set) Token: 0x06025802 RID: 153602 RVA: 0x00385D39 File Offset: 0x00383F39
+		// Token: 0x17002192 RID: 8594
+		// (get) Token: 0x0600B2DE RID: 45790 RVA: 0x0011534D File Offset: 0x0011354D
+		// (set) Token: 0x0600B2DF RID: 45791 RVA: 0x00115361 File Offset: 0x00113561
 		[Nullable(new byte[]
 		{
 			0,
@@ -191,9 +191,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090AB RID: 37035
-		// (get) Token: 0x06025803 RID: 153603 RVA: 0x00385D4E File Offset: 0x00383F4E
-		// (set) Token: 0x06025804 RID: 153604 RVA: 0x00385D62 File Offset: 0x00383F62
+		// Token: 0x17002193 RID: 8595
+		// (get) Token: 0x0600B2E0 RID: 45792 RVA: 0x00115376 File Offset: 0x00113576
+		// (set) Token: 0x0600B2E1 RID: 45793 RVA: 0x0011538A File Offset: 0x0011358A
 		[Nullable(new byte[]
 		{
 			0,
@@ -221,9 +221,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090AC RID: 37036
-		// (get) Token: 0x06025805 RID: 153605 RVA: 0x00385D77 File Offset: 0x00383F77
-		// (set) Token: 0x06025806 RID: 153606 RVA: 0x00385D8B File Offset: 0x00383F8B
+		// Token: 0x17002194 RID: 8596
+		// (get) Token: 0x0600B2E2 RID: 45794 RVA: 0x0011539F File Offset: 0x0011359F
+		// (set) Token: 0x0600B2E3 RID: 45795 RVA: 0x001153B3 File Offset: 0x001135B3
 		[Nullable(new byte[]
 		{
 			0,
@@ -251,9 +251,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090AD RID: 37037
-		// (get) Token: 0x06025807 RID: 153607 RVA: 0x00385DA0 File Offset: 0x00383FA0
-		// (set) Token: 0x06025808 RID: 153608 RVA: 0x00385DB4 File Offset: 0x00383FB4
+		// Token: 0x17002195 RID: 8597
+		// (get) Token: 0x0600B2E4 RID: 45796 RVA: 0x001153C8 File Offset: 0x001135C8
+		// (set) Token: 0x0600B2E5 RID: 45797 RVA: 0x001153DC File Offset: 0x001135DC
 		[Nullable(new byte[]
 		{
 			0,
@@ -281,9 +281,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090AE RID: 37038
-		// (get) Token: 0x06025809 RID: 153609 RVA: 0x00385DC9 File Offset: 0x00383FC9
-		// (set) Token: 0x0602580A RID: 153610 RVA: 0x00385DDD File Offset: 0x00383FDD
+		// Token: 0x17002196 RID: 8598
+		// (get) Token: 0x0600B2E6 RID: 45798 RVA: 0x001153F1 File Offset: 0x001135F1
+		// (set) Token: 0x0600B2E7 RID: 45799 RVA: 0x00115405 File Offset: 0x00113605
 		[Nullable(2)]
 		public unsafe UObject Object
 		{
@@ -299,9 +299,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090AF RID: 37039
-		// (get) Token: 0x0602580B RID: 153611 RVA: 0x00385DF4 File Offset: 0x00383FF4
-		// (set) Token: 0x0602580C RID: 153612 RVA: 0x00385E2D File Offset: 0x0038402D
+		// Token: 0x17002197 RID: 8599
+		// (get) Token: 0x0600B2E8 RID: 45800 RVA: 0x0011541C File Offset: 0x0011361C
+		// (set) Token: 0x0600B2E9 RID: 45801 RVA: 0x00115455 File Offset: 0x00113655
 		[Nullable(1)]
 		public TArray<UObject> ObjectArray
 		{
@@ -323,9 +323,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B0 RID: 37040
-		// (get) Token: 0x0602580D RID: 153613 RVA: 0x00385E3C File Offset: 0x0038403C
-		// (set) Token: 0x0602580E RID: 153614 RVA: 0x00385E75 File Offset: 0x00384075
+		// Token: 0x17002198 RID: 8600
+		// (get) Token: 0x0600B2EA RID: 45802 RVA: 0x00115464 File Offset: 0x00113664
+		// (set) Token: 0x0600B2EB RID: 45803 RVA: 0x0011549D File Offset: 0x0011369D
 		[Nullable(1)]
 		public TSet<UObject> ObjectSet
 		{
@@ -347,9 +347,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B1 RID: 37041
-		// (get) Token: 0x0602580F RID: 153615 RVA: 0x00385E84 File Offset: 0x00384084
-		// (set) Token: 0x06025810 RID: 153616 RVA: 0x00385EBD File Offset: 0x003840BD
+		// Token: 0x17002199 RID: 8601
+		// (get) Token: 0x0600B2EC RID: 45804 RVA: 0x001154AC File Offset: 0x001136AC
+		// (set) Token: 0x0600B2ED RID: 45805 RVA: 0x001154E5 File Offset: 0x001136E5
 		[Nullable(1)]
 		public TMap<UObject, int> ObjectMap
 		{
@@ -371,9 +371,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B2 RID: 37042
-		// (get) Token: 0x06025811 RID: 153617 RVA: 0x00385ECB File Offset: 0x003840CB
-		// (set) Token: 0x06025812 RID: 153618 RVA: 0x00385EDF File Offset: 0x003840DF
+		// Token: 0x1700219A RID: 8602
+		// (get) Token: 0x0600B2EE RID: 45806 RVA: 0x001154F3 File Offset: 0x001136F3
+		// (set) Token: 0x0600B2EF RID: 45807 RVA: 0x00115507 File Offset: 0x00113707
 		[Nullable(2)]
 		public unsafe USharpherealTestSimpleClass SimpleObject
 		{
@@ -389,9 +389,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B3 RID: 37043
-		// (get) Token: 0x06025813 RID: 153619 RVA: 0x00385EF4 File Offset: 0x003840F4
-		// (set) Token: 0x06025814 RID: 153620 RVA: 0x00385F2D File Offset: 0x0038412D
+		// Token: 0x1700219B RID: 8603
+		// (get) Token: 0x0600B2F0 RID: 45808 RVA: 0x0011551C File Offset: 0x0011371C
+		// (set) Token: 0x0600B2F1 RID: 45809 RVA: 0x00115555 File Offset: 0x00113755
 		[Nullable(1)]
 		public TArray<USharpherealTestSimpleClass> SimpleObjectArray
 		{
@@ -413,9 +413,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B4 RID: 37044
-		// (get) Token: 0x06025815 RID: 153621 RVA: 0x00385F3C File Offset: 0x0038413C
-		// (set) Token: 0x06025816 RID: 153622 RVA: 0x00385F75 File Offset: 0x00384175
+		// Token: 0x1700219C RID: 8604
+		// (get) Token: 0x0600B2F2 RID: 45810 RVA: 0x00115564 File Offset: 0x00113764
+		// (set) Token: 0x0600B2F3 RID: 45811 RVA: 0x0011559D File Offset: 0x0011379D
 		[Nullable(1)]
 		public TSet<USharpherealTestSimpleClass> SimpleObjectSet
 		{
@@ -437,9 +437,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B5 RID: 37045
-		// (get) Token: 0x06025817 RID: 153623 RVA: 0x00385F84 File Offset: 0x00384184
-		// (set) Token: 0x06025818 RID: 153624 RVA: 0x00385FBD File Offset: 0x003841BD
+		// Token: 0x1700219D RID: 8605
+		// (get) Token: 0x0600B2F4 RID: 45812 RVA: 0x001155AC File Offset: 0x001137AC
+		// (set) Token: 0x0600B2F5 RID: 45813 RVA: 0x001155E5 File Offset: 0x001137E5
 		[Nullable(1)]
 		public TMap<USharpherealTestSimpleClass, int> SimpleObjectMap
 		{
@@ -461,9 +461,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B6 RID: 37046
-		// (get) Token: 0x06025819 RID: 153625 RVA: 0x00385FCB File Offset: 0x003841CB
-		// (set) Token: 0x0602581A RID: 153626 RVA: 0x00385FE0 File Offset: 0x003841E0
+		// Token: 0x1700219E RID: 8606
+		// (get) Token: 0x0600B2F6 RID: 45814 RVA: 0x001155F3 File Offset: 0x001137F3
+		// (set) Token: 0x0600B2F7 RID: 45815 RVA: 0x00115608 File Offset: 0x00113808
 		[Nullable(1)]
 		public TSoftObjectPtr<USharpherealTestSimpleClass> SoftObject
 		{
@@ -479,9 +479,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B7 RID: 37047
-		// (get) Token: 0x0602581B RID: 153627 RVA: 0x00386008 File Offset: 0x00384208
-		// (set) Token: 0x0602581C RID: 153628 RVA: 0x00386041 File Offset: 0x00384241
+		// Token: 0x1700219F RID: 8607
+		// (get) Token: 0x0600B2F8 RID: 45816 RVA: 0x00115630 File Offset: 0x00113830
+		// (set) Token: 0x0600B2F9 RID: 45817 RVA: 0x00115669 File Offset: 0x00113869
 		[Nullable(1)]
 		public TArray<TSoftObjectPtr<USharpherealTestSimpleClass>> SoftObjectArray
 		{
@@ -503,9 +503,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B8 RID: 37048
-		// (get) Token: 0x0602581D RID: 153629 RVA: 0x00386050 File Offset: 0x00384250
-		// (set) Token: 0x0602581E RID: 153630 RVA: 0x00386089 File Offset: 0x00384289
+		// Token: 0x170021A0 RID: 8608
+		// (get) Token: 0x0600B2FA RID: 45818 RVA: 0x00115678 File Offset: 0x00113878
+		// (set) Token: 0x0600B2FB RID: 45819 RVA: 0x001156B1 File Offset: 0x001138B1
 		[Nullable(1)]
 		public TSet<TSoftObjectPtr<USharpherealTestSimpleClass>> SoftObjectSet
 		{
@@ -527,9 +527,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090B9 RID: 37049
-		// (get) Token: 0x0602581F RID: 153631 RVA: 0x00386098 File Offset: 0x00384298
-		// (set) Token: 0x06025820 RID: 153632 RVA: 0x003860D1 File Offset: 0x003842D1
+		// Token: 0x170021A1 RID: 8609
+		// (get) Token: 0x0600B2FC RID: 45820 RVA: 0x001156C0 File Offset: 0x001138C0
+		// (set) Token: 0x0600B2FD RID: 45821 RVA: 0x001156F9 File Offset: 0x001138F9
 		[Nullable(1)]
 		public TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int> SoftObjectMap
 		{
@@ -551,9 +551,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090BA RID: 37050
-		// (get) Token: 0x06025821 RID: 153633 RVA: 0x003860E0 File Offset: 0x003842E0
-		// (set) Token: 0x06025822 RID: 153634 RVA: 0x00386119 File Offset: 0x00384319
+		// Token: 0x170021A2 RID: 8610
+		// (get) Token: 0x0600B2FE RID: 45822 RVA: 0x00115708 File Offset: 0x00113908
+		// (set) Token: 0x0600B2FF RID: 45823 RVA: 0x00115741 File Offset: 0x00113941
 		[Nullable(1)]
 		public FSoftObjectPath ObjectPath
 		{
@@ -575,9 +575,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090BB RID: 37051
-		// (get) Token: 0x06025823 RID: 153635 RVA: 0x0038613C File Offset: 0x0038433C
-		// (set) Token: 0x06025824 RID: 153636 RVA: 0x00386175 File Offset: 0x00384375
+		// Token: 0x170021A3 RID: 8611
+		// (get) Token: 0x0600B300 RID: 45824 RVA: 0x00115764 File Offset: 0x00113964
+		// (set) Token: 0x0600B301 RID: 45825 RVA: 0x0011579D File Offset: 0x0011399D
 		[Nullable(1)]
 		public TArray<FSoftObjectPath> ObjectPathArray
 		{
@@ -599,9 +599,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090BC RID: 37052
-		// (get) Token: 0x06025825 RID: 153637 RVA: 0x00386184 File Offset: 0x00384384
-		// (set) Token: 0x06025826 RID: 153638 RVA: 0x003861BD File Offset: 0x003843BD
+		// Token: 0x170021A4 RID: 8612
+		// (get) Token: 0x0600B302 RID: 45826 RVA: 0x001157AC File Offset: 0x001139AC
+		// (set) Token: 0x0600B303 RID: 45827 RVA: 0x001157E5 File Offset: 0x001139E5
 		[Nullable(1)]
 		public TSet<FSoftObjectPath> ObjectPathSet
 		{
@@ -623,9 +623,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090BD RID: 37053
-		// (get) Token: 0x06025827 RID: 153639 RVA: 0x003861CC File Offset: 0x003843CC
-		// (set) Token: 0x06025828 RID: 153640 RVA: 0x00386205 File Offset: 0x00384405
+		// Token: 0x170021A5 RID: 8613
+		// (get) Token: 0x0600B304 RID: 45828 RVA: 0x001157F4 File Offset: 0x001139F4
+		// (set) Token: 0x0600B305 RID: 45829 RVA: 0x0011582D File Offset: 0x00113A2D
 		[Nullable(1)]
 		public TMap<FSoftObjectPath, int> ObjectPathMap
 		{
@@ -647,10 +647,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06025829 RID: 153641 RVA: 0x00386214 File Offset: 0x00384414
+		// Token: 0x0600B306 RID: 45830 RVA: 0x0011583C File Offset: 0x00113A3C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetSubPathString(ref TSoftObjectPtr<USharpherealTestSimpleClass> ObjectPtr, string SubPathString)
 		{
 			UTestClass_UFunction_Direct_UObject.__SetSubPathString_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__SetSubPathString_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__SetSubPathString_FunctionParams) & -16L;
@@ -660,7 +659,7 @@ namespace UnrealEngine
 				FSoftObjectPtr.NativeCopy(&ptr->ObjectPtr, ObjectPtr.NativePtr, 1);
 			}
 			FString.CopyFrom((void*)(&ptr->SubPathString), SubPathString);
-			UnrealReflectionUtils.CallUFunction(UTestClass_UFunction_Direct_UObject._ClassDefaultObjectPtr, UTestClass_UFunction_Direct_UObject.__SetSubPathString_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UTestClass_UFunction_Direct_UObject._ClassDefaultObjectPtr, UTestClass_UFunction_Direct_UObject.__SetSubPathString_NativeFunctionPtr, (void*)ptr);
 			if (ObjectPtr != null)
 			{
 				FSoftObjectPtr.NativeCopy(ObjectPtr.NativePtr, &ptr->ObjectPtr, 1);
@@ -668,9 +667,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetSubPathString_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602582A RID: 153642 RVA: 0x003862B0 File Offset: 0x003844B0
+		// Token: 0x0600B307 RID: 45831 RVA: 0x001158D4 File Offset: 0x00113AD4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSoftObjectSet([Nullable(new byte[]
 		{
 			2,
@@ -684,13 +682,12 @@ namespace UnrealEngine
 			{
 				InSoftObjectSet.CopyTo(&ptr->InSoftObjectSet, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSoftObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSoftObjectSet_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetSoftObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602582B RID: 153643 RVA: 0x0038631C File Offset: 0x0038451C
+		// Token: 0x0600B308 RID: 45832 RVA: 0x00115940 File Offset: 0x00113B40
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSoftObjectMap([Nullable(new byte[]
 		{
 			2,
@@ -704,13 +701,12 @@ namespace UnrealEngine
 			{
 				InSoftObjectMap.CopyTo(&ptr->InSoftObjectMap, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSoftObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSoftObjectMap_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetSoftObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602582C RID: 153644 RVA: 0x00386388 File Offset: 0x00384588
+		// Token: 0x0600B309 RID: 45833 RVA: 0x001159AC File Offset: 0x00113BAC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSoftObjectArray([Nullable(new byte[]
 		{
 			2,
@@ -724,14 +720,13 @@ namespace UnrealEngine
 			{
 				InSoftObjectArray.CopyTo(&ptr->InSoftObjectArray, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSoftObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSoftObjectArray_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetSoftObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602582D RID: 153645 RVA: 0x003863F4 File Offset: 0x003845F4
+		// Token: 0x0600B30A RID: 45834 RVA: 0x00115A18 File Offset: 0x00113C18
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSoftObject(TSoftObjectPtr<USharpherealTestSimpleClass> InSoftObject)
 		{
 			UTestClass_UFunction_Direct_UObject.__SetSoftObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__SetSoftObject_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__SetSoftObject_FunctionParams) & -16L;
@@ -740,13 +735,12 @@ namespace UnrealEngine
 			{
 				FSoftObjectPtr.NativeCopy(&ptr->InSoftObject, InSoftObject.NativePtr, 1);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSoftObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSoftObject_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetSoftObject_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602582E RID: 153646 RVA: 0x00386464 File Offset: 0x00384664
+		// Token: 0x0600B30B RID: 45835 RVA: 0x00115A84 File Offset: 0x00113C84
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSimpleObjectSet([Nullable(new byte[]
 		{
 			2,
@@ -759,13 +753,12 @@ namespace UnrealEngine
 			{
 				InSimpleObjectSet.CopyTo(&ptr->InSimpleObjectSet, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSimpleObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSimpleObjectSet_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetSimpleObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602582F RID: 153647 RVA: 0x003864D0 File Offset: 0x003846D0
+		// Token: 0x0600B30C RID: 45836 RVA: 0x00115AF0 File Offset: 0x00113CF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSimpleObjectMap([Nullable(new byte[]
 		{
 			2,
@@ -778,13 +771,12 @@ namespace UnrealEngine
 			{
 				InSimpleObjectMap.CopyTo(&ptr->InSimpleObjectMap, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSimpleObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSimpleObjectMap_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetSimpleObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025830 RID: 153648 RVA: 0x0038653C File Offset: 0x0038473C
+		// Token: 0x0600B30D RID: 45837 RVA: 0x00115B5C File Offset: 0x00113D5C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSimpleObjectArray([Nullable(new byte[]
 		{
 			2,
@@ -797,25 +789,23 @@ namespace UnrealEngine
 			{
 				InSimpleObjectArray.CopyTo(&ptr->InSimpleObjectArray, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSimpleObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSimpleObjectArray_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetSimpleObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025831 RID: 153649 RVA: 0x003865A8 File Offset: 0x003847A8
+		// Token: 0x0600B30E RID: 45838 RVA: 0x00115BC8 File Offset: 0x00113DC8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSimpleObject(USharpherealTestSimpleClass InSimpleObject)
 		{
 			UTestClass_UFunction_Direct_UObject.__SetSimpleObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__SetSimpleObject_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__SetSimpleObject_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__SetSimpleObject_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InSimpleObject = ((InSimpleObject != null) ? InSimpleObject.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSimpleObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetSimpleObject_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06025832 RID: 153650 RVA: 0x00386600 File Offset: 0x00384800
+		// Token: 0x0600B30F RID: 45839 RVA: 0x00115C20 File Offset: 0x00113E20
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetObjectSet([Nullable(new byte[]
 		{
 			2,
@@ -828,13 +818,12 @@ namespace UnrealEngine
 			{
 				InObjectSet.CopyTo(&ptr->InObjectSet, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectSet_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025833 RID: 153651 RVA: 0x0038666C File Offset: 0x0038486C
+		// Token: 0x0600B310 RID: 45840 RVA: 0x00115C8C File Offset: 0x00113E8C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetObjectPathSet([Nullable(new byte[]
 		{
 			2,
@@ -847,13 +836,12 @@ namespace UnrealEngine
 			{
 				InObjectPathSet.CopyTo(&ptr->InObjectPathSet, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectPathSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectPathSet_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetObjectPathSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025834 RID: 153652 RVA: 0x003866D8 File Offset: 0x003848D8
+		// Token: 0x0600B311 RID: 45841 RVA: 0x00115CF8 File Offset: 0x00113EF8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetObjectPathMap([Nullable(new byte[]
 		{
 			2,
@@ -866,13 +854,12 @@ namespace UnrealEngine
 			{
 				InObjectPathMap.CopyTo(&ptr->InObjectPathMap, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectPathMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectPathMap_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetObjectPathMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025835 RID: 153653 RVA: 0x00386744 File Offset: 0x00384944
+		// Token: 0x0600B312 RID: 45842 RVA: 0x00115D64 File Offset: 0x00113F64
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetObjectPathArray([Nullable(new byte[]
 		{
 			2,
@@ -885,14 +872,13 @@ namespace UnrealEngine
 			{
 				InObjectPathArray.CopyTo(&ptr->InObjectPathArray, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectPathArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectPathArray_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetObjectPathArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025836 RID: 153654 RVA: 0x003867B0 File Offset: 0x003849B0
+		// Token: 0x0600B313 RID: 45843 RVA: 0x00115DD0 File Offset: 0x00113FD0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetObjectPath(FSoftObjectPath InObjectPath)
 		{
 			UTestClass_UFunction_Direct_UObject.__SetObjectPath_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__SetObjectPath_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__SetObjectPath_FunctionParams) & -16L;
@@ -901,13 +887,12 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), &ptr->InObjectPath, InObjectPath.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectPath_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectPath_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetObjectPath_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025837 RID: 153655 RVA: 0x00386824 File Offset: 0x00384A24
+		// Token: 0x0600B314 RID: 45844 RVA: 0x00115E44 File Offset: 0x00114044
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetObjectMap([Nullable(new byte[]
 		{
 			2,
@@ -920,13 +905,12 @@ namespace UnrealEngine
 			{
 				InObjectMap.CopyTo(&ptr->InObjectMap, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectMap_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025838 RID: 153656 RVA: 0x00386890 File Offset: 0x00384A90
+		// Token: 0x0600B315 RID: 45845 RVA: 0x00115EB0 File Offset: 0x001140B0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetObjectArray([Nullable(new byte[]
 		{
 			2,
@@ -939,25 +923,23 @@ namespace UnrealEngine
 			{
 				InObjectArray.CopyTo(&ptr->InObjectArray, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObjectArray_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__SetObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025839 RID: 153657 RVA: 0x003868FC File Offset: 0x00384AFC
+		// Token: 0x0600B316 RID: 45846 RVA: 0x00115F1C File Offset: 0x0011411C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetObject(UObject InObject)
 		{
 			UTestClass_UFunction_Direct_UObject.__SetObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__SetObject_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__SetObject_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__SetObject_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InObject = ((InObject != null) ? InObject.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__SetObject_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602583A RID: 153658 RVA: 0x00386954 File Offset: 0x00384B54
+		// Token: 0x0600B317 RID: 45847 RVA: 0x00115F74 File Offset: 0x00114174
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSoftObjectSet([Nullable(new byte[]
 		{
 			2,
@@ -972,7 +954,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->OutSoftObjectSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSoftObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSoftObjectSet_NativeFunctionPtr, (void*)ptr);
 			TSet<TSoftObjectPtr<USharpherealTestSimpleClass>> tset2 = OutSoftObjectSet;
 			if (tset2 != null)
 			{
@@ -981,9 +963,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutSoftObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602583B RID: 153659 RVA: 0x003869D0 File Offset: 0x00384BD0
+		// Token: 0x0600B318 RID: 45848 RVA: 0x00115FEC File Offset: 0x001141EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSoftObjectMap([Nullable(new byte[]
 		{
 			2,
@@ -998,7 +979,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->OutSoftObjectMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSoftObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSoftObjectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int> tmap2 = OutSoftObjectMap;
 			if (tmap2 != null)
 			{
@@ -1007,9 +988,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutSoftObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602583C RID: 153660 RVA: 0x00386A4C File Offset: 0x00384C4C
+		// Token: 0x0600B319 RID: 45849 RVA: 0x00116064 File Offset: 0x00114264
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSoftObjectArray([Nullable(new byte[]
 		{
 			2,
@@ -1024,7 +1004,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutSoftObjectArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSoftObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSoftObjectArray_NativeFunctionPtr, (void*)ptr);
 			TArray<TSoftObjectPtr<USharpherealTestSimpleClass>> tarray2 = OutSoftObjectArray;
 			if (tarray2 != null)
 			{
@@ -1033,10 +1013,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutSoftObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602583D RID: 153661 RVA: 0x00386AC8 File Offset: 0x00384CC8
+		// Token: 0x0600B31A RID: 45850 RVA: 0x001160DC File Offset: 0x001142DC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSoftObject(ref TSoftObjectPtr<USharpherealTestSimpleClass> OutSoftObject)
 		{
 			UTestClass_UFunction_Direct_UObject.__OutSoftObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__OutSoftObject_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__OutSoftObject_FunctionParams) & -16L;
@@ -1045,7 +1024,7 @@ namespace UnrealEngine
 			{
 				FSoftObjectPtr.NativeCopy(&ptr->OutSoftObject, OutSoftObject.NativePtr, 1);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSoftObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSoftObject_NativeFunctionPtr, (void*)ptr);
 			if (OutSoftObject != null)
 			{
 				FSoftObjectPtr.NativeCopy(OutSoftObject.NativePtr, &ptr->OutSoftObject, 1);
@@ -1053,9 +1032,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutSoftObject_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602583E RID: 153662 RVA: 0x00386B58 File Offset: 0x00384D58
+		// Token: 0x0600B31B RID: 45851 RVA: 0x00116168 File Offset: 0x00114368
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSimpleObjectSet([Nullable(new byte[]
 		{
 			2,
@@ -1069,7 +1047,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->OutSimpleObjectSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSimpleObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSimpleObjectSet_NativeFunctionPtr, (void*)ptr);
 			TSet<USharpherealTestSimpleClass> tset2 = OutSimpleObjectSet;
 			if (tset2 != null)
 			{
@@ -1078,9 +1056,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutSimpleObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602583F RID: 153663 RVA: 0x00386BD4 File Offset: 0x00384DD4
+		// Token: 0x0600B31C RID: 45852 RVA: 0x001161E0 File Offset: 0x001143E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSimpleObjectMap([Nullable(new byte[]
 		{
 			2,
@@ -1094,7 +1071,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->OutSimpleObjectMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSimpleObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSimpleObjectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<USharpherealTestSimpleClass, int> tmap2 = OutSimpleObjectMap;
 			if (tmap2 != null)
 			{
@@ -1103,9 +1080,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutSimpleObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025840 RID: 153664 RVA: 0x00386C50 File Offset: 0x00384E50
+		// Token: 0x0600B31D RID: 45853 RVA: 0x00116258 File Offset: 0x00114458
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSimpleObjectArray([Nullable(new byte[]
 		{
 			2,
@@ -1119,7 +1095,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutSimpleObjectArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSimpleObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSimpleObjectArray_NativeFunctionPtr, (void*)ptr);
 			TArray<USharpherealTestSimpleClass> tarray2 = OutSimpleObjectArray;
 			if (tarray2 != null)
 			{
@@ -1128,10 +1104,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutSimpleObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025841 RID: 153665 RVA: 0x00386CCC File Offset: 0x00384ECC
+		// Token: 0x0600B31E RID: 45854 RVA: 0x001162D0 File Offset: 0x001144D0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSimpleObject(ref USharpherealTestSimpleClass OutSimpleObject)
 		{
 			UTestClass_UFunction_Direct_UObject.__OutSimpleObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__OutSimpleObject_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__OutSimpleObject_FunctionParams) & -16L;
@@ -1139,13 +1114,12 @@ namespace UnrealEngine
 			ref UTestClass_UFunction_Direct_UObject.__OutSimpleObject_FunctionParams ptr2 = ref *ptr;
 			USharpherealTestSimpleClass usharpherealTestSimpleClass = OutSimpleObject;
 			ptr2.OutSimpleObject = ((usharpherealTestSimpleClass != null) ? usharpherealTestSimpleClass.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSimpleObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutSimpleObject_NativeFunctionPtr, (void*)ptr);
 			OutSimpleObject = BuiltinUtils.GetOrCreateUObjectByNativePointer<USharpherealTestSimpleClass>(ptr->OutSimpleObject);
 		}
 
-		// Token: 0x06025842 RID: 153666 RVA: 0x00386D34 File Offset: 0x00384F34
+		// Token: 0x0600B31F RID: 45855 RVA: 0x00116334 File Offset: 0x00114534
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutObjectSet([Nullable(new byte[]
 		{
 			2,
@@ -1159,7 +1133,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->OutObjectSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectSet_NativeFunctionPtr, (void*)ptr);
 			TSet<UObject> tset2 = OutObjectSet;
 			if (tset2 != null)
 			{
@@ -1168,9 +1142,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025843 RID: 153667 RVA: 0x00386DB0 File Offset: 0x00384FB0
+		// Token: 0x0600B320 RID: 45856 RVA: 0x001163AC File Offset: 0x001145AC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutObjectPathSet([Nullable(new byte[]
 		{
 			2,
@@ -1184,7 +1157,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->OutObjectPathSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectPathSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectPathSet_NativeFunctionPtr, (void*)ptr);
 			TSet<FSoftObjectPath> tset2 = OutObjectPathSet;
 			if (tset2 != null)
 			{
@@ -1193,9 +1166,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutObjectPathSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025844 RID: 153668 RVA: 0x00386E2C File Offset: 0x0038502C
+		// Token: 0x0600B321 RID: 45857 RVA: 0x00116424 File Offset: 0x00114624
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutObjectPathMap([Nullable(new byte[]
 		{
 			2,
@@ -1209,7 +1181,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->OutObjectPathMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectPathMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectPathMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FSoftObjectPath, int> tmap2 = OutObjectPathMap;
 			if (tmap2 != null)
 			{
@@ -1218,9 +1190,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutObjectPathMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025845 RID: 153669 RVA: 0x00386EA8 File Offset: 0x003850A8
+		// Token: 0x0600B322 RID: 45858 RVA: 0x0011649C File Offset: 0x0011469C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutObjectPathArray([Nullable(new byte[]
 		{
 			2,
@@ -1234,7 +1205,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutObjectPathArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectPathArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectPathArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FSoftObjectPath> tarray2 = OutObjectPathArray;
 			if (tarray2 != null)
 			{
@@ -1243,10 +1214,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutObjectPathArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025846 RID: 153670 RVA: 0x00386F24 File Offset: 0x00385124
+		// Token: 0x0600B323 RID: 45859 RVA: 0x00116514 File Offset: 0x00114714
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutObjectPath(ref FSoftObjectPath OutObjectPath)
 		{
 			UTestClass_UFunction_Direct_UObject.__OutObjectPath_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__OutObjectPath_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__OutObjectPath_FunctionParams) & -16L;
@@ -1255,7 +1225,7 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), &ptr->OutObjectPath, OutObjectPath.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectPath_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectPath_NativeFunctionPtr, (void*)ptr);
 			if (OutObjectPath != null)
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), OutObjectPath.NativePtr, &ptr->OutObjectPath, 1, false);
@@ -1263,9 +1233,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutObjectPath_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025847 RID: 153671 RVA: 0x00386FC0 File Offset: 0x003851C0
+		// Token: 0x0600B324 RID: 45860 RVA: 0x001165AC File Offset: 0x001147AC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutObjectMap([Nullable(new byte[]
 		{
 			2,
@@ -1279,7 +1248,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->OutObjectMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<UObject, int> tmap2 = OutObjectMap;
 			if (tmap2 != null)
 			{
@@ -1288,9 +1257,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025848 RID: 153672 RVA: 0x0038703C File Offset: 0x0038523C
+		// Token: 0x0600B325 RID: 45861 RVA: 0x00116624 File Offset: 0x00114824
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutObjectArray([Nullable(new byte[]
 		{
 			2,
@@ -1304,7 +1272,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutObjectArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObjectArray_NativeFunctionPtr, (void*)ptr);
 			TArray<UObject> tarray2 = OutObjectArray;
 			if (tarray2 != null)
 			{
@@ -1313,10 +1281,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__OutObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025849 RID: 153673 RVA: 0x003870B8 File Offset: 0x003852B8
+		// Token: 0x0600B326 RID: 45862 RVA: 0x0011669C File Offset: 0x0011489C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutObject(ref UObject OutObject)
 		{
 			UTestClass_UFunction_Direct_UObject.__OutObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__OutObject_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__OutObject_FunctionParams) & -16L;
@@ -1324,13 +1291,12 @@ namespace UnrealEngine
 			ref UTestClass_UFunction_Direct_UObject.__OutObject_FunctionParams ptr2 = ref *ptr;
 			UObject uobject = OutObject;
 			ptr2.OutObject = ((uobject != null) ? uobject.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__OutObject_NativeFunctionPtr, (void*)ptr);
 			OutObject = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(ptr->OutObject);
 		}
 
-		// Token: 0x0602584A RID: 153674 RVA: 0x00387120 File Offset: 0x00385320
+		// Token: 0x0600B327 RID: 45863 RVA: 0x00116700 File Offset: 0x00114900
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSoftObjectSet([Nullable(new byte[]
 		{
 			2,
@@ -1345,7 +1311,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->InSoftObjectSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSoftObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSoftObjectSet_NativeFunctionPtr, (void*)ptr);
 			TSet<TSoftObjectPtr<USharpherealTestSimpleClass>> tset2 = InSoftObjectSet;
 			if (tset2 != null)
 			{
@@ -1354,9 +1320,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InSoftObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602584B RID: 153675 RVA: 0x0038719C File Offset: 0x0038539C
+		// Token: 0x0600B328 RID: 45864 RVA: 0x00116778 File Offset: 0x00114978
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSoftObjectMap([Nullable(new byte[]
 		{
 			2,
@@ -1371,7 +1336,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->InSoftObjectMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSoftObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSoftObjectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int> tmap2 = InSoftObjectMap;
 			if (tmap2 != null)
 			{
@@ -1380,9 +1345,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InSoftObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602584C RID: 153676 RVA: 0x00387218 File Offset: 0x00385418
+		// Token: 0x0600B329 RID: 45865 RVA: 0x001167F0 File Offset: 0x001149F0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSoftObjectArray([Nullable(new byte[]
 		{
 			2,
@@ -1397,7 +1361,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InSoftObjectArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSoftObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSoftObjectArray_NativeFunctionPtr, (void*)ptr);
 			TArray<TSoftObjectPtr<USharpherealTestSimpleClass>> tarray2 = InSoftObjectArray;
 			if (tarray2 != null)
 			{
@@ -1406,10 +1370,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InSoftObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602584D RID: 153677 RVA: 0x00387294 File Offset: 0x00385494
+		// Token: 0x0600B32A RID: 45866 RVA: 0x00116868 File Offset: 0x00114A68
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSoftObject(in TSoftObjectPtr<USharpherealTestSimpleClass> InSoftObject)
 		{
 			UTestClass_UFunction_Direct_UObject.__InSoftObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__InSoftObject_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__InSoftObject_FunctionParams) & -16L;
@@ -1418,13 +1381,12 @@ namespace UnrealEngine
 			{
 				FSoftObjectPtr.NativeCopy(&ptr->InSoftObject, InSoftObject.NativePtr, 1);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSoftObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSoftObject_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InSoftObject_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602584E RID: 153678 RVA: 0x00387304 File Offset: 0x00385504
+		// Token: 0x0600B32B RID: 45867 RVA: 0x001168D8 File Offset: 0x00114AD8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSimpleObjectSet([Nullable(new byte[]
 		{
 			2,
@@ -1438,7 +1400,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->InSimpleObjectSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSimpleObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSimpleObjectSet_NativeFunctionPtr, (void*)ptr);
 			TSet<USharpherealTestSimpleClass> tset2 = InSimpleObjectSet;
 			if (tset2 != null)
 			{
@@ -1447,9 +1409,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InSimpleObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602584F RID: 153679 RVA: 0x00387380 File Offset: 0x00385580
+		// Token: 0x0600B32C RID: 45868 RVA: 0x00116950 File Offset: 0x00114B50
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSimpleObjectMap([Nullable(new byte[]
 		{
 			2,
@@ -1463,7 +1424,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->InSimpleObjectMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSimpleObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSimpleObjectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<USharpherealTestSimpleClass, int> tmap2 = InSimpleObjectMap;
 			if (tmap2 != null)
 			{
@@ -1472,9 +1433,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InSimpleObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025850 RID: 153680 RVA: 0x003873FC File Offset: 0x003855FC
+		// Token: 0x0600B32D RID: 45869 RVA: 0x001169C8 File Offset: 0x00114BC8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSimpleObjectArray([Nullable(new byte[]
 		{
 			2,
@@ -1488,7 +1448,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InSimpleObjectArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSimpleObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSimpleObjectArray_NativeFunctionPtr, (void*)ptr);
 			TArray<USharpherealTestSimpleClass> tarray2 = InSimpleObjectArray;
 			if (tarray2 != null)
 			{
@@ -1497,10 +1457,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InSimpleObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025851 RID: 153681 RVA: 0x00387478 File Offset: 0x00385678
+		// Token: 0x0600B32E RID: 45870 RVA: 0x00116A40 File Offset: 0x00114C40
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSimpleObject(in USharpherealTestSimpleClass InSimpleObject)
 		{
 			UTestClass_UFunction_Direct_UObject.__InSimpleObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__InSimpleObject_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__InSimpleObject_FunctionParams) & -16L;
@@ -1508,12 +1467,11 @@ namespace UnrealEngine
 			ref UTestClass_UFunction_Direct_UObject.__InSimpleObject_FunctionParams ptr2 = ref *ptr;
 			USharpherealTestSimpleClass usharpherealTestSimpleClass = InSimpleObject;
 			ptr2.InSimpleObject = ((usharpherealTestSimpleClass != null) ? usharpherealTestSimpleClass.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSimpleObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InSimpleObject_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06025852 RID: 153682 RVA: 0x003874D0 File Offset: 0x003856D0
+		// Token: 0x0600B32F RID: 45871 RVA: 0x00116A98 File Offset: 0x00114C98
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InObjectSet([Nullable(new byte[]
 		{
 			2,
@@ -1527,7 +1485,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->InObjectSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectSet_NativeFunctionPtr, (void*)ptr);
 			TSet<UObject> tset2 = InObjectSet;
 			if (tset2 != null)
 			{
@@ -1536,9 +1494,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025853 RID: 153683 RVA: 0x0038754C File Offset: 0x0038574C
+		// Token: 0x0600B330 RID: 45872 RVA: 0x00116B10 File Offset: 0x00114D10
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InObjectPathSet([Nullable(new byte[]
 		{
 			2,
@@ -1552,7 +1509,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->InObjectPathSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectPathSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectPathSet_NativeFunctionPtr, (void*)ptr);
 			TSet<FSoftObjectPath> tset2 = InObjectPathSet;
 			if (tset2 != null)
 			{
@@ -1561,9 +1518,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InObjectPathSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025854 RID: 153684 RVA: 0x003875C8 File Offset: 0x003857C8
+		// Token: 0x0600B331 RID: 45873 RVA: 0x00116B88 File Offset: 0x00114D88
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InObjectPathMap([Nullable(new byte[]
 		{
 			2,
@@ -1577,7 +1533,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->InObjectPathMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectPathMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectPathMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FSoftObjectPath, int> tmap2 = InObjectPathMap;
 			if (tmap2 != null)
 			{
@@ -1586,9 +1542,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InObjectPathMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025855 RID: 153685 RVA: 0x00387644 File Offset: 0x00385844
+		// Token: 0x0600B332 RID: 45874 RVA: 0x00116C00 File Offset: 0x00114E00
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InObjectPathArray([Nullable(new byte[]
 		{
 			2,
@@ -1602,7 +1557,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InObjectPathArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectPathArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectPathArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FSoftObjectPath> tarray2 = InObjectPathArray;
 			if (tarray2 != null)
 			{
@@ -1611,10 +1566,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InObjectPathArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025856 RID: 153686 RVA: 0x003876C0 File Offset: 0x003858C0
+		// Token: 0x0600B333 RID: 45875 RVA: 0x00116C78 File Offset: 0x00114E78
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InObjectPath(in FSoftObjectPath InObjectPath)
 		{
 			UTestClass_UFunction_Direct_UObject.__InObjectPath_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__InObjectPath_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__InObjectPath_FunctionParams) & -16L;
@@ -1623,13 +1577,12 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), &ptr->InObjectPath, InObjectPath.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectPath_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectPath_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InObjectPath_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025857 RID: 153687 RVA: 0x00387738 File Offset: 0x00385938
+		// Token: 0x0600B334 RID: 45876 RVA: 0x00116CEC File Offset: 0x00114EEC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InObjectMap([Nullable(new byte[]
 		{
 			2,
@@ -1643,7 +1596,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->InObjectMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<UObject, int> tmap2 = InObjectMap;
 			if (tmap2 != null)
 			{
@@ -1652,9 +1605,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025858 RID: 153688 RVA: 0x003877B4 File Offset: 0x003859B4
+		// Token: 0x0600B335 RID: 45877 RVA: 0x00116D64 File Offset: 0x00114F64
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InObjectArray([Nullable(new byte[]
 		{
 			2,
@@ -1668,7 +1620,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InObjectArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObjectArray_NativeFunctionPtr, (void*)ptr);
 			TArray<UObject> tarray2 = InObjectArray;
 			if (tarray2 != null)
 			{
@@ -1677,10 +1629,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__InObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025859 RID: 153689 RVA: 0x00387830 File Offset: 0x00385A30
+		// Token: 0x0600B336 RID: 45878 RVA: 0x00116DDC File Offset: 0x00114FDC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InObject(in UObject InObject)
 		{
 			UTestClass_UFunction_Direct_UObject.__InObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__InObject_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__InObject_FunctionParams) & -16L;
@@ -1688,287 +1639,271 @@ namespace UnrealEngine
 			ref UTestClass_UFunction_Direct_UObject.__InObject_FunctionParams ptr2 = ref *ptr;
 			UObject uobject = InObject;
 			ptr2.InObject = ((uobject != null) ? uobject.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__InObject_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602585A RID: 153690 RVA: 0x00387888 File Offset: 0x00385A88
+		// Token: 0x0600B337 RID: 45879 RVA: 0x00116E34 File Offset: 0x00115034
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TSet<TSoftObjectPtr<USharpherealTestSimpleClass>> GetSoftObjectSet()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetSoftObjectSet_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetSoftObjectSet_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetSoftObjectSet_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetSoftObjectSet_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSoftObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSoftObjectSet_NativeFunctionPtr, (void*)ptr);
 			TSet<TSoftObjectPtr<USharpherealTestSimpleClass>> result = new TSet<TSoftObjectPtr<USharpherealTestSimpleClass>>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetSoftObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0602585B RID: 153691 RVA: 0x003878E8 File Offset: 0x00385AE8
+		// Token: 0x0600B338 RID: 45880 RVA: 0x00116E94 File Offset: 0x00115094
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int> GetSoftObjectMap()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetSoftObjectMap_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetSoftObjectMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetSoftObjectMap_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetSoftObjectMap_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSoftObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSoftObjectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int> result = new TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetSoftObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0602585C RID: 153692 RVA: 0x00387948 File Offset: 0x00385B48
+		// Token: 0x0600B339 RID: 45881 RVA: 0x00116EF4 File Offset: 0x001150F4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<TSoftObjectPtr<USharpherealTestSimpleClass>> GetSoftObjectArray()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetSoftObjectArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetSoftObjectArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetSoftObjectArray_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetSoftObjectArray_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSoftObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSoftObjectArray_NativeFunctionPtr, (void*)ptr);
 			TArray<TSoftObjectPtr<USharpherealTestSimpleClass>> result = new TArray<TSoftObjectPtr<USharpherealTestSimpleClass>>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetSoftObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0602585D RID: 153693 RVA: 0x003879A8 File Offset: 0x00385BA8
+		// Token: 0x0600B33A RID: 45882 RVA: 0x00116F54 File Offset: 0x00115154
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TSoftObjectPtr<USharpherealTestSimpleClass> GetSoftObject()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetSoftObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetSoftObject_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetSoftObject_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetSoftObject_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSoftObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSoftObject_NativeFunctionPtr, (void*)ptr);
 			TSoftObjectPtr<USharpherealTestSimpleClass> result = new TSoftObjectPtr<USharpherealTestSimpleClass>(&ptr->__Result, false, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetSoftObject_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0602585E RID: 153694 RVA: 0x00387A08 File Offset: 0x00385C08
+		// Token: 0x0600B33B RID: 45883 RVA: 0x00116FB4 File Offset: 0x001151B4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TSet<USharpherealTestSimpleClass> GetSimpleObjectSet()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetSimpleObjectSet_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetSimpleObjectSet_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetSimpleObjectSet_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetSimpleObjectSet_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSimpleObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSimpleObjectSet_NativeFunctionPtr, (void*)ptr);
 			TSet<USharpherealTestSimpleClass> result = new TSet<USharpherealTestSimpleClass>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetSimpleObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0602585F RID: 153695 RVA: 0x00387A68 File Offset: 0x00385C68
+		// Token: 0x0600B33C RID: 45884 RVA: 0x00117014 File Offset: 0x00115214
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TMap<USharpherealTestSimpleClass, int> GetSimpleObjectMap()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetSimpleObjectMap_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetSimpleObjectMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetSimpleObjectMap_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetSimpleObjectMap_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSimpleObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSimpleObjectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<USharpherealTestSimpleClass, int> result = new TMap<USharpherealTestSimpleClass, int>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetSimpleObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025860 RID: 153696 RVA: 0x00387AC8 File Offset: 0x00385CC8
+		// Token: 0x0600B33D RID: 45885 RVA: 0x00117074 File Offset: 0x00115274
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<USharpherealTestSimpleClass> GetSimpleObjectArray()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetSimpleObjectArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetSimpleObjectArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetSimpleObjectArray_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetSimpleObjectArray_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSimpleObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSimpleObjectArray_NativeFunctionPtr, (void*)ptr);
 			TArray<USharpherealTestSimpleClass> result = new TArray<USharpherealTestSimpleClass>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetSimpleObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025861 RID: 153697 RVA: 0x00387B28 File Offset: 0x00385D28
+		// Token: 0x0600B33E RID: 45886 RVA: 0x001170D4 File Offset: 0x001152D4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USharpherealTestSimpleClass GetSimpleObject()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetSimpleObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetSimpleObject_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetSimpleObject_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetSimpleObject_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSimpleObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetSimpleObject_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USharpherealTestSimpleClass>(ptr->__Result);
 		}
 
-		// Token: 0x06025862 RID: 153698 RVA: 0x00387B74 File Offset: 0x00385D74
+		// Token: 0x0600B33F RID: 45887 RVA: 0x00117120 File Offset: 0x00115320
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TSet<UObject> GetObjectSet()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetObjectSet_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetObjectSet_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetObjectSet_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetObjectSet_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectSet_NativeFunctionPtr, (void*)ptr);
 			TSet<UObject> result = new TSet<UObject>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetObjectSet_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025863 RID: 153699 RVA: 0x00387BD4 File Offset: 0x00385DD4
+		// Token: 0x0600B340 RID: 45888 RVA: 0x00117180 File Offset: 0x00115380
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TSet<FSoftObjectPath> GetObjectPathSet()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetObjectPathSet_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetObjectPathSet_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetObjectPathSet_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetObjectPathSet_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectPathSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectPathSet_NativeFunctionPtr, (void*)ptr);
 			TSet<FSoftObjectPath> result = new TSet<FSoftObjectPath>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetObjectPathSet_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025864 RID: 153700 RVA: 0x00387C34 File Offset: 0x00385E34
+		// Token: 0x0600B341 RID: 45889 RVA: 0x001171E0 File Offset: 0x001153E0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TMap<FSoftObjectPath, int> GetObjectPathMap()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetObjectPathMap_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetObjectPathMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetObjectPathMap_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetObjectPathMap_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectPathMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectPathMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FSoftObjectPath, int> result = new TMap<FSoftObjectPath, int>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetObjectPathMap_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025865 RID: 153701 RVA: 0x00387C94 File Offset: 0x00385E94
+		// Token: 0x0600B342 RID: 45890 RVA: 0x00117240 File Offset: 0x00115440
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<FSoftObjectPath> GetObjectPathArray()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetObjectPathArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetObjectPathArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetObjectPathArray_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetObjectPathArray_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectPathArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectPathArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FSoftObjectPath> result = new TArray<FSoftObjectPath>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetObjectPathArray_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025866 RID: 153702 RVA: 0x00387CF4 File Offset: 0x00385EF4
+		// Token: 0x0600B343 RID: 45891 RVA: 0x001172A0 File Offset: 0x001154A0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FSoftObjectPath GetObjectPath()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetObjectPath_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetObjectPath_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetObjectPath_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetObjectPath_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectPath_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectPath_NativeFunctionPtr, (void*)ptr);
 			FSoftObjectPath result = new FSoftObjectPath(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetObjectPath_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025867 RID: 153703 RVA: 0x00387D54 File Offset: 0x00385F54
+		// Token: 0x0600B344 RID: 45892 RVA: 0x00117300 File Offset: 0x00115500
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TMap<UObject, int> GetObjectMap()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetObjectMap_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetObjectMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetObjectMap_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetObjectMap_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<UObject, int> result = new TMap<UObject, int>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetObjectMap_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025868 RID: 153704 RVA: 0x00387DB4 File Offset: 0x00385FB4
+		// Token: 0x0600B345 RID: 45893 RVA: 0x00117360 File Offset: 0x00115560
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<UObject> GetObjectArray()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetObjectArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetObjectArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetObjectArray_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetObjectArray_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObjectArray_NativeFunctionPtr, (void*)ptr);
 			TArray<UObject> result = new TArray<UObject>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_Direct_UObject.__GetObjectArray_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06025869 RID: 153705 RVA: 0x00387E14 File Offset: 0x00386014
+		// Token: 0x0600B346 RID: 45894 RVA: 0x001173C0 File Offset: 0x001155C0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe UObject GetObject()
 		{
 			UTestClass_UFunction_Direct_UObject.__GetObject_FunctionParams* ptr = stackalloc UTestClass_UFunction_Direct_UObject.__GetObject_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UTestClass_UFunction_Direct_UObject.__GetObject_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_Direct_UObject.__GetObject_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObject_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_Direct_UObject.__GetObject_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(ptr->__Result);
 		}
 
-		// Token: 0x0602586A RID: 153706 RVA: 0x00387E5F File Offset: 0x0038605F
+		// Token: 0x0600B347 RID: 45895 RVA: 0x0011740A File Offset: 0x0011560A
 		static UTestClass_UFunction_Direct_UObject()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SharpherealTest.TestClass_UFunction_Direct_UObject");
 		}
 
-		// Token: 0x0602586B RID: 153707 RVA: 0x00387E6D File Offset: 0x0038606D
+		// Token: 0x0600B348 RID: 45896 RVA: 0x00117418 File Offset: 0x00115618
 		protected UTestClass_UFunction_Direct_UObject(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014523 RID: 83235
+		// Token: 0x04004F82 RID: 20354
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/SharpherealTest.TestClass_UFunction_Direct_UObject";
 
-		// Token: 0x04014524 RID: 83236
+		// Token: 0x04004F83 RID: 20355
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014525 RID: 83237
+		// Token: 0x04004F84 RID: 20356
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014526 RID: 83238
+		// Token: 0x04004F85 RID: 20357
 		internal static int __PropertyOffset_ObjectBase;
 
-		// Token: 0x04014527 RID: 83239
+		// Token: 0x04004F86 RID: 20358
 		internal static int __PropertyOffset_ObjectCmp;
 
-		// Token: 0x04014528 RID: 83240
+		// Token: 0x04004F87 RID: 20359
 		internal static int __PropertyOffset_SimpleObjectBase;
 
-		// Token: 0x04014529 RID: 83241
+		// Token: 0x04004F88 RID: 20360
 		internal static int __PropertyOffset_SimpleObjectCmp;
 
-		// Token: 0x0401452A RID: 83242
+		// Token: 0x04004F89 RID: 20361
 		internal static int __PropertyOffset_WeakObjectBase;
 
-		// Token: 0x0401452B RID: 83243
+		// Token: 0x04004F8A RID: 20362
 		internal static int __PropertyOffset_WeakObjectSame;
 
-		// Token: 0x0401452C RID: 83244
+		// Token: 0x04004F8B RID: 20363
 		internal static int __PropertyOffset_WeakObjectCmp;
 
-		// Token: 0x0401452D RID: 83245
+		// Token: 0x04004F8C RID: 20364
 		internal static int __PropertyOffset_LazyObjectBase;
 
-		// Token: 0x0401452E RID: 83246
+		// Token: 0x04004F8D RID: 20365
 		internal static int __PropertyOffset_LazyObjectSame;
 
-		// Token: 0x0401452F RID: 83247
+		// Token: 0x04004F8E RID: 20366
 		internal static int __PropertyOffset_LazyObjectCmp;
 
-		// Token: 0x04014530 RID: 83248
+		// Token: 0x04004F8F RID: 20367
 		internal static int __PropertyOffset_Object;
 
-		// Token: 0x04014531 RID: 83249
+		// Token: 0x04004F90 RID: 20368
 		internal static int __PropertyOffset_ObjectArray;
 
-		// Token: 0x04014532 RID: 83250
+		// Token: 0x04004F91 RID: 20369
 		[Nullable(new byte[]
 		{
 			2,
@@ -1976,10 +1911,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UObject> _ObjectArray;
 
-		// Token: 0x04014533 RID: 83251
+		// Token: 0x04004F92 RID: 20370
 		internal static int __PropertyOffset_ObjectSet;
 
-		// Token: 0x04014534 RID: 83252
+		// Token: 0x04004F93 RID: 20371
 		[Nullable(new byte[]
 		{
 			2,
@@ -1987,10 +1922,10 @@ namespace UnrealEngine
 		})]
 		private TSet<UObject> _ObjectSet;
 
-		// Token: 0x04014535 RID: 83253
+		// Token: 0x04004F94 RID: 20372
 		internal static int __PropertyOffset_ObjectMap;
 
-		// Token: 0x04014536 RID: 83254
+		// Token: 0x04004F95 RID: 20373
 		[Nullable(new byte[]
 		{
 			2,
@@ -1998,13 +1933,13 @@ namespace UnrealEngine
 		})]
 		private TMap<UObject, int> _ObjectMap;
 
-		// Token: 0x04014537 RID: 83255
+		// Token: 0x04004F96 RID: 20374
 		internal static int __PropertyOffset_SimpleObject;
 
-		// Token: 0x04014538 RID: 83256
+		// Token: 0x04004F97 RID: 20375
 		internal static int __PropertyOffset_SimpleObjectArray;
 
-		// Token: 0x04014539 RID: 83257
+		// Token: 0x04004F98 RID: 20376
 		[Nullable(new byte[]
 		{
 			2,
@@ -2012,10 +1947,10 @@ namespace UnrealEngine
 		})]
 		private TArray<USharpherealTestSimpleClass> _SimpleObjectArray;
 
-		// Token: 0x0401453A RID: 83258
+		// Token: 0x04004F99 RID: 20377
 		internal static int __PropertyOffset_SimpleObjectSet;
 
-		// Token: 0x0401453B RID: 83259
+		// Token: 0x04004F9A RID: 20378
 		[Nullable(new byte[]
 		{
 			2,
@@ -2023,10 +1958,10 @@ namespace UnrealEngine
 		})]
 		private TSet<USharpherealTestSimpleClass> _SimpleObjectSet;
 
-		// Token: 0x0401453C RID: 83260
+		// Token: 0x04004F9B RID: 20379
 		internal static int __PropertyOffset_SimpleObjectMap;
 
-		// Token: 0x0401453D RID: 83261
+		// Token: 0x04004F9C RID: 20380
 		[Nullable(new byte[]
 		{
 			2,
@@ -2034,13 +1969,13 @@ namespace UnrealEngine
 		})]
 		private TMap<USharpherealTestSimpleClass, int> _SimpleObjectMap;
 
-		// Token: 0x0401453E RID: 83262
+		// Token: 0x04004F9D RID: 20381
 		internal static int __PropertyOffset_SoftObject;
 
-		// Token: 0x0401453F RID: 83263
+		// Token: 0x04004F9E RID: 20382
 		internal static int __PropertyOffset_SoftObjectArray;
 
-		// Token: 0x04014540 RID: 83264
+		// Token: 0x04004F9F RID: 20383
 		[Nullable(new byte[]
 		{
 			2,
@@ -2049,10 +1984,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TSoftObjectPtr<USharpherealTestSimpleClass>> _SoftObjectArray;
 
-		// Token: 0x04014541 RID: 83265
+		// Token: 0x04004FA0 RID: 20384
 		internal static int __PropertyOffset_SoftObjectSet;
 
-		// Token: 0x04014542 RID: 83266
+		// Token: 0x04004FA1 RID: 20385
 		[Nullable(new byte[]
 		{
 			2,
@@ -2061,10 +1996,10 @@ namespace UnrealEngine
 		})]
 		private TSet<TSoftObjectPtr<USharpherealTestSimpleClass>> _SoftObjectSet;
 
-		// Token: 0x04014543 RID: 83267
+		// Token: 0x04004FA2 RID: 20386
 		internal static int __PropertyOffset_SoftObjectMap;
 
-		// Token: 0x04014544 RID: 83268
+		// Token: 0x04004FA3 RID: 20387
 		[Nullable(new byte[]
 		{
 			2,
@@ -2073,17 +2008,17 @@ namespace UnrealEngine
 		})]
 		private TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int> _SoftObjectMap;
 
-		// Token: 0x04014545 RID: 83269
+		// Token: 0x04004FA4 RID: 20388
 		internal static int __PropertyOffset_ObjectPath;
 
-		// Token: 0x04014546 RID: 83270
+		// Token: 0x04004FA5 RID: 20389
 		[Nullable(2)]
 		private FSoftObjectPath _ObjectPath;
 
-		// Token: 0x04014547 RID: 83271
+		// Token: 0x04004FA6 RID: 20390
 		internal static int __PropertyOffset_ObjectPathArray;
 
-		// Token: 0x04014548 RID: 83272
+		// Token: 0x04004FA7 RID: 20391
 		[Nullable(new byte[]
 		{
 			2,
@@ -2091,10 +2026,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FSoftObjectPath> _ObjectPathArray;
 
-		// Token: 0x04014549 RID: 83273
+		// Token: 0x04004FA8 RID: 20392
 		internal static int __PropertyOffset_ObjectPathSet;
 
-		// Token: 0x0401454A RID: 83274
+		// Token: 0x04004FA9 RID: 20393
 		[Nullable(new byte[]
 		{
 			2,
@@ -2102,10 +2037,10 @@ namespace UnrealEngine
 		})]
 		private TSet<FSoftObjectPath> _ObjectPathSet;
 
-		// Token: 0x0401454B RID: 83275
+		// Token: 0x04004FAA RID: 20394
 		internal static int __PropertyOffset_ObjectPathMap;
 
-		// Token: 0x0401454C RID: 83276
+		// Token: 0x04004FAB RID: 20395
 		[Nullable(new byte[]
 		{
 			2,
@@ -2113,851 +2048,851 @@ namespace UnrealEngine
 		})]
 		private TMap<FSoftObjectPath, int> _ObjectPathMap;
 
-		// Token: 0x0401454D RID: 83277
+		// Token: 0x04004FAC RID: 20396
 		private static IntPtr __SetSubPathString_NativeFunctionPtr;
 
-		// Token: 0x0401454E RID: 83278
+		// Token: 0x04004FAD RID: 20397
 		private static IntPtr __SetSoftObjectSet_NativeFunctionPtr;
 
-		// Token: 0x0401454F RID: 83279
+		// Token: 0x04004FAE RID: 20398
 		private static IntPtr __SetSoftObjectMap_NativeFunctionPtr;
 
-		// Token: 0x04014550 RID: 83280
+		// Token: 0x04004FAF RID: 20399
 		private static IntPtr __SetSoftObjectArray_NativeFunctionPtr;
 
-		// Token: 0x04014551 RID: 83281
+		// Token: 0x04004FB0 RID: 20400
 		private static IntPtr __SetSoftObject_NativeFunctionPtr;
 
-		// Token: 0x04014552 RID: 83282
+		// Token: 0x04004FB1 RID: 20401
 		private static IntPtr __SetSimpleObjectSet_NativeFunctionPtr;
 
-		// Token: 0x04014553 RID: 83283
+		// Token: 0x04004FB2 RID: 20402
 		private static IntPtr __SetSimpleObjectMap_NativeFunctionPtr;
 
-		// Token: 0x04014554 RID: 83284
+		// Token: 0x04004FB3 RID: 20403
 		private static IntPtr __SetSimpleObjectArray_NativeFunctionPtr;
 
-		// Token: 0x04014555 RID: 83285
+		// Token: 0x04004FB4 RID: 20404
 		private static IntPtr __SetSimpleObject_NativeFunctionPtr;
 
-		// Token: 0x04014556 RID: 83286
+		// Token: 0x04004FB5 RID: 20405
 		private static IntPtr __SetObjectSet_NativeFunctionPtr;
 
-		// Token: 0x04014557 RID: 83287
+		// Token: 0x04004FB6 RID: 20406
 		private static IntPtr __SetObjectPathSet_NativeFunctionPtr;
 
-		// Token: 0x04014558 RID: 83288
+		// Token: 0x04004FB7 RID: 20407
 		private static IntPtr __SetObjectPathMap_NativeFunctionPtr;
 
-		// Token: 0x04014559 RID: 83289
+		// Token: 0x04004FB8 RID: 20408
 		private static IntPtr __SetObjectPathArray_NativeFunctionPtr;
 
-		// Token: 0x0401455A RID: 83290
+		// Token: 0x04004FB9 RID: 20409
 		private static IntPtr __SetObjectPath_NativeFunctionPtr;
 
-		// Token: 0x0401455B RID: 83291
+		// Token: 0x04004FBA RID: 20410
 		private static IntPtr __SetObjectMap_NativeFunctionPtr;
 
-		// Token: 0x0401455C RID: 83292
+		// Token: 0x04004FBB RID: 20411
 		private static IntPtr __SetObjectArray_NativeFunctionPtr;
 
-		// Token: 0x0401455D RID: 83293
+		// Token: 0x04004FBC RID: 20412
 		private static IntPtr __SetObject_NativeFunctionPtr;
 
-		// Token: 0x0401455E RID: 83294
+		// Token: 0x04004FBD RID: 20413
 		private static IntPtr __OutSoftObjectSet_NativeFunctionPtr;
 
-		// Token: 0x0401455F RID: 83295
+		// Token: 0x04004FBE RID: 20414
 		private static IntPtr __OutSoftObjectMap_NativeFunctionPtr;
 
-		// Token: 0x04014560 RID: 83296
+		// Token: 0x04004FBF RID: 20415
 		private static IntPtr __OutSoftObjectArray_NativeFunctionPtr;
 
-		// Token: 0x04014561 RID: 83297
+		// Token: 0x04004FC0 RID: 20416
 		private static IntPtr __OutSoftObject_NativeFunctionPtr;
 
-		// Token: 0x04014562 RID: 83298
+		// Token: 0x04004FC1 RID: 20417
 		private static IntPtr __OutSimpleObjectSet_NativeFunctionPtr;
 
-		// Token: 0x04014563 RID: 83299
+		// Token: 0x04004FC2 RID: 20418
 		private static IntPtr __OutSimpleObjectMap_NativeFunctionPtr;
 
-		// Token: 0x04014564 RID: 83300
+		// Token: 0x04004FC3 RID: 20419
 		private static IntPtr __OutSimpleObjectArray_NativeFunctionPtr;
 
-		// Token: 0x04014565 RID: 83301
+		// Token: 0x04004FC4 RID: 20420
 		private static IntPtr __OutSimpleObject_NativeFunctionPtr;
 
-		// Token: 0x04014566 RID: 83302
+		// Token: 0x04004FC5 RID: 20421
 		private static IntPtr __OutObjectSet_NativeFunctionPtr;
 
-		// Token: 0x04014567 RID: 83303
+		// Token: 0x04004FC6 RID: 20422
 		private static IntPtr __OutObjectPathSet_NativeFunctionPtr;
 
-		// Token: 0x04014568 RID: 83304
+		// Token: 0x04004FC7 RID: 20423
 		private static IntPtr __OutObjectPathMap_NativeFunctionPtr;
 
-		// Token: 0x04014569 RID: 83305
+		// Token: 0x04004FC8 RID: 20424
 		private static IntPtr __OutObjectPathArray_NativeFunctionPtr;
 
-		// Token: 0x0401456A RID: 83306
+		// Token: 0x04004FC9 RID: 20425
 		private static IntPtr __OutObjectPath_NativeFunctionPtr;
 
-		// Token: 0x0401456B RID: 83307
+		// Token: 0x04004FCA RID: 20426
 		private static IntPtr __OutObjectMap_NativeFunctionPtr;
 
-		// Token: 0x0401456C RID: 83308
+		// Token: 0x04004FCB RID: 20427
 		private static IntPtr __OutObjectArray_NativeFunctionPtr;
 
-		// Token: 0x0401456D RID: 83309
+		// Token: 0x04004FCC RID: 20428
 		private static IntPtr __OutObject_NativeFunctionPtr;
 
-		// Token: 0x0401456E RID: 83310
+		// Token: 0x04004FCD RID: 20429
 		private static IntPtr __InSoftObjectSet_NativeFunctionPtr;
 
-		// Token: 0x0401456F RID: 83311
+		// Token: 0x04004FCE RID: 20430
 		private static IntPtr __InSoftObjectMap_NativeFunctionPtr;
 
-		// Token: 0x04014570 RID: 83312
+		// Token: 0x04004FCF RID: 20431
 		private static IntPtr __InSoftObjectArray_NativeFunctionPtr;
 
-		// Token: 0x04014571 RID: 83313
+		// Token: 0x04004FD0 RID: 20432
 		private static IntPtr __InSoftObject_NativeFunctionPtr;
 
-		// Token: 0x04014572 RID: 83314
+		// Token: 0x04004FD1 RID: 20433
 		private static IntPtr __InSimpleObjectSet_NativeFunctionPtr;
 
-		// Token: 0x04014573 RID: 83315
+		// Token: 0x04004FD2 RID: 20434
 		private static IntPtr __InSimpleObjectMap_NativeFunctionPtr;
 
-		// Token: 0x04014574 RID: 83316
+		// Token: 0x04004FD3 RID: 20435
 		private static IntPtr __InSimpleObjectArray_NativeFunctionPtr;
 
-		// Token: 0x04014575 RID: 83317
+		// Token: 0x04004FD4 RID: 20436
 		private static IntPtr __InSimpleObject_NativeFunctionPtr;
 
-		// Token: 0x04014576 RID: 83318
+		// Token: 0x04004FD5 RID: 20437
 		private static IntPtr __InObjectSet_NativeFunctionPtr;
 
-		// Token: 0x04014577 RID: 83319
+		// Token: 0x04004FD6 RID: 20438
 		private static IntPtr __InObjectPathSet_NativeFunctionPtr;
 
-		// Token: 0x04014578 RID: 83320
+		// Token: 0x04004FD7 RID: 20439
 		private static IntPtr __InObjectPathMap_NativeFunctionPtr;
 
-		// Token: 0x04014579 RID: 83321
+		// Token: 0x04004FD8 RID: 20440
 		private static IntPtr __InObjectPathArray_NativeFunctionPtr;
 
-		// Token: 0x0401457A RID: 83322
+		// Token: 0x04004FD9 RID: 20441
 		private static IntPtr __InObjectPath_NativeFunctionPtr;
 
-		// Token: 0x0401457B RID: 83323
+		// Token: 0x04004FDA RID: 20442
 		private static IntPtr __InObjectMap_NativeFunctionPtr;
 
-		// Token: 0x0401457C RID: 83324
+		// Token: 0x04004FDB RID: 20443
 		private static IntPtr __InObjectArray_NativeFunctionPtr;
 
-		// Token: 0x0401457D RID: 83325
+		// Token: 0x04004FDC RID: 20444
 		private static IntPtr __InObject_NativeFunctionPtr;
 
-		// Token: 0x0401457E RID: 83326
+		// Token: 0x04004FDD RID: 20445
 		private static IntPtr __GetSoftObjectSet_NativeFunctionPtr;
 
-		// Token: 0x0401457F RID: 83327
+		// Token: 0x04004FDE RID: 20446
 		private static IntPtr __GetSoftObjectMap_NativeFunctionPtr;
 
-		// Token: 0x04014580 RID: 83328
+		// Token: 0x04004FDF RID: 20447
 		private static IntPtr __GetSoftObjectArray_NativeFunctionPtr;
 
-		// Token: 0x04014581 RID: 83329
+		// Token: 0x04004FE0 RID: 20448
 		private static IntPtr __GetSoftObject_NativeFunctionPtr;
 
-		// Token: 0x04014582 RID: 83330
+		// Token: 0x04004FE1 RID: 20449
 		private static IntPtr __GetSimpleObjectSet_NativeFunctionPtr;
 
-		// Token: 0x04014583 RID: 83331
+		// Token: 0x04004FE2 RID: 20450
 		private static IntPtr __GetSimpleObjectMap_NativeFunctionPtr;
 
-		// Token: 0x04014584 RID: 83332
+		// Token: 0x04004FE3 RID: 20451
 		private static IntPtr __GetSimpleObjectArray_NativeFunctionPtr;
 
-		// Token: 0x04014585 RID: 83333
+		// Token: 0x04004FE4 RID: 20452
 		private static IntPtr __GetSimpleObject_NativeFunctionPtr;
 
-		// Token: 0x04014586 RID: 83334
+		// Token: 0x04004FE5 RID: 20453
 		private static IntPtr __GetObjectSet_NativeFunctionPtr;
 
-		// Token: 0x04014587 RID: 83335
+		// Token: 0x04004FE6 RID: 20454
 		private static IntPtr __GetObjectPathSet_NativeFunctionPtr;
 
-		// Token: 0x04014588 RID: 83336
+		// Token: 0x04004FE7 RID: 20455
 		private static IntPtr __GetObjectPathMap_NativeFunctionPtr;
 
-		// Token: 0x04014589 RID: 83337
+		// Token: 0x04004FE8 RID: 20456
 		private static IntPtr __GetObjectPathArray_NativeFunctionPtr;
 
-		// Token: 0x0401458A RID: 83338
+		// Token: 0x04004FE9 RID: 20457
 		private static IntPtr __GetObjectPath_NativeFunctionPtr;
 
-		// Token: 0x0401458B RID: 83339
+		// Token: 0x04004FEA RID: 20458
 		private static IntPtr __GetObjectMap_NativeFunctionPtr;
 
-		// Token: 0x0401458C RID: 83340
+		// Token: 0x04004FEB RID: 20459
 		private static IntPtr __GetObjectArray_NativeFunctionPtr;
 
-		// Token: 0x0401458D RID: 83341
+		// Token: 0x04004FEC RID: 20460
 		private static IntPtr __GetObject_NativeFunctionPtr;
 
-		// Token: 0x020038FC RID: 14588
+		// Token: 0x020011CE RID: 4558
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __SetSubPathString_FunctionParams
 		{
-			// Token: 0x04017A24 RID: 96804
+			// Token: 0x040065D7 RID: 26071
 			[FieldOffset(0)]
 			public byte ObjectPtr;
 
-			// Token: 0x04017A25 RID: 96805
+			// Token: 0x040065D8 RID: 26072
 			[FieldOffset(48)]
 			public FString SubPathString;
 		}
 
-		// Token: 0x020038FD RID: 14589
+		// Token: 0x020011CF RID: 4559
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetSoftObjectSet_FunctionParams
 		{
-			// Token: 0x04017A26 RID: 96806
+			// Token: 0x040065D9 RID: 26073
 			[FieldOffset(0)]
 			public byte InSoftObjectSet;
 		}
 
-		// Token: 0x020038FE RID: 14590
+		// Token: 0x020011D0 RID: 4560
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetSoftObjectMap_FunctionParams
 		{
-			// Token: 0x04017A27 RID: 96807
+			// Token: 0x040065DA RID: 26074
 			[FieldOffset(0)]
 			public byte InSoftObjectMap;
 		}
 
-		// Token: 0x020038FF RID: 14591
+		// Token: 0x020011D1 RID: 4561
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetSoftObjectArray_FunctionParams
 		{
-			// Token: 0x04017A28 RID: 96808
+			// Token: 0x040065DB RID: 26075
 			[FieldOffset(0)]
 			public byte InSoftObjectArray;
 		}
 
-		// Token: 0x02003900 RID: 14592
+		// Token: 0x020011D2 RID: 4562
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __SetSoftObject_FunctionParams
 		{
-			// Token: 0x04017A29 RID: 96809
+			// Token: 0x040065DC RID: 26076
 			[FieldOffset(0)]
 			public byte InSoftObject;
 		}
 
-		// Token: 0x02003901 RID: 14593
+		// Token: 0x020011D3 RID: 4563
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetSimpleObjectSet_FunctionParams
 		{
-			// Token: 0x04017A2A RID: 96810
+			// Token: 0x040065DD RID: 26077
 			[FieldOffset(0)]
 			public byte InSimpleObjectSet;
 		}
 
-		// Token: 0x02003902 RID: 14594
+		// Token: 0x020011D4 RID: 4564
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetSimpleObjectMap_FunctionParams
 		{
-			// Token: 0x04017A2B RID: 96811
+			// Token: 0x040065DE RID: 26078
 			[FieldOffset(0)]
 			public byte InSimpleObjectMap;
 		}
 
-		// Token: 0x02003903 RID: 14595
+		// Token: 0x020011D5 RID: 4565
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetSimpleObjectArray_FunctionParams
 		{
-			// Token: 0x04017A2C RID: 96812
+			// Token: 0x040065DF RID: 26079
 			[FieldOffset(0)]
 			public byte InSimpleObjectArray;
 		}
 
-		// Token: 0x02003904 RID: 14596
+		// Token: 0x020011D6 RID: 4566
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __SetSimpleObject_FunctionParams
 		{
-			// Token: 0x04017A2D RID: 96813
+			// Token: 0x040065E0 RID: 26080
 			[FieldOffset(0)]
 			public IntPtr InSimpleObject;
 		}
 
-		// Token: 0x02003905 RID: 14597
+		// Token: 0x020011D7 RID: 4567
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetObjectSet_FunctionParams
 		{
-			// Token: 0x04017A2E RID: 96814
+			// Token: 0x040065E1 RID: 26081
 			[FieldOffset(0)]
 			public byte InObjectSet;
 		}
 
-		// Token: 0x02003906 RID: 14598
+		// Token: 0x020011D8 RID: 4568
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetObjectPathSet_FunctionParams
 		{
-			// Token: 0x04017A2F RID: 96815
+			// Token: 0x040065E2 RID: 26082
 			[FieldOffset(0)]
 			public byte InObjectPathSet;
 		}
 
-		// Token: 0x02003907 RID: 14599
+		// Token: 0x020011D9 RID: 4569
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetObjectPathMap_FunctionParams
 		{
-			// Token: 0x04017A30 RID: 96816
+			// Token: 0x040065E3 RID: 26083
 			[FieldOffset(0)]
 			public byte InObjectPathMap;
 		}
 
-		// Token: 0x02003908 RID: 14600
+		// Token: 0x020011DA RID: 4570
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetObjectPathArray_FunctionParams
 		{
-			// Token: 0x04017A31 RID: 96817
+			// Token: 0x040065E4 RID: 26084
 			[FieldOffset(0)]
 			public byte InObjectPathArray;
 		}
 
-		// Token: 0x02003909 RID: 14601
+		// Token: 0x020011DB RID: 4571
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __SetObjectPath_FunctionParams
 		{
-			// Token: 0x04017A32 RID: 96818
+			// Token: 0x040065E5 RID: 26085
 			[FieldOffset(0)]
 			public byte InObjectPath;
 		}
 
-		// Token: 0x0200390A RID: 14602
+		// Token: 0x020011DC RID: 4572
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetObjectMap_FunctionParams
 		{
-			// Token: 0x04017A33 RID: 96819
+			// Token: 0x040065E6 RID: 26086
 			[FieldOffset(0)]
 			public byte InObjectMap;
 		}
 
-		// Token: 0x0200390B RID: 14603
+		// Token: 0x020011DD RID: 4573
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetObjectArray_FunctionParams
 		{
-			// Token: 0x04017A34 RID: 96820
+			// Token: 0x040065E7 RID: 26087
 			[FieldOffset(0)]
 			public byte InObjectArray;
 		}
 
-		// Token: 0x0200390C RID: 14604
+		// Token: 0x020011DE RID: 4574
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __SetObject_FunctionParams
 		{
-			// Token: 0x04017A35 RID: 96821
+			// Token: 0x040065E8 RID: 26088
 			[FieldOffset(0)]
 			public IntPtr InObject;
 		}
 
-		// Token: 0x0200390D RID: 14605
+		// Token: 0x020011DF RID: 4575
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutSoftObjectSet_FunctionParams
 		{
-			// Token: 0x04017A36 RID: 96822
+			// Token: 0x040065E9 RID: 26089
 			[FieldOffset(0)]
 			public byte OutSoftObjectSet;
 		}
 
-		// Token: 0x0200390E RID: 14606
+		// Token: 0x020011E0 RID: 4576
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutSoftObjectMap_FunctionParams
 		{
-			// Token: 0x04017A37 RID: 96823
+			// Token: 0x040065EA RID: 26090
 			[FieldOffset(0)]
 			public byte OutSoftObjectMap;
 		}
 
-		// Token: 0x0200390F RID: 14607
+		// Token: 0x020011E1 RID: 4577
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutSoftObjectArray_FunctionParams
 		{
-			// Token: 0x04017A38 RID: 96824
+			// Token: 0x040065EB RID: 26091
 			[FieldOffset(0)]
 			public byte OutSoftObjectArray;
 		}
 
-		// Token: 0x02003910 RID: 14608
+		// Token: 0x020011E2 RID: 4578
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __OutSoftObject_FunctionParams
 		{
-			// Token: 0x04017A39 RID: 96825
+			// Token: 0x040065EC RID: 26092
 			[FieldOffset(0)]
 			public byte OutSoftObject;
 		}
 
-		// Token: 0x02003911 RID: 14609
+		// Token: 0x020011E3 RID: 4579
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutSimpleObjectSet_FunctionParams
 		{
-			// Token: 0x04017A3A RID: 96826
+			// Token: 0x040065ED RID: 26093
 			[FieldOffset(0)]
 			public byte OutSimpleObjectSet;
 		}
 
-		// Token: 0x02003912 RID: 14610
+		// Token: 0x020011E4 RID: 4580
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutSimpleObjectMap_FunctionParams
 		{
-			// Token: 0x04017A3B RID: 96827
+			// Token: 0x040065EE RID: 26094
 			[FieldOffset(0)]
 			public byte OutSimpleObjectMap;
 		}
 
-		// Token: 0x02003913 RID: 14611
+		// Token: 0x020011E5 RID: 4581
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutSimpleObjectArray_FunctionParams
 		{
-			// Token: 0x04017A3C RID: 96828
+			// Token: 0x040065EF RID: 26095
 			[FieldOffset(0)]
 			public byte OutSimpleObjectArray;
 		}
 
-		// Token: 0x02003914 RID: 14612
+		// Token: 0x020011E6 RID: 4582
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __OutSimpleObject_FunctionParams
 		{
-			// Token: 0x04017A3D RID: 96829
+			// Token: 0x040065F0 RID: 26096
 			[FieldOffset(0)]
 			public IntPtr OutSimpleObject;
 		}
 
-		// Token: 0x02003915 RID: 14613
+		// Token: 0x020011E7 RID: 4583
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutObjectSet_FunctionParams
 		{
-			// Token: 0x04017A3E RID: 96830
+			// Token: 0x040065F1 RID: 26097
 			[FieldOffset(0)]
 			public byte OutObjectSet;
 		}
 
-		// Token: 0x02003916 RID: 14614
+		// Token: 0x020011E8 RID: 4584
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutObjectPathSet_FunctionParams
 		{
-			// Token: 0x04017A3F RID: 96831
+			// Token: 0x040065F2 RID: 26098
 			[FieldOffset(0)]
 			public byte OutObjectPathSet;
 		}
 
-		// Token: 0x02003917 RID: 14615
+		// Token: 0x020011E9 RID: 4585
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutObjectPathMap_FunctionParams
 		{
-			// Token: 0x04017A40 RID: 96832
+			// Token: 0x040065F3 RID: 26099
 			[FieldOffset(0)]
 			public byte OutObjectPathMap;
 		}
 
-		// Token: 0x02003918 RID: 14616
+		// Token: 0x020011EA RID: 4586
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutObjectPathArray_FunctionParams
 		{
-			// Token: 0x04017A41 RID: 96833
+			// Token: 0x040065F4 RID: 26100
 			[FieldOffset(0)]
 			public byte OutObjectPathArray;
 		}
 
-		// Token: 0x02003919 RID: 14617
+		// Token: 0x020011EB RID: 4587
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __OutObjectPath_FunctionParams
 		{
-			// Token: 0x04017A42 RID: 96834
+			// Token: 0x040065F5 RID: 26101
 			[FieldOffset(0)]
 			public byte OutObjectPath;
 		}
 
-		// Token: 0x0200391A RID: 14618
+		// Token: 0x020011EC RID: 4588
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutObjectMap_FunctionParams
 		{
-			// Token: 0x04017A43 RID: 96835
+			// Token: 0x040065F6 RID: 26102
 			[FieldOffset(0)]
 			public byte OutObjectMap;
 		}
 
-		// Token: 0x0200391B RID: 14619
+		// Token: 0x020011ED RID: 4589
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutObjectArray_FunctionParams
 		{
-			// Token: 0x04017A44 RID: 96836
+			// Token: 0x040065F7 RID: 26103
 			[FieldOffset(0)]
 			public byte OutObjectArray;
 		}
 
-		// Token: 0x0200391C RID: 14620
+		// Token: 0x020011EE RID: 4590
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __OutObject_FunctionParams
 		{
-			// Token: 0x04017A45 RID: 96837
+			// Token: 0x040065F8 RID: 26104
 			[FieldOffset(0)]
 			public IntPtr OutObject;
 		}
 
-		// Token: 0x0200391D RID: 14621
+		// Token: 0x020011EF RID: 4591
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InSoftObjectSet_FunctionParams
 		{
-			// Token: 0x04017A46 RID: 96838
+			// Token: 0x040065F9 RID: 26105
 			[FieldOffset(0)]
 			public byte InSoftObjectSet;
 		}
 
-		// Token: 0x0200391E RID: 14622
+		// Token: 0x020011F0 RID: 4592
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InSoftObjectMap_FunctionParams
 		{
-			// Token: 0x04017A47 RID: 96839
+			// Token: 0x040065FA RID: 26106
 			[FieldOffset(0)]
 			public byte InSoftObjectMap;
 		}
 
-		// Token: 0x0200391F RID: 14623
+		// Token: 0x020011F1 RID: 4593
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InSoftObjectArray_FunctionParams
 		{
-			// Token: 0x04017A48 RID: 96840
+			// Token: 0x040065FB RID: 26107
 			[FieldOffset(0)]
 			public byte InSoftObjectArray;
 		}
 
-		// Token: 0x02003920 RID: 14624
+		// Token: 0x020011F2 RID: 4594
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __InSoftObject_FunctionParams
 		{
-			// Token: 0x04017A49 RID: 96841
+			// Token: 0x040065FC RID: 26108
 			[FieldOffset(0)]
 			public byte InSoftObject;
 		}
 
-		// Token: 0x02003921 RID: 14625
+		// Token: 0x020011F3 RID: 4595
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InSimpleObjectSet_FunctionParams
 		{
-			// Token: 0x04017A4A RID: 96842
+			// Token: 0x040065FD RID: 26109
 			[FieldOffset(0)]
 			public byte InSimpleObjectSet;
 		}
 
-		// Token: 0x02003922 RID: 14626
+		// Token: 0x020011F4 RID: 4596
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InSimpleObjectMap_FunctionParams
 		{
-			// Token: 0x04017A4B RID: 96843
+			// Token: 0x040065FE RID: 26110
 			[FieldOffset(0)]
 			public byte InSimpleObjectMap;
 		}
 
-		// Token: 0x02003923 RID: 14627
+		// Token: 0x020011F5 RID: 4597
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InSimpleObjectArray_FunctionParams
 		{
-			// Token: 0x04017A4C RID: 96844
+			// Token: 0x040065FF RID: 26111
 			[FieldOffset(0)]
 			public byte InSimpleObjectArray;
 		}
 
-		// Token: 0x02003924 RID: 14628
+		// Token: 0x020011F6 RID: 4598
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __InSimpleObject_FunctionParams
 		{
-			// Token: 0x04017A4D RID: 96845
+			// Token: 0x04006600 RID: 26112
 			[FieldOffset(0)]
 			public IntPtr InSimpleObject;
 		}
 
-		// Token: 0x02003925 RID: 14629
+		// Token: 0x020011F7 RID: 4599
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InObjectSet_FunctionParams
 		{
-			// Token: 0x04017A4E RID: 96846
+			// Token: 0x04006601 RID: 26113
 			[FieldOffset(0)]
 			public byte InObjectSet;
 		}
 
-		// Token: 0x02003926 RID: 14630
+		// Token: 0x020011F8 RID: 4600
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InObjectPathSet_FunctionParams
 		{
-			// Token: 0x04017A4F RID: 96847
+			// Token: 0x04006602 RID: 26114
 			[FieldOffset(0)]
 			public byte InObjectPathSet;
 		}
 
-		// Token: 0x02003927 RID: 14631
+		// Token: 0x020011F9 RID: 4601
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InObjectPathMap_FunctionParams
 		{
-			// Token: 0x04017A50 RID: 96848
+			// Token: 0x04006603 RID: 26115
 			[FieldOffset(0)]
 			public byte InObjectPathMap;
 		}
 
-		// Token: 0x02003928 RID: 14632
+		// Token: 0x020011FA RID: 4602
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InObjectPathArray_FunctionParams
 		{
-			// Token: 0x04017A51 RID: 96849
+			// Token: 0x04006604 RID: 26116
 			[FieldOffset(0)]
 			public byte InObjectPathArray;
 		}
 
-		// Token: 0x02003929 RID: 14633
+		// Token: 0x020011FB RID: 4603
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __InObjectPath_FunctionParams
 		{
-			// Token: 0x04017A52 RID: 96850
+			// Token: 0x04006605 RID: 26117
 			[FieldOffset(0)]
 			public byte InObjectPath;
 		}
 
-		// Token: 0x0200392A RID: 14634
+		// Token: 0x020011FC RID: 4604
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InObjectMap_FunctionParams
 		{
-			// Token: 0x04017A53 RID: 96851
+			// Token: 0x04006606 RID: 26118
 			[FieldOffset(0)]
 			public byte InObjectMap;
 		}
 
-		// Token: 0x0200392B RID: 14635
+		// Token: 0x020011FD RID: 4605
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InObjectArray_FunctionParams
 		{
-			// Token: 0x04017A54 RID: 96852
+			// Token: 0x04006607 RID: 26119
 			[FieldOffset(0)]
 			public byte InObjectArray;
 		}
 
-		// Token: 0x0200392C RID: 14636
+		// Token: 0x020011FE RID: 4606
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __InObject_FunctionParams
 		{
-			// Token: 0x04017A55 RID: 96853
+			// Token: 0x04006608 RID: 26120
 			[FieldOffset(0)]
 			public IntPtr InObject;
 		}
 
-		// Token: 0x0200392D RID: 14637
+		// Token: 0x020011FF RID: 4607
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetSoftObjectSet_FunctionParams
 		{
-			// Token: 0x04017A56 RID: 96854
+			// Token: 0x04006609 RID: 26121
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200392E RID: 14638
+		// Token: 0x02001200 RID: 4608
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetSoftObjectMap_FunctionParams
 		{
-			// Token: 0x04017A57 RID: 96855
+			// Token: 0x0400660A RID: 26122
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200392F RID: 14639
+		// Token: 0x02001201 RID: 4609
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetSoftObjectArray_FunctionParams
 		{
-			// Token: 0x04017A58 RID: 96856
+			// Token: 0x0400660B RID: 26123
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003930 RID: 14640
+		// Token: 0x02001202 RID: 4610
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __GetSoftObject_FunctionParams
 		{
-			// Token: 0x04017A59 RID: 96857
+			// Token: 0x0400660C RID: 26124
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003931 RID: 14641
+		// Token: 0x02001203 RID: 4611
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetSimpleObjectSet_FunctionParams
 		{
-			// Token: 0x04017A5A RID: 96858
+			// Token: 0x0400660D RID: 26125
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003932 RID: 14642
+		// Token: 0x02001204 RID: 4612
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetSimpleObjectMap_FunctionParams
 		{
-			// Token: 0x04017A5B RID: 96859
+			// Token: 0x0400660E RID: 26126
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003933 RID: 14643
+		// Token: 0x02001205 RID: 4613
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetSimpleObjectArray_FunctionParams
 		{
-			// Token: 0x04017A5C RID: 96860
+			// Token: 0x0400660F RID: 26127
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003934 RID: 14644
+		// Token: 0x02001206 RID: 4614
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetSimpleObject_FunctionParams
 		{
-			// Token: 0x04017A5D RID: 96861
+			// Token: 0x04006610 RID: 26128
 			[FieldOffset(0)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003935 RID: 14645
+		// Token: 0x02001207 RID: 4615
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetObjectSet_FunctionParams
 		{
-			// Token: 0x04017A5E RID: 96862
+			// Token: 0x04006611 RID: 26129
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003936 RID: 14646
+		// Token: 0x02001208 RID: 4616
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetObjectPathSet_FunctionParams
 		{
-			// Token: 0x04017A5F RID: 96863
+			// Token: 0x04006612 RID: 26130
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003937 RID: 14647
+		// Token: 0x02001209 RID: 4617
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetObjectPathMap_FunctionParams
 		{
-			// Token: 0x04017A60 RID: 96864
+			// Token: 0x04006613 RID: 26131
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003938 RID: 14648
+		// Token: 0x0200120A RID: 4618
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetObjectPathArray_FunctionParams
 		{
-			// Token: 0x04017A61 RID: 96865
+			// Token: 0x04006614 RID: 26132
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003939 RID: 14649
+		// Token: 0x0200120B RID: 4619
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __GetObjectPath_FunctionParams
 		{
-			// Token: 0x04017A62 RID: 96866
+			// Token: 0x04006615 RID: 26133
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200393A RID: 14650
+		// Token: 0x0200120C RID: 4620
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetObjectMap_FunctionParams
 		{
-			// Token: 0x04017A63 RID: 96867
+			// Token: 0x04006616 RID: 26134
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200393B RID: 14651
+		// Token: 0x0200120D RID: 4621
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetObjectArray_FunctionParams
 		{
-			// Token: 0x04017A64 RID: 96868
+			// Token: 0x04006617 RID: 26135
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200393C RID: 14652
+		// Token: 0x0200120E RID: 4622
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetObject_FunctionParams
 		{
-			// Token: 0x04017A65 RID: 96869
+			// Token: 0x04006618 RID: 26136
 			[FieldOffset(0)]
 			public IntPtr __Result;
 		}

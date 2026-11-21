@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 {
-	// Token: 0x02005684 RID: 22148
+	// Token: 0x0200465A RID: 18010
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 	})]
 	public class ComposeItem : GridProxyAbstract<IBaseItemData>
 	{
-		// Token: 0x060385C2 RID: 230850 RVA: 0x00D61214 File Offset: 0x00D5F414
+		// Token: 0x0602D4BF RID: 185535 RVA: 0x00CAF364 File Offset: 0x00CAD564
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060385C3 RID: 230851 RVA: 0x00D61363 File Offset: 0x00D5F563
+		// Token: 0x0602D4C0 RID: 185536 RVA: 0x00CAF4B3 File Offset: 0x00CAD6B3
 		public override void Refresh(IBaseItemData data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			this.Selected(isSelected, false);
 		}
 
-		// Token: 0x060385C4 RID: 230852 RVA: 0x00D61398 File Offset: 0x00D5F598
+		// Token: 0x0602D4C1 RID: 185537 RVA: 0x00CAF4E8 File Offset: 0x00CAD6E8
 		private void RefreshName()
 		{
 			SynthesisFormula? synthesisFormulaById = ComposeConfig.Instance.GetSynthesisFormulaById(this.GetConfigId(this.ItemData));
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			base.GetText(12).SetText(localText, true);
 		}
 
-		// Token: 0x060385C5 RID: 230853 RVA: 0x00D613E8 File Offset: 0x00D5F5E8
+		// Token: 0x0602D4C2 RID: 185538 RVA: 0x00CAF538 File Offset: 0x00CAD738
 		private void RefreshQuality()
 		{
 			switch (this.GetMainType(this.ItemData))
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			base.SetItemQualityIcon(base.GetSprite(10), synthesisFormulaById.Value.ItemId, null, CommonDefine.EQualityIconType.BackgroundSprite, null);
 		}
 
-		// Token: 0x060385C6 RID: 230854 RVA: 0x00D614D4 File Offset: 0x00D5F6D4
+		// Token: 0x0602D4C3 RID: 185539 RVA: 0x00CAF624 File Offset: 0x00CAD824
 		private void RefreshIcon()
 		{
 			switch (this.GetMainType(this.ItemData))
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			}
 		}
 
-		// Token: 0x060385C7 RID: 230855 RVA: 0x00D61678 File Offset: 0x00D5F878
+		// Token: 0x0602D4C4 RID: 185540 RVA: 0x00CAF7C8 File Offset: 0x00CAD9C8
 		private void RefreshLock()
 		{
 			switch (this.GetMainType(this.ItemData))
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			}
 		}
 
-		// Token: 0x060385C8 RID: 230856 RVA: 0x00D61710 File Offset: 0x00D5F910
+		// Token: 0x0602D4C5 RID: 185541 RVA: 0x00CAF860 File Offset: 0x00CADA60
 		private void RefreshShadow()
 		{
 			switch (this.GetMainType(this.ItemData))
@@ -225,31 +225,31 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			}
 		}
 
-		// Token: 0x060385C9 RID: 230857 RVA: 0x00D61884 File Offset: 0x00D5FA84
+		// Token: 0x0602D4C6 RID: 185542 RVA: 0x00CAF9D4 File Offset: 0x00CADBD4
 		private void RefreshNew()
 		{
 			base.GetItem(9).SetUIActive(this.GetIsNew(this.ItemData));
 		}
 
-		// Token: 0x060385CA RID: 230858 RVA: 0x00D6189F File Offset: 0x00D5FA9F
+		// Token: 0x0602D4C7 RID: 185543 RVA: 0x00CAF9EF File Offset: 0x00CADBEF
 		public void BindOnClickedCallback(Action<object> onItemButtonClicked)
 		{
 			this.OnClickedCallback = onItemButtonClicked;
 		}
 
-		// Token: 0x060385CB RID: 230859 RVA: 0x00D618A8 File Offset: 0x00D5FAA8
+		// Token: 0x0602D4C8 RID: 185544 RVA: 0x00CAF9F8 File Offset: 0x00CADBF8
 		public override void OnSelected(bool fireEvent)
 		{
 			this.Selected(true, true);
 		}
 
-		// Token: 0x060385CC RID: 230860 RVA: 0x00D618B2 File Offset: 0x00D5FAB2
+		// Token: 0x0602D4C9 RID: 185545 RVA: 0x00CAFA02 File Offset: 0x00CADC02
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.Selected(false, true);
 		}
 
-		// Token: 0x060385CD RID: 230861 RVA: 0x00D618BC File Offset: 0x00D5FABC
+		// Token: 0x0602D4CA RID: 185546 RVA: 0x00CAFA0C File Offset: 0x00CADC0C
 		private void Selected(bool bSelected, bool fire = true)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(6);
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060385CE RID: 230862 RVA: 0x00D618EB File Offset: 0x00D5FAEB
+		// Token: 0x0602D4CB RID: 185547 RVA: 0x00CAFA3B File Offset: 0x00CADC3B
 		private void OnItemButtonClicked(EToggleState state)
 		{
 			if (this.OnClickedCallback != null)
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			}
 		}
 
-		// Token: 0x060385CF RID: 230863 RVA: 0x00D6190C File Offset: 0x00D5FB0C
+		// Token: 0x0602D4CC RID: 185548 RVA: 0x00CAFA5C File Offset: 0x00CADC5C
 		private int GetConfigId(object data)
 		{
 			ICollectData collectData = data as ICollectData;
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			return 0;
 		}
 
-		// Token: 0x060385D0 RID: 230864 RVA: 0x00D61960 File Offset: 0x00D5FB60
+		// Token: 0x0602D4CD RID: 185549 RVA: 0x00CAFAB0 File Offset: 0x00CADCB0
 		private EComposeListType GetMainType(object data)
 		{
 			ICollectData collectData = data as ICollectData;
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			return EComposeListType.Purification;
 		}
 
-		// Token: 0x060385D1 RID: 230865 RVA: 0x00D619B4 File Offset: 0x00D5FBB4
+		// Token: 0x0602D4CE RID: 185550 RVA: 0x00CAFB04 File Offset: 0x00CADD04
 		private bool GetIsNew(object data)
 		{
 			ICollectData collectData = data as ICollectData;
@@ -345,11 +345,11 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			return structureData != null && structureData.IsNew;
 		}
 
-		// Token: 0x0401D9E3 RID: 121315
+		// Token: 0x0401846E RID: 99438
 		[Nullable(2)]
 		private IBaseItemData ItemData;
 
-		// Token: 0x0401D9E4 RID: 121316
+		// Token: 0x0401846F RID: 99439
 		[Nullable(new byte[]
 		{
 			2,
@@ -357,29 +357,29 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 		})]
 		private Action<IBaseItemData> OnClickedCallback;
 
-		// Token: 0x0200B84F RID: 47183
+		// Token: 0x0200A277 RID: 41591
 		[NullableContext(0)]
 		private class EComposeContentItemDefine
 		{
-			// Token: 0x04037C92 RID: 228498
+			// Token: 0x040326AF RID: 206511
 			public const int ComposeExtendToggle = 6;
 
-			// Token: 0x04037C93 RID: 228499
+			// Token: 0x040326B0 RID: 206512
 			public const int LockItem = 7;
 
-			// Token: 0x04037C94 RID: 228500
+			// Token: 0x040326B1 RID: 206513
 			public const int ShadowItem = 8;
 
-			// Token: 0x04037C95 RID: 228501
+			// Token: 0x040326B2 RID: 206514
 			public const int NewItem = 9;
 
-			// Token: 0x04037C96 RID: 228502
+			// Token: 0x040326B3 RID: 206515
 			public const int QualitySprite = 10;
 
-			// Token: 0x04037C97 RID: 228503
+			// Token: 0x040326B4 RID: 206516
 			public const int IconTexture = 11;
 
-			// Token: 0x04037C98 RID: 228504
+			// Token: 0x040326B5 RID: 206517
 			public const int TxtName = 12;
 		}
 	}

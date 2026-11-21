@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E21 RID: 24097
+	// Token: 0x02004E06 RID: 19974
 	public class SpecialEnergyBarNumItem : UiPanelBase
 	{
-		// Token: 0x0603D496 RID: 251030 RVA: 0x00EC51CC File Offset: 0x00EC33CC
+		// Token: 0x06032425 RID: 205861 RVA: 0x00E1672C File Offset: 0x00E1492C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D497 RID: 251031 RVA: 0x00EC5214 File Offset: 0x00EC3414
+		// Token: 0x06032426 RID: 205862 RVA: 0x00E16774 File Offset: 0x00E14974
 		public void SetNum(int num)
 		{
 			if (this.Num == num)
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			text.SetText(num.ToString(), true);
 		}
 
-		// Token: 0x0401FF58 RID: 130904
+		// Token: 0x0401AA1F RID: 109087
 		private int Num = -1;
 
-		// Token: 0x0200C19F RID: 49567
+		// Token: 0x0200ABAE RID: 43950
 		private enum EChildType
 		{
-			// Token: 0x0403A824 RID: 239652
+			// Token: 0x04035216 RID: 217622
 			NumText
 		}
 	}

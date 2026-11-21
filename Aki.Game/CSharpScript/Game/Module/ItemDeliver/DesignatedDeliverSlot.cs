@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.ItemDeliver
 {
-	// Token: 0x02005814 RID: 22548
+	// Token: 0x020047EB RID: 18411
 	public class DesignatedDeliverSlot
 	{
-		// Token: 0x0401DF78 RID: 122744
+		// Token: 0x04018A0F RID: 100879
 		public int ItemConfigId;
 
-		// Token: 0x0401DF79 RID: 122745
+		// Token: 0x04018A10 RID: 100880
 		public int NeedCount;
 	}
 }

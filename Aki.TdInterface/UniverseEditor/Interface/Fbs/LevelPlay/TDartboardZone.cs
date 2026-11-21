@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045FC RID: 17916
+	// Token: 0x02004A64 RID: 19044
 	public enum TDartboardZone : byte
 	{
-		// Token: 0x0400C6E2 RID: 50914
+		// Token: 0x0400D111 RID: 53521
 		NONE,
-		// Token: 0x0400C6E3 RID: 50915
+		// Token: 0x0400D112 RID: 53522
 		ICenterBullZone,
-		// Token: 0x0400C6E4 RID: 50916
+		// Token: 0x0400D113 RID: 53523
 		IDoubleScoreZone,
-		// Token: 0x0400C6E5 RID: 50917
+		// Token: 0x0400D114 RID: 53524
 		IOuterBullZone,
-		// Token: 0x0400C6E6 RID: 50918
+		// Token: 0x0400D115 RID: 53525
 		ISingleScoreZone,
-		// Token: 0x0400C6E7 RID: 50919
+		// Token: 0x0400D116 RID: 53526
 		ITripleScoreZone
 	}
 }

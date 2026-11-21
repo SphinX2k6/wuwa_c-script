@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005FA RID: 1530
+	// Token: 0x02000612 RID: 1554
 	public class ConfigNewTowerBossBuffById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060023EC RID: 9196 RVA: 0x00124A83 File Offset: 0x00122C83
+		// Token: 0x0600247C RID: 9340 RVA: 0x0012B4FF File Offset: 0x001296FF
 		static ConfigNewTowerBossBuffById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewTowerBossBuffById.CreateStaticDefaultValue), new Action(ConfigNewTowerBossBuffById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060023ED RID: 9197 RVA: 0x00124AA4 File Offset: 0x00122CA4
+		// Token: 0x0600247D RID: 9341 RVA: 0x0012B520 File Offset: 0x00129720
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewTowerBossBuffById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060023EE RID: 9198 RVA: 0x00124B23 File Offset: 0x00122D23
+		// Token: 0x0600247E RID: 9342 RVA: 0x0012B59F File Offset: 0x0012979F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewTowerBossBuffById.LogPair = null;
 			ConfigNewTowerBossBuffById.HandleId = 0;
 		}
 
-		// Token: 0x060023EF RID: 9199 RVA: 0x00124B31 File Offset: 0x00122D31
+		// Token: 0x0600247F RID: 9343 RVA: 0x0012B5AD File Offset: 0x001297AD
 		public static void Init()
 		{
 			ConfigNewTowerBossBuffById.HandleId = ConfigCommon.InitDataStatement(ConfigNewTowerBossBuffById.HandleId, "db_newtower.db", "select BinData from `NewTowerBossBuff` where Id=?");
 		}
 
-		// Token: 0x060023F0 RID: 9200 RVA: 0x00124B4C File Offset: 0x00122D4C
+		// Token: 0x06002480 RID: 9344 RVA: 0x0012B5C8 File Offset: 0x001297C8
 		public static NewTowerBossBuff? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigNewTowerBossBuffById.HandleId, ConfigNewTowerBossBuffById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new NewTowerBossBuff?(rootAsNewTowerBossBuff);
 		}
 
-		// Token: 0x040029BC RID: 10684
+		// Token: 0x04002A64 RID: 10852
 		private const string DB = "db_newtower.db";
 
-		// Token: 0x040029BD RID: 10685
+		// Token: 0x04002A65 RID: 10853
 		private const string FILE = "x.3.0新爬塔.xlsx";
 
-		// Token: 0x040029BE RID: 10686
+		// Token: 0x04002A66 RID: 10854
 		private const string TABLE = "NewTowerBossBuff";
 
-		// Token: 0x040029BF RID: 10687
+		// Token: 0x04002A67 RID: 10855
 		private const string COMMAND = "select BinData from `NewTowerBossBuff` where Id=?";
 
-		// Token: 0x040029C0 RID: 10688
+		// Token: 0x04002A68 RID: 10856
 		private const string KEY_PREFIX = "NewTowerBossBuffById";
 
-		// Token: 0x040029C1 RID: 10689
+		// Token: 0x04002A69 RID: 10857
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040029C2 RID: 10690
+		// Token: 0x04002A6A RID: 10858
 		private static int HandleId;
 	}
 }

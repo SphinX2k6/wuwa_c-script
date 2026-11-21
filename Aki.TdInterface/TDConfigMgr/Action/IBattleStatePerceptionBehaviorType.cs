@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001806 RID: 6150
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200198F RID: 6543
 	public class IBattleStatePerceptionBehaviorType
 	{
-		// Token: 0x06008409 RID: 33801 RVA: 0x0013AD60 File Offset: 0x00138F60
+		// Token: 0x06008B25 RID: 35621 RVA: 0x0014A448 File Offset: 0x00148648
 		private IBattleStatePerceptionBehaviorType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600840A RID: 33802 RVA: 0x0013AD98 File Offset: 0x00138F98
+		// Token: 0x06008B26 RID: 35622 RVA: 0x0014A480 File Offset: 0x00148680
 		public static IBattleStatePerceptionBehaviorType Create([Nullable(2)] IBattleStatePerceptionBehaviorType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600840B RID: 33803 RVA: 0x0013ADAB File Offset: 0x00138FAB
+		// Token: 0x06008B27 RID: 35623 RVA: 0x0014A493 File Offset: 0x00148693
 		public static IBattleStatePerceptionBehaviorType CreateFromSetValue([Nullable(2)] IBattleStatePerceptionBehaviorType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600840C RID: 33804 RVA: 0x0013ADBE File Offset: 0x00138FBE
+		// Token: 0x06008B28 RID: 35624 RVA: 0x0014A4A6 File Offset: 0x001486A6
 		public IBattleStatePerceptionBehaviorType_SetValue ToSetValue()
 		{
 			return new IBattleStatePerceptionBehaviorType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B50 RID: 11088
-		// (get) Token: 0x0600840D RID: 33805 RVA: 0x0013ADD1 File Offset: 0x00138FD1
-		// (set) Token: 0x0600840E RID: 33806 RVA: 0x0013ADFC File Offset: 0x00138FFC
+		// Token: 0x17002D48 RID: 11592
+		// (get) Token: 0x06008B29 RID: 35625 RVA: 0x0014A4B9 File Offset: 0x001486B9
+		// (set) Token: 0x06008B2A RID: 35626 RVA: 0x0014A4E4 File Offset: 0x001486E4
 		public virtual EBattleStatePerceptionBehavior Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053A5 RID: 21413
+		// Token: 0x040057ED RID: 22509
 		[Nullable(2)]
 		protected IBattleStatePerceptionBehaviorType FbInstance;
 
-		// Token: 0x040053A6 RID: 21414
+		// Token: 0x040057EE RID: 22510
 		[Nullable(2)]
 		protected IBattleStatePerceptionBehaviorType_SetValue PocoInterface;
 	}

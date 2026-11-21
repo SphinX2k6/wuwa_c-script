@@ -6,32 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000D1D RID: 3357
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200022F RID: 559
 	[UnrealObjectPath("/Script/Engine.Layer")]
 	[UnrealStructLayout(80, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 80)]
 	public class ULayer : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600B3F7 RID: 46071 RVA: 0x00100A4B File Offset: 0x000FEC4B
+		// Token: 0x06002D25 RID: 11557 RVA: 0x0003FBEE File Offset: 0x0003DDEE
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULayer._ClassPtr;
 		}
 
-		// Token: 0x0600B3F8 RID: 46072 RVA: 0x00100A58 File Offset: 0x000FEC58
+		// Token: 0x06002D26 RID: 11558 RVA: 0x0003FBFC File Offset: 0x0003DDFC
 		public ULayer() : this(BuiltinUtils.AllocNativeUObject(ULayer.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600B3F9 RID: 46073 RVA: 0x00100A80 File Offset: 0x000FEC80
+		// Token: 0x06002D27 RID: 11559 RVA: 0x0003FC24 File Offset: 0x0003DE24
+		[NullableContext(1)]
 		public ULayer(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULayer.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002925 RID: 10533
-		// (get) Token: 0x0600B3FA RID: 46074 RVA: 0x00100AB3 File Offset: 0x000FECB3
-		// (set) Token: 0x0600B3FB RID: 46075 RVA: 0x00100AC7 File Offset: 0x000FECC7
+		// Token: 0x1700054B RID: 1355
+		// (get) Token: 0x06002D28 RID: 11560 RVA: 0x0003FC57 File Offset: 0x0003DE57
+		// (set) Token: 0x06002D29 RID: 11561 RVA: 0x0003FC6B File Offset: 0x0003DE6B
 		public unsafe FName LayerName
 		{
 			get
@@ -44,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002926 RID: 10534
-		// (get) Token: 0x0600B3FC RID: 46076 RVA: 0x00100ADC File Offset: 0x000FECDC
-		// (set) Token: 0x0600B3FD RID: 46077 RVA: 0x00100AF5 File Offset: 0x000FECF5
+		// Token: 0x1700054C RID: 1356
+		// (get) Token: 0x06002D2A RID: 11562 RVA: 0x0003FC80 File Offset: 0x0003DE80
+		// (set) Token: 0x06002D2B RID: 11563 RVA: 0x0003FC99 File Offset: 0x0003DE99
 		public unsafe bool bIsVisible
 		{
 			get
@@ -59,65 +58,34 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002927 RID: 10535
-		// (get) Token: 0x0600B3FE RID: 46078 RVA: 0x00100B28 File Offset: 0x000FED28
-		// (set) Token: 0x0600B3FF RID: 46079 RVA: 0x00100B61 File Offset: 0x000FED61
-		public TArray<FLayerActorStats> ActorStats
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FLayerActorStats> result;
-				if ((result = this._ActorStats) == null)
-				{
-					result = (this._ActorStats = new TArray<FLayerActorStats>(base.NativePtr + (IntPtr)ULayer.__PropertyOffset_ActorStats, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ActorStats.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x0600B400 RID: 46080 RVA: 0x00100B6F File Offset: 0x000FED6F
+		// Token: 0x06002D2C RID: 11564 RVA: 0x0003FCC9 File Offset: 0x0003DEC9
 		static ULayer()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.Layer");
 		}
 
-		// Token: 0x0600B401 RID: 46081 RVA: 0x00100B7D File Offset: 0x000FED7D
+		// Token: 0x06002D2D RID: 11565 RVA: 0x0003FCD7 File Offset: 0x0003DED7
 		protected ULayer(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005E96 RID: 24214
+		// Token: 0x04000E52 RID: 3666
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.Layer";
 
-		// Token: 0x04005E97 RID: 24215
+		// Token: 0x04000E53 RID: 3667
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005E98 RID: 24216
+		// Token: 0x04000E54 RID: 3668
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04005E99 RID: 24217
+		// Token: 0x04000E55 RID: 3669
 		internal static int __PropertyOffset_LayerName;
 
-		// Token: 0x04005E9A RID: 24218
+		// Token: 0x04000E56 RID: 3670
 		internal static int __PropertyOffset_bIsVisible;
 
-		// Token: 0x04005E9B RID: 24219
+		// Token: 0x04000E57 RID: 3671
 		internal static byte __PropertyMask_bIsVisible;
-
-		// Token: 0x04005E9C RID: 24220
-		internal static int __PropertyOffset_ActorStats;
-
-		// Token: 0x04005E9D RID: 24221
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FLayerActorStats> _ActorStats;
 	}
 }

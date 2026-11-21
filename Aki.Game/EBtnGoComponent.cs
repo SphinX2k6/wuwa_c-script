@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02001EC8 RID: 7880
+// Token: 0x0200138A RID: 5002
 public enum EBtnGoComponent
 {
-	// Token: 0x0400703B RID: 28731
+	// Token: 0x0400711C RID: 28956
 	BtnConfirm,
-	// Token: 0x0400703C RID: 28732
+	// Token: 0x0400711D RID: 28957
 	TxtConfirm,
-	// Token: 0x0400703D RID: 28733
+	// Token: 0x0400711E RID: 28958
 	ItemRedDot,
-	// Token: 0x0400703E RID: 28734
+	// Token: 0x0400711F RID: 28959
 	TexCost,
-	// Token: 0x0400703F RID: 28735
+	// Token: 0x04007120 RID: 28960
 	TxtCost,
-	// Token: 0x04007040 RID: 28736
+	// Token: 0x04007121 RID: 28961
 	PnlLeft
 }

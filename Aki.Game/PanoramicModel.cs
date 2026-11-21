@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200230D RID: 8973
+// Token: 0x020017F1 RID: 6129
 [NullableContext(2)]
 [Nullable(0)]
 [Model(0)]
 public class PanoramicModel : ModelBase
 {
-	// Token: 0x170016AC RID: 5804
-	// (get) Token: 0x06011B87 RID: 72583 RVA: 0x0045BBF4 File Offset: 0x00459DF4
-	// (set) Token: 0x06011B88 RID: 72584 RVA: 0x0045BBFC File Offset: 0x00459DFC
+	// Token: 0x170016E3 RID: 5859
+	// (get) Token: 0x0600F022 RID: 61474 RVA: 0x00468A04 File Offset: 0x00466C04
+	// (set) Token: 0x0600F023 RID: 61475 RVA: 0x00468A0C File Offset: 0x00466C0C
 	public bool IsPanoramic
 	{
 		get
@@ -24,9 +24,9 @@ public class PanoramicModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016AD RID: 5805
-	// (get) Token: 0x06011B89 RID: 72585 RVA: 0x0045BC05 File Offset: 0x00459E05
-	// (set) Token: 0x06011B8A RID: 72586 RVA: 0x0045BC0D File Offset: 0x00459E0D
+	// Token: 0x170016E4 RID: 5860
+	// (get) Token: 0x0600F024 RID: 61476 RVA: 0x00468A15 File Offset: 0x00466C15
+	// (set) Token: 0x0600F025 RID: 61477 RVA: 0x00468A1D File Offset: 0x00466C1D
 	public int PlayMoveMotorTag
 	{
 		get
@@ -39,7 +39,7 @@ public class PanoramicModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011B8B RID: 72587 RVA: 0x0045BC16 File Offset: 0x00459E16
+	// Token: 0x0600F026 RID: 61478 RVA: 0x00468A26 File Offset: 0x00466C26
 	protected override bool OnInit()
 	{
 		this.CurrentPanoramic = null;
@@ -49,7 +49,7 @@ public class PanoramicModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011B8C RID: 72588 RVA: 0x0045BC39 File Offset: 0x00459E39
+	// Token: 0x0600F027 RID: 61479 RVA: 0x00468A49 File Offset: 0x00466C49
 	protected override bool OnClear()
 	{
 		this.CurrentPanoramic = null;
@@ -59,7 +59,7 @@ public class PanoramicModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011B8D RID: 72589 RVA: 0x0045BC57 File Offset: 0x00459E57
+	// Token: 0x0600F028 RID: 61480 RVA: 0x00468A67 File Offset: 0x00466C67
 	protected override bool OnLeaveLevel()
 	{
 		this.CurrentPanoramic = null;
@@ -69,7 +69,7 @@ public class PanoramicModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011B8E RID: 72590 RVA: 0x0045BC78 File Offset: 0x00459E78
+	// Token: 0x0600F029 RID: 61481 RVA: 0x00468A88 File Offset: 0x00466C88
 	[NullableContext(1)]
 	public void AddPoint(long num, PanoramicPointComponent comp)
 	{
@@ -93,7 +93,7 @@ public class PanoramicModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011B8F RID: 72591 RVA: 0x0045BCF4 File Offset: 0x00459EF4
+	// Token: 0x0600F02A RID: 61482 RVA: 0x00468B04 File Offset: 0x00466D04
 	public void RemovePoint(long num)
 	{
 		Dictionary<long, PanoramicPointComponent> allPoints = this.AllPoints;
@@ -115,7 +115,7 @@ public class PanoramicModel : ModelBase
 		allPoints3.Remove(num);
 	}
 
-	// Token: 0x06011B90 RID: 72592 RVA: 0x0045BD50 File Offset: 0x00459F50
+	// Token: 0x0600F02B RID: 61483 RVA: 0x00468B60 File Offset: 0x00466D60
 	public void ClearPoint()
 	{
 		Log.Instance.Info(ELogModule.Panoramic, ELogAuthor.JYS, "[环视] ClearPoint", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -127,7 +127,7 @@ public class PanoramicModel : ModelBase
 		this.AllPoints = null;
 	}
 
-	// Token: 0x06011B91 RID: 72593 RVA: 0x0045BD94 File Offset: 0x00459F94
+	// Token: 0x0600F02C RID: 61484 RVA: 0x00468BA4 File Offset: 0x00466DA4
 	public PanoramicPointComponent FindPoint(long num)
 	{
 		Dictionary<long, PanoramicPointComponent> allPoints = this.AllPoints;
@@ -144,7 +144,7 @@ public class PanoramicModel : ModelBase
 		return allPoints2.GetValueOrDefault(num);
 	}
 
-	// Token: 0x06011B92 RID: 72594 RVA: 0x0045BDEC File Offset: 0x00459FEC
+	// Token: 0x0600F02D RID: 61485 RVA: 0x00468BFC File Offset: 0x00466DFC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -155,7 +155,7 @@ public class PanoramicModel : ModelBase
 		return this.AllPoints;
 	}
 
-	// Token: 0x06011B93 RID: 72595 RVA: 0x0045BDF4 File Offset: 0x00459FF4
+	// Token: 0x0600F02E RID: 61486 RVA: 0x00468C04 File Offset: 0x00466E04
 	public int GetPointNum()
 	{
 		Dictionary<long, PanoramicPointComponent> allPoints = this.AllPoints;
@@ -166,7 +166,7 @@ public class PanoramicModel : ModelBase
 		return allPoints.Count;
 	}
 
-	// Token: 0x06011B94 RID: 72596 RVA: 0x0045BE08 File Offset: 0x0045A008
+	// Token: 0x0600F02F RID: 61487 RVA: 0x00468C18 File Offset: 0x00466E18
 	public void SetCurrentPanoramic(PanoramicPointComponent value, bool noUpdate = false)
 	{
 		if (value == null)
@@ -221,13 +221,13 @@ public class PanoramicModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011B95 RID: 72597 RVA: 0x0045BF32 File Offset: 0x0045A132
+	// Token: 0x0600F030 RID: 61488 RVA: 0x00468D42 File Offset: 0x00466F42
 	public PanoramicPointComponent GetCurrentPanoramic()
 	{
 		return this.CurrentPanoramic;
 	}
 
-	// Token: 0x06011B96 RID: 72598 RVA: 0x0045BF3C File Offset: 0x0045A13C
+	// Token: 0x0600F031 RID: 61489 RVA: 0x00468D4C File Offset: 0x00466F4C
 	public void ChangeAllPanoramicType(EPanoramicType type)
 	{
 		if (this.AllPoints != null)
@@ -239,7 +239,7 @@ public class PanoramicModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011B97 RID: 72599 RVA: 0x0045BF9C File Offset: 0x0045A19C
+	// Token: 0x0600F032 RID: 61490 RVA: 0x00468DAC File Offset: 0x00466FAC
 	public void ChangeAllPanoramicTypeExecptWhich(EPanoramicType type, long? id)
 	{
 		if (this.AllPoints != null)
@@ -256,8 +256,8 @@ public class PanoramicModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016AE RID: 5806
-	// (get) Token: 0x06011B98 RID: 72600 RVA: 0x0045C018 File Offset: 0x0045A218
+	// Token: 0x170016E5 RID: 5861
+	// (get) Token: 0x0600F033 RID: 61491 RVA: 0x00468E28 File Offset: 0x00467028
 	[Nullable(1)]
 	public static PanoramicModel Instance
 	{
@@ -268,7 +268,7 @@ public class PanoramicModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011B99 RID: 72601 RVA: 0x0045C01F File Offset: 0x0045A21F
+	// Token: 0x0600F034 RID: 61492 RVA: 0x00468E2F File Offset: 0x0046702F
 	[NullableContext(1)]
 	public static PanoramicModel GetOrCreateInstance()
 	{
@@ -279,7 +279,7 @@ public class PanoramicModel : ModelBase
 		return PanoramicModel._Instance;
 	}
 
-	// Token: 0x06011B9A RID: 72602 RVA: 0x0045C033 File Offset: 0x0045A233
+	// Token: 0x0600F035 RID: 61493 RVA: 0x00468E43 File Offset: 0x00467043
 	public static bool CreateInstance()
 	{
 		if (PanoramicModel._Instance != null)
@@ -290,27 +290,27 @@ public class PanoramicModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011B9B RID: 72603 RVA: 0x0045C049 File Offset: 0x0045A249
+	// Token: 0x0600F036 RID: 61494 RVA: 0x00468E59 File Offset: 0x00467059
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011B9C RID: 72604 RVA: 0x0045C04B File Offset: 0x0045A24B
+	// Token: 0x0600F037 RID: 61495 RVA: 0x00468E5B File Offset: 0x0046705B
 	public static void ResetStaticDefaultValue()
 	{
 		PanoramicModel._Instance = null;
 	}
 
-	// Token: 0x06011B9D RID: 72605 RVA: 0x0045C053 File Offset: 0x0045A253
+	// Token: 0x0600F038 RID: 61496 RVA: 0x00468E63 File Offset: 0x00467063
 	static PanoramicModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PanoramicModel.CreateStaticDefaultValue), new Action(PanoramicModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400866D RID: 34413
+	// Token: 0x040087AD RID: 34733
 	private PanoramicPointComponent CurrentPanoramic;
 
-	// Token: 0x0400866E RID: 34414
+	// Token: 0x040087AE RID: 34734
 	[Nullable(new byte[]
 	{
 		2,
@@ -318,15 +318,15 @@ public class PanoramicModel : ModelBase
 	})]
 	private Dictionary<long, PanoramicPointComponent> AllPoints;
 
-	// Token: 0x0400866F RID: 34415
+	// Token: 0x040087AF RID: 34735
 	private bool Activated;
 
-	// Token: 0x04008670 RID: 34416
+	// Token: 0x040087B0 RID: 34736
 	private bool Panoramic;
 
-	// Token: 0x04008671 RID: 34417
+	// Token: 0x040087B1 RID: 34737
 	private int MotorTag;
 
-	// Token: 0x04008672 RID: 34418
+	// Token: 0x040087B2 RID: 34738
 	private static PanoramicModel _Instance;
 }

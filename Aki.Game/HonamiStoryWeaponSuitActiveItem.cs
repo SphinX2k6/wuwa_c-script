@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.HonamiStory.Data;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F07 RID: 7943
+// Token: 0x020013C9 RID: 5065
 public class HonamiStoryWeaponSuitActiveItem : UiPanelBase
 {
-	// Token: 0x0600F4A0 RID: 62624 RVA: 0x003B0400 File Offset: 0x003AE600
+	// Token: 0x0600C8BF RID: 51391 RVA: 0x003BBEF4 File Offset: 0x003BA0F4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -23,14 +23,14 @@ public class HonamiStoryWeaponSuitActiveItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F4A1 RID: 62625 RVA: 0x003B0448 File Offset: 0x003AE648
+	// Token: 0x0600C8C0 RID: 51392 RVA: 0x003BBF3C File Offset: 0x003BA13C
 	protected override void OnBeforeCreateImplement()
 	{
 		this.LevelPlaySequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.LevelPlaySequence);
 	}
 
-	// Token: 0x0600F4A2 RID: 62626 RVA: 0x003B0464 File Offset: 0x003AE664
+	// Token: 0x0600C8C1 RID: 51393 RVA: 0x003BBF58 File Offset: 0x003BA158
 	[NullableContext(1)]
 	public void Refresh(IHonamiStoryWeaponSuitData data)
 	{
@@ -89,31 +89,31 @@ public class HonamiStoryWeaponSuitActiveItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04007131 RID: 28977
+	// Token: 0x04007212 RID: 29202
 	private const int START_SHOW_MIN_COUNT = 2;
 
-	// Token: 0x04007132 RID: 28978
+	// Token: 0x04007213 RID: 29203
 	[Nullable(2)]
 	private UiBehaviorLevelSequence LevelPlaySequence;
 
-	// Token: 0x04007133 RID: 28979
+	// Token: 0x04007214 RID: 29204
 	private bool LastActiveStatus;
 
-	// Token: 0x02008512 RID: 34066
+	// Token: 0x02007697 RID: 30359
 	private enum EHonamiStoryWeaponSuitActiveItemComponent
 	{
-		// Token: 0x0402B4E8 RID: 177384
+		// Token: 0x0402680C RID: 157708
 		Sprite
 	}
 
-	// Token: 0x02008513 RID: 34067
+	// Token: 0x02007698 RID: 30360
 	private enum EHonamiStoryWeaponSuitActiveItemIndex
 	{
-		// Token: 0x0402B4EA RID: 177386
+		// Token: 0x0402680E RID: 157710
 		InActive,
-		// Token: 0x0402B4EB RID: 177387
+		// Token: 0x0402680F RID: 157711
 		ActiveOne,
-		// Token: 0x0402B4EC RID: 177388
+		// Token: 0x04026810 RID: 157712
 		ActiveAll
 	}
 }

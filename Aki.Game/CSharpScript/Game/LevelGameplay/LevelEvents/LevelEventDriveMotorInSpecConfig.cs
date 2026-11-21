@@ -12,23 +12,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B13 RID: 27411
+	// Token: 0x02005C8B RID: 23691
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventDriveMotorInSpecConfig : LevelEventBase, IStaticVariableResetter
 	{
-		// Token: 0x06044090 RID: 278672 RVA: 0x010B8B80 File Offset: 0x010B6D80
+		// Token: 0x0603A1E2 RID: 238050 RVA: 0x0106240C File Offset: 0x0106060C
 		static LevelEventDriveMotorInSpecConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelEventDriveMotorInSpecConfig.CreateStaticDefaultValue), new Action(LevelEventDriveMotorInSpecConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06044091 RID: 278673 RVA: 0x010B8BD2 File Offset: 0x010B6DD2
+		// Token: 0x0603A1E3 RID: 238051 RVA: 0x0106245E File Offset: 0x0106065E
 		public LevelEventDriveMotorInSpecConfig(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044092 RID: 278674 RVA: 0x010B8BE8 File Offset: 0x010B6DE8
+		// Token: 0x0603A1E4 RID: 238052 RVA: 0x01062474 File Offset: 0x01060674
 		protected void Interrupt(string reason)
 		{
 			if (this.TransitionTimerHandle != null && TimerSystem.Instance.Has(this.TransitionTimerHandle))
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.WaitTransitionTimePromise = null;
 		}
 
-		// Token: 0x06044093 RID: 278675 RVA: 0x010B8C40 File Offset: 0x010B6E40
+		// Token: 0x0603A1E5 RID: 238053 RVA: 0x010624CC File Offset: 0x010606CC
 		private void OnVehicleBeenLeaved(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(25, 1);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.Interrupt(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06044094 RID: 278676 RVA: 0x010B8C80 File Offset: 0x010B6E80
+		// Token: 0x0603A1E6 RID: 238054 RVA: 0x0106250C File Offset: 0x0106070C
 		private void OnTeleportStart(bool loading)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(21, 1);
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.Interrupt(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06044095 RID: 278677 RVA: 0x010B8CB8 File Offset: 0x010B6EB8
+		// Token: 0x0603A1E7 RID: 238055 RVA: 0x01062544 File Offset: 0x01060744
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			int id = handle.Id;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044096 RID: 278678 RVA: 0x010B8D29 File Offset: 0x010B6F29
+		// Token: 0x0603A1E8 RID: 238056 RVA: 0x010625B5 File Offset: 0x010607B5
 		private void OnExecuteAfterSetPlotMode()
 		{
 			if (PlotModel.Instance.IsInOverLevel(EPlotLevel.LevelC))
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044097 RID: 278679 RVA: 0x010B8D44 File Offset: 0x010B6F44
+		// Token: 0x0603A1E9 RID: 238057 RVA: 0x010625D0 File Offset: 0x010607D0
 		private void OnCharBeforeSkillWithTarget(int skillId, bool isAutonomousProxy)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(54, 2);
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.Interrupt(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06044098 RID: 278680 RVA: 0x010B8D90 File Offset: 0x010B6F90
+		// Token: 0x0603A1EA RID: 238058 RVA: 0x0106261C File Offset: 0x0106081C
 		protected override void OnFailure()
 		{
 			this.ClearAndLogReport(0);
 		}
 
-		// Token: 0x06044099 RID: 278681 RVA: 0x010B8D9C File Offset: 0x010B6F9C
+		// Token: 0x0603A1EB RID: 238059 RVA: 0x01062628 File Offset: 0x01060828
 		protected void ClearAndLogReport(int reportResult)
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LevelPlayController.Instance.LogReportMotorcycleLevelPlay(creatureDataComponent2.GetPbDataId(), EMotorcycleLevelPlayType.JumpPlatform, new bool?(true), reportResult, 1);
 		}
 
-		// Token: 0x0604409A RID: 278682 RVA: 0x010B9030 File Offset: 0x010B7230
+		// Token: 0x0603A1EC RID: 238060 RVA: 0x010628BC File Offset: 0x01060ABC
 		private UniTask DriveMotorInSpecConfig(ActionParams inParams, GeneralContext context)
 		{
 			LevelEventDriveMotorInSpecConfig.<DriveMotorInSpecConfig>d__19 <DriveMotorInSpecConfig>d__;
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <DriveMotorInSpecConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604409B RID: 278683 RVA: 0x010B907C File Offset: 0x010B727C
+		// Token: 0x0603A1ED RID: 238061 RVA: 0x01062908 File Offset: 0x01060B08
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -271,32 +271,32 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(false, false, true);
 		}
 
-		// Token: 0x0604409C RID: 278684 RVA: 0x010B9339 File Offset: 0x010B7539
+		// Token: 0x0603A1EE RID: 238062 RVA: 0x01062BC5 File Offset: 0x01060DC5
 		public static void CreateStaticDefaultValue()
 		{
 			LevelEventDriveMotorInSpecConfig.ExecutingEntities = new HashSet<int>();
 		}
 
-		// Token: 0x0604409D RID: 278685 RVA: 0x010B9345 File Offset: 0x010B7545
+		// Token: 0x0603A1EF RID: 238063 RVA: 0x01062BD1 File Offset: 0x01060DD1
 		public static void ResetStaticDefaultValue()
 		{
 			LevelEventDriveMotorInSpecConfig.ExecutingEntities = null;
 		}
 
-		// Token: 0x040238D8 RID: 145624
+		// Token: 0x0401EB7A RID: 125818
 		private static readonly int sprintTagId = GameplayTagDefine.EGameplayTagId["载具.摩托.移动.冲刺.跳台"];
 
-		// Token: 0x040238D9 RID: 145625
+		// Token: 0x0401EB7B RID: 125819
 		private static readonly int rotateTagId = GameplayTagDefine.EGameplayTagId["载具.摩托.功能开关.禁用转向.跳台"];
 
-		// Token: 0x040238DA RID: 145626
+		// Token: 0x0401EB7C RID: 125820
 		private const string JUMP_PLATFORM_BLUEPRINT_TYPE = "branch3.0_135_Gameplay129_1_3";
 
-		// Token: 0x040238DB RID: 145627
+		// Token: 0x0401EB7D RID: 125821
 		[Nullable(2)]
 		private TimerHandle TransitionTimerHandle;
 
-		// Token: 0x040238DC RID: 145628
+		// Token: 0x0401EB7E RID: 125822
 		[Nullable(new byte[]
 		{
 			2,
@@ -304,18 +304,18 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 		})]
 		private CustomPromise<string> WaitTransitionTimePromise;
 
-		// Token: 0x040238DD RID: 145629
+		// Token: 0x0401EB7F RID: 125823
 		private readonly List<int> TagIds = new List<int>();
 
-		// Token: 0x040238DE RID: 145630
+		// Token: 0x0401EB80 RID: 125824
 		[Nullable(2)]
 		private BaseTagComponent TagComponent;
 
-		// Token: 0x040238DF RID: 145631
+		// Token: 0x0401EB81 RID: 125825
 		[Nullable(2)]
 		private Entity VehicleEntity;
 
-		// Token: 0x040238E0 RID: 145632
+		// Token: 0x0401EB82 RID: 125826
 		private static HashSet<int> ExecutingEntities;
 	}
 }

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002073 RID: 8307
+	// Token: 0x02000695 RID: 1685
 	public sealed class FLGUIExtendToggleAudioWithStateDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F57A RID: 128378 RVA: 0x002E8BAA File Offset: 0x002E6DAA
+		// Token: 0x06009177 RID: 37239 RVA: 0x000DACD2 File Offset: 0x000D8ED2
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIExtendToggleAudioWithStateDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F57B RID: 128379 RVA: 0x002E8BB6 File Offset: 0x002E6DB6
+		// Token: 0x06009178 RID: 37240 RVA: 0x000DACDE File Offset: 0x000D8EDE
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIExtendToggleAudioWithStateDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIExtendToggleAudioWithStateDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F57C RID: 128380 RVA: 0x002E8BD9 File Offset: 0x002E6DD9
+		// Token: 0x06009179 RID: 37241 RVA: 0x000DAD01 File Offset: 0x000D8F01
 		public FLGUIExtendToggleAudioWithStateDelegate()
 		{
 		}
 
-		// Token: 0x0601F57D RID: 128381 RVA: 0x002E8BE1 File Offset: 0x002E6DE1
+		// Token: 0x0600917A RID: 37242 RVA: 0x000DAD09 File Offset: 0x000D8F09
 		[NullableContext(2)]
 		public FLGUIExtendToggleAudioWithStateDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F57E RID: 128382 RVA: 0x002E8BEB File Offset: 0x002E6DEB
+		// Token: 0x0600917B RID: 37243 RVA: 0x000DAD13 File Offset: 0x000D8F13
 		public FLGUIExtendToggleAudioWithStateDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F57F RID: 128383 RVA: 0x002E8BF6 File Offset: 0x002E6DF6
+		// Token: 0x0600917C RID: 37244 RVA: 0x000DAD1E File Offset: 0x000D8F1E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<EToggleAudioTransitionState, string>) ?? ((Action<EToggleAudioTransitionState, string>)Delegate.CreateDelegate(typeof(Action<EToggleAudioTransitionState, string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F580 RID: 128384 RVA: 0x002E8C28 File Offset: 0x002E6E28
+		// Token: 0x0600917D RID: 37245 RVA: 0x000DAD50 File Offset: 0x000D8F50
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<EToggleAudioTransitionState, string> Callback)
 		{
 			if (FLGUIExtendToggleAudioWithStateDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIExtendToggleAudioWithStateDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F581 RID: 128385 RVA: 0x002E8C64 File Offset: 0x002E6E64
+		// Token: 0x0600917E RID: 37246 RVA: 0x000DAD8C File Offset: 0x000D8F8C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(EToggleAudioTransitionState State, string EventName)
 		{
 			FLGUIExtendToggleAudioWithStateDelegate.__FLGUIExtendToggleAudioWithStateDelegate_DelegateParams* ptr = stackalloc FLGUIExtendToggleAudioWithStateDelegate.__FLGUIExtendToggleAudioWithStateDelegate_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FLGUIExtendToggleAudioWithStateDelegate.__FLGUIExtendToggleAudioWithStateDelegate_DelegateParams) & -16L;
@@ -79,10 +77,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FLGUIExtendToggleAudioWithStateDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F582 RID: 128386 RVA: 0x002E8CC0 File Offset: 0x002E6EC0
+		// Token: 0x0600917F RID: 37247 RVA: 0x000DADE8 File Offset: 0x000D8FE8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<EToggleAudioTransitionState, string> action = target as Action<EToggleAudioTransitionState, string>;
@@ -94,35 +91,35 @@ namespace UnrealEngine
 			action(((FLGUIExtendToggleAudioWithStateDelegate.__FLGUIExtendToggleAudioWithStateDelegate_DelegateParams*)__Parameters)->State, arg);
 		}
 
-		// Token: 0x04010EFF RID: 69375
+		// Token: 0x04003F6C RID: 16236
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010F00 RID: 69376
+		// Token: 0x04003F6D RID: 16237
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIExtendToggleAudioWithStateDelegate__DelegateSignature";
 
-		// Token: 0x04010F01 RID: 69377
+		// Token: 0x04003F6E RID: 16238
 		private static int RegisterId;
 
-		// Token: 0x02003476 RID: 13430
+		// Token: 0x02000EB9 RID: 3769
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FLGUIExtendToggleAudioWithStateDelegate_DelegateParams
+		private ref struct __FLGUIExtendToggleAudioWithStateDelegate_DelegateParams
 		{
-			// Token: 0x0401745E RID: 95326
+			// Token: 0x0400626D RID: 25197
 			[FieldOffset(0)]
 			public EToggleAudioTransitionState State;
 
-			// Token: 0x0401745F RID: 95327
+			// Token: 0x0400626E RID: 25198
 			[FieldOffset(8)]
 			public FString EventName;
 		}
 
-		// Token: 0x02003477 RID: 13431
+		// Token: 0x02000EBA RID: 3770
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017460 RID: 95328
+			// Token: 0x0400626F RID: 25199
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070E8 RID: 28904
+	// Token: 0x02006398 RID: 25496
 	public enum ERailJumpType
 	{
-		// Token: 0x0402505A RID: 151642
+		// Token: 0x04020CEF RID: 134383
 		TangentRotator,
-		// Token: 0x0402505B RID: 151643
+		// Token: 0x04020CF0 RID: 134384
 		TangentRotatorNoHeight,
-		// Token: 0x0402505C RID: 151644
+		// Token: 0x04020CF1 RID: 134385
 		RotatorFixedDirection,
-		// Token: 0x0402505D RID: 151645
+		// Token: 0x04020CF2 RID: 134386
 		TangentIgnoreSideRotator,
-		// Token: 0x0402505E RID: 151646
+		// Token: 0x04020CF3 RID: 134387
 		Sword,
-		// Token: 0x0402505F RID: 151647
+		// Token: 0x04020CF4 RID: 134388
 		Follower
 	}
 }

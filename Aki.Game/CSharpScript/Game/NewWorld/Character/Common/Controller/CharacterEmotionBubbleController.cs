@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 {
-	// Token: 0x020070B2 RID: 28850
+	// Token: 0x02006311 RID: 25361
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class CharacterEmotionBubbleController : ControllerBase
 	{
-		// Token: 0x0604655D RID: 288093 RVA: 0x011A17D4 File Offset: 0x0119F9D4
+		// Token: 0x0603D607 RID: 251399 RVA: 0x011BF0A6 File Offset: 0x011BD2A6
 		protected override bool OnInit()
 		{
 			this.InitEmotionConfig();
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return true;
 		}
 
-		// Token: 0x0604655E RID: 288094 RVA: 0x011A17E4 File Offset: 0x0119F9E4
+		// Token: 0x0603D608 RID: 251400 RVA: 0x011BF0B8 File Offset: 0x011BD2B8
 		[NullableContext(2)]
 		public IEmotionConfigInfo GetMonsterEmotionConfigById(int id)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return result;
 		}
 
-		// Token: 0x0604655F RID: 288095 RVA: 0x011A1818 File Offset: 0x0119FA18
+		// Token: 0x0603D609 RID: 251401 RVA: 0x011BF0EC File Offset: 0x011BD2EC
 		[NullableContext(2)]
 		public IEmotionEffectInfo GetMonsterEmotionInfo(int id)
 		{
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			};
 		}
 
-		// Token: 0x06046560 RID: 288096 RVA: 0x011A1874 File Offset: 0x0119FA74
+		// Token: 0x0603D60A RID: 251402 RVA: 0x011BF148 File Offset: 0x011BD348
 		[return: Nullable(2)]
 		public IEmotionEffectInfo GetAnimalEmotionInfo(string blueprintPath, string emotion, string montage)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return null;
 		}
 
-		// Token: 0x06046561 RID: 288097 RVA: 0x011A18E4 File Offset: 0x0119FAE4
+		// Token: 0x0603D60B RID: 251403 RVA: 0x011BF1B8 File Offset: 0x011BD3B8
 		private void InitEmotionConfig()
 		{
 			IReadOnlyList<EmotionBubbleConfig> configList = ConfigEmotionBubbleConfigAll.GetConfigList(true);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			}
 		}
 
-		// Token: 0x06046562 RID: 288098 RVA: 0x011A1954 File Offset: 0x0119FB54
+		// Token: 0x0603D60C RID: 251404 RVA: 0x011BF228 File Offset: 0x011BD428
 		private unsafe void InitMonsterConfig(int id)
 		{
 			EmotionBubbleMonsterConfig? config = ConfigEmotionBubbleMonsterConfigById.GetConfig(id, true);
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			};
 		}
 
-		// Token: 0x06046563 RID: 288099 RVA: 0x011A1B38 File Offset: 0x0119FD38
+		// Token: 0x0603D60D RID: 251405 RVA: 0x011BF40C File Offset: 0x011BD60C
 		private void InitAnimalConfig()
 		{
 			IReadOnlyList<EmotionBubbleAnimalConfig> configList = ConfigEmotionBubbleAnimalConfigAll.GetConfigList(true);
@@ -199,8 +199,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			}
 		}
 
-		// Token: 0x17009C59 RID: 40025
-		// (get) Token: 0x06046564 RID: 288100 RVA: 0x011A1C78 File Offset: 0x0119FE78
+		// Token: 0x1700744D RID: 29773
+		// (get) Token: 0x0603D60E RID: 251406 RVA: 0x011BF54C File Offset: 0x011BD74C
 		public static CharacterEmotionBubbleController Instance
 		{
 			get
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			}
 		}
 
-		// Token: 0x06046565 RID: 288101 RVA: 0x011A1C7F File Offset: 0x0119FE7F
+		// Token: 0x0603D60F RID: 251407 RVA: 0x011BF553 File Offset: 0x011BD753
 		public static CharacterEmotionBubbleController GetOrCreateInstance()
 		{
 			if (CharacterEmotionBubbleController._Instance == null)
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return CharacterEmotionBubbleController._Instance;
 		}
 
-		// Token: 0x06046566 RID: 288102 RVA: 0x011A1C93 File Offset: 0x0119FE93
+		// Token: 0x0603D610 RID: 251408 RVA: 0x011BF567 File Offset: 0x011BD767
 		public static bool CreateInstance()
 		{
 			if (CharacterEmotionBubbleController._Instance != null)
@@ -230,33 +230,33 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return true;
 		}
 
-		// Token: 0x06046567 RID: 288103 RVA: 0x011A1CA9 File Offset: 0x0119FEA9
+		// Token: 0x0603D611 RID: 251409 RVA: 0x011BF57D File Offset: 0x011BD77D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06046568 RID: 288104 RVA: 0x011A1CAB File Offset: 0x0119FEAB
+		// Token: 0x0603D612 RID: 251410 RVA: 0x011BF57F File Offset: 0x011BD77F
 		public static void ResetStaticDefaultValue()
 		{
 			CharacterEmotionBubbleController._Instance = null;
 		}
 
-		// Token: 0x06046569 RID: 288105 RVA: 0x011A1CB3 File Offset: 0x0119FEB3
+		// Token: 0x0603D613 RID: 251411 RVA: 0x011BF587 File Offset: 0x011BD787
 		static CharacterEmotionBubbleController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CharacterEmotionBubbleController.CreateStaticDefaultValue), new Action(CharacterEmotionBubbleController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024DB6 RID: 150966
+		// Token: 0x040208DD RID: 133341
 		private readonly Dictionary<int, IEmotionConfigInfo> MonsterEmotionMap = new Dictionary<int, IEmotionConfigInfo>();
 
-		// Token: 0x04024DB7 RID: 150967
+		// Token: 0x040208DE RID: 133342
 		private readonly Dictionary<string, Dictionary<string, Dictionary<string, IEmotionBubbleConfig>>> EmotionMontageMap = new Dictionary<string, Dictionary<string, Dictionary<string, IEmotionBubbleConfig>>>();
 
-		// Token: 0x04024DB8 RID: 150968
+		// Token: 0x040208DF RID: 133343
 		private readonly Dictionary<string, string> EmotionEffectMap = new Dictionary<string, string>();
 
-		// Token: 0x04024DB9 RID: 150969
+		// Token: 0x040208E0 RID: 133344
 		[Nullable(2)]
 		private static CharacterEmotionBubbleController _Instance;
 	}

@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A3F RID: 10815
+// Token: 0x02001FBA RID: 8122
 [NullableContext(1)]
 [Nullable(0)]
 public static class CalabashSkinDefine
 {
-	// Token: 0x0400A743 RID: 42819
+	// Token: 0x0400AB47 RID: 43847
 	public const string DEFAULT_CALABASH_SKIN_CASE = "TerminalCase";
 
-	// Token: 0x0400A744 RID: 42820
+	// Token: 0x0400AB48 RID: 43848
 	public const string CALABASH_SWITCH_EFFECT_ID = "CalabashSwitchEffect";
 
-	// Token: 0x0400A745 RID: 42821
+	// Token: 0x0400AB49 RID: 43849
 	public const string CALABASH_SWITCH_MATERIAL_ID = "CalabashSwitchController";
 
-	// Token: 0x0400A746 RID: 42822
+	// Token: 0x0400AB4A RID: 43850
 	public const int CALABASH_SKIN_HELP_ID = 387;
 
-	// Token: 0x0400A747 RID: 42823
+	// Token: 0x0400AB4B RID: 43851
 	public const int CALABASH_SKIN_DEFAULT_ID = 0;
 
-	// Token: 0x0400A748 RID: 42824
+	// Token: 0x0400AB4C RID: 43852
 	public const string CALABASH_CONFIG_TAG = "葫芦皮肤旋转查看";
 }

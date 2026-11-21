@@ -3,22 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CF3 RID: 7411
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001F02 RID: 7938
 	public class IPictureCaptionConfig_SetValue
 	{
-		// Token: 0x0400600D RID: 24589
-		[Nullable(1)]
+		// Token: 0x04006580 RID: 25984
 		public string PictureCaption;
 
-		// Token: 0x0400600E RID: 24590
+		// Token: 0x04006581 RID: 25985
+		[Nullable(2)]
 		public string UiPrefabId;
 
-		// Token: 0x0400600F RID: 24591
+		// Token: 0x04006582 RID: 25986
 		public float Duration;
 
-		// Token: 0x04006010 RID: 24592
+		// Token: 0x04006583 RID: 25987
+		[Nullable(2)]
 		public IUiAnimConfig UiAnimConfig;
 	}
 }

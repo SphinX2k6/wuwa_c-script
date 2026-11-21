@@ -7,23 +7,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E3A RID: 24122
+	// Token: 0x02004E1F RID: 19999
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SwordControlFlightDirectionButton : UiPanelBase
 	{
-		// Token: 0x17008E6E RID: 36462
-		// (get) Token: 0x0603D54D RID: 251213 RVA: 0x00EC8F92 File Offset: 0x00EC7192
-		// (set) Token: 0x0603D54E RID: 251214 RVA: 0x00EC8F9A File Offset: 0x00EC719A
+		// Token: 0x17006240 RID: 25152
+		// (get) Token: 0x060324DD RID: 206045 RVA: 0x00E1A4FE File Offset: 0x00E186FE
+		// (set) Token: 0x060324DE RID: 206046 RVA: 0x00E1A506 File Offset: 0x00E18706
 		public Action OnPressCallback { get; set; }
 
-		// Token: 0x17008E6F RID: 36463
-		// (get) Token: 0x0603D54F RID: 251215 RVA: 0x00EC8FA3 File Offset: 0x00EC71A3
-		// (set) Token: 0x0603D550 RID: 251216 RVA: 0x00EC8FAB File Offset: 0x00EC71AB
+		// Token: 0x17006241 RID: 25153
+		// (get) Token: 0x060324DF RID: 206047 RVA: 0x00E1A50F File Offset: 0x00E1870F
+		// (set) Token: 0x060324E0 RID: 206048 RVA: 0x00E1A517 File Offset: 0x00E18717
 		public Action OnReleaseCallback { get; set; }
 
-		// Token: 0x17008E70 RID: 36464
-		// (get) Token: 0x0603D551 RID: 251217 RVA: 0x00EC8FB4 File Offset: 0x00EC71B4
+		// Token: 0x17006242 RID: 25154
+		// (get) Token: 0x060324E1 RID: 206049 RVA: 0x00E1A520 File Offset: 0x00E18720
 		public bool IsPressed
 		{
 			get
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D552 RID: 251218 RVA: 0x00EC8FBC File Offset: 0x00EC71BC
+		// Token: 0x060324E2 RID: 206050 RVA: 0x00E1A528 File Offset: 0x00E18728
 		public SwordControlFlightDirectionButton()
 		{
 			base.SkipDestroyActor = true;
 		}
 
-		// Token: 0x0603D553 RID: 251219 RVA: 0x00EC8FCC File Offset: 0x00EC71CC
+		// Token: 0x060324E3 RID: 206051 RVA: 0x00E1A538 File Offset: 0x00E18738
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -52,14 +52,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D554 RID: 251220 RVA: 0x00EC9035 File Offset: 0x00EC7235
+		// Token: 0x060324E4 RID: 206052 RVA: 0x00E1A5A1 File Offset: 0x00E187A1
 		protected override void OnStart()
 		{
 			this.Button = base.GetButton(0);
 			this.BindButtonEvent();
 		}
 
-		// Token: 0x0603D555 RID: 251221 RVA: 0x00EC904A File Offset: 0x00EC724A
+		// Token: 0x060324E5 RID: 206053 RVA: 0x00E1A5B6 File Offset: 0x00E187B6
 		protected override void OnBeforeDestroy()
 		{
 			if (this.HasPressedInput)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Button = null;
 		}
 
-		// Token: 0x0603D556 RID: 251222 RVA: 0x00EC907C File Offset: 0x00EC727C
+		// Token: 0x060324E6 RID: 206054 RVA: 0x00E1A5E8 File Offset: 0x00E187E8
 		private void BindButtonEvent()
 		{
 			UUIButtonComponent button = this.Button;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			button3.OnPointCancelCallBack.Bind(new Action(this.OnReleaseButton));
 		}
 
-		// Token: 0x0603D557 RID: 251223 RVA: 0x00EC90F0 File Offset: 0x00EC72F0
+		// Token: 0x060324E7 RID: 206055 RVA: 0x00E1A65C File Offset: 0x00E1885C
 		private void UnBindButtonEvent()
 		{
 			UUIButtonComponent button = this.Button;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			button3.OnPointCancelCallBack.Unbind();
 		}
 
-		// Token: 0x0603D558 RID: 251224 RVA: 0x00EC913E File Offset: 0x00EC733E
+		// Token: 0x060324E8 RID: 206056 RVA: 0x00E1A6AA File Offset: 0x00E188AA
 		private void OnPressButton()
 		{
 			if (this.HasPressedInput)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onPressCallback();
 		}
 
-		// Token: 0x0603D559 RID: 251225 RVA: 0x00EC9160 File Offset: 0x00EC7360
+		// Token: 0x060324E9 RID: 206057 RVA: 0x00E1A6CC File Offset: 0x00E188CC
 		private void OnReleaseButton()
 		{
 			if (!this.HasPressedInput)
@@ -149,19 +149,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onReleaseCallback();
 		}
 
-		// Token: 0x0401FFE2 RID: 131042
+		// Token: 0x0401AAA9 RID: 109225
 		private UUIButtonComponent Button;
 
-		// Token: 0x0401FFE3 RID: 131043
+		// Token: 0x0401AAAA RID: 109226
 		private bool HasPressedInput;
 
-		// Token: 0x0200C1B8 RID: 49592
+		// Token: 0x0200ABC7 RID: 43975
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A8A3 RID: 239779
+			// Token: 0x04035295 RID: 217749
 			Button,
-			// Token: 0x0403A8A4 RID: 239780
+			// Token: 0x04035296 RID: 217750
 			StateHolder
 		}
 	}

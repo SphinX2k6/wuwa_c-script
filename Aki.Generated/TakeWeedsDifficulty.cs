@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001114 RID: 4372
+	// Token: 0x0200124A RID: 4682
 	public struct TakeWeedsDifficulty : IFlatbufferObject
 	{
-		// Token: 0x170039A7 RID: 14759
-		// (get) Token: 0x0600DCBD RID: 56509 RVA: 0x003293A5 File Offset: 0x003275A5
+		// Token: 0x17003CFD RID: 15613
+		// (get) Token: 0x0600EA08 RID: 59912 RVA: 0x00354515 File Offset: 0x00352715
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DCBE RID: 56510 RVA: 0x003293B2 File Offset: 0x003275B2
+		// Token: 0x0600EA09 RID: 59913 RVA: 0x00354522 File Offset: 0x00352722
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DCBF RID: 56511 RVA: 0x003293BC File Offset: 0x003275BC
+		// Token: 0x0600EA0A RID: 59914 RVA: 0x0035452C File Offset: 0x0035272C
 		public static TakeWeedsDifficulty GetRootAsTakeWeedsDifficulty(ByteBuffer _bb)
 		{
 			return TakeWeedsDifficulty.GetRootAsTakeWeedsDifficulty(_bb, default(TakeWeedsDifficulty));
 		}
 
-		// Token: 0x0600DCC0 RID: 56512 RVA: 0x003293D8 File Offset: 0x003275D8
+		// Token: 0x0600EA0B RID: 59915 RVA: 0x00354548 File Offset: 0x00352748
 		public static TakeWeedsDifficulty GetRootAsTakeWeedsDifficulty(ByteBuffer _bb, TakeWeedsDifficulty obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DCC1 RID: 56513 RVA: 0x003293F5 File Offset: 0x003275F5
+		// Token: 0x0600EA0C RID: 59916 RVA: 0x00354565 File Offset: 0x00352765
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DCC2 RID: 56514 RVA: 0x00329404 File Offset: 0x00327604
+		// Token: 0x0600EA0D RID: 59917 RVA: 0x00354574 File Offset: 0x00352774
 		public TakeWeedsDifficulty __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170039A8 RID: 14760
-		// (get) Token: 0x0600DCC3 RID: 56515 RVA: 0x00329414 File Offset: 0x00327614
+		// Token: 0x17003CFE RID: 15614
+		// (get) Token: 0x0600EA0E RID: 59918 RVA: 0x00354584 File Offset: 0x00352784
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039A9 RID: 14761
-		// (get) Token: 0x0600DCC4 RID: 56516 RVA: 0x00329450 File Offset: 0x00327650
+		// Token: 0x17003CFF RID: 15615
+		// (get) Token: 0x0600EA0F RID: 59919 RVA: 0x003545C0 File Offset: 0x003527C0
 		public int Magnification
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039AA RID: 14762
-		// (get) Token: 0x0600DCC5 RID: 56517 RVA: 0x0032948C File Offset: 0x0032768C
+		// Token: 0x17003D00 RID: 15616
+		// (get) Token: 0x0600EA10 RID: 59920 RVA: 0x003545FC File Offset: 0x003527FC
 		public int RecommendedLevel
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039AB RID: 14763
-		// (get) Token: 0x0600DCC6 RID: 56518 RVA: 0x003294C8 File Offset: 0x003276C8
+		// Token: 0x17003D01 RID: 15617
+		// (get) Token: 0x0600EA11 RID: 59921 RVA: 0x00354638 File Offset: 0x00352838
 		public int Reward
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039AC RID: 14764
-		// (get) Token: 0x0600DCC7 RID: 56519 RVA: 0x00329508 File Offset: 0x00327708
+		// Token: 0x17003D02 RID: 15618
+		// (get) Token: 0x0600EA12 RID: 59922 RVA: 0x00354678 File Offset: 0x00352878
 		public string Desc
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DCC8 RID: 56520 RVA: 0x00329540 File Offset: 0x00327740
+		// Token: 0x0600EA13 RID: 59923 RVA: 0x003546B0 File Offset: 0x003528B0
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600DCC9 RID: 56521 RVA: 0x00329550 File Offset: 0x00327750
+		// Token: 0x0600EA14 RID: 59924 RVA: 0x003546C0 File Offset: 0x003528C0
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005251 RID: 21073
+		// Token: 0x04005894 RID: 22676
 		private Table __p;
 	}
 }

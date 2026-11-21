@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001506 RID: 5382
+	// Token: 0x02001661 RID: 5729
 	public class ClientSetPlayerPos_SetValue
 	{
-		// Token: 0x040046DF RID: 18143
-		[Nullable(1)]
+		// Token: 0x04004A7E RID: 19070
 		public IClientTeleportConfig TelePortConfig;
 	}
 }

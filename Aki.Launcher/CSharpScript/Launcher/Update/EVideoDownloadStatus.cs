@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x02000099 RID: 153
+	// Token: 0x0200009C RID: 156
 	public enum EVideoDownloadStatus
 	{
-		// Token: 0x0400034E RID: 846
+		// Token: 0x0400037C RID: 892
 		None,
-		// Token: 0x0400034F RID: 847
+		// Token: 0x0400037D RID: 893
 		Downloading,
-		// Token: 0x04000350 RID: 848
+		// Token: 0x0400037E RID: 894
 		Pause,
-		// Token: 0x04000351 RID: 849
+		// Token: 0x0400037F RID: 895
 		Done,
-		// Token: 0x04000352 RID: 850
+		// Token: 0x04000380 RID: 896
 		NoSpace
 	}
 }

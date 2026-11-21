@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A16 RID: 18966
+	// Token: 0x02004ED6 RID: 20182
 	public class ICheckEntityRewardT
 	{
-		// Token: 0x1700894F RID: 35151
-		// (get) Token: 0x0601DAD3 RID: 121555 RVA: 0x0042CEF2 File Offset: 0x0042B0F2
-		// (set) Token: 0x0601DAD4 RID: 121556 RVA: 0x0042CEFA File Offset: 0x0042B0FA
+		// Token: 0x1700901F RID: 36895
+		// (get) Token: 0x0601F546 RID: 128326 RVA: 0x0045DB5E File Offset: 0x0045BD5E
+		// (set) Token: 0x0601F547 RID: 128327 RVA: 0x0045DB66 File Offset: 0x0045BD66
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008950 RID: 35152
-		// (get) Token: 0x0601DAD5 RID: 121557 RVA: 0x0042CF03 File Offset: 0x0042B103
-		// (set) Token: 0x0601DAD6 RID: 121558 RVA: 0x0042CF0B File Offset: 0x0042B10B
+		// Token: 0x17009020 RID: 36896
+		// (get) Token: 0x0601F548 RID: 128328 RVA: 0x0045DB6F File Offset: 0x0045BD6F
+		// (set) Token: 0x0601F549 RID: 128329 RVA: 0x0045DB77 File Offset: 0x0045BD77
 		public int EntityId { get; set; }
 
-		// Token: 0x17008951 RID: 35153
-		// (get) Token: 0x0601DAD7 RID: 121559 RVA: 0x0042CF14 File Offset: 0x0042B114
-		// (set) Token: 0x0601DAD8 RID: 121560 RVA: 0x0042CF1C File Offset: 0x0042B11C
+		// Token: 0x17009021 RID: 36897
+		// (get) Token: 0x0601F54A RID: 128330 RVA: 0x0045DB80 File Offset: 0x0045BD80
+		// (set) Token: 0x0601F54B RID: 128331 RVA: 0x0045DB88 File Offset: 0x0045BD88
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601DAD9 RID: 121561 RVA: 0x0042CF25 File Offset: 0x0042B125
+		// Token: 0x0601F54C RID: 128332 RVA: 0x0045DB91 File Offset: 0x0045BD91
 		public ICheckEntityRewardT()
 		{
 			this.Type = ECondition.CompareVar;

@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005306 RID: 21254
+	// Token: 0x020042D6 RID: 17110
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueDungeonDataItem : AutoAttachItem<int>
 	{
-		// Token: 0x06036606 RID: 222726 RVA: 0x00CDD530 File Offset: 0x00CDB730
+		// Token: 0x0602B502 RID: 177410 RVA: 0x00C2AF00 File Offset: 0x00C29100
 		public RogueDungeonDataItem(AActor uiItem = null) : base(null)
 		{
 			this.Canvas = (uiItem.GetComponentByClass(ULGUICanvas.StaticClass()) as ULGUICanvas);
 		}
 
-		// Token: 0x06036607 RID: 222727 RVA: 0x00CDD554 File Offset: 0x00CDB754
+		// Token: 0x0602B503 RID: 177411 RVA: 0x00C2AF24 File Offset: 0x00C29124
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036608 RID: 222728 RVA: 0x00CDD5E7 File Offset: 0x00CDB7E7
+		// Token: 0x0602B504 RID: 177412 RVA: 0x00C2AFB7 File Offset: 0x00C291B7
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CheckCanClick));
 		}
 
-		// Token: 0x06036609 RID: 222729 RVA: 0x00CDD60C File Offset: 0x00CDB80C
+		// Token: 0x0602B505 RID: 177413 RVA: 0x00C2AFDC File Offset: 0x00C291DC
 		public override void OnSelect()
 		{
 			if (this.OnSelectCall != null && this.Data != 0)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.Canvas.SetSortOrder(1, true);
 		}
 
-		// Token: 0x0603660A RID: 222730 RVA: 0x00CDD65D File Offset: 0x00CDB85D
+		// Token: 0x0602B506 RID: 177414 RVA: 0x00C2B02D File Offset: 0x00C2922D
 		protected override void OnUnSelect()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.Canvas.SetSortOrder(0, true);
 		}
 
-		// Token: 0x0603660B RID: 222731 RVA: 0x00CDD682 File Offset: 0x00CDB882
+		// Token: 0x0602B507 RID: 177415 RVA: 0x00C2B052 File Offset: 0x00C29252
 		protected override void OnRefreshItem(int data)
 		{
 			this.Data = data;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshState();
 		}
 
-		// Token: 0x0603660C RID: 222732 RVA: 0x00CDD697 File Offset: 0x00CDB897
+		// Token: 0x0602B508 RID: 177416 RVA: 0x00C2B067 File Offset: 0x00C29267
 		protected override void OnMoveItem()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603660D RID: 222733 RVA: 0x00CDD6B0 File Offset: 0x00CDB8B0
+		// Token: 0x0602B509 RID: 177417 RVA: 0x00C2B080 File Offset: 0x00C29280
 		private void RefreshCover()
 		{
 			if (this.Data == 0)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			base.SetTextureByPath(path, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0603660E RID: 222734 RVA: 0x00CDD74C File Offset: 0x00CDB94C
+		// Token: 0x0602B50A RID: 177418 RVA: 0x00C2B11C File Offset: 0x00C2931C
 		private void RefreshState()
 		{
 			if (this.Data == 0)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0603660F RID: 222735 RVA: 0x00CDD830 File Offset: 0x00CDBA30
+		// Token: 0x0602B50B RID: 177419 RVA: 0x00C2B200 File Offset: 0x00C29400
 		private void SelectedItem(EToggleState toggleState)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -168,19 +168,19 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			onToggleClick(this);
 		}
 
-		// Token: 0x06036610 RID: 222736 RVA: 0x00CDD859 File Offset: 0x00CDBA59
+		// Token: 0x0602B50C RID: 177420 RVA: 0x00C2B229 File Offset: 0x00C29429
 		private bool CheckCanClick()
 		{
 			return this.CheckToggleCanClick == null || this.CheckToggleCanClick(this.Data);
 		}
 
-		// Token: 0x06036611 RID: 222737 RVA: 0x00CDD876 File Offset: 0x00CDBA76
+		// Token: 0x0602B50D RID: 177421 RVA: 0x00C2B246 File Offset: 0x00C29446
 		public int? GetData()
 		{
 			return new int?(this.Data);
 		}
 
-		// Token: 0x06036612 RID: 222738 RVA: 0x00CDD883 File Offset: 0x00CDBA83
+		// Token: 0x0602B50E RID: 177422 RVA: 0x00C2B253 File Offset: 0x00C29453
 		public void UnSelectWhenEnter()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -191,13 +191,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.Canvas.SetSortOrder(0, true);
 		}
 
-		// Token: 0x0401CB92 RID: 117650
+		// Token: 0x040175C8 RID: 95688
 		private int Data;
 
-		// Token: 0x0401CB93 RID: 117651
+		// Token: 0x040175C9 RID: 95689
 		private readonly ULGUICanvas Canvas;
 
-		// Token: 0x0401CB94 RID: 117652
+		// Token: 0x040175CA RID: 95690
 		[Nullable(new byte[]
 		{
 			2,
@@ -205,16 +205,16 @@ namespace CSharpScript.Game.Module.PermanentRogue
 		})]
 		public Action<RogueDungeonDataItem> OnToggleClick;
 
-		// Token: 0x0401CB95 RID: 117653
+		// Token: 0x040175CB RID: 95691
 		public Action<int> OnSelectCall;
 
-		// Token: 0x0401CB96 RID: 117654
+		// Token: 0x040175CC RID: 95692
 		public Func<int, bool> CheckToggleCanClick;
 
-		// Token: 0x0401CB97 RID: 117655
+		// Token: 0x040175CD RID: 95693
 		public const int SORT_MAX = 1;
 
-		// Token: 0x0401CB98 RID: 117656
+		// Token: 0x040175CE RID: 95694
 		public const int SORT_EMPTY = 0;
 	}
 }

@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E9C RID: 7836
+// Token: 0x0200135E RID: 4958
 public class HonamiStoryBackpackValueCountItem : UiPanelBase
 {
-	// Token: 0x0600F098 RID: 61592 RVA: 0x0039BF94 File Offset: 0x0039A194
+	// Token: 0x0600C4B7 RID: 50359 RVA: 0x003A7B50 File Offset: 0x003A5D50
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -48,7 +48,7 @@ public class HonamiStoryBackpackValueCountItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F099 RID: 61593 RVA: 0x0039C16C File Offset: 0x0039A36C
+	// Token: 0x0600C4B8 RID: 50360 RVA: 0x003A7D28 File Offset: 0x003A5F28
 	protected override void OnStart()
 	{
 		this.InDungeon = HonamiStoryUtil.CheckInHonamiStoryDungeon();
@@ -62,7 +62,7 @@ public class HonamiStoryBackpackValueCountItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600F09A RID: 61594 RVA: 0x0039C23C File Offset: 0x0039A43C
+	// Token: 0x0600C4B9 RID: 50361 RVA: 0x003A7DF8 File Offset: 0x003A5FF8
 	public void SetVisible(bool isVisible)
 	{
 		base.SetUiActive(isVisible);
@@ -74,7 +74,7 @@ public class HonamiStoryBackpackValueCountItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F09B RID: 61595 RVA: 0x0039C290 File Offset: 0x0039A490
+	// Token: 0x0600C4BA RID: 50362 RVA: 0x003A7E4C File Offset: 0x003A604C
 	public void SetValue(int value)
 	{
 		if (value < 0)
@@ -89,7 +89,7 @@ public class HonamiStoryBackpackValueCountItem : UiPanelBase
 		text.SetText(HonamiStoryUtil.GetPriceNumFormat(value), true);
 	}
 
-	// Token: 0x0600F09C RID: 61596 RVA: 0x0039C2D8 File Offset: 0x0039A4D8
+	// Token: 0x0600C4BB RID: 50363 RVA: 0x003A7E94 File Offset: 0x003A6094
 	public void RefreshInGame()
 	{
 		string newText = HonamiStoryUtil.GetPriceNumFormat(HonamiStoryModel.Instance.GetBackPackData(2, false).GetTotalValue()) ?? "";
@@ -101,7 +101,7 @@ public class HonamiStoryBackpackValueCountItem : UiPanelBase
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x0600F09D RID: 61597 RVA: 0x0039C318 File Offset: 0x0039A518
+	// Token: 0x0600C4BC RID: 50364 RVA: 0x003A7ED4 File Offset: 0x003A60D4
 	private void OnClickedCancel()
 	{
 		HonamiStoryBackpackLogicController backpackLogic = HonamiStoryModel.Instance.GetBackpackLogic();
@@ -112,7 +112,7 @@ public class HonamiStoryBackpackValueCountItem : UiPanelBase
 		backpackLogic.SetLogicState(EHonamiStoryBackpackLogicState.Normal, null, null);
 	}
 
-	// Token: 0x0600F09E RID: 61598 RVA: 0x0039C344 File Offset: 0x0039A544
+	// Token: 0x0600C4BD RID: 50365 RVA: 0x003A7F00 File Offset: 0x003A6100
 	private void OnClickedToggle(EToggleState toggleState)
 	{
 		bool isSelected = base.GetExtendToggle(3).GetToggleState() == EToggleState.ETT_Checked;
@@ -124,7 +124,7 @@ public class HonamiStoryBackpackValueCountItem : UiPanelBase
 		backpackLogic.DoSellToAll(isSelected, EHonamiStoryItemType.Normal, 0);
 	}
 
-	// Token: 0x0600F09F RID: 61599 RVA: 0x0039C378 File Offset: 0x0039A578
+	// Token: 0x0600C4BE RID: 50366 RVA: 0x003A7F34 File Offset: 0x003A6134
 	private void OnClickedTogglePluginA(EToggleState toggleState)
 	{
 		bool isSelected = base.GetExtendToggle(5).GetToggleState() == EToggleState.ETT_Checked;
@@ -136,7 +136,7 @@ public class HonamiStoryBackpackValueCountItem : UiPanelBase
 		backpackLogic.DoSellToAll(isSelected, EHonamiStoryItemType.Plugin, 1);
 	}
 
-	// Token: 0x0600F0A0 RID: 61600 RVA: 0x0039C3AC File Offset: 0x0039A5AC
+	// Token: 0x0600C4BF RID: 50367 RVA: 0x003A7F68 File Offset: 0x003A6168
 	private void OnClickedTogglePluginB(EToggleState toggleState)
 	{
 		bool isSelected = base.GetExtendToggle(6).GetToggleState() == EToggleState.ETT_Checked;
@@ -148,27 +148,27 @@ public class HonamiStoryBackpackValueCountItem : UiPanelBase
 		backpackLogic.DoSellToAll(isSelected, EHonamiStoryItemType.Plugin, 2);
 	}
 
-	// Token: 0x04006F53 RID: 28499
+	// Token: 0x04007034 RID: 28724
 	private bool InDungeon;
 
-	// Token: 0x02008464 RID: 33892
+	// Token: 0x020075E9 RID: 30185
 	private enum EItem
 	{
-		// Token: 0x0402B17C RID: 176508
+		// Token: 0x040264A0 RID: 156832
 		BtnCancel,
-		// Token: 0x0402B17D RID: 176509
+		// Token: 0x040264A1 RID: 156833
 		Texture,
-		// Token: 0x0402B17E RID: 176510
+		// Token: 0x040264A2 RID: 156834
 		TxtCost,
-		// Token: 0x0402B17F RID: 176511
+		// Token: 0x040264A3 RID: 156835
 		Toggle,
-		// Token: 0x0402B180 RID: 176512
+		// Token: 0x040264A4 RID: 156836
 		TxtTips,
-		// Token: 0x0402B181 RID: 176513
+		// Token: 0x040264A5 RID: 156837
 		TogglePluginA,
-		// Token: 0x0402B182 RID: 176514
+		// Token: 0x040264A6 RID: 156838
 		TogglePluginB,
-		// Token: 0x0402B183 RID: 176515
+		// Token: 0x040264A7 RID: 156839
 		PanelToggle
 	}
 }

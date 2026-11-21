@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A30 RID: 27184
+	// Token: 0x020070E0 RID: 28896
 	public class ILinearOverRangeCameraShakeT
 	{
-		// Token: 0x1700C9A2 RID: 51618
-		// (get) Token: 0x0602F92C RID: 194860 RVA: 0x00679CEC File Offset: 0x00677EEC
-		// (set) Token: 0x0602F92D RID: 194861 RVA: 0x00679CF4 File Offset: 0x00677EF4
+		// Token: 0x1700D3A2 RID: 54178
+		// (get) Token: 0x060322EC RID: 205548 RVA: 0x006CA044 File Offset: 0x006C8244
+		// (set) Token: 0x060322ED RID: 205549 RVA: 0x006CA04C File Offset: 0x006C824C
 		public ECameraShakeType Type { get; set; }
 
-		// Token: 0x1700C9A3 RID: 51619
-		// (get) Token: 0x0602F92E RID: 194862 RVA: 0x00679CFD File Offset: 0x00677EFD
-		// (set) Token: 0x0602F92F RID: 194863 RVA: 0x00679D05 File Offset: 0x00677F05
+		// Token: 0x1700D3A3 RID: 54179
+		// (get) Token: 0x060322EE RID: 205550 RVA: 0x006CA055 File Offset: 0x006C8255
+		// (set) Token: 0x060322EF RID: 205551 RVA: 0x006CA05D File Offset: 0x006C825D
 		public int CenterEntityId { get; set; }
 
-		// Token: 0x1700C9A4 RID: 51620
-		// (get) Token: 0x0602F930 RID: 194864 RVA: 0x00679D0E File Offset: 0x00677F0E
-		// (set) Token: 0x0602F931 RID: 194865 RVA: 0x00679D16 File Offset: 0x00677F16
+		// Token: 0x1700D3A4 RID: 54180
+		// (get) Token: 0x060322F0 RID: 205552 RVA: 0x006CA066 File Offset: 0x006C8266
+		// (set) Token: 0x060322F1 RID: 205553 RVA: 0x006CA06E File Offset: 0x006C826E
 		public int MinRange { get; set; }
 
-		// Token: 0x1700C9A5 RID: 51621
-		// (get) Token: 0x0602F932 RID: 194866 RVA: 0x00679D1F File Offset: 0x00677F1F
-		// (set) Token: 0x0602F933 RID: 194867 RVA: 0x00679D27 File Offset: 0x00677F27
+		// Token: 0x1700D3A5 RID: 54181
+		// (get) Token: 0x060322F2 RID: 205554 RVA: 0x006CA077 File Offset: 0x006C8277
+		// (set) Token: 0x060322F3 RID: 205555 RVA: 0x006CA07F File Offset: 0x006C827F
 		public int MaxRange { get; set; }
 
-		// Token: 0x0602F934 RID: 194868 RVA: 0x00679D30 File Offset: 0x00677F30
+		// Token: 0x060322F4 RID: 205556 RVA: 0x006CA088 File Offset: 0x006C8288
 		public ILinearOverRangeCameraShakeT()
 		{
 			this.Type = ECameraShakeType.Constant;

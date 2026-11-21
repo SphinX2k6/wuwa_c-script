@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Core.Fight
 {
-	// Token: 0x02003FFE RID: 16382
+	// Token: 0x02003262 RID: 12898
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Core/Fight/EBulletObject.EBulletObject")]
 	public enum EBulletObject : byte
 	{
-		// Token: 0x04015965 RID: 88421
+		// Token: 0x040115C5 RID: 71109
 		空,
-		// Token: 0x04015966 RID: 88422
+		// Token: 0x040115C6 RID: 71110
 		攻击者,
-		// Token: 0x04015967 RID: 88423
+		// Token: 0x040115C7 RID: 71111
 		受击者,
-		// Token: 0x04015968 RID: 88424
+		// Token: 0x040115C8 RID: 71112
 		执行GB的子弹,
-		// Token: 0x04015969 RID: 88425
+		// Token: 0x040115C9 RID: 71113
 		EBulletObject_MAX
 	}
 }

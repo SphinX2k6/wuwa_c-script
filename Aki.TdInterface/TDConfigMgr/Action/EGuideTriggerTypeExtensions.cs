@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002351 RID: 9041
+	// Token: 0x020025C4 RID: 9668
 	public static class EGuideTriggerTypeExtensions
 	{
-		// Token: 0x0600C56B RID: 50539 RVA: 0x001CD018 File Offset: 0x001CB218
+		// Token: 0x0600D14C RID: 53580 RVA: 0x001E51E4 File Offset: 0x001E33E4
 		public static string ToEnumString(this EGuideTriggerType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C56C RID: 50540 RVA: 0x001CD050 File Offset: 0x001CB250
+		// Token: 0x0600D14D RID: 53581 RVA: 0x001E521C File Offset: 0x001E341C
 		public static EGuideTriggerType FromString(string name)
 		{
 			EGuideTriggerType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C56D RID: 50541 RVA: 0x001CD079 File Offset: 0x001CB279
+		// Token: 0x0600D14E RID: 53582 RVA: 0x001E5245 File Offset: 0x001E3445
 		public static bool TryFromString(string name, out EGuideTriggerType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C56E RID: 50542 RVA: 0x001CD0B2 File Offset: 0x001CB2B2
+		// Token: 0x0600D14F RID: 53583 RVA: 0x001E527E File Offset: 0x001E347E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C56F RID: 50543 RVA: 0x001CD0CA File Offset: 0x001CB2CA
+		// Token: 0x0600D150 RID: 53584 RVA: 0x001E5296 File Offset: 0x001E3496
 		public static EGuideTriggerType[] GetValues()
 		{
 			return new EGuideTriggerType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C570 RID: 50544 RVA: 0x001CD0D6 File Offset: 0x001CB2D6
+		// Token: 0x0600D151 RID: 53585 RVA: 0x001E52A2 File Offset: 0x001E34A2
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002911 RID: 10513
+	// Token: 0x02002BED RID: 11245
 	public class ICloseAirWall : IToggleAirWallType
 	{
-		// Token: 0x0600E962 RID: 59746 RVA: 0x002237DB File Offset: 0x002219DB
-		[NullableContext(1)]
+		// Token: 0x0600F7B4 RID: 63412 RVA: 0x00240B33 File Offset: 0x0023ED33
 		public static ICloseAirWall Create(ICloseAirWall? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004902 RID: 18690
-		// (get) Token: 0x0600E963 RID: 59747 RVA: 0x002237FA File Offset: 0x002219FA
+		// Token: 0x17004C88 RID: 19592
+		// (get) Token: 0x0600F7B5 RID: 63413 RVA: 0x00240B52 File Offset: 0x0023ED52
 		public override EToggleAirWall Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080D1 RID: 32977
+		// Token: 0x0400879F RID: 34719
 		private ICloseAirWall Instance;
 	}
 }

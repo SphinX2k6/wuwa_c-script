@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000475 RID: 1141
+	// Token: 0x020004CE RID: 1230
 	public class IInteractBehaviourActions_SetValue
 	{
-		// Token: 0x0400115D RID: 4445
+		// Token: 0x0400127F RID: 4735
 		public ELevelAIBehaviourType Type;
 
-		// Token: 0x0400115E RID: 4446
-		[Nullable(1)]
+		// Token: 0x04001280 RID: 4736
 		public List<ActionInfo> Actions;
 	}
 }

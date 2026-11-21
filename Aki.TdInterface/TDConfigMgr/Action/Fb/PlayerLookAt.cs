@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002626 RID: 9766
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028E6 RID: 10470
 	public class PlayerLookAt : ActionParams
 	{
-		// Token: 0x0600DB38 RID: 56120 RVA: 0x0020A492 File Offset: 0x00208692
+		// Token: 0x0600E906 RID: 59654 RVA: 0x00226C5E File Offset: 0x00224E5E
 		public static PlayerLookAt Create(IPlayerLookAt? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040AE RID: 16558
-		// (get) Token: 0x0600DB39 RID: 56121 RVA: 0x0020A4B1 File Offset: 0x002086B1
+		// Token: 0x170043E8 RID: 17384
+		// (get) Token: 0x0600E907 RID: 59655 RVA: 0x00226C7D File Offset: 0x00224E7D
 		public virtual VectorInfo Pos
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040AF RID: 16559
-		// (get) Token: 0x0600DB3A RID: 56122 RVA: 0x0020A4E8 File Offset: 0x002086E8
+		// Token: 0x170043E9 RID: 17385
+		// (get) Token: 0x0600E908 RID: 59656 RVA: 0x00226CB4 File Offset: 0x00224EB4
 		public virtual bool? CameraMove
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040B0 RID: 16560
-		// (get) Token: 0x0600DB3B RID: 56123 RVA: 0x0020A520 File Offset: 0x00208720
+		// Token: 0x170043EA RID: 17386
+		// (get) Token: 0x0600E909 RID: 59657 RVA: 0x00226CEC File Offset: 0x00224EEC
 		public virtual bool? PlayAnimation
 		{
 			get
@@ -67,14 +65,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079C8 RID: 31176
+		// Token: 0x04008064 RID: 32868
 		private IPlayerLookAt Instance;
 
-		// Token: 0x040079C9 RID: 31177
+		// Token: 0x04008065 RID: 32869
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x040079CA RID: 31178
+		// Token: 0x04008066 RID: 32870
 		private bool _PosInited;
 	}
 }

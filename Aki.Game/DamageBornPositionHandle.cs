@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Camera;
 
-// Token: 0x020019FF RID: 6655
+// Token: 0x02000EBE RID: 3774
 [NullableContext(1)]
 [Nullable(0)]
 public class DamageBornPositionHandle
 {
-	// Token: 0x0600C2D9 RID: 49881 RVA: 0x002C05A0 File Offset: 0x002BE7A0
+	// Token: 0x060096E7 RID: 38631 RVA: 0x002CB58C File Offset: 0x002C978C
 	private DamageViewOffsetInfo SpawnDamageViewOffsetInfo()
 	{
 		if (this.DamageViewOffsetInfoPool.Count > 0)
@@ -22,14 +22,14 @@ public class DamageBornPositionHandle
 		return new DamageViewOffsetInfo();
 	}
 
-	// Token: 0x0600C2DA RID: 49882 RVA: 0x002C05E7 File Offset: 0x002BE7E7
+	// Token: 0x060096E8 RID: 38632 RVA: 0x002CB5D3 File Offset: 0x002C97D3
 	private void RecycleDamageViewOffsetInfo(DamageViewOffsetInfo info)
 	{
 		info.Reset();
 		this.DamageViewOffsetInfoPool.Add(info);
 	}
 
-	// Token: 0x0600C2DB RID: 49883 RVA: 0x002C05FC File Offset: 0x002BE7FC
+	// Token: 0x060096E9 RID: 38633 RVA: 0x002CB5E8 File Offset: 0x002C97E8
 	public void Init()
 	{
 		this.GridWidth = ConfigCommonParamById.GetFloatConfig("DamageUiGridWidth").GetValueOrDefault(100f);
@@ -53,7 +53,7 @@ public class DamageBornPositionHandle
 		}
 	}
 
-	// Token: 0x0600C2DC RID: 49884 RVA: 0x002C076C File Offset: 0x002BE96C
+	// Token: 0x060096EA RID: 38634 RVA: 0x002CB758 File Offset: 0x002C9958
 	public void Clear()
 	{
 		foreach (DamageViewOffsetInfo info in this.DamageViewOffsetMap.Values)
@@ -68,7 +68,7 @@ public class DamageBornPositionHandle
 		}
 	}
 
-	// Token: 0x0600C2DD RID: 49885 RVA: 0x002C0804 File Offset: 0x002BEA04
+	// Token: 0x060096EB RID: 38635 RVA: 0x002CB7F0 File Offset: 0x002C99F0
 	private void InitRandomGrids()
 	{
 		this.RandomGrids.Clear();
@@ -113,13 +113,13 @@ public class DamageBornPositionHandle
 		}
 	}
 
-	// Token: 0x0600C2DE RID: 49886 RVA: 0x002C096A File Offset: 0x002BEB6A
+	// Token: 0x060096EC RID: 38636 RVA: 0x002CB956 File Offset: 0x002C9B56
 	private void OnTimer(float delta)
 	{
 		this.CleanupExpiredGroupInfo();
 	}
 
-	// Token: 0x0600C2DF RID: 49887 RVA: 0x002C0974 File Offset: 0x002BEB74
+	// Token: 0x060096ED RID: 38637 RVA: 0x002CB960 File Offset: 0x002C9B60
 	private void CleanupExpiredGroupInfo()
 	{
 		double num = Time.Instance.FlowTime - 5000.0;
@@ -138,7 +138,7 @@ public class DamageBornPositionHandle
 		}
 	}
 
-	// Token: 0x0600C2E0 RID: 49888 RVA: 0x002C0A4C File Offset: 0x002BEC4C
+	// Token: 0x060096EE RID: 38638 RVA: 0x002CBA38 File Offset: 0x002C9C38
 	public DamageTextArea? GetDamageTextAreaById(int id)
 	{
 		DamageTextArea value;
@@ -149,7 +149,7 @@ public class DamageBornPositionHandle
 		return null;
 	}
 
-	// Token: 0x0600C2E1 RID: 49889 RVA: 0x002C0A7C File Offset: 0x002BEC7C
+	// Token: 0x060096EF RID: 38639 RVA: 0x002CBA68 File Offset: 0x002C9C68
 	public void GetRandomOffset(int entityId, int damageTextAreaId, DamageViewData damageViewData, global::Vector damageLocation, Vector2D outV)
 	{
 		DamageViewOffsetInfo damageViewOffsetInfo;
@@ -203,49 +203,49 @@ public class DamageBornPositionHandle
 		outV.Y *= (double)damageViewOffsetInfo.DistanceScale;
 	}
 
-	// Token: 0x040059D7 RID: 22999
+	// Token: 0x04005AA6 RID: 23206
 	private const double GROUP_INFO_LIFETIME = 5000.0;
 
-	// Token: 0x040059D8 RID: 23000
+	// Token: 0x04005AA7 RID: 23207
 	private const float GROUP_INFO_CLEANUP_INTERVAL = 10000f;
 
-	// Token: 0x040059D9 RID: 23001
+	// Token: 0x04005AA8 RID: 23208
 	private float GridWidth;
 
-	// Token: 0x040059DA RID: 23002
+	// Token: 0x04005AA9 RID: 23209
 	private float GridHeight;
 
-	// Token: 0x040059DB RID: 23003
+	// Token: 0x04005AAA RID: 23210
 	private int GridTotalCount;
 
-	// Token: 0x040059DC RID: 23004
+	// Token: 0x04005AAB RID: 23211
 	private float GridRandomOffsetMax;
 
-	// Token: 0x040059DD RID: 23005
+	// Token: 0x04005AAC RID: 23212
 	private double GroupUpdateTime;
 
-	// Token: 0x040059DE RID: 23006
+	// Token: 0x04005AAD RID: 23213
 	private double ScaleMinDistSquared;
 
-	// Token: 0x040059DF RID: 23007
+	// Token: 0x04005AAE RID: 23214
 	private double ScaleMaxDistSquared;
 
-	// Token: 0x040059E0 RID: 23008
+	// Token: 0x04005AAF RID: 23215
 	private float MinScaleByDist;
 
-	// Token: 0x040059E1 RID: 23009
+	// Token: 0x04005AB0 RID: 23216
 	private readonly Dictionary<int, DamageViewOffsetInfo> DamageViewOffsetMap = new Dictionary<int, DamageViewOffsetInfo>();
 
-	// Token: 0x040059E2 RID: 23010
+	// Token: 0x04005AB1 RID: 23217
 	private readonly List<float[]> RandomGrids = new List<float[]>();
 
-	// Token: 0x040059E3 RID: 23011
+	// Token: 0x04005AB2 RID: 23218
 	private readonly List<DamageViewOffsetInfo> DamageViewOffsetInfoPool = new List<DamageViewOffsetInfo>();
 
-	// Token: 0x040059E4 RID: 23012
+	// Token: 0x04005AB3 RID: 23219
 	[Nullable(2)]
 	private TimerHandle Timer;
 
-	// Token: 0x040059E5 RID: 23013
+	// Token: 0x04005AB4 RID: 23220
 	private readonly Dictionary<int, DamageTextArea> DamageTextAreaMap = new Dictionary<int, DamageTextArea>();
 }

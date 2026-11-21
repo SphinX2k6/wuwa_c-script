@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Core.Common
 {
-	// Token: 0x0200016E RID: 366
+	// Token: 0x02000173 RID: 371
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Core.Common
 	})]
 	public class IntMapStringConverter : JsonConverter<Dictionary<int, int>>
 	{
-		// Token: 0x06000C9A RID: 3226 RVA: 0x0003B118 File Offset: 0x00039318
+		// Token: 0x06000CF5 RID: 3317 RVA: 0x0003BDDC File Offset: 0x00039FDC
 		public override Dictionary<int, int> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			if (reader.TokenType == JsonTokenType.Null)
@@ -47,7 +47,7 @@ namespace CSharpScript.Core.Common
 			return dictionary;
 		}
 
-		// Token: 0x06000C9B RID: 3227 RVA: 0x0003B1E9 File Offset: 0x000393E9
+		// Token: 0x06000CF6 RID: 3318 RVA: 0x0003BEAD File Offset: 0x0003A0AD
 		public override void Write(Utf8JsonWriter writer, Dictionary<int, int> value, JsonSerializerOptions options)
 		{
 			JsonSerializer.Serialize<Dictionary<int, int>>(writer, value, options);

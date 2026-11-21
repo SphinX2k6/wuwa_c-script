@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020028CD RID: 10445
+// Token: 0x02001E48 RID: 7752
 public class RoleTagDetailItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601590F RID: 88335 RVA: 0x005722CC File Offset: 0x005704CC
+	// Token: 0x0601330F RID: 78607 RVA: 0x0059D184 File Offset: 0x0059B384
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class RoleTagDetailItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06015910 RID: 88336 RVA: 0x00572354 File Offset: 0x00570554
+	// Token: 0x06013310 RID: 78608 RVA: 0x0059D20C File Offset: 0x0059B40C
 	public override void Refresh(int tagId, bool isSelected, int gridIndex)
 	{
 		RoleTag? roleTagConfig = RoleConfig.Instance.GetRoleTagConfig(tagId);
@@ -43,18 +43,18 @@ public class RoleTagDetailItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), roleTagConfig.Value.TagDesc, Array.Empty<object>());
 	}
 
-	// Token: 0x02008EE3 RID: 36579
+	// Token: 0x0200812B RID: 33067
 	private enum EComponent
 	{
-		// Token: 0x0402E55F RID: 189791
+		// Token: 0x04029C5A RID: 171098
 		BackGroundItem,
-		// Token: 0x0402E560 RID: 189792
+		// Token: 0x04029C5B RID: 171099
 		TagIcon,
-		// Token: 0x0402E561 RID: 189793
+		// Token: 0x04029C5C RID: 171100
 		TagName,
-		// Token: 0x0402E562 RID: 189794
+		// Token: 0x04029C5D RID: 171101
 		TagDesc,
-		// Token: 0x0402E563 RID: 189795
+		// Token: 0x04029C5E RID: 171102
 		BackGroundItem2
 	}
 }

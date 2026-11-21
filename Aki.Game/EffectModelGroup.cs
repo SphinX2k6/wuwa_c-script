@@ -6,12 +6,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003473 RID: 13427
+// Token: 0x020029E7 RID: 10727
 [UClass("/Game/Aki/TypeScript/Game/Render/Effect/Data/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Effect/Data/EffectModelGroup.EffectModelGroup_C")]
 public class EffectModelGroup : UEffectModelGroup, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D1D5 RID: 119253 RVA: 0x0081DD48 File Offset: 0x0081BF48
+	// Token: 0x0601AEDD RID: 110301 RVA: 0x00845048 File Offset: 0x00843248
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (EffectModelGroup._ClassPtr == IntPtr.Zero)
@@ -21,29 +21,29 @@ public class EffectModelGroup : UEffectModelGroup, IUnrealUObject, IUnrealObject
 		return EffectModelGroup._ClassPtr;
 	}
 
-	// Token: 0x0601D1D6 RID: 119254 RVA: 0x0081DD6C File Offset: 0x0081BF6C
+	// Token: 0x0601AEDE RID: 110302 RVA: 0x0084506C File Offset: 0x0084326C
 	public EffectModelGroup() : this(BuiltinUtils.AllocNativeUObject(EffectModelGroup.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D1D7 RID: 119255 RVA: 0x0081DD94 File Offset: 0x0081BF94
+	// Token: 0x0601AEDF RID: 110303 RVA: 0x00845094 File Offset: 0x00843294
 	[NullableContext(1)]
 	public EffectModelGroup(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(EffectModelGroup.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D1D8 RID: 119256 RVA: 0x0081DDC7 File Offset: 0x0081BFC7
+	// Token: 0x0601AEE0 RID: 110304 RVA: 0x008450C7 File Offset: 0x008432C7
 	protected EffectModelGroup(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400E540 RID: 58688
+	// Token: 0x0400E9F8 RID: 59896
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Effect/Data/EffectModelGroup.EffectModelGroup_C";
 
-	// Token: 0x0400E541 RID: 58689
+	// Token: 0x0400E9F9 RID: 59897
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E542 RID: 58690
+	// Token: 0x0400E9FA RID: 59898
 	private static IntPtr _ClassDefaultObjectPtr;
 }

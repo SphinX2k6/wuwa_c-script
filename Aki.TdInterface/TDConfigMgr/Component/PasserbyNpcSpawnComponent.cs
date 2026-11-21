@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200084B RID: 2123
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008EE RID: 2286
 	public class PasserbyNpcSpawnComponent : IComponentBase
 	{
-		// Token: 0x06002EC1 RID: 11969 RVA: 0x00078DAC File Offset: 0x00076FAC
+		// Token: 0x060031F9 RID: 12793 RVA: 0x00080210 File Offset: 0x0007E410
 		private PasserbyNpcSpawnComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002EC2 RID: 11970 RVA: 0x00078DE4 File Offset: 0x00076FE4
+		// Token: 0x060031FA RID: 12794 RVA: 0x00080248 File Offset: 0x0007E448
 		public static PasserbyNpcSpawnComponent Create([Nullable(2)] PasserbyNpcSpawnComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002EC3 RID: 11971 RVA: 0x00078DF7 File Offset: 0x00076FF7
+		// Token: 0x060031FB RID: 12795 RVA: 0x0008025B File Offset: 0x0007E45B
 		public static PasserbyNpcSpawnComponent CreateFromSetValue([Nullable(2)] PasserbyNpcSpawnComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002EC4 RID: 11972 RVA: 0x00078E0C File Offset: 0x0007700C
+		// Token: 0x060031FC RID: 12796 RVA: 0x00080270 File Offset: 0x0007E470
 		public new PasserbyNpcSpawnComponent_SetValue ToSetValue()
 		{
 			return new PasserbyNpcSpawnComponent_SetValue
@@ -62,14 +60,16 @@ namespace Aki.TDConfigMgr.Component
 				SpawnConfig = this.SpawnConfig,
 				SourceConfig = this.SourceConfig,
 				NpcMaterialDa = this.NpcMaterialDa,
+				BornPerformance = this.BornPerformance,
+				DestroyPerformance = this.DestroyPerformance,
 				DeviceGradeConfig = this.DeviceGradeConfig,
 				VisibleConditions = this.VisibleConditions
 			};
 		}
 
-		// Token: 0x17000C53 RID: 3155
-		// (get) Token: 0x06002EC5 RID: 11973 RVA: 0x00078E80 File Offset: 0x00077080
-		// (set) Token: 0x06002EC6 RID: 11974 RVA: 0x00078EBA File Offset: 0x000770BA
+		// Token: 0x17000D1A RID: 3354
+		// (get) Token: 0x060031FD RID: 12797 RVA: 0x000802FC File Offset: 0x0007E4FC
+		// (set) Token: 0x060031FE RID: 12798 RVA: 0x00080336 File Offset: 0x0007E536
 		public override bool? Disabled
 		{
 			get
@@ -91,9 +91,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C54 RID: 3156
-		// (get) Token: 0x06002EC7 RID: 11975 RVA: 0x00078EC8 File Offset: 0x000770C8
-		// (set) Token: 0x06002EC8 RID: 11976 RVA: 0x00078EF2 File Offset: 0x000770F2
+		// Token: 0x17000D1B RID: 3355
+		// (get) Token: 0x060031FF RID: 12799 RVA: 0x00080344 File Offset: 0x0007E544
+		// (set) Token: 0x06003200 RID: 12800 RVA: 0x0008036E File Offset: 0x0007E56E
 		public override bool? EdIsLocked
 		{
 			get
@@ -110,69 +110,57 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C55 RID: 3157
-		// (get) Token: 0x06002EC9 RID: 11977 RVA: 0x00078F00 File Offset: 0x00077100
-		// (set) Token: 0x06002ECA RID: 11978 RVA: 0x00078F61 File Offset: 0x00077161
-		public virtual IPasserbyNpcSplineMove MoveConfig
+		// Token: 0x17000D1C RID: 3356
+		// (get) Token: 0x06003201 RID: 12801 RVA: 0x0008037C File Offset: 0x0007E57C
+		// (set) Token: 0x06003202 RID: 12802 RVA: 0x000803A3 File Offset: 0x0007E5A3
+		public virtual IPasserbyNpcMoveBase MoveConfig
 		{
 			get
 			{
-				if (this._MoveConfigInited)
-				{
-					return this._MoveConfigCache;
-				}
-				this._MoveConfigInited = true;
 				if (this.FbInstance != null)
 				{
-					this._MoveConfigCache = IPasserbyNpcSplineMove.Create(this.FbInstance.MoveConfig);
+					return this.FbInstance.MoveConfig;
 				}
-				else
+				PasserbyNpcSpawnComponent_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
 				{
-					PasserbyNpcSpawnComponent_SetValue pocoInterface = this.PocoInterface;
-					this._MoveConfigCache = ((pocoInterface != null) ? pocoInterface.MoveConfig : null);
+					return null;
 				}
-				return this._MoveConfigCache;
+				return pocoInterface.MoveConfig;
 			}
 			set
 			{
 				this.GetOrCreatePoco().MoveConfig = value;
-				this._MoveConfigInited = false;
 			}
 		}
 
-		// Token: 0x17000C56 RID: 3158
-		// (get) Token: 0x06002ECB RID: 11979 RVA: 0x00078F78 File Offset: 0x00077178
-		// (set) Token: 0x06002ECC RID: 11980 RVA: 0x00078FD9 File Offset: 0x000771D9
-		public virtual IPasserbyNpcFixIntervalSpawn SpawnConfig
+		// Token: 0x17000D1D RID: 3357
+		// (get) Token: 0x06003203 RID: 12803 RVA: 0x000803B1 File Offset: 0x0007E5B1
+		// (set) Token: 0x06003204 RID: 12804 RVA: 0x000803D8 File Offset: 0x0007E5D8
+		public virtual IPasserbyNpcSpawnBase SpawnConfig
 		{
 			get
 			{
-				if (this._SpawnConfigInited)
-				{
-					return this._SpawnConfigCache;
-				}
-				this._SpawnConfigInited = true;
 				if (this.FbInstance != null)
 				{
-					this._SpawnConfigCache = IPasserbyNpcFixIntervalSpawn.Create(this.FbInstance.SpawnConfig);
+					return this.FbInstance.SpawnConfig;
 				}
-				else
+				PasserbyNpcSpawnComponent_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
 				{
-					PasserbyNpcSpawnComponent_SetValue pocoInterface = this.PocoInterface;
-					this._SpawnConfigCache = ((pocoInterface != null) ? pocoInterface.SpawnConfig : null);
+					return null;
 				}
-				return this._SpawnConfigCache;
+				return pocoInterface.SpawnConfig;
 			}
 			set
 			{
 				this.GetOrCreatePoco().SpawnConfig = value;
-				this._SpawnConfigInited = false;
 			}
 		}
 
-		// Token: 0x17000C57 RID: 3159
-		// (get) Token: 0x06002ECD RID: 11981 RVA: 0x00078FF0 File Offset: 0x000771F0
-		// (set) Token: 0x06002ECE RID: 11982 RVA: 0x00079051 File Offset: 0x00077251
+		// Token: 0x17000D1E RID: 3358
+		// (get) Token: 0x06003205 RID: 12805 RVA: 0x000803E8 File Offset: 0x0007E5E8
+		// (set) Token: 0x06003206 RID: 12806 RVA: 0x00080449 File Offset: 0x0007E649
 		public virtual IPasserbyNpcTemplateSource SourceConfig
 		{
 			get
@@ -200,9 +188,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C58 RID: 3160
-		// (get) Token: 0x06002ECF RID: 11983 RVA: 0x00079066 File Offset: 0x00077266
-		// (set) Token: 0x06002ED0 RID: 11984 RVA: 0x0007908D File Offset: 0x0007728D
+		// Token: 0x17000D1F RID: 3359
+		// (get) Token: 0x06003207 RID: 12807 RVA: 0x0008045E File Offset: 0x0007E65E
+		// (set) Token: 0x06003208 RID: 12808 RVA: 0x00080485 File Offset: 0x0007E685
 		[Nullable(2)]
 		public virtual string NpcMaterialDa
 		{
@@ -227,9 +215,75 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C59 RID: 3161
-		// (get) Token: 0x06002ED1 RID: 11985 RVA: 0x0007909C File Offset: 0x0007729C
-		// (set) Token: 0x06002ED2 RID: 11986 RVA: 0x000790FD File Offset: 0x000772FD
+		// Token: 0x17000D20 RID: 3360
+		// (get) Token: 0x06003209 RID: 12809 RVA: 0x00080494 File Offset: 0x0007E694
+		// (set) Token: 0x0600320A RID: 12810 RVA: 0x000804F5 File Offset: 0x0007E6F5
+		[Nullable(2)]
+		public virtual IPasserbyNpcPerformance BornPerformance
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this._BornPerformanceInited)
+				{
+					return this._BornPerformanceCache;
+				}
+				this._BornPerformanceInited = true;
+				if (this.FbInstance != null)
+				{
+					this._BornPerformanceCache = IPasserbyNpcPerformance.Create(this.FbInstance.BornPerformance);
+				}
+				else
+				{
+					PasserbyNpcSpawnComponent_SetValue pocoInterface = this.PocoInterface;
+					this._BornPerformanceCache = ((pocoInterface != null) ? pocoInterface.BornPerformance : null);
+				}
+				return this._BornPerformanceCache;
+			}
+			[NullableContext(2)]
+			set
+			{
+				this.GetOrCreatePoco().BornPerformance = value;
+				this._BornPerformanceInited = false;
+			}
+		}
+
+		// Token: 0x17000D21 RID: 3361
+		// (get) Token: 0x0600320B RID: 12811 RVA: 0x0008050C File Offset: 0x0007E70C
+		// (set) Token: 0x0600320C RID: 12812 RVA: 0x0008056D File Offset: 0x0007E76D
+		[Nullable(2)]
+		public virtual IPasserbyNpcPerformance DestroyPerformance
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this._DestroyPerformanceInited)
+				{
+					return this._DestroyPerformanceCache;
+				}
+				this._DestroyPerformanceInited = true;
+				if (this.FbInstance != null)
+				{
+					this._DestroyPerformanceCache = IPasserbyNpcPerformance.Create(this.FbInstance.DestroyPerformance);
+				}
+				else
+				{
+					PasserbyNpcSpawnComponent_SetValue pocoInterface = this.PocoInterface;
+					this._DestroyPerformanceCache = ((pocoInterface != null) ? pocoInterface.DestroyPerformance : null);
+				}
+				return this._DestroyPerformanceCache;
+			}
+			[NullableContext(2)]
+			set
+			{
+				this.GetOrCreatePoco().DestroyPerformance = value;
+				this._DestroyPerformanceInited = false;
+			}
+		}
+
+		// Token: 0x17000D22 RID: 3362
+		// (get) Token: 0x0600320D RID: 12813 RVA: 0x00080584 File Offset: 0x0007E784
+		// (set) Token: 0x0600320E RID: 12814 RVA: 0x000805E5 File Offset: 0x0007E7E5
 		[Nullable(2)]
 		public virtual IPasserbyNpcDeviceGradeConfig DeviceGradeConfig
 		{
@@ -260,9 +314,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C5A RID: 3162
-		// (get) Token: 0x06002ED3 RID: 11987 RVA: 0x00079114 File Offset: 0x00077314
-		// (set) Token: 0x06002ED4 RID: 11988 RVA: 0x00079175 File Offset: 0x00077375
+		// Token: 0x17000D23 RID: 3363
+		// (get) Token: 0x0600320F RID: 12815 RVA: 0x000805FC File Offset: 0x0007E7FC
+		// (set) Token: 0x06003210 RID: 12816 RVA: 0x0008065D File Offset: 0x0007E85D
 		[Nullable(2)]
 		public virtual IConditionGroup VisibleConditions
 		{
@@ -293,42 +347,42 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001EE3 RID: 7907
+		// Token: 0x040020F3 RID: 8435
 		[Nullable(2)]
 		protected new PasserbyNpcSpawnComponent FbInstance;
 
-		// Token: 0x04001EE4 RID: 7908
+		// Token: 0x040020F4 RID: 8436
 		[Nullable(2)]
 		protected new PasserbyNpcSpawnComponent_SetValue PocoInterface;
 
-		// Token: 0x04001EE5 RID: 7909
-		private IPasserbyNpcSplineMove _MoveConfigCache;
-
-		// Token: 0x04001EE6 RID: 7910
-		private bool _MoveConfigInited;
-
-		// Token: 0x04001EE7 RID: 7911
-		private IPasserbyNpcFixIntervalSpawn _SpawnConfigCache;
-
-		// Token: 0x04001EE8 RID: 7912
-		private bool _SpawnConfigInited;
-
-		// Token: 0x04001EE9 RID: 7913
+		// Token: 0x040020F5 RID: 8437
 		private IPasserbyNpcTemplateSource _SourceConfigCache;
 
-		// Token: 0x04001EEA RID: 7914
+		// Token: 0x040020F6 RID: 8438
 		private bool _SourceConfigInited;
 
-		// Token: 0x04001EEB RID: 7915
+		// Token: 0x040020F7 RID: 8439
+		private IPasserbyNpcPerformance _BornPerformanceCache;
+
+		// Token: 0x040020F8 RID: 8440
+		private bool _BornPerformanceInited;
+
+		// Token: 0x040020F9 RID: 8441
+		private IPasserbyNpcPerformance _DestroyPerformanceCache;
+
+		// Token: 0x040020FA RID: 8442
+		private bool _DestroyPerformanceInited;
+
+		// Token: 0x040020FB RID: 8443
 		private IPasserbyNpcDeviceGradeConfig _DeviceGradeConfigCache;
 
-		// Token: 0x04001EEC RID: 7916
+		// Token: 0x040020FC RID: 8444
 		private bool _DeviceGradeConfigInited;
 
-		// Token: 0x04001EED RID: 7917
+		// Token: 0x040020FD RID: 8445
 		private IConditionGroup _VisibleConditionsCache;
 
-		// Token: 0x04001EEE RID: 7918
+		// Token: 0x040020FE RID: 8446
 		private bool _VisibleConditionsInited;
 	}
 }

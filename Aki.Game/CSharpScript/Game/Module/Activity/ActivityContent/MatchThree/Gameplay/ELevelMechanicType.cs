@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064B7 RID: 25783
+	// Token: 0x02005435 RID: 21557
 	public enum ELevelMechanicType
 	{
-		// Token: 0x04021B49 RID: 138057
+		// Token: 0x0401C47A RID: 115834
 		GenerateCharger = 1,
-		// Token: 0x04021B4A RID: 138058
+		// Token: 0x0401C47B RID: 115835
 		GenerateHourglass,
-		// Token: 0x04021B4B RID: 138059
+		// Token: 0x0401C47C RID: 115836
 		RecycleCharger,
-		// Token: 0x04021B4C RID: 138060
+		// Token: 0x0401C47D RID: 115837
 		RecycleHourglass
 	}
 }

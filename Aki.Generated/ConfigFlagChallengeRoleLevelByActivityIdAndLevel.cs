@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000302 RID: 770
+	// Token: 0x02000317 RID: 791
 	public class ConfigFlagChallengeRoleLevelByActivityIdAndLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001211 RID: 4625 RVA: 0x000BFADB File Offset: 0x000BDCDB
+		// Token: 0x0600128F RID: 4751 RVA: 0x000C5FE7 File Offset: 0x000C41E7
 		static ConfigFlagChallengeRoleLevelByActivityIdAndLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFlagChallengeRoleLevelByActivityIdAndLevel.CreateStaticDefaultValue), new Action(ConfigFlagChallengeRoleLevelByActivityIdAndLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001212 RID: 4626 RVA: 0x000BFAFC File Offset: 0x000BDCFC
+		// Token: 0x06001290 RID: 4752 RVA: 0x000C6008 File Offset: 0x000C4208
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFlagChallengeRoleLevelByActivityIdAndLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001213 RID: 4627 RVA: 0x000BFB7B File Offset: 0x000BDD7B
+		// Token: 0x06001291 RID: 4753 RVA: 0x000C6087 File Offset: 0x000C4287
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFlagChallengeRoleLevelByActivityIdAndLevel.LogPair = null;
 			ConfigFlagChallengeRoleLevelByActivityIdAndLevel.HandleId = 0;
 		}
 
-		// Token: 0x06001214 RID: 4628 RVA: 0x000BFB89 File Offset: 0x000BDD89
+		// Token: 0x06001292 RID: 4754 RVA: 0x000C6095 File Offset: 0x000C4295
 		public static void Init()
 		{
 			ConfigFlagChallengeRoleLevelByActivityIdAndLevel.HandleId = ConfigCommon.InitDataStatement(ConfigFlagChallengeRoleLevelByActivityIdAndLevel.HandleId, "db_flagchallenge.db", "select BinData from `FlagChallengeRoleLevel` where ActivityId=? AND Level=?");
 		}
 
-		// Token: 0x06001215 RID: 4629 RVA: 0x000BFBA4 File Offset: 0x000BDDA4
+		// Token: 0x06001293 RID: 4755 RVA: 0x000C60B0 File Offset: 0x000C42B0
 		public static FlagChallengeRoleLevel? GetConfig(int p0ActivityId, int p1Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFlagChallengeRoleLevelByActivityIdAndLevel.HandleId, ConfigFlagChallengeRoleLevelByActivityIdAndLevel.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new FlagChallengeRoleLevel?(rootAsFlagChallengeRoleLevel);
 		}
 
-		// Token: 0x040014F2 RID: 5362
+		// Token: 0x04001585 RID: 5509
 		private const string DB = "db_flagchallenge.db";
 
-		// Token: 0x040014F3 RID: 5363
+		// Token: 0x04001586 RID: 5510
 		private const string FILE = "c.插旗活动局内.xlsx";
 
-		// Token: 0x040014F4 RID: 5364
+		// Token: 0x04001587 RID: 5511
 		private const string TABLE = "FlagChallengeRoleLevel";
 
-		// Token: 0x040014F5 RID: 5365
+		// Token: 0x04001588 RID: 5512
 		private const string COMMAND = "select BinData from `FlagChallengeRoleLevel` where ActivityId=? AND Level=?";
 
-		// Token: 0x040014F6 RID: 5366
+		// Token: 0x04001589 RID: 5513
 		private const string KEY_PREFIX = "FlagChallengeRoleLevelByActivityIdAndLevel";
 
-		// Token: 0x040014F7 RID: 5367
+		// Token: 0x0400158A RID: 5514
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040014F8 RID: 5368
+		// Token: 0x0400158B RID: 5515
 		private static int HandleId;
 	}
 }

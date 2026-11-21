@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058A1 RID: 22689
+	// Token: 0x02004879 RID: 18553
 	public class InstanceDungeonMowingPanelItem : UiPanelBase
 	{
-		// Token: 0x06039B9F RID: 236447 RVA: 0x00DB8124 File Offset: 0x00DB6324
+		// Token: 0x0602EAC2 RID: 191170 RVA: 0x00D0703C File Offset: 0x00D0523C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039BA0 RID: 236448 RVA: 0x00DB8292 File Offset: 0x00DB6492
+		// Token: 0x0602EAC3 RID: 191171 RVA: 0x00D071AA File Offset: 0x00D053AA
 		protected override void OnStart()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.RedDotMowingRiskBuffAll, base.GetItem(1), null, 0);
@@ -54,14 +54,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039BA1 RID: 236449 RVA: 0x00DB82D2 File Offset: 0x00DB64D2
+		// Token: 0x0602EAC4 RID: 191172 RVA: 0x00D071EA File Offset: 0x00D053EA
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindRedDot(ERedDotName.RedDotMowingRiskBuffAll);
 			RedDotController.Instance.UnBindRedDot(ERedDotName.RedDotMowingRiskReward);
 		}
 
-		// Token: 0x06039BA2 RID: 236450 RVA: 0x00DB82F2 File Offset: 0x00DB64F2
+		// Token: 0x0602EAC5 RID: 191173 RVA: 0x00D0720A File Offset: 0x00D0540A
 		[NullableContext(1)]
 		public void RefreshItemByData(InstanceDungeonMowingPanelItemData data)
 		{
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.RefreshItem();
 		}
 
-		// Token: 0x06039BA3 RID: 236451 RVA: 0x00DB830C File Offset: 0x00DB650C
+		// Token: 0x0602EAC6 RID: 191174 RVA: 0x00D07224 File Offset: 0x00D05424
 		public void RefreshItem()
 		{
 			if (this.Data == null)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039BA4 RID: 236452 RVA: 0x00DB8376 File Offset: 0x00DB6576
+		// Token: 0x0602EAC7 RID: 191175 RVA: 0x00D0728E File Offset: 0x00D0548E
 		private void OnLeftClick()
 		{
 			InstanceDungeonMowingPanelItemData data = this.Data;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			leftBtnClickCallBack();
 		}
 
-		// Token: 0x06039BA5 RID: 236453 RVA: 0x00DB8392 File Offset: 0x00DB6592
+		// Token: 0x0602EAC8 RID: 191176 RVA: 0x00D072AA File Offset: 0x00D054AA
 		private void OnRightClick()
 		{
 			InstanceDungeonMowingPanelItemData data = this.Data;
@@ -123,26 +123,26 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			rightBtnClickCallBack();
 		}
 
-		// Token: 0x0401E26F RID: 123503
+		// Token: 0x04018D0C RID: 101644
 		[Nullable(2)]
 		private InstanceDungeonMowingPanelItemData Data;
 
-		// Token: 0x0200BB0A RID: 47882
+		// Token: 0x0200A523 RID: 42275
 		private enum EChildType
 		{
-			// Token: 0x04038813 RID: 231443
+			// Token: 0x04033214 RID: 209428
 			LeftButton,
-			// Token: 0x04038814 RID: 231444
+			// Token: 0x04033215 RID: 209429
 			LeftRedDotItem,
-			// Token: 0x04038815 RID: 231445
+			// Token: 0x04033216 RID: 209430
 			RightButton,
-			// Token: 0x04038816 RID: 231446
+			// Token: 0x04033217 RID: 209431
 			RightRedDotItem,
-			// Token: 0x04038817 RID: 231447
+			// Token: 0x04033218 RID: 209432
 			ProgressText,
-			// Token: 0x04038818 RID: 231448
+			// Token: 0x04033219 RID: 209433
 			LeftItem,
-			// Token: 0x04038819 RID: 231449
+			// Token: 0x0403321A RID: 209434
 			ScoreItem
 		}
 	}

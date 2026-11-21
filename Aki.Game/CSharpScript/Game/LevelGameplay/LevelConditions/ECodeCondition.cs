@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C38 RID: 27704
+	// Token: 0x02005DB1 RID: 23985
 	public enum ECodeCondition
 	{
-		// Token: 0x04023990 RID: 145808
+		// Token: 0x0401EC32 RID: 126002
 		CheckCharacterTag,
-		// Token: 0x04023991 RID: 145809
+		// Token: 0x0401EC33 RID: 126003
 		CheckEntityTag,
-		// Token: 0x04023992 RID: 145810
+		// Token: 0x0401EC34 RID: 126004
 		CheckFanIsNotRotating,
-		// Token: 0x04023993 RID: 145811
+		// Token: 0x0401EC35 RID: 126005
 		CheckCodeGroup,
-		// Token: 0x04023994 RID: 145812
+		// Token: 0x0401EC36 RID: 126006
 		CheckGravityFlipEntityDirectionSameAsPlayer
 	}
 }

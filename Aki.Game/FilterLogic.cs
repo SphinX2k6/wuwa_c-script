@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using FilterDefine;
 
-// Token: 0x02001831 RID: 6193
+// Token: 0x02000CEA RID: 3306
 [NullableContext(1)]
 [Nullable(0)]
 public class FilterLogic
 {
-	// Token: 0x0600B58F RID: 46479 RVA: 0x0028FECC File Offset: 0x0028E0CC
+	// Token: 0x0600897A RID: 35194 RVA: 0x0029A5EC File Offset: 0x002987EC
 	public Func<int[], FilterItemData[]> GetDataFuncByType(FilterDefine.EFilterType type)
 	{
 		Func<int[], FilterItemData[]> result;
@@ -29,13 +28,13 @@ public class FilterLogic
 		return null;
 	}
 
-	// Token: 0x0600B590 RID: 46480 RVA: 0x0028FF2B File Offset: 0x0028E12B
+	// Token: 0x0600897B RID: 35195 RVA: 0x0029A64B File Offset: 0x0029884B
 	private TDefaultFilter[] GetDefaultFilterFunction(EFilterDataType dataType)
 	{
 		return this.DataMapInternal[dataType].DefaultFilterList();
 	}
 
-	// Token: 0x0600B591 RID: 46481 RVA: 0x0028FF40 File Offset: 0x0028E140
+	// Token: 0x0600897C RID: 35196 RVA: 0x0029A660 File Offset: 0x00298860
 	[NullableContext(2)]
 	private unsafe TFilterConfig GetFilterFunctionByParam(EFilterDataType dataType, FilterDefine.EFilterType filterType)
 	{
@@ -57,7 +56,7 @@ public class FilterLogic
 		return filterFunction;
 	}
 
-	// Token: 0x0600B592 RID: 46482 RVA: 0x0028FFCC File Offset: 0x0028E1CC
+	// Token: 0x0600897D RID: 35197 RVA: 0x0029A6EC File Offset: 0x002988EC
 	private List<T> GetFilterListIntersection<[Nullable(2)] T>(List<T> dataList, EFilterDataType dataType, FilterDefine.EFilterType typeId, Dictionary<int, string> idMap)
 	{
 		TFilterConfig filterFunctionByParam = this.GetFilterFunctionByParam(dataType, typeId);
@@ -114,7 +113,7 @@ public class FilterLogic
 		return list;
 	}
 
-	// Token: 0x0600B593 RID: 46483 RVA: 0x00290154 File Offset: 0x0028E354
+	// Token: 0x0600897E RID: 35198 RVA: 0x0029A874 File Offset: 0x00298A74
 	[return: TupleElementNames(new string[]
 	{
 		"FindList",
@@ -177,7 +176,7 @@ public class FilterLogic
 		return new ValueTuple<List<T>, List<T>>(list, list2);
 	}
 
-	// Token: 0x0600B594 RID: 46484 RVA: 0x0029028C File Offset: 0x0028E48C
+	// Token: 0x0600897F RID: 35199 RVA: 0x0029A9AC File Offset: 0x00298BAC
 	public List<T> GetFilterList<[Nullable(2)] T>(List<T> dataList, EFilterDataType dataType, bool isSupportSelectAll, bool isSelectAllUnion, Dictionary<FilterDefine.EFilterType, Dictionary<int, string>> ruleData)
 	{
 		List<T> list = new List<T>();
@@ -241,7 +240,7 @@ public class FilterLogic
 		return list5;
 	}
 
-	// Token: 0x0600B595 RID: 46485 RVA: 0x00290448 File Offset: 0x0028E648
+	// Token: 0x06008980 RID: 35200 RVA: 0x0029AB68 File Offset: 0x00298D68
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -269,10 +268,10 @@ public class FilterLogic
 			filterItemData.SetIsShowIcon(value2.IsShowIcon);
 			filterItemData.NeedChangeColor = value.NeedChangeColor;
 		}
-		return array.ToList<FilterItemData>();
+		return new List<FilterItemData>(array);
 	}
 
-	// Token: 0x0600B596 RID: 46486 RVA: 0x00290514 File Offset: 0x0028E714
+	// Token: 0x06008981 RID: 35201 RVA: 0x0029AC34 File Offset: 0x00298E34
 	public FilterLogic()
 	{
 		Dictionary<FilterDefine.EFilterType, Func<int[], FilterItemData[]>> dictionary = new Dictionary<FilterDefine.EFilterType, Func<int[], FilterItemData[]>>();
@@ -588,7 +587,7 @@ public class FilterLogic
 		base..ctor();
 	}
 
-	// Token: 0x04005254 RID: 21076
+	// Token: 0x040052FF RID: 21247
 	private readonly Dictionary<EFilterDataType, CommonFilter> DataMapInternal = new Dictionary<EFilterDataType, CommonFilter>
 	{
 		{
@@ -685,14 +684,14 @@ public class FilterLogic
 		}
 	};
 
-	// Token: 0x04005255 RID: 21077
+	// Token: 0x04005300 RID: 21248
 	private readonly Dictionary<FilterDefine.EFilterType, Func<int[], FilterItemData[]>> FilterTypeMapInternal;
 
-	// Token: 0x02007E14 RID: 32276
+	// Token: 0x02006F9A RID: 28570
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04029426 RID: 168998
+		// Token: 0x04024751 RID: 149329
 		[Nullable(new byte[]
 		{
 			0,
@@ -702,7 +701,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <0>__GetElementFilterData;
 
-		// Token: 0x04029427 RID: 168999
+		// Token: 0x04024752 RID: 149330
 		[Nullable(new byte[]
 		{
 			0,
@@ -712,7 +711,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <1>__GetWeaponFilterData;
 
-		// Token: 0x04029428 RID: 169000
+		// Token: 0x04024753 RID: 149331
 		[Nullable(new byte[]
 		{
 			0,
@@ -722,7 +721,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <2>__GetPhantomFilterData;
 
-		// Token: 0x04029429 RID: 169001
+		// Token: 0x04024754 RID: 149332
 		[Nullable(new byte[]
 		{
 			0,
@@ -732,7 +731,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <3>__GetDetectFilterData;
 
-		// Token: 0x0402942A RID: 169002
+		// Token: 0x04024755 RID: 149333
 		[Nullable(new byte[]
 		{
 			0,
@@ -742,7 +741,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <4>__GetCookMenuFilterData;
 
-		// Token: 0x0402942B RID: 169003
+		// Token: 0x04024756 RID: 149334
 		[Nullable(new byte[]
 		{
 			0,
@@ -752,7 +751,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <5>__GetCookTypeFilterData;
 
-		// Token: 0x0402942C RID: 169004
+		// Token: 0x04024757 RID: 149335
 		[Nullable(new byte[]
 		{
 			0,
@@ -762,7 +761,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <6>__GetComposeFilterData;
 
-		// Token: 0x0402942D RID: 169005
+		// Token: 0x04024758 RID: 149336
 		[Nullable(new byte[]
 		{
 			0,
@@ -772,7 +771,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <7>__GetPhantomRarityFilterData;
 
-		// Token: 0x0402942E RID: 169006
+		// Token: 0x04024759 RID: 149337
 		[Nullable(new byte[]
 		{
 			0,
@@ -782,7 +781,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <8>__GetPhantomFettersEquipFilterData;
 
-		// Token: 0x0402942F RID: 169007
+		// Token: 0x0402475A RID: 149338
 		[Nullable(new byte[]
 		{
 			0,
@@ -792,7 +791,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <9>__GetPhantomFettersHasFilterData;
 
-		// Token: 0x04029430 RID: 169008
+		// Token: 0x0402475B RID: 149339
 		[Nullable(new byte[]
 		{
 			0,
@@ -802,7 +801,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <10>__GetPhantomRarityZeroFilterData;
 
-		// Token: 0x04029431 RID: 169009
+		// Token: 0x0402475C RID: 149340
 		[Nullable(new byte[]
 		{
 			0,
@@ -812,7 +811,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <11>__GetPhantomRarityOneFilterData;
 
-		// Token: 0x04029432 RID: 169010
+		// Token: 0x0402475D RID: 149341
 		[Nullable(new byte[]
 		{
 			0,
@@ -822,7 +821,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <12>__GetPhantomRarityTwoFilterData;
 
-		// Token: 0x04029433 RID: 169011
+		// Token: 0x0402475E RID: 149342
 		[Nullable(new byte[]
 		{
 			0,
@@ -832,7 +831,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <13>__GetPhantomRarityThreeFilterData;
 
-		// Token: 0x04029434 RID: 169012
+		// Token: 0x0402475F RID: 149343
 		[Nullable(new byte[]
 		{
 			0,
@@ -842,7 +841,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <14>__GetItemQualityFilterData;
 
-		// Token: 0x04029435 RID: 169013
+		// Token: 0x04024760 RID: 149344
 		[Nullable(new byte[]
 		{
 			0,
@@ -852,7 +851,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <15>__GetVisionDestroyCostData;
 
-		// Token: 0x04029436 RID: 169014
+		// Token: 0x04024761 RID: 149345
 		[Nullable(new byte[]
 		{
 			0,
@@ -862,7 +861,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <16>__GetVisionDestroyQualityData;
 
-		// Token: 0x04029437 RID: 169015
+		// Token: 0x04024762 RID: 149346
 		[Nullable(new byte[]
 		{
 			0,
@@ -872,7 +871,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <17>__GetVisionDestroyFetterGroupData;
 
-		// Token: 0x04029438 RID: 169016
+		// Token: 0x04024763 RID: 149347
 		[Nullable(new byte[]
 		{
 			0,
@@ -882,7 +881,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <18>__GetVisionDestroyAttribute;
 
-		// Token: 0x04029439 RID: 169017
+		// Token: 0x04024764 RID: 149348
 		[Nullable(new byte[]
 		{
 			0,
@@ -892,7 +891,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <19>__GetRoleTagFilterList;
 
-		// Token: 0x0402943A RID: 169018
+		// Token: 0x04024765 RID: 149349
 		[Nullable(new byte[]
 		{
 			0,
@@ -902,7 +901,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <20>__GetItemDeprecateFilterList;
 
-		// Token: 0x0402943B RID: 169019
+		// Token: 0x04024766 RID: 149350
 		[Nullable(new byte[]
 		{
 			0,
@@ -912,7 +911,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <21>__GetVisionGroupAttributeFilterList;
 
-		// Token: 0x0402943C RID: 169020
+		// Token: 0x04024767 RID: 149351
 		[Nullable(new byte[]
 		{
 			0,
@@ -922,7 +921,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <22>__GetFishingTechData;
 
-		// Token: 0x0402943D RID: 169021
+		// Token: 0x04024768 RID: 149352
 		[Nullable(new byte[]
 		{
 			0,
@@ -932,7 +931,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <23>__GetFishingAreaData;
 
-		// Token: 0x0402943E RID: 169022
+		// Token: 0x04024769 RID: 149353
 		[Nullable(new byte[]
 		{
 			0,
@@ -942,7 +941,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <24>__GetFishingTimeData;
 
-		// Token: 0x0402943F RID: 169023
+		// Token: 0x0402476A RID: 149354
 		[Nullable(new byte[]
 		{
 			0,
@@ -952,7 +951,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <25>__GetFishingTypeData;
 
-		// Token: 0x04029440 RID: 169024
+		// Token: 0x0402476B RID: 149355
 		[Nullable(new byte[]
 		{
 			0,
@@ -962,7 +961,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <26>__GetDangoAbyssPluginQualityData;
 
-		// Token: 0x04029441 RID: 169025
+		// Token: 0x0402476C RID: 149356
 		[Nullable(new byte[]
 		{
 			0,
@@ -972,7 +971,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <27>__GetDangoAbyssPluginPropData;
 
-		// Token: 0x04029442 RID: 169026
+		// Token: 0x0402476D RID: 149357
 		[Nullable(new byte[]
 		{
 			0,
@@ -982,7 +981,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <28>__GetDangoAbyssPluginTagData;
 
-		// Token: 0x04029443 RID: 169027
+		// Token: 0x0402476E RID: 149358
 		[Nullable(new byte[]
 		{
 			0,
@@ -992,7 +991,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <29>__GetDangoAbyssPluginLockStateData;
 
-		// Token: 0x04029444 RID: 169028
+		// Token: 0x0402476F RID: 149359
 		[Nullable(new byte[]
 		{
 			0,
@@ -1002,7 +1001,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <30>__GetPhantomManageFirstMainPropData;
 
-		// Token: 0x04029445 RID: 169029
+		// Token: 0x04024770 RID: 149360
 		[Nullable(new byte[]
 		{
 			0,
@@ -1012,7 +1011,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <31>__GetPhantomManageCostData;
 
-		// Token: 0x04029446 RID: 169030
+		// Token: 0x04024771 RID: 149361
 		[Nullable(new byte[]
 		{
 			0,
@@ -1022,7 +1021,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <32>__GetPinballRoleBdData;
 
-		// Token: 0x04029447 RID: 169031
+		// Token: 0x04024772 RID: 149362
 		[Nullable(new byte[]
 		{
 			0,
@@ -1032,7 +1031,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <33>__GetPinballRoleClassData;
 
-		// Token: 0x04029448 RID: 169032
+		// Token: 0x04024773 RID: 149363
 		[Nullable(new byte[]
 		{
 			0,
@@ -1042,7 +1041,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <34>__GetPinballWeaponTypeData;
 
-		// Token: 0x04029449 RID: 169033
+		// Token: 0x04024774 RID: 149364
 		[Nullable(new byte[]
 		{
 			0,
@@ -1052,7 +1051,7 @@ public class FilterLogic
 		})]
 		public static Func<int[], FilterItemData[]> <35>__GetPinballWeaponQualityData;
 
-		// Token: 0x0402944A RID: 169034
+		// Token: 0x04024775 RID: 149365
 		[Nullable(new byte[]
 		{
 			0,

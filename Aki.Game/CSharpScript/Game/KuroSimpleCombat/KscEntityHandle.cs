@@ -5,20 +5,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.KuroSimpleCombat
 {
-	// Token: 0x02006FB8 RID: 28600
+	// Token: 0x02006139 RID: 24889
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class KscEntityHandle
 	{
-		// Token: 0x06045806 RID: 284678 RVA: 0x0113DEF5 File Offset: 0x0113C0F5
+		// Token: 0x0603B9B6 RID: 244150 RVA: 0x010E7D21 File Offset: 0x010E5F21
 		public KscEntityHandle(AKSC_Entity kscEntity, long creatureDataId = 0L)
 		{
 			this.KscEntity = kscEntity;
 			this.CreatureDataId = creatureDataId;
 		}
 
-		// Token: 0x17009B7C RID: 39804
-		// (get) Token: 0x06045807 RID: 284679 RVA: 0x0113DF16 File Offset: 0x0113C116
+		// Token: 0x170070BC RID: 28860
+		// (get) Token: 0x0603B9B7 RID: 244151 RVA: 0x010E7D42 File Offset: 0x010E5F42
 		public bool Valid
 		{
 			get
@@ -28,26 +28,26 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			}
 		}
 
-		// Token: 0x06045808 RID: 284680 RVA: 0x0113DF29 File Offset: 0x0113C129
+		// Token: 0x0603B9B8 RID: 244152 RVA: 0x010E7D55 File Offset: 0x010E5F55
 		[NullableContext(1)]
 		public void SetKscEntity(AKSC_Entity kscEntity)
 		{
 			this.KscEntity = kscEntity;
 		}
 
-		// Token: 0x06045809 RID: 284681 RVA: 0x0113DF32 File Offset: 0x0113C132
+		// Token: 0x0603B9B9 RID: 244153 RVA: 0x010E7D5E File Offset: 0x010E5F5E
 		public void SetCreatureDataId(int creatureDataId)
 		{
 			this.CreatureDataId = (long)creatureDataId;
 		}
 
-		// Token: 0x0604580A RID: 284682 RVA: 0x0113DF3C File Offset: 0x0113C13C
+		// Token: 0x0603B9BA RID: 244154 RVA: 0x010E7D68 File Offset: 0x010E5F68
 		public void SetAttr(EKSC_AttrType attrType, int attrValue)
 		{
 			this.ServerAttributeMap[attrType] = attrValue;
 		}
 
-		// Token: 0x0604580B RID: 284683 RVA: 0x0113DF4C File Offset: 0x0113C14C
+		// Token: 0x0603B9BB RID: 244155 RVA: 0x010E7D78 File Offset: 0x010E5F78
 		public unsafe void ApplyAttrDelta(Dictionary<int, int> newAttributes)
 		{
 			if (this.KscEntity == null || newAttributes == null || newAttributes.Count == 0)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			}
 		}
 
-		// Token: 0x0604580C RID: 284684 RVA: 0x0113E110 File Offset: 0x0113C310
+		// Token: 0x0603B9BC RID: 244156 RVA: 0x010E7F3C File Offset: 0x010E613C
 		private bool ShouldSync()
 		{
 			if (this.CreatureDataId == 0L)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			return ftransformDouble != null;
 		}
 
-		// Token: 0x0604580D RID: 284685 RVA: 0x0113E194 File Offset: 0x0113C394
+		// Token: 0x0603B9BD RID: 244157 RVA: 0x010E7FC0 File Offset: 0x010E61C0
 		public void SyncEntityLocation()
 		{
 			if (!this.ShouldSync())
@@ -138,13 +138,13 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			this.KscEntity.SetTransformByWorld(ftransformDouble);
 		}
 
-		// Token: 0x04024441 RID: 148545
+		// Token: 0x0401F6F6 RID: 128758
 		public AKSC_Entity KscEntity;
 
-		// Token: 0x04024442 RID: 148546
+		// Token: 0x0401F6F7 RID: 128759
 		public long CreatureDataId;
 
-		// Token: 0x04024443 RID: 148547
+		// Token: 0x0401F6F8 RID: 128760
 		[Nullable(1)]
 		private readonly Dictionary<EKSC_AttrType, int> ServerAttributeMap = new Dictionary<EKSC_AttrType, int>();
 	}

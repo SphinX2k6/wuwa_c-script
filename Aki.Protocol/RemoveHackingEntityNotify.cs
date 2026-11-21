@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000EFD RID: 3837
+	// Token: 0x02000EED RID: 3821
 	[NetMessage(EMessageId.RemoveHackingEntityNotify)]
 	public sealed class RemoveHackingEntityNotify : IMessage<RemoveHackingEntityNotify>, IMessage, IEquatable<RemoveHackingEntityNotify>, IDeepCloneable<RemoveHackingEntityNotify>, IBufferMessage
 	{
-		// Token: 0x060148EA RID: 84202 RVA: 0x002FC8D5 File Offset: 0x002FAAD5
+		// Token: 0x06014805 RID: 83973 RVA: 0x002FB219 File Offset: 0x002F9419
 		[NullableContext(1)]
 		public static RemoveHackingEntityNotify Create()
 		{
 			return new RemoveHackingEntityNotify();
 		}
 
-		// Token: 0x1700445E RID: 17502
-		// (get) Token: 0x060148EB RID: 84203 RVA: 0x002FC8DC File Offset: 0x002FAADC
+		// Token: 0x17004434 RID: 17460
+		// (get) Token: 0x06014806 RID: 83974 RVA: 0x002FB220 File Offset: 0x002F9420
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700445F RID: 17503
-		// (get) Token: 0x060148EC RID: 84204 RVA: 0x002FC8DF File Offset: 0x002FAADF
+		// Token: 0x17004435 RID: 17461
+		// (get) Token: 0x06014807 RID: 83975 RVA: 0x002FB223 File Offset: 0x002F9423
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060148ED RID: 84205 RVA: 0x002FC8E6 File Offset: 0x002FAAE6
+		// Token: 0x06014808 RID: 83976 RVA: 0x002FB22A File Offset: 0x002F942A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveHackingEntityNotify()
 		{
 		}
 
-		// Token: 0x060148EE RID: 84206 RVA: 0x002FC8EE File Offset: 0x002FAAEE
+		// Token: 0x06014809 RID: 83977 RVA: 0x002FB232 File Offset: 0x002F9432
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveHackingEntityNotify(RemoveHackingEntityNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060148EF RID: 84207 RVA: 0x002FC91F File Offset: 0x002FAB1F
+		// Token: 0x0601480A RID: 83978 RVA: 0x002FB263 File Offset: 0x002F9463
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveHackingEntityNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new RemoveHackingEntityNotify(this);
 		}
 
-		// Token: 0x17004460 RID: 17504
-		// (get) Token: 0x060148F0 RID: 84208 RVA: 0x002FC927 File Offset: 0x002FAB27
-		// (set) Token: 0x060148F1 RID: 84209 RVA: 0x002FC92F File Offset: 0x002FAB2F
+		// Token: 0x17004436 RID: 17462
+		// (get) Token: 0x0601480B RID: 83979 RVA: 0x002FB26B File Offset: 0x002F946B
+		// (set) Token: 0x0601480C RID: 83980 RVA: 0x002FB273 File Offset: 0x002F9473
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long AuxiliaryMachineEntityId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004461 RID: 17505
-		// (get) Token: 0x060148F2 RID: 84210 RVA: 0x002FC938 File Offset: 0x002FAB38
-		// (set) Token: 0x060148F3 RID: 84211 RVA: 0x002FC940 File Offset: 0x002FAB40
+		// Token: 0x17004437 RID: 17463
+		// (get) Token: 0x0601480D RID: 83981 RVA: 0x002FB27C File Offset: 0x002F947C
+		// (set) Token: 0x0601480E RID: 83982 RVA: 0x002FB284 File Offset: 0x002F9484
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long HackingEntityId
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060148F4 RID: 84212 RVA: 0x002FC949 File Offset: 0x002FAB49
+		// Token: 0x0601480F RID: 83983 RVA: 0x002FB28D File Offset: 0x002F948D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RemoveHackingEntityNotify);
 		}
 
-		// Token: 0x060148F5 RID: 84213 RVA: 0x002FC957 File Offset: 0x002FAB57
+		// Token: 0x06014810 RID: 83984 RVA: 0x002FB29B File Offset: 0x002F949B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RemoveHackingEntityNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.AuxiliaryMachineEntityId == other.AuxiliaryMachineEntityId && this.HackingEntityId == other.HackingEntityId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060148F6 RID: 84214 RVA: 0x002FC998 File Offset: 0x002FAB98
+		// Token: 0x06014811 RID: 83985 RVA: 0x002FB2DC File Offset: 0x002F94DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060148F7 RID: 84215 RVA: 0x002FC9F0 File Offset: 0x002FABF0
+		// Token: 0x06014812 RID: 83986 RVA: 0x002FB334 File Offset: 0x002F9534
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060148F8 RID: 84216 RVA: 0x002FC9FD File Offset: 0x002FABFD
+		// Token: 0x06014813 RID: 83987 RVA: 0x002FB341 File Offset: 0x002F9541
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060148F9 RID: 84217 RVA: 0x002FCA08 File Offset: 0x002FAC08
+		// Token: 0x06014814 RID: 83988 RVA: 0x002FB34C File Offset: 0x002F954C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			}
 			if (this.HackingEntityId != 0L)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(96);
 				output.WriteInt64(this.HackingEntityId);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060148FA RID: 84218 RVA: 0x002FCA64 File Offset: 0x002FAC64
+		// Token: 0x06014815 RID: 83989 RVA: 0x002FB3A8 File Offset: 0x002F95A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060148FB RID: 84219 RVA: 0x002FCABC File Offset: 0x002FACBC
+		// Token: 0x06014816 RID: 83990 RVA: 0x002FB400 File Offset: 0x002F9600
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RemoveHackingEntityNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060148FC RID: 84220 RVA: 0x002FCB0C File Offset: 0x002FAD0C
+		// Token: 0x06014817 RID: 83991 RVA: 0x002FB450 File Offset: 0x002F9650
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060148FD RID: 84221 RVA: 0x002FCB18 File Offset: 0x002FAD18
+		// Token: 0x06014818 RID: 83992 RVA: 0x002FB45C File Offset: 0x002F965C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 				}
 				if (num != 64U)
 				{
-					if (num != 104U)
+					if (num != 96U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007C93 RID: 31891
+		// Token: 0x04007CBD RID: 31933
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007C94 RID: 31892
+		// Token: 0x04007CBE RID: 31934
 		public const int AuxiliaryMachineEntityIdFieldNumber = 8;
 
-		// Token: 0x04007C95 RID: 31893
+		// Token: 0x04007CBF RID: 31935
 		private long auxiliaryMachineEntityId_;
 
-		// Token: 0x04007C96 RID: 31894
-		public const int HackingEntityIdFieldNumber = 13;
+		// Token: 0x04007CC0 RID: 31936
+		public const int HackingEntityIdFieldNumber = 12;
 
-		// Token: 0x04007C97 RID: 31895
+		// Token: 0x04007CC1 RID: 31937
 		private long hackingEntityId_;
 	}
 }

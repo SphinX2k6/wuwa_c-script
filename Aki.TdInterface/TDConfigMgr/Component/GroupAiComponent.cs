@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200018D RID: 397
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001A4 RID: 420
 	public class GroupAiComponent : IComponentBase
 	{
-		// Token: 0x060005A4 RID: 1444 RVA: 0x00020EB0 File Offset: 0x0001F0B0
+		// Token: 0x060005B8 RID: 1464 RVA: 0x00021A8C File Offset: 0x0001FC8C
 		private GroupAiComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060005A5 RID: 1445 RVA: 0x00020EE8 File Offset: 0x0001F0E8
+		// Token: 0x060005B9 RID: 1465 RVA: 0x00021AC4 File Offset: 0x0001FCC4
 		public static GroupAiComponent Create([Nullable(2)] GroupAiComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060005A6 RID: 1446 RVA: 0x00020EFB File Offset: 0x0001F0FB
+		// Token: 0x060005BA RID: 1466 RVA: 0x00021AD7 File Offset: 0x0001FCD7
 		public static GroupAiComponent CreateFromSetValue([Nullable(2)] GroupAiComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060005A7 RID: 1447 RVA: 0x00020F10 File Offset: 0x0001F110
+		// Token: 0x060005BB RID: 1467 RVA: 0x00021AEC File Offset: 0x0001FCEC
 		public new GroupAiComponent_SetValue ToSetValue()
 		{
 			return new GroupAiComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001DC RID: 476
-		// (get) Token: 0x060005A8 RID: 1448 RVA: 0x00020F60 File Offset: 0x0001F160
-		// (set) Token: 0x060005A9 RID: 1449 RVA: 0x00020F9A File Offset: 0x0001F19A
+		// Token: 0x170001E3 RID: 483
+		// (get) Token: 0x060005BC RID: 1468 RVA: 0x00021B3C File Offset: 0x0001FD3C
+		// (set) Token: 0x060005BD RID: 1469 RVA: 0x00021B76 File Offset: 0x0001FD76
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001DD RID: 477
-		// (get) Token: 0x060005AA RID: 1450 RVA: 0x00020FA8 File Offset: 0x0001F1A8
-		// (set) Token: 0x060005AB RID: 1451 RVA: 0x00020FD2 File Offset: 0x0001F1D2
+		// Token: 0x170001E4 RID: 484
+		// (get) Token: 0x060005BE RID: 1470 RVA: 0x00021B84 File Offset: 0x0001FD84
+		// (set) Token: 0x060005BF RID: 1471 RVA: 0x00021BAE File Offset: 0x0001FDAE
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001DE RID: 478
-		// (get) Token: 0x060005AC RID: 1452 RVA: 0x00020FE0 File Offset: 0x0001F1E0
-		// (set) Token: 0x060005AD RID: 1453 RVA: 0x00021007 File Offset: 0x0001F207
+		// Token: 0x170001E5 RID: 485
+		// (get) Token: 0x060005C0 RID: 1472 RVA: 0x00021BBC File Offset: 0x0001FDBC
+		// (set) Token: 0x060005C1 RID: 1473 RVA: 0x00021BE3 File Offset: 0x0001FDE3
 		public virtual List<int> Entities
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001DF RID: 479
-		// (get) Token: 0x060005AE RID: 1454 RVA: 0x00021015 File Offset: 0x0001F215
-		// (set) Token: 0x060005AF RID: 1455 RVA: 0x0002103C File Offset: 0x0001F23C
+		// Token: 0x170001E6 RID: 486
+		// (get) Token: 0x060005C2 RID: 1474 RVA: 0x00021BF1 File Offset: 0x0001FDF1
+		// (set) Token: 0x060005C3 RID: 1475 RVA: 0x00021C18 File Offset: 0x0001FE18
 		public virtual IGroupAiMode Option
 		{
 			get
@@ -155,20 +153,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001E0 RID: 480
-		// (get) Token: 0x060005B0 RID: 1456 RVA: 0x0002104A File Offset: 0x0001F24A
-		// (set) Token: 0x060005B1 RID: 1457 RVA: 0x00021071 File Offset: 0x0001F271
+		// Token: 0x170001E7 RID: 487
+		// (get) Token: 0x060005C4 RID: 1476 RVA: 0x00021C26 File Offset: 0x0001FE26
+		// (set) Token: 0x060005C5 RID: 1477 RVA: 0x00021C4D File Offset: 0x0001FE4D
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> SyncTags
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -186,7 +184,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -194,11 +192,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000788 RID: 1928
+		// Token: 0x040007DE RID: 2014
 		[Nullable(2)]
 		protected new GroupAiComponent FbInstance;
 
-		// Token: 0x04000789 RID: 1929
+		// Token: 0x040007DF RID: 2015
 		[Nullable(2)]
 		protected new GroupAiComponent_SetValue PocoInterface;
 	}

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000F70 RID: 3952
+	// Token: 0x02000F60 RID: 3936
 	public sealed class RoadBookMotorcycleInfo : IMessage<RoadBookMotorcycleInfo>, IMessage, IEquatable<RoadBookMotorcycleInfo>, IDeepCloneable<RoadBookMotorcycleInfo>, IBufferMessage
 	{
-		// Token: 0x0601520F RID: 86543 RVA: 0x003102DC File Offset: 0x0030E4DC
+		// Token: 0x0601512A RID: 86314 RVA: 0x0030EC2D File Offset: 0x0030CE2D
 		[NullableContext(1)]
 		public static RoadBookMotorcycleInfo Create()
 		{
 			return new RoadBookMotorcycleInfo();
 		}
 
-		// Token: 0x17004648 RID: 17992
-		// (get) Token: 0x06015210 RID: 86544 RVA: 0x003102E3 File Offset: 0x0030E4E3
+		// Token: 0x1700461E RID: 17950
+		// (get) Token: 0x0601512B RID: 86315 RVA: 0x0030EC34 File Offset: 0x0030CE34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RoadBookMotorcycleInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004649 RID: 17993
-		// (get) Token: 0x06015211 RID: 86545 RVA: 0x003102EA File Offset: 0x0030E4EA
+		// Token: 0x1700461F RID: 17951
+		// (get) Token: 0x0601512C RID: 86316 RVA: 0x0030EC3B File Offset: 0x0030CE3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700464A RID: 17994
-		// (get) Token: 0x06015212 RID: 86546 RVA: 0x003102ED File Offset: 0x0030E4ED
+		// Token: 0x17004620 RID: 17952
+		// (get) Token: 0x0601512D RID: 86317 RVA: 0x0030EC3E File Offset: 0x0030CE3E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015213 RID: 86547 RVA: 0x003102F4 File Offset: 0x0030E4F4
+		// Token: 0x0601512E RID: 86318 RVA: 0x0030EC45 File Offset: 0x0030CE45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoadBookMotorcycleInfo()
 		{
 		}
 
-		// Token: 0x06015214 RID: 86548 RVA: 0x00310308 File Offset: 0x0030E508
+		// Token: 0x0601512F RID: 86319 RVA: 0x0030EC58 File Offset: 0x0030CE58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoadBookMotorcycleInfo(RoadBookMotorcycleInfo other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06015215 RID: 86549 RVA: 0x00310355 File Offset: 0x0030E555
+		// Token: 0x06015130 RID: 86320 RVA: 0x0030ECA5 File Offset: 0x0030CEA5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoadBookMotorcycleInfo Clone()
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			return new RoadBookMotorcycleInfo(this);
 		}
 
-		// Token: 0x1700464B RID: 17995
-		// (get) Token: 0x06015216 RID: 86550 RVA: 0x0031035D File Offset: 0x0030E55D
-		// (set) Token: 0x06015217 RID: 86551 RVA: 0x00310365 File Offset: 0x0030E565
+		// Token: 0x17004621 RID: 17953
+		// (get) Token: 0x06015131 RID: 86321 RVA: 0x0030ECAD File Offset: 0x0030CEAD
+		// (set) Token: 0x06015132 RID: 86322 RVA: 0x0030ECB5 File Offset: 0x0030CEB5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MotorcyclePlayId
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700464C RID: 17996
-		// (get) Token: 0x06015218 RID: 86552 RVA: 0x0031036E File Offset: 0x0030E56E
-		// (set) Token: 0x06015219 RID: 86553 RVA: 0x00310376 File Offset: 0x0030E576
+		// Token: 0x17004622 RID: 17954
+		// (get) Token: 0x06015133 RID: 86323 RVA: 0x0030ECBE File Offset: 0x0030CEBE
+		// (set) Token: 0x06015134 RID: 86324 RVA: 0x0030ECC6 File Offset: 0x0030CEC6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int HistorySoarScore
@@ -114,8 +114,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700464D RID: 17997
-		// (get) Token: 0x0601521A RID: 86554 RVA: 0x0031037F File Offset: 0x0030E57F
+		// Token: 0x17004623 RID: 17955
+		// (get) Token: 0x06015135 RID: 86325 RVA: 0x0030ECCF File Offset: 0x0030CECF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ReceiveIds
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601521B RID: 86555 RVA: 0x00310387 File Offset: 0x0030E587
+		// Token: 0x06015136 RID: 86326 RVA: 0x0030ECD7 File Offset: 0x0030CED7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoadBookMotorcycleInfo);
 		}
 
-		// Token: 0x0601521C RID: 86556 RVA: 0x00310398 File Offset: 0x0030E598
+		// Token: 0x06015137 RID: 86327 RVA: 0x0030ECE8 File Offset: 0x0030CEE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoadBookMotorcycleInfo other)
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.MotorcyclePlayId == other.MotorcyclePlayId && this.HistorySoarScore == other.HistorySoarScore && this.receiveIds_.Equals(other.receiveIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601521D RID: 86557 RVA: 0x003103F8 File Offset: 0x0030E5F8
+		// Token: 0x06015138 RID: 86328 RVA: 0x0030ED48 File Offset: 0x0030CF48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601521E RID: 86558 RVA: 0x0031045E File Offset: 0x0030E65E
+		// Token: 0x06015139 RID: 86329 RVA: 0x0030EDAE File Offset: 0x0030CFAE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601521F RID: 86559 RVA: 0x0031046B File Offset: 0x0030E66B
+		// Token: 0x0601513A RID: 86330 RVA: 0x0030EDBB File Offset: 0x0030CFBB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06015220 RID: 86560 RVA: 0x00310474 File Offset: 0x0030E674
+		// Token: 0x0601513B RID: 86331 RVA: 0x0030EDC4 File Offset: 0x0030CFC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015221 RID: 86561 RVA: 0x003104E0 File Offset: 0x0030E6E0
+		// Token: 0x0601513C RID: 86332 RVA: 0x0030EE30 File Offset: 0x0030D030
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015222 RID: 86562 RVA: 0x0031054C File Offset: 0x0030E74C
+		// Token: 0x0601513D RID: 86333 RVA: 0x0030EE9C File Offset: 0x0030D09C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoadBookMotorcycleInfo other)
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06015223 RID: 86563 RVA: 0x003105AD File Offset: 0x0030E7AD
+		// Token: 0x0601513E RID: 86334 RVA: 0x0030EEFD File Offset: 0x0030D0FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06015224 RID: 86564 RVA: 0x003105B8 File Offset: 0x0030E7B8
+		// Token: 0x0601513F RID: 86335 RVA: 0x0030EF08 File Offset: 0x0030D108
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -287,31 +287,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007F1B RID: 32539
+		// Token: 0x04007F45 RID: 32581
 		private static readonly MessageParser<RoadBookMotorcycleInfo> _parser = new MessageParser<RoadBookMotorcycleInfo>(() => new RoadBookMotorcycleInfo());
 
-		// Token: 0x04007F1C RID: 32540
+		// Token: 0x04007F46 RID: 32582
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007F1D RID: 32541
+		// Token: 0x04007F47 RID: 32583
 		public const int MotorcyclePlayIdFieldNumber = 1;
 
-		// Token: 0x04007F1E RID: 32542
+		// Token: 0x04007F48 RID: 32584
 		private int motorcyclePlayId_;
 
-		// Token: 0x04007F1F RID: 32543
+		// Token: 0x04007F49 RID: 32585
 		public const int HistorySoarScoreFieldNumber = 2;
 
-		// Token: 0x04007F20 RID: 32544
+		// Token: 0x04007F4A RID: 32586
 		private int historySoarScore_;
 
-		// Token: 0x04007F21 RID: 32545
+		// Token: 0x04007F4B RID: 32587
 		public const int ReceiveIdsFieldNumber = 3;
 
-		// Token: 0x04007F22 RID: 32546
+		// Token: 0x04007F4C RID: 32588
 		private static readonly FieldCodec<int> _repeated_receiveIds_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x04007F23 RID: 32547
+		// Token: 0x04007F4D RID: 32589
 		private readonly RepeatedField<int> receiveIds_ = new RepeatedField<int>();
 	}
 }

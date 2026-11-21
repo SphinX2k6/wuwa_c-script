@@ -18,12 +18,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007181 RID: 29057
+	// Token: 0x02006235 RID: 25141
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemHitComponent : EntityComponent
 	{
-		// Token: 0x06047044 RID: 290884 RVA: 0x011FC15C File Offset: 0x011FA35C
+		// Token: 0x0603C8DC RID: 248028 RVA: 0x0115685C File Offset: 0x01154A5C
 		protected override bool OnStart()
 		{
 			this.LevelTagComponent = base.Entity.GetComponent<LevelTagComponent>();
@@ -68,14 +68,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047045 RID: 290885 RVA: 0x011FC2AC File Offset: 0x011FA4AC
+		// Token: 0x0603C8DD RID: 248029 RVA: 0x011569AC File Offset: 0x01154BAC
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget<bool, AActor>(base.Entity, EEventName.OnActorInOutRangeLocal, new Action<bool, AActor>(this.OnActorInOutRangeLocal));
 			return base.OnEnd();
 		}
 
-		// Token: 0x06047046 RID: 290886 RVA: 0x011FC2D8 File Offset: 0x011FA4D8
+		// Token: 0x0603C8DE RID: 248030 RVA: 0x011569D8 File Offset: 0x01154BD8
 		[NullableContext(2)]
 		private void InitByHitComponentConfig(HitComponent hitComponentConfig)
 		{
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047047 RID: 290887 RVA: 0x011FC444 File Offset: 0x011FA644
+		// Token: 0x0603C8DF RID: 248031 RVA: 0x01156B44 File Offset: 0x01154D44
 		[return: Nullable(2)]
 		private SceneItemHitComponent.BulletHitReg GetMatchedBulletHitReg(global::HitInformation hitData, bool forceReMatch = false)
 		{
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return bulletHitReg;
 		}
 
-		// Token: 0x06047048 RID: 290888 RVA: 0x011FC56C File Offset: 0x011FA76C
+		// Token: 0x0603C8E0 RID: 248032 RVA: 0x01156C6C File Offset: 0x01154E6C
 		private bool GetHitEnable(global::HitInformation hitData)
 		{
 			if (this.LevelTagComponent.HasTag(GameplayTagDefine.EGameplayTagId["物体.状态.不可攻击"]))
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return (component == null || !component.IsConcealed) && this.GetMatchedBulletHitReg(hitData, true) != null;
 		}
 
-		// Token: 0x06047049 RID: 290889 RVA: 0x011FC5D4 File Offset: 0x011FA7D4
+		// Token: 0x0603C8E1 RID: 248033 RVA: 0x01156CD4 File Offset: 0x01154ED4
 		private bool CheckComponentCondition(EntityComponent component, global::HitInformation hitData)
 		{
 			SceneItemHitComponent.ComponentHitReg valueOrDefault = this.ComponentHitRegistry.GetValueOrDefault(component);
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return flag;
 		}
 
-		// Token: 0x0604704A RID: 290890 RVA: 0x011FC654 File Offset: 0x011FA854
+		// Token: 0x0603C8E2 RID: 248034 RVA: 0x01156D54 File Offset: 0x01154F54
 		private bool CheckBulletCanHitComponent(EntityComponent component, global::HitInformation hitData)
 		{
 			SceneItemHitComponent.ComponentHitReg valueOrDefault = this.ComponentHitRegistry.GetValueOrDefault(component);
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return hitBulletType2 == null || SceneItemHitUtils.CheckHitDataMatchBulletType(hitBulletType2, hitData, base.Entity);
 		}
 
-		// Token: 0x0604704B RID: 290891 RVA: 0x011FC698 File Offset: 0x011FA898
+		// Token: 0x0603C8E3 RID: 248035 RVA: 0x01156D98 File Offset: 0x01154F98
 		public bool OnSceneItemHit(global::HitInformation hitData, BulletHitActorData hitActorData)
 		{
 			EventSystem.Instance.EmitWithTarget<global::HitInformation>(base.Entity, EEventName.OnSceneItemEntityHitAlways, hitData);
@@ -276,13 +276,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604704C RID: 290892 RVA: 0x011FC820 File Offset: 0x011FAA20
+		// Token: 0x0603C8E4 RID: 248036 RVA: 0x01156F20 File Offset: 0x01155120
 		public EBulletPenetrationType? GetPenetrationType()
 		{
 			return base.Entity.GetComponent<CreatureDataComponent>().GetBaseInfo().Category.BulletPenetrationType;
 		}
 
-		// Token: 0x0604704D RID: 290893 RVA: 0x011FC83C File Offset: 0x011FAA3C
+		// Token: 0x0603C8E5 RID: 248037 RVA: 0x01156F3C File Offset: 0x0115513C
 		private void ProcessHitEffect(global::HitInformation hitData, bool disablePostProcess)
 		{
 			FName? fname = null;
@@ -311,8 +311,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			BulletCollisionUtil.PlaySceneItemHitEffect(hitData.Attacker, fname.Value.ToString(), transform, hitData.ReBulletData.Render.AudioOnHit, disablePostProcess);
 		}
 
-		// Token: 0x0604704E RID: 290894 RVA: 0x011FC954 File Offset: 0x011FAB54
-		private void ProcessHitPerform(global::HitInformation hitData, BulletHitActorData hitActorData)
+		// Token: 0x0603C8E6 RID: 248038 RVA: 0x01157054 File Offset: 0x01155254
+		private unsafe void ProcessHitPerform(global::HitInformation hitData, BulletHitActorData hitActorData)
 		{
 			LevelTagComponent component = base.Entity.GetComponent<LevelTagComponent>();
 			if (component == null)
@@ -334,10 +334,24 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			int? lastHitPerformTag = null;
 			if (flag)
 			{
-				if (hitActorData.ValidProcessIndex == 1)
+				if (hitActorData.ValidProcessIndex == 1 && ObjectUtils.IsValid(hitActorData.Actor))
 				{
 					FGameplayTag? fgameplayTag;
 					lastHitPerformTag = ((SceneInteractionManager.Get().GetPartCollisionActorTag(this.ActorComp.GetSceneInteractionLevelHandleId(), hitActorData.Actor) != null) ? new int?(fgameplayTag.GetValueOrDefault().TagId()) : null);
+					if (lastHitPerformTag == null)
+					{
+						Log instance = Log.Instance;
+						ELogModule module = ELogModule.Bullet;
+						ELogAuthor author = ELogAuthor.XDW;
+						string message = "[SceneItemHitComponent.ProcessHitPerform] 获取受击Actor对应的受击表现Tag失败";
+						<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray5<ValueTuple<string, object>>);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("EntityId", base.Entity.Id);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("BulletEntityId", hitData.BulletEntityId);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("BulletRowName", hitData.BulletRowName);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("HitActor", hitActorData.Actor.GetName());
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("SceneInteractionLevelHandleId", this.ActorComp.GetSceneInteractionLevelHandleId());
+						instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
+					}
 				}
 			}
 			else
@@ -363,7 +377,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604704F RID: 290895 RVA: 0x011FCB0E File Offset: 0x011FAD0E
+		// Token: 0x0603C8E7 RID: 248039 RVA: 0x01157301 File Offset: 0x01155501
 		private void ProcessHitInfo(global::HitInformation hitData)
 		{
 			if (hitData.HitEffect == null)
@@ -373,7 +387,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ActorComp.UpdateHitInfo(hitData.HitPosition, hitData.HitEffect.地面受击速度);
 		}
 
-		// Token: 0x06047050 RID: 290896 RVA: 0x011FCB3B File Offset: 0x011FAD3B
+		// Token: 0x0603C8E8 RID: 248040 RVA: 0x0115732E File Offset: 0x0115552E
 		private void ProcessEvent([Nullable(2)] EntityComponent component, global::HitInformation hitData)
 		{
 			if (component == null || !component.Valid)
@@ -384,14 +398,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.EmitWithTarget<global::HitInformation>(component, EEventName.OnSceneItemHitByHitData, hitData);
 		}
 
-		// Token: 0x06047051 RID: 290897 RVA: 0x011FCB72 File Offset: 0x011FAD72
+		// Token: 0x0603C8E9 RID: 248041 RVA: 0x01157365 File Offset: 0x01155565
 		private void ProcessTimeScale(global::HitInformation hitData)
 		{
 			this.ProcessAttackerTimeScale(hitData);
 			this.ProcessVictimTimeScale(hitData);
 		}
 
-		// Token: 0x06047052 RID: 290898 RVA: 0x011FCB84 File Offset: 0x011FAD84
+		// Token: 0x0603C8EA RID: 248042 RVA: 0x01157378 File Offset: 0x01155578
 		private void ProcessAttackerTimeScale(global::HitInformation hitData)
 		{
 			BulletDataTimeScale timeScale = hitData.ReBulletData.TimeScale;
@@ -470,7 +484,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047053 RID: 290899 RVA: 0x011FCDC4 File Offset: 0x011FAFC4
+		// Token: 0x0603C8EB RID: 248043 RVA: 0x011575B8 File Offset: 0x011557B8
 		private void ProcessVictimTimeScale(global::HitInformation hitData)
 		{
 			if (hitData.ReBulletData.Base.ContinuesCollision)
@@ -528,19 +542,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047054 RID: 290900 RVA: 0x011FCF24 File Offset: 0x011FB124
+		// Token: 0x0603C8EC RID: 248044 RVA: 0x01157718 File Offset: 0x01155918
 		private bool IsSpecialTimeScaleBullet(global::HitInformation hitData)
 		{
 			return hitData.CalculateType != 0 && hitData.ReBulletData.TimeScale.TimeScaleOnHit.时间膨胀时长 > 0f;
 		}
 
-		// Token: 0x06047055 RID: 290901 RVA: 0x011FCF4D File Offset: 0x011FB14D
+		// Token: 0x0603C8ED RID: 248045 RVA: 0x01157741 File Offset: 0x01155941
 		private void ProcessSpecialTimeScaleBullet(global::HitInformation hitData)
 		{
 			this.ProcessVictimTimeScale(hitData);
 		}
 
-		// Token: 0x06047056 RID: 290902 RVA: 0x011FCF58 File Offset: 0x011FB158
+		// Token: 0x0603C8EE RID: 248046 RVA: 0x0115774C File Offset: 0x0115594C
 		public void RegisterComponent(EntityComponent component, [Nullable(2)] IHitComponentBase hitBaseConfig = null)
 		{
 			if (this.ComponentHitRegistry.ContainsKey(component))
@@ -573,7 +587,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047057 RID: 290903 RVA: 0x011FD068 File Offset: 0x011FB268
+		// Token: 0x0603C8EF RID: 248047 RVA: 0x0115785C File Offset: 0x01155A5C
 		public void AddComponentHitCondition(EntityComponent component, SceneItemHitComponent.TSceneItemHitConditionCheck callback)
 		{
 			if (!this.ComponentHitRegistry.ContainsKey(component))
@@ -584,7 +598,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ComponentHitRegistry[component].ComponentHitConditionCheck.Add(callback);
 		}
 
-		// Token: 0x06047058 RID: 290904 RVA: 0x011FD0B0 File Offset: 0x011FB2B0
+		// Token: 0x0603C8F0 RID: 248048 RVA: 0x011578A4 File Offset: 0x01155AA4
 		public void RemoveComponentHitCondition(EntityComponent component, SceneItemHitComponent.TSceneItemHitConditionCheck callback)
 		{
 			SceneItemHitComponent.ComponentHitReg valueOrDefault = this.ComponentHitRegistry.GetValueOrDefault(component);
@@ -600,7 +614,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047059 RID: 290905 RVA: 0x011FD0F0 File Offset: 0x011FB2F0
+		// Token: 0x0603C8F1 RID: 248049 RVA: 0x011578E4 File Offset: 0x01155AE4
 		private int? GetHitDirectionTag(EHitAnim? beHitAnim)
 		{
 			if (beHitAnim == null)
@@ -610,7 +624,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return new int?(SceneItemHitComponent.HitAnimToDirectionTag[beHitAnim.Value]);
 		}
 
-		// Token: 0x0604705A RID: 290906 RVA: 0x011FD128 File Offset: 0x011FB328
+		// Token: 0x0603C8F2 RID: 248050 RVA: 0x0115791C File Offset: 0x01155B1C
 		private void OnActorInOutRangeLocal(bool isEnter, AActor actor)
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -622,7 +636,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			SceneInteractionManager.Get().UpdateRangeOverlapInfo(num.Value, isEnter, actor);
 		}
 
-		// Token: 0x0604705B RID: 290907 RVA: 0x011FD174 File Offset: 0x011FB374
+		// Token: 0x0603C8F3 RID: 248051 RVA: 0x01157968 File Offset: 0x01155B68
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -630,120 +644,119 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemHitComponent sceneItemHitComponent = (SceneItemHitComponent)componentTemplate;
-			if (base.CanResetComponentProperty("LevelTagComponent"))
+			if (sceneItemHitComponent.LevelTagComponent == null)
 			{
-				if (sceneItemHitComponent.LevelTagComponent == null)
-				{
-					this.LevelTagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.LevelTagComponent), "LevelTagComponent"))
-				{
-					return false;
-				}
+				this.LevelTagComponent = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemHitComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SceneItemProperty"))
-			{
-				if (sceneItemHitComponent.SceneItemProperty == null)
-				{
-					this.SceneItemProperty = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.SceneItemProperty), "SceneItemProperty"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HitCompConfig"))
-			{
-				if (sceneItemHitComponent.HitCompConfig == null)
-				{
-					this.HitCompConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<HitComponent>(this.HitCompConfig), "HitCompConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("BulletHitRegistry") && sceneItemHitComponent.BulletHitRegistry != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<SceneItemHitComponent.BulletHitReg>>(this.BulletHitRegistry), "BulletHitRegistry"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LevelTagComponent), "LevelTagComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ComponentHitRegistry") && sceneItemHitComponent.ComponentHitRegistry != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EntityComponent, SceneItemHitComponent.ComponentHitReg>>(this.ComponentHitRegistry), "ComponentHitRegistry"))
+			if (sceneItemHitComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LastHitPerformTag"))
+			if (sceneItemHitComponent.SceneItemProperty == null)
 			{
-				this.LastHitPerformTag = sceneItemHitComponent.LastHitPerformTag;
+				this.SceneItemProperty = null;
 			}
-			if (base.CanResetComponentProperty("VictimRotator") && sceneItemHitComponent.VictimRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.VictimRotator), "VictimRotator"))
-			{
-				return false;
-			}
-			if (base.CanResetComponentProperty("OnlineInteractType"))
-			{
-				this.OnlineInteractType = sceneItemHitComponent.OnlineInteractType;
-			}
-			if (base.CanResetComponentProperty("AimParts") && sceneItemHitComponent.AimParts != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<AimPart>>(this.AimParts), "AimParts"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneItemProperty), "SceneItemProperty"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("HitDataToBulletHitRegCache") && sceneItemHitComponent.HitDataToBulletHitRegCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<global::HitInformation, SceneItemHitComponent.BulletHitReg>>(this.HitDataToBulletHitRegCache), "HitDataToBulletHitRegCache"))
+			if (sceneItemHitComponent.HitCompConfig == null)
+			{
+				this.HitCompConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitCompConfig), "HitCompConfig"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("HitDataToBulletHitRegCacheLastUpdateTime"))
+			if (sceneItemHitComponent.BulletHitRegistry != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletHitRegistry), "BulletHitRegistry"))
 			{
-				this.HitDataToBulletHitRegCacheLastUpdateTime = sceneItemHitComponent.HitDataToBulletHitRegCacheLastUpdateTime;
+				return false;
 			}
+			if (sceneItemHitComponent.ComponentHitRegistry != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ComponentHitRegistry), "ComponentHitRegistry"))
+			{
+				return false;
+			}
+			this.LastHitPerformTag = sceneItemHitComponent.LastHitPerformTag;
+			if (sceneItemHitComponent.VictimRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VictimRotator), "VictimRotator"))
+			{
+				return false;
+			}
+			this.OnlineInteractType = sceneItemHitComponent.OnlineInteractType;
+			if (sceneItemHitComponent.AimParts != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AimParts), "AimParts"))
+			{
+				return false;
+			}
+			if (sceneItemHitComponent.HitDataToBulletHitRegCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitDataToBulletHitRegCache), "HitDataToBulletHitRegCache"))
+			{
+				return false;
+			}
+			this.HitDataToBulletHitRegCacheLastUpdateTime = sceneItemHitComponent.HitDataToBulletHitRegCacheLastUpdateTime;
 			return true;
 		}
 
-		// Token: 0x04025523 RID: 152867
+		// Token: 0x17007277 RID: 29303
+		// (get) Token: 0x0603C8F4 RID: 248052 RVA: 0x01157B02 File Offset: 0x01155D02
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007278 RID: 29304
+		// (get) Token: 0x0603C8F5 RID: 248053 RVA: 0x01157B05 File Offset: 0x01155D05
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402018A RID: 131466
 		[Nullable(2)]
 		private LevelTagComponent LevelTagComponent;
 
-		// Token: 0x04025524 RID: 152868
+		// Token: 0x0402018B RID: 131467
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025525 RID: 152869
+		// Token: 0x0402018C RID: 131468
 		[Nullable(2)]
 		private SceneItemPropertyComponent SceneItemProperty;
 
-		// Token: 0x04025526 RID: 152870
+		// Token: 0x0402018D RID: 131469
 		[Nullable(2)]
 		private HitComponent HitCompConfig;
 
-		// Token: 0x04025527 RID: 152871
+		// Token: 0x0402018E RID: 131470
 		private readonly List<SceneItemHitComponent.BulletHitReg> BulletHitRegistry = new List<SceneItemHitComponent.BulletHitReg>();
 
-		// Token: 0x04025528 RID: 152872
+		// Token: 0x0402018F RID: 131471
 		private readonly Dictionary<EntityComponent, SceneItemHitComponent.ComponentHitReg> ComponentHitRegistry = new Dictionary<EntityComponent, SceneItemHitComponent.ComponentHitReg>();
 
-		// Token: 0x04025529 RID: 152873
+		// Token: 0x04020190 RID: 131472
 		private int? LastHitPerformTag;
 
-		// Token: 0x0402552A RID: 152874
+		// Token: 0x04020191 RID: 131473
 		private readonly global::Rotator VictimRotator = global::Rotator.Create();
 
-		// Token: 0x0402552B RID: 152875
+		// Token: 0x04020192 RID: 131474
 		private EOnlineInteractType OnlineInteractType;
 
-		// Token: 0x0402552C RID: 152876
+		// Token: 0x04020193 RID: 131475
 		public readonly List<AimPart> AimParts = new List<AimPart>();
 
-		// Token: 0x0402552D RID: 152877
+		// Token: 0x04020194 RID: 131476
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EHitAnim, int> HitAnimToDirectionTag = new Dictionary<EHitAnim, int>
 		{
@@ -781,7 +794,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		};
 
-		// Token: 0x0402552E RID: 152878
+		// Token: 0x04020195 RID: 131477
 		[Nullable(new byte[]
 		{
 			1,
@@ -790,33 +803,33 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private readonly Dictionary<global::HitInformation, SceneItemHitComponent.BulletHitReg> HitDataToBulletHitRegCache = new Dictionary<global::HitInformation, SceneItemHitComponent.BulletHitReg>();
 
-		// Token: 0x0402552F RID: 152879
+		// Token: 0x04020196 RID: 131478
 		private int HitDataToBulletHitRegCacheLastUpdateTime;
 
-		// Token: 0x0200CEC8 RID: 52936
-		// (Invoke) Token: 0x06051F62 RID: 335714
+		// Token: 0x0200BA5E RID: 47710
+		// (Invoke) Token: 0x0604870C RID: 296716
 		[NullableContext(0)]
 		public delegate bool TSceneItemHitConditionCheck(global::HitInformation hitData);
 
-		// Token: 0x0200CEC9 RID: 52937
+		// Token: 0x0200BA5F RID: 47711
 		[NullableContext(0)]
 		private class ComponentHitReg
 		{
-			// Token: 0x0403E379 RID: 254841
+			// Token: 0x0403969F RID: 235167
 			[Nullable(1)]
 			public readonly List<SceneItemHitComponent.TSceneItemHitConditionCheck> ComponentHitConditionCheck = new List<SceneItemHitComponent.TSceneItemHitConditionCheck>();
 
-			// Token: 0x0403E37A RID: 254842
+			// Token: 0x040396A0 RID: 235168
 			[Nullable(2)]
 			public IHitComponentBase HitCompConfig;
 		}
 
-		// Token: 0x0200CECA RID: 52938
+		// Token: 0x0200BA60 RID: 47712
 		[NullableContext(2)]
 		[Nullable(0)]
 		private class BulletHitReg
 		{
-			// Token: 0x06051F66 RID: 335718 RVA: 0x0164584C File Offset: 0x01643A4C
+			// Token: 0x06048710 RID: 296720 RVA: 0x01617974 File Offset: 0x01615B74
 			public void SetupConfig(IHitBulletType hitBullet = null, IHitTimeScaleRatio attackerHitTimeScaleRatio = null, IHitTimeScaleRatio victimHitTimeScaleRatio = null)
 			{
 				this.HitBullet = hitBullet;
@@ -824,17 +837,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				this.VictimHitTimeScaleRatio = victimHitTimeScaleRatio;
 			}
 
-			// Token: 0x0403E37B RID: 254843
+			// Token: 0x040396A1 RID: 235169
 			public IHitBulletType HitBullet;
 
-			// Token: 0x0403E37C RID: 254844
+			// Token: 0x040396A2 RID: 235170
 			[Nullable(1)]
 			public readonly List<SceneItemHitComponent.TSceneItemHitConditionCheck> HitConditionCheck = new List<SceneItemHitComponent.TSceneItemHitConditionCheck>();
 
-			// Token: 0x0403E37D RID: 254845
+			// Token: 0x040396A3 RID: 235171
 			public IHitTimeScaleRatio AttackerHitTimeScaleRatio;
 
-			// Token: 0x0403E37E RID: 254846
+			// Token: 0x040396A4 RID: 235172
 			public IHitTimeScaleRatio VictimHitTimeScaleRatio;
 		}
 	}

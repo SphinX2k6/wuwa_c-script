@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x0200669B RID: 26267
+	// Token: 0x020055EB RID: 21995
 	public class IChangeRoleColorCommandParams
 	{
-		// Token: 0x040223C6 RID: 140230
+		// Token: 0x0401CC1F RID: 117791
 		public bool UseChangeColor;
 
-		// Token: 0x040223C7 RID: 140231
+		// Token: 0x0401CC20 RID: 117792
 		[Nullable(1)]
 		public string HexColor;
 
-		// Token: 0x040223C8 RID: 140232
+		// Token: 0x0401CC21 RID: 117793
 		public float? Duration;
 	}
 }

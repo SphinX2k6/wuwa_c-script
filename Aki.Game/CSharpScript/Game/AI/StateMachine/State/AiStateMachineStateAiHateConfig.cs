@@ -6,24 +6,24 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.State
 {
-	// Token: 0x02007324 RID: 29476
+	// Token: 0x020064A7 RID: 25767
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineStateAiHateConfig : AiStateMachineState
 	{
-		// Token: 0x060485A4 RID: 296356 RVA: 0x0129C62B File Offset: 0x0129A82B
+		// Token: 0x0603E9F1 RID: 256497 RVA: 0x0123F0AB File Offset: 0x0123D2AB
 		public AiStateMachineStateAiHateConfig(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.State state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x060485A5 RID: 296357 RVA: 0x0129C635 File Offset: 0x0129A835
+		// Token: 0x0603E9F2 RID: 256498 RVA: 0x0123F0B5 File Offset: 0x0123D2B5
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.State state)
 		{
 			this.ConfigId = state.BindAiHateConfig.ConfigId;
 			return true;
 		}
 
-		// Token: 0x060485A6 RID: 296358 RVA: 0x0129C64C File Offset: 0x0129A84C
+		// Token: 0x0603E9F3 RID: 256499 RVA: 0x0123F0CC File Offset: 0x0123D2CC
 		[NullableContext(2)]
 		public override void OnActivate(AiStateMachineBase lastState = null, long? contextId = null)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			this.Node.AiController.AiHateList.AiHate = AiConfig.Instance.LoadAiHateByController(this.Node.AiController, null, null);
 		}
 
-		// Token: 0x060485A7 RID: 296359 RVA: 0x0129C718 File Offset: 0x0129A918
+		// Token: 0x0603E9F4 RID: 256500 RVA: 0x0123F198 File Offset: 0x0123D398
 		[NullableContext(2)]
 		public override void OnDeactivate(AiStateMachineBase nextState = null, long? contextId = null)
 		{
@@ -53,16 +53,16 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			this.LastConfigId = null;
 		}
 
-		// Token: 0x060485A8 RID: 296360 RVA: 0x0129C7A6 File Offset: 0x0129A9A6
+		// Token: 0x0603E9F5 RID: 256501 RVA: 0x0123F226 File Offset: 0x0123D426
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026414 RID: 156692
+		// Token: 0x04021701 RID: 136961
 		private int ConfigId;
 
-		// Token: 0x04026415 RID: 156693
+		// Token: 0x04021702 RID: 136962
 		private int? LastConfigId;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000282 RID: 642
+	// Token: 0x02000296 RID: 662
 	public class ConfigEntranceIconTagById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F11 RID: 3857 RVA: 0x000AEA39 File Offset: 0x000ACC39
+		// Token: 0x06000F89 RID: 3977 RVA: 0x000B4CFD File Offset: 0x000B2EFD
 		static ConfigEntranceIconTagById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntranceIconTagById.CreateStaticDefaultValue), new Action(ConfigEntranceIconTagById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F12 RID: 3858 RVA: 0x000AEA58 File Offset: 0x000ACC58
+		// Token: 0x06000F8A RID: 3978 RVA: 0x000B4D1C File Offset: 0x000B2F1C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntranceIconTagById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F13 RID: 3859 RVA: 0x000AEAD7 File Offset: 0x000ACCD7
+		// Token: 0x06000F8B RID: 3979 RVA: 0x000B4D9B File Offset: 0x000B2F9B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntranceIconTagById.LogPair = null;
 			ConfigEntranceIconTagById.HandleId = 0;
 		}
 
-		// Token: 0x06000F14 RID: 3860 RVA: 0x000AEAE5 File Offset: 0x000ACCE5
+		// Token: 0x06000F8C RID: 3980 RVA: 0x000B4DA9 File Offset: 0x000B2FA9
 		public static void Init()
 		{
 			ConfigEntranceIconTagById.HandleId = ConfigCommon.InitDataStatement(ConfigEntranceIconTagById.HandleId, "db_component_config.db", "select BinData from `EntranceIconTag` where Id=?");
 		}
 
-		// Token: 0x06000F15 RID: 3861 RVA: 0x000AEB00 File Offset: 0x000ACD00
+		// Token: 0x06000F8D RID: 3981 RVA: 0x000B4DC4 File Offset: 0x000B2FC4
 		public static EntranceIconTag? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEntranceIconTagById.HandleId, ConfigEntranceIconTagById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new EntranceIconTag?(rootAsEntranceIconTag);
 		}
 
-		// Token: 0x04001172 RID: 4466
+		// Token: 0x040011FE RID: 4606
 		private const string DB = "db_component_config.db";
 
-		// Token: 0x04001173 RID: 4467
+		// Token: 0x040011FF RID: 4607
 		private const string FILE = "t.通用组件配置.xlsx";
 
-		// Token: 0x04001174 RID: 4468
+		// Token: 0x04001200 RID: 4608
 		private const string TABLE = "EntranceIconTag";
 
-		// Token: 0x04001175 RID: 4469
+		// Token: 0x04001201 RID: 4609
 		private const string COMMAND = "select BinData from `EntranceIconTag` where Id=?";
 
-		// Token: 0x04001176 RID: 4470
+		// Token: 0x04001202 RID: 4610
 		private const string KEY_PREFIX = "EntranceIconTagById";
 
-		// Token: 0x04001177 RID: 4471
+		// Token: 0x04001203 RID: 4611
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001178 RID: 4472
+		// Token: 0x04001204 RID: 4612
 		private static int HandleId;
 	}
 }

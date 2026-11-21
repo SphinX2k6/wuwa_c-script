@@ -3,13 +3,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 {
-	// Token: 0x02006384 RID: 25476
+	// Token: 0x02005302 RID: 21250
 	public class NewbieMainTaskQuestInfo
 	{
-		// Token: 0x04021632 RID: 136754
+		// Token: 0x0401BF61 RID: 114529
 		public NewbieMainActTask Task;
 
-		// Token: 0x04021633 RID: 136755
+		// Token: 0x0401BF62 RID: 114530
 		public int QuestId;
 	}
 }

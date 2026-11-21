@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DDC RID: 7644
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FF5 RID: 8181
 	public class ISceneInspection : IUiGame
 	{
-		// Token: 0x0600A3A5 RID: 41893 RVA: 0x00173780 File Offset: 0x00171980
+		// Token: 0x0600ADBB RID: 44475 RVA: 0x00187FD8 File Offset: 0x001861D8
 		private ISceneInspection_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A3A6 RID: 41894 RVA: 0x001737B8 File Offset: 0x001719B8
+		// Token: 0x0600ADBC RID: 44476 RVA: 0x00188010 File Offset: 0x00186210
 		public static ISceneInspection Create([Nullable(2)] ISceneInspection instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3A7 RID: 41895 RVA: 0x001737CB File Offset: 0x001719CB
+		// Token: 0x0600ADBD RID: 44477 RVA: 0x00188023 File Offset: 0x00186223
 		public static ISceneInspection CreateFromSetValue([Nullable(2)] ISceneInspection_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3A8 RID: 41896 RVA: 0x001737DE File Offset: 0x001719DE
+		// Token: 0x0600ADBE RID: 44478 RVA: 0x00188036 File Offset: 0x00186236
 		public new ISceneInspection_SetValue ToSetValue()
 		{
 			return new ISceneInspection_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700325F RID: 12895
-		// (get) Token: 0x0600A3A9 RID: 41897 RVA: 0x00173809 File Offset: 0x00171A09
-		// (set) Token: 0x0600A3AA RID: 41898 RVA: 0x00173834 File Offset: 0x00171A34
+		// Token: 0x170034FC RID: 13564
+		// (get) Token: 0x0600ADBF RID: 44479 RVA: 0x00188061 File Offset: 0x00186261
+		// (set) Token: 0x0600ADC0 RID: 44480 RVA: 0x0018808C File Offset: 0x0018628C
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003260 RID: 12896
-		// (get) Token: 0x0600A3AB RID: 41899 RVA: 0x00173842 File Offset: 0x00171A42
-		// (set) Token: 0x0600A3AC RID: 41900 RVA: 0x0017386D File Offset: 0x00171A6D
+		// Token: 0x170034FD RID: 13565
+		// (get) Token: 0x0600ADC1 RID: 44481 RVA: 0x0018809A File Offset: 0x0018629A
+		// (set) Token: 0x0600ADC2 RID: 44482 RVA: 0x001880C5 File Offset: 0x001862C5
 		public virtual string SaveVarName
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003261 RID: 12897
-		// (get) Token: 0x0600A3AD RID: 41901 RVA: 0x0017387C File Offset: 0x00171A7C
-		// (set) Token: 0x0600A3AE RID: 41902 RVA: 0x0017390F File Offset: 0x00171B0F
+		// Token: 0x170034FE RID: 13566
+		// (get) Token: 0x0600ADC3 RID: 44483 RVA: 0x001880D4 File Offset: 0x001862D4
+		// (set) Token: 0x0600ADC4 RID: 44484 RVA: 0x00188167 File Offset: 0x00186367
 		public virtual List<ISceneInspectionPoint> InteractPoints
 		{
 			get
@@ -146,18 +144,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006216 RID: 25110
+		// Token: 0x040067A3 RID: 26531
 		[Nullable(2)]
 		protected new ISceneInspection FbInstance;
 
-		// Token: 0x04006217 RID: 25111
+		// Token: 0x040067A4 RID: 26532
 		[Nullable(2)]
 		protected new ISceneInspection_SetValue PocoInterface;
 
-		// Token: 0x04006218 RID: 25112
+		// Token: 0x040067A5 RID: 26533
 		private List<ISceneInspectionPoint> _InteractPointsCache;
 
-		// Token: 0x04006219 RID: 25113
+		// Token: 0x040067A6 RID: 26534
 		private bool _InteractPointsInited;
 	}
 }

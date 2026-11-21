@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002368 RID: 9064
+// Token: 0x0200184D RID: 6221
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 {
-	// Token: 0x0601214D RID: 74061 RVA: 0x00470C54 File Offset: 0x0046EE54
+	// Token: 0x0600F5FD RID: 62973 RVA: 0x0047DDE4 File Offset: 0x0047BFE4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,21 +29,21 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		};
 	}
 
-	// Token: 0x0601214E RID: 74062 RVA: 0x00470D33 File Offset: 0x0046EF33
+	// Token: 0x0600F5FE RID: 62974 RVA: 0x0047DEC3 File Offset: 0x0047C0C3
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.GoodsSoldOut, new Action<int>(this.OnGoodsSoldOut));
 		EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 	}
 
-	// Token: 0x0601214F RID: 74063 RVA: 0x00470D6D File Offset: 0x0046EF6D
+	// Token: 0x0600F5FF RID: 62975 RVA: 0x0047DEFD File Offset: 0x0047C0FD
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.GoodsSoldOut, new Action<int>(this.OnGoodsSoldOut));
 		EventSystem.Instance.Remove(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 	}
 
-	// Token: 0x06012150 RID: 74064 RVA: 0x00470DA7 File Offset: 0x0046EFA7
+	// Token: 0x0600F600 RID: 62976 RVA: 0x0047DF37 File Offset: 0x0047C137
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		if (this.CurrentShopId == (int)shopId && this.CurrentSelectTabId == tabId)
@@ -52,13 +52,13 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x06012151 RID: 74065 RVA: 0x00470DC6 File Offset: 0x0046EFC6
+	// Token: 0x0600F601 RID: 62977 RVA: 0x0047DF56 File Offset: 0x0047C156
 	private void OnGoodsSoldOut(int goodsId)
 	{
 		this.RefreshLoopScroll(this.CurrentSelectTabId);
 	}
 
-	// Token: 0x06012152 RID: 74066 RVA: 0x00470DD4 File Offset: 0x0046EFD4
+	// Token: 0x0600F602 RID: 62978 RVA: 0x0047DF64 File Offset: 0x0047C164
 	protected override void OnStart()
 	{
 		this.TabGroup = new TabComponent<PayShopSwitchItem>(base.GetHorizontalLayout(2).GetRootComponent(), new Func<UUIItem, int?, PayShopSwitchItem>(this.TabItemProxyCreate), new Action<int>(this.ToggleCallBack), base.GetItem(3));
@@ -70,25 +70,25 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		this.TabGroup.SelectToggleByIndex(0, false, true);
 	}
 
-	// Token: 0x06012153 RID: 74067 RVA: 0x00470E7D File Offset: 0x0046F07D
+	// Token: 0x0600F603 RID: 62979 RVA: 0x0047E00D File Offset: 0x0047C20D
 	protected UUIItem GetScrollItem()
 	{
 		return base.GetItem(0);
 	}
 
-	// Token: 0x06012154 RID: 74068 RVA: 0x00470E86 File Offset: 0x0046F086
+	// Token: 0x0600F604 RID: 62980 RVA: 0x0047E016 File Offset: 0x0047C216
 	protected PayShopItem InitItem()
 	{
 		return new PayShopItem();
 	}
 
-	// Token: 0x06012155 RID: 74069 RVA: 0x00470E8D File Offset: 0x0046F08D
+	// Token: 0x0600F605 RID: 62981 RVA: 0x0047E01D File Offset: 0x0047C21D
 	private PayShopSwitchItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new PayShopSwitchItem();
 	}
 
-	// Token: 0x06012156 RID: 74070 RVA: 0x00470E94 File Offset: 0x0046F094
+	// Token: 0x0600F606 RID: 62982 RVA: 0x0047E024 File Offset: 0x0047C224
 	private void ToggleCallBack(int tabIndex)
 	{
 		List<int> payShopTabIdList = PayShopModel.Instance.GetPayShopTabIdList((PayShopDefine.EPayShopTabType)this.CurrentShopId, true);
@@ -96,7 +96,7 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		this.RefreshLoopScroll(this.CurrentSelectTabId);
 	}
 
-	// Token: 0x06012157 RID: 74071 RVA: 0x00470ECC File Offset: 0x0046F0CC
+	// Token: 0x0600F607 RID: 62983 RVA: 0x0047E05C File Offset: 0x0047C25C
 	protected void RefreshLoopScroll(int tabId)
 	{
 		List<PayShopGoods> payShopTabData = PayShopModel.Instance.GetPayShopTabData((PayShopDefine.EPayShopTabType)this.CurrentShopId, tabId, true);
@@ -110,13 +110,13 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		base.GetItem(8).SetUIActive(this.PayShopGoodsList.Count <= 0);
 	}
 
-	// Token: 0x06012158 RID: 74072 RVA: 0x00470FA4 File Offset: 0x0046F1A4
+	// Token: 0x0600F608 RID: 62984 RVA: 0x0047E134 File Offset: 0x0047C334
 	protected IPayShopUnionData GetProxyData(int gridIndex)
 	{
 		return this.PayShopGoodsList[gridIndex];
 	}
 
-	// Token: 0x06012159 RID: 74073 RVA: 0x00470FB4 File Offset: 0x0046F1B4
+	// Token: 0x0600F609 RID: 62985 RVA: 0x0047E144 File Offset: 0x0047C344
 	protected override void OnAfterShow()
 	{
 		this.CurrentShopId = (int)this.Params;
@@ -134,12 +134,12 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		this.OnDiscountShopAfterShow();
 	}
 
-	// Token: 0x0601215A RID: 74074 RVA: 0x0047104D File Offset: 0x0046F24D
+	// Token: 0x0600F60A RID: 62986 RVA: 0x0047E1DD File Offset: 0x0047C3DD
 	protected virtual void OnDiscountShopAfterShow()
 	{
 	}
 
-	// Token: 0x0601215B RID: 74075 RVA: 0x0047104F File Offset: 0x0046F24F
+	// Token: 0x0600F60B RID: 62987 RVA: 0x0047E1DF File Offset: 0x0047C3DF
 	private void AddTimer()
 	{
 		this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(delegate(float _)
@@ -148,7 +148,7 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0601215C RID: 74076 RVA: 0x0047107A File Offset: 0x0046F27A
+	// Token: 0x0600F60C RID: 62988 RVA: 0x0047E20A File Offset: 0x0047C40A
 	private void RemoveTimer()
 	{
 		if (this.TimerHandle != null)
@@ -158,13 +158,13 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x0601215D RID: 74077 RVA: 0x0047109C File Offset: 0x0046F29C
+	// Token: 0x0600F60D RID: 62989 RVA: 0x0047E22C File Offset: 0x0047C42C
 	private void OnRefreshTimer()
 	{
 		EventSystem.Instance.Emit(EEventName.DiscountShopTimerRefresh);
 	}
 
-	// Token: 0x0601215E RID: 74078 RVA: 0x004710B0 File Offset: 0x0046F2B0
+	// Token: 0x0600F60E RID: 62990 RVA: 0x0047E240 File Offset: 0x0047C440
 	private void UpdateTabs(int selectIndex)
 	{
 		BabelTowerShopTabView.<>c__DisplayClass25_0 CS$<>8__locals1 = new BabelTowerShopTabView.<>c__DisplayClass25_0();
@@ -176,7 +176,7 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		this.TabGroup.RefreshTabItemByLength(count, new Action(CS$<>8__locals1.<UpdateTabs>g__CallBack|0));
 	}
 
-	// Token: 0x0601215F RID: 74079 RVA: 0x00471117 File Offset: 0x0046F317
+	// Token: 0x0600F60F RID: 62991 RVA: 0x0047E2A7 File Offset: 0x0047C4A7
 	[NullableContext(2)]
 	public void RefreshView(object @params)
 	{
@@ -187,20 +187,20 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 		this.RefreshLoopScroll(this.CurrentSelectTabId);
 	}
 
-	// Token: 0x06012160 RID: 74080 RVA: 0x0047112E File Offset: 0x0046F32E
+	// Token: 0x0600F610 RID: 62992 RVA: 0x0047E2BE File Offset: 0x0047C4BE
 	protected override void OnBeforeHide()
 	{
 		this.RemoveTimer();
 	}
 
-	// Token: 0x06012161 RID: 74081 RVA: 0x00471136 File Offset: 0x0046F336
+	// Token: 0x0600F611 RID: 62993 RVA: 0x0047E2C6 File Offset: 0x0047C4C6
 	protected override void OnBeforeDestroy()
 	{
 		this.TabGroup.Destroy(null);
 		this.LoopScrollView.ClearGridProxies();
 	}
 
-	// Token: 0x040088CD RID: 35021
+	// Token: 0x04008A12 RID: 35346
 	[Nullable(new byte[]
 	{
 		2,
@@ -208,13 +208,13 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 	})]
 	protected TabComponent<PayShopSwitchItem> TabGroup;
 
-	// Token: 0x040088CE RID: 35022
+	// Token: 0x04008A13 RID: 35347
 	protected List<IPayShopUnionData> PayShopGoodsList = new List<IPayShopUnionData>();
 
-	// Token: 0x040088CF RID: 35023
+	// Token: 0x04008A14 RID: 35348
 	protected int CurrentSelectTabId;
 
-	// Token: 0x040088D0 RID: 35024
+	// Token: 0x04008A15 RID: 35349
 	[Nullable(new byte[]
 	{
 		2,
@@ -223,39 +223,39 @@ public class BabelTowerShopTabView : UiTabViewBase, IUiTabViewRefresh
 	})]
 	protected LoopScrollView<PayShopItem, IPayShopUnionData> LoopScrollView;
 
-	// Token: 0x040088D1 RID: 35025
+	// Token: 0x04008A16 RID: 35350
 	private int CurrentShopId;
 
-	// Token: 0x040088D2 RID: 35026
+	// Token: 0x04008A17 RID: 35351
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x040088D3 RID: 35027
+	// Token: 0x04008A18 RID: 35352
 	private const int TIMEGAP = 1000;
 
-	// Token: 0x020088F6 RID: 35062
+	// Token: 0x02007A80 RID: 31360
 	[NullableContext(0)]
 	private enum EDiscountShopComponent
 	{
-		// Token: 0x0402C826 RID: 182310
+		// Token: 0x04027B3E RID: 162622
 		ScrollerItem,
-		// Token: 0x0402C827 RID: 182311
+		// Token: 0x04027B3F RID: 162623
 		Scroller,
-		// Token: 0x0402C828 RID: 182312
+		// Token: 0x04027B40 RID: 162624
 		HoriGroupScroller,
-		// Token: 0x0402C829 RID: 182313
+		// Token: 0x04027B41 RID: 162625
 		TabItem,
-		// Token: 0x0402C82A RID: 182314
+		// Token: 0x04027B42 RID: 162626
 		TabPanel,
-		// Token: 0x0402C82B RID: 182315
+		// Token: 0x04027B43 RID: 162627
 		TitleTips,
-		// Token: 0x0402C82C RID: 182316
+		// Token: 0x04027B44 RID: 162628
 		ScrollerItemRecharge,
-		// Token: 0x0402C82D RID: 182317
+		// Token: 0x04027B45 RID: 162629
 		PanelItem,
-		// Token: 0x0402C82E RID: 182318
+		// Token: 0x04027B46 RID: 162630
 		EmptyItem,
-		// Token: 0x0402C82F RID: 182319
+		// Token: 0x04027B47 RID: 162631
 		EmptyText
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000542 RID: 1346
+	// Token: 0x02000558 RID: 1368
 	public class ConfigMobileBattleUiSetByPanelIndex : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F99 RID: 8089 RVA: 0x0010BFBB File Offset: 0x0010A1BB
+		// Token: 0x0600201D RID: 8221 RVA: 0x0011270F File Offset: 0x0011090F
 		static ConfigMobileBattleUiSetByPanelIndex()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMobileBattleUiSetByPanelIndex.CreateStaticDefaultValue), new Action(ConfigMobileBattleUiSetByPanelIndex.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F9A RID: 8090 RVA: 0x0010BFDC File Offset: 0x0010A1DC
+		// Token: 0x0600201E RID: 8222 RVA: 0x00112730 File Offset: 0x00110930
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMobileBattleUiSetByPanelIndex.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F9B RID: 8091 RVA: 0x0010C05B File Offset: 0x0010A25B
+		// Token: 0x0600201F RID: 8223 RVA: 0x001127AF File Offset: 0x001109AF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMobileBattleUiSetByPanelIndex.LogPair = null;
 			ConfigMobileBattleUiSetByPanelIndex.HandleId = 0;
 		}
 
-		// Token: 0x06001F9C RID: 8092 RVA: 0x0010C069 File Offset: 0x0010A269
+		// Token: 0x06002020 RID: 8224 RVA: 0x001127BD File Offset: 0x001109BD
 		public static void Init()
 		{
 			ConfigMobileBattleUiSetByPanelIndex.HandleId = ConfigCommon.InitDataStatement(ConfigMobileBattleUiSetByPanelIndex.HandleId, "db_mobile_battle_ui_set.db", "select BinData from `MobileBattleUiSet` where PanelIndex=?");
 		}
 
-		// Token: 0x06001F9D RID: 8093 RVA: 0x0010C084 File Offset: 0x0010A284
+		// Token: 0x06002021 RID: 8225 RVA: 0x001127D8 File Offset: 0x001109D8
 		[NullableContext(2)]
 		public static IReadOnlyList<MobileBattleUiSet> GetConfigList(int p0PanelIndex, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040024B2 RID: 9394
+		// Token: 0x0400254C RID: 9548
 		private const string DB = "db_mobile_battle_ui_set.db";
 
-		// Token: 0x040024B3 RID: 9395
+		// Token: 0x0400254D RID: 9549
 		private const string FILE = "y.移动端主界面键位配置.xlsx";
 
-		// Token: 0x040024B4 RID: 9396
+		// Token: 0x0400254E RID: 9550
 		private const string TABLE = "MobileBattleUiSet";
 
-		// Token: 0x040024B5 RID: 9397
+		// Token: 0x0400254F RID: 9551
 		private const string COMMAND = "select BinData from `MobileBattleUiSet` where PanelIndex=?";
 
-		// Token: 0x040024B6 RID: 9398
+		// Token: 0x04002550 RID: 9552
 		private const string KEY_PREFIX = "MobileBattleUiSetByPanelIndex";
 
-		// Token: 0x040024B7 RID: 9399
+		// Token: 0x04002551 RID: 9553
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040024B8 RID: 9400
+		// Token: 0x04002552 RID: 9554
 		private static int HandleId;
 	}
 }

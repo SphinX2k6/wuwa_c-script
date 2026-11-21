@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 {
-	// Token: 0x020069B7 RID: 27063
+	// Token: 0x02005B13 RID: 23315
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UnopenedAreaCheck
 	{
-		// Token: 0x06043557 RID: 275799 RVA: 0x01073458 File Offset: 0x01071658
+		// Token: 0x0603958F RID: 234895 RVA: 0x010178A0 File Offset: 0x01015AA0
 		public void AreaInit(IReadOnlyDictionary<int, bool> areaStates)
 		{
 			foreach (KeyValuePair<int, bool> keyValuePair in areaStates)
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			this.IsSplineInit = true;
 		}
 
-		// Token: 0x06043558 RID: 275800 RVA: 0x010734E8 File Offset: 0x010716E8
+		// Token: 0x06039590 RID: 234896 RVA: 0x01017930 File Offset: 0x01015B30
 		public unsafe void AreaStatesChange(SceneAreaStateNotify notify)
 		{
 			this.UpdateAreaBinItem(notify.AreaState.AreaId, notify.AreaState.State);
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06043559 RID: 275801 RVA: 0x01073584 File Offset: 0x01071784
+		// Token: 0x06039591 RID: 234897 RVA: 0x010179CC File Offset: 0x01015BCC
 		private unsafe void UpdateAreaBinItem(int areaId, bool check)
 		{
 			Area? config = ConfigAreaByAreaId.GetConfig(areaId, true);
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x0604355A RID: 275802 RVA: 0x0107387C File Offset: 0x01071A7C
+		// Token: 0x06039592 RID: 234898 RVA: 0x01017CC4 File Offset: 0x01015EC4
 		public unsafe bool BinTest(IVector2D inputP, int mapId, int dungeonId)
 		{
 			if (!this.IsSplineInit || this.BinMap.Count == 0)
@@ -208,29 +208,29 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			return !flag;
 		}
 
-		// Token: 0x0604355B RID: 275803 RVA: 0x01073A64 File Offset: 0x01071C64
+		// Token: 0x06039593 RID: 234899 RVA: 0x01017EAC File Offset: 0x010160AC
 		public void Clear()
 		{
 			this.IsSplineInit = false;
 			this.BinMap.Clear();
 		}
 
-		// Token: 0x04023200 RID: 143872
+		// Token: 0x0401E3EF RID: 123887
 		private const int FAILURE_COUNT = 7;
 
-		// Token: 0x04023201 RID: 143873
+		// Token: 0x0401E3F0 RID: 123888
 		public bool IsSplineInit;
 
-		// Token: 0x04023202 RID: 143874
+		// Token: 0x0401E3F1 RID: 123889
 		private int FailureCount;
 
-		// Token: 0x04023203 RID: 143875
+		// Token: 0x0401E3F2 RID: 123890
 		private readonly Dictionary<string, BinItem> BinMap = new Dictionary<string, BinItem>();
 
-		// Token: 0x04023204 RID: 143876
+		// Token: 0x0401E3F3 RID: 123891
 		private readonly Dictionary<string, HashSet<int>> AreaPathMap = new Dictionary<string, HashSet<int>>();
 
-		// Token: 0x04023205 RID: 143877
+		// Token: 0x0401E3F4 RID: 123892
 		private readonly Dictionary<int, HashSet<string>> DungeonMap = new Dictionary<int, HashSet<string>>();
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074CA RID: 29898
+	// Token: 0x02007CC0 RID: 31936
 	public class IUnLockCookSystemItemT
 	{
-		// Token: 0x1700E2EC RID: 58092
-		// (get) Token: 0x060365BB RID: 222651 RVA: 0x00762FA7 File Offset: 0x007611A7
-		// (set) Token: 0x060365BC RID: 222652 RVA: 0x00762FAF File Offset: 0x007611AF
+		// Token: 0x1700EF16 RID: 61206
+		// (get) Token: 0x060399D0 RID: 235984 RVA: 0x007C61F7 File Offset: 0x007C43F7
+		// (set) Token: 0x060399D1 RID: 235985 RVA: 0x007C61FF File Offset: 0x007C43FF
 		public EUnlockSystemItemType Type { get; set; }
 
-		// Token: 0x1700E2ED RID: 58093
-		// (get) Token: 0x060365BD RID: 222653 RVA: 0x00762FB8 File Offset: 0x007611B8
-		// (set) Token: 0x060365BE RID: 222654 RVA: 0x00762FC0 File Offset: 0x007611C0
+		// Token: 0x1700EF17 RID: 61207
+		// (get) Token: 0x060399D2 RID: 235986 RVA: 0x007C6208 File Offset: 0x007C4408
+		// (set) Token: 0x060399D3 RID: 235987 RVA: 0x007C6210 File Offset: 0x007C4410
 		public IUnlockCookSystemCookBookT UnlockOption { get; set; }
 
-		// Token: 0x060365BF RID: 222655 RVA: 0x00762FC9 File Offset: 0x007611C9
+		// Token: 0x060399D4 RID: 235988 RVA: 0x007C6219 File Offset: 0x007C4419
 		public IUnLockCookSystemItemT()
 		{
 			this.Type = EUnlockSystemItemType.CookSystem;

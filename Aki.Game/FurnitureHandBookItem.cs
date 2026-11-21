@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x02000FDA RID: 4058
+// Token: 0x0200048F RID: 1167
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -11,7 +11,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 })]
 public class FurnitureHandBookItem : LoopScrollMediumItemGrid<IFurnitureHandBookItemData>
 {
-	// Token: 0x0600683C RID: 26684 RVA: 0x0014B12C File Offset: 0x0014932C
+	// Token: 0x06003BD4 RID: 15316 RVA: 0x001539F0 File Offset: 0x00151BF0
 	[NullableContext(1)]
 	protected override void OnRefresh(IFurnitureHandBookItemData data, bool isSelected, int gridIndex)
 	{
@@ -30,7 +30,7 @@ public class FurnitureHandBookItem : LoopScrollMediumItemGrid<IFurnitureHandBook
 		this.SetSelected(isSelected, false);
 	}
 
-	// Token: 0x0600683D RID: 26685 RVA: 0x0014B1D8 File Offset: 0x001493D8
+	// Token: 0x06003BD5 RID: 15317 RVA: 0x00153A9C File Offset: 0x00151C9C
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
@@ -45,19 +45,19 @@ public class FurnitureHandBookItem : LoopScrollMediumItemGrid<IFurnitureHandBook
 		}
 	}
 
-	// Token: 0x0600683E RID: 26686 RVA: 0x0014B23D File Offset: 0x0014943D
+	// Token: 0x06003BD6 RID: 15318 RVA: 0x00153B01 File Offset: 0x00151D01
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x0600683F RID: 26687 RVA: 0x0014B248 File Offset: 0x00149448
+	// Token: 0x06003BD7 RID: 15319 RVA: 0x00153B0C File Offset: 0x00151D0C
 	public object GetKey()
 	{
 		IFurnitureHandBookItemData itemData = this.ItemData;
 		return (itemData != null) ? new int?(itemData.FurnitureConfig.Id) : null;
 	}
 
-	// Token: 0x04002F8B RID: 12171
+	// Token: 0x04003024 RID: 12324
 	private IFurnitureHandBookItemData ItemData;
 }

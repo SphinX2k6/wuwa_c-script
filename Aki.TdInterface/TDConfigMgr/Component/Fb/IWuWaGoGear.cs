@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E0B RID: 3595
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F07 RID: 3847
 	public class IWuWaGoGear : IWuWaGoEntityBase
 	{
-		// Token: 0x06005160 RID: 20832 RVA: 0x000C8C91 File Offset: 0x000C6E91
+		// Token: 0x06005687 RID: 22151 RVA: 0x000D4559 File Offset: 0x000D2759
 		public static IWuWaGoGear Create(IWuWaGoGear? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B07 RID: 6919
-		// (get) Token: 0x06005161 RID: 20833 RVA: 0x000C8CB0 File Offset: 0x000C6EB0
+		// Token: 0x17001C74 RID: 7284
+		// (get) Token: 0x06005688 RID: 22152 RVA: 0x000D4578 File Offset: 0x000D2778
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B08 RID: 6920
-		// (get) Token: 0x06005162 RID: 20834 RVA: 0x000C8CC0 File Offset: 0x000C6EC0
+		// Token: 0x17001C75 RID: 7285
+		// (get) Token: 0x06005689 RID: 22153 RVA: 0x000D4588 File Offset: 0x000D2788
 		public virtual List<int> GridEntityIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EDC RID: 11996
+		// Token: 0x040031A4 RID: 12708
 		private IWuWaGoGear Instance;
 
-		// Token: 0x04002EDD RID: 11997
+		// Token: 0x040031A5 RID: 12709
 		private List<int> _GridEntityIdsCache;
 
-		// Token: 0x04002EDE RID: 11998
+		// Token: 0x040031A6 RID: 12710
 		private bool _GridEntityIdsInited;
 	}
 }

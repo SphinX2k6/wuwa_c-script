@@ -3,34 +3,39 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.GameSettings;
+using CSharpScript.Launcher.HotPatchKuroSdk;
 using CSharpScript.Launcher.Platform;
+using CSharpScript.Launcher.Util;
 using UnrealEngine;
 
-// Token: 0x02000DC8 RID: 3528
-[NullableContext(1)]
+// Token: 0x0200027A RID: 634
+[NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class GameSettingsController : ControllerBase
 {
-	// Token: 0x0600537E RID: 21374 RVA: 0x000E5080 File Offset: 0x000E3280
+	// Token: 0x060026F2 RID: 9970 RVA: 0x000EB620 File Offset: 0x000E9820
 	protected override bool OnInit()
 	{
 		Log.Instance.Info(ELogModule.Render, ELogAuthor.ZJF, "GameSettingsController-OnInit", default(ReadOnlySpan<ValueTuple<string, object>>));
+		this.KuroRenderQualityLocalIndex = -1;
 		this.AddEvents();
 		this.KuroRenderQualityVolumeManager = (UKuroRenderingRuntimeBPPluginBPLibrary.GetEngineSubsystem(UKuroRenderQualityVolumeManager.StaticClass()) as UKuroRenderQualityVolumeManager);
 		this.AddKuroRenderQualityVolumeEvents();
 		return true;
 	}
 
-	// Token: 0x0600537F RID: 21375 RVA: 0x000E50D0 File Offset: 0x000E32D0
+	// Token: 0x060026F3 RID: 9971 RVA: 0x000EB677 File Offset: 0x000E9877
 	protected override bool OnClear()
 	{
+		GameSettingsUtils.RestoreDistanceQualityDefaults();
+		this.KuroRenderQualityLocalIndex = -1;
 		this.RemoveEvents();
 		this.RemoveKuroRenderQualityVolumeEvents();
 		return true;
 	}
 
-	// Token: 0x06005380 RID: 21376 RVA: 0x000E50E0 File Offset: 0x000E32E0
+	// Token: 0x060026F4 RID: 9972 RVA: 0x000EB694 File Offset: 0x000E9894
 	private unsafe void KuroRenderQualityVolumeReApplyGameSettings()
 	{
 		GameSettingsManager.Instance.ReApply(EFunction.NPCDENSITY, EGameSettingsApplyReason.AnyTime, false);
@@ -47,46 +52,63 @@ public class GameSettingsController : ControllerBase
 				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "UBInstancing.Enabled 1", null);
 			}
 		}
-		if (GameSettingsDeviceRender.Instance.DeviceVideoGbRam <= 12 && this.KuroRenderQualityLocalIndex >= 70 && this.KuroRenderQualityLocalIndex < 90)
-		{
-			float consoleVariableFloatValue = UKismetSystemLibrary.GetConsoleVariableFloatValue("wp.Runtime.LoadingRangeScale");
-			if (consoleVariableFloatValue > 1f)
-			{
-				Log instance = Log.Instance;
-				ELogModule module = ELogModule.Render;
-				ELogAuthor author = ELogAuthor.LQX;
-				string message = "[局部性能盒子-TS] 低显存限制流送系数";
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("OldValue:", consoleVariableFloatValue);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Value:", 1);
-				instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-				UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float("wp.Runtime.LoadingRangeScale", 1f);
-			}
-		}
 		if (Info.Instance.IsWindowsPlatform() && GameSettingsDeviceRender.Instance.DeviceVideoGbRam >= 7 && UKismetSystemLibrary.GetConsoleVariableIntValue("sg.TextureQuality") == 3)
 		{
 			if (this.KuroRenderQualityLocalIndex >= 100 && this.KuroRenderQualityLocalIndex < 110)
 			{
 				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Streaming.PoolSize 1350", null);
+				Log instance = Log.Instance;
+				ELogModule module = ELogModule.Render;
+				ELogAuthor author = ELogAuthor.LQX;
+				string message = "[局部性能盒子-TS] 高显存提升池子";
+				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("PoolSize:", 1350);
+				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			}
+			else
+			{
+				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Streaming.PoolSize 1000", null);
 				Log instance2 = Log.Instance;
 				ELogModule module2 = ELogModule.Render;
 				ELogAuthor author2 = ELogAuthor.LQX;
-				string message2 = "[局部性能盒子-TS] 高显存提升池子";
-				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("PoolSize:", 1350);
-				instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				string message2 = "[局部性能盒子-TS] 高显存恢复池子";
+				ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("PoolSize:", 1000);
+				instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
+			}
+		}
+		if (Info.Instance.IsWindowsPlatform())
+		{
+			if (this.KuroRenderQualityLocalIndex >= 130 && this.KuroRenderQualityLocalIndex < 140 && UKuroStaticLibrary.GetVideoMemoryGB() < 9 && UKismetSystemLibrary.GetConsoleVariableIntValue("r.RayTracing.Enable") != 0)
+			{
+				if (this.LowVideoMemoryRayTracingOriginalPoolSize < 0)
+				{
+					this.LowVideoMemoryRayTracingOriginalPoolSize = UKismetSystemLibrary.GetConsoleVariableIntValue("r.Streaming.PoolSize");
+				}
+				UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Int("r.Streaming.PoolSize", 800);
+				Log instance3 = Log.Instance;
+				ELogModule module3 = ELogModule.Render;
+				ELogAuthor author3 = ELogAuthor.LQX;
+				string message3 = "[局部性能盒子-TS] 低显存光追降低池子";
+				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("PoolSize:", 800);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("OriginalPoolSize:", this.LowVideoMemoryRayTracingOriginalPoolSize);
+				instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 				return;
 			}
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Streaming.PoolSize 1000", null);
-			Log instance3 = Log.Instance;
-			ELogModule module3 = ELogModule.Render;
-			ELogAuthor author3 = ELogAuthor.LQX;
-			string message3 = "[局部性能盒子-TS] 高显存恢复池子";
-			ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("PoolSize:", 1000);
-			instance3.Info(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
+			if (this.LowVideoMemoryRayTracingOriginalPoolSize >= 0)
+			{
+				UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Int("r.Streaming.PoolSize", this.LowVideoMemoryRayTracingOriginalPoolSize);
+				Log instance4 = Log.Instance;
+				ELogModule module4 = ELogModule.Render;
+				ELogAuthor author4 = ELogAuthor.LQX;
+				string message4 = "[局部性能盒子-TS] 低显存光追恢复池子";
+				ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("PoolSize:", this.LowVideoMemoryRayTracingOriginalPoolSize);
+				instance4.Info(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
+				this.LowVideoMemoryRayTracingOriginalPoolSize = -1;
+			}
 		}
 	}
 
-	// Token: 0x06005381 RID: 21377 RVA: 0x000E52F0 File Offset: 0x000E34F0
+	// Token: 0x060026F5 RID: 9973 RVA: 0x000EB928 File Offset: 0x000E9B28
 	private void AddKuroRenderQualityVolumeEvents()
 	{
 		Action callback = delegate()
@@ -115,7 +137,7 @@ public class GameSettingsController : ControllerBase
 		this.KuroRenderQualityVolumeManager.OnLeaveVolumeBlueprintEvent.Add(callback3);
 	}
 
-	// Token: 0x06005382 RID: 21378 RVA: 0x000E536A File Offset: 0x000E356A
+	// Token: 0x060026F6 RID: 9974 RVA: 0x000EB9A2 File Offset: 0x000E9BA2
 	private void RemoveKuroRenderQualityVolumeEvents()
 	{
 		this.KuroRenderQualityVolumeManager.OnEnterVolumeBlueprintEvent.Clear();
@@ -123,7 +145,7 @@ public class GameSettingsController : ControllerBase
 		this.KuroRenderQualityVolumeManager.OnLeaveVolumeBlueprintEvent.Clear();
 	}
 
-	// Token: 0x06005383 RID: 21379 RVA: 0x000E539C File Offset: 0x000E359C
+	// Token: 0x060026F7 RID: 9975 RVA: 0x000EB9D4 File Offset: 0x000E9BD4
 	private void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnStartLoadingState, new Action(this.OnOpenLoading));
@@ -140,9 +162,10 @@ public class GameSettingsController : ControllerBase
 		}
 		instance.Add(name, handle);
 		Application.Instance.AddWindowActivationHandler(new Action<bool>(this.OnWindowActive));
+		this.AddFoldStateChangeEvent();
 	}
 
-	// Token: 0x06005384 RID: 21380 RVA: 0x000E5478 File Offset: 0x000E3678
+	// Token: 0x060026F8 RID: 9976 RVA: 0x000EBAB4 File Offset: 0x000E9CB4
 	private void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnStartLoadingState, new Action(this.OnOpenLoading));
@@ -159,9 +182,48 @@ public class GameSettingsController : ControllerBase
 		}
 		instance.Remove(name, handle);
 		Application.Instance.RemoveWindowActivationHandler(new Action<bool>(this.OnWindowActive));
+		this.RemoveFoldStateChangeEvent();
 	}
 
-	// Token: 0x06005385 RID: 21381 RVA: 0x000E5554 File Offset: 0x000E3754
+	// Token: 0x060026F9 RID: 9977 RVA: 0x000EBB94 File Offset: 0x000E9D94
+	private void AddFoldStateChangeEvent()
+	{
+		if (!Platform.Instance.IsOpenHarmonyPlatform() || Platform.Instance.IsRedMagicDevice())
+		{
+			return;
+		}
+		LauncherSdkBase launcherSdkBase = LauncherSdk.Get();
+		if (!launcherSdkBase.IsFoldableScreen())
+		{
+			return;
+		}
+		this.FoldStateSdk = launcherSdkBase;
+		launcherSdkBase.BindFoldStateChangeCallback(new Action<bool>(this.OnFoldStateChanged));
+		this.OnFoldStateChanged(launcherSdkBase.IsScreenFolded());
+	}
+
+	// Token: 0x060026FA RID: 9978 RVA: 0x000EBBEE File Offset: 0x000E9DEE
+	private void RemoveFoldStateChangeEvent()
+	{
+		LauncherSdkBase foldStateSdk = this.FoldStateSdk;
+		if (foldStateSdk != null)
+		{
+			foldStateSdk.UnbindFoldStateChangeCallback(new Action<bool>(this.OnFoldStateChanged));
+		}
+		this.FoldStateSdk = null;
+	}
+
+	// Token: 0x060026FB RID: 9979 RVA: 0x000EBC14 File Offset: 0x000E9E14
+	private void OnFoldStateChanged(bool isFolded)
+	{
+		UWorld world = GlobalData.World;
+		if (this.FoldStateSdk != null && world != null)
+		{
+			LauncherGameSettingLib.Instance.ApplyFoldStateMobileContentScaleFactor(world, isFolded);
+		}
+	}
+
+	// Token: 0x060026FC RID: 9980 RVA: 0x000EBC40 File Offset: 0x000E9E40
 	private void OnOpenLoading()
 	{
 		if (GameSettingsManager.Instance.IsGameSettingsAppliedOnOpenLoading)
@@ -175,40 +237,13 @@ public class GameSettingsController : ControllerBase
 		{
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Streaming.RenderAssetMinKuroBoostFactor 0.1", null);
 		}
-		if (Platform.Instance.IsPs5Platform())
-		{
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "sg.ViewDistanceQuality 2", null);
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "sg.AntiAliasingQuality 2", null);
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "sg.PostProcessQuality 2", null);
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "sg.TextureQuality 2", null);
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "sg.EffectsQuality 3", null);
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "sg.FoliageQuality 2", null);
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.CapsuleKuroAO 1", null);
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.LandscapeReverseLODScaleFactor 0", null);
-		}
 		GameSettingsManager.Instance.HandleInitDataOnOpenLoading();
 		EventSystem.Instance.Emit(EEventName.AfterGameSettingsAppliedOnOpenLoading);
-		if (Info.Instance.IsPlayInEditor && false)
-		{
-			string command = "wp.Runtime.OverrideMultipleRuntimeGridNames Grid_Near&Grid_Middle&Grid_Middle_Far&Grid_Far&Grid_SuperFar&Grid_SSuperFar&Grid_HLOD_Small&Grid_HLOD_Middle&Grid_HLOD&Grid_HLOD_Volume_Small&Grid_HLOD_Volume_Middle&Grid_HLOD_Volume&Grid_Water&Grid_Impostor&Grid_ISM_Near&Grid_ISM_Middle&Grid_ISM_Far&Grid_ISM_SuperFar&Grid_Foliage_Near&Grid_Foliage_Grass&Grid_Foliage_Middle&Grid_Foliage_Far&Grid_ReverseFar&Grid_SSuperFarReverse&Grid_EnclosedSpaceNear&Grid_EnclosedSpaceMiddle&Grid_EnclosedSpaceFar&Grid_EnclosedSpaceSuperFar&Grid_EnclosedSpaceSSuperFar";
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, command, null);
-			command = "wp.Runtime.OverrideMultipleRuntimeGridLoadingRangeValues 50&80&180&100&450&1800&150&200&300&150&200&300&480&250&50&80&100&150&40&80&100&100&300&1800&50&80&100&450&600";
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, command, null);
-			command = "r.Kuro.SkeletalMesh.LODDistanceScale 1.0";
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, command, null);
-			command = "r.Kuro.Foliage.GrassCullDistanceMax 3000";
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, command, null);
-			command = "r.Kuro.MaterialDesktopQualityShoulderRender 0";
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, command, null);
-			command = "r.Kuro.GlobalPointCloudStreamEnabled 0";
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, command, null);
-			Log.Instance.Info(ELogModule.World, ELogAuthor.XMC, "Editor: TopSpeedMode is on.", default(ReadOnlySpan<ValueTuple<string, object>>));
-		}
 		GameSettingsDeviceRender.Instance.CancelAllPerformanceLimit();
 		GameSettingsManager.Instance.IsGameSettingsAppliedOnOpenLoading = true;
 	}
 
-	// Token: 0x06005386 RID: 21382 RVA: 0x000E5728 File Offset: 0x000E3928
+	// Token: 0x060026FD RID: 9981 RVA: 0x000EBCE8 File Offset: 0x000E9EE8
 	private void OnOpenLevel()
 	{
 		if (!GameModeModel.Instance.UseWorldPartition)
@@ -245,11 +280,13 @@ public class GameSettingsController : ControllerBase
 		GameSettingsManager.Instance.ReApply(EFunction.GamepadRightStickDeadZone, EGameSettingsApplyReason.WhenLoading, false);
 		GameSettingsManager.Instance.ReApply(EFunction.GamepadLeftTriggerDeadZone, EGameSettingsApplyReason.WhenLoading, false);
 		GameSettingsManager.Instance.ReApply(EFunction.GamepadRightTriggerDeadZone, EGameSettingsApplyReason.WhenLoading, false);
+		GameSettingsUtils.ReApplyLoadingRangeScale();
 	}
 
-	// Token: 0x06005387 RID: 21383 RVA: 0x000E5898 File Offset: 0x000E3A98
+	// Token: 0x060026FE RID: 9982 RVA: 0x000EBE5C File Offset: 0x000EA05C
 	private void OnClearWorld()
 	{
+		this.KuroRenderQualityLocalIndex = -1;
 		if (!GameModeModel.Instance.UseWorldPartition)
 		{
 			Log.Instance.Info(ELogModule.Render, ELogAuthor.ZYT, "退出副本-调整渲染参数", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -261,7 +298,7 @@ public class GameSettingsController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005388 RID: 21384 RVA: 0x000E58FD File Offset: 0x000E3AFD
+	// Token: 0x060026FF RID: 9983 RVA: 0x000EBEC8 File Offset: 0x000EA0C8
 	private void OnSubLevelAdded()
 	{
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Shadow.CacheWholeSceneShadows 0", null);
@@ -269,14 +306,14 @@ public class GameSettingsController : ControllerBase
 		this.AddTimer();
 	}
 
-	// Token: 0x06005389 RID: 21385 RVA: 0x000E591B File Offset: 0x000E3B1B
+	// Token: 0x06002700 RID: 9984 RVA: 0x000EBEE6 File Offset: 0x000EA0E6
 	private void OnTimer(float _)
 	{
 		this.TimerId = null;
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Shadow.CacheWholeSceneShadows 1", null);
 	}
 
-	// Token: 0x0600538A RID: 21386 RVA: 0x000E5934 File Offset: 0x000E3B34
+	// Token: 0x06002701 RID: 9985 RVA: 0x000EBEFF File Offset: 0x000EA0FF
 	private void OnInputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
 	{
 		if (last == EInputControllerMainType.Gamepad || now == EInputControllerMainType.Gamepad)
@@ -285,7 +322,7 @@ public class GameSettingsController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600538B RID: 21387 RVA: 0x000E5944 File Offset: 0x000E3B44
+	// Token: 0x06002702 RID: 9986 RVA: 0x000EBF10 File Offset: 0x000EA110
 	private void OnWindowActive(bool bIsActive)
 	{
 		if (GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.BackendVolume, 0, true) == 1)
@@ -299,7 +336,7 @@ public class GameSettingsController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600538C RID: 21388 RVA: 0x000E5993 File Offset: 0x000E3B93
+	// Token: 0x06002703 RID: 9987 RVA: 0x000EBF5F File Offset: 0x000EA15F
 	public void OnGameUserSettingsUINeedsUpdate()
 	{
 		TimerSystem.GameplayTimeInstance.Next(delegate(float _)
@@ -308,7 +345,7 @@ public class GameSettingsController : ControllerBase
 		}, null, null);
 	}
 
-	// Token: 0x0600538D RID: 21389 RVA: 0x000E59B0 File Offset: 0x000E3BB0
+	// Token: 0x06002704 RID: 9988 RVA: 0x000EBF7C File Offset: 0x000EA17C
 	public void OnUEGameUserSettingsUpdate()
 	{
 		UGameUserSettings gameUserSettings = UGameUserSettings.GetGameUserSettings();
@@ -333,13 +370,13 @@ public class GameSettingsController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600538E RID: 21390 RVA: 0x000E5A5D File Offset: 0x000E3C5D
+	// Token: 0x06002705 RID: 9989 RVA: 0x000EC029 File Offset: 0x000EA229
 	private void AddTimer()
 	{
 		this.TimerId = TimerSystem.GameplayTimeInstance.Delay(new TTimerAction(this.OnTimer), 1000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0600538F RID: 21391 RVA: 0x000E5A88 File Offset: 0x000E3C88
+	// Token: 0x06002706 RID: 9990 RVA: 0x000EC054 File Offset: 0x000EA254
 	private void RemoveTimer()
 	{
 		if (this.TimerId != null)
@@ -352,7 +389,7 @@ public class GameSettingsController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005390 RID: 21392 RVA: 0x000E5ABC File Offset: 0x000E3CBC
+	// Token: 0x06002707 RID: 9991 RVA: 0x000EC088 File Offset: 0x000EA288
 	private static void OnBeforeOpenLoginView()
 	{
 		Log.Instance.Info(ELogModule.GameSettings, ELogAuthor.TZJ, "在打开登录界面之前-执行预设置逻辑", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -366,17 +403,20 @@ public class GameSettingsController : ControllerBase
 		GameSettingsUtils.ApplyHighestFps(GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.HIGHESTFPS, 0, true));
 	}
 
-	// Token: 0x170005D0 RID: 1488
-	// (get) Token: 0x06005391 RID: 21393 RVA: 0x000E5B53 File Offset: 0x000E3D53
+	// Token: 0x170005F6 RID: 1526
+	// (get) Token: 0x06002708 RID: 9992 RVA: 0x000EC11F File Offset: 0x000EA31F
+	[Nullable(1)]
 	public static GameSettingsController Instance
 	{
+		[NullableContext(1)]
 		get
 		{
 			return GameSettingsController._Instance;
 		}
 	}
 
-	// Token: 0x06005392 RID: 21394 RVA: 0x000E5B5A File Offset: 0x000E3D5A
+	// Token: 0x06002709 RID: 9993 RVA: 0x000EC126 File Offset: 0x000EA326
+	[NullableContext(1)]
 	public static GameSettingsController GetOrCreateInstance()
 	{
 		if (GameSettingsController._Instance == null)
@@ -386,7 +426,7 @@ public class GameSettingsController : ControllerBase
 		return GameSettingsController._Instance;
 	}
 
-	// Token: 0x06005393 RID: 21395 RVA: 0x000E5B6E File Offset: 0x000E3D6E
+	// Token: 0x0600270A RID: 9994 RVA: 0x000EC13A File Offset: 0x000EA33A
 	public static bool CreateInstance()
 	{
 		if (GameSettingsController._Instance != null)
@@ -397,43 +437,46 @@ public class GameSettingsController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06005394 RID: 21396 RVA: 0x000E5B84 File Offset: 0x000E3D84
+	// Token: 0x0600270B RID: 9995 RVA: 0x000EC150 File Offset: 0x000EA350
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005395 RID: 21397 RVA: 0x000E5B86 File Offset: 0x000E3D86
+	// Token: 0x0600270C RID: 9996 RVA: 0x000EC152 File Offset: 0x000EA352
 	public static void ResetStaticDefaultValue()
 	{
 		GameSettingsController._Instance = null;
 	}
 
-	// Token: 0x06005396 RID: 21398 RVA: 0x000E5B8E File Offset: 0x000E3D8E
+	// Token: 0x0600270D RID: 9997 RVA: 0x000EC15A File Offset: 0x000EA35A
 	static GameSettingsController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameSettingsController.CreateStaticDefaultValue), new Action(GameSettingsController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040024CE RID: 9422
-	[Nullable(2)]
+	// Token: 0x0400254E RID: 9550
 	private TimerHandle TimerId;
 
-	// Token: 0x040024CF RID: 9423
-	[Nullable(2)]
+	// Token: 0x0400254F RID: 9551
 	private UKuroRenderQualityVolumeManager KuroRenderQualityVolumeManager;
 
-	// Token: 0x040024D0 RID: 9424
+	// Token: 0x04002550 RID: 9552
+	private LauncherSdkBase FoldStateSdk;
+
+	// Token: 0x04002551 RID: 9553
 	public int KuroRenderQualityLocalIndex = -1;
 
-	// Token: 0x040024D1 RID: 9425
-	[Nullable(2)]
+	// Token: 0x04002552 RID: 9554
+	private int LowVideoMemoryRayTracingOriginalPoolSize = -1;
+
+	// Token: 0x04002553 RID: 9555
 	private static GameSettingsController _Instance;
 
-	// Token: 0x02007476 RID: 29814
+	// Token: 0x02006607 RID: 26119
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x040268F0 RID: 157936
+		// Token: 0x04021C2E RID: 138286
 		[Nullable(0)]
 		public static Action <0>__OnBeforeOpenLoginView;
 	}

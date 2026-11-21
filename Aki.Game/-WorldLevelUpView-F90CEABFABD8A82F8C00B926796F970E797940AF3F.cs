@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002D6C RID: 11628
+// Token: 0x020022C6 RID: 8902
 internal enum <WorldLevelUpView>F90CEABFABD8A82F8C00B926796F970E797940AF3FA8BBD0345A738C611EE0696__EChildType
 {
-	// Token: 0x0400B54F RID: 46415
+	// Token: 0x0400B8C4 RID: 47300
 	LevelText,
-	// Token: 0x0400B550 RID: 46416
+	// Token: 0x0400B8C5 RID: 47301
 	DescText,
-	// Token: 0x0400B551 RID: 46417
+	// Token: 0x0400B8C6 RID: 47302
 	DescItem
 }

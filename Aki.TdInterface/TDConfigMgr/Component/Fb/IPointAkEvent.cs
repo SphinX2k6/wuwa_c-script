@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000ADA RID: 2778
+	// Token: 0x02000BA4 RID: 2980
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPointAkEvent : IAkEventTypeConfig
 	{
-		// Token: 0x06003FFD RID: 16381 RVA: 0x000A389A File Offset: 0x000A1A9A
-		[NullableContext(1)]
+		// Token: 0x06004427 RID: 17447 RVA: 0x000ACE8E File Offset: 0x000AB08E
+		[NullableContext(0)]
 		public static IPointAkEvent Create(IPointAkEvent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001006 RID: 4102
-		// (get) Token: 0x06003FFE RID: 16382 RVA: 0x000A38B9 File Offset: 0x000A1AB9
+		// Token: 0x170010DA RID: 4314
+		// (get) Token: 0x06004428 RID: 17448 RVA: 0x000ACEAD File Offset: 0x000AB0AD
 		public override EAkEventType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001007 RID: 4103
-		// (get) Token: 0x06003FFF RID: 16383 RVA: 0x000A38C8 File Offset: 0x000A1AC8
+		// Token: 0x170010DB RID: 4315
+		// (get) Token: 0x06004429 RID: 17449 RVA: 0x000ACEBC File Offset: 0x000AB0BC
 		public virtual List<int> PointIds
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001008 RID: 4104
-		// (get) Token: 0x06004000 RID: 16384 RVA: 0x000A3940 File Offset: 0x000A1B40
+		// Token: 0x170010DC RID: 4316
+		// (get) Token: 0x0600442A RID: 17450 RVA: 0x000ACF34 File Offset: 0x000AB134
 		public virtual bool? UseListenerCone
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001009 RID: 4105
-		// (get) Token: 0x06004001 RID: 16385 RVA: 0x000A3978 File Offset: 0x000A1B78
+		// Token: 0x170010DD RID: 4317
+		// (get) Token: 0x0600442B RID: 17451 RVA: 0x000ACF6C File Offset: 0x000AB16C
 		public virtual bool? EnableOcclusion
 		{
 			get
@@ -87,13 +87,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400239F RID: 9119
+		// Token: 0x040025BB RID: 9659
 		private IPointAkEvent Instance;
 
-		// Token: 0x040023A0 RID: 9120
+		// Token: 0x040025BC RID: 9660
 		private List<int> _PointIdsCache;
 
-		// Token: 0x040023A1 RID: 9121
+		// Token: 0x040025BD RID: 9661
 		private bool _PointIdsInited;
 	}
 }

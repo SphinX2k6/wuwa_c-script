@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C41 RID: 3137
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D14 RID: 3348
 	public class IButterflySpline : ISplineType
 	{
-		// Token: 0x060047D8 RID: 18392 RVA: 0x000B4CBB File Offset: 0x000B2EBB
+		// Token: 0x06004C48 RID: 19528 RVA: 0x000BF06B File Offset: 0x000BD26B
 		public static IButterflySpline Create(IButterflySpline? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001513 RID: 5395
-		// (get) Token: 0x060047D9 RID: 18393 RVA: 0x000B4CDA File Offset: 0x000B2EDA
+		// Token: 0x1700161B RID: 5659
+		// (get) Token: 0x06004C49 RID: 19529 RVA: 0x000BF08A File Offset: 0x000BD28A
 		public override ESplineType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001514 RID: 5396
-		// (get) Token: 0x060047DA RID: 18394 RVA: 0x000B4CE8 File Offset: 0x000B2EE8
+		// Token: 0x1700161C RID: 5660
+		// (get) Token: 0x06004C4A RID: 19530 RVA: 0x000BF098 File Offset: 0x000BD298
 		public virtual List<IButterflySplinePoint> Points
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028E4 RID: 10468
+		// Token: 0x04002B39 RID: 11065
 		private IButterflySpline Instance;
 
-		// Token: 0x040028E5 RID: 10469
+		// Token: 0x04002B3A RID: 11066
 		private List<IButterflySplinePoint> _PointsCache;
 
-		// Token: 0x040028E6 RID: 10470
+		// Token: 0x04002B3B RID: 11067
 		private bool _PointsInited;
 	}
 }

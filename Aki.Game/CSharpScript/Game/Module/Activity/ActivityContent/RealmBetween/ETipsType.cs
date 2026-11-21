@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006271 RID: 25201
+	// Token: 0x020051EF RID: 20975
 	public enum ETipsType
 	{
-		// Token: 0x0402125B RID: 135771
+		// Token: 0x0401BB8A RID: 113546
 		ExpAdd,
-		// Token: 0x0402125C RID: 135772
+		// Token: 0x0401BB8B RID: 113547
 		LevelUp,
-		// Token: 0x0402125D RID: 135773
+		// Token: 0x0401BB8C RID: 113548
 		LevelUpAndExpAdd
 	}
 }

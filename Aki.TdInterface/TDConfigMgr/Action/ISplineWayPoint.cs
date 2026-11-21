@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EA9 RID: 7849
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020E2 RID: 8418
 	public class ISplineWayPoint
 	{
-		// Token: 0x0600A7E8 RID: 42984 RVA: 0x0017B478 File Offset: 0x00179678
+		// Token: 0x0600B2B8 RID: 45752 RVA: 0x00191418 File Offset: 0x0018F618
 		private ISplineWayPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A7E9 RID: 42985 RVA: 0x0017B4B0 File Offset: 0x001796B0
+		// Token: 0x0600B2B9 RID: 45753 RVA: 0x00191450 File Offset: 0x0018F650
 		public static ISplineWayPoint Create([Nullable(2)] ISplineWayPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7EA RID: 42986 RVA: 0x0017B4C3 File Offset: 0x001796C3
+		// Token: 0x0600B2BA RID: 45754 RVA: 0x00191463 File Offset: 0x0018F663
 		public static ISplineWayPoint CreateFromSetValue([Nullable(2)] ISplineWayPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7EB RID: 42987 RVA: 0x0017B4D6 File Offset: 0x001796D6
+		// Token: 0x0600B2BB RID: 45755 RVA: 0x00191476 File Offset: 0x0018F676
 		public ISplineWayPoint_SetValue ToSetValue()
 		{
 			return new ISplineWayPoint_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700334E RID: 13134
-		// (get) Token: 0x0600A7EC RID: 42988 RVA: 0x0017B4F5 File Offset: 0x001796F5
-		// (set) Token: 0x0600A7ED RID: 42989 RVA: 0x0017B520 File Offset: 0x00179720
+		// Token: 0x17003618 RID: 13848
+		// (get) Token: 0x0600B2BC RID: 45756 RVA: 0x00191495 File Offset: 0x0018F695
+		// (set) Token: 0x0600B2BD RID: 45757 RVA: 0x001914C0 File Offset: 0x0018F6C0
 		public virtual int Spline
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700334F RID: 13135
-		// (get) Token: 0x0600A7EE RID: 42990 RVA: 0x0017B52E File Offset: 0x0017972E
-		// (set) Token: 0x0600A7EF RID: 42991 RVA: 0x0017B559 File Offset: 0x00179759
+		// Token: 0x17003619 RID: 13849
+		// (get) Token: 0x0600B2BE RID: 45758 RVA: 0x001914CE File Offset: 0x0018F6CE
+		// (set) Token: 0x0600B2BF RID: 45759 RVA: 0x001914F9 File Offset: 0x0018F6F9
 		public virtual int PointId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006415 RID: 25621
+		// Token: 0x04006A03 RID: 27139
 		[Nullable(2)]
 		protected ISplineWayPoint FbInstance;
 
-		// Token: 0x04006416 RID: 25622
+		// Token: 0x04006A04 RID: 27140
 		[Nullable(2)]
 		protected ISplineWayPoint_SetValue PocoInterface;
 	}

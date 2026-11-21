@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C6C RID: 3180
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D4B RID: 3403
 	public class IAutoGenSequenceConfig
 	{
-		// Token: 0x060048E2 RID: 18658 RVA: 0x000B6F6D File Offset: 0x000B516D
+		// Token: 0x06004D81 RID: 19841 RVA: 0x000C1771 File Offset: 0x000BF971
 		public static IAutoGenSequenceConfig Create(IAutoGenSequenceConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015C7 RID: 5575
-		// (get) Token: 0x060048E3 RID: 18659 RVA: 0x000B6F8C File Offset: 0x000B518C
+		// Token: 0x170016E6 RID: 5862
+		// (get) Token: 0x06004D82 RID: 19842 RVA: 0x000C1790 File Offset: 0x000BF990
 		[Nullable(2)]
 		public virtual string SequencePath
 		{
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015C8 RID: 5576
-		// (get) Token: 0x060048E4 RID: 18660 RVA: 0x000B6F99 File Offset: 0x000B5199
+		// Token: 0x170016E7 RID: 5863
+		// (get) Token: 0x06004D83 RID: 19843 RVA: 0x000C179D File Offset: 0x000BF99D
 		public virtual PlayLevelSequence SequenceConfig
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015C9 RID: 5577
-		// (get) Token: 0x060048E5 RID: 18661 RVA: 0x000B6FCD File Offset: 0x000B51CD
+		// Token: 0x170016E8 RID: 5864
+		// (get) Token: 0x06004D84 RID: 19844 RVA: 0x000C17D1 File Offset: 0x000BF9D1
 		public virtual int Count
 		{
 			get
@@ -61,14 +59,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400298D RID: 10637
+		// Token: 0x04002BFA RID: 11258
 		private IAutoGenSequenceConfig Instance;
 
-		// Token: 0x0400298E RID: 10638
+		// Token: 0x04002BFB RID: 11259
 		[Nullable(2)]
 		private PlayLevelSequence _SequenceConfigCache;
 
-		// Token: 0x0400298F RID: 10639
+		// Token: 0x04002BFC RID: 11260
 		private bool _SequenceConfigInited;
 	}
 }

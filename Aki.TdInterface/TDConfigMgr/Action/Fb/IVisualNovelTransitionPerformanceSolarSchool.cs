@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002589 RID: 9609
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002837 RID: 10295
 	public class IVisualNovelTransitionPerformanceSolarSchool : IVisualNovelTransitionPerformanceConfigBase
 	{
-		// Token: 0x0600D7A6 RID: 55206 RVA: 0x00201CB2 File Offset: 0x001FFEB2
+		// Token: 0x0600E520 RID: 58656 RVA: 0x0021D9E6 File Offset: 0x0021BBE6
 		public static IVisualNovelTransitionPerformanceSolarSchool Create(IVisualNovelTransitionPerformanceSolarSchool? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E56 RID: 15958
-		// (get) Token: 0x0600D7A7 RID: 55207 RVA: 0x00201CD1 File Offset: 0x001FFED1
+		// Token: 0x17004160 RID: 16736
+		// (get) Token: 0x0600E521 RID: 58657 RVA: 0x0021DA05 File Offset: 0x0021BC05
 		public override EVisualNovelSubType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E57 RID: 15959
-		// (get) Token: 0x0600D7A8 RID: 55208 RVA: 0x00201CDE File Offset: 0x001FFEDE
+		// Token: 0x17004161 RID: 16737
+		// (get) Token: 0x0600E522 RID: 58658 RVA: 0x0021DA12 File Offset: 0x0021BC12
 		public virtual IVisualNovelTransitionConfigBase TransitionConfig
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007751 RID: 30545
+		// Token: 0x04007DB7 RID: 32183
 		private IVisualNovelTransitionPerformanceSolarSchool Instance;
 
-		// Token: 0x04007752 RID: 30546
+		// Token: 0x04007DB8 RID: 32184
 		private IVisualNovelTransitionConfigBase _TransitionConfigCache;
 
-		// Token: 0x04007753 RID: 30547
+		// Token: 0x04007DB9 RID: 32185
 		private bool _TransitionConfigInited;
 	}
 }

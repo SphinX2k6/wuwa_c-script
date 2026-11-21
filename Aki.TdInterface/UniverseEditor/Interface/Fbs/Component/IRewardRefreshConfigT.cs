@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200586B RID: 22635
+	// Token: 0x02005E78 RID: 24184
 	public class IRewardRefreshConfigT
 	{
-		// Token: 0x1700A94F RID: 43343
-		// (get) Token: 0x0602623C RID: 156220 RVA: 0x005425E3 File Offset: 0x005407E3
-		// (set) Token: 0x0602623D RID: 156221 RVA: 0x005425EB File Offset: 0x005407EB
+		// Token: 0x1700B27F RID: 45695
+		// (get) Token: 0x0602879E RID: 165790 RVA: 0x0058912F File Offset: 0x0058732F
+		// (set) Token: 0x0602879F RID: 165791 RVA: 0x00589137 File Offset: 0x00587337
 		public TRefreshConditionUnion RefreshCondition { get; set; }
 
-		// Token: 0x1700A950 RID: 43344
-		// (get) Token: 0x0602623E RID: 156222 RVA: 0x005425F4 File Offset: 0x005407F4
-		// (set) Token: 0x0602623F RID: 156223 RVA: 0x005425FC File Offset: 0x005407FC
+		// Token: 0x1700B280 RID: 45696
+		// (get) Token: 0x060287A0 RID: 165792 RVA: 0x00589140 File Offset: 0x00587340
+		// (set) Token: 0x060287A1 RID: 165793 RVA: 0x00589148 File Offset: 0x00587348
 		public TRefreshRuleUnion RefreshType { get; set; }
 
-		// Token: 0x1700A951 RID: 43345
-		// (get) Token: 0x06026240 RID: 156224 RVA: 0x00542605 File Offset: 0x00540805
-		// (set) Token: 0x06026241 RID: 156225 RVA: 0x0054260D File Offset: 0x0054080D
+		// Token: 0x1700B281 RID: 45697
+		// (get) Token: 0x060287A2 RID: 165794 RVA: 0x00589151 File Offset: 0x00587351
+		// (set) Token: 0x060287A3 RID: 165795 RVA: 0x00589159 File Offset: 0x00587359
 		public int MaxCount { get; set; }
 
-		// Token: 0x1700A952 RID: 43346
-		// (get) Token: 0x06026242 RID: 156226 RVA: 0x00542616 File Offset: 0x00540816
-		// (set) Token: 0x06026243 RID: 156227 RVA: 0x0054261E File Offset: 0x0054081E
+		// Token: 0x1700B282 RID: 45698
+		// (get) Token: 0x060287A4 RID: 165796 RVA: 0x00589162 File Offset: 0x00587362
+		// (set) Token: 0x060287A5 RID: 165797 RVA: 0x0058916A File Offset: 0x0058736A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026244 RID: 156228 RVA: 0x00542627 File Offset: 0x00540827
+		// Token: 0x060287A6 RID: 165798 RVA: 0x00589173 File Offset: 0x00587373
 		public IRewardRefreshConfigT()
 		{
 			this.RefreshCondition = null;

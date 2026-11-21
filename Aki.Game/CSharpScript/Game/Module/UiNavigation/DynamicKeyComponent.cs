@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200495D RID: 18781
+	// Token: 0x020038D5 RID: 14549
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DynamicKeyComponent : UiPanelBase
 	{
-		// Token: 0x06031011 RID: 200721 RVA: 0x00B60FDE File Offset: 0x00B5F1DE
+		// Token: 0x06025B41 RID: 154433 RVA: 0x00A9BEBE File Offset: 0x00A9A0BE
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			};
 		}
 
-		// Token: 0x06031012 RID: 200722 RVA: 0x00B61018 File Offset: 0x00B5F218
+		// Token: 0x06025B42 RID: 154434 RVA: 0x00A9BEF8 File Offset: 0x00A9A0F8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DynamicKeyComponent.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -34,19 +34,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031013 RID: 200723 RVA: 0x00B6105B File Offset: 0x00B5F25B
+		// Token: 0x06025B43 RID: 154435 RVA: 0x00A9BF3B File Offset: 0x00A9A13B
 		public void SetKeyName(string keyName)
 		{
 			this.KeyName = keyName;
 		}
 
-		// Token: 0x06031014 RID: 200724 RVA: 0x00B61064 File Offset: 0x00B5F264
+		// Token: 0x06025B44 RID: 154436 RVA: 0x00A9BF44 File Offset: 0x00A9A144
 		public void SetIsNeedLongPress(bool isLongPress)
 		{
 			this.IsLongPress = isLongPress;
 		}
 
-		// Token: 0x06031015 RID: 200725 RVA: 0x00B6106D File Offset: 0x00B5F26D
+		// Token: 0x06025B45 RID: 154437 RVA: 0x00A9BF4D File Offset: 0x00A9A14D
 		public void RefreshKeyIcon(string keyName)
 		{
 			KeyBaseComponent curComponent = this.CurComponent;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			curComponent.RefreshKeyIcon(keyName);
 		}
 
-		// Token: 0x06031016 RID: 200726 RVA: 0x00B61080 File Offset: 0x00B5F280
+		// Token: 0x06025B46 RID: 154438 RVA: 0x00A9BF60 File Offset: 0x00A9A160
 		public void RefreshNameText(string textId)
 		{
 			KeyBaseComponent curComponent = this.CurComponent;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			curComponent.RefreshNameText(textId);
 		}
 
-		// Token: 0x06031017 RID: 200727 RVA: 0x00B61093 File Offset: 0x00B5F293
+		// Token: 0x06025B47 RID: 154439 RVA: 0x00A9BF73 File Offset: 0x00A9A173
 		public void RefreshPcAndGamepad()
 		{
 			KeyBaseComponent curComponent = this.CurComponent;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			curComponent.RefreshPcAndGamepad();
 		}
 
-		// Token: 0x06031018 RID: 200728 RVA: 0x00B610A5 File Offset: 0x00B5F2A5
+		// Token: 0x06025B48 RID: 154440 RVA: 0x00A9BF85 File Offset: 0x00A9A185
 		public void SetNameText(string keyText)
 		{
 			KeyBaseComponent curComponent = this.CurComponent;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			curComponent.SetNameText(keyText);
 		}
 
-		// Token: 0x06031019 RID: 200729 RVA: 0x00B610B8 File Offset: 0x00B5F2B8
+		// Token: 0x06025B49 RID: 154441 RVA: 0x00A9BF98 File Offset: 0x00A9A198
 		public void SetLongPressState(float percent)
 		{
 			KeyBaseComponent curComponent = this.CurComponent;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			curComponent.SetLongPressState(percent);
 		}
 
-		// Token: 0x0603101A RID: 200730 RVA: 0x00B610CB File Offset: 0x00B5F2CB
+		// Token: 0x06025B4A RID: 154442 RVA: 0x00A9BFAB File Offset: 0x00A9A1AB
 		public void SetLongPressItemAlpha(float alpha)
 		{
 			KeyBaseComponent curComponent = this.CurComponent;
@@ -112,24 +112,24 @@ namespace CSharpScript.Game.Module.UiNavigation
 			curComponent.SetLongPressItemAlpha(alpha);
 		}
 
-		// Token: 0x0401A486 RID: 107654
+		// Token: 0x04014CF9 RID: 85241
 		private string KeyName = "";
 
-		// Token: 0x0401A487 RID: 107655
+		// Token: 0x04014CFA RID: 85242
 		private bool IsLongPress;
 
-		// Token: 0x0401A488 RID: 107656
+		// Token: 0x04014CFB RID: 85243
 		[Nullable(2)]
 		protected KeyBaseComponent CurComponent;
 
-		// Token: 0x0200ABAE RID: 43950
+		// Token: 0x020095BD RID: 38333
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04034301 RID: 213761
+			// Token: 0x0402EC84 RID: 191620
 			public const int Text = 0;
 
-			// Token: 0x04034302 RID: 213762
+			// Token: 0x0402EC85 RID: 191621
 			public const int KeyItem = 1;
 		}
 	}

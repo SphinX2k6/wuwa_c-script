@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020007F6 RID: 2038
+	// Token: 0x020007E2 RID: 2018
 	public sealed class InfrV2FirePb : IMessage<InfrV2FirePb>, IMessage, IEquatable<InfrV2FirePb>, IDeepCloneable<InfrV2FirePb>, IBufferMessage
 	{
-		// Token: 0x0600B6A6 RID: 46758 RVA: 0x001B3D64 File Offset: 0x001B1F64
+		// Token: 0x0600B550 RID: 46416 RVA: 0x001B132C File Offset: 0x001AF52C
 		[NullableContext(1)]
 		public static InfrV2FirePb Create()
 		{
 			return new InfrV2FirePb();
 		}
 
-		// Token: 0x170024D3 RID: 9427
-		// (get) Token: 0x0600B6A7 RID: 46759 RVA: 0x001B3D6B File Offset: 0x001B1F6B
+		// Token: 0x17002489 RID: 9353
+		// (get) Token: 0x0600B551 RID: 46417 RVA: 0x001B1333 File Offset: 0x001AF533
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170024D4 RID: 9428
-		// (get) Token: 0x0600B6A8 RID: 46760 RVA: 0x001B3D6E File Offset: 0x001B1F6E
+		// Token: 0x1700248A RID: 9354
+		// (get) Token: 0x0600B552 RID: 46418 RVA: 0x001B1336 File Offset: 0x001AF536
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B6A9 RID: 46761 RVA: 0x001B3D75 File Offset: 0x001B1F75
+		// Token: 0x0600B553 RID: 46419 RVA: 0x001B133D File Offset: 0x001AF53D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InfrV2FirePb()
 		{
 		}
 
-		// Token: 0x0600B6AA RID: 46762 RVA: 0x001B3D80 File Offset: 0x001B1F80
+		// Token: 0x0600B554 RID: 46420 RVA: 0x001B1348 File Offset: 0x001AF548
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InfrV2FirePb(InfrV2FirePb other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600B6AB RID: 46763 RVA: 0x001B3DD4 File Offset: 0x001B1FD4
+		// Token: 0x0600B555 RID: 46421 RVA: 0x001B139C File Offset: 0x001AF59C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InfrV2FirePb Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new InfrV2FirePb(this);
 		}
 
-		// Token: 0x170024D5 RID: 9429
-		// (get) Token: 0x0600B6AC RID: 46764 RVA: 0x001B3DDC File Offset: 0x001B1FDC
-		// (set) Token: 0x0600B6AD RID: 46765 RVA: 0x001B3DE4 File Offset: 0x001B1FE4
+		// Token: 0x1700248B RID: 9355
+		// (get) Token: 0x0600B556 RID: 46422 RVA: 0x001B13A4 File Offset: 0x001AF5A4
+		// (set) Token: 0x0600B557 RID: 46423 RVA: 0x001B13AC File Offset: 0x001AF5AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long FireExp
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170024D6 RID: 9430
-		// (get) Token: 0x0600B6AE RID: 46766 RVA: 0x001B3DED File Offset: 0x001B1FED
-		// (set) Token: 0x0600B6AF RID: 46767 RVA: 0x001B3DF5 File Offset: 0x001B1FF5
+		// Token: 0x1700248C RID: 9356
+		// (get) Token: 0x0600B558 RID: 46424 RVA: 0x001B13B5 File Offset: 0x001AF5B5
+		// (set) Token: 0x0600B559 RID: 46425 RVA: 0x001B13BD File Offset: 0x001AF5BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FireLevel
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170024D7 RID: 9431
-		// (get) Token: 0x0600B6B0 RID: 46768 RVA: 0x001B3DFE File Offset: 0x001B1FFE
-		// (set) Token: 0x0600B6B1 RID: 46769 RVA: 0x001B3E06 File Offset: 0x001B2006
+		// Token: 0x1700248D RID: 9357
+		// (get) Token: 0x0600B55A RID: 46426 RVA: 0x001B13C6 File Offset: 0x001AF5C6
+		// (set) Token: 0x0600B55B RID: 46427 RVA: 0x001B13CE File Offset: 0x001AF5CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long FireLevelReachTime
@@ -119,9 +119,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170024D8 RID: 9432
-		// (get) Token: 0x0600B6B2 RID: 46770 RVA: 0x001B3E0F File Offset: 0x001B200F
-		// (set) Token: 0x0600B6B3 RID: 46771 RVA: 0x001B3E17 File Offset: 0x001B2017
+		// Token: 0x1700248E RID: 9358
+		// (get) Token: 0x0600B55C RID: 46428 RVA: 0x001B13D7 File Offset: 0x001AF5D7
+		// (set) Token: 0x0600B55D RID: 46429 RVA: 0x001B13DF File Offset: 0x001AF5DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InfrV2StatusPb FireStatus
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B6B4 RID: 46772 RVA: 0x001B3E20 File Offset: 0x001B2020
+		// Token: 0x0600B55E RID: 46430 RVA: 0x001B13E8 File Offset: 0x001AF5E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return this.Equals(other as InfrV2FirePb);
 		}
 
-		// Token: 0x0600B6B5 RID: 46773 RVA: 0x001B3E30 File Offset: 0x001B2030
+		// Token: 0x0600B55F RID: 46431 RVA: 0x001B13F8 File Offset: 0x001AF5F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(InfrV2FirePb other)
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.FireExp == other.FireExp && this.FireLevel == other.FireLevel && this.FireLevelReachTime == other.FireLevelReachTime && this.FireStatus == other.FireStatus && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600B6B6 RID: 46774 RVA: 0x001B3E9C File Offset: 0x001B209C
+		// Token: 0x0600B560 RID: 46432 RVA: 0x001B1464 File Offset: 0x001AF664
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B6B7 RID: 46775 RVA: 0x001B3F2C File Offset: 0x001B212C
+		// Token: 0x0600B561 RID: 46433 RVA: 0x001B14F4 File Offset: 0x001AF6F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600B6B8 RID: 46776 RVA: 0x001B3F39 File Offset: 0x001B2139
+		// Token: 0x0600B562 RID: 46434 RVA: 0x001B1501 File Offset: 0x001AF701
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600B6B9 RID: 46777 RVA: 0x001B3F44 File Offset: 0x001B2144
+		// Token: 0x0600B563 RID: 46435 RVA: 0x001B150C File Offset: 0x001AF70C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B6BA RID: 46778 RVA: 0x001B3FD4 File Offset: 0x001B21D4
+		// Token: 0x0600B564 RID: 46436 RVA: 0x001B159C File Offset: 0x001AF79C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -257,7 +257,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B6BB RID: 46779 RVA: 0x001B405C File Offset: 0x001B225C
+		// Token: 0x0600B565 RID: 46437 RVA: 0x001B1624 File Offset: 0x001AF824
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(InfrV2FirePb other)
@@ -285,7 +285,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600B6BC RID: 46780 RVA: 0x001B40D4 File Offset: 0x001B22D4
+		// Token: 0x0600B566 RID: 46438 RVA: 0x001B169C File Offset: 0x001AF89C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -293,7 +293,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600B6BD RID: 46781 RVA: 0x001B40E0 File Offset: 0x001B22E0
+		// Token: 0x0600B567 RID: 46439 RVA: 0x001B16A8 File Offset: 0x001AF8A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -335,31 +335,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040050D5 RID: 20693
+		// Token: 0x040050CE RID: 20686
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040050D6 RID: 20694
+		// Token: 0x040050CF RID: 20687
 		public const int FireExpFieldNumber = 1;
 
-		// Token: 0x040050D7 RID: 20695
+		// Token: 0x040050D0 RID: 20688
 		private long fireExp_;
 
-		// Token: 0x040050D8 RID: 20696
+		// Token: 0x040050D1 RID: 20689
 		public const int FireLevelFieldNumber = 2;
 
-		// Token: 0x040050D9 RID: 20697
+		// Token: 0x040050D2 RID: 20690
 		private int fireLevel_;
 
-		// Token: 0x040050DA RID: 20698
+		// Token: 0x040050D3 RID: 20691
 		public const int FireLevelReachTimeFieldNumber = 3;
 
-		// Token: 0x040050DB RID: 20699
+		// Token: 0x040050D4 RID: 20692
 		private long fireLevelReachTime_;
 
-		// Token: 0x040050DC RID: 20700
+		// Token: 0x040050D5 RID: 20693
 		public const int FireStatusFieldNumber = 4;
 
-		// Token: 0x040050DD RID: 20701
+		// Token: 0x040050D6 RID: 20694
 		private InfrV2StatusPb fireStatus_;
 	}
 }

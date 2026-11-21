@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000121 RID: 289
+	// Token: 0x02000130 RID: 304
 	public class ConfigBubbleDataByActionGuid : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060006C7 RID: 1735 RVA: 0x0007FFA0 File Offset: 0x0007E1A0
+		// Token: 0x06000721 RID: 1825 RVA: 0x00085904 File Offset: 0x00083B04
 		static ConfigBubbleDataByActionGuid()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBubbleDataByActionGuid.CreateStaticDefaultValue), new Action(ConfigBubbleDataByActionGuid.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060006C8 RID: 1736 RVA: 0x0007FFC0 File Offset: 0x0007E1C0
+		// Token: 0x06000722 RID: 1826 RVA: 0x00085924 File Offset: 0x00083B24
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBubbleDataByActionGuid.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060006C9 RID: 1737 RVA: 0x0008003F File Offset: 0x0007E23F
+		// Token: 0x06000723 RID: 1827 RVA: 0x000859A3 File Offset: 0x00083BA3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBubbleDataByActionGuid.LogPair = null;
 			ConfigBubbleDataByActionGuid.HandleId = 0;
 		}
 
-		// Token: 0x060006CA RID: 1738 RVA: 0x0008004D File Offset: 0x0007E24D
+		// Token: 0x06000724 RID: 1828 RVA: 0x000859B1 File Offset: 0x00083BB1
 		public static void Init()
 		{
 			ConfigBubbleDataByActionGuid.HandleId = ConfigCommon.InitDataStatement(ConfigBubbleDataByActionGuid.HandleId, "db_bubbledata.db", "select BinData from `BubbleData` where ActionGuid=?");
 		}
 
-		// Token: 0x060006CB RID: 1739 RVA: 0x00080068 File Offset: 0x0007E268
+		// Token: 0x06000725 RID: 1829 RVA: 0x000859CC File Offset: 0x00083BCC
 		public static BubbleData? GetConfig(string p0ActionGuid, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBubbleDataByActionGuid.HandleId, ConfigBubbleDataByActionGuid.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new BubbleData?(rootAsBubbleData);
 		}
 
-		// Token: 0x040007CB RID: 1995
+		// Token: 0x04000834 RID: 2100
 		private const string DB = "db_bubbledata.db";
 
-		// Token: 0x040007CC RID: 1996
+		// Token: 0x04000835 RID: 2101
 		private const string FILE = "UniverseEditor/BubbleConfig/BubbleConfig.csv";
 
-		// Token: 0x040007CD RID: 1997
+		// Token: 0x04000836 RID: 2102
 		private const string TABLE = "BubbleData";
 
-		// Token: 0x040007CE RID: 1998
+		// Token: 0x04000837 RID: 2103
 		private const string COMMAND = "select BinData from `BubbleData` where ActionGuid=?";
 
-		// Token: 0x040007CF RID: 1999
+		// Token: 0x04000838 RID: 2104
 		private const string KEY_PREFIX = "BubbleDataByActionGuid";
 
-		// Token: 0x040007D0 RID: 2000
+		// Token: 0x04000839 RID: 2105
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040007D1 RID: 2001
+		// Token: 0x0400083A RID: 2106
 		private static int HandleId;
 	}
 }

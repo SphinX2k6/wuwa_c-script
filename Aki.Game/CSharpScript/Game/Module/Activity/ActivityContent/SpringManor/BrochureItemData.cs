@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006061 RID: 24673
+	// Token: 0x02004FDF RID: 20447
 	public class BrochureItemData
 	{
-		// Token: 0x040209E0 RID: 133600
+		// Token: 0x0401B30D RID: 111373
 		public int ConfigId;
 
-		// Token: 0x040209E1 RID: 133601
+		// Token: 0x0401B30E RID: 111374
 		public EBrochureState State;
 
-		// Token: 0x040209E2 RID: 133602
+		// Token: 0x0401B30F RID: 111375
 		public int Index;
 	}
 }

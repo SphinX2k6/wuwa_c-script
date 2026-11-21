@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063DB RID: 25563
+	// Token: 0x02005359 RID: 21337
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingBuffOverview : UiPanelBase
 	{
-		// Token: 0x060404BB RID: 263355 RVA: 0x00F8D104 File Offset: 0x00F8B304
+		// Token: 0x0603517C RID: 217468 RVA: 0x00ED409C File Offset: 0x00ED229C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060404BC RID: 263356 RVA: 0x00F8D1F4 File Offset: 0x00F8B3F4
+		// Token: 0x0603517D RID: 217469 RVA: 0x00ED418C File Offset: 0x00ED238C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MowingBuffOverview.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060404BD RID: 263357 RVA: 0x00F8D238 File Offset: 0x00F8B438
+		// Token: 0x0603517E RID: 217470 RVA: 0x00ED41D0 File Offset: 0x00ED23D0
 		private UniTask CreateBuffIntroduceAsync()
 		{
 			MowingBuffOverview.<CreateBuffIntroduceAsync>d__7 <CreateBuffIntroduceAsync>d__;
@@ -59,19 +59,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <CreateBuffIntroduceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060404BE RID: 263358 RVA: 0x00F8D27B File Offset: 0x00F8B47B
+		// Token: 0x0603517F RID: 217471 RVA: 0x00ED4213 File Offset: 0x00ED2413
 		private void CreateFilterEntrance()
 		{
 			base.GetItem(2).SetUIActive(false);
 		}
 
-		// Token: 0x060404BF RID: 263359 RVA: 0x00F8D28A File Offset: 0x00F8B48A
+		// Token: 0x06035180 RID: 217472 RVA: 0x00ED4222 File Offset: 0x00ED2422
 		private void CreateBuffContent()
 		{
 			this.BuffContent = new GenericLayout<MowingBuffGridGroup, IMowingBuffGridGroupData>(base.GetVerticalLayout(3), new Func<MowingBuffGridGroup>(this.BuildGridGroup), null, true, true);
 		}
 
-		// Token: 0x060404C0 RID: 263360 RVA: 0x00F8D2B0 File Offset: 0x00F8B4B0
+		// Token: 0x06035181 RID: 217473 RVA: 0x00ED4248 File Offset: 0x00ED2448
 		public UniTask RefreshByCustomDataAsync(IMowingBuffOverviewData data)
 		{
 			MowingBuffOverview.<RefreshByCustomDataAsync>d__10 <RefreshByCustomDataAsync>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <RefreshByCustomDataAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060404C1 RID: 263361 RVA: 0x00F8D2FC File Offset: 0x00F8B4FC
+		// Token: 0x06035182 RID: 217474 RVA: 0x00ED4294 File Offset: 0x00ED2494
 		public UniTask PlayStartSequenceAsync()
 		{
 			MowingBuffOverview.<PlayStartSequenceAsync>d__11 <PlayStartSequenceAsync>d__;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <PlayStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060404C2 RID: 263362 RVA: 0x00F8D340 File Offset: 0x00F8B540
+		// Token: 0x06035183 RID: 217475 RVA: 0x00ED42D8 File Offset: 0x00ED24D8
 		public void PlayUnlockSequenceAsync()
 		{
 			if (this.Data == null)
@@ -113,45 +113,45 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}
 		}
 
-		// Token: 0x060404C3 RID: 263363 RVA: 0x00F8D3E8 File Offset: 0x00F8B5E8
+		// Token: 0x06035184 RID: 217476 RVA: 0x00ED4380 File Offset: 0x00ED2580
 		private MowingBuffGridGroup BuildGridGroup()
 		{
 			return new MowingBuffGridGroup();
 		}
 
-		// Token: 0x0402174D RID: 137037
+		// Token: 0x0401C07C RID: 114812
 		[Nullable(2)]
 		private IMowingBuffOverviewData Data;
 
-		// Token: 0x0402174E RID: 137038
+		// Token: 0x0401C07D RID: 114813
 		private MowingBuffIntroduce BuffIntroduce;
 
-		// Token: 0x0402174F RID: 137039
+		// Token: 0x0401C07E RID: 114814
 		private GenericLayout<MowingBuffGridGroup, IMowingBuffGridGroupData> BuffContent;
 
-		// Token: 0x04021750 RID: 137040
+		// Token: 0x0401C07F RID: 114815
 		private UiSequencePlayer Player;
 
-		// Token: 0x0200C5DD RID: 50653
+		// Token: 0x0200AFC4 RID: 44996
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BBE2 RID: 244706
+			// Token: 0x04036541 RID: 222529
 			public const int IntroduceItem = 0;
 
-			// Token: 0x0403BBE3 RID: 244707
+			// Token: 0x04036542 RID: 222530
 			public const int NonExistRoot = 1;
 
-			// Token: 0x0403BBE4 RID: 244708
+			// Token: 0x04036543 RID: 222531
 			public const int FilterItem = 2;
 
-			// Token: 0x0403BBE5 RID: 244709
+			// Token: 0x04036544 RID: 222532
 			public const int BuffLayout = 3;
 
-			// Token: 0x0403BBE6 RID: 244710
+			// Token: 0x04036545 RID: 222533
 			public const int BuffItem = 4;
 
-			// Token: 0x0403BBE7 RID: 244711
+			// Token: 0x04036546 RID: 222534
 			public const int ExistRoot = 5;
 		}
 	}

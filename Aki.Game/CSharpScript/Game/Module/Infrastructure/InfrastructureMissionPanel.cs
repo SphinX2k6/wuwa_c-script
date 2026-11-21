@@ -17,7 +17,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005916 RID: 22806
+	// Token: 0x020048EF RID: 18671
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 	})]
 	public class InfrastructureMissionPanel : GridProxyAbstract<IInfrastructureMissionPanelData>
 	{
-		// Token: 0x06039EA0 RID: 237216 RVA: 0x00DC21D8 File Offset: 0x00DC03D8
+		// Token: 0x0602EDC3 RID: 191939 RVA: 0x00D114D8 File Offset: 0x00D0F6D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -67,14 +67,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039EA1 RID: 237217 RVA: 0x00DC23CC File Offset: 0x00DC05CC
+		// Token: 0x0602EDC4 RID: 191940 RVA: 0x00D116CC File Offset: 0x00D0F8CC
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			base.GetItem(11).SetUIActive(false);
 		}
 
-		// Token: 0x06039EA2 RID: 237218 RVA: 0x00DC23F0 File Offset: 0x00DC05F0
+		// Token: 0x0602EDC5 RID: 191941 RVA: 0x00D116F0 File Offset: 0x00D0F8F0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrastructureMissionPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -85,13 +85,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039EA3 RID: 237219 RVA: 0x00DC2433 File Offset: 0x00DC0633
+		// Token: 0x0602EDC6 RID: 191942 RVA: 0x00D11733 File Offset: 0x00D0F933
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.QuestViewItem, base.GetItem(6), 0);
 		}
 
-		// Token: 0x06039EA4 RID: 237220 RVA: 0x00DC244C File Offset: 0x00DC064C
+		// Token: 0x0602EDC7 RID: 191943 RVA: 0x00D1174C File Offset: 0x00D0F94C
 		public override void Refresh(IInfrastructureMissionPanelData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06039EA5 RID: 237221 RVA: 0x00DC24A8 File Offset: 0x00DC06A8
+		// Token: 0x0602EDC8 RID: 191944 RVA: 0x00D117A8 File Offset: 0x00D0F9A8
 		private void RefreshQuestPanel()
 		{
 			base.GetText(0).ShowTextNew("BuildRoadNet_CoreTask");
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.SetSpriteByPath("/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity30/ActivityInfrastructure/Main/SP_IconActivityInfrastructure8.SP_IconActivityInfrastructure8", base.GetSprite(8), true, null, null);
 		}
 
-		// Token: 0x06039EA6 RID: 237222 RVA: 0x00DC259C File Offset: 0x00DC079C
+		// Token: 0x0602EDC9 RID: 191945 RVA: 0x00D1189C File Offset: 0x00D0FA9C
 		private void RefreshBuildPanel()
 		{
 			InfrastructureModel instance = InfrastructureModel.Instance;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.GetText(3).ShowTextNew(roadConfigById.Value.QuestDescription);
 		}
 
-		// Token: 0x06039EA7 RID: 237223 RVA: 0x00DC279C File Offset: 0x00DC099C
+		// Token: 0x0602EDCA RID: 191946 RVA: 0x00D11A9C File Offset: 0x00D0FC9C
 		private void OnGotoClick()
 		{
 			IInfrastructureMissionPanelData data = this.Data;
@@ -224,60 +224,60 @@ namespace CSharpScript.Game.Module.Infrastructure
 			SkipTaskManager.RunByConfigId(roadConfigById.Value.JumpId, null);
 		}
 
-		// Token: 0x06039EA8 RID: 237224 RVA: 0x00DC290C File Offset: 0x00DC0B0C
+		// Token: 0x0602EDCB RID: 191947 RVA: 0x00D11C0C File Offset: 0x00D0FE0C
 		public void PlayFocusSequence()
 		{
 			base.GetItem(11).SetUIActive(true);
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Update", false, null, false);
 		}
 
-		// Token: 0x0401E333 RID: 123699
+		// Token: 0x04018DD0 RID: 101840
 		private IInfrastructureMissionPanelData Data;
 
-		// Token: 0x0401E334 RID: 123700
+		// Token: 0x04018DD1 RID: 101841
 		private GenericLayout<InfrastructureMissionItem, InfrastructureMissionItemData> MissionItemLayout;
 
-		// Token: 0x0401E335 RID: 123701
+		// Token: 0x04018DD2 RID: 101842
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200BB91 RID: 48017
+		// Token: 0x0200A5A1 RID: 42401
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040389EE RID: 231918
+			// Token: 0x040333D6 RID: 209878
 			public const int TextName = 0;
 
-			// Token: 0x040389EF RID: 231919
+			// Token: 0x040333D7 RID: 209879
 			public const int BtnGoto = 1;
 
-			// Token: 0x040389F0 RID: 231920
+			// Token: 0x040333D8 RID: 209880
 			public const int PanelVertical = 2;
 
-			// Token: 0x040389F1 RID: 231921
+			// Token: 0x040333D9 RID: 209881
 			public const int TextMission = 3;
 
-			// Token: 0x040389F2 RID: 231922
+			// Token: 0x040333DA RID: 209882
 			public const int PanelVerticalMissions = 4;
 
-			// Token: 0x040389F3 RID: 231923
+			// Token: 0x040333DB RID: 209883
 			public const int Mission = 5;
 
-			// Token: 0x040389F4 RID: 231924
+			// Token: 0x040333DC RID: 209884
 			public const int RedDot = 6;
 
-			// Token: 0x040389F5 RID: 231925
+			// Token: 0x040333DD RID: 209885
 			public const int SpriteIcon = 7;
 
-			// Token: 0x040389F6 RID: 231926
+			// Token: 0x040333DE RID: 209886
 			public const int SpriteTitleIcon = 8;
 
-			// Token: 0x040389F7 RID: 231927
+			// Token: 0x040333DF RID: 209887
 			public const int TextDes = 9;
 
-			// Token: 0x040389F8 RID: 231928
+			// Token: 0x040333E0 RID: 209888
 			public const int PanelColorMask = 10;
 
-			// Token: 0x040389F9 RID: 231929
+			// Token: 0x040333E1 RID: 209889
 			public const int PanelAnim = 11;
 		}
 	}

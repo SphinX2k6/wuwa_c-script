@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006723 RID: 26403
+	// Token: 0x02005673 RID: 22131
 	public class ModifyDropPoolTimeIntervalCommand : IDropCatchCommand
 	{
-		// Token: 0x06041EA4 RID: 269988 RVA: 0x00FFCCA4 File Offset: 0x00FFAEA4
+		// Token: 0x060369F0 RID: 223728 RVA: 0x00F3E070 File Offset: 0x00F3C270
 		[NullableContext(1)]
 		public void Execute(ICommandContext context, [Nullable(2)] object @params)
 		{

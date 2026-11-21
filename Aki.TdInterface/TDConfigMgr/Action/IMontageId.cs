@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C06 RID: 7174
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DF5 RID: 7669
 	public class IMontageId
 	{
-		// Token: 0x060099C1 RID: 39361 RVA: 0x00161D4C File Offset: 0x0015FF4C
+		// Token: 0x0600A2F1 RID: 41713 RVA: 0x00174C98 File Offset: 0x00172E98
 		private IMontageId_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060099C2 RID: 39362 RVA: 0x00161D84 File Offset: 0x0015FF84
+		// Token: 0x0600A2F2 RID: 41714 RVA: 0x00174CD0 File Offset: 0x00172ED0
 		public static IMontageId Create([Nullable(2)] IMontageId instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060099C3 RID: 39363 RVA: 0x00161D97 File Offset: 0x0015FF97
+		// Token: 0x0600A2F3 RID: 41715 RVA: 0x00174CE3 File Offset: 0x00172EE3
 		public static IMontageId CreateFromSetValue([Nullable(2)] IMontageId_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060099C4 RID: 39364 RVA: 0x00161DAA File Offset: 0x0015FFAA
+		// Token: 0x0600A2F4 RID: 41716 RVA: 0x00174CF6 File Offset: 0x00172EF6
 		public IMontageId_SetValue ToSetValue()
 		{
 			return new IMontageId_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700302E RID: 12334
-		// (get) Token: 0x060099C5 RID: 39365 RVA: 0x00161DC9 File Offset: 0x0015FFC9
-		// (set) Token: 0x060099C6 RID: 39366 RVA: 0x00161DF4 File Offset: 0x0015FFF4
+		// Token: 0x17003297 RID: 12951
+		// (get) Token: 0x0600A2F5 RID: 41717 RVA: 0x00174D15 File Offset: 0x00172F15
+		// (set) Token: 0x0600A2F6 RID: 41718 RVA: 0x00174D40 File Offset: 0x00172F40
 		public virtual int MontageId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700302F RID: 12335
-		// (get) Token: 0x060099C7 RID: 39367 RVA: 0x00161E04 File Offset: 0x00160004
-		// (set) Token: 0x060099C8 RID: 39368 RVA: 0x00161E3E File Offset: 0x0016003E
+		// Token: 0x17003298 RID: 12952
+		// (get) Token: 0x0600A2F7 RID: 41719 RVA: 0x00174D50 File Offset: 0x00172F50
+		// (set) Token: 0x0600A2F8 RID: 41720 RVA: 0x00174D8A File Offset: 0x00172F8A
 		public virtual bool? IsAbp
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D97 RID: 23959
+		// Token: 0x040062BE RID: 25278
 		[Nullable(2)]
 		protected IMontageId FbInstance;
 
-		// Token: 0x04005D98 RID: 23960
+		// Token: 0x040062BF RID: 25279
 		[Nullable(2)]
 		protected IMontageId_SetValue PocoInterface;
 	}

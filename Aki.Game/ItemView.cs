@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001FD3 RID: 8147
+// Token: 0x020014A6 RID: 5286
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ItemView : GridProxyAbstract<global::ItemViewData>
 {
-	// Token: 0x0600FF3F RID: 65343 RVA: 0x003E25E0 File Offset: 0x003E07E0
+	// Token: 0x0600D3A7 RID: 54183 RVA: 0x003EEBB8 File Offset: 0x003ECDB8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 19;
@@ -70,13 +70,13 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FF40 RID: 65344 RVA: 0x003E28C2 File Offset: 0x003E0AC2
+	// Token: 0x0600D3A8 RID: 54184 RVA: 0x003EEE9A File Offset: 0x003ED09A
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600FF41 RID: 65345 RVA: 0x003E28D5 File Offset: 0x003E0AD5
+	// Token: 0x0600D3A9 RID: 54185 RVA: 0x003EEEAD File Offset: 0x003ED0AD
 	protected override void OnBeforeDestroy()
 	{
 		this.OnItemButtonClickedCallback = null;
@@ -84,7 +84,7 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0600FF42 RID: 65346 RVA: 0x003E28F0 File Offset: 0x003E0AF0
+	// Token: 0x0600D3AA RID: 54186 RVA: 0x003EEEC8 File Offset: 0x003ED0C8
 	private void OnToggleStateChanged(EToggleState state)
 	{
 		if (this.OnItemButtonClickedCallback != null)
@@ -93,32 +93,32 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		}
 	}
 
-	// Token: 0x0600FF43 RID: 65347 RVA: 0x003E290B File Offset: 0x003E0B0B
+	// Token: 0x0600D3AB RID: 54187 RVA: 0x003EEEE3 File Offset: 0x003ED0E3
 	public void BindOnItemButtonClickedCallback(Action<global::ItemViewData> onItemButtonClicked)
 	{
 		this.OnItemButtonClickedCallback = onItemButtonClicked;
 	}
 
-	// Token: 0x0600FF44 RID: 65348 RVA: 0x003E2914 File Offset: 0x003E0B14
+	// Token: 0x0600D3AC RID: 54188 RVA: 0x003EEEEC File Offset: 0x003ED0EC
 	public override void Refresh(global::ItemViewData data, bool isSelected, int gridIndex)
 	{
 		this.RefreshItemViewByItemData(data);
 		this.SetSelected(isSelected);
 	}
 
-	// Token: 0x0600FF45 RID: 65349 RVA: 0x003E2924 File Offset: 0x003E0B24
+	// Token: 0x0600D3AD RID: 54189 RVA: 0x003EEEFC File Offset: 0x003ED0FC
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true);
 	}
 
-	// Token: 0x0600FF46 RID: 65350 RVA: 0x003E292D File Offset: 0x003E0B2D
+	// Token: 0x0600D3AE RID: 54190 RVA: 0x003EEF05 File Offset: 0x003ED105
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false);
 	}
 
-	// Token: 0x0600FF47 RID: 65351 RVA: 0x003E2938 File Offset: 0x003E0B38
+	// Token: 0x0600D3AF RID: 54191 RVA: 0x003EEF10 File Offset: 0x003ED110
 	public void RefreshItemViewByItemData(global::ItemViewData itemViewData)
 	{
 		this.ItemViewData = itemViewData;
@@ -159,14 +159,14 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		this.SetItemCount(count2);
 	}
 
-	// Token: 0x0600FF48 RID: 65352 RVA: 0x003E2A38 File Offset: 0x003E0C38
+	// Token: 0x0600D3B0 RID: 54192 RVA: 0x003EF010 File Offset: 0x003ED210
 	private void SetItemTexture()
 	{
 		UUITexture texture = base.GetTexture(0);
 		base.SetItemIcon(texture, this.ItemViewData.GetConfigId(), null, null);
 	}
 
-	// Token: 0x0600FF49 RID: 65353 RVA: 0x003E2A6C File Offset: 0x003E0C6C
+	// Token: 0x0600D3B1 RID: 54193 RVA: 0x003EF044 File Offset: 0x003ED244
 	private void SetQualityIcon(int qualityId)
 	{
 		UUISprite sprite = base.GetSprite(2);
@@ -177,7 +177,7 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		base.SetItemQualityIcon(sprite, this.ItemViewData.GetConfigId(), null, CommonDefine.EQualityIconType.BackgroundSprite, null);
 	}
 
-	// Token: 0x0600FF4A RID: 65354 RVA: 0x003E2AA4 File Offset: 0x003E0CA4
+	// Token: 0x0600D3B2 RID: 54194 RVA: 0x003EF07C File Offset: 0x003ED27C
 	public void SetSelected(bool bSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(5);
@@ -189,7 +189,7 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600FF4B RID: 65355 RVA: 0x003E2AD4 File Offset: 0x003E0CD4
+	// Token: 0x0600D3B3 RID: 54195 RVA: 0x003EF0AC File Offset: 0x003ED2AC
 	private void SetLock(bool bLock)
 	{
 		UUISprite sprite = base.GetSprite(6);
@@ -200,13 +200,13 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		sprite.SetUIActive(bLock);
 	}
 
-	// Token: 0x0600FF4C RID: 65356 RVA: 0x003E2AF4 File Offset: 0x003E0CF4
+	// Token: 0x0600D3B4 RID: 54196 RVA: 0x003EF0CC File Offset: 0x003ED2CC
 	public void SetIsNewItem(bool bNewItem)
 	{
 		base.GetSprite(7).SetUIActive(bNewItem);
 	}
 
-	// Token: 0x0600FF4D RID: 65357 RVA: 0x003E2B04 File Offset: 0x003E0D04
+	// Token: 0x0600D3B5 RID: 54197 RVA: 0x003EF0DC File Offset: 0x003ED2DC
 	private void SetItemCount(int count)
 	{
 		UUIText text = base.GetText(4);
@@ -223,7 +223,7 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		}
 	}
 
-	// Token: 0x0600FF4E RID: 65358 RVA: 0x003E2B44 File Offset: 0x003E0D44
+	// Token: 0x0600D3B6 RID: 54198 RVA: 0x003EF11C File Offset: 0x003ED31C
 	private void SetItemLevel(int weaponLevel)
 	{
 		UUIText text = base.GetText(3);
@@ -240,13 +240,13 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		}
 	}
 
-	// Token: 0x0600FF4F RID: 65359 RVA: 0x003E2B91 File Offset: 0x003E0D91
+	// Token: 0x0600D3B7 RID: 54199 RVA: 0x003EF169 File Offset: 0x003ED369
 	public void SetRoleHeadVisible(bool bVisible)
 	{
 		base.GetItem(14).SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600FF50 RID: 65360 RVA: 0x003E2BA4 File Offset: 0x003E0DA4
+	// Token: 0x0600D3B8 RID: 54200 RVA: 0x003EF17C File Offset: 0x003ED37C
 	private void SetCdItemVisible(bool bVisible)
 	{
 		UUIItem item = base.GetItem(16);
@@ -261,7 +261,7 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		}
 	}
 
-	// Token: 0x0600FF51 RID: 65361 RVA: 0x003E2BEC File Offset: 0x003E0DEC
+	// Token: 0x0600D3B9 RID: 54201 RVA: 0x003EF1C4 File Offset: 0x003ED3C4
 	public void RefreshCdTimeDisplay()
 	{
 		int configId = this.ItemViewData.GetConfigId();
@@ -277,7 +277,7 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		this.SetCdItemVisible(true);
 	}
 
-	// Token: 0x0600FF52 RID: 65362 RVA: 0x003E2C40 File Offset: 0x003E0E40
+	// Token: 0x0600D3BA RID: 54202 RVA: 0x003EF218 File Offset: 0x003ED418
 	private void SetCdTimePercent(double remainingCdTime, double totalCdTime)
 	{
 		double num = Math.Ceiling(remainingCdTime);
@@ -288,15 +288,15 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 		text.SetText(num.ToString(), true);
 	}
 
-	// Token: 0x0400762A RID: 30250
+	// Token: 0x04007713 RID: 30483
 	[Nullable(2)]
 	private global::ItemViewData ItemViewData;
 
-	// Token: 0x0400762B RID: 30251
+	// Token: 0x04007714 RID: 30484
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400762C RID: 30252
+	// Token: 0x04007715 RID: 30485
 	[Nullable(new byte[]
 	{
 		2,
@@ -304,47 +304,47 @@ public class ItemView : GridProxyAbstract<global::ItemViewData>
 	})]
 	private Action<global::ItemViewData> OnItemButtonClickedCallback;
 
-	// Token: 0x020085E7 RID: 34279
+	// Token: 0x0200776E RID: 30574
 	[NullableContext(0)]
 	private enum EChildComponentType
 	{
-		// Token: 0x0402B94F RID: 178511
+		// Token: 0x04026C5E RID: 158814
 		ItemTexture,
-		// Token: 0x0402B950 RID: 178512
+		// Token: 0x04026C5F RID: 158815
 		StarUiItem,
-		// Token: 0x0402B951 RID: 178513
+		// Token: 0x04026C60 RID: 158816
 		QualitySprite,
-		// Token: 0x0402B952 RID: 178514
+		// Token: 0x04026C61 RID: 158817
 		LevelText,
-		// Token: 0x0402B953 RID: 178515
+		// Token: 0x04026C62 RID: 158818
 		CountText,
-		// Token: 0x0402B954 RID: 178516
+		// Token: 0x04026C63 RID: 158819
 		ItemToggle,
-		// Token: 0x0402B955 RID: 178517
+		// Token: 0x04026C64 RID: 158820
 		LockSprite,
-		// Token: 0x0402B956 RID: 178518
+		// Token: 0x04026C65 RID: 158821
 		NewFlagSprite,
-		// Token: 0x0402B957 RID: 178519
+		// Token: 0x04026C66 RID: 158822
 		Star1,
-		// Token: 0x0402B958 RID: 178520
+		// Token: 0x04026C67 RID: 158823
 		Star2,
-		// Token: 0x0402B959 RID: 178521
+		// Token: 0x04026C68 RID: 158824
 		Star3,
-		// Token: 0x0402B95A RID: 178522
+		// Token: 0x04026C69 RID: 158825
 		Star4,
-		// Token: 0x0402B95B RID: 178523
+		// Token: 0x04026C6A RID: 158826
 		Star5,
-		// Token: 0x0402B95C RID: 178524
+		// Token: 0x04026C6B RID: 158827
 		Star6,
-		// Token: 0x0402B95D RID: 178525
+		// Token: 0x04026C6C RID: 158828
 		RoleHeadItem,
-		// Token: 0x0402B95E RID: 178526
+		// Token: 0x04026C6D RID: 158829
 		RoleHeadTexture,
-		// Token: 0x0402B95F RID: 178527
+		// Token: 0x04026C6E RID: 158830
 		CdItem,
-		// Token: 0x0402B960 RID: 178528
+		// Token: 0x04026C6F RID: 158831
 		CdSprite,
-		// Token: 0x0402B961 RID: 178529
+		// Token: 0x04026C70 RID: 158832
 		CdText
 	}
 }

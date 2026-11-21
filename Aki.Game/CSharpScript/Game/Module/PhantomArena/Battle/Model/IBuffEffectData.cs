@@ -5,33 +5,33 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 {
-	// Token: 0x02005296 RID: 21142
+	// Token: 0x02004266 RID: 16998
 	[NullableContext(1)]
 	public interface IBuffEffectData
 	{
-		// Token: 0x1700828C RID: 33420
-		// (get) Token: 0x0603612C RID: 221484
-		// (set) Token: 0x0603612D RID: 221485
+		// Token: 0x1700564C RID: 22092
+		// (get) Token: 0x0602B027 RID: 176167
+		// (set) Token: 0x0602B028 RID: 176168
 		int SourceFightId { get; set; }
 
-		// Token: 0x1700828D RID: 33421
-		// (get) Token: 0x0603612E RID: 221486
-		// (set) Token: 0x0603612F RID: 221487
+		// Token: 0x1700564D RID: 22093
+		// (get) Token: 0x0602B029 RID: 176169
+		// (set) Token: 0x0602B02A RID: 176170
 		int SkillId { get; set; }
 
-		// Token: 0x1700828E RID: 33422
-		// (get) Token: 0x06036130 RID: 221488
-		// (set) Token: 0x06036131 RID: 221489
+		// Token: 0x1700564E RID: 22094
+		// (get) Token: 0x0602B02B RID: 176171
+		// (set) Token: 0x0602B02C RID: 176172
 		List<int> SelectFightIdList { get; set; }
 
-		// Token: 0x1700828F RID: 33423
-		// (get) Token: 0x06036132 RID: 221490
-		// (set) Token: 0x06036133 RID: 221491
+		// Token: 0x1700564F RID: 22095
+		// (get) Token: 0x0602B02D RID: 176173
+		// (set) Token: 0x0602B02E RID: 176174
 		PhantomBattleEffectResultInfo Effect { get; set; }
 
-		// Token: 0x17008290 RID: 33424
-		// (get) Token: 0x06036134 RID: 221492
-		// (set) Token: 0x06036135 RID: 221493
+		// Token: 0x17005650 RID: 22096
+		// (get) Token: 0x0602B02F RID: 176175
+		// (set) Token: 0x0602B030 RID: 176176
 		ENotifyMessageId? NotifyId { get; set; }
 	}
 }

@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003209 RID: 12809
+// Token: 0x02002778 RID: 10104
 [NullableContext(1)]
 [Nullable(0)]
 public class InterestActionLookAt : InterestActionBase
 {
-	// Token: 0x17002636 RID: 9782
-	// (get) Token: 0x0601BA29 RID: 113193 RVA: 0x00797B70 File Offset: 0x00795D70
+	// Token: 0x17002877 RID: 10359
+	// (get) Token: 0x060195AE RID: 103854 RVA: 0x007C02CF File Offset: 0x007BE4CF
 	public override EInterestActionType Type
 	{
 		get
@@ -17,8 +17,8 @@ public class InterestActionLookAt : InterestActionBase
 		}
 	}
 
-	// Token: 0x17002637 RID: 9783
-	// (get) Token: 0x0601BA2A RID: 113194 RVA: 0x00797B73 File Offset: 0x00795D73
+	// Token: 0x17002878 RID: 10360
+	// (get) Token: 0x060195AF RID: 103855 RVA: 0x007C02D2 File Offset: 0x007BE4D2
 	public override bool IsExclusive
 	{
 		get
@@ -27,7 +27,7 @@ public class InterestActionLookAt : InterestActionBase
 		}
 	}
 
-	// Token: 0x0601BA2B RID: 113195 RVA: 0x00797B78 File Offset: 0x00795D78
+	// Token: 0x060195B0 RID: 103856 RVA: 0x007C02D8 File Offset: 0x007BE4D8
 	public override void OnEnter(Entity entity, InterestItemBase item)
 	{
 		CommonNpcPerformComponent component = entity.GetComponent<CommonNpcPerformComponent>();
@@ -43,7 +43,7 @@ public class InterestActionLookAt : InterestActionBase
 		component.SightTarget(lookAtTarget, EStareActionType.InterestEvent);
 	}
 
-	// Token: 0x0601BA2C RID: 113196 RVA: 0x00797BAC File Offset: 0x00795DAC
+	// Token: 0x060195B1 RID: 103857 RVA: 0x007C030C File Offset: 0x007BE50C
 	public override void OnLeave(Entity entity, InterestItemBase item)
 	{
 		CommonNpcPerformComponent component = entity.GetComponent<CommonNpcPerformComponent>();
@@ -54,7 +54,7 @@ public class InterestActionLookAt : InterestActionBase
 		component.SightTarget(null, EStareActionType.InterestEvent);
 	}
 
-	// Token: 0x0601BA2D RID: 113197 RVA: 0x00797BD4 File Offset: 0x00795DD4
+	// Token: 0x060195B2 RID: 103858 RVA: 0x007C0334 File Offset: 0x007BE534
 	public override int GetPriority(Entity entity, InterestItemBase item)
 	{
 		BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -69,7 +69,7 @@ public class InterestActionLookAt : InterestActionBase
 		return (int)Vector.DistSquared(component.ActorLocationProxy, InterestActionBase.TmpVector1);
 	}
 
-	// Token: 0x0601BA2E RID: 113198 RVA: 0x00797C18 File Offset: 0x00795E18
+	// Token: 0x060195B3 RID: 103859 RVA: 0x007C0378 File Offset: 0x007BE578
 	[return: Nullable(new byte[]
 	{
 		0,

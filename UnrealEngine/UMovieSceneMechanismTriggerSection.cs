@@ -6,41 +6,34 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019D3 RID: 6611
+	// Token: 0x02000464 RID: 1124
+	[NullableContext(1)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroMechanismSequenceRuntime.MovieSceneMechanismTriggerSection")]
-	[UnrealStructLayout(448, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 448)]
-	public class UMovieSceneMechanismTriggerSection : UMovieSceneSection, IUnrealUObject, IUnrealObject, IMovieSceneEntityProvider, IUnrealNativeInterface, IUnrealInterface
+	[UnrealStructLayout(464, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 464)]
+	public class UMovieSceneMechanismTriggerSection : UMovieSceneSection, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060188D3 RID: 100563 RVA: 0x0024279A File Offset: 0x0024099A
+		// Token: 0x06006B82 RID: 27522 RVA: 0x0009C816 File Offset: 0x0009AA16
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneMechanismTriggerSection._ClassPtr;
 		}
 
-		// Token: 0x060188D4 RID: 100564 RVA: 0x002427A6 File Offset: 0x002409A6
-		int IMovieSceneEntityProvider.InterfaceOffset()
-		{
-			return UMovieSceneMechanismTriggerSection.__InterfaceOffset_IMovieSceneEntityProvider;
-		}
-
-		// Token: 0x060188D5 RID: 100565 RVA: 0x002427B0 File Offset: 0x002409B0
+		// Token: 0x06006B83 RID: 27523 RVA: 0x0009C824 File Offset: 0x0009AA24
 		public UMovieSceneMechanismTriggerSection() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneMechanismTriggerSection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060188D6 RID: 100566 RVA: 0x002427D8 File Offset: 0x002409D8
-		[NullableContext(1)]
+		// Token: 0x06006B84 RID: 27524 RVA: 0x0009C84C File Offset: 0x0009AA4C
 		public UMovieSceneMechanismTriggerSection(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneMechanismTriggerSection.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170061DC RID: 25052
-		// (get) Token: 0x060188D7 RID: 100567 RVA: 0x0024280C File Offset: 0x00240A0C
-		// (set) Token: 0x060188D8 RID: 100568 RVA: 0x00242845 File Offset: 0x00240A45
-		[Nullable(1)]
+		// Token: 0x1700155B RID: 5467
+		// (get) Token: 0x06006B85 RID: 27525 RVA: 0x0009C880 File Offset: 0x0009AA80
+		// (set) Token: 0x06006B86 RID: 27526 RVA: 0x0009C8B9 File Offset: 0x0009AAB9
 		public FMovieSceneMechanismEventChannel EventChannel
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -51,41 +44,36 @@ namespace UnrealEngine
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FMovieSceneMechanismEventChannel.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneMechanismTriggerSection.__PropertyOffset_EventChannel, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x060188D9 RID: 100569 RVA: 0x00242866 File Offset: 0x00240A66
+		// Token: 0x06006B87 RID: 27527 RVA: 0x0009C8DA File Offset: 0x0009AADA
 		static UMovieSceneMechanismTriggerSection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroMechanismSequenceRuntime.MovieSceneMechanismTriggerSection");
 		}
 
-		// Token: 0x060188DA RID: 100570 RVA: 0x00242874 File Offset: 0x00240A74
+		// Token: 0x06006B88 RID: 27528 RVA: 0x0009C8E8 File Offset: 0x0009AAE8
 		protected UMovieSceneMechanismTriggerSection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D43D RID: 54333
-		internal static int __InterfaceOffset_IMovieSceneEntityProvider;
-
-		// Token: 0x0400D43E RID: 54334
-		[Nullable(1)]
+		// Token: 0x04002DC6 RID: 11718
 		public new const string __ObjectPath = "/Script/KuroMechanismSequenceRuntime.MovieSceneMechanismTriggerSection";
 
-		// Token: 0x0400D43F RID: 54335
+		// Token: 0x04002DC7 RID: 11719
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D440 RID: 54336
+		// Token: 0x04002DC8 RID: 11720
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D441 RID: 54337
+		// Token: 0x04002DC9 RID: 11721
 		internal static int __PropertyOffset_EventChannel;
 
-		// Token: 0x0400D442 RID: 54338
+		// Token: 0x04002DCA RID: 11722
 		[Nullable(2)]
 		private FMovieSceneMechanismEventChannel _EventChannel;
 	}

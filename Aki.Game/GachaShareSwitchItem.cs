@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020025C3 RID: 9667
+// Token: 0x02001AAE RID: 6830
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class GachaShareSwitchItem : GridProxyAbstract<GachaShareSwitchData>
 {
-	// Token: 0x06013991 RID: 80273 RVA: 0x004E68BC File Offset: 0x004E4ABC
+	// Token: 0x06010E71 RID: 69233 RVA: 0x004F54BC File Offset: 0x004F36BC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class GachaShareSwitchItem : GridProxyAbstract<GachaShareSwitchData>
 		};
 	}
 
-	// Token: 0x06013992 RID: 80274 RVA: 0x004E694F File Offset: 0x004E4B4F
+	// Token: 0x06010E72 RID: 69234 RVA: 0x004F554F File Offset: 0x004F374F
 	private void OnClickToggle(EToggleState obj)
 	{
 		if (this.ToggleClickCb != null)
@@ -40,13 +40,13 @@ public class GachaShareSwitchItem : GridProxyAbstract<GachaShareSwitchData>
 		}
 	}
 
-	// Token: 0x06013993 RID: 80275 RVA: 0x004E6970 File Offset: 0x004E4B70
+	// Token: 0x06010E73 RID: 69235 RVA: 0x004F5570 File Offset: 0x004F3770
 	public void SetToggleClickCallback(Action<GachaShareSwitchData, int> cb)
 	{
 		this.ToggleClickCb = cb;
 	}
 
-	// Token: 0x06013994 RID: 80276 RVA: 0x004E697C File Offset: 0x004E4B7C
+	// Token: 0x06010E74 RID: 69236 RVA: 0x004F557C File Offset: 0x004F377C
 	public override void Refresh(GachaShareSwitchData switchData, bool isSelected, int gridIndex)
 	{
 		this.SwitchData = switchData;
@@ -81,23 +81,23 @@ public class GachaShareSwitchItem : GridProxyAbstract<GachaShareSwitchData>
 		extendToggle.SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06013995 RID: 80277 RVA: 0x004E6AA6 File Offset: 0x004E4CA6
+	// Token: 0x06010E75 RID: 69237 RVA: 0x004F56A6 File Offset: 0x004F38A6
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06013996 RID: 80278 RVA: 0x004E6AB9 File Offset: 0x004E4CB9
+	// Token: 0x06010E76 RID: 69238 RVA: 0x004F56B9 File Offset: 0x004F38B9
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x040093DF RID: 37855
+	// Token: 0x04009535 RID: 38197
 	[Nullable(2)]
 	private GachaShareSwitchData SwitchData;
 
-	// Token: 0x040093E0 RID: 37856
+	// Token: 0x04009536 RID: 38198
 	[Nullable(new byte[]
 	{
 		2,
@@ -105,17 +105,17 @@ public class GachaShareSwitchItem : GridProxyAbstract<GachaShareSwitchData>
 	})]
 	private Action<GachaShareSwitchData, int> ToggleClickCb;
 
-	// Token: 0x02008BD4 RID: 35796
+	// Token: 0x02007D5C RID: 32092
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D62E RID: 185902
+		// Token: 0x04028943 RID: 166211
 		Toggle,
-		// Token: 0x0402D62F RID: 185903
+		// Token: 0x04028944 RID: 166212
 		DefaultIcon,
-		// Token: 0x0402D630 RID: 185904
+		// Token: 0x04028945 RID: 166213
 		WeaponIcon,
-		// Token: 0x0402D631 RID: 185905
+		// Token: 0x04028946 RID: 166214
 		RoleIcon
 	}
 }

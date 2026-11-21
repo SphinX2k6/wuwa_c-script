@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B63 RID: 11107
+// Token: 0x020020DF RID: 8415
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,12 +15,12 @@ using UnrealEngine;
 })]
 public class SurvivorsRogueLvNode : GridProxyAbstract<ISurvivorsLvNodeData>
 {
-	// Token: 0x17001EB3 RID: 7859
-	// (get) Token: 0x06017054 RID: 94292 RVA: 0x005D8301 File Offset: 0x005D6501
-	// (set) Token: 0x06017055 RID: 94293 RVA: 0x005D8309 File Offset: 0x005D6509
+	// Token: 0x17001F0B RID: 7947
+	// (get) Token: 0x06014A85 RID: 84613 RVA: 0x00604E69 File Offset: 0x00603069
+	// (set) Token: 0x06014A86 RID: 84614 RVA: 0x00604E71 File Offset: 0x00603071
 	public ISurvivorsLvNodeData Data { get; set; }
 
-	// Token: 0x06017056 RID: 94294 RVA: 0x005D8314 File Offset: 0x005D6514
+	// Token: 0x06014A87 RID: 84615 RVA: 0x00604E7C File Offset: 0x0060307C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,13 +36,13 @@ public class SurvivorsRogueLvNode : GridProxyAbstract<ISurvivorsLvNodeData>
 		};
 	}
 
-	// Token: 0x06017057 RID: 94295 RVA: 0x005D83DC File Offset: 0x005D65DC
+	// Token: 0x06014A88 RID: 84616 RVA: 0x00604F44 File Offset: 0x00603144
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x06017058 RID: 94296 RVA: 0x005D83EF File Offset: 0x005D65EF
+	// Token: 0x06014A89 RID: 84617 RVA: 0x00604F57 File Offset: 0x00603157
 	public override void Refresh(ISurvivorsLvNodeData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -50,14 +50,14 @@ public class SurvivorsRogueLvNode : GridProxyAbstract<ISurvivorsLvNodeData>
 		this.RefreshState(data.State);
 	}
 
-	// Token: 0x06017059 RID: 94297 RVA: 0x005D8410 File Offset: 0x005D6610
+	// Token: 0x06014A8A RID: 84618 RVA: 0x00604F78 File Offset: 0x00603178
 	private void RefreshType(bool isImportant)
 	{
 		base.GetItem(0).SetUIActive(isImportant);
 		base.GetItem(4).SetUIActive(!isImportant);
 	}
 
-	// Token: 0x0601705A RID: 94298 RVA: 0x005D8430 File Offset: 0x005D6630
+	// Token: 0x06014A8B RID: 84619 RVA: 0x00604F98 File Offset: 0x00603198
 	public void RefreshState(ESurvivorsLvState state)
 	{
 		bool uiactive = state == ESurvivorsLvState.Activated;
@@ -69,7 +69,7 @@ public class SurvivorsRogueLvNode : GridProxyAbstract<ISurvivorsLvNodeData>
 		this.SetAnimOn(flag);
 	}
 
-	// Token: 0x0601705B RID: 94299 RVA: 0x005D8484 File Offset: 0x005D6684
+	// Token: 0x06014A8C RID: 84620 RVA: 0x00604FEC File Offset: 0x006031EC
 	public void SetAnimOn(bool bOn)
 	{
 		if (bOn == this.AnimState)
@@ -90,7 +90,7 @@ public class SurvivorsRogueLvNode : GridProxyAbstract<ISurvivorsLvNodeData>
 		this.LevelSequencePlayer.PlayLevelSequenceByName(bOn ? "Start" : "Close", false, null, false);
 	}
 
-	// Token: 0x0601705C RID: 94300 RVA: 0x005D8520 File Offset: 0x005D6720
+	// Token: 0x06014A8D RID: 84621 RVA: 0x00605088 File Offset: 0x00603288
 	public UniTask PlayImportantNodeAnim()
 	{
 		SurvivorsRogueLvNode.<PlayImportantNodeAnim>d__15 <PlayImportantNodeAnim>d__;
@@ -101,25 +101,25 @@ public class SurvivorsRogueLvNode : GridProxyAbstract<ISurvivorsLvNodeData>
 		return <PlayImportantNodeAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601705D RID: 94301 RVA: 0x005D8563 File Offset: 0x005D6763
+	// Token: 0x06014A8E RID: 84622 RVA: 0x006050CB File Offset: 0x006032CB
 	public override object GetKey(ISurvivorsLvNodeData data, int displayIndex)
 	{
 		return data.Lv;
 	}
 
-	// Token: 0x0400AC0D RID: 44045
+	// Token: 0x0400B013 RID: 45075
 	private const string SEQ_LIGHT = "Start";
 
-	// Token: 0x0400AC0E RID: 44046
+	// Token: 0x0400B014 RID: 45076
 	private const string SEQ_CLOSE = "Close";
 
-	// Token: 0x0400AC0F RID: 44047
+	// Token: 0x0400B015 RID: 45077
 	private const string SEQ_EVOLVE = "LevelUp";
 
-	// Token: 0x0400AC11 RID: 44049
+	// Token: 0x0400B017 RID: 45079
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400AC12 RID: 44050
+	// Token: 0x0400B018 RID: 45080
 	private bool AnimState;
 }

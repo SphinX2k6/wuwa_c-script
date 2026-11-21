@@ -4,19 +4,19 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067BF RID: 26559
+	// Token: 0x0200570F RID: 22287
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBenchItemServerData
 	{
-		// Token: 0x06042268 RID: 270952 RVA: 0x0100AAE9 File Offset: 0x01008CE9
+		// Token: 0x06036DBE RID: 224702 RVA: 0x00F4BECD File Offset: 0x00F4A0CD
 		public DangoBrawlBenchItemServerData(DangoBrawlBenchItemInfo data)
 		{
 			this.ServerData = data;
 		}
 
-		// Token: 0x170096B1 RID: 38577
-		// (get) Token: 0x06042269 RID: 270953 RVA: 0x0100AAF8 File Offset: 0x01008CF8
+		// Token: 0x170069F2 RID: 27122
+		// (get) Token: 0x06036DBF RID: 224703 RVA: 0x00F4BEDC File Offset: 0x00F4A0DC
 		public int Uid
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096B2 RID: 38578
-		// (get) Token: 0x0604226A RID: 270954 RVA: 0x0100AB0A File Offset: 0x01008D0A
+		// Token: 0x170069F3 RID: 27123
+		// (get) Token: 0x06036DC0 RID: 224704 RVA: 0x00F4BEEE File Offset: 0x00F4A0EE
 		public int ConfigId
 		{
 			get
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0402289C RID: 141468
+		// Token: 0x0401D0F9 RID: 119033
 		private readonly DangoBrawlBenchItemInfo ServerData;
 	}
 }

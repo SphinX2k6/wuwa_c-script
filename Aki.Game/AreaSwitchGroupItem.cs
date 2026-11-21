@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200222F RID: 8751
+// Token: 0x02001713 RID: 5907
 public class AreaSwitchGroupItem : UiPanelBase
 {
-	// Token: 0x06011133 RID: 69939 RVA: 0x004299CC File Offset: 0x00427BCC
+	// Token: 0x0600E5C9 RID: 58825 RVA: 0x00436570 File Offset: 0x00434770
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class AreaSwitchGroupItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06011134 RID: 69940 RVA: 0x00429A78 File Offset: 0x00427C78
+	// Token: 0x0600E5CA RID: 58826 RVA: 0x0043661C File Offset: 0x0043481C
 	[NullableContext(1)]
 	public void RefreshAreaList(List<int> areaIdList, int selectAreaId)
 	{
@@ -35,7 +35,7 @@ public class AreaSwitchGroupItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x06011135 RID: 69941 RVA: 0x00429AA8 File Offset: 0x00427CA8
+	// Token: 0x0600E5CB RID: 58827 RVA: 0x0043664C File Offset: 0x0043484C
 	private void Refresh()
 	{
 		int num = this.AreaIdList[this.SelectAreaIndex];
@@ -56,7 +56,7 @@ public class AreaSwitchGroupItem : UiPanelBase
 		onSwitchCallBack(num);
 	}
 
-	// Token: 0x06011136 RID: 69942 RVA: 0x00429B33 File Offset: 0x00427D33
+	// Token: 0x0600E5CC RID: 58828 RVA: 0x004366D7 File Offset: 0x004348D7
 	private void OnClickLastBtn()
 	{
 		this.SelectAreaIndex--;
@@ -67,7 +67,7 @@ public class AreaSwitchGroupItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x06011137 RID: 69943 RVA: 0x00429B65 File Offset: 0x00427D65
+	// Token: 0x0600E5CD RID: 58829 RVA: 0x00436709 File Offset: 0x00434909
 	private void OnClickNextBtn()
 	{
 		this.SelectAreaIndex++;
@@ -78,30 +78,30 @@ public class AreaSwitchGroupItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x04008218 RID: 33304
+	// Token: 0x04008356 RID: 33622
 	[Nullable(1)]
 	private List<int> AreaIdList = new List<int>();
 
-	// Token: 0x04008219 RID: 33305
+	// Token: 0x04008357 RID: 33623
 	private int SelectAreaIndex;
 
-	// Token: 0x0400821A RID: 33306
+	// Token: 0x04008358 RID: 33624
 	[Nullable(2)]
 	public Action<int> OnSwitchCallBack;
 
-	// Token: 0x0200875D RID: 34653
+	// Token: 0x020078E6 RID: 30950
 	private class EComponents
 	{
-		// Token: 0x0402C007 RID: 180231
+		// Token: 0x0402731F RID: 160543
 		public const int SpriteIcon = 0;
 
-		// Token: 0x0402C008 RID: 180232
+		// Token: 0x04027320 RID: 160544
 		public const int TxtTitle = 1;
 
-		// Token: 0x0402C009 RID: 180233
+		// Token: 0x04027321 RID: 160545
 		public const int BtnLast = 2;
 
-		// Token: 0x0402C00A RID: 180234
+		// Token: 0x04027322 RID: 160546
 		public const int BtnNext = 3;
 	}
 }

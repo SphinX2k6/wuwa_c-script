@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000078 RID: 120
+	// Token: 0x0200007B RID: 123
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class ProcedureUtil
 	{
-		// Token: 0x0600032B RID: 811 RVA: 0x000110C4 File Offset: 0x0000F2C4
+		// Token: 0x0600033B RID: 827 RVA: 0x00011F44 File Offset: 0x00010144
 		public static UniTask whetherRepeatDoOnFailedAsync([Nullable(new byte[]
 		{
 			1,
@@ -39,7 +39,7 @@ namespace CSharpScript.Launcher.Util
 			return <whetherRepeatDoOnFailedAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600032C RID: 812 RVA: 0x00011118 File Offset: 0x0000F318
+		// Token: 0x0600033C RID: 828 RVA: 0x00011F98 File Offset: 0x00010198
 		public static UniTask whetherRepeatDoOnFailed(Func<IDoResult> doSomething, [Nullable(new byte[]
 		{
 			1,
@@ -60,7 +60,7 @@ namespace CSharpScript.Launcher.Util
 			return <whetherRepeatDoOnFailed>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600032D RID: 813 RVA: 0x0001116C File Offset: 0x0000F36C
+		// Token: 0x0600033D RID: 829 RVA: 0x00011FEC File Offset: 0x000101EC
 		public static void randomArray<[Nullable(2)] T>(IList<T> arr)
 		{
 			Random random = new Random();
@@ -79,7 +79,7 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x0600032E RID: 814 RVA: 0x000111C4 File Offset: 0x0000F3C4
+		// Token: 0x0600033E RID: 830 RVA: 0x00012044 File Offset: 0x00010244
 		public unsafe static bool IsFirstTimeUpdateForPackage()
 		{
 			string deviceSaved = LauncherStorageLib.Instance.GetDeviceSaved<string>(ELauncherStorageDeviceKey.PatchVersion, "");

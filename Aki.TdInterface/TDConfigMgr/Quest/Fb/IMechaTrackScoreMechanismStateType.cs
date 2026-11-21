@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001352 RID: 4946
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014A2 RID: 5282
 	public class IMechaTrackScoreMechanismStateType
 	{
-		// Token: 0x0600714B RID: 29003 RVA: 0x001111FF File Offset: 0x0010F3FF
+		// Token: 0x060077EB RID: 30699 RVA: 0x0011F76B File Offset: 0x0011D96B
 		public static IMechaTrackScoreMechanismStateType Create(IMechaTrackScoreMechanismStateType? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700247A RID: 9338
-		// (get) Token: 0x0600714C RID: 29004 RVA: 0x0011121E File Offset: 0x0010F41E
+		// Token: 0x17002649 RID: 9801
+		// (get) Token: 0x060077EC RID: 30700 RVA: 0x0011F78A File Offset: 0x0011D98A
 		public virtual IStaticEntitiyMatch EntitiyMatch
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700247B RID: 9339
-		// (get) Token: 0x0600714D RID: 29005 RVA: 0x00111252 File Offset: 0x0010F452
+		// Token: 0x1700264A RID: 9802
+		// (get) Token: 0x060077ED RID: 30701 RVA: 0x0011F7BE File Offset: 0x0011D9BE
 		public virtual string State
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700247C RID: 9340
-		// (get) Token: 0x0600714E RID: 29006 RVA: 0x0011125F File Offset: 0x0010F45F
+		// Token: 0x1700264B RID: 9803
+		// (get) Token: 0x060077EE RID: 30702 RVA: 0x0011F7CB File Offset: 0x0011D9CB
 		public virtual int ScoreId
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400416C RID: 16748
+		// Token: 0x040044E8 RID: 17640
 		private IMechaTrackScoreMechanismStateType Instance;
 
-		// Token: 0x0400416D RID: 16749
+		// Token: 0x040044E9 RID: 17641
 		[Nullable(2)]
 		private IStaticEntitiyMatch _EntitiyMatchCache;
 
-		// Token: 0x0400416E RID: 16750
+		// Token: 0x040044EA RID: 17642
 		private bool _EntitiyMatchInited;
 	}
 }

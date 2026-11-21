@@ -10,12 +10,12 @@ using CSharpScript.Game.Module.Map.View.BaseMap;
 
 namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 {
-	// Token: 0x020047B3 RID: 18355
+	// Token: 0x020036E4 RID: 14052
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapQuickNavigateComponent : MapComponent
 	{
-		// Token: 0x06030112 RID: 196882 RVA: 0x00B2408B File Offset: 0x00B2228B
+		// Token: 0x060248E1 RID: 149729 RVA: 0x00A54017 File Offset: 0x00A52217
 		public WorldMapQuickNavigateComponent([Nullable(new byte[]
 		{
 			0,
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 		{
 		}
 
-		// Token: 0x17007861 RID: 30817
-		// (get) Token: 0x06030113 RID: 196883 RVA: 0x00B24094 File Offset: 0x00B22294
+		// Token: 0x17004B1D RID: 19229
+		// (get) Token: 0x060248E2 RID: 149730 RVA: 0x00A54020 File Offset: 0x00A52220
 		public override EMapComponent ComponentType
 		{
 			get
@@ -36,25 +36,25 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x06030114 RID: 196884 RVA: 0x00B24097 File Offset: 0x00B22297
+		// Token: 0x060248E3 RID: 149731 RVA: 0x00A54023 File Offset: 0x00A52223
 		protected override void OnEnable()
 		{
 			EventSystem.Instance.Add(EEventName.WorldMapNavigate, new Action<NavigateMark>(this.EventWorldMapNavigate));
 		}
 
-		// Token: 0x06030115 RID: 196885 RVA: 0x00B240B5 File Offset: 0x00B222B5
+		// Token: 0x060248E4 RID: 149732 RVA: 0x00A54041 File Offset: 0x00A52241
 		protected override void OnDisable()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldMapNavigate, new Action<NavigateMark>(this.EventWorldMapNavigate));
 		}
 
-		// Token: 0x06030116 RID: 196886 RVA: 0x00B240D3 File Offset: 0x00B222D3
+		// Token: 0x060248E5 RID: 149733 RVA: 0x00A5405F File Offset: 0x00A5225F
 		private void EventWorldMapNavigate(NavigateMark navigate)
 		{
 			this.NavigateTo(navigate.MarkId, navigate.MarkType, navigate.Focal.GetValueOrDefault(), navigate.FocusTween.GetValueOrDefault(true), navigate.NeedTempShow.GetValueOrDefault());
 		}
 
-		// Token: 0x06030117 RID: 196887 RVA: 0x00B2410C File Offset: 0x00B2230C
+		// Token: 0x060248E6 RID: 149734 RVA: 0x00A54098 File Offset: 0x00A52298
 		public bool NavigateTo(int markId, EMarkType markType, bool focal = false, bool focusTween = true, bool needTempShow = false)
 		{
 			WorldMapChangeMapDiffParams navigateMarkIsNeedChangeMap = this.GetNavigateMarkIsNeedChangeMap(markId, markType);
@@ -76,14 +76,14 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return false;
 		}
 
-		// Token: 0x06030118 RID: 196888 RVA: 0x00B241B4 File Offset: 0x00B223B4
+		// Token: 0x060248E7 RID: 149735 RVA: 0x00A54140 File Offset: 0x00A52340
 		public WorldMapChangeMapDiffParams GetNavigateMarkIsNeedChangeMap(int markId, EMarkType markType)
 		{
 			BaseMap map = (base.Parent.AsT3 as WorldMapUiEntity).Map;
 			MarkItem markItem = map.GetMarkItem(markType, markId);
 			MapModel instance = MapModel.Instance;
 			int dungeonMapConfigId = instance.GetDungeonMapConfigId((markItem != null) ? markItem.MapId : instance.GetMarkMapConfigId(markId, markType));
-			EMapGravityDirection emapGravityDirection = (markItem != null) ? markItem.MarkItemEntity.GamePlay.Gravity : instance.GetMarkMapGravity(markId, markType);
+			EMapGravityDirection emapGravityDirection = (markItem != null) ? markItem.Gravity : instance.GetMarkMapGravity(markId, markType);
 			int? num = (dungeonMapConfigId != map.MapId) ? new int?(dungeonMapConfigId) : null;
 			emapGravityDirection = WorldMapModel.Instance.GetFinalWorldMapGravity(num ?? map.MapId, new EMapGravityDirection?(emapGravityDirection));
 			EMapGravityDirection? emapGravityDirection2 = (emapGravityDirection != map.MapGravity) ? new EMapGravityDirection?(emapGravityDirection) : null;

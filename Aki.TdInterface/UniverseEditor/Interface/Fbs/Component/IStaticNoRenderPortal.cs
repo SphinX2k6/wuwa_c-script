@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059C5 RID: 22981
+	// Token: 0x02005FD2 RID: 24530
 	public struct IStaticNoRenderPortal : IFlatbufferObject
 	{
-		// Token: 0x1700AC7E RID: 44158
-		// (get) Token: 0x06026F33 RID: 159539 RVA: 0x0055BD07 File Offset: 0x00559F07
+		// Token: 0x1700B5B4 RID: 46516
+		// (get) Token: 0x060294A7 RID: 169127 RVA: 0x005A2BBF File Offset: 0x005A0DBF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026F34 RID: 159540 RVA: 0x0055BD14 File Offset: 0x00559F14
+		// Token: 0x060294A8 RID: 169128 RVA: 0x005A2BCC File Offset: 0x005A0DCC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026F35 RID: 159541 RVA: 0x0055BD1C File Offset: 0x00559F1C
+		// Token: 0x060294A9 RID: 169129 RVA: 0x005A2BD4 File Offset: 0x005A0DD4
 		public static IStaticNoRenderPortal GetRootAsIStaticNoRenderPortal(ByteBuffer _bb)
 		{
 			return IStaticNoRenderPortal.GetRootAsIStaticNoRenderPortal(_bb, default(IStaticNoRenderPortal));
 		}
 
-		// Token: 0x06026F36 RID: 159542 RVA: 0x0055BD38 File Offset: 0x00559F38
+		// Token: 0x060294AA RID: 169130 RVA: 0x005A2BF0 File Offset: 0x005A0DF0
 		public static IStaticNoRenderPortal GetRootAsIStaticNoRenderPortal(ByteBuffer _bb, IStaticNoRenderPortal obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026F37 RID: 159543 RVA: 0x0055BD55 File Offset: 0x00559F55
+		// Token: 0x060294AB RID: 169131 RVA: 0x005A2C0D File Offset: 0x005A0E0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026F38 RID: 159544 RVA: 0x0055BD64 File Offset: 0x00559F64
+		// Token: 0x060294AC RID: 169132 RVA: 0x005A2C1C File Offset: 0x005A0E1C
 		public IStaticNoRenderPortal __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AC7F RID: 44159
-		// (get) Token: 0x06026F39 RID: 159545 RVA: 0x0055BD74 File Offset: 0x00559F74
+		// Token: 0x1700B5B5 RID: 46517
+		// (get) Token: 0x060294AD RID: 169133 RVA: 0x005A2C2C File Offset: 0x005A0E2C
 		public ENoRenderPortalType Type
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC80 RID: 44160
-		// (get) Token: 0x06026F3A RID: 159546 RVA: 0x0055BDB0 File Offset: 0x00559FB0
+		// Token: 0x1700B5B6 RID: 46518
+		// (get) Token: 0x060294AE RID: 169134 RVA: 0x005A2C68 File Offset: 0x005A0E68
 		public EPortalModel PortalModel
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC81 RID: 44161
-		// (get) Token: 0x06026F3B RID: 159547 RVA: 0x0055BDEC File Offset: 0x00559FEC
+		// Token: 0x1700B5B7 RID: 46519
+		// (get) Token: 0x060294AF RID: 169135 RVA: 0x005A2CA4 File Offset: 0x005A0EA4
 		public int LinkPortalEntityId
 		{
 			get
@@ -96,9 +96,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC82 RID: 44162
-		// (get) Token: 0x06026F3C RID: 159548 RVA: 0x0055BE28 File Offset: 0x0055A028
-		public ITeleportSceneEffect? TeleportSceneEffect
+		// Token: 0x1700B5B8 RID: 46520
+		// (get) Token: 0x060294B0 RID: 169136 RVA: 0x005A2CE0 File Offset: 0x005A0EE0
+		public ICubeMapBinding? CubeMapBinding
 		{
 			get
 			{
@@ -107,17 +107,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				{
 					return null;
 				}
-				return new ITeleportSceneEffect?(default(ITeleportSceneEffect).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return new ICubeMapBinding?(default(ICubeMapBinding).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x1700AC83 RID: 44163
-		// (get) Token: 0x06026F3D RID: 159549 RVA: 0x0055BE88 File Offset: 0x0055A088
-		public TTeleportTransitionOption TeleportLoadingEffectType
+		// Token: 0x1700B5B9 RID: 46521
+		// (get) Token: 0x060294B1 RID: 169137 RVA: 0x005A2D40 File Offset: 0x005A0F40
+		public ITeleportSceneEffect? TeleportSceneEffect
 		{
 			get
 			{
 				int num = this.__p.__offset(12);
+				if (num == 0)
+				{
+					return null;
+				}
+				return new ITeleportSceneEffect?(default(ITeleportSceneEffect).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x1700B5BA RID: 46522
+		// (get) Token: 0x060294B2 RID: 169138 RVA: 0x005A2DA0 File Offset: 0x005A0FA0
+		public TTeleportTransitionOption TeleportLoadingEffectType
+		{
+			get
+			{
+				int num = this.__p.__offset(14);
 				if (num == 0)
 				{
 					return TTeleportTransitionOption.NONE;
@@ -126,10 +141,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026F3E RID: 159550 RVA: 0x0055BEC8 File Offset: 0x0055A0C8
+		// Token: 0x060294B3 RID: 169139 RVA: 0x005A2DE0 File Offset: 0x005A0FE0
 		public TTable? TeleportLoadingEffect<TTable>() where TTable : struct, IFlatbufferObject
 		{
-			int num = this.__p.__offset(14);
+			int num = this.__p.__offset(16);
 			if (num == 0)
 			{
 				return null;
@@ -137,90 +152,75 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06026F3F RID: 159551 RVA: 0x0055BF10 File Offset: 0x0055A110
+		// Token: 0x060294B4 RID: 169140 RVA: 0x005A2E28 File Offset: 0x005A1028
 		public ITeleportTransitionInDigitalScreen TeleportLoadingEffectAsITeleportTransitionInDigitalScreen()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionInDigitalScreen>().Value;
 		}
 
-		// Token: 0x06026F40 RID: 159552 RVA: 0x0055BF2C File Offset: 0x0055A12C
+		// Token: 0x060294B5 RID: 169141 RVA: 0x005A2E44 File Offset: 0x005A1044
 		public ITeleportTransitionInSeamlessType TeleportLoadingEffectAsITeleportTransitionInSeamlessType()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionInSeamlessType>().Value;
 		}
 
-		// Token: 0x06026F41 RID: 159553 RVA: 0x0055BF48 File Offset: 0x0055A148
+		// Token: 0x060294B6 RID: 169142 RVA: 0x005A2E60 File Offset: 0x005A1060
 		public ITeleportTransitionWithCenterText TeleportLoadingEffectAsITeleportTransitionWithCenterText()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionWithCenterText>().Value;
 		}
 
-		// Token: 0x06026F42 RID: 159554 RVA: 0x0055BF64 File Offset: 0x0055A164
+		// Token: 0x060294B7 RID: 169143 RVA: 0x005A2E7C File Offset: 0x005A107C
 		public ITeleportTransitionWithCharacterDisplay TeleportLoadingEffectAsITeleportTransitionWithCharacterDisplay()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionWithCharacterDisplay>().Value;
 		}
 
-		// Token: 0x06026F43 RID: 159555 RVA: 0x0055BF80 File Offset: 0x0055A180
+		// Token: 0x060294B8 RID: 169144 RVA: 0x005A2E98 File Offset: 0x005A1098
 		public ITeleportTransitionWithCustomLoading TeleportLoadingEffectAsITeleportTransitionWithCustomLoading()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionWithCustomLoading>().Value;
 		}
 
-		// Token: 0x06026F44 RID: 159556 RVA: 0x0055BF9C File Offset: 0x0055A19C
+		// Token: 0x060294B9 RID: 169145 RVA: 0x005A2EB4 File Offset: 0x005A10B4
 		public ITeleportTransitionWithCustomScreen TeleportLoadingEffectAsITeleportTransitionWithCustomScreen()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionWithCustomScreen>().Value;
 		}
 
-		// Token: 0x06026F45 RID: 159557 RVA: 0x0055BFB8 File Offset: 0x0055A1B8
+		// Token: 0x060294BA RID: 169146 RVA: 0x005A2ED0 File Offset: 0x005A10D0
 		public ITeleportTransitionWithEffect TeleportLoadingEffectAsITeleportTransitionWithEffect()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionWithEffect>().Value;
 		}
 
-		// Token: 0x06026F46 RID: 159558 RVA: 0x0055BFD4 File Offset: 0x0055A1D4
+		// Token: 0x060294BB RID: 169147 RVA: 0x005A2EEC File Offset: 0x005A10EC
 		public ITeleportTransitionWithFadeInScreen TeleportLoadingEffectAsITeleportTransitionWithFadeInScreen()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionWithFadeInScreen>().Value;
 		}
 
-		// Token: 0x06026F47 RID: 159559 RVA: 0x0055BFF0 File Offset: 0x0055A1F0
+		// Token: 0x060294BC RID: 169148 RVA: 0x005A2F08 File Offset: 0x005A1108
 		public ITeleportTransitionWithMp4 TeleportLoadingEffectAsITeleportTransitionWithMp4()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionWithMp4>().Value;
 		}
 
-		// Token: 0x06026F48 RID: 159560 RVA: 0x0055C00C File Offset: 0x0055A20C
+		// Token: 0x060294BD RID: 169149 RVA: 0x005A2F24 File Offset: 0x005A1124
 		public ITeleportTransitionWithPlayFlow TeleportLoadingEffectAsITeleportTransitionWithPlayFlow()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionWithPlayFlow>().Value;
 		}
 
-		// Token: 0x06026F49 RID: 159561 RVA: 0x0055C028 File Offset: 0x0055A228
+		// Token: 0x060294BE RID: 169150 RVA: 0x005A2F40 File Offset: 0x005A1140
 		public ITeleportTransitionWithSpecialCustomLoading TeleportLoadingEffectAsITeleportTransitionWithSpecialCustomLoading()
 		{
 			return this.TeleportLoadingEffect<ITeleportTransitionWithSpecialCustomLoading>().Value;
 		}
 
-		// Token: 0x1700AC84 RID: 44164
-		// (get) Token: 0x06026F4A RID: 159562 RVA: 0x0055C044 File Offset: 0x0055A244
+		// Token: 0x1700B5BB RID: 46523
+		// (get) Token: 0x060294BF RID: 169151 RVA: 0x005A2F5C File Offset: 0x005A115C
 		public IConditionGroup? Condition
-		{
-			get
-			{
-				int num = this.__p.__offset(16);
-				if (num == 0)
-				{
-					return null;
-				}
-				return new IConditionGroup?(default(IConditionGroup).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
-			}
-		}
-
-		// Token: 0x1700AC85 RID: 44165
-		// (get) Token: 0x06026F4B RID: 159563 RVA: 0x0055C0A4 File Offset: 0x0055A2A4
-		public IVectorInfo? TeleportToSelfPos
 		{
 			get
 			{
@@ -229,13 +229,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				{
 					return null;
 				}
-				return new IVectorInfo?(default(IVectorInfo).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return new IConditionGroup?(default(IConditionGroup).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x1700AC86 RID: 44166
-		// (get) Token: 0x06026F4C RID: 159564 RVA: 0x0055C104 File Offset: 0x0055A304
-		public IGravityFlipTeleportConfig? GravityConfig
+		// Token: 0x1700B5BC RID: 46524
+		// (get) Token: 0x060294C0 RID: 169152 RVA: 0x005A2FBC File Offset: 0x005A11BC
+		public IVectorInfo? TeleportToSelfPos
 		{
 			get
 			{
@@ -244,28 +244,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				{
 					return null;
 				}
-				return new IGravityFlipTeleportConfig?(default(IGravityFlipTeleportConfig).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return new IVectorInfo?(default(IVectorInfo).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x1700AC87 RID: 44167
-		// (get) Token: 0x06026F4D RID: 159565 RVA: 0x0055C164 File Offset: 0x0055A364
-		public bool NoBlindSpot
+		// Token: 0x1700B5BD RID: 46525
+		// (get) Token: 0x060294C1 RID: 169153 RVA: 0x005A301C File Offset: 0x005A121C
+		public IGravityFlipTeleportConfig? GravityConfig
 		{
 			get
 			{
 				int num = this.__p.__offset(22);
-				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+				if (num == 0)
+				{
+					return null;
+				}
+				return new IGravityFlipTeleportConfig?(default(IGravityFlipTeleportConfig).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x1700AC88 RID: 44168
-		// (get) Token: 0x06026F4E RID: 159566 RVA: 0x0055C1A4 File Offset: 0x0055A3A4
-		public ETeleportActionType ActionAfterTeleport
+		// Token: 0x1700B5BE RID: 46526
+		// (get) Token: 0x060294C2 RID: 169154 RVA: 0x005A307C File Offset: 0x005A127C
+		public bool NoBlindSpot
 		{
 			get
 			{
 				int num = this.__p.__offset(24);
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+			}
+		}
+
+		// Token: 0x1700B5BF RID: 46527
+		// (get) Token: 0x060294C3 RID: 169155 RVA: 0x005A30BC File Offset: 0x005A12BC
+		public ETeleportActionType ActionAfterTeleport
+		{
+			get
+			{
+				int num = this.__p.__offset(26);
 				if (num == 0)
 				{
 					return ETeleportActionType.Dodge;
@@ -274,10 +289,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026F4F RID: 159567 RVA: 0x0055C1E4 File Offset: 0x0055A3E4
+		// Token: 0x060294C4 RID: 169156 RVA: 0x005A30FC File Offset: 0x005A12FC
 		public int NpcMonsterEntityIds(int j)
 		{
-			int num = this.__p.__offset(26);
+			int num = this.__p.__offset(28);
 			if (num == 0)
 			{
 				return 0;
@@ -285,13 +300,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700AC89 RID: 44169
-		// (get) Token: 0x06026F50 RID: 159568 RVA: 0x0055C224 File Offset: 0x0055A424
+		// Token: 0x1700B5C0 RID: 46528
+		// (get) Token: 0x060294C5 RID: 169157 RVA: 0x005A313C File Offset: 0x005A133C
 		public int NpcMonsterEntityIdsLength
 		{
 			get
 			{
-				int num = this.__p.__offset(26);
+				int num = this.__p.__offset(28);
 				if (num == 0)
 				{
 					return 0;
@@ -300,25 +315,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026F51 RID: 159569 RVA: 0x0055C250 File Offset: 0x0055A450
+		// Token: 0x060294C6 RID: 169158 RVA: 0x005A3168 File Offset: 0x005A1368
 		public Span<int> GetNpcMonsterEntityIdsBytes()
 		{
-			return this.__p.__vector_as_span<int>(26, 4);
+			return this.__p.__vector_as_span<int>(28, 4);
 		}
 
-		// Token: 0x06026F52 RID: 159570 RVA: 0x0055C260 File Offset: 0x0055A460
+		// Token: 0x060294C7 RID: 169159 RVA: 0x005A3178 File Offset: 0x005A1378
 		public int[] GetNpcMonsterEntityIdsArray()
 		{
-			return this.__p.__vector_as_array<int>(26);
+			return this.__p.__vector_as_array<int>(28);
 		}
 
-		// Token: 0x1700AC8A RID: 44170
-		// (get) Token: 0x06026F53 RID: 159571 RVA: 0x0055C270 File Offset: 0x0055A470
+		// Token: 0x1700B5C1 RID: 46529
+		// (get) Token: 0x060294C8 RID: 169160 RVA: 0x005A3188 File Offset: 0x005A1388
 		public IAfterTeleportConfig? AfterTeleportConfig
 		{
 			get
 			{
-				int num = this.__p.__offset(28);
+				int num = this.__p.__offset(30);
 				if (num == 0)
 				{
 					return null;
@@ -327,24 +342,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC8B RID: 44171
-		// (get) Token: 0x06026F54 RID: 159572 RVA: 0x0055C2D0 File Offset: 0x0055A4D0
+		// Token: 0x1700B5C2 RID: 46530
+		// (get) Token: 0x060294C9 RID: 169161 RVA: 0x005A31E8 File Offset: 0x005A13E8
 		public int TeleportStreamRadius
-		{
-			get
-			{
-				int num = this.__p.__offset(30);
-				if (num == 0)
-				{
-					return 0;
-				}
-				return this.__p.bb.GetInt(num + this.__p.bb_pos);
-			}
-		}
-
-		// Token: 0x1700AC8C RID: 44172
-		// (get) Token: 0x06026F55 RID: 159573 RVA: 0x0055C310 File Offset: 0x0055A510
-		public byte NullMask
 		{
 			get
 			{
@@ -353,14 +353,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				{
 					return 0;
 				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x1700B5C3 RID: 46531
+		// (get) Token: 0x060294CA RID: 169162 RVA: 0x005A3228 File Offset: 0x005A1428
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(34);
+				if (num == 0)
+				{
+					return 0;
+				}
 				return this.__p.bb.Get(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x06026F56 RID: 159574 RVA: 0x0055C350 File Offset: 0x0055A550
-		public static Offset<IStaticNoRenderPortal> CreateIStaticNoRenderPortal(FlatBufferBuilder builder, ENoRenderPortalType Type = ENoRenderPortalType.Static, EPortalModel PortalModel = EPortalModel.A, int LinkPortalEntityId = 0, Offset<ITeleportSceneEffect> TeleportSceneEffectOffset = default(Offset<ITeleportSceneEffect>), TTeleportTransitionOption TeleportLoadingEffect_type = TTeleportTransitionOption.NONE, int TeleportLoadingEffectOffset = 0, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), Offset<IVectorInfo> TeleportToSelfPosOffset = default(Offset<IVectorInfo>), Offset<IGravityFlipTeleportConfig> GravityConfigOffset = default(Offset<IGravityFlipTeleportConfig>), bool NoBlindSpot = false, ETeleportActionType ActionAfterTeleport = ETeleportActionType.Dodge, VectorOffset NpcMonsterEntityIdsOffset = default(VectorOffset), Offset<IAfterTeleportConfig> AfterTeleportConfigOffset = default(Offset<IAfterTeleportConfig>), int TeleportStreamRadius = 0, byte NullMask = 0)
+		// Token: 0x060294CB RID: 169163 RVA: 0x005A3268 File Offset: 0x005A1468
+		public static Offset<IStaticNoRenderPortal> CreateIStaticNoRenderPortal(FlatBufferBuilder builder, ENoRenderPortalType Type = ENoRenderPortalType.Static, EPortalModel PortalModel = EPortalModel.A, int LinkPortalEntityId = 0, Offset<ICubeMapBinding> CubeMapBindingOffset = default(Offset<ICubeMapBinding>), Offset<ITeleportSceneEffect> TeleportSceneEffectOffset = default(Offset<ITeleportSceneEffect>), TTeleportTransitionOption TeleportLoadingEffect_type = TTeleportTransitionOption.NONE, int TeleportLoadingEffectOffset = 0, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), Offset<IVectorInfo> TeleportToSelfPosOffset = default(Offset<IVectorInfo>), Offset<IGravityFlipTeleportConfig> GravityConfigOffset = default(Offset<IGravityFlipTeleportConfig>), bool NoBlindSpot = false, ETeleportActionType ActionAfterTeleport = ETeleportActionType.Dodge, VectorOffset NpcMonsterEntityIdsOffset = default(VectorOffset), Offset<IAfterTeleportConfig> AfterTeleportConfigOffset = default(Offset<IAfterTeleportConfig>), int TeleportStreamRadius = 0, byte NullMask = 0)
 		{
-			builder.StartTable(15);
+			builder.StartTable(16);
 			IStaticNoRenderPortal.AddTeleportStreamRadius(builder, TeleportStreamRadius);
 			IStaticNoRenderPortal.AddAfterTeleportConfig(builder, AfterTeleportConfigOffset);
 			IStaticNoRenderPortal.AddNpcMonsterEntityIds(builder, NpcMonsterEntityIdsOffset);
@@ -369,6 +384,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			IStaticNoRenderPortal.AddCondition(builder, ConditionOffset);
 			IStaticNoRenderPortal.AddTeleportLoadingEffect(builder, TeleportLoadingEffectOffset);
 			IStaticNoRenderPortal.AddTeleportSceneEffect(builder, TeleportSceneEffectOffset);
+			IStaticNoRenderPortal.AddCubeMapBinding(builder, CubeMapBindingOffset);
 			IStaticNoRenderPortal.AddLinkPortalEntityId(builder, LinkPortalEntityId);
 			IStaticNoRenderPortal.AddNullMask(builder, NullMask);
 			IStaticNoRenderPortal.AddActionAfterTeleport(builder, ActionAfterTeleport);
@@ -379,85 +395,91 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IStaticNoRenderPortal.EndIStaticNoRenderPortal(builder);
 		}
 
-		// Token: 0x06026F57 RID: 159575 RVA: 0x0055C3E0 File Offset: 0x0055A5E0
+		// Token: 0x060294CC RID: 169164 RVA: 0x005A3300 File Offset: 0x005A1500
 		public static void StartIStaticNoRenderPortal(FlatBufferBuilder builder)
 		{
-			builder.StartTable(15);
+			builder.StartTable(16);
 		}
 
-		// Token: 0x06026F58 RID: 159576 RVA: 0x0055C3EA File Offset: 0x0055A5EA
+		// Token: 0x060294CD RID: 169165 RVA: 0x005A330A File Offset: 0x005A150A
 		public static void AddType(FlatBufferBuilder builder, ENoRenderPortalType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026F59 RID: 159577 RVA: 0x0055C3F5 File Offset: 0x0055A5F5
+		// Token: 0x060294CE RID: 169166 RVA: 0x005A3315 File Offset: 0x005A1515
 		public static void AddPortalModel(FlatBufferBuilder builder, EPortalModel portalModel)
 		{
 			builder.AddByte(1, (byte)portalModel, 0);
 		}
 
-		// Token: 0x06026F5A RID: 159578 RVA: 0x0055C400 File Offset: 0x0055A600
+		// Token: 0x060294CF RID: 169167 RVA: 0x005A3320 File Offset: 0x005A1520
 		public static void AddLinkPortalEntityId(FlatBufferBuilder builder, int linkPortalEntityId)
 		{
 			builder.AddInt(2, linkPortalEntityId, 0);
 		}
 
-		// Token: 0x06026F5B RID: 159579 RVA: 0x0055C40B File Offset: 0x0055A60B
+		// Token: 0x060294D0 RID: 169168 RVA: 0x005A332B File Offset: 0x005A152B
+		public static void AddCubeMapBinding(FlatBufferBuilder builder, Offset<ICubeMapBinding> cubeMapBindingOffset)
+		{
+			builder.AddOffset(3, cubeMapBindingOffset.Value, 0);
+		}
+
+		// Token: 0x060294D1 RID: 169169 RVA: 0x005A333B File Offset: 0x005A153B
 		public static void AddTeleportSceneEffect(FlatBufferBuilder builder, Offset<ITeleportSceneEffect> teleportSceneEffectOffset)
 		{
-			builder.AddOffset(3, teleportSceneEffectOffset.Value, 0);
+			builder.AddOffset(4, teleportSceneEffectOffset.Value, 0);
 		}
 
-		// Token: 0x06026F5C RID: 159580 RVA: 0x0055C41B File Offset: 0x0055A61B
+		// Token: 0x060294D2 RID: 169170 RVA: 0x005A334B File Offset: 0x005A154B
 		public static void AddTeleportLoadingEffectType(FlatBufferBuilder builder, TTeleportTransitionOption teleportLoadingEffectType)
 		{
-			builder.AddByte(4, (byte)teleportLoadingEffectType, 0);
+			builder.AddByte(5, (byte)teleportLoadingEffectType, 0);
 		}
 
-		// Token: 0x06026F5D RID: 159581 RVA: 0x0055C426 File Offset: 0x0055A626
+		// Token: 0x060294D3 RID: 169171 RVA: 0x005A3356 File Offset: 0x005A1556
 		public static void AddTeleportLoadingEffect(FlatBufferBuilder builder, int teleportLoadingEffectOffset)
 		{
-			builder.AddOffset(5, teleportLoadingEffectOffset, 0);
+			builder.AddOffset(6, teleportLoadingEffectOffset, 0);
 		}
 
-		// Token: 0x06026F5E RID: 159582 RVA: 0x0055C431 File Offset: 0x0055A631
+		// Token: 0x060294D4 RID: 169172 RVA: 0x005A3361 File Offset: 0x005A1561
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
-			builder.AddOffset(6, conditionOffset.Value, 0);
+			builder.AddOffset(7, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x06026F5F RID: 159583 RVA: 0x0055C441 File Offset: 0x0055A641
+		// Token: 0x060294D5 RID: 169173 RVA: 0x005A3371 File Offset: 0x005A1571
 		public static void AddTeleportToSelfPos(FlatBufferBuilder builder, Offset<IVectorInfo> teleportToSelfPosOffset)
 		{
-			builder.AddOffset(7, teleportToSelfPosOffset.Value, 0);
+			builder.AddOffset(8, teleportToSelfPosOffset.Value, 0);
 		}
 
-		// Token: 0x06026F60 RID: 159584 RVA: 0x0055C451 File Offset: 0x0055A651
+		// Token: 0x060294D6 RID: 169174 RVA: 0x005A3381 File Offset: 0x005A1581
 		public static void AddGravityConfig(FlatBufferBuilder builder, Offset<IGravityFlipTeleportConfig> gravityConfigOffset)
 		{
-			builder.AddOffset(8, gravityConfigOffset.Value, 0);
+			builder.AddOffset(9, gravityConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06026F61 RID: 159585 RVA: 0x0055C461 File Offset: 0x0055A661
+		// Token: 0x060294D7 RID: 169175 RVA: 0x005A3392 File Offset: 0x005A1592
 		public static void AddNoBlindSpot(FlatBufferBuilder builder, bool noBlindSpot)
 		{
-			builder.AddBool(9, noBlindSpot, false);
+			builder.AddBool(10, noBlindSpot, false);
 		}
 
-		// Token: 0x06026F62 RID: 159586 RVA: 0x0055C46D File Offset: 0x0055A66D
+		// Token: 0x060294D8 RID: 169176 RVA: 0x005A339E File Offset: 0x005A159E
 		public static void AddActionAfterTeleport(FlatBufferBuilder builder, ETeleportActionType actionAfterTeleport)
 		{
-			builder.AddByte(10, (byte)actionAfterTeleport, 0);
+			builder.AddByte(11, (byte)actionAfterTeleport, 0);
 		}
 
-		// Token: 0x06026F63 RID: 159587 RVA: 0x0055C479 File Offset: 0x0055A679
+		// Token: 0x060294D9 RID: 169177 RVA: 0x005A33AA File Offset: 0x005A15AA
 		public static void AddNpcMonsterEntityIds(FlatBufferBuilder builder, VectorOffset npcMonsterEntityIdsOffset)
 		{
-			builder.AddOffset(11, npcMonsterEntityIdsOffset.Value, 0);
+			builder.AddOffset(12, npcMonsterEntityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06026F64 RID: 159588 RVA: 0x0055C48C File Offset: 0x0055A68C
+		// Token: 0x060294DA RID: 169178 RVA: 0x005A33BC File Offset: 0x005A15BC
 		public static VectorOffset CreateNpcMonsterEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -468,7 +490,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026F65 RID: 159589 RVA: 0x0055C4C3 File Offset: 0x0055A6C3
+		// Token: 0x060294DB RID: 169179 RVA: 0x005A33F3 File Offset: 0x005A15F3
 		public static VectorOffset CreateNpcMonsterEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -476,7 +498,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026F66 RID: 159590 RVA: 0x0055C4DD File Offset: 0x0055A6DD
+		// Token: 0x060294DC RID: 169180 RVA: 0x005A340D File Offset: 0x005A160D
 		public static VectorOffset CreateNpcMonsterEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -484,7 +506,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026F67 RID: 159591 RVA: 0x0055C4FB File Offset: 0x0055A6FB
+		// Token: 0x060294DD RID: 169181 RVA: 0x005A342B File Offset: 0x005A162B
 		public static VectorOffset CreateNpcMonsterEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -492,37 +514,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026F68 RID: 159592 RVA: 0x0055C514 File Offset: 0x0055A714
+		// Token: 0x060294DE RID: 169182 RVA: 0x005A3444 File Offset: 0x005A1644
 		public static void StartNpcMonsterEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06026F69 RID: 159593 RVA: 0x0055C51F File Offset: 0x0055A71F
+		// Token: 0x060294DF RID: 169183 RVA: 0x005A344F File Offset: 0x005A164F
 		public static void AddAfterTeleportConfig(FlatBufferBuilder builder, Offset<IAfterTeleportConfig> afterTeleportConfigOffset)
 		{
-			builder.AddOffset(12, afterTeleportConfigOffset.Value, 0);
+			builder.AddOffset(13, afterTeleportConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06026F6A RID: 159594 RVA: 0x0055C530 File Offset: 0x0055A730
+		// Token: 0x060294E0 RID: 169184 RVA: 0x005A3460 File Offset: 0x005A1660
 		public static void AddTeleportStreamRadius(FlatBufferBuilder builder, int teleportStreamRadius)
 		{
-			builder.AddInt(13, teleportStreamRadius, 0);
+			builder.AddInt(14, teleportStreamRadius, 0);
 		}
 
-		// Token: 0x06026F6B RID: 159595 RVA: 0x0055C53C File Offset: 0x0055A73C
+		// Token: 0x060294E1 RID: 169185 RVA: 0x005A346C File Offset: 0x005A166C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
-			builder.AddByte(14, nullMask, 0);
+			builder.AddByte(15, nullMask, 0);
 		}
 
-		// Token: 0x06026F6C RID: 159596 RVA: 0x0055C548 File Offset: 0x0055A748
+		// Token: 0x060294E2 RID: 169186 RVA: 0x005A3478 File Offset: 0x005A1678
 		public static Offset<IStaticNoRenderPortal> EndIStaticNoRenderPortal(FlatBufferBuilder builder)
 		{
 			return new Offset<IStaticNoRenderPortal>(builder.EndTable());
 		}
 
-		// Token: 0x06026F6D RID: 159597 RVA: 0x0055C558 File Offset: 0x0055A758
+		// Token: 0x060294E3 RID: 169187 RVA: 0x005A3488 File Offset: 0x005A1688
 		public IStaticNoRenderPortalT UnPack()
 		{
 			IStaticNoRenderPortalT staticNoRenderPortalT = new IStaticNoRenderPortalT();
@@ -530,12 +552,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return staticNoRenderPortalT;
 		}
 
-		// Token: 0x06026F6E RID: 159598 RVA: 0x0055C574 File Offset: 0x0055A774
+		// Token: 0x060294E4 RID: 169188 RVA: 0x005A34A4 File Offset: 0x005A16A4
 		public void UnPackTo(IStaticNoRenderPortalT _o)
 		{
 			_o.Type = this.Type;
 			_o.PortalModel = this.PortalModel;
 			_o.LinkPortalEntityId = this.LinkPortalEntityId;
+			_o.CubeMapBinding = ((this.CubeMapBinding != null) ? this.CubeMapBinding.Value.UnPack() : null);
 			_o.TeleportSceneEffect = ((this.TeleportSceneEffect != null) ? this.TeleportSceneEffect.Value.UnPack() : null);
 			_o.TeleportLoadingEffect = new TTeleportTransitionOptionUnion();
 			_o.TeleportLoadingEffect.Type = this.TeleportLoadingEffectType;
@@ -590,13 +613,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026F6F RID: 159599 RVA: 0x0055C9E4 File Offset: 0x0055ABE4
+		// Token: 0x060294E5 RID: 169189 RVA: 0x005A3948 File Offset: 0x005A1B48
 		public static Offset<IStaticNoRenderPortal> Pack(FlatBufferBuilder builder, IStaticNoRenderPortalT _o)
 		{
 			if (_o == null)
 			{
 				return default(Offset<IStaticNoRenderPortal>);
 			}
+			Offset<ICubeMapBinding> cubeMapBindingOffset = (_o.CubeMapBinding == null) ? default(Offset<ICubeMapBinding>) : ICubeMapBinding.Pack(builder, _o.CubeMapBinding);
 			Offset<ITeleportSceneEffect> teleportSceneEffectOffset = (_o.TeleportSceneEffect == null) ? default(Offset<ITeleportSceneEffect>) : ITeleportSceneEffect.Pack(builder, _o.TeleportSceneEffect);
 			TTeleportTransitionOption teleportLoadingEffect_type = (_o.TeleportLoadingEffect == null) ? TTeleportTransitionOption.NONE : _o.TeleportLoadingEffect.Type;
 			int teleportLoadingEffectOffset = (_o.TeleportLoadingEffect == null) ? 0 : TTeleportTransitionOptionUnion.Pack(builder, _o.TeleportLoadingEffect);
@@ -610,10 +634,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				npcMonsterEntityIdsOffset = IStaticNoRenderPortal.CreateNpcMonsterEntityIdsVector(builder, data);
 			}
 			Offset<IAfterTeleportConfig> afterTeleportConfigOffset = (_o.AfterTeleportConfig == null) ? default(Offset<IAfterTeleportConfig>) : IAfterTeleportConfig.Pack(builder, _o.AfterTeleportConfig);
-			return IStaticNoRenderPortal.CreateIStaticNoRenderPortal(builder, _o.Type, _o.PortalModel, _o.LinkPortalEntityId, teleportSceneEffectOffset, teleportLoadingEffect_type, teleportLoadingEffectOffset, conditionOffset, teleportToSelfPosOffset, gravityConfigOffset, _o.NoBlindSpot, _o.ActionAfterTeleport, npcMonsterEntityIdsOffset, afterTeleportConfigOffset, _o.TeleportStreamRadius, _o.NullMask);
+			return IStaticNoRenderPortal.CreateIStaticNoRenderPortal(builder, _o.Type, _o.PortalModel, _o.LinkPortalEntityId, cubeMapBindingOffset, teleportSceneEffectOffset, teleportLoadingEffect_type, teleportLoadingEffectOffset, conditionOffset, teleportToSelfPosOffset, gravityConfigOffset, _o.NoBlindSpot, _o.ActionAfterTeleport, npcMonsterEntityIdsOffset, afterTeleportConfigOffset, _o.TeleportStreamRadius, _o.NullMask);
 		}
 
-		// Token: 0x0400EFE0 RID: 61408
+		// Token: 0x0400FCD6 RID: 64726
 		private Table __p;
 	}
 }

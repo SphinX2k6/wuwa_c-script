@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001213 RID: 4627
+// Token: 0x020006C7 RID: 1735
 [NullableContext(1)]
 [Nullable(0)]
 public class DailyAdventureRewardItem : UiPanelBase
 {
-	// Token: 0x06007BE9 RID: 31721 RVA: 0x001A2620 File Offset: 0x001A0820
+	// Token: 0x06004F7F RID: 20351 RVA: 0x001AB298 File Offset: 0x001A9498
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -52,7 +52,7 @@ public class DailyAdventureRewardItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007BEA RID: 31722 RVA: 0x001A27B0 File Offset: 0x001A09B0
+	// Token: 0x06004F80 RID: 20352 RVA: 0x001AB428 File Offset: 0x001A9628
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DailyAdventureRewardItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -63,13 +63,13 @@ public class DailyAdventureRewardItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007BEB RID: 31723 RVA: 0x001A27F3 File Offset: 0x001A09F3
+	// Token: 0x06004F81 RID: 20353 RVA: 0x001AB46B File Offset: 0x001A966B
 	protected override void OnBeforeDestroy()
 	{
 		this.RewardItemList.Clear();
 	}
 
-	// Token: 0x06007BEC RID: 31724 RVA: 0x001A2800 File Offset: 0x001A0A00
+	// Token: 0x06004F82 RID: 20354 RVA: 0x001AB478 File Offset: 0x001A9678
 	private UniTask CreateRewardItem(AActor item)
 	{
 		DailyAdventureRewardItem.<CreateRewardItem>d__6 <CreateRewardItem>d__;
@@ -81,7 +81,7 @@ public class DailyAdventureRewardItem : UiPanelBase
 		return <CreateRewardItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007BED RID: 31725 RVA: 0x001A284C File Offset: 0x001A0A4C
+	// Token: 0x06004F83 RID: 20355 RVA: 0x001AB4C4 File Offset: 0x001A96C4
 	private void HandleRewardItemClick(MediumItemGridExtendCallback parameter)
 	{
 		if (this.Data == null)
@@ -91,13 +91,13 @@ public class DailyAdventureRewardItem : UiPanelBase
 		if (this.Data.RewardState != ERewardState.FinishedAndUnClaimed)
 		{
 			IItemGridData itemGridData = parameter.Data as IItemGridData;
-			ItemController.Instance.OpenItemTipsByItemId(itemGridData.Item.ItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(itemGridData.Item.ItemData.ItemId, true, null, false);
 			return;
 		}
 		ActivityDailyAdventureController.Instance.RequestPointReward(this.Data.RewardId);
 	}
 
-	// Token: 0x06007BEE RID: 31726 RVA: 0x001A28B0 File Offset: 0x001A0AB0
+	// Token: 0x06004F84 RID: 20356 RVA: 0x001AB528 File Offset: 0x001A9728
 	public void Refresh(DailyAdventureRewardData data)
 	{
 		this.Data = data;
@@ -126,7 +126,7 @@ public class DailyAdventureRewardItem : UiPanelBase
 		this.RefreshState(data.RewardState);
 	}
 
-	// Token: 0x06007BEF RID: 31727 RVA: 0x001A29B4 File Offset: 0x001A0BB4
+	// Token: 0x06004F85 RID: 20357 RVA: 0x001AB62C File Offset: 0x001A982C
 	private void RefreshState(ERewardState state)
 	{
 		switch (state)
@@ -160,7 +160,7 @@ public class DailyAdventureRewardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007BF0 RID: 31728 RVA: 0x001A2ABC File Offset: 0x001A0CBC
+	// Token: 0x06004F86 RID: 20358 RVA: 0x001AB734 File Offset: 0x001A9934
 	private void SetTextChangeColor(bool useChangeColor)
 	{
 		UUIItem text = base.GetText(5);
@@ -168,7 +168,7 @@ public class DailyAdventureRewardItem : UiPanelBase
 		text.SetChangeColor(useChangeColor, fcolor);
 	}
 
-	// Token: 0x06007BF1 RID: 31729 RVA: 0x001A2AEC File Offset: 0x001A0CEC
+	// Token: 0x06004F87 RID: 20359 RVA: 0x001AB764 File Offset: 0x001A9964
 	private List<TItem> GetPreviewReward(int dropId)
 	{
 		DropPackage? dropPackage;
@@ -192,7 +192,7 @@ public class DailyAdventureRewardItem : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x06007BF2 RID: 31730 RVA: 0x001A2BA8 File Offset: 0x001A0DA8
+	// Token: 0x06004F88 RID: 20360 RVA: 0x001AB820 File Offset: 0x001A9A20
 	private void RequestReward()
 	{
 		if (this.Data == null || this.Data.RewardState != ERewardState.FinishedAndUnClaimed)
@@ -202,42 +202,42 @@ public class DailyAdventureRewardItem : UiPanelBase
 		ActivityDailyAdventureController.Instance.RequestPointReward(this.Data.RewardId);
 	}
 
-	// Token: 0x040038C5 RID: 14533
+	// Token: 0x0400395E RID: 14686
 	[Nullable(2)]
 	protected DailyAdventureRewardData Data;
 
-	// Token: 0x040038C6 RID: 14534
+	// Token: 0x0400395F RID: 14687
 	private readonly List<DailyAdventureSmallGridItem> RewardItemList = new List<DailyAdventureSmallGridItem>();
 
-	// Token: 0x020077F4 RID: 30708
+	// Token: 0x0200697F RID: 27007
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040278A0 RID: 161952
+		// Token: 0x04022BD1 RID: 142289
 		public const int Button = 0;
 
-		// Token: 0x040278A1 RID: 161953
+		// Token: 0x04022BD2 RID: 142290
 		public const int SpriteBase = 1;
 
-		// Token: 0x040278A2 RID: 161954
+		// Token: 0x04022BD3 RID: 142291
 		public const int TxtNum = 2;
 
-		// Token: 0x040278A3 RID: 161955
+		// Token: 0x04022BD4 RID: 142292
 		public const int Item1 = 3;
 
-		// Token: 0x040278A4 RID: 161956
+		// Token: 0x04022BD5 RID: 142293
 		public const int Item2 = 4;
 
-		// Token: 0x040278A5 RID: 161957
+		// Token: 0x04022BD6 RID: 142294
 		public const int TxtState = 5;
 
-		// Token: 0x040278A6 RID: 161958
+		// Token: 0x04022BD7 RID: 142295
 		public const int SpriteReceive = 6;
 
-		// Token: 0x040278A7 RID: 161959
+		// Token: 0x04022BD8 RID: 142296
 		public const int PanelReceive = 7;
 
-		// Token: 0x040278A8 RID: 161960
+		// Token: 0x04022BD9 RID: 142297
 		public const int SpriteDone = 8;
 	}
 }

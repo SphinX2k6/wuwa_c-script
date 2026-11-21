@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020017EC RID: 6124
+// Token: 0x02000CA5 RID: 3237
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class CommonTextItem : GridProxyAbstract<TableTextArgNew>
 {
-	// Token: 0x0600B334 RID: 45876 RVA: 0x00287E38 File Offset: 0x00286038
+	// Token: 0x0600871E RID: 34590 RVA: 0x0029250C File Offset: 0x0029070C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,7 +26,7 @@ public class CommonTextItem : GridProxyAbstract<TableTextArgNew>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B335 RID: 45877 RVA: 0x00287E80 File Offset: 0x00286080
+	// Token: 0x0600871F RID: 34591 RVA: 0x00292554 File Offset: 0x00290754
 	public void SetTextByTextId(string textId, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -36,7 +36,7 @@ public class CommonTextItem : GridProxyAbstract<TableTextArgNew>
 		LguiUtil.Instance.SetLocalText(base.GetText(0), textId, args);
 	}
 
-	// Token: 0x0600B336 RID: 45878 RVA: 0x00287E98 File Offset: 0x00286098
+	// Token: 0x06008720 RID: 34592 RVA: 0x0029256C File Offset: 0x0029076C
 	public override void Refresh(TableTextArgNew data, bool isSelected, int gridIndex)
 	{
 		string textKey = data.TextKey;
@@ -46,11 +46,11 @@ public class CommonTextItem : GridProxyAbstract<TableTextArgNew>
 		}
 	}
 
-	// Token: 0x02007DDA RID: 32218
+	// Token: 0x02006F60 RID: 28512
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04029318 RID: 168728
+		// Token: 0x04024643 RID: 149059
 		public const int Text = 0;
 	}
 }

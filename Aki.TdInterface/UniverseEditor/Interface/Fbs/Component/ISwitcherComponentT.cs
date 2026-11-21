@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A11 RID: 23057
+	// Token: 0x0200601E RID: 24606
 	public class ISwitcherComponentT
 	{
-		// Token: 0x1700AD44 RID: 44356
-		// (get) Token: 0x0602725F RID: 160351 RVA: 0x00562AAB File Offset: 0x00560CAB
-		// (set) Token: 0x06027260 RID: 160352 RVA: 0x00562AB3 File Offset: 0x00560CB3
+		// Token: 0x1700B67C RID: 46716
+		// (get) Token: 0x060297D7 RID: 169943 RVA: 0x005A9A6F File Offset: 0x005A7C6F
+		// (set) Token: 0x060297D8 RID: 169944 RVA: 0x005A9A77 File Offset: 0x005A7C77
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AD45 RID: 44357
-		// (get) Token: 0x06027261 RID: 160353 RVA: 0x00562ABC File Offset: 0x00560CBC
-		// (set) Token: 0x06027262 RID: 160354 RVA: 0x00562AC4 File Offset: 0x00560CC4
+		// Token: 0x1700B67D RID: 46717
+		// (get) Token: 0x060297D9 RID: 169945 RVA: 0x005A9A80 File Offset: 0x005A7C80
+		// (set) Token: 0x060297DA RID: 169946 RVA: 0x005A9A88 File Offset: 0x005A7C88
 		public string Content { get; set; }
 
-		// Token: 0x1700AD46 RID: 44358
-		// (get) Token: 0x06027263 RID: 160355 RVA: 0x00562ACD File Offset: 0x00560CCD
-		// (set) Token: 0x06027264 RID: 160356 RVA: 0x00562AD5 File Offset: 0x00560CD5
+		// Token: 0x1700B67E RID: 46718
+		// (get) Token: 0x060297DB RID: 169947 RVA: 0x005A9A91 File Offset: 0x005A7C91
+		// (set) Token: 0x060297DC RID: 169948 RVA: 0x005A9A99 File Offset: 0x005A7C99
 		public string Icon { get; set; }
 
-		// Token: 0x1700AD47 RID: 44359
-		// (get) Token: 0x06027265 RID: 160357 RVA: 0x00562ADE File Offset: 0x00560CDE
-		// (set) Token: 0x06027266 RID: 160358 RVA: 0x00562AE6 File Offset: 0x00560CE6
+		// Token: 0x1700B67F RID: 46719
+		// (get) Token: 0x060297DD RID: 169949 RVA: 0x005A9AA2 File Offset: 0x005A7CA2
+		// (set) Token: 0x060297DE RID: 169950 RVA: 0x005A9AAA File Offset: 0x005A7CAA
 		public List<IActionInfoT> OnActions { get; set; }
 
-		// Token: 0x1700AD48 RID: 44360
-		// (get) Token: 0x06027267 RID: 160359 RVA: 0x00562AEF File Offset: 0x00560CEF
-		// (set) Token: 0x06027268 RID: 160360 RVA: 0x00562AF7 File Offset: 0x00560CF7
+		// Token: 0x1700B680 RID: 46720
+		// (get) Token: 0x060297DF RID: 169951 RVA: 0x005A9AB3 File Offset: 0x005A7CB3
+		// (set) Token: 0x060297E0 RID: 169952 RVA: 0x005A9ABB File Offset: 0x005A7CBB
 		public List<IActionInfoT> OffActions { get; set; }
 
-		// Token: 0x1700AD49 RID: 44361
-		// (get) Token: 0x06027269 RID: 160361 RVA: 0x00562B00 File Offset: 0x00560D00
-		// (set) Token: 0x0602726A RID: 160362 RVA: 0x00562B08 File Offset: 0x00560D08
+		// Token: 0x1700B681 RID: 46721
+		// (get) Token: 0x060297E1 RID: 169953 RVA: 0x005A9AC4 File Offset: 0x005A7CC4
+		// (set) Token: 0x060297E2 RID: 169954 RVA: 0x005A9ACC File Offset: 0x005A7CCC
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602726B RID: 160363 RVA: 0x00562B11 File Offset: 0x00560D11
+		// Token: 0x060297E3 RID: 169955 RVA: 0x005A9AD5 File Offset: 0x005A7CD5
 		public ISwitcherComponentT()
 		{
 			this.Disabled = false;

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005871 RID: 22641
+	// Token: 0x02005E7E RID: 24190
 	public class IRoadNetworkNavigationTypeT
 	{
-		// Token: 0x1700A960 RID: 43360
-		// (get) Token: 0x06026276 RID: 156278 RVA: 0x00542CEA File Offset: 0x00540EEA
-		// (set) Token: 0x06026277 RID: 156279 RVA: 0x00542CF2 File Offset: 0x00540EF2
+		// Token: 0x1700B290 RID: 45712
+		// (get) Token: 0x060287D8 RID: 165848 RVA: 0x00589836 File Offset: 0x00587A36
+		// (set) Token: 0x060287D9 RID: 165849 RVA: 0x0058983E File Offset: 0x00587A3E
 		public ERoadNetworkNavigationType Type { get; set; }
 
-		// Token: 0x06026278 RID: 156280 RVA: 0x00542CFB File Offset: 0x00540EFB
+		// Token: 0x060287DA RID: 165850 RVA: 0x00589847 File Offset: 0x00587A47
 		public IRoadNetworkNavigationTypeT()
 		{
 			this.Type = ERoadNetworkNavigationType.Traffic;

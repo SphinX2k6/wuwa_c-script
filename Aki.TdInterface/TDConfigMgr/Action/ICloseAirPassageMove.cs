@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018D4 RID: 6356
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A65 RID: 6757
 	public class ICloseAirPassageMove : ICloseSplineMovePattern
 	{
-		// Token: 0x06008851 RID: 34897 RVA: 0x001428B4 File Offset: 0x00140AB4
+		// Token: 0x06008F99 RID: 36761 RVA: 0x0015242C File Offset: 0x0015062C
 		private ICloseAirPassageMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008852 RID: 34898 RVA: 0x001428EC File Offset: 0x00140AEC
+		// Token: 0x06008F9A RID: 36762 RVA: 0x00152464 File Offset: 0x00150664
 		public static ICloseAirPassageMove Create([Nullable(2)] ICloseAirPassageMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008853 RID: 34899 RVA: 0x001428FF File Offset: 0x00140AFF
+		// Token: 0x06008F9B RID: 36763 RVA: 0x00152477 File Offset: 0x00150677
 		public static ICloseAirPassageMove CreateFromSetValue([Nullable(2)] ICloseAirPassageMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008854 RID: 34900 RVA: 0x00142912 File Offset: 0x00140B12
+		// Token: 0x06008F9C RID: 36764 RVA: 0x0015248A File Offset: 0x0015068A
 		public new ICloseAirPassageMove_SetValue ToSetValue()
 		{
 			return new ICloseAirPassageMove_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C3F RID: 11327
-		// (get) Token: 0x06008855 RID: 34901 RVA: 0x00142931 File Offset: 0x00140B31
-		// (set) Token: 0x06008856 RID: 34902 RVA: 0x0014295C File Offset: 0x00140B5C
+		// Token: 0x17002E41 RID: 11841
+		// (get) Token: 0x06008F9D RID: 36765 RVA: 0x001524A9 File Offset: 0x001506A9
+		// (set) Token: 0x06008F9E RID: 36766 RVA: 0x001524D4 File Offset: 0x001506D4
 		public override ESplineMovePattern Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C40 RID: 11328
-		// (get) Token: 0x06008857 RID: 34903 RVA: 0x0014296C File Offset: 0x00140B6C
-		// (set) Token: 0x06008858 RID: 34904 RVA: 0x001429A6 File Offset: 0x00140BA6
+		// Token: 0x17002E42 RID: 11842
+		// (get) Token: 0x06008F9F RID: 36767 RVA: 0x001524E4 File Offset: 0x001506E4
+		// (set) Token: 0x06008FA0 RID: 36768 RVA: 0x0015251E File Offset: 0x0015071E
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040055A2 RID: 21922
+		// Token: 0x040059FC RID: 23036
 		[Nullable(2)]
 		protected new ICloseAirPassageMove FbInstance;
 
-		// Token: 0x040055A3 RID: 21923
+		// Token: 0x040059FD RID: 23037
 		[Nullable(2)]
 		protected new ICloseAirPassageMove_SetValue PocoInterface;
 	}

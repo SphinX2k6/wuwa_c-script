@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020016AE RID: 5806
+// Token: 0x02000B66 RID: 2918
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class NewSoundTypeItemGridData : MultiTemplateGridDataBase<INewSoundTypeItemData, NewSoundTypeItem>
 {
-	// Token: 0x0600A597 RID: 42391 RVA: 0x0025041B File Offset: 0x0024E61B
+	// Token: 0x06007977 RID: 31095 RVA: 0x0025A82F File Offset: 0x00258A2F
 	public NewSoundTypeItemGridData(INewSoundTypeItemData data, Action<int, UUIExtendToggle> toggleFunc, Func<int, bool> canToggleChange)
 	{
 		base.Data = data;
@@ -20,13 +20,13 @@ public class NewSoundTypeItemGridData : MultiTemplateGridDataBase<INewSoundTypeI
 		this.CanToggleChange = canToggleChange;
 	}
 
-	// Token: 0x0600A598 RID: 42392 RVA: 0x00250438 File Offset: 0x0024E638
+	// Token: 0x06007978 RID: 31096 RVA: 0x0025A84C File Offset: 0x00258A4C
 	public override int GetTemplateIndex()
 	{
 		return 0;
 	}
 
-	// Token: 0x0600A599 RID: 42393 RVA: 0x0025043B File Offset: 0x0024E63B
+	// Token: 0x06007979 RID: 31097 RVA: 0x0025A84F File Offset: 0x00258A4F
 	public override NewSoundTypeItem CreateProxy()
 	{
 		NewSoundTypeItem newSoundTypeItem = new NewSoundTypeItem();
@@ -35,9 +35,9 @@ public class NewSoundTypeItemGridData : MultiTemplateGridDataBase<INewSoundTypeI
 		return newSoundTypeItem;
 	}
 
-	// Token: 0x04004ADA RID: 19162
+	// Token: 0x04004B81 RID: 19329
 	private Action<int, UUIExtendToggle> ToggleFunc;
 
-	// Token: 0x04004ADB RID: 19163
+	// Token: 0x04004B82 RID: 19330
 	private Func<int, bool> CanToggleChange;
 }

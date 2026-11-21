@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018A1 RID: 6305
+	// Token: 0x020003C4 RID: 964
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.EffectModelGpuParticle")]
 	[UnrealStructLayout(1568, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1568)]
 	public class UEffectModelGpuParticle : UEffectModelBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017383 RID: 95107 RVA: 0x0021DE56 File Offset: 0x0021C056
+		// Token: 0x06005E2A RID: 24106 RVA: 0x00085282 File Offset: 0x00083482
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UEffectModelGpuParticle._ClassPtr;
 		}
 
-		// Token: 0x06017384 RID: 95108 RVA: 0x0021DE64 File Offset: 0x0021C064
+		// Token: 0x06005E2B RID: 24107 RVA: 0x00085290 File Offset: 0x00083490
 		public UEffectModelGpuParticle() : this(BuiltinUtils.AllocNativeUObject(UEffectModelGpuParticle.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017385 RID: 95109 RVA: 0x0021DE8C File Offset: 0x0021C08C
+		// Token: 0x06005E2C RID: 24108 RVA: 0x000852B8 File Offset: 0x000834B8
 		public UEffectModelGpuParticle(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UEffectModelGpuParticle.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005D5F RID: 23903
-		// (get) Token: 0x06017386 RID: 95110 RVA: 0x0021DEC0 File Offset: 0x0021C0C0
-		// (set) Token: 0x06017387 RID: 95111 RVA: 0x0021DEF9 File Offset: 0x0021C0F9
+		// Token: 0x170012A0 RID: 4768
+		// (get) Token: 0x06005E2D RID: 24109 RVA: 0x000852EC File Offset: 0x000834EC
+		// (set) Token: 0x06005E2E RID: 24110 RVA: 0x00085325 File Offset: 0x00083525
 		public FKuroCurveVector Location
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D60 RID: 23904
-		// (get) Token: 0x06017388 RID: 95112 RVA: 0x0021DF1C File Offset: 0x0021C11C
-		// (set) Token: 0x06017389 RID: 95113 RVA: 0x0021DF55 File Offset: 0x0021C155
+		// Token: 0x170012A1 RID: 4769
+		// (get) Token: 0x06005E2F RID: 24111 RVA: 0x00085348 File Offset: 0x00083548
+		// (set) Token: 0x06005E30 RID: 24112 RVA: 0x00085381 File Offset: 0x00083581
 		public FKuroCurveVector Rotation
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D61 RID: 23905
-		// (get) Token: 0x0601738A RID: 95114 RVA: 0x0021DF78 File Offset: 0x0021C178
-		// (set) Token: 0x0601738B RID: 95115 RVA: 0x0021DFB1 File Offset: 0x0021C1B1
+		// Token: 0x170012A2 RID: 4770
+		// (get) Token: 0x06005E31 RID: 24113 RVA: 0x000853A4 File Offset: 0x000835A4
+		// (set) Token: 0x06005E32 RID: 24114 RVA: 0x000853DD File Offset: 0x000835DD
 		public FKuroCurveVector Scale
 		{
 			get
@@ -92,27 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D62 RID: 23906
-		// (get) Token: 0x0601738C RID: 95116 RVA: 0x0021DFD2 File Offset: 0x0021C1D2
-		// (set) Token: 0x0601738D RID: 95117 RVA: 0x0021DFE6 File Offset: 0x0021C1E6
-		[Nullable(2)]
-		public unsafe UKuroGPUParticleDA Data
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroGPUParticleDA>(base.NativePtr / (IntPtr)sizeof(void*) + UEffectModelGpuParticle.__PropertyOffset_Data);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UEffectModelGpuParticle.__PropertyOffset_Data, value);
-			}
-		}
-
-		// Token: 0x17005D63 RID: 23907
-		// (get) Token: 0x0601738E RID: 95118 RVA: 0x0021DFFC File Offset: 0x0021C1FC
-		// (set) Token: 0x0601738F RID: 95119 RVA: 0x0021E035 File Offset: 0x0021C235
+		// Token: 0x170012A3 RID: 4771
+		// (get) Token: 0x06005E33 RID: 24115 RVA: 0x00085400 File Offset: 0x00083600
+		// (set) Token: 0x06005E34 RID: 24116 RVA: 0x00085439 File Offset: 0x00083639
 		public FKuroCurveFloat TimeScaler
 		{
 			get
@@ -131,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D64 RID: 23908
-		// (get) Token: 0x06017390 RID: 95120 RVA: 0x0021E056 File Offset: 0x0021C256
-		// (set) Token: 0x06017391 RID: 95121 RVA: 0x0021E066 File Offset: 0x0021C266
+		// Token: 0x170012A4 RID: 4772
+		// (get) Token: 0x06005E35 RID: 24117 RVA: 0x0008545A File Offset: 0x0008365A
+		// (set) Token: 0x06005E36 RID: 24118 RVA: 0x0008546A File Offset: 0x0008366A
 		public unsafe bool Loop
 		{
 			get
@@ -146,9 +128,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D65 RID: 23909
-		// (get) Token: 0x06017392 RID: 95122 RVA: 0x0021E077 File Offset: 0x0021C277
-		// (set) Token: 0x06017393 RID: 95123 RVA: 0x0021E087 File Offset: 0x0021C287
+		// Token: 0x170012A5 RID: 4773
+		// (get) Token: 0x06005E37 RID: 24119 RVA: 0x0008547B File Offset: 0x0008367B
+		// (set) Token: 0x06005E38 RID: 24120 RVA: 0x0008548B File Offset: 0x0008368B
 		public unsafe bool EnablePingPong
 		{
 			get
@@ -161,9 +143,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D66 RID: 23910
-		// (get) Token: 0x06017394 RID: 95124 RVA: 0x0021E098 File Offset: 0x0021C298
-		// (set) Token: 0x06017395 RID: 95125 RVA: 0x0021E0A8 File Offset: 0x0021C2A8
+		// Token: 0x170012A6 RID: 4774
+		// (get) Token: 0x06005E39 RID: 24121 RVA: 0x0008549C File Offset: 0x0008369C
+		// (set) Token: 0x06005E3A RID: 24122 RVA: 0x000854AC File Offset: 0x000836AC
 		public unsafe float PingPongTime
 		{
 			get
@@ -176,9 +158,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D67 RID: 23911
-		// (get) Token: 0x06017396 RID: 95126 RVA: 0x0021E0B9 File Offset: 0x0021C2B9
-		// (set) Token: 0x06017397 RID: 95127 RVA: 0x0021E0C9 File Offset: 0x0021C2C9
+		// Token: 0x170012A7 RID: 4775
+		// (get) Token: 0x06005E3B RID: 24123 RVA: 0x000854BD File Offset: 0x000836BD
+		// (set) Token: 0x06005E3C RID: 24124 RVA: 0x000854CD File Offset: 0x000836CD
 		public unsafe bool ReversePlay
 		{
 			get
@@ -191,67 +173,64 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017398 RID: 95128 RVA: 0x0021E0DA File Offset: 0x0021C2DA
+		// Token: 0x06005E3D RID: 24125 RVA: 0x000854DE File Offset: 0x000836DE
 		static UEffectModelGpuParticle()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.EffectModelGpuParticle");
 		}
 
-		// Token: 0x06017399 RID: 95129 RVA: 0x0021E0E8 File Offset: 0x0021C2E8
+		// Token: 0x06005E3E RID: 24126 RVA: 0x000854EC File Offset: 0x000836EC
 		protected UEffectModelGpuParticle(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C988 RID: 51592
+		// Token: 0x04002754 RID: 10068
 		public new const string __ObjectPath = "/Script/KuroGameplay.EffectModelGpuParticle";
 
-		// Token: 0x0400C989 RID: 51593
+		// Token: 0x04002755 RID: 10069
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C98A RID: 51594
+		// Token: 0x04002756 RID: 10070
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C98B RID: 51595
+		// Token: 0x04002757 RID: 10071
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400C98C RID: 51596
+		// Token: 0x04002758 RID: 10072
 		[Nullable(2)]
 		private FKuroCurveVector _Location;
 
-		// Token: 0x0400C98D RID: 51597
+		// Token: 0x04002759 RID: 10073
 		internal static int __PropertyOffset_Rotation;
 
-		// Token: 0x0400C98E RID: 51598
+		// Token: 0x0400275A RID: 10074
 		[Nullable(2)]
 		private FKuroCurveVector _Rotation;
 
-		// Token: 0x0400C98F RID: 51599
+		// Token: 0x0400275B RID: 10075
 		internal static int __PropertyOffset_Scale;
 
-		// Token: 0x0400C990 RID: 51600
+		// Token: 0x0400275C RID: 10076
 		[Nullable(2)]
 		private FKuroCurveVector _Scale;
 
-		// Token: 0x0400C991 RID: 51601
-		internal static int __PropertyOffset_Data;
-
-		// Token: 0x0400C992 RID: 51602
+		// Token: 0x0400275D RID: 10077
 		internal static int __PropertyOffset_TimeScaler;
 
-		// Token: 0x0400C993 RID: 51603
+		// Token: 0x0400275E RID: 10078
 		[Nullable(2)]
 		private FKuroCurveFloat _TimeScaler;
 
-		// Token: 0x0400C994 RID: 51604
+		// Token: 0x0400275F RID: 10079
 		internal static int __PropertyOffset_Loop;
 
-		// Token: 0x0400C995 RID: 51605
+		// Token: 0x04002760 RID: 10080
 		internal static int __PropertyOffset_EnablePingPong;
 
-		// Token: 0x0400C996 RID: 51606
+		// Token: 0x04002761 RID: 10081
 		internal static int __PropertyOffset_PingPongTime;
 
-		// Token: 0x0400C997 RID: 51607
+		// Token: 0x04002762 RID: 10082
 		internal static int __PropertyOffset_ReversePlay;
 	}
 }

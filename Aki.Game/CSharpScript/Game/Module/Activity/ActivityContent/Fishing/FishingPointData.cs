@@ -5,10 +5,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065A2 RID: 26018
+	// Token: 0x02005520 RID: 21792
 	public class FishingPointData
 	{
-		// Token: 0x060413D1 RID: 267217 RVA: 0x00FCEEF8 File Offset: 0x00FCD0F8
+		// Token: 0x06036096 RID: 221334 RVA: 0x00F15EFC File Offset: 0x00F140FC
 		[NullableContext(1)]
 		public void Refresh(OneFishPointInfo data)
 		{
@@ -26,37 +26,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.Interacted = data.Interacted;
 		}
 
-		// Token: 0x060413D2 RID: 267218 RVA: 0x00FCEF83 File Offset: 0x00FCD183
+		// Token: 0x06036097 RID: 221335 RVA: 0x00F15F87 File Offset: 0x00F14187
 		public bool IsValid()
 		{
 			return (double)this.NextUpdateTime >= TimeUtil.Instance.GetServerTimeStamp();
 		}
 
-		// Token: 0x04021F5C RID: 139100
+		// Token: 0x0401C88D RID: 116877
 		public int Id;
 
-		// Token: 0x04021F5D RID: 139101
+		// Token: 0x0401C88E RID: 116878
 		public int PbEntityId;
 
-		// Token: 0x04021F5E RID: 139102
+		// Token: 0x0401C88F RID: 116879
 		public int SceneId;
 
-		// Token: 0x04021F5F RID: 139103
+		// Token: 0x0401C890 RID: 116880
 		public int GamePlayId;
 
-		// Token: 0x04021F60 RID: 139104
+		// Token: 0x0401C891 RID: 116881
 		public int CurrentCount;
 
-		// Token: 0x04021F61 RID: 139105
+		// Token: 0x0401C892 RID: 116882
 		public int MaxCount;
 
-		// Token: 0x04021F62 RID: 139106
+		// Token: 0x0401C893 RID: 116883
 		public long LastUpdateTime;
 
-		// Token: 0x04021F63 RID: 139107
+		// Token: 0x0401C894 RID: 116884
 		public long NextUpdateTime;
 
-		// Token: 0x04021F64 RID: 139108
+		// Token: 0x0401C895 RID: 116885
 		public bool Interacted;
 	}
 }

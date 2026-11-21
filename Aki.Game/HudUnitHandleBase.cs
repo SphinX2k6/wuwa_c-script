@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F2D RID: 7981
+// Token: 0x020013EF RID: 5103
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class HudUnitHandleBase
 {
-	// Token: 0x0600F5F2 RID: 62962 RVA: 0x003B60C1 File Offset: 0x003B42C1
+	// Token: 0x0600CA11 RID: 51729 RVA: 0x003C1BAD File Offset: 0x003BFDAD
 	public void Initialize()
 	{
 		this.PlayerController = Global.CharacterController;
@@ -23,7 +23,7 @@ public abstract class HudUnitHandleBase
 		this.OnInitialize();
 	}
 
-	// Token: 0x0600F5F3 RID: 62963 RVA: 0x003B60F8 File Offset: 0x003B42F8
+	// Token: 0x0600CA12 RID: 51730 RVA: 0x003C1BE4 File Offset: 0x003BFDE4
 	protected void InitCursorAxis()
 	{
 		float num = (float)ConfigCommonParamById.GetIntConfig("MonsterCursorWidthToScreenPercent").Value / 100f;
@@ -32,7 +32,7 @@ public abstract class HudUnitHandleBase
 		this.MinorAxis = this.HudItem.GetHeight() * num2;
 	}
 
-	// Token: 0x0600F5F4 RID: 62964 RVA: 0x003B615F File Offset: 0x003B435F
+	// Token: 0x0600CA13 RID: 51731 RVA: 0x003C1C4B File Offset: 0x003BFE4B
 	public void Destroy()
 	{
 		this.OnDestroyed();
@@ -47,7 +47,7 @@ public abstract class HudUnitHandleBase
 		this.HudEntitySet = null;
 	}
 
-	// Token: 0x0600F5F5 RID: 62965 RVA: 0x003B6194 File Offset: 0x003B4394
+	// Token: 0x0600CA14 RID: 51732 RVA: 0x003C1C80 File Offset: 0x003BFE80
 	public void Tick(float delta)
 	{
 		this.OnTick(delta);
@@ -57,7 +57,7 @@ public abstract class HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F5F6 RID: 62966 RVA: 0x003B61EC File Offset: 0x003B43EC
+	// Token: 0x0600CA15 RID: 51733 RVA: 0x003C1CD8 File Offset: 0x003BFED8
 	public void AfterTick(float delta)
 	{
 		this.OnAfterTick(delta);
@@ -67,50 +67,50 @@ public abstract class HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F5F7 RID: 62967 RVA: 0x003B6244 File Offset: 0x003B4444
+	// Token: 0x0600CA16 RID: 51734 RVA: 0x003C1D30 File Offset: 0x003BFF30
 	protected virtual void OnInitialize()
 	{
 	}
 
-	// Token: 0x0600F5F8 RID: 62968 RVA: 0x003B6246 File Offset: 0x003B4446
+	// Token: 0x0600CA17 RID: 51735 RVA: 0x003C1D32 File Offset: 0x003BFF32
 	protected virtual void OnDestroyed()
 	{
 	}
 
-	// Token: 0x0600F5F9 RID: 62969 RVA: 0x003B6248 File Offset: 0x003B4448
+	// Token: 0x0600CA18 RID: 51736 RVA: 0x003C1D34 File Offset: 0x003BFF34
 	protected virtual void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x0600F5FA RID: 62970 RVA: 0x003B624A File Offset: 0x003B444A
+	// Token: 0x0600CA19 RID: 51737 RVA: 0x003C1D36 File Offset: 0x003BFF36
 	protected virtual void OnAfterTick(float delta)
 	{
 	}
 
-	// Token: 0x0600F5FB RID: 62971 RVA: 0x003B624C File Offset: 0x003B444C
+	// Token: 0x0600CA1A RID: 51738 RVA: 0x003C1D38 File Offset: 0x003BFF38
 	public virtual void OnShowHud()
 	{
 		this.IsHudVisible = true;
 	}
 
-	// Token: 0x0600F5FC RID: 62972 RVA: 0x003B6255 File Offset: 0x003B4455
+	// Token: 0x0600CA1B RID: 51739 RVA: 0x003C1D41 File Offset: 0x003BFF41
 	public void OnHideHud()
 	{
 		this.IsHudVisible = false;
 	}
 
-	// Token: 0x0600F5FD RID: 62973 RVA: 0x003B625E File Offset: 0x003B445E
+	// Token: 0x0600CA1C RID: 51740 RVA: 0x003C1D4A File Offset: 0x003BFF4A
 	public virtual void OnInputControllerChanged(EInputControllerType last, EInputControllerType now)
 	{
 	}
 
-	// Token: 0x0600F5FE RID: 62974
+	// Token: 0x0600CA1D RID: 51741
 	protected abstract void OnAddEvents();
 
-	// Token: 0x0600F5FF RID: 62975
+	// Token: 0x0600CA1E RID: 51742
 	protected abstract void OnRemoveEvents();
 
-	// Token: 0x0600F600 RID: 62976 RVA: 0x003B6260 File Offset: 0x003B4460
+	// Token: 0x0600CA1F RID: 51743 RVA: 0x003C1D4C File Offset: 0x003BFF4C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -130,7 +130,7 @@ public abstract class HudUnitHandleBase
 		return <NewHudUnit>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F601 RID: 62977 RVA: 0x003B62C4 File Offset: 0x003B44C4
+	// Token: 0x0600CA20 RID: 51744 RVA: 0x003C1DB0 File Offset: 0x003BFFB0
 	protected void NewHudUnitWithReturn<[Nullable(0)] T>(Type hudUnitClass, string resourceId, out T outHudUnit, bool showAfterCreate = true, [Nullable(new byte[]
 	{
 		2,
@@ -150,7 +150,7 @@ public abstract class HudUnitHandleBase
 		this.HudUnitSet.Add(hudUnitBase);
 	}
 
-	// Token: 0x0600F602 RID: 62978 RVA: 0x003B6332 File Offset: 0x003B4532
+	// Token: 0x0600CA21 RID: 51745 RVA: 0x003C1E1E File Offset: 0x003C001E
 	protected void DestroyHudUnit(HudUnitBase hudUnit)
 	{
 		if (hudUnit == null)
@@ -161,7 +161,7 @@ public abstract class HudUnitHandleBase
 		this.HudUnitSet.Remove(hudUnit);
 	}
 
-	// Token: 0x0600F603 RID: 62979 RVA: 0x003B634C File Offset: 0x003B454C
+	// Token: 0x0600CA22 RID: 51746 RVA: 0x003C1E38 File Offset: 0x003C0038
 	protected void DestroyAllHudUnit()
 	{
 		foreach (HudUnitBase hudUnitBase in this.HudUnitSet)
@@ -171,14 +171,14 @@ public abstract class HudUnitHandleBase
 		this.HudUnitSet.Clear();
 	}
 
-	// Token: 0x0600F604 RID: 62980 RVA: 0x003B63A8 File Offset: 0x003B45A8
+	// Token: 0x0600CA23 RID: 51747 RVA: 0x003C1E94 File Offset: 0x003C0094
 	protected void NewHudEntitySet()
 	{
 		this.HudEntitySet = new HudEntitySet();
 		this.HudEntitySet.Initialize();
 	}
 
-	// Token: 0x0600F605 RID: 62981 RVA: 0x003B63C0 File Offset: 0x003B45C0
+	// Token: 0x0600CA24 RID: 51748 RVA: 0x003C1EAC File Offset: 0x003C00AC
 	private float GetViewportSizeX()
 	{
 		int num = 0;
@@ -186,13 +186,13 @@ public abstract class HudUnitHandleBase
 		return (float)this.ViewportSizeX;
 	}
 
-	// Token: 0x0600F606 RID: 62982 RVA: 0x003B63E9 File Offset: 0x003B45E9
+	// Token: 0x0600CA25 RID: 51749 RVA: 0x003C1ED5 File Offset: 0x003C00D5
 	private FVector2D GetUiRootItemSize()
 	{
 		return new FVector2D(this.HudItem.GetWidth(), this.HudItem.GetHeight());
 	}
 
-	// Token: 0x0600F607 RID: 62983 RVA: 0x003B6408 File Offset: 0x003B4608
+	// Token: 0x0600CA26 RID: 51750 RVA: 0x003C1EF4 File Offset: 0x003C00F4
 	private FVector2D ClampToEllipse(FVector2D vector, float majorAxis, float minorAxis, bool isInScreen)
 	{
 		float x = vector.X;
@@ -205,7 +205,7 @@ public abstract class HudUnitHandleBase
 		return vector * scale;
 	}
 
-	// Token: 0x0600F608 RID: 62984 RVA: 0x003B6464 File Offset: 0x003B4664
+	// Token: 0x0600CA27 RID: 51751 RVA: 0x003C1F50 File Offset: 0x003C0150
 	protected FVector2D ScreenPositionToEllipsePosition(FVector2D screenPosition, bool isInScreen)
 	{
 		float viewportSizeX = this.GetViewportSizeX();
@@ -218,20 +218,20 @@ public abstract class HudUnitHandleBase
 		return fvector2D2 + this.Center;
 	}
 
-	// Token: 0x0600F609 RID: 62985 RVA: 0x003B64D7 File Offset: 0x003B46D7
+	// Token: 0x0600CA28 RID: 51752 RVA: 0x003C1FC3 File Offset: 0x003C01C3
 	private global::Vector GetTargetToPlayerVector(global::Vector playerLocation, global::Vector targetLocation)
 	{
 		targetLocation.Subtraction(playerLocation, this.TargetToPlayerVector);
 		return this.TargetToPlayerVector;
 	}
 
-	// Token: 0x0600F60A RID: 62986 RVA: 0x003B64F0 File Offset: 0x003B46F0
+	// Token: 0x0600CA29 RID: 51753 RVA: 0x003C1FDC File Offset: 0x003C01DC
 	private FVectorDouble GetCameraForwardVector()
 	{
 		return this.PlayerCameraManager.GetCameraRotation().VectorDouble();
 	}
 
-	// Token: 0x0600F60B RID: 62987 RVA: 0x003B6510 File Offset: 0x003B4710
+	// Token: 0x0600CA2A RID: 51754 RVA: 0x003C1FFC File Offset: 0x003C01FC
 	protected global::Vector GetProjectionToFrontPosition(global::Vector playerLocation, FVectorDouble targetLocation)
 	{
 		this.TargetLocation.Set(targetLocation.X, targetLocation.Y, targetLocation.Z);
@@ -245,7 +245,7 @@ public abstract class HudUnitHandleBase
 		return this.TargetLocation;
 	}
 
-	// Token: 0x0600F60C RID: 62988 RVA: 0x003B65AC File Offset: 0x003B47AC
+	// Token: 0x0600CA2B RID: 51755 RVA: 0x003C2098 File Offset: 0x003C0298
 	protected FVector2D? ProjectWorldToScreen(FVectorDouble worldLocation)
 	{
 		if (!UGameplayStatics.D_ProjectWorldToScreen(this.PlayerController, worldLocation, ref this.ScreenPositionRef, false))
@@ -255,7 +255,7 @@ public abstract class HudUnitHandleBase
 		return new FVector2D?(this.HudItem.GetCanvasScaler().ConvertPositionFromViewportToLGUICanvas(this.ScreenPositionRef));
 	}
 
-	// Token: 0x0600F60D RID: 62989 RVA: 0x003B65F4 File Offset: 0x003B47F4
+	// Token: 0x0600CA2C RID: 51756 RVA: 0x003C20E0 File Offset: 0x003C02E0
 	[NullableContext(0)]
 	protected ValueTuple<FVector2D, FVector2D?> GetInEllipsePosition([Nullable(1)] global::Vector playerLocation, FVectorDouble entityLocation)
 	{
@@ -273,58 +273,58 @@ public abstract class HudUnitHandleBase
 		return new ValueTuple<FVector2D, FVector2D?>(this.ScreenPositionToEllipsePosition(screenPosition, false), null);
 	}
 
-	// Token: 0x040071D0 RID: 29136
+	// Token: 0x040072B1 RID: 29361
 	private const float CenterY = 62.5f;
 
-	// Token: 0x040071D1 RID: 29137
+	// Token: 0x040072B2 RID: 29362
 	private readonly HashSet<HudUnitBase> HudUnitSet = new HashSet<HudUnitBase>();
 
-	// Token: 0x040071D2 RID: 29138
+	// Token: 0x040072B3 RID: 29363
 	[Nullable(2)]
 	protected HudEntitySet HudEntitySet;
 
-	// Token: 0x040071D3 RID: 29139
+	// Token: 0x040072B4 RID: 29364
 	[Nullable(2)]
 	private APlayerController PlayerController;
 
-	// Token: 0x040071D4 RID: 29140
+	// Token: 0x040072B5 RID: 29365
 	[Nullable(2)]
 	private APlayerCameraManager PlayerCameraManager;
 
-	// Token: 0x040071D5 RID: 29141
+	// Token: 0x040072B6 RID: 29366
 	private FVector2D ScreenPositionRef = new FVector2D();
 
-	// Token: 0x040071D6 RID: 29142
+	// Token: 0x040072B7 RID: 29367
 	[Nullable(2)]
 	private UUIItem HudItem;
 
-	// Token: 0x040071D7 RID: 29143
+	// Token: 0x040072B8 RID: 29368
 	private readonly global::Vector TargetLocation = global::Vector.Create();
 
-	// Token: 0x040071D8 RID: 29144
+	// Token: 0x040072B9 RID: 29369
 	private int ViewportSizeX;
 
-	// Token: 0x040071D9 RID: 29145
+	// Token: 0x040072BA RID: 29370
 	private readonly FVector2D PointTransport = new FVector2D(1f, -1f);
 
-	// Token: 0x040071DA RID: 29146
+	// Token: 0x040072BB RID: 29371
 	private float MajorAxis;
 
-	// Token: 0x040071DB RID: 29147
+	// Token: 0x040072BC RID: 29372
 	private float MinorAxis;
 
-	// Token: 0x040071DC RID: 29148
+	// Token: 0x040072BD RID: 29373
 	private readonly FVector2D Center = new FVector2D(0f, 62.5f);
 
-	// Token: 0x040071DD RID: 29149
+	// Token: 0x040072BE RID: 29374
 	private readonly global::Vector TargetToPlayerVector = global::Vector.Create();
 
-	// Token: 0x040071DE RID: 29150
+	// Token: 0x040072BF RID: 29375
 	private readonly global::Vector ProjectScreenLocation = global::Vector.Create();
 
-	// Token: 0x040071DF RID: 29151
+	// Token: 0x040072C0 RID: 29376
 	protected bool IsHudVisible;
 
-	// Token: 0x040071E0 RID: 29152
+	// Token: 0x040072C1 RID: 29377
 	protected bool IsDestroyed;
 }

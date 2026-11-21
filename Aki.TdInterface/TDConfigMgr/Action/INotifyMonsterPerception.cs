@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C62 RID: 7266
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E5B RID: 7771
 	public class INotifyMonsterPerception : ISendBattleStateType
 	{
-		// Token: 0x06009BD9 RID: 39897 RVA: 0x00165B50 File Offset: 0x00163D50
+		// Token: 0x0600A539 RID: 42297 RVA: 0x00178F4C File Offset: 0x0017714C
 		private INotifyMonsterPerception_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009BDA RID: 39898 RVA: 0x00165B88 File Offset: 0x00163D88
+		// Token: 0x0600A53A RID: 42298 RVA: 0x00178F84 File Offset: 0x00177184
 		public static INotifyMonsterPerception Create([Nullable(2)] INotifyMonsterPerception instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BDB RID: 39899 RVA: 0x00165B9B File Offset: 0x00163D9B
+		// Token: 0x0600A53B RID: 42299 RVA: 0x00178F97 File Offset: 0x00177197
 		public static INotifyMonsterPerception CreateFromSetValue([Nullable(2)] INotifyMonsterPerception_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BDC RID: 39900 RVA: 0x00165BAE File Offset: 0x00163DAE
+		// Token: 0x0600A53C RID: 42300 RVA: 0x00178FAA File Offset: 0x001771AA
 		public new INotifyMonsterPerception_SetValue ToSetValue()
 		{
 			return new INotifyMonsterPerception_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030B0 RID: 12464
-		// (get) Token: 0x06009BDD RID: 39901 RVA: 0x00165BD9 File Offset: 0x00163DD9
-		// (set) Token: 0x06009BDE RID: 39902 RVA: 0x00165C04 File Offset: 0x00163E04
+		// Token: 0x17003322 RID: 13090
+		// (get) Token: 0x0600A53D RID: 42301 RVA: 0x00178FD5 File Offset: 0x001771D5
+		// (set) Token: 0x0600A53E RID: 42302 RVA: 0x00179000 File Offset: 0x00177200
 		public override ESetBattleStateType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030B1 RID: 12465
-		// (get) Token: 0x06009BDF RID: 39903 RVA: 0x00165C12 File Offset: 0x00163E12
-		// (set) Token: 0x06009BE0 RID: 39904 RVA: 0x00165C39 File Offset: 0x00163E39
+		// Token: 0x17003323 RID: 13091
+		// (get) Token: 0x0600A53F RID: 42303 RVA: 0x0017900E File Offset: 0x0017720E
+		// (set) Token: 0x0600A540 RID: 42304 RVA: 0x00179035 File Offset: 0x00177235
 		public virtual List<int> EntityIds
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030B2 RID: 12466
-		// (get) Token: 0x06009BE1 RID: 39905 RVA: 0x00165C47 File Offset: 0x00163E47
-		// (set) Token: 0x06009BE2 RID: 39906 RVA: 0x00165C6E File Offset: 0x00163E6E
+		// Token: 0x17003324 RID: 13092
+		// (get) Token: 0x0600A541 RID: 42305 RVA: 0x00179043 File Offset: 0x00177243
+		// (set) Token: 0x0600A542 RID: 42306 RVA: 0x0017906A File Offset: 0x0017726A
 		public virtual IBattleStatePerceptionBehaviorType PerceptionBehaviorOption
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E95 RID: 24213
+		// Token: 0x040063CF RID: 25551
 		[Nullable(2)]
 		protected new INotifyMonsterPerception FbInstance;
 
-		// Token: 0x04005E96 RID: 24214
+		// Token: 0x040063D0 RID: 25552
 		[Nullable(2)]
 		protected new INotifyMonsterPerception_SetValue PocoInterface;
 	}

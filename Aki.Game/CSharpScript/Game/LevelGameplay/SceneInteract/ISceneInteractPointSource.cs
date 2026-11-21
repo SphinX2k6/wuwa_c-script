@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 {
-	// Token: 0x02006A78 RID: 27256
+	// Token: 0x02005BD5 RID: 23509
 	[NullableContext(1)]
 	public interface ISceneInteractPointSource
 	{
-		// Token: 0x06043C12 RID: 277522
+		// Token: 0x06039C60 RID: 236640
 		IReadOnlyList<ISceneInteractPoint> GetInteractPoints();
 	}
 }

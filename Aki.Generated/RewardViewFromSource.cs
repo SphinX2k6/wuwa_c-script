@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FBE RID: 4030
+	// Token: 0x020010A6 RID: 4262
 	public struct RewardViewFromSource : IFlatbufferObject
 	{
-		// Token: 0x17002E13 RID: 11795
-		// (get) Token: 0x0600BC12 RID: 48146 RVA: 0x002DE4E8 File Offset: 0x002DC6E8
+		// Token: 0x17002E8E RID: 11918
+		// (get) Token: 0x0600C25C RID: 49756 RVA: 0x002FAC00 File Offset: 0x002F8E00
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC13 RID: 48147 RVA: 0x002DE4F5 File Offset: 0x002DC6F5
+		// Token: 0x0600C25D RID: 49757 RVA: 0x002FAC0D File Offset: 0x002F8E0D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BC14 RID: 48148 RVA: 0x002DE4FC File Offset: 0x002DC6FC
+		// Token: 0x0600C25E RID: 49758 RVA: 0x002FAC14 File Offset: 0x002F8E14
 		public static RewardViewFromSource GetRootAsRewardViewFromSource(ByteBuffer _bb)
 		{
 			return RewardViewFromSource.GetRootAsRewardViewFromSource(_bb, default(RewardViewFromSource));
 		}
 
-		// Token: 0x0600BC15 RID: 48149 RVA: 0x002DE518 File Offset: 0x002DC718
+		// Token: 0x0600C25F RID: 49759 RVA: 0x002FAC30 File Offset: 0x002F8E30
 		public static RewardViewFromSource GetRootAsRewardViewFromSource(ByteBuffer _bb, RewardViewFromSource obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BC16 RID: 48150 RVA: 0x002DE535 File Offset: 0x002DC735
+		// Token: 0x0600C260 RID: 49760 RVA: 0x002FAC4D File Offset: 0x002F8E4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BC17 RID: 48151 RVA: 0x002DE544 File Offset: 0x002DC744
+		// Token: 0x0600C261 RID: 49761 RVA: 0x002FAC5C File Offset: 0x002F8E5C
 		public RewardViewFromSource __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002E14 RID: 11796
-		// (get) Token: 0x0600BC18 RID: 48152 RVA: 0x002DE554 File Offset: 0x002DC754
+		// Token: 0x17002E8F RID: 11919
+		// (get) Token: 0x0600C262 RID: 49762 RVA: 0x002FAC6C File Offset: 0x002F8E6C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E15 RID: 11797
-		// (get) Token: 0x0600BC19 RID: 48153 RVA: 0x002DE590 File Offset: 0x002DC790
+		// Token: 0x17002E90 RID: 11920
+		// (get) Token: 0x0600C263 RID: 49763 RVA: 0x002FACA8 File Offset: 0x002F8EA8
 		public int RewardSourceId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E16 RID: 11798
-		// (get) Token: 0x0600BC1A RID: 48154 RVA: 0x002DE5CC File Offset: 0x002DC7CC
+		// Token: 0x17002E91 RID: 11921
+		// (get) Token: 0x0600C264 RID: 49764 RVA: 0x002FACE4 File Offset: 0x002F8EE4
 		public int RewardViewId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E17 RID: 11799
-		// (get) Token: 0x0600BC1B RID: 48155 RVA: 0x002DE608 File Offset: 0x002DC808
+		// Token: 0x17002E92 RID: 11922
+		// (get) Token: 0x0600C265 RID: 49765 RVA: 0x002FAD20 File Offset: 0x002F8F20
 		public bool RewardNotifyNotTrick
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005098 RID: 20632
+		// Token: 0x04005680 RID: 22144
 		private Table __p;
 	}
 }

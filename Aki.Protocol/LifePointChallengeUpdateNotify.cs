@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000919 RID: 2329
+	// Token: 0x02000908 RID: 2312
 	[NetMessage(EMessageId.LifePointChallengeUpdateNotify)]
 	public sealed class LifePointChallengeUpdateNotify : IMessage<LifePointChallengeUpdateNotify>, IMessage, IEquatable<LifePointChallengeUpdateNotify>, IDeepCloneable<LifePointChallengeUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x0600CD86 RID: 52614 RVA: 0x001E47C5 File Offset: 0x001E29C5
+		// Token: 0x0600CC6A RID: 52330 RVA: 0x001E24F5 File Offset: 0x001E06F5
 		[NullableContext(1)]
 		public static LifePointChallengeUpdateNotify Create()
 		{
 			return new LifePointChallengeUpdateNotify();
 		}
 
-		// Token: 0x17002982 RID: 10626
-		// (get) Token: 0x0600CD87 RID: 52615 RVA: 0x001E47CC File Offset: 0x001E29CC
+		// Token: 0x17002943 RID: 10563
+		// (get) Token: 0x0600CC6B RID: 52331 RVA: 0x001E24FC File Offset: 0x001E06FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002983 RID: 10627
-		// (get) Token: 0x0600CD88 RID: 52616 RVA: 0x001E47CF File Offset: 0x001E29CF
+		// Token: 0x17002944 RID: 10564
+		// (get) Token: 0x0600CC6C RID: 52332 RVA: 0x001E24FF File Offset: 0x001E06FF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CD89 RID: 52617 RVA: 0x001E47D6 File Offset: 0x001E29D6
+		// Token: 0x0600CC6D RID: 52333 RVA: 0x001E2506 File Offset: 0x001E0706
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LifePointChallengeUpdateNotify()
 		{
 		}
 
-		// Token: 0x0600CD8A RID: 52618 RVA: 0x001E47E9 File Offset: 0x001E29E9
+		// Token: 0x0600CC6E RID: 52334 RVA: 0x001E2519 File Offset: 0x001E0719
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LifePointChallengeUpdateNotify(LifePointChallengeUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600CD8B RID: 52619 RVA: 0x001E4813 File Offset: 0x001E2A13
+		// Token: 0x0600CC6F RID: 52335 RVA: 0x001E2543 File Offset: 0x001E0743
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LifePointChallengeUpdateNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new LifePointChallengeUpdateNotify(this);
 		}
 
-		// Token: 0x17002984 RID: 10628
-		// (get) Token: 0x0600CD8C RID: 52620 RVA: 0x001E481B File Offset: 0x001E2A1B
+		// Token: 0x17002945 RID: 10565
+		// (get) Token: 0x0600CC70 RID: 52336 RVA: 0x001E254B File Offset: 0x001E074B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<LifePointChallengeData> Challenges
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CD8D RID: 52621 RVA: 0x001E4823 File Offset: 0x001E2A23
+		// Token: 0x0600CC71 RID: 52337 RVA: 0x001E2553 File Offset: 0x001E0753
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as LifePointChallengeUpdateNotify);
 		}
 
-		// Token: 0x0600CD8E RID: 52622 RVA: 0x001E4831 File Offset: 0x001E2A31
+		// Token: 0x0600CC72 RID: 52338 RVA: 0x001E2561 File Offset: 0x001E0761
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(LifePointChallengeUpdateNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.challenges_.Equals(other.challenges_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600CD8F RID: 52623 RVA: 0x001E4864 File Offset: 0x001E2A64
+		// Token: 0x0600CC73 RID: 52339 RVA: 0x001E2594 File Offset: 0x001E0794
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600CD90 RID: 52624 RVA: 0x001E4898 File Offset: 0x001E2A98
+		// Token: 0x0600CC74 RID: 52340 RVA: 0x001E25C8 File Offset: 0x001E07C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600CD91 RID: 52625 RVA: 0x001E48A5 File Offset: 0x001E2AA5
+		// Token: 0x0600CC75 RID: 52341 RVA: 0x001E25D5 File Offset: 0x001E07D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600CD92 RID: 52626 RVA: 0x001E48AE File Offset: 0x001E2AAE
+		// Token: 0x0600CC76 RID: 52342 RVA: 0x001E25DE File Offset: 0x001E07DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CD93 RID: 52627 RVA: 0x001E48D8 File Offset: 0x001E2AD8
+		// Token: 0x0600CC77 RID: 52343 RVA: 0x001E2608 File Offset: 0x001E0808
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600CD94 RID: 52628 RVA: 0x001E4911 File Offset: 0x001E2B11
+		// Token: 0x0600CC78 RID: 52344 RVA: 0x001E2641 File Offset: 0x001E0841
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(LifePointChallengeUpdateNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600CD95 RID: 52629 RVA: 0x001E493F File Offset: 0x001E2B3F
+		// Token: 0x0600CC79 RID: 52345 RVA: 0x001E266F File Offset: 0x001E086F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600CD96 RID: 52630 RVA: 0x001E4948 File Offset: 0x001E2B48
+		// Token: 0x0600CC7A RID: 52346 RVA: 0x001E2678 File Offset: 0x001E0878
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 90U)
+				if (num != 114U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040056FB RID: 22267
+		// Token: 0x04005702 RID: 22274
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040056FC RID: 22268
-		public const int ChallengesFieldNumber = 11;
+		// Token: 0x04005703 RID: 22275
+		public const int ChallengesFieldNumber = 14;
 
-		// Token: 0x040056FD RID: 22269
-		private static readonly FieldCodec<LifePointChallengeData> _repeated_challenges_codec = FieldCodec.ForMessage<LifePointChallengeData>(90U, LifePointChallengeData.Parser);
+		// Token: 0x04005704 RID: 22276
+		private static readonly FieldCodec<LifePointChallengeData> _repeated_challenges_codec = FieldCodec.ForMessage<LifePointChallengeData>(114U, LifePointChallengeData.Parser);
 
-		// Token: 0x040056FE RID: 22270
+		// Token: 0x04005705 RID: 22277
 		private readonly RepeatedField<LifePointChallengeData> challenges_ = new RepeatedField<LifePointChallengeData>();
 	}
 }

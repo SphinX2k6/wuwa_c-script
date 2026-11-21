@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02003532 RID: 13618
+// Token: 0x02002AA7 RID: 10919
 public class AsyncTask : TaskBase
 {
-	// Token: 0x0601DED7 RID: 122583 RVA: 0x00863A1B File Offset: 0x00861C1B
+	// Token: 0x0601BBFF RID: 113663 RVA: 0x0088B653 File Offset: 0x00889853
 	[NullableContext(2)]
 	public AsyncTask([Nullable(1)] string name, [Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ public class AsyncTask : TaskBase
 		this.RunHandle = runHandle;
 	}
 
-	// Token: 0x0601DED8 RID: 122584 RVA: 0x00863A30 File Offset: 0x00861C30
+	// Token: 0x0601BC00 RID: 113664 RVA: 0x0088B668 File Offset: 0x00889868
 	protected override UniTask<bool> OnRun()
 	{
 		AsyncTask.<OnRun>d__2 <OnRun>d__;
@@ -28,7 +28,7 @@ public class AsyncTask : TaskBase
 		return <OnRun>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400EB19 RID: 60185
+	// Token: 0x0400EFD6 RID: 61398
 	[Nullable(new byte[]
 	{
 		1,

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000739 RID: 1849
+	// Token: 0x02000751 RID: 1873
 	public class ConfigPinballWeaponQualityById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002B66 RID: 11110 RVA: 0x0014ECD8 File Offset: 0x0014CED8
+		// Token: 0x06002BF6 RID: 11254 RVA: 0x00155754 File Offset: 0x00153954
 		static ConfigPinballWeaponQualityById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPinballWeaponQualityById.CreateStaticDefaultValue), new Action(ConfigPinballWeaponQualityById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002B67 RID: 11111 RVA: 0x0014ECF8 File Offset: 0x0014CEF8
+		// Token: 0x06002BF7 RID: 11255 RVA: 0x00155774 File Offset: 0x00153974
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPinballWeaponQualityById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002B68 RID: 11112 RVA: 0x0014ED77 File Offset: 0x0014CF77
+		// Token: 0x06002BF8 RID: 11256 RVA: 0x001557F3 File Offset: 0x001539F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPinballWeaponQualityById.LogPair = null;
 			ConfigPinballWeaponQualityById.HandleId = 0;
 		}
 
-		// Token: 0x06002B69 RID: 11113 RVA: 0x0014ED85 File Offset: 0x0014CF85
+		// Token: 0x06002BF9 RID: 11257 RVA: 0x00155801 File Offset: 0x00153A01
 		public static void Init()
 		{
 			ConfigPinballWeaponQualityById.HandleId = ConfigCommon.InitDataStatement(ConfigPinballWeaponQualityById.HandleId, "db_pinballbattle.db", "select BinData from `PinballWeaponQuality` where Id=?");
 		}
 
-		// Token: 0x06002B6A RID: 11114 RVA: 0x0014EDA0 File Offset: 0x0014CFA0
+		// Token: 0x06002BFA RID: 11258 RVA: 0x0015581C File Offset: 0x00153A1C
 		public static PinballWeaponQuality? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPinballWeaponQualityById.HandleId, ConfigPinballWeaponQualityById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PinballWeaponQuality?(rootAsPinballWeaponQuality);
 		}
 
-		// Token: 0x04003275 RID: 12917
+		// Token: 0x0400331D RID: 13085
 		private const string DB = "db_pinballbattle.db";
 
-		// Token: 0x04003276 RID: 12918
+		// Token: 0x0400331E RID: 13086
 		private const string FILE = "x.星弹奇游_武器.xlsx";
 
-		// Token: 0x04003277 RID: 12919
+		// Token: 0x0400331F RID: 13087
 		private const string TABLE = "PinballWeaponQuality";
 
-		// Token: 0x04003278 RID: 12920
+		// Token: 0x04003320 RID: 13088
 		private const string COMMAND = "select BinData from `PinballWeaponQuality` where Id=?";
 
-		// Token: 0x04003279 RID: 12921
+		// Token: 0x04003321 RID: 13089
 		private const string KEY_PREFIX = "PinballWeaponQualityById";
 
-		// Token: 0x0400327A RID: 12922
+		// Token: 0x04003322 RID: 13090
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400327B RID: 12923
+		// Token: 0x04003323 RID: 13091
 		private static int HandleId;
 	}
 }

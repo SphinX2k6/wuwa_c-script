@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CF0 RID: 23792
+	// Token: 0x02006324 RID: 25380
 	public enum EFollowShooterType : byte
 	{
-		// Token: 0x0400F62C RID: 63020
+		// Token: 0x0401037B RID: 66427
 		JellyFish
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008F2 RID: 2290
+	// Token: 0x0200099B RID: 2459
 	public static class EAnimalModelTypeExtensions
 	{
-		// Token: 0x060033F2 RID: 13298 RVA: 0x00084CE4 File Offset: 0x00082EE4
+		// Token: 0x0600374C RID: 14156 RVA: 0x0008C510 File Offset: 0x0008A710
 		public static string ToEnumString(this EAnimalModelType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033F3 RID: 13299 RVA: 0x00084D0C File Offset: 0x00082F0C
+		// Token: 0x0600374D RID: 14157 RVA: 0x0008C538 File Offset: 0x0008A738
 		public static EAnimalModelType FromString(string name)
 		{
 			EAnimalModelType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033F4 RID: 13300 RVA: 0x00084D35 File Offset: 0x00082F35
+		// Token: 0x0600374E RID: 14158 RVA: 0x0008C561 File Offset: 0x0008A761
 		public static bool TryFromString(string name, out EAnimalModelType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060033F5 RID: 13301 RVA: 0x00084D5A File Offset: 0x00082F5A
+		// Token: 0x0600374F RID: 14159 RVA: 0x0008C586 File Offset: 0x0008A786
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033F6 RID: 13302 RVA: 0x00084D6A File Offset: 0x00082F6A
+		// Token: 0x06003750 RID: 14160 RVA: 0x0008C596 File Offset: 0x0008A796
 		public static EAnimalModelType[] GetValues()
 		{
 			return new EAnimalModelType[1];
 		}
 
-		// Token: 0x060033F7 RID: 13303 RVA: 0x00084D72 File Offset: 0x00082F72
+		// Token: 0x06003751 RID: 14161 RVA: 0x0008C59E File Offset: 0x0008A79E
 		public static string[] GetNames()
 		{
 			return new string[]

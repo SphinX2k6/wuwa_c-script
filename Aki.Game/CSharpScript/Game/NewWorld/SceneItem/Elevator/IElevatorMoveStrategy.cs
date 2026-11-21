@@ -4,41 +4,41 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 {
-	// Token: 0x02007205 RID: 29189
+	// Token: 0x020062BA RID: 25274
 	[NullableContext(1)]
 	public interface IElevatorMoveStrategy
 	{
-		// Token: 0x0604775D RID: 292701
+		// Token: 0x0603D06E RID: 249966
 		void InitFromConfig(LiftComponent config, ElevatorContext ctx, float initLocationX, float initLocationY, float initLocationZ);
 
-		// Token: 0x0604775E RID: 292702
+		// Token: 0x0603D06F RID: 249967
 		void OnInit();
 
-		// Token: 0x0604775F RID: 292703
+		// Token: 0x0603D070 RID: 249968
 		void OnStart(Action tryStartAutoRun);
 
-		// Token: 0x06047760 RID: 292704
+		// Token: 0x0603D071 RID: 249969
 		void OnClear();
 
-		// Token: 0x06047761 RID: 292705
+		// Token: 0x0603D072 RID: 249970
 		void OnEnterMovePhase();
 
-		// Token: 0x06047762 RID: 292706
+		// Token: 0x0603D073 RID: 249971
 		void TickMove(float deltaSeconds);
 
-		// Token: 0x06047763 RID: 292707
+		// Token: 0x0603D074 RID: 249972
 		void CheckAndFinishMove(Action onMoveArrived);
 
-		// Token: 0x06047764 RID: 292708
+		// Token: 0x0603D075 RID: 249973
 		void PrepareMoveToFloor(Action onReady);
 
-		// Token: 0x06047765 RID: 292709
+		// Token: 0x0603D076 RID: 249974
 		bool OnBeforeEnterMoving();
 
-		// Token: 0x06047766 RID: 292710
+		// Token: 0x0603D077 RID: 249975
 		int GetFloorCount();
 
-		// Token: 0x06047767 RID: 292711
+		// Token: 0x0603D078 RID: 249976
 		float GetMoveDuration();
 	}
 }

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001896 RID: 6294
+	// Token: 0x020003B9 RID: 953
 	public sealed class FEffectAudioControllerAddPlayEffectAudioRetVal : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060172D0 RID: 94928 RVA: 0x0021CB7D File Offset: 0x0021AD7D
+		// Token: 0x06005D7B RID: 23931 RVA: 0x00084019 File Offset: 0x00082219
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FEffectAudioControllerAddPlayEffectAudioRetVal.StaticFunctionPtr();
 		}
 
-		// Token: 0x060172D1 RID: 94929 RVA: 0x0021CB89 File Offset: 0x0021AD89
+		// Token: 0x06005D7C RID: 23932 RVA: 0x00084025 File Offset: 0x00082225
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FEffectAudioControllerAddPlayEffectAudioRetVal._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FEffectAudioControllerAddPlayEffectAudioRetVal._FunctionPtr;
 		}
 
-		// Token: 0x060172D2 RID: 94930 RVA: 0x0021CBAC File Offset: 0x0021ADAC
+		// Token: 0x06005D7D RID: 23933 RVA: 0x00084048 File Offset: 0x00082248
 		public FEffectAudioControllerAddPlayEffectAudioRetVal()
 		{
 		}
 
-		// Token: 0x060172D3 RID: 94931 RVA: 0x0021CBB4 File Offset: 0x0021ADB4
+		// Token: 0x06005D7E RID: 23934 RVA: 0x00084050 File Offset: 0x00082250
 		[NullableContext(2)]
 		public FEffectAudioControllerAddPlayEffectAudioRetVal(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060172D4 RID: 94932 RVA: 0x0021CBBE File Offset: 0x0021ADBE
+		// Token: 0x06005D7F RID: 23935 RVA: 0x0008405A File Offset: 0x0008225A
 		public FEffectAudioControllerAddPlayEffectAudioRetVal(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060172D5 RID: 94933 RVA: 0x0021CBC9 File Offset: 0x0021ADC9
+		// Token: 0x06005D80 RID: 23936 RVA: 0x00084065 File Offset: 0x00082265
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<UEffectModelAudio, AActor, int, int>) ?? ((Func<UEffectModelAudio, AActor, int, int>)Delegate.CreateDelegate(typeof(Func<UEffectModelAudio, AActor, int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060172D6 RID: 94934 RVA: 0x0021CBFB File Offset: 0x0021ADFB
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06005D81 RID: 23937 RVA: 0x00084097 File Offset: 0x00082297
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -69,10 +68,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FEffectAudioControllerAddPlayEffectAudioRetVal.RegisterId);
 		}
 
-		// Token: 0x060172D7 RID: 94935 RVA: 0x0021CC38 File Offset: 0x0021AE38
+		// Token: 0x06005D82 RID: 23938 RVA: 0x000840D4 File Offset: 0x000822D4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int Execute(UEffectModelAudio EffectModel, AActor EffectActor, int EffectType)
 		{
 			FEffectAudioControllerAddPlayEffectAudioRetVal.__FEffectAudioControllerAddPlayEffectAudioRetVal_DelegateParams* ptr = stackalloc FEffectAudioControllerAddPlayEffectAudioRetVal.__FEffectAudioControllerAddPlayEffectAudioRetVal_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FEffectAudioControllerAddPlayEffectAudioRetVal.__FEffectAudioControllerAddPlayEffectAudioRetVal_DelegateParams) & -16L;
@@ -84,10 +82,9 @@ namespace UnrealEngine
 			return ptr->__Result;
 		}
 
-		// Token: 0x060172D8 RID: 94936 RVA: 0x0021CCA8 File Offset: 0x0021AEA8
+		// Token: 0x06005D83 RID: 23939 RVA: 0x00084144 File Offset: 0x00082344
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<UEffectModelAudio, AActor, int, int> func = target as Func<UEffectModelAudio, AActor, int, int>;
@@ -101,43 +98,43 @@ namespace UnrealEngine
 			((FEffectAudioControllerAddPlayEffectAudioRetVal.__FEffectAudioControllerAddPlayEffectAudioRetVal_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x0400C928 RID: 51496
+		// Token: 0x040026F7 RID: 9975
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C929 RID: 51497
+		// Token: 0x040026F8 RID: 9976
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.EffectAudioControllerAddPlayEffectAudioRetVal__DelegateSignature";
 
-		// Token: 0x0400C92A RID: 51498
+		// Token: 0x040026F9 RID: 9977
 		private static int RegisterId;
 
-		// Token: 0x02002F99 RID: 12185
+		// Token: 0x02000ABC RID: 2748
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FEffectAudioControllerAddPlayEffectAudioRetVal_DelegateParams
+		private ref struct __FEffectAudioControllerAddPlayEffectAudioRetVal_DelegateParams
 		{
-			// Token: 0x04016B6A RID: 93034
+			// Token: 0x04005B27 RID: 23335
 			[FieldOffset(0)]
 			public IntPtr EffectModel;
 
-			// Token: 0x04016B6B RID: 93035
+			// Token: 0x04005B28 RID: 23336
 			[FieldOffset(8)]
 			public IntPtr EffectActor;
 
-			// Token: 0x04016B6C RID: 93036
+			// Token: 0x04005B29 RID: 23337
 			[FieldOffset(16)]
 			public int EffectType;
 
-			// Token: 0x04016B6D RID: 93037
+			// Token: 0x04005B2A RID: 23338
 			[FieldOffset(20)]
 			public int __Result;
 		}
 
-		// Token: 0x02002F9A RID: 12186
+		// Token: 0x02000ABD RID: 2749
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B6E RID: 93038
+			// Token: 0x04005B2B RID: 23339
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

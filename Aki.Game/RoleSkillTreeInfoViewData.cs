@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleUi.RoleSkill;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020028AC RID: 10412
+// Token: 0x02001E27 RID: 7719
 public class RoleSkillTreeInfoViewData : UiPopViewData, IRoleSkillTreeInfoItemData
 {
-	// Token: 0x17001CD7 RID: 7383
-	// (get) Token: 0x060157A6 RID: 87974 RVA: 0x0056ABF2 File Offset: 0x00568DF2
-	// (set) Token: 0x060157A7 RID: 87975 RVA: 0x0056ABFA File Offset: 0x00568DFA
+	// Token: 0x17001D2F RID: 7471
+	// (get) Token: 0x060131A6 RID: 78246 RVA: 0x00595A3A File Offset: 0x00593C3A
+	// (set) Token: 0x060131A7 RID: 78247 RVA: 0x00595A42 File Offset: 0x00593C42
 	public int RoleId { get; set; }
 
-	// Token: 0x17001CD8 RID: 7384
-	// (get) Token: 0x060157A8 RID: 87976 RVA: 0x0056AC03 File Offset: 0x00568E03
-	// (set) Token: 0x060157A9 RID: 87977 RVA: 0x0056AC0B File Offset: 0x00568E0B
+	// Token: 0x17001D30 RID: 7472
+	// (get) Token: 0x060131A8 RID: 78248 RVA: 0x00595A4B File Offset: 0x00593C4B
+	// (set) Token: 0x060131A9 RID: 78249 RVA: 0x00595A53 File Offset: 0x00593C53
 	public int SkillNodeId { get; set; }
 
-	// Token: 0x0400A023 RID: 40995
+	// Token: 0x0400A40C RID: 41996
 	[Nullable(2)]
 	public RoleViewAgent RoleViewAgent;
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C67 RID: 7271
+	// Token: 0x02001E60 RID: 7776
 	public class INpcExitCurrentInteract_SetValue
 	{
-		// Token: 0x04005EA2 RID: 24226
+		// Token: 0x040063DC RID: 25564
 		public ENpcLeisureInteract Type;
 
-		// Token: 0x04005EA3 RID: 24227
+		// Token: 0x040063DD RID: 25565
 		public bool? KeepState;
 	}
 }

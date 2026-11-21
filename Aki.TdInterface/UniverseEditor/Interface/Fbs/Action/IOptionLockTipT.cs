@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C4C RID: 27724
+	// Token: 0x020073B3 RID: 29619
 	public class IOptionLockTipT
 	{
-		// Token: 0x1700CE7C RID: 52860
-		// (get) Token: 0x06030D81 RID: 200065 RVA: 0x006A2984 File Offset: 0x006A0B84
-		// (set) Token: 0x06030D82 RID: 200066 RVA: 0x006A298C File Offset: 0x006A0B8C
+		// Token: 0x1700D997 RID: 55703
+		// (get) Token: 0x06033CDC RID: 212188 RVA: 0x006FCE84 File Offset: 0x006FB084
+		// (set) Token: 0x06033CDD RID: 212189 RVA: 0x006FCE8C File Offset: 0x006FB08C
 		public string TidAppendText { get; set; }
 
-		// Token: 0x1700CE7D RID: 52861
-		// (get) Token: 0x06030D83 RID: 200067 RVA: 0x006A2995 File Offset: 0x006A0B95
-		// (set) Token: 0x06030D84 RID: 200068 RVA: 0x006A299D File Offset: 0x006A0B9D
+		// Token: 0x1700D998 RID: 55704
+		// (get) Token: 0x06033CDE RID: 212190 RVA: 0x006FCE95 File Offset: 0x006FB095
+		// (set) Token: 0x06033CDF RID: 212191 RVA: 0x006FCE9D File Offset: 0x006FB09D
 		public string TidHintText { get; set; }
 
-		// Token: 0x1700CE7E RID: 52862
-		// (get) Token: 0x06030D85 RID: 200069 RVA: 0x006A29A6 File Offset: 0x006A0BA6
-		// (set) Token: 0x06030D86 RID: 200070 RVA: 0x006A29AE File Offset: 0x006A0BAE
+		// Token: 0x1700D999 RID: 55705
+		// (get) Token: 0x06033CE0 RID: 212192 RVA: 0x006FCEA6 File Offset: 0x006FB0A6
+		// (set) Token: 0x06033CE1 RID: 212193 RVA: 0x006FCEAE File Offset: 0x006FB0AE
 		public int AppendTextId { get; set; }
 
-		// Token: 0x1700CE7F RID: 52863
-		// (get) Token: 0x06030D87 RID: 200071 RVA: 0x006A29B7 File Offset: 0x006A0BB7
-		// (set) Token: 0x06030D88 RID: 200072 RVA: 0x006A29BF File Offset: 0x006A0BBF
+		// Token: 0x1700D99A RID: 55706
+		// (get) Token: 0x06033CE2 RID: 212194 RVA: 0x006FCEB7 File Offset: 0x006FB0B7
+		// (set) Token: 0x06033CE3 RID: 212195 RVA: 0x006FCEBF File Offset: 0x006FB0BF
 		public int HintTextId { get; set; }
 
-		// Token: 0x1700CE80 RID: 52864
-		// (get) Token: 0x06030D89 RID: 200073 RVA: 0x006A29C8 File Offset: 0x006A0BC8
-		// (set) Token: 0x06030D8A RID: 200074 RVA: 0x006A29D0 File Offset: 0x006A0BD0
+		// Token: 0x1700D99B RID: 55707
+		// (get) Token: 0x06033CE4 RID: 212196 RVA: 0x006FCEC8 File Offset: 0x006FB0C8
+		// (set) Token: 0x06033CE5 RID: 212197 RVA: 0x006FCED0 File Offset: 0x006FB0D0
 		public byte NullMask { get; set; }
 
-		// Token: 0x06030D8B RID: 200075 RVA: 0x006A29D9 File Offset: 0x006A0BD9
+		// Token: 0x06033CE6 RID: 212198 RVA: 0x006FCED9 File Offset: 0x006FB0D9
 		public IOptionLockTipT()
 		{
 			this.TidAppendText = null;

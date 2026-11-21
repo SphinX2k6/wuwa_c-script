@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F4E RID: 12110
+// Token: 0x020024A1 RID: 9377
 [NullableContext(1)]
 [Nullable(0)]
 public class AdditionBulletDuration : BuffEffect
 {
-	// Token: 0x06019C6E RID: 105582 RVA: 0x006B8926 File Offset: 0x006B6B26
+	// Token: 0x06017579 RID: 95609 RVA: 0x006DEC42 File Offset: 0x006DCE42
 	public AdditionBulletDuration(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C6F RID: 105583 RVA: 0x006B8940 File Offset: 0x006B6B40
+	// Token: 0x0601757A RID: 95610 RVA: 0x006DEC5C File Offset: 0x006DCE5C
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C70 RID: 105584 RVA: 0x006B8944 File Offset: 0x006B6B44
+	// Token: 0x0601757B RID: 95611 RVA: 0x006DEC60 File Offset: 0x006DCE60
 	protected unsafe override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -50,7 +50,7 @@ public class AdditionBulletDuration : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C71 RID: 105585 RVA: 0x006B8A4C File Offset: 0x006B6C4C
+	// Token: 0x0601757C RID: 95612 RVA: 0x006DED68 File Offset: 0x006DCF68
 	public float GetBulletDuration(string bulletRowName)
 	{
 		float valueOrDefault = this.BulletDurationMap.GetValueOrDefault(bulletRowName, 0f);
@@ -58,7 +58,7 @@ public class AdditionBulletDuration : BuffEffect
 		return valueOrDefault * (float)stackCount;
 	}
 
-	// Token: 0x06019C72 RID: 105586 RVA: 0x006B8A7C File Offset: 0x006B6C7C
+	// Token: 0x0601757D RID: 95613 RVA: 0x006DED98 File Offset: 0x006DCF98
 	public static float ApplyEffects(Entity ownerEntity, string bulletRowName)
 	{
 		float num = 0f;
@@ -95,15 +95,15 @@ public class AdditionBulletDuration : BuffEffect
 		return num;
 	}
 
-	// Token: 0x0400C251 RID: 49745
+	// Token: 0x0400C5F3 RID: 50675
 	private const int DURATION_SCALE_PARAMS_LEN = 2;
 
-	// Token: 0x0400C252 RID: 49746
+	// Token: 0x0400C5F4 RID: 50676
 	private const int DURATION_SCALE_INDEX_BULLETROWNAME = 0;
 
-	// Token: 0x0400C253 RID: 49747
+	// Token: 0x0400C5F5 RID: 50677
 	private const int DURATION_SCALE_INDEX_DURATION = 1;
 
-	// Token: 0x0400C254 RID: 49748
+	// Token: 0x0400C5F6 RID: 50678
 	private readonly Dictionary<string, float> BulletDurationMap = new Dictionary<string, float>();
 }

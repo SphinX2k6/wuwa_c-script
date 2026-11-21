@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004ED0 RID: 20176
+	// Token: 0x020053FF RID: 21503
 	public static class IAudioControlType_UnionVerify
 	{
-		// Token: 0x0601FCC2 RID: 130242 RVA: 0x0046CFC4 File Offset: 0x0046B1C4
+		// Token: 0x06021A06 RID: 137734 RVA: 0x004A2D94 File Offset: 0x004A0F94
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

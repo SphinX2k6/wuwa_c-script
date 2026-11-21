@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029CF RID: 10703
+// Token: 0x02001F4A RID: 8010
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class ShipTowerScoreTargetItem : GridProxyAbstract<ShipTowerScoreTargetData>
 {
-	// Token: 0x060162EC RID: 90860 RVA: 0x0059C478 File Offset: 0x0059A678
+	// Token: 0x06013CF2 RID: 81138 RVA: 0x005C7430 File Offset: 0x005C5630
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class ShipTowerScoreTargetItem : GridProxyAbstract<ShipTowerScoreTargetDa
 		};
 	}
 
-	// Token: 0x060162ED RID: 90861 RVA: 0x0059C514 File Offset: 0x0059A714
+	// Token: 0x06013CF3 RID: 81139 RVA: 0x005C74CC File Offset: 0x005C56CC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerScoreTargetItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -39,22 +39,22 @@ public class ShipTowerScoreTargetItem : GridProxyAbstract<ShipTowerScoreTargetDa
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060162EE RID: 90862 RVA: 0x0059C557 File Offset: 0x0059A757
+	// Token: 0x06013CF4 RID: 81140 RVA: 0x005C750F File Offset: 0x005C570F
 	protected override void OnBeforeCreate()
 	{
 	}
 
-	// Token: 0x060162EF RID: 90863 RVA: 0x0059C559 File Offset: 0x0059A759
+	// Token: 0x06013CF5 RID: 81141 RVA: 0x005C7511 File Offset: 0x005C5711
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x060162F0 RID: 90864 RVA: 0x0059C55B File Offset: 0x0059A75B
+	// Token: 0x06013CF6 RID: 81142 RVA: 0x005C7513 File Offset: 0x005C5713
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x060162F1 RID: 90865 RVA: 0x0059C560 File Offset: 0x0059A760
+	// Token: 0x06013CF7 RID: 81143 RVA: 0x005C7518 File Offset: 0x005C5718
 	[NullableContext(1)]
 	public override void Refresh(ShipTowerScoreTargetData data, bool isSelected, int gridIndex)
 	{
@@ -66,7 +66,7 @@ public class ShipTowerScoreTargetItem : GridProxyAbstract<ShipTowerScoreTargetDa
 		this.UpdateGrade();
 	}
 
-	// Token: 0x060162F2 RID: 90866 RVA: 0x0059C5E0 File Offset: 0x0059A7E0
+	// Token: 0x06013CF8 RID: 81144 RVA: 0x005C7598 File Offset: 0x005C5798
 	private void UpdateGrade()
 	{
 		ShipTowerScoreTargetData itemData = this.ItemData;
@@ -79,29 +79,29 @@ public class ShipTowerScoreTargetItem : GridProxyAbstract<ShipTowerScoreTargetDa
 		}
 	}
 
-	// Token: 0x0400A52B RID: 42283
+	// Token: 0x0400A915 RID: 43285
 	[Nullable(2)]
 	private ShipTowerScoreTargetData ItemData;
 
-	// Token: 0x02008FF5 RID: 36853
+	// Token: 0x0200823C RID: 33340
 	private static class EChildType
 	{
-		// Token: 0x0402E9D7 RID: 190935
+		// Token: 0x0402A0CF RID: 172239
 		public const int SpriteUnFinish = 0;
 
-		// Token: 0x0402E9D8 RID: 190936
+		// Token: 0x0402A0D0 RID: 172240
 		public const int SpriteFinish = 1;
 
-		// Token: 0x0402E9D9 RID: 190937
+		// Token: 0x0402A0D1 RID: 172241
 		public const int TxtTitle = 2;
 
-		// Token: 0x0402E9DA RID: 190938
+		// Token: 0x0402A0D2 RID: 172242
 		public const int TxtScore = 3;
 
-		// Token: 0x0402E9DB RID: 190939
+		// Token: 0x0402A0D3 RID: 172243
 		public const int ItemGradeRoot = 4;
 
-		// Token: 0x0402E9DC RID: 190940
+		// Token: 0x0402A0D4 RID: 172244
 		public const int TextureGrade = 5;
 	}
 }

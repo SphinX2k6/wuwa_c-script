@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200261B RID: 9755
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028DB RID: 10459
 	public class AddFlowInteractOption : ActionParams
 	{
-		// Token: 0x0600DB06 RID: 56070 RVA: 0x00209FEE File Offset: 0x002081EE
+		// Token: 0x0600E8D4 RID: 59604 RVA: 0x002267BA File Offset: 0x002249BA
 		public static AddFlowInteractOption Create(IAddFlowInteractOption? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004092 RID: 16530
-		// (get) Token: 0x0600DB07 RID: 56071 RVA: 0x0020A00D File Offset: 0x0020820D
+		// Token: 0x170043CC RID: 17356
+		// (get) Token: 0x0600E8D5 RID: 59605 RVA: 0x002267D9 File Offset: 0x002249D9
 		public virtual IInteractOption Option
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004093 RID: 16531
-		// (get) Token: 0x0600DB08 RID: 56072 RVA: 0x0020A041 File Offset: 0x00208241
+		// Token: 0x170043CD RID: 17357
+		// (get) Token: 0x0600E8D6 RID: 59606 RVA: 0x0022680D File Offset: 0x00224A0D
 		public virtual int EntityId
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004094 RID: 16532
-		// (get) Token: 0x0600DB09 RID: 56073 RVA: 0x0020A050 File Offset: 0x00208250
+		// Token: 0x170043CE RID: 17358
+		// (get) Token: 0x0600E8D7 RID: 59607 RVA: 0x0022681C File Offset: 0x00224A1C
 		public virtual bool? DelayRemoveByQuestEnd
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004095 RID: 16533
-		// (get) Token: 0x0600DB0A RID: 56074 RVA: 0x0020A086 File Offset: 0x00208286
+		// Token: 0x170043CF RID: 17359
+		// (get) Token: 0x0600E8D8 RID: 59608 RVA: 0x00226852 File Offset: 0x00224A52
 		[Nullable(2)]
 		public virtual string InteractToken
 		{
@@ -74,14 +72,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079B1 RID: 31153
+		// Token: 0x0400804D RID: 32845
 		private IAddFlowInteractOption Instance;
 
-		// Token: 0x040079B2 RID: 31154
+		// Token: 0x0400804E RID: 32846
 		[Nullable(2)]
 		private IInteractOption _OptionCache;
 
-		// Token: 0x040079B3 RID: 31155
+		// Token: 0x0400804F RID: 32847
 		private bool _OptionInited;
 	}
 }

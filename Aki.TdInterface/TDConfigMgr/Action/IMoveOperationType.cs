@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C34 RID: 7220
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E2B RID: 7723
 	[JsonConverter(typeof(IMoveOperationTypeConverter))]
 	public class IMoveOperationType
 	{
-		// Token: 0x06009AE7 RID: 39655 RVA: 0x00164100 File Offset: 0x00162300
+		// Token: 0x0600A43F RID: 42047 RVA: 0x00177440 File Offset: 0x00175640
 		private IMoveOperationType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009AE8 RID: 39656 RVA: 0x00164138 File Offset: 0x00162338
+		// Token: 0x0600A440 RID: 42048 RVA: 0x00177478 File Offset: 0x00175678
 		public static IMoveOperationType Create([Nullable(2)] IMoveOperationType instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AE9 RID: 39657 RVA: 0x0016414B File Offset: 0x0016234B
+		// Token: 0x0600A441 RID: 42049 RVA: 0x0017748B File Offset: 0x0017568B
 		public static IMoveOperationType CreateFromSetValue([Nullable(2)] IMoveOperationType_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AEA RID: 39658 RVA: 0x0016415E File Offset: 0x0016235E
+		// Token: 0x0600A442 RID: 42050 RVA: 0x0017749E File Offset: 0x0017569E
 		public IMoveOperationType_SetValue ToSetValue()
 		{
 			return new IMoveOperationType_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700307C RID: 12412
-		// (get) Token: 0x06009AEB RID: 39659 RVA: 0x00164171 File Offset: 0x00162371
-		// (set) Token: 0x06009AEC RID: 39660 RVA: 0x0016419C File Offset: 0x0016239C
+		// Token: 0x170032ED RID: 13037
+		// (get) Token: 0x0600A443 RID: 42051 RVA: 0x001774B1 File Offset: 0x001756B1
+		// (set) Token: 0x0600A444 RID: 42052 RVA: 0x001774DC File Offset: 0x001756DC
 		public virtual EMoveOperationType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E29 RID: 24105
+		// Token: 0x04006360 RID: 25440
 		[Nullable(2)]
 		protected IMoveOperationType FbInstance;
 
-		// Token: 0x04005E2A RID: 24106
+		// Token: 0x04006361 RID: 25441
 		[Nullable(2)]
 		protected IMoveOperationType_SetValue PocoInterface;
 	}

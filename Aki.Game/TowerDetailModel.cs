@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002BDC RID: 11228
+// Token: 0x02002157 RID: 8535
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class TowerDetailModel : ModelBase
 {
-	// Token: 0x060174E6 RID: 95462 RVA: 0x005ECB24 File Offset: 0x005EAD24
+	// Token: 0x06014F17 RID: 85783 RVA: 0x00619660 File Offset: 0x00617860
 	public void AddSwitchData(int index, string name)
 	{
 		TowerSwitchData towerSwitchData = new TowerSwitchData();
@@ -19,7 +19,7 @@ public class TowerDetailModel : ModelBase
 		this.SwitchData.Add(towerSwitchData);
 	}
 
-	// Token: 0x060174E7 RID: 95463 RVA: 0x005ECB74 File Offset: 0x005EAD74
+	// Token: 0x06014F18 RID: 85784 RVA: 0x006196B0 File Offset: 0x006178B0
 	public void AddBuff(int index, List<TowerDetailBuff> buffs, string title, int priority)
 	{
 		TowerDetailBuffData towerDetailBuffData = new TowerDetailBuffData();
@@ -37,7 +37,7 @@ public class TowerDetailModel : ModelBase
 		}
 	}
 
-	// Token: 0x060174E8 RID: 95464 RVA: 0x005ECBE0 File Offset: 0x005EADE0
+	// Token: 0x06014F19 RID: 85785 RVA: 0x0061971C File Offset: 0x0061791C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -53,7 +53,7 @@ public class TowerDetailModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060174E9 RID: 95465 RVA: 0x005ECC00 File Offset: 0x005EAE00
+	// Token: 0x06014F1A RID: 85786 RVA: 0x0061973C File Offset: 0x0061793C
 	public void AddMonster(int index, List<TowerDetailMonster> towerDetailMonster, string title, int priority)
 	{
 		TowerDetailMonsterData towerDetailMonsterData = new TowerDetailMonsterData();
@@ -71,7 +71,7 @@ public class TowerDetailModel : ModelBase
 		}
 	}
 
-	// Token: 0x060174EA RID: 95466 RVA: 0x005ECC6C File Offset: 0x005EAE6C
+	// Token: 0x06014F1B RID: 85787 RVA: 0x006197A8 File Offset: 0x006179A8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -87,7 +87,7 @@ public class TowerDetailModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060174EB RID: 95467 RVA: 0x005ECC8C File Offset: 0x005EAE8C
+	// Token: 0x06014F1C RID: 85788 RVA: 0x006197C8 File Offset: 0x006179C8
 	public void Reset()
 	{
 		this.BuffMap = new Dictionary<TowerSwitchData, List<TowerDetailBuffData>>();
@@ -95,8 +95,8 @@ public class TowerDetailModel : ModelBase
 		this.SwitchData = new List<TowerSwitchData>();
 	}
 
-	// Token: 0x17001F67 RID: 8039
-	// (get) Token: 0x060174EC RID: 95468 RVA: 0x005ECCAF File Offset: 0x005EAEAF
+	// Token: 0x17001FBF RID: 8127
+	// (get) Token: 0x06014F1D RID: 85789 RVA: 0x006197EB File Offset: 0x006179EB
 	public static TowerDetailModel Instance
 	{
 		get
@@ -105,7 +105,7 @@ public class TowerDetailModel : ModelBase
 		}
 	}
 
-	// Token: 0x060174ED RID: 95469 RVA: 0x005ECCB6 File Offset: 0x005EAEB6
+	// Token: 0x06014F1E RID: 85790 RVA: 0x006197F2 File Offset: 0x006179F2
 	public static TowerDetailModel GetOrCreateInstance()
 	{
 		if (TowerDetailModel._Instance == null)
@@ -115,7 +115,7 @@ public class TowerDetailModel : ModelBase
 		return TowerDetailModel._Instance;
 	}
 
-	// Token: 0x060174EE RID: 95470 RVA: 0x005ECCCA File Offset: 0x005EAECA
+	// Token: 0x06014F1F RID: 85791 RVA: 0x00619806 File Offset: 0x00617A06
 	public static bool CreateInstance()
 	{
 		if (TowerDetailModel._Instance != null)
@@ -126,42 +126,42 @@ public class TowerDetailModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060174EF RID: 95471 RVA: 0x005ECCE0 File Offset: 0x005EAEE0
+	// Token: 0x06014F20 RID: 85792 RVA: 0x0061981C File Offset: 0x00617A1C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060174F0 RID: 95472 RVA: 0x005ECCE2 File Offset: 0x005EAEE2
+	// Token: 0x06014F21 RID: 85793 RVA: 0x0061981E File Offset: 0x00617A1E
 	public static void ResetStaticDefaultValue()
 	{
 		TowerDetailModel._Instance = null;
 	}
 
-	// Token: 0x060174F1 RID: 95473 RVA: 0x005ECCEA File Offset: 0x005EAEEA
+	// Token: 0x06014F22 RID: 85794 RVA: 0x00619826 File Offset: 0x00617A26
 	static TowerDetailModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TowerDetailModel.CreateStaticDefaultValue), new Action(TowerDetailModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AE81 RID: 44673
+	// Token: 0x0400B286 RID: 45702
 	public int CurrentSelectDetailId;
 
-	// Token: 0x0400AE82 RID: 44674
+	// Token: 0x0400B287 RID: 45703
 	public string TowerTitle = string.Empty;
 
-	// Token: 0x0400AE83 RID: 44675
+	// Token: 0x0400B288 RID: 45704
 	public int SwitchButtonIndex;
 
-	// Token: 0x0400AE84 RID: 44676
+	// Token: 0x0400B289 RID: 45705
 	public List<TowerSwitchData> SwitchData = new List<TowerSwitchData>();
 
-	// Token: 0x0400AE85 RID: 44677
+	// Token: 0x0400B28A RID: 45706
 	private Dictionary<TowerSwitchData, List<TowerDetailBuffData>> BuffMap = new Dictionary<TowerSwitchData, List<TowerDetailBuffData>>();
 
-	// Token: 0x0400AE86 RID: 44678
+	// Token: 0x0400B28B RID: 45707
 	private Dictionary<TowerSwitchData, List<TowerDetailMonsterData>> MonsterMap = new Dictionary<TowerSwitchData, List<TowerDetailMonsterData>>();
 
-	// Token: 0x0400AE87 RID: 44679
+	// Token: 0x0400B28C RID: 45708
 	[Nullable(2)]
 	private static TowerDetailModel _Instance;
 }

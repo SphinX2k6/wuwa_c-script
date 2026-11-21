@@ -6,38 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020023A8 RID: 9128
+	// Token: 0x02000773 RID: 1907
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieSceneTracks.MovieSceneSkeletalAnimationTrack")]
-	[UnrealStructLayout(304, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 304)]
-	public class UMovieSceneSkeletalAnimationTrack : UMovieSceneNameableTrack, IUnrealUObject, IUnrealObject, IMovieSceneTrackTemplateProducer, IUnrealNativeInterface, IUnrealInterface
+	[UnrealStructLayout(320, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 320)]
+	public class UMovieSceneSkeletalAnimationTrack : UMovieSceneNameableTrack, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602261B RID: 140827 RVA: 0x0032D9C4 File Offset: 0x0032BBC4
+		// Token: 0x0600A550 RID: 42320 RVA: 0x000F4284 File Offset: 0x000F2484
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneSkeletalAnimationTrack._ClassPtr;
 		}
 
-		// Token: 0x0602261C RID: 140828 RVA: 0x0032D9D0 File Offset: 0x0032BBD0
-		int IMovieSceneTrackTemplateProducer.InterfaceOffset()
-		{
-			return UMovieSceneSkeletalAnimationTrack.__InterfaceOffset_IMovieSceneTrackTemplateProducer;
-		}
-
-		// Token: 0x0602261D RID: 140829 RVA: 0x0032D9D8 File Offset: 0x0032BBD8
+		// Token: 0x0600A551 RID: 42321 RVA: 0x000F4290 File Offset: 0x000F2490
 		public UMovieSceneSkeletalAnimationTrack() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSkeletalAnimationTrack.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602261E RID: 140830 RVA: 0x0032DA00 File Offset: 0x0032BC00
+		// Token: 0x0600A552 RID: 42322 RVA: 0x000F42B8 File Offset: 0x000F24B8
 		public UMovieSceneSkeletalAnimationTrack(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSkeletalAnimationTrack.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008487 RID: 33927
-		// (get) Token: 0x0602261F RID: 140831 RVA: 0x0032DA34 File Offset: 0x0032BC34
-		// (set) Token: 0x06022620 RID: 140832 RVA: 0x0032DA6D File Offset: 0x0032BC6D
+		// Token: 0x17001EA5 RID: 7845
+		// (get) Token: 0x0600A553 RID: 42323 RVA: 0x000F42EC File Offset: 0x000F24EC
+		// (set) Token: 0x0600A554 RID: 42324 RVA: 0x000F4325 File Offset: 0x000F2525
 		public TArray<UMovieSceneSection> AnimationSections
 		{
 			get
@@ -56,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008488 RID: 33928
-		// (get) Token: 0x06022621 RID: 140833 RVA: 0x0032DA7B File Offset: 0x0032BC7B
-		// (set) Token: 0x06022622 RID: 140834 RVA: 0x0032DA8B File Offset: 0x0032BC8B
+		// Token: 0x17001EA6 RID: 7846
+		// (get) Token: 0x0600A555 RID: 42325 RVA: 0x000F4333 File Offset: 0x000F2533
+		// (set) Token: 0x0600A556 RID: 42326 RVA: 0x000F4343 File Offset: 0x000F2543
 		public unsafe bool bUseLegacySectionIndexBlend
 		{
 			get
@@ -71,30 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008489 RID: 33929
-		// (get) Token: 0x06022623 RID: 140835 RVA: 0x0032DA9C File Offset: 0x0032BC9C
-		// (set) Token: 0x06022624 RID: 140836 RVA: 0x0032DAD5 File Offset: 0x0032BCD5
-		public FMovieSceneSkeletalAnimRootMotionTrackParams RootMotionParams
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMovieSceneSkeletalAnimRootMotionTrackParams result;
-				if ((result = this._RootMotionParams) == null)
-				{
-					result = (this._RootMotionParams = new FMovieSceneSkeletalAnimRootMotionTrackParams(base.NativePtr + (IntPtr)UMovieSceneSkeletalAnimationTrack.__PropertyOffset_RootMotionParams, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMovieSceneSkeletalAnimRootMotionTrackParams.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneSkeletalAnimationTrack.__PropertyOffset_RootMotionParams, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x1700848A RID: 33930
-		// (get) Token: 0x06022625 RID: 140837 RVA: 0x0032DAF6 File Offset: 0x0032BCF6
-		// (set) Token: 0x06022626 RID: 140838 RVA: 0x0032DB06 File Offset: 0x0032BD06
+		// Token: 0x17001EA7 RID: 7847
+		// (get) Token: 0x0600A557 RID: 42327 RVA: 0x000F4354 File Offset: 0x000F2554
+		// (set) Token: 0x0600A558 RID: 42328 RVA: 0x000F4364 File Offset: 0x000F2564
 		public unsafe bool bBlendFirstChildOfRoot
 		{
 			get
@@ -107,33 +80,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022627 RID: 140839 RVA: 0x0032DB17 File Offset: 0x0032BD17
+		// Token: 0x0600A559 RID: 42329 RVA: 0x000F4375 File Offset: 0x000F2575
 		static UMovieSceneSkeletalAnimationTrack()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieSceneTracks.MovieSceneSkeletalAnimationTrack");
 		}
 
-		// Token: 0x06022628 RID: 140840 RVA: 0x0032DB25 File Offset: 0x0032BD25
+		// Token: 0x0600A55A RID: 42330 RVA: 0x000F4383 File Offset: 0x000F2583
 		protected UMovieSceneSkeletalAnimationTrack(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040125AD RID: 75181
-		internal static int __InterfaceOffset_IMovieSceneTrackTemplateProducer;
-
-		// Token: 0x040125AE RID: 75182
+		// Token: 0x040046A0 RID: 18080
 		public new const string __ObjectPath = "/Script/MovieSceneTracks.MovieSceneSkeletalAnimationTrack";
 
-		// Token: 0x040125AF RID: 75183
+		// Token: 0x040046A1 RID: 18081
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040125B0 RID: 75184
+		// Token: 0x040046A2 RID: 18082
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040125B1 RID: 75185
+		// Token: 0x040046A3 RID: 18083
 		internal static int __PropertyOffset_AnimationSections;
 
-		// Token: 0x040125B2 RID: 75186
+		// Token: 0x040046A4 RID: 18084
 		[Nullable(new byte[]
 		{
 			2,
@@ -141,17 +111,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UMovieSceneSection> _AnimationSections;
 
-		// Token: 0x040125B3 RID: 75187
+		// Token: 0x040046A5 RID: 18085
 		internal static int __PropertyOffset_bUseLegacySectionIndexBlend;
 
-		// Token: 0x040125B4 RID: 75188
-		internal static int __PropertyOffset_RootMotionParams;
-
-		// Token: 0x040125B5 RID: 75189
-		[Nullable(2)]
-		private FMovieSceneSkeletalAnimRootMotionTrackParams _RootMotionParams;
-
-		// Token: 0x040125B6 RID: 75190
+		// Token: 0x040046A6 RID: 18086
 		internal static int __PropertyOffset_bBlendFirstChildOfRoot;
 	}
 }

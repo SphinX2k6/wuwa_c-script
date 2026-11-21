@@ -9,17 +9,17 @@ using CSharpScript.Game.Module.Teleport;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050D4 RID: 20692
+	// Token: 0x020040A4 RID: 16548
 	public class FlowActionSetPlayerPos : FlowActionServerAction
 	{
-		// Token: 0x06034F3A RID: 216890 RVA: 0x00C8AF02 File Offset: 0x00C89102
+		// Token: 0x06029E33 RID: 171571 RVA: 0x00BD81EA File Offset: 0x00BD63EA
 		protected override void OnExecute()
 		{
 			base.RequestServerAction(false, new Action<ErrorCode>(this.OnFallback));
 			EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 		}
 
-		// Token: 0x06034F3B RID: 216891 RVA: 0x00C8AF33 File Offset: 0x00C89133
+		// Token: 0x06029E34 RID: 171572 RVA: 0x00BD821B File Offset: 0x00BD641B
 		private void OnFallback(ErrorCode code)
 		{
 			if (code == ErrorCode.ErrPlayerIsTeleportCanNotDoTeleport)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x06034F3C RID: 216892 RVA: 0x00C8AF50 File Offset: 0x00C89150
+		// Token: 0x06029E35 RID: 171573 RVA: 0x00BD8238 File Offset: 0x00BD6438
 		[NullableContext(2)]
 		private void OnTeleportComplete(TeleportContext teleportContext)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.FinishTeleport();
 		}
 
-		// Token: 0x06034F3D RID: 216893 RVA: 0x00C8AFB9 File Offset: 0x00C891B9
+		// Token: 0x06029E36 RID: 171574 RVA: 0x00BD82A1 File Offset: 0x00BD64A1
 		protected override void OnBackgroundExecute()
 		{
 			if (AutoRunModel.Instance.IsInLogicTreeGmMode())
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.OnExecute();
 		}
 
-		// Token: 0x06034F3E RID: 216894 RVA: 0x00C8AFD6 File Offset: 0x00C891D6
+		// Token: 0x06029E37 RID: 171575 RVA: 0x00BD82BE File Offset: 0x00BD64BE
 		protected override void OnInterruptExecute()
 		{
 			if (EventSystem.Instance.Has<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete)))
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x06034F3F RID: 216895 RVA: 0x00C8AFFC File Offset: 0x00C891FC
+		// Token: 0x06029E38 RID: 171576 RVA: 0x00BD82E4 File Offset: 0x00BD64E4
 		private void FinishTeleport()
 		{
 			PlotModel instance = PlotModel.Instance;

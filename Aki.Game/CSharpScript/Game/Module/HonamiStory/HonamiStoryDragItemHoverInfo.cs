@@ -4,39 +4,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005931 RID: 22833
+	// Token: 0x0200490A RID: 18698
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HonamiStoryDragItemHoverInfo : IHonamiStoryDragItemHoverInfo
 	{
-		// Token: 0x17008AEC RID: 35564
-		// (get) Token: 0x06039FE5 RID: 237541 RVA: 0x00DCA47A File Offset: 0x00DC867A
-		// (set) Token: 0x06039FE6 RID: 237542 RVA: 0x00DCA482 File Offset: 0x00DC8682
+		// Token: 0x17005EB8 RID: 24248
+		// (get) Token: 0x0602EF08 RID: 192264 RVA: 0x00D1972E File Offset: 0x00D1792E
+		// (set) Token: 0x0602EF09 RID: 192265 RVA: 0x00D19736 File Offset: 0x00D17936
 		public bool IsValid { get; set; }
 
-		// Token: 0x17008AED RID: 35565
-		// (get) Token: 0x06039FE7 RID: 237543 RVA: 0x00DCA48B File Offset: 0x00DC868B
-		// (set) Token: 0x06039FE8 RID: 237544 RVA: 0x00DCA493 File Offset: 0x00DC8693
+		// Token: 0x17005EB9 RID: 24249
+		// (get) Token: 0x0602EF0A RID: 192266 RVA: 0x00D1973F File Offset: 0x00D1793F
+		// (set) Token: 0x0602EF0B RID: 192267 RVA: 0x00D19747 File Offset: 0x00D17947
 		public int StartPosition { get; set; }
 
-		// Token: 0x17008AEE RID: 35566
-		// (get) Token: 0x06039FE9 RID: 237545 RVA: 0x00DCA49C File Offset: 0x00DC869C
-		// (set) Token: 0x06039FEA RID: 237546 RVA: 0x00DCA4A4 File Offset: 0x00DC86A4
+		// Token: 0x17005EBA RID: 24250
+		// (get) Token: 0x0602EF0C RID: 192268 RVA: 0x00D19750 File Offset: 0x00D17950
+		// (set) Token: 0x0602EF0D RID: 192269 RVA: 0x00D19758 File Offset: 0x00D17958
 		public int EndPosition { get; set; }
 
-		// Token: 0x17008AEF RID: 35567
-		// (get) Token: 0x06039FEB RID: 237547 RVA: 0x00DCA4AD File Offset: 0x00DC86AD
-		// (set) Token: 0x06039FEC RID: 237548 RVA: 0x00DCA4B5 File Offset: 0x00DC86B5
+		// Token: 0x17005EBB RID: 24251
+		// (get) Token: 0x0602EF0E RID: 192270 RVA: 0x00D19761 File Offset: 0x00D17961
+		// (set) Token: 0x0602EF0F RID: 192271 RVA: 0x00D19769 File Offset: 0x00D17969
 		public int Height { get; set; }
 
-		// Token: 0x17008AF0 RID: 35568
-		// (get) Token: 0x06039FED RID: 237549 RVA: 0x00DCA4BE File Offset: 0x00DC86BE
-		// (set) Token: 0x06039FEE RID: 237550 RVA: 0x00DCA4C6 File Offset: 0x00DC86C6
+		// Token: 0x17005EBC RID: 24252
+		// (get) Token: 0x0602EF10 RID: 192272 RVA: 0x00D19772 File Offset: 0x00D17972
+		// (set) Token: 0x0602EF11 RID: 192273 RVA: 0x00D1977A File Offset: 0x00D1797A
 		public int Width { get; set; }
 
-		// Token: 0x17008AF1 RID: 35569
-		// (get) Token: 0x06039FEF RID: 237551 RVA: 0x00DCA4CF File Offset: 0x00DC86CF
-		// (set) Token: 0x06039FF0 RID: 237552 RVA: 0x00DCA4D7 File Offset: 0x00DC86D7
+		// Token: 0x17005EBD RID: 24253
+		// (get) Token: 0x0602EF12 RID: 192274 RVA: 0x00D19783 File Offset: 0x00D17983
+		// (set) Token: 0x0602EF13 RID: 192275 RVA: 0x00D1978B File Offset: 0x00D1798B
 		public List<int> FillPosList { get; set; } = new List<int>();
 	}
 }

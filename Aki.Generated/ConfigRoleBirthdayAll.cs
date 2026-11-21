@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200088A RID: 2186
+	// Token: 0x020008A6 RID: 2214
 	public class ConfigRoleBirthdayAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600334E RID: 13134 RVA: 0x0017B6DC File Offset: 0x001798DC
+		// Token: 0x060033F6 RID: 13302 RVA: 0x001829C4 File Offset: 0x00180BC4
 		static ConfigRoleBirthdayAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleBirthdayAll.CreateStaticDefaultValue), new Action(ConfigRoleBirthdayAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600334F RID: 13135 RVA: 0x0017B6FC File Offset: 0x001798FC
+		// Token: 0x060033F7 RID: 13303 RVA: 0x001829E4 File Offset: 0x00180BE4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleBirthdayAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003350 RID: 13136 RVA: 0x0017B77B File Offset: 0x0017997B
+		// Token: 0x060033F8 RID: 13304 RVA: 0x00182A63 File Offset: 0x00180C63
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleBirthdayAll.LogPair = null;
 			ConfigRoleBirthdayAll.HandleId = 0;
 		}
 
-		// Token: 0x06003351 RID: 13137 RVA: 0x0017B789 File Offset: 0x00179989
+		// Token: 0x060033F9 RID: 13305 RVA: 0x00182A71 File Offset: 0x00180C71
 		public static void Init()
 		{
 			ConfigRoleBirthdayAll.HandleId = ConfigCommon.InitDataStatement(ConfigRoleBirthdayAll.HandleId, "db_birthday.db", "select BinData from `RoleBirthday`");
 		}
 
-		// Token: 0x06003352 RID: 13138 RVA: 0x0017B7A4 File Offset: 0x001799A4
+		// Token: 0x060033FA RID: 13306 RVA: 0x00182A8C File Offset: 0x00180C8C
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleBirthday> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003BAC RID: 15276
+		// Token: 0x04003C70 RID: 15472
 		private const string DB = "db_birthday.db";
 
-		// Token: 0x04003BAD RID: 15277
+		// Token: 0x04003C71 RID: 15473
 		private const string FILE = "s.生日.xlsx";
 
-		// Token: 0x04003BAE RID: 15278
+		// Token: 0x04003C72 RID: 15474
 		private const string TABLE = "RoleBirthday";
 
-		// Token: 0x04003BAF RID: 15279
+		// Token: 0x04003C73 RID: 15475
 		private const string COMMAND = "select BinData from `RoleBirthday`";
 
-		// Token: 0x04003BB0 RID: 15280
+		// Token: 0x04003C74 RID: 15476
 		private const string KEY_PREFIX = "RoleBirthdayAll";
 
-		// Token: 0x04003BB1 RID: 15281
+		// Token: 0x04003C75 RID: 15477
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003BB2 RID: 15282
+		// Token: 0x04003C76 RID: 15478
 		private static int HandleId;
 	}
 }

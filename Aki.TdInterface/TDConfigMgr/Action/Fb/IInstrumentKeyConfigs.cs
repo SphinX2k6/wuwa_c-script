@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002838 RID: 10296
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B0B RID: 11019
 	public class IInstrumentKeyConfigs
 	{
-		// Token: 0x0600E449 RID: 58441 RVA: 0x00219B30 File Offset: 0x00217D30
+		// Token: 0x0600F26E RID: 62062 RVA: 0x00236994 File Offset: 0x00234B94
 		public static IInstrumentKeyConfigs Create(IInstrumentKeyConfigs? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700459B RID: 17819
-		// (get) Token: 0x0600E44A RID: 58442 RVA: 0x00219B50 File Offset: 0x00217D50
+		// Token: 0x17004906 RID: 18694
+		// (get) Token: 0x0600F26F RID: 62063 RVA: 0x002369B4 File Offset: 0x00234BB4
 		public virtual List<IInstrumentKeyAttribute> Grids
 		{
 			get
@@ -44,8 +42,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700459C RID: 17820
-		// (get) Token: 0x0600E44B RID: 58443 RVA: 0x00219BB9 File Offset: 0x00217DB9
+		// Token: 0x17004907 RID: 18695
+		// (get) Token: 0x0600F270 RID: 62064 RVA: 0x00236A1D File Offset: 0x00234C1D
 		public virtual IInstrumentBoardSize BoardSize
 		{
 			get
@@ -60,20 +58,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E4C RID: 32332
+		// Token: 0x04008509 RID: 34057
 		private IInstrumentKeyConfigs Instance;
 
-		// Token: 0x04007E4D RID: 32333
+		// Token: 0x0400850A RID: 34058
 		private List<IInstrumentKeyAttribute> _GridsCache;
 
-		// Token: 0x04007E4E RID: 32334
+		// Token: 0x0400850B RID: 34059
 		private bool _GridsInited;
 
-		// Token: 0x04007E4F RID: 32335
+		// Token: 0x0400850C RID: 34060
 		[Nullable(2)]
 		private IInstrumentBoardSize _BoardSizeCache;
 
-		// Token: 0x04007E50 RID: 32336
+		// Token: 0x0400850D RID: 34061
 		private bool _BoardSizeInited;
 	}
 }

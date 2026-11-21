@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012E5 RID: 4837
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200142B RID: 5163
 	public class IRoleTowerSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006E7A RID: 28282 RVA: 0x0010AF3C File Offset: 0x0010913C
+		// Token: 0x060074FA RID: 29946 RVA: 0x0011923C File Offset: 0x0011743C
 		public static IRoleTowerSystemConfig Create(IRoleTowerSystemConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002283 RID: 8835
-		// (get) Token: 0x06006E7B RID: 28283 RVA: 0x0010AF5B File Offset: 0x0010915B
+		// Token: 0x17002446 RID: 9286
+		// (get) Token: 0x060074FB RID: 29947 RVA: 0x0011925B File Offset: 0x0011745B
 		public override EEnableSystemType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002284 RID: 8836
-		// (get) Token: 0x06006E7C RID: 28284 RVA: 0x0010AF68 File Offset: 0x00109168
+		// Token: 0x17002447 RID: 9287
+		// (get) Token: 0x060074FC RID: 29948 RVA: 0x00119268 File Offset: 0x00117468
 		public virtual List<IRoleTowerSystemVar> Vars
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F4D RID: 16205
+		// Token: 0x040042BB RID: 17083
 		private IRoleTowerSystemConfig Instance;
 
-		// Token: 0x04003F4E RID: 16206
+		// Token: 0x040042BC RID: 17084
 		private List<IRoleTowerSystemVar> _VarsCache;
 
-		// Token: 0x04003F4F RID: 16207
+		// Token: 0x040042BD RID: 17085
 		private bool _VarsInited;
 	}
 }

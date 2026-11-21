@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001126 RID: 4390
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001254 RID: 4692
 	public class ISavePoint : ISaveConfigType
 	{
-		// Token: 0x06006314 RID: 25364 RVA: 0x000EE310 File Offset: 0x000EC510
+		// Token: 0x0600690F RID: 26895 RVA: 0x000FB484 File Offset: 0x000F9684
 		private ISavePoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006315 RID: 25365 RVA: 0x000EE348 File Offset: 0x000EC548
+		// Token: 0x06006910 RID: 26896 RVA: 0x000FB4BC File Offset: 0x000F96BC
 		public static ISavePoint Create([Nullable(2)] ISavePoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006316 RID: 25366 RVA: 0x000EE35B File Offset: 0x000EC55B
+		// Token: 0x06006911 RID: 26897 RVA: 0x000FB4CF File Offset: 0x000F96CF
 		public static ISavePoint CreateFromSetValue([Nullable(2)] ISavePoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006317 RID: 25367 RVA: 0x000EE36E File Offset: 0x000EC56E
+		// Token: 0x06006912 RID: 26898 RVA: 0x000FB4E2 File Offset: 0x000F96E2
 		public new ISavePoint_SetValue ToSetValue()
 		{
 			return new ISavePoint_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002055 RID: 8277
-		// (get) Token: 0x06006318 RID: 25368 RVA: 0x000EE399 File Offset: 0x000EC599
-		// (set) Token: 0x06006319 RID: 25369 RVA: 0x000EE3C4 File Offset: 0x000EC5C4
+		// Token: 0x17002208 RID: 8712
+		// (get) Token: 0x06006913 RID: 26899 RVA: 0x000FB50D File Offset: 0x000F970D
+		// (set) Token: 0x06006914 RID: 26900 RVA: 0x000FB538 File Offset: 0x000F9738
 		public override ESaveConfig Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002056 RID: 8278
-		// (get) Token: 0x0600631A RID: 25370 RVA: 0x000EE3D4 File Offset: 0x000EC5D4
-		// (set) Token: 0x0600631B RID: 25371 RVA: 0x000EE40E File Offset: 0x000EC60E
+		// Token: 0x17002209 RID: 8713
+		// (get) Token: 0x06006915 RID: 26901 RVA: 0x000FB548 File Offset: 0x000F9748
+		// (set) Token: 0x06006916 RID: 26902 RVA: 0x000FB582 File Offset: 0x000F9782
 		public virtual bool? RelinkRollback
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002057 RID: 8279
-		// (get) Token: 0x0600631C RID: 25372 RVA: 0x000EE41C File Offset: 0x000EC61C
-		// (set) Token: 0x0600631D RID: 25373 RVA: 0x000EE47D File Offset: 0x000EC67D
+		// Token: 0x1700220A RID: 8714
+		// (get) Token: 0x06006917 RID: 26903 RVA: 0x000FB590 File Offset: 0x000F9790
+		// (set) Token: 0x06006918 RID: 26904 RVA: 0x000FB5F1 File Offset: 0x000F97F1
 		[Nullable(2)]
 		public virtual IPositionRollbackConfig PosRollbackCfg
 		{
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B66 RID: 15206
+		// Token: 0x04003EB4 RID: 16052
 		[Nullable(2)]
 		protected new ISavePoint FbInstance;
 
-		// Token: 0x04003B67 RID: 15207
+		// Token: 0x04003EB5 RID: 16053
 		[Nullable(2)]
 		protected new ISavePoint_SetValue PocoInterface;
 
-		// Token: 0x04003B68 RID: 15208
+		// Token: 0x04003EB6 RID: 16054
 		private IPositionRollbackConfig _PosRollbackCfgCache;
 
-		// Token: 0x04003B69 RID: 15209
+		// Token: 0x04003EB7 RID: 16055
 		private bool _PosRollbackCfgInited;
 	}
 }

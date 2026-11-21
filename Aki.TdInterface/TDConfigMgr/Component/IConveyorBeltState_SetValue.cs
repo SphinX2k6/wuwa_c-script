@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200028C RID: 652
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002CF RID: 719
 	public class IConveyorBeltState_SetValue
 	{
-		// Token: 0x04000B8A RID: 2954
+		// Token: 0x04000C6B RID: 3179
 		public string EntityState;
 
-		// Token: 0x04000B8B RID: 2955
+		// Token: 0x04000C6C RID: 3180
 		public IConveyorBeltField FieldType;
 
-		// Token: 0x04000B8C RID: 2956
+		// Token: 0x04000C6D RID: 3181
 		public IFixSpeed MoveType;
 	}
 }

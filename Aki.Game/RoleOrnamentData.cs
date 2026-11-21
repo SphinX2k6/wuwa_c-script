@@ -1,123 +1,122 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020022F8 RID: 8952
+// Token: 0x020017DC RID: 6108
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleOrnamentData
 {
-	// Token: 0x06011A78 RID: 72312 RVA: 0x004564FA File Offset: 0x004546FA
+	// Token: 0x0600EF10 RID: 61200 RVA: 0x004631C6 File Offset: 0x004613C6
 	public RoleOrnamentData(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x06011A79 RID: 72313 RVA: 0x0045650C File Offset: 0x0045470C
+	// Token: 0x0600EF11 RID: 61201 RVA: 0x004631D8 File Offset: 0x004613D8
 	public Ornament GetOrnamentConfig()
 	{
 		return RoleConfig.Instance.GetOrnamentConfig(this.Id).Value;
 	}
 
-	// Token: 0x06011A7A RID: 72314 RVA: 0x00456531 File Offset: 0x00454731
+	// Token: 0x0600EF12 RID: 61202 RVA: 0x004631FD File Offset: 0x004613FD
 	public ItemConfig GetItemConfig()
 	{
 		return InventoryConfig.Instance.GetItemConfigData(this.Id);
 	}
 
-	// Token: 0x06011A7B RID: 72315 RVA: 0x00456543 File Offset: 0x00454743
+	// Token: 0x0600EF13 RID: 61203 RVA: 0x0046320F File Offset: 0x0046140F
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06011A7C RID: 72316 RVA: 0x0045654C File Offset: 0x0045474C
+	// Token: 0x0600EF14 RID: 61204 RVA: 0x00463218 File Offset: 0x00461418
 	public int[] GetRoleSkinIds()
 	{
-		return this.GetOrnamentConfig().RoleSkinIdsIter().ToArray<int>();
+		return NoLinq.ToArray<int>(this.GetOrnamentConfig().RoleSkinIdsIter());
 	}
 
-	// Token: 0x06011A7D RID: 72317 RVA: 0x0045656C File Offset: 0x0045476C
+	// Token: 0x0600EF15 RID: 61205 RVA: 0x00463238 File Offset: 0x00461438
 	public int GetGroupId()
 	{
 		return this.GetOrnamentConfig().OrGroupId;
 	}
 
-	// Token: 0x06011A7E RID: 72318 RVA: 0x00456587 File Offset: 0x00454787
+	// Token: 0x0600EF16 RID: 61206 RVA: 0x00463253 File Offset: 0x00461453
 	public string GetName()
 	{
 		return this.GetItemConfig().Name;
 	}
 
-	// Token: 0x06011A7F RID: 72319 RVA: 0x00456594 File Offset: 0x00454794
+	// Token: 0x0600EF17 RID: 61207 RVA: 0x00463260 File Offset: 0x00461460
 	public string GetTitleName()
 	{
 		return this.GetName();
 	}
 
-	// Token: 0x06011A80 RID: 72320 RVA: 0x0045659C File Offset: 0x0045479C
+	// Token: 0x0600EF18 RID: 61208 RVA: 0x00463268 File Offset: 0x00461468
 	public string GetTypeDescription()
 	{
 		return this.GetItemConfig().TypeDescription;
 	}
 
-	// Token: 0x06011A81 RID: 72321 RVA: 0x004565AC File Offset: 0x004547AC
+	// Token: 0x0600EF19 RID: 61209 RVA: 0x00463278 File Offset: 0x00461478
 	public string GetSubTitle()
 	{
 		return this.GetOrnamentConfig().ShopPreviewSubTitle;
 	}
 
-	// Token: 0x06011A82 RID: 72322 RVA: 0x004565C7 File Offset: 0x004547C7
+	// Token: 0x0600EF1A RID: 61210 RVA: 0x00463293 File Offset: 0x00461493
 	public string GetBgDescription()
 	{
 		return this.GetItemConfig().BgDescription ?? "";
 	}
 
-	// Token: 0x06011A83 RID: 72323 RVA: 0x004565DD File Offset: 0x004547DD
+	// Token: 0x0600EF1B RID: 61211 RVA: 0x004632A9 File Offset: 0x004614A9
 	public int GetQuality()
 	{
 		return this.GetItemConfig().QualityId;
 	}
 
-	// Token: 0x06011A84 RID: 72324 RVA: 0x004565EA File Offset: 0x004547EA
+	// Token: 0x0600EF1C RID: 61212 RVA: 0x004632B6 File Offset: 0x004614B6
 	public bool IsOwn()
 	{
 		return RoleOrnamentModel.Instance.IsOwnOrnament(this.Id);
 	}
 
-	// Token: 0x06011A85 RID: 72325 RVA: 0x004565FC File Offset: 0x004547FC
+	// Token: 0x0600EF1D RID: 61213 RVA: 0x004632C8 File Offset: 0x004614C8
 	public int GetSortIndex()
 	{
 		return this.GetItemConfig().SortIndex;
 	}
 
-	// Token: 0x06011A86 RID: 72326 RVA: 0x0045660C File Offset: 0x0045480C
+	// Token: 0x0600EF1E RID: 61214 RVA: 0x004632D8 File Offset: 0x004614D8
 	public string GetBuyPreviewQualityBgPath()
 	{
 		return ConfigQualityInfoById.GetConfig(this.GetQuality(), true).Value.RoleSkinQualityBg;
 	}
 
-	// Token: 0x06011A87 RID: 72327 RVA: 0x00456638 File Offset: 0x00454838
+	// Token: 0x0600EF1F RID: 61215 RVA: 0x00463304 File Offset: 0x00461504
 	public string GetPreviewTextureInBuyView()
 	{
 		return this.GetOrnamentConfig().PreviewTextureInBuyView;
 	}
 
-	// Token: 0x06011A88 RID: 72328 RVA: 0x00456654 File Offset: 0x00454854
+	// Token: 0x0600EF20 RID: 61216 RVA: 0x00463320 File Offset: 0x00461520
 	public string GetPreviewTextureInPayShop()
 	{
 		return this.GetOrnamentConfig().PreviewTextureInPayShop;
 	}
 
-	// Token: 0x06011A89 RID: 72329 RVA: 0x00456670 File Offset: 0x00454870
+	// Token: 0x0600EF21 RID: 61217 RVA: 0x0046333C File Offset: 0x0046153C
 	public string GetPreviewTextureInPop()
 	{
 		return this.GetOrnamentConfig().PopPreviewTexture;
 	}
 
-	// Token: 0x040085E7 RID: 34279
+	// Token: 0x04008725 RID: 34597
 	private readonly int Id;
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,13 +12,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02001C2F RID: 7215
+// Token: 0x020010EE RID: 4334
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class FriendController : ControllerBase
 {
-	// Token: 0x0600D8C1 RID: 55489 RVA: 0x0032395E File Offset: 0x00321B5E
+	// Token: 0x0600ACD7 RID: 44247 RVA: 0x0032ED36 File Offset: 0x0032CF36
 	protected override bool OnInit()
 	{
 		this.OnAddEvents();
@@ -27,7 +26,7 @@ public class FriendController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600D8C2 RID: 55490 RVA: 0x0032396D File Offset: 0x00321B6D
+	// Token: 0x0600ACD8 RID: 44248 RVA: 0x0032ED45 File Offset: 0x0032CF45
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
@@ -38,20 +37,20 @@ public class FriendController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600D8C3 RID: 55491 RVA: 0x00323990 File Offset: 0x00321B90
+	// Token: 0x0600ACD9 RID: 44249 RVA: 0x0032ED68 File Offset: 0x0032CF68
 	private void InitTimer()
 	{
 		this.CancelTimer();
 		this.CheckFriendTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnRequestFriendDataTimer), 30000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600D8C4 RID: 55492 RVA: 0x003239C1 File Offset: 0x00321BC1
+	// Token: 0x0600ACDA RID: 44250 RVA: 0x0032ED99 File Offset: 0x0032CF99
 	private void OnRequestFriendDataTimer(float delta)
 	{
 		this.RequestAllFriend(false, null);
 	}
 
-	// Token: 0x0600D8C5 RID: 55493 RVA: 0x003239CB File Offset: 0x00321BCB
+	// Token: 0x0600ACDB RID: 44251 RVA: 0x0032EDA3 File Offset: 0x0032CFA3
 	private void CancelTimer()
 	{
 		if (this.CheckFriendTimer != null)
@@ -61,7 +60,7 @@ public class FriendController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600D8C6 RID: 55494 RVA: 0x003239F0 File Offset: 0x00321BF0
+	// Token: 0x0600ACDC RID: 44252 RVA: 0x0032EDC8 File Offset: 0x0032CFC8
 	protected void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.ChangeModeFinish, new Action(this.OnWorldDone));
@@ -78,7 +77,7 @@ public class FriendController : ControllerBase
 		EventSystem.Instance.Add<FArrayBuffer>(EEventName.TsResponseFriendRecentlyTeam, new Action<FArrayBuffer>(this.TsResponseFriendRecentlyTeam));
 	}
 
-	// Token: 0x0600D8C7 RID: 55495 RVA: 0x00323B50 File Offset: 0x00321D50
+	// Token: 0x0600ACDD RID: 44253 RVA: 0x0032EF28 File Offset: 0x0032D128
 	protected void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.ChangeModeFinish, new Action(this.OnWorldDone));
@@ -95,13 +94,13 @@ public class FriendController : ControllerBase
 		EventSystem.Instance.Remove(EEventName.TsResponseFriendRecentlyTeam, new Action<FArrayBuffer>(this.TsResponseFriendRecentlyTeam));
 	}
 
-	// Token: 0x0600D8C8 RID: 55496 RVA: 0x00323CAD File Offset: 0x00321EAD
+	// Token: 0x0600ACDE RID: 44254 RVA: 0x0032F085 File Offset: 0x0032D285
 	private void OnRefreshOnlineTeamList()
 	{
 		this.RequestAllFriend(true, null);
 	}
 
-	// Token: 0x0600D8C9 RID: 55497 RVA: 0x00323CB8 File Offset: 0x00321EB8
+	// Token: 0x0600ACDF RID: 44255 RVA: 0x0032F090 File Offset: 0x0032D290
 	private void OnWorldDone()
 	{
 		if (!this.FirstCheckFriendState)
@@ -116,20 +115,20 @@ public class FriendController : ControllerBase
 		this.PastWorldMutiState = GameModeModel.Instance.IsMulti;
 	}
 
-	// Token: 0x0600D8CA RID: 55498 RVA: 0x00323D0A File Offset: 0x00321F0A
+	// Token: 0x0600ACE0 RID: 44256 RVA: 0x0032F0E2 File Offset: 0x0032D2E2
 	private void OnDataDone()
 	{
 		this.RequestAllFriend(true, new Action(FriendController.<OnDataDone>g__callback|16_0));
 		this.InitTimer();
 	}
 
-	// Token: 0x0600D8CB RID: 55499 RVA: 0x00323D25 File Offset: 0x00321F25
+	// Token: 0x0600ACE1 RID: 44257 RVA: 0x0032F0FD File Offset: 0x0032D2FD
 	private void ValidateRedDot()
 	{
 		EventSystem.Instance.Emit(EEventName.RefreshFriendApplicationRedDot);
 	}
 
-	// Token: 0x0600D8CC RID: 55500 RVA: 0x00323D38 File Offset: 0x00321F38
+	// Token: 0x0600ACE2 RID: 44258 RVA: 0x0032F110 File Offset: 0x0032D310
 	protected void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.FriendAddedNotify, new Action<IMessage, Net.CallbackStatus>(this.FriendAddedNotify));
@@ -138,7 +137,7 @@ public class FriendController : ControllerBase
 		Net.Instance.Register(ENotifyMessageId.FriendApplyDeletedNotify, new Action<IMessage, Net.CallbackStatus>(this.FriendApplyDeletedNotify));
 	}
 
-	// Token: 0x0600D8CD RID: 55501 RVA: 0x00323DB8 File Offset: 0x00321FB8
+	// Token: 0x0600ACE3 RID: 44259 RVA: 0x0032F190 File Offset: 0x0032D390
 	protected void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.FriendAddedNotify);
@@ -147,7 +146,7 @@ public class FriendController : ControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.FriendApplyDeletedNotify);
 	}
 
-	// Token: 0x0600D8CE RID: 55502 RVA: 0x00323E08 File Offset: 0x00322008
+	// Token: 0x0600ACE4 RID: 44260 RVA: 0x0032F1E0 File Offset: 0x0032D3E0
 	[NullableContext(2)]
 	public void RequestAllFriend(bool force = false, Action call = null)
 	{
@@ -183,7 +182,7 @@ public class FriendController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600D8CF RID: 55503 RVA: 0x00323EFC File Offset: 0x003220FC
+	// Token: 0x0600ACE5 RID: 44261 RVA: 0x0032F2D4 File Offset: 0x0032D4D4
 	[NullableContext(2)]
 	private UniTask OnRequestAllFriendResponse(FriendAllResponse message)
 	{
@@ -195,7 +194,7 @@ public class FriendController : ControllerBase
 		return <OnRequestAllFriendResponse>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D8D0 RID: 55504 RVA: 0x00323F40 File Offset: 0x00322140
+	// Token: 0x0600ACE6 RID: 44262 RVA: 0x0032F318 File Offset: 0x0032D518
 	[NullableContext(2)]
 	private void FriendAddedNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -203,7 +202,7 @@ public class FriendController : ControllerBase
 		this.OnFriendAddedNotify(message);
 	}
 
-	// Token: 0x0600D8D1 RID: 55505 RVA: 0x00323F5C File Offset: 0x0032215C
+	// Token: 0x0600ACE7 RID: 44263 RVA: 0x0032F334 File Offset: 0x0032D534
 	private UniTask OnFriendAddedNotify(FriendAddedNotify message)
 	{
 		FriendController.<OnFriendAddedNotify>d__25 <OnFriendAddedNotify>d__;
@@ -214,7 +213,7 @@ public class FriendController : ControllerBase
 		return <OnFriendAddedNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D8D2 RID: 55506 RVA: 0x00323FA0 File Offset: 0x003221A0
+	// Token: 0x0600ACE8 RID: 44264 RVA: 0x0032F378 File Offset: 0x0032D578
 	[NullableContext(2)]
 	private void FriendDeletedNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -223,7 +222,7 @@ public class FriendController : ControllerBase
 		FriendModel.Instance.DeleteFriend(id);
 	}
 
-	// Token: 0x0600D8D3 RID: 55507 RVA: 0x00323FD0 File Offset: 0x003221D0
+	// Token: 0x0600ACE9 RID: 44265 RVA: 0x0032F3A8 File Offset: 0x0032D5A8
 	[NullableContext(2)]
 	private void FriendApplyReceivedNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -231,7 +230,7 @@ public class FriendController : ControllerBase
 		this.OnFriendApplyReceivedNotify(message);
 	}
 
-	// Token: 0x0600D8D4 RID: 55508 RVA: 0x00323FEC File Offset: 0x003221EC
+	// Token: 0x0600ACEA RID: 44266 RVA: 0x0032F3C4 File Offset: 0x0032D5C4
 	private UniTask OnFriendApplyReceivedNotify(FriendApplyReceivedNotify message)
 	{
 		FriendController.<OnFriendApplyReceivedNotify>d__28 <OnFriendApplyReceivedNotify>d__;
@@ -242,7 +241,7 @@ public class FriendController : ControllerBase
 		return <OnFriendApplyReceivedNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D8D5 RID: 55509 RVA: 0x00324030 File Offset: 0x00322230
+	// Token: 0x0600ACEB RID: 44267 RVA: 0x0032F408 File Offset: 0x0032D608
 	[NullableContext(2)]
 	private void FriendApplyDeletedNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -250,7 +249,7 @@ public class FriendController : ControllerBase
 		FriendModel.Instance.DeleteFriendApplication(friendApplyDeletedNotify.Id);
 	}
 
-	// Token: 0x0600D8D6 RID: 55510 RVA: 0x00324054 File Offset: 0x00322254
+	// Token: 0x0600ACEC RID: 44268 RVA: 0x0032F42C File Offset: 0x0032D62C
 	public void RequestFriendApplyAddSend(int id, FriendApplyWay fromWhere)
 	{
 		if (this.LastApplyAddFriendRequestTime != 0.0 && Time.Instance.Now - this.LastApplyAddFriendRequestTime <= 1000.0)
@@ -303,7 +302,7 @@ public class FriendController : ControllerBase
 					GenericPromptController.Instance.ShowPromptByCode("AlreadyOnFriendList", Array.Empty<object>());
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(friendApplySendResponse.ErrorCode, 19754, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(friendApplySendResponse.ErrorCode, 15562, null, true, true);
 			}
 			FriendModel.Instance.AddPlayerToApplyFriendList(message.Id);
 			GenericPromptController.Instance.ShowPromptByCode("FriendApplicationSent", Array.Empty<object>());
@@ -311,7 +310,7 @@ public class FriendController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600D8D7 RID: 55511 RVA: 0x003240EC File Offset: 0x003222EC
+	// Token: 0x0600ACED RID: 44269 RVA: 0x0032F4C4 File Offset: 0x0032D6C4
 	public void RequestFriendApplyHandle(List<int> ids, FriendApplyOperator operation)
 	{
 		FriendApplyHandleRequest message = FriendApplyHandleRequest.Create();
@@ -407,7 +406,7 @@ public class FriendController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600D8D8 RID: 55512 RVA: 0x00324196 File Offset: 0x00322396
+	// Token: 0x0600ACEE RID: 44270 RVA: 0x0032F56E File Offset: 0x0032D76E
 	private string GetErrorCodeShowString(Aki.Protocol.ErrorCode errorCode)
 	{
 		if (errorCode == Aki.Protocol.ErrorCode.Success)
@@ -429,7 +428,7 @@ public class FriendController : ControllerBase
 		return "FriendApplicationInvalid";
 	}
 
-	// Token: 0x0600D8D9 RID: 55513 RVA: 0x003241D0 File Offset: 0x003223D0
+	// Token: 0x0600ACEF RID: 44271 RVA: 0x0032F5A8 File Offset: 0x0032D7A8
 	public void LocalRemoveApplicationFriend(int friend)
 	{
 		FriendModel.Instance.DeleteFriendApplication(friend);
@@ -437,7 +436,7 @@ public class FriendController : ControllerBase
 		EventSystem.Instance.Emit(EEventName.RefreshFriendApplicationRedDot);
 	}
 
-	// Token: 0x0600D8DA RID: 55514 RVA: 0x00324200 File Offset: 0x00322400
+	// Token: 0x0600ACF0 RID: 44272 RVA: 0x0032F5D8 File Offset: 0x0032D7D8
 	[NullableContext(0)]
 	public UniTask<Aki.Protocol.ErrorCode> RequestFriendRemarkChange(int? id, [Nullable(1)] string remark)
 	{
@@ -450,7 +449,7 @@ public class FriendController : ControllerBase
 		return <RequestFriendRemarkChange>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D8DB RID: 55515 RVA: 0x0032424C File Offset: 0x0032244C
+	// Token: 0x0600ACF1 RID: 44273 RVA: 0x0032F624 File Offset: 0x0032D824
 	public void RequestFriendDelete(int id)
 	{
 		FriendDeleteRequest friendDeleteRequest = FriendDeleteRequest.Create();
@@ -462,7 +461,7 @@ public class FriendController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600D8DC RID: 55516 RVA: 0x0032429C File Offset: 0x0032249C
+	// Token: 0x0600ACF2 RID: 44274 RVA: 0x0032F674 File Offset: 0x0032D874
 	private void OnRequestFriendDeleteResponse(FriendDeleteResponse response, int id)
 	{
 		if (response.ErrorCode == Aki.Protocol.ErrorCode.Success)
@@ -479,10 +478,10 @@ public class FriendController : ControllerBase
 			EventSystem.Instance.Emit(EEventName.UpdateFriendViewShow);
 			return;
 		}
-		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 29748, null, true, true);
+		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 17425, null, true, true);
 	}
 
-	// Token: 0x0600D8DD RID: 55517 RVA: 0x0032433C File Offset: 0x0032253C
+	// Token: 0x0600ACF3 RID: 44275 RVA: 0x0032F714 File Offset: 0x0032D914
 	public void RequestBlackList()
 	{
 		BlockListRequest message = BlockListRequest.Create();
@@ -491,14 +490,14 @@ public class FriendController : ControllerBase
 			BlockListResponse blockListResponse = (BlockListResponse)msg;
 			if (blockListResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(blockListResponse.ErrorCode, 16716, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(blockListResponse.ErrorCode, 23512, null, true, true);
 				return;
 			}
 			this.OnBlackListResponse(blockListResponse);
 		}, 0);
 	}
 
-	// Token: 0x0600D8DE RID: 55518 RVA: 0x0032436C File Offset: 0x0032256C
+	// Token: 0x0600ACF4 RID: 44276 RVA: 0x0032F744 File Offset: 0x0032D944
 	private UniTask OnBlackListResponse(BlockListResponse message)
 	{
 		FriendController.<OnBlackListResponse>d__38 <OnBlackListResponse>d__;
@@ -509,7 +508,7 @@ public class FriendController : ControllerBase
 		return <OnBlackListResponse>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D8DF RID: 55519 RVA: 0x003243B0 File Offset: 0x003225B0
+	// Token: 0x0600ACF5 RID: 44277 RVA: 0x0032F788 File Offset: 0x0032D988
 	public void RequestBlockPlayer(int playerId)
 	{
 		BlockPlayerRequest blockPlayerRequest = BlockPlayerRequest.Create();
@@ -534,11 +533,11 @@ public class FriendController : ControllerBase
 				EventSystem.Instance.Emit(EEventName.UpdateBlackListShow);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(blockPlayerResponse.ErrorCode, 21431, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(blockPlayerResponse.ErrorCode, 25057, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x0600D8E0 RID: 55520 RVA: 0x00324400 File Offset: 0x00322600
+	// Token: 0x0600ACF6 RID: 44278 RVA: 0x0032F7D8 File Offset: 0x0032D9D8
 	private UniTask OnBlockPlayerResponse(int playerId, BlockPlayerResponse response)
 	{
 		FriendController.<OnBlockPlayerResponse>d__40 <OnBlockPlayerResponse>d__;
@@ -550,7 +549,7 @@ public class FriendController : ControllerBase
 		return <OnBlockPlayerResponse>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D8E1 RID: 55521 RVA: 0x0032444C File Offset: 0x0032264C
+	// Token: 0x0600ACF7 RID: 44279 RVA: 0x0032F824 File Offset: 0x0032DA24
 	public void RequestUnBlockPlayer(int playerId)
 	{
 		UnblockPlayerRequest unblockPlayerRequest = UnblockPlayerRequest.Create();
@@ -574,11 +573,11 @@ public class FriendController : ControllerBase
 				EventSystem.Instance.Emit(EEventName.UpdateBlackListShow);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(unblockPlayerResponse.ErrorCode, 27927, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(unblockPlayerResponse.ErrorCode, 26572, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x0600D8E2 RID: 55522 RVA: 0x00324498 File Offset: 0x00322698
+	// Token: 0x0600ACF8 RID: 44280 RVA: 0x0032F870 File Offset: 0x0032DA70
 	public void RequestSearchPlayerBasicInfoBySdkId(string thirdPartyId)
 	{
 		if (Info.Instance.IsPs5Platform())
@@ -603,7 +602,7 @@ public class FriendController : ControllerBase
 					GenericPromptController.Instance.ShowPromptByCode("CanNotSearchSelf", Array.Empty<object>());
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(playerPsnInfoGetResponse.ErrorCode, 15989, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(playerPsnInfoGetResponse.ErrorCode, 21086, null, true, true);
 			}, 0);
 			return;
 		}
@@ -629,12 +628,12 @@ public class FriendController : ControllerBase
 					GenericPromptController.Instance.ShowPromptByCode("CanNotSearchSelf", Array.Empty<object>());
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(playerXboxInfoGetResponse.ErrorCode, 27026, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(playerXboxInfoGetResponse.ErrorCode, 29123, null, true, true);
 			}, 0);
 		}
 	}
 
-	// Token: 0x0600D8E3 RID: 55523 RVA: 0x00324514 File Offset: 0x00322714
+	// Token: 0x0600ACF9 RID: 44281 RVA: 0x0032F8EC File Offset: 0x0032DAEC
 	public void RequestPlayerCurrentDeactivationState(int playerId, Action<bool> callback)
 	{
 		PlayerBasicInfoGetRequest playerBasicInfoGetRequest = PlayerBasicInfoGetRequest.Create();
@@ -650,7 +649,7 @@ public class FriendController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600D8E4 RID: 55524 RVA: 0x00324558 File Offset: 0x00322758
+	// Token: 0x0600ACFA RID: 44282 RVA: 0x0032F930 File Offset: 0x0032DB30
 	public void RequestSearchPlayerBasicInfo(int playerId, bool silenceQuery = false)
 	{
 		PlayerBasicInfoGetRequest playerBasicInfoGetRequest = PlayerBasicInfoGetRequest.Create();
@@ -676,7 +675,7 @@ public class FriendController : ControllerBase
 					GenericPromptController.Instance.ShowPromptByItsType<object>(EPromptSubViewType.FloatLinePrompt, null, null, new <>z__ReadOnlySingleElementList<object>(localTextNew), null, null, null, null, null, false, null);
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(playerBasicInfoGetResponse.ErrorCode, 22549, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(playerBasicInfoGetResponse.ErrorCode, 19022, null, true, true);
 				return;
 			}
 			else
@@ -691,7 +690,7 @@ public class FriendController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600D8E5 RID: 55525 RVA: 0x003245A4 File Offset: 0x003227A4
+	// Token: 0x0600ACFB RID: 44283 RVA: 0x0032F97C File Offset: 0x0032DB7C
 	[NullableContext(2)]
 	private UniTask OnSearchPlayerBasicInfoResponse(PlayerDetails info)
 	{
@@ -703,7 +702,7 @@ public class FriendController : ControllerBase
 		return <OnSearchPlayerBasicInfoResponse>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D8E6 RID: 55526 RVA: 0x003245E8 File Offset: 0x003227E8
+	// Token: 0x0600ACFC RID: 44284 RVA: 0x0032F9C0 File Offset: 0x0032DBC0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -737,13 +736,13 @@ public class FriendController : ControllerBase
 		return new ValueTuple<string, EFriendOfflineSection>(item2, item);
 	}
 
-	// Token: 0x0600D8E7 RID: 55527 RVA: 0x00324652 File Offset: 0x00322852
+	// Token: 0x0600ACFD RID: 44285 RVA: 0x0032FA2A File Offset: 0x0032DC2A
 	public bool CheckRemarkIsValid(string remark)
 	{
 		return !string.IsNullOrEmpty(remark);
 	}
 
-	// Token: 0x0600D8E8 RID: 55528 RVA: 0x00324660 File Offset: 0x00322860
+	// Token: 0x0600ACFE RID: 44286 RVA: 0x0032FA38 File Offset: 0x0032DC38
 	public List<FriendItemSt> CreateFriendItemSt(IReadOnlyList<int> ids, EFriendItemOperation operationType)
 	{
 		List<FriendItemSt> list = new List<FriendItemSt>();
@@ -758,7 +757,7 @@ public class FriendController : ControllerBase
 		return list;
 	}
 
-	// Token: 0x0600D8E9 RID: 55529 RVA: 0x003246C4 File Offset: 0x003228C4
+	// Token: 0x0600ACFF RID: 44287 RVA: 0x0032FA9C File Offset: 0x0032DC9C
 	public bool CheckHasAnyApplied(int[] playerIdList)
 	{
 		FriendModel instance = FriendModel.Instance;
@@ -772,7 +771,7 @@ public class FriendController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0600D8EA RID: 55530 RVA: 0x003246F8 File Offset: 0x003228F8
+	// Token: 0x0600AD00 RID: 44288 RVA: 0x0032FAD0 File Offset: 0x0032DCD0
 	public List<int> GetSortedFriendListByRules(List<int> originalList, Func<int, int, int> callback)
 	{
 		List<int> list = new List<int>();
@@ -784,7 +783,7 @@ public class FriendController : ControllerBase
 		return list;
 	}
 
-	// Token: 0x0600D8EB RID: 55531 RVA: 0x0032474C File Offset: 0x0032294C
+	// Token: 0x0600AD01 RID: 44289 RVA: 0x0032FB24 File Offset: 0x0032DD24
 	public List<int> GetSortedBlackOrApplyList(List<int> originalList)
 	{
 		List<int> list = new List<int>();
@@ -795,7 +794,7 @@ public class FriendController : ControllerBase
 		return list;
 	}
 
-	// Token: 0x0600D8EC RID: 55532 RVA: 0x00324780 File Offset: 0x00322980
+	// Token: 0x0600AD02 RID: 44290 RVA: 0x0032FB58 File Offset: 0x0032DD58
 	public int FriendListSortHook(int a, int b)
 	{
 		FriendData friendById = FriendModel.Instance.GetFriendById(a);
@@ -803,7 +802,7 @@ public class FriendController : ControllerBase
 		return this.FriendSortCondition(friendById, friendById2);
 	}
 
-	// Token: 0x0600D8ED RID: 55533 RVA: 0x003247B0 File Offset: 0x003229B0
+	// Token: 0x0600AD03 RID: 44291 RVA: 0x0032FB88 File Offset: 0x0032DD88
 	private int FriendSortCondition(FriendData aData, FriendData bData)
 	{
 		if (aData == null || bData == null)
@@ -840,7 +839,7 @@ public class FriendController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600D8EE RID: 55534 RVA: 0x00324898 File Offset: 0x00322A98
+	// Token: 0x0600AD04 RID: 44292 RVA: 0x0032FC70 File Offset: 0x0032DE70
 	private void CallBackLoadTestFriendsByGm(int count)
 	{
 		FriendModel.Instance.ClearTestFriendData();
@@ -879,14 +878,14 @@ public class FriendController : ControllerBase
 		FriendModel.Instance.TestDataLoaded = true;
 	}
 
-	// Token: 0x0600D8EF RID: 55535 RVA: 0x003249EC File Offset: 0x00322BEC
+	// Token: 0x0600AD05 RID: 44293 RVA: 0x0032FDC4 File Offset: 0x0032DFC4
 	public void RequestFriendRecentlyTeam()
 	{
 		FriendRecentlyTeamRequest message = FriendRecentlyTeamRequest.Create();
 		Net.Instance.Call(ERequestMessageId.FriendRecentlyTeamRequest, message, new Action<IMessage, Net.CallbackStatus>(FriendController.<RequestFriendRecentlyTeam>g__response|55_0), 0);
 	}
 
-	// Token: 0x0600D8F0 RID: 55536 RVA: 0x00324A1C File Offset: 0x00322C1C
+	// Token: 0x0600AD06 RID: 44294 RVA: 0x0032FDF4 File Offset: 0x0032DFF4
 	public string GetOfflineTimeString(int day)
 	{
 		if (day <= 1)
@@ -904,7 +903,7 @@ public class FriendController : ControllerBase
 		return "FriendOfflineToday";
 	}
 
-	// Token: 0x0600D8F1 RID: 55537 RVA: 0x00324A48 File Offset: 0x00322C48
+	// Token: 0x0600AD07 RID: 44295 RVA: 0x0032FE20 File Offset: 0x0032E020
 	private void TsOnRequestFriendInfoResponse(FArrayBuffer buffer)
 	{
 		FriendAllResponse friendAllResponse = new FriendAllResponse();
@@ -916,7 +915,7 @@ public class FriendController : ControllerBase
 		this.OnRequestAllFriendResponse(friendAllResponse);
 	}
 
-	// Token: 0x0600D8F2 RID: 55538 RVA: 0x00324A74 File Offset: 0x00322C74
+	// Token: 0x0600AD08 RID: 44296 RVA: 0x0032FE4C File Offset: 0x0032E04C
 	private void OnTsSyncChangePlayerRemark(int uid, string remark)
 	{
 		if (FriendModel.Instance.IsMyFriend(uid))
@@ -927,7 +926,7 @@ public class FriendController : ControllerBase
 		EventSystem.Instance.Emit(EEventName.UpdateFriendViewShow);
 	}
 
-	// Token: 0x0600D8F3 RID: 55539 RVA: 0x00324AC4 File Offset: 0x00322CC4
+	// Token: 0x0600AD09 RID: 44297 RVA: 0x0032FE9C File Offset: 0x0032E09C
 	private void OnTsSyncResponseSearchBasicData(FArrayBuffer buffer)
 	{
 		PlayerBasicInfoGetResponse playerBasicInfoGetResponse = new PlayerBasicInfoGetResponse();
@@ -939,7 +938,7 @@ public class FriendController : ControllerBase
 		this.OnSearchPlayerBasicInfoResponse(playerBasicInfoGetResponse.Info);
 	}
 
-	// Token: 0x0600D8F4 RID: 55540 RVA: 0x00324AF4 File Offset: 0x00322CF4
+	// Token: 0x0600AD0A RID: 44298 RVA: 0x0032FECC File Offset: 0x0032E0CC
 	private void OnTsSyncResponseSearchSdkData(FArrayBuffer buffer)
 	{
 		PlayerPsnInfoGetResponse playerPsnInfoGetResponse = new PlayerPsnInfoGetResponse();
@@ -951,7 +950,7 @@ public class FriendController : ControllerBase
 		this.OnSearchPlayerBasicInfoResponse(playerPsnInfoGetResponse.Info);
 	}
 
-	// Token: 0x0600D8F5 RID: 55541 RVA: 0x00324B24 File Offset: 0x00322D24
+	// Token: 0x0600AD0B RID: 44299 RVA: 0x0032FEFC File Offset: 0x0032E0FC
 	private void OnTsResponseBlockData(FArrayBuffer buffer)
 	{
 		BlockListResponse blockListResponse = new BlockListResponse();
@@ -963,7 +962,7 @@ public class FriendController : ControllerBase
 		this.OnBlackListResponse(blockListResponse);
 	}
 
-	// Token: 0x0600D8F6 RID: 55542 RVA: 0x00324B50 File Offset: 0x00322D50
+	// Token: 0x0600AD0C RID: 44300 RVA: 0x0032FF28 File Offset: 0x0032E128
 	private void TsResponseFriendRecentlyTeam(FArrayBuffer buffer)
 	{
 		FriendRecentlyTeamResponse friendRecentlyTeamResponse = new FriendRecentlyTeamResponse();
@@ -974,12 +973,14 @@ public class FriendController : ControllerBase
 		}
 		if (friendRecentlyTeamResponse.ErrorCode == Aki.Protocol.ErrorCode.Success)
 		{
-			FriendModel.Instance.InitRecentlyTeamDataByResponse(friendRecentlyTeamResponse.Infos.ToArray<RecentlyTeamInfo>());
+			RecentlyTeamInfo[] array = new RecentlyTeamInfo[friendRecentlyTeamResponse.Infos.Count];
+			friendRecentlyTeamResponse.Infos.CopyTo(array, 0);
+			FriendModel.Instance.InitRecentlyTeamDataByResponse(array);
 		}
 	}
 
-	// Token: 0x170011B9 RID: 4537
-	// (get) Token: 0x0600D8F7 RID: 55543 RVA: 0x00324B91 File Offset: 0x00322D91
+	// Token: 0x170011DF RID: 4575
+	// (get) Token: 0x0600AD0D RID: 44301 RVA: 0x0032FF7D File Offset: 0x0032E17D
 	public static FriendController Instance
 	{
 		get
@@ -988,7 +989,7 @@ public class FriendController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600D8F8 RID: 55544 RVA: 0x00324B98 File Offset: 0x00322D98
+	// Token: 0x0600AD0E RID: 44302 RVA: 0x0032FF84 File Offset: 0x0032E184
 	public static FriendController GetOrCreateInstance()
 	{
 		if (FriendController._Instance == null)
@@ -998,7 +999,7 @@ public class FriendController : ControllerBase
 		return FriendController._Instance;
 	}
 
-	// Token: 0x0600D8F9 RID: 55545 RVA: 0x00324BAC File Offset: 0x00322DAC
+	// Token: 0x0600AD0F RID: 44303 RVA: 0x0032FF98 File Offset: 0x0032E198
 	public static bool CreateInstance()
 	{
 		if (FriendController._Instance != null)
@@ -1009,38 +1010,38 @@ public class FriendController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600D8FA RID: 55546 RVA: 0x00324BC2 File Offset: 0x00322DC2
+	// Token: 0x0600AD10 RID: 44304 RVA: 0x0032FFAE File Offset: 0x0032E1AE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600D8FB RID: 55547 RVA: 0x00324BC4 File Offset: 0x00322DC4
+	// Token: 0x0600AD11 RID: 44305 RVA: 0x0032FFB0 File Offset: 0x0032E1B0
 	public static void ResetStaticDefaultValue()
 	{
 		FriendController._Instance = null;
 	}
 
-	// Token: 0x0600D8FC RID: 55548 RVA: 0x00324BCC File Offset: 0x00322DCC
+	// Token: 0x0600AD12 RID: 44306 RVA: 0x0032FFB8 File Offset: 0x0032E1B8
 	static FriendController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FriendController.CreateStaticDefaultValue), new Action(FriendController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600D8FE RID: 55550 RVA: 0x00324BF3 File Offset: 0x00322DF3
+	// Token: 0x0600AD14 RID: 44308 RVA: 0x0032FFDF File Offset: 0x0032E1DF
 	[CompilerGenerated]
 	internal static void <OnWorldDone>g__callback|15_0()
 	{
 		EventSystem.Instance.Emit(EEventName.OnGetFriendInitData);
 	}
 
-	// Token: 0x0600D8FF RID: 55551 RVA: 0x00324C05 File Offset: 0x00322E05
+	// Token: 0x0600AD15 RID: 44309 RVA: 0x0032FFF1 File Offset: 0x0032E1F1
 	[CompilerGenerated]
 	internal static void <OnDataDone>g__callback|16_0()
 	{
 		EventSystem.Instance.Emit(EEventName.OnGetFriendInitData);
 	}
 
-	// Token: 0x0600D903 RID: 55555 RVA: 0x00324D60 File Offset: 0x00322F60
+	// Token: 0x0600AD19 RID: 44313 RVA: 0x0033014C File Offset: 0x0032E34C
 	[NullableContext(2)]
 	[CompilerGenerated]
 	internal static void <RequestFriendRecentlyTeam>g__response|55_0(IMessage msg, Net.CallbackStatus _)
@@ -1052,41 +1053,43 @@ public class FriendController : ControllerBase
 		}
 		if (friendRecentlyTeamResponse.ErrorCode == Aki.Protocol.ErrorCode.Success)
 		{
-			FriendModel.Instance.InitRecentlyTeamDataByResponse(friendRecentlyTeamResponse.Infos.ToArray<RecentlyTeamInfo>());
+			RecentlyTeamInfo[] array = new RecentlyTeamInfo[friendRecentlyTeamResponse.Infos.Count];
+			friendRecentlyTeamResponse.Infos.CopyTo(array, 0);
+			FriendModel.Instance.InitRecentlyTeamDataByResponse(array);
 			return;
 		}
-		ErrorCodeController.Instance.OpenErrorCodeTipView(friendRecentlyTeamResponse.ErrorCode, 29522, null, true, true);
+		ErrorCodeController.Instance.OpenErrorCodeTipView(friendRecentlyTeamResponse.ErrorCode, 26286, null, true, true);
 	}
 
-	// Token: 0x040062DE RID: 25310
+	// Token: 0x040063B0 RID: 25520
 	private const int CHECKGAP = 30000;
 
-	// Token: 0x040062DF RID: 25311
+	// Token: 0x040063B1 RID: 25521
 	private const int APPLYFRIENDCD = 1000;
 
-	// Token: 0x040062E0 RID: 25312
+	// Token: 0x040063B2 RID: 25522
 	private const int SERVERREQUESTCD = 2500;
 
-	// Token: 0x040062E1 RID: 25313
+	// Token: 0x040063B3 RID: 25523
 	[Nullable(2)]
 	private TimerHandle CheckFriendTimer;
 
-	// Token: 0x040062E2 RID: 25314
+	// Token: 0x040063B4 RID: 25524
 	private bool FirstCheckFriendState;
 
-	// Token: 0x040062E3 RID: 25315
+	// Token: 0x040063B5 RID: 25525
 	private bool PastWorldMutiState;
 
-	// Token: 0x040062E4 RID: 25316
+	// Token: 0x040063B6 RID: 25526
 	private double LastApplyAddFriendRequestTime;
 
-	// Token: 0x040062E5 RID: 25317
+	// Token: 0x040063B7 RID: 25527
 	private double TargetRequestTimeStamp;
 
-	// Token: 0x040062E6 RID: 25318
+	// Token: 0x040063B8 RID: 25528
 	private double LastSendTime;
 
-	// Token: 0x040062E7 RID: 25319
+	// Token: 0x040063B9 RID: 25529
 	[Nullable(2)]
 	private static FriendController _Instance;
 }

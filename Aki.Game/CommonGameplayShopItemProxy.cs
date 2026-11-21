@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x0200233F RID: 9023
+// Token: 0x02001824 RID: 6180
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 {
-	// Token: 0x06011E3D RID: 73277 RVA: 0x00466C0C File Offset: 0x00464E0C
+	// Token: 0x0600F2ED RID: 62189 RVA: 0x00473CD4 File Offset: 0x00471ED4
 	public virtual void UpdatePriceData()
 	{
 		if (this.GoodsData == null)
@@ -40,7 +40,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		}
 	}
 
-	// Token: 0x06011E3E RID: 73278 RVA: 0x00466CF9 File Offset: 0x00464EF9
+	// Token: 0x0600F2EE RID: 62190 RVA: 0x00473DC1 File Offset: 0x00471FC1
 	public virtual void UpdateItemName()
 	{
 		if (this.GoodsData == null)
@@ -50,7 +50,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		base.ItemNameTextData.SetContent(this.GoodsData.GetGoodsData().GetGoodsName(LanguageSystem.Instance.PackageLanguage));
 	}
 
-	// Token: 0x06011E3F RID: 73279 RVA: 0x00466D2C File Offset: 0x00464F2C
+	// Token: 0x0600F2EF RID: 62191 RVA: 0x00473DF4 File Offset: 0x00471FF4
 	public void UpdateDiscountData()
 	{
 		if (this.GoodsData == null)
@@ -67,7 +67,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		}
 	}
 
-	// Token: 0x06011E40 RID: 73280 RVA: 0x00466D8C File Offset: 0x00464F8C
+	// Token: 0x0600F2F0 RID: 62192 RVA: 0x00473E54 File Offset: 0x00472054
 	public void UpdateLockData()
 	{
 		if (this.GoodsData == null)
@@ -81,7 +81,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		}
 	}
 
-	// Token: 0x06011E41 RID: 73281 RVA: 0x00466DE0 File Offset: 0x00464FE0
+	// Token: 0x0600F2F1 RID: 62193 RVA: 0x00473EA8 File Offset: 0x004720A8
 	public virtual void UpdateSoldOutData()
 	{
 		if (this.GoodsData == null)
@@ -100,7 +100,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		}
 	}
 
-	// Token: 0x06011E42 RID: 73282 RVA: 0x00466E64 File Offset: 0x00465064
+	// Token: 0x0600F2F2 RID: 62194 RVA: 0x00473F2C File Offset: 0x0047212C
 	public virtual void UpdateQualityData()
 	{
 		if (this.GoodsData == null)
@@ -116,7 +116,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		base.QualitySpritePath = payShopItemQualitySpriteByItemIdAndQuality;
 	}
 
-	// Token: 0x06011E43 RID: 73283 RVA: 0x00466EA8 File Offset: 0x004650A8
+	// Token: 0x0600F2F3 RID: 62195 RVA: 0x00473F70 File Offset: 0x00472170
 	public virtual void UpdateItemIconData()
 	{
 		if (this.GoodsData == null)
@@ -126,7 +126,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		base.ItemId = this.GoodsData.GetGoodsData().ItemId;
 	}
 
-	// Token: 0x06011E44 RID: 73284 RVA: 0x00466ECC File Offset: 0x004650CC
+	// Token: 0x0600F2F4 RID: 62196 RVA: 0x00473F94 File Offset: 0x00472194
 	public virtual void UpdateBuyLimitCountText()
 	{
 		if (this.GoodsData == null)
@@ -143,7 +143,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		base.BuyLimitCountTextVisible = false;
 	}
 
-	// Token: 0x06011E45 RID: 73285 RVA: 0x00466F14 File Offset: 0x00465114
+	// Token: 0x0600F2F5 RID: 62197 RVA: 0x00473FDC File Offset: 0x004721DC
 	public virtual void UpdateRedDot()
 	{
 		if (this.GoodsData == null)
@@ -153,7 +153,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		base.RedDotVisible = this.GoodsData.GetIfNeedRemind();
 	}
 
-	// Token: 0x06011E46 RID: 73286 RVA: 0x00466F30 File Offset: 0x00465130
+	// Token: 0x0600F2F6 RID: 62198 RVA: 0x00473FF8 File Offset: 0x004721F8
 	public void UpdateLabel()
 	{
 		if (this.GoodsData == null)
@@ -169,7 +169,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		}
 	}
 
-	// Token: 0x06011E47 RID: 73287 RVA: 0x00466F94 File Offset: 0x00465194
+	// Token: 0x0600F2F7 RID: 62199 RVA: 0x0047405C File Offset: 0x0047225C
 	public virtual void UpdateLeftTime()
 	{
 		if (this.GoodsData == null)
@@ -196,7 +196,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		}
 	}
 
-	// Token: 0x06011E48 RID: 73288 RVA: 0x0046702C File Offset: 0x0046522C
+	// Token: 0x0600F2F8 RID: 62200 RVA: 0x004740F4 File Offset: 0x004722F4
 	public void UpdateReSell()
 	{
 		if (this.GoodsData == null)
@@ -212,19 +212,19 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		}
 	}
 
-	// Token: 0x06011E49 RID: 73289 RVA: 0x00467083 File Offset: 0x00465283
+	// Token: 0x0600F2F9 RID: 62201 RVA: 0x0047414B File Offset: 0x0047234B
 	public void UpdateRaycastTarget()
 	{
 		base.RaycastTarget = true;
 	}
 
-	// Token: 0x06011E4A RID: 73290 RVA: 0x0046708C File Offset: 0x0046528C
+	// Token: 0x0600F2FA RID: 62202 RVA: 0x00474154 File Offset: 0x00472354
 	public virtual void UpdateBottomBgVisible()
 	{
 		base.BottomBgVisible = true;
 	}
 
-	// Token: 0x06011E4B RID: 73291 RVA: 0x00467095 File Offset: 0x00465295
+	// Token: 0x0600F2FB RID: 62203 RVA: 0x0047415D File Offset: 0x0047235D
 	public override void OnBuyButtonClick()
 	{
 		if (this.GoodsData == null)
@@ -234,7 +234,7 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		GameplayShopUtil.OpenExchangePopView(this.GoodsData);
 	}
 
-	// Token: 0x06011E4C RID: 73292 RVA: 0x004670AC File Offset: 0x004652AC
+	// Token: 0x0600F2FC RID: 62204 RVA: 0x00474174 File Offset: 0x00472374
 	public virtual void UpdateFromPayShopGoods(PayShopGoods payShopGoods)
 	{
 		this.GoodsData = payShopGoods;
@@ -254,13 +254,13 @@ public class CommonGameplayShopItemProxy : AbstractGameplayShopItemProxy
 		this.UpdateBottomBgVisible();
 	}
 
-	// Token: 0x04008784 RID: 34692
+	// Token: 0x040088C7 RID: 35015
 	private const string NORMALCOLOR = "FFEF6FFF";
 
-	// Token: 0x04008785 RID: 34693
+	// Token: 0x040088C8 RID: 35016
 	private const string REDCOLOR = "F55E66FF";
 
-	// Token: 0x04008786 RID: 34694
+	// Token: 0x040088C9 RID: 35017
 	[Nullable(2)]
 	public PayShopGoods GoodsData;
 }

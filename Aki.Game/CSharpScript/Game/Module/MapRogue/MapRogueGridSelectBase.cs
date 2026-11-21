@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200561C RID: 22044
+	// Token: 0x020045F2 RID: 17906
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueGridSelectBase : UiPanelBase
 	{
-		// Token: 0x06038139 RID: 229689 RVA: 0x00D48515 File Offset: 0x00D46715
+		// Token: 0x0602D037 RID: 184375 RVA: 0x00C9625D File Offset: 0x00C9445D
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,33 +21,33 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603813A RID: 229690 RVA: 0x00D4854E File Offset: 0x00D4674E
+		// Token: 0x0602D038 RID: 184376 RVA: 0x00C96296 File Offset: 0x00C94496
 		protected override void OnStart()
 		{
 			this.InteractAnimationPlayer = new LevelSequencePlayer(this.RootItem);
 			this.StateAnimationPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603813B RID: 229691 RVA: 0x00D48572 File Offset: 0x00D46772
+		// Token: 0x0602D039 RID: 184377 RVA: 0x00C962BA File Offset: 0x00C944BA
 		public void SetSelected(bool isSelectOn)
 		{
 			this.IsSelectOn = isSelectOn;
 		}
 
-		// Token: 0x0603813C RID: 229692 RVA: 0x00D4857B File Offset: 0x00D4677B
+		// Token: 0x0602D03A RID: 184378 RVA: 0x00C962C3 File Offset: 0x00C944C3
 		public void SetState(bool groupEnable)
 		{
 			base.GetItem(0).SetUIActive(groupEnable);
 			base.GetItem(1).SetUIActive(!groupEnable);
 		}
 
-		// Token: 0x0603813D RID: 229693 RVA: 0x00D4859A File Offset: 0x00D4679A
+		// Token: 0x0602D03B RID: 184379 RVA: 0x00C962E2 File Offset: 0x00C944E2
 		public void SetSequenceToStart(string seqDefine)
 		{
 			this.JumpToFirstFrame(this.RootItem.GetOwner() as AUIBaseActor, seqDefine);
 		}
 
-		// Token: 0x0603813E RID: 229694 RVA: 0x00D485B4 File Offset: 0x00D467B4
+		// Token: 0x0602D03C RID: 184380 RVA: 0x00C962FC File Offset: 0x00C944FC
 		public void ResetAllSequence()
 		{
 			this.SetSequenceToStart("Float");
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.StateAnimationPlayer.StopSequenceByKey("UnSle", false, true);
 		}
 
-		// Token: 0x0603813F RID: 229695 RVA: 0x00D4862C File Offset: 0x00D4682C
+		// Token: 0x0602D03D RID: 184381 RVA: 0x00C96374 File Offset: 0x00C94574
 		public void PlaySequence(string seqDefine, bool notDistribute = false)
 		{
 			if (!(seqDefine == "Float") && !(seqDefine == "Move") && !(seqDefine == "Pre") && !(seqDefine == "PreUp"))
@@ -100,22 +100,22 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038140 RID: 229696 RVA: 0x00D48734 File Offset: 0x00D46934
+		// Token: 0x0602D03E RID: 184382 RVA: 0x00C9647C File Offset: 0x00C9467C
 		private void JumpToFirstFrame(AUIBaseActor actor, string sequenceName)
 		{
 			FFrameTime fframeTime = new FFrameTime();
 			actor.SequenceJumpToSecondByKey(sequenceName, fframeTime);
 		}
 
-		// Token: 0x0401D7D5 RID: 120789
+		// Token: 0x04018260 RID: 98912
 		[Nullable(2)]
 		protected LevelSequencePlayer InteractAnimationPlayer;
 
-		// Token: 0x0401D7D6 RID: 120790
+		// Token: 0x04018261 RID: 98913
 		[Nullable(2)]
 		protected LevelSequencePlayer StateAnimationPlayer;
 
-		// Token: 0x0401D7D7 RID: 120791
+		// Token: 0x04018262 RID: 98914
 		private bool IsSelectOn;
 	}
 }

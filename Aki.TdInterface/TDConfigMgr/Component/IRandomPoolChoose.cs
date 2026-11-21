@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000656 RID: 1622
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006F3 RID: 1779
 	public class IRandomPoolChoose : IMonsterChooseType
 	{
-		// Token: 0x060022B4 RID: 8884 RVA: 0x0005F580 File Offset: 0x0005D780
+		// Token: 0x060025BA RID: 9658 RVA: 0x00066294 File Offset: 0x00064494
 		private IRandomPoolChoose_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060022B5 RID: 8885 RVA: 0x0005F5B8 File Offset: 0x0005D7B8
+		// Token: 0x060025BB RID: 9659 RVA: 0x000662CC File Offset: 0x000644CC
 		public static IRandomPoolChoose Create([Nullable(2)] IRandomPoolChoose instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022B6 RID: 8886 RVA: 0x0005F5CB File Offset: 0x0005D7CB
+		// Token: 0x060025BC RID: 9660 RVA: 0x000662DF File Offset: 0x000644DF
 		public static IRandomPoolChoose CreateFromSetValue([Nullable(2)] IRandomPoolChoose_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022B7 RID: 8887 RVA: 0x0005F5DE File Offset: 0x0005D7DE
+		// Token: 0x060025BD RID: 9661 RVA: 0x000662F2 File Offset: 0x000644F2
 		public new IRandomPoolChoose_SetValue ToSetValue()
 		{
 			return new IRandomPoolChoose_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000938 RID: 2360
-		// (get) Token: 0x060022B8 RID: 8888 RVA: 0x0005F5FD File Offset: 0x0005D7FD
-		// (set) Token: 0x060022B9 RID: 8889 RVA: 0x0005F628 File Offset: 0x0005D828
+		// Token: 0x170009EF RID: 2543
+		// (get) Token: 0x060025BE RID: 9662 RVA: 0x00066311 File Offset: 0x00064511
+		// (set) Token: 0x060025BF RID: 9663 RVA: 0x0006633C File Offset: 0x0006453C
 		public override EMonsterChooseType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000939 RID: 2361
-		// (get) Token: 0x060022BA RID: 8890 RVA: 0x0005F638 File Offset: 0x0005D838
-		// (set) Token: 0x060022BB RID: 8891 RVA: 0x0005F6CB File Offset: 0x0005D8CB
+		// Token: 0x170009F0 RID: 2544
+		// (get) Token: 0x060025C0 RID: 9664 RVA: 0x0006634C File Offset: 0x0006454C
+		// (set) Token: 0x060025C1 RID: 9665 RVA: 0x000663DF File Offset: 0x000645DF
 		public virtual List<IRandomPoolConfig> RandomPoolConfigs
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400181A RID: 6170
+		// Token: 0x04001A0C RID: 6668
 		[Nullable(2)]
 		protected new IRandomPoolChoose FbInstance;
 
-		// Token: 0x0400181B RID: 6171
+		// Token: 0x04001A0D RID: 6669
 		[Nullable(2)]
 		protected new IRandomPoolChoose_SetValue PocoInterface;
 
-		// Token: 0x0400181C RID: 6172
+		// Token: 0x04001A0E RID: 6670
 		private List<IRandomPoolConfig> _RandomPoolConfigsCache;
 
-		// Token: 0x0400181D RID: 6173
+		// Token: 0x04001A0F RID: 6671
 		private bool _RandomPoolConfigsInited;
 	}
 }

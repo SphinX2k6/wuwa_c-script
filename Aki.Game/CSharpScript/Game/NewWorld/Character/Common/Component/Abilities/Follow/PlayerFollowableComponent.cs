@@ -10,32 +10,32 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007148 RID: 29000
+	// Token: 0x02006376 RID: 25462
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlayerFollowableComponent : EntityComponent, IFollowable, IStaticVariableResetter
 	{
-		// Token: 0x06046C9E RID: 289950 RVA: 0x011D61D8 File Offset: 0x011D43D8
+		// Token: 0x0603DAEF RID: 252655 RVA: 0x011DEBEC File Offset: 0x011DCDEC
 		static PlayerFollowableComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlayerFollowableComponent.CreateStaticDefaultValue), new Action(PlayerFollowableComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06046C9F RID: 289951 RVA: 0x011D623F File Offset: 0x011D443F
+		// Token: 0x0603DAF0 RID: 252656 RVA: 0x011DEC53 File Offset: 0x011DCE53
 		[Obsolete]
 		public EntityHandle GetFollower()
 		{
 			return FollowUtils.GetPlayerFollowShooter(this.PlayerId);
 		}
 
-		// Token: 0x06046CA0 RID: 289952 RVA: 0x011D624C File Offset: 0x011D444C
+		// Token: 0x0603DAF1 RID: 252657 RVA: 0x011DEC60 File Offset: 0x011DCE60
 		[Obsolete]
 		public bool IsFollowerEnable()
 		{
 			return FollowUtils.IsFollowShooterEnable(this.PlayerId);
 		}
 
-		// Token: 0x06046CA1 RID: 289953 RVA: 0x011D625C File Offset: 0x011D445C
+		// Token: 0x0603DAF2 RID: 252658 RVA: 0x011DEC70 File Offset: 0x011DCE70
 		public static void CreateStaticDefaultValue()
 		{
 			PlayerFollowableComponent.getHandlerTypeChain = new RegardAsFollowShooterHandler();
@@ -57,14 +57,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			};
 		}
 
-		// Token: 0x06046CA2 RID: 289954 RVA: 0x011D62BB File Offset: 0x011D44BB
+		// Token: 0x0603DAF3 RID: 252659 RVA: 0x011DECCF File Offset: 0x011DCECF
 		public static void ResetStaticDefaultValue()
 		{
 			PlayerFollowableComponent.getHandlerTypeChain = null;
 			PlayerFollowableComponent.FollowerHandlerFactory = null;
 		}
 
-		// Token: 0x06046CA3 RID: 289955 RVA: 0x011D62CC File Offset: 0x011D44CC
+		// Token: 0x0603DAF4 RID: 252660 RVA: 0x011DECE0 File Offset: 0x011DCEE0
 		public IPlayerFollowerHandler GetOrCreateHandlerByCreatureDataId(long creatureDataId)
 		{
 			EntityHandle entity = CreatureModel.Instance.GetEntity(creatureDataId);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return this.GetOrCreateHandler(entityHandleParameterContext.OutPlayerFollowerHandlerType.Value);
 		}
 
-		// Token: 0x06046CA4 RID: 289956 RVA: 0x011D6378 File Offset: 0x011D4578
+		// Token: 0x0603DAF5 RID: 252661 RVA: 0x011DED8C File Offset: 0x011DCF8C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public T GetOrCreateHandler<T>() where T : class, IPlayerFollowerHandler
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return default(T);
 		}
 
-		// Token: 0x06046CA5 RID: 289957 RVA: 0x011D63B8 File Offset: 0x011D45B8
+		// Token: 0x0603DAF6 RID: 252662 RVA: 0x011DEDCC File Offset: 0x011DCFCC
 		public IPlayerFollowerHandler GetOrCreateHandler(EPlayerFollowerHandlerType handlerType)
 		{
 			Dictionary<EPlayerFollowerHandlerType, IPlayerFollowerHandler> followerHandlesMap = this.FollowerHandlesMap;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return playerFollowerHandler;
 		}
 
-		// Token: 0x06046CA6 RID: 289958 RVA: 0x011D644C File Offset: 0x011D464C
+		// Token: 0x0603DAF7 RID: 252663 RVA: 0x011DEE60 File Offset: 0x011DD060
 		[NullableContext(1)]
 		public void UpdatePlayerFollowers(IEnumerable<IPlayerFollowerItemInfo> followers)
 		{
@@ -236,35 +236,35 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			commandInvoker6.ExecuteAllCommand();
 		}
 
-		// Token: 0x06046CA7 RID: 289959 RVA: 0x011D67D8 File Offset: 0x011D49D8
+		// Token: 0x0603DAF8 RID: 252664 RVA: 0x011DF1EC File Offset: 0x011DD3EC
 		public long GetFollowerCreatureDataId(EClientPlayerFollower type)
 		{
 			Dictionary<int, long> followersMap = this.FollowersMap;
 			return ((followersMap != null) ? followersMap.GetValueOrNull((int)type) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x06046CA8 RID: 289960 RVA: 0x011D6808 File Offset: 0x011D4A08
+		// Token: 0x0603DAF9 RID: 252665 RVA: 0x011DF21C File Offset: 0x011DD41C
 		public long GetFollowerCreatureDataId(EPlayerFollower type)
 		{
 			Dictionary<int, long> followersMap = this.FollowersMap;
 			return ((followersMap != null) ? followersMap.GetValueOrNull((int)type) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x06046CA9 RID: 289961 RVA: 0x011D6838 File Offset: 0x011D4A38
+		// Token: 0x0603DAFA RID: 252666 RVA: 0x011DF24C File Offset: 0x011DD44C
 		public long GetFollowerCreatureDataId(int type)
 		{
 			Dictionary<int, long> followersMap = this.FollowersMap;
 			return ((followersMap != null) ? followersMap.GetValueOrNull(type) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x06046CAA RID: 289962 RVA: 0x011D6868 File Offset: 0x011D4A68
+		// Token: 0x0603DAFB RID: 252667 RVA: 0x011DF27C File Offset: 0x011DD47C
 		[Obsolete]
 		public void SetFollowerEnable(bool enable)
 		{
 			FollowUtils.SetPlayerFollowShooterEnable(this.PlayerId, enable, BPEEnableFollowShooter.GameAbility, "");
 		}
 
-		// Token: 0x06046CAB RID: 289963 RVA: 0x011D6880 File Offset: 0x011D4A80
+		// Token: 0x0603DAFC RID: 252668 RVA: 0x011DF294 File Offset: 0x011DD494
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			base.OnInitData(args);
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x06046CAC RID: 289964 RVA: 0x011D69AC File Offset: 0x011D4BAC
+		// Token: 0x0603DAFD RID: 252669 RVA: 0x011DF3C0 File Offset: 0x011DD5C0
 		protected override bool OnClear()
 		{
 			Dictionary<int, long> followersMap = this.FollowersMap;
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return base.OnClear();
 		}
 
-		// Token: 0x06046CAD RID: 289965 RVA: 0x011D6A58 File Offset: 0x011D4C58
+		// Token: 0x0603DAFE RID: 252670 RVA: 0x011DF46C File Offset: 0x011DD66C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -347,47 +347,45 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				return false;
 			}
 			PlayerFollowableComponent playerFollowableComponent = (PlayerFollowableComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CommandInvoker"))
+			if (playerFollowableComponent.CommandInvoker == null)
 			{
-				if (playerFollowableComponent.CommandInvoker == null)
-				{
-					this.CommandInvoker = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CommandInvoker>(this.CommandInvoker), "CommandInvoker"))
-				{
-					return false;
-				}
+				this.CommandInvoker = null;
 			}
-			if (base.CanResetComponentProperty("FollowerHandlesMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommandInvoker), "CommandInvoker"))
 			{
-				if (playerFollowableComponent.FollowerHandlesMap == null)
-				{
-					this.FollowerHandlesMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EPlayerFollowerHandlerType, IPlayerFollowerHandler>>(this.FollowerHandlesMap), "FollowerHandlesMap"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FollowersMap"))
+			if (playerFollowableComponent.FollowerHandlesMap == null)
 			{
-				if (playerFollowableComponent.FollowersMap == null)
-				{
-					this.FollowersMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, long>>(this.FollowersMap), "FollowersMap"))
-				{
-					return false;
-				}
+				this.FollowerHandlesMap = null;
 			}
-			if (base.CanResetComponentProperty("PlayerId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowerHandlesMap), "FollowerHandlesMap"))
 			{
-				this.PlayerId = playerFollowableComponent.PlayerId;
+				return false;
 			}
+			if (playerFollowableComponent.FollowersMap == null)
+			{
+				this.FollowersMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowersMap), "FollowersMap"))
+			{
+				return false;
+			}
+			this.PlayerId = playerFollowableComponent.PlayerId;
 			return true;
 		}
 
-		// Token: 0x04025285 RID: 152197
+		// Token: 0x1700751B RID: 29979
+		// (get) Token: 0x0603DAFF RID: 252671 RVA: 0x011DF519 File Offset: 0x011DD719
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020B65 RID: 133989
 		[Nullable(new byte[]
 		{
 			2,
@@ -395,7 +393,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 		})]
 		private static IParameterHandler<EntityHandleParameterContext> getHandlerTypeChain;
 
-		// Token: 0x04025286 RID: 152198
+		// Token: 0x04020B66 RID: 133990
 		[Nullable(new byte[]
 		{
 			2,
@@ -404,7 +402,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 		})]
 		private static Dictionary<EPlayerFollowerHandlerType, IPlayerFollowerHandlerFactory<IPlayerFollowerHandler>> FollowerHandlerFactory;
 
-		// Token: 0x04025287 RID: 152199
+		// Token: 0x04020B67 RID: 133991
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<Type, EPlayerFollowerHandlerType> PlayerFollowerHandlerTypeNameToEnum = new Dictionary<Type, EPlayerFollowerHandlerType>
@@ -423,10 +421,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		};
 
-		// Token: 0x04025288 RID: 152200
+		// Token: 0x04020B68 RID: 133992
 		public CommandInvoker CommandInvoker;
 
-		// Token: 0x04025289 RID: 152201
+		// Token: 0x04020B69 RID: 133993
 		[Nullable(new byte[]
 		{
 			2,
@@ -434,10 +432,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 		})]
 		private Dictionary<EPlayerFollowerHandlerType, IPlayerFollowerHandler> FollowerHandlesMap;
 
-		// Token: 0x0402528A RID: 152202
+		// Token: 0x04020B6A RID: 133994
 		private Dictionary<int, long> FollowersMap;
 
-		// Token: 0x0402528B RID: 152203
+		// Token: 0x04020B6B RID: 133995
 		private int PlayerId;
 	}
 }

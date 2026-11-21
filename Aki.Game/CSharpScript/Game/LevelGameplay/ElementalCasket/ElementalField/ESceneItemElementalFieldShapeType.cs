@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006E97 RID: 28311
+	// Token: 0x02006017 RID: 24599
 	public enum ESceneItemElementalFieldShapeType
 	{
-		// Token: 0x04023ECE RID: 147150
+		// Token: 0x0401F181 RID: 127361
 		None,
-		// Token: 0x04023ECF RID: 147151
+		// Token: 0x0401F182 RID: 127362
 		Cone,
-		// Token: 0x04023ED0 RID: 147152
+		// Token: 0x0401F183 RID: 127363
 		Sphere,
-		// Token: 0x04023ED1 RID: 147153
+		// Token: 0x0401F184 RID: 127364
 		Box
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009AA RID: 2474
+	// Token: 0x02000A5F RID: 2655
 	public static class ENearbyTrackingTextureExtensions
 	{
-		// Token: 0x0600372E RID: 14126 RVA: 0x0008F64C File Offset: 0x0008D84C
+		// Token: 0x06003ABE RID: 15038 RVA: 0x00097710 File Offset: 0x00095910
 		public static string ToEnumString(this ENearbyTrackingTexture value)
 		{
 			string result;
@@ -51,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600372F RID: 14127 RVA: 0x0008F6F4 File Offset: 0x0008D8F4
+		// Token: 0x06003ABF RID: 15039 RVA: 0x000977B8 File Offset: 0x000959B8
 		public static ENearbyTrackingTexture FromString(string name)
 		{
 			ENearbyTrackingTexture result;
@@ -62,7 +62,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003730 RID: 14128 RVA: 0x0008F720 File Offset: 0x0008D920
+		// Token: 0x06003AC0 RID: 15040 RVA: 0x000977E4 File Offset: 0x000959E4
 		public static bool TryFromString(string name, out ENearbyTrackingTexture value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -186,7 +186,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003731 RID: 14129 RVA: 0x0008F8F8 File Offset: 0x0008DAF8
+		// Token: 0x06003AC1 RID: 15041 RVA: 0x000979BC File Offset: 0x00095BBC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -205,7 +205,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003732 RID: 14130 RVA: 0x0008F966 File Offset: 0x0008DB66
+		// Token: 0x06003AC2 RID: 15042 RVA: 0x00097A2A File Offset: 0x00095C2A
 		public static ENearbyTrackingTexture[] GetValues()
 		{
 			return new ENearbyTrackingTexture[]
@@ -224,7 +224,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003733 RID: 14131 RVA: 0x0008F97C File Offset: 0x0008DB7C
+		// Token: 0x06003AC3 RID: 15043 RVA: 0x00097A40 File Offset: 0x00095C40
 		public static string[] GetNames()
 		{
 			return new string[]

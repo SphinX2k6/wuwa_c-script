@@ -6,12 +6,12 @@ using CSharpScript.Typing;
 using UnrealEngine;
 using UnrealEngine.Interface;
 
-// Token: 0x020034B5 RID: 13493
+// Token: 0x02002A29 RID: 10793
 [NullableContext(1)]
 [Nullable(0)]
 public class DataTableUtil : IStaticVariableResetter
 {
-	// Token: 0x0601D62F RID: 120367 RVA: 0x008329DC File Offset: 0x00830BDC
+	// Token: 0x0601B32E RID: 111406 RVA: 0x00859DFC File Offset: 0x00857FFC
 	static DataTableUtil()
 	{
 		Dictionary<EDataTable, string> dictionary = new Dictionary<EDataTable, string>();
@@ -50,7 +50,7 @@ public class DataTableUtil : IStaticVariableResetter
 		StaticVariableRegister.RegisterAndExecute(new Action(DataTableUtil.CreateStaticDefaultValue), new Action(DataTableUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601D630 RID: 120368 RVA: 0x00832B9C File Offset: 0x00830D9C
+	// Token: 0x0601B32F RID: 111407 RVA: 0x00859FBC File Offset: 0x008581BC
 	[NullableContext(0)]
 	public unsafe static bool TryGetDataTableRowStruct<[IsUnmanaged] T>([Nullable(2)] UDataTable table, [Nullable(1)] string rowName, out T? value) where T : struct, ValueType, IUnrealScriptStruct
 	{
@@ -70,14 +70,14 @@ public class DataTableUtil : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601D631 RID: 120369 RVA: 0x00832BF0 File Offset: 0x00830DF0
+	// Token: 0x0601B330 RID: 111408 RVA: 0x0085A010 File Offset: 0x00858210
 	[NullableContext(0)]
 	public static bool TryGetDataTableRowStruct<[IsUnmanaged] T>(EDataTable dtEnum, [Nullable(1)] string rowName, out T? value) where T : struct, ValueType, IUnrealScriptStruct
 	{
 		return DataTableUtil.TryGetDataTableRowStruct<T>(DataTableUtil.GetDataTable(dtEnum), rowName, out value);
 	}
 
-	// Token: 0x0601D632 RID: 120370 RVA: 0x00832C00 File Offset: 0x00830E00
+	// Token: 0x0601B331 RID: 111409 RVA: 0x0085A020 File Offset: 0x00858220
 	[return: Nullable(2)]
 	public static T GetDataTableRow<[Nullable(0)] T>([Nullable(2)] UDataTable table, string rowName) where T : UnrealScriptStructProxy, IUnrealScriptStructProxy
 	{
@@ -96,7 +96,7 @@ public class DataTableUtil : IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0601D633 RID: 120371 RVA: 0x00832C64 File Offset: 0x00830E64
+	// Token: 0x0601B332 RID: 111410 RVA: 0x0085A084 File Offset: 0x00858284
 	[return: Nullable(2)]
 	public static T GetDataTableRowFromName<[Nullable(0)] T>(EDataTable dtEnum, string rowName) where T : UnrealScriptStructProxy, IUnrealScriptStructProxy
 	{
@@ -114,8 +114,8 @@ public class DataTableUtil : IStaticVariableResetter
 		return dataTableRow;
 	}
 
-	// Token: 0x170028BE RID: 10430
-	// (get) Token: 0x0601D634 RID: 120372 RVA: 0x00832CC2 File Offset: 0x00830EC2
+	// Token: 0x17002C56 RID: 11350
+	// (get) Token: 0x0601B333 RID: 111411 RVA: 0x0085A0E2 File Offset: 0x008582E2
 	private static Dictionary<EDataTable, UDataTable> DataTableCacheMap
 	{
 		get
@@ -124,13 +124,13 @@ public class DataTableUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601D635 RID: 120373 RVA: 0x00832CC9 File Offset: 0x00830EC9
+	// Token: 0x0601B334 RID: 111412 RVA: 0x0085A0E9 File Offset: 0x008582E9
 	private static T CreateDataTableRowReference<[Nullable(0)] T>(IntPtr rowPtr, UDataTable table) where T : UnrealScriptStructProxy, IUnrealScriptStructProxy
 	{
 		return (T)((object)IUnrealScriptStructProxy.CreateReferenceFromPointer(rowPtr, table));
 	}
 
-	// Token: 0x0601D636 RID: 120374 RVA: 0x00832CE0 File Offset: 0x00830EE0
+	// Token: 0x0601B335 RID: 111413 RVA: 0x0085A100 File Offset: 0x00858300
 	private static bool TryGetDataTableAllRowsWithKeys(UDataTable table, out TArray<FName> rowNames, out IntPtr[] rows)
 	{
 		rowNames = new TArray<FName>();
@@ -140,7 +140,7 @@ public class DataTableUtil : IStaticVariableResetter
 		return nativePtr != IntPtr.Zero && rows.Length != 0 && rowNames.Num() == rows.Length;
 	}
 
-	// Token: 0x0601D637 RID: 120375 RVA: 0x00832D28 File Offset: 0x00830F28
+	// Token: 0x0601B336 RID: 111414 RVA: 0x0085A148 File Offset: 0x00858348
 	[NullableContext(2)]
 	private static UDataTable GetDataTable(EDataTable dtEnum)
 	{
@@ -177,7 +177,7 @@ public class DataTableUtil : IStaticVariableResetter
 		return loadedAsset;
 	}
 
-	// Token: 0x0601D638 RID: 120376 RVA: 0x00832DD0 File Offset: 0x00830FD0
+	// Token: 0x0601B337 RID: 111415 RVA: 0x0085A1F0 File Offset: 0x008583F0
 	[NullableContext(2)]
 	public static TArray<FName> GetDataTableAllRowNames(EDataTable dtEnum)
 	{
@@ -194,7 +194,7 @@ public class DataTableUtil : IStaticVariableResetter
 		return new TArray<FName>(dataTableAllRowNames, null);
 	}
 
-	// Token: 0x0601D639 RID: 120377 RVA: 0x00832E04 File Offset: 0x00831004
+	// Token: 0x0601B338 RID: 111416 RVA: 0x0085A224 File Offset: 0x00858424
 	public static void GetDataTableAllRowNamesFromTable([Nullable(2)] UDataTable table, List<string> result)
 	{
 		result.Clear();
@@ -220,13 +220,13 @@ public class DataTableUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601D63A RID: 120378 RVA: 0x00832E78 File Offset: 0x00831078
+	// Token: 0x0601B339 RID: 111417 RVA: 0x0085A298 File Offset: 0x00858498
 	public static List<T> GetDataTableAllRow<[Nullable(0)] T>(EDataTable dtEnum) where T : UnrealScriptStructProxy, IUnrealScriptStructProxy
 	{
 		return DataTableUtil.GetDataTableAllRowFromTable<T>(DataTableUtil.GetDataTable(dtEnum));
 	}
 
-	// Token: 0x0601D63B RID: 120379 RVA: 0x00832E88 File Offset: 0x00831088
+	// Token: 0x0601B33A RID: 111418 RVA: 0x0085A2A8 File Offset: 0x008584A8
 	public static List<T> GetDataTableAllRowFromTable<[Nullable(0)] T>([Nullable(2)] UDataTable table) where T : UnrealScriptStructProxy, IUnrealScriptStructProxy
 	{
 		if (table == null)
@@ -254,7 +254,7 @@ public class DataTableUtil : IStaticVariableResetter
 		return list;
 	}
 
-	// Token: 0x0601D63C RID: 120380 RVA: 0x00832F70 File Offset: 0x00831170
+	// Token: 0x0601B33B RID: 111419 RVA: 0x0085A390 File Offset: 0x00858590
 	public static void GetDataTableAllRowWithKeysFromTable<[Nullable(0)] T>([Nullable(2)] UDataTable table, List<DataTableKeyRow<T>> result) where T : UnrealScriptStructProxy, IUnrealScriptStructProxy
 	{
 		result.Clear();
@@ -283,7 +283,7 @@ public class DataTableUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601D63D RID: 120381 RVA: 0x0083305C File Offset: 0x0083125C
+	// Token: 0x0601B33C RID: 111420 RVA: 0x0085A47C File Offset: 0x0085867C
 	public static List<Tuple<string, T>> GetAllDataTableRowFromTableWithRowName<[Nullable(0)] T>([Nullable(2)] UDataTable table) where T : UnrealScriptStructProxy, IUnrealScriptStructProxy
 	{
 		List<DataTableKeyRow<T>> list = new List<DataTableKeyRow<T>>();
@@ -296,7 +296,7 @@ public class DataTableUtil : IStaticVariableResetter
 		return list2;
 	}
 
-	// Token: 0x0601D63E RID: 120382 RVA: 0x008330D4 File Offset: 0x008312D4
+	// Token: 0x0601B33D RID: 111421 RVA: 0x0085A4F4 File Offset: 0x008586F4
 	[return: Nullable(2)]
 	public static SWeaponSocketItem LoadAiWeaponSocketConfigs(string rowName, int key)
 	{
@@ -313,7 +313,7 @@ public class DataTableUtil : IStaticVariableResetter
 		return valueOrDefault.Weapon;
 	}
 
-	// Token: 0x0601D63F RID: 120383 RVA: 0x0083310C File Offset: 0x0083130C
+	// Token: 0x0601B33E RID: 111422 RVA: 0x0085A52C File Offset: 0x0085872C
 	public static Dictionary<int, SAiWeaponSocket> LoadAllAiWeaponSockets()
 	{
 		UDataTable dataTable = DataTableUtil.GetDataTable(EDataTable.AiWeaponSocket);
@@ -331,22 +331,22 @@ public class DataTableUtil : IStaticVariableResetter
 		return dictionary;
 	}
 
-	// Token: 0x0601D640 RID: 120384 RVA: 0x00833198 File Offset: 0x00831398
+	// Token: 0x0601B33F RID: 111423 RVA: 0x0085A5B8 File Offset: 0x008587B8
 	public static void CreateStaticDefaultValue()
 	{
 		DataTableUtil._dataTableCacheMap = new Dictionary<EDataTable, UDataTable>();
 	}
 
-	// Token: 0x0601D641 RID: 120385 RVA: 0x008331A4 File Offset: 0x008313A4
+	// Token: 0x0601B340 RID: 111424 RVA: 0x0085A5C4 File Offset: 0x008587C4
 	public static void ResetStaticDefaultValue()
 	{
 		DataTableUtil._dataTableCacheMap = null;
 	}
 
-	// Token: 0x0400E79A RID: 59290
+	// Token: 0x0400EC4E RID: 60494
 	public static readonly IReadOnlyDictionary<EDataTable, string> dataTablePaths;
 
-	// Token: 0x0400E79B RID: 59291
+	// Token: 0x0400EC4F RID: 60495
 	[Nullable(new byte[]
 	{
 		2,

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054EB RID: 21739
+	// Token: 0x02005A71 RID: 23153
 	public struct ILevelQteComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A05B RID: 41051
-		// (get) Token: 0x06023DDF RID: 146911 RVA: 0x004F58AF File Offset: 0x004F3AAF
+		// Token: 0x1700A895 RID: 43157
+		// (get) Token: 0x06025E99 RID: 155289 RVA: 0x005329D3 File Offset: 0x00530BD3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023DE0 RID: 146912 RVA: 0x004F58BC File Offset: 0x004F3ABC
+		// Token: 0x06025E9A RID: 155290 RVA: 0x005329E0 File Offset: 0x00530BE0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023DE1 RID: 146913 RVA: 0x004F58C4 File Offset: 0x004F3AC4
+		// Token: 0x06025E9B RID: 155291 RVA: 0x005329E8 File Offset: 0x00530BE8
 		public static ILevelQteComponent GetRootAsILevelQteComponent(ByteBuffer _bb)
 		{
 			return ILevelQteComponent.GetRootAsILevelQteComponent(_bb, default(ILevelQteComponent));
 		}
 
-		// Token: 0x06023DE2 RID: 146914 RVA: 0x004F58E0 File Offset: 0x004F3AE0
+		// Token: 0x06025E9C RID: 155292 RVA: 0x00532A04 File Offset: 0x00530C04
 		public static ILevelQteComponent GetRootAsILevelQteComponent(ByteBuffer _bb, ILevelQteComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023DE3 RID: 146915 RVA: 0x004F58FD File Offset: 0x004F3AFD
+		// Token: 0x06025E9D RID: 155293 RVA: 0x00532A21 File Offset: 0x00530C21
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023DE4 RID: 146916 RVA: 0x004F590C File Offset: 0x004F3B0C
+		// Token: 0x06025E9E RID: 155294 RVA: 0x00532A30 File Offset: 0x00530C30
 		public ILevelQteComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A05C RID: 41052
-		// (get) Token: 0x06023DE5 RID: 146917 RVA: 0x004F591C File Offset: 0x004F3B1C
+		// Token: 0x1700A896 RID: 43158
+		// (get) Token: 0x06025E9F RID: 155295 RVA: 0x00532A40 File Offset: 0x00530C40
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A05D RID: 41053
-		// (get) Token: 0x06023DE6 RID: 146918 RVA: 0x004F595C File Offset: 0x004F3B5C
+		// Token: 0x1700A897 RID: 43159
+		// (get) Token: 0x06025EA0 RID: 155296 RVA: 0x00532A80 File Offset: 0x00530C80
 		public ISingleBtnQte? QteConfig
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A05E RID: 41054
-		// (get) Token: 0x06023DE7 RID: 146919 RVA: 0x004F59BC File Offset: 0x004F3BBC
+		// Token: 0x1700A898 RID: 43160
+		// (get) Token: 0x06025EA1 RID: 155297 RVA: 0x00532AE0 File Offset: 0x00530CE0
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023DE8 RID: 146920 RVA: 0x004F59F8 File Offset: 0x004F3BF8
+		// Token: 0x06025EA2 RID: 155298 RVA: 0x00532B1C File Offset: 0x00530D1C
 		public static Offset<ILevelQteComponent> CreateILevelQteComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<ISingleBtnQte> QteConfigOffset = default(Offset<ISingleBtnQte>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelQteComponent.EndILevelQteComponent(builder);
 		}
 
-		// Token: 0x06023DE9 RID: 146921 RVA: 0x004F5A1C File Offset: 0x004F3C1C
+		// Token: 0x06025EA3 RID: 155299 RVA: 0x00532B40 File Offset: 0x00530D40
 		public static void StartILevelQteComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06023DEA RID: 146922 RVA: 0x004F5A25 File Offset: 0x004F3C25
+		// Token: 0x06025EA4 RID: 155300 RVA: 0x00532B49 File Offset: 0x00530D49
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06023DEB RID: 146923 RVA: 0x004F5A30 File Offset: 0x004F3C30
+		// Token: 0x06025EA5 RID: 155301 RVA: 0x00532B54 File Offset: 0x00530D54
 		public static void AddQteConfig(FlatBufferBuilder builder, Offset<ISingleBtnQte> qteConfigOffset)
 		{
 			builder.AddOffset(1, qteConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06023DEC RID: 146924 RVA: 0x004F5A40 File Offset: 0x004F3C40
+		// Token: 0x06025EA6 RID: 155302 RVA: 0x00532B64 File Offset: 0x00530D64
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06023DED RID: 146925 RVA: 0x004F5A4B File Offset: 0x004F3C4B
+		// Token: 0x06025EA7 RID: 155303 RVA: 0x00532B6F File Offset: 0x00530D6F
 		public static Offset<ILevelQteComponent> EndILevelQteComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelQteComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06023DEE RID: 146926 RVA: 0x004F5A58 File Offset: 0x004F3C58
+		// Token: 0x06025EA8 RID: 155304 RVA: 0x00532B7C File Offset: 0x00530D7C
 		public ILevelQteComponentT UnPack()
 		{
 			ILevelQteComponentT levelQteComponentT = new ILevelQteComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return levelQteComponentT;
 		}
 
-		// Token: 0x06023DEF RID: 146927 RVA: 0x004F5A74 File Offset: 0x004F3C74
+		// Token: 0x06025EA9 RID: 155305 RVA: 0x00532B98 File Offset: 0x00530D98
 		public void UnPackTo(ILevelQteComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023DF0 RID: 146928 RVA: 0x004F5AC8 File Offset: 0x004F3CC8
+		// Token: 0x06025EAA RID: 155306 RVA: 0x00532BEC File Offset: 0x00530DEC
 		public static Offset<ILevelQteComponent> Pack(FlatBufferBuilder builder, ILevelQteComponentT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelQteComponent.CreateILevelQteComponent(builder, _o.Disabled, qteConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E7C5 RID: 59333
+		// Token: 0x0400F3F6 RID: 62454
 		private Table __p;
 	}
 }

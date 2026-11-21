@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020BE RID: 8382
+	// Token: 0x02002313 RID: 8979
 	public class IWindProtagonistParkour4_SetValue
 	{
-		// Token: 0x04006E7C RID: 28284
+		// Token: 0x0400749A RID: 29850
 		public ELeisureInteract Type;
 	}
 }

@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020021D9 RID: 8665
+// Token: 0x020016BD RID: 5821
 [NullableContext(1)]
 [Nullable(0)]
 public class MailScrollItemNew : UiPanelBase, IDynamicScrollItem<MailData>
 {
-	// Token: 0x06010DDF RID: 69087 RVA: 0x0041A6B8 File Offset: 0x004188B8
+	// Token: 0x0600E270 RID: 57968 RVA: 0x00426F98 File Offset: 0x00425198
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -42,7 +42,7 @@ public class MailScrollItemNew : UiPanelBase, IDynamicScrollItem<MailData>
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06010DE0 RID: 69088 RVA: 0x0041A814 File Offset: 0x00418A14
+	// Token: 0x0600E271 RID: 57969 RVA: 0x004270F4 File Offset: 0x004252F4
 	public void Update(MailData data, int index)
 	{
 		this.Index = index;
@@ -133,38 +133,38 @@ public class MailScrollItemNew : UiPanelBase, IDynamicScrollItem<MailData>
 		}
 	}
 
-	// Token: 0x06010DE1 RID: 69089 RVA: 0x0041AB55 File Offset: 0x00418D55
+	// Token: 0x0600E272 RID: 57970 RVA: 0x00427435 File Offset: 0x00425635
 	public void BindSelectCall(Action<int, MailData> func)
 	{
 		this.OnSelectCallback = func;
 	}
 
-	// Token: 0x06010DE2 RID: 69090 RVA: 0x0041AB5E File Offset: 0x00418D5E
+	// Token: 0x0600E273 RID: 57971 RVA: 0x0042743E File Offset: 0x0042563E
 	public void BindGetSelectedIndexFunction(Func<int> func)
 	{
 		this.GetSelectIndexFunction = func;
 	}
 
-	// Token: 0x06010DE3 RID: 69091 RVA: 0x0041AB67 File Offset: 0x00418D67
+	// Token: 0x0600E274 RID: 57972 RVA: 0x00427447 File Offset: 0x00425647
 	public void BindFavoriteClickCall(Action<int, MailData> func)
 	{
 		this.OnFavoriteClickCallback = func;
 	}
 
-	// Token: 0x06010DE4 RID: 69092 RVA: 0x0041AB70 File Offset: 0x00418D70
+	// Token: 0x0600E275 RID: 57973 RVA: 0x00427450 File Offset: 0x00425650
 	public void OnSelected(bool fireEvent)
 	{
 		(this.RootActor.GetComponentByClass(UUIExtendToggle.StaticClass()) as UUIExtendToggle).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 	}
 
-	// Token: 0x06010DE5 RID: 69093 RVA: 0x0041AB96 File Offset: 0x00418D96
+	// Token: 0x0600E276 RID: 57974 RVA: 0x00427476 File Offset: 0x00425676
 	public void OnDeselected(bool fireEvent)
 	{
 		this.SelectTrigger = false;
 		(this.RootActor.GetComponentByClass(UUIExtendToggle.StaticClass()) as UUIExtendToggle).SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x06010DE6 RID: 69094 RVA: 0x0041ABC3 File Offset: 0x00418DC3
+	// Token: 0x0600E277 RID: 57975 RVA: 0x004274A3 File Offset: 0x004256A3
 	private void OnExtendToggleStateChanged(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked && this != null)
@@ -173,7 +173,7 @@ public class MailScrollItemNew : UiPanelBase, IDynamicScrollItem<MailData>
 		}
 	}
 
-	// Token: 0x06010DE7 RID: 69095 RVA: 0x0041ABE3 File Offset: 0x00418DE3
+	// Token: 0x0600E278 RID: 57976 RVA: 0x004274C3 File Offset: 0x004256C3
 	private void OnFavoriteButtonClick()
 	{
 		if (this.Data == null)
@@ -188,7 +188,7 @@ public class MailScrollItemNew : UiPanelBase, IDynamicScrollItem<MailData>
 		onFavoriteClickCallback(this.Index, this.Data);
 	}
 
-	// Token: 0x06010DE8 RID: 69096 RVA: 0x0041AC0C File Offset: 0x00418E0C
+	// Token: 0x0600E279 RID: 57977 RVA: 0x004274EC File Offset: 0x004256EC
 	private void BindFavoriteButton()
 	{
 		UUISprite sprite = base.GetSprite(8);
@@ -206,13 +206,13 @@ public class MailScrollItemNew : UiPanelBase, IDynamicScrollItem<MailData>
 		favoriteButton.OnClickCallBack.Bind(new Action(this.OnFavoriteButtonClick));
 	}
 
-	// Token: 0x06010DE9 RID: 69097 RVA: 0x0041AC6D File Offset: 0x00418E6D
+	// Token: 0x0600E27A RID: 57978 RVA: 0x0042754D File Offset: 0x0042574D
 	public AUIBaseActor GetUsingItem(MailData data)
 	{
 		return base.GetRootItem().GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x06010DEA RID: 69098 RVA: 0x0041AC80 File Offset: 0x00418E80
+	// Token: 0x0600E27B RID: 57979 RVA: 0x00427560 File Offset: 0x00425760
 	public UniTask Init(UUIItem actor)
 	{
 		MailScrollItemNew.<Init>d__22 <Init>d__;
@@ -224,7 +224,7 @@ public class MailScrollItemNew : UiPanelBase, IDynamicScrollItem<MailData>
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010DEB RID: 69099 RVA: 0x0041ACCB File Offset: 0x00418ECB
+	// Token: 0x0600E27C RID: 57980 RVA: 0x004275AB File Offset: 0x004257AB
 	public void ClearItem()
 	{
 		UUIButtonComponent favoriteButton = this.FavoriteButton;
@@ -237,57 +237,57 @@ public class MailScrollItemNew : UiPanelBase, IDynamicScrollItem<MailData>
 		base.Destroy(null);
 	}
 
-	// Token: 0x0400801E RID: 32798
+	// Token: 0x04008165 RID: 33125
 	private const int DAY_GAP = 7;
 
-	// Token: 0x0400801F RID: 32799
+	// Token: 0x04008166 RID: 33126
 	private UUIExtendToggle Toggle;
 
-	// Token: 0x04008020 RID: 32800
+	// Token: 0x04008167 RID: 33127
 	private UUIButtonComponent FavoriteButton;
 
-	// Token: 0x04008021 RID: 32801
+	// Token: 0x04008168 RID: 33128
 	private Action<int, MailData> OnSelectCallback;
 
-	// Token: 0x04008022 RID: 32802
+	// Token: 0x04008169 RID: 33129
 	private Action<int, MailData> OnFavoriteClickCallback;
 
-	// Token: 0x04008023 RID: 32803
+	// Token: 0x0400816A RID: 33130
 	private Func<int> GetSelectIndexFunction;
 
-	// Token: 0x04008024 RID: 32804
+	// Token: 0x0400816B RID: 33131
 	public bool SelectTrigger;
 
-	// Token: 0x04008025 RID: 32805
+	// Token: 0x0400816C RID: 33132
 	public bool IsInit;
 
-	// Token: 0x04008026 RID: 32806
+	// Token: 0x0400816D RID: 33133
 	private int Index = -1;
 
-	// Token: 0x04008027 RID: 32807
+	// Token: 0x0400816E RID: 33134
 	private MailData Data;
 
-	// Token: 0x0200871F RID: 34591
+	// Token: 0x020078A8 RID: 30888
 	[NullableContext(0)]
 	private enum EMailScrollItemComponents
 	{
-		// Token: 0x0402BF0A RID: 179978
+		// Token: 0x04027223 RID: 160291
 		SprIcon,
-		// Token: 0x0402BF0B RID: 179979
+		// Token: 0x04027224 RID: 160292
 		Toggle,
-		// Token: 0x0402BF0C RID: 179980
+		// Token: 0x04027225 RID: 160293
 		TxtMailTitle,
-		// Token: 0x0402BF0D RID: 179981
+		// Token: 0x04027226 RID: 160294
 		SprStar,
-		// Token: 0x0402BF0E RID: 179982
+		// Token: 0x04027227 RID: 160295
 		TxtPoster,
-		// Token: 0x0402BF0F RID: 179983
+		// Token: 0x04027228 RID: 160296
 		TxtTime,
-		// Token: 0x0402BF10 RID: 179984
+		// Token: 0x04027229 RID: 160297
 		RedDot,
-		// Token: 0x0402BF11 RID: 179985
+		// Token: 0x0402722A RID: 160298
 		PnlContent,
-		// Token: 0x0402BF12 RID: 179986
+		// Token: 0x0402722B RID: 160299
 		SprFavorite
 	}
 }

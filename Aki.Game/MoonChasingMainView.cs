@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001355 RID: 4949
+// Token: 0x02000809 RID: 2057
 [NullableContext(1)]
 [Nullable(0)]
 public class MoonChasingMainView : UiViewBase
 {
-	// Token: 0x060089C6 RID: 35270 RVA: 0x001D70BD File Offset: 0x001D52BD
+	// Token: 0x06005D61 RID: 23905 RVA: 0x001DFF21 File Offset: 0x001DE121
 	public MoonChasingMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x060089C7 RID: 35271 RVA: 0x001D70D4 File Offset: 0x001D52D4
+	// Token: 0x06005D62 RID: 23906 RVA: 0x001DFF38 File Offset: 0x001DE138
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class MoonChasingMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x060089C8 RID: 35272 RVA: 0x001D71E0 File Offset: 0x001D53E0
+	// Token: 0x06005D63 RID: 23907 RVA: 0x001E0044 File Offset: 0x001DE244
 	protected override void OnStart()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -47,7 +47,7 @@ public class MoonChasingMainView : UiViewBase
 		rootActor.OnSequencePlayEvent.Bind(new Action<string, string>(this.OnPlaySequenceEvent));
 	}
 
-	// Token: 0x060089C9 RID: 35273 RVA: 0x001D7203 File Offset: 0x001D5403
+	// Token: 0x06005D64 RID: 23908 RVA: 0x001E0067 File Offset: 0x001DE267
 	private void OnPlaySequenceEvent(string sequenceName, string eventName)
 	{
 		if (eventName != "InturnAni")
@@ -57,7 +57,7 @@ public class MoonChasingMainView : UiViewBase
 		base.GetUiInturnAnimController(10).Play("", -1, false);
 	}
 
-	// Token: 0x060089CA RID: 35274 RVA: 0x001D7228 File Offset: 0x001D5428
+	// Token: 0x06005D65 RID: 23909 RVA: 0x001E008C File Offset: 0x001DE28C
 	private UniTask InitPopularity()
 	{
 		MoonChasingMainView.<InitPopularity>d__13 <InitPopularity>d__;
@@ -68,7 +68,7 @@ public class MoonChasingMainView : UiViewBase
 		return <InitPopularity>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060089CB RID: 35275 RVA: 0x001D726C File Offset: 0x001D546C
+	// Token: 0x06005D66 RID: 23910 RVA: 0x001E00D0 File Offset: 0x001DE2D0
 	private UniTask InitCaption()
 	{
 		MoonChasingMainView.<InitCaption>d__14 <InitCaption>d__;
@@ -79,7 +79,7 @@ public class MoonChasingMainView : UiViewBase
 		return <InitCaption>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060089CC RID: 35276 RVA: 0x001D72B0 File Offset: 0x001D54B0
+	// Token: 0x06005D67 RID: 23911 RVA: 0x001E0114 File Offset: 0x001DE314
 	private UniTask InitBuildingMainModule()
 	{
 		MoonChasingMainView.<InitBuildingMainModule>d__15 <InitBuildingMainModule>d__;
@@ -90,7 +90,7 @@ public class MoonChasingMainView : UiViewBase
 		return <InitBuildingMainModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060089CD RID: 35277 RVA: 0x001D72F4 File Offset: 0x001D54F4
+	// Token: 0x06005D68 RID: 23912 RVA: 0x001E0158 File Offset: 0x001DE358
 	private void InitBtn()
 	{
 		this.BusinessBtn = new ButtonItem(base.GetItem(2));
@@ -109,7 +109,7 @@ public class MoonChasingMainView : UiViewBase
 		this.RewardBtn.SetUiActive(false);
 	}
 
-	// Token: 0x060089CE RID: 35278 RVA: 0x001D73F0 File Offset: 0x001D55F0
+	// Token: 0x06005D69 RID: 23913 RVA: 0x001E0254 File Offset: 0x001DE454
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MoonChasingMainView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -120,26 +120,26 @@ public class MoonChasingMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060089CF RID: 35279 RVA: 0x001D7433 File Offset: 0x001D5633
+	// Token: 0x06005D6A RID: 23914 RVA: 0x001E0297 File Offset: 0x001DE497
 	protected override void OnBeforeShow()
 	{
 		this.Vc.Show();
 		ActivityMoonChasingController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x060089D0 RID: 35280 RVA: 0x001D744A File Offset: 0x001D564A
+	// Token: 0x06005D6B RID: 23915 RVA: 0x001E02AE File Offset: 0x001DE4AE
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.PopularityChange, new Action(this.OnPopularityChange));
 	}
 
-	// Token: 0x060089D1 RID: 35281 RVA: 0x001D7468 File Offset: 0x001D5668
+	// Token: 0x06005D6C RID: 23916 RVA: 0x001E02CC File Offset: 0x001DE4CC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PopularityChange, new Action(this.OnPopularityChange));
 	}
 
-	// Token: 0x060089D2 RID: 35282 RVA: 0x001D7488 File Offset: 0x001D5688
+	// Token: 0x06005D6D RID: 23917 RVA: 0x001E02EC File Offset: 0x001DE4EC
 	public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 	{
 		if (configParams.Length < 1)
@@ -170,19 +170,19 @@ public class MoonChasingMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060089D3 RID: 35283 RVA: 0x001D74E9 File Offset: 0x001D56E9
+	// Token: 0x06005D6E RID: 23918 RVA: 0x001E034D File Offset: 0x001DE54D
 	private void OnPopularityChange()
 	{
 		this.Popularity.RefreshPopularity();
 	}
 
-	// Token: 0x060089D4 RID: 35284 RVA: 0x001D74F6 File Offset: 0x001D56F6
+	// Token: 0x06005D6F RID: 23919 RVA: 0x001E035A File Offset: 0x001DE55A
 	public void RefreshBuildingModule()
 	{
 		this.BuildingMainModule.RefreshModule();
 	}
 
-	// Token: 0x060089D5 RID: 35285 RVA: 0x001D7503 File Offset: 0x001D5703
+	// Token: 0x06005D70 RID: 23920 RVA: 0x001E0367 File Offset: 0x001DE567
 	public void BuildingBackToMainView()
 	{
 		UUIItem item = base.GetItem(7);
@@ -193,7 +193,7 @@ public class MoonChasingMainView : UiViewBase
 		this.BuildingMainModule.HideBuildingModule();
 	}
 
-	// Token: 0x060089D6 RID: 35286 RVA: 0x001D7523 File Offset: 0x001D5723
+	// Token: 0x06005D71 RID: 23921 RVA: 0x001E0387 File Offset: 0x001DE587
 	public void SkipToBuild()
 	{
 		UUIItem item = base.GetItem(7);
@@ -204,13 +204,13 @@ public class MoonChasingMainView : UiViewBase
 		this.BuildingMainModule.ShowBuilding();
 	}
 
-	// Token: 0x060089D7 RID: 35287 RVA: 0x001D7543 File Offset: 0x001D5743
+	// Token: 0x06005D72 RID: 23922 RVA: 0x001E03A7 File Offset: 0x001DE5A7
 	public void RefreshMainModule(int buildingId)
 	{
 		this.BuildingMainModule.RefreshBuilding(buildingId);
 	}
 
-	// Token: 0x060089D8 RID: 35288 RVA: 0x001D7554 File Offset: 0x001D5754
+	// Token: 0x06005D73 RID: 23923 RVA: 0x001E03B8 File Offset: 0x001DE5B8
 	public void RefreshRedDot()
 	{
 		this.BusinessBtn.BindRedDot(ERedDotName.MoonChasingDelegation, 0);
@@ -220,68 +220,68 @@ public class MoonChasingMainView : UiViewBase
 		this.TaskBtn.BindRedDot(ERedDotName.MoonChasingAllQuest, 0);
 	}
 
-	// Token: 0x04003D76 RID: 15734
+	// Token: 0x04003E0E RID: 15886
 	private PopularityModule Popularity;
 
-	// Token: 0x04003D77 RID: 15735
+	// Token: 0x04003E0F RID: 15887
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003D78 RID: 15736
+	// Token: 0x04003E10 RID: 15888
 	private BuildingMainModule BuildingMainModule;
 
-	// Token: 0x04003D79 RID: 15737
+	// Token: 0x04003E11 RID: 15889
 	private ButtonItem BusinessBtn;
 
-	// Token: 0x04003D7A RID: 15738
+	// Token: 0x04003E12 RID: 15890
 	private ButtonItem BuildBtn;
 
-	// Token: 0x04003D7B RID: 15739
+	// Token: 0x04003E13 RID: 15891
 	private ButtonItem TaskBtn;
 
-	// Token: 0x04003D7C RID: 15740
+	// Token: 0x04003E14 RID: 15892
 	private ButtonItem HandbookBtn;
 
-	// Token: 0x04003D7D RID: 15741
+	// Token: 0x04003E15 RID: 15893
 	private ButtonItem RewardBtn;
 
-	// Token: 0x04003D7E RID: 15742
+	// Token: 0x04003E16 RID: 15894
 	private readonly MoonChasingViewController Vc = new MoonChasingViewController();
 
-	// Token: 0x020079B9 RID: 31161
+	// Token: 0x02006B43 RID: 27459
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402812C RID: 164140
+		// Token: 0x04023459 RID: 144473
 		public const int HandbookBtn = 0;
 
-		// Token: 0x0402812D RID: 164141
+		// Token: 0x0402345A RID: 144474
 		public const int RewardBtn = 1;
 
-		// Token: 0x0402812E RID: 164142
+		// Token: 0x0402345B RID: 144475
 		public const int BusinessBtn = 2;
 
-		// Token: 0x0402812F RID: 164143
+		// Token: 0x0402345C RID: 144476
 		public const int BuildBtn = 3;
 
-		// Token: 0x04028130 RID: 164144
+		// Token: 0x0402345D RID: 144477
 		public const int TaskBtn = 4;
 
-		// Token: 0x04028131 RID: 164145
+		// Token: 0x0402345E RID: 144478
 		public const int CaptionItem = 5;
 
-		// Token: 0x04028132 RID: 164146
+		// Token: 0x0402345F RID: 144479
 		public const int PopularityItem = 6;
 
-		// Token: 0x04028133 RID: 164147
+		// Token: 0x04023460 RID: 144480
 		public const int ContentItem = 7;
 
-		// Token: 0x04028134 RID: 164148
+		// Token: 0x04023461 RID: 144481
 		public const int BuildMainItem = 8;
 
-		// Token: 0x04028135 RID: 164149
+		// Token: 0x04023462 RID: 144482
 		public const int CaptionItem2 = 9;
 
-		// Token: 0x04028136 RID: 164150
+		// Token: 0x04023463 RID: 144483
 		public const int Lantern = 10;
 	}
 }

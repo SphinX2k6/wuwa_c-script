@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050CE RID: 20686
+	// Token: 0x0200409E RID: 16542
 	public class FlowActionSetCameraAnim : FlowActionBase
 	{
-		// Token: 0x06034F24 RID: 216868 RVA: 0x00C8A722 File Offset: 0x00C88922
+		// Token: 0x06029E1D RID: 171549 RVA: 0x00BD7A0A File Offset: 0x00BD5C0A
 		protected override void OnExecute()
 		{
 			PlotModel.Instance.PlayCameraAnim(this.ActionInfo.Params as SetCameraAnim);

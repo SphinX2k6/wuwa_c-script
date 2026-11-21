@@ -4,54 +4,54 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Inventory
 {
-	// Token: 0x02005835 RID: 22581
+	// Token: 0x0200480C RID: 18444
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemViewData
 	{
-		// Token: 0x06039600 RID: 235008 RVA: 0x00D9DAB0 File Offset: 0x00D9BCB0
+		// Token: 0x0602E514 RID: 189716 RVA: 0x00CEC970 File Offset: 0x00CEAB70
 		public ItemViewData(InventoryDefine.IItemViewDataInfo itemViewInfo)
 		{
 			this.ItemViewInfo = itemViewInfo;
 		}
 
-		// Token: 0x06039601 RID: 235009 RVA: 0x00D9DABF File Offset: 0x00D9BCBF
+		// Token: 0x0602E515 RID: 189717 RVA: 0x00CEC97F File Offset: 0x00CEAB7F
 		public void SetItemViewInfo(InventoryDefine.IItemViewDataInfo itemViewInfo)
 		{
 			this.ItemViewInfo = itemViewInfo;
 		}
 
-		// Token: 0x06039602 RID: 235010 RVA: 0x00D9DAC8 File Offset: 0x00D9BCC8
+		// Token: 0x0602E516 RID: 189718 RVA: 0x00CEC988 File Offset: 0x00CEAB88
 		public InventoryDefine.IItemViewDataInfo GetItemViewInfo()
 		{
 			return this.ItemViewInfo;
 		}
 
-		// Token: 0x06039603 RID: 235011 RVA: 0x00D9DAD0 File Offset: 0x00D9BCD0
+		// Token: 0x0602E517 RID: 189719 RVA: 0x00CEC990 File Offset: 0x00CEAB90
 		private void SetIsNew(bool isNew)
 		{
 			this.ItemViewInfo.IsNewItem = isNew;
 		}
 
-		// Token: 0x06039604 RID: 235012 RVA: 0x00D9DADE File Offset: 0x00D9BCDE
+		// Token: 0x0602E518 RID: 189720 RVA: 0x00CEC99E File Offset: 0x00CEAB9E
 		public void SetIsLock(bool bIsLock)
 		{
 			this.ItemViewInfo.IsLock = bIsLock;
 		}
 
-		// Token: 0x06039605 RID: 235013 RVA: 0x00D9DAEC File Offset: 0x00D9BCEC
+		// Token: 0x0602E519 RID: 189721 RVA: 0x00CEC9AC File Offset: 0x00CEABAC
 		public void SetIsDeprecate(bool isDeprecate)
 		{
 			this.ItemViewInfo.IsDeprecate = isDeprecate;
 		}
 
-		// Token: 0x06039606 RID: 235014 RVA: 0x00D9DAFA File Offset: 0x00D9BCFA
+		// Token: 0x0602E51A RID: 189722 RVA: 0x00CEC9BA File Offset: 0x00CEABBA
 		public void SetHasRedDot(bool hasRedDot)
 		{
 			this.ItemViewInfo.HasRedDot = hasRedDot;
 		}
 
-		// Token: 0x06039607 RID: 235015 RVA: 0x00D9DB08 File Offset: 0x00D9BD08
+		// Token: 0x0602E51B RID: 189723 RVA: 0x00CEC9C8 File Offset: 0x00CEABC8
 		public InventoryDefine.ERedDotDisableRule GetRedDotDisableRule()
 		{
 			int configId = this.GetConfigId();
@@ -63,13 +63,13 @@ namespace CSharpScript.Game.Module.Inventory
 			return itemConfigData.RedDotDisableRule;
 		}
 
-		// Token: 0x06039608 RID: 235016 RVA: 0x00D9DB33 File Offset: 0x00D9BD33
+		// Token: 0x0602E51C RID: 189724 RVA: 0x00CEC9F3 File Offset: 0x00CEABF3
 		public int GetConfigId()
 		{
 			return this.ItemViewInfo.ConfigId;
 		}
 
-		// Token: 0x06039609 RID: 235017 RVA: 0x00D9DB40 File Offset: 0x00D9BD40
+		// Token: 0x0602E51D RID: 189725 RVA: 0x00CECA00 File Offset: 0x00CEAC00
 		public int? GetUniqueId()
 		{
 			ItemDataBase itemDataBase = this.GetItemDataBase();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Inventory
 			return new int?(itemDataBase.GetUniqueId());
 		}
 
-		// Token: 0x0603960A RID: 235018 RVA: 0x00D9DB6B File Offset: 0x00D9BD6B
+		// Token: 0x0602E51E RID: 189726 RVA: 0x00CECA2B File Offset: 0x00CEAC2B
 		public int GetQuality()
 		{
 			ItemDataBase itemDataBase = this.GetItemDataBase();
@@ -91,68 +91,68 @@ namespace CSharpScript.Game.Module.Inventory
 			return itemDataBase.GetQuality();
 		}
 
-		// Token: 0x0603960B RID: 235019 RVA: 0x00D9DB7E File Offset: 0x00D9BD7E
+		// Token: 0x0602E51F RID: 189727 RVA: 0x00CECA3E File Offset: 0x00CEAC3E
 		public void SetCount(int count)
 		{
 			this.ItemViewInfo.Count = count;
 		}
 
-		// Token: 0x0603960C RID: 235020 RVA: 0x00D9DB8C File Offset: 0x00D9BD8C
+		// Token: 0x0602E520 RID: 189728 RVA: 0x00CECA4C File Offset: 0x00CEAC4C
 		public int GetCount()
 		{
 			return this.ItemViewInfo.Count;
 		}
 
-		// Token: 0x0603960D RID: 235021 RVA: 0x00D9DB99 File Offset: 0x00D9BD99
+		// Token: 0x0602E521 RID: 189729 RVA: 0x00CECA59 File Offset: 0x00CEAC59
 		public void SetStackId(int stackId)
 		{
 			this.ItemViewInfo.StackId = stackId;
 		}
 
-		// Token: 0x0603960E RID: 235022 RVA: 0x00D9DBA7 File Offset: 0x00D9BDA7
+		// Token: 0x0602E522 RID: 189730 RVA: 0x00CECA67 File Offset: 0x00CEAC67
 		public int GetStackId()
 		{
 			return this.ItemViewInfo.StackId;
 		}
 
-		// Token: 0x0603960F RID: 235023 RVA: 0x00D9DBB4 File Offset: 0x00D9BDB4
+		// Token: 0x0602E523 RID: 189731 RVA: 0x00CECA74 File Offset: 0x00CEAC74
 		public void SetSelectOn(bool isSelectOn)
 		{
 			this.ItemViewInfo.IsSelectOn = isSelectOn;
 		}
 
-		// Token: 0x06039610 RID: 235024 RVA: 0x00D9DBC2 File Offset: 0x00D9BDC2
+		// Token: 0x0602E524 RID: 189732 RVA: 0x00CECA82 File Offset: 0x00CEAC82
 		public bool GetSelectOn()
 		{
 			return this.ItemViewInfo.IsSelectOn;
 		}
 
-		// Token: 0x06039611 RID: 235025 RVA: 0x00D9DBCF File Offset: 0x00D9BDCF
+		// Token: 0x0602E525 RID: 189733 RVA: 0x00CECA8F File Offset: 0x00CEAC8F
 		public void SetSelectNum(int selectNum)
 		{
 			this.ItemViewInfo.SelectOnNum = selectNum;
 		}
 
-		// Token: 0x06039612 RID: 235026 RVA: 0x00D9DBDD File Offset: 0x00D9BDDD
+		// Token: 0x0602E526 RID: 189734 RVA: 0x00CECA9D File Offset: 0x00CEAC9D
 		public int GetSelectNum()
 		{
 			return this.ItemViewInfo.SelectOnNum;
 		}
 
-		// Token: 0x06039613 RID: 235027 RVA: 0x00D9DBEA File Offset: 0x00D9BDEA
+		// Token: 0x0602E527 RID: 189735 RVA: 0x00CECAAA File Offset: 0x00CEACAA
 		[NullableContext(2)]
 		public ItemDataBase GetItemDataBase()
 		{
 			return this.ItemViewInfo.ItemDataBase;
 		}
 
-		// Token: 0x06039614 RID: 235028 RVA: 0x00D9DBF7 File Offset: 0x00D9BDF7
+		// Token: 0x0602E528 RID: 189736 RVA: 0x00CECAB7 File Offset: 0x00CEACB7
 		public InventoryDefine.EItemDataType GetItemDataType()
 		{
 			return this.ItemViewInfo.ItemDataType;
 		}
 
-		// Token: 0x06039615 RID: 235029 RVA: 0x00D9DC04 File Offset: 0x00D9BE04
+		// Token: 0x0602E529 RID: 189737 RVA: 0x00CECAC4 File Offset: 0x00CEACC4
 		public int GetSortIndex()
 		{
 			ItemDataBase itemDataBase = this.GetItemDataBase();
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Inventory
 			return itemDataBase.GetSortIndex();
 		}
 
-		// Token: 0x06039616 RID: 235030 RVA: 0x00D9DC24 File Offset: 0x00D9BE24
+		// Token: 0x0602E52A RID: 189738 RVA: 0x00CECAE4 File Offset: 0x00CEACE4
 		public void RemoveNewItem()
 		{
 			InventoryModel instance = InventoryModel.Instance;
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Inventory
 			this.SetIsNew(false);
 		}
 
-		// Token: 0x06039617 RID: 235031 RVA: 0x00D9DC74 File Offset: 0x00D9BE74
+		// Token: 0x0602E52B RID: 189739 RVA: 0x00CECB34 File Offset: 0x00CEAD34
 		public void RemoveRedDotItem()
 		{
 			InventoryModel instance = InventoryModel.Instance;
@@ -199,25 +199,25 @@ namespace CSharpScript.Game.Module.Inventory
 			this.SetHasRedDot(false);
 		}
 
-		// Token: 0x06039618 RID: 235032 RVA: 0x00D9DCC3 File Offset: 0x00D9BEC3
+		// Token: 0x0602E52C RID: 189740 RVA: 0x00CECB83 File Offset: 0x00CEAD83
 		public bool IsBuffItem()
 		{
 			return BuffItemConfig.Instance.IsBuffItem(this.GetConfigId());
 		}
 
-		// Token: 0x06039619 RID: 235033 RVA: 0x00D9DCD5 File Offset: 0x00D9BED5
+		// Token: 0x0602E52D RID: 189741 RVA: 0x00CECB95 File Offset: 0x00CEAD95
 		public bool IsTeamBuffItem()
 		{
 			return BuffItemConfig.Instance.IsTeamBuffItem(this.GetConfigId());
 		}
 
-		// Token: 0x0603961A RID: 235034 RVA: 0x00D9DCE7 File Offset: 0x00D9BEE7
+		// Token: 0x0602E52E RID: 189742 RVA: 0x00CECBA7 File Offset: 0x00CEADA7
 		public UiPlayItem? GetUiPlayItem()
 		{
 			return ConfigUiPlayItemById.GetConfig(this.GetConfigId(), true);
 		}
 
-		// Token: 0x0603961B RID: 235035 RVA: 0x00D9DCF8 File Offset: 0x00D9BEF8
+		// Token: 0x0602E52F RID: 189743 RVA: 0x00CECBB8 File Offset: 0x00CEADB8
 		public InventoryDefine.EItemType? GetItemType()
 		{
 			ItemDataBase itemDataBase = this.GetItemDataBase();
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Inventory
 			return itemDataBase.GetType();
 		}
 
-		// Token: 0x0603961C RID: 235036 RVA: 0x00D9DD20 File Offset: 0x00D9BF20
+		// Token: 0x0602E530 RID: 189744 RVA: 0x00CECBE0 File Offset: 0x00CEADE0
 		public int GetAttributeLevel()
 		{
 			InventoryDefine.EItemDataType itemDataType = this.GetItemDataType();
@@ -252,13 +252,13 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x0603961D RID: 235037 RVA: 0x00D9DD74 File Offset: 0x00D9BF74
+		// Token: 0x0602E531 RID: 189745 RVA: 0x00CECC34 File Offset: 0x00CEAE34
 		public ItemViewDefine.EItemOperationMode GetItemOperationType()
 		{
 			return this.ItemViewInfo.ItemOperationMode;
 		}
 
-		// Token: 0x0603961E RID: 235038 RVA: 0x00D9DD84 File Offset: 0x00D9BF84
+		// Token: 0x0602E532 RID: 189746 RVA: 0x00CECC44 File Offset: 0x00CEAE44
 		public bool IsItemCanDestroy()
 		{
 			switch (this.GetItemDataType())
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.Inventory
 			return false;
 		}
 
-		// Token: 0x0603961F RID: 235039 RVA: 0x00D9DEE8 File Offset: 0x00D9C0E8
+		// Token: 0x0602E533 RID: 189747 RVA: 0x00CECDA8 File Offset: 0x00CEAFA8
 		public bool IsEqual(ItemViewData itemViewDataB, bool? needStackEqual = null)
 		{
 			bool flag = this.GetConfigId() == itemViewDataB.GetConfigId();
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.Inventory
 			return flag && flag2;
 		}
 
-		// Token: 0x0401E03E RID: 122942
+		// Token: 0x04018AD7 RID: 101079
 		private InventoryDefine.IItemViewDataInfo ItemViewInfo;
 	}
 }

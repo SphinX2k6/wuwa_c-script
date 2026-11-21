@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ABA RID: 6842
+	// Token: 0x02001C59 RID: 7257
 	public class IFoxPickUp_SetValue
 	{
-		// Token: 0x04005A4B RID: 23115
+		// Token: 0x04005EC4 RID: 24260
 		public ELeisureInteract Type;
 
-		// Token: 0x04005A4C RID: 23116
+		// Token: 0x04005EC5 RID: 24261
 		public int DataTableIndex;
 
-		// Token: 0x04005A4D RID: 23117
+		// Token: 0x04005EC6 RID: 24262
 		public bool? MouthOpen;
 	}
 }

@@ -3,50 +3,50 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D3F RID: 27967
+	// Token: 0x020074BA RID: 29882
 	public class IPlaySequenceDataT
 	{
-		// Token: 0x1700D08A RID: 53386
-		// (get) Token: 0x060315F5 RID: 202229 RVA: 0x006B242D File Offset: 0x006B062D
-		// (set) Token: 0x060315F6 RID: 202230 RVA: 0x006B2435 File Offset: 0x006B0635
+		// Token: 0x1700DBD2 RID: 56274
+		// (get) Token: 0x060345F1 RID: 214513 RVA: 0x0070DB15 File Offset: 0x0070BD15
+		// (set) Token: 0x060345F2 RID: 214514 RVA: 0x0070DB1D File Offset: 0x0070BD1D
 		public string Path { get; set; }
 
-		// Token: 0x1700D08B RID: 53387
-		// (get) Token: 0x060315F7 RID: 202231 RVA: 0x006B243E File Offset: 0x006B063E
-		// (set) Token: 0x060315F8 RID: 202232 RVA: 0x006B2446 File Offset: 0x006B0646
+		// Token: 0x1700DBD3 RID: 56275
+		// (get) Token: 0x060345F3 RID: 214515 RVA: 0x0070DB26 File Offset: 0x0070BD26
+		// (set) Token: 0x060345F4 RID: 214516 RVA: 0x0070DB2E File Offset: 0x0070BD2E
 		public bool ResetCamera { get; set; }
 
-		// Token: 0x1700D08C RID: 53388
-		// (get) Token: 0x060315F9 RID: 202233 RVA: 0x006B244F File Offset: 0x006B064F
-		// (set) Token: 0x060315FA RID: 202234 RVA: 0x006B2457 File Offset: 0x006B0657
+		// Token: 0x1700DBD4 RID: 56276
+		// (get) Token: 0x060345F5 RID: 214517 RVA: 0x0070DB37 File Offset: 0x0070BD37
+		// (set) Token: 0x060345F6 RID: 214518 RVA: 0x0070DB3F File Offset: 0x0070BD3F
 		public bool KeepCamera { get; set; }
 
-		// Token: 0x1700D08D RID: 53389
-		// (get) Token: 0x060315FB RID: 202235 RVA: 0x006B2460 File Offset: 0x006B0660
-		// (set) Token: 0x060315FC RID: 202236 RVA: 0x006B2468 File Offset: 0x006B0668
+		// Token: 0x1700DBD5 RID: 56277
+		// (get) Token: 0x060345F7 RID: 214519 RVA: 0x0070DB48 File Offset: 0x0070BD48
+		// (set) Token: 0x060345F8 RID: 214520 RVA: 0x0070DB50 File Offset: 0x0070BD50
 		public bool PreLoadRenderAssets { get; set; }
 
-		// Token: 0x1700D08E RID: 53390
-		// (get) Token: 0x060315FD RID: 202237 RVA: 0x006B2471 File Offset: 0x006B0671
-		// (set) Token: 0x060315FE RID: 202238 RVA: 0x006B2479 File Offset: 0x006B0679
+		// Token: 0x1700DBD6 RID: 56278
+		// (get) Token: 0x060345F9 RID: 214521 RVA: 0x0070DB59 File Offset: 0x0070BD59
+		// (set) Token: 0x060345FA RID: 214522 RVA: 0x0070DB61 File Offset: 0x0070BD61
 		public List<ISequenceFrameEventT> FrameEvents { get; set; }
 
-		// Token: 0x1700D08F RID: 53391
-		// (get) Token: 0x060315FF RID: 202239 RVA: 0x006B2482 File Offset: 0x006B0682
-		// (set) Token: 0x06031600 RID: 202240 RVA: 0x006B248A File Offset: 0x006B068A
+		// Token: 0x1700DBD7 RID: 56279
+		// (get) Token: 0x060345FB RID: 214523 RVA: 0x0070DB6A File Offset: 0x0070BD6A
+		// (set) Token: 0x060345FC RID: 214524 RVA: 0x0070DB72 File Offset: 0x0070BD72
 		public bool SaveFinalPos { get; set; }
 
-		// Token: 0x1700D090 RID: 53392
-		// (get) Token: 0x06031601 RID: 202241 RVA: 0x006B2493 File Offset: 0x006B0693
-		// (set) Token: 0x06031602 RID: 202242 RVA: 0x006B249B File Offset: 0x006B069B
+		// Token: 0x1700DBD8 RID: 56280
+		// (get) Token: 0x060345FD RID: 214525 RVA: 0x0070DB7B File Offset: 0x0070BD7B
+		// (set) Token: 0x060345FE RID: 214526 RVA: 0x0070DB83 File Offset: 0x0070BD83
 		public ISetBlendAnimT SeqBlendAnim { get; set; }
 
-		// Token: 0x1700D091 RID: 53393
-		// (get) Token: 0x06031603 RID: 202243 RVA: 0x006B24A4 File Offset: 0x006B06A4
-		// (set) Token: 0x06031604 RID: 202244 RVA: 0x006B24AC File Offset: 0x006B06AC
+		// Token: 0x1700DBD9 RID: 56281
+		// (get) Token: 0x060345FF RID: 214527 RVA: 0x0070DB8C File Offset: 0x0070BD8C
+		// (set) Token: 0x06034600 RID: 214528 RVA: 0x0070DB94 File Offset: 0x0070BD94
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031605 RID: 202245 RVA: 0x006B24B5 File Offset: 0x006B06B5
+		// Token: 0x06034601 RID: 214529 RVA: 0x0070DB9D File Offset: 0x0070BD9D
 		public IPlaySequenceDataT()
 		{
 			this.Path = null;

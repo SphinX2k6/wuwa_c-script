@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200122E RID: 4654
+	// Token: 0x020002AD RID: 685
 	[UnrealObjectPath("/Script/Engine.ViewTargetTransitionParams")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FViewTargetTransitionParams : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060111DE RID: 70110 RVA: 0x00191E30 File Offset: 0x00190030
+		// Token: 0x06004A30 RID: 18992 RVA: 0x00067E74 File Offset: 0x00066074
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FViewTargetTransitionParams._ScriptStructPtr != 0) ? FViewTargetTransitionParams._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.ViewTargetTransitionParams", ref FViewTargetTransitionParams._ScriptStructPtr);
 		}
 
-		// Token: 0x170042CA RID: 17098
-		// (get) Token: 0x060111DF RID: 70111 RVA: 0x00191E54 File Offset: 0x00190054
-		// (set) Token: 0x060111E0 RID: 70112 RVA: 0x00191E64 File Offset: 0x00190064
+		// Token: 0x17000DE3 RID: 3555
+		// (get) Token: 0x06004A31 RID: 18993 RVA: 0x00067E98 File Offset: 0x00066098
+		// (set) Token: 0x06004A32 RID: 18994 RVA: 0x00067EA8 File Offset: 0x000660A8
 		public unsafe float BlendTime
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170042CB RID: 17099
-		// (get) Token: 0x060111E1 RID: 70113 RVA: 0x00191E75 File Offset: 0x00190075
-		// (set) Token: 0x060111E2 RID: 70114 RVA: 0x00191E89 File Offset: 0x00190089
+		// Token: 0x17000DE4 RID: 3556
+		// (get) Token: 0x06004A33 RID: 18995 RVA: 0x00067EB9 File Offset: 0x000660B9
+		// (set) Token: 0x06004A34 RID: 18996 RVA: 0x00067ECD File Offset: 0x000660CD
 		public unsafe TEnumAsByte<EViewTargetBlendFunction> BlendFunction
 		{
 			get
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170042CC RID: 17100
-		// (get) Token: 0x060111E3 RID: 70115 RVA: 0x00191E9E File Offset: 0x0019009E
-		// (set) Token: 0x060111E4 RID: 70116 RVA: 0x00191EAE File Offset: 0x001900AE
+		// Token: 0x17000DE5 RID: 3557
+		// (get) Token: 0x06004A35 RID: 18997 RVA: 0x00067EE2 File Offset: 0x000660E2
+		// (set) Token: 0x06004A36 RID: 18998 RVA: 0x00067EF2 File Offset: 0x000660F2
 		public unsafe float BlendExp
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170042CD RID: 17101
-		// (get) Token: 0x060111E5 RID: 70117 RVA: 0x00191EBF File Offset: 0x001900BF
-		// (set) Token: 0x060111E6 RID: 70118 RVA: 0x00191ED8 File Offset: 0x001900D8
+		// Token: 0x17000DE6 RID: 3558
+		// (get) Token: 0x06004A37 RID: 18999 RVA: 0x00067F03 File Offset: 0x00066103
+		// (set) Token: 0x06004A38 RID: 19000 RVA: 0x00067F1C File Offset: 0x0006611C
 		public unsafe bool bLockOutgoing
 		{
 			get
@@ -77,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170042CE RID: 17102
-		// (get) Token: 0x060111E7 RID: 70119 RVA: 0x00191F08 File Offset: 0x00190108
-		// (set) Token: 0x060111E8 RID: 70120 RVA: 0x00191F18 File Offset: 0x00190118
+		// Token: 0x17000DE7 RID: 3559
+		// (get) Token: 0x06004A39 RID: 19001 RVA: 0x00067F4C File Offset: 0x0006614C
+		// (set) Token: 0x06004A3A RID: 19002 RVA: 0x00067F5C File Offset: 0x0006615C
 		public unsafe bool bKuroEnableBlend
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170042CF RID: 17103
-		// (get) Token: 0x060111E9 RID: 70121 RVA: 0x00191F29 File Offset: 0x00190129
-		// (set) Token: 0x060111EA RID: 70122 RVA: 0x00191F3D File Offset: 0x0019013D
+		// Token: 0x17000DE8 RID: 3560
+		// (get) Token: 0x06004A3B RID: 19003 RVA: 0x00067F6D File Offset: 0x0006616D
+		// (set) Token: 0x06004A3C RID: 19004 RVA: 0x00067F81 File Offset: 0x00066181
 		[Nullable(2)]
 		public unsafe UCurveFloat BlendCurve
 		{
@@ -110,79 +110,68 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060111EB RID: 70123 RVA: 0x00191F52 File Offset: 0x00190152
+		// Token: 0x06004A3D RID: 19005 RVA: 0x00067F96 File Offset: 0x00066196
 		public FViewTargetTransitionParams()
 		{
 		}
 
-		// Token: 0x060111EC RID: 70124 RVA: 0x00191F5A File Offset: 0x0019015A
-		public FViewTargetTransitionParams(float BlendTime, TEnumAsByte<EViewTargetBlendFunction> BlendFunction, float BlendExp, bool bLockOutgoing, bool bKuroEnableBlend, [Nullable(1)] UCurveFloat BlendCurve)
-		{
-			this.BlendTime = BlendTime;
-			this.BlendFunction = BlendFunction;
-			this.BlendExp = BlendExp;
-			this.bLockOutgoing = bLockOutgoing;
-			this.bKuroEnableBlend = bKuroEnableBlend;
-			this.BlendCurve = BlendCurve;
-		}
-
-		// Token: 0x060111ED RID: 70125 RVA: 0x00191F8F File Offset: 0x0019018F
+		// Token: 0x06004A3E RID: 19006 RVA: 0x00067F9E File Offset: 0x0006619E
 		protected override IntPtr GetUStructPtr()
 		{
 			return FViewTargetTransitionParams.StaticStruct();
 		}
 
-		// Token: 0x060111EE RID: 70126 RVA: 0x00191F9B File Offset: 0x0019019B
+		// Token: 0x06004A3F RID: 19007 RVA: 0x00067FAA File Offset: 0x000661AA
 		[NullableContext(2)]
 		public FViewTargetTransitionParams(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060111EF RID: 70127 RVA: 0x00191FA5 File Offset: 0x001901A5
+		// Token: 0x06004A40 RID: 19008 RVA: 0x00067FB4 File Offset: 0x000661B4
 		public FViewTargetTransitionParams(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060111F0 RID: 70128 RVA: 0x00191FB0 File Offset: 0x001901B0
+		// Token: 0x06004A41 RID: 19009 RVA: 0x00067FBF File Offset: 0x000661BF
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FViewTargetTransitionParams(Pointer, false, true);
 		}
 
-		// Token: 0x060111F1 RID: 70129 RVA: 0x00191FBA File Offset: 0x001901BA
+		// Token: 0x06004A42 RID: 19010 RVA: 0x00067FC9 File Offset: 0x000661C9
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FViewTargetTransitionParams(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04009292 RID: 37522
+		// Token: 0x04001D3C RID: 7484
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ViewTargetTransitionParams";
 
-		// Token: 0x04009293 RID: 37523
+		// Token: 0x04001D3D RID: 7485
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04009294 RID: 37524
+		// Token: 0x04001D3E RID: 7486
 		internal static int __PropertyOffset_BlendTime;
 
-		// Token: 0x04009295 RID: 37525
+		// Token: 0x04001D3F RID: 7487
 		internal static int __PropertyOffset_BlendFunction;
 
-		// Token: 0x04009296 RID: 37526
+		// Token: 0x04001D40 RID: 7488
 		internal static int __PropertyOffset_BlendExp;
 
-		// Token: 0x04009297 RID: 37527
+		// Token: 0x04001D41 RID: 7489
 		internal static int __PropertyOffset_bLockOutgoing;
 
-		// Token: 0x04009298 RID: 37528
+		// Token: 0x04001D42 RID: 7490
 		internal static byte __PropertyMask_bLockOutgoing;
 
-		// Token: 0x04009299 RID: 37529
+		// Token: 0x04001D43 RID: 7491
 		internal static int __PropertyOffset_bKuroEnableBlend;
 
-		// Token: 0x0400929A RID: 37530
+		// Token: 0x04001D44 RID: 7492
 		internal static int __PropertyOffset_BlendCurve;
 	}
 }

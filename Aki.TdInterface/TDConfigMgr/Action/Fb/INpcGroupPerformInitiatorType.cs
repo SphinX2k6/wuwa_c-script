@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A5C RID: 10844
+	// Token: 0x02002D49 RID: 11593
 	public class INpcGroupPerformInitiatorType
 	{
-		// Token: 0x0600EE8A RID: 61066 RVA: 0x0022B753 File Offset: 0x00229953
-		[NullableContext(1)]
+		// Token: 0x0600FD22 RID: 64802 RVA: 0x00249107 File Offset: 0x00247307
 		public static INpcGroupPerformInitiatorType Create(INpcGroupPerformInitiatorType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B94 RID: 19348
-		// (get) Token: 0x0600EE8B RID: 61067 RVA: 0x0022B772 File Offset: 0x00229972
+		// Token: 0x17004F3E RID: 20286
+		// (get) Token: 0x0600FD23 RID: 64803 RVA: 0x00249126 File Offset: 0x00247326
 		public virtual ENpcGroupPerformInitiatorType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400833C RID: 33596
+		// Token: 0x04008A2F RID: 35375
 		private INpcGroupPerformInitiatorType Instance;
 	}
 }

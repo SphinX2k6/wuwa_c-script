@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 {
-	// Token: 0x02005275 RID: 21109
+	// Token: 0x02004245 RID: 16965
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleFloatTips : UiTickViewBase
 	{
-		// Token: 0x06035FE1 RID: 221153 RVA: 0x00CC6FF8 File Offset: 0x00CC51F8
+		// Token: 0x0602AEDC RID: 175836 RVA: 0x00C146F8 File Offset: 0x00C128F8
 		public PhantomArenaBattleFloatTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06035FE2 RID: 221154 RVA: 0x00CC7022 File Offset: 0x00CC5222
+		// Token: 0x0602AEDD RID: 175837 RVA: 0x00C14722 File Offset: 0x00C12922
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			};
 		}
 
-		// Token: 0x06035FE3 RID: 221155 RVA: 0x00CC705C File Offset: 0x00CC525C
+		// Token: 0x0602AEDE RID: 175838 RVA: 0x00C1475C File Offset: 0x00C1295C
 		protected override void OnTick(float delta)
 		{
 			if (TickSystem.Instance.IsPaused)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			this.SetExtraText(this.MinuteText, this.SecondText, this.Millisecond);
 		}
 
-		// Token: 0x06035FE4 RID: 221156 RVA: 0x00CC70B4 File Offset: 0x00CC52B4
+		// Token: 0x0602AEDF RID: 175839 RVA: 0x00C147B4 File Offset: 0x00C129B4
 		private void UpdateCountDown()
 		{
 			float currentTime = this.CurrentTime;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			this.Millisecond = ((num3 < 10) ? "0" : "") + num3.ToString();
 		}
 
-		// Token: 0x06035FE5 RID: 221157 RVA: 0x00CC717F File Offset: 0x00CC537F
+		// Token: 0x0602AEE0 RID: 175840 RVA: 0x00C1487F File Offset: 0x00C12A7F
 		protected void SetExtraText(string minute, string second, string millionSecond)
 		{
 			UUIText text = base.GetText(1);
@@ -68,26 +68,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			}), true);
 		}
 
-		// Token: 0x0401C973 RID: 117107
+		// Token: 0x040173A8 RID: 95144
 		private float CurrentTime;
 
-		// Token: 0x0401C974 RID: 117108
+		// Token: 0x040173A9 RID: 95145
 		private string Millisecond = "";
 
-		// Token: 0x0401C975 RID: 117109
+		// Token: 0x040173AA RID: 95146
 		private string MinuteText = "";
 
-		// Token: 0x0401C976 RID: 117110
+		// Token: 0x040173AB RID: 95147
 		private string SecondText = "";
 
-		// Token: 0x0200B477 RID: 46199
+		// Token: 0x02009EAF RID: 40623
 		[NullableContext(0)]
 		private class EDefine
 		{
-			// Token: 0x04036AD2 RID: 223954
+			// Token: 0x04031525 RID: 202021
 			public const int MainTextItem = 0;
 
-			// Token: 0x04036AD3 RID: 223955
+			// Token: 0x04031526 RID: 202022
 			public const int ExtraTextItem = 1;
 		}
 	}

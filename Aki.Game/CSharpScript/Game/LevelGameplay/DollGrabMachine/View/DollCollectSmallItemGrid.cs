@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006F09 RID: 28425
+	// Token: 0x0200608A RID: 24714
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 	})]
 	public class DollCollectSmallItemGrid : LoopScrollSmallItemGrid<IDollRewardItemData>
 	{
-		// Token: 0x0604530A RID: 283402 RVA: 0x0111DA88 File Offset: 0x0111BC88
+		// Token: 0x0603B4B8 RID: 242872 RVA: 0x010C7A28 File Offset: 0x010C5C28
 		protected override void OnRefresh(IDollRewardItemData data, bool isSelected, int gridIndex)
 		{
 			PropSmallItemGrid parameters = new PropSmallItemGrid

@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C39 RID: 23609
+	// Token: 0x02004C19 RID: 19481
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengePauseView : UiViewBase
 	{
-		// Token: 0x0603BA6B RID: 244331 RVA: 0x00E3BF41 File Offset: 0x00E3A141
+		// Token: 0x060309B6 RID: 199094 RVA: 0x00D8C2B1 File Offset: 0x00D8A4B1
 		public FlagChallengePauseView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603BA6C RID: 244332 RVA: 0x00E3BF4C File Offset: 0x00E3A14C
+		// Token: 0x060309B7 RID: 199095 RVA: 0x00D8C2BC File Offset: 0x00D8A4BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603BA6D RID: 244333 RVA: 0x00E3C0FC File Offset: 0x00E3A2FC
+		// Token: 0x060309B8 RID: 199096 RVA: 0x00D8C46C File Offset: 0x00D8A66C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FlagChallengePauseView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BA6E RID: 244334 RVA: 0x00E3C140 File Offset: 0x00E3A340
+		// Token: 0x060309B9 RID: 199097 RVA: 0x00D8C4B0 File Offset: 0x00D8A6B0
 		protected override void OnStart()
 		{
 			base.GetButton(1).RootUIComp.Get().SetUIActive(false);
@@ -117,13 +117,13 @@ namespace CSharpScript.Game.Module.Battle
 			this.Layout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603BA6F RID: 244335 RVA: 0x00E3C2F0 File Offset: 0x00E3A4F0
+		// Token: 0x060309BA RID: 199098 RVA: 0x00D8C660 File Offset: 0x00D8A860
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603BA70 RID: 244336 RVA: 0x00E3C2FC File Offset: 0x00E3A4FC
+		// Token: 0x060309BB RID: 199099 RVA: 0x00D8C66C File Offset: 0x00D8A86C
 		private void OnClickLevel()
 		{
 			int activityId = FlagChallengeBattleModel.Instance.ActivityId;
@@ -138,13 +138,13 @@ namespace CSharpScript.Game.Module.Battle
 			FlagChallengeController.Instance.OpenFlagChallengeAreaDetailView(activityId, levelId, strongholdData.StrongholdConfig.AreaId, new int?(levelRecommendStrongholdId));
 		}
 
-		// Token: 0x0603BA71 RID: 244337 RVA: 0x00E3C378 File Offset: 0x00E3A578
+		// Token: 0x060309BC RID: 199100 RVA: 0x00D8C6E8 File Offset: 0x00D8A8E8
 		private void OnClickBuff()
 		{
 			FlagChallengeController.Instance.OpenFlagChallengeBuffView(FlagChallengeBattleModel.Instance.ActivityId, null);
 		}
 
-		// Token: 0x0603BA72 RID: 244338 RVA: 0x00E3C3A4 File Offset: 0x00E3A5A4
+		// Token: 0x060309BD RID: 199101 RVA: 0x00D8C714 File Offset: 0x00D8A914
 		private void OnClickSaveAndLeave()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.FlagChallengeBattleExitConfirm);
@@ -155,13 +155,13 @@ namespace CSharpScript.Game.Module.Battle
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603BA73 RID: 244339 RVA: 0x00E3C3F3 File Offset: 0x00E3A5F3
+		// Token: 0x060309BE RID: 199102 RVA: 0x00D8C763 File Offset: 0x00D8A963
 		private FlagChallengePauseInfoItem CreateItem()
 		{
 			return new FlagChallengePauseInfoItem();
 		}
 
-		// Token: 0x0401F0DD RID: 127197
+		// Token: 0x04019B8E RID: 105358
 		[Nullable(new byte[]
 		{
 			2,
@@ -170,38 +170,38 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		protected GenericLayout<FlagChallengePauseInfoItem, FlagChallengePauseInfo> Layout;
 
-		// Token: 0x0401F0DE RID: 127198
+		// Token: 0x04019B8F RID: 105359
 		private FlagChallengePauseButton LevelBtn;
 
-		// Token: 0x0401F0DF RID: 127199
+		// Token: 0x04019B90 RID: 105360
 		private FlagChallengePauseButton BuffBtn;
 
-		// Token: 0x0401F0E0 RID: 127200
+		// Token: 0x04019B91 RID: 105361
 		private FlagChallengePauseButton SaveAndLeaveBtn;
 
-		// Token: 0x0200BE2D RID: 48685
+		// Token: 0x0200A835 RID: 43061
 		[NullableContext(0)]
 		private enum EComponentType
 		{
-			// Token: 0x04039593 RID: 234899
+			// Token: 0x04033F56 RID: 212822
 			BackBtn,
-			// Token: 0x04039594 RID: 234900
+			// Token: 0x04033F57 RID: 212823
 			SettingBtn,
-			// Token: 0x04039595 RID: 234901
+			// Token: 0x04033F58 RID: 212824
 			LevelBaseInfoLayout,
-			// Token: 0x04039596 RID: 234902
+			// Token: 0x04033F59 RID: 212825
 			BaseInfo,
-			// Token: 0x04039597 RID: 234903
+			// Token: 0x04033F5A RID: 212826
 			NumTxt,
-			// Token: 0x04039598 RID: 234904
+			// Token: 0x04033F5B RID: 212827
 			BuffDetailBtn,
-			// Token: 0x04039599 RID: 234905
+			// Token: 0x04033F5C RID: 212828
 			LevelBtn,
-			// Token: 0x0403959A RID: 234906
+			// Token: 0x04033F5D RID: 212829
 			BuffBtn,
-			// Token: 0x0403959B RID: 234907
+			// Token: 0x04033F5E RID: 212830
 			SaveAndLeaveBtn,
-			// Token: 0x0403959C RID: 234908
+			// Token: 0x04033F5F RID: 212831
 			PanelStar
 		}
 	}

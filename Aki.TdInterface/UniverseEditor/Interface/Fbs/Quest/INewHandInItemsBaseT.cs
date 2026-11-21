@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F51 RID: 16209
+	// Token: 0x0200438F RID: 17295
 	public class INewHandInItemsBaseT
 	{
-		// Token: 0x170070B9 RID: 28857
-		// (get) Token: 0x060170CE RID: 94414 RVA: 0x00352CA2 File Offset: 0x00350EA2
-		// (set) Token: 0x060170CF RID: 94415 RVA: 0x00352CAA File Offset: 0x00350EAA
+		// Token: 0x170076AA RID: 30378
+		// (get) Token: 0x06018730 RID: 100144 RVA: 0x0037C116 File Offset: 0x0037A316
+		// (set) Token: 0x06018731 RID: 100145 RVA: 0x0037C11E File Offset: 0x0037A31E
 		public ENewHandInItemsType Type { get; set; }
 
-		// Token: 0x060170D0 RID: 94416 RVA: 0x00352CB3 File Offset: 0x00350EB3
+		// Token: 0x06018732 RID: 100146 RVA: 0x0037C127 File Offset: 0x0037A327
 		public INewHandInItemsBaseT()
 		{
 			this.Type = ENewHandInItemsType.ProjectionMachine;

@@ -3,31 +3,31 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017CD RID: 6093
+	// Token: 0x02001954 RID: 6484
 	public class IAirPassageMove_SetValue
 	{
-		// Token: 0x04005322 RID: 21282
+		// Token: 0x04005766 RID: 22374
 		public ESplineMovePattern Type;
 
-		// Token: 0x04005323 RID: 21283
+		// Token: 0x04005767 RID: 22375
 		public float? MaxOffsetDistance;
 
-		// Token: 0x04005324 RID: 21284
+		// Token: 0x04005768 RID: 22376
 		public bool? IsOneWay;
 
-		// Token: 0x04005325 RID: 21285
+		// Token: 0x04005769 RID: 22377
 		public float? LayerVerticalLimit;
 
-		// Token: 0x04005326 RID: 21286
+		// Token: 0x0400576A RID: 22378
 		public bool? DynamicGravity;
 
-		// Token: 0x04005327 RID: 21287
+		// Token: 0x0400576B RID: 22379
 		public float? GravitySwitchAngularVelocity;
 
-		// Token: 0x04005328 RID: 21288
+		// Token: 0x0400576C RID: 22380
 		public int? AutoExitDistance;
 
-		// Token: 0x04005329 RID: 21289
+		// Token: 0x0400576D RID: 22381
 		[Nullable(2)]
 		public IAirPassageMoveLimit Limit;
 	}

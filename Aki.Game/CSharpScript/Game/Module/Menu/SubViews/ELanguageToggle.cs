@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200541A RID: 21530
+	// Token: 0x020043FD RID: 17405
 	public enum ELanguageToggle
 	{
-		// Token: 0x0401D06A RID: 118890
+		// Token: 0x04017B03 RID: 97027
 		Toggle,
-		// Token: 0x0401D06B RID: 118891
+		// Token: 0x04017B04 RID: 97028
 		Text,
-		// Token: 0x0401D06C RID: 118892
+		// Token: 0x04017B05 RID: 97029
 		Detail
 	}
 }

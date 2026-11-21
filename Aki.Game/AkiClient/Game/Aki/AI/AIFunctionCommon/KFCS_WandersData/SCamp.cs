@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.AI.AIFunctionCommon.KFCS_WandersData
 {
-	// Token: 0x02004448 RID: 17480
+	// Token: 0x02003405 RID: 13317
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/AI/AIFunctionCommon/KFCS_WandersData/SCamp.SCamp")]
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class SCamp : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602D40A RID: 185354 RVA: 0x00A37CA2 File Offset: 0x00A35EA2
+		// Token: 0x06021D06 RID: 138502 RVA: 0x0096C44F File Offset: 0x0096A64F
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCamp._ScriptStructPtr != 0) ? SCamp._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/AI/AIFunctionCommon/KFCS_WandersData/SCamp.SCamp", ref SCamp._ScriptStructPtr);
 		}
 
-		// Token: 0x170072BE RID: 29374
-		// (get) Token: 0x0602D40B RID: 185355 RVA: 0x00A37CC8 File Offset: 0x00A35EC8
-		// (set) Token: 0x0602D40C RID: 185356 RVA: 0x00A37D0B File Offset: 0x00A35F0B
+		// Token: 0x1700462F RID: 17967
+		// (get) Token: 0x06021D07 RID: 138503 RVA: 0x0096C474 File Offset: 0x0096A674
+		// (set) Token: 0x06021D08 RID: 138504 RVA: 0x0096C4B7 File Offset: 0x0096A6B7
 		public TArray<int> Value
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.AI.AIFunctionCommon.KFCS_WandersData
 				TArray<int> result;
 				if ((result = this._Value) == null)
 				{
-					result = (this._Value = new TArray<int>(base.NativePtr + (IntPtr)SCamp.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._Value = new TArray<int>(base.NativePtr + (IntPtr)SCamp.__PropertyOffset_Value, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,56 +40,50 @@ namespace AkiClient.Game.Aki.AI.AIFunctionCommon.KFCS_WandersData
 			}
 		}
 
-		// Token: 0x0602D40D RID: 185357 RVA: 0x00A37D19 File Offset: 0x00A35F19
+		// Token: 0x06021D09 RID: 138505 RVA: 0x0096C4C5 File Offset: 0x0096A6C5
 		public SCamp()
 		{
 		}
 
-		// Token: 0x0602D40E RID: 185358 RVA: 0x00A37D21 File Offset: 0x00A35F21
-		public SCamp(TArray<int> Value)
-		{
-			this.Value = Value;
-		}
-
-		// Token: 0x0602D40F RID: 185359 RVA: 0x00A37D30 File Offset: 0x00A35F30
+		// Token: 0x06021D0A RID: 138506 RVA: 0x0096C4CD File Offset: 0x0096A6CD
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCamp.StaticStruct();
 		}
 
-		// Token: 0x0602D410 RID: 185360 RVA: 0x00A37D3C File Offset: 0x00A35F3C
+		// Token: 0x06021D0B RID: 138507 RVA: 0x0096C4D9 File Offset: 0x0096A6D9
 		[NullableContext(2)]
 		public SCamp(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602D411 RID: 185361 RVA: 0x00A37D46 File Offset: 0x00A35F46
+		// Token: 0x06021D0C RID: 138508 RVA: 0x0096C4E3 File Offset: 0x0096A6E3
 		public SCamp(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602D412 RID: 185362 RVA: 0x00A37D51 File Offset: 0x00A35F51
+		// Token: 0x06021D0D RID: 138509 RVA: 0x0096C4EE File Offset: 0x0096A6EE
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCamp(Pointer, false, true);
 		}
 
-		// Token: 0x0602D413 RID: 185363 RVA: 0x00A37D5B File Offset: 0x00A35F5B
+		// Token: 0x06021D0E RID: 138510 RVA: 0x0096C4F8 File Offset: 0x0096A6F8
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCamp(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04018130 RID: 98608
+		// Token: 0x04012A6B RID: 76395
 		public const string __ObjectPath = "/Game/Aki/AI/AIFunctionCommon/KFCS_WandersData/SCamp.SCamp";
 
-		// Token: 0x04018131 RID: 98609
+		// Token: 0x04012A6C RID: 76396
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04018132 RID: 98610
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012A6D RID: 76397
+		internal static int __PropertyOffset_Value;
 
-		// Token: 0x04018133 RID: 98611
+		// Token: 0x04012A6E RID: 76398
 		[Nullable(2)]
 		private TArray<int> _Value;
 	}

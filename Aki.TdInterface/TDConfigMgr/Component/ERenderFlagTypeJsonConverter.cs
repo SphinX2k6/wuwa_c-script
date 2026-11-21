@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009F3 RID: 2547
+	// Token: 0x02000AB8 RID: 2744
 	public class ERenderFlagTypeJsonConverter : JsonConverter<ERenderFlagType>
 	{
-		// Token: 0x06003878 RID: 14456 RVA: 0x00092424 File Offset: 0x00090624
+		// Token: 0x06003C50 RID: 15440 RVA: 0x0009ACE4 File Offset: 0x00098EE4
 		public override ERenderFlagType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ERenderFlagTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003879 RID: 14457 RVA: 0x00092448 File Offset: 0x00090648
+		// Token: 0x06003C51 RID: 15441 RVA: 0x0009AD08 File Offset: 0x00098F08
 		public override void Write(Utf8JsonWriter writer, ERenderFlagType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

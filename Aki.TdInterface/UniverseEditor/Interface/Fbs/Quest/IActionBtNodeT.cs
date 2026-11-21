@@ -5,50 +5,50 @@ using Aki.UniverseEditor.Interface.Fbs.FixProcessor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CED RID: 15597
+	// Token: 0x02004104 RID: 16644
 	public class IActionBtNodeT
 	{
-		// Token: 0x17006AD5 RID: 27349
-		// (get) Token: 0x06015783 RID: 87939 RVA: 0x0031A15D File Offset: 0x0031835D
-		// (set) Token: 0x06015784 RID: 87940 RVA: 0x0031A165 File Offset: 0x00318365
+		// Token: 0x1700708F RID: 28815
+		// (get) Token: 0x06016CBB RID: 93371 RVA: 0x003413D5 File Offset: 0x0033F5D5
+		// (set) Token: 0x06016CBC RID: 93372 RVA: 0x003413DD File Offset: 0x0033F5DD
 		public EBtNode Type { get; set; }
 
-		// Token: 0x17006AD6 RID: 27350
-		// (get) Token: 0x06015785 RID: 87941 RVA: 0x0031A16E File Offset: 0x0031836E
-		// (set) Token: 0x06015786 RID: 87942 RVA: 0x0031A176 File Offset: 0x00318376
+		// Token: 0x17007090 RID: 28816
+		// (get) Token: 0x06016CBD RID: 93373 RVA: 0x003413E6 File Offset: 0x0033F5E6
+		// (set) Token: 0x06016CBE RID: 93374 RVA: 0x003413EE File Offset: 0x0033F5EE
 		public int Id { get; set; }
 
-		// Token: 0x17006AD7 RID: 27351
-		// (get) Token: 0x06015787 RID: 87943 RVA: 0x0031A17F File Offset: 0x0031837F
-		// (set) Token: 0x06015788 RID: 87944 RVA: 0x0031A187 File Offset: 0x00318387
+		// Token: 0x17007091 RID: 28817
+		// (get) Token: 0x06016CBF RID: 93375 RVA: 0x003413F7 File Offset: 0x0033F5F7
+		// (set) Token: 0x06016CC0 RID: 93376 RVA: 0x003413FF File Offset: 0x0033F5FF
 		public string Desc { get; set; }
 
-		// Token: 0x17006AD8 RID: 27352
-		// (get) Token: 0x06015789 RID: 87945 RVA: 0x0031A190 File Offset: 0x00318390
-		// (set) Token: 0x0601578A RID: 87946 RVA: 0x0031A198 File Offset: 0x00318398
+		// Token: 0x17007092 RID: 28818
+		// (get) Token: 0x06016CC1 RID: 93377 RVA: 0x00341408 File Offset: 0x0033F608
+		// (set) Token: 0x06016CC2 RID: 93378 RVA: 0x00341410 File Offset: 0x0033F610
 		public IFixProcessorT FixProcessor { get; set; }
 
-		// Token: 0x17006AD9 RID: 27353
-		// (get) Token: 0x0601578B RID: 87947 RVA: 0x0031A1A1 File Offset: 0x003183A1
-		// (set) Token: 0x0601578C RID: 87948 RVA: 0x0031A1A9 File Offset: 0x003183A9
+		// Token: 0x17007093 RID: 28819
+		// (get) Token: 0x06016CC3 RID: 93379 RVA: 0x00341419 File Offset: 0x0033F619
+		// (set) Token: 0x06016CC4 RID: 93380 RVA: 0x00341421 File Offset: 0x0033F621
 		public bool _FoldedForTree { get; set; }
 
-		// Token: 0x17006ADA RID: 27354
-		// (get) Token: 0x0601578D RID: 87949 RVA: 0x0031A1B2 File Offset: 0x003183B2
-		// (set) Token: 0x0601578E RID: 87950 RVA: 0x0031A1BA File Offset: 0x003183BA
+		// Token: 0x17007094 RID: 28820
+		// (get) Token: 0x06016CC5 RID: 93381 RVA: 0x0034142A File Offset: 0x0033F62A
+		// (set) Token: 0x06016CC6 RID: 93382 RVA: 0x00341432 File Offset: 0x0033F632
 		public bool Disabled { get; set; }
 
-		// Token: 0x17006ADB RID: 27355
-		// (get) Token: 0x0601578F RID: 87951 RVA: 0x0031A1C3 File Offset: 0x003183C3
-		// (set) Token: 0x06015790 RID: 87952 RVA: 0x0031A1CB File Offset: 0x003183CB
+		// Token: 0x17007095 RID: 28821
+		// (get) Token: 0x06016CC7 RID: 93383 RVA: 0x0034143B File Offset: 0x0033F63B
+		// (set) Token: 0x06016CC8 RID: 93384 RVA: 0x00341443 File Offset: 0x0033F643
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x17006ADC RID: 27356
-		// (get) Token: 0x06015791 RID: 87953 RVA: 0x0031A1D4 File Offset: 0x003183D4
-		// (set) Token: 0x06015792 RID: 87954 RVA: 0x0031A1DC File Offset: 0x003183DC
+		// Token: 0x17007096 RID: 28822
+		// (get) Token: 0x06016CC9 RID: 93385 RVA: 0x0034144C File Offset: 0x0033F64C
+		// (set) Token: 0x06016CCA RID: 93386 RVA: 0x00341454 File Offset: 0x0033F654
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015793 RID: 87955 RVA: 0x0031A1E5 File Offset: 0x003183E5
+		// Token: 0x06016CCB RID: 93387 RVA: 0x0034145D File Offset: 0x0033F65D
 		public IActionBtNodeT()
 		{
 			this.Type = EBtNode.Start;

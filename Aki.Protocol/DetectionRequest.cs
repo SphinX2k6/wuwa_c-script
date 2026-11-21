@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020003CE RID: 974
+	// Token: 0x020003B7 RID: 951
 	[NetMessage(EMessageId.DetectionRequest)]
 	public sealed class DetectionRequest : IMessage<DetectionRequest>, IMessage, IEquatable<DetectionRequest>, IDeepCloneable<DetectionRequest>, IBufferMessage
 	{
-		// Token: 0x06005EFC RID: 24316 RVA: 0x000E5DA6 File Offset: 0x000E3FA6
+		// Token: 0x06005D6C RID: 23916 RVA: 0x000E2C22 File Offset: 0x000E0E22
 		[NullableContext(1)]
 		public static DetectionRequest Create()
 		{
 			return new DetectionRequest();
 		}
 
-		// Token: 0x170011A5 RID: 4517
-		// (get) Token: 0x06005EFD RID: 24317 RVA: 0x000E5DAD File Offset: 0x000E3FAD
+		// Token: 0x17001150 RID: 4432
+		// (get) Token: 0x06005D6D RID: 23917 RVA: 0x000E2C29 File Offset: 0x000E0E29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170011A6 RID: 4518
-		// (get) Token: 0x06005EFE RID: 24318 RVA: 0x000E5DB0 File Offset: 0x000E3FB0
+		// Token: 0x17001151 RID: 4433
+		// (get) Token: 0x06005D6E RID: 23918 RVA: 0x000E2C2C File Offset: 0x000E0E2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005EFF RID: 24319 RVA: 0x000E5DB7 File Offset: 0x000E3FB7
+		// Token: 0x06005D6F RID: 23919 RVA: 0x000E2C33 File Offset: 0x000E0E33
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DetectionRequest()
 		{
 		}
 
-		// Token: 0x06005F00 RID: 24320 RVA: 0x000E5DCC File Offset: 0x000E3FCC
+		// Token: 0x06005D70 RID: 23920 RVA: 0x000E2C48 File Offset: 0x000E0E48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DetectionRequest(DetectionRequest other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005F01 RID: 24321 RVA: 0x000E5E19 File Offset: 0x000E4019
+		// Token: 0x06005D71 RID: 23921 RVA: 0x000E2C95 File Offset: 0x000E0E95
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DetectionRequest Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new DetectionRequest(this);
 		}
 
-		// Token: 0x170011A7 RID: 4519
-		// (get) Token: 0x06005F02 RID: 24322 RVA: 0x000E5E21 File Offset: 0x000E4021
-		// (set) Token: 0x06005F03 RID: 24323 RVA: 0x000E5E29 File Offset: 0x000E4029
+		// Token: 0x17001152 RID: 4434
+		// (get) Token: 0x06005D72 RID: 23922 RVA: 0x000E2C9D File Offset: 0x000E0E9D
+		// (set) Token: 0x06005D73 RID: 23923 RVA: 0x000E2CA5 File Offset: 0x000E0EA5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DetectionType DetectionType
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170011A8 RID: 4520
-		// (get) Token: 0x06005F04 RID: 24324 RVA: 0x000E5E32 File Offset: 0x000E4032
+		// Token: 0x17001153 RID: 4435
+		// (get) Token: 0x06005D74 RID: 23924 RVA: 0x000E2CAE File Offset: 0x000E0EAE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> DetectionId
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170011A9 RID: 4521
-		// (get) Token: 0x06005F05 RID: 24325 RVA: 0x000E5E3A File Offset: 0x000E403A
-		// (set) Token: 0x06005F06 RID: 24326 RVA: 0x000E5E42 File Offset: 0x000E4042
+		// Token: 0x17001154 RID: 4436
+		// (get) Token: 0x06005D75 RID: 23925 RVA: 0x000E2CB6 File Offset: 0x000E0EB6
+		// (set) Token: 0x06005D76 RID: 23926 RVA: 0x000E2CBE File Offset: 0x000E0EBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DetectionConfId
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005F07 RID: 24327 RVA: 0x000E5E4B File Offset: 0x000E404B
+		// Token: 0x06005D77 RID: 23927 RVA: 0x000E2CC7 File Offset: 0x000E0EC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DetectionRequest);
 		}
 
-		// Token: 0x06005F08 RID: 24328 RVA: 0x000E5E5C File Offset: 0x000E405C
+		// Token: 0x06005D78 RID: 23928 RVA: 0x000E2CD8 File Offset: 0x000E0ED8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DetectionRequest other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.DetectionType == other.DetectionType && this.detectionId_.Equals(other.detectionId_) && this.DetectionConfId == other.DetectionConfId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005F09 RID: 24329 RVA: 0x000E5EBC File Offset: 0x000E40BC
+		// Token: 0x06005D79 RID: 23929 RVA: 0x000E2D38 File Offset: 0x000E0F38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005F0A RID: 24330 RVA: 0x000E5F28 File Offset: 0x000E4128
+		// Token: 0x06005D7A RID: 23930 RVA: 0x000E2DA4 File Offset: 0x000E0FA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005F0B RID: 24331 RVA: 0x000E5F35 File Offset: 0x000E4135
+		// Token: 0x06005D7B RID: 23931 RVA: 0x000E2DB1 File Offset: 0x000E0FB1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,29 +169,29 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06005F0C RID: 24332 RVA: 0x000E5F40 File Offset: 0x000E4140
+		// Token: 0x06005D7C RID: 23932 RVA: 0x000E2DBC File Offset: 0x000E0FBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.DetectionType != DetectionType.NormalMonster)
-			{
-				output.WriteRawTag(16);
-				output.WriteEnum((int)this.DetectionType);
-			}
 			if (this.DetectionConfId != 0)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(80);
 				output.WriteInt32(this.DetectionConfId);
 			}
 			this.detectionId_.WriteTo(ref output, DetectionRequest._repeated_detectionId_codec);
+			if (this.DetectionType != DetectionType.NormalMonster)
+			{
+				output.WriteRawTag(112);
+				output.WriteEnum((int)this.DetectionType);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06005F0D RID: 24333 RVA: 0x000E5FAC File Offset: 0x000E41AC
+		// Token: 0x06005D7D RID: 23933 RVA: 0x000E2E28 File Offset: 0x000E1028
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005F0E RID: 24334 RVA: 0x000E6018 File Offset: 0x000E4218
+		// Token: 0x06005D7E RID: 23934 RVA: 0x000E2E94 File Offset: 0x000E1094
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DetectionRequest other)
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005F0F RID: 24335 RVA: 0x000E6079 File Offset: 0x000E4279
+		// Token: 0x06005D7F RID: 23935 RVA: 0x000E2EF5 File Offset: 0x000E10F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -242,7 +242,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005F10 RID: 24336 RVA: 0x000E6084 File Offset: 0x000E4284
+		// Token: 0x06005D80 RID: 23936 RVA: 0x000E2F00 File Offset: 0x000E1100
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -254,50 +254,59 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 48U)
+				if (num <= 104U)
 				{
-					if (num == 16U)
-					{
-						this.DetectionType = (DetectionType)input.ReadEnum();
-						continue;
-					}
-					if (num == 48U)
+					if (num == 80U)
 					{
 						this.DetectionConfId = input.ReadInt32();
 						continue;
 					}
+					if (num == 104U)
+					{
+						goto IL_46;
+					}
 				}
-				else if (num == 120U || num == 122U)
+				else
 				{
-					this.detectionId_.AddEntriesFrom(ref input, DetectionRequest._repeated_detectionId_codec);
-					continue;
+					if (num == 106U)
+					{
+						goto IL_46;
+					}
+					if (num == 112U)
+					{
+						this.DetectionType = (DetectionType)input.ReadEnum();
+						continue;
+					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
+				continue;
+				IL_46:
+				this.detectionId_.AddEntriesFrom(ref input, DetectionRequest._repeated_detectionId_codec);
 			}
 		}
 
-		// Token: 0x040036ED RID: 14061
+		// Token: 0x040036DA RID: 14042
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040036EE RID: 14062
-		public const int DetectionTypeFieldNumber = 2;
+		// Token: 0x040036DB RID: 14043
+		public const int DetectionTypeFieldNumber = 14;
 
-		// Token: 0x040036EF RID: 14063
+		// Token: 0x040036DC RID: 14044
 		private DetectionType detectionType_;
 
-		// Token: 0x040036F0 RID: 14064
-		public const int DetectionIdFieldNumber = 15;
+		// Token: 0x040036DD RID: 14045
+		public const int DetectionIdFieldNumber = 13;
 
-		// Token: 0x040036F1 RID: 14065
-		private static readonly FieldCodec<int> _repeated_detectionId_codec = FieldCodec.ForInt32(122U);
+		// Token: 0x040036DE RID: 14046
+		private static readonly FieldCodec<int> _repeated_detectionId_codec = FieldCodec.ForInt32(106U);
 
-		// Token: 0x040036F2 RID: 14066
+		// Token: 0x040036DF RID: 14047
 		private readonly RepeatedField<int> detectionId_ = new RepeatedField<int>();
 
-		// Token: 0x040036F3 RID: 14067
-		public const int DetectionConfIdFieldNumber = 6;
+		// Token: 0x040036E0 RID: 14048
+		public const int DetectionConfIdFieldNumber = 10;
 
-		// Token: 0x040036F4 RID: 14068
+		// Token: 0x040036E1 RID: 14049
 		private int detectionConfId_;
 	}
 }

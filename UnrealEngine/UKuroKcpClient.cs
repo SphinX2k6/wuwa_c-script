@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019F9 RID: 6649
+	// Token: 0x0200047F RID: 1151
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroNetwork.KuroKcpClient")]
 	[UnrealStructLayout(984, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 984)]
 	public class UKuroKcpClient : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018A39 RID: 100921 RVA: 0x002455ED File Offset: 0x002437ED
+		// Token: 0x06006CB6 RID: 27830 RVA: 0x0009EDE9 File Offset: 0x0009CFE9
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroKcpClient._ClassPtr;
 		}
 
-		// Token: 0x06018A3A RID: 100922 RVA: 0x002455FC File Offset: 0x002437FC
+		// Token: 0x06006CB7 RID: 27831 RVA: 0x0009EDF8 File Offset: 0x0009CFF8
 		public UKuroKcpClient() : this(BuiltinUtils.AllocNativeUObject(UKuroKcpClient.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018A3B RID: 100923 RVA: 0x00245624 File Offset: 0x00243824
+		// Token: 0x06006CB8 RID: 27832 RVA: 0x0009EE20 File Offset: 0x0009D020
 		public UKuroKcpClient(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroKcpClient.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170061FE RID: 25086
-		// (get) Token: 0x06018A3C RID: 100924 RVA: 0x00245658 File Offset: 0x00243858
-		// (set) Token: 0x06018A3D RID: 100925 RVA: 0x00245691 File Offset: 0x00243891
+		// Token: 0x1700157B RID: 5499
+		// (get) Token: 0x06006CB9 RID: 27833 RVA: 0x0009EE54 File Offset: 0x0009D054
+		// (set) Token: 0x06006CBA RID: 27834 RVA: 0x0009EE8D File Offset: 0x0009D08D
 		public FOnKcpConnectSuccessDelegate OnConnectSuccess
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170061FF RID: 25087
-		// (get) Token: 0x06018A3E RID: 100926 RVA: 0x002456B4 File Offset: 0x002438B4
-		// (set) Token: 0x06018A3F RID: 100927 RVA: 0x002456ED File Offset: 0x002438ED
+		// Token: 0x1700157C RID: 5500
+		// (get) Token: 0x06006CBB RID: 27835 RVA: 0x0009EEB0 File Offset: 0x0009D0B0
+		// (set) Token: 0x06006CBC RID: 27836 RVA: 0x0009EEE9 File Offset: 0x0009D0E9
 		public FOnReceivedResponseDelegate OnRecResp
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006200 RID: 25088
-		// (get) Token: 0x06018A40 RID: 100928 RVA: 0x00245710 File Offset: 0x00243910
-		// (set) Token: 0x06018A41 RID: 100929 RVA: 0x00245749 File Offset: 0x00243949
+		// Token: 0x1700157D RID: 5501
+		// (get) Token: 0x06006CBD RID: 27837 RVA: 0x0009EF0C File Offset: 0x0009D10C
+		// (set) Token: 0x06006CBE RID: 27838 RVA: 0x0009EF45 File Offset: 0x0009D145
 		public FOnReceivedExceptionDelegate OnRecException
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006201 RID: 25089
-		// (get) Token: 0x06018A42 RID: 100930 RVA: 0x0024576C File Offset: 0x0024396C
-		// (set) Token: 0x06018A43 RID: 100931 RVA: 0x002457A5 File Offset: 0x002439A5
+		// Token: 0x1700157E RID: 5502
+		// (get) Token: 0x06006CBF RID: 27839 RVA: 0x0009EF68 File Offset: 0x0009D168
+		// (set) Token: 0x06006CC0 RID: 27840 RVA: 0x0009EFA1 File Offset: 0x0009D1A1
 		public FOnReceivedPushDelegate OnRecPush
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006202 RID: 25090
-		// (get) Token: 0x06018A44 RID: 100932 RVA: 0x002457C8 File Offset: 0x002439C8
-		// (set) Token: 0x06018A45 RID: 100933 RVA: 0x00245801 File Offset: 0x00243A01
+		// Token: 0x1700157F RID: 5503
+		// (get) Token: 0x06006CC1 RID: 27841 RVA: 0x0009EFC4 File Offset: 0x0009D1C4
+		// (set) Token: 0x06006CC2 RID: 27842 RVA: 0x0009EFFD File Offset: 0x0009D1FD
 		public FOnReceivedTcpExceptionDelegate OnRecTcpException
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006203 RID: 25091
-		// (get) Token: 0x06018A46 RID: 100934 RVA: 0x00245824 File Offset: 0x00243A24
-		// (set) Token: 0x06018A47 RID: 100935 RVA: 0x0024585D File Offset: 0x00243A5D
+		// Token: 0x17001580 RID: 5504
+		// (get) Token: 0x06006CC3 RID: 27843 RVA: 0x0009F020 File Offset: 0x0009D220
+		// (set) Token: 0x06006CC4 RID: 27844 RVA: 0x0009F059 File Offset: 0x0009D259
 		public FOnError OnError
 		{
 			get
@@ -155,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006204 RID: 25092
-		// (get) Token: 0x06018A48 RID: 100936 RVA: 0x0024587E File Offset: 0x00243A7E
-		// (set) Token: 0x06018A49 RID: 100937 RVA: 0x0024588E File Offset: 0x00243A8E
+		// Token: 0x17001581 RID: 5505
+		// (get) Token: 0x06006CC5 RID: 27845 RVA: 0x0009F07A File Offset: 0x0009D27A
+		// (set) Token: 0x06006CC6 RID: 27846 RVA: 0x0009F08A File Offset: 0x0009D28A
 		public unsafe uint RemoteMtu
 		{
 			get
@@ -170,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006205 RID: 25093
-		// (get) Token: 0x06018A4A RID: 100938 RVA: 0x0024589F File Offset: 0x00243A9F
-		// (set) Token: 0x06018A4B RID: 100939 RVA: 0x002458AF File Offset: 0x00243AAF
+		// Token: 0x17001582 RID: 5506
+		// (get) Token: 0x06006CC7 RID: 27847 RVA: 0x0009F09B File Offset: 0x0009D29B
+		// (set) Token: 0x06006CC8 RID: 27848 RVA: 0x0009F0AB File Offset: 0x0009D2AB
 		public unsafe bool UseNewResolveIp
 		{
 			get
@@ -185,9 +185,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006206 RID: 25094
-		// (get) Token: 0x06018A4C RID: 100940 RVA: 0x002458C0 File Offset: 0x00243AC0
-		// (set) Token: 0x06018A4D RID: 100941 RVA: 0x002458D0 File Offset: 0x00243AD0
+		// Token: 0x17001583 RID: 5507
+		// (get) Token: 0x06006CC9 RID: 27849 RVA: 0x0009F0BC File Offset: 0x0009D2BC
+		// (set) Token: 0x06006CCA RID: 27850 RVA: 0x0009F0CC File Offset: 0x0009D2CC
 		public unsafe bool IsMultiThreaded
 		{
 			get
@@ -200,9 +200,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006207 RID: 25095
-		// (get) Token: 0x06018A4E RID: 100942 RVA: 0x002458E1 File Offset: 0x00243AE1
-		// (set) Token: 0x06018A4F RID: 100943 RVA: 0x002458F1 File Offset: 0x00243AF1
+		// Token: 0x17001584 RID: 5508
+		// (get) Token: 0x06006CCB RID: 27851 RVA: 0x0009F0DD File Offset: 0x0009D2DD
+		// (set) Token: 0x06006CCC RID: 27852 RVA: 0x0009F0ED File Offset: 0x0009D2ED
 		public unsafe bool IsTickDrivenOutside
 		{
 			get
@@ -215,9 +215,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006208 RID: 25096
-		// (get) Token: 0x06018A50 RID: 100944 RVA: 0x00245902 File Offset: 0x00243B02
-		// (set) Token: 0x06018A51 RID: 100945 RVA: 0x00245912 File Offset: 0x00243B12
+		// Token: 0x17001585 RID: 5509
+		// (get) Token: 0x06006CCD RID: 27853 RVA: 0x0009F0FE File Offset: 0x0009D2FE
+		// (set) Token: 0x06006CCE RID: 27854 RVA: 0x0009F10E File Offset: 0x0009D30E
 		public unsafe bool OpenSendVerify
 		{
 			get
@@ -230,9 +230,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006209 RID: 25097
-		// (get) Token: 0x06018A52 RID: 100946 RVA: 0x00245924 File Offset: 0x00243B24
-		// (set) Token: 0x06018A53 RID: 100947 RVA: 0x0024595D File Offset: 0x00243B5D
+		// Token: 0x17001586 RID: 5510
+		// (get) Token: 0x06006CCF RID: 27855 RVA: 0x0009F120 File Offset: 0x0009D320
+		// (set) Token: 0x06006CD0 RID: 27856 RVA: 0x0009F159 File Offset: 0x0009D359
 		public FOnKcpConnectTcpSuccessDelegate OnTcpConnected
 		{
 			get
@@ -251,9 +251,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700620A RID: 25098
-		// (get) Token: 0x06018A54 RID: 100948 RVA: 0x00245980 File Offset: 0x00243B80
-		// (set) Token: 0x06018A55 RID: 100949 RVA: 0x002459B9 File Offset: 0x00243BB9
+		// Token: 0x17001587 RID: 5511
+		// (get) Token: 0x06006CD1 RID: 27857 RVA: 0x0009F17C File Offset: 0x0009D37C
+		// (set) Token: 0x06006CD2 RID: 27858 RVA: 0x0009F1B5 File Offset: 0x0009D3B5
 		public FOnKcpConnectTcpFailedDelegate OnTcpConnectFailed
 		{
 			get
@@ -272,31 +272,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700620B RID: 25099
-		// (get) Token: 0x06018A56 RID: 100950 RVA: 0x002459DA File Offset: 0x00243BDA
-		// (set) Token: 0x06018A57 RID: 100951 RVA: 0x002459EE File Offset: 0x00243BEE
-		[Nullable(2)]
-		public unsafe UKuroTcpClient TcpClient
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroTcpClient>(base.NativePtr / (IntPtr)sizeof(void*) + UKuroKcpClient.__PropertyOffset_TcpClient);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UKuroKcpClient.__PropertyOffset_TcpClient, value);
-			}
-		}
-
-		// Token: 0x06018A58 RID: 100952 RVA: 0x00245A03 File Offset: 0x00243C03
+		// Token: 0x06006CD3 RID: 27859 RVA: 0x0009F1D6 File Offset: 0x0009D3D6
 		public void TickOutside(float DeltaSeconds)
 		{
 			UKuroKcpClient.__TickOutside_Internal(base.NativePtr, DeltaSeconds);
 		}
 
-		// Token: 0x06018A59 RID: 100953 RVA: 0x00245A14 File Offset: 0x00243C14
+		// Token: 0x06006CD4 RID: 27860 RVA: 0x0009F1E4 File Offset: 0x0009D3E4
 		public unsafe void StartTcpConnect(string Addr, int Port)
 		{
 			FString fstring = FString.AllocTemp(Addr);
@@ -304,85 +286,85 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06018A5A RID: 100954 RVA: 0x00245A3F File Offset: 0x00243C3F
+		// Token: 0x06006CD5 RID: 27861 RVA: 0x0009F20F File Offset: 0x0009D40F
 		public void SetKcpWndSize(int SndWnd, int RcvWnd)
 		{
 			UKuroKcpClient.__SetKcpWndSize_Internal(base.NativePtr, SndWnd, RcvWnd);
 		}
 
-		// Token: 0x06018A5B RID: 100955 RVA: 0x00245A4E File Offset: 0x00243C4E
+		// Token: 0x06006CD6 RID: 27862 RVA: 0x0009F21E File Offset: 0x0009D41E
 		public void SetKcpStream(bool bStream)
 		{
 			UKuroKcpClient.__SetKcpStream_Internal(base.NativePtr, bStream);
 		}
 
-		// Token: 0x06018A5C RID: 100956 RVA: 0x00245A5C File Offset: 0x00243C5C
+		// Token: 0x06006CD7 RID: 27863 RVA: 0x0009F22C File Offset: 0x0009D42C
 		public void SetKcpSegmentSize(int SegmentSize)
 		{
 			UKuroKcpClient.__SetKcpSegmentSize_Internal(base.NativePtr, SegmentSize);
 		}
 
-		// Token: 0x06018A5D RID: 100957 RVA: 0x00245A6A File Offset: 0x00243C6A
+		// Token: 0x06006CD8 RID: 27864 RVA: 0x0009F23A File Offset: 0x0009D43A
 		public void SetKcpNoDelay(int NoDelay, int Interval, int Resend, int Nc)
 		{
 			UKuroKcpClient.__SetKcpNoDelay_Internal(base.NativePtr, NoDelay, Interval, Resend, Nc);
 		}
 
-		// Token: 0x06018A5E RID: 100958 RVA: 0x00245A7C File Offset: 0x00243C7C
+		// Token: 0x06006CD9 RID: 27865 RVA: 0x0009F24C File Offset: 0x0009D44C
 		public void SetKcpMtu(int Mtu)
 		{
 			UKuroKcpClient.__SetKcpMtu_Internal(base.NativePtr, Mtu);
 		}
 
-		// Token: 0x06018A5F RID: 100959 RVA: 0x00245A8A File Offset: 0x00243C8A
+		// Token: 0x06006CDA RID: 27866 RVA: 0x0009F25A File Offset: 0x0009D45A
 		public bool SetK(byte Type, in FArrayBuffer KeyBuffer)
 		{
 			return UKuroKcpClient.__SetK_Internal(base.NativePtr, Type, KeyBuffer);
 		}
 
-		// Token: 0x06018A60 RID: 100960 RVA: 0x00245A99 File Offset: 0x00243C99
+		// Token: 0x06006CDB RID: 27867 RVA: 0x0009F269 File Offset: 0x0009D469
 		public void SetEnType(byte Type, short MsgId)
 		{
 			UKuroKcpClient.__SetEnType_Internal(base.NativePtr, Type, MsgId);
 		}
 
-		// Token: 0x06018A61 RID: 100961 RVA: 0x00245AA8 File Offset: 0x00243CA8
+		// Token: 0x06006CDC RID: 27868 RVA: 0x0009F278 File Offset: 0x0009D478
 		public void SendTcpMessage(short RpcId, short MsgId, in FArrayBuffer ArrayBuffer)
 		{
 			UKuroKcpClient.__SendTcpMessage_Internal(base.NativePtr, RpcId, MsgId, ArrayBuffer);
 		}
 
-		// Token: 0x06018A62 RID: 100962 RVA: 0x00245AB8 File Offset: 0x00243CB8
+		// Token: 0x06006CDD RID: 27869 RVA: 0x0009F288 File Offset: 0x0009D488
 		public bool SendM(sbyte MsgType, int SeqNo, short RpcId, short MsgId, in FArrayBuffer ArrayBuffer, bool UseKcp)
 		{
 			return UKuroKcpClient.__SendM_Internal(base.NativePtr, MsgType, SeqNo, RpcId, MsgId, ArrayBuffer, UseKcp);
 		}
 
-		// Token: 0x06018A63 RID: 100963 RVA: 0x00245ACE File Offset: 0x00243CCE
+		// Token: 0x06006CDE RID: 27870 RVA: 0x0009F29E File Offset: 0x0009D49E
 		public bool IsTcpConnectStart()
 		{
 			return UKuroKcpClient.__IsTcpConnectStart_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018A64 RID: 100964 RVA: 0x00245ADB File Offset: 0x00243CDB
+		// Token: 0x06006CDF RID: 27871 RVA: 0x0009F2AB File Offset: 0x0009D4AB
 		public void HandleTcpConnectFailed()
 		{
 			UKuroKcpClient.__HandleTcpConnectFailed_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018A65 RID: 100965 RVA: 0x00245AE8 File Offset: 0x00243CE8
+		// Token: 0x06006CE0 RID: 27872 RVA: 0x0009F2B8 File Offset: 0x0009D4B8
 		public void HandleTcpConnected()
 		{
 			UKuroKcpClient.__HandleTcpConnected_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018A66 RID: 100966 RVA: 0x00245AF5 File Offset: 0x00243CF5
+		// Token: 0x06006CE1 RID: 27873 RVA: 0x0009F2C5 File Offset: 0x0009D4C5
 		public void HandleKcpConnect(uint NeedCrcCheck, uint Conv)
 		{
 			UKuroKcpClient.__HandleKcpConnect_Internal(base.NativePtr, NeedCrcCheck, Conv);
 		}
 
-		// Token: 0x06018A67 RID: 100967 RVA: 0x00245B04 File Offset: 0x00243D04
+		// Token: 0x06006CE2 RID: 27874 RVA: 0x0009F2D4 File Offset: 0x0009D4D4
 		public unsafe string GetDebugString(in FArrayBuffer ArrayBuffer, string Separator, short MsgId, int SeqNo)
 		{
 			FString fstring = FString.AllocTemp(Separator);
@@ -391,7 +373,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06018A68 RID: 100968 RVA: 0x00245B38 File Offset: 0x00243D38
+		// Token: 0x06006CE3 RID: 27875 RVA: 0x0009F308 File Offset: 0x0009D508
 		public unsafe bool DoConnect(string Addr, int Port, bool CrcCheckDisable, bool bAddTraceId)
 		{
 			FString fstring = FString.AllocTemp(Addr);
@@ -400,13 +382,13 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06018A69 RID: 100969 RVA: 0x00245B66 File Offset: 0x00243D66
+		// Token: 0x06006CE4 RID: 27876 RVA: 0x0009F336 File Offset: 0x0009D536
 		public void Disconnect()
 		{
 			UKuroKcpClient.__Disconnect_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018A6A RID: 100970 RVA: 0x00245B74 File Offset: 0x00243D74
+		// Token: 0x06006CE5 RID: 27877 RVA: 0x0009F344 File Offset: 0x0009D544
 		public unsafe bool Connect(string Addr, int Port, bool CrcCheckDisable)
 		{
 			FString fstring = FString.AllocTemp(Addr);
@@ -415,185 +397,182 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06018A6B RID: 100971 RVA: 0x00245BA0 File Offset: 0x00243DA0
+		// Token: 0x06006CE6 RID: 27878 RVA: 0x0009F370 File Offset: 0x0009D570
 		public void CloseTcpConnect()
 		{
 			UKuroKcpClient.__CloseTcpConnect_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018A6C RID: 100972
+		// Token: 0x06006CE7 RID: 27879
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TickOutside_Internal(IntPtr @this, float DeltaSeconds);
 
-		// Token: 0x06018A6D RID: 100973
+		// Token: 0x06006CE8 RID: 27880
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StartTcpConnect_Internal(IntPtr @this, in FString Addr, int Port);
 
-		// Token: 0x06018A6E RID: 100974
+		// Token: 0x06006CE9 RID: 27881
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetKcpWndSize_Internal(IntPtr @this, int SndWnd, int RcvWnd);
 
-		// Token: 0x06018A6F RID: 100975
+		// Token: 0x06006CEA RID: 27882
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetKcpStream_Internal(IntPtr @this, bool bStream);
 
-		// Token: 0x06018A70 RID: 100976
+		// Token: 0x06006CEB RID: 27883
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetKcpSegmentSize_Internal(IntPtr @this, int SegmentSize);
 
-		// Token: 0x06018A71 RID: 100977
+		// Token: 0x06006CEC RID: 27884
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetKcpNoDelay_Internal(IntPtr @this, int NoDelay, int Interval, int Resend, int Nc);
 
-		// Token: 0x06018A72 RID: 100978
+		// Token: 0x06006CED RID: 27885
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetKcpMtu_Internal(IntPtr @this, int Mtu);
 
-		// Token: 0x06018A73 RID: 100979
+		// Token: 0x06006CEE RID: 27886
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetK_Internal(IntPtr @this, byte Type, in FArrayBuffer KeyBuffer);
 
-		// Token: 0x06018A74 RID: 100980
+		// Token: 0x06006CEF RID: 27887
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEnType_Internal(IntPtr @this, byte Type, short MsgId);
 
-		// Token: 0x06018A75 RID: 100981
+		// Token: 0x06006CF0 RID: 27888
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SendTcpMessage_Internal(IntPtr @this, short RpcId, short MsgId, in FArrayBuffer ArrayBuffer);
 
-		// Token: 0x06018A76 RID: 100982
+		// Token: 0x06006CF1 RID: 27889
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SendM_Internal(IntPtr @this, sbyte MsgType, int SeqNo, short RpcId, short MsgId, in FArrayBuffer ArrayBuffer, bool UseKcp);
 
-		// Token: 0x06018A77 RID: 100983
+		// Token: 0x06006CF2 RID: 27890
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsTcpConnectStart_Internal(IntPtr @this);
 
-		// Token: 0x06018A78 RID: 100984
+		// Token: 0x06006CF3 RID: 27891
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __HandleTcpConnectFailed_Internal(IntPtr @this);
 
-		// Token: 0x06018A79 RID: 100985
+		// Token: 0x06006CF4 RID: 27892
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __HandleTcpConnected_Internal(IntPtr @this);
 
-		// Token: 0x06018A7A RID: 100986
+		// Token: 0x06006CF5 RID: 27893
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __HandleKcpConnect_Internal(IntPtr @this, uint NeedCrcCheck, uint Conv);
 
-		// Token: 0x06018A7B RID: 100987
+		// Token: 0x06006CF6 RID: 27894
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetDebugString_Internal(IntPtr @this, in FArrayBuffer ArrayBuffer, in FString Separator, short MsgId, int SeqNo);
 
-		// Token: 0x06018A7C RID: 100988
+		// Token: 0x06006CF7 RID: 27895
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __DoConnect_Internal(IntPtr @this, in FString Addr, int Port, bool CrcCheckDisable, bool bAddTraceId);
 
-		// Token: 0x06018A7D RID: 100989
+		// Token: 0x06006CF8 RID: 27896
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Disconnect_Internal(IntPtr @this);
 
-		// Token: 0x06018A7E RID: 100990
+		// Token: 0x06006CF9 RID: 27897
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Connect_Internal(IntPtr @this, in FString Addr, int Port, bool CrcCheckDisable);
 
-		// Token: 0x06018A7F RID: 100991
+		// Token: 0x06006CFA RID: 27898
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CloseTcpConnect_Internal(IntPtr @this);
 
-		// Token: 0x06018A80 RID: 100992 RVA: 0x00245BAD File Offset: 0x00243DAD
+		// Token: 0x06006CFB RID: 27899 RVA: 0x0009F37D File Offset: 0x0009D57D
 		static UKuroKcpClient()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroNetwork.KuroKcpClient");
 		}
 
-		// Token: 0x06018A81 RID: 100993 RVA: 0x00245BBB File Offset: 0x00243DBB
+		// Token: 0x06006CFC RID: 27900 RVA: 0x0009F38B File Offset: 0x0009D58B
 		protected UKuroKcpClient(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D515 RID: 54549
+		// Token: 0x04002E77 RID: 11895
 		public new const string __ObjectPath = "/Script/KuroNetwork.KuroKcpClient";
 
-		// Token: 0x0400D516 RID: 54550
+		// Token: 0x04002E78 RID: 11896
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D517 RID: 54551
+		// Token: 0x04002E79 RID: 11897
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D518 RID: 54552
+		// Token: 0x04002E7A RID: 11898
 		internal static int __PropertyOffset_OnConnectSuccess;
 
-		// Token: 0x0400D519 RID: 54553
+		// Token: 0x04002E7B RID: 11899
 		[Nullable(2)]
 		private FOnKcpConnectSuccessDelegate _OnConnectSuccess;
 
-		// Token: 0x0400D51A RID: 54554
+		// Token: 0x04002E7C RID: 11900
 		internal static int __PropertyOffset_OnRecResp;
 
-		// Token: 0x0400D51B RID: 54555
+		// Token: 0x04002E7D RID: 11901
 		[Nullable(2)]
 		private FOnReceivedResponseDelegate _OnRecResp;
 
-		// Token: 0x0400D51C RID: 54556
+		// Token: 0x04002E7E RID: 11902
 		internal static int __PropertyOffset_OnRecException;
 
-		// Token: 0x0400D51D RID: 54557
+		// Token: 0x04002E7F RID: 11903
 		[Nullable(2)]
 		private FOnReceivedExceptionDelegate _OnRecException;
 
-		// Token: 0x0400D51E RID: 54558
+		// Token: 0x04002E80 RID: 11904
 		internal static int __PropertyOffset_OnRecPush;
 
-		// Token: 0x0400D51F RID: 54559
+		// Token: 0x04002E81 RID: 11905
 		[Nullable(2)]
 		private FOnReceivedPushDelegate _OnRecPush;
 
-		// Token: 0x0400D520 RID: 54560
+		// Token: 0x04002E82 RID: 11906
 		internal static int __PropertyOffset_OnRecTcpException;
 
-		// Token: 0x0400D521 RID: 54561
+		// Token: 0x04002E83 RID: 11907
 		[Nullable(2)]
 		private FOnReceivedTcpExceptionDelegate _OnRecTcpException;
 
-		// Token: 0x0400D522 RID: 54562
+		// Token: 0x04002E84 RID: 11908
 		internal static int __PropertyOffset_OnError;
 
-		// Token: 0x0400D523 RID: 54563
+		// Token: 0x04002E85 RID: 11909
 		[Nullable(2)]
 		private FOnError _OnError;
 
-		// Token: 0x0400D524 RID: 54564
+		// Token: 0x04002E86 RID: 11910
 		internal static int __PropertyOffset_RemoteMtu;
 
-		// Token: 0x0400D525 RID: 54565
+		// Token: 0x04002E87 RID: 11911
 		internal static int __PropertyOffset_UseNewResolveIp;
 
-		// Token: 0x0400D526 RID: 54566
+		// Token: 0x04002E88 RID: 11912
 		internal static int __PropertyOffset_IsMultiThreaded;
 
-		// Token: 0x0400D527 RID: 54567
+		// Token: 0x04002E89 RID: 11913
 		internal static int __PropertyOffset_IsTickDrivenOutside;
 
-		// Token: 0x0400D528 RID: 54568
+		// Token: 0x04002E8A RID: 11914
 		internal static int __PropertyOffset_OpenSendVerify;
 
-		// Token: 0x0400D529 RID: 54569
+		// Token: 0x04002E8B RID: 11915
 		internal static int __PropertyOffset_OnTcpConnected;
 
-		// Token: 0x0400D52A RID: 54570
+		// Token: 0x04002E8C RID: 11916
 		[Nullable(2)]
 		private FOnKcpConnectTcpSuccessDelegate _OnTcpConnected;
 
-		// Token: 0x0400D52B RID: 54571
+		// Token: 0x04002E8D RID: 11917
 		internal static int __PropertyOffset_OnTcpConnectFailed;
 
-		// Token: 0x0400D52C RID: 54572
+		// Token: 0x04002E8E RID: 11918
 		[Nullable(2)]
 		private FOnKcpConnectTcpFailedDelegate _OnTcpConnectFailed;
-
-		// Token: 0x0400D52D RID: 54573
-		internal static int __PropertyOffset_TcpClient;
 	}
 }

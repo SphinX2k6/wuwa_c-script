@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E66 RID: 28262
+	// Token: 0x02005FE7 RID: 24551
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElementalCasketHelper
 	{
-		// Token: 0x06044DEE RID: 282094 RVA: 0x010FFF94 File Offset: 0x010FE194
+		// Token: 0x0603AF7B RID: 241531 RVA: 0x010AA4F4 File Offset: 0x010A86F4
 		[NullableContext(2)]
 		public static ElementalCoreData CreateElementalCoreData(int foundationPbDataId, FoundationCoreInfo coreInfo)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return new ElementalCoreData(foundationPbDataId, coreInfo.SourceEntityId, elementalBoxId, eelementalType.Value, eelementalCoreState.Value, config.Value.CustomBoxPrefab);
 		}
 
-		// Token: 0x06044DEF RID: 282095 RVA: 0x01100108 File Offset: 0x010FE308
+		// Token: 0x0603AF7C RID: 241532 RVA: 0x010AA668 File Offset: 0x010A8868
 		public static EElementalType? GetCasketElementType(ECasketElementType type)
 		{
 			switch (type)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DF0 RID: 282096 RVA: 0x01100148 File Offset: 0x010FE348
+		// Token: 0x0603AF7D RID: 241533 RVA: 0x010AA6A8 File Offset: 0x010A88A8
 		public static int? GetElementalTag(EElementalType type)
 		{
 			switch (type)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DF1 RID: 282097 RVA: 0x011001B4 File Offset: 0x010FE3B4
+		// Token: 0x0603AF7E RID: 241534 RVA: 0x010AA714 File Offset: 0x010A8914
 		public static int GetElementalCorePerformTag(EElementalType type, EElementalCoreState state)
 		{
 			switch (type)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DF2 RID: 282098 RVA: 0x011002AC File Offset: 0x010FE4AC
+		// Token: 0x0603AF7F RID: 241535 RVA: 0x010AA80C File Offset: 0x010A8A0C
 		public static void InitShapeCompByConfig(UKuroFastCollisionShapeComponent shape, ITriggerShape shapeConfig)
 		{
 			ETriggerShape type = shapeConfig.Type;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DF3 RID: 282099 RVA: 0x011003E4 File Offset: 0x010FE5E4
+		// Token: 0x0603AF80 RID: 241536 RVA: 0x010AA944 File Offset: 0x010A8B44
 		public static FVectorDouble ComputeShapeCenterLocation(UKuroFastCollisionShapeComponent shape)
 		{
 			AActor owner = shape.GetOwner();
@@ -281,24 +281,24 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return tempBaseLocation.ToUeVector(false);
 		}
 
-		// Token: 0x04023D9A RID: 146842
+		// Token: 0x0401F04F RID: 127055
 		private const string NORMAL_STATE_TAG = "关卡.Common.状态.常态";
 
-		// Token: 0x04023D9B RID: 146843
+		// Token: 0x0401F050 RID: 127056
 		private const string ACTIVATE_STATE_TAG = "关卡.Common.状态.激活";
 
-		// Token: 0x04023D9C RID: 146844
+		// Token: 0x0401F051 RID: 127057
 		private const string FINISH_STATE_TAG = "关卡.Common.状态.完成";
 
-		// Token: 0x04023D9D RID: 146845
+		// Token: 0x0401F052 RID: 127058
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TempBaseLocation = global::Vector.Create();
 
-		// Token: 0x04023D9E RID: 146846
+		// Token: 0x0401F053 RID: 127059
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TempBaseQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04023D9F RID: 146847
+		// Token: 0x0401F054 RID: 127060
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TempRelativeOffset = global::Vector.Create();
 	}

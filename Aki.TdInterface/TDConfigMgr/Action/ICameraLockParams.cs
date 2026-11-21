@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001842 RID: 6210
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019CD RID: 6605
 	public class ICameraLockParams
 	{
-		// Token: 0x06008547 RID: 34119 RVA: 0x0013D0EC File Offset: 0x0013B2EC
+		// Token: 0x06008C6D RID: 35949 RVA: 0x0014C8E0 File Offset: 0x0014AAE0
 		private ICameraLockParams_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008548 RID: 34120 RVA: 0x0013D124 File Offset: 0x0013B324
+		// Token: 0x06008C6E RID: 35950 RVA: 0x0014C918 File Offset: 0x0014AB18
 		public static ICameraLockParams Create([Nullable(2)] ICameraLockParams instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008549 RID: 34121 RVA: 0x0013D137 File Offset: 0x0013B337
+		// Token: 0x06008C6F RID: 35951 RVA: 0x0014C92B File Offset: 0x0014AB2B
 		public static ICameraLockParams CreateFromSetValue([Nullable(2)] ICameraLockParams_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600854A RID: 34122 RVA: 0x0013D14C File Offset: 0x0013B34C
+		// Token: 0x06008C70 RID: 35952 RVA: 0x0014C940 File Offset: 0x0014AB40
 		public ICameraLockParams_SetValue ToSetValue()
 		{
 			return new ICameraLockParams_SetValue
@@ -73,9 +71,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B95 RID: 11157
-		// (get) Token: 0x0600854B RID: 34123 RVA: 0x0013D212 File Offset: 0x0013B412
-		// (set) Token: 0x0600854C RID: 34124 RVA: 0x0013D241 File Offset: 0x0013B441
+		// Token: 0x17002D8F RID: 11663
+		// (get) Token: 0x06008C71 RID: 35953 RVA: 0x0014CA06 File Offset: 0x0014AC06
+		// (set) Token: 0x06008C72 RID: 35954 RVA: 0x0014CA35 File Offset: 0x0014AC35
 		public virtual float RelativeYawHardMin
 		{
 			get
@@ -96,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B96 RID: 11158
-		// (get) Token: 0x0600854D RID: 34125 RVA: 0x0013D24F File Offset: 0x0013B44F
-		// (set) Token: 0x0600854E RID: 34126 RVA: 0x0013D27E File Offset: 0x0013B47E
+		// Token: 0x17002D90 RID: 11664
+		// (get) Token: 0x06008C73 RID: 35955 RVA: 0x0014CA43 File Offset: 0x0014AC43
+		// (set) Token: 0x06008C74 RID: 35956 RVA: 0x0014CA72 File Offset: 0x0014AC72
 		public virtual float RelativeYawHardMax
 		{
 			get
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B97 RID: 11159
-		// (get) Token: 0x0600854F RID: 34127 RVA: 0x0013D28C File Offset: 0x0013B48C
-		// (set) Token: 0x06008550 RID: 34128 RVA: 0x0013D2BB File Offset: 0x0013B4BB
+		// Token: 0x17002D91 RID: 11665
+		// (get) Token: 0x06008C75 RID: 35957 RVA: 0x0014CA80 File Offset: 0x0014AC80
+		// (set) Token: 0x06008C76 RID: 35958 RVA: 0x0014CAAF File Offset: 0x0014ACAF
 		public virtual float RelativePitchHardMin
 		{
 			get
@@ -142,9 +140,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B98 RID: 11160
-		// (get) Token: 0x06008551 RID: 34129 RVA: 0x0013D2C9 File Offset: 0x0013B4C9
-		// (set) Token: 0x06008552 RID: 34130 RVA: 0x0013D2F8 File Offset: 0x0013B4F8
+		// Token: 0x17002D92 RID: 11666
+		// (get) Token: 0x06008C77 RID: 35959 RVA: 0x0014CABD File Offset: 0x0014ACBD
+		// (set) Token: 0x06008C78 RID: 35960 RVA: 0x0014CAEC File Offset: 0x0014ACEC
 		public virtual float RelativePitchHardMax
 		{
 			get
@@ -165,9 +163,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B99 RID: 11161
-		// (get) Token: 0x06008553 RID: 34131 RVA: 0x0013D306 File Offset: 0x0013B506
-		// (set) Token: 0x06008554 RID: 34132 RVA: 0x0013D335 File Offset: 0x0013B535
+		// Token: 0x17002D93 RID: 11667
+		// (get) Token: 0x06008C79 RID: 35961 RVA: 0x0014CAFA File Offset: 0x0014ACFA
+		// (set) Token: 0x06008C7A RID: 35962 RVA: 0x0014CB29 File Offset: 0x0014AD29
 		public virtual float YawSignAdaptionLockDirection
 		{
 			get
@@ -188,9 +186,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B9A RID: 11162
-		// (get) Token: 0x06008555 RID: 34133 RVA: 0x0013D343 File Offset: 0x0013B543
-		// (set) Token: 0x06008556 RID: 34134 RVA: 0x0013D372 File Offset: 0x0013B572
+		// Token: 0x17002D94 RID: 11668
+		// (get) Token: 0x06008C7B RID: 35963 RVA: 0x0014CB37 File Offset: 0x0014AD37
+		// (set) Token: 0x06008C7C RID: 35964 RVA: 0x0014CB66 File Offset: 0x0014AD66
 		public virtual float RelativeRotationLagYawSpeedMin
 		{
 			get
@@ -211,9 +209,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B9B RID: 11163
-		// (get) Token: 0x06008557 RID: 34135 RVA: 0x0013D380 File Offset: 0x0013B580
-		// (set) Token: 0x06008558 RID: 34136 RVA: 0x0013D3AF File Offset: 0x0013B5AF
+		// Token: 0x17002D95 RID: 11669
+		// (get) Token: 0x06008C7D RID: 35965 RVA: 0x0014CB74 File Offset: 0x0014AD74
+		// (set) Token: 0x06008C7E RID: 35966 RVA: 0x0014CBA3 File Offset: 0x0014ADA3
 		public virtual float RelativeRotationLagYawSpeedMax
 		{
 			get
@@ -234,9 +232,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B9C RID: 11164
-		// (get) Token: 0x06008559 RID: 34137 RVA: 0x0013D3BD File Offset: 0x0013B5BD
-		// (set) Token: 0x0600855A RID: 34138 RVA: 0x0013D3EC File Offset: 0x0013B5EC
+		// Token: 0x17002D96 RID: 11670
+		// (get) Token: 0x06008C7F RID: 35967 RVA: 0x0014CBB1 File Offset: 0x0014ADB1
+		// (set) Token: 0x06008C80 RID: 35968 RVA: 0x0014CBE0 File Offset: 0x0014ADE0
 		public virtual float RelativeRotationLagYawAngleRange
 		{
 			get
@@ -257,9 +255,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B9D RID: 11165
-		// (get) Token: 0x0600855B RID: 34139 RVA: 0x0013D3FA File Offset: 0x0013B5FA
-		// (set) Token: 0x0600855C RID: 34140 RVA: 0x0013D429 File Offset: 0x0013B629
+		// Token: 0x17002D97 RID: 11671
+		// (get) Token: 0x06008C81 RID: 35969 RVA: 0x0014CBEE File Offset: 0x0014ADEE
+		// (set) Token: 0x06008C82 RID: 35970 RVA: 0x0014CC1D File Offset: 0x0014AE1D
 		public virtual float RelativeRotationLagPitchSpeedMin
 		{
 			get
@@ -280,9 +278,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B9E RID: 11166
-		// (get) Token: 0x0600855D RID: 34141 RVA: 0x0013D437 File Offset: 0x0013B637
-		// (set) Token: 0x0600855E RID: 34142 RVA: 0x0013D466 File Offset: 0x0013B666
+		// Token: 0x17002D98 RID: 11672
+		// (get) Token: 0x06008C83 RID: 35971 RVA: 0x0014CC2B File Offset: 0x0014AE2B
+		// (set) Token: 0x06008C84 RID: 35972 RVA: 0x0014CC5A File Offset: 0x0014AE5A
 		public virtual float RelativeRotationLagPitchSpeedMax
 		{
 			get
@@ -303,9 +301,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B9F RID: 11167
-		// (get) Token: 0x0600855F RID: 34143 RVA: 0x0013D474 File Offset: 0x0013B674
-		// (set) Token: 0x06008560 RID: 34144 RVA: 0x0013D4A3 File Offset: 0x0013B6A3
+		// Token: 0x17002D99 RID: 11673
+		// (get) Token: 0x06008C85 RID: 35973 RVA: 0x0014CC68 File Offset: 0x0014AE68
+		// (set) Token: 0x06008C86 RID: 35974 RVA: 0x0014CC97 File Offset: 0x0014AE97
 		public virtual float RelativeRotationLagPitchAngleRange
 		{
 			get
@@ -326,9 +324,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BA0 RID: 11168
-		// (get) Token: 0x06008561 RID: 34145 RVA: 0x0013D4B1 File Offset: 0x0013B6B1
-		// (set) Token: 0x06008562 RID: 34146 RVA: 0x0013D4E0 File Offset: 0x0013B6E0
+		// Token: 0x17002D9A RID: 11674
+		// (get) Token: 0x06008C87 RID: 35975 RVA: 0x0014CCA5 File Offset: 0x0014AEA5
+		// (set) Token: 0x06008C88 RID: 35976 RVA: 0x0014CCD4 File Offset: 0x0014AED4
 		public virtual float RelativeRotationLagRatioMin
 		{
 			get
@@ -349,9 +347,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BA1 RID: 11169
-		// (get) Token: 0x06008563 RID: 34147 RVA: 0x0013D4EE File Offset: 0x0013B6EE
-		// (set) Token: 0x06008564 RID: 34148 RVA: 0x0013D51D File Offset: 0x0013B71D
+		// Token: 0x17002D9B RID: 11675
+		// (get) Token: 0x06008C89 RID: 35977 RVA: 0x0014CCE2 File Offset: 0x0014AEE2
+		// (set) Token: 0x06008C8A RID: 35978 RVA: 0x0014CD11 File Offset: 0x0014AF11
 		public virtual float RelativeRotationLagRatioMax
 		{
 			get
@@ -372,9 +370,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BA2 RID: 11170
-		// (get) Token: 0x06008565 RID: 34149 RVA: 0x0013D52B File Offset: 0x0013B72B
-		// (set) Token: 0x06008566 RID: 34150 RVA: 0x0013D55A File Offset: 0x0013B75A
+		// Token: 0x17002D9C RID: 11676
+		// (get) Token: 0x06008C8B RID: 35979 RVA: 0x0014CD1F File Offset: 0x0014AF1F
+		// (set) Token: 0x06008C8C RID: 35980 RVA: 0x0014CD4E File Offset: 0x0014AF4E
 		public virtual float RelativeRotationLagDistanceRangeMin
 		{
 			get
@@ -395,9 +393,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BA3 RID: 11171
-		// (get) Token: 0x06008567 RID: 34151 RVA: 0x0013D568 File Offset: 0x0013B768
-		// (set) Token: 0x06008568 RID: 34152 RVA: 0x0013D597 File Offset: 0x0013B797
+		// Token: 0x17002D9D RID: 11677
+		// (get) Token: 0x06008C8D RID: 35981 RVA: 0x0014CD5C File Offset: 0x0014AF5C
+		// (set) Token: 0x06008C8E RID: 35982 RVA: 0x0014CD8B File Offset: 0x0014AF8B
 		public virtual float RelativeRotationLagDistanceRangeMax
 		{
 			get
@@ -418,11 +416,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005436 RID: 21558
+		// Token: 0x04005882 RID: 22658
 		[Nullable(2)]
 		protected ICameraLockParams FbInstance;
 
-		// Token: 0x04005437 RID: 21559
+		// Token: 0x04005883 RID: 22659
 		[Nullable(2)]
 		protected ICameraLockParams_SetValue PocoInterface;
 	}

@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000FCB RID: 4043
+// Token: 0x02000480 RID: 1152
 public class FurnitureDetailTipItem : UiPanelBase, IItemTipsUiProxy
 {
-	// Token: 0x060067E9 RID: 26601 RVA: 0x0014A204 File Offset: 0x00148404
+	// Token: 0x06003B81 RID: 15233 RVA: 0x00152AC8 File Offset: 0x00150CC8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,13 +37,13 @@ public class FurnitureDetailTipItem : UiPanelBase, IItemTipsUiProxy
 		};
 	}
 
-	// Token: 0x060067EA RID: 26602 RVA: 0x0014A38F File Offset: 0x0014858F
+	// Token: 0x06003B82 RID: 15234 RVA: 0x00152C53 File Offset: 0x00150E53
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x060067EB RID: 26603 RVA: 0x0014A3A4 File Offset: 0x001485A4
+	// Token: 0x06003B83 RID: 15235 RVA: 0x00152C68 File Offset: 0x00150E68
 	public UniTask PlayCloseSequence()
 	{
 		FurnitureDetailTipItem.<PlayCloseSequence>d__5 <PlayCloseSequence>d__;
@@ -54,7 +54,7 @@ public class FurnitureDetailTipItem : UiPanelBase, IItemTipsUiProxy
 		return <PlayCloseSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060067EC RID: 26604 RVA: 0x0014A3E8 File Offset: 0x001485E8
+	// Token: 0x06003B84 RID: 15236 RVA: 0x00152CAC File Offset: 0x00150EAC
 	[NullableContext(1)]
 	public void Refresh(ItemTipsData data)
 	{
@@ -66,7 +66,7 @@ public class FurnitureDetailTipItem : UiPanelBase, IItemTipsUiProxy
 		this.RefreshByFurnitureId(tipsFurnitureData.ConfigId, false);
 	}
 
-	// Token: 0x060067ED RID: 26605 RVA: 0x0014A410 File Offset: 0x00148610
+	// Token: 0x06003B85 RID: 15237 RVA: 0x00152CD4 File Offset: 0x00150ED4
 	public void RefreshByFurnitureId(int id, bool showBottomEmptyItem)
 	{
 		this.FurnitureId = id;
@@ -154,7 +154,7 @@ public class FurnitureDetailTipItem : UiPanelBase, IItemTipsUiProxy
 		}
 	}
 
-	// Token: 0x060067EE RID: 26606 RVA: 0x0014A784 File Offset: 0x00148984
+	// Token: 0x06003B86 RID: 15238 RVA: 0x00153048 File Offset: 0x00151248
 	private void OnClickJumpButton()
 	{
 		Furniture? furnitureConfig = FurnitureConfig.Instance.GetFurnitureConfig(this.FurnitureId);
@@ -187,14 +187,14 @@ public class FurnitureDetailTipItem : UiPanelBase, IItemTipsUiProxy
 		}
 	}
 
-	// Token: 0x04002F5D RID: 12125
+	// Token: 0x04002FF6 RID: 12278
 	protected int FurnitureId;
 
-	// Token: 0x04002F5E RID: 12126
+	// Token: 0x04002FF7 RID: 12279
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04002F5F RID: 12127
+	// Token: 0x04002FF8 RID: 12280
 	[Nullable(2)]
 	public Action TipViewCloseDelegate;
 }

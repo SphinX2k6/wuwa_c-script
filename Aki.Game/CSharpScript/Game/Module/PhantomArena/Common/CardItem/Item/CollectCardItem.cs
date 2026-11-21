@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051D4 RID: 20948
+	// Token: 0x020041A4 RID: 16804
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 	})]
 	internal class CollectCardItem : CommonBaseCardItem<CollectGridCardData>
 	{
-		// Token: 0x060359DA RID: 219610 RVA: 0x00CB3E98 File Offset: 0x00CB2098
+		// Token: 0x0602A8D5 RID: 174293 RVA: 0x00C014D4 File Offset: 0x00BFF6D4
 		protected override void OnRegisterCardComponent()
 		{
 			string resourceId = this.IsNewPhantomArenaActivity ? "UiItem_CardLock256New" : "UiItem_CardLockSmall";
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			};
 		}
 
-		// Token: 0x060359DB RID: 219611 RVA: 0x00CB3F34 File Offset: 0x00CB2134
+		// Token: 0x0602A8D6 RID: 174294 RVA: 0x00C01570 File Offset: 0x00BFF770
 		protected override void OnStart()
 		{
 			CollectGridCardData collectGridCardData = this.OpenParam as CollectGridCardData;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			}
 		}
 
-		// Token: 0x060359DC RID: 219612 RVA: 0x00CB3F58 File Offset: 0x00CB2158
+		// Token: 0x0602A8D7 RID: 174295 RVA: 0x00C01594 File Offset: 0x00BFF794
 		public override void Refresh(CollectGridCardData data)
 		{
 			this.Data = data;
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			component3.Refresh(data3);
 		}
 
-		// Token: 0x060359DD RID: 219613 RVA: 0x00CB4079 File Offset: 0x00CB2279
+		// Token: 0x0602A8D8 RID: 174296 RVA: 0x00C016B5 File Offset: 0x00BFF8B5
 		private bool CanToggleChange()
 		{
 			return false;
 		}
 
-		// Token: 0x060359DE RID: 219614 RVA: 0x00CB407C File Offset: 0x00CB227C
+		// Token: 0x0602A8D9 RID: 174297 RVA: 0x00C016B8 File Offset: 0x00BFF8B8
 		private void OnClickCard()
 		{
 			if (this.Data == null)
@@ -119,13 +119,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			}
 		}
 
-		// Token: 0x0401C74D RID: 116557
+		// Token: 0x04017182 RID: 94594
 		private CollectGridCardData Data;
 
-		// Token: 0x0401C74E RID: 116558
+		// Token: 0x04017183 RID: 94595
 		public Action<int> CallbackOnClick;
 
-		// Token: 0x0401C74F RID: 116559
+		// Token: 0x04017184 RID: 94596
 		public bool IsNewPhantomArenaActivity;
 	}
 }

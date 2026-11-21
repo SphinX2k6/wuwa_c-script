@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004254 RID: 16980
+	// Token: 0x020046B0 RID: 18096
 	public class IUseSkillCheckByVisionShowIdT
 	{
-		// Token: 0x1700788A RID: 30858
-		// (get) Token: 0x060191E3 RID: 102883 RVA: 0x0039C5A4 File Offset: 0x0039A7A4
-		// (set) Token: 0x060191E4 RID: 102884 RVA: 0x0039C5AC File Offset: 0x0039A7AC
+		// Token: 0x17007EBB RID: 32443
+		// (get) Token: 0x0601A94F RID: 108879 RVA: 0x003C7C7C File Offset: 0x003C5E7C
+		// (set) Token: 0x0601A950 RID: 108880 RVA: 0x003C7C84 File Offset: 0x003C5E84
 		public EUseSkillCheckType Type { get; set; }
 
-		// Token: 0x1700788B RID: 30859
-		// (get) Token: 0x060191E5 RID: 102885 RVA: 0x0039C5B5 File Offset: 0x0039A7B5
-		// (set) Token: 0x060191E6 RID: 102886 RVA: 0x0039C5BD File Offset: 0x0039A7BD
+		// Token: 0x17007EBC RID: 32444
+		// (get) Token: 0x0601A951 RID: 108881 RVA: 0x003C7C8D File Offset: 0x003C5E8D
+		// (set) Token: 0x0601A952 RID: 108882 RVA: 0x003C7C95 File Offset: 0x003C5E95
 		public int VisionId { get; set; }
 
-		// Token: 0x060191E7 RID: 102887 RVA: 0x0039C5C6 File Offset: 0x0039A7C6
+		// Token: 0x0601A953 RID: 108883 RVA: 0x003C7C9E File Offset: 0x003C5E9E
 		public IUseSkillCheckByVisionShowIdT()
 		{
 			this.Type = EUseSkillCheckType.CheckSkillGenre;

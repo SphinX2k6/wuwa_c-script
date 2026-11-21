@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000233 RID: 563
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200025A RID: 602
 	public class IChargeSlashControl : ICurveControlConfig
 	{
-		// Token: 0x060009E0 RID: 2528 RVA: 0x0002A20C File Offset: 0x0002840C
-		[NullableContext(1)]
+		// Token: 0x06000A54 RID: 2644 RVA: 0x0002B9CC File Offset: 0x00029BCC
 		private IChargeSlashControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060009E1 RID: 2529 RVA: 0x0002A244 File Offset: 0x00028444
-		[NullableContext(1)]
+		// Token: 0x06000A55 RID: 2645 RVA: 0x0002BA04 File Offset: 0x00029C04
 		public static IChargeSlashControl Create([Nullable(2)] IChargeSlashControl instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060009E2 RID: 2530 RVA: 0x0002A257 File Offset: 0x00028457
-		[NullableContext(1)]
+		// Token: 0x06000A56 RID: 2646 RVA: 0x0002BA17 File Offset: 0x00029C17
 		public static IChargeSlashControl CreateFromSetValue([Nullable(2)] IChargeSlashControl_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060009E3 RID: 2531 RVA: 0x0002A26A File Offset: 0x0002846A
-		[NullableContext(1)]
+		// Token: 0x06000A57 RID: 2647 RVA: 0x0002BA2A File Offset: 0x00029C2A
 		public new IChargeSlashControl_SetValue ToSetValue()
 		{
 			return new IChargeSlashControl_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000301 RID: 769
-		// (get) Token: 0x060009E4 RID: 2532 RVA: 0x0002A295 File Offset: 0x00028495
-		// (set) Token: 0x060009E5 RID: 2533 RVA: 0x0002A2C0 File Offset: 0x000284C0
+		// Token: 0x17000320 RID: 800
+		// (get) Token: 0x06000A58 RID: 2648 RVA: 0x0002BA55 File Offset: 0x00029C55
+		// (set) Token: 0x06000A59 RID: 2649 RVA: 0x0002BA80 File Offset: 0x00029C80
 		public override ECurveControlType Type
 		{
 			get
@@ -88,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000302 RID: 770
-		// (get) Token: 0x060009E6 RID: 2534 RVA: 0x0002A2CE File Offset: 0x000284CE
-		// (set) Token: 0x060009E7 RID: 2535 RVA: 0x0002A2F9 File Offset: 0x000284F9
+		// Token: 0x17000321 RID: 801
+		// (get) Token: 0x06000A5A RID: 2650 RVA: 0x0002BA8E File Offset: 0x00029C8E
+		// (set) Token: 0x06000A5B RID: 2651 RVA: 0x0002BAB9 File Offset: 0x00029CB9
 		public virtual int UpHeight
 		{
 			get
@@ -111,11 +105,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000303 RID: 771
-		// (get) Token: 0x060009E8 RID: 2536 RVA: 0x0002A307 File Offset: 0x00028507
-		// (set) Token: 0x060009E9 RID: 2537 RVA: 0x0002A32E File Offset: 0x0002852E
+		// Token: 0x17000322 RID: 802
+		// (get) Token: 0x06000A5C RID: 2652 RVA: 0x0002BAC7 File Offset: 0x00029CC7
+		// (set) Token: 0x06000A5D RID: 2653 RVA: 0x0002BAEE File Offset: 0x00029CEE
+		[Nullable(2)]
 		public virtual string UpCurvePath
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -129,16 +125,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.UpCurvePath;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().UpCurvePath = value;
 			}
 		}
 
-		// Token: 0x04000A11 RID: 2577
+		// Token: 0x04000A9B RID: 2715
+		[Nullable(2)]
 		protected new IChargeSlashControl FbInstance;
 
-		// Token: 0x04000A12 RID: 2578
+		// Token: 0x04000A9C RID: 2716
+		[Nullable(2)]
 		protected new IChargeSlashControl_SetValue PocoInterface;
 	}
 }

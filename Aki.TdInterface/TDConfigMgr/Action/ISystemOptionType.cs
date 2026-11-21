@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F13 RID: 7955
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200214C RID: 8524
 	public class ISystemOptionType
 	{
-		// Token: 0x0600AA1C RID: 43548 RVA: 0x0017F2EC File Offset: 0x0017D4EC
+		// Token: 0x0600B4EE RID: 46318 RVA: 0x001952E4 File Offset: 0x001934E4
 		private ISystemOptionType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AA1D RID: 43549 RVA: 0x0017F324 File Offset: 0x0017D524
+		// Token: 0x0600B4EF RID: 46319 RVA: 0x0019531C File Offset: 0x0019351C
 		public static ISystemOptionType Create([Nullable(2)] ISystemOptionType instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA1E RID: 43550 RVA: 0x0017F337 File Offset: 0x0017D537
+		// Token: 0x0600B4F0 RID: 46320 RVA: 0x0019532F File Offset: 0x0019352F
 		public static ISystemOptionType CreateFromSetValue([Nullable(2)] ISystemOptionType_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA1F RID: 43551 RVA: 0x0017F34A File Offset: 0x0017D54A
+		// Token: 0x0600B4F1 RID: 46321 RVA: 0x00195342 File Offset: 0x00193542
 		public ISystemOptionType_SetValue ToSetValue()
 		{
 			return new ISystemOptionType_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033C9 RID: 13257
-		// (get) Token: 0x0600AA20 RID: 43552 RVA: 0x0017F375 File Offset: 0x0017D575
-		// (set) Token: 0x0600AA21 RID: 43553 RVA: 0x0017F3A0 File Offset: 0x0017D5A0
+		// Token: 0x17003694 RID: 13972
+		// (get) Token: 0x0600B4F2 RID: 46322 RVA: 0x0019536D File Offset: 0x0019356D
+		// (set) Token: 0x0600B4F3 RID: 46323 RVA: 0x00195398 File Offset: 0x00193598
 		public virtual ESystemOptionType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033CA RID: 13258
-		// (get) Token: 0x0600AA22 RID: 43554 RVA: 0x0017F3B0 File Offset: 0x0017D5B0
-		// (set) Token: 0x0600AA23 RID: 43555 RVA: 0x0017F443 File Offset: 0x0017D643
+		// Token: 0x17003695 RID: 13973
+		// (get) Token: 0x0600B4F4 RID: 46324 RVA: 0x001953A8 File Offset: 0x001935A8
+		// (set) Token: 0x0600B4F5 RID: 46325 RVA: 0x0019543B File Offset: 0x0019363B
 		public virtual List<ISystemOption> SystemOptions
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033CB RID: 13259
-		// (get) Token: 0x0600AA24 RID: 43556 RVA: 0x0017F458 File Offset: 0x0017D658
-		// (set) Token: 0x0600AA25 RID: 43557 RVA: 0x0017F492 File Offset: 0x0017D692
+		// Token: 0x17003696 RID: 13974
+		// (get) Token: 0x0600B4F6 RID: 46326 RVA: 0x00195450 File Offset: 0x00193650
+		// (set) Token: 0x0600B4F7 RID: 46327 RVA: 0x0019548A File Offset: 0x0019368A
 		public virtual bool? KeepPreTalkItem
 		{
 			get
@@ -147,18 +145,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006516 RID: 25878
+		// Token: 0x04006B05 RID: 27397
 		[Nullable(2)]
 		protected ISystemOptionType FbInstance;
 
-		// Token: 0x04006517 RID: 25879
+		// Token: 0x04006B06 RID: 27398
 		[Nullable(2)]
 		protected ISystemOptionType_SetValue PocoInterface;
 
-		// Token: 0x04006518 RID: 25880
+		// Token: 0x04006B07 RID: 27399
 		private List<ISystemOption> _SystemOptionsCache;
 
-		// Token: 0x04006519 RID: 25881
+		// Token: 0x04006B08 RID: 27400
 		private bool _SystemOptionsInited;
 	}
 }

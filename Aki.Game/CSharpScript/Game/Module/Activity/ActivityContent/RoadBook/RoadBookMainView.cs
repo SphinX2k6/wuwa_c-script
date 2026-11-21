@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061D6 RID: 25046
+	// Token: 0x02005154 RID: 20820
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookMainView : UiViewBase
 	{
-		// Token: 0x0603F3E5 RID: 259045 RVA: 0x00F47CEB File Offset: 0x00F45EEB
+		// Token: 0x060340A6 RID: 213158 RVA: 0x00E8EC43 File Offset: 0x00E8CE43
 		public RoadBookMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F3E6 RID: 259046 RVA: 0x00F47D08 File Offset: 0x00F45F08
+		// Token: 0x060340A7 RID: 213159 RVA: 0x00E8EC60 File Offset: 0x00E8CE60
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F3E7 RID: 259047 RVA: 0x00F47EFC File Offset: 0x00F460FC
+		// Token: 0x060340A8 RID: 213160 RVA: 0x00E8EE54 File Offset: 0x00E8D054
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoadBookMainView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -62,37 +62,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F3E8 RID: 259048 RVA: 0x00F47F3F File Offset: 0x00F4613F
+		// Token: 0x060340A9 RID: 213161 RVA: 0x00E8EE97 File Offset: 0x00E8D097
 		protected override void OnStart()
 		{
 			this.SelectedLevel = this.ActivityBaseData.TravelLevel;
 		}
 
-		// Token: 0x0603F3E9 RID: 259049 RVA: 0x00F47F52 File Offset: 0x00F46152
+		// Token: 0x060340AA RID: 213162 RVA: 0x00E8EEAA File Offset: 0x00E8D0AA
 		protected override void OnBeforeShow()
 		{
 			this.RefreshExpComponent(this.SelectedLevel);
 			this.RefreshSubViewButton();
 		}
 
-		// Token: 0x0603F3EA RID: 259050 RVA: 0x00F47F66 File Offset: 0x00F46166
+		// Token: 0x060340AB RID: 213163 RVA: 0x00E8EEBE File Offset: 0x00E8D0BE
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRewardViewClose));
 		}
 
-		// Token: 0x0603F3EB RID: 259051 RVA: 0x00F47F81 File Offset: 0x00F46181
+		// Token: 0x060340AC RID: 213164 RVA: 0x00E8EED9 File Offset: 0x00E8D0D9
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRewardViewClose));
 		}
 
-		// Token: 0x0603F3EC RID: 259052 RVA: 0x00F47F9C File Offset: 0x00F4619C
+		// Token: 0x060340AD RID: 213165 RVA: 0x00E8EEF4 File Offset: 0x00E8D0F4
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603F3ED RID: 259053 RVA: 0x00F47FA0 File Offset: 0x00F461A0
+		// Token: 0x060340AE RID: 213166 RVA: 0x00E8EEF8 File Offset: 0x00E8D0F8
 		private UniTask CreateSubViewButton()
 		{
 			RoadBookMainView.<CreateSubViewButton>d__18 <CreateSubViewButton>d__;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <CreateSubViewButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F3EE RID: 259054 RVA: 0x00F47FE4 File Offset: 0x00F461E4
+		// Token: 0x060340AF RID: 213167 RVA: 0x00E8EF3C File Offset: 0x00E8D13C
 		protected void OnOpenSubView(ERoadBookSubType type)
 		{
 			switch (type)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3EF RID: 259055 RVA: 0x00F4804E File Offset: 0x00F4624E
+		// Token: 0x060340B0 RID: 213168 RVA: 0x00E8EFA6 File Offset: 0x00E8D1A6
 		private void OnClickedLevelUpButton()
 		{
 			ActivityRoadBookController.Instance.RequestRoadBookLevelUp(delegate(bool success)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			});
 		}
 
-		// Token: 0x0603F3F0 RID: 259056 RVA: 0x00F48068 File Offset: 0x00F46268
+		// Token: 0x060340B1 RID: 213169 RVA: 0x00E8EFC0 File Offset: 0x00E8D1C0
 		private void LevelUp()
 		{
 			if (this.NeedLevelUp)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3F1 RID: 259057 RVA: 0x00F480D1 File Offset: 0x00F462D1
+		// Token: 0x060340B2 RID: 213170 RVA: 0x00E8F029 File Offset: 0x00E8D229
 		private void OnRewardViewClose(EUiViewName viewName, int viewId)
 		{
 			if (this.SelectedViewType != ERoadBookSubType.Main)
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3F2 RID: 259058 RVA: 0x00F48104 File Offset: 0x00F46304
+		// Token: 0x060340B3 RID: 213171 RVA: 0x00E8F05C File Offset: 0x00E8D25C
 		private void RefreshExpComponent(int level)
 		{
 			bool hasClaimed = level < this.ActivityBaseData.TravelLevel;
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			base.GetItem(5).SetUIActive(level < this.ActivityBaseData.MaxTravelLevel);
 		}
 
-		// Token: 0x0603F3F3 RID: 259059 RVA: 0x00F482FC File Offset: 0x00F464FC
+		// Token: 0x060340B4 RID: 213172 RVA: 0x00E8F254 File Offset: 0x00E8D454
 		private void RefreshSubViewButton()
 		{
 			foreach (KeyValuePair<ERoadBookSubType, RoadBookSubViewButton> keyValuePair in this.SubViewButtonMap)
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3F4 RID: 259060 RVA: 0x00F483E0 File Offset: 0x00F465E0
+		// Token: 0x060340B5 RID: 213173 RVA: 0x00E8F338 File Offset: 0x00E8D538
 		private void SetLevelProgress(int current, int target)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "RoadBookExp_Text", new <>z__ReadOnlyArray<object>(new object[]
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			base.GetText(4).SetUIActive(true);
 		}
 
-		// Token: 0x0603F3F5 RID: 259061 RVA: 0x00F48430 File Offset: 0x00F46630
+		// Token: 0x060340B6 RID: 213174 RVA: 0x00E8F388 File Offset: 0x00E8D588
 		private void SetPerformanceFinishedLevel(int level)
 		{
 			base.GetItem(17).SetUIActive(true);
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "RoadBookLevelMax_Text", Array.Empty<object>());
 		}
 
-		// Token: 0x0603F3F6 RID: 259062 RVA: 0x00F484F0 File Offset: 0x00F466F0
+		// Token: 0x060340B7 RID: 213175 RVA: 0x00E8F448 File Offset: 0x00E8D648
 		private void SetPerformanceCurrentLevel(int level)
 		{
 			bool flag = this.ActivityBaseData.MaxTravelLevel == level;
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.LevelUpButton.SetEnableClick(false);
 		}
 
-		// Token: 0x0603F3F7 RID: 259063 RVA: 0x00F48658 File Offset: 0x00F46858
+		// Token: 0x060340B8 RID: 213176 RVA: 0x00E8F5B0 File Offset: 0x00E8D7B0
 		private void SetPerformanceUnFinishedLevel(int level)
 		{
 			IRoadBookLevelData roadBookLevelData;
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.LevelUpButton.SetEnableClick(false);
 		}
 
-		// Token: 0x0603F3F8 RID: 259064 RVA: 0x00F48768 File Offset: 0x00F46968
+		// Token: 0x060340B9 RID: 213177 RVA: 0x00E8F6C0 File Offset: 0x00E8D8C0
 		private void OnClickedPreLevelButton()
 		{
 			this.SelectedLevel--;
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.UiViewSequence.PlaySequence("Switch", true, null);
 		}
 
-		// Token: 0x0603F3F9 RID: 259065 RVA: 0x00F487AC File Offset: 0x00F469AC
+		// Token: 0x060340BA RID: 213178 RVA: 0x00E8F704 File Offset: 0x00E8D904
 		private void OnClickedNextLevelButton()
 		{
 			this.SelectedLevel++;
@@ -362,39 +362,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.UiViewSequence.PlaySequence("Switch", true, null);
 		}
 
-		// Token: 0x0603F3FA RID: 259066 RVA: 0x00F487ED File Offset: 0x00F469ED
+		// Token: 0x060340BB RID: 213179 RVA: 0x00E8F745 File Offset: 0x00E8D945
 		private void CloseButtonClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603F3FB RID: 259067 RVA: 0x00F487F8 File Offset: 0x00F469F8
+		// Token: 0x060340BC RID: 213180 RVA: 0x00E8F750 File Offset: 0x00E8D950
 		private void HelpButtonClicked()
 		{
 			HelpController.Instance.OpenHelpById(this.ActivityBaseData.LocalConfig.Value.HelpId);
 		}
 
-		// Token: 0x04020F90 RID: 135056
+		// Token: 0x0401B8BF RID: 112831
 		[Nullable(2)]
 		private PopupCaptionItem CaptionComponent;
 
-		// Token: 0x04020F91 RID: 135057
+		// Token: 0x0401B8C0 RID: 112832
 		protected ActivityRoadBookData ActivityBaseData;
 
-		// Token: 0x04020F92 RID: 135058
+		// Token: 0x0401B8C1 RID: 112833
 		private int SelectedLevel = -1;
 
-		// Token: 0x04020F93 RID: 135059
+		// Token: 0x0401B8C2 RID: 112834
 		[Nullable(2)]
 		private ActivityButtonItem LevelUpButton;
 
-		// Token: 0x04020F94 RID: 135060
+		// Token: 0x0401B8C3 RID: 112835
 		private readonly Dictionary<ERoadBookSubType, RoadBookSubViewButton> SubViewButtonMap = new Dictionary<ERoadBookSubType, RoadBookSubViewButton>();
 
-		// Token: 0x04020F95 RID: 135061
+		// Token: 0x0401B8C4 RID: 112836
 		private bool NeedLevelUp;
 
-		// Token: 0x04020F96 RID: 135062
+		// Token: 0x0401B8C5 RID: 112837
 		[Nullable(new byte[]
 		{
 			2,
@@ -403,13 +403,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 		})]
 		private GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> LevelRewardLayout;
 
-		// Token: 0x04020F97 RID: 135063
+		// Token: 0x0401B8C6 RID: 112838
 		private readonly ERoadBookSubType SelectedViewType;
 
-		// Token: 0x04020F98 RID: 135064
+		// Token: 0x0401B8C7 RID: 112839
 		private ButtonWithRedDot BtnRight;
 
-		// Token: 0x04020F99 RID: 135065
+		// Token: 0x0401B8C8 RID: 112840
 		private ButtonWithRedDot BtnLeft;
 	}
 }

@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B21 RID: 23329
+	// Token: 0x02004B02 RID: 19202
 	public class CookRoleView : UiViewBase
 	{
-		// Token: 0x0603B0E3 RID: 241891 RVA: 0x00E146DF File Offset: 0x00E128DF
+		// Token: 0x06030055 RID: 196693 RVA: 0x00D653F7 File Offset: 0x00D635F7
 		[NullableContext(1)]
 		public CookRoleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603B0E4 RID: 241892 RVA: 0x00E146E8 File Offset: 0x00E128E8
+		// Token: 0x06030056 RID: 196694 RVA: 0x00D65400 File Offset: 0x00D63600
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B0E5 RID: 241893 RVA: 0x00E147D0 File Offset: 0x00E129D0
+		// Token: 0x06030057 RID: 196695 RVA: 0x00D654E8 File Offset: 0x00D636E8
 		protected override void OnBeforeDestroy()
 		{
 			if (this.RoleItemScrollView != null)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0603B0E6 RID: 241894 RVA: 0x00E147EC File Offset: 0x00E129EC
+		// Token: 0x06030058 RID: 196696 RVA: 0x00D65504 File Offset: 0x00D63704
 		protected override void OnStart()
 		{
 			this.RoleItemScrollView = new LoopScrollView<CookRoleItem, ICookRoleItemData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<CookRoleItem>(this.OnGridProxyCreate), false);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.ShowView((this.OpenParam as int?).Value);
 		}
 
-		// Token: 0x0603B0E7 RID: 241895 RVA: 0x00E14862 File Offset: 0x00E12A62
+		// Token: 0x06030059 RID: 196697 RVA: 0x00D6557A File Offset: 0x00D6377A
 		protected override void OnBeforeShow()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			popItem.SetTexBgVisible(false);
 		}
 
-		// Token: 0x0603B0E8 RID: 241896 RVA: 0x00E1487F File Offset: 0x00E12A7F
+		// Token: 0x0603005A RID: 196698 RVA: 0x00D65597 File Offset: 0x00D63797
 		[NullableContext(1)]
 		private CookRoleItem OnGridProxyCreate()
 		{
@@ -89,13 +89,13 @@ namespace CSharpScript.Game.Module.Cook.View
 			return cookRoleItem;
 		}
 
-		// Token: 0x0603B0E9 RID: 241897 RVA: 0x00E14898 File Offset: 0x00E12A98
+		// Token: 0x0603005B RID: 196699 RVA: 0x00D655B0 File Offset: 0x00D637B0
 		public void HideView(bool isHide)
 		{
 			this.SetActive(!isHide);
 		}
 
-		// Token: 0x0603B0EA RID: 241898 RVA: 0x00E148A4 File Offset: 0x00E12AA4
+		// Token: 0x0603005C RID: 196700 RVA: 0x00D655BC File Offset: 0x00D637BC
 		public void ShowView(int itemId)
 		{
 			this.SetActive(true);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RefreshCookRoleScroll();
 		}
 
-		// Token: 0x0603B0EB RID: 241899 RVA: 0x00E148E8 File Offset: 0x00E12AE8
+		// Token: 0x0603005D RID: 196701 RVA: 0x00D65600 File Offset: 0x00D63800
 		private void RefreshCookRoleScroll()
 		{
 			this.RoleItemDataList = CookModel.Instance.GetCookRoleItemDataList(this.ItemId);
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.SetSelectedPhantomItem();
 		}
 
-		// Token: 0x0603B0EC RID: 241900 RVA: 0x00E14918 File Offset: 0x00E12B18
+		// Token: 0x0603005E RID: 196702 RVA: 0x00D65630 File Offset: 0x00D63830
 		private void SetSelectedPhantomItem()
 		{
 			int num = 0;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RoleItemScrollView.SelectGridProxy(num, false);
 		}
 
-		// Token: 0x0603B0ED RID: 241901 RVA: 0x00E14988 File Offset: 0x00E12B88
+		// Token: 0x0603005F RID: 196703 RVA: 0x00D656A0 File Offset: 0x00D638A0
 		private void RefreshConfirm(int roleId)
 		{
 			this.TmpId = roleId;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RoleItemScrollView.RefreshGridProxy(num);
 		}
 
-		// Token: 0x0603B0EE RID: 241902 RVA: 0x00E149F7 File Offset: 0x00E12BF7
+		// Token: 0x06030060 RID: 196704 RVA: 0x00D6570F File Offset: 0x00D6390F
 		private void OnConfirm()
 		{
 			CookModel.Instance.CurrentCookRoleId = new int?(this.TmpId);
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			EventSystem.Instance.Emit(EEventName.CloseCookRole);
 		}
 
-		// Token: 0x0401ECC9 RID: 126153
+		// Token: 0x04019785 RID: 104325
 		[Nullable(new byte[]
 		{
 			2,
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Cook.View
 		})]
 		private LoopScrollView<CookRoleItem, ICookRoleItemData> RoleItemScrollView;
 
-		// Token: 0x0401ECCA RID: 126154
+		// Token: 0x04019786 RID: 104326
 		[Nullable(new byte[]
 		{
 			2,
@@ -173,22 +173,22 @@ namespace CSharpScript.Game.Module.Cook.View
 		})]
 		private List<ICookRoleItemData> RoleItemDataList;
 
-		// Token: 0x0401ECCB RID: 126155
+		// Token: 0x04019787 RID: 104327
 		private int ItemId;
 
-		// Token: 0x0401ECCC RID: 126156
+		// Token: 0x04019788 RID: 104328
 		private int TmpId;
 
-		// Token: 0x0200BD59 RID: 48473
+		// Token: 0x0200A762 RID: 42850
 		public enum ECookRoleDefine
 		{
-			// Token: 0x040391C2 RID: 233922
+			// Token: 0x04033B8E RID: 211854
 			CookRoleLoopScroll,
-			// Token: 0x040391C3 RID: 233923
+			// Token: 0x04033B8F RID: 211855
 			CookRoleItem,
-			// Token: 0x040391C4 RID: 233924
+			// Token: 0x04033B90 RID: 211856
 			ConfirmButton,
-			// Token: 0x040391C5 RID: 233925
+			// Token: 0x04033B91 RID: 211857
 			TxtConfirm
 		}
 	}

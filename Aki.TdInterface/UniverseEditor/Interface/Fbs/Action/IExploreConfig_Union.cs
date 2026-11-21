@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006741 RID: 26433
+	// Token: 0x02006DC1 RID: 28097
 	public enum IExploreConfig_Union : byte
 	{
-		// Token: 0x04010E29 RID: 69161
+		// Token: 0x04011C5B RID: 72795
 		NONE,
-		// Token: 0x04010E2A RID: 69162
+		// Token: 0x04011C5C RID: 72796
 		IExploreConfig,
-		// Token: 0x04010E2B RID: 69163
+		// Token: 0x04011C5D RID: 72797
 		ITeleControlConfig
 	}
 }

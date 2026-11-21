@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200285A RID: 10330
+	// Token: 0x02002B2D RID: 11053
 	public class ISundialPuzzleGameplay : IUiGame
 	{
-		// Token: 0x0600E4FF RID: 58623 RVA: 0x0021B08C File Offset: 0x0021928C
-		[NullableContext(1)]
+		// Token: 0x0600F324 RID: 62244 RVA: 0x00237EF0 File Offset: 0x002360F0
 		public static ISundialPuzzleGameplay Create(ISundialPuzzleGameplay? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700460D RID: 17933
-		// (get) Token: 0x0600E500 RID: 58624 RVA: 0x0021B0AB File Offset: 0x002192AB
+		// Token: 0x17004978 RID: 18808
+		// (get) Token: 0x0600F325 RID: 62245 RVA: 0x00237F0F File Offset: 0x0023610F
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EAE RID: 32430
+		// Token: 0x0400856B RID: 34155
 		private ISundialPuzzleGameplay Instance;
 	}
 }

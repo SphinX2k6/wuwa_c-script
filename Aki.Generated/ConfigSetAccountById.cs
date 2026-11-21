@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000906 RID: 2310
+	// Token: 0x02000951 RID: 2385
 	public class ConfigSetAccountById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003637 RID: 13879 RVA: 0x0018BCE7 File Offset: 0x00189EE7
+		// Token: 0x060037F9 RID: 14329 RVA: 0x00198F07 File Offset: 0x00197107
 		static ConfigSetAccountById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSetAccountById.CreateStaticDefaultValue), new Action(ConfigSetAccountById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003638 RID: 13880 RVA: 0x0018BD08 File Offset: 0x00189F08
+		// Token: 0x060037FA RID: 14330 RVA: 0x00198F28 File Offset: 0x00197128
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSetAccountById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003639 RID: 13881 RVA: 0x0018BD87 File Offset: 0x00189F87
+		// Token: 0x060037FB RID: 14331 RVA: 0x00198FA7 File Offset: 0x001971A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSetAccountById.LogPair = null;
 			ConfigSetAccountById.HandleId = 0;
 		}
 
-		// Token: 0x0600363A RID: 13882 RVA: 0x0018BD95 File Offset: 0x00189F95
+		// Token: 0x060037FC RID: 14332 RVA: 0x00198FB5 File Offset: 0x001971B5
 		public static void Init()
 		{
 			ConfigSetAccountById.HandleId = ConfigCommon.InitDataStatement(ConfigSetAccountById.HandleId, "db_platformchannel.db", "select BinData from `SetAccount` where Id=?");
 		}
 
-		// Token: 0x0600363B RID: 13883 RVA: 0x0018BDB0 File Offset: 0x00189FB0
+		// Token: 0x060037FD RID: 14333 RVA: 0x00198FD0 File Offset: 0x001971D0
 		public static SetAccount? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSetAccountById.HandleId, ConfigSetAccountById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SetAccount?(rootAsSetAccount);
 		}
 
-		// Token: 0x04003F10 RID: 16144
+		// Token: 0x0400411D RID: 16669
 		private const string DB = "db_platformchannel.db";
 
-		// Token: 0x04003F11 RID: 16145
+		// Token: 0x0400411E RID: 16670
 		private const string FILE = "p.平台渠道.xlsx";
 
-		// Token: 0x04003F12 RID: 16146
+		// Token: 0x0400411F RID: 16671
 		private const string TABLE = "SetAccount";
 
-		// Token: 0x04003F13 RID: 16147
+		// Token: 0x04004120 RID: 16672
 		private const string COMMAND = "select BinData from `SetAccount` where Id=?";
 
-		// Token: 0x04003F14 RID: 16148
+		// Token: 0x04004121 RID: 16673
 		private const string KEY_PREFIX = "SetAccountById";
 
-		// Token: 0x04003F15 RID: 16149
+		// Token: 0x04004122 RID: 16674
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003F16 RID: 16150
+		// Token: 0x04004123 RID: 16675
 		private static int HandleId;
 	}
 }

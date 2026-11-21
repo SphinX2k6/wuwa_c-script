@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200339D RID: 13213
+// Token: 0x0200290F RID: 10511
 public class RedDotFunctionPayShop : RedDotBase
 {
-	// Token: 0x0601CB0D RID: 117517 RVA: 0x00807523 File Offset: 0x00805723
+	// Token: 0x0601A805 RID: 108549 RVA: 0x0082DAE7 File Offset: 0x0082BCE7
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.BattleViewMenu);
 	}
 
-	// Token: 0x0601CB0E RID: 117518 RVA: 0x0080752C File Offset: 0x0080572C
+	// Token: 0x0601A806 RID: 108550 RVA: 0x0082DAF0 File Offset: 0x0082BCF0
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnFunctionViewShow, new Action(base.EventCheck));
@@ -20,7 +20,7 @@ public class RedDotFunctionPayShop : RedDotBase
 		EventSystem.Instance.Add(EEventName.RefreshPayShopEntranceRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB0F RID: 117519 RVA: 0x00807590 File Offset: 0x00805790
+	// Token: 0x0601A807 RID: 108551 RVA: 0x0082DB54 File Offset: 0x0082BD54
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFunctionViewShow, new Action(base.EventCheck));
@@ -28,13 +28,13 @@ public class RedDotFunctionPayShop : RedDotBase
 		EventSystem.Instance.Remove(EEventName.RefreshPayShopEntranceRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB10 RID: 117520 RVA: 0x008075F1 File Offset: 0x008057F1
+	// Token: 0x0601A808 RID: 108552 RVA: 0x0082DBB5 File Offset: 0x0082BDB5
 	protected override bool OnCheck(int uId = 0)
 	{
 		return PayShopModel.Instance.CheckPayShopEntranceHasRedDot();
 	}
 
-	// Token: 0x0601CB11 RID: 117521 RVA: 0x008075FD File Offset: 0x008057FD
+	// Token: 0x0601A809 RID: 108553 RVA: 0x0082DBC1 File Offset: 0x0082BDC1
 	[NullableContext(1)]
 	private void OnRefreshAllPayShop(IEnumerable<PayShopDefine.EPayShopTabType> idList)
 	{

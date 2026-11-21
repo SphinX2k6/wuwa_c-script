@@ -15,34 +15,34 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x02007125 RID: 28965
+	// Token: 0x02006353 RID: 25427
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleExploreComponent : BaseExploreComponent, IStaticVariableResetter
 	{
-		// Token: 0x06046B8C RID: 289676 RVA: 0x011CFDA6 File Offset: 0x011CDFA6
+		// Token: 0x0603D9D7 RID: 252375 RVA: 0x011D89F6 File Offset: 0x011D6BF6
 		static MotorcycleExploreComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleExploreComponent.CreateStaticDefaultValue), new Action(MotorcycleExploreComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06046B8D RID: 289677 RVA: 0x011CFDC5 File Offset: 0x011CDFC5
+		// Token: 0x0603D9D8 RID: 252376 RVA: 0x011D8A15 File Offset: 0x011D6C15
 		public static void CreateStaticDefaultValue()
 		{
 			MotorcycleExploreComponent.TraceDebug = false;
 			MotorcycleExploreComponent._defaultStateTagId = GameplayTagDefine.EGameplayTagId["关卡.Common.状态.常态"];
 		}
 
-		// Token: 0x06046B8E RID: 289678 RVA: 0x011CFDE1 File Offset: 0x011CDFE1
+		// Token: 0x0603D9D9 RID: 252377 RVA: 0x011D8A31 File Offset: 0x011D6C31
 		public static void ResetStaticDefaultValue()
 		{
 			MotorcycleExploreComponent.TraceDebug = false;
 			MotorcycleExploreComponent._defaultStateTagId = 0;
 		}
 
-		// Token: 0x17009D2F RID: 40239
-		// (get) Token: 0x06046B8F RID: 289679 RVA: 0x011CFDF0 File Offset: 0x011CDFF0
-		// (set) Token: 0x06046B90 RID: 289680 RVA: 0x011CFEE4 File Offset: 0x011CE0E4
+		// Token: 0x170074FB RID: 29947
+		// (get) Token: 0x0603D9DA RID: 252378 RVA: 0x011D8A40 File Offset: 0x011D6C40
+		// (set) Token: 0x0603D9DB RID: 252379 RVA: 0x011D8B34 File Offset: 0x011D6D34
 		[Nullable(2)]
 		public GrapplingHookPointComponent PullingTarget
 		{
@@ -89,23 +89,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x17009D30 RID: 40240
-		// (get) Token: 0x06046B91 RID: 289681 RVA: 0x011CFF48 File Offset: 0x011CE148
-		[Nullable(new byte[]
+		// Token: 0x170074FC RID: 29948
+		// (get) Token: 0x0603D9DC RID: 252380 RVA: 0x011D8B98 File Offset: 0x011D6D98
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public new static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
-				Type[] array = BaseExploreComponent.Dependencies ?? Array.Empty<Type>();
+				Type[] array = EntityComponentConstant.GetComponentDependencies(typeof(BaseExploreComponent)) ?? Array.Empty<Type>();
 				int num = 0;
 				Type[] array2 = new Type[1 + array.Length];
 				ReadOnlySpan<Type> readOnlySpan = new ReadOnlySpan<Type>(array);
@@ -116,7 +106,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B92 RID: 289682 RVA: 0x011CFFB0 File Offset: 0x011CE1B0
+		// Token: 0x0603D9DD RID: 252381 RVA: 0x011D8C0C File Offset: 0x011D6E0C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -137,7 +127,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B93 RID: 289683 RVA: 0x011D0088 File Offset: 0x011CE288
+		// Token: 0x0603D9DE RID: 252382 RVA: 0x011D8CE4 File Offset: 0x011D6EE4
 		protected override bool OnStart()
 		{
 			base.OnStart();
@@ -162,7 +152,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B94 RID: 289684 RVA: 0x011D0190 File Offset: 0x011CE390
+		// Token: 0x0603D9DF RID: 252383 RVA: 0x011D8DEC File Offset: 0x011D6FEC
 		protected override bool OnEnd()
 		{
 			base.OnEnd();
@@ -182,7 +172,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B95 RID: 289685 RVA: 0x011D0270 File Offset: 0x011CE470
+		// Token: 0x0603D9E0 RID: 252384 RVA: 0x011D8ECC File Offset: 0x011D70CC
 		protected override bool OnExploreComponentEnable(string reason)
 		{
 			if (!base.OnExploreComponentEnable(reason))
@@ -202,7 +192,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B96 RID: 289686 RVA: 0x011D0330 File Offset: 0x011CE530
+		// Token: 0x0603D9E1 RID: 252385 RVA: 0x011D8F8C File Offset: 0x011D718C
 		protected override bool OnExploreComponentDisable(string reason)
 		{
 			if (!base.OnExploreComponentDisable(reason))
@@ -225,7 +215,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B97 RID: 289687 RVA: 0x011D040C File Offset: 0x011CE60C
+		// Token: 0x0603D9E2 RID: 252386 RVA: 0x011D9068 File Offset: 0x011D7268
 		protected override void OnExploreComponentTick(float delta)
 		{
 			this.TryDetectFollowShooterAutoEnable();
@@ -241,13 +231,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.PlatformRotationDriver.Tick(delta);
 		}
 
-		// Token: 0x06046B98 RID: 289688 RVA: 0x011D045C File Offset: 0x011CE65C
+		// Token: 0x0603D9E3 RID: 252387 RVA: 0x011D90B8 File Offset: 0x011D72B8
 		public override bool CheckAllowLevelEventHighlightSkill()
 		{
 			return !this.IsLockingTarget;
 		}
 
-		// Token: 0x06046B99 RID: 289689 RVA: 0x011D0468 File Offset: 0x011CE668
+		// Token: 0x0603D9E4 RID: 252388 RVA: 0x011D90C4 File Offset: 0x011D72C4
 		public override void OnLevelEventHighlightSkillUpdate(bool enabled)
 		{
 			this.LevelEventHighlightingSkill = enabled;
@@ -278,7 +268,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B9A RID: 289690 RVA: 0x011D0590 File Offset: 0x011CE790
+		// Token: 0x0603D9E5 RID: 252389 RVA: 0x011D91EC File Offset: 0x011D73EC
 		public int GetSkillIdByCurrentTarget()
 		{
 			HighlightExploreSkillLogic highlightLogic = this.HighlightLogic;
@@ -319,14 +309,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return 10001027;
 		}
 
-		// Token: 0x06046B9B RID: 289691 RVA: 0x011D067C File Offset: 0x011CE87C
+		// Token: 0x0603D9E6 RID: 252390 RVA: 0x011D92D8 File Offset: 0x011D74D8
 		public bool TryPullCollection()
 		{
 			GrapplingHookPointComponent pullingTarget = this.PullingTarget;
 			return pullingTarget != null && pullingTarget.Valid && this.PullCollection(pullingTarget);
 		}
 
-		// Token: 0x06046B9C RID: 289692 RVA: 0x011D06AC File Offset: 0x011CE8AC
+		// Token: 0x0603D9E7 RID: 252391 RVA: 0x011D9308 File Offset: 0x011D7508
 		private unsafe bool PullCollection(GrapplingHookPointComponent mainHook)
 		{
 			WorldEntity playerEntity = SceneTeamModel.Instance.GetCurrentEntity.Entity;
@@ -406,7 +396,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B9D RID: 289693 RVA: 0x011D0958 File Offset: 0x011CEB58
+		// Token: 0x0603D9E8 RID: 252392 RVA: 0x011D95B4 File Offset: 0x011D77B4
 		[NullableContext(2)]
 		private void RequestBatchCollect(int instanceId, long mainTargetEntityId, List<long> batchTargetEntityIds = null, Action onCollectFailed = null)
 		{
@@ -447,7 +437,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}, 0);
 		}
 
-		// Token: 0x06046B9E RID: 289694 RVA: 0x011D09C8 File Offset: 0x011CEBC8
+		// Token: 0x0603D9E9 RID: 252393 RVA: 0x011D9624 File Offset: 0x011D7824
 		private void CancelInteraction()
 		{
 			GrapplingHookPointComponent pullingTarget = this.PullingTarget;
@@ -470,7 +460,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.PullingTarget = null;
 		}
 
-		// Token: 0x06046B9F RID: 289695 RVA: 0x011D0A48 File Offset: 0x011CEC48
+		// Token: 0x0603D9EA RID: 252394 RVA: 0x011D96A4 File Offset: 0x011D78A4
 		private void TryDetectHookPoint()
 		{
 			if (this.IsLockingTarget)
@@ -521,7 +511,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046BA0 RID: 289696 RVA: 0x011D0B6C File Offset: 0x011CED6C
+		// Token: 0x0603D9EB RID: 252395 RVA: 0x011D97C8 File Offset: 0x011D79C8
 		public override void ClearDetectedTarget(string reason)
 		{
 			if (this.IsLockingTarget)
@@ -541,13 +531,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06046BA1 RID: 289697 RVA: 0x011D0BDE File Offset: 0x011CEDDE
+		// Token: 0x0603D9EC RID: 252396 RVA: 0x011D983A File Offset: 0x011D7A3A
 		private bool IsTypeDisabled(EHookInteractType hookType)
 		{
 			return CharacterExploreModel.Instance.MotorcycleHookDetectRestriction.IsTypeDisabled(hookType);
 		}
 
-		// Token: 0x06046BA2 RID: 289698 RVA: 0x011D0BF0 File Offset: 0x011CEDF0
+		// Token: 0x0603D9ED RID: 252397 RVA: 0x011D984C File Offset: 0x011D7A4C
 		private bool IsFocusTypeDisabled()
 		{
 			GrapplingHookPointComponent focusTarget = base.FocusTarget;
@@ -555,7 +545,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return ehookInteractType != null && this.IsTypeDisabled(ehookInteractType.Value);
 		}
 
-		// Token: 0x06046BA3 RID: 289699 RVA: 0x011D0C30 File Offset: 0x011CEE30
+		// Token: 0x0603D9EE RID: 252398 RVA: 0x011D988C File Offset: 0x011D7A8C
 		private void TryDetectFollowShooterAutoEnable()
 		{
 			if (Time.Instance.WorldTimeSeconds - (double)this.LastAutoDetectTimeStamp < (double)this.AutoDetectInterval)
@@ -604,13 +594,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			FollowUtils.SetPlayerFollowShooterEnable(component.GetPlayerId(), enable, BPEEnableFollowShooter.AutoDetectedGamePartitionObject, "");
 		}
 
-		// Token: 0x06046BA4 RID: 289700 RVA: 0x011D0D20 File Offset: 0x011CEF20
+		// Token: 0x0603D9EF RID: 252399 RVA: 0x011D997C File Offset: 0x011D7B7C
 		private void OnChangeExploreVisionSkillByTab(int id)
 		{
 			this.DetectedTargetLegalOnceFlag = false;
 		}
 
-		// Token: 0x06046BA5 RID: 289701 RVA: 0x011D0D2C File Offset: 0x011CEF2C
+		// Token: 0x0603D9F0 RID: 252400 RVA: 0x011D9988 File Offset: 0x011D7B88
 		[NullableContext(2)]
 		protected override void OnDetectedTargetChanged(GrapplingHookPointComponent prevTarget)
 		{
@@ -633,7 +623,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.DestroyBatchCollectRangeEffect("(摩托车)探索组件当前未选中点或者选中的点无效");
 		}
 
-		// Token: 0x06046BA6 RID: 289702 RVA: 0x011D0DC0 File Offset: 0x011CEFC0
+		// Token: 0x0603D9F1 RID: 252401 RVA: 0x011D9A1C File Offset: 0x011D7C1C
 		private void CreateBatchCollectRangeEffect(GrapplingHookPointComponent target)
 		{
 			this.DestroyBatchCollectRangeEffect("(摩托车)探索组件选中新目标时尝试移除旧目标的特效");
@@ -651,7 +641,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.BatchCollectRangeEffectHandleId = new int?(instance.SpawnEffect(owner, ftransformDouble, this.BatchCollectRangeEffectPath, "[MotorcycleExploreComponent.OnDetectedTargetChanged]", new EffectContext(new int?(target.Entity.Id), null, false), EEffectType.Scene, null, null, null, false, false));
 		}
 
-		// Token: 0x06046BA7 RID: 289703 RVA: 0x011D0E54 File Offset: 0x011CF054
+		// Token: 0x0603D9F2 RID: 252402 RVA: 0x011D9AB0 File Offset: 0x011D7CB0
 		private void DestroyBatchCollectRangeEffect(string reason)
 		{
 			bool flag = (this.BatchCollectRangeEffectHandleId ?? 0) == 0;
@@ -663,7 +653,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.BatchCollectRangeEffectHandleId = null;
 		}
 
-		// Token: 0x06046BA8 RID: 289704 RVA: 0x011D0EB4 File Offset: 0x011CF0B4
+		// Token: 0x0603D9F3 RID: 252403 RVA: 0x011D9B10 File Offset: 0x011D7D10
 		private unsafe void OnBeforeSkill(int skillId, bool IsAutonomousProxy)
 		{
 			BaseActorComponent actorComponent = this.ActorComponent;
@@ -751,7 +741,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.EnsureRemoveEntityListener(skillId);
 		}
 
-		// Token: 0x06046BA9 RID: 289705 RVA: 0x011D10C0 File Offset: 0x011CF2C0
+		// Token: 0x0603D9F4 RID: 252404 RVA: 0x011D9D1C File Offset: 0x011D7F1C
 		private void EnsureRemoveEntityListener(int skillId)
 		{
 			if (EventSystem.Instance.Has<ERemoveEntityType, EntityHandle>(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnEntityRemove)))
@@ -767,7 +757,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			EventSystem.Instance.Add<ERemoveEntityType, EntityHandle>(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnEntityRemove));
 		}
 
-		// Token: 0x06046BAA RID: 289706 RVA: 0x011D1138 File Offset: 0x011CF338
+		// Token: 0x0603D9F5 RID: 252405 RVA: 0x011D9D94 File Offset: 0x011D7F94
 		private void TryRemoveEntityListener(int skillId)
 		{
 			if (this.CurrentActiveSkillId.Count > 0 || !EventSystem.Instance.Has<ERemoveEntityType, EntityHandle>(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnEntityRemove)))
@@ -783,7 +773,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			EventSystem.Instance.Remove<ERemoveEntityType, EntityHandle>(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnEntityRemove));
 		}
 
-		// Token: 0x06046BAB RID: 289707 RVA: 0x011D11BC File Offset: 0x011CF3BC
+		// Token: 0x0603D9F6 RID: 252406 RVA: 0x011D9E18 File Offset: 0x011D8018
 		private unsafe void OnCharUseSkill(int entityId, int skillId, bool isAutonomousProxy)
 		{
 			if (skillId != 10002002 || !isAutonomousProxy)
@@ -812,7 +802,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.EnsureRemoveEntityListener(skillId);
 		}
 
-		// Token: 0x06046BAC RID: 289708 RVA: 0x011D12A9 File Offset: 0x011CF4A9
+		// Token: 0x0603D9F7 RID: 252407 RVA: 0x011D9F05 File Offset: 0x011D8105
 		private void OnBeforeInterruptWithTarget(int newSkillId, int interruptedSkillId)
 		{
 			if (interruptedSkillId != 10002001)
@@ -822,7 +812,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.EjectInterruptingSkillId = new int?(newSkillId);
 		}
 
-		// Token: 0x06046BAD RID: 289709 RVA: 0x011D12C0 File Offset: 0x011CF4C0
+		// Token: 0x0603D9F8 RID: 252408 RVA: 0x011D9F1C File Offset: 0x011D811C
 		private void OnSkillEnd(int entityId, int skillId)
 		{
 			BaseActorComponent actorComponent = this.ActorComponent;
@@ -872,7 +862,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.DoSkillEnd(skillId, "OnSkillEnd");
 		}
 
-		// Token: 0x06046BAE RID: 289710 RVA: 0x011D13C4 File Offset: 0x011CF5C4
+		// Token: 0x0603D9F9 RID: 252409 RVA: 0x011DA020 File Offset: 0x011D8220
 		private unsafe void DoSkillEnd(int skillId, string reason)
 		{
 			if (!this.CurrentActiveSkillId.Contains(skillId))
@@ -974,7 +964,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.TryRemoveEntityListener(skillId);
 		}
 
-		// Token: 0x06046BAF RID: 289711 RVA: 0x011D16B4 File Offset: 0x011CF8B4
+		// Token: 0x0603D9FA RID: 252410 RVA: 0x011DA310 File Offset: 0x011D8510
 		private void OnFixHookSkillInterrupt(int entityId, int skillId)
 		{
 			if (entityId != base.Entity.Id || !MotorcycleHookDetectRestriction.MotorcycleHookSkillIds.Contains(skillId) || skillId == 10002002)
@@ -984,7 +974,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.IsHookEndByInterrupt = true;
 		}
 
-		// Token: 0x06046BB0 RID: 289712 RVA: 0x011D16E4 File Offset: 0x011CF8E4
+		// Token: 0x0603D9FB RID: 252411 RVA: 0x011DA340 File Offset: 0x011D8540
 		private unsafe void OnEntityRemove(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			int? interactingTargetEntityId = this.InteractingTargetEntityId;
@@ -1022,7 +1012,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.TryRemoveEntityListener(0);
 		}
 
-		// Token: 0x06046BB1 RID: 289713 RVA: 0x011D1844 File Offset: 0x011CFA44
+		// Token: 0x0603D9FC RID: 252412 RVA: 0x011DA4A0 File Offset: 0x011D86A0
 		private void OnVehicleBeenEntered(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsDriver || info.PassengerEntity == null || !info.IsRolePassenger(true))
@@ -1034,7 +1024,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.OnExploreComponentEnable("OnVehicleBeenEntered");
 		}
 
-		// Token: 0x06046BB2 RID: 289714 RVA: 0x011D18A8 File Offset: 0x011CFAA8
+		// Token: 0x0603D9FD RID: 252413 RVA: 0x011DA504 File Offset: 0x011D8704
 		private void OnVehicleBeenLeaved(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (info.IsDriver)
@@ -1051,7 +1041,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046BB3 RID: 289715 RVA: 0x011D1924 File Offset: 0x011CFB24
+		// Token: 0x0603D9FE RID: 252414 RVA: 0x011DA580 File Offset: 0x011D8780
 		private void SendPullCollectionPush()
 		{
 			GrapplingHookPointComponent pullingTarget = this.PullingTarget;
@@ -1066,7 +1056,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046BB4 RID: 289716 RVA: 0x011D1970 File Offset: 0x011CFB70
+		// Token: 0x0603D9FF RID: 252415 RVA: 0x011DA5CC File Offset: 0x011D87CC
 		public unsafe long GetPullCollectionBuffIdByTarget()
 		{
 			GrapplingHookPointComponent pullingTarget = this.PullingTarget;
@@ -1086,7 +1076,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return valueOrDefault;
 		}
 
-		// Token: 0x06046BB5 RID: 289717 RVA: 0x011D1A14 File Offset: 0x011CFC14
+		// Token: 0x0603DA00 RID: 252416 RVA: 0x011DA670 File Offset: 0x011D8870
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1094,202 +1084,184 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 				return false;
 			}
 			MotorcycleExploreComponent motorcycleExploreComponent = (MotorcycleExploreComponent)componentTemplate;
-			if (base.CanResetComponentProperty("VehiclePerformComponent"))
+			if (motorcycleExploreComponent.VehiclePerformComponent == null)
 			{
-				if (motorcycleExploreComponent.VehiclePerformComponent == null)
-				{
-					this.VehiclePerformComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseVehiclePerformComponent>(this.VehiclePerformComponent), "VehiclePerformComponent"))
-				{
-					return false;
-				}
+				this.VehiclePerformComponent = null;
 			}
-			if (base.CanResetComponentProperty("TargetSelector") && motorcycleExploreComponent.TargetSelector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<InteractionTargetSelector>(this.TargetSelector), "TargetSelector"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehiclePerformComponent), "VehiclePerformComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpHandles") && motorcycleExploreComponent.TmpHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<EntityHandle>>(this.TmpHandles), "TmpHandles"))
+			if (motorcycleExploreComponent.TargetSelector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetSelector), "TargetSelector"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LevelEventHighlightingSkill"))
-			{
-				this.LevelEventHighlightingSkill = motorcycleExploreComponent.LevelEventHighlightingSkill;
-			}
-			if (base.CanResetComponentProperty("RouletteListDataMotor"))
-			{
-				if (motorcycleExploreComponent.RouletteListDataMotor == null)
-				{
-					this.RouletteListDataMotor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RouletteListDataMotor>(this.RouletteListDataMotor), "RouletteListDataMotor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DetectedTargetLegalOnceFlag"))
-			{
-				this.DetectedTargetLegalOnceFlag = motorcycleExploreComponent.DetectedTargetLegalOnceFlag;
-			}
-			if (base.CanResetComponentProperty("CurrentActiveSkillId") && motorcycleExploreComponent.CurrentActiveSkillId != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.CurrentActiveSkillId), "CurrentActiveSkillId"))
+			if (motorcycleExploreComponent.TmpHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpHandles), "TmpHandles"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EjectInterruptingSkillId"))
+			this.LevelEventHighlightingSkill = motorcycleExploreComponent.LevelEventHighlightingSkill;
+			if (motorcycleExploreComponent.RouletteListDataMotor == null)
 			{
-				this.EjectInterruptingSkillId = motorcycleExploreComponent.EjectInterruptingSkillId;
+				this.RouletteListDataMotor = null;
 			}
-			if (base.CanResetComponentProperty("DriverEntityId"))
-			{
-				this.DriverEntityId = motorcycleExploreComponent.DriverEntityId;
-			}
-			if (base.CanResetComponentProperty("PlayerId"))
-			{
-				this.PlayerId = motorcycleExploreComponent.PlayerId;
-			}
-			if (base.CanResetComponentProperty("PlatformRotationDriver") && motorcycleExploreComponent.PlatformRotationDriver != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcyclePlatformRotationDriver>(this.PlatformRotationDriver), "PlatformRotationDriver"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RouletteListDataMotor), "RouletteListDataMotor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("PullingTargetInternal"))
+			this.DetectedTargetLegalOnceFlag = motorcycleExploreComponent.DetectedTargetLegalOnceFlag;
+			if (motorcycleExploreComponent.CurrentActiveSkillId != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.CurrentActiveSkillId), "CurrentActiveSkillId"))
 			{
-				if (motorcycleExploreComponent.PullingTargetInternal == null)
-				{
-					this.PullingTargetInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GrapplingHookPointComponent>(this.PullingTargetInternal), "PullingTargetInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PullingTargetEntityId"))
+			this.EjectInterruptingSkillId = motorcycleExploreComponent.EjectInterruptingSkillId;
+			this.DriverEntityId = motorcycleExploreComponent.DriverEntityId;
+			this.PlayerId = motorcycleExploreComponent.PlayerId;
+			if (motorcycleExploreComponent.PlatformRotationDriver != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlatformRotationDriver), "PlatformRotationDriver"))
 			{
-				this.PullingTargetEntityId = motorcycleExploreComponent.PullingTargetEntityId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SimulatePullingTarget"))
+			if (motorcycleExploreComponent.PullingTargetInternal == null)
 			{
-				if (motorcycleExploreComponent.SimulatePullingTarget == null)
-				{
-					this.SimulatePullingTarget = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GrapplingHookPointComponent>(this.SimulatePullingTarget), "SimulatePullingTarget"))
-				{
-					return false;
-				}
+				this.PullingTargetInternal = null;
 			}
-			if (base.CanResetComponentProperty("BatchCollectRangeEffectHandleId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PullingTargetInternal), "PullingTargetInternal"))
 			{
-				this.BatchCollectRangeEffectHandleId = motorcycleExploreComponent.BatchCollectRangeEffectHandleId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("BatchCollectRangeEffectPath"))
+			this.PullingTargetEntityId = motorcycleExploreComponent.PullingTargetEntityId;
+			if (motorcycleExploreComponent.SimulatePullingTarget == null)
 			{
-				this.BatchCollectRangeEffectPath = motorcycleExploreComponent.BatchCollectRangeEffectPath;
+				this.SimulatePullingTarget = null;
 			}
-			if (base.CanResetComponentProperty("AutoDetectDistance"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SimulatePullingTarget), "SimulatePullingTarget"))
 			{
-				this.AutoDetectDistance = motorcycleExploreComponent.AutoDetectDistance;
+				return false;
 			}
-			if (base.CanResetComponentProperty("AutoDetectInterval"))
+			this.BatchCollectRangeEffectHandleId = motorcycleExploreComponent.BatchCollectRangeEffectHandleId;
+			this.BatchCollectRangeEffectPath = motorcycleExploreComponent.BatchCollectRangeEffectPath;
+			this.AutoDetectDistance = motorcycleExploreComponent.AutoDetectDistance;
+			this.AutoDetectInterval = motorcycleExploreComponent.AutoDetectInterval;
+			if (motorcycleExploreComponent.DisableAutoDetectTags == null)
 			{
-				this.AutoDetectInterval = motorcycleExploreComponent.AutoDetectInterval;
+				this.DisableAutoDetectTags = null;
 			}
-			if (base.CanResetComponentProperty("DisableAutoDetectTags"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableAutoDetectTags), "DisableAutoDetectTags"))
 			{
-				if (motorcycleExploreComponent.DisableAutoDetectTags == null)
-				{
-					this.DisableAutoDetectTags = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.DisableAutoDetectTags), "DisableAutoDetectTags"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastAutoDetectTimeStamp"))
-			{
-				this.LastAutoDetectTimeStamp = motorcycleExploreComponent.LastAutoDetectTimeStamp;
-			}
+			this.LastAutoDetectTimeStamp = motorcycleExploreComponent.LastAutoDetectTimeStamp;
 			return true;
 		}
 
-		// Token: 0x0402520D RID: 152077
+		// Token: 0x170074FD RID: 29949
+		// (get) Token: 0x0603DA01 RID: 252417 RVA: 0x011DA873 File Offset: 0x011D8A73
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074FE RID: 29950
+		// (get) Token: 0x0603DA02 RID: 252418 RVA: 0x011DA876 File Offset: 0x011D8A76
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074FF RID: 29951
+		// (get) Token: 0x0603DA03 RID: 252419 RVA: 0x011DA879 File Offset: 0x011D8A79
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020AED RID: 133869
 		private static int _defaultStateTagId;
 
-		// Token: 0x0402520E RID: 152078
+		// Token: 0x04020AEE RID: 133870
 		private const float BATCH_PULL_COLLECTION_MAX_RADIUS = 5000f;
 
-		// Token: 0x0402520F RID: 152079
+		// Token: 0x04020AEF RID: 133871
 		private const int BATCH_PULL_COLLECTION_MAX_COUNT = 15;
 
-		// Token: 0x04025210 RID: 152080
+		// Token: 0x04020AF0 RID: 133872
 		private const long DEFAULT_PULL_COLLECTION_BUFF_ID = 640003034L;
 
-		// Token: 0x04025211 RID: 152081
+		// Token: 0x04020AF1 RID: 133873
 		public static bool TraceDebug;
 
-		// Token: 0x04025212 RID: 152082
+		// Token: 0x04020AF2 RID: 133874
 		[Nullable(2)]
 		protected BaseVehiclePerformComponent VehiclePerformComponent;
 
-		// Token: 0x04025213 RID: 152083
+		// Token: 0x04020AF3 RID: 133875
 		private readonly InteractionTargetSelector TargetSelector = new InteractionTargetSelector();
 
-		// Token: 0x04025214 RID: 152084
+		// Token: 0x04020AF4 RID: 133876
 		private readonly List<EntityHandle> TmpHandles = new List<EntityHandle>();
 
-		// Token: 0x04025215 RID: 152085
+		// Token: 0x04020AF5 RID: 133877
 		private bool LevelEventHighlightingSkill;
 
-		// Token: 0x04025216 RID: 152086
+		// Token: 0x04020AF6 RID: 133878
 		[Nullable(2)]
 		private RouletteListDataMotor RouletteListDataMotor;
 
-		// Token: 0x04025217 RID: 152087
+		// Token: 0x04020AF7 RID: 133879
 		public bool DetectedTargetLegalOnceFlag = true;
 
-		// Token: 0x04025218 RID: 152088
+		// Token: 0x04020AF8 RID: 133880
 		private readonly HashSet<int> CurrentActiveSkillId = new HashSet<int>();
 
-		// Token: 0x04025219 RID: 152089
+		// Token: 0x04020AF9 RID: 133881
 		private int? EjectInterruptingSkillId;
 
-		// Token: 0x0402521A RID: 152090
+		// Token: 0x04020AFA RID: 133882
 		private int DriverEntityId;
 
-		// Token: 0x0402521B RID: 152091
+		// Token: 0x04020AFB RID: 133883
 		private int PlayerId;
 
-		// Token: 0x0402521C RID: 152092
+		// Token: 0x04020AFC RID: 133884
 		private readonly MotorcyclePlatformRotationDriver PlatformRotationDriver = new MotorcyclePlatformRotationDriver();
 
-		// Token: 0x0402521D RID: 152093
+		// Token: 0x04020AFD RID: 133885
 		[Nullable(2)]
 		private GrapplingHookPointComponent PullingTargetInternal;
 
-		// Token: 0x0402521E RID: 152094
+		// Token: 0x04020AFE RID: 133886
 		protected int? PullingTargetEntityId;
 
-		// Token: 0x0402521F RID: 152095
+		// Token: 0x04020AFF RID: 133887
 		[Nullable(2)]
 		public GrapplingHookPointComponent SimulatePullingTarget;
 
-		// Token: 0x04025220 RID: 152096
+		// Token: 0x04020B00 RID: 133888
 		private int? BatchCollectRangeEffectHandleId;
 
-		// Token: 0x04025221 RID: 152097
+		// Token: 0x04020B01 RID: 133889
 		[Nullable(2)]
 		private string BatchCollectRangeEffectPath;
 
-		// Token: 0x04025222 RID: 152098
+		// Token: 0x04020B02 RID: 133890
 		protected float AutoDetectDistance;
 
-		// Token: 0x04025223 RID: 152099
+		// Token: 0x04020B03 RID: 133891
 		protected float AutoDetectInterval = 0.5f;
 
-		// Token: 0x04025224 RID: 152100
+		// Token: 0x04020B04 RID: 133892
 		protected List<int> DisableAutoDetectTags = new List<int>();
 
-		// Token: 0x04025225 RID: 152101
+		// Token: 0x04020B05 RID: 133893
 		protected float LastAutoDetectTimeStamp;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x02004599 RID: 17817
+	// Token: 0x020034C1 RID: 13505
 	public class WuYinQuBattleStateIdleToFighting : WuYinQuBattleStateBase
 	{
-		// Token: 0x0602DF13 RID: 188179 RVA: 0x00A90A51 File Offset: 0x00A8EC51
+		// Token: 0x060225FD RID: 140797 RVA: 0x009BCC71 File Offset: 0x009BAE71
 		[NullableContext(1)]
 		public WuYinQuBattleStateIdleToFighting(WuYinQuBattleActor Owner, EWuYinQuBattleState State, [Nullable(new byte[]
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Render
 		{
 		}
 
-		// Token: 0x0602DF14 RID: 188180 RVA: 0x00A90A64 File Offset: 0x00A8EC64
+		// Token: 0x060225FE RID: 140798 RVA: 0x009BCC84 File Offset: 0x009BAE84
 		protected override void OnEnter(EWuYinQuBattleState? lastState)
 		{
 			AKuroLevelSequenceActor levelSequenceActor = this.Owner.GetKuroLevelSequenceActor();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF15 RID: 188181 RVA: 0x00A90B70 File Offset: 0x00A8ED70
+		// Token: 0x060225FF RID: 140799 RVA: 0x009BCD90 File Offset: 0x009BAF90
 		private void OnEnterAsync()
 		{
 			Log.Instance.Info(ELogModule.RenderBattle, ELogAuthor.HCS, "进入Idle2Fighting的过度状态", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Render
 			stateMachine.Switch(EWuYinQuBattleState.Fighting1);
 		}
 
-		// Token: 0x0602DF16 RID: 188182 RVA: 0x00A90D24 File Offset: 0x00A8EF24
+		// Token: 0x06022600 RID: 140800 RVA: 0x009BCF44 File Offset: 0x009BB144
 		protected override void OnUpdate(float delta)
 		{
 			if (this.Timer > this.Owner.WuYinQuFightingData.IdleToFightingTransitionTime)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF17 RID: 188183 RVA: 0x00A90E78 File Offset: 0x00A8F078
+		// Token: 0x06022601 RID: 140801 RVA: 0x009BD098 File Offset: 0x009BB298
 		protected override void OnExit(EWuYinQuBattleState lastState)
 		{
 			Log.Instance.Info(ELogModule.RenderBattle, ELogAuthor.HCS, "退出Idle2Fighting的过度状态", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -167,14 +167,14 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018861 RID: 100449
+		// Token: 0x04012E9C RID: 77468
 		private float Timer;
 
-		// Token: 0x04018862 RID: 100450
+		// Token: 0x04012E9D RID: 77469
 		[Nullable(2)]
 		private ULevelSequence SeqenceData;
 
-		// Token: 0x04018863 RID: 100451
+		// Token: 0x04012E9E RID: 77470
 		private int SeqenceDataLoading = -1;
 	}
 }

@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001545 RID: 5445
+// Token: 0x020009FD RID: 2557
 public class ActivityTurntableRewardView : UiViewBase
 {
-	// Token: 0x06009BA5 RID: 39845 RVA: 0x0021B1B6 File Offset: 0x002193B6
+	// Token: 0x06006F83 RID: 28547 RVA: 0x00224F66 File Offset: 0x00223166
 	[NullableContext(1)]
 	public ActivityTurntableRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009BA6 RID: 39846 RVA: 0x0021B1BF File Offset: 0x002193BF
+	// Token: 0x06006F84 RID: 28548 RVA: 0x00224F6F File Offset: 0x0022316F
 	protected override void OnAfterShow()
 	{
 		base.CloseMe(delegate(bool _)
@@ -25,13 +25,13 @@ public class ActivityTurntableRewardView : UiViewBase
 		});
 	}
 
-	// Token: 0x06009BA7 RID: 39847 RVA: 0x0021B1D3 File Offset: 0x002193D3
+	// Token: 0x06006F85 RID: 28549 RVA: 0x00224F83 File Offset: 0x00223183
 	protected override void OnStart()
 	{
 		this.CloseFunc = (this.OpenParam as Action);
 	}
 
-	// Token: 0x04004462 RID: 17506
+	// Token: 0x04004508 RID: 17672
 	[Nullable(2)]
 	private Action CloseFunc;
 }

@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200159B RID: 5531
+// Token: 0x02000A53 RID: 2643
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class WheelTowerResultTeamItem : GridProxyAbstract<NewTowerTeamRecordPb>
 {
-	// Token: 0x06009D82 RID: 40322 RVA: 0x00222B58 File Offset: 0x00220D58
+	// Token: 0x06007160 RID: 29024 RVA: 0x0022C908 File Offset: 0x0022AB08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -41,13 +41,13 @@ public class WheelTowerResultTeamItem : GridProxyAbstract<NewTowerTeamRecordPb>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D83 RID: 40323 RVA: 0x00222C66 File Offset: 0x00220E66
+	// Token: 0x06007161 RID: 29025 RVA: 0x0022CA16 File Offset: 0x0022AC16
 	protected override void OnStart()
 	{
 		this.RoleLayout = new GenericLayout<WheelTowerResultRoleItem, int>(base.GetHorizontalLayout(1), () => new WheelTowerResultRoleItem(), null, false, true);
 	}
 
-	// Token: 0x06009D84 RID: 40324 RVA: 0x00222C9C File Offset: 0x00220E9C
+	// Token: 0x06007162 RID: 29026 RVA: 0x0022CA4C File Offset: 0x0022AC4C
 	public override UniTask RefreshAsync(NewTowerTeamRecordPb data, bool isSelected, int gridIndex)
 	{
 		WheelTowerResultTeamItem.<RefreshAsync>d__3 <RefreshAsync>d__;
@@ -60,7 +60,7 @@ public class WheelTowerResultTeamItem : GridProxyAbstract<NewTowerTeamRecordPb>
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400456A RID: 17770
+	// Token: 0x04004610 RID: 17936
 	[Nullable(new byte[]
 	{
 		2,

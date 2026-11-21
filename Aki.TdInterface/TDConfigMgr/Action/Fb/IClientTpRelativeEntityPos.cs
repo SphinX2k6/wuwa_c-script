@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026BE RID: 9918
+	// Token: 0x02002982 RID: 10626
 	public class IClientTpRelativeEntityPos : IClientTeleportConfig
 	{
-		// Token: 0x0600DDD8 RID: 56792 RVA: 0x0020EF92 File Offset: 0x0020D192
-		[NullableContext(1)]
+		// Token: 0x0600EBB4 RID: 60340 RVA: 0x0022B7D2 File Offset: 0x002299D2
 		public static IClientTpRelativeEntityPos Create(IClientTpRelativeEntityPos? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700421E RID: 16926
-		// (get) Token: 0x0600DDD9 RID: 56793 RVA: 0x0020EFB1 File Offset: 0x0020D1B1
+		// Token: 0x1700455E RID: 17758
+		// (get) Token: 0x0600EBB5 RID: 60341 RVA: 0x0022B7F1 File Offset: 0x002299F1
 		public override EClientTeleportType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700421F RID: 16927
-		// (get) Token: 0x0600DDDA RID: 56794 RVA: 0x0020EFBE File Offset: 0x0020D1BE
+		// Token: 0x1700455F RID: 17759
+		// (get) Token: 0x0600EBB6 RID: 60342 RVA: 0x0022B7FE File Offset: 0x002299FE
 		public virtual int SourcePosEntityId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004220 RID: 16928
-		// (get) Token: 0x0600DDDB RID: 56795 RVA: 0x0020EFCB File Offset: 0x0020D1CB
+		// Token: 0x17004560 RID: 17760
+		// (get) Token: 0x0600EBB7 RID: 60343 RVA: 0x0022B80B File Offset: 0x00229A0B
 		public virtual int TargetPosEntityId
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B2A RID: 31530
+		// Token: 0x040081CA RID: 33226
 		private IClientTpRelativeEntityPos Instance;
 	}
 }

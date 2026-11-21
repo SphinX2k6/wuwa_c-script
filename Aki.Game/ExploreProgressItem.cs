@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001ABC RID: 6844
+// Token: 0x02000F7B RID: 3963
 public class ExploreProgressItem : UiPanelBase
 {
-	// Token: 0x0600CAE1 RID: 51937 RVA: 0x002E3A24 File Offset: 0x002E1C24
+	// Token: 0x06009EF2 RID: 40690 RVA: 0x002EEBA8 File Offset: 0x002ECDA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -43,7 +43,7 @@ public class ExploreProgressItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CAE2 RID: 51938 RVA: 0x002E3BB3 File Offset: 0x002E1DB3
+	// Token: 0x06009EF3 RID: 40691 RVA: 0x002EED37 File Offset: 0x002ECF37
 	private void OnMissionButtonClicked()
 	{
 		if (this.ExploreAreaItemData == null)
@@ -53,7 +53,7 @@ public class ExploreProgressItem : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.ExploreMissionView, this.ExploreAreaItemData.AreaId, null);
 	}
 
-	// Token: 0x0600CAE3 RID: 51939 RVA: 0x002E3BE0 File Offset: 0x002E1DE0
+	// Token: 0x06009EF4 RID: 40692 RVA: 0x002EED64 File Offset: 0x002ECF64
 	private void OnTipsButtonClicked()
 	{
 		ExploreAreaItemData exploreAreaItemData = this.ExploreAreaItemData;
@@ -65,7 +65,7 @@ public class ExploreProgressItem : UiPanelBase
 		HelpController.Instance.OpenHelpById(num.Value);
 	}
 
-	// Token: 0x0600CAE4 RID: 51940 RVA: 0x002E3C24 File Offset: 0x002E1E24
+	// Token: 0x06009EF5 RID: 40693 RVA: 0x002EEDA8 File Offset: 0x002ECFA8
 	[NullableContext(1)]
 	public void Refresh(ExploreAreaItemData data)
 	{
@@ -122,28 +122,28 @@ public class ExploreProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005D61 RID: 23905
+	// Token: 0x04005E30 RID: 24112
 	[Nullable(2)]
 	private ExploreAreaItemData ExploreAreaItemData;
 
-	// Token: 0x02008014 RID: 32788
+	// Token: 0x020071A3 RID: 29091
 	private enum EChildType
 	{
-		// Token: 0x04029CFA RID: 171258
+		// Token: 0x04025033 RID: 151603
 		NameText,
-		// Token: 0x04029CFB RID: 171259
+		// Token: 0x04025034 RID: 151604
 		ProgressText,
-		// Token: 0x04029CFC RID: 171260
+		// Token: 0x04025035 RID: 151605
 		ProgressBarSprite,
-		// Token: 0x04029CFD RID: 171261
+		// Token: 0x04025036 RID: 151606
 		MissionButtonItem,
-		// Token: 0x04029CFE RID: 171262
+		// Token: 0x04025037 RID: 151607
 		MissionButton,
-		// Token: 0x04029CFF RID: 171263
+		// Token: 0x04025038 RID: 151608
 		TipsItem,
-		// Token: 0x04029D00 RID: 171264
+		// Token: 0x04025039 RID: 151609
 		TipsButton,
-		// Token: 0x04029D01 RID: 171265
+		// Token: 0x0402503A RID: 151610
 		TipsText
 	}
 }

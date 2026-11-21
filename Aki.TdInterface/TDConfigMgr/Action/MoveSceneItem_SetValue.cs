@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020DE RID: 8414
+	// Token: 0x0200233F RID: 9023
 	public class MoveSceneItem_SetValue
 	{
-		// Token: 0x04006EB8 RID: 28344
+		// Token: 0x040074E9 RID: 29929
 		public int EntityId;
 
-		// Token: 0x04006EB9 RID: 28345
+		// Token: 0x040074EA RID: 29930
 		public bool? StopBeforeMove;
 
-		// Token: 0x04006EBA RID: 28346
-		[Nullable(1)]
+		// Token: 0x040074EB RID: 29931
 		public IMoveSceneItemType MoveConfig;
 
-		// Token: 0x04006EBB RID: 28347
+		// Token: 0x040074EC RID: 29932
 		public bool? BypassClientResponse;
 	}
 }

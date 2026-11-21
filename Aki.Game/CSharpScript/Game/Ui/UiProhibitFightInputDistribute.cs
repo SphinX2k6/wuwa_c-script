@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200468F RID: 18063
+	// Token: 0x020035C0 RID: 13760
 	public class UiProhibitFightInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E9AA RID: 190890 RVA: 0x00ACA8CC File Offset: 0x00AC8ACC
+		// Token: 0x060230F4 RID: 143604 RVA: 0x009F8600 File Offset: 0x009F6800
 		public unsafe override bool OnRefresh()
 		{
 			InputDistributeModel instance = InputDistributeModel.Instance;

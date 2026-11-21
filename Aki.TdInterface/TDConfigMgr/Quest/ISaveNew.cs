@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001124 RID: 4388
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001252 RID: 4690
 	public class ISaveNew : ISaveConfigType
 	{
-		// Token: 0x0600630C RID: 25356 RVA: 0x000EE254 File Offset: 0x000EC454
+		// Token: 0x06006907 RID: 26887 RVA: 0x000FB3C8 File Offset: 0x000F95C8
 		private ISaveNew_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600630D RID: 25357 RVA: 0x000EE28C File Offset: 0x000EC48C
+		// Token: 0x06006908 RID: 26888 RVA: 0x000FB400 File Offset: 0x000F9600
 		public static ISaveNew Create([Nullable(2)] ISaveNew instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600630E RID: 25358 RVA: 0x000EE29F File Offset: 0x000EC49F
+		// Token: 0x06006909 RID: 26889 RVA: 0x000FB413 File Offset: 0x000F9613
 		public static ISaveNew CreateFromSetValue([Nullable(2)] ISaveNew_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600630F RID: 25359 RVA: 0x000EE2B2 File Offset: 0x000EC4B2
+		// Token: 0x0600690A RID: 26890 RVA: 0x000FB426 File Offset: 0x000F9626
 		public new ISaveNew_SetValue ToSetValue()
 		{
 			return new ISaveNew_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002054 RID: 8276
-		// (get) Token: 0x06006310 RID: 25360 RVA: 0x000EE2C5 File Offset: 0x000EC4C5
-		// (set) Token: 0x06006311 RID: 25361 RVA: 0x000EE2F0 File Offset: 0x000EC4F0
+		// Token: 0x17002207 RID: 8711
+		// (get) Token: 0x0600690B RID: 26891 RVA: 0x000FB439 File Offset: 0x000F9639
+		// (set) Token: 0x0600690C RID: 26892 RVA: 0x000FB464 File Offset: 0x000F9664
 		public override ESaveConfig Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B63 RID: 15203
+		// Token: 0x04003EB1 RID: 16049
 		[Nullable(2)]
 		protected new ISaveNew FbInstance;
 
-		// Token: 0x04003B64 RID: 15204
+		// Token: 0x04003EB2 RID: 16050
 		[Nullable(2)]
 		protected new ISaveNew_SetValue PocoInterface;
 	}

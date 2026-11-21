@@ -10,23 +10,23 @@ using CSharpScript.Game.InputSetting;
 using CSharpScript.Game.Module.PayShop;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Skin;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002A2F RID: 10799
+// Token: 0x02001FAA RID: 8106
 [NullableContext(2)]
 [Nullable(0)]
 public class SkinBuyDetailView : UiTickViewBase
 {
-	// Token: 0x06016780 RID: 92032 RVA: 0x005B1175 File Offset: 0x005AF375
+	// Token: 0x06014189 RID: 82313 RVA: 0x005DC1BD File Offset: 0x005DA3BD
 	[NullableContext(1)]
 	public SkinBuyDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016781 RID: 92033 RVA: 0x005B1180 File Offset: 0x005AF380
+	// Token: 0x0601418A RID: 82314 RVA: 0x005DC1C8 File Offset: 0x005DA3C8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -97,7 +97,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06016782 RID: 92034 RVA: 0x005B170C File Offset: 0x005AF90C
+	// Token: 0x0601418B RID: 82315 RVA: 0x005DC754 File Offset: 0x005DA954
 	protected override void OnAddEventListener()
 	{
 		UUIDraggableComponent draggable = base.GetDraggable(29);
@@ -120,7 +120,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		EventSystem.Instance.Add<PayItemSuccess>(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06016783 RID: 92035 RVA: 0x005B187C File Offset: 0x005AFA7C
+	// Token: 0x0601418C RID: 82316 RVA: 0x005DC8C4 File Offset: 0x005DAAC4
 	protected void RemoveCameraEventListener()
 	{
 		UUIDraggableComponent draggable = base.GetDraggable(29);
@@ -143,14 +143,14 @@ public class SkinBuyDetailView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06016784 RID: 92036 RVA: 0x005B19C1 File Offset: 0x005AFBC1
+	// Token: 0x0601418D RID: 82317 RVA: 0x005DCA09 File Offset: 0x005DAC09
 	[NullableContext(1)]
 	private void OnPayItemSuccess(PayItemSuccess notify)
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06016785 RID: 92037 RVA: 0x005B19CC File Offset: 0x005AFBCC
+	// Token: 0x0601418E RID: 82318 RVA: 0x005DCA14 File Offset: 0x005DAC14
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		ShopSkinData currentGoodsData = this.ViewData.GetCurrentGoodsData();
@@ -162,7 +162,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06016786 RID: 92038 RVA: 0x005B1A1E File Offset: 0x005AFC1E
+	// Token: 0x0601418F RID: 82319 RVA: 0x005DCA66 File Offset: 0x005DAC66
 	protected override void OnHandleLoadScene()
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
@@ -184,7 +184,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		obj2.SetTransformByTag("RoleCase");
 	}
 
-	// Token: 0x06016787 RID: 92039 RVA: 0x005B1A4D File Offset: 0x005AFC4D
+	// Token: 0x06014190 RID: 82320 RVA: 0x005DCA95 File Offset: 0x005DAC95
 	[NullableContext(1)]
 	private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 	{
@@ -194,23 +194,23 @@ public class SkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016788 RID: 92040 RVA: 0x005B1A60 File Offset: 0x005AFC60
+	// Token: 0x06014191 RID: 82321 RVA: 0x005DCAA8 File Offset: 0x005DACA8
 	private void TouchMoved()
 	{
 		if (TouchFingerManager.Instance.GetTouchFingerCount() > 1)
 		{
 			float fingerExpandCloseValue = TouchFingerManager.Instance.GetFingerExpandCloseValue(EFingerIndex.One, EFingerIndex.Two);
-			this.UiCameraControlRotationComponent.AddZoomInput(-fingerExpandCloseValue);
+			this.UiCameraInputComponent.AddZoomInput(-fingerExpandCloseValue);
 		}
 	}
 
-	// Token: 0x06016789 RID: 92041 RVA: 0x005B1A94 File Offset: 0x005AFC94
+	// Token: 0x06014192 RID: 82322 RVA: 0x005DCADC File Offset: 0x005DACDC
 	private void OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 	{
 		this.CurrentDragPosition = new FVector?(eventData.GetLocalPointInPlane());
 	}
 
-	// Token: 0x0601678A RID: 92042 RVA: 0x005B1AA8 File Offset: 0x005AFCA8
+	// Token: 0x06014193 RID: 82323 RVA: 0x005DCAF0 File Offset: 0x005DACF0
 	private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 	{
 		if (TouchFingerManager.Instance.GetTouchFingerCount() > 1 || InputSettings.Instance.IsInputKeyDown("RightMouseButton"))
@@ -228,30 +228,30 @@ public class SkinBuyDetailView : UiTickViewBase
 		float num2 = this.CurrentDragPosition.Value.Y - currentDragPosition.Value.Y;
 		if (num != 0f)
 		{
-			this.UiCameraControlRotationComponent.AddYawInput(num);
+			this.UiCameraInputComponent.AddYawInput(num);
 		}
 		if (num2 != 0f)
 		{
-			this.UiCameraControlRotationComponent.AddPitchInput(num2);
+			this.UiCameraInputComponent.AddPitchInput(num2);
 		}
 	}
 
-	// Token: 0x0601678B RID: 92043 RVA: 0x005B1B66 File Offset: 0x005AFD66
+	// Token: 0x06014194 RID: 82324 RVA: 0x005DCBAE File Offset: 0x005DADAE
 	private void OnPointerEndDragCallBack(ULGUIPointerEventData eventData)
 	{
 		this.CurrentDragPosition = null;
 	}
 
-	// Token: 0x0601678C RID: 92044 RVA: 0x005B1B74 File Offset: 0x005AFD74
+	// Token: 0x06014195 RID: 82325 RVA: 0x005DCBBC File Offset: 0x005DADBC
 	private void OnPointerScrollCallBack(ULGUIPointerEventData eventData)
 	{
 		if (eventData.scrollAxisValue != 0f)
 		{
-			this.UiCameraControlRotationComponent.AddZoomInput(-eventData.scrollAxisValue);
+			this.UiCameraInputComponent.AddZoomInput(-eventData.scrollAxisValue);
 		}
 	}
 
-	// Token: 0x0601678D RID: 92045 RVA: 0x005B1B98 File Offset: 0x005AFD98
+	// Token: 0x06014196 RID: 82326 RVA: 0x005DCBE0 File Offset: 0x005DADE0
 	protected override void OnBeforeShow()
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
@@ -281,13 +281,13 @@ public class SkinBuyDetailView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0601678E RID: 92046 RVA: 0x005B1C88 File Offset: 0x005AFE88
+	// Token: 0x06014197 RID: 82327 RVA: 0x005DCCD0 File Offset: 0x005DAED0
 	protected override void OnAfterShow()
 	{
 		this.RefreshCameraRotationComponentByViewType();
 	}
 
-	// Token: 0x0601678F RID: 92047 RVA: 0x005B1C90 File Offset: 0x005AFE90
+	// Token: 0x06014198 RID: 82328 RVA: 0x005DCCD8 File Offset: 0x005DAED8
 	protected override void OnAfterHide()
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
@@ -298,10 +298,10 @@ public class SkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016790 RID: 92048 RVA: 0x005B1CC0 File Offset: 0x005AFEC0
+	// Token: 0x06014199 RID: 82329 RVA: 0x005DCD08 File Offset: 0x005DAF08
 	private void RefreshCameraRotationComponentByViewType()
 	{
-		if (UiCameraAnimationManager.Instance.IsPlayingAnimation())
+		if (UiCameraModel.Instance.IsPlayingAnimation())
 		{
 			return;
 		}
@@ -309,20 +309,21 @@ public class SkinBuyDetailView : UiTickViewBase
 		this.RefreshCameraRotationComponent(configId);
 	}
 
-	// Token: 0x06016791 RID: 92049 RVA: 0x005B1D00 File Offset: 0x005AFF00
+	// Token: 0x0601419A RID: 82330 RVA: 0x005DCD48 File Offset: 0x005DAF48
 	[NullableContext(1)]
 	private void RefreshCameraRotationComponent(string configId)
 	{
-		UiCamera uiCamera = UiCameraManager.Get();
-		this.UiCameraControlRotationComponent = (uiCamera.AddUiCameraComponent(typeof(UiCameraControlRotationComponent), false) as UiCameraControlRotationComponent);
+		UiCamera orCreateCamera = UiCameraModel.Instance.GetOrCreateCamera();
+		this.UiCameraInputComponent = orCreateCamera.GetUiCameraComponent<UiCameraInputComponent>();
+		this.UiCameraLogicComponent = orCreateCamera.GetUiCameraComponent<UiCameraLogicComponent>();
 		int itemId = this.ViewData.GetCurrentSkinData().GetItemId();
 		SUiRoleCameraSetting? roleCameraConfigBySkin = UiRoleCameraConfig.Instance.GetRoleCameraConfigBySkin(configId, itemId);
 		if (roleCameraConfigBySkin == null)
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.InitDataByConfig(roleCameraConfigBySkin.Value);
-		this.UiCameraControlRotationComponent.SetNeedFloorReflection(true);
+		this.UiCameraLogicComponent.InitDataByConfig(roleCameraConfigBySkin.Value);
+		this.UiCameraLogicComponent.SetNeedFloorReflection(true);
 		FVectorDouble sourceLocation = this.TsUiSceneRoleActor.D_K2_GetActorLocation();
 		int roleId = this.ViewData.GetCurrentSkinData().GetRoleId();
 		if (roleId == 0)
@@ -340,32 +341,32 @@ public class SkinBuyDetailView : UiTickViewBase
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.UpdateData(sourceLocation, roleCameraOffsetConfig.Value.镜头浮动最大高度, roleCameraOffsetConfig.Value.镜头浮动最低高度, roleCameraOffsetConfig.Value.镜头浮动最长臂长, roleCameraOffsetConfig.Value.镜头浮动最短臂长);
-		this.UiCameraControlRotationComponent.Activate();
-		this.UiCameraControlRotationComponent.ResumeTick();
+		this.UiCameraLogicComponent.UpdateData(sourceLocation, roleCameraOffsetConfig.Value.镜头浮动最大高度, roleCameraOffsetConfig.Value.镜头浮动最低高度, roleCameraOffsetConfig.Value.镜头浮动最长臂长, roleCameraOffsetConfig.Value.镜头浮动最短臂长);
+		this.UiCameraInputComponent.Activate();
+		this.UiCameraInputComponent.ResumeTick();
 	}
 
-	// Token: 0x06016792 RID: 92050 RVA: 0x005B1E2C File Offset: 0x005B002C
+	// Token: 0x0601419B RID: 82331 RVA: 0x005DCE75 File Offset: 0x005DB075
 	private void OnInputUiLookUp(float value)
 	{
 		if (value == 0f || !Info.Instance.IsInGamepad())
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddPitchInput(-value);
+		this.UiCameraInputComponent.AddPitchInput(-value);
 	}
 
-	// Token: 0x06016793 RID: 92051 RVA: 0x005B1E50 File Offset: 0x005B0050
+	// Token: 0x0601419C RID: 82332 RVA: 0x005DCE99 File Offset: 0x005DB099
 	private void OnInputUiTurn(float value)
 	{
 		if (value == 0f || !Info.Instance.IsInGamepad())
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddYawInput(value);
+		this.UiCameraInputComponent.AddYawInput(value);
 	}
 
-	// Token: 0x06016794 RID: 92052 RVA: 0x005B1E73 File Offset: 0x005B0073
+	// Token: 0x0601419D RID: 82333 RVA: 0x005DCEBC File Offset: 0x005DB0BC
 	[NullableContext(1)]
 	private void OnInputUiZoom(string axisName, float value)
 	{
@@ -373,20 +374,43 @@ public class SkinBuyDetailView : UiTickViewBase
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddZoomInput(value);
+		this.UiCameraInputComponent.AddZoomInput(value);
 	}
 
-	// Token: 0x06016795 RID: 92053 RVA: 0x005B1E98 File Offset: 0x005B0098
+	// Token: 0x0601419E RID: 82334 RVA: 0x005DCEE0 File Offset: 0x005DB0E0
 	private void OnRightStickPress()
 	{
-		UiCameraHandleData lastHandleData = UiCameraAnimationManager.Instance.GetLastHandleData();
-		if (lastHandleData != null)
+		UiCameraModel instance = UiCameraModel.Instance;
+		UiCamera camera = instance.Camera;
+		UiCameraHandleData lastHandleData = instance.GetLastHandleData();
+		if (camera == null || !camera.IsEntered || camera.CurrentMode != EUiCameraMode.Normal || lastHandleData == null || lastHandleData.ShouldSkipApply())
 		{
-			UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(lastHandleData.HandleName, true, true, "1001", false, null, null);
+			return;
+		}
+		UiCameraNormalMode mode = camera.GetMode<UiCameraNormalMode>();
+		if (mode.State != EUiCameraNormalState.Active || mode.IsInputBlocked || mode.TryGetLastAppliedData() != lastHandleData)
+		{
+			return;
+		}
+		if (camera.RefreshCameraActor())
+		{
+			UCineCameraComponent cineCameraComponent = camera.CineCameraComponent;
+			if (cineCameraComponent != null && cineCameraComponent.IsValid())
+			{
+				if (!lastHandleData.Refresh(instance) || lastHandleData.GetUiCameraAnimationConfig() == null)
+				{
+					return;
+				}
+				if (!mode.PushCameraHandle(lastHandleData, lastHandleData, true, false, "1001", null))
+				{
+					Log.Instance.Warn(ELogModule.UiCamera, ELogAuthor.BB, "手柄重置皮肤预览Ui镜头失败，当前镜头不可重置", default(ReadOnlySpan<ValueTuple<string, object>>));
+				}
+				return;
+			}
 		}
 	}
 
-	// Token: 0x06016796 RID: 92054 RVA: 0x005B1ED8 File Offset: 0x005B00D8
+	// Token: 0x0601419F RID: 82335 RVA: 0x005DCFAC File Offset: 0x005DB1AC
 	protected override void OnStart()
 	{
 		this.TsUiSceneRoleActor = UiSceneManager.Instance.InitRoleSystemRoleActor(EUiModelUseWay.RoleInSkinView);
@@ -403,35 +427,40 @@ public class SkinBuyDetailView : UiTickViewBase
 		this.ResetCurrentSkinTypeIndex();
 	}
 
-	// Token: 0x06016797 RID: 92055 RVA: 0x005B1FDE File Offset: 0x005B01DE
+	// Token: 0x060141A0 RID: 82336 RVA: 0x005DD0B2 File Offset: 0x005DB2B2
 	private bool CanToggleExecuteChange()
 	{
 		return TimeUtil.Instance.GetServerTimeStamp() - this.LastSwitchTime >= (double)SkinConfig.Instance.GetSkinDetailButtonSwitchGap();
 	}
 
-	// Token: 0x06016798 RID: 92056 RVA: 0x005B2001 File Offset: 0x005B0201
+	// Token: 0x060141A1 RID: 82337 RVA: 0x005DD0D5 File Offset: 0x005DB2D5
 	[NullableContext(1)]
 	private SkinRewardItemGrid InitGridItem()
 	{
 		return new SkinRewardItemGrid();
 	}
 
-	// Token: 0x06016799 RID: 92057 RVA: 0x005B2008 File Offset: 0x005B0208
+	// Token: 0x060141A2 RID: 82338 RVA: 0x005DD0DC File Offset: 0x005DB2DC
 	protected override void OnBeforeHide()
 	{
 		this.RemoveCameraEventListener();
-		this.UiCameraControlRotationComponent.PauseTick();
+		this.UiCameraInputComponent.PauseTick();
 	}
 
-	// Token: 0x0601679A RID: 92058 RVA: 0x005B201B File Offset: 0x005B021B
+	// Token: 0x060141A3 RID: 82339 RVA: 0x005DD0EF File Offset: 0x005DB2EF
 	protected override void OnBeforeDestroy()
 	{
-		UiCameraManager.Get().DestroyUiCameraComponent(typeof(UiCameraControlRotationComponent));
+		UiCameraModel.Instance.GetOrCreateCamera();
+		UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+		if (uiCameraInputComponent != null)
+		{
+			uiCameraInputComponent.Deactivate();
+		}
 		UiSceneManager.Instance.DestroyRoleSystemRoleActor(this.TsUiSceneRoleActor);
 		this.TsUiSceneRoleActor = null;
 	}
 
-	// Token: 0x0601679B RID: 92059 RVA: 0x005B204C File Offset: 0x005B024C
+	// Token: 0x060141A4 RID: 82340 RVA: 0x005DD128 File Offset: 0x005DB328
 	private void RefreshRolePerformance()
 	{
 		int roleId = this.ViewData.GetCurrentSkinData().GetRoleId();
@@ -443,7 +472,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		EventSystem.Instance.Emit(EEventName.OnSelectedRoleChanged);
 	}
 
-	// Token: 0x0601679C RID: 92060 RVA: 0x005B20A8 File Offset: 0x005B02A8
+	// Token: 0x060141A5 RID: 82341 RVA: 0x005DD184 File Offset: 0x005DB384
 	private void RefreshMontageByCurrentSkinType()
 	{
 		EPerformanceRoleState roleState = (this.CurrentSkinTypeIndex == 0) ? EPerformanceRoleState.Attribute_Perform : EPerformanceRoleState.Weapon;
@@ -466,17 +495,17 @@ public class SkinBuyDetailView : UiTickViewBase
 		obj2.SetState(roleState, false, false, false);
 	}
 
-	// Token: 0x0601679D RID: 92061 RVA: 0x005B20F0 File Offset: 0x005B02F0
+	// Token: 0x060141A6 RID: 82342 RVA: 0x005DD1CC File Offset: 0x005DB3CC
 	private void RefreshWeaponMesh()
 	{
-		SkinBuyDetailView.<>c__DisplayClass41_0 CS$<>8__locals1 = new SkinBuyDetailView.<>c__DisplayClass41_0();
+		SkinBuyDetailView.<>c__DisplayClass42_0 CS$<>8__locals1 = new SkinBuyDetailView.<>c__DisplayClass42_0();
 		SkinBuyDetailViewData viewData = this.ViewData;
 		WeaponSkin? weaponSkin = (viewData != null) ? viewData.GetCurrentSkinData().GetSuitWeaponSkinConfig() : null;
 		if (weaponSkin == null)
 		{
 			return;
 		}
-		SkinBuyDetailView.<>c__DisplayClass41_0 CS$<>8__locals2 = CS$<>8__locals1;
+		SkinBuyDetailView.<>c__DisplayClass42_0 CS$<>8__locals2 = CS$<>8__locals1;
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
 		UiRoleWeaponComponent component;
 		if (tsUiSceneRoleActor == null)
@@ -509,24 +538,24 @@ public class SkinBuyDetailView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0601679E RID: 92062 RVA: 0x005B2180 File Offset: 0x005B0380
+	// Token: 0x060141A7 RID: 82343 RVA: 0x005DD25C File Offset: 0x005DB45C
 	private void CloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601679F RID: 92063 RVA: 0x005B2189 File Offset: 0x005B0389
+	// Token: 0x060141A8 RID: 82344 RVA: 0x005DD265 File Offset: 0x005DB465
 	protected override void OnHandleReleaseScene()
 	{
 		this.HandleReleaseScene();
 	}
 
-	// Token: 0x060167A0 RID: 92064 RVA: 0x005B2191 File Offset: 0x005B0391
+	// Token: 0x060141A9 RID: 82345 RVA: 0x005DD26D File Offset: 0x005DB46D
 	private void HandleReleaseScene()
 	{
 	}
 
-	// Token: 0x060167A1 RID: 92065 RVA: 0x005B2194 File Offset: 0x005B0394
+	// Token: 0x060141AA RID: 82346 RVA: 0x005DD270 File Offset: 0x005DB470
 	private void OnClickToggleRight(EToggleState toggleState)
 	{
 		this.CurrentSkinTypeIndex = 1;
@@ -537,7 +566,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		this.LastSwitchTime = TimeUtil.Instance.GetServerTimeStamp();
 	}
 
-	// Token: 0x060167A2 RID: 92066 RVA: 0x005B21E4 File Offset: 0x005B03E4
+	// Token: 0x060141AB RID: 82347 RVA: 0x005DD2C0 File Offset: 0x005DB4C0
 	private void OnClickToggleLeft(EToggleState toggleState)
 	{
 		this.CurrentSkinTypeIndex = 0;
@@ -548,56 +577,56 @@ public class SkinBuyDetailView : UiTickViewBase
 		this.LastSwitchTime = TimeUtil.Instance.GetServerTimeStamp();
 	}
 
-	// Token: 0x060167A3 RID: 92067 RVA: 0x005B2235 File Offset: 0x005B0435
+	// Token: 0x060141AC RID: 82348 RVA: 0x005DD311 File Offset: 0x005DB511
 	[NullableContext(1)]
 	private void OnPlayCameraAnimationStart(UiCameraHandleData uiCameraHandleData, UiCameraHandleData cameraHandleData, string arg3)
 	{
-		UiCameraControlRotationComponent uiCameraControlRotationComponent = this.UiCameraControlRotationComponent;
-		if (uiCameraControlRotationComponent == null)
+		UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+		if (uiCameraInputComponent == null)
 		{
 			return;
 		}
-		uiCameraControlRotationComponent.PauseTick();
+		uiCameraInputComponent.PauseTick();
 	}
 
-	// Token: 0x060167A4 RID: 92068 RVA: 0x005B2247 File Offset: 0x005B0447
+	// Token: 0x060141AD RID: 82349 RVA: 0x005DD323 File Offset: 0x005DB523
 	[NullableContext(1)]
 	private void OnActivateUiCameraAnimationHandle(UiCameraHandleData handleData)
 	{
 		this.RefreshCameraRotationComponentByViewType();
 	}
 
-	// Token: 0x060167A5 RID: 92069 RVA: 0x005B2250 File Offset: 0x005B0450
+	// Token: 0x060141AE RID: 82350 RVA: 0x005DD32C File Offset: 0x005DB52C
 	private void RefreshCameraBySkinType()
 	{
 		if (this.CurrentSkinTypeIndex == 0)
 		{
 			UiLayer.Instance.SetShowMaskLayer("SkinBuyDetailView", true);
-			UiCameraHandleData lastHandleData = UiCameraAnimationManager.Instance.GetLastHandleData();
+			UiCameraHandleData lastHandleData = UiCameraModel.Instance.GetLastHandleData();
 			if (lastHandleData != null)
 			{
-				UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(lastHandleData.HandleName, true, true, "1001", true, delegate(UiCameraAnimationDefine.IFinishData _)
+				UiCameraModel.Instance.PushCameraHandleByHandleName(lastHandleData.GetHandleName(), true, true, "1001", true, delegate(UiCameraDefine.IFinishData _)
 				{
 					UiLayer.Instance.SetShowMaskLayer("SkinBuyDetailView", false);
-				}, null);
+				});
 				return;
 			}
 		}
 		else
 		{
 			UiLayer.Instance.SetShowMaskLayer("SkinBuyDetailView", true);
-			UiCameraHandleData lastHandleData2 = UiCameraAnimationManager.Instance.GetLastHandleData();
+			UiCameraHandleData lastHandleData2 = UiCameraModel.Instance.GetLastHandleData();
 			if (lastHandleData2 != null)
 			{
-				UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(lastHandleData2.HandleName, true, true, "1001", true, delegate(UiCameraAnimationDefine.IFinishData _)
+				UiCameraModel.Instance.PushCameraHandleByHandleName(lastHandleData2.GetHandleName(), true, true, "1001", true, delegate(UiCameraDefine.IFinishData _)
 				{
 					UiLayer.Instance.SetShowMaskLayer("SkinBuyDetailView", false);
-				}, null);
+				});
 			}
 		}
 	}
 
-	// Token: 0x060167A6 RID: 92070 RVA: 0x005B2327 File Offset: 0x005B0527
+	// Token: 0x060141AF RID: 82351 RVA: 0x005DD3F1 File Offset: 0x005DB5F1
 	private void OnClickToggleMale(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -614,7 +643,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.PlaySequence("Switch", null, true);
 	}
 
-	// Token: 0x060167A7 RID: 92071 RVA: 0x005B2360 File Offset: 0x005B0560
+	// Token: 0x060141B0 RID: 82352 RVA: 0x005DD42A File Offset: 0x005DB62A
 	private void OnClickToggleFemale(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -631,7 +660,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.PlaySequence("Switch", null, true);
 	}
 
-	// Token: 0x060167A8 RID: 92072 RVA: 0x005B239C File Offset: 0x005B059C
+	// Token: 0x060141B1 RID: 82353 RVA: 0x005DD464 File Offset: 0x005DB664
 	private void OnClickOnlyUiToggle(EToggleState toggleState)
 	{
 		bool state = base.GetItem(28).bIsUIActive;
@@ -651,7 +680,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		}, true);
 	}
 
-	// Token: 0x060167A9 RID: 92073 RVA: 0x005B2450 File Offset: 0x005B0650
+	// Token: 0x060141B2 RID: 82354 RVA: 0x005DD518 File Offset: 0x005DB718
 	private void OnClickBuyButton()
 	{
 		if (!this.ViewData.GetCurrentSkinData().GetIfHaveRole())
@@ -664,13 +693,13 @@ public class SkinBuyDetailView : UiTickViewBase
 		this.StartBuyProcess();
 	}
 
-	// Token: 0x060167AA RID: 92074 RVA: 0x005B24A5 File Offset: 0x005B06A5
+	// Token: 0x060141B3 RID: 82355 RVA: 0x005DD56D File Offset: 0x005DB76D
 	private void StartBuyProcess()
 	{
 		PayShopController.Instance.OpenBuySkinDetailView(this.ViewData.GetCurrentGoodsData().GetCurrentGoodsData());
 	}
 
-	// Token: 0x060167AB RID: 92075 RVA: 0x005B24C4 File Offset: 0x005B06C4
+	// Token: 0x060141B4 RID: 82356 RVA: 0x005DD58C File Offset: 0x005DB78C
 	private void OnClickRightButton()
 	{
 		if (TimeUtil.Instance.GetServerTimeStamp() - this.LastClickButtonTime < (double)SkinConfig.Instance.GetSkinDetailButtonGap())
@@ -688,7 +717,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.PlaySequence("Switch", null, true);
 	}
 
-	// Token: 0x060167AC RID: 92076 RVA: 0x005B2534 File Offset: 0x005B0734
+	// Token: 0x060141B5 RID: 82357 RVA: 0x005DD5FC File Offset: 0x005DB7FC
 	private void OnClickLeftButton()
 	{
 		if (TimeUtil.Instance.GetServerTimeStamp() - this.LastClickButtonTime < (double)SkinConfig.Instance.GetSkinDetailButtonGap())
@@ -706,19 +735,19 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.PlaySequence("Switch", null, true);
 	}
 
-	// Token: 0x060167AD RID: 92077 RVA: 0x005B25A2 File Offset: 0x005B07A2
+	// Token: 0x060141B6 RID: 82358 RVA: 0x005DD66A File Offset: 0x005DB86A
 	private void ResetCurrentSkinTypeIndex()
 	{
 		this.CurrentSkinTypeIndex = 0;
 	}
 
-	// Token: 0x060167AE RID: 92078 RVA: 0x005B25AB File Offset: 0x005B07AB
+	// Token: 0x060141B7 RID: 82359 RVA: 0x005DD673 File Offset: 0x005DB873
 	private void OnClickDetailIconButton()
 	{
 		SkinController.Instance.OpenSkinShowView(this.ViewData.GetCurrentSkinData().GetItemId());
 	}
 
-	// Token: 0x060167AF RID: 92079 RVA: 0x005B25C8 File Offset: 0x005B07C8
+	// Token: 0x060141B8 RID: 82360 RVA: 0x005DD690 File Offset: 0x005DB890
 	private void RefreshView()
 	{
 		SkinBuyDetailViewData viewData = this.ViewData;
@@ -759,7 +788,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		this.RefreshCouponPrice(this.ViewData);
 	}
 
-	// Token: 0x060167B0 RID: 92080 RVA: 0x005B2734 File Offset: 0x005B0934
+	// Token: 0x060141B9 RID: 82361 RVA: 0x005DD7FC File Offset: 0x005DB9FC
 	private void RefreshSwitchToggleByIndex()
 	{
 		base.GetExtendToggle(8).SetToggleState((this.CurrentSkinTypeIndex == 0) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
@@ -767,7 +796,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		this.RefreshMontageByCurrentSkinType();
 	}
 
-	// Token: 0x060167B1 RID: 92081 RVA: 0x005B2784 File Offset: 0x005B0984
+	// Token: 0x060141BA RID: 82362 RVA: 0x005DD84C File Offset: 0x005DBA4C
 	private void RefreshDescText(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -779,7 +808,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(12), desc, Array.Empty<object>());
 	}
 
-	// Token: 0x060167B2 RID: 92082 RVA: 0x005B27CC File Offset: 0x005B09CC
+	// Token: 0x060141BB RID: 82363 RVA: 0x005DD894 File Offset: 0x005DBA94
 	private void RefreshTitleText(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -791,7 +820,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), titleName, Array.Empty<object>());
 	}
 
-	// Token: 0x060167B3 RID: 92083 RVA: 0x005B2814 File Offset: 0x005B0A14
+	// Token: 0x060141BC RID: 82364 RVA: 0x005DD8DC File Offset: 0x005DBADC
 	private void RefreshSubTitleText(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -803,21 +832,21 @@ public class SkinBuyDetailView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), subTitle, Array.Empty<object>());
 	}
 
-	// Token: 0x060167B4 RID: 92084 RVA: 0x005B285C File Offset: 0x005B0A5C
+	// Token: 0x060141BD RID: 82365 RVA: 0x005DD924 File Offset: 0x005DBB24
 	private void RefreshRightButton(SkinBuyDetailViewData data)
 	{
 		bool uiactive = data != null && data.CheckIfHaveMutiGood();
 		base.GetButton(4).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x060167B5 RID: 92085 RVA: 0x005B2890 File Offset: 0x005B0A90
+	// Token: 0x060141BE RID: 82366 RVA: 0x005DD958 File Offset: 0x005DBB58
 	private void RefreshLeftButton(SkinBuyDetailViewData data)
 	{
 		bool uiactive = data != null && data.CheckIfHaveMutiGood();
 		base.GetButton(3).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x060167B6 RID: 92086 RVA: 0x005B28C4 File Offset: 0x005B0AC4
+	// Token: 0x060141BF RID: 82367 RVA: 0x005DD98C File Offset: 0x005DBB8C
 	private void RefreshSwitchItem(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -828,7 +857,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetItem(7).SetUIActive(ifNeedShowSwitchItem);
 	}
 
-	// Token: 0x060167B7 RID: 92087 RVA: 0x005B28EC File Offset: 0x005B0AEC
+	// Token: 0x060141C0 RID: 82368 RVA: 0x005DD9B4 File Offset: 0x005DBBB4
 	private void RefreshRoleTexture(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -839,7 +868,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.SetTextureByPath(buyPreviewRoleCardPath, base.GetTexture(23), null, null);
 	}
 
-	// Token: 0x060167B8 RID: 92088 RVA: 0x005B2924 File Offset: 0x005B0B24
+	// Token: 0x060141C1 RID: 82369 RVA: 0x005DD9EC File Offset: 0x005DBBEC
 	private void RefreshRoleQualityTexture(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -850,7 +879,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.SetTextureByPath(buyPreviewRoleQualityBgPath, base.GetTexture(22), null, null);
 	}
 
-	// Token: 0x060167B9 RID: 92089 RVA: 0x005B295C File Offset: 0x005B0B5C
+	// Token: 0x060141C2 RID: 82370 RVA: 0x005DDA24 File Offset: 0x005DBC24
 	private void RefreshWeaponTexture(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -868,7 +897,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetTexture(26).SetUIActive(false);
 	}
 
-	// Token: 0x060167BA RID: 92090 RVA: 0x005B29D0 File Offset: 0x005B0BD0
+	// Token: 0x060141C3 RID: 82371 RVA: 0x005DDA98 File Offset: 0x005DBC98
 	private void RefreshWeaponQualityTexture(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -886,7 +915,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetItem(25).SetUIActive(false);
 	}
 
-	// Token: 0x060167BB RID: 92091 RVA: 0x005B2A44 File Offset: 0x005B0C44
+	// Token: 0x060141C4 RID: 82372 RVA: 0x005DDB0C File Offset: 0x005DBD0C
 	private void RefreshDiscountText(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -899,7 +928,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetText(19).SetText(discountText, true);
 	}
 
-	// Token: 0x060167BC RID: 92092 RVA: 0x005B2A94 File Offset: 0x005B0C94
+	// Token: 0x060141C5 RID: 82373 RVA: 0x005DDB5C File Offset: 0x005DBD5C
 	private void RefreshDiscountTime(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -928,7 +957,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060167BD RID: 92093 RVA: 0x005B2B30 File Offset: 0x005B0D30
+	// Token: 0x060141C6 RID: 82374 RVA: 0x005DDBF8 File Offset: 0x005DBDF8
 	private void RefreshBuyItemIcon(SkinBuyDetailViewData data)
 	{
 		if (data == null || data.GetCurrentGoodsData() == null)
@@ -948,7 +977,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060167BE RID: 92094 RVA: 0x005B2B9C File Offset: 0x005B0D9C
+	// Token: 0x060141C7 RID: 82375 RVA: 0x005DDC64 File Offset: 0x005DBE64
 	private void RefreshSourcePriceText(SkinBuyDetailViewData data)
 	{
 		if (data == null || data.GetCurrentGoodsData() == null || !data.GetCurrentGoodsData().GetIfCanBuy())
@@ -976,7 +1005,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetText(16).SetText("<s>" + originalPrice.Value.ToString() + "</s>", true);
 	}
 
-	// Token: 0x060167BF RID: 92095 RVA: 0x005B2C58 File Offset: 0x005B0E58
+	// Token: 0x060141C8 RID: 82376 RVA: 0x005DDD20 File Offset: 0x005DBF20
 	private void RefreshNowPriceText(SkinBuyDetailViewData data)
 	{
 		if (data == null || data.GetCurrentGoodsData() == null)
@@ -998,7 +1027,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060167C0 RID: 92096 RVA: 0x005B2CCC File Offset: 0x005B0ECC
+	// Token: 0x060141C9 RID: 82377 RVA: 0x005DDD94 File Offset: 0x005DBF94
 	private void RefreshPriceTextShowState(SkinBuyDetailViewData data)
 	{
 		if (data == null || data.GetCurrentGoodsData() == null)
@@ -1012,7 +1041,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetItem(39).SetUIActive(ifCanBuy && availableCouponItem != null);
 	}
 
-	// Token: 0x060167C1 RID: 92097 RVA: 0x005B2D40 File Offset: 0x005B0F40
+	// Token: 0x060141CA RID: 82378 RVA: 0x005DDE08 File Offset: 0x005DC008
 	private void RefreshBuyButtonState(SkinBuyDetailViewData data)
 	{
 		if (data == null || data.GetCurrentGoodsData() == null)
@@ -1024,7 +1053,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetButton(17).RootUIComp.Get().SetUIActive(ifCanBuy);
 	}
 
-	// Token: 0x060167C2 RID: 92098 RVA: 0x005B2D9C File Offset: 0x005B0F9C
+	// Token: 0x060141CB RID: 82379 RVA: 0x005DDE64 File Offset: 0x005DC064
 	private void RefreshHaveItem(SkinBuyDetailViewData data)
 	{
 		if (data == null || data.GetCurrentGoodsData() == null)
@@ -1036,7 +1065,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetItem(27).SetUIActive(!ifCanBuy);
 	}
 
-	// Token: 0x060167C3 RID: 92099 RVA: 0x005B2DE0 File Offset: 0x005B0FE0
+	// Token: 0x060141CC RID: 82380 RVA: 0x005DDEA8 File Offset: 0x005DC0A8
 	private void RefreshNotHaveRoleItem(SkinBuyDetailViewData data)
 	{
 		if (data == null || data.GetCurrentGoodsData() == null)
@@ -1048,7 +1077,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetItem(13).SetUIActive(!ifHaveSkinNeedRole);
 	}
 
-	// Token: 0x060167C4 RID: 92100 RVA: 0x005B2E20 File Offset: 0x005B1020
+	// Token: 0x060141CD RID: 82381 RVA: 0x005DDEE8 File Offset: 0x005DC0E8
 	private void RefreshExtraReward(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -1117,7 +1146,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060167C5 RID: 92101 RVA: 0x005B2F68 File Offset: 0x005B1168
+	// Token: 0x060141CE RID: 82382 RVA: 0x005DE030 File Offset: 0x005DC230
 	private void RefreshExtraRewardItem(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -1139,7 +1168,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(50), "PrefabTextitem_RoleSkinExtraAcquisition_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x060167C6 RID: 92102 RVA: 0x005B2FF0 File Offset: 0x005B11F0
+	// Token: 0x060141CF RID: 82383 RVA: 0x005DE0B8 File Offset: 0x005DC2B8
 	private void RefreshEffectItem(SkinBuyDetailViewData data)
 	{
 		if (data == null || data.GetCurrentGoodsData() == null)
@@ -1153,7 +1182,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.GetItem(32).SetUIActive(uiactive);
 	}
 
-	// Token: 0x060167C7 RID: 92103 RVA: 0x005B3050 File Offset: 0x005B1250
+	// Token: 0x060141D0 RID: 82384 RVA: 0x005DE118 File Offset: 0x005DC318
 	private void RefreshCouponPrice(SkinBuyDetailViewData data)
 	{
 		if (data == null || data.GetCurrentGoodsData() == null)
@@ -1193,7 +1222,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		base.SetItemIcon(base.GetTexture(43), priceData.CurrencyId, null, null);
 	}
 
-	// Token: 0x060167C8 RID: 92104 RVA: 0x005B3180 File Offset: 0x005B1380
+	// Token: 0x060141D1 RID: 82385 RVA: 0x005DE248 File Offset: 0x005DC448
 	private void RefreshSexPanel(SkinBuyDetailViewData data)
 	{
 		if (data == null)
@@ -1230,7 +1259,7 @@ public class SkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060167C9 RID: 92105 RVA: 0x005B3214 File Offset: 0x005B1414
+	// Token: 0x060141D2 RID: 82386 RVA: 0x005DE2DC File Offset: 0x005DC4DC
 	protected override void OnTick(float delta)
 	{
 		SkinBuyDetailViewData viewData = this.ViewData;
@@ -1274,31 +1303,34 @@ public class SkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060167CA RID: 92106 RVA: 0x005B331D File Offset: 0x005B151D
+	// Token: 0x060141D3 RID: 82387 RVA: 0x005DE3E5 File Offset: 0x005DC5E5
 	private void OnClickedHelpButton()
 	{
 		HelpController.Instance.OpenHelpById(169);
 	}
 
-	// Token: 0x0400A6EC RID: 42732
+	// Token: 0x0400AAD6 RID: 43734
 	private SkinBuyDetailViewData ViewData;
 
-	// Token: 0x0400A6ED RID: 42733
+	// Token: 0x0400AAD7 RID: 43735
 	private int CurrentSkinTypeIndex;
 
-	// Token: 0x0400A6EE RID: 42734
+	// Token: 0x0400AAD8 RID: 43736
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A6EF RID: 42735
+	// Token: 0x0400AAD9 RID: 43737
 	private TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x0400A6F0 RID: 42736
+	// Token: 0x0400AADA RID: 43738
 	private FVector? CurrentDragPosition;
 
-	// Token: 0x0400A6F1 RID: 42737
-	private UiCameraControlRotationComponent UiCameraControlRotationComponent;
+	// Token: 0x0400AADB RID: 43739
+	private UiCameraInputComponent UiCameraInputComponent;
 
-	// Token: 0x0400A6F2 RID: 42738
+	// Token: 0x0400AADC RID: 43740
+	private UiCameraLogicComponent UiCameraLogicComponent;
+
+	// Token: 0x0400AADD RID: 43741
 	[Nullable(new byte[]
 	{
 		2,
@@ -1307,123 +1339,123 @@ public class SkinBuyDetailView : UiTickViewBase
 	})]
 	private GenericLayout<SkinRewardItemGrid, SkinRewardData> ItemLayout;
 
-	// Token: 0x0400A6F3 RID: 42739
+	// Token: 0x0400AADE RID: 43742
 	private double LastClickButtonTime;
 
-	// Token: 0x0400A6F4 RID: 42740
+	// Token: 0x0400AADF RID: 43743
 	private double LastSwitchTime;
 
-	// Token: 0x0400A6F5 RID: 42741
+	// Token: 0x0400AAE0 RID: 43744
 	private bool CurrentDiscountState;
 
-	// Token: 0x0400A6F6 RID: 42742
+	// Token: 0x0400AAE1 RID: 43745
 	private int CurrentPayItemId;
 
-	// Token: 0x02009070 RID: 36976
+	// Token: 0x020082B7 RID: 33463
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402ECDF RID: 191711
+		// Token: 0x0402A3D7 RID: 173015
 		CaptionItem,
-		// Token: 0x0402ECE0 RID: 191712
+		// Token: 0x0402A3D8 RID: 173016
 		OnlyUiToggle,
-		// Token: 0x0402ECE1 RID: 191713
+		// Token: 0x0402A3D9 RID: 173017
 		DetailIconButton,
-		// Token: 0x0402ECE2 RID: 191714
+		// Token: 0x0402A3DA RID: 173018
 		ButtonLeft,
-		// Token: 0x0402ECE3 RID: 191715
+		// Token: 0x0402A3DB RID: 173019
 		ButtonRight,
-		// Token: 0x0402ECE4 RID: 191716
+		// Token: 0x0402A3DC RID: 173020
 		TitleText,
-		// Token: 0x0402ECE5 RID: 191717
+		// Token: 0x0402A3DD RID: 173021
 		SubTitleText,
-		// Token: 0x0402ECE6 RID: 191718
+		// Token: 0x0402A3DE RID: 173022
 		SwitchItem,
-		// Token: 0x0402ECE7 RID: 191719
+		// Token: 0x0402A3DF RID: 173023
 		ToggleLeft,
-		// Token: 0x0402ECE8 RID: 191720
+		// Token: 0x0402A3E0 RID: 173024
 		ExtraRewardItem,
-		// Token: 0x0402ECE9 RID: 191721
+		// Token: 0x0402A3E1 RID: 173025
 		ExtraRewardContentHorizontalLayout,
-		// Token: 0x0402ECEA RID: 191722
+		// Token: 0x0402A3E2 RID: 173026
 		RewardItem,
-		// Token: 0x0402ECEB RID: 191723
+		// Token: 0x0402A3E3 RID: 173027
 		DescText,
-		// Token: 0x0402ECEC RID: 191724
+		// Token: 0x0402A3E4 RID: 173028
 		NotHaveRoleItem,
-		// Token: 0x0402ECED RID: 191725
+		// Token: 0x0402A3E5 RID: 173029
 		BuyItemIcon,
-		// Token: 0x0402ECEE RID: 191726
+		// Token: 0x0402A3E6 RID: 173030
 		NowPrice,
-		// Token: 0x0402ECEF RID: 191727
+		// Token: 0x0402A3E7 RID: 173031
 		BeforePrice,
-		// Token: 0x0402ECF0 RID: 191728
+		// Token: 0x0402A3E8 RID: 173032
 		BuyButton,
-		// Token: 0x0402ECF1 RID: 191729
+		// Token: 0x0402A3E9 RID: 173033
 		DiscountItem,
-		// Token: 0x0402ECF2 RID: 191730
+		// Token: 0x0402A3EA RID: 173034
 		DiscountText,
-		// Token: 0x0402ECF3 RID: 191731
+		// Token: 0x0402A3EB RID: 173035
 		LeftTimeItem,
-		// Token: 0x0402ECF4 RID: 191732
+		// Token: 0x0402A3EC RID: 173036
 		LeftTimeText,
-		// Token: 0x0402ECF5 RID: 191733
+		// Token: 0x0402A3ED RID: 173037
 		QualityTexture,
-		// Token: 0x0402ECF6 RID: 191734
+		// Token: 0x0402A3EE RID: 173038
 		RoleTexture,
-		// Token: 0x0402ECF7 RID: 191735
+		// Token: 0x0402A3EF RID: 173039
 		FrameTexture,
-		// Token: 0x0402ECF8 RID: 191736
+		// Token: 0x0402A3F0 RID: 173040
 		WeaponRootItem,
-		// Token: 0x0402ECF9 RID: 191737
+		// Token: 0x0402A3F1 RID: 173041
 		WeaponTexture,
-		// Token: 0x0402ECFA RID: 191738
+		// Token: 0x0402A3F2 RID: 173042
 		HaveItem,
-		// Token: 0x0402ECFB RID: 191739
+		// Token: 0x0402A3F3 RID: 173043
 		HideUiParentItem,
-		// Token: 0x0402ECFC RID: 191740
+		// Token: 0x0402A3F4 RID: 173044
 		DragComponent,
-		// Token: 0x0402ECFD RID: 191741
+		// Token: 0x0402A3F5 RID: 173045
 		WeaponQualityTexture,
-		// Token: 0x0402ECFE RID: 191742
+		// Token: 0x0402A3F6 RID: 173046
 		ToggleRight,
-		// Token: 0x0402ECFF RID: 191743
+		// Token: 0x0402A3F7 RID: 173047
 		EffectItemB,
-		// Token: 0x0402ED00 RID: 191744
+		// Token: 0x0402A3F8 RID: 173048
 		EffectItemA,
-		// Token: 0x0402ED01 RID: 191745
+		// Token: 0x0402A3F9 RID: 173049
 		TextureToggleLeft,
-		// Token: 0x0402ED02 RID: 191746
+		// Token: 0x0402A3FA RID: 173050
 		TextToggleLeft,
-		// Token: 0x0402ED03 RID: 191747
+		// Token: 0x0402A3FB RID: 173051
 		TextureToggleRight,
-		// Token: 0x0402ED04 RID: 191748
+		// Token: 0x0402A3FC RID: 173052
 		TextToggleRight,
-		// Token: 0x0402ED05 RID: 191749
+		// Token: 0x0402A3FD RID: 173053
 		ItemNonCouponPrice,
-		// Token: 0x0402ED06 RID: 191750
+		// Token: 0x0402A3FE RID: 173054
 		ItemCouponPrice,
-		// Token: 0x0402ED07 RID: 191751
+		// Token: 0x0402A3FF RID: 173055
 		TextCouponPrice,
-		// Token: 0x0402ED08 RID: 191752
+		// Token: 0x0402A400 RID: 173056
 		TextureCouponIcon,
-		// Token: 0x0402ED09 RID: 191753
+		// Token: 0x0402A401 RID: 173057
 		TextOriginPrice,
-		// Token: 0x0402ED0A RID: 191754
+		// Token: 0x0402A402 RID: 173058
 		TexturePriceIcon,
-		// Token: 0x0402ED0B RID: 191755
+		// Token: 0x0402A403 RID: 173059
 		TextCurPrice,
-		// Token: 0x0402ED0C RID: 191756
+		// Token: 0x0402A404 RID: 173060
 		ItemGamePadKeyTipA,
-		// Token: 0x0402ED0D RID: 191757
+		// Token: 0x0402A405 RID: 173061
 		ItemGamePadKeyTipB,
-		// Token: 0x0402ED0E RID: 191758
+		// Token: 0x0402A406 RID: 173062
 		ToggleLayout,
-		// Token: 0x0402ED0F RID: 191759
+		// Token: 0x0402A407 RID: 173063
 		ToggleMale,
-		// Token: 0x0402ED10 RID: 191760
+		// Token: 0x0402A408 RID: 173064
 		ToggleFemale,
-		// Token: 0x0402ED11 RID: 191761
+		// Token: 0x0402A409 RID: 173065
 		ExtraRewardText
 	}
 }

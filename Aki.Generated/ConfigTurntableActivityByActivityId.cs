@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A5B RID: 2651
+	// Token: 0x02000B30 RID: 2864
 	public class ConfigTurntableActivityByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E36 RID: 15926 RVA: 0x001B9B58 File Offset: 0x001B7D58
+		// Token: 0x06004334 RID: 17204 RVA: 0x001D8EEC File Offset: 0x001D70EC
 		static ConfigTurntableActivityByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTurntableActivityByActivityId.CreateStaticDefaultValue), new Action(ConfigTurntableActivityByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E37 RID: 15927 RVA: 0x001B9B78 File Offset: 0x001B7D78
+		// Token: 0x06004335 RID: 17205 RVA: 0x001D8F0C File Offset: 0x001D710C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTurntableActivityByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E38 RID: 15928 RVA: 0x001B9BF7 File Offset: 0x001B7DF7
+		// Token: 0x06004336 RID: 17206 RVA: 0x001D8F8B File Offset: 0x001D718B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTurntableActivityByActivityId.LogPair = null;
 			ConfigTurntableActivityByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06003E39 RID: 15929 RVA: 0x001B9C05 File Offset: 0x001B7E05
+		// Token: 0x06004337 RID: 17207 RVA: 0x001D8F99 File Offset: 0x001D7199
 		public static void Init()
 		{
 			ConfigTurntableActivityByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigTurntableActivityByActivityId.HandleId, "db_turntableactivity.db", "select BinData from `TurntableActivity` where ActivityId = ?");
 		}
 
-		// Token: 0x06003E3A RID: 15930 RVA: 0x001B9C20 File Offset: 0x001B7E20
+		// Token: 0x06004338 RID: 17208 RVA: 0x001D8FB4 File Offset: 0x001D71B4
 		[NullableContext(2)]
 		public static IReadOnlyList<TurntableActivity> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004863 RID: 18531
+		// Token: 0x04004E36 RID: 20022
 		private const string DB = "db_turntableactivity.db";
 
-		// Token: 0x04004864 RID: 18532
+		// Token: 0x04004E37 RID: 20023
 		private const string FILE = "z.转盘活动.xlsx";
 
-		// Token: 0x04004865 RID: 18533
+		// Token: 0x04004E38 RID: 20024
 		private const string TABLE = "TurntableActivity";
 
-		// Token: 0x04004866 RID: 18534
+		// Token: 0x04004E39 RID: 20025
 		private const string COMMAND = "select BinData from `TurntableActivity` where ActivityId = ?";
 
-		// Token: 0x04004867 RID: 18535
+		// Token: 0x04004E3A RID: 20026
 		private const string KEY_PREFIX = "TurntableActivityByActivityId";
 
-		// Token: 0x04004868 RID: 18536
+		// Token: 0x04004E3B RID: 20027
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004869 RID: 18537
+		// Token: 0x04004E3C RID: 20028
 		private static int HandleId;
 	}
 }

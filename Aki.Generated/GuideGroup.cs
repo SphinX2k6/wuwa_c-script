@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D1A RID: 3354
+	// Token: 0x02000DFF RID: 3583
 	public struct GuideGroup : IFlatbufferObject
 	{
-		// Token: 0x1700167A RID: 5754
-		// (get) Token: 0x06007CF0 RID: 31984 RVA: 0x002509FC File Offset: 0x0024EBFC
+		// Token: 0x170016DB RID: 5851
+		// (get) Token: 0x06008308 RID: 33544 RVA: 0x0026F380 File Offset: 0x0026D580
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007CF1 RID: 31985 RVA: 0x00250A09 File Offset: 0x0024EC09
+		// Token: 0x06008309 RID: 33545 RVA: 0x0026F38D File Offset: 0x0026D58D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007CF2 RID: 31986 RVA: 0x00250A10 File Offset: 0x0024EC10
+		// Token: 0x0600830A RID: 33546 RVA: 0x0026F394 File Offset: 0x0026D594
 		public static GuideGroup GetRootAsGuideGroup(ByteBuffer _bb)
 		{
 			return GuideGroup.GetRootAsGuideGroup(_bb, default(GuideGroup));
 		}
 
-		// Token: 0x06007CF3 RID: 31987 RVA: 0x00250A2C File Offset: 0x0024EC2C
+		// Token: 0x0600830B RID: 33547 RVA: 0x0026F3B0 File Offset: 0x0026D5B0
 		public static GuideGroup GetRootAsGuideGroup(ByteBuffer _bb, GuideGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007CF4 RID: 31988 RVA: 0x00250A49 File Offset: 0x0024EC49
+		// Token: 0x0600830C RID: 33548 RVA: 0x0026F3CD File Offset: 0x0026D5CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007CF5 RID: 31989 RVA: 0x00250A58 File Offset: 0x0024EC58
+		// Token: 0x0600830D RID: 33549 RVA: 0x0026F3DC File Offset: 0x0026D5DC
 		public GuideGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700167B RID: 5755
-		// (get) Token: 0x06007CF6 RID: 31990 RVA: 0x00250A68 File Offset: 0x0024EC68
+		// Token: 0x170016DC RID: 5852
+		// (get) Token: 0x0600830E RID: 33550 RVA: 0x0026F3EC File Offset: 0x0026D5EC
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007CF7 RID: 31991 RVA: 0x00250AA4 File Offset: 0x0024ECA4
+		// Token: 0x0600830F RID: 33551 RVA: 0x0026F428 File Offset: 0x0026D628
 		public int Step(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700167C RID: 5756
-		// (get) Token: 0x06007CF8 RID: 31992 RVA: 0x00250AE4 File Offset: 0x0024ECE4
+		// Token: 0x170016DD RID: 5853
+		// (get) Token: 0x06008310 RID: 33552 RVA: 0x0026F468 File Offset: 0x0026D668
 		public int StepLength
 		{
 			get
@@ -91,19 +91,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007CF9 RID: 31993 RVA: 0x00250B0F File Offset: 0x0024ED0F
+		// Token: 0x06008311 RID: 33553 RVA: 0x0026F493 File Offset: 0x0026D693
 		public Span<int> GetStepBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06007CFA RID: 31994 RVA: 0x00250B1E File Offset: 0x0024ED1E
+		// Token: 0x06008312 RID: 33554 RVA: 0x0026F4A2 File Offset: 0x0026D6A2
 		public int[] GetStepArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06007CFB RID: 31995 RVA: 0x00250B38 File Offset: 0x0024ED38
+		// Token: 0x06008313 RID: 33555 RVA: 0x0026F4BC File Offset: 0x0026D6BC
 		public int MultiPlatformStep(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -114,8 +114,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700167D RID: 5757
-		// (get) Token: 0x06007CFC RID: 31996 RVA: 0x00250B78 File Offset: 0x0024ED78
+		// Token: 0x170016DE RID: 5854
+		// (get) Token: 0x06008314 RID: 33556 RVA: 0x0026F4FC File Offset: 0x0026D6FC
 		public int MultiPlatformStepLength
 		{
 			get
@@ -129,21 +129,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007CFD RID: 31997 RVA: 0x00250BA3 File Offset: 0x0024EDA3
+		// Token: 0x06008315 RID: 33557 RVA: 0x0026F527 File Offset: 0x0026D727
 		public Span<int> GetMultiPlatformStepBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06007CFE RID: 31998 RVA: 0x00250BB2 File Offset: 0x0024EDB2
+		// Token: 0x06008316 RID: 33558 RVA: 0x0026F536 File Offset: 0x0026D736
 		public int[] GetMultiPlatformStepArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700167E RID: 5758
-		// (get) Token: 0x06007CFF RID: 31999 RVA: 0x00250BCC File Offset: 0x0024EDCC
-		public int OpenLimitCondition
+		// Token: 0x170016DF RID: 5855
+		// (get) Token: 0x06008317 RID: 33559 RVA: 0x0026F550 File Offset: 0x0026D750
+		public int OpenLimitActivityCondition
 		{
 			get
 			{
@@ -156,9 +156,9 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700167F RID: 5759
-		// (get) Token: 0x06007D00 RID: 32000 RVA: 0x00250C0C File Offset: 0x0024EE0C
-		public int AutoOpenCondition
+		// Token: 0x170016E0 RID: 5856
+		// (get) Token: 0x06008318 RID: 33560 RVA: 0x0026F590 File Offset: 0x0026D790
+		public int OpenLimitCondition
 		{
 			get
 			{
@@ -171,20 +171,9 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D01 RID: 32001 RVA: 0x00250C4C File Offset: 0x0024EE4C
-		public int LimitRepeat(int j)
-		{
-			int num = this.__p.__offset(14);
-			if (num == 0)
-			{
-				return 0;
-			}
-			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
-		}
-
-		// Token: 0x17001680 RID: 5760
-		// (get) Token: 0x06007D02 RID: 32002 RVA: 0x00250C8C File Offset: 0x0024EE8C
-		public int LimitRepeatLength
+		// Token: 0x170016E1 RID: 5857
+		// (get) Token: 0x06008319 RID: 33561 RVA: 0x0026F5D0 File Offset: 0x0026D7D0
+		public int AutoOpenActivityCondition
 		{
 			get
 			{
@@ -193,36 +182,13 @@ namespace Aki.Config
 				{
 					return 0;
 				}
-				return this.__p.__vector_len(num);
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x06007D03 RID: 32003 RVA: 0x00250CB8 File Offset: 0x0024EEB8
-		public Span<int> GetLimitRepeatBytes()
-		{
-			return this.__p.__vector_as_span<int>(14, 4);
-		}
-
-		// Token: 0x06007D04 RID: 32004 RVA: 0x00250CC8 File Offset: 0x0024EEC8
-		public int[] GetLimitRepeatArray()
-		{
-			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
-		}
-
-		// Token: 0x06007D05 RID: 32005 RVA: 0x00250CE0 File Offset: 0x0024EEE0
-		public int DungeonId(int j)
-		{
-			int num = this.__p.__offset(16);
-			if (num == 0)
-			{
-				return 0;
-			}
-			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
-		}
-
-		// Token: 0x17001681 RID: 5761
-		// (get) Token: 0x06007D06 RID: 32006 RVA: 0x00250D20 File Offset: 0x0024EF20
-		public int DungeonIdLength
+		// Token: 0x170016E2 RID: 5858
+		// (get) Token: 0x0600831A RID: 33562 RVA: 0x0026F610 File Offset: 0x0026D810
+		public int AutoOpenCondition
 		{
 			get
 			{
@@ -231,36 +197,24 @@ namespace Aki.Config
 				{
 					return 0;
 				}
-				return this.__p.__vector_len(num);
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x06007D07 RID: 32007 RVA: 0x00250D4C File Offset: 0x0024EF4C
-		public Span<int> GetDungeonIdBytes()
-		{
-			return this.__p.__vector_as_span<int>(16, 4);
-		}
-
-		// Token: 0x06007D08 RID: 32008 RVA: 0x00250D5C File Offset: 0x0024EF5C
-		public int[] GetDungeonIdArray()
-		{
-			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
-		}
-
-		// Token: 0x06007D09 RID: 32009 RVA: 0x00250D74 File Offset: 0x0024EF74
-		public string DungeonSets(int j)
+		// Token: 0x0600831B RID: 33563 RVA: 0x0026F650 File Offset: 0x0026D850
+		public int LimitRepeat(int j)
 		{
 			int num = this.__p.__offset(18);
 			if (num == 0)
 			{
-				return null;
+				return 0;
 			}
-			return this.__p.__string(this.__p.__vector(num) + j * 4);
+			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001682 RID: 5762
-		// (get) Token: 0x06007D0A RID: 32010 RVA: 0x00250DB0 File Offset: 0x0024EFB0
-		public int DungeonSetsLength
+		// Token: 0x170016E3 RID: 5859
+		// (get) Token: 0x0600831C RID: 33564 RVA: 0x0026F690 File Offset: 0x0026D890
+		public int LimitRepeatLength
 		{
 			get
 			{
@@ -273,20 +227,32 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D0B RID: 32011 RVA: 0x00250DDC File Offset: 0x0024EFDC
-		public IntPair? DungeonTypes(int j)
+		// Token: 0x0600831D RID: 33565 RVA: 0x0026F6BC File Offset: 0x0026D8BC
+		public Span<int> GetLimitRepeatBytes()
+		{
+			return this.__p.__vector_as_span<int>(18, 4);
+		}
+
+		// Token: 0x0600831E RID: 33566 RVA: 0x0026F6CC File Offset: 0x0026D8CC
+		public int[] GetLimitRepeatArray()
+		{
+			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
+		}
+
+		// Token: 0x0600831F RID: 33567 RVA: 0x0026F6E4 File Offset: 0x0026D8E4
+		public int DungeonId(int j)
 		{
 			int num = this.__p.__offset(20);
 			if (num == 0)
 			{
-				return null;
+				return 0;
 			}
-			return new IntPair?(default(IntPair).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
+			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001683 RID: 5763
-		// (get) Token: 0x06007D0C RID: 32012 RVA: 0x00250E40 File Offset: 0x0024F040
-		public int DungeonTypesLength
+		// Token: 0x170016E4 RID: 5860
+		// (get) Token: 0x06008320 RID: 33568 RVA: 0x0026F724 File Offset: 0x0026D924
+		public int DungeonIdLength
 		{
 			get
 			{
@@ -299,65 +265,36 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001684 RID: 5764
-		// (get) Token: 0x06007D0D RID: 32013 RVA: 0x00250E6C File Offset: 0x0024F06C
-		public bool ResetInDungeon
+		// Token: 0x06008321 RID: 33569 RVA: 0x0026F750 File Offset: 0x0026D950
+		public Span<int> GetDungeonIdBytes()
+		{
+			return this.__p.__vector_as_span<int>(20, 4);
+		}
+
+		// Token: 0x06008322 RID: 33570 RVA: 0x0026F760 File Offset: 0x0026D960
+		public int[] GetDungeonIdArray()
+		{
+			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
+		}
+
+		// Token: 0x06008323 RID: 33571 RVA: 0x0026F778 File Offset: 0x0026D978
+		public string DungeonSets(int j)
+		{
+			int num = this.__p.__offset(22);
+			if (num == 0)
+			{
+				return null;
+			}
+			return this.__p.__string(this.__p.__vector(num) + j * 4);
+		}
+
+		// Token: 0x170016E5 RID: 5861
+		// (get) Token: 0x06008324 RID: 33572 RVA: 0x0026F7B4 File Offset: 0x0026D9B4
+		public int DungeonSetsLength
 		{
 			get
 			{
 				int num = this.__p.__offset(22);
-				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
-			}
-		}
-
-		// Token: 0x17001685 RID: 5765
-		// (get) Token: 0x06007D0E RID: 32014 RVA: 0x00250EAC File Offset: 0x0024F0AC
-		public int OnlineMode
-		{
-			get
-			{
-				int num = this.__p.__offset(24);
-				if (num == 0)
-				{
-					return 1;
-				}
-				return this.__p.bb.GetInt(num + this.__p.bb_pos);
-			}
-		}
-
-		// Token: 0x17001686 RID: 5766
-		// (get) Token: 0x06007D0F RID: 32015 RVA: 0x00250EEC File Offset: 0x0024F0EC
-		public int Priority
-		{
-			get
-			{
-				int num = this.__p.__offset(26);
-				if (num == 0)
-				{
-					return 0;
-				}
-				return this.__p.bb.GetInt(num + this.__p.bb_pos);
-			}
-		}
-
-		// Token: 0x06007D10 RID: 32016 RVA: 0x00250F2C File Offset: 0x0024F12C
-		public int PriorityBreakExclude(int j)
-		{
-			int num = this.__p.__offset(28);
-			if (num == 0)
-			{
-				return 0;
-			}
-			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
-		}
-
-		// Token: 0x17001687 RID: 5767
-		// (get) Token: 0x06007D11 RID: 32017 RVA: 0x00250F6C File Offset: 0x0024F16C
-		public int PriorityBreakExcludeLength
-		{
-			get
-			{
-				int num = this.__p.__offset(28);
 				if (num == 0)
 				{
 					return 0;
@@ -366,143 +303,224 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D12 RID: 32018 RVA: 0x00250F98 File Offset: 0x0024F198
+		// Token: 0x06008325 RID: 33573 RVA: 0x0026F7E0 File Offset: 0x0026D9E0
+		public IntPair? DungeonTypes(int j)
+		{
+			int num = this.__p.__offset(24);
+			if (num == 0)
+			{
+				return null;
+			}
+			return new IntPair?(default(IntPair).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
+		}
+
+		// Token: 0x170016E6 RID: 5862
+		// (get) Token: 0x06008326 RID: 33574 RVA: 0x0026F844 File Offset: 0x0026DA44
+		public int DungeonTypesLength
+		{
+			get
+			{
+				int num = this.__p.__offset(24);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.__vector_len(num);
+			}
+		}
+
+		// Token: 0x170016E7 RID: 5863
+		// (get) Token: 0x06008327 RID: 33575 RVA: 0x0026F870 File Offset: 0x0026DA70
+		public bool ResetInDungeon
+		{
+			get
+			{
+				int num = this.__p.__offset(26);
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+			}
+		}
+
+		// Token: 0x170016E8 RID: 5864
+		// (get) Token: 0x06008328 RID: 33576 RVA: 0x0026F8B0 File Offset: 0x0026DAB0
+		public int OnlineMode
+		{
+			get
+			{
+				int num = this.__p.__offset(28);
+				if (num == 0)
+				{
+					return 1;
+				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x170016E9 RID: 5865
+		// (get) Token: 0x06008329 RID: 33577 RVA: 0x0026F8F0 File Offset: 0x0026DAF0
+		public int Priority
+		{
+			get
+			{
+				int num = this.__p.__offset(30);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x0600832A RID: 33578 RVA: 0x0026F930 File Offset: 0x0026DB30
+		public int PriorityBreakExclude(int j)
+		{
+			int num = this.__p.__offset(32);
+			if (num == 0)
+			{
+				return 0;
+			}
+			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
+		}
+
+		// Token: 0x170016EA RID: 5866
+		// (get) Token: 0x0600832B RID: 33579 RVA: 0x0026F970 File Offset: 0x0026DB70
+		public int PriorityBreakExcludeLength
+		{
+			get
+			{
+				int num = this.__p.__offset(32);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.__vector_len(num);
+			}
+		}
+
+		// Token: 0x0600832C RID: 33580 RVA: 0x0026F99C File Offset: 0x0026DB9C
 		public Span<int> GetPriorityBreakExcludeBytes()
 		{
-			return this.__p.__vector_as_span<int>(28, 4);
+			return this.__p.__vector_as_span<int>(32, 4);
 		}
 
-		// Token: 0x06007D13 RID: 32019 RVA: 0x00250FA8 File Offset: 0x0024F1A8
+		// Token: 0x0600832D RID: 33581 RVA: 0x0026F9AC File Offset: 0x0026DBAC
 		public int[] GetPriorityBreakExcludeArray()
 		{
-			return this.__p.__vector_as_array<int>(28) ?? Array.Empty<int>();
+			return this.__p.__vector_as_array<int>(32) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06007D14 RID: 32020 RVA: 0x00250FC0 File Offset: 0x0024F1C0
+		// Token: 0x0600832E RID: 33582 RVA: 0x0026F9C4 File Offset: 0x0026DBC4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DungeonIdIter()或GetDungeonIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DungeonId()
+		public int[] DungeonId()
 		{
-			GuideGroup guideGroup = this;
-			return guideGroup.GetDungeonIdArray() ?? Array.Empty<int>();
+			return this.GetDungeonIdArray();
 		}
 
-		// Token: 0x06007D15 RID: 32021 RVA: 0x00250FE4 File Offset: 0x0024F1E4
+		// Token: 0x0600832F RID: 33583 RVA: 0x0026F9CC File Offset: 0x0026DBCC
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DungeonIdIter()
+		public IEnumerable<int> DungeonIdIter()
 		{
-			GuideGroup.<DungeonIdIter>d__52 <DungeonIdIter>d__ = new GuideGroup.<DungeonIdIter>d__52(-2);
+			GuideGroup.<DungeonIdIter>d__56 <DungeonIdIter>d__ = new GuideGroup.<DungeonIdIter>d__56(-2);
 			<DungeonIdIter>d__.<>3__<>4__this = this;
 			return <DungeonIdIter>d__;
 		}
 
-		// Token: 0x06007D16 RID: 32022 RVA: 0x00250FF9 File Offset: 0x0024F1F9
+		// Token: 0x06008330 RID: 33584 RVA: 0x0026F9E1 File Offset: 0x0026DBE1
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DungeonSetsIter()或GetDungeonSetsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] DungeonSets()
+		public string[] DungeonSets()
 		{
 			return this.DungeonSetsIter().ToArray<string>();
 		}
 
-		// Token: 0x06007D17 RID: 32023 RVA: 0x00251006 File Offset: 0x0024F206
+		// Token: 0x06008331 RID: 33585 RVA: 0x0026F9EE File Offset: 0x0026DBEE
 		[NullableContext(1)]
-		public readonly IEnumerable<string> DungeonSetsIter()
+		public IEnumerable<string> DungeonSetsIter()
 		{
-			GuideGroup.<DungeonSetsIter>d__54 <DungeonSetsIter>d__ = new GuideGroup.<DungeonSetsIter>d__54(-2);
+			GuideGroup.<DungeonSetsIter>d__58 <DungeonSetsIter>d__ = new GuideGroup.<DungeonSetsIter>d__58(-2);
 			<DungeonSetsIter>d__.<>3__<>4__this = this;
 			return <DungeonSetsIter>d__;
 		}
 
-		// Token: 0x06007D18 RID: 32024 RVA: 0x0025101B File Offset: 0x0024F21B
+		// Token: 0x06008332 RID: 33586 RVA: 0x0026FA03 File Offset: 0x0026DC03
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DungeonTypesIter()或GetDungeonTypesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntPair[] DungeonTypes()
+		public IntPair[] DungeonTypes()
 		{
 			return this.DungeonTypesIter().ToArray<IntPair>();
 		}
 
-		// Token: 0x06007D19 RID: 32025 RVA: 0x00251028 File Offset: 0x0024F228
+		// Token: 0x06008333 RID: 33587 RVA: 0x0026FA10 File Offset: 0x0026DC10
 		[NullableContext(1)]
-		public readonly IEnumerable<IntPair> DungeonTypesIter()
+		public IEnumerable<IntPair> DungeonTypesIter()
 		{
-			GuideGroup.<DungeonTypesIter>d__56 <DungeonTypesIter>d__ = new GuideGroup.<DungeonTypesIter>d__56(-2);
+			GuideGroup.<DungeonTypesIter>d__60 <DungeonTypesIter>d__ = new GuideGroup.<DungeonTypesIter>d__60(-2);
 			<DungeonTypesIter>d__.<>3__<>4__this = this;
 			return <DungeonTypesIter>d__;
 		}
 
-		// Token: 0x06007D1A RID: 32026 RVA: 0x00251040 File Offset: 0x0024F240
+		// Token: 0x06008334 RID: 33588 RVA: 0x0026FA25 File Offset: 0x0026DC25
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LimitRepeatIter()或GetLimitRepeatBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LimitRepeat()
+		public int[] LimitRepeat()
 		{
-			GuideGroup guideGroup = this;
-			return guideGroup.GetLimitRepeatArray() ?? Array.Empty<int>();
+			return this.GetLimitRepeatArray();
 		}
 
-		// Token: 0x06007D1B RID: 32027 RVA: 0x00251064 File Offset: 0x0024F264
+		// Token: 0x06008335 RID: 33589 RVA: 0x0026FA2D File Offset: 0x0026DC2D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LimitRepeatIter()
+		public IEnumerable<int> LimitRepeatIter()
 		{
-			GuideGroup.<LimitRepeatIter>d__58 <LimitRepeatIter>d__ = new GuideGroup.<LimitRepeatIter>d__58(-2);
+			GuideGroup.<LimitRepeatIter>d__62 <LimitRepeatIter>d__ = new GuideGroup.<LimitRepeatIter>d__62(-2);
 			<LimitRepeatIter>d__.<>3__<>4__this = this;
 			return <LimitRepeatIter>d__;
 		}
 
-		// Token: 0x06007D1C RID: 32028 RVA: 0x0025107C File Offset: 0x0024F27C
+		// Token: 0x06008336 RID: 33590 RVA: 0x0026FA42 File Offset: 0x0026DC42
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MultiPlatformStepIter()或GetMultiPlatformStepBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MultiPlatformStep()
+		public int[] MultiPlatformStep()
 		{
-			GuideGroup guideGroup = this;
-			return guideGroup.GetMultiPlatformStepArray() ?? Array.Empty<int>();
+			return this.GetMultiPlatformStepArray();
 		}
 
-		// Token: 0x06007D1D RID: 32029 RVA: 0x002510A0 File Offset: 0x0024F2A0
+		// Token: 0x06008337 RID: 33591 RVA: 0x0026FA4A File Offset: 0x0026DC4A
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MultiPlatformStepIter()
+		public IEnumerable<int> MultiPlatformStepIter()
 		{
-			GuideGroup.<MultiPlatformStepIter>d__60 <MultiPlatformStepIter>d__ = new GuideGroup.<MultiPlatformStepIter>d__60(-2);
+			GuideGroup.<MultiPlatformStepIter>d__64 <MultiPlatformStepIter>d__ = new GuideGroup.<MultiPlatformStepIter>d__64(-2);
 			<MultiPlatformStepIter>d__.<>3__<>4__this = this;
 			return <MultiPlatformStepIter>d__;
 		}
 
-		// Token: 0x06007D1E RID: 32030 RVA: 0x002510B8 File Offset: 0x0024F2B8
+		// Token: 0x06008338 RID: 33592 RVA: 0x0026FA5F File Offset: 0x0026DC5F
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PriorityBreakExcludeIter()或GetPriorityBreakExcludeBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PriorityBreakExclude()
+		public int[] PriorityBreakExclude()
 		{
-			GuideGroup guideGroup = this;
-			return guideGroup.GetPriorityBreakExcludeArray() ?? Array.Empty<int>();
+			return this.GetPriorityBreakExcludeArray();
 		}
 
-		// Token: 0x06007D1F RID: 32031 RVA: 0x002510DC File Offset: 0x0024F2DC
+		// Token: 0x06008339 RID: 33593 RVA: 0x0026FA67 File Offset: 0x0026DC67
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PriorityBreakExcludeIter()
+		public IEnumerable<int> PriorityBreakExcludeIter()
 		{
-			GuideGroup.<PriorityBreakExcludeIter>d__62 <PriorityBreakExcludeIter>d__ = new GuideGroup.<PriorityBreakExcludeIter>d__62(-2);
+			GuideGroup.<PriorityBreakExcludeIter>d__66 <PriorityBreakExcludeIter>d__ = new GuideGroup.<PriorityBreakExcludeIter>d__66(-2);
 			<PriorityBreakExcludeIter>d__.<>3__<>4__this = this;
 			return <PriorityBreakExcludeIter>d__;
 		}
 
-		// Token: 0x06007D20 RID: 32032 RVA: 0x002510F4 File Offset: 0x0024F2F4
+		// Token: 0x0600833A RID: 33594 RVA: 0x0026FA7C File Offset: 0x0026DC7C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用StepIter()或GetStepBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Step()
+		public int[] Step()
 		{
-			GuideGroup guideGroup = this;
-			return guideGroup.GetStepArray() ?? Array.Empty<int>();
+			return this.GetStepArray();
 		}
 
-		// Token: 0x06007D21 RID: 32033 RVA: 0x00251118 File Offset: 0x0024F318
+		// Token: 0x0600833B RID: 33595 RVA: 0x0026FA84 File Offset: 0x0026DC84
 		[NullableContext(1)]
-		public readonly IEnumerable<int> StepIter()
+		public IEnumerable<int> StepIter()
 		{
-			GuideGroup.<StepIter>d__64 <StepIter>d__ = new GuideGroup.<StepIter>d__64(-2);
+			GuideGroup.<StepIter>d__68 <StepIter>d__ = new GuideGroup.<StepIter>d__68(-2);
 			<StepIter>d__.<>3__<>4__this = this;
 			return <StepIter>d__;
 		}
 
-		// Token: 0x04004D92 RID: 19858
+		// Token: 0x04005377 RID: 21367
 		private Table __p;
 	}
 }

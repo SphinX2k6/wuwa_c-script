@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002A0 RID: 672
+	// Token: 0x020002B4 RID: 692
 	public class ConfigExploreRouletteTypeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000FC5 RID: 4037 RVA: 0x000B2A24 File Offset: 0x000B0C24
+		// Token: 0x0600103D RID: 4157 RVA: 0x000B8CE8 File Offset: 0x000B6EE8
 		static ConfigExploreRouletteTypeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExploreRouletteTypeAll.CreateStaticDefaultValue), new Action(ConfigExploreRouletteTypeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000FC6 RID: 4038 RVA: 0x000B2A44 File Offset: 0x000B0C44
+		// Token: 0x0600103E RID: 4158 RVA: 0x000B8D08 File Offset: 0x000B6F08
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExploreRouletteTypeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000FC7 RID: 4039 RVA: 0x000B2AC3 File Offset: 0x000B0CC3
+		// Token: 0x0600103F RID: 4159 RVA: 0x000B8D87 File Offset: 0x000B6F87
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExploreRouletteTypeAll.LogPair = null;
 			ConfigExploreRouletteTypeAll.HandleId = 0;
 		}
 
-		// Token: 0x06000FC8 RID: 4040 RVA: 0x000B2AD1 File Offset: 0x000B0CD1
+		// Token: 0x06001040 RID: 4160 RVA: 0x000B8D95 File Offset: 0x000B6F95
 		public static void Init()
 		{
 			ConfigExploreRouletteTypeAll.HandleId = ConfigCommon.InitDataStatement(ConfigExploreRouletteTypeAll.HandleId, "db_explore_skill.db", "select BinData from `ExploreRouletteType`");
 		}
 
-		// Token: 0x06000FC9 RID: 4041 RVA: 0x000B2AEC File Offset: 0x000B0CEC
+		// Token: 0x06001041 RID: 4161 RVA: 0x000B8DB0 File Offset: 0x000B6FB0
 		[NullableContext(2)]
 		public static IReadOnlyList<ExploreRouletteType> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001244 RID: 4676
+		// Token: 0x040012D0 RID: 4816
 		private const string DB = "db_explore_skill.db";
 
-		// Token: 0x04001245 RID: 4677
+		// Token: 0x040012D1 RID: 4817
 		private const string FILE = "t.探索工具.xlsx";
 
-		// Token: 0x04001246 RID: 4678
+		// Token: 0x040012D2 RID: 4818
 		private const string TABLE = "ExploreRouletteType";
 
-		// Token: 0x04001247 RID: 4679
+		// Token: 0x040012D3 RID: 4819
 		private const string COMMAND = "select BinData from `ExploreRouletteType`";
 
-		// Token: 0x04001248 RID: 4680
+		// Token: 0x040012D4 RID: 4820
 		private const string KEY_PREFIX = "ExploreRouletteTypeAll";
 
-		// Token: 0x04001249 RID: 4681
+		// Token: 0x040012D5 RID: 4821
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400124A RID: 4682
+		// Token: 0x040012D6 RID: 4822
 		private static int HandleId;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065DB RID: 26075
+	// Token: 0x02005559 RID: 21849
 	public enum EBackpackGridType
 	{
-		// Token: 0x04022054 RID: 139348
+		// Token: 0x0401C985 RID: 117125
 		Disable,
-		// Token: 0x04022055 RID: 139349
+		// Token: 0x0401C986 RID: 117126
 		Enable
 	}
 }

@@ -5,23 +5,23 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Functional;
 using CSharpScript.Game.Module.HonamiStory;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001ED8 RID: 7896
+// Token: 0x0200139A RID: 5018
 [NullableContext(1)]
 [Nullable(0)]
-public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
+public class HonamiStoryMainView : UiViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x0600F2CD RID: 62157 RVA: 0x003A8281 File Offset: 0x003A6481
+	// Token: 0x0600C6EC RID: 50924 RVA: 0x003B3D81 File Offset: 0x003B1F81
 	public HonamiStoryMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F2CE RID: 62158 RVA: 0x003A82AC File Offset: 0x003A64AC
+	// Token: 0x0600C6ED RID: 50925 RVA: 0x003B3DAC File Offset: 0x003B1FAC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 19;
@@ -78,7 +78,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F2CF RID: 62159 RVA: 0x003A85B4 File Offset: 0x003A67B4
+	// Token: 0x0600C6EE RID: 50926 RVA: 0x003B40B4 File Offset: 0x003B22B4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryMainView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -89,7 +89,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F2D0 RID: 62160 RVA: 0x003A85F8 File Offset: 0x003A67F8
+	// Token: 0x0600C6EF RID: 50927 RVA: 0x003B40F8 File Offset: 0x003B22F8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnUiBlendInTimeCameraFinished, new Action<UiCameraHandleData>(this.OnCameraFinish));
@@ -97,7 +97,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		EventSystem.Instance.Add<bool>(EEventName.OnHonamiStorySetVisible, new Action<bool>(this.OnHonamiStorySetVisible));
 	}
 
-	// Token: 0x0600F2D1 RID: 62161 RVA: 0x003A865C File Offset: 0x003A685C
+	// Token: 0x0600C6F0 RID: 50928 RVA: 0x003B415C File Offset: 0x003B235C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnUiBlendInTimeCameraFinished, new Action<UiCameraHandleData>(this.OnCameraFinish));
@@ -105,10 +105,10 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		EventSystem.Instance.Remove(EEventName.OnHonamiStorySetVisible, new Action<bool>(this.OnHonamiStorySetVisible));
 	}
 
-	// Token: 0x0600F2D2 RID: 62162 RVA: 0x003A86C0 File Offset: 0x003A68C0
+	// Token: 0x0600C6F1 RID: 50929 RVA: 0x003B41C0 File Offset: 0x003B23C0
 	protected override void OnBeforeShow()
 	{
-		UiCameraAnimationManager.Instance.DisablePlayerActor();
+		UiCameraModel.Instance.DisablePlayerActor();
 		if (!HonamiStoryUtil.CheckInMainQuest())
 		{
 			this.RefreshTimeText();
@@ -133,7 +133,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		this.RefreshAllUiState(!this.IsHideAllUi);
 	}
 
-	// Token: 0x0600F2D3 RID: 62163 RVA: 0x003A8781 File Offset: 0x003A6981
+	// Token: 0x0600C6F2 RID: 50930 RVA: 0x003B4281 File Offset: 0x003B2481
 	protected override void OnStart()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -144,7 +144,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		uiViewSequence.AddSequenceFinishEvent("ShowView", new Action<string>(this.OnShowUiSequenceFinish), false);
 	}
 
-	// Token: 0x0600F2D4 RID: 62164 RVA: 0x003A87A5 File Offset: 0x003A69A5
+	// Token: 0x0600C6F3 RID: 50931 RVA: 0x003B42A5 File Offset: 0x003B24A5
 	protected override void OnBeforeHide()
 	{
 		if (this.TimerHandle != null)
@@ -155,7 +155,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		this.ResetHasClickedAnyButton();
 	}
 
-	// Token: 0x0600F2D5 RID: 62165 RVA: 0x003A87D0 File Offset: 0x003A69D0
+	// Token: 0x0600C6F4 RID: 50932 RVA: 0x003B42D0 File Offset: 0x003B24D0
 	protected override void OnBeforeDestroy()
 	{
 		foreach (HonamiStoryMainButtonItem honamiStoryMainButtonItem in this.ButtonItems.Values)
@@ -166,13 +166,13 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		this.ButtonConfigs = new List<IHonamiStoryMainButtonConfig>();
 	}
 
-	// Token: 0x0600F2D6 RID: 62166 RVA: 0x003A883C File Offset: 0x003A6A3C
+	// Token: 0x0600C6F5 RID: 50933 RVA: 0x003B433C File Offset: 0x003B253C
 	protected override void OnAfterDestroy()
 	{
-		UiCameraAnimationManager.Instance.EnablePlayerActor();
+		UiCameraModel.Instance.EnablePlayerActor();
 	}
 
-	// Token: 0x0600F2D7 RID: 62167 RVA: 0x003A8848 File Offset: 0x003A6A48
+	// Token: 0x0600C6F6 RID: 50934 RVA: 0x003B4348 File Offset: 0x003B2548
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		foreach (HonamiStoryMainButtonItem honamiStoryMainButtonItem in this.ButtonItems.Values)
@@ -185,28 +185,28 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F2D8 RID: 62168 RVA: 0x003A88B4 File Offset: 0x003A6AB4
+	// Token: 0x0600C6F7 RID: 50935 RVA: 0x003B43B4 File Offset: 0x003B25B4
 	private void OnHonamiStorySetVisible(bool _)
 	{
 		this.RefreshAllUiState(true);
 	}
 
-	// Token: 0x0600F2D9 RID: 62169 RVA: 0x003A88BD File Offset: 0x003A6ABD
+	// Token: 0x0600C6F8 RID: 50936 RVA: 0x003B43BD File Offset: 0x003B25BD
 	private void OnCameraFinish(UiCameraHandleData handleData)
 	{
-		if (handleData.ViewName == EUiViewName.HonamiStoryMainView)
+		if (handleData.GetViewName() == EUiViewName.HonamiStoryMainView)
 		{
 			this.RefreshTalkButton(false);
 		}
 	}
 
-	// Token: 0x0600F2DA RID: 62170 RVA: 0x003A88DD File Offset: 0x003A6ADD
+	// Token: 0x0600C6F9 RID: 50937 RVA: 0x003B43DD File Offset: 0x003B25DD
 	private void OnShowUiSequenceFinish(string _)
 	{
 		this.RefreshSpecialButtonsStates();
 	}
 
-	// Token: 0x0600F2DB RID: 62171 RVA: 0x003A88E8 File Offset: 0x003A6AE8
+	// Token: 0x0600C6FA RID: 50938 RVA: 0x003B43E8 File Offset: 0x003B25E8
 	public void RefreshSpecialButtonsStates()
 	{
 		foreach (HonamiStoryMainButtonItem honamiStoryMainButtonItem in this.ButtonItems.Values)
@@ -225,7 +225,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F2DC RID: 62172 RVA: 0x003A898C File Offset: 0x003A6B8C
+	// Token: 0x0600C6FB RID: 50939 RVA: 0x003B448C File Offset: 0x003B268C
 	private void RefreshNormalButtonStates()
 	{
 		foreach (HonamiStoryMainButtonItem honamiStoryMainButtonItem in this.ButtonItems.Values)
@@ -236,7 +236,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F2DD RID: 62173 RVA: 0x003A89F0 File Offset: 0x003A6BF0
+	// Token: 0x0600C6FC RID: 50940 RVA: 0x003B44F0 File Offset: 0x003B26F0
 	private void RefreshTimeText()
 	{
 		HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
@@ -260,7 +260,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F2DE RID: 62174 RVA: 0x003A8A70 File Offset: 0x003A6C70
+	// Token: 0x0600C6FD RID: 50941 RVA: 0x003B4570 File Offset: 0x003B2770
 	private void RefreshTalkButton(bool isActive)
 	{
 		UUIButtonComponent button = base.GetButton(12);
@@ -293,7 +293,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F2DF RID: 62175 RVA: 0x003A8B3C File Offset: 0x003A6D3C
+	// Token: 0x0600C6FE RID: 50942 RVA: 0x003B463C File Offset: 0x003B283C
 	private void RefreshPermanentScore()
 	{
 		HonamiStoryMainButtonItem honamiStoryMainButtonItem;
@@ -305,44 +305,43 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F2E0 RID: 62176 RVA: 0x003A8B6B File Offset: 0x003A6D6B
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x0600C6FF RID: 50943 RVA: 0x003B466B File Offset: 0x003B286B
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
 		if (this.UiCameraName.Length > 0)
 		{
-			UiCameraAnimationController.Instance.PushCameraHandle((EUiViewName)this.UiCameraName, new int?(viewId), isBlend);
+			UiCameraController.Instance.PushCameraHandleByOpenView((EUiViewName)this.UiCameraName, viewId, operationType);
 		}
 	}
 
-	// Token: 0x0600F2E1 RID: 62177 RVA: 0x003A8B97 File Offset: 0x003A6D97
-	[NullableContext(2)]
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x0600C700 RID: 50944 RVA: 0x003B4692 File Offset: 0x003B2892
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
 		if (this.UiCameraName.Length > 0)
 		{
-			UiCameraAnimationController.Instance.PopCameraHandle((EUiViewName)this.UiCameraName, stackTopInfo, closeViewId, popOrDelete);
+			UiCameraController.Instance.PopCameraHandleByCloseView((EUiViewName)this.UiCameraName, nextViewName, closeViewId, operationType);
 		}
 	}
 
-	// Token: 0x0600F2E2 RID: 62178 RVA: 0x003A8BC0 File Offset: 0x003A6DC0
+	// Token: 0x0600C701 RID: 50945 RVA: 0x003B46BB File Offset: 0x003B28BB
 	private bool CheckCanButtonClick()
 	{
 		return !this.HasClickedAnyButton;
 	}
 
-	// Token: 0x0600F2E3 RID: 62179 RVA: 0x003A8BCD File Offset: 0x003A6DCD
+	// Token: 0x0600C702 RID: 50946 RVA: 0x003B46C8 File Offset: 0x003B28C8
 	private void SetHasClickedAnyButton()
 	{
 		this.HasClickedAnyButton = true;
 	}
 
-	// Token: 0x0600F2E4 RID: 62180 RVA: 0x003A8BD6 File Offset: 0x003A6DD6
+	// Token: 0x0600C703 RID: 50947 RVA: 0x003B46D1 File Offset: 0x003B28D1
 	private void ResetHasClickedAnyButton()
 	{
 		this.HasClickedAnyButton = false;
 	}
 
-	// Token: 0x0600F2E5 RID: 62181 RVA: 0x003A8BDF File Offset: 0x003A6DDF
+	// Token: 0x0600C704 RID: 50948 RVA: 0x003B46DA File Offset: 0x003B28DA
 	private void ExecuteButtonAction(Action action)
 	{
 		if (!this.CheckCanButtonClick())
@@ -354,7 +353,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		this.ResetHasClickedAnyButton();
 	}
 
-	// Token: 0x0600F2E6 RID: 62182 RVA: 0x003A8BFC File Offset: 0x003A6DFC
+	// Token: 0x0600C705 RID: 50949 RVA: 0x003B46F8 File Offset: 0x003B28F8
 	private UniTask ExecuteButtonActionAsync(Func<UniTask> action)
 	{
 		HonamiStoryMainView.<ExecuteButtonActionAsync>d__37 <ExecuteButtonActionAsync>d__;
@@ -366,7 +365,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		return <ExecuteButtonActionAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F2E7 RID: 62183 RVA: 0x003A8C48 File Offset: 0x003A6E48
+	// Token: 0x0600C706 RID: 50950 RVA: 0x003B4744 File Offset: 0x003B2944
 	private void RefreshAllUiState(bool isShow)
 	{
 		base.GetExtendToggle(14).SetToggleState(isShow ? EToggleState.ETT_UnChecked : EToggleState.ETT_Checked, false, false, false);
@@ -390,75 +389,75 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		this.ButtonGoItem.SetUiActive(isShow);
 	}
 
-	// Token: 0x0600F2E8 RID: 62184 RVA: 0x003A8D44 File Offset: 0x003A6F44
+	// Token: 0x0600C707 RID: 50951 RVA: 0x003B4840 File Offset: 0x003B2A40
 	private bool CheckIsShowPanel()
 	{
 		return !HonamiStoryUtil.CheckInMainQuest();
 	}
 
-	// Token: 0x0600F2E9 RID: 62185 RVA: 0x003A8D4E File Offset: 0x003A6F4E
+	// Token: 0x0600C708 RID: 50952 RVA: 0x003B484A File Offset: 0x003B2A4A
 	private void OnBtnTalk()
 	{
 		ScrollingTipsController.Instance.ShowTipsByText("剧情对话");
 	}
 
-	// Token: 0x0600F2EA RID: 62186 RVA: 0x003A8D5F File Offset: 0x003A6F5F
+	// Token: 0x0600C709 RID: 50953 RVA: 0x003B485B File Offset: 0x003B2A5B
 	private void OnHideToggle(EToggleState toggleState)
 	{
 		this.IsHideAllUi = !this.IsHideAllUi;
 		this.RefreshAllUiState(!this.IsHideAllUi);
 	}
 
-	// Token: 0x0600F2EB RID: 62187 RVA: 0x003A8D7F File Offset: 0x003A6F7F
+	// Token: 0x0600C70A RID: 50954 RVA: 0x003B487B File Offset: 0x003B2A7B
 	private void OnBtnTechnology()
 	{
 		UiManager.Instance.OpenView(EUiViewName.HonamiStoryTechnologyView, null, null);
 	}
 
-	// Token: 0x0600F2EC RID: 62188 RVA: 0x003A8D92 File Offset: 0x003A6F92
+	// Token: 0x0600C70B RID: 50955 RVA: 0x003B488E File Offset: 0x003B2A8E
 	private void OnBtnPrepare()
 	{
 		FunctionController.Instance.OpenFunctionRelateView(EFunctionType.HonamiStoryBackpack);
 	}
 
-	// Token: 0x0600F2ED RID: 62189 RVA: 0x003A8DA3 File Offset: 0x003A6FA3
+	// Token: 0x0600C70C RID: 50956 RVA: 0x003B489F File Offset: 0x003B2A9F
 	private void OnBtnShop()
 	{
 		UiManager.Instance.OpenView(EUiViewName.HonamiStoryShopView, null, null);
 	}
 
-	// Token: 0x0600F2EE RID: 62190 RVA: 0x003A8DB6 File Offset: 0x003A6FB6
+	// Token: 0x0600C70D RID: 50957 RVA: 0x003B48B2 File Offset: 0x003B2AB2
 	private void OnBtnMascotCollect()
 	{
 		UiManager.Instance.OpenView(EUiViewName.HonamiStoryMascotCollectBookView, null, null);
 	}
 
-	// Token: 0x0600F2EF RID: 62191 RVA: 0x003A8DC9 File Offset: 0x003A6FC9
+	// Token: 0x0600C70E RID: 50958 RVA: 0x003B48C5 File Offset: 0x003B2AC5
 	private void OnBtnItemCollect()
 	{
 		UiManager.Instance.OpenView(EUiViewName.HonamiStoryItemCollectView, null, null);
 	}
 
-	// Token: 0x0600F2F0 RID: 62192 RVA: 0x003A8DDC File Offset: 0x003A6FDC
+	// Token: 0x0600C70F RID: 50959 RVA: 0x003B48D8 File Offset: 0x003B2AD8
 	private void OnBtnScoreReward()
 	{
 		UiManager.Instance.OpenView(EUiViewName.HonamiStoryPermanentTaskView, null, null);
 	}
 
-	// Token: 0x0600F2F1 RID: 62193 RVA: 0x003A8DEF File Offset: 0x003A6FEF
+	// Token: 0x0600C710 RID: 50960 RVA: 0x003B48EB File Offset: 0x003B2AEB
 	private void OnBtnLimitTask()
 	{
 		UiManager.Instance.OpenView(EUiViewName.HonamiStoryLimitTaskView, null, null);
 	}
 
-	// Token: 0x0600F2F2 RID: 62194 RVA: 0x003A8E04 File Offset: 0x003A7004
+	// Token: 0x0600C711 RID: 50961 RVA: 0x003B4900 File Offset: 0x003B2B00
 	private bool OnBtnLimitTaskCheckShow()
 	{
 		HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
 		return activityData != null && activityData.CheckIfInLimitTime();
 	}
 
-	// Token: 0x0600F2F3 RID: 62195 RVA: 0x003A8E28 File Offset: 0x003A7028
+	// Token: 0x0600C712 RID: 50962 RVA: 0x003B4924 File Offset: 0x003B2B24
 	private UniTask OnBtnEnter()
 	{
 		HonamiStoryMainView.<OnBtnEnter>d__50 <OnBtnEnter>d__;
@@ -468,60 +467,60 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		return <OnBtnEnter>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F2F4 RID: 62196 RVA: 0x003A8E63 File Offset: 0x003A7063
+	// Token: 0x0600C713 RID: 50963 RVA: 0x003B495F File Offset: 0x003B2B5F
 	private void OnBtnClose()
 	{
 		base.CloseMe(null);
 		UiManager.Instance.OpenView(EUiViewName.HonamiStorySmallLoadingView, null, null);
 	}
 
-	// Token: 0x0600F2F5 RID: 62197 RVA: 0x003A8E80 File Offset: 0x003A7080
+	// Token: 0x0600C714 RID: 50964 RVA: 0x003B497C File Offset: 0x003B2B7C
 	private bool OnBtnMascotCollectRedDot()
 	{
 		HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
 		return activityData != null && (activityData.CanMascotCollectGetReward() || activityData.CanAreaCollectGetReward());
 	}
 
-	// Token: 0x0600F2F6 RID: 62198 RVA: 0x003A8EB0 File Offset: 0x003A70B0
+	// Token: 0x0600C715 RID: 50965 RVA: 0x003B49AC File Offset: 0x003B2BAC
 	private bool OnBtnScoreRewardRedDot()
 	{
 		HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
 		return activityData != null && activityData.IsPermanentTaskHasRedDot();
 	}
 
-	// Token: 0x0600F2F7 RID: 62199 RVA: 0x003A8ED4 File Offset: 0x003A70D4
+	// Token: 0x0600C716 RID: 50966 RVA: 0x003B49D0 File Offset: 0x003B2BD0
 	private bool OnBtnLimitTaskRedDot()
 	{
 		HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
 		return activityData != null && activityData.IsLimitTaskHasRedDot();
 	}
 
-	// Token: 0x0600F2F8 RID: 62200 RVA: 0x003A8EF8 File Offset: 0x003A70F8
+	// Token: 0x0600C717 RID: 50967 RVA: 0x003B49F4 File Offset: 0x003B2BF4
 	private bool OnBtnCollectRedDot()
 	{
 		HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
 		return activityData != null && activityData.IsItemCollectionHasRedDot();
 	}
 
-	// Token: 0x0600F2F9 RID: 62201 RVA: 0x003A8F1C File Offset: 0x003A711C
+	// Token: 0x0600C718 RID: 50968 RVA: 0x003B4A18 File Offset: 0x003B2C18
 	private bool OnBtnPrepareRedDot()
 	{
 		return HonamiStoryModel.Instance.CheckIsNewInInventory();
 	}
 
-	// Token: 0x0600F2FA RID: 62202 RVA: 0x003A8F28 File Offset: 0x003A7128
+	// Token: 0x0600C719 RID: 50969 RVA: 0x003B4A24 File Offset: 0x003B2C24
 	private bool OnBtnShopRedDot()
 	{
 		return HonamiStoryModel.Instance.IsShopHasRedDot();
 	}
 
-	// Token: 0x0600F2FB RID: 62203 RVA: 0x003A8F34 File Offset: 0x003A7134
+	// Token: 0x0600C71A RID: 50970 RVA: 0x003B4A30 File Offset: 0x003B2C30
 	private bool OnBtnTechRedDot()
 	{
 		return HonamiStoryModel.Instance.IsTechHasRedDot();
 	}
 
-	// Token: 0x0600F2FC RID: 62204 RVA: 0x003A8F40 File Offset: 0x003A7140
+	// Token: 0x0600C71B RID: 50971 RVA: 0x003B4A3C File Offset: 0x003B2C3C
 	[NullableContext(2)]
 	private void OnLimitTaskTextCallBack(UUIText item)
 	{
@@ -537,7 +536,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F2FD RID: 62205 RVA: 0x003A8F88 File Offset: 0x003A7188
+	// Token: 0x0600C71C RID: 50972 RVA: 0x003B4A84 File Offset: 0x003B2C84
 	[NullableContext(2)]
 	private void OnScoreRewardTextCallBack(UUIText item)
 	{
@@ -558,7 +557,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F2FE RID: 62206 RVA: 0x003A8FF0 File Offset: 0x003A71F0
+	// Token: 0x0600C71D RID: 50973 RVA: 0x003B4AEC File Offset: 0x003B2CEC
 	[NullableContext(2)]
 	private void OnPrepareTextCallBack(UUIText item)
 	{
@@ -588,7 +587,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F2FF RID: 62207 RVA: 0x003A908C File Offset: 0x003A728C
+	// Token: 0x0600C71E RID: 50974 RVA: 0x003B4B88 File Offset: 0x003B2D88
 	private void InitButtonShow()
 	{
 		int num = 5;
@@ -603,7 +602,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600F300 RID: 62208 RVA: 0x003A90BC File Offset: 0x003A72BC
+	// Token: 0x0600C71F RID: 50975 RVA: 0x003B4BB8 File Offset: 0x003B2DB8
 	private void InitButtonConfigs()
 	{
 		if (this.ButtonConfigs.Count > 0)
@@ -674,7 +673,7 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x0600F301 RID: 62209 RVA: 0x003A9330 File Offset: 0x003A7530
+	// Token: 0x0600C720 RID: 50976 RVA: 0x003B4E2C File Offset: 0x003B302C
 	private UniTask CreateButtons()
 	{
 		HonamiStoryMainView.<CreateButtons>d__64 <CreateButtons>d__;
@@ -685,14 +684,14 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		return <CreateButtons>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F302 RID: 62210 RVA: 0x003A9374 File Offset: 0x003A7574
+	// Token: 0x0600C721 RID: 50977 RVA: 0x003B4E70 File Offset: 0x003B3070
 	private bool CheckButtonShow(EHonamiStoryMainButtonFunctionType buttonType)
 	{
 		bool flag = HonamiStoryUtil.CheckInMainQuest();
 		return !flag || (flag && HonamiStoryMainView.showWhenMainTask.Contains(buttonType));
 	}
 
-	// Token: 0x04007081 RID: 28801
+	// Token: 0x04007162 RID: 29026
 	[StaticVariableRuleIgnore]
 	private static readonly List<EHonamiStoryMainButtonFunctionType> showWhenMainTask = new List<EHonamiStoryMainButtonFunctionType>
 	{
@@ -700,37 +699,37 @@ public class HonamiStoryMainView : UiViewBase, IUiCameraBehavior
 		EHonamiStoryMainButtonFunctionType.Prepare
 	};
 
-	// Token: 0x04007082 RID: 28802
+	// Token: 0x04007163 RID: 29027
 	private PopupCaptionItem PopupCaption;
 
-	// Token: 0x04007083 RID: 28803
+	// Token: 0x04007164 RID: 29028
 	private HonamiStoryQuestPanel QuestPanel;
 
-	// Token: 0x04007084 RID: 28804
+	// Token: 0x04007165 RID: 29029
 	private HonamiStoryProfitPanel ProfitPanel;
 
-	// Token: 0x04007085 RID: 28805
+	// Token: 0x04007166 RID: 29030
 	private HonamiStoryMainButtonGoItem ButtonGoItem;
 
-	// Token: 0x04007086 RID: 28806
+	// Token: 0x04007167 RID: 29031
 	private readonly Dictionary<EHonamiStoryMainButtonFunctionType, HonamiStoryMainButtonItem> ButtonItems = new Dictionary<EHonamiStoryMainButtonFunctionType, HonamiStoryMainButtonItem>();
 
-	// Token: 0x04007087 RID: 28807
+	// Token: 0x04007168 RID: 29032
 	private List<IHonamiStoryMainButtonConfig> ButtonConfigs = new List<IHonamiStoryMainButtonConfig>();
 
-	// Token: 0x04007088 RID: 28808
+	// Token: 0x04007169 RID: 29033
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04007089 RID: 28809
+	// Token: 0x0400716A RID: 29034
 	private string UiCameraName = string.Empty;
 
-	// Token: 0x0400708A RID: 28810
+	// Token: 0x0400716B RID: 29035
 	private int TalkEntityId;
 
-	// Token: 0x0400708B RID: 28811
+	// Token: 0x0400716C RID: 29036
 	private bool HasClickedAnyButton;
 
-	// Token: 0x0400708C RID: 28812
+	// Token: 0x0400716D RID: 29037
 	private bool IsHideAllUi;
 }

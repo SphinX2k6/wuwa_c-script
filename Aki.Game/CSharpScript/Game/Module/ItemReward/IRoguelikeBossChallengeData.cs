@@ -4,38 +4,38 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057E4 RID: 22500
+	// Token: 0x020047BB RID: 18363
 	[NullableContext(1)]
 	public interface IRoguelikeBossChallengeData
 	{
-		// Token: 0x170089F4 RID: 35316
-		// (get) Token: 0x060392FE RID: 234238
-		// (set) Token: 0x060392FF RID: 234239
+		// Token: 0x17005DBE RID: 23998
+		// (get) Token: 0x0602E212 RID: 188946
+		// (set) Token: 0x0602E213 RID: 188947
 		bool IsNewRecord { get; set; }
 
-		// Token: 0x170089F5 RID: 35317
-		// (get) Token: 0x06039300 RID: 234240
-		// (set) Token: 0x06039301 RID: 234241
+		// Token: 0x17005DBF RID: 23999
+		// (get) Token: 0x0602E214 RID: 188948
+		// (set) Token: 0x0602E215 RID: 188949
 		int PassTime { get; set; }
 
-		// Token: 0x170089F6 RID: 35318
-		// (get) Token: 0x06039302 RID: 234242
-		// (set) Token: 0x06039303 RID: 234243
+		// Token: 0x17005DC0 RID: 24000
+		// (get) Token: 0x0602E216 RID: 188950
+		// (set) Token: 0x0602E217 RID: 188951
 		int InstId { get; set; }
 
-		// Token: 0x170089F7 RID: 35319
-		// (get) Token: 0x06039304 RID: 234244
-		// (set) Token: 0x06039305 RID: 234245
+		// Token: 0x17005DC1 RID: 24001
+		// (get) Token: 0x0602E218 RID: 188952
+		// (set) Token: 0x0602E219 RID: 188953
 		int BossTotalCount { get; set; }
 
-		// Token: 0x170089F8 RID: 35320
-		// (get) Token: 0x06039306 RID: 234246
-		// (set) Token: 0x06039307 RID: 234247
+		// Token: 0x17005DC2 RID: 24002
+		// (get) Token: 0x0602E21A RID: 188954
+		// (set) Token: 0x0602E21B RID: 188955
 		IReadOnlyList<int> FinishedBossIdList { get; set; }
 
-		// Token: 0x170089F9 RID: 35321
-		// (get) Token: 0x06039308 RID: 234248
-		// (set) Token: 0x06039309 RID: 234249
+		// Token: 0x17005DC3 RID: 24003
+		// (get) Token: 0x0602E21C RID: 188956
+		// (set) Token: 0x0602E21D RID: 188957
 		int? CurrentBossId { get; set; }
 	}
 }

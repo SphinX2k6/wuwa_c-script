@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CB9 RID: 3257
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D9B RID: 3483
 	public class IExploreSkillMechascoutDrag : IExploreSkillInteractType
 	{
-		// Token: 0x06004A7B RID: 19067 RVA: 0x000BA59A File Offset: 0x000B879A
+		// Token: 0x06004F29 RID: 20265 RVA: 0x000C4FAA File Offset: 0x000C31AA
 		public static IExploreSkillMechascoutDrag Create(IExploreSkillMechascoutDrag? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016C6 RID: 5830
-		// (get) Token: 0x06004A7C RID: 19068 RVA: 0x000BA5B9 File Offset: 0x000B87B9
+		// Token: 0x170017EE RID: 6126
+		// (get) Token: 0x06004F2A RID: 20266 RVA: 0x000C4FC9 File Offset: 0x000C31C9
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016C7 RID: 5831
-		// (get) Token: 0x06004A7D RID: 19069 RVA: 0x000BA5C6 File Offset: 0x000B87C6
+		// Token: 0x170017EF RID: 6127
+		// (get) Token: 0x06004F2B RID: 20267 RVA: 0x000C4FD6 File Offset: 0x000C31D6
 		public virtual IMechascoutDragTypeBase DragType
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016C8 RID: 5832
-		// (get) Token: 0x06004A7E RID: 19070 RVA: 0x000BA5F8 File Offset: 0x000B87F8
+		// Token: 0x170017F0 RID: 6128
+		// (get) Token: 0x06004F2C RID: 20268 RVA: 0x000C5008 File Offset: 0x000C3208
 		public virtual List<int> TriggerPointList
 		{
 			get
@@ -71,19 +69,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016C9 RID: 5833
-		// (get) Token: 0x06004A7F RID: 19071 RVA: 0x000BA65C File Offset: 0x000B885C
+		// Token: 0x170017F1 RID: 6129
+		// (get) Token: 0x06004F2D RID: 20269 RVA: 0x000C506C File Offset: 0x000C326C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> FinishedActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -106,30 +104,30 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A7E RID: 10878
+		// Token: 0x04002CF8 RID: 11512
 		private IExploreSkillMechascoutDrag Instance;
 
-		// Token: 0x04002A7F RID: 10879
+		// Token: 0x04002CF9 RID: 11513
 		private IMechascoutDragTypeBase _DragTypeCache;
 
-		// Token: 0x04002A80 RID: 10880
+		// Token: 0x04002CFA RID: 11514
 		private bool _DragTypeInited;
 
-		// Token: 0x04002A81 RID: 10881
+		// Token: 0x04002CFB RID: 11515
 		private List<int> _TriggerPointListCache;
 
-		// Token: 0x04002A82 RID: 10882
+		// Token: 0x04002CFC RID: 11516
 		private bool _TriggerPointListInited;
 
-		// Token: 0x04002A83 RID: 10883
+		// Token: 0x04002CFD RID: 11517
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FinishedActionsCache;
 
-		// Token: 0x04002A84 RID: 10884
+		// Token: 0x04002CFE RID: 11518
 		private bool _FinishedActionsInited;
 	}
 }

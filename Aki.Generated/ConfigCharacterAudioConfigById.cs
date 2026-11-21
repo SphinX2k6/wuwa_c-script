@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000140 RID: 320
+	// Token: 0x0200014F RID: 335
 	public class ConfigCharacterAudioConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000781 RID: 1921 RVA: 0x000840BB File Offset: 0x000822BB
+		// Token: 0x060007DB RID: 2011 RVA: 0x00089A1F File Offset: 0x00087C1F
 		static ConfigCharacterAudioConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCharacterAudioConfigById.CreateStaticDefaultValue), new Action(ConfigCharacterAudioConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000782 RID: 1922 RVA: 0x000840DC File Offset: 0x000822DC
+		// Token: 0x060007DC RID: 2012 RVA: 0x00089A40 File Offset: 0x00087C40
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCharacterAudioConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000783 RID: 1923 RVA: 0x0008415B File Offset: 0x0008235B
+		// Token: 0x060007DD RID: 2013 RVA: 0x00089ABF File Offset: 0x00087CBF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCharacterAudioConfigById.LogPair = null;
 			ConfigCharacterAudioConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06000784 RID: 1924 RVA: 0x00084169 File Offset: 0x00082369
+		// Token: 0x060007DE RID: 2014 RVA: 0x00089ACD File Offset: 0x00087CCD
 		public static void Init()
 		{
 			ConfigCharacterAudioConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigCharacterAudioConfigById.HandleId, "db_entity_audio.db", "select BinData from `CharacterAudioConfig` where Id=?");
 		}
 
-		// Token: 0x06000785 RID: 1925 RVA: 0x00084184 File Offset: 0x00082384
+		// Token: 0x060007DF RID: 2015 RVA: 0x00089AE8 File Offset: 0x00087CE8
 		public static CharacterAudioConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCharacterAudioConfigById.HandleId, ConfigCharacterAudioConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CharacterAudioConfig?(rootAsCharacterAudioConfig);
 		}
 
-		// Token: 0x040008A4 RID: 2212
+		// Token: 0x0400090D RID: 2317
 		private const string DB = "db_entity_audio.db";
 
-		// Token: 0x040008A5 RID: 2213
+		// Token: 0x0400090E RID: 2318
 		private const string FILE = "y.音频组件配置.xlsx";
 
-		// Token: 0x040008A6 RID: 2214
+		// Token: 0x0400090F RID: 2319
 		private const string TABLE = "CharacterAudioConfig";
 
-		// Token: 0x040008A7 RID: 2215
+		// Token: 0x04000910 RID: 2320
 		private const string COMMAND = "select BinData from `CharacterAudioConfig` where Id=?";
 
-		// Token: 0x040008A8 RID: 2216
+		// Token: 0x04000911 RID: 2321
 		private const string KEY_PREFIX = "CharacterAudioConfigById";
 
-		// Token: 0x040008A9 RID: 2217
+		// Token: 0x04000912 RID: 2322
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040008AA RID: 2218
+		// Token: 0x04000913 RID: 2323
 		private static int HandleId;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004BA RID: 1210
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000513 RID: 1299
 	public class ILevelAISpline : ISplineType
 	{
-		// Token: 0x0600186A RID: 6250 RVA: 0x00048FF4 File Offset: 0x000471F4
+		// Token: 0x06001A04 RID: 6660 RVA: 0x0004CD3C File Offset: 0x0004AF3C
 		private ILevelAISpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600186B RID: 6251 RVA: 0x0004902C File Offset: 0x0004722C
+		// Token: 0x06001A05 RID: 6661 RVA: 0x0004CD74 File Offset: 0x0004AF74
 		public static ILevelAISpline Create([Nullable(2)] ILevelAISpline instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600186C RID: 6252 RVA: 0x0004903F File Offset: 0x0004723F
+		// Token: 0x06001A06 RID: 6662 RVA: 0x0004CD87 File Offset: 0x0004AF87
 		public static ILevelAISpline CreateFromSetValue([Nullable(2)] ILevelAISpline_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600186D RID: 6253 RVA: 0x00049054 File Offset: 0x00047254
+		// Token: 0x06001A07 RID: 6663 RVA: 0x0004CD9C File Offset: 0x0004AF9C
 		public new ILevelAISpline_SetValue ToSetValue()
 		{
 			return new ILevelAISpline_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700067D RID: 1661
-		// (get) Token: 0x0600186E RID: 6254 RVA: 0x000490AE File Offset: 0x000472AE
-		// (set) Token: 0x0600186F RID: 6255 RVA: 0x000490D9 File Offset: 0x000472D9
+		// Token: 0x170006E4 RID: 1764
+		// (get) Token: 0x06001A08 RID: 6664 RVA: 0x0004CDF6 File Offset: 0x0004AFF6
+		// (set) Token: 0x06001A09 RID: 6665 RVA: 0x0004CE21 File Offset: 0x0004B021
 		public override ESplineType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700067E RID: 1662
-		// (get) Token: 0x06001870 RID: 6256 RVA: 0x000490E7 File Offset: 0x000472E7
-		// (set) Token: 0x06001871 RID: 6257 RVA: 0x00049112 File Offset: 0x00047312
+		// Token: 0x170006E5 RID: 1765
+		// (get) Token: 0x06001A0A RID: 6666 RVA: 0x0004CE2F File Offset: 0x0004B02F
+		// (set) Token: 0x06001A0B RID: 6667 RVA: 0x0004CE5A File Offset: 0x0004B05A
 		public virtual int EntityId
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700067F RID: 1663
-		// (get) Token: 0x06001872 RID: 6258 RVA: 0x00049120 File Offset: 0x00047320
-		// (set) Token: 0x06001873 RID: 6259 RVA: 0x00049181 File Offset: 0x00047381
+		// Token: 0x170006E6 RID: 1766
+		// (get) Token: 0x06001A0C RID: 6668 RVA: 0x0004CE68 File Offset: 0x0004B068
+		// (set) Token: 0x06001A0D RID: 6669 RVA: 0x0004CEC9 File Offset: 0x0004B0C9
 		[Nullable(2)]
 		public virtual ILevelAiCycleLooply CycleOption
 		{
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000680 RID: 1664
-		// (get) Token: 0x06001874 RID: 6260 RVA: 0x00049198 File Offset: 0x00047398
-		// (set) Token: 0x06001875 RID: 6261 RVA: 0x000491D2 File Offset: 0x000473D2
+		// Token: 0x170006E7 RID: 1767
+		// (get) Token: 0x06001A0E RID: 6670 RVA: 0x0004CEE0 File Offset: 0x0004B0E0
+		// (set) Token: 0x06001A0F RID: 6671 RVA: 0x0004CF1A File Offset: 0x0004B11A
 		public virtual bool? UsePathFinding
 		{
 			get
@@ -168,9 +166,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000681 RID: 1665
-		// (get) Token: 0x06001876 RID: 6262 RVA: 0x000491E0 File Offset: 0x000473E0
-		// (set) Token: 0x06001877 RID: 6263 RVA: 0x0004921A File Offset: 0x0004741A
+		// Token: 0x170006E8 RID: 1768
+		// (get) Token: 0x06001A10 RID: 6672 RVA: 0x0004CF28 File Offset: 0x0004B128
+		// (set) Token: 0x06001A11 RID: 6673 RVA: 0x0004CF62 File Offset: 0x0004B162
 		public virtual bool? IsPassEveryKeyPoint
 		{
 			get
@@ -192,9 +190,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000682 RID: 1666
-		// (get) Token: 0x06001878 RID: 6264 RVA: 0x00049228 File Offset: 0x00047428
-		// (set) Token: 0x06001879 RID: 6265 RVA: 0x000492BB File Offset: 0x000474BB
+		// Token: 0x170006E9 RID: 1769
+		// (get) Token: 0x06001A12 RID: 6674 RVA: 0x0004CF70 File Offset: 0x0004B170
+		// (set) Token: 0x06001A13 RID: 6675 RVA: 0x0004D003 File Offset: 0x0004B203
 		public virtual List<ILevelAISplinePoint> Points
 		{
 			get
@@ -230,24 +228,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001217 RID: 4631
+		// Token: 0x04001339 RID: 4921
 		[Nullable(2)]
 		protected new ILevelAISpline FbInstance;
 
-		// Token: 0x04001218 RID: 4632
+		// Token: 0x0400133A RID: 4922
 		[Nullable(2)]
 		protected new ILevelAISpline_SetValue PocoInterface;
 
-		// Token: 0x04001219 RID: 4633
+		// Token: 0x0400133B RID: 4923
 		private ILevelAiCycleLooply _CycleOptionCache;
 
-		// Token: 0x0400121A RID: 4634
+		// Token: 0x0400133C RID: 4924
 		private bool _CycleOptionInited;
 
-		// Token: 0x0400121B RID: 4635
+		// Token: 0x0400133D RID: 4925
 		private List<ILevelAISplinePoint> _PointsCache;
 
-		// Token: 0x0400121C RID: 4636
+		// Token: 0x0400133E RID: 4926
 		private bool _PointsInited;
 	}
 }

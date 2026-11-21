@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200173F RID: 5951
+// Token: 0x02000BF8 RID: 3064
 [NullableContext(2)]
 [Nullable(0)]
 public class CalabashCollectDetailItem : UiPanelBase
 {
-	// Token: 0x0600AC1F RID: 44063 RVA: 0x00268FD8 File Offset: 0x002671D8
+	// Token: 0x06008006 RID: 32774 RVA: 0x00273414 File Offset: 0x00271614
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,21 +46,21 @@ public class CalabashCollectDetailItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600AC20 RID: 44064 RVA: 0x002691C0 File Offset: 0x002673C0
+	// Token: 0x06008007 RID: 32775 RVA: 0x002735FC File Offset: 0x002717FC
 	private void OnPositionBtnClick()
 	{
 		CalabashDevelopReward? calabashDevelopReward;
 		AdventureGuideController.Instance.JumpToTargetView(EUiTabViewName.MonsterDetectView, (CalabashConfig.Instance.GetCalabashDevelopRewardByMonsterId(this.PhantomId) != null) ? new int?(calabashDevelopReward.GetValueOrDefault().MonsterProbeId) : null, null);
 	}
 
-	// Token: 0x0600AC21 RID: 44065 RVA: 0x00269218 File Offset: 0x00267418
+	// Token: 0x06008008 RID: 32776 RVA: 0x00273654 File Offset: 0x00271854
 	private void OnHelpBtnClick()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.CalabashCollectSuitTipId);
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600AC22 RID: 44066 RVA: 0x0026923C File Offset: 0x0026743C
+	// Token: 0x06008009 RID: 32777 RVA: 0x00273678 File Offset: 0x00271878
 	private void OnMonsterSkinBtnClick()
 	{
 		if (this.SkinList == null)
@@ -81,7 +81,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600AC23 RID: 44067 RVA: 0x00269318 File Offset: 0x00267518
+	// Token: 0x0600800A RID: 32778 RVA: 0x00273754 File Offset: 0x00271954
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CalabashCollectDetailItem.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -92,13 +92,13 @@ public class CalabashCollectDetailItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AC24 RID: 44068 RVA: 0x0026935B File Offset: 0x0026755B
+	// Token: 0x0600800B RID: 32779 RVA: 0x00273797 File Offset: 0x00271997
 	private void OnSuitItemClick(int id)
 	{
 		EventSystem.Instance.Emit<int>(EEventName.JumpToPhantomBattleFettersTabView, id);
 	}
 
-	// Token: 0x0600AC25 RID: 44069 RVA: 0x0026936E File Offset: 0x0026756E
+	// Token: 0x0600800C RID: 32780 RVA: 0x002737AA File Offset: 0x002719AA
 	[NullableContext(1)]
 	private VisionFetterSuitItem CreateVisionFetterSuitItem()
 	{
@@ -108,7 +108,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600AC26 RID: 44070 RVA: 0x00269388 File Offset: 0x00267588
+	// Token: 0x0600800D RID: 32781 RVA: 0x002737C4 File Offset: 0x002719C4
 	[NullableContext(1)]
 	public void Update(CalabashDevelopRewardData data)
 	{
@@ -120,7 +120,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x0600AC27 RID: 44071 RVA: 0x002693E8 File Offset: 0x002675E8
+	// Token: 0x0600800E RID: 32782 RVA: 0x00273824 File Offset: 0x00271A24
 	public void UpdateSkinInfo(int data)
 	{
 		this.PhantomId = data;
@@ -134,7 +134,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		this.RefreshTitle();
 	}
 
-	// Token: 0x0600AC28 RID: 44072 RVA: 0x00269435 File Offset: 0x00267635
+	// Token: 0x0600800F RID: 32783 RVA: 0x00273871 File Offset: 0x00271A71
 	public void Refresh()
 	{
 		this.RefreshTitle();
@@ -145,7 +145,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		this.RefreshSkinBtn();
 	}
 
-	// Token: 0x0600AC29 RID: 44073 RVA: 0x0026945C File Offset: 0x0026765C
+	// Token: 0x06008010 RID: 32784 RVA: 0x00273898 File Offset: 0x00271A98
 	public void RefreshTitle()
 	{
 		CalabashDevelopRewardData data = this.Data;
@@ -165,7 +165,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), phantomRareConfig.Value.Desc, Array.Empty<object>());
 	}
 
-	// Token: 0x0600AC2A RID: 44074 RVA: 0x00269518 File Offset: 0x00267718
+	// Token: 0x06008011 RID: 32785 RVA: 0x00273954 File Offset: 0x00271B54
 	public void RefreshTitleBySkinId()
 	{
 		if (!this.Data.UnlockData)
@@ -182,7 +182,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		text.SetText(monsterNumber + localTextNew, true);
 	}
 
-	// Token: 0x0600AC2B RID: 44075 RVA: 0x00269588 File Offset: 0x00267788
+	// Token: 0x06008012 RID: 32786 RVA: 0x002739C4 File Offset: 0x00271BC4
 	public void RefreshStage()
 	{
 		ICalabashDevelopRewardInfoData[] calabashDevelopRewardInfoData = CalabashModel.Instance.GetCalabashDevelopRewardInfoData(this.PhantomId);
@@ -209,7 +209,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		texture.SetFillAmount((float)num2 / (float)(num - 1));
 	}
 
-	// Token: 0x0600AC2C RID: 44076 RVA: 0x00269614 File Offset: 0x00267814
+	// Token: 0x06008013 RID: 32787 RVA: 0x00273A50 File Offset: 0x00271C50
 	public void RefreshSuit()
 	{
 		int[] array = this.ItemConfig.Value.FetterGroup();
@@ -227,7 +227,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		suitLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600AC2D RID: 44077 RVA: 0x00269678 File Offset: 0x00267878
+	// Token: 0x06008014 RID: 32788 RVA: 0x00273AB4 File Offset: 0x00271CB4
 	public void RefreshDesc()
 	{
 		PhantomSkill? phantomSkillBySkillId = PhantomBattleConfig.Instance.GetPhantomSkillBySkillId(this.ItemConfig.Value.SkillId);
@@ -239,14 +239,14 @@ public class CalabashCollectDetailItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(9), phantomSkillBySkillId.Value.SimplyDescription, Array.Empty<object>());
 	}
 
-	// Token: 0x0600AC2E RID: 44078 RVA: 0x002696FC File Offset: 0x002678FC
+	// Token: 0x06008015 RID: 32789 RVA: 0x00273B38 File Offset: 0x00271D38
 	public void RefreshInfoItem()
 	{
 		base.GetItem(12).SetUIActive(this.Data.UnlockData);
 		base.GetButton(11).RootUIComp.Get().SetUIActive(this.Data.UnlockData);
 	}
 
-	// Token: 0x0600AC2F RID: 44079 RVA: 0x00269748 File Offset: 0x00267948
+	// Token: 0x06008016 RID: 32790 RVA: 0x00273B84 File Offset: 0x00271D84
 	public void RefreshSkinBtn()
 	{
 		int[] monsterSkinListByMonsterId = PhantomBattleModel.Instance.GetMonsterSkinListByMonsterId(this.Data.DevelopRewardData.MonsterId);
@@ -260,7 +260,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		this.ShowSkinIndex = 0;
 	}
 
-	// Token: 0x0600AC30 RID: 44080 RVA: 0x002697D0 File Offset: 0x002679D0
+	// Token: 0x06008017 RID: 32791 RVA: 0x00273C0C File Offset: 0x00271E0C
 	public void RefreshDetailState()
 	{
 		bool ifSimpleState = CalabashModel.Instance.GetIfSimpleState();
@@ -277,7 +277,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		item2.SetUIActive(!ifSimpleState);
 	}
 
-	// Token: 0x0600AC31 RID: 44081 RVA: 0x00269818 File Offset: 0x00267A18
+	// Token: 0x06008018 RID: 32792 RVA: 0x00273C54 File Offset: 0x00271E54
 	public void PlayDetailShowSequence()
 	{
 		LevelSequencePlayer infoLevelSequencePlayer = this.InfoLevelSequencePlayer;
@@ -288,7 +288,7 @@ public class CalabashCollectDetailItem : UiPanelBase
 		infoLevelSequencePlayer.PlayLevelSequenceByName("Start", true, null, false);
 	}
 
-	// Token: 0x0600AC32 RID: 44082 RVA: 0x00269848 File Offset: 0x00267A48
+	// Token: 0x06008019 RID: 32793 RVA: 0x00273C84 File Offset: 0x00271E84
 	public void PlayDetailHideSequence()
 	{
 		UUIItem item = base.GetItem(14);
@@ -309,20 +309,20 @@ public class CalabashCollectDetailItem : UiPanelBase
 		infoLevelSequencePlayer.PlayLevelSequenceByName("Close", true, null, false);
 	}
 
-	// Token: 0x04004E13 RID: 19987
+	// Token: 0x04004EBC RID: 20156
 	private int PhantomId;
 
-	// Token: 0x04004E14 RID: 19988
+	// Token: 0x04004EBD RID: 20157
 	private CalabashDevelopRewardData Data;
 
-	// Token: 0x04004E15 RID: 19989
+	// Token: 0x04004EBE RID: 20158
 	private PhantomItem? ItemConfig;
 
-	// Token: 0x04004E16 RID: 19990
+	// Token: 0x04004EBF RID: 20159
 	[Nullable(1)]
 	private readonly List<CalabashCollectStageItem> StageItemList = new List<CalabashCollectStageItem>();
 
-	// Token: 0x04004E17 RID: 19991
+	// Token: 0x04004EC0 RID: 20160
 	[Nullable(new byte[]
 	{
 		2,
@@ -330,56 +330,56 @@ public class CalabashCollectDetailItem : UiPanelBase
 	})]
 	private GenericLayout<VisionFetterSuitItem, PhantomFetterGroup> SuitLayout;
 
-	// Token: 0x04004E18 RID: 19992
+	// Token: 0x04004EC1 RID: 20161
 	private LevelSequencePlayer InfoLevelSequencePlayer;
 
-	// Token: 0x04004E19 RID: 19993
+	// Token: 0x04004EC2 RID: 20162
 	private int[] SkinList;
 
-	// Token: 0x04004E1A RID: 19994
+	// Token: 0x04004EC3 RID: 20163
 	private int ShowSkinIndex;
 
-	// Token: 0x04004E1B RID: 19995
+	// Token: 0x04004EC4 RID: 20164
 	public Action OnLookOverBtnClick;
 
-	// Token: 0x04004E1C RID: 19996
+	// Token: 0x04004EC5 RID: 20165
 	public Action<int, bool> OnMonsterSkinBtnClickCallBack;
 
-	// Token: 0x02007D26 RID: 32038
+	// Token: 0x02006EAC RID: 28332
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04028FBB RID: 167867
+		// Token: 0x040242E5 RID: 148197
 		NameText,
-		// Token: 0x04028FBC RID: 167868
+		// Token: 0x040242E6 RID: 148198
 		LevelText,
-		// Token: 0x04028FBD RID: 167869
+		// Token: 0x040242E7 RID: 148199
 		StageBarTexture,
-		// Token: 0x04028FBE RID: 167870
+		// Token: 0x040242E8 RID: 148200
 		StageItem1,
-		// Token: 0x04028FBF RID: 167871
+		// Token: 0x040242E9 RID: 148201
 		StageItem2,
-		// Token: 0x04028FC0 RID: 167872
+		// Token: 0x040242EA RID: 148202
 		StageItem3,
-		// Token: 0x04028FC1 RID: 167873
+		// Token: 0x040242EB RID: 148203
 		StageItem4,
-		// Token: 0x04028FC2 RID: 167874
+		// Token: 0x040242EC RID: 148204
 		HelpBtn,
-		// Token: 0x04028FC3 RID: 167875
+		// Token: 0x040242ED RID: 148205
 		SuitLayout,
-		// Token: 0x04028FC4 RID: 167876
+		// Token: 0x040242EE RID: 148206
 		DescText,
-		// Token: 0x04028FC5 RID: 167877
+		// Token: 0x040242EF RID: 148207
 		PositionBtn,
-		// Token: 0x04028FC6 RID: 167878
+		// Token: 0x040242F0 RID: 148208
 		LookOverBtn,
-		// Token: 0x04028FC7 RID: 167879
+		// Token: 0x040242F1 RID: 148209
 		InfoItem,
-		// Token: 0x04028FC8 RID: 167880
+		// Token: 0x040242F2 RID: 148210
 		SuitItem,
-		// Token: 0x04028FC9 RID: 167881
+		// Token: 0x040242F3 RID: 148211
 		DescItem,
-		// Token: 0x04028FCA RID: 167882
+		// Token: 0x040242F4 RID: 148212
 		MonsterSkinBtn
 	}
 }

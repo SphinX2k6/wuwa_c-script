@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EFB RID: 3835
+	// Token: 0x02000FE0 RID: 4064
 	public struct PhantomSummonGroup : IFlatbufferObject
 	{
-		// Token: 0x1700276E RID: 10094
-		// (get) Token: 0x0600AA7C RID: 43644 RVA: 0x002B7955 File Offset: 0x002B5B55
+		// Token: 0x170027D4 RID: 10196
+		// (get) Token: 0x0600B09D RID: 45213 RVA: 0x002D4715 File Offset: 0x002D2915
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AA7D RID: 43645 RVA: 0x002B7962 File Offset: 0x002B5B62
+		// Token: 0x0600B09E RID: 45214 RVA: 0x002D4722 File Offset: 0x002D2922
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AA7E RID: 43646 RVA: 0x002B796C File Offset: 0x002B5B6C
+		// Token: 0x0600B09F RID: 45215 RVA: 0x002D472C File Offset: 0x002D292C
 		public static PhantomSummonGroup GetRootAsPhantomSummonGroup(ByteBuffer _bb)
 		{
 			return PhantomSummonGroup.GetRootAsPhantomSummonGroup(_bb, default(PhantomSummonGroup));
 		}
 
-		// Token: 0x0600AA7F RID: 43647 RVA: 0x002B7988 File Offset: 0x002B5B88
+		// Token: 0x0600B0A0 RID: 45216 RVA: 0x002D4748 File Offset: 0x002D2948
 		public static PhantomSummonGroup GetRootAsPhantomSummonGroup(ByteBuffer _bb, PhantomSummonGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AA80 RID: 43648 RVA: 0x002B79A5 File Offset: 0x002B5BA5
+		// Token: 0x0600B0A1 RID: 45217 RVA: 0x002D4765 File Offset: 0x002D2965
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AA81 RID: 43649 RVA: 0x002B79B4 File Offset: 0x002B5BB4
+		// Token: 0x0600B0A2 RID: 45218 RVA: 0x002D4774 File Offset: 0x002D2974
 		public PhantomSummonGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700276F RID: 10095
-		// (get) Token: 0x0600AA82 RID: 43650 RVA: 0x002B79C4 File Offset: 0x002B5BC4
+		// Token: 0x170027D5 RID: 10197
+		// (get) Token: 0x0600B0A3 RID: 45219 RVA: 0x002D4784 File Offset: 0x002D2984
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AA83 RID: 43651 RVA: 0x002B7A00 File Offset: 0x002B5C00
+		// Token: 0x0600B0A4 RID: 45220 RVA: 0x002D47C0 File Offset: 0x002D29C0
 		public int GroupMonsterIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002770 RID: 10096
-		// (get) Token: 0x0600AA84 RID: 43652 RVA: 0x002B7A40 File Offset: 0x002B5C40
+		// Token: 0x170027D6 RID: 10198
+		// (get) Token: 0x0600B0A5 RID: 45221 RVA: 0x002D4800 File Offset: 0x002D2A00
 		public int GroupMonsterIdsLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AA85 RID: 43653 RVA: 0x002B7A6B File Offset: 0x002B5C6B
+		// Token: 0x0600B0A6 RID: 45222 RVA: 0x002D482B File Offset: 0x002D2A2B
 		public Span<int> GetGroupMonsterIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600AA86 RID: 43654 RVA: 0x002B7A7A File Offset: 0x002B5C7A
+		// Token: 0x0600B0A7 RID: 45223 RVA: 0x002D483A File Offset: 0x002D2A3A
 		public int[] GetGroupMonsterIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600AA87 RID: 43655 RVA: 0x002B7A94 File Offset: 0x002B5C94
+		// Token: 0x0600B0A8 RID: 45224 RVA: 0x002D4851 File Offset: 0x002D2A51
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GroupMonsterIdsIter()或GetGroupMonsterIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GroupMonsterIds()
+		public int[] GroupMonsterIds()
 		{
-			PhantomSummonGroup phantomSummonGroup = this;
-			return phantomSummonGroup.GetGroupMonsterIdsArray() ?? Array.Empty<int>();
+			return this.GetGroupMonsterIdsArray();
 		}
 
-		// Token: 0x0600AA88 RID: 43656 RVA: 0x002B7AB8 File Offset: 0x002B5CB8
+		// Token: 0x0600B0A9 RID: 45225 RVA: 0x002D4859 File Offset: 0x002D2A59
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GroupMonsterIdsIter()
+		public IEnumerable<int> GroupMonsterIdsIter()
 		{
 			PhantomSummonGroup.<GroupMonsterIdsIter>d__16 <GroupMonsterIdsIter>d__ = new PhantomSummonGroup.<GroupMonsterIdsIter>d__16(-2);
 			<GroupMonsterIdsIter>d__.<>3__<>4__this = this;
 			return <GroupMonsterIdsIter>d__;
 		}
 
-		// Token: 0x04004FC2 RID: 20418
+		// Token: 0x040055A7 RID: 21927
 		private Table __p;
 	}
 }

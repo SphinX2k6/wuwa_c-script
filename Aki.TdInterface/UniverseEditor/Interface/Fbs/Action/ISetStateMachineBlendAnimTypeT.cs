@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200707D RID: 28797
+	// Token: 0x02007849 RID: 30793
 	public class ISetStateMachineBlendAnimTypeT
 	{
-		// Token: 0x1700D600 RID: 54784
-		// (get) Token: 0x06032FCB RID: 208843 RVA: 0x006E09E4 File Offset: 0x006DEBE4
-		// (set) Token: 0x06032FCC RID: 208844 RVA: 0x006E09EC File Offset: 0x006DEBEC
+		// Token: 0x1700E1E3 RID: 57827
+		// (get) Token: 0x0603626D RID: 221805 RVA: 0x00740FF0 File Offset: 0x0073F1F0
+		// (set) Token: 0x0603626E RID: 221806 RVA: 0x00740FF8 File Offset: 0x0073F1F8
 		public EBlendAnimType Type { get; set; }
 
-		// Token: 0x1700D601 RID: 54785
-		// (get) Token: 0x06032FCD RID: 208845 RVA: 0x006E09F5 File Offset: 0x006DEBF5
-		// (set) Token: 0x06032FCE RID: 208846 RVA: 0x006E09FD File Offset: 0x006DEBFD
+		// Token: 0x1700E1E4 RID: 57828
+		// (get) Token: 0x0603626F RID: 221807 RVA: 0x00741001 File Offset: 0x0073F201
+		// (set) Token: 0x06036270 RID: 221808 RVA: 0x00741009 File Offset: 0x0073F209
 		public EBlendAnimState State { get; set; }
 
-		// Token: 0x06032FCF RID: 208847 RVA: 0x006E0A06 File Offset: 0x006DEC06
+		// Token: 0x06036271 RID: 221809 RVA: 0x00741012 File Offset: 0x0073F212
 		public ISetStateMachineBlendAnimTypeT()
 		{
 			this.Type = EBlendAnimType.StateMachine;

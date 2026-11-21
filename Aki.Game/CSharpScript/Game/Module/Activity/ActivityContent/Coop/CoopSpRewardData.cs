@@ -3,11 +3,11 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068C8 RID: 26824
+	// Token: 0x02005818 RID: 22552
 	public class CoopSpRewardData
 	{
-		// Token: 0x170097D4 RID: 38868
-		// (get) Token: 0x06042F38 RID: 274232 RVA: 0x0104E2AC File Offset: 0x0104C4AC
+		// Token: 0x17006B14 RID: 27412
+		// (get) Token: 0x06037A90 RID: 227984 RVA: 0x00F8F8D4 File Offset: 0x00F8DAD4
 		public CoopSpReward? GetConfig
 		{
 			get
@@ -16,23 +16,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F39 RID: 274233 RVA: 0x0104E2BE File Offset: 0x0104C4BE
+		// Token: 0x06037A91 RID: 227985 RVA: 0x00F8F8E6 File Offset: 0x00F8DAE6
 		public CoopSpRewardData(int id, ECoopSpRewardState state)
 		{
 			this.Id = id;
 			this.State = state;
 		}
 
-		// Token: 0x06042F3A RID: 274234 RVA: 0x0104E2D4 File Offset: 0x0104C4D4
+		// Token: 0x06037A92 RID: 227986 RVA: 0x00F8F8FC File Offset: 0x00F8DAFC
 		public void SetState(ECoopSpRewardState state)
 		{
 			this.State = state;
 		}
 
-		// Token: 0x04022D30 RID: 142640
+		// Token: 0x0401D58C RID: 120204
 		public int Id;
 
-		// Token: 0x04022D31 RID: 142641
+		// Token: 0x0401D58D RID: 120205
 		public ECoopSpRewardState State;
 	}
 }

@@ -3,40 +3,40 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001644 RID: 5700
+	// Token: 0x020016BB RID: 5819
 	public enum RogueResDataType
 	{
-		// Token: 0x0400C0CB RID: 49355
+		// Token: 0x0400C5D6 RID: 50646
 		[OriginalName("NoGain")]
 		NoGain,
-		// Token: 0x0400C0CC RID: 49356
+		// Token: 0x0400C5D7 RID: 50647
 		[OriginalName("Token")]
 		Token,
-		// Token: 0x0400C0CD RID: 49357
+		// Token: 0x0400C5D8 RID: 50648
 		[OriginalName("TokenShop")]
 		TokenShop,
-		// Token: 0x0400C0CE RID: 49358
+		// Token: 0x0400C5D9 RID: 50649
 		[OriginalName("Phantom")]
 		Phantom,
-		// Token: 0x0400C0CF RID: 49359
+		// Token: 0x0400C5DA RID: 50650
 		[OriginalName("Role")]
 		Role,
-		// Token: 0x0400C0D0 RID: 49360
+		// Token: 0x0400C5DB RID: 50651
 		[OriginalName("RoleBuff")]
 		RoleBuff,
-		// Token: 0x0400C0D1 RID: 49361
+		// Token: 0x0400C5DC RID: 50652
 		[OriginalName("Event")]
 		Event,
-		// Token: 0x0400C0D2 RID: 49362
+		// Token: 0x0400C5DD RID: 50653
 		[OriginalName("EventGrid")]
 		EventGrid,
-		// Token: 0x0400C0D3 RID: 49363
+		// Token: 0x0400C5DE RID: 50654
 		[OriginalName("MiracleCreation")]
 		MiracleCreation,
-		// Token: 0x0400C0D4 RID: 49364
+		// Token: 0x0400C5DF RID: 50655
 		[OriginalName("Effect")]
 		Effect,
-		// Token: 0x0400C0D5 RID: 49365
+		// Token: 0x0400C5E0 RID: 50656
 		[OriginalName("Complex")]
 		Complex
 	}

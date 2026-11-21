@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001ED9 RID: 7897
+// Token: 0x0200139B RID: 5019
 public enum EHonamiStoryMainButtonGo
 {
-	// Token: 0x0400708E RID: 28814
+	// Token: 0x0400716F RID: 29039
 	Button,
-	// Token: 0x0400708F RID: 28815
+	// Token: 0x04007170 RID: 29040
 	NameText,
-	// Token: 0x04007090 RID: 28816
+	// Token: 0x04007171 RID: 29041
 	RedDotItem,
-	// Token: 0x04007091 RID: 28817
+	// Token: 0x04007172 RID: 29042
 	FirstEnterItem,
-	// Token: 0x04007092 RID: 28818
+	// Token: 0x04007173 RID: 29043
 	OtherEnterItem
 }

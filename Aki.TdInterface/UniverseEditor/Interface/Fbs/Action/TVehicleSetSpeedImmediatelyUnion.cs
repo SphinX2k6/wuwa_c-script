@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007805 RID: 30725
+	// Token: 0x02008043 RID: 32835
 	public class TVehicleSetSpeedImmediatelyUnion
 	{
-		// Token: 0x1700E6F1 RID: 59121
-		// (get) Token: 0x06037B7C RID: 228220 RVA: 0x007885DE File Offset: 0x007867DE
-		// (set) Token: 0x06037B7D RID: 228221 RVA: 0x007885E6 File Offset: 0x007867E6
+		// Token: 0x1700F34F RID: 62287
+		// (get) Token: 0x0603B121 RID: 241953 RVA: 0x007EDF56 File Offset: 0x007EC156
+		// (set) Token: 0x0603B122 RID: 241954 RVA: 0x007EDF5E File Offset: 0x007EC15E
 		public TVehicleSetSpeedImmediately Type { get; set; }
 
-		// Token: 0x1700E6F2 RID: 59122
-		// (get) Token: 0x06037B7E RID: 228222 RVA: 0x007885EF File Offset: 0x007867EF
-		// (set) Token: 0x06037B7F RID: 228223 RVA: 0x007885F7 File Offset: 0x007867F7
+		// Token: 0x1700F350 RID: 62288
+		// (get) Token: 0x0603B123 RID: 241955 RVA: 0x007EDF67 File Offset: 0x007EC167
+		// (set) Token: 0x0603B124 RID: 241956 RVA: 0x007EDF6F File Offset: 0x007EC16F
 		public object Value { get; set; }
 
-		// Token: 0x06037B80 RID: 228224 RVA: 0x00788600 File Offset: 0x00786800
+		// Token: 0x0603B125 RID: 241957 RVA: 0x007EDF78 File Offset: 0x007EC178
 		public TVehicleSetSpeedImmediatelyUnion()
 		{
 			this.Type = TVehicleSetSpeedImmediately.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037B81 RID: 228225 RVA: 0x00788616 File Offset: 0x00786816
+		// Token: 0x0603B126 RID: 241958 RVA: 0x007EDF8E File Offset: 0x007EC18E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037B82 RID: 228226 RVA: 0x00788628 File Offset: 0x00786828
+		// Token: 0x0603B127 RID: 241959 RVA: 0x007EDFA0 File Offset: 0x007EC1A0
 		public ISetHorizontalVerticalSpeedImmediatelyT AsISetHorizontalVerticalSpeedImmediately()
 		{
 			return this.As<ISetHorizontalVerticalSpeedImmediatelyT>();
 		}
 
-		// Token: 0x06037B83 RID: 228227 RVA: 0x00788630 File Offset: 0x00786830
+		// Token: 0x0603B128 RID: 241960 RVA: 0x007EDFA8 File Offset: 0x007EC1A8
 		public static TVehicleSetSpeedImmediatelyUnion FromISetHorizontalVerticalSpeedImmediately(ISetHorizontalVerticalSpeedImmediatelyT _isethorizontalverticalspeedimmediately)
 		{
 			return new TVehicleSetSpeedImmediatelyUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B84 RID: 228228 RVA: 0x00788645 File Offset: 0x00786845
+		// Token: 0x0603B129 RID: 241961 RVA: 0x007EDFBD File Offset: 0x007EC1BD
 		public ISetTotalVehicleSpeedImmediatelyT AsISetTotalVehicleSpeedImmediately()
 		{
 			return this.As<ISetTotalVehicleSpeedImmediatelyT>();
 		}
 
-		// Token: 0x06037B85 RID: 228229 RVA: 0x0078864D File Offset: 0x0078684D
+		// Token: 0x0603B12A RID: 241962 RVA: 0x007EDFC5 File Offset: 0x007EC1C5
 		public static TVehicleSetSpeedImmediatelyUnion FromISetTotalVehicleSpeedImmediately(ISetTotalVehicleSpeedImmediatelyT _isettotalvehiclespeedimmediately)
 		{
 			return new TVehicleSetSpeedImmediatelyUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B86 RID: 228230 RVA: 0x00788664 File Offset: 0x00786864
+		// Token: 0x0603B12B RID: 241963 RVA: 0x007EDFDC File Offset: 0x007EC1DC
 		public static int Pack(FlatBufferBuilder builder, TVehicleSetSpeedImmediatelyUnion _o)
 		{
 			TVehicleSetSpeedImmediately type = _o.Type;

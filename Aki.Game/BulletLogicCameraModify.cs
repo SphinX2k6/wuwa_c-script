@@ -5,7 +5,7 @@ using AkiClient.Game.Aki.Core.Fight;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x02002DC9 RID: 11721
+// Token: 0x02002323 RID: 8995
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,14 +15,14 @@ using UnrealEngine;
 })]
 public class BulletLogicCameraModify : BulletLogicController<LogicDataCameraModify, BulletHitActorData>
 {
-	// Token: 0x060189F5 RID: 100853 RVA: 0x0064BD03 File Offset: 0x00649F03
+	// Token: 0x0601629D RID: 90781 RVA: 0x00671AE7 File Offset: 0x0066FCE7
 	[NullableContext(1)]
 	public BulletLogicCameraModify(LogicDataCameraModify logicData, Entity bulletEntity) : base(logicData, bulletEntity)
 	{
 		this.Config = logicData;
 	}
 
-	// Token: 0x060189F6 RID: 100854 RVA: 0x0064BD14 File Offset: 0x00649F14
+	// Token: 0x0601629E RID: 90782 RVA: 0x00671AF8 File Offset: 0x0066FCF8
 	public override void BulletLogicAction(BulletHitActorData param = null)
 	{
 		EBulletCameraModifyPlayer player = this.Config.Player;
@@ -36,7 +36,7 @@ public class BulletLogicCameraModify : BulletLogicController<LogicDataCameraModi
 		}
 	}
 
-	// Token: 0x060189F7 RID: 100855 RVA: 0x0064BD64 File Offset: 0x00649F64
+	// Token: 0x0601629F RID: 90783 RVA: 0x00671B48 File Offset: 0x0066FD48
 	private void PlayCameraModify(EntityHandle entityHandle)
 	{
 		if (entityHandle == null || !entityHandle.Valid)
@@ -71,6 +71,6 @@ public class BulletLogicCameraModify : BulletLogicController<LogicDataCameraModi
 		}
 	}
 
-	// Token: 0x0400B74C RID: 46924
+	// Token: 0x0400BAC7 RID: 47815
 	private readonly LogicDataCameraModify Config;
 }

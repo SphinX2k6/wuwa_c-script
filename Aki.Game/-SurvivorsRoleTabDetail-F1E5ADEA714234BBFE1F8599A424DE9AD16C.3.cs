@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002B28 RID: 11048
+// Token: 0x020020A4 RID: 8356
 internal enum <SurvivorsRoleTabDetail>F1E5ADEA714234BBFE1F8599A424DE9AD16C4C0CFFC118B23F594FAB5AF84D2B0__EAttributeItemComp
 {
-	// Token: 0x0400AABE RID: 43710
+	// Token: 0x0400AEC4 RID: 44740
 	AttributeText,
-	// Token: 0x0400AABF RID: 43711
+	// Token: 0x0400AEC5 RID: 44741
 	AttributeNumText,
-	// Token: 0x0400AAC0 RID: 43712
+	// Token: 0x0400AEC6 RID: 44742
 	ArrowItem,
-	// Token: 0x0400AAC1 RID: 43713
+	// Token: 0x0400AEC7 RID: 44743
 	AttributeAddText,
-	// Token: 0x0400AAC2 RID: 43714
+	// Token: 0x0400AEC8 RID: 44744
 	AttributeIcon,
-	// Token: 0x0400AAC3 RID: 43715
+	// Token: 0x0400AEC9 RID: 44745
 	Bg,
-	// Token: 0x0400AAC4 RID: 43716
+	// Token: 0x0400AECA RID: 44746
 	HighLightItem
 }

@@ -6,12 +6,13 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
+using CSharpScript.Game.Module.SolarSchool;
 using CSharpScript.Game.Module.WorldMap;
 using FilterDefine;
 
 namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 {
-	// Token: 0x02007294 RID: 29332
+	// Token: 0x02006413 RID: 25619
 	[JsonSourceGenerationOptions(GenerationMode = JsonSourceGenerationMode.Metadata, IncludeFields = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull)]
 	[JsonSerializable(typeof(bool))]
 	[JsonSerializable(typeof(bool?))]
@@ -48,6 +49,14 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 	[JsonSerializable(typeof(RacingBetsRedDotState))]
 	[JsonSerializable(typeof(RegionAndIpSt))]
 	[JsonSerializable(typeof(SortStorageData))]
+	[JsonSerializable(typeof(SolarSchoolLocalStorageData))]
+	[JsonSerializable(typeof(SolarSchoolActivityLocalData))]
+	[JsonSerializable(typeof(SolarSchoolSlotLocalData))]
+	[JsonSerializable(typeof(SolarSchoolRedDotLocalData))]
+	[JsonSerializable(typeof(Dictionary<int, SolarSchoolRedDotLocalData>))]
+	[JsonSerializable(typeof(Dictionary<int, SolarSchoolActivityLocalData>))]
+	[JsonSerializable(typeof(Dictionary<int, SolarSchoolSlotLocalData>))]
+	[JsonSerializable(typeof(Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>))]
 	[JsonSerializable(typeof(Dictionary<EFunction, int>))]
 	[JsonSerializable(typeof(Dictionary<FilterDefine.EFilterType, List<int>>))]
 	[JsonSerializable(typeof(Dictionary<int, bool>))]
@@ -94,8 +103,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 	[GeneratedCode("System.Text.Json.SourceGeneration", "9.0.12.26613")]
 	internal class LocalStorageJsonSourceGenContext : JsonSerializerContext, IJsonTypeInfoResolver
 	{
-		// Token: 0x17009EA8 RID: 40616
-		// (get) Token: 0x06047E21 RID: 294433 RVA: 0x01265AA8 File Offset: 0x01263CA8
+		// Token: 0x17007601 RID: 30209
+		// (get) Token: 0x0603E1E1 RID: 254433 RVA: 0x01206558 File Offset: 0x01204758
 		public JsonTypeInfo<bool> Boolean
 		{
 			get
@@ -109,7 +118,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E22 RID: 294434 RVA: 0x01265AE4 File Offset: 0x01263CE4
+		// Token: 0x0603E1E2 RID: 254434 RVA: 0x01206594 File Offset: 0x01204794
 		[NullableContext(1)]
 		private JsonTypeInfo<bool> Create_Boolean(JsonSerializerOptions options)
 		{
@@ -122,8 +131,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EA9 RID: 40617
-		// (get) Token: 0x06047E23 RID: 294435 RVA: 0x01265B10 File Offset: 0x01263D10
+		// Token: 0x17007602 RID: 30210
+		// (get) Token: 0x0603E1E3 RID: 254435 RVA: 0x012065C0 File Offset: 0x012047C0
 		public JsonTypeInfo<bool?> NullableBoolean
 		{
 			get
@@ -137,7 +146,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E24 RID: 294436 RVA: 0x01265B4C File Offset: 0x01263D4C
+		// Token: 0x0603E1E4 RID: 254436 RVA: 0x012065FC File Offset: 0x012047FC
 		[NullableContext(1)]
 		private JsonTypeInfo<bool?> Create_NullableBoolean(JsonSerializerOptions options)
 		{
@@ -151,8 +160,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EAA RID: 40618
-		// (get) Token: 0x06047E25 RID: 294437 RVA: 0x01265B7C File Offset: 0x01263D7C
+		// Token: 0x17007603 RID: 30211
+		// (get) Token: 0x0603E1E5 RID: 254437 RVA: 0x0120662C File Offset: 0x0120482C
 		public JsonTypeInfo<double> Double
 		{
 			get
@@ -166,7 +175,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E26 RID: 294438 RVA: 0x01265BB8 File Offset: 0x01263DB8
+		// Token: 0x0603E1E6 RID: 254438 RVA: 0x01206668 File Offset: 0x01204868
 		[NullableContext(1)]
 		private JsonTypeInfo<double> Create_Double(JsonSerializerOptions options)
 		{
@@ -179,8 +188,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EAB RID: 40619
-		// (get) Token: 0x06047E27 RID: 294439 RVA: 0x01265BE4 File Offset: 0x01263DE4
+		// Token: 0x17007604 RID: 30212
+		// (get) Token: 0x0603E1E7 RID: 254439 RVA: 0x01206694 File Offset: 0x01204894
 		public JsonTypeInfo<double?> NullableDouble
 		{
 			get
@@ -194,7 +203,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E28 RID: 294440 RVA: 0x01265C20 File Offset: 0x01263E20
+		// Token: 0x0603E1E8 RID: 254440 RVA: 0x012066D0 File Offset: 0x012048D0
 		[NullableContext(1)]
 		private JsonTypeInfo<double?> Create_NullableDouble(JsonSerializerOptions options)
 		{
@@ -208,8 +217,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EAC RID: 40620
-		// (get) Token: 0x06047E29 RID: 294441 RVA: 0x01265C50 File Offset: 0x01263E50
+		// Token: 0x17007605 RID: 30213
+		// (get) Token: 0x0603E1E9 RID: 254441 RVA: 0x01206700 File Offset: 0x01204900
 		public JsonTypeInfo<double[]> DoubleArray
 		{
 			get
@@ -223,7 +232,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E2A RID: 294442 RVA: 0x01265C8C File Offset: 0x01263E8C
+		// Token: 0x0603E1EA RID: 254442 RVA: 0x0120673C File Offset: 0x0120493C
 		[NullableContext(1)]
 		private JsonTypeInfo<double[]> Create_DoubleArray(JsonSerializerOptions options)
 		{
@@ -242,8 +251,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EAD RID: 40621
-		// (get) Token: 0x06047E2B RID: 294443 RVA: 0x01265CD8 File Offset: 0x01263ED8
+		// Token: 0x17007606 RID: 30214
+		// (get) Token: 0x0603E1EB RID: 254443 RVA: 0x01206788 File Offset: 0x01204988
 		public JsonTypeInfo<float> Single
 		{
 			get
@@ -257,7 +266,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E2C RID: 294444 RVA: 0x01265D14 File Offset: 0x01263F14
+		// Token: 0x0603E1EC RID: 254444 RVA: 0x012067C4 File Offset: 0x012049C4
 		[NullableContext(1)]
 		private JsonTypeInfo<float> Create_Single(JsonSerializerOptions options)
 		{
@@ -270,8 +279,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EAE RID: 40622
-		// (get) Token: 0x06047E2D RID: 294445 RVA: 0x01265D40 File Offset: 0x01263F40
+		// Token: 0x17007607 RID: 30215
+		// (get) Token: 0x0603E1ED RID: 254445 RVA: 0x012067F0 File Offset: 0x012049F0
 		public JsonTypeInfo<float?> NullableSingle
 		{
 			get
@@ -285,7 +294,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E2E RID: 294446 RVA: 0x01265D7C File Offset: 0x01263F7C
+		// Token: 0x0603E1EE RID: 254446 RVA: 0x0120682C File Offset: 0x01204A2C
 		[NullableContext(1)]
 		private JsonTypeInfo<float?> Create_NullableSingle(JsonSerializerOptions options)
 		{
@@ -299,8 +308,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EAF RID: 40623
-		// (get) Token: 0x06047E2F RID: 294447 RVA: 0x01265DAC File Offset: 0x01263FAC
+		// Token: 0x17007608 RID: 30216
+		// (get) Token: 0x0603E1EF RID: 254447 RVA: 0x0120685C File Offset: 0x01204A5C
 		public JsonTypeInfo<float[]> SingleArray
 		{
 			get
@@ -314,7 +323,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E30 RID: 294448 RVA: 0x01265DE8 File Offset: 0x01263FE8
+		// Token: 0x0603E1F0 RID: 254448 RVA: 0x01206898 File Offset: 0x01204A98
 		[NullableContext(1)]
 		private JsonTypeInfo<float[]> Create_SingleArray(JsonSerializerOptions options)
 		{
@@ -333,8 +342,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EB0 RID: 40624
-		// (get) Token: 0x06047E31 RID: 294449 RVA: 0x01265E34 File Offset: 0x01264034
+		// Token: 0x17007609 RID: 30217
+		// (get) Token: 0x0603E1F1 RID: 254449 RVA: 0x012068E4 File Offset: 0x01204AE4
 		public JsonTypeInfo<AbyssDangoOwnerData> AbyssDangoOwnerData
 		{
 			get
@@ -348,7 +357,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E32 RID: 294450 RVA: 0x01265E70 File Offset: 0x01264070
+		// Token: 0x0603E1F2 RID: 254450 RVA: 0x01206920 File Offset: 0x01204B20
 		[NullableContext(1)]
 		private JsonTypeInfo<AbyssDangoOwnerData> Create_AbyssDangoOwnerData(JsonSerializerOptions options)
 		{
@@ -370,7 +379,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E33 RID: 294451 RVA: 0x01265F38 File Offset: 0x01264138
+		// Token: 0x0603E1F3 RID: 254451 RVA: 0x012069E8 File Offset: 0x01204BE8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] AbyssDangoOwnerDataPropInit(JsonSerializerOptions options)
 		{
@@ -480,8 +489,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009EB1 RID: 40625
-		// (get) Token: 0x06047E34 RID: 294452 RVA: 0x012663F8 File Offset: 0x012645F8
+		// Token: 0x1700760A RID: 30218
+		// (get) Token: 0x0603E1F4 RID: 254452 RVA: 0x01206EA8 File Offset: 0x012050A8
 		public JsonTypeInfo<ActivityCacheData> ActivityCacheData
 		{
 			get
@@ -495,7 +504,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E35 RID: 294453 RVA: 0x01266434 File Offset: 0x01264634
+		// Token: 0x0603E1F5 RID: 254453 RVA: 0x01206EE4 File Offset: 0x012050E4
 		[NullableContext(1)]
 		private JsonTypeInfo<ActivityCacheData> Create_ActivityCacheData(JsonSerializerOptions options)
 		{
@@ -517,7 +526,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E36 RID: 294454 RVA: 0x012664FC File Offset: 0x012646FC
+		// Token: 0x0603E1F6 RID: 254454 RVA: 0x01206FAC File Offset: 0x012051AC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ActivityCacheDataPropInit(JsonSerializerOptions options)
 		{
@@ -565,8 +574,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009EB2 RID: 40626
-		// (get) Token: 0x06047E37 RID: 294455 RVA: 0x012666E4 File Offset: 0x012648E4
+		// Token: 0x1700760B RID: 30219
+		// (get) Token: 0x0603E1F7 RID: 254455 RVA: 0x01207194 File Offset: 0x01205394
 		public JsonTypeInfo<AreaExplorePlayState> AreaExplorePlayState
 		{
 			get
@@ -580,7 +589,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E38 RID: 294456 RVA: 0x01266720 File Offset: 0x01264920
+		// Token: 0x0603E1F8 RID: 254456 RVA: 0x012071D0 File Offset: 0x012053D0
 		[NullableContext(1)]
 		private JsonTypeInfo<AreaExplorePlayState> Create_AreaExplorePlayState(JsonSerializerOptions options)
 		{
@@ -602,7 +611,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E39 RID: 294457 RVA: 0x012667E8 File Offset: 0x012649E8
+		// Token: 0x0603E1F9 RID: 254457 RVA: 0x01207298 File Offset: 0x01205498
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] AreaExplorePlayStatePropInit(JsonSerializerOptions options)
 		{
@@ -652,8 +661,384 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009EB3 RID: 40627
-		// (get) Token: 0x06047E3A RID: 294458 RVA: 0x012669E0 File Offset: 0x01264BE0
+		// Token: 0x1700760C RID: 30220
+		// (get) Token: 0x0603E1FA RID: 254458 RVA: 0x01207490 File Offset: 0x01205690
+		public JsonTypeInfo<ESolarSchoolLocalRecordType> ESolarSchoolLocalRecordType
+		{
+			get
+			{
+				JsonTypeInfo<ESolarSchoolLocalRecordType> result;
+				if ((result = this._ESolarSchoolLocalRecordType) == null)
+				{
+					result = (this._ESolarSchoolLocalRecordType = (JsonTypeInfo<ESolarSchoolLocalRecordType>)base.Options.GetTypeInfo(typeof(ESolarSchoolLocalRecordType)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0603E1FB RID: 254459 RVA: 0x012074CC File Offset: 0x012056CC
+		[NullableContext(1)]
+		private JsonTypeInfo<ESolarSchoolLocalRecordType> Create_ESolarSchoolLocalRecordType(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<ESolarSchoolLocalRecordType> jsonTypeInfo;
+			if (!LocalStorageJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<ESolarSchoolLocalRecordType>(options, out jsonTypeInfo))
+			{
+				jsonTypeInfo = JsonMetadataServices.CreateValueInfo<ESolarSchoolLocalRecordType>(options, JsonMetadataServices.GetEnumConverter<ESolarSchoolLocalRecordType>(options));
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x1700760D RID: 30221
+		// (get) Token: 0x0603E1FC RID: 254460 RVA: 0x012074F8 File Offset: 0x012056F8
+		public JsonTypeInfo<SolarSchoolActivityLocalData> SolarSchoolActivityLocalData
+		{
+			get
+			{
+				JsonTypeInfo<SolarSchoolActivityLocalData> result;
+				if ((result = this._SolarSchoolActivityLocalData) == null)
+				{
+					result = (this._SolarSchoolActivityLocalData = (JsonTypeInfo<SolarSchoolActivityLocalData>)base.Options.GetTypeInfo(typeof(SolarSchoolActivityLocalData)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0603E1FD RID: 254461 RVA: 0x01207534 File Offset: 0x01205734
+		[NullableContext(1)]
+		private JsonTypeInfo<SolarSchoolActivityLocalData> Create_SolarSchoolActivityLocalData(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<SolarSchoolActivityLocalData> jsonTypeInfo;
+			if (!LocalStorageJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<SolarSchoolActivityLocalData>(options, out jsonTypeInfo))
+			{
+				JsonObjectInfoValues<SolarSchoolActivityLocalData> jsonObjectInfoValues = new JsonObjectInfoValues<SolarSchoolActivityLocalData>();
+				jsonObjectInfoValues.ObjectCreator = (() => new SolarSchoolActivityLocalData());
+				jsonObjectInfoValues.ObjectWithParameterizedConstructorCreator = null;
+				jsonObjectInfoValues.PropertyMetadataInitializer = ((JsonSerializerContext _) => LocalStorageJsonSourceGenContext.SolarSchoolActivityLocalDataPropInit(options));
+				jsonObjectInfoValues.ConstructorParameterMetadataInitializer = null;
+				jsonObjectInfoValues.ConstructorAttributeProviderFactory = (() => typeof(SolarSchoolActivityLocalData).GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, Array.Empty<Type>(), null));
+				jsonObjectInfoValues.SerializeHandler = null;
+				JsonObjectInfoValues<SolarSchoolActivityLocalData> objectInfo = jsonObjectInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateObjectInfo<SolarSchoolActivityLocalData>(options, objectInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x0603E1FE RID: 254462 RVA: 0x012075FC File Offset: 0x012057FC
+		[NullableContext(1)]
+		private static JsonPropertyInfo[] SolarSchoolActivityLocalDataPropInit(JsonSerializerOptions options)
+		{
+			JsonPropertyInfo[] array = new JsonPropertyInfo[1];
+			JsonPropertyInfoValues<Dictionary<int, SolarSchoolSlotLocalData>> jsonPropertyInfoValues = new JsonPropertyInfoValues<Dictionary<int, SolarSchoolSlotLocalData>>();
+			jsonPropertyInfoValues.IsProperty = true;
+			jsonPropertyInfoValues.IsPublic = true;
+			jsonPropertyInfoValues.IsVirtual = false;
+			jsonPropertyInfoValues.DeclaringType = typeof(SolarSchoolActivityLocalData);
+			jsonPropertyInfoValues.Converter = null;
+			jsonPropertyInfoValues.Getter = ((object obj) => ((SolarSchoolActivityLocalData)obj).Slots);
+			jsonPropertyInfoValues.Setter = delegate(object obj, [Nullable(new byte[]
+			{
+				2,
+				1
+			})] Dictionary<int, SolarSchoolSlotLocalData> value)
+			{
+				((SolarSchoolActivityLocalData)obj).Slots = value;
+			};
+			jsonPropertyInfoValues.IgnoreCondition = null;
+			jsonPropertyInfoValues.HasJsonInclude = false;
+			jsonPropertyInfoValues.IsExtensionData = false;
+			jsonPropertyInfoValues.NumberHandling = null;
+			jsonPropertyInfoValues.PropertyName = "Slots";
+			jsonPropertyInfoValues.JsonPropertyName = null;
+			jsonPropertyInfoValues.AttributeProviderFactory = (() => typeof(SolarSchoolActivityLocalData).GetProperty("Slots", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, typeof(Dictionary<int, SolarSchoolSlotLocalData>), Array.Empty<Type>(), null));
+			JsonPropertyInfoValues<Dictionary<int, SolarSchoolSlotLocalData>> propertyInfo = jsonPropertyInfoValues;
+			array[0] = JsonMetadataServices.CreatePropertyInfo<Dictionary<int, SolarSchoolSlotLocalData>>(options, propertyInfo);
+			array[0].IsGetNullable = false;
+			array[0].IsSetNullable = false;
+			return array;
+		}
+
+		// Token: 0x1700760E RID: 30222
+		// (get) Token: 0x0603E1FF RID: 254463 RVA: 0x0120770C File Offset: 0x0120590C
+		public JsonTypeInfo<SolarSchoolLocalStorageData> SolarSchoolLocalStorageData
+		{
+			get
+			{
+				JsonTypeInfo<SolarSchoolLocalStorageData> result;
+				if ((result = this._SolarSchoolLocalStorageData) == null)
+				{
+					result = (this._SolarSchoolLocalStorageData = (JsonTypeInfo<SolarSchoolLocalStorageData>)base.Options.GetTypeInfo(typeof(SolarSchoolLocalStorageData)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0603E200 RID: 254464 RVA: 0x01207748 File Offset: 0x01205948
+		[NullableContext(1)]
+		private JsonTypeInfo<SolarSchoolLocalStorageData> Create_SolarSchoolLocalStorageData(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<SolarSchoolLocalStorageData> jsonTypeInfo;
+			if (!LocalStorageJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<SolarSchoolLocalStorageData>(options, out jsonTypeInfo))
+			{
+				JsonObjectInfoValues<SolarSchoolLocalStorageData> jsonObjectInfoValues = new JsonObjectInfoValues<SolarSchoolLocalStorageData>();
+				jsonObjectInfoValues.ObjectCreator = (() => new SolarSchoolLocalStorageData());
+				jsonObjectInfoValues.ObjectWithParameterizedConstructorCreator = null;
+				jsonObjectInfoValues.PropertyMetadataInitializer = ((JsonSerializerContext _) => LocalStorageJsonSourceGenContext.SolarSchoolLocalStorageDataPropInit(options));
+				jsonObjectInfoValues.ConstructorParameterMetadataInitializer = null;
+				jsonObjectInfoValues.ConstructorAttributeProviderFactory = (() => typeof(SolarSchoolLocalStorageData).GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, Array.Empty<Type>(), null));
+				jsonObjectInfoValues.SerializeHandler = null;
+				JsonObjectInfoValues<SolarSchoolLocalStorageData> objectInfo = jsonObjectInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateObjectInfo<SolarSchoolLocalStorageData>(options, objectInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x0603E201 RID: 254465 RVA: 0x01207810 File Offset: 0x01205A10
+		[NullableContext(1)]
+		private static JsonPropertyInfo[] SolarSchoolLocalStorageDataPropInit(JsonSerializerOptions options)
+		{
+			JsonPropertyInfo[] array = new JsonPropertyInfo[2];
+			JsonPropertyInfoValues<Dictionary<int, SolarSchoolActivityLocalData>> jsonPropertyInfoValues = new JsonPropertyInfoValues<Dictionary<int, SolarSchoolActivityLocalData>>();
+			jsonPropertyInfoValues.IsProperty = true;
+			jsonPropertyInfoValues.IsPublic = true;
+			jsonPropertyInfoValues.IsVirtual = false;
+			jsonPropertyInfoValues.DeclaringType = typeof(SolarSchoolLocalStorageData);
+			jsonPropertyInfoValues.Converter = null;
+			jsonPropertyInfoValues.Getter = ((object obj) => ((SolarSchoolLocalStorageData)obj).Activities);
+			jsonPropertyInfoValues.Setter = delegate(object obj, [Nullable(new byte[]
+			{
+				2,
+				1
+			})] Dictionary<int, SolarSchoolActivityLocalData> value)
+			{
+				((SolarSchoolLocalStorageData)obj).Activities = value;
+			};
+			jsonPropertyInfoValues.IgnoreCondition = null;
+			jsonPropertyInfoValues.HasJsonInclude = false;
+			jsonPropertyInfoValues.IsExtensionData = false;
+			jsonPropertyInfoValues.NumberHandling = null;
+			jsonPropertyInfoValues.PropertyName = "Activities";
+			jsonPropertyInfoValues.JsonPropertyName = null;
+			jsonPropertyInfoValues.AttributeProviderFactory = (() => typeof(SolarSchoolLocalStorageData).GetProperty("Activities", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, typeof(Dictionary<int, SolarSchoolActivityLocalData>), Array.Empty<Type>(), null));
+			JsonPropertyInfoValues<Dictionary<int, SolarSchoolActivityLocalData>> propertyInfo = jsonPropertyInfoValues;
+			array[0] = JsonMetadataServices.CreatePropertyInfo<Dictionary<int, SolarSchoolActivityLocalData>>(options, propertyInfo);
+			array[0].IsGetNullable = false;
+			array[0].IsSetNullable = false;
+			JsonPropertyInfoValues<Dictionary<int, SolarSchoolRedDotLocalData>> jsonPropertyInfoValues2 = new JsonPropertyInfoValues<Dictionary<int, SolarSchoolRedDotLocalData>>();
+			jsonPropertyInfoValues2.IsProperty = true;
+			jsonPropertyInfoValues2.IsPublic = true;
+			jsonPropertyInfoValues2.IsVirtual = false;
+			jsonPropertyInfoValues2.DeclaringType = typeof(SolarSchoolLocalStorageData);
+			jsonPropertyInfoValues2.Converter = null;
+			jsonPropertyInfoValues2.Getter = ((object obj) => ((SolarSchoolLocalStorageData)obj).RedDots);
+			jsonPropertyInfoValues2.Setter = delegate(object obj, [Nullable(new byte[]
+			{
+				2,
+				1
+			})] Dictionary<int, SolarSchoolRedDotLocalData> value)
+			{
+				((SolarSchoolLocalStorageData)obj).RedDots = value;
+			};
+			jsonPropertyInfoValues2.IgnoreCondition = null;
+			jsonPropertyInfoValues2.HasJsonInclude = false;
+			jsonPropertyInfoValues2.IsExtensionData = false;
+			jsonPropertyInfoValues2.NumberHandling = null;
+			jsonPropertyInfoValues2.PropertyName = "RedDots";
+			jsonPropertyInfoValues2.JsonPropertyName = null;
+			jsonPropertyInfoValues2.AttributeProviderFactory = (() => typeof(SolarSchoolLocalStorageData).GetProperty("RedDots", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, typeof(Dictionary<int, SolarSchoolRedDotLocalData>), Array.Empty<Type>(), null));
+			JsonPropertyInfoValues<Dictionary<int, SolarSchoolRedDotLocalData>> propertyInfo2 = jsonPropertyInfoValues2;
+			array[1] = JsonMetadataServices.CreatePropertyInfo<Dictionary<int, SolarSchoolRedDotLocalData>>(options, propertyInfo2);
+			array[1].IsGetNullable = false;
+			array[1].IsSetNullable = false;
+			return array;
+		}
+
+		// Token: 0x1700760F RID: 30223
+		// (get) Token: 0x0603E202 RID: 254466 RVA: 0x01207A1C File Offset: 0x01205C1C
+		public JsonTypeInfo<SolarSchoolRedDotLocalData> SolarSchoolRedDotLocalData
+		{
+			get
+			{
+				JsonTypeInfo<SolarSchoolRedDotLocalData> result;
+				if ((result = this._SolarSchoolRedDotLocalData) == null)
+				{
+					result = (this._SolarSchoolRedDotLocalData = (JsonTypeInfo<SolarSchoolRedDotLocalData>)base.Options.GetTypeInfo(typeof(SolarSchoolRedDotLocalData)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0603E203 RID: 254467 RVA: 0x01207A58 File Offset: 0x01205C58
+		[NullableContext(1)]
+		private JsonTypeInfo<SolarSchoolRedDotLocalData> Create_SolarSchoolRedDotLocalData(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<SolarSchoolRedDotLocalData> jsonTypeInfo;
+			if (!LocalStorageJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<SolarSchoolRedDotLocalData>(options, out jsonTypeInfo))
+			{
+				JsonObjectInfoValues<SolarSchoolRedDotLocalData> jsonObjectInfoValues = new JsonObjectInfoValues<SolarSchoolRedDotLocalData>();
+				jsonObjectInfoValues.ObjectCreator = (() => new SolarSchoolRedDotLocalData());
+				jsonObjectInfoValues.ObjectWithParameterizedConstructorCreator = null;
+				jsonObjectInfoValues.PropertyMetadataInitializer = ((JsonSerializerContext _) => LocalStorageJsonSourceGenContext.SolarSchoolRedDotLocalDataPropInit(options));
+				jsonObjectInfoValues.ConstructorParameterMetadataInitializer = null;
+				jsonObjectInfoValues.ConstructorAttributeProviderFactory = (() => typeof(SolarSchoolRedDotLocalData).GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, Array.Empty<Type>(), null));
+				jsonObjectInfoValues.SerializeHandler = null;
+				JsonObjectInfoValues<SolarSchoolRedDotLocalData> objectInfo = jsonObjectInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateObjectInfo<SolarSchoolRedDotLocalData>(options, objectInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x0603E204 RID: 254468 RVA: 0x01207B20 File Offset: 0x01205D20
+		[NullableContext(1)]
+		private static JsonPropertyInfo[] SolarSchoolRedDotLocalDataPropInit(JsonSerializerOptions options)
+		{
+			JsonPropertyInfo[] array = new JsonPropertyInfo[3];
+			JsonPropertyInfoValues<bool> jsonPropertyInfoValues = new JsonPropertyInfoValues<bool>();
+			jsonPropertyInfoValues.IsProperty = true;
+			jsonPropertyInfoValues.IsPublic = true;
+			jsonPropertyInfoValues.IsVirtual = false;
+			jsonPropertyInfoValues.DeclaringType = typeof(SolarSchoolRedDotLocalData);
+			jsonPropertyInfoValues.Converter = null;
+			jsonPropertyInfoValues.Getter = ((object obj) => ((SolarSchoolRedDotLocalData)obj).GoEntranceRedDotConsumed);
+			jsonPropertyInfoValues.Setter = delegate(object obj, bool value)
+			{
+				((SolarSchoolRedDotLocalData)obj).GoEntranceRedDotConsumed = value;
+			};
+			jsonPropertyInfoValues.IgnoreCondition = null;
+			jsonPropertyInfoValues.HasJsonInclude = false;
+			jsonPropertyInfoValues.IsExtensionData = false;
+			jsonPropertyInfoValues.NumberHandling = null;
+			jsonPropertyInfoValues.PropertyName = "GoEntranceRedDotConsumed";
+			jsonPropertyInfoValues.JsonPropertyName = null;
+			jsonPropertyInfoValues.AttributeProviderFactory = (() => typeof(SolarSchoolRedDotLocalData).GetProperty("GoEntranceRedDotConsumed", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, typeof(bool), Array.Empty<Type>(), null));
+			JsonPropertyInfoValues<bool> propertyInfo = jsonPropertyInfoValues;
+			array[0] = JsonMetadataServices.CreatePropertyInfo<bool>(options, propertyInfo);
+			JsonPropertyInfoValues<HashSet<int>> jsonPropertyInfoValues2 = new JsonPropertyInfoValues<HashSet<int>>();
+			jsonPropertyInfoValues2.IsProperty = true;
+			jsonPropertyInfoValues2.IsPublic = true;
+			jsonPropertyInfoValues2.IsVirtual = false;
+			jsonPropertyInfoValues2.DeclaringType = typeof(SolarSchoolRedDotLocalData);
+			jsonPropertyInfoValues2.Converter = null;
+			jsonPropertyInfoValues2.Getter = ((object obj) => ((SolarSchoolRedDotLocalData)obj).ViewedGalleryIds);
+			jsonPropertyInfoValues2.Setter = delegate(object obj, [Nullable(2)] HashSet<int> value)
+			{
+				((SolarSchoolRedDotLocalData)obj).ViewedGalleryIds = value;
+			};
+			jsonPropertyInfoValues2.IgnoreCondition = null;
+			jsonPropertyInfoValues2.HasJsonInclude = false;
+			jsonPropertyInfoValues2.IsExtensionData = false;
+			jsonPropertyInfoValues2.NumberHandling = null;
+			jsonPropertyInfoValues2.PropertyName = "ViewedGalleryIds";
+			jsonPropertyInfoValues2.JsonPropertyName = null;
+			jsonPropertyInfoValues2.AttributeProviderFactory = (() => typeof(SolarSchoolRedDotLocalData).GetProperty("ViewedGalleryIds", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, typeof(HashSet<int>), Array.Empty<Type>(), null));
+			JsonPropertyInfoValues<HashSet<int>> propertyInfo2 = jsonPropertyInfoValues2;
+			array[1] = JsonMetadataServices.CreatePropertyInfo<HashSet<int>>(options, propertyInfo2);
+			array[1].IsGetNullable = false;
+			array[1].IsSetNullable = false;
+			JsonPropertyInfoValues<HashSet<int>> jsonPropertyInfoValues3 = new JsonPropertyInfoValues<HashSet<int>>();
+			jsonPropertyInfoValues3.IsProperty = true;
+			jsonPropertyInfoValues3.IsPublic = true;
+			jsonPropertyInfoValues3.IsVirtual = false;
+			jsonPropertyInfoValues3.DeclaringType = typeof(SolarSchoolRedDotLocalData);
+			jsonPropertyInfoValues3.Converter = null;
+			jsonPropertyInfoValues3.Getter = ((object obj) => ((SolarSchoolRedDotLocalData)obj).TabAckedGalleryIds);
+			jsonPropertyInfoValues3.Setter = delegate(object obj, [Nullable(2)] HashSet<int> value)
+			{
+				((SolarSchoolRedDotLocalData)obj).TabAckedGalleryIds = value;
+			};
+			jsonPropertyInfoValues3.IgnoreCondition = null;
+			jsonPropertyInfoValues3.HasJsonInclude = false;
+			jsonPropertyInfoValues3.IsExtensionData = false;
+			jsonPropertyInfoValues3.NumberHandling = null;
+			jsonPropertyInfoValues3.PropertyName = "TabAckedGalleryIds";
+			jsonPropertyInfoValues3.JsonPropertyName = null;
+			jsonPropertyInfoValues3.AttributeProviderFactory = (() => typeof(SolarSchoolRedDotLocalData).GetProperty("TabAckedGalleryIds", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, typeof(HashSet<int>), Array.Empty<Type>(), null));
+			JsonPropertyInfoValues<HashSet<int>> propertyInfo3 = jsonPropertyInfoValues3;
+			array[2] = JsonMetadataServices.CreatePropertyInfo<HashSet<int>>(options, propertyInfo3);
+			array[2].IsGetNullable = false;
+			array[2].IsSetNullable = false;
+			return array;
+		}
+
+		// Token: 0x17007610 RID: 30224
+		// (get) Token: 0x0603E205 RID: 254469 RVA: 0x01207E18 File Offset: 0x01206018
+		public JsonTypeInfo<SolarSchoolSlotLocalData> SolarSchoolSlotLocalData
+		{
+			get
+			{
+				JsonTypeInfo<SolarSchoolSlotLocalData> result;
+				if ((result = this._SolarSchoolSlotLocalData) == null)
+				{
+					result = (this._SolarSchoolSlotLocalData = (JsonTypeInfo<SolarSchoolSlotLocalData>)base.Options.GetTypeInfo(typeof(SolarSchoolSlotLocalData)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0603E206 RID: 254470 RVA: 0x01207E54 File Offset: 0x01206054
+		[NullableContext(1)]
+		private JsonTypeInfo<SolarSchoolSlotLocalData> Create_SolarSchoolSlotLocalData(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<SolarSchoolSlotLocalData> jsonTypeInfo;
+			if (!LocalStorageJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<SolarSchoolSlotLocalData>(options, out jsonTypeInfo))
+			{
+				JsonObjectInfoValues<SolarSchoolSlotLocalData> jsonObjectInfoValues = new JsonObjectInfoValues<SolarSchoolSlotLocalData>();
+				jsonObjectInfoValues.ObjectCreator = (() => new SolarSchoolSlotLocalData());
+				jsonObjectInfoValues.ObjectWithParameterizedConstructorCreator = null;
+				jsonObjectInfoValues.PropertyMetadataInitializer = ((JsonSerializerContext _) => LocalStorageJsonSourceGenContext.SolarSchoolSlotLocalDataPropInit(options));
+				jsonObjectInfoValues.ConstructorParameterMetadataInitializer = null;
+				jsonObjectInfoValues.ConstructorAttributeProviderFactory = (() => typeof(SolarSchoolSlotLocalData).GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, Array.Empty<Type>(), null));
+				jsonObjectInfoValues.SerializeHandler = null;
+				JsonObjectInfoValues<SolarSchoolSlotLocalData> objectInfo = jsonObjectInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateObjectInfo<SolarSchoolSlotLocalData>(options, objectInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x0603E207 RID: 254471 RVA: 0x01207F1C File Offset: 0x0120611C
+		[NullableContext(1)]
+		private static JsonPropertyInfo[] SolarSchoolSlotLocalDataPropInit(JsonSerializerOptions options)
+		{
+			JsonPropertyInfo[] array = new JsonPropertyInfo[1];
+			JsonPropertyInfoValues<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>> jsonPropertyInfoValues = new JsonPropertyInfoValues<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>>();
+			jsonPropertyInfoValues.IsProperty = true;
+			jsonPropertyInfoValues.IsPublic = true;
+			jsonPropertyInfoValues.IsVirtual = false;
+			jsonPropertyInfoValues.DeclaringType = typeof(SolarSchoolSlotLocalData);
+			jsonPropertyInfoValues.Converter = null;
+			jsonPropertyInfoValues.Getter = ((object obj) => ((SolarSchoolSlotLocalData)obj).Records);
+			jsonPropertyInfoValues.Setter = delegate(object obj, [Nullable(new byte[]
+			{
+				2,
+				1
+			})] Dictionary<ESolarSchoolLocalRecordType, HashSet<int>> value)
+			{
+				((SolarSchoolSlotLocalData)obj).Records = value;
+			};
+			jsonPropertyInfoValues.IgnoreCondition = null;
+			jsonPropertyInfoValues.HasJsonInclude = false;
+			jsonPropertyInfoValues.IsExtensionData = false;
+			jsonPropertyInfoValues.NumberHandling = null;
+			jsonPropertyInfoValues.PropertyName = "Records";
+			jsonPropertyInfoValues.JsonPropertyName = null;
+			jsonPropertyInfoValues.AttributeProviderFactory = (() => typeof(SolarSchoolSlotLocalData).GetProperty("Records", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, typeof(Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>), Array.Empty<Type>(), null));
+			JsonPropertyInfoValues<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>> propertyInfo = jsonPropertyInfoValues;
+			array[0] = JsonMetadataServices.CreatePropertyInfo<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>>(options, propertyInfo);
+			array[0].IsGetNullable = false;
+			array[0].IsSetNullable = false;
+			return array;
+		}
+
+		// Token: 0x17007611 RID: 30225
+		// (get) Token: 0x0603E208 RID: 254472 RVA: 0x0120802C File Offset: 0x0120622C
 		public JsonTypeInfo<EMapNoteId> EMapNoteId
 		{
 			get
@@ -667,7 +1052,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E3B RID: 294459 RVA: 0x01266A1C File Offset: 0x01264C1C
+		// Token: 0x0603E209 RID: 254473 RVA: 0x01208068 File Offset: 0x01206268
 		[NullableContext(1)]
 		private JsonTypeInfo<EMapNoteId> Create_EMapNoteId(JsonSerializerOptions options)
 		{
@@ -680,8 +1065,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EB4 RID: 40628
-		// (get) Token: 0x06047E3C RID: 294460 RVA: 0x01266A48 File Offset: 0x01264C48
+		// Token: 0x17007612 RID: 30226
+		// (get) Token: 0x0603E20A RID: 254474 RVA: 0x01208094 File Offset: 0x01206294
 		public JsonTypeInfo<EExploreType> EExploreType
 		{
 			get
@@ -695,7 +1080,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E3D RID: 294461 RVA: 0x01266A84 File Offset: 0x01264C84
+		// Token: 0x0603E20B RID: 254475 RVA: 0x012080D0 File Offset: 0x012062D0
 		[NullableContext(1)]
 		private JsonTypeInfo<EExploreType> Create_EExploreType(JsonSerializerOptions options)
 		{
@@ -708,8 +1093,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EB5 RID: 40629
-		// (get) Token: 0x06047E3E RID: 294462 RVA: 0x01266AB0 File Offset: 0x01264CB0
+		// Token: 0x17007613 RID: 30227
+		// (get) Token: 0x0603E20C RID: 254476 RVA: 0x012080FC File Offset: 0x012062FC
 		public JsonTypeInfo<EFunction> EFunction
 		{
 			get
@@ -723,7 +1108,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E3F RID: 294463 RVA: 0x01266AEC File Offset: 0x01264CEC
+		// Token: 0x0603E20D RID: 254477 RVA: 0x01208138 File Offset: 0x01206338
 		[NullableContext(1)]
 		private JsonTypeInfo<EFunction> Create_EFunction(JsonSerializerOptions options)
 		{
@@ -736,8 +1121,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EB6 RID: 40630
-		// (get) Token: 0x06047E40 RID: 294464 RVA: 0x01266B18 File Offset: 0x01264D18
+		// Token: 0x17007614 RID: 30228
+		// (get) Token: 0x0603E20E RID: 254478 RVA: 0x01208164 File Offset: 0x01206364
 		public JsonTypeInfo<EMotorMusicPlayMode> EMotorMusicPlayMode
 		{
 			get
@@ -751,7 +1136,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E41 RID: 294465 RVA: 0x01266B54 File Offset: 0x01264D54
+		// Token: 0x0603E20F RID: 254479 RVA: 0x012081A0 File Offset: 0x012063A0
 		[NullableContext(1)]
 		private JsonTypeInfo<EMotorMusicPlayMode> Create_EMotorMusicPlayMode(JsonSerializerOptions options)
 		{
@@ -764,8 +1149,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EB7 RID: 40631
-		// (get) Token: 0x06047E42 RID: 294466 RVA: 0x01266B80 File Offset: 0x01264D80
+		// Token: 0x17007615 RID: 30229
+		// (get) Token: 0x0603E210 RID: 254480 RVA: 0x012081CC File Offset: 0x012063CC
 		public JsonTypeInfo<EPlayPointState> EPlayPointState
 		{
 			get
@@ -779,7 +1164,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E43 RID: 294467 RVA: 0x01266BBC File Offset: 0x01264DBC
+		// Token: 0x0603E211 RID: 254481 RVA: 0x01208208 File Offset: 0x01206408
 		[NullableContext(1)]
 		private JsonTypeInfo<EPlayPointState> Create_EPlayPointState(JsonSerializerOptions options)
 		{
@@ -792,8 +1177,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EB8 RID: 40632
-		// (get) Token: 0x06047E44 RID: 294468 RVA: 0x01266BE8 File Offset: 0x01264DE8
+		// Token: 0x17007616 RID: 30230
+		// (get) Token: 0x0603E212 RID: 254482 RVA: 0x01208234 File Offset: 0x01206434
 		public JsonTypeInfo<ERouletteType> ERouletteType
 		{
 			get
@@ -807,7 +1192,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E45 RID: 294469 RVA: 0x01266C24 File Offset: 0x01264E24
+		// Token: 0x0603E213 RID: 254483 RVA: 0x01208270 File Offset: 0x01206470
 		[NullableContext(1)]
 		private JsonTypeInfo<ERouletteType> Create_ERouletteType(JsonSerializerOptions options)
 		{
@@ -820,8 +1205,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EB9 RID: 40633
-		// (get) Token: 0x06047E46 RID: 294470 RVA: 0x01266C50 File Offset: 0x01264E50
+		// Token: 0x17007617 RID: 30231
+		// (get) Token: 0x0603E214 RID: 254484 RVA: 0x0120829C File Offset: 0x0120649C
 		public JsonTypeInfo<ERouletteType?> NullableERouletteType
 		{
 			get
@@ -835,7 +1220,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E47 RID: 294471 RVA: 0x01266C8C File Offset: 0x01264E8C
+		// Token: 0x0603E215 RID: 254485 RVA: 0x012082D8 File Offset: 0x012064D8
 		[NullableContext(1)]
 		private JsonTypeInfo<ERouletteType?> Create_NullableERouletteType(JsonSerializerOptions options)
 		{
@@ -849,8 +1234,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EBA RID: 40634
-		// (get) Token: 0x06047E48 RID: 294472 RVA: 0x01266CBC File Offset: 0x01264EBC
+		// Token: 0x17007618 RID: 30232
+		// (get) Token: 0x0603E216 RID: 254486 RVA: 0x01208308 File Offset: 0x01206508
 		public JsonTypeInfo<EVisionLevelUpIdentify> EVisionLevelUpIdentify
 		{
 			get
@@ -864,7 +1249,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E49 RID: 294473 RVA: 0x01266CF8 File Offset: 0x01264EF8
+		// Token: 0x0603E217 RID: 254487 RVA: 0x01208344 File Offset: 0x01206544
 		[NullableContext(1)]
 		private JsonTypeInfo<EVisionLevelUpIdentify> Create_EVisionLevelUpIdentify(JsonSerializerOptions options)
 		{
@@ -877,8 +1262,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EBB RID: 40635
-		// (get) Token: 0x06047E4A RID: 294474 RVA: 0x01266D24 File Offset: 0x01264F24
+		// Token: 0x17007619 RID: 30233
+		// (get) Token: 0x0603E218 RID: 254488 RVA: 0x01208370 File Offset: 0x01206570
 		public JsonTypeInfo<EVisionLevelUpIdentify?> NullableEVisionLevelUpIdentify
 		{
 			get
@@ -892,7 +1277,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E4B RID: 294475 RVA: 0x01266D60 File Offset: 0x01264F60
+		// Token: 0x0603E219 RID: 254489 RVA: 0x012083AC File Offset: 0x012065AC
 		[NullableContext(1)]
 		private JsonTypeInfo<EVisionLevelUpIdentify?> Create_NullableEVisionLevelUpIdentify(JsonSerializerOptions options)
 		{
@@ -906,8 +1291,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EBC RID: 40636
-		// (get) Token: 0x06047E4C RID: 294476 RVA: 0x01266D90 File Offset: 0x01264F90
+		// Token: 0x1700761A RID: 30234
+		// (get) Token: 0x0603E21A RID: 254490 RVA: 0x012083DC File Offset: 0x012065DC
 		public JsonTypeInfo<EVisionLevelUpMaterialPutInMode> EVisionLevelUpMaterialPutInMode
 		{
 			get
@@ -921,7 +1306,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E4D RID: 294477 RVA: 0x01266DCC File Offset: 0x01264FCC
+		// Token: 0x0603E21B RID: 254491 RVA: 0x01208418 File Offset: 0x01206618
 		[NullableContext(1)]
 		private JsonTypeInfo<EVisionLevelUpMaterialPutInMode> Create_EVisionLevelUpMaterialPutInMode(JsonSerializerOptions options)
 		{
@@ -934,8 +1319,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EBD RID: 40637
-		// (get) Token: 0x06047E4E RID: 294478 RVA: 0x01266DF8 File Offset: 0x01264FF8
+		// Token: 0x1700761B RID: 30235
+		// (get) Token: 0x0603E21C RID: 254492 RVA: 0x01208444 File Offset: 0x01206644
 		public JsonTypeInfo<EVisionLevelUpMaterialPutInMode?> NullableEVisionLevelUpMaterialPutInMode
 		{
 			get
@@ -949,7 +1334,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E4F RID: 294479 RVA: 0x01266E34 File Offset: 0x01265034
+		// Token: 0x0603E21D RID: 254493 RVA: 0x01208480 File Offset: 0x01206680
 		[NullableContext(1)]
 		private JsonTypeInfo<EVisionLevelUpMaterialPutInMode?> Create_NullableEVisionLevelUpMaterialPutInMode(JsonSerializerOptions options)
 		{
@@ -963,8 +1348,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EBE RID: 40638
-		// (get) Token: 0x06047E50 RID: 294480 RVA: 0x01266E64 File Offset: 0x01265064
+		// Token: 0x1700761C RID: 30236
+		// (get) Token: 0x0603E21E RID: 254494 RVA: 0x012084B0 File Offset: 0x012066B0
 		public JsonTypeInfo<EVisionLevelUpMaterialUseType> EVisionLevelUpMaterialUseType
 		{
 			get
@@ -978,7 +1363,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E51 RID: 294481 RVA: 0x01266EA0 File Offset: 0x012650A0
+		// Token: 0x0603E21F RID: 254495 RVA: 0x012084EC File Offset: 0x012066EC
 		[NullableContext(1)]
 		private JsonTypeInfo<EVisionLevelUpMaterialUseType> Create_EVisionLevelUpMaterialUseType(JsonSerializerOptions options)
 		{
@@ -991,8 +1376,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EBF RID: 40639
-		// (get) Token: 0x06047E52 RID: 294482 RVA: 0x01266ECC File Offset: 0x012650CC
+		// Token: 0x1700761D RID: 30237
+		// (get) Token: 0x0603E220 RID: 254496 RVA: 0x01208518 File Offset: 0x01206718
 		public JsonTypeInfo<EVisionLevelUpMaterialUseType?> NullableEVisionLevelUpMaterialUseType
 		{
 			get
@@ -1006,7 +1391,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E53 RID: 294483 RVA: 0x01266F08 File Offset: 0x01265108
+		// Token: 0x0603E221 RID: 254497 RVA: 0x01208554 File Offset: 0x01206754
 		[NullableContext(1)]
 		private JsonTypeInfo<EVisionLevelUpMaterialUseType?> Create_NullableEVisionLevelUpMaterialUseType(JsonSerializerOptions options)
 		{
@@ -1020,8 +1405,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EC0 RID: 40640
-		// (get) Token: 0x06047E54 RID: 294484 RVA: 0x01266F38 File Offset: 0x01265138
+		// Token: 0x1700761E RID: 30238
+		// (get) Token: 0x0603E222 RID: 254498 RVA: 0x01208584 File Offset: 0x01206784
 		public JsonTypeInfo<FilterDefine.EFilterType> EFilterType
 		{
 			get
@@ -1035,7 +1420,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E55 RID: 294485 RVA: 0x01266F74 File Offset: 0x01265174
+		// Token: 0x0603E223 RID: 254499 RVA: 0x012085C0 File Offset: 0x012067C0
 		[NullableContext(1)]
 		private JsonTypeInfo<FilterDefine.EFilterType> Create_EFilterType(JsonSerializerOptions options)
 		{
@@ -1048,8 +1433,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EC1 RID: 40641
-		// (get) Token: 0x06047E56 RID: 294486 RVA: 0x01266FA0 File Offset: 0x012651A0
+		// Token: 0x1700761F RID: 30239
+		// (get) Token: 0x0603E224 RID: 254500 RVA: 0x012085EC File Offset: 0x012067EC
 		public JsonTypeInfo<FilterStorageData> FilterStorageData
 		{
 			get
@@ -1063,7 +1448,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E57 RID: 294487 RVA: 0x01266FDC File Offset: 0x012651DC
+		// Token: 0x0603E225 RID: 254501 RVA: 0x01208628 File Offset: 0x01206828
 		[NullableContext(1)]
 		private JsonTypeInfo<FilterStorageData> Create_FilterStorageData(JsonSerializerOptions options)
 		{
@@ -1085,7 +1470,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E58 RID: 294488 RVA: 0x012670A4 File Offset: 0x012652A4
+		// Token: 0x0603E226 RID: 254502 RVA: 0x012086F0 File Offset: 0x012068F0
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] FilterStorageDataPropInit(JsonSerializerOptions options)
 		{
@@ -1139,8 +1524,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009EC2 RID: 40642
-		// (get) Token: 0x06047E59 RID: 294489 RVA: 0x0126729C File Offset: 0x0126549C
+		// Token: 0x17007620 RID: 30240
+		// (get) Token: 0x0603E227 RID: 254503 RVA: 0x012088E8 File Offset: 0x01206AE8
 		public JsonTypeInfo<GamepadTypeUsage> GamepadTypeUsage
 		{
 			get
@@ -1154,7 +1539,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E5A RID: 294490 RVA: 0x012672D8 File Offset: 0x012654D8
+		// Token: 0x0603E228 RID: 254504 RVA: 0x01208924 File Offset: 0x01206B24
 		[NullableContext(1)]
 		private JsonTypeInfo<GamepadTypeUsage> Create_GamepadTypeUsage(JsonSerializerOptions options)
 		{
@@ -1176,7 +1561,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E5B RID: 294491 RVA: 0x012673A0 File Offset: 0x012655A0
+		// Token: 0x0603E229 RID: 254505 RVA: 0x012089EC File Offset: 0x01206BEC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] GamepadTypeUsagePropInit(JsonSerializerOptions options)
 		{
@@ -1224,8 +1609,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009EC3 RID: 40643
-		// (get) Token: 0x06047E5C RID: 294492 RVA: 0x01267588 File Offset: 0x01265788
+		// Token: 0x17007621 RID: 30241
+		// (get) Token: 0x0603E22A RID: 254506 RVA: 0x01208BD4 File Offset: 0x01206DD4
 		public JsonTypeInfo<GameQualityData> GameQualityData
 		{
 			get
@@ -1239,7 +1624,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E5D RID: 294493 RVA: 0x012675C4 File Offset: 0x012657C4
+		// Token: 0x0603E22B RID: 254507 RVA: 0x01208C10 File Offset: 0x01206E10
 		[NullableContext(1)]
 		private JsonTypeInfo<GameQualityData> Create_GameQualityData(JsonSerializerOptions options)
 		{
@@ -1261,7 +1646,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E5E RID: 294494 RVA: 0x0126768C File Offset: 0x0126588C
+		// Token: 0x0603E22C RID: 254508 RVA: 0x01208CD8 File Offset: 0x01206ED8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] GameQualityDataPropInit(JsonSerializerOptions options)
 		{
@@ -2309,8 +2694,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009EC4 RID: 40644
-		// (get) Token: 0x06047E5F RID: 294495 RVA: 0x0126A6E8 File Offset: 0x012688E8
+		// Token: 0x17007622 RID: 30242
+		// (get) Token: 0x0603E22D RID: 254509 RVA: 0x0120BD34 File Offset: 0x01209F34
 		public JsonTypeInfo<IRacingBetsSettlementMainViewRecord> IRacingBetsSettlementMainViewRecord
 		{
 			get
@@ -2324,7 +2709,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E60 RID: 294496 RVA: 0x0126A724 File Offset: 0x01268924
+		// Token: 0x0603E22E RID: 254510 RVA: 0x0120BD70 File Offset: 0x01209F70
 		[NullableContext(1)]
 		private JsonTypeInfo<IRacingBetsSettlementMainViewRecord> Create_IRacingBetsSettlementMainViewRecord(JsonSerializerOptions options)
 		{
@@ -2347,7 +2732,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E61 RID: 294497 RVA: 0x0126A7AC File Offset: 0x012689AC
+		// Token: 0x0603E22F RID: 254511 RVA: 0x0120BDF8 File Offset: 0x01209FF8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IRacingBetsSettlementMainViewRecordPropInit(JsonSerializerOptions options)
 		{
@@ -2397,8 +2782,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009EC5 RID: 40645
-		// (get) Token: 0x06047E62 RID: 294498 RVA: 0x0126A9A4 File Offset: 0x01268BA4
+		// Token: 0x17007623 RID: 30243
+		// (get) Token: 0x0603E230 RID: 254512 RVA: 0x0120BFF0 File Offset: 0x0120A1F0
 		public JsonTypeInfo<LocalFriendApplication> LocalFriendApplication
 		{
 			get
@@ -2412,7 +2797,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E63 RID: 294499 RVA: 0x0126A9E0 File Offset: 0x01268BE0
+		// Token: 0x0603E231 RID: 254513 RVA: 0x0120C02C File Offset: 0x0120A22C
 		[NullableContext(1)]
 		private JsonTypeInfo<LocalFriendApplication> Create_LocalFriendApplication(JsonSerializerOptions options)
 		{
@@ -2434,7 +2819,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E64 RID: 294500 RVA: 0x0126AAA8 File Offset: 0x01268CA8
+		// Token: 0x0603E232 RID: 254514 RVA: 0x0120C0F4 File Offset: 0x0120A2F4
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] LocalFriendApplicationPropInit(JsonSerializerOptions options)
 		{
@@ -2482,8 +2867,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009EC6 RID: 40646
-		// (get) Token: 0x06047E65 RID: 294501 RVA: 0x0126AC90 File Offset: 0x01268E90
+		// Token: 0x17007624 RID: 30244
+		// (get) Token: 0x0603E233 RID: 254515 RVA: 0x0120C2DC File Offset: 0x0120A4DC
 		public JsonTypeInfo<LocalPlayerIpLevelData> LocalPlayerIpLevelData
 		{
 			get
@@ -2497,7 +2882,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E66 RID: 294502 RVA: 0x0126ACCC File Offset: 0x01268ECC
+		// Token: 0x0603E234 RID: 254516 RVA: 0x0120C318 File Offset: 0x0120A518
 		[NullableContext(1)]
 		private JsonTypeInfo<LocalPlayerIpLevelData> Create_LocalPlayerIpLevelData(JsonSerializerOptions options)
 		{
@@ -2519,7 +2904,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E67 RID: 294503 RVA: 0x0126AD94 File Offset: 0x01268F94
+		// Token: 0x0603E235 RID: 254517 RVA: 0x0120C3E0 File Offset: 0x0120A5E0
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] LocalPlayerIpLevelDataPropInit(JsonSerializerOptions options)
 		{
@@ -2569,8 +2954,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009EC7 RID: 40647
-		// (get) Token: 0x06047E68 RID: 294504 RVA: 0x0126AF8C File Offset: 0x0126918C
+		// Token: 0x17007625 RID: 30245
+		// (get) Token: 0x0603E236 RID: 254518 RVA: 0x0120C5D8 File Offset: 0x0120A7D8
 		public JsonTypeInfo<LocalPlayerIpLevelData[]> LocalPlayerIpLevelDataArray
 		{
 			get
@@ -2584,7 +2969,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E69 RID: 294505 RVA: 0x0126AFC8 File Offset: 0x012691C8
+		// Token: 0x0603E237 RID: 254519 RVA: 0x0120C614 File Offset: 0x0120A814
 		[NullableContext(1)]
 		private JsonTypeInfo<LocalPlayerIpLevelData[]> Create_LocalPlayerIpLevelDataArray(JsonSerializerOptions options)
 		{
@@ -2603,8 +2988,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EC8 RID: 40648
-		// (get) Token: 0x06047E6A RID: 294506 RVA: 0x0126B014 File Offset: 0x01269214
+		// Token: 0x17007626 RID: 30246
+		// (get) Token: 0x0603E238 RID: 254520 RVA: 0x0120C660 File Offset: 0x0120A860
 		public JsonTypeInfo<MarqueeStorageData> MarqueeStorageData
 		{
 			get
@@ -2618,7 +3003,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E6B RID: 294507 RVA: 0x0126B050 File Offset: 0x01269250
+		// Token: 0x0603E239 RID: 254521 RVA: 0x0120C69C File Offset: 0x0120A89C
 		[NullableContext(1)]
 		private JsonTypeInfo<MarqueeStorageData> Create_MarqueeStorageData(JsonSerializerOptions options)
 		{
@@ -2648,7 +3033,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E6C RID: 294508 RVA: 0x0126B134 File Offset: 0x01269334
+		// Token: 0x0603E23A RID: 254522 RVA: 0x0120C780 File Offset: 0x0120A980
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] MarqueeStorageDataPropInit(JsonSerializerOptions options)
 		{
@@ -2696,7 +3081,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x06047E6D RID: 294509 RVA: 0x0126B31C File Offset: 0x0126951C
+		// Token: 0x0603E23B RID: 254523 RVA: 0x0120C968 File Offset: 0x0120AB68
 		[NullableContext(1)]
 		private static JsonParameterInfoValues[] MarqueeStorageDataCtorParamInit()
 		{
@@ -2714,8 +3099,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			};
 		}
 
-		// Token: 0x17009EC9 RID: 40649
-		// (get) Token: 0x06047E6E RID: 294510 RVA: 0x0126B370 File Offset: 0x01269570
+		// Token: 0x17007627 RID: 30247
+		// (get) Token: 0x0603E23C RID: 254524 RVA: 0x0120C9BC File Offset: 0x0120ABBC
 		public JsonTypeInfo<RacingBetsRedDotState> RacingBetsRedDotState
 		{
 			get
@@ -2729,7 +3114,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E6F RID: 294511 RVA: 0x0126B3AC File Offset: 0x012695AC
+		// Token: 0x0603E23D RID: 254525 RVA: 0x0120C9F8 File Offset: 0x0120ABF8
 		[NullableContext(1)]
 		private JsonTypeInfo<RacingBetsRedDotState> Create_RacingBetsRedDotState(JsonSerializerOptions options)
 		{
@@ -2751,7 +3136,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E70 RID: 294512 RVA: 0x0126B474 File Offset: 0x01269674
+		// Token: 0x0603E23E RID: 254526 RVA: 0x0120CAC0 File Offset: 0x0120ACC0
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] RacingBetsRedDotStatePropInit(JsonSerializerOptions options)
 		{
@@ -2799,8 +3184,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009ECA RID: 40650
-		// (get) Token: 0x06047E71 RID: 294513 RVA: 0x0126B65C File Offset: 0x0126985C
+		// Token: 0x17007628 RID: 30248
+		// (get) Token: 0x0603E23F RID: 254527 RVA: 0x0120CCA8 File Offset: 0x0120AEA8
 		public JsonTypeInfo<RegionAndIpSt> RegionAndIpSt
 		{
 			get
@@ -2814,7 +3199,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E72 RID: 294514 RVA: 0x0126B698 File Offset: 0x01269898
+		// Token: 0x0603E240 RID: 254528 RVA: 0x0120CCE4 File Offset: 0x0120AEE4
 		[NullableContext(1)]
 		private JsonTypeInfo<RegionAndIpSt> Create_RegionAndIpSt(JsonSerializerOptions options)
 		{
@@ -2836,7 +3221,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E73 RID: 294515 RVA: 0x0126B760 File Offset: 0x01269960
+		// Token: 0x0603E241 RID: 254529 RVA: 0x0120CDAC File Offset: 0x0120AFAC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] RegionAndIpStPropInit(JsonSerializerOptions options)
 		{
@@ -2888,8 +3273,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009ECB RID: 40651
-		// (get) Token: 0x06047E74 RID: 294516 RVA: 0x0126B96C File Offset: 0x01269B6C
+		// Token: 0x17007629 RID: 30249
+		// (get) Token: 0x0603E242 RID: 254530 RVA: 0x0120CFB8 File Offset: 0x0120B1B8
 		public JsonTypeInfo<SortStorageData> SortStorageData
 		{
 			get
@@ -2903,7 +3288,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E75 RID: 294517 RVA: 0x0126B9A8 File Offset: 0x01269BA8
+		// Token: 0x0603E243 RID: 254531 RVA: 0x0120CFF4 File Offset: 0x0120B1F4
 		[NullableContext(1)]
 		private JsonTypeInfo<SortStorageData> Create_SortStorageData(JsonSerializerOptions options)
 		{
@@ -2925,7 +3310,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06047E76 RID: 294518 RVA: 0x0126BA70 File Offset: 0x01269C70
+		// Token: 0x0603E244 RID: 254532 RVA: 0x0120D0BC File Offset: 0x0120B2BC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] SortStorageDataPropInit(JsonSerializerOptions options)
 		{
@@ -3013,8 +3398,41 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return array;
 		}
 
-		// Token: 0x17009ECC RID: 40652
-		// (get) Token: 0x06047E77 RID: 294519 RVA: 0x0126BE30 File Offset: 0x0126A030
+		// Token: 0x1700762A RID: 30250
+		// (get) Token: 0x0603E245 RID: 254533 RVA: 0x0120D47C File Offset: 0x0120B67C
+		public JsonTypeInfo<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>> DictionaryESolarSchoolLocalRecordTypeHashSetInt32
+		{
+			get
+			{
+				JsonTypeInfo<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>> result;
+				if ((result = this._DictionaryESolarSchoolLocalRecordTypeHashSetInt32) == null)
+				{
+					result = (this._DictionaryESolarSchoolLocalRecordTypeHashSetInt32 = (JsonTypeInfo<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>>)base.Options.GetTypeInfo(typeof(Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0603E246 RID: 254534 RVA: 0x0120D4B8 File Offset: 0x0120B6B8
+		[NullableContext(1)]
+		private JsonTypeInfo<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>> Create_DictionaryESolarSchoolLocalRecordTypeHashSetInt32(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>> jsonTypeInfo;
+			if (!LocalStorageJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>>(options, out jsonTypeInfo))
+			{
+				JsonCollectionInfoValues<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>> jsonCollectionInfoValues = new JsonCollectionInfoValues<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>>();
+				jsonCollectionInfoValues.ObjectCreator = (() => new Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>());
+				jsonCollectionInfoValues.SerializeHandler = null;
+				JsonCollectionInfoValues<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>> collectionInfo = jsonCollectionInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateDictionaryInfo<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>, ESolarSchoolLocalRecordType, HashSet<int>>(options, collectionInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x1700762B RID: 30251
+		// (get) Token: 0x0603E247 RID: 254535 RVA: 0x0120D520 File Offset: 0x0120B720
 		public JsonTypeInfo<Dictionary<EFunction, int>> DictionaryEFunctionInt32
 		{
 			get
@@ -3028,7 +3446,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E78 RID: 294520 RVA: 0x0126BE6C File Offset: 0x0126A06C
+		// Token: 0x0603E248 RID: 254536 RVA: 0x0120D55C File Offset: 0x0120B75C
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<EFunction, int>> Create_DictionaryEFunctionInt32(JsonSerializerOptions options)
 		{
@@ -3046,8 +3464,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ECD RID: 40653
-		// (get) Token: 0x06047E79 RID: 294521 RVA: 0x0126BED4 File Offset: 0x0126A0D4
+		// Token: 0x1700762C RID: 30252
+		// (get) Token: 0x0603E249 RID: 254537 RVA: 0x0120D5C4 File Offset: 0x0120B7C4
 		public JsonTypeInfo<Dictionary<FilterDefine.EFilterType, List<int>>> DictionaryEFilterTypeListInt32
 		{
 			get
@@ -3061,7 +3479,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E7A RID: 294522 RVA: 0x0126BF10 File Offset: 0x0126A110
+		// Token: 0x0603E24A RID: 254538 RVA: 0x0120D600 File Offset: 0x0120B800
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<FilterDefine.EFilterType, List<int>>> Create_DictionaryEFilterTypeListInt32(JsonSerializerOptions options)
 		{
@@ -3079,8 +3497,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ECE RID: 40654
-		// (get) Token: 0x06047E7B RID: 294523 RVA: 0x0126BF78 File Offset: 0x0126A178
+		// Token: 0x1700762D RID: 30253
+		// (get) Token: 0x0603E24B RID: 254539 RVA: 0x0120D668 File Offset: 0x0120B868
 		public JsonTypeInfo<Dictionary<int, bool>> DictionaryInt32Boolean
 		{
 			get
@@ -3094,7 +3512,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E7C RID: 294524 RVA: 0x0126BFB4 File Offset: 0x0126A1B4
+		// Token: 0x0603E24C RID: 254540 RVA: 0x0120D6A4 File Offset: 0x0120B8A4
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, bool>> Create_DictionaryInt32Boolean(JsonSerializerOptions options)
 		{
@@ -3112,8 +3530,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ECF RID: 40655
-		// (get) Token: 0x06047E7D RID: 294525 RVA: 0x0126C01C File Offset: 0x0126A21C
+		// Token: 0x1700762E RID: 30254
+		// (get) Token: 0x0603E24D RID: 254541 RVA: 0x0120D70C File Offset: 0x0120B90C
 		public JsonTypeInfo<Dictionary<int, double>> DictionaryInt32Double
 		{
 			get
@@ -3127,7 +3545,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E7E RID: 294526 RVA: 0x0126C058 File Offset: 0x0126A258
+		// Token: 0x0603E24E RID: 254542 RVA: 0x0120D748 File Offset: 0x0120B948
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, double>> Create_DictionaryInt32Double(JsonSerializerOptions options)
 		{
@@ -3145,8 +3563,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED0 RID: 40656
-		// (get) Token: 0x06047E7F RID: 294527 RVA: 0x0126C0C0 File Offset: 0x0126A2C0
+		// Token: 0x1700762F RID: 30255
+		// (get) Token: 0x0603E24F RID: 254543 RVA: 0x0120D7B0 File Offset: 0x0120B9B0
 		public JsonTypeInfo<Dictionary<int, float[]>> DictionaryInt32SingleArray
 		{
 			get
@@ -3160,7 +3578,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E80 RID: 294528 RVA: 0x0126C0FC File Offset: 0x0126A2FC
+		// Token: 0x0603E250 RID: 254544 RVA: 0x0120D7EC File Offset: 0x0120B9EC
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, float[]>> Create_DictionaryInt32SingleArray(JsonSerializerOptions options)
 		{
@@ -3178,8 +3596,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED1 RID: 40657
-		// (get) Token: 0x06047E81 RID: 294529 RVA: 0x0126C164 File Offset: 0x0126A364
+		// Token: 0x17007630 RID: 30256
+		// (get) Token: 0x0603E251 RID: 254545 RVA: 0x0120D854 File Offset: 0x0120BA54
 		public JsonTypeInfo<Dictionary<int, float>> DictionaryInt32Single
 		{
 			get
@@ -3193,7 +3611,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E82 RID: 294530 RVA: 0x0126C1A0 File Offset: 0x0126A3A0
+		// Token: 0x0603E252 RID: 254546 RVA: 0x0120D890 File Offset: 0x0120BA90
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, float>> Create_DictionaryInt32Single(JsonSerializerOptions options)
 		{
@@ -3211,8 +3629,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED2 RID: 40658
-		// (get) Token: 0x06047E83 RID: 294531 RVA: 0x0126C208 File Offset: 0x0126A408
+		// Token: 0x17007631 RID: 30257
+		// (get) Token: 0x0603E253 RID: 254547 RVA: 0x0120D8F8 File Offset: 0x0120BAF8
 		public JsonTypeInfo<Dictionary<int, AbyssDangoOwnerData>> DictionaryInt32AbyssDangoOwnerData
 		{
 			get
@@ -3226,7 +3644,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E84 RID: 294532 RVA: 0x0126C244 File Offset: 0x0126A444
+		// Token: 0x0603E254 RID: 254548 RVA: 0x0120D934 File Offset: 0x0120BB34
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, AbyssDangoOwnerData>> Create_DictionaryInt32AbyssDangoOwnerData(JsonSerializerOptions options)
 		{
@@ -3244,8 +3662,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED3 RID: 40659
-		// (get) Token: 0x06047E85 RID: 294533 RVA: 0x0126C2AC File Offset: 0x0126A4AC
+		// Token: 0x17007632 RID: 30258
+		// (get) Token: 0x0603E255 RID: 254549 RVA: 0x0120D99C File Offset: 0x0120BB9C
 		public JsonTypeInfo<Dictionary<int, AreaExplorePlayState>> DictionaryInt32AreaExplorePlayState
 		{
 			get
@@ -3259,7 +3677,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E86 RID: 294534 RVA: 0x0126C2E8 File Offset: 0x0126A4E8
+		// Token: 0x0603E256 RID: 254550 RVA: 0x0120D9D8 File Offset: 0x0120BBD8
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, AreaExplorePlayState>> Create_DictionaryInt32AreaExplorePlayState(JsonSerializerOptions options)
 		{
@@ -3277,8 +3695,107 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED4 RID: 40660
-		// (get) Token: 0x06047E87 RID: 294535 RVA: 0x0126C350 File Offset: 0x0126A550
+		// Token: 0x17007633 RID: 30259
+		// (get) Token: 0x0603E257 RID: 254551 RVA: 0x0120DA40 File Offset: 0x0120BC40
+		public JsonTypeInfo<Dictionary<int, SolarSchoolActivityLocalData>> DictionaryInt32SolarSchoolActivityLocalData
+		{
+			get
+			{
+				JsonTypeInfo<Dictionary<int, SolarSchoolActivityLocalData>> result;
+				if ((result = this._DictionaryInt32SolarSchoolActivityLocalData) == null)
+				{
+					result = (this._DictionaryInt32SolarSchoolActivityLocalData = (JsonTypeInfo<Dictionary<int, SolarSchoolActivityLocalData>>)base.Options.GetTypeInfo(typeof(Dictionary<int, SolarSchoolActivityLocalData>)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0603E258 RID: 254552 RVA: 0x0120DA7C File Offset: 0x0120BC7C
+		[NullableContext(1)]
+		private JsonTypeInfo<Dictionary<int, SolarSchoolActivityLocalData>> Create_DictionaryInt32SolarSchoolActivityLocalData(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<Dictionary<int, SolarSchoolActivityLocalData>> jsonTypeInfo;
+			if (!LocalStorageJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<Dictionary<int, SolarSchoolActivityLocalData>>(options, out jsonTypeInfo))
+			{
+				JsonCollectionInfoValues<Dictionary<int, SolarSchoolActivityLocalData>> jsonCollectionInfoValues = new JsonCollectionInfoValues<Dictionary<int, SolarSchoolActivityLocalData>>();
+				jsonCollectionInfoValues.ObjectCreator = (() => new Dictionary<int, SolarSchoolActivityLocalData>());
+				jsonCollectionInfoValues.SerializeHandler = null;
+				JsonCollectionInfoValues<Dictionary<int, SolarSchoolActivityLocalData>> collectionInfo = jsonCollectionInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateDictionaryInfo<Dictionary<int, SolarSchoolActivityLocalData>, int, SolarSchoolActivityLocalData>(options, collectionInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x17007634 RID: 30260
+		// (get) Token: 0x0603E259 RID: 254553 RVA: 0x0120DAE4 File Offset: 0x0120BCE4
+		public JsonTypeInfo<Dictionary<int, SolarSchoolRedDotLocalData>> DictionaryInt32SolarSchoolRedDotLocalData
+		{
+			get
+			{
+				JsonTypeInfo<Dictionary<int, SolarSchoolRedDotLocalData>> result;
+				if ((result = this._DictionaryInt32SolarSchoolRedDotLocalData) == null)
+				{
+					result = (this._DictionaryInt32SolarSchoolRedDotLocalData = (JsonTypeInfo<Dictionary<int, SolarSchoolRedDotLocalData>>)base.Options.GetTypeInfo(typeof(Dictionary<int, SolarSchoolRedDotLocalData>)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0603E25A RID: 254554 RVA: 0x0120DB20 File Offset: 0x0120BD20
+		[NullableContext(1)]
+		private JsonTypeInfo<Dictionary<int, SolarSchoolRedDotLocalData>> Create_DictionaryInt32SolarSchoolRedDotLocalData(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<Dictionary<int, SolarSchoolRedDotLocalData>> jsonTypeInfo;
+			if (!LocalStorageJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<Dictionary<int, SolarSchoolRedDotLocalData>>(options, out jsonTypeInfo))
+			{
+				JsonCollectionInfoValues<Dictionary<int, SolarSchoolRedDotLocalData>> jsonCollectionInfoValues = new JsonCollectionInfoValues<Dictionary<int, SolarSchoolRedDotLocalData>>();
+				jsonCollectionInfoValues.ObjectCreator = (() => new Dictionary<int, SolarSchoolRedDotLocalData>());
+				jsonCollectionInfoValues.SerializeHandler = null;
+				JsonCollectionInfoValues<Dictionary<int, SolarSchoolRedDotLocalData>> collectionInfo = jsonCollectionInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateDictionaryInfo<Dictionary<int, SolarSchoolRedDotLocalData>, int, SolarSchoolRedDotLocalData>(options, collectionInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x17007635 RID: 30261
+		// (get) Token: 0x0603E25B RID: 254555 RVA: 0x0120DB88 File Offset: 0x0120BD88
+		public JsonTypeInfo<Dictionary<int, SolarSchoolSlotLocalData>> DictionaryInt32SolarSchoolSlotLocalData
+		{
+			get
+			{
+				JsonTypeInfo<Dictionary<int, SolarSchoolSlotLocalData>> result;
+				if ((result = this._DictionaryInt32SolarSchoolSlotLocalData) == null)
+				{
+					result = (this._DictionaryInt32SolarSchoolSlotLocalData = (JsonTypeInfo<Dictionary<int, SolarSchoolSlotLocalData>>)base.Options.GetTypeInfo(typeof(Dictionary<int, SolarSchoolSlotLocalData>)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0603E25C RID: 254556 RVA: 0x0120DBC4 File Offset: 0x0120BDC4
+		[NullableContext(1)]
+		private JsonTypeInfo<Dictionary<int, SolarSchoolSlotLocalData>> Create_DictionaryInt32SolarSchoolSlotLocalData(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<Dictionary<int, SolarSchoolSlotLocalData>> jsonTypeInfo;
+			if (!LocalStorageJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<Dictionary<int, SolarSchoolSlotLocalData>>(options, out jsonTypeInfo))
+			{
+				JsonCollectionInfoValues<Dictionary<int, SolarSchoolSlotLocalData>> jsonCollectionInfoValues = new JsonCollectionInfoValues<Dictionary<int, SolarSchoolSlotLocalData>>();
+				jsonCollectionInfoValues.ObjectCreator = (() => new Dictionary<int, SolarSchoolSlotLocalData>());
+				jsonCollectionInfoValues.SerializeHandler = null;
+				JsonCollectionInfoValues<Dictionary<int, SolarSchoolSlotLocalData>> collectionInfo = jsonCollectionInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateDictionaryInfo<Dictionary<int, SolarSchoolSlotLocalData>, int, SolarSchoolSlotLocalData>(options, collectionInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x17007636 RID: 30262
+		// (get) Token: 0x0603E25D RID: 254557 RVA: 0x0120DC2C File Offset: 0x0120BE2C
 		public JsonTypeInfo<Dictionary<int, LocalFriendApplication>> DictionaryInt32LocalFriendApplication
 		{
 			get
@@ -3292,7 +3809,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E88 RID: 294536 RVA: 0x0126C38C File Offset: 0x0126A58C
+		// Token: 0x0603E25E RID: 254558 RVA: 0x0120DC68 File Offset: 0x0120BE68
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, LocalFriendApplication>> Create_DictionaryInt32LocalFriendApplication(JsonSerializerOptions options)
 		{
@@ -3310,8 +3827,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED5 RID: 40661
-		// (get) Token: 0x06047E89 RID: 294537 RVA: 0x0126C3F4 File Offset: 0x0126A5F4
+		// Token: 0x17007637 RID: 30263
+		// (get) Token: 0x0603E25F RID: 254559 RVA: 0x0120DCD0 File Offset: 0x0120BED0
 		public JsonTypeInfo<Dictionary<int, Dictionary<int, double>>> DictionaryInt32DictionaryInt32Double
 		{
 			get
@@ -3325,7 +3842,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E8A RID: 294538 RVA: 0x0126C430 File Offset: 0x0126A630
+		// Token: 0x0603E260 RID: 254560 RVA: 0x0120DD0C File Offset: 0x0120BF0C
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, Dictionary<int, double>>> Create_DictionaryInt32DictionaryInt32Double(JsonSerializerOptions options)
 		{
@@ -3343,8 +3860,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED6 RID: 40662
-		// (get) Token: 0x06047E8B RID: 294539 RVA: 0x0126C498 File Offset: 0x0126A698
+		// Token: 0x17007638 RID: 30264
+		// (get) Token: 0x0603E261 RID: 254561 RVA: 0x0120DD74 File Offset: 0x0120BF74
 		public JsonTypeInfo<Dictionary<int, Dictionary<int, AbyssDangoOwnerData>>> DictionaryInt32DictionaryInt32AbyssDangoOwnerData
 		{
 			get
@@ -3358,7 +3875,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E8C RID: 294540 RVA: 0x0126C4D4 File Offset: 0x0126A6D4
+		// Token: 0x0603E262 RID: 254562 RVA: 0x0120DDB0 File Offset: 0x0120BFB0
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, Dictionary<int, AbyssDangoOwnerData>>> Create_DictionaryInt32DictionaryInt32AbyssDangoOwnerData(JsonSerializerOptions options)
 		{
@@ -3376,8 +3893,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED7 RID: 40663
-		// (get) Token: 0x06047E8D RID: 294541 RVA: 0x0126C53C File Offset: 0x0126A73C
+		// Token: 0x17007639 RID: 30265
+		// (get) Token: 0x0603E263 RID: 254563 RVA: 0x0120DE18 File Offset: 0x0120C018
 		public JsonTypeInfo<Dictionary<int, Dictionary<int, AreaExplorePlayState>>> DictionaryInt32DictionaryInt32AreaExplorePlayState
 		{
 			get
@@ -3391,7 +3908,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E8E RID: 294542 RVA: 0x0126C578 File Offset: 0x0126A778
+		// Token: 0x0603E264 RID: 254564 RVA: 0x0120DE54 File Offset: 0x0120C054
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, Dictionary<int, AreaExplorePlayState>>> Create_DictionaryInt32DictionaryInt32AreaExplorePlayState(JsonSerializerOptions options)
 		{
@@ -3409,8 +3926,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED8 RID: 40664
-		// (get) Token: 0x06047E8F RID: 294543 RVA: 0x0126C5E0 File Offset: 0x0126A7E0
+		// Token: 0x1700763A RID: 30266
+		// (get) Token: 0x0603E265 RID: 254565 RVA: 0x0120DEBC File Offset: 0x0120C0BC
 		public JsonTypeInfo<Dictionary<int, Dictionary<int, HashSet<int>>>> DictionaryInt32DictionaryInt32HashSetInt32
 		{
 			get
@@ -3424,7 +3941,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E90 RID: 294544 RVA: 0x0126C61C File Offset: 0x0126A81C
+		// Token: 0x0603E266 RID: 254566 RVA: 0x0120DEF8 File Offset: 0x0120C0F8
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, Dictionary<int, HashSet<int>>>> Create_DictionaryInt32DictionaryInt32HashSetInt32(JsonSerializerOptions options)
 		{
@@ -3442,8 +3959,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009ED9 RID: 40665
-		// (get) Token: 0x06047E91 RID: 294545 RVA: 0x0126C684 File Offset: 0x0126A884
+		// Token: 0x1700763B RID: 30267
+		// (get) Token: 0x0603E267 RID: 254567 RVA: 0x0120DF60 File Offset: 0x0120C160
 		public JsonTypeInfo<Dictionary<int, HashSet<int>>> DictionaryInt32HashSetInt32
 		{
 			get
@@ -3457,7 +3974,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E92 RID: 294546 RVA: 0x0126C6C0 File Offset: 0x0126A8C0
+		// Token: 0x0603E268 RID: 254568 RVA: 0x0120DF9C File Offset: 0x0120C19C
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, HashSet<int>>> Create_DictionaryInt32HashSetInt32(JsonSerializerOptions options)
 		{
@@ -3475,8 +3992,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EDA RID: 40666
-		// (get) Token: 0x06047E93 RID: 294547 RVA: 0x0126C728 File Offset: 0x0126A928
+		// Token: 0x1700763C RID: 30268
+		// (get) Token: 0x0603E269 RID: 254569 RVA: 0x0120E004 File Offset: 0x0120C204
 		public JsonTypeInfo<Dictionary<int, List<int>>> DictionaryInt32ListInt32
 		{
 			get
@@ -3490,7 +4007,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E94 RID: 294548 RVA: 0x0126C764 File Offset: 0x0126A964
+		// Token: 0x0603E26A RID: 254570 RVA: 0x0120E040 File Offset: 0x0120C240
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, List<int>>> Create_DictionaryInt32ListInt32(JsonSerializerOptions options)
 		{
@@ -3508,8 +4025,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EDB RID: 40667
-		// (get) Token: 0x06047E95 RID: 294549 RVA: 0x0126C7CC File Offset: 0x0126A9CC
+		// Token: 0x1700763D RID: 30269
+		// (get) Token: 0x0603E26B RID: 254571 RVA: 0x0120E0A8 File Offset: 0x0120C2A8
 		public JsonTypeInfo<Dictionary<int, int[]>> DictionaryInt32Int32Array
 		{
 			get
@@ -3523,7 +4040,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E96 RID: 294550 RVA: 0x0126C808 File Offset: 0x0126AA08
+		// Token: 0x0603E26C RID: 254572 RVA: 0x0120E0E4 File Offset: 0x0120C2E4
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, int[]>> Create_DictionaryInt32Int32Array(JsonSerializerOptions options)
 		{
@@ -3541,8 +4058,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EDC RID: 40668
-		// (get) Token: 0x06047E97 RID: 294551 RVA: 0x0126C870 File Offset: 0x0126AA70
+		// Token: 0x1700763E RID: 30270
+		// (get) Token: 0x0603E26D RID: 254573 RVA: 0x0120E14C File Offset: 0x0120C34C
 		public JsonTypeInfo<Dictionary<int, int>> DictionaryInt32Int32
 		{
 			get
@@ -3556,7 +4073,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E98 RID: 294552 RVA: 0x0126C8AC File Offset: 0x0126AAAC
+		// Token: 0x0603E26E RID: 254574 RVA: 0x0120E188 File Offset: 0x0120C388
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, int>> Create_DictionaryInt32Int32(JsonSerializerOptions options)
 		{
@@ -3574,8 +4091,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EDD RID: 40669
-		// (get) Token: 0x06047E99 RID: 294553 RVA: 0x0126C914 File Offset: 0x0126AB14
+		// Token: 0x1700763F RID: 30271
+		// (get) Token: 0x0603E26F RID: 254575 RVA: 0x0120E1F0 File Offset: 0x0120C3F0
 		public JsonTypeInfo<Dictionary<int, long>> DictionaryInt32Int64
 		{
 			get
@@ -3589,7 +4106,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E9A RID: 294554 RVA: 0x0126C950 File Offset: 0x0126AB50
+		// Token: 0x0603E270 RID: 254576 RVA: 0x0120E22C File Offset: 0x0120C42C
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, long>> Create_DictionaryInt32Int64(JsonSerializerOptions options)
 		{
@@ -3607,8 +4124,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EDE RID: 40670
-		// (get) Token: 0x06047E9B RID: 294555 RVA: 0x0126C9B8 File Offset: 0x0126ABB8
+		// Token: 0x17007640 RID: 30272
+		// (get) Token: 0x0603E271 RID: 254577 RVA: 0x0120E294 File Offset: 0x0120C494
 		public JsonTypeInfo<Dictionary<int, string>> DictionaryInt32String
 		{
 			get
@@ -3622,7 +4139,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E9C RID: 294556 RVA: 0x0126C9F4 File Offset: 0x0126ABF4
+		// Token: 0x0603E272 RID: 254578 RVA: 0x0120E2D0 File Offset: 0x0120C4D0
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, string>> Create_DictionaryInt32String(JsonSerializerOptions options)
 		{
@@ -3640,8 +4157,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EDF RID: 40671
-		// (get) Token: 0x06047E9D RID: 294557 RVA: 0x0126CA5C File Offset: 0x0126AC5C
+		// Token: 0x17007641 RID: 30273
+		// (get) Token: 0x0603E273 RID: 254579 RVA: 0x0120E338 File Offset: 0x0120C538
 		public JsonTypeInfo<Dictionary<string, bool>> DictionaryStringBoolean
 		{
 			get
@@ -3655,7 +4172,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047E9E RID: 294558 RVA: 0x0126CA98 File Offset: 0x0126AC98
+		// Token: 0x0603E274 RID: 254580 RVA: 0x0120E374 File Offset: 0x0120C574
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, bool>> Create_DictionaryStringBoolean(JsonSerializerOptions options)
 		{
@@ -3673,8 +4190,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE0 RID: 40672
-		// (get) Token: 0x06047E9F RID: 294559 RVA: 0x0126CB00 File Offset: 0x0126AD00
+		// Token: 0x17007642 RID: 30274
+		// (get) Token: 0x0603E275 RID: 254581 RVA: 0x0120E3DC File Offset: 0x0120C5DC
 		public JsonTypeInfo<Dictionary<string, FilterStorageData>> DictionaryStringFilterStorageData
 		{
 			get
@@ -3688,7 +4205,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EA0 RID: 294560 RVA: 0x0126CB3C File Offset: 0x0126AD3C
+		// Token: 0x0603E276 RID: 254582 RVA: 0x0120E418 File Offset: 0x0120C618
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, FilterStorageData>> Create_DictionaryStringFilterStorageData(JsonSerializerOptions options)
 		{
@@ -3706,8 +4223,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE1 RID: 40673
-		// (get) Token: 0x06047EA1 RID: 294561 RVA: 0x0126CBA4 File Offset: 0x0126ADA4
+		// Token: 0x17007643 RID: 30275
+		// (get) Token: 0x0603E277 RID: 254583 RVA: 0x0120E480 File Offset: 0x0120C680
 		public JsonTypeInfo<Dictionary<string, GamepadTypeUsage>> DictionaryStringGamepadTypeUsage
 		{
 			get
@@ -3721,7 +4238,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EA2 RID: 294562 RVA: 0x0126CBE0 File Offset: 0x0126ADE0
+		// Token: 0x0603E278 RID: 254584 RVA: 0x0120E4BC File Offset: 0x0120C6BC
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, GamepadTypeUsage>> Create_DictionaryStringGamepadTypeUsage(JsonSerializerOptions options)
 		{
@@ -3739,8 +4256,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE2 RID: 40674
-		// (get) Token: 0x06047EA3 RID: 294563 RVA: 0x0126CC48 File Offset: 0x0126AE48
+		// Token: 0x17007644 RID: 30276
+		// (get) Token: 0x0603E279 RID: 254585 RVA: 0x0120E524 File Offset: 0x0120C724
 		public JsonTypeInfo<Dictionary<string, LocalPlayerIpLevelData[]>> DictionaryStringLocalPlayerIpLevelDataArray
 		{
 			get
@@ -3754,7 +4271,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EA4 RID: 294564 RVA: 0x0126CC84 File Offset: 0x0126AE84
+		// Token: 0x0603E27A RID: 254586 RVA: 0x0120E560 File Offset: 0x0120C760
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, LocalPlayerIpLevelData[]>> Create_DictionaryStringLocalPlayerIpLevelDataArray(JsonSerializerOptions options)
 		{
@@ -3772,8 +4289,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE3 RID: 40675
-		// (get) Token: 0x06047EA5 RID: 294565 RVA: 0x0126CCEC File Offset: 0x0126AEEC
+		// Token: 0x17007645 RID: 30277
+		// (get) Token: 0x0603E27B RID: 254587 RVA: 0x0120E5C8 File Offset: 0x0120C7C8
 		public JsonTypeInfo<Dictionary<string, MarqueeStorageData>> DictionaryStringMarqueeStorageData
 		{
 			get
@@ -3787,7 +4304,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EA6 RID: 294566 RVA: 0x0126CD28 File Offset: 0x0126AF28
+		// Token: 0x0603E27C RID: 254588 RVA: 0x0120E604 File Offset: 0x0120C804
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, MarqueeStorageData>> Create_DictionaryStringMarqueeStorageData(JsonSerializerOptions options)
 		{
@@ -3805,8 +4322,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE4 RID: 40676
-		// (get) Token: 0x06047EA7 RID: 294567 RVA: 0x0126CD90 File Offset: 0x0126AF90
+		// Token: 0x17007646 RID: 30278
+		// (get) Token: 0x0603E27D RID: 254589 RVA: 0x0120E66C File Offset: 0x0120C86C
 		public JsonTypeInfo<Dictionary<string, RegionAndIpSt>> DictionaryStringRegionAndIpSt
 		{
 			get
@@ -3820,7 +4337,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EA8 RID: 294568 RVA: 0x0126CDCC File Offset: 0x0126AFCC
+		// Token: 0x0603E27E RID: 254590 RVA: 0x0120E6A8 File Offset: 0x0120C8A8
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, RegionAndIpSt>> Create_DictionaryStringRegionAndIpSt(JsonSerializerOptions options)
 		{
@@ -3838,8 +4355,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE5 RID: 40677
-		// (get) Token: 0x06047EA9 RID: 294569 RVA: 0x0126CE34 File Offset: 0x0126B034
+		// Token: 0x17007647 RID: 30279
+		// (get) Token: 0x0603E27F RID: 254591 RVA: 0x0120E710 File Offset: 0x0120C910
 		public JsonTypeInfo<Dictionary<string, SortStorageData>> DictionaryStringSortStorageData
 		{
 			get
@@ -3853,7 +4370,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EAA RID: 294570 RVA: 0x0126CE70 File Offset: 0x0126B070
+		// Token: 0x0603E280 RID: 254592 RVA: 0x0120E74C File Offset: 0x0120C94C
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, SortStorageData>> Create_DictionaryStringSortStorageData(JsonSerializerOptions options)
 		{
@@ -3871,8 +4388,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE6 RID: 40678
-		// (get) Token: 0x06047EAB RID: 294571 RVA: 0x0126CED8 File Offset: 0x0126B0D8
+		// Token: 0x17007648 RID: 30280
+		// (get) Token: 0x0603E281 RID: 254593 RVA: 0x0120E7B4 File Offset: 0x0120C9B4
 		public JsonTypeInfo<Dictionary<string, IList<IList<string>>>> DictionaryStringIListIListString
 		{
 			get
@@ -3886,7 +4403,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EAC RID: 294572 RVA: 0x0126CF14 File Offset: 0x0126B114
+		// Token: 0x0603E282 RID: 254594 RVA: 0x0120E7F0 File Offset: 0x0120C9F0
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, IList<IList<string>>>> Create_DictionaryStringIListIListString(JsonSerializerOptions options)
 		{
@@ -3904,8 +4421,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE7 RID: 40679
-		// (get) Token: 0x06047EAD RID: 294573 RVA: 0x0126CF7C File Offset: 0x0126B17C
+		// Token: 0x17007649 RID: 30281
+		// (get) Token: 0x0603E283 RID: 254595 RVA: 0x0120E858 File Offset: 0x0120CA58
 		public JsonTypeInfo<Dictionary<string, List<ActivityCacheData>>> DictionaryStringListActivityCacheData
 		{
 			get
@@ -3919,7 +4436,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EAE RID: 294574 RVA: 0x0126CFB8 File Offset: 0x0126B1B8
+		// Token: 0x0603E284 RID: 254596 RVA: 0x0120E894 File Offset: 0x0120CA94
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, List<ActivityCacheData>>> Create_DictionaryStringListActivityCacheData(JsonSerializerOptions options)
 		{
@@ -3937,8 +4454,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE8 RID: 40680
-		// (get) Token: 0x06047EAF RID: 294575 RVA: 0x0126D020 File Offset: 0x0126B220
+		// Token: 0x1700764A RID: 30282
+		// (get) Token: 0x0603E285 RID: 254597 RVA: 0x0120E8FC File Offset: 0x0120CAFC
 		public JsonTypeInfo<Dictionary<string, int>> DictionaryStringInt32
 		{
 			get
@@ -3952,7 +4469,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EB0 RID: 294576 RVA: 0x0126D05C File Offset: 0x0126B25C
+		// Token: 0x0603E286 RID: 254598 RVA: 0x0120E938 File Offset: 0x0120CB38
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, int>> Create_DictionaryStringInt32(JsonSerializerOptions options)
 		{
@@ -3970,8 +4487,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EE9 RID: 40681
-		// (get) Token: 0x06047EB1 RID: 294577 RVA: 0x0126D0C4 File Offset: 0x0126B2C4
+		// Token: 0x1700764B RID: 30283
+		// (get) Token: 0x0603E287 RID: 254599 RVA: 0x0120E9A0 File Offset: 0x0120CBA0
 		public JsonTypeInfo<HashSet<EMapNoteId>> HashSetEMapNoteId
 		{
 			get
@@ -3985,7 +4502,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EB2 RID: 294578 RVA: 0x0126D100 File Offset: 0x0126B300
+		// Token: 0x0603E288 RID: 254600 RVA: 0x0120E9DC File Offset: 0x0120CBDC
 		[NullableContext(1)]
 		private JsonTypeInfo<HashSet<EMapNoteId>> Create_HashSetEMapNoteId(JsonSerializerOptions options)
 		{
@@ -4003,8 +4520,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EEA RID: 40682
-		// (get) Token: 0x06047EB3 RID: 294579 RVA: 0x0126D168 File Offset: 0x0126B368
+		// Token: 0x1700764C RID: 30284
+		// (get) Token: 0x0603E289 RID: 254601 RVA: 0x0120EA44 File Offset: 0x0120CC44
 		public JsonTypeInfo<HashSet<int>> HashSetInt32
 		{
 			get
@@ -4018,7 +4535,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EB4 RID: 294580 RVA: 0x0126D1A4 File Offset: 0x0126B3A4
+		// Token: 0x0603E28A RID: 254602 RVA: 0x0120EA80 File Offset: 0x0120CC80
 		[NullableContext(1)]
 		private JsonTypeInfo<HashSet<int>> Create_HashSetInt32(JsonSerializerOptions options)
 		{
@@ -4036,8 +4553,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EEB RID: 40683
-		// (get) Token: 0x06047EB5 RID: 294581 RVA: 0x0126D20C File Offset: 0x0126B40C
+		// Token: 0x1700764D RID: 30285
+		// (get) Token: 0x0603E28B RID: 254603 RVA: 0x0120EAE8 File Offset: 0x0120CCE8
 		public JsonTypeInfo<IList<IList<string>>> IListIListString
 		{
 			get
@@ -4051,7 +4568,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EB6 RID: 294582 RVA: 0x0126D248 File Offset: 0x0126B448
+		// Token: 0x0603E28C RID: 254604 RVA: 0x0120EB24 File Offset: 0x0120CD24
 		[NullableContext(1)]
 		private JsonTypeInfo<IList<IList<string>>> Create_IListIListString(JsonSerializerOptions options)
 		{
@@ -4070,8 +4587,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EEC RID: 40684
-		// (get) Token: 0x06047EB7 RID: 294583 RVA: 0x0126D294 File Offset: 0x0126B494
+		// Token: 0x1700764E RID: 30286
+		// (get) Token: 0x0603E28D RID: 254605 RVA: 0x0120EB70 File Offset: 0x0120CD70
 		public JsonTypeInfo<IList<string>> IListString
 		{
 			get
@@ -4085,7 +4602,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EB8 RID: 294584 RVA: 0x0126D2D0 File Offset: 0x0126B4D0
+		// Token: 0x0603E28E RID: 254606 RVA: 0x0120EBAC File Offset: 0x0120CDAC
 		[NullableContext(1)]
 		private JsonTypeInfo<IList<string>> Create_IListString(JsonSerializerOptions options)
 		{
@@ -4104,8 +4621,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EED RID: 40685
-		// (get) Token: 0x06047EB9 RID: 294585 RVA: 0x0126D31C File Offset: 0x0126B51C
+		// Token: 0x1700764F RID: 30287
+		// (get) Token: 0x0603E28F RID: 254607 RVA: 0x0120EBF8 File Offset: 0x0120CDF8
 		public JsonTypeInfo<List<ActivityCacheData>> ListActivityCacheData
 		{
 			get
@@ -4119,7 +4636,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EBA RID: 294586 RVA: 0x0126D358 File Offset: 0x0126B558
+		// Token: 0x0603E290 RID: 254608 RVA: 0x0120EC34 File Offset: 0x0120CE34
 		[NullableContext(1)]
 		private JsonTypeInfo<List<ActivityCacheData>> Create_ListActivityCacheData(JsonSerializerOptions options)
 		{
@@ -4137,8 +4654,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EEE RID: 40686
-		// (get) Token: 0x06047EBB RID: 294587 RVA: 0x0126D3C0 File Offset: 0x0126B5C0
+		// Token: 0x17007650 RID: 30288
+		// (get) Token: 0x0603E291 RID: 254609 RVA: 0x0120EC9C File Offset: 0x0120CE9C
 		public JsonTypeInfo<List<EPlayPointState>> ListEPlayPointState
 		{
 			get
@@ -4152,7 +4669,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EBC RID: 294588 RVA: 0x0126D3FC File Offset: 0x0126B5FC
+		// Token: 0x0603E292 RID: 254610 RVA: 0x0120ECD8 File Offset: 0x0120CED8
 		[NullableContext(1)]
 		private JsonTypeInfo<List<EPlayPointState>> Create_ListEPlayPointState(JsonSerializerOptions options)
 		{
@@ -4170,8 +4687,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EEF RID: 40687
-		// (get) Token: 0x06047EBD RID: 294589 RVA: 0x0126D464 File Offset: 0x0126B664
+		// Token: 0x17007651 RID: 30289
+		// (get) Token: 0x0603E293 RID: 254611 RVA: 0x0120ED40 File Offset: 0x0120CF40
 		public JsonTypeInfo<List<int>> ListInt32
 		{
 			get
@@ -4185,7 +4702,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EBE RID: 294590 RVA: 0x0126D4A0 File Offset: 0x0126B6A0
+		// Token: 0x0603E294 RID: 254612 RVA: 0x0120ED7C File Offset: 0x0120CF7C
 		[NullableContext(1)]
 		private JsonTypeInfo<List<int>> Create_ListInt32(JsonSerializerOptions options)
 		{
@@ -4203,8 +4720,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EF0 RID: 40688
-		// (get) Token: 0x06047EBF RID: 294591 RVA: 0x0126D508 File Offset: 0x0126B708
+		// Token: 0x17007652 RID: 30290
+		// (get) Token: 0x0603E295 RID: 254613 RVA: 0x0120EDE4 File Offset: 0x0120CFE4
 		public JsonTypeInfo<List<string>> ListString
 		{
 			get
@@ -4218,7 +4735,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EC0 RID: 294592 RVA: 0x0126D544 File Offset: 0x0126B744
+		// Token: 0x0603E296 RID: 254614 RVA: 0x0120EE20 File Offset: 0x0120D020
 		[NullableContext(1)]
 		private JsonTypeInfo<List<string>> Create_ListString(JsonSerializerOptions options)
 		{
@@ -4236,8 +4753,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EF1 RID: 40689
-		// (get) Token: 0x06047EC1 RID: 294593 RVA: 0x0126D5AC File Offset: 0x0126B7AC
+		// Token: 0x17007653 RID: 30291
+		// (get) Token: 0x0603E297 RID: 254615 RVA: 0x0120EE88 File Offset: 0x0120D088
 		public JsonTypeInfo<int> Int32
 		{
 			get
@@ -4251,7 +4768,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EC2 RID: 294594 RVA: 0x0126D5E8 File Offset: 0x0126B7E8
+		// Token: 0x0603E298 RID: 254616 RVA: 0x0120EEC4 File Offset: 0x0120D0C4
 		[NullableContext(1)]
 		private JsonTypeInfo<int> Create_Int32(JsonSerializerOptions options)
 		{
@@ -4264,8 +4781,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EF2 RID: 40690
-		// (get) Token: 0x06047EC3 RID: 294595 RVA: 0x0126D614 File Offset: 0x0126B814
+		// Token: 0x17007654 RID: 30292
+		// (get) Token: 0x0603E299 RID: 254617 RVA: 0x0120EEF0 File Offset: 0x0120D0F0
 		public JsonTypeInfo<int?> NullableInt32
 		{
 			get
@@ -4279,7 +4796,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EC4 RID: 294596 RVA: 0x0126D650 File Offset: 0x0126B850
+		// Token: 0x0603E29A RID: 254618 RVA: 0x0120EF2C File Offset: 0x0120D12C
 		[NullableContext(1)]
 		private JsonTypeInfo<int?> Create_NullableInt32(JsonSerializerOptions options)
 		{
@@ -4293,8 +4810,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EF3 RID: 40691
-		// (get) Token: 0x06047EC5 RID: 294597 RVA: 0x0126D680 File Offset: 0x0126B880
+		// Token: 0x17007655 RID: 30293
+		// (get) Token: 0x0603E29B RID: 254619 RVA: 0x0120EF5C File Offset: 0x0120D15C
 		public JsonTypeInfo<int[]> Int32Array
 		{
 			get
@@ -4308,7 +4825,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EC6 RID: 294598 RVA: 0x0126D6BC File Offset: 0x0126B8BC
+		// Token: 0x0603E29C RID: 254620 RVA: 0x0120EF98 File Offset: 0x0120D198
 		[NullableContext(1)]
 		private JsonTypeInfo<int[]> Create_Int32Array(JsonSerializerOptions options)
 		{
@@ -4327,8 +4844,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EF4 RID: 40692
-		// (get) Token: 0x06047EC7 RID: 294599 RVA: 0x0126D708 File Offset: 0x0126B908
+		// Token: 0x17007656 RID: 30294
+		// (get) Token: 0x0603E29D RID: 254621 RVA: 0x0120EFE4 File Offset: 0x0120D1E4
 		public JsonTypeInfo<long> Int64
 		{
 			get
@@ -4342,7 +4859,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047EC8 RID: 294600 RVA: 0x0126D744 File Offset: 0x0126B944
+		// Token: 0x0603E29E RID: 254622 RVA: 0x0120F020 File Offset: 0x0120D220
 		[NullableContext(1)]
 		private JsonTypeInfo<long> Create_Int64(JsonSerializerOptions options)
 		{
@@ -4355,8 +4872,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EF5 RID: 40693
-		// (get) Token: 0x06047EC9 RID: 294601 RVA: 0x0126D770 File Offset: 0x0126B970
+		// Token: 0x17007657 RID: 30295
+		// (get) Token: 0x0603E29F RID: 254623 RVA: 0x0120F04C File Offset: 0x0120D24C
 		public JsonTypeInfo<object> Object
 		{
 			get
@@ -4370,7 +4887,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047ECA RID: 294602 RVA: 0x0126D7AC File Offset: 0x0126B9AC
+		// Token: 0x0603E2A0 RID: 254624 RVA: 0x0120F088 File Offset: 0x0120D288
 		[NullableContext(1)]
 		private JsonTypeInfo<object> Create_Object(JsonSerializerOptions options)
 		{
@@ -4383,8 +4900,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EF6 RID: 40694
-		// (get) Token: 0x06047ECB RID: 294603 RVA: 0x0126D7D8 File Offset: 0x0126B9D8
+		// Token: 0x17007658 RID: 30296
+		// (get) Token: 0x0603E2A1 RID: 254625 RVA: 0x0120F0B4 File Offset: 0x0120D2B4
 		public JsonTypeInfo<string> String
 		{
 			get
@@ -4398,7 +4915,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047ECC RID: 294604 RVA: 0x0126D814 File Offset: 0x0126BA14
+		// Token: 0x0603E2A2 RID: 254626 RVA: 0x0120F0F0 File Offset: 0x0120D2F0
 		[NullableContext(1)]
 		private JsonTypeInfo<string> Create_String(JsonSerializerOptions options)
 		{
@@ -4411,8 +4928,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EF7 RID: 40695
-		// (get) Token: 0x06047ECD RID: 294605 RVA: 0x0126D840 File Offset: 0x0126BA40
+		// Token: 0x17007659 RID: 30297
+		// (get) Token: 0x0603E2A3 RID: 254627 RVA: 0x0120F11C File Offset: 0x0120D31C
 		public JsonTypeInfo<string[]> StringArray
 		{
 			get
@@ -4426,7 +4943,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			}
 		}
 
-		// Token: 0x06047ECE RID: 294606 RVA: 0x0126D87C File Offset: 0x0126BA7C
+		// Token: 0x0603E2A4 RID: 254628 RVA: 0x0120F158 File Offset: 0x0120D358
 		[NullableContext(1)]
 		private JsonTypeInfo<string[]> Create_StringArray(JsonSerializerOptions options)
 		{
@@ -4445,28 +4962,28 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17009EF8 RID: 40696
-		// (get) Token: 0x06047ECF RID: 294607 RVA: 0x0126D8C6 File Offset: 0x0126BAC6
+		// Token: 0x1700765A RID: 30298
+		// (get) Token: 0x0603E2A5 RID: 254629 RVA: 0x0120F1A2 File Offset: 0x0120D3A2
 		[Nullable(1)]
 		public static LocalStorageJsonSourceGenContext Default { [NullableContext(1)] get; } = new LocalStorageJsonSourceGenContext(new JsonSerializerOptions(LocalStorageJsonSourceGenContext.s_defaultOptions));
 
-		// Token: 0x17009EF9 RID: 40697
-		// (get) Token: 0x06047ED0 RID: 294608 RVA: 0x0126D8CD File Offset: 0x0126BACD
+		// Token: 0x1700765B RID: 30299
+		// (get) Token: 0x0603E2A6 RID: 254630 RVA: 0x0120F1A9 File Offset: 0x0120D3A9
 		[Nullable(2)]
 		protected override JsonSerializerOptions GeneratedSerializerOptions { [NullableContext(2)] get; } = LocalStorageJsonSourceGenContext.s_defaultOptions;
 
-		// Token: 0x06047ED1 RID: 294609 RVA: 0x0126D8D5 File Offset: 0x0126BAD5
+		// Token: 0x0603E2A7 RID: 254631 RVA: 0x0120F1B1 File Offset: 0x0120D3B1
 		public LocalStorageJsonSourceGenContext() : base(null)
 		{
 		}
 
-		// Token: 0x06047ED2 RID: 294610 RVA: 0x0126D8E9 File Offset: 0x0126BAE9
+		// Token: 0x0603E2A8 RID: 254632 RVA: 0x0120F1C5 File Offset: 0x0120D3C5
 		[NullableContext(1)]
 		public LocalStorageJsonSourceGenContext(JsonSerializerOptions options) : base(options)
 		{
 		}
 
-		// Token: 0x06047ED3 RID: 294611 RVA: 0x0126D900 File Offset: 0x0126BB00
+		// Token: 0x0603E2A9 RID: 254633 RVA: 0x0120F1DC File Offset: 0x0120D3DC
 		[NullableContext(1)]
 		private static bool TryGetTypeInfoForRuntimeCustomConverter<[Nullable(2)] TJsonMetadataType>(JsonSerializerOptions options, out JsonTypeInfo<TJsonMetadataType> jsonTypeInfo)
 		{
@@ -4480,7 +4997,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return false;
 		}
 
-		// Token: 0x06047ED4 RID: 294612 RVA: 0x0126D930 File Offset: 0x0126BB30
+		// Token: 0x0603E2AA RID: 254634 RVA: 0x0120F20C File Offset: 0x0120D40C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private static JsonConverter GetRuntimeConverterForType(Type type, JsonSerializerOptions options)
@@ -4496,7 +5013,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return null;
 		}
 
-		// Token: 0x06047ED5 RID: 294613 RVA: 0x0126D978 File Offset: 0x0126BB78
+		// Token: 0x0603E2AB RID: 254635 RVA: 0x0120F254 File Offset: 0x0120D454
 		[NullableContext(1)]
 		private static JsonConverter ExpandConverter(Type type, JsonConverter converter, JsonSerializerOptions options, bool validateCanConvert = true)
 		{
@@ -4516,7 +5033,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return converter;
 		}
 
-		// Token: 0x06047ED6 RID: 294614 RVA: 0x0126D9E0 File Offset: 0x0126BBE0
+		// Token: 0x0603E2AC RID: 254636 RVA: 0x0120F2BC File Offset: 0x0120D4BC
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public override JsonTypeInfo GetTypeInfo(Type type)
@@ -4526,7 +5043,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return result;
 		}
 
-		// Token: 0x06047ED7 RID: 294615 RVA: 0x0126DA00 File Offset: 0x0126BC00
+		// Token: 0x0603E2AD RID: 254637 RVA: 0x0120F2DC File Offset: 0x0120D4DC
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		JsonTypeInfo IJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
@@ -4574,6 +5091,26 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			if (type == typeof(AreaExplorePlayState))
 			{
 				return this.Create_AreaExplorePlayState(options);
+			}
+			if (type == typeof(ESolarSchoolLocalRecordType))
+			{
+				return this.Create_ESolarSchoolLocalRecordType(options);
+			}
+			if (type == typeof(SolarSchoolActivityLocalData))
+			{
+				return this.Create_SolarSchoolActivityLocalData(options);
+			}
+			if (type == typeof(SolarSchoolLocalStorageData))
+			{
+				return this.Create_SolarSchoolLocalStorageData(options);
+			}
+			if (type == typeof(SolarSchoolRedDotLocalData))
+			{
+				return this.Create_SolarSchoolRedDotLocalData(options);
+			}
+			if (type == typeof(SolarSchoolSlotLocalData))
+			{
+				return this.Create_SolarSchoolSlotLocalData(options);
 			}
 			if (type == typeof(EMapNoteId))
 			{
@@ -4675,6 +5212,10 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			{
 				return this.Create_SortStorageData(options);
 			}
+			if (type == typeof(Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>))
+			{
+				return this.Create_DictionaryESolarSchoolLocalRecordTypeHashSetInt32(options);
+			}
 			if (type == typeof(Dictionary<EFunction, int>))
 			{
 				return this.Create_DictionaryEFunctionInt32(options);
@@ -4706,6 +5247,18 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			if (type == typeof(Dictionary<int, AreaExplorePlayState>))
 			{
 				return this.Create_DictionaryInt32AreaExplorePlayState(options);
+			}
+			if (type == typeof(Dictionary<int, SolarSchoolActivityLocalData>))
+			{
+				return this.Create_DictionaryInt32SolarSchoolActivityLocalData(options);
+			}
+			if (type == typeof(Dictionary<int, SolarSchoolRedDotLocalData>))
+			{
+				return this.Create_DictionaryInt32SolarSchoolRedDotLocalData(options);
+			}
+			if (type == typeof(Dictionary<int, SolarSchoolSlotLocalData>))
+			{
+				return this.Create_DictionaryInt32SolarSchoolSlotLocalData(options);
 			}
 			if (type == typeof(Dictionary<int, LocalFriendApplication>))
 			{
@@ -4854,23 +5407,23 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			return null;
 		}
 
-		// Token: 0x04025E7C RID: 155260
+		// Token: 0x04021148 RID: 135496
 		[Nullable(2)]
 		private JsonTypeInfo<bool> _Boolean;
 
-		// Token: 0x04025E7D RID: 155261
+		// Token: 0x04021149 RID: 135497
 		[Nullable(2)]
 		private JsonTypeInfo<bool?> _NullableBoolean;
 
-		// Token: 0x04025E7E RID: 155262
+		// Token: 0x0402114A RID: 135498
 		[Nullable(2)]
 		private JsonTypeInfo<double> _Double;
 
-		// Token: 0x04025E7F RID: 155263
+		// Token: 0x0402114B RID: 135499
 		[Nullable(2)]
 		private JsonTypeInfo<double?> _NullableDouble;
 
-		// Token: 0x04025E80 RID: 155264
+		// Token: 0x0402114C RID: 135500
 		[Nullable(new byte[]
 		{
 			2,
@@ -4878,15 +5431,15 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<double[]> _DoubleArray;
 
-		// Token: 0x04025E81 RID: 155265
+		// Token: 0x0402114D RID: 135501
 		[Nullable(2)]
 		private JsonTypeInfo<float> _Single;
 
-		// Token: 0x04025E82 RID: 155266
+		// Token: 0x0402114E RID: 135502
 		[Nullable(2)]
 		private JsonTypeInfo<float?> _NullableSingle;
 
-		// Token: 0x04025E83 RID: 155267
+		// Token: 0x0402114F RID: 135503
 		[Nullable(new byte[]
 		{
 			2,
@@ -4894,7 +5447,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<float[]> _SingleArray;
 
-		// Token: 0x04025E84 RID: 155268
+		// Token: 0x04021150 RID: 135504
 		[Nullable(new byte[]
 		{
 			2,
@@ -4902,7 +5455,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<AbyssDangoOwnerData> _AbyssDangoOwnerData;
 
-		// Token: 0x04025E85 RID: 155269
+		// Token: 0x04021151 RID: 135505
 		[Nullable(new byte[]
 		{
 			2,
@@ -4910,7 +5463,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<ActivityCacheData> _ActivityCacheData;
 
-		// Token: 0x04025E86 RID: 155270
+		// Token: 0x04021152 RID: 135506
 		[Nullable(new byte[]
 		{
 			2,
@@ -4918,63 +5471,99 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<AreaExplorePlayState> _AreaExplorePlayState;
 
-		// Token: 0x04025E87 RID: 155271
+		// Token: 0x04021153 RID: 135507
+		[Nullable(2)]
+		private JsonTypeInfo<ESolarSchoolLocalRecordType> _ESolarSchoolLocalRecordType;
+
+		// Token: 0x04021154 RID: 135508
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<SolarSchoolActivityLocalData> _SolarSchoolActivityLocalData;
+
+		// Token: 0x04021155 RID: 135509
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<SolarSchoolLocalStorageData> _SolarSchoolLocalStorageData;
+
+		// Token: 0x04021156 RID: 135510
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<SolarSchoolRedDotLocalData> _SolarSchoolRedDotLocalData;
+
+		// Token: 0x04021157 RID: 135511
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<SolarSchoolSlotLocalData> _SolarSchoolSlotLocalData;
+
+		// Token: 0x04021158 RID: 135512
 		[Nullable(2)]
 		private JsonTypeInfo<EMapNoteId> _EMapNoteId;
 
-		// Token: 0x04025E88 RID: 155272
+		// Token: 0x04021159 RID: 135513
 		[Nullable(2)]
 		private JsonTypeInfo<EExploreType> _EExploreType;
 
-		// Token: 0x04025E89 RID: 155273
+		// Token: 0x0402115A RID: 135514
 		[Nullable(2)]
 		private JsonTypeInfo<EFunction> _EFunction;
 
-		// Token: 0x04025E8A RID: 155274
+		// Token: 0x0402115B RID: 135515
 		[Nullable(2)]
 		private JsonTypeInfo<EMotorMusicPlayMode> _EMotorMusicPlayMode;
 
-		// Token: 0x04025E8B RID: 155275
+		// Token: 0x0402115C RID: 135516
 		[Nullable(2)]
 		private JsonTypeInfo<EPlayPointState> _EPlayPointState;
 
-		// Token: 0x04025E8C RID: 155276
+		// Token: 0x0402115D RID: 135517
 		[Nullable(2)]
 		private JsonTypeInfo<ERouletteType> _ERouletteType;
 
-		// Token: 0x04025E8D RID: 155277
+		// Token: 0x0402115E RID: 135518
 		[Nullable(2)]
 		private JsonTypeInfo<ERouletteType?> _NullableERouletteType;
 
-		// Token: 0x04025E8E RID: 155278
+		// Token: 0x0402115F RID: 135519
 		[Nullable(2)]
 		private JsonTypeInfo<EVisionLevelUpIdentify> _EVisionLevelUpIdentify;
 
-		// Token: 0x04025E8F RID: 155279
+		// Token: 0x04021160 RID: 135520
 		[Nullable(2)]
 		private JsonTypeInfo<EVisionLevelUpIdentify?> _NullableEVisionLevelUpIdentify;
 
-		// Token: 0x04025E90 RID: 155280
+		// Token: 0x04021161 RID: 135521
 		[Nullable(2)]
 		private JsonTypeInfo<EVisionLevelUpMaterialPutInMode> _EVisionLevelUpMaterialPutInMode;
 
-		// Token: 0x04025E91 RID: 155281
+		// Token: 0x04021162 RID: 135522
 		[Nullable(2)]
 		private JsonTypeInfo<EVisionLevelUpMaterialPutInMode?> _NullableEVisionLevelUpMaterialPutInMode;
 
-		// Token: 0x04025E92 RID: 155282
+		// Token: 0x04021163 RID: 135523
 		[Nullable(2)]
 		private JsonTypeInfo<EVisionLevelUpMaterialUseType> _EVisionLevelUpMaterialUseType;
 
-		// Token: 0x04025E93 RID: 155283
+		// Token: 0x04021164 RID: 135524
 		[Nullable(2)]
 		private JsonTypeInfo<EVisionLevelUpMaterialUseType?> _NullableEVisionLevelUpMaterialUseType;
 
-		// Token: 0x04025E94 RID: 155284
+		// Token: 0x04021165 RID: 135525
 		[Nullable(2)]
 		private JsonTypeInfo<FilterDefine.EFilterType> _EFilterType;
 
-		// Token: 0x04025E95 RID: 155285
+		// Token: 0x04021166 RID: 135526
 		[Nullable(new byte[]
 		{
 			2,
@@ -4982,7 +5571,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<FilterStorageData> _FilterStorageData;
 
-		// Token: 0x04025E96 RID: 155286
+		// Token: 0x04021167 RID: 135527
 		[Nullable(new byte[]
 		{
 			2,
@@ -4990,7 +5579,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<GamepadTypeUsage> _GamepadTypeUsage;
 
-		// Token: 0x04025E97 RID: 155287
+		// Token: 0x04021168 RID: 135528
 		[Nullable(new byte[]
 		{
 			2,
@@ -4998,7 +5587,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<GameQualityData> _GameQualityData;
 
-		// Token: 0x04025E98 RID: 155288
+		// Token: 0x04021169 RID: 135529
 		[Nullable(new byte[]
 		{
 			2,
@@ -5006,7 +5595,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<IRacingBetsSettlementMainViewRecord> _IRacingBetsSettlementMainViewRecord;
 
-		// Token: 0x04025E99 RID: 155289
+		// Token: 0x0402116A RID: 135530
 		[Nullable(new byte[]
 		{
 			2,
@@ -5014,7 +5603,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<LocalFriendApplication> _LocalFriendApplication;
 
-		// Token: 0x04025E9A RID: 155290
+		// Token: 0x0402116B RID: 135531
 		[Nullable(new byte[]
 		{
 			2,
@@ -5022,7 +5611,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<LocalPlayerIpLevelData> _LocalPlayerIpLevelData;
 
-		// Token: 0x04025E9B RID: 155291
+		// Token: 0x0402116C RID: 135532
 		[Nullable(new byte[]
 		{
 			2,
@@ -5031,7 +5620,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<LocalPlayerIpLevelData[]> _LocalPlayerIpLevelDataArray;
 
-		// Token: 0x04025E9C RID: 155292
+		// Token: 0x0402116D RID: 135533
 		[Nullable(new byte[]
 		{
 			2,
@@ -5039,7 +5628,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<MarqueeStorageData> _MarqueeStorageData;
 
-		// Token: 0x04025E9D RID: 155293
+		// Token: 0x0402116E RID: 135534
 		[Nullable(new byte[]
 		{
 			2,
@@ -5047,7 +5636,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<RacingBetsRedDotState> _RacingBetsRedDotState;
 
-		// Token: 0x04025E9E RID: 155294
+		// Token: 0x0402116F RID: 135535
 		[Nullable(new byte[]
 		{
 			2,
@@ -5055,7 +5644,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<RegionAndIpSt> _RegionAndIpSt;
 
-		// Token: 0x04025E9F RID: 155295
+		// Token: 0x04021170 RID: 135536
 		[Nullable(new byte[]
 		{
 			2,
@@ -5063,7 +5652,16 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<SortStorageData> _SortStorageData;
 
-		// Token: 0x04025EA0 RID: 155296
+		// Token: 0x04021171 RID: 135537
+		[Nullable(new byte[]
+		{
+			2,
+			1,
+			1
+		})]
+		private JsonTypeInfo<Dictionary<ESolarSchoolLocalRecordType, HashSet<int>>> _DictionaryESolarSchoolLocalRecordTypeHashSetInt32;
+
+		// Token: 0x04021172 RID: 135538
 		[Nullable(new byte[]
 		{
 			2,
@@ -5071,7 +5669,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<EFunction, int>> _DictionaryEFunctionInt32;
 
-		// Token: 0x04025EA1 RID: 155297
+		// Token: 0x04021173 RID: 135539
 		[Nullable(new byte[]
 		{
 			2,
@@ -5080,7 +5678,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<FilterDefine.EFilterType, List<int>>> _DictionaryEFilterTypeListInt32;
 
-		// Token: 0x04025EA2 RID: 155298
+		// Token: 0x04021174 RID: 135540
 		[Nullable(new byte[]
 		{
 			2,
@@ -5088,7 +5686,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, bool>> _DictionaryInt32Boolean;
 
-		// Token: 0x04025EA3 RID: 155299
+		// Token: 0x04021175 RID: 135541
 		[Nullable(new byte[]
 		{
 			2,
@@ -5096,7 +5694,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, double>> _DictionaryInt32Double;
 
-		// Token: 0x04025EA4 RID: 155300
+		// Token: 0x04021176 RID: 135542
 		[Nullable(new byte[]
 		{
 			2,
@@ -5105,7 +5703,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, float[]>> _DictionaryInt32SingleArray;
 
-		// Token: 0x04025EA5 RID: 155301
+		// Token: 0x04021177 RID: 135543
 		[Nullable(new byte[]
 		{
 			2,
@@ -5113,7 +5711,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, float>> _DictionaryInt32Single;
 
-		// Token: 0x04025EA6 RID: 155302
+		// Token: 0x04021178 RID: 135544
 		[Nullable(new byte[]
 		{
 			2,
@@ -5122,7 +5720,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, AbyssDangoOwnerData>> _DictionaryInt32AbyssDangoOwnerData;
 
-		// Token: 0x04025EA7 RID: 155303
+		// Token: 0x04021179 RID: 135545
 		[Nullable(new byte[]
 		{
 			2,
@@ -5131,7 +5729,34 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, AreaExplorePlayState>> _DictionaryInt32AreaExplorePlayState;
 
-		// Token: 0x04025EA8 RID: 155304
+		// Token: 0x0402117A RID: 135546
+		[Nullable(new byte[]
+		{
+			2,
+			1,
+			1
+		})]
+		private JsonTypeInfo<Dictionary<int, SolarSchoolActivityLocalData>> _DictionaryInt32SolarSchoolActivityLocalData;
+
+		// Token: 0x0402117B RID: 135547
+		[Nullable(new byte[]
+		{
+			2,
+			1,
+			1
+		})]
+		private JsonTypeInfo<Dictionary<int, SolarSchoolRedDotLocalData>> _DictionaryInt32SolarSchoolRedDotLocalData;
+
+		// Token: 0x0402117C RID: 135548
+		[Nullable(new byte[]
+		{
+			2,
+			1,
+			1
+		})]
+		private JsonTypeInfo<Dictionary<int, SolarSchoolSlotLocalData>> _DictionaryInt32SolarSchoolSlotLocalData;
+
+		// Token: 0x0402117D RID: 135549
 		[Nullable(new byte[]
 		{
 			2,
@@ -5140,7 +5765,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, LocalFriendApplication>> _DictionaryInt32LocalFriendApplication;
 
-		// Token: 0x04025EA9 RID: 155305
+		// Token: 0x0402117E RID: 135550
 		[Nullable(new byte[]
 		{
 			2,
@@ -5149,7 +5774,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, Dictionary<int, double>>> _DictionaryInt32DictionaryInt32Double;
 
-		// Token: 0x04025EAA RID: 155306
+		// Token: 0x0402117F RID: 135551
 		[Nullable(new byte[]
 		{
 			2,
@@ -5159,7 +5784,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, Dictionary<int, AbyssDangoOwnerData>>> _DictionaryInt32DictionaryInt32AbyssDangoOwnerData;
 
-		// Token: 0x04025EAB RID: 155307
+		// Token: 0x04021180 RID: 135552
 		[Nullable(new byte[]
 		{
 			2,
@@ -5169,7 +5794,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, Dictionary<int, AreaExplorePlayState>>> _DictionaryInt32DictionaryInt32AreaExplorePlayState;
 
-		// Token: 0x04025EAC RID: 155308
+		// Token: 0x04021181 RID: 135553
 		[Nullable(new byte[]
 		{
 			2,
@@ -5179,7 +5804,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, Dictionary<int, HashSet<int>>>> _DictionaryInt32DictionaryInt32HashSetInt32;
 
-		// Token: 0x04025EAD RID: 155309
+		// Token: 0x04021182 RID: 135554
 		[Nullable(new byte[]
 		{
 			2,
@@ -5188,7 +5813,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, HashSet<int>>> _DictionaryInt32HashSetInt32;
 
-		// Token: 0x04025EAE RID: 155310
+		// Token: 0x04021183 RID: 135555
 		[Nullable(new byte[]
 		{
 			2,
@@ -5197,7 +5822,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, List<int>>> _DictionaryInt32ListInt32;
 
-		// Token: 0x04025EAF RID: 155311
+		// Token: 0x04021184 RID: 135556
 		[Nullable(new byte[]
 		{
 			2,
@@ -5206,7 +5831,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, int[]>> _DictionaryInt32Int32Array;
 
-		// Token: 0x04025EB0 RID: 155312
+		// Token: 0x04021185 RID: 135557
 		[Nullable(new byte[]
 		{
 			2,
@@ -5214,7 +5839,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, int>> _DictionaryInt32Int32;
 
-		// Token: 0x04025EB1 RID: 155313
+		// Token: 0x04021186 RID: 135558
 		[Nullable(new byte[]
 		{
 			2,
@@ -5222,7 +5847,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, long>> _DictionaryInt32Int64;
 
-		// Token: 0x04025EB2 RID: 155314
+		// Token: 0x04021187 RID: 135559
 		[Nullable(new byte[]
 		{
 			2,
@@ -5231,7 +5856,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<int, string>> _DictionaryInt32String;
 
-		// Token: 0x04025EB3 RID: 155315
+		// Token: 0x04021188 RID: 135560
 		[Nullable(new byte[]
 		{
 			2,
@@ -5240,7 +5865,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, bool>> _DictionaryStringBoolean;
 
-		// Token: 0x04025EB4 RID: 155316
+		// Token: 0x04021189 RID: 135561
 		[Nullable(new byte[]
 		{
 			2,
@@ -5250,7 +5875,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, FilterStorageData>> _DictionaryStringFilterStorageData;
 
-		// Token: 0x04025EB5 RID: 155317
+		// Token: 0x0402118A RID: 135562
 		[Nullable(new byte[]
 		{
 			2,
@@ -5260,7 +5885,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, GamepadTypeUsage>> _DictionaryStringGamepadTypeUsage;
 
-		// Token: 0x04025EB6 RID: 155318
+		// Token: 0x0402118B RID: 135563
 		[Nullable(new byte[]
 		{
 			2,
@@ -5271,7 +5896,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, LocalPlayerIpLevelData[]>> _DictionaryStringLocalPlayerIpLevelDataArray;
 
-		// Token: 0x04025EB7 RID: 155319
+		// Token: 0x0402118C RID: 135564
 		[Nullable(new byte[]
 		{
 			2,
@@ -5281,7 +5906,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, MarqueeStorageData>> _DictionaryStringMarqueeStorageData;
 
-		// Token: 0x04025EB8 RID: 155320
+		// Token: 0x0402118D RID: 135565
 		[Nullable(new byte[]
 		{
 			2,
@@ -5291,7 +5916,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, RegionAndIpSt>> _DictionaryStringRegionAndIpSt;
 
-		// Token: 0x04025EB9 RID: 155321
+		// Token: 0x0402118E RID: 135566
 		[Nullable(new byte[]
 		{
 			2,
@@ -5301,7 +5926,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, SortStorageData>> _DictionaryStringSortStorageData;
 
-		// Token: 0x04025EBA RID: 155322
+		// Token: 0x0402118F RID: 135567
 		[Nullable(new byte[]
 		{
 			2,
@@ -5313,7 +5938,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, IList<IList<string>>>> _DictionaryStringIListIListString;
 
-		// Token: 0x04025EBB RID: 155323
+		// Token: 0x04021190 RID: 135568
 		[Nullable(new byte[]
 		{
 			2,
@@ -5324,7 +5949,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, List<ActivityCacheData>>> _DictionaryStringListActivityCacheData;
 
-		// Token: 0x04025EBC RID: 155324
+		// Token: 0x04021191 RID: 135569
 		[Nullable(new byte[]
 		{
 			2,
@@ -5333,7 +5958,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, int>> _DictionaryStringInt32;
 
-		// Token: 0x04025EBD RID: 155325
+		// Token: 0x04021192 RID: 135570
 		[Nullable(new byte[]
 		{
 			2,
@@ -5341,7 +5966,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<HashSet<EMapNoteId>> _HashSetEMapNoteId;
 
-		// Token: 0x04025EBE RID: 155326
+		// Token: 0x04021193 RID: 135571
 		[Nullable(new byte[]
 		{
 			2,
@@ -5349,7 +5974,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<HashSet<int>> _HashSetInt32;
 
-		// Token: 0x04025EBF RID: 155327
+		// Token: 0x04021194 RID: 135572
 		[Nullable(new byte[]
 		{
 			2,
@@ -5359,7 +5984,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<IList<IList<string>>> _IListIListString;
 
-		// Token: 0x04025EC0 RID: 155328
+		// Token: 0x04021195 RID: 135573
 		[Nullable(new byte[]
 		{
 			2,
@@ -5368,7 +5993,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<IList<string>> _IListString;
 
-		// Token: 0x04025EC1 RID: 155329
+		// Token: 0x04021196 RID: 135574
 		[Nullable(new byte[]
 		{
 			2,
@@ -5377,7 +6002,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<List<ActivityCacheData>> _ListActivityCacheData;
 
-		// Token: 0x04025EC2 RID: 155330
+		// Token: 0x04021197 RID: 135575
 		[Nullable(new byte[]
 		{
 			2,
@@ -5385,7 +6010,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<List<EPlayPointState>> _ListEPlayPointState;
 
-		// Token: 0x04025EC3 RID: 155331
+		// Token: 0x04021198 RID: 135576
 		[Nullable(new byte[]
 		{
 			2,
@@ -5393,7 +6018,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<List<int>> _ListInt32;
 
-		// Token: 0x04025EC4 RID: 155332
+		// Token: 0x04021199 RID: 135577
 		[Nullable(new byte[]
 		{
 			2,
@@ -5402,15 +6027,15 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<List<string>> _ListString;
 
-		// Token: 0x04025EC5 RID: 155333
+		// Token: 0x0402119A RID: 135578
 		[Nullable(2)]
 		private JsonTypeInfo<int> _Int32;
 
-		// Token: 0x04025EC6 RID: 155334
+		// Token: 0x0402119B RID: 135579
 		[Nullable(2)]
 		private JsonTypeInfo<int?> _NullableInt32;
 
-		// Token: 0x04025EC7 RID: 155335
+		// Token: 0x0402119C RID: 135580
 		[Nullable(new byte[]
 		{
 			2,
@@ -5418,11 +6043,11 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<int[]> _Int32Array;
 
-		// Token: 0x04025EC8 RID: 155336
+		// Token: 0x0402119D RID: 135581
 		[Nullable(2)]
 		private JsonTypeInfo<long> _Int64;
 
-		// Token: 0x04025EC9 RID: 155337
+		// Token: 0x0402119E RID: 135582
 		[Nullable(new byte[]
 		{
 			2,
@@ -5430,7 +6055,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<object> _Object;
 
-		// Token: 0x04025ECA RID: 155338
+		// Token: 0x0402119F RID: 135583
 		[Nullable(new byte[]
 		{
 			2,
@@ -5438,7 +6063,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<string> _String;
 
-		// Token: 0x04025ECB RID: 155339
+		// Token: 0x040211A0 RID: 135584
 		[Nullable(new byte[]
 		{
 			2,
@@ -5447,7 +6072,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 		})]
 		private JsonTypeInfo<string[]> _StringArray;
 
-		// Token: 0x04025ECC RID: 155340
+		// Token: 0x040211A1 RID: 135585
 		[Nullable(1)]
 		private static readonly JsonSerializerOptions s_defaultOptions = new JsonSerializerOptions
 		{
@@ -5455,14 +6080,14 @@ namespace CSharpScript.Game.Common.LocalStorageJson.Generated
 			IncludeFields = true
 		};
 
-		// Token: 0x04025ECD RID: 155341
+		// Token: 0x040211A2 RID: 135586
 		private const BindingFlags InstanceMemberBindingFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 
-		// Token: 0x0200CF95 RID: 53141
+		// Token: 0x0200BB81 RID: 48001
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E633 RID: 255539
+			// Token: 0x04039A5F RID: 236127
 			[Nullable(new byte[]
 			{
 				0,

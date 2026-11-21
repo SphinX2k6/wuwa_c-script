@@ -9,12 +9,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 {
-	// Token: 0x02003AE5 RID: 15077
+	// Token: 0x020030AF RID: 12463
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/ScreenEffect/BP_ScreenEffectPlayer.BP_ScreenEffectPlayer_C")]
 	[UnrealStructLayout(1184, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1177)]
 	public class BP_ScreenEffectPlayer_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060209D1 RID: 133585 RVA: 0x008D7BF0 File Offset: 0x008D5DF0
+		// Token: 0x0601DE73 RID: 122483 RVA: 0x00905453 File Offset: 0x00903653
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_ScreenEffectPlayer_C._ClassPtr == IntPtr.Zero)
@@ -24,104 +24,104 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			return BP_ScreenEffectPlayer_C._ClassPtr;
 		}
 
-		// Token: 0x060209D2 RID: 133586 RVA: 0x008D7C14 File Offset: 0x008D5E14
+		// Token: 0x0601DE74 RID: 122484 RVA: 0x00905478 File Offset: 0x00903678
 		public BP_ScreenEffectPlayer_C() : this(BuiltinUtils.AllocNativeUObject(BP_ScreenEffectPlayer_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060209D3 RID: 133587 RVA: 0x008D7C3C File Offset: 0x008D5E3C
+		// Token: 0x0601DE75 RID: 122485 RVA: 0x009054A0 File Offset: 0x009036A0
 		[NullableContext(1)]
 		public BP_ScreenEffectPlayer_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_ScreenEffectPlayer_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170031A8 RID: 12712
-		// (get) Token: 0x060209D4 RID: 133588 RVA: 0x008D7C6F File Offset: 0x008D5E6F
-		// (set) Token: 0x060209D5 RID: 133589 RVA: 0x008D7C83 File Offset: 0x008D5E83
+		// Token: 0x17003107 RID: 12551
+		// (get) Token: 0x0601DE76 RID: 122486 RVA: 0x009054D3 File Offset: 0x009036D3
+		// (set) Token: 0x0601DE77 RID: 122487 RVA: 0x009054E7 File Offset: 0x009036E7
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x170031A9 RID: 12713
-		// (get) Token: 0x060209D6 RID: 133590 RVA: 0x008D7C98 File Offset: 0x008D5E98
-		// (set) Token: 0x060209D7 RID: 133591 RVA: 0x008D7CAC File Offset: 0x008D5EAC
+		// Token: 0x17003108 RID: 12552
+		// (get) Token: 0x0601DE78 RID: 122488 RVA: 0x009054FC File Offset: 0x009036FC
+		// (set) Token: 0x0601DE79 RID: 122489 RVA: 0x00905510 File Offset: 0x00903710
 		[Nullable(2)]
 		public unsafe EffectScreenPlayData_C Data
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<EffectScreenPlayData_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<EffectScreenPlayData_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_Data);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_Data, value);
 			}
 		}
 
-		// Token: 0x170031AA RID: 12714
-		// (get) Token: 0x060209D8 RID: 133592 RVA: 0x008D7CC1 File Offset: 0x008D5EC1
-		// (set) Token: 0x060209D9 RID: 133593 RVA: 0x008D7CD5 File Offset: 0x008D5ED5
+		// Token: 0x17003109 RID: 12553
+		// (get) Token: 0x0601DE7A RID: 122490 RVA: 0x00905525 File Offset: 0x00903725
+		// (set) Token: 0x0601DE7B RID: 122491 RVA: 0x00905539 File Offset: 0x00903739
 		public unsafe TEnumAsByte<E_SE_PlayState> State
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_State);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_State) = value;
 			}
 		}
 
-		// Token: 0x170031AB RID: 12715
-		// (get) Token: 0x060209DA RID: 133594 RVA: 0x008D7CEA File Offset: 0x008D5EEA
-		// (set) Token: 0x060209DB RID: 133595 RVA: 0x008D7CFA File Offset: 0x008D5EFA
+		// Token: 0x1700310A RID: 12554
+		// (get) Token: 0x0601DE7C RID: 122492 RVA: 0x0090554E File Offset: 0x0090374E
+		// (set) Token: 0x0601DE7D RID: 122493 RVA: 0x0090555E File Offset: 0x0090375E
 		public unsafe float TimeCounter
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_TimeCounter);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_TimeCounter) = value;
 			}
 		}
 
-		// Token: 0x170031AC RID: 12716
-		// (get) Token: 0x060209DC RID: 133596 RVA: 0x008D7D0B File Offset: 0x008D5F0B
-		// (set) Token: 0x060209DD RID: 133597 RVA: 0x008D7D1F File Offset: 0x008D5F1F
+		// Token: 0x1700310B RID: 12555
+		// (get) Token: 0x0601DE7E RID: 122494 RVA: 0x0090556F File Offset: 0x0090376F
+		// (set) Token: 0x0601DE7F RID: 122495 RVA: 0x00905583 File Offset: 0x00903783
 		[Nullable(2)]
 		public unsafe AActor TargetActor
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_TargetActor);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_TargetActor, value);
 			}
 		}
 
-		// Token: 0x170031AD RID: 12717
-		// (get) Token: 0x060209DE RID: 133598 RVA: 0x008D7D34 File Offset: 0x008D5F34
-		// (set) Token: 0x060209DF RID: 133599 RVA: 0x008D7D6D File Offset: 0x008D5F6D
+		// Token: 0x1700310C RID: 12556
+		// (get) Token: 0x0601DE80 RID: 122496 RVA: 0x00905598 File Offset: 0x00903798
+		// (set) Token: 0x0601DE81 RID: 122497 RVA: 0x009055D1 File Offset: 0x009037D1
 		[Nullable(1)]
 		public TArray<UActorComponent> CachedComponents
 		{
@@ -132,7 +132,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 				TArray<UActorComponent> result;
 				if ((result = this._CachedComponents) == null)
 				{
-					result = (this._CachedComponents = new TArray<UActorComponent>(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_6, this));
+					result = (this._CachedComponents = new TArray<UActorComponent>(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_CachedComponents, this));
 				}
 				return result;
 			}
@@ -143,69 +143,69 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			}
 		}
 
-		// Token: 0x170031AE RID: 12718
-		// (get) Token: 0x060209E0 RID: 133600 RVA: 0x008D7D7B File Offset: 0x008D5F7B
-		// (set) Token: 0x060209E1 RID: 133601 RVA: 0x008D7D8B File Offset: 0x008D5F8B
+		// Token: 0x1700310D RID: 12557
+		// (get) Token: 0x0601DE82 RID: 122498 RVA: 0x009055DF File Offset: 0x009037DF
+		// (set) Token: 0x0601DE83 RID: 122499 RVA: 0x009055EF File Offset: 0x009037EF
 		public unsafe bool bToHide
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_bToHide) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_bToHide) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170031AF RID: 12719
-		// (get) Token: 0x060209E2 RID: 133602 RVA: 0x008D7D9C File Offset: 0x008D5F9C
-		// (set) Token: 0x060209E3 RID: 133603 RVA: 0x008D7DAC File Offset: 0x008D5FAC
+		// Token: 0x1700310E RID: 12558
+		// (get) Token: 0x0601DE84 RID: 122500 RVA: 0x00905600 File Offset: 0x00903800
+		// (set) Token: 0x0601DE85 RID: 122501 RVA: 0x00905610 File Offset: 0x00903810
 		public unsafe float Alpha
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_Alpha);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_Alpha) = value;
 			}
 		}
 
-		// Token: 0x170031B0 RID: 12720
-		// (get) Token: 0x060209E4 RID: 133604 RVA: 0x008D7DBD File Offset: 0x008D5FBD
-		// (set) Token: 0x060209E5 RID: 133605 RVA: 0x008D7DCD File Offset: 0x008D5FCD
+		// Token: 0x1700310F RID: 12559
+		// (get) Token: 0x0601DE86 RID: 122502 RVA: 0x00905621 File Offset: 0x00903821
+		// (set) Token: 0x0601DE87 RID: 122503 RVA: 0x00905631 File Offset: 0x00903831
 		public unsafe float FadeSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_FadeSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_FadeSpeed) = value;
 			}
 		}
 
-		// Token: 0x170031B1 RID: 12721
-		// (get) Token: 0x060209E6 RID: 133606 RVA: 0x008D7DDE File Offset: 0x008D5FDE
-		// (set) Token: 0x060209E7 RID: 133607 RVA: 0x008D7DEE File Offset: 0x008D5FEE
+		// Token: 0x17003110 RID: 12560
+		// (get) Token: 0x0601DE88 RID: 122504 RVA: 0x00905642 File Offset: 0x00903842
+		// (set) Token: 0x0601DE89 RID: 122505 RVA: 0x00905652 File Offset: 0x00903852
 		public unsafe float FadeOutSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_FadeOutSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_FadeOutSpeed) = value;
 			}
 		}
 
-		// Token: 0x170031B2 RID: 12722
-		// (get) Token: 0x060209E8 RID: 133608 RVA: 0x008D7E00 File Offset: 0x008D6000
-		// (set) Token: 0x060209E9 RID: 133609 RVA: 0x008D7E39 File Offset: 0x008D6039
+		// Token: 0x17003111 RID: 12561
+		// (get) Token: 0x0601DE8A RID: 122506 RVA: 0x00905664 File Offset: 0x00903864
+		// (set) Token: 0x0601DE8B RID: 122507 RVA: 0x0090569D File Offset: 0x0090389D
 		[Nullable(1)]
 		public TArray<AActor> CachedUIActors
 		{
@@ -216,7 +216,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 				TArray<AActor> result;
 				if ((result = this._CachedUIActors) == null)
 				{
-					result = (this._CachedUIActors = new TArray<AActor>(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_11, this));
+					result = (this._CachedUIActors = new TArray<AActor>(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_CachedUIActors, this));
 				}
 				return result;
 			}
@@ -227,147 +227,146 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			}
 		}
 
-		// Token: 0x170031B3 RID: 12723
-		// (get) Token: 0x060209EA RID: 133610 RVA: 0x008D7E47 File Offset: 0x008D6047
-		// (set) Token: 0x060209EB RID: 133611 RVA: 0x008D7E57 File Offset: 0x008D6057
+		// Token: 0x17003112 RID: 12562
+		// (get) Token: 0x0601DE8C RID: 122508 RVA: 0x009056AB File Offset: 0x009038AB
+		// (set) Token: 0x0601DE8D RID: 122509 RVA: 0x009056BB File Offset: 0x009038BB
 		public unsafe bool bVisible
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_12) != 0;
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_bVisible) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_12) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_bVisible) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170031B4 RID: 12724
-		// (get) Token: 0x060209EC RID: 133612 RVA: 0x008D7E68 File Offset: 0x008D6068
-		// (set) Token: 0x060209ED RID: 133613 RVA: 0x008D7E7C File Offset: 0x008D607C
+		// Token: 0x17003113 RID: 12563
+		// (get) Token: 0x0601DE8E RID: 122510 RVA: 0x009056CC File Offset: 0x009038CC
+		// (set) Token: 0x0601DE8F RID: 122511 RVA: 0x009056E0 File Offset: 0x009038E0
 		[Nullable(2)]
 		public unsafe AUIContainerActor ScreenEffectRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AUIContainerActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_13);
+				return BuiltinUtils.ObjectPropertyGetter<AUIContainerActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_ScreenEffectRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_13, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ScreenEffectPlayer_C.__PropertyOffset_ScreenEffectRoot, value);
 			}
 		}
 
-		// Token: 0x170031B5 RID: 12725
-		// (get) Token: 0x060209EE RID: 133614 RVA: 0x008D7E91 File Offset: 0x008D6091
-		// (set) Token: 0x060209EF RID: 133615 RVA: 0x008D7EA1 File Offset: 0x008D60A1
+		// Token: 0x17003114 RID: 12564
+		// (get) Token: 0x0601DE90 RID: 122512 RVA: 0x009056F5 File Offset: 0x009038F5
+		// (set) Token: 0x0601DE91 RID: 122513 RVA: 0x00905705 File Offset: 0x00903905
 		public unsafe bool bNeedToDestroy
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_14) != 0;
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_bNeedToDestroy) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_14) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_bNeedToDestroy) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170031B6 RID: 12726
-		// (get) Token: 0x060209F0 RID: 133616 RVA: 0x008D7EB2 File Offset: 0x008D60B2
-		// (set) Token: 0x060209F1 RID: 133617 RVA: 0x008D7EC2 File Offset: 0x008D60C2
+		// Token: 0x17003115 RID: 12565
+		// (get) Token: 0x0601DE92 RID: 122514 RVA: 0x00905716 File Offset: 0x00903916
+		// (set) Token: 0x0601DE93 RID: 122515 RVA: 0x00905726 File Offset: 0x00903926
 		public unsafe float CacheEnvironmentFactor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_CacheEnvironmentFactor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_CacheEnvironmentFactor) = value;
 			}
 		}
 
-		// Token: 0x170031B7 RID: 12727
-		// (get) Token: 0x060209F2 RID: 133618 RVA: 0x008D7ED3 File Offset: 0x008D60D3
-		// (set) Token: 0x060209F3 RID: 133619 RVA: 0x008D7EE3 File Offset: 0x008D60E3
+		// Token: 0x17003116 RID: 12566
+		// (get) Token: 0x0601DE94 RID: 122516 RVA: 0x00905737 File Offset: 0x00903937
+		// (set) Token: 0x0601DE95 RID: 122517 RVA: 0x00905747 File Offset: 0x00903947
 		public unsafe float ParameterTweenProgress
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_ParameterTweenProgress);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_ParameterTweenProgress) = value;
 			}
 		}
 
-		// Token: 0x170031B8 RID: 12728
-		// (get) Token: 0x060209F4 RID: 133620 RVA: 0x008D7EF4 File Offset: 0x008D60F4
-		// (set) Token: 0x060209F5 RID: 133621 RVA: 0x008D7F04 File Offset: 0x008D6104
+		// Token: 0x17003117 RID: 12567
+		// (get) Token: 0x0601DE96 RID: 122518 RVA: 0x00905758 File Offset: 0x00903958
+		// (set) Token: 0x0601DE97 RID: 122519 RVA: 0x00905768 File Offset: 0x00903968
 		public unsafe float ParameterTweenSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_ParameterTweenSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_ParameterTweenSpeed) = value;
 			}
 		}
 
-		// Token: 0x170031B9 RID: 12729
-		// (get) Token: 0x060209F6 RID: 133622 RVA: 0x008D7F15 File Offset: 0x008D6115
-		// (set) Token: 0x060209F7 RID: 133623 RVA: 0x008D7F25 File Offset: 0x008D6125
+		// Token: 0x17003118 RID: 12568
+		// (get) Token: 0x0601DE98 RID: 122520 RVA: 0x00905779 File Offset: 0x00903979
+		// (set) Token: 0x0601DE99 RID: 122521 RVA: 0x00905789 File Offset: 0x00903989
 		public unsafe float ParameterTweenTarget
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_ParameterTweenTarget);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_ParameterTweenTarget) = value;
 			}
 		}
 
-		// Token: 0x170031BA RID: 12730
-		// (get) Token: 0x060209F8 RID: 133624 RVA: 0x008D7F36 File Offset: 0x008D6136
-		// (set) Token: 0x060209F9 RID: 133625 RVA: 0x008D7F46 File Offset: 0x008D6146
+		// Token: 0x17003119 RID: 12569
+		// (get) Token: 0x0601DE9A RID: 122522 RVA: 0x0090579A File Offset: 0x0090399A
+		// (set) Token: 0x0601DE9B RID: 122523 RVA: 0x009057AA File Offset: 0x009039AA
 		public unsafe float NiagaraFrameDeltaTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_NiagaraFrameDeltaTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_NiagaraFrameDeltaTime) = value;
 			}
 		}
 
-		// Token: 0x170031BB RID: 12731
-		// (get) Token: 0x060209FA RID: 133626 RVA: 0x008D7F57 File Offset: 0x008D6157
-		// (set) Token: 0x060209FB RID: 133627 RVA: 0x008D7F67 File Offset: 0x008D6167
+		// Token: 0x1700311A RID: 12570
+		// (get) Token: 0x0601DE9C RID: 122524 RVA: 0x009057BB File Offset: 0x009039BB
+		// (set) Token: 0x0601DE9D RID: 122525 RVA: 0x009057CB File Offset: 0x009039CB
 		public unsafe bool NiagaraFrameDeltaTimeDirty
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_20) != 0;
+				return *(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_NiagaraFrameDeltaTimeDirty) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_20) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_ScreenEffectPlayer_C.__PropertyOffset_NiagaraFrameDeltaTimeDirty) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x060209FC RID: 133628 RVA: 0x008D7F78 File Offset: 0x008D6178
+		// Token: 0x0601DE9E RID: 122526 RVA: 0x009057DC File Offset: 0x009039DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetNiagaraFrameDeltaTime(float DeltaTime)
 		{
 			BP_ScreenEffectPlayer_C.__SetNiagaraFrameDeltaTime_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__SetNiagaraFrameDeltaTime_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__SetNiagaraFrameDeltaTime_FunctionParams) & -16L;
@@ -376,9 +375,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__SetNiagaraFrameDeltaTime_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060209FD RID: 133629 RVA: 0x008D7FC0 File Offset: 0x008D61C0
+		// Token: 0x0601DE9F RID: 122527 RVA: 0x00905824 File Offset: 0x00903A24
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void AlmostEqual(float val1, float val2, ref bool isequal)
 		{
 			BP_ScreenEffectPlayer_C.__AlmostEqual_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__AlmostEqual_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__AlmostEqual_FunctionParams) & -16L;
@@ -390,9 +388,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			isequal = ptr->isequal;
 		}
 
-		// Token: 0x060209FE RID: 133630 RVA: 0x008D8020 File Offset: 0x008D6220
+		// Token: 0x0601DEA0 RID: 122528 RVA: 0x00905884 File Offset: 0x00903A84
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetExtraState(int ExtraState)
 		{
 			BP_ScreenEffectPlayer_C.__SetExtraState_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__SetExtraState_FunctionParams[(UIntPtr)255] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__SetExtraState_FunctionParams) & -16L;
@@ -401,9 +398,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__SetExtraState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060209FF RID: 133631 RVA: 0x008D806C File Offset: 0x008D626C
+		// Token: 0x0601DEA1 RID: 122529 RVA: 0x009058D0 File Offset: 0x00903AD0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Refresh_Addition_Parameter(float TweenProgress)
 		{
 			BP_ScreenEffectPlayer_C.__Refresh_Addition_Parameter_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__Refresh_Addition_Parameter_FunctionParams[(UIntPtr)911] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__Refresh_Addition_Parameter_FunctionParams) & -16L;
@@ -412,9 +408,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__Refresh_Addition_Parameter_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A00 RID: 133632 RVA: 0x008D80B8 File Offset: 0x008D62B8
+		// Token: 0x0601DEA2 RID: 122530 RVA: 0x0090591C File Offset: 0x00903B1C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void TweenParameterSpeed(float TweenTarget, float TweenSpeed, float TweenDeltaSecond)
 		{
 			BP_ScreenEffectPlayer_C.__TweenParameterSpeed_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__TweenParameterSpeed_FunctionParams[(UIntPtr)51] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__TweenParameterSpeed_FunctionParams) & -16L;
@@ -425,25 +420,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__TweenParameterSpeed_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A01 RID: 133633 RVA: 0x008D810C File Offset: 0x008D630C
+		// Token: 0x0601DEA3 RID: 122531 RVA: 0x00905970 File Offset: 0x00903B70
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void BP_ScreenEffectPlayer_AutoGenFunc()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__BP_ScreenEffectPlayer_AutoGenFunc_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A02 RID: 133634 RVA: 0x008D8120 File Offset: 0x008D6320
+		// Token: 0x0601DEA4 RID: 122532 RVA: 0x00905984 File Offset: 0x00903B84
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void DelayEndAudioCall()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__DelayEndAudioCall_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A03 RID: 133635 RVA: 0x008D8134 File Offset: 0x008D6334
+		// Token: 0x0601DEA5 RID: 122533 RVA: 0x00905998 File Offset: 0x00903B98
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void UpdatePlayerSEEnvironmentFactor(float EnvironmentFactor)
 		{
 			BP_ScreenEffectPlayer_C.__UpdatePlayerSEEnvironmentFactor_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__UpdatePlayerSEEnvironmentFactor_FunctionParams[(UIntPtr)135] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__UpdatePlayerSEEnvironmentFactor_FunctionParams) & -16L;
@@ -452,26 +444,23 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__UpdatePlayerSEEnvironmentFactor_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A04 RID: 133636 RVA: 0x008D817D File Offset: 0x008D637D
+		// Token: 0x0601DEA6 RID: 122534 RVA: 0x009059E1 File Offset: 0x00903BE1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Destroy_Player()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__Destroy_Player_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A05 RID: 133637 RVA: 0x008D8191 File Offset: 0x008D6391
+		// Token: 0x0601DEA7 RID: 122535 RVA: 0x009059F5 File Offset: 0x00903BF5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ClearPlayer()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ClearPlayer_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A06 RID: 133638 RVA: 0x008D81A8 File Offset: 0x008D63A8
+		// Token: 0x0601DEA8 RID: 122536 RVA: 0x00905A0C File Offset: 0x00903C0C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void InitPlayer(EffectScreenPlayData_C Data, AUIContainerActor ScreenEffectRoot)
 		{
 			BP_ScreenEffectPlayer_C.__InitPlayer_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__InitPlayer_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__InitPlayer_FunctionParams) & -16L;
@@ -481,17 +470,15 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__InitPlayer_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A07 RID: 133639 RVA: 0x008D8213 File Offset: 0x008D6413
+		// Token: 0x0601DEA9 RID: 122537 RVA: 0x00905A77 File Offset: 0x00903C77
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void BeforeStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__BeforeStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A08 RID: 133640 RVA: 0x008D8228 File Offset: 0x008D6428
+		// Token: 0x0601DEAA RID: 122538 RVA: 0x00905A8C File Offset: 0x00903C8C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Set_Effect_Hidden(bool bToHide, bool bOverrideFadeSpeed, float OverrideFadeSpeed)
 		{
 			BP_ScreenEffectPlayer_C.__Set_Effect_Hidden_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__Set_Effect_Hidden_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__Set_Effect_Hidden_FunctionParams) & -16L;
@@ -502,9 +489,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__Set_Effect_Hidden_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A09 RID: 133641 RVA: 0x008D827C File Offset: 0x008D647C
+		// Token: 0x0601DEAB RID: 122539 RVA: 0x00905AE0 File Offset: 0x00903CE0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetUIVisible(bool Visible)
 		{
 			BP_ScreenEffectPlayer_C.__SetUIVisible_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__SetUIVisible_FunctionParams[(UIntPtr)111] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__SetUIVisible_FunctionParams) & -16L;
@@ -513,41 +499,36 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__SetUIVisible_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A0A RID: 133642 RVA: 0x008D82C2 File Offset: 0x008D64C2
+		// Token: 0x0601DEAC RID: 122540 RVA: 0x00905B26 File Offset: 0x00903D26
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UpdateComponentsAlpha()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__UpdateComponentsAlpha_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A0B RID: 133643 RVA: 0x008D82D6 File Offset: 0x008D64D6
+		// Token: 0x0601DEAD RID: 122541 RVA: 0x00905B3A File Offset: 0x00903D3A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UpdateComponents()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__UpdateComponents_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A0C RID: 133644 RVA: 0x008D82EA File Offset: 0x008D64EA
+		// Token: 0x0601DEAE RID: 122542 RVA: 0x00905B4E File Offset: 0x00903D4E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void EndPlayer()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__EndPlayer_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A0D RID: 133645 RVA: 0x008D82FE File Offset: 0x008D64FE
+		// Token: 0x0601DEAF RID: 122543 RVA: 0x00905B62 File Offset: 0x00903D62
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Start_Player()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__Start_Player_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A0E RID: 133646 RVA: 0x008D8314 File Offset: 0x008D6514
+		// Token: 0x0601DEB0 RID: 122544 RVA: 0x00905B78 File Offset: 0x00903D78
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void TweenParameter(float TweenTarget)
 		{
 			BP_ScreenEffectPlayer_C.__TweenParameter_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__TweenParameter_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__TweenParameter_FunctionParams) & -16L;
@@ -556,9 +537,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__TweenParameter_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A0F RID: 133647 RVA: 0x008D835C File Offset: 0x008D655C
+		// Token: 0x0601DEB1 RID: 122545 RVA: 0x00905BC0 File Offset: 0x00903DC0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void TweenParameterImmediately(float TweenTarget)
 		{
 			BP_ScreenEffectPlayer_C.__TweenParameterImmediately_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__TweenParameterImmediately_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__TweenParameterImmediately_FunctionParams) & -16L;
@@ -567,41 +547,36 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__TweenParameterImmediately_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A10 RID: 133648 RVA: 0x008D83A2 File Offset: 0x008D65A2
+		// Token: 0x0601DEB2 RID: 122546 RVA: 0x00905C06 File Offset: 0x00903E06
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A11 RID: 133649 RVA: 0x008D83B6 File Offset: 0x008D65B6
+		// Token: 0x0601DEB3 RID: 122547 RVA: 0x00905C1A File Offset: 0x00903E1A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A12 RID: 133650 RVA: 0x008D83CB File Offset: 0x008D65CB
+		// Token: 0x0601DEB4 RID: 122548 RVA: 0x00905C2E File Offset: 0x00903E2E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A13 RID: 133651 RVA: 0x008D83DF File Offset: 0x008D65DF
+		// Token: 0x0601DEB5 RID: 122549 RVA: 0x00905C42 File Offset: 0x00903E42
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06020A14 RID: 133652 RVA: 0x008D83F4 File Offset: 0x008D65F4
+		// Token: 0x0601DEB6 RID: 122550 RVA: 0x00905C58 File Offset: 0x00903E58
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_ScreenEffectPlayer_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__ReceiveTick_FunctionParams) & -16L;
@@ -610,20 +585,18 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A15 RID: 133653 RVA: 0x008D843C File Offset: 0x008D663C
+		// Token: 0x0601DEB7 RID: 122551 RVA: 0x00905CA0 File Offset: 0x00903EA0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_ScreenEffectPlayer_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_ScreenEffectPlayer_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A16 RID: 133654 RVA: 0x008D8484 File Offset: 0x008D6684
+		// Token: 0x0601DEB8 RID: 122552 RVA: 0x00905CE8 File Offset: 0x00903EE8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveEndPlay(EEndPlayReason EndPlayReason)
 		{
 			BP_ScreenEffectPlayer_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__ReceiveEndPlay_FunctionParams) & -16L;
@@ -632,51 +605,50 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A17 RID: 133655 RVA: 0x008D84D0 File Offset: 0x008D66D0
+		// Token: 0x0601DEB9 RID: 122553 RVA: 0x00905D34 File Offset: 0x00903F34
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveEndPlay_Implementation(EEndPlayReason EndPlayReason)
 		{
 			BP_ScreenEffectPlayer_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_ScreenEffectPlayer_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_ScreenEffectPlayer_C.__ReceiveEndPlay_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_ScreenEffectPlayer_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->EndPlayReason = EndPlayReason;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ScreenEffectPlayer_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06020A18 RID: 133656 RVA: 0x008D851C File Offset: 0x008D671C
+		// Token: 0x0601DEBA RID: 122554 RVA: 0x00905D7F File Offset: 0x00903F7F
 		protected BP_ScreenEffectPlayer_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FD03 RID: 64771
+		// Token: 0x0400FC97 RID: 64663
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/ScreenEffect/BP_ScreenEffectPlayer.BP_ScreenEffectPlayer_C";
 
-		// Token: 0x0400FD04 RID: 64772
+		// Token: 0x0400FC98 RID: 64664
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FD05 RID: 64773
+		// Token: 0x0400FC99 RID: 64665
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FD06 RID: 64774
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FC9A RID: 64666
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x0400FD07 RID: 64775
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FC9B RID: 64667
+		internal static int __PropertyOffset_Data;
 
-		// Token: 0x0400FD08 RID: 64776
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FC9C RID: 64668
+		internal static int __PropertyOffset_State;
 
-		// Token: 0x0400FD09 RID: 64777
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FC9D RID: 64669
+		internal static int __PropertyOffset_TimeCounter;
 
-		// Token: 0x0400FD0A RID: 64778
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FC9E RID: 64670
+		internal static int __PropertyOffset_TargetActor;
 
-		// Token: 0x0400FD0B RID: 64779
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FC9F RID: 64671
+		internal static int __PropertyOffset_CachedComponents;
 
-		// Token: 0x0400FD0C RID: 64780
+		// Token: 0x0400FCA0 RID: 64672
 		[Nullable(new byte[]
 		{
 			2,
@@ -684,22 +656,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 		})]
 		private TArray<UActorComponent> _CachedComponents;
 
-		// Token: 0x0400FD0D RID: 64781
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400FCA1 RID: 64673
+		internal static int __PropertyOffset_bToHide;
 
-		// Token: 0x0400FD0E RID: 64782
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400FCA2 RID: 64674
+		internal static int __PropertyOffset_Alpha;
 
-		// Token: 0x0400FD0F RID: 64783
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400FCA3 RID: 64675
+		internal static int __PropertyOffset_FadeSpeed;
 
-		// Token: 0x0400FD10 RID: 64784
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400FCA4 RID: 64676
+		internal static int __PropertyOffset_FadeOutSpeed;
 
-		// Token: 0x0400FD11 RID: 64785
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400FCA5 RID: 64677
+		internal static int __PropertyOffset_CachedUIActors;
 
-		// Token: 0x0400FD12 RID: 64786
+		// Token: 0x0400FCA6 RID: 64678
 		[Nullable(new byte[]
 		{
 			2,
@@ -707,259 +679,259 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect
 		})]
 		private TArray<AActor> _CachedUIActors;
 
-		// Token: 0x0400FD13 RID: 64787
-		internal static int __PropertyOffset_12;
+		// Token: 0x0400FCA7 RID: 64679
+		internal static int __PropertyOffset_bVisible;
 
-		// Token: 0x0400FD14 RID: 64788
-		internal static int __PropertyOffset_13;
+		// Token: 0x0400FCA8 RID: 64680
+		internal static int __PropertyOffset_ScreenEffectRoot;
 
-		// Token: 0x0400FD15 RID: 64789
-		internal static int __PropertyOffset_14;
+		// Token: 0x0400FCA9 RID: 64681
+		internal static int __PropertyOffset_bNeedToDestroy;
 
-		// Token: 0x0400FD16 RID: 64790
-		internal static int __PropertyOffset_15;
+		// Token: 0x0400FCAA RID: 64682
+		internal static int __PropertyOffset_CacheEnvironmentFactor;
 
-		// Token: 0x0400FD17 RID: 64791
-		internal static int __PropertyOffset_16;
+		// Token: 0x0400FCAB RID: 64683
+		internal static int __PropertyOffset_ParameterTweenProgress;
 
-		// Token: 0x0400FD18 RID: 64792
-		internal static int __PropertyOffset_17;
+		// Token: 0x0400FCAC RID: 64684
+		internal static int __PropertyOffset_ParameterTweenSpeed;
 
-		// Token: 0x0400FD19 RID: 64793
-		internal static int __PropertyOffset_18;
+		// Token: 0x0400FCAD RID: 64685
+		internal static int __PropertyOffset_ParameterTweenTarget;
 
-		// Token: 0x0400FD1A RID: 64794
-		internal static int __PropertyOffset_19;
+		// Token: 0x0400FCAE RID: 64686
+		internal static int __PropertyOffset_NiagaraFrameDeltaTime;
 
-		// Token: 0x0400FD1B RID: 64795
-		internal static int __PropertyOffset_20;
+		// Token: 0x0400FCAF RID: 64687
+		internal static int __PropertyOffset_NiagaraFrameDeltaTimeDirty;
 
-		// Token: 0x0400FD1C RID: 64796
+		// Token: 0x0400FCB0 RID: 64688
 		private static IntPtr __SetNiagaraFrameDeltaTime_NativeFunctionPtr;
 
-		// Token: 0x0400FD1D RID: 64797
+		// Token: 0x0400FCB1 RID: 64689
 		private static IntPtr __AlmostEqual_NativeFunctionPtr;
 
-		// Token: 0x0400FD1E RID: 64798
+		// Token: 0x0400FCB2 RID: 64690
 		private static IntPtr __SetExtraState_NativeFunctionPtr;
 
-		// Token: 0x0400FD1F RID: 64799
+		// Token: 0x0400FCB3 RID: 64691
 		private static IntPtr __Refresh_Addition_Parameter_NativeFunctionPtr;
 
-		// Token: 0x0400FD20 RID: 64800
+		// Token: 0x0400FCB4 RID: 64692
 		private static IntPtr __TweenParameterSpeed_NativeFunctionPtr;
 
-		// Token: 0x0400FD21 RID: 64801
+		// Token: 0x0400FCB5 RID: 64693
 		private static IntPtr __BP_ScreenEffectPlayer_AutoGenFunc_NativeFunctionPtr;
 
-		// Token: 0x0400FD22 RID: 64802
+		// Token: 0x0400FCB6 RID: 64694
 		private static IntPtr __DelayEndAudioCall_NativeFunctionPtr;
 
-		// Token: 0x0400FD23 RID: 64803
+		// Token: 0x0400FCB7 RID: 64695
 		private static IntPtr __UpdatePlayerSEEnvironmentFactor_NativeFunctionPtr;
 
-		// Token: 0x0400FD24 RID: 64804
+		// Token: 0x0400FCB8 RID: 64696
 		private static IntPtr __Destroy_Player_NativeFunctionPtr;
 
-		// Token: 0x0400FD25 RID: 64805
+		// Token: 0x0400FCB9 RID: 64697
 		private static IntPtr __ClearPlayer_NativeFunctionPtr;
 
-		// Token: 0x0400FD26 RID: 64806
+		// Token: 0x0400FCBA RID: 64698
 		private static IntPtr __InitPlayer_NativeFunctionPtr;
 
-		// Token: 0x0400FD27 RID: 64807
+		// Token: 0x0400FCBB RID: 64699
 		private static IntPtr __BeforeStart_NativeFunctionPtr;
 
-		// Token: 0x0400FD28 RID: 64808
+		// Token: 0x0400FCBC RID: 64700
 		private static IntPtr __Set_Effect_Hidden_NativeFunctionPtr;
 
-		// Token: 0x0400FD29 RID: 64809
+		// Token: 0x0400FCBD RID: 64701
 		private static IntPtr __SetUIVisible_NativeFunctionPtr;
 
-		// Token: 0x0400FD2A RID: 64810
+		// Token: 0x0400FCBE RID: 64702
 		private static IntPtr __UpdateComponentsAlpha_NativeFunctionPtr;
 
-		// Token: 0x0400FD2B RID: 64811
+		// Token: 0x0400FCBF RID: 64703
 		private static IntPtr __UpdateComponents_NativeFunctionPtr;
 
-		// Token: 0x0400FD2C RID: 64812
+		// Token: 0x0400FCC0 RID: 64704
 		private static IntPtr __EndPlayer_NativeFunctionPtr;
 
-		// Token: 0x0400FD2D RID: 64813
+		// Token: 0x0400FCC1 RID: 64705
 		private static IntPtr __Start_Player_NativeFunctionPtr;
 
-		// Token: 0x0400FD2E RID: 64814
+		// Token: 0x0400FCC2 RID: 64706
 		private static IntPtr __TweenParameter_NativeFunctionPtr;
 
-		// Token: 0x0400FD2F RID: 64815
+		// Token: 0x0400FCC3 RID: 64707
 		private static IntPtr __TweenParameterImmediately_NativeFunctionPtr;
 
-		// Token: 0x0400FD30 RID: 64816
+		// Token: 0x0400FCC4 RID: 64708
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x0400FD31 RID: 64817
+		// Token: 0x0400FCC5 RID: 64709
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x0400FD32 RID: 64818
+		// Token: 0x0400FCC6 RID: 64710
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x0400FD33 RID: 64819
+		// Token: 0x0400FCC7 RID: 64711
 		private static IntPtr __ReceiveEndPlay_NativeFunctionPtr;
 
-		// Token: 0x02009BE6 RID: 39910
+		// Token: 0x02008DD4 RID: 36308
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __SetNiagaraFrameDeltaTime_FunctionParams
 		{
-			// Token: 0x0403127A RID: 201338
+			// Token: 0x0402C9E6 RID: 182758
 			[FieldOffset(0)]
 			public float DeltaTime;
 		}
 
-		// Token: 0x02009BE7 RID: 39911
+		// Token: 0x02008DD5 RID: 36309
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __AlmostEqual_FunctionParams
 		{
-			// Token: 0x0403127B RID: 201339
+			// Token: 0x0402C9E7 RID: 182759
 			[FieldOffset(0)]
 			public float val1;
 
-			// Token: 0x0403127C RID: 201340
+			// Token: 0x0402C9E8 RID: 182760
 			[FieldOffset(4)]
 			public float val2;
 
-			// Token: 0x0403127D RID: 201341
+			// Token: 0x0402C9E9 RID: 182761
 			[FieldOffset(8)]
 			public bool isequal;
 		}
 
-		// Token: 0x02009BE8 RID: 39912
+		// Token: 0x02008DD6 RID: 36310
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 240)]
 		protected ref struct __SetExtraState_FunctionParams
 		{
-			// Token: 0x0403127E RID: 201342
+			// Token: 0x0402C9EA RID: 182762
 			[FieldOffset(0)]
 			public int ExtraState;
 		}
 
-		// Token: 0x02009BE9 RID: 39913
+		// Token: 0x02008DD7 RID: 36311
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 896)]
 		protected ref struct __Refresh_Addition_Parameter_FunctionParams
 		{
-			// Token: 0x0403127F RID: 201343
+			// Token: 0x0402C9EB RID: 182763
 			[FieldOffset(0)]
 			public float TweenProgress;
 		}
 
-		// Token: 0x02009BEA RID: 39914
+		// Token: 0x02008DD8 RID: 36312
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 36)]
 		protected ref struct __TweenParameterSpeed_FunctionParams
 		{
-			// Token: 0x04031280 RID: 201344
+			// Token: 0x0402C9EC RID: 182764
 			[FieldOffset(0)]
 			public float TweenTarget;
 
-			// Token: 0x04031281 RID: 201345
+			// Token: 0x0402C9ED RID: 182765
 			[FieldOffset(4)]
 			public float TweenSpeed;
 
-			// Token: 0x04031282 RID: 201346
+			// Token: 0x0402C9EE RID: 182766
 			[FieldOffset(8)]
 			public float TweenDeltaSecond;
 		}
 
-		// Token: 0x02009BEB RID: 39915
+		// Token: 0x02008DD9 RID: 36313
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 120)]
 		protected ref struct __UpdatePlayerSEEnvironmentFactor_FunctionParams
 		{
-			// Token: 0x04031283 RID: 201347
+			// Token: 0x0402C9EF RID: 182767
 			[FieldOffset(0)]
 			public float EnvironmentFactor;
 		}
 
-		// Token: 0x02009BEC RID: 39916
+		// Token: 0x02008DDA RID: 36314
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InitPlayer_FunctionParams
 		{
-			// Token: 0x04031284 RID: 201348
+			// Token: 0x0402C9F0 RID: 182768
 			[FieldOffset(0)]
 			public IntPtr Data;
 
-			// Token: 0x04031285 RID: 201349
+			// Token: 0x0402C9F1 RID: 182769
 			[FieldOffset(8)]
 			public IntPtr ScreenEffectRoot;
 		}
 
-		// Token: 0x02009BED RID: 39917
+		// Token: 0x02008DDB RID: 36315
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __Set_Effect_Hidden_FunctionParams
 		{
-			// Token: 0x04031286 RID: 201350
+			// Token: 0x0402C9F2 RID: 182770
 			[FieldOffset(0)]
 			public bool bToHide;
 
-			// Token: 0x04031287 RID: 201351
+			// Token: 0x0402C9F3 RID: 182771
 			[FieldOffset(1)]
 			public bool bOverrideFadeSpeed;
 
-			// Token: 0x04031288 RID: 201352
+			// Token: 0x0402C9F4 RID: 182772
 			[FieldOffset(4)]
 			public float OverrideFadeSpeed;
 		}
 
-		// Token: 0x02009BEE RID: 39918
+		// Token: 0x02008DDC RID: 36316
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 96)]
 		protected ref struct __SetUIVisible_FunctionParams
 		{
-			// Token: 0x04031289 RID: 201353
+			// Token: 0x0402C9F5 RID: 182773
 			[FieldOffset(0)]
 			public bool Visible;
 		}
 
-		// Token: 0x02009BEF RID: 39919
+		// Token: 0x02008DDD RID: 36317
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __TweenParameter_FunctionParams
 		{
-			// Token: 0x0403128A RID: 201354
+			// Token: 0x0402C9F6 RID: 182774
 			[FieldOffset(0)]
 			public float TweenTarget;
 		}
 
-		// Token: 0x02009BF0 RID: 39920
+		// Token: 0x02008DDE RID: 36318
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __TweenParameterImmediately_FunctionParams
 		{
-			// Token: 0x0403128B RID: 201355
+			// Token: 0x0402C9F7 RID: 182775
 			[FieldOffset(0)]
 			public float TweenTarget;
 		}
 
-		// Token: 0x02009BF1 RID: 39921
+		// Token: 0x02008DDF RID: 36319
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x0403128C RID: 201356
+			// Token: 0x0402C9F8 RID: 182776
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02009BF2 RID: 39922
+		// Token: 0x02008DE0 RID: 36320
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected new ref struct __ReceiveEndPlay_FunctionParams
 		{
-			// Token: 0x0403128D RID: 201357
+			// Token: 0x0402C9F9 RID: 182777
 			[FieldOffset(0)]
 			public TEnumAsByte<EEndPlayReason> EndPlayReason;
 		}

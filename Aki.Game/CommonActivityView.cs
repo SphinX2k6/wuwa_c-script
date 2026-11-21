@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,18 +12,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001685 RID: 5765
+// Token: 0x02000B3D RID: 2877
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonActivityView : UiViewBase
 {
-	// Token: 0x0600A313 RID: 41747 RVA: 0x002405D8 File Offset: 0x0023E7D8
+	// Token: 0x060076F1 RID: 30449 RVA: 0x0024A564 File Offset: 0x00248764
 	public CommonActivityView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x17000DCA RID: 3530
-	// (get) Token: 0x0600A314 RID: 41748 RVA: 0x00240658 File Offset: 0x0023E858
+	// Token: 0x17000DEB RID: 3563
+	// (get) Token: 0x060076F2 RID: 30450 RVA: 0x0024A5E4 File Offset: 0x002487E4
 	private int CurrentSelectActivityId
 	{
 		get
@@ -34,15 +33,7 @@ public class CommonActivityView : UiViewBase
 			if (currentSelectTabId == null)
 			{
 				IActivityCategoryTabData[] tabDataList = this.TabDataList;
-				if (tabDataList == null)
-				{
-					num = null;
-				}
-				else
-				{
-					IActivityCategoryTabData activityCategoryTabData = tabDataList.FirstOrDefault<IActivityCategoryTabData>();
-					num = ((activityCategoryTabData != null) ? activityCategoryTabData.Id : null);
-				}
+				num = ((tabDataList != null && tabDataList.Length > 0) ? tabDataList[0].Id : null);
 			}
 			else
 			{
@@ -62,7 +53,7 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A315 RID: 41749 RVA: 0x002406CC File Offset: 0x0023E8CC
+	// Token: 0x060076F3 RID: 30451 RVA: 0x0024A650 File Offset: 0x00248850
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 19;
@@ -121,7 +112,7 @@ public class CommonActivityView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A316 RID: 41750 RVA: 0x002409F8 File Offset: 0x0023EBF8
+	// Token: 0x060076F4 RID: 30452 RVA: 0x0024A97C File Offset: 0x00248B7C
 	protected override void OnAddEventListener()
 	{
 		this.BindToggleRedDot();
@@ -138,7 +129,7 @@ public class CommonActivityView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnServerStorageInfoInited, new Action(this.RefreshRecommendEntryRedDot));
 	}
 
-	// Token: 0x0600A317 RID: 41751 RVA: 0x00240B40 File Offset: 0x0023ED40
+	// Token: 0x060076F5 RID: 30453 RVA: 0x0024AAC4 File Offset: 0x00248CC4
 	protected override void OnRemoveEventListener()
 	{
 		this.UnBindToggleRedDot();
@@ -155,7 +146,7 @@ public class CommonActivityView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnServerStorageInfoInited, new Action(this.RefreshRecommendEntryRedDot));
 	}
 
-	// Token: 0x0600A318 RID: 41752 RVA: 0x00240C88 File Offset: 0x0023EE88
+	// Token: 0x060076F6 RID: 30454 RVA: 0x0024AC0C File Offset: 0x00248E0C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonActivityView.<OnBeforeStartAsync>d__34 <OnBeforeStartAsync>d__;
@@ -166,7 +157,7 @@ public class CommonActivityView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A319 RID: 41753 RVA: 0x00240CCC File Offset: 0x0023EECC
+	// Token: 0x060076F7 RID: 30455 RVA: 0x0024AC50 File Offset: 0x00248E50
 	private void InitTabDataList()
 	{
 		List<IActivityCategoryTabData> list = new List<IActivityCategoryTabData>();
@@ -212,7 +203,7 @@ public class CommonActivityView : UiViewBase
 		categoryScrollView.RefreshByData(this.TabDataList, false, false);
 	}
 
-	// Token: 0x0600A31A RID: 41754 RVA: 0x00240E08 File Offset: 0x0023F008
+	// Token: 0x060076F8 RID: 30456 RVA: 0x0024AD8C File Offset: 0x00248F8C
 	[NullableContext(2)]
 	private List<int> GetSortTabList()
 	{
@@ -235,11 +226,15 @@ public class CommonActivityView : UiViewBase
 			"Id",
 			"SortId"
 		})] ValueTuple<int, int> b) => a.Item2.CompareTo(b.Item2));
-		return (from item in list
-		select item.Item1).ToList<int>();
+		List<int> list2 = new List<int>(list.Count);
+		for (int i = 0; i < list.Count; i++)
+		{
+			list2.Add(list[i].Item1);
+		}
+		return list2;
 	}
 
-	// Token: 0x0600A31B RID: 41755 RVA: 0x00240EC8 File Offset: 0x0023F0C8
+	// Token: 0x060076F9 RID: 30457 RVA: 0x0024AE58 File Offset: 0x00249058
 	private ActivitySwitchToggle OnCreateCategoryItemView(IActivityCategoryTabData data, UUIItem uiItem, int index)
 	{
 		ActivitySwitchToggle activitySwitchToggle = new ActivitySwitchToggle();
@@ -248,14 +243,14 @@ public class CommonActivityView : UiViewBase
 		return activitySwitchToggle;
 	}
 
-	// Token: 0x0600A31C RID: 41756 RVA: 0x00240EE8 File Offset: 0x0023F0E8
+	// Token: 0x060076FA RID: 30458 RVA: 0x0024AE78 File Offset: 0x00249078
 	private void CreateLeftScrollView()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(1);
 		this.SubViewTabLayout = new GenericScrollViewNew<ActivityPageSelectContent, ActivityBaseData>(scrollViewWithScrollbar, new Func<ActivityPageSelectContent>(this.InitTabItem), null, false, null);
 	}
 
-	// Token: 0x0600A31D RID: 41757 RVA: 0x00240F18 File Offset: 0x0023F118
+	// Token: 0x060076FB RID: 30459 RVA: 0x0024AEA8 File Offset: 0x002490A8
 	private UniTask CreateViewSubComponents()
 	{
 		CommonActivityView.<CreateViewSubComponents>d__39 <CreateViewSubComponents>d__;
@@ -266,7 +261,7 @@ public class CommonActivityView : UiViewBase
 		return <CreateViewSubComponents>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A31E RID: 41758 RVA: 0x00240F5C File Offset: 0x0023F15C
+	// Token: 0x060076FC RID: 30460 RVA: 0x0024AEEC File Offset: 0x002490EC
 	protected override void OnStart()
 	{
 		EActivityViewOpenType openType = EActivityViewOpenType.Other;
@@ -284,7 +279,7 @@ public class CommonActivityView : UiViewBase
 			}
 		}
 		ActivityModel.Instance.SendActivityViewOpenLogData(openType);
-		this.ViewSaveStateSequence = ActivityViewStateSequence.Value[EActivityViewState.Side].ToList<string>();
+		this.ViewSaveStateSequence = new List<string>(ActivityViewStateSequence.Value[EActivityViewState.Side]);
 		PopupCaptionItem captionItem = this.CaptionItem;
 		if (captionItem != null)
 		{
@@ -294,7 +289,7 @@ public class CommonActivityView : UiViewBase
 		this.InitTabDataList();
 	}
 
-	// Token: 0x0600A31F RID: 41759 RVA: 0x00240FE8 File Offset: 0x0023F1E8
+	// Token: 0x060076FD RID: 30461 RVA: 0x0024AF78 File Offset: 0x00249178
 	protected override void OnBeforeShow()
 	{
 		if (this.CurrentSelectTabId == null)
@@ -334,15 +329,7 @@ public class CommonActivityView : UiViewBase
 			if (num3 == null)
 			{
 				IActivityCategoryTabData[] tabDataList2 = this.TabDataList;
-				if (tabDataList2 == null)
-				{
-					num4 = null;
-				}
-				else
-				{
-					IActivityCategoryTabData activityCategoryTabData2 = tabDataList2.FirstOrDefault<IActivityCategoryTabData>();
-					num4 = ((activityCategoryTabData2 != null) ? activityCategoryTabData2.Id : null);
-				}
+				num4 = ((tabDataList2 != null && tabDataList2.Length > 0) ? tabDataList2[0].Id : null);
 			}
 			else
 			{
@@ -402,7 +389,7 @@ public class CommonActivityView : UiViewBase
 		this.IsViewFirstShow = false;
 	}
 
-	// Token: 0x0600A320 RID: 41760 RVA: 0x0024129C File Offset: 0x0023F49C
+	// Token: 0x060076FE RID: 30462 RVA: 0x0024B224 File Offset: 0x00249424
 	protected override UniTask OnBeforeHideAsync()
 	{
 		CommonActivityView.<OnBeforeHideAsync>d__42 <OnBeforeHideAsync>d__;
@@ -413,7 +400,7 @@ public class CommonActivityView : UiViewBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A321 RID: 41761 RVA: 0x002412E0 File Offset: 0x0023F4E0
+	// Token: 0x060076FF RID: 30463 RVA: 0x0024B268 File Offset: 0x00249468
 	protected override void OnBeforeDestroy()
 	{
 		ActivityController.Instance.DisableRefreshTimer();
@@ -434,7 +421,7 @@ public class CommonActivityView : UiViewBase
 		this.CaptionDecorationTagCache.Clear();
 	}
 
-	// Token: 0x0600A322 RID: 41762 RVA: 0x00241378 File Offset: 0x0023F578
+	// Token: 0x06007700 RID: 30464 RVA: 0x0024B300 File Offset: 0x00249500
 	protected override void OnAfterDestroy()
 	{
 		ActivitySubViewBase currentShowingActivitySubView = this.CurrentShowingActivitySubView;
@@ -449,13 +436,13 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A323 RID: 41763 RVA: 0x002413AB File Offset: 0x0023F5AB
+	// Token: 0x06007701 RID: 30465 RVA: 0x0024B333 File Offset: 0x00249533
 	private ActivitySubViewBase CreateActivitySubView(ActivityBaseData activityData)
 	{
 		return ActivityManager.GetActivityController(activityData.Type).CreateSubPageComponent(activityData);
 	}
 
-	// Token: 0x0600A324 RID: 41764 RVA: 0x002413BE File Offset: 0x0023F5BE
+	// Token: 0x06007702 RID: 30466 RVA: 0x0024B346 File Offset: 0x00249546
 	private void OnEvictActivitySubView(ActivitySubViewBase uiItem)
 	{
 		if (uiItem.IsShowOrShowing)
@@ -465,7 +452,7 @@ public class CommonActivityView : UiViewBase
 		uiItem.Destroy(null);
 	}
 
-	// Token: 0x0600A325 RID: 41765 RVA: 0x002413D6 File Offset: 0x0023F5D6
+	// Token: 0x06007703 RID: 30467 RVA: 0x0024B35E File Offset: 0x0024955E
 	private void OnClickTopRedDot()
 	{
 		if (this.ItemRedDot.Item1 != null)
@@ -479,7 +466,7 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A326 RID: 41766 RVA: 0x00241401 File Offset: 0x0023F601
+	// Token: 0x06007704 RID: 30468 RVA: 0x0024B389 File Offset: 0x00249589
 	private void OnClickBottomRedDot()
 	{
 		if (this.ItemRedDot.Item2 != null)
@@ -493,13 +480,13 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A327 RID: 41767 RVA: 0x0024142C File Offset: 0x0023F62C
+	// Token: 0x06007705 RID: 30469 RVA: 0x0024B3B4 File Offset: 0x002495B4
 	private void OnClickBack()
 	{
 		this.UpdateListShowState(true, EActivityViewState.Side, null);
 	}
 
-	// Token: 0x0600A328 RID: 41768 RVA: 0x0024144A File Offset: 0x0023F64A
+	// Token: 0x06007706 RID: 30470 RVA: 0x0024B3D2 File Offset: 0x002495D2
 	private void OnClickActivityRecommend()
 	{
 		ActivityNewPlayerSupportActivityV2Controller.ReportEntranceClick(ENewPlayerSupportEntrance.ActivityRecommend);
@@ -512,7 +499,7 @@ public class CommonActivityView : UiViewBase
 		ActivityRecommendController.Instance.OpenView();
 	}
 
-	// Token: 0x0600A329 RID: 41769 RVA: 0x00241478 File Offset: 0x0023F678
+	// Token: 0x06007707 RID: 30471 RVA: 0x0024B400 File Offset: 0x00249600
 	private void RefreshRecommendEntryRedDot()
 	{
 		bool redDotVisible = ActivityRecommendModel.Instance.IsEntryFirstClickRedDotShow();
@@ -524,19 +511,19 @@ public class CommonActivityView : UiViewBase
 		recommendBtnItem.SetRedDotVisible(redDotVisible);
 	}
 
-	// Token: 0x0600A32A RID: 41770 RVA: 0x002414A1 File Offset: 0x0023F6A1
+	// Token: 0x06007708 RID: 30472 RVA: 0x0024B429 File Offset: 0x00249629
 	private void OpenHelpView()
 	{
 		HelpController.Instance.OpenHelpById(this.HelpId);
 	}
 
-	// Token: 0x0600A32B RID: 41771 RVA: 0x002414B3 File Offset: 0x0023F6B3
+	// Token: 0x06007709 RID: 30473 RVA: 0x0024B43B File Offset: 0x0024963B
 	private void CloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600A32C RID: 41772 RVA: 0x002414BC File Offset: 0x0023F6BC
+	// Token: 0x0600770A RID: 30474 RVA: 0x0024B444 File Offset: 0x00249644
 	private void ToggleActivityTypeClick(IActivityCategoryTabData data, UUIExtendToggle toggle, EToggleState state)
 	{
 		int? id = data.Id;
@@ -576,7 +563,7 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A32D RID: 41773 RVA: 0x0024156C File Offset: 0x0023F76C
+	// Token: 0x0600770B RID: 30475 RVA: 0x0024B4F4 File Offset: 0x002496F4
 	private void SetActivityTabId(int tabId, bool manual = true)
 	{
 		this.CurrentSelectTabId = new int?(tabId);
@@ -636,16 +623,22 @@ public class CommonActivityView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600A32E RID: 41774 RVA: 0x00241640 File Offset: 0x0023F840
+	// Token: 0x0600770C RID: 30476 RVA: 0x0024B5C8 File Offset: 0x002497C8
 	private void SelectTabType(int tabId, bool bFireEvent)
 	{
-		IActivityCategoryTabData[] tabDataList = this.TabDataList;
-		int? num = (tabDataList != null) ? new int?(tabDataList.ToList<IActivityCategoryTabData>().FindIndex(delegate(IActivityCategoryTabData x)
+		int? num = null;
+		if (this.TabDataList != null)
 		{
-			int? id = x.Id;
-			int tabId2 = tabId;
-			return id.GetValueOrDefault() == tabId2 & id != null;
-		})) : null;
+			for (int i = 0; i < this.TabDataList.Length; i++)
+			{
+				int? id = this.TabDataList[i].Id;
+				if (id.GetValueOrDefault() == tabId & id != null)
+				{
+					num = new int?(i);
+					break;
+				}
+			}
+		}
 		if (num == null || num.GetValueOrDefault() == -1)
 		{
 			return;
@@ -659,7 +652,7 @@ public class CommonActivityView : UiViewBase
 		activitySwitchToggle.OnSelected(bFireEvent);
 	}
 
-	// Token: 0x0600A32F RID: 41775 RVA: 0x002416C4 File Offset: 0x0023F8C4
+	// Token: 0x0600770D RID: 30477 RVA: 0x0024B661 File Offset: 0x00249861
 	private ActivityPageSelectContent InitTabItem()
 	{
 		ActivityPageSelectContent activityPageSelectContent = new ActivityPageSelectContent();
@@ -668,13 +661,13 @@ public class CommonActivityView : UiViewBase
 		return activityPageSelectContent;
 	}
 
-	// Token: 0x0600A330 RID: 41776 RVA: 0x002416EF File Offset: 0x0023F8EF
+	// Token: 0x0600770E RID: 30478 RVA: 0x0024B68C File Offset: 0x0024988C
 	private bool CanToggleExecuteChange(int id, bool toggleState)
 	{
 		return true;
 	}
 
-	// Token: 0x0600A331 RID: 41777 RVA: 0x002416F2 File Offset: 0x0023F8F2
+	// Token: 0x0600770F RID: 30479 RVA: 0x0024B68F File Offset: 0x0024988F
 	private void ToggleClick(ActivityBaseData data, bool toggleState)
 	{
 		if (toggleState)
@@ -683,7 +676,7 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A332 RID: 41778 RVA: 0x00241700 File Offset: 0x0023F900
+	// Token: 0x06007710 RID: 30480 RVA: 0x0024B6A0 File Offset: 0x002498A0
 	private UniTask SelectOnActivity(ActivityBaseData data, bool playSwitchAnim)
 	{
 		CommonActivityView.<SelectOnActivity>d__60 <SelectOnActivity>d__;
@@ -696,17 +689,17 @@ public class CommonActivityView : UiViewBase
 		return <SelectOnActivity>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A333 RID: 41779 RVA: 0x00241753 File Offset: 0x0023F953
+	// Token: 0x06007711 RID: 30481 RVA: 0x0024B6F3 File Offset: 0x002498F3
 	private void BindToggleRedDot()
 	{
 	}
 
-	// Token: 0x0600A334 RID: 41780 RVA: 0x00241755 File Offset: 0x0023F955
+	// Token: 0x06007712 RID: 30482 RVA: 0x0024B6F5 File Offset: 0x002498F5
 	private void UnBindToggleRedDot()
 	{
 	}
 
-	// Token: 0x0600A335 RID: 41781 RVA: 0x00241757 File Offset: 0x0023F957
+	// Token: 0x06007713 RID: 30483 RVA: 0x0024B6F7 File Offset: 0x002498F7
 	private void OnActivityRedDotUpdate(int activityId)
 	{
 		this.RefreshRedDot(new int?(activityId));
@@ -714,7 +707,7 @@ public class CommonActivityView : UiViewBase
 		this.RefreshBubbleAndCheckTimer(activityId);
 	}
 
-	// Token: 0x0600A336 RID: 41782 RVA: 0x00241774 File Offset: 0x0023F974
+	// Token: 0x06007714 RID: 30484 RVA: 0x0024B714 File Offset: 0x00249914
 	public void BindRedDotIds(int[] redDotIds)
 	{
 		foreach (int value in redDotIds)
@@ -723,7 +716,7 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A337 RID: 41783 RVA: 0x002417A4 File Offset: 0x0023F9A4
+	// Token: 0x06007715 RID: 30485 RVA: 0x0024B744 File Offset: 0x00249944
 	private void RefreshRedDot(int? activityId = null)
 	{
 		if (activityId != null)
@@ -739,7 +732,7 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A338 RID: 41784 RVA: 0x00241844 File Offset: 0x0023FA44
+	// Token: 0x06007716 RID: 30486 RVA: 0x0024B7E4 File Offset: 0x002499E4
 	private void RefreshIndexRedDot()
 	{
 		if (this.IsInRefreshTabItem || this.IsHideTabSidebar)
@@ -768,7 +761,7 @@ public class CommonActivityView : UiViewBase
 		this.ItemRedDot = new ValueTuple<UUIItem, UUIItem>(item, (subViewTabLayout2 != null) ? subViewTabLayout2.GetItemByIndex(list[list.Count - 1]) : null);
 	}
 
-	// Token: 0x0600A339 RID: 41785 RVA: 0x00241914 File Offset: 0x0023FB14
+	// Token: 0x06007717 RID: 30487 RVA: 0x0024B8B4 File Offset: 0x00249AB4
 	private void RefreshBubbleAndCheckTimer(int activityId)
 	{
 		GenericScrollViewNew<ActivityPageSelectContent, ActivityBaseData> subViewTabLayout = this.SubViewTabLayout;
@@ -790,7 +783,7 @@ public class CommonActivityView : UiViewBase
 		activityPageSelectContent2.RefreshBubbleAndCheckTimer();
 	}
 
-	// Token: 0x0600A33A RID: 41786 RVA: 0x00241950 File Offset: 0x0023FB50
+	// Token: 0x06007718 RID: 30488 RVA: 0x0024B8F0 File Offset: 0x00249AF0
 	private void RefreshAllBubbleAndCheckTimer()
 	{
 		GenericScrollViewNew<ActivityPageSelectContent, ActivityBaseData> subViewTabLayout = this.SubViewTabLayout;
@@ -815,7 +808,7 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A33B RID: 41787 RVA: 0x002419C0 File Offset: 0x0023FBC0
+	// Token: 0x06007719 RID: 30489 RVA: 0x0024B960 File Offset: 0x00249B60
 	private void OnScrollUpdateRedDot(FVector2D _)
 	{
 		ValueTuple<UUIItem, UUIItem> itemRedDot = this.ItemRedDot;
@@ -840,7 +833,7 @@ public class CommonActivityView : UiViewBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600A33C RID: 41788 RVA: 0x00241A68 File Offset: 0x0023FC68
+	// Token: 0x0600771A RID: 30490 RVA: 0x0024BA08 File Offset: 0x00249C08
 	private void OnSetActivityViewCurrency(IReadOnlyList<int> itemConfigList)
 	{
 		if (itemConfigList.Count <= 0)
@@ -852,15 +845,20 @@ public class CommonActivityView : UiViewBase
 		{
 			captionItem.SetCurrencyItemVisible(true);
 		}
+		int[] array = new int[itemConfigList.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = itemConfigList[i];
+		}
 		PopupCaptionItem captionItem2 = this.CaptionItem;
 		if (captionItem2 == null)
 		{
 			return;
 		}
-		captionItem2.SetCurrencyItemList(itemConfigList.ToArray<int>()).Forget();
+		captionItem2.SetCurrencyItemList(array).Forget();
 	}
 
-	// Token: 0x0600A33D RID: 41789 RVA: 0x00241AA1 File Offset: 0x0023FCA1
+	// Token: 0x0600771B RID: 30491 RVA: 0x0024BA6B File Offset: 0x00249C6B
 	public UUIItem GetCaptionItemToggleRootItem()
 	{
 		PopupCaptionItem captionItem = this.CaptionItem;
@@ -871,7 +869,7 @@ public class CommonActivityView : UiViewBase
 		return captionItem.GetToggleRootItem();
 	}
 
-	// Token: 0x0600A33E RID: 41790 RVA: 0x00241AB4 File Offset: 0x0023FCB4
+	// Token: 0x0600771C RID: 30492 RVA: 0x0024BA7E File Offset: 0x00249C7E
 	[NullableContext(2)]
 	public UUIItem GetCaptionItemTitleIconRootItem()
 	{
@@ -883,7 +881,7 @@ public class CommonActivityView : UiViewBase
 		return captionItem.GetTitleIconRootItem();
 	}
 
-	// Token: 0x0600A33F RID: 41791 RVA: 0x00241AC7 File Offset: 0x0023FCC7
+	// Token: 0x0600771D RID: 30493 RVA: 0x0024BA91 File Offset: 0x00249C91
 	private void OnChangeActivityViewNeedBlurState(bool state)
 	{
 		UiBehaviourUiBlur uiBlurBehaviour = this.UiBlurBehaviour;
@@ -894,7 +892,7 @@ public class CommonActivityView : UiViewBase
 		uiBlurBehaviour.ChangeNeedBlurState(state);
 	}
 
-	// Token: 0x0600A340 RID: 41792 RVA: 0x00241ADC File Offset: 0x0023FCDC
+	// Token: 0x0600771E RID: 30494 RVA: 0x0024BAA4 File Offset: 0x00249CA4
 	private UniTask RefreshTabPageItem(int tabId, bool playSwitchAnim)
 	{
 		CommonActivityView.<RefreshTabPageItem>d__74 <RefreshTabPageItem>d__;
@@ -907,7 +905,7 @@ public class CommonActivityView : UiViewBase
 		return <RefreshTabPageItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A341 RID: 41793 RVA: 0x00241B30 File Offset: 0x0023FD30
+	// Token: 0x0600771F RID: 30495 RVA: 0x0024BAF8 File Offset: 0x00249CF8
 	private void ActivityViewChange(int activityId)
 	{
 		if (activityId <= 0)
@@ -943,7 +941,7 @@ public class CommonActivityView : UiViewBase
 		this.RefreshTabPageItem(this.CurrentSelectTabId.Value, true);
 	}
 
-	// Token: 0x0600A342 RID: 41794 RVA: 0x00241BFA File Offset: 0x0023FDFA
+	// Token: 0x06007720 RID: 30496 RVA: 0x0024BBC2 File Offset: 0x00249DC2
 	private void OnActivityViewRefresh(int activityId)
 	{
 		if (this.CurrentSelectActivityId != activityId)
@@ -958,7 +956,7 @@ public class CommonActivityView : UiViewBase
 		currentShowingActivitySubView.RefreshView();
 	}
 
-	// Token: 0x0600A343 RID: 41795 RVA: 0x00241C18 File Offset: 0x0023FE18
+	// Token: 0x06007721 RID: 30497 RVA: 0x0024BBE0 File Offset: 0x00249DE0
 	private UniTask RefreshActivityContent(bool playSwitchAnim)
 	{
 		CommonActivityView.<RefreshActivityContent>d__77 <RefreshActivityContent>d__;
@@ -970,7 +968,7 @@ public class CommonActivityView : UiViewBase
 		return <RefreshActivityContent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A344 RID: 41796 RVA: 0x00241C64 File Offset: 0x0023FE64
+	// Token: 0x06007722 RID: 30498 RVA: 0x0024BC2C File Offset: 0x00249E2C
 	private void RefreshMainView(ActivityBaseData activityData)
 	{
 		this.HelpId = activityData.GetHelpId();
@@ -995,7 +993,7 @@ public class CommonActivityView : UiViewBase
 		this.RefreshTabIcon();
 	}
 
-	// Token: 0x0600A345 RID: 41797 RVA: 0x00241D10 File Offset: 0x0023FF10
+	// Token: 0x06007723 RID: 30499 RVA: 0x0024BCD8 File Offset: 0x00249ED8
 	private UniTask RefreshCaptionDecorationTag(int activityId)
 	{
 		CommonActivityView.<RefreshCaptionDecorationTag>d__79 <RefreshCaptionDecorationTag>d__;
@@ -1007,7 +1005,7 @@ public class CommonActivityView : UiViewBase
 		return <RefreshCaptionDecorationTag>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A346 RID: 41798 RVA: 0x00241D5C File Offset: 0x0023FF5C
+	// Token: 0x06007724 RID: 30500 RVA: 0x0024BD24 File Offset: 0x00249F24
 	private UniTask RefreshBg(ActivityBaseData activityData)
 	{
 		CommonActivityView.<RefreshBg>d__80 <RefreshBg>d__;
@@ -1019,7 +1017,7 @@ public class CommonActivityView : UiViewBase
 		return <RefreshBg>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A347 RID: 41799 RVA: 0x00241DA8 File Offset: 0x0023FFA8
+	// Token: 0x06007725 RID: 30501 RVA: 0x0024BD70 File Offset: 0x00249F70
 	private UniTask RefreshSubView(ActivityBaseData activityData, bool playSwitchAnim)
 	{
 		CommonActivityView.<RefreshSubView>d__81 <RefreshSubView>d__;
@@ -1032,7 +1030,7 @@ public class CommonActivityView : UiViewBase
 		return <RefreshSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A348 RID: 41800 RVA: 0x00241DFC File Offset: 0x0023FFFC
+	// Token: 0x06007726 RID: 30502 RVA: 0x0024BDC4 File Offset: 0x00249FC4
 	public void OnActivityUpdate(IReadOnlySet<int> _ = null)
 	{
 		Action value = delegate()
@@ -1045,7 +1043,7 @@ public class CommonActivityView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600A349 RID: 41801 RVA: 0x00241E57 File Offset: 0x00240057
+	// Token: 0x06007727 RID: 30503 RVA: 0x0024BE1F File Offset: 0x0024A01F
 	private void OnPlaySequenceEventByStringParam(string name)
 	{
 		ActivitySubViewBase currentShowingActivitySubView = this.CurrentShowingActivitySubView;
@@ -1056,10 +1054,10 @@ public class CommonActivityView : UiViewBase
 		currentShowingActivitySubView.PlaySubViewSequence(name, false);
 	}
 
-	// Token: 0x0600A34A RID: 41802 RVA: 0x00241E6C File Offset: 0x0024006C
+	// Token: 0x06007728 RID: 30504 RVA: 0x0024BE34 File Offset: 0x0024A034
 	private void UpdateListShowState(bool show, EActivityViewState state = EActivityViewState.Side, bool? blockClick = null)
 	{
-		this.ViewSaveStateSequence = ActivityViewStateSequence.Value[state].ToList<string>();
+		this.ViewSaveStateSequence = new List<string>(ActivityViewStateSequence.Value[state]);
 		if (show != this.ListShowInternal)
 		{
 			this.ListShowInternal = show;
@@ -1073,7 +1071,7 @@ public class CommonActivityView : UiViewBase
 		this.RefreshTabIcon();
 	}
 
-	// Token: 0x0600A34B RID: 41803 RVA: 0x00241EF0 File Offset: 0x002400F0
+	// Token: 0x06007729 RID: 30505 RVA: 0x0024BEB8 File Offset: 0x0024A0B8
 	public void RefreshTabIcon()
 	{
 		Activity? localConfig = ActivityModel.Instance.GetActivityById(this.CurrentSelectActivityId).LocalConfig;
@@ -1089,7 +1087,7 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A34C RID: 41804 RVA: 0x00241F58 File Offset: 0x00240158
+	// Token: 0x0600772A RID: 30506 RVA: 0x0024BF20 File Offset: 0x0024A120
 	private void SetDebugText()
 	{
 		UUIText text = base.GetText(10);
@@ -1101,7 +1099,7 @@ public class CommonActivityView : UiViewBase
 		text.SetUIActive(true);
 	}
 
-	// Token: 0x0600A34D RID: 41805 RVA: 0x00241F84 File Offset: 0x00240184
+	// Token: 0x0600772B RID: 30507 RVA: 0x0024BF4C File Offset: 0x0024A14C
 	private void RefreshDebugText(int activityId, ActivityType activityType)
 	{
 		UUIText text = base.GetText(10);
@@ -1115,7 +1113,7 @@ public class CommonActivityView : UiViewBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600A34E RID: 41806 RVA: 0x00241FEC File Offset: 0x002401EC
+	// Token: 0x0600772C RID: 30508 RVA: 0x0024BFB4 File Offset: 0x0024A1B4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1181,27 +1179,45 @@ public class CommonActivityView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A34F RID: 41807 RVA: 0x0024210D File Offset: 0x0024030D
+	// Token: 0x0600772D RID: 30509 RVA: 0x0024C0D5 File Offset: 0x0024A2D5
 	public bool IsPermanentTab(int tabId)
 	{
 		return tabId == 999;
 	}
 
-	// Token: 0x0600A350 RID: 41808 RVA: 0x00242118 File Offset: 0x00240318
+	// Token: 0x0600772E RID: 30510 RVA: 0x0024C0E0 File Offset: 0x0024A2E0
 	public List<ActivityBaseData> FilterActivitiesByTabId(List<ActivityBaseData> activities, int tabId)
 	{
-		bool isPermanentTab = this.IsPermanentTab(tabId);
-		return activities.Where(delegate(ActivityBaseData act)
+		bool flag = this.IsPermanentTab(tabId);
+		List<ActivityBaseData> list = new List<ActivityBaseData>(activities.Count);
+		foreach (ActivityBaseData activityBaseData in activities)
 		{
-			if (isPermanentTab)
+			bool flag2;
+			if (!flag)
 			{
-				return act.TimeType == EActivityTimeType.Permanent;
+				if (activityBaseData.TimeType == EActivityTimeType.TimeLimit)
+				{
+					ActivityBaseData activityBaseData2 = activityBaseData;
+					flag2 = (activityBaseData2.LocalConfig != null && activityBaseData2.LocalConfig.GetValueOrDefault().FilterTabType == tabId);
+				}
+				else
+				{
+					flag2 = false;
+				}
 			}
-			return act.TimeType == EActivityTimeType.TimeLimit && act.LocalConfig != null && act.LocalConfig.GetValueOrDefault().FilterTabType == tabId;
-		}).ToList<ActivityBaseData>();
+			else
+			{
+				flag2 = (activityBaseData.TimeType == EActivityTimeType.Permanent);
+			}
+			if (flag2)
+			{
+				list.Add(activityBaseData);
+			}
+		}
+		return list;
 	}
 
-	// Token: 0x0600A351 RID: 41809 RVA: 0x0024215C File Offset: 0x0024035C
+	// Token: 0x0600772F RID: 30511 RVA: 0x0024C184 File Offset: 0x0024A384
 	private void OnFilterDropDownSelect(int index, ActivityPermanentFilter data)
 	{
 		this.CurrentPermanentFilterId = data.Id;
@@ -1213,7 +1229,7 @@ public class CommonActivityView : UiViewBase
 		ActivityModel.Instance.SetActivityPermanentFilterId(this.CurrentPermanentFilterId);
 	}
 
-	// Token: 0x0600A352 RID: 41810 RVA: 0x002421AC File Offset: 0x002403AC
+	// Token: 0x06007730 RID: 30512 RVA: 0x0024C1D4 File Offset: 0x0024A3D4
 	private void InitPermanentFilter()
 	{
 		IReadOnlyList<ActivityPermanentFilter> allActivityPermanentFilter = ActivityConfig.Instance.GetAllActivityPermanentFilter();
@@ -1221,33 +1237,44 @@ public class CommonActivityView : UiViewBase
 		{
 			return;
 		}
-		IActivityCategoryTabData[] tabDataList = this.TabDataList;
-		IActivityCategoryTabData activityCategoryTabData;
-		if (tabDataList == null)
+		IActivityCategoryTabData activityCategoryTabData = null;
+		if (this.TabDataList != null)
 		{
-			activityCategoryTabData = null;
+			for (int i = 0; i < this.TabDataList.Length; i++)
+			{
+				if (this.TabDataList[i].Id.GetValueOrDefault() == 999)
+				{
+					activityCategoryTabData = this.TabDataList[i];
+					break;
+				}
+			}
 		}
-		else
-		{
-			activityCategoryTabData = tabDataList.FirstOrDefault((IActivityCategoryTabData x) => x.Id.GetValueOrDefault() == 999);
-		}
-		IActivityCategoryTabData activityCategoryTabData2 = activityCategoryTabData;
 		List<ActivityPermanentFilter> list = new List<ActivityPermanentFilter>();
-		list.Add(allActivityPermanentFilter.First((ActivityPermanentFilter cfg) => cfg.Id == 999));
-		if (activityCategoryTabData2 != null)
+		int num = -1;
+		for (int j = 0; j < allActivityPermanentFilter.Count; j++)
 		{
-			List<ActivityBaseData> activities = activityCategoryTabData2.Activities;
-			IEnumerable<int> enumerable;
-			if (activities == null)
+			if (allActivityPermanentFilter[j].Id == 999)
 			{
-				enumerable = null;
+				num = j;
+				break;
 			}
-			else
+		}
+		if (num < 0)
+		{
+			throw new InvalidOperationException("Sequence contains no matching element");
+		}
+		list.Add(allActivityPermanentFilter[num]);
+		if (activityCategoryTabData != null)
+		{
+			HashSet<int> hashSet = new HashSet<int>();
+			List<ActivityBaseData> activities = activityCategoryTabData.Activities;
+			if (activities != null)
 			{
-				enumerable = from act in activities
-				select act.LocalConfig.Value.PermanentFilterType;
+				foreach (ActivityBaseData activityBaseData in activities)
+				{
+					hashSet.Add(activityBaseData.LocalConfig.Value.PermanentFilterType);
+				}
 			}
-			HashSet<int> hashSet = new HashSet<int>(enumerable ?? Enumerable.Empty<int>());
 			foreach (ActivityPermanentFilter item in allActivityPermanentFilter)
 			{
 				if (item.Id != 999 && hashSet.Contains(item.Id))
@@ -1256,40 +1283,40 @@ public class CommonActivityView : UiViewBase
 				}
 			}
 		}
-		int num = list.FindIndex((ActivityPermanentFilter x) => x.Id == this.CurrentPermanentFilterId);
-		if (num == -1)
+		int num2 = list.FindIndex((ActivityPermanentFilter x) => x.Id == this.CurrentPermanentFilterId);
+		if (num2 == -1)
 		{
-			num = 0;
+			num2 = 0;
 		}
 		this.FilterDropDown.InitScroll(list, delegate(ActivityPermanentFilter tabCfg)
 		{
 			ActivityPermanentFilter activityPermanentFilter = tabCfg;
 			return new TableTextArgNew(activityPermanentFilter.FilterName, Array.Empty<object>());
-		}, num, true);
+		}, num2, true);
 	}
 
-	// Token: 0x04004A20 RID: 18976
+	// Token: 0x04004AC7 RID: 19143
 	private bool IsViewFirstShow = true;
 
-	// Token: 0x04004A21 RID: 18977
+	// Token: 0x04004AC8 RID: 19144
 	private bool ListShowInternal = true;
 
-	// Token: 0x04004A22 RID: 18978
+	// Token: 0x04004AC9 RID: 19145
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04004A23 RID: 18979
+	// Token: 0x04004ACA RID: 19146
 	private int HelpId;
 
-	// Token: 0x04004A24 RID: 18980
+	// Token: 0x04004ACB RID: 19147
 	[Nullable(2)]
 	private object SubViewOpenParam;
 
-	// Token: 0x04004A25 RID: 18981
+	// Token: 0x04004ACC RID: 19148
 	[Nullable(2)]
 	private ActivityTipsButton TipsButton;
 
-	// Token: 0x04004A26 RID: 18982
+	// Token: 0x04004ACD RID: 19149
 	[Nullable(new byte[]
 	{
 		2,
@@ -1298,13 +1325,13 @@ public class CommonActivityView : UiViewBase
 	})]
 	private GenericScrollViewNew<ActivityPageSelectContent, ActivityBaseData> SubViewTabLayout;
 
-	// Token: 0x04004A27 RID: 18983
+	// Token: 0x04004ACE RID: 19150
 	private int? CurrentSelectTabId;
 
-	// Token: 0x04004A28 RID: 18984
+	// Token: 0x04004ACF RID: 19151
 	private readonly Dictionary<EActivityTimeType, int> SelectActivityIdMap = new Dictionary<EActivityTimeType, int>();
 
-	// Token: 0x04004A29 RID: 18985
+	// Token: 0x04004AD0 RID: 19152
 	[Nullable(new byte[]
 	{
 		2,
@@ -1314,11 +1341,11 @@ public class CommonActivityView : UiViewBase
 	})]
 	private DynamicScrollView<ActivitySwitchToggle, ActivitySwitchToggleDynamicItem, IActivityCategoryTabData> CategoryScrollView;
 
-	// Token: 0x04004A2A RID: 18986
+	// Token: 0x04004AD1 RID: 19153
 	[Nullable(2)]
 	private UUIExtendToggle CurrentCategoryToggle;
 
-	// Token: 0x04004A2B RID: 18987
+	// Token: 0x04004AD2 RID: 19154
 	[Nullable(new byte[]
 	{
 		2,
@@ -1326,7 +1353,7 @@ public class CommonActivityView : UiViewBase
 	})]
 	private IActivityCategoryTabData[] TabDataList;
 
-	// Token: 0x04004A2C RID: 18988
+	// Token: 0x04004AD3 RID: 19155
 	[Nullable(new byte[]
 	{
 		2,
@@ -1334,26 +1361,26 @@ public class CommonActivityView : UiViewBase
 	})]
 	private CommonDropDown<TableTextArgNew, ActivityPermanentFilter> FilterDropDown;
 
-	// Token: 0x04004A2D RID: 18989
+	// Token: 0x04004AD4 RID: 19156
 	private int CurrentPermanentFilterId = 999;
 
-	// Token: 0x04004A2E RID: 18990
+	// Token: 0x04004AD5 RID: 19157
 	private bool IsInRefreshTabItem;
 
-	// Token: 0x04004A2F RID: 18991
+	// Token: 0x04004AD6 RID: 19158
 	private bool IsHideTabSidebar;
 
-	// Token: 0x04004A30 RID: 18992
+	// Token: 0x04004AD7 RID: 19159
 	private ECaptionDecorationFunc CurrentCaptionDecorationFunc;
 
-	// Token: 0x04004A31 RID: 18993
+	// Token: 0x04004AD8 RID: 19160
 	private readonly Dictionary<ECaptionDecorationFunc, ActivityCaptionDecorationTagBase> CaptionDecorationTagCache = new Dictionary<ECaptionDecorationFunc, ActivityCaptionDecorationTagBase>();
 
-	// Token: 0x04004A32 RID: 18994
+	// Token: 0x04004AD9 RID: 19161
 	[Nullable(2)]
 	private ActivitySubViewBase CurrentShowingActivitySubView;
 
-	// Token: 0x04004A33 RID: 18995
+	// Token: 0x04004ADA RID: 19162
 	[Nullable(new byte[]
 	{
 		2,
@@ -1362,20 +1389,20 @@ public class CommonActivityView : UiViewBase
 	})]
 	private Lru<ActivityBaseData, ActivitySubViewBase> ActivitySubViewCache;
 
-	// Token: 0x04004A34 RID: 18996
+	// Token: 0x04004ADB RID: 19163
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04004A35 RID: 18997
+	// Token: 0x04004ADC RID: 19164
 	private List<ActivityBaseData> ActivityDataList = new List<ActivityBaseData>();
 
-	// Token: 0x04004A36 RID: 18998
+	// Token: 0x04004ADD RID: 19165
 	private readonly Dictionary<int, bool> RedDotStateMap = new Dictionary<int, bool>();
 
-	// Token: 0x04004A37 RID: 18999
+	// Token: 0x04004ADE RID: 19166
 	private List<string> ViewSaveStateSequence = new List<string>();
 
-	// Token: 0x04004A38 RID: 19000
+	// Token: 0x04004ADF RID: 19167
 	[Nullable(new byte[]
 	{
 		0,
@@ -1384,7 +1411,7 @@ public class CommonActivityView : UiViewBase
 	})]
 	private ValueTuple<UUIItem, UUIItem> ItemRedDot = new ValueTuple<UUIItem, UUIItem>(null, null);
 
-	// Token: 0x04004A39 RID: 19001
+	// Token: 0x04004AE0 RID: 19168
 	[Nullable(new byte[]
 	{
 		0,
@@ -1393,69 +1420,69 @@ public class CommonActivityView : UiViewBase
 	})]
 	private ValueTuple<UUIItem, UUIItem> BtnRedDot = new ValueTuple<UUIItem, UUIItem>(null, null);
 
-	// Token: 0x04004A3A RID: 19002
+	// Token: 0x04004AE1 RID: 19169
 	[Nullable(2)]
 	private ButtonItem RecommendBtnItem;
 
-	// Token: 0x02007C42 RID: 31810
+	// Token: 0x02006DC9 RID: 28105
 	[NullableContext(0)]
 	private class EActivityComponents
 	{
-		// Token: 0x04028C5B RID: 167003
+		// Token: 0x04023F8C RID: 147340
 		public const int CaptionItem = 0;
 
-		// Token: 0x04028C5C RID: 167004
+		// Token: 0x04023F8D RID: 147341
 		public const int TabScrollView = 1;
 
-		// Token: 0x04028C5D RID: 167005
+		// Token: 0x04023F8E RID: 147342
 		public const int TabToggle = 2;
 
-		// Token: 0x04028C5E RID: 167006
+		// Token: 0x04023F8F RID: 147343
 		public const int SubView = 3;
 
-		// Token: 0x04028C5F RID: 167007
+		// Token: 0x04023F90 RID: 147344
 		public const int Panel = 4;
 
-		// Token: 0x04028C60 RID: 167008
+		// Token: 0x04023F91 RID: 147345
 		public const int BgTexture = 5;
 
-		// Token: 0x04028C61 RID: 167009
+		// Token: 0x04023F92 RID: 147346
 		public const int BtnBack = 6;
 
-		// Token: 0x04028C62 RID: 167010
+		// Token: 0x04023F93 RID: 147347
 		public const int PanelTips = 7;
 
-		// Token: 0x04028C63 RID: 167011
+		// Token: 0x04023F94 RID: 147348
 		public const int Content = 8;
 
-		// Token: 0x04028C64 RID: 167012
+		// Token: 0x04023F95 RID: 147349
 		public const int TabLine = 9;
 
-		// Token: 0x04028C65 RID: 167013
+		// Token: 0x04023F96 RID: 147350
 		public const int TxtDebugId = 10;
 
-		// Token: 0x04028C66 RID: 167014
+		// Token: 0x04023F97 RID: 147351
 		public const int BtnTopRedDot = 11;
 
-		// Token: 0x04028C67 RID: 167015
+		// Token: 0x04023F98 RID: 147352
 		public const int BtnBottomRedDot = 12;
 
-		// Token: 0x04028C68 RID: 167016
+		// Token: 0x04023F99 RID: 147353
 		public const int PanelTop = 13;
 
-		// Token: 0x04028C69 RID: 167017
+		// Token: 0x04023F9A RID: 147354
 		public const int DropdownA = 14;
 
-		// Token: 0x04028C6A RID: 167018
+		// Token: 0x04023F9B RID: 147355
 		public const int DynamicTab = 15;
 
-		// Token: 0x04028C6B RID: 167019
+		// Token: 0x04023F9C RID: 147356
 		public const int PanelTab = 16;
 
-		// Token: 0x04028C6C RID: 167020
+		// Token: 0x04023F9D RID: 147357
 		public const int PanelSafe = 17;
 
-		// Token: 0x04028C6D RID: 167021
+		// Token: 0x04023F9E RID: 147358
 		public const int BtnActivityRecommend = 18;
 	}
 }

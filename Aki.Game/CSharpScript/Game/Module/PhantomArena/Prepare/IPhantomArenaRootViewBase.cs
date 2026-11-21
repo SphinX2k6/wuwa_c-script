@@ -3,22 +3,22 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare
 {
-	// Token: 0x02005148 RID: 20808
+	// Token: 0x02004118 RID: 16664
 	public interface IPhantomArenaRootViewBase
 	{
-		// Token: 0x060352CC RID: 217804
+		// Token: 0x0602A1C8 RID: 172488
 		void OpenChildView(EPhantomArenaChildViewName viewName);
 
-		// Token: 0x060352CD RID: 217805
+		// Token: 0x0602A1C9 RID: 172489
 		UniTask OpenChildViewAsync(EPhantomArenaChildViewName viewName);
 
-		// Token: 0x060352CE RID: 217806
+		// Token: 0x0602A1CA RID: 172490
 		UniTask<bool> CloseCurChildViewAsync();
 
-		// Token: 0x060352CF RID: 217807
+		// Token: 0x0602A1CB RID: 172491
 		void CloseCurChildView();
 
-		// Token: 0x060352D0 RID: 217808
+		// Token: 0x0602A1CC RID: 172492
 		void Back();
 	}
 }

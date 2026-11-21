@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F48 RID: 8008
+// Token: 0x0200140A RID: 5130
 [NullableContext(2)]
 [Nullable(0)]
 public class FollowShootOnlyAutoAimUnit : HudUnitBase
 {
-	// Token: 0x0600F78F RID: 63375 RVA: 0x003BDFFC File Offset: 0x003BC1FC
+	// Token: 0x0600CBAE RID: 52142 RVA: 0x003C9AE8 File Offset: 0x003C7CE8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -27,7 +27,7 @@ public class FollowShootOnlyAutoAimUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F790 RID: 63376 RVA: 0x003BE088 File Offset: 0x003BC288
+	// Token: 0x0600CBAF RID: 52143 RVA: 0x003C9B74 File Offset: 0x003C7D74
 	protected override void OnStart()
 	{
 		this.TargetItem = base.GetItem(0);
@@ -53,7 +53,7 @@ public class FollowShootOnlyAutoAimUnit : HudUnitBase
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600F791 RID: 63377 RVA: 0x003BE111 File Offset: 0x003BC311
+	// Token: 0x0600CBB0 RID: 52144 RVA: 0x003C9BFD File Offset: 0x003C7DFD
 	protected override void OnBeforeDestroy()
 	{
 		this.TargetItem = null;
@@ -68,7 +68,7 @@ public class FollowShootOnlyAutoAimUnit : HudUnitBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F792 RID: 63378 RVA: 0x003BE148 File Offset: 0x003BC348
+	// Token: 0x0600CBB1 RID: 52145 RVA: 0x003C9C34 File Offset: 0x003C7E34
 	public override void SetActive(bool active)
 	{
 		if (base.IsCreateOrCreating)
@@ -117,7 +117,7 @@ public class FollowShootOnlyAutoAimUnit : HudUnitBase
 		this.PlayCloseSequenceAsync().Forget();
 	}
 
-	// Token: 0x0600F793 RID: 63379 RVA: 0x003BE21C File Offset: 0x003BC41C
+	// Token: 0x0600CBB2 RID: 52146 RVA: 0x003C9D08 File Offset: 0x003C7F08
 	private UniTask PlayCloseSequenceAsync()
 	{
 		FollowShootOnlyAutoAimUnit.<PlayCloseSequenceAsync>d__12 <PlayCloseSequenceAsync>d__;
@@ -128,7 +128,7 @@ public class FollowShootOnlyAutoAimUnit : HudUnitBase
 		return <PlayCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F794 RID: 63380 RVA: 0x003BE25F File Offset: 0x003BC45F
+	// Token: 0x0600CBB3 RID: 52147 RVA: 0x003C9D4B File Offset: 0x003C7F4B
 	public void SetTargetItemOffset(float x, float y)
 	{
 		if (this.TargetItem == null)
@@ -139,7 +139,7 @@ public class FollowShootOnlyAutoAimUnit : HudUnitBase
 		this.TargetItem.SetAnchorOffsetY(y);
 	}
 
-	// Token: 0x0600F795 RID: 63381 RVA: 0x003BE284 File Offset: 0x003BC484
+	// Token: 0x0600CBB4 RID: 52148 RVA: 0x003C9D70 File Offset: 0x003C7F70
 	public void SetTargetAimVisible(bool isVisible, bool isTargetChanged)
 	{
 		if (this.IsClosing || this.TargetItem == null)
@@ -163,36 +163,36 @@ public class FollowShootOnlyAutoAimUnit : HudUnitBase
 		this.TargetItem.SetUIActive(isVisible);
 	}
 
-	// Token: 0x040072CB RID: 29387
+	// Token: 0x040073AC RID: 29612
 	private UUIItem TargetItem;
 
-	// Token: 0x040072CC RID: 29388
+	// Token: 0x040073AD RID: 29613
 	private UUIItem Left;
 
-	// Token: 0x040072CD RID: 29389
+	// Token: 0x040073AE RID: 29614
 	private UUIItem Right;
 
-	// Token: 0x040072CE RID: 29390
+	// Token: 0x040073AF RID: 29615
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040072CF RID: 29391
+	// Token: 0x040073B0 RID: 29616
 	private bool IsActive;
 
-	// Token: 0x040072D0 RID: 29392
+	// Token: 0x040073B1 RID: 29617
 	private bool IsTargetItemActive;
 
-	// Token: 0x040072D1 RID: 29393
+	// Token: 0x040073B2 RID: 29618
 	private bool IsClosing;
 
-	// Token: 0x02008538 RID: 34104
+	// Token: 0x020076BD RID: 30397
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402B5F7 RID: 177655
+		// Token: 0x0402691B RID: 157979
 		TargetItem,
-		// Token: 0x0402B5F8 RID: 177656
+		// Token: 0x0402691C RID: 157980
 		Left,
-		// Token: 0x0402B5F9 RID: 177657
+		// Token: 0x0402691D RID: 157981
 		Right
 	}
 }

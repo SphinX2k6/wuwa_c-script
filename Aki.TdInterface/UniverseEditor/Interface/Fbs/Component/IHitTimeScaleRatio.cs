@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053A7 RID: 21415
+	// Token: 0x0200592D RID: 22829
 	public struct IHitTimeScaleRatio : IFlatbufferObject
 	{
-		// Token: 0x17009D52 RID: 40274
-		// (get) Token: 0x06023134 RID: 143668 RVA: 0x004DB142 File Offset: 0x004D9342
+		// Token: 0x1700A58A RID: 42378
+		// (get) Token: 0x060251E8 RID: 152040 RVA: 0x00518016 File Offset: 0x00516216
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023135 RID: 143669 RVA: 0x004DB14F File Offset: 0x004D934F
+		// Token: 0x060251E9 RID: 152041 RVA: 0x00518023 File Offset: 0x00516223
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023136 RID: 143670 RVA: 0x004DB158 File Offset: 0x004D9358
+		// Token: 0x060251EA RID: 152042 RVA: 0x0051802C File Offset: 0x0051622C
 		public static IHitTimeScaleRatio GetRootAsIHitTimeScaleRatio(ByteBuffer _bb)
 		{
 			return IHitTimeScaleRatio.GetRootAsIHitTimeScaleRatio(_bb, default(IHitTimeScaleRatio));
 		}
 
-		// Token: 0x06023137 RID: 143671 RVA: 0x004DB174 File Offset: 0x004D9374
+		// Token: 0x060251EB RID: 152043 RVA: 0x00518048 File Offset: 0x00516248
 		public static IHitTimeScaleRatio GetRootAsIHitTimeScaleRatio(ByteBuffer _bb, IHitTimeScaleRatio obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023138 RID: 143672 RVA: 0x004DB191 File Offset: 0x004D9391
+		// Token: 0x060251EC RID: 152044 RVA: 0x00518065 File Offset: 0x00516265
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023139 RID: 143673 RVA: 0x004DB1A0 File Offset: 0x004D93A0
+		// Token: 0x060251ED RID: 152045 RVA: 0x00518074 File Offset: 0x00516274
 		public IHitTimeScaleRatio __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009D53 RID: 40275
-		// (get) Token: 0x0602313A RID: 143674 RVA: 0x004DB1B0 File Offset: 0x004D93B0
+		// Token: 0x1700A58B RID: 42379
+		// (get) Token: 0x060251EE RID: 152046 RVA: 0x00518084 File Offset: 0x00516284
 		public float TimeRatio
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D54 RID: 40276
-		// (get) Token: 0x0602313B RID: 143675 RVA: 0x004DB1F0 File Offset: 0x004D93F0
+		// Token: 0x1700A58C RID: 42380
+		// (get) Token: 0x060251EF RID: 152047 RVA: 0x005180C4 File Offset: 0x005162C4
 		public float MaxExtraTime
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D55 RID: 40277
-		// (get) Token: 0x0602313C RID: 143676 RVA: 0x004DB230 File Offset: 0x004D9430
+		// Token: 0x1700A58D RID: 42381
+		// (get) Token: 0x060251F0 RID: 152048 RVA: 0x00518104 File Offset: 0x00516304
 		public float ValueRatio
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D56 RID: 40278
-		// (get) Token: 0x0602313D RID: 143677 RVA: 0x004DB270 File Offset: 0x004D9470
+		// Token: 0x1700A58E RID: 42382
+		// (get) Token: 0x060251F1 RID: 152049 RVA: 0x00518144 File Offset: 0x00516344
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602313E RID: 143678 RVA: 0x004DB2AD File Offset: 0x004D94AD
+		// Token: 0x060251F2 RID: 152050 RVA: 0x00518181 File Offset: 0x00516381
 		public static Offset<IHitTimeScaleRatio> CreateIHitTimeScaleRatio(FlatBufferBuilder builder, float TimeRatio = 0f, float MaxExtraTime = 0f, float ValueRatio = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHitTimeScaleRatio.EndIHitTimeScaleRatio(builder);
 		}
 
-		// Token: 0x0602313F RID: 143679 RVA: 0x004DB2D9 File Offset: 0x004D94D9
+		// Token: 0x060251F3 RID: 152051 RVA: 0x005181AD File Offset: 0x005163AD
 		public static void StartIHitTimeScaleRatio(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06023140 RID: 143680 RVA: 0x004DB2E2 File Offset: 0x004D94E2
+		// Token: 0x060251F4 RID: 152052 RVA: 0x005181B6 File Offset: 0x005163B6
 		public static void AddTimeRatio(FlatBufferBuilder builder, float timeRatio)
 		{
 			builder.AddFloat(0, timeRatio, 0.0);
 		}
 
-		// Token: 0x06023141 RID: 143681 RVA: 0x004DB2F5 File Offset: 0x004D94F5
+		// Token: 0x060251F5 RID: 152053 RVA: 0x005181C9 File Offset: 0x005163C9
 		public static void AddMaxExtraTime(FlatBufferBuilder builder, float maxExtraTime)
 		{
 			builder.AddFloat(1, maxExtraTime, 0.0);
 		}
 
-		// Token: 0x06023142 RID: 143682 RVA: 0x004DB308 File Offset: 0x004D9508
+		// Token: 0x060251F6 RID: 152054 RVA: 0x005181DC File Offset: 0x005163DC
 		public static void AddValueRatio(FlatBufferBuilder builder, float valueRatio)
 		{
 			builder.AddFloat(2, valueRatio, 0.0);
 		}
 
-		// Token: 0x06023143 RID: 143683 RVA: 0x004DB31B File Offset: 0x004D951B
+		// Token: 0x060251F7 RID: 152055 RVA: 0x005181EF File Offset: 0x005163EF
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06023144 RID: 143684 RVA: 0x004DB326 File Offset: 0x004D9526
+		// Token: 0x060251F8 RID: 152056 RVA: 0x005181FA File Offset: 0x005163FA
 		public static Offset<IHitTimeScaleRatio> EndIHitTimeScaleRatio(FlatBufferBuilder builder)
 		{
 			return new Offset<IHitTimeScaleRatio>(builder.EndTable());
 		}
 
-		// Token: 0x06023145 RID: 143685 RVA: 0x004DB334 File Offset: 0x004D9534
+		// Token: 0x060251F9 RID: 152057 RVA: 0x00518208 File Offset: 0x00516408
 		public IHitTimeScaleRatioT UnPack()
 		{
 			IHitTimeScaleRatioT hitTimeScaleRatioT = new IHitTimeScaleRatioT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return hitTimeScaleRatioT;
 		}
 
-		// Token: 0x06023146 RID: 143686 RVA: 0x004DB34F File Offset: 0x004D954F
+		// Token: 0x060251FA RID: 152058 RVA: 0x00518223 File Offset: 0x00516423
 		public void UnPackTo(IHitTimeScaleRatioT _o)
 		{
 			_o.TimeRatio = this.TimeRatio;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023147 RID: 143687 RVA: 0x004DB384 File Offset: 0x004D9584
+		// Token: 0x060251FB RID: 152059 RVA: 0x00518258 File Offset: 0x00516458
 		public static Offset<IHitTimeScaleRatio> Pack(FlatBufferBuilder builder, IHitTimeScaleRatioT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHitTimeScaleRatio.CreateIHitTimeScaleRatio(builder, _o.TimeRatio, _o.MaxExtraTime, _o.ValueRatio, _o.NullMask);
 		}
 
-		// Token: 0x0400E599 RID: 58777
+		// Token: 0x0400F1C9 RID: 61897
 		private Table __p;
 	}
 }

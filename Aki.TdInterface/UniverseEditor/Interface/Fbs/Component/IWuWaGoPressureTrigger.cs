@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BCD RID: 23501
+	// Token: 0x020061E3 RID: 25059
 	public struct IWuWaGoPressureTrigger : IFlatbufferObject
 	{
-		// Token: 0x1700B191 RID: 45457
-		// (get) Token: 0x06028425 RID: 164901 RVA: 0x00588060 File Offset: 0x00586260
+		// Token: 0x1700BAD9 RID: 47833
+		// (get) Token: 0x0602A9E9 RID: 174569 RVA: 0x005CFAF0 File Offset: 0x005CDCF0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028426 RID: 164902 RVA: 0x0058806D File Offset: 0x0058626D
+		// Token: 0x0602A9EA RID: 174570 RVA: 0x005CFAFD File Offset: 0x005CDCFD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028427 RID: 164903 RVA: 0x00588074 File Offset: 0x00586274
+		// Token: 0x0602A9EB RID: 174571 RVA: 0x005CFB04 File Offset: 0x005CDD04
 		public static IWuWaGoPressureTrigger GetRootAsIWuWaGoPressureTrigger(ByteBuffer _bb)
 		{
 			return IWuWaGoPressureTrigger.GetRootAsIWuWaGoPressureTrigger(_bb, default(IWuWaGoPressureTrigger));
 		}
 
-		// Token: 0x06028428 RID: 164904 RVA: 0x00588090 File Offset: 0x00586290
+		// Token: 0x0602A9EC RID: 174572 RVA: 0x005CFB20 File Offset: 0x005CDD20
 		public static IWuWaGoPressureTrigger GetRootAsIWuWaGoPressureTrigger(ByteBuffer _bb, IWuWaGoPressureTrigger obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028429 RID: 164905 RVA: 0x005880AD File Offset: 0x005862AD
+		// Token: 0x0602A9ED RID: 174573 RVA: 0x005CFB3D File Offset: 0x005CDD3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602842A RID: 164906 RVA: 0x005880BC File Offset: 0x005862BC
+		// Token: 0x0602A9EE RID: 174574 RVA: 0x005CFB4C File Offset: 0x005CDD4C
 		public IWuWaGoPressureTrigger __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B192 RID: 45458
-		// (get) Token: 0x0602842B RID: 164907 RVA: 0x005880CC File Offset: 0x005862CC
+		// Token: 0x1700BADA RID: 47834
+		// (get) Token: 0x0602A9EF RID: 174575 RVA: 0x005CFB5C File Offset: 0x005CDD5C
 		public EWuWaGoEntityType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B193 RID: 45459
-		// (get) Token: 0x0602842C RID: 164908 RVA: 0x00588108 File Offset: 0x00586308
+		// Token: 0x1700BADB RID: 47835
+		// (get) Token: 0x0602A9F0 RID: 174576 RVA: 0x005CFB98 File Offset: 0x005CDD98
 		public IWuWaGoGridLinkData? LinkData
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602842D RID: 164909 RVA: 0x0058815C File Offset: 0x0058635C
+		// Token: 0x0602A9F1 RID: 174577 RVA: 0x005CFBEC File Offset: 0x005CDDEC
 		public IActionInfo? EnterActionList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B194 RID: 45460
-		// (get) Token: 0x0602842E RID: 164910 RVA: 0x005881BC File Offset: 0x005863BC
+		// Token: 0x1700BADC RID: 47836
+		// (get) Token: 0x0602A9F2 RID: 174578 RVA: 0x005CFC4C File Offset: 0x005CDE4C
 		public int EnterActionListLength
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602842F RID: 164911 RVA: 0x005881E8 File Offset: 0x005863E8
+		// Token: 0x0602A9F3 RID: 174579 RVA: 0x005CFC78 File Offset: 0x005CDE78
 		public IActionInfo? ExitActionList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B195 RID: 45461
-		// (get) Token: 0x06028430 RID: 164912 RVA: 0x0058824C File Offset: 0x0058644C
+		// Token: 0x1700BADD RID: 47837
+		// (get) Token: 0x0602A9F4 RID: 174580 RVA: 0x005CFCDC File Offset: 0x005CDEDC
 		public int ExitActionListLength
 		{
 			get
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028431 RID: 164913 RVA: 0x00588278 File Offset: 0x00586478
+		// Token: 0x0602A9F5 RID: 174581 RVA: 0x005CFD08 File Offset: 0x005CDF08
 		public static Offset<IWuWaGoPressureTrigger> CreateIWuWaGoPressureTrigger(FlatBufferBuilder builder, EWuWaGoEntityType Type = EWuWaGoEntityType.LevelCenter, IWuWaGoGridLinkDataT LinkData = null, VectorOffset EnterActionListOffset = default(VectorOffset), VectorOffset ExitActionListOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -142,31 +142,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoPressureTrigger.EndIWuWaGoPressureTrigger(builder);
 		}
 
-		// Token: 0x06028432 RID: 164914 RVA: 0x005882AA File Offset: 0x005864AA
+		// Token: 0x0602A9F6 RID: 174582 RVA: 0x005CFD3A File Offset: 0x005CDF3A
 		public static void StartIWuWaGoPressureTrigger(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06028433 RID: 164915 RVA: 0x005882B3 File Offset: 0x005864B3
+		// Token: 0x0602A9F7 RID: 174583 RVA: 0x005CFD43 File Offset: 0x005CDF43
 		public static void AddType(FlatBufferBuilder builder, EWuWaGoEntityType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028434 RID: 164916 RVA: 0x005882BE File Offset: 0x005864BE
+		// Token: 0x0602A9F8 RID: 174584 RVA: 0x005CFD4E File Offset: 0x005CDF4E
 		public static void AddLinkData(FlatBufferBuilder builder, Offset<IWuWaGoGridLinkData> linkDataOffset)
 		{
 			builder.AddStruct(1, linkDataOffset.Value, 0);
 		}
 
-		// Token: 0x06028435 RID: 164917 RVA: 0x005882CE File Offset: 0x005864CE
+		// Token: 0x0602A9F9 RID: 174585 RVA: 0x005CFD5E File Offset: 0x005CDF5E
 		public static void AddEnterActionList(FlatBufferBuilder builder, VectorOffset enterActionListOffset)
 		{
 			builder.AddOffset(2, enterActionListOffset.Value, 0);
 		}
 
-		// Token: 0x06028436 RID: 164918 RVA: 0x005882E0 File Offset: 0x005864E0
+		// Token: 0x0602A9FA RID: 174586 RVA: 0x005CFD70 File Offset: 0x005CDF70
 		public static VectorOffset CreateEnterActionListVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028437 RID: 164919 RVA: 0x00588320 File Offset: 0x00586520
+		// Token: 0x0602A9FB RID: 174587 RVA: 0x005CFDB0 File Offset: 0x005CDFB0
 		public static VectorOffset CreateEnterActionListVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -185,7 +185,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028438 RID: 164920 RVA: 0x0058833A File Offset: 0x0058653A
+		// Token: 0x0602A9FC RID: 174588 RVA: 0x005CFDCA File Offset: 0x005CDFCA
 		public static VectorOffset CreateEnterActionListVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028439 RID: 164921 RVA: 0x00588358 File Offset: 0x00586558
+		// Token: 0x0602A9FD RID: 174589 RVA: 0x005CFDE8 File Offset: 0x005CDFE8
 		public static VectorOffset CreateEnterActionListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -201,19 +201,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602843A RID: 164922 RVA: 0x00588371 File Offset: 0x00586571
+		// Token: 0x0602A9FE RID: 174590 RVA: 0x005CFE01 File Offset: 0x005CE001
 		public static void StartEnterActionListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602843B RID: 164923 RVA: 0x0058837C File Offset: 0x0058657C
+		// Token: 0x0602A9FF RID: 174591 RVA: 0x005CFE0C File Offset: 0x005CE00C
 		public static void AddExitActionList(FlatBufferBuilder builder, VectorOffset exitActionListOffset)
 		{
 			builder.AddOffset(3, exitActionListOffset.Value, 0);
 		}
 
-		// Token: 0x0602843C RID: 164924 RVA: 0x0058838C File Offset: 0x0058658C
+		// Token: 0x0602AA00 RID: 174592 RVA: 0x005CFE1C File Offset: 0x005CE01C
 		public static VectorOffset CreateExitActionListVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -224,7 +224,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602843D RID: 164925 RVA: 0x005883CC File Offset: 0x005865CC
+		// Token: 0x0602AA01 RID: 174593 RVA: 0x005CFE5C File Offset: 0x005CE05C
 		public static VectorOffset CreateExitActionListVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602843E RID: 164926 RVA: 0x005883E6 File Offset: 0x005865E6
+		// Token: 0x0602AA02 RID: 174594 RVA: 0x005CFE76 File Offset: 0x005CE076
 		public static VectorOffset CreateExitActionListVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602843F RID: 164927 RVA: 0x00588404 File Offset: 0x00586604
+		// Token: 0x0602AA03 RID: 174595 RVA: 0x005CFE94 File Offset: 0x005CE094
 		public static VectorOffset CreateExitActionListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -248,19 +248,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028440 RID: 164928 RVA: 0x0058841D File Offset: 0x0058661D
+		// Token: 0x0602AA04 RID: 174596 RVA: 0x005CFEAD File Offset: 0x005CE0AD
 		public static void StartExitActionListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06028441 RID: 164929 RVA: 0x00588428 File Offset: 0x00586628
+		// Token: 0x0602AA05 RID: 174597 RVA: 0x005CFEB8 File Offset: 0x005CE0B8
 		public static Offset<IWuWaGoPressureTrigger> EndIWuWaGoPressureTrigger(FlatBufferBuilder builder)
 		{
 			return new Offset<IWuWaGoPressureTrigger>(builder.EndTable());
 		}
 
-		// Token: 0x06028442 RID: 164930 RVA: 0x00588438 File Offset: 0x00586638
+		// Token: 0x0602AA06 RID: 174598 RVA: 0x005CFEC8 File Offset: 0x005CE0C8
 		public IWuWaGoPressureTriggerT UnPack()
 		{
 			IWuWaGoPressureTriggerT wuWaGoPressureTriggerT = new IWuWaGoPressureTriggerT();
@@ -268,7 +268,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return wuWaGoPressureTriggerT;
 		}
 
-		// Token: 0x06028443 RID: 164931 RVA: 0x00588454 File Offset: 0x00586654
+		// Token: 0x0602AA07 RID: 174599 RVA: 0x005CFEE4 File Offset: 0x005CE0E4
 		public void UnPackTo(IWuWaGoPressureTriggerT _o)
 		{
 			_o.Type = this.Type;
@@ -285,7 +285,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028444 RID: 164932 RVA: 0x00588548 File Offset: 0x00586748
+		// Token: 0x0602AA08 RID: 174600 RVA: 0x005CFFD8 File Offset: 0x005CE1D8
 		public static Offset<IWuWaGoPressureTrigger> Pack(FlatBufferBuilder builder, IWuWaGoPressureTriggerT _o)
 		{
 			if (_o == null)
@@ -315,7 +315,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoPressureTrigger.CreateIWuWaGoPressureTrigger(builder, _o.Type, _o.LinkData, enterActionListOffset, exitActionListOffset);
 		}
 
-		// Token: 0x0400F349 RID: 62281
+		// Token: 0x0401004F RID: 65615
 		private Table __p;
 	}
 }

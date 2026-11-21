@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B35 RID: 11061
+// Token: 0x020020B1 RID: 8369
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsAttributeDetailView : UiViewBase
 {
-	// Token: 0x06016F4E RID: 94030 RVA: 0x005D3849 File Offset: 0x005D1A49
+	// Token: 0x0601497F RID: 84351 RVA: 0x006003B9 File Offset: 0x005FE5B9
 	public SurvivorsAttributeDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016F4F RID: 94031 RVA: 0x005D3854 File Offset: 0x005D1A54
+	// Token: 0x06014980 RID: 84352 RVA: 0x006003C4 File Offset: 0x005FE5C4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class SurvivorsAttributeDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016F50 RID: 94032 RVA: 0x005D38B0 File Offset: 0x005D1AB0
+	// Token: 0x06014981 RID: 84353 RVA: 0x00600420 File Offset: 0x005FE620
 	protected override void OnStart()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -39,7 +39,7 @@ public class SurvivorsAttributeDetailView : UiViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.AttributeComponentEvent, true);
 	}
 
-	// Token: 0x06016F51 RID: 94033 RVA: 0x005D3942 File Offset: 0x005D1B42
+	// Token: 0x06014982 RID: 84354 RVA: 0x006004B2 File Offset: 0x005FE6B2
 	protected override void OnBeforeDestroy()
 	{
 		this.CaptionItem.Destroy(null);
@@ -49,23 +49,23 @@ public class SurvivorsAttributeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016F52 RID: 94034 RVA: 0x005D395F File Offset: 0x005D1B5F
+	// Token: 0x06014983 RID: 84355 RVA: 0x006004CF File Offset: 0x005FE6CF
 	private SurvivorsRoleAttributeItem InitAttrItem()
 	{
 		return new SurvivorsRoleAttributeItem();
 	}
 
-	// Token: 0x06016F53 RID: 94035 RVA: 0x005D3966 File Offset: 0x005D1B66
+	// Token: 0x06014984 RID: 84356 RVA: 0x006004D6 File Offset: 0x005FE6D6
 	private void OnBackButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400AAF0 RID: 43760
+	// Token: 0x0400AEF6 RID: 44790
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400AAF1 RID: 43761
+	// Token: 0x0400AEF7 RID: 44791
 	[Nullable(new byte[]
 	{
 		2,

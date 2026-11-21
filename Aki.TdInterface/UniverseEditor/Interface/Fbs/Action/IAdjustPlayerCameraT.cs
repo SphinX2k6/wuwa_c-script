@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006168 RID: 24936
+	// Token: 0x020067CD RID: 26573
 	public class IAdjustPlayerCameraT
 	{
-		// Token: 0x1700B998 RID: 47512
-		// (get) Token: 0x0602AE60 RID: 175712 RVA: 0x005EAF29 File Offset: 0x005E9129
-		// (set) Token: 0x0602AE61 RID: 175713 RVA: 0x005EAF31 File Offset: 0x005E9131
+		// Token: 0x1700C308 RID: 49928
+		// (get) Token: 0x0602D559 RID: 185689 RVA: 0x00635105 File Offset: 0x00633305
+		// (set) Token: 0x0602D55A RID: 185690 RVA: 0x0063510D File Offset: 0x0063330D
 		public TAdjustPlayerCameraOptionUnion Option { get; set; }
 
-		// Token: 0x0602AE62 RID: 175714 RVA: 0x005EAF3A File Offset: 0x005E913A
+		// Token: 0x0602D55B RID: 185691 RVA: 0x00635116 File Offset: 0x00633316
 		public IAdjustPlayerCameraT()
 		{
 			this.Option = null;

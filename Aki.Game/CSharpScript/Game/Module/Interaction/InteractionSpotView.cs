@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200585D RID: 22621
+	// Token: 0x02004835 RID: 18485
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InteractionSpotView : UiPanelBase
 	{
-		// Token: 0x06039829 RID: 235561 RVA: 0x00DA7608 File Offset: 0x00DA5808
+		// Token: 0x0602E746 RID: 190278 RVA: 0x00CF6330 File Offset: 0x00CF4530
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603982A RID: 235562 RVA: 0x00DA76B4 File Offset: 0x00DA58B4
+		// Token: 0x0602E747 RID: 190279 RVA: 0x00CF63DC File Offset: 0x00CF45DC
 		protected override void OnStart()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -57,27 +57,27 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603982B RID: 235563 RVA: 0x00DA777D File Offset: 0x00DA597D
+		// Token: 0x0602E748 RID: 190280 RVA: 0x00CF64A5 File Offset: 0x00CF46A5
 		protected override void OnBeforeShow()
 		{
 			this.TickEnabled = true;
 			this.OnAddEventListener();
 		}
 
-		// Token: 0x0603982C RID: 235564 RVA: 0x00DA778C File Offset: 0x00DA598C
+		// Token: 0x0602E749 RID: 190281 RVA: 0x00CF64B4 File Offset: 0x00CF46B4
 		protected override void OnBeforeHide()
 		{
 			this.TickEnabled = false;
 			this.OnRemoveEventListener();
 		}
 
-		// Token: 0x0603982D RID: 235565 RVA: 0x00DA779B File Offset: 0x00DA599B
+		// Token: 0x0602E74A RID: 190282 RVA: 0x00CF64C3 File Offset: 0x00CF46C3
 		protected override void OnAfterShow()
 		{
 			this.UpdateInteractionSpotPerform();
 		}
 
-		// Token: 0x0603982E RID: 235566 RVA: 0x00DA77A3 File Offset: 0x00DA59A3
+		// Token: 0x0602E74B RID: 190283 RVA: 0x00CF64CB File Offset: 0x00CF46CB
 		protected void OnAddEventListener()
 		{
 			if (this.OwnerEntity != null && this.OwnerEntity.Valid)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603982F RID: 235567 RVA: 0x00DA77DC File Offset: 0x00DA59DC
+		// Token: 0x0602E74C RID: 190284 RVA: 0x00CF6504 File Offset: 0x00CF4704
 		protected void OnRemoveEventListener()
 		{
 			if (this.OwnerEntity != null && this.OwnerEntity.Valid)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039830 RID: 235568 RVA: 0x00DA7818 File Offset: 0x00DA5A18
+		// Token: 0x0602E74D RID: 190285 RVA: 0x00CF6540 File Offset: 0x00CF4740
 		public void DestroySelf(Action callback)
 		{
 			this.TickEnabled = false;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SeqPlayer.PlayLevelSequenceByName("NorOut", false, null, false);
 		}
 
-		// Token: 0x06039831 RID: 235569 RVA: 0x00DA78BC File Offset: 0x00DA5ABC
+		// Token: 0x0602E74E RID: 190286 RVA: 0x00CF65E4 File Offset: 0x00CF47E4
 		public void Update()
 		{
 			if (this.OwnerActor == null || !this.TickEnabled || this.InDestroyAnim)
@@ -153,19 +153,19 @@ namespace CSharpScript.Game.Module.Interaction
 			this.RootItem.SetAnchorOffset(vector2D.ToUeVector2D(false));
 		}
 
-		// Token: 0x06039832 RID: 235570 RVA: 0x00DA79FE File Offset: 0x00DA5BFE
+		// Token: 0x0602E74F RID: 190287 RVA: 0x00CF6726 File Offset: 0x00CF4926
 		public void SetOwnerEntity(Entity entity)
 		{
 			this.OwnerEntity = entity;
 		}
 
-		// Token: 0x06039833 RID: 235571 RVA: 0x00DA7A07 File Offset: 0x00DA5C07
+		// Token: 0x0602E750 RID: 190288 RVA: 0x00CF672F File Offset: 0x00CF492F
 		public void SetOwnerActor(AActor ownerActor)
 		{
 			this.OwnerActor = ownerActor;
 		}
 
-		// Token: 0x06039834 RID: 235572 RVA: 0x00DA7A10 File Offset: 0x00DA5C10
+		// Token: 0x0602E751 RID: 190289 RVA: 0x00CF6738 File Offset: 0x00CF4938
 		public void SetIsSelect(bool isSelect)
 		{
 			if (this.InDestroyAnim)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.UpdateInteractionSpotPerform();
 		}
 
-		// Token: 0x06039835 RID: 235573 RVA: 0x00DA7A28 File Offset: 0x00DA5C28
+		// Token: 0x0602E752 RID: 190290 RVA: 0x00CF6750 File Offset: 0x00CF4950
 		public void SetIsInEntityInteractRange(bool isInEntityInteractRange)
 		{
 			if (this.InDestroyAnim)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.UpdateInteractionSpotPerform();
 		}
 
-		// Token: 0x06039836 RID: 235574 RVA: 0x00DA7A40 File Offset: 0x00DA5C40
+		// Token: 0x0602E753 RID: 190291 RVA: 0x00CF6768 File Offset: 0x00CF4968
 		public void SetIsTracking(bool isTracking)
 		{
 			if (this.InDestroyAnim)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.UpdateInteractionSpotPerform();
 		}
 
-		// Token: 0x06039837 RID: 235575 RVA: 0x00DA7A58 File Offset: 0x00DA5C58
+		// Token: 0x0602E754 RID: 190292 RVA: 0x00CF6780 File Offset: 0x00CF4980
 		public void SetIsObstruct(bool isObstruct)
 		{
 			if (this.InDestroyAnim)
@@ -209,14 +209,14 @@ namespace CSharpScript.Game.Module.Interaction
 			this.UpdateInteractionSpotPerform();
 		}
 
-		// Token: 0x06039838 RID: 235576 RVA: 0x00DA7A70 File Offset: 0x00DA5C70
+		// Token: 0x0602E755 RID: 190293 RVA: 0x00CF6798 File Offset: 0x00CF4998
 		[NullableContext(1)]
 		public void SetOffset(Vector offset)
 		{
 			this.Offset.DeepCopy(offset);
 		}
 
-		// Token: 0x06039839 RID: 235577 RVA: 0x00DA7A7E File Offset: 0x00DA5C7E
+		// Token: 0x0602E756 RID: 190294 RVA: 0x00CF67A6 File Offset: 0x00CF49A6
 		public void SetSuppressLongPressProgress(bool suppress)
 		{
 			if (this.InDestroyAnim)
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603983A RID: 235578 RVA: 0x00DA7AA4 File Offset: 0x00DA5CA4
+		// Token: 0x0602E757 RID: 190295 RVA: 0x00CF67CC File Offset: 0x00CF49CC
 		private void OnInteractionLongPressProgressChange(float progress)
 		{
 			if (this.SuppressLongPressProgress)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SpotProgressItem.SetUIActive(false);
 		}
 
-		// Token: 0x0603983B RID: 235579 RVA: 0x00DA7AF4 File Offset: 0x00DA5CF4
+		// Token: 0x0602E758 RID: 190296 RVA: 0x00CF681C File Offset: 0x00CF4A1C
 		private void UpdateInteractionSpotPerform()
 		{
 			if (this.InDestroyAnim)
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SpotProgressSprite.SetAlpha(this.IsObstruct ? 0.3f : 1f);
 		}
 
-		// Token: 0x0603983C RID: 235580 RVA: 0x00DA7BE4 File Offset: 0x00DA5DE4
+		// Token: 0x0602E759 RID: 190297 RVA: 0x00CF690C File Offset: 0x00CF4B0C
 		private void OnShowInnerChange(bool showInner)
 		{
 			if (this.InDestroyAnim)
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603983D RID: 235581 RVA: 0x00DA7CEC File Offset: 0x00DA5EEC
+		// Token: 0x0602E75A RID: 190298 RVA: 0x00CF6A14 File Offset: 0x00CF4C14
 		[NullableContext(1)]
 		private void OnSequenceEndEvent(string sequenceName)
 		{
@@ -384,97 +384,97 @@ namespace CSharpScript.Game.Module.Interaction
 			seqPlayer2.PlayLevelSequenceByName("Select", false, null, false);
 		}
 
-		// Token: 0x0401E112 RID: 123154
+		// Token: 0x04018BAF RID: 101295
 		private const float CENTER_Y = 62.5f;
 
-		// Token: 0x0401E113 RID: 123155
+		// Token: 0x04018BB0 RID: 101296
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Vector2D center = Vector2D.Create(0.0, 62.5);
 
-		// Token: 0x0401E114 RID: 123156
+		// Token: 0x04018BB1 RID: 101297
 		protected FRotator? RootActorRotation;
 
-		// Token: 0x0401E115 RID: 123157
+		// Token: 0x04018BB2 RID: 101298
 		private UUIItem NormalSpotItem;
 
-		// Token: 0x0401E116 RID: 123158
+		// Token: 0x04018BB3 RID: 101299
 		private UUIItem QuestSpotItem;
 
-		// Token: 0x0401E117 RID: 123159
+		// Token: 0x04018BB4 RID: 101300
 		private UUIItem SpotProgressItem;
 
-		// Token: 0x0401E118 RID: 123160
+		// Token: 0x04018BB5 RID: 101301
 		private UUISprite SpotProgressSprite;
 
-		// Token: 0x0401E119 RID: 123161
+		// Token: 0x04018BB6 RID: 101302
 		private bool IsSelect;
 
-		// Token: 0x0401E11A RID: 123162
+		// Token: 0x04018BB7 RID: 101303
 		private bool IsInEntityInteractRange;
 
-		// Token: 0x0401E11B RID: 123163
+		// Token: 0x04018BB8 RID: 101304
 		private bool IsTracking;
 
-		// Token: 0x0401E11C RID: 123164
+		// Token: 0x04018BB9 RID: 101305
 		private bool IsObstruct;
 
-		// Token: 0x0401E11D RID: 123165
+		// Token: 0x04018BBA RID: 101306
 		private bool SuppressLongPressProgress;
 
-		// Token: 0x0401E11E RID: 123166
+		// Token: 0x04018BBB RID: 101307
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0401E11F RID: 123167
+		// Token: 0x04018BBC RID: 101308
 		private bool? LastShowInner;
 
-		// Token: 0x0401E120 RID: 123168
+		// Token: 0x04018BBD RID: 101309
 		private bool NeedAnimTransition;
 
-		// Token: 0x0401E121 RID: 123169
+		// Token: 0x04018BBE RID: 101310
 		private bool InDestroyAnim;
 
-		// Token: 0x0401E122 RID: 123170
+		// Token: 0x04018BBF RID: 101311
 		private string DestroyAnimName;
 
-		// Token: 0x0401E123 RID: 123171
+		// Token: 0x04018BC0 RID: 101312
 		private Action DestroyCallback;
 
-		// Token: 0x0401E124 RID: 123172
+		// Token: 0x04018BC1 RID: 101313
 		private Entity OwnerEntity;
 
-		// Token: 0x0401E125 RID: 123173
+		// Token: 0x04018BC2 RID: 101314
 		private AActor OwnerActor;
 
-		// Token: 0x0401E126 RID: 123174
+		// Token: 0x04018BC3 RID: 101315
 		[Nullable(1)]
 		private readonly Vector Offset = Vector.Create();
 
-		// Token: 0x0401E127 RID: 123175
+		// Token: 0x04018BC4 RID: 101316
 		[Nullable(1)]
 		protected readonly Vector2D ScreenPosition = Vector2D.Create();
 
-		// Token: 0x0401E128 RID: 123176
+		// Token: 0x04018BC5 RID: 101317
 		[Nullable(1)]
 		private readonly Vector2D LastScreenPosition = Vector2D.Create();
 
-		// Token: 0x0401E129 RID: 123177
+		// Token: 0x04018BC6 RID: 101318
 		private bool TickEnabled;
 
-		// Token: 0x0200BA86 RID: 47750
+		// Token: 0x0200A49D RID: 42141
 		[NullableContext(0)]
 		private class ESpotViewDefine
 		{
-			// Token: 0x04038616 RID: 230934
+			// Token: 0x0403300D RID: 208909
 			public const int NormalSpot = 0;
 
-			// Token: 0x04038617 RID: 230935
+			// Token: 0x0403300E RID: 208910
 			public const int QuestSpot = 1;
 
-			// Token: 0x04038618 RID: 230936
+			// Token: 0x0403300F RID: 208911
 			public const int SpotProgressItem = 2;
 
-			// Token: 0x04038619 RID: 230937
+			// Token: 0x04033010 RID: 208912
 			public const int SpotProgressSprite = 3;
 		}
 	}

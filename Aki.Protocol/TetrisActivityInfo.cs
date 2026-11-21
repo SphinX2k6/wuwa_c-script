@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001352 RID: 4946
+	// Token: 0x020013C5 RID: 5061
 	public sealed class TetrisActivityInfo : IMessage<TetrisActivityInfo>, IMessage, IEquatable<TetrisActivityInfo>, IDeepCloneable<TetrisActivityInfo>, IBufferMessage
 	{
-		// Token: 0x0601A474 RID: 107636 RVA: 0x003D16F7 File Offset: 0x003CF8F7
+		// Token: 0x0601AEFB RID: 110331 RVA: 0x003EC82A File Offset: 0x003EAA2A
 		[NullableContext(1)]
 		public static TetrisActivityInfo Create()
 		{
 			return new TetrisActivityInfo();
 		}
 
-		// Token: 0x170058AA RID: 22698
-		// (get) Token: 0x0601A475 RID: 107637 RVA: 0x003D16FE File Offset: 0x003CF8FE
+		// Token: 0x17005B3D RID: 23357
+		// (get) Token: 0x0601AEFC RID: 110332 RVA: 0x003EC831 File Offset: 0x003EAA31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170058AB RID: 22699
-		// (get) Token: 0x0601A476 RID: 107638 RVA: 0x003D1701 File Offset: 0x003CF901
+		// Token: 0x17005B3E RID: 23358
+		// (get) Token: 0x0601AEFD RID: 110333 RVA: 0x003EC834 File Offset: 0x003EAA34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A477 RID: 107639 RVA: 0x003D1708 File Offset: 0x003CF908
+		// Token: 0x0601AEFE RID: 110334 RVA: 0x003EC83B File Offset: 0x003EAA3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TetrisActivityInfo()
 		{
 		}
 
-		// Token: 0x0601A478 RID: 107640 RVA: 0x003D171B File Offset: 0x003CF91B
+		// Token: 0x0601AEFF RID: 110335 RVA: 0x003EC84E File Offset: 0x003EAA4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TetrisActivityInfo(TetrisActivityInfo other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601A479 RID: 107641 RVA: 0x003D1745 File Offset: 0x003CF945
+		// Token: 0x0601AF00 RID: 110336 RVA: 0x003EC878 File Offset: 0x003EAA78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TetrisActivityInfo Clone()
@@ -66,8 +66,8 @@ namespace Aki.Protocol
 			return new TetrisActivityInfo(this);
 		}
 
-		// Token: 0x170058AC RID: 22700
-		// (get) Token: 0x0601A47A RID: 107642 RVA: 0x003D174D File Offset: 0x003CF94D
+		// Token: 0x17005B3F RID: 23359
+		// (get) Token: 0x0601AF01 RID: 110337 RVA: 0x003EC880 File Offset: 0x003EAA80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<TetrisLevelInfo> TetrisLevelInfos
@@ -78,7 +78,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A47B RID: 107643 RVA: 0x003D1755 File Offset: 0x003CF955
+		// Token: 0x0601AF02 RID: 110338 RVA: 0x003EC888 File Offset: 0x003EAA88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -86,7 +86,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TetrisActivityInfo);
 		}
 
-		// Token: 0x0601A47C RID: 107644 RVA: 0x003D1763 File Offset: 0x003CF963
+		// Token: 0x0601AF03 RID: 110339 RVA: 0x003EC896 File Offset: 0x003EAA96
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TetrisActivityInfo other)
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.tetrisLevelInfos_.Equals(other.tetrisLevelInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601A47D RID: 107645 RVA: 0x003D1798 File Offset: 0x003CF998
+		// Token: 0x0601AF04 RID: 110340 RVA: 0x003EC8CC File Offset: 0x003EAACC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A47E RID: 107646 RVA: 0x003D17CC File Offset: 0x003CF9CC
+		// Token: 0x0601AF05 RID: 110341 RVA: 0x003EC900 File Offset: 0x003EAB00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601A47F RID: 107647 RVA: 0x003D17D9 File Offset: 0x003CF9D9
+		// Token: 0x0601AF06 RID: 110342 RVA: 0x003EC90D File Offset: 0x003EAB0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601A480 RID: 107648 RVA: 0x003D17E2 File Offset: 0x003CF9E2
+		// Token: 0x0601AF07 RID: 110343 RVA: 0x003EC916 File Offset: 0x003EAB16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A481 RID: 107649 RVA: 0x003D180C File Offset: 0x003CFA0C
+		// Token: 0x0601AF08 RID: 110344 RVA: 0x003EC940 File Offset: 0x003EAB40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A482 RID: 107650 RVA: 0x003D1845 File Offset: 0x003CFA45
+		// Token: 0x0601AF09 RID: 110345 RVA: 0x003EC979 File Offset: 0x003EAB79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TetrisActivityInfo other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601A483 RID: 107651 RVA: 0x003D1873 File Offset: 0x003CFA73
+		// Token: 0x0601AF0A RID: 110346 RVA: 0x003EC9A7 File Offset: 0x003EABA7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601A484 RID: 107652 RVA: 0x003D187C File Offset: 0x003CFA7C
+		// Token: 0x0601AF0B RID: 110347 RVA: 0x003EC9B0 File Offset: 0x003EABB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -194,16 +194,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009943 RID: 39235
+		// Token: 0x04009D85 RID: 40325
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009944 RID: 39236
+		// Token: 0x04009D86 RID: 40326
 		public const int TetrisLevelInfosFieldNumber = 1;
 
-		// Token: 0x04009945 RID: 39237
+		// Token: 0x04009D87 RID: 40327
 		private static readonly FieldCodec<TetrisLevelInfo> _repeated_tetrisLevelInfos_codec = FieldCodec.ForMessage<TetrisLevelInfo>(10U, TetrisLevelInfo.Parser);
 
-		// Token: 0x04009946 RID: 39238
+		// Token: 0x04009D88 RID: 40328
 		private readonly RepeatedField<TetrisLevelInfo> tetrisLevelInfos_ = new RepeatedField<TetrisLevelInfo>();
 	}
 }

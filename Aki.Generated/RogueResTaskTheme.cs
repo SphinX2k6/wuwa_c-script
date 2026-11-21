@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001018 RID: 4120
+	// Token: 0x02001100 RID: 4352
 	public struct RogueResTaskTheme : IFlatbufferObject
 	{
-		// Token: 0x170030DD RID: 12509
-		// (get) Token: 0x0600C438 RID: 50232 RVA: 0x002F0501 File Offset: 0x002EE701
+		// Token: 0x17003158 RID: 12632
+		// (get) Token: 0x0600CA82 RID: 51842 RVA: 0x0030C5A1 File Offset: 0x0030A7A1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C439 RID: 50233 RVA: 0x002F050E File Offset: 0x002EE70E
+		// Token: 0x0600CA83 RID: 51843 RVA: 0x0030C5AE File Offset: 0x0030A7AE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C43A RID: 50234 RVA: 0x002F0518 File Offset: 0x002EE718
+		// Token: 0x0600CA84 RID: 51844 RVA: 0x0030C5B8 File Offset: 0x0030A7B8
 		public static RogueResTaskTheme GetRootAsRogueResTaskTheme(ByteBuffer _bb)
 		{
 			return RogueResTaskTheme.GetRootAsRogueResTaskTheme(_bb, default(RogueResTaskTheme));
 		}
 
-		// Token: 0x0600C43B RID: 50235 RVA: 0x002F0534 File Offset: 0x002EE734
+		// Token: 0x0600CA85 RID: 51845 RVA: 0x0030C5D4 File Offset: 0x0030A7D4
 		public static RogueResTaskTheme GetRootAsRogueResTaskTheme(ByteBuffer _bb, RogueResTaskTheme obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C43C RID: 50236 RVA: 0x002F0551 File Offset: 0x002EE751
+		// Token: 0x0600CA86 RID: 51846 RVA: 0x0030C5F1 File Offset: 0x0030A7F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C43D RID: 50237 RVA: 0x002F0560 File Offset: 0x002EE760
+		// Token: 0x0600CA87 RID: 51847 RVA: 0x0030C600 File Offset: 0x0030A800
 		public RogueResTaskTheme __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170030DE RID: 12510
-		// (get) Token: 0x0600C43E RID: 50238 RVA: 0x002F0570 File Offset: 0x002EE770
+		// Token: 0x17003159 RID: 12633
+		// (get) Token: 0x0600CA88 RID: 51848 RVA: 0x0030C610 File Offset: 0x0030A810
 		public int Id
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C43F RID: 50239 RVA: 0x002F05AC File Offset: 0x002EE7AC
+		// Token: 0x0600CA89 RID: 51849 RVA: 0x0030C64C File Offset: 0x0030A84C
 		public int RoleImage(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170030DF RID: 12511
-		// (get) Token: 0x0600C440 RID: 50240 RVA: 0x002F05EC File Offset: 0x002EE7EC
+		// Token: 0x1700315A RID: 12634
+		// (get) Token: 0x0600CA8A RID: 51850 RVA: 0x0030C68C File Offset: 0x0030A88C
 		public int RoleImageLength
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C441 RID: 50241 RVA: 0x002F0617 File Offset: 0x002EE817
+		// Token: 0x0600CA8B RID: 51851 RVA: 0x0030C6B7 File Offset: 0x0030A8B7
 		public Span<int> GetRoleImageBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600C442 RID: 50242 RVA: 0x002F0626 File Offset: 0x002EE826
+		// Token: 0x0600CA8C RID: 51852 RVA: 0x0030C6C6 File Offset: 0x0030A8C6
 		public int[] GetRoleImageArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600C443 RID: 50243 RVA: 0x002F0640 File Offset: 0x002EE840
+		// Token: 0x0600CA8D RID: 51853 RVA: 0x0030C6E0 File Offset: 0x0030A8E0
 		public DicIntString? TabNames(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -115,8 +115,8 @@ namespace Aki.Config
 			return new DicIntString?(default(DicIntString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170030E0 RID: 12512
-		// (get) Token: 0x0600C444 RID: 50244 RVA: 0x002F06A0 File Offset: 0x002EE8A0
+		// Token: 0x1700315B RID: 12635
+		// (get) Token: 0x0600CA8E RID: 51854 RVA: 0x0030C740 File Offset: 0x0030A940
 		public int TabNamesLength
 		{
 			get
@@ -130,42 +130,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C445 RID: 50245 RVA: 0x002F06CC File Offset: 0x002EE8CC
+		// Token: 0x0600CA8F RID: 51855 RVA: 0x0030C76B File Offset: 0x0030A96B
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RoleImageIter()或GetRoleImageBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RoleImage()
+		public int[] RoleImage()
 		{
-			RogueResTaskTheme rogueResTaskTheme = this;
-			return rogueResTaskTheme.GetRoleImageArray() ?? Array.Empty<int>();
+			return this.GetRoleImageArray();
 		}
 
-		// Token: 0x0600C446 RID: 50246 RVA: 0x002F06F0 File Offset: 0x002EE8F0
+		// Token: 0x0600CA90 RID: 51856 RVA: 0x0030C773 File Offset: 0x0030A973
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RoleImageIter()
+		public IEnumerable<int> RoleImageIter()
 		{
 			RogueResTaskTheme.<RoleImageIter>d__19 <RoleImageIter>d__ = new RogueResTaskTheme.<RoleImageIter>d__19(-2);
 			<RoleImageIter>d__.<>3__<>4__this = this;
 			return <RoleImageIter>d__;
 		}
 
-		// Token: 0x0600C447 RID: 50247 RVA: 0x002F0708 File Offset: 0x002EE908
+		// Token: 0x0600CA91 RID: 51857 RVA: 0x0030C788 File Offset: 0x0030A988
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用TabNamesFrozenDict()缓存字典，遍历请使用TabNamesIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, string> TabNames()
+		public Dictionary<int, string> TabNames()
 		{
 			return this.TabNamesIter().ToDictionary((DicIntString element) => element.Key, (DicIntString element) => element.Value);
 		}
 
-		// Token: 0x0600C448 RID: 50248 RVA: 0x002F075E File Offset: 0x002EE95E
+		// Token: 0x0600CA92 RID: 51858 RVA: 0x0030C7DE File Offset: 0x0030A9DE
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntString> TabNamesIter()
+		public IEnumerable<DicIntString> TabNamesIter()
 		{
 			RogueResTaskTheme.<TabNamesIter>d__21 <TabNamesIter>d__ = new RogueResTaskTheme.<TabNamesIter>d__21(-2);
 			<TabNamesIter>d__.<>3__<>4__this = this;
 			return <TabNamesIter>d__;
 		}
 
-		// Token: 0x0600C449 RID: 50249 RVA: 0x002F0774 File Offset: 0x002EE974
+		// Token: 0x0600CA93 RID: 51859 RVA: 0x0030C7F4 File Offset: 0x0030A9F4
 		[NullableContext(2)]
 		public string GetTabNames(int key)
 		{
@@ -178,7 +175,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x0600C44A RID: 50250 RVA: 0x002F079C File Offset: 0x002EE99C
+		// Token: 0x0600CA94 RID: 51860 RVA: 0x0030C81C File Offset: 0x0030AA1C
 		private void EnsureTabNamesCacheIfNeeded()
 		{
 			if (this.TabNamesCache != null)
@@ -188,22 +185,18 @@ namespace Aki.Config
 			this.TabNamesCache = this.TabNamesIter().ToFrozenDictionary((DicIntString kvp) => kvp.Key, (DicIntString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600C44B RID: 50251 RVA: 0x002F0802 File Offset: 0x002EEA02
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<int, string> GetTabNamesFrozenDict(int key)
+		// Token: 0x0600CA95 RID: 51861 RVA: 0x0030C882 File Offset: 0x0030AA82
+		[NullableContext(1)]
+		public FrozenDictionary<int, string> GetTabNamesFrozenDict()
 		{
 			this.EnsureTabNamesCacheIfNeeded();
 			return this.TabNamesCache;
 		}
 
-		// Token: 0x04005106 RID: 20742
+		// Token: 0x040056EE RID: 22254
 		private Table __p;
 
-		// Token: 0x04005107 RID: 20743
+		// Token: 0x040056EF RID: 22255
 		[Nullable(new byte[]
 		{
 			2,

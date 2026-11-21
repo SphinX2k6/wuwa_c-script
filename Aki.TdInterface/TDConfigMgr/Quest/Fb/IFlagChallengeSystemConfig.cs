@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012EC RID: 4844
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001432 RID: 5170
 	public class IFlagChallengeSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006E97 RID: 28311 RVA: 0x0010B2C8 File Offset: 0x001094C8
+		// Token: 0x06007517 RID: 29975 RVA: 0x001195C8 File Offset: 0x001177C8
 		public static IFlagChallengeSystemConfig Create(IFlagChallengeSystemConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002292 RID: 8850
-		// (get) Token: 0x06006E98 RID: 28312 RVA: 0x0010B2E7 File Offset: 0x001094E7
+		// Token: 0x17002455 RID: 9301
+		// (get) Token: 0x06007518 RID: 29976 RVA: 0x001195E7 File Offset: 0x001177E7
 		public override EEnableSystemType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002293 RID: 8851
-		// (get) Token: 0x06006E99 RID: 28313 RVA: 0x0010B2F4 File Offset: 0x001094F4
+		// Token: 0x17002456 RID: 9302
+		// (get) Token: 0x06007519 RID: 29977 RVA: 0x001195F4 File Offset: 0x001177F4
 		public virtual List<IFlagChallengeSystemVar> Vars
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F60 RID: 16224
+		// Token: 0x040042CE RID: 17102
 		private IFlagChallengeSystemConfig Instance;
 
-		// Token: 0x04003F61 RID: 16225
+		// Token: 0x040042CF RID: 17103
 		private List<IFlagChallengeSystemVar> _VarsCache;
 
-		// Token: 0x04003F62 RID: 16226
+		// Token: 0x040042D0 RID: 17104
 		private bool _VarsInited;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200600B RID: 24587
+	// Token: 0x02006669 RID: 26217
 	public enum ESplineMoveDriveMode : byte
 	{
-		// Token: 0x04010032 RID: 65586
+		// Token: 0x04010E12 RID: 69138
 		InputDriven,
-		// Token: 0x04010033 RID: 65587
+		// Token: 0x04010E13 RID: 69139
 		PositionDriven
 	}
 }

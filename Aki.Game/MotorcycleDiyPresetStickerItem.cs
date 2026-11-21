@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200227D RID: 8829
+// Token: 0x02001761 RID: 5985
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class MotorcycleDiyPresetStickerItem : GridProxyAbstract<MotorcycleDiyEditStickerDecoItemData>
 {
-	// Token: 0x060113E3 RID: 70627 RVA: 0x00435468 File Offset: 0x00433668
+	// Token: 0x0600E879 RID: 59513 RVA: 0x00442074 File Offset: 0x00440274
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,14 +32,14 @@ public class MotorcycleDiyPresetStickerItem : GridProxyAbstract<MotorcycleDiyEdi
 		};
 	}
 
-	// Token: 0x060113E4 RID: 70628 RVA: 0x00435540 File Offset: 0x00433740
+	// Token: 0x0600E87A RID: 59514 RVA: 0x0044214C File Offset: 0x0044034C
 	public void SetEnableClick(bool isEnable)
 	{
 		EToggleState state = isEnable ? EToggleState.ETT_UnChecked : EToggleState.ETT_UnDetermined;
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x060113E5 RID: 70629 RVA: 0x00435568 File Offset: 0x00433768
+	// Token: 0x0600E87B RID: 59515 RVA: 0x00442174 File Offset: 0x00440374
 	[NullableContext(1)]
 	public override void Refresh(MotorcycleDiyEditStickerDecoItemData data, bool isSelected, int gridIndex)
 	{
@@ -85,7 +85,7 @@ public class MotorcycleDiyPresetStickerItem : GridProxyAbstract<MotorcycleDiyEdi
 		base.SetTextureByPath(motorStickerConfig.Value.StickerIconPath, texture, null, null);
 	}
 
-	// Token: 0x060113E6 RID: 70630 RVA: 0x004356D4 File Offset: 0x004338D4
+	// Token: 0x0600E87C RID: 59516 RVA: 0x004422E0 File Offset: 0x004404E0
 	private void OnClickItem(EToggleState state)
 	{
 		if (this.Data == null)
@@ -100,11 +100,11 @@ public class MotorcycleDiyPresetStickerItem : GridProxyAbstract<MotorcycleDiyEdi
 		onClickToggleBack(this.Data);
 	}
 
-	// Token: 0x0400832C RID: 33580
+	// Token: 0x0400846A RID: 33898
 	[Nullable(2)]
 	private MotorcycleDiyEditStickerDecoItemData Data;
 
-	// Token: 0x0400832D RID: 33581
+	// Token: 0x0400846B RID: 33899
 	[Nullable(new byte[]
 	{
 		2,
@@ -112,28 +112,28 @@ public class MotorcycleDiyPresetStickerItem : GridProxyAbstract<MotorcycleDiyEdi
 	})]
 	public Action<MotorcycleDiyEditStickerDecoItemData> OnClickToggleBack;
 
-	// Token: 0x020087C2 RID: 34754
+	// Token: 0x0200794B RID: 31051
 	private class EStickerItemComponent
 	{
-		// Token: 0x0402C1EC RID: 180716
+		// Token: 0x04027504 RID: 161028
 		public const int TogItem = 0;
 
-		// Token: 0x0402C1ED RID: 180717
+		// Token: 0x04027505 RID: 161029
 		public const int TexIcon = 1;
 
-		// Token: 0x0402C1EE RID: 180718
+		// Token: 0x04027506 RID: 161030
 		public const int EmptyItem = 2;
 
-		// Token: 0x0402C1EF RID: 180719
+		// Token: 0x04027507 RID: 161031
 		public const int TexIconPart = 3;
 
-		// Token: 0x0402C1F0 RID: 180720
+		// Token: 0x04027508 RID: 161032
 		public const int NoneItem = 4;
 
-		// Token: 0x0402C1F1 RID: 180721
+		// Token: 0x04027509 RID: 161033
 		public const int SprQuality = 5;
 
-		// Token: 0x0402C1F2 RID: 180722
+		// Token: 0x0402750A RID: 161034
 		public const int ChangeTagItem = 6;
 	}
 }

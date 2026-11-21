@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200681D RID: 26653
+	// Token: 0x02006E9D RID: 28317
 	public class IFlowOpenPhoneMessageT
 	{
-		// Token: 0x1700C5FB RID: 50683
-		// (get) Token: 0x0602E760 RID: 190304 RVA: 0x0065758F File Offset: 0x0065578F
-		// (set) Token: 0x0602E761 RID: 190305 RVA: 0x00657597 File Offset: 0x00655797
+		// Token: 0x1700CFB5 RID: 53173
+		// (get) Token: 0x06030FBC RID: 200636 RVA: 0x006A50C7 File Offset: 0x006A32C7
+		// (set) Token: 0x06030FBD RID: 200637 RVA: 0x006A50CF File Offset: 0x006A32CF
 		public EPhoneSystemInteractType Type { get; set; }
 
-		// Token: 0x1700C5FC RID: 50684
-		// (get) Token: 0x0602E762 RID: 190306 RVA: 0x006575A0 File Offset: 0x006557A0
-		// (set) Token: 0x0602E763 RID: 190307 RVA: 0x006575A8 File Offset: 0x006557A8
+		// Token: 0x1700CFB6 RID: 53174
+		// (get) Token: 0x06030FBE RID: 200638 RVA: 0x006A50D8 File Offset: 0x006A32D8
+		// (set) Token: 0x06030FBF RID: 200639 RVA: 0x006A50E0 File Offset: 0x006A32E0
 		public IMessageBoardT PhoneBoardType { get; set; }
 
-		// Token: 0x0602E764 RID: 190308 RVA: 0x006575B1 File Offset: 0x006557B1
+		// Token: 0x06030FC0 RID: 200640 RVA: 0x006A50E9 File Offset: 0x006A32E9
 		public IFlowOpenPhoneMessageT()
 		{
 			this.Type = EPhoneSystemInteractType.SendPhoneMessage;

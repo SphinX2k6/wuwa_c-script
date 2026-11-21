@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005942 RID: 22850
+	// Token: 0x0200491B RID: 18715
 	public class HonamiStoryPollution : IHonamiStoryPollution
 	{
-		// Token: 0x17008B01 RID: 35585
-		// (get) Token: 0x0603A013 RID: 237587 RVA: 0x00DCA57C File Offset: 0x00DC877C
-		// (set) Token: 0x0603A014 RID: 237588 RVA: 0x00DCA584 File Offset: 0x00DC8784
+		// Token: 0x17005ECD RID: 24269
+		// (get) Token: 0x0602EF36 RID: 192310 RVA: 0x00D19830 File Offset: 0x00D17A30
+		// (set) Token: 0x0602EF37 RID: 192311 RVA: 0x00D19838 File Offset: 0x00D17A38
 		public int PollutionLevel { get; set; }
 
-		// Token: 0x17008B02 RID: 35586
-		// (get) Token: 0x0603A015 RID: 237589 RVA: 0x00DCA58D File Offset: 0x00DC878D
-		// (set) Token: 0x0603A016 RID: 237590 RVA: 0x00DCA595 File Offset: 0x00DC8795
+		// Token: 0x17005ECE RID: 24270
+		// (get) Token: 0x0602EF38 RID: 192312 RVA: 0x00D19841 File Offset: 0x00D17A41
+		// (set) Token: 0x0602EF39 RID: 192313 RVA: 0x00D19849 File Offset: 0x00D17A49
 		public int PersistMilliseconds { get; set; }
 
-		// Token: 0x17008B03 RID: 35587
-		// (get) Token: 0x0603A017 RID: 237591 RVA: 0x00DCA59E File Offset: 0x00DC879E
-		// (set) Token: 0x0603A018 RID: 237592 RVA: 0x00DCA5A6 File Offset: 0x00DC87A6
+		// Token: 0x17005ECF RID: 24271
+		// (get) Token: 0x0602EF3A RID: 192314 RVA: 0x00D19852 File Offset: 0x00D17A52
+		// (set) Token: 0x0602EF3B RID: 192315 RVA: 0x00D1985A File Offset: 0x00D17A5A
 		public int MonsterEnhanceLevel { get; set; }
 	}
 }

@@ -4,95 +4,95 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005740 RID: 22336
+	// Token: 0x02005D47 RID: 23879
 	public class IPilotThrowT
 	{
-		// Token: 0x1700A691 RID: 42641
-		// (get) Token: 0x060256A5 RID: 153253 RVA: 0x00529F21 File Offset: 0x00528121
-		// (set) Token: 0x060256A6 RID: 153254 RVA: 0x00529F29 File Offset: 0x00528129
+		// Token: 0x1700AFB5 RID: 44981
+		// (get) Token: 0x06027BC5 RID: 162757 RVA: 0x005700AD File Offset: 0x0056E2AD
+		// (set) Token: 0x06027BC6 RID: 162758 RVA: 0x005700B5 File Offset: 0x0056E2B5
 		public EHookInteractType Type { get; set; }
 
-		// Token: 0x1700A692 RID: 42642
-		// (get) Token: 0x060256A7 RID: 153255 RVA: 0x00529F32 File Offset: 0x00528132
-		// (set) Token: 0x060256A8 RID: 153256 RVA: 0x00529F3A File Offset: 0x0052813A
+		// Token: 0x1700AFB6 RID: 44982
+		// (get) Token: 0x06027BC7 RID: 162759 RVA: 0x005700BE File Offset: 0x0056E2BE
+		// (set) Token: 0x06027BC8 RID: 162760 RVA: 0x005700C6 File Offset: 0x0056E2C6
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x1700A693 RID: 42643
-		// (get) Token: 0x060256A9 RID: 153257 RVA: 0x00529F43 File Offset: 0x00528143
-		// (set) Token: 0x060256AA RID: 153258 RVA: 0x00529F4B File Offset: 0x0052814B
+		// Token: 0x1700AFB7 RID: 44983
+		// (get) Token: 0x06027BC9 RID: 162761 RVA: 0x005700CF File Offset: 0x0056E2CF
+		// (set) Token: 0x06027BCA RID: 162762 RVA: 0x005700D7 File Offset: 0x0056E2D7
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x1700A694 RID: 42644
-		// (get) Token: 0x060256AB RID: 153259 RVA: 0x00529F54 File Offset: 0x00528154
-		// (set) Token: 0x060256AC RID: 153260 RVA: 0x00529F5C File Offset: 0x0052815C
+		// Token: 0x1700AFB8 RID: 44984
+		// (get) Token: 0x06027BCB RID: 162763 RVA: 0x005700E0 File Offset: 0x0056E2E0
+		// (set) Token: 0x06027BCC RID: 162764 RVA: 0x005700E8 File Offset: 0x0056E2E8
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x1700A695 RID: 42645
-		// (get) Token: 0x060256AD RID: 153261 RVA: 0x00529F65 File Offset: 0x00528165
-		// (set) Token: 0x060256AE RID: 153262 RVA: 0x00529F6D File Offset: 0x0052816D
+		// Token: 0x1700AFB9 RID: 44985
+		// (get) Token: 0x06027BCD RID: 162765 RVA: 0x005700F1 File Offset: 0x0056E2F1
+		// (set) Token: 0x06027BCE RID: 162766 RVA: 0x005700F9 File Offset: 0x0056E2F9
 		public IClientHookActionConfigT ClientHookActionConfig { get; set; }
 
-		// Token: 0x1700A696 RID: 42646
-		// (get) Token: 0x060256AF RID: 153263 RVA: 0x00529F76 File Offset: 0x00528176
-		// (set) Token: 0x060256B0 RID: 153264 RVA: 0x00529F7E File Offset: 0x0052817E
+		// Token: 0x1700AFBA RID: 44986
+		// (get) Token: 0x06027BCF RID: 162767 RVA: 0x00570102 File Offset: 0x0056E302
+		// (set) Token: 0x06027BD0 RID: 162768 RVA: 0x0057010A File Offset: 0x0056E30A
 		public int TitanEntityId { get; set; }
 
-		// Token: 0x1700A697 RID: 42647
-		// (get) Token: 0x060256B1 RID: 153265 RVA: 0x00529F87 File Offset: 0x00528187
-		// (set) Token: 0x060256B2 RID: 153266 RVA: 0x00529F8F File Offset: 0x0052818F
+		// Token: 0x1700AFBB RID: 44987
+		// (get) Token: 0x06027BD1 RID: 162769 RVA: 0x00570113 File Offset: 0x0056E313
+		// (set) Token: 0x06027BD2 RID: 162770 RVA: 0x0057011B File Offset: 0x0056E31B
 		public float MinPitchAngle { get; set; }
 
-		// Token: 0x1700A698 RID: 42648
-		// (get) Token: 0x060256B3 RID: 153267 RVA: 0x00529F98 File Offset: 0x00528198
-		// (set) Token: 0x060256B4 RID: 153268 RVA: 0x00529FA0 File Offset: 0x005281A0
+		// Token: 0x1700AFBC RID: 44988
+		// (get) Token: 0x06027BD3 RID: 162771 RVA: 0x00570124 File Offset: 0x0056E324
+		// (set) Token: 0x06027BD4 RID: 162772 RVA: 0x0057012C File Offset: 0x0056E32C
 		public float DefaultPitchAngle { get; set; }
 
-		// Token: 0x1700A699 RID: 42649
-		// (get) Token: 0x060256B5 RID: 153269 RVA: 0x00529FA9 File Offset: 0x005281A9
-		// (set) Token: 0x060256B6 RID: 153270 RVA: 0x00529FB1 File Offset: 0x005281B1
+		// Token: 0x1700AFBD RID: 44989
+		// (get) Token: 0x06027BD5 RID: 162773 RVA: 0x00570135 File Offset: 0x0056E335
+		// (set) Token: 0x06027BD6 RID: 162774 RVA: 0x0057013D File Offset: 0x0056E33D
 		public float MaxPitchAngle { get; set; }
 
-		// Token: 0x1700A69A RID: 42650
-		// (get) Token: 0x060256B7 RID: 153271 RVA: 0x00529FBA File Offset: 0x005281BA
-		// (set) Token: 0x060256B8 RID: 153272 RVA: 0x00529FC2 File Offset: 0x005281C2
+		// Token: 0x1700AFBE RID: 44990
+		// (get) Token: 0x06027BD7 RID: 162775 RVA: 0x00570146 File Offset: 0x0056E346
+		// (set) Token: 0x06027BD8 RID: 162776 RVA: 0x0057014E File Offset: 0x0056E34E
 		public float MaxYawAngleDelta { get; set; }
 
-		// Token: 0x1700A69B RID: 42651
-		// (get) Token: 0x060256B9 RID: 153273 RVA: 0x00529FCB File Offset: 0x005281CB
-		// (set) Token: 0x060256BA RID: 153274 RVA: 0x00529FD3 File Offset: 0x005281D3
+		// Token: 0x1700AFBF RID: 44991
+		// (get) Token: 0x06027BD9 RID: 162777 RVA: 0x00570157 File Offset: 0x0056E357
+		// (set) Token: 0x06027BDA RID: 162778 RVA: 0x0057015F File Offset: 0x0056E35F
 		public float FlySpeed { get; set; }
 
-		// Token: 0x1700A69C RID: 42652
-		// (get) Token: 0x060256BB RID: 153275 RVA: 0x00529FDC File Offset: 0x005281DC
-		// (set) Token: 0x060256BC RID: 153276 RVA: 0x00529FE4 File Offset: 0x005281E4
+		// Token: 0x1700AFC0 RID: 44992
+		// (get) Token: 0x06027BDB RID: 162779 RVA: 0x00570168 File Offset: 0x0056E368
+		// (set) Token: 0x06027BDC RID: 162780 RVA: 0x00570170 File Offset: 0x0056E370
 		public float Gravity { get; set; }
 
-		// Token: 0x1700A69D RID: 42653
-		// (get) Token: 0x060256BD RID: 153277 RVA: 0x00529FED File Offset: 0x005281ED
-		// (set) Token: 0x060256BE RID: 153278 RVA: 0x00529FF5 File Offset: 0x005281F5
+		// Token: 0x1700AFC1 RID: 44993
+		// (get) Token: 0x06027BDD RID: 162781 RVA: 0x00570179 File Offset: 0x0056E379
+		// (set) Token: 0x06027BDE RID: 162782 RVA: 0x00570181 File Offset: 0x0056E381
 		public List<IPilotThrowTargetT> TargetList { get; set; }
 
-		// Token: 0x1700A69E RID: 42654
-		// (get) Token: 0x060256BF RID: 153279 RVA: 0x00529FFE File Offset: 0x005281FE
-		// (set) Token: 0x060256C0 RID: 153280 RVA: 0x0052A006 File Offset: 0x00528206
+		// Token: 0x1700AFC2 RID: 44994
+		// (get) Token: 0x06027BDF RID: 162783 RVA: 0x0057018A File Offset: 0x0056E38A
+		// (set) Token: 0x06027BE0 RID: 162784 RVA: 0x00570192 File Offset: 0x0056E392
 		public EPilotThrowAutoThrowType AutoThrowType { get; set; }
 
-		// Token: 0x1700A69F RID: 42655
-		// (get) Token: 0x060256C1 RID: 153281 RVA: 0x0052A00F File Offset: 0x0052820F
-		// (set) Token: 0x060256C2 RID: 153282 RVA: 0x0052A017 File Offset: 0x00528217
+		// Token: 0x1700AFC3 RID: 44995
+		// (get) Token: 0x06027BE1 RID: 162785 RVA: 0x0057019B File Offset: 0x0056E39B
+		// (set) Token: 0x06027BE2 RID: 162786 RVA: 0x005701A3 File Offset: 0x0056E3A3
 		public bool IsAutoRide { get; set; }
 
-		// Token: 0x1700A6A0 RID: 42656
-		// (get) Token: 0x060256C3 RID: 153283 RVA: 0x0052A020 File Offset: 0x00528220
-		// (set) Token: 0x060256C4 RID: 153284 RVA: 0x0052A028 File Offset: 0x00528228
+		// Token: 0x1700AFC4 RID: 44996
+		// (get) Token: 0x06027BE3 RID: 162787 RVA: 0x005701AC File Offset: 0x0056E3AC
+		// (set) Token: 0x06027BE4 RID: 162788 RVA: 0x005701B4 File Offset: 0x0056E3B4
 		public bool DisableInterrupt { get; set; }
 
-		// Token: 0x1700A6A1 RID: 42657
-		// (get) Token: 0x060256C5 RID: 153285 RVA: 0x0052A031 File Offset: 0x00528231
-		// (set) Token: 0x060256C6 RID: 153286 RVA: 0x0052A039 File Offset: 0x00528239
+		// Token: 0x1700AFC5 RID: 44997
+		// (get) Token: 0x06027BE5 RID: 162789 RVA: 0x005701BD File Offset: 0x0056E3BD
+		// (set) Token: 0x06027BE6 RID: 162790 RVA: 0x005701C5 File Offset: 0x0056E3C5
 		public byte NullMask { get; set; }
 
-		// Token: 0x060256C7 RID: 153287 RVA: 0x0052A044 File Offset: 0x00528244
+		// Token: 0x06027BE7 RID: 162791 RVA: 0x005701D0 File Offset: 0x0056E3D0
 		public IPilotThrowT()
 		{
 			this.Type = EHookInteractType.FixedPointHook;

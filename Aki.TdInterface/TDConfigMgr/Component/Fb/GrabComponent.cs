@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A6F RID: 2671
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B39 RID: 2873
 	public class GrabComponent : IComponentBase
 	{
-		// Token: 0x06003D92 RID: 15762 RVA: 0x0009E0BD File Offset: 0x0009C2BD
+		// Token: 0x060041BB RID: 16827 RVA: 0x000A7675 File Offset: 0x000A5875
 		public static GrabComponent Create(IGrabComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E71 RID: 3697
-		// (get) Token: 0x06003D93 RID: 15763 RVA: 0x0009E0DC File Offset: 0x0009C2DC
+		// Token: 0x17000F44 RID: 3908
+		// (get) Token: 0x060041BC RID: 16828 RVA: 0x000A7694 File Offset: 0x000A5894
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E72 RID: 3698
-		// (get) Token: 0x06003D94 RID: 15764 RVA: 0x0009E114 File Offset: 0x0009C314
+		// Token: 0x17000F45 RID: 3909
+		// (get) Token: 0x060041BD RID: 16829 RVA: 0x000A76CC File Offset: 0x000A58CC
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E73 RID: 3699
-		// (get) Token: 0x06003D95 RID: 15765 RVA: 0x0009E12A File Offset: 0x0009C32A
+		// Token: 0x17000F46 RID: 3910
+		// (get) Token: 0x060041BE RID: 16830 RVA: 0x000A76E2 File Offset: 0x000A58E2
 		public virtual VectorInfo GrabPos
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E74 RID: 3700
-		// (get) Token: 0x06003D96 RID: 15766 RVA: 0x0009E15E File Offset: 0x0009C35E
+		// Token: 0x17000F47 RID: 3911
+		// (get) Token: 0x060041BF RID: 16831 RVA: 0x000A7716 File Offset: 0x000A5916
 		public virtual int ThrowPow
 		{
 			get
@@ -73,8 +71,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E75 RID: 3701
-		// (get) Token: 0x06003D97 RID: 15767 RVA: 0x0009E16B File Offset: 0x0009C36B
+		// Token: 0x17000F48 RID: 3912
+		// (get) Token: 0x060041C0 RID: 16832 RVA: 0x000A7723 File Offset: 0x000A5923
 		public virtual int ThrowHight
 		{
 			get
@@ -83,14 +81,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400224E RID: 8782
+		// Token: 0x0400246A RID: 9322
 		private IGrabComponent Instance;
 
-		// Token: 0x0400224F RID: 8783
+		// Token: 0x0400246B RID: 9323
 		[Nullable(2)]
 		private VectorInfo _GrabPosCache;
 
-		// Token: 0x04002250 RID: 8784
+		// Token: 0x0400246C RID: 9324
 		private bool _GrabPosInited;
 	}
 }

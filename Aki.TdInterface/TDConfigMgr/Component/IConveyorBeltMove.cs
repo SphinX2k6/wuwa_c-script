@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000289 RID: 649
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002CC RID: 716
 	public class IConveyorBeltMove
 	{
-		// Token: 0x06000C19 RID: 3097 RVA: 0x0002F918 File Offset: 0x0002DB18
+		// Token: 0x06000D33 RID: 3379 RVA: 0x00032608 File Offset: 0x00030808
 		private IConveyorBeltMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C1A RID: 3098 RVA: 0x0002F950 File Offset: 0x0002DB50
+		// Token: 0x06000D34 RID: 3380 RVA: 0x00032640 File Offset: 0x00030840
 		public static IConveyorBeltMove Create([Nullable(2)] IConveyorBeltMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C1B RID: 3099 RVA: 0x0002F963 File Offset: 0x0002DB63
+		// Token: 0x06000D35 RID: 3381 RVA: 0x00032653 File Offset: 0x00030853
 		public static IConveyorBeltMove CreateFromSetValue([Nullable(2)] IConveyorBeltMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C1C RID: 3100 RVA: 0x0002F976 File Offset: 0x0002DB76
+		// Token: 0x06000D36 RID: 3382 RVA: 0x00032666 File Offset: 0x00030866
 		public IConveyorBeltMove_SetValue ToSetValue()
 		{
 			return new IConveyorBeltMove_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700039C RID: 924
-		// (get) Token: 0x06000C1D RID: 3101 RVA: 0x0002F989 File Offset: 0x0002DB89
-		// (set) Token: 0x06000C1E RID: 3102 RVA: 0x0002F9B4 File Offset: 0x0002DBB4
+		// Token: 0x170003E4 RID: 996
+		// (get) Token: 0x06000D37 RID: 3383 RVA: 0x00032679 File Offset: 0x00030879
+		// (set) Token: 0x06000D38 RID: 3384 RVA: 0x000326A4 File Offset: 0x000308A4
 		public virtual EConveyorBeltMoveType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B83 RID: 2947
+		// Token: 0x04000C64 RID: 3172
 		[Nullable(2)]
 		protected IConveyorBeltMove FbInstance;
 
-		// Token: 0x04000B84 RID: 2948
+		// Token: 0x04000C65 RID: 3173
 		[Nullable(2)]
 		protected IConveyorBeltMove_SetValue PocoInterface;
 	}

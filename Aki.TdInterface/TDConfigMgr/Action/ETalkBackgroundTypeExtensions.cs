@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200244F RID: 9295
+	// Token: 0x020026F0 RID: 9968
 	public static class ETalkBackgroundTypeExtensions
 	{
-		// Token: 0x0600C9E2 RID: 51682 RVA: 0x001DAF2C File Offset: 0x001D912C
+		// Token: 0x0600D692 RID: 54930 RVA: 0x001F4F9C File Offset: 0x001F319C
 		public static string ToEnumString(this ETalkBackgroundType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9E3 RID: 51683 RVA: 0x001DAF8C File Offset: 0x001D918C
+		// Token: 0x0600D693 RID: 54931 RVA: 0x001F4FFC File Offset: 0x001F31FC
 		public static ETalkBackgroundType FromString(string name)
 		{
 			ETalkBackgroundType result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9E4 RID: 51684 RVA: 0x001DAFB8 File Offset: 0x001D91B8
+		// Token: 0x0600D694 RID: 54932 RVA: 0x001F5028 File Offset: 0x001F3228
 		public static bool TryFromString(string name, out ETalkBackgroundType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C9E5 RID: 51685 RVA: 0x001DB032 File Offset: 0x001D9232
+		// Token: 0x0600D695 RID: 54933 RVA: 0x001F50A2 File Offset: 0x001F32A2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9E6 RID: 51686 RVA: 0x001DB062 File Offset: 0x001D9262
+		// Token: 0x0600D696 RID: 54934 RVA: 0x001F50D2 File Offset: 0x001F32D2
 		public static ETalkBackgroundType[] GetValues()
 		{
 			return new ETalkBackgroundType[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9E7 RID: 51687 RVA: 0x001DB075 File Offset: 0x001D9275
+		// Token: 0x0600D697 RID: 54935 RVA: 0x001F50E5 File Offset: 0x001F32E5
 		public static string[] GetNames()
 		{
 			return new string[]

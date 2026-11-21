@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004860 RID: 18528
+	// Token: 0x02004CC8 RID: 19656
 	public class IEditorIndentationDisplaySettingT
 	{
-		// Token: 0x1700856A RID: 34154
-		// (get) Token: 0x0601CBE8 RID: 117736 RVA: 0x0041048A File Offset: 0x0040E68A
-		// (set) Token: 0x0601CBE9 RID: 117737 RVA: 0x00410492 File Offset: 0x0040E692
+		// Token: 0x17008BB9 RID: 35769
+		// (get) Token: 0x0601E3EF RID: 123887 RVA: 0x0043CF36 File Offset: 0x0043B136
+		// (set) Token: 0x0601E3F0 RID: 123888 RVA: 0x0043CF3E File Offset: 0x0043B13E
 		public bool EnabledShowStructureIndentLine { get; set; }
 
-		// Token: 0x1700856B RID: 34155
-		// (get) Token: 0x0601CBEA RID: 117738 RVA: 0x0041049B File Offset: 0x0040E69B
-		// (set) Token: 0x0601CBEB RID: 117739 RVA: 0x004104A3 File Offset: 0x0040E6A3
+		// Token: 0x17008BBA RID: 35770
+		// (get) Token: 0x0601E3F1 RID: 123889 RVA: 0x0043CF47 File Offset: 0x0043B147
+		// (set) Token: 0x0601E3F2 RID: 123890 RVA: 0x0043CF4F File Offset: 0x0043B14F
 		public bool EnabledShowStructureBlock { get; set; }
 
-		// Token: 0x1700856C RID: 34156
-		// (get) Token: 0x0601CBEC RID: 117740 RVA: 0x004104AC File Offset: 0x0040E6AC
-		// (set) Token: 0x0601CBED RID: 117741 RVA: 0x004104B4 File Offset: 0x0040E6B4
+		// Token: 0x17008BBB RID: 35771
+		// (get) Token: 0x0601E3F3 RID: 123891 RVA: 0x0043CF58 File Offset: 0x0043B158
+		// (set) Token: 0x0601E3F4 RID: 123892 RVA: 0x0043CF60 File Offset: 0x0043B160
 		public bool EnabledShowArrayElementPrefixLine { get; set; }
 
-		// Token: 0x1700856D RID: 34157
-		// (get) Token: 0x0601CBEE RID: 117742 RVA: 0x004104BD File Offset: 0x0040E6BD
-		// (set) Token: 0x0601CBEF RID: 117743 RVA: 0x004104C5 File Offset: 0x0040E6C5
+		// Token: 0x17008BBC RID: 35772
+		// (get) Token: 0x0601E3F5 RID: 123893 RVA: 0x0043CF69 File Offset: 0x0043B169
+		// (set) Token: 0x0601E3F6 RID: 123894 RVA: 0x0043CF71 File Offset: 0x0043B171
 		public float BaseGray { get; set; }
 
-		// Token: 0x1700856E RID: 34158
-		// (get) Token: 0x0601CBF0 RID: 117744 RVA: 0x004104CE File Offset: 0x0040E6CE
-		// (set) Token: 0x0601CBF1 RID: 117745 RVA: 0x004104D6 File Offset: 0x0040E6D6
+		// Token: 0x17008BBD RID: 35773
+		// (get) Token: 0x0601E3F7 RID: 123895 RVA: 0x0043CF7A File Offset: 0x0043B17A
+		// (set) Token: 0x0601E3F8 RID: 123896 RVA: 0x0043CF82 File Offset: 0x0043B182
 		public float MaxGray { get; set; }
 
-		// Token: 0x1700856F RID: 34159
-		// (get) Token: 0x0601CBF2 RID: 117746 RVA: 0x004104DF File Offset: 0x0040E6DF
-		// (set) Token: 0x0601CBF3 RID: 117747 RVA: 0x004104E7 File Offset: 0x0040E6E7
+		// Token: 0x17008BBE RID: 35774
+		// (get) Token: 0x0601E3F9 RID: 123897 RVA: 0x0043CF8B File Offset: 0x0043B18B
+		// (set) Token: 0x0601E3FA RID: 123898 RVA: 0x0043CF93 File Offset: 0x0043B193
 		public int MaxDepth { get; set; }
 
-		// Token: 0x17008570 RID: 34160
-		// (get) Token: 0x0601CBF4 RID: 117748 RVA: 0x004104F0 File Offset: 0x0040E6F0
-		// (set) Token: 0x0601CBF5 RID: 117749 RVA: 0x004104F8 File Offset: 0x0040E6F8
+		// Token: 0x17008BBF RID: 35775
+		// (get) Token: 0x0601E3FB RID: 123899 RVA: 0x0043CF9C File Offset: 0x0043B19C
+		// (set) Token: 0x0601E3FC RID: 123900 RVA: 0x0043CFA4 File Offset: 0x0043B1A4
 		public float SameLevelChangeStrength { get; set; }
 
-		// Token: 0x0601CBF6 RID: 117750 RVA: 0x00410504 File Offset: 0x0040E704
+		// Token: 0x0601E3FD RID: 123901 RVA: 0x0043CFB0 File Offset: 0x0043B1B0
 		public IEditorIndentationDisplaySettingT()
 		{
 			this.EnabledShowStructureIndentLine = false;

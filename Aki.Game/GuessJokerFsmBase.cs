@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200103E RID: 4158
+// Token: 0x020004F2 RID: 1266
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class GuessJokerFsmBase<[Nullable(2)] TType, [Nullable(0)] TState> where TState : GuessJokerStageBase
 {
-	// Token: 0x06006AB3 RID: 27315 RVA: 0x001579E2 File Offset: 0x00155BE2
+	// Token: 0x06003E48 RID: 15944 RVA: 0x0016030A File Offset: 0x0015E50A
 	public void Init()
 	{
 		this.InitStateInstance();
 	}
 
-	// Token: 0x06006AB4 RID: 27316 RVA: 0x001579EA File Offset: 0x00155BEA
+	// Token: 0x06003E49 RID: 15945 RVA: 0x00160312 File Offset: 0x0015E512
 	public void Tick(float deltaTime)
 	{
 		if (this.CurrentState != null)
@@ -22,7 +22,7 @@ public abstract class GuessJokerFsmBase<[Nullable(2)] TType, [Nullable(0)] TStat
 		}
 	}
 
-	// Token: 0x06006AB5 RID: 27317 RVA: 0x00157A0C File Offset: 0x00155C0C
+	// Token: 0x06003E4A RID: 15946 RVA: 0x00160334 File Offset: 0x0015E534
 	protected void RegisterState(TType type, TState state)
 	{
 		if (this.StateMap.ContainsKey(type))
@@ -38,7 +38,7 @@ public abstract class GuessJokerFsmBase<[Nullable(2)] TType, [Nullable(0)] TStat
 		this.StateMap[type] = state;
 	}
 
-	// Token: 0x06006AB6 RID: 27318 RVA: 0x00157A64 File Offset: 0x00155C64
+	// Token: 0x06003E4B RID: 15947 RVA: 0x0016038C File Offset: 0x0015E58C
 	public void ChangeState(TType stateType)
 	{
 		if (!this.CheckCanChangeState(this.CurrentStateType, stateType))
@@ -59,7 +59,7 @@ public abstract class GuessJokerFsmBase<[Nullable(2)] TType, [Nullable(0)] TStat
 		this.CurrentState.Enter();
 	}
 
-	// Token: 0x06006AB7 RID: 27319 RVA: 0x00157AD0 File Offset: 0x00155CD0
+	// Token: 0x06003E4C RID: 15948 RVA: 0x001603F8 File Offset: 0x0015E5F8
 	[return: Nullable(2)]
 	private TState GetStateInstance(TType stateType)
 	{
@@ -77,32 +77,32 @@ public abstract class GuessJokerFsmBase<[Nullable(2)] TType, [Nullable(0)] TStat
 		return result;
 	}
 
-	// Token: 0x06006AB8 RID: 27320 RVA: 0x00157B27 File Offset: 0x00155D27
+	// Token: 0x06003E4D RID: 15949 RVA: 0x0016044F File Offset: 0x0015E64F
 	public TType GetCurrentStateType()
 	{
 		return this.CurrentStateType;
 	}
 
-	// Token: 0x06006AB9 RID: 27321 RVA: 0x00157B2F File Offset: 0x00155D2F
+	// Token: 0x06003E4E RID: 15950 RVA: 0x00160457 File Offset: 0x0015E657
 	[NullableContext(2)]
 	public TState GetCurrentState()
 	{
 		return this.CurrentState;
 	}
 
-	// Token: 0x06006ABA RID: 27322
+	// Token: 0x06003E4F RID: 15951
 	protected abstract void InitStateInstance();
 
-	// Token: 0x06006ABB RID: 27323
+	// Token: 0x06003E50 RID: 15952
 	protected abstract bool CheckCanChangeState(TType curStateType, TType nextStateType);
 
-	// Token: 0x04003130 RID: 12592
+	// Token: 0x040031C9 RID: 12745
 	[Nullable(2)]
 	protected TState CurrentState;
 
-	// Token: 0x04003131 RID: 12593
+	// Token: 0x040031CA RID: 12746
 	protected TType CurrentStateType;
 
-	// Token: 0x04003132 RID: 12594
+	// Token: 0x040031CB RID: 12747
 	protected Dictionary<TType, TState> StateMap = new Dictionary<TType, TState>();
 }

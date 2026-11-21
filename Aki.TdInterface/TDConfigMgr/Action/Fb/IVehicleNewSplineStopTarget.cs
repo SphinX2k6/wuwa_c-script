@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002735 RID: 10037
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A01 RID: 10753
 	public class IVehicleNewSplineStopTarget : INewSplineStopTarget
 	{
-		// Token: 0x0600DFBC RID: 57276 RVA: 0x00212419 File Offset: 0x00210619
+		// Token: 0x0600EDBC RID: 60860 RVA: 0x0022EF51 File Offset: 0x0022D151
 		public static IVehicleNewSplineStopTarget Create(IVehicleNewSplineStopTarget? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004314 RID: 17172
-		// (get) Token: 0x0600DFBD RID: 57277 RVA: 0x00212438 File Offset: 0x00210638
+		// Token: 0x17004668 RID: 18024
+		// (get) Token: 0x0600EDBD RID: 60861 RVA: 0x0022EF70 File Offset: 0x0022D170
 		public override ENewSplineMoveTargetType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004315 RID: 17173
-		// (get) Token: 0x0600DFBE RID: 57278 RVA: 0x00212445 File Offset: 0x00210645
+		// Token: 0x17004669 RID: 18025
+		// (get) Token: 0x0600EDBE RID: 60862 RVA: 0x0022EF7D File Offset: 0x0022D17D
 		public virtual ITargetVehicle TargetVehicle
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C21 RID: 31777
+		// Token: 0x040082CF RID: 33487
 		private IVehicleNewSplineStopTarget Instance;
 
-		// Token: 0x04007C22 RID: 31778
+		// Token: 0x040082D0 RID: 33488
 		private ITargetVehicle _TargetVehicleCache;
 
-		// Token: 0x04007C23 RID: 31779
+		// Token: 0x040082D1 RID: 33489
 		private bool _TargetVehicleInited;
 	}
 }

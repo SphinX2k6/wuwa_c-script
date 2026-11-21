@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001663 RID: 5731
+	// Token: 0x020017D3 RID: 6099
 	public class EntityTurnTo_SetValue
 	{
-		// Token: 0x04004CC3 RID: 19651
+		// Token: 0x040050BE RID: 20670
 		public int EntityId;
 
-		// Token: 0x04004CC4 RID: 19652
-		[Nullable(1)]
+		// Token: 0x040050BF RID: 20671
 		public IActorTurnToData Target;
 
-		// Token: 0x04004CC5 RID: 19653
+		// Token: 0x040050C0 RID: 20672
 		public bool? UseLookAtForSmallAngle;
 	}
 }

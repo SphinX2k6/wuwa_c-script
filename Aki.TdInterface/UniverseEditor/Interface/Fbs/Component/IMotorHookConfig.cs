@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055B7 RID: 21943
+	// Token: 0x02005B55 RID: 23381
 	public struct IMotorHookConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A220 RID: 41504
-		// (get) Token: 0x06024579 RID: 148857 RVA: 0x00504435 File Offset: 0x00502635
+		// Token: 0x1700AAA8 RID: 43688
+		// (get) Token: 0x06026786 RID: 157574 RVA: 0x005449AD File Offset: 0x00542BAD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602457A RID: 148858 RVA: 0x00504442 File Offset: 0x00502642
+		// Token: 0x06026787 RID: 157575 RVA: 0x005449BA File Offset: 0x00542BBA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602457B RID: 148859 RVA: 0x0050444C File Offset: 0x0050264C
+		// Token: 0x06026788 RID: 157576 RVA: 0x005449C4 File Offset: 0x00542BC4
 		public static IMotorHookConfig GetRootAsIMotorHookConfig(ByteBuffer _bb)
 		{
 			return IMotorHookConfig.GetRootAsIMotorHookConfig(_bb, default(IMotorHookConfig));
 		}
 
-		// Token: 0x0602457C RID: 148860 RVA: 0x00504468 File Offset: 0x00502668
+		// Token: 0x06026789 RID: 157577 RVA: 0x005449E0 File Offset: 0x00542BE0
 		public static IMotorHookConfig GetRootAsIMotorHookConfig(ByteBuffer _bb, IMotorHookConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602457D RID: 148861 RVA: 0x00504485 File Offset: 0x00502685
+		// Token: 0x0602678A RID: 157578 RVA: 0x005449FD File Offset: 0x00542BFD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602457E RID: 148862 RVA: 0x00504494 File Offset: 0x00502694
+		// Token: 0x0602678B RID: 157579 RVA: 0x00544A0C File Offset: 0x00542C0C
 		public IMotorHookConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A221 RID: 41505
-		// (get) Token: 0x0602457F RID: 148863 RVA: 0x005044A4 File Offset: 0x005026A4
+		// Token: 0x1700AAA9 RID: 43689
+		// (get) Token: 0x0602678C RID: 157580 RVA: 0x00544A1C File Offset: 0x00542C1C
 		public IFaceToTargetMotorInteractConstraint? InteractConstraint
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A222 RID: 41506
-		// (get) Token: 0x06024580 RID: 148864 RVA: 0x00504504 File Offset: 0x00502704
+		// Token: 0x1700AAAA RID: 43690
+		// (get) Token: 0x0602678D RID: 157581 RVA: 0x00544A7C File Offset: 0x00542C7C
 		public float Radius
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A223 RID: 41507
-		// (get) Token: 0x06024581 RID: 148865 RVA: 0x00504544 File Offset: 0x00502744
+		// Token: 0x1700AAAB RID: 43691
+		// (get) Token: 0x0602678E RID: 157582 RVA: 0x00544ABC File Offset: 0x00542CBC
 		public float NonInteractiveInnerRadius
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A224 RID: 41508
-		// (get) Token: 0x06024582 RID: 148866 RVA: 0x00504584 File Offset: 0x00502784
+		// Token: 0x1700AAAC RID: 43692
+		// (get) Token: 0x0602678F RID: 157583 RVA: 0x00544AFC File Offset: 0x00542CFC
 		public IMotorHookEndDir? HookEndDir
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A225 RID: 41509
-		// (get) Token: 0x06024583 RID: 148867 RVA: 0x005045E4 File Offset: 0x005027E4
+		// Token: 0x1700AAAD RID: 43693
+		// (get) Token: 0x06026790 RID: 157584 RVA: 0x00544B5C File Offset: 0x00542D5C
 		public IMotorHookAcceleration? MotorHookAcceleration
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A226 RID: 41510
-		// (get) Token: 0x06024584 RID: 148868 RVA: 0x00504644 File Offset: 0x00502844
+		// Token: 0x1700AAAE RID: 43694
+		// (get) Token: 0x06026791 RID: 157585 RVA: 0x00544BBC File Offset: 0x00542DBC
 		public THookLockScreenDetectType ScreenDetectTypeType
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024585 RID: 148869 RVA: 0x00504684 File Offset: 0x00502884
+		// Token: 0x06026792 RID: 157586 RVA: 0x00544BFC File Offset: 0x00542DFC
 		public TTable? ScreenDetectType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(16);
@@ -148,20 +148,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06024586 RID: 148870 RVA: 0x005046CC File Offset: 0x005028CC
+		// Token: 0x06026793 RID: 157587 RVA: 0x00544C44 File Offset: 0x00542E44
 		public IHookLockScreenDetectTypeCentralEllipse ScreenDetectTypeAsIHookLockScreenDetectTypeCentralEllipse()
 		{
 			return this.ScreenDetectType<IHookLockScreenDetectTypeCentralEllipse>().Value;
 		}
 
-		// Token: 0x06024587 RID: 148871 RVA: 0x005046E8 File Offset: 0x005028E8
+		// Token: 0x06026794 RID: 157588 RVA: 0x00544C60 File Offset: 0x00542E60
 		public IHookLockScreenDetectTypeFullScreen ScreenDetectTypeAsIHookLockScreenDetectTypeFullScreen()
 		{
 			return this.ScreenDetectType<IHookLockScreenDetectTypeFullScreen>().Value;
 		}
 
-		// Token: 0x1700A227 RID: 41511
-		// (get) Token: 0x06024588 RID: 148872 RVA: 0x00504704 File Offset: 0x00502904
+		// Token: 0x1700AAAF RID: 43695
+		// (get) Token: 0x06026795 RID: 157589 RVA: 0x00544C7C File Offset: 0x00542E7C
 		public bool AutoExit
 		{
 			get
@@ -171,8 +171,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A228 RID: 41512
-		// (get) Token: 0x06024589 RID: 148873 RVA: 0x00504744 File Offset: 0x00502944
+		// Token: 0x1700AAB0 RID: 43696
+		// (get) Token: 0x06026796 RID: 157590 RVA: 0x00544CBC File Offset: 0x00542EBC
 		public IMotorHookPerformanceConfig? MotorHookPerformanceConfig
 		{
 			get
@@ -186,8 +186,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A229 RID: 41513
-		// (get) Token: 0x0602458A RID: 148874 RVA: 0x005047A4 File Offset: 0x005029A4
+		// Token: 0x1700AAB1 RID: 43697
+		// (get) Token: 0x06026797 RID: 157591 RVA: 0x00544D1C File Offset: 0x00542F1C
 		public byte NullMask
 		{
 			get
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602458B RID: 148875 RVA: 0x005047E4 File Offset: 0x005029E4
+		// Token: 0x06026798 RID: 157592 RVA: 0x00544D5C File Offset: 0x00542F5C
 		public static Offset<IMotorHookConfig> CreateIMotorHookConfig(FlatBufferBuilder builder, Offset<IFaceToTargetMotorInteractConstraint> InteractConstraintOffset = default(Offset<IFaceToTargetMotorInteractConstraint>), float Radius = 0f, float NonInteractiveInnerRadius = 0f, Offset<IMotorHookEndDir> HookEndDirOffset = default(Offset<IMotorHookEndDir>), Offset<IMotorHookAcceleration> MotorHookAccelerationOffset = default(Offset<IMotorHookAcceleration>), THookLockScreenDetectType ScreenDetectType_type = THookLockScreenDetectType.NONE, int ScreenDetectTypeOffset = 0, bool AutoExit = false, Offset<IMotorHookPerformanceConfig> MotorHookPerformanceConfigOffset = default(Offset<IMotorHookPerformanceConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(10);
@@ -218,79 +218,79 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMotorHookConfig.EndIMotorHookConfig(builder);
 		}
 
-		// Token: 0x0602458C RID: 148876 RVA: 0x0050484C File Offset: 0x00502A4C
+		// Token: 0x06026799 RID: 157593 RVA: 0x00544DC4 File Offset: 0x00542FC4
 		public static void StartIMotorHookConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(10);
 		}
 
-		// Token: 0x0602458D RID: 148877 RVA: 0x00504856 File Offset: 0x00502A56
+		// Token: 0x0602679A RID: 157594 RVA: 0x00544DCE File Offset: 0x00542FCE
 		public static void AddInteractConstraint(FlatBufferBuilder builder, Offset<IFaceToTargetMotorInteractConstraint> interactConstraintOffset)
 		{
 			builder.AddOffset(0, interactConstraintOffset.Value, 0);
 		}
 
-		// Token: 0x0602458E RID: 148878 RVA: 0x00504866 File Offset: 0x00502A66
+		// Token: 0x0602679B RID: 157595 RVA: 0x00544DDE File Offset: 0x00542FDE
 		public static void AddRadius(FlatBufferBuilder builder, float radius)
 		{
 			builder.AddFloat(1, radius, 0.0);
 		}
 
-		// Token: 0x0602458F RID: 148879 RVA: 0x00504879 File Offset: 0x00502A79
+		// Token: 0x0602679C RID: 157596 RVA: 0x00544DF1 File Offset: 0x00542FF1
 		public static void AddNonInteractiveInnerRadius(FlatBufferBuilder builder, float nonInteractiveInnerRadius)
 		{
 			builder.AddFloat(2, nonInteractiveInnerRadius, 0.0);
 		}
 
-		// Token: 0x06024590 RID: 148880 RVA: 0x0050488C File Offset: 0x00502A8C
+		// Token: 0x0602679D RID: 157597 RVA: 0x00544E04 File Offset: 0x00543004
 		public static void AddHookEndDir(FlatBufferBuilder builder, Offset<IMotorHookEndDir> hookEndDirOffset)
 		{
 			builder.AddOffset(3, hookEndDirOffset.Value, 0);
 		}
 
-		// Token: 0x06024591 RID: 148881 RVA: 0x0050489C File Offset: 0x00502A9C
+		// Token: 0x0602679E RID: 157598 RVA: 0x00544E14 File Offset: 0x00543014
 		public static void AddMotorHookAcceleration(FlatBufferBuilder builder, Offset<IMotorHookAcceleration> motorHookAccelerationOffset)
 		{
 			builder.AddOffset(4, motorHookAccelerationOffset.Value, 0);
 		}
 
-		// Token: 0x06024592 RID: 148882 RVA: 0x005048AC File Offset: 0x00502AAC
+		// Token: 0x0602679F RID: 157599 RVA: 0x00544E24 File Offset: 0x00543024
 		public static void AddScreenDetectTypeType(FlatBufferBuilder builder, THookLockScreenDetectType screenDetectTypeType)
 		{
 			builder.AddByte(5, (byte)screenDetectTypeType, 0);
 		}
 
-		// Token: 0x06024593 RID: 148883 RVA: 0x005048B7 File Offset: 0x00502AB7
+		// Token: 0x060267A0 RID: 157600 RVA: 0x00544E2F File Offset: 0x0054302F
 		public static void AddScreenDetectType(FlatBufferBuilder builder, int screenDetectTypeOffset)
 		{
 			builder.AddOffset(6, screenDetectTypeOffset, 0);
 		}
 
-		// Token: 0x06024594 RID: 148884 RVA: 0x005048C2 File Offset: 0x00502AC2
+		// Token: 0x060267A1 RID: 157601 RVA: 0x00544E3A File Offset: 0x0054303A
 		public static void AddAutoExit(FlatBufferBuilder builder, bool autoExit)
 		{
 			builder.AddBool(7, autoExit, false);
 		}
 
-		// Token: 0x06024595 RID: 148885 RVA: 0x005048CD File Offset: 0x00502ACD
+		// Token: 0x060267A2 RID: 157602 RVA: 0x00544E45 File Offset: 0x00543045
 		public static void AddMotorHookPerformanceConfig(FlatBufferBuilder builder, Offset<IMotorHookPerformanceConfig> motorHookPerformanceConfigOffset)
 		{
 			builder.AddOffset(8, motorHookPerformanceConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06024596 RID: 148886 RVA: 0x005048DD File Offset: 0x00502ADD
+		// Token: 0x060267A3 RID: 157603 RVA: 0x00544E55 File Offset: 0x00543055
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(9, nullMask, 0);
 		}
 
-		// Token: 0x06024597 RID: 148887 RVA: 0x005048E9 File Offset: 0x00502AE9
+		// Token: 0x060267A4 RID: 157604 RVA: 0x00544E61 File Offset: 0x00543061
 		public static Offset<IMotorHookConfig> EndIMotorHookConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorHookConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06024598 RID: 148888 RVA: 0x005048F8 File Offset: 0x00502AF8
+		// Token: 0x060267A5 RID: 157605 RVA: 0x00544E70 File Offset: 0x00543070
 		public IMotorHookConfigT UnPack()
 		{
 			IMotorHookConfigT motorHookConfigT = new IMotorHookConfigT();
@@ -298,7 +298,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return motorHookConfigT;
 		}
 
-		// Token: 0x06024599 RID: 148889 RVA: 0x00504914 File Offset: 0x00502B14
+		// Token: 0x060267A6 RID: 157606 RVA: 0x00544E8C File Offset: 0x0054308C
 		public void UnPackTo(IMotorHookConfigT _o)
 		{
 			_o.InteractConstraint = ((this.InteractConstraint != null) ? this.InteractConstraint.Value.UnPack() : null);
@@ -325,7 +325,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602459A RID: 148890 RVA: 0x00504AB4 File Offset: 0x00502CB4
+		// Token: 0x060267A7 RID: 157607 RVA: 0x0054502C File Offset: 0x0054322C
 		public static Offset<IMotorHookConfig> Pack(FlatBufferBuilder builder, IMotorHookConfigT _o)
 		{
 			if (_o == null)
@@ -341,7 +341,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMotorHookConfig.CreateIMotorHookConfig(builder, interactConstraintOffset, _o.Radius, _o.NonInteractiveInnerRadius, hookEndDirOffset, motorHookAccelerationOffset, screenDetectType_type, screenDetectTypeOffset, _o.AutoExit, motorHookPerformanceConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E8F7 RID: 59639
+		// Token: 0x0400F559 RID: 62809
 		private Table __p;
 	}
 }

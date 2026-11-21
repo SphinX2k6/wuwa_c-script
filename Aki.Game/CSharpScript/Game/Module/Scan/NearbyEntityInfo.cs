@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Scan
 {
-	// Token: 0x02004C91 RID: 19601
+	// Token: 0x02003C42 RID: 15426
 	internal class NearbyEntityInfo
 	{
-		// Token: 0x06032A9E RID: 207518 RVA: 0x00BD147B File Offset: 0x00BCF67B
+		// Token: 0x06027851 RID: 161873 RVA: 0x00B160DF File Offset: 0x00B142DF
 		[NullableContext(1)]
 		public NearbyEntityInfo(Entity entity, double distance)
 		{
@@ -14,11 +14,11 @@ namespace CSharpScript.Game.Module.Scan
 			this.Distance = distance;
 		}
 
-		// Token: 0x0401AF7F RID: 110463
+		// Token: 0x040158DC RID: 88284
 		[Nullable(2)]
 		public Entity Entity;
 
-		// Token: 0x0401AF80 RID: 110464
+		// Token: 0x040158DD RID: 88285
 		public double Distance;
 	}
 }

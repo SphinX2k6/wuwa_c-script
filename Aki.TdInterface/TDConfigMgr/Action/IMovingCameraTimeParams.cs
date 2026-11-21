@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C44 RID: 7236
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E3B RID: 7739
 	public class IMovingCameraTimeParams
 	{
-		// Token: 0x06009B39 RID: 39737 RVA: 0x001649D8 File Offset: 0x00162BD8
+		// Token: 0x0600A491 RID: 42129 RVA: 0x00177D18 File Offset: 0x00175F18
 		private IMovingCameraTimeParams_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009B3A RID: 39738 RVA: 0x00164A10 File Offset: 0x00162C10
+		// Token: 0x0600A492 RID: 42130 RVA: 0x00177D50 File Offset: 0x00175F50
 		public static IMovingCameraTimeParams Create([Nullable(2)] IMovingCameraTimeParams instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B3B RID: 39739 RVA: 0x00164A23 File Offset: 0x00162C23
+		// Token: 0x0600A493 RID: 42131 RVA: 0x00177D63 File Offset: 0x00175F63
 		public static IMovingCameraTimeParams CreateFromSetValue([Nullable(2)] IMovingCameraTimeParams_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B3C RID: 39740 RVA: 0x00164A36 File Offset: 0x00162C36
+		// Token: 0x0600A494 RID: 42132 RVA: 0x00177D76 File Offset: 0x00175F76
 		public IMovingCameraTimeParams_SetValue ToSetValue()
 		{
 			return new IMovingCameraTimeParams_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700308D RID: 12429
-		// (get) Token: 0x06009B3D RID: 39741 RVA: 0x00164A6D File Offset: 0x00162C6D
-		// (set) Token: 0x06009B3E RID: 39742 RVA: 0x00164A9C File Offset: 0x00162C9C
+		// Token: 0x170032FE RID: 13054
+		// (get) Token: 0x0600A495 RID: 42133 RVA: 0x00177DAD File Offset: 0x00175FAD
+		// (set) Token: 0x0600A496 RID: 42134 RVA: 0x00177DDC File Offset: 0x00175FDC
 		public virtual float FadeInTime
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700308E RID: 12430
-		// (get) Token: 0x06009B3F RID: 39743 RVA: 0x00164AAA File Offset: 0x00162CAA
-		// (set) Token: 0x06009B40 RID: 39744 RVA: 0x00164AD9 File Offset: 0x00162CD9
+		// Token: 0x170032FF RID: 13055
+		// (get) Token: 0x0600A497 RID: 42135 RVA: 0x00177DEA File Offset: 0x00175FEA
+		// (set) Token: 0x0600A498 RID: 42136 RVA: 0x00177E19 File Offset: 0x00176019
 		public virtual float AfterFadeInStayTime
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700308F RID: 12431
-		// (get) Token: 0x06009B41 RID: 39745 RVA: 0x00164AE7 File Offset: 0x00162CE7
-		// (set) Token: 0x06009B42 RID: 39746 RVA: 0x00164B16 File Offset: 0x00162D16
+		// Token: 0x17003300 RID: 13056
+		// (get) Token: 0x0600A499 RID: 42137 RVA: 0x00177E27 File Offset: 0x00176027
+		// (set) Token: 0x0600A49A RID: 42138 RVA: 0x00177E56 File Offset: 0x00176056
 		public virtual float FadeOutTime
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003090 RID: 12432
-		// (get) Token: 0x06009B43 RID: 39747 RVA: 0x00164B24 File Offset: 0x00162D24
-		// (set) Token: 0x06009B44 RID: 39748 RVA: 0x00164B53 File Offset: 0x00162D53
+		// Token: 0x17003301 RID: 13057
+		// (get) Token: 0x0600A49B RID: 42139 RVA: 0x00177E64 File Offset: 0x00176064
+		// (set) Token: 0x0600A49C RID: 42140 RVA: 0x00177E93 File Offset: 0x00176093
 		public virtual float BeforeFadeOutStayTime
 		{
 			get
@@ -154,11 +152,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E4E RID: 24142
+		// Token: 0x04006385 RID: 25477
 		[Nullable(2)]
 		protected IMovingCameraTimeParams FbInstance;
 
-		// Token: 0x04005E4F RID: 24143
+		// Token: 0x04006386 RID: 25478
 		[Nullable(2)]
 		protected IMovingCameraTimeParams_SetValue PocoInterface;
 	}

@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuestMultiLine
 {
-	// Token: 0x02004FA6 RID: 20390
+	// Token: 0x02003F6F RID: 16239
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TimePointSpritePaths : ITimePointSpritePaths
 	{
-		// Token: 0x17007F73 RID: 32627
-		// (get) Token: 0x06034324 RID: 213796 RVA: 0x00C40B0D File Offset: 0x00C3ED0D
-		// (set) Token: 0x06034325 RID: 213797 RVA: 0x00C40B15 File Offset: 0x00C3ED15
+		// Token: 0x17005323 RID: 21283
+		// (get) Token: 0x06029192 RID: 168338 RVA: 0x00B8A2B9 File Offset: 0x00B884B9
+		// (set) Token: 0x06029193 RID: 168339 RVA: 0x00B8A2C1 File Offset: 0x00B884C1
 		public string Idle { get; set; }
 
-		// Token: 0x17007F74 RID: 32628
-		// (get) Token: 0x06034326 RID: 213798 RVA: 0x00C40B1E File Offset: 0x00C3ED1E
-		// (set) Token: 0x06034327 RID: 213799 RVA: 0x00C40B26 File Offset: 0x00C3ED26
+		// Token: 0x17005324 RID: 21284
+		// (get) Token: 0x06029194 RID: 168340 RVA: 0x00B8A2CA File Offset: 0x00B884CA
+		// (set) Token: 0x06029195 RID: 168341 RVA: 0x00B8A2D2 File Offset: 0x00B884D2
 		public string Hover { get; set; }
 
-		// Token: 0x17007F75 RID: 32629
-		// (get) Token: 0x06034328 RID: 213800 RVA: 0x00C40B2F File Offset: 0x00C3ED2F
-		// (set) Token: 0x06034329 RID: 213801 RVA: 0x00C40B37 File Offset: 0x00C3ED37
+		// Token: 0x17005325 RID: 21285
+		// (get) Token: 0x06029196 RID: 168342 RVA: 0x00B8A2DB File Offset: 0x00B884DB
+		// (set) Token: 0x06029197 RID: 168343 RVA: 0x00B8A2E3 File Offset: 0x00B884E3
 		public string Pressed { get; set; }
 
-		// Token: 0x17007F76 RID: 32630
-		// (get) Token: 0x0603432A RID: 213802 RVA: 0x00C40B40 File Offset: 0x00C3ED40
-		// (set) Token: 0x0603432B RID: 213803 RVA: 0x00C40B48 File Offset: 0x00C3ED48
+		// Token: 0x17005326 RID: 21286
+		// (get) Token: 0x06029198 RID: 168344 RVA: 0x00B8A2EC File Offset: 0x00B884EC
+		// (set) Token: 0x06029199 RID: 168345 RVA: 0x00B8A2F4 File Offset: 0x00B884F4
 		public string Selected { get; set; }
 	}
 }

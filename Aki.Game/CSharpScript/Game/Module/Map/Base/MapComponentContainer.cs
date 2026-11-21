@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Map.Misc;
 
 namespace CSharpScript.Game.Module.Map.Base
 {
-	// Token: 0x02005597 RID: 21911
+	// Token: 0x0200456D RID: 17773
 	public class MapComponentContainer
 	{
-		// Token: 0x06037D9E RID: 228766 RVA: 0x00D3C784 File Offset: 0x00D3A984
+		// Token: 0x0602CC9C RID: 183452 RVA: 0x00C8A4CC File Offset: 0x00C886CC
 		[return: Nullable(2)]
 		public T AddComponent<T>(EMapComponent componentType, [Nullable(new byte[]
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			return default(T);
 		}
 
-		// Token: 0x06037D9F RID: 228767 RVA: 0x00D3C7F4 File Offset: 0x00D3A9F4
+		// Token: 0x0602CC9D RID: 183453 RVA: 0x00C8A53C File Offset: 0x00C8873C
 		[NullableContext(1)]
 		private bool AddInternal(EMapComponent componentType, MapComponent component)
 		{
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			return true;
 		}
 
-		// Token: 0x06037DA0 RID: 228768 RVA: 0x00D3C878 File Offset: 0x00D3AA78
+		// Token: 0x0602CC9E RID: 183454 RVA: 0x00C8A5C0 File Offset: 0x00C887C0
 		[return: Nullable(2)]
 		public T GetComponent<T>(EMapComponent componentType) where T : MapComponent
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			return default(T);
 		}
 
-		// Token: 0x06037DA1 RID: 228769 RVA: 0x00D3C8F8 File Offset: 0x00D3AAF8
+		// Token: 0x0602CC9F RID: 183455 RVA: 0x00C8A640 File Offset: 0x00C88840
 		public void RemoveComponent(EMapComponent componentType)
 		{
 			List<MapComponent> list = this.ComponentTypeArray[(int)componentType];
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			list.Clear();
 		}
 
-		// Token: 0x06037DA2 RID: 228770 RVA: 0x00D3C95C File Offset: 0x00D3AB5C
+		// Token: 0x0602CCA0 RID: 183456 RVA: 0x00C8A6A4 File Offset: 0x00C888A4
 		public void RemoveById(int componentId)
 		{
 			MapComponent mapComponent;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			mapComponent.Remove();
 		}
 
-		// Token: 0x06037DA3 RID: 228771 RVA: 0x00D3C9EC File Offset: 0x00D3ABEC
+		// Token: 0x0602CCA1 RID: 183457 RVA: 0x00C8A734 File Offset: 0x00C88934
 		public void RemoveAll()
 		{
 			foreach (MapComponent mapComponent in this.ComponentIdMap.Values)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Map.Base
 				mapComponent.Remove();
 			}
 			this.ComponentIdMap.Clear();
-			for (int i = 0; i < 21; i++)
+			for (int i = 0; i < 12; i++)
 			{
 				List<MapComponent> list = this.ComponentTypeArray[i];
 				if (list != null)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x06037DA4 RID: 228772 RVA: 0x00D3CA74 File Offset: 0x00D3AC74
+		// Token: 0x0602CCA2 RID: 183458 RVA: 0x00C8A7BC File Offset: 0x00C889BC
 		public void Init()
 		{
 			this.TickSnapshot.Clear();
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			this.TickSnapshot.Clear();
 		}
 
-		// Token: 0x06037DA5 RID: 228773 RVA: 0x00D3CAD4 File Offset: 0x00D3ACD4
+		// Token: 0x0602CCA3 RID: 183459 RVA: 0x00C8A81C File Offset: 0x00C88A1C
 		public void Tick(float delta)
 		{
 			this.TickSnapshot.Clear();
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			this.TickSnapshot.Clear();
 		}
 
-		// Token: 0x06037DA6 RID: 228774 RVA: 0x00D3CB38 File Offset: 0x00D3AD38
+		// Token: 0x0602CCA4 RID: 183460 RVA: 0x00C8A880 File Offset: 0x00C88A80
 		public void Update()
 		{
 			this.TickSnapshot.Clear();
@@ -189,23 +189,23 @@ namespace CSharpScript.Game.Module.Map.Base
 			this.TickSnapshot.Clear();
 		}
 
-		// Token: 0x0401D57B RID: 120187
-		private const int COMPONENT_TYPE_COUNT = 21;
+		// Token: 0x04018006 RID: 98310
+		private const int COMPONENT_TYPE_COUNT = 12;
 
-		// Token: 0x0401D57C RID: 120188
+		// Token: 0x04018007 RID: 98311
 		[Nullable(1)]
 		private readonly Dictionary<int, MapComponent> ComponentIdMap = new Dictionary<int, MapComponent>();
 
-		// Token: 0x0401D57D RID: 120189
+		// Token: 0x04018008 RID: 98312
 		[Nullable(new byte[]
 		{
 			1,
 			2,
 			1
 		})]
-		private readonly List<MapComponent>[] ComponentTypeArray = new List<MapComponent>[21];
+		private readonly List<MapComponent>[] ComponentTypeArray = new List<MapComponent>[12];
 
-		// Token: 0x0401D57E RID: 120190
+		// Token: 0x04018009 RID: 98313
 		[Nullable(1)]
 		private readonly List<MapComponent> TickSnapshot = new List<MapComponent>();
 	}

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x0200707A RID: 28794
+	// Token: 0x020061FB RID: 25083
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DecorationItem
 	{
-		// Token: 0x060461CA RID: 287178 RVA: 0x0117FC6C File Offset: 0x0117DE6C
+		// Token: 0x0603C3D4 RID: 246740 RVA: 0x01129488 File Offset: 0x01127688
 		public DecorationItem(BaseOutlookComponent owner, USkeletalMeshComponent parentMesh, int index, bool alwaysUpdate, bool needDelayShow)
 		{
 			this.Owner = owner;
@@ -42,32 +42,32 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			ueSkelTickMgrComp2.EnableOrDisableSkelTick(this.MeshComp, false);
 		}
 
-		// Token: 0x17009C19 RID: 39961
-		// (get) Token: 0x060461CB RID: 287179 RVA: 0x0117FD96 File Offset: 0x0117DF96
-		// (set) Token: 0x060461CC RID: 287180 RVA: 0x0117FD9E File Offset: 0x0117DF9E
+		// Token: 0x170071AE RID: 29102
+		// (get) Token: 0x0603C3D5 RID: 246741 RVA: 0x011295B2 File Offset: 0x011277B2
+		// (set) Token: 0x0603C3D6 RID: 246742 RVA: 0x011295BA File Offset: 0x011277BA
 		public BaseOutlookComponent Owner { get; set; }
 
-		// Token: 0x17009C1A RID: 39962
-		// (get) Token: 0x060461CD RID: 287181 RVA: 0x0117FDA7 File Offset: 0x0117DFA7
-		// (set) Token: 0x060461CE RID: 287182 RVA: 0x0117FDAF File Offset: 0x0117DFAF
+		// Token: 0x170071AF RID: 29103
+		// (get) Token: 0x0603C3D7 RID: 246743 RVA: 0x011295C3 File Offset: 0x011277C3
+		// (set) Token: 0x0603C3D8 RID: 246744 RVA: 0x011295CB File Offset: 0x011277CB
 		public USkeletalMeshComponent ParentMesh { get; set; }
 
-		// Token: 0x17009C1B RID: 39963
-		// (get) Token: 0x060461CF RID: 287183 RVA: 0x0117FDB8 File Offset: 0x0117DFB8
-		// (set) Token: 0x060461D0 RID: 287184 RVA: 0x0117FDC0 File Offset: 0x0117DFC0
+		// Token: 0x170071B0 RID: 29104
+		// (get) Token: 0x0603C3D9 RID: 246745 RVA: 0x011295D4 File Offset: 0x011277D4
+		// (set) Token: 0x0603C3DA RID: 246746 RVA: 0x011295DC File Offset: 0x011277DC
 		public int Index { get; set; }
 
-		// Token: 0x17009C1C RID: 39964
-		// (get) Token: 0x060461D1 RID: 287185 RVA: 0x0117FDC9 File Offset: 0x0117DFC9
-		// (set) Token: 0x060461D2 RID: 287186 RVA: 0x0117FDD1 File Offset: 0x0117DFD1
+		// Token: 0x170071B1 RID: 29105
+		// (get) Token: 0x0603C3DB RID: 246747 RVA: 0x011295E5 File Offset: 0x011277E5
+		// (set) Token: 0x0603C3DC RID: 246748 RVA: 0x011295ED File Offset: 0x011277ED
 		protected bool AlwaysUpdate { get; set; }
 
-		// Token: 0x17009C1D RID: 39965
-		// (get) Token: 0x060461D3 RID: 287187 RVA: 0x0117FDDA File Offset: 0x0117DFDA
-		// (set) Token: 0x060461D4 RID: 287188 RVA: 0x0117FDE2 File Offset: 0x0117DFE2
+		// Token: 0x170071B2 RID: 29106
+		// (get) Token: 0x0603C3DD RID: 246749 RVA: 0x011295F6 File Offset: 0x011277F6
+		// (set) Token: 0x0603C3DE RID: 246750 RVA: 0x011295FE File Offset: 0x011277FE
 		protected bool NeedDelayShow { get; set; }
 
-		// Token: 0x060461D5 RID: 287189 RVA: 0x0117FDEC File Offset: 0x0117DFEC
+		// Token: 0x0603C3DF RID: 246751 RVA: 0x01129608 File Offset: 0x01127808
 		private void ResetMeshAnimationState()
 		{
 			if (this.MeshComp == null || !this.MeshComp.IsValid())
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.MeshComp.SetVisibility(false, false);
 		}
 
-		// Token: 0x060461D6 RID: 287190 RVA: 0x0117FE5C File Offset: 0x0117E05C
+		// Token: 0x0603C3E0 RID: 246752 RVA: 0x01129678 File Offset: 0x01127878
 		public unsafe bool SetDecorationId(int newId)
 		{
 			Log instance = Log.Instance;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.CurrentConfigId == newId;
 		}
 
-		// Token: 0x060461D7 RID: 287191 RVA: 0x01180190 File Offset: 0x0117E390
+		// Token: 0x0603C3E1 RID: 246753 RVA: 0x011299AC File Offset: 0x01127BAC
 		private unsafe void OnMeshLoaded([Nullable(2)] USkeletalMesh skelMesh, int newId, SDecorationConfig modelConfig)
 		{
 			if (this.MeshComp == null || !this.MeshComp.IsValid())
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ApplyIndependentAttach(newId, modelConfig, finalVisible);
 		}
 
-		// Token: 0x060461D8 RID: 287192 RVA: 0x01180290 File Offset: 0x0117E490
+		// Token: 0x0603C3E2 RID: 246754 RVA: 0x01129AAC File Offset: 0x01127CAC
 		private unsafe void ApplyMasterFollow(int newId, SDecorationConfig modelConfig, bool finalVisible)
 		{
 			USkeletalMeshComponent subMeshComponent = this.GetSubMeshComponent(modelConfig.SubMeshName);
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ApplyPresentationVisibility("SetDecorationId.SetMasterFollow", finalVisible);
 		}
 
-		// Token: 0x060461D9 RID: 287193 RVA: 0x01180450 File Offset: 0x0117E650
+		// Token: 0x0603C3E3 RID: 246755 RVA: 0x01129C6C File Offset: 0x01127E6C
 		private void ApplyIndependentAttach(int newId, SDecorationConfig modelConfig, bool finalVisible)
 		{
 			this.MeshComp.SetMasterPoseComponent(null, false);
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ApplyPresentationVisibility("SetDecorationId", finalVisible);
 		}
 
-		// Token: 0x060461DA RID: 287194 RVA: 0x01180520 File Offset: 0x0117E720
+		// Token: 0x0603C3E4 RID: 246756 RVA: 0x01129D3C File Offset: 0x01127F3C
 		private void ApplyAttachTransform(USceneComponent meshComp, SDecorationConfig modelConfig)
 		{
 			if (modelConfig.AttachTrans.Num() > 0)
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			meshComp.D_K2_SetRelativeTransform(ftransformDouble, false, ref fhitResult, false);
 		}
 
-		// Token: 0x060461DB RID: 287195 RVA: 0x011805DC File Offset: 0x0117E7DC
+		// Token: 0x0603C3E5 RID: 246757 RVA: 0x01129DF8 File Offset: 0x01127FF8
 		private void DisableSkeletalMesh()
 		{
 			if (this.MeshComp == null)
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			ueSkelTickMgrComp2.EnableOrDisableSkelTick(this.MeshComp, false);
 		}
 
-		// Token: 0x060461DC RID: 287196 RVA: 0x01180670 File Offset: 0x0117E870
+		// Token: 0x0603C3E6 RID: 246758 RVA: 0x01129E8C File Offset: 0x0112808C
 		private bool CheckHasTagInMap(Dictionary<int, bool> map, bool zero)
 		{
 			if (map.Count == 0)
@@ -331,13 +331,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x060461DD RID: 287197 RVA: 0x011806D4 File Offset: 0x0117E8D4
+		// Token: 0x0603C3E7 RID: 246759 RVA: 0x01129EF0 File Offset: 0x011280F0
 		private bool CheckHasTag()
 		{
 			return this.CheckHasTagInMap(this.DisplayTags, true) && !this.CheckHasTagInMap(this.HideTags, false);
 		}
 
-		// Token: 0x060461DE RID: 287198 RVA: 0x011806F8 File Offset: 0x0117E8F8
+		// Token: 0x0603C3E8 RID: 246760 RVA: 0x01129F14 File Offset: 0x01128114
 		private void AddTagsListenerInMap(Dictionary<int, bool> map, int id, TArray<FGameplayTag> gameplayTags)
 		{
 			if (this.TagComp == null)
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060461DF RID: 287199 RVA: 0x01180788 File Offset: 0x0117E988
+		// Token: 0x0603C3E9 RID: 246761 RVA: 0x01129FA4 File Offset: 0x011281A4
 		private void RemoveTagsListenerInMap(Dictionary<int, bool> map)
 		{
 			foreach (KeyValuePair<int, bool> keyValuePair in map)
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			map.Clear();
 		}
 
-		// Token: 0x060461E0 RID: 287200 RVA: 0x011807FC File Offset: 0x0117E9FC
+		// Token: 0x0603C3EA RID: 246762 RVA: 0x0112A018 File Offset: 0x01128218
 		private void DestroyEffects()
 		{
 			if (this.SpawnEffectHandleList == null)
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SpawnEffectHandleList = null;
 		}
 
-		// Token: 0x060461E1 RID: 287201 RVA: 0x01180874 File Offset: 0x0117EA74
+		// Token: 0x0603C3EB RID: 246763 RVA: 0x0112A090 File Offset: 0x01128290
 		private void DisplayEffects(bool display)
 		{
 			if (this.SpawnEffectHandleList == null)
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060461E2 RID: 287202 RVA: 0x011808E0 File Offset: 0x0117EAE0
+		// Token: 0x0603C3EC RID: 246764 RVA: 0x0112A0FC File Offset: 0x011282FC
 		private void SpawnEffects(int id, SDecorationConfig modelConfig, bool visible)
 		{
 			if (modelConfig.Effects.Num() <= 0 || this.MeshComp == null)
@@ -433,7 +433,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.DisplayEffects(visible);
 		}
 
-		// Token: 0x060461E3 RID: 287203 RVA: 0x011809FC File Offset: 0x0117EBFC
+		// Token: 0x0603C3ED RID: 246765 RVA: 0x0112A218 File Offset: 0x01128418
 		private void SetDecorationDisplay(int tagId, bool tagExist)
 		{
 			if (this.DisplayTags.ContainsKey(tagId))
@@ -447,7 +447,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.RefreshVisibility("TagChangeExist", false);
 		}
 
-		// Token: 0x060461E4 RID: 287204 RVA: 0x01180A4B File Offset: 0x0117EC4B
+		// Token: 0x0603C3EE RID: 246766 RVA: 0x0112A267 File Offset: 0x01128467
 		public void SetVisible(bool visible, string reason)
 		{
 			this.RequireVisible = visible;
@@ -459,13 +459,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ApplyPresentationVisibility(reason, false);
 		}
 
-		// Token: 0x060461E5 RID: 287205 RVA: 0x01180A68 File Offset: 0x0117EC68
+		// Token: 0x0603C3EF RID: 246767 RVA: 0x0112A284 File Offset: 0x01128484
 		private bool ComputeFinalVisible()
 		{
 			return this.RequireVisible && this.CheckHasTag() && this.IsActive();
 		}
 
-		// Token: 0x060461E6 RID: 287206 RVA: 0x01180A84 File Offset: 0x0117EC84
+		// Token: 0x0603C3F0 RID: 246768 RVA: 0x0112A2A0 File Offset: 0x011284A0
 		public void RefreshVisibility(string reason, bool force = false)
 		{
 			bool flag = this.CheckHasTag();
@@ -478,7 +478,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ApplyPresentationVisibility(reason, flag3);
 		}
 
-		// Token: 0x060461E7 RID: 287207 RVA: 0x01180AC0 File Offset: 0x0117ECC0
+		// Token: 0x0603C3F1 RID: 246769 RVA: 0x0112A2DC File Offset: 0x011284DC
 		private void ApplyPresentationVisibility(string reason, bool visible)
 		{
 			this.Visible = visible;
@@ -556,13 +556,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060461E8 RID: 287208 RVA: 0x01180C05 File Offset: 0x0117EE05
+		// Token: 0x0603C3F2 RID: 246770 RVA: 0x0112A421 File Offset: 0x01128621
 		private bool IsActive()
 		{
 			return this.ParentMesh != null && this.Owner.Active && this.Owner.Entity.Active;
 		}
 
-		// Token: 0x060461E9 RID: 287209 RVA: 0x01180C30 File Offset: 0x0117EE30
+		// Token: 0x0603C3F3 RID: 246771 RVA: 0x0112A44C File Offset: 0x0112864C
 		private unsafe bool SetStaticDecorationId(int newId, SDecorationConfig modelConfig)
 		{
 			string text = modelConfig.StaticMesh.ToAssetPathName();
@@ -594,7 +594,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.CurrentConfigId == newId;
 		}
 
-		// Token: 0x060461EA RID: 287210 RVA: 0x01180D44 File Offset: 0x0117EF44
+		// Token: 0x0603C3F4 RID: 246772 RVA: 0x0112A560 File Offset: 0x01128760
 		private unsafe void OnStaticMeshLoaded([Nullable(2)] UStaticMesh staticMesh, int newId, SDecorationConfig modelConfig)
 		{
 			if (this.CurrentConfigId != newId || !this.CurrentUseStaticMesh)
@@ -626,7 +626,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ApplyStaticIndependentAttach(newId, modelConfig, this.ComputeFinalVisible());
 		}
 
-		// Token: 0x060461EB RID: 287211 RVA: 0x01180E24 File Offset: 0x0117F024
+		// Token: 0x0603C3F5 RID: 246773 RVA: 0x0112A640 File Offset: 0x01128840
 		[NullableContext(2)]
 		private UStaticMeshComponent EnsureStaticMeshComponent()
 		{
@@ -648,7 +648,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.StaticMeshComp;
 		}
 
-		// Token: 0x060461EC RID: 287212 RVA: 0x01180ED4 File Offset: 0x0117F0D4
+		// Token: 0x0603C3F6 RID: 246774 RVA: 0x0112A6F0 File Offset: 0x011288F0
 		private void ApplyStaticIndependentAttach(int newId, SDecorationConfig modelConfig, bool finalVisible)
 		{
 			UStaticMeshComponent ustaticMeshComponent = this.EnsureStaticMeshComponent();
@@ -662,7 +662,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ApplyPresentationVisibility("SetDecorationId.StaticMesh", finalVisible);
 		}
 
-		// Token: 0x060461ED RID: 287213 RVA: 0x01180F35 File Offset: 0x0117F135
+		// Token: 0x0603C3F7 RID: 246775 RVA: 0x0112A751 File Offset: 0x01128951
 		private void ClearStaticMeshComponent()
 		{
 			if (this.StaticMeshComp == null || !this.StaticMeshComp.IsValid())
@@ -673,7 +673,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.StaticMeshComp.SetVisibility(false, false);
 		}
 
-		// Token: 0x060461EE RID: 287214 RVA: 0x01180F68 File Offset: 0x0117F168
+		// Token: 0x0603C3F8 RID: 246776 RVA: 0x0112A784 File Offset: 0x01128984
 		[return: Nullable(2)]
 		private USkeletalMeshComponent GetSubMeshComponent(string mesh)
 		{
@@ -703,7 +703,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.ParentMesh;
 		}
 
-		// Token: 0x060461EF RID: 287215 RVA: 0x01181000 File Offset: 0x0117F200
+		// Token: 0x0603C3F9 RID: 246777 RVA: 0x0112A81C File Offset: 0x01128A1C
 		public void Clear()
 		{
 			int currentConfigId = this.CurrentConfigId;
@@ -723,51 +723,51 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.RequireVisible = false;
 		}
 
-		// Token: 0x060461F0 RID: 287216 RVA: 0x0118106D File Offset: 0x0117F26D
+		// Token: 0x0603C3FA RID: 246778 RVA: 0x0112A889 File Offset: 0x01128A89
 		public int GetDecorationConfigId()
 		{
 			return this.CurrentConfigId;
 		}
 
-		// Token: 0x04024BAD RID: 150445
+		// Token: 0x0401FE68 RID: 130664
 		[StaticVariableRuleIgnore]
 		private static Transform tmpTrans = Transform.Create();
 
-		// Token: 0x04024BAE RID: 150446
+		// Token: 0x0401FE69 RID: 130665
 		[Nullable(2)]
 		private UeSkeletalTickManageComponent UeSkelTickMgrComp;
 
-		// Token: 0x04024BAF RID: 150447
+		// Token: 0x0401FE6A RID: 130666
 		[Nullable(2)]
 		public USkeletalMeshComponent MeshComp;
 
-		// Token: 0x04024BB0 RID: 150448
+		// Token: 0x0401FE6B RID: 130667
 		private int CurrentConfigId;
 
-		// Token: 0x04024BB1 RID: 150449
+		// Token: 0x0401FE6C RID: 130668
 		private bool Visible = true;
 
-		// Token: 0x04024BB2 RID: 150450
+		// Token: 0x0401FE6D RID: 130669
 		private bool RequireVisible = true;
 
-		// Token: 0x04024BB3 RID: 150451
+		// Token: 0x0401FE6E RID: 130670
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04024BB4 RID: 150452
+		// Token: 0x0401FE6F RID: 130671
 		public Dictionary<int, bool> DisplayTags = new Dictionary<int, bool>();
 
-		// Token: 0x04024BB5 RID: 150453
+		// Token: 0x0401FE70 RID: 130672
 		public Dictionary<int, bool> HideTags = new Dictionary<int, bool>();
 
-		// Token: 0x04024BB6 RID: 150454
+		// Token: 0x0401FE71 RID: 130673
 		private bool CurrentUseStaticMesh;
 
-		// Token: 0x04024BB7 RID: 150455
+		// Token: 0x0401FE72 RID: 130674
 		[Nullable(2)]
 		private UStaticMeshComponent StaticMeshComp;
 
-		// Token: 0x04024BBD RID: 150461
+		// Token: 0x0401FE78 RID: 130680
 		[Nullable(2)]
 		private List<int> SpawnEffectHandleList;
 	}

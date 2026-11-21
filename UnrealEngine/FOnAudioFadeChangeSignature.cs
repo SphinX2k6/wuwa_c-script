@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000F04 RID: 3844
+	// Token: 0x02000250 RID: 592
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnAudioFadeChangeSignature : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0600D018 RID: 53272 RVA: 0x0012FA6B File Offset: 0x0012DC6B
+		// Token: 0x060032D7 RID: 13015 RVA: 0x000489F5 File Offset: 0x00046BF5
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnAudioFadeChangeSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x0600D019 RID: 53273 RVA: 0x0012FA77 File Offset: 0x0012DC77
+		// Token: 0x060032D8 RID: 13016 RVA: 0x00048A01 File Offset: 0x00046C01
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnAudioFadeChangeSignature._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnAudioFadeChangeSignature._FunctionPtr;
 		}
 
-		// Token: 0x0600D01A RID: 53274 RVA: 0x0012FA9A File Offset: 0x0012DC9A
+		// Token: 0x060032D9 RID: 13017 RVA: 0x00048A24 File Offset: 0x00046C24
 		public FOnAudioFadeChangeSignature()
 		{
 		}
 
-		// Token: 0x0600D01B RID: 53275 RVA: 0x0012FAA2 File Offset: 0x0012DCA2
+		// Token: 0x060032DA RID: 13018 RVA: 0x00048A2C File Offset: 0x00046C2C
 		[NullableContext(2)]
 		public FOnAudioFadeChangeSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600D01C RID: 53276 RVA: 0x0012FAAC File Offset: 0x0012DCAC
+		// Token: 0x060032DB RID: 13019 RVA: 0x00048A36 File Offset: 0x00046C36
 		public FOnAudioFadeChangeSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600D01D RID: 53277 RVA: 0x0012FAB7 File Offset: 0x0012DCB7
+		// Token: 0x060032DC RID: 13020 RVA: 0x00048A41 File Offset: 0x00046C41
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool, float>) ?? ((Action<bool, float>)Delegate.CreateDelegate(typeof(Action<bool, float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0600D01E RID: 53278 RVA: 0x0012FAE9 File Offset: 0x0012DCE9
+		// Token: 0x060032DD RID: 13021 RVA: 0x00048A73 File Offset: 0x00046C73
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool, float> Callback)
 		{
 			if (FOnAudioFadeChangeSignature.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnAudioFadeChangeSignature.RegisterId);
 		}
 
-		// Token: 0x0600D01F RID: 53279 RVA: 0x0012FB23 File Offset: 0x0012DD23
+		// Token: 0x060032DE RID: 13022 RVA: 0x00048AAD File Offset: 0x00046CAD
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool, float> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0600D020 RID: 53280 RVA: 0x0012FB2C File Offset: 0x0012DD2C
+		// Token: 0x060032DF RID: 13023 RVA: 0x00048AB8 File Offset: 0x00046CB8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool bFadeOut, float FadeTime)
 		{
 			FOnAudioFadeChangeSignature.__FOnAudioFadeChangeSignature_DelegateParams* ptr = stackalloc FOnAudioFadeChangeSignature.__FOnAudioFadeChangeSignature_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnAudioFadeChangeSignature.__FOnAudioFadeChangeSignature_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0600D021 RID: 53281 RVA: 0x0012FB70 File Offset: 0x0012DD70
+		// Token: 0x060032E0 RID: 13024 RVA: 0x00048AFC File Offset: 0x00046CFC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, float> action = target as Action<bool, float>;
@@ -101,35 +97,35 @@ namespace UnrealEngine
 			action(((FOnAudioFadeChangeSignature.__FOnAudioFadeChangeSignature_DelegateParams*)__Parameters)->bFadeOut, ((FOnAudioFadeChangeSignature.__FOnAudioFadeChangeSignature_DelegateParams*)__Parameters)->FadeTime);
 		}
 
-		// Token: 0x04007021 RID: 28705
+		// Token: 0x040011BC RID: 4540
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04007022 RID: 28706
+		// Token: 0x040011BD RID: 4541
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.OnAudioFadeChangeSignature__DelegateSignature";
 
-		// Token: 0x04007023 RID: 28707
+		// Token: 0x040011BE RID: 4542
 		private static int RegisterId;
 
-		// Token: 0x02002D58 RID: 11608
+		// Token: 0x020009CB RID: 2507
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnAudioFadeChangeSignature_DelegateParams
+		private ref struct __FOnAudioFadeChangeSignature_DelegateParams
 		{
-			// Token: 0x0401676B RID: 92011
+			// Token: 0x04005957 RID: 22871
 			[FieldOffset(0)]
 			public bool bFadeOut;
 
-			// Token: 0x0401676C RID: 92012
+			// Token: 0x04005958 RID: 22872
 			[FieldOffset(4)]
 			public float FadeTime;
 		}
 
-		// Token: 0x02002D59 RID: 11609
+		// Token: 0x020009CC RID: 2508
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401676D RID: 92013
+			// Token: 0x04005959 RID: 22873
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

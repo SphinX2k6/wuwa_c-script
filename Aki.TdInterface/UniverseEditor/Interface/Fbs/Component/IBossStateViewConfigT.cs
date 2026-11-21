@@ -3,50 +3,50 @@ using Aki.UniverseEditor.Interface.Fbs.Match;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F1A RID: 20250
+	// Token: 0x0200544C RID: 21580
 	public class IBossStateViewConfigT
 	{
-		// Token: 0x170091DB RID: 37339
-		// (get) Token: 0x0602006A RID: 131178 RVA: 0x00474FE0 File Offset: 0x004731E0
-		// (set) Token: 0x0602006B RID: 131179 RVA: 0x00474FE8 File Offset: 0x004731E8
+		// Token: 0x1700995D RID: 39261
+		// (get) Token: 0x06021DDA RID: 138714 RVA: 0x004AB374 File Offset: 0x004A9574
+		// (set) Token: 0x06021DDB RID: 138715 RVA: 0x004AB37C File Offset: 0x004A957C
 		public EBossStateViewType BossStateViewType { get; set; }
 
-		// Token: 0x170091DC RID: 37340
-		// (get) Token: 0x0602006C RID: 131180 RVA: 0x00474FF1 File Offset: 0x004731F1
-		// (set) Token: 0x0602006D RID: 131181 RVA: 0x00474FF9 File Offset: 0x004731F9
+		// Token: 0x1700995E RID: 39262
+		// (get) Token: 0x06021DDC RID: 138716 RVA: 0x004AB385 File Offset: 0x004A9585
+		// (set) Token: 0x06021DDD RID: 138717 RVA: 0x004AB38D File Offset: 0x004A958D
 		public IDoubleViewBossStateViewStyleT BossStateViewStyle { get; set; }
 
-		// Token: 0x170091DD RID: 37341
-		// (get) Token: 0x0602006E RID: 131182 RVA: 0x00475002 File Offset: 0x00473202
-		// (set) Token: 0x0602006F RID: 131183 RVA: 0x0047500A File Offset: 0x0047320A
+		// Token: 0x1700995F RID: 39263
+		// (get) Token: 0x06021DDE RID: 138718 RVA: 0x004AB396 File Offset: 0x004A9596
+		// (set) Token: 0x06021DDF RID: 138719 RVA: 0x004AB39E File Offset: 0x004A959E
 		public string TidBossSubTitle { get; set; }
 
-		// Token: 0x170091DE RID: 37342
-		// (get) Token: 0x06020070 RID: 131184 RVA: 0x00475013 File Offset: 0x00473213
-		// (set) Token: 0x06020071 RID: 131185 RVA: 0x0047501B File Offset: 0x0047321B
+		// Token: 0x17009960 RID: 39264
+		// (get) Token: 0x06021DE0 RID: 138720 RVA: 0x004AB3A7 File Offset: 0x004A95A7
+		// (set) Token: 0x06021DE1 RID: 138721 RVA: 0x004AB3AF File Offset: 0x004A95AF
 		public EBossStateInfoShowType BossStateInfoShowType { get; set; }
 
-		// Token: 0x170091DF RID: 37343
-		// (get) Token: 0x06020072 RID: 131186 RVA: 0x00475024 File Offset: 0x00473224
-		// (set) Token: 0x06020073 RID: 131187 RVA: 0x0047502C File Offset: 0x0047322C
+		// Token: 0x17009961 RID: 39265
+		// (get) Token: 0x06021DE2 RID: 138722 RVA: 0x004AB3B8 File Offset: 0x004A95B8
+		// (set) Token: 0x06021DE3 RID: 138723 RVA: 0x004AB3C0 File Offset: 0x004A95C0
 		public string TidLevelText { get; set; }
 
-		// Token: 0x170091E0 RID: 37344
-		// (get) Token: 0x06020074 RID: 131188 RVA: 0x00475035 File Offset: 0x00473235
-		// (set) Token: 0x06020075 RID: 131189 RVA: 0x0047503D File Offset: 0x0047323D
+		// Token: 0x17009962 RID: 39266
+		// (get) Token: 0x06021DE4 RID: 138724 RVA: 0x004AB3C9 File Offset: 0x004A95C9
+		// (set) Token: 0x06021DE5 RID: 138725 RVA: 0x004AB3D1 File Offset: 0x004A95D1
 		public bool OnlyShowInBattleState { get; set; }
 
-		// Token: 0x170091E1 RID: 37345
-		// (get) Token: 0x06020076 RID: 131190 RVA: 0x00475046 File Offset: 0x00473246
-		// (set) Token: 0x06020077 RID: 131191 RVA: 0x0047504E File Offset: 0x0047324E
+		// Token: 0x17009963 RID: 39267
+		// (get) Token: 0x06021DE6 RID: 138726 RVA: 0x004AB3DA File Offset: 0x004A95DA
+		// (set) Token: 0x06021DE7 RID: 138727 RVA: 0x004AB3E2 File Offset: 0x004A95E2
 		public int ShowDistance { get; set; }
 
-		// Token: 0x170091E2 RID: 37346
-		// (get) Token: 0x06020078 RID: 131192 RVA: 0x00475057 File Offset: 0x00473257
-		// (set) Token: 0x06020079 RID: 131193 RVA: 0x0047505F File Offset: 0x0047325F
+		// Token: 0x17009964 RID: 39268
+		// (get) Token: 0x06021DE8 RID: 138728 RVA: 0x004AB3EB File Offset: 0x004A95EB
+		// (set) Token: 0x06021DE9 RID: 138729 RVA: 0x004AB3F3 File Offset: 0x004A95F3
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602007A RID: 131194 RVA: 0x00475068 File Offset: 0x00473268
+		// Token: 0x06021DEA RID: 138730 RVA: 0x004AB3FC File Offset: 0x004A95FC
 		public IBossStateViewConfigT()
 		{
 			this.BossStateViewType = EBossStateViewType.None;

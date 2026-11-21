@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056A9 RID: 22185
+	// Token: 0x0200467F RID: 18047
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoginGateWayPingTest
 	{
-		// Token: 0x06038734 RID: 231220 RVA: 0x00D66FAB File Offset: 0x00D651AB
+		// Token: 0x0602D631 RID: 185905 RVA: 0x00CB5107 File Offset: 0x00CB3307
 		public LoginGateWayPingTest(string host, int port, int timeoutMs)
 		{
 			this.Host = host;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Login
 			this.TimeoutMs = timeoutMs;
 		}
 
-		// Token: 0x06038735 RID: 231221 RVA: 0x00D66FD4 File Offset: 0x00D651D4
+		// Token: 0x0602D632 RID: 185906 RVA: 0x00CB5130 File Offset: 0x00CB3330
 		public UniTask Start()
 		{
 			LoginGateWayPingTest.<Start>d__6 <Start>d__;
@@ -29,31 +29,31 @@ namespace CSharpScript.Game.Module.Login
 			return <Start>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038736 RID: 231222 RVA: 0x00D67017 File Offset: 0x00D65217
+		// Token: 0x0602D633 RID: 185907 RVA: 0x00CB5173 File Offset: 0x00CB3373
 		public void Stop()
 		{
 			this.Result = EGateWayPingResult.Stop;
 		}
 
-		// Token: 0x06038737 RID: 231223 RVA: 0x00D67020 File Offset: 0x00D65220
+		// Token: 0x0602D634 RID: 185908 RVA: 0x00CB517C File Offset: 0x00CB337C
 		public EGateWayPingResult GetResult()
 		{
 			return this.Result;
 		}
 
-		// Token: 0x0401DA47 RID: 121415
+		// Token: 0x040184D2 RID: 99538
 		private readonly int TimeoutMs = 2000;
 
-		// Token: 0x0401DA48 RID: 121416
+		// Token: 0x040184D3 RID: 99539
 		public string Host;
 
-		// Token: 0x0401DA49 RID: 121417
+		// Token: 0x040184D4 RID: 99540
 		public int Port;
 
-		// Token: 0x0401DA4A RID: 121418
+		// Token: 0x040184D5 RID: 99541
 		public double PingCostMs;
 
-		// Token: 0x0401DA4B RID: 121419
+		// Token: 0x040184D6 RID: 99542
 		private EGateWayPingResult Result;
 	}
 }

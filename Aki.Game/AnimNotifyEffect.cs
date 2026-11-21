@@ -14,22 +14,22 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003462 RID: 13410
+// Token: 0x020029D6 RID: 10710
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Render/Effect/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Effect/AnimNotify/AnimNotifyEffect.AnimNotifyEffect_C")]
 public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D0BB RID: 118971 RVA: 0x0081860C File Offset: 0x0081680C
+	// Token: 0x0601ADB9 RID: 110009 RVA: 0x0083F3B8 File Offset: 0x0083D5B8
 	static AnimNotifyEffect()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AnimNotifyEffect.CreateStaticDefaultValue), new Action(AnimNotifyEffect.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170027DC RID: 10204
-	// (get) Token: 0x0601D0BC RID: 118972 RVA: 0x00818711 File Offset: 0x00816911
-	// (set) Token: 0x0601D0BD RID: 118973 RVA: 0x00818721 File Offset: 0x00816921
+	// Token: 0x17002B77 RID: 11127
+	// (get) Token: 0x0601ADBA RID: 110010 RVA: 0x0083F4BD File Offset: 0x0083D6BD
+	// (set) Token: 0x0601ADBB RID: 110011 RVA: 0x0083F4CD File Offset: 0x0083D6CD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool NeedAnyTag
 	{
@@ -43,8 +43,8 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027DD RID: 10205
-	// (get) Token: 0x0601D0BE RID: 118974 RVA: 0x00818734 File Offset: 0x00816934
+	// Token: 0x17002B78 RID: 11128
+	// (get) Token: 0x0601ADBC RID: 110012 RVA: 0x0083F4E0 File Offset: 0x0083D6E0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<FGameplayTag, bool> PlayNeedTags
 	{
@@ -60,8 +60,8 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027DE RID: 10206
-	// (get) Token: 0x0601D0BF RID: 118975 RVA: 0x00818770 File Offset: 0x00816970
+	// Token: 0x17002B79 RID: 11129
+	// (get) Token: 0x0601ADBD RID: 110013 RVA: 0x0083F51C File Offset: 0x0083D71C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UEffectModelBase> EffectDataAssetRef
 	{
@@ -77,9 +77,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027DF RID: 10207
-	// (get) Token: 0x0601D0C0 RID: 118976 RVA: 0x008187A9 File Offset: 0x008169A9
-	// (set) Token: 0x0601D0C1 RID: 118977 RVA: 0x008187B9 File Offset: 0x008169B9
+	// Token: 0x17002B7A RID: 11130
+	// (get) Token: 0x0601ADBE RID: 110014 RVA: 0x0083F555 File Offset: 0x0083D755
+	// (set) Token: 0x0601ADBF RID: 110015 RVA: 0x0083F565 File Offset: 0x0083D765
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsSyncEffectTimeScale
 	{
@@ -93,9 +93,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E0 RID: 10208
-	// (get) Token: 0x0601D0C2 RID: 118978 RVA: 0x008187CA File Offset: 0x008169CA
-	// (set) Token: 0x0601D0C3 RID: 118979 RVA: 0x008187DA File Offset: 0x008169DA
+	// Token: 0x17002B7B RID: 11131
+	// (get) Token: 0x0601ADC0 RID: 110016 RVA: 0x0083F576 File Offset: 0x0083D776
+	// (set) Token: 0x0601ADC1 RID: 110017 RVA: 0x0083F586 File Offset: 0x0083D786
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EAnimNotifyEffectLocationType LocationType
 	{
@@ -109,9 +109,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E1 RID: 10209
-	// (get) Token: 0x0601D0C4 RID: 118980 RVA: 0x008187EB File Offset: 0x008169EB
-	// (set) Token: 0x0601D0C5 RID: 118981 RVA: 0x008187FB File Offset: 0x008169FB
+	// Token: 0x17002B7C RID: 11132
+	// (get) Token: 0x0601ADC2 RID: 110018 RVA: 0x0083F597 File Offset: 0x0083D797
+	// (set) Token: 0x0601ADC3 RID: 110019 RVA: 0x0083F5A7 File Offset: 0x0083D7A7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool RightOrLeftFoot
 	{
@@ -125,9 +125,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E2 RID: 10210
-	// (get) Token: 0x0601D0C6 RID: 118982 RVA: 0x0081880C File Offset: 0x00816A0C
-	// (set) Token: 0x0601D0C7 RID: 118983 RVA: 0x0081881C File Offset: 0x00816A1C
+	// Token: 0x17002B7D RID: 11133
+	// (get) Token: 0x0601ADC4 RID: 110020 RVA: 0x0083F5B8 File Offset: 0x0083D7B8
+	// (set) Token: 0x0601ADC5 RID: 110021 RVA: 0x0083F5C8 File Offset: 0x0083D7C8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DebugTrace
 	{
@@ -141,9 +141,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E3 RID: 10211
-	// (get) Token: 0x0601D0C8 RID: 118984 RVA: 0x0081882D File Offset: 0x00816A2D
-	// (set) Token: 0x0601D0C9 RID: 118985 RVA: 0x0081883D File Offset: 0x00816A3D
+	// Token: 0x17002B7E RID: 11134
+	// (get) Token: 0x0601ADC6 RID: 110022 RVA: 0x0083F5D9 File Offset: 0x0083D7D9
+	// (set) Token: 0x0601ADC7 RID: 110023 RVA: 0x0083F5E9 File Offset: 0x0083D7E9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UseSocketTransform
 	{
@@ -157,9 +157,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E4 RID: 10212
-	// (get) Token: 0x0601D0CA RID: 118986 RVA: 0x0081884E File Offset: 0x00816A4E
-	// (set) Token: 0x0601D0CB RID: 118987 RVA: 0x00818862 File Offset: 0x00816A62
+	// Token: 0x17002B7F RID: 11135
+	// (get) Token: 0x0601ADC8 RID: 110024 RVA: 0x0083F5FA File Offset: 0x0083D7FA
+	// (set) Token: 0x0601ADC9 RID: 110025 RVA: 0x0083F60E File Offset: 0x0083D80E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector TraceFrom
 	{
@@ -173,9 +173,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E5 RID: 10213
-	// (get) Token: 0x0601D0CC RID: 118988 RVA: 0x00818877 File Offset: 0x00816A77
-	// (set) Token: 0x0601D0CD RID: 118989 RVA: 0x0081888B File Offset: 0x00816A8B
+	// Token: 0x17002B80 RID: 11136
+	// (get) Token: 0x0601ADCA RID: 110026 RVA: 0x0083F623 File Offset: 0x0083D823
+	// (set) Token: 0x0601ADCB RID: 110027 RVA: 0x0083F637 File Offset: 0x0083D837
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector TraceTo
 	{
@@ -189,9 +189,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E6 RID: 10214
-	// (get) Token: 0x0601D0CE RID: 118990 RVA: 0x008188A0 File Offset: 0x00816AA0
-	// (set) Token: 0x0601D0CF RID: 118991 RVA: 0x008188B0 File Offset: 0x00816AB0
+	// Token: 0x17002B81 RID: 11137
+	// (get) Token: 0x0601ADCC RID: 110028 RVA: 0x0083F64C File Offset: 0x0083D84C
+	// (set) Token: 0x0601ADCD RID: 110029 RVA: 0x0083F65C File Offset: 0x0083D85C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UseClipboardTransform
 	{
@@ -205,9 +205,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E7 RID: 10215
-	// (get) Token: 0x0601D0D0 RID: 118992 RVA: 0x008188C1 File Offset: 0x00816AC1
-	// (set) Token: 0x0601D0D1 RID: 118993 RVA: 0x008188D1 File Offset: 0x00816AD1
+	// Token: 0x17002B82 RID: 11138
+	// (get) Token: 0x0601ADCE RID: 110030 RVA: 0x0083F66D File Offset: 0x0083D86D
+	// (set) Token: 0x0601ADCF RID: 110031 RVA: 0x0083F67D File Offset: 0x0083D87D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DetachWhenSkillEnd
 	{
@@ -221,9 +221,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E8 RID: 10216
-	// (get) Token: 0x0601D0D2 RID: 118994 RVA: 0x008188E2 File Offset: 0x00816AE2
-	// (set) Token: 0x0601D0D3 RID: 118995 RVA: 0x008188F2 File Offset: 0x00816AF2
+	// Token: 0x17002B83 RID: 11139
+	// (get) Token: 0x0601ADD0 RID: 110032 RVA: 0x0083F68E File Offset: 0x0083D88E
+	// (set) Token: 0x0601ADD1 RID: 110033 RVA: 0x0083F69E File Offset: 0x0083D89E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float AttachTimeLength
 	{
@@ -237,9 +237,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027E9 RID: 10217
-	// (get) Token: 0x0601D0D4 RID: 118996 RVA: 0x00818903 File Offset: 0x00816B03
-	// (set) Token: 0x0601D0D5 RID: 118997 RVA: 0x00818913 File Offset: 0x00816B13
+	// Token: 0x17002B84 RID: 11140
+	// (get) Token: 0x0601ADD2 RID: 110034 RVA: 0x0083F6AF File Offset: 0x0083D8AF
+	// (set) Token: 0x0601ADD3 RID: 110035 RVA: 0x0083F6BF File Offset: 0x0083D8BF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ESkillEffectType WhenSkillEnd
 	{
@@ -253,9 +253,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027EA RID: 10218
-	// (get) Token: 0x0601D0D6 RID: 118998 RVA: 0x00818924 File Offset: 0x00816B24
-	// (set) Token: 0x0601D0D7 RID: 118999 RVA: 0x00818934 File Offset: 0x00816B34
+	// Token: 0x17002B85 RID: 11141
+	// (get) Token: 0x0601ADD4 RID: 110036 RVA: 0x0083F6D0 File Offset: 0x0083D8D0
+	// (set) Token: 0x0601ADD5 RID: 110037 RVA: 0x0083F6E0 File Offset: 0x0083D8E0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float WhenSkillEndEnableTime
 	{
@@ -269,9 +269,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027EB RID: 10219
-	// (get) Token: 0x0601D0D8 RID: 119000 RVA: 0x00818945 File Offset: 0x00816B45
-	// (set) Token: 0x0601D0D9 RID: 119001 RVA: 0x00818955 File Offset: 0x00816B55
+	// Token: 0x17002B86 RID: 11142
+	// (get) Token: 0x0601ADD6 RID: 110038 RVA: 0x0083F6F1 File Offset: 0x0083D8F1
+	// (set) Token: 0x0601ADD7 RID: 110039 RVA: 0x0083F701 File Offset: 0x0083D901
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IgnoreWhenInvisible
 	{
@@ -285,9 +285,9 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x170027EC RID: 10220
-	// (get) Token: 0x0601D0DA RID: 119002 RVA: 0x00818966 File Offset: 0x00816B66
-	// (set) Token: 0x0601D0DB RID: 119003 RVA: 0x00818976 File Offset: 0x00816B76
+	// Token: 0x17002B87 RID: 11143
+	// (get) Token: 0x0601ADD8 RID: 110040 RVA: 0x0083F712 File Offset: 0x0083D912
+	// (set) Token: 0x0601ADD9 RID: 110041 RVA: 0x0083F722 File Offset: 0x0083D922
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisableOnVehicle
 	{
@@ -301,60 +301,52 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x0601D0DC RID: 119004 RVA: 0x00818988 File Offset: 0x00816B88
+	// Token: 0x0601ADDA RID: 110042 RVA: 0x0083F734 File Offset: 0x0083D934
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_ValidateAssets()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_ValidateAssets"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_ValidateAssets_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(AnimNotifyEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_ValidateAssets"), AnimNotifyEffect.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_ValidateAssets_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_ValidateAssets_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.K2_ValidateAssets_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_ValidateAssets_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_ValidateAssets_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_ValidateAssets_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D0DD RID: 119005 RVA: 0x008189FD File Offset: 0x00816BFD
+	// Token: 0x0601ADDB RID: 110043 RVA: 0x0083F7BE File Offset: 0x0083D9BE
 	protected virtual bool K2_ValidateAssets_Implementation()
 	{
 		return true;
 	}
 
-	// Token: 0x0601D0DE RID: 119006 RVA: 0x00818A00 File Offset: 0x00816C00
+	// Token: 0x0601ADDC RID: 110044 RVA: 0x0083F7C4 File Offset: 0x0083D9C4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(AnimNotifyEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), AnimNotifyEffect.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D0DF RID: 119007 RVA: 0x00818AA0 File Offset: 0x00816CA0
+	// Token: 0x0601ADDD RID: 110045 RVA: 0x0083F87C File Offset: 0x0083DA7C
 	[NullableContext(2)]
 	protected unsafe virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -523,16 +515,30 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		{
 			text2 = EffectUtil.GetPreviewReplaceEffectPath(text);
 		}
-		EffectSystem instance4 = EffectSystem.Instance;
+		string text3 = (!string.IsNullOrEmpty(text2)) ? text2 : text;
+		if (string.IsNullOrEmpty(text3))
+		{
+			Log instance4 = Log.Instance;
+			ELogModule module3 = ELogModule.RenderEffect;
+			ELogAuthor author3 = ELogAuthor.WLJ;
+			string message3 = "[特效框架][AN]特效路径无效";
+			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray3<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("meshComp", meshComp);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("outer", owner);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 2) = new ValueTuple<string, object>("animation", animation);
+			instance4.Error(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 3));
+			return false;
+		}
+		EffectSystem instance5 = EffectSystem.Instance;
 		UObject worldContext = owner;
 		FTransformDouble? ftransformDouble = new FTransformDouble?(MathUtils.Instance.DefaultTransformDouble);
-		int num = instance4.SpawnUnloopedEffect(worldContext, ftransformDouble, (!string.IsNullOrEmpty(text2)) ? text2 : text, "[AnimNotifyEffect.K2_Notify]", skeletalMeshEffectContext, effectType, null, null, null, false, false);
+		int num = instance5.SpawnUnloopedEffect(worldContext, ftransformDouble, text3, "[AnimNotifyEffect.K2_Notify]", skeletalMeshEffectContext, effectType, null, null, null, false, false);
 		EffectSystem.Instance.SetEffectNotRecord(num, true);
 		this.AttachEffectAndSetupTransform(owner, num);
 		return true;
 	}
 
-	// Token: 0x0601D0E0 RID: 119008 RVA: 0x00818EC4 File Offset: 0x008170C4
+	// Token: 0x0601ADDE RID: 110046 RVA: 0x0083FD1C File Offset: 0x0083DF1C
 	private void AttachEffectAndSetupTransform(AActor outer, int effectHandle)
 	{
 		if (effectHandle == 0 || !EffectSystem.Instance.IsValid(effectHandle))
@@ -546,7 +552,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		this.SetupAttachTimeLengthTimer(effectHandle);
 	}
 
-	// Token: 0x0601D0E1 RID: 119009 RVA: 0x00818F18 File Offset: 0x00817118
+	// Token: 0x0601ADDF RID: 110047 RVA: 0x0083FD70 File Offset: 0x0083DF70
 	private void SetupAttachTimeLengthTimer(int effectHandle)
 	{
 		if (this.AttachTimeLength <= 0f)
@@ -569,7 +575,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}, (float)num, null, "AnimNotifyEffect.AttachTimeLength", true, 1f);
 	}
 
-	// Token: 0x0601D0E2 RID: 119010 RVA: 0x00818F74 File Offset: 0x00817174
+	// Token: 0x0601ADE0 RID: 110048 RVA: 0x0083FDCC File Offset: 0x0083DFCC
 	private bool GameplayTagsCheck(TsBaseCharacter outer)
 	{
 		AnimNotifyEffect.<>c__DisplayClass77_0 CS$<>8__locals1 = new AnimNotifyEffect.<>c__DisplayClass77_0();
@@ -589,7 +595,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		return CS$<>8__locals1.tagComp == null || TsAnimNotifyUtils.CheckTags(this.NeedAnyTag, this.PlayNeedTags, (int tagId) => CS$<>8__locals1.tagComp.HasTag(tagId));
 	}
 
-	// Token: 0x0601D0E3 RID: 119011 RVA: 0x00818FD4 File Offset: 0x008171D4
+	// Token: 0x0601ADE1 RID: 110049 RVA: 0x0083FE2C File Offset: 0x0083E02C
 	private void AttachEffectToSkill(AActor outer, int effectHandle)
 	{
 		TsBaseCharacter tsBaseCharacter = outer as TsBaseCharacter;
@@ -643,7 +649,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x0601D0E4 RID: 119012 RVA: 0x008190B4 File Offset: 0x008172B4
+	// Token: 0x0601ADE2 RID: 110050 RVA: 0x0083FF0C File Offset: 0x0083E10C
 	private void AttachEffectToSelfCentered(AActor outer, int effectHandle)
 	{
 		TsBaseCharacter tsBaseCharacter = outer as TsBaseCharacter;
@@ -685,30 +691,26 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x0601D0E5 RID: 119013 RVA: 0x00819130 File Offset: 0x00817330
+	// Token: 0x0601ADE3 RID: 110051 RVA: 0x0083FF88 File Offset: 0x0083E188
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_PostChangeProperty(FName propertyName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_PostChangeProperty"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_PostChangeProperty_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(AnimNotifyEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_PostChangeProperty"), AnimNotifyEffect.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_PostChangeProperty_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_PostChangeProperty_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->PropertyName = propertyName;
+			return this.K2_PostChangeProperty_Implementation(propertyName);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_PostChangeProperty_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_PostChangeProperty_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_PostChangeProperty_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->PropertyName = propertyName;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D0E6 RID: 119014 RVA: 0x008191AC File Offset: 0x008173AC
+	// Token: 0x0601ADE4 RID: 110052 RVA: 0x0084001C File Offset: 0x0083E21C
 	protected virtual bool K2_PostChangeProperty_Implementation(FName propertyName)
 	{
 		if (propertyName == RenderConfig.UseSocketTransform)
@@ -755,29 +757,25 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		return true;
 	}
 
-	// Token: 0x0601D0E7 RID: 119015 RVA: 0x008192D4 File Offset: 0x008174D4
+	// Token: 0x0601ADE5 RID: 110053 RVA: 0x00840144 File Offset: 0x0083E344
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(AnimNotifyEffect) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), AnimNotifyEffect.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x0601D0E8 RID: 119016 RVA: 0x00819350 File Offset: 0x00817550
+	// Token: 0x0601ADE6 RID: 110054 RVA: 0x008401D4 File Offset: 0x0083E3D4
 	protected override string GetNotifyName_Implementation()
 	{
 		string text = this.EffectDataAssetRef.ToAssetPathName();
@@ -788,7 +786,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		return "特效数据通知";
 	}
 
-	// Token: 0x0601D0E9 RID: 119017 RVA: 0x00819380 File Offset: 0x00817580
+	// Token: 0x0601ADE7 RID: 110055 RVA: 0x00840204 File Offset: 0x0083E404
 	public void SetupTransform([Nullable(new byte[]
 	{
 		0,
@@ -912,7 +910,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		}
 	}
 
-	// Token: 0x0601D0EA RID: 119018 RVA: 0x00819808 File Offset: 0x00817A08
+	// Token: 0x0601ADE8 RID: 110056 RVA: 0x0084068C File Offset: 0x0083E88C
 	private static void InitTraceInfo()
 	{
 		AnimNotifyEffect.TmpVector = Vector.Create();
@@ -934,7 +932,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		AnimNotifyEffect.LineTrace = utraceLineElement;
 	}
 
-	// Token: 0x0601D0EB RID: 119019 RVA: 0x008198F4 File Offset: 0x00817AF4
+	// Token: 0x0601ADE9 RID: 110057 RVA: 0x00840778 File Offset: 0x0083E978
 	protected bool TraceDetectClimbStep(TsBaseCharacter outer, FTransformDouble outTrans)
 	{
 		if (AnimNotifyEffect.TmpVector == null)
@@ -976,7 +974,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		return false;
 	}
 
-	// Token: 0x0601D0EC RID: 119020 RVA: 0x00819B00 File Offset: 0x00817D00
+	// Token: 0x0601ADEA RID: 110058 RVA: 0x00840984 File Offset: 0x0083EB84
 	private bool IsDisablePostProcess(USkeletalMeshComponent meshComp)
 	{
 		AActor owner = meshComp.GetOwner();
@@ -998,7 +996,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		return entityById != null && entityById.Valid && !CharacterUtils.CanCharacterMonsterOrSummonedDisplayEffect(entityById);
 	}
 
-	// Token: 0x0601D0ED RID: 119021 RVA: 0x00819B84 File Offset: 0x00817D84
+	// Token: 0x0601ADEB RID: 110059 RVA: 0x00840A08 File Offset: 0x0083EC08
 	public static void CreateStaticDefaultValue()
 	{
 		AnimNotifyEffect.TmpVector = null;
@@ -1012,7 +1010,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		AnimNotifyEffect.LineTrace = null;
 	}
 
-	// Token: 0x0601D0EE RID: 119022 RVA: 0x00819BD4 File Offset: 0x00817DD4
+	// Token: 0x0601ADEC RID: 110060 RVA: 0x00840A58 File Offset: 0x0083EC58
 	public static void ResetStaticDefaultValue()
 	{
 		AnimNotifyEffect.TmpVector = null;
@@ -1026,7 +1024,7 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		AnimNotifyEffect.LineTrace = null;
 	}
 
-	// Token: 0x0601D0EF RID: 119023 RVA: 0x00819C21 File Offset: 0x00817E21
+	// Token: 0x0601ADED RID: 110061 RVA: 0x00840AA5 File Offset: 0x0083ECA5
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (AnimNotifyEffect._ClassPtr == IntPtr.Zero)
@@ -1036,29 +1034,29 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		return AnimNotifyEffect._ClassPtr;
 	}
 
-	// Token: 0x0601D0F0 RID: 119024 RVA: 0x00819C48 File Offset: 0x00817E48
+	// Token: 0x0601ADEE RID: 110062 RVA: 0x00840ACC File Offset: 0x0083ECCC
 	public AnimNotifyEffect() : this(BuiltinUtils.AllocNativeUObject(AnimNotifyEffect.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D0F1 RID: 119025 RVA: 0x00819C70 File Offset: 0x00817E70
+	// Token: 0x0601ADEF RID: 110063 RVA: 0x00840AF4 File Offset: 0x0083ECF4
 	public AnimNotifyEffect(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AnimNotifyEffect.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D0F2 RID: 119026 RVA: 0x00819CA3 File Offset: 0x00817EA3
+	// Token: 0x0601ADF0 RID: 110064 RVA: 0x00840B27 File Offset: 0x0083ED27
 	protected AnimNotifyEffect(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D0F3 RID: 119027 RVA: 0x00819CAC File Offset: 0x00817EAC
+	// Token: 0x0601ADF1 RID: 110065 RVA: 0x00840B30 File Offset: 0x0083ED30
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_ValidateAssets_Implementation(UKuroAnimNotify.__K2_ValidateAssets_FunctionParams* __Params)
 	{
 		__Params->__Result = this.K2_ValidateAssets_Implementation();
 	}
 
-	// Token: 0x0601D0F4 RID: 119028 RVA: 0x00819CBC File Offset: 0x00817EBC
+	// Token: 0x0601ADF2 RID: 110066 RVA: 0x00840B40 File Offset: 0x0083ED40
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
@@ -1067,21 +1065,21 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601D0F5 RID: 119029 RVA: 0x00819CEF File Offset: 0x00817EEF
+	// Token: 0x0601ADF3 RID: 110067 RVA: 0x00840B73 File Offset: 0x0083ED73
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_PostChangeProperty_Implementation(UKuroAnimNotify.__K2_PostChangeProperty_FunctionParams* __Params)
 	{
 		__Params->__Result = this.K2_PostChangeProperty_Implementation(__Params->PropertyName);
 	}
 
-	// Token: 0x0601D0F6 RID: 119030 RVA: 0x00819D03 File Offset: 0x00817F03
+	// Token: 0x0601ADF4 RID: 110068 RVA: 0x00840B87 File Offset: 0x0083ED87
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x0601D0F7 RID: 119031 RVA: 0x00819D18 File Offset: 0x00817F18
+	// Token: 0x0601ADF5 RID: 110069 RVA: 0x00840B9C File Offset: 0x0083ED9C
 	[CompilerGenerated]
 	internal static string <K2_PostChangeProperty_Implementation>g__getSubString|81_0(string findString, ref AnimNotifyEffect.<>c__DisplayClass81_0 A_1)
 	{
@@ -1098,107 +1096,107 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 		return "";
 	}
 
-	// Token: 0x0400E4A1 RID: 58529
+	// Token: 0x0400E952 RID: 59730
 	private const int DISTANCE_EFFECT_ON_FLOOR = 1;
 
-	// Token: 0x0400E4A2 RID: 58530
+	// Token: 0x0400E953 RID: 59731
 	private const int DISTANCE_FOOT_TO_EFFECT = 10;
 
-	// Token: 0x0400E4A3 RID: 58531
+	// Token: 0x0400E954 RID: 59732
 	private const int DETECT_DEPTH = 100;
 
-	// Token: 0x0400E4A4 RID: 58532
+	// Token: 0x0400E955 RID: 59733
 	private const string PROFILE_KEY = "AnimNotifyEffect";
 
-	// Token: 0x0400E4A5 RID: 58533
+	// Token: 0x0400E956 RID: 59734
 	[Nullable(2)]
 	protected USkeletalMeshComponent LastSkeletalMesh;
 
-	// Token: 0x0400E4A6 RID: 58534
+	// Token: 0x0400E957 RID: 59735
 	[Nullable(2)]
 	private static Vector TmpVector = null;
 
-	// Token: 0x0400E4A7 RID: 58535
+	// Token: 0x0400E958 RID: 59736
 	[Nullable(2)]
 	private static Vector TmpVector2 = null;
 
-	// Token: 0x0400E4A8 RID: 58536
+	// Token: 0x0400E959 RID: 59737
 	[Nullable(2)]
 	private static Vector TmpVector3 = null;
 
-	// Token: 0x0400E4A9 RID: 58537
+	// Token: 0x0400E95A RID: 59738
 	[Nullable(2)]
 	private static Vector TmpVector4 = null;
 
-	// Token: 0x0400E4AA RID: 58538
+	// Token: 0x0400E95B RID: 59739
 	[Nullable(2)]
 	private static Quat TmpQuat = null;
 
-	// Token: 0x0400E4AB RID: 58539
+	// Token: 0x0400E95C RID: 59740
 	[Nullable(2)]
 	private static Vector SocketLocation = null;
 
-	// Token: 0x0400E4AC RID: 58540
+	// Token: 0x0400E95D RID: 59741
 	private static FName? SocketNameLeftFoot = null;
 
-	// Token: 0x0400E4AD RID: 58541
+	// Token: 0x0400E95E RID: 59742
 	private static FName? SocketNameRightFoot = null;
 
-	// Token: 0x0400E4AE RID: 58542
+	// Token: 0x0400E95F RID: 59743
 	[Nullable(2)]
 	private static UTraceLineElement LineTrace = null;
 
-	// Token: 0x0400E4AF RID: 58543
+	// Token: 0x0400E960 RID: 59744
 	[StaticVariableRuleIgnore]
 	private static readonly Stat NotifyStat = Stat.Create("K2_Notify", "", "");
 
-	// Token: 0x0400E4B0 RID: 58544
+	// Token: 0x0400E961 RID: 59745
 	[StaticVariableRuleIgnore]
 	private static readonly Stat CreateEffectContextStat = Stat.Create("K2_Notify.CreateEffectContext", "", "");
 
-	// Token: 0x0400E4B1 RID: 58545
+	// Token: 0x0400E962 RID: 59746
 	[StaticVariableRuleIgnore]
 	private static readonly Stat SpawnEffectStat = Stat.Create("K2_Notify.SpawnEffect", "", "");
 
-	// Token: 0x0400E4B2 RID: 58546
+	// Token: 0x0400E963 RID: 59747
 	[StaticVariableRuleIgnore]
 	private static readonly Stat AttachEffectToSkillStat = Stat.Create("K2_Notify.AttachEffectToSkill", "", "");
 
-	// Token: 0x0400E4B3 RID: 58547
+	// Token: 0x0400E964 RID: 59748
 	[StaticVariableRuleIgnore]
 	private static readonly Stat SetupTransformStat = Stat.Create("K2_Notify.SetupTransform", "", "");
 
-	// Token: 0x0400E4B4 RID: 58548
+	// Token: 0x0400E965 RID: 59749
 	[StaticVariableRuleIgnore]
 	private static readonly FName NameNone = new FName("None");
 
-	// Token: 0x0400E4B5 RID: 58549
+	// Token: 0x0400E966 RID: 59750
 	[StaticVariableRuleIgnore]
 	private static readonly FName TagFlagNoNiagara = new FName("NoNiagara");
 
-	// Token: 0x0400E4B6 RID: 58550
+	// Token: 0x0400E967 RID: 59751
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Effect/AnimNotify/AnimNotifyEffect.AnimNotifyEffect_C";
 
-	// Token: 0x0400E4B7 RID: 58551
+	// Token: 0x0400E968 RID: 59752
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E4B8 RID: 58552
+	// Token: 0x0400E969 RID: 59753
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E4B9 RID: 58553
+	// Token: 0x0400E96A RID: 59754
 	private static int __PropertyOffset_NeedAnyTag;
 
-	// Token: 0x0400E4BA RID: 58554
+	// Token: 0x0400E96B RID: 59755
 	private static int __PropertyOffset_PlayNeedTags;
 
-	// Token: 0x0400E4BB RID: 58555
+	// Token: 0x0400E96C RID: 59756
 	[Nullable(2)]
 	private TMap<FGameplayTag, bool> _PlayNeedTags;
 
-	// Token: 0x0400E4BC RID: 58556
+	// Token: 0x0400E96D RID: 59757
 	private static int __PropertyOffset_EffectDataAssetRef;
 
-	// Token: 0x0400E4BD RID: 58557
+	// Token: 0x0400E96E RID: 59758
 	[Nullable(new byte[]
 	{
 		2,
@@ -1206,45 +1204,45 @@ public class AnimNotifyEffect : UKuroEffectMakerAN, IStaticVariableResetter, IUn
 	})]
 	private TSoftObjectPtr<UEffectModelBase> _EffectDataAssetRef;
 
-	// Token: 0x0400E4BE RID: 58558
+	// Token: 0x0400E96F RID: 59759
 	private static int __PropertyOffset_IsSyncEffectTimeScale;
 
-	// Token: 0x0400E4BF RID: 58559
+	// Token: 0x0400E970 RID: 59760
 	private static int __PropertyOffset_LocationType;
 
-	// Token: 0x0400E4C0 RID: 58560
+	// Token: 0x0400E971 RID: 59761
 	private static int __PropertyOffset_RightOrLeftFoot;
 
-	// Token: 0x0400E4C1 RID: 58561
+	// Token: 0x0400E972 RID: 59762
 	private static int __PropertyOffset_DebugTrace;
 
-	// Token: 0x0400E4C2 RID: 58562
+	// Token: 0x0400E973 RID: 59763
 	private static int __PropertyOffset_UseSocketTransform;
 
-	// Token: 0x0400E4C3 RID: 58563
+	// Token: 0x0400E974 RID: 59764
 	private static int __PropertyOffset_TraceFrom;
 
-	// Token: 0x0400E4C4 RID: 58564
+	// Token: 0x0400E975 RID: 59765
 	private static int __PropertyOffset_TraceTo;
 
-	// Token: 0x0400E4C5 RID: 58565
+	// Token: 0x0400E976 RID: 59766
 	private static int __PropertyOffset_UseClipboardTransform;
 
-	// Token: 0x0400E4C6 RID: 58566
+	// Token: 0x0400E977 RID: 59767
 	private static int __PropertyOffset_DetachWhenSkillEnd;
 
-	// Token: 0x0400E4C7 RID: 58567
+	// Token: 0x0400E978 RID: 59768
 	private static int __PropertyOffset_AttachTimeLength;
 
-	// Token: 0x0400E4C8 RID: 58568
+	// Token: 0x0400E979 RID: 59769
 	private static int __PropertyOffset_WhenSkillEnd;
 
-	// Token: 0x0400E4C9 RID: 58569
+	// Token: 0x0400E97A RID: 59770
 	private static int __PropertyOffset_WhenSkillEndEnableTime;
 
-	// Token: 0x0400E4CA RID: 58570
+	// Token: 0x0400E97B RID: 59771
 	private static int __PropertyOffset_IgnoreWhenInvisible;
 
-	// Token: 0x0400E4CB RID: 58571
+	// Token: 0x0400E97C RID: 59772
 	private static int __PropertyOffset_DisableOnVehicle;
 }

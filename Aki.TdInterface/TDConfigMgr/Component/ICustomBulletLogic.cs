@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000299 RID: 665
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002DE RID: 734
 	public class ICustomBulletLogic
 	{
-		// Token: 0x06000C69 RID: 3177 RVA: 0x00030224 File Offset: 0x0002E424
+		// Token: 0x06000D8D RID: 3469 RVA: 0x00033014 File Offset: 0x00031214
 		private ICustomBulletLogic_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C6A RID: 3178 RVA: 0x0003025C File Offset: 0x0002E45C
+		// Token: 0x06000D8E RID: 3470 RVA: 0x0003304C File Offset: 0x0003124C
 		public static ICustomBulletLogic Create([Nullable(2)] ICustomBulletLogic instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C6B RID: 3179 RVA: 0x0003026F File Offset: 0x0002E46F
+		// Token: 0x06000D8F RID: 3471 RVA: 0x0003305F File Offset: 0x0003125F
 		public static ICustomBulletLogic CreateFromSetValue([Nullable(2)] ICustomBulletLogic_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C6C RID: 3180 RVA: 0x00030282 File Offset: 0x0002E482
+		// Token: 0x06000D90 RID: 3472 RVA: 0x00033072 File Offset: 0x00031272
 		public ICustomBulletLogic_SetValue ToSetValue()
 		{
 			return new ICustomBulletLogic_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003AC RID: 940
-		// (get) Token: 0x06000C6D RID: 3181 RVA: 0x00030295 File Offset: 0x0002E495
-		// (set) Token: 0x06000C6E RID: 3182 RVA: 0x000302C0 File Offset: 0x0002E4C0
+		// Token: 0x170003F6 RID: 1014
+		// (get) Token: 0x06000D91 RID: 3473 RVA: 0x00033085 File Offset: 0x00031285
+		// (set) Token: 0x06000D92 RID: 3474 RVA: 0x000330B0 File Offset: 0x000312B0
 		public virtual ECustomBulletLogic Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BA9 RID: 2985
+		// Token: 0x04000C8E RID: 3214
 		[Nullable(2)]
 		protected ICustomBulletLogic FbInstance;
 
-		// Token: 0x04000BAA RID: 2986
+		// Token: 0x04000C8F RID: 3215
 		[Nullable(2)]
 		protected ICustomBulletLogic_SetValue PocoInterface;
 	}

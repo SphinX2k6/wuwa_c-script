@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056F3 RID: 22259
+	// Token: 0x020046CA RID: 18122
 	public interface IKurotatoWeaponBuildInfoPanel
 	{
-		// Token: 0x170087F6 RID: 34806
-		// (get) Token: 0x060389D0 RID: 231888
-		// (set) Token: 0x060389D1 RID: 231889
+		// Token: 0x17005BBE RID: 23486
+		// (get) Token: 0x0602D8E0 RID: 186592
+		// (set) Token: 0x0602D8E1 RID: 186593
 		int BuildId { get; set; }
 
-		// Token: 0x170087F7 RID: 34807
-		// (get) Token: 0x060389D2 RID: 231890
-		// (set) Token: 0x060389D3 RID: 231891
+		// Token: 0x17005BBF RID: 23487
+		// (get) Token: 0x0602D8E2 RID: 186594
+		// (set) Token: 0x0602D8E3 RID: 186595
 		int BuildLevel { get; set; }
 	}
 }

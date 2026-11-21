@@ -2,37 +2,37 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002954 RID: 10580
+// Token: 0x02001ECF RID: 7887
 [NullableContext(1)]
 public interface IUpdateGroupParams
 {
-	// Token: 0x17001D58 RID: 7512
-	// (get) Token: 0x06015DBB RID: 89531
-	// (set) Token: 0x06015DBC RID: 89532
+	// Token: 0x17001DB1 RID: 7601
+	// (get) Token: 0x060137BF RID: 79807
+	// (set) Token: 0x060137C0 RID: 79808
 	ETeamGroupType GroupType { get; set; }
 
-	// Token: 0x17001D59 RID: 7513
-	// (get) Token: 0x06015DBD RID: 89533
-	// (set) Token: 0x06015DBE RID: 89534
+	// Token: 0x17001DB2 RID: 7602
+	// (get) Token: 0x060137C1 RID: 79809
+	// (set) Token: 0x060137C2 RID: 79810
 	IList<SceneTeamRole> GroupRoleList { get; set; }
 
-	// Token: 0x17001D5A RID: 7514
-	// (get) Token: 0x06015DBF RID: 89535
-	// (set) Token: 0x06015DC0 RID: 89536
+	// Token: 0x17001DB3 RID: 7603
+	// (get) Token: 0x060137C3 RID: 79811
+	// (set) Token: 0x060137C4 RID: 79812
 	int CurrentRoleId { get; set; }
 
-	// Token: 0x17001D5B RID: 7515
-	// (get) Token: 0x06015DC1 RID: 89537
-	// (set) Token: 0x06015DC2 RID: 89538
+	// Token: 0x17001DB4 RID: 7604
+	// (get) Token: 0x060137C5 RID: 79813
+	// (set) Token: 0x060137C6 RID: 79814
 	ETeamLivingState? LivingState { get; set; }
 
-	// Token: 0x17001D5C RID: 7516
-	// (get) Token: 0x06015DC3 RID: 89539
-	// (set) Token: 0x06015DC4 RID: 89540
+	// Token: 0x17001DB5 RID: 7605
+	// (get) Token: 0x060137C7 RID: 79815
+	// (set) Token: 0x060137C8 RID: 79816
 	bool? IsFixedLocation { get; set; }
 
-	// Token: 0x17001D5D RID: 7517
-	// (get) Token: 0x06015DC5 RID: 89541
-	// (set) Token: 0x06015DC6 RID: 89542
+	// Token: 0x17001DB6 RID: 7606
+	// (get) Token: 0x060137C9 RID: 79817
+	// (set) Token: 0x060137CA RID: 79818
 	bool? ReplaceAllRole { get; set; }
 }

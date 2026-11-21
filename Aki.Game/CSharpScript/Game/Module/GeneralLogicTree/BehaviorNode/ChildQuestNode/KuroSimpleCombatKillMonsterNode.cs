@@ -5,17 +5,17 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059D7 RID: 22999
+	// Token: 0x020049B0 RID: 18864
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KuroSimpleCombatKillMonsterNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4C3 RID: 238787 RVA: 0x00DDD0B8 File Offset: 0x00DDB2B8
+		// Token: 0x0602F3EB RID: 193515 RVA: 0x00D2C8DB File Offset: 0x00D2AADB
 		public KuroSimpleCombatKillMonsterNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A4C4 RID: 238788 RVA: 0x00DDD0C4 File Offset: 0x00DDB2C4
+		// Token: 0x0602F3EC RID: 193516 RVA: 0x00D2C8E4 File Offset: 0x00D2AAE4
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			IChildQuestBtNode childQuestBtNode = nodeConfig as IChildQuestBtNode;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4C5 RID: 238789 RVA: 0x00DDD108 File Offset: 0x00DDB308
+		// Token: 0x0602F3ED RID: 193517 RVA: 0x00D2C928 File Offset: 0x00D2AB28
 		protected override bool OnUpdateProgress(ChildQuestNodeProgress progress)
 		{
 			if (progress.GpuMonster == null)
@@ -47,19 +47,19 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4C6 RID: 238790 RVA: 0x00DDD126 File Offset: 0x00DDB326
+		// Token: 0x0602F3EE RID: 193518 RVA: 0x00D2C946 File Offset: 0x00D2AB46
 		public override string GetProgress()
 		{
 			return this.CurrentKillNum.ToString();
 		}
 
-		// Token: 0x0603A4C7 RID: 238791 RVA: 0x00DDD133 File Offset: 0x00DDB333
+		// Token: 0x0602F3EF RID: 193519 RVA: 0x00D2C953 File Offset: 0x00D2AB53
 		public override string GetProgressMax()
 		{
 			return "";
 		}
 
-		// Token: 0x0401E645 RID: 124485
+		// Token: 0x040190E4 RID: 102628
 		private int CurrentKillNum;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002828 RID: 10280
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AFB RID: 11003
 	public class IMoveToPoint : IMoveSceneItemType
 	{
-		// Token: 0x0600E3FA RID: 58362 RVA: 0x0021930A File Offset: 0x0021750A
+		// Token: 0x0600F21F RID: 61983 RVA: 0x0023616E File Offset: 0x0023436E
 		public static IMoveToPoint Create(IMoveToPoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700456C RID: 17772
-		// (get) Token: 0x0600E3FB RID: 58363 RVA: 0x00219329 File Offset: 0x00217529
+		// Token: 0x170048D7 RID: 18647
+		// (get) Token: 0x0600F220 RID: 61984 RVA: 0x0023618D File Offset: 0x0023438D
 		public override EMoveSceneItemType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700456D RID: 17773
-		// (get) Token: 0x0600E3FC RID: 58364 RVA: 0x00219336 File Offset: 0x00217536
+		// Token: 0x170048D8 RID: 18648
+		// (get) Token: 0x0600F221 RID: 61985 RVA: 0x0023619A File Offset: 0x0023439A
 		public virtual VectorInfo Point
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700456E RID: 17774
-		// (get) Token: 0x0600E3FD RID: 58365 RVA: 0x0021936A File Offset: 0x0021756A
+		// Token: 0x170048D9 RID: 18649
+		// (get) Token: 0x0600F222 RID: 61986 RVA: 0x002361CE File Offset: 0x002343CE
 		public virtual float Time
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700456F RID: 17775
-		// (get) Token: 0x0600E3FE RID: 58366 RVA: 0x00219377 File Offset: 0x00217577
+		// Token: 0x170048DA RID: 18650
+		// (get) Token: 0x0600F223 RID: 61987 RVA: 0x002361DB File Offset: 0x002343DB
 		public virtual ISceneItemMoveMotionType MoveMotion
 		{
 			get
@@ -75,20 +73,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E24 RID: 32292
+		// Token: 0x040084E1 RID: 34017
 		private IMoveToPoint Instance;
 
-		// Token: 0x04007E25 RID: 32293
+		// Token: 0x040084E2 RID: 34018
 		[Nullable(2)]
 		private VectorInfo _PointCache;
 
-		// Token: 0x04007E26 RID: 32294
+		// Token: 0x040084E3 RID: 34019
 		private bool _PointInited;
 
-		// Token: 0x04007E27 RID: 32295
+		// Token: 0x040084E4 RID: 34020
 		private ISceneItemMoveMotionType _MoveMotionCache;
 
-		// Token: 0x04007E28 RID: 32296
+		// Token: 0x040084E5 RID: 34021
 		private bool _MoveMotionInited;
 	}
 }

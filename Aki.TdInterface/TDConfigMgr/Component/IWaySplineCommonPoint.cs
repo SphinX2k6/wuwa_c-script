@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007D3 RID: 2003
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000876 RID: 2166
 	public class IWaySplineCommonPoint : IWaySplinePointType
 	{
-		// Token: 0x06002B7B RID: 11131 RVA: 0x00071688 File Offset: 0x0006F888
+		// Token: 0x06002EAB RID: 11947 RVA: 0x000789EC File Offset: 0x00076BEC
 		private IWaySplineCommonPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002B7C RID: 11132 RVA: 0x000716C0 File Offset: 0x0006F8C0
+		// Token: 0x06002EAC RID: 11948 RVA: 0x00078A24 File Offset: 0x00076C24
 		public static IWaySplineCommonPoint Create([Nullable(2)] IWaySplineCommonPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B7D RID: 11133 RVA: 0x000716D3 File Offset: 0x0006F8D3
+		// Token: 0x06002EAD RID: 11949 RVA: 0x00078A37 File Offset: 0x00076C37
 		public static IWaySplineCommonPoint CreateFromSetValue([Nullable(2)] IWaySplineCommonPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B7E RID: 11134 RVA: 0x000716E6 File Offset: 0x0006F8E6
+		// Token: 0x06002EAE RID: 11950 RVA: 0x00078A4A File Offset: 0x00076C4A
 		public new IWaySplineCommonPoint_SetValue ToSetValue()
 		{
 			return new IWaySplineCommonPoint_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B64 RID: 2916
-		// (get) Token: 0x06002B7F RID: 11135 RVA: 0x000716F9 File Offset: 0x0006F8F9
-		// (set) Token: 0x06002B80 RID: 11136 RVA: 0x00071724 File Offset: 0x0006F924
+		// Token: 0x17000C27 RID: 3111
+		// (get) Token: 0x06002EAF RID: 11951 RVA: 0x00078A5D File Offset: 0x00076C5D
+		// (set) Token: 0x06002EB0 RID: 11952 RVA: 0x00078A88 File Offset: 0x00076C88
 		public override EWaySplinePointType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001CDC RID: 7388
+		// Token: 0x04001EE8 RID: 7912
 		[Nullable(2)]
 		protected new IWaySplineCommonPoint FbInstance;
 
-		// Token: 0x04001CDD RID: 7389
+		// Token: 0x04001EE9 RID: 7913
 		[Nullable(2)]
 		protected new IWaySplineCommonPoint_SetValue PocoInterface;
 	}

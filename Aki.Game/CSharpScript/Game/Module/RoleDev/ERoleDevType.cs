@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CB0 RID: 19632
+	// Token: 0x02003C61 RID: 15457
 	public enum ERoleDevType
 	{
-		// Token: 0x0401B002 RID: 110594
+		// Token: 0x04015963 RID: 88419
 		None,
-		// Token: 0x0401B003 RID: 110595
+		// Token: 0x04015964 RID: 88420
 		OnlyForecast,
-		// Token: 0x0401B004 RID: 110596
+		// Token: 0x04015965 RID: 88421
 		ForecastToSummon,
-		// Token: 0x0401B005 RID: 110597
+		// Token: 0x04015966 RID: 88422
 		OnlyRerun,
-		// Token: 0x0401B006 RID: 110598
+		// Token: 0x04015967 RID: 88423
 		RerunToSummon,
-		// Token: 0x0401B007 RID: 110599
+		// Token: 0x04015968 RID: 88424
 		OnlySummon,
-		// Token: 0x0401B008 RID: 110600
+		// Token: 0x04015969 RID: 88425
 		WeaponType
 	}
 }

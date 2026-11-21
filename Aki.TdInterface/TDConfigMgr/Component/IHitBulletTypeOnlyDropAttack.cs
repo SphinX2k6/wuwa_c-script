@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000416 RID: 1046
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200046F RID: 1135
 	public class IHitBulletTypeOnlyDropAttack : IHitBulletType
 	{
-		// Token: 0x0600151B RID: 5403 RVA: 0x00042898 File Offset: 0x00040A98
+		// Token: 0x060016B5 RID: 5813 RVA: 0x000465E0 File Offset: 0x000447E0
 		private IHitBulletTypeOnlyDropAttack_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600151C RID: 5404 RVA: 0x000428D0 File Offset: 0x00040AD0
+		// Token: 0x060016B6 RID: 5814 RVA: 0x00046618 File Offset: 0x00044818
 		public static IHitBulletTypeOnlyDropAttack Create([Nullable(2)] IHitBulletTypeOnlyDropAttack instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600151D RID: 5405 RVA: 0x000428E3 File Offset: 0x00040AE3
+		// Token: 0x060016B7 RID: 5815 RVA: 0x0004662B File Offset: 0x0004482B
 		public static IHitBulletTypeOnlyDropAttack CreateFromSetValue([Nullable(2)] IHitBulletTypeOnlyDropAttack_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600151E RID: 5406 RVA: 0x000428F6 File Offset: 0x00040AF6
+		// Token: 0x060016B8 RID: 5816 RVA: 0x0004663E File Offset: 0x0004483E
 		public new IHitBulletTypeOnlyDropAttack_SetValue ToSetValue()
 		{
 			return new IHitBulletTypeOnlyDropAttack_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005CA RID: 1482
-		// (get) Token: 0x0600151F RID: 5407 RVA: 0x00042909 File Offset: 0x00040B09
-		// (set) Token: 0x06001520 RID: 5408 RVA: 0x00042934 File Offset: 0x00040B34
+		// Token: 0x17000631 RID: 1585
+		// (get) Token: 0x060016B9 RID: 5817 RVA: 0x00046651 File Offset: 0x00044851
+		// (set) Token: 0x060016BA RID: 5818 RVA: 0x0004667C File Offset: 0x0004487C
 		public override EHitBulletType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001067 RID: 4199
+		// Token: 0x04001189 RID: 4489
 		[Nullable(2)]
 		protected new IHitBulletTypeOnlyDropAttack FbInstance;
 
-		// Token: 0x04001068 RID: 4200
+		// Token: 0x0400118A RID: 4490
 		[Nullable(2)]
 		protected new IHitBulletTypeOnlyDropAttack_SetValue PocoInterface;
 	}

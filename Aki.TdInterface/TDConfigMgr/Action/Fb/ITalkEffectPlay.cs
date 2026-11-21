@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200253C RID: 9532
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027E3 RID: 10211
 	public class ITalkEffectPlay : ITalkEffectActionType
 	{
-		// Token: 0x0600D46B RID: 54379 RVA: 0x001F7162 File Offset: 0x001F5362
+		// Token: 0x0600E1CB RID: 57803 RVA: 0x00212BC2 File Offset: 0x00210DC2
 		public static ITalkEffectPlay Create(ITalkEffectPlay? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BB5 RID: 15285
-		// (get) Token: 0x0600D46C RID: 54380 RVA: 0x001F7181 File Offset: 0x001F5381
+		// Token: 0x17003EB3 RID: 16051
+		// (get) Token: 0x0600E1CC RID: 57804 RVA: 0x00212BE1 File Offset: 0x00210DE1
 		public override ETalkEffectActionType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BB6 RID: 15286
-		// (get) Token: 0x0600D46D RID: 54381 RVA: 0x001F718E File Offset: 0x001F538E
+		// Token: 0x17003EB4 RID: 16052
+		// (get) Token: 0x0600E1CD RID: 57805 RVA: 0x00212BEE File Offset: 0x00210DEE
 		public virtual ITalkCommonEffect Effect
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BB7 RID: 15287
-		// (get) Token: 0x0600D46E RID: 54382 RVA: 0x001F71C4 File Offset: 0x001F53C4
+		// Token: 0x17003EB5 RID: 16053
+		// (get) Token: 0x0600E1CE RID: 57806 RVA: 0x00212C24 File Offset: 0x00210E24
 		public virtual bool? KeepPlay
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BB8 RID: 15288
-		// (get) Token: 0x0600D46F RID: 54383 RVA: 0x001F71FA File Offset: 0x001F53FA
+		// Token: 0x17003EB6 RID: 16054
+		// (get) Token: 0x0600E1CF RID: 57807 RVA: 0x00212C5A File Offset: 0x00210E5A
 		[Nullable(2)]
 		public virtual string EffectKey
 		{
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BB9 RID: 15289
-		// (get) Token: 0x0600D470 RID: 54384 RVA: 0x001F7208 File Offset: 0x001F5408
+		// Token: 0x17003EB7 RID: 16055
+		// (get) Token: 0x0600E1D0 RID: 57808 RVA: 0x00212C68 File Offset: 0x00210E68
 		public virtual float? DelayTime
 		{
 			get
@@ -88,14 +86,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400745A RID: 29786
+		// Token: 0x04007AAF RID: 31407
 		private ITalkEffectPlay Instance;
 
-		// Token: 0x0400745B RID: 29787
+		// Token: 0x04007AB0 RID: 31408
 		[Nullable(2)]
 		private ITalkCommonEffect _EffectCache;
 
-		// Token: 0x0400745C RID: 29788
+		// Token: 0x04007AB1 RID: 31409
 		private bool _EffectInited;
 	}
 }

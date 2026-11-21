@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CA3 RID: 27811
+	// Token: 0x02005E1D RID: 24093
 	public class LevelConditionCheckHasFirstPhantomAtPosition : LevelConditionBase
 	{
-		// Token: 0x060445D8 RID: 280024 RVA: 0x010DBC98 File Offset: 0x010D9E98
+		// Token: 0x0603A732 RID: 239410 RVA: 0x01085C44 File Offset: 0x01083E44
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

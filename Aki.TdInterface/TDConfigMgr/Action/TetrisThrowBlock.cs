@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200223D RID: 8765
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024A8 RID: 9384
 	public class TetrisThrowBlock : ActionParams
 	{
-		// Token: 0x0600C05A RID: 49242 RVA: 0x001B9E90 File Offset: 0x001B8090
+		// Token: 0x0600CC18 RID: 52248 RVA: 0x001D155C File Offset: 0x001CF75C
 		private TetrisThrowBlock_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C05B RID: 49243 RVA: 0x001B9EC8 File Offset: 0x001B80C8
+		// Token: 0x0600CC19 RID: 52249 RVA: 0x001D1594 File Offset: 0x001CF794
 		public static TetrisThrowBlock Create([Nullable(2)] TetrisThrowBlock instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C05C RID: 49244 RVA: 0x001B9EDB File Offset: 0x001B80DB
+		// Token: 0x0600CC1A RID: 52250 RVA: 0x001D15A7 File Offset: 0x001CF7A7
 		public static TetrisThrowBlock CreateFromSetValue([Nullable(2)] TetrisThrowBlock_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C05D RID: 49245 RVA: 0x001B9EF0 File Offset: 0x001B80F0
+		// Token: 0x0600CC1B RID: 52251 RVA: 0x001D15BC File Offset: 0x001CF7BC
 		public TetrisThrowBlock_SetValue ToSetValue()
 		{
 			return new TetrisThrowBlock_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A3C RID: 14908
-		// (get) Token: 0x0600C05E RID: 49246 RVA: 0x001B9F56 File Offset: 0x001B8156
-		// (set) Token: 0x0600C05F RID: 49247 RVA: 0x001B9F81 File Offset: 0x001B8181
+		// Token: 0x17003D32 RID: 15666
+		// (get) Token: 0x0600CC1C RID: 52252 RVA: 0x001D1622 File Offset: 0x001CF822
+		// (set) Token: 0x0600CC1D RID: 52253 RVA: 0x001D164D File Offset: 0x001CF84D
 		public virtual string ShapeName
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A3D RID: 14909
-		// (get) Token: 0x0600C060 RID: 49248 RVA: 0x001B9F8F File Offset: 0x001B818F
-		// (set) Token: 0x0600C061 RID: 49249 RVA: 0x001B9FBA File Offset: 0x001B81BA
+		// Token: 0x17003D33 RID: 15667
+		// (get) Token: 0x0600CC1E RID: 52254 RVA: 0x001D165B File Offset: 0x001CF85B
+		// (set) Token: 0x0600CC1F RID: 52255 RVA: 0x001D1686 File Offset: 0x001CF886
 		public virtual int PosIndex
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A3E RID: 14910
-		// (get) Token: 0x0600C062 RID: 49250 RVA: 0x001B9FC8 File Offset: 0x001B81C8
-		// (set) Token: 0x0600C063 RID: 49251 RVA: 0x001B9FF3 File Offset: 0x001B81F3
+		// Token: 0x17003D34 RID: 15668
+		// (get) Token: 0x0600CC20 RID: 52256 RVA: 0x001D1694 File Offset: 0x001CF894
+		// (set) Token: 0x0600CC21 RID: 52257 RVA: 0x001D16BF File Offset: 0x001CF8BF
 		public virtual int HeightIndex
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A3F RID: 14911
-		// (get) Token: 0x0600C064 RID: 49252 RVA: 0x001BA001 File Offset: 0x001B8201
-		// (set) Token: 0x0600C065 RID: 49253 RVA: 0x001BA02C File Offset: 0x001B822C
+		// Token: 0x17003D35 RID: 15669
+		// (get) Token: 0x0600CC22 RID: 52258 RVA: 0x001D16CD File Offset: 0x001CF8CD
+		// (set) Token: 0x0600CC23 RID: 52259 RVA: 0x001D16F8 File Offset: 0x001CF8F8
 		public virtual ETetrisRotation Rotation
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A40 RID: 14912
-		// (get) Token: 0x0600C066 RID: 49254 RVA: 0x001BA03C File Offset: 0x001B823C
-		// (set) Token: 0x0600C067 RID: 49255 RVA: 0x001BA076 File Offset: 0x001B8276
+		// Token: 0x17003D36 RID: 15670
+		// (get) Token: 0x0600CC24 RID: 52260 RVA: 0x001D1708 File Offset: 0x001CF908
+		// (set) Token: 0x0600CC25 RID: 52261 RVA: 0x001D1742 File Offset: 0x001CF942
 		public virtual bool? IsDelayFall
 		{
 			get
@@ -181,9 +179,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A41 RID: 14913
-		// (get) Token: 0x0600C068 RID: 49256 RVA: 0x001BA084 File Offset: 0x001B8284
-		// (set) Token: 0x0600C069 RID: 49257 RVA: 0x001BA0BE File Offset: 0x001B82BE
+		// Token: 0x17003D37 RID: 15671
+		// (get) Token: 0x0600CC26 RID: 52262 RVA: 0x001D1750 File Offset: 0x001CF950
+		// (set) Token: 0x0600CC27 RID: 52263 RVA: 0x001D178A File Offset: 0x001CF98A
 		public virtual int? FallSpeed
 		{
 			get
@@ -205,9 +203,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A42 RID: 14914
-		// (get) Token: 0x0600C06A RID: 49258 RVA: 0x001BA0CC File Offset: 0x001B82CC
-		// (set) Token: 0x0600C06B RID: 49259 RVA: 0x001BA106 File Offset: 0x001B8306
+		// Token: 0x17003D38 RID: 15672
+		// (get) Token: 0x0600CC28 RID: 52264 RVA: 0x001D1798 File Offset: 0x001CF998
+		// (set) Token: 0x0600CC29 RID: 52265 RVA: 0x001D17D2 File Offset: 0x001CF9D2
 		public virtual int? FallAcceleration
 		{
 			get
@@ -229,11 +227,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072B3 RID: 29363
+		// Token: 0x040078FD RID: 30973
 		[Nullable(2)]
 		protected new TetrisThrowBlock FbInstance;
 
-		// Token: 0x040072B4 RID: 29364
+		// Token: 0x040078FE RID: 30974
 		[Nullable(2)]
 		protected TetrisThrowBlock_SetValue PocoInterface;
 	}

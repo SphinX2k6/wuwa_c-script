@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200653A RID: 25914
+	// Token: 0x02006BAB RID: 27563
 	public struct IDartGameplay : IFlatbufferObject
 	{
-		// Token: 0x1700C0A0 RID: 49312
-		// (get) Token: 0x0602CF43 RID: 184131 RVA: 0x0062C0E2 File Offset: 0x0062A2E2
+		// Token: 0x1700CA37 RID: 51767
+		// (get) Token: 0x0602F6F7 RID: 194295 RVA: 0x0067878E File Offset: 0x0067698E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF44 RID: 184132 RVA: 0x0062C0EF File Offset: 0x0062A2EF
+		// Token: 0x0602F6F8 RID: 194296 RVA: 0x0067879B File Offset: 0x0067699B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CF45 RID: 184133 RVA: 0x0062C0F8 File Offset: 0x0062A2F8
+		// Token: 0x0602F6F9 RID: 194297 RVA: 0x006787A4 File Offset: 0x006769A4
 		public static IDartGameplay GetRootAsIDartGameplay(ByteBuffer _bb)
 		{
 			return IDartGameplay.GetRootAsIDartGameplay(_bb, default(IDartGameplay));
 		}
 
-		// Token: 0x0602CF46 RID: 184134 RVA: 0x0062C114 File Offset: 0x0062A314
+		// Token: 0x0602F6FA RID: 194298 RVA: 0x006787C0 File Offset: 0x006769C0
 		public static IDartGameplay GetRootAsIDartGameplay(ByteBuffer _bb, IDartGameplay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CF47 RID: 184135 RVA: 0x0062C131 File Offset: 0x0062A331
+		// Token: 0x0602F6FB RID: 194299 RVA: 0x006787DD File Offset: 0x006769DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CF48 RID: 184136 RVA: 0x0062C140 File Offset: 0x0062A340
+		// Token: 0x0602F6FC RID: 194300 RVA: 0x006787EC File Offset: 0x006769EC
 		public IDartGameplay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C0A1 RID: 49313
-		// (get) Token: 0x0602CF49 RID: 184137 RVA: 0x0062C150 File Offset: 0x0062A350
+		// Token: 0x1700CA38 RID: 51768
+		// (get) Token: 0x0602F6FD RID: 194301 RVA: 0x006787FC File Offset: 0x006769FC
 		public ESimpleGameplayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C0A2 RID: 49314
-		// (get) Token: 0x0602CF4A RID: 184138 RVA: 0x0062C18C File Offset: 0x0062A38C
+		// Token: 0x1700CA39 RID: 51769
+		// (get) Token: 0x0602F6FE RID: 194302 RVA: 0x00678838 File Offset: 0x00676A38
 		public int MachineEntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C0A3 RID: 49315
-		// (get) Token: 0x0602CF4B RID: 184139 RVA: 0x0062C1C8 File Offset: 0x0062A3C8
+		// Token: 0x1700CA3A RID: 51770
+		// (get) Token: 0x0602F6FF RID: 194303 RVA: 0x00678874 File Offset: 0x00676A74
 		public TDartInteractType InteractTypeType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF4C RID: 184140 RVA: 0x0062C204 File Offset: 0x0062A404
+		// Token: 0x0602F700 RID: 194304 RVA: 0x006788B0 File Offset: 0x00676AB0
 		public TTable? InteractType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -103,25 +103,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602CF4D RID: 184141 RVA: 0x0062C24C File Offset: 0x0062A44C
+		// Token: 0x0602F701 RID: 194305 RVA: 0x006788F8 File Offset: 0x00676AF8
 		public IDartChampionOwnerInteractType InteractTypeAsIDartChampionOwnerInteractType()
 		{
 			return this.InteractType<IDartChampionOwnerInteractType>().Value;
 		}
 
-		// Token: 0x0602CF4E RID: 184142 RVA: 0x0062C268 File Offset: 0x0062A468
+		// Token: 0x0602F702 RID: 194306 RVA: 0x00678914 File Offset: 0x00676B14
 		public IDartMachineInteractType InteractTypeAsIDartMachineInteractType()
 		{
 			return this.InteractType<IDartMachineInteractType>().Value;
 		}
 
-		// Token: 0x0602CF4F RID: 184143 RVA: 0x0062C284 File Offset: 0x0062A484
+		// Token: 0x0602F703 RID: 194307 RVA: 0x00678930 File Offset: 0x00676B30
 		public IDartPlayableRoleInteractType InteractTypeAsIDartPlayableRoleInteractType()
 		{
 			return this.InteractType<IDartPlayableRoleInteractType>().Value;
 		}
 
-		// Token: 0x0602CF50 RID: 184144 RVA: 0x0062C29F File Offset: 0x0062A49F
+		// Token: 0x0602F704 RID: 194308 RVA: 0x0067894B File Offset: 0x00676B4B
 		public static Offset<IDartGameplay> CreateIDartGameplay(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher, int MachineEntityId = 0, TDartInteractType InteractType_type = TDartInteractType.NONE, int InteractTypeOffset = 0)
 		{
 			builder.StartTable(4);
@@ -132,43 +132,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDartGameplay.EndIDartGameplay(builder);
 		}
 
-		// Token: 0x0602CF51 RID: 184145 RVA: 0x0062C2CB File Offset: 0x0062A4CB
+		// Token: 0x0602F705 RID: 194309 RVA: 0x00678977 File Offset: 0x00676B77
 		public static void StartIDartGameplay(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602CF52 RID: 184146 RVA: 0x0062C2D4 File Offset: 0x0062A4D4
+		// Token: 0x0602F706 RID: 194310 RVA: 0x00678980 File Offset: 0x00676B80
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CF53 RID: 184147 RVA: 0x0062C2DF File Offset: 0x0062A4DF
+		// Token: 0x0602F707 RID: 194311 RVA: 0x0067898B File Offset: 0x00676B8B
 		public static void AddMachineEntityId(FlatBufferBuilder builder, int machineEntityId)
 		{
 			builder.AddInt(1, machineEntityId, 0);
 		}
 
-		// Token: 0x0602CF54 RID: 184148 RVA: 0x0062C2EA File Offset: 0x0062A4EA
+		// Token: 0x0602F708 RID: 194312 RVA: 0x00678996 File Offset: 0x00676B96
 		public static void AddInteractTypeType(FlatBufferBuilder builder, TDartInteractType interactTypeType)
 		{
 			builder.AddByte(2, (byte)interactTypeType, 0);
 		}
 
-		// Token: 0x0602CF55 RID: 184149 RVA: 0x0062C2F5 File Offset: 0x0062A4F5
+		// Token: 0x0602F709 RID: 194313 RVA: 0x006789A1 File Offset: 0x00676BA1
 		public static void AddInteractType(FlatBufferBuilder builder, int interactTypeOffset)
 		{
 			builder.AddOffset(3, interactTypeOffset, 0);
 		}
 
-		// Token: 0x0602CF56 RID: 184150 RVA: 0x0062C300 File Offset: 0x0062A500
+		// Token: 0x0602F70A RID: 194314 RVA: 0x006789AC File Offset: 0x00676BAC
 		public static Offset<IDartGameplay> EndIDartGameplay(FlatBufferBuilder builder)
 		{
 			return new Offset<IDartGameplay>(builder.EndTable());
 		}
 
-		// Token: 0x0602CF57 RID: 184151 RVA: 0x0062C310 File Offset: 0x0062A510
+		// Token: 0x0602F70B RID: 194315 RVA: 0x006789BC File Offset: 0x00676BBC
 		public IDartGameplayT UnPack()
 		{
 			IDartGameplayT dartGameplayT = new IDartGameplayT();
@@ -176,7 +176,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return dartGameplayT;
 		}
 
-		// Token: 0x0602CF58 RID: 184152 RVA: 0x0062C32C File Offset: 0x0062A52C
+		// Token: 0x0602F70C RID: 194316 RVA: 0x006789D8 File Offset: 0x00676BD8
 		public void UnPackTo(IDartGameplayT _o)
 		{
 			_o.Type = this.Type;
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF59 RID: 184153 RVA: 0x0062C42C File Offset: 0x0062A62C
+		// Token: 0x0602F70D RID: 194317 RVA: 0x00678AD8 File Offset: 0x00676CD8
 		public static Offset<IDartGameplay> Pack(FlatBufferBuilder builder, IDartGameplayT _o)
 		{
 			if (_o == null)
@@ -211,7 +211,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDartGameplay.CreateIDartGameplay(builder, _o.Type, _o.MachineEntityId, interactType_type, interactTypeOffset);
 		}
 
-		// Token: 0x04010B81 RID: 68481
+		// Token: 0x0401199D RID: 72093
 		private Table __p;
 	}
 }

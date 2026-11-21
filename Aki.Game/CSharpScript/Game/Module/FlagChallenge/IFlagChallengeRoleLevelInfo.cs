@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A32 RID: 23090
+	// Token: 0x02004A0E RID: 18958
 	public interface IFlagChallengeRoleLevelInfo
 	{
-		// Token: 0x17008BDC RID: 35804
-		// (get) Token: 0x0603A94D RID: 239949
-		// (set) Token: 0x0603A94E RID: 239950
+		// Token: 0x17005FAA RID: 24490
+		// (get) Token: 0x0602F896 RID: 194710
+		// (set) Token: 0x0602F897 RID: 194711
 		int Level { get; set; }
 
-		// Token: 0x17008BDD RID: 35805
-		// (get) Token: 0x0603A94F RID: 239951
-		// (set) Token: 0x0603A950 RID: 239952
+		// Token: 0x17005FAB RID: 24491
+		// (get) Token: 0x0602F898 RID: 194712
+		// (set) Token: 0x0602F899 RID: 194713
 		int Exp { get; set; }
 	}
 }

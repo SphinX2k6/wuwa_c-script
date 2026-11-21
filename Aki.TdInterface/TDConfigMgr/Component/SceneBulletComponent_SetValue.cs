@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200088A RID: 2186
+	// Token: 0x0200092D RID: 2349
 	public class SceneBulletComponent_SetValue
 	{
-		// Token: 0x04002011 RID: 8209
+		// Token: 0x04002223 RID: 8739
 		public bool? Disabled;
 
-		// Token: 0x04002012 RID: 8210
+		// Token: 0x04002224 RID: 8740
 		public bool? EdIsLocked;
 
-		// Token: 0x04002013 RID: 8211
+		// Token: 0x04002225 RID: 8741
 		public bool? DisableGenerateByRange;
 
-		// Token: 0x04002014 RID: 8212
-		[Nullable(1)]
+		// Token: 0x04002226 RID: 8742
 		public List<ISceneBulletGroup> BulletGroups;
 	}
 }

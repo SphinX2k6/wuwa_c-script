@@ -8,35 +8,35 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054E6 RID: 21734
+	// Token: 0x020044B9 RID: 17593
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FloatLightForestMarkItem : ConfigMarkItem
 	{
-		// Token: 0x17008541 RID: 34113
-		// (get) Token: 0x060377E6 RID: 227302 RVA: 0x00D2E0AC File Offset: 0x00D2C2AC
-		// (set) Token: 0x060377E7 RID: 227303 RVA: 0x00D2E0B4 File Offset: 0x00D2C2B4
+		// Token: 0x170058D0 RID: 22736
+		// (get) Token: 0x0602C6A3 RID: 181923 RVA: 0x00C7C19F File Offset: 0x00C7A39F
+		// (set) Token: 0x0602C6A4 RID: 181924 RVA: 0x00C7C1A7 File Offset: 0x00C7A3A7
 		public override bool IsStreaming { get; set; }
 
-		// Token: 0x060377E8 RID: 227304 RVA: 0x00D2E0BD File Offset: 0x00D2C2BD
+		// Token: 0x0602C6A5 RID: 181925 RVA: 0x00C7C1B0 File Offset: 0x00C7A3B0
 		public FloatLightForestMarkItem(int markId, MapMark markConfig, UUIItem parent, EMapType mapType, float markScale, ETrackSource? trackSource = null) : base(markId, markConfig, parent, mapType, markScale, trackSource)
 		{
 		}
 
-		// Token: 0x060377E9 RID: 227305 RVA: 0x00D2E0CE File Offset: 0x00D2C2CE
+		// Token: 0x0602C6A6 RID: 181926 RVA: 0x00C7C1C1 File Offset: 0x00C7A3C1
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.FloatLightForestMarkItemView;
 		}
 
-		// Token: 0x060377EA RID: 227306 RVA: 0x00D2E0D2 File Offset: 0x00D2C2D2
+		// Token: 0x0602C6A7 RID: 181927 RVA: 0x00C7C1C5 File Offset: 0x00C7A3C5
 		[PreserveBaseOverrides]
 		protected new virtual FloatLightForestMarkItemView CreateView()
 		{
 			return new FloatLightForestMarkItemView(this);
 		}
 
-		// Token: 0x060377EB RID: 227307 RVA: 0x00D2E0DA File Offset: 0x00D2C2DA
+		// Token: 0x0602C6A8 RID: 181928 RVA: 0x00C7C1CD File Offset: 0x00C7A3CD
 		public override bool GetInteractiveFlag()
 		{
 			return false;

@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057B1 RID: 22449
+	// Token: 0x02004788 RID: 18312
 	[NullableContext(2)]
 	public interface IExtendRewardInfo
 	{
-		// Token: 0x17008906 RID: 35078
-		// (get) Token: 0x06039109 RID: 233737
-		// (set) Token: 0x0603910A RID: 233738
+		// Token: 0x17005CCE RID: 23758
+		// (get) Token: 0x0602E019 RID: 188441
+		// (set) Token: 0x0602E01A RID: 188442
 		[Nullable(new byte[]
 		{
 			2,
@@ -26,9 +26,9 @@ namespace CSharpScript.Game.Module.ItemReward
 			1
 		})] set; }
 
-		// Token: 0x17008907 RID: 35079
-		// (get) Token: 0x0603910B RID: 233739
-		// (set) Token: 0x0603910C RID: 233740
+		// Token: 0x17005CCF RID: 23759
+		// (get) Token: 0x0602E01B RID: 188443
+		// (set) Token: 0x0602E01C RID: 188444
 		[Nullable(new byte[]
 		{
 			2,
@@ -44,14 +44,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			1
 		})] set; }
 
-		// Token: 0x17008908 RID: 35080
-		// (get) Token: 0x0603910D RID: 233741
-		// (set) Token: 0x0603910E RID: 233742
+		// Token: 0x17005CD0 RID: 23760
+		// (get) Token: 0x0602E01D RID: 188445
+		// (set) Token: 0x0602E01E RID: 188446
 		IRewardExploreRecord ExploreRecordInfo { get; set; }
 
-		// Token: 0x17008909 RID: 35081
-		// (get) Token: 0x0603910F RID: 233743
-		// (set) Token: 0x06039110 RID: 233744
+		// Token: 0x17005CD1 RID: 23761
+		// (get) Token: 0x0602E01F RID: 188447
+		// (set) Token: 0x0602E020 RID: 188448
 		[Nullable(new byte[]
 		{
 			2,
@@ -67,9 +67,9 @@ namespace CSharpScript.Game.Module.ItemReward
 			1
 		})] set; }
 
-		// Token: 0x1700890A RID: 35082
-		// (get) Token: 0x06039111 RID: 233745
-		// (set) Token: 0x06039112 RID: 233746
+		// Token: 0x17005CD2 RID: 23762
+		// (get) Token: 0x0602E021 RID: 188449
+		// (set) Token: 0x0602E022 RID: 188450
 		[Nullable(new byte[]
 		{
 			2,
@@ -85,9 +85,9 @@ namespace CSharpScript.Game.Module.ItemReward
 			1
 		})] set; }
 
-		// Token: 0x1700890B RID: 35083
-		// (get) Token: 0x06039113 RID: 233747
-		// (set) Token: 0x06039114 RID: 233748
+		// Token: 0x17005CD3 RID: 23763
+		// (get) Token: 0x0602E023 RID: 188451
+		// (set) Token: 0x0602E024 RID: 188452
 		[Nullable(new byte[]
 		{
 			2,
@@ -103,9 +103,9 @@ namespace CSharpScript.Game.Module.ItemReward
 			1
 		})] set; }
 
-		// Token: 0x1700890C RID: 35084
-		// (get) Token: 0x06039115 RID: 233749
-		// (set) Token: 0x06039116 RID: 233750
+		// Token: 0x17005CD4 RID: 23764
+		// (get) Token: 0x0602E025 RID: 188453
+		// (set) Token: 0x0602E026 RID: 188454
 		[Nullable(new byte[]
 		{
 			2,
@@ -121,44 +121,44 @@ namespace CSharpScript.Game.Module.ItemReward
 			1
 		})] set; }
 
-		// Token: 0x1700890D RID: 35085
-		// (get) Token: 0x06039117 RID: 233751
-		// (set) Token: 0x06039118 RID: 233752
+		// Token: 0x17005CD5 RID: 23765
+		// (get) Token: 0x0602E027 RID: 188455
+		// (set) Token: 0x0602E028 RID: 188456
 		IRewardExploreScoreBelongHalfArea ScoreHalfArea { get; set; }
 
-		// Token: 0x1700890E RID: 35086
-		// (get) Token: 0x06039119 RID: 233753
-		// (set) Token: 0x0603911A RID: 233754
+		// Token: 0x17005CD6 RID: 23766
+		// (get) Token: 0x0602E029 RID: 188457
+		// (set) Token: 0x0602E02A RID: 188458
 		ReachTargetData ScoreReached { get; set; }
 
-		// Token: 0x1700890F RID: 35087
-		// (get) Token: 0x0603911B RID: 233755
-		// (set) Token: 0x0603911C RID: 233756
+		// Token: 0x17005CD7 RID: 23767
+		// (get) Token: 0x0602E02B RID: 188459
+		// (set) Token: 0x0602E02C RID: 188460
 		IRewardExploreToggle StateToggle { get; set; }
 
-		// Token: 0x17008910 RID: 35088
-		// (get) Token: 0x0603911D RID: 233757
-		// (set) Token: 0x0603911E RID: 233758
+		// Token: 0x17005CD8 RID: 23768
+		// (get) Token: 0x0602E02D RID: 188461
+		// (set) Token: 0x0602E02E RID: 188462
 		AccumulatedScoreData AccumulatedScoreData { get; set; }
 
-		// Token: 0x17008911 RID: 35089
-		// (get) Token: 0x0603911F RID: 233759
-		// (set) Token: 0x06039120 RID: 233760
+		// Token: 0x17005CD9 RID: 23769
+		// (get) Token: 0x0602E02F RID: 188463
+		// (set) Token: 0x0602E030 RID: 188464
 		IBabelTowerSuccessData BabelTowerSuccessData { get; set; }
 
-		// Token: 0x17008912 RID: 35090
-		// (get) Token: 0x06039121 RID: 233761
-		// (set) Token: 0x06039122 RID: 233762
+		// Token: 0x17005CDA RID: 23770
+		// (get) Token: 0x0602E031 RID: 188465
+		// (set) Token: 0x0602E032 RID: 188466
 		IDangoAbyssSuccessData DangoAbyssSuccessData { get; set; }
 
-		// Token: 0x17008913 RID: 35091
-		// (get) Token: 0x06039123 RID: 233763
-		// (set) Token: 0x06039124 RID: 233764
+		// Token: 0x17005CDB RID: 23771
+		// (get) Token: 0x0602E033 RID: 188467
+		// (set) Token: 0x0602E034 RID: 188468
 		IHonamiTowerSuccessData HonamiTowerSuccessData { get; set; }
 
-		// Token: 0x17008914 RID: 35092
-		// (get) Token: 0x06039125 RID: 233765
-		// (set) Token: 0x06039126 RID: 233766
+		// Token: 0x17005CDC RID: 23772
+		// (get) Token: 0x0602E035 RID: 188469
+		// (set) Token: 0x0602E036 RID: 188470
 		IRoguelikeBossChallengeData RoguelikeBossChallengeData { get; set; }
 	}
 }

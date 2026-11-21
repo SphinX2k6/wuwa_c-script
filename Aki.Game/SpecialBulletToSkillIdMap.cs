@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EB1 RID: 11953
+// Token: 0x02002404 RID: 9220
 public static class SpecialBulletToSkillIdMap
 {
-	// Token: 0x0400BE9F RID: 48799
+	// Token: 0x0400C23A RID: 49722
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<string, int> Values = new Dictionary<string, int>

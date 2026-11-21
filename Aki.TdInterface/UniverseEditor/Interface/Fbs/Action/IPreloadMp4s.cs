@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D98 RID: 28056
+	// Token: 0x02007513 RID: 29971
 	public struct IPreloadMp4s : IFlatbufferObject
 	{
-		// Token: 0x1700D146 RID: 53574
-		// (get) Token: 0x060318F1 RID: 202993 RVA: 0x006B788E File Offset: 0x006B5A8E
+		// Token: 0x1700DC8E RID: 56462
+		// (get) Token: 0x060348ED RID: 215277 RVA: 0x00712F76 File Offset: 0x00711176
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060318F2 RID: 202994 RVA: 0x006B789B File Offset: 0x006B5A9B
+		// Token: 0x060348EE RID: 215278 RVA: 0x00712F83 File Offset: 0x00711183
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060318F3 RID: 202995 RVA: 0x006B78A4 File Offset: 0x006B5AA4
+		// Token: 0x060348EF RID: 215279 RVA: 0x00712F8C File Offset: 0x0071118C
 		public static IPreloadMp4s GetRootAsIPreloadMp4s(ByteBuffer _bb)
 		{
 			return IPreloadMp4s.GetRootAsIPreloadMp4s(_bb, default(IPreloadMp4s));
 		}
 
-		// Token: 0x060318F4 RID: 202996 RVA: 0x006B78C0 File Offset: 0x006B5AC0
+		// Token: 0x060348F0 RID: 215280 RVA: 0x00712FA8 File Offset: 0x007111A8
 		public static IPreloadMp4s GetRootAsIPreloadMp4s(ByteBuffer _bb, IPreloadMp4s obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060318F5 RID: 202997 RVA: 0x006B78DD File Offset: 0x006B5ADD
+		// Token: 0x060348F1 RID: 215281 RVA: 0x00712FC5 File Offset: 0x007111C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060318F6 RID: 202998 RVA: 0x006B78EC File Offset: 0x006B5AEC
+		// Token: 0x060348F2 RID: 215282 RVA: 0x00712FD4 File Offset: 0x007111D4
 		public IPreloadMp4s __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D147 RID: 53575
-		// (get) Token: 0x060318F7 RID: 202999 RVA: 0x006B78FC File Offset: 0x006B5AFC
+		// Token: 0x1700DC8F RID: 56463
+		// (get) Token: 0x060348F3 RID: 215283 RVA: 0x00712FE4 File Offset: 0x007111E4
 		public EPreloadObjectType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060318F8 RID: 203000 RVA: 0x006B7938 File Offset: 0x006B5B38
+		// Token: 0x060348F4 RID: 215284 RVA: 0x00713020 File Offset: 0x00711220
 		public string Mp4s(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700D148 RID: 53576
-		// (get) Token: 0x060318F9 RID: 203001 RVA: 0x006B7974 File Offset: 0x006B5B74
+		// Token: 0x1700DC90 RID: 56464
+		// (get) Token: 0x060348F5 RID: 215285 RVA: 0x0071305C File Offset: 0x0071125C
 		public int Mp4sLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060318FA RID: 203002 RVA: 0x006B799F File Offset: 0x006B5B9F
+		// Token: 0x060348F6 RID: 215286 RVA: 0x00713087 File Offset: 0x00711287
 		public static Offset<IPreloadMp4s> CreateIPreloadMp4s(FlatBufferBuilder builder, EPreloadObjectType Type = EPreloadObjectType.PreloadTrialCharacterForSkill, VectorOffset Mp4sOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPreloadMp4s.EndIPreloadMp4s(builder);
 		}
 
-		// Token: 0x060318FB RID: 203003 RVA: 0x006B79BC File Offset: 0x006B5BBC
+		// Token: 0x060348F7 RID: 215287 RVA: 0x007130A4 File Offset: 0x007112A4
 		public static void StartIPreloadMp4s(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060318FC RID: 203004 RVA: 0x006B79C5 File Offset: 0x006B5BC5
+		// Token: 0x060348F8 RID: 215288 RVA: 0x007130AD File Offset: 0x007112AD
 		public static void AddType(FlatBufferBuilder builder, EPreloadObjectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060318FD RID: 203005 RVA: 0x006B79D0 File Offset: 0x006B5BD0
+		// Token: 0x060348F9 RID: 215289 RVA: 0x007130B8 File Offset: 0x007112B8
 		public static void AddMp4s(FlatBufferBuilder builder, VectorOffset mp4sOffset)
 		{
 			builder.AddOffset(1, mp4sOffset.Value, 0);
 		}
 
-		// Token: 0x060318FE RID: 203006 RVA: 0x006B79E0 File Offset: 0x006B5BE0
+		// Token: 0x060348FA RID: 215290 RVA: 0x007130C8 File Offset: 0x007112C8
 		public static VectorOffset CreateMp4sVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x060318FF RID: 203007 RVA: 0x006B7A20 File Offset: 0x006B5C20
+		// Token: 0x060348FB RID: 215291 RVA: 0x00713108 File Offset: 0x00711308
 		public static VectorOffset CreateMp4sVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031900 RID: 203008 RVA: 0x006B7A3A File Offset: 0x006B5C3A
+		// Token: 0x060348FC RID: 215292 RVA: 0x00713122 File Offset: 0x00711322
 		public static VectorOffset CreateMp4sVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031901 RID: 203009 RVA: 0x006B7A58 File Offset: 0x006B5C58
+		// Token: 0x060348FD RID: 215293 RVA: 0x00713140 File Offset: 0x00711340
 		public static VectorOffset CreateMp4sVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06031902 RID: 203010 RVA: 0x006B7A71 File Offset: 0x006B5C71
+		// Token: 0x060348FE RID: 215294 RVA: 0x00713159 File Offset: 0x00711359
 		public static void StartMp4sVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06031903 RID: 203011 RVA: 0x006B7A7C File Offset: 0x006B5C7C
+		// Token: 0x060348FF RID: 215295 RVA: 0x00713164 File Offset: 0x00711364
 		public static Offset<IPreloadMp4s> EndIPreloadMp4s(FlatBufferBuilder builder)
 		{
 			return new Offset<IPreloadMp4s>(builder.EndTable());
 		}
 
-		// Token: 0x06031904 RID: 203012 RVA: 0x006B7A8C File Offset: 0x006B5C8C
+		// Token: 0x06034900 RID: 215296 RVA: 0x00713174 File Offset: 0x00711374
 		public IPreloadMp4sT UnPack()
 		{
 			IPreloadMp4sT preloadMp4sT = new IPreloadMp4sT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return preloadMp4sT;
 		}
 
-		// Token: 0x06031905 RID: 203013 RVA: 0x006B7AA8 File Offset: 0x006B5CA8
+		// Token: 0x06034901 RID: 215297 RVA: 0x00713190 File Offset: 0x00711390
 		public void UnPackTo(IPreloadMp4sT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031906 RID: 203014 RVA: 0x006B7AF0 File Offset: 0x006B5CF0
+		// Token: 0x06034902 RID: 215298 RVA: 0x007131D8 File Offset: 0x007113D8
 		public static Offset<IPreloadMp4s> Pack(FlatBufferBuilder builder, IPreloadMp4sT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPreloadMp4s.CreateIPreloadMp4s(builder, _o.Type, mp4sOffset);
 		}
 
-		// Token: 0x0401176B RID: 71531
+		// Token: 0x040126E7 RID: 75495
 		private Table __p;
 	}
 }

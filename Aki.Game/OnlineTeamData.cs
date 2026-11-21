@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Core.Common;
 
-// Token: 0x020022DF RID: 8927
+// Token: 0x020017C3 RID: 6083
 [NullableContext(1)]
 [Nullable(0)]
 public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 {
-	// Token: 0x1700167B RID: 5755
-	// (get) Token: 0x0601192B RID: 71979 RVA: 0x0044F263 File Offset: 0x0044D463
+	// Token: 0x170016B2 RID: 5810
+	// (get) Token: 0x0600EDC3 RID: 60867 RVA: 0x0045BF2F File Offset: 0x0045A12F
 	public List<PersonalCardData> CardUnlockList
 	{
 		get
@@ -19,8 +19,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700167C RID: 5756
-	// (get) Token: 0x0601192C RID: 71980 RVA: 0x0044F26B File Offset: 0x0044D46B
+	// Token: 0x170016B3 RID: 5811
+	// (get) Token: 0x0600EDC4 RID: 60868 RVA: 0x0045BF37 File Offset: 0x0045A137
 	public int CurUsingCardId
 	{
 		get
@@ -29,7 +29,7 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x0601192D RID: 71981 RVA: 0x0044F274 File Offset: 0x0044D474
+	// Token: 0x0600EDC5 RID: 60869 RVA: 0x0045BF40 File Offset: 0x0045A140
 	public OnlineTeamData(string name, int playerId, int level, int headId, string signature, int playerNumber, PlayerDetails playerDetails, ENetPingState ping, int playerTitleId, int playerTitleStarLevel, int sex, int worldLevel)
 	{
 		this.NameInternal = name;
@@ -51,8 +51,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		this.CurUsingCardIdInternal = playerDetails.CurCard;
 	}
 
-	// Token: 0x1700167D RID: 5757
-	// (get) Token: 0x0601192E RID: 71982 RVA: 0x0044F350 File Offset: 0x0044D550
+	// Token: 0x170016B4 RID: 5812
+	// (get) Token: 0x0600EDC6 RID: 60870 RVA: 0x0045C01C File Offset: 0x0045A21C
 	public int PlayerId
 	{
 		get
@@ -61,9 +61,9 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700167E RID: 5758
-	// (get) Token: 0x0601192F RID: 71983 RVA: 0x0044F358 File Offset: 0x0044D558
-	// (set) Token: 0x06011930 RID: 71984 RVA: 0x0044F360 File Offset: 0x0044D560
+	// Token: 0x170016B5 RID: 5813
+	// (get) Token: 0x0600EDC7 RID: 60871 RVA: 0x0045C024 File Offset: 0x0045A224
+	// (set) Token: 0x0600EDC8 RID: 60872 RVA: 0x0045C02C File Offset: 0x0045A22C
 	public int HeadId
 	{
 		get
@@ -76,9 +76,9 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700167F RID: 5759
-	// (get) Token: 0x06011931 RID: 71985 RVA: 0x0044F369 File Offset: 0x0044D569
-	// (set) Token: 0x06011932 RID: 71986 RVA: 0x0044F371 File Offset: 0x0044D571
+	// Token: 0x170016B6 RID: 5814
+	// (get) Token: 0x0600EDC9 RID: 60873 RVA: 0x0045C035 File Offset: 0x0045A235
+	// (set) Token: 0x0600EDCA RID: 60874 RVA: 0x0045C03D File Offset: 0x0045A23D
 	public int Level
 	{
 		get
@@ -91,9 +91,9 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001680 RID: 5760
-	// (get) Token: 0x06011933 RID: 71987 RVA: 0x0044F37A File Offset: 0x0044D57A
-	// (set) Token: 0x06011934 RID: 71988 RVA: 0x0044F382 File Offset: 0x0044D582
+	// Token: 0x170016B7 RID: 5815
+	// (get) Token: 0x0600EDCB RID: 60875 RVA: 0x0045C046 File Offset: 0x0045A246
+	// (set) Token: 0x0600EDCC RID: 60876 RVA: 0x0045C04E File Offset: 0x0045A24E
 	public string Name
 	{
 		get
@@ -106,8 +106,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001681 RID: 5761
-	// (get) Token: 0x06011935 RID: 71989 RVA: 0x0044F38B File Offset: 0x0044D58B
+	// Token: 0x170016B8 RID: 5816
+	// (get) Token: 0x0600EDCD RID: 60877 RVA: 0x0045C057 File Offset: 0x0045A257
 	public int PlayerTitleId
 	{
 		get
@@ -116,8 +116,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001682 RID: 5762
-	// (get) Token: 0x06011936 RID: 71990 RVA: 0x0044F393 File Offset: 0x0044D593
+	// Token: 0x170016B9 RID: 5817
+	// (get) Token: 0x0600EDCE RID: 60878 RVA: 0x0045C05F File Offset: 0x0045A25F
 	public int PlayerTitleStarLevel
 	{
 		get
@@ -126,9 +126,9 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001683 RID: 5763
-	// (get) Token: 0x06011937 RID: 71991 RVA: 0x0044F39B File Offset: 0x0044D59B
-	// (set) Token: 0x06011938 RID: 71992 RVA: 0x0044F3A3 File Offset: 0x0044D5A3
+	// Token: 0x170016BA RID: 5818
+	// (get) Token: 0x0600EDCF RID: 60879 RVA: 0x0045C067 File Offset: 0x0045A267
+	// (set) Token: 0x0600EDD0 RID: 60880 RVA: 0x0045C06F File Offset: 0x0045A26F
 	public int Sex
 	{
 		get
@@ -141,8 +141,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001684 RID: 5764
-	// (get) Token: 0x06011939 RID: 71993 RVA: 0x0044F3AC File Offset: 0x0044D5AC
+	// Token: 0x170016BB RID: 5819
+	// (get) Token: 0x0600EDD1 RID: 60881 RVA: 0x0045C078 File Offset: 0x0045A278
 	public int WorldLevel
 	{
 		get
@@ -151,7 +151,7 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x0601193A RID: 71994 RVA: 0x0044F3B4 File Offset: 0x0044D5B4
+	// Token: 0x0600EDD2 RID: 60882 RVA: 0x0045C080 File Offset: 0x0045A280
 	public void SetPlayerTitleInfo(string playerTitleString)
 	{
 		if (playerTitleString.Length != 0)
@@ -163,8 +163,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001685 RID: 5765
-	// (get) Token: 0x0601193B RID: 71995 RVA: 0x0044F3FA File Offset: 0x0044D5FA
+	// Token: 0x170016BC RID: 5820
+	// (get) Token: 0x0600EDD3 RID: 60883 RVA: 0x0045C0C6 File Offset: 0x0045A2C6
 	public string PlayerName
 	{
 		get
@@ -173,13 +173,13 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x0601193C RID: 71996 RVA: 0x0044F402 File Offset: 0x0044D602
+	// Token: 0x0600EDD4 RID: 60884 RVA: 0x0045C0CE File Offset: 0x0045A2CE
 	public string GetRawName()
 	{
 		return this.NameInternal;
 	}
 
-	// Token: 0x0601193D RID: 71997 RVA: 0x0044F40A File Offset: 0x0044D60A
+	// Token: 0x0600EDD5 RID: 60885 RVA: 0x0045C0D6 File Offset: 0x0045A2D6
 	public string GetOnlineName()
 	{
 		if (!Info.Instance.IsPs5Platform())
@@ -189,7 +189,7 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		return this.PlayerDetails.PsnOnlineId;
 	}
 
-	// Token: 0x0601193E RID: 71998 RVA: 0x0044F430 File Offset: 0x0044D630
+	// Token: 0x0600EDD6 RID: 60886 RVA: 0x0045C0FC File Offset: 0x0045A2FC
 	public string GetFormationName()
 	{
 		if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -203,9 +203,9 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		return this.NameInternal;
 	}
 
-	// Token: 0x17001686 RID: 5766
-	// (get) Token: 0x0601193F RID: 71999 RVA: 0x0044F47E File Offset: 0x0044D67E
-	// (set) Token: 0x06011940 RID: 72000 RVA: 0x0044F486 File Offset: 0x0044D686
+	// Token: 0x170016BD RID: 5821
+	// (get) Token: 0x0600EDD7 RID: 60887 RVA: 0x0045C14A File Offset: 0x0045A34A
+	// (set) Token: 0x0600EDD8 RID: 60888 RVA: 0x0045C152 File Offset: 0x0045A352
 	public string Signature
 	{
 		get
@@ -218,9 +218,9 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001687 RID: 5767
-	// (get) Token: 0x06011941 RID: 72001 RVA: 0x0044F48F File Offset: 0x0044D68F
-	// (set) Token: 0x06011942 RID: 72002 RVA: 0x0044F497 File Offset: 0x0044D697
+	// Token: 0x170016BE RID: 5822
+	// (get) Token: 0x0600EDD9 RID: 60889 RVA: 0x0045C15B File Offset: 0x0045A35B
+	// (set) Token: 0x0600EDDA RID: 60890 RVA: 0x0045C163 File Offset: 0x0045A363
 	public int PlayerNumber
 	{
 		get
@@ -233,8 +233,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001688 RID: 5768
-	// (get) Token: 0x06011943 RID: 72003 RVA: 0x0044F4A0 File Offset: 0x0044D6A0
+	// Token: 0x170016BF RID: 5823
+	// (get) Token: 0x0600EDDB RID: 60891 RVA: 0x0045C16C File Offset: 0x0045A36C
 	public bool IsSelf
 	{
 		get
@@ -245,9 +245,9 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001689 RID: 5769
-	// (get) Token: 0x06011944 RID: 72004 RVA: 0x0044F4CF File Offset: 0x0044D6CF
-	// (set) Token: 0x06011945 RID: 72005 RVA: 0x0044F4D7 File Offset: 0x0044D6D7
+	// Token: 0x170016C0 RID: 5824
+	// (get) Token: 0x0600EDDC RID: 60892 RVA: 0x0045C19B File Offset: 0x0045A39B
+	// (set) Token: 0x0600EDDD RID: 60893 RVA: 0x0045C1A3 File Offset: 0x0045A3A3
 	public ENetPingState PingState
 	{
 		get
@@ -260,9 +260,9 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700168A RID: 5770
-	// (get) Token: 0x06011946 RID: 72006 RVA: 0x0044F4E0 File Offset: 0x0044D6E0
-	// (set) Token: 0x06011947 RID: 72007 RVA: 0x0044F4E8 File Offset: 0x0044D6E8
+	// Token: 0x170016C1 RID: 5825
+	// (get) Token: 0x0600EDDE RID: 60894 RVA: 0x0045C1AC File Offset: 0x0045A3AC
+	// (set) Token: 0x0600EDDF RID: 60895 RVA: 0x0045C1B4 File Offset: 0x0045A3B4
 	public PlayerDetails PlayerDetails
 	{
 		get
@@ -275,8 +275,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700168B RID: 5771
-	// (get) Token: 0x06011948 RID: 72008 RVA: 0x0044F4F1 File Offset: 0x0044D6F1
+	// Token: 0x170016C2 RID: 5826
+	// (get) Token: 0x0600EDE0 RID: 60896 RVA: 0x0045C1BD File Offset: 0x0045A3BD
 	public string ThirdPartyUserId
 	{
 		get
@@ -289,8 +289,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700168C RID: 5772
-	// (get) Token: 0x06011949 RID: 72009 RVA: 0x0044F516 File Offset: 0x0044D716
+	// Token: 0x170016C3 RID: 5827
+	// (get) Token: 0x0600EDE1 RID: 60897 RVA: 0x0045C1E2 File Offset: 0x0045A3E2
 	public string ThirdPartyOnlineId
 	{
 		get
@@ -303,8 +303,8 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700168D RID: 5773
-	// (get) Token: 0x0601194A RID: 72010 RVA: 0x0044F53B File Offset: 0x0044D73B
+	// Token: 0x170016C4 RID: 5828
+	// (get) Token: 0x0600EDE2 RID: 60898 RVA: 0x0045C207 File Offset: 0x0045A407
 	public string ThirdAvoidId
 	{
 		get
@@ -317,7 +317,7 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x0601194B RID: 72011 RVA: 0x0044F560 File Offset: 0x0044D760
+	// Token: 0x0600EDE3 RID: 60899 RVA: 0x0045C22C File Offset: 0x0045A42C
 	public bool GetIfCanShowInHallList([Nullable(new byte[]
 	{
 		2,
@@ -327,45 +327,45 @@ public class OnlineTeamData : IOnlinePlayerData, IPlayerData
 		return blockMap == null || !blockMap.ContainsKey(this.ThirdAvoidId);
 	}
 
-	// Token: 0x04008560 RID: 34144
+	// Token: 0x0400869E RID: 34462
 	private readonly int PlayerIdInternal;
 
-	// Token: 0x04008561 RID: 34145
+	// Token: 0x0400869F RID: 34463
 	private string NameInternal;
 
-	// Token: 0x04008562 RID: 34146
+	// Token: 0x040086A0 RID: 34464
 	private int HeadIdInternal;
 
-	// Token: 0x04008563 RID: 34147
+	// Token: 0x040086A1 RID: 34465
 	private int LevelInternal;
 
-	// Token: 0x04008564 RID: 34148
+	// Token: 0x040086A2 RID: 34466
 	private string SignatureInternal;
 
-	// Token: 0x04008565 RID: 34149
+	// Token: 0x040086A3 RID: 34467
 	private int PlayerTitleIdInternal;
 
-	// Token: 0x04008566 RID: 34150
+	// Token: 0x040086A4 RID: 34468
 	private int PlayerTitleStarLevelInternal;
 
-	// Token: 0x04008567 RID: 34151
+	// Token: 0x040086A5 RID: 34469
 	private int SexInternal;
 
-	// Token: 0x04008568 RID: 34152
+	// Token: 0x040086A6 RID: 34470
 	private PlayerDetails PlayerDetailsInternal;
 
-	// Token: 0x04008569 RID: 34153
+	// Token: 0x040086A7 RID: 34471
 	private List<PersonalCardData> _cardUnlockList = new List<PersonalCardData>();
 
-	// Token: 0x0400856A RID: 34154
+	// Token: 0x040086A8 RID: 34472
 	private int PlayerNumberInternal;
 
-	// Token: 0x0400856B RID: 34155
+	// Token: 0x040086A9 RID: 34473
 	private ENetPingState PingStateInternal;
 
-	// Token: 0x0400856C RID: 34156
+	// Token: 0x040086AA RID: 34474
 	private readonly int WorldLevelInternal = 1;
 
-	// Token: 0x0400856D RID: 34157
+	// Token: 0x040086AB RID: 34475
 	private int CurUsingCardIdInternal;
 }

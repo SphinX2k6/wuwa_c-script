@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007548 RID: 30024
+	// Token: 0x02007D3E RID: 32062
 	public class IVillageInfrVillageLevelT
 	{
-		// Token: 0x1700E3CC RID: 58316
-		// (get) Token: 0x06036A04 RID: 223748 RVA: 0x0076BB54 File Offset: 0x00769D54
-		// (set) Token: 0x06036A05 RID: 223749 RVA: 0x0076BB5C File Offset: 0x00769D5C
+		// Token: 0x1700EFF6 RID: 61430
+		// (get) Token: 0x06039E1A RID: 237082 RVA: 0x007CEDFC File Offset: 0x007CCFFC
+		// (set) Token: 0x06039E1B RID: 237083 RVA: 0x007CEE04 File Offset: 0x007CD004
 		public EVillageInfrBuildType Type { get; set; }
 
-		// Token: 0x1700E3CD RID: 58317
-		// (get) Token: 0x06036A06 RID: 223750 RVA: 0x0076BB65 File Offset: 0x00769D65
-		// (set) Token: 0x06036A07 RID: 223751 RVA: 0x0076BB6D File Offset: 0x00769D6D
+		// Token: 0x1700EFF7 RID: 61431
+		// (get) Token: 0x06039E1C RID: 237084 RVA: 0x007CEE0D File Offset: 0x007CD00D
+		// (set) Token: 0x06039E1D RID: 237085 RVA: 0x007CEE15 File Offset: 0x007CD015
 		public int Level { get; set; }
 
-		// Token: 0x06036A08 RID: 223752 RVA: 0x0076BB76 File Offset: 0x00769D76
+		// Token: 0x06039E1E RID: 237086 RVA: 0x007CEE1E File Offset: 0x007CD01E
 		public IVillageInfrVillageLevelT()
 		{
 			this.Type = EVillageInfrBuildType.Village;

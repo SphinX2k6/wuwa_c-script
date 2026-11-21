@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BAB RID: 2987
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C79 RID: 3193
 	public class INpcPerformBubble
 	{
-		// Token: 0x0600448A RID: 17546 RVA: 0x000AE121 File Offset: 0x000AC321
+		// Token: 0x060048E3 RID: 18659 RVA: 0x000B81E5 File Offset: 0x000B63E5
 		public static INpcPerformBubble Create(INpcPerformBubble? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012F1 RID: 4849
-		// (get) Token: 0x0600448B RID: 17547 RVA: 0x000AE140 File Offset: 0x000AC340
+		// Token: 0x170013EC RID: 5100
+		// (get) Token: 0x060048E4 RID: 18660 RVA: 0x000B8204 File Offset: 0x000B6404
 		public virtual IBubbleIndex Bubble
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012F2 RID: 4850
-		// (get) Token: 0x0600448C RID: 17548 RVA: 0x000AE174 File Offset: 0x000AC374
+		// Token: 0x170013ED RID: 5101
+		// (get) Token: 0x060048E5 RID: 18661 RVA: 0x000B8238 File Offset: 0x000B6438
 		public virtual int Rate
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026BA RID: 9914
+		// Token: 0x04002902 RID: 10498
 		private INpcPerformBubble Instance;
 
-		// Token: 0x040026BB RID: 9915
+		// Token: 0x04002903 RID: 10499
 		[Nullable(2)]
 		private IBubbleIndex _BubbleCache;
 
-		// Token: 0x040026BC RID: 9916
+		// Token: 0x04002904 RID: 10500
 		private bool _BubbleInited;
 	}
 }

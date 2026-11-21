@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005438 RID: 21560
+	// Token: 0x0200441B RID: 17435
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,12 +19,12 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 	})]
 	public class VoiceLanguageSelectView : LanguageSettingViewBase<VoiceLanguageSelectToggle>
 	{
-		// Token: 0x060370FB RID: 225531 RVA: 0x00D0CA7B File Offset: 0x00D0AC7B
+		// Token: 0x0602C044 RID: 180292 RVA: 0x00C5BE9B File Offset: 0x00C5A09B
 		public VoiceLanguageSelectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060370FC RID: 225532 RVA: 0x00D0CA84 File Offset: 0x00D0AC84
+		// Token: 0x0602C045 RID: 180293 RVA: 0x00C5BEA4 File Offset: 0x00C5A0A4
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x060370FD RID: 225533 RVA: 0x00D0CB30 File Offset: 0x00D0AD30
+		// Token: 0x0602C046 RID: 180294 RVA: 0x00C5BF50 File Offset: 0x00C5A150
 		protected override void InitScrollViewData()
 		{
 			List<int> allLanguageTypeForAudio = LanguageUpdateManager.Instance.GetAllLanguageTypeForAudio();
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.ConfirmButton.SetLocalText("PowerConfirm", Array.Empty<object>());
 		}
 
-		// Token: 0x060370FE RID: 225534 RVA: 0x00D0CBC5 File Offset: 0x00D0ADC5
+		// Token: 0x0602C047 RID: 180295 RVA: 0x00C5BFE5 File Offset: 0x00C5A1E5
 		[return: Nullable(2)]
 		protected override VoiceLanguageSelectToggle CreateToggle(UUIItem uiItem, int index, bool isToggled)
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return voiceLanguageSelectToggle;
 		}
 
-		// Token: 0x060370FF RID: 225535 RVA: 0x00D0CBD8 File Offset: 0x00D0ADD8
+		// Token: 0x0602C048 RID: 180296 RVA: 0x00C5BFF8 File Offset: 0x00C5A1F8
 		protected override void OnRefreshView(VoiceLanguageSelectToggle newToggle)
 		{
 			base.OnRefreshView(newToggle);
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x06037100 RID: 225536 RVA: 0x00D0CC2C File Offset: 0x00D0AE2C
+		// Token: 0x0602C049 RID: 180297 RVA: 0x00C5C04C File Offset: 0x00C5A24C
 		protected override void OnSelected(VoiceLanguageSelectToggle newToggle, EToggleState newToggleState)
 		{
 			if (newToggle.Updater.Status == ELanguageDownloadStatus.Done)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.RefreshRoleCoverHint(newToggle);
 		}
 
-		// Token: 0x06037101 RID: 225537 RVA: 0x00D0CC84 File Offset: 0x00D0AE84
+		// Token: 0x0602C04A RID: 180298 RVA: 0x00C5C0A4 File Offset: 0x00C5A2A4
 		private void RefreshCoverRoleLangToggleVisible(VoiceLanguageSelectToggle newToggle)
 		{
 			bool? boolConfig = ConfigCommonParamById.GetBoolConfig("NeedShowRoleLangCustom");
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.CoverRoleLangToggle.RootUIComp.Get().SetUIActive(uiactive);
 		}
 
-		// Token: 0x06037102 RID: 225538 RVA: 0x00D0CD8C File Offset: 0x00D0AF8C
+		// Token: 0x0602C04B RID: 180299 RVA: 0x00C5C1AC File Offset: 0x00C5A3AC
 		private void RefreshRoleCoverHint(VoiceLanguageSelectToggle newToggle)
 		{
 			if (GameSettingsManager.Instance.IsGameSettingsAppliedOnOpenLoading)
@@ -143,13 +143,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.RoleLangDeleteHint.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06037103 RID: 225539 RVA: 0x00D0CDFE File Offset: 0x00D0AFFE
+		// Token: 0x0602C04C RID: 180300 RVA: 0x00C5C21E File Offset: 0x00C5A41E
 		private void DoCloseBtn(int _)
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06037104 RID: 225540 RVA: 0x00D0CE08 File Offset: 0x00D0B008
+		// Token: 0x0602C04D RID: 180301 RVA: 0x00C5C228 File Offset: 0x00C5A428
 		private void DoConfirmBtn(int _)
 		{
 			if (this.SelectedToggle == null)

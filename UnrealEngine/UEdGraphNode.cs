@@ -6,53 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A48 RID: 2632
+	// Token: 0x020001DD RID: 477
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.EdGraphNode")]
 	[UnrealStructLayout(200, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 200)]
 	public class UEdGraphNode : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06008ECE RID: 36558 RVA: 0x000CC321 File Offset: 0x000CA521
+		// Token: 0x0600217D RID: 8573 RVA: 0x0003119D File Offset: 0x0002F39D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UEdGraphNode._ClassPtr;
 		}
 
-		// Token: 0x06008ECF RID: 36559 RVA: 0x000CC330 File Offset: 0x000CA530
+		// Token: 0x0600217E RID: 8574 RVA: 0x000311AC File Offset: 0x0002F3AC
 		public UEdGraphNode() : this(BuiltinUtils.AllocNativeUObject(UEdGraphNode.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06008ED0 RID: 36560 RVA: 0x000CC358 File Offset: 0x000CA558
+		// Token: 0x0600217F RID: 8575 RVA: 0x000311D4 File Offset: 0x0002F3D4
 		public UEdGraphNode(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UEdGraphNode.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170021A4 RID: 8612
-		// (get) Token: 0x06008ED1 RID: 36561 RVA: 0x000CC38C File Offset: 0x000CA58C
-		// (set) Token: 0x06008ED2 RID: 36562 RVA: 0x000CC3C5 File Offset: 0x000CA5C5
-		public TArray<UEdGraphPin_Deprecated> DeprecatedPins
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UEdGraphPin_Deprecated> result;
-				if ((result = this._DeprecatedPins) == null)
-				{
-					result = (this._DeprecatedPins = new TArray<UEdGraphPin_Deprecated>(base.NativePtr + (IntPtr)UEdGraphNode.__PropertyOffset_DeprecatedPins, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.DeprecatedPins.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170021A5 RID: 8613
-		// (get) Token: 0x06008ED3 RID: 36563 RVA: 0x000CC3D3 File Offset: 0x000CA5D3
-		// (set) Token: 0x06008ED4 RID: 36564 RVA: 0x000CC3E3 File Offset: 0x000CA5E3
+		// Token: 0x170004AE RID: 1198
+		// (get) Token: 0x06002180 RID: 8576 RVA: 0x00031207 File Offset: 0x0002F407
+		// (set) Token: 0x06002181 RID: 8577 RVA: 0x00031217 File Offset: 0x0002F417
 		public unsafe int NodePosX
 		{
 			get
@@ -65,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021A6 RID: 8614
-		// (get) Token: 0x06008ED5 RID: 36565 RVA: 0x000CC3F4 File Offset: 0x000CA5F4
-		// (set) Token: 0x06008ED6 RID: 36566 RVA: 0x000CC404 File Offset: 0x000CA604
+		// Token: 0x170004AF RID: 1199
+		// (get) Token: 0x06002182 RID: 8578 RVA: 0x00031228 File Offset: 0x0002F428
+		// (set) Token: 0x06002183 RID: 8579 RVA: 0x00031238 File Offset: 0x0002F438
 		public unsafe int NodePosY
 		{
 			get
@@ -80,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021A7 RID: 8615
-		// (get) Token: 0x06008ED7 RID: 36567 RVA: 0x000CC415 File Offset: 0x000CA615
-		// (set) Token: 0x06008ED8 RID: 36568 RVA: 0x000CC425 File Offset: 0x000CA625
+		// Token: 0x170004B0 RID: 1200
+		// (get) Token: 0x06002184 RID: 8580 RVA: 0x00031249 File Offset: 0x0002F449
+		// (set) Token: 0x06002185 RID: 8581 RVA: 0x00031259 File Offset: 0x0002F459
 		public unsafe int NodeWidth
 		{
 			get
@@ -95,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021A8 RID: 8616
-		// (get) Token: 0x06008ED9 RID: 36569 RVA: 0x000CC436 File Offset: 0x000CA636
-		// (set) Token: 0x06008EDA RID: 36570 RVA: 0x000CC446 File Offset: 0x000CA646
+		// Token: 0x170004B1 RID: 1201
+		// (get) Token: 0x06002186 RID: 8582 RVA: 0x0003126A File Offset: 0x0002F46A
+		// (set) Token: 0x06002187 RID: 8583 RVA: 0x0003127A File Offset: 0x0002F47A
 		public unsafe int NodeHeight
 		{
 			get
@@ -110,42 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021A9 RID: 8617
-		// (get) Token: 0x06008EDB RID: 36571 RVA: 0x000CC457 File Offset: 0x000CA657
-		// (set) Token: 0x06008EDC RID: 36572 RVA: 0x000CC46B File Offset: 0x000CA66B
-		[Nullable(0)]
-		public unsafe TEnumAsByte<ENodeAdvancedPins> AdvancedPinDisplay
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UEdGraphNode.__PropertyOffset_AdvancedPinDisplay);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)UEdGraphNode.__PropertyOffset_AdvancedPinDisplay) = value;
-			}
-		}
-
-		// Token: 0x170021AA RID: 8618
-		// (get) Token: 0x06008EDD RID: 36573 RVA: 0x000CC480 File Offset: 0x000CA680
-		// (set) Token: 0x06008EDE RID: 36574 RVA: 0x000CC490 File Offset: 0x000CA690
-		public unsafe ENodeEnabledState EnabledState
-		{
-			get
-			{
-				return (ENodeEnabledState)(*(base.NativePtr + (IntPtr)UEdGraphNode.__PropertyOffset_EnabledState));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UEdGraphNode.__PropertyOffset_EnabledState) = (byte)value;
-			}
-		}
-
-		// Token: 0x170021AB RID: 8619
-		// (get) Token: 0x06008EDF RID: 36575 RVA: 0x000CC4A1 File Offset: 0x000CA6A1
-		// (set) Token: 0x06008EE0 RID: 36576 RVA: 0x000CC4BA File Offset: 0x000CA6BA
+		// Token: 0x170004B2 RID: 1202
+		// (get) Token: 0x06002188 RID: 8584 RVA: 0x0003128B File Offset: 0x0002F48B
+		// (set) Token: 0x06002189 RID: 8585 RVA: 0x000312A4 File Offset: 0x0002F4A4
 		public unsafe bool bDisplayAsDisabled
 		{
 			get
@@ -158,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021AC RID: 8620
-		// (get) Token: 0x06008EE1 RID: 36577 RVA: 0x000CC4EA File Offset: 0x000CA6EA
-		// (set) Token: 0x06008EE2 RID: 36578 RVA: 0x000CC503 File Offset: 0x000CA703
+		// Token: 0x170004B3 RID: 1203
+		// (get) Token: 0x0600218A RID: 8586 RVA: 0x000312D4 File Offset: 0x0002F4D4
+		// (set) Token: 0x0600218B RID: 8587 RVA: 0x000312ED File Offset: 0x0002F4ED
 		public unsafe bool bUserSetEnabledState
 		{
 			get
@@ -173,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021AD RID: 8621
-		// (get) Token: 0x06008EE3 RID: 36579 RVA: 0x000CC533 File Offset: 0x000CA733
-		// (set) Token: 0x06008EE4 RID: 36580 RVA: 0x000CC54C File Offset: 0x000CA74C
+		// Token: 0x170004B4 RID: 1204
+		// (get) Token: 0x0600218C RID: 8588 RVA: 0x0003131D File Offset: 0x0002F51D
+		// (set) Token: 0x0600218D RID: 8589 RVA: 0x00031336 File Offset: 0x0002F536
 		public unsafe bool bIsNodeEnabled_DEPRECATED
 		{
 			get
@@ -188,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021AE RID: 8622
-		// (get) Token: 0x06008EE5 RID: 36581 RVA: 0x000CC57C File Offset: 0x000CA77C
-		// (set) Token: 0x06008EE6 RID: 36582 RVA: 0x000CC595 File Offset: 0x000CA795
+		// Token: 0x170004B5 RID: 1205
+		// (get) Token: 0x0600218E RID: 8590 RVA: 0x00031366 File Offset: 0x0002F566
+		// (set) Token: 0x0600218F RID: 8591 RVA: 0x0003137F File Offset: 0x0002F57F
 		public unsafe bool bHasCompilerMessage
 		{
 			get
@@ -203,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021AF RID: 8623
-		// (get) Token: 0x06008EE7 RID: 36583 RVA: 0x000CC5C5 File Offset: 0x000CA7C5
-		// (set) Token: 0x06008EE8 RID: 36584 RVA: 0x000CC5D9 File Offset: 0x000CA7D9
+		// Token: 0x170004B6 RID: 1206
+		// (get) Token: 0x06002190 RID: 8592 RVA: 0x000313AF File Offset: 0x0002F5AF
+		// (set) Token: 0x06002191 RID: 8593 RVA: 0x000313C3 File Offset: 0x0002F5C3
 		public unsafe string NodeComment
 		{
 			get
@@ -218,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021B0 RID: 8624
-		// (get) Token: 0x06008EE9 RID: 36585 RVA: 0x000CC5EE File Offset: 0x000CA7EE
-		// (set) Token: 0x06008EEA RID: 36586 RVA: 0x000CC5FE File Offset: 0x000CA7FE
+		// Token: 0x170004B7 RID: 1207
+		// (get) Token: 0x06002192 RID: 8594 RVA: 0x000313D8 File Offset: 0x0002F5D8
+		// (set) Token: 0x06002193 RID: 8595 RVA: 0x000313E8 File Offset: 0x0002F5E8
 		public unsafe int ErrorType
 		{
 			get
@@ -233,9 +179,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021B1 RID: 8625
-		// (get) Token: 0x06008EEB RID: 36587 RVA: 0x000CC60F File Offset: 0x000CA80F
-		// (set) Token: 0x06008EEC RID: 36588 RVA: 0x000CC623 File Offset: 0x000CA823
+		// Token: 0x170004B8 RID: 1208
+		// (get) Token: 0x06002194 RID: 8596 RVA: 0x000313F9 File Offset: 0x0002F5F9
+		// (set) Token: 0x06002195 RID: 8597 RVA: 0x0003140D File Offset: 0x0002F60D
 		public unsafe string ErrorMsg
 		{
 			get
@@ -248,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021B2 RID: 8626
-		// (get) Token: 0x06008EED RID: 36589 RVA: 0x000CC638 File Offset: 0x000CA838
-		// (set) Token: 0x06008EEE RID: 36590 RVA: 0x000CC64C File Offset: 0x000CA84C
+		// Token: 0x170004B9 RID: 1209
+		// (get) Token: 0x06002196 RID: 8598 RVA: 0x00031422 File Offset: 0x0002F622
+		// (set) Token: 0x06002197 RID: 8599 RVA: 0x00031436 File Offset: 0x0002F636
 		public unsafe FGuid NodeGuid
 		{
 			get
@@ -263,89 +209,72 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06008EEF RID: 36591 RVA: 0x000CC661 File Offset: 0x000CA861
+		// Token: 0x06002198 RID: 8600 RVA: 0x0003144B File Offset: 0x0002F64B
 		static UEdGraphNode()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.EdGraphNode");
 		}
 
-		// Token: 0x06008EF0 RID: 36592 RVA: 0x000CC66F File Offset: 0x000CA86F
+		// Token: 0x06002199 RID: 8601 RVA: 0x00031459 File Offset: 0x0002F659
 		protected UEdGraphNode(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04004676 RID: 18038
+		// Token: 0x04000BB6 RID: 2998
 		public new const string __ObjectPath = "/Script/Engine.EdGraphNode";
 
-		// Token: 0x04004677 RID: 18039
+		// Token: 0x04000BB7 RID: 2999
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04004678 RID: 18040
+		// Token: 0x04000BB8 RID: 3000
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04004679 RID: 18041
-		internal static int __PropertyOffset_DeprecatedPins;
-
-		// Token: 0x0400467A RID: 18042
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UEdGraphPin_Deprecated> _DeprecatedPins;
-
-		// Token: 0x0400467B RID: 18043
+		// Token: 0x04000BB9 RID: 3001
 		internal static int __PropertyOffset_NodePosX;
 
-		// Token: 0x0400467C RID: 18044
+		// Token: 0x04000BBA RID: 3002
 		internal static int __PropertyOffset_NodePosY;
 
-		// Token: 0x0400467D RID: 18045
+		// Token: 0x04000BBB RID: 3003
 		internal static int __PropertyOffset_NodeWidth;
 
-		// Token: 0x0400467E RID: 18046
+		// Token: 0x04000BBC RID: 3004
 		internal static int __PropertyOffset_NodeHeight;
 
-		// Token: 0x0400467F RID: 18047
-		internal static int __PropertyOffset_AdvancedPinDisplay;
-
-		// Token: 0x04004680 RID: 18048
-		internal static int __PropertyOffset_EnabledState;
-
-		// Token: 0x04004681 RID: 18049
+		// Token: 0x04000BBD RID: 3005
 		internal static int __PropertyOffset_bDisplayAsDisabled;
 
-		// Token: 0x04004682 RID: 18050
+		// Token: 0x04000BBE RID: 3006
 		internal static byte __PropertyMask_bDisplayAsDisabled;
 
-		// Token: 0x04004683 RID: 18051
+		// Token: 0x04000BBF RID: 3007
 		internal static int __PropertyOffset_bUserSetEnabledState;
 
-		// Token: 0x04004684 RID: 18052
+		// Token: 0x04000BC0 RID: 3008
 		internal static byte __PropertyMask_bUserSetEnabledState;
 
-		// Token: 0x04004685 RID: 18053
+		// Token: 0x04000BC1 RID: 3009
 		internal static int __PropertyOffset_bIsNodeEnabled_DEPRECATED;
 
-		// Token: 0x04004686 RID: 18054
+		// Token: 0x04000BC2 RID: 3010
 		internal static byte __PropertyMask_bIsNodeEnabled_DEPRECATED;
 
-		// Token: 0x04004687 RID: 18055
+		// Token: 0x04000BC3 RID: 3011
 		internal static int __PropertyOffset_bHasCompilerMessage;
 
-		// Token: 0x04004688 RID: 18056
+		// Token: 0x04000BC4 RID: 3012
 		internal static byte __PropertyMask_bHasCompilerMessage;
 
-		// Token: 0x04004689 RID: 18057
+		// Token: 0x04000BC5 RID: 3013
 		internal static int __PropertyOffset_NodeComment;
 
-		// Token: 0x0400468A RID: 18058
+		// Token: 0x04000BC6 RID: 3014
 		internal static int __PropertyOffset_ErrorType;
 
-		// Token: 0x0400468B RID: 18059
+		// Token: 0x04000BC7 RID: 3015
 		internal static int __PropertyOffset_ErrorMsg;
 
-		// Token: 0x0400468C RID: 18060
+		// Token: 0x04000BC8 RID: 3016
 		internal static int __PropertyOffset_NodeGuid;
 	}
 }

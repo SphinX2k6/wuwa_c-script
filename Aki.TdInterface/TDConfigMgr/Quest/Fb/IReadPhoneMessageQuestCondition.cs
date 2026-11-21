@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001362 RID: 4962
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020014B2 RID: 5298
 	public class IReadPhoneMessageQuestCondition : IQuestCondition
 	{
-		// Token: 0x06007192 RID: 29074 RVA: 0x00111A38 File Offset: 0x0010FC38
-		[NullableContext(1)]
+		// Token: 0x06007832 RID: 30770 RVA: 0x0011FFA4 File Offset: 0x0011E1A4
 		public static IReadPhoneMessageQuestCondition Create(IReadPhoneMessageQuestCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024A1 RID: 9377
-		// (get) Token: 0x06007193 RID: 29075 RVA: 0x00111A57 File Offset: 0x0010FC57
+		// Token: 0x17002670 RID: 9840
+		// (get) Token: 0x06007833 RID: 30771 RVA: 0x0011FFC3 File Offset: 0x0011E1C3
 		public override EChildQuest Type
 		{
 			get
@@ -34,10 +31,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024A2 RID: 9378
-		// (get) Token: 0x06007194 RID: 29076 RVA: 0x00111A64 File Offset: 0x0010FC64
+		// Token: 0x17002671 RID: 9841
+		// (get) Token: 0x06007834 RID: 30772 RVA: 0x0011FFD0 File Offset: 0x0011E1D0
+		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._PreConditionsInited)
@@ -50,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024A3 RID: 9379
-		// (get) Token: 0x06007195 RID: 29077 RVA: 0x00111A98 File Offset: 0x0010FC98
+		// Token: 0x17002672 RID: 9842
+		// (get) Token: 0x06007835 RID: 30773 RVA: 0x00120004 File Offset: 0x0011E204
 		public virtual int? PhoneMessageId
 		{
 			get
@@ -64,12 +63,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024A4 RID: 9380
-		// (get) Token: 0x06007196 RID: 29078 RVA: 0x00111ACE File Offset: 0x0010FCCE
-		[Nullable(1)]
+		// Token: 0x17002673 RID: 9843
+		// (get) Token: 0x06007836 RID: 30774 RVA: 0x0012003A File Offset: 0x0011E23A
 		public virtual ICompleteMessageQuestCondition ProgressType
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._ProgressTypeInited)
@@ -82,19 +79,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400419E RID: 16798
+		// Token: 0x0400451A RID: 17690
 		private IReadPhoneMessageQuestCondition Instance;
 
-		// Token: 0x0400419F RID: 16799
+		// Token: 0x0400451B RID: 17691
+		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040041A0 RID: 16800
+		// Token: 0x0400451C RID: 17692
 		private bool _PreConditionsInited;
 
-		// Token: 0x040041A1 RID: 16801
+		// Token: 0x0400451D RID: 17693
+		[Nullable(2)]
 		private ICompleteMessageQuestCondition _ProgressTypeCache;
 
-		// Token: 0x040041A2 RID: 16802
+		// Token: 0x0400451E RID: 17694
 		private bool _ProgressTypeInited;
 	}
 }

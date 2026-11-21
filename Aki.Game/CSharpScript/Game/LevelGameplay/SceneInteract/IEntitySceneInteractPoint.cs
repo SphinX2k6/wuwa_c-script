@@ -4,14 +4,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 {
-	// Token: 0x02006A72 RID: 27250
+	// Token: 0x02005BCF RID: 23503
 	public interface IEntitySceneInteractPoint : ISceneInteractPoint
 	{
-		// Token: 0x06043BE5 RID: 277477
+		// Token: 0x06039C33 RID: 236595
 		[NullableContext(1)]
 		EntityHandle GetEntityHandle();
 
-		// Token: 0x06043BE6 RID: 277478
+		// Token: 0x06039C34 RID: 236596
 		[NullableContext(2)]
 		AActor GetOwnerActor();
 	}

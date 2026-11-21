@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x0200670B RID: 26379
+	// Token: 0x0200565B RID: 22107
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayRoleView : UiPanelBase
 	{
-		// Token: 0x06041E21 RID: 269857 RVA: 0x00FFA754 File Offset: 0x00FF8954
+		// Token: 0x0603696D RID: 223597 RVA: 0x00F3BB48 File Offset: 0x00F39D48
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041E22 RID: 269858 RVA: 0x00FFA81C File Offset: 0x00FF8A1C
+		// Token: 0x0603696E RID: 223598 RVA: 0x00F3BC10 File Offset: 0x00F39E10
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DropCatchGameplayRoleView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -40,12 +40,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041E23 RID: 269859 RVA: 0x00FFA85F File Offset: 0x00FF8A5F
+		// Token: 0x0603696F RID: 223599 RVA: 0x00F3BC53 File Offset: 0x00F39E53
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06041E24 RID: 269860 RVA: 0x00FFA861 File Offset: 0x00FF8A61
+		// Token: 0x06036970 RID: 223600 RVA: 0x00F3BC55 File Offset: 0x00F39E55
 		private void UpdateBowlScaleX(float scaleX)
 		{
 			this.Scale.X = (double)scaleX;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			item.SetUIItemScale(this.Scale.ToUeVectorOld());
 		}
 
-		// Token: 0x06041E25 RID: 269861 RVA: 0x00FFA88C File Offset: 0x00FF8A8C
+		// Token: 0x06036971 RID: 223601 RVA: 0x00F3BC80 File Offset: 0x00F39E80
 		public void UpdateRolePos(Vector2D pos)
 		{
 			base.GetRootItem().SetAnchorOffset(pos.ToUeVector2D(false));
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			posChangeCallback(pos.X);
 		}
 
-		// Token: 0x06041E26 RID: 269862 RVA: 0x00FFA8B8 File Offset: 0x00FF8AB8
+		// Token: 0x06036972 RID: 223602 RVA: 0x00F3BCAC File Offset: 0x00F39EAC
 		public void PlayAnimation(EDropCatchRoleAnimState state)
 		{
 			string animationName = this.StateToAnimName[state].ToEnumString();
@@ -98,14 +98,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.UpdateFxOffset(state);
 		}
 
-		// Token: 0x06041E27 RID: 269863 RVA: 0x00FFA95B File Offset: 0x00FF8B5B
+		// Token: 0x06036973 RID: 223603 RVA: 0x00F3BD4F File Offset: 0x00F39F4F
 		[NullableContext(2)]
 		public DropCatchGameplayRoleFxView GetFxView()
 		{
 			return this.FxView;
 		}
 
-		// Token: 0x06041E28 RID: 269864 RVA: 0x00FFA964 File Offset: 0x00FF8B64
+		// Token: 0x06036974 RID: 223604 RVA: 0x00F3BD58 File Offset: 0x00F39F58
 		public UniTask CreateFxView()
 		{
 			DropCatchGameplayRoleView.<CreateFxView>d__17 <CreateFxView>d__;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			return <CreateFxView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041E29 RID: 269865 RVA: 0x00FFA9A8 File Offset: 0x00FF8BA8
+		// Token: 0x06036975 RID: 223605 RVA: 0x00F3BD9C File Offset: 0x00F39F9C
 		public UniTask RefreshSpine()
 		{
 			DropCatchGameplayRoleView.<RefreshSpine>d__18 <RefreshSpine>d__;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			return <RefreshSpine>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041E2A RID: 269866 RVA: 0x00FFA9EC File Offset: 0x00FF8BEC
+		// Token: 0x06036976 RID: 223606 RVA: 0x00F3BDE0 File Offset: 0x00F39FE0
 		public void UpdateFxOffset(EDropCatchRoleAnimState state)
 		{
 			if (this.LeftStates.Contains(state))
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}
 		}
 
-		// Token: 0x06041E2B RID: 269867 RVA: 0x00FFAA44 File Offset: 0x00FF8C44
+		// Token: 0x06036977 RID: 223607 RVA: 0x00F3BE38 File Offset: 0x00F3A038
 		public void SetChangeColor(bool useChangeColor, string hexColor, float? duration = null)
 		{
 			FColor color = FColor.FromHex(hexColor);
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}, duration.Value * (float)TimeUtil.Instance.InverseMillisecond, null, null, true, 1f);
 		}
 
-		// Token: 0x06041E2C RID: 269868 RVA: 0x00FFAB04 File Offset: 0x00FF8D04
+		// Token: 0x06036978 RID: 223608 RVA: 0x00F3BEF8 File Offset: 0x00F3A0F8
 		private void ClearTimer()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.TimerHandle))
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.TimerHandle = null;
 		}
 
-		// Token: 0x06041E2D RID: 269869 RVA: 0x00FFAB30 File Offset: 0x00FF8D30
+		// Token: 0x06036979 RID: 223609 RVA: 0x00F3BF24 File Offset: 0x00F3A124
 		protected override void OnBeforeHide()
 		{
 			DropCatchGameplayRoleFxView fxView = this.FxView;
@@ -217,13 +217,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			fxView.ResetView();
 		}
 
-		// Token: 0x06041E2E RID: 269870 RVA: 0x00FFAB42 File Offset: 0x00FF8D42
+		// Token: 0x0603697A RID: 223610 RVA: 0x00F3BF36 File Offset: 0x00F3A136
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearTimer();
 		}
 
-		// Token: 0x06041E2F RID: 269871 RVA: 0x00FFAB4C File Offset: 0x00FF8D4C
+		// Token: 0x0603697B RID: 223611 RVA: 0x00F3BF40 File Offset: 0x00F3A140
 		private void UpdateDebugSize(float[] roleSizeBias, Tuple<float, float> roleSize, float[] bowlSizeBias, Tuple<float, float> bowlSize)
 		{
 			if (!DropCatchGameplayController.Instance.EnableDebug)
@@ -298,10 +298,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}
 		}
 
-		// Token: 0x04022538 RID: 140600
+		// Token: 0x0401CD91 RID: 118161
 		private readonly int ROLE_FX_OFFSET = 12;
 
-		// Token: 0x04022539 RID: 140601
+		// Token: 0x0401CD92 RID: 118162
 		private readonly Dictionary<EDropCatchRoleAnimState, EDropCatchRoleAnimState> StateToAnimName = new Dictionary<EDropCatchRoleAnimState, EDropCatchRoleAnimState>
 		{
 			{
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}
 		};
 
-		// Token: 0x0402253A RID: 140602
+		// Token: 0x0401CD93 RID: 118163
 		private readonly Dictionary<EDropCatchRoleAnimState, EMorningSpecialAnimState> StateToMorningSpecialAnimName = new Dictionary<EDropCatchRoleAnimState, EMorningSpecialAnimState>
 		{
 			{
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}
 		};
 
-		// Token: 0x0402253B RID: 140603
+		// Token: 0x0401CD94 RID: 118164
 		private readonly HashSet<EDropCatchRoleAnimState> BowlStates = new HashSet<EDropCatchRoleAnimState>
 		{
 			EDropCatchRoleAnimState.IdleBowlLeft,
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			EDropCatchRoleAnimState.WalkBowlRight
 		};
 
-		// Token: 0x0402253C RID: 140604
+		// Token: 0x0401CD95 RID: 118165
 		private readonly HashSet<EDropCatchRoleAnimState> LeftStates = new HashSet<EDropCatchRoleAnimState>
 		{
 			EDropCatchRoleAnimState.IdleLeft,
@@ -393,21 +393,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			EDropCatchRoleAnimState.WalkBowlLeft
 		};
 
-		// Token: 0x0402253D RID: 140605
+		// Token: 0x0401CD96 RID: 118166
 		[Nullable(2)]
 		private DropCatchGameplayRoleFxView FxView;
 
-		// Token: 0x0402253E RID: 140606
+		// Token: 0x0401CD97 RID: 118167
 		[Nullable(2)]
 		public Action<double> PosChangeCallback;
 
-		// Token: 0x0402253F RID: 140607
+		// Token: 0x0401CD98 RID: 118168
 		private float BowlSpineScaleX;
 
-		// Token: 0x04022540 RID: 140608
+		// Token: 0x0401CD99 RID: 118169
 		private readonly Vector Scale = Vector.Create(0.0, 0.32199999690055847, 0.32199999690055847);
 
-		// Token: 0x04022541 RID: 140609
+		// Token: 0x0401CD9A RID: 118170
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 	}

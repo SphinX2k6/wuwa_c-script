@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FA2 RID: 8098
+// Token: 0x02001464 RID: 5220
 public class InfoDisplayTypeThreeView : UiTickViewBase
 {
-	// Token: 0x0600FB82 RID: 64386 RVA: 0x003CF703 File Offset: 0x003CD903
+	// Token: 0x0600CFA4 RID: 53156 RVA: 0x003DB337 File Offset: 0x003D9537
 	[NullableContext(1)]
 	public InfoDisplayTypeThreeView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FB83 RID: 64387 RVA: 0x003CF70C File Offset: 0x003CD90C
+	// Token: 0x0600CFA5 RID: 53157 RVA: 0x003DB340 File Offset: 0x003D9540
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -65,7 +65,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FB84 RID: 64388 RVA: 0x003CF98C File Offset: 0x003CDB8C
+	// Token: 0x0600CFA6 RID: 53158 RVA: 0x003DB5C0 File Offset: 0x003D97C0
 	protected override void OnStart()
 	{
 		this.AudioPlayer = new InfoDisplayAudioPlayer();
@@ -86,7 +86,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		this.RefreshPageSwitch();
 	}
 
-	// Token: 0x0600FB85 RID: 64389 RVA: 0x003CFA14 File Offset: 0x003CDC14
+	// Token: 0x0600CFA7 RID: 53159 RVA: 0x003DB648 File Offset: 0x003D9848
 	protected override void OnBeforeShow()
 	{
 		int id = InfoDisplayModel.Instance.CurrentInformationId();
@@ -97,7 +97,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FB86 RID: 64390 RVA: 0x003CFA54 File Offset: 0x003CDC54
+	// Token: 0x0600CFA8 RID: 53160 RVA: 0x003DB688 File Offset: 0x003D9888
 	protected override void OnBeforeHide()
 	{
 		int id = InfoDisplayModel.Instance.CurrentInformationId();
@@ -108,7 +108,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FB87 RID: 64391 RVA: 0x003CFA91 File Offset: 0x003CDC91
+	// Token: 0x0600CFA9 RID: 53161 RVA: 0x003DB6C5 File Offset: 0x003D98C5
 	private void RefreshElement(int id)
 	{
 		this.RefreshShowText(id);
@@ -116,7 +116,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		this.RefreshAudioShow(id);
 	}
 
-	// Token: 0x0600FB88 RID: 64392 RVA: 0x003CFAA8 File Offset: 0x003CDCA8
+	// Token: 0x0600CFAA RID: 53162 RVA: 0x003DB6DC File Offset: 0x003D98DC
 	private void RefreshAudioShow(int id)
 	{
 		string infoDisplayAudio = InfoDisplayModuleConfig.Instance.GetInfoDisplayAudio(id);
@@ -147,7 +147,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FB89 RID: 64393 RVA: 0x003CFB08 File Offset: 0x003CDD08
+	// Token: 0x0600CFAB RID: 53163 RVA: 0x003DB73C File Offset: 0x003D993C
 	private void RefreshShowText(int id)
 	{
 		string infoDisplayTitle = InfoDisplayModuleConfig.Instance.GetInfoDisplayTitle(id);
@@ -164,7 +164,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FB8A RID: 64394 RVA: 0x003CFB54 File Offset: 0x003CDD54
+	// Token: 0x0600CFAC RID: 53164 RVA: 0x003DB788 File Offset: 0x003D9988
 	private void RefreshBgStamp(int id)
 	{
 		string infoDisplayBgStamp = InfoDisplayModuleConfig.Instance.GetInfoDisplayBgStamp(id);
@@ -195,25 +195,25 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FB8B RID: 64395 RVA: 0x003CFBD5 File Offset: 0x003CDDD5
+	// Token: 0x0600CFAD RID: 53165 RVA: 0x003DB809 File Offset: 0x003D9A09
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FB8C RID: 64396 RVA: 0x003CFBDE File Offset: 0x003CDDDE
+	// Token: 0x0600CFAE RID: 53166 RVA: 0x003DB812 File Offset: 0x003D9A12
 	private void OnClickSwitchLeftBtn()
 	{
 		this.SwitchGroupPage(-1);
 	}
 
-	// Token: 0x0600FB8D RID: 64397 RVA: 0x003CFBE7 File Offset: 0x003CDDE7
+	// Token: 0x0600CFAF RID: 53167 RVA: 0x003DB81B File Offset: 0x003D9A1B
 	private void OnClickSwitchRightBtn()
 	{
 		this.SwitchGroupPage(1);
 	}
 
-	// Token: 0x0600FB8E RID: 64398 RVA: 0x003CFBF0 File Offset: 0x003CDDF0
+	// Token: 0x0600CFB0 RID: 53168 RVA: 0x003DB824 File Offset: 0x003D9A24
 	private void SwitchGroupPage(int offset)
 	{
 		InfoDisplayModel instance = InfoDisplayModel.Instance;
@@ -234,7 +234,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		this.RefreshPageSwitch();
 	}
 
-	// Token: 0x0600FB8F RID: 64399 RVA: 0x003CFC5C File Offset: 0x003CDE5C
+	// Token: 0x0600CFB1 RID: 53169 RVA: 0x003DB890 File Offset: 0x003D9A90
 	private void RefreshPageSwitch()
 	{
 		InfoDisplayModel instance = InfoDisplayModel.Instance;
@@ -267,7 +267,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FB90 RID: 64400 RVA: 0x003CFD28 File Offset: 0x003CDF28
+	// Token: 0x0600CFB2 RID: 53170 RVA: 0x003DB95C File Offset: 0x003D9B5C
 	protected override void OnBeforeDestroy()
 	{
 		InfoDisplayAudioPlayer audioPlayer = this.AudioPlayer;
@@ -279,7 +279,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		InfoDisplayController.Instance.RequestReadDisplayInfo(displayId);
 	}
 
-	// Token: 0x0600FB91 RID: 64401 RVA: 0x003CFD5D File Offset: 0x003CDF5D
+	// Token: 0x0600CFB3 RID: 53171 RVA: 0x003DB991 File Offset: 0x003D9B91
 	protected override void OnTick(float delta)
 	{
 		InfoDisplayAudioPlayer audioPlayer = this.AudioPlayer;
@@ -290,7 +290,7 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		audioPlayer.OnTick(delta);
 	}
 
-	// Token: 0x0600FB92 RID: 64402 RVA: 0x003CFD70 File Offset: 0x003CDF70
+	// Token: 0x0600CFB4 RID: 53172 RVA: 0x003DB9A4 File Offset: 0x003D9BA4
 	protected override UniTask OnBeforeHideAsync()
 	{
 		InfoDisplayTypeThreeView.<OnBeforeHideAsync>d__18 <OnBeforeHideAsync>d__;
@@ -301,53 +301,53 @@ public class InfoDisplayTypeThreeView : UiTickViewBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400750F RID: 29967
+	// Token: 0x040075F2 RID: 30194
 	[Nullable(2)]
 	private InfoDisplayAudioPlayer AudioPlayer;
 
-	// Token: 0x02008593 RID: 34195
+	// Token: 0x02007718 RID: 30488
 	private class EInfoDisplayTypeThreeComponents
 	{
-		// Token: 0x0402B7CD RID: 178125
+		// Token: 0x04026AF0 RID: 158448
 		public const int Name = 0;
 
-		// Token: 0x0402B7CE RID: 178126
+		// Token: 0x04026AF1 RID: 158449
 		public const int BgStampImg = 1;
 
-		// Token: 0x0402B7CF RID: 178127
+		// Token: 0x04026AF2 RID: 158450
 		public const int Desc = 2;
 
-		// Token: 0x0402B7D0 RID: 178128
+		// Token: 0x04026AF3 RID: 158451
 		public const int TimeText = 3;
 
-		// Token: 0x0402B7D1 RID: 178129
+		// Token: 0x04026AF4 RID: 158452
 		public const int BackBtn = 4;
 
-		// Token: 0x0402B7D2 RID: 178130
+		// Token: 0x04026AF5 RID: 158453
 		public const int PlayItem = 5;
 
-		// Token: 0x0402B7D3 RID: 178131
+		// Token: 0x04026AF6 RID: 158454
 		public const int DescItem = 6;
 
-		// Token: 0x0402B7D4 RID: 178132
+		// Token: 0x04026AF7 RID: 158455
 		public const int TimeLineItem = 7;
 
-		// Token: 0x0402B7D5 RID: 178133
+		// Token: 0x04026AF8 RID: 158456
 		public const int TexBg = 8;
 
-		// Token: 0x0402B7D6 RID: 178134
+		// Token: 0x04026AF9 RID: 158457
 		public const int BgMaskItem = 9;
 
-		// Token: 0x0402B7D7 RID: 178135
+		// Token: 0x04026AFA RID: 158458
 		public const int BgMaskBlack = 10;
 
-		// Token: 0x0402B7D8 RID: 178136
+		// Token: 0x04026AFB RID: 158459
 		public const int BtnSwitchLeft = 11;
 
-		// Token: 0x0402B7D9 RID: 178137
+		// Token: 0x04026AFC RID: 158460
 		public const int BtnSwitchRight = 12;
 
-		// Token: 0x0402B7DA RID: 178138
+		// Token: 0x04026AFD RID: 158461
 		public const int TextPageCount = 13;
 	}
 }

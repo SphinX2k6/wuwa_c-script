@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043E1 RID: 17377
+	// Token: 0x02004846 RID: 18502
 	public enum EDestructibleType : byte
 	{
-		// Token: 0x0400C281 RID: 49793
+		// Token: 0x0400CCA5 RID: 52389
 		Rock,
-		// Token: 0x0400C282 RID: 49794
+		// Token: 0x0400CCA6 RID: 52390
 		Case,
-		// Token: 0x0400C283 RID: 49795
+		// Token: 0x0400CCA7 RID: 52391
 		Vine,
-		// Token: 0x0400C284 RID: 49796
+		// Token: 0x0400CCA8 RID: 52392
 		CrackRock,
-		// Token: 0x0400C285 RID: 49797
+		// Token: 0x0400CCA9 RID: 52393
 		Silt
 	}
 }

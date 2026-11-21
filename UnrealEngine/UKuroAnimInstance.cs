@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001655 RID: 5717
+	// Token: 0x020002EE RID: 750
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroAnim.KuroAnimInstance")]
-	[UnrealStructLayout(2560, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2560)]
+	[UnrealStructLayout(2576, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2576)]
 	public class UKuroAnimInstance : UAnimInstance, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601492B RID: 84267 RVA: 0x001E421C File Offset: 0x001E241C
+		// Token: 0x06004FE0 RID: 20448 RVA: 0x0006FC6D File Offset: 0x0006DE6D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroAnimInstance._ClassPtr;
 		}
 
-		// Token: 0x0601492C RID: 84268 RVA: 0x001E4228 File Offset: 0x001E2428
+		// Token: 0x06004FE1 RID: 20449 RVA: 0x0006FC7C File Offset: 0x0006DE7C
 		public UKuroAnimInstance() : this(BuiltinUtils.AllocNativeUObject(UKuroAnimInstance.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601492D RID: 84269 RVA: 0x001E4250 File Offset: 0x001E2450
+		// Token: 0x06004FE2 RID: 20450 RVA: 0x0006FCA4 File Offset: 0x0006DEA4
 		[NullableContext(1)]
 		public UKuroAnimInstance(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroAnimInstance.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005100 RID: 20736
-		// (get) Token: 0x0601492E RID: 84270 RVA: 0x001E4283 File Offset: 0x001E2483
-		// (set) Token: 0x0601492F RID: 84271 RVA: 0x001E4297 File Offset: 0x001E2497
+		// Token: 0x17000F75 RID: 3957
+		// (get) Token: 0x06004FE3 RID: 20451 RVA: 0x0006FCD7 File Offset: 0x0006DED7
+		// (set) Token: 0x06004FE4 RID: 20452 RVA: 0x0006FCEB File Offset: 0x0006DEEB
 		public unsafe FVector2D TurnLimitForBoneRotateAnimNode
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005101 RID: 20737
-		// (get) Token: 0x06014930 RID: 84272 RVA: 0x001E42AC File Offset: 0x001E24AC
-		// (set) Token: 0x06014931 RID: 84273 RVA: 0x001E42C0 File Offset: 0x001E24C0
+		// Token: 0x17000F76 RID: 3958
+		// (get) Token: 0x06004FE5 RID: 20453 RVA: 0x0006FD00 File Offset: 0x0006DF00
+		// (set) Token: 0x06004FE6 RID: 20454 RVA: 0x0006FD14 File Offset: 0x0006DF14
 		public unsafe FVector2D LookUpLimitForBoneRotateAnimNode
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005102 RID: 20738
-		// (get) Token: 0x06014932 RID: 84274 RVA: 0x001E42D5 File Offset: 0x001E24D5
-		// (set) Token: 0x06014933 RID: 84275 RVA: 0x001E42E5 File Offset: 0x001E24E5
+		// Token: 0x17000F77 RID: 3959
+		// (get) Token: 0x06004FE7 RID: 20455 RVA: 0x0006FD29 File Offset: 0x0006DF29
+		// (set) Token: 0x06004FE8 RID: 20456 RVA: 0x0006FD39 File Offset: 0x0006DF39
 		public unsafe bool bRollBackToOriginForBoneRotateAnimNode
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005103 RID: 20739
-		// (get) Token: 0x06014934 RID: 84276 RVA: 0x001E42F6 File Offset: 0x001E24F6
-		// (set) Token: 0x06014935 RID: 84277 RVA: 0x001E4306 File Offset: 0x001E2506
+		// Token: 0x17000F78 RID: 3960
+		// (get) Token: 0x06004FE9 RID: 20457 RVA: 0x0006FD4A File Offset: 0x0006DF4A
+		// (set) Token: 0x06004FEA RID: 20458 RVA: 0x0006FD5A File Offset: 0x0006DF5A
 		public unsafe bool bStopForBoneRotateAnimNode
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005104 RID: 20740
-		// (get) Token: 0x06014936 RID: 84278 RVA: 0x001E4317 File Offset: 0x001E2517
-		// (set) Token: 0x06014937 RID: 84279 RVA: 0x001E4327 File Offset: 0x001E2527
+		// Token: 0x17000F79 RID: 3961
+		// (get) Token: 0x06004FEB RID: 20459 RVA: 0x0006FD6B File Offset: 0x0006DF6B
+		// (set) Token: 0x06004FEC RID: 20460 RVA: 0x0006FD7B File Offset: 0x0006DF7B
 		public unsafe float TurnAngleForBoneRotateAnimNode
 		{
 			get
@@ -105,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005105 RID: 20741
-		// (get) Token: 0x06014938 RID: 84280 RVA: 0x001E4338 File Offset: 0x001E2538
-		// (set) Token: 0x06014939 RID: 84281 RVA: 0x001E4348 File Offset: 0x001E2548
+		// Token: 0x17000F7A RID: 3962
+		// (get) Token: 0x06004FED RID: 20461 RVA: 0x0006FD8C File Offset: 0x0006DF8C
+		// (set) Token: 0x06004FEE RID: 20462 RVA: 0x0006FD9C File Offset: 0x0006DF9C
 		public unsafe float LookUpAngleForBoneRotateAnimNode
 		{
 			get
@@ -120,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005106 RID: 20742
-		// (get) Token: 0x0601493A RID: 84282 RVA: 0x001E4359 File Offset: 0x001E2559
-		// (set) Token: 0x0601493B RID: 84283 RVA: 0x001E4369 File Offset: 0x001E2569
+		// Token: 0x17000F7B RID: 3963
+		// (get) Token: 0x06004FEF RID: 20463 RVA: 0x0006FDAD File Offset: 0x0006DFAD
+		// (set) Token: 0x06004FF0 RID: 20464 RVA: 0x0006FDBD File Offset: 0x0006DFBD
 		public unsafe float TurnOffsetForBoneRotateAnimNode
 		{
 			get
@@ -135,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005107 RID: 20743
-		// (get) Token: 0x0601493C RID: 84284 RVA: 0x001E437A File Offset: 0x001E257A
-		// (set) Token: 0x0601493D RID: 84285 RVA: 0x001E438A File Offset: 0x001E258A
+		// Token: 0x17000F7C RID: 3964
+		// (get) Token: 0x06004FF1 RID: 20465 RVA: 0x0006FDCE File Offset: 0x0006DFCE
+		// (set) Token: 0x06004FF2 RID: 20466 RVA: 0x0006FDDE File Offset: 0x0006DFDE
 		public unsafe float LookUpOffsetForBoneRotateAnimNode
 		{
 			get
@@ -150,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005108 RID: 20744
-		// (get) Token: 0x0601493E RID: 84286 RVA: 0x001E439C File Offset: 0x001E259C
-		// (set) Token: 0x0601493F RID: 84287 RVA: 0x001E43D5 File Offset: 0x001E25D5
+		// Token: 0x17000F7D RID: 3965
+		// (get) Token: 0x06004FF3 RID: 20467 RVA: 0x0006FDF0 File Offset: 0x0006DFF0
+		// (set) Token: 0x06004FF4 RID: 20468 RVA: 0x0006FE29 File Offset: 0x0006E029
 		[Nullable(1)]
 		public TMap<FName, UAnimSequence> ExtraRibbonAnims
 		{
@@ -174,33 +174,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005109 RID: 20745
-		// (get) Token: 0x06014940 RID: 84288 RVA: 0x001E43E4 File Offset: 0x001E25E4
-		// (set) Token: 0x06014941 RID: 84289 RVA: 0x001E441D File Offset: 0x001E261D
-		[Nullable(1)]
-		public TMap<FName, FExtraFollowTable> SecondaryExtraFollowAnims
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<FName, FExtraFollowTable> result;
-				if ((result = this._SecondaryExtraFollowAnims) == null)
-				{
-					result = (this._SecondaryExtraFollowAnims = new TMap<FName, FExtraFollowTable>(base.NativePtr + (IntPtr)UKuroAnimInstance.__PropertyOffset_SecondaryExtraFollowAnims, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.SecondaryExtraFollowAnims.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x1700510A RID: 20746
-		// (get) Token: 0x06014942 RID: 84290 RVA: 0x001E442B File Offset: 0x001E262B
-		// (set) Token: 0x06014943 RID: 84291 RVA: 0x001E443B File Offset: 0x001E263B
+		// Token: 0x17000F7E RID: 3966
+		// (get) Token: 0x06004FF5 RID: 20469 RVA: 0x0006FE37 File Offset: 0x0006E037
+		// (set) Token: 0x06004FF6 RID: 20470 RVA: 0x0006FE47 File Offset: 0x0006E047
 		public unsafe bool bExtraFollowFreeze
 		{
 			get
@@ -213,9 +189,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700510B RID: 20747
-		// (get) Token: 0x06014944 RID: 84292 RVA: 0x001E444C File Offset: 0x001E264C
-		// (set) Token: 0x06014945 RID: 84293 RVA: 0x001E445C File Offset: 0x001E265C
+		// Token: 0x17000F7F RID: 3967
+		// (get) Token: 0x06004FF7 RID: 20471 RVA: 0x0006FE58 File Offset: 0x0006E058
+		// (set) Token: 0x06004FF8 RID: 20472 RVA: 0x0006FE68 File Offset: 0x0006E068
 		public unsafe bool bRequestSaveExtraFollowSnapshot
 		{
 			get
@@ -228,9 +204,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700510C RID: 20748
-		// (get) Token: 0x06014946 RID: 84294 RVA: 0x001E446D File Offset: 0x001E266D
-		// (set) Token: 0x06014947 RID: 84295 RVA: 0x001E4481 File Offset: 0x001E2681
+		// Token: 0x17000F80 RID: 3968
+		// (get) Token: 0x06004FF9 RID: 20473 RVA: 0x0006FE79 File Offset: 0x0006E079
+		// (set) Token: 0x06004FFA RID: 20474 RVA: 0x0006FE8D File Offset: 0x0006E08D
 		public unsafe FTransform ExtraFollowFrozenWorldTransform
 		{
 			get
@@ -243,9 +219,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700510D RID: 20749
-		// (get) Token: 0x06014948 RID: 84296 RVA: 0x001E4496 File Offset: 0x001E2696
-		// (set) Token: 0x06014949 RID: 84297 RVA: 0x001E44A6 File Offset: 0x001E26A6
+		// Token: 0x17000F81 RID: 3969
+		// (get) Token: 0x06004FFB RID: 20475 RVA: 0x0006FEA2 File Offset: 0x0006E0A2
+		// (set) Token: 0x06004FFC RID: 20476 RVA: 0x0006FEB2 File Offset: 0x0006E0B2
 		public unsafe bool bExtraFollowLockWorldTransform
 		{
 			get
@@ -258,50 +234,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601494A RID: 84298 RVA: 0x001E44B8 File Offset: 0x001E26B8
-		public unsafe void UpdateSkillMoveInfo(in float DeltaTime, in FRotator RoleRotator, in FVector Speed, ref ACharacter Character, ref float RotatorMixed, in FVector Acceleration, ref FVector RelativeAcceleration, ref FLeanAmount LeanAmount, in float GroundLeanAmountLerpSpeed, in FRotator AimRotator, ref float AimAngle, ref FVector2D AimMoveMixed, in float RotatorSpeed, AActor SkillTarget, in FVectorDouble CachedActorLocation)
-		{
-			ACharacter acharacter = Character;
-			IntPtr nativeObjectPtr = (acharacter != null) ? acharacter.NativePtr : IntPtr.Zero;
-			fixed (float* ptr = &DeltaTime)
-			{
-				void* ptr2 = (void*)ptr;
-				fixed (float* ptr3 = &RotatorMixed)
-				{
-					void* ptr4 = (void*)ptr3;
-					fixed (FVector* ptr5 = &RelativeAcceleration)
-					{
-						void* ptr6 = (void*)ptr5;
-						fixed (float* ptr7 = &GroundLeanAmountLerpSpeed)
-						{
-							void* ptr8 = (void*)ptr7;
-							fixed (float* ptr9 = &AimAngle)
-							{
-								void* ptr10 = (void*)ptr9;
-								fixed (FVector2D* ptr11 = &AimMoveMixed)
-								{
-									void* ptr12 = (void*)ptr11;
-									fixed (float* ptr13 = &RotatorSpeed)
-									{
-										void* ptr14 = (void*)ptr13;
-										UKuroAnimInstance.__UpdateSkillMoveInfo_Internal(base.NativePtr, DeltaTime, RoleRotator, Speed, ref nativeObjectPtr, ref RotatorMixed, Acceleration, ref RelativeAcceleration, (LeanAmount ?? new FLeanAmount()).NativePtr, GroundLeanAmountLerpSpeed, AimRotator, ref AimAngle, ref AimMoveMixed, RotatorSpeed, (SkillTarget != null) ? SkillTarget.NativePtr : IntPtr.Zero, CachedActorLocation);
-										Character = BuiltinUtils.GetOrCreateUObjectByNativePointer<ACharacter>(nativeObjectPtr);
-										ptr = null;
-										ptr3 = null;
-										ptr5 = null;
-										ptr7 = null;
-										ptr9 = null;
-										ptr11 = null;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
-		// Token: 0x0601494B RID: 84299 RVA: 0x001E4580 File Offset: 0x001E2780
+		// Token: 0x06004FFD RID: 20477 RVA: 0x0006FEC4 File Offset: 0x0006E0C4
 		public unsafe void UpdateRoleInfo(ref bool StateGround, ref bool StateGroundSprint, ref bool StateGroundWalk, ref bool StateGroundRun, ref bool StateRunStop, ref bool StateSprintStop, ref bool StateWalkStop, ref bool RunStop, ref bool StateClimb, ref bool StateAir, ref bool StateAirGlide, ref bool StateWater, ref bool StateView, ref bool StateAim, ref bool StateFace)
 		{
 			fixed (bool* ptr = &StateGround)
@@ -381,7 +314,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601494C RID: 84300 RVA: 0x001E4670 File Offset: 0x001E2870
+		// Token: 0x06004FFE RID: 20478 RVA: 0x0006FFB4 File Offset: 0x0006E1B4
 		public unsafe void UpdateMoveInfoMixed(ref ACharacter Character, ref float WalkRunMixed, in float DeltaTime, in float Slop, ref UCurveFloat AngleToStepFrequency, ref UCurveFloat AngleToStepLength, ref UCurveFloat WalkCurve, ref UCurveFloat RunCurve, in float SpeedSize, ref float StepLengthMixed, in float AnimWalkSpeed, in float AnimRunSpeed, in float SprintSpeed, ref float StandRate)
 		{
 			ACharacter acharacter = Character;
@@ -446,7 +379,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601494D RID: 84301 RVA: 0x001E47A8 File Offset: 0x001E29A8
+		// Token: 0x06004FFF RID: 20479 RVA: 0x000700EC File Offset: 0x0006E2EC
 		public unsafe void UpdateIKInfoLocalValue(ACharacter Character, ref FRotator MeshQuatInverse, ref FVector MeshWorldLocation)
 		{
 			fixed (FRotator* ptr = &MeshQuatInverse)
@@ -461,7 +394,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601494E RID: 84302 RVA: 0x001E47E4 File Offset: 0x001E29E4
+		// Token: 0x06005000 RID: 20480 RVA: 0x00070128 File Offset: 0x0006E328
 		public unsafe void UpdateIKinfoInOtherState(ref ACharacter Character, ref FVector OverallOffsetLocation, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, ref FVector LHandNormalDirection, ref FVector RHandNormalDirection, ref float HipLerpSpeed)
 		{
 			ACharacter acharacter = Character;
@@ -509,7 +442,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601494F RID: 84303 RVA: 0x001E488C File Offset: 0x001E2A8C
+		// Token: 0x06005001 RID: 20481 RVA: 0x000701D0 File Offset: 0x0006E3D0
 		public unsafe void UpdateIKInfoInGroundState(in bool HasWallForward, in FVector MeshWorldLocation, in bool IsMoving, in float DegMovementSlop, ref bool bUpHill, ref bool bDownHill, ref ACharacter Character, ref USkeletalMeshComponent Mesh, in float Speed, in bool HasMoveInput, in float RunWalkMix, ref FVector OverallOffsetLocation, ref float HipLerpSpeed, ref bool bLFootNeedIK, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, ref FHitResult LFootHitResult, ref bool bRFootNeedIK, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, ref FHitResult RFootHitResult, bool UseCurveFootLocation)
 		{
 			ACharacter acharacter = Character;
@@ -600,7 +533,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014950 RID: 84304 RVA: 0x001E49F4 File Offset: 0x001E2BF4
+		// Token: 0x06005002 RID: 20482 RVA: 0x00070338 File Offset: 0x0006E538
 		public unsafe void UpdateIKinfoInClimbState(UAnimInstance AnimInstance, in FVector MeshWorldLocation, in FRotator QuatInverse, ref FVector OverallOffsetLocation, ref float ClimbIK, in float FastClimbDirection, in bool IsFastClimbState, ref ACharacter Character, ref USkeletalMeshComponent Mesh, ref float HipLerpSpeed, in float Speed, in bool HasMoveInput, in bool IsClimbExitState, in float ClimbRadius, in FVector LFootOffsetRelativeLocation, ref FVector LFootCachedLocation, ref FVector LFootCachedNormal, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, ref float LFootPrevFrameAlpha, in FVector RFootOffsetRelativeLocation, ref FVector RFootCachedLocation, ref FVector RFootCachedNormal, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, ref float RFootPrevFrameAlpha, in FVector LHandOffsetRelativeLocation, ref FVector LHandCachedLocation, ref FVector LHandCachedNormal, ref FVector LHandOffsetLocation, ref FVector LHandNormalDirection, ref float LHandPrevFrameAlpha, in FVector RHandOffsetRelativeLocation, ref FVector RHandCachedLocation, ref FVector RHandCachedNormal, ref FVector RHandOffsetLocation, ref FVector RHandNormalDirection, ref float RHandPrevFrameAlpha)
 		{
 			ACharacter acharacter = Character;
@@ -756,58 +689,25 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014951 RID: 84305 RVA: 0x001E4C15 File Offset: 0x001E2E15
+		// Token: 0x06005003 RID: 20483 RVA: 0x00070559 File Offset: 0x0006E759
 		public void UpdateCharacterVar()
 		{
 			UKuroAnimInstance.__UpdateCharacterVar_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014952 RID: 84306 RVA: 0x001E4C24 File Offset: 0x001E2E24
-		public unsafe void UpdateCameraStateMoveInfo(in FVector Speed, ref ACharacter Character, in FRotator RoleRotator, in FVector Acceleration, ref float RotatorMixed, in float DeltaTime, ref FVector RelativeAcceleration, ref FLeanAmount LeanAmount, in float GroundLeanAmountLerpSpeed, in FRotator AimRotator, ref float AimAngle)
-		{
-			ACharacter acharacter = Character;
-			IntPtr nativeObjectPtr = (acharacter != null) ? acharacter.NativePtr : IntPtr.Zero;
-			fixed (float* ptr = &RotatorMixed)
-			{
-				void* ptr2 = (void*)ptr;
-				fixed (float* ptr3 = &DeltaTime)
-				{
-					void* ptr4 = (void*)ptr3;
-					fixed (FVector* ptr5 = &RelativeAcceleration)
-					{
-						void* ptr6 = (void*)ptr5;
-						fixed (float* ptr7 = &GroundLeanAmountLerpSpeed)
-						{
-							void* ptr8 = (void*)ptr7;
-							fixed (float* ptr9 = &AimAngle)
-							{
-								void* ptr10 = (void*)ptr9;
-								UKuroAnimInstance.__UpdateCameraStateMoveInfo_Internal(base.NativePtr, Speed, ref nativeObjectPtr, RoleRotator, Acceleration, ref RotatorMixed, DeltaTime, ref RelativeAcceleration, (LeanAmount ?? new FLeanAmount()).NativePtr, GroundLeanAmountLerpSpeed, AimRotator, ref AimAngle);
-								Character = BuiltinUtils.GetOrCreateUObjectByNativePointer<ACharacter>(nativeObjectPtr);
-								ptr = null;
-								ptr3 = null;
-								ptr5 = null;
-								ptr7 = null;
-							}
-						}
-					}
-				}
-			}
-		}
-
-		// Token: 0x06014953 RID: 84307 RVA: 0x001E4CB8 File Offset: 0x001E2EB8
+		// Token: 0x06005004 RID: 20484 RVA: 0x00070566 File Offset: 0x0006E766
 		public void UpdateBooleanVar()
 		{
 			UKuroAnimInstance.__UpdateBooleanVar_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014954 RID: 84308 RVA: 0x001E4CC5 File Offset: 0x001E2EC5
+		// Token: 0x06005005 RID: 20485 RVA: 0x00070573 File Offset: 0x0006E773
 		public void UpdateBindRoleInfo()
 		{
 			UKuroAnimInstance.__UpdateBindRoleInfo_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014955 RID: 84309 RVA: 0x001E4CD4 File Offset: 0x001E2ED4
+		// Token: 0x06005006 RID: 20486 RVA: 0x00070580 File Offset: 0x0006E780
 		public unsafe void UpdateBattleIdle(in float BattleIdleTime, ref bool bBattleIdle)
 		{
 			fixed (float* ptr = &BattleIdleTime)
@@ -822,51 +722,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014956 RID: 84310 RVA: 0x001E4D00 File Offset: 0x001E2F00
-		public unsafe void UpdateAdditiveBlendInfo(UAnimInstance AnimInstance, in bool bUsingAdditiveBlend, in bool bUsingWholeBodyBlend, ref float AdditiveBlendAlpha, ref FAdditiveBlendAlpha Pelvis, ref FAdditiveBlendAlpha Spine, ref FAdditiveBlendAlpha Spine1, ref FAdditiveBlendAlpha Spine2, ref FAdditiveBlendAlpha Head, ref FAdditiveBlendAlpha ArmL, ref FAdditiveBlendAlpha ArmR, ref FAdditiveBlendAlpha Leg)
-		{
-			fixed (bool* ptr = &bUsingAdditiveBlend)
-			{
-				void* ptr2 = (void*)ptr;
-				fixed (bool* ptr3 = &bUsingWholeBodyBlend)
-				{
-					void* ptr4 = (void*)ptr3;
-					fixed (float* ptr5 = &AdditiveBlendAlpha)
-					{
-						void* ptr6 = (void*)ptr5;
-						UKuroAnimInstance.__UpdateAdditiveBlendInfo_Internal(base.NativePtr, (AnimInstance != null) ? AnimInstance.NativePtr : IntPtr.Zero, bUsingAdditiveBlend, bUsingWholeBodyBlend, ref AdditiveBlendAlpha, (Pelvis ?? new FAdditiveBlendAlpha()).NativePtr, (Spine ?? new FAdditiveBlendAlpha()).NativePtr, (Spine1 ?? new FAdditiveBlendAlpha()).NativePtr, (Spine2 ?? new FAdditiveBlendAlpha()).NativePtr, (Head ?? new FAdditiveBlendAlpha()).NativePtr, (ArmL ?? new FAdditiveBlendAlpha()).NativePtr, (ArmR ?? new FAdditiveBlendAlpha()).NativePtr, (Leg ?? new FAdditiveBlendAlpha()).NativePtr);
-						ptr = null;
-						ptr3 = null;
-					}
-				}
-			}
-		}
-
-		// Token: 0x06014957 RID: 84311 RVA: 0x001E4DD3 File Offset: 0x001E2FD3
+		// Token: 0x06005007 RID: 20487 RVA: 0x000705AA File Offset: 0x0006E7AA
 		public void UpdateABP(float DeltaSeconds)
 		{
 			UKuroAnimInstance.__UpdateABP_Internal(base.NativePtr, DeltaSeconds);
 		}
 
-		// Token: 0x06014958 RID: 84312 RVA: 0x001E4DE1 File Offset: 0x001E2FE1
+		// Token: 0x06005008 RID: 20488 RVA: 0x000705B8 File Offset: 0x0006E7B8
 		public void UnRegisterActorAndResetInstance()
 		{
 			UKuroAnimInstance.__UnRegisterActorAndResetInstance_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014959 RID: 84313 RVA: 0x001E4DEE File Offset: 0x001E2FEE
+		// Token: 0x06005009 RID: 20489 RVA: 0x000705C5 File Offset: 0x0006E7C5
 		public void UnfreezeExtraFollow()
 		{
 			UKuroAnimInstance.__UnfreezeExtraFollow_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601495A RID: 84314 RVA: 0x001E4DFB File Offset: 0x001E2FFB
+		// Token: 0x0600500A RID: 20490 RVA: 0x000705D2 File Offset: 0x0006E7D2
 		public void StartABP()
 		{
 			UKuroAnimInstance.__StartABP_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601495B RID: 84315 RVA: 0x001E4E08 File Offset: 0x001E3008
+		// Token: 0x0600500B RID: 20491 RVA: 0x000705E0 File Offset: 0x0006E7E0
 		public unsafe void SetFootOffset(in FVector SkeletionAbsoluteLocation, in FVector IKDirection, in float BenchMarkDepth, in float RotationCorrectedDistance, ref ACharacter Character, ref USkeletalMeshComponent Mesh, in bool HasMoveInput, ref bool bNeedIK, ref FVector OffsetLocation, ref FVector NormalDirection, ref FHitResult OutHitResult)
 		{
 			ACharacter acharacter = Character;
@@ -907,98 +787,91 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601495C RID: 84316 RVA: 0x001E4EC7 File Offset: 0x001E30C7
+		// Token: 0x0600500C RID: 20492 RVA: 0x0007069F File Offset: 0x0006E89F
 		public void SetExtraFollowFreeze(bool bFreeze)
 		{
 			UKuroAnimInstance.__SetExtraFollowFreeze_Internal(base.NativePtr, bFreeze);
 		}
 
-		// Token: 0x0601495D RID: 84317 RVA: 0x001E4ED5 File Offset: 0x001E30D5
+		// Token: 0x0600500D RID: 20493 RVA: 0x000706AD File Offset: 0x0006E8AD
 		public void SetDebugTraceType(EDrawDebugTrace GroundTrace, EDrawDebugTrace ClimbTrace)
 		{
 			UKuroAnimInstance.__SetDebugTraceType_Internal(base.NativePtr, GroundTrace, ClimbTrace);
 		}
 
-		// Token: 0x0601495E RID: 84318 RVA: 0x001E4EEE File Offset: 0x001E30EE
+		// Token: 0x0600500E RID: 20494 RVA: 0x000706C6 File Offset: 0x0006E8C6
 		public void SetBoneRotateToLocationInfoStopEnd()
 		{
 			UKuroAnimInstance.__SetBoneRotateToLocationInfoStopEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601495F RID: 84319 RVA: 0x001E4EFB File Offset: 0x001E30FB
+		// Token: 0x0600500F RID: 20495 RVA: 0x000706D3 File Offset: 0x0006E8D3
 		public void SetBoneRotateToLocationInfoStopBegin()
 		{
 			UKuroAnimInstance.__SetBoneRotateToLocationInfoStopBegin_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014960 RID: 84320 RVA: 0x001E4F08 File Offset: 0x001E3108
+		// Token: 0x06005010 RID: 20496 RVA: 0x000706E0 File Offset: 0x0006E8E0
 		public void SetBoneRotateToLocationInfoRunTick(float TurnAngle, float LookUpAngle)
 		{
 			UKuroAnimInstance.__SetBoneRotateToLocationInfoRunTick_Internal(base.NativePtr, TurnAngle, LookUpAngle);
 		}
 
-		// Token: 0x06014961 RID: 84321 RVA: 0x001E4F17 File Offset: 0x001E3117
+		// Token: 0x06005011 RID: 20497 RVA: 0x000706EF File Offset: 0x0006E8EF
 		public void SetBoneRotateToLocationInfoRunEnd()
 		{
 			UKuroAnimInstance.__SetBoneRotateToLocationInfoRunEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014962 RID: 84322 RVA: 0x001E4F24 File Offset: 0x001E3124
+		// Token: 0x06005012 RID: 20498 RVA: 0x000706FC File Offset: 0x0006E8FC
 		public void SetBoneRotateToLocationInfoRunBegin(float TurnAngle, float LookUpAngle, FVector2D TurnLimit, FVector2D LookUpLimit, float TurnOffset, float LookUpOffset)
 		{
 			UKuroAnimInstance.__SetBoneRotateToLocationInfoRunBegin_Internal(base.NativePtr, TurnAngle, LookUpAngle, TurnLimit, LookUpLimit, TurnOffset, LookUpOffset);
 		}
 
-		// Token: 0x06014963 RID: 84323 RVA: 0x001E4F3A File Offset: 0x001E313A
+		// Token: 0x06005013 RID: 20499 RVA: 0x00070712 File Offset: 0x0006E912
 		public void SaveExtraFollowSnapshot()
 		{
 			UKuroAnimInstance.__SaveExtraFollowSnapshot_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014964 RID: 84324 RVA: 0x001E4F47 File Offset: 0x001E3147
+		// Token: 0x06005014 RID: 20500 RVA: 0x0007071F File Offset: 0x0006E91F
 		public void ResigterExtraRibbenOwnerAnimInstance(UAnimInstance AnimInstance)
 		{
 			UKuroAnimInstance.__ResigterExtraRibbenOwnerAnimInstance_Internal(base.NativePtr, (AnimInstance != null) ? AnimInstance.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06014965 RID: 84325 RVA: 0x001E4F64 File Offset: 0x001E3164
+		// Token: 0x06005015 RID: 20501 RVA: 0x0007073C File Offset: 0x0006E93C
 		public void RegisterExtraFollowOwnerAnimInstance(UAnimInstance AnimInstance)
 		{
 			UKuroAnimInstance.__RegisterExtraFollowOwnerAnimInstance_Internal(base.NativePtr, (AnimInstance != null) ? AnimInstance.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06014966 RID: 84326 RVA: 0x001E4F81 File Offset: 0x001E3181
+		// Token: 0x06005016 RID: 20502 RVA: 0x00070759 File Offset: 0x0006E959
 		public void RegisterActor(ACharacter Character)
 		{
 			UKuroAnimInstance.__RegisterActor_Internal(base.NativePtr, (Character != null) ? Character.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06014967 RID: 84327 RVA: 0x001E4F9E File Offset: 0x001E319E
+		// Token: 0x06005017 RID: 20503 RVA: 0x00070776 File Offset: 0x0006E976
 		public virtual void OnComponentStart()
 		{
 			UKuroAnimInstance.__OnComponentStart_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014968 RID: 84328 RVA: 0x001E4FAB File Offset: 0x001E31AB
+		// Token: 0x06005018 RID: 20504 RVA: 0x00070783 File Offset: 0x0006E983
 		public bool IsSyncGroupBetweenMarkersCoarse(FName InSyncGroupName, FName PreviousMarker, FName NextMarker, bool bRespectMarkerOrder = true)
 		{
 			return UKuroAnimInstance.__IsSyncGroupBetweenMarkersCoarse_Internal(base.NativePtr, InSyncGroupName, PreviousMarker, NextMarker, bRespectMarkerOrder);
 		}
 
-		// Token: 0x06014969 RID: 84329 RVA: 0x001E4FBD File Offset: 0x001E31BD
+		// Token: 0x06005019 RID: 20505 RVA: 0x00070795 File Offset: 0x0006E995
 		public float IsContainExtraRibbonAnims()
 		{
 			return UKuroAnimInstance.__IsContainExtraRibbonAnims_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601496A RID: 84330 RVA: 0x001E4FCA File Offset: 0x001E31CA
-		[return: Nullable(1)]
-		public FLeanAmount InterpLeanAmountTo(in FLeanAmount Current, in FLeanAmount Target, float DeltaTime, float InterpSpeed)
-		{
-			return new FLeanAmount(UKuroAnimInstance.__InterpLeanAmountTo_Internal(base.NativePtr, (Current ?? new FLeanAmount()).NativePtr, (Target ?? new FLeanAmount()).NativePtr, DeltaTime, InterpSpeed), null);
-		}
-
-		// Token: 0x0601496B RID: 84331 RVA: 0x001E5000 File Offset: 0x001E3200
+		// Token: 0x0600501A RID: 20506 RVA: 0x000707A4 File Offset: 0x0006E9A4
 		public unsafe void IKInfoLerpProcess(in float DeltaTime, in float HipLerpSpeed, in FRotator QuatInverse, in FVector OverallOffsetLocation, ref FVector OverallOffsetLocationBeUsed, ref FVector LFootOffsetRelativeLocation, ref FVector LFootNormalRelativeDirection, in FVector LFootOffsetLocation, in FVector LFootNormalDirection, ref FVector RFootOffsetRelativeLocation, ref FVector RFootNormalRelativeDirection, in FVector RFootOffsetLocation, in FVector RFootNormalDirection, ref FVector LHandOffsetRelativeLocation, ref FVector LHandNormalRelativeDirection, in FVector LHandOffsetLocation, in FVector LHandNormalDirection, ref FVector RHandOffsetRelativeLocation, ref FVector RHandNormalRelativeDirection, in FVector RHandOffsetLocation, in FVector RHandNormalDirection)
 		{
 			fixed (float* ptr = &DeltaTime)
@@ -1058,7 +931,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601496C RID: 84332 RVA: 0x001E50C8 File Offset: 0x001E32C8
+		// Token: 0x0600501B RID: 20507 RVA: 0x0007086C File Offset: 0x0006EA6C
 		public unsafe void GroundIKProcess(in FVector MeshWorldLocation, in float DegMovementSlop, ref ACharacter Character, ref USkeletalMeshComponent Mesh, in bool bUpHill, in bool bDownHill, in float Speed, in bool HasMoveInput, ref bool bLFootNeedIK, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, ref FHitResult LFootHitResult, ref bool bRFootNeedIK, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, ref FHitResult RFootHitResult, bool UseCurveFootLocation)
 		{
 			ACharacter acharacter = Character;
@@ -1124,21 +997,21 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601496D RID: 84333 RVA: 0x001E51E2 File Offset: 0x001E33E2
+		// Token: 0x0600501C RID: 20508 RVA: 0x00070986 File Offset: 0x0006EB86
 		[NullableContext(1)]
 		public string GetStateMachineCurrentStatesString()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroAnimInstance.__GetStateMachineCurrentStatesString_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601496E RID: 84334 RVA: 0x001E51F4 File Offset: 0x001E33F4
+		// Token: 0x0600501D RID: 20509 RVA: 0x00070998 File Offset: 0x0006EB98
 		[NullableContext(1)]
 		public string GetDebugAnimNodeString()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroAnimInstance.__GetDebugAnimNodeString_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601496F RID: 84335 RVA: 0x001E5208 File Offset: 0x001E3408
+		// Token: 0x0600501E RID: 20510 RVA: 0x000709AC File Offset: 0x0006EBAC
 		public unsafe void FreezeExtraFollowAtWorldTransform(in FTransform WorldTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -1146,7 +1019,7 @@ namespace UnrealEngine
 			UKuroAnimInstance.__FreezeExtraFollowAtWorldTransform_Internal(base.NativePtr, ptr);
 		}
 
-		// Token: 0x06014970 RID: 84336 RVA: 0x001E5240 File Offset: 0x001E3440
+		// Token: 0x0600501F RID: 20511 RVA: 0x000709E4 File Offset: 0x0006EBE4
 		public unsafe void ClimbIKProcess(UAnimInstance AnimInstance, in FVector MeshWorldLocation, in FRotator QuatInverse, in bool IsClimbExitState, ref FVector OverallOffsetLocation, ref float ClimbIK, ref ACharacter Character, ref USkeletalMeshComponent Mesh, in float ClimbRadius, in FVector LFootOffsetRelativeLocation, ref FVector LFootCachedLocation, ref FVector LFootCachedNormal, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, ref float LFootPrevFrameAlpha, in FVector RFootOffsetRelativeLocation, ref FVector RFootCachedLocation, ref FVector RFootCachedNormal, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, ref float RFootPrevFrameAlpha, in FVector LHandOffsetRelativeLocation, ref FVector LHandCachedLocation, ref FVector LHandCachedNormal, ref FVector LHandOffsetLocation, ref FVector LHandNormalDirection, ref float LHandPrevFrameAlpha, in FVector RHandOffsetRelativeLocation, ref FVector RHandCachedLocation, ref FVector RHandCachedNormal, ref FVector RHandOffsetLocation, ref FVector RHandNormalDirection, ref float RHandPrevFrameAlpha)
 		{
 			ACharacter acharacter = Character;
@@ -1277,7 +1150,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014971 RID: 84337 RVA: 0x001E5418 File Offset: 0x001E3618
+		// Token: 0x06005020 RID: 20512 RVA: 0x00070BBC File Offset: 0x0006EDBC
 		public unsafe void CalucateClimbOffset(ref ACharacter Character, in FVector IKDirection, in FVector OffsetRelativeLocation, in FVector BoneLocation, float OffsetCorrection, float TraceRadius, in FVector MeshWorldLocation, in FRotator QuatInverse, ref FVector CachedLocation, ref FVector CachedNormal, in float IKCurveValue, in float ClimbRadius, ref float PrevFrameAlpha, ref FVector OutOffset, ref FVector OutNormal, ref bool bSuccess)
 		{
 			ACharacter acharacter = Character;
@@ -1325,7 +1198,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014972 RID: 84338 RVA: 0x001E54D0 File Offset: 0x001E36D0
+		// Token: 0x06005021 RID: 20513 RVA: 0x00070C74 File Offset: 0x0006EE74
 		public unsafe float CalculateWalkRunMixed(in int MoveState)
 		{
 			fixed (int* ptr = &MoveState)
@@ -1335,7 +1208,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014973 RID: 84339 RVA: 0x001E54F0 File Offset: 0x001E36F0
+		// Token: 0x06005022 RID: 20514 RVA: 0x00070C94 File Offset: 0x0006EE94
 		public unsafe float CalculateStepLengthMixed(ACharacter Character, ref UCurveFloat AngleToStepLength, ref UCurveFloat WalkCurve, ref UCurveFloat RunCurve, in float Speed, in float Slop)
 		{
 			UCurveFloat ucurveFloat = AngleToStepLength;
@@ -1359,7 +1232,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014974 RID: 84340 RVA: 0x001E5588 File Offset: 0x001E3788
+		// Token: 0x06005023 RID: 20515 RVA: 0x00070D2C File Offset: 0x0006EF2C
 		public unsafe float CalculateStandRate(ref UCurveFloat AngleToStepFrequency, in float Slop, in float Speed, in float AnimWalkSpeed, in float AnimRunSpeed, in float SprintSpeed, in float StepLengthMix)
 		{
 			UCurveFloat ucurveFloat = AngleToStepFrequency;
@@ -1393,7 +1266,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014975 RID: 84341 RVA: 0x001E55F8 File Offset: 0x001E37F8
+		// Token: 0x06005024 RID: 20516 RVA: 0x00070D9C File Offset: 0x0006EF9C
 		public unsafe void CalculateSpeedMixed(in FRotator RoleRotator, in FRotator AdditiveRotator, in FVector Speed, ACharacter Character, ref UCurveFloat Curve, in float DeltaTime, ref float CachedPercentFB, ref float CachedPercentLR, ref FVeloctiyBlend VelocityBlend)
 		{
 			UCurveFloat ucurveFloat = Curve;
@@ -1421,19 +1294,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014976 RID: 84342 RVA: 0x001E567D File Offset: 0x001E387D
+		// Token: 0x06005025 RID: 20517 RVA: 0x00070E21 File Offset: 0x0006F021
 		public FVector CalculateRelativeAcceleration(in FVector Speed, in FVector Acceleration, in FRotator RoleRotator, ACharacter Character)
 		{
 			return UKuroAnimInstance.__CalculateRelativeAcceleration_Internal(base.NativePtr, Speed, Acceleration, RoleRotator, (Character != null) ? Character.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06014977 RID: 84343 RVA: 0x001E569F File Offset: 0x001E389F
+		// Token: 0x06005026 RID: 20518 RVA: 0x00070E43 File Offset: 0x0006F043
 		public FVector2D CalculateAimMixed(in FVector Speed, in FRotator RoleRotator, ACharacter Character)
 		{
 			return UKuroAnimInstance.__CalculateAimMixed_Internal(base.NativePtr, Speed, RoleRotator, (Character != null) ? Character.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06014978 RID: 84344 RVA: 0x001E56C0 File Offset: 0x001E38C0
+		// Token: 0x06005027 RID: 20519 RVA: 0x00070E64 File Offset: 0x0006F064
 		public unsafe void BindVarToCharacter(ref FVector VelocityRef, ref FVector ActorForwardVectorRef, ref FRotator ActorRotationRef, ref FRotator ControlRotationRef, ref FVector CurrentAccelerationRef, ref bool bMoveBlockRef)
 		{
 			fixed (FVector* ptr = &VelocityRef)
@@ -1468,13 +1341,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014979 RID: 84345 RVA: 0x001E5728 File Offset: 0x001E3928
+		// Token: 0x06005028 RID: 20520 RVA: 0x00070ECC File Offset: 0x0006F0CC
 		public void BindEnumToRoleAnimInstance(UObject Component)
 		{
 			UKuroAnimInstance.__BindEnumToRoleAnimInstance_Internal(base.NativePtr, (Component != null) ? Component.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601497A RID: 84346 RVA: 0x001E5748 File Offset: 0x001E3948
+		// Token: 0x06005029 RID: 20521 RVA: 0x00070EEC File Offset: 0x0006F0EC
 		[NullableContext(1)]
 		public unsafe void BindComponentVarToAnimInstance([Nullable(2)] UObject Component, string ComponentVarName, string InstanceVarName)
 		{
@@ -1485,7 +1358,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x0601497B RID: 84347 RVA: 0x001E5794 File Offset: 0x001E3994
+		// Token: 0x0600502A RID: 20522 RVA: 0x00070F38 File Offset: 0x0006F138
 		public unsafe void BindBooleanVarToTag(ref bool BooleanVarRef, FGameplayTag Tag)
 		{
 			fixed (bool* ptr = &BooleanVarRef)
@@ -1495,7 +1368,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601497C RID: 84348 RVA: 0x001E57B8 File Offset: 0x001E39B8
+		// Token: 0x0600502B RID: 20523 RVA: 0x00070F5C File Offset: 0x0006F15C
 		public unsafe void BindBooleanVarToActorTag(ref bool BooleanVarRef, FName Tag)
 		{
 			fixed (bool* ptr = &BooleanVarRef)
@@ -1505,7 +1378,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601497D RID: 84349 RVA: 0x001E57DC File Offset: 0x001E39DC
+		// Token: 0x0600502C RID: 20524 RVA: 0x00070F80 File Offset: 0x0006F180
 		public unsafe float AngleConversion(in float Angle)
 		{
 			fixed (float* ptr = &Angle)
@@ -1515,266 +1388,250 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601497E RID: 84350
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __UpdateSkillMoveInfo_Internal(IntPtr @this, in float DeltaTime, in FRotator RoleRotator, in FVector Speed, ref IntPtr Character, ref float RotatorMixed, in FVector Acceleration, ref FVector RelativeAcceleration, IntPtr LeanAmount, in float GroundLeanAmountLerpSpeed, in FRotator AimRotator, ref float AimAngle, ref FVector2D AimMoveMixed, in float RotatorSpeed, IntPtr SkillTarget, in FVectorDouble CachedActorLocation);
-
-		// Token: 0x0601497F RID: 84351
+		// Token: 0x0600502D RID: 20525
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateRoleInfo_Internal(IntPtr @this, ref bool StateGround, ref bool StateGroundSprint, ref bool StateGroundWalk, ref bool StateGroundRun, ref bool StateRunStop, ref bool StateSprintStop, ref bool StateWalkStop, ref bool RunStop, ref bool StateClimb, ref bool StateAir, ref bool StateAirGlide, ref bool StateWater, ref bool StateView, ref bool StateAim, ref bool StateFace);
 
-		// Token: 0x06014980 RID: 84352
+		// Token: 0x0600502E RID: 20526
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateMoveInfoMixed_Internal(IntPtr @this, ref IntPtr Character, ref float WalkRunMixed, in float DeltaTime, in float Slop, ref IntPtr AngleToStepFrequency, ref IntPtr AngleToStepLength, ref IntPtr WalkCurve, ref IntPtr RunCurve, in float SpeedSize, ref float StepLengthMixed, in float AnimWalkSpeed, in float AnimRunSpeed, in float SprintSpeed, ref float StandRate);
 
-		// Token: 0x06014981 RID: 84353
+		// Token: 0x0600502F RID: 20527
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateIKInfoLocalValue_Internal(IntPtr @this, IntPtr Character, ref FRotator MeshQuatInverse, ref FVector MeshWorldLocation);
 
-		// Token: 0x06014982 RID: 84354
+		// Token: 0x06005030 RID: 20528
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateIKinfoInOtherState_Internal(IntPtr @this, ref IntPtr Character, ref FVector OverallOffsetLocation, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, ref FVector LHandNormalDirection, ref FVector RHandNormalDirection, ref float HipLerpSpeed);
 
-		// Token: 0x06014983 RID: 84355
+		// Token: 0x06005031 RID: 20529
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateIKInfoInGroundState_Internal(IntPtr @this, in bool HasWallForward, in FVector MeshWorldLocation, in bool IsMoving, in float DegMovementSlop, ref bool bUpHill, ref bool bDownHill, ref IntPtr Character, ref IntPtr Mesh, in float Speed, in bool HasMoveInput, in float RunWalkMix, ref FVector OverallOffsetLocation, ref float HipLerpSpeed, ref bool bLFootNeedIK, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, IntPtr LFootHitResult, ref bool bRFootNeedIK, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, IntPtr RFootHitResult, bool UseCurveFootLocation);
 
-		// Token: 0x06014984 RID: 84356
+		// Token: 0x06005032 RID: 20530
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateIKinfoInClimbState_Internal(IntPtr @this, IntPtr AnimInstance, in FVector MeshWorldLocation, in FRotator QuatInverse, ref FVector OverallOffsetLocation, ref float ClimbIK, in float FastClimbDirection, in bool IsFastClimbState, ref IntPtr Character, ref IntPtr Mesh, ref float HipLerpSpeed, in float Speed, in bool HasMoveInput, in bool IsClimbExitState, in float ClimbRadius, in FVector LFootOffsetRelativeLocation, ref FVector LFootCachedLocation, ref FVector LFootCachedNormal, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, ref float LFootPrevFrameAlpha, in FVector RFootOffsetRelativeLocation, ref FVector RFootCachedLocation, ref FVector RFootCachedNormal, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, ref float RFootPrevFrameAlpha, in FVector LHandOffsetRelativeLocation, ref FVector LHandCachedLocation, ref FVector LHandCachedNormal, ref FVector LHandOffsetLocation, ref FVector LHandNormalDirection, ref float LHandPrevFrameAlpha, in FVector RHandOffsetRelativeLocation, ref FVector RHandCachedLocation, ref FVector RHandCachedNormal, ref FVector RHandOffsetLocation, ref FVector RHandNormalDirection, ref float RHandPrevFrameAlpha);
 
-		// Token: 0x06014985 RID: 84357
+		// Token: 0x06005033 RID: 20531
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateCharacterVar_Internal(IntPtr @this);
 
-		// Token: 0x06014986 RID: 84358
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __UpdateCameraStateMoveInfo_Internal(IntPtr @this, in FVector Speed, ref IntPtr Character, in FRotator RoleRotator, in FVector Acceleration, ref float RotatorMixed, in float DeltaTime, ref FVector RelativeAcceleration, IntPtr LeanAmount, in float GroundLeanAmountLerpSpeed, in FRotator AimRotator, ref float AimAngle);
-
-		// Token: 0x06014987 RID: 84359
+		// Token: 0x06005034 RID: 20532
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateBooleanVar_Internal(IntPtr @this);
 
-		// Token: 0x06014988 RID: 84360
+		// Token: 0x06005035 RID: 20533
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateBindRoleInfo_Internal(IntPtr @this);
 
-		// Token: 0x06014989 RID: 84361
+		// Token: 0x06005036 RID: 20534
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateBattleIdle_Internal(IntPtr @this, in float BattleIdleTime, ref bool bBattleIdle);
 
-		// Token: 0x0601498A RID: 84362
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __UpdateAdditiveBlendInfo_Internal(IntPtr @this, IntPtr AnimInstance, in bool bUsingAdditiveBlend, in bool bUsingWholeBodyBlend, ref float AdditiveBlendAlpha, IntPtr Pelvis, IntPtr Spine, IntPtr Spine1, IntPtr Spine2, IntPtr Head, IntPtr ArmL, IntPtr ArmR, IntPtr Leg);
-
-		// Token: 0x0601498B RID: 84363
+		// Token: 0x06005037 RID: 20535
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateABP_Internal(IntPtr @this, float DeltaSeconds);
 
-		// Token: 0x0601498C RID: 84364
+		// Token: 0x06005038 RID: 20536
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnRegisterActorAndResetInstance_Internal(IntPtr @this);
 
-		// Token: 0x0601498D RID: 84365
+		// Token: 0x06005039 RID: 20537
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnfreezeExtraFollow_Internal(IntPtr @this);
 
-		// Token: 0x0601498E RID: 84366
+		// Token: 0x0600503A RID: 20538
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StartABP_Internal(IntPtr @this);
 
-		// Token: 0x0601498F RID: 84367
+		// Token: 0x0600503B RID: 20539
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetFootOffset_Internal(IntPtr @this, in FVector SkeletionAbsoluteLocation, in FVector IKDirection, in float BenchMarkDepth, in float RotationCorrectedDistance, ref IntPtr Character, ref IntPtr Mesh, in bool HasMoveInput, ref bool bNeedIK, ref FVector OffsetLocation, ref FVector NormalDirection, IntPtr OutHitResult);
 
-		// Token: 0x06014990 RID: 84368
+		// Token: 0x0600503C RID: 20540
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetExtraFollowFreeze_Internal(IntPtr @this, bool bFreeze);
 
-		// Token: 0x06014991 RID: 84369
+		// Token: 0x0600503D RID: 20541
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDebugTraceType_Internal(IntPtr @this, TEnumAsByte<EDrawDebugTrace> GroundTrace, TEnumAsByte<EDrawDebugTrace> ClimbTrace);
 
-		// Token: 0x06014992 RID: 84370
+		// Token: 0x0600503E RID: 20542
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoneRotateToLocationInfoStopEnd_Internal(IntPtr @this);
 
-		// Token: 0x06014993 RID: 84371
+		// Token: 0x0600503F RID: 20543
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoneRotateToLocationInfoStopBegin_Internal(IntPtr @this);
 
-		// Token: 0x06014994 RID: 84372
+		// Token: 0x06005040 RID: 20544
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoneRotateToLocationInfoRunTick_Internal(IntPtr @this, float TurnAngle, float LookUpAngle);
 
-		// Token: 0x06014995 RID: 84373
+		// Token: 0x06005041 RID: 20545
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoneRotateToLocationInfoRunEnd_Internal(IntPtr @this);
 
-		// Token: 0x06014996 RID: 84374
+		// Token: 0x06005042 RID: 20546
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoneRotateToLocationInfoRunBegin_Internal(IntPtr @this, float TurnAngle, float LookUpAngle, FVector2D TurnLimit, FVector2D LookUpLimit, float TurnOffset, float LookUpOffset);
 
-		// Token: 0x06014997 RID: 84375
+		// Token: 0x06005043 RID: 20547
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SaveExtraFollowSnapshot_Internal(IntPtr @this);
 
-		// Token: 0x06014998 RID: 84376
+		// Token: 0x06005044 RID: 20548
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResigterExtraRibbenOwnerAnimInstance_Internal(IntPtr @this, IntPtr AnimInstance);
 
-		// Token: 0x06014999 RID: 84377
+		// Token: 0x06005045 RID: 20549
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterExtraFollowOwnerAnimInstance_Internal(IntPtr @this, IntPtr AnimInstance);
 
-		// Token: 0x0601499A RID: 84378
+		// Token: 0x06005046 RID: 20550
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterActor_Internal(IntPtr @this, IntPtr Character);
 
-		// Token: 0x0601499B RID: 84379
+		// Token: 0x06005047 RID: 20551
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnComponentStart_Internal(IntPtr @this);
 
-		// Token: 0x0601499C RID: 84380
+		// Token: 0x06005048 RID: 20552
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsSyncGroupBetweenMarkersCoarse_Internal(IntPtr @this, FName InSyncGroupName, FName PreviousMarker, FName NextMarker, bool bRespectMarkerOrder);
 
-		// Token: 0x0601499D RID: 84381
+		// Token: 0x06005049 RID: 20553
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __IsContainExtraRibbonAnims_Internal(IntPtr @this);
 
-		// Token: 0x0601499E RID: 84382
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __InterpLeanAmountTo_Internal(IntPtr @this, IntPtr Current, IntPtr Target, float DeltaTime, float InterpSpeed);
-
-		// Token: 0x0601499F RID: 84383
+		// Token: 0x0600504A RID: 20554
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __IKInfoLerpProcess_Internal(IntPtr @this, in float DeltaTime, in float HipLerpSpeed, in FRotator QuatInverse, in FVector OverallOffsetLocation, ref FVector OverallOffsetLocationBeUsed, ref FVector LFootOffsetRelativeLocation, ref FVector LFootNormalRelativeDirection, in FVector LFootOffsetLocation, in FVector LFootNormalDirection, ref FVector RFootOffsetRelativeLocation, ref FVector RFootNormalRelativeDirection, in FVector RFootOffsetLocation, in FVector RFootNormalDirection, ref FVector LHandOffsetRelativeLocation, ref FVector LHandNormalRelativeDirection, in FVector LHandOffsetLocation, in FVector LHandNormalDirection, ref FVector RHandOffsetRelativeLocation, ref FVector RHandNormalRelativeDirection, in FVector RHandOffsetLocation, in FVector RHandNormalDirection);
 
-		// Token: 0x060149A0 RID: 84384
+		// Token: 0x0600504B RID: 20555
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GroundIKProcess_Internal(IntPtr @this, in FVector MeshWorldLocation, in float DegMovementSlop, ref IntPtr Character, ref IntPtr Mesh, in bool bUpHill, in bool bDownHill, in float Speed, in bool HasMoveInput, ref bool bLFootNeedIK, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, IntPtr LFootHitResult, ref bool bRFootNeedIK, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, IntPtr RFootHitResult, bool UseCurveFootLocation);
 
-		// Token: 0x060149A1 RID: 84385
+		// Token: 0x0600504C RID: 20556
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetStateMachineCurrentStatesString_Internal(IntPtr @this);
 
-		// Token: 0x060149A2 RID: 84386
+		// Token: 0x0600504D RID: 20557
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetDebugAnimNodeString_Internal(IntPtr @this);
 
-		// Token: 0x060149A3 RID: 84387
+		// Token: 0x0600504E RID: 20558
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __FreezeExtraFollowAtWorldTransform_Internal(IntPtr @this, in FTransform WorldTransform);
 
-		// Token: 0x060149A4 RID: 84388
+		// Token: 0x0600504F RID: 20559
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClimbIKProcess_Internal(IntPtr @this, IntPtr AnimInstance, in FVector MeshWorldLocation, in FRotator QuatInverse, in bool IsClimbExitState, ref FVector OverallOffsetLocation, ref float ClimbIK, ref IntPtr Character, ref IntPtr Mesh, in float ClimbRadius, in FVector LFootOffsetRelativeLocation, ref FVector LFootCachedLocation, ref FVector LFootCachedNormal, ref FVector LFootOffsetLocation, ref FVector LFootNormalDirection, ref float LFootPrevFrameAlpha, in FVector RFootOffsetRelativeLocation, ref FVector RFootCachedLocation, ref FVector RFootCachedNormal, ref FVector RFootOffsetLocation, ref FVector RFootNormalDirection, ref float RFootPrevFrameAlpha, in FVector LHandOffsetRelativeLocation, ref FVector LHandCachedLocation, ref FVector LHandCachedNormal, ref FVector LHandOffsetLocation, ref FVector LHandNormalDirection, ref float LHandPrevFrameAlpha, in FVector RHandOffsetRelativeLocation, ref FVector RHandCachedLocation, ref FVector RHandCachedNormal, ref FVector RHandOffsetLocation, ref FVector RHandNormalDirection, ref float RHandPrevFrameAlpha);
 
-		// Token: 0x060149A5 RID: 84389
+		// Token: 0x06005050 RID: 20560
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CalucateClimbOffset_Internal(IntPtr @this, ref IntPtr Character, in FVector IKDirection, in FVector OffsetRelativeLocation, in FVector BoneLocation, float OffsetCorrection, float TraceRadius, in FVector MeshWorldLocation, in FRotator QuatInverse, ref FVector CachedLocation, ref FVector CachedNormal, in float IKCurveValue, in float ClimbRadius, ref float PrevFrameAlpha, ref FVector OutOffset, ref FVector OutNormal, ref bool bSuccess);
 
-		// Token: 0x060149A6 RID: 84390
+		// Token: 0x06005051 RID: 20561
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __CalculateWalkRunMixed_Internal(IntPtr @this, in int MoveState);
 
-		// Token: 0x060149A7 RID: 84391
+		// Token: 0x06005052 RID: 20562
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __CalculateStepLengthMixed_Internal(IntPtr @this, IntPtr Character, ref IntPtr AngleToStepLength, ref IntPtr WalkCurve, ref IntPtr RunCurve, in float Speed, in float Slop);
 
-		// Token: 0x060149A8 RID: 84392
+		// Token: 0x06005053 RID: 20563
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __CalculateStandRate_Internal(IntPtr @this, ref IntPtr AngleToStepFrequency, in float Slop, in float Speed, in float AnimWalkSpeed, in float AnimRunSpeed, in float SprintSpeed, in float StepLengthMix);
 
-		// Token: 0x060149A9 RID: 84393
+		// Token: 0x06005054 RID: 20564
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CalculateSpeedMixed_Internal(IntPtr @this, in FRotator RoleRotator, in FRotator AdditiveRotator, in FVector Speed, IntPtr Character, ref IntPtr Curve, in float DeltaTime, ref float CachedPercentFB, ref float CachedPercentLR, ref FVeloctiyBlend VelocityBlend);
 
-		// Token: 0x060149AA RID: 84394
+		// Token: 0x06005055 RID: 20565
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __CalculateRelativeAcceleration_Internal(IntPtr @this, in FVector Speed, in FVector Acceleration, in FRotator RoleRotator, IntPtr Character);
 
-		// Token: 0x060149AB RID: 84395
+		// Token: 0x06005056 RID: 20566
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __CalculateAimMixed_Internal(IntPtr @this, in FVector Speed, in FRotator RoleRotator, IntPtr Character);
 
-		// Token: 0x060149AC RID: 84396
+		// Token: 0x06005057 RID: 20567
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BindVarToCharacter_Internal(IntPtr @this, ref FVector VelocityRef, ref FVector ActorForwardVectorRef, ref FRotator ActorRotationRef, ref FRotator ControlRotationRef, ref FVector CurrentAccelerationRef, ref bool bMoveBlockRef);
 
-		// Token: 0x060149AD RID: 84397
+		// Token: 0x06005058 RID: 20568
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BindEnumToRoleAnimInstance_Internal(IntPtr @this, IntPtr Component);
 
-		// Token: 0x060149AE RID: 84398
+		// Token: 0x06005059 RID: 20569
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BindComponentVarToAnimInstance_Internal(IntPtr @this, IntPtr Component, in FString ComponentVarName, in FString InstanceVarName);
 
-		// Token: 0x060149AF RID: 84399
+		// Token: 0x0600505A RID: 20570
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BindBooleanVarToTag_Internal(IntPtr @this, ref bool BooleanVarRef, FGameplayTag Tag);
 
-		// Token: 0x060149B0 RID: 84400
+		// Token: 0x0600505B RID: 20571
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BindBooleanVarToActorTag_Internal(IntPtr @this, ref bool BooleanVarRef, FName Tag);
 
-		// Token: 0x060149B1 RID: 84401
+		// Token: 0x0600505C RID: 20572
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __AngleConversion_Internal(IntPtr @this, in float Angle);
 
-		// Token: 0x060149B2 RID: 84402 RVA: 0x001E57FA File Offset: 0x001E39FA
+		// Token: 0x0600505D RID: 20573 RVA: 0x00070F9E File Offset: 0x0006F19E
 		static UKuroAnimInstance()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroAnim.KuroAnimInstance");
 		}
 
-		// Token: 0x060149B3 RID: 84403 RVA: 0x001E5808 File Offset: 0x001E3A08
+		// Token: 0x0600505E RID: 20574 RVA: 0x00070FAC File Offset: 0x0006F1AC
 		protected UKuroAnimInstance(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B3BE RID: 46014
+		// Token: 0x04002081 RID: 8321
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroAnim.KuroAnimInstance";
 
-		// Token: 0x0400B3BF RID: 46015
+		// Token: 0x04002082 RID: 8322
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B3C0 RID: 46016
+		// Token: 0x04002083 RID: 8323
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400B3C1 RID: 46017
+		// Token: 0x04002084 RID: 8324
 		internal static int __PropertyOffset_TurnLimitForBoneRotateAnimNode;
 
-		// Token: 0x0400B3C2 RID: 46018
+		// Token: 0x04002085 RID: 8325
 		internal static int __PropertyOffset_LookUpLimitForBoneRotateAnimNode;
 
-		// Token: 0x0400B3C3 RID: 46019
+		// Token: 0x04002086 RID: 8326
 		internal static int __PropertyOffset_bRollBackToOriginForBoneRotateAnimNode;
 
-		// Token: 0x0400B3C4 RID: 46020
+		// Token: 0x04002087 RID: 8327
 		internal static int __PropertyOffset_bStopForBoneRotateAnimNode;
 
-		// Token: 0x0400B3C5 RID: 46021
+		// Token: 0x04002088 RID: 8328
 		internal static int __PropertyOffset_TurnAngleForBoneRotateAnimNode;
 
-		// Token: 0x0400B3C6 RID: 46022
+		// Token: 0x04002089 RID: 8329
 		internal static int __PropertyOffset_LookUpAngleForBoneRotateAnimNode;
 
-		// Token: 0x0400B3C7 RID: 46023
+		// Token: 0x0400208A RID: 8330
 		internal static int __PropertyOffset_TurnOffsetForBoneRotateAnimNode;
 
-		// Token: 0x0400B3C8 RID: 46024
+		// Token: 0x0400208B RID: 8331
 		internal static int __PropertyOffset_LookUpOffsetForBoneRotateAnimNode;
 
-		// Token: 0x0400B3C9 RID: 46025
+		// Token: 0x0400208C RID: 8332
 		internal static int __PropertyOffset_ExtraRibbonAnims;
 
-		// Token: 0x0400B3CA RID: 46026
+		// Token: 0x0400208D RID: 8333
 		[Nullable(new byte[]
 		{
 			2,
@@ -1782,27 +1639,16 @@ namespace UnrealEngine
 		})]
 		private TMap<FName, UAnimSequence> _ExtraRibbonAnims;
 
-		// Token: 0x0400B3CB RID: 46027
-		internal static int __PropertyOffset_SecondaryExtraFollowAnims;
-
-		// Token: 0x0400B3CC RID: 46028
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TMap<FName, FExtraFollowTable> _SecondaryExtraFollowAnims;
-
-		// Token: 0x0400B3CD RID: 46029
+		// Token: 0x0400208E RID: 8334
 		internal static int __PropertyOffset_bExtraFollowFreeze;
 
-		// Token: 0x0400B3CE RID: 46030
+		// Token: 0x0400208F RID: 8335
 		internal static int __PropertyOffset_bRequestSaveExtraFollowSnapshot;
 
-		// Token: 0x0400B3CF RID: 46031
+		// Token: 0x04002090 RID: 8336
 		internal static int __PropertyOffset_ExtraFollowFrozenWorldTransform;
 
-		// Token: 0x0400B3D0 RID: 46032
+		// Token: 0x04002091 RID: 8337
 		internal static int __PropertyOffset_bExtraFollowLockWorldTransform;
 	}
 }

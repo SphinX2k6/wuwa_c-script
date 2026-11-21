@@ -5,10 +5,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B21 RID: 19233
+	// Token: 0x02003AC9 RID: 15049
 	public class TowerDefenseRankTimeModel : RankTimeItemModelBase
 	{
-		// Token: 0x06031D12 RID: 204050 RVA: 0x00B908EC File Offset: 0x00B8EAEC
+		// Token: 0x06026AA2 RID: 158370 RVA: 0x00AD4950 File Offset: 0x00AD2B50
 		protected override void OnButtonClick()
 		{
 			TowerDefenseRankViewModelV2 towerDefenseRankViewModelV = new TowerDefenseRankViewModelV2();
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			UiManager.Instance.OpenView(EUiViewName.TowerDefenseRankViewV2, towerDefenseRankViewModelV, null);
 		}
 
-		// Token: 0x06031D13 RID: 204051 RVA: 0x00B9091C File Offset: 0x00B8EB1C
+		// Token: 0x06026AA3 RID: 158371 RVA: 0x00AD4980 File Offset: 0x00AD2B80
 		[NullableContext(1)]
 		protected override TableTextArgNew OnGetContent()
 		{

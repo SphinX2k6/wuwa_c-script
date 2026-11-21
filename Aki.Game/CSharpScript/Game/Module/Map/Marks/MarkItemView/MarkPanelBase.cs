@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005519 RID: 21785
+	// Token: 0x020044EC RID: 17644
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MarkPanelBase : UiPanelBase
 	{
-		// Token: 0x170085AB RID: 34219
-		// (get) Token: 0x06037A34 RID: 227892 RVA: 0x00D35174 File Offset: 0x00D33374
+		// Token: 0x17005946 RID: 22854
+		// (get) Token: 0x0602C900 RID: 182528 RVA: 0x00C82F60 File Offset: 0x00C81160
 		public UniTaskCompletionSource LoadingPromise
 		{
 			get
@@ -23,60 +23,41 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A35 RID: 227893 RVA: 0x00D3517C File Offset: 0x00D3337C
-		public MarkPanelBase()
-		{
-			base.SkipDestroyActor = true;
-		}
-
-		// Token: 0x06037A36 RID: 227894 RVA: 0x00D3518C File Offset: 0x00D3338C
+		// Token: 0x0602C901 RID: 182529 RVA: 0x00C82F68 File Offset: 0x00C81168
 		[NullableContext(1)]
 		public UniTask CreateByPoolResourceIdAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null)
 		{
-			MarkPanelBase.<CreateByPoolResourceIdAsync>d__6 <CreateByPoolResourceIdAsync>d__;
+			MarkPanelBase.<CreateByPoolResourceIdAsync>d__4 <CreateByPoolResourceIdAsync>d__;
 			<CreateByPoolResourceIdAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreateByPoolResourceIdAsync>d__.<>4__this = this;
 			<CreateByPoolResourceIdAsync>d__.resourceId = resourceId;
 			<CreateByPoolResourceIdAsync>d__.parentItem = parentItem;
 			<CreateByPoolResourceIdAsync>d__.<>1__state = -1;
-			<CreateByPoolResourceIdAsync>d__.<>t__builder.Start<MarkPanelBase.<CreateByPoolResourceIdAsync>d__6>(ref <CreateByPoolResourceIdAsync>d__);
+			<CreateByPoolResourceIdAsync>d__.<>t__builder.Start<MarkPanelBase.<CreateByPoolResourceIdAsync>d__4>(ref <CreateByPoolResourceIdAsync>d__);
 			return <CreateByPoolResourceIdAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037A37 RID: 227895 RVA: 0x00D351E0 File Offset: 0x00D333E0
+		// Token: 0x0602C902 RID: 182530 RVA: 0x00C82FBC File Offset: 0x00C811BC
 		[NullableContext(1)]
 		public UniTask CreateThenShowByPoolResourceIdAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null)
 		{
-			MarkPanelBase.<CreateThenShowByPoolResourceIdAsync>d__7 <CreateThenShowByPoolResourceIdAsync>d__;
+			MarkPanelBase.<CreateThenShowByPoolResourceIdAsync>d__5 <CreateThenShowByPoolResourceIdAsync>d__;
 			<CreateThenShowByPoolResourceIdAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreateThenShowByPoolResourceIdAsync>d__.<>4__this = this;
 			<CreateThenShowByPoolResourceIdAsync>d__.resourceId = resourceId;
 			<CreateThenShowByPoolResourceIdAsync>d__.parentItem = parentItem;
 			<CreateThenShowByPoolResourceIdAsync>d__.<>1__state = -1;
-			<CreateThenShowByPoolResourceIdAsync>d__.<>t__builder.Start<MarkPanelBase.<CreateThenShowByPoolResourceIdAsync>d__7>(ref <CreateThenShowByPoolResourceIdAsync>d__);
+			<CreateThenShowByPoolResourceIdAsync>d__.<>t__builder.Start<MarkPanelBase.<CreateThenShowByPoolResourceIdAsync>d__5>(ref <CreateThenShowByPoolResourceIdAsync>d__);
 			return <CreateThenShowByPoolResourceIdAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037A38 RID: 227896 RVA: 0x00D35234 File Offset: 0x00D33434
-		[NullableContext(1)]
-		[return: Nullable(new byte[]
+		// Token: 0x0602C903 RID: 182531 RVA: 0x00C8300F File Offset: 0x00C8120F
+		private bool IsCreateFailedAfterLoad(UUIItem parentItem)
 		{
-			0,
-			2
-		})]
-		private UniTask<UiPoolActor> CreatePoolActorAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null)
-		{
-			MarkPanelBase.<CreatePoolActorAsync>d__8 <CreatePoolActorAsync>d__;
-			<CreatePoolActorAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<UiPoolActor>.Create();
-			<CreatePoolActorAsync>d__.<>4__this = this;
-			<CreatePoolActorAsync>d__.resourceId = resourceId;
-			<CreatePoolActorAsync>d__.parentItem = parentItem;
-			<CreatePoolActorAsync>d__.<>1__state = -1;
-			<CreatePoolActorAsync>d__.<>t__builder.Start<MarkPanelBase.<CreatePoolActorAsync>d__8>(ref <CreatePoolActorAsync>d__);
-			return <CreatePoolActorAsync>d__.<>t__builder.Task;
+			return base.IsDestroyOrDestroying || this.WaitToDestroy || this.RootItem == null || !MarkPanelBase.IsParentItemValid(parentItem);
 		}
 
-		// Token: 0x06037A39 RID: 227897 RVA: 0x00D35287 File Offset: 0x00D33487
+		// Token: 0x0602C904 RID: 182532 RVA: 0x00C83034 File Offset: 0x00C81234
 		private static bool IsParentItemValid(UUIItem parentItem)
 		{
 			if (parentItem != null && parentItem.IsValid())
@@ -87,7 +68,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return false;
 		}
 
-		// Token: 0x06037A3A RID: 227898 RVA: 0x00D352A7 File Offset: 0x00D334A7
+		// Token: 0x17005947 RID: 22855
+		// (get) Token: 0x0602C905 RID: 182533 RVA: 0x00C83054 File Offset: 0x00C81254
+		// (set) Token: 0x0602C906 RID: 182534 RVA: 0x00C8305C File Offset: 0x00C8125C
+		public bool EventRegistered { get; private set; }
+
+		// Token: 0x0602C907 RID: 182535 RVA: 0x00C83065 File Offset: 0x00C81265
 		protected void DoRegisterEvents()
 		{
 			if (this.EventRegistered)
@@ -98,7 +84,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.RegisterEvents();
 		}
 
-		// Token: 0x06037A3B RID: 227899 RVA: 0x00D352BF File Offset: 0x00D334BF
+		// Token: 0x0602C908 RID: 182536 RVA: 0x00C8307D File Offset: 0x00C8127D
 		protected void DoUnRegisterEvents()
 		{
 			if (!this.EventRegistered)
@@ -109,41 +95,41 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.UnRegisterEvents();
 		}
 
-		// Token: 0x06037A3C RID: 227900 RVA: 0x00D352D7 File Offset: 0x00D334D7
+		// Token: 0x0602C909 RID: 182537 RVA: 0x00C83095 File Offset: 0x00C81295
 		public virtual void RegisterEvents()
 		{
 		}
 
-		// Token: 0x06037A3D RID: 227901 RVA: 0x00D352D9 File Offset: 0x00D334D9
+		// Token: 0x0602C90A RID: 182538 RVA: 0x00C83097 File Offset: 0x00C81297
 		public virtual void UnRegisterEvents()
 		{
 		}
 
-		// Token: 0x06037A3E RID: 227902 RVA: 0x00D352DB File Offset: 0x00D334DB
+		// Token: 0x0602C90B RID: 182539 RVA: 0x00C83099 File Offset: 0x00C81299
 		public virtual void RecycleToPool()
 		{
 			this.DoUnRegisterEvents();
 			this.RecycleToPoolAsync();
 		}
 
-		// Token: 0x06037A3F RID: 227903 RVA: 0x00D352EC File Offset: 0x00D334EC
+		// Token: 0x0602C90C RID: 182540 RVA: 0x00C830A8 File Offset: 0x00C812A8
 		private UniTask RecycleToPoolAsync()
 		{
-			MarkPanelBase.<RecycleToPoolAsync>d__16 <RecycleToPoolAsync>d__;
+			MarkPanelBase.<RecycleToPoolAsync>d__17 <RecycleToPoolAsync>d__;
 			<RecycleToPoolAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<RecycleToPoolAsync>d__.<>4__this = this;
 			<RecycleToPoolAsync>d__.<>1__state = -1;
-			<RecycleToPoolAsync>d__.<>t__builder.Start<MarkPanelBase.<RecycleToPoolAsync>d__16>(ref <RecycleToPoolAsync>d__);
+			<RecycleToPoolAsync>d__.<>t__builder.Start<MarkPanelBase.<RecycleToPoolAsync>d__17>(ref <RecycleToPoolAsync>d__);
 			return <RecycleToPoolAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037A40 RID: 227904 RVA: 0x00D3532F File Offset: 0x00D3352F
+		// Token: 0x0602C90D RID: 182541 RVA: 0x00C830EB File Offset: 0x00C812EB
 		protected override void OnAfterHide()
 		{
 			MarkSpritePool.UnRef(this.ComponentId);
 		}
 
-		// Token: 0x06037A41 RID: 227905 RVA: 0x00D3533C File Offset: 0x00D3353C
+		// Token: 0x0602C90E RID: 182542 RVA: 0x00C830F8 File Offset: 0x00C812F8
 		[NullableContext(1)]
 		protected override void SetSpriteByPath(string path, UUISprite uiSprite, bool setSize, EUiViewName? syncLoadViewName = null, [Nullable(2)] Action<bool> callback = null)
 		{
@@ -175,6 +161,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 					});
 					return;
 				}
+				base.CancelSpriteLoad(uiSprite);
 				uiSprite.SetSprite(ulguispriteData_BaseObject, setSize);
 				Action<bool> callback3 = callback;
 				if (callback3 == null)
@@ -186,7 +173,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A42 RID: 227906 RVA: 0x00D353EE File Offset: 0x00D335EE
+		// Token: 0x0602C90F RID: 182543 RVA: 0x00C831B7 File Offset: 0x00C813B7
 		public void SetVisible(bool visible)
 		{
 			if (visible)
@@ -206,13 +193,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A43 RID: 227907 RVA: 0x00D3542E File Offset: 0x00D3362E
+		// Token: 0x0602C910 RID: 182544 RVA: 0x00C831F7 File Offset: 0x00C813F7
 		private void SaveLastVisiblePosition()
 		{
 			this.LastVisibleAnchorOffsetX = new float?(this.RootItem.GetAnchorOffsetX());
 		}
 
-		// Token: 0x06037A44 RID: 227908 RVA: 0x00D35446 File Offset: 0x00D33646
+		// Token: 0x0602C911 RID: 182545 RVA: 0x00C8320F File Offset: 0x00C8140F
 		private void RestoreLastVisiblePosition()
 		{
 			if (this.LastVisibleAnchorOffsetX != null)
@@ -221,16 +208,10 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x0401D420 RID: 119840
-		private UiPoolActor MarkItemActor;
-
-		// Token: 0x0401D421 RID: 119841
+		// Token: 0x04017EA4 RID: 97956
 		protected UniTaskCompletionSource LoadingTaskCompletionSource;
 
-		// Token: 0x0401D422 RID: 119842
+		// Token: 0x04017EA5 RID: 97957
 		private float? LastVisibleAnchorOffsetX;
-
-		// Token: 0x0401D423 RID: 119843
-		private bool EventRegistered;
 	}
 }

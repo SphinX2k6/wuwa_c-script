@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.MechanismTimeline
 {
-	// Token: 0x02005475 RID: 21621
+	// Token: 0x02004458 RID: 17496
 	public enum EMechanismEventContextType
 	{
-		// Token: 0x0401D1AB RID: 119211
+		// Token: 0x04017C44 RID: 97348
 		Entity,
-		// Token: 0x0401D1AC RID: 119212
+		// Token: 0x04017C45 RID: 97349
 		LevelPrefab
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007578 RID: 30072
+	// Token: 0x02007D6E RID: 32110
 	public class IVisualNovelDateT
 	{
-		// Token: 0x1700E417 RID: 58391
-		// (get) Token: 0x06036B5E RID: 224094 RVA: 0x0076DBF0 File Offset: 0x0076BDF0
-		// (set) Token: 0x06036B5F RID: 224095 RVA: 0x0076DBF8 File Offset: 0x0076BDF8
+		// Token: 0x1700F047 RID: 61511
+		// (get) Token: 0x06039F86 RID: 237446 RVA: 0x007D1194 File Offset: 0x007CF394
+		// (set) Token: 0x06039F87 RID: 237447 RVA: 0x007D119C File Offset: 0x007CF39C
 		public int Month { get; set; }
 
-		// Token: 0x1700E418 RID: 58392
-		// (get) Token: 0x06036B60 RID: 224096 RVA: 0x0076DC01 File Offset: 0x0076BE01
-		// (set) Token: 0x06036B61 RID: 224097 RVA: 0x0076DC09 File Offset: 0x0076BE09
+		// Token: 0x1700F048 RID: 61512
+		// (get) Token: 0x06039F88 RID: 237448 RVA: 0x007D11A5 File Offset: 0x007CF3A5
+		// (set) Token: 0x06039F89 RID: 237449 RVA: 0x007D11AD File Offset: 0x007CF3AD
 		public int Day { get; set; }
 
-		// Token: 0x06036B62 RID: 224098 RVA: 0x0076DC12 File Offset: 0x0076BE12
+		// Token: 0x06039F8A RID: 237450 RVA: 0x007D11B6 File Offset: 0x007CF3B6
 		public IVisualNovelDateT()
 		{
 			this.Month = 0;

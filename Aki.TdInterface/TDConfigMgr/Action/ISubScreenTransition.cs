@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EE3 RID: 7907
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200211C RID: 8476
 	public class ISubScreenTransition
 	{
-		// Token: 0x0600A92C RID: 43308 RVA: 0x0017DA08 File Offset: 0x0017BC08
+		// Token: 0x0600B3FE RID: 46078 RVA: 0x00193A00 File Offset: 0x00191C00
 		private ISubScreenTransition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A92D RID: 43309 RVA: 0x0017DA40 File Offset: 0x0017BC40
+		// Token: 0x0600B3FF RID: 46079 RVA: 0x00193A38 File Offset: 0x00191C38
 		public static ISubScreenTransition Create([Nullable(2)] ISubScreenTransition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A92E RID: 43310 RVA: 0x0017DA53 File Offset: 0x0017BC53
+		// Token: 0x0600B400 RID: 46080 RVA: 0x00193A4B File Offset: 0x00191C4B
 		public static ISubScreenTransition CreateFromSetValue([Nullable(2)] ISubScreenTransition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A92F RID: 43311 RVA: 0x0017DA66 File Offset: 0x0017BC66
+		// Token: 0x0600B401 RID: 46081 RVA: 0x00193A5E File Offset: 0x00191C5E
 		public ISubScreenTransition_SetValue ToSetValue()
 		{
 			return new ISubScreenTransition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003399 RID: 13209
-		// (get) Token: 0x0600A930 RID: 43312 RVA: 0x0017DA85 File Offset: 0x0017BC85
-		// (set) Token: 0x0600A931 RID: 43313 RVA: 0x0017DAB4 File Offset: 0x0017BCB4
+		// Token: 0x17003664 RID: 13924
+		// (get) Token: 0x0600B402 RID: 46082 RVA: 0x00193A7D File Offset: 0x00191C7D
+		// (set) Token: 0x0600B403 RID: 46083 RVA: 0x00193AAC File Offset: 0x00191CAC
 		public virtual float TransitionDuration
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700339A RID: 13210
-		// (get) Token: 0x0600A932 RID: 43314 RVA: 0x0017DAC2 File Offset: 0x0017BCC2
-		// (set) Token: 0x0600A933 RID: 43315 RVA: 0x0017DAED File Offset: 0x0017BCED
+		// Token: 0x17003665 RID: 13925
+		// (get) Token: 0x0600B404 RID: 46084 RVA: 0x00193ABA File Offset: 0x00191CBA
+		// (set) Token: 0x0600B405 RID: 46085 RVA: 0x00193AE5 File Offset: 0x00191CE5
 		public virtual string TransitionCurve
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064B2 RID: 25778
+		// Token: 0x04006AA1 RID: 27297
 		[Nullable(2)]
 		protected ISubScreenTransition FbInstance;
 
-		// Token: 0x040064B3 RID: 25779
+		// Token: 0x04006AA2 RID: 27298
 		[Nullable(2)]
 		protected ISubScreenTransition_SetValue PocoInterface;
 	}

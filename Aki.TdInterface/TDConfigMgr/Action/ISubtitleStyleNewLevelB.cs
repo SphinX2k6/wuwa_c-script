@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EE9 RID: 7913
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002122 RID: 8482
 	public class ISubtitleStyleNewLevelB : ISubtitleStyleBase
 	{
-		// Token: 0x0600A946 RID: 43334 RVA: 0x0017DC84 File Offset: 0x0017BE84
+		// Token: 0x0600B418 RID: 46104 RVA: 0x00193C7C File Offset: 0x00191E7C
 		private ISubtitleStyleNewLevelB_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A947 RID: 43335 RVA: 0x0017DCBC File Offset: 0x0017BEBC
+		// Token: 0x0600B419 RID: 46105 RVA: 0x00193CB4 File Offset: 0x00191EB4
 		public static ISubtitleStyleNewLevelB Create([Nullable(2)] ISubtitleStyleNewLevelB instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A948 RID: 43336 RVA: 0x0017DCCF File Offset: 0x0017BECF
+		// Token: 0x0600B41A RID: 46106 RVA: 0x00193CC7 File Offset: 0x00191EC7
 		public static ISubtitleStyleNewLevelB CreateFromSetValue([Nullable(2)] ISubtitleStyleNewLevelB_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A949 RID: 43337 RVA: 0x0017DCE2 File Offset: 0x0017BEE2
+		// Token: 0x0600B41B RID: 46107 RVA: 0x00193CDA File Offset: 0x00191EDA
 		public new ISubtitleStyleNewLevelB_SetValue ToSetValue()
 		{
 			return new ISubtitleStyleNewLevelB_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700339D RID: 13213
-		// (get) Token: 0x0600A94A RID: 43338 RVA: 0x0017DCF5 File Offset: 0x0017BEF5
-		// (set) Token: 0x0600A94B RID: 43339 RVA: 0x0017DD20 File Offset: 0x0017BF20
+		// Token: 0x17003668 RID: 13928
+		// (get) Token: 0x0600B41C RID: 46108 RVA: 0x00193CED File Offset: 0x00191EED
+		// (set) Token: 0x0600B41D RID: 46109 RVA: 0x00193D18 File Offset: 0x00191F18
 		public override ESubtitleStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064BC RID: 25788
+		// Token: 0x04006AAB RID: 27307
 		[Nullable(2)]
 		protected new ISubtitleStyleNewLevelB FbInstance;
 
-		// Token: 0x040064BD RID: 25789
+		// Token: 0x04006AAC RID: 27308
 		[Nullable(2)]
 		protected new ISubtitleStyleNewLevelB_SetValue PocoInterface;
 	}

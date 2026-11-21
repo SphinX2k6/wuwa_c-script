@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006058 RID: 24664
+	// Token: 0x020066B9 RID: 26297
 	public enum EVisualNovelCgType : byte
 	{
-		// Token: 0x040101EE RID: 66030
-		LoadSpine,
-		// Token: 0x040101EF RID: 66031
+		// Token: 0x04010FE1 RID: 69601
+		LoadPrefab,
+		// Token: 0x04010FE2 RID: 69602
 		LoadImage,
-		// Token: 0x040101F0 RID: 66032
+		// Token: 0x04010FE3 RID: 69603
 		Clean
 	}
 }

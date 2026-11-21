@@ -6,11 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CB4 RID: 3252
+	// Token: 0x02000D96 RID: 3478
 	public class IExploreSkillQuantumDiffusion : IExploreSkillInteractType
 	{
-		// Token: 0x06004A66 RID: 19046 RVA: 0x000BA329 File Offset: 0x000B8529
-		[NullableContext(1)]
+		// Token: 0x06004F14 RID: 20244 RVA: 0x000C4D39 File Offset: 0x000C2F39
 		public static IExploreSkillQuantumDiffusion Create(IExploreSkillQuantumDiffusion? instance)
 		{
 			if (instance == null)
@@ -23,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016BB RID: 5819
-		// (get) Token: 0x06004A67 RID: 19047 RVA: 0x000BA348 File Offset: 0x000B8548
+		// Token: 0x170017E3 RID: 6115
+		// (get) Token: 0x06004F15 RID: 20245 RVA: 0x000C4D58 File Offset: 0x000C2F58
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -33,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016BC RID: 5820
-		// (get) Token: 0x06004A68 RID: 19048 RVA: 0x000BA358 File Offset: 0x000B8558
+		// Token: 0x170017E4 RID: 6116
+		// (get) Token: 0x06004F16 RID: 20246 RVA: 0x000C4D68 File Offset: 0x000C2F68
 		public virtual bool? NeedFollowShooter
 		{
 			get
@@ -47,19 +46,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016BD RID: 5821
-		// (get) Token: 0x06004A69 RID: 19049 RVA: 0x000BA390 File Offset: 0x000B8590
+		// Token: 0x170017E5 RID: 6117
+		// (get) Token: 0x06004F17 RID: 20247 RVA: 0x000C4DA0 File Offset: 0x000C2FA0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -82,18 +81,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A73 RID: 10867
+		// Token: 0x04002CED RID: 11501
 		private IExploreSkillQuantumDiffusion Instance;
 
-		// Token: 0x04002A74 RID: 10868
+		// Token: 0x04002CEE RID: 11502
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002A75 RID: 10869
+		// Token: 0x04002CEF RID: 11503
 		private bool _ActionsInited;
 	}
 }

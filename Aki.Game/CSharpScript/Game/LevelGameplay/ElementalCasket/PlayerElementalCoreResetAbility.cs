@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E6E RID: 28270
+	// Token: 0x02005FEF RID: 24559
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalCoreResetAbility : LevelEntityAbilityBase
 	{
-		// Token: 0x06044E35 RID: 282165 RVA: 0x01101DD1 File Offset: 0x010FFFD1
+		// Token: 0x0603AFC7 RID: 241607 RVA: 0x010AC33C File Offset: 0x010AA53C
 		public PlayerElementalCoreResetAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044E36 RID: 282166 RVA: 0x01101E00 File Offset: 0x01100000
+		// Token: 0x0603AFC8 RID: 241608 RVA: 0x010AC36C File Offset: 0x010AA56C
 		public override void OnActivated(Entity entity)
 		{
 			EntityHandle coreFoundationEntityHandle = entity.GetComponent<PlayerElementalCasketComponent>().GetCoreFoundationEntityHandle();
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.MappingInited = false;
 		}
 
-		// Token: 0x06044E37 RID: 282167 RVA: 0x01101E74 File Offset: 0x01100074
+		// Token: 0x0603AFC9 RID: 241609 RVA: 0x010AC3E0 File Offset: 0x010AA5E0
 		public override void OnDeactivated(Entity entity)
 		{
 			this.ResetDistanceSquared = 0L;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.IsResetting = false;
 		}
 
-		// Token: 0x06044E38 RID: 282168 RVA: 0x01101EB4 File Offset: 0x011000B4
+		// Token: 0x0603AFCA RID: 241610 RVA: 0x010AC420 File Offset: 0x010AA620
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			if (this.IsResetting || this.ResetDistanceSquared <= 0L || TeleportModel.Instance.IsTeleport)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			});
 		}
 
-		// Token: 0x06044E39 RID: 282169 RVA: 0x01101F68 File Offset: 0x01100168
+		// Token: 0x0603AFCB RID: 241611 RVA: 0x010AC4D4 File Offset: 0x010AA6D4
 		private bool TryInitMappingRange()
 		{
 			if (this.MappingInited)
@@ -106,28 +106,38 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x04023DDC RID: 146908
+		// Token: 0x17006F6C RID: 28524
+		// (get) Token: 0x0603AFCC RID: 241612 RVA: 0x010AC560 File Offset: 0x010AA760
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F091 RID: 127121
 		private readonly Vector StartLocation = Vector.Create();
 
-		// Token: 0x04023DDD RID: 146909
+		// Token: 0x0401F092 RID: 127122
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04023DDE RID: 146910
+		// Token: 0x0401F093 RID: 127123
 		private long ResetDistanceSquared;
 
-		// Token: 0x04023DDF RID: 146911
+		// Token: 0x0401F094 RID: 127124
 		private readonly Vector MappingLocation = Vector.Create();
 
-		// Token: 0x04023DE0 RID: 146912
+		// Token: 0x0401F095 RID: 127125
 		private long MappingResetDistanceSquared;
 
-		// Token: 0x04023DE1 RID: 146913
+		// Token: 0x0401F096 RID: 127126
 		private int MappingFoundationPbDataId;
 
-		// Token: 0x04023DE2 RID: 146914
+		// Token: 0x0401F097 RID: 127127
 		private bool MappingInited;
 
-		// Token: 0x04023DE3 RID: 146915
+		// Token: 0x0401F098 RID: 127128
 		private bool IsResetting;
 	}
 }

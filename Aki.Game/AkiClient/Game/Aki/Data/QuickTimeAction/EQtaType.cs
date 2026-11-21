@@ -4,14 +4,14 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.QuickTimeAction
 {
-	// Token: 0x02003EAD RID: 16045
+	// Token: 0x0200317A RID: 12666
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/QuickTimeAction/EQtaType.EQtaType")]
 	public enum EQtaType : byte
 	{
-		// Token: 0x04014B3F RID: 84799
+		// Token: 0x04010B67 RID: 68455
 		定制型,
-		// Token: 0x04014B40 RID: 84800
+		// Token: 0x04010B68 RID: 68456
 		EQtaType_MAX
 	}
 }

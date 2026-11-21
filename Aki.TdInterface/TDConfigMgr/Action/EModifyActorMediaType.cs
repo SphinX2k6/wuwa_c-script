@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001616 RID: 5654
+	// Token: 0x02001782 RID: 6018
 	[EnumExtensions]
 	public enum EModifyActorMediaType
 	{
-		// Token: 0x04004BE4 RID: 19428
+		// Token: 0x04004FD2 RID: 20434
 		ChangeMediaPlayDA
 	}
 }

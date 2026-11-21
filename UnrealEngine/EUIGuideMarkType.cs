@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002005 RID: 8197
+	// Token: 0x02000659 RID: 1625
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.EUIGuideMarkType")]
 	public enum EUIGuideMarkType : byte
 	{
-		// Token: 0x04010C79 RID: 68729
+		// Token: 0x04003E19 RID: 15897
 		Parent,
-		// Token: 0x04010C7A RID: 68730
+		// Token: 0x04003E1A RID: 15898
 		Route,
-		// Token: 0x04010C7B RID: 68731
+		// Token: 0x04003E1B RID: 15899
 		Child,
-		// Token: 0x04010C7C RID: 68732
+		// Token: 0x04003E1C RID: 15900
 		ChildWithoutRoute,
-		// Token: 0x04010C7D RID: 68733
+		// Token: 0x04003E1D RID: 15901
 		EUIGuideMarkType_MAX
 	}
 }

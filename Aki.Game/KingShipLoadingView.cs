@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200203C RID: 8252
+// Token: 0x0200150F RID: 5391
 public class KingShipLoadingView : UiViewBase
 {
-	// Token: 0x0601033A RID: 66362 RVA: 0x003F2E30 File Offset: 0x003F1030
+	// Token: 0x0600D7A2 RID: 55202 RVA: 0x003FF428 File Offset: 0x003FD628
 	[NullableContext(1)]
 	public KingShipLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601033B RID: 66363 RVA: 0x003F2E3C File Offset: 0x003F103C
+	// Token: 0x0600D7A3 RID: 55203 RVA: 0x003FF434 File Offset: 0x003FD634
 	protected override void OnStart()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;

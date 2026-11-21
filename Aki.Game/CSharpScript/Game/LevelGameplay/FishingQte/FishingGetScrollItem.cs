@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E3E RID: 28222
+	// Token: 0x02005FBF RID: 24511
 	public class FishingGetScrollItem : UiPanelBase
 	{
-		// Token: 0x06044CD9 RID: 281817 RVA: 0x010FA5BC File Offset: 0x010F87BC
+		// Token: 0x0603AE66 RID: 241254 RVA: 0x010A4B3C File Offset: 0x010A2D3C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044CDA RID: 281818 RVA: 0x010FA628 File Offset: 0x010F8828
+		// Token: 0x0603AE67 RID: 241255 RVA: 0x010A4BA8 File Offset: 0x010A2DA8
 		protected override void OnStart()
 		{
 			ListSliderControlData<FishingGetItem> listSliderControlData = new ListSliderControlData<FishingGetItem>(base.GetItem(1).GetParentAsUIItem(), new Func<FishingGetItem>(this.CreateProxyFunction), new Func<bool>(this.CheckNext));
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ListSlideControl.DisEnableParentLayout();
 		}
 
-		// Token: 0x06044CDB RID: 281819 RVA: 0x010FA6F8 File Offset: 0x010F88F8
+		// Token: 0x0603AE68 RID: 241256 RVA: 0x010A4C78 File Offset: 0x010A2E78
 		public void OnTick(float delta)
 		{
 			ListSliderControl<FishingGetItem> listSlideControl = this.ListSlideControl;
@@ -53,39 +53,39 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			listSlideControl.Tick(delta);
 		}
 
-		// Token: 0x06044CDC RID: 281820 RVA: 0x010FA70B File Offset: 0x010F890B
+		// Token: 0x0603AE69 RID: 241257 RVA: 0x010A4C8B File Offset: 0x010A2E8B
 		[NullableContext(1)]
 		private FishingGetItem CreateProxyFunction()
 		{
 			return new FishingGetItem();
 		}
 
-		// Token: 0x06044CDD RID: 281821 RVA: 0x010FA712 File Offset: 0x010F8912
+		// Token: 0x0603AE6A RID: 241258 RVA: 0x010A4C92 File Offset: 0x010A2E92
 		private bool CheckNext()
 		{
 			return !FishingQteModel.Instance.IsTempGetDataEmpty();
 		}
 
-		// Token: 0x04023CB8 RID: 146616
+		// Token: 0x0401EF6D RID: 126829
 		private const int MAX_LIST_COUNT = 7;
 
-		// Token: 0x04023CB9 RID: 146617
+		// Token: 0x0401EF6E RID: 126830
 		private const int ITEM_INTERVAL_TIME = 200;
 
-		// Token: 0x04023CBA RID: 146618
+		// Token: 0x0401EF6F RID: 126831
 		private const int ITEM_SILDER_TIME = 200;
 
-		// Token: 0x04023CBB RID: 146619
+		// Token: 0x0401EF70 RID: 126832
 		[Nullable(1)]
 		protected ListSliderControl<FishingGetItem> ListSlideControl;
 
-		// Token: 0x0200CCF0 RID: 52464
+		// Token: 0x0200B8E0 RID: 47328
 		private class EComponents
 		{
-			// Token: 0x0403DCD2 RID: 253138
+			// Token: 0x040390F4 RID: 233716
 			public const int Layout = 0;
 
-			// Token: 0x0403DCD3 RID: 253139
+			// Token: 0x040390F5 RID: 233717
 			public const int Item = 1;
 		}
 	}

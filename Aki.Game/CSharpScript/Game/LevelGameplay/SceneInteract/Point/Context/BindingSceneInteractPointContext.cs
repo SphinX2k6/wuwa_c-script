@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 {
-	// Token: 0x02006A89 RID: 27273
+	// Token: 0x02005BE6 RID: 23526
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class BindingSceneInteractPointContext : SceneInteractPointContext
 	{
-		// Token: 0x06043C6A RID: 277610 RVA: 0x01096F7F File Offset: 0x0109517F
+		// Token: 0x06039CB8 RID: 236728 RVA: 0x0103B7D3 File Offset: 0x010399D3
 		public virtual EntityHandle GetEntityHandle()
 		{
 			EntityBinding entityBindingSlot = this.EntityBindingSlot;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			return entityBindingSlot.Handle;
 		}
 
-		// Token: 0x06043C6B RID: 277611 RVA: 0x01096F92 File Offset: 0x01095192
+		// Token: 0x06039CB9 RID: 236729 RVA: 0x0103B7E6 File Offset: 0x010399E6
 		public virtual AActor GetOwnerActor()
 		{
 			ActorBinding actorBindingSlot = this.ActorBindingSlot;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			return actorBindingSlot.Actor;
 		}
 
-		// Token: 0x06043C6C RID: 277612 RVA: 0x01096FA5 File Offset: 0x010951A5
+		// Token: 0x06039CBA RID: 236730 RVA: 0x0103B7F9 File Offset: 0x010399F9
 		public virtual Vector GetLocation()
 		{
 			LocationBinding locationBindingSlot = this.LocationBindingSlot;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			return locationBindingSlot.Location;
 		}
 
-		// Token: 0x06043C6D RID: 277613 RVA: 0x01096FB8 File Offset: 0x010951B8
+		// Token: 0x06039CBB RID: 236731 RVA: 0x0103B80C File Offset: 0x01039A0C
 		public USplineComponent TryGetLandingSpline()
 		{
 			SplineLandingBinding splineLandingBindingSlot = this.SplineLandingBindingSlot;
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			return splineLandingBindingSlot.TryGetSplineComponent();
 		}
 
-		// Token: 0x06043C6E RID: 277614 RVA: 0x01096FCB File Offset: 0x010951CB
+		// Token: 0x06039CBC RID: 236732 RVA: 0x0103B81F File Offset: 0x01039A1F
 		public override bool IsValid()
 		{
 			return (this.EntityBindingSlot == null || this.EntityBindingSlot.IsValid()) && (this.ActorBindingSlot == null || this.ActorBindingSlot.IsValid());
 		}
 
-		// Token: 0x06043C6F RID: 277615 RVA: 0x01096FFC File Offset: 0x010951FC
+		// Token: 0x06039CBD RID: 236733 RVA: 0x0103B850 File Offset: 0x01039A50
 		public override void Dispose()
 		{
 			RangeGateBinding rangeGateBindingSlot = this.RangeGateBindingSlot;
@@ -75,19 +75,19 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			splineLandingBindingSlot.Dispose();
 		}
 
-		// Token: 0x04023694 RID: 145044
+		// Token: 0x0401E886 RID: 125062
 		protected EntityBinding EntityBindingSlot;
 
-		// Token: 0x04023695 RID: 145045
+		// Token: 0x0401E887 RID: 125063
 		protected ActorBinding ActorBindingSlot;
 
-		// Token: 0x04023696 RID: 145046
+		// Token: 0x0401E888 RID: 125064
 		protected LocationBinding LocationBindingSlot;
 
-		// Token: 0x04023697 RID: 145047
+		// Token: 0x0401E889 RID: 125065
 		protected RangeGateBinding RangeGateBindingSlot;
 
-		// Token: 0x04023698 RID: 145048
+		// Token: 0x0401E88A RID: 125066
 		protected SplineLandingBinding SplineLandingBindingSlot;
 	}
 }

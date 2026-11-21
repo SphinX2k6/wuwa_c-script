@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001981 RID: 6529
+	// Token: 0x02001B0C RID: 6924
 	public class IDeletePhoneMessage_SetValue
 	{
-		// Token: 0x04005722 RID: 22306
+		// Token: 0x04005B77 RID: 23415
 		public EPhoneSystemInteractType Type;
 
-		// Token: 0x04005723 RID: 22307
+		// Token: 0x04005B78 RID: 23416
 		public int? PhoneMessageId;
 	}
 }

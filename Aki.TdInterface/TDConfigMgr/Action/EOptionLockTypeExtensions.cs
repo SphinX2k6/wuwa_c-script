@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023B9 RID: 9145
+	// Token: 0x0200264A RID: 9802
 	public static class EOptionLockTypeExtensions
 	{
-		// Token: 0x0600C73F RID: 51007 RVA: 0x001D2BB0 File Offset: 0x001D0DB0
+		// Token: 0x0600D3A7 RID: 54183 RVA: 0x001EBFE4 File Offset: 0x001EA1E4
 		public static string ToEnumString(this EOptionLockType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C740 RID: 51008 RVA: 0x001D2BD8 File Offset: 0x001D0DD8
+		// Token: 0x0600D3A8 RID: 54184 RVA: 0x001EC00C File Offset: 0x001EA20C
 		public static EOptionLockType FromString(string name)
 		{
 			EOptionLockType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C741 RID: 51009 RVA: 0x001D2C01 File Offset: 0x001D0E01
+		// Token: 0x0600D3A9 RID: 54185 RVA: 0x001EC035 File Offset: 0x001EA235
 		public static bool TryFromString(string name, out EOptionLockType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C742 RID: 51010 RVA: 0x001D2C26 File Offset: 0x001D0E26
+		// Token: 0x0600D3AA RID: 54186 RVA: 0x001EC05A File Offset: 0x001EA25A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C743 RID: 51011 RVA: 0x001D2C36 File Offset: 0x001D0E36
+		// Token: 0x0600D3AB RID: 54187 RVA: 0x001EC06A File Offset: 0x001EA26A
 		public static EOptionLockType[] GetValues()
 		{
 			return new EOptionLockType[1];
 		}
 
-		// Token: 0x0600C744 RID: 51012 RVA: 0x001D2C3E File Offset: 0x001D0E3E
+		// Token: 0x0600D3AC RID: 54188 RVA: 0x001EC072 File Offset: 0x001EA272
 		public static string[] GetNames()
 		{
 			return new string[]

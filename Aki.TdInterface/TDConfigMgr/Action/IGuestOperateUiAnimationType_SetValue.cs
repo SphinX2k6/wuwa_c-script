@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AE6 RID: 6886
+	// Token: 0x02001C8D RID: 7309
 	public class IGuestOperateUiAnimationType_SetValue
 	{
-		// Token: 0x04005AA8 RID: 23208
+		// Token: 0x04005F32 RID: 24370
 		public EGuestOperateUiAnimation Type;
 	}
 }

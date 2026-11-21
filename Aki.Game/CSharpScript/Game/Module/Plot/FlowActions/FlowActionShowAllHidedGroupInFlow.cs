@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050D7 RID: 20695
+	// Token: 0x020040A7 RID: 16551
 	public class FlowActionShowAllHidedGroupInFlow : FlowActionBase
 	{
-		// Token: 0x06034F54 RID: 216916 RVA: 0x00C8B8A0 File Offset: 0x00C89AA0
+		// Token: 0x06029E4D RID: 171597 RVA: 0x00BD8B88 File Offset: 0x00BD6D88
 		protected override void OnExecute()
 		{
 			PlotModel.Instance.PlotCleanRange.Close();
 		}
 
-		// Token: 0x06034F55 RID: 216917 RVA: 0x00C8B8B1 File Offset: 0x00C89AB1
+		// Token: 0x06029E4E RID: 171598 RVA: 0x00BD8B99 File Offset: 0x00BD6D99
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

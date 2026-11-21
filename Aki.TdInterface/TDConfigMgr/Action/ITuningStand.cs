@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002006 RID: 8198
+	// Token: 0x0200224D RID: 8781
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITuningStand : IUiGame
 	{
-		// Token: 0x0600B448 RID: 46152 RVA: 0x001A343C File Offset: 0x001A163C
-		[NullableContext(1)]
+		// Token: 0x0600BF60 RID: 48992 RVA: 0x001B9A00 File Offset: 0x001B7C00
+		[NullableContext(0)]
 		private ITuningStand_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B449 RID: 46153 RVA: 0x001A3474 File Offset: 0x001A1674
-		[NullableContext(1)]
+		// Token: 0x0600BF61 RID: 48993 RVA: 0x001B9A38 File Offset: 0x001B7C38
+		[NullableContext(0)]
 		public static ITuningStand Create([Nullable(2)] ITuningStand instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B44A RID: 46154 RVA: 0x001A3487 File Offset: 0x001A1687
-		[NullableContext(1)]
+		// Token: 0x0600BF62 RID: 48994 RVA: 0x001B9A4B File Offset: 0x001B7C4B
+		[NullableContext(0)]
 		public static ITuningStand CreateFromSetValue([Nullable(2)] ITuningStand_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B44B RID: 46155 RVA: 0x001A349C File Offset: 0x001A169C
-		[NullableContext(1)]
+		// Token: 0x0600BF63 RID: 48995 RVA: 0x001B9A60 File Offset: 0x001B7C60
+		[NullableContext(0)]
 		public new ITuningStand_SetValue ToSetValue()
 		{
 			return new ITuningStand_SetValue
@@ -71,9 +71,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003773 RID: 14195
-		// (get) Token: 0x0600B44C RID: 46156 RVA: 0x001A350E File Offset: 0x001A170E
-		// (set) Token: 0x0600B44D RID: 46157 RVA: 0x001A3539 File Offset: 0x001A1739
+		// Token: 0x17003A4C RID: 14924
+		// (get) Token: 0x0600BF64 RID: 48996 RVA: 0x001B9AD2 File Offset: 0x001B7CD2
+		// (set) Token: 0x0600BF65 RID: 48997 RVA: 0x001B9AFD File Offset: 0x001B7CFD
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -94,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003774 RID: 14196
-		// (get) Token: 0x0600B44E RID: 46158 RVA: 0x001A3547 File Offset: 0x001A1747
-		// (set) Token: 0x0600B44F RID: 46159 RVA: 0x001A3572 File Offset: 0x001A1772
+		// Token: 0x17003A4D RID: 14925
+		// (get) Token: 0x0600BF66 RID: 48998 RVA: 0x001B9B0B File Offset: 0x001B7D0B
+		// (set) Token: 0x0600BF67 RID: 48999 RVA: 0x001B9B36 File Offset: 0x001B7D36
 		public virtual ETuningStandVisualType VisualType
 		{
 			get
@@ -117,20 +117,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003775 RID: 14197
-		// (get) Token: 0x0600B450 RID: 46160 RVA: 0x001A3580 File Offset: 0x001A1780
-		// (set) Token: 0x0600B451 RID: 46161 RVA: 0x001A3613 File Offset: 0x001A1813
+		// Token: 0x17003A4E RID: 14926
+		// (get) Token: 0x0600BF68 RID: 49000 RVA: 0x001B9B44 File Offset: 0x001B7D44
+		// (set) Token: 0x0600BF69 RID: 49001 RVA: 0x001B9BD7 File Offset: 0x001B7DD7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ITuningStandBubbleConfig> BubbleConfig
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -161,7 +161,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -170,9 +170,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003776 RID: 14198
-		// (get) Token: 0x0600B452 RID: 46162 RVA: 0x001A3628 File Offset: 0x001A1828
-		// (set) Token: 0x0600B453 RID: 46163 RVA: 0x001A364F File Offset: 0x001A184F
+		// Token: 0x17003A4F RID: 14927
+		// (get) Token: 0x0600BF6A RID: 49002 RVA: 0x001B9BEC File Offset: 0x001B7DEC
+		// (set) Token: 0x0600BF6B RID: 49003 RVA: 0x001B9C13 File Offset: 0x001B7E13
 		public virtual string GuidancePath
 		{
 			get
@@ -194,9 +194,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003777 RID: 14199
-		// (get) Token: 0x0600B454 RID: 46164 RVA: 0x001A365D File Offset: 0x001A185D
-		// (set) Token: 0x0600B455 RID: 46165 RVA: 0x001A3684 File Offset: 0x001A1884
+		// Token: 0x17003A50 RID: 14928
+		// (get) Token: 0x0600BF6C RID: 49004 RVA: 0x001B9C21 File Offset: 0x001B7E21
+		// (set) Token: 0x0600BF6D RID: 49005 RVA: 0x001B9C48 File Offset: 0x001B7E48
 		public virtual string MusicScorePath
 		{
 			get
@@ -218,9 +218,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003778 RID: 14200
-		// (get) Token: 0x0600B456 RID: 46166 RVA: 0x001A3692 File Offset: 0x001A1892
-		// (set) Token: 0x0600B457 RID: 46167 RVA: 0x001A36B9 File Offset: 0x001A18B9
+		// Token: 0x17003A51 RID: 14929
+		// (get) Token: 0x0600BF6E RID: 49006 RVA: 0x001B9C56 File Offset: 0x001B7E56
+		// (set) Token: 0x0600BF6F RID: 49007 RVA: 0x001B9C7D File Offset: 0x001B7E7D
 		public virtual string NoteSequence
 		{
 			get
@@ -242,9 +242,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003779 RID: 14201
-		// (get) Token: 0x0600B458 RID: 46168 RVA: 0x001A36C7 File Offset: 0x001A18C7
-		// (set) Token: 0x0600B459 RID: 46169 RVA: 0x001A36EE File Offset: 0x001A18EE
+		// Token: 0x17003A52 RID: 14930
+		// (get) Token: 0x0600BF70 RID: 49008 RVA: 0x001B9C8B File Offset: 0x001B7E8B
+		// (set) Token: 0x0600BF71 RID: 49009 RVA: 0x001B9CB2 File Offset: 0x001B7EB2
 		public virtual string CompleteMusic
 		{
 			get
@@ -266,13 +266,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700377A RID: 14202
-		// (get) Token: 0x0600B45A RID: 46170 RVA: 0x001A36FC File Offset: 0x001A18FC
-		// (set) Token: 0x0600B45B RID: 46171 RVA: 0x001A375D File Offset: 0x001A195D
-		[Nullable(1)]
+		// Token: 0x17003A53 RID: 14931
+		// (get) Token: 0x0600BF72 RID: 49010 RVA: 0x001B9CC0 File Offset: 0x001B7EC0
+		// (set) Token: 0x0600BF73 RID: 49011 RVA: 0x001B9D21 File Offset: 0x001B7F21
+		[Nullable(0)]
 		public virtual ITuningStandGridBoard BoardConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._BoardConfigInited)
@@ -291,7 +291,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._BoardConfigCache;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().BoardConfig = value;
@@ -299,28 +299,28 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CA8 RID: 27816
+		// Token: 0x040072AB RID: 29355
 		protected new ITuningStand FbInstance;
 
-		// Token: 0x04006CA9 RID: 27817
+		// Token: 0x040072AC RID: 29356
 		protected new ITuningStand_SetValue PocoInterface;
 
-		// Token: 0x04006CAA RID: 27818
+		// Token: 0x040072AD RID: 29357
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ITuningStandBubbleConfig> _BubbleConfigCache;
 
-		// Token: 0x04006CAB RID: 27819
+		// Token: 0x040072AE RID: 29358
 		private bool _BubbleConfigInited;
 
-		// Token: 0x04006CAC RID: 27820
-		[Nullable(1)]
+		// Token: 0x040072AF RID: 29359
+		[Nullable(0)]
 		private ITuningStandGridBoard _BoardConfigCache;
 
-		// Token: 0x04006CAD RID: 27821
+		// Token: 0x040072B0 RID: 29360
 		private bool _BoardConfigInited;
 	}
 }

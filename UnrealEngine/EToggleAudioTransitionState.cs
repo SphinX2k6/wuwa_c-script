@@ -4,24 +4,24 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FF8 RID: 8184
+	// Token: 0x02000653 RID: 1619
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.EToggleAudioTransitionState")]
 	public enum EToggleAudioTransitionState : byte
 	{
-		// Token: 0x04010C22 RID: 68642
+		// Token: 0x04003DEF RID: 15855
 		ETT_None,
-		// Token: 0x04010C23 RID: 68643
+		// Token: 0x04003DF0 RID: 15856
 		ETT_NormalToHighLight,
-		// Token: 0x04010C24 RID: 68644
+		// Token: 0x04003DF1 RID: 15857
 		ETT_HighlightedPress,
-		// Token: 0x04010C25 RID: 68645
+		// Token: 0x04003DF2 RID: 15858
 		ETT_UncheckedClick,
-		// Token: 0x04010C26 RID: 68646
+		// Token: 0x04003DF3 RID: 15859
 		ETT_CheckedClick,
-		// Token: 0x04010C27 RID: 68647
+		// Token: 0x04003DF4 RID: 15860
 		ETT_DisabledPress,
-		// Token: 0x04010C28 RID: 68648
+		// Token: 0x04003DF5 RID: 15861
 		ETT_MAX
 	}
 }

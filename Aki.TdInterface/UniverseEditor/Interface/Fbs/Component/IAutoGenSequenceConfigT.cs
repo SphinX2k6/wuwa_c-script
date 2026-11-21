@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EE4 RID: 20196
+	// Token: 0x02005413 RID: 21523
 	public class IAutoGenSequenceConfigT
 	{
-		// Token: 0x170090F7 RID: 37111
-		// (get) Token: 0x0601FD5F RID: 130399 RVA: 0x0046DFA1 File Offset: 0x0046C1A1
-		// (set) Token: 0x0601FD60 RID: 130400 RVA: 0x0046DFA9 File Offset: 0x0046C1A9
+		// Token: 0x1700986A RID: 39018
+		// (get) Token: 0x06021AA3 RID: 137891 RVA: 0x004A3D71 File Offset: 0x004A1F71
+		// (set) Token: 0x06021AA4 RID: 137892 RVA: 0x004A3D79 File Offset: 0x004A1F79
 		public string SequencePath { get; set; }
 
-		// Token: 0x170090F8 RID: 37112
-		// (get) Token: 0x0601FD61 RID: 130401 RVA: 0x0046DFB2 File Offset: 0x0046C1B2
-		// (set) Token: 0x0601FD62 RID: 130402 RVA: 0x0046DFBA File Offset: 0x0046C1BA
+		// Token: 0x1700986B RID: 39019
+		// (get) Token: 0x06021AA5 RID: 137893 RVA: 0x004A3D82 File Offset: 0x004A1F82
+		// (set) Token: 0x06021AA6 RID: 137894 RVA: 0x004A3D8A File Offset: 0x004A1F8A
 		public IPlayLevelSequenceT SequenceConfig { get; set; }
 
-		// Token: 0x170090F9 RID: 37113
-		// (get) Token: 0x0601FD63 RID: 130403 RVA: 0x0046DFC3 File Offset: 0x0046C1C3
-		// (set) Token: 0x0601FD64 RID: 130404 RVA: 0x0046DFCB File Offset: 0x0046C1CB
+		// Token: 0x1700986C RID: 39020
+		// (get) Token: 0x06021AA7 RID: 137895 RVA: 0x004A3D93 File Offset: 0x004A1F93
+		// (set) Token: 0x06021AA8 RID: 137896 RVA: 0x004A3D9B File Offset: 0x004A1F9B
 		public int Count { get; set; }
 
-		// Token: 0x0601FD65 RID: 130405 RVA: 0x0046DFD4 File Offset: 0x0046C1D4
+		// Token: 0x06021AA9 RID: 137897 RVA: 0x004A3DA4 File Offset: 0x004A1FA4
 		public IAutoGenSequenceConfigT()
 		{
 			this.SequencePath = null;

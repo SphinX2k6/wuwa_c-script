@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000778 RID: 1912
+	// Token: 0x02000792 RID: 1938
 	public class ConfigQuestNodeDataByKey : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002CE1 RID: 11489 RVA: 0x00156EA0 File Offset: 0x001550A0
+		// Token: 0x06002D7D RID: 11645 RVA: 0x0015DDAC File Offset: 0x0015BFAC
 		static ConfigQuestNodeDataByKey()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestNodeDataByKey.CreateStaticDefaultValue), new Action(ConfigQuestNodeDataByKey.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002CE2 RID: 11490 RVA: 0x00156EC0 File Offset: 0x001550C0
+		// Token: 0x06002D7E RID: 11646 RVA: 0x0015DDCC File Offset: 0x0015BFCC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestNodeDataByKey.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002CE3 RID: 11491 RVA: 0x00156F3F File Offset: 0x0015513F
+		// Token: 0x06002D7F RID: 11647 RVA: 0x0015DE4B File Offset: 0x0015C04B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestNodeDataByKey.LogPair = null;
 			ConfigQuestNodeDataByKey.HandleId = 0;
 		}
 
-		// Token: 0x06002CE4 RID: 11492 RVA: 0x00156F4D File Offset: 0x0015514D
+		// Token: 0x06002D80 RID: 11648 RVA: 0x0015DE59 File Offset: 0x0015C059
 		public static void Init()
 		{
 			ConfigQuestNodeDataByKey.HandleId = ConfigCommon.InitDataStatement(ConfigQuestNodeDataByKey.HandleId, "db_questnodedata.db", "select BinData from `QuestNodeData` where Key=?");
 		}
 
-		// Token: 0x06002CE5 RID: 11493 RVA: 0x00156F68 File Offset: 0x00155168
+		// Token: 0x06002D81 RID: 11649 RVA: 0x0015DE74 File Offset: 0x0015C074
 		public static QuestNodeData? GetConfig(string p0Key, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigQuestNodeDataByKey.HandleId, ConfigQuestNodeDataByKey.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new QuestNodeData?(rootAsQuestNodeData);
 		}
 
-		// Token: 0x0400342E RID: 13358
+		// Token: 0x040034E4 RID: 13540
 		private const string DB = "db_questnodedata.db";
 
-		// Token: 0x0400342F RID: 13359
+		// Token: 0x040034E5 RID: 13541
 		private const string FILE = "UniverseEditor/Quest/节点_*";
 
-		// Token: 0x04003430 RID: 13360
+		// Token: 0x040034E6 RID: 13542
 		private const string TABLE = "QuestNodeData";
 
-		// Token: 0x04003431 RID: 13361
+		// Token: 0x040034E7 RID: 13543
 		private const string COMMAND = "select BinData from `QuestNodeData` where Key=?";
 
-		// Token: 0x04003432 RID: 13362
+		// Token: 0x040034E8 RID: 13544
 		private const string KEY_PREFIX = "QuestNodeDataByKey";
 
-		// Token: 0x04003433 RID: 13363
+		// Token: 0x040034E9 RID: 13545
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003434 RID: 13364
+		// Token: 0x040034EA RID: 13546
 		private static int HandleId;
 	}
 }

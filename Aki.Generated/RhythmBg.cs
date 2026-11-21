@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FC0 RID: 4032
+	// Token: 0x020010A8 RID: 4264
 	public struct RhythmBg : IFlatbufferObject
 	{
-		// Token: 0x17002E22 RID: 11810
-		// (get) Token: 0x0600BC37 RID: 48183 RVA: 0x002DEA29 File Offset: 0x002DCC29
+		// Token: 0x17002E9D RID: 11933
+		// (get) Token: 0x0600C281 RID: 49793 RVA: 0x002FB106 File Offset: 0x002F9306
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC38 RID: 48184 RVA: 0x002DEA36 File Offset: 0x002DCC36
+		// Token: 0x0600C282 RID: 49794 RVA: 0x002FB113 File Offset: 0x002F9313
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BC39 RID: 48185 RVA: 0x002DEA40 File Offset: 0x002DCC40
+		// Token: 0x0600C283 RID: 49795 RVA: 0x002FB11C File Offset: 0x002F931C
 		public static RhythmBg GetRootAsRhythmBg(ByteBuffer _bb)
 		{
 			return RhythmBg.GetRootAsRhythmBg(_bb, default(RhythmBg));
 		}
 
-		// Token: 0x0600BC3A RID: 48186 RVA: 0x002DEA5C File Offset: 0x002DCC5C
+		// Token: 0x0600C284 RID: 49796 RVA: 0x002FB138 File Offset: 0x002F9338
 		public static RhythmBg GetRootAsRhythmBg(ByteBuffer _bb, RhythmBg obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BC3B RID: 48187 RVA: 0x002DEA79 File Offset: 0x002DCC79
+		// Token: 0x0600C285 RID: 49797 RVA: 0x002FB155 File Offset: 0x002F9355
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BC3C RID: 48188 RVA: 0x002DEA88 File Offset: 0x002DCC88
+		// Token: 0x0600C286 RID: 49798 RVA: 0x002FB164 File Offset: 0x002F9364
 		public RhythmBg __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002E23 RID: 11811
-		// (get) Token: 0x0600BC3D RID: 48189 RVA: 0x002DEA98 File Offset: 0x002DCC98
+		// Token: 0x17002E9E RID: 11934
+		// (get) Token: 0x0600C287 RID: 49799 RVA: 0x002FB174 File Offset: 0x002F9374
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E24 RID: 11812
-		// (get) Token: 0x0600BC3E RID: 48190 RVA: 0x002DEAD4 File Offset: 0x002DCCD4
+		// Token: 0x17002E9F RID: 11935
+		// (get) Token: 0x0600C288 RID: 49800 RVA: 0x002FB1B0 File Offset: 0x002F93B0
 		public string BgItemColor
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC3F RID: 48191 RVA: 0x002DEB0B File Offset: 0x002DCD0B
+		// Token: 0x0600C289 RID: 49801 RVA: 0x002FB1E7 File Offset: 0x002F93E7
 		public Span<byte> GetBgItemColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600BC40 RID: 48192 RVA: 0x002DEB1A File Offset: 0x002DCD1A
+		// Token: 0x0600C28A RID: 49802 RVA: 0x002FB1F6 File Offset: 0x002F93F6
 		public byte[] GetBgItemColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E25 RID: 11813
-		// (get) Token: 0x0600BC41 RID: 48193 RVA: 0x002DEB34 File Offset: 0x002DCD34
+		// Token: 0x17002EA0 RID: 11936
+		// (get) Token: 0x0600C28B RID: 49803 RVA: 0x002FB210 File Offset: 0x002F9410
 		public string BgMaskItemColor
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC42 RID: 48194 RVA: 0x002DEB6B File Offset: 0x002DCD6B
+		// Token: 0x0600C28C RID: 49804 RVA: 0x002FB247 File Offset: 0x002F9447
 		public Span<byte> GetBgMaskItemColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600BC43 RID: 48195 RVA: 0x002DEB7A File Offset: 0x002DCD7A
+		// Token: 0x0600C28D RID: 49805 RVA: 0x002FB256 File Offset: 0x002F9456
 		public byte[] GetBgMaskItemColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E26 RID: 11814
-		// (get) Token: 0x0600BC44 RID: 48196 RVA: 0x002DEB94 File Offset: 0x002DCD94
+		// Token: 0x17002EA1 RID: 11937
+		// (get) Token: 0x0600C28E RID: 49806 RVA: 0x002FB270 File Offset: 0x002F9470
 		public string StartLevelSequence
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC45 RID: 48197 RVA: 0x002DEBCC File Offset: 0x002DCDCC
+		// Token: 0x0600C28F RID: 49807 RVA: 0x002FB2A8 File Offset: 0x002F94A8
 		public Span<byte> GetStartLevelSequenceBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600BC46 RID: 48198 RVA: 0x002DEBDC File Offset: 0x002DCDDC
+		// Token: 0x0600C290 RID: 49808 RVA: 0x002FB2B8 File Offset: 0x002F94B8
 		public byte[] GetStartLevelSequenceArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E27 RID: 11815
-		// (get) Token: 0x0600BC47 RID: 48199 RVA: 0x002DEBF4 File Offset: 0x002DCDF4
+		// Token: 0x17002EA2 RID: 11938
+		// (get) Token: 0x0600C291 RID: 49809 RVA: 0x002FB2D0 File Offset: 0x002F94D0
 		public string GlowItemTexture
 		{
 			get
@@ -158,20 +158,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC48 RID: 48200 RVA: 0x002DEC2C File Offset: 0x002DCE2C
+		// Token: 0x0600C292 RID: 49810 RVA: 0x002FB308 File Offset: 0x002F9508
 		public Span<byte> GetGlowItemTextureBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600BC49 RID: 48201 RVA: 0x002DEC3C File Offset: 0x002DCE3C
+		// Token: 0x0600C293 RID: 49811 RVA: 0x002FB318 File Offset: 0x002F9518
 		public byte[] GetGlowItemTextureArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E28 RID: 11816
-		// (get) Token: 0x0600BC4A RID: 48202 RVA: 0x002DEC54 File Offset: 0x002DCE54
+		// Token: 0x17002EA3 RID: 11939
+		// (get) Token: 0x0600C294 RID: 49812 RVA: 0x002FB330 File Offset: 0x002F9530
 		public string GlowItemMaterial
 		{
 			get
@@ -185,20 +185,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC4B RID: 48203 RVA: 0x002DEC8C File Offset: 0x002DCE8C
+		// Token: 0x0600C295 RID: 49813 RVA: 0x002FB368 File Offset: 0x002F9568
 		public Span<byte> GetGlowItemMaterialBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600BC4C RID: 48204 RVA: 0x002DEC9C File Offset: 0x002DCE9C
+		// Token: 0x0600C296 RID: 49814 RVA: 0x002FB378 File Offset: 0x002F9578
 		public byte[] GetGlowItemMaterialArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E29 RID: 11817
-		// (get) Token: 0x0600BC4D RID: 48205 RVA: 0x002DECB4 File Offset: 0x002DCEB4
+		// Token: 0x17002EA4 RID: 11940
+		// (get) Token: 0x0600C297 RID: 49815 RVA: 0x002FB390 File Offset: 0x002F9590
 		public string NiaSphereParWhiteColor
 		{
 			get
@@ -212,19 +212,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC4E RID: 48206 RVA: 0x002DECEC File Offset: 0x002DCEEC
+		// Token: 0x0600C298 RID: 49816 RVA: 0x002FB3C8 File Offset: 0x002F95C8
 		public Span<byte> GetNiaSphereParWhiteColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600BC4F RID: 48207 RVA: 0x002DECFC File Offset: 0x002DCEFC
+		// Token: 0x0600C299 RID: 49817 RVA: 0x002FB3D8 File Offset: 0x002F95D8
 		public byte[] GetNiaSphereParWhiteColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0400509A RID: 20634
+		// Token: 0x04005682 RID: 22146
 		private Table __p;
 	}
 }

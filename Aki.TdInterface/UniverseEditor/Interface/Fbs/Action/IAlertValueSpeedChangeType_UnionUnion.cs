@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006192 RID: 24978
+	// Token: 0x020067FD RID: 26621
 	public class IAlertValueSpeedChangeType_UnionUnion
 	{
-		// Token: 0x1700BA33 RID: 47667
-		// (get) Token: 0x0602B056 RID: 176214 RVA: 0x005EF2ED File Offset: 0x005ED4ED
-		// (set) Token: 0x0602B057 RID: 176215 RVA: 0x005EF2F5 File Offset: 0x005ED4F5
+		// Token: 0x1700C3B1 RID: 50097
+		// (get) Token: 0x0602D787 RID: 186247 RVA: 0x00639B61 File Offset: 0x00637D61
+		// (set) Token: 0x0602D788 RID: 186248 RVA: 0x00639B69 File Offset: 0x00637D69
 		public IAlertValueSpeedChangeType_Union Type { get; set; }
 
-		// Token: 0x1700BA34 RID: 47668
-		// (get) Token: 0x0602B058 RID: 176216 RVA: 0x005EF2FE File Offset: 0x005ED4FE
-		// (set) Token: 0x0602B059 RID: 176217 RVA: 0x005EF306 File Offset: 0x005ED506
+		// Token: 0x1700C3B2 RID: 50098
+		// (get) Token: 0x0602D789 RID: 186249 RVA: 0x00639B72 File Offset: 0x00637D72
+		// (set) Token: 0x0602D78A RID: 186250 RVA: 0x00639B7A File Offset: 0x00637D7A
 		public object Value { get; set; }
 
-		// Token: 0x0602B05A RID: 176218 RVA: 0x005EF30F File Offset: 0x005ED50F
+		// Token: 0x0602D78B RID: 186251 RVA: 0x00639B83 File Offset: 0x00637D83
 		public IAlertValueSpeedChangeType_UnionUnion()
 		{
 			this.Type = IAlertValueSpeedChangeType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602B05B RID: 176219 RVA: 0x005EF325 File Offset: 0x005ED525
+		// Token: 0x0602D78C RID: 186252 RVA: 0x00639B99 File Offset: 0x00637D99
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602B05C RID: 176220 RVA: 0x005EF337 File Offset: 0x005ED537
+		// Token: 0x0602D78D RID: 186253 RVA: 0x00639BAB File Offset: 0x00637DAB
 		public IAlertValueSpeedChangeTypeT AsIAlertValueSpeedChangeType()
 		{
 			return this.As<IAlertValueSpeedChangeTypeT>();
 		}
 
-		// Token: 0x0602B05D RID: 176221 RVA: 0x005EF33F File Offset: 0x005ED53F
+		// Token: 0x0602D78E RID: 186254 RVA: 0x00639BB3 File Offset: 0x00637DB3
 		public static IAlertValueSpeedChangeType_UnionUnion FromIAlertValueSpeedChangeType(IAlertValueSpeedChangeTypeT _ialertvaluespeedchangetype)
 		{
 			return new IAlertValueSpeedChangeType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B05E RID: 176222 RVA: 0x005EF354 File Offset: 0x005ED554
+		// Token: 0x0602D78F RID: 186255 RVA: 0x00639BC8 File Offset: 0x00637DC8
 		public IAddOrSubAlertValueChangeSpeedT AsIAddOrSubAlertValueChangeSpeed()
 		{
 			return this.As<IAddOrSubAlertValueChangeSpeedT>();
 		}
 
-		// Token: 0x0602B05F RID: 176223 RVA: 0x005EF35C File Offset: 0x005ED55C
+		// Token: 0x0602D790 RID: 186256 RVA: 0x00639BD0 File Offset: 0x00637DD0
 		public static IAlertValueSpeedChangeType_UnionUnion FromIAddOrSubAlertValueChangeSpeed(IAddOrSubAlertValueChangeSpeedT _iaddorsubalertvaluechangespeed)
 		{
 			return new IAlertValueSpeedChangeType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B060 RID: 176224 RVA: 0x005EF371 File Offset: 0x005ED571
+		// Token: 0x0602D791 RID: 186257 RVA: 0x00639BE5 File Offset: 0x00637DE5
 		public ICustomAlertValueChangeSpeedT AsICustomAlertValueChangeSpeed()
 		{
 			return this.As<ICustomAlertValueChangeSpeedT>();
 		}
 
-		// Token: 0x0602B061 RID: 176225 RVA: 0x005EF379 File Offset: 0x005ED579
+		// Token: 0x0602D792 RID: 186258 RVA: 0x00639BED File Offset: 0x00637DED
 		public static IAlertValueSpeedChangeType_UnionUnion FromICustomAlertValueChangeSpeed(ICustomAlertValueChangeSpeedT _icustomalertvaluechangespeed)
 		{
 			return new IAlertValueSpeedChangeType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B062 RID: 176226 RVA: 0x005EF390 File Offset: 0x005ED590
+		// Token: 0x0602D793 RID: 186259 RVA: 0x00639C04 File Offset: 0x00637E04
 		public static int Pack(FlatBufferBuilder builder, IAlertValueSpeedChangeType_UnionUnion _o)
 		{
 			switch (_o.Type)

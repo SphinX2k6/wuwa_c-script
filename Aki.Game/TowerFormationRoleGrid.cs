@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x02002BF4 RID: 11252
+// Token: 0x0200216F RID: 8559
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 })]
 public class TowerFormationRoleGrid : LoopScrollMediumItemGrid<RoleDataBase>
 {
-	// Token: 0x060175EF RID: 95727 RVA: 0x005F21C8 File Offset: 0x005F03C8
+	// Token: 0x06015020 RID: 86048 RVA: 0x0061ED04 File Offset: 0x0061CF04
 	protected override void OnRefresh(RoleDataBase data, bool isSelected, int gridIndex)
 	{
 		RoleLevelData levelData = data.GetLevelData();
@@ -67,13 +67,13 @@ public class TowerFormationRoleGrid : LoopScrollMediumItemGrid<RoleDataBase>
 		this.SetSelected(bSelected, true);
 	}
 
-	// Token: 0x060175F0 RID: 95728 RVA: 0x005F248B File Offset: 0x005F068B
+	// Token: 0x06015021 RID: 86049 RVA: 0x0061EFC7 File Offset: 0x0061D1C7
 	public void OnForceSelected()
 	{
 		this.SetSelected(true, true);
 	}
 
-	// Token: 0x060175F1 RID: 95729 RVA: 0x005F2498 File Offset: 0x005F0698
+	// Token: 0x06015022 RID: 86050 RVA: 0x0061EFD4 File Offset: 0x0061D1D4
 	private int GetTeamSlot(int roleId)
 	{
 		foreach (KeyValuePair<int, RoleDataBase> keyValuePair in RoleSelectModel.Instance.RoleIndexMap)
@@ -86,13 +86,13 @@ public class TowerFormationRoleGrid : LoopScrollMediumItemGrid<RoleDataBase>
 		return -1;
 	}
 
-	// Token: 0x060175F2 RID: 95730 RVA: 0x005F2504 File Offset: 0x005F0704
+	// Token: 0x06015023 RID: 86051 RVA: 0x0061F040 File Offset: 0x0061D240
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
 	}
 
-	// Token: 0x060175F3 RID: 95731 RVA: 0x005F250E File Offset: 0x005F070E
+	// Token: 0x06015024 RID: 86052 RVA: 0x0061F04A File Offset: 0x0061D24A
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);

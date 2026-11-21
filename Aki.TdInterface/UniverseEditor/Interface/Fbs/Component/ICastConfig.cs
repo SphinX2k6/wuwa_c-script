@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F58 RID: 20312
+	// Token: 0x02005487 RID: 21639
 	public struct ICastConfig : IFlatbufferObject
 	{
-		// Token: 0x1700929C RID: 37532
-		// (get) Token: 0x0602033B RID: 131899 RVA: 0x0047B1DB File Offset: 0x004793DB
+		// Token: 0x17009A15 RID: 39445
+		// (get) Token: 0x0602208D RID: 139405 RVA: 0x004B11CB File Offset: 0x004AF3CB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602033C RID: 131900 RVA: 0x0047B1E8 File Offset: 0x004793E8
+		// Token: 0x0602208E RID: 139406 RVA: 0x004B11D8 File Offset: 0x004AF3D8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602033D RID: 131901 RVA: 0x0047B1F0 File Offset: 0x004793F0
+		// Token: 0x0602208F RID: 139407 RVA: 0x004B11E0 File Offset: 0x004AF3E0
 		public static ICastConfig GetRootAsICastConfig(ByteBuffer _bb)
 		{
 			return ICastConfig.GetRootAsICastConfig(_bb, default(ICastConfig));
 		}
 
-		// Token: 0x0602033E RID: 131902 RVA: 0x0047B20C File Offset: 0x0047940C
+		// Token: 0x06022090 RID: 139408 RVA: 0x004B11FC File Offset: 0x004AF3FC
 		public static ICastConfig GetRootAsICastConfig(ByteBuffer _bb, ICastConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602033F RID: 131903 RVA: 0x0047B229 File Offset: 0x00479429
+		// Token: 0x06022091 RID: 139409 RVA: 0x004B1219 File Offset: 0x004AF419
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020340 RID: 131904 RVA: 0x0047B238 File Offset: 0x00479438
+		// Token: 0x06022092 RID: 139410 RVA: 0x004B1228 File Offset: 0x004AF428
 		public ICastConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700929D RID: 37533
-		// (get) Token: 0x06020341 RID: 131905 RVA: 0x0047B248 File Offset: 0x00479448
+		// Token: 0x17009A16 RID: 39446
+		// (get) Token: 0x06022093 RID: 139411 RVA: 0x004B1238 File Offset: 0x004AF438
 		public int CastAngularVelocity
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700929E RID: 37534
-		// (get) Token: 0x06020342 RID: 131906 RVA: 0x0047B284 File Offset: 0x00479484
+		// Token: 0x17009A17 RID: 39447
+		// (get) Token: 0x06022094 RID: 139412 RVA: 0x004B1274 File Offset: 0x004AF474
 		public string CastCameraShake
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020343 RID: 131907 RVA: 0x0047B2BB File Offset: 0x004794BB
+		// Token: 0x06022095 RID: 139413 RVA: 0x004B12AB File Offset: 0x004AF4AB
 		public Span<byte> GetCastCameraShakeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06020344 RID: 131908 RVA: 0x0047B2CA File Offset: 0x004794CA
+		// Token: 0x06022096 RID: 139414 RVA: 0x004B12BA File Offset: 0x004AF4BA
 		public byte[] GetCastCameraShakeArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700929F RID: 37535
-		// (get) Token: 0x06020345 RID: 131909 RVA: 0x0047B2D8 File Offset: 0x004794D8
+		// Token: 0x17009A18 RID: 39448
+		// (get) Token: 0x06022097 RID: 139415 RVA: 0x004B12C8 File Offset: 0x004AF4C8
 		public int CastVelocity
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020346 RID: 131910 RVA: 0x0047B314 File Offset: 0x00479514
+		// Token: 0x06022098 RID: 139416 RVA: 0x004B1304 File Offset: 0x004AF504
 		public static Offset<ICastConfig> CreateICastConfig(FlatBufferBuilder builder, int CastAngularVelocity = 0, StringOffset CastCameraShakeOffset = default(StringOffset), int CastVelocity = 0)
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICastConfig.EndICastConfig(builder);
 		}
 
-		// Token: 0x06020347 RID: 131911 RVA: 0x0047B338 File Offset: 0x00479538
+		// Token: 0x06022099 RID: 139417 RVA: 0x004B1328 File Offset: 0x004AF528
 		public static void StartICastConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06020348 RID: 131912 RVA: 0x0047B341 File Offset: 0x00479541
+		// Token: 0x0602209A RID: 139418 RVA: 0x004B1331 File Offset: 0x004AF531
 		public static void AddCastAngularVelocity(FlatBufferBuilder builder, int castAngularVelocity)
 		{
 			builder.AddInt(0, castAngularVelocity, 0);
 		}
 
-		// Token: 0x06020349 RID: 131913 RVA: 0x0047B34C File Offset: 0x0047954C
+		// Token: 0x0602209B RID: 139419 RVA: 0x004B133C File Offset: 0x004AF53C
 		public static void AddCastCameraShake(FlatBufferBuilder builder, StringOffset castCameraShakeOffset)
 		{
 			builder.AddOffset(1, castCameraShakeOffset.Value, 0);
 		}
 
-		// Token: 0x0602034A RID: 131914 RVA: 0x0047B35C File Offset: 0x0047955C
+		// Token: 0x0602209C RID: 139420 RVA: 0x004B134C File Offset: 0x004AF54C
 		public static void AddCastVelocity(FlatBufferBuilder builder, int castVelocity)
 		{
 			builder.AddInt(2, castVelocity, 0);
 		}
 
-		// Token: 0x0602034B RID: 131915 RVA: 0x0047B367 File Offset: 0x00479567
+		// Token: 0x0602209D RID: 139421 RVA: 0x004B1357 File Offset: 0x004AF557
 		public static Offset<ICastConfig> EndICastConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ICastConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602034C RID: 131916 RVA: 0x0047B374 File Offset: 0x00479574
+		// Token: 0x0602209E RID: 139422 RVA: 0x004B1364 File Offset: 0x004AF564
 		public ICastConfigT UnPack()
 		{
 			ICastConfigT castConfigT = new ICastConfigT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return castConfigT;
 		}
 
-		// Token: 0x0602034D RID: 131917 RVA: 0x0047B38F File Offset: 0x0047958F
+		// Token: 0x0602209F RID: 139423 RVA: 0x004B137F File Offset: 0x004AF57F
 		public void UnPackTo(ICastConfigT _o)
 		{
 			_o.CastAngularVelocity = this.CastAngularVelocity;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.CastVelocity = this.CastVelocity;
 		}
 
-		// Token: 0x0602034E RID: 131918 RVA: 0x0047B3B8 File Offset: 0x004795B8
+		// Token: 0x060220A0 RID: 139424 RVA: 0x004B13A8 File Offset: 0x004AF5A8
 		public static Offset<ICastConfig> Pack(FlatBufferBuilder builder, ICastConfigT _o)
 		{
 			if (_o == null)
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICastConfig.CreateICastConfig(builder, _o.CastAngularVelocity, castCameraShakeOffset, _o.CastVelocity);
 		}
 
-		// Token: 0x0400DDE4 RID: 56804
+		// Token: 0x0400E98E RID: 59790
 		private Table __p;
 	}
 }

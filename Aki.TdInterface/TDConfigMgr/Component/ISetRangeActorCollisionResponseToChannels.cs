@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006C4 RID: 1732
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000765 RID: 1893
 	public class ISetRangeActorCollisionResponseToChannels
 	{
-		// Token: 0x06002538 RID: 9528 RVA: 0x00064660 File Offset: 0x00062860
+		// Token: 0x06002858 RID: 10328 RVA: 0x0006B6D0 File Offset: 0x000698D0
 		private ISetRangeActorCollisionResponseToChannels_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002539 RID: 9529 RVA: 0x00064698 File Offset: 0x00062898
+		// Token: 0x06002859 RID: 10329 RVA: 0x0006B708 File Offset: 0x00069908
 		public static ISetRangeActorCollisionResponseToChannels Create([Nullable(2)] ISetRangeActorCollisionResponseToChannels instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600253A RID: 9530 RVA: 0x000646AB File Offset: 0x000628AB
+		// Token: 0x0600285A RID: 10330 RVA: 0x0006B71B File Offset: 0x0006991B
 		public static ISetRangeActorCollisionResponseToChannels CreateFromSetValue([Nullable(2)] ISetRangeActorCollisionResponseToChannels_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600253B RID: 9531 RVA: 0x000646BE File Offset: 0x000628BE
+		// Token: 0x0600285B RID: 10331 RVA: 0x0006B72E File Offset: 0x0006992E
 		public ISetRangeActorCollisionResponseToChannels_SetValue ToSetValue()
 		{
 			return new ISetRangeActorCollisionResponseToChannels_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009D5 RID: 2517
-		// (get) Token: 0x0600253C RID: 9532 RVA: 0x000646DD File Offset: 0x000628DD
-		// (set) Token: 0x0600253D RID: 9533 RVA: 0x00064708 File Offset: 0x00062908
+		// Token: 0x17000A93 RID: 2707
+		// (get) Token: 0x0600285C RID: 10332 RVA: 0x0006B74D File Offset: 0x0006994D
+		// (set) Token: 0x0600285D RID: 10333 RVA: 0x0006B778 File Offset: 0x00069978
 		public virtual ECollisionChannelType CollisionChannelType
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009D6 RID: 2518
-		// (get) Token: 0x0600253E RID: 9534 RVA: 0x00064716 File Offset: 0x00062916
-		// (set) Token: 0x0600253F RID: 9535 RVA: 0x00064741 File Offset: 0x00062941
+		// Token: 0x17000A94 RID: 2708
+		// (get) Token: 0x0600285E RID: 10334 RVA: 0x0006B786 File Offset: 0x00069986
+		// (set) Token: 0x0600285F RID: 10335 RVA: 0x0006B7B1 File Offset: 0x000699B1
 		public virtual ECollisionResponseType CollisionResponseType
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001973 RID: 6515
+		// Token: 0x04001B72 RID: 7026
 		[Nullable(2)]
 		protected ISetRangeActorCollisionResponseToChannels FbInstance;
 
-		// Token: 0x04001974 RID: 6516
+		// Token: 0x04001B73 RID: 7027
 		[Nullable(2)]
 		protected ISetRangeActorCollisionResponseToChannels_SetValue PocoInterface;
 	}

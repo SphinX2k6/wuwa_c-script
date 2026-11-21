@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001207 RID: 4615
+// Token: 0x020006BB RID: 1723
 [NullableContext(1)]
 [Nullable(0)]
 public class CumulativeShopTaskView : UiViewBase
 {
-	// Token: 0x06007B89 RID: 31625 RVA: 0x001A1025 File Offset: 0x0019F225
+	// Token: 0x06004F1F RID: 20255 RVA: 0x001A9CDD File Offset: 0x001A7EDD
 	public CumulativeShopTaskView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007B8A RID: 31626 RVA: 0x001A1030 File Offset: 0x0019F230
+	// Token: 0x06004F20 RID: 20256 RVA: 0x001A9CE8 File Offset: 0x001A7EE8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class CumulativeShopTaskView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007B8B RID: 31627 RVA: 0x001A10A0 File Offset: 0x0019F2A0
+	// Token: 0x06004F21 RID: 20257 RVA: 0x001A9D58 File Offset: 0x001A7F58
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CumulativeShopTaskView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class CumulativeShopTaskView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007B8C RID: 31628 RVA: 0x001A10E4 File Offset: 0x0019F2E4
+	// Token: 0x06004F22 RID: 20258 RVA: 0x001A9D9C File Offset: 0x001A7F9C
 	protected override void OnStart()
 	{
 		this.TabScrollView = new GenericScrollViewNew<CumulativeShopTaskTabItem, int>(base.GetScrollViewWithScrollbar(4), new Func<CumulativeShopTaskTabItem>(this.InitTabItem), null, false, null);
@@ -49,13 +49,13 @@ public class CumulativeShopTaskView : UiViewBase
 		this.CaptionItem.SetTitleLocalText("Activity_105100001_QuestList_Desc");
 	}
 
-	// Token: 0x06007B8D RID: 31629 RVA: 0x001A1152 File Offset: 0x0019F352
+	// Token: 0x06004F23 RID: 20259 RVA: 0x001A9E0A File Offset: 0x001A800A
 	protected override void OnBeforeShow()
 	{
 		CumulativeShopController.Instance.ConsumptiveActivityInfoRequest();
 	}
 
-	// Token: 0x06007B8E RID: 31630 RVA: 0x001A1160 File Offset: 0x0019F360
+	// Token: 0x06004F24 RID: 20260 RVA: 0x001A9E18 File Offset: 0x001A8018
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.CumulativeShopTaskRefresh, new Action<int>(this.OnCumulativeShopTaskRefresh));
@@ -63,7 +63,7 @@ public class CumulativeShopTaskView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnActivityUpdate, new Action(this.OnActivityUpdate));
 	}
 
-	// Token: 0x06007B8F RID: 31631 RVA: 0x001A11C4 File Offset: 0x0019F3C4
+	// Token: 0x06004F25 RID: 20261 RVA: 0x001A9E7C File Offset: 0x001A807C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.CumulativeShopTaskRefresh, new Action<int>(this.OnCumulativeShopTaskRefresh));
@@ -71,7 +71,7 @@ public class CumulativeShopTaskView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnActivityUpdate, new Action(this.OnActivityUpdate));
 	}
 
-	// Token: 0x06007B90 RID: 31632 RVA: 0x001A1225 File Offset: 0x0019F425
+	// Token: 0x06004F26 RID: 20262 RVA: 0x001A9EDD File Offset: 0x001A80DD
 	private CumulativeShopTaskTabItem InitTabItem()
 	{
 		return new CumulativeShopTaskTabItem
@@ -80,13 +80,13 @@ public class CumulativeShopTaskView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007B91 RID: 31633 RVA: 0x001A123E File Offset: 0x0019F43E
+	// Token: 0x06004F27 RID: 20263 RVA: 0x001A9EF6 File Offset: 0x001A80F6
 	private CumulativeShopTaskItem InitTaskItem()
 	{
 		return new CumulativeShopTaskItem();
 	}
 
-	// Token: 0x06007B92 RID: 31634 RVA: 0x001A1248 File Offset: 0x0019F448
+	// Token: 0x06004F28 RID: 20264 RVA: 0x001A9F00 File Offset: 0x001A8100
 	private void OnClickTabBack(int tabIndex, UUIExtendToggle toggle)
 	{
 		UUIExtendToggle lastSelectToggle = this.LastSelectToggle;
@@ -106,7 +106,7 @@ public class CumulativeShopTaskView : UiViewBase
 		uiAnimController.Play("", -1, false);
 	}
 
-	// Token: 0x06007B93 RID: 31635 RVA: 0x001A12C0 File Offset: 0x0019F4C0
+	// Token: 0x06004F29 RID: 20265 RVA: 0x001A9F78 File Offset: 0x001A8178
 	private void CumulativeShopTaskRefresh()
 	{
 		List<int> tabTaskList = CumulativeShopController.Instance.GetCumulativeShopData().GetTabTaskList(this.CurrentSelectTabIndex);
@@ -119,13 +119,13 @@ public class CumulativeShopTaskView : UiViewBase
 		uiAnimController.Play("", -1, false);
 	}
 
-	// Token: 0x06007B94 RID: 31636 RVA: 0x001A1317 File Offset: 0x0019F517
+	// Token: 0x06004F2A RID: 20266 RVA: 0x001A9FCF File Offset: 0x001A81CF
 	private void OnCumulativeShopTaskRefresh(int tabIndex)
 	{
 		this.CumulativeShopTaskRefresh();
 	}
 
-	// Token: 0x06007B95 RID: 31637 RVA: 0x001A1320 File Offset: 0x0019F520
+	// Token: 0x06004F2B RID: 20267 RVA: 0x001A9FD8 File Offset: 0x001A81D8
 	private void OnActivityUpdate()
 	{
 		CumulativeShopData cumulativeShopData = CumulativeShopController.Instance.GetCumulativeShopData();
@@ -135,7 +135,7 @@ public class CumulativeShopTaskView : UiViewBase
 		}
 	}
 
-	// Token: 0x06007B96 RID: 31638 RVA: 0x001A1350 File Offset: 0x0019F550
+	// Token: 0x06004F2C RID: 20268 RVA: 0x001AA008 File Offset: 0x001A8208
 	private void CumulativeShopTaskViewDataRefresh()
 	{
 		List<int> taskTabList = new List<int>(CumulativeShopController.Instance.GetCumulativeShopData().TaskTabMap.Keys);
@@ -166,7 +166,7 @@ public class CumulativeShopTaskView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x04003897 RID: 14487
+	// Token: 0x04003930 RID: 14640
 	[Nullable(new byte[]
 	{
 		2,
@@ -174,7 +174,7 @@ public class CumulativeShopTaskView : UiViewBase
 	})]
 	private GenericScrollViewNew<CumulativeShopTaskTabItem, int> TabScrollView;
 
-	// Token: 0x04003898 RID: 14488
+	// Token: 0x04003931 RID: 14641
 	[Nullable(new byte[]
 	{
 		2,
@@ -182,14 +182,14 @@ public class CumulativeShopTaskView : UiViewBase
 	})]
 	private LoopScrollView<CumulativeShopTaskItem, int> TaskLoopScrollView;
 
-	// Token: 0x04003899 RID: 14489
+	// Token: 0x04003932 RID: 14642
 	[Nullable(2)]
 	private UUIExtendToggle LastSelectToggle;
 
-	// Token: 0x0400389A RID: 14490
+	// Token: 0x04003933 RID: 14643
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400389B RID: 14491
+	// Token: 0x04003934 RID: 14644
 	private int CurrentSelectTabIndex;
 }

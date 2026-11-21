@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000419 RID: 1049
+	// Token: 0x0200042F RID: 1071
 	public class ConfigI18nTexturesById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600189F RID: 6303 RVA: 0x000E4FB7 File Offset: 0x000E31B7
+		// Token: 0x06001923 RID: 6435 RVA: 0x000EB70B File Offset: 0x000E990B
 		static ConfigI18nTexturesById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigI18nTexturesById.CreateStaticDefaultValue), new Action(ConfigI18nTexturesById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060018A0 RID: 6304 RVA: 0x000E4FD8 File Offset: 0x000E31D8
+		// Token: 0x06001924 RID: 6436 RVA: 0x000EB72C File Offset: 0x000E992C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigI18nTexturesById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060018A1 RID: 6305 RVA: 0x000E5057 File Offset: 0x000E3257
+		// Token: 0x06001925 RID: 6437 RVA: 0x000EB7AB File Offset: 0x000E99AB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigI18nTexturesById.LogPair = null;
 			ConfigI18nTexturesById.HandleId = 0;
 		}
 
-		// Token: 0x060018A2 RID: 6306 RVA: 0x000E5065 File Offset: 0x000E3265
+		// Token: 0x06001926 RID: 6438 RVA: 0x000EB7B9 File Offset: 0x000E99B9
 		public static void Init()
 		{
 			ConfigI18nTexturesById.HandleId = ConfigCommon.InitDataStatement(ConfigI18nTexturesById.HandleId, "db_i18nresources.db", "select BinData from `I18nTextures` where Id=?");
 		}
 
-		// Token: 0x060018A3 RID: 6307 RVA: 0x000E5080 File Offset: 0x000E3280
+		// Token: 0x06001927 RID: 6439 RVA: 0x000EB7D4 File Offset: 0x000E99D4
 		public static I18nTextures? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigI18nTexturesById.HandleId, ConfigI18nTexturesById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new I18nTextures?(rootAsI18nTextures);
 		}
 
-		// Token: 0x04001C93 RID: 7315
+		// Token: 0x04001D2D RID: 7469
 		private const string DB = "db_i18nresources.db";
 
-		// Token: 0x04001C94 RID: 7316
+		// Token: 0x04001D2E RID: 7470
 		private const string FILE = "i.i18n资源.xlsx";
 
-		// Token: 0x04001C95 RID: 7317
+		// Token: 0x04001D2F RID: 7471
 		private const string TABLE = "I18nTextures";
 
-		// Token: 0x04001C96 RID: 7318
+		// Token: 0x04001D30 RID: 7472
 		private const string COMMAND = "select BinData from `I18nTextures` where Id=?";
 
-		// Token: 0x04001C97 RID: 7319
+		// Token: 0x04001D31 RID: 7473
 		private const string KEY_PREFIX = "I18nTexturesById";
 
-		// Token: 0x04001C98 RID: 7320
+		// Token: 0x04001D32 RID: 7474
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001C99 RID: 7321
+		// Token: 0x04001D33 RID: 7475
 		private static int HandleId;
 	}
 }

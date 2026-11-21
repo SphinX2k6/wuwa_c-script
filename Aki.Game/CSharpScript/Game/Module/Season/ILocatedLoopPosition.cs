@@ -3,17 +3,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Season
 {
-	// Token: 0x02004C77 RID: 19575
+	// Token: 0x02003C28 RID: 15400
 	internal interface ILocatedLoopPosition
 	{
-		// Token: 0x17007CD2 RID: 31954
-		// (get) Token: 0x06032987 RID: 207239
-		// (set) Token: 0x06032988 RID: 207240
+		// Token: 0x1700507C RID: 20604
+		// (get) Token: 0x0602773A RID: 161594
+		// (set) Token: 0x0602773B RID: 161595
 		ESeason Season { get; set; }
 
-		// Token: 0x17007CD3 RID: 31955
-		// (get) Token: 0x06032989 RID: 207241
-		// (set) Token: 0x0603298A RID: 207242
+		// Token: 0x1700507D RID: 20605
+		// (get) Token: 0x0602773C RID: 161596
+		// (set) Token: 0x0602773D RID: 161597
 		ESeasonLoopPhase Phase { get; set; }
 	}
 }

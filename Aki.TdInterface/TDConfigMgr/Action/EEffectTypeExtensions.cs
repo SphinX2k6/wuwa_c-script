@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002313 RID: 8979
+	// Token: 0x02002582 RID: 9602
 	public static class EEffectTypeExtensions
 	{
-		// Token: 0x0600C454 RID: 50260 RVA: 0x001CA8D8 File Offset: 0x001C8AD8
+		// Token: 0x0600D023 RID: 53283 RVA: 0x001E27A0 File Offset: 0x001E09A0
 		public static string ToEnumString(this EEffectType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C455 RID: 50261 RVA: 0x001CA938 File Offset: 0x001C8B38
+		// Token: 0x0600D024 RID: 53284 RVA: 0x001E2800 File Offset: 0x001E0A00
 		public static EEffectType FromString(string name)
 		{
 			EEffectType result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C456 RID: 50262 RVA: 0x001CA964 File Offset: 0x001C8B64
+		// Token: 0x0600D025 RID: 53285 RVA: 0x001E282C File Offset: 0x001E0A2C
 		public static bool TryFromString(string name, out EEffectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C457 RID: 50263 RVA: 0x001CA9DE File Offset: 0x001C8BDE
+		// Token: 0x0600D026 RID: 53286 RVA: 0x001E28A6 File Offset: 0x001E0AA6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C458 RID: 50264 RVA: 0x001CAA0E File Offset: 0x001C8C0E
+		// Token: 0x0600D027 RID: 53287 RVA: 0x001E28D6 File Offset: 0x001E0AD6
 		public static EEffectType[] GetValues()
 		{
 			return new EEffectType[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C459 RID: 50265 RVA: 0x001CAA21 File Offset: 0x001C8C21
+		// Token: 0x0600D028 RID: 53288 RVA: 0x001E28E9 File Offset: 0x001E0AE9
 		public static string[] GetNames()
 		{
 			return new string[]

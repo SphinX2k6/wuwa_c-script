@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DCC RID: 19916
+	// Token: 0x02003D95 RID: 15765
 	public class RoguelikeBossChallengeBuffData
 	{
-		// Token: 0x0401B4AE RID: 111790
+		// Token: 0x04015E81 RID: 89729
 		public int BossId;
 
-		// Token: 0x0401B4AF RID: 111791
+		// Token: 0x04015E82 RID: 89730
 		public int Id;
 
-		// Token: 0x0401B4B0 RID: 111792
+		// Token: 0x04015E83 RID: 89731
 		public bool IsNew;
 
-		// Token: 0x0401B4B1 RID: 111793
+		// Token: 0x04015E84 RID: 89732
 		public bool IsActive;
 
-		// Token: 0x0401B4B2 RID: 111794
+		// Token: 0x04015E85 RID: 89733
 		public EDescModel DescMode = EDescModel.DETAIL;
 	}
 }

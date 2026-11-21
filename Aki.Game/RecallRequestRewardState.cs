@@ -2,33 +2,33 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020014A0 RID: 5280
+// Token: 0x02000954 RID: 2388
 [NullableContext(1)]
 [Nullable(0)]
 public class RecallRequestRewardState : IRegressTransitionState
 {
-	// Token: 0x17000CF6 RID: 3318
-	// (get) Token: 0x060095A0 RID: 38304 RVA: 0x002047E2 File Offset: 0x002029E2
+	// Token: 0x17000D16 RID: 3350
+	// (get) Token: 0x06006935 RID: 26933 RVA: 0x0020D74A File Offset: 0x0020B94A
 	public Action<IRegressTransitionState> EndCallBack { get; }
 
-	// Token: 0x060095A1 RID: 38305 RVA: 0x002047EA File Offset: 0x002029EA
+	// Token: 0x06006936 RID: 26934 RVA: 0x0020D752 File Offset: 0x0020B952
 	public RecallRequestRewardState(Action<IRegressTransitionState> endCallBack)
 	{
 		this.EndCallBack = endCallBack;
 	}
 
-	// Token: 0x060095A2 RID: 38306 RVA: 0x002047F9 File Offset: 0x002029F9
+	// Token: 0x06006937 RID: 26935 RVA: 0x0020D761 File Offset: 0x0020B961
 	public void Transition(UiViewBase view)
 	{
 	}
 
-	// Token: 0x060095A3 RID: 38307 RVA: 0x002047FB File Offset: 0x002029FB
+	// Token: 0x06006938 RID: 26936 RVA: 0x0020D763 File Offset: 0x0020B963
 	public EActivityRecallTransitionStatus GetNextStatus()
 	{
 		return EActivityRecallTransitionStatus.ReqRewardAndJumpActivity;
 	}
 
-	// Token: 0x060095A4 RID: 38308 RVA: 0x002047FE File Offset: 0x002029FE
+	// Token: 0x06006939 RID: 26937 RVA: 0x0020D766 File Offset: 0x0020B966
 	public void End()
 	{
 		this.EndCallBack(this);

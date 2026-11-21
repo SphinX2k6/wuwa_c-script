@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047D2 RID: 18386
+	// Token: 0x02003703 RID: 14083
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickNavigateDynamicScrollItem : UiPanelBase, IDynamicScrollItem<QuickNavigateDynamicData>
 	{
-		// Token: 0x060302D2 RID: 197330 RVA: 0x00B29D70 File Offset: 0x00B27F70
+		// Token: 0x06024AA2 RID: 150178 RVA: 0x00A59C0C File Offset: 0x00A57E0C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060302D3 RID: 197331 RVA: 0x00B29DDC File Offset: 0x00B27FDC
+		// Token: 0x06024AA3 RID: 150179 RVA: 0x00A59C78 File Offset: 0x00A57E78
 		public UniTask Init(UUIItem actor)
 		{
 			QuickNavigateDynamicScrollItem.<Init>d__3 <Init>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060302D4 RID: 197332 RVA: 0x00B29E28 File Offset: 0x00B28028
+		// Token: 0x06024AA4 RID: 150180 RVA: 0x00A59CC4 File Offset: 0x00A57EC4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			QuickNavigateDynamicScrollItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060302D5 RID: 197333 RVA: 0x00B29E6B File Offset: 0x00B2806B
+		// Token: 0x06024AA5 RID: 150181 RVA: 0x00A59D07 File Offset: 0x00A57F07
 		[return: Nullable(2)]
 		public AUIBaseActor GetUsingItem(QuickNavigateDynamicData data)
 		{
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return null;
 		}
 
-		// Token: 0x060302D6 RID: 197334 RVA: 0x00B29E8F File Offset: 0x00B2808F
+		// Token: 0x06024AA6 RID: 150182 RVA: 0x00A59D2B File Offset: 0x00A57F2B
 		[NullableContext(2)]
 		private AUIBaseActor GetItemActor(EQuickNavigateDynamicComponent key)
 		{
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return ((item != null) ? item.GetOwner() : null) as AUIBaseActor;
 		}
 
-		// Token: 0x060302D7 RID: 197335 RVA: 0x00B29EAC File Offset: 0x00B280AC
+		// Token: 0x06024AA7 RID: 150183 RVA: 0x00A59D48 File Offset: 0x00A57F48
 		public void Update(QuickNavigateDynamicData data, int index)
 		{
 			bool flag = data.ItemType == EQuickNavigateItemType.Country;
@@ -111,17 +111,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x060302D8 RID: 197336 RVA: 0x00B29F10 File Offset: 0x00B28110
+		// Token: 0x06024AA8 RID: 150184 RVA: 0x00A59DAC File Offset: 0x00A57FAC
 		public void ClearItem()
 		{
 			base.Destroy(null);
 		}
 
-		// Token: 0x04019F1F RID: 106271
+		// Token: 0x040145D3 RID: 83411
 		[Nullable(2)]
 		private QuickNavigateItemPanelA QuickNavigateItemPanelA;
 
-		// Token: 0x04019F20 RID: 106272
+		// Token: 0x040145D4 RID: 83412
 		[Nullable(2)]
 		private QuickNavigateItemPanelB QuickNavigateItemPanelB;
 	}

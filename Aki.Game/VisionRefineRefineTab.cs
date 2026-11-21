@@ -6,14 +6,14 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200176F RID: 5999
+// Token: 0x02000C28 RID: 3112
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionRefineRefineTab : UiPanelBase, IGridProxy<VisionRefineRefineTabData>
 {
-	// Token: 0x17000E71 RID: 3697
-	// (get) Token: 0x0600ADF1 RID: 44529 RVA: 0x0027332D File Offset: 0x0027152D
-	// (set) Token: 0x0600ADF2 RID: 44530 RVA: 0x00273335 File Offset: 0x00271535
+	// Token: 0x17000E94 RID: 3732
+	// (get) Token: 0x060081D8 RID: 33240 RVA: 0x0027D7F1 File Offset: 0x0027B9F1
+	// (set) Token: 0x060081D9 RID: 33241 RVA: 0x0027D7F9 File Offset: 0x0027B9F9
 	[Nullable(new byte[]
 	{
 		2,
@@ -35,17 +35,17 @@ public class VisionRefineRefineTab : UiPanelBase, IGridProxy<VisionRefineRefineT
 		1
 	})] set; }
 
-	// Token: 0x17000E72 RID: 3698
-	// (get) Token: 0x0600ADF3 RID: 44531 RVA: 0x0027333E File Offset: 0x0027153E
-	// (set) Token: 0x0600ADF4 RID: 44532 RVA: 0x00273346 File Offset: 0x00271546
+	// Token: 0x17000E95 RID: 3733
+	// (get) Token: 0x060081DA RID: 33242 RVA: 0x0027D802 File Offset: 0x0027BA02
+	// (set) Token: 0x060081DB RID: 33243 RVA: 0x0027D80A File Offset: 0x0027BA0A
 	public int GridIndex { get; set; }
 
-	// Token: 0x17000E73 RID: 3699
-	// (get) Token: 0x0600ADF5 RID: 44533 RVA: 0x0027334F File Offset: 0x0027154F
-	// (set) Token: 0x0600ADF6 RID: 44534 RVA: 0x00273357 File Offset: 0x00271557
+	// Token: 0x17000E96 RID: 3734
+	// (get) Token: 0x060081DC RID: 33244 RVA: 0x0027D813 File Offset: 0x0027BA13
+	// (set) Token: 0x060081DD RID: 33245 RVA: 0x0027D81B File Offset: 0x0027BA1B
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600ADF7 RID: 44535 RVA: 0x00273360 File Offset: 0x00271560
+	// Token: 0x060081DE RID: 33246 RVA: 0x0027D824 File Offset: 0x0027BA24
 	public void Refresh(VisionRefineRefineTabData data, bool isSelected, int gridIndex)
 	{
 		this.DataCache = data;
@@ -64,14 +64,14 @@ public class VisionRefineRefineTab : UiPanelBase, IGridProxy<VisionRefineRefineT
 		}
 	}
 
-	// Token: 0x0600ADF8 RID: 44536 RVA: 0x002733DC File Offset: 0x002715DC
+	// Token: 0x060081DF RID: 33247 RVA: 0x0027D8A0 File Offset: 0x0027BAA0
 	public UniTask RefreshAsync(VisionRefineRefineTabData data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data, isSelected, gridIndex);
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600ADF9 RID: 44537 RVA: 0x002733EC File Offset: 0x002715EC
+	// Token: 0x060081E0 RID: 33248 RVA: 0x0027D8B0 File Offset: 0x0027BAB0
 	public void Clear()
 	{
 		this.DataCache = null;
@@ -79,7 +79,7 @@ public class VisionRefineRefineTab : UiPanelBase, IGridProxy<VisionRefineRefineT
 		this.GridIndex = 0;
 	}
 
-	// Token: 0x0600ADFA RID: 44538 RVA: 0x00273404 File Offset: 0x00271604
+	// Token: 0x060081E1 RID: 33249 RVA: 0x0027D8C8 File Offset: 0x0027BAC8
 	public void OnSelected(bool fireEvent)
 	{
 		if (this.DataCache != null)
@@ -93,7 +93,7 @@ public class VisionRefineRefineTab : UiPanelBase, IGridProxy<VisionRefineRefineT
 		}
 	}
 
-	// Token: 0x0600ADFB RID: 44539 RVA: 0x0027343C File Offset: 0x0027163C
+	// Token: 0x060081E2 RID: 33250 RVA: 0x0027D900 File Offset: 0x0027BB00
 	public void OnDeselected(bool fireEvent)
 	{
 		if (this.DataCache != null)
@@ -107,14 +107,14 @@ public class VisionRefineRefineTab : UiPanelBase, IGridProxy<VisionRefineRefineT
 		}
 	}
 
-	// Token: 0x0600ADFC RID: 44540 RVA: 0x00273472 File Offset: 0x00271672
+	// Token: 0x060081E3 RID: 33251 RVA: 0x0027D936 File Offset: 0x0027BB36
 	[return: Nullable(2)]
 	public object GetKey(VisionRefineRefineTabData data, int gridIndex)
 	{
 		return data;
 	}
 
-	// Token: 0x0600ADFD RID: 44541 RVA: 0x00273478 File Offset: 0x00271678
+	// Token: 0x060081E4 RID: 33252 RVA: 0x0027D93C File Offset: 0x0027BB3C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -128,7 +128,7 @@ public class VisionRefineRefineTab : UiPanelBase, IGridProxy<VisionRefineRefineT
 		};
 	}
 
-	// Token: 0x0600ADFE RID: 44542 RVA: 0x002734DF File Offset: 0x002716DF
+	// Token: 0x060081E5 RID: 33253 RVA: 0x0027D9A3 File Offset: 0x0027BBA3
 	private void OnClick(EToggleState toggleState)
 	{
 		VisionRefineRefineTabData dataCache = this.DataCache;
@@ -144,14 +144,14 @@ public class VisionRefineRefineTab : UiPanelBase, IGridProxy<VisionRefineRefineT
 		onClick();
 	}
 
-	// Token: 0x0600ADFF RID: 44543 RVA: 0x002734FB File Offset: 0x002716FB
+	// Token: 0x060081E6 RID: 33254 RVA: 0x0027D9BF File Offset: 0x0027BBBF
 	private bool OnCanChangeExecute()
 	{
 		VisionRefineRefineTabData dataCache = this.DataCache;
 		return ((dataCache != null) ? dataCache.CanChangeExecute : null) == null || this.DataCache.CanChangeExecute(this.DataCache.RefineType);
 	}
 
-	// Token: 0x0600AE00 RID: 44544 RVA: 0x00273530 File Offset: 0x00271730
+	// Token: 0x060081E7 RID: 33255 RVA: 0x0027D9F4 File Offset: 0x0027BBF4
 	public bool CheckChosen(EVisionRefineRefineType currentChosen)
 	{
 		VisionRefineRefineTabData dataCache = this.DataCache;
@@ -159,17 +159,17 @@ public class VisionRefineRefineTab : UiPanelBase, IGridProxy<VisionRefineRefineT
 		return currentChosen == evisionRefineRefineType.GetValueOrDefault() & evisionRefineRefineType != null;
 	}
 
-	// Token: 0x04004F09 RID: 20233
+	// Token: 0x04004FB3 RID: 20403
 	[Nullable(2)]
 	private VisionRefineRefineTabData DataCache;
 
-	// Token: 0x02007D63 RID: 32099
+	// Token: 0x02006EE9 RID: 28393
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x040290F0 RID: 168176
+		// Token: 0x0402441B RID: 148507
 		Toggle,
-		// Token: 0x040290F1 RID: 168177
+		// Token: 0x0402441C RID: 148508
 		Text
 	}
 }

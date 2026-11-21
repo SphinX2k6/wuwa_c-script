@@ -15,13 +15,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.DiffPatch.Update
 {
-	// Token: 0x02000210 RID: 528
+	// Token: 0x02000215 RID: 533
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VideoResUpdate : Singleton
 	{
-		// Token: 0x17000148 RID: 328
-		// (get) Token: 0x06000D7E RID: 3454 RVA: 0x00051C16 File Offset: 0x0004FE16
+		// Token: 0x1700014E RID: 334
+		// (get) Token: 0x06000DBF RID: 3519 RVA: 0x0005470A File Offset: 0x0005290A
 		protected UKuroNetworkChange NetworkListener
 		{
 			get
@@ -34,8 +34,8 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x17000149 RID: 329
-		// (get) Token: 0x06000D7F RID: 3455 RVA: 0x00051C34 File Offset: 0x0004FE34
+		// Token: 0x1700014F RID: 335
+		// (get) Token: 0x06000DC0 RID: 3520 RVA: 0x00054728 File Offset: 0x00052928
 		public Dictionary<string, VideoResourceInfo> VideoMap
 		{
 			get
@@ -44,7 +44,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D80 RID: 3456 RVA: 0x00051C50 File Offset: 0x0004FE50
+		// Token: 0x06000DC1 RID: 3521 RVA: 0x00054744 File Offset: 0x00052944
 		private ETier ResolveTierKey(ETier? tier = null)
 		{
 			if (!RemoteInfo.Instance.IsResourceQualityTierEnabled())
@@ -59,7 +59,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return LauncherDeviceTierLib.GetHighestSupportTier();
 		}
 
-		// Token: 0x06000D81 RID: 3457 RVA: 0x00051C94 File Offset: 0x0004FE94
+		// Token: 0x06000DC2 RID: 3522 RVA: 0x00054788 File Offset: 0x00052988
 		public Dictionary<string, VideoResourceInfo> GetVideoMap(ETier? tier = null)
 		{
 			ETier key = this.ResolveTierKey(tier);
@@ -72,7 +72,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return dictionary;
 		}
 
-		// Token: 0x06000D82 RID: 3458 RVA: 0x00051CD0 File Offset: 0x0004FED0
+		// Token: 0x06000DC3 RID: 3523 RVA: 0x000547C4 File Offset: 0x000529C4
 		private Dictionary<int, string> GetVideoIdToPackNameMap(ETier? tier = null)
 		{
 			ETier key = this.ResolveTierKey(tier);
@@ -85,8 +85,8 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return dictionary;
 		}
 
-		// Token: 0x1700014A RID: 330
-		// (get) Token: 0x06000D83 RID: 3459 RVA: 0x00051D0C File Offset: 0x0004FF0C
+		// Token: 0x17000150 RID: 336
+		// (get) Token: 0x06000DC4 RID: 3524 RVA: 0x00054800 File Offset: 0x00052A00
 		private Dictionary<string, VideoResourceInfo> Video
 		{
 			get
@@ -95,14 +95,14 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D84 RID: 3460 RVA: 0x00051D28 File Offset: 0x0004FF28
+		// Token: 0x06000DC5 RID: 3525 RVA: 0x0005481C File Offset: 0x00052A1C
 		[NullableContext(2)]
 		public void SetViewMgr(HotFixManager viewMgr)
 		{
 			this.ViewMgr = viewMgr;
 		}
 
-		// Token: 0x06000D85 RID: 3461 RVA: 0x00051D31 File Offset: 0x0004FF31
+		// Token: 0x06000DC6 RID: 3526 RVA: 0x00054825 File Offset: 0x00052A25
 		public void ResetNetworkTypeRecord()
 		{
 			this.IsAllowCellDownload = false;
@@ -110,19 +110,19 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			this.CallbackOnNetworkTypeChange = null;
 		}
 
-		// Token: 0x06000D86 RID: 3462 RVA: 0x00051D51 File Offset: 0x0004FF51
+		// Token: 0x06000DC7 RID: 3527 RVA: 0x00054845 File Offset: 0x00052A45
 		public bool GetIsCellNetworkType()
 		{
 			return this.NetworkListener.GetNetworkType() == 3;
 		}
 
-		// Token: 0x06000D87 RID: 3463 RVA: 0x00051D61 File Offset: 0x0004FF61
+		// Token: 0x06000DC8 RID: 3528 RVA: 0x00054855 File Offset: 0x00052A55
 		public bool GetIsAllowCellDownload()
 		{
 			return this.IsAllowCellDownload;
 		}
 
-		// Token: 0x06000D88 RID: 3464 RVA: 0x00051D69 File Offset: 0x0004FF69
+		// Token: 0x06000DC9 RID: 3529 RVA: 0x0005485D File Offset: 0x00052A5D
 		public void SetCallbackOnNetworkTypeChange(Action<byte> callback)
 		{
 			this.NetworkListener.NetworkChangeDelegate.Clear();
@@ -130,19 +130,19 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			this.NetworkListener.NetworkChangeDelegate.Add(this.CallbackOnNetworkTypeChange);
 		}
 
-		// Token: 0x06000D89 RID: 3465 RVA: 0x00051D98 File Offset: 0x0004FF98
+		// Token: 0x06000DCA RID: 3530 RVA: 0x0005488C File Offset: 0x00052A8C
 		public void SetIsAllowCellDownload(bool isAllowCellDownload)
 		{
 			this.IsAllowCellDownload = isAllowCellDownload;
 		}
 
-		// Token: 0x06000D8A RID: 3466 RVA: 0x00051DA1 File Offset: 0x0004FFA1
+		// Token: 0x06000DCB RID: 3531 RVA: 0x00054895 File Offset: 0x00052A95
 		public bool GetIsSeparateVideo()
 		{
 			return this.IsSeparateVideoInternal;
 		}
 
-		// Token: 0x06000D8B RID: 3467 RVA: 0x00051DAC File Offset: 0x0004FFAC
+		// Token: 0x06000DCC RID: 3532 RVA: 0x000548A0 File Offset: 0x00052AA0
 		public bool IsVideoClearGrayBoxHit()
 		{
 			if (!this.IsSeparateVideoInternal)
@@ -167,7 +167,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return true;
 		}
 
-		// Token: 0x06000D8C RID: 3468 RVA: 0x00051E6C File Offset: 0x0005006C
+		// Token: 0x06000DCD RID: 3533 RVA: 0x00054960 File Offset: 0x00052B60
 		public unsafe void Init(AppPathMisc appPathMisc, bool isSeparateVideo, bool isNewUser)
 		{
 			this.PathMisc = appPathMisc;
@@ -198,31 +198,31 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x06000D8D RID: 3469 RVA: 0x00051F41 File Offset: 0x00050141
+		// Token: 0x06000DCE RID: 3534 RVA: 0x00054A35 File Offset: 0x00052C35
 		public void SetVideoResSize(EVideoResSizeType sizeType, long size)
 		{
 			this.VideoResSizeMap[sizeType] = size;
 		}
 
-		// Token: 0x06000D8E RID: 3470 RVA: 0x00051F50 File Offset: 0x00050150
+		// Token: 0x06000DCF RID: 3535 RVA: 0x00054A44 File Offset: 0x00052C44
 		public bool GetIsNewUser()
 		{
 			return this.IsNewUser;
 		}
 
-		// Token: 0x06000D8F RID: 3471 RVA: 0x00051F58 File Offset: 0x00050158
+		// Token: 0x06000DD0 RID: 3536 RVA: 0x00054A4C File Offset: 0x00052C4C
 		public bool GetIsEnableVideoUpdateEntry()
 		{
 			return this.IsSeparateVideoInternal && this.GetIsGrayBoxHit();
 		}
 
-		// Token: 0x06000D90 RID: 3472 RVA: 0x00051F6A File Offset: 0x0005016A
+		// Token: 0x06000DD1 RID: 3537 RVA: 0x00054A5E File Offset: 0x00052C5E
 		public bool GetIsGrayBoxHit()
 		{
 			return false;
 		}
 
-		// Token: 0x06000D91 RID: 3473 RVA: 0x00051F6D File Offset: 0x0005016D
+		// Token: 0x06000DD2 RID: 3538 RVA: 0x00054A61 File Offset: 0x00052C61
 		public long GetVideoResSize(EVideoResSizeType sizeType)
 		{
 			if (this.VideoResSizeMap.ContainsKey(sizeType))
@@ -232,13 +232,13 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return 0L;
 		}
 
-		// Token: 0x06000D92 RID: 3474 RVA: 0x00051F8C File Offset: 0x0005018C
+		// Token: 0x06000DD3 RID: 3539 RVA: 0x00054A80 File Offset: 0x00052C80
 		public void SetVideoResSavedSize(EVideoResSizeType sizeType, long size)
 		{
 			this.VideoResSavedSizeMap[sizeType] = size;
 		}
 
-		// Token: 0x06000D93 RID: 3475 RVA: 0x00051F9B File Offset: 0x0005019B
+		// Token: 0x06000DD4 RID: 3540 RVA: 0x00054A8F File Offset: 0x00052C8F
 		public long GetVideoResSavedSize(EVideoResSizeType sizeType)
 		{
 			if (this.VideoResSavedSizeMap.ContainsKey(sizeType))
@@ -248,13 +248,13 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return 0L;
 		}
 
-		// Token: 0x06000D94 RID: 3476 RVA: 0x00051FBA File Offset: 0x000501BA
+		// Token: 0x06000DD5 RID: 3541 RVA: 0x00054AAE File Offset: 0x00052CAE
 		public void SetVideoResPak(EVideoResSizeType sizeType, List<string> paks)
 		{
 			this.VideoResPakMap[sizeType] = paks;
 		}
 
-		// Token: 0x06000D95 RID: 3477 RVA: 0x00051FCC File Offset: 0x000501CC
+		// Token: 0x06000DD6 RID: 3542 RVA: 0x00054AC0 File Offset: 0x00052CC0
 		public IReadOnlyList<string> GetVideoResPak(EVideoResSizeType sizeType)
 		{
 			List<string> result;
@@ -265,13 +265,13 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return Array.Empty<string>();
 		}
 
-		// Token: 0x06000D96 RID: 3478 RVA: 0x00051FF0 File Offset: 0x000501F0
+		// Token: 0x06000DD7 RID: 3543 RVA: 0x00054AE4 File Offset: 0x00052CE4
 		public void SetAllSpecialVideoResPak(EVideoResSizeType sizeType, List<string> paks)
 		{
 			this.AllSpVideoResPakMap[sizeType] = paks;
 		}
 
-		// Token: 0x06000D97 RID: 3479 RVA: 0x00052000 File Offset: 0x00050200
+		// Token: 0x06000DD8 RID: 3544 RVA: 0x00054AF4 File Offset: 0x00052CF4
 		public IReadOnlyList<string> GetAllSpecialVideoResPak(EVideoResSizeType sizeType)
 		{
 			List<string> result;
@@ -282,7 +282,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return Array.Empty<string>();
 		}
 
-		// Token: 0x06000D98 RID: 3480 RVA: 0x00052024 File Offset: 0x00050224
+		// Token: 0x06000DD9 RID: 3545 RVA: 0x00054B18 File Offset: 0x00052D18
 		public unsafe bool GetIsResPakDownloading(EVideoResSizeType sizeType)
 		{
 			List<string> list;
@@ -321,7 +321,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return flag;
 		}
 
-		// Token: 0x06000D99 RID: 3481 RVA: 0x00052144 File Offset: 0x00050344
+		// Token: 0x06000DDA RID: 3546 RVA: 0x00054C38 File Offset: 0x00052E38
 		public void ResetResPakDownloadingState(EVideoResSizeType sizeType)
 		{
 			if (this.VideoResPakMapDownLoadState.ContainsKey(sizeType))
@@ -330,7 +330,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D9A RID: 3482 RVA: 0x00052164 File Offset: 0x00050364
+		// Token: 0x06000DDB RID: 3547 RVA: 0x00054C58 File Offset: 0x00052E58
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -354,7 +354,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<List<LocalFileInfo>, List<RequireFileInfo>>(list, list2);
 		}
 
-		// Token: 0x06000D9B RID: 3483 RVA: 0x000521F0 File Offset: 0x000503F0
+		// Token: 0x06000DDC RID: 3548 RVA: 0x00054CE4 File Offset: 0x00052EE4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -414,7 +414,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<List<LocalFileInfo>, List<RequireFileInfo>, List<LocalFileInfo>, List<RequireFileInfo>, List<LocalFileInfo>, List<RequireFileInfo>, long, ValueTuple<long>>(list, list2, list3, list4, list5, list6, num, new ValueTuple<long>(num2));
 		}
 
-		// Token: 0x06000D9C RID: 3484 RVA: 0x00052354 File Offset: 0x00050554
+		// Token: 0x06000DDD RID: 3549 RVA: 0x00054E48 File Offset: 0x00053048
 		public void CheckVideoManifestsData()
 		{
 			if (!UKuroLauncherLibrary.NeedHotPatch())
@@ -427,7 +427,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D9D RID: 3485 RVA: 0x0005238C File Offset: 0x0005058C
+		// Token: 0x06000DDE RID: 3550 RVA: 0x00054E80 File Offset: 0x00053080
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -451,7 +451,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<List<LocalFileInfo>, List<RequireFileInfo>>(list, list2);
 		}
 
-		// Token: 0x06000D9E RID: 3486 RVA: 0x00052418 File Offset: 0x00050618
+		// Token: 0x06000DDF RID: 3551 RVA: 0x00054F0C File Offset: 0x0005310C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -497,7 +497,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<List<LocalFileInfo>, List<RequireFileInfo>, long, long>(list, list2, num, num2);
 		}
 
-		// Token: 0x06000D9F RID: 3487 RVA: 0x00052588 File Offset: 0x00050788
+		// Token: 0x06000DE0 RID: 3552 RVA: 0x0005507C File Offset: 0x0005327C
 		public void DeleteSingle(VideoResourceInfo singleInfo)
 		{
 			UKuroPakMountStatic.UnmountPak(singleInfo.LocalPath + "/" + singleInfo.PakFileName);
@@ -527,7 +527,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			instance4.Warn(message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple4));
 		}
 
-		// Token: 0x06000DA0 RID: 3488 RVA: 0x0005266C File Offset: 0x0005086C
+		// Token: 0x06000DE1 RID: 3553 RVA: 0x00055160 File Offset: 0x00053360
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -568,19 +568,19 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<List<RequireFileInfo>, long, long, List<LocalFileInfo>>(list2, num, num2, list);
 		}
 
-		// Token: 0x06000DA1 RID: 3489 RVA: 0x0005274C File Offset: 0x0005094C
+		// Token: 0x06000DE2 RID: 3554 RVA: 0x00055240 File Offset: 0x00053440
 		public long GetFreeSpace()
 		{
 			return ResPackageInfo.GetTotalAndFreeSpace(ResPackageInfo.GetResSaveDir()).Item2;
 		}
 
-		// Token: 0x06000DA2 RID: 3490 RVA: 0x00052760 File Offset: 0x00050960
+		// Token: 0x06000DE3 RID: 3555 RVA: 0x00055254 File Offset: 0x00053454
 		public bool IsVideoDirExists()
 		{
 			return UBlueprintPathsLibrary.DirectoryExists(ResPackageInfo.GetResSaveDir() + "Video/" + this.GetTierSubDir(null) + "Paks");
 		}
 
-		// Token: 0x06000DA3 RID: 3491 RVA: 0x00052798 File Offset: 0x00050998
+		// Token: 0x06000DE4 RID: 3556 RVA: 0x0005528C File Offset: 0x0005348C
 		public void DeleteLegacyVideoDir()
 		{
 			string text = ResPackageInfo.GetResSaveDir() + "Video/Paks";
@@ -597,7 +597,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000DA4 RID: 3492 RVA: 0x0005280C File Offset: 0x00050A0C
+		// Token: 0x06000DE5 RID: 3557 RVA: 0x00055300 File Offset: 0x00053500
 		public string DeleteTierVideoDir(ETier tier)
 		{
 			string text = LauncherDeviceTierLib.TierToLabel(this.ResolveTierKey(new ETier?(tier)));
@@ -617,7 +617,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return text2;
 		}
 
-		// Token: 0x06000DA5 RID: 3493 RVA: 0x000528F0 File Offset: 0x00050AF0
+		// Token: 0x06000DE6 RID: 3558 RVA: 0x000553E4 File Offset: 0x000535E4
 		public void MountPaks()
 		{
 			foreach (KeyValuePair<string, VideoResourceInfo> keyValuePair in this.Video)
@@ -634,7 +634,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000DA6 RID: 3494 RVA: 0x000529B0 File Offset: 0x00050BB0
+		// Token: 0x06000DE7 RID: 3559 RVA: 0x000554A4 File Offset: 0x000536A4
 		public void MountPaksByName(List<string> videoNames)
 		{
 			foreach (string text in videoNames)
@@ -662,7 +662,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000DA7 RID: 3495 RVA: 0x00052A90 File Offset: 0x00050C90
+		// Token: 0x06000DE8 RID: 3560 RVA: 0x00055584 File Offset: 0x00053784
 		[NullableContext(0)]
 		public UniTask<bool> UpdateVideoSource()
 		{
@@ -674,7 +674,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <UpdateVideoSource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DA8 RID: 3496 RVA: 0x00052AD4 File Offset: 0x00050CD4
+		// Token: 0x06000DE9 RID: 3561 RVA: 0x000555C8 File Offset: 0x000537C8
 		private unsafe List<ETier> GetManifestTiers()
 		{
 			if (!RemoteInfo.Instance.IsResourceQualityTierEnabled())
@@ -701,7 +701,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return list2;
 		}
 
-		// Token: 0x06000DA9 RID: 3497 RVA: 0x00052B5C File Offset: 0x00050D5C
+		// Token: 0x06000DEA RID: 3562 RVA: 0x00055650 File Offset: 0x00053850
 		private UniTask RequestVideoCfg(ETier tier)
 		{
 			VideoResUpdate.<RequestVideoCfg>d__66 <RequestVideoCfg>d__;
@@ -713,7 +713,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <RequestVideoCfg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DAA RID: 3498 RVA: 0x00052BA8 File Offset: 0x00050DA8
+		// Token: 0x06000DEB RID: 3563 RVA: 0x0005569C File Offset: 0x0005389C
 		[NullableContext(0)]
 		private UniTask<bool> RequestVideoCfgManifest(ETier tier)
 		{
@@ -726,7 +726,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <RequestVideoCfgManifest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DAB RID: 3499 RVA: 0x00052BF4 File Offset: 0x00050DF4
+		// Token: 0x06000DEC RID: 3564 RVA: 0x000556E8 File Offset: 0x000538E8
 		private bool ResolveVideoManifests(ETier tier)
 		{
 			Dictionary<string, VideoResourceInfo> videoMap = this.GetVideoMap(new ETier?(tier));
@@ -751,7 +751,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return result;
 		}
 
-		// Token: 0x06000DAC RID: 3500 RVA: 0x00052CCC File Offset: 0x00050ECC
+		// Token: 0x06000DED RID: 3565 RVA: 0x000557C0 File Offset: 0x000539C0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -769,7 +769,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <RequestVideoCfgForPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DAD RID: 3501 RVA: 0x00052D20 File Offset: 0x00050F20
+		// Token: 0x06000DEE RID: 3566 RVA: 0x00055814 File Offset: 0x00053A14
 		[return: Nullable(0)]
 		public UniTask<bool> DownloadVideoCfgManifestForConfig(RemoteVideoConfigUpdateTime videoConfig, string mixUri, string appVersion, ETier? tier = null)
 		{
@@ -785,7 +785,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <DownloadVideoCfgManifestForConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DAE RID: 3502 RVA: 0x00052D84 File Offset: 0x00050F84
+		// Token: 0x06000DEF RID: 3567 RVA: 0x00055878 File Offset: 0x00053A78
 		private string GetTierSuffix(ETier? tier = null)
 		{
 			string text = LauncherDeviceTierLib.TierToLabel(this.ResolveTierKey(tier));
@@ -796,7 +796,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return "_" + text.ToLower();
 		}
 
-		// Token: 0x06000DAF RID: 3503 RVA: 0x00052DC4 File Offset: 0x00050FC4
+		// Token: 0x06000DF0 RID: 3568 RVA: 0x000558B8 File Offset: 0x00053AB8
 		private string GetTierSubDir(ETier? tier = null)
 		{
 			string text = LauncherDeviceTierLib.TierToLabel(this.ResolveTierKey(tier));
@@ -807,7 +807,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return text.ToLower() + "/";
 		}
 
-		// Token: 0x06000DB0 RID: 3504 RVA: 0x00052E04 File Offset: 0x00051004
+		// Token: 0x06000DF1 RID: 3569 RVA: 0x000558F8 File Offset: 0x00053AF8
 		private string GetVideoManifestSavePath(string appVersion, ETier? tier = null)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(25, 3);
@@ -819,7 +819,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000DB1 RID: 3505 RVA: 0x00052E5C File Offset: 0x0005105C
+		// Token: 0x06000DF2 RID: 3570 RVA: 0x00055950 File Offset: 0x00053B50
 		private string GetVideoManifestDownloadPath(string mixPath, string appVersion, ETier? tier = null)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(27, 4);
@@ -834,13 +834,13 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000DB2 RID: 3506 RVA: 0x00052EDA File Offset: 0x000510DA
+		// Token: 0x06000DF3 RID: 3571 RVA: 0x000559CE File Offset: 0x00053BCE
 		public string GetVideoLocalSavePath(ETier? tier = null)
 		{
 			return ResPackageInfo.GetResSaveDir() + "Video/" + this.GetTierSubDir(tier) + "Paks";
 		}
 
-		// Token: 0x06000DB3 RID: 3507 RVA: 0x00052EF8 File Offset: 0x000510F8
+		// Token: 0x06000DF4 RID: 3572 RVA: 0x000559EC File Offset: 0x00053BEC
 		private string GetVideoRemoteRoute(string resUri, string appVersion)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(8, 3);
@@ -853,7 +853,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000DB4 RID: 3508 RVA: 0x00052F5C File Offset: 0x0005115C
+		// Token: 0x06000DF5 RID: 3573 RVA: 0x00055A50 File Offset: 0x00053C50
 		public bool ResolveVideoManifestsFromPath(Dictionary<string, VideoResourceInfo> outVideo, string mixUri, string resUri, string appVersion, ETier? tier = null)
 		{
 			string videoManifestSavePath = this.GetVideoManifestSavePath(appVersion, tier);
@@ -888,7 +888,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return true;
 		}
 
-		// Token: 0x06000DB5 RID: 3509 RVA: 0x00053088 File Offset: 0x00051288
+		// Token: 0x06000DF6 RID: 3574 RVA: 0x00055B7C File Offset: 0x00053D7C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -908,7 +908,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <AnalyzeVideoManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DB6 RID: 3510 RVA: 0x000530CC File Offset: 0x000512CC
+		// Token: 0x06000DF7 RID: 3575 RVA: 0x00055BC0 File Offset: 0x00053DC0
 		public List<string> GetVideoResPakByVideoIds(IReadOnlyList<int> videoIds, ETier? tier = null)
 		{
 			Dictionary<int, string> videoIdToPackNameMap = this.GetVideoIdToPackNameMap(tier);
@@ -924,8 +924,8 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return list;
 		}
 
-		// Token: 0x1700014B RID: 331
-		// (get) Token: 0x06000DB7 RID: 3511 RVA: 0x0005313C File Offset: 0x0005133C
+		// Token: 0x17000151 RID: 337
+		// (get) Token: 0x06000DF8 RID: 3576 RVA: 0x00055C30 File Offset: 0x00053E30
 		public static VideoResUpdate Instance
 		{
 			get
@@ -939,12 +939,12 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000DB8 RID: 3512 RVA: 0x0005315F File Offset: 0x0005135F
+		// Token: 0x06000DF9 RID: 3577 RVA: 0x00055C53 File Offset: 0x00053E53
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000DB9 RID: 3513 RVA: 0x00053161 File Offset: 0x00051361
+		// Token: 0x06000DFA RID: 3578 RVA: 0x00055C55 File Offset: 0x00053E55
 		public static void ResetStaticDefaultValue()
 		{
 			VideoResUpdate instance = VideoResUpdate._instance;
@@ -955,77 +955,77 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			VideoResUpdate._instance = null;
 		}
 
-		// Token: 0x06000DBA RID: 3514 RVA: 0x0005317A File Offset: 0x0005137A
+		// Token: 0x06000DFB RID: 3579 RVA: 0x00055C6E File Offset: 0x00053E6E
 		static VideoResUpdate()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(VideoResUpdate.CreateStaticDefaultValue), new Action(VideoResUpdate.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000886 RID: 2182
+		// Token: 0x040008C7 RID: 2247
 		private const int DOWNLOAD_TRY_COUNT = 3;
 
-		// Token: 0x04000887 RID: 2183
+		// Token: 0x040008C8 RID: 2248
 		private const string CLEAR_VIDEO_RES_GRAY_BOX = "ClearVideoResGrayBox";
 
-		// Token: 0x04000888 RID: 2184
+		// Token: 0x040008C9 RID: 2249
 		private readonly Dictionary<ETier, RemoteVideoConfigUpdateTime> TierConfigUpdateInfos = new Dictionary<ETier, RemoteVideoConfigUpdateTime>();
 
-		// Token: 0x04000889 RID: 2185
+		// Token: 0x040008CA RID: 2250
 		private readonly Dictionary<ETier, Dictionary<string, VideoResourceInfo>> TierVideos = new Dictionary<ETier, Dictionary<string, VideoResourceInfo>>();
 
-		// Token: 0x0400088A RID: 2186
+		// Token: 0x040008CB RID: 2251
 		private readonly Dictionary<ETier, Dictionary<int, string>> TierVideoIdToPackNames = new Dictionary<ETier, Dictionary<int, string>>();
 
-		// Token: 0x0400088B RID: 2187
+		// Token: 0x040008CC RID: 2252
 		private readonly Dictionary<string, VideoResourceInfo> PreDownloadVideo = new Dictionary<string, VideoResourceInfo>();
 
-		// Token: 0x0400088C RID: 2188
+		// Token: 0x040008CD RID: 2253
 		private readonly Dictionary<EVideoResSizeType, long> VideoResSizeMap = new Dictionary<EVideoResSizeType, long>();
 
-		// Token: 0x0400088D RID: 2189
+		// Token: 0x040008CE RID: 2254
 		private readonly Dictionary<EVideoResSizeType, long> VideoResSavedSizeMap = new Dictionary<EVideoResSizeType, long>();
 
-		// Token: 0x0400088E RID: 2190
+		// Token: 0x040008CF RID: 2255
 		private readonly Dictionary<EVideoResSizeType, List<string>> VideoResPakMap = new Dictionary<EVideoResSizeType, List<string>>();
 
-		// Token: 0x0400088F RID: 2191
+		// Token: 0x040008D0 RID: 2256
 		private readonly Dictionary<EVideoResSizeType, bool> VideoResPakMapDownLoadState = new Dictionary<EVideoResSizeType, bool>();
 
-		// Token: 0x04000890 RID: 2192
+		// Token: 0x040008D1 RID: 2257
 		private readonly Dictionary<EVideoResSizeType, List<string>> AllSpVideoResPakMap = new Dictionary<EVideoResSizeType, List<string>>();
 
-		// Token: 0x04000891 RID: 2193
+		// Token: 0x040008D2 RID: 2258
 		[Nullable(2)]
 		private AppPathMisc PathMisc;
 
-		// Token: 0x04000892 RID: 2194
+		// Token: 0x040008D3 RID: 2259
 		private bool IsSeparateVideoInternal;
 
-		// Token: 0x04000893 RID: 2195
+		// Token: 0x040008D4 RID: 2260
 		private bool IsNewUser;
 
-		// Token: 0x04000894 RID: 2196
+		// Token: 0x040008D5 RID: 2261
 		private bool IsAllowCellDownload;
 
-		// Token: 0x04000895 RID: 2197
+		// Token: 0x040008D6 RID: 2262
 		[Nullable(2)]
 		private Action<byte> CallbackOnNetworkTypeChange;
 
-		// Token: 0x04000896 RID: 2198
+		// Token: 0x040008D7 RID: 2263
 		[Nullable(2)]
 		private UKuroNetworkChange NetworkListenerInternal;
 
-		// Token: 0x04000897 RID: 2199
+		// Token: 0x040008D8 RID: 2264
 		public bool ManifestInited;
 
-		// Token: 0x04000898 RID: 2200
+		// Token: 0x040008D9 RID: 2265
 		[Nullable(2)]
 		private HotFixManager ViewMgr;
 
-		// Token: 0x04000899 RID: 2201
+		// Token: 0x040008DA RID: 2266
 		public EVideoResSizeType VideoDownloadState = EVideoResSizeType.StartMinNeed;
 
-		// Token: 0x0400089A RID: 2202
+		// Token: 0x040008DB RID: 2267
 		[Nullable(2)]
 		private static VideoResUpdate _instance;
 	}

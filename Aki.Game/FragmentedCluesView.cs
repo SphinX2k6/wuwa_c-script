@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C15 RID: 7189
+// Token: 0x020010D4 RID: 4308
 [NullableContext(1)]
 [Nullable(0)]
 public class FragmentedCluesView : UiViewBase
 {
-	// Token: 0x0600D799 RID: 55193 RVA: 0x0031EB59 File Offset: 0x0031CD59
+	// Token: 0x0600ABAD RID: 43949 RVA: 0x00329EA9 File Offset: 0x003280A9
 	public FragmentedCluesView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600D79A RID: 55194 RVA: 0x0031EB64 File Offset: 0x0031CD64
+	// Token: 0x0600ABAE RID: 43950 RVA: 0x00329EB4 File Offset: 0x003280B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -47,13 +47,13 @@ public class FragmentedCluesView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D79B RID: 55195 RVA: 0x0031ECB1 File Offset: 0x0031CEB1
+	// Token: 0x0600ABAF RID: 43951 RVA: 0x0032A001 File Offset: 0x00328201
 	private void RevertCurrentPageSelect()
 	{
 		this.CurrentDotData[this.CurrentPageIndex] = false;
 	}
 
-	// Token: 0x0600D79C RID: 55196 RVA: 0x0031ECC5 File Offset: 0x0031CEC5
+	// Token: 0x0600ABB0 RID: 43952 RVA: 0x0032A015 File Offset: 0x00328215
 	private void OnLeftBtnClick()
 	{
 		this.RevertCurrentPageSelect();
@@ -65,7 +65,7 @@ public class FragmentedCluesView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600D79D RID: 55197 RVA: 0x0031ECF1 File Offset: 0x0031CEF1
+	// Token: 0x0600ABB1 RID: 43953 RVA: 0x0032A041 File Offset: 0x00328241
 	private void OnRightBtnClick()
 	{
 		this.RevertCurrentPageSelect();
@@ -77,19 +77,19 @@ public class FragmentedCluesView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600D79E RID: 55198 RVA: 0x0031ED2B File Offset: 0x0031CF2B
+	// Token: 0x0600ABB2 RID: 43954 RVA: 0x0032A07B File Offset: 0x0032827B
 	protected override void OnStart()
 	{
 		this.DotLayout = new GenericLayout<MemoryPageDot, bool>(base.GetHorizontalLayout(0), new Func<MemoryPageDot>(this.CreateDot), null, false, true);
 	}
 
-	// Token: 0x0600D79F RID: 55199 RVA: 0x0031ED4E File Offset: 0x0031CF4E
+	// Token: 0x0600ABB3 RID: 43955 RVA: 0x0032A09E File Offset: 0x0032829E
 	private MemoryPageDot CreateDot()
 	{
 		return new MemoryPageDot();
 	}
 
-	// Token: 0x0600D7A0 RID: 55200 RVA: 0x0031ED58 File Offset: 0x0031CF58
+	// Token: 0x0600ABB4 RID: 43956 RVA: 0x0032A0A8 File Offset: 0x003282A8
 	protected override void OnBeforeShow()
 	{
 		this.CurrentOpenTopic = (this.OpenParam as FragmentMemoryCollectData);
@@ -105,7 +105,7 @@ public class FragmentedCluesView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600D7A1 RID: 55201 RVA: 0x0031EDDC File Offset: 0x0031CFDC
+	// Token: 0x0600ABB5 RID: 43957 RVA: 0x0032A12C File Offset: 0x0032832C
 	private void RefreshView()
 	{
 		this.RefreshPageDotLayout();
@@ -116,31 +116,31 @@ public class FragmentedCluesView : UiViewBase
 		this.RefreshLeftBtn();
 	}
 
-	// Token: 0x0600D7A2 RID: 55202 RVA: 0x0031EE04 File Offset: 0x0031D004
+	// Token: 0x0600ABB6 RID: 43958 RVA: 0x0032A154 File Offset: 0x00328354
 	private string GetPageIndexTexture(int index)
 	{
 		return this.CurrentOpenTopic.GetClueContent()[index].Texture;
 	}
 
-	// Token: 0x0600D7A3 RID: 55203 RVA: 0x0031EE2C File Offset: 0x0031D02C
+	// Token: 0x0600ABB7 RID: 43959 RVA: 0x0032A17C File Offset: 0x0032837C
 	private string GetPageIndexDescription(int index)
 	{
 		return this.CurrentOpenTopic.GetClueContent()[index].Desc;
 	}
 
-	// Token: 0x0600D7A4 RID: 55204 RVA: 0x0031EE54 File Offset: 0x0031D054
+	// Token: 0x0600ABB8 RID: 43960 RVA: 0x0032A1A4 File Offset: 0x003283A4
 	private void RefreshName()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), this.CurrentOpenTopic.GetClueEntrance().Title, Array.Empty<object>());
 	}
 
-	// Token: 0x0600D7A5 RID: 55205 RVA: 0x0031EE8A File Offset: 0x0031D08A
+	// Token: 0x0600ABB9 RID: 43961 RVA: 0x0032A1DA File Offset: 0x003283DA
 	private void RefreshDescription()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), this.GetPageIndexDescription(this.CurrentPageIndex), Array.Empty<object>());
 	}
 
-	// Token: 0x0600D7A6 RID: 55206 RVA: 0x0031EEB0 File Offset: 0x0031D0B0
+	// Token: 0x0600ABBA RID: 43962 RVA: 0x0032A200 File Offset: 0x00328400
 	private void RefreshRightBtn()
 	{
 		bool selfInteractive = this.CurrentPageIndex < this.PageMax - 1;
@@ -152,7 +152,7 @@ public class FragmentedCluesView : UiViewBase
 		button.SetSelfInteractive(selfInteractive);
 	}
 
-	// Token: 0x0600D7A7 RID: 55207 RVA: 0x0031EEE0 File Offset: 0x0031D0E0
+	// Token: 0x0600ABBB RID: 43963 RVA: 0x0032A230 File Offset: 0x00328430
 	private void RefreshLeftBtn()
 	{
 		bool selfInteractive = this.CurrentPageIndex > 0;
@@ -164,28 +164,28 @@ public class FragmentedCluesView : UiViewBase
 		button.SetSelfInteractive(selfInteractive);
 	}
 
-	// Token: 0x0600D7A8 RID: 55208 RVA: 0x0031EF0C File Offset: 0x0031D10C
+	// Token: 0x0600ABBC RID: 43964 RVA: 0x0032A25C File Offset: 0x0032845C
 	private void RefreshTexture()
 	{
 		string pageIndexTexture = this.GetPageIndexTexture(this.CurrentPageIndex);
 		base.SetTextureByPath(pageIndexTexture, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x0600D7A9 RID: 55209 RVA: 0x0031EF3E File Offset: 0x0031D13E
+	// Token: 0x0600ABBD RID: 43965 RVA: 0x0032A28E File Offset: 0x0032848E
 	private void RefreshPageDotLayout()
 	{
 		this.CurrentDotData[this.CurrentPageIndex] = true;
 		this.DotLayout.RefreshByData(this.CurrentDotData, null, false);
 	}
 
-	// Token: 0x0400627A RID: 25210
+	// Token: 0x0400634C RID: 25420
 	private List<bool> CurrentDotData;
 
-	// Token: 0x0400627B RID: 25211
+	// Token: 0x0400634D RID: 25421
 	[Nullable(2)]
 	private FragmentMemoryCollectData CurrentOpenTopic;
 
-	// Token: 0x0400627C RID: 25212
+	// Token: 0x0400634E RID: 25422
 	[Nullable(new byte[]
 	{
 		2,
@@ -193,32 +193,32 @@ public class FragmentedCluesView : UiViewBase
 	})]
 	private GenericLayout<MemoryPageDot, bool> DotLayout;
 
-	// Token: 0x0400627D RID: 25213
+	// Token: 0x0400634F RID: 25423
 	private int CurrentPageIndex;
 
-	// Token: 0x0400627E RID: 25214
+	// Token: 0x04006350 RID: 25424
 	private int PageMax;
 
-	// Token: 0x020081D4 RID: 33236
+	// Token: 0x0200735D RID: 29533
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A5FC RID: 173564
+		// Token: 0x04025923 RID: 153891
 		public const int PageDotLayout = 0;
 
-		// Token: 0x0402A5FD RID: 173565
+		// Token: 0x04025924 RID: 153892
 		public const int Texture = 1;
 
-		// Token: 0x0402A5FE RID: 173566
+		// Token: 0x04025925 RID: 153893
 		public const int TextContent = 2;
 
-		// Token: 0x0402A5FF RID: 173567
+		// Token: 0x04025926 RID: 153894
 		public const int TextName = 3;
 
-		// Token: 0x0402A600 RID: 173568
+		// Token: 0x04025927 RID: 153895
 		public const int LeftBtn = 4;
 
-		// Token: 0x0402A601 RID: 173569
+		// Token: 0x04025928 RID: 153896
 		public const int RightBtn = 5;
 	}
 }

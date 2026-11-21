@@ -16,9 +16,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayMontage.TsTaskPlayMontage_C")]
 public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170001BD RID: 445
-	// (get) Token: 0x060009E7 RID: 2535 RVA: 0x00031FF8 File Offset: 0x000301F8
-	// (set) Token: 0x060009E8 RID: 2536 RVA: 0x00032031 File Offset: 0x00030231
+	// Token: 0x170001C0 RID: 448
+	// (get) Token: 0x060009ED RID: 2541 RVA: 0x00033108 File Offset: 0x00031308
+	// (set) Token: 0x060009EE RID: 2542 RVA: 0x00033141 File Offset: 0x00031341
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UAnimMontage> Montage
 	{
@@ -38,9 +38,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001BE RID: 446
-	// (get) Token: 0x060009E9 RID: 2537 RVA: 0x00032056 File Offset: 0x00030256
-	// (set) Token: 0x060009EA RID: 2538 RVA: 0x0003206A File Offset: 0x0003026A
+	// Token: 0x170001C1 RID: 449
+	// (get) Token: 0x060009EF RID: 2543 RVA: 0x00033166 File Offset: 0x00031366
+	// (set) Token: 0x060009F0 RID: 2544 RVA: 0x0003317A File Offset: 0x0003137A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string MontagePath
 	{
@@ -54,9 +54,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001BF RID: 447
-	// (get) Token: 0x060009EB RID: 2539 RVA: 0x0003207F File Offset: 0x0003027F
-	// (set) Token: 0x060009EC RID: 2540 RVA: 0x0003208F File Offset: 0x0003028F
+	// Token: 0x170001C2 RID: 450
+	// (get) Token: 0x060009F1 RID: 2545 RVA: 0x0003318F File Offset: 0x0003138F
+	// (set) Token: 0x060009F2 RID: 2546 RVA: 0x0003319F File Offset: 0x0003139F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int ExpressionId
 	{
@@ -70,9 +70,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001C0 RID: 448
-	// (get) Token: 0x060009ED RID: 2541 RVA: 0x000320A0 File Offset: 0x000302A0
-	// (set) Token: 0x060009EE RID: 2542 RVA: 0x000320B0 File Offset: 0x000302B0
+	// Token: 0x170001C3 RID: 451
+	// (get) Token: 0x060009F3 RID: 2547 RVA: 0x000331B0 File Offset: 0x000313B0
+	// (set) Token: 0x060009F4 RID: 2548 RVA: 0x000331C0 File Offset: 0x000313C0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float LoopDuration
 	{
@@ -86,9 +86,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001C1 RID: 449
-	// (get) Token: 0x060009EF RID: 2543 RVA: 0x000320C1 File Offset: 0x000302C1
-	// (set) Token: 0x060009F0 RID: 2544 RVA: 0x000320D1 File Offset: 0x000302D1
+	// Token: 0x170001C4 RID: 452
+	// (get) Token: 0x060009F5 RID: 2549 RVA: 0x000331D1 File Offset: 0x000313D1
+	// (set) Token: 0x060009F6 RID: 2550 RVA: 0x000331E1 File Offset: 0x000313E1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int RepeatTimes
 	{
@@ -102,9 +102,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001C2 RID: 450
-	// (get) Token: 0x060009F1 RID: 2545 RVA: 0x000320E2 File Offset: 0x000302E2
-	// (set) Token: 0x060009F2 RID: 2546 RVA: 0x000320F2 File Offset: 0x000302F2
+	// Token: 0x170001C5 RID: 453
+	// (get) Token: 0x060009F7 RID: 2551 RVA: 0x000331F2 File Offset: 0x000313F2
+	// (set) Token: 0x060009F8 RID: 2552 RVA: 0x00033202 File Offset: 0x00031402
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool KeepMontageWhenEnd
 	{
@@ -118,9 +118,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001C3 RID: 451
-	// (get) Token: 0x060009F3 RID: 2547 RVA: 0x00032103 File Offset: 0x00030303
-	// (set) Token: 0x060009F4 RID: 2548 RVA: 0x00032117 File Offset: 0x00030317
+	// Token: 0x170001C6 RID: 454
+	// (get) Token: 0x060009F9 RID: 2553 RVA: 0x00033213 File Offset: 0x00031413
+	// (set) Token: 0x060009FA RID: 2554 RVA: 0x00033227 File Offset: 0x00031427
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string InitStateName
 	{
@@ -134,9 +134,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001C4 RID: 452
-	// (get) Token: 0x060009F5 RID: 2549 RVA: 0x0003212C File Offset: 0x0003032C
-	// (set) Token: 0x060009F6 RID: 2550 RVA: 0x00032140 File Offset: 0x00030340
+	// Token: 0x170001C7 RID: 455
+	// (get) Token: 0x060009FB RID: 2555 RVA: 0x0003323C File Offset: 0x0003143C
+	// (set) Token: 0x060009FC RID: 2556 RVA: 0x00033250 File Offset: 0x00031450
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string EndStateName
 	{
@@ -150,9 +150,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001C5 RID: 453
-	// (get) Token: 0x060009F7 RID: 2551 RVA: 0x00032155 File Offset: 0x00030355
-	// (set) Token: 0x060009F8 RID: 2552 RVA: 0x00032165 File Offset: 0x00030365
+	// Token: 0x170001C8 RID: 456
+	// (get) Token: 0x060009FD RID: 2557 RVA: 0x00033265 File Offset: 0x00031465
+	// (set) Token: 0x060009FE RID: 2558 RVA: 0x00033275 File Offset: 0x00031475
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsAdditiveMontage
 	{
@@ -166,9 +166,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001C6 RID: 454
-	// (get) Token: 0x060009F9 RID: 2553 RVA: 0x00032176 File Offset: 0x00030376
-	// (set) Token: 0x060009FA RID: 2554 RVA: 0x00032186 File Offset: 0x00030386
+	// Token: 0x170001C9 RID: 457
+	// (get) Token: 0x060009FF RID: 2559 RVA: 0x00033286 File Offset: 0x00031486
+	// (set) Token: 0x06000A00 RID: 2560 RVA: 0x00033296 File Offset: 0x00031496
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool MaskInteract
 	{
@@ -182,9 +182,9 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001C7 RID: 455
-	// (get) Token: 0x060009FB RID: 2555 RVA: 0x00032197 File Offset: 0x00030397
-	// (set) Token: 0x060009FC RID: 2556 RVA: 0x000321A7 File Offset: 0x000303A7
+	// Token: 0x170001CA RID: 458
+	// (get) Token: 0x06000A01 RID: 2561 RVA: 0x000332A7 File Offset: 0x000314A7
+	// (set) Token: 0x06000A02 RID: 2562 RVA: 0x000332B7 File Offset: 0x000314B7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EndOnBlendOut
 	{
@@ -198,7 +198,7 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060009FD RID: 2557 RVA: 0x000321B8 File Offset: 0x000303B8
+	// Token: 0x06000A03 RID: 2563 RVA: 0x000332C8 File Offset: 0x000314C8
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -222,30 +222,27 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060009FE RID: 2558 RVA: 0x0003228C File Offset: 0x0003048C
+	// Token: 0x06000A04 RID: 2564 RVA: 0x0003339C File Offset: 0x0003159C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskPlayMontage) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskPlayMontage.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060009FF RID: 2559 RVA: 0x00032328 File Offset: 0x00030528
+	// Token: 0x06000A05 RID: 2565 RVA: 0x0003344C File Offset: 0x0003164C
 	[NullableContext(2)]
 	protected unsafe virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -314,7 +311,7 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.PlayMontageByAnimComp();
 	}
 
-	// Token: 0x06000A00 RID: 2560 RVA: 0x00032504 File Offset: 0x00030704
+	// Token: 0x06000A06 RID: 2566 RVA: 0x00033628 File Offset: 0x00031828
 	protected override void OnAbort()
 	{
 		if (this.TsMaskInteract && this.InteractComponent != null)
@@ -344,13 +341,13 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.PlayingMontageId = -1;
 	}
 
-	// Token: 0x06000A01 RID: 2561 RVA: 0x000325BB File Offset: 0x000307BB
+	// Token: 0x06000A07 RID: 2567 RVA: 0x000336DF File Offset: 0x000318DF
 	protected override void OnClear()
 	{
 		this.StopMontageEmotionBubble();
 	}
 
-	// Token: 0x06000A02 RID: 2562 RVA: 0x000325C4 File Offset: 0x000307C4
+	// Token: 0x06000A08 RID: 2568 RVA: 0x000336E8 File Offset: 0x000318E8
 	protected void PlayMontageByAnimComp()
 	{
 		TsTaskPlayMontage.<>c__DisplayClass52_0 CS$<>8__locals1 = new TsTaskPlayMontage.<>c__DisplayClass52_0();
@@ -442,7 +439,7 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06000A03 RID: 2563 RVA: 0x0003262C File Offset: 0x0003082C
+	// Token: 0x06000A09 RID: 2569 RVA: 0x00033750 File Offset: 0x00031950
 	protected void PlayMontageByPerformComp()
 	{
 		bool animalDebug = ServerGmController.Instance.AnimalDebug;
@@ -491,7 +488,7 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x06000A04 RID: 2564 RVA: 0x00032714 File Offset: 0x00030914
+	// Token: 0x06000A0A RID: 2570 RVA: 0x00033838 File Offset: 0x00031A38
 	protected void PlayMontageEmotionBubble()
 	{
 		Entity entity = this.Entity;
@@ -503,7 +500,7 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		characterEmotionBubbleComponent.PlayAnimalMontageEmotion(this.TsMontage);
 	}
 
-	// Token: 0x06000A05 RID: 2565 RVA: 0x00032738 File Offset: 0x00030938
+	// Token: 0x06000A0B RID: 2571 RVA: 0x0003385C File Offset: 0x00031A5C
 	protected void StopMontageEmotionBubble()
 	{
 		Entity entity = this.Entity;
@@ -515,7 +512,7 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		characterEmotionBubbleComponent.StopAnimalMontageEmotion(this.TsMontage);
 	}
 
-	// Token: 0x06000A06 RID: 2566 RVA: 0x0003275C File Offset: 0x0003095C
+	// Token: 0x06000A0C RID: 2572 RVA: 0x00033880 File Offset: 0x00031A80
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskPlayMontage._ClassPtr == IntPtr.Zero)
@@ -525,22 +522,22 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		return TsTaskPlayMontage._ClassPtr;
 	}
 
-	// Token: 0x06000A07 RID: 2567 RVA: 0x00032780 File Offset: 0x00030980
+	// Token: 0x06000A0D RID: 2573 RVA: 0x000338A4 File Offset: 0x00031AA4
 	public TsTaskPlayMontage() : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayMontage.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000A08 RID: 2568 RVA: 0x000327A8 File Offset: 0x000309A8
+	// Token: 0x06000A0E RID: 2574 RVA: 0x000338CC File Offset: 0x00031ACC
 	public TsTaskPlayMontage(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayMontage.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000A09 RID: 2569 RVA: 0x000327DB File Offset: 0x000309DB
+	// Token: 0x06000A0F RID: 2575 RVA: 0x000338FF File Offset: 0x00031AFF
 	protected TsTaskPlayMontage(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000A0A RID: 2570 RVA: 0x0003280C File Offset: 0x00030A0C
+	// Token: 0x06000A10 RID: 2576 RVA: 0x00033930 File Offset: 0x00031B30
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -549,63 +546,63 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040007A4 RID: 1956
+	// Token: 0x040007AC RID: 1964
 	private bool IsInitTsVariables;
 
-	// Token: 0x040007A5 RID: 1957
+	// Token: 0x040007AD RID: 1965
 	private string TsMontage = "";
 
-	// Token: 0x040007A6 RID: 1958
+	// Token: 0x040007AE RID: 1966
 	private bool TsMaskInteract;
 
-	// Token: 0x040007A7 RID: 1959
+	// Token: 0x040007AF RID: 1967
 	private float TsLoopDuration;
 
-	// Token: 0x040007A8 RID: 1960
+	// Token: 0x040007B0 RID: 1968
 	private int TsRepeatTimes;
 
-	// Token: 0x040007A9 RID: 1961
+	// Token: 0x040007B1 RID: 1969
 	private int TsExpressionId;
 
-	// Token: 0x040007AA RID: 1962
+	// Token: 0x040007B2 RID: 1970
 	private bool TsKeepMontageWhenEnd;
 
-	// Token: 0x040007AB RID: 1963
+	// Token: 0x040007B3 RID: 1971
 	private string TsInitStateName = "";
 
-	// Token: 0x040007AC RID: 1964
+	// Token: 0x040007B4 RID: 1972
 	private string TsEndStateName = "";
 
-	// Token: 0x040007AD RID: 1965
+	// Token: 0x040007B5 RID: 1973
 	private bool TsIsAdditiveMontage;
 
-	// Token: 0x040007AE RID: 1966
+	// Token: 0x040007B6 RID: 1974
 	private bool TsEndOnBlendOut;
 
-	// Token: 0x040007AF RID: 1967
+	// Token: 0x040007B7 RID: 1975
 	[Nullable(2)]
 	private PawnInteractNewComponent InteractComponent;
 
-	// Token: 0x040007B0 RID: 1968
+	// Token: 0x040007B8 RID: 1976
 	private int PlayingMontageId = -1;
 
-	// Token: 0x040007B1 RID: 1969
+	// Token: 0x040007B9 RID: 1977
 	[Nullable(2)]
 	private Entity Entity;
 
-	// Token: 0x040007B2 RID: 1970
+	// Token: 0x040007BA RID: 1978
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayMontage.TsTaskPlayMontage_C";
 
-	// Token: 0x040007B3 RID: 1971
+	// Token: 0x040007BB RID: 1979
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040007B4 RID: 1972
+	// Token: 0x040007BC RID: 1980
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040007B5 RID: 1973
+	// Token: 0x040007BD RID: 1981
 	private static int __PropertyOffset_Montage;
 
-	// Token: 0x040007B6 RID: 1974
+	// Token: 0x040007BE RID: 1982
 	[Nullable(new byte[]
 	{
 		2,
@@ -613,33 +610,33 @@ public class TsTaskPlayMontage : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 	})]
 	private TSoftObjectPtr<UAnimMontage> _Montage;
 
-	// Token: 0x040007B7 RID: 1975
+	// Token: 0x040007BF RID: 1983
 	private static int __PropertyOffset_MontagePath;
 
-	// Token: 0x040007B8 RID: 1976
+	// Token: 0x040007C0 RID: 1984
 	private static int __PropertyOffset_ExpressionId;
 
-	// Token: 0x040007B9 RID: 1977
+	// Token: 0x040007C1 RID: 1985
 	private static int __PropertyOffset_LoopDuration;
 
-	// Token: 0x040007BA RID: 1978
+	// Token: 0x040007C2 RID: 1986
 	private static int __PropertyOffset_RepeatTimes;
 
-	// Token: 0x040007BB RID: 1979
+	// Token: 0x040007C3 RID: 1987
 	private static int __PropertyOffset_KeepMontageWhenEnd;
 
-	// Token: 0x040007BC RID: 1980
+	// Token: 0x040007C4 RID: 1988
 	private static int __PropertyOffset_InitStateName;
 
-	// Token: 0x040007BD RID: 1981
+	// Token: 0x040007C5 RID: 1989
 	private static int __PropertyOffset_EndStateName;
 
-	// Token: 0x040007BE RID: 1982
+	// Token: 0x040007C6 RID: 1990
 	private static int __PropertyOffset_IsAdditiveMontage;
 
-	// Token: 0x040007BF RID: 1983
+	// Token: 0x040007C7 RID: 1991
 	private static int __PropertyOffset_MaskInteract;
 
-	// Token: 0x040007C0 RID: 1984
+	// Token: 0x040007C8 RID: 1992
 	private static int __PropertyOffset_EndOnBlendOut;
 }

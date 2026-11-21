@@ -6,43 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200244C RID: 9292
+	// Token: 0x02000792 RID: 1938
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneTrack")]
-	[UnrealStructLayout(192, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 192)]
+	[UnrealStructLayout(208, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 208)]
 	public abstract class UMovieSceneTrack : UMovieSceneSignedObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022D55 RID: 142677 RVA: 0x003382DA File Offset: 0x003364DA
+		// Token: 0x0600A774 RID: 42868 RVA: 0x000F726E File Offset: 0x000F546E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneTrack._ClassPtr;
 		}
 
-		// Token: 0x170085ED RID: 34285
-		// (get) Token: 0x06022D56 RID: 142678 RVA: 0x003382E8 File Offset: 0x003364E8
-		// (set) Token: 0x06022D57 RID: 142679 RVA: 0x00338321 File Offset: 0x00336521
-		public FMovieSceneTrackEvalOptions EvalOptions
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMovieSceneTrackEvalOptions result;
-				if ((result = this._EvalOptions) == null)
-				{
-					result = (this._EvalOptions = new FMovieSceneTrackEvalOptions(base.NativePtr + (IntPtr)UMovieSceneTrack.__PropertyOffset_EvalOptions, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMovieSceneTrackEvalOptions.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneTrack.__PropertyOffset_EvalOptions, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170085EE RID: 34286
-		// (get) Token: 0x06022D58 RID: 142680 RVA: 0x00338344 File Offset: 0x00336544
-		// (set) Token: 0x06022D59 RID: 142681 RVA: 0x0033837D File Offset: 0x0033657D
+		// Token: 0x17001F21 RID: 7969
+		// (get) Token: 0x0600A775 RID: 42869 RVA: 0x000F727C File Offset: 0x000F547C
+		// (set) Token: 0x0600A776 RID: 42870 RVA: 0x000F72B5 File Offset: 0x000F54B5
 		public TArray<FName> TrackTags
 		{
 			get
@@ -61,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085EF RID: 34287
-		// (get) Token: 0x06022D5A RID: 142682 RVA: 0x0033838B File Offset: 0x0033658B
-		// (set) Token: 0x06022D5B RID: 142683 RVA: 0x0033839B File Offset: 0x0033659B
+		// Token: 0x17001F22 RID: 7970
+		// (get) Token: 0x0600A777 RID: 42871 RVA: 0x000F72C3 File Offset: 0x000F54C3
+		// (set) Token: 0x0600A778 RID: 42872 RVA: 0x000F72D3 File Offset: 0x000F54D3
 		public unsafe bool bIsEvalDisabled
 		{
 			get
@@ -76,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085F0 RID: 34288
-		// (get) Token: 0x06022D5C RID: 142684 RVA: 0x003383AC File Offset: 0x003365AC
-		// (set) Token: 0x06022D5D RID: 142685 RVA: 0x003383C0 File Offset: 0x003365C0
+		// Token: 0x17001F23 RID: 7971
+		// (get) Token: 0x0600A779 RID: 42873 RVA: 0x000F72E4 File Offset: 0x000F54E4
+		// (set) Token: 0x0600A77A RID: 42874 RVA: 0x000F72F8 File Offset: 0x000F54F8
 		public unsafe FGuid EvaluationFieldGuid
 		{
 			get
@@ -91,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085F1 RID: 34289
-		// (get) Token: 0x06022D5E RID: 142686 RVA: 0x003383D8 File Offset: 0x003365D8
-		// (set) Token: 0x06022D5F RID: 142687 RVA: 0x00338411 File Offset: 0x00336611
+		// Token: 0x17001F24 RID: 7972
+		// (get) Token: 0x0600A77B RID: 42875 RVA: 0x000F7310 File Offset: 0x000F5510
+		// (set) Token: 0x0600A77C RID: 42876 RVA: 0x000F7349 File Offset: 0x000F5549
 		public FMovieSceneTrackEvaluationField EvaluationField
 		{
 			get
@@ -112,55 +91,48 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022D60 RID: 142688 RVA: 0x00338432 File Offset: 0x00336632
+		// Token: 0x0600A77D RID: 42877 RVA: 0x000F736A File Offset: 0x000F556A
 		static UMovieSceneTrack()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieScene.MovieSceneTrack");
 		}
 
-		// Token: 0x06022D61 RID: 142689 RVA: 0x00338440 File Offset: 0x00336640
+		// Token: 0x0600A77E RID: 42878 RVA: 0x000F7378 File Offset: 0x000F5578
 		protected UMovieSceneTrack() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneTrack.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022D62 RID: 142690 RVA: 0x00338468 File Offset: 0x00336668
+		// Token: 0x0600A77F RID: 42879 RVA: 0x000F73A0 File Offset: 0x000F55A0
 		protected UMovieSceneTrack(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04012996 RID: 76182
+		// Token: 0x040047BA RID: 18362
 		public new const string __ObjectPath = "/Script/MovieScene.MovieSceneTrack";
 
-		// Token: 0x04012997 RID: 76183
+		// Token: 0x040047BB RID: 18363
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04012998 RID: 76184
+		// Token: 0x040047BC RID: 18364
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04012999 RID: 76185
-		internal static int __PropertyOffset_EvalOptions;
-
-		// Token: 0x0401299A RID: 76186
-		[Nullable(2)]
-		private FMovieSceneTrackEvalOptions _EvalOptions;
-
-		// Token: 0x0401299B RID: 76187
+		// Token: 0x040047BD RID: 18365
 		internal static int __PropertyOffset_TrackTags;
 
-		// Token: 0x0401299C RID: 76188
+		// Token: 0x040047BE RID: 18366
 		[Nullable(2)]
 		private TArray<FName> _TrackTags;
 
-		// Token: 0x0401299D RID: 76189
+		// Token: 0x040047BF RID: 18367
 		internal static int __PropertyOffset_bIsEvalDisabled;
 
-		// Token: 0x0401299E RID: 76190
+		// Token: 0x040047C0 RID: 18368
 		internal static int __PropertyOffset_EvaluationFieldGuid;
 
-		// Token: 0x0401299F RID: 76191
+		// Token: 0x040047C1 RID: 18369
 		internal static int __PropertyOffset_EvaluationField;
 
-		// Token: 0x040129A0 RID: 76192
+		// Token: 0x040047C2 RID: 18370
 		[Nullable(2)]
 		private FMovieSceneTrackEvaluationField _EvaluationField;
 	}

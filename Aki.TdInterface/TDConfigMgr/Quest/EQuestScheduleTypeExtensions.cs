@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001270 RID: 4720
+	// Token: 0x020013B0 RID: 5040
 	public static class EQuestScheduleTypeExtensions
 	{
-		// Token: 0x06006A9F RID: 27295 RVA: 0x000FF91C File Offset: 0x000FDB1C
+		// Token: 0x060070F2 RID: 28914 RVA: 0x0010D548 File Offset: 0x0010B748
 		public static string ToEnumString(this EQuestScheduleType value)
 		{
 			string result;
@@ -57,7 +57,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AA0 RID: 27296 RVA: 0x000FF9DC File Offset: 0x000FDBDC
+		// Token: 0x060070F3 RID: 28915 RVA: 0x0010D608 File Offset: 0x0010B808
 		public static EQuestScheduleType FromString(string name)
 		{
 			EQuestScheduleType result;
@@ -68,7 +68,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AA1 RID: 27297 RVA: 0x000FFA08 File Offset: 0x000FDC08
+		// Token: 0x060070F4 RID: 28916 RVA: 0x0010D634 File Offset: 0x0010B834
 		public static bool TryFromString(string name, out EQuestScheduleType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -212,7 +212,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006AA2 RID: 27298 RVA: 0x000FFC14 File Offset: 0x000FDE14
+		// Token: 0x060070F5 RID: 28917 RVA: 0x0010D840 File Offset: 0x0010BA40
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -233,7 +233,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AA3 RID: 27299 RVA: 0x000FFC94 File Offset: 0x000FDE94
+		// Token: 0x060070F6 RID: 28918 RVA: 0x0010D8C0 File Offset: 0x0010BAC0
 		public static EQuestScheduleType[] GetValues()
 		{
 			return new EQuestScheduleType[]
@@ -254,7 +254,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AA4 RID: 27300 RVA: 0x000FFCA8 File Offset: 0x000FDEA8
+		// Token: 0x060070F7 RID: 28919 RVA: 0x0010D8D4 File Offset: 0x0010BAD4
 		public static string[] GetNames()
 		{
 			return new string[]

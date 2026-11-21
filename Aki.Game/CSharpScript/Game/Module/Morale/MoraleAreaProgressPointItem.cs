@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053A0 RID: 21408
+	// Token: 0x02004383 RID: 17283
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Morale
 	})]
 	public class MoraleAreaProgressPointItem : GridProxyAbstract<MoraleAreaProgressData>
 	{
-		// Token: 0x06036B26 RID: 224038 RVA: 0x00CF204C File Offset: 0x00CF024C
+		// Token: 0x0602BA6C RID: 178796 RVA: 0x00C410F4 File Offset: 0x00C3F2F4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.Morale
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036B27 RID: 224039 RVA: 0x00CF2094 File Offset: 0x00CF0294
+		// Token: 0x0602BA6D RID: 178797 RVA: 0x00C4113C File Offset: 0x00C3F33C
 		public override void Refresh(MoraleAreaProgressData data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
 			this.SetUiProgressByScore(data.StartScore);
 		}
 
-		// Token: 0x06036B28 RID: 224040 RVA: 0x00CF20A9 File Offset: 0x00CF02A9
+		// Token: 0x0602BA6E RID: 178798 RVA: 0x00C41151 File Offset: 0x00C3F351
 		private void SetPointShow(bool show)
 		{
 			UUIItem item = base.GetItem(0);
@@ -46,17 +46,17 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(show);
 		}
 
-		// Token: 0x06036B29 RID: 224041 RVA: 0x00CF20C0 File Offset: 0x00CF02C0
+		// Token: 0x0602BA6F RID: 178799 RVA: 0x00C41168 File Offset: 0x00C3F368
 		public void SetUiProgressByScore(int score)
 		{
 			bool pointShow = score >= this.ItemData.TargetScore;
 			this.SetPointShow(pointShow);
 		}
 
-		// Token: 0x0401CE35 RID: 118325
+		// Token: 0x040178CD RID: 96461
 		public MoraleAreaProgressData ItemData;
 
-		// Token: 0x0401CE36 RID: 118326
+		// Token: 0x040178CE RID: 96462
 		[Nullable(new byte[]
 		{
 			2,
@@ -64,11 +64,11 @@ namespace CSharpScript.Game.Module.Morale
 		})]
 		public Action<MoraleAreaProgressData> ClickCallBack;
 
-		// Token: 0x0200B61A RID: 46618
+		// Token: 0x0200A052 RID: 41042
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04037296 RID: 225942
+			// Token: 0x04031CEB RID: 204011
 			ItemPoint
 		}
 	}

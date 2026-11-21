@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007170 RID: 29040
+	// Token: 0x02006224 RID: 25124
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemBuffProducerComponent : EntityComponent
 	{
-		// Token: 0x06046E6F RID: 290415 RVA: 0x011E5CC8 File Offset: 0x011E3EC8
+		// Token: 0x0603C6CF RID: 247503 RVA: 0x01141318 File Offset: 0x0113F518
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			BuffProducerComponent buffProducerComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemBuffProducerComponent>() as BuffProducerComponent;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E70 RID: 290416 RVA: 0x011E5DF8 File Offset: 0x011E3FF8
+		// Token: 0x0603C6D0 RID: 247504 RVA: 0x01141448 File Offset: 0x0113F648
 		protected unsafe override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E71 RID: 290417 RVA: 0x011E6066 File Offset: 0x011E4266
+		// Token: 0x0603C6D1 RID: 247505 RVA: 0x011416B6 File Offset: 0x0113F8B6
 		protected override void OnActivate()
 		{
 			if (!this.StateComp.IsInState(SceneItemStateComponent.ESceneItemState.Born))
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E72 RID: 290418 RVA: 0x011E607C File Offset: 0x011E427C
+		// Token: 0x0603C6D2 RID: 247506 RVA: 0x011416CC File Offset: 0x0113F8CC
 		protected override void OnTick(float delta)
 		{
 			if (!this.WorldOwner || this.SelfState != SceneItemStateComponent.ESceneItemState.Active)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E73 RID: 290419 RVA: 0x011E60AE File Offset: 0x011E42AE
+		// Token: 0x0603C6D3 RID: 247507 RVA: 0x011416FE File Offset: 0x0113F8FE
 		protected override bool OnEnd()
 		{
 			if (this.RangeComp != null)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E74 RID: 290420 RVA: 0x011E60D6 File Offset: 0x011E42D6
+		// Token: 0x0603C6D4 RID: 247508 RVA: 0x01141726 File Offset: 0x0113F926
 		private void AddEvents()
 		{
 			if (this.EventsInited)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.EventsInited = true;
 		}
 
-		// Token: 0x06046E75 RID: 290421 RVA: 0x011E610A File Offset: 0x011E430A
+		// Token: 0x0603C6D5 RID: 247509 RVA: 0x0114175A File Offset: 0x0113F95A
 		private void RemoveEvents()
 		{
 			if (!this.EventsInited)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.EventsInited = false;
 		}
 
-		// Token: 0x06046E76 RID: 290422 RVA: 0x011E613E File Offset: 0x011E433E
+		// Token: 0x0603C6D6 RID: 247510 RVA: 0x0114178E File Offset: 0x0113F98E
 		private void OnPlayerTriggerCallback(bool isEnter)
 		{
 			this.IsInRange = isEnter;
@@ -188,13 +188,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E77 RID: 290423 RVA: 0x011E6167 File Offset: 0x011E4367
+		// Token: 0x0603C6D7 RID: 247511 RVA: 0x011417B7 File Offset: 0x0113F9B7
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			this.OnSceneItemStateChange();
 		}
 
-		// Token: 0x06046E78 RID: 290424 RVA: 0x011E6170 File Offset: 0x011E4370
+		// Token: 0x0603C6D8 RID: 247512 RVA: 0x011417C0 File Offset: 0x0113F9C0
 		private void OnSceneItemStateChange()
 		{
 			if (!this.WorldOwner)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E79 RID: 290425 RVA: 0x011E61C4 File Offset: 0x011E43C4
+		// Token: 0x0603C6D9 RID: 247513 RVA: 0x01141814 File Offset: 0x0113FA14
 		private void OnPerformanceUpdate(float delta)
 		{
 			BuffProducerComponent config = this.Config;
@@ -241,14 +241,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E7A RID: 290426 RVA: 0x011E6230 File Offset: 0x011E4430
+		// Token: 0x0603C6DA RID: 247514 RVA: 0x01141880 File Offset: 0x0113FA80
 		private void OnPerformanceComplete()
 		{
 			this.IsInPerformance = false;
 			this.ApplyBuffToPlayer();
 		}
 
-		// Token: 0x06046E7B RID: 290427 RVA: 0x011E6240 File Offset: 0x011E4440
+		// Token: 0x0603C6DB RID: 247515 RVA: 0x01141890 File Offset: 0x0113FA90
 		private bool CheckPlayerHasBuff()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return flag;
 		}
 
-		// Token: 0x06046E7C RID: 290428 RVA: 0x011E62B2 File Offset: 0x011E44B2
+		// Token: 0x0603C6DC RID: 247516 RVA: 0x01141902 File Offset: 0x0113FB02
 		private void UndoApplyBuffToPlayer()
 		{
 			if (this.IsBusyOperatingBuff || !this.CheckPlayerHasBuff())
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			SceneItemBuffController.Instance.BuffOperate(base.Entity.Id, BuffOperateType.UndoBuff, new Action<BuffOperateType, bool>(this.OnBuffOperateCallBack));
 		}
 
-		// Token: 0x06046E7D RID: 290429 RVA: 0x011E62EE File Offset: 0x011E44EE
+		// Token: 0x0603C6DD RID: 247517 RVA: 0x0114193E File Offset: 0x0113FB3E
 		private void ApplyBuffToPlayer()
 		{
 			if (this.IsBusyOperatingBuff || this.CheckPlayerHasBuff())
@@ -303,13 +303,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			SceneItemBuffController.Instance.BuffOperate(base.Entity.Id, BuffOperateType.AddBuff, new Action<BuffOperateType, bool>(this.OnBuffOperateCallBack));
 		}
 
-		// Token: 0x06046E7E RID: 290430 RVA: 0x011E632A File Offset: 0x011E452A
+		// Token: 0x0603C6DE RID: 247518 RVA: 0x0114197A File Offset: 0x0113FB7A
 		private void OnBuffOperateCallBack(BuffOperateType type, bool isSuccess)
 		{
 			this.IsBusyOperatingBuff = false;
 		}
 
-		// Token: 0x06046E7F RID: 290431 RVA: 0x011E6334 File Offset: 0x011E4534
+		// Token: 0x0603C6DF RID: 247519 RVA: 0x01141984 File Offset: 0x0113FB84
 		private void FlyToPlayer(float delta)
 		{
 			if (Global.BaseCharacter == null)
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E80 RID: 290432 RVA: 0x011E64C4 File Offset: 0x011E46C4
+		// Token: 0x0603C6E0 RID: 247520 RVA: 0x01141B14 File Offset: 0x0113FD14
 		private void CreateBullet(float delta)
 		{
 			if (string.IsNullOrEmpty(this.BulletId))
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.IsInPerformance = false;
 		}
 
-		// Token: 0x06046E81 RID: 290433 RVA: 0x011E65E8 File Offset: 0x011E47E8
+		// Token: 0x0603C6E1 RID: 247521 RVA: 0x01141C38 File Offset: 0x0113FE38
 		[NullableContext(1)]
 		private void OnBulletHit(global::HitInformation hitData, [Nullable(2)] IAttributeSet attackerAttribute)
 		{
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E82 RID: 290434 RVA: 0x011E6664 File Offset: 0x011E4864
+		// Token: 0x0603C6E2 RID: 247522 RVA: 0x01141CB4 File Offset: 0x0113FEB4
 		private void OnBulletTimeOut(float delta)
 		{
 			if (EventSystem.Instance.HasWithTarget<global::HitInformation, IAttributeSet>(this.BulletEntity, EEventName.BulletHit, new Action<global::HitInformation, IAttributeSet>(this.OnBulletHit)))
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnPerformanceComplete();
 		}
 
-		// Token: 0x06046E83 RID: 290435 RVA: 0x011E66CC File Offset: 0x011E48CC
+		// Token: 0x0603C6E3 RID: 247523 RVA: 0x01141D1C File Offset: 0x0113FF1C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -424,230 +424,210 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemBuffProducerComponent sceneItemBuffProducerComponent = (SceneItemBuffProducerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ConfigId"))
+			this.ConfigId = sceneItemBuffProducerComponent.ConfigId;
+			if (sceneItemBuffProducerComponent.ActorComp == null)
 			{
-				this.ConfigId = sceneItemBuffProducerComponent.ConfigId;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemBuffProducerComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CommonTagComp"))
+			if (sceneItemBuffProducerComponent.CommonTagComp == null)
 			{
-				if (sceneItemBuffProducerComponent.CommonTagComp == null)
-				{
-					this.CommonTagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.CommonTagComp), "CommonTagComp"))
-				{
-					return false;
-				}
+				this.CommonTagComp = null;
 			}
-			if (base.CanResetComponentProperty("StateComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommonTagComp), "CommonTagComp"))
 			{
-				if (sceneItemBuffProducerComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RangeComp"))
+			if (sceneItemBuffProducerComponent.StateComp == null)
 			{
-				if (sceneItemBuffProducerComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
+				this.StateComp = null;
 			}
-			if (base.CanResetComponentProperty("IsInPerformance"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
-				this.IsInPerformance = sceneItemBuffProducerComponent.IsInPerformance;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsBusyOperatingBuff"))
+			if (sceneItemBuffProducerComponent.RangeComp == null)
 			{
-				this.IsBusyOperatingBuff = sceneItemBuffProducerComponent.IsBusyOperatingBuff;
+				this.RangeComp = null;
 			}
-			if (base.CanResetComponentProperty("SelfState"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
-				this.SelfState = sceneItemBuffProducerComponent.SelfState;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsInRange"))
+			this.IsInPerformance = sceneItemBuffProducerComponent.IsInPerformance;
+			this.IsBusyOperatingBuff = sceneItemBuffProducerComponent.IsBusyOperatingBuff;
+			this.SelfState = sceneItemBuffProducerComponent.SelfState;
+			this.IsInRange = sceneItemBuffProducerComponent.IsInRange;
+			this.EventsInited = sceneItemBuffProducerComponent.EventsInited;
+			this.WorldOwner = sceneItemBuffProducerComponent.WorldOwner;
+			this.BuffId = sceneItemBuffProducerComponent.BuffId;
+			if (sceneItemBuffProducerComponent.Config == null)
 			{
-				this.IsInRange = sceneItemBuffProducerComponent.IsInRange;
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("EventsInited"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				this.EventsInited = sceneItemBuffProducerComponent.EventsInited;
+				return false;
 			}
-			if (base.CanResetComponentProperty("WorldOwner"))
+			this.ContextMessageId = sceneItemBuffProducerComponent.ContextMessageId;
+			if (sceneItemBuffProducerComponent.Direction == null)
 			{
-				this.WorldOwner = sceneItemBuffProducerComponent.WorldOwner;
+				this.Direction = null;
 			}
-			if (base.CanResetComponentProperty("BuffId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Direction), "Direction"))
 			{
-				this.BuffId = sceneItemBuffProducerComponent.BuffId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemBuffProducerComponent.LocationCache == null)
 			{
-				if (sceneItemBuffProducerComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BuffProducerComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.LocationCache = null;
 			}
-			if (base.CanResetComponentProperty("ContextMessageId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LocationCache), "LocationCache"))
 			{
-				this.ContextMessageId = sceneItemBuffProducerComponent.ContextMessageId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("Direction"))
+			if (sceneItemBuffProducerComponent.BulletOffset == null)
 			{
-				if (sceneItemBuffProducerComponent.Direction == null)
-				{
-					this.Direction = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.Direction), "Direction"))
-				{
-					return false;
-				}
+				this.BulletOffset = null;
 			}
-			if (base.CanResetComponentProperty("LocationCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletOffset), "BulletOffset"))
 			{
-				if (sceneItemBuffProducerComponent.LocationCache == null)
-				{
-					this.LocationCache = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LocationCache), "LocationCache"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("BulletOffset"))
+			this.BulletId = sceneItemBuffProducerComponent.BulletId;
+			if (sceneItemBuffProducerComponent.BulletEntity == null)
 			{
-				if (sceneItemBuffProducerComponent.BulletOffset == null)
-				{
-					this.BulletOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.BulletOffset), "BulletOffset"))
-				{
-					return false;
-				}
+				this.BulletEntity = null;
 			}
-			if (base.CanResetComponentProperty("BulletId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletEntity), "BulletEntity"))
 			{
-				this.BulletId = sceneItemBuffProducerComponent.BulletId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("BulletEntity"))
+			if (sceneItemBuffProducerComponent.TimerHandle == null)
 			{
-				if (sceneItemBuffProducerComponent.BulletEntity == null)
-				{
-					this.BulletEntity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.BulletEntity), "BulletEntity"))
-				{
-					return false;
-				}
+				this.TimerHandle = null;
 			}
-			if (base.CanResetComponentProperty("TimerHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimerHandle), "TimerHandle"))
 			{
-				if (sceneItemBuffProducerComponent.TimerHandle == null)
-				{
-					this.TimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.TimerHandle), "TimerHandle"))
-				{
-					return false;
-				}
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x0402538A RID: 152458
+		// Token: 0x1700721F RID: 29215
+		// (get) Token: 0x0603C6E4 RID: 247524 RVA: 0x01141F62 File Offset: 0x01140162
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007220 RID: 29216
+		// (get) Token: 0x0603C6E5 RID: 247525 RVA: 0x01141F65 File Offset: 0x01140165
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007221 RID: 29217
+		// (get) Token: 0x0603C6E6 RID: 247526 RVA: 0x01141F68 File Offset: 0x01140168
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007222 RID: 29218
+		// (get) Token: 0x0603C6E7 RID: 247527 RVA: 0x01141F6B File Offset: 0x0114016B
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FFF1 RID: 131057
 		private const float DISTANCE_THRESHOLD = 100f;
 
-		// Token: 0x0402538B RID: 152459
+		// Token: 0x0401FFF2 RID: 131058
 		private const float NORMALIZE = 0.01f;
 
-		// Token: 0x0402538C RID: 152460
+		// Token: 0x0401FFF3 RID: 131059
 		private const float SPEED = 600f;
 
-		// Token: 0x0402538D RID: 152461
+		// Token: 0x0401FFF4 RID: 131060
 		private const int MAX_BULLET_HIT_TIME = 5000;
 
-		// Token: 0x0402538E RID: 152462
+		// Token: 0x0401FFF5 RID: 131061
 		private int ConfigId;
 
-		// Token: 0x0402538F RID: 152463
+		// Token: 0x0401FFF6 RID: 131062
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025390 RID: 152464
+		// Token: 0x0401FFF7 RID: 131063
 		private LevelTagComponent CommonTagComp;
 
-		// Token: 0x04025391 RID: 152465
+		// Token: 0x0401FFF8 RID: 131064
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04025392 RID: 152466
+		// Token: 0x0401FFF9 RID: 131065
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x04025393 RID: 152467
+		// Token: 0x0401FFFA RID: 131066
 		private bool IsInPerformance;
 
-		// Token: 0x04025394 RID: 152468
+		// Token: 0x0401FFFB RID: 131067
 		private bool IsBusyOperatingBuff;
 
-		// Token: 0x04025395 RID: 152469
+		// Token: 0x0401FFFC RID: 131068
 		private SceneItemStateComponent.ESceneItemState SelfState = SceneItemStateComponent.ESceneItemState.Normal;
 
-		// Token: 0x04025396 RID: 152470
+		// Token: 0x0401FFFD RID: 131069
 		private bool IsInRange = true;
 
-		// Token: 0x04025397 RID: 152471
+		// Token: 0x0401FFFE RID: 131070
 		private bool EventsInited;
 
-		// Token: 0x04025398 RID: 152472
+		// Token: 0x0401FFFF RID: 131071
 		private bool WorldOwner;
 
-		// Token: 0x04025399 RID: 152473
+		// Token: 0x04020000 RID: 131072
 		private long BuffId;
 
-		// Token: 0x0402539A RID: 152474
+		// Token: 0x04020001 RID: 131073
 		private BuffProducerComponent Config;
 
-		// Token: 0x0402539B RID: 152475
+		// Token: 0x04020002 RID: 131074
 		private long? ContextMessageId;
 
-		// Token: 0x0402539C RID: 152476
+		// Token: 0x04020003 RID: 131075
 		private global::Vector Direction;
 
-		// Token: 0x0402539D RID: 152477
+		// Token: 0x04020004 RID: 131076
 		private global::Vector LocationCache;
 
-		// Token: 0x0402539E RID: 152478
+		// Token: 0x04020005 RID: 131077
 		private global::Vector BulletOffset;
 
-		// Token: 0x0402539F RID: 152479
+		// Token: 0x04020006 RID: 131078
 		[Nullable(1)]
 		private string BulletId = "";
 
-		// Token: 0x040253A0 RID: 152480
+		// Token: 0x04020007 RID: 131079
 		private Entity BulletEntity;
 
-		// Token: 0x040253A1 RID: 152481
+		// Token: 0x04020008 RID: 131080
 		private TimerHandle TimerHandle;
 	}
 }

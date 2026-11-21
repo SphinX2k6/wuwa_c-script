@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001709 RID: 5897
+// Token: 0x02000BC1 RID: 3009
 [NullableContext(1)]
 [Nullable(0)]
 public static class EBlackScreenShowAnimType
 {
-	// Token: 0x04004D22 RID: 19746
+	// Token: 0x04004DC9 RID: 19913
 	public const string None = "None";
 
-	// Token: 0x04004D23 RID: 19747
+	// Token: 0x04004DCA RID: 19914
 	public const string Start = "Start";
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000645 RID: 1605
+	// Token: 0x0200065D RID: 1629
 	public class ConfigPayShopRecommendById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060025AE RID: 9646 RVA: 0x0012EA8F File Offset: 0x0012CC8F
+		// Token: 0x0600263E RID: 9790 RVA: 0x0013550B File Offset: 0x0013370B
 		static ConfigPayShopRecommendById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPayShopRecommendById.CreateStaticDefaultValue), new Action(ConfigPayShopRecommendById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060025AF RID: 9647 RVA: 0x0012EAB0 File Offset: 0x0012CCB0
+		// Token: 0x0600263F RID: 9791 RVA: 0x0013552C File Offset: 0x0013372C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPayShopRecommendById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060025B0 RID: 9648 RVA: 0x0012EB2F File Offset: 0x0012CD2F
+		// Token: 0x06002640 RID: 9792 RVA: 0x001355AB File Offset: 0x001337AB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPayShopRecommendById.LogPair = null;
 			ConfigPayShopRecommendById.HandleId = 0;
 		}
 
-		// Token: 0x060025B1 RID: 9649 RVA: 0x0012EB3D File Offset: 0x0012CD3D
+		// Token: 0x06002641 RID: 9793 RVA: 0x001355B9 File Offset: 0x001337B9
 		public static void Init()
 		{
 			ConfigPayShopRecommendById.HandleId = ConfigCommon.InitDataStatement(ConfigPayShopRecommendById.HandleId, "db_payshop.db", "select BinData from `PayShopRecommend` where Id=?");
 		}
 
-		// Token: 0x060025B2 RID: 9650 RVA: 0x0012EB58 File Offset: 0x0012CD58
+		// Token: 0x06002642 RID: 9794 RVA: 0x001355D4 File Offset: 0x001337D4
 		public static PayShopRecommend? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPayShopRecommendById.HandleId, ConfigPayShopRecommendById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PayShopRecommend?(rootAsPayShopRecommend);
 		}
 
-		// Token: 0x04002BC9 RID: 11209
+		// Token: 0x04002C71 RID: 11377
 		private const string DB = "db_payshop.db";
 
-		// Token: 0x04002BCA RID: 11210
+		// Token: 0x04002C72 RID: 11378
 		private const string FILE = "s.商业化商城.xlsx";
 
-		// Token: 0x04002BCB RID: 11211
+		// Token: 0x04002C73 RID: 11379
 		private const string TABLE = "PayShopRecommend";
 
-		// Token: 0x04002BCC RID: 11212
+		// Token: 0x04002C74 RID: 11380
 		private const string COMMAND = "select BinData from `PayShopRecommend` where Id=?";
 
-		// Token: 0x04002BCD RID: 11213
+		// Token: 0x04002C75 RID: 11381
 		private const string KEY_PREFIX = "PayShopRecommendById";
 
-		// Token: 0x04002BCE RID: 11214
+		// Token: 0x04002C76 RID: 11382
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002BCF RID: 11215
+		// Token: 0x04002C77 RID: 11383
 		private static int HandleId;
 	}
 }

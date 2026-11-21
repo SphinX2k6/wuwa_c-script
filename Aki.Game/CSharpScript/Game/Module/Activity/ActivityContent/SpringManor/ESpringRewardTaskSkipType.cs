@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200603E RID: 24638
+	// Token: 0x02004FBC RID: 20412
 	public enum ESpringRewardTaskSkipType
 	{
-		// Token: 0x0402093F RID: 133439
+		// Token: 0x0401B26C RID: 111212
 		None,
-		// Token: 0x04020940 RID: 133440
+		// Token: 0x0401B26D RID: 111213
 		View,
-		// Token: 0x04020941 RID: 133441
+		// Token: 0x0401B26E RID: 111214
 		WorldPosition
 	}
 }

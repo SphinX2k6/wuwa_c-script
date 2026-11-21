@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000152 RID: 338
+	// Token: 0x02000165 RID: 357
 	[EnumExtensions]
 	public enum EThrowMotion
 	{
-		// Token: 0x0400067C RID: 1660
+		// Token: 0x040006C1 RID: 1729
 		Projectile,
-		// Token: 0x0400067D RID: 1661
+		// Token: 0x040006C2 RID: 1730
 		Circumnutation,
-		// Token: 0x0400067E RID: 1662
+		// Token: 0x040006C3 RID: 1731
 		TrackTarget,
-		// Token: 0x0400067F RID: 1663
+		// Token: 0x040006C4 RID: 1732
 		Levitate,
-		// Token: 0x04000680 RID: 1664
+		// Token: 0x040006C5 RID: 1733
 		FreeFall
 	}
 }

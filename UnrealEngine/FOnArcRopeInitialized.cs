@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C74 RID: 7284
+	// Token: 0x02000517 RID: 1303
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnArcRopeInitialized : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C427 RID: 115751 RVA: 0x0029A7D8 File Offset: 0x002989D8
+		// Token: 0x060079D6 RID: 31190 RVA: 0x000B2BA4 File Offset: 0x000B0DA4
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnArcRopeInitialized.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C428 RID: 115752 RVA: 0x0029A7E4 File Offset: 0x002989E4
+		// Token: 0x060079D7 RID: 31191 RVA: 0x000B2BB0 File Offset: 0x000B0DB0
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnArcRopeInitialized._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FOnArcRopeInitialized._FunctionPtr;
 		}
 
-		// Token: 0x0601C429 RID: 115753 RVA: 0x0029A807 File Offset: 0x00298A07
+		// Token: 0x060079D8 RID: 31192 RVA: 0x000B2BD3 File Offset: 0x000B0DD3
 		public FOnArcRopeInitialized()
 		{
 		}
 
-		// Token: 0x0601C42A RID: 115754 RVA: 0x0029A80F File Offset: 0x00298A0F
+		// Token: 0x060079D9 RID: 31193 RVA: 0x000B2BDB File Offset: 0x000B0DDB
 		[NullableContext(2)]
 		public FOnArcRopeInitialized(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C42B RID: 115755 RVA: 0x0029A819 File Offset: 0x00298A19
+		// Token: 0x060079DA RID: 31194 RVA: 0x000B2BE5 File Offset: 0x000B0DE5
 		public FOnArcRopeInitialized(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C42C RID: 115756 RVA: 0x0029A824 File Offset: 0x00298A24
+		// Token: 0x060079DB RID: 31195 RVA: 0x000B2BF0 File Offset: 0x000B0DF0
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C42D RID: 115757 RVA: 0x0029A856 File Offset: 0x00298A56
+		// Token: 0x060079DC RID: 31196 RVA: 0x000B2C22 File Offset: 0x000B0E22
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FOnArcRopeInitialized.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FOnArcRopeInitialized.RegisterId);
 		}
 
-		// Token: 0x0601C42E RID: 115758 RVA: 0x0029A890 File Offset: 0x00298A90
+		// Token: 0x060079DD RID: 31197 RVA: 0x000B2C5C File Offset: 0x000B0E5C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C42F RID: 115759 RVA: 0x0029A899 File Offset: 0x00298A99
+		// Token: 0x060079DE RID: 31198 RVA: 0x000B2C65 File Offset: 0x000B0E65
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0601C430 RID: 115760 RVA: 0x0029A8A4 File Offset: 0x00298AA4
+		// Token: 0x060079DF RID: 31199 RVA: 0x000B2C70 File Offset: 0x000B0E70
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400F321 RID: 62241
+		// Token: 0x040033C3 RID: 13251
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F322 RID: 62242
+		// Token: 0x040033C4 RID: 13252
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRopeEffect.OnArcRopeInitialized__DelegateSignature";
 
-		// Token: 0x0400F323 RID: 62243
+		// Token: 0x040033C5 RID: 13253
 		private static int RegisterId;
 
-		// Token: 0x0200320B RID: 12811
+		// Token: 0x02000C80 RID: 3200
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401706E RID: 94318
+			// Token: 0x04005EE2 RID: 24290
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

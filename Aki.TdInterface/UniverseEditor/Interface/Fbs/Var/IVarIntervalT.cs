@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B09 RID: 15113
+	// Token: 0x02003F0B RID: 16139
 	public class IVarIntervalT
 	{
-		// Token: 0x170067B0 RID: 26544
-		// (get) Token: 0x060149F7 RID: 84471 RVA: 0x00300B4B File Offset: 0x002FED4B
-		// (set) Token: 0x060149F8 RID: 84472 RVA: 0x00300B53 File Offset: 0x002FED53
+		// Token: 0x17006D4B RID: 27979
+		// (get) Token: 0x06015EA1 RID: 89761 RVA: 0x00326DDB File Offset: 0x00324FDB
+		// (set) Token: 0x06015EA2 RID: 89762 RVA: 0x00326DE3 File Offset: 0x00324FE3
 		public TVarRefUnion VarMin { get; set; }
 
-		// Token: 0x170067B1 RID: 26545
-		// (get) Token: 0x060149F9 RID: 84473 RVA: 0x00300B5C File Offset: 0x002FED5C
-		// (set) Token: 0x060149FA RID: 84474 RVA: 0x00300B64 File Offset: 0x002FED64
+		// Token: 0x17006D4C RID: 27980
+		// (get) Token: 0x06015EA3 RID: 89763 RVA: 0x00326DEC File Offset: 0x00324FEC
+		// (set) Token: 0x06015EA4 RID: 89764 RVA: 0x00326DF4 File Offset: 0x00324FF4
 		public TVarRefUnion VarMax { get; set; }
 
-		// Token: 0x060149FB RID: 84475 RVA: 0x00300B6D File Offset: 0x002FED6D
+		// Token: 0x06015EA5 RID: 89765 RVA: 0x00326DFD File Offset: 0x00324FFD
 		public IVarIntervalT()
 		{
 			this.VarMin = null;

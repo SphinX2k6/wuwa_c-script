@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020000EC RID: 236
+// Token: 0x020000EE RID: 238
 [NullableContext(1)]
 [Nullable(0)]
 public class DataTableCacheData : Singleton
 {
-	// Token: 0x06000739 RID: 1849 RVA: 0x00027C78 File Offset: 0x00025E78
+	// Token: 0x0600077B RID: 1915 RVA: 0x00028278 File Offset: 0x00026478
 	[return: Nullable(2)]
 	public unsafe T GetOrCreate<[Nullable(0)] T>(UDataTable table, string rowName, [Nullable(new byte[]
 	{
@@ -55,15 +55,15 @@ public class DataTableCacheData : Singleton
 		}
 	}
 
-	// Token: 0x0600073A RID: 1850 RVA: 0x00027DA9 File Offset: 0x00025FA9
+	// Token: 0x0600077C RID: 1916 RVA: 0x000283A9 File Offset: 0x000265A9
 	protected override bool OnClear()
 	{
 		this.Cache.Clear();
 		return base.OnClear();
 	}
 
-	// Token: 0x170000E4 RID: 228
-	// (get) Token: 0x0600073B RID: 1851 RVA: 0x00027DBC File Offset: 0x00025FBC
+	// Token: 0x170000F6 RID: 246
+	// (get) Token: 0x0600077D RID: 1917 RVA: 0x000283BC File Offset: 0x000265BC
 	public static DataTableCacheData Instance
 	{
 		get
@@ -77,12 +77,12 @@ public class DataTableCacheData : Singleton
 		}
 	}
 
-	// Token: 0x0600073C RID: 1852 RVA: 0x00027DDF File Offset: 0x00025FDF
+	// Token: 0x0600077E RID: 1918 RVA: 0x000283DF File Offset: 0x000265DF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600073D RID: 1853 RVA: 0x00027DE1 File Offset: 0x00025FE1
+	// Token: 0x0600077F RID: 1919 RVA: 0x000283E1 File Offset: 0x000265E1
 	public static void ResetStaticDefaultValue()
 	{
 		DataTableCacheData instance = DataTableCacheData._instance;
@@ -93,24 +93,24 @@ public class DataTableCacheData : Singleton
 		DataTableCacheData._instance = null;
 	}
 
-	// Token: 0x0600073E RID: 1854 RVA: 0x00027DFA File Offset: 0x00025FFA
+	// Token: 0x06000780 RID: 1920 RVA: 0x000283FA File Offset: 0x000265FA
 	static DataTableCacheData()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DataTableCacheData.CreateStaticDefaultValue), new Action(DataTableCacheData.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040005C1 RID: 1473
+	// Token: 0x040005D0 RID: 1488
 	private readonly WeakMap<UDataTable, DataTableCacheData.DataTableRowCache> Cache = new WeakMap<UDataTable, DataTableCacheData.DataTableRowCache>();
 
-	// Token: 0x040005C2 RID: 1474
+	// Token: 0x040005D1 RID: 1489
 	[Nullable(2)]
 	private static DataTableCacheData _instance;
 
-	// Token: 0x020001D2 RID: 466
+	// Token: 0x020001D7 RID: 471
 	[NullableContext(0)]
 	private sealed class DataTableRowCache
 	{
-		// Token: 0x04000883 RID: 2179
+		// Token: 0x040008A5 RID: 2213
 		[Nullable(1)]
 		public readonly Dictionary<string, WeakReference<UnrealProxyObject>> Rows = new Dictionary<string, WeakReference<UnrealProxyObject>>(StringComparer.OrdinalIgnoreCase);
 	}

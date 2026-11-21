@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200129F RID: 4767
+	// Token: 0x020013E5 RID: 5093
 	public class ETargetBattleAttributeJsonConverter : JsonConverter<ETargetBattleAttribute>
 	{
-		// Token: 0x06006B74 RID: 27508 RVA: 0x001022D0 File Offset: 0x001004D0
+		// Token: 0x060071E2 RID: 29154 RVA: 0x00110298 File Offset: 0x0010E498
 		public override ETargetBattleAttribute Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ETargetBattleAttributeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B75 RID: 27509 RVA: 0x001022F4 File Offset: 0x001004F4
+		// Token: 0x060071E3 RID: 29155 RVA: 0x001102BC File Offset: 0x0010E4BC
 		public override void Write(Utf8JsonWriter writer, ETargetBattleAttribute value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

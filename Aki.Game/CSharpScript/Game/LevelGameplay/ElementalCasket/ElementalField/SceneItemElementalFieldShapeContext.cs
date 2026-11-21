@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EA1 RID: 28321
+	// Token: 0x02006021 RID: 24609
 	[RequiredMember]
 	public class SceneItemElementalFieldShapeContext : ISceneItemElementalFieldShapeContext
 	{
-		// Token: 0x17009A72 RID: 39538
-		// (get) Token: 0x0604501E RID: 282654 RVA: 0x0110DA68 File Offset: 0x0110BC68
-		// (set) Token: 0x0604501F RID: 282655 RVA: 0x0110DA70 File Offset: 0x0110BC70
+		// Token: 0x17006FA9 RID: 28585
+		// (get) Token: 0x0603B1BF RID: 242111 RVA: 0x010B7B44 File Offset: 0x010B5D44
+		// (set) Token: 0x0603B1C0 RID: 242112 RVA: 0x010B7B4C File Offset: 0x010B5D4C
 		[Nullable(new byte[]
 		{
 			1,
@@ -31,9 +31,9 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			1
 		})] set; }
 
-		// Token: 0x17009A73 RID: 39539
-		// (get) Token: 0x06045020 RID: 282656 RVA: 0x0110DA79 File Offset: 0x0110BC79
-		// (set) Token: 0x06045021 RID: 282657 RVA: 0x0110DA81 File Offset: 0x0110BC81
+		// Token: 0x17006FAA RID: 28586
+		// (get) Token: 0x0603B1C1 RID: 242113 RVA: 0x010B7B55 File Offset: 0x010B5D55
+		// (set) Token: 0x0603B1C2 RID: 242114 RVA: 0x010B7B5D File Offset: 0x010B5D5D
 		[Nullable(new byte[]
 		{
 			1,
@@ -50,9 +50,9 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			2
 		})] set; }
 
-		// Token: 0x17009A74 RID: 39540
-		// (get) Token: 0x06045022 RID: 282658 RVA: 0x0110DA8A File Offset: 0x0110BC8A
-		// (set) Token: 0x06045023 RID: 282659 RVA: 0x0110DA92 File Offset: 0x0110BC92
+		// Token: 0x17006FAB RID: 28587
+		// (get) Token: 0x0603B1C3 RID: 242115 RVA: 0x010B7B66 File Offset: 0x010B5D66
+		// (set) Token: 0x0603B1C4 RID: 242116 RVA: 0x010B7B6E File Offset: 0x010B5D6E
 		[Nullable(new byte[]
 		{
 			1,
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			2
 		})] set; }
 
-		// Token: 0x06045024 RID: 282660 RVA: 0x0110DA9B File Offset: 0x0110BC9B
+		// Token: 0x0603B1C5 RID: 242117 RVA: 0x010B7B77 File Offset: 0x010B5D77
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public SceneItemElementalFieldShapeContext()

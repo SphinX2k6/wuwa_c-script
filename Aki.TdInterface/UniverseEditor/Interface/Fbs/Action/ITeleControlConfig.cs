@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007370 RID: 29552
+	// Token: 0x02007B57 RID: 31575
 	public struct ITeleControlConfig : IFlatbufferObject
 	{
-		// Token: 0x1700E059 RID: 57433
-		// (get) Token: 0x06035A1E RID: 219678 RVA: 0x0074D97E File Offset: 0x0074BB7E
+		// Token: 0x1700EC69 RID: 60521
+		// (get) Token: 0x06038DB9 RID: 232889 RVA: 0x007AFEBE File Offset: 0x007AE0BE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035A1F RID: 219679 RVA: 0x0074D98B File Offset: 0x0074BB8B
+		// Token: 0x06038DBA RID: 232890 RVA: 0x007AFECB File Offset: 0x007AE0CB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035A20 RID: 219680 RVA: 0x0074D994 File Offset: 0x0074BB94
+		// Token: 0x06038DBB RID: 232891 RVA: 0x007AFED4 File Offset: 0x007AE0D4
 		public static ITeleControlConfig GetRootAsITeleControlConfig(ByteBuffer _bb)
 		{
 			return ITeleControlConfig.GetRootAsITeleControlConfig(_bb, default(ITeleControlConfig));
 		}
 
-		// Token: 0x06035A21 RID: 219681 RVA: 0x0074D9B0 File Offset: 0x0074BBB0
+		// Token: 0x06038DBC RID: 232892 RVA: 0x007AFEF0 File Offset: 0x007AE0F0
 		public static ITeleControlConfig GetRootAsITeleControlConfig(ByteBuffer _bb, ITeleControlConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035A22 RID: 219682 RVA: 0x0074D9CD File Offset: 0x0074BBCD
+		// Token: 0x06038DBD RID: 232893 RVA: 0x007AFF0D File Offset: 0x007AE10D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035A23 RID: 219683 RVA: 0x0074D9DC File Offset: 0x0074BBDC
+		// Token: 0x06038DBE RID: 232894 RVA: 0x007AFF1C File Offset: 0x007AE11C
 		public ITeleControlConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E05A RID: 57434
-		// (get) Token: 0x06035A24 RID: 219684 RVA: 0x0074D9EC File Offset: 0x0074BBEC
+		// Token: 0x1700EC6A RID: 60522
+		// (get) Token: 0x06038DBF RID: 232895 RVA: 0x007AFF2C File Offset: 0x007AE12C
 		public EExploreStateType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E05B RID: 57435
-		// (get) Token: 0x06035A25 RID: 219685 RVA: 0x0074DA28 File Offset: 0x0074BC28
+		// Token: 0x1700EC6B RID: 60523
+		// (get) Token: 0x06038DC0 RID: 232896 RVA: 0x007AFF68 File Offset: 0x007AE168
 		public ETeleControlType TeleControlType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035A26 RID: 219686 RVA: 0x0074DA64 File Offset: 0x0074BC64
+		// Token: 0x06038DC1 RID: 232897 RVA: 0x007AFFA4 File Offset: 0x007AE1A4
 		public static Offset<ITeleControlConfig> CreateITeleControlConfig(FlatBufferBuilder builder, EExploreStateType Type = EExploreStateType.TeleControl, ETeleControlType TeleControlType = ETeleControlType.BigWorld)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleControlConfig.EndITeleControlConfig(builder);
 		}
 
-		// Token: 0x06035A27 RID: 219687 RVA: 0x0074DA81 File Offset: 0x0074BC81
+		// Token: 0x06038DC2 RID: 232898 RVA: 0x007AFFC1 File Offset: 0x007AE1C1
 		public static void StartITeleControlConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06035A28 RID: 219688 RVA: 0x0074DA8A File Offset: 0x0074BC8A
+		// Token: 0x06038DC3 RID: 232899 RVA: 0x007AFFCA File Offset: 0x007AE1CA
 		public static void AddType(FlatBufferBuilder builder, EExploreStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035A29 RID: 219689 RVA: 0x0074DA95 File Offset: 0x0074BC95
+		// Token: 0x06038DC4 RID: 232900 RVA: 0x007AFFD5 File Offset: 0x007AE1D5
 		public static void AddTeleControlType(FlatBufferBuilder builder, ETeleControlType teleControlType)
 		{
 			builder.AddByte(1, (byte)teleControlType, 0);
 		}
 
-		// Token: 0x06035A2A RID: 219690 RVA: 0x0074DAA0 File Offset: 0x0074BCA0
+		// Token: 0x06038DC5 RID: 232901 RVA: 0x007AFFE0 File Offset: 0x007AE1E0
 		public static Offset<ITeleControlConfig> EndITeleControlConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleControlConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06035A2B RID: 219691 RVA: 0x0074DAB0 File Offset: 0x0074BCB0
+		// Token: 0x06038DC6 RID: 232902 RVA: 0x007AFFF0 File Offset: 0x007AE1F0
 		public ITeleControlConfigT UnPack()
 		{
 			ITeleControlConfigT teleControlConfigT = new ITeleControlConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return teleControlConfigT;
 		}
 
-		// Token: 0x06035A2C RID: 219692 RVA: 0x0074DACB File Offset: 0x0074BCCB
+		// Token: 0x06038DC7 RID: 232903 RVA: 0x007B000B File Offset: 0x007AE20B
 		public void UnPackTo(ITeleControlConfigT _o)
 		{
 			_o.Type = this.Type;
 			_o.TeleControlType = this.TeleControlType;
 		}
 
-		// Token: 0x06035A2D RID: 219693 RVA: 0x0074DAE8 File Offset: 0x0074BCE8
+		// Token: 0x06038DC8 RID: 232904 RVA: 0x007B0028 File Offset: 0x007AE228
 		public static Offset<ITeleControlConfig> Pack(FlatBufferBuilder builder, ITeleControlConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleControlConfig.CreateITeleControlConfig(builder, _o.Type, _o.TeleControlType);
 		}
 
-		// Token: 0x0401217F RID: 74111
+		// Token: 0x04013198 RID: 78232
 		private Table __p;
 	}
 }

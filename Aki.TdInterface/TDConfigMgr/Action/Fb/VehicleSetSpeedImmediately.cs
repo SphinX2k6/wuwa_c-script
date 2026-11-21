@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AA6 RID: 10918
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D9A RID: 11674
 	public class VehicleSetSpeedImmediately : ActionParams
 	{
-		// Token: 0x0600EFBC RID: 61372 RVA: 0x0022D769 File Offset: 0x0022B969
+		// Token: 0x0600FE72 RID: 65138 RVA: 0x0024B475 File Offset: 0x00249675
 		public static VehicleSetSpeedImmediately Create(IVehicleSetSpeedImmediately? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C32 RID: 19506
-		// (get) Token: 0x0600EFBD RID: 61373 RVA: 0x0022D788 File Offset: 0x0022B988
+		// Token: 0x17004FEC RID: 20460
+		// (get) Token: 0x0600FE73 RID: 65139 RVA: 0x0024B494 File Offset: 0x00249694
 		public virtual ISetVehicleSpeedImmediatelyType SetSpeedConfig
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083E2 RID: 33762
+		// Token: 0x04008AE6 RID: 35558
 		private IVehicleSetSpeedImmediately Instance;
 
-		// Token: 0x040083E3 RID: 33763
+		// Token: 0x04008AE7 RID: 35559
 		private ISetVehicleSpeedImmediatelyType _SetSpeedConfigCache;
 
-		// Token: 0x040083E4 RID: 33764
+		// Token: 0x04008AE8 RID: 35560
 		private bool _SetSpeedConfigInited;
 	}
 }

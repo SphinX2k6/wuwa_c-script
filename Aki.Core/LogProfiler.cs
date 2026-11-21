@@ -9,7 +9,7 @@ using System.Text;
 [Nullable(0)]
 public class LogProfiler
 {
-	// Token: 0x0600014D RID: 333 RVA: 0x000091DC File Offset: 0x000073DC
+	// Token: 0x0600014F RID: 335 RVA: 0x00008EC0 File Offset: 0x000070C0
 	public LogProfiler(string name, bool isDynamic = false)
 	{
 		this._Children = null;
@@ -22,19 +22,19 @@ public class LogProfiler
 		this._Describe = string.Empty;
 	}
 
-	// Token: 0x0600014E RID: 334 RVA: 0x0000922D File Offset: 0x0000742D
+	// Token: 0x06000150 RID: 336 RVA: 0x00008F11 File Offset: 0x00007111
 	public static LogProfiler Create(string name)
 	{
 		return new LogProfiler(name, false);
 	}
 
-	// Token: 0x0600014F RID: 335 RVA: 0x00009236 File Offset: 0x00007436
+	// Token: 0x06000151 RID: 337 RVA: 0x00008F1A File Offset: 0x0000711A
 	public void SetDescribe(string describe)
 	{
 		this._Describe = describe;
 	}
 
-	// Token: 0x06000150 RID: 336 RVA: 0x00009240 File Offset: 0x00007440
+	// Token: 0x06000152 RID: 338 RVA: 0x00008F24 File Offset: 0x00007124
 	public LogProfiler CreateChild(string name, bool isDynamic = false)
 	{
 		if (this._Children == null)
@@ -49,7 +49,7 @@ public class LogProfiler
 		return logProfiler;
 	}
 
-	// Token: 0x06000151 RID: 337 RVA: 0x00009284 File Offset: 0x00007484
+	// Token: 0x06000153 RID: 339 RVA: 0x00008F68 File Offset: 0x00007168
 	public void Reset()
 	{
 		this._Timestamp = -1L;
@@ -73,7 +73,7 @@ public class LogProfiler
 		}
 	}
 
-	// Token: 0x06000152 RID: 338 RVA: 0x0000933C File Offset: 0x0000753C
+	// Token: 0x06000154 RID: 340 RVA: 0x00009020 File Offset: 0x00007220
 	public void Start()
 	{
 		if (this._Timestamp != -1L)
@@ -88,14 +88,14 @@ public class LogProfiler
 		this._Timestamp = Stopwatch.GetTimestamp();
 	}
 
-	// Token: 0x06000153 RID: 339 RVA: 0x00009388 File Offset: 0x00007588
+	// Token: 0x06000155 RID: 341 RVA: 0x0000906C File Offset: 0x0000726C
 	public void Restart()
 	{
 		this.Reset();
 		this.Start();
 	}
 
-	// Token: 0x06000154 RID: 340 RVA: 0x00009398 File Offset: 0x00007598
+	// Token: 0x06000156 RID: 342 RVA: 0x0000907C File Offset: 0x0000727C
 	public void Stop()
 	{
 		if (this._Timestamp == -1L)
@@ -112,7 +112,7 @@ public class LogProfiler
 		this._Timestamp = -1L;
 	}
 
-	// Token: 0x06000155 RID: 341 RVA: 0x00009408 File Offset: 0x00007608
+	// Token: 0x06000157 RID: 343 RVA: 0x000090EC File Offset: 0x000072EC
 	private void Format(StringBuilder sb)
 	{
 		sb.AppendLine();
@@ -195,7 +195,7 @@ public class LogProfiler
 		sb.Append("]");
 	}
 
-	// Token: 0x06000156 RID: 342 RVA: 0x000096C8 File Offset: 0x000078C8
+	// Token: 0x06000158 RID: 344 RVA: 0x000093AC File Offset: 0x000075AC
 	public override string ToString()
 	{
 		StringBuilder stringBuilder = new StringBuilder();
@@ -217,7 +217,7 @@ public class LogProfiler
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x04000166 RID: 358
+	// Token: 0x04000167 RID: 359
 	[Nullable(new byte[]
 	{
 		2,
@@ -225,24 +225,24 @@ public class LogProfiler
 	})]
 	private List<LogProfiler> _Children;
 
-	// Token: 0x04000167 RID: 359
+	// Token: 0x04000168 RID: 360
 	private readonly string _Name;
 
-	// Token: 0x04000168 RID: 360
+	// Token: 0x04000169 RID: 361
 	private string _Describe;
 
-	// Token: 0x04000169 RID: 361
+	// Token: 0x0400016A RID: 362
 	private int _Level;
 
-	// Token: 0x0400016A RID: 362
+	// Token: 0x0400016B RID: 363
 	private long _Timestamp;
 
-	// Token: 0x0400016B RID: 363
+	// Token: 0x0400016C RID: 364
 	private int _Count;
 
-	// Token: 0x0400016C RID: 364
+	// Token: 0x0400016D RID: 365
 	private readonly bool _IsDynamic;
 
-	// Token: 0x0400016D RID: 365
+	// Token: 0x0400016E RID: 366
 	public long Time;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002495 RID: 9365
+	// Token: 0x02002738 RID: 10040
 	public static class EUnlockCookSystemTypeExtensions
 	{
-		// Token: 0x0600CB1D RID: 51997 RVA: 0x001DE71C File Offset: 0x001DC91C
+		// Token: 0x0600D7D6 RID: 55254 RVA: 0x001F88E4 File Offset: 0x001F6AE4
 		public static string ToEnumString(this EUnlockCookSystemType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB1E RID: 51998 RVA: 0x001DE744 File Offset: 0x001DC944
+		// Token: 0x0600D7D7 RID: 55255 RVA: 0x001F890C File Offset: 0x001F6B0C
 		public static EUnlockCookSystemType FromString(string name)
 		{
 			EUnlockCookSystemType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB1F RID: 51999 RVA: 0x001DE76D File Offset: 0x001DC96D
+		// Token: 0x0600D7D8 RID: 55256 RVA: 0x001F8935 File Offset: 0x001F6B35
 		public static bool TryFromString(string name, out EUnlockCookSystemType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600CB20 RID: 52000 RVA: 0x001DE792 File Offset: 0x001DC992
+		// Token: 0x0600D7D9 RID: 55257 RVA: 0x001F895A File Offset: 0x001F6B5A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB21 RID: 52001 RVA: 0x001DE7A2 File Offset: 0x001DC9A2
+		// Token: 0x0600D7DA RID: 55258 RVA: 0x001F896A File Offset: 0x001F6B6A
 		public static EUnlockCookSystemType[] GetValues()
 		{
 			return new EUnlockCookSystemType[1];
 		}
 
-		// Token: 0x0600CB22 RID: 52002 RVA: 0x001DE7AA File Offset: 0x001DC9AA
+		// Token: 0x0600D7DB RID: 55259 RVA: 0x001F8972 File Offset: 0x001F6B72
 		public static string[] GetNames()
 		{
 			return new string[]

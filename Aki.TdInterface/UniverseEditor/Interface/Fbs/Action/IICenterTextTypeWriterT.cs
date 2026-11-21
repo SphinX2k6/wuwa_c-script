@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006943 RID: 26947
+	// Token: 0x02006FF6 RID: 28662
 	public class IICenterTextTypeWriterT
 	{
-		// Token: 0x1700C7ED RID: 51181
-		// (get) Token: 0x0602F0DC RID: 192732 RVA: 0x00669EFC File Offset: 0x006680FC
-		// (set) Token: 0x0602F0DD RID: 192733 RVA: 0x00669F04 File Offset: 0x00668104
+		// Token: 0x1700D1F0 RID: 53744
+		// (get) Token: 0x06031AAC RID: 203436 RVA: 0x006BA3E4 File Offset: 0x006B85E4
+		// (set) Token: 0x06031AAD RID: 203437 RVA: 0x006BA3EC File Offset: 0x006B85EC
 		public ECenterTextShowAnim Type { get; set; }
 
-		// Token: 0x1700C7EE RID: 51182
-		// (get) Token: 0x0602F0DE RID: 192734 RVA: 0x00669F0D File Offset: 0x0066810D
-		// (set) Token: 0x0602F0DF RID: 192735 RVA: 0x00669F15 File Offset: 0x00668115
+		// Token: 0x1700D1F1 RID: 53745
+		// (get) Token: 0x06031AAE RID: 203438 RVA: 0x006BA3F5 File Offset: 0x006B85F5
+		// (set) Token: 0x06031AAF RID: 203439 RVA: 0x006BA3FD File Offset: 0x006B85FD
 		public int TextCountPerSecond { get; set; }
 
-		// Token: 0x0602F0E0 RID: 192736 RVA: 0x00669F1E File Offset: 0x0066811E
+		// Token: 0x06031AB0 RID: 203440 RVA: 0x006BA406 File Offset: 0x006B8606
 		public IICenterTextTypeWriterT()
 		{
 			this.Type = ECenterTextShowAnim.ShowAll;

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063DE RID: 25566
+	// Token: 0x0200535C RID: 21340
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingBuffUnit : UiPanelBase
 	{
-		// Token: 0x060404D5 RID: 263381 RVA: 0x00F8D784 File Offset: 0x00F8B984
+		// Token: 0x06035196 RID: 217494 RVA: 0x00ED471C File Offset: 0x00ED291C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -47,20 +47,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060404D6 RID: 263382 RVA: 0x00F8D8F0 File Offset: 0x00F8BAF0
+		// Token: 0x06035197 RID: 217495 RVA: 0x00ED4888 File Offset: 0x00ED2A88
 		protected override void OnStart()
 		{
 			this.Player = new UiSequencePlayer(this.RootItem);
 			base.GetExtendToggle(6).CanExecuteChange.Bind(new Func<bool>(this.HandleCanExecuteChange));
 		}
 
-		// Token: 0x060404D7 RID: 263383 RVA: 0x00F8D920 File Offset: 0x00F8BB20
+		// Token: 0x06035198 RID: 217496 RVA: 0x00ED48B8 File Offset: 0x00ED2AB8
 		protected override void OnBeforeDestroy()
 		{
 			base.GetExtendToggle(6).CanExecuteChange.Unbind();
 		}
 
-		// Token: 0x060404D8 RID: 263384 RVA: 0x00F8D934 File Offset: 0x00F8BB34
+		// Token: 0x06035199 RID: 217497 RVA: 0x00ED48CC File Offset: 0x00ED2ACC
 		public void RefreshByCustomData(IMowingBuffUnitData data)
 		{
 			this.PassData = data;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			base.GetItem(7).SetUIActive(false);
 		}
 
-		// Token: 0x060404D9 RID: 263385 RVA: 0x00F8D9F4 File Offset: 0x00F8BBF4
+		// Token: 0x0603519A RID: 217498 RVA: 0x00ED498C File Offset: 0x00ED2B8C
 		public void UpdateUnlockState(bool isUnlock)
 		{
 			base.GetSprite(0).SetUIActive(isUnlock);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			texture.SetAlpha(isUnlock ? 1f : 0.85f);
 		}
 
-		// Token: 0x060404DA RID: 263386 RVA: 0x00F8DA5B File Offset: 0x00F8BC5B
+		// Token: 0x0603519B RID: 217499 RVA: 0x00ED49F3 File Offset: 0x00ED2BF3
 		public void PlayUnlockSequence()
 		{
 			base.GetItem(7).SetUIActive(true);
@@ -106,54 +106,54 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.Player.LitePlayAsync("Unlock", true, false).Forget<bool>();
 		}
 
-		// Token: 0x060404DB RID: 263387 RVA: 0x00F8DA88 File Offset: 0x00F8BC88
+		// Token: 0x0603519C RID: 217500 RVA: 0x00ED4A20 File Offset: 0x00ED2C20
 		private void HandleOnClick(EToggleState toggleState)
 		{
 			MowingRiskModel.Instance.CurrentChosenProgressIndex = new int?(this.PassData.Index);
 			EventSystem.Instance.Emit(EEventName.MowingSuperBuffGridItemClick);
 		}
 
-		// Token: 0x060404DC RID: 263388 RVA: 0x00F8DAB4 File Offset: 0x00F8BCB4
+		// Token: 0x0603519D RID: 217501 RVA: 0x00ED4A4C File Offset: 0x00ED2C4C
 		private bool HandleCanExecuteChange()
 		{
 			return !this.PassData.IsChosen;
 		}
 
-		// Token: 0x0402175C RID: 137052
+		// Token: 0x0401C08B RID: 114827
 		private const float GRAY_ALPHA = 0.85f;
 
-		// Token: 0x0402175D RID: 137053
+		// Token: 0x0401C08C RID: 114828
 		private IMowingBuffUnitData PassData;
 
-		// Token: 0x0402175E RID: 137054
+		// Token: 0x0401C08D RID: 114829
 		private UiSequencePlayer Player;
 
-		// Token: 0x0200C5EA RID: 50666
+		// Token: 0x0200AFD1 RID: 45009
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BC1B RID: 244763
+			// Token: 0x0403657A RID: 222586
 			public const int StarSprite = 0;
 
-			// Token: 0x0403BC1C RID: 244764
+			// Token: 0x0403657B RID: 222587
 			public const int ActiveItem = 1;
 
-			// Token: 0x0403BC1D RID: 244765
+			// Token: 0x0403657C RID: 222588
 			public const int InactiveItem = 2;
 
-			// Token: 0x0403BC1E RID: 244766
+			// Token: 0x0403657D RID: 222589
 			public const int IconTexture = 3;
 
-			// Token: 0x0403BC1F RID: 244767
+			// Token: 0x0403657E RID: 222590
 			public const int NameText = 4;
 
-			// Token: 0x0403BC20 RID: 244768
+			// Token: 0x0403657F RID: 222591
 			public const int CountText = 5;
 
-			// Token: 0x0403BC21 RID: 244769
+			// Token: 0x04036580 RID: 222592
 			public const int BuffToggle = 6;
 
-			// Token: 0x0403BC22 RID: 244770
+			// Token: 0x04036581 RID: 222593
 			public const int UnlockAnimItem = 7;
 		}
 	}

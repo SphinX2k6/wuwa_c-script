@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004ECC RID: 20172
+	// Token: 0x02003E95 RID: 16021
 	public class RogueBattleMapRoleGridInfo : IRogueBattleMapRoleGridInfo
 	{
-		// Token: 0x17007F04 RID: 32516
-		// (get) Token: 0x06033C9B RID: 212123 RVA: 0x00C20F70 File Offset: 0x00C1F170
-		// (set) Token: 0x06033C9C RID: 212124 RVA: 0x00C20F78 File Offset: 0x00C1F178
+		// Token: 0x170052B4 RID: 21172
+		// (get) Token: 0x06028B06 RID: 166662 RVA: 0x00B6A488 File Offset: 0x00B68688
+		// (set) Token: 0x06028B07 RID: 166663 RVA: 0x00B6A490 File Offset: 0x00B68690
 		public int ConfigId { get; set; }
 
-		// Token: 0x17007F05 RID: 32517
-		// (get) Token: 0x06033C9D RID: 212125 RVA: 0x00C20F81 File Offset: 0x00C1F181
-		// (set) Token: 0x06033C9E RID: 212126 RVA: 0x00C20F89 File Offset: 0x00C1F189
+		// Token: 0x170052B5 RID: 21173
+		// (get) Token: 0x06028B08 RID: 166664 RVA: 0x00B6A499 File Offset: 0x00B68699
+		// (set) Token: 0x06028B09 RID: 166665 RVA: 0x00B6A4A1 File Offset: 0x00B686A1
 		public bool IsGain { get; set; }
 
-		// Token: 0x17007F06 RID: 32518
-		// (get) Token: 0x06033C9F RID: 212127 RVA: 0x00C20F92 File Offset: 0x00C1F192
-		// (set) Token: 0x06033CA0 RID: 212128 RVA: 0x00C20F9A File Offset: 0x00C1F19A
+		// Token: 0x170052B6 RID: 21174
+		// (get) Token: 0x06028B0A RID: 166666 RVA: 0x00B6A4AA File Offset: 0x00B686AA
+		// (set) Token: 0x06028B0B RID: 166667 RVA: 0x00B6A4B2 File Offset: 0x00B686B2
 		public bool NeedLevel { get; set; }
 	}
 }

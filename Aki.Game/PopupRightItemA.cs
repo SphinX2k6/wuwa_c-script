@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D76 RID: 11638
+// Token: 0x020022D0 RID: 8912
 public class PopupRightItemA : PopupTypeRightItem
 {
-	// Token: 0x0601878D RID: 100237 RVA: 0x0063A46C File Offset: 0x0063866C
+	// Token: 0x0601602F RID: 90159 RVA: 0x00660484 File Offset: 0x0065E684
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -34,7 +34,7 @@ public class PopupRightItemA : PopupTypeRightItem
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601878E RID: 100238 RVA: 0x0063A534 File Offset: 0x00638734
+	// Token: 0x06016030 RID: 90160 RVA: 0x0066054C File Offset: 0x0065E74C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PopupRightItemA.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class PopupRightItemA : PopupTypeRightItem
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601878F RID: 100239 RVA: 0x0063A577 File Offset: 0x00638777
+	// Token: 0x06016031 RID: 90161 RVA: 0x0066058F File Offset: 0x0065E78F
 	[NullableContext(1)]
 	public void SetTitleIcon(string resourceId)
 	{
@@ -57,7 +57,7 @@ public class PopupRightItemA : PopupTypeRightItem
 		popupCaption.SetTitleIcon(resourceId);
 	}
 
-	// Token: 0x06018790 RID: 100240 RVA: 0x0063A58A File Offset: 0x0063878A
+	// Token: 0x06016032 RID: 90162 RVA: 0x006605A2 File Offset: 0x0065E7A2
 	[NullableContext(1)]
 	public void SetTitleLocalTxt(string txtId)
 	{
@@ -69,20 +69,20 @@ public class PopupRightItemA : PopupTypeRightItem
 		popupCaption.SetTitleLocalTxt(txtId);
 	}
 
-	// Token: 0x0400B567 RID: 46439
+	// Token: 0x0400B8DC RID: 47324
 	[Nullable(2)]
 	private PopupCaption PopupCaption;
 
-	// Token: 0x02009311 RID: 37649
+	// Token: 0x02008538 RID: 34104
 	public static class EComponents
 	{
-		// Token: 0x0402F860 RID: 194656
+		// Token: 0x0402AEE8 RID: 175848
 		public const int BackBtn = 0;
 
-		// Token: 0x0402F861 RID: 194657
+		// Token: 0x0402AEE9 RID: 175849
 		public const int Content = 1;
 
-		// Token: 0x0402F862 RID: 194658
+		// Token: 0x0402AEEA RID: 175850
 		public const int Caption = 2;
 	}
 }

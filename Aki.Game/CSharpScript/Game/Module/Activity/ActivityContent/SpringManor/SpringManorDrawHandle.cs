@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006032 RID: 24626
+	// Token: 0x02004FB0 RID: 20400
 	public class SpringManorDrawHandle : SpringManorGameHandleBase
 	{
-		// Token: 0x0603E517 RID: 255255 RVA: 0x00F0CE4C File Offset: 0x00F0B04C
+		// Token: 0x060331DB RID: 209371 RVA: 0x00E53C10 File Offset: 0x00E51E10
 		public override int GetCurrentProgress()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return num3;
 		}
 
-		// Token: 0x0603E518 RID: 255256 RVA: 0x00F0CF8C File Offset: 0x00F0B18C
+		// Token: 0x060331DC RID: 209372 RVA: 0x00E53D50 File Offset: 0x00E51F50
 		public override int GetTotalProgress()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return valueOrDefault + valueOrDefault2;
 		}
 
-		// Token: 0x0603E519 RID: 255257 RVA: 0x00F0D080 File Offset: 0x00F0B280
+		// Token: 0x060331DD RID: 209373 RVA: 0x00E53E44 File Offset: 0x00E52044
 		public override void EnterGame()
 		{
 			SpringManorAlbumViewOpenParam param = new SpringManorAlbumViewOpenParam
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			UiManager.Instance.OpenView(EUiViewName.SpringManorAlbumView, param, null);
 		}
 
-		// Token: 0x0603E51A RID: 255258 RVA: 0x00F0D0AB File Offset: 0x00F0B2AB
+		// Token: 0x060331DE RID: 209374 RVA: 0x00E53E6F File Offset: 0x00E5206F
 		public override ERedDotName? GetRedDotName()
 		{
 			return new ERedDotName?(ERedDotName.SpringManorAlbumReward);

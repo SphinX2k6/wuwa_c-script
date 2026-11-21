@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 {
-	// Token: 0x0200577A RID: 22394
+	// Token: 0x02004751 RID: 18257
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class WeaponAttrInfoItemData : IMultiTemplateGridData<IKurotatoAttrDisplay, WeaponAttrInfoItem>, IMultiTemplateGridData
 	{
-		// Token: 0x17008872 RID: 34930
-		// (get) Token: 0x06038E4B RID: 233035 RVA: 0x00D85B75 File Offset: 0x00D83D75
-		// (set) Token: 0x06038E4C RID: 233036 RVA: 0x00D85B7D File Offset: 0x00D83D7D
+		// Token: 0x17005C3A RID: 23610
+		// (get) Token: 0x0602DD5B RID: 187739 RVA: 0x00CD4835 File Offset: 0x00CD2A35
+		// (set) Token: 0x0602DD5C RID: 187740 RVA: 0x00CD483D File Offset: 0x00CD2A3D
 		public IKurotatoAttrDisplay Data { get; set; }
 
-		// Token: 0x17008873 RID: 34931
-		// (get) Token: 0x06038E4D RID: 233037 RVA: 0x00D85B86 File Offset: 0x00D83D86
+		// Token: 0x17005C3B RID: 23611
+		// (get) Token: 0x0602DD5D RID: 187741 RVA: 0x00CD4846 File Offset: 0x00CD2A46
 		object IMultiTemplateGridData.Data
 		{
 			get
@@ -23,19 +23,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			}
 		}
 
-		// Token: 0x06038E4E RID: 233038 RVA: 0x00D85B8E File Offset: 0x00D83D8E
+		// Token: 0x0602DD5E RID: 187742 RVA: 0x00CD484E File Offset: 0x00CD2A4E
 		public WeaponAttrInfoItemData(IKurotatoAttrDisplay data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06038E4F RID: 233039 RVA: 0x00D85B9D File Offset: 0x00D83D9D
+		// Token: 0x0602DD5F RID: 187743 RVA: 0x00CD485D File Offset: 0x00CD2A5D
 		public int GetTemplateIndex()
 		{
 			return 1;
 		}
 
-		// Token: 0x06038E50 RID: 233040 RVA: 0x00D85BA0 File Offset: 0x00D83DA0
+		// Token: 0x0602DD60 RID: 187744 RVA: 0x00CD4860 File Offset: 0x00CD2A60
 		public ISyncGridProxy CreateProxy()
 		{
 			return new WeaponAttrInfoItem();

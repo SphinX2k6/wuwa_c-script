@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002958 RID: 10584
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C3D RID: 11325
 	public class ModifySceneItemAttributeTag : ActionParams
 	{
-		// Token: 0x0600EAB2 RID: 60082 RVA: 0x00225D64 File Offset: 0x00223F64
+		// Token: 0x0600F928 RID: 63784 RVA: 0x0024341C File Offset: 0x0024161C
 		public static ModifySceneItemAttributeTag Create(IModifySceneItemAttributeTag? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049C4 RID: 18884
-		// (get) Token: 0x0600EAB3 RID: 60083 RVA: 0x00225D83 File Offset: 0x00223F83
+		// Token: 0x17004D5C RID: 19804
+		// (get) Token: 0x0600F929 RID: 63785 RVA: 0x0024343B File Offset: 0x0024163B
 		public virtual EChangeEntityPrefabPerformanceType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049C5 RID: 18885
-		// (get) Token: 0x0600EAB4 RID: 60084 RVA: 0x00225D90 File Offset: 0x00223F90
+		// Token: 0x17004D5D RID: 19805
+		// (get) Token: 0x0600F92A RID: 63786 RVA: 0x00243448 File Offset: 0x00241648
 		public virtual bool IsAddTag
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049C6 RID: 18886
-		// (get) Token: 0x0600EAB5 RID: 60085 RVA: 0x00225DA0 File Offset: 0x00223FA0
+		// Token: 0x17004D5E RID: 19806
+		// (get) Token: 0x0600F92B RID: 63787 RVA: 0x00243458 File Offset: 0x00241658
 		public virtual List<int> PerformanceTag
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008154 RID: 33108
+		// Token: 0x04008835 RID: 34869
 		private IModifySceneItemAttributeTag Instance;
 
-		// Token: 0x04008155 RID: 33109
+		// Token: 0x04008836 RID: 34870
 		private List<int> _PerformanceTagCache;
 
-		// Token: 0x04008156 RID: 33110
+		// Token: 0x04008837 RID: 34871
 		private bool _PerformanceTagInited;
 	}
 }

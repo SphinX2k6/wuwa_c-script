@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AC0 RID: 19136
+	// Token: 0x02003A68 RID: 14952
 	public class TrapDefenseMonsterEndlessWaveItem : UiPanelBase
 	{
-		// Token: 0x06031931 RID: 203057 RVA: 0x00B7EE88 File Offset: 0x00B7D088
+		// Token: 0x060266C1 RID: 157377 RVA: 0x00AC2E3C File Offset: 0x00AC103C
 		[NullableContext(1)]
 		public UniTask Init(UUIItem item)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031932 RID: 203058 RVA: 0x00B7EED4 File Offset: 0x00B7D0D4
+		// Token: 0x060266C2 RID: 157378 RVA: 0x00AC2E88 File Offset: 0x00AC1088
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031933 RID: 203059 RVA: 0x00B7EF1C File Offset: 0x00B7D11C
+		// Token: 0x060266C3 RID: 157379 RVA: 0x00AC2ED0 File Offset: 0x00AC10D0
 		[NullableContext(1)]
 		public void UpdateDescKey(string descKey)
 		{
@@ -49,10 +49,10 @@ namespace CSharpScript.Game.Module.TrapDefense
 			text.ShowTextNew(descKey);
 		}
 
-		// Token: 0x0200AC27 RID: 44071
+		// Token: 0x02009647 RID: 38471
 		private class EChildType
 		{
-			// Token: 0x040344FE RID: 214270
+			// Token: 0x0402EEAF RID: 192175
 			public const int TextContent = 0;
 		}
 	}

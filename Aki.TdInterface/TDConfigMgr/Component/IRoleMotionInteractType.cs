@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200068E RID: 1678
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200072F RID: 1839
 	public class IRoleMotionInteractType
 	{
-		// Token: 0x060023EE RID: 9198 RVA: 0x00061B88 File Offset: 0x0005FD88
+		// Token: 0x0600270A RID: 9994 RVA: 0x00068B50 File Offset: 0x00066D50
 		private IRoleMotionInteractType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060023EF RID: 9199 RVA: 0x00061BC0 File Offset: 0x0005FDC0
+		// Token: 0x0600270B RID: 9995 RVA: 0x00068B88 File Offset: 0x00066D88
 		public static IRoleMotionInteractType Create([Nullable(2)] IRoleMotionInteractType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023F0 RID: 9200 RVA: 0x00061BD3 File Offset: 0x0005FDD3
+		// Token: 0x0600270C RID: 9996 RVA: 0x00068B9B File Offset: 0x00066D9B
 		public static IRoleMotionInteractType CreateFromSetValue([Nullable(2)] IRoleMotionInteractType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023F1 RID: 9201 RVA: 0x00061BE6 File Offset: 0x0005FDE6
+		// Token: 0x0600270D RID: 9997 RVA: 0x00068BAE File Offset: 0x00066DAE
 		public IRoleMotionInteractType_SetValue ToSetValue()
 		{
 			return new IRoleMotionInteractType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000981 RID: 2433
-		// (get) Token: 0x060023F2 RID: 9202 RVA: 0x00061BF9 File Offset: 0x0005FDF9
-		// (set) Token: 0x060023F3 RID: 9203 RVA: 0x00061C24 File Offset: 0x0005FE24
+		// Token: 0x17000A3D RID: 2621
+		// (get) Token: 0x0600270E RID: 9998 RVA: 0x00068BC1 File Offset: 0x00066DC1
+		// (set) Token: 0x0600270F RID: 9999 RVA: 0x00068BEC File Offset: 0x00066DEC
 		public virtual ERoleMotionInteractType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040018BD RID: 6333
+		// Token: 0x04001ABA RID: 6842
 		[Nullable(2)]
 		protected IRoleMotionInteractType FbInstance;
 
-		// Token: 0x040018BE RID: 6334
+		// Token: 0x04001ABB RID: 6843
 		[Nullable(2)]
 		protected IRoleMotionInteractType_SetValue PocoInterface;
 	}

@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045AA RID: 17834
+	// Token: 0x020034D2 RID: 13522
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharSceneInteraction : CharRenderBase
 	{
-		// Token: 0x0602DFC0 RID: 188352 RVA: 0x00A94030 File Offset: 0x00A92230
+		// Token: 0x060226AA RID: 140970 RVA: 0x009C0250 File Offset: 0x009BE450
 		public override void Start()
 		{
 			base.Start();
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Render
 			base.OnInitSuccess();
 		}
 
-		// Token: 0x0602DFC1 RID: 188353 RVA: 0x00A9407C File Offset: 0x00A9227C
+		// Token: 0x060226AB RID: 140971 RVA: 0x009C029C File Offset: 0x009BE49C
 		public override void Update()
 		{
 			if (this.CharacterInteraction != null)
@@ -29,20 +29,20 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFC2 RID: 188354 RVA: 0x00A94097 File Offset: 0x00A92297
+		// Token: 0x060226AC RID: 140972 RVA: 0x009C02B7 File Offset: 0x009BE4B7
 		public override void Destroy()
 		{
 			this.UnpossCharacter();
 			base.Destroy();
 		}
 
-		// Token: 0x0602DFC3 RID: 188355 RVA: 0x00A940A5 File Offset: 0x00A922A5
+		// Token: 0x060226AD RID: 140973 RVA: 0x009C02C5 File Offset: 0x009BE4C5
 		public bool GetIsPossed()
 		{
 			return this.CharacterInteraction != null;
 		}
 
-		// Token: 0x0602DFC4 RID: 188356 RVA: 0x00A940B0 File Offset: 0x00A922B0
+		// Token: 0x060226AE RID: 140974 RVA: 0x009C02D0 File Offset: 0x009BE4D0
 		public void PossCharacter(PDA_InteractionPlayerConfig_C config, float updateInternalScale = 1f)
 		{
 			if (config == null)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFC5 RID: 188357 RVA: 0x00A940DC File Offset: 0x00A922DC
+		// Token: 0x060226AF RID: 140975 RVA: 0x009C02FC File Offset: 0x009BE4FC
 		public void UnpossCharacter()
 		{
 			if (this.CharacterInteraction != null)
@@ -66,26 +66,26 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFC6 RID: 188358 RVA: 0x00A940F8 File Offset: 0x00A922F8
+		// Token: 0x060226B0 RID: 140976 RVA: 0x009C0318 File Offset: 0x009BE518
 		public override int GetComponentId()
 		{
 			return 5;
 		}
 
-		// Token: 0x0602DFC7 RID: 188359 RVA: 0x00A940FB File Offset: 0x00A922FB
+		// Token: 0x060226B1 RID: 140977 RVA: 0x009C031B File Offset: 0x009BE51B
 		[NullableContext(1)]
 		public override string GetStatName()
 		{
 			return "CharSceneInteraction";
 		}
 
-		// Token: 0x0602DFC8 RID: 188360 RVA: 0x00A94102 File Offset: 0x00A92302
+		// Token: 0x060226B2 RID: 140978 RVA: 0x009C0322 File Offset: 0x009BE522
 		public bool GetInWater(float depthThreshold)
 		{
 			return this.CharacterInteraction != null && this.CharacterInteraction.GetInWater() && this.CharacterInteraction.GetWaterDepth() > (double)depthThreshold;
 		}
 
-		// Token: 0x0602DFC9 RID: 188361 RVA: 0x00A9412C File Offset: 0x00A9232C
+		// Token: 0x060226B3 RID: 140979 RVA: 0x009C034C File Offset: 0x009BE54C
 		public double GetWaterHitLocationZ()
 		{
 			if (this.CharacterInteraction != null)
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Render
 			return 0.0;
 		}
 
-		// Token: 0x0602DFCA RID: 188362 RVA: 0x00A9414B File Offset: 0x00A9234B
+		// Token: 0x060226B4 RID: 140980 RVA: 0x009C036B File Offset: 0x009BE56B
 		public bool GetInAudioShr()
 		{
 			return this.CharacterInteraction != null && this.CharacterInteraction.GetInAudioShr();
 		}
 
-		// Token: 0x0602DFCB RID: 188363 RVA: 0x00A94162 File Offset: 0x00A92362
+		// Token: 0x060226B5 RID: 140981 RVA: 0x009C0382 File Offset: 0x009BE582
 		public FName GetAudioShrTag()
 		{
 			if (this.CharacterInteraction != null)
@@ -111,10 +111,10 @@ namespace CSharpScript.Game.Render
 			return FNameUtil.NONE;
 		}
 
-		// Token: 0x040188CC RID: 100556
+		// Token: 0x04012F07 RID: 77575
 		protected TsBaseCharacter OwnerCharacter;
 
-		// Token: 0x040188CD RID: 100557
+		// Token: 0x04012F08 RID: 77576
 		protected SceneCharacterInteraction CharacterInteraction;
 	}
 }

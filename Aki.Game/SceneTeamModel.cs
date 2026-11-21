@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,15 +10,15 @@ using CSharpScript.Game.Module.SeamlessTravel;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200295C RID: 10588
+// Token: 0x02001ED7 RID: 7895
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class SceneTeamModel : ModelBase
 {
-	// Token: 0x17001D7C RID: 7548
-	// (get) Token: 0x06015E07 RID: 89607 RVA: 0x005840A8 File Offset: 0x005822A8
-	// (set) Token: 0x06015E08 RID: 89608 RVA: 0x005840E8 File Offset: 0x005822E8
+	// Token: 0x17001DD5 RID: 7637
+	// (get) Token: 0x0601380B RID: 79883 RVA: 0x005AF0A8 File Offset: 0x005AD2A8
+	// (set) Token: 0x0601380C RID: 79884 RVA: 0x005AF0E8 File Offset: 0x005AD2E8
 	public bool ChangingRole
 	{
 		get
@@ -42,7 +41,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E09 RID: 89609 RVA: 0x00584118 File Offset: 0x00582318
+	// Token: 0x0601380D RID: 79885 RVA: 0x005AF118 File Offset: 0x005AD318
 	protected override bool OnInit()
 	{
 		this.DefaultChangeRoleCooldown = (double)ConfigCommonParamById.GetFloatConfig("change_role_cooldown").Value;
@@ -53,14 +52,14 @@ public class SceneTeamModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015E0A RID: 89610 RVA: 0x00584181 File Offset: 0x00582381
+	// Token: 0x0601380E RID: 79886 RVA: 0x005AF181 File Offset: 0x005AD381
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.OnGlobalFootstepMaterialChange, new Action<UPhysicalMaterial>(this.OnPhysicalMaterialChange));
 		return true;
 	}
 
-	// Token: 0x06015E0B RID: 89611 RVA: 0x005841A0 File Offset: 0x005823A0
+	// Token: 0x0601380F RID: 79887 RVA: 0x005AF1A0 File Offset: 0x005AD3A0
 	protected override bool OnLeaveLevel()
 	{
 		this.FinishSeamlessUpdateTeam();
@@ -73,7 +72,7 @@ public class SceneTeamModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015E0C RID: 89612 RVA: 0x005841C3 File Offset: 0x005823C3
+	// Token: 0x06013810 RID: 79888 RVA: 0x005AF1C3 File Offset: 0x005AD3C3
 	protected override bool OnChangeMode()
 	{
 		this.FinishSeamlessUpdateTeam();
@@ -82,7 +81,7 @@ public class SceneTeamModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015E0D RID: 89613 RVA: 0x005841D8 File Offset: 0x005823D8
+	// Token: 0x06013811 RID: 79889 RVA: 0x005AF1D8 File Offset: 0x005AD3D8
 	private void ClearTeam()
 	{
 		this.LastTransform = null;
@@ -113,7 +112,7 @@ public class SceneTeamModel : ModelBase
 		this.MarkTeamNotReady();
 	}
 
-	// Token: 0x06015E0E RID: 89614 RVA: 0x005842F4 File Offset: 0x005824F4
+	// Token: 0x06013812 RID: 79890 RVA: 0x005AF2F4 File Offset: 0x005AD4F4
 	public void FinishSeamlessUpdateTeam()
 	{
 		this.IsSeamlessUpdateTeam = false;
@@ -131,7 +130,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E0F RID: 89615 RVA: 0x00584345 File Offset: 0x00582545
+	// Token: 0x06013813 RID: 79891 RVA: 0x005AF345 File Offset: 0x005AD545
 	[NullableContext(2)]
 	private void OnPhysicalMaterialChange(UPhysicalMaterial material)
 	{
@@ -141,7 +140,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E10 RID: 89616 RVA: 0x00584358 File Offset: 0x00582558
+	// Token: 0x06013814 RID: 79892 RVA: 0x005AF358 File Offset: 0x005AD558
 	public unsafe void SwitchGroup(int playerId, ETeamGroupType groupType, bool useGoBattleSkill = false, bool forceInheritState = false)
 	{
 		SceneTeamPlayer sceneTeamPlayer = this.TeamPlayerMap.ContainsKey(playerId) ? this.TeamPlayerMap[playerId] : null;
@@ -178,7 +177,7 @@ public class SceneTeamModel : ModelBase
 		this.TeamGoBattle(flag, useGoBattleSkill);
 	}
 
-	// Token: 0x06015E11 RID: 89617 RVA: 0x0058445C File Offset: 0x0058265C
+	// Token: 0x06013815 RID: 79893 RVA: 0x005AF45C File Offset: 0x005AD65C
 	private void SwitchGroupInternal(int playerId, SceneTeamPlayer player, ETeamGroupType groupType)
 	{
 		player.SwitchGroup(groupType);
@@ -191,7 +190,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E12 RID: 89618 RVA: 0x005844B8 File Offset: 0x005826B8
+	// Token: 0x06013816 RID: 79894 RVA: 0x005AF4B8 File Offset: 0x005AD6B8
 	public void UpdateGroupData(int playerId, IUpdateGroupParams @params)
 	{
 		SceneTeamPlayer sceneTeamPlayer = this.TeamPlayerMap.ContainsKey(playerId) ? this.TeamPlayerMap[playerId] : null;
@@ -212,7 +211,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E13 RID: 89619 RVA: 0x0058457C File Offset: 0x0058277C
+	// Token: 0x06013817 RID: 79895 RVA: 0x005AF57C File Offset: 0x005AD77C
 	public void UpdateGroupDataAndSwitchGroup(int playerId, IUpdateGroupParams @params)
 	{
 		SceneTeamPlayer sceneTeamPlayer = this.TeamPlayerMap.ContainsKey(playerId) ? this.TeamPlayerMap[playerId] : null;
@@ -228,7 +227,7 @@ public class SceneTeamModel : ModelBase
 		this.TeamGoBattle(true, false);
 	}
 
-	// Token: 0x06015E14 RID: 89620 RVA: 0x0058460C File Offset: 0x0058280C
+	// Token: 0x06013818 RID: 79896 RVA: 0x005AF60C File Offset: 0x005AD80C
 	public void AddRoleAndSwitchGroup(int playerId, ETeamGroupType groupType, SceneTeamRole[] roleList)
 	{
 		SceneTeamPlayer sceneTeamPlayer = this.TeamPlayerMap.ContainsKey(playerId) ? this.TeamPlayerMap[playerId] : null;
@@ -247,7 +246,7 @@ public class SceneTeamModel : ModelBase
 		this.TeamGoBattle(true, false);
 	}
 
-	// Token: 0x06015E15 RID: 89621 RVA: 0x00584670 File Offset: 0x00582870
+	// Token: 0x06013819 RID: 79897 RVA: 0x005AF670 File Offset: 0x005AD870
 	public unsafe void UpdateAllPlayerData(IList<IUpdatePlayerParams> paramsList)
 	{
 		List<int> list = new List<int>();
@@ -337,13 +336,13 @@ public class SceneTeamModel : ModelBase
 		this.TeamGoBattle(needInheritState, false);
 	}
 
-	// Token: 0x06015E16 RID: 89622 RVA: 0x00584A40 File Offset: 0x00582C40
+	// Token: 0x0601381A RID: 79898 RVA: 0x005AFA40 File Offset: 0x005ADC40
 	private bool IsNeedInherit(ETeamGroupType lastType = ETeamGroupType.Default, ETeamGroupType newType = ETeamGroupType.Default)
 	{
 		return newType == lastType || SceneTeamDefine.needInheritTypeSet.Contains(lastType) || SceneTeamDefine.needInheritTypeSet.Contains(newType);
 	}
 
-	// Token: 0x06015E17 RID: 89623 RVA: 0x00584A60 File Offset: 0x00582C60
+	// Token: 0x0601381B RID: 79899 RVA: 0x005AFA60 File Offset: 0x005ADC60
 	public void UpdateGroupLivingStates(int playerId, Dictionary<ETeamGroupType, ETeamLivingState> teamLivingStateMap)
 	{
 		SceneTeamPlayer sceneTeamPlayer = this.TeamPlayerMap.ContainsKey(playerId) ? this.TeamPlayerMap[playerId] : null;
@@ -360,7 +359,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E18 RID: 89624 RVA: 0x00584AE8 File Offset: 0x00582CE8
+	// Token: 0x0601381C RID: 79900 RVA: 0x005AFAE8 File Offset: 0x005ADCE8
 	private void TeamGoBattle(bool needInheritState, bool useGoBattleSkill = false)
 	{
 		Log.Instance.Info(ELogModule.SceneTeam, ELogAuthor.LYY, "刷新出战编队，开始", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -562,7 +561,7 @@ public class SceneTeamModel : ModelBase
 		}, -1, true, false);
 	}
 
-	// Token: 0x06015E19 RID: 89625 RVA: 0x00584DA8 File Offset: 0x00582FA8
+	// Token: 0x0601381D RID: 79901 RVA: 0x005AFDA8 File Offset: 0x005ADFA8
 	private void ResetCurrentItem(bool needInheritState)
 	{
 		if (this.CurrentItem == null)
@@ -597,7 +596,7 @@ public class SceneTeamModel : ModelBase
 		this.CurrentItem = null;
 	}
 
-	// Token: 0x06015E1A RID: 89626 RVA: 0x00584E5C File Offset: 0x0058305C
+	// Token: 0x0601381E RID: 79902 RVA: 0x005AFE5C File Offset: 0x005AE05C
 	private void TeamGoBattleFinish()
 	{
 		if (this.SeamlessUpdateTeamStartTime > 0L && this.TeamGoBattleStartTime > this.SeamlessUpdateTeamStartTime)
@@ -616,11 +615,11 @@ public class SceneTeamModel : ModelBase
 		Log.Instance.Info(ELogModule.SceneTeam, ELogAuthor.LYY, "刷新出战编队，结束", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06015E1B RID: 89627 RVA: 0x00584ED0 File Offset: 0x005830D0
+	// Token: 0x0601381F RID: 79903 RVA: 0x005AFED0 File Offset: 0x005AE0D0
 	private void NotifyTeamChange()
 	{
 		ETeamGroupType? currentGroupType = this.CurrentGroupType;
-		if (currentGroupType == null || SceneTeamDefine.innerGroupType.Contains(currentGroupType.Value))
+		if (currentGroupType == null || Array.IndexOf<ETeamGroupType>(SceneTeamDefine.innerGroupType, currentGroupType.Value) >= 0)
 		{
 			return;
 		}
@@ -657,7 +656,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E1C RID: 89628 RVA: 0x00585020 File Offset: 0x00583220
+	// Token: 0x06013820 RID: 79904 RVA: 0x005B0020 File Offset: 0x005AE220
 	public void OnAddEntity(EntityHandle handle)
 	{
 		if (!GameModeModel.Instance.IsMulti)
@@ -700,7 +699,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E1D RID: 89629 RVA: 0x0058517C File Offset: 0x0058337C
+	// Token: 0x06013821 RID: 79905 RVA: 0x005B017C File Offset: 0x005AE37C
 	public void OnRemoveEntity(EntityHandle handle)
 	{
 		WorldEntity entity = handle.Entity;
@@ -720,7 +719,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E1E RID: 89630 RVA: 0x0058520E File Offset: 0x0058340E
+	// Token: 0x06013822 RID: 79906 RVA: 0x005B020E File Offset: 0x005AE40E
 	private void MarkTeamNotReady()
 	{
 		this.IsTeamReady = false;
@@ -730,7 +729,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E1F RID: 89631 RVA: 0x0058522C File Offset: 0x0058342C
+	// Token: 0x06013823 RID: 79907 RVA: 0x005B022C File Offset: 0x005AE42C
 	public void AddPreloadEntity(long creatureDataId)
 	{
 		Log instance = Log.Instance;
@@ -742,7 +741,7 @@ public class SceneTeamModel : ModelBase
 		this.PreloadEntitySet.Add(creatureDataId);
 	}
 
-	// Token: 0x06015E20 RID: 89632 RVA: 0x00585274 File Offset: 0x00583474
+	// Token: 0x06013824 RID: 79908 RVA: 0x005B0274 File Offset: 0x005AE474
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -771,7 +770,7 @@ public class SceneTeamModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06015E21 RID: 89633 RVA: 0x00585340 File Offset: 0x00583540
+	// Token: 0x06013825 RID: 79909 RVA: 0x005B0340 File Offset: 0x005AE540
 	private bool IsRoleMatch(int realRoleId, int targetRoleId)
 	{
 		if (realRoleId == targetRoleId)
@@ -789,8 +788,8 @@ public class SceneTeamModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x17001D7D RID: 7549
-	// (get) Token: 0x06015E22 RID: 89634 RVA: 0x00585386 File Offset: 0x00583586
+	// Token: 0x17001DD6 RID: 7638
+	// (get) Token: 0x06013826 RID: 79910 RVA: 0x005B0386 File Offset: 0x005AE586
 	[Nullable(2)]
 	public SceneTeamItem GetCurrentTeamItem
 	{
@@ -801,8 +800,8 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D7E RID: 7550
-	// (get) Token: 0x06015E23 RID: 89635 RVA: 0x0058538E File Offset: 0x0058358E
+	// Token: 0x17001DD7 RID: 7639
+	// (get) Token: 0x06013827 RID: 79911 RVA: 0x005B038E File Offset: 0x005AE58E
 	[Nullable(2)]
 	public EntityHandle GetCurrentEntity
 	{
@@ -818,8 +817,8 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D7F RID: 7551
-	// (get) Token: 0x06015E24 RID: 89636 RVA: 0x005853A1 File Offset: 0x005835A1
+	// Token: 0x17001DD8 RID: 7640
+	// (get) Token: 0x06013828 RID: 79912 RVA: 0x005B03A1 File Offset: 0x005AE5A1
 	[Nullable(2)]
 	public UPhysicalMaterial GetPhysMaterial
 	{
@@ -830,19 +829,19 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E25 RID: 89637 RVA: 0x005853A9 File Offset: 0x005835A9
+	// Token: 0x06013829 RID: 79913 RVA: 0x005B03A9 File Offset: 0x005AE5A9
 	public int GetTeamLength()
 	{
 		return this.TeamItems.Count;
 	}
 
-	// Token: 0x06015E26 RID: 89638 RVA: 0x005853B6 File Offset: 0x005835B6
+	// Token: 0x0601382A RID: 79914 RVA: 0x005B03B6 File Offset: 0x005AE5B6
 	public int GetTeamPlayerSize()
 	{
 		return this.PlayerIdSet.Count;
 	}
 
-	// Token: 0x06015E27 RID: 89639 RVA: 0x005853C4 File Offset: 0x005835C4
+	// Token: 0x0601382B RID: 79915 RVA: 0x005B03C4 File Offset: 0x005AE5C4
 	[return: Nullable(2)]
 	public SceneTeamItem GetTeamItem(long param, IGetTeamItemOptions options)
 	{
@@ -856,7 +855,7 @@ public class SceneTeamModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06015E28 RID: 89640 RVA: 0x00585424 File Offset: 0x00583624
+	// Token: 0x0601382C RID: 79916 RVA: 0x005B0424 File Offset: 0x005AE624
 	private bool IsItemMatch(SceneTeamItem item, long param, IGetTeamItemOptions options)
 	{
 		if (options.OnlyMyRole.GetValueOrDefault() && !item.IsMyRole())
@@ -887,7 +886,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E29 RID: 89641 RVA: 0x00585500 File Offset: 0x00583700
+	// Token: 0x0601382D RID: 79917 RVA: 0x005B0500 File Offset: 0x005AE700
 	public List<SceneTeamItem> GetTeamItems(bool onlyMyRole = false)
 	{
 		List<SceneTeamItem> list = new List<SceneTeamItem>();
@@ -901,7 +900,7 @@ public class SceneTeamModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015E2A RID: 89642 RVA: 0x00585568 File Offset: 0x00583768
+	// Token: 0x0601382E RID: 79918 RVA: 0x005B0568 File Offset: 0x005AE768
 	public List<SceneTeamItem> GetTeamItemsByPlayer(int playerId)
 	{
 		List<SceneTeamItem> list = new List<SceneTeamItem>();
@@ -915,7 +914,7 @@ public class SceneTeamModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015E2B RID: 89643 RVA: 0x005855CC File Offset: 0x005837CC
+	// Token: 0x0601382F RID: 79919 RVA: 0x005B05CC File Offset: 0x005AE7CC
 	public List<int> GetTeamRoleConfigIdList(bool onlyMyRole = false, bool getBaseRoleId = false)
 	{
 		List<int> list = new List<int>();
@@ -936,7 +935,7 @@ public class SceneTeamModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015E2C RID: 89644 RVA: 0x00585654 File Offset: 0x00583854
+	// Token: 0x06013830 RID: 79920 RVA: 0x005B0654 File Offset: 0x005AE854
 	public List<EntityHandle> GetTeamEntities(bool onlyMyRole = false)
 	{
 		List<EntityHandle> list = new List<EntityHandle>();
@@ -954,7 +953,7 @@ public class SceneTeamModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015E2D RID: 89645 RVA: 0x005856C4 File Offset: 0x005838C4
+	// Token: 0x06013831 RID: 79921 RVA: 0x005B06C4 File Offset: 0x005AE8C4
 	public List<EntityHandle> GetAllGroupEntities(int playerId)
 	{
 		List<EntityHandle> list = new List<EntityHandle>();
@@ -978,7 +977,7 @@ public class SceneTeamModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015E2E RID: 89646 RVA: 0x005857A0 File Offset: 0x005839A0
+	// Token: 0x06013832 RID: 79922 RVA: 0x005B07A0 File Offset: 0x005AE9A0
 	public List<SceneTeamItem> GetTeamItemsInRange(global::Vector location, float distance)
 	{
 		List<SceneTeamItem> list = new List<SceneTeamItem>();
@@ -999,7 +998,7 @@ public class SceneTeamModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015E2F RID: 89647 RVA: 0x00585840 File Offset: 0x00583A40
+	// Token: 0x06013833 RID: 79923 RVA: 0x005B0840 File Offset: 0x005AEA40
 	[NullableContext(2)]
 	public SceneTeamPlayer GetTeamPlayerData(int playerId)
 	{
@@ -1010,7 +1009,7 @@ public class SceneTeamModel : ModelBase
 		return this.TeamPlayerMap[playerId];
 	}
 
-	// Token: 0x06015E30 RID: 89648 RVA: 0x00585860 File Offset: 0x00583A60
+	// Token: 0x06013834 RID: 79924 RVA: 0x005B0860 File Offset: 0x005AEA60
 	public bool HasPhantomRole()
 	{
 		foreach (SceneTeamItem sceneTeamItem in this.GetTeamItems(true))
@@ -1024,7 +1023,7 @@ public class SceneTeamModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06015E31 RID: 89649 RVA: 0x005858E8 File Offset: 0x00583AE8
+	// Token: 0x06013835 RID: 79925 RVA: 0x005B08E8 File Offset: 0x005AEAE8
 	[NullableContext(2)]
 	public void ChangeRole(long creatureDataId, IChangeRoleParams @params = null)
 	{
@@ -1118,7 +1117,7 @@ public class SceneTeamModel : ModelBase
 		EventSystem.Instance.Emit<EntityHandle, EntityHandle>(EEventName.OnChangeRole, entityHandle2, entityHandle);
 	}
 
-	// Token: 0x06015E32 RID: 89650 RVA: 0x00585BC4 File Offset: 0x00583DC4
+	// Token: 0x06013836 RID: 79926 RVA: 0x005B0BC4 File Offset: 0x005AEDC4
 	public void OtherPlayerChangeRole(int playerId, long newCreatureDataId)
 	{
 		if (this.TeamPlayerMap.ContainsKey(playerId))
@@ -1132,7 +1131,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E33 RID: 89651 RVA: 0x00585BF0 File Offset: 0x00583DF0
+	// Token: 0x06013837 RID: 79927 RVA: 0x005B0BF0 File Offset: 0x005AEDF0
 	public void RefreshLastTransform()
 	{
 		EntityHandle getCurrentEntity = this.GetCurrentEntity;
@@ -1149,13 +1148,13 @@ public class SceneTeamModel : ModelBase
 		this.LastTransform = new FTransformDouble?(value);
 	}
 
-	// Token: 0x06015E34 RID: 89652 RVA: 0x00585C47 File Offset: 0x00583E47
+	// Token: 0x06013838 RID: 79928 RVA: 0x005B0C47 File Offset: 0x005AEE47
 	public void SetLastTransform(FTransformDouble? transform)
 	{
 		this.LastTransform = transform;
 	}
 
-	// Token: 0x06015E35 RID: 89653 RVA: 0x00585C50 File Offset: 0x00583E50
+	// Token: 0x06013839 RID: 79929 RVA: 0x005B0C50 File Offset: 0x005AEE50
 	public FTransformDouble? GetSpawnTransform()
 	{
 		FTransformDouble? lastTransform = this.LastTransform;
@@ -1195,25 +1194,25 @@ public class SceneTeamModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06015E36 RID: 89654 RVA: 0x00585D84 File Offset: 0x00583F84
+	// Token: 0x0601383A RID: 79930 RVA: 0x005B0D84 File Offset: 0x005AEF84
 	public double GetChangeRoleCooldown()
 	{
 		return this.ChangeRoleCooldown;
 	}
 
-	// Token: 0x06015E37 RID: 89655 RVA: 0x00585D8C File Offset: 0x00583F8C
+	// Token: 0x0601383B RID: 79931 RVA: 0x005B0D8C File Offset: 0x005AEF8C
 	public void ResetChangeRoleCooldown()
 	{
 		this.ChangeRoleCooldown = this.DefaultChangeRoleCooldown;
 	}
 
-	// Token: 0x06015E38 RID: 89656 RVA: 0x00585D9A File Offset: 0x00583F9A
+	// Token: 0x0601383C RID: 79932 RVA: 0x005B0D9A File Offset: 0x005AEF9A
 	public void UpdateChangeRoleCooldown(float time)
 	{
 		this.ChangeRoleCooldown = (double)time;
 	}
 
-	// Token: 0x06015E39 RID: 89657 RVA: 0x00585DA4 File Offset: 0x00583FA4
+	// Token: 0x0601383D RID: 79933 RVA: 0x005B0DA4 File Offset: 0x005AEFA4
 	public unsafe void RoleDeathEnded(int entityId)
 	{
 		Log instance = Log.Instance;
@@ -1311,7 +1310,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E3A RID: 89658 RVA: 0x00586050 File Offset: 0x00584250
+	// Token: 0x0601383E RID: 79934 RVA: 0x005B1050 File Offset: 0x005AF250
 	public bool IsAllDid()
 	{
 		using (List<SceneTeamItem>.Enumerator enumerator = this.TeamItems.GetEnumerator())
@@ -1327,7 +1326,7 @@ public class SceneTeamModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015E3B RID: 89659 RVA: 0x005860AC File Offset: 0x005842AC
+	// Token: 0x0601383F RID: 79935 RVA: 0x005B10AC File Offset: 0x005AF2AC
 	public ETeamLivingState GetCurrentGroupLivingState(int playerId)
 	{
 		SceneTeamGroup sceneTeamGroup;
@@ -1348,7 +1347,7 @@ public class SceneTeamModel : ModelBase
 		return sceneTeamGroup2.GetLivingState();
 	}
 
-	// Token: 0x06015E3C RID: 89660 RVA: 0x005860F0 File Offset: 0x005842F0
+	// Token: 0x06013840 RID: 79936 RVA: 0x005B10F0 File Offset: 0x005AF2F0
 	public ETeamLivingState GetGroupLivingState(int playerId, ETeamGroupType groupType)
 	{
 		SceneTeamGroup sceneTeamGroup;
@@ -1369,7 +1368,7 @@ public class SceneTeamModel : ModelBase
 		return sceneTeamGroup2.GetLivingState();
 	}
 
-	// Token: 0x06015E3D RID: 89661 RVA: 0x00586134 File Offset: 0x00584334
+	// Token: 0x06013841 RID: 79937 RVA: 0x005B1134 File Offset: 0x005AF334
 	public void InitializeOfflineSceneTeam(int aConfigId, int bConfigId, int cConfigId)
 	{
 		if (AActor.GetKuroNetMode() == EKuroNetMode.KNM_Net)
@@ -1451,8 +1450,8 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D80 RID: 7552
-	// (get) Token: 0x06015E3E RID: 89662 RVA: 0x0058633A File Offset: 0x0058453A
+	// Token: 0x17001DD9 RID: 7641
+	// (get) Token: 0x06013842 RID: 79938 RVA: 0x005B133A File Offset: 0x005AF53A
 	public static SceneTeamModel Instance
 	{
 		get
@@ -1461,7 +1460,7 @@ public class SceneTeamModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E3F RID: 89663 RVA: 0x00586341 File Offset: 0x00584541
+	// Token: 0x06013843 RID: 79939 RVA: 0x005B1341 File Offset: 0x005AF541
 	public static SceneTeamModel GetOrCreateInstance()
 	{
 		if (SceneTeamModel._Instance == null)
@@ -1471,7 +1470,7 @@ public class SceneTeamModel : ModelBase
 		return SceneTeamModel._Instance;
 	}
 
-	// Token: 0x06015E40 RID: 89664 RVA: 0x00586355 File Offset: 0x00584555
+	// Token: 0x06013844 RID: 79940 RVA: 0x005B1355 File Offset: 0x005AF555
 	public static bool CreateInstance()
 	{
 		if (SceneTeamModel._Instance != null)
@@ -1482,116 +1481,116 @@ public class SceneTeamModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015E41 RID: 89665 RVA: 0x0058636B File Offset: 0x0058456B
+	// Token: 0x06013845 RID: 79941 RVA: 0x005B136B File Offset: 0x005AF56B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06015E42 RID: 89666 RVA: 0x0058636D File Offset: 0x0058456D
+	// Token: 0x06013846 RID: 79942 RVA: 0x005B136D File Offset: 0x005AF56D
 	public static void ResetStaticDefaultValue()
 	{
 		SceneTeamModel._Instance = null;
 	}
 
-	// Token: 0x06015E43 RID: 89667 RVA: 0x00586375 File Offset: 0x00584575
+	// Token: 0x06013847 RID: 79943 RVA: 0x005B1375 File Offset: 0x005AF575
 	static SceneTeamModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SceneTeamModel.CreateStaticDefaultValue), new Action(SceneTeamModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A2D8 RID: 41688
+	// Token: 0x0400A6C2 RID: 42690
 	[Nullable(2)]
 	private Stat OnChangeRoleStat;
 
-	// Token: 0x0400A2D9 RID: 41689
+	// Token: 0x0400A6C3 RID: 42691
 	private readonly Dictionary<int, SceneTeamPlayer> TeamPlayerMap = new Dictionary<int, SceneTeamPlayer>();
 
-	// Token: 0x0400A2DA RID: 41690
+	// Token: 0x0400A6C4 RID: 42692
 	private readonly List<SceneTeamItem> TeamItems = new List<SceneTeamItem>();
 
-	// Token: 0x0400A2DB RID: 41691
+	// Token: 0x0400A6C5 RID: 42693
 	private readonly HashSet<int> PlayerIdSet = new HashSet<int>();
 
-	// Token: 0x0400A2DC RID: 41692
+	// Token: 0x0400A6C6 RID: 42694
 	private readonly HashSet<long> PreloadEntitySet = new HashSet<long>();
 
-	// Token: 0x0400A2DD RID: 41693
+	// Token: 0x0400A6C7 RID: 42695
 	public ETeamGroupType? CurrentGroupType;
 
-	// Token: 0x0400A2DE RID: 41694
+	// Token: 0x0400A6C8 RID: 42696
 	[Nullable(2)]
 	private WaitEntityTask WaitTask;
 
-	// Token: 0x0400A2DF RID: 41695
+	// Token: 0x0400A6C9 RID: 42697
 	[Nullable(2)]
 	private int[] LastRoleIdList;
 
-	// Token: 0x0400A2E0 RID: 41696
+	// Token: 0x0400A6CA RID: 42698
 	private long TeamGoBattleStartTime;
 
-	// Token: 0x0400A2E1 RID: 41697
+	// Token: 0x0400A6CB RID: 42699
 	[Nullable(2)]
 	private SceneTeamItem CurrentItem;
 
-	// Token: 0x0400A2E2 RID: 41698
+	// Token: 0x0400A6CC RID: 42700
 	public bool IsTeamReady;
 
-	// Token: 0x0400A2E3 RID: 41699
+	// Token: 0x0400A6CD RID: 42701
 	public bool IsPhantomTeam;
 
-	// Token: 0x0400A2E4 RID: 41700
+	// Token: 0x0400A6CE RID: 42702
 	public int PanelQteHandleId;
 
-	// Token: 0x0400A2E5 RID: 41701
+	// Token: 0x0400A6CF RID: 42703
 	public readonly HashSet<int> PanelQteRoleIdSet = new HashSet<int>();
 
-	// Token: 0x0400A2E6 RID: 41702
+	// Token: 0x0400A6D0 RID: 42704
 	public bool PanelQteShowTrialRoleTips;
 
-	// Token: 0x0400A2E7 RID: 41703
+	// Token: 0x0400A6D1 RID: 42705
 	private double ChangeRoleCooldown;
 
-	// Token: 0x0400A2E8 RID: 41704
+	// Token: 0x0400A6D2 RID: 42706
 	private double DefaultChangeRoleCooldown;
 
-	// Token: 0x0400A2E9 RID: 41705
+	// Token: 0x0400A6D3 RID: 42707
 	private FTransformDouble? LastTransform;
 
-	// Token: 0x0400A2EA RID: 41706
+	// Token: 0x0400A6D4 RID: 42708
 	public bool LastEntityIsOnGround = true;
 
-	// Token: 0x0400A2EB RID: 41707
+	// Token: 0x0400A6D5 RID: 42709
 	[Nullable(2)]
 	public GameModePromise LoadTeamPromise;
 
-	// Token: 0x0400A2EC RID: 41708
+	// Token: 0x0400A6D6 RID: 42710
 	[Nullable(2)]
 	private UPhysicalMaterial PhysMaterial;
 
-	// Token: 0x0400A2ED RID: 41709
+	// Token: 0x0400A6D7 RID: 42711
 	private long ChangingRoleTime;
 
-	// Token: 0x0400A2EE RID: 41710
+	// Token: 0x0400A6D8 RID: 42712
 	private bool RequestingChangeRole;
 
-	// Token: 0x0400A2EF RID: 41711
+	// Token: 0x0400A6D9 RID: 42713
 	public bool IsSeamlessUpdateTeam;
 
-	// Token: 0x0400A2F0 RID: 41712
+	// Token: 0x0400A6DA RID: 42714
 	public long SeamlessUpdateTeamStartTime;
 
-	// Token: 0x0400A2F1 RID: 41713
+	// Token: 0x0400A6DB RID: 42715
 	public bool IsSeamlessUpdateTeamBlockInput;
 
-	// Token: 0x0400A2F2 RID: 41714
+	// Token: 0x0400A6DC RID: 42716
 	[Nullable(2)]
 	public EntityHandle SeamlessDelayRemoveEntityHandle;
 
-	// Token: 0x0400A2F3 RID: 41715
+	// Token: 0x0400A6DD RID: 42717
 	[Nullable(2)]
 	public TimerHandle SeamlessWaitUpdateTeamTimer;
 
-	// Token: 0x0400A2F4 RID: 41716
+	// Token: 0x0400A6DE RID: 42718
 	[Nullable(2)]
 	private static SceneTeamModel _Instance;
 }

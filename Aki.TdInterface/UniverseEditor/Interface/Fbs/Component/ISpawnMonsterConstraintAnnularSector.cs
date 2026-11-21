@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005953 RID: 22867
+	// Token: 0x02005F60 RID: 24416
 	public struct ISpawnMonsterConstraintAnnularSector : IFlatbufferObject
 	{
-		// Token: 0x1700ABA7 RID: 43943
-		// (get) Token: 0x06026B47 RID: 158535 RVA: 0x005548B3 File Offset: 0x00552AB3
+		// Token: 0x1700B4DB RID: 46299
+		// (get) Token: 0x060290B1 RID: 168113 RVA: 0x0059B51F File Offset: 0x0059971F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026B48 RID: 158536 RVA: 0x005548C0 File Offset: 0x00552AC0
+		// Token: 0x060290B2 RID: 168114 RVA: 0x0059B52C File Offset: 0x0059972C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026B49 RID: 158537 RVA: 0x005548C8 File Offset: 0x00552AC8
+		// Token: 0x060290B3 RID: 168115 RVA: 0x0059B534 File Offset: 0x00599734
 		public static ISpawnMonsterConstraintAnnularSector GetRootAsISpawnMonsterConstraintAnnularSector(ByteBuffer _bb)
 		{
 			return ISpawnMonsterConstraintAnnularSector.GetRootAsISpawnMonsterConstraintAnnularSector(_bb, default(ISpawnMonsterConstraintAnnularSector));
 		}
 
-		// Token: 0x06026B4A RID: 158538 RVA: 0x005548E4 File Offset: 0x00552AE4
+		// Token: 0x060290B4 RID: 168116 RVA: 0x0059B550 File Offset: 0x00599750
 		public static ISpawnMonsterConstraintAnnularSector GetRootAsISpawnMonsterConstraintAnnularSector(ByteBuffer _bb, ISpawnMonsterConstraintAnnularSector obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026B4B RID: 158539 RVA: 0x00554901 File Offset: 0x00552B01
+		// Token: 0x060290B5 RID: 168117 RVA: 0x0059B56D File Offset: 0x0059976D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026B4C RID: 158540 RVA: 0x00554910 File Offset: 0x00552B10
+		// Token: 0x060290B6 RID: 168118 RVA: 0x0059B57C File Offset: 0x0059977C
 		public ISpawnMonsterConstraintAnnularSector __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ABA8 RID: 43944
-		// (get) Token: 0x06026B4D RID: 158541 RVA: 0x00554920 File Offset: 0x00552B20
+		// Token: 0x1700B4DC RID: 46300
+		// (get) Token: 0x060290B7 RID: 168119 RVA: 0x0059B58C File Offset: 0x0059978C
 		public ESpawnMonsterConstraint Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ABA9 RID: 43945
-		// (get) Token: 0x06026B4E RID: 158542 RVA: 0x0055495C File Offset: 0x00552B5C
+		// Token: 0x1700B4DD RID: 46301
+		// (get) Token: 0x060290B8 RID: 168120 RVA: 0x0059B5C8 File Offset: 0x005997C8
 		public float InnerRadius
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ABAA RID: 43946
-		// (get) Token: 0x06026B4F RID: 158543 RVA: 0x0055499C File Offset: 0x00552B9C
+		// Token: 0x1700B4DE RID: 46302
+		// (get) Token: 0x060290B9 RID: 168121 RVA: 0x0059B608 File Offset: 0x00599808
 		public float OuterRadius
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ABAB RID: 43947
-		// (get) Token: 0x06026B50 RID: 158544 RVA: 0x005549DC File Offset: 0x00552BDC
+		// Token: 0x1700B4DF RID: 46303
+		// (get) Token: 0x060290BA RID: 168122 RVA: 0x0059B648 File Offset: 0x00599848
 		public float Angle
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026B51 RID: 158545 RVA: 0x00554A1D File Offset: 0x00552C1D
+		// Token: 0x060290BB RID: 168123 RVA: 0x0059B689 File Offset: 0x00599889
 		public static Offset<ISpawnMonsterConstraintAnnularSector> CreateISpawnMonsterConstraintAnnularSector(FlatBufferBuilder builder, ESpawnMonsterConstraint Type = ESpawnMonsterConstraint.CharacterForwardAnnularSector, float InnerRadius = 0f, float OuterRadius = 0f, float Angle = 0f)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpawnMonsterConstraintAnnularSector.EndISpawnMonsterConstraintAnnularSector(builder);
 		}
 
-		// Token: 0x06026B52 RID: 158546 RVA: 0x00554A49 File Offset: 0x00552C49
+		// Token: 0x060290BC RID: 168124 RVA: 0x0059B6B5 File Offset: 0x005998B5
 		public static void StartISpawnMonsterConstraintAnnularSector(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06026B53 RID: 158547 RVA: 0x00554A52 File Offset: 0x00552C52
+		// Token: 0x060290BD RID: 168125 RVA: 0x0059B6BE File Offset: 0x005998BE
 		public static void AddType(FlatBufferBuilder builder, ESpawnMonsterConstraint type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026B54 RID: 158548 RVA: 0x00554A5D File Offset: 0x00552C5D
+		// Token: 0x060290BE RID: 168126 RVA: 0x0059B6C9 File Offset: 0x005998C9
 		public static void AddInnerRadius(FlatBufferBuilder builder, float innerRadius)
 		{
 			builder.AddFloat(1, innerRadius, 0.0);
 		}
 
-		// Token: 0x06026B55 RID: 158549 RVA: 0x00554A70 File Offset: 0x00552C70
+		// Token: 0x060290BF RID: 168127 RVA: 0x0059B6DC File Offset: 0x005998DC
 		public static void AddOuterRadius(FlatBufferBuilder builder, float outerRadius)
 		{
 			builder.AddFloat(2, outerRadius, 0.0);
 		}
 
-		// Token: 0x06026B56 RID: 158550 RVA: 0x00554A83 File Offset: 0x00552C83
+		// Token: 0x060290C0 RID: 168128 RVA: 0x0059B6EF File Offset: 0x005998EF
 		public static void AddAngle(FlatBufferBuilder builder, float angle)
 		{
 			builder.AddFloat(3, angle, 0.0);
 		}
 
-		// Token: 0x06026B57 RID: 158551 RVA: 0x00554A96 File Offset: 0x00552C96
+		// Token: 0x060290C1 RID: 168129 RVA: 0x0059B702 File Offset: 0x00599902
 		public static Offset<ISpawnMonsterConstraintAnnularSector> EndISpawnMonsterConstraintAnnularSector(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpawnMonsterConstraintAnnularSector>(builder.EndTable());
 		}
 
-		// Token: 0x06026B58 RID: 158552 RVA: 0x00554AA4 File Offset: 0x00552CA4
+		// Token: 0x060290C2 RID: 168130 RVA: 0x0059B710 File Offset: 0x00599910
 		public ISpawnMonsterConstraintAnnularSectorT UnPack()
 		{
 			ISpawnMonsterConstraintAnnularSectorT spawnMonsterConstraintAnnularSectorT = new ISpawnMonsterConstraintAnnularSectorT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return spawnMonsterConstraintAnnularSectorT;
 		}
 
-		// Token: 0x06026B59 RID: 158553 RVA: 0x00554ABF File Offset: 0x00552CBF
+		// Token: 0x060290C3 RID: 168131 RVA: 0x0059B72B File Offset: 0x0059992B
 		public void UnPackTo(ISpawnMonsterConstraintAnnularSectorT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Angle = this.Angle;
 		}
 
-		// Token: 0x06026B5A RID: 158554 RVA: 0x00554AF4 File Offset: 0x00552CF4
+		// Token: 0x060290C4 RID: 168132 RVA: 0x0059B760 File Offset: 0x00599960
 		public static Offset<ISpawnMonsterConstraintAnnularSector> Pack(FlatBufferBuilder builder, ISpawnMonsterConstraintAnnularSectorT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpawnMonsterConstraintAnnularSector.CreateISpawnMonsterConstraintAnnularSector(builder, _o.Type, _o.InnerRadius, _o.OuterRadius, _o.Angle);
 		}
 
-		// Token: 0x0400EF33 RID: 61235
+		// Token: 0x0400FC28 RID: 64552
 		private Table __p;
 	}
 }

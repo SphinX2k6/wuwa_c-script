@@ -2,82 +2,82 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002E66 RID: 11878
+// Token: 0x020023B8 RID: 9144
 [NullableContext(1)]
 public interface IBulletDamageParam
 {
-	// Token: 0x170022AF RID: 8879
-	// (get) Token: 0x060195F8 RID: 103928
-	// (set) Token: 0x060195F9 RID: 103929
+	// Token: 0x1700232E RID: 9006
+	// (get) Token: 0x06016EBF RID: 93887
+	// (set) Token: 0x06016EC0 RID: 93888
 	long DamageDataId { get; set; }
 
-	// Token: 0x170022B0 RID: 8880
-	// (get) Token: 0x060195FA RID: 103930
-	// (set) Token: 0x060195FB RID: 103931
+	// Token: 0x1700232F RID: 9007
+	// (get) Token: 0x06016EC1 RID: 93889
+	// (set) Token: 0x06016EC2 RID: 93890
 	long? BulletId { get; set; }
 
-	// Token: 0x170022B1 RID: 8881
-	// (get) Token: 0x060195FC RID: 103932
-	// (set) Token: 0x060195FD RID: 103933
+	// Token: 0x17002330 RID: 9008
+	// (get) Token: 0x06016EC3 RID: 93891
+	// (set) Token: 0x06016EC4 RID: 93892
 	Entity Attacker { get; set; }
 
-	// Token: 0x170022B2 RID: 8882
-	// (get) Token: 0x060195FE RID: 103934
-	// (set) Token: 0x060195FF RID: 103935
+	// Token: 0x17002331 RID: 9009
+	// (get) Token: 0x06016EC5 RID: 93893
+	// (set) Token: 0x06016EC6 RID: 93894
 	Entity DirectTarget { get; set; }
 
-	// Token: 0x170022B3 RID: 8883
-	// (get) Token: 0x06019600 RID: 103936
-	// (set) Token: 0x06019601 RID: 103937
+	// Token: 0x17002332 RID: 9010
+	// (get) Token: 0x06016EC7 RID: 93895
+	// (set) Token: 0x06016EC8 RID: 93896
 	int SkillLevel { get; set; }
 
-	// Token: 0x170022B4 RID: 8884
-	// (get) Token: 0x06019602 RID: 103938
-	// (set) Token: 0x06019603 RID: 103939
+	// Token: 0x17002333 RID: 9011
+	// (get) Token: 0x06016EC9 RID: 93897
+	// (set) Token: 0x06016ECA RID: 93898
 	FVectorDouble HitPosition { get; set; }
 
-	// Token: 0x170022B5 RID: 8885
-	// (get) Token: 0x06019604 RID: 103940
-	// (set) Token: 0x06019605 RID: 103941
+	// Token: 0x17002334 RID: 9012
+	// (get) Token: 0x06016ECB RID: 93899
+	// (set) Token: 0x06016ECC RID: 93900
 	float ExtraRate { get; set; }
 
-	// Token: 0x170022B6 RID: 8886
-	// (get) Token: 0x06019606 RID: 103942
-	// (set) Token: 0x06019607 RID: 103943
+	// Token: 0x17002335 RID: 9013
+	// (get) Token: 0x06016ECD RID: 93901
+	// (set) Token: 0x06016ECE RID: 93902
 	bool IsAddEnergy { get; set; }
 
-	// Token: 0x170022B7 RID: 8887
-	// (get) Token: 0x06019608 RID: 103944
-	// (set) Token: 0x06019609 RID: 103945
+	// Token: 0x17002336 RID: 9014
+	// (get) Token: 0x06016ECF RID: 93903
+	// (set) Token: 0x06016ED0 RID: 93904
 	bool IsCounterAttack { get; set; }
 
-	// Token: 0x170022B8 RID: 8888
-	// (get) Token: 0x0601960A RID: 103946
-	// (set) Token: 0x0601960B RID: 103947
+	// Token: 0x17002337 RID: 9015
+	// (get) Token: 0x06016ED1 RID: 93905
+	// (set) Token: 0x06016ED2 RID: 93906
 	bool ForceCritical { get; set; }
 
-	// Token: 0x170022B9 RID: 8889
-	// (get) Token: 0x0601960C RID: 103948
-	// (set) Token: 0x0601960D RID: 103949
+	// Token: 0x17002338 RID: 9016
+	// (get) Token: 0x06016ED3 RID: 93907
+	// (set) Token: 0x06016ED4 RID: 93908
 	bool IsBlocked { get; set; }
 
-	// Token: 0x170022BA RID: 8890
-	// (get) Token: 0x0601960E RID: 103950
-	// (set) Token: 0x0601960F RID: 103951
+	// Token: 0x17002339 RID: 9017
+	// (get) Token: 0x06016ED5 RID: 93909
+	// (set) Token: 0x06016ED6 RID: 93910
 	int PartId { get; set; }
 
-	// Token: 0x170022BB RID: 8891
-	// (get) Token: 0x06019610 RID: 103952
-	// (set) Token: 0x06019611 RID: 103953
+	// Token: 0x1700233A RID: 9018
+	// (get) Token: 0x06016ED7 RID: 93911
+	// (set) Token: 0x06016ED8 RID: 93912
 	long? CounterSkillMessageId { get; set; }
 
-	// Token: 0x170022BC RID: 8892
-	// (get) Token: 0x06019612 RID: 103954
-	// (set) Token: 0x06019613 RID: 103955
+	// Token: 0x1700233B RID: 9019
+	// (get) Token: 0x06016ED9 RID: 93913
+	// (set) Token: 0x06016EDA RID: 93914
 	long? CounterSkillId { get; set; }
 
-	// Token: 0x170022BD RID: 8893
-	// (get) Token: 0x06019614 RID: 103956
-	// (set) Token: 0x06019615 RID: 103957
+	// Token: 0x1700233C RID: 9020
+	// (get) Token: 0x06016EDB RID: 93915
+	// (set) Token: 0x06016EDC RID: 93916
 	ECounterAttackType? CounterType { get; set; }
 }

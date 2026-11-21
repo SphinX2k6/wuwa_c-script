@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005869 RID: 22633
+	// Token: 0x02004841 RID: 18497
 	public class InstanceDungeonAreaView : UiViewBase
 	{
-		// Token: 0x060398A5 RID: 235685 RVA: 0x00DA9DD1 File Offset: 0x00DA7FD1
+		// Token: 0x0602E7C2 RID: 190402 RVA: 0x00CF8AF9 File Offset: 0x00CF6CF9
 		[NullableContext(1)]
 		public InstanceDungeonAreaView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060398A6 RID: 235686 RVA: 0x00DA9DDC File Offset: 0x00DA7FDC
+		// Token: 0x0602E7C3 RID: 190403 RVA: 0x00CF8B04 File Offset: 0x00CF6D04
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060398A7 RID: 235687 RVA: 0x00DA9E24 File Offset: 0x00DA8024
+		// Token: 0x0602E7C4 RID: 190404 RVA: 0x00CF8B4C File Offset: 0x00CF6D4C
 		protected override void OnStart()
 		{
 			this.UiViewSequence.AddSequenceFinishEvent("Start", delegate(string _)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}, false);
 		}
 
-		// Token: 0x060398A8 RID: 235688 RVA: 0x00DA9E44 File Offset: 0x00DA8044
+		// Token: 0x0602E7C5 RID: 190405 RVA: 0x00CF8B6C File Offset: 0x00CF6D6C
 		private void SetName()
 		{
 			if (base.GetText(0) != null)
@@ -53,19 +53,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060398A9 RID: 235689 RVA: 0x00DA9E7B File Offset: 0x00DA807B
+		// Token: 0x0602E7C6 RID: 190406 RVA: 0x00CF8BA3 File Offset: 0x00CF6DA3
 		protected override void OnBeforeShow()
 		{
 			this.SetName();
 		}
 
-		// Token: 0x0401E177 RID: 123255
+		// Token: 0x04018C14 RID: 101396
 		private const int SHOW_TIME = 3000;
 
-		// Token: 0x0200BA8D RID: 47757
+		// Token: 0x0200A4A4 RID: 42148
 		private enum EChildCom
 		{
-			// Token: 0x04038630 RID: 230960
+			// Token: 0x04033027 RID: 208935
 			AreaNameText
 		}
 	}

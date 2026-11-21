@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Phantom.Vision.View
 {
-	// Token: 0x02004602 RID: 17922
+	// Token: 0x0200352B RID: 13611
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,13 +19,13 @@ namespace CSharpScript.Game.Phantom.Vision.View
 	})]
 	public class VisionDetailDescContentItem : GridProxyAbstract<VisionDetailDesc>
 	{
-		// Token: 0x0602E354 RID: 189268 RVA: 0x00AAF120 File Offset: 0x00AAD320
+		// Token: 0x06022A49 RID: 141897 RVA: 0x009DB814 File Offset: 0x009D9A14
 		public override void Refresh(VisionDetailDesc data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 		}
 
-		// Token: 0x0602E355 RID: 189269 RVA: 0x00AAF12C File Offset: 0x00AAD32C
+		// Token: 0x06022A4A RID: 141898 RVA: 0x009DB820 File Offset: 0x009D9A20
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602E356 RID: 189270 RVA: 0x00AAF2C4 File Offset: 0x00AAD4C4
+		// Token: 0x06022A4B RID: 141899 RVA: 0x009DB9B8 File Offset: 0x009D9BB8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			VisionDetailDescContentItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E357 RID: 189271 RVA: 0x00AAF307 File Offset: 0x00AAD507
+		// Token: 0x06022A4C RID: 141900 RVA: 0x009DB9FB File Offset: 0x009D9BFB
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetItem(7));
 		}
 
-		// Token: 0x0602E358 RID: 189272 RVA: 0x00AAF31C File Offset: 0x00AAD51C
+		// Token: 0x06022A4D RID: 141901 RVA: 0x009DBA10 File Offset: 0x009D9C10
 		public void Update(VisionDetailDesc data)
 		{
 			this.Data = data;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			this.RefreshSimplyAnimation(data);
 		}
 
-		// Token: 0x0602E359 RID: 189273 RVA: 0x00AAF36C File Offset: 0x00AAD56C
+		// Token: 0x06022A4E RID: 141902 RVA: 0x009DBA60 File Offset: 0x009D9C60
 		private void RefreshSimplyAnimation(VisionDetailDesc data)
 		{
 			if (data.NeedSimplyStateChangeAnimation && data.AnimationState)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			}
 		}
 
-		// Token: 0x0602E35A RID: 189274 RVA: 0x00AAF3B8 File Offset: 0x00AAD5B8
+		// Token: 0x06022A4F RID: 141903 RVA: 0x009DBAAC File Offset: 0x009D9CAC
 		private void RefreshAnimation(VisionDetailDesc data)
 		{
 			if (this.AnimationState && data.AnimationState)
@@ -153,13 +153,13 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			}
 		}
 
-		// Token: 0x0602E35B RID: 189275 RVA: 0x00AAF4C6 File Offset: 0x00AAD6C6
+		// Token: 0x06022A50 RID: 141904 RVA: 0x009DBBBA File Offset: 0x009D9DBA
 		private void RefreshActiveStateItem(VisionDetailDesc data)
 		{
 			base.GetItem(0).SetUIActive(data.NeedActiveState || data.GetNeedWarn());
 		}
 
-		// Token: 0x0602E35C RID: 189276 RVA: 0x00AAF4E5 File Offset: 0x00AAD6E5
+		// Token: 0x06022A51 RID: 141905 RVA: 0x009DBBD9 File Offset: 0x009D9DD9
 		private void RefreshActiveContentItem(VisionDetailDesc data)
 		{
 			if (data.NeedActiveState)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			}
 		}
 
-		// Token: 0x0602E35D RID: 189277 RVA: 0x00AAF518 File Offset: 0x00AAD718
+		// Token: 0x06022A52 RID: 141906 RVA: 0x009DBC0C File Offset: 0x009D9E0C
 		private void RefreshNoneItem(VisionDetailDesc data)
 		{
 			if (data.GreenActiveState && !data.NewState && data.FetterId > 0)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			base.GetItem(1).SetUIActive(true);
 		}
 
-		// Token: 0x0602E35E RID: 189278 RVA: 0x00AAF59C File Offset: 0x00AAD79C
+		// Token: 0x06022A53 RID: 141907 RVA: 0x009DBC90 File Offset: 0x009D9E90
 		private void RefreshElement(VisionDetailDesc data)
 		{
 			if (data.FetterId > 0)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			base.GetItem(5).SetUIActive(false);
 		}
 
-		// Token: 0x0602E35F RID: 189279 RVA: 0x00AAF6A8 File Offset: 0x00AAD8A8
+		// Token: 0x06022A54 RID: 141908 RVA: 0x009DBD9C File Offset: 0x009D9F9C
 		private void RefreshContent(VisionDetailDesc data)
 		{
 			if (data.GetNeedWarn() && data.FetterId <= 0)
@@ -324,28 +324,28 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			}
 		}
 
-		// Token: 0x0602E360 RID: 189280 RVA: 0x00AAF98A File Offset: 0x00AADB8A
+		// Token: 0x06022A55 RID: 141909 RVA: 0x009DC07E File Offset: 0x009DA27E
 		protected override void OnBeforeHide()
 		{
 			this.LevelSequencePlayer.StopCurrentSequence(false, false);
 		}
 
-		// Token: 0x04018CE4 RID: 101604
+		// Token: 0x04013323 RID: 78627
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04018CE5 RID: 101605
+		// Token: 0x04013324 RID: 78628
 		private readonly bool AnimationState = true;
 
-		// Token: 0x04018CE6 RID: 101606
+		// Token: 0x04013325 RID: 78629
 		[Nullable(2)]
 		protected VisionDetailDesc CurrentData;
 
-		// Token: 0x04018CE7 RID: 101607
+		// Token: 0x04013326 RID: 78630
 		[Nullable(2)]
 		private VisionFetterSuitItem VisionFetterSuitItem;
 
-		// Token: 0x04018CE8 RID: 101608
+		// Token: 0x04013327 RID: 78631
 		[Nullable(2)]
 		private VisionDetailDesc Data;
 	}

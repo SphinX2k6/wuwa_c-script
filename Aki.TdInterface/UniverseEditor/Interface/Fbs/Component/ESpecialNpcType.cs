@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E1D RID: 19997
+	// Token: 0x0200532C RID: 21292
 	public enum ESpecialNpcType : byte
 	{
-		// Token: 0x0400DB45 RID: 56133
+		// Token: 0x0400E6B7 RID: 59063
 		BaseRoleNpc
 	}
 }

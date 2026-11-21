@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B51 RID: 2897
+	// Token: 0x02000C1F RID: 3103
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IHoldCfg
 	{
-		// Token: 0x060042BC RID: 17084 RVA: 0x000AA56A File Offset: 0x000A876A
-		[NullableContext(1)]
+		// Token: 0x06004715 RID: 18197 RVA: 0x000B462E File Offset: 0x000B282E
+		[NullableContext(0)]
 		public static IHoldCfg Create(IHoldCfg? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011D7 RID: 4567
-		// (get) Token: 0x060042BD RID: 17085 RVA: 0x000AA589 File Offset: 0x000A8789
+		// Token: 0x170012D2 RID: 4818
+		// (get) Token: 0x06004716 RID: 18198 RVA: 0x000B464D File Offset: 0x000B284D
 		public virtual IHoldingTrackTarget TrackTarget
 		{
 			get
@@ -39,13 +39,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002594 RID: 9620
+		// Token: 0x040027DC RID: 10204
 		private IHoldCfg Instance;
 
-		// Token: 0x04002595 RID: 9621
+		// Token: 0x040027DD RID: 10205
 		private IHoldingTrackTarget _TrackTargetCache;
 
-		// Token: 0x04002596 RID: 9622
+		// Token: 0x040027DE RID: 10206
 		private bool _TrackTargetInited;
 	}
 }

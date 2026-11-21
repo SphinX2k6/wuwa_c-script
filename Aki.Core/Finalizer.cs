@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 [Nullable(0)]
 internal class Finalizer<TParam>
 {
-	// Token: 0x06000213 RID: 531 RVA: 0x0000C887 File Offset: 0x0000AA87
+	// Token: 0x06000214 RID: 532 RVA: 0x0000C56B File Offset: 0x0000A76B
 	public void Dispose()
 	{
 		this._Callback = null;
 		GC.SuppressFinalize(this);
 	}
 
-	// Token: 0x06000214 RID: 532 RVA: 0x0000C896 File Offset: 0x0000AA96
+	// Token: 0x06000215 RID: 533 RVA: 0x0000C57A File Offset: 0x0000A77A
 	public Finalizer(TParam param, string reason, Action<TParam, string> callback)
 	{
 		this._Param = param;
@@ -22,7 +22,7 @@ internal class Finalizer<TParam>
 		this._Callback = callback;
 	}
 
-	// Token: 0x06000215 RID: 533 RVA: 0x0000C8B4 File Offset: 0x0000AAB4
+	// Token: 0x06000216 RID: 534 RVA: 0x0000C598 File Offset: 0x0000A798
 	protected override void Finalize()
 	{
 		try
@@ -43,12 +43,12 @@ internal class Finalizer<TParam>
 		}
 	}
 
-	// Token: 0x040001BC RID: 444
+	// Token: 0x040001BE RID: 446
 	private readonly TParam _Param;
 
-	// Token: 0x040001BD RID: 445
+	// Token: 0x040001BF RID: 447
 	private readonly string _Reason;
 
-	// Token: 0x040001BE RID: 446
+	// Token: 0x040001C0 RID: 448
 	private Action<TParam, string> _Callback;
 }

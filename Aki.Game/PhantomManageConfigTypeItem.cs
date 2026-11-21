@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001FBA RID: 8122
+// Token: 0x0200147C RID: 5244
 [Nullable(new byte[]
 {
 	0,
@@ -14,25 +14,25 @@ using UnrealEngine;
 })]
 public class PhantomManageConfigTypeItem : GridProxyAbstract<InventoryDefine.IManageConfigTypeItemData>, IStaticVariableResetter
 {
-	// Token: 0x0600FDF2 RID: 65010 RVA: 0x003D9A8E File Offset: 0x003D7C8E
+	// Token: 0x0600D218 RID: 53784 RVA: 0x003E546A File Offset: 0x003E366A
 	static PhantomManageConfigTypeItem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomManageConfigTypeItem.CreateStaticDefaultValue), new Action(PhantomManageConfigTypeItem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600FDF3 RID: 65011 RVA: 0x003D9AAD File Offset: 0x003D7CAD
+	// Token: 0x0600D219 RID: 53785 RVA: 0x003E5489 File Offset: 0x003E3689
 	public static void CreateStaticDefaultValue()
 	{
 		PhantomManageConfigTypeItem.ViewModel = null;
 	}
 
-	// Token: 0x0600FDF4 RID: 65012 RVA: 0x003D9AB5 File Offset: 0x003D7CB5
+	// Token: 0x0600D21A RID: 53786 RVA: 0x003E5491 File Offset: 0x003E3691
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomManageConfigTypeItem.ViewModel = null;
 	}
 
-	// Token: 0x0600FDF5 RID: 65013 RVA: 0x003D9AC0 File Offset: 0x003D7CC0
+	// Token: 0x0600D21B RID: 53787 RVA: 0x003E549C File Offset: 0x003E369C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -55,14 +55,14 @@ public class PhantomManageConfigTypeItem : GridProxyAbstract<InventoryDefine.IMa
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FDF6 RID: 65014 RVA: 0x003D9B87 File Offset: 0x003D7D87
+	// Token: 0x0600D21C RID: 53788 RVA: 0x003E5563 File Offset: 0x003E3763
 	protected override void OnStart()
 	{
 		base.GetItem(2).SetUIActive(false);
 		base.GetExtendToggle(1).CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 	}
 
-	// Token: 0x0600FDF7 RID: 65015 RVA: 0x003D9BB4 File Offset: 0x003D7DB4
+	// Token: 0x0600D21D RID: 53789 RVA: 0x003E5590 File Offset: 0x003E3790
 	[NullableContext(1)]
 	public override void Refresh(InventoryDefine.IManageConfigTypeItemData data, bool isSelected, int gridIndex)
 	{
@@ -72,21 +72,21 @@ public class PhantomManageConfigTypeItem : GridProxyAbstract<InventoryDefine.IMa
 		base.GetExtendToggle(1).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600FDF8 RID: 65016 RVA: 0x003D9C02 File Offset: 0x003D7E02
+	// Token: 0x0600D21E RID: 53790 RVA: 0x003E55DE File Offset: 0x003E37DE
 	[NullableContext(1)]
 	public override object GetKey(InventoryDefine.IManageConfigTypeItemData data, int displayIndex)
 	{
 		return data.Type;
 	}
 
-	// Token: 0x0600FDF9 RID: 65017 RVA: 0x003D9C10 File Offset: 0x003D7E10
+	// Token: 0x0600D21F RID: 53791 RVA: 0x003E55EC File Offset: 0x003E37EC
 	private bool OnCanExecuteChange()
 	{
 		EToggleState toggleState = base.GetExtendToggle(1).GetToggleState();
 		return !this.GetSelectState() || toggleState != EToggleState.ETT_Checked;
 	}
 
-	// Token: 0x0600FDFA RID: 65018 RVA: 0x003D9C39 File Offset: 0x003D7E39
+	// Token: 0x0600D220 RID: 53792 RVA: 0x003E5615 File Offset: 0x003E3815
 	private void OnClickedSelect(EToggleState toggleState)
 	{
 		if (this.Data != null && PhantomManageConfigTypeItem.ViewModel != null)
@@ -99,28 +99,28 @@ public class PhantomManageConfigTypeItem : GridProxyAbstract<InventoryDefine.IMa
 		}
 	}
 
-	// Token: 0x0600FDFB RID: 65019 RVA: 0x003D9C78 File Offset: 0x003D7E78
+	// Token: 0x0600D221 RID: 53793 RVA: 0x003E5654 File Offset: 0x003E3854
 	private bool GetSelectState()
 	{
 		return this.Data != null && PhantomManageConfigTypeItem.ViewModel != null && PhantomManageConfigTypeItem.ViewModel.GetSelectType() == this.Data.Type;
 	}
 
-	// Token: 0x0400759B RID: 30107
+	// Token: 0x0400767D RID: 30333
 	[Nullable(2)]
 	private InventoryDefine.IManageConfigTypeItemData Data;
 
-	// Token: 0x0400759C RID: 30108
+	// Token: 0x0400767E RID: 30334
 	[Nullable(2)]
 	public static PhantomManageConfigViewModel ViewModel;
 
-	// Token: 0x020085C2 RID: 34242
+	// Token: 0x02007744 RID: 30532
 	private enum EComponent
 	{
-		// Token: 0x0402B8B8 RID: 178360
+		// Token: 0x04026BC0 RID: 158656
 		TextName,
-		// Token: 0x0402B8B9 RID: 178361
+		// Token: 0x04026BC1 RID: 158657
 		BtnSelect,
-		// Token: 0x0402B8BA RID: 178362
+		// Token: 0x04026BC2 RID: 158658
 		ItemReddot
 	}
 }

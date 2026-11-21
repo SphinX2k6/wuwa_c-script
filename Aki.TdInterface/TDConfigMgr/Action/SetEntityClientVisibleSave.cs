@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021AF RID: 8623
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200241A RID: 9242
 	public class SetEntityClientVisibleSave : ActionParams
 	{
-		// Token: 0x0600BD58 RID: 48472 RVA: 0x001B405C File Offset: 0x001B225C
+		// Token: 0x0600C912 RID: 51474 RVA: 0x001CB694 File Offset: 0x001C9894
 		private SetEntityClientVisibleSave_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BD59 RID: 48473 RVA: 0x001B4094 File Offset: 0x001B2294
+		// Token: 0x0600C913 RID: 51475 RVA: 0x001CB6CC File Offset: 0x001C98CC
 		public static SetEntityClientVisibleSave Create([Nullable(2)] SetEntityClientVisibleSave instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD5A RID: 48474 RVA: 0x001B40A7 File Offset: 0x001B22A7
+		// Token: 0x0600C914 RID: 51476 RVA: 0x001CB6DF File Offset: 0x001C98DF
 		public static SetEntityClientVisibleSave CreateFromSetValue([Nullable(2)] SetEntityClientVisibleSave_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD5B RID: 48475 RVA: 0x001B40BA File Offset: 0x001B22BA
+		// Token: 0x0600C915 RID: 51477 RVA: 0x001CB6F2 File Offset: 0x001C98F2
 		public SetEntityClientVisibleSave_SetValue ToSetValue()
 		{
 			return new SetEntityClientVisibleSave_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003986 RID: 14726
-		// (get) Token: 0x0600BD5C RID: 48476 RVA: 0x001B40D9 File Offset: 0x001B22D9
-		// (set) Token: 0x0600BD5D RID: 48477 RVA: 0x001B4100 File Offset: 0x001B2300
+		// Token: 0x17003C7A RID: 15482
+		// (get) Token: 0x0600C916 RID: 51478 RVA: 0x001CB711 File Offset: 0x001C9911
+		// (set) Token: 0x0600C917 RID: 51479 RVA: 0x001CB738 File Offset: 0x001C9938
 		public virtual List<int> EntityIds
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003987 RID: 14727
-		// (get) Token: 0x0600BD5E RID: 48478 RVA: 0x001B410E File Offset: 0x001B230E
-		// (set) Token: 0x0600BD5F RID: 48479 RVA: 0x001B4139 File Offset: 0x001B2339
+		// Token: 0x17003C7B RID: 15483
+		// (get) Token: 0x0600C918 RID: 51480 RVA: 0x001CB746 File Offset: 0x001C9946
+		// (set) Token: 0x0600C919 RID: 51481 RVA: 0x001CB771 File Offset: 0x001C9971
 		public virtual bool Visible
 		{
 			get
@@ -104,11 +102,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070F7 RID: 28919
+		// Token: 0x0400773F RID: 30527
 		[Nullable(2)]
 		protected new SetEntityClientVisibleSave FbInstance;
 
-		// Token: 0x040070F8 RID: 28920
+		// Token: 0x04007740 RID: 30528
 		[Nullable(2)]
 		protected SetEntityClientVisibleSave_SetValue PocoInterface;
 	}

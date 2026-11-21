@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002538 RID: 9528
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027DF RID: 10207
 	public class IActorVisibility
 	{
-		// Token: 0x0600D458 RID: 54360 RVA: 0x001F6F69 File Offset: 0x001F5169
+		// Token: 0x0600E1B8 RID: 57784 RVA: 0x002129C9 File Offset: 0x00210BC9
 		public static IActorVisibility Create(IActorVisibility? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BAA RID: 15274
-		// (get) Token: 0x0600D459 RID: 54361 RVA: 0x001F6F88 File Offset: 0x001F5188
+		// Token: 0x17003EA8 RID: 16040
+		// (get) Token: 0x0600E1B9 RID: 57785 RVA: 0x002129E8 File Offset: 0x00210BE8
 		public virtual int ActorIndex
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BAB RID: 15275
-		// (get) Token: 0x0600D45A RID: 54362 RVA: 0x001F6F95 File Offset: 0x001F5195
+		// Token: 0x17003EA9 RID: 16041
+		// (get) Token: 0x0600E1BA RID: 57786 RVA: 0x002129F5 File Offset: 0x00210BF5
 		public virtual EActorVisibilityPlayMode PlayMode
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BAC RID: 15276
-		// (get) Token: 0x0600D45B RID: 54363 RVA: 0x001F6FA2 File Offset: 0x001F51A2
+		// Token: 0x17003EAA RID: 16042
+		// (get) Token: 0x0600E1BB RID: 57787 RVA: 0x00212A02 File Offset: 0x00210C02
 		public virtual IActorVisibilityEffectDefault Effect
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BAD RID: 15277
-		// (get) Token: 0x0600D45C RID: 54364 RVA: 0x001F6FD8 File Offset: 0x001F51D8
+		// Token: 0x17003EAB RID: 16043
+		// (get) Token: 0x0600E1BC RID: 57788 RVA: 0x00212A38 File Offset: 0x00210C38
 		public virtual float? FadeDuration
 		{
 			get
@@ -72,8 +70,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BAE RID: 15278
-		// (get) Token: 0x0600D45D RID: 54365 RVA: 0x001F7010 File Offset: 0x001F5210
+		// Token: 0x17003EAC RID: 16044
+		// (get) Token: 0x0600E1BD RID: 57789 RVA: 0x00212A70 File Offset: 0x00210C70
 		public virtual float? DelayTime
 		{
 			get
@@ -86,14 +84,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007452 RID: 29778
+		// Token: 0x04007AA7 RID: 31399
 		private IActorVisibility Instance;
 
-		// Token: 0x04007453 RID: 29779
+		// Token: 0x04007AA8 RID: 31400
 		[Nullable(2)]
 		private IActorVisibilityEffectDefault _EffectCache;
 
-		// Token: 0x04007454 RID: 29780
+		// Token: 0x04007AA9 RID: 31401
 		private bool _EffectInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006978 RID: 27000
+	// Token: 0x0200702B RID: 28715
 	public struct IInstrumentQteGameplay : IFlatbufferObject
 	{
-		// Token: 0x1700C83E RID: 51262
-		// (get) Token: 0x0602F266 RID: 193126 RVA: 0x0066C6AE File Offset: 0x0066A8AE
+		// Token: 0x1700D241 RID: 53825
+		// (get) Token: 0x06031C36 RID: 203830 RVA: 0x006BCB96 File Offset: 0x006BAD96
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F267 RID: 193127 RVA: 0x0066C6BB File Offset: 0x0066A8BB
+		// Token: 0x06031C37 RID: 203831 RVA: 0x006BCBA3 File Offset: 0x006BADA3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F268 RID: 193128 RVA: 0x0066C6C4 File Offset: 0x0066A8C4
+		// Token: 0x06031C38 RID: 203832 RVA: 0x006BCBAC File Offset: 0x006BADAC
 		public static IInstrumentQteGameplay GetRootAsIInstrumentQteGameplay(ByteBuffer _bb)
 		{
 			return IInstrumentQteGameplay.GetRootAsIInstrumentQteGameplay(_bb, default(IInstrumentQteGameplay));
 		}
 
-		// Token: 0x0602F269 RID: 193129 RVA: 0x0066C6E0 File Offset: 0x0066A8E0
+		// Token: 0x06031C39 RID: 203833 RVA: 0x006BCBC8 File Offset: 0x006BADC8
 		public static IInstrumentQteGameplay GetRootAsIInstrumentQteGameplay(ByteBuffer _bb, IInstrumentQteGameplay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F26A RID: 193130 RVA: 0x0066C6FD File Offset: 0x0066A8FD
+		// Token: 0x06031C3A RID: 203834 RVA: 0x006BCBE5 File Offset: 0x006BADE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F26B RID: 193131 RVA: 0x0066C70C File Offset: 0x0066A90C
+		// Token: 0x06031C3B RID: 203835 RVA: 0x006BCBF4 File Offset: 0x006BADF4
 		public IInstrumentQteGameplay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C83F RID: 51263
-		// (get) Token: 0x0602F26C RID: 193132 RVA: 0x0066C71C File Offset: 0x0066A91C
+		// Token: 0x1700D242 RID: 53826
+		// (get) Token: 0x06031C3C RID: 203836 RVA: 0x006BCC04 File Offset: 0x006BAE04
 		public ESimpleGameplayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C840 RID: 51264
-		// (get) Token: 0x0602F26D RID: 193133 RVA: 0x0066C758 File Offset: 0x0066A958
+		// Token: 0x1700D243 RID: 53827
+		// (get) Token: 0x06031C3D RID: 203837 RVA: 0x006BCC40 File Offset: 0x006BAE40
 		public EInstrumentType InstrumentType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C841 RID: 51265
-		// (get) Token: 0x0602F26E RID: 193134 RVA: 0x0066C794 File Offset: 0x0066A994
+		// Token: 0x1700D244 RID: 53828
+		// (get) Token: 0x06031C3E RID: 203838 RVA: 0x006BCC7C File Offset: 0x006BAE7C
 		public int Id
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F26F RID: 193135 RVA: 0x0066C7D0 File Offset: 0x0066A9D0
+		// Token: 0x06031C3F RID: 203839 RVA: 0x006BCCB8 File Offset: 0x006BAEB8
 		public static Offset<IInstrumentQteGameplay> CreateIInstrumentQteGameplay(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher, EInstrumentType InstrumentType = EInstrumentType.ChineseZither, int Id = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInstrumentQteGameplay.EndIInstrumentQteGameplay(builder);
 		}
 
-		// Token: 0x0602F270 RID: 193136 RVA: 0x0066C7F4 File Offset: 0x0066A9F4
+		// Token: 0x06031C40 RID: 203840 RVA: 0x006BCCDC File Offset: 0x006BAEDC
 		public static void StartIInstrumentQteGameplay(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602F271 RID: 193137 RVA: 0x0066C7FD File Offset: 0x0066A9FD
+		// Token: 0x06031C41 RID: 203841 RVA: 0x006BCCE5 File Offset: 0x006BAEE5
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F272 RID: 193138 RVA: 0x0066C808 File Offset: 0x0066AA08
+		// Token: 0x06031C42 RID: 203842 RVA: 0x006BCCF0 File Offset: 0x006BAEF0
 		public static void AddInstrumentType(FlatBufferBuilder builder, EInstrumentType instrumentType)
 		{
 			builder.AddByte(1, (byte)instrumentType, 0);
 		}
 
-		// Token: 0x0602F273 RID: 193139 RVA: 0x0066C813 File Offset: 0x0066AA13
+		// Token: 0x06031C43 RID: 203843 RVA: 0x006BCCFB File Offset: 0x006BAEFB
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(2, id, 0);
 		}
 
-		// Token: 0x0602F274 RID: 193140 RVA: 0x0066C81E File Offset: 0x0066AA1E
+		// Token: 0x06031C44 RID: 203844 RVA: 0x006BCD06 File Offset: 0x006BAF06
 		public static Offset<IInstrumentQteGameplay> EndIInstrumentQteGameplay(FlatBufferBuilder builder)
 		{
 			return new Offset<IInstrumentQteGameplay>(builder.EndTable());
 		}
 
-		// Token: 0x0602F275 RID: 193141 RVA: 0x0066C82C File Offset: 0x0066AA2C
+		// Token: 0x06031C45 RID: 203845 RVA: 0x006BCD14 File Offset: 0x006BAF14
 		public IInstrumentQteGameplayT UnPack()
 		{
 			IInstrumentQteGameplayT instrumentQteGameplayT = new IInstrumentQteGameplayT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return instrumentQteGameplayT;
 		}
 
-		// Token: 0x0602F276 RID: 193142 RVA: 0x0066C847 File Offset: 0x0066AA47
+		// Token: 0x06031C46 RID: 203846 RVA: 0x006BCD2F File Offset: 0x006BAF2F
 		public void UnPackTo(IInstrumentQteGameplayT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0602F277 RID: 193143 RVA: 0x0066C870 File Offset: 0x0066AA70
+		// Token: 0x06031C47 RID: 203847 RVA: 0x006BCD58 File Offset: 0x006BAF58
 		public static Offset<IInstrumentQteGameplay> Pack(FlatBufferBuilder builder, IInstrumentQteGameplayT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInstrumentQteGameplay.CreateIInstrumentQteGameplay(builder, _o.Type, _o.InstrumentType, _o.Id);
 		}
 
-		// Token: 0x040110FE RID: 69886
+		// Token: 0x04011F6A RID: 73578
 		private Table __p;
 	}
 }

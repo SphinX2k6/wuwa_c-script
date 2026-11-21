@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200014D RID: 333
+	// Token: 0x02000160 RID: 352
 	[EnumExtensions]
 	public enum ETeleControlDestroyCondition
 	{
-		// Token: 0x0400066A RID: 1642
+		// Token: 0x040006AF RID: 1711
 		LetGo,
-		// Token: 0x0400066B RID: 1643
+		// Token: 0x040006B0 RID: 1712
 		CreateBullet,
-		// Token: 0x0400066C RID: 1644
+		// Token: 0x040006B1 RID: 1713
 		Throw
 	}
 }

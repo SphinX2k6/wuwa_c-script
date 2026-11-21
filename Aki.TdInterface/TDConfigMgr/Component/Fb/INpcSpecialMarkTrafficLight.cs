@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BD1 RID: 3025
+	// Token: 0x02000C9F RID: 3231
 	public class INpcSpecialMarkTrafficLight : INpcSpecialMarkBase
 	{
-		// Token: 0x06004581 RID: 17793 RVA: 0x000AFFB5 File Offset: 0x000AE1B5
-		[NullableContext(1)]
+		// Token: 0x060049DA RID: 18906 RVA: 0x000BA079 File Offset: 0x000B8279
 		public static INpcSpecialMarkTrafficLight Create(INpcSpecialMarkTrafficLight? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700139C RID: 5020
-		// (get) Token: 0x06004582 RID: 17794 RVA: 0x000AFFD4 File Offset: 0x000AE1D4
+		// Token: 0x17001497 RID: 5271
+		// (get) Token: 0x060049DB RID: 18907 RVA: 0x000BA098 File Offset: 0x000B8298
 		public override ESpecialNpcMarkType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400278A RID: 10122
+		// Token: 0x040029D2 RID: 10706
 		private INpcSpecialMarkTrafficLight Instance;
 	}
 }

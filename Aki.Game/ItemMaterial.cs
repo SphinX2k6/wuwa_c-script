@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020027E0 RID: 10208
+// Token: 0x02001D5B RID: 7515
 public class ItemMaterial : IItemMaterial
 {
-	// Token: 0x17001B64 RID: 7012
-	// (get) Token: 0x06014F65 RID: 85861 RVA: 0x0055113E File Offset: 0x0054F33E
-	// (set) Token: 0x06014F66 RID: 85862 RVA: 0x00551146 File Offset: 0x0054F346
+	// Token: 0x17001BBC RID: 7100
+	// (get) Token: 0x06012965 RID: 76133 RVA: 0x0057BEAE File Offset: 0x0057A0AE
+	// (set) Token: 0x06012966 RID: 76134 RVA: 0x0057BEB6 File Offset: 0x0057A0B6
 	public int ItemId { get; set; }
 
-	// Token: 0x17001B65 RID: 7013
-	// (get) Token: 0x06014F67 RID: 85863 RVA: 0x0055114F File Offset: 0x0054F34F
-	// (set) Token: 0x06014F68 RID: 85864 RVA: 0x00551157 File Offset: 0x0054F357
+	// Token: 0x17001BBD RID: 7101
+	// (get) Token: 0x06012967 RID: 76135 RVA: 0x0057BEBF File Offset: 0x0057A0BF
+	// (set) Token: 0x06012968 RID: 76136 RVA: 0x0057BEC7 File Offset: 0x0057A0C7
 	public int RequiredCount { get; set; }
 }

@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010C5 RID: 4293
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011F3 RID: 4595
 	public static class IQuestStatisticsTypeExtensions
 	{
-		// Token: 0x060060E2 RID: 24802 RVA: 0x000EA0D0 File Offset: 0x000E82D0
+		// Token: 0x060066DB RID: 26331 RVA: 0x000F71F0 File Offset: 0x000F53F0
 		public static IReadOnlyList<object> GetEntityConfigs(this IQuestStatisticsType p)
 		{
 			IQuestMonsterPoint questMonsterPoint = p as IQuestMonsterPoint;
@@ -30,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return entityConfigs;
 		}
 
-		// Token: 0x060060E3 RID: 24803 RVA: 0x000EA128 File Offset: 0x000E8328
+		// Token: 0x060066DC RID: 26332 RVA: 0x000F7248 File Offset: 0x000F5448
 		public static IReadOnlyList<object> GetTypeConfigs(this IQuestStatisticsType p)
 		{
 			IQuestMonsterPoint questMonsterPoint = p as IQuestMonsterPoint;

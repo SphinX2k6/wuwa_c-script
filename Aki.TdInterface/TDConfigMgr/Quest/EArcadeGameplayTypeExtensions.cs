@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001222 RID: 4642
+	// Token: 0x0200135E RID: 4958
 	public static class EArcadeGameplayTypeExtensions
 	{
-		// Token: 0x06006940 RID: 26944 RVA: 0x000FAD64 File Offset: 0x000F8F64
+		// Token: 0x06006F81 RID: 28545 RVA: 0x00108670 File Offset: 0x00106870
 		public static string ToEnumString(this EArcadeGameplayType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006941 RID: 26945 RVA: 0x000FAD9C File Offset: 0x000F8F9C
+		// Token: 0x06006F82 RID: 28546 RVA: 0x001086A8 File Offset: 0x001068A8
 		public static EArcadeGameplayType FromString(string name)
 		{
 			EArcadeGameplayType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006942 RID: 26946 RVA: 0x000FADC5 File Offset: 0x000F8FC5
+		// Token: 0x06006F83 RID: 28547 RVA: 0x001086D1 File Offset: 0x001068D1
 		public static bool TryFromString(string name, out EArcadeGameplayType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006943 RID: 26947 RVA: 0x000FADFE File Offset: 0x000F8FFE
+		// Token: 0x06006F84 RID: 28548 RVA: 0x0010870A File Offset: 0x0010690A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006944 RID: 26948 RVA: 0x000FAE16 File Offset: 0x000F9016
+		// Token: 0x06006F85 RID: 28549 RVA: 0x00108722 File Offset: 0x00106922
 		public static EArcadeGameplayType[] GetValues()
 		{
 			return new EArcadeGameplayType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006945 RID: 26949 RVA: 0x000FAE22 File Offset: 0x000F9022
+		// Token: 0x06006F86 RID: 28550 RVA: 0x0010872E File Offset: 0x0010692E
 		public static string[] GetNames()
 		{
 			return new string[]

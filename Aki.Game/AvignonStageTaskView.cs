@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001111 RID: 4369
+// Token: 0x020005C5 RID: 1477
 [NullableContext(1)]
 [Nullable(0)]
 public class AvignonStageTaskView : UiViewBase
 {
-	// Token: 0x0600723E RID: 29246 RVA: 0x00175C80 File Offset: 0x00173E80
+	// Token: 0x060045D4 RID: 17876 RVA: 0x0017E63C File Offset: 0x0017C83C
 	public AvignonStageTaskView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600723F RID: 29247 RVA: 0x00175C94 File Offset: 0x00173E94
+	// Token: 0x060045D5 RID: 17877 RVA: 0x0017E650 File Offset: 0x0017C850
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -61,7 +61,7 @@ public class AvignonStageTaskView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007240 RID: 29248 RVA: 0x00175E8C File Offset: 0x0017408C
+	// Token: 0x060045D6 RID: 17878 RVA: 0x0017E848 File Offset: 0x0017CA48
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AvignonStageTaskView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -72,33 +72,33 @@ public class AvignonStageTaskView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007241 RID: 29249 RVA: 0x00175ECF File Offset: 0x001740CF
+	// Token: 0x060045D7 RID: 17879 RVA: 0x0017E88B File Offset: 0x0017CA8B
 	private PageDot<int> InitPageDot()
 	{
 		return new PageDot<int>();
 	}
 
-	// Token: 0x06007242 RID: 29250 RVA: 0x00175ED6 File Offset: 0x001740D6
+	// Token: 0x060045D8 RID: 17880 RVA: 0x0017E892 File Offset: 0x0017CA92
 	private AvignonTaskItem CreateTaskItem()
 	{
 		return new AvignonTaskItem();
 	}
 
-	// Token: 0x06007243 RID: 29251 RVA: 0x00175EDD File Offset: 0x001740DD
+	// Token: 0x060045D9 RID: 17881 RVA: 0x0017E899 File Offset: 0x0017CA99
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshTaskLayout));
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06007244 RID: 29252 RVA: 0x00175F17 File Offset: 0x00174117
+	// Token: 0x060045DA RID: 17882 RVA: 0x0017E8D3 File Offset: 0x0017CAD3
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshTaskLayout));
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06007245 RID: 29253 RVA: 0x00175F54 File Offset: 0x00174154
+	// Token: 0x060045DB RID: 17883 RVA: 0x0017E910 File Offset: 0x0017CB10
 	private void RefreshView()
 	{
 		this.PageDotLayout.GetLayoutItemByIndex(this.CurrentSelectedIndex).UpdateShow(false);
@@ -121,7 +121,7 @@ public class AvignonStageTaskView : UiViewBase
 		AvignonModel.Instance.SaveNewStageFlag(this.StageId);
 	}
 
-	// Token: 0x06007246 RID: 29254 RVA: 0x001760F0 File Offset: 0x001742F0
+	// Token: 0x060045DC RID: 17884 RVA: 0x0017EAAC File Offset: 0x0017CCAC
 	private void OnRefreshTaskLayout(int activityId)
 	{
 		if (AvignonModel.Instance.GetAvignonActivityId() == activityId)
@@ -131,28 +131,28 @@ public class AvignonStageTaskView : UiViewBase
 		}
 	}
 
-	// Token: 0x06007247 RID: 29255 RVA: 0x00176133 File Offset: 0x00174333
+	// Token: 0x060045DD RID: 17885 RVA: 0x0017EAEF File Offset: 0x0017CCEF
 	private void RefreshTaskList(List<AvignonTaskData> data, bool playGridAnim = false)
 	{
 		this.RefreshStageTaskProgress();
 		this.TaskLayout.RefreshByData(data, null, playGridAnim);
 	}
 
-	// Token: 0x06007248 RID: 29256 RVA: 0x0017614C File Offset: 0x0017434C
+	// Token: 0x060045DE RID: 17886 RVA: 0x0017EB08 File Offset: 0x0017CD08
 	private void RefreshStageTaskProgress()
 	{
 		AvignonStageInfo avignonStageInfo = AvignonModel.Instance.GetAvignonStageInfo(this.StageId);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "BlackCoastTheme_TaskCompleteProgress", new <>z__ReadOnlySingleElementList<object>(avignonStageInfo.GetTaskProgress()));
 	}
 
-	// Token: 0x06007249 RID: 29257 RVA: 0x00176190 File Offset: 0x00174390
+	// Token: 0x060045DF RID: 17887 RVA: 0x0017EB4C File Offset: 0x0017CD4C
 	private void OnClickPre()
 	{
 		this.NextSelectedIndex = this.CurrentSelectedIndex - 1;
 		base.PlaySequence("SwitchLeft", null, false);
 	}
 
-	// Token: 0x0600724A RID: 29258 RVA: 0x001761B0 File Offset: 0x001743B0
+	// Token: 0x060045E0 RID: 17888 RVA: 0x0017EB6C File Offset: 0x0017CD6C
 	private void OnClickNext()
 	{
 		int num = this.CurrentSelectedIndex + 1;
@@ -167,13 +167,13 @@ public class AvignonStageTaskView : UiViewBase
 		ScrollingTipsController.Instance.ShowTipsByTextId(avignonStageInfo.GetLockConditionText(), Array.Empty<object>());
 	}
 
-	// Token: 0x0600724B RID: 29259 RVA: 0x00176211 File Offset: 0x00174411
+	// Token: 0x060045E1 RID: 17889 RVA: 0x0017EBCD File Offset: 0x0017CDCD
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600724C RID: 29260 RVA: 0x0017621A File Offset: 0x0017441A
+	// Token: 0x060045E2 RID: 17890 RVA: 0x0017EBD6 File Offset: 0x0017CDD6
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "PageChange")
@@ -182,23 +182,23 @@ public class AvignonStageTaskView : UiViewBase
 		}
 	}
 
-	// Token: 0x040034EB RID: 13547
+	// Token: 0x04003584 RID: 13700
 	private int StageId;
 
-	// Token: 0x040034EC RID: 13548
+	// Token: 0x04003585 RID: 13701
 	private AvignonStage? AvignonStageConf;
 
-	// Token: 0x040034ED RID: 13549
+	// Token: 0x04003586 RID: 13702
 	private int CurrentSelectedIndex;
 
-	// Token: 0x040034EE RID: 13550
+	// Token: 0x04003587 RID: 13703
 	private List<int> StageIdList = new List<int>();
 
-	// Token: 0x040034EF RID: 13551
+	// Token: 0x04003588 RID: 13704
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040034F0 RID: 13552
+	// Token: 0x04003589 RID: 13705
 	[Nullable(new byte[]
 	{
 		2,
@@ -206,7 +206,7 @@ public class AvignonStageTaskView : UiViewBase
 	})]
 	private GenericLayout<PageDot<int>, int> PageDotLayout;
 
-	// Token: 0x040034F1 RID: 13553
+	// Token: 0x0400358A RID: 13706
 	[Nullable(new byte[]
 	{
 		2,
@@ -215,44 +215,44 @@ public class AvignonStageTaskView : UiViewBase
 	})]
 	private GenericLayout<AvignonTaskItem, AvignonTaskData> TaskLayout;
 
-	// Token: 0x040034F2 RID: 13554
+	// Token: 0x0400358B RID: 13707
 	private int NextSelectedIndex;
 
-	// Token: 0x020076D4 RID: 30420
+	// Token: 0x02006868 RID: 26728
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027361 RID: 160609
+		// Token: 0x040226AA RID: 140970
 		public const int ItemCaption = 0;
 
-		// Token: 0x04027362 RID: 160610
+		// Token: 0x040226AB RID: 140971
 		public const int TxtFinishPercent = 1;
 
-		// Token: 0x04027363 RID: 160611
+		// Token: 0x040226AC RID: 140972
 		public const int LayoutTaskContent = 2;
 
-		// Token: 0x04027364 RID: 160612
+		// Token: 0x040226AD RID: 140973
 		public const int ItemTask = 3;
 
-		// Token: 0x04027365 RID: 160613
+		// Token: 0x040226AE RID: 140974
 		public const int LayoutPageDotContent = 4;
 
-		// Token: 0x04027366 RID: 160614
+		// Token: 0x040226AF RID: 140975
 		public const int ItemPageDot = 5;
 
-		// Token: 0x04027367 RID: 160615
+		// Token: 0x040226B0 RID: 140976
 		public const int BtnArrrowRight = 6;
 
-		// Token: 0x04027368 RID: 160616
+		// Token: 0x040226B1 RID: 140977
 		public const int BtnArrrowLeft = 7;
 
-		// Token: 0x04027369 RID: 160617
+		// Token: 0x040226B2 RID: 140978
 		public const int TextureIcon = 8;
 
-		// Token: 0x0402736A RID: 160618
+		// Token: 0x040226B3 RID: 140979
 		public const int SpriteRoma = 9;
 
-		// Token: 0x0402736B RID: 160619
+		// Token: 0x040226B4 RID: 140980
 		public const int TxtStageName = 10;
 	}
 }

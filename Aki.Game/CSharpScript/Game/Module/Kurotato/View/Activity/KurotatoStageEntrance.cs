@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x0200578B RID: 22411
+	// Token: 0x02004762 RID: 18274
 	public class KurotatoStageEntrance : UiPanelBase
 	{
-		// Token: 0x06038EE3 RID: 233187 RVA: 0x00D87FC4 File Offset: 0x00D861C4
+		// Token: 0x0602DDF3 RID: 187891 RVA: 0x00CD6D20 File Offset: 0x00CD4F20
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -45,14 +45,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038EE4 RID: 233188 RVA: 0x00D88130 File Offset: 0x00D86330
+		// Token: 0x0602DDF4 RID: 187892 RVA: 0x00CD6E8C File Offset: 0x00CD508C
 		public void InitView(EKurotatoLevelMode levelMode)
 		{
 			this.LevelMode = levelMode;
 			this.RefreshView();
 		}
 
-		// Token: 0x06038EE5 RID: 233189 RVA: 0x00D88140 File Offset: 0x00D86340
+		// Token: 0x0602DDF5 RID: 187893 RVA: 0x00CD6E9C File Offset: 0x00CD509C
 		public void RefreshView()
 		{
 			KurotatoLevelGroup value = KurotatoConfig.Instance.GetLevelGroupConfig((int)this.LevelMode).Value;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			base.GetItem(7).SetUIActive(uiactive);
 		}
 
-		// Token: 0x06038EE6 RID: 233190 RVA: 0x00D88228 File Offset: 0x00D86428
+		// Token: 0x0602DDF6 RID: 187894 RVA: 0x00CD6F84 File Offset: 0x00CD5184
 		private void OnSelfBtnClick()
 		{
 			Action clickCallback = this.ClickCallback;
@@ -81,31 +81,31 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			clickCallback();
 		}
 
-		// Token: 0x0401DD7D RID: 122237
+		// Token: 0x04018813 RID: 100371
 		public EKurotatoLevelMode LevelMode = EKurotatoLevelMode.Teach;
 
-		// Token: 0x0401DD7E RID: 122238
+		// Token: 0x04018814 RID: 100372
 		[Nullable(2)]
 		public Action ClickCallback;
 
-		// Token: 0x0200B9B2 RID: 47538
+		// Token: 0x0200A3C8 RID: 41928
 		private enum EStageEntranceComponents
 		{
-			// Token: 0x04038257 RID: 229975
+			// Token: 0x04032C48 RID: 207944
 			BtnSelf,
-			// Token: 0x04038258 RID: 229976
+			// Token: 0x04032C49 RID: 207945
 			PanelNormal,
-			// Token: 0x04038259 RID: 229977
+			// Token: 0x04032C4A RID: 207946
 			PanelFinish,
-			// Token: 0x0403825A RID: 229978
+			// Token: 0x04032C4B RID: 207947
 			TextLevelNum,
-			// Token: 0x0403825B RID: 229979
+			// Token: 0x04032C4C RID: 207948
 			TextLevelTotalNum,
-			// Token: 0x0403825C RID: 229980
+			// Token: 0x04032C4D RID: 207949
 			TextLevelName,
-			// Token: 0x0403825D RID: 229981
+			// Token: 0x04032C4E RID: 207950
 			SpriteFinish,
-			// Token: 0x0403825E RID: 229982
+			// Token: 0x04032C4F RID: 207951
 			RedDot
 		}
 	}

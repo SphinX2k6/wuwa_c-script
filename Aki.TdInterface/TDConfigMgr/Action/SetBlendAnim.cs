@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021A3 RID: 8611
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200240E RID: 9230
 	public class SetBlendAnim : ActionParams
 	{
-		// Token: 0x0600BD16 RID: 48406 RVA: 0x001B3908 File Offset: 0x001B1B08
+		// Token: 0x0600C8D0 RID: 51408 RVA: 0x001CAF40 File Offset: 0x001C9140
 		private SetBlendAnim_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BD17 RID: 48407 RVA: 0x001B3940 File Offset: 0x001B1B40
+		// Token: 0x0600C8D1 RID: 51409 RVA: 0x001CAF78 File Offset: 0x001C9178
 		public static SetBlendAnim Create([Nullable(2)] SetBlendAnim instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD18 RID: 48408 RVA: 0x001B3953 File Offset: 0x001B1B53
+		// Token: 0x0600C8D2 RID: 51410 RVA: 0x001CAF8B File Offset: 0x001C918B
 		public static SetBlendAnim CreateFromSetValue([Nullable(2)] SetBlendAnim_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD19 RID: 48409 RVA: 0x001B3966 File Offset: 0x001B1B66
+		// Token: 0x0600C8D3 RID: 51411 RVA: 0x001CAF9E File Offset: 0x001C919E
 		public SetBlendAnim_SetValue ToSetValue()
 		{
 			return new SetBlendAnim_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003977 RID: 14711
-		// (get) Token: 0x0600BD1A RID: 48410 RVA: 0x001B3988 File Offset: 0x001B1B88
-		// (set) Token: 0x0600BD1B RID: 48411 RVA: 0x001B39E9 File Offset: 0x001B1BE9
+		// Token: 0x17003C6B RID: 15467
+		// (get) Token: 0x0600C8D4 RID: 51412 RVA: 0x001CAFC0 File Offset: 0x001C91C0
+		// (set) Token: 0x0600C8D5 RID: 51413 RVA: 0x001CB021 File Offset: 0x001C9221
 		public virtual IPlayerBlendAnimTarget Target
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003978 RID: 14712
-		// (get) Token: 0x0600BD1C RID: 48412 RVA: 0x001B39FE File Offset: 0x001B1BFE
-		// (set) Token: 0x0600BD1D RID: 48413 RVA: 0x001B3A25 File Offset: 0x001B1C25
+		// Token: 0x17003C6C RID: 15468
+		// (get) Token: 0x0600C8D6 RID: 51414 RVA: 0x001CB036 File Offset: 0x001C9236
+		// (set) Token: 0x0600C8D7 RID: 51415 RVA: 0x001CB05D File Offset: 0x001C925D
 		public virtual IBlendAnimTypeBase BlendType
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070D8 RID: 28888
+		// Token: 0x04007720 RID: 30496
 		[Nullable(2)]
 		protected new SetBlendAnim FbInstance;
 
-		// Token: 0x040070D9 RID: 28889
+		// Token: 0x04007721 RID: 30497
 		[Nullable(2)]
 		protected SetBlendAnim_SetValue PocoInterface;
 
-		// Token: 0x040070DA RID: 28890
+		// Token: 0x04007722 RID: 30498
 		private IPlayerBlendAnimTarget _TargetCache;
 
-		// Token: 0x040070DB RID: 28891
+		// Token: 0x04007723 RID: 30499
 		private bool _TargetInited;
 	}
 }

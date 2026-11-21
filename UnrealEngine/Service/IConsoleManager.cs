@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Service
 {
-	// Token: 0x02002AFD RID: 11005
+	// Token: 0x020008AD RID: 2221
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class IConsoleManager
 	{
-		// Token: 0x0602848B RID: 165003 RVA: 0x003D49EC File Offset: 0x003D2BEC
+		// Token: 0x0600BE45 RID: 48709 RVA: 0x0012FD48 File Offset: 0x0012DF48
 		public static void RegisterConsoleCommand(string Name, string Help, Action Command, EConsoleVariableFlags Flags)
 		{
 			FSharpherealConsoleCommandDelegate fsharpherealConsoleCommandDelegate = new FSharpherealConsoleCommandDelegate();
@@ -17,7 +17,7 @@ namespace UnrealEngine.Service
 			UConsoleCommandBPL.RegisterConsoleCommand(Name, Help, fsharpherealConsoleCommandDelegate, (uint)Flags);
 		}
 
-		// Token: 0x0602848C RID: 165004 RVA: 0x003D4A10 File Offset: 0x003D2C10
+		// Token: 0x0600BE46 RID: 48710 RVA: 0x0012FD6C File Offset: 0x0012DF6C
 		public static void RegisterConsoleCommand(string Name, string Help, FSharpherealConsoleCommandWithArgsDelegate.FSharpherealConsoleCommandWithArgsDelegate_ScriptDelegate Command, EConsoleVariableFlags Flags)
 		{
 			FSharpherealConsoleCommandWithArgsDelegate fsharpherealConsoleCommandWithArgsDelegate = new FSharpherealConsoleCommandWithArgsDelegate();
@@ -25,7 +25,7 @@ namespace UnrealEngine.Service
 			UConsoleCommandBPL.RegisterConsoleCommandWithArgs(Name, Help, fsharpherealConsoleCommandWithArgsDelegate, (uint)Flags);
 		}
 
-		// Token: 0x0602848D RID: 165005 RVA: 0x003D4A34 File Offset: 0x003D2C34
+		// Token: 0x0600BE47 RID: 48711 RVA: 0x0012FD90 File Offset: 0x0012DF90
 		public static void RegisterConsoleCommand(string Name, string Help, [Nullable(new byte[]
 		{
 			1,
@@ -37,7 +37,7 @@ namespace UnrealEngine.Service
 			UConsoleCommandBPL.RegisterConsoleCommandWithWorld(Name, Help, fsharpherealConsoleCommandWithWorldDelegate, (uint)Flags);
 		}
 
-		// Token: 0x0602848E RID: 165006 RVA: 0x003D4A58 File Offset: 0x003D2C58
+		// Token: 0x0600BE48 RID: 48712 RVA: 0x0012FDB4 File Offset: 0x0012DFB4
 		public static void RegisterConsoleCommand(string Name, string Help, FSharpherealConsoleCommandWithWorldAndArgsDelegate.FSharpherealConsoleCommandWithWorldAndArgsDelegate_ScriptDelegate Command, EConsoleVariableFlags Flags)
 		{
 			FSharpherealConsoleCommandWithWorldAndArgsDelegate fsharpherealConsoleCommandWithWorldAndArgsDelegate = new FSharpherealConsoleCommandWithWorldAndArgsDelegate();
@@ -45,7 +45,7 @@ namespace UnrealEngine.Service
 			UConsoleCommandBPL.RegisterConsoleCommandWithWorldAndArgs(Name, Help, fsharpherealConsoleCommandWithWorldAndArgsDelegate, (uint)Flags);
 		}
 
-		// Token: 0x0602848F RID: 165007 RVA: 0x003D4A7C File Offset: 0x003D2C7C
+		// Token: 0x0600BE49 RID: 48713 RVA: 0x0012FDD8 File Offset: 0x0012DFD8
 		public static bool GetConsoleBoolVariable(string Name)
 		{
 			bool result = false;
@@ -56,7 +56,7 @@ namespace UnrealEngine.Service
 			return result;
 		}
 
-		// Token: 0x06028490 RID: 165008 RVA: 0x003D4A9C File Offset: 0x003D2C9C
+		// Token: 0x0600BE4A RID: 48714 RVA: 0x0012FDF8 File Offset: 0x0012DFF8
 		public static int GetConsoleIntVariable(string Name)
 		{
 			int result = 0;
@@ -67,7 +67,7 @@ namespace UnrealEngine.Service
 			return result;
 		}
 
-		// Token: 0x06028491 RID: 165009 RVA: 0x003D4ABC File Offset: 0x003D2CBC
+		// Token: 0x0600BE4B RID: 48715 RVA: 0x0012FE18 File Offset: 0x0012E018
 		public static float GetConsoleFloatVariable(string Name)
 		{
 			float result = 0f;
@@ -78,7 +78,7 @@ namespace UnrealEngine.Service
 			return result;
 		}
 
-		// Token: 0x06028492 RID: 165010 RVA: 0x003D4AE0 File Offset: 0x003D2CE0
+		// Token: 0x0600BE4C RID: 48716 RVA: 0x0012FE3C File Offset: 0x0012E03C
 		public static string GetConsoleStringVariable(string Name)
 		{
 			string result = null;
@@ -89,49 +89,49 @@ namespace UnrealEngine.Service
 			return result;
 		}
 
-		// Token: 0x06028493 RID: 165011 RVA: 0x003D4B00 File Offset: 0x003D2D00
+		// Token: 0x0600BE4D RID: 48717 RVA: 0x0012FE5C File Offset: 0x0012E05C
 		public static bool SetConsoleVariable(string Name, bool Value, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_SetByCode)
 		{
 			return UConsoleCommandBPL.SetConsoleBoolVariable(Name, Value, (uint)Flags);
 		}
 
-		// Token: 0x06028494 RID: 165012 RVA: 0x003D4B0A File Offset: 0x003D2D0A
+		// Token: 0x0600BE4E RID: 48718 RVA: 0x0012FE66 File Offset: 0x0012E066
 		public static bool SetConsoleVariable(string Name, int Value, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_SetByCode)
 		{
 			return UConsoleCommandBPL.SetConsoleIntVariable(Name, Value, (uint)Flags);
 		}
 
-		// Token: 0x06028495 RID: 165013 RVA: 0x003D4B14 File Offset: 0x003D2D14
+		// Token: 0x0600BE4F RID: 48719 RVA: 0x0012FE70 File Offset: 0x0012E070
 		public static bool SetConsoleVariable(string Name, float Value, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_SetByCode)
 		{
 			return UConsoleCommandBPL.SetConsoleFloatVariable(Name, Value, (uint)Flags);
 		}
 
-		// Token: 0x06028496 RID: 165014 RVA: 0x003D4B1E File Offset: 0x003D2D1E
+		// Token: 0x0600BE50 RID: 48720 RVA: 0x0012FE7A File Offset: 0x0012E07A
 		public static bool SetConsoleVariable(string Name, string Value, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_SetByCode)
 		{
 			return UConsoleCommandBPL.SetConsoleStringVariable(Name, Value, (uint)Flags);
 		}
 
-		// Token: 0x06028497 RID: 165015 RVA: 0x003D4B28 File Offset: 0x003D2D28
+		// Token: 0x0600BE51 RID: 48721 RVA: 0x0012FE84 File Offset: 0x0012E084
 		public static void RegisterConsoleVariable(string Name, bool DefaultValue, string Help, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_Default)
 		{
 			UConsoleCommandBPL.RegisterConsoleBoolVariable(Name, DefaultValue, Help, (uint)Flags);
 		}
 
-		// Token: 0x06028498 RID: 165016 RVA: 0x003D4B33 File Offset: 0x003D2D33
+		// Token: 0x0600BE52 RID: 48722 RVA: 0x0012FE8F File Offset: 0x0012E08F
 		public static void RegisterConsoleVariable(string Name, int DefaultValue, string Help, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_Default)
 		{
 			UConsoleCommandBPL.RegisterConsoleIntVariable(Name, DefaultValue, Help, (uint)Flags);
 		}
 
-		// Token: 0x06028499 RID: 165017 RVA: 0x003D4B3E File Offset: 0x003D2D3E
+		// Token: 0x0600BE53 RID: 48723 RVA: 0x0012FE9A File Offset: 0x0012E09A
 		public static void RegisterConsoleVariable(string Name, float DefaultValue, string Help, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_Default)
 		{
 			UConsoleCommandBPL.RegisterConsoleFloatVariable(Name, DefaultValue, Help, (uint)Flags);
 		}
 
-		// Token: 0x0602849A RID: 165018 RVA: 0x003D4B49 File Offset: 0x003D2D49
+		// Token: 0x0600BE54 RID: 48724 RVA: 0x0012FEA5 File Offset: 0x0012E0A5
 		public static void RegisterConsoleVariable(string Name, string DefaultValue, string Help, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_Default)
 		{
 			UConsoleCommandBPL.RegisterConsoleStringVariable(Name, DefaultValue, Help, (uint)Flags);

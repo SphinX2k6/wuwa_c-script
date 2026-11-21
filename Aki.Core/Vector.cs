@@ -13,14 +13,33 @@ using UnrealEngine.Extension;
 [NullableContext(1)]
 [Nullable(0)]
 [StaticVariablePriority(100)]
+[Obsolete("手写数学库已废弃，请改用 UnrealEngine.FVectorDouble")]
 public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 {
-	// Token: 0x060008C3 RID: 2243 RVA: 0x0002E68F File Offset: 0x0002C88F
+	// Token: 0x0600090F RID: 2319 RVA: 0x0002EF50 File Offset: 0x0002D150
+	[Obsolete("迁移期隐式转换：请确认不在每帧热点路径上")]
+	public static implicit operator FVectorDouble(global::Vector v)
+	{
+		if (v != null)
+		{
+			return new FVectorDouble(v.X, v.Y, v.Z);
+		}
+		return default(FVectorDouble);
+	}
+
+	// Token: 0x06000910 RID: 2320 RVA: 0x0002EF81 File Offset: 0x0002D181
+	[Obsolete("迁移期隐式转换：请确认不在每帧热点路径上")]
+	public static implicit operator global::Vector(FVectorDouble v)
+	{
+		return global::Vector.Create(v.X, v.Y, v.Z);
+	}
+
+	// Token: 0x06000911 RID: 2321 RVA: 0x0002EF9A File Offset: 0x0002D19A
 	public Vector()
 	{
 	}
 
-	// Token: 0x060008C4 RID: 2244 RVA: 0x0002E697 File Offset: 0x0002C897
+	// Token: 0x06000912 RID: 2322 RVA: 0x0002EFA2 File Offset: 0x0002D1A2
 	public Vector(double x, double y, double z)
 	{
 		this.X = x;
@@ -28,9 +47,9 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = z;
 	}
 
-	// Token: 0x170000F5 RID: 245
-	// (get) Token: 0x060008C5 RID: 2245 RVA: 0x0002E6B4 File Offset: 0x0002C8B4
-	// (set) Token: 0x060008C6 RID: 2246 RVA: 0x0002E6BC File Offset: 0x0002C8BC
+	// Token: 0x17000107 RID: 263
+	// (get) Token: 0x06000913 RID: 2323 RVA: 0x0002EFBF File Offset: 0x0002D1BF
+	// (set) Token: 0x06000914 RID: 2324 RVA: 0x0002EFC7 File Offset: 0x0002D1C7
 	double IVector2D.X
 	{
 		get
@@ -43,9 +62,9 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x170000F6 RID: 246
-	// (get) Token: 0x060008C7 RID: 2247 RVA: 0x0002E6C5 File Offset: 0x0002C8C5
-	// (set) Token: 0x060008C8 RID: 2248 RVA: 0x0002E6CD File Offset: 0x0002C8CD
+	// Token: 0x17000108 RID: 264
+	// (get) Token: 0x06000915 RID: 2325 RVA: 0x0002EFD0 File Offset: 0x0002D1D0
+	// (set) Token: 0x06000916 RID: 2326 RVA: 0x0002EFD8 File Offset: 0x0002D1D8
 	double IVector2D.Y
 	{
 		get
@@ -58,9 +77,9 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x170000F7 RID: 247
-	// (get) Token: 0x060008C9 RID: 2249 RVA: 0x0002E6D6 File Offset: 0x0002C8D6
-	// (set) Token: 0x060008CA RID: 2250 RVA: 0x0002E6DE File Offset: 0x0002C8DE
+	// Token: 0x17000109 RID: 265
+	// (get) Token: 0x06000917 RID: 2327 RVA: 0x0002EFE1 File Offset: 0x0002D1E1
+	// (set) Token: 0x06000918 RID: 2328 RVA: 0x0002EFE9 File Offset: 0x0002D1E9
 	double IVector.Z
 	{
 		get
@@ -73,7 +92,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x170000F8 RID: 248
+	// Token: 0x1700010A RID: 266
 	public double this[int index]
 	{
 		get
@@ -114,19 +133,19 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x060008CD RID: 2253 RVA: 0x0002E75E File Offset: 0x0002C95E
+	// Token: 0x0600091B RID: 2331 RVA: 0x0002F06A File Offset: 0x0002D26A
 	public FVector ToUeVectorOld()
 	{
 		return new FVector((float)this.X, (float)this.Y, (float)this.Z);
 	}
 
-	// Token: 0x060008CE RID: 2254 RVA: 0x0002E77A File Offset: 0x0002C97A
+	// Token: 0x0600091C RID: 2332 RVA: 0x0002F086 File Offset: 0x0002D286
 	public FVectorDouble ToUeVector(bool isCacheUeObj = false)
 	{
 		return new FVectorDouble(this.X, this.Y, this.Z);
 	}
 
-	// Token: 0x060008CF RID: 2255 RVA: 0x0002E794 File Offset: 0x0002C994
+	// Token: 0x0600091D RID: 2333 RVA: 0x0002F0A0 File Offset: 0x0002D2A0
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(10, 3);
@@ -139,13 +158,13 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060008D0 RID: 2256 RVA: 0x0002E7FD File Offset: 0x0002C9FD
+	// Token: 0x0600091E RID: 2334 RVA: 0x0002F109 File Offset: 0x0002D309
 	public string ToFormattedString()
 	{
 		return this.ToString();
 	}
 
-	// Token: 0x060008D1 RID: 2257 RVA: 0x0002E808 File Offset: 0x0002CA08
+	// Token: 0x0600091F RID: 2335 RVA: 0x0002F114 File Offset: 0x0002D314
 	public void ToFormattedString(UnsafeStringBuilder sb)
 	{
 		UnsafeStringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new UnsafeStringBuilder.AppendInterpolatedStringHandler(10, 3, sb);
@@ -158,13 +177,13 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		sb.Append(ref appendInterpolatedStringHandler);
 	}
 
-	// Token: 0x060008D2 RID: 2258 RVA: 0x0002E876 File Offset: 0x0002CA76
+	// Token: 0x06000920 RID: 2336 RVA: 0x0002F182 File Offset: 0x0002D382
 	public void Clear()
 	{
 		this.Reset();
 	}
 
-	// Token: 0x060008D3 RID: 2259 RVA: 0x0002E87E File Offset: 0x0002CA7E
+	// Token: 0x06000921 RID: 2337 RVA: 0x0002F18A File Offset: 0x0002D38A
 	public void FromUeVector(IVector inV)
 	{
 		this.X = inV.X;
@@ -172,7 +191,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = inV.Z;
 	}
 
-	// Token: 0x060008D4 RID: 2260 RVA: 0x0002E8A4 File Offset: 0x0002CAA4
+	// Token: 0x06000922 RID: 2338 RVA: 0x0002F1B0 File Offset: 0x0002D3B0
 	public void FromUeVector(global::Vector inV)
 	{
 		this.X = inV.X;
@@ -180,7 +199,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = inV.Z;
 	}
 
-	// Token: 0x060008D5 RID: 2261 RVA: 0x0002E8CA File Offset: 0x0002CACA
+	// Token: 0x06000923 RID: 2339 RVA: 0x0002F1D6 File Offset: 0x0002D3D6
 	public void FromUeVector(Aki.Protocol.Vector inV)
 	{
 		this.X = (double)inV.X;
@@ -188,7 +207,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = (double)inV.Z;
 	}
 
-	// Token: 0x060008D6 RID: 2262 RVA: 0x0002E8F3 File Offset: 0x0002CAF3
+	// Token: 0x06000924 RID: 2340 RVA: 0x0002F1FF File Offset: 0x0002D3FF
 	public void FromUeVector(in FVectorDouble inV)
 	{
 		this.X = inV.X;
@@ -196,7 +215,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = inV.Z;
 	}
 
-	// Token: 0x060008D7 RID: 2263 RVA: 0x0002E919 File Offset: 0x0002CB19
+	// Token: 0x06000925 RID: 2341 RVA: 0x0002F225 File Offset: 0x0002D425
 	public void FromUeVector(in FVector inV)
 	{
 		this.X = (double)inV.X;
@@ -204,7 +223,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = (double)inV.Z;
 	}
 
-	// Token: 0x060008D8 RID: 2264 RVA: 0x0002E942 File Offset: 0x0002CB42
+	// Token: 0x06000926 RID: 2342 RVA: 0x0002F24E File Offset: 0x0002D44E
 	public void FromUeVector(in FVector_NetQuantize inV)
 	{
 		this.X = (double)inV.X;
@@ -212,7 +231,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = (double)inV.Z;
 	}
 
-	// Token: 0x060008D9 RID: 2265 RVA: 0x0002E96B File Offset: 0x0002CB6B
+	// Token: 0x06000927 RID: 2343 RVA: 0x0002F277 File Offset: 0x0002D477
 	public void FromUeVector(in FVector_NetQuantizeNormal inV)
 	{
 		this.X = (double)inV.X;
@@ -220,7 +239,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = (double)inV.Z;
 	}
 
-	// Token: 0x060008DA RID: 2266 RVA: 0x0002E994 File Offset: 0x0002CB94
+	// Token: 0x06000928 RID: 2344 RVA: 0x0002F2A0 File Offset: 0x0002D4A0
 	public void FromConfigVector(global::Vector inV)
 	{
 		this.X = inV.X;
@@ -228,7 +247,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = inV.Z;
 	}
 
-	// Token: 0x060008DB RID: 2267 RVA: 0x0002E9BA File Offset: 0x0002CBBA
+	// Token: 0x06000929 RID: 2345 RVA: 0x0002F2C6 File Offset: 0x0002D4C6
 	public void FromConfigVector(IVector inV)
 	{
 		this.X = inV.X;
@@ -236,7 +255,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = inV.Z;
 	}
 
-	// Token: 0x060008DC RID: 2268 RVA: 0x0002E9E0 File Offset: 0x0002CBE0
+	// Token: 0x0600092A RID: 2346 RVA: 0x0002F2EC File Offset: 0x0002D4EC
 	public void FromConfigVector(VectorInfo inV)
 	{
 		this.X = (double)inV.X.GetValueOrDefault();
@@ -244,7 +263,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = (double)inV.Z.GetValueOrDefault();
 	}
 
-	// Token: 0x060008DD RID: 2269 RVA: 0x0002EA2C File Offset: 0x0002CC2C
+	// Token: 0x0600092B RID: 2347 RVA: 0x0002F338 File Offset: 0x0002D538
 	public void FromConfigVector(Aki.Config.Vector inV)
 	{
 		this.X = (double)inV.X;
@@ -252,7 +271,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = (double)inV.Z;
 	}
 
-	// Token: 0x060008DE RID: 2270 RVA: 0x0002EA58 File Offset: 0x0002CC58
+	// Token: 0x0600092C RID: 2348 RVA: 0x0002F364 File Offset: 0x0002D564
 	[NullableContext(0)]
 	public void FromConfigVector([TupleElementNames(new string[]
 	{
@@ -265,7 +284,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = 0.0;
 	}
 
-	// Token: 0x060008DF RID: 2271 RVA: 0x0002EA81 File Offset: 0x0002CC81
+	// Token: 0x0600092D RID: 2349 RVA: 0x0002F38D File Offset: 0x0002D58D
 	public static global::Vector Create(double x, double y, double z)
 	{
 		global::Vector vector = new global::Vector();
@@ -273,7 +292,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return vector;
 	}
 
-	// Token: 0x060008E0 RID: 2272 RVA: 0x0002EA94 File Offset: 0x0002CC94
+	// Token: 0x0600092E RID: 2350 RVA: 0x0002F3A0 File Offset: 0x0002D5A0
 	public static global::Vector Create([Nullable(2)] IVector inV)
 	{
 		global::Vector vector = new global::Vector();
@@ -284,7 +303,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return vector;
 	}
 
-	// Token: 0x060008E1 RID: 2273 RVA: 0x0002EAB4 File Offset: 0x0002CCB4
+	// Token: 0x0600092F RID: 2351 RVA: 0x0002F3C0 File Offset: 0x0002D5C0
 	public static global::Vector Create(Aki.Config.Vector? inV)
 	{
 		global::Vector vector = new global::Vector();
@@ -295,7 +314,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return vector;
 	}
 
-	// Token: 0x060008E2 RID: 2274 RVA: 0x0002EB08 File Offset: 0x0002CD08
+	// Token: 0x06000930 RID: 2352 RVA: 0x0002F414 File Offset: 0x0002D614
 	public static global::Vector Create(IntVector? inV)
 	{
 		global::Vector vector = new global::Vector();
@@ -306,37 +325,37 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return vector;
 	}
 
-	// Token: 0x060008E3 RID: 2275 RVA: 0x0002EB5B File Offset: 0x0002CD5B
+	// Token: 0x06000931 RID: 2353 RVA: 0x0002F467 File Offset: 0x0002D667
 	public static global::Vector Create()
 	{
 		return new global::Vector();
 	}
 
-	// Token: 0x060008E4 RID: 2276 RVA: 0x0002EB62 File Offset: 0x0002CD62
+	// Token: 0x06000932 RID: 2354 RVA: 0x0002F46E File Offset: 0x0002D66E
 	public double DotProduct(global::Vector inB)
 	{
 		return this.X * inB.X + this.Y * inB.Y + this.Z * inB.Z;
 	}
 
-	// Token: 0x060008E5 RID: 2277 RVA: 0x0002EB8D File Offset: 0x0002CD8D
+	// Token: 0x06000933 RID: 2355 RVA: 0x0002F499 File Offset: 0x0002D699
 	public double DotProduct(double x, double y, double z)
 	{
 		return this.X * x + this.Y * y + this.Z * z;
 	}
 
-	// Token: 0x060008E6 RID: 2278 RVA: 0x0002EBA9 File Offset: 0x0002CDA9
+	// Token: 0x06000934 RID: 2356 RVA: 0x0002F4B5 File Offset: 0x0002D6B5
 	public static double DotProduct(global::Vector inA, global::Vector inB)
 	{
 		return inA.DotProduct(inB);
 	}
 
-	// Token: 0x060008E7 RID: 2279 RVA: 0x0002EBB2 File Offset: 0x0002CDB2
+	// Token: 0x06000935 RID: 2357 RVA: 0x0002F4BE File Offset: 0x0002D6BE
 	public static double DotProduct(global::Vector inA, IPlane inB)
 	{
 		return inA.DotProduct(inB.X, inB.Y, inB.Z);
 	}
 
-	// Token: 0x060008E8 RID: 2280 RVA: 0x0002EBCC File Offset: 0x0002CDCC
+	// Token: 0x06000936 RID: 2358 RVA: 0x0002F4D8 File Offset: 0x0002D6D8
 	public void CrossProduct(global::Vector inB, global::Vector outV)
 	{
 		double x = this.Y * inB.Z - this.Z * inB.Y;
@@ -347,20 +366,20 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = z;
 	}
 
-	// Token: 0x060008E9 RID: 2281 RVA: 0x0002EC42 File Offset: 0x0002CE42
+	// Token: 0x06000937 RID: 2359 RVA: 0x0002F54E File Offset: 0x0002D74E
 	public global::Vector CrossProductEqual(global::Vector inB)
 	{
 		this.CrossProduct(inB, this);
 		return this;
 	}
 
-	// Token: 0x060008EA RID: 2282 RVA: 0x0002EC4D File Offset: 0x0002CE4D
+	// Token: 0x06000938 RID: 2360 RVA: 0x0002F559 File Offset: 0x0002D759
 	public static void CrossProduct(global::Vector inA, global::Vector inB, global::Vector outV)
 	{
 		inA.CrossProduct(inB, outV);
 	}
 
-	// Token: 0x060008EB RID: 2283 RVA: 0x0002EC57 File Offset: 0x0002CE57
+	// Token: 0x06000939 RID: 2361 RVA: 0x0002F563 File Offset: 0x0002D763
 	public void DeepCopy(IVector inV)
 	{
 		this.X = inV.X;
@@ -368,7 +387,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = inV.Z;
 	}
 
-	// Token: 0x060008EC RID: 2284 RVA: 0x0002EC7D File Offset: 0x0002CE7D
+	// Token: 0x0600093A RID: 2362 RVA: 0x0002F589 File Offset: 0x0002D789
 	public void DeepCopy(global::Vector inV)
 	{
 		this.X = inV.X;
@@ -376,7 +395,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = inV.Z;
 	}
 
-	// Token: 0x060008ED RID: 2285 RVA: 0x0002ECA3 File Offset: 0x0002CEA3
+	// Token: 0x0600093B RID: 2363 RVA: 0x0002F5AF File Offset: 0x0002D7AF
 	public void DeepCopy(in FVectorDouble inV)
 	{
 		this.X = inV.X;
@@ -384,7 +403,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = inV.Z;
 	}
 
-	// Token: 0x060008EE RID: 2286 RVA: 0x0002ECC9 File Offset: 0x0002CEC9
+	// Token: 0x0600093C RID: 2364 RVA: 0x0002F5D5 File Offset: 0x0002D7D5
 	public global::Vector AdditionEqual(global::Vector inB)
 	{
 		this.X += inB.X;
@@ -393,7 +412,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x060008EF RID: 2287 RVA: 0x0002ED05 File Offset: 0x0002CF05
+	// Token: 0x0600093D RID: 2365 RVA: 0x0002F611 File Offset: 0x0002D811
 	public global::Vector AdditionEqual(double inB)
 	{
 		this.X += inB;
@@ -402,7 +421,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x060008F0 RID: 2288 RVA: 0x0002ED32 File Offset: 0x0002CF32
+	// Token: 0x0600093E RID: 2366 RVA: 0x0002F63E File Offset: 0x0002D83E
 	public global::Vector SubtractionEqual(global::Vector inB)
 	{
 		this.X -= inB.X;
@@ -411,7 +430,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x060008F1 RID: 2289 RVA: 0x0002ED6E File Offset: 0x0002CF6E
+	// Token: 0x0600093F RID: 2367 RVA: 0x0002F67A File Offset: 0x0002D87A
 	public global::Vector SubtractionEqual(double inB)
 	{
 		this.X -= inB;
@@ -420,7 +439,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x060008F2 RID: 2290 RVA: 0x0002ED9B File Offset: 0x0002CF9B
+	// Token: 0x06000940 RID: 2368 RVA: 0x0002F6A7 File Offset: 0x0002D8A7
 	public global::Vector MultiplyEqual(global::Vector inB)
 	{
 		this.X *= inB.X;
@@ -429,7 +448,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x060008F3 RID: 2291 RVA: 0x0002EDD7 File Offset: 0x0002CFD7
+	// Token: 0x06000941 RID: 2369 RVA: 0x0002F6E3 File Offset: 0x0002D8E3
 	public global::Vector MultiplyEqual(double inB)
 	{
 		this.X *= inB;
@@ -438,7 +457,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x060008F4 RID: 2292 RVA: 0x0002EE04 File Offset: 0x0002D004
+	// Token: 0x06000942 RID: 2370 RVA: 0x0002F710 File Offset: 0x0002D910
 	public global::Vector DivisionEqual(global::Vector inB)
 	{
 		this.X /= inB.X;
@@ -447,7 +466,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x060008F5 RID: 2293 RVA: 0x0002EE40 File Offset: 0x0002D040
+	// Token: 0x06000943 RID: 2371 RVA: 0x0002F74C File Offset: 0x0002D94C
 	public global::Vector DivisionEqual(double inB)
 	{
 		double num = 1.0 / inB;
@@ -457,7 +476,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x060008F6 RID: 2294 RVA: 0x0002EE84 File Offset: 0x0002D084
+	// Token: 0x06000944 RID: 2372 RVA: 0x0002F790 File Offset: 0x0002D990
 	public global::Vector Addition(global::Vector inB, global::Vector outV)
 	{
 		outV.X = this.X + inB.X;
@@ -466,7 +485,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return outV;
 	}
 
-	// Token: 0x060008F7 RID: 2295 RVA: 0x0002EEC0 File Offset: 0x0002D0C0
+	// Token: 0x06000945 RID: 2373 RVA: 0x0002F7CC File Offset: 0x0002D9CC
 	public global::Vector Addition(double inB, global::Vector outV)
 	{
 		outV.X = this.X + inB;
@@ -475,7 +494,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return outV;
 	}
 
-	// Token: 0x060008F8 RID: 2296 RVA: 0x0002EEED File Offset: 0x0002D0ED
+	// Token: 0x06000946 RID: 2374 RVA: 0x0002F7F9 File Offset: 0x0002D9F9
 	public global::Vector Subtraction(global::Vector inB, global::Vector outV)
 	{
 		outV.X = this.X - inB.X;
@@ -484,7 +503,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return outV;
 	}
 
-	// Token: 0x060008F9 RID: 2297 RVA: 0x0002EF29 File Offset: 0x0002D129
+	// Token: 0x06000947 RID: 2375 RVA: 0x0002F835 File Offset: 0x0002DA35
 	public global::Vector Subtraction(double inB, global::Vector outV)
 	{
 		outV.X = this.X - inB;
@@ -493,7 +512,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return outV;
 	}
 
-	// Token: 0x060008FA RID: 2298 RVA: 0x0002EF56 File Offset: 0x0002D156
+	// Token: 0x06000948 RID: 2376 RVA: 0x0002F862 File Offset: 0x0002DA62
 	public global::Vector Multiply(global::Vector inB, global::Vector outV)
 	{
 		outV.X = this.X * inB.X;
@@ -502,7 +521,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return outV;
 	}
 
-	// Token: 0x060008FB RID: 2299 RVA: 0x0002EF92 File Offset: 0x0002D192
+	// Token: 0x06000949 RID: 2377 RVA: 0x0002F89E File Offset: 0x0002DA9E
 	public global::Vector Multiply(double inB, global::Vector outV)
 	{
 		outV.X = this.X * inB;
@@ -511,7 +530,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return outV;
 	}
 
-	// Token: 0x060008FC RID: 2300 RVA: 0x0002EFBF File Offset: 0x0002D1BF
+	// Token: 0x0600094A RID: 2378 RVA: 0x0002F8CB File Offset: 0x0002DACB
 	public global::Vector Division(global::Vector inB, global::Vector outV)
 	{
 		outV.X = this.X / inB.X;
@@ -520,7 +539,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return outV;
 	}
 
-	// Token: 0x060008FD RID: 2301 RVA: 0x0002EFFC File Offset: 0x0002D1FC
+	// Token: 0x0600094B RID: 2379 RVA: 0x0002F908 File Offset: 0x0002DB08
 	public global::Vector Division(double inB, global::Vector outV)
 	{
 		double num = 1.0 / inB;
@@ -530,31 +549,31 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return outV;
 	}
 
-	// Token: 0x060008FE RID: 2302 RVA: 0x0002F040 File Offset: 0x0002D240
+	// Token: 0x0600094C RID: 2380 RVA: 0x0002F94C File Offset: 0x0002DB4C
 	public bool Equality(global::Vector inB)
 	{
 		return this.X == inB.X && this.Y == inB.Y && this.Z == inB.Z;
 	}
 
-	// Token: 0x060008FF RID: 2303 RVA: 0x0002F06E File Offset: 0x0002D26E
+	// Token: 0x0600094D RID: 2381 RVA: 0x0002F97A File Offset: 0x0002DB7A
 	public bool Inequality(global::Vector inB)
 	{
 		return this.X != inB.X || this.Y != inB.Y || this.Z != inB.Z;
 	}
 
-	// Token: 0x06000900 RID: 2304 RVA: 0x0002F0A0 File Offset: 0x0002D2A0
+	// Token: 0x0600094E RID: 2382 RVA: 0x0002F9AC File Offset: 0x0002DBAC
 	public bool Equals(global::Vector inB, double tolerance = 9.999999747378752E-05)
 	{
 		return Math.Abs(this.X - inB.X) <= tolerance && Math.Abs(this.Y - inB.Y) <= tolerance && Math.Abs(this.Z - inB.Z) <= tolerance;
 	}
 
-	// Token: 0x06000901 RID: 2305 RVA: 0x0002F0F4 File Offset: 0x0002D2F4
+	// Token: 0x0600094F RID: 2383 RVA: 0x0002FA00 File Offset: 0x0002DC00
 	public bool AllComponentsEqual(double tolerance = 9.999999747378752E-05)
 	{
 		return Math.Abs(this.X - this.Y) <= tolerance && Math.Abs(this.X - this.Z) <= tolerance && Math.Abs(this.Y - this.Z) <= tolerance;
 	}
 
-	// Token: 0x06000902 RID: 2306 RVA: 0x0002F145 File Offset: 0x0002D345
+	// Token: 0x06000950 RID: 2384 RVA: 0x0002FA51 File Offset: 0x0002DC51
 	public void UnaryNegation(global::Vector outV)
 	{
 		outV.X = -this.X;
@@ -562,7 +581,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = -this.Z;
 	}
 
-	// Token: 0x06000903 RID: 2307 RVA: 0x0002F170 File Offset: 0x0002D370
+	// Token: 0x06000951 RID: 2385 RVA: 0x0002FA7C File Offset: 0x0002DC7C
 	public double? Component(int index)
 	{
 		switch (index)
@@ -578,7 +597,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x06000904 RID: 2308 RVA: 0x0002F1BE File Offset: 0x0002D3BE
+	// Token: 0x06000952 RID: 2386 RVA: 0x0002FACA File Offset: 0x0002DCCA
 	public double GetComponentForAxis(EAxisType axis)
 	{
 		switch (axis)
@@ -594,7 +613,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x06000905 RID: 2309 RVA: 0x0002F1F4 File Offset: 0x0002D3F4
+	// Token: 0x06000953 RID: 2387 RVA: 0x0002FB00 File Offset: 0x0002DD00
 	public void SetComponentForAxis(EAxisType axis, double component)
 	{
 		switch (axis)
@@ -613,7 +632,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x06000906 RID: 2310 RVA: 0x0002F222 File Offset: 0x0002D422
+	// Token: 0x06000954 RID: 2388 RVA: 0x0002FB2E File Offset: 0x0002DD2E
 	public void Set(double inX, double inY, double inZ)
 	{
 		this.X = inX;
@@ -621,31 +640,31 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = inZ;
 	}
 
-	// Token: 0x06000907 RID: 2311 RVA: 0x0002F239 File Offset: 0x0002D439
+	// Token: 0x06000955 RID: 2389 RVA: 0x0002FB45 File Offset: 0x0002DD45
 	public double GetMax()
 	{
 		return Math.Max(this.X, Math.Max(this.Y, this.Z));
 	}
 
-	// Token: 0x06000908 RID: 2312 RVA: 0x0002F257 File Offset: 0x0002D457
+	// Token: 0x06000956 RID: 2390 RVA: 0x0002FB63 File Offset: 0x0002DD63
 	public double GetAbsMax()
 	{
 		return Math.Max(Math.Abs(this.X), Math.Max(Math.Abs(this.Y), Math.Abs(this.Z)));
 	}
 
-	// Token: 0x06000909 RID: 2313 RVA: 0x0002F284 File Offset: 0x0002D484
+	// Token: 0x06000957 RID: 2391 RVA: 0x0002FB90 File Offset: 0x0002DD90
 	public double GetMin()
 	{
 		return Math.Min(this.X, Math.Min(this.Y, this.Z));
 	}
 
-	// Token: 0x0600090A RID: 2314 RVA: 0x0002F2A2 File Offset: 0x0002D4A2
+	// Token: 0x06000958 RID: 2392 RVA: 0x0002FBAE File Offset: 0x0002DDAE
 	public double GetAbsMin()
 	{
 		return Math.Min(Math.Abs(this.X), Math.Min(Math.Abs(this.Y), Math.Abs(this.Z)));
 	}
 
-	// Token: 0x0600090B RID: 2315 RVA: 0x0002F2D0 File Offset: 0x0002D4D0
+	// Token: 0x06000959 RID: 2393 RVA: 0x0002FBDC File Offset: 0x0002DDDC
 	public void ComponentMin(global::Vector inB, global::Vector outV)
 	{
 		outV.X = Math.Min(this.X, inB.X);
@@ -653,7 +672,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = Math.Min(this.Z, inB.Z);
 	}
 
-	// Token: 0x0600090C RID: 2316 RVA: 0x0002F324 File Offset: 0x0002D524
+	// Token: 0x0600095A RID: 2394 RVA: 0x0002FC30 File Offset: 0x0002DE30
 	public void ComponentMax(global::Vector inB, global::Vector outV)
 	{
 		outV.X = Math.Max(this.X, inB.X);
@@ -661,7 +680,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = Math.Max(this.Z, inB.Z);
 	}
 
-	// Token: 0x0600090D RID: 2317 RVA: 0x0002F376 File Offset: 0x0002D576
+	// Token: 0x0600095B RID: 2395 RVA: 0x0002FC82 File Offset: 0x0002DE82
 	public void GetAbs(global::Vector outV)
 	{
 		outV.X = Math.Abs(this.X);
@@ -669,55 +688,55 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = Math.Abs(this.Z);
 	}
 
-	// Token: 0x0600090E RID: 2318 RVA: 0x0002F3AB File Offset: 0x0002D5AB
+	// Token: 0x0600095C RID: 2396 RVA: 0x0002FCB7 File Offset: 0x0002DEB7
 	public double Size()
 	{
 		return Math.Sqrt(this.SizeSquared());
 	}
 
-	// Token: 0x0600090F RID: 2319 RVA: 0x0002F3B8 File Offset: 0x0002D5B8
+	// Token: 0x0600095D RID: 2397 RVA: 0x0002FCC4 File Offset: 0x0002DEC4
 	public double SizeSquared()
 	{
 		return this.X * this.X + this.Y * this.Y + this.Z * this.Z;
 	}
 
-	// Token: 0x06000910 RID: 2320 RVA: 0x0002F3E3 File Offset: 0x0002D5E3
+	// Token: 0x0600095E RID: 2398 RVA: 0x0002FCEF File Offset: 0x0002DEEF
 	public double Size2D()
 	{
 		return Math.Sqrt(this.SizeSquared2D());
 	}
 
-	// Token: 0x06000911 RID: 2321 RVA: 0x0002F3F0 File Offset: 0x0002D5F0
+	// Token: 0x0600095F RID: 2399 RVA: 0x0002FCFC File Offset: 0x0002DEFC
 	public double SizeSquared2D()
 	{
 		return this.X * this.X + this.Y * this.Y;
 	}
 
-	// Token: 0x06000912 RID: 2322 RVA: 0x0002F40D File Offset: 0x0002D60D
+	// Token: 0x06000960 RID: 2400 RVA: 0x0002FD19 File Offset: 0x0002DF19
 	public bool IsNearlyZero(double tolerance = 9.999999747378752E-05)
 	{
 		return Math.Abs(this.X) <= tolerance && Math.Abs(this.Y) <= tolerance && Math.Abs(this.Z) <= tolerance;
 	}
 
-	// Token: 0x06000913 RID: 2323 RVA: 0x0002F43E File Offset: 0x0002D63E
+	// Token: 0x06000961 RID: 2401 RVA: 0x0002FD4A File Offset: 0x0002DF4A
 	public bool IsZero()
 	{
 		return this.X == 0.0 && this.Y == 0.0 && this.Z == 0.0;
 	}
 
-	// Token: 0x06000914 RID: 2324 RVA: 0x0002F475 File Offset: 0x0002D675
+	// Token: 0x06000962 RID: 2402 RVA: 0x0002FD81 File Offset: 0x0002DF81
 	public bool IsUnit(double lengthSquaredTolerance = 9.999999747378752E-05)
 	{
 		return Math.Abs(1.0 - this.SizeSquared()) < lengthSquaredTolerance;
 	}
 
-	// Token: 0x06000915 RID: 2325 RVA: 0x0002F48F File Offset: 0x0002D68F
+	// Token: 0x06000963 RID: 2403 RVA: 0x0002FD9B File Offset: 0x0002DF9B
 	public bool IsNormalized()
 	{
 		return this.IsUnit(0.009999999776482582);
 	}
 
-	// Token: 0x06000916 RID: 2326 RVA: 0x0002F4A0 File Offset: 0x0002D6A0
+	// Token: 0x06000964 RID: 2404 RVA: 0x0002FDAC File Offset: 0x0002DFAC
 	public bool Normalize(double tolerance = 9.99999993922529E-09)
 	{
 		double num = this.SizeSquared();
@@ -730,14 +749,14 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return false;
 	}
 
-	// Token: 0x06000917 RID: 2327 RVA: 0x0002F4D4 File Offset: 0x0002D6D4
+	// Token: 0x06000965 RID: 2405 RVA: 0x0002FDE0 File Offset: 0x0002DFE0
 	public void GetUnsafeNormal(global::Vector outV)
 	{
 		double inB = 1.0 / this.Size();
 		this.Multiply(inB, outV);
 	}
 
-	// Token: 0x06000918 RID: 2328 RVA: 0x0002F4FC File Offset: 0x0002D6FC
+	// Token: 0x06000966 RID: 2406 RVA: 0x0002FE08 File Offset: 0x0002E008
 	public void GetUnsafeNormal2D(global::Vector outV)
 	{
 		double num = 1.0 / this.Size2D();
@@ -746,7 +765,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = 0.0;
 	}
 
-	// Token: 0x06000919 RID: 2329 RVA: 0x0002F548 File Offset: 0x0002D748
+	// Token: 0x06000967 RID: 2407 RVA: 0x0002FE54 File Offset: 0x0002E054
 	public void GetSafeNormal(global::Vector outV, double tolerance = 9.99999993922529E-09)
 	{
 		double num = this.SizeSquared();
@@ -764,7 +783,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Multiply(inB, outV);
 	}
 
-	// Token: 0x0600091A RID: 2330 RVA: 0x0002F598 File Offset: 0x0002D798
+	// Token: 0x06000968 RID: 2408 RVA: 0x0002FEA4 File Offset: 0x0002E0A4
 	public void GetSafeNormal2D(global::Vector outV, double tolerance = 9.99999993922529E-09)
 	{
 		double num = this.SizeSquared2D();
@@ -785,7 +804,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = 0.0;
 	}
 
-	// Token: 0x0600091B RID: 2331 RVA: 0x0002F60C File Offset: 0x0002D80C
+	// Token: 0x06000969 RID: 2409 RVA: 0x0002FF18 File Offset: 0x0002E118
 	public double ToDirectionAndLength(global::Vector outDir)
 	{
 		double num = this.Size();
@@ -801,7 +820,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return num;
 	}
 
-	// Token: 0x0600091C RID: 2332 RVA: 0x0002F650 File Offset: 0x0002D850
+	// Token: 0x0600096A RID: 2410 RVA: 0x0002FF5C File Offset: 0x0002E15C
 	public void GetSignVector(global::Vector outV)
 	{
 		outV.X = MathCommon.DoubleSelect(this.X, 1.0, -1.0);
@@ -809,7 +828,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = MathCommon.DoubleSelect(this.Z, 1.0, -1.0);
 	}
 
-	// Token: 0x0600091D RID: 2333 RVA: 0x0002F6C8 File Offset: 0x0002D8C8
+	// Token: 0x0600096B RID: 2411 RVA: 0x0002FFD4 File Offset: 0x0002E1D4
 	public void Projection(global::Vector outV)
 	{
 		double num = 1.0 / this.Z;
@@ -818,7 +837,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = 1.0;
 	}
 
-	// Token: 0x0600091E RID: 2334 RVA: 0x0002F714 File Offset: 0x0002D914
+	// Token: 0x0600096C RID: 2412 RVA: 0x00030020 File Offset: 0x0002E220
 	public void GridSnap(double gridSz, global::Vector outV)
 	{
 		outV.X = ((gridSz != 0.0) ? (Math.Floor((this.X + gridSz * 0.5) / gridSz) * gridSz) : outV.X);
@@ -826,7 +845,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = ((gridSz != 0.0) ? (Math.Floor((this.Z + gridSz * 0.5) / gridSz) * gridSz) : outV.X);
 	}
 
-	// Token: 0x0600091F RID: 2335 RVA: 0x0002F7C0 File Offset: 0x0002D9C0
+	// Token: 0x0600096D RID: 2413 RVA: 0x000300CC File Offset: 0x0002E2CC
 	public void BoundToCube(double radius, global::Vector outV)
 	{
 		outV.X = MathCommon.Clamp(this.X, -radius, radius);
@@ -834,7 +853,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = MathCommon.Clamp(this.Z, -radius, radius);
 	}
 
-	// Token: 0x06000920 RID: 2336 RVA: 0x0002F800 File Offset: 0x0002DA00
+	// Token: 0x0600096E RID: 2414 RVA: 0x0003010C File Offset: 0x0002E30C
 	public void BoundToBox(global::Vector minV, global::Vector maxV, global::Vector outV)
 	{
 		outV.X = MathCommon.Clamp(this.X, minV.X, maxV.X);
@@ -842,7 +861,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = MathCommon.Clamp(this.Z, minV.Z, maxV.Z);
 	}
 
-	// Token: 0x06000921 RID: 2337 RVA: 0x0002F864 File Offset: 0x0002DA64
+	// Token: 0x0600096F RID: 2415 RVA: 0x00030170 File Offset: 0x0002E370
 	public void GetClampedToSize(double min, double max, global::Vector outV)
 	{
 		double num = this.Size();
@@ -858,7 +877,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.MultiplyEqual(num);
 	}
 
-	// Token: 0x06000922 RID: 2338 RVA: 0x0002F8A8 File Offset: 0x0002DAA8
+	// Token: 0x06000970 RID: 2416 RVA: 0x000301B4 File Offset: 0x0002E3B4
 	public void GetClampedToSize2D(double min, double max, global::Vector outV)
 	{
 		double num = this.Size2D();
@@ -876,7 +895,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = this.Z;
 	}
 
-	// Token: 0x06000923 RID: 2339 RVA: 0x0002F910 File Offset: 0x0002DB10
+	// Token: 0x06000971 RID: 2417 RVA: 0x0003021C File Offset: 0x0002E41C
 	public void GetClampedToMaxSize(double maxSize, global::Vector outV)
 	{
 		if (maxSize < 9.999999747378752E-05)
@@ -894,7 +913,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.DeepCopy(this);
 	}
 
-	// Token: 0x06000924 RID: 2340 RVA: 0x0002F964 File Offset: 0x0002DB64
+	// Token: 0x06000972 RID: 2418 RVA: 0x00030270 File Offset: 0x0002E470
 	public void GetClampedToMaxSize2D(double maxSize, global::Vector outV)
 	{
 		outV.Z = this.Z;
@@ -914,14 +933,14 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.DeepCopy(this);
 	}
 
-	// Token: 0x06000925 RID: 2341 RVA: 0x0002F9F2 File Offset: 0x0002DBF2
+	// Token: 0x06000973 RID: 2419 RVA: 0x000302FE File Offset: 0x0002E4FE
 	public void AddBounded(global::Vector v, double radius = 32767.0)
 	{
 		this.AdditionEqual(v);
 		this.BoundToCube(radius, this);
 	}
 
-	// Token: 0x06000926 RID: 2342 RVA: 0x0002FA04 File Offset: 0x0002DC04
+	// Token: 0x06000974 RID: 2420 RVA: 0x00030310 File Offset: 0x0002E510
 	public void Reciprocal(global::Vector outV)
 	{
 		outV.X = ((this.X != 0.0) ? (1.0 / this.X) : 3.3999999521443642E+38);
@@ -929,13 +948,13 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = ((this.Z != 0.0) ? (1.0 / this.Z) : 3.3999999521443642E+38);
 	}
 
-	// Token: 0x06000927 RID: 2343 RVA: 0x0002FAA7 File Offset: 0x0002DCA7
+	// Token: 0x06000975 RID: 2421 RVA: 0x000303B3 File Offset: 0x0002E5B3
 	public bool IsUniform(double tolerance = 9.999999747378752E-05)
 	{
 		return this.AllComponentsEqual(tolerance);
 	}
 
-	// Token: 0x06000928 RID: 2344 RVA: 0x0002FAB0 File Offset: 0x0002DCB0
+	// Token: 0x06000976 RID: 2422 RVA: 0x000303BC File Offset: 0x0002E5BC
 	public void MirrorByVector(global::Vector mirrorNormal, global::Vector outV)
 	{
 		double num = this.DotProduct(mirrorNormal);
@@ -943,7 +962,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.AdditionEqual(this);
 	}
 
-	// Token: 0x06000929 RID: 2345 RVA: 0x0002FAE0 File Offset: 0x0002DCE0
+	// Token: 0x06000977 RID: 2423 RVA: 0x000303EC File Offset: 0x0002E5EC
 	public void MirrorByPlane(IPlane plane, global::Vector outV)
 	{
 		double num = this.X * plane.X + this.Y * plane.Y + this.Z * plane.Z - plane.W;
@@ -951,7 +970,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.AdditionEqual(this);
 	}
 
-	// Token: 0x0600092A RID: 2346 RVA: 0x0002FB3C File Offset: 0x0002DD3C
+	// Token: 0x06000978 RID: 2424 RVA: 0x00030448 File Offset: 0x0002E648
 	public void RotateAngleAxis(double angleDeg, global::Vector axis, global::Vector outV)
 	{
 		double num = angleDeg * 0.01745329238474369;
@@ -975,7 +994,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = (num13 * num9 - num11) * x + (num13 * num8 + num10) * y + (num13 * num6 + num3) * z;
 	}
 
-	// Token: 0x0600092B RID: 2347 RVA: 0x0002FC74 File Offset: 0x0002DE74
+	// Token: 0x06000979 RID: 2425 RVA: 0x00030580 File Offset: 0x0002E780
 	public double CosineAngle2D(global::Vector b, double tolerance = 9.999999747378752E-05)
 	{
 		double x = this.X;
@@ -995,21 +1014,21 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return (x * x2 + y * y2) / Math.Sqrt(num * num2);
 	}
 
-	// Token: 0x0600092C RID: 2348 RVA: 0x0002FCE0 File Offset: 0x0002DEE0
+	// Token: 0x0600097A RID: 2426 RVA: 0x000305EC File Offset: 0x0002E7EC
 	public void ProjectOnTo(global::Vector a, global::Vector outV)
 	{
 		double inB = this.DotProduct(a) / a.SizeSquared();
 		a.Multiply(inB, outV);
 	}
 
-	// Token: 0x0600092D RID: 2349 RVA: 0x0002FD08 File Offset: 0x0002DF08
+	// Token: 0x0600097B RID: 2427 RVA: 0x00030614 File Offset: 0x0002E814
 	public void ProjectOnToNormal(global::Vector normal, global::Vector outV)
 	{
 		double inB = this.DotProduct(normal);
 		normal.Multiply(inB, outV);
 	}
 
-	// Token: 0x0600092E RID: 2350 RVA: 0x0002FD28 File Offset: 0x0002DF28
+	// Token: 0x0600097C RID: 2428 RVA: 0x00030634 File Offset: 0x0002E834
 	public void ToOrientationRotator(IRotator outR)
 	{
 		outR.Yaw = (float)Math.Atan2(this.Y, this.X) * 57.29578f;
@@ -1017,7 +1036,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outR.Roll = 0f;
 	}
 
-	// Token: 0x0600092F RID: 2351 RVA: 0x0002FD7C File Offset: 0x0002DF7C
+	// Token: 0x0600097D RID: 2429 RVA: 0x00030688 File Offset: 0x0002E888
 	public void ToOrientationQuat(IQuat outQ)
 	{
 		double num = Math.Atan2(this.Y, this.X);
@@ -1033,13 +1052,13 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outQ.W = num5 * num7;
 	}
 
-	// Token: 0x06000930 RID: 2352 RVA: 0x0002FDFF File Offset: 0x0002DFFF
+	// Token: 0x0600097E RID: 2430 RVA: 0x0003070B File Offset: 0x0002E90B
 	public void Rotation(IRotator outR)
 	{
 		this.ToOrientationRotator(outR);
 	}
 
-	// Token: 0x06000931 RID: 2353 RVA: 0x0002FE08 File Offset: 0x0002E008
+	// Token: 0x0600097F RID: 2431 RVA: 0x00030714 File Offset: 0x0002E914
 	public void FindBestAxisVectors(global::Vector axis1, global::Vector axis2)
 	{
 		double num = Math.Abs(this.X);
@@ -1080,7 +1099,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		axis1.CrossProduct(this, axis2);
 	}
 
-	// Token: 0x06000932 RID: 2354 RVA: 0x0002FF5B File Offset: 0x0002E15B
+	// Token: 0x06000980 RID: 2432 RVA: 0x00030867 File Offset: 0x0002EA67
 	public void UnwindEuler()
 	{
 		this.X = MathCommon.UnwindDegrees(this.X);
@@ -1088,13 +1107,13 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = MathCommon.UnwindDegrees(this.Z);
 	}
 
-	// Token: 0x06000933 RID: 2355 RVA: 0x0002FF90 File Offset: 0x0002E190
+	// Token: 0x06000981 RID: 2433 RVA: 0x0003089C File Offset: 0x0002EA9C
 	public bool ContainsNaN()
 	{
 		return !double.IsFinite(this.X) || !double.IsFinite(this.Y) || !double.IsFinite(this.Z);
 	}
 
-	// Token: 0x06000934 RID: 2356 RVA: 0x0002FFBC File Offset: 0x0002E1BC
+	// Token: 0x06000982 RID: 2434 RVA: 0x000308C8 File Offset: 0x0002EAC8
 	public void UnitCartesianToSpherical(IVector2D outV2D)
 	{
 		double x = this.X;
@@ -1104,7 +1123,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV2D.Y = Math.Atan2(y, x);
 	}
 
-	// Token: 0x06000935 RID: 2357 RVA: 0x00030000 File Offset: 0x0002E200
+	// Token: 0x06000983 RID: 2435 RVA: 0x0003090C File Offset: 0x0002EB0C
 	public double HeadingAngle()
 	{
 		double num = (Math.Abs(this.X) < 9.999999747378752E-05) ? 0.0 : this.X;
@@ -1116,7 +1135,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return Math.Atan2(num2, num);
 	}
 
-	// Token: 0x06000936 RID: 2358 RVA: 0x00030088 File Offset: 0x0002E288
+	// Token: 0x06000984 RID: 2436 RVA: 0x00030994 File Offset: 0x0002EB94
 	public static void CreateOrthonormalBasis(global::Vector xAxis, global::Vector yAxis, global::Vector zAxis)
 	{
 		double num = xAxis.DotProduct(zAxis) / zAxis.SizeSquared();
@@ -1141,19 +1160,19 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		zAxis.Normalize(9.99999993922529E-09);
 	}
 
-	// Token: 0x06000937 RID: 2359 RVA: 0x0003018D File Offset: 0x0002E38D
+	// Token: 0x06000985 RID: 2437 RVA: 0x00030A99 File Offset: 0x0002EC99
 	public static bool PointsAreSame(global::Vector p, global::Vector q)
 	{
 		return global::Vector.PointsAreNear(p, q, 1.9999999494757503E-05);
 	}
 
-	// Token: 0x06000938 RID: 2360 RVA: 0x000301A0 File Offset: 0x0002E3A0
+	// Token: 0x06000986 RID: 2438 RVA: 0x00030AAC File Offset: 0x0002ECAC
 	public static bool PointsAreNear(global::Vector point1, global::Vector point2, double dist)
 	{
 		return Math.Abs(point1.X - point2.X) < dist && Math.Abs(point1.Y - point2.Y) < dist && Math.Abs(point1.Z - point2.Z) < dist;
 	}
 
-	// Token: 0x06000939 RID: 2361 RVA: 0x000301F0 File Offset: 0x0002E3F0
+	// Token: 0x06000987 RID: 2439 RVA: 0x00030AFC File Offset: 0x0002ECFC
 	public static double PointPlaneDist(global::Vector point, global::Vector planeBase, global::Vector planeNormal)
 	{
 		double num = point.X - planeBase.X;
@@ -1162,7 +1181,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return num * planeNormal.X + num2 * planeNormal.Y + num3 * planeNormal.Z;
 	}
 
-	// Token: 0x0600093A RID: 2362 RVA: 0x00030240 File Offset: 0x0002E440
+	// Token: 0x06000988 RID: 2440 RVA: 0x00030B4C File Offset: 0x0002ED4C
 	public static void PointPlaneProject(global::Vector point, IPlane plane, global::Vector outV)
 	{
 		double num = global::Vector.DotProduct(point, plane) - plane.W;
@@ -1170,7 +1189,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.AdditionEqual(point);
 	}
 
-	// Token: 0x0600093B RID: 2363 RVA: 0x00030270 File Offset: 0x0002E470
+	// Token: 0x06000989 RID: 2441 RVA: 0x00030B7C File Offset: 0x0002ED7C
 	public static void PointPlaneProject(global::Vector point, global::Vector a, global::Vector b, global::Vector c, global::Vector outV)
 	{
 		double num = b.X - a.X;
@@ -1188,7 +1207,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.AdditionEqual(point);
 	}
 
-	// Token: 0x0600093C RID: 2364 RVA: 0x00030334 File Offset: 0x0002E534
+	// Token: 0x0600098A RID: 2442 RVA: 0x00030C40 File Offset: 0x0002EE40
 	public static void PointPlaneProject(global::Vector point, global::Vector planeBase, global::Vector planeNormal, global::Vector outV)
 	{
 		double num = global::Vector.PointPlaneDist(point, planeBase, planeNormal);
@@ -1196,7 +1215,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.AdditionEqual(point);
 	}
 
-	// Token: 0x0600093D RID: 2365 RVA: 0x0003035C File Offset: 0x0002E55C
+	// Token: 0x0600098B RID: 2443 RVA: 0x00030C68 File Offset: 0x0002EE68
 	public static void VectorPlaneProject(global::Vector v, global::Vector planeNormal, global::Vector outV)
 	{
 		v.ProjectOnToNormal(planeNormal, outV);
@@ -1204,85 +1223,85 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.AdditionEqual(v);
 	}
 
-	// Token: 0x0600093E RID: 2366 RVA: 0x00030375 File Offset: 0x0002E575
+	// Token: 0x0600098C RID: 2444 RVA: 0x00030C81 File Offset: 0x0002EE81
 	public static double DistSquaredXY(global::Vector v1, global::Vector v2)
 	{
 		return Math.Pow(v2.X - v1.X, 2.0) + Math.Pow(v2.Y - v1.Y, 2.0);
 	}
 
-	// Token: 0x0600093F RID: 2367 RVA: 0x000303AF File Offset: 0x0002E5AF
+	// Token: 0x0600098D RID: 2445 RVA: 0x00030CBB File Offset: 0x0002EEBB
 	public static double DistXY(global::Vector v1, global::Vector v2)
 	{
 		return Math.Sqrt(global::Vector.DistSquaredXY(v1, v2));
 	}
 
-	// Token: 0x06000940 RID: 2368 RVA: 0x000303C0 File Offset: 0x0002E5C0
+	// Token: 0x0600098E RID: 2446 RVA: 0x00030CCC File Offset: 0x0002EECC
 	public static double DistSquared(global::Vector v1, global::Vector v2)
 	{
 		return Math.Pow(v2.X - v1.X, 2.0) + Math.Pow(v2.Y - v1.Y, 2.0) + Math.Pow(v2.Z - v1.Z, 2.0);
 	}
 
-	// Token: 0x06000941 RID: 2369 RVA: 0x00030421 File Offset: 0x0002E621
+	// Token: 0x0600098F RID: 2447 RVA: 0x00030D2D File Offset: 0x0002EF2D
 	public static double Dist(global::Vector v1, global::Vector v2)
 	{
 		return Math.Sqrt(global::Vector.DistSquared(v1, v2));
 	}
 
-	// Token: 0x06000942 RID: 2370 RVA: 0x0003042F File Offset: 0x0002E62F
+	// Token: 0x06000990 RID: 2448 RVA: 0x00030D3B File Offset: 0x0002EF3B
 	public static double Distance(global::Vector v1, global::Vector v2)
 	{
 		return global::Vector.Dist(v1, v2);
 	}
 
-	// Token: 0x06000943 RID: 2371 RVA: 0x00030438 File Offset: 0x0002E638
+	// Token: 0x06000991 RID: 2449 RVA: 0x00030D44 File Offset: 0x0002EF44
 	public static double Dist2D(global::Vector v1, global::Vector v2)
 	{
 		return global::Vector.DistXY(v1, v2);
 	}
 
-	// Token: 0x06000944 RID: 2372 RVA: 0x00030441 File Offset: 0x0002E641
+	// Token: 0x06000992 RID: 2450 RVA: 0x00030D4D File Offset: 0x0002EF4D
 	public static double DistSquared2D(global::Vector v1, global::Vector v2)
 	{
 		return global::Vector.DistSquaredXY(v1, v2);
 	}
 
-	// Token: 0x06000945 RID: 2373 RVA: 0x0003044A File Offset: 0x0002E64A
+	// Token: 0x06000993 RID: 2451 RVA: 0x00030D56 File Offset: 0x0002EF56
 	public static double BoxPushOut(global::Vector normal, global::Vector size)
 	{
 		return Math.Abs(normal.X * size.X) + Math.Abs(normal.Y * size.Y) + Math.Abs(normal.Z * size.Z);
 	}
 
-	// Token: 0x06000946 RID: 2374 RVA: 0x00030484 File Offset: 0x0002E684
+	// Token: 0x06000994 RID: 2452 RVA: 0x00030D90 File Offset: 0x0002EF90
 	public static bool Parallel(global::Vector normal1, global::Vector normal2, double parallelCosineThreshold = 0.999845027923584)
 	{
 		return Math.Abs(global::Vector.DotProduct(normal1, normal2)) >= parallelCosineThreshold;
 	}
 
-	// Token: 0x06000947 RID: 2375 RVA: 0x00030498 File Offset: 0x0002E698
+	// Token: 0x06000995 RID: 2453 RVA: 0x00030DA4 File Offset: 0x0002EFA4
 	public static bool Coincident(global::Vector normal1, global::Vector normal2, double parallelCosineThreshold = 0.999845027923584)
 	{
 		return global::Vector.DotProduct(normal1, normal2) >= parallelCosineThreshold;
 	}
 
-	// Token: 0x06000948 RID: 2376 RVA: 0x000304A7 File Offset: 0x0002E6A7
+	// Token: 0x06000996 RID: 2454 RVA: 0x00030DB3 File Offset: 0x0002EFB3
 	public static bool Orthogonal(global::Vector normal1, global::Vector normal2, double orthogonalCosineThreshold = 0.017455000430345535)
 	{
 		return Math.Abs(global::Vector.DotProduct(normal1, normal2)) <= orthogonalCosineThreshold;
 	}
 
-	// Token: 0x06000949 RID: 2377 RVA: 0x000304BB File Offset: 0x0002E6BB
+	// Token: 0x06000997 RID: 2455 RVA: 0x00030DC7 File Offset: 0x0002EFC7
 	public static bool Coplanar(global::Vector base1, global::Vector normal1, global::Vector base2, global::Vector normal2, double parallelCosineThreshold = 0.999845027923584)
 	{
 		return global::Vector.Parallel(normal1, normal2, parallelCosineThreshold) && Math.Abs(global::Vector.PointPlaneDist(base1, base2, normal1)) <= 0.10000000149011612;
 	}
 
-	// Token: 0x0600094A RID: 2378 RVA: 0x000304E8 File Offset: 0x0002E6E8
+	// Token: 0x06000998 RID: 2456 RVA: 0x00030DF4 File Offset: 0x0002EFF4
 	public static double Triple(global::Vector x, global::Vector y, global::Vector z)
 	{
 		return x.X * (y.Y * z.Z - y.Z * z.Y) + x.Y * (y.Z * z.X - y.X * z.Z) + x.Z * (y.X * z.Y - y.Y * z.X);
 	}
 
-	// Token: 0x0600094B RID: 2379 RVA: 0x00030560 File Offset: 0x0002E760
+	// Token: 0x06000999 RID: 2457 RVA: 0x00030E6C File Offset: 0x0002F06C
 	public static void RadiansToDegrees(global::Vector radVector, global::Vector outV)
 	{
 		outV.X = radVector.X * 57.295780181884766;
@@ -1290,7 +1309,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = radVector.Z * 57.295780181884766;
 	}
 
-	// Token: 0x0600094C RID: 2380 RVA: 0x000305B0 File Offset: 0x0002E7B0
+	// Token: 0x0600099A RID: 2458 RVA: 0x00030EBC File Offset: 0x0002F0BC
 	public static void DegreesToRadians(global::Vector radVector, global::Vector outV)
 	{
 		outV.X = radVector.X * 0.01745329238474369;
@@ -1298,7 +1317,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = radVector.Z * 0.01745329238474369;
 	}
 
-	// Token: 0x0600094D RID: 2381 RVA: 0x000305FF File Offset: 0x0002E7FF
+	// Token: 0x0600099B RID: 2459 RVA: 0x00030F0B File Offset: 0x0002F10B
 	public void Reset()
 	{
 		this.X = 0.0;
@@ -1306,7 +1325,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		this.Z = 0.0;
 	}
 
-	// Token: 0x0600094E RID: 2382 RVA: 0x0003062E File Offset: 0x0002E82E
+	// Token: 0x0600099C RID: 2460 RVA: 0x00030F3A File Offset: 0x0002F13A
 	public void DeepCopy2D(global::Vector outV)
 	{
 		outV.X = this.X;
@@ -1314,7 +1333,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = 0.0;
 	}
 
-	// Token: 0x0600094F RID: 2383 RVA: 0x00030658 File Offset: 0x0002E858
+	// Token: 0x0600099D RID: 2461 RVA: 0x00030F64 File Offset: 0x0002F164
 	public double SineAngle2D(global::Vector inV, double tolerance = 9.999999747378752E-05)
 	{
 		double num = this.X;
@@ -1338,7 +1357,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return num * num4 - num2 * num3;
 	}
 
-	// Token: 0x06000950 RID: 2384 RVA: 0x000306E0 File Offset: 0x0002E8E0
+	// Token: 0x0600099E RID: 2462 RVA: 0x00030FEC File Offset: 0x0002F1EC
 	public static void VectorBlendEaseIn(global::Vector from, global::Vector to, double alpha, double exp, global::Vector outV)
 	{
 		double x = from.X;
@@ -1353,7 +1372,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = z + num3 * num4;
 	}
 
-	// Token: 0x06000951 RID: 2385 RVA: 0x00030764 File Offset: 0x0002E964
+	// Token: 0x0600099F RID: 2463 RVA: 0x00031070 File Offset: 0x0002F270
 	public static void DirectLerp(global::Vector from, global::Vector to, float alpha, global::Vector outV)
 	{
 		Quat quat = Quat.Create(0.0, 0.0, 0.0, 1.0);
@@ -1362,7 +1381,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		quat.RotateVector(from, outV);
 	}
 
-	// Token: 0x06000952 RID: 2386 RVA: 0x000307B8 File Offset: 0x0002E9B8
+	// Token: 0x060009A0 RID: 2464 RVA: 0x000310C4 File Offset: 0x0002F2C4
 	public static void DirectLerpWithAngle(global::Vector from, global::Vector to, float maxAngle, global::Vector outV)
 	{
 		float num = (float)(Math.Acos(global::Vector.DotProduct(from, to)) * 57.295780181884766);
@@ -1377,7 +1396,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		quat.RotateVector(from, outV);
 	}
 
-	// Token: 0x06000953 RID: 2387 RVA: 0x00030834 File Offset: 0x0002EA34
+	// Token: 0x060009A1 RID: 2465 RVA: 0x00031140 File Offset: 0x0002F340
 	public static void Lerp(global::Vector from, global::Vector to, double alpha, global::Vector outV)
 	{
 		double inB = MathCommon.Clamp(alpha, 0.0, 1.0);
@@ -1386,14 +1405,14 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		global::Vector.TmpVector1.Addition(from, outV);
 	}
 
-	// Token: 0x06000954 RID: 2388 RVA: 0x00030880 File Offset: 0x0002EA80
+	// Token: 0x060009A2 RID: 2466 RVA: 0x0003118C File Offset: 0x0002F38C
 	public static void LerpSin(global::Vector from, global::Vector to, float alpha, global::Vector outV)
 	{
 		float alpha2 = MathCommon.Clamp(alpha, 0f, 1f);
 		outV.Set(MathCommon.LerpSin(from.X, to.X, alpha2), MathCommon.LerpSin(from.Y, to.Y, alpha2), MathCommon.LerpSin(from.Z, to.Z, alpha2));
 	}
 
-	// Token: 0x06000955 RID: 2389 RVA: 0x000308DC File Offset: 0x0002EADC
+	// Token: 0x060009A3 RID: 2467 RVA: 0x000311E8 File Offset: 0x0002F3E8
 	public static void LerpCubic(global::Vector p0, global::Vector t0, global::Vector p1, global::Vector t1, double alpha, global::Vector outV)
 	{
 		double num = alpha * alpha;
@@ -1416,7 +1435,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.AdditionEqual(global::Vector.TmpVector1);
 	}
 
-	// Token: 0x06000956 RID: 2390 RVA: 0x000309D8 File Offset: 0x0002EBD8
+	// Token: 0x060009A4 RID: 2468 RVA: 0x000312E4 File Offset: 0x0002F4E4
 	public static void LerpCubicDerivative(global::Vector p0, global::Vector t0, global::Vector p1, global::Vector t1, double alpha, global::Vector outV)
 	{
 		double inB = alpha * alpha;
@@ -1451,7 +1470,7 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.AdditionEqual(global::Vector.TmpVector3);
 	}
 
-	// Token: 0x06000957 RID: 2391 RVA: 0x00030B9C File Offset: 0x0002ED9C
+	// Token: 0x060009A5 RID: 2469 RVA: 0x000314A8 File Offset: 0x0002F6A8
 	public static void VectorCopy(IVector inV, IVector outV)
 	{
 		outV.X = inV.X;
@@ -1459,26 +1478,26 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		outV.Z = inV.Z;
 	}
 
-	// Token: 0x06000958 RID: 2392 RVA: 0x00030BC4 File Offset: 0x0002EDC4
+	// Token: 0x060009A6 RID: 2470 RVA: 0x000314D0 File Offset: 0x0002F6D0
 	public static global::Vector GetVector2dByAngle(double angle)
 	{
 		double num = angle * 0.01745329238474369;
 		return global::Vector.Create(Math.Cos(num), Math.Sin(num), 0.0);
 	}
 
-	// Token: 0x06000959 RID: 2393 RVA: 0x00030BF7 File Offset: 0x0002EDF7
+	// Token: 0x060009A7 RID: 2471 RVA: 0x00031503 File Offset: 0x0002F703
 	public static double GetAngleByVector2D(FVector vector)
 	{
 		return (double)vector.HeadingAngle() * 57.295780181884766;
 	}
 
-	// Token: 0x0600095A RID: 2394 RVA: 0x00030C0B File Offset: 0x0002EE0B
+	// Token: 0x060009A8 RID: 2472 RVA: 0x00031517 File Offset: 0x0002F717
 	public static double GetAngleByVector2D(global::Vector vector)
 	{
 		return vector.HeadingAngle() * 57.295780181884766;
 	}
 
-	// Token: 0x0600095B RID: 2395 RVA: 0x00030C1D File Offset: 0x0002EE1D
+	// Token: 0x060009A9 RID: 2473 RVA: 0x00031529 File Offset: 0x0002F729
 	public Aki.Protocol.Vector ToProtocolVector()
 	{
 		Aki.Protocol.Vector vector = Aki.Protocol.Vector.Create();
@@ -1488,159 +1507,159 @@ public class Vector : IVector, IVector2D, IClearable, ILogFormattedPrint
 		return vector;
 	}
 
-	// Token: 0x04000635 RID: 1589
+	// Token: 0x04000640 RID: 1600
 	public const int TupleLength = 3;
 
-	// Token: 0x04000636 RID: 1590
+	// Token: 0x04000641 RID: 1601
 	public double X;
 
-	// Token: 0x04000637 RID: 1591
+	// Token: 0x04000642 RID: 1602
 	public double Y;
 
-	// Token: 0x04000638 RID: 1592
-	public double Z;
-
-	// Token: 0x04000639 RID: 1593
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector ZeroVectorProxy = global::Vector.Create(0.0, 0.0, 0.0);
-
-	// Token: 0x0400063A RID: 1594
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector OneVectorProxy = global::Vector.Create(1.0, 1.0, 1.0);
-
-	// Token: 0x0400063B RID: 1595
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector UpVectorProxy = global::Vector.Create(0.0, 0.0, 1.0);
-
-	// Token: 0x0400063C RID: 1596
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector DownVectorProxy = global::Vector.Create(0.0, 0.0, -1.0);
-
-	// Token: 0x0400063D RID: 1597
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector ForwardVectorProxy = global::Vector.Create(1.0, 0.0, 0.0);
-
-	// Token: 0x0400063E RID: 1598
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector BackwardVectorProxy = global::Vector.Create(-1.0, 0.0, 0.0);
-
-	// Token: 0x0400063F RID: 1599
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector RightVectorProxy = global::Vector.Create(0.0, 1.0, 0.0);
-
-	// Token: 0x04000640 RID: 1600
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector LeftVectorProxy = global::Vector.Create(0.0, -1.0, 0.0);
-
-	// Token: 0x04000641 RID: 1601
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector XAxisVectorProxy = global::Vector.ForwardVectorProxy;
-
-	// Token: 0x04000642 RID: 1602
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector YAxisVectorProxy = global::Vector.RightVectorProxy;
-
 	// Token: 0x04000643 RID: 1603
-	[StaticVariableRuleIgnore]
-	public static readonly global::Vector ZAxisVectorProxy = global::Vector.UpVectorProxy;
+	public double Z;
 
 	// Token: 0x04000644 RID: 1604
 	[StaticVariableRuleIgnore]
-	public static readonly FVector ZeroVector = global::Vector.ZeroVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector ZeroVectorProxy = global::Vector.Create(0.0, 0.0, 0.0);
 
 	// Token: 0x04000645 RID: 1605
 	[StaticVariableRuleIgnore]
-	public static readonly FVector OneVector = global::Vector.OneVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector OneVectorProxy = global::Vector.Create(1.0, 1.0, 1.0);
 
 	// Token: 0x04000646 RID: 1606
 	[StaticVariableRuleIgnore]
-	public static readonly FVector UpVector = global::Vector.UpVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector UpVectorProxy = global::Vector.Create(0.0, 0.0, 1.0);
 
 	// Token: 0x04000647 RID: 1607
 	[StaticVariableRuleIgnore]
-	public static readonly FVector DownVector = global::Vector.DownVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector DownVectorProxy = global::Vector.Create(0.0, 0.0, -1.0);
 
 	// Token: 0x04000648 RID: 1608
 	[StaticVariableRuleIgnore]
-	public static readonly FVector ForwardVector = global::Vector.ForwardVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector ForwardVectorProxy = global::Vector.Create(1.0, 0.0, 0.0);
 
 	// Token: 0x04000649 RID: 1609
 	[StaticVariableRuleIgnore]
-	public static readonly FVector BackwardVector = global::Vector.BackwardVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector BackwardVectorProxy = global::Vector.Create(-1.0, 0.0, 0.0);
 
 	// Token: 0x0400064A RID: 1610
 	[StaticVariableRuleIgnore]
-	public static readonly FVector RightVector = global::Vector.RightVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector RightVectorProxy = global::Vector.Create(0.0, 1.0, 0.0);
 
 	// Token: 0x0400064B RID: 1611
 	[StaticVariableRuleIgnore]
-	public static readonly FVector LeftVector = global::Vector.LeftVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector LeftVectorProxy = global::Vector.Create(0.0, -1.0, 0.0);
 
 	// Token: 0x0400064C RID: 1612
 	[StaticVariableRuleIgnore]
-	public static readonly FVector XAxisVector = global::Vector.XAxisVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector XAxisVectorProxy = global::Vector.ForwardVectorProxy;
 
 	// Token: 0x0400064D RID: 1613
 	[StaticVariableRuleIgnore]
-	public static readonly FVector YAxisVector = global::Vector.YAxisVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector YAxisVectorProxy = global::Vector.RightVectorProxy;
 
 	// Token: 0x0400064E RID: 1614
 	[StaticVariableRuleIgnore]
-	public static readonly FVector ZAxisVector = global::Vector.ZAxisVectorProxy.ToUeVectorOld();
+	public static readonly global::Vector ZAxisVectorProxy = global::Vector.UpVectorProxy;
 
 	// Token: 0x0400064F RID: 1615
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble ZeroVectorDouble = global::Vector.ZeroVectorProxy.ToUeVector(false);
+	public static readonly FVector ZeroVector = global::Vector.ZeroVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000650 RID: 1616
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble OneVectorDouble = global::Vector.OneVectorProxy.ToUeVector(false);
+	public static readonly FVector OneVector = global::Vector.OneVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000651 RID: 1617
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble UpVectorDouble = global::Vector.UpVectorProxy.ToUeVector(false);
+	public static readonly FVector UpVector = global::Vector.UpVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000652 RID: 1618
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble DownVectorDouble = global::Vector.DownVectorProxy.ToUeVector(false);
+	public static readonly FVector DownVector = global::Vector.DownVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000653 RID: 1619
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble ForwardVectorDouble = global::Vector.ForwardVectorProxy.ToUeVector(false);
+	public static readonly FVector ForwardVector = global::Vector.ForwardVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000654 RID: 1620
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble BackwardVectorDouble = global::Vector.BackwardVectorProxy.ToUeVector(false);
+	public static readonly FVector BackwardVector = global::Vector.BackwardVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000655 RID: 1621
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble RightVectorDouble = global::Vector.RightVectorProxy.ToUeVector(false);
+	public static readonly FVector RightVector = global::Vector.RightVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000656 RID: 1622
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble LeftVectorDouble = global::Vector.LeftVectorProxy.ToUeVector(false);
+	public static readonly FVector LeftVector = global::Vector.LeftVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000657 RID: 1623
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble XAxisVectorDouble = global::Vector.XAxisVectorProxy.ToUeVector(false);
+	public static readonly FVector XAxisVector = global::Vector.XAxisVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000658 RID: 1624
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble YAxisVectorDouble = global::Vector.YAxisVectorProxy.ToUeVector(false);
+	public static readonly FVector YAxisVector = global::Vector.YAxisVectorProxy.ToUeVectorOld();
 
 	// Token: 0x04000659 RID: 1625
 	[StaticVariableRuleIgnore]
-	public static readonly FVectorDouble ZAxisVectorDouble = global::Vector.ZAxisVectorProxy.ToUeVector(false);
+	public static readonly FVector ZAxisVector = global::Vector.ZAxisVectorProxy.ToUeVectorOld();
 
 	// Token: 0x0400065A RID: 1626
 	[StaticVariableRuleIgnore]
-	private static readonly global::Vector TmpVector1 = global::Vector.Create();
+	public static readonly FVectorDouble ZeroVectorDouble = global::Vector.ZeroVectorProxy.ToUeVector(false);
 
 	// Token: 0x0400065B RID: 1627
 	[StaticVariableRuleIgnore]
-	private static readonly global::Vector TmpVector2 = global::Vector.Create();
+	public static readonly FVectorDouble OneVectorDouble = global::Vector.OneVectorProxy.ToUeVector(false);
 
 	// Token: 0x0400065C RID: 1628
+	[StaticVariableRuleIgnore]
+	public static readonly FVectorDouble UpVectorDouble = global::Vector.UpVectorProxy.ToUeVector(false);
+
+	// Token: 0x0400065D RID: 1629
+	[StaticVariableRuleIgnore]
+	public static readonly FVectorDouble DownVectorDouble = global::Vector.DownVectorProxy.ToUeVector(false);
+
+	// Token: 0x0400065E RID: 1630
+	[StaticVariableRuleIgnore]
+	public static readonly FVectorDouble ForwardVectorDouble = global::Vector.ForwardVectorProxy.ToUeVector(false);
+
+	// Token: 0x0400065F RID: 1631
+	[StaticVariableRuleIgnore]
+	public static readonly FVectorDouble BackwardVectorDouble = global::Vector.BackwardVectorProxy.ToUeVector(false);
+
+	// Token: 0x04000660 RID: 1632
+	[StaticVariableRuleIgnore]
+	public static readonly FVectorDouble RightVectorDouble = global::Vector.RightVectorProxy.ToUeVector(false);
+
+	// Token: 0x04000661 RID: 1633
+	[StaticVariableRuleIgnore]
+	public static readonly FVectorDouble LeftVectorDouble = global::Vector.LeftVectorProxy.ToUeVector(false);
+
+	// Token: 0x04000662 RID: 1634
+	[StaticVariableRuleIgnore]
+	public static readonly FVectorDouble XAxisVectorDouble = global::Vector.XAxisVectorProxy.ToUeVector(false);
+
+	// Token: 0x04000663 RID: 1635
+	[StaticVariableRuleIgnore]
+	public static readonly FVectorDouble YAxisVectorDouble = global::Vector.YAxisVectorProxy.ToUeVector(false);
+
+	// Token: 0x04000664 RID: 1636
+	[StaticVariableRuleIgnore]
+	public static readonly FVectorDouble ZAxisVectorDouble = global::Vector.ZAxisVectorProxy.ToUeVector(false);
+
+	// Token: 0x04000665 RID: 1637
+	[StaticVariableRuleIgnore]
+	private static readonly global::Vector TmpVector1 = global::Vector.Create();
+
+	// Token: 0x04000666 RID: 1638
+	[StaticVariableRuleIgnore]
+	private static readonly global::Vector TmpVector2 = global::Vector.Create();
+
+	// Token: 0x04000667 RID: 1639
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector3 = global::Vector.Create();
 }

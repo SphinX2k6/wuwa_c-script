@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005DE RID: 1502
+	// Token: 0x020005F6 RID: 1526
 	public class ConfigMusicBeatTypeByBeatType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002343 RID: 9027 RVA: 0x00120EC8 File Offset: 0x0011F0C8
+		// Token: 0x060023D3 RID: 9171 RVA: 0x00127944 File Offset: 0x00125B44
 		static ConfigMusicBeatTypeByBeatType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMusicBeatTypeByBeatType.CreateStaticDefaultValue), new Action(ConfigMusicBeatTypeByBeatType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002344 RID: 9028 RVA: 0x00120EE8 File Offset: 0x0011F0E8
+		// Token: 0x060023D4 RID: 9172 RVA: 0x00127964 File Offset: 0x00125B64
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMusicBeatTypeByBeatType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002345 RID: 9029 RVA: 0x00120F67 File Offset: 0x0011F167
+		// Token: 0x060023D5 RID: 9173 RVA: 0x001279E3 File Offset: 0x00125BE3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMusicBeatTypeByBeatType.LogPair = null;
 			ConfigMusicBeatTypeByBeatType.HandleId = 0;
 		}
 
-		// Token: 0x06002346 RID: 9030 RVA: 0x00120F75 File Offset: 0x0011F175
+		// Token: 0x060023D6 RID: 9174 RVA: 0x001279F1 File Offset: 0x00125BF1
 		public static void Init()
 		{
 			ConfigMusicBeatTypeByBeatType.HandleId = ConfigCommon.InitDataStatement(ConfigMusicBeatTypeByBeatType.HandleId, "db_musicbeattype.db", "select BinData from `MusicBeatType` where BeatType=?");
 		}
 
-		// Token: 0x06002347 RID: 9031 RVA: 0x00120F90 File Offset: 0x0011F190
+		// Token: 0x060023D7 RID: 9175 RVA: 0x00127A0C File Offset: 0x00125C0C
 		public static MusicBeatType? GetConfig(string p0BeatType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMusicBeatTypeByBeatType.HandleId, ConfigMusicBeatTypeByBeatType.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new MusicBeatType?(rootAsMusicBeatType);
 		}
 
-		// Token: 0x040028F8 RID: 10488
+		// Token: 0x040029A0 RID: 10656
 		private const string DB = "db_musicbeattype.db";
 
-		// Token: 0x040028F9 RID: 10489
+		// Token: 0x040029A1 RID: 10657
 		private const string FILE = "k.可视化编辑/c.Csv/y.音乐节拍配置/*.csv*";
 
-		// Token: 0x040028FA RID: 10490
+		// Token: 0x040029A2 RID: 10658
 		private const string TABLE = "MusicBeatType";
 
-		// Token: 0x040028FB RID: 10491
+		// Token: 0x040029A3 RID: 10659
 		private const string COMMAND = "select BinData from `MusicBeatType` where BeatType=?";
 
-		// Token: 0x040028FC RID: 10492
+		// Token: 0x040029A4 RID: 10660
 		private const string KEY_PREFIX = "MusicBeatTypeByBeatType";
 
-		// Token: 0x040028FD RID: 10493
+		// Token: 0x040029A5 RID: 10661
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040028FE RID: 10494
+		// Token: 0x040029A6 RID: 10662
 		private static int HandleId;
 	}
 }

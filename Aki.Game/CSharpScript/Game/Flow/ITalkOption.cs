@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Flow
 {
-	// Token: 0x0200724D RID: 29261
+	// Token: 0x020063CC RID: 25548
 	[NullableContext(1)]
 	public interface ITalkOption
 	{
-		// Token: 0x17009E5F RID: 40543
-		// (get) Token: 0x06047BA2 RID: 293794
-		// (set) Token: 0x06047BA3 RID: 293795
+		// Token: 0x170075B7 RID: 30135
+		// (get) Token: 0x0603DF5A RID: 253786
+		// (set) Token: 0x0603DF5B RID: 253787
 		int TextId { get; set; }
 
-		// Token: 0x17009E60 RID: 40544
-		// (get) Token: 0x06047BA4 RID: 293796
-		// (set) Token: 0x06047BA5 RID: 293797
+		// Token: 0x170075B8 RID: 30136
+		// (get) Token: 0x0603DF5C RID: 253788
+		// (set) Token: 0x0603DF5D RID: 253789
 		IActionInfo[] Actions { get; set; }
 	}
 }

@@ -7,24 +7,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.StateApplier
 {
-	// Token: 0x02006A32 RID: 27186
+	// Token: 0x02005B8F RID: 23439
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LegacyDaDraggableStateApplier : IDraggableStateApplier
 	{
-		// Token: 0x06043A17 RID: 277015 RVA: 0x0108CE9A File Offset: 0x0108B09A
+		// Token: 0x06039A65 RID: 236133 RVA: 0x010316A2 File Offset: 0x0102F8A2
 		[NullableContext(2)]
 		public LegacyDaDraggableStateApplier(string daPath)
 		{
 			this.DaPath = daPath;
 		}
 
-		// Token: 0x06043A18 RID: 277016 RVA: 0x0108CEA9 File Offset: 0x0108B0A9
+		// Token: 0x06039A66 RID: 236134 RVA: 0x010316B1 File Offset: 0x0102F8B1
 		public void Initialize(AActor actor)
 		{
 		}
 
-		// Token: 0x06043A19 RID: 277017 RVA: 0x0108CEAB File Offset: 0x0108B0AB
+		// Token: 0x06039A67 RID: 236135 RVA: 0x010316B3 File Offset: 0x0102F8B3
 		public void ApplyState(AActor actor, EDraggableState state)
 		{
 			if (state == EDraggableState.Selected)
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.StateApplier
 			this.ClearSelectionMaterial();
 		}
 
-		// Token: 0x06043A1A RID: 277018 RVA: 0x0108CEBF File Offset: 0x0108B0BF
+		// Token: 0x06039A68 RID: 236136 RVA: 0x010316C7 File Offset: 0x0102F8C7
 		public void Dispose(AActor actor)
 		{
 			this.ClearSelectionMaterial();
 		}
 
-		// Token: 0x06043A1B RID: 277019 RVA: 0x0108CEC8 File Offset: 0x0108B0C8
+		// Token: 0x06039A69 RID: 236137 RVA: 0x010316D0 File Offset: 0x0102F8D0
 		private void AddSelectionMaterial(AActor actor)
 		{
 			this.ClearSelectionMaterial();
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.StateApplier
 			this.CurrentHandle = new int?(ItemMaterialManager.Instance.AddMaterialData(actor, itemMaterialControllerActorData));
 		}
 
-		// Token: 0x06043A1C RID: 277020 RVA: 0x0108CFC4 File Offset: 0x0108B1C4
+		// Token: 0x06039A6A RID: 236138 RVA: 0x010317CC File Offset: 0x0102F9CC
 		private void ClearSelectionMaterial()
 		{
 			int? currentHandle = this.CurrentHandle;
@@ -94,10 +94,10 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.StateApplier
 			this.CurrentHandle = null;
 		}
 
-		// Token: 0x040234DD RID: 144605
+		// Token: 0x0401E6CF RID: 124623
 		private int? CurrentHandle;
 
-		// Token: 0x040234DE RID: 144606
+		// Token: 0x0401E6D0 RID: 124624
 		[Nullable(2)]
 		private readonly string DaPath;
 	}

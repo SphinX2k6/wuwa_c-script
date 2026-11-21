@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045EF RID: 17903
+	// Token: 0x02003518 RID: 13592
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ThreeSectionTimeline
 	{
-		// Token: 0x0602E2C6 RID: 189126 RVA: 0x00AAC6A4 File Offset: 0x00AAA8A4
+		// Token: 0x060229BB RID: 141755 RVA: 0x009D8E40 File Offset: 0x009D7040
 		public void Setup(double start, double loop, double end, bool enableLoop = true, bool ignoreTimeDilation = false)
 		{
 			this.Start = start;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Render
 			this.EndAsZero = false;
 		}
 
-		// Token: 0x0602E2C7 RID: 189127 RVA: 0x00AAC77C File Offset: 0x00AAA97C
+		// Token: 0x060229BC RID: 141756 RVA: 0x009D8F18 File Offset: 0x009D7118
 		public void Update(double delta)
 		{
 			if (this.Dead)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateStateAndFactor();
 		}
 
-		// Token: 0x0602E2C8 RID: 189128 RVA: 0x00AAC85D File Offset: 0x00AAAA5D
+		// Token: 0x060229BD RID: 141757 RVA: 0x009D8FF9 File Offset: 0x009D71F9
 		public void TriggerEnd()
 		{
 			this.Ending = true;
@@ -95,31 +95,31 @@ namespace CSharpScript.Game.Render
 			this.UpdateStateAndFactor();
 		}
 
-		// Token: 0x0602E2C9 RID: 189129 RVA: 0x00AAC88E File Offset: 0x00AAAA8E
+		// Token: 0x060229BE RID: 141758 RVA: 0x009D902A File Offset: 0x009D722A
 		public void SetLoop(bool enableLoop)
 		{
 			this.EnableLoop = enableLoop;
 		}
 
-		// Token: 0x0602E2CA RID: 189130 RVA: 0x00AAC897 File Offset: 0x00AAAA97
+		// Token: 0x060229BF RID: 141759 RVA: 0x009D9033 File Offset: 0x009D7233
 		public EThreeSectionTimelineSection? GetCurrState()
 		{
 			return this.CurrState;
 		}
 
-		// Token: 0x0602E2CB RID: 189131 RVA: 0x00AAC89F File Offset: 0x00AAAA9F
+		// Token: 0x060229C0 RID: 141760 RVA: 0x009D903B File Offset: 0x009D723B
 		public bool IsDead()
 		{
 			return this.Dead;
 		}
 
-		// Token: 0x0602E2CC RID: 189132 RVA: 0x00AAC8A7 File Offset: 0x00AAAAA7
+		// Token: 0x060229C1 RID: 141761 RVA: 0x009D9043 File Offset: 0x009D7243
 		public double GetCurrFactor()
 		{
 			return this.CurrFactor;
 		}
 
-		// Token: 0x0602E2CD RID: 189133 RVA: 0x00AAC8B0 File Offset: 0x00AAAAB0
+		// Token: 0x060229C2 RID: 141762 RVA: 0x009D904C File Offset: 0x009D724C
 		public float GetFloatFromGroup(SMaterialControllerFloatGroup floatGroup)
 		{
 			EThreeSectionTimelineSection? currState = this.CurrState;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Render
 			return UKuroCurveLibrary.GetValue_Float(fkuroCurveFloat, (float)this.GetCurrFactor());
 		}
 
-		// Token: 0x0602E2CE RID: 189134 RVA: 0x00AAC920 File Offset: 0x00AAAB20
+		// Token: 0x060229C3 RID: 141763 RVA: 0x009D90BC File Offset: 0x009D72BC
 		public FLinearColor GetColorFromGroup(SMaterialControllerColorGroup colorGroup)
 		{
 			EThreeSectionTimelineSection? currState = this.CurrState;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Render
 			return UKuroCurveLibrary.GetValue_LinearColor(fkuroCurveLinearColor, (float)this.GetCurrFactor());
 		}
 
-		// Token: 0x0602E2CF RID: 189135 RVA: 0x00AAC990 File Offset: 0x00AAAB90
+		// Token: 0x060229C4 RID: 141764 RVA: 0x009D912C File Offset: 0x009D732C
 		private double GetTimeDelta(double delta)
 		{
 			if (!this.IgnoreTimeDilation && RenderModuleController.Instance.IsGamePaused)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Render
 			return delta;
 		}
 
-		// Token: 0x0602E2D0 RID: 189136 RVA: 0x00AAC9FC File Offset: 0x00AAABFC
+		// Token: 0x060229C5 RID: 141765 RVA: 0x009D9198 File Offset: 0x009D7398
 		private void UpdateStateAndFactor()
 		{
 			if (this.Dead)
@@ -212,43 +212,43 @@ namespace CSharpScript.Game.Render
 			this.CurrFactor = (this.CurrTime - this.Start) / this.Loop;
 		}
 
-		// Token: 0x04018C6A RID: 101482
+		// Token: 0x040132A9 RID: 78505
 		private double Start;
 
-		// Token: 0x04018C6B RID: 101483
+		// Token: 0x040132AA RID: 78506
 		private double Loop;
 
-		// Token: 0x04018C6C RID: 101484
+		// Token: 0x040132AB RID: 78507
 		private double End;
 
-		// Token: 0x04018C6D RID: 101485
+		// Token: 0x040132AC RID: 78508
 		private bool LoopAsZero;
 
-		// Token: 0x04018C6E RID: 101486
+		// Token: 0x040132AD RID: 78509
 		private bool EndAsZero;
 
-		// Token: 0x04018C6F RID: 101487
+		// Token: 0x040132AE RID: 78510
 		private double WholeTime;
 
-		// Token: 0x04018C70 RID: 101488
+		// Token: 0x040132AF RID: 78511
 		private bool EnableLoop;
 
-		// Token: 0x04018C71 RID: 101489
+		// Token: 0x040132B0 RID: 78512
 		private double CurrTime;
 
-		// Token: 0x04018C72 RID: 101490
+		// Token: 0x040132B1 RID: 78513
 		private bool Ending;
 
-		// Token: 0x04018C73 RID: 101491
+		// Token: 0x040132B2 RID: 78514
 		private bool Dead = true;
 
-		// Token: 0x04018C74 RID: 101492
+		// Token: 0x040132B3 RID: 78515
 		private bool IgnoreTimeDilation;
 
-		// Token: 0x04018C75 RID: 101493
+		// Token: 0x040132B4 RID: 78516
 		private EThreeSectionTimelineSection? CurrState;
 
-		// Token: 0x04018C76 RID: 101494
+		// Token: 0x040132B5 RID: 78517
 		private double CurrFactor;
 	}
 }

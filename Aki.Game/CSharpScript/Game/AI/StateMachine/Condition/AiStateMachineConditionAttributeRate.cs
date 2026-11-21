@@ -6,17 +6,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x02007336 RID: 29494
+	// Token: 0x020064B9 RID: 25785
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionAttributeRate : AiStateMachineCondition
 	{
-		// Token: 0x0604860F RID: 296463 RVA: 0x0129E496 File Offset: 0x0129C696
+		// Token: 0x0603EA5C RID: 256604 RVA: 0x01240F1E File Offset: 0x0123F11E
 		public AiStateMachineConditionAttributeRate(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048610 RID: 296464 RVA: 0x0129E4A4 File Offset: 0x0129C6A4
+		// Token: 0x0603EA5D RID: 256605 RVA: 0x01240F2C File Offset: 0x0123F12C
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.Numerator = (EAttributeType)condition.CondAttributeRate.AttributeId;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return true;
 		}
 
-		// Token: 0x06048611 RID: 296465 RVA: 0x0129E5A4 File Offset: 0x0129C7A4
+		// Token: 0x0603EA5E RID: 256606 RVA: 0x0124102C File Offset: 0x0123F22C
 		private void OnAttrRateChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			if (attributeId == this.Numerator)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x06048612 RID: 296466 RVA: 0x0129E639 File Offset: 0x0129C839
+		// Token: 0x0603EA5F RID: 256607 RVA: 0x012410C1 File Offset: 0x0123F2C1
 		protected override void OnClear()
 		{
 			BaseAttributeComponent attributeComponent = this.Node.AttributeComponent;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}, new Action<EAttributeType, float, float>(this.OnAttrRateChanged));
 		}
 
-		// Token: 0x06048613 RID: 296467 RVA: 0x0129E674 File Offset: 0x0129C874
+		// Token: 0x0603EA60 RID: 256608 RVA: 0x012410FC File Offset: 0x0123F2FC
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);
@@ -87,25 +87,25 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			outBuilder.Append(ref appendInterpolatedStringHandler);
 		}
 
-		// Token: 0x04026452 RID: 156754
+		// Token: 0x0402173F RID: 137023
 		private const float ATTRIBUTE_RATE_COE = 0.0001f;
 
-		// Token: 0x04026453 RID: 156755
+		// Token: 0x04021740 RID: 137024
 		private EAttributeType Numerator;
 
-		// Token: 0x04026454 RID: 156756
+		// Token: 0x04021741 RID: 137025
 		private EAttributeType Denominator;
 
-		// Token: 0x04026455 RID: 156757
+		// Token: 0x04021742 RID: 137026
 		private float Min;
 
-		// Token: 0x04026456 RID: 156758
+		// Token: 0x04021743 RID: 137027
 		private float Max;
 
-		// Token: 0x04026457 RID: 156759
+		// Token: 0x04021744 RID: 137028
 		private float NumeratorValue;
 
-		// Token: 0x04026458 RID: 156760
+		// Token: 0x04021745 RID: 137029
 		private float DenominatorValue;
 	}
 }

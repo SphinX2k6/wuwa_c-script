@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004BFA RID: 19450
+	// Token: 0x02003BAB RID: 15275
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BehaviorButtonMapping<T>
 	{
-		// Token: 0x060324C9 RID: 206025 RVA: 0x00BB0290 File Offset: 0x00BAE490
+		// Token: 0x0602726F RID: 160367 RVA: 0x00AF48A4 File Offset: 0x00AF2AA4
 		public void Add(IEnumerable<T> keys, BehaviorButtonData skillButtonData)
 		{
 			foreach (T key in keys)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060324CA RID: 206026 RVA: 0x00BB0308 File Offset: 0x00BAE508
+		// Token: 0x06027270 RID: 160368 RVA: 0x00AF491C File Offset: 0x00AF2B1C
 		public void AddSingle(T key, BehaviorButtonData skillButtonData)
 		{
 			HashSet<BehaviorButtonData> hashSet;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.BehaviorButtonMap[key] = hashSet;
 		}
 
-		// Token: 0x060324CB RID: 206027 RVA: 0x00BB034C File Offset: 0x00BAE54C
+		// Token: 0x06027271 RID: 160369 RVA: 0x00AF4960 File Offset: 0x00AF2B60
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -58,19 +58,19 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return result;
 		}
 
-		// Token: 0x060324CC RID: 206028 RVA: 0x00BB036C File Offset: 0x00BAE56C
+		// Token: 0x06027272 RID: 160370 RVA: 0x00AF4980 File Offset: 0x00AF2B80
 		public IEnumerable<T> GetAllKey()
 		{
 			return this.BehaviorButtonMap.Keys;
 		}
 
-		// Token: 0x060324CD RID: 206029 RVA: 0x00BB0379 File Offset: 0x00BAE579
+		// Token: 0x06027273 RID: 160371 RVA: 0x00AF498D File Offset: 0x00AF2B8D
 		public void Clear()
 		{
 			this.BehaviorButtonMap.Clear();
 		}
 
-		// Token: 0x0401AC16 RID: 109590
+		// Token: 0x04015570 RID: 87408
 		private readonly Dictionary<T, HashSet<BehaviorButtonData>> BehaviorButtonMap = new Dictionary<T, HashSet<BehaviorButtonData>>();
 	}
 }

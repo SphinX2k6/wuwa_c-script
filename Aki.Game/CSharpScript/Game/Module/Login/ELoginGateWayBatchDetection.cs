@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056AB RID: 22187
+	// Token: 0x02004681 RID: 18049
 	public enum ELoginGateWayBatchDetection
 	{
-		// Token: 0x0401DA53 RID: 121427
+		// Token: 0x040184DE RID: 99550
 		None,
-		// Token: 0x0401DA54 RID: 121428
+		// Token: 0x040184DF RID: 99551
 		Success,
-		// Token: 0x0401DA55 RID: 121429
+		// Token: 0x040184E0 RID: 99552
 		Fail,
-		// Token: 0x0401DA56 RID: 121430
+		// Token: 0x040184E1 RID: 99553
 		Timeout
 	}
 }

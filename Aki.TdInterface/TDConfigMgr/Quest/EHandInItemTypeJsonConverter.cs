@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001249 RID: 4681
+	// Token: 0x02001389 RID: 5001
 	public class EHandInItemTypeJsonConverter : JsonConverter<EHandInItemType>
 	{
-		// Token: 0x060069F1 RID: 27121 RVA: 0x000FDC64 File Offset: 0x000FBE64
+		// Token: 0x06007044 RID: 28740 RVA: 0x0010B890 File Offset: 0x00109A90
 		public override EHandInItemType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EHandInItemTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060069F2 RID: 27122 RVA: 0x000FDC88 File Offset: 0x000FBE88
+		// Token: 0x06007045 RID: 28741 RVA: 0x0010B8B4 File Offset: 0x00109AB4
 		public override void Write(Utf8JsonWriter writer, EHandInItemType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

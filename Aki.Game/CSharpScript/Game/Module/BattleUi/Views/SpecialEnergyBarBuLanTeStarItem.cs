@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DCE RID: 24014
+	// Token: 0x02004DB2 RID: 19890
 	public class SpecialEnergyBarBuLanTeStarItem : UiPanelBase
 	{
-		// Token: 0x0603D07C RID: 249980 RVA: 0x00EAD594 File Offset: 0x00EAB794
+		// Token: 0x06031FF3 RID: 204787 RVA: 0x00DFE488 File Offset: 0x00DFC688
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D07D RID: 249981 RVA: 0x00EAD61E File Offset: 0x00EAB81E
+		// Token: 0x06031FF4 RID: 204788 RVA: 0x00DFE512 File Offset: 0x00DFC712
 		public void SetIsEmpty(bool isEmpty)
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			texture2.SetUIActive(!isEmpty);
 		}
 
-		// Token: 0x0603D07E RID: 249982 RVA: 0x00EAD648 File Offset: 0x00EAB848
+		// Token: 0x06031FF5 RID: 204789 RVA: 0x00DFE53C File Offset: 0x00DFC73C
 		public void SetStarEnable(bool isEnable)
 		{
 			UUITexture texture = base.GetTexture(2);
@@ -52,14 +52,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			texture.SetUIActive(isEnable);
 		}
 
-		// Token: 0x0200C0E1 RID: 49377
+		// Token: 0x0200AAEA RID: 43754
 		private enum EChildType
 		{
-			// Token: 0x0403A33B RID: 238395
+			// Token: 0x04034D0D RID: 216333
 			StarBgTexture1,
-			// Token: 0x0403A33C RID: 238396
+			// Token: 0x04034D0E RID: 216334
 			StarBgTexture2,
-			// Token: 0x0403A33D RID: 238397
+			// Token: 0x04034D0F RID: 216335
 			StarTexture
 		}
 	}

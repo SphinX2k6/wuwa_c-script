@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020024F3 RID: 9459
+// Token: 0x020019DA RID: 6618
 [NullableContext(2)]
 public interface IVisionSkinViewOpenParam
 {
-	// Token: 0x170018C2 RID: 6338
-	// (get) Token: 0x06013060 RID: 77920
-	// (set) Token: 0x06013061 RID: 77921
+	// Token: 0x170018FC RID: 6396
+	// (get) Token: 0x0601051F RID: 66847
+	// (set) Token: 0x06010520 RID: 66848
 	int? UniqueId { get; set; }
 
-	// Token: 0x170018C3 RID: 6339
-	// (get) Token: 0x06013062 RID: 77922
-	// (set) Token: 0x06013063 RID: 77923
+	// Token: 0x170018FD RID: 6397
+	// (get) Token: 0x06010521 RID: 66849
+	// (set) Token: 0x06010522 RID: 66850
 	int[] ShowItemIdList { get; set; }
 }

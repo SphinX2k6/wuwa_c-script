@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks.CompilerServices;
 [Nullable(0)]
 public class ExecutionQueue
 {
-	// Token: 0x060000DD RID: 221 RVA: 0x000072F8 File Offset: 0x000054F8
+	// Token: 0x060000DF RID: 223 RVA: 0x00007070 File Offset: 0x00005270
 	public int Enqueue(Func<int, UniTask> task)
 	{
 		ExecutionQueue.<>c__DisplayClass5_0 CS$<>8__locals1 = new ExecutionQueue.<>c__DisplayClass5_0();
@@ -36,13 +36,13 @@ public class ExecutionQueue
 		return CS$<>8__locals1.handle;
 	}
 
-	// Token: 0x060000DE RID: 222 RVA: 0x00007372 File Offset: 0x00005572
+	// Token: 0x060000E0 RID: 224 RVA: 0x000070EA File Offset: 0x000052EA
 	public bool Cancel(int handle)
 	{
 		return this.Pending.Remove(handle);
 	}
 
-	// Token: 0x060000DF RID: 223 RVA: 0x00007380 File Offset: 0x00005580
+	// Token: 0x060000E1 RID: 225 RVA: 0x000070F8 File Offset: 0x000052F8
 	private UniTask Execute()
 	{
 		ExecutionQueue.<Execute>d__7 <Execute>d__;
@@ -53,18 +53,18 @@ public class ExecutionQueue
 		return <Execute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040000BA RID: 186
+	// Token: 0x040000BB RID: 187
 	private const bool EXECUTION_QUEUE_ENABLE = true;
 
-	// Token: 0x040000BB RID: 187
+	// Token: 0x040000BC RID: 188
 	private int Handle;
 
-	// Token: 0x040000BC RID: 188
+	// Token: 0x040000BD RID: 189
 	private bool Executing;
 
-	// Token: 0x040000BD RID: 189
+	// Token: 0x040000BE RID: 190
 	private HashSet<int> Pending = new HashSet<int>();
 
-	// Token: 0x040000BE RID: 190
+	// Token: 0x040000BF RID: 191
 	private List<Func<UniTask>> TaskQueue = new List<Func<UniTask>>();
 }

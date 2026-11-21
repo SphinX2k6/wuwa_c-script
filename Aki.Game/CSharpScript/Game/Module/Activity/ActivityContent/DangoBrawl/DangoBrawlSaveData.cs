@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067D3 RID: 26579
+	// Token: 0x02005723 RID: 22307
 	public class DangoBrawlSaveData
 	{
-		// Token: 0x06042338 RID: 271160 RVA: 0x0100DAD0 File Offset: 0x0100BCD0
+		// Token: 0x06036E8E RID: 224910 RVA: 0x00F4EFA0 File Offset: 0x00F4D1A0
 		public DangoBrawlSaveData(int levelId, int roundNum, int roleId)
 		{
 			this.LevelId = levelId;
@@ -13,13 +13,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RoleId = roleId;
 		}
 
-		// Token: 0x040228E1 RID: 141537
+		// Token: 0x0401D13E RID: 119102
 		public int LevelId;
 
-		// Token: 0x040228E2 RID: 141538
+		// Token: 0x0401D13F RID: 119103
 		public int RoundNum;
 
-		// Token: 0x040228E3 RID: 141539
+		// Token: 0x0401D140 RID: 119104
 		public int RoleId;
 	}
 }

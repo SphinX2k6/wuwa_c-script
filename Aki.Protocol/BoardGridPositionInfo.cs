@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020001B8 RID: 440
+	// Token: 0x020001BC RID: 444
 	public sealed class BoardGridPositionInfo : IMessage<BoardGridPositionInfo>, IMessage, IEquatable<BoardGridPositionInfo>, IDeepCloneable<BoardGridPositionInfo>, IBufferMessage
 	{
-		// Token: 0x060032FB RID: 13051 RVA: 0x0008133C File Offset: 0x0007F53C
+		// Token: 0x06003388 RID: 13192 RVA: 0x00082AAC File Offset: 0x00080CAC
 		[NullableContext(1)]
 		public static BoardGridPositionInfo Create()
 		{
 			return new BoardGridPositionInfo();
 		}
 
-		// Token: 0x17000804 RID: 2052
-		// (get) Token: 0x060032FC RID: 13052 RVA: 0x00081343 File Offset: 0x0007F543
+		// Token: 0x1700081D RID: 2077
+		// (get) Token: 0x06003389 RID: 13193 RVA: 0x00082AB3 File Offset: 0x00080CB3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000805 RID: 2053
-		// (get) Token: 0x060032FD RID: 13053 RVA: 0x00081346 File Offset: 0x0007F546
+		// Token: 0x1700081E RID: 2078
+		// (get) Token: 0x0600338A RID: 13194 RVA: 0x00082AB6 File Offset: 0x00080CB6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060032FE RID: 13054 RVA: 0x0008134D File Offset: 0x0007F54D
+		// Token: 0x0600338B RID: 13195 RVA: 0x00082ABD File Offset: 0x00080CBD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoardGridPositionInfo()
 		{
 		}
 
-		// Token: 0x060032FF RID: 13055 RVA: 0x00081355 File Offset: 0x0007F555
+		// Token: 0x0600338C RID: 13196 RVA: 0x00082AC5 File Offset: 0x00080CC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoardGridPositionInfo(BoardGridPositionInfo other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06003300 RID: 13056 RVA: 0x00081392 File Offset: 0x0007F592
+		// Token: 0x0600338D RID: 13197 RVA: 0x00082B02 File Offset: 0x00080D02
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoardGridPositionInfo Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new BoardGridPositionInfo(this);
 		}
 
-		// Token: 0x17000806 RID: 2054
-		// (get) Token: 0x06003301 RID: 13057 RVA: 0x0008139A File Offset: 0x0007F59A
-		// (set) Token: 0x06003302 RID: 13058 RVA: 0x000813A2 File Offset: 0x0007F5A2
+		// Token: 0x1700081F RID: 2079
+		// (get) Token: 0x0600338E RID: 13198 RVA: 0x00082B0A File Offset: 0x00080D0A
+		// (set) Token: 0x0600338F RID: 13199 RVA: 0x00082B12 File Offset: 0x00080D12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Row
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000807 RID: 2055
-		// (get) Token: 0x06003303 RID: 13059 RVA: 0x000813AB File Offset: 0x0007F5AB
-		// (set) Token: 0x06003304 RID: 13060 RVA: 0x000813B3 File Offset: 0x0007F5B3
+		// Token: 0x17000820 RID: 2080
+		// (get) Token: 0x06003390 RID: 13200 RVA: 0x00082B1B File Offset: 0x00080D1B
+		// (set) Token: 0x06003391 RID: 13201 RVA: 0x00082B23 File Offset: 0x00080D23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Column
@@ -101,9 +101,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000808 RID: 2056
-		// (get) Token: 0x06003305 RID: 13061 RVA: 0x000813BC File Offset: 0x0007F5BC
-		// (set) Token: 0x06003306 RID: 13062 RVA: 0x000813C4 File Offset: 0x0007F5C4
+		// Token: 0x17000821 RID: 2081
+		// (get) Token: 0x06003392 RID: 13202 RVA: 0x00082B2C File Offset: 0x00080D2C
+		// (set) Token: 0x06003393 RID: 13203 RVA: 0x00082B34 File Offset: 0x00080D34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RotAngle
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003307 RID: 13063 RVA: 0x000813CD File Offset: 0x0007F5CD
+		// Token: 0x06003394 RID: 13204 RVA: 0x00082B3D File Offset: 0x00080D3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BoardGridPositionInfo);
 		}
 
-		// Token: 0x06003308 RID: 13064 RVA: 0x000813DC File Offset: 0x0007F5DC
+		// Token: 0x06003395 RID: 13205 RVA: 0x00082B4C File Offset: 0x00080D4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BoardGridPositionInfo other)
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Row == other.Row && this.Column == other.Column && this.RotAngle == other.RotAngle && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06003309 RID: 13065 RVA: 0x00081438 File Offset: 0x0007F638
+		// Token: 0x06003396 RID: 13206 RVA: 0x00082BA8 File Offset: 0x00080DA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -159,7 +159,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600330A RID: 13066 RVA: 0x000814A9 File Offset: 0x0007F6A9
+		// Token: 0x06003397 RID: 13207 RVA: 0x00082C19 File Offset: 0x00080E19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600330B RID: 13067 RVA: 0x000814B6 File Offset: 0x0007F6B6
+		// Token: 0x06003398 RID: 13208 RVA: 0x00082C26 File Offset: 0x00080E26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600330C RID: 13068 RVA: 0x000814C0 File Offset: 0x0007F6C0
+		// Token: 0x06003399 RID: 13209 RVA: 0x00082C30 File Offset: 0x00080E30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600330D RID: 13069 RVA: 0x00081534 File Offset: 0x0007F734
+		// Token: 0x0600339A RID: 13210 RVA: 0x00082CA4 File Offset: 0x00080EA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -226,7 +226,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600330E RID: 13070 RVA: 0x000815A4 File Offset: 0x0007F7A4
+		// Token: 0x0600339B RID: 13211 RVA: 0x00082D14 File Offset: 0x00080F14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BoardGridPositionInfo other)
@@ -250,7 +250,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600330F RID: 13071 RVA: 0x00081608 File Offset: 0x0007F808
+		// Token: 0x0600339C RID: 13212 RVA: 0x00082D78 File Offset: 0x00080F78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06003310 RID: 13072 RVA: 0x00081614 File Offset: 0x0007F814
+		// Token: 0x0600339D RID: 13213 RVA: 0x00082D84 File Offset: 0x00080F84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -295,25 +295,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400299C RID: 10652
+		// Token: 0x04002A17 RID: 10775
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400299D RID: 10653
+		// Token: 0x04002A18 RID: 10776
 		public const int RowFieldNumber = 1;
 
-		// Token: 0x0400299E RID: 10654
+		// Token: 0x04002A19 RID: 10777
 		private int row_;
 
-		// Token: 0x0400299F RID: 10655
+		// Token: 0x04002A1A RID: 10778
 		public const int ColumnFieldNumber = 2;
 
-		// Token: 0x040029A0 RID: 10656
+		// Token: 0x04002A1B RID: 10779
 		private int column_;
 
-		// Token: 0x040029A1 RID: 10657
+		// Token: 0x04002A1C RID: 10780
 		public const int RotAngleFieldNumber = 3;
 
-		// Token: 0x040029A2 RID: 10658
+		// Token: 0x04002A1D RID: 10781
 		private int rotAngle_;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EC9 RID: 16073
+	// Token: 0x02004307 RID: 17159
 	public struct IKillMonster : IFlatbufferObject
 	{
-		// Token: 0x17006F98 RID: 28568
-		// (get) Token: 0x06016BA7 RID: 93095 RVA: 0x00348267 File Offset: 0x00346467
+		// Token: 0x17007587 RID: 30087
+		// (get) Token: 0x060181FE RID: 98814 RVA: 0x00371434 File Offset: 0x0036F634
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016BA8 RID: 93096 RVA: 0x00348274 File Offset: 0x00346474
+		// Token: 0x060181FF RID: 98815 RVA: 0x00371441 File Offset: 0x0036F641
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016BA9 RID: 93097 RVA: 0x0034827C File Offset: 0x0034647C
+		// Token: 0x06018200 RID: 98816 RVA: 0x00371448 File Offset: 0x0036F648
 		public static IKillMonster GetRootAsIKillMonster(ByteBuffer _bb)
 		{
 			return IKillMonster.GetRootAsIKillMonster(_bb, default(IKillMonster));
 		}
 
-		// Token: 0x06016BAA RID: 93098 RVA: 0x00348298 File Offset: 0x00346498
+		// Token: 0x06018201 RID: 98817 RVA: 0x00371464 File Offset: 0x0036F664
 		public static IKillMonster GetRootAsIKillMonster(ByteBuffer _bb, IKillMonster obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016BAB RID: 93099 RVA: 0x003482B5 File Offset: 0x003464B5
+		// Token: 0x06018202 RID: 98818 RVA: 0x00371481 File Offset: 0x0036F681
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016BAC RID: 93100 RVA: 0x003482C4 File Offset: 0x003464C4
+		// Token: 0x06018203 RID: 98819 RVA: 0x00371490 File Offset: 0x0036F690
 		public IKillMonster __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006F99 RID: 28569
-		// (get) Token: 0x06016BAD RID: 93101 RVA: 0x003482D4 File Offset: 0x003464D4
+		// Token: 0x17007588 RID: 30088
+		// (get) Token: 0x06018204 RID: 98820 RVA: 0x003714A0 File Offset: 0x0036F6A0
 		public int NormalAddTime
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016BAE RID: 93102 RVA: 0x00348310 File Offset: 0x00346510
+		// Token: 0x06018205 RID: 98821 RVA: 0x003714DC File Offset: 0x0036F6DC
 		public IKillSingleMonster? SpecialTime(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new IKillSingleMonster?(default(IKillSingleMonster).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17006F9A RID: 28570
-		// (get) Token: 0x06016BAF RID: 93103 RVA: 0x00348370 File Offset: 0x00346570
+		// Token: 0x17007589 RID: 30089
+		// (get) Token: 0x06018206 RID: 98822 RVA: 0x0037153C File Offset: 0x0036F73C
 		public int SpecialTimeLength
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F9B RID: 28571
-		// (get) Token: 0x06016BB0 RID: 93104 RVA: 0x0034839C File Offset: 0x0034659C
+		// Token: 0x1700758A RID: 30090
+		// (get) Token: 0x06018207 RID: 98823 RVA: 0x00371568 File Offset: 0x0036F768
 		public byte NullMask
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016BB1 RID: 93105 RVA: 0x003483D8 File Offset: 0x003465D8
+		// Token: 0x06018208 RID: 98824 RVA: 0x003715A4 File Offset: 0x0036F7A4
 		public static Offset<IKillMonster> CreateIKillMonster(FlatBufferBuilder builder, int NormalAddTime = 0, VectorOffset SpecialTimeOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -114,25 +114,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKillMonster.EndIKillMonster(builder);
 		}
 
-		// Token: 0x06016BB2 RID: 93106 RVA: 0x003483FC File Offset: 0x003465FC
+		// Token: 0x06018209 RID: 98825 RVA: 0x003715C8 File Offset: 0x0036F7C8
 		public static void StartIKillMonster(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06016BB3 RID: 93107 RVA: 0x00348405 File Offset: 0x00346605
+		// Token: 0x0601820A RID: 98826 RVA: 0x003715D1 File Offset: 0x0036F7D1
 		public static void AddNormalAddTime(FlatBufferBuilder builder, int normalAddTime)
 		{
 			builder.AddInt(0, normalAddTime, 0);
 		}
 
-		// Token: 0x06016BB4 RID: 93108 RVA: 0x00348410 File Offset: 0x00346610
+		// Token: 0x0601820B RID: 98827 RVA: 0x003715DC File Offset: 0x0036F7DC
 		public static void AddSpecialTime(FlatBufferBuilder builder, VectorOffset specialTimeOffset)
 		{
 			builder.AddOffset(1, specialTimeOffset.Value, 0);
 		}
 
-		// Token: 0x06016BB5 RID: 93109 RVA: 0x00348420 File Offset: 0x00346620
+		// Token: 0x0601820C RID: 98828 RVA: 0x003715EC File Offset: 0x0036F7EC
 		public static VectorOffset CreateSpecialTimeVector(FlatBufferBuilder builder, Offset<IKillSingleMonster>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016BB6 RID: 93110 RVA: 0x00348460 File Offset: 0x00346660
+		// Token: 0x0601820D RID: 98829 RVA: 0x0037162C File Offset: 0x0036F82C
 		public static VectorOffset CreateSpecialTimeVectorBlock(FlatBufferBuilder builder, Offset<IKillSingleMonster>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -151,7 +151,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016BB7 RID: 93111 RVA: 0x0034847A File Offset: 0x0034667A
+		// Token: 0x0601820E RID: 98830 RVA: 0x00371646 File Offset: 0x0036F846
 		public static VectorOffset CreateSpecialTimeVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IKillSingleMonster>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016BB8 RID: 93112 RVA: 0x00348498 File Offset: 0x00346698
+		// Token: 0x0601820F RID: 98831 RVA: 0x00371664 File Offset: 0x0036F864
 		public static VectorOffset CreateSpecialTimeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -167,25 +167,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016BB9 RID: 93113 RVA: 0x003484B1 File Offset: 0x003466B1
+		// Token: 0x06018210 RID: 98832 RVA: 0x0037167D File Offset: 0x0036F87D
 		public static void StartSpecialTimeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06016BBA RID: 93114 RVA: 0x003484BC File Offset: 0x003466BC
+		// Token: 0x06018211 RID: 98833 RVA: 0x00371688 File Offset: 0x0036F888
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06016BBB RID: 93115 RVA: 0x003484C7 File Offset: 0x003466C7
+		// Token: 0x06018212 RID: 98834 RVA: 0x00371693 File Offset: 0x0036F893
 		public static Offset<IKillMonster> EndIKillMonster(FlatBufferBuilder builder)
 		{
 			return new Offset<IKillMonster>(builder.EndTable());
 		}
 
-		// Token: 0x06016BBC RID: 93116 RVA: 0x003484D4 File Offset: 0x003466D4
+		// Token: 0x06018213 RID: 98835 RVA: 0x003716A0 File Offset: 0x0036F8A0
 		public IKillMonsterT UnPack()
 		{
 			IKillMonsterT killMonsterT = new IKillMonsterT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return killMonsterT;
 		}
 
-		// Token: 0x06016BBD RID: 93117 RVA: 0x003484F0 File Offset: 0x003466F0
+		// Token: 0x06018214 RID: 98836 RVA: 0x003716BC File Offset: 0x0036F8BC
 		public void UnPackTo(IKillMonsterT _o)
 		{
 			_o.NormalAddTime = this.NormalAddTime;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06016BBE RID: 93118 RVA: 0x00348568 File Offset: 0x00346768
+		// Token: 0x06018215 RID: 98837 RVA: 0x00371734 File Offset: 0x0036F934
 		public static Offset<IKillMonster> Pack(FlatBufferBuilder builder, IKillMonsterT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKillMonster.CreateIKillMonster(builder, _o.NormalAddTime, specialTimeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400B8A5 RID: 47269
+		// Token: 0x0400C282 RID: 49794
 		private Table __p;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005597 RID: 21911
+	// Token: 0x02005B35 RID: 23349
 	public class IMonsterPerformConfigT
 	{
-		// Token: 0x1700A1DD RID: 41437
-		// (get) Token: 0x06024461 RID: 148577 RVA: 0x00502201 File Offset: 0x00500401
-		// (set) Token: 0x06024462 RID: 148578 RVA: 0x00502209 File Offset: 0x00500409
+		// Token: 0x1700AA65 RID: 43621
+		// (get) Token: 0x0602666E RID: 157294 RVA: 0x00542779 File Offset: 0x00540979
+		// (set) Token: 0x0602666F RID: 157295 RVA: 0x00542781 File Offset: 0x00540981
 		public IMonsterShowOnDeathEffectT ShowOnDeath { get; set; }
 
-		// Token: 0x06024463 RID: 148579 RVA: 0x00502212 File Offset: 0x00500412
+		// Token: 0x06026670 RID: 157296 RVA: 0x0054278A File Offset: 0x0054098A
 		public IMonsterPerformConfigT()
 		{
 			this.ShowOnDeath = null;

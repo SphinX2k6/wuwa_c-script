@@ -5,10 +5,9 @@ using Aki.Config;
 using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Skin.Role.Item;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
@@ -17,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Role.View
 {
-	// Token: 0x02004BF4 RID: 19444
+	// Token: 0x02003BA5 RID: 15269
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleSkinTabView : UiTabViewBase
 	{
-		// Token: 0x0603246D RID: 205933 RVA: 0x00BAE0C4 File Offset: 0x00BAC2C4
+		// Token: 0x06027211 RID: 160273 RVA: 0x00AF2644 File Offset: 0x00AF0844
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -62,18 +61,18 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			};
 		}
 
-		// Token: 0x0603246E RID: 205934 RVA: 0x00BAE388 File Offset: 0x00BAC588
+		// Token: 0x06027212 RID: 160274 RVA: 0x00AF2908 File Offset: 0x00AF0B08
 		protected override UniTask OnBeforeStartAsync()
 		{
-			RoleSkinTabView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
+			RoleSkinTabView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
 			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeStartAsync>d__.<>4__this = this;
 			<OnBeforeStartAsync>d__.<>1__state = -1;
-			<OnBeforeStartAsync>d__.<>t__builder.Start<RoleSkinTabView.<OnBeforeStartAsync>d__12>(ref <OnBeforeStartAsync>d__);
+			<OnBeforeStartAsync>d__.<>t__builder.Start<RoleSkinTabView.<OnBeforeStartAsync>d__11>(ref <OnBeforeStartAsync>d__);
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603246F RID: 205935 RVA: 0x00BAE3CB File Offset: 0x00BAC5CB
+		// Token: 0x06027213 RID: 160275 RVA: 0x00AF294B File Offset: 0x00AF0B4B
 		private void OnRootViewModelUpdate(ESkinRootViewData data)
 		{
 			if (data == ESkinRootViewData.CurSelectTabViewName && base.IsShowOrShowing)
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			}
 		}
 
-		// Token: 0x06032470 RID: 205936 RVA: 0x00BAE3E0 File Offset: 0x00BAC5E0
+		// Token: 0x06027214 RID: 160276 RVA: 0x00AF2960 File Offset: 0x00AF0B60
 		private void OnViewModelUpdate(ERoleSkinTabViewData data)
 		{
 			if (data == ERoleSkinTabViewData.SelectRoleSkinId)
@@ -99,17 +98,17 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			}
 		}
 
-		// Token: 0x06032471 RID: 205937 RVA: 0x00BAE430 File Offset: 0x00BAC630
+		// Token: 0x06027215 RID: 160277 RVA: 0x00AF29B0 File Offset: 0x00AF0BB0
 		private UniTask LoadCurveResource()
 		{
-			RoleSkinTabView.<LoadCurveResource>d__15 <LoadCurveResource>d__;
+			RoleSkinTabView.<LoadCurveResource>d__14 <LoadCurveResource>d__;
 			<LoadCurveResource>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<LoadCurveResource>d__.<>1__state = -1;
-			<LoadCurveResource>d__.<>t__builder.Start<RoleSkinTabView.<LoadCurveResource>d__15>(ref <LoadCurveResource>d__);
+			<LoadCurveResource>d__.<>t__builder.Start<RoleSkinTabView.<LoadCurveResource>d__14>(ref <LoadCurveResource>d__);
 			return <LoadCurveResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032472 RID: 205938 RVA: 0x00BAE46B File Offset: 0x00BAC66B
+		// Token: 0x06027216 RID: 160278 RVA: 0x00AF29EB File Offset: 0x00AF0BEB
 		private RoleSkinItem InitSkinItem(AActor actor, int _1, int _2)
 		{
 			RoleSkinItem roleSkinItem = new RoleSkinItem();
@@ -118,22 +117,30 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			return roleSkinItem;
 		}
 
-		// Token: 0x06032473 RID: 205939 RVA: 0x00BAE48C File Offset: 0x00BAC68C
+		// Token: 0x06027217 RID: 160279 RVA: 0x00AF2A0C File Offset: 0x00AF0C0C
 		private void InitSkinLayout()
 		{
 			this.RoleSkinList = RoleSkinModel.Instance.GetRoleSkinDataList(this.RootViewModel.RoleId);
 			this.SkinLayout.ReloadView(this.RoleSkinList.Count, this.RoleSkinList.ToArray(), 0);
 		}
 
-		// Token: 0x06032474 RID: 205940 RVA: 0x00BAE4CC File Offset: 0x00BAC6CC
+		// Token: 0x06027218 RID: 160280 RVA: 0x00AF2A4C File Offset: 0x00AF0C4C
 		private void SwitchSelectRoleSkin(RoleSkinData roleSkinData)
 		{
 			bool isWearWeaponSkin = roleSkinData.IsWearWeaponSkin();
 			this.ViewModel.SetIsWearWeaponSkin(isWearWeaponSkin, false);
 			this.ViewModel.SetSelectRoleSkinId(roleSkinData.GetItemId(), false);
+			bool uiactive = base.GetExtendToggle(2).GetToggleState() == EToggleState.ETT_Checked && this.CanShowSkinDetailButton(roleSkinData);
+			base.GetButton(3).RootUIComp.Get().SetUIActive(uiactive);
 		}
 
-		// Token: 0x06032475 RID: 205941 RVA: 0x00BAE500 File Offset: 0x00BAC700
+		// Token: 0x06027219 RID: 160281 RVA: 0x00AF2AB3 File Offset: 0x00AF0CB3
+		private bool CanShowSkinDetailButton(RoleSkinData roleSkinData)
+		{
+			return SkinPreviewUtil.TryGetSpinePreviewResources(roleSkinData.GetRoleSkinConfig(), false).Item1;
+		}
+
+		// Token: 0x0602721A RID: 160282 RVA: 0x00AF2AC8 File Offset: 0x00AF0CC8
 		private void RefreshUi(RoleSkinData roleSkinData)
 		{
 			bool isWearWeaponSkin = this.ViewModel.GetIsWearWeaponSkin();
@@ -146,8 +153,6 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			this.RefreshObtainLayout(roleSkinConfig.Id);
 			base.GetButton(4).RootUIComp.Get().SetUIActive(this.CurSelectSkinIndex > 0);
 			base.GetButton(5).RootUIComp.Get().SetUIActive(this.CurSelectSkinIndex < this.RoleSkinList.Count - 1);
-			this.CurrentSelectSkinIsOrigin = roleSkinData.IsOriginalSkin();
-			base.GetButton(3).RootUIComp.Get().SetUIActive(!this.CurrentSelectSkinIsOrigin);
 			base.GetItem(9).SetUIActive(roleSkinConfig.SuitWeaponSkinId > 0);
 			bool flag = RoleSkinModel.Instance.CheckSuitWeaponFirstWear(roleSkinConfig.SuitWeaponSkinId);
 			if (flag && isWearWeaponSkin)
@@ -171,20 +176,20 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			this.RefreshRoleSkinRedDot(roleSkinData);
 		}
 
-		// Token: 0x06032476 RID: 205942 RVA: 0x00BAE6DC File Offset: 0x00BAC8DC
+		// Token: 0x0602721B RID: 160283 RVA: 0x00AF2C78 File Offset: 0x00AF0E78
 		private void RefreshWearWeaponButton(RoleSkinData roleSkinData, bool isWearWeaponSkin)
 		{
 			EToggleState state = isWearWeaponSkin ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(10).SetToggleStateForce(state, false, false, false);
-			UiCameraHandleData lastHandleData = UiCameraAnimationManager.Instance.GetLastHandleData();
+			UiCameraHandleData lastHandleData = UiCameraModel.Instance.GetLastHandleData();
 			if (lastHandleData != null)
 			{
-				UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(lastHandleData.HandleName, true, true, "1001", false, null, null);
+				UiCameraModel.Instance.PushCameraHandleByHandleName(lastHandleData.GetHandleName(), true, true, "1001", false, null);
 			}
 			this.ActiveRoleTabCameraInput();
 		}
 
-		// Token: 0x06032477 RID: 205943 RVA: 0x00BAE73C File Offset: 0x00BAC93C
+		// Token: 0x0602721C RID: 160284 RVA: 0x00AF2CCC File Offset: 0x00AF0ECC
 		private void RefreshWearButton(RoleSkinData roleSkinData, bool isWearWeaponSkin)
 		{
 			UUIButtonComponent button = base.GetButton(14);
@@ -192,7 +197,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			button.SetSelfInteractive(this.CanWearSkin(roleSkinData, isWearWeaponSkin));
 		}
 
-		// Token: 0x06032478 RID: 205944 RVA: 0x00BAE77C File Offset: 0x00BAC97C
+		// Token: 0x0602721D RID: 160285 RVA: 0x00AF2D0C File Offset: 0x00AF0F0C
 		private void RefreshRoleSkinRedDot(RoleSkinData skinData)
 		{
 			if (skinData.IsLocked())
@@ -205,7 +210,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			EventSystem.Instance.Emit(EEventName.MainViewRoleButtonRefreshByRoleSkin);
 		}
 
-		// Token: 0x06032479 RID: 205945 RVA: 0x00BAE7D8 File Offset: 0x00BAC9D8
+		// Token: 0x0602721E RID: 160286 RVA: 0x00AF2D68 File Offset: 0x00AF0F68
 		public bool CanWearSkin(RoleSkinData roleSkinData, bool isWearWeaponSkin)
 		{
 			if (roleSkinData.IsLocked())
@@ -225,7 +230,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			return (!flag || !isWearWeaponSkin) && (flag || isWearWeaponSkin);
 		}
 
-		// Token: 0x0603247A RID: 205946 RVA: 0x00BAE830 File Offset: 0x00BACA30
+		// Token: 0x0602721F RID: 160287 RVA: 0x00AF2DC0 File Offset: 0x00AF0FC0
 		private void RefreshWeaponSkin(RoleSkinData roleSkinData)
 		{
 			if (roleSkinData.GetRoleSkinConfig().SuitWeaponSkinId <= 0)
@@ -252,7 +257,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			uiRoleWeaponComponent.ReplaceWeaponModel(weaponSkinConfig.Models(), null);
 		}
 
-		// Token: 0x0603247B RID: 205947 RVA: 0x00BAE8A0 File Offset: 0x00BACAA0
+		// Token: 0x06027220 RID: 160288 RVA: 0x00AF2E30 File Offset: 0x00AF1030
 		private void RefreshRoleWeaponSkin()
 		{
 			int skinIdByRoleId = WeaponSkinModel.Instance.GetSkinIdByRoleId(this.RootViewModel.RoleId);
@@ -296,7 +301,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			}
 		}
 
-		// Token: 0x0603247C RID: 205948 RVA: 0x00BAE94E File Offset: 0x00BACB4E
+		// Token: 0x06027221 RID: 160289 RVA: 0x00AF2EDE File Offset: 0x00AF10DE
 		private void RefreshRoleMontage(bool showWeapon)
 		{
 			if (showWeapon)
@@ -307,7 +312,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Attribute_Perform, false, false, false);
 		}
 
-		// Token: 0x0603247D RID: 205949 RVA: 0x00BAE970 File Offset: 0x00BACB70
+		// Token: 0x06027222 RID: 160290 RVA: 0x00AF2F00 File Offset: 0x00AF1100
 		protected override void OnBeforeShow()
 		{
 			SkinTabViewParam tabViewParam = this.RootViewModel.GetTabViewParam();
@@ -325,48 +330,48 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			EventSystem.Instance.Emit<bool>(EEventName.OnRoleSkinSubViewShow, this.CurSelectSkinIndex == 0 && this.RoleSkinList.Count > 1);
 		}
 
-		// Token: 0x0603247E RID: 205950 RVA: 0x00BAEA38 File Offset: 0x00BACC38
+		// Token: 0x06027223 RID: 160291 RVA: 0x00AF2FC8 File Offset: 0x00AF11C8
 		private void RefreshObtainLayout(int itemId)
 		{
 			List<IGetWayItemData> getWayDataList = InventoryModel.Instance.GetGetWayDataList(itemId);
 			this.ObtainLayout.RefreshByData(getWayDataList, null, false);
 		}
 
-		// Token: 0x0603247F RID: 205951 RVA: 0x00BAEA5F File Offset: 0x00BACC5F
+		// Token: 0x06027224 RID: 160292 RVA: 0x00AF2FEF File Offset: 0x00AF11EF
 		private RoleSkinObtainItem InitObtainItem()
 		{
 			return new RoleSkinObtainItem();
 		}
 
-		// Token: 0x06032480 RID: 205952 RVA: 0x00BAEA66 File Offset: 0x00BACC66
+		// Token: 0x06027225 RID: 160293 RVA: 0x00AF2FF6 File Offset: 0x00AF11F6
 		protected override void OnBeforeHide()
 		{
 			this.RevertWeaponSkin();
-			this.RootViewModel.EndCameraInput();
+			this.RootViewModel.UnbindCameraInput();
 		}
 
-		// Token: 0x06032481 RID: 205953 RVA: 0x00BAEA79 File Offset: 0x00BACC79
+		// Token: 0x06027226 RID: 160294 RVA: 0x00AF3009 File Offset: 0x00AF1209
 		protected override void OnBeforeDestroy()
 		{
 			this.RootViewModel.UnBind(new Action<ESkinRootViewData>(this.OnRootViewModelUpdate));
 			this.ViewModel.UnBind(new Action<ERoleSkinTabViewData>(this.OnViewModelUpdate));
 		}
 
-		// Token: 0x06032482 RID: 205954 RVA: 0x00BAEAA9 File Offset: 0x00BACCA9
+		// Token: 0x06027227 RID: 160295 RVA: 0x00AF3039 File Offset: 0x00AF1239
 		private void OnSkinRootViewDestroy()
 		{
 			this.RevertWeaponSkin();
 			this.RevertRoleSkin();
-			this.RootViewModel.EndCameraInput();
+			this.RootViewModel.UnbindCameraInput();
 		}
 
-		// Token: 0x06032483 RID: 205955 RVA: 0x00BAEAC2 File Offset: 0x00BACCC2
+		// Token: 0x06027228 RID: 160296 RVA: 0x00AF3052 File Offset: 0x00AF1252
 		private void RevertWeaponSkin()
 		{
 			this.RefreshRoleWeaponSkin();
 		}
 
-		// Token: 0x06032484 RID: 205956 RVA: 0x00BAEACC File Offset: 0x00BACCCC
+		// Token: 0x06027229 RID: 160297 RVA: 0x00AF305C File Offset: 0x00AF125C
 		private void RevertRoleSkin()
 		{
 			RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RootViewModel.RoleId);
@@ -377,19 +382,31 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			RoleController.Instance.RefreshUiSceneRoleActor(this.RootViewModel.TsUiSceneRoleActor, this.RootViewModel.RoleId, roleInstanceById.GetRoleSkinId(), null);
 		}
 
-		// Token: 0x06032485 RID: 205957 RVA: 0x00BAEB27 File Offset: 0x00BACD27
+		// Token: 0x0602722A RID: 160298 RVA: 0x00AF30B7 File Offset: 0x00AF12B7
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnSkinRootViewDestroy, new Action(this.OnSkinRootViewDestroy));
+			EventSystem.Instance.Add<UiCameraHandleData>(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 		}
 
-		// Token: 0x06032486 RID: 205958 RVA: 0x00BAEB45 File Offset: 0x00BACD45
+		// Token: 0x0602722B RID: 160299 RVA: 0x00AF30F1 File Offset: 0x00AF12F1
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSkinRootViewDestroy, new Action(this.OnSkinRootViewDestroy));
+			EventSystem.Instance.Remove(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 		}
 
-		// Token: 0x06032487 RID: 205959 RVA: 0x00BAEB63 File Offset: 0x00BACD63
+		// Token: 0x0602722C RID: 160300 RVA: 0x00AF312B File Offset: 0x00AF132B
+		private void OnActivateUiCameraAnimationHandle(UiCameraHandleData handleData)
+		{
+			if (!base.IsShowOrShowing || handleData.GetViewName() != EUiTabViewName.RoleSkinTabView)
+			{
+				return;
+			}
+			this.ActiveRoleTabCameraInput();
+		}
+
+		// Token: 0x0602722D RID: 160301 RVA: 0x00AF3153 File Offset: 0x00AF1353
 		private bool CanChangeSkin()
 		{
 			if (this.LastChangeSkinTime != 0.0 && Time.Instance.Now - this.LastChangeSkinTime <= (double)this.ChangeSkinInternal)
@@ -400,7 +417,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			return true;
 		}
 
-		// Token: 0x06032488 RID: 205960 RVA: 0x00BAEBA4 File Offset: 0x00BACDA4
+		// Token: 0x0602722E RID: 160302 RVA: 0x00AF3194 File Offset: 0x00AF1394
 		private void OnMoveSkinItem(int showIndex)
 		{
 			if (this.CurSelectSkinIndex == showIndex)
@@ -417,7 +434,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			GuideController.Instance.TryFinishRunningGuides();
 		}
 
-		// Token: 0x06032489 RID: 205961 RVA: 0x00BAEC00 File Offset: 0x00BACE00
+		// Token: 0x0602722F RID: 160303 RVA: 0x00AF31F0 File Offset: 0x00AF13F0
 		private void OnClickHideViewToggle(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -428,7 +445,8 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 					uiViewSequence.PlaySequence("UiIn", false, null);
 				}
 				this.RootViewModel.SetCaptionItemActive(true);
-				base.GetButton(3).RootUIComp.Get().SetUIActive(!this.CurrentSelectSkinIsOrigin);
+				RoleSkinData roleSkinData = RoleSkinModel.Instance.GetRoleSkinData(this.ViewModel.GetSelectRoleSkinId());
+				base.GetButton(3).RootUIComp.Get().SetUIActive(this.CanShowSkinDetailButton(roleSkinData));
 			}
 			else
 			{
@@ -443,14 +461,14 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			GuideController.Instance.TryFinishRunningGuides();
 		}
 
-		// Token: 0x0603248A RID: 205962 RVA: 0x00BAECB4 File Offset: 0x00BACEB4
+		// Token: 0x06027230 RID: 160304 RVA: 0x00AF32B8 File Offset: 0x00AF14B8
 		private void OnClickSkinDetailButton()
 		{
 			RoleSkinData roleSkinData = this.RoleSkinList[this.CurSelectSkinIndex];
 			SkinController.Instance.OpenSkinShowView(roleSkinData.GetItemId());
 		}
 
-		// Token: 0x0603248B RID: 205963 RVA: 0x00BAECE4 File Offset: 0x00BACEE4
+		// Token: 0x06027231 RID: 160305 RVA: 0x00AF32E8 File Offset: 0x00AF14E8
 		private void OnClickLeftArrowButton()
 		{
 			if (!this.CanChangeSkin())
@@ -462,7 +480,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			this.SkinLayout.AttachToIndex(this.CurSelectSkinIndex, false);
 		}
 
-		// Token: 0x0603248C RID: 205964 RVA: 0x00BAED34 File Offset: 0x00BACF34
+		// Token: 0x06027232 RID: 160306 RVA: 0x00AF3338 File Offset: 0x00AF1538
 		private void OnClickRightArrowButton()
 		{
 			if (!this.CanChangeSkin())
@@ -474,7 +492,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			this.SkinLayout.AttachToIndex(this.CurSelectSkinIndex, false);
 		}
 
-		// Token: 0x0603248D RID: 205965 RVA: 0x00BAED84 File Offset: 0x00BACF84
+		// Token: 0x06027233 RID: 160307 RVA: 0x00AF3388 File Offset: 0x00AF1588
 		private void OnClickWearWeaponToggle(EToggleState state)
 		{
 			bool flag = state == EToggleState.ETT_Checked;
@@ -508,20 +526,20 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			this.RefreshRoleMontage(flag);
 		}
 
-		// Token: 0x0603248E RID: 205966 RVA: 0x00BAEE53 File Offset: 0x00BAD053
+		// Token: 0x06027234 RID: 160308 RVA: 0x00AF3457 File Offset: 0x00AF1657
 		private bool OnCanExecuteChange()
 		{
 			return this.CanChangeSkin();
 		}
 
-		// Token: 0x0603248F RID: 205967 RVA: 0x00BAEE5C File Offset: 0x00BAD05C
+		// Token: 0x06027235 RID: 160309 RVA: 0x00AF3460 File Offset: 0x00AF1660
 		private void OnClickWearWeaponTipButton()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoleSkinTip);
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06032490 RID: 205968 RVA: 0x00BAEE80 File Offset: 0x00BAD080
+		// Token: 0x06027236 RID: 160310 RVA: 0x00AF3484 File Offset: 0x00AF1684
 		private void OnClickWearButton()
 		{
 			if (!SkinController.Instance.CheckCanWearSkinAndShowTip())
@@ -532,7 +550,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			RoleController.Instance.RoleSkinChangeRequest(this.RootViewModel.RoleId, roleSkinData.ItemId, this.ViewModel.GetIsWearWeaponSkin(), new Action<int, bool>(this.OnRoleSkinChange));
 		}
 
-		// Token: 0x06032491 RID: 205969 RVA: 0x00BAEEE0 File Offset: 0x00BAD0E0
+		// Token: 0x06027237 RID: 160311 RVA: 0x00AF34E4 File Offset: 0x00AF16E4
 		private void OnRoleSkinChange(int skinId, bool isWearWeaponSkin)
 		{
 			RoleSkinData roleSkinData = RoleSkinModel.Instance.GetRoleSkinData(skinId);
@@ -540,14 +558,15 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			this.SkinLayout.RefreshItems();
 		}
 
-		// Token: 0x06032492 RID: 205970 RVA: 0x00BAEF0C File Offset: 0x00BAD10C
+		// Token: 0x06027238 RID: 160312 RVA: 0x00AF3510 File Offset: 0x00AF1710
 		private void ActiveRoleTabCameraInput()
 		{
-			IUiCameraInputComponentData roleTabCameraInputData = this.ViewModel.GetRoleTabCameraInputData(this.RootViewModel.GetDragItem(), this.RootViewModel.TsUiSceneRoleActor);
-			this.RootViewModel.StartCameraInput(roleTabCameraInputData, new bool?(true), false);
+			UiCameraInputBindingData roleTabCameraInputData = this.ViewModel.GetRoleTabCameraInputData(this.RootViewModel.GetDragItem(), this.RootViewModel.TsUiSceneRoleActor);
+			this.RootViewModel.ConfigureCameraInput(roleTabCameraInputData);
+			this.RootViewModel.BindCameraInput();
 		}
 
-		// Token: 0x06032493 RID: 205971 RVA: 0x00BAEF4E File Offset: 0x00BAD14E
+		// Token: 0x06027239 RID: 160313 RVA: 0x00AF3556 File Offset: 0x00AF1756
 		private void OnClickOrnamentButton()
 		{
 			this.RootViewModel.SetTabViewParam(new SkinTabViewParam
@@ -557,7 +576,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			this.RootViewModel.SetSelectTabViewName(EUiTabViewName.RoleOrnamentTabView, false);
 		}
 
-		// Token: 0x06032494 RID: 205972 RVA: 0x00BAEF88 File Offset: 0x00BAD188
+		// Token: 0x0602723A RID: 160314 RVA: 0x00AF3590 File Offset: 0x00AF1790
 		private void RefreshSkinOrnament(RoleSkinData roleSkinData)
 		{
 			List<int> skinAllOrnaments = RoleOrnamentModel.Instance.GetSkinAllOrnaments(roleSkinData.GetItemId(), new bool?(true));
@@ -597,87 +616,84 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			}, false);
 		}
 
-		// Token: 0x06032495 RID: 205973 RVA: 0x00BAF0B0 File Offset: 0x00BAD2B0
+		// Token: 0x0602723B RID: 160315 RVA: 0x00AF36B8 File Offset: 0x00AF18B8
 		private CommonItemSmallItemGrid CreateOrnamentItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0401ABE1 RID: 109537
+		// Token: 0x0401553C RID: 87356
 		private NoCircleAttachView<RoleSkinData, RoleSkinItem> SkinLayout;
 
-		// Token: 0x0401ABE2 RID: 109538
+		// Token: 0x0401553D RID: 87357
 		protected GenericLayout<RoleSkinObtainItem, IGetWayItemData> ObtainLayout;
 
-		// Token: 0x0401ABE3 RID: 109539
+		// Token: 0x0401553E RID: 87358
 		private SkinRootViewModel RootViewModel;
 
-		// Token: 0x0401ABE4 RID: 109540
+		// Token: 0x0401553F RID: 87359
 		private RoleSkinViewModel ViewModel;
 
-		// Token: 0x0401ABE5 RID: 109541
+		// Token: 0x04015540 RID: 87360
 		private List<RoleSkinData> RoleSkinList;
 
-		// Token: 0x0401ABE6 RID: 109542
+		// Token: 0x04015541 RID: 87361
 		private GenericLayout<CommonItemSmallItemGrid, TItem> OrnamentLayout;
 
-		// Token: 0x0401ABE7 RID: 109543
+		// Token: 0x04015542 RID: 87362
 		private int CurSelectSkinIndex;
 
-		// Token: 0x0401ABE8 RID: 109544
+		// Token: 0x04015543 RID: 87363
 		private int ChangeSkinInternal;
 
-		// Token: 0x0401ABE9 RID: 109545
+		// Token: 0x04015544 RID: 87364
 		private double LastChangeSkinTime;
 
-		// Token: 0x0401ABEA RID: 109546
-		private bool CurrentSelectSkinIsOrigin = true;
-
-		// Token: 0x0200ADEA RID: 44522
+		// Token: 0x02009809 RID: 38921
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04034D1C RID: 216348
+			// Token: 0x0402F6C3 RID: 194243
 			DragRoot,
-			// Token: 0x04034D1D RID: 216349
+			// Token: 0x0402F6C4 RID: 194244
 			DragItem,
-			// Token: 0x04034D1E RID: 216350
+			// Token: 0x0402F6C5 RID: 194245
 			HideViewToggle,
-			// Token: 0x04034D1F RID: 216351
+			// Token: 0x0402F6C6 RID: 194246
 			SkinDetailButton,
-			// Token: 0x04034D20 RID: 216352
+			// Token: 0x0402F6C7 RID: 194247
 			LeftArrowButton,
-			// Token: 0x04034D21 RID: 216353
+			// Token: 0x0402F6C8 RID: 194248
 			RightArrowButton,
-			// Token: 0x04034D22 RID: 216354
+			// Token: 0x0402F6C9 RID: 194249
 			SkinName,
-			// Token: 0x04034D23 RID: 216355
+			// Token: 0x0402F6CA RID: 194250
 			SkinSubName,
-			// Token: 0x04034D24 RID: 216356
+			// Token: 0x0402F6CB RID: 194251
 			SkinDesc,
-			// Token: 0x04034D25 RID: 216357
+			// Token: 0x0402F6CC RID: 194252
 			WearWeaponTipItem,
-			// Token: 0x04034D26 RID: 216358
+			// Token: 0x0402F6CD RID: 194253
 			WearWeaponToggle,
-			// Token: 0x04034D27 RID: 216359
+			// Token: 0x0402F6CE RID: 194254
 			WearWeaponTipButton,
-			// Token: 0x04034D28 RID: 216360
+			// Token: 0x0402F6CF RID: 194255
 			GetWayLayout,
-			// Token: 0x04034D29 RID: 216361
+			// Token: 0x0402F6D0 RID: 194256
 			GetWayItem,
-			// Token: 0x04034D2A RID: 216362
+			// Token: 0x0402F6D1 RID: 194257
 			WearButton,
-			// Token: 0x04034D2B RID: 216363
+			// Token: 0x0402F6D2 RID: 194258
 			TopAndRightItem,
-			// Token: 0x04034D2C RID: 216364
+			// Token: 0x0402F6D3 RID: 194259
 			WeaponSkinGuideNiagara,
-			// Token: 0x04034D2D RID: 216365
+			// Token: 0x0402F6D4 RID: 194260
 			OrnamentRoot,
-			// Token: 0x04034D2E RID: 216366
+			// Token: 0x0402F6D5 RID: 194261
 			OrnamentButton,
-			// Token: 0x04034D2F RID: 216367
+			// Token: 0x0402F6D6 RID: 194262
 			OrnamentItemLayout,
-			// Token: 0x04034D30 RID: 216368
+			// Token: 0x0402F6D7 RID: 194263
 			OrnamentItem
 		}
 	}

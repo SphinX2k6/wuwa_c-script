@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001B7 RID: 439
+	// Token: 0x020001C9 RID: 457
 	public class ConfigDailyAdventureActivityByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A4D RID: 2637 RVA: 0x00093DE8 File Offset: 0x00091FE8
+		// Token: 0x06000AB9 RID: 2745 RVA: 0x00099D20 File Offset: 0x00097F20
 		static ConfigDailyAdventureActivityByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDailyAdventureActivityByActivityId.CreateStaticDefaultValue), new Action(ConfigDailyAdventureActivityByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A4E RID: 2638 RVA: 0x00093E08 File Offset: 0x00092008
+		// Token: 0x06000ABA RID: 2746 RVA: 0x00099D40 File Offset: 0x00097F40
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDailyAdventureActivityByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A4F RID: 2639 RVA: 0x00093E87 File Offset: 0x00092087
+		// Token: 0x06000ABB RID: 2747 RVA: 0x00099DBF File Offset: 0x00097FBF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDailyAdventureActivityByActivityId.LogPair = null;
 			ConfigDailyAdventureActivityByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06000A50 RID: 2640 RVA: 0x00093E95 File Offset: 0x00092095
+		// Token: 0x06000ABC RID: 2748 RVA: 0x00099DCD File Offset: 0x00097FCD
 		public static void Init()
 		{
 			ConfigDailyAdventureActivityByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigDailyAdventureActivityByActivityId.HandleId, "db_dailyadventureactivity.db", "select BinData from `DailyAdventureActivity` where ActivityId=?");
 		}
 
-		// Token: 0x06000A51 RID: 2641 RVA: 0x00093EB0 File Offset: 0x000920B0
+		// Token: 0x06000ABD RID: 2749 RVA: 0x00099DE8 File Offset: 0x00097FE8
 		public static DailyAdventureActivity? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDailyAdventureActivityByActivityId.HandleId, ConfigDailyAdventureActivityByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DailyAdventureActivity?(rootAsDailyAdventureActivity);
 		}
 
-		// Token: 0x04000BE5 RID: 3045
+		// Token: 0x04000C63 RID: 3171
 		private const string DB = "db_dailyadventureactivity.db";
 
-		// Token: 0x04000BE6 RID: 3046
+		// Token: 0x04000C64 RID: 3172
 		private const string FILE = "r.日常探险活动.xlsx";
 
-		// Token: 0x04000BE7 RID: 3047
+		// Token: 0x04000C65 RID: 3173
 		private const string TABLE = "DailyAdventureActivity";
 
-		// Token: 0x04000BE8 RID: 3048
+		// Token: 0x04000C66 RID: 3174
 		private const string COMMAND = "select BinData from `DailyAdventureActivity` where ActivityId=?";
 
-		// Token: 0x04000BE9 RID: 3049
+		// Token: 0x04000C67 RID: 3175
 		private const string KEY_PREFIX = "DailyAdventureActivityByActivityId";
 
-		// Token: 0x04000BEA RID: 3050
+		// Token: 0x04000C68 RID: 3176
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000BEB RID: 3051
+		// Token: 0x04000C69 RID: 3177
 		private static int HandleId;
 	}
 }

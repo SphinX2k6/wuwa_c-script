@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C29 RID: 23593
+	// Token: 0x02004C09 RID: 19465
 	public class BossPilingFetterItem : UiPanelBase
 	{
-		// Token: 0x0603B98E RID: 244110 RVA: 0x00E379E8 File Offset: 0x00E35BE8
+		// Token: 0x060308D9 RID: 198873 RVA: 0x00D87D50 File Offset: 0x00D85F50
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B98F RID: 244111 RVA: 0x00E37A54 File Offset: 0x00E35C54
+		// Token: 0x060308DA RID: 198874 RVA: 0x00D87DBC File Offset: 0x00D85FBC
 		public void Refresh(int id)
 		{
 			ElementInfo? elementConfig = CommonConfig.Instance.GetElementConfig(id);
@@ -37,12 +37,12 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			base.SetTextureByPath(elementConfig.Value.Icon5, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0200BE13 RID: 48659
+		// Token: 0x0200A81B RID: 43035
 		private enum EFetter
 		{
-			// Token: 0x0403951B RID: 234779
+			// Token: 0x04033EDE RID: 212702
 			Sprite,
-			// Token: 0x0403951C RID: 234780
+			// Token: 0x04033EDF RID: 212703
 			Tex
 		}
 	}

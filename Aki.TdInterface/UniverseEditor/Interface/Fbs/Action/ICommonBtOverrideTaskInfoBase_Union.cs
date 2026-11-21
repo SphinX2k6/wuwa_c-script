@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006471 RID: 25713
+	// Token: 0x02006AD9 RID: 27353
 	public enum ICommonBtOverrideTaskInfoBase_Union : byte
 	{
-		// Token: 0x04010A6F RID: 68207
+		// Token: 0x0401187A RID: 71802
 		NONE,
-		// Token: 0x04010A70 RID: 68208
+		// Token: 0x0401187B RID: 71803
 		ICommonBtOverrideTaskInfoBase,
-		// Token: 0x04010A71 RID: 68209
+		// Token: 0x0401187C RID: 71804
 		ICommonBtOverrideActionInfo,
-		// Token: 0x04010A72 RID: 68210
+		// Token: 0x0401187D RID: 71805
 		ICommonBtOverrideConditionInfo
 	}
 }

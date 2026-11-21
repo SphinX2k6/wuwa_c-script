@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D47 RID: 19783
+	// Token: 0x02003D10 RID: 15632
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopProjectSkillPanel : RoleDevelopProjectBasePanel
 	{
-		// Token: 0x060331C6 RID: 209350 RVA: 0x00BEA13C File Offset: 0x00BE833C
+		// Token: 0x06028029 RID: 163881 RVA: 0x00B3347C File Offset: 0x00B3167C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060331C7 RID: 209351 RVA: 0x00BEA3DC File Offset: 0x00BE85DC
+		// Token: 0x0602802A RID: 163882 RVA: 0x00B3371C File Offset: 0x00B3191C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleDevelopProjectSkillPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060331C8 RID: 209352 RVA: 0x00BEA420 File Offset: 0x00BE8620
+		// Token: 0x0602802B RID: 163883 RVA: 0x00B33760 File Offset: 0x00B31960
 		private UniTask InitSkillSlotItems()
 		{
 			RoleDevelopProjectSkillPanel.<InitSkillSlotItems>d__8 <InitSkillSlotItems>d__;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <InitSkillSlotItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060331C9 RID: 209353 RVA: 0x00BEA464 File Offset: 0x00BE8664
+		// Token: 0x0602802C RID: 163884 RVA: 0x00B337A4 File Offset: 0x00B319A4
 		private UniTask InitButtons()
 		{
 			RoleDevelopProjectSkillPanel.<InitButtons>d__9 <InitButtons>d__;
@@ -101,17 +101,17 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <InitButtons>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060331CA RID: 209354 RVA: 0x00BEA4A8 File Offset: 0x00BE86A8
+		// Token: 0x0602802D RID: 163885 RVA: 0x00B337E8 File Offset: 0x00B319E8
 		private void RefreshSkillSlotItems()
 		{
 			List<RoleDevelopSkillData> skillDevelopData = this.Data.GetProjectData().GetSkillDevelopData();
 			for (int i = 0; i < this.SkillSlotItems.Count; i++)
 			{
-				this.SkillSlotItems[i].Refresh(skillDevelopData[i]);
+				this.SkillSlotItems[i].Refresh(skillDevelopData[i], true);
 			}
 		}
 
-		// Token: 0x060331CB RID: 209355 RVA: 0x00BEA4F4 File Offset: 0x00BE86F4
+		// Token: 0x0602802E RID: 163886 RVA: 0x00B33838 File Offset: 0x00B31A38
 		private void RefreshItemLayout()
 		{
 			List<RoleDevelopProjectMaterialItemData> skillDevelopProjectViewItems = this.Data.GetProjectData().GetSkillDevelopProjectViewItems();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			base.GetItem(16).SetUIActive(skillDevelopProjectViewItems.Count > 0);
 		}
 
-		// Token: 0x060331CC RID: 209356 RVA: 0x00BEA5B8 File Offset: 0x00BE87B8
+		// Token: 0x0602802F RID: 163887 RVA: 0x00B338FC File Offset: 0x00B31AFC
 		private void RefreshTitle()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(15), "RoleProject_SkillUpgradePrefect", Array.Empty<object>());
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			base.GetText(0).SetUIActive(false);
 		}
 
-		// Token: 0x060331CD RID: 209357 RVA: 0x00BEA608 File Offset: 0x00BE8808
+		// Token: 0x06028030 RID: 163888 RVA: 0x00B3394C File Offset: 0x00B31B4C
 		private void RefreshButtons()
 		{
 			int id = this.Data.GetId();
@@ -184,14 +184,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x060331CE RID: 209358 RVA: 0x00BEA76F File Offset: 0x00BE896F
+		// Token: 0x06028031 RID: 163889 RVA: 0x00B33AB3 File Offset: 0x00B31CB3
 		public override void OnCommonItemCountAnyChange(int configId)
 		{
 			this.RefreshButtons();
 			this.ItemLayout.RefreshWithoutDataSync();
 		}
 
-		// Token: 0x060331CF RID: 209359 RVA: 0x00BEA782 File Offset: 0x00BE8982
+		// Token: 0x06028032 RID: 163890 RVA: 0x00B33AC6 File Offset: 0x00B31CC6
 		protected override void OnRefreshView(bool forceRefresh)
 		{
 			this.RefreshSkillSlotItems();
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.RefreshButtons();
 		}
 
-		// Token: 0x060331D0 RID: 209360 RVA: 0x00BEA79C File Offset: 0x00BE899C
+		// Token: 0x06028033 RID: 163891 RVA: 0x00B33AE0 File Offset: 0x00B31CE0
 		private void OnClickSwitchState()
 		{
 			base.StopSequenceByName("Switch", false, true);
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			RoleController.Instance.LogRoleDevelopClick(this.Data.GetId(), ERoleDevelopCategoryType.Skill, ERoleDevelopLogSubPage.SkillDevelopSwitchPlan, null);
 		}
 
-		// Token: 0x060331D1 RID: 209361 RVA: 0x00BEA7E4 File Offset: 0x00BE89E4
+		// Token: 0x06028034 RID: 163892 RVA: 0x00B33B28 File Offset: 0x00B31D28
 		private void OnClickBtnJump(int value)
 		{
 			int id = this.Data.GetId();
@@ -226,13 +226,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			RoleController.Instance.LogRoleDevelopClick(id, ERoleDevelopCategoryType.Skill, subPage, null);
 		}
 
-		// Token: 0x060331D2 RID: 209362 RVA: 0x00BEA868 File Offset: 0x00BE8A68
+		// Token: 0x06028035 RID: 163893 RVA: 0x00B33BAC File Offset: 0x00B31DAC
 		private RoleDevelopProjectMaterialItem CreateMaterialItem()
 		{
 			return new RoleDevelopProjectMaterialItem();
 		}
 
-		// Token: 0x0401B2B3 RID: 111283
+		// Token: 0x04015C84 RID: 89220
 		private readonly Dictionary<EItemMaterialType, ERoleDevelopLogSubPage> SkillDevelopMaterialTypeToLogSubPageMap = new Dictionary<EItemMaterialType, ERoleDevelopLogSubPage>
 		{
 			{
@@ -249,72 +249,56 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		};
 
-		// Token: 0x0401B2B4 RID: 111284
+		// Token: 0x04015C85 RID: 89221
 		private List<RoleDevelopProjectSkillSlotItem> SkillSlotItems = new List<RoleDevelopProjectSkillSlotItem>();
 
-		// Token: 0x0401B2B5 RID: 111285
+		// Token: 0x04015C86 RID: 89222
 		private ButtonItem NormalButtonItem;
 
-		// Token: 0x0401B2B6 RID: 111286
+		// Token: 0x04015C87 RID: 89223
 		private ButtonItem HighLightButtonItem;
 
-		// Token: 0x0401B2B7 RID: 111287
+		// Token: 0x04015C88 RID: 89224
 		private GenericLayout<RoleDevelopProjectMaterialItem, RoleDevelopProjectMaterialItemData> ItemLayout;
 
-		// Token: 0x0200AEAF RID: 44719
+		// Token: 0x020098E3 RID: 39139
 		[NullableContext(0)]
-		public static class EComponentType
+		private enum EComponentType
 		{
-			// Token: 0x040350C4 RID: 217284
-			public const int TxtSwitchState = 0;
-
-			// Token: 0x040350C5 RID: 217285
-			public const int BtnSwitchState = 1;
-
-			// Token: 0x040350C6 RID: 217286
-			public const int PanelSkillSlot0 = 2;
-
-			// Token: 0x040350C7 RID: 217287
-			public const int PanelSkillSlot1 = 3;
-
-			// Token: 0x040350C8 RID: 217288
-			public const int PanelSkillSlot2 = 4;
-
-			// Token: 0x040350C9 RID: 217289
-			public const int PanelSkillSlot3 = 5;
-
-			// Token: 0x040350CA RID: 217290
-			public const int PanelSkillSlot4 = 6;
-
-			// Token: 0x040350CB RID: 217291
-			public const int PanelItemRight = 7;
-
-			// Token: 0x040350CC RID: 217292
-			public const int BtnItemJump = 8;
-
-			// Token: 0x040350CD RID: 217293
-			public const int PanelTxtOffset = 9;
-
-			// Token: 0x040350CE RID: 217294
-			public const int BtnItemPerfectJump = 10;
-
-			// Token: 0x040350CF RID: 217295
-			public const int PanelItemRightLine = 11;
-
-			// Token: 0x040350D0 RID: 217296
-			public const int PanelItemDetailLayout = 12;
-
-			// Token: 0x040350D1 RID: 217297
-			public const int PanelItemList = 13;
-
-			// Token: 0x040350D2 RID: 217298
-			public const int PanelSwitch = 14;
-
-			// Token: 0x040350D3 RID: 217299
-			public const int TxtTitle = 15;
-
-			// Token: 0x040350D4 RID: 217300
-			public const int PanelItemDescription = 16;
+			// Token: 0x0402FAE8 RID: 195304
+			TxtSwitchState,
+			// Token: 0x0402FAE9 RID: 195305
+			BtnSwitchState,
+			// Token: 0x0402FAEA RID: 195306
+			PanelSkillSlot0,
+			// Token: 0x0402FAEB RID: 195307
+			PanelSkillSlot1,
+			// Token: 0x0402FAEC RID: 195308
+			PanelSkillSlot2,
+			// Token: 0x0402FAED RID: 195309
+			PanelSkillSlot3,
+			// Token: 0x0402FAEE RID: 195310
+			PanelSkillSlot4,
+			// Token: 0x0402FAEF RID: 195311
+			PanelItemRight,
+			// Token: 0x0402FAF0 RID: 195312
+			BtnItemJump,
+			// Token: 0x0402FAF1 RID: 195313
+			PanelTxtOffset,
+			// Token: 0x0402FAF2 RID: 195314
+			BtnItemPerfectJump,
+			// Token: 0x0402FAF3 RID: 195315
+			PanelItemRightLine,
+			// Token: 0x0402FAF4 RID: 195316
+			PanelItemDetailLayout,
+			// Token: 0x0402FAF5 RID: 195317
+			PanelItemList,
+			// Token: 0x0402FAF6 RID: 195318
+			PanelSwitch,
+			// Token: 0x0402FAF7 RID: 195319
+			TxtTitle,
+			// Token: 0x0402FAF8 RID: 195320
+			PanelItemDescription
 		}
 	}
 }

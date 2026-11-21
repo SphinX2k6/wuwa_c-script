@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200014F RID: 335
+	// Token: 0x02000153 RID: 339
 	public class PlatformReportGetGameLanguage : PlatformSdkReportBaseData
 	{
-		// Token: 0x06000A51 RID: 2641 RVA: 0x00044B33 File Offset: 0x00042D33
+		// Token: 0x06000A85 RID: 2693 RVA: 0x00046F47 File Offset: 0x00045147
 		public PlatformReportGetGameLanguage()
 		{
 			this.event_id = 60112;

@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200169F RID: 5791
+	// Token: 0x02001818 RID: 6168
 	public enum ESheriffCriminalState
 	{
-		// Token: 0x04004D95 RID: 19861
+		// Token: 0x040051AC RID: 20908
 		Confirmed = 1,
-		// Token: 0x04004D96 RID: 19862
+		// Token: 0x040051AD RID: 20909
 		Captured
 	}
 }

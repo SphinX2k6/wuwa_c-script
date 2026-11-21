@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018EF RID: 6383
+	// Token: 0x02001A7A RID: 6778
 	public class ICloseTraceSpline_SetValue
 	{
-		// Token: 0x040055D6 RID: 21974
+		// Token: 0x04005A26 RID: 23078
 		public ETraceSplineOptionType Type;
 
-		// Token: 0x040055D7 RID: 21975
+		// Token: 0x04005A27 RID: 23079
 		public int SplineEntityId;
 	}
 }

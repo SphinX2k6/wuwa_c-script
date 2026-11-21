@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020028A1 RID: 10401
+// Token: 0x02001E1C RID: 7708
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkillBranchPopViewParams
 {
-	// Token: 0x17001CCC RID: 7372
-	// (get) Token: 0x06015773 RID: 87923 RVA: 0x0056A075 File Offset: 0x00568275
-	// (set) Token: 0x06015774 RID: 87924 RVA: 0x0056A07D File Offset: 0x0056827D
+	// Token: 0x17001D24 RID: 7460
+	// (get) Token: 0x06013173 RID: 78195 RVA: 0x00594EBD File Offset: 0x005930BD
+	// (set) Token: 0x06013174 RID: 78196 RVA: 0x00594EC5 File Offset: 0x005930C5
 	public List<RoleSkillBranchTeamTabData> RoleSkillBranchTeamTabDataList { get; set; } = new List<RoleSkillBranchTeamTabData>();
 
-	// Token: 0x17001CCD RID: 7373
-	// (get) Token: 0x06015775 RID: 87925 RVA: 0x0056A086 File Offset: 0x00568286
-	// (set) Token: 0x06015776 RID: 87926 RVA: 0x0056A08E File Offset: 0x0056828E
+	// Token: 0x17001D25 RID: 7461
+	// (get) Token: 0x06013175 RID: 78197 RVA: 0x00594ECE File Offset: 0x005930CE
+	// (set) Token: 0x06013176 RID: 78198 RVA: 0x00594ED6 File Offset: 0x005930D6
 	public int? PreferredTabIndex { get; set; }
 
-	// Token: 0x06015777 RID: 87927 RVA: 0x0056A098 File Offset: 0x00568298
+	// Token: 0x06013177 RID: 78199 RVA: 0x00594EE0 File Offset: 0x005930E0
 	public void Load(int[][] roleIdTab)
 	{
 		this.RoleSkillBranchTeamTabDataList.Clear();

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DE4 RID: 28132
+	// Token: 0x0200755F RID: 30047
 	public class IQiuyuanQinggongExploration2T
 	{
-		// Token: 0x1700D1B3 RID: 53683
-		// (get) Token: 0x06031B0F RID: 203535 RVA: 0x006BACA2 File Offset: 0x006B8EA2
-		// (set) Token: 0x06031B10 RID: 203536 RVA: 0x006BACAA File Offset: 0x006B8EAA
+		// Token: 0x1700DCFB RID: 56571
+		// (get) Token: 0x06034B0B RID: 215819 RVA: 0x0071638A File Offset: 0x0071458A
+		// (set) Token: 0x06034B0C RID: 215820 RVA: 0x00716392 File Offset: 0x00714592
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x06031B11 RID: 203537 RVA: 0x006BACB3 File Offset: 0x006B8EB3
+		// Token: 0x06034B0D RID: 215821 RVA: 0x0071639B File Offset: 0x0071459B
 		public IQiuyuanQinggongExploration2T()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

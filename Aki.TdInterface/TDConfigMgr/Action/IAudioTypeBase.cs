@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017EA RID: 6122
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001973 RID: 6515
 	public class IAudioTypeBase
 	{
-		// Token: 0x0600837D RID: 33661 RVA: 0x00139EF4 File Offset: 0x001380F4
+		// Token: 0x06008A99 RID: 35481 RVA: 0x001495DC File Offset: 0x001477DC
 		private IAudioTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600837E RID: 33662 RVA: 0x00139F2C File Offset: 0x0013812C
+		// Token: 0x06008A9A RID: 35482 RVA: 0x00149614 File Offset: 0x00147814
 		public static IAudioTypeBase Create([Nullable(2)] IAudioTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600837F RID: 33663 RVA: 0x00139F3F File Offset: 0x0013813F
+		// Token: 0x06008A9B RID: 35483 RVA: 0x00149627 File Offset: 0x00147827
 		public static IAudioTypeBase CreateFromSetValue([Nullable(2)] IAudioTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008380 RID: 33664 RVA: 0x00139F52 File Offset: 0x00138152
+		// Token: 0x06008A9C RID: 35484 RVA: 0x0014963A File Offset: 0x0014783A
 		public IAudioTypeBase_SetValue ToSetValue()
 		{
 			return new IAudioTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B34 RID: 11060
-		// (get) Token: 0x06008381 RID: 33665 RVA: 0x00139F65 File Offset: 0x00138165
-		// (set) Token: 0x06008382 RID: 33666 RVA: 0x00139F90 File Offset: 0x00138190
+		// Token: 0x17002D2C RID: 11564
+		// (get) Token: 0x06008A9D RID: 35485 RVA: 0x0014964D File Offset: 0x0014784D
+		// (set) Token: 0x06008A9E RID: 35486 RVA: 0x00149678 File Offset: 0x00147878
 		public virtual EAudioType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400536D RID: 21357
+		// Token: 0x040057B5 RID: 22453
 		[Nullable(2)]
 		protected IAudioTypeBase FbInstance;
 
-		// Token: 0x0400536E RID: 21358
+		// Token: 0x040057B6 RID: 22454
 		[Nullable(2)]
 		protected IAudioTypeBase_SetValue PocoInterface;
 	}

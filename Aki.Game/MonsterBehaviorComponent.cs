@@ -10,12 +10,12 @@ using CSharpScript.Game.LevelGamePlay.ElementalCasket;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 using UnrealEngine;
 
-// Token: 0x020031C9 RID: 12745
+// Token: 0x02002738 RID: 10040
 [NullableContext(2)]
 [Nullable(0)]
 public class MonsterBehaviorComponent : EntityComponent
 {
-	// Token: 0x0601B795 RID: 112533 RVA: 0x00786008 File Offset: 0x00784208
+	// Token: 0x060192D1 RID: 103121 RVA: 0x007AE1BC File Offset: 0x007AC3BC
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -72,7 +72,7 @@ public class MonsterBehaviorComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B796 RID: 112534 RVA: 0x007861D0 File Offset: 0x007843D0
+	// Token: 0x060192D2 RID: 103122 RVA: 0x007AE384 File Offset: 0x007AC584
 	protected override void OnActivate()
 	{
 		bool flag = base.Entity.GetComponent<CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow.FollowShooterComponent>() != null;
@@ -102,7 +102,7 @@ public class MonsterBehaviorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B797 RID: 112535 RVA: 0x007862A0 File Offset: 0x007844A0
+	// Token: 0x060192D3 RID: 103123 RVA: 0x007AE454 File Offset: 0x007AC654
 	protected override void OnPostActivate()
 	{
 		int num = GameplayTagDefine.EGameplayTagId["关卡.Common.匣子能力.水匣.怪物凝滞识别"];
@@ -110,7 +110,7 @@ public class MonsterBehaviorComponent : EntityComponent
 		this.ElementalTagListenTask = this.TagComponent.ListenForTagAddOrRemove(new int?(num), new BaseTagComponent.TTagSwitchedCallback(this.ElementalTagListenTaskCallback), null);
 	}
 
-	// Token: 0x0601B798 RID: 112536 RVA: 0x007862F4 File Offset: 0x007844F4
+	// Token: 0x060192D4 RID: 103124 RVA: 0x007AE4A8 File Offset: 0x007AC6A8
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CharOnPositionStateChanged, new Action<global::ECharPositionState, global::ECharPositionState>(this.PositionStateChangeHandler));
@@ -142,7 +142,7 @@ public class MonsterBehaviorComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B799 RID: 112537 RVA: 0x007863DC File Offset: 0x007845DC
+	// Token: 0x060192D5 RID: 103125 RVA: 0x007AE590 File Offset: 0x007AC790
 	private void PositionStateChangeHandler(global::ECharPositionState oldState, global::ECharPositionState newState)
 	{
 		if (newState != global::ECharPositionState.Water || this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.不会淹死"]))
@@ -155,7 +155,7 @@ public class MonsterBehaviorComponent : EntityComponent
 		CombatNet.Instance.Send(EPushMessageId.MonsterDrownPush, base.Entity, monsterDrownPush, null, null, null);
 	}
 
-	// Token: 0x0601B79A RID: 112538 RVA: 0x0078645A File Offset: 0x0078465A
+	// Token: 0x060192D6 RID: 103126 RVA: 0x007AE60E File Offset: 0x007AC80E
 	private void AiTaskWanderForResetEndHandler()
 	{
 		if (!GameModeModel.Instance.IsMulti)
@@ -164,7 +164,7 @@ public class MonsterBehaviorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B79B RID: 112539 RVA: 0x00786479 File Offset: 0x00784679
+	// Token: 0x060192D7 RID: 103127 RVA: 0x007AE62D File Offset: 0x007AC82D
 	private void FightTagListenTaskCallback(int tagId, bool bTagExists)
 	{
 		if (bTagExists && !GameModeModel.Instance.IsMulti)
@@ -173,7 +173,7 @@ public class MonsterBehaviorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B79C RID: 112540 RVA: 0x0078649C File Offset: 0x0078469C
+	// Token: 0x060192D8 RID: 103128 RVA: 0x007AE650 File Offset: 0x007AC850
 	private void DisableTagListenTaskCallback(int tagId, bool bTagExists)
 	{
 		if (bTagExists)
@@ -235,13 +235,13 @@ public class MonsterBehaviorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B79D RID: 112541 RVA: 0x00786621 File Offset: 0x00784821
+	// Token: 0x060192D9 RID: 103129 RVA: 0x007AE7D5 File Offset: 0x007AC9D5
 	private void ElementalTagListenTaskCallback(int tagId, bool bTagExists)
 	{
 		this.RefreshElementalDetectable(bTagExists);
 	}
 
-	// Token: 0x0601B79E RID: 112542 RVA: 0x0078662A File Offset: 0x0078482A
+	// Token: 0x060192DA RID: 103130 RVA: 0x007AE7DE File Offset: 0x007AC9DE
 	private void RefreshElementalDetectable(bool enable)
 	{
 		if (this.ElementalDetectableEnable == enable)
@@ -257,7 +257,7 @@ public class MonsterBehaviorComponent : EntityComponent
 		ElementalCasketController.Instance.UnRegisterMonsterDetectable(base.Entity);
 	}
 
-	// Token: 0x0601B79F RID: 112543 RVA: 0x00786664 File Offset: 0x00784864
+	// Token: 0x060192DB RID: 103131 RVA: 0x007AE818 File Offset: 0x007ACA18
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -266,133 +266,140 @@ public class MonsterBehaviorComponent : EntityComponent
 			return false;
 		}
 		MonsterBehaviorComponent monsterBehaviorComponent = (MonsterBehaviorComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (monsterBehaviorComponent.ActorComp == null)
 		{
-			if (monsterBehaviorComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (monsterBehaviorComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("FightTagListenTask"))
+		if (monsterBehaviorComponent.TagComponent == null)
 		{
-			if (monsterBehaviorComponent.FightTagListenTask == null)
-			{
-				this.FightTagListenTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.FightTagListenTask), "FightTagListenTask"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("DisableTagListenTask"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			if (monsterBehaviorComponent.DisableTagListenTask == null)
-			{
-				this.DisableTagListenTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.DisableTagListenTask), "DisableTagListenTask"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DisableHandle"))
+		if (monsterBehaviorComponent.FightTagListenTask == null)
 		{
-			this.DisableHandle = monsterBehaviorComponent.DisableHandle;
+			this.FightTagListenTask = null;
 		}
-		if (base.CanResetComponentProperty("DisableEffectId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FightTagListenTask), "FightTagListenTask"))
 		{
-			this.DisableEffectId = monsterBehaviorComponent.DisableEffectId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveSyncComp"))
+		if (monsterBehaviorComponent.DisableTagListenTask == null)
 		{
-			if (monsterBehaviorComponent.MoveSyncComp == null)
-			{
-				this.MoveSyncComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMovementSyncComponent>(this.MoveSyncComp), "MoveSyncComp"))
-			{
-				return false;
-			}
+			this.DisableTagListenTask = null;
 		}
-		if (base.CanResetComponentProperty("IsNormalMonster"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableTagListenTask), "DisableTagListenTask"))
 		{
-			this.IsNormalMonster = monsterBehaviorComponent.IsNormalMonster;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsFixedLocation"))
+		this.DisableHandle = monsterBehaviorComponent.DisableHandle;
+		this.DisableEffectId = monsterBehaviorComponent.DisableEffectId;
+		if (monsterBehaviorComponent.MoveSyncComp == null)
 		{
-			this.IsFixedLocation = monsterBehaviorComponent.IsFixedLocation;
+			this.MoveSyncComp = null;
 		}
-		if (base.CanResetComponentProperty("ElementalDetectableEnable"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveSyncComp), "MoveSyncComp"))
 		{
-			this.ElementalDetectableEnable = monsterBehaviorComponent.ElementalDetectableEnable;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ElementalTagListenTask"))
+		this.IsNormalMonster = monsterBehaviorComponent.IsNormalMonster;
+		this.IsFixedLocation = monsterBehaviorComponent.IsFixedLocation;
+		this.ElementalDetectableEnable = monsterBehaviorComponent.ElementalDetectableEnable;
+		if (monsterBehaviorComponent.ElementalTagListenTask == null)
 		{
-			if (monsterBehaviorComponent.ElementalTagListenTask == null)
-			{
-				this.ElementalTagListenTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.ElementalTagListenTask), "ElementalTagListenTask"))
-			{
-				return false;
-			}
+			this.ElementalTagListenTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ElementalTagListenTask), "ElementalTagListenTask"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400D78D RID: 55181
+	// Token: 0x1700280C RID: 10252
+	// (get) Token: 0x060192DC RID: 103132 RVA: 0x007AE976 File Offset: 0x007ACB76
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700280D RID: 10253
+	// (get) Token: 0x060192DD RID: 103133 RVA: 0x007AE979 File Offset: 0x007ACB79
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700280E RID: 10254
+	// (get) Token: 0x060192DE RID: 103134 RVA: 0x007AE97C File Offset: 0x007ACB7C
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700280F RID: 10255
+	// (get) Token: 0x060192DF RID: 103135 RVA: 0x007AE97F File Offset: 0x007ACB7F
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DC14 RID: 56340
 	[Nullable(1)]
 	private const string MONSTER_ENTER_WUYINQU_EFFCT = "/Game/Aki/Effect/DataAsset/Niagara/Common/Wuyinqu/DA_Fx_Wuyinqu_Ordinary_Origin.DA_Fx_Wuyinqu_Ordinary_Origin";
 
-	// Token: 0x0400D78E RID: 55182
+	// Token: 0x0400DC15 RID: 56341
 	[Nullable(1)]
 	private const string ELITE_MONSTER_ENTER_WUYINQU_EFFCT = "/Game/Aki/Effect/DataAsset/Niagara/Common/Wuyinqu/DA_Fx_Wuyinqu_Elite_Origin.DA_Fx_Wuyinqu_Elite_Origin";
 
-	// Token: 0x0400D78F RID: 55183
+	// Token: 0x0400DC16 RID: 56342
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D790 RID: 55184
+	// Token: 0x0400DC17 RID: 56343
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400D791 RID: 55185
+	// Token: 0x0400DC18 RID: 56344
 	private ITagTask FightTagListenTask;
 
-	// Token: 0x0400D792 RID: 55186
+	// Token: 0x0400DC19 RID: 56345
 	private ITagTask DisableTagListenTask;
 
-	// Token: 0x0400D793 RID: 55187
+	// Token: 0x0400DC1A RID: 56346
 	private int DisableHandle;
 
-	// Token: 0x0400D794 RID: 55188
+	// Token: 0x0400DC1B RID: 56347
 	private int DisableEffectId;
 
-	// Token: 0x0400D795 RID: 55189
+	// Token: 0x0400DC1C RID: 56348
 	private CharacterMovementSyncComponent MoveSyncComp;
 
-	// Token: 0x0400D796 RID: 55190
+	// Token: 0x0400DC1D RID: 56349
 	private bool IsNormalMonster = true;
 
-	// Token: 0x0400D797 RID: 55191
+	// Token: 0x0400DC1E RID: 56350
 	private bool IsFixedLocation;
 
-	// Token: 0x0400D798 RID: 55192
+	// Token: 0x0400DC1F RID: 56351
 	private bool ElementalDetectableEnable;
 
-	// Token: 0x0400D799 RID: 55193
+	// Token: 0x0400DC20 RID: 56352
 	private ITagTask ElementalTagListenTask;
 }

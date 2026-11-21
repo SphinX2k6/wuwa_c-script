@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002888 RID: 10376
+// Token: 0x02001E03 RID: 7683
 [NullableContext(2)]
 public interface ILevelUpSuccessEffectData
 {
-	// Token: 0x17001C99 RID: 7321
-	// (get) Token: 0x060155B4 RID: 87476
-	// (set) Token: 0x060155B5 RID: 87477
+	// Token: 0x17001CF1 RID: 7409
+	// (get) Token: 0x06012FB2 RID: 77746
+	// (set) Token: 0x06012FB3 RID: 77747
 	string Title { get; set; }
 
-	// Token: 0x17001C9A RID: 7322
-	// (get) Token: 0x060155B6 RID: 87478
-	// (set) Token: 0x060155B7 RID: 87479
+	// Token: 0x17001CF2 RID: 7410
+	// (get) Token: 0x06012FB4 RID: 77748
+	// (set) Token: 0x06012FB5 RID: 77749
 	string AudioId { get; set; }
 
-	// Token: 0x17001C9B RID: 7323
-	// (get) Token: 0x060155B8 RID: 87480
-	// (set) Token: 0x060155B9 RID: 87481
+	// Token: 0x17001CF3 RID: 7411
+	// (get) Token: 0x06012FB6 RID: 77750
+	// (set) Token: 0x06012FB7 RID: 77751
 	[Nullable(new byte[]
 	{
 		2,
@@ -34,13 +34,13 @@ public interface ILevelUpSuccessEffectData
 		1
 	})] set; }
 
-	// Token: 0x17001C9C RID: 7324
-	// (get) Token: 0x060155BA RID: 87482
-	// (set) Token: 0x060155BB RID: 87483
+	// Token: 0x17001CF4 RID: 7412
+	// (get) Token: 0x06012FB8 RID: 77752
+	// (set) Token: 0x06012FB9 RID: 77753
 	string ClickText { get; set; }
 
-	// Token: 0x17001C9D RID: 7325
-	// (get) Token: 0x060155BC RID: 87484
-	// (set) Token: 0x060155BD RID: 87485
+	// Token: 0x17001CF5 RID: 7413
+	// (get) Token: 0x06012FBA RID: 77754
+	// (set) Token: 0x06012FBB RID: 77755
 	Action ClickFunction { get; set; }
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025F0 RID: 9712
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028B0 RID: 10416
 	public class IRemoveEffectBase
 	{
-		// Token: 0x0600DA3F RID: 55871 RVA: 0x002086E5 File Offset: 0x002068E5
+		// Token: 0x0600E80C RID: 59404 RVA: 0x00224E39 File Offset: 0x00223039
 		public static IRemoveEffectBase Create(IRemoveEffectBase? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004021 RID: 16417
-		// (get) Token: 0x0600DA40 RID: 55872 RVA: 0x00208704 File Offset: 0x00206904
+		// Token: 0x1700435A RID: 17242
+		// (get) Token: 0x0600E80D RID: 59405 RVA: 0x00224E58 File Offset: 0x00223058
 		public virtual EEffectType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004022 RID: 16418
-		// (get) Token: 0x0600DA41 RID: 55873 RVA: 0x00208711 File Offset: 0x00206911
+		// Token: 0x1700435B RID: 17243
+		// (get) Token: 0x0600E80E RID: 59406 RVA: 0x00224E65 File Offset: 0x00223065
 		public virtual string Path
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007930 RID: 31024
+		// Token: 0x04007FCA RID: 32714
 		private IRemoveEffectBase Instance;
 	}
 }

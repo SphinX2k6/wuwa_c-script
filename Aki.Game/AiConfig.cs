@@ -14,7 +14,7 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 [Config(0)]
 public class AiConfig : ConfigBase
 {
-	// Token: 0x06000C8F RID: 3215 RVA: 0x00040898 File Offset: 0x0003EA98
+	// Token: 0x06000C95 RID: 3221 RVA: 0x00041438 File Offset: 0x0003F638
 	protected override bool OnInit()
 	{
 		AiStateMachineConfig? config = ConfigAiStateMachineConfigById.GetConfig("SM_Common", true);
@@ -31,20 +31,20 @@ public class AiConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06000C90 RID: 3216 RVA: 0x00040944 File Offset: 0x0003EB44
+	// Token: 0x06000C96 RID: 3222 RVA: 0x000414E4 File Offset: 0x0003F6E4
 	protected override bool OnClear()
 	{
 		this.BlackboardWhiteList.Clear();
 		return true;
 	}
 
-	// Token: 0x06000C91 RID: 3217 RVA: 0x00040952 File Offset: 0x0003EB52
+	// Token: 0x06000C97 RID: 3223 RVA: 0x000414F2 File Offset: 0x0003F6F2
 	public bool CheckBlackboardWhiteList(string key)
 	{
 		return this.BlackboardWhiteList.Contains(key);
 	}
 
-	// Token: 0x06000C92 RID: 3218 RVA: 0x00040960 File Offset: 0x0003EB60
+	// Token: 0x06000C98 RID: 3224 RVA: 0x00041500 File Offset: 0x0003F700
 	public unsafe void LoadAiConfig(AiController aiController, int aiBaseId, bool isNpc = false)
 	{
 		CharacterActorComponent charActorComp = aiController.CharActorComp;
@@ -72,7 +72,7 @@ public class AiConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06000C93 RID: 3219 RVA: 0x00040A74 File Offset: 0x0003EC74
+	// Token: 0x06000C99 RID: 3225 RVA: 0x00041614 File Offset: 0x0003F814
 	private unsafe void LoadAiWanderBodyConfig(AiController aiController)
 	{
 		CharacterActorComponent charActorComp = aiController.CharActorComp;
@@ -119,7 +119,7 @@ public class AiConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06000C94 RID: 3220 RVA: 0x00040BD4 File Offset: 0x0003EDD4
+	// Token: 0x06000C9A RID: 3226 RVA: 0x00041774 File Offset: 0x0003F974
 	private unsafe void LoadAiSubConfigs(AiController aiController, bool isNpc = false)
 	{
 		CharacterActorComponent charActorComp = aiController.CharActorComp;
@@ -274,7 +274,7 @@ public class AiConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06000C95 RID: 3221 RVA: 0x000412B4 File Offset: 0x0003F4B4
+	// Token: 0x06000C9B RID: 3227 RVA: 0x00041E54 File Offset: 0x00040054
 	private void LoadAiSkillDetails(AiSkill aiSkill)
 	{
 		if (aiSkill.BaseSkill.Value.RandomSkillsLength > 0)
@@ -312,7 +312,7 @@ public class AiConfig : ConfigBase
 		aiSkill.InitTagMap();
 	}
 
-	// Token: 0x06000C96 RID: 3222 RVA: 0x00041458 File Offset: 0x0003F658
+	// Token: 0x06000C9C RID: 3228 RVA: 0x00041FF8 File Offset: 0x000401F8
 	public unsafe void LoadAiTeamConfigNew(AiTeam aiTeam, int aiTeamLevelId)
 	{
 		aiTeam.AiTeamLevel = ConfigAiTeamLevelNewById.GetConfig(aiTeamLevelId, true);
@@ -365,7 +365,7 @@ public class AiConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06000C97 RID: 3223 RVA: 0x00041620 File Offset: 0x0003F820
+	// Token: 0x06000C9D RID: 3229 RVA: 0x000421C0 File Offset: 0x000403C0
 	public AiPatrol? LoadAiPatrolConfig(AiBase? aiBase, int patrolIndex)
 	{
 		if (aiBase == null || aiBase.Value.SubBehaviorConfigsLength == 0)
@@ -397,7 +397,7 @@ public class AiConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06000C98 RID: 3224 RVA: 0x000416F0 File Offset: 0x0003F8F0
+	// Token: 0x06000C9E RID: 3230 RVA: 0x00042290 File Offset: 0x00040490
 	public AiPatrol? LoadAiPatrolConfigById(int patrolId)
 	{
 		AiPatrol? config = ConfigAiPatrolById.GetConfig(patrolId, true);
@@ -414,7 +414,7 @@ public class AiConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06000C99 RID: 3225 RVA: 0x00041744 File Offset: 0x0003F944
+	// Token: 0x06000C9F RID: 3231 RVA: 0x000422E4 File Offset: 0x000404E4
 	[NullableContext(2)]
 	private unsafe IAiPerception LoadAiSenseConfigCreateAiPerception([Nullable(1)] AiController aiController, IReadOnlyList<int> protoSenseGroup, string configId, SpecialHateAndSense? specialConfig)
 	{
@@ -470,7 +470,7 @@ public class AiConfig : ConfigBase
 		return new AiPerception(aiController, config.Value, list.ToArray());
 	}
 
-	// Token: 0x06000C9A RID: 3226 RVA: 0x000418C0 File Offset: 0x0003FAC0
+	// Token: 0x06000CA0 RID: 3232 RVA: 0x00042460 File Offset: 0x00040660
 	public AiSense? LoadAiSense(string aiSenseId)
 	{
 		int num;
@@ -488,7 +488,7 @@ public class AiConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06000C9B RID: 3227 RVA: 0x0004191C File Offset: 0x0003FB1C
+	// Token: 0x06000CA1 RID: 3233 RVA: 0x000424BC File Offset: 0x000406BC
 	public SpecialHateAndSense? LoadSpecialHateAndSenseConfig(AiController aiController)
 	{
 		MonsterComponent monsterComponent = aiController.CharActorComp.Entity.GetComponent<CreatureDataComponent>().GetMonsterComponent();
@@ -514,7 +514,7 @@ public class AiConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x06000C9C RID: 3228 RVA: 0x000419C8 File Offset: 0x0003FBC8
+	// Token: 0x06000CA2 RID: 3234 RVA: 0x00042568 File Offset: 0x00040768
 	public AiHate? LoadAiHate(int aiHateId)
 	{
 		if (aiHateId == 0)
@@ -534,7 +534,7 @@ public class AiConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06000C9D RID: 3229 RVA: 0x00041A20 File Offset: 0x0003FC20
+	// Token: 0x06000CA3 RID: 3235 RVA: 0x000425C0 File Offset: 0x000407C0
 	public AiHate? LoadAiHateByController(AiController aiController, SpecialHateAndSense? specialConfig, long? hatredId = null)
 	{
 		if (hatredId != null)
@@ -557,7 +557,7 @@ public class AiConfig : ConfigBase
 		return this.LoadAiHate(aiHateId);
 	}
 
-	// Token: 0x06000C9E RID: 3230 RVA: 0x00041AC8 File Offset: 0x0003FCC8
+	// Token: 0x06000CA4 RID: 3236 RVA: 0x00042668 File Offset: 0x00040868
 	[NullableContext(2)]
 	public AiAlert? LoadAiAlert(string aiAlertId)
 	{
@@ -579,8 +579,8 @@ public class AiConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x17000252 RID: 594
-	// (get) Token: 0x06000C9F RID: 3231 RVA: 0x00041B2C File Offset: 0x0003FD2C
+	// Token: 0x17000255 RID: 597
+	// (get) Token: 0x06000CA5 RID: 3237 RVA: 0x000426CC File Offset: 0x000408CC
 	public static AiConfig Instance
 	{
 		get
@@ -589,7 +589,7 @@ public class AiConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06000CA0 RID: 3232 RVA: 0x00041B33 File Offset: 0x0003FD33
+	// Token: 0x06000CA6 RID: 3238 RVA: 0x000426D3 File Offset: 0x000408D3
 	public static AiConfig GetOrCreateInstance()
 	{
 		if (AiConfig._Instance == null)
@@ -599,7 +599,7 @@ public class AiConfig : ConfigBase
 		return AiConfig._Instance;
 	}
 
-	// Token: 0x06000CA1 RID: 3233 RVA: 0x00041B47 File Offset: 0x0003FD47
+	// Token: 0x06000CA7 RID: 3239 RVA: 0x000426E7 File Offset: 0x000408E7
 	public static bool CreateInstance()
 	{
 		if (AiConfig._Instance != null)
@@ -610,40 +610,40 @@ public class AiConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06000CA2 RID: 3234 RVA: 0x00041B5D File Offset: 0x0003FD5D
+	// Token: 0x06000CA8 RID: 3240 RVA: 0x000426FD File Offset: 0x000408FD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000CA3 RID: 3235 RVA: 0x00041B5F File Offset: 0x0003FD5F
+	// Token: 0x06000CA9 RID: 3241 RVA: 0x000426FF File Offset: 0x000408FF
 	public static void ResetStaticDefaultValue()
 	{
 		AiConfig._Instance = null;
 	}
 
-	// Token: 0x06000CA4 RID: 3236 RVA: 0x00041B67 File Offset: 0x0003FD67
+	// Token: 0x06000CAA RID: 3242 RVA: 0x00042707 File Offset: 0x00040907
 	static AiConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AiConfig.CreateStaticDefaultValue), new Action(AiConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000A0C RID: 2572
+	// Token: 0x04000A14 RID: 2580
 	private const string commonStateMachine = "SM_Common";
 
-	// Token: 0x04000A0D RID: 2573
+	// Token: 0x04000A15 RID: 2581
 	[Nullable(2)]
 	public CombatStateMachineDefine.Fsm.StateMachineGroup CommonStateMachineJsonObject;
 
-	// Token: 0x04000A0E RID: 2574
+	// Token: 0x04000A16 RID: 2582
 	private readonly HashSet<string> BlackboardWhiteList = new HashSet<string>();
 
-	// Token: 0x04000A0F RID: 2575
+	// Token: 0x04000A17 RID: 2583
 	public bool AsyncAiPerception;
 
-	// Token: 0x04000A10 RID: 2576
+	// Token: 0x04000A18 RID: 2584
 	public bool CppAsyncAiPerception;
 
-	// Token: 0x04000A11 RID: 2577
+	// Token: 0x04000A19 RID: 2585
 	[Nullable(2)]
 	private static AiConfig _Instance;
 }

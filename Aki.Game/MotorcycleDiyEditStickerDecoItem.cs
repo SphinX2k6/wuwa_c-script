@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002277 RID: 8823
+// Token: 0x0200175B RID: 5979
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class MotorcycleDiyEditStickerDecoItem : GridProxyAbstract<MotorcycleDiyEditStickerDecoItemData>
 {
-	// Token: 0x060113BD RID: 70589 RVA: 0x004340F8 File Offset: 0x004322F8
+	// Token: 0x0600E853 RID: 59475 RVA: 0x00440D04 File Offset: 0x0043EF04
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class MotorcycleDiyEditStickerDecoItem : GridProxyAbstract<MotorcycleDiyE
 		};
 	}
 
-	// Token: 0x060113BE RID: 70590 RVA: 0x004341FC File Offset: 0x004323FC
+	// Token: 0x0600E854 RID: 59476 RVA: 0x00440E08 File Offset: 0x0043F008
 	[NullableContext(1)]
 	public override void Refresh(MotorcycleDiyEditStickerDecoItemData data, bool isSelected, int gridIndex)
 	{
@@ -109,13 +109,13 @@ public class MotorcycleDiyEditStickerDecoItem : GridProxyAbstract<MotorcycleDiyE
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x060113BF RID: 70591 RVA: 0x00434457 File Offset: 0x00432657
+	// Token: 0x0600E855 RID: 59477 RVA: 0x00441063 File Offset: 0x0043F263
 	public override void OnSelected(bool fireEvent)
 	{
 		this.OnClickItem(EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x060113C0 RID: 70592 RVA: 0x00434460 File Offset: 0x00432660
+	// Token: 0x0600E856 RID: 59478 RVA: 0x0044106C File Offset: 0x0043F26C
 	private void OnClickItem(EToggleState toggleState)
 	{
 		if (this.Data == null)
@@ -130,11 +130,11 @@ public class MotorcycleDiyEditStickerDecoItem : GridProxyAbstract<MotorcycleDiyE
 		onClickToggleBack(this.Data.ItemId, base.GetExtendToggle(0), base.GetItem(7));
 	}
 
-	// Token: 0x0400831F RID: 33567
+	// Token: 0x0400845D RID: 33885
 	[Nullable(2)]
 	private MotorcycleDiyEditStickerDecoItemData Data;
 
-	// Token: 0x04008320 RID: 33568
+	// Token: 0x0400845E RID: 33886
 	[Nullable(new byte[]
 	{
 		2,
@@ -143,34 +143,34 @@ public class MotorcycleDiyEditStickerDecoItem : GridProxyAbstract<MotorcycleDiyE
 	})]
 	public Action<int, UUIExtendToggle, UUIItem> OnClickToggleBack;
 
-	// Token: 0x020087BA RID: 34746
+	// Token: 0x02007943 RID: 31043
 	private class EEditStickerDecoItemComponent
 	{
-		// Token: 0x0402C1C1 RID: 180673
+		// Token: 0x040274D9 RID: 160985
 		public const int TogItem = 0;
 
-		// Token: 0x0402C1C2 RID: 180674
+		// Token: 0x040274DA RID: 160986
 		public const int SprQuality = 1;
 
-		// Token: 0x0402C1C3 RID: 180675
+		// Token: 0x040274DB RID: 160987
 		public const int PnlNone = 2;
 
-		// Token: 0x0402C1C4 RID: 180676
+		// Token: 0x040274DC RID: 160988
 		public const int TexIcon = 3;
 
-		// Token: 0x0402C1C5 RID: 180677
+		// Token: 0x040274DD RID: 160989
 		public const int PnlBan = 4;
 
-		// Token: 0x0402C1C6 RID: 180678
+		// Token: 0x040274DE RID: 160990
 		public const int PnlLock = 5;
 
-		// Token: 0x0402C1C7 RID: 180679
+		// Token: 0x040274DF RID: 160991
 		public const int PnlSelect = 6;
 
-		// Token: 0x0402C1C8 RID: 180680
+		// Token: 0x040274E0 RID: 160992
 		public const int NewItem = 7;
 
-		// Token: 0x0402C1C9 RID: 180681
+		// Token: 0x040274E1 RID: 160993
 		public const int PreviewItem = 8;
 	}
 }

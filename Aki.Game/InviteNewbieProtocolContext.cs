@@ -4,14 +4,14 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200128D RID: 4749
+// Token: 0x02000741 RID: 1857
 [NullableContext(2)]
 [Nullable(0)]
 public class InviteNewbieProtocolContext : ActivityBaseData
 {
-	// Token: 0x17000B2A RID: 2858
-	// (get) Token: 0x060081D6 RID: 33238 RVA: 0x001B88F0 File Offset: 0x001B6AF0
-	// (set) Token: 0x060081D7 RID: 33239 RVA: 0x001B88F8 File Offset: 0x001B6AF8
+	// Token: 0x17000B4A RID: 2890
+	// (get) Token: 0x0600556D RID: 21869 RVA: 0x001C15C0 File Offset: 0x001BF7C0
+	// (set) Token: 0x0600556E RID: 21870 RVA: 0x001C15C8 File Offset: 0x001BF7C8
 	public string InviteCode
 	{
 		get
@@ -31,25 +31,25 @@ public class InviteNewbieProtocolContext : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060081D8 RID: 33240 RVA: 0x001B8947 File Offset: 0x001B6B47
+	// Token: 0x0600556F RID: 21871 RVA: 0x001C1617 File Offset: 0x001BF817
 	[NullableContext(1)]
 	public InviteNewbieProtocolContext(InviteNewbieModel model)
 	{
 		this.AttachedModel = model;
 	}
 
-	// Token: 0x060081D9 RID: 33241 RVA: 0x001B8956 File Offset: 0x001B6B56
+	// Token: 0x06005570 RID: 21872 RVA: 0x001C1626 File Offset: 0x001BF826
 	public void Dispose()
 	{
 	}
 
-	// Token: 0x060081DA RID: 33242 RVA: 0x001B8958 File Offset: 0x001B6B58
+	// Token: 0x06005571 RID: 21873 RVA: 0x001C1628 File Offset: 0x001BF828
 	protected override bool GetExDataFinishShowState()
 	{
 		return this.RewardClaimState;
 	}
 
-	// Token: 0x060081DB RID: 33243 RVA: 0x001B8960 File Offset: 0x001B6B60
+	// Token: 0x06005572 RID: 21874 RVA: 0x001C1630 File Offset: 0x001BF830
 	[NullableContext(1)]
 	protected override void PhraseEx(ActivityData data)
 	{
@@ -63,8 +63,8 @@ public class InviteNewbieProtocolContext : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000B2B RID: 2859
-	// (get) Token: 0x060081DC RID: 33244 RVA: 0x001B89A8 File Offset: 0x001B6BA8
+	// Token: 0x17000B4B RID: 2891
+	// (get) Token: 0x06005573 RID: 21875 RVA: 0x001C1678 File Offset: 0x001BF878
 	public string BgPath
 	{
 		get
@@ -78,54 +78,54 @@ public class InviteNewbieProtocolContext : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060081DD RID: 33245 RVA: 0x001B89DC File Offset: 0x001B6BDC
+	// Token: 0x06005574 RID: 21876 RVA: 0x001C16AC File Offset: 0x001BF8AC
 	public void SetCurrentLoginClickState(bool state)
 	{
 		this.CurrentLoginClickState = state;
 	}
 
-	// Token: 0x060081DE RID: 33246 RVA: 0x001B89E5 File Offset: 0x001B6BE5
+	// Token: 0x06005575 RID: 21877 RVA: 0x001C16B5 File Offset: 0x001BF8B5
 	public bool GetClickRedDotState()
 	{
 		return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 1, 0, 0) == 0;
 	}
 
-	// Token: 0x060081DF RID: 33247 RVA: 0x001B89FE File Offset: 0x001B6BFE
+	// Token: 0x06005576 RID: 21878 RVA: 0x001C16CE File Offset: 0x001BF8CE
 	public void SaveClickRedDotState()
 	{
 		ActivityModel.Instance.SaveActivityData(base.Id, 1, 0, 0, 1);
 	}
 
-	// Token: 0x060081E0 RID: 33248 RVA: 0x001B8A14 File Offset: 0x001B6C14
+	// Token: 0x06005577 RID: 21879 RVA: 0x001C16E4 File Offset: 0x001BF8E4
 	public void ChangeServerRedDotState(bool state)
 	{
 		this.RedDotInternal = state;
 	}
 
-	// Token: 0x060081E1 RID: 33249 RVA: 0x001B8A1D File Offset: 0x001B6C1D
+	// Token: 0x06005578 RID: 21880 RVA: 0x001C16ED File Offset: 0x001BF8ED
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.GetClickRedDotState() || (this.RedDotInternal && !this.CurrentLoginClickState);
 	}
 
-	// Token: 0x04003AC1 RID: 15041
+	// Token: 0x04003B59 RID: 15193
 	private const int CLICKKEY = 1;
 
-	// Token: 0x04003AC2 RID: 15042
+	// Token: 0x04003B5A RID: 15194
 	private string InviteCodeInternal;
 
-	// Token: 0x04003AC3 RID: 15043
+	// Token: 0x04003B5B RID: 15195
 	private bool RedDotInternal;
 
-	// Token: 0x04003AC4 RID: 15044
+	// Token: 0x04003B5C RID: 15196
 	private bool CurrentLoginClickState;
 
-	// Token: 0x04003AC5 RID: 15045
+	// Token: 0x04003B5D RID: 15197
 	public bool RewardClaimState;
 
-	// Token: 0x04003AC6 RID: 15046
+	// Token: 0x04003B5E RID: 15198
 	public int Score;
 
-	// Token: 0x04003AC7 RID: 15047
+	// Token: 0x04003B5F RID: 15199
 	protected readonly InviteNewbieModel AttachedModel;
 }

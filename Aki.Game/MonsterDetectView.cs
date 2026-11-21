@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,24 +13,24 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001697 RID: 5783
+// Token: 0x02000B4F RID: 2895
 [NullableContext(2)]
 [Nullable(0)]
 public class MonsterDetectView : UiTabViewBase
 {
-	// Token: 0x0600A521 RID: 42273 RVA: 0x0024D83B File Offset: 0x0024BA3B
+	// Token: 0x06007901 RID: 30977 RVA: 0x00257BBF File Offset: 0x00255DBF
 	public int GetCurrentId()
 	{
 		return this.CurShowingDetectingTarget;
 	}
 
-	// Token: 0x0600A522 RID: 42274 RVA: 0x0024D843 File Offset: 0x0024BA43
+	// Token: 0x06007902 RID: 30978 RVA: 0x00257BC7 File Offset: 0x00255DC7
 	public UUIExtendToggle GetCurrentToggle()
 	{
 		return this.CurrentSelectedToggle;
 	}
 
-	// Token: 0x0600A523 RID: 42275 RVA: 0x0024D84C File Offset: 0x0024BA4C
+	// Token: 0x06007903 RID: 30979 RVA: 0x00257BD0 File Offset: 0x00255DD0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 20;
@@ -90,7 +89,7 @@ public class MonsterDetectView : UiTabViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A524 RID: 42276 RVA: 0x0024DB74 File Offset: 0x0024BD74
+	// Token: 0x06007904 RID: 30980 RVA: 0x00257EF8 File Offset: 0x002560F8
 	protected override void OnStart()
 	{
 		this.DetectLoopScroll = new LoopScrollView<MonsterDetectItem, MonsterDetectionRecord>(base.GetLoopScrollViewComponent(7), base.GetItem(2).GetOwner() as AUIBaseActor, delegate()
@@ -116,7 +115,7 @@ public class MonsterDetectView : UiTabViewBase
 		this.SearchComponent = new CommonSearchComponent(base.GetItem(17), new Action<string>(this.SearchResult), new Action(this.ResetSearch));
 	}
 
-	// Token: 0x0600A525 RID: 42277 RVA: 0x0024DCEC File Offset: 0x0024BEEC
+	// Token: 0x06007905 RID: 30981 RVA: 0x00258070 File Offset: 0x00256270
 	private void InitNavigationParam()
 	{
 		AdventureGuideViewOpenData adventureGuideViewOpenData = this.ExtraParams as AdventureGuideViewOpenData;
@@ -132,7 +131,7 @@ public class MonsterDetectView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600A526 RID: 42278 RVA: 0x0024DD7C File Offset: 0x0024BF7C
+	// Token: 0x06007906 RID: 30982 RVA: 0x00258100 File Offset: 0x00256300
 	private void NavigationJumpToGrid()
 	{
 		if (!this.IsNavigationJumpToGrid)
@@ -148,7 +147,7 @@ public class MonsterDetectView : UiTabViewBase
 		UiNavigationNewController.Instance.SetNavigationFocusForView(monsterDetectItem.GetToggleItem(), false, false, false);
 	}
 
-	// Token: 0x0600A527 RID: 42279 RVA: 0x0024DDC4 File Offset: 0x0024BFC4
+	// Token: 0x06007907 RID: 30983 RVA: 0x00258148 File Offset: 0x00256348
 	protected override void OnBeforeShow()
 	{
 		AdventureGuideViewOpenData adventureGuideViewOpenData = this.ExtraParams as AdventureGuideViewOpenData;
@@ -169,7 +168,7 @@ public class MonsterDetectView : UiTabViewBase
 		}
 		this.PreSelectedMonster = num2;
 		AdventureGuideModel.Instance.CurrentMonsterId = num2;
-		List<MonsterDetectionRecord> dataList = AdventureGuideModel.Instance.GetAllDetectMonsters().Values.ToList<MonsterDetectionRecord>();
+		List<MonsterDetectionRecord> dataList = new List<MonsterDetectionRecord>(AdventureGuideModel.Instance.GetAllDetectMonsters().Values);
 		this.FilterBtn.UpdateData(EFilterSortGroupId.MonsterDetection, dataList, Array.Empty<object>());
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
 		if (levelSequencePlayer != null)
@@ -184,20 +183,20 @@ public class MonsterDetectView : UiTabViewBase
 		EventSystem.Instance.Emit<int>(EEventName.AdventureHelpBtn, 17);
 	}
 
-	// Token: 0x0600A528 RID: 42280 RVA: 0x0024DF06 File Offset: 0x0024C106
+	// Token: 0x06007908 RID: 30984 RVA: 0x0025828A File Offset: 0x0025648A
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid OnRewardLayoutUpdater()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600A529 RID: 42281 RVA: 0x0024DF0D File Offset: 0x0024C10D
+	// Token: 0x06007909 RID: 30985 RVA: 0x00258291 File Offset: 0x00256491
 	private void OnRefreshTimeLangChange()
 	{
 		this.UpdateRefreshTime();
 	}
 
-	// Token: 0x0600A52A RID: 42282 RVA: 0x0024DF18 File Offset: 0x0024C118
+	// Token: 0x0600790A RID: 30986 RVA: 0x0025829C File Offset: 0x0025649C
 	protected override void OnBeforeDestroy()
 	{
 		this.RewardLayout = null;
@@ -215,7 +214,7 @@ public class MonsterDetectView : UiTabViewBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0600A52B RID: 42283 RVA: 0x0024DF70 File Offset: 0x0024C170
+	// Token: 0x0600790B RID: 30987 RVA: 0x002582F4 File Offset: 0x002564F4
 	[NullableContext(1)]
 	private void BuildDetectList(List<MonsterDetectionRecord> list)
 	{
@@ -245,7 +244,7 @@ public class MonsterDetectView : UiTabViewBase
 		this.DetectLoopScroll.RefreshByData(this.DetectItemList, false, callBack, true);
 	}
 
-	// Token: 0x0600A52C RID: 42284 RVA: 0x0024E060 File Offset: 0x0024C260
+	// Token: 0x0600790C RID: 30988 RVA: 0x002583E4 File Offset: 0x002565E4
 	[NullableContext(1)]
 	public void RefreshByDetectingId(int id, UUIExtendToggle toggle)
 	{
@@ -314,14 +313,49 @@ public class MonsterDetectView : UiTabViewBase
 			base.GetItem(9).SetUIActive(true);
 			this.BuildRewardList(monsterDetectData.Conf.ShowReward, false);
 		}
-		IEnumerable<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("CanUpAbsorbDangerTypeList");
-		IReadOnlyList<int> intArrayConfig2 = ConfigCommonParamById.GetIntArrayConfig("CanUpAbsorbTypeDescription2List");
+		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("CanUpAbsorbDangerTypeList");
+		IEnumerable<int> intArrayConfig2 = ConfigCommonParamById.GetIntArrayConfig("CanUpAbsorbTypeDescription2List");
 		IReadOnlyList<int> intArrayConfig3 = ConfigCommonParamById.GetIntArrayConfig("CanUpAbsorbLowDangerTypeList");
-		object obj = intArrayConfig.Contains(monsterDetectData.Conf.DangerType) && intArrayConfig2.Contains(monsterDetectData.Conf.TypeDescription2);
-		bool flag = intArrayConfig3.Contains(monsterDetectData.Conf.DangerType) && intArrayConfig2.Contains(monsterDetectData.Conf.TypeDescription2);
+		bool flag = false;
+		bool flag2 = false;
+		bool flag3 = false;
+		using (IEnumerator<int> enumerator = intArrayConfig2.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current == monsterDetectData.Conf.TypeDescription2)
+				{
+					flag3 = true;
+					break;
+				}
+			}
+		}
+		using (IEnumerator<int> enumerator = intArrayConfig.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current == monsterDetectData.Conf.DangerType)
+				{
+					flag = true;
+					break;
+				}
+			}
+		}
+		using (IEnumerator<int> enumerator = intArrayConfig3.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current == monsterDetectData.Conf.DangerType)
+				{
+					flag2 = true;
+					break;
+				}
+			}
+		}
+		flag = (flag && flag3);
+		flag2 = (flag2 && flag3);
 		UUIText text = base.GetText(15);
-		object obj2 = obj;
-		if (obj2 != null)
+		if (flag)
 		{
 			int leftIntensifyCaptureGuarantee = CalabashModel.Instance.GetLeftIntensifyCaptureGuarantee();
 			LguiUtil.Instance.SetLocalTextNew(text, "UpAbsorptionTimeWithTagText", new <>z__ReadOnlySingleElementList<object>(leftIntensifyCaptureGuarantee));
@@ -330,7 +364,7 @@ public class MonsterDetectView : UiTabViewBase
 				text.SetUIActive(true);
 			}
 		}
-		else if (flag)
+		else if (flag2)
 		{
 			int leftLowCostIntensifyCaptureGuarantee = CalabashModel.Instance.GetLeftLowCostIntensifyCaptureGuarantee();
 			LguiUtil.Instance.SetLocalTextNew(text, "UpAbsorptionTimeWithTagText", new <>z__ReadOnlySingleElementList<object>(leftLowCostIntensifyCaptureGuarantee));
@@ -343,7 +377,7 @@ public class MonsterDetectView : UiTabViewBase
 		{
 			text.SetUIActive(false);
 		}
-		bool uiactive = (obj2 | flag) != null;
+		bool uiactive = flag || flag2;
 		UUIButtonComponent button = base.GetButton(16);
 		if (button == null)
 		{
@@ -352,7 +386,7 @@ public class MonsterDetectView : UiTabViewBase
 		button.RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600A52D RID: 42285 RVA: 0x0024E47C File Offset: 0x0024C67C
+	// Token: 0x0600790D RID: 30989 RVA: 0x0025889C File Offset: 0x00256A9C
 	private int GetFirstMonsterIdByDangerType()
 	{
 		int? preSelectedDangerType = this.PreSelectedDangerType;
@@ -381,7 +415,7 @@ public class MonsterDetectView : UiTabViewBase
 		return id;
 	}
 
-	// Token: 0x0600A52E RID: 42286 RVA: 0x0024E558 File Offset: 0x0024C758
+	// Token: 0x0600790E RID: 30990 RVA: 0x00258978 File Offset: 0x00256B78
 	private void UpdateRefreshTime()
 	{
 		int currentId = this.GetCurrentId();
@@ -407,13 +441,13 @@ public class MonsterDetectView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600A52F RID: 42287 RVA: 0x0024E5D8 File Offset: 0x0024C7D8
+	// Token: 0x0600790F RID: 30991 RVA: 0x002589F8 File Offset: 0x00256BF8
 	public void Tick(float delta)
 	{
 		this.UpdateRefreshTime();
 	}
 
-	// Token: 0x0600A530 RID: 42288 RVA: 0x0024E5E0 File Offset: 0x0024C7E0
+	// Token: 0x06007910 RID: 30992 RVA: 0x00258A00 File Offset: 0x00256C00
 	private void BuildRewardList(int dropId, bool isReceived)
 	{
 		Dictionary<int, int> dropShowInfo = AdventureGuideConfig.Instance.GetDropShowInfo(dropId);
@@ -427,7 +461,7 @@ public class MonsterDetectView : UiTabViewBase
 		this.RewardLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600A531 RID: 42289 RVA: 0x0024E670 File Offset: 0x0024C870
+	// Token: 0x06007911 RID: 30993 RVA: 0x00258A90 File Offset: 0x00256C90
 	[NullableContext(1)]
 	private void OnFilterUpdate(List<MonsterDetectionRecord> list, bool result, EFilterSortType type)
 	{
@@ -443,7 +477,7 @@ public class MonsterDetectView : UiTabViewBase
 		this.SearchComponent.ResetSearch(true);
 	}
 
-	// Token: 0x0600A532 RID: 42290 RVA: 0x0024E710 File Offset: 0x0024C910
+	// Token: 0x06007912 RID: 30994 RVA: 0x00258B30 File Offset: 0x00256D30
 	private void OnDetectClickFunction()
 	{
 		if (Time.Instance.Now - this.LastClickTime <= (double)(TimeUtil.Instance.InverseMillisecond * 2))
@@ -486,13 +520,13 @@ public class MonsterDetectView : UiTabViewBase
 		AdventureGuideController.Instance.RequestForDetection(DetectionType.NormalMonster, Array.Empty<int>(), this.CurShowingDetectingTarget);
 	}
 
-	// Token: 0x0600A533 RID: 42291 RVA: 0x0024E88C File Offset: 0x0024CA8C
+	// Token: 0x06007913 RID: 30995 RVA: 0x00258CAC File Offset: 0x00256EAC
 	private void OnLeftTimeBtn()
 	{
 		HelpController.Instance.OpenHelpById(72);
 	}
 
-	// Token: 0x0600A534 RID: 42292 RVA: 0x0024E89A File Offset: 0x0024CA9A
+	// Token: 0x06007914 RID: 30996 RVA: 0x00258CBA File Offset: 0x00256EBA
 	private void OnAnimFinishDelegate()
 	{
 		this.NavigationJumpToGrid();
@@ -504,7 +538,7 @@ public class MonsterDetectView : UiTabViewBase
 		detectLoopScroll.SetAnimFinishDelegate(null);
 	}
 
-	// Token: 0x0600A535 RID: 42293 RVA: 0x0024E8B4 File Offset: 0x0024CAB4
+	// Token: 0x06007915 RID: 30997 RVA: 0x00258CD4 File Offset: 0x00256ED4
 	public void JumpToTarget(int target)
 	{
 		int num = 0;
@@ -522,7 +556,7 @@ public class MonsterDetectView : UiTabViewBase
 		this.JumpIndex = num;
 	}
 
-	// Token: 0x0600A536 RID: 42294 RVA: 0x0024E950 File Offset: 0x0024CB50
+	// Token: 0x06007916 RID: 30998 RVA: 0x00258D70 File Offset: 0x00256F70
 	[NullableContext(1)]
 	private void SearchResult(string content)
 	{
@@ -531,10 +565,10 @@ public class MonsterDetectView : UiTabViewBase
 		MonsterDetectionRecord[] searchList = instance.GetSearchList(((detectItemList != null) ? detectItemList.ToArray() : null) ?? Array.Empty<MonsterDetectionRecord>(), content);
 		base.GetItem(18).SetUIActive(searchList.Length != 0);
 		base.GetItem(19).SetUIActive(searchList.Length == 0);
-		this.DetectLoopScroll.RefreshByData(searchList.ToList<MonsterDetectionRecord>(), false, null, false);
+		this.DetectLoopScroll.RefreshByData(searchList, false, null, false);
 	}
 
-	// Token: 0x0600A537 RID: 42295 RVA: 0x0024E9BC File Offset: 0x0024CBBC
+	// Token: 0x06007917 RID: 30999 RVA: 0x00258DD8 File Offset: 0x00256FD8
 	private void ResetSearch()
 	{
 		if (this.FilterResult != null)
@@ -550,19 +584,19 @@ public class MonsterDetectView : UiTabViewBase
 		this.DetectLoopScroll.RefreshByData(this.FilterResult ?? new List<MonsterDetectionRecord>(), false, null, false);
 	}
 
-	// Token: 0x04004AB2 RID: 19122
+	// Token: 0x04004B59 RID: 19289
 	private const int MONSTER_HELP = 17;
 
-	// Token: 0x04004AB3 RID: 19123
+	// Token: 0x04004B5A RID: 19290
 	private const int LEFT_TIME_HELP = 72;
 
-	// Token: 0x04004AB4 RID: 19124
+	// Token: 0x04004B5B RID: 19291
 	private const int NIGHT_MARE_TYPE = 23;
 
-	// Token: 0x04004AB5 RID: 19125
+	// Token: 0x04004B5C RID: 19292
 	private const int NIGHT_MARE_TAG = 63;
 
-	// Token: 0x04004AB6 RID: 19126
+	// Token: 0x04004B5D RID: 19293
 	[Nullable(new byte[]
 	{
 		2,
@@ -571,7 +605,7 @@ public class MonsterDetectView : UiTabViewBase
 	})]
 	private LoopScrollView<MonsterDetectItem, MonsterDetectionRecord> DetectLoopScroll;
 
-	// Token: 0x04004AB7 RID: 19127
+	// Token: 0x04004B5E RID: 19294
 	[Nullable(new byte[]
 	{
 		2,
@@ -579,7 +613,7 @@ public class MonsterDetectView : UiTabViewBase
 	})]
 	private List<MonsterDetectionRecord> DetectItemList;
 
-	// Token: 0x04004AB8 RID: 19128
+	// Token: 0x04004B5F RID: 19295
 	[Nullable(new byte[]
 	{
 		2,
@@ -587,10 +621,10 @@ public class MonsterDetectView : UiTabViewBase
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x04004AB9 RID: 19129
+	// Token: 0x04004B60 RID: 19296
 	private int CurShowingDetectingTarget;
 
-	// Token: 0x04004ABA RID: 19130
+	// Token: 0x04004B61 RID: 19297
 	[Nullable(new byte[]
 	{
 		2,
@@ -598,43 +632,43 @@ public class MonsterDetectView : UiTabViewBase
 	})]
 	private FilterSortEntrance<MonsterDetectionRecord> FilterBtn;
 
-	// Token: 0x04004ABB RID: 19131
+	// Token: 0x04004B62 RID: 19298
 	private UUIExtendToggle CurrentSelectedToggle;
 
-	// Token: 0x04004ABC RID: 19132
+	// Token: 0x04004B63 RID: 19299
 	private UUIText DetectText;
 
-	// Token: 0x04004ABD RID: 19133
+	// Token: 0x04004B64 RID: 19300
 	private int? PreSelectedMonster = new int?(-1);
 
-	// Token: 0x04004ABE RID: 19134
+	// Token: 0x04004B65 RID: 19301
 	private int? PreSelectedDangerType;
 
-	// Token: 0x04004ABF RID: 19135
+	// Token: 0x04004B66 RID: 19302
 	private UUIButtonComponent DetectBtn;
 
-	// Token: 0x04004AC0 RID: 19136
+	// Token: 0x04004B67 RID: 19303
 	private bool DetectInteractive = true;
 
-	// Token: 0x04004AC1 RID: 19137
+	// Token: 0x04004B68 RID: 19304
 	private double LastClickTime;
 
-	// Token: 0x04004AC2 RID: 19138
+	// Token: 0x04004B69 RID: 19305
 	private CommonItemSmallItemGrid MonsterHeadItem;
 
-	// Token: 0x04004AC3 RID: 19139
+	// Token: 0x04004B6A RID: 19306
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04004AC4 RID: 19140
+	// Token: 0x04004B6B RID: 19307
 	private bool IsNavigationJumpToGrid;
 
-	// Token: 0x04004AC5 RID: 19141
+	// Token: 0x04004B6C RID: 19308
 	private int JumpIndex;
 
-	// Token: 0x04004AC6 RID: 19142
+	// Token: 0x04004B6D RID: 19309
 	private CommonSearchComponent SearchComponent;
 
-	// Token: 0x04004AC7 RID: 19143
+	// Token: 0x04004B6E RID: 19310
 	[Nullable(new byte[]
 	{
 		2,
@@ -642,49 +676,49 @@ public class MonsterDetectView : UiTabViewBase
 	})]
 	private List<MonsterDetectionRecord> FilterResult;
 
-	// Token: 0x02007C74 RID: 31860
+	// Token: 0x02006DF9 RID: 28153
 	[NullableContext(0)]
 	private enum ENodeDefine
 	{
-		// Token: 0x04028D4D RID: 167245
+		// Token: 0x04024076 RID: 147574
 		FilterBtn,
-		// Token: 0x04028D4E RID: 167246
+		// Token: 0x04024077 RID: 147575
 		DetectBtn,
-		// Token: 0x04028D4F RID: 167247
+		// Token: 0x04024078 RID: 147576
 		DetectItem,
-		// Token: 0x04028D50 RID: 167248
+		// Token: 0x04024079 RID: 147577
 		RewardItem,
-		// Token: 0x04028D51 RID: 167249
+		// Token: 0x0402407A RID: 147578
 		NameText,
-		// Token: 0x04028D52 RID: 167250
+		// Token: 0x0402407B RID: 147579
 		DescText,
-		// Token: 0x04028D53 RID: 167251
+		// Token: 0x0402407C RID: 147580
 		LowDangerItem,
-		// Token: 0x04028D54 RID: 167252
+		// Token: 0x0402407D RID: 147581
 		DetectScroll,
-		// Token: 0x04028D55 RID: 167253
+		// Token: 0x0402407E RID: 147582
 		RewardLayout,
-		// Token: 0x04028D56 RID: 167254
+		// Token: 0x0402407F RID: 147583
 		DropItem,
-		// Token: 0x04028D57 RID: 167255
+		// Token: 0x04024080 RID: 147584
 		ConfirmText,
-		// Token: 0x04028D58 RID: 167256
+		// Token: 0x04024081 RID: 147585
 		LowLevelText,
-		// Token: 0x04028D59 RID: 167257
+		// Token: 0x04024082 RID: 147586
 		TxtUnlock,
-		// Token: 0x04028D5A RID: 167258
+		// Token: 0x04024083 RID: 147587
 		UnlockItem,
-		// Token: 0x04028D5B RID: 167259
+		// Token: 0x04024084 RID: 147588
 		MonsterItem,
-		// Token: 0x04028D5C RID: 167260
+		// Token: 0x04024085 RID: 147589
 		LeftTimeText,
-		// Token: 0x04028D5D RID: 167261
+		// Token: 0x04024086 RID: 147590
 		LeftTimeBtn,
-		// Token: 0x04028D5E RID: 167262
+		// Token: 0x04024087 RID: 147591
 		UiItemInputBoxItem,
-		// Token: 0x04028D5F RID: 167263
+		// Token: 0x04024088 RID: 147592
 		RightItem,
-		// Token: 0x04028D60 RID: 167264
+		// Token: 0x04024089 RID: 147593
 		EmptyItem
 	}
 }

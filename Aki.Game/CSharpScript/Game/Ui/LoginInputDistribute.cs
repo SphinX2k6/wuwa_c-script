@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004688 RID: 18056
+	// Token: 0x020035B9 RID: 13753
 	public class LoginInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E999 RID: 190873 RVA: 0x00ACA39C File Offset: 0x00AC859C
+		// Token: 0x060230E3 RID: 143587 RVA: 0x009F80D0 File Offset: 0x009F62D0
 		public override bool OnRefresh()
 		{
 			if (WorldModel.Instance.IsStandalone || !this.IsLogin())
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602E99A RID: 190874 RVA: 0x00ACA3F8 File Offset: 0x00AC85F8
+		// Token: 0x060230E4 RID: 143588 RVA: 0x009F812C File Offset: 0x009F632C
 		private bool IsLogin()
 		{
 			return !LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.EnterGameRet);

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002F6 RID: 758
+	// Token: 0x0200033D RID: 829
 	public class IEffectSplineCreationMode_SetValue
 	{
-		// Token: 0x04000CE1 RID: 3297
+		// Token: 0x04000DCB RID: 3531
 		public EEffectSplineCreateMode Type;
 	}
 }

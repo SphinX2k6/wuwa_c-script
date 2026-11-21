@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200661C RID: 26140
+	// Token: 0x02006C8D RID: 27789
 	public class IDurationInteractT
 	{
-		// Token: 0x1700C23C RID: 49724
-		// (get) Token: 0x0602D653 RID: 185939 RVA: 0x00638572 File Offset: 0x00636772
-		// (set) Token: 0x0602D654 RID: 185940 RVA: 0x0063857A File Offset: 0x0063677A
+		// Token: 0x1700CBDA RID: 52186
+		// (get) Token: 0x0602FE24 RID: 196132 RVA: 0x006850DA File Offset: 0x006832DA
+		// (set) Token: 0x0602FE25 RID: 196133 RVA: 0x006850E2 File Offset: 0x006832E2
 		public float Duration { get; set; }
 
-		// Token: 0x0602D655 RID: 185941 RVA: 0x00638583 File Offset: 0x00636783
+		// Token: 0x0602FE26 RID: 196134 RVA: 0x006850EB File Offset: 0x006832EB
 		public IDurationInteractT()
 		{
 			this.Duration = 0f;

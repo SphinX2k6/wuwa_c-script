@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F07 RID: 20231
+	// Token: 0x02005439 RID: 21561
 	public struct IBeamLayoutConfigWall : IFlatbufferObject
 	{
-		// Token: 0x170091A3 RID: 37283
-		// (get) Token: 0x0601FF94 RID: 130964 RVA: 0x004732BD File Offset: 0x004714BD
+		// Token: 0x17009925 RID: 39205
+		// (get) Token: 0x06021D04 RID: 138500 RVA: 0x004A9651 File Offset: 0x004A7851
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FF95 RID: 130965 RVA: 0x004732CA File Offset: 0x004714CA
+		// Token: 0x06021D05 RID: 138501 RVA: 0x004A965E File Offset: 0x004A785E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FF96 RID: 130966 RVA: 0x004732D4 File Offset: 0x004714D4
+		// Token: 0x06021D06 RID: 138502 RVA: 0x004A9668 File Offset: 0x004A7868
 		public static IBeamLayoutConfigWall GetRootAsIBeamLayoutConfigWall(ByteBuffer _bb)
 		{
 			return IBeamLayoutConfigWall.GetRootAsIBeamLayoutConfigWall(_bb, default(IBeamLayoutConfigWall));
 		}
 
-		// Token: 0x0601FF97 RID: 130967 RVA: 0x004732F0 File Offset: 0x004714F0
+		// Token: 0x06021D07 RID: 138503 RVA: 0x004A9684 File Offset: 0x004A7884
 		public static IBeamLayoutConfigWall GetRootAsIBeamLayoutConfigWall(ByteBuffer _bb, IBeamLayoutConfigWall obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FF98 RID: 130968 RVA: 0x0047330D File Offset: 0x0047150D
+		// Token: 0x06021D08 RID: 138504 RVA: 0x004A96A1 File Offset: 0x004A78A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FF99 RID: 130969 RVA: 0x0047331C File Offset: 0x0047151C
+		// Token: 0x06021D09 RID: 138505 RVA: 0x004A96B0 File Offset: 0x004A78B0
 		public IBeamLayoutConfigWall __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170091A4 RID: 37284
-		// (get) Token: 0x0601FF9A RID: 130970 RVA: 0x0047332C File Offset: 0x0047152C
+		// Token: 0x17009926 RID: 39206
+		// (get) Token: 0x06021D0A RID: 138506 RVA: 0x004A96C0 File Offset: 0x004A78C0
 		public EBeamLayoutType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170091A5 RID: 37285
-		// (get) Token: 0x0601FF9B RID: 130971 RVA: 0x00473368 File Offset: 0x00471568
+		// Token: 0x17009927 RID: 39207
+		// (get) Token: 0x06021D0B RID: 138507 RVA: 0x004A96FC File Offset: 0x004A78FC
 		public int Count
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170091A6 RID: 37286
-		// (get) Token: 0x0601FF9C RID: 130972 RVA: 0x004733A4 File Offset: 0x004715A4
+		// Token: 0x17009928 RID: 39208
+		// (get) Token: 0x06021D0C RID: 138508 RVA: 0x004A9738 File Offset: 0x004A7938
 		public float Distance
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FF9D RID: 130973 RVA: 0x004733E4 File Offset: 0x004715E4
+		// Token: 0x06021D0D RID: 138509 RVA: 0x004A9778 File Offset: 0x004A7978
 		public static Offset<IBeamLayoutConfigWall> CreateIBeamLayoutConfigWall(FlatBufferBuilder builder, EBeamLayoutType Type = EBeamLayoutType.BeamWall, int Count = 0, float Distance = 0f)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBeamLayoutConfigWall.EndIBeamLayoutConfigWall(builder);
 		}
 
-		// Token: 0x0601FF9E RID: 130974 RVA: 0x00473408 File Offset: 0x00471608
+		// Token: 0x06021D0E RID: 138510 RVA: 0x004A979C File Offset: 0x004A799C
 		public static void StartIBeamLayoutConfigWall(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601FF9F RID: 130975 RVA: 0x00473411 File Offset: 0x00471611
+		// Token: 0x06021D0F RID: 138511 RVA: 0x004A97A5 File Offset: 0x004A79A5
 		public static void AddType(FlatBufferBuilder builder, EBeamLayoutType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601FFA0 RID: 130976 RVA: 0x0047341C File Offset: 0x0047161C
+		// Token: 0x06021D10 RID: 138512 RVA: 0x004A97B0 File Offset: 0x004A79B0
 		public static void AddCount(FlatBufferBuilder builder, int count)
 		{
 			builder.AddInt(1, count, 0);
 		}
 
-		// Token: 0x0601FFA1 RID: 130977 RVA: 0x00473427 File Offset: 0x00471627
+		// Token: 0x06021D11 RID: 138513 RVA: 0x004A97BB File Offset: 0x004A79BB
 		public static void AddDistance(FlatBufferBuilder builder, float distance)
 		{
 			builder.AddFloat(2, distance, 0.0);
 		}
 
-		// Token: 0x0601FFA2 RID: 130978 RVA: 0x0047343A File Offset: 0x0047163A
+		// Token: 0x06021D12 RID: 138514 RVA: 0x004A97CE File Offset: 0x004A79CE
 		public static Offset<IBeamLayoutConfigWall> EndIBeamLayoutConfigWall(FlatBufferBuilder builder)
 		{
 			return new Offset<IBeamLayoutConfigWall>(builder.EndTable());
 		}
 
-		// Token: 0x0601FFA3 RID: 130979 RVA: 0x00473448 File Offset: 0x00471648
+		// Token: 0x06021D13 RID: 138515 RVA: 0x004A97DC File Offset: 0x004A79DC
 		public IBeamLayoutConfigWallT UnPack()
 		{
 			IBeamLayoutConfigWallT beamLayoutConfigWallT = new IBeamLayoutConfigWallT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return beamLayoutConfigWallT;
 		}
 
-		// Token: 0x0601FFA4 RID: 130980 RVA: 0x00473463 File Offset: 0x00471663
+		// Token: 0x06021D14 RID: 138516 RVA: 0x004A97F7 File Offset: 0x004A79F7
 		public void UnPackTo(IBeamLayoutConfigWallT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Distance = this.Distance;
 		}
 
-		// Token: 0x0601FFA5 RID: 130981 RVA: 0x0047348C File Offset: 0x0047168C
+		// Token: 0x06021D15 RID: 138517 RVA: 0x004A9820 File Offset: 0x004A7A20
 		public static Offset<IBeamLayoutConfigWall> Pack(FlatBufferBuilder builder, IBeamLayoutConfigWallT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBeamLayoutConfigWall.CreateIBeamLayoutConfigWall(builder, _o.Type, _o.Count, _o.Distance);
 		}
 
-		// Token: 0x0400DD49 RID: 56649
+		// Token: 0x0400E8F8 RID: 59640
 		private Table __p;
 	}
 }

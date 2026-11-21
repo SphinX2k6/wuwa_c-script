@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055FF RID: 22015
+	// Token: 0x020045D5 RID: 17877
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChangeItemInfoData : <MapRogueGridTakeView>F0D6A9394D98A3554905B4525007C4F9CD3B1992BAFD47820775D4B63968B03FA__IChangeItemInfoData
 	{
-		// Token: 0x1700871B RID: 34587
-		// (get) Token: 0x060380AE RID: 229550 RVA: 0x00D45C03 File Offset: 0x00D43E03
-		// (set) Token: 0x060380AF RID: 229551 RVA: 0x00D45C0B File Offset: 0x00D43E0B
+		// Token: 0x17005AE2 RID: 23266
+		// (get) Token: 0x0602CFAC RID: 184236 RVA: 0x00C9394B File Offset: 0x00C91B4B
+		// (set) Token: 0x0602CFAD RID: 184237 RVA: 0x00C93953 File Offset: 0x00C91B53
 		public string TitleId { get; set; }
 
-		// Token: 0x1700871C RID: 34588
-		// (get) Token: 0x060380B0 RID: 229552 RVA: 0x00D45C14 File Offset: 0x00D43E14
-		// (set) Token: 0x060380B1 RID: 229553 RVA: 0x00D45C1C File Offset: 0x00D43E1C
+		// Token: 0x17005AE3 RID: 23267
+		// (get) Token: 0x0602CFAE RID: 184238 RVA: 0x00C9395C File Offset: 0x00C91B5C
+		// (set) Token: 0x0602CFAF RID: 184239 RVA: 0x00C93964 File Offset: 0x00C91B64
 		public string Value { get; set; }
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E12 RID: 19986
+	// Token: 0x02005321 RID: 21281
 	public enum ESearchlightRotateAxis : byte
 	{
-		// Token: 0x0400DB21 RID: 56097
+		// Token: 0x0400E692 RID: 59026
 		Yaw,
-		// Token: 0x0400DB22 RID: 56098
+		// Token: 0x0400E693 RID: 59027
 		Pitch
 	}
 }

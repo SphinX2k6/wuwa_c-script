@@ -4,10 +4,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050CA RID: 20682
+	// Token: 0x0200409A RID: 16538
 	public class FlowActionPlaySpine : FlowActionBase
 	{
-		// Token: 0x06034F16 RID: 216854 RVA: 0x00C8A3D8 File Offset: 0x00C885D8
+		// Token: 0x06029E0F RID: 171535 RVA: 0x00BD76C0 File Offset: 0x00BD58C0
 		protected override void OnExecute()
 		{
 			SetSpineAnimation setSpineAnimation = this.ActionInfo.Params as SetSpineAnimation;
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x06034F17 RID: 216855 RVA: 0x00C8A42C File Offset: 0x00C8862C
+		// Token: 0x06029E10 RID: 171536 RVA: 0x00BD7714 File Offset: 0x00BD5914
 		protected override void OnBackgroundExecute()
 		{
 		}

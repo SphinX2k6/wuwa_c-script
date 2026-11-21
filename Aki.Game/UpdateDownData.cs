@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002215 RID: 8725
+// Token: 0x020016F9 RID: 5881
 [NullableContext(1)]
 [Nullable(0)]
 public class UpdateDownData
 {
-	// Token: 0x04008170 RID: 33136
+	// Token: 0x040082AE RID: 33454
 	public bool NeedWait;
 
-	// Token: 0x04008171 RID: 33137
+	// Token: 0x040082AF RID: 33455
 	public float Rate;
 
-	// Token: 0x04008172 RID: 33138
+	// Token: 0x040082B0 RID: 33456
 	public string FileName = "";
 
-	// Token: 0x04008173 RID: 33139
+	// Token: 0x040082B1 RID: 33457
 	public string SpeedText = "";
 
-	// Token: 0x04008174 RID: 33140
+	// Token: 0x040082B2 RID: 33458
 	public string SizeCurrent = "";
 
-	// Token: 0x04008175 RID: 33141
+	// Token: 0x040082B3 RID: 33459
 	public string SizeTotal = "";
 }

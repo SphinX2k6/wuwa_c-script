@@ -7,13 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E27 RID: 3623
+	// Token: 0x02000F23 RID: 3875
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IElementalMatchActions
 	{
-		// Token: 0x060051F2 RID: 20978 RVA: 0x000C9F2E File Offset: 0x000C812E
-		[NullableContext(1)]
+		// Token: 0x06005719 RID: 22297 RVA: 0x000D57F6 File Offset: 0x000D39F6
+		[NullableContext(0)]
 		public static IElementalMatchActions Create(IElementalMatchActions? instance)
 		{
 			if (instance == null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B61 RID: 7009
-		// (get) Token: 0x060051F3 RID: 20979 RVA: 0x000C9F4D File Offset: 0x000C814D
+		// Token: 0x17001CCE RID: 7374
+		// (get) Token: 0x0600571A RID: 22298 RVA: 0x000D5815 File Offset: 0x000D3A15
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -42,19 +42,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B62 RID: 7010
-		// (get) Token: 0x060051F4 RID: 20980 RVA: 0x000C9F84 File Offset: 0x000C8184
+		// Token: 0x17001CCF RID: 7375
+		// (get) Token: 0x0600571B RID: 22299 RVA: 0x000D584C File Offset: 0x000D3A4C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -77,24 +77,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F32 RID: 12082
+		// Token: 0x040031FA RID: 12794
 		private IElementalMatchActions Instance;
 
-		// Token: 0x04002F33 RID: 12083
+		// Token: 0x040031FB RID: 12795
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002F34 RID: 12084
+		// Token: 0x040031FC RID: 12796
 		private bool _ConditionInited;
 
-		// Token: 0x04002F35 RID: 12085
+		// Token: 0x040031FD RID: 12797
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002F36 RID: 12086
+		// Token: 0x040031FE RID: 12798
 		private bool _ActionsInited;
 	}
 }

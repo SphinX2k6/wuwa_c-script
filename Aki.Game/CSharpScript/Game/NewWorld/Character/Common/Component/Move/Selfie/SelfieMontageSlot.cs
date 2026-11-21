@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.Selfie
 {
-	// Token: 0x02007101 RID: 28929
+	// Token: 0x020063B1 RID: 25521
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class SelfieMontageSlot
 	{
-		// Token: 0x06046A03 RID: 289283 RVA: 0x011C604A File Offset: 0x011C424A
+		// Token: 0x0603DE02 RID: 253442 RVA: 0x011F506A File Offset: 0x011F326A
 		public void Clear()
 		{
 			this.ConfigId = 0;
@@ -18,26 +18,26 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.Selfie
 			this.AnimInstance = null;
 		}
 
-		// Token: 0x06046A04 RID: 289284 RVA: 0x011C606C File Offset: 0x011C426C
+		// Token: 0x0603DE03 RID: 253443 RVA: 0x011F508C File Offset: 0x011F328C
 		public bool IsCurrent(int configId, string dtPath)
 		{
 			return this.ConfigId == configId && this.DataTablePath == dtPath;
 		}
 
-		// Token: 0x0402510D RID: 151821
+		// Token: 0x04020DA2 RID: 134562
 		public int Token;
 
-		// Token: 0x0402510E RID: 151822
+		// Token: 0x04020DA3 RID: 134563
 		public int ConfigId;
 
-		// Token: 0x0402510F RID: 151823
+		// Token: 0x04020DA4 RID: 134564
 		public string DataTablePath = "";
 
-		// Token: 0x04025110 RID: 151824
+		// Token: 0x04020DA5 RID: 134565
 		[Nullable(2)]
 		public UAnimMontage Montage;
 
-		// Token: 0x04025111 RID: 151825
+		// Token: 0x04020DA6 RID: 134566
 		[Nullable(2)]
 		public UAnimInstance AnimInstance;
 	}

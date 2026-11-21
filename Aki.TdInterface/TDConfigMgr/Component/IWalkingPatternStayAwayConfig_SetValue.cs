@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007CA RID: 1994
+	// Token: 0x0200086D RID: 2157
 	public class IWalkingPatternStayAwayConfig_SetValue
 	{
-		// Token: 0x04001CB0 RID: 7344
+		// Token: 0x04001EBC RID: 7868
 		public int SplineDistance;
 
-		// Token: 0x04001CB1 RID: 7345
+		// Token: 0x04001EBD RID: 7869
 		public int? StayAwayTime;
 	}
 }

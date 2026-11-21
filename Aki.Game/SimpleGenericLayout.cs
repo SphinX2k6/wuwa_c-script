@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CD6 RID: 11478
+// Token: 0x0200222F RID: 8751
 [NullableContext(1)]
 [Nullable(0)]
 public class SimpleGenericLayout
 {
-	// Token: 0x06018145 RID: 98629 RVA: 0x0061F2CC File Offset: 0x0061D4CC
+	// Token: 0x060159C2 RID: 88514 RVA: 0x00644E84 File Offset: 0x00643084
 	public SimpleGenericLayout(UUILayoutBase layout)
 	{
 		this.Layout = layout;
@@ -22,7 +22,7 @@ public class SimpleGenericLayout
 		this.ItemList.Add(this.SrcItem);
 	}
 
-	// Token: 0x06018146 RID: 98630 RVA: 0x0061F348 File Offset: 0x0061D548
+	// Token: 0x060159C3 RID: 88515 RVA: 0x00644F00 File Offset: 0x00643100
 	public void RebuildLayout(int length)
 	{
 		if (this.SrcItem == null || !this.SrcItem.IsValid())
@@ -46,13 +46,13 @@ public class SimpleGenericLayout
 		}
 	}
 
-	// Token: 0x06018147 RID: 98631 RVA: 0x0061F436 File Offset: 0x0061D636
+	// Token: 0x060159C4 RID: 88516 RVA: 0x00644FEE File Offset: 0x006431EE
 	public int GetDisplayCount()
 	{
 		return this.DisplayCount;
 	}
 
-	// Token: 0x06018148 RID: 98632 RVA: 0x0061F43E File Offset: 0x0061D63E
+	// Token: 0x060159C5 RID: 88517 RVA: 0x00644FF6 File Offset: 0x006431F6
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -63,23 +63,23 @@ public class SimpleGenericLayout
 		return this.ItemList;
 	}
 
-	// Token: 0x06018149 RID: 98633 RVA: 0x0061F448 File Offset: 0x0061D648
+	// Token: 0x060159C6 RID: 88518 RVA: 0x00645000 File Offset: 0x00643200
 	public void SetActive(bool active)
 	{
 		this.Layout.RootUIComp.Get().SetUIActive(active);
 	}
 
-	// Token: 0x0400B316 RID: 45846
+	// Token: 0x0400B682 RID: 46722
 	[Nullable(2)]
 	public readonly UUILayoutBase Layout;
 
-	// Token: 0x0400B317 RID: 45847
+	// Token: 0x0400B683 RID: 46723
 	[Nullable(2)]
 	private readonly UUIItem SrcItem;
 
-	// Token: 0x0400B318 RID: 45848
+	// Token: 0x0400B684 RID: 46724
 	private readonly List<UUIItem> ItemList = new List<UUIItem>();
 
-	// Token: 0x0400B319 RID: 45849
+	// Token: 0x0400B685 RID: 46725
 	private int DisplayCount;
 }

@@ -13,6 +13,7 @@ using CSharpScript.Game.Manager;
 using CSharpScript.Game.Module.CombatMessage;
 using CSharpScript.Game.Module.DataLayerSwitch;
 using CSharpScript.Game.Module.DeadRevive;
+using CSharpScript.Game.Module.Teleport;
 using CSharpScript.Game.Module.WorldMap;
 using CSharpScript.Game.Render;
 using CSharpScript.Game.World.Controller;
@@ -24,13 +25,13 @@ using Google.Protobuf;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020034DB RID: 13531
+// Token: 0x02002A4F RID: 10831
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class GameModeController : ControllerBase
 {
-	// Token: 0x0601D9D4 RID: 121300 RVA: 0x00848708 File Offset: 0x00846908
+	// Token: 0x0601B6DE RID: 112350 RVA: 0x00870A54 File Offset: 0x0086EC54
 	public void AddWorldDoneBlocker(Func<UniTask> blocker, int timeout = 60000)
 	{
 		if (this.IsWorldDoneBlockersExecuted)
@@ -41,7 +42,7 @@ public class GameModeController : ControllerBase
 		this.WorldDoneBlockers.Add(new ValueTuple<Func<UniTask>, int>(blocker, timeout));
 	}
 
-	// Token: 0x0601D9D5 RID: 121301 RVA: 0x0084874C File Offset: 0x0084694C
+	// Token: 0x0601B6DF RID: 112351 RVA: 0x00870A98 File Offset: 0x0086EC98
 	private UniTask ExecuteWorldDoneBlockers()
 	{
 		GameModeController.<ExecuteWorldDoneBlockers>d__14 <ExecuteWorldDoneBlockers>d__;
@@ -52,7 +53,7 @@ public class GameModeController : ControllerBase
 		return <ExecuteWorldDoneBlockers>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9D6 RID: 121302 RVA: 0x00848790 File Offset: 0x00846990
+	// Token: 0x0601B6E0 RID: 112352 RVA: 0x00870ADC File Offset: 0x0086ECDC
 	private UniTask ExecuteBlockerWithTimeout(Func<UniTask> blocker, int timeout, int index)
 	{
 		GameModeController.<ExecuteBlockerWithTimeout>d__15 <ExecuteBlockerWithTimeout>d__;
@@ -66,7 +67,7 @@ public class GameModeController : ControllerBase
 		return <ExecuteBlockerWithTimeout>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9D7 RID: 121303 RVA: 0x008487EC File Offset: 0x008469EC
+	// Token: 0x0601B6E1 RID: 112353 RVA: 0x00870B38 File Offset: 0x0086ED38
 	private UniTask ExecuteBlockerWithErrorHandler(Func<UniTask> blocker, int index)
 	{
 		GameModeController.<ExecuteBlockerWithErrorHandler>d__16 <ExecuteBlockerWithErrorHandler>d__;
@@ -78,20 +79,13 @@ public class GameModeController : ControllerBase
 		return <ExecuteBlockerWithErrorHandler>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9D8 RID: 121304 RVA: 0x00848838 File Offset: 0x00846A38
+	// Token: 0x0601B6E2 RID: 112354 RVA: 0x00870B84 File Offset: 0x0086ED84
 	protected override bool OnInit()
 	{
 		if (Info.Instance.IsMobilePlatform() || Info.Instance.IsGamepadPlatform())
 		{
 			Application.Instance.AddApplicationHandler(EApplicationLifetimeDelegate.ApplicationWillDeactivateDelegate, new Action(this.ApplicationHasDeactivated));
 			Application.Instance.AddApplicationHandler(EApplicationLifetimeDelegate.ApplicationHasReactivatedDelegate, new Action(this.ApplicationHasReactivated));
-		}
-		if (Info.Instance.IsPlayInEditor)
-		{
-			Log.Instance.Info(ELogModule.World, ELogAuthor.WLJ, "Disable UseSeparatedBody In Editor", default(ReadOnlySpan<ValueTuple<string, object>>));
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "Kuro.Collision.UseSeparatedBody 0", null);
-			Log.Instance.Info(ELogModule.World, ELogAuthor.WLJ, "Disable FastGeo In Editor", default(ReadOnlySpan<ValueTuple<string, object>>));
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "Wp.Runtime.UseNoTransformerPackages 1", null);
 		}
 		EventSystem.Instance.Add(EEventName.ClearWorld, new Action(this.OnClearWorld));
 		EventSystem.Instance.Add(EEventName.SlowStreamingBySoar, new Action<bool>(this.OnSlowStreamingBySoar));
@@ -102,13 +96,13 @@ public class GameModeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D9D9 RID: 121305 RVA: 0x00848935 File Offset: 0x00846B35
+	// Token: 0x0601B6E3 RID: 112355 RVA: 0x00870C1D File Offset: 0x0086EE1D
 	protected override bool OnLeaveLevel()
 	{
 		return true;
 	}
 
-	// Token: 0x0601D9DA RID: 121306 RVA: 0x00848938 File Offset: 0x00846B38
+	// Token: 0x0601B6E4 RID: 112356 RVA: 0x00870C20 File Offset: 0x0086EE20
 	private void ApplicationHasDeactivated()
 	{
 		if (!Net.Instance.IsServerConnected())
@@ -126,7 +120,7 @@ public class GameModeController : ControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601D9DB RID: 121307 RVA: 0x008489A8 File Offset: 0x00846BA8
+	// Token: 0x0601B6E5 RID: 112357 RVA: 0x00870C90 File Offset: 0x0086EE90
 	private void ApplicationHasReactivated()
 	{
 		if (!Net.Instance.IsServerConnected())
@@ -144,7 +138,7 @@ public class GameModeController : ControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601D9DC RID: 121308 RVA: 0x00848A20 File Offset: 0x00846C20
+	// Token: 0x0601B6E6 RID: 112358 RVA: 0x00870D08 File Offset: 0x0086EF08
 	protected override bool OnClear()
 	{
 		if (Info.Instance.IsMobilePlatform() || Info.Instance.IsGamepadPlatform())
@@ -158,13 +152,13 @@ public class GameModeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D9DD RID: 121309 RVA: 0x00848AB5 File Offset: 0x00846CB5
+	// Token: 0x0601B6E7 RID: 112359 RVA: 0x00870D9D File Offset: 0x0086EF9D
 	private void OnClearWorld()
 	{
 		GameModeModel.Instance.RenderAssetDone = false;
 	}
 
-	// Token: 0x0601D9DE RID: 121310 RVA: 0x00848AC4 File Offset: 0x00846CC4
+	// Token: 0x0601B6E8 RID: 112360 RVA: 0x00870DAC File Offset: 0x0086EFAC
 	private void ForceLowMemDeviceStreamingLowIfSanWangFengInstance(bool isSet)
 	{
 		if (!UKuroStaticLibrary.IsLowMemoryDevice())
@@ -200,7 +194,7 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D9DF RID: 121311 RVA: 0x00848BB8 File Offset: 0x00846DB8
+	// Token: 0x0601B6E9 RID: 112361 RVA: 0x00870EA0 File Offset: 0x0086F0A0
 	public bool SetGameModeData(int id, SceneMode sceneMode)
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -235,15 +229,12 @@ public class GameModeController : ControllerBase
 		instance.MapId = config.Value.MapConfigId;
 		instance.LoadMapMode = (ELoadMapMode)akiMapSourceConfig.Value.LoadMapMode;
 		instance.SetInstanceDungeon(id);
-		if (!Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			CreatureModel.Instance.EnableEntityLog = (instance.InstanceType != InstanceType.BigWorldInstance);
-		}
+		CreatureModel.Instance.EnableEntityLog = (instance.InstanceType != InstanceType.BigWorldInstance);
 		EventSystem.Instance.Emit(EEventName.OnSetGameModeDataDone);
 		return true;
 	}
 
-	// Token: 0x0601D9E0 RID: 121312 RVA: 0x00848D2C File Offset: 0x00846F2C
+	// Token: 0x0601B6EA RID: 112362 RVA: 0x00871008 File Offset: 0x0086F208
 	public bool CheckIsSameMapTravel(int targetDungeonId)
 	{
 		InstanceDungeon? config = ConfigInstanceDungeonById.GetConfig(targetDungeonId, true);
@@ -271,7 +262,7 @@ public class GameModeController : ControllerBase
 		return GameModeModel.Instance.MapPath == akiMapSourceConfig.Value.MapPath;
 	}
 
-	// Token: 0x0601D9E1 RID: 121313 RVA: 0x00848DF8 File Offset: 0x00846FF8
+	// Token: 0x0601B6EB RID: 112363 RVA: 0x008710D4 File Offset: 0x0086F2D4
 	public UniTask Load(SceneInformation sceneInformation)
 	{
 		GameModeController.<Load>d__26 <Load>d__;
@@ -283,23 +274,13 @@ public class GameModeController : ControllerBase
 		return <Load>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9E2 RID: 121314 RVA: 0x00848E44 File Offset: 0x00847044
+	// Token: 0x0601B6EC RID: 112364 RVA: 0x00871120 File Offset: 0x0086F320
 	private void CreateStat(string name)
 	{
 		Stat.CreateNoFlameGraph(name, "", "");
-		if (Info.Instance.IsPlayInEditor)
-		{
-			float platformTimeInSeconds = UKuroStaticLibrary.GetPlatformTimeInSeconds();
-			Log instance = Log.Instance;
-			ELogModule module = ELogModule.GameMode;
-			ELogAuthor author = ELogAuthor.BLZ;
-			string message = "[LoadPhase] " + name;
-			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("time", platformTimeInSeconds);
-			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-		}
 	}
 
-	// Token: 0x0601D9E3 RID: 121315 RVA: 0x00848EA8 File Offset: 0x008470A8
+	// Token: 0x0601B6ED RID: 112365 RVA: 0x00871140 File Offset: 0x0086F340
 	public UniTask Change(ChangeSceneModeNotify data)
 	{
 		GameModeController.<Change>d__28 <Change>d__;
@@ -311,7 +292,7 @@ public class GameModeController : ControllerBase
 		return <Change>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9E4 RID: 121316 RVA: 0x00848EF4 File Offset: 0x008470F4
+	// Token: 0x0601B6EE RID: 112366 RVA: 0x0087118C File Offset: 0x0086F38C
 	private void RegisterDataLayerChange()
 	{
 		if (GameModeModel.Instance.UseWorldPartition)
@@ -340,7 +321,7 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D9E5 RID: 121317 RVA: 0x00848FFC File Offset: 0x008471FC
+	// Token: 0x0601B6EF RID: 112367 RVA: 0x00871294 File Offset: 0x0086F494
 	private void OnDatalayerChange(FName datalayerLabel, bool bIsActive)
 	{
 		if (bIsActive && datalayerLabel != FName.NAME_None && (datalayerLabel == WorldDefine.SpecificVolumeDatalayer1 || datalayerLabel == WorldDefine.SpecificVolumeDatalayer2) && !GameModeModel.Instance.HasDataLayer(datalayerLabel.ToString()))
@@ -355,61 +336,21 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D9E6 RID: 121318 RVA: 0x00849094 File Offset: 0x00847294
+	// Token: 0x0601B6F0 RID: 112368 RVA: 0x0087132C File Offset: 0x0086F52C
 	public void PreventEntityFalling()
 	{
 		DeadReviveModel.Instance.SetSkipFallInjure(ESkipFallInjureReason.GameMode, true);
-		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
-		if (getCurrentEntity != null && getCurrentEntity.Valid)
-		{
-			CharacterActorComponent component = getCurrentEntity.Entity.GetComponent<CharacterActorComponent>();
-			if (component != null && component.Valid)
-			{
-				TsBaseCharacter actor = component.Actor;
-				if (actor != null && actor.IsValid())
-				{
-					UCharacterMovementComponent characterMovement = component.Actor.CharacterMovement;
-					if (characterMovement != null && characterMovement.IsValid())
-					{
-						component.Actor.KuroSetMovementMode(new SetMovementModeInfo
-						{
-							Mode = EMovementMode.MOVE_None,
-							Context = "[GameModeController.PreventEntityFalling]"
-						});
-					}
-				}
-			}
-		}
+		CharacterTeleportLockHelper.Lock(ECharacterTeleportLockReason.ChangeMode);
 	}
 
-	// Token: 0x0601D9E7 RID: 121319 RVA: 0x0084912C File Offset: 0x0084732C
+	// Token: 0x0601B6F1 RID: 112369 RVA: 0x00871340 File Offset: 0x0086F540
 	public void EnableEntityFalling()
 	{
 		DeadReviveModel.Instance.SetSkipFallInjure(ESkipFallInjureReason.GameMode, false);
-		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
-		if (getCurrentEntity != null && getCurrentEntity.Valid)
-		{
-			CharacterActorComponent component = getCurrentEntity.Entity.GetComponent<CharacterActorComponent>();
-			if (component != null && component.Valid)
-			{
-				TsBaseCharacter actor = component.Actor;
-				if (actor != null && actor.IsValid())
-				{
-					UCharacterMovementComponent characterMovement = component.Actor.CharacterMovement;
-					if (characterMovement != null && characterMovement.IsValid())
-					{
-						component.Actor.KuroSetMovementMode(new SetMovementModeInfo
-						{
-							Mode = component.Actor.CharacterMovement.DefaultLandMovementMode,
-							Context = "[GameModeController.EnableEntityFalling]"
-						});
-					}
-				}
-			}
-		}
+		CharacterTeleportLockHelper.Unlock(ECharacterTeleportLockReason.ChangeMode);
 	}
 
-	// Token: 0x0601D9E8 RID: 121320 RVA: 0x008491D8 File Offset: 0x008473D8
+	// Token: 0x0601B6F2 RID: 112370 RVA: 0x00871354 File Offset: 0x0086F554
 	public void PrintWorldPartitionDebugInfo(UWorldPartitionStreamingSourceComponent streamingSourceComponent, [Nullable(2)] TArray<FName> inDataLayerLabels, bool bUseGridLoadingRange, float radius, bool bRequirePhysics)
 	{
 		if (streamingSourceComponent == null)
@@ -424,21 +365,21 @@ public class GameModeController : ControllerBase
 		streamingSourceComponent.LogStreamingStuckInfo2(inDataLayerLabels ?? new TArray<FName>(), bUseGridLoadingRange, radius, bRequirePhysics);
 	}
 
-	// Token: 0x0601D9E9 RID: 121321 RVA: 0x00849251 File Offset: 0x00847451
+	// Token: 0x0601B6F3 RID: 112371 RVA: 0x008713CD File Offset: 0x0086F5CD
 	[NullableContext(2)]
 	public void SwitchDataLayer([Nullable(1)] IList<string> unloadDataLayers, [Nullable(1)] IList<string> activateDataLayers, Action<bool> callback = null, string sequencePath = null, string sequenceMarkBeforeModifyMaterial = null, string materialDataForLoadedLayers = null, string materialDataForUnloadLayers = null)
 	{
 		this.AwaitSwitchDataLayer(unloadDataLayers, activateDataLayers, callback, sequencePath, sequenceMarkBeforeModifyMaterial, materialDataForLoadedLayers, materialDataForUnloadLayers);
 	}
 
-	// Token: 0x0601D9EA RID: 121322 RVA: 0x00849268 File Offset: 0x00847468
+	// Token: 0x0601B6F4 RID: 112372 RVA: 0x008713E4 File Offset: 0x0086F5E4
 	private void OnInterruptDataLayerSwitchTask()
 	{
 		Log.Instance.Info(ELogModule.GameMode, ELogAuthor.ZYL, "GameMode:Task被打断,触发OnInterrupt收尾", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.InterruptDataLayerSwitch();
 	}
 
-	// Token: 0x0601D9EB RID: 121323 RVA: 0x00849298 File Offset: 0x00847498
+	// Token: 0x0601B6F5 RID: 112373 RVA: 0x00871414 File Offset: 0x0086F614
 	public void InterruptDataLayerSwitch()
 	{
 		Log.Instance.Info(ELogModule.GameMode, ELogAuthor.ZYL, "GameMode:打断DataLayer切换(InterruptDataLayerSwitch)", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -450,7 +391,7 @@ public class GameModeController : ControllerBase
 		instance.SwitchDataLayerContext.AbortDataLayerSwitch();
 	}
 
-	// Token: 0x0601D9EC RID: 121324 RVA: 0x008492D8 File Offset: 0x008474D8
+	// Token: 0x0601B6F6 RID: 112374 RVA: 0x00871454 File Offset: 0x0086F654
 	[NullableContext(2)]
 	public UniTask AwaitSwitchDataLayer([Nullable(1)] IList<string> unloadDataLayers, [Nullable(1)] IList<string> activateDataLayers, Action<bool> callback = null, string sequencePath = null, string sequenceMarkBeforeModifyMaterial = null, string materialDataForLoadedLayers = null, string materialDataForUnloadLayers = null)
 	{
@@ -469,7 +410,7 @@ public class GameModeController : ControllerBase
 		return <AwaitSwitchDataLayer>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9ED RID: 121325 RVA: 0x00849358 File Offset: 0x00847558
+	// Token: 0x0601B6F7 RID: 112375 RVA: 0x008714D4 File Offset: 0x0086F6D4
 	[NullableContext(2)]
 	[return: Nullable(1)]
 	private AsyncTask CreateSwitchDataLayerTask([Nullable(1)] IList<string> unloadDataLayers, [Nullable(1)] IList<string> activateDataLayers, Action<bool> callback = null, string sequencePath = null, string sequenceMarkBeforeModifyMaterial = null, string materialDataForLoadedLayers = null, string materialDataForUnloadLayers = null)
@@ -509,7 +450,7 @@ public class GameModeController : ControllerBase
 		}, null, null, new TaskInterruptOptions(ETaskPriority.Normal, true, new Action(this.OnInterruptDataLayerSwitchTask)));
 	}
 
-	// Token: 0x0601D9EE RID: 121326 RVA: 0x00849488 File Offset: 0x00847688
+	// Token: 0x0601B6F8 RID: 112376 RVA: 0x00871604 File Offset: 0x0086F804
 	private void PrepareSwitchDataLayer()
 	{
 		Log instance = Log.Instance;
@@ -539,7 +480,7 @@ public class GameModeController : ControllerBase
 		switchDataLayerContext.BeginDataLayerSwitch((instanceDungeon != null) ? instanceDungeon.GetValueOrDefault().Id : 0);
 	}
 
-	// Token: 0x0601D9EF RID: 121327 RVA: 0x008495D4 File Offset: 0x008477D4
+	// Token: 0x0601B6F9 RID: 112377 RVA: 0x00871750 File Offset: 0x0086F950
 	private bool CheckAndTryFakeSwitchDataLayer(IList<string> unloadDataLayers, IList<string> activateDataLayers, [Nullable(2)] Action<bool> callback = null)
 	{
 		AutoRunModel instance = AutoRunModel.Instance;
@@ -551,7 +492,7 @@ public class GameModeController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0601D9F0 RID: 121328 RVA: 0x00849604 File Offset: 0x00847804
+	// Token: 0x0601B6FA RID: 112378 RVA: 0x00871780 File Offset: 0x0086F980
 	private UniTask RunNormalSwitchTask(IList<string> unloadDataLayers, IList<string> activateDataLayers, [Nullable(2)] Action<bool> callback = null)
 	{
 		GameModeController.<RunNormalSwitchTask>d__41 <RunNormalSwitchTask>d__;
@@ -565,7 +506,7 @@ public class GameModeController : ControllerBase
 		return <RunNormalSwitchTask>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9F1 RID: 121329 RVA: 0x00849660 File Offset: 0x00847860
+	// Token: 0x0601B6FB RID: 112379 RVA: 0x008717DC File Offset: 0x0086F9DC
 	private UniTask RunLevelSeqSwitchTask(IList<string> unloadDataLayers, IList<string> activateDataLayers, string sequencePath, [Nullable(2)] Action<bool> callback = null)
 	{
 		GameModeController.<RunLevelSeqSwitchTask>d__42 <RunLevelSeqSwitchTask>d__;
@@ -580,7 +521,7 @@ public class GameModeController : ControllerBase
 		return <RunLevelSeqSwitchTask>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9F2 RID: 121330 RVA: 0x008496C4 File Offset: 0x008478C4
+	// Token: 0x0601B6FC RID: 112380 RVA: 0x00871840 File Offset: 0x0086FA40
 	[NullableContext(2)]
 	private UniTask RunMaterialSwitchTask([Nullable(1)] IList<string> unloadDataLayers, [Nullable(1)] IList<string> activateDataLayers, Action<bool> callback = null, string sequencePath = null, string sequenceMarkBeforeModifyMaterial = null, string materialDataForLoadedLayers = null, string materialDataForUnloadLayers = null)
 	{
@@ -599,7 +540,7 @@ public class GameModeController : ControllerBase
 		return <RunMaterialSwitchTask>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9F3 RID: 121331 RVA: 0x00849744 File Offset: 0x00847944
+	// Token: 0x0601B6FD RID: 112381 RVA: 0x008718C0 File Offset: 0x0086FAC0
 	private UniTask NormalSwitchDataLayerInternal(IList<string> unloadDataLayers, IList<string> activateDataLayers, bool bEnterLoadingMode = true, bool bWaitingRenderAssetDone = true)
 	{
 		GameModeController.<NormalSwitchDataLayerInternal>d__44 <NormalSwitchDataLayerInternal>d__;
@@ -614,7 +555,7 @@ public class GameModeController : ControllerBase
 		return <NormalSwitchDataLayerInternal>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D9F4 RID: 121332 RVA: 0x008497A8 File Offset: 0x008479A8
+	// Token: 0x0601B6FE RID: 112382 RVA: 0x00871924 File Offset: 0x0086FB24
 	private unsafe void FakeSwitchDataLayerInternal(IList<string> unloadDataLayers, IList<string> activateDataLayers, int instId, [Nullable(2)] Action<bool> callback = null)
 	{
 		Log instance = Log.Instance;
@@ -641,26 +582,26 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D9F5 RID: 121333 RVA: 0x008498D3 File Offset: 0x00847AD3
+	// Token: 0x0601B6FF RID: 112383 RVA: 0x00871A4F File Offset: 0x0086FC4F
 	public bool IsInInstance()
 	{
 		return GameModeModel.Instance.InstanceType >= InstanceType.NormalInstance;
 	}
 
-	// Token: 0x0601D9F6 RID: 121334 RVA: 0x008498E8 File Offset: 0x00847AE8
+	// Token: 0x0601B700 RID: 112384 RVA: 0x00871A64 File Offset: 0x0086FC64
 	public bool CanLoadEntity()
 	{
 		GameModeModel instance = GameModeModel.Instance;
 		return instance.WorldDone && !instance.IsTeleport && !instance.ChangeModeState;
 	}
 
-	// Token: 0x0601D9F7 RID: 121335 RVA: 0x00849916 File Offset: 0x00847B16
+	// Token: 0x0601B701 RID: 112385 RVA: 0x00871A92 File Offset: 0x0086FC92
 	public void BeforeLoadMap()
 	{
 		GameModeModel.Instance.BeginLoadMapPromise.SetResult(true);
 	}
 
-	// Token: 0x0601D9F8 RID: 121336 RVA: 0x00849928 File Offset: 0x00847B28
+	// Token: 0x0601B702 RID: 112386 RVA: 0x00871AA4 File Offset: 0x0086FCA4
 	public void InitAllPlayerStarts()
 	{
 		TArray<AActor> tarray = new TArray<AActor>();
@@ -675,14 +616,14 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D9F9 RID: 121337 RVA: 0x0084998B File Offset: 0x00847B8B
+	// Token: 0x0601B703 RID: 112387 RVA: 0x00871B07 File Offset: 0x0086FD07
 	public void AfterLoadMap()
 	{
 		this.InitAllPlayerStarts();
 		GameModeModel.Instance.OpenLevelPromise.SetResult(true);
 	}
 
-	// Token: 0x0601D9FA RID: 121338 RVA: 0x008499A4 File Offset: 0x00847BA4
+	// Token: 0x0601B704 RID: 112388 RVA: 0x00871B20 File Offset: 0x0086FD20
 	protected override void OnTick(float delta)
 	{
 		if (GameModeModel.Instance.IsMulti || CombatMessageModel.Instance.AnyEntityInFight)
@@ -714,7 +655,7 @@ public class GameModeController : ControllerBase
 		GameModeModel.Instance.UpdateBornLocation(ftransformDouble.GetLocation());
 	}
 
-	// Token: 0x0601D9FB RID: 121339 RVA: 0x00849A3C File Offset: 0x00847C3C
+	// Token: 0x0601B705 RID: 112389 RVA: 0x00871BB8 File Offset: 0x0086FDB8
 	public new void AfterTick(float delta)
 	{
 		ITimeDilationData cacheTimeDilationValue = GameModeModel.Instance.GetCacheTimeDilationValue();
@@ -724,14 +665,14 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D9FC RID: 121340 RVA: 0x00849A63 File Offset: 0x00847C63
+	// Token: 0x0601B706 RID: 112390 RVA: 0x00871BDF File Offset: 0x0086FDDF
 	private void OnSlowStreamingBySoar(bool bSlow)
 	{
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, bSlow ? "wp.Runtime.EnableGridBlackList true" : "wp.Runtime.EnableGridBlackList false", null);
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, bSlow ? "r.CLV.Freeze 1" : "r.CLV.Freeze 0", null);
 	}
 
-	// Token: 0x0601D9FD RID: 121341 RVA: 0x00849A9C File Offset: 0x00847C9C
+	// Token: 0x0601B707 RID: 112391 RVA: 0x00871C18 File Offset: 0x0086FE18
 	public unsafe void PrintLoadDetail(FVectorDouble bornLocation)
 	{
 		LogProfiler loadWorldProfiler = GameModeModel.Instance.LoadWorldProfiler;
@@ -780,7 +721,7 @@ public class GameModeController : ControllerBase
 			dictionary["BornLocation"] = bornLocation.ToString();
 			dictionary["TestName"] = value2;
 			dictionary["PipelineTag"] = value;
-			string text = Json.Stringify<Dictionary<string, object>>(dictionary, null);
+			string text = Json.Stringify(dictionary, null);
 			Log instance4 = Log.Instance;
 			ELogModule module4 = ELogModule.GameMode;
 			ELogAuthor author4 = ELogAuthor.HMH;
@@ -836,7 +777,7 @@ public class GameModeController : ControllerBase
 		PreloadModelNew.Instance.ClearResourcesLoadTime();
 	}
 
-	// Token: 0x0601D9FE RID: 121342 RVA: 0x00849DF4 File Offset: 0x00847FF4
+	// Token: 0x0601B708 RID: 112392 RVA: 0x00871F70 File Offset: 0x00870170
 	private void InitDataReport()
 	{
 		EntryJson entryJson = BaseConfigModel.Instance.EntryJson;
@@ -852,14 +793,38 @@ public class GameModeController : ControllerBase
 		{
 			return;
 		}
-		FCreateInstanceParam fcreateInstanceParam = new FCreateInstanceParam(21, serverUrl, appId, UThinkingAnalytics.GetMachineID(), "", "GameController", "", maxNumInBatch, TAMode.NORMAL, UnrealEngine.ESaveMode.None_Save, 0f, true, false, false, true, 1f, 1000, 10000f, true, 10f, true, true);
+		FCreateInstanceParam fcreateInstanceParam = new FCreateInstanceParam
+		{
+			Index = 21,
+			ServerUrl = serverUrl,
+			AppId = appId,
+			DistinctId = UThinkingAnalytics.GetMachineID(),
+			AccountId = "",
+			LogDisplayName = "GameController",
+			SaveDBPath = "",
+			MaxNumInBatch = maxNumInBatch,
+			Mode = TAMode.NORMAL,
+			SaveMode = UnrealEngine.ESaveMode.None_Save,
+			FlushTimeInterval = 0f,
+			bUseUtf8 = true,
+			bLogInitEnable = false,
+			bImmediateSave = false,
+			bRuntimeInstance = true,
+			ExitWaitTime = 1f,
+			MaxPendingLog = 1000,
+			SendHttpTimeout = 10000f,
+			bExitFlush = true,
+			CalibrateIntervalTime = 10f,
+			bCalibratedStopTimer = true,
+			bEnableCompressPlusOneLen = true
+		};
 		if (!UThinkingAnalytics.CreateSimpleInstance(fcreateInstanceParam))
 		{
 			Log.Instance.Warn(ELogModule.GameMode, ELogAuthor.HMH, "Thinking Analytics instance create fail", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 	}
 
-	// Token: 0x0601D9FF RID: 121343 RVA: 0x00849EDC File Offset: 0x008480DC
+	// Token: 0x0601B709 RID: 112393 RVA: 0x008720DC File Offset: 0x008702DC
 	public unsafe bool SetGamePaused(bool bPaused, string reason, float unPausedTimeDilation = 1f)
 	{
 		Time.Instance.OriginTimeDilation = unPausedTimeDilation;
@@ -935,7 +900,7 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA00 RID: 121344 RVA: 0x0084A148 File Offset: 0x00848348
+	// Token: 0x0601B70A RID: 112394 RVA: 0x00872348 File Offset: 0x00870548
 	public void CheckAndUpdateGamePaused()
 	{
 		HashSet<string> gamePausedReasons = GameModeModel.Instance.GamePausedReasons;
@@ -952,7 +917,7 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA01 RID: 121345 RVA: 0x0084A200 File Offset: 0x00848400
+	// Token: 0x0601B70B RID: 112395 RVA: 0x00872400 File Offset: 0x00870600
 	public void ForceDisableGamePaused(bool value)
 	{
 		if (value)
@@ -995,7 +960,7 @@ public class GameModeController : ControllerBase
 		instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x0601DA02 RID: 121346 RVA: 0x0084A3AC File Offset: 0x008485AC
+	// Token: 0x0601B70C RID: 112396 RVA: 0x008725AC File Offset: 0x008707AC
 	public unsafe void SetTimeDilation(float timeDilation, ETimeDilationType timeDilationType = ETimeDilationType.Default)
 	{
 		Log instance = Log.Instance;
@@ -1066,7 +1031,7 @@ public class GameModeController : ControllerBase
 		this.BroadcastTimeDilation(num);
 	}
 
-	// Token: 0x0601DA03 RID: 121347 RVA: 0x0084A5F0 File Offset: 0x008487F0
+	// Token: 0x0601B70D RID: 112397 RVA: 0x008727F0 File Offset: 0x008709F0
 	private void BroadcastTimeDilation(float finalDilation)
 	{
 		GameModeModel.Instance.ClearCacheTimeDilationValue();
@@ -1092,9 +1057,9 @@ public class GameModeController : ControllerBase
 		EventSystem.Instance.Emit(EEventName.TriggerUiTimeDilation);
 	}
 
-	// Token: 0x0601DA04 RID: 121348 RVA: 0x0084A6C0 File Offset: 0x008488C0
+	// Token: 0x0601B70E RID: 112398 RVA: 0x008728C0 File Offset: 0x00870AC0
 	[NullableContext(2)]
-	public void FixBornLocation(global::Vector target = null)
+	public void FixBornLocation(global::Vector target = null, bool resetMovementMode = true)
 	{
 		if (Global.BaseCharacter == null)
 		{
@@ -1114,11 +1079,14 @@ public class GameModeController : ControllerBase
 		{
 			Global.BaseCharacter.CharacterActorComponent.FixBornLocation("主控玩家.修正地面", true, null, false, false, true);
 		}
-		Global.BaseCharacter.KuroSetMovementMode(new SetMovementModeInfo
+		if (resetMovementMode)
 		{
-			Mode = EMovementMode.MOVE_Walking,
-			Context = "[GameModeController.FixBornLocation]"
-		});
+			Global.BaseCharacter.KuroSetMovementMode(new SetMovementModeInfo
+			{
+				Mode = EMovementMode.MOVE_Walking,
+				Context = "[GameModeController.FixBornLocation]"
+			});
+		}
 		Entity entity = Global.BaseCharacter.CharacterActorComponent.Entity;
 		CharacterAnimationComponent component = entity.GetComponent<CharacterAnimationComponent>();
 		if (component != null)
@@ -1142,7 +1110,7 @@ public class GameModeController : ControllerBase
 		component3.ResetCharState();
 	}
 
-	// Token: 0x0601DA05 RID: 121349 RVA: 0x0084A79C File Offset: 0x0084899C
+	// Token: 0x0601B70F RID: 112399 RVA: 0x008729A0 File Offset: 0x00870BA0
 	public void LoadDataLayers(SceneInformation sceneInformation)
 	{
 		RenderModuleController.Instance.SetWorldPartitionDataLayerState("DatalayerRuntime_HideInLowMemDevice", !UKuroStaticLibrary.IsLowMemoryDevice(), false);
@@ -1188,21 +1156,21 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA06 RID: 121350 RVA: 0x0084A904 File Offset: 0x00848B04
+	// Token: 0x0601B710 RID: 112400 RVA: 0x00872B08 File Offset: 0x00870D08
 	private void ActivateDataLayer(string dataLayerPath)
 	{
 		GameModeModel.Instance.AddDataLayer(dataLayerPath);
 		RenderModuleController.Instance.SetWorldPartitionDataLayerState(dataLayerPath, true, false);
 	}
 
-	// Token: 0x0601DA07 RID: 121351 RVA: 0x0084A91F File Offset: 0x00848B1F
+	// Token: 0x0601B711 RID: 112401 RVA: 0x00872B23 File Offset: 0x00870D23
 	private void UnloadDataLayer(string dataLayerPath)
 	{
 		GameModeModel.Instance.RemoveDataLayer(dataLayerPath);
 		RenderModuleController.Instance.SetWorldPartitionDataLayerState(dataLayerPath, false, false);
 	}
 
-	// Token: 0x0601DA08 RID: 121352 RVA: 0x0084A93C File Offset: 0x00848B3C
+	// Token: 0x0601B712 RID: 112402 RVA: 0x00872B40 File Offset: 0x00870D40
 	private void ChangeDataLayerFinishRequest(int instId)
 	{
 		ChangeDataLayerFinishRequest changeDataLayerFinishRequest = Aki.Protocol.ChangeDataLayerFinishRequest.Create();
@@ -1212,12 +1180,12 @@ public class GameModeController : ControllerBase
 			ChangeDataLayerFinishResponse changeDataLayerFinishResponse = (ChangeDataLayerFinishResponse)msg;
 			if (changeDataLayerFinishResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(changeDataLayerFinishResponse.ErrorCode, 27963, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(changeDataLayerFinishResponse.ErrorCode, 20475, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0601DA09 RID: 121353 RVA: 0x0084A988 File Offset: 0x00848B88
+	// Token: 0x0601B713 RID: 112403 RVA: 0x00872B8C File Offset: 0x00870D8C
 	public unsafe void ApplyMaterialParameterCollection(IDictionary<int, int> protoAreaMpc)
 	{
 		GameModeModel.Instance.MaterialParameterCollectionMap.Clear();
@@ -1268,7 +1236,7 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA0A RID: 121354 RVA: 0x0084AB34 File Offset: 0x00848D34
+	// Token: 0x0601B714 RID: 112404 RVA: 0x00872D38 File Offset: 0x00870F38
 	private void CheckMaterialParameterCollectionLoaded()
 	{
 		bool flag = true;
@@ -1282,11 +1250,12 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA0B RID: 121355 RVA: 0x0084ABA0 File Offset: 0x00848DA0
-	public UniTask SwitchStreamingSource(AActor actor, bool waitForStreaming, bool bLockMovementDuringStreaming, EMovementLockMode? movementLockModeAfterStreaming)
+	// Token: 0x0601B715 RID: 112405 RVA: 0x00872DA4 File Offset: 0x00870FA4
+	[NullableContext(0)]
+	public UniTask<bool> SwitchStreamingSource([Nullable(1)] AActor actor, bool waitForStreaming, bool bLockMovementDuringStreaming, EMovementLockMode? movementLockModeAfterStreaming)
 	{
 		GameModeController.<SwitchStreamingSource>d__68 <SwitchStreamingSource>d__;
-		<SwitchStreamingSource>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<SwitchStreamingSource>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 		<SwitchStreamingSource>d__.<>4__this = this;
 		<SwitchStreamingSource>d__.actor = actor;
 		<SwitchStreamingSource>d__.waitForStreaming = waitForStreaming;
@@ -1297,7 +1266,7 @@ public class GameModeController : ControllerBase
 		return <SwitchStreamingSource>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DA0C RID: 121356 RVA: 0x0084AC04 File Offset: 0x00848E04
+	// Token: 0x0601B716 RID: 112406 RVA: 0x00872E08 File Offset: 0x00871008
 	public UniTask ResetStreamingSourceAttachment()
 	{
 		GameModeController.<ResetStreamingSourceAttachment>d__69 <ResetStreamingSourceAttachment>d__;
@@ -1308,7 +1277,7 @@ public class GameModeController : ControllerBase
 		return <ResetStreamingSourceAttachment>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DA0D RID: 121357 RVA: 0x0084AC48 File Offset: 0x00848E48
+	// Token: 0x0601B717 RID: 112407 RVA: 0x00872E4C File Offset: 0x0087104C
 	private UniTask CheckWorldPartitionStreamingCompleted(CustomPromise<bool> voxelPromise, CustomPromise<bool> streamingPromise, [Nullable(2)] Func<bool> abortCheckCondition = null)
 	{
 		GameModeController.<CheckWorldPartitionStreamingCompleted>d__70 <CheckWorldPartitionStreamingCompleted>d__;
@@ -1322,7 +1291,7 @@ public class GameModeController : ControllerBase
 		return <CheckWorldPartitionStreamingCompleted>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DA0E RID: 121358 RVA: 0x0084ACA4 File Offset: 0x00848EA4
+	// Token: 0x0601B718 RID: 112408 RVA: 0x00872EA8 File Offset: 0x008710A8
 	[NullableContext(2)]
 	[return: Nullable(1)]
 	private unsafe TimerHandle CheckTargetStreamingCompleted([Nullable(1)] UWorldPartitionStreamingSourceComponent streamingSourceComponent, [Nullable(new byte[]
@@ -1396,7 +1365,7 @@ public class GameModeController : ControllerBase
 		return timerId;
 	}
 
-	// Token: 0x0601DA0F RID: 121359 RVA: 0x0084ADE4 File Offset: 0x00848FE4
+	// Token: 0x0601B719 RID: 112409 RVA: 0x00872FE8 File Offset: 0x008711E8
 	public void InitStreamingSources()
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -1407,7 +1376,7 @@ public class GameModeController : ControllerBase
 		instance.InitStreamingSources();
 	}
 
-	// Token: 0x0601DA10 RID: 121360 RVA: 0x0084AE24 File Offset: 0x00849024
+	// Token: 0x0601B71A RID: 112410 RVA: 0x00873028 File Offset: 0x00871228
 	public UniTask CheckVoxelStreamingCompleted(float relativeProgress, int maxProgress)
 	{
 		GameModeController.<CheckVoxelStreamingCompleted>d__73 <CheckVoxelStreamingCompleted>d__;
@@ -1420,7 +1389,7 @@ public class GameModeController : ControllerBase
 		return <CheckVoxelStreamingCompleted>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DA11 RID: 121361 RVA: 0x0084AE78 File Offset: 0x00849078
+	// Token: 0x0601B71B RID: 112411 RVA: 0x0087307C File Offset: 0x0087127C
 	public void AppendAllBaseDatalayers(TArray<FName> dataLayerLabels)
 	{
 		foreach (FName value in WorldDefine.allBaseDataLayers)
@@ -1429,7 +1398,7 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA12 RID: 121362 RVA: 0x0084AEA8 File Offset: 0x008490A8
+	// Token: 0x0601B71C RID: 112412 RVA: 0x008730AC File Offset: 0x008712AC
 	public UniTask CheckStreamingCompleted(float relativeProgress, int maxProgress)
 	{
 		GameModeController.<CheckStreamingCompleted>d__75 <CheckStreamingCompleted>d__;
@@ -1442,7 +1411,7 @@ public class GameModeController : ControllerBase
 		return <CheckStreamingCompleted>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DA13 RID: 121363 RVA: 0x0084AEFC File Offset: 0x008490FC
+	// Token: 0x0601B71D RID: 112413 RVA: 0x00873100 File Offset: 0x00871300
 	public void AddOrRemoveRenderAssetsQueryViewInfo(FVectorDouble viewOrigin, float duration)
 	{
 		if (!GlobalData.World.GetWorld().K2_GetWorldSettings().bEnableWorldPartition)
@@ -1457,7 +1426,7 @@ public class GameModeController : ControllerBase
 		uworldPartitionSubsystem.D_AddOrRemoveRenderAssetsQueryViewInfo(viewOrigin, duration, 1.2f);
 	}
 
-	// Token: 0x0601DA14 RID: 121364 RVA: 0x0084AF5C File Offset: 0x0084915C
+	// Token: 0x0601B71E RID: 112414 RVA: 0x00873160 File Offset: 0x00871360
 	[NullableContext(2)]
 	private void ResetRenderAssetsQuery(UWorldPartitionSubsystem worldPartitionSubsystem = null, FWorldPartitionStreamingQuerySource querySource = null, bool raiseError = false)
 	{
@@ -1488,7 +1457,7 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA15 RID: 121365 RVA: 0x0084B008 File Offset: 0x00849208
+	// Token: 0x0601B71F RID: 112415 RVA: 0x0087320C File Offset: 0x0087140C
 	[return: Nullable(0)]
 	public UniTask<bool> CheckRenderAssetsStreamingCompleted(FVectorDouble viewOrigin, string reason, Func<bool> abortCheckCondition = null)
 	{
@@ -1503,7 +1472,7 @@ public class GameModeController : ControllerBase
 		return <CheckRenderAssetsStreamingCompleted>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DA16 RID: 121366 RVA: 0x0084B064 File Offset: 0x00849264
+	// Token: 0x0601B720 RID: 112416 RVA: 0x00873268 File Offset: 0x00871468
 	public void CheckPreload(Action<bool> commonCallback, [Nullable(2)] Action<bool> callback = null)
 	{
 		PreloadControllerNew.Instance.DoPreload(delegate(bool commonResult)
@@ -1526,7 +1495,7 @@ public class GameModeController : ControllerBase
 		});
 	}
 
-	// Token: 0x0601DA17 RID: 121367 RVA: 0x0084B0B0 File Offset: 0x008492B0
+	// Token: 0x0601B721 RID: 112417 RVA: 0x008732B4 File Offset: 0x008714B4
 	[NullableContext(0)]
 	public UniTask<bool> OpenLoading()
 	{
@@ -1537,7 +1506,7 @@ public class GameModeController : ControllerBase
 		return <OpenLoading>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DA18 RID: 121368 RVA: 0x0084B0EB File Offset: 0x008492EB
+	// Token: 0x0601B722 RID: 112418 RVA: 0x008732EF File Offset: 0x008714EF
 	[NullableContext(2)]
 	public void SetTravelMp4(bool play, string path = null)
 	{
@@ -1549,7 +1518,7 @@ public class GameModeController : ControllerBase
 		GameModeModel.Instance.TravelMp4Path = path;
 	}
 
-	// Token: 0x0601DA19 RID: 121369 RVA: 0x0084B110 File Offset: 0x00849310
+	// Token: 0x0601B723 RID: 112419 RVA: 0x00873314 File Offset: 0x00871514
 	public void ChangeGameMode()
 	{
 		Log.Instance.Info(ELogModule.World, ELogAuthor.LFJW, "[Game.ChangeMode] ChangeMode", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1583,7 +1552,7 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA1A RID: 121370 RVA: 0x0084B1D0 File Offset: 0x008493D0
+	// Token: 0x0601B724 RID: 112420 RVA: 0x008733D4 File Offset: 0x008715D4
 	public void UpdateFoliageDataLayer()
 	{
 		AWorldSettings aworldSettings = GlobalData.World.GetWorld().K2_GetWorldSettings();
@@ -1595,7 +1564,7 @@ public class GameModeController : ControllerBase
 		UKuroRenderingRuntimeBPPluginBPLibrary.UpdateFoliageDataLayer(GlobalData.World, (int)((gameQualitySettingLevel < EGameQualitySettingLevel.VeryLow) ? EGameQualitySettingLevel.Low : gameQualitySettingLevel));
 	}
 
-	// Token: 0x0601DA1B RID: 121371 RVA: 0x0084B21C File Offset: 0x0084941C
+	// Token: 0x0601B725 RID: 112421 RVA: 0x00873420 File Offset: 0x00871620
 	public unsafe void UpdateStreamingQualityLevel()
 	{
 		AWorldSettings aworldSettings = GlobalData.World.GetWorld().K2_GetWorldSettings();
@@ -1639,8 +1608,8 @@ public class GameModeController : ControllerBase
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 4));
 	}
 
-	// Token: 0x170028E4 RID: 10468
-	// (get) Token: 0x0601DA1C RID: 121372 RVA: 0x0084B40D File Offset: 0x0084960D
+	// Token: 0x17002C7C RID: 11388
+	// (get) Token: 0x0601B726 RID: 112422 RVA: 0x00873611 File Offset: 0x00871811
 	public static GameModeController Instance
 	{
 		get
@@ -1649,7 +1618,7 @@ public class GameModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA1D RID: 121373 RVA: 0x0084B414 File Offset: 0x00849614
+	// Token: 0x0601B727 RID: 112423 RVA: 0x00873618 File Offset: 0x00871818
 	public static GameModeController GetOrCreateInstance()
 	{
 		if (GameModeController._Instance == null)
@@ -1659,7 +1628,7 @@ public class GameModeController : ControllerBase
 		return GameModeController._Instance;
 	}
 
-	// Token: 0x0601DA1E RID: 121374 RVA: 0x0084B428 File Offset: 0x00849628
+	// Token: 0x0601B728 RID: 112424 RVA: 0x0087362C File Offset: 0x0087182C
 	public static bool CreateInstance()
 	{
 		if (GameModeController._Instance != null)
@@ -1670,24 +1639,24 @@ public class GameModeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DA1F RID: 121375 RVA: 0x0084B43E File Offset: 0x0084963E
+	// Token: 0x0601B729 RID: 112425 RVA: 0x00873642 File Offset: 0x00871842
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DA20 RID: 121376 RVA: 0x0084B440 File Offset: 0x00849640
+	// Token: 0x0601B72A RID: 112426 RVA: 0x00873644 File Offset: 0x00871844
 	public static void ResetStaticDefaultValue()
 	{
 		GameModeController._Instance = null;
 	}
 
-	// Token: 0x0601DA21 RID: 121377 RVA: 0x0084B448 File Offset: 0x00849648
+	// Token: 0x0601B72B RID: 112427 RVA: 0x0087364C File Offset: 0x0087184C
 	static GameModeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameModeController.CreateStaticDefaultValue), new Action(GameModeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601DA23 RID: 121379 RVA: 0x0084B48C File Offset: 0x0084968C
+	// Token: 0x0601B72D RID: 112429 RVA: 0x00873690 File Offset: 0x00871890
 	[CompilerGenerated]
 	internal static string <PrintLoadDetail>g__GetCmdValue|54_1(string commandLine, string startStr)
 	{
@@ -1700,40 +1669,40 @@ public class GameModeController : ControllerBase
 		return "";
 	}
 
-	// Token: 0x0400E874 RID: 59508
+	// Token: 0x0400ED2B RID: 60715
 	public const int TOP_CONSUMING_COUNT = 20;
 
-	// Token: 0x0400E875 RID: 59509
+	// Token: 0x0400ED2C RID: 60716
 	private const int ONE_SECOND = 1000;
 
-	// Token: 0x0400E876 RID: 59510
+	// Token: 0x0400ED2D RID: 60717
 	private const int GAME_MODE_CTRL_THINKING_INDEX = 21;
 
-	// Token: 0x0400E877 RID: 59511
+	// Token: 0x0400ED2E RID: 60718
 	private const int SANWANGFENG_INSTANCEID = 1550;
 
-	// Token: 0x0400E878 RID: 59512
+	// Token: 0x0400ED2F RID: 60719
 	public const int LOG_STREAMING_STUCK_INTERVAL = 60000;
 
-	// Token: 0x0400E879 RID: 59513
+	// Token: 0x0400ED30 RID: 60720
 	private const int RENDER_ASSET_ABORT_CHECK_DISTANCE_SQUARE = 10000;
 
-	// Token: 0x0400E87A RID: 59514
+	// Token: 0x0400ED31 RID: 60721
 	private float cellProgress;
 
-	// Token: 0x0400E87B RID: 59515
+	// Token: 0x0400ED32 RID: 60722
 	private bool HasOverrideQuality;
 
-	// Token: 0x0400E87C RID: 59516
+	// Token: 0x0400ED33 RID: 60723
 	private int LastGameQualityLevel = -1;
 
-	// Token: 0x0400E87D RID: 59517
+	// Token: 0x0400ED34 RID: 60724
 	private readonly global::Vector TmpLocation = global::Vector.Create();
 
-	// Token: 0x0400E87E RID: 59518
+	// Token: 0x0400ED35 RID: 60725
 	private const int DEFAULT_BLOCKER_TIMEOUT = 60000;
 
-	// Token: 0x0400E87F RID: 59519
+	// Token: 0x0400ED36 RID: 60726
 	[TupleElementNames(new string[]
 	{
 		"blocker",
@@ -1747,10 +1716,10 @@ public class GameModeController : ControllerBase
 	})]
 	private readonly List<ValueTuple<Func<UniTask>, int>> WorldDoneBlockers = new List<ValueTuple<Func<UniTask>, int>>();
 
-	// Token: 0x0400E880 RID: 59520
+	// Token: 0x0400ED37 RID: 60727
 	private bool IsWorldDoneBlockersExecuted;
 
-	// Token: 0x0400E881 RID: 59521
+	// Token: 0x0400ED38 RID: 60728
 	[Nullable(2)]
 	private static GameModeController _Instance;
 }

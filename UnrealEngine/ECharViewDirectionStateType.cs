@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001636 RID: 5686
+	// Token: 0x020002E5 RID: 741
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroAnim.ECharViewDirectionStateType")]
 	public enum ECharViewDirectionStateType : byte
 	{
-		// Token: 0x0400B308 RID: 45832
+		// Token: 0x04002043 RID: 8259
 		LockDirection,
-		// Token: 0x0400B309 RID: 45833
+		// Token: 0x04002044 RID: 8260
 		AimDirection,
-		// Token: 0x0400B30A RID: 45834
+		// Token: 0x04002045 RID: 8261
 		FaceDirection,
-		// Token: 0x0400B30B RID: 45835
+		// Token: 0x04002046 RID: 8262
 		LookAtDirection,
-		// Token: 0x0400B30C RID: 45836
+		// Token: 0x04002047 RID: 8263
 		CameraDirection,
-		// Token: 0x0400B30D RID: 45837
+		// Token: 0x04002048 RID: 8264
 		ECharViewDirectionStateType_MAX
 	}
 }

@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02003534 RID: 13620
+// Token: 0x02002AA9 RID: 10921
 [NullableContext(1)]
 public interface IGraphNode
 {
-	// Token: 0x17002965 RID: 10597
-	// (get) Token: 0x0601DEDC RID: 122588
-	// (set) Token: 0x0601DEDD RID: 122589
+	// Token: 0x17002CFE RID: 11518
+	// (get) Token: 0x0601BC04 RID: 113668
+	// (set) Token: 0x0601BC05 RID: 113669
 	Func<UniTask> Run { get; set; }
 
-	// Token: 0x17002966 RID: 10598
-	// (get) Token: 0x0601DEDE RID: 122590
-	// (set) Token: 0x0601DEDF RID: 122591
+	// Token: 0x17002CFF RID: 11519
+	// (get) Token: 0x0601BC06 RID: 113670
+	// (set) Token: 0x0601BC07 RID: 113671
 	int? Priority { get; set; }
 }

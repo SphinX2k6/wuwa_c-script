@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 {
-	// Token: 0x02004F25 RID: 20261
+	// Token: 0x02003EEE RID: 16110
 	public class RacingBetsAdvanceItem : RacingBetsMatchItemBase
 	{
-		// Token: 0x06033F94 RID: 212884 RVA: 0x00C2ECC4 File Offset: 0x00C2CEC4
+		// Token: 0x06028E02 RID: 167426 RVA: 0x00B7846C File Offset: 0x00B7666C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			};
 		}
 
-		// Token: 0x06033F95 RID: 212885 RVA: 0x00C2ED20 File Offset: 0x00C2CF20
+		// Token: 0x06028E03 RID: 167427 RVA: 0x00B784C8 File Offset: 0x00B766C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RacingBetsAdvanceItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -31,19 +31,19 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B9AE RID: 113070
+		// Token: 0x04016383 RID: 91011
 		public ERacingBetsMatchTableType MatchTableType = ERacingBetsMatchTableType.GroupMatch;
 
-		// Token: 0x0200B070 RID: 45168
+		// Token: 0x02009AA0 RID: 39584
 		private class EComponent
 		{
-			// Token: 0x040358B9 RID: 219321
+			// Token: 0x040302E4 RID: 197348
 			public const int TextTitle = 0;
 
-			// Token: 0x040358BA RID: 219322
+			// Token: 0x040302E5 RID: 197349
 			public const int LayoutDango = 1;
 
-			// Token: 0x040358BB RID: 219323
+			// Token: 0x040302E6 RID: 197350
 			public const int ItemDango = 2;
 		}
 	}

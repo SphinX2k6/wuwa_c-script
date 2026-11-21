@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002906 RID: 10502
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BE2 RID: 11234
 	public class ModifyActorMedia : ActionParams
 	{
-		// Token: 0x0600E927 RID: 59687 RVA: 0x00223125 File Offset: 0x00221325
+		// Token: 0x0600F778 RID: 63352 RVA: 0x00240445 File Offset: 0x0023E645
 		public static ModifyActorMedia Create(IModifyActorMedia? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048DD RID: 18653
-		// (get) Token: 0x0600E928 RID: 59688 RVA: 0x00223144 File Offset: 0x00221344
+		// Token: 0x17004C62 RID: 19554
+		// (get) Token: 0x0600F779 RID: 63353 RVA: 0x00240464 File Offset: 0x0023E664
 		public virtual IChangeMediaPlayDa Config
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080B6 RID: 32950
+		// Token: 0x04008784 RID: 34692
 		private IModifyActorMedia Instance;
 
-		// Token: 0x040080B7 RID: 32951
+		// Token: 0x04008785 RID: 34693
 		[Nullable(2)]
 		private IChangeMediaPlayDa _ConfigCache;
 
-		// Token: 0x040080B8 RID: 32952
+		// Token: 0x04008786 RID: 34694
 		private bool _ConfigInited;
 	}
 }

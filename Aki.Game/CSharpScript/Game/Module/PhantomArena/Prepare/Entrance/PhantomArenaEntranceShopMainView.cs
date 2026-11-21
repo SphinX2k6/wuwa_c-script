@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005165 RID: 20837
+	// Token: 0x02004135 RID: 16693
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaEntranceShopMainView : UiTickViewBase
 	{
-		// Token: 0x06035463 RID: 218211 RVA: 0x00C9D8E6 File Offset: 0x00C9BAE6
+		// Token: 0x0602A35F RID: 172895 RVA: 0x00BEAE16 File Offset: 0x00BE9016
 		public PhantomArenaEntranceShopMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06035464 RID: 218212 RVA: 0x00C9D908 File Offset: 0x00C9BB08
+		// Token: 0x0602A360 RID: 172896 RVA: 0x00BEAE38 File Offset: 0x00BE9038
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035465 RID: 218213 RVA: 0x00C9D964 File Offset: 0x00C9BB64
+		// Token: 0x0602A361 RID: 172897 RVA: 0x00BEAE94 File Offset: 0x00BE9094
 		protected override void OnStart()
 		{
 			BattleShopViewOpenParam battleShopViewOpenParam = this.OpenParam as BattleShopViewOpenParam;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshTime();
 		}
 
-		// Token: 0x06035466 RID: 218214 RVA: 0x00C9DA1C File Offset: 0x00C9BC1C
+		// Token: 0x0602A362 RID: 172898 RVA: 0x00BEAF4C File Offset: 0x00BE914C
 		protected override UniTask OnBeforeShowAsyncImplementImplement()
 		{
 			PhantomArenaEntranceShopMainView.<OnBeforeShowAsyncImplementImplement>d__12 <OnBeforeShowAsyncImplementImplement>d__;
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035467 RID: 218215 RVA: 0x00C9DA5F File Offset: 0x00C9BC5F
+		// Token: 0x0602A363 RID: 172899 RVA: 0x00BEAF8F File Offset: 0x00BE918F
 		protected override void OnTick(float delta)
 		{
 			this.RefreshTime();
 		}
 
-		// Token: 0x06035468 RID: 218216 RVA: 0x00C9DA67 File Offset: 0x00C9BC67
+		// Token: 0x0602A364 RID: 172900 RVA: 0x00BEAF97 File Offset: 0x00BE9197
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TabComponent != null)
@@ -86,13 +86,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035469 RID: 218217 RVA: 0x00C9DA84 File Offset: 0x00C9BC84
+		// Token: 0x0602A365 RID: 172901 RVA: 0x00BEAFB4 File Offset: 0x00BE91B4
 		private void OnCloseClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603546A RID: 218218 RVA: 0x00C9DA90 File Offset: 0x00C9BC90
+		// Token: 0x0602A366 RID: 172902 RVA: 0x00BEAFC0 File Offset: 0x00BE91C0
 		protected void InitTabComponent()
 		{
 			CommonTabComponentData<PhantomArenaEntranceShopTabItem> data = new CommonTabComponentData<PhantomArenaEntranceShopTabItem>(new Func<UUIItem, int?, PhantomArenaEntranceShopTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(1), EKeyMode.Default);
 		}
 
-		// Token: 0x0603546B RID: 218219 RVA: 0x00C9DB40 File Offset: 0x00C9BD40
+		// Token: 0x0602A367 RID: 172903 RVA: 0x00BEB070 File Offset: 0x00BE9270
 		private UniTask RefreshTabListAsync()
 		{
 			PhantomArenaEntranceShopMainView.<RefreshTabListAsync>d__17 <RefreshTabListAsync>d__;
@@ -115,14 +115,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return <RefreshTabListAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603546C RID: 218220 RVA: 0x00C9DB84 File Offset: 0x00C9BD84
+		// Token: 0x0602A368 RID: 172904 RVA: 0x00BEB0B4 File Offset: 0x00BE92B4
 		private PhantomArenaEntranceShopTabData GetCommonData(int index)
 		{
 			UiDynamicTab uiDynamicTab = this.TabDataList[index];
 			return new PhantomArenaEntranceShopTabData(uiDynamicTab.Icon, new CommonTabTitleData("PhantomBattle_1098", Array.Empty<object>()), uiDynamicTab.TabName, (EUiTabViewName)uiDynamicTab.ChildViewName);
 		}
 
-		// Token: 0x0603546D RID: 218221 RVA: 0x00C9DBCC File Offset: 0x00C9BDCC
+		// Token: 0x0602A369 RID: 172905 RVA: 0x00BEB0FC File Offset: 0x00BE92FC
 		protected bool CanToggleChange(int index, bool? _)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -143,13 +143,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return true;
 		}
 
-		// Token: 0x0603546E RID: 218222 RVA: 0x00C9DC87 File Offset: 0x00C9BE87
+		// Token: 0x0602A36A RID: 172906 RVA: 0x00BEB1B7 File Offset: 0x00BE93B7
 		private PhantomArenaEntranceShopTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new PhantomArenaEntranceShopTabItem();
 		}
 
-		// Token: 0x0603546F RID: 218223 RVA: 0x00C9DC90 File Offset: 0x00C9BE90
+		// Token: 0x0602A36B RID: 172907 RVA: 0x00BEB1C0 File Offset: 0x00BE93C0
 		private void ToggleCallBack(int index)
 		{
 			this.LastClickTime = new double?(Time.Instance.Now);
@@ -160,13 +160,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.CurSelectTabView = new EUiTabViewName?(euiTabViewName);
 		}
 
-		// Token: 0x06035470 RID: 218224 RVA: 0x00C9DD07 File Offset: 0x00C9BF07
+		// Token: 0x0602A36C RID: 172908 RVA: 0x00BEB237 File Offset: 0x00BE9437
 		private void OnClickedHelp()
 		{
 			HelpController.Instance.OpenHelpById(335);
 		}
 
-		// Token: 0x06035471 RID: 218225 RVA: 0x00C9DD18 File Offset: 0x00C9BF18
+		// Token: 0x0602A36D RID: 172909 RVA: 0x00BEB248 File Offset: 0x00BE9448
 		private ERedDotName? GetRedDotNameByTabId(EUiTabViewName tab)
 		{
 			if (tab == EUiTabViewName.PhantomArenaEntranceTaskTabView)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return null;
 		}
 
-		// Token: 0x06035472 RID: 218226 RVA: 0x00C9DD60 File Offset: 0x00C9BF60
+		// Token: 0x0602A36E RID: 172910 RVA: 0x00BEB290 File Offset: 0x00BE9490
 		private void RefreshTime()
 		{
 			ValueTuple<bool, string> valueTuple = PhantomArenaModel.Instance.IsInLimitTime(this.ActivityId, this.RemainTimeText);
@@ -199,10 +199,10 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			text2.SetText(item2, true);
 		}
 
-		// Token: 0x0401C56A RID: 116074
+		// Token: 0x04016F9F RID: 94111
 		protected int ActivityId;
 
-		// Token: 0x0401C56B RID: 116075
+		// Token: 0x04016FA0 RID: 94112
 		[Nullable(new byte[]
 		{
 			2,
@@ -210,36 +210,36 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		protected TabComponentWithCaptionItem<PhantomArenaEntranceShopTabItem> TabComponent;
 
-		// Token: 0x0401C56C RID: 116076
+		// Token: 0x04016FA1 RID: 94113
 		[Nullable(2)]
 		protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x0401C56D RID: 116077
+		// Token: 0x04016FA2 RID: 94114
 		private double? LastClickTime;
 
-		// Token: 0x0401C56E RID: 116078
+		// Token: 0x04016FA3 RID: 94115
 		protected List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x0401C56F RID: 116079
+		// Token: 0x04016FA4 RID: 94116
 		private EUiTabViewName? CurSelectTabView;
 
-		// Token: 0x0401C570 RID: 116080
+		// Token: 0x04016FA5 RID: 94117
 		private int CurrencyId;
 
-		// Token: 0x0401C571 RID: 116081
+		// Token: 0x04016FA6 RID: 94118
 		private string RemainTimeText = "";
 
-		// Token: 0x0200B2C6 RID: 45766
+		// Token: 0x02009CFF RID: 40191
 		[NullableContext(0)]
 		private class EChildComponentType
 		{
-			// Token: 0x040362AC RID: 221868
+			// Token: 0x04030D01 RID: 199937
 			public const int CaptionItem = 0;
 
-			// Token: 0x040362AD RID: 221869
+			// Token: 0x04030D02 RID: 199938
 			public const int InfoContent = 1;
 
-			// Token: 0x040362AE RID: 221870
+			// Token: 0x04030D03 RID: 199939
 			public const int TxtTime = 2;
 		}
 	}

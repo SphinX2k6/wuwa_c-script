@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029E2 RID: 10722
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CCF RID: 11471
 	public class IPreloadFlows : IPreloadCharacterType
 	{
-		// Token: 0x0600ECD6 RID: 60630 RVA: 0x002291AC File Offset: 0x002273AC
+		// Token: 0x0600FB6D RID: 64365 RVA: 0x00246B30 File Offset: 0x00244D30
 		public static IPreloadFlows Create(IPreloadFlows? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AD4 RID: 19156
-		// (get) Token: 0x0600ECD7 RID: 60631 RVA: 0x002291CB File Offset: 0x002273CB
+		// Token: 0x17004E7D RID: 20093
+		// (get) Token: 0x0600FB6E RID: 64366 RVA: 0x00246B4F File Offset: 0x00244D4F
 		public override EPreloadObjectType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AD5 RID: 19157
-		// (get) Token: 0x0600ECD8 RID: 60632 RVA: 0x002291D8 File Offset: 0x002273D8
+		// Token: 0x17004E7E RID: 20094
+		// (get) Token: 0x0600FB6F RID: 64367 RVA: 0x00246B5C File Offset: 0x00244D5C
 		public virtual PlayFlow FlowData
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400826E RID: 33390
+		// Token: 0x0400895F RID: 35167
 		private IPreloadFlows Instance;
 
-		// Token: 0x0400826F RID: 33391
+		// Token: 0x04008960 RID: 35168
 		[Nullable(2)]
 		private PlayFlow _FlowDataCache;
 
-		// Token: 0x04008270 RID: 33392
+		// Token: 0x04008961 RID: 35169
 		private bool _FlowDataInited;
 	}
 }

@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051D5 RID: 20949
+	// Token: 0x020041A5 RID: 16805
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 	})]
 	public abstract class CommonBaseCardItem<[Nullable(2)] TItemData> : CardItemBase<TItemData>
 	{
-		// Token: 0x060359E0 RID: 219616 RVA: 0x00CB40B0 File Offset: 0x00CB22B0
+		// Token: 0x0602A8DB RID: 174299 RVA: 0x00C016EC File Offset: 0x00BFF8EC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,35 +25,35 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			};
 		}
 
-		// Token: 0x060359E1 RID: 219617 RVA: 0x00CB410B File Offset: 0x00CB230B
+		// Token: 0x0602A8DC RID: 174300 RVA: 0x00C01747 File Offset: 0x00BFF947
 		protected UUIItem GetCardRootItem()
 		{
 			return base.GetItem(0);
 		}
 
-		// Token: 0x060359E2 RID: 219618 RVA: 0x00CB4114 File Offset: 0x00CB2314
+		// Token: 0x0602A8DD RID: 174301 RVA: 0x00C01750 File Offset: 0x00BFF950
 		protected UUIItem GetContentRootItem()
 		{
 			return base.GetItem(2);
 		}
 
-		// Token: 0x060359E3 RID: 219619 RVA: 0x00CB411D File Offset: 0x00CB231D
+		// Token: 0x0602A8DE RID: 174302 RVA: 0x00C01759 File Offset: 0x00BFF959
 		protected UUIItem GetSpineRootItem()
 		{
 			return base.GetItem(13);
 		}
 
-		// Token: 0x0200B364 RID: 45924
+		// Token: 0x02009D9C RID: 40348
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x040365F3 RID: 222707
+			// Token: 0x04031046 RID: 200774
 			public const int CardItem = 0;
 
-			// Token: 0x040365F4 RID: 222708
+			// Token: 0x04031047 RID: 200775
 			public const int ContentItem = 2;
 
-			// Token: 0x040365F5 RID: 222709
+			// Token: 0x04031048 RID: 200776
 			public const int SpineRootItem = 13;
 		}
 	}

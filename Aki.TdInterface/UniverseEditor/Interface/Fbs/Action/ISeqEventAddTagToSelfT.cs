@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F7C RID: 28540
+	// Token: 0x02007742 RID: 30530
 	public class ISeqEventAddTagToSelfT
 	{
-		// Token: 0x1700D3FD RID: 54269
-		// (get) Token: 0x060326CE RID: 206542 RVA: 0x006CE7C9 File Offset: 0x006CC9C9
-		// (set) Token: 0x060326CF RID: 206543 RVA: 0x006CE7D1 File Offset: 0x006CC9D1
+		// Token: 0x1700DFCC RID: 57292
+		// (get) Token: 0x0603591E RID: 219422 RVA: 0x0072E181 File Offset: 0x0072C381
+		// (set) Token: 0x0603591F RID: 219423 RVA: 0x0072E189 File Offset: 0x0072C389
 		public List<int> Tags { get; set; }
 
-		// Token: 0x060326D0 RID: 206544 RVA: 0x006CE7DA File Offset: 0x006CC9DA
+		// Token: 0x06035920 RID: 219424 RVA: 0x0072E192 File Offset: 0x0072C392
 		public ISeqEventAddTagToSelfT()
 		{
 			this.Tags = null;

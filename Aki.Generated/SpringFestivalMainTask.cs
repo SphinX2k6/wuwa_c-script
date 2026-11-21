@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010E8 RID: 4328
+	// Token: 0x0200121E RID: 4638
 	public struct SpringFestivalMainTask : IFlatbufferObject
 	{
-		// Token: 0x17003821 RID: 14369
-		// (get) Token: 0x0600D8BA RID: 55482 RVA: 0x0031FE46 File Offset: 0x0031E046
+		// Token: 0x17003B77 RID: 15223
+		// (get) Token: 0x0600E605 RID: 58885 RVA: 0x0034B3E6 File Offset: 0x003495E6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D8BB RID: 55483 RVA: 0x0031FE53 File Offset: 0x0031E053
+		// Token: 0x0600E606 RID: 58886 RVA: 0x0034B3F3 File Offset: 0x003495F3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D8BC RID: 55484 RVA: 0x0031FE5C File Offset: 0x0031E05C
+		// Token: 0x0600E607 RID: 58887 RVA: 0x0034B3FC File Offset: 0x003495FC
 		public static SpringFestivalMainTask GetRootAsSpringFestivalMainTask(ByteBuffer _bb)
 		{
 			return SpringFestivalMainTask.GetRootAsSpringFestivalMainTask(_bb, default(SpringFestivalMainTask));
 		}
 
-		// Token: 0x0600D8BD RID: 55485 RVA: 0x0031FE78 File Offset: 0x0031E078
+		// Token: 0x0600E608 RID: 58888 RVA: 0x0034B418 File Offset: 0x00349618
 		public static SpringFestivalMainTask GetRootAsSpringFestivalMainTask(ByteBuffer _bb, SpringFestivalMainTask obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D8BE RID: 55486 RVA: 0x0031FE95 File Offset: 0x0031E095
+		// Token: 0x0600E609 RID: 58889 RVA: 0x0034B435 File Offset: 0x00349635
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D8BF RID: 55487 RVA: 0x0031FEA4 File Offset: 0x0031E0A4
+		// Token: 0x0600E60A RID: 58890 RVA: 0x0034B444 File Offset: 0x00349644
 		public SpringFestivalMainTask __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003822 RID: 14370
-		// (get) Token: 0x0600D8C0 RID: 55488 RVA: 0x0031FEB4 File Offset: 0x0031E0B4
+		// Token: 0x17003B78 RID: 15224
+		// (get) Token: 0x0600E60B RID: 58891 RVA: 0x0034B454 File Offset: 0x00349654
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003823 RID: 14371
-		// (get) Token: 0x0600D8C1 RID: 55489 RVA: 0x0031FEF0 File Offset: 0x0031E0F0
+		// Token: 0x17003B79 RID: 15225
+		// (get) Token: 0x0600E60C RID: 58892 RVA: 0x0034B490 File Offset: 0x00349690
 		public int QuestId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003824 RID: 14372
-		// (get) Token: 0x0600D8C2 RID: 55490 RVA: 0x0031FF2C File Offset: 0x0031E12C
+		// Token: 0x17003B7A RID: 15226
+		// (get) Token: 0x0600E60D RID: 58893 RVA: 0x0034B4CC File Offset: 0x003496CC
 		public int OpenDay
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003825 RID: 14373
-		// (get) Token: 0x0600D8C3 RID: 55491 RVA: 0x0031FF68 File Offset: 0x0031E168
+		// Token: 0x17003B7B RID: 15227
+		// (get) Token: 0x0600E60E RID: 58894 RVA: 0x0034B508 File Offset: 0x00349708
 		public string LockDesc
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D8C4 RID: 55492 RVA: 0x0031FFA0 File Offset: 0x0031E1A0
+		// Token: 0x0600E60F RID: 58895 RVA: 0x0034B540 File Offset: 0x00349740
 		public Span<byte> GetLockDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600D8C5 RID: 55493 RVA: 0x0031FFB0 File Offset: 0x0031E1B0
+		// Token: 0x0600E610 RID: 58896 RVA: 0x0034B550 File Offset: 0x00349750
 		public byte[] GetLockDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0400521C RID: 21020
+		// Token: 0x0400585F RID: 22623
 		private Table __p;
 	}
 }

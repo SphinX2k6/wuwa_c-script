@@ -1,22 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Component
 {
-	// Token: 0x0200693D RID: 26941
+	// Token: 0x0200588E RID: 22670
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class ActivityGameplayComponentBase
 	{
-		// Token: 0x170097F3 RID: 38899
-		// (get) Token: 0x0604325C RID: 275036 RVA: 0x0105E328 File Offset: 0x0105C528
+		// Token: 0x17006B33 RID: 27443
+		// (get) Token: 0x06037DB9 RID: 228793 RVA: 0x00F9F998 File Offset: 0x00F9DB98
 		[Nullable(new byte[]
 		{
 			2,
 			1
 		})]
-		public static List<Type> Dependencies
+		public virtual Type[] Dependencies
 		{
 			[return: Nullable(new byte[]
 			{
@@ -29,8 +28,8 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Compo
 			}
 		}
 
-		// Token: 0x170097F4 RID: 38900
-		// (get) Token: 0x0604325D RID: 275037 RVA: 0x0105E32B File Offset: 0x0105C52B
+		// Token: 0x17006B34 RID: 27444
+		// (get) Token: 0x06037DBA RID: 228794 RVA: 0x00F9F99B File Offset: 0x00F9DB9B
 		public bool NeedTick
 		{
 			get
@@ -39,8 +38,8 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Compo
 			}
 		}
 
-		// Token: 0x170097F5 RID: 38901
-		// (get) Token: 0x0604325E RID: 275038 RVA: 0x0105E333 File Offset: 0x0105C533
+		// Token: 0x17006B35 RID: 27445
+		// (get) Token: 0x06037DBB RID: 228795 RVA: 0x00F9F9A3 File Offset: 0x00F9DBA3
 		protected ActivityGameplayEntity OwnerEntity
 		{
 			get
@@ -49,19 +48,19 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Compo
 			}
 		}
 
-		// Token: 0x0604325F RID: 275039 RVA: 0x0105E33B File Offset: 0x0105C53B
+		// Token: 0x06037DBC RID: 228796 RVA: 0x00F9F9AB File Offset: 0x00F9DBAB
 		public virtual void Create(ActivityGameplayEntity ownerEntity, [Nullable(2)] object args = null)
 		{
 			this.OwnerEntityInternal = ownerEntity;
 		}
 
-		// Token: 0x06043260 RID: 275040 RVA: 0x0105E344 File Offset: 0x0105C544
+		// Token: 0x06037DBD RID: 228797 RVA: 0x00F9F9B4 File Offset: 0x00F9DBB4
 		public void Init()
 		{
 			this.OnInit();
 		}
 
-		// Token: 0x06043261 RID: 275041 RVA: 0x0105E34C File Offset: 0x0105C54C
+		// Token: 0x06037DBE RID: 228798 RVA: 0x00F9F9BC File Offset: 0x00F9DBBC
 		public void Tick(float deltaTime)
 		{
 			if (!this.NeedTickInternal)
@@ -71,38 +70,38 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Compo
 			this.OnTick(deltaTime);
 		}
 
-		// Token: 0x06043262 RID: 275042 RVA: 0x0105E35E File Offset: 0x0105C55E
+		// Token: 0x06037DBF RID: 228799 RVA: 0x00F9F9CE File Offset: 0x00F9DBCE
 		public void End()
 		{
 			this.OnEnd();
 			this.OwnerEntityInternal = null;
 		}
 
-		// Token: 0x06043263 RID: 275043 RVA: 0x0105E36D File Offset: 0x0105C56D
+		// Token: 0x06037DC0 RID: 228800 RVA: 0x00F9F9DD File Offset: 0x00F9DBDD
 		protected void SetNeedTick(bool value)
 		{
 			this.NeedTickInternal = value;
 		}
 
-		// Token: 0x06043264 RID: 275044 RVA: 0x0105E376 File Offset: 0x0105C576
+		// Token: 0x06037DC1 RID: 228801 RVA: 0x00F9F9E6 File Offset: 0x00F9DBE6
 		protected virtual void OnInit()
 		{
 		}
 
-		// Token: 0x06043265 RID: 275045 RVA: 0x0105E378 File Offset: 0x0105C578
+		// Token: 0x06037DC2 RID: 228802 RVA: 0x00F9F9E8 File Offset: 0x00F9DBE8
 		protected virtual void OnTick(float deltaTime)
 		{
 		}
 
-		// Token: 0x06043266 RID: 275046 RVA: 0x0105E37A File Offset: 0x0105C57A
+		// Token: 0x06037DC3 RID: 228803 RVA: 0x00F9F9EA File Offset: 0x00F9DBEA
 		protected virtual void OnEnd()
 		{
 		}
 
-		// Token: 0x04022F5E RID: 143198
+		// Token: 0x0401D7BB RID: 120763
 		private bool NeedTickInternal;
 
-		// Token: 0x04022F5F RID: 143199
+		// Token: 0x0401D7BC RID: 120764
 		[Nullable(2)]
 		private ActivityGameplayEntity OwnerEntityInternal;
 	}

@@ -9,36 +9,42 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054D8 RID: 21720
+	// Token: 0x020044AB RID: 17579
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CaveHoleMarkItem : ConfigMarkItem
 	{
-		// Token: 0x06037739 RID: 227129 RVA: 0x00D2C040 File Offset: 0x00D2A240
+		// Token: 0x0602C5DE RID: 181726 RVA: 0x00C79B28 File Offset: 0x00C77D28
 		public CaveHoleMarkItem(int markId, MapMark config, UUIItem parent, EMapType mapType, float markScale, ETrackSource trackSource = ETrackSource.MapMark) : base(markId, config, parent, mapType, markScale, new ETrackSource?((config.InstanceDungeonId != 0) ? ETrackSource.Instance : trackSource))
 		{
 		}
 
-		// Token: 0x0603773A RID: 227130 RVA: 0x00D2C062 File Offset: 0x00D2A262
+		// Token: 0x0602C5DF RID: 181727 RVA: 0x00C79B4A File Offset: 0x00C77D4A
 		protected override void OnInitialize()
 		{
 			this.UpdateMultiMapFloorSelectedState();
 			base.OnInitialize();
 		}
 
-		// Token: 0x0603773B RID: 227131 RVA: 0x00D2C070 File Offset: 0x00D2A270
+		// Token: 0x0602C5E0 RID: 181728 RVA: 0x00C79B58 File Offset: 0x00C77D58
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.CaveHoleMarkItemView;
 		}
 
-		// Token: 0x0603773C RID: 227132 RVA: 0x00D2C073 File Offset: 0x00D2A273
+		// Token: 0x0602C5E1 RID: 181729 RVA: 0x00C79B5B File Offset: 0x00C77D5B
 		protected override MarkItemView CreateView()
 		{
 			return new CaveHoleMarkItemView(this);
 		}
 
-		// Token: 0x0603773D RID: 227133 RVA: 0x00D2C07C File Offset: 0x00D2A27C
+		// Token: 0x0602C5E2 RID: 181730 RVA: 0x00C79B63 File Offset: 0x00C77D63
+		public override bool IsMarkDisabled()
+		{
+			return false;
+		}
+
+		// Token: 0x0602C5E3 RID: 181731 RVA: 0x00C79B68 File Offset: 0x00C77D68
 		public override bool CheckCanShowView()
 		{
 			bool flag = base.CheckCanShowView();
@@ -67,7 +73,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return flag;
 		}
 
-		// Token: 0x0603773E RID: 227134 RVA: 0x00D2C0E8 File Offset: 0x00D2A2E8
+		// Token: 0x0602C5E4 RID: 181732 RVA: 0x00C79BD4 File Offset: 0x00C77DD4
 		protected override void OnUpdate(global::Vector playerLocation)
 		{
 			base.OnUpdate(playerLocation);
@@ -77,7 +83,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x0603773F RID: 227135 RVA: 0x00D2C100 File Offset: 0x00D2A300
+		// Token: 0x0602C5E5 RID: 181733 RVA: 0x00C79BEC File Offset: 0x00C77DEC
 		public override bool GetIsSelectThisFloor()
 		{
 			if (!this.IsMultiMap())
@@ -85,7 +91,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 				return this.LocateInGround();
 			}
 			int multiMapId = this.GetMultiMapId();
-			int multiMapFloorId = this.MarkConfig.Value.MultiMapFloorId;
+			int multiMapFloorId = base.MarkConfig.Value.MultiMapFloorId;
 			if (base.MapType == EMapType.MiniMap)
 			{
 				return base.InMultiMapArea(multiMapId) || base.InMultiMapArea(multiMapFloorId);
@@ -102,7 +108,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return true;
 		}
 
-		// Token: 0x06037740 RID: 227136 RVA: 0x00D2C194 File Offset: 0x00D2A394
+		// Token: 0x0602C5E6 RID: 181734 RVA: 0x00C79C84 File Offset: 0x00C77E84
 		private void UpdateMultiMapFloorSelectedState()
 		{
 			bool isSelectThisFloor = base.IsSelectThisFloor;

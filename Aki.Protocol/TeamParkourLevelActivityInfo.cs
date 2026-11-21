@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200132C RID: 4908
+	// Token: 0x02001399 RID: 5017
 	public sealed class TeamParkourLevelActivityInfo : IMessage<TeamParkourLevelActivityInfo>, IMessage, IEquatable<TeamParkourLevelActivityInfo>, IDeepCloneable<TeamParkourLevelActivityInfo>, IBufferMessage
 	{
-		// Token: 0x0601A13D RID: 106813 RVA: 0x003C9B2C File Offset: 0x003C7D2C
+		// Token: 0x0601AB4D RID: 109389 RVA: 0x003E3DE8 File Offset: 0x003E1FE8
 		[NullableContext(1)]
 		public static TeamParkourLevelActivityInfo Create()
 		{
 			return new TeamParkourLevelActivityInfo();
 		}
 
-		// Token: 0x170057F2 RID: 22514
-		// (get) Token: 0x0601A13E RID: 106814 RVA: 0x003C9B33 File Offset: 0x003C7D33
+		// Token: 0x17005A6C RID: 23148
+		// (get) Token: 0x0601AB4E RID: 109390 RVA: 0x003E3DEF File Offset: 0x003E1FEF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170057F3 RID: 22515
-		// (get) Token: 0x0601A13F RID: 106815 RVA: 0x003C9B36 File Offset: 0x003C7D36
+		// Token: 0x17005A6D RID: 23149
+		// (get) Token: 0x0601AB4F RID: 109391 RVA: 0x003E3DF2 File Offset: 0x003E1FF2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A140 RID: 106816 RVA: 0x003C9B3D File Offset: 0x003C7D3D
+		// Token: 0x0601AB50 RID: 109392 RVA: 0x003E3DF9 File Offset: 0x003E1FF9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeamParkourLevelActivityInfo()
 		{
 		}
 
-		// Token: 0x0601A141 RID: 106817 RVA: 0x003C9B50 File Offset: 0x003C7D50
+		// Token: 0x0601AB51 RID: 109393 RVA: 0x003E3E0C File Offset: 0x003E200C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeamParkourLevelActivityInfo(TeamParkourLevelActivityInfo other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601A142 RID: 106818 RVA: 0x003C9BA1 File Offset: 0x003C7DA1
+		// Token: 0x0601AB52 RID: 109394 RVA: 0x003E3E5D File Offset: 0x003E205D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeamParkourLevelActivityInfo Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new TeamParkourLevelActivityInfo(this);
 		}
 
-		// Token: 0x170057F4 RID: 22516
-		// (get) Token: 0x0601A143 RID: 106819 RVA: 0x003C9BA9 File Offset: 0x003C7DA9
+		// Token: 0x17005A6E RID: 23150
+		// (get) Token: 0x0601AB53 RID: 109395 RVA: 0x003E3E65 File Offset: 0x003E2065
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<TeamParkourLevelPlayInfo> TeamParkourLevelPlayInfos
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170057F5 RID: 22517
-		// (get) Token: 0x0601A144 RID: 106820 RVA: 0x003C9BB1 File Offset: 0x003C7DB1
-		// (set) Token: 0x0601A145 RID: 106821 RVA: 0x003C9BB9 File Offset: 0x003C7DB9
+		// Token: 0x17005A6F RID: 23151
+		// (get) Token: 0x0601AB54 RID: 109396 RVA: 0x003E3E6D File Offset: 0x003E206D
+		// (set) Token: 0x0601AB55 RID: 109397 RVA: 0x003E3E75 File Offset: 0x003E2075
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityTaskData ActivityTaskDatas
@@ -96,7 +96,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A146 RID: 106822 RVA: 0x003C9BC2 File Offset: 0x003C7DC2
+		// Token: 0x0601AB56 RID: 109398 RVA: 0x003E3E7E File Offset: 0x003E207E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -104,7 +104,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TeamParkourLevelActivityInfo);
 		}
 
-		// Token: 0x0601A147 RID: 106823 RVA: 0x003C9BD0 File Offset: 0x003C7DD0
+		// Token: 0x0601AB57 RID: 109399 RVA: 0x003E3E8C File Offset: 0x003E208C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TeamParkourLevelActivityInfo other)
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.teamParkourLevelPlayInfos_.Equals(other.teamParkourLevelPlayInfos_) && object.Equals(this.ActivityTaskDatas, other.ActivityTaskDatas) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601A148 RID: 106824 RVA: 0x003C9C24 File Offset: 0x003C7E24
+		// Token: 0x0601AB58 RID: 109400 RVA: 0x003E3EE0 File Offset: 0x003E20E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A149 RID: 106825 RVA: 0x003C9C6E File Offset: 0x003C7E6E
+		// Token: 0x0601AB59 RID: 109401 RVA: 0x003E3F2A File Offset: 0x003E212A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601A14A RID: 106826 RVA: 0x003C9C7B File Offset: 0x003C7E7B
+		// Token: 0x0601AB5A RID: 109402 RVA: 0x003E3F37 File Offset: 0x003E2137
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601A14B RID: 106827 RVA: 0x003C9C84 File Offset: 0x003C7E84
+		// Token: 0x0601AB5B RID: 109403 RVA: 0x003E3F40 File Offset: 0x003E2140
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A14C RID: 106828 RVA: 0x003C9CD4 File Offset: 0x003C7ED4
+		// Token: 0x0601AB5C RID: 109404 RVA: 0x003E3F90 File Offset: 0x003E2190
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A14D RID: 106829 RVA: 0x003C9D28 File Offset: 0x003C7F28
+		// Token: 0x0601AB5D RID: 109405 RVA: 0x003E3FE4 File Offset: 0x003E21E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TeamParkourLevelActivityInfo other)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601A14E RID: 106830 RVA: 0x003C9D8D File Offset: 0x003C7F8D
+		// Token: 0x0601AB5E RID: 109406 RVA: 0x003E4049 File Offset: 0x003E2249
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601A14F RID: 106831 RVA: 0x003C9D98 File Offset: 0x003C7F98
+		// Token: 0x0601AB5F RID: 109407 RVA: 0x003E4054 File Offset: 0x003E2254
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -244,22 +244,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009840 RID: 38976
+		// Token: 0x04009C62 RID: 40034
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009841 RID: 38977
+		// Token: 0x04009C63 RID: 40035
 		public const int TeamParkourLevelPlayInfosFieldNumber = 1;
 
-		// Token: 0x04009842 RID: 38978
+		// Token: 0x04009C64 RID: 40036
 		private static readonly FieldCodec<TeamParkourLevelPlayInfo> _repeated_teamParkourLevelPlayInfos_codec = FieldCodec.ForMessage<TeamParkourLevelPlayInfo>(10U, TeamParkourLevelPlayInfo.Parser);
 
-		// Token: 0x04009843 RID: 38979
+		// Token: 0x04009C65 RID: 40037
 		private readonly RepeatedField<TeamParkourLevelPlayInfo> teamParkourLevelPlayInfos_ = new RepeatedField<TeamParkourLevelPlayInfo>();
 
-		// Token: 0x04009844 RID: 38980
+		// Token: 0x04009C66 RID: 40038
 		public const int ActivityTaskDatasFieldNumber = 2;
 
-		// Token: 0x04009845 RID: 38981
+		// Token: 0x04009C67 RID: 40039
 		private ActivityTaskData activityTaskDatas_;
 	}
 }

@@ -7,12 +7,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter.GameplayABP;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
 using UnrealEngine;
 
-// Token: 0x020031D3 RID: 12755
+// Token: 0x02002742 RID: 10050
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcDriveVehicleComponent : CharacterDriveVehicleComponent
 {
-	// Token: 0x0601B81F RID: 112671 RVA: 0x0078ADDD File Offset: 0x00788FDD
+	// Token: 0x06019371 RID: 103281 RVA: 0x007B2BF9 File Offset: 0x007B0DF9
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -24,7 +24,7 @@ public class NpcDriveVehicleComponent : CharacterDriveVehicleComponent
 		return true;
 	}
 
-	// Token: 0x0601B820 RID: 112672 RVA: 0x0078AE0C File Offset: 0x0078900C
+	// Token: 0x06019372 RID: 103282 RVA: 0x007B2C28 File Offset: 0x007B0E28
 	protected override void OnActivate()
 	{
 		CommonNpcPerformComponent npcPerformComp = this.NpcPerformComp;
@@ -47,7 +47,7 @@ public class NpcDriveVehicleComponent : CharacterDriveVehicleComponent
 		VehicleController.Instance.VehicleUpdateEntity(entityVehicleInfo);
 	}
 
-	// Token: 0x0601B821 RID: 112673 RVA: 0x0078AEC8 File Offset: 0x007890C8
+	// Token: 0x06019373 RID: 103283 RVA: 0x007B2CE4 File Offset: 0x007B0EE4
 	protected override void PostEnterVehiclePerform(VehiclePassengerInfo info)
 	{
 		base.PostEnterVehiclePerform(info);
@@ -59,7 +59,7 @@ public class NpcDriveVehicleComponent : CharacterDriveVehicleComponent
 		npcPerformComp.OnEnterVehicle();
 	}
 
-	// Token: 0x0601B822 RID: 112674 RVA: 0x0078AEE1 File Offset: 0x007890E1
+	// Token: 0x06019374 RID: 103284 RVA: 0x007B2CFD File Offset: 0x007B0EFD
 	protected override void LeaveVehiclePerform(VehiclePassengerInfo info)
 	{
 		CommonNpcPerformComponent npcPerformComp = this.NpcPerformComp;
@@ -70,7 +70,7 @@ public class NpcDriveVehicleComponent : CharacterDriveVehicleComponent
 		base.LeaveVehiclePerform(info);
 	}
 
-	// Token: 0x0601B823 RID: 112675 RVA: 0x0078AEFC File Offset: 0x007890FC
+	// Token: 0x06019375 RID: 103285 RVA: 0x007B2D18 File Offset: 0x007B0F18
 	protected unsafe override void RegisterExtraFollow(VehiclePassengerInfo info)
 	{
 		if (base.VehicleType.GetValueOrDefault() == EVehicleType.Motorcycle || base.VehicleType.GetValueOrDefault() == EVehicleType.Thunderbird || base.VehicleType.GetValueOrDefault() == EVehicleType.WoodenOxenAndFlowingHorses)
@@ -149,7 +149,7 @@ public class NpcDriveVehicleComponent : CharacterDriveVehicleComponent
 		}
 	}
 
-	// Token: 0x0601B824 RID: 112676 RVA: 0x0078B10C File Offset: 0x0078930C
+	// Token: 0x06019376 RID: 103286 RVA: 0x007B2F28 File Offset: 0x007B1128
 	protected override void UnregisterExtraFollow(VehiclePassengerInfo info)
 	{
 		if (base.VehicleType.GetValueOrDefault() == EVehicleType.Motorcycle || base.VehicleType.GetValueOrDefault() == EVehicleType.Thunderbird || base.VehicleType.GetValueOrDefault() == EVehicleType.WoodenOxenAndFlowingHorses)
@@ -196,7 +196,7 @@ public class NpcDriveVehicleComponent : CharacterDriveVehicleComponent
 		}
 	}
 
-	// Token: 0x0601B825 RID: 112677 RVA: 0x0078B1E8 File Offset: 0x007893E8
+	// Token: 0x06019377 RID: 103287 RVA: 0x007B3004 File Offset: 0x007B1204
 	protected override bool OnEnd()
 	{
 		long creatureDataId = base.Entity.GetComponent<CreatureDataComponent>().GetCreatureDataId();
@@ -211,7 +211,7 @@ public class NpcDriveVehicleComponent : CharacterDriveVehicleComponent
 		return base.OnEnd();
 	}
 
-	// Token: 0x0601B826 RID: 112678 RVA: 0x0078B234 File Offset: 0x00789434
+	// Token: 0x06019378 RID: 103288 RVA: 0x007B3050 File Offset: 0x007B1250
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -219,42 +219,86 @@ public class NpcDriveVehicleComponent : CharacterDriveVehicleComponent
 			return false;
 		}
 		NpcDriveVehicleComponent npcDriveVehicleComponent = (NpcDriveVehicleComponent)componentTemplate;
-		if (base.CanResetComponentProperty("NpcPerformComp"))
+		if (npcDriveVehicleComponent.NpcPerformComp == null)
 		{
-			if (npcDriveVehicleComponent.NpcPerformComp == null)
-			{
-				this.NpcPerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CommonNpcPerformComponent>(this.NpcPerformComp), "NpcPerformComp"))
-			{
-				return false;
-			}
+			this.NpcPerformComp = null;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.NpcPerformComp), "NpcPerformComp"))
 		{
-			if (npcDriveVehicleComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (npcDriveVehicleComponent.AnimComp == null)
+		{
+			this.AnimComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400D7F7 RID: 55287
+	// Token: 0x17002825 RID: 10277
+	// (get) Token: 0x06019379 RID: 103289 RVA: 0x007B30C6 File Offset: 0x007B12C6
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002826 RID: 10278
+	// (get) Token: 0x0601937A RID: 103290 RVA: 0x007B30C9 File Offset: 0x007B12C9
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002827 RID: 10279
+	// (get) Token: 0x0601937B RID: 103291 RVA: 0x007B30CC File Offset: 0x007B12CC
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002828 RID: 10280
+	// (get) Token: 0x0601937C RID: 103292 RVA: 0x007B30CF File Offset: 0x007B12CF
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002829 RID: 10281
+	// (get) Token: 0x0601937D RID: 103293 RVA: 0x007B30D2 File Offset: 0x007B12D2
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DC7E RID: 56446
 	private const int DRIVE_MONTAGE_DEFAULT_OFFSET_X = 35;
 
-	// Token: 0x0400D7F8 RID: 55288
+	// Token: 0x0400DC7F RID: 56447
 	private const string VEHICLE_PB = "VehiclePassengerComponentPb";
 
-	// Token: 0x0400D7F9 RID: 55289
+	// Token: 0x0400DC80 RID: 56448
 	[Nullable(2)]
 	protected CommonNpcPerformComponent NpcPerformComp;
 
-	// Token: 0x0400D7FA RID: 55290
+	// Token: 0x0400DC81 RID: 56449
 	[Nullable(2)]
 	protected CharacterAnimationComponent AnimComp;
 }

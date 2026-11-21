@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002983 RID: 10627
+	// Token: 0x02002C69 RID: 11369
 	public class IDynamicSettlementConfig
 	{
-		// Token: 0x0600EB67 RID: 60263 RVA: 0x00226F5C File Offset: 0x0022515C
-		[NullableContext(1)]
+		// Token: 0x0600F9E2 RID: 63970 RVA: 0x002446B4 File Offset: 0x002428B4
 		public static IDynamicSettlementConfig Create(IDynamicSettlementConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A23 RID: 18979
-		// (get) Token: 0x0600EB68 RID: 60264 RVA: 0x00226F7B File Offset: 0x0022517B
+		// Token: 0x17004DBE RID: 19902
+		// (get) Token: 0x0600F9E3 RID: 63971 RVA: 0x002446D3 File Offset: 0x002428D3
 		public virtual EDynamicSettlementType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081A7 RID: 33191
+		// Token: 0x0400888B RID: 34955
 		private IDynamicSettlementConfig Instance;
 	}
 }

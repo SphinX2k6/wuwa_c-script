@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200037C RID: 892
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003C5 RID: 965
 	public class IFightMusicsSwitchByTagList : IFightMusicsSwitchType
 	{
-		// Token: 0x060011B5 RID: 4533 RVA: 0x0003B670 File Offset: 0x00039870
+		// Token: 0x060012F9 RID: 4857 RVA: 0x0003E954 File Offset: 0x0003CB54
 		private IFightMusicsSwitchByTagList_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060011B6 RID: 4534 RVA: 0x0003B6A8 File Offset: 0x000398A8
+		// Token: 0x060012FA RID: 4858 RVA: 0x0003E98C File Offset: 0x0003CB8C
 		public static IFightMusicsSwitchByTagList Create([Nullable(2)] IFightMusicsSwitchByTagList instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011B7 RID: 4535 RVA: 0x0003B6BB File Offset: 0x000398BB
+		// Token: 0x060012FB RID: 4859 RVA: 0x0003E99F File Offset: 0x0003CB9F
 		public static IFightMusicsSwitchByTagList CreateFromSetValue([Nullable(2)] IFightMusicsSwitchByTagList_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011B8 RID: 4536 RVA: 0x0003B6CE File Offset: 0x000398CE
+		// Token: 0x060012FC RID: 4860 RVA: 0x0003E9B2 File Offset: 0x0003CBB2
 		public new IFightMusicsSwitchByTagList_SetValue ToSetValue()
 		{
 			return new IFightMusicsSwitchByTagList_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004FE RID: 1278
-		// (get) Token: 0x060011B9 RID: 4537 RVA: 0x0003B6ED File Offset: 0x000398ED
-		// (set) Token: 0x060011BA RID: 4538 RVA: 0x0003B718 File Offset: 0x00039918
+		// Token: 0x17000552 RID: 1362
+		// (get) Token: 0x060012FD RID: 4861 RVA: 0x0003E9D1 File Offset: 0x0003CBD1
+		// (set) Token: 0x060012FE RID: 4862 RVA: 0x0003E9FC File Offset: 0x0003CBFC
 		public override EFightMusicsSwitchType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004FF RID: 1279
-		// (get) Token: 0x060011BB RID: 4539 RVA: 0x0003B728 File Offset: 0x00039928
-		// (set) Token: 0x060011BC RID: 4540 RVA: 0x0003B7BB File Offset: 0x000399BB
+		// Token: 0x17000553 RID: 1363
+		// (get) Token: 0x060012FF RID: 4863 RVA: 0x0003EA0C File Offset: 0x0003CC0C
+		// (set) Token: 0x06001300 RID: 4864 RVA: 0x0003EA9F File Offset: 0x0003CC9F
 		public virtual List<IFightMusicSwitchByTag> Element
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E75 RID: 3701
+		// Token: 0x04000F6C RID: 3948
 		[Nullable(2)]
 		protected new IFightMusicsSwitchByTagList FbInstance;
 
-		// Token: 0x04000E76 RID: 3702
+		// Token: 0x04000F6D RID: 3949
 		[Nullable(2)]
 		protected new IFightMusicsSwitchByTagList_SetValue PocoInterface;
 
-		// Token: 0x04000E77 RID: 3703
+		// Token: 0x04000F6E RID: 3950
 		private List<IFightMusicSwitchByTag> _ElementCache;
 
-		// Token: 0x04000E78 RID: 3704
+		// Token: 0x04000F6F RID: 3951
 		private bool _ElementInited;
 	}
 }

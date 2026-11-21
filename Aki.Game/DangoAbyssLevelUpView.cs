@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
@@ -9,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A44 RID: 6724
+// Token: 0x02000F03 RID: 3843
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoAbyssLevelUpView : UiViewBase
 {
-	// Token: 0x0600C5CB RID: 50635 RVA: 0x002CEA47 File Offset: 0x002CCC47
+	// Token: 0x060099DB RID: 39387 RVA: 0x002D9B5B File Offset: 0x002D7D5B
 	[NullableContext(1)]
 	public DangoAbyssLevelUpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C5CC RID: 50636 RVA: 0x002CEA50 File Offset: 0x002CCC50
+	// Token: 0x060099DC RID: 39388 RVA: 0x002D9B64 File Offset: 0x002D7D64
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,13 +43,13 @@ public class DangoAbyssLevelUpView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600C5CD RID: 50637 RVA: 0x002CEB96 File Offset: 0x002CCD96
-	public override bool GetLoopAudioEventSwitch()
+	// Token: 0x060099DD RID: 39389 RVA: 0x002D9CAA File Offset: 0x002D7EAA
+	public override bool GetBgmSwitch()
 	{
 		return !DangoAbyssModel.Instance.CheckIfInSmallWorldInstance();
 	}
 
-	// Token: 0x0600C5CE RID: 50638 RVA: 0x002CEBA8 File Offset: 0x002CCDA8
+	// Token: 0x060099DE RID: 39390 RVA: 0x002D9CBC File Offset: 0x002D7EBC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssLevelUpView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -61,27 +60,27 @@ public class DangoAbyssLevelUpView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C5CF RID: 50639 RVA: 0x002CEBEB File Offset: 0x002CCDEB
+	// Token: 0x060099DF RID: 39391 RVA: 0x002D9CFF File Offset: 0x002D7EFF
 	protected override void OnStart()
 	{
 		this.DangoId = (int)this.OpenParam;
 		EventSystem.Instance.Emit<int>(EEventName.OnAbyssPluginDangoSelect, 0);
 	}
 
-	// Token: 0x0600C5D0 RID: 50640 RVA: 0x002CEC0F File Offset: 0x002CCE0F
+	// Token: 0x060099E0 RID: 39392 RVA: 0x002D9D23 File Offset: 0x002D7F23
 	[NullableContext(1)]
 	private AbyssDangoRoleData GetCurrentDangoData()
 	{
 		return DangoAbyssModel.Instance.GetDangoAbyssRoleData(this.DangoId);
 	}
 
-	// Token: 0x0600C5D1 RID: 50641 RVA: 0x002CEC21 File Offset: 0x002CCE21
+	// Token: 0x060099E1 RID: 39393 RVA: 0x002D9D35 File Offset: 0x002D7F35
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600C5D2 RID: 50642 RVA: 0x002CEC2C File Offset: 0x002CCE2C
+	// Token: 0x060099E2 RID: 39394 RVA: 0x002D9D40 File Offset: 0x002D7F40
 	private void RefreshView()
 	{
 		AbyssDangoRoleData currentDangoData = this.GetCurrentDangoData();
@@ -93,7 +92,7 @@ public class DangoAbyssLevelUpView : UiViewBase
 		this.RefreshAttribute(currentDangoData);
 	}
 
-	// Token: 0x0600C5D3 RID: 50643 RVA: 0x002CEC6C File Offset: 0x002CCE6C
+	// Token: 0x060099E3 RID: 39395 RVA: 0x002D9D80 File Offset: 0x002D7F80
 	private void RefreshCostItem(AbyssDangoRoleData data)
 	{
 		if (data == null)
@@ -104,11 +103,11 @@ public class DangoAbyssLevelUpView : UiViewBase
 		this.CostItem.SetActive(ifCanLevelUp);
 		if (ifCanLevelUp)
 		{
-			this.CostItem.RefreshCost(data.GetCurrentLevelUpConsume().ToList<ICostData>());
+			this.CostItem.RefreshCost(data.GetCurrentLevelUpConsume());
 		}
 	}
 
-	// Token: 0x0600C5D4 RID: 50644 RVA: 0x002CECAC File Offset: 0x002CCEAC
+	// Token: 0x060099E4 RID: 39396 RVA: 0x002D9DB8 File Offset: 0x002D7FB8
 	private void RefreshMaxLevel(AbyssDangoRoleData data)
 	{
 		if (data == null)
@@ -121,7 +120,7 @@ public class DangoAbyssLevelUpView : UiViewBase
 		base.GetItem(10).SetActive(!ifLock && ifMaxLevel, false);
 	}
 
-	// Token: 0x0600C5D5 RID: 50645 RVA: 0x002CECF0 File Offset: 0x002CCEF0
+	// Token: 0x060099E5 RID: 39397 RVA: 0x002D9DFC File Offset: 0x002D7FFC
 	private void RefreshLevelUpItem(AbyssDangoRoleData data)
 	{
 		if (data == null)
@@ -153,7 +152,7 @@ public class DangoAbyssLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C5D6 RID: 50646 RVA: 0x002CED54 File Offset: 0x002CCF54
+	// Token: 0x060099E6 RID: 39398 RVA: 0x002D9E60 File Offset: 0x002D8060
 	private void RefreshLevelPreviewText(AbyssDangoRoleData data)
 	{
 		base.GetText(4).SetText(StringUtils.Format("Lv.{0}", new string[]
@@ -173,7 +172,7 @@ public class DangoAbyssLevelUpView : UiViewBase
 		}), true);
 	}
 
-	// Token: 0x0600C5D7 RID: 50647 RVA: 0x002CEDF4 File Offset: 0x002CCFF4
+	// Token: 0x060099E7 RID: 39399 RVA: 0x002D9F00 File Offset: 0x002D8100
 	private void RefreshAttribute(AbyssDangoRoleData data)
 	{
 		int newLevel = data.GetLevel() + 1;
@@ -182,36 +181,36 @@ public class DangoAbyssLevelUpView : UiViewBase
 			newLevel = data.GetLevel();
 		}
 		IAttributeInfo[] levelUpViewAttributeInfo = data.GetLevelUpViewAttributeInfo(newLevel, new bool?(data.GetIfMaxLevel()));
-		this.Layout.RefreshByData(levelUpViewAttributeInfo.ToList<IAttributeInfo>(), null, false);
+		this.Layout.RefreshByData(levelUpViewAttributeInfo, null, false);
 	}
 
-	// Token: 0x0600C5D8 RID: 50648 RVA: 0x002CEE3F File Offset: 0x002CD03F
+	// Token: 0x060099E8 RID: 39400 RVA: 0x002D9F46 File Offset: 0x002D8146
 	private void RefreshNameText(AbyssDangoRoleData data)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), data.GetName(), Array.Empty<object>());
 	}
 
-	// Token: 0x0600C5D9 RID: 50649 RVA: 0x002CEE5D File Offset: 0x002CD05D
+	// Token: 0x060099E9 RID: 39401 RVA: 0x002D9F64 File Offset: 0x002D8164
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnAbyssRoleInfoUpdate, new Action(this.OnAbyssRoleInfoUpdate));
 		EventSystem.Instance.Add<int, int>(EEventName.OnAbyssDangoLevelUp, new Action<int, int>(this.OnAbyssDangoLevelUp));
 	}
 
-	// Token: 0x0600C5DA RID: 50650 RVA: 0x002CEE97 File Offset: 0x002CD097
+	// Token: 0x060099EA RID: 39402 RVA: 0x002D9F9E File Offset: 0x002D819E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAbyssRoleInfoUpdate, new Action(this.OnAbyssRoleInfoUpdate));
 		EventSystem.Instance.Remove(EEventName.OnAbyssDangoLevelUp, new Action<int, int>(this.OnAbyssDangoLevelUp));
 	}
 
-	// Token: 0x0600C5DB RID: 50651 RVA: 0x002CEED1 File Offset: 0x002CD0D1
+	// Token: 0x060099EB RID: 39403 RVA: 0x002D9FD8 File Offset: 0x002D81D8
 	private void OnAbyssRoleInfoUpdate()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600C5DC RID: 50652 RVA: 0x002CEEDC File Offset: 0x002CD0DC
+	// Token: 0x060099EC RID: 39404 RVA: 0x002D9FE0 File Offset: 0x002D81E0
 	private void OnAbyssDangoLevelUp(int dangoId, int level)
 	{
 		if (this.DangoId != dangoId)
@@ -223,14 +222,14 @@ public class DangoAbyssLevelUpView : UiViewBase
 		RoleLevelUpSuccessController.Instance.OpenSuccessAttributeView(levelUpViewData, null);
 	}
 
-	// Token: 0x0600C5DD RID: 50653 RVA: 0x002CEF1E File Offset: 0x002CD11E
+	// Token: 0x060099ED RID: 39405 RVA: 0x002DA022 File Offset: 0x002D8222
 	[NullableContext(1)]
 	private CommonLevelUpAttributeItem InitItem()
 	{
 		return new CommonLevelUpAttributeItem();
 	}
 
-	// Token: 0x0600C5DE RID: 50654 RVA: 0x002CEF28 File Offset: 0x002CD128
+	// Token: 0x060099EE RID: 39406 RVA: 0x002DA02C File Offset: 0x002D822C
 	private void OnConfirmBtnClick(int _)
 	{
 		AbyssDangoRoleData currentDangoData = this.GetCurrentDangoData();
@@ -246,13 +245,13 @@ public class DangoAbyssLevelUpView : UiViewBase
 		DangoAbyssActivityController.Instance.RequestAbyssDangoLevelUp(currentDangoData.GetId(), currentDangoData.GetLevel() + 1);
 	}
 
-	// Token: 0x0600C5DF RID: 50655 RVA: 0x002CEF7A File Offset: 0x002CD17A
+	// Token: 0x060099EF RID: 39407 RVA: 0x002DA07E File Offset: 0x002D827E
 	private void OnClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C5E0 RID: 50656 RVA: 0x002CEF83 File Offset: 0x002CD183
+	// Token: 0x060099F0 RID: 39408 RVA: 0x002DA087 File Offset: 0x002D8287
 	private void OnClickCloseSuccess()
 	{
 		if (this.GetCurrentDangoData().GetIfMaxLevel())
@@ -261,19 +260,19 @@ public class DangoAbyssLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x04005B29 RID: 23337
+	// Token: 0x04005BF8 RID: 23544
 	private int DangoId;
 
-	// Token: 0x04005B2A RID: 23338
+	// Token: 0x04005BF9 RID: 23545
 	private CommonCurrencyItemListComponent CurrencyList;
 
-	// Token: 0x04005B2B RID: 23339
+	// Token: 0x04005BFA RID: 23546
 	private CostItem CostItem;
 
-	// Token: 0x04005B2C RID: 23340
+	// Token: 0x04005BFB RID: 23547
 	private ButtonItem LevelUpItem;
 
-	// Token: 0x04005B2D RID: 23341
+	// Token: 0x04005BFC RID: 23548
 	[Nullable(new byte[]
 	{
 		2,
@@ -282,33 +281,33 @@ public class DangoAbyssLevelUpView : UiViewBase
 	})]
 	private GenericLayout<CommonLevelUpAttributeItem, IAttributeInfo> Layout;
 
-	// Token: 0x02007F88 RID: 32648
+	// Token: 0x02007117 RID: 28951
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029A2D RID: 170541
+		// Token: 0x04024D6A RID: 150890
 		BtnClose,
-		// Token: 0x04029A2E RID: 170542
+		// Token: 0x04024D6B RID: 150891
 		PanelCost,
-		// Token: 0x04029A2F RID: 170543
+		// Token: 0x04024D6C RID: 150892
 		ItemCost,
-		// Token: 0x04029A30 RID: 170544
+		// Token: 0x04024D6D RID: 150893
 		NameText,
-		// Token: 0x04029A31 RID: 170545
+		// Token: 0x04024D6E RID: 150894
 		CurrentLevelText,
-		// Token: 0x04029A32 RID: 170546
+		// Token: 0x04024D6F RID: 150895
 		SpriteArrow,
-		// Token: 0x04029A33 RID: 170547
+		// Token: 0x04024D70 RID: 150896
 		NextLevelText,
-		// Token: 0x04029A34 RID: 170548
+		// Token: 0x04024D71 RID: 150897
 		AttributeLayout,
-		// Token: 0x04029A35 RID: 170549
+		// Token: 0x04024D72 RID: 150898
 		AttributeItem,
-		// Token: 0x04029A36 RID: 170550
+		// Token: 0x04024D73 RID: 150899
 		CostItem,
-		// Token: 0x04029A37 RID: 170551
+		// Token: 0x04024D74 RID: 150900
 		MaxLevelItem,
-		// Token: 0x04029A38 RID: 170552
+		// Token: 0x04024D75 RID: 150901
 		ConfirmBtnItem
 	}
 }

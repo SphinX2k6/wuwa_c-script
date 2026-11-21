@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction
 {
-	// Token: 0x02006868 RID: 26728
+	// Token: 0x020057B8 RID: 22456
 	public enum EInteractionState
 	{
-		// Token: 0x04022BF6 RID: 142326
+		// Token: 0x0401D453 RID: 119891
 		Idle,
-		// Token: 0x04022BF7 RID: 142327
+		// Token: 0x0401D454 RID: 119892
 		Holding,
-		// Token: 0x04022BF8 RID: 142328
+		// Token: 0x0401D455 RID: 119893
 		Sticky
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C90 RID: 27792
+	// Token: 0x020073F7 RID: 29687
 	public struct IPerformerRangeBoundaryActionTrigger : IFlatbufferObject
 	{
-		// Token: 0x1700CEF4 RID: 52980
-		// (get) Token: 0x06030F8F RID: 200591 RVA: 0x006A60FE File Offset: 0x006A42FE
+		// Token: 0x1700DA0F RID: 55823
+		// (get) Token: 0x06033EEA RID: 212714 RVA: 0x007005FE File Offset: 0x006FE7FE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030F90 RID: 200592 RVA: 0x006A610B File Offset: 0x006A430B
+		// Token: 0x06033EEB RID: 212715 RVA: 0x0070060B File Offset: 0x006FE80B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030F91 RID: 200593 RVA: 0x006A6114 File Offset: 0x006A4314
+		// Token: 0x06033EEC RID: 212716 RVA: 0x00700614 File Offset: 0x006FE814
 		public static IPerformerRangeBoundaryActionTrigger GetRootAsIPerformerRangeBoundaryActionTrigger(ByteBuffer _bb)
 		{
 			return IPerformerRangeBoundaryActionTrigger.GetRootAsIPerformerRangeBoundaryActionTrigger(_bb, default(IPerformerRangeBoundaryActionTrigger));
 		}
 
-		// Token: 0x06030F92 RID: 200594 RVA: 0x006A6130 File Offset: 0x006A4330
+		// Token: 0x06033EED RID: 212717 RVA: 0x00700630 File Offset: 0x006FE830
 		public static IPerformerRangeBoundaryActionTrigger GetRootAsIPerformerRangeBoundaryActionTrigger(ByteBuffer _bb, IPerformerRangeBoundaryActionTrigger obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030F93 RID: 200595 RVA: 0x006A614D File Offset: 0x006A434D
+		// Token: 0x06033EEE RID: 212718 RVA: 0x0070064D File Offset: 0x006FE84D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030F94 RID: 200596 RVA: 0x006A615C File Offset: 0x006A435C
+		// Token: 0x06033EEF RID: 212719 RVA: 0x0070065C File Offset: 0x006FE85C
 		public IPerformerRangeBoundaryActionTrigger __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CEF5 RID: 52981
-		// (get) Token: 0x06030F95 RID: 200597 RVA: 0x006A616C File Offset: 0x006A436C
+		// Token: 0x1700DA10 RID: 55824
+		// (get) Token: 0x06033EF0 RID: 212720 RVA: 0x0070066C File Offset: 0x006FE86C
 		public int Range
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030F96 RID: 200598 RVA: 0x006A61A8 File Offset: 0x006A43A8
+		// Token: 0x06033EF1 RID: 212721 RVA: 0x007006A8 File Offset: 0x006FE8A8
 		public IActionInfo? Actions(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700CEF6 RID: 52982
-		// (get) Token: 0x06030F97 RID: 200599 RVA: 0x006A6208 File Offset: 0x006A4408
+		// Token: 0x1700DA11 RID: 55825
+		// (get) Token: 0x06033EF2 RID: 212722 RVA: 0x00700708 File Offset: 0x006FE908
 		public int ActionsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030F98 RID: 200600 RVA: 0x006A6233 File Offset: 0x006A4433
+		// Token: 0x06033EF3 RID: 212723 RVA: 0x00700733 File Offset: 0x006FE933
 		public static Offset<IPerformerRangeBoundaryActionTrigger> CreateIPerformerRangeBoundaryActionTrigger(FlatBufferBuilder builder, int Range = 0, VectorOffset ActionsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPerformerRangeBoundaryActionTrigger.EndIPerformerRangeBoundaryActionTrigger(builder);
 		}
 
-		// Token: 0x06030F99 RID: 200601 RVA: 0x006A6250 File Offset: 0x006A4450
+		// Token: 0x06033EF4 RID: 212724 RVA: 0x00700750 File Offset: 0x006FE950
 		public static void StartIPerformerRangeBoundaryActionTrigger(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06030F9A RID: 200602 RVA: 0x006A6259 File Offset: 0x006A4459
+		// Token: 0x06033EF5 RID: 212725 RVA: 0x00700759 File Offset: 0x006FE959
 		public static void AddRange(FlatBufferBuilder builder, int range)
 		{
 			builder.AddInt(0, range, 0);
 		}
 
-		// Token: 0x06030F9B RID: 200603 RVA: 0x006A6264 File Offset: 0x006A4464
+		// Token: 0x06033EF6 RID: 212726 RVA: 0x00700764 File Offset: 0x006FE964
 		public static void AddActions(FlatBufferBuilder builder, VectorOffset actionsOffset)
 		{
 			builder.AddOffset(1, actionsOffset.Value, 0);
 		}
 
-		// Token: 0x06030F9C RID: 200604 RVA: 0x006A6274 File Offset: 0x006A4474
+		// Token: 0x06033EF7 RID: 212727 RVA: 0x00700774 File Offset: 0x006FE974
 		public static VectorOffset CreateActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030F9D RID: 200605 RVA: 0x006A62B4 File Offset: 0x006A44B4
+		// Token: 0x06033EF8 RID: 212728 RVA: 0x007007B4 File Offset: 0x006FE9B4
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030F9E RID: 200606 RVA: 0x006A62CE File Offset: 0x006A44CE
+		// Token: 0x06033EF9 RID: 212729 RVA: 0x007007CE File Offset: 0x006FE9CE
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030F9F RID: 200607 RVA: 0x006A62EC File Offset: 0x006A44EC
+		// Token: 0x06033EFA RID: 212730 RVA: 0x007007EC File Offset: 0x006FE9EC
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030FA0 RID: 200608 RVA: 0x006A6305 File Offset: 0x006A4505
+		// Token: 0x06033EFB RID: 212731 RVA: 0x00700805 File Offset: 0x006FEA05
 		public static void StartActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06030FA1 RID: 200609 RVA: 0x006A6310 File Offset: 0x006A4510
+		// Token: 0x06033EFC RID: 212732 RVA: 0x00700810 File Offset: 0x006FEA10
 		public static Offset<IPerformerRangeBoundaryActionTrigger> EndIPerformerRangeBoundaryActionTrigger(FlatBufferBuilder builder)
 		{
 			return new Offset<IPerformerRangeBoundaryActionTrigger>(builder.EndTable());
 		}
 
-		// Token: 0x06030FA2 RID: 200610 RVA: 0x006A6320 File Offset: 0x006A4520
+		// Token: 0x06033EFD RID: 212733 RVA: 0x00700820 File Offset: 0x006FEA20
 		public IPerformerRangeBoundaryActionTriggerT UnPack()
 		{
 			IPerformerRangeBoundaryActionTriggerT performerRangeBoundaryActionTriggerT = new IPerformerRangeBoundaryActionTriggerT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return performerRangeBoundaryActionTriggerT;
 		}
 
-		// Token: 0x06030FA3 RID: 200611 RVA: 0x006A633C File Offset: 0x006A453C
+		// Token: 0x06033EFE RID: 212734 RVA: 0x0070083C File Offset: 0x006FEA3C
 		public void UnPackTo(IPerformerRangeBoundaryActionTriggerT _o)
 		{
 			_o.Range = this.Range;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030FA4 RID: 200612 RVA: 0x006A63A8 File Offset: 0x006A45A8
+		// Token: 0x06033EFF RID: 212735 RVA: 0x007008A8 File Offset: 0x006FEAA8
 		public static Offset<IPerformerRangeBoundaryActionTrigger> Pack(FlatBufferBuilder builder, IPerformerRangeBoundaryActionTriggerT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPerformerRangeBoundaryActionTrigger.CreateIPerformerRangeBoundaryActionTrigger(builder, _o.Range, actionsOffset);
 		}
 
-		// Token: 0x040115E4 RID: 71140
+		// Token: 0x0401253C RID: 75068
 		private Table __p;
 	}
 }

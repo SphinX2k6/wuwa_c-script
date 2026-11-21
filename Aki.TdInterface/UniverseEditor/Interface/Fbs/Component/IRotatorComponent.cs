@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200588E RID: 22670
+	// Token: 0x02005E9B RID: 24219
 	public struct IRotatorComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A990 RID: 43408
-		// (get) Token: 0x0602633E RID: 156478 RVA: 0x00544102 File Offset: 0x00542302
+		// Token: 0x1700B2C0 RID: 45760
+		// (get) Token: 0x060288A0 RID: 166048 RVA: 0x0058AC4E File Offset: 0x00588E4E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602633F RID: 156479 RVA: 0x0054410F File Offset: 0x0054230F
+		// Token: 0x060288A1 RID: 166049 RVA: 0x0058AC5B File Offset: 0x00588E5B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026340 RID: 156480 RVA: 0x00544118 File Offset: 0x00542318
+		// Token: 0x060288A2 RID: 166050 RVA: 0x0058AC64 File Offset: 0x00588E64
 		public static IRotatorComponent GetRootAsIRotatorComponent(ByteBuffer _bb)
 		{
 			return IRotatorComponent.GetRootAsIRotatorComponent(_bb, default(IRotatorComponent));
 		}
 
-		// Token: 0x06026341 RID: 156481 RVA: 0x00544134 File Offset: 0x00542334
+		// Token: 0x060288A3 RID: 166051 RVA: 0x0058AC80 File Offset: 0x00588E80
 		public static IRotatorComponent GetRootAsIRotatorComponent(ByteBuffer _bb, IRotatorComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026342 RID: 156482 RVA: 0x00544151 File Offset: 0x00542351
+		// Token: 0x060288A4 RID: 166052 RVA: 0x0058AC9D File Offset: 0x00588E9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026343 RID: 156483 RVA: 0x00544160 File Offset: 0x00542360
+		// Token: 0x060288A5 RID: 166053 RVA: 0x0058ACAC File Offset: 0x00588EAC
 		public IRotatorComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A991 RID: 43409
-		// (get) Token: 0x06026344 RID: 156484 RVA: 0x00544170 File Offset: 0x00542370
+		// Token: 0x1700B2C1 RID: 45761
+		// (get) Token: 0x060288A6 RID: 166054 RVA: 0x0058ACBC File Offset: 0x00588EBC
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A992 RID: 43410
-		// (get) Token: 0x06026345 RID: 156485 RVA: 0x005441B0 File Offset: 0x005423B0
+		// Token: 0x1700B2C2 RID: 45762
+		// (get) Token: 0x060288A7 RID: 166055 RVA: 0x0058ACFC File Offset: 0x00588EFC
 		public string Content
 		{
 			get
@@ -74,20 +74,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026346 RID: 156486 RVA: 0x005441E7 File Offset: 0x005423E7
+		// Token: 0x060288A8 RID: 166056 RVA: 0x0058AD33 File Offset: 0x00588F33
 		public Span<byte> GetContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06026347 RID: 156487 RVA: 0x005441F6 File Offset: 0x005423F6
+		// Token: 0x060288A9 RID: 166057 RVA: 0x0058AD42 File Offset: 0x00588F42
 		public byte[] GetContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700A993 RID: 43411
-		// (get) Token: 0x06026348 RID: 156488 RVA: 0x00544204 File Offset: 0x00542404
+		// Token: 0x1700B2C3 RID: 45763
+		// (get) Token: 0x060288AA RID: 166058 RVA: 0x0058AD50 File Offset: 0x00588F50
 		public string Icon
 		{
 			get
@@ -101,20 +101,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026349 RID: 156489 RVA: 0x0054423B File Offset: 0x0054243B
+		// Token: 0x060288AB RID: 166059 RVA: 0x0058AD87 File Offset: 0x00588F87
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0602634A RID: 156490 RVA: 0x0054424A File Offset: 0x0054244A
+		// Token: 0x060288AC RID: 166060 RVA: 0x0058AD96 File Offset: 0x00588F96
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700A994 RID: 43412
-		// (get) Token: 0x0602634B RID: 156491 RVA: 0x00544258 File Offset: 0x00542458
+		// Token: 0x1700B2C4 RID: 45764
+		// (get) Token: 0x060288AD RID: 166061 RVA: 0x0058ADA4 File Offset: 0x00588FA4
 		public IVectorInfo? RotatorSpeed
 		{
 			get
@@ -128,8 +128,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A995 RID: 43413
-		// (get) Token: 0x0602634C RID: 156492 RVA: 0x005442B8 File Offset: 0x005424B8
+		// Token: 0x1700B2C5 RID: 45765
+		// (get) Token: 0x060288AE RID: 166062 RVA: 0x0058AE04 File Offset: 0x00589004
 		public IVectorInfo? LocationOffset
 		{
 			get
@@ -143,8 +143,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A996 RID: 43414
-		// (get) Token: 0x0602634D RID: 156493 RVA: 0x00544318 File Offset: 0x00542518
+		// Token: 0x1700B2C6 RID: 45766
+		// (get) Token: 0x060288AF RID: 166063 RVA: 0x0058AE64 File Offset: 0x00589064
 		public IVectorInfo? RotationOffset
 		{
 			get
@@ -158,8 +158,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A997 RID: 43415
-		// (get) Token: 0x0602634E RID: 156494 RVA: 0x00544378 File Offset: 0x00542578
+		// Token: 0x1700B2C7 RID: 45767
+		// (get) Token: 0x060288B0 RID: 166064 RVA: 0x0058AEC4 File Offset: 0x005890C4
 		public IVectorInfo? RotationMapping
 		{
 			get
@@ -173,8 +173,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A998 RID: 43416
-		// (get) Token: 0x0602634F RID: 156495 RVA: 0x005443D8 File Offset: 0x005425D8
+		// Token: 0x1700B2C8 RID: 45768
+		// (get) Token: 0x060288B1 RID: 166065 RVA: 0x0058AF24 File Offset: 0x00589124
 		public bool IsLocalSpace
 		{
 			get
@@ -184,8 +184,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A999 RID: 43417
-		// (get) Token: 0x06026350 RID: 156496 RVA: 0x00544418 File Offset: 0x00542618
+		// Token: 0x1700B2C9 RID: 45769
+		// (get) Token: 0x060288B2 RID: 166066 RVA: 0x0058AF64 File Offset: 0x00589164
 		public int EntityId
 		{
 			get
@@ -199,8 +199,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A99A RID: 43418
-		// (get) Token: 0x06026351 RID: 156497 RVA: 0x00544458 File Offset: 0x00542658
+		// Token: 0x1700B2CA RID: 45770
+		// (get) Token: 0x060288B3 RID: 166067 RVA: 0x0058AFA4 File Offset: 0x005891A4
 		public bool IsRotatorSelf
 		{
 			get
@@ -210,8 +210,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A99B RID: 43419
-		// (get) Token: 0x06026352 RID: 156498 RVA: 0x00544498 File Offset: 0x00542698
+		// Token: 0x1700B2CB RID: 45771
+		// (get) Token: 0x060288B4 RID: 166068 RVA: 0x0058AFE4 File Offset: 0x005891E4
 		public IEventRotator? InteractAction
 		{
 			get
@@ -225,8 +225,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A99C RID: 43420
-		// (get) Token: 0x06026353 RID: 156499 RVA: 0x005444F8 File Offset: 0x005426F8
+		// Token: 0x1700B2CC RID: 45772
+		// (get) Token: 0x060288B5 RID: 166069 RVA: 0x0058B044 File Offset: 0x00589244
 		public bool IsLockZ
 		{
 			get
@@ -236,8 +236,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A99D RID: 43421
-		// (get) Token: 0x06026354 RID: 156500 RVA: 0x00544538 File Offset: 0x00542738
+		// Token: 0x1700B2CD RID: 45773
+		// (get) Token: 0x060288B6 RID: 166070 RVA: 0x0058B084 File Offset: 0x00589284
 		public bool IsRecovery
 		{
 			get
@@ -247,8 +247,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A99E RID: 43422
-		// (get) Token: 0x06026355 RID: 156501 RVA: 0x00544578 File Offset: 0x00542778
+		// Token: 0x1700B2CE RID: 45774
+		// (get) Token: 0x060288B7 RID: 166071 RVA: 0x0058B0C4 File Offset: 0x005892C4
 		public byte NullMask
 		{
 			get
@@ -262,7 +262,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026356 RID: 156502 RVA: 0x005445B8 File Offset: 0x005427B8
+		// Token: 0x060288B8 RID: 166072 RVA: 0x0058B104 File Offset: 0x00589304
 		public static Offset<IRotatorComponent> CreateIRotatorComponent(FlatBufferBuilder builder, bool Disabled = false, StringOffset ContentOffset = default(StringOffset), StringOffset IconOffset = default(StringOffset), Offset<IVectorInfo> RotatorSpeedOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> LocationOffsetOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotationOffsetOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotationMappingOffset = default(Offset<IVectorInfo>), bool IsLocalSpace = false, int EntityId = 0, bool IsRotatorSelf = false, Offset<IEventRotator> InteractActionOffset = default(Offset<IEventRotator>), bool IsLockZ = false, bool IsRecovery = false, byte NullMask = 0)
 		{
 			builder.StartTable(14);
@@ -283,103 +283,103 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRotatorComponent.EndIRotatorComponent(builder);
 		}
 
-		// Token: 0x06026357 RID: 156503 RVA: 0x00544640 File Offset: 0x00542840
+		// Token: 0x060288B9 RID: 166073 RVA: 0x0058B18C File Offset: 0x0058938C
 		public static void StartIRotatorComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(14);
 		}
 
-		// Token: 0x06026358 RID: 156504 RVA: 0x0054464A File Offset: 0x0054284A
+		// Token: 0x060288BA RID: 166074 RVA: 0x0058B196 File Offset: 0x00589396
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06026359 RID: 156505 RVA: 0x00544655 File Offset: 0x00542855
+		// Token: 0x060288BB RID: 166075 RVA: 0x0058B1A1 File Offset: 0x005893A1
 		public static void AddContent(FlatBufferBuilder builder, StringOffset contentOffset)
 		{
 			builder.AddOffset(1, contentOffset.Value, 0);
 		}
 
-		// Token: 0x0602635A RID: 156506 RVA: 0x00544665 File Offset: 0x00542865
+		// Token: 0x060288BC RID: 166076 RVA: 0x0058B1B1 File Offset: 0x005893B1
 		public static void AddIcon(FlatBufferBuilder builder, StringOffset iconOffset)
 		{
 			builder.AddOffset(2, iconOffset.Value, 0);
 		}
 
-		// Token: 0x0602635B RID: 156507 RVA: 0x00544675 File Offset: 0x00542875
+		// Token: 0x060288BD RID: 166077 RVA: 0x0058B1C1 File Offset: 0x005893C1
 		public static void AddRotatorSpeed(FlatBufferBuilder builder, Offset<IVectorInfo> rotatorSpeedOffset)
 		{
 			builder.AddOffset(3, rotatorSpeedOffset.Value, 0);
 		}
 
-		// Token: 0x0602635C RID: 156508 RVA: 0x00544685 File Offset: 0x00542885
+		// Token: 0x060288BE RID: 166078 RVA: 0x0058B1D1 File Offset: 0x005893D1
 		public static void AddLocationOffset(FlatBufferBuilder builder, Offset<IVectorInfo> locationOffsetOffset)
 		{
 			builder.AddOffset(4, locationOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602635D RID: 156509 RVA: 0x00544695 File Offset: 0x00542895
+		// Token: 0x060288BF RID: 166079 RVA: 0x0058B1E1 File Offset: 0x005893E1
 		public static void AddRotationOffset(FlatBufferBuilder builder, Offset<IVectorInfo> rotationOffsetOffset)
 		{
 			builder.AddOffset(5, rotationOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602635E RID: 156510 RVA: 0x005446A5 File Offset: 0x005428A5
+		// Token: 0x060288C0 RID: 166080 RVA: 0x0058B1F1 File Offset: 0x005893F1
 		public static void AddRotationMapping(FlatBufferBuilder builder, Offset<IVectorInfo> rotationMappingOffset)
 		{
 			builder.AddOffset(6, rotationMappingOffset.Value, 0);
 		}
 
-		// Token: 0x0602635F RID: 156511 RVA: 0x005446B5 File Offset: 0x005428B5
+		// Token: 0x060288C1 RID: 166081 RVA: 0x0058B201 File Offset: 0x00589401
 		public static void AddIsLocalSpace(FlatBufferBuilder builder, bool isLocalSpace)
 		{
 			builder.AddBool(7, isLocalSpace, false);
 		}
 
-		// Token: 0x06026360 RID: 156512 RVA: 0x005446C0 File Offset: 0x005428C0
+		// Token: 0x060288C2 RID: 166082 RVA: 0x0058B20C File Offset: 0x0058940C
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(8, entityId, 0);
 		}
 
-		// Token: 0x06026361 RID: 156513 RVA: 0x005446CB File Offset: 0x005428CB
+		// Token: 0x060288C3 RID: 166083 RVA: 0x0058B217 File Offset: 0x00589417
 		public static void AddIsRotatorSelf(FlatBufferBuilder builder, bool isRotatorSelf)
 		{
 			builder.AddBool(9, isRotatorSelf, false);
 		}
 
-		// Token: 0x06026362 RID: 156514 RVA: 0x005446D7 File Offset: 0x005428D7
+		// Token: 0x060288C4 RID: 166084 RVA: 0x0058B223 File Offset: 0x00589423
 		public static void AddInteractAction(FlatBufferBuilder builder, Offset<IEventRotator> interactActionOffset)
 		{
 			builder.AddOffset(10, interactActionOffset.Value, 0);
 		}
 
-		// Token: 0x06026363 RID: 156515 RVA: 0x005446E8 File Offset: 0x005428E8
+		// Token: 0x060288C5 RID: 166085 RVA: 0x0058B234 File Offset: 0x00589434
 		public static void AddIsLockZ(FlatBufferBuilder builder, bool isLockZ)
 		{
 			builder.AddBool(11, isLockZ, false);
 		}
 
-		// Token: 0x06026364 RID: 156516 RVA: 0x005446F4 File Offset: 0x005428F4
+		// Token: 0x060288C6 RID: 166086 RVA: 0x0058B240 File Offset: 0x00589440
 		public static void AddIsRecovery(FlatBufferBuilder builder, bool isRecovery)
 		{
 			builder.AddBool(12, isRecovery, false);
 		}
 
-		// Token: 0x06026365 RID: 156517 RVA: 0x00544700 File Offset: 0x00542900
+		// Token: 0x060288C7 RID: 166087 RVA: 0x0058B24C File Offset: 0x0058944C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(13, nullMask, 0);
 		}
 
-		// Token: 0x06026366 RID: 156518 RVA: 0x0054470C File Offset: 0x0054290C
+		// Token: 0x060288C8 RID: 166088 RVA: 0x0058B258 File Offset: 0x00589458
 		public static Offset<IRotatorComponent> EndIRotatorComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IRotatorComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06026367 RID: 156519 RVA: 0x0054471C File Offset: 0x0054291C
+		// Token: 0x060288C9 RID: 166089 RVA: 0x0058B268 File Offset: 0x00589468
 		public IRotatorComponentT UnPack()
 		{
 			IRotatorComponentT rotatorComponentT = new IRotatorComponentT();
@@ -387,7 +387,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return rotatorComponentT;
 		}
 
-		// Token: 0x06026368 RID: 156520 RVA: 0x00544738 File Offset: 0x00542938
+		// Token: 0x060288CA RID: 166090 RVA: 0x0058B284 File Offset: 0x00589484
 		public void UnPackTo(IRotatorComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -406,7 +406,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026369 RID: 156521 RVA: 0x0054489C File Offset: 0x00542A9C
+		// Token: 0x060288CB RID: 166091 RVA: 0x0058B3E8 File Offset: 0x005895E8
 		public static Offset<IRotatorComponent> Pack(FlatBufferBuilder builder, IRotatorComponentT _o)
 		{
 			if (_o == null)
@@ -423,7 +423,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRotatorComponent.CreateIRotatorComponent(builder, _o.Disabled, contentOffset, iconOffset, rotatorSpeedOffset, locationOffsetOffset, rotationOffsetOffset, rotationMappingOffset, _o.IsLocalSpace, _o.EntityId, _o.IsRotatorSelf, interactActionOffset, _o.IsLockZ, _o.IsRecovery, _o.NullMask);
 		}
 
-		// Token: 0x0400EDDE RID: 60894
+		// Token: 0x0400FAD1 RID: 64209
 		private Table __p;
 	}
 }

@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CC8 RID: 23752
+	// Token: 0x02004CAA RID: 19626
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoveSkillPanel : BattleVisibleChildView, IBattleUiCenterPanelOtherMovePanel
 	{
-		// Token: 0x0603C0E9 RID: 245993 RVA: 0x00E5D3FA File Offset: 0x00E5B5FA
+		// Token: 0x0603103E RID: 200766 RVA: 0x00DADB0E File Offset: 0x00DABD0E
 		public void CreateDynamic(UUIItem parentItem)
 		{
 			base.CreateThenShowByResourceIdAsync("UiItem_SkillVisionB", parentItem, false).Forget();
 		}
 
-		// Token: 0x0603C0EA RID: 245994 RVA: 0x00E5D410 File Offset: 0x00E5B610
+		// Token: 0x0603103F RID: 200767 RVA: 0x00DADB24 File Offset: 0x00DABD24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C0EB RID: 245995 RVA: 0x00E5D47C File Offset: 0x00E5B67C
+		// Token: 0x06031040 RID: 200768 RVA: 0x00DADB90 File Offset: 0x00DABD90
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoveSkillPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0EC RID: 245996 RVA: 0x00E5D4C0 File Offset: 0x00E5B6C0
+		// Token: 0x06031041 RID: 200769 RVA: 0x00DADBD4 File Offset: 0x00DABDD4
 		public UniTask NewAllSkillItems()
 		{
 			MoveSkillPanel.<NewAllSkillItems>d__6 <NewAllSkillItems>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewAllSkillItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0ED RID: 245997 RVA: 0x00E5D504 File Offset: 0x00E5B704
+		// Token: 0x06031042 RID: 200770 RVA: 0x00DADC18 File Offset: 0x00DABE18
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewSkillItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0EE RID: 245998 RVA: 0x00E5D558 File Offset: 0x00E5B758
+		// Token: 0x06031043 RID: 200771 RVA: 0x00DADC6C File Offset: 0x00DABE6C
 		private void RefreshAllSkillItems()
 		{
 			this.SkillItemList[0].RefreshByMoveType(EInputAxis.MoveForward, 1f, true);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SkillItemList[1].RefreshSkillIconByResId("SP_IconVision01B");
 		}
 
-		// Token: 0x0603C0EF RID: 245999 RVA: 0x00E5D5F8 File Offset: 0x00E5B7F8
+		// Token: 0x06031044 RID: 200772 RVA: 0x00DADD0C File Offset: 0x00DABF0C
 		public void Tick(float delta)
 		{
 			foreach (MoveSkillItem moveSkillItem in this.SkillItemList)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0F0 RID: 246000 RVA: 0x00E5D64C File Offset: 0x00E5B84C
+		// Token: 0x06031045 RID: 200773 RVA: 0x00DADD60 File Offset: 0x00DABF60
 		protected override void OnBeforeDestroy()
 		{
 			foreach (MoveSkillItem moveSkillItem in this.SkillItemList)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0603C0F1 RID: 246001 RVA: 0x00E5D6B0 File Offset: 0x00E5B8B0
+		// Token: 0x06031046 RID: 200774 RVA: 0x00DADDC4 File Offset: 0x00DABFC4
 		private void AddEvents()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0F2 RID: 246002 RVA: 0x00E5D6D9 File Offset: 0x00E5B8D9
+		// Token: 0x06031047 RID: 200775 RVA: 0x00DADDED File Offset: 0x00DABFED
 		private void RemoveEvents()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0F3 RID: 246003 RVA: 0x00E5D704 File Offset: 0x00E5B904
+		// Token: 0x06031048 RID: 200776 RVA: 0x00DADE18 File Offset: 0x00DAC018
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Press)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0F5 RID: 246005 RVA: 0x00E5D768 File Offset: 0x00E5B968
+		// Token: 0x0603104A RID: 200778 RVA: 0x00DADE7C File Offset: 0x00DAC07C
 		// Note: this type is marked as 'beforefieldinit'.
 		unsafe static MoveSkillPanel()
 		{
@@ -158,20 +158,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			MoveSkillPanel.ActionNameList = list;
 		}
 
-		// Token: 0x0401F525 RID: 128293
+		// Token: 0x04019FDE RID: 106462
 		[StaticVariableRuleIgnore]
 		private static readonly List<string> ActionNameList;
 
-		// Token: 0x0401F526 RID: 128294
+		// Token: 0x04019FDF RID: 106463
 		private readonly List<MoveSkillItem> SkillItemList = new List<MoveSkillItem>();
 
-		// Token: 0x0200BED2 RID: 48850
+		// Token: 0x0200A8D8 RID: 43224
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040398CA RID: 235722
+			// Token: 0x0403428B RID: 213643
 			Item1,
-			// Token: 0x040398CB RID: 235723
+			// Token: 0x0403428C RID: 213644
 			Item2
 		}
 	}

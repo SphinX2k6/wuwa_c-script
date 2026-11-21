@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Backpack
 {
-	// Token: 0x0200684A RID: 26698
+	// Token: 0x0200579A RID: 22426
 	public class DangoBrawlAchievementTips : UiPanelBase
 	{
-		// Token: 0x06042A4A RID: 272970 RVA: 0x010346DC File Offset: 0x010328DC
+		// Token: 0x0603759F RID: 226719 RVA: 0x00F75C04 File Offset: 0x00F73E04
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042A4B RID: 272971 RVA: 0x01034788 File Offset: 0x01032988
+		// Token: 0x060375A0 RID: 226720 RVA: 0x00F75CB0 File Offset: 0x00F73EB0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlAchievementTips.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -42,13 +42,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042A4C RID: 272972 RVA: 0x010347CB File Offset: 0x010329CB
+		// Token: 0x060375A1 RID: 226721 RVA: 0x00F75CF3 File Offset: 0x00F73EF3
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearSequencePlayer();
 		}
 
-		// Token: 0x06042A4D RID: 272973 RVA: 0x010347D4 File Offset: 0x010329D4
+		// Token: 0x060375A2 RID: 226722 RVA: 0x00F75CFC File Offset: 0x00F73EFC
 		private void CreateSequencePlayer()
 		{
 			this.ClearSequencePlayer();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.SequencePlayer = new UiSequencePlayer(rootItem);
 		}
 
-		// Token: 0x06042A4E RID: 272974 RVA: 0x010347FE File Offset: 0x010329FE
+		// Token: 0x060375A3 RID: 226723 RVA: 0x00F75D26 File Offset: 0x00F73F26
 		private void ClearSequencePlayer()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x06042A4F RID: 272975 RVA: 0x01034818 File Offset: 0x01032A18
+		// Token: 0x060375A4 RID: 226724 RVA: 0x00F75D40 File Offset: 0x00F73F40
 		public void ShowTips(int configId)
 		{
 			DangoBrawlItem? itemConfigById = DangoBrawlConfig.Instance.GetItemConfigById(configId);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			sequencePlayer.PlaySequencePurely("Start", false, false);
 		}
 
-		// Token: 0x06042A50 RID: 272976 RVA: 0x010348FC File Offset: 0x01032AFC
+		// Token: 0x060375A5 RID: 226725 RVA: 0x00F75E24 File Offset: 0x00F74024
 		[NullableContext(1)]
 		private static string[] GetDescParams(DangoBrawlItem itemConfig)
 		{
@@ -120,24 +120,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			return array;
 		}
 
-		// Token: 0x04022B4F RID: 142159
+		// Token: 0x0401D3AC RID: 119724
 		[Nullable(2)]
 		private DangoBrawlOccupationWeaponItem WeaponItem;
 
-		// Token: 0x04022B50 RID: 142160
+		// Token: 0x0401D3AD RID: 119725
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200CA12 RID: 51730
+		// Token: 0x0200B3DD RID: 46045
 		private enum EComponents
 		{
-			// Token: 0x0403D10C RID: 250124
+			// Token: 0x040379F3 RID: 227827
 			ProxyPageItem,
-			// Token: 0x0403D10D RID: 250125
+			// Token: 0x040379F4 RID: 227828
 			TxtTitle,
-			// Token: 0x0403D10E RID: 250126
+			// Token: 0x040379F5 RID: 227829
 			TxtName,
-			// Token: 0x0403D10F RID: 250127
+			// Token: 0x040379F6 RID: 227830
 			TexQuality
 		}
 	}

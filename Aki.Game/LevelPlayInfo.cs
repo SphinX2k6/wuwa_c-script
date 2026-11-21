@@ -10,13 +10,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200205C RID: 8284
+// Token: 0x0200152F RID: 5423
 [NullableContext(1)]
 [Nullable(0)]
 public class LevelPlayInfo : LogicTreeContainer
 {
-	// Token: 0x170013F8 RID: 5112
-	// (get) Token: 0x06010480 RID: 66688 RVA: 0x003F847B File Offset: 0x003F667B
+	// Token: 0x17001425 RID: 5157
+	// (get) Token: 0x0600D8E8 RID: 55528 RVA: 0x004049E7 File Offset: 0x00402BE7
 	public override int Id
 	{
 		get
@@ -25,8 +25,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x170013F9 RID: 5113
-	// (get) Token: 0x06010481 RID: 66689 RVA: 0x003F8483 File Offset: 0x003F6683
+	// Token: 0x17001426 RID: 5158
+	// (get) Token: 0x0600D8E9 RID: 55529 RVA: 0x004049EF File Offset: 0x00402BEF
 	public ELevelPlayState PlayState
 	{
 		get
@@ -35,8 +35,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x170013FA RID: 5114
-	// (get) Token: 0x06010482 RID: 66690 RVA: 0x003F848B File Offset: 0x003F668B
+	// Token: 0x17001427 RID: 5159
+	// (get) Token: 0x0600D8EA RID: 55530 RVA: 0x004049F7 File Offset: 0x00402BF7
 	public bool IsClose
 	{
 		get
@@ -45,8 +45,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x170013FB RID: 5115
-	// (get) Token: 0x06010483 RID: 66691 RVA: 0x003F8496 File Offset: 0x003F6696
+	// Token: 0x17001428 RID: 5160
+	// (get) Token: 0x0600D8EB RID: 55531 RVA: 0x00404A02 File Offset: 0x00402C02
 	public bool IsFinish
 	{
 		get
@@ -55,8 +55,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x170013FC RID: 5116
-	// (get) Token: 0x06010484 RID: 66692 RVA: 0x003F84A1 File Offset: 0x003F66A1
+	// Token: 0x17001429 RID: 5161
+	// (get) Token: 0x0600D8EC RID: 55532 RVA: 0x00404A0D File Offset: 0x00402C0D
 	public bool CanExecOpenAction
 	{
 		get
@@ -65,8 +65,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x170013FD RID: 5117
-	// (get) Token: 0x06010485 RID: 66693 RVA: 0x003F84AC File Offset: 0x003F66AC
+	// Token: 0x1700142A RID: 5162
+	// (get) Token: 0x0600D8ED RID: 55533 RVA: 0x00404A18 File Offset: 0x00402C18
 	public bool CanTrack
 	{
 		get
@@ -117,8 +117,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x170013FE RID: 5118
-	// (get) Token: 0x06010486 RID: 66694 RVA: 0x003F85C0 File Offset: 0x003F67C0
+	// Token: 0x1700142B RID: 5163
+	// (get) Token: 0x0600D8EE RID: 55534 RVA: 0x00404B2C File Offset: 0x00402D2C
 	public bool IsFirstPass
 	{
 		get
@@ -127,8 +127,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x170013FF RID: 5119
-	// (get) Token: 0x06010487 RID: 66695 RVA: 0x003F85C8 File Offset: 0x003F67C8
+	// Token: 0x1700142C RID: 5164
+	// (get) Token: 0x0600D8EF RID: 55535 RVA: 0x00404B34 File Offset: 0x00402D34
 	public long RefreshTime
 	{
 		get
@@ -137,8 +137,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001400 RID: 5120
-	// (get) Token: 0x06010488 RID: 66696 RVA: 0x003F85D0 File Offset: 0x003F67D0
+	// Token: 0x1700142D RID: 5165
+	// (get) Token: 0x0600D8F0 RID: 55536 RVA: 0x00404B3C File Offset: 0x00402D3C
 	public bool CanGetReward
 	{
 		get
@@ -147,8 +147,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001401 RID: 5121
-	// (get) Token: 0x06010489 RID: 66697 RVA: 0x003F85D8 File Offset: 0x003F67D8
+	// Token: 0x1700142E RID: 5166
+	// (get) Token: 0x0600D8F1 RID: 55537 RVA: 0x00404B44 File Offset: 0x00402D44
 	public override string Name
 	{
 		get
@@ -157,8 +157,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001402 RID: 5122
-	// (get) Token: 0x0601048A RID: 66698 RVA: 0x003F85E0 File Offset: 0x003F67E0
+	// Token: 0x1700142F RID: 5167
+	// (get) Token: 0x0600D8F2 RID: 55538 RVA: 0x00404B4C File Offset: 0x00402D4C
 	public string NameKey
 	{
 		get
@@ -167,8 +167,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001403 RID: 5123
-	// (get) Token: 0x0601048B RID: 66699 RVA: 0x003F85E8 File Offset: 0x003F67E8
+	// Token: 0x17001430 RID: 5168
+	// (get) Token: 0x0600D8F3 RID: 55539 RVA: 0x00404B54 File Offset: 0x00402D54
 	public int LevelPlayEntityId
 	{
 		get
@@ -177,8 +177,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001404 RID: 5124
-	// (get) Token: 0x0601048C RID: 66700 RVA: 0x003F85F0 File Offset: 0x003F67F0
+	// Token: 0x17001431 RID: 5169
+	// (get) Token: 0x0600D8F4 RID: 55540 RVA: 0x00404B5C File Offset: 0x00402D5C
 	public int MapId
 	{
 		get
@@ -187,8 +187,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001405 RID: 5125
-	// (get) Token: 0x0601048D RID: 66701 RVA: 0x003F85F8 File Offset: 0x003F67F8
+	// Token: 0x17001432 RID: 5170
+	// (get) Token: 0x0600D8F5 RID: 55541 RVA: 0x00404B64 File Offset: 0x00402D64
 	public int InstanceId
 	{
 		get
@@ -197,8 +197,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001406 RID: 5126
-	// (get) Token: 0x0601048E RID: 66702 RVA: 0x003F8600 File Offset: 0x003F6800
+	// Token: 0x17001433 RID: 5171
+	// (get) Token: 0x0600D8F6 RID: 55542 RVA: 0x00404B6C File Offset: 0x00402D6C
 	public ILevelPlayMark MarkConfig
 	{
 		get
@@ -207,8 +207,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001407 RID: 5127
-	// (get) Token: 0x0601048F RID: 66703 RVA: 0x003F8608 File Offset: 0x003F6808
+	// Token: 0x17001434 RID: 5172
+	// (get) Token: 0x0600D8F7 RID: 55543 RVA: 0x00404B74 File Offset: 0x00402D74
 	public bool NeedShowInMap
 	{
 		get
@@ -217,8 +217,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001408 RID: 5128
-	// (get) Token: 0x06010490 RID: 66704 RVA: 0x003F8613 File Offset: 0x003F6813
+	// Token: 0x17001435 RID: 5173
+	// (get) Token: 0x0600D8F8 RID: 55544 RVA: 0x00404B7F File Offset: 0x00402D7F
 	public int TrackPriority
 	{
 		get
@@ -236,8 +236,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001409 RID: 5129
-	// (get) Token: 0x06010491 RID: 66705 RVA: 0x003F8643 File Offset: 0x003F6843
+	// Token: 0x17001436 RID: 5174
+	// (get) Token: 0x0600D8F9 RID: 55545 RVA: 0x00404BAF File Offset: 0x00402DAF
 	public int CustomIconId
 	{
 		get
@@ -246,8 +246,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x1700140A RID: 5130
-	// (get) Token: 0x06010492 RID: 66706 RVA: 0x003F864B File Offset: 0x003F684B
+	// Token: 0x17001437 RID: 5175
+	// (get) Token: 0x0600D8FA RID: 55546 RVA: 0x00404BB7 File Offset: 0x00402DB7
 	public int RewardId
 	{
 		get
@@ -256,8 +256,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x1700140B RID: 5131
-	// (get) Token: 0x06010493 RID: 66707 RVA: 0x003F8653 File Offset: 0x003F6853
+	// Token: 0x17001438 RID: 5176
+	// (get) Token: 0x0600D8FB RID: 55547 RVA: 0x00404BBF File Offset: 0x00402DBF
 	public int FirstRewardId
 	{
 		get
@@ -266,8 +266,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x1700140C RID: 5132
-	// (get) Token: 0x06010494 RID: 66708 RVA: 0x003F865B File Offset: 0x003F685B
+	// Token: 0x17001439 RID: 5177
+	// (get) Token: 0x0600D8FC RID: 55548 RVA: 0x00404BC7 File Offset: 0x00402DC7
 	public int RewardEntityId
 	{
 		get
@@ -276,8 +276,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x1700140D RID: 5133
-	// (get) Token: 0x06010495 RID: 66709 RVA: 0x003F8663 File Offset: 0x003F6863
+	// Token: 0x1700143A RID: 5178
+	// (get) Token: 0x0600D8FD RID: 55549 RVA: 0x00404BCF File Offset: 0x00402DCF
 	public List<ActionInfo> AfterGetRewardAction
 	{
 		get
@@ -286,8 +286,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x1700140E RID: 5134
-	// (get) Token: 0x06010496 RID: 66710 RVA: 0x003F866B File Offset: 0x003F686B
+	// Token: 0x1700143B RID: 5179
+	// (get) Token: 0x0600D8FE RID: 55550 RVA: 0x00404BD7 File Offset: 0x00402DD7
 	public List<ActionInfo> LevelPlayOpenAction
 	{
 		get
@@ -296,8 +296,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x1700140F RID: 5135
-	// (get) Token: 0x06010497 RID: 66711 RVA: 0x003F8673 File Offset: 0x003F6873
+	// Token: 0x1700143C RID: 5180
+	// (get) Token: 0x0600D8FF RID: 55551 RVA: 0x00404BDF File Offset: 0x00402DDF
 	public List<ActionInfo> LevelPlayFirstPassAction
 	{
 		get
@@ -306,8 +306,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001410 RID: 5136
-	// (get) Token: 0x06010498 RID: 66712 RVA: 0x003F867B File Offset: 0x003F687B
+	// Token: 0x1700143D RID: 5181
+	// (get) Token: 0x0600D900 RID: 55552 RVA: 0x00404BE7 File Offset: 0x00402DE7
 	public List<ActionInfo> LevelPlayEnterAction
 	{
 		get
@@ -316,8 +316,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001411 RID: 5137
-	// (get) Token: 0x06010499 RID: 66713 RVA: 0x003F8683 File Offset: 0x003F6883
+	// Token: 0x1700143E RID: 5182
+	// (get) Token: 0x0600D901 RID: 55553 RVA: 0x00404BEF File Offset: 0x00402DEF
 	public ELevelPlayOnlineType OnlineType
 	{
 		get
@@ -326,8 +326,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001412 RID: 5138
-	// (get) Token: 0x0601049A RID: 66714 RVA: 0x003F868B File Offset: 0x003F688B
+	// Token: 0x1700143F RID: 5183
+	// (get) Token: 0x0600D902 RID: 55554 RVA: 0x00404BF7 File Offset: 0x00402DF7
 	public override bool IsInteractValid
 	{
 		get
@@ -336,8 +336,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001413 RID: 5139
-	// (get) Token: 0x0601049B RID: 66715 RVA: 0x003F86A4 File Offset: 0x003F68A4
+	// Token: 0x17001440 RID: 5184
+	// (get) Token: 0x0600D903 RID: 55555 RVA: 0x00404C10 File Offset: 0x00402E10
 	public ELevelPlayType? LevelPlayType
 	{
 		get
@@ -346,8 +346,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001414 RID: 5140
-	// (get) Token: 0x0601049C RID: 66716 RVA: 0x003F86AC File Offset: 0x003F68AC
+	// Token: 0x17001441 RID: 5185
+	// (get) Token: 0x0600D904 RID: 55556 RVA: 0x00404C18 File Offset: 0x00402E18
 	public int LevelPlayTypeNumber
 	{
 		get
@@ -360,8 +360,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001415 RID: 5141
-	// (get) Token: 0x0601049D RID: 66717 RVA: 0x003F86D2 File Offset: 0x003F68D2
+	// Token: 0x17001442 RID: 5186
+	// (get) Token: 0x0600D905 RID: 55557 RVA: 0x00404C3E File Offset: 0x00402E3E
 	private RangeCheck RangeCheck
 	{
 		get
@@ -374,8 +374,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001416 RID: 5142
-	// (get) Token: 0x0601049E RID: 66718 RVA: 0x003F86ED File Offset: 0x003F68ED
+	// Token: 0x17001443 RID: 5187
+	// (get) Token: 0x0600D906 RID: 55558 RVA: 0x00404C59 File Offset: 0x00402E59
 	public bool IsOnlyTrackWhenQuestBind
 	{
 		get
@@ -384,8 +384,8 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x17001417 RID: 5143
-	// (get) Token: 0x0601049F RID: 66719 RVA: 0x003F86F5 File Offset: 0x003F68F5
+	// Token: 0x17001444 RID: 5188
+	// (get) Token: 0x0600D907 RID: 55559 RVA: 0x00404C61 File Offset: 0x00402E61
 	public HashSet<int> RangeAbsorbPbDataIds
 	{
 		get
@@ -398,7 +398,7 @@ public class LevelPlayInfo : LogicTreeContainer
 		}
 	}
 
-	// Token: 0x060104A0 RID: 66720 RVA: 0x003F8710 File Offset: 0x003F6910
+	// Token: 0x0600D908 RID: 55560 RVA: 0x00404C7C File Offset: 0x00402E7C
 	public LevelPlayInfo(int id)
 	{
 		this.InnerId = id;
@@ -408,7 +408,7 @@ public class LevelPlayInfo : LogicTreeContainer
 		this.CacheDistanceSquared = -1f;
 	}
 
-	// Token: 0x060104A1 RID: 66721 RVA: 0x003F8764 File Offset: 0x003F6964
+	// Token: 0x0600D909 RID: 55561 RVA: 0x00404CD0 File Offset: 0x00402ED0
 	public void InitConfig()
 	{
 		ILevelPlay levelPlayConfig = LevelPlayModel.Instance.GetLevelPlayConfig(this.InnerId);
@@ -466,7 +466,7 @@ public class LevelPlayInfo : LogicTreeContainer
 		this.ChangeLevelPlayTrackRange(new float?((float)this.TrackConfig.TrackRadius));
 	}
 
-	// Token: 0x060104A2 RID: 66722 RVA: 0x003F8973 File Offset: 0x003F6B73
+	// Token: 0x0600D90A RID: 55562 RVA: 0x00404EDF File Offset: 0x004030DF
 	public override void Destroy()
 	{
 		base.Destroy();
@@ -478,39 +478,39 @@ public class LevelPlayInfo : LogicTreeContainer
 		this.RangeCheckInternal = null;
 	}
 
-	// Token: 0x060104A3 RID: 66723 RVA: 0x003F8994 File Offset: 0x003F6B94
+	// Token: 0x0600D90B RID: 55563 RVA: 0x00404F00 File Offset: 0x00403100
 	public void UpdateFirstPass(bool? value)
 	{
 		this.IsFirst = value.GetValueOrDefault();
 	}
 
-	// Token: 0x060104A4 RID: 66724 RVA: 0x003F89A3 File Offset: 0x003F6BA3
+	// Token: 0x0600D90C RID: 55564 RVA: 0x00404F0F File Offset: 0x0040310F
 	public void UpdateState(ELevelPlayState? value)
 	{
 		this.State = value.GetValueOrDefault();
 		EventSystem.Instance.Emit<int, ELevelPlayState>(EEventName.OnLevelPlayStateChange, this.InnerId, this.State);
 	}
 
-	// Token: 0x060104A5 RID: 66725 RVA: 0x003F89CE File Offset: 0x003F6BCE
+	// Token: 0x0600D90D RID: 55565 RVA: 0x00404F3A File Offset: 0x0040313A
 	public void UpdateCompleteNumber(int value)
 	{
 		this.CompleteNumber = value;
 		EventSystem.Instance.Emit<int, ELevelPlayState, int>(EEventName.OnLevelPlayCompleteNumberChange, this.InnerId, this.State, this.CompleteNumber);
 	}
 
-	// Token: 0x060104A6 RID: 66726 RVA: 0x003F89F9 File Offset: 0x003F6BF9
+	// Token: 0x0600D90E RID: 55566 RVA: 0x00404F65 File Offset: 0x00403165
 	public void UpdateRefreshTime(long value)
 	{
 		this.RefreshTimestamp = MathUtils.Instance.LongToBigInt(value);
 	}
 
-	// Token: 0x060104A7 RID: 66727 RVA: 0x003F8A0C File Offset: 0x003F6C0C
+	// Token: 0x0600D90F RID: 55567 RVA: 0x00404F78 File Offset: 0x00403178
 	public void UpdateCanGetReward(bool value)
 	{
 		this.InnerCanGetReward = value;
 	}
 
-	// Token: 0x060104A8 RID: 66728 RVA: 0x003F8A18 File Offset: 0x003F6C18
+	// Token: 0x0600D910 RID: 55568 RVA: 0x00404F84 File Offset: 0x00403184
 	public void UpdateDistanceSquared(Vector playerLocation)
 	{
 		Vector entityConfigPosition = GeneralLogicTreeUtil.Instance.GetEntityConfigPosition(this.LevelPlayEntityId, null);
@@ -527,7 +527,7 @@ public class LevelPlayInfo : LogicTreeContainer
 		this.CacheDistanceSquared = this.DistSquared(entityConfigPosition, playerLocation);
 	}
 
-	// Token: 0x060104A9 RID: 66729 RVA: 0x003F8A84 File Offset: 0x003F6C84
+	// Token: 0x0600D911 RID: 55569 RVA: 0x00404FF0 File Offset: 0x004031F0
 	public override bool IsInTrackRange()
 	{
 		if (this.CustomTrackRadius == null)
@@ -541,13 +541,13 @@ public class LevelPlayInfo : LogicTreeContainer
 		return this.IsInTrackRangeByDistance();
 	}
 
-	// Token: 0x060104AA RID: 66730 RVA: 0x003F8AC7 File Offset: 0x003F6CC7
+	// Token: 0x0600D912 RID: 55570 RVA: 0x00405033 File Offset: 0x00403233
 	private bool IsInTrackRangeByDistance()
 	{
 		return this.CacheDistanceSquared >= 0f && this.CacheDistanceSquared < this.TrackRadiusSquared;
 	}
 
-	// Token: 0x060104AB RID: 66731 RVA: 0x003F8AE8 File Offset: 0x003F6CE8
+	// Token: 0x0600D913 RID: 55571 RVA: 0x00405054 File Offset: 0x00403254
 	private bool IsInTrackRangeByRangeEntity()
 	{
 		ILevelPlayTrack trackConfig = this.TrackConfig;
@@ -560,13 +560,13 @@ public class LevelPlayInfo : LogicTreeContainer
 		return this.RangeCheck.CheckReached(new int?(num.Value));
 	}
 
-	// Token: 0x060104AC RID: 66732 RVA: 0x003F8B48 File Offset: 0x003F6D48
+	// Token: 0x0600D914 RID: 55572 RVA: 0x004050B4 File Offset: 0x004032B4
 	private float DistSquared(IVector v1, IVector v2)
 	{
 		return (float)(Math.Pow(v2.X - v1.X, 2.0) + Math.Pow(v2.Y - v1.Y, 2.0) + Math.Pow(v2.Z - v1.Z, 2.0));
 	}
 
-	// Token: 0x060104AD RID: 66733 RVA: 0x003F8BA9 File Offset: 0x003F6DA9
+	// Token: 0x0600D915 RID: 55573 RVA: 0x00405115 File Offset: 0x00403315
 	public override int GetUiPriority()
 	{
 		if (this.TrackConfig == null)
@@ -576,7 +576,7 @@ public class LevelPlayInfo : LogicTreeContainer
 		return this.TrackConfig.TrackPriority;
 	}
 
-	// Token: 0x060104AE RID: 66734 RVA: 0x003F8BC8 File Offset: 0x003F6DC8
+	// Token: 0x0600D916 RID: 55574 RVA: 0x00405134 File Offset: 0x00403334
 	public void ChangeLevelPlayTrackRange(float? trackRadius)
 	{
 		float? num = trackRadius;
@@ -600,14 +600,14 @@ public class LevelPlayInfo : LogicTreeContainer
 		this.TrackRadiusSquared = num4.Value * num4.Value;
 	}
 
-	// Token: 0x060104AF RID: 66735 RVA: 0x003F8C5F File Offset: 0x003F6E5F
+	// Token: 0x0600D917 RID: 55575 RVA: 0x004051CB File Offset: 0x004033CB
 	public void SetCustomTrackRadius(float? trackRadius)
 	{
 		this.CustomTrackRadius = trackRadius;
 		this.ChangeLevelPlayTrackRange(trackRadius);
 	}
 
-	// Token: 0x060104B0 RID: 66736 RVA: 0x003F8C70 File Offset: 0x003F6E70
+	// Token: 0x0600D918 RID: 55576 RVA: 0x004051DC File Offset: 0x004033DC
 	public unsafe void SetTrackPriorityOverride(int? priority)
 	{
 		this.OverrideTrackPriority = priority;
@@ -626,19 +626,19 @@ public class LevelPlayInfo : LogicTreeContainer
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 	}
 
-	// Token: 0x060104B1 RID: 66737 RVA: 0x003F8D50 File Offset: 0x003F6F50
+	// Token: 0x0600D919 RID: 55577 RVA: 0x004052BC File Offset: 0x004034BC
 	public void ResetTrackPriorityOverride()
 	{
 		this.SetTrackPriorityOverride(null);
 	}
 
-	// Token: 0x060104B2 RID: 66738 RVA: 0x003F8D6C File Offset: 0x003F6F6C
+	// Token: 0x0600D91A RID: 55578 RVA: 0x004052D8 File Offset: 0x004034D8
 	public bool IsTrackPriorityOverride()
 	{
 		return this.OverrideTrackPriority != null;
 	}
 
-	// Token: 0x060104B3 RID: 66739 RVA: 0x003F8D7C File Offset: 0x003F6F7C
+	// Token: 0x0600D91B RID: 55579 RVA: 0x004052E8 File Offset: 0x004034E8
 	public int? GetNodeRewardId(int nodeId)
 	{
 		if (base.Tree == null)
@@ -653,7 +653,7 @@ public class LevelPlayInfo : LogicTreeContainer
 		return null;
 	}
 
-	// Token: 0x060104B4 RID: 66740 RVA: 0x003F8DCC File Offset: 0x003F6FCC
+	// Token: 0x0600D91C RID: 55580 RVA: 0x00405338 File Offset: 0x00403538
 	public int? GetTreasureBoxRewardId(int boxId)
 	{
 		IEntityData entityData = CreatureModel.Instance.GetEntityData(new int?(boxId), new int?(this.MapId));
@@ -669,102 +669,102 @@ public class LevelPlayInfo : LogicTreeContainer
 		return new int?(component.RewardId);
 	}
 
-	// Token: 0x04007854 RID: 30804
+	// Token: 0x0400793D RID: 31037
 	private readonly int InnerId;
 
-	// Token: 0x04007855 RID: 30805
+	// Token: 0x0400793E RID: 31038
 	private bool IsFirst;
 
-	// Token: 0x04007856 RID: 30806
+	// Token: 0x0400793F RID: 31039
 	private long RefreshTimestamp;
 
-	// Token: 0x04007857 RID: 30807
+	// Token: 0x04007940 RID: 31040
 	private ELevelPlayState State;
 
-	// Token: 0x04007858 RID: 30808
+	// Token: 0x04007941 RID: 31041
 	private int CompleteNumber;
 
-	// Token: 0x04007859 RID: 30809
+	// Token: 0x04007942 RID: 31042
 	private bool InnerCanGetReward;
 
-	// Token: 0x0400785A RID: 30810
+	// Token: 0x04007943 RID: 31043
 	public float TrackRadiusSquared;
 
-	// Token: 0x0400785B RID: 30811
+	// Token: 0x04007944 RID: 31044
 	public float CacheDistanceSquared;
 
-	// Token: 0x0400785C RID: 30812
+	// Token: 0x04007945 RID: 31045
 	private string InnerName = "";
 
-	// Token: 0x0400785D RID: 30813
+	// Token: 0x04007946 RID: 31046
 	private string InnerNameKey = "";
 
-	// Token: 0x0400785E RID: 30814
+	// Token: 0x04007947 RID: 31047
 	private int InnerLevelPlayEntityId;
 
-	// Token: 0x0400785F RID: 30815
+	// Token: 0x04007948 RID: 31048
 	private int InnerMapId;
 
-	// Token: 0x04007860 RID: 30816
+	// Token: 0x04007949 RID: 31049
 	private int InnerInstanceId;
 
-	// Token: 0x04007861 RID: 30817
+	// Token: 0x0400794A RID: 31050
 	private ILevelPlayMark InnerMarkConfig;
 
-	// Token: 0x04007862 RID: 30818
+	// Token: 0x0400794B RID: 31051
 	private ILevelPlayTrack TrackConfig;
 
-	// Token: 0x04007863 RID: 30819
+	// Token: 0x0400794C RID: 31052
 	private float? CustomTrackRadius;
 
-	// Token: 0x04007864 RID: 30820
+	// Token: 0x0400794D RID: 31053
 	private int? OverrideTrackPriority;
 
-	// Token: 0x04007865 RID: 30821
+	// Token: 0x0400794E RID: 31054
 	private int InnerCustomIconId;
 
-	// Token: 0x04007866 RID: 30822
+	// Token: 0x0400794F RID: 31055
 	private int InnerRewardId;
 
-	// Token: 0x04007867 RID: 30823
+	// Token: 0x04007950 RID: 31056
 	private int InnerFirstRewardId;
 
-	// Token: 0x04007868 RID: 30824
+	// Token: 0x04007951 RID: 31057
 	private int InnerRewardEntityId;
 
-	// Token: 0x04007869 RID: 30825
+	// Token: 0x04007952 RID: 31058
 	private List<ActionInfo> InnerAfterGetRewardAction;
 
-	// Token: 0x0400786A RID: 30826
+	// Token: 0x04007953 RID: 31059
 	private List<ActionInfo> InnerLevelPlayOpenAction;
 
-	// Token: 0x0400786B RID: 30827
+	// Token: 0x04007954 RID: 31060
 	private List<ActionInfo> InnerLevelPlayFirstPassAction;
 
-	// Token: 0x0400786C RID: 30828
+	// Token: 0x04007955 RID: 31061
 	private List<ActionInfo> InnerLevelPlayEnterAction;
 
-	// Token: 0x0400786D RID: 30829
+	// Token: 0x04007956 RID: 31062
 	private ELevelPlayOnlineType InnerOnlineType;
 
-	// Token: 0x0400786E RID: 30830
+	// Token: 0x04007957 RID: 31063
 	private ELevelPlayType? InnerLevelPlayType;
 
-	// Token: 0x0400786F RID: 30831
+	// Token: 0x04007958 RID: 31064
 	public List<string> Children;
 
-	// Token: 0x04007870 RID: 30832
+	// Token: 0x04007959 RID: 31065
 	public IRangeAbsorbPhantom RangeAbsorbPhantom;
 
-	// Token: 0x04007871 RID: 30833
+	// Token: 0x0400795A RID: 31066
 	public IRewardConfig RewardConfig;
 
-	// Token: 0x04007872 RID: 30834
+	// Token: 0x0400795B RID: 31067
 	private HashSet<int> InnerRangeAbsorbPbDataIds;
 
-	// Token: 0x04007873 RID: 30835
+	// Token: 0x0400795C RID: 31068
 	private RangeCheck RangeCheckInternal;
 
-	// Token: 0x04007874 RID: 30836
+	// Token: 0x0400795D RID: 31069
 	private bool InnerOnlyTrackWhenQuestBind;
 }

@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Map
 {
-	// Token: 0x02004C62 RID: 19554
+	// Token: 0x02003C13 RID: 15379
 	public class SheriffErrorView : UiViewBase
 	{
-		// Token: 0x060328C3 RID: 207043 RVA: 0x00BC6C88 File Offset: 0x00BC4E88
+		// Token: 0x06027676 RID: 161398 RVA: 0x00B0B8F4 File Offset: 0x00B09AF4
 		[NullableContext(1)]
 		public SheriffErrorView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060328C4 RID: 207044 RVA: 0x00BC6C94 File Offset: 0x00BC4E94
+		// Token: 0x06027677 RID: 161399 RVA: 0x00B0B900 File Offset: 0x00B09B00
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060328C5 RID: 207045 RVA: 0x00BC6D19 File Offset: 0x00BC4F19
+		// Token: 0x06027678 RID: 161400 RVA: 0x00B0B985 File Offset: 0x00B09B85
 		private void OnClickBtnClose()
 		{
 			this.HandleClose().Forget();
 		}
 
-		// Token: 0x060328C6 RID: 207046 RVA: 0x00BC6D28 File Offset: 0x00BC4F28
+		// Token: 0x06027679 RID: 161401 RVA: 0x00B0B994 File Offset: 0x00B09B94
 		private UniTask HandleClose()
 		{
 			SheriffErrorView.<HandleClose>d__4 <HandleClose>d__;
@@ -53,10 +53,10 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return <HandleClose>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0200AE0B RID: 44555
+		// Token: 0x02009829 RID: 38953
 		private static class EComponent
 		{
-			// Token: 0x04034DC6 RID: 216518
+			// Token: 0x0402F76B RID: 194411
 			public const int BtnClose = 0;
 		}
 	}

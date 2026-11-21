@@ -2,48 +2,48 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043EA RID: 17386
+	// Token: 0x0200484F RID: 18511
 	public enum EItemFoundationMatchType : byte
 	{
-		// Token: 0x0400C2D2 RID: 49874
+		// Token: 0x0400CCF6 RID: 52470
 		Branch,
-		// Token: 0x0400C2D3 RID: 49875
+		// Token: 0x0400CCF7 RID: 52471
 		BatteryFoundation,
-		// Token: 0x0400C2D4 RID: 49876
+		// Token: 0x0400CCF8 RID: 52472
 		BatteryTransformer,
-		// Token: 0x0400C2D5 RID: 49877
+		// Token: 0x0400CCF9 RID: 52473
 		BridgeFoundation,
-		// Token: 0x0400C2D6 RID: 49878
+		// Token: 0x0400CCFA RID: 52474
 		BurstCrystal,
-		// Token: 0x0400C2D7 RID: 49879
+		// Token: 0x0400CCFB RID: 52475
 		GrowthStoste,
-		// Token: 0x0400C2D8 RID: 49880
+		// Token: 0x0400CCFC RID: 52476
 		JigsawFoundation,
-		// Token: 0x0400C2D9 RID: 49881
+		// Token: 0x0400CCFD RID: 52477
 		PulseDeviceFoundation,
-		// Token: 0x0400C2DA RID: 49882
+		// Token: 0x0400CCFE RID: 52478
 		DungeonEntryFoundation,
-		// Token: 0x0400C2DB RID: 49883
+		// Token: 0x0400CCFF RID: 52479
 		MuralFoundation,
-		// Token: 0x0400C2DC RID: 49884
+		// Token: 0x0400CD00 RID: 52480
 		ExplosiveLanceFoundation,
-		// Token: 0x0400C2DD RID: 49885
+		// Token: 0x0400CD01 RID: 52481
 		PipelinFoundatione,
-		// Token: 0x0400C2DE RID: 49886
+		// Token: 0x0400CD02 RID: 52482
 		BemoanFlowerFoundation,
-		// Token: 0x0400C2DF RID: 49887
+		// Token: 0x0400CD03 RID: 52483
 		MonsterCallFoundation,
-		// Token: 0x0400C2E0 RID: 49888
+		// Token: 0x0400CD04 RID: 52484
 		GravityCubeFoundation,
-		// Token: 0x0400C2E1 RID: 49889
+		// Token: 0x0400CD05 RID: 52485
 		BeamFoundation,
-		// Token: 0x0400C2E2 RID: 49890
+		// Token: 0x0400CD06 RID: 52486
 		OilPaintingFoundation,
-		// Token: 0x0400C2E3 RID: 49891
+		// Token: 0x0400CD07 RID: 52487
 		StainedGlassFoundation,
-		// Token: 0x0400C2E4 RID: 49892
+		// Token: 0x0400CD08 RID: 52488
 		PullStatueFoundation,
-		// Token: 0x0400C2E5 RID: 49893
+		// Token: 0x0400CD09 RID: 52489
 		RadioFoundation
 	}
 }

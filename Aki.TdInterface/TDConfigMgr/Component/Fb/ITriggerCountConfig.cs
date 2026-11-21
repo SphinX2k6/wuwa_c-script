@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B3A RID: 2874
+	// Token: 0x02000C08 RID: 3080
 	public class ITriggerCountConfig
 	{
-		// Token: 0x06004251 RID: 16977 RVA: 0x000A9C90 File Offset: 0x000A7E90
-		[NullableContext(1)]
+		// Token: 0x060046AA RID: 18090 RVA: 0x000B3D54 File Offset: 0x000B1F54
 		public static ITriggerCountConfig Create(ITriggerCountConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700119A RID: 4506
-		// (get) Token: 0x06004252 RID: 16978 RVA: 0x000A9CAF File Offset: 0x000A7EAF
+		// Token: 0x17001295 RID: 4757
+		// (get) Token: 0x060046AB RID: 18091 RVA: 0x000B3D73 File Offset: 0x000B1F73
 		public virtual int TriggerCount
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700119B RID: 4507
-		// (get) Token: 0x06004253 RID: 16979 RVA: 0x000A9CBC File Offset: 0x000A7EBC
+		// Token: 0x17001296 RID: 4758
+		// (get) Token: 0x060046AC RID: 18092 RVA: 0x000B3D80 File Offset: 0x000B1F80
 		public virtual float TriggerInterval
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002563 RID: 9571
+		// Token: 0x040027AB RID: 10155
 		private ITriggerCountConfig Instance;
 	}
 }

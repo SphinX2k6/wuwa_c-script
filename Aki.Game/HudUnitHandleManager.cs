@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x02001F26 RID: 7974
+// Token: 0x020013E8 RID: 5096
 public class HudUnitHandleManager
 {
-	// Token: 0x0600F58A RID: 62858 RVA: 0x003B37A0 File Offset: 0x003B19A0
+	// Token: 0x0600C9A9 RID: 51625 RVA: 0x003BF28C File Offset: 0x003BD48C
 	public static void Init()
 	{
 		HudUnitManager.Instance.HudUnitHandleClassArray = new Type[]

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200163C RID: 5692
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017A9 RID: 6057
 	public class EnableFunction : ActionParams
 	{
-		// Token: 0x06007C4D RID: 31821 RVA: 0x0012AFB8 File Offset: 0x001291B8
+		// Token: 0x0600832B RID: 33579 RVA: 0x0013A064 File Offset: 0x00138264
 		private EnableFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C4E RID: 31822 RVA: 0x0012AFF0 File Offset: 0x001291F0
+		// Token: 0x0600832C RID: 33580 RVA: 0x0013A09C File Offset: 0x0013829C
 		public static EnableFunction Create([Nullable(2)] EnableFunction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C4F RID: 31823 RVA: 0x0012B003 File Offset: 0x00129203
+		// Token: 0x0600832D RID: 33581 RVA: 0x0013A0AF File Offset: 0x001382AF
 		public static EnableFunction CreateFromSetValue([Nullable(2)] EnableFunction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C50 RID: 31824 RVA: 0x0012B016 File Offset: 0x00129216
+		// Token: 0x0600832E RID: 33582 RVA: 0x0013A0C2 File Offset: 0x001382C2
 		public EnableFunction_SetValue ToSetValue()
 		{
 			return new EnableFunction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700291F RID: 10527
-		// (get) Token: 0x06007C51 RID: 31825 RVA: 0x0012B029 File Offset: 0x00129229
-		// (set) Token: 0x06007C52 RID: 31826 RVA: 0x0012B054 File Offset: 0x00129254
+		// Token: 0x17002B0A RID: 11018
+		// (get) Token: 0x0600832F RID: 33583 RVA: 0x0013A0D5 File Offset: 0x001382D5
+		// (set) Token: 0x06008330 RID: 33584 RVA: 0x0013A100 File Offset: 0x00138300
 		public virtual EEnableFunctionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C5F RID: 19551
+		// Token: 0x04005053 RID: 20563
 		[Nullable(2)]
 		protected new EnableFunction FbInstance;
 
-		// Token: 0x04004C60 RID: 19552
+		// Token: 0x04005054 RID: 20564
 		[Nullable(2)]
 		protected EnableFunction_SetValue PocoInterface;
 	}

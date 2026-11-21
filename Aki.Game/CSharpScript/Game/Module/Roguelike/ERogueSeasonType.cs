@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D9C RID: 19868
+	// Token: 0x02003D65 RID: 15717
 	public enum ERogueSeasonType
 	{
-		// Token: 0x0401B406 RID: 111622
+		// Token: 0x04015DD9 RID: 89561
 		Normal = 1,
-		// Token: 0x0401B407 RID: 111623
+		// Token: 0x04015DDA RID: 89562
 		Fire
 	}
 }

@@ -4,23 +4,23 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006968 RID: 26984
+	// Token: 0x02005AC4 RID: 23236
 	public class ActionSetSeqCameraTransform : ActionParams
 	{
-		// Token: 0x04022FF5 RID: 143349
+		// Token: 0x0401E1DF RID: 123359
 		[Nullable(2)]
 		public Transform Transform;
 
-		// Token: 0x04022FF6 RID: 143350
+		// Token: 0x0401E1E0 RID: 123360
 		public float? Fov;
 
-		// Token: 0x04022FF7 RID: 143351
+		// Token: 0x0401E1E1 RID: 123361
 		public float? Aperture;
 
-		// Token: 0x04022FF8 RID: 143352
+		// Token: 0x0401E1E2 RID: 123362
 		public float? FocalLength;
 
-		// Token: 0x04022FF9 RID: 143353
+		// Token: 0x0401E1E3 RID: 123363
 		public float? FocusDistance;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006BC RID: 1724
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200075D RID: 1885
 	public class ISearchTargetCfg
 	{
-		// Token: 0x0600250C RID: 9484 RVA: 0x00063FF8 File Offset: 0x000621F8
+		// Token: 0x0600282C RID: 10284 RVA: 0x0006B068 File Offset: 0x00069268
 		private ISearchTargetCfg_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600250D RID: 9485 RVA: 0x00064030 File Offset: 0x00062230
+		// Token: 0x0600282D RID: 10285 RVA: 0x0006B0A0 File Offset: 0x000692A0
 		public static ISearchTargetCfg Create([Nullable(2)] ISearchTargetCfg instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600250E RID: 9486 RVA: 0x00064043 File Offset: 0x00062243
+		// Token: 0x0600282E RID: 10286 RVA: 0x0006B0B3 File Offset: 0x000692B3
 		public static ISearchTargetCfg CreateFromSetValue([Nullable(2)] ISearchTargetCfg_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600250F RID: 9487 RVA: 0x00064056 File Offset: 0x00062256
+		// Token: 0x0600282F RID: 10287 RVA: 0x0006B0C6 File Offset: 0x000692C6
 		public ISearchTargetCfg_SetValue ToSetValue()
 		{
 			return new ISearchTargetCfg_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009CB RID: 2507
-		// (get) Token: 0x06002510 RID: 9488 RVA: 0x00064084 File Offset: 0x00062284
-		// (set) Token: 0x06002511 RID: 9489 RVA: 0x00064117 File Offset: 0x00062317
+		// Token: 0x17000A89 RID: 2697
+		// (get) Token: 0x06002830 RID: 10288 RVA: 0x0006B0F4 File Offset: 0x000692F4
+		// (set) Token: 0x06002831 RID: 10289 RVA: 0x0006B187 File Offset: 0x00069387
 		public virtual List<IEntityAngleWeight> AngleWeight
 		{
 			get
@@ -100,9 +98,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009CC RID: 2508
-		// (get) Token: 0x06002512 RID: 9490 RVA: 0x0006412C File Offset: 0x0006232C
-		// (set) Token: 0x06002513 RID: 9491 RVA: 0x000641BF File Offset: 0x000623BF
+		// Token: 0x17000A8A RID: 2698
+		// (get) Token: 0x06002832 RID: 10290 RVA: 0x0006B19C File Offset: 0x0006939C
+		// (set) Token: 0x06002833 RID: 10291 RVA: 0x0006B22F File Offset: 0x0006942F
 		public virtual List<IEntityCategoryWeight> LockConditions
 		{
 			get
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009CD RID: 2509
-		// (get) Token: 0x06002514 RID: 9492 RVA: 0x000641D4 File Offset: 0x000623D4
-		// (set) Token: 0x06002515 RID: 9493 RVA: 0x0006420E File Offset: 0x0006240E
+		// Token: 0x17000A8B RID: 2699
+		// (get) Token: 0x06002834 RID: 10292 RVA: 0x0006B244 File Offset: 0x00069444
+		// (set) Token: 0x06002835 RID: 10293 RVA: 0x0006B27E File Offset: 0x0006947E
 		public virtual bool? IgnoreDistanceWeight
 		{
 			get
@@ -162,24 +160,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001959 RID: 6489
+		// Token: 0x04001B58 RID: 7000
 		[Nullable(2)]
 		protected ISearchTargetCfg FbInstance;
 
-		// Token: 0x0400195A RID: 6490
+		// Token: 0x04001B59 RID: 7001
 		[Nullable(2)]
 		protected ISearchTargetCfg_SetValue PocoInterface;
 
-		// Token: 0x0400195B RID: 6491
+		// Token: 0x04001B5A RID: 7002
 		private List<IEntityAngleWeight> _AngleWeightCache;
 
-		// Token: 0x0400195C RID: 6492
+		// Token: 0x04001B5B RID: 7003
 		private bool _AngleWeightInited;
 
-		// Token: 0x0400195D RID: 6493
+		// Token: 0x04001B5C RID: 7004
 		private List<IEntityCategoryWeight> _LockConditionsCache;
 
-		// Token: 0x0400195E RID: 6494
+		// Token: 0x04001B5D RID: 7005
 		private bool _LockConditionsInited;
 	}
 }

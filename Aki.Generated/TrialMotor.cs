@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001177 RID: 4471
+	// Token: 0x020012AD RID: 4781
 	public struct TrialMotor : IFlatbufferObject
 	{
-		// Token: 0x17003CD4 RID: 15572
-		// (get) Token: 0x0600E557 RID: 58711 RVA: 0x0033C82D File Offset: 0x0033AA2D
+		// Token: 0x17004038 RID: 16440
+		// (get) Token: 0x0600F2C5 RID: 62149 RVA: 0x00367646 File Offset: 0x00365846
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E558 RID: 58712 RVA: 0x0033C83A File Offset: 0x0033AA3A
+		// Token: 0x0600F2C6 RID: 62150 RVA: 0x00367653 File Offset: 0x00365853
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E559 RID: 58713 RVA: 0x0033C844 File Offset: 0x0033AA44
+		// Token: 0x0600F2C7 RID: 62151 RVA: 0x0036765C File Offset: 0x0036585C
 		public static TrialMotor GetRootAsTrialMotor(ByteBuffer _bb)
 		{
 			return TrialMotor.GetRootAsTrialMotor(_bb, default(TrialMotor));
 		}
 
-		// Token: 0x0600E55A RID: 58714 RVA: 0x0033C860 File Offset: 0x0033AA60
+		// Token: 0x0600F2C8 RID: 62152 RVA: 0x00367678 File Offset: 0x00365878
 		public static TrialMotor GetRootAsTrialMotor(ByteBuffer _bb, TrialMotor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E55B RID: 58715 RVA: 0x0033C87D File Offset: 0x0033AA7D
+		// Token: 0x0600F2C9 RID: 62153 RVA: 0x00367695 File Offset: 0x00365895
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E55C RID: 58716 RVA: 0x0033C88C File Offset: 0x0033AA8C
+		// Token: 0x0600F2CA RID: 62154 RVA: 0x003676A4 File Offset: 0x003658A4
 		public TrialMotor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003CD5 RID: 15573
-		// (get) Token: 0x0600E55D RID: 58717 RVA: 0x0033C89C File Offset: 0x0033AA9C
+		// Token: 0x17004039 RID: 16441
+		// (get) Token: 0x0600F2CB RID: 62155 RVA: 0x003676B4 File Offset: 0x003658B4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CD6 RID: 15574
-		// (get) Token: 0x0600E55E RID: 58718 RVA: 0x0033C8D8 File Offset: 0x0033AAD8
+		// Token: 0x1700403A RID: 16442
+		// (get) Token: 0x0600F2CC RID: 62156 RVA: 0x003676F0 File Offset: 0x003658F0
 		public int MotorLoadProjectId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CD7 RID: 15575
-		// (get) Token: 0x0600E55F RID: 58719 RVA: 0x0033C914 File Offset: 0x0033AB14
+		// Token: 0x1700403B RID: 16443
+		// (get) Token: 0x0600F2CD RID: 62157 RVA: 0x0036772C File Offset: 0x0036592C
 		public int MotorLoadType
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CD8 RID: 15576
-		// (get) Token: 0x0600E560 RID: 58720 RVA: 0x0033C950 File Offset: 0x0033AB50
+		// Token: 0x1700403C RID: 16444
+		// (get) Token: 0x0600F2CE RID: 62158 RVA: 0x00367768 File Offset: 0x00365968
 		public int Level
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CD9 RID: 15577
-		// (get) Token: 0x0600E561 RID: 58721 RVA: 0x0033C990 File Offset: 0x0033AB90
+		// Token: 0x1700403D RID: 16445
+		// (get) Token: 0x0600F2CF RID: 62159 RVA: 0x003677A8 File Offset: 0x003659A8
 		public bool UseMotorTechTree
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CDA RID: 15578
-		// (get) Token: 0x0600E562 RID: 58722 RVA: 0x0033C9D0 File Offset: 0x0033ABD0
+		// Token: 0x1700403E RID: 16446
+		// (get) Token: 0x0600F2D0 RID: 62160 RVA: 0x003677E8 File Offset: 0x003659E8
 		public int TechTreeType
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052BD RID: 21181
+		// Token: 0x04005900 RID: 22784
 		private Table __p;
 	}
 }

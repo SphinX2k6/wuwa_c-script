@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using AkiClient.Game.Aki.Character.Input.Enum;
@@ -9,15 +8,17 @@ using CSharpScript.Game.Input;
 using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 using CSharpScript.Game.Ui;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 {
-	// Token: 0x02006AC0 RID: 27328
+	// Token: 0x02005C38 RID: 23608
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OperationRestrictUtils : Singleton
 	{
-		// Token: 0x06043E66 RID: 278118 RVA: 0x010A550C File Offset: 0x010A370C
+		// Token: 0x06039FAD RID: 237485 RVA: 0x0104EB3C File Offset: 0x0104CD3C
 		public void SetOperationRestrictByOption(SetPlayerOperationRestriction option)
 		{
 			switch (option.Type)
@@ -36,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E67 RID: 278119 RVA: 0x010A5554 File Offset: 0x010A3754
+		// Token: 0x06039FAE RID: 237486 RVA: 0x0104EB84 File Offset: 0x0104CD84
 		public void SetOperationRestrictEnableAll()
 		{
 			this.SetInputUnlock();
@@ -52,14 +53,14 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			EventSystem.Instance.Emit(EEventName.OnNewPhoneMsgNeedShowTips);
 		}
 
-		// Token: 0x06043E68 RID: 278120 RVA: 0x010A55C0 File Offset: 0x010A37C0
+		// Token: 0x06039FAF RID: 237487 RVA: 0x0104EBF0 File Offset: 0x0104CDF0
 		public void SetOperationRestrictByDisableOption(IDisableAllPlayerOperation option)
 		{
 			this.SetInputDisableAll();
 			this.ClearInputLimitView();
 			if (option.DisplayMode.GetValueOrDefault() == EDisplayModeInPlayerOp.HideUi)
 			{
-				this.SetBattleUiDisableAll(true);
+				this.SetBattleUiDisableAll(true, option.IsUiFadeEffect.GetValueOrDefault());
 			}
 			else
 			{
@@ -81,7 +82,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			PhoneMsgController.Instance.IsPhoneMsgTipEnable = false;
 		}
 
-		// Token: 0x06043E69 RID: 278121 RVA: 0x010A5650 File Offset: 0x010A3850
+		// Token: 0x06039FB0 RID: 237488 RVA: 0x0104EC8C File Offset: 0x0104CE8C
 		public void SetOperationRestrictByDisableSectionalOption(IDisableModulePlayerOperation option)
 		{
 			this.SetInputEnableAll();
@@ -97,13 +98,13 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			LevelGamePlayModel.Instance.LevelRestrictOperationBlockAll = false;
 		}
 
-		// Token: 0x06043E6A RID: 278122 RVA: 0x010A56C8 File Offset: 0x010A38C8
+		// Token: 0x06039FB1 RID: 237489 RVA: 0x0104ED04 File Offset: 0x0104CF04
 		public void SetInputUnlock()
 		{
 			LevelEventLockInputState.Instance.Unlock();
 		}
 
-		// Token: 0x06043E6B RID: 278123 RVA: 0x010A56D4 File Offset: 0x010A38D4
+		// Token: 0x06039FB2 RID: 237490 RVA: 0x0104ED10 File Offset: 0x0104CF10
 		public void SetInputLimitView(EUiViewName viewName, bool enable)
 		{
 			int num = LevelEventLockInputState.Instance.InputLimitView.IndexOf(viewName);
@@ -122,14 +123,14 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E6C RID: 278124 RVA: 0x010A5724 File Offset: 0x010A3924
+		// Token: 0x06039FB3 RID: 237491 RVA: 0x0104ED60 File Offset: 0x0104CF60
 		public void ClearInputLimitView()
 		{
 			LevelEventLockInputState.Instance.InputLimitEsc = false;
 			LevelEventLockInputState.Instance.InputLimitView.Clear();
 		}
 
-		// Token: 0x06043E6D RID: 278125 RVA: 0x010A5740 File Offset: 0x010A3940
+		// Token: 0x06039FB4 RID: 237492 RVA: 0x0104ED7C File Offset: 0x0104CF7C
 		public void SetInputEnableAll()
 		{
 			List<string> list = new List<string>
@@ -146,7 +147,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			LevelEventLockInputState.Instance.InputTagNames = list;
 		}
 
-		// Token: 0x06043E6E RID: 278126 RVA: 0x010A5797 File Offset: 0x010A3997
+		// Token: 0x06039FB5 RID: 237493 RVA: 0x0104EDD3 File Offset: 0x0104CFD3
 		public void SetInputDisableAll()
 		{
 			if (!LevelEventLockInputState.Instance.RealLockInput)
@@ -157,7 +158,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			LevelEventLockInputState.Instance.InputTagNames.Clear();
 		}
 
-		// Token: 0x06043E6F RID: 278127 RVA: 0x010A57C4 File Offset: 0x010A39C4
+		// Token: 0x06039FB6 RID: 237494 RVA: 0x0104EE00 File Offset: 0x0104D000
 		public void SetInputRestrictByTag(string targetTagName, bool enable)
 		{
 			if (!LevelEventLockInputState.Instance.RealLockInput)
@@ -172,22 +173,22 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			InputTagModifyUtils.Instance.SetEnableInputTag(LevelEventLockInputState.Instance.InputTagNames, targetTagName, enable);
 		}
 
-		// Token: 0x06043E70 RID: 278128 RVA: 0x010A5823 File Offset: 0x010A3A23
+		// Token: 0x06039FB7 RID: 237495 RVA: 0x0104EE5F File Offset: 0x0104D05F
 		public bool GetInputEnableByTag(string targetTagName)
 		{
 			return !LevelEventLockInputState.Instance.RealLockInput || InputTagModifyUtils.Instance.GetIsInputTagEnable(LevelEventLockInputState.Instance.InputTagNames, targetTagName, false);
 		}
 
-		// Token: 0x06043E71 RID: 278129 RVA: 0x010A5849 File Offset: 0x010A3A49
+		// Token: 0x06039FB8 RID: 237496 RVA: 0x0104EE85 File Offset: 0x0104D085
 		public void SetExploreSkillInputRestrict(bool enable)
 		{
 			BattleInputModel.Instance.SetInputEnable(AkiClient.Game.Aki.Character.Input.Enum.EInputAction.幻象1, !enable, EBattleInputReason.LevelEvent);
 		}
 
-		// Token: 0x06043E72 RID: 278130 RVA: 0x010A5860 File Offset: 0x010A3A60
+		// Token: 0x06039FB9 RID: 237497 RVA: 0x0104EE9C File Offset: 0x0104D09C
 		public void SetBattleUiEnableAll(bool bLockInput)
 		{
-			BattleUiModel.Instance.ChildViewData.ShowBattleView(EBattleUiVisibleReason.LevelEvent, 1);
+			this.SetBattleUiVisibleAsync(true, false).Forget();
 			if (bLockInput)
 			{
 				this.SetInputRestrictByTag("UiInputRoot.ShortcutKeyTag", true);
@@ -204,10 +205,10 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E73 RID: 278131 RVA: 0x010A58D4 File Offset: 0x010A3AD4
-		public void SetBattleUiDisableAll(bool bLockInput)
+		// Token: 0x06039FBA RID: 237498 RVA: 0x0104EF0C File Offset: 0x0104D10C
+		public void SetBattleUiDisableAll(bool bLockInput, bool isUiFadeEffect = false)
 		{
-			BattleUiModel.Instance.ChildViewData.HideBattleView(EBattleUiVisibleReason.LevelEvent, null, 1);
+			this.SetBattleUiVisibleAsync(false, isUiFadeEffect).Forget();
 			if (bLockInput)
 			{
 				this.SetInputRestrictByTag("UiInputRoot.ShortcutKeyTag", false);
@@ -224,7 +225,20 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E74 RID: 278132 RVA: 0x010A5946 File Offset: 0x010A3B46
+		// Token: 0x06039FBB RID: 237499 RVA: 0x0104EF7C File Offset: 0x0104D17C
+		private UniTask SetBattleUiVisibleAsync(bool visible, bool isUiFadeEffect = false)
+		{
+			OperationRestrictUtils.<SetBattleUiVisibleAsync>d__20 <SetBattleUiVisibleAsync>d__;
+			<SetBattleUiVisibleAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<SetBattleUiVisibleAsync>d__.<>4__this = this;
+			<SetBattleUiVisibleAsync>d__.visible = visible;
+			<SetBattleUiVisibleAsync>d__.isUiFadeEffect = isUiFadeEffect;
+			<SetBattleUiVisibleAsync>d__.<>1__state = -1;
+			<SetBattleUiVisibleAsync>d__.<>t__builder.Start<OperationRestrictUtils.<SetBattleUiVisibleAsync>d__20>(ref <SetBattleUiVisibleAsync>d__);
+			return <SetBattleUiVisibleAsync>d__.<>t__builder.Task;
+		}
+
+		// Token: 0x06039FBC RID: 237500 RVA: 0x0104EFCF File Offset: 0x0104D1CF
 		[NullableContext(2)]
 		public void SetBattleUiRestrictByUiOption(IUiOperationType uiOption)
 		{
@@ -241,7 +255,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			this.SetBattleUiRestrictByEnableUiOption(uiOption as IEnableUiOperation);
 		}
 
-		// Token: 0x06043E75 RID: 278133 RVA: 0x010A5988 File Offset: 0x010A3B88
+		// Token: 0x06039FBD RID: 237501 RVA: 0x0104F010 File Offset: 0x0104D210
 		[NullableContext(2)]
 		public void SetBattleUiRestrictByEnableUiOption(IEnableUiOperation uiOption)
 		{
@@ -262,7 +276,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E76 RID: 278134 RVA: 0x010A5A0C File Offset: 0x010A3C0C
+		// Token: 0x06039FBE RID: 237502 RVA: 0x0104F094 File Offset: 0x0104D294
 		public void SetBattleUiRestrictByDisableUiOption(IDisableUiOperation uiOption)
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.LevelEvent, this.BattleUiChildrenControlledByUiOption, false, true, 1);
@@ -279,7 +293,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E77 RID: 278135 RVA: 0x010A5A84 File Offset: 0x010A3C84
+		// Token: 0x06039FBF RID: 237503 RVA: 0x0104F10C File Offset: 0x0104D30C
 		public void SetBattleUiRestrictByEnableSectionalUiOption(IEnableSectionalUi uiOption)
 		{
 			HashSet<EBattleUiChild> hashSet = new HashSet<EBattleUiChild>();
@@ -451,11 +465,11 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 					}
 				}
 			}
-			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.LevelEvent, hashSet2.ToArray<EBattleUiChild>(), false, true, 1);
-			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.LevelEvent, hashSet.ToArray<EBattleUiChild>(), true, true, 1);
+			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.LevelEvent, hashSet2, false, true, 1);
+			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.LevelEvent, hashSet, true, true, 1);
 		}
 
-		// Token: 0x06043E78 RID: 278136 RVA: 0x010A5EA0 File Offset: 0x010A40A0
+		// Token: 0x06039FC0 RID: 237504 RVA: 0x0104F520 File Offset: 0x0104D720
 		[NullableContext(2)]
 		public void SetBattleUiRestrictByUiChildType(EBattleUiChild[] uiShow, EBattleUiChild[] uiHide)
 		{
@@ -469,8 +483,8 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x17009969 RID: 39273
-		// (get) Token: 0x06043E79 RID: 278137 RVA: 0x010A5ED8 File Offset: 0x010A40D8
+		// Token: 0x17006E6C RID: 28268
+		// (get) Token: 0x06039FC1 RID: 237505 RVA: 0x0104F558 File Offset: 0x0104D758
 		private EBattleUiChild[] BattleUiChildrenControlledByUiOption
 		{
 			get
@@ -493,13 +507,13 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E7A RID: 278138 RVA: 0x010A5F5D File Offset: 0x010A415D
+		// Token: 0x06039FC2 RID: 237506 RVA: 0x0104F5DD File Offset: 0x0104D7DD
 		public void SetInputBlockRestrict(bool enable)
 		{
 			LevelEventLockMaskModule.SetLockMask(enable);
 		}
 
-		// Token: 0x06043E7B RID: 278139 RVA: 0x010A5F65 File Offset: 0x010A4165
+		// Token: 0x06039FC3 RID: 237507 RVA: 0x0104F5E5 File Offset: 0x0104D7E5
 		[NullableContext(2)]
 		public void SetMoveRestrictByMoveOption(IMoveOperationType moveOption)
 		{
@@ -511,7 +525,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			this.SetMoveEnableAll();
 		}
 
-		// Token: 0x06043E7C RID: 278140 RVA: 0x010A5F88 File Offset: 0x010A4188
+		// Token: 0x06039FC4 RID: 237508 RVA: 0x0104F608 File Offset: 0x0104D808
 		public void SetMoveEnableAll()
 		{
 			InputController.Instance.SetMoveControlEnabled(true, true, true, true);
@@ -520,19 +534,19 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			this.SetMoveRestrictTag(GameplayTagDefine.EGameplayTagId["战斗状态.行为限制.强制慢跑"], false);
 		}
 
-		// Token: 0x06043E7D RID: 278141 RVA: 0x010A5FE5 File Offset: 0x010A41E5
+		// Token: 0x06039FC5 RID: 237509 RVA: 0x0104F665 File Offset: 0x0104D865
 		public void SetMoveDisableAll()
 		{
 			InputController.Instance.SetMoveControlEnabled(false, false, false, false);
 		}
 
-		// Token: 0x06043E7E RID: 278142 RVA: 0x010A5FF5 File Offset: 0x010A41F5
+		// Token: 0x06039FC6 RID: 237510 RVA: 0x0104F675 File Offset: 0x0104D875
 		public void SetSwitchTeamRoleRestrict(bool enable)
 		{
 			this.SetPlayerRestrictTag(GameplayTagDefine.EGameplayTagId["角色.Common.BUFF通用标识.不能切人"], enable);
 		}
 
-		// Token: 0x06043E7F RID: 278143 RVA: 0x010A6010 File Offset: 0x010A4210
+		// Token: 0x06039FC7 RID: 237511 RVA: 0x0104F690 File Offset: 0x0104D890
 		public void SetMoveRestrictByDisableMoveOption(IDisableMoveOperation moveOption)
 		{
 			this.SetMoveRestrictTag(GameplayTagDefine.EGameplayTagId["战斗状态.行为限制.禁止冲刺"], moveOption.ForbidSprint.GetValueOrDefault());
@@ -541,13 +555,13 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			InputController.Instance.SetMoveControlEnabled(moveOption.Forward, moveOption.Back, moveOption.Left, moveOption.Right);
 		}
 
-		// Token: 0x06043E80 RID: 278144 RVA: 0x010A60BB File Offset: 0x010A42BB
+		// Token: 0x06039FC8 RID: 237512 RVA: 0x0104F73B File Offset: 0x0104D93B
 		private void SetMoveRestrictTag(int tagId, bool enable)
 		{
 			this.SetPlayerRestrictTag(tagId, enable);
 		}
 
-		// Token: 0x06043E81 RID: 278145 RVA: 0x010A60C8 File Offset: 0x010A42C8
+		// Token: 0x06039FC9 RID: 237513 RVA: 0x0104F748 File Offset: 0x0104D948
 		private unsafe void SetPlayerRestrictTag(int tagId, bool enable)
 		{
 			int playerId = CreatureModel.Instance.GetPlayerId();
@@ -577,7 +591,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E82 RID: 278146 RVA: 0x010A618F File Offset: 0x010A438F
+		// Token: 0x06039FCA RID: 237514 RVA: 0x0104F80F File Offset: 0x0104DA0F
 		[NullableContext(2)]
 		public void SetInteractRestrictByInteractOption(ISceneInteractionOperationType interactOption)
 		{
@@ -589,7 +603,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			this.SetInteractEnable(true);
 		}
 
-		// Token: 0x06043E83 RID: 278147 RVA: 0x010A61AC File Offset: 0x010A43AC
+		// Token: 0x06039FCB RID: 237515 RVA: 0x0104F82C File Offset: 0x0104DA2C
 		public void SetInteractEnable(bool bLockInput)
 		{
 			if (bLockInput)
@@ -602,7 +616,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}, null);
 		}
 
-		// Token: 0x06043E84 RID: 278148 RVA: 0x010A61CF File Offset: 0x010A43CF
+		// Token: 0x06039FCC RID: 237516 RVA: 0x0104F84F File Offset: 0x0104DA4F
 		public void SetInteractDisable(bool bLockInput)
 		{
 			if (bLockInput)
@@ -615,7 +629,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			});
 		}
 
-		// Token: 0x06043E85 RID: 278149 RVA: 0x010A61F2 File Offset: 0x010A43F2
+		// Token: 0x06039FCD RID: 237517 RVA: 0x0104F872 File Offset: 0x0104DA72
 		[NullableContext(2)]
 		public void SetCameraRestrictByCameraOption(ICameraOperationType cameraOption)
 		{
@@ -633,19 +647,19 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			this.SetCameraEnable();
 		}
 
-		// Token: 0x06043E86 RID: 278150 RVA: 0x010A622C File Offset: 0x010A442C
+		// Token: 0x06039FCE RID: 237518 RVA: 0x0104F8AC File Offset: 0x0104DAAC
 		public void SetCameraEnable()
 		{
 			this.SetInputRestrictByTag("FightInputRoot.FightInput.AxisInput.CameraInput", true);
 		}
 
-		// Token: 0x06043E87 RID: 278151 RVA: 0x010A623A File Offset: 0x010A443A
+		// Token: 0x06039FCF RID: 237519 RVA: 0x0104F8BA File Offset: 0x0104DABA
 		public void SetCameraDisable()
 		{
 			this.SetInputRestrictByTag("FightInputRoot.FightInput.AxisInput.CameraInput", false);
 		}
 
-		// Token: 0x06043E88 RID: 278152 RVA: 0x010A6248 File Offset: 0x010A4448
+		// Token: 0x06039FD0 RID: 237520 RVA: 0x0104F8C8 File Offset: 0x0104DAC8
 		public void SetCameraEnableSection(IEnableSectionalCameraOperation cameraOption)
 		{
 			if (cameraOption.EnableRotate.GetValueOrDefault())
@@ -658,7 +672,17 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E89 RID: 278153 RVA: 0x010A6290 File Offset: 0x010A4490
+		// Token: 0x06039FD1 RID: 237521 RVA: 0x0104F90D File Offset: 0x0104DB0D
+		public void SetMiniMapEnable(bool enable)
+		{
+			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.LevelEvent, new EBattleUiChild[]
+			{
+				EBattleUiChild.MiniMap
+			}, enable, true, 4);
+			OperationRestrictUtils.Instance.SetInputLimitView(EUiViewName.WorldMapView, !enable);
+		}
+
+		// Token: 0x06039FD2 RID: 237522 RVA: 0x0104F940 File Offset: 0x0104DB40
 		[NullableContext(2)]
 		public void SetSkillRestrictBySkillOption(ISkillOperationType skillOption)
 		{
@@ -678,7 +702,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E8A RID: 278154 RVA: 0x010A62E4 File Offset: 0x010A44E4
+		// Token: 0x06039FD3 RID: 237523 RVA: 0x0104F994 File Offset: 0x0104DB94
 		public void SetSkillEnableAll()
 		{
 			LevelFuncFlagModel.Instance.SetFuncFlagEnable(ELevelFuncFlagId.ExploreSkillRoulette, true);
@@ -691,7 +715,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			BattleInputModel.Instance.SetAllInputEnable(true, EBattleInputReason.LevelEvent);
 		}
 
-		// Token: 0x06043E8B RID: 278155 RVA: 0x010A6360 File Offset: 0x010A4560
+		// Token: 0x06039FD4 RID: 237524 RVA: 0x0104FA10 File Offset: 0x0104DC10
 		public void SetSkillDisableAll()
 		{
 			this.SetInputRestrictByTag("FightInputRoot.FightInput.ActionInput", false);
@@ -703,7 +727,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			BattleInputModel.Instance.SetAllInputEnable(false, EBattleInputReason.LevelEvent);
 		}
 
-		// Token: 0x06043E8C RID: 278156 RVA: 0x010A63CC File Offset: 0x010A45CC
+		// Token: 0x06039FD5 RID: 237525 RVA: 0x0104FA7C File Offset: 0x0104DC7C
 		public void SetSkillRestrictByDisableSkillOption(IDisableSkillOperation skillOption)
 		{
 			this.SetInputRestrictByTag("FightInputRoot.FightInput.ActionInput", false);
@@ -739,7 +763,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06043E8D RID: 278157 RVA: 0x010A64E0 File Offset: 0x010A46E0
+		// Token: 0x06039FD6 RID: 237526 RVA: 0x0104FB90 File Offset: 0x0104DD90
 		public void SetSkillRestrictByDisableSectionalSkillOption(IDisableSectionalSkillOperation skillOption)
 		{
 			LevelFuncFlagModel.Instance.SetFuncFlagEnable(ELevelFuncFlagId.ExploreSkillRoulette, !skillOption.DisableSkillWheel.GetValueOrDefault());
@@ -815,7 +839,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			BattleInputModel.Instance.SetAllInputEnableWithIgnoreSet(true, hashSet, EBattleInputReason.LevelEvent);
 		}
 
-		// Token: 0x06043E8E RID: 278158 RVA: 0x010A678C File Offset: 0x010A498C
+		// Token: 0x06039FD7 RID: 237527 RVA: 0x0104FE3C File Offset: 0x0104E03C
 		private void AddDisableCharacterSectionalSkillsToSet(IDisableCharacterSectionalSkillOption sectionalSkillOption, HashSet<int> disableInputAction)
 		{
 			if (sectionalSkillOption.DisableJump.GetValueOrDefault())
@@ -868,8 +892,8 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x1700996A RID: 39274
-		// (get) Token: 0x06043E8F RID: 278159 RVA: 0x010A68BE File Offset: 0x010A4ABE
+		// Token: 0x17006E6D RID: 28269
+		// (get) Token: 0x06039FD8 RID: 237528 RVA: 0x0104FF6E File Offset: 0x0104E16E
 		public static OperationRestrictUtils Instance
 		{
 			get
@@ -883,12 +907,12 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E90 RID: 278160 RVA: 0x010A68E1 File Offset: 0x010A4AE1
+		// Token: 0x06039FD9 RID: 237529 RVA: 0x0104FF91 File Offset: 0x0104E191
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043E91 RID: 278161 RVA: 0x010A68E3 File Offset: 0x010A4AE3
+		// Token: 0x06039FDA RID: 237530 RVA: 0x0104FF93 File Offset: 0x0104E193
 		public static void ResetStaticDefaultValue()
 		{
 			OperationRestrictUtils instance = OperationRestrictUtils._instance;
@@ -899,13 +923,13 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			OperationRestrictUtils._instance = null;
 		}
 
-		// Token: 0x06043E92 RID: 278162 RVA: 0x010A68FC File Offset: 0x010A4AFC
+		// Token: 0x06039FDB RID: 237531 RVA: 0x0104FFAC File Offset: 0x0104E1AC
 		static OperationRestrictUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(OperationRestrictUtils.CreateStaticDefaultValue), new Action(OperationRestrictUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040237CA RID: 145354
+		// Token: 0x0401EA67 RID: 125543
 		private readonly EBattleUiChild[] SkillButtonUiChildTypeList = new EBattleUiChild[]
 		{
 			EBattleUiChild.SkillButton,
@@ -913,11 +937,21 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			EBattleUiChild.MotorcycleMobileSkillButton
 		};
 
-		// Token: 0x040237CB RID: 145355
+		// Token: 0x0401EA68 RID: 125544
 		[Nullable(2)]
 		private EBattleUiChild[] BattleUiChildrenControlledByUiOptionCache;
 
-		// Token: 0x040237CC RID: 145356
+		// Token: 0x0401EA69 RID: 125545
+		private int BattleUiVisibilityRequestId;
+
+		// Token: 0x0401EA6A RID: 125546
+		private bool? PendingBattleUiVisible;
+
+		// Token: 0x0401EA6B RID: 125547
+		[Nullable(2)]
+		private UiBehaviorLevelSequence FadeHiddenBattleViewSequence;
+
+		// Token: 0x0401EA6C RID: 125548
 		private readonly ISkillOptionToInputAction[] SkillOptionToInputAction = new ISkillOptionToInputAction[]
 		{
 			new ISkillOptionToInputAction
@@ -982,7 +1016,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		};
 
-		// Token: 0x040237CD RID: 145357
+		// Token: 0x0401EA6D RID: 125549
 		[Nullable(2)]
 		private static OperationRestrictUtils _instance;
 	}

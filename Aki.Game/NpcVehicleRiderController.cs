@@ -8,13 +8,13 @@ using Aki.TDConfigMgr.Component;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020031F8 RID: 12792
+// Token: 0x02002767 RID: 10087
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class NpcVehicleRiderController : ControllerBase
 {
-	// Token: 0x0601B96C RID: 113004 RVA: 0x00792980 File Offset: 0x00790B80
+	// Token: 0x060194F1 RID: 103665 RVA: 0x007BB0AC File Offset: 0x007B92AC
 	public void TryRegisterNpcVehicle(Entity entity)
 	{
 		int creaturePbDataId = CreatureModel.Instance.GetCreaturePbDataId(entity.Id);
@@ -36,7 +36,7 @@ public class NpcVehicleRiderController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B96D RID: 113005 RVA: 0x00792A18 File Offset: 0x00790C18
+	// Token: 0x060194F2 RID: 103666 RVA: 0x007BB144 File Offset: 0x007B9344
 	[NullableContext(2)]
 	public void TryUnregisterNpcVehicle(Entity entity)
 	{
@@ -63,7 +63,7 @@ public class NpcVehicleRiderController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B96E RID: 113006 RVA: 0x00792AB4 File Offset: 0x00790CB4
+	// Token: 0x060194F3 RID: 103667 RVA: 0x007BB1E0 File Offset: 0x007B93E0
 	[NullableContext(2)]
 	private bool IsGeneralNpcVehicleByPbDataId(IEntityData entityData)
 	{
@@ -72,7 +72,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return entityCategory != null && entityCategory.NpcType.GetValueOrDefault() == ENpcType.Vehicle && entityCategory.VehicleType.GetValueOrDefault() == EVehicleType.WoodenOxenAndFlowingHorses;
 	}
 
-	// Token: 0x0601B96F RID: 113007 RVA: 0x00792B14 File Offset: 0x00790D14
+	// Token: 0x060194F4 RID: 103668 RVA: 0x007BB240 File Offset: 0x007B9440
 	[NullableContext(2)]
 	private int GetVehicleSeatCount(IEntityData entityData)
 	{
@@ -88,7 +88,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return (int)component.SeatCount;
 	}
 
-	// Token: 0x0601B970 RID: 113008 RVA: 0x00792B50 File Offset: 0x00790D50
+	// Token: 0x060194F5 RID: 103669 RVA: 0x007BB27C File Offset: 0x007B947C
 	public unsafe bool TryReserveVehicle(int npcEntityId, int vehicleEntityId)
 	{
 		if (!this.CheckNpcEntityActive(npcEntityId) || vehicleEntityId == 0)
@@ -127,7 +127,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return flag2;
 	}
 
-	// Token: 0x0601B971 RID: 113009 RVA: 0x00792C54 File Offset: 0x00790E54
+	// Token: 0x060194F6 RID: 103670 RVA: 0x007BB380 File Offset: 0x007B9580
 	private void EnsureEnterRouteCached(int npcEntityId, int vehicleEntityId)
 	{
 		VehicleEnterRouteCache vehicleEnterRouteCache;
@@ -143,32 +143,32 @@ public class NpcVehicleRiderController : ControllerBase
 		this.WriteEnterRouteCache(npcEntityId, vehicleEntityId, eenterVehicleDirection.Value, this.TmpReachableProbePath);
 	}
 
-	// Token: 0x0601B972 RID: 113010 RVA: 0x00792CB8 File Offset: 0x00790EB8
+	// Token: 0x060194F7 RID: 103671 RVA: 0x007BB3E4 File Offset: 0x007B95E4
 	public bool ReleaseVehicle(int npcEntityId)
 	{
 		this.EnterRouteCacheMap.Remove(npcEntityId);
 		return NpcVehicleRiderModel.Instance.ReleaseVehicle(npcEntityId, 0) != null;
 	}
 
-	// Token: 0x0601B973 RID: 113011 RVA: 0x00792CE6 File Offset: 0x00790EE6
+	// Token: 0x060194F8 RID: 103672 RVA: 0x007BB412 File Offset: 0x007B9612
 	public bool SetNpcVehicleRideState(int npcEntityId, ENpcVehicleRideState state)
 	{
 		return (state == ENpcVehicleRideState.None || this.CheckNpcEntityActive(npcEntityId)) && NpcVehicleRiderModel.Instance.SetNpcVehicleRideState(npcEntityId, state);
 	}
 
-	// Token: 0x0601B974 RID: 113012 RVA: 0x00792D02 File Offset: 0x00790F02
+	// Token: 0x060194F9 RID: 103673 RVA: 0x007BB42E File Offset: 0x007B962E
 	public bool SetNpcTargetSplinePbDataId(int npcEntityId, int splinePbDataId)
 	{
 		return this.CheckNpcEntityActive(npcEntityId) && splinePbDataId != 0 && NpcVehicleRiderModel.Instance.SetNpcTargetSplinePbDataId(npcEntityId, splinePbDataId);
 	}
 
-	// Token: 0x0601B975 RID: 113013 RVA: 0x00792D1E File Offset: 0x00790F1E
+	// Token: 0x060194FA RID: 103674 RVA: 0x007BB44A File Offset: 0x007B964A
 	public int? GetRidingVehicle(int npcEntityId)
 	{
 		return NpcVehicleRiderModel.Instance.GetRidingVehicle(npcEntityId);
 	}
 
-	// Token: 0x0601B976 RID: 113014 RVA: 0x00792D2C File Offset: 0x00790F2C
+	// Token: 0x060194FB RID: 103675 RVA: 0x007BB458 File Offset: 0x007B9658
 	public CommonNpcPerformComponent.EEnterVehicleDirection? GetEnterVehicleDirection(int npcEntityId)
 	{
 		int? intValueByEntity = BlackboardController.Instance.GetIntValueByEntity(npcEntityId, "NpcEnterVehicleDirection");
@@ -179,7 +179,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x0601B977 RID: 113015 RVA: 0x00792D6C File Offset: 0x00790F6C
+	// Token: 0x060194FC RID: 103676 RVA: 0x007BB498 File Offset: 0x007B9698
 	public void CacheEnterVehicleStartTransform(int npcEntityId)
 	{
 		Entity entity = EntitySystem.Instance.Get(npcEntityId);
@@ -204,20 +204,20 @@ public class NpcVehicleRiderController : ControllerBase
 		enterVehicleStartTransform.Yaw = component.ActorRotationProxy.Yaw;
 	}
 
-	// Token: 0x0601B978 RID: 113016 RVA: 0x00792E02 File Offset: 0x00791002
+	// Token: 0x060194FD RID: 103677 RVA: 0x007BB52E File Offset: 0x007B972E
 	[NullableContext(2)]
 	public EnterVehicleStartTransform GetEnterVehicleStartTransform(int npcEntityId)
 	{
 		return this.EnterStartTransformMap.GetValueOrDefault(npcEntityId);
 	}
 
-	// Token: 0x0601B979 RID: 113017 RVA: 0x00792E10 File Offset: 0x00791010
+	// Token: 0x060194FE RID: 103678 RVA: 0x007BB53C File Offset: 0x007B973C
 	public void ClearEnterVehicleStartTransform(int npcEntityId)
 	{
 		this.EnterStartTransformMap.Remove(npcEntityId);
 	}
 
-	// Token: 0x0601B97A RID: 113018 RVA: 0x00792E20 File Offset: 0x00791020
+	// Token: 0x060194FF RID: 103679 RVA: 0x007BB54C File Offset: 0x007B974C
 	public string GetEnterVehicleMontageByCachedDirection(int npcEntityId)
 	{
 		CommonNpcPerformComponent.EEnterVehicleDirection? enterVehicleDirection = this.GetEnterVehicleDirection(npcEntityId);
@@ -239,7 +239,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return text ?? "";
 	}
 
-	// Token: 0x0601B97B RID: 113019 RVA: 0x00792E7C File Offset: 0x0079107C
+	// Token: 0x06019500 RID: 103680 RVA: 0x007BB5A8 File Offset: 0x007B97A8
 	[NullableContext(2)]
 	public LeaveVehicleDirectionAndMontage GetRandomLeaveVehicleDirectionAndMontage(int npcEntityId)
 	{
@@ -261,7 +261,7 @@ public class NpcVehicleRiderController : ControllerBase
 		};
 	}
 
-	// Token: 0x0601B97C RID: 113020 RVA: 0x00792EE8 File Offset: 0x007910E8
+	// Token: 0x06019501 RID: 103681 RVA: 0x007BB614 File Offset: 0x007B9814
 	private bool IsNpcFemale(int npcEntityId)
 	{
 		CreatureDataComponent component = EntitySystem.Instance.GetComponent<CreatureDataComponent>(npcEntityId);
@@ -284,7 +284,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return egenderType2.GetValueOrDefault() == EGenderType.Female;
 	}
 
-	// Token: 0x0601B97D RID: 113021 RVA: 0x00792F40 File Offset: 0x00791140
+	// Token: 0x06019502 RID: 103682 RVA: 0x007BB66C File Offset: 0x007B986C
 	private void PlayVehicleHorseMontage(int npcEntityId, int vehicleEntityId, CommonNpcPerformComponent.EEnterVehicleDirection direction, bool isEnter)
 	{
 		NpcVehiclePerformComponent component = EntitySystem.Instance.GetComponent<NpcVehiclePerformComponent>(vehicleEntityId);
@@ -317,31 +317,31 @@ public class NpcVehicleRiderController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B97E RID: 113022 RVA: 0x0079306D File Offset: 0x0079126D
+	// Token: 0x06019503 RID: 103683 RVA: 0x007BB799 File Offset: 0x007B9999
 	public int? GetRideSeat(int npcEntityId)
 	{
 		return NpcVehicleRiderModel.Instance.GetRideSeat(npcEntityId, 0);
 	}
 
-	// Token: 0x0601B97F RID: 113023 RVA: 0x0079307B File Offset: 0x0079127B
+	// Token: 0x06019504 RID: 103684 RVA: 0x007BB7A7 File Offset: 0x007B99A7
 	public int? GetNpcTargetSplinePbDataId(int npcEntityId)
 	{
 		return NpcVehicleRiderModel.Instance.GetNpcTargetSplinePbDataId(npcEntityId);
 	}
 
-	// Token: 0x0601B980 RID: 113024 RVA: 0x00793088 File Offset: 0x00791288
+	// Token: 0x06019505 RID: 103685 RVA: 0x007BB7B4 File Offset: 0x007B99B4
 	public bool IsVehicleMovingToTarget(int vehicleEntityId)
 	{
 		return vehicleEntityId != 0 && NpcVehicleRiderModel.Instance.IsVehicleMovingToTarget(vehicleEntityId);
 	}
 
-	// Token: 0x0601B981 RID: 113025 RVA: 0x0079309C File Offset: 0x0079129C
+	// Token: 0x06019506 RID: 103686 RVA: 0x007BB7C8 File Offset: 0x007B99C8
 	public bool HasAvailableRouteSpline(int vehicleEntityId)
 	{
 		return this.GetAvailableRouteNpc(vehicleEntityId) != null;
 	}
 
-	// Token: 0x0601B982 RID: 113026 RVA: 0x007930B8 File Offset: 0x007912B8
+	// Token: 0x06019507 RID: 103687 RVA: 0x007BB7E4 File Offset: 0x007B99E4
 	public int? GetAvailableRouteNpc(int vehicleEntityId)
 	{
 		if (vehicleEntityId == 0)
@@ -351,7 +351,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return NpcVehicleRiderModel.Instance.GetAvailableRouteNpc(vehicleEntityId);
 	}
 
-	// Token: 0x0601B983 RID: 113027 RVA: 0x007930E0 File Offset: 0x007912E0
+	// Token: 0x06019508 RID: 103688 RVA: 0x007BB80C File Offset: 0x007B9A0C
 	public int? ActivateNpcRouteBySpline(int vehicleEntityId, int splinePbDataId)
 	{
 		if (vehicleEntityId == 0 || splinePbDataId == 0)
@@ -361,19 +361,19 @@ public class NpcVehicleRiderController : ControllerBase
 		return NpcVehicleRiderModel.Instance.ActivateNpcRouteBySpline(vehicleEntityId, splinePbDataId);
 	}
 
-	// Token: 0x0601B984 RID: 113028 RVA: 0x00793109 File Offset: 0x00791309
+	// Token: 0x06019509 RID: 103689 RVA: 0x007BB835 File Offset: 0x007B9A35
 	public ENpcVehicleRideState GetNpcVehicleRideState(int npcEntityId)
 	{
 		return NpcVehicleRiderModel.Instance.GetNpcVehicleRideState(npcEntityId);
 	}
 
-	// Token: 0x0601B985 RID: 113029 RVA: 0x00793116 File Offset: 0x00791316
+	// Token: 0x0601950A RID: 103690 RVA: 0x007BB842 File Offset: 0x007B9A42
 	public bool GetVehicleIsWaitingNpc(int vehicleEntityId, int checkState)
 	{
 		return NpcVehicleRiderModel.Instance.GetVehicleIsWaitingNpc(vehicleEntityId, checkState);
 	}
 
-	// Token: 0x0601B986 RID: 113030 RVA: 0x00793124 File Offset: 0x00791324
+	// Token: 0x0601950B RID: 103691 RVA: 0x007BB850 File Offset: 0x007B9A50
 	public void NotifyRideEntityInvalid(int vehicleEntityId)
 	{
 		if (vehicleEntityId == 0)
@@ -389,7 +389,7 @@ public class NpcVehicleRiderController : ControllerBase
 		NpcVehicleRiderModel.Instance.RefreshVehicleRuntimeInfo(vehicleEntityId);
 	}
 
-	// Token: 0x0601B987 RID: 113031 RVA: 0x00793160 File Offset: 0x00791360
+	// Token: 0x0601950C RID: 103692 RVA: 0x007BB88C File Offset: 0x007B9A8C
 	public int? GetNearestFreeVehicleInRange(int npcEntityId, float range)
 	{
 		float num = range * range;
@@ -433,7 +433,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return new int?(num2);
 	}
 
-	// Token: 0x0601B988 RID: 113032 RVA: 0x007932B0 File Offset: 0x007914B0
+	// Token: 0x0601950D RID: 103693 RVA: 0x007BB9DC File Offset: 0x007B9BDC
 	public bool GetVehicleInteractionLocation(int npcEntityId, int vehicleEntityId, Vector outLocation)
 	{
 		if (!this.GetVehicleEnterPath(npcEntityId, vehicleEntityId, this.TmpEnterPath))
@@ -444,7 +444,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B989 RID: 113033 RVA: 0x007932E4 File Offset: 0x007914E4
+	// Token: 0x0601950E RID: 103694 RVA: 0x007BBA10 File Offset: 0x007B9C10
 	public bool GetVehicleEnterPath(int npcEntityId, int vehicleEntityId, List<Vector> outPath)
 	{
 		outPath.Clear();
@@ -468,7 +468,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B98A RID: 113034 RVA: 0x007933C0 File Offset: 0x007915C0
+	// Token: 0x0601950F RID: 103695 RVA: 0x007BBAEC File Offset: 0x007B9CEC
 	public bool GetVehicleEnterBoxDebugGeometry(int npcEntityId, int vehicleEntityId, VehicleEnterBoxDebugGeometry @out)
 	{
 		VehicleEnterRouteContext vehicleEnterRouteContext = this.PrepareEnterRouteContext(npcEntityId, vehicleEntityId);
@@ -485,7 +485,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B98B RID: 113035 RVA: 0x0079343C File Offset: 0x0079163C
+	// Token: 0x06019510 RID: 103696 RVA: 0x007BBB68 File Offset: 0x007B9D68
 	public bool GetNpcRideFacingDirection(int npcEntityId, int vehicleEntityId, Vector outDirection)
 	{
 		Entity entity = EntitySystem.Instance.Get(npcEntityId);
@@ -508,7 +508,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return this.ProjectDirectionToVehiclePlane(baseActorComponent2, outDirection);
 	}
 
-	// Token: 0x0601B98C RID: 113036 RVA: 0x007934C4 File Offset: 0x007916C4
+	// Token: 0x06019511 RID: 103697 RVA: 0x007BBBF0 File Offset: 0x007B9DF0
 	private bool TryGetConfigRideFacingDirection(int npcEntityId, BaseActorComponent vehicleActorComp, Vector outDirection)
 	{
 		CommonNpcPerformComponent.EEnterVehicleDirection? enterVehicleDirection = this.GetEnterVehicleDirection(npcEntityId);
@@ -530,7 +530,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return this.ProjectDirectionToVehiclePlane(vehicleActorComp, outDirection);
 	}
 
-	// Token: 0x0601B98D RID: 113037 RVA: 0x00793564 File Offset: 0x00791764
+	// Token: 0x06019512 RID: 103698 RVA: 0x007BBC90 File Offset: 0x007B9E90
 	public bool IsNpcAtVehicleRideLocation(int npcEntityId, int vehicleEntityId, float tolerance)
 	{
 		Entity entity = EntitySystem.Instance.Get(npcEntityId);
@@ -566,7 +566,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0601B98E RID: 113038 RVA: 0x0079368C File Offset: 0x0079188C
+	// Token: 0x06019513 RID: 103699 RVA: 0x007BBDB8 File Offset: 0x007B9FB8
 	public unsafe void BoardVehicle(int npcEntityId, int vehicleEntityId, string montagePath, int seat, [Nullable(new byte[]
 	{
 		1,
@@ -660,7 +660,7 @@ public class NpcVehicleRiderController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B98F RID: 113039 RVA: 0x0079387C File Offset: 0x00791A7C
+	// Token: 0x06019514 RID: 103700 RVA: 0x007BBFA8 File Offset: 0x007BA1A8
 	public unsafe void DismountVehicle(int npcEntityId, int vehicleEntityId, string montagePath, CommonNpcPerformComponent.EEnterVehicleDirection direction, [Nullable(new byte[]
 	{
 		1,
@@ -779,20 +779,20 @@ public class NpcVehicleRiderController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B990 RID: 113040 RVA: 0x00793A8B File Offset: 0x00791C8B
+	// Token: 0x06019515 RID: 103701 RVA: 0x007BC1B7 File Offset: 0x007BA3B7
 	private bool CheckNpcEntityActive(int npcEntityId)
 	{
 		Entity entity = EntitySystem.Instance.Get(npcEntityId);
 		return entity != null && entity.Active;
 	}
 
-	// Token: 0x0601B991 RID: 113041 RVA: 0x00793AA4 File Offset: 0x00791CA4
+	// Token: 0x06019516 RID: 103702 RVA: 0x007BC1D0 File Offset: 0x007BA3D0
 	private bool CheckStartRideLocationIsReachable(int npcEntityId, int vehicleEntityId)
 	{
 		return this.ComputeVehicleEnterRoute(npcEntityId, vehicleEntityId, this.TmpReachableProbePath) != null;
 	}
 
-	// Token: 0x0601B992 RID: 113042 RVA: 0x00793AC8 File Offset: 0x00791CC8
+	// Token: 0x06019517 RID: 103703 RVA: 0x007BC1F4 File Offset: 0x007BA3F4
 	private CommonNpcPerformComponent.EEnterVehicleDirection? ComputeVehicleEnterRoute(int npcEntityId, int vehicleEntityId, List<Vector> outPath)
 	{
 		outPath.Clear();
@@ -837,7 +837,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return this.ComputeCornerDetourRoute(world, oppositeRide, vehicleEnterRouteContext.NpcLateral, vehicleEnterRouteContext.WaypointHalfLength, vehicleEnterRouteContext.WaypointHalfWidth, outPath);
 	}
 
-	// Token: 0x0601B993 RID: 113043 RVA: 0x00793C58 File Offset: 0x00791E58
+	// Token: 0x06019518 RID: 103704 RVA: 0x007BC384 File Offset: 0x007BA584
 	[NullableContext(2)]
 	private VehicleEnterRouteContext PrepareEnterRouteContext(int npcEntityId, int vehicleEntityId)
 	{
@@ -901,7 +901,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return tmpRouteContext;
 	}
 
-	// Token: 0x0601B994 RID: 113044 RVA: 0x00793EA8 File Offset: 0x007920A8
+	// Token: 0x06019519 RID: 103705 RVA: 0x007BC5D4 File Offset: 0x007BA7D4
 	private CommonNpcPerformComponent.EEnterVehicleDirection? ComputeCornerDetourRoute(UWorld world, VehicleRideLocation oppositeRide, double npcLat, float waypointHalfLength, double waypointHalfWidth, List<Vector> outPath)
 	{
 		this.TmpRouteTransform.InverseTransformPositionNoScale(oppositeRide.Location, this.TmpLocation1);
@@ -957,7 +957,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x0601B995 RID: 113045 RVA: 0x007940B8 File Offset: 0x007922B8
+	// Token: 0x0601951A RID: 103706 RVA: 0x007BC7E4 File Offset: 0x007BA9E4
 	private bool AreSegmentsNavigable(UWorld world, List<Vector> points)
 	{
 		for (int i = 1; i < points.Count; i++)
@@ -970,7 +970,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B996 RID: 113046 RVA: 0x0079410C File Offset: 0x0079230C
+	// Token: 0x0601951B RID: 103707 RVA: 0x007BC838 File Offset: 0x007BAA38
 	private void SetRouteTransform(BaseActorComponent vehicleActorComp)
 	{
 		this.TmpRotator1.DeepCopy(vehicleActorComp.ActorRotationProxy);
@@ -979,7 +979,7 @@ public class NpcVehicleRiderController : ControllerBase
 		this.TmpRouteTransform.SetRotation(this.TmpQuat1);
 	}
 
-	// Token: 0x0601B997 RID: 113047 RVA: 0x00794160 File Offset: 0x00792360
+	// Token: 0x0601951C RID: 103708 RVA: 0x007BC88C File Offset: 0x007BAA8C
 	private bool ProjectDirectionToVehiclePlane(BaseActorComponent vehicleActorComp, Vector direction)
 	{
 		this.SetRouteTransform(vehicleActorComp);
@@ -993,21 +993,21 @@ public class NpcVehicleRiderController : ControllerBase
 		return direction.Normalize(1E-08);
 	}
 
-	// Token: 0x0601B998 RID: 113048 RVA: 0x007941D3 File Offset: 0x007923D3
+	// Token: 0x0601951D RID: 103709 RVA: 0x007BC8FF File Offset: 0x007BAAFF
 	private void BuildWaypointCorner(int signX, int signY, double halfLength, double halfWidth, Vector @out)
 	{
 		@out.Set((double)signX * halfLength, (double)signY * halfWidth, 0.0);
 		this.TmpRouteTransform.TransformPositionNoScale(@out, @out);
 	}
 
-	// Token: 0x0601B999 RID: 113049 RVA: 0x007941FD File Offset: 0x007923FD
+	// Token: 0x0601951E RID: 103710 RVA: 0x007BC929 File Offset: 0x007BAB29
 	private void BuildWaypointEdge(int signX, double lateral, double halfLength, Vector @out)
 	{
 		@out.Set((double)signX * halfLength, lateral, 0.0);
 		this.TmpRouteTransform.TransformPositionNoScale(@out, @out);
 	}
 
-	// Token: 0x0601B99A RID: 113050 RVA: 0x00794224 File Offset: 0x00792424
+	// Token: 0x0601951F RID: 103711 RVA: 0x007BC950 File Offset: 0x007BAB50
 	private bool IsRouteCrossingObstacle(List<Vector> routePoints, double halfLength, double halfWidth)
 	{
 		if (routePoints.Count < 2)
@@ -1032,7 +1032,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0601B99B RID: 113051 RVA: 0x007942C8 File Offset: 0x007924C8
+	// Token: 0x06019520 RID: 103712 RVA: 0x007BC9F4 File Offset: 0x007BABF4
 	private bool SegmentIntersectsAabb2D(double x0, double y0, double x1, double y1, double halfLength, double halfWidth)
 	{
 		double num = x1 - x0;
@@ -1092,7 +1092,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return num3 <= num4;
 	}
 
-	// Token: 0x0601B99C RID: 113052 RVA: 0x007943BC File Offset: 0x007925BC
+	// Token: 0x06019521 RID: 103713 RVA: 0x007BCAE8 File Offset: 0x007BACE8
 	private CommonNpcPerformComponent.EEnterVehicleDirection FillRoute(CommonNpcPerformComponent.EEnterVehicleDirection direction, List<Vector> outPath, params Vector[] points)
 	{
 		outPath.Clear();
@@ -1103,7 +1103,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return direction;
 	}
 
-	// Token: 0x0601B99D RID: 113053 RVA: 0x007943F0 File Offset: 0x007925F0
+	// Token: 0x06019522 RID: 103714 RVA: 0x007BCB1C File Offset: 0x007BAD1C
 	private void WriteEnterRouteCache(int npcEntityId, int vehicleEntityId, CommonNpcPerformComponent.EEnterVehicleDirection direction, List<Vector> path)
 	{
 		VehicleEnterRouteCache vehicleEnterRouteCache;
@@ -1121,7 +1121,7 @@ public class NpcVehicleRiderController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B99E RID: 113054 RVA: 0x00794488 File Offset: 0x00792688
+	// Token: 0x06019523 RID: 103715 RVA: 0x007BCBB4 File Offset: 0x007BADB4
 	private void GetVehicleStartRideLocation(int npcEntityId, int vehicleEntityId, List<VehicleRideLocation> outList)
 	{
 		outList.Clear();
@@ -1158,8 +1158,8 @@ public class NpcVehicleRiderController : ControllerBase
 		}
 	}
 
-	// Token: 0x1700262C RID: 9772
-	// (get) Token: 0x0601B99F RID: 113055 RVA: 0x007945A4 File Offset: 0x007927A4
+	// Token: 0x1700286D RID: 10349
+	// (get) Token: 0x06019524 RID: 103716 RVA: 0x007BCCD0 File Offset: 0x007BAED0
 	public static NpcVehicleRiderController Instance
 	{
 		get
@@ -1168,7 +1168,7 @@ public class NpcVehicleRiderController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B9A0 RID: 113056 RVA: 0x007945AB File Offset: 0x007927AB
+	// Token: 0x06019525 RID: 103717 RVA: 0x007BCCD7 File Offset: 0x007BAED7
 	public static NpcVehicleRiderController GetOrCreateInstance()
 	{
 		if (NpcVehicleRiderController._Instance == null)
@@ -1178,7 +1178,7 @@ public class NpcVehicleRiderController : ControllerBase
 		return NpcVehicleRiderController._Instance;
 	}
 
-	// Token: 0x0601B9A1 RID: 113057 RVA: 0x007945BF File Offset: 0x007927BF
+	// Token: 0x06019526 RID: 103718 RVA: 0x007BCCEB File Offset: 0x007BAEEB
 	public static bool CreateInstance()
 	{
 		if (NpcVehicleRiderController._Instance != null)
@@ -1189,96 +1189,96 @@ public class NpcVehicleRiderController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B9A2 RID: 113058 RVA: 0x007945D5 File Offset: 0x007927D5
+	// Token: 0x06019527 RID: 103719 RVA: 0x007BCD01 File Offset: 0x007BAF01
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B9A3 RID: 113059 RVA: 0x007945D7 File Offset: 0x007927D7
+	// Token: 0x06019528 RID: 103720 RVA: 0x007BCD03 File Offset: 0x007BAF03
 	public static void ResetStaticDefaultValue()
 	{
 		NpcVehicleRiderController._Instance = null;
 	}
 
-	// Token: 0x0601B9A4 RID: 113060 RVA: 0x007945DF File Offset: 0x007927DF
+	// Token: 0x06019529 RID: 103721 RVA: 0x007BCD0B File Offset: 0x007BAF0B
 	static NpcVehicleRiderController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(NpcVehicleRiderController.CreateStaticDefaultValue), new Action(NpcVehicleRiderController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D8EE RID: 55534
+	// Token: 0x0400DD8C RID: 56716
 	private readonly Vector TmpNpcLocation = Vector.Create();
 
-	// Token: 0x0400D8EF RID: 55535
+	// Token: 0x0400DD8D RID: 56717
 	private readonly Vector TmpLocation1 = Vector.Create();
 
-	// Token: 0x0400D8F0 RID: 55536
+	// Token: 0x0400DD8E RID: 56718
 	private readonly Vector TmpLocation2 = Vector.Create();
 
-	// Token: 0x0400D8F1 RID: 55537
+	// Token: 0x0400DD8F RID: 56719
 	private readonly Rotator TmpRotator1 = Rotator.Create();
 
-	// Token: 0x0400D8F2 RID: 55538
+	// Token: 0x0400DD90 RID: 56720
 	private readonly Quat TmpQuat1 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D8F3 RID: 55539
+	// Token: 0x0400DD91 RID: 56721
 	private readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D8F4 RID: 55540
+	// Token: 0x0400DD92 RID: 56722
 	private readonly Quat TmpQuat3 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D8F5 RID: 55541
+	// Token: 0x0400DD93 RID: 56723
 	private readonly List<VehicleRideLocation> TmpTargetLocationList = new List<VehicleRideLocation>();
 
-	// Token: 0x0400D8F6 RID: 55542
+	// Token: 0x0400DD94 RID: 56724
 	private readonly List<int> TmpFreeVehicleList = new List<int>();
 
-	// Token: 0x0400D8F7 RID: 55543
+	// Token: 0x0400DD95 RID: 56725
 	private readonly List<Vector> TmpEnterPath = new List<Vector>();
 
-	// Token: 0x0400D8F8 RID: 55544
+	// Token: 0x0400DD96 RID: 56726
 	private readonly Transform TmpRouteTransform = Transform.Create();
 
-	// Token: 0x0400D8F9 RID: 55545
+	// Token: 0x0400DD97 RID: 56727
 	private readonly Vector TmpRouteCenter = Vector.Create();
 
-	// Token: 0x0400D8FA RID: 55546
+	// Token: 0x0400DD98 RID: 56728
 	private readonly Vector TmpRouteNpc = Vector.Create();
 
-	// Token: 0x0400D8FB RID: 55547
+	// Token: 0x0400DD99 RID: 56729
 	private readonly Vector TmpRouteNpcLocal = Vector.Create();
 
-	// Token: 0x0400D8FC RID: 55548
+	// Token: 0x0400DD9A RID: 56730
 	private readonly Vector TmpRouteCorner1 = Vector.Create();
 
-	// Token: 0x0400D8FD RID: 55549
+	// Token: 0x0400DD9B RID: 56731
 	private readonly Vector TmpRouteCorner2 = Vector.Create();
 
-	// Token: 0x0400D8FE RID: 55550
+	// Token: 0x0400DD9C RID: 56732
 	private readonly List<Vector> TmpRouteNavResult = new List<Vector>();
 
-	// Token: 0x0400D8FF RID: 55551
+	// Token: 0x0400DD9D RID: 56733
 	private readonly List<Vector> TmpReachableProbePath = new List<Vector>();
 
-	// Token: 0x0400D900 RID: 55552
+	// Token: 0x0400DD9E RID: 56734
 	private readonly VehicleEnterRouteContext TmpRouteContext = new VehicleEnterRouteContext();
 
-	// Token: 0x0400D901 RID: 55553
+	// Token: 0x0400DD9F RID: 56735
 	private readonly Dictionary<int, VehicleEnterRouteCache> EnterRouteCacheMap = new Dictionary<int, VehicleEnterRouteCache>();
 
-	// Token: 0x0400D902 RID: 55554
+	// Token: 0x0400DDA0 RID: 56736
 	private static readonly bool Debug = true;
 
-	// Token: 0x0400D903 RID: 55555
+	// Token: 0x0400DDA1 RID: 56737
 	public const string SearchedVehicleBlackboardKey = "SearchedRideableVehicleEntityId";
 
-	// Token: 0x0400D904 RID: 55556
+	// Token: 0x0400DDA2 RID: 56738
 	private readonly Dictionary<int, EnterVehicleStartTransform> EnterStartTransformMap = new Dictionary<int, EnterVehicleStartTransform>();
 
-	// Token: 0x0400D905 RID: 55557
+	// Token: 0x0400DDA3 RID: 56739
 	public const string EnterVehicleDirectionBlackboardKey = "NpcEnterVehicleDirection";
 
-	// Token: 0x0400D906 RID: 55558
+	// Token: 0x0400DDA4 RID: 56740
 	[Nullable(2)]
 	private static NpcVehicleRiderController _Instance;
 }

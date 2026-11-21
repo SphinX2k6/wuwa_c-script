@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016F4 RID: 5876
+	// Token: 0x02001870 RID: 6256
 	[EnumExtensions]
 	public enum EVehicleOption
 	{
-		// Token: 0x04004F87 RID: 20359
+		// Token: 0x040053B4 RID: 21428
 		EnterVehicle,
-		// Token: 0x04004F88 RID: 20360
+		// Token: 0x040053B5 RID: 21429
 		ExitVehicle,
-		// Token: 0x04004F89 RID: 20361
+		// Token: 0x040053B6 RID: 21430
 		GongduolaWaterfallClimbing
 	}
 }

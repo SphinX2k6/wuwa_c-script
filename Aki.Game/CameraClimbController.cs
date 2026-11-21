@@ -8,19 +8,19 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 
-// Token: 0x020001F3 RID: 499
+// Token: 0x020001F7 RID: 503
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x06001F73 RID: 8051 RVA: 0x0009E1EE File Offset: 0x0009C3EE
+	// Token: 0x06002022 RID: 8226 RVA: 0x000A55BA File Offset: 0x000A37BA
 	public override string Name()
 	{
 		return "ClimbController";
 	}
 
-	// Token: 0x06001F74 RID: 8052 RVA: 0x0009E1F8 File Offset: 0x0009C3F8
+	// Token: 0x06002023 RID: 8227 RVA: 0x000A55C4 File Offset: 0x000A37C4
 	protected override void OnInit()
 	{
 		base.SetConfigMap(EFightCameraClimb.退出攀爬淡出时间, "FadeOutDuration");
@@ -45,7 +45,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		base.SetConfigMap(EFightCameraClimb.停止输入延迟响应时间, "StartInputDelay");
 	}
 
-	// Token: 0x06001F75 RID: 8053 RVA: 0x0009E368 File Offset: 0x0009C568
+	// Token: 0x06002024 RID: 8228 RVA: 0x000A5734 File Offset: 0x000A3934
 	public CameraClimbController(FightCameraLogicComponent camera) : base(camera)
 	{
 		this.StateMachine = new StateMachine<CameraClimbController, CameraClimbController.ECameraState>(this, null);
@@ -58,7 +58,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		this.StateMachine.Start(CameraClimbController.ECameraState.Default);
 	}
 
-	// Token: 0x06001F76 RID: 8054 RVA: 0x0009E43C File Offset: 0x0009C63C
+	// Token: 0x06002025 RID: 8229 RVA: 0x000A5808 File Offset: 0x000A3A08
 	protected override void OnEnable()
 	{
 		EExitClimb exitClimbType = this.Camera.CharacterEntityHandle.Entity.GetComponent<CharacterClimbComponent>().GetExitClimbType();
@@ -80,7 +80,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		EventSystem.Instance.Add<int, EExitClimb>(EEventName.CharClimbStartExit, new Action<int, EExitClimb>(this.OnCharClimbStartExit));
 	}
 
-	// Token: 0x06001F77 RID: 8055 RVA: 0x0009E518 File Offset: 0x0009C718
+	// Token: 0x06002026 RID: 8230 RVA: 0x000A58E4 File Offset: 0x000A3AE4
 	protected override void OnDisable()
 	{
 		this.Camera.CameraAdjustController.Unlock(this);
@@ -92,13 +92,13 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06001F78 RID: 8056 RVA: 0x0009E58B File Offset: 0x0009C78B
+	// Token: 0x06002027 RID: 8231 RVA: 0x000A5957 File Offset: 0x000A3B57
 	protected override bool UpdateCustomEnableCondition()
 	{
 		return this.Camera.ContainsTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.攀爬"], false);
 	}
 
-	// Token: 0x06001F79 RID: 8057 RVA: 0x0009E5A8 File Offset: 0x0009C7A8
+	// Token: 0x06002028 RID: 8232 RVA: 0x000A5974 File Offset: 0x000A3B74
 	protected override void UpdateInternal(float deltaSeconds)
 	{
 		this.Camera.CharacterEntityHandle.Entity.GetComponent<CharacterInputComponent>().GetMoveVector(this.TmpVector);
@@ -128,7 +128,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		this.StateMachine.Update(deltaSeconds);
 	}
 
-	// Token: 0x06001F7A RID: 8058 RVA: 0x0009E760 File Offset: 0x0009C960
+	// Token: 0x06002029 RID: 8233 RVA: 0x000A5B2C File Offset: 0x000A3D2C
 	private bool CheckStateMayChange(Vector inputDirect)
 	{
 		bool flag = inputDirect.X != 0.0 || inputDirect.Y != 0.0;
@@ -162,7 +162,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		return true;
 	}
 
-	// Token: 0x06001F7B RID: 8059 RVA: 0x0009E8E0 File Offset: 0x0009CAE0
+	// Token: 0x0600202A RID: 8234 RVA: 0x000A5CAC File Offset: 0x000A3EAC
 	public void UpdateInterp(float deltaTime, float interpSpeed, Vector moveDirection)
 	{
 		CameraUtility.GetVectorInGravity(this.Camera.Character.CharacterActorComponent.ActorForwardProxy, this.ActorForwardInGravity);
@@ -210,7 +210,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		this.Camera.IsModifiedArmRotationYaw = true;
 	}
 
-	// Token: 0x06001F7C RID: 8060 RVA: 0x0009EBC8 File Offset: 0x0009CDC8
+	// Token: 0x0600202B RID: 8235 RVA: 0x000A5F94 File Offset: 0x000A4194
 	public void OnCharClimbStartExit(int charId, EExitClimb exitClimbType)
 	{
 		if (this.Camera.CharacterEntityHandle.Id == charId && this.CheckReachThePeak(exitClimbType))
@@ -227,19 +227,19 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06001F7D RID: 8061 RVA: 0x0009EC38 File Offset: 0x0009CE38
+	// Token: 0x0600202C RID: 8236 RVA: 0x000A6004 File Offset: 0x000A4204
 	private bool CheckReachThePeak(EExitClimb exitClimbType)
 	{
 		return exitClimbType == EExitClimb.到顶退出 || exitClimbType - EExitClimb.地面登上 <= 2;
 	}
 
-	// Token: 0x06001F7E RID: 8062 RVA: 0x0009EC56 File Offset: 0x0009CE56
+	// Token: 0x0600202D RID: 8237 RVA: 0x000A6022 File Offset: 0x000A4222
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x06001F7F RID: 8063 RVA: 0x0009EC60 File Offset: 0x0009CE60
+	// Token: 0x0600202E RID: 8238 RVA: 0x000A602C File Offset: 0x000A422C
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -552,7 +552,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x06001F80 RID: 8064 RVA: 0x0009F290 File Offset: 0x0009D490
+	// Token: 0x0600202F RID: 8239 RVA: 0x000A665C File Offset: 0x000A485C
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -1367,7 +1367,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x06001F81 RID: 8065 RVA: 0x000A0098 File Offset: 0x0009E298
+	// Token: 0x06002030 RID: 8240 RVA: 0x000A7464 File Offset: 0x000A5664
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -1376,124 +1376,124 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x0400132D RID: 4909
+	// Token: 0x04001370 RID: 4976
 	public const bool IsDebug = false;
 
-	// Token: 0x0400132E RID: 4910
+	// Token: 0x04001371 RID: 4977
 	public float FadeOutDuration;
 
-	// Token: 0x0400132F RID: 4911
+	// Token: 0x04001372 RID: 4978
 	public float PrepTime;
 
-	// Token: 0x04001330 RID: 4912
+	// Token: 0x04001373 RID: 4979
 	public float MoveDelayTime;
 
-	// Token: 0x04001331 RID: 4913
+	// Token: 0x04001374 RID: 4980
 	public float DefaultInterpSpeed;
 
-	// Token: 0x04001332 RID: 4914
+	// Token: 0x04001375 RID: 4981
 	public float ReferToMoveSpeed;
 
-	// Token: 0x04001333 RID: 4915
+	// Token: 0x04001376 RID: 4982
 	public float AdditionalArmLength;
 
-	// Token: 0x04001334 RID: 4916
+	// Token: 0x04001377 RID: 4983
 	public float FadeInCenterTime;
 
-	// Token: 0x04001335 RID: 4917
+	// Token: 0x04001378 RID: 4984
 	public float CenterStateBlendInExp;
 
-	// Token: 0x04001336 RID: 4918
+	// Token: 0x04001379 RID: 4985
 	public float DefaultArmLength;
 
-	// Token: 0x04001337 RID: 4919
+	// Token: 0x0400137A RID: 4986
 	public float ArmLengthSpeed;
 
-	// Token: 0x04001338 RID: 4920
+	// Token: 0x0400137B RID: 4987
 	public float DesiredAngle;
 
-	// Token: 0x04001339 RID: 4921
+	// Token: 0x0400137C RID: 4988
 	public float PitchUpRate;
 
-	// Token: 0x0400133A RID: 4922
+	// Token: 0x0400137D RID: 4989
 	public float PitchDownRate;
 
-	// Token: 0x0400133B RID: 4923
+	// Token: 0x0400137E RID: 4990
 	public float ApplicableAngleWithCharacter;
 
-	// Token: 0x0400133C RID: 4924
+	// Token: 0x0400137F RID: 4991
 	public float StopInputDelay;
 
-	// Token: 0x0400133D RID: 4925
+	// Token: 0x04001380 RID: 4992
 	public float ReachThePeakSpeed;
 
-	// Token: 0x0400133E RID: 4926
+	// Token: 0x04001381 RID: 4993
 	public float ReachThePeakPitch;
 
-	// Token: 0x0400133F RID: 4927
+	// Token: 0x04001382 RID: 4994
 	public float LargeAngleTurnThreshold;
 
-	// Token: 0x04001340 RID: 4928
+	// Token: 0x04001383 RID: 4995
 	public float LargeAngleTurnDelay;
 
-	// Token: 0x04001341 RID: 4929
+	// Token: 0x04001384 RID: 4996
 	public float StartInputDelay;
 
-	// Token: 0x04001342 RID: 4930
+	// Token: 0x04001385 RID: 4997
 	public float ElapseTimeScale = 1f;
 
-	// Token: 0x04001343 RID: 4931
+	// Token: 0x04001386 RID: 4998
 	public bool IsMoving;
 
-	// Token: 0x04001344 RID: 4932
+	// Token: 0x04001387 RID: 4999
 	private readonly Vector LastValidInput = Vector.Create();
 
-	// Token: 0x04001345 RID: 4933
+	// Token: 0x04001388 RID: 5000
 	private float NextChangeInputTime;
 
-	// Token: 0x04001346 RID: 4934
+	// Token: 0x04001389 RID: 5001
 	private float NextStopTime;
 
-	// Token: 0x04001347 RID: 4935
+	// Token: 0x0400138A RID: 5002
 	public readonly Vector MoveDirection = Vector.Create();
 
-	// Token: 0x04001348 RID: 4936
+	// Token: 0x0400138B RID: 5003
 	private readonly StateMachine<CameraClimbController, CameraClimbController.ECameraState> StateMachine;
 
-	// Token: 0x04001349 RID: 4937
+	// Token: 0x0400138C RID: 5004
 	private readonly Vector ActorForwardInGravity = Vector.Create();
 
-	// Token: 0x0400134A RID: 4938
+	// Token: 0x0400138D RID: 5005
 	private readonly Vector MoveDirectionInGravity = Vector.Create();
 
-	// Token: 0x0400134B RID: 4939
+	// Token: 0x0400138E RID: 5006
 	private readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400134C RID: 4940
+	// Token: 0x0400138F RID: 5007
 	private readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x0400134D RID: 4941
+	// Token: 0x04001390 RID: 5008
 	private readonly Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x02007418 RID: 29720
+	// Token: 0x020065A9 RID: 26025
 	[NullableContext(0)]
 	public enum ECameraState
 	{
-		// Token: 0x04026783 RID: 157571
+		// Token: 0x04021AC1 RID: 137921
 		Default,
-		// Token: 0x04026784 RID: 157572
+		// Token: 0x04021AC2 RID: 137922
 		Center,
-		// Token: 0x04026785 RID: 157573
+		// Token: 0x04021AC3 RID: 137923
 		Ready,
-		// Token: 0x04026786 RID: 157574
+		// Token: 0x04021AC4 RID: 137924
 		Adjust,
-		// Token: 0x04026787 RID: 157575
+		// Token: 0x04021AC5 RID: 137925
 		FadeOut,
-		// Token: 0x04026788 RID: 157576
+		// Token: 0x04021AC6 RID: 137926
 		ReachThePeak
 	}
 
-	// Token: 0x02007419 RID: 29721
+	// Token: 0x020065AA RID: 26026
 	[Nullable(new byte[]
 	{
 		0,
@@ -1501,7 +1501,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 	})]
 	public class DefaultState : StateBase<CameraClimbController, CameraClimbController.ECameraState>
 	{
-		// Token: 0x0604878F RID: 296847 RVA: 0x012A3897 File Offset: 0x012A1A97
+		// Token: 0x0603EBEC RID: 257004 RVA: 0x01246B4B File Offset: 0x01244D4B
 		public DefaultState(CameraClimbController owner, CameraClimbController.ECameraState state, [Nullable(new byte[]
 		{
 			2,
@@ -1510,13 +1510,13 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		{
 		}
 
-		// Token: 0x06048790 RID: 296848 RVA: 0x012A38A2 File Offset: 0x012A1AA2
+		// Token: 0x0603EBED RID: 257005 RVA: 0x01246B56 File Offset: 0x01244D56
 		protected override void OnEnter(CameraClimbController.ECameraState? stat)
 		{
 			this.ElapseTime = 0f;
 		}
 
-		// Token: 0x06048791 RID: 296849 RVA: 0x012A38AF File Offset: 0x012A1AAF
+		// Token: 0x0603EBEE RID: 257006 RVA: 0x01246B63 File Offset: 0x01244D63
 		protected override void OnUpdate(float delta)
 		{
 			this.ElapseTime += delta * this.Owner.ElapseTimeScale;
@@ -1526,11 +1526,11 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 			}
 		}
 
-		// Token: 0x04026789 RID: 157577
+		// Token: 0x04021AC7 RID: 137927
 		private float ElapseTime;
 	}
 
-	// Token: 0x0200741A RID: 29722
+	// Token: 0x020065AB RID: 26027
 	[Nullable(new byte[]
 	{
 		0,
@@ -1538,7 +1538,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 	})]
 	public class CenterState : StateBase<CameraClimbController, CameraClimbController.ECameraState>
 	{
-		// Token: 0x06048792 RID: 296850 RVA: 0x012A38EB File Offset: 0x012A1AEB
+		// Token: 0x0603EBEF RID: 257007 RVA: 0x01246B9F File Offset: 0x01244D9F
 		public CenterState(CameraClimbController owner, CameraClimbController.ECameraState state, [Nullable(new byte[]
 		{
 			2,
@@ -1547,19 +1547,19 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		{
 		}
 
-		// Token: 0x06048793 RID: 296851 RVA: 0x012A3917 File Offset: 0x012A1B17
+		// Token: 0x0603EBF0 RID: 257008 RVA: 0x01246BCB File Offset: 0x01244DCB
 		public override bool CanReEnter()
 		{
 			return true;
 		}
 
-		// Token: 0x06048794 RID: 296852 RVA: 0x012A391C File Offset: 0x012A1B1C
+		// Token: 0x0603EBF1 RID: 257009 RVA: 0x01246BD0 File Offset: 0x01244DD0
 		protected override void OnReEnter()
 		{
 			this.OnEnter(null);
 		}
 
-		// Token: 0x06048795 RID: 296853 RVA: 0x012A3938 File Offset: 0x012A1B38
+		// Token: 0x0603EBF2 RID: 257010 RVA: 0x01246BEC File Offset: 0x01244DEC
 		protected override void OnEnter(CameraClimbController.ECameraState? state)
 		{
 			if (this.Owner.Camera.IsInNormalGravityMode())
@@ -1575,7 +1575,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 			this.ElapseTime = 0f;
 		}
 
-		// Token: 0x06048796 RID: 296854 RVA: 0x012A39DC File Offset: 0x012A1BDC
+		// Token: 0x0603EBF3 RID: 257011 RVA: 0x01246C90 File Offset: 0x01244E90
 		protected override void OnUpdate(float delta)
 		{
 			if (this.Owner.Camera.IsModifiedArmRotationPitch || this.Owner.Camera.IsModifiedArmRotationYaw)
@@ -1606,20 +1606,20 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 			}
 		}
 
-		// Token: 0x0402678A RID: 157578
+		// Token: 0x04021AC8 RID: 137928
 		private readonly Rotator StartRotator = Rotator.Create();
 
-		// Token: 0x0402678B RID: 157579
+		// Token: 0x04021AC9 RID: 137929
 		private readonly Rotator DesiredRotator = Rotator.Create();
 
-		// Token: 0x0402678C RID: 157580
+		// Token: 0x04021ACA RID: 137930
 		private float ElapseTime;
 
-		// Token: 0x0402678D RID: 157581
+		// Token: 0x04021ACB RID: 137931
 		private readonly Rotator TmpRotator = Rotator.Create();
 	}
 
-	// Token: 0x0200741B RID: 29723
+	// Token: 0x020065AC RID: 26028
 	[Nullable(new byte[]
 	{
 		0,
@@ -1627,7 +1627,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 	})]
 	public class ReadyState : StateBase<CameraClimbController, CameraClimbController.ECameraState>
 	{
-		// Token: 0x06048797 RID: 296855 RVA: 0x012A3B79 File Offset: 0x012A1D79
+		// Token: 0x0603EBF4 RID: 257012 RVA: 0x01246E2D File Offset: 0x0124502D
 		public ReadyState(CameraClimbController owner, CameraClimbController.ECameraState state, [Nullable(new byte[]
 		{
 			2,
@@ -1636,13 +1636,13 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		{
 		}
 
-		// Token: 0x06048798 RID: 296856 RVA: 0x012A3B84 File Offset: 0x012A1D84
+		// Token: 0x0603EBF5 RID: 257013 RVA: 0x01246E38 File Offset: 0x01245038
 		protected override void OnEnter(CameraClimbController.ECameraState? lastState)
 		{
 			this.ElapseTime = 0f;
 		}
 
-		// Token: 0x06048799 RID: 296857 RVA: 0x012A3B94 File Offset: 0x012A1D94
+		// Token: 0x0603EBF6 RID: 257014 RVA: 0x01246E48 File Offset: 0x01245048
 		protected override void OnUpdate(float delta)
 		{
 			if (this.Owner.Camera.IsModifiedArmRotationPitch || this.Owner.Camera.IsModifiedArmRotationYaw)
@@ -1662,11 +1662,11 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 			}
 		}
 
-		// Token: 0x0402678E RID: 157582
+		// Token: 0x04021ACC RID: 137932
 		private float ElapseTime;
 	}
 
-	// Token: 0x0200741C RID: 29724
+	// Token: 0x020065AD RID: 26029
 	[Nullable(new byte[]
 	{
 		0,
@@ -1674,7 +1674,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 	})]
 	public class AdjustState : StateBase<CameraClimbController, CameraClimbController.ECameraState>
 	{
-		// Token: 0x0604879A RID: 296858 RVA: 0x012A3C26 File Offset: 0x012A1E26
+		// Token: 0x0603EBF7 RID: 257015 RVA: 0x01246EDA File Offset: 0x012450DA
 		public AdjustState(CameraClimbController owner, CameraClimbController.ECameraState state, [Nullable(new byte[]
 		{
 			2,
@@ -1683,13 +1683,13 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		{
 		}
 
-		// Token: 0x0604879B RID: 296859 RVA: 0x012A3C47 File Offset: 0x012A1E47
+		// Token: 0x0603EBF8 RID: 257016 RVA: 0x01246EFB File Offset: 0x012450FB
 		protected override void OnEnter(CameraClimbController.ECameraState? lastState)
 		{
 			this.Applicable = false;
 		}
 
-		// Token: 0x0604879C RID: 296860 RVA: 0x012A3C50 File Offset: 0x012A1E50
+		// Token: 0x0603EBF9 RID: 257017 RVA: 0x01246F04 File Offset: 0x01245104
 		protected override void OnUpdate(float delta)
 		{
 			if (this.Owner.Camera.IsModifiedArmRotationPitch || this.Owner.Camera.IsModifiedArmRotationYaw)
@@ -1750,17 +1750,17 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 			}
 		}
 
-		// Token: 0x0402678F RID: 157583
+		// Token: 0x04021ACD RID: 137933
 		private bool Applicable;
 
-		// Token: 0x04026790 RID: 157584
+		// Token: 0x04021ACE RID: 137934
 		private readonly Vector PlayerFacing = Vector.Create();
 
-		// Token: 0x04026791 RID: 157585
+		// Token: 0x04021ACF RID: 137935
 		private readonly Vector CameraFacing = Vector.Create();
 	}
 
-	// Token: 0x0200741D RID: 29725
+	// Token: 0x020065AE RID: 26030
 	[Nullable(new byte[]
 	{
 		0,
@@ -1768,7 +1768,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 	})]
 	public class FadeOutState : StateBase<CameraClimbController, CameraClimbController.ECameraState>
 	{
-		// Token: 0x0604879D RID: 296861 RVA: 0x012A3F16 File Offset: 0x012A2116
+		// Token: 0x0603EBFA RID: 257018 RVA: 0x012471CA File Offset: 0x012453CA
 		public FadeOutState(CameraClimbController owner, CameraClimbController.ECameraState state, [Nullable(new byte[]
 		{
 			2,
@@ -1777,13 +1777,13 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		{
 		}
 
-		// Token: 0x0604879E RID: 296862 RVA: 0x012A3F21 File Offset: 0x012A2121
+		// Token: 0x0603EBFB RID: 257019 RVA: 0x012471D5 File Offset: 0x012453D5
 		protected override void OnEnter(CameraClimbController.ECameraState? state)
 		{
 			this.ElapseTime = 0f;
 		}
 
-		// Token: 0x0604879F RID: 296863 RVA: 0x012A3F30 File Offset: 0x012A2130
+		// Token: 0x0603EBFC RID: 257020 RVA: 0x012471E4 File Offset: 0x012453E4
 		protected override void OnUpdate(float delta)
 		{
 			if (this.Owner.Camera.IsModifiedArmRotationPitch || this.Owner.Camera.IsModifiedArmRotationYaw)
@@ -1806,11 +1806,11 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 			this.Owner.UpdateInterp(delta, interpSpeed, this.Owner.MoveDirection);
 		}
 
-		// Token: 0x04026792 RID: 157586
+		// Token: 0x04021AD0 RID: 137936
 		private float ElapseTime;
 	}
 
-	// Token: 0x0200741E RID: 29726
+	// Token: 0x020065AF RID: 26031
 	[Nullable(new byte[]
 	{
 		0,
@@ -1818,7 +1818,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 	})]
 	public class ReachThePeakState : StateBase<CameraClimbController, CameraClimbController.ECameraState>
 	{
-		// Token: 0x060487A0 RID: 296864 RVA: 0x012A4002 File Offset: 0x012A2202
+		// Token: 0x0603EBFD RID: 257021 RVA: 0x012472B6 File Offset: 0x012454B6
 		public ReachThePeakState(CameraClimbController owner, CameraClimbController.ECameraState state, [Nullable(new byte[]
 		{
 			2,
@@ -1827,7 +1827,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 		{
 		}
 
-		// Token: 0x060487A1 RID: 296865 RVA: 0x012A4024 File Offset: 0x012A2224
+		// Token: 0x0603EBFE RID: 257022 RVA: 0x012472D8 File Offset: 0x012454D8
 		protected override void OnEnter(CameraClimbController.ECameraState? state)
 		{
 			this.TargetRotator.DeepCopy(this.Owner.Camera.PlayerRotator);
@@ -1835,7 +1835,7 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 			this.TargetRotator.Vector(this.TargetLookAt);
 		}
 
-		// Token: 0x060487A2 RID: 296866 RVA: 0x012A4074 File Offset: 0x012A2274
+		// Token: 0x0603EBFF RID: 257023 RVA: 0x01247328 File Offset: 0x01245528
 		protected override void OnUpdate(float delta)
 		{
 			if (this.Owner.Camera.IsModifiedArmRotationPitch || this.Owner.Camera.IsModifiedArmRotationYaw)
@@ -1846,10 +1846,10 @@ public class CameraClimbController : CameraControllerBase, ICanGetConfigMapValue
 			this.Owner.UpdateInterp(delta, this.Owner.ReachThePeakSpeed, this.TargetLookAt);
 		}
 
-		// Token: 0x04026793 RID: 157587
+		// Token: 0x04021AD1 RID: 137937
 		private readonly Vector TargetLookAt = Vector.Create();
 
-		// Token: 0x04026794 RID: 157588
+		// Token: 0x04021AD2 RID: 137938
 		private readonly Rotator TargetRotator = Rotator.Create();
 	}
 }

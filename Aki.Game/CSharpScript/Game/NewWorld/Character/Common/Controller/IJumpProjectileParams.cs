@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 {
-	// Token: 0x020070B3 RID: 28851
+	// Token: 0x02006312 RID: 25362
 	public interface IJumpProjectileParams
 	{
-		// Token: 0x17009C5A RID: 40026
-		// (get) Token: 0x0604656B RID: 288107
-		// (set) Token: 0x0604656C RID: 288108
+		// Token: 0x1700744E RID: 29774
+		// (get) Token: 0x0603D615 RID: 251413
+		// (set) Token: 0x0603D616 RID: 251414
 		float Length { get; set; }
 
-		// Token: 0x17009C5B RID: 40027
-		// (get) Token: 0x0604656D RID: 288109
-		// (set) Token: 0x0604656E RID: 288110
+		// Token: 0x1700744F RID: 29775
+		// (get) Token: 0x0603D617 RID: 251415
+		// (set) Token: 0x0603D618 RID: 251416
 		float AllTime { get; set; }
 
-		// Token: 0x17009C5C RID: 40028
-		// (get) Token: 0x0604656F RID: 288111
-		// (set) Token: 0x06046570 RID: 288112
+		// Token: 0x17007450 RID: 29776
+		// (get) Token: 0x0603D619 RID: 251417
+		// (set) Token: 0x0603D61A RID: 251418
 		float Height0 { get; set; }
 
-		// Token: 0x17009C5D RID: 40029
-		// (get) Token: 0x06046571 RID: 288113
-		// (set) Token: 0x06046572 RID: 288114
+		// Token: 0x17007451 RID: 29777
+		// (get) Token: 0x0603D61B RID: 251419
+		// (set) Token: 0x0603D61C RID: 251420
 		float ProjectileA { get; set; }
 
-		// Token: 0x17009C5E RID: 40030
-		// (get) Token: 0x06046573 RID: 288115
-		// (set) Token: 0x06046574 RID: 288116
+		// Token: 0x17007452 RID: 29778
+		// (get) Token: 0x0603D61D RID: 251421
+		// (set) Token: 0x0603D61E RID: 251422
 		float ProjectileB { get; set; }
 	}
 }

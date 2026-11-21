@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011D6 RID: 4566
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001312 RID: 4882
 	public class ITrapDefenseConditionStepReward : ITrapDefenseConditionStepBase
 	{
-		// Token: 0x060067BE RID: 26558 RVA: 0x000F830C File Offset: 0x000F650C
+		// Token: 0x06006DFF RID: 28159 RVA: 0x00105C18 File Offset: 0x00103E18
 		private ITrapDefenseConditionStepReward_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060067BF RID: 26559 RVA: 0x000F8344 File Offset: 0x000F6544
+		// Token: 0x06006E00 RID: 28160 RVA: 0x00105C50 File Offset: 0x00103E50
 		public static ITrapDefenseConditionStepReward Create([Nullable(2)] ITrapDefenseConditionStepReward instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067C0 RID: 26560 RVA: 0x000F8357 File Offset: 0x000F6557
+		// Token: 0x06006E01 RID: 28161 RVA: 0x00105C63 File Offset: 0x00103E63
 		public static ITrapDefenseConditionStepReward CreateFromSetValue([Nullable(2)] ITrapDefenseConditionStepReward_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067C1 RID: 26561 RVA: 0x000F836A File Offset: 0x000F656A
+		// Token: 0x06006E02 RID: 28162 RVA: 0x00105C76 File Offset: 0x00103E76
 		public new ITrapDefenseConditionStepReward_SetValue ToSetValue()
 		{
 			return new ITrapDefenseConditionStepReward_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021A3 RID: 8611
-		// (get) Token: 0x060067C2 RID: 26562 RVA: 0x000F837D File Offset: 0x000F657D
-		// (set) Token: 0x060067C3 RID: 26563 RVA: 0x000F83A8 File Offset: 0x000F65A8
+		// Token: 0x17002364 RID: 9060
+		// (get) Token: 0x06006E03 RID: 28163 RVA: 0x00105C89 File Offset: 0x00103E89
+		// (set) Token: 0x06006E04 RID: 28164 RVA: 0x00105CB4 File Offset: 0x00103EB4
 		public override ETrapDefenseConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E3A RID: 15930
+		// Token: 0x040041A8 RID: 16808
 		[Nullable(2)]
 		protected new ITrapDefenseConditionStepReward FbInstance;
 
-		// Token: 0x04003E3B RID: 15931
+		// Token: 0x040041A9 RID: 16809
 		[Nullable(2)]
 		protected new ITrapDefenseConditionStepReward_SetValue PocoInterface;
 	}

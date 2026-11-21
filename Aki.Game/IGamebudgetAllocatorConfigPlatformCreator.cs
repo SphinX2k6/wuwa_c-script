@@ -1,97 +1,100 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003501 RID: 13569
+// Token: 0x02002A76 RID: 10870
 [NullableContext(1)]
 public interface IGamebudgetAllocatorConfigPlatformCreator
 {
-	// Token: 0x0601DBF7 RID: 121847
+	// Token: 0x0601B90E RID: 112910
 	GameBudgetAllocatorConfig CreateNormalEntityConfig();
 
-	// Token: 0x0601DBF8 RID: 121848
+	// Token: 0x0601B90F RID: 112911
 	GameBudgetAllocatorConfig CreateBossEntityConfig();
 
-	// Token: 0x0601DBF9 RID: 121849
+	// Token: 0x0601B910 RID: 112912
 	GameBudgetAllocatorConfig CreateCharacterEntityConfig();
 
-	// Token: 0x0601DBFA RID: 121850
+	// Token: 0x0601B911 RID: 112913
 	GameBudgetAllocatorConfig CreateNormalNpcEntityConfig();
 
-	// Token: 0x0601DBFB RID: 121851
+	// Token: 0x0601B912 RID: 112914
 	GameBudgetAllocatorConfig CreateSimpleNpcEntityConfig();
 
-	// Token: 0x0601DBFC RID: 121852
+	// Token: 0x0601B913 RID: 112915
 	TsGameBudgetAllocatorTickIntervalDetailConfig CreateFightEffectConfig();
 
-	// Token: 0x0601DBFD RID: 121853
+	// Token: 0x0601B914 RID: 112916
 	GameBudgetAllocatorConfig CreateEffectConfig();
 
-	// Token: 0x0601DBFE RID: 121854
+	// Token: 0x0601B915 RID: 112917
 	GameBudgetAllocatorConfig CreateEffectImportanceConfig();
 
-	// Token: 0x0601DBFF RID: 121855
+	// Token: 0x0601B916 RID: 112918
 	GameBudgetAllocatorConfig CreateStabilizeLowEntityConfig();
 
-	// Token: 0x0601DC00 RID: 121856
+	// Token: 0x0601B917 RID: 112919
 	GameBudgetAllocatorConfig CreateAlwaysTickHotfixConfig();
 
-	// Token: 0x0601DC01 RID: 121857
+	// Token: 0x0601B918 RID: 112920
 	GameBudgetAllocatorConfig CreateMoveSceneItemEntityConfig();
 
-	// Token: 0x0601DC02 RID: 121858
+	// Token: 0x0601B919 RID: 112921
 	TsGameBudgetAllocatorTickIntervalDetailConfig CreatePlayerAlwaysTickConfig();
 
-	// Token: 0x0601DC03 RID: 121859
+	// Token: 0x0601B91A RID: 112922
 	GameBudgetAllocatorConfig CreateNormalEntityAlwaysTickConfig();
 
-	// Token: 0x0601DC04 RID: 121860
+	// Token: 0x0601B91B RID: 112923
 	GameBudgetAllocatorConfig CreateNormalEntityAlwaysTickWithoutNotRenderedConfig();
 
-	// Token: 0x0601DC05 RID: 121861
+	// Token: 0x0601B91C RID: 112924
 	TsGameBudgetAllocatorTickIntervalDetailConfig CreateAlwaysTickConfig();
 
-	// Token: 0x0601DC06 RID: 121862
+	// Token: 0x0601B91D RID: 112925
 	TsGameBudgetAllocatorTickIntervalDetailConfig CreateCameraAlwaysTickConfig();
 
-	// Token: 0x0601DC07 RID: 121863
+	// Token: 0x0601B91E RID: 112926
 	TsGameBudgetAllocatorTickIntervalDetailConfig CreateIdleExecConfig();
 
-	// Token: 0x0601DC08 RID: 121864
+	// Token: 0x0601B91F RID: 112927
 	TsGameBudgetAllocatorTickIntervalDetailConfig CreateHUDTickConfig();
 
-	// Token: 0x0601DC09 RID: 121865
+	// Token: 0x0601B920 RID: 112928
 	GameBudgetAllocatorConfig CreateCharacterRenderConfig();
 
-	// Token: 0x0601DC0A RID: 121866
+	// Token: 0x0601B921 RID: 112929
 	GameBudgetAllocatorConfig CreateNpcRenderConfig();
 
-	// Token: 0x0601DC0B RID: 121867
+	// Token: 0x0601B922 RID: 112930
 	TsGameBudgetAllocatorTickIntervalDetailConfig CreateBattleHeadViewConfig();
 
-	// Token: 0x0601DC0C RID: 121868
+	// Token: 0x0601B923 RID: 112931
 	GameBudgetAllocatorConfig CreateCollisionPlantConfig();
 
-	// Token: 0x0601DC0D RID: 121869
+	// Token: 0x0601B924 RID: 112932
 	TsGameBudgetAllocatorTickIntervalDetailConfig CreateBlueprintSingletonConfig();
 
-	// Token: 0x0601DC0E RID: 121870
+	// Token: 0x0601B925 RID: 112933
 	GameBudgetAllocatorConfig CreateSceneBlueprintActorConfig();
 
-	// Token: 0x0601DC0F RID: 121871
+	// Token: 0x0601B926 RID: 112934
 	GameBudgetAllocatorConfig CreateFarBlueprintActorConfig();
 
-	// Token: 0x0601DC10 RID: 121872
+	// Token: 0x0601B927 RID: 112935
 	GameBudgetAllocatorConfig CreateSuperFarBlueprintActorConfig();
 
-	// Token: 0x0601DC11 RID: 121873
+	// Token: 0x0601B928 RID: 112936
 	GameBudgetAllocatorConfig CreateDynamicPhysicsInteractionActorConfig();
 
-	// Token: 0x0601DC12 RID: 121874
+	// Token: 0x0601B929 RID: 112937
 	GameBudgetAllocatorConfig CreateStaticPhysicsInteractionActorConfig();
 
-	// Token: 0x0601DC13 RID: 121875
+	// Token: 0x0601B92A RID: 112938
 	GameBudgetAllocatorConfig CreateHighPriorityPhysicsInteractionActorConfig();
 
-	// Token: 0x0601DC14 RID: 121876
+	// Token: 0x0601B92B RID: 112939
 	GameBudgetAllocatorConfig CreateSpecialBlueprintActorConfig();
+
+	// Token: 0x0601B92C RID: 112940
+	GameBudgetAllocatorConfig CreateScreenDecalActorConfig();
 }

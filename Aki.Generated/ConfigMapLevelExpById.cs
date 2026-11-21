@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000514 RID: 1300
+	// Token: 0x0200052A RID: 1322
 	public class ConfigMapLevelExpById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E83 RID: 7811 RVA: 0x00105A5F File Offset: 0x00103C5F
+		// Token: 0x06001F07 RID: 7943 RVA: 0x0010C1B3 File Offset: 0x0010A3B3
 		static ConfigMapLevelExpById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMapLevelExpById.CreateStaticDefaultValue), new Action(ConfigMapLevelExpById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E84 RID: 7812 RVA: 0x00105A80 File Offset: 0x00103C80
+		// Token: 0x06001F08 RID: 7944 RVA: 0x0010C1D4 File Offset: 0x0010A3D4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMapLevelExpById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E85 RID: 7813 RVA: 0x00105AFF File Offset: 0x00103CFF
+		// Token: 0x06001F09 RID: 7945 RVA: 0x0010C253 File Offset: 0x0010A453
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMapLevelExpById.LogPair = null;
 			ConfigMapLevelExpById.HandleId = 0;
 		}
 
-		// Token: 0x06001E86 RID: 7814 RVA: 0x00105B0D File Offset: 0x00103D0D
+		// Token: 0x06001F0A RID: 7946 RVA: 0x0010C261 File Offset: 0x0010A461
 		public static void Init()
 		{
 			ConfigMapLevelExpById.HandleId = ConfigCommon.InitDataStatement(ConfigMapLevelExpById.HandleId, "db_activitymaptravel.db", "select BinData from `MapLevelExp` where Id=?");
 		}
 
-		// Token: 0x06001E87 RID: 7815 RVA: 0x00105B28 File Offset: 0x00103D28
+		// Token: 0x06001F0B RID: 7947 RVA: 0x0010C27C File Offset: 0x0010A47C
 		public static MapLevelExp? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMapLevelExpById.HandleId, ConfigMapLevelExpById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MapLevelExp?(rootAsMapLevelExp);
 		}
 
-		// Token: 0x04002370 RID: 9072
+		// Token: 0x0400240A RID: 9226
 		private const string DB = "db_activitymaptravel.db";
 
-		// Token: 0x04002371 RID: 9073
+		// Token: 0x0400240B RID: 9227
 		private const string FILE = "d.地图主题活动.xlsx";
 
-		// Token: 0x04002372 RID: 9074
+		// Token: 0x0400240C RID: 9228
 		private const string TABLE = "MapLevelExp";
 
-		// Token: 0x04002373 RID: 9075
+		// Token: 0x0400240D RID: 9229
 		private const string COMMAND = "select BinData from `MapLevelExp` where Id=?";
 
-		// Token: 0x04002374 RID: 9076
+		// Token: 0x0400240E RID: 9230
 		private const string KEY_PREFIX = "MapLevelExpById";
 
-		// Token: 0x04002375 RID: 9077
+		// Token: 0x0400240F RID: 9231
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002376 RID: 9078
+		// Token: 0x04002410 RID: 9232
 		private static int HandleId;
 	}
 }

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000979 RID: 2425
+	// Token: 0x02000968 RID: 2408
 	[NetMessage(EMessageId.MailFavoriteRequest)]
 	public sealed class MailFavoriteRequest : IMessage<MailFavoriteRequest>, IMessage, IEquatable<MailFavoriteRequest>, IDeepCloneable<MailFavoriteRequest>, IBufferMessage
 	{
-		// Token: 0x0600D554 RID: 54612 RVA: 0x001F626B File Offset: 0x001F446B
+		// Token: 0x0600D43A RID: 54330 RVA: 0x001F4083 File Offset: 0x001F2283
 		[NullableContext(1)]
 		public static MailFavoriteRequest Create()
 		{
 			return new MailFavoriteRequest();
 		}
 
-		// Token: 0x17002B2E RID: 11054
-		// (get) Token: 0x0600D555 RID: 54613 RVA: 0x001F6272 File Offset: 0x001F4472
+		// Token: 0x17002AF0 RID: 10992
+		// (get) Token: 0x0600D43B RID: 54331 RVA: 0x001F408A File Offset: 0x001F228A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002B2F RID: 11055
-		// (get) Token: 0x0600D556 RID: 54614 RVA: 0x001F6275 File Offset: 0x001F4475
+		// Token: 0x17002AF1 RID: 10993
+		// (get) Token: 0x0600D43C RID: 54332 RVA: 0x001F408D File Offset: 0x001F228D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D557 RID: 54615 RVA: 0x001F627C File Offset: 0x001F447C
+		// Token: 0x0600D43D RID: 54333 RVA: 0x001F4094 File Offset: 0x001F2294
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailFavoriteRequest()
 		{
 		}
 
-		// Token: 0x0600D558 RID: 54616 RVA: 0x001F628F File Offset: 0x001F448F
+		// Token: 0x0600D43E RID: 54334 RVA: 0x001F40A7 File Offset: 0x001F22A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailFavoriteRequest(MailFavoriteRequest other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D559 RID: 54617 RVA: 0x001F62C0 File Offset: 0x001F44C0
+		// Token: 0x0600D43F RID: 54335 RVA: 0x001F40D8 File Offset: 0x001F22D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailFavoriteRequest Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new MailFavoriteRequest(this);
 		}
 
-		// Token: 0x17002B30 RID: 11056
-		// (get) Token: 0x0600D55A RID: 54618 RVA: 0x001F62C8 File Offset: 0x001F44C8
-		// (set) Token: 0x0600D55B RID: 54619 RVA: 0x001F62D0 File Offset: 0x001F44D0
+		// Token: 0x17002AF2 RID: 10994
+		// (get) Token: 0x0600D440 RID: 54336 RVA: 0x001F40E0 File Offset: 0x001F22E0
+		// (set) Token: 0x0600D441 RID: 54337 RVA: 0x001F40E8 File Offset: 0x001F22E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string Id
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002B31 RID: 11057
-		// (get) Token: 0x0600D55C RID: 54620 RVA: 0x001F62E3 File Offset: 0x001F44E3
-		// (set) Token: 0x0600D55D RID: 54621 RVA: 0x001F62EB File Offset: 0x001F44EB
+		// Token: 0x17002AF3 RID: 10995
+		// (get) Token: 0x0600D442 RID: 54338 RVA: 0x001F40FB File Offset: 0x001F22FB
+		// (set) Token: 0x0600D443 RID: 54339 RVA: 0x001F4103 File Offset: 0x001F2303
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsFavorite
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D55E RID: 54622 RVA: 0x001F62F4 File Offset: 0x001F44F4
+		// Token: 0x0600D444 RID: 54340 RVA: 0x001F410C File Offset: 0x001F230C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MailFavoriteRequest);
 		}
 
-		// Token: 0x0600D55F RID: 54623 RVA: 0x001F6304 File Offset: 0x001F4504
+		// Token: 0x0600D445 RID: 54341 RVA: 0x001F411C File Offset: 0x001F231C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MailFavoriteRequest other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (!(this.Id != other.Id) && this.IsFavorite == other.IsFavorite && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600D560 RID: 54624 RVA: 0x001F6354 File Offset: 0x001F4554
+		// Token: 0x0600D446 RID: 54342 RVA: 0x001F416C File Offset: 0x001F236C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D561 RID: 54625 RVA: 0x001F63AE File Offset: 0x001F45AE
+		// Token: 0x0600D447 RID: 54343 RVA: 0x001F41C6 File Offset: 0x001F23C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D562 RID: 54626 RVA: 0x001F63BB File Offset: 0x001F45BB
+		// Token: 0x0600D448 RID: 54344 RVA: 0x001F41D3 File Offset: 0x001F23D3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D563 RID: 54627 RVA: 0x001F63C4 File Offset: 0x001F45C4
+		// Token: 0x0600D449 RID: 54345 RVA: 0x001F41DC File Offset: 0x001F23DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.Id.Length != 0)
 			{
-				output.WriteRawTag(18);
+				output.WriteRawTag(58);
 				output.WriteString(this.Id);
 			}
 			if (this.IsFavorite)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(64);
 				output.WriteBool(this.IsFavorite);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D564 RID: 54628 RVA: 0x001F6424 File Offset: 0x001F4624
+		// Token: 0x0600D44A RID: 54346 RVA: 0x001F423C File Offset: 0x001F243C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D565 RID: 54629 RVA: 0x001F6474 File Offset: 0x001F4674
+		// Token: 0x0600D44B RID: 54347 RVA: 0x001F428C File Offset: 0x001F248C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MailFavoriteRequest other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D566 RID: 54630 RVA: 0x001F64C9 File Offset: 0x001F46C9
+		// Token: 0x0600D44C RID: 54348 RVA: 0x001F42E1 File Offset: 0x001F24E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D567 RID: 54631 RVA: 0x001F64D4 File Offset: 0x001F46D4
+		// Token: 0x0600D44D RID: 54349 RVA: 0x001F42EC File Offset: 0x001F24EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 18U)
+				if (num != 58U)
 				{
-					if (num != 88U)
+					if (num != 64U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400594F RID: 22863
+		// Token: 0x04005958 RID: 22872
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005950 RID: 22864
-		public const int IdFieldNumber = 2;
+		// Token: 0x04005959 RID: 22873
+		public const int IdFieldNumber = 7;
 
-		// Token: 0x04005951 RID: 22865
+		// Token: 0x0400595A RID: 22874
 		private string id_ = "";
 
-		// Token: 0x04005952 RID: 22866
-		public const int IsFavoriteFieldNumber = 11;
+		// Token: 0x0400595B RID: 22875
+		public const int IsFavoriteFieldNumber = 8;
 
-		// Token: 0x04005953 RID: 22867
+		// Token: 0x0400595C RID: 22876
 		private bool isFavorite_;
 	}
 }

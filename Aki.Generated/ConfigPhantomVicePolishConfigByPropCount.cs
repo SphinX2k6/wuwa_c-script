@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006B8 RID: 1720
+	// Token: 0x020006D0 RID: 1744
 	public class ConfigPhantomVicePolishConfigByPropCount : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002860 RID: 10336 RVA: 0x0013DE57 File Offset: 0x0013C057
+		// Token: 0x060028F0 RID: 10480 RVA: 0x001448D3 File Offset: 0x00142AD3
 		static ConfigPhantomVicePolishConfigByPropCount()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomVicePolishConfigByPropCount.CreateStaticDefaultValue), new Action(ConfigPhantomVicePolishConfigByPropCount.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002861 RID: 10337 RVA: 0x0013DE78 File Offset: 0x0013C078
+		// Token: 0x060028F1 RID: 10481 RVA: 0x001448F4 File Offset: 0x00142AF4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomVicePolishConfigByPropCount.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002862 RID: 10338 RVA: 0x0013DEF7 File Offset: 0x0013C0F7
+		// Token: 0x060028F2 RID: 10482 RVA: 0x00144973 File Offset: 0x00142B73
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomVicePolishConfigByPropCount.LogPair = null;
 			ConfigPhantomVicePolishConfigByPropCount.HandleId = 0;
 		}
 
-		// Token: 0x06002863 RID: 10339 RVA: 0x0013DF05 File Offset: 0x0013C105
+		// Token: 0x060028F3 RID: 10483 RVA: 0x00144981 File Offset: 0x00142B81
 		public static void Init()
 		{
 			ConfigPhantomVicePolishConfigByPropCount.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomVicePolishConfigByPropCount.HandleId, "db_phantom.db", "select BinData from `PhantomVicePolishConfig` where PropCount=?");
 		}
 
-		// Token: 0x06002864 RID: 10340 RVA: 0x0013DF20 File Offset: 0x0013C120
+		// Token: 0x060028F4 RID: 10484 RVA: 0x0014499C File Offset: 0x00142B9C
 		public static PhantomVicePolishConfig? GetConfig(int p0PropCount, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomVicePolishConfigByPropCount.HandleId, ConfigPhantomVicePolishConfigByPropCount.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomVicePolishConfig?(rootAsPhantomVicePolishConfig);
 		}
 
-		// Token: 0x04002EEE RID: 12014
+		// Token: 0x04002F96 RID: 12182
 		private const string DB = "db_phantom.db";
 
-		// Token: 0x04002EEF RID: 12015
+		// Token: 0x04002F97 RID: 12183
 		private const string FILE = "h.幻象.xlsx";
 
-		// Token: 0x04002EF0 RID: 12016
+		// Token: 0x04002F98 RID: 12184
 		private const string TABLE = "PhantomVicePolishConfig";
 
-		// Token: 0x04002EF1 RID: 12017
+		// Token: 0x04002F99 RID: 12185
 		private const string COMMAND = "select BinData from `PhantomVicePolishConfig` where PropCount=?";
 
-		// Token: 0x04002EF2 RID: 12018
+		// Token: 0x04002F9A RID: 12186
 		private const string KEY_PREFIX = "PhantomVicePolishConfigByPropCount";
 
-		// Token: 0x04002EF3 RID: 12019
+		// Token: 0x04002F9B RID: 12187
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002EF4 RID: 12020
+		// Token: 0x04002F9C RID: 12188
 		private static int HandleId;
 	}
 }

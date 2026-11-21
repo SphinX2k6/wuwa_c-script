@@ -2,54 +2,54 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200288D RID: 10381
+// Token: 0x02001E08 RID: 7688
 [NullableContext(2)]
 [Nullable(0)]
 public class LevelUpSuccessAttributeData : ILevelUpSuccessAttributeData
 {
-	// Token: 0x17001CB4 RID: 7348
-	// (get) Token: 0x060155EC RID: 87532 RVA: 0x00563564 File Offset: 0x00561764
-	// (set) Token: 0x060155ED RID: 87533 RVA: 0x0056356C File Offset: 0x0056176C
+	// Token: 0x17001D0C RID: 7436
+	// (get) Token: 0x06012FEA RID: 77802 RVA: 0x0058E2C0 File Offset: 0x0058C4C0
+	// (set) Token: 0x06012FEB RID: 77803 RVA: 0x0058E2C8 File Offset: 0x0058C4C8
 	public string Title { get; set; }
 
-	// Token: 0x17001CB5 RID: 7349
-	// (get) Token: 0x060155EE RID: 87534 RVA: 0x00563575 File Offset: 0x00561775
-	// (set) Token: 0x060155EF RID: 87535 RVA: 0x0056357D File Offset: 0x0056177D
+	// Token: 0x17001D0D RID: 7437
+	// (get) Token: 0x06012FEC RID: 77804 RVA: 0x0058E2D1 File Offset: 0x0058C4D1
+	// (set) Token: 0x06012FED RID: 77805 RVA: 0x0058E2D9 File Offset: 0x0058C4D9
 	public string AudioId { get; set; }
 
-	// Token: 0x17001CB6 RID: 7350
-	// (get) Token: 0x060155F0 RID: 87536 RVA: 0x00563586 File Offset: 0x00561786
-	// (set) Token: 0x060155F1 RID: 87537 RVA: 0x0056358E File Offset: 0x0056178E
+	// Token: 0x17001D0E RID: 7438
+	// (get) Token: 0x06012FEE RID: 77806 RVA: 0x0058E2E2 File Offset: 0x0058C4E2
+	// (set) Token: 0x06012FEF RID: 77807 RVA: 0x0058E2EA File Offset: 0x0058C4EA
 	public ILevelInfo LevelInfo { get; set; }
 
-	// Token: 0x17001CB7 RID: 7351
-	// (get) Token: 0x060155F2 RID: 87538 RVA: 0x00563597 File Offset: 0x00561797
-	// (set) Token: 0x060155F3 RID: 87539 RVA: 0x0056359F File Offset: 0x0056179F
+	// Token: 0x17001D0F RID: 7439
+	// (get) Token: 0x06012FF0 RID: 77808 RVA: 0x0058E2F3 File Offset: 0x0058C4F3
+	// (set) Token: 0x06012FF1 RID: 77809 RVA: 0x0058E2FB File Offset: 0x0058C4FB
 	[Nullable(1)]
 	public List<IAttributeInfo> AttributeInfo { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17001CB8 RID: 7352
-	// (get) Token: 0x060155F4 RID: 87540 RVA: 0x005635A8 File Offset: 0x005617A8
-	// (set) Token: 0x060155F5 RID: 87541 RVA: 0x005635B0 File Offset: 0x005617B0
+	// Token: 0x17001D10 RID: 7440
+	// (get) Token: 0x06012FF2 RID: 77810 RVA: 0x0058E304 File Offset: 0x0058C504
+	// (set) Token: 0x06012FF3 RID: 77811 RVA: 0x0058E30C File Offset: 0x0058C50C
 	public bool? IsShowArrow { get; set; }
 
-	// Token: 0x17001CB9 RID: 7353
-	// (get) Token: 0x060155F6 RID: 87542 RVA: 0x005635B9 File Offset: 0x005617B9
-	// (set) Token: 0x060155F7 RID: 87543 RVA: 0x005635C1 File Offset: 0x005617C1
+	// Token: 0x17001D11 RID: 7441
+	// (get) Token: 0x06012FF4 RID: 77812 RVA: 0x0058E315 File Offset: 0x0058C515
+	// (set) Token: 0x06012FF5 RID: 77813 RVA: 0x0058E31D File Offset: 0x0058C51D
 	public string ClickText { get; set; }
 
-	// Token: 0x17001CBA RID: 7354
-	// (get) Token: 0x060155F8 RID: 87544 RVA: 0x005635CA File Offset: 0x005617CA
-	// (set) Token: 0x060155F9 RID: 87545 RVA: 0x005635D2 File Offset: 0x005617D2
+	// Token: 0x17001D12 RID: 7442
+	// (get) Token: 0x06012FF6 RID: 77814 RVA: 0x0058E326 File Offset: 0x0058C526
+	// (set) Token: 0x06012FF7 RID: 77815 RVA: 0x0058E32E File Offset: 0x0058C52E
 	public Action ClickFunction { get; set; }
 
-	// Token: 0x17001CBB RID: 7355
-	// (get) Token: 0x060155FA RID: 87546 RVA: 0x005635DB File Offset: 0x005617DB
-	// (set) Token: 0x060155FB RID: 87547 RVA: 0x005635E3 File Offset: 0x005617E3
+	// Token: 0x17001D13 RID: 7443
+	// (get) Token: 0x06012FF8 RID: 77816 RVA: 0x0058E337 File Offset: 0x0058C537
+	// (set) Token: 0x06012FF9 RID: 77817 RVA: 0x0058E33F File Offset: 0x0058C53F
 	public bool? WiderScrollView { get; set; }
 
-	// Token: 0x17001CBC RID: 7356
-	// (get) Token: 0x060155FC RID: 87548 RVA: 0x005635EC File Offset: 0x005617EC
-	// (set) Token: 0x060155FD RID: 87549 RVA: 0x005635F4 File Offset: 0x005617F4
+	// Token: 0x17001D14 RID: 7444
+	// (get) Token: 0x06012FFA RID: 77818 RVA: 0x0058E348 File Offset: 0x0058C548
+	// (set) Token: 0x06012FFB RID: 77819 RVA: 0x0058E350 File Offset: 0x0058C550
 	public IStrengthUpgradeData StrengthUpgradeData { get; set; }
 }

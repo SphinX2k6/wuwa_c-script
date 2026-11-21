@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Area.AreaFunction
 {
-	// Token: 0x02005EA8 RID: 24232
+	// Token: 0x02004E8D RID: 20109
 	public static class AreaFunctionUtils
 	{
-		// Token: 0x0603DA8D RID: 252557 RVA: 0x00EE39AC File Offset: 0x00EE1BAC
+		// Token: 0x06032A1D RID: 207389 RVA: 0x00E34EF8 File Offset: 0x00E330F8
 		[NullableContext(2)]
 		public static Entity GetLocalRoleEntity()
 		{

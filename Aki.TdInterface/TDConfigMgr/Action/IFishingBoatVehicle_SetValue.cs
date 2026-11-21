@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A6A RID: 6762
+	// Token: 0x02001BFF RID: 7167
 	public class IFishingBoatVehicle_SetValue
 	{
-		// Token: 0x04005960 RID: 22880
+		// Token: 0x04005DC5 RID: 24005
 		public ETargetVehicle Type;
 	}
 }

@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055F4 RID: 22004
+	// Token: 0x02005B92 RID: 23442
 	public class INearbyTrackingComponentT
 	{
-		// Token: 0x1700A2D1 RID: 41681
-		// (get) Token: 0x06024821 RID: 149537 RVA: 0x00509FFF File Offset: 0x005081FF
-		// (set) Token: 0x06024822 RID: 149538 RVA: 0x0050A007 File Offset: 0x00508207
+		// Token: 0x1700AB59 RID: 43865
+		// (get) Token: 0x06026A2F RID: 158255 RVA: 0x0054A5D3 File Offset: 0x005487D3
+		// (set) Token: 0x06026A30 RID: 158256 RVA: 0x0054A5DB File Offset: 0x005487DB
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A2D2 RID: 41682
-		// (get) Token: 0x06024823 RID: 149539 RVA: 0x0050A010 File Offset: 0x00508210
-		// (set) Token: 0x06024824 RID: 149540 RVA: 0x0050A018 File Offset: 0x00508218
+		// Token: 0x1700AB5A RID: 43866
+		// (get) Token: 0x06026A31 RID: 158257 RVA: 0x0054A5E4 File Offset: 0x005487E4
+		// (set) Token: 0x06026A32 RID: 158258 RVA: 0x0054A5EC File Offset: 0x005487EC
 		public bool IsEnable { get; set; }
 
-		// Token: 0x1700A2D3 RID: 41683
-		// (get) Token: 0x06024825 RID: 149541 RVA: 0x0050A021 File Offset: 0x00508221
-		// (set) Token: 0x06024826 RID: 149542 RVA: 0x0050A029 File Offset: 0x00508229
+		// Token: 0x1700AB5B RID: 43867
+		// (get) Token: 0x06026A33 RID: 158259 RVA: 0x0054A5F5 File Offset: 0x005487F5
+		// (set) Token: 0x06026A34 RID: 158260 RVA: 0x0054A5FD File Offset: 0x005487FD
 		public bool IsEnableWhileUnlock { get; set; }
 
-		// Token: 0x1700A2D4 RID: 41684
-		// (get) Token: 0x06024827 RID: 149543 RVA: 0x0050A032 File Offset: 0x00508232
-		// (set) Token: 0x06024828 RID: 149544 RVA: 0x0050A03A File Offset: 0x0050823A
+		// Token: 0x1700AB5C RID: 43868
+		// (get) Token: 0x06026A35 RID: 158261 RVA: 0x0054A606 File Offset: 0x00548806
+		// (set) Token: 0x06026A36 RID: 158262 RVA: 0x0054A60E File Offset: 0x0054880E
 		public bool IsEnbaleWhileHoming { get; set; }
 
-		// Token: 0x1700A2D5 RID: 41685
-		// (get) Token: 0x06024829 RID: 149545 RVA: 0x0050A043 File Offset: 0x00508243
-		// (set) Token: 0x0602482A RID: 149546 RVA: 0x0050A04B File Offset: 0x0050824B
+		// Token: 0x1700AB5D RID: 43869
+		// (get) Token: 0x06026A37 RID: 158263 RVA: 0x0054A617 File Offset: 0x00548817
+		// (set) Token: 0x06026A38 RID: 158264 RVA: 0x0054A61F File Offset: 0x0054881F
 		public TNearbyTrackingUnion TrackingType { get; set; }
 
-		// Token: 0x1700A2D6 RID: 41686
-		// (get) Token: 0x0602482B RID: 149547 RVA: 0x0050A054 File Offset: 0x00508254
-		// (set) Token: 0x0602482C RID: 149548 RVA: 0x0050A05C File Offset: 0x0050825C
+		// Token: 0x1700AB5E RID: 43870
+		// (get) Token: 0x06026A39 RID: 158265 RVA: 0x0054A628 File Offset: 0x00548828
+		// (set) Token: 0x06026A3A RID: 158266 RVA: 0x0054A630 File Offset: 0x00548830
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602482D RID: 149549 RVA: 0x0050A065 File Offset: 0x00508265
+		// Token: 0x06026A3B RID: 158267 RVA: 0x0054A639 File Offset: 0x00548839
 		public INearbyTrackingComponentT()
 		{
 			this.Disabled = false;

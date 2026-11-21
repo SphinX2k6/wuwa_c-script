@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001EA RID: 490
+	// Token: 0x020001FC RID: 508
 	public class ConfigDangoMonopolyGridByGroup : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000B7F RID: 2943 RVA: 0x0009AA44 File Offset: 0x00098C44
+		// Token: 0x06000BEB RID: 3051 RVA: 0x000A097C File Offset: 0x0009EB7C
 		static ConfigDangoMonopolyGridByGroup()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDangoMonopolyGridByGroup.CreateStaticDefaultValue), new Action(ConfigDangoMonopolyGridByGroup.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000B80 RID: 2944 RVA: 0x0009AA64 File Offset: 0x00098C64
+		// Token: 0x06000BEC RID: 3052 RVA: 0x000A099C File Offset: 0x0009EB9C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDangoMonopolyGridByGroup.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000B81 RID: 2945 RVA: 0x0009AAE3 File Offset: 0x00098CE3
+		// Token: 0x06000BED RID: 3053 RVA: 0x000A0A1B File Offset: 0x0009EC1B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDangoMonopolyGridByGroup.LogPair = null;
 			ConfigDangoMonopolyGridByGroup.HandleId = 0;
 		}
 
-		// Token: 0x06000B82 RID: 2946 RVA: 0x0009AAF1 File Offset: 0x00098CF1
+		// Token: 0x06000BEE RID: 3054 RVA: 0x000A0A29 File Offset: 0x0009EC29
 		public static void Init()
 		{
 			ConfigDangoMonopolyGridByGroup.HandleId = ConfigCommon.InitDataStatement(ConfigDangoMonopolyGridByGroup.HandleId, "db_dangomonopoly.db", "select BinData from `DangoMonopolyGrid` where GridGroupId=?");
 		}
 
-		// Token: 0x06000B83 RID: 2947 RVA: 0x0009AB0C File Offset: 0x00098D0C
+		// Token: 0x06000BEF RID: 3055 RVA: 0x000A0A44 File Offset: 0x0009EC44
 		[NullableContext(2)]
 		public static IReadOnlyList<DangoMonopolyGrid> GetConfigList(int p0GridGroupId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000D4A RID: 3402
+		// Token: 0x04000DC8 RID: 3528
 		private const string DB = "db_dangomonopoly.db";
 
-		// Token: 0x04000D4B RID: 3403
+		// Token: 0x04000DC9 RID: 3529
 		private const string FILE = "t.团子大富翁.xlsx";
 
-		// Token: 0x04000D4C RID: 3404
+		// Token: 0x04000DCA RID: 3530
 		private const string TABLE = "DangoMonopolyGrid";
 
-		// Token: 0x04000D4D RID: 3405
+		// Token: 0x04000DCB RID: 3531
 		private const string COMMAND = "select BinData from `DangoMonopolyGrid` where GridGroupId=?";
 
-		// Token: 0x04000D4E RID: 3406
+		// Token: 0x04000DCC RID: 3532
 		private const string KEY_PREFIX = "DangoMonopolyGridByGroup";
 
-		// Token: 0x04000D4F RID: 3407
+		// Token: 0x04000DCD RID: 3533
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000D50 RID: 3408
+		// Token: 0x04000DCE RID: 3534
 		private static int HandleId;
 	}
 }

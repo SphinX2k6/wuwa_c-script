@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EBB RID: 28347
+	// Token: 0x0200763F RID: 30271
 	public struct IRestorePlayerCameraAdjustment : IFlatbufferObject
 	{
-		// Token: 0x1700D301 RID: 54017
-		// (get) Token: 0x0603219E RID: 205214 RVA: 0x006C622C File Offset: 0x006C442C
+		// Token: 0x1700DE58 RID: 56920
+		// (get) Token: 0x060351DE RID: 217566 RVA: 0x00721F60 File Offset: 0x00720160
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603219F RID: 205215 RVA: 0x006C6239 File Offset: 0x006C4439
+		// Token: 0x060351DF RID: 217567 RVA: 0x00721F6D File Offset: 0x0072016D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060321A0 RID: 205216 RVA: 0x006C6240 File Offset: 0x006C4440
+		// Token: 0x060351E0 RID: 217568 RVA: 0x00721F74 File Offset: 0x00720174
 		public static IRestorePlayerCameraAdjustment GetRootAsIRestorePlayerCameraAdjustment(ByteBuffer _bb)
 		{
 			return IRestorePlayerCameraAdjustment.GetRootAsIRestorePlayerCameraAdjustment(_bb, default(IRestorePlayerCameraAdjustment));
 		}
 
-		// Token: 0x060321A1 RID: 205217 RVA: 0x006C625C File Offset: 0x006C445C
+		// Token: 0x060351E1 RID: 217569 RVA: 0x00721F90 File Offset: 0x00720190
 		public static IRestorePlayerCameraAdjustment GetRootAsIRestorePlayerCameraAdjustment(ByteBuffer _bb, IRestorePlayerCameraAdjustment obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060321A2 RID: 205218 RVA: 0x006C6279 File Offset: 0x006C4479
+		// Token: 0x060351E2 RID: 217570 RVA: 0x00721FAD File Offset: 0x007201AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060321A3 RID: 205219 RVA: 0x006C6288 File Offset: 0x006C4488
+		// Token: 0x060351E3 RID: 217571 RVA: 0x00721FBC File Offset: 0x007201BC
 		public IRestorePlayerCameraAdjustment __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D302 RID: 54018
-		// (get) Token: 0x060321A4 RID: 205220 RVA: 0x006C6298 File Offset: 0x006C4498
+		// Token: 0x1700DE59 RID: 56921
+		// (get) Token: 0x060351E4 RID: 217572 RVA: 0x00721FCC File Offset: 0x007201CC
 		public IResetFocusConfig? ResetFocus
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D303 RID: 54019
-		// (get) Token: 0x060321A5 RID: 205221 RVA: 0x006C62F8 File Offset: 0x006C44F8
+		// Token: 0x1700DE5A RID: 56922
+		// (get) Token: 0x060351E5 RID: 217573 RVA: 0x0072202C File Offset: 0x0072022C
 		public string SubScreenKey
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060321A6 RID: 205222 RVA: 0x006C632F File Offset: 0x006C452F
+		// Token: 0x060351E6 RID: 217574 RVA: 0x00722063 File Offset: 0x00720263
 		public Span<byte> GetSubScreenKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060321A7 RID: 205223 RVA: 0x006C633E File Offset: 0x006C453E
+		// Token: 0x060351E7 RID: 217575 RVA: 0x00722072 File Offset: 0x00720272
 		public byte[] GetSubScreenKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060321A8 RID: 205224 RVA: 0x006C634C File Offset: 0x006C454C
+		// Token: 0x060351E8 RID: 217576 RVA: 0x00722080 File Offset: 0x00720280
 		public static Offset<IRestorePlayerCameraAdjustment> CreateIRestorePlayerCameraAdjustment(FlatBufferBuilder builder, Offset<IResetFocusConfig> ResetFocusOffset = default(Offset<IResetFocusConfig>), StringOffset SubScreenKeyOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRestorePlayerCameraAdjustment.EndIRestorePlayerCameraAdjustment(builder);
 		}
 
-		// Token: 0x060321A9 RID: 205225 RVA: 0x006C6369 File Offset: 0x006C4569
+		// Token: 0x060351E9 RID: 217577 RVA: 0x0072209D File Offset: 0x0072029D
 		public static void StartIRestorePlayerCameraAdjustment(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060321AA RID: 205226 RVA: 0x006C6372 File Offset: 0x006C4572
+		// Token: 0x060351EA RID: 217578 RVA: 0x007220A6 File Offset: 0x007202A6
 		public static void AddResetFocus(FlatBufferBuilder builder, Offset<IResetFocusConfig> resetFocusOffset)
 		{
 			builder.AddOffset(0, resetFocusOffset.Value, 0);
 		}
 
-		// Token: 0x060321AB RID: 205227 RVA: 0x006C6382 File Offset: 0x006C4582
+		// Token: 0x060351EB RID: 217579 RVA: 0x007220B6 File Offset: 0x007202B6
 		public static void AddSubScreenKey(FlatBufferBuilder builder, StringOffset subScreenKeyOffset)
 		{
 			builder.AddOffset(1, subScreenKeyOffset.Value, 0);
 		}
 
-		// Token: 0x060321AC RID: 205228 RVA: 0x006C6392 File Offset: 0x006C4592
+		// Token: 0x060351EC RID: 217580 RVA: 0x007220C6 File Offset: 0x007202C6
 		public static Offset<IRestorePlayerCameraAdjustment> EndIRestorePlayerCameraAdjustment(FlatBufferBuilder builder)
 		{
 			return new Offset<IRestorePlayerCameraAdjustment>(builder.EndTable());
 		}
 
-		// Token: 0x060321AD RID: 205229 RVA: 0x006C63A0 File Offset: 0x006C45A0
+		// Token: 0x060351ED RID: 217581 RVA: 0x007220D4 File Offset: 0x007202D4
 		public IRestorePlayerCameraAdjustmentT UnPack()
 		{
 			IRestorePlayerCameraAdjustmentT restorePlayerCameraAdjustmentT = new IRestorePlayerCameraAdjustmentT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return restorePlayerCameraAdjustmentT;
 		}
 
-		// Token: 0x060321AE RID: 205230 RVA: 0x006C63BC File Offset: 0x006C45BC
+		// Token: 0x060351EE RID: 217582 RVA: 0x007220F0 File Offset: 0x007202F0
 		public void UnPackTo(IRestorePlayerCameraAdjustmentT _o)
 		{
 			_o.ResetFocus = ((this.ResetFocus != null) ? this.ResetFocus.Value.UnPack() : null);
 			_o.SubScreenKey = this.SubScreenKey;
 		}
 
-		// Token: 0x060321AF RID: 205231 RVA: 0x006C6404 File Offset: 0x006C4604
+		// Token: 0x060351EF RID: 217583 RVA: 0x00722138 File Offset: 0x00720338
 		public static Offset<IRestorePlayerCameraAdjustment> Pack(FlatBufferBuilder builder, IRestorePlayerCameraAdjustmentT _o)
 		{
 			if (_o == null)
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRestorePlayerCameraAdjustment.CreateIRestorePlayerCameraAdjustment(builder, resetFocusOffset, subScreenKeyOffset);
 		}
 
-		// Token: 0x040118AF RID: 71855
+		// Token: 0x04012834 RID: 75828
 		private Table __p;
 	}
 }

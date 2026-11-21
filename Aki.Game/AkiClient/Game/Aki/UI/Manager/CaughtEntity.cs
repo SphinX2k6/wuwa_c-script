@@ -9,17 +9,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039E5 RID: 14821
+	// Token: 0x0200303C RID: 12348
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class CaughtEntity : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F0A2 RID: 127138 RVA: 0x008A88F3 File Offset: 0x008A6AF3
+		// Token: 0x0601D503 RID: 120067 RVA: 0x008F0F53 File Offset: 0x008EF153
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return CaughtEntity.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F0A3 RID: 127139 RVA: 0x008A88FF File Offset: 0x008A6AFF
+		// Token: 0x0601D504 RID: 120068 RVA: 0x008F0F5F File Offset: 0x008EF15F
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__CaughtEntity__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -29,31 +29,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__CaughtEntity__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F0A4 RID: 127140 RVA: 0x008A8922 File Offset: 0x008A6B22
+		// Token: 0x0601D505 RID: 120069 RVA: 0x008F0F82 File Offset: 0x008EF182
 		public CaughtEntity()
 		{
 		}
 
-		// Token: 0x0601F0A5 RID: 127141 RVA: 0x008A892A File Offset: 0x008A6B2A
+		// Token: 0x0601D506 RID: 120070 RVA: 0x008F0F8A File Offset: 0x008EF18A
 		[NullableContext(2)]
 		public CaughtEntity(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F0A6 RID: 127142 RVA: 0x008A8934 File Offset: 0x008A6B34
+		// Token: 0x0601D507 RID: 120071 RVA: 0x008F0F94 File Offset: 0x008EF194
 		public CaughtEntity(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F0A7 RID: 127143 RVA: 0x008A893F File Offset: 0x008A6B3F
+		// Token: 0x0601D508 RID: 120072 RVA: 0x008F0F9F File Offset: 0x008EF19F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, int, string, TEnumAsByte<ECaughtResultType>>) ?? ((Action<int, int, string, TEnumAsByte<ECaughtResultType>>)Delegate.CreateDelegate(typeof(Action<int, int, string, TEnumAsByte<ECaughtResultType>>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F0A8 RID: 127144 RVA: 0x008A8971 File Offset: 0x008A6B71
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D509 RID: 120073 RVA: 0x008F0FD1 File Offset: 0x008EF1D1
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -73,8 +72,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, CaughtEntity.RegisterId);
 		}
 
-		// Token: 0x0601F0A9 RID: 127145 RVA: 0x008A89AB File Offset: 0x008A6BAB
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D50A RID: 120074 RVA: 0x008F100B File Offset: 0x008EF20B
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -85,10 +83,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F0AA RID: 127146 RVA: 0x008A89B4 File Offset: 0x008A6BB4
+		// Token: 0x0601D50B RID: 120075 RVA: 0x008F1014 File Offset: 0x008EF214
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int RoleEntityID, int CaughtEntityID, string CaughtID, ECaughtResultType Result)
 		{
 			CaughtEntity.__CaughtEntity_DelegateParams* ptr = stackalloc CaughtEntity.__CaughtEntity_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(CaughtEntity.__CaughtEntity_DelegateParams) & -16L;
@@ -101,10 +98,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_EventManager_C.__CaughtEntity__DelegateSignature_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F0AB RID: 127147 RVA: 0x008A8A24 File Offset: 0x008A6C24
+		// Token: 0x0601D50C RID: 120076 RVA: 0x008F1084 File Offset: 0x008EF284
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int, string, TEnumAsByte<ECaughtResultType>> action = target as Action<int, int, string, TEnumAsByte<ECaughtResultType>>;
@@ -116,40 +112,40 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(((CaughtEntity.__CaughtEntity_DelegateParams*)__Parameters)->RoleEntityID, ((CaughtEntity.__CaughtEntity_DelegateParams*)__Parameters)->CaughtEntityID, arg, ((CaughtEntity.__CaughtEntity_DelegateParams*)__Parameters)->Result);
 		}
 
-		// Token: 0x0400EE0C RID: 60940
+		// Token: 0x0400F734 RID: 63284
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:CaughtEntity__DelegateSignature";
 
-		// Token: 0x0400EE0D RID: 60941
+		// Token: 0x0400F735 RID: 63285
 		private static int RegisterId;
 
-		// Token: 0x020099DC RID: 39388
+		// Token: 0x02008C90 RID: 35984
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __CaughtEntity_DelegateParams
+		private ref struct __CaughtEntity_DelegateParams
 		{
-			// Token: 0x04030EAC RID: 200364
+			// Token: 0x0402C78C RID: 182156
 			[FieldOffset(0)]
 			public int RoleEntityID;
 
-			// Token: 0x04030EAD RID: 200365
+			// Token: 0x0402C78D RID: 182157
 			[FieldOffset(4)]
 			public int CaughtEntityID;
 
-			// Token: 0x04030EAE RID: 200366
+			// Token: 0x0402C78E RID: 182158
 			[FieldOffset(8)]
 			public FString CaughtID;
 
-			// Token: 0x04030EAF RID: 200367
+			// Token: 0x0402C78F RID: 182159
 			[FieldOffset(24)]
 			public TEnumAsByte<ECaughtResultType> Result;
 		}
 
-		// Token: 0x020099DD RID: 39389
+		// Token: 0x02008C91 RID: 35985
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EB0 RID: 200368
+			// Token: 0x0402C790 RID: 182160
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

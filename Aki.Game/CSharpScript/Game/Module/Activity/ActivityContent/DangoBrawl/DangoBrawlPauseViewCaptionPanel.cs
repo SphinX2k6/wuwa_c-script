@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200682F RID: 26671
+	// Token: 0x0200577F RID: 22399
 	internal class DangoBrawlPauseViewCaptionPanel : UiPanelBase
 	{
-		// Token: 0x06042900 RID: 272640 RVA: 0x0102D494 File Offset: 0x0102B694
+		// Token: 0x06037454 RID: 226388 RVA: 0x00F6E9D0 File Offset: 0x00F6CBD0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042901 RID: 272641 RVA: 0x0102D519 File Offset: 0x0102B719
+		// Token: 0x06037455 RID: 226389 RVA: 0x00F6EA55 File Offset: 0x00F6CC55
 		private void OnBackButtonClick()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.DangoBrawlPauseView))

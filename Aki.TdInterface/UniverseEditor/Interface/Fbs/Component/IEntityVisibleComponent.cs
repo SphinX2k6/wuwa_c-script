@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051C5 RID: 20933
+	// Token: 0x0200572A RID: 22314
 	public struct IEntityVisibleComponent : IFlatbufferObject
 	{
-		// Token: 0x17009923 RID: 39203
-		// (get) Token: 0x06021ECC RID: 138956 RVA: 0x004B4D42 File Offset: 0x004B2F42
+		// Token: 0x1700A112 RID: 41234
+		// (get) Token: 0x06023E24 RID: 146980 RVA: 0x004EEDAA File Offset: 0x004ECFAA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021ECD RID: 138957 RVA: 0x004B4D4F File Offset: 0x004B2F4F
+		// Token: 0x06023E25 RID: 146981 RVA: 0x004EEDB7 File Offset: 0x004ECFB7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021ECE RID: 138958 RVA: 0x004B4D58 File Offset: 0x004B2F58
+		// Token: 0x06023E26 RID: 146982 RVA: 0x004EEDC0 File Offset: 0x004ECFC0
 		public static IEntityVisibleComponent GetRootAsIEntityVisibleComponent(ByteBuffer _bb)
 		{
 			return IEntityVisibleComponent.GetRootAsIEntityVisibleComponent(_bb, default(IEntityVisibleComponent));
 		}
 
-		// Token: 0x06021ECF RID: 138959 RVA: 0x004B4D74 File Offset: 0x004B2F74
+		// Token: 0x06023E27 RID: 146983 RVA: 0x004EEDDC File Offset: 0x004ECFDC
 		public static IEntityVisibleComponent GetRootAsIEntityVisibleComponent(ByteBuffer _bb, IEntityVisibleComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021ED0 RID: 138960 RVA: 0x004B4D91 File Offset: 0x004B2F91
+		// Token: 0x06023E28 RID: 146984 RVA: 0x004EEDF9 File Offset: 0x004ECFF9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021ED1 RID: 138961 RVA: 0x004B4DA0 File Offset: 0x004B2FA0
+		// Token: 0x06023E29 RID: 146985 RVA: 0x004EEE08 File Offset: 0x004ED008
 		public IEntityVisibleComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009924 RID: 39204
-		// (get) Token: 0x06021ED2 RID: 138962 RVA: 0x004B4DB0 File Offset: 0x004B2FB0
+		// Token: 0x1700A113 RID: 41235
+		// (get) Token: 0x06023E2A RID: 146986 RVA: 0x004EEE18 File Offset: 0x004ED018
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009925 RID: 39205
-		// (get) Token: 0x06021ED3 RID: 138963 RVA: 0x004B4DF0 File Offset: 0x004B2FF0
+		// Token: 0x1700A114 RID: 41236
+		// (get) Token: 0x06023E2B RID: 146987 RVA: 0x004EEE58 File Offset: 0x004ED058
 		public bool DelayChange
 		{
 			get
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009926 RID: 39206
-		// (get) Token: 0x06021ED4 RID: 138964 RVA: 0x004B4E30 File Offset: 0x004B3030
+		// Token: 0x1700A115 RID: 41237
+		// (get) Token: 0x06023E2C RID: 146988 RVA: 0x004EEE98 File Offset: 0x004ED098
 		public bool UseFadeEffect
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009927 RID: 39207
-		// (get) Token: 0x06021ED5 RID: 138965 RVA: 0x004B4E70 File Offset: 0x004B3070
+		// Token: 0x1700A116 RID: 41238
+		// (get) Token: 0x06023E2D RID: 146989 RVA: 0x004EEED8 File Offset: 0x004ED0D8
 		public bool UseCutEffect
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009928 RID: 39208
-		// (get) Token: 0x06021ED6 RID: 138966 RVA: 0x004B4EB0 File Offset: 0x004B30B0
+		// Token: 0x1700A117 RID: 41239
+		// (get) Token: 0x06023E2E RID: 146990 RVA: 0x004EEF18 File Offset: 0x004ED118
 		public bool UseHolographicEffect
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021ED7 RID: 138967 RVA: 0x004B4EF0 File Offset: 0x004B30F0
+		// Token: 0x06023E2F RID: 146991 RVA: 0x004EEF58 File Offset: 0x004ED158
 		public IVisibleConditionGroup? VisibleConditions(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -114,8 +114,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IVisibleConditionGroup?(default(IVisibleConditionGroup).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009929 RID: 39209
-		// (get) Token: 0x06021ED8 RID: 138968 RVA: 0x004B4F54 File Offset: 0x004B3154
+		// Token: 0x1700A118 RID: 41240
+		// (get) Token: 0x06023E30 RID: 146992 RVA: 0x004EEFBC File Offset: 0x004ED1BC
 		public int VisibleConditionsLength
 		{
 			get
@@ -129,8 +129,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700992A RID: 39210
-		// (get) Token: 0x06021ED9 RID: 138969 RVA: 0x004B4F80 File Offset: 0x004B3180
+		// Token: 0x1700A119 RID: 41241
+		// (get) Token: 0x06023E31 RID: 146993 RVA: 0x004EEFE8 File Offset: 0x004ED1E8
 		public int CustomVisibleRange
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700992B RID: 39211
-		// (get) Token: 0x06021EDA RID: 138970 RVA: 0x004B4FC0 File Offset: 0x004B31C0
+		// Token: 0x1700A11A RID: 41242
+		// (get) Token: 0x06023E32 RID: 146994 RVA: 0x004EF028 File Offset: 0x004ED228
 		public ERuntimePlatformOptions TargetPlatform
 		{
 			get
@@ -159,8 +159,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700992C RID: 39212
-		// (get) Token: 0x06021EDB RID: 138971 RVA: 0x004B5000 File Offset: 0x004B3200
+		// Token: 0x1700A11B RID: 41243
+		// (get) Token: 0x06023E33 RID: 146995 RVA: 0x004EF068 File Offset: 0x004ED268
 		public byte NullMask
 		{
 			get
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021EDC RID: 138972 RVA: 0x004B5040 File Offset: 0x004B3240
+		// Token: 0x06023E34 RID: 146996 RVA: 0x004EF0A8 File Offset: 0x004ED2A8
 		public static Offset<IEntityVisibleComponent> CreateIEntityVisibleComponent(FlatBufferBuilder builder, bool Disabled = false, bool DelayChange = false, bool UseFadeEffect = false, bool UseCutEffect = false, bool UseHolographicEffect = false, VectorOffset VisibleConditionsOffset = default(VectorOffset), int CustomVisibleRange = 0, ERuntimePlatformOptions TargetPlatform = ERuntimePlatformOptions.None, byte NullMask = 0)
 		{
 			builder.StartTable(9);
@@ -190,49 +190,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityVisibleComponent.EndIEntityVisibleComponent(builder);
 		}
 
-		// Token: 0x06021EDD RID: 138973 RVA: 0x004B50A0 File Offset: 0x004B32A0
+		// Token: 0x06023E35 RID: 146997 RVA: 0x004EF108 File Offset: 0x004ED308
 		public static void StartIEntityVisibleComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(9);
 		}
 
-		// Token: 0x06021EDE RID: 138974 RVA: 0x004B50AA File Offset: 0x004B32AA
+		// Token: 0x06023E36 RID: 146998 RVA: 0x004EF112 File Offset: 0x004ED312
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06021EDF RID: 138975 RVA: 0x004B50B5 File Offset: 0x004B32B5
+		// Token: 0x06023E37 RID: 146999 RVA: 0x004EF11D File Offset: 0x004ED31D
 		public static void AddDelayChange(FlatBufferBuilder builder, bool delayChange)
 		{
 			builder.AddBool(1, delayChange, false);
 		}
 
-		// Token: 0x06021EE0 RID: 138976 RVA: 0x004B50C0 File Offset: 0x004B32C0
+		// Token: 0x06023E38 RID: 147000 RVA: 0x004EF128 File Offset: 0x004ED328
 		public static void AddUseFadeEffect(FlatBufferBuilder builder, bool useFadeEffect)
 		{
 			builder.AddBool(2, useFadeEffect, false);
 		}
 
-		// Token: 0x06021EE1 RID: 138977 RVA: 0x004B50CB File Offset: 0x004B32CB
+		// Token: 0x06023E39 RID: 147001 RVA: 0x004EF133 File Offset: 0x004ED333
 		public static void AddUseCutEffect(FlatBufferBuilder builder, bool useCutEffect)
 		{
 			builder.AddBool(3, useCutEffect, false);
 		}
 
-		// Token: 0x06021EE2 RID: 138978 RVA: 0x004B50D6 File Offset: 0x004B32D6
+		// Token: 0x06023E3A RID: 147002 RVA: 0x004EF13E File Offset: 0x004ED33E
 		public static void AddUseHolographicEffect(FlatBufferBuilder builder, bool useHolographicEffect)
 		{
 			builder.AddBool(4, useHolographicEffect, false);
 		}
 
-		// Token: 0x06021EE3 RID: 138979 RVA: 0x004B50E1 File Offset: 0x004B32E1
+		// Token: 0x06023E3B RID: 147003 RVA: 0x004EF149 File Offset: 0x004ED349
 		public static void AddVisibleConditions(FlatBufferBuilder builder, VectorOffset visibleConditionsOffset)
 		{
 			builder.AddOffset(5, visibleConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06021EE4 RID: 138980 RVA: 0x004B50F4 File Offset: 0x004B32F4
+		// Token: 0x06023E3C RID: 147004 RVA: 0x004EF15C File Offset: 0x004ED35C
 		public static VectorOffset CreateVisibleConditionsVector(FlatBufferBuilder builder, Offset<IVisibleConditionGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -243,7 +243,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021EE5 RID: 138981 RVA: 0x004B5134 File Offset: 0x004B3334
+		// Token: 0x06023E3D RID: 147005 RVA: 0x004EF19C File Offset: 0x004ED39C
 		public static VectorOffset CreateVisibleConditionsVectorBlock(FlatBufferBuilder builder, Offset<IVisibleConditionGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021EE6 RID: 138982 RVA: 0x004B514E File Offset: 0x004B334E
+		// Token: 0x06023E3E RID: 147006 RVA: 0x004EF1B6 File Offset: 0x004ED3B6
 		public static VectorOffset CreateVisibleConditionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IVisibleConditionGroup>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -259,7 +259,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021EE7 RID: 138983 RVA: 0x004B516C File Offset: 0x004B336C
+		// Token: 0x06023E3F RID: 147007 RVA: 0x004EF1D4 File Offset: 0x004ED3D4
 		public static VectorOffset CreateVisibleConditionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -267,37 +267,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021EE8 RID: 138984 RVA: 0x004B5185 File Offset: 0x004B3385
+		// Token: 0x06023E40 RID: 147008 RVA: 0x004EF1ED File Offset: 0x004ED3ED
 		public static void StartVisibleConditionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06021EE9 RID: 138985 RVA: 0x004B5190 File Offset: 0x004B3390
+		// Token: 0x06023E41 RID: 147009 RVA: 0x004EF1F8 File Offset: 0x004ED3F8
 		public static void AddCustomVisibleRange(FlatBufferBuilder builder, int customVisibleRange)
 		{
 			builder.AddInt(6, customVisibleRange, 0);
 		}
 
-		// Token: 0x06021EEA RID: 138986 RVA: 0x004B519B File Offset: 0x004B339B
+		// Token: 0x06023E42 RID: 147010 RVA: 0x004EF203 File Offset: 0x004ED403
 		public static void AddTargetPlatform(FlatBufferBuilder builder, ERuntimePlatformOptions targetPlatform)
 		{
 			builder.AddByte(7, (byte)targetPlatform, 0);
 		}
 
-		// Token: 0x06021EEB RID: 138987 RVA: 0x004B51A6 File Offset: 0x004B33A6
+		// Token: 0x06023E43 RID: 147011 RVA: 0x004EF20E File Offset: 0x004ED40E
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x06021EEC RID: 138988 RVA: 0x004B51B1 File Offset: 0x004B33B1
+		// Token: 0x06023E44 RID: 147012 RVA: 0x004EF219 File Offset: 0x004ED419
 		public static Offset<IEntityVisibleComponent> EndIEntityVisibleComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityVisibleComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06021EED RID: 138989 RVA: 0x004B51C0 File Offset: 0x004B33C0
+		// Token: 0x06023E45 RID: 147013 RVA: 0x004EF228 File Offset: 0x004ED428
 		public IEntityVisibleComponentT UnPack()
 		{
 			IEntityVisibleComponentT entityVisibleComponentT = new IEntityVisibleComponentT();
@@ -305,7 +305,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return entityVisibleComponentT;
 		}
 
-		// Token: 0x06021EEE RID: 138990 RVA: 0x004B51DC File Offset: 0x004B33DC
+		// Token: 0x06023E46 RID: 147014 RVA: 0x004EF244 File Offset: 0x004ED444
 		public void UnPackTo(IEntityVisibleComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -323,7 +323,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021EEF RID: 138991 RVA: 0x004B529C File Offset: 0x004B349C
+		// Token: 0x06023E47 RID: 147015 RVA: 0x004EF304 File Offset: 0x004ED504
 		public static Offset<IEntityVisibleComponent> Pack(FlatBufferBuilder builder, IEntityVisibleComponentT _o)
 		{
 			if (_o == null)
@@ -343,7 +343,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityVisibleComponent.CreateIEntityVisibleComponent(builder, _o.Disabled, _o.DelayChange, _o.UseFadeEffect, _o.UseCutEffect, _o.UseHolographicEffect, visibleConditionsOffset, _o.CustomVisibleRange, _o.TargetPlatform, _o.NullMask);
 		}
 
-		// Token: 0x0400E2C0 RID: 58048
+		// Token: 0x0400EEBE RID: 61118
 		private Table __p;
 	}
 }

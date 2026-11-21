@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A36 RID: 2614
+	// Token: 0x02000AFB RID: 2811
 	public static class EThrowMotionExtensions
 	{
-		// Token: 0x060039A4 RID: 14756 RVA: 0x00094C5C File Offset: 0x00092E5C
+		// Token: 0x06003D7C RID: 15740 RVA: 0x0009D590 File Offset: 0x0009B790
 		public static string ToEnumString(this EThrowMotion value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060039A5 RID: 14757 RVA: 0x00094CBC File Offset: 0x00092EBC
+		// Token: 0x06003D7D RID: 15741 RVA: 0x0009D5F0 File Offset: 0x0009B7F0
 		public static EThrowMotion FromString(string name)
 		{
 			EThrowMotion result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060039A6 RID: 14758 RVA: 0x00094CE8 File Offset: 0x00092EE8
+		// Token: 0x06003D7E RID: 15742 RVA: 0x0009D61C File Offset: 0x0009B81C
 		public static bool TryFromString(string name, out EThrowMotion value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060039A7 RID: 14759 RVA: 0x00094D62 File Offset: 0x00092F62
+		// Token: 0x06003D7F RID: 15743 RVA: 0x0009D696 File Offset: 0x0009B896
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060039A8 RID: 14760 RVA: 0x00094D92 File Offset: 0x00092F92
+		// Token: 0x06003D80 RID: 15744 RVA: 0x0009D6C6 File Offset: 0x0009B8C6
 		public static EThrowMotion[] GetValues()
 		{
 			return new EThrowMotion[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060039A9 RID: 14761 RVA: 0x00094DA5 File Offset: 0x00092FA5
+		// Token: 0x06003D81 RID: 15745 RVA: 0x0009D6D9 File Offset: 0x0009B8D9
 		public static string[] GetNames()
 		{
 			return new string[]

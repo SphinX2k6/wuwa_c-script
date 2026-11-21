@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x02005670 RID: 22128
+	// Token: 0x02004646 RID: 17990
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ProficiencyView : UiPanelBase
 	{
-		// Token: 0x060384C4 RID: 230596 RVA: 0x00D5A29C File Offset: 0x00D5849C
+		// Token: 0x0602D3C1 RID: 185281 RVA: 0x00CA839C File Offset: 0x00CA659C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -38,19 +38,19 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060384C5 RID: 230597 RVA: 0x00D5A384 File Offset: 0x00D58584
+		// Token: 0x0602D3C2 RID: 185282 RVA: 0x00CA8484 File Offset: 0x00CA6684
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(base.GetButton(2).RootUIComp);
 		}
 
-		// Token: 0x060384C6 RID: 230598 RVA: 0x00D5A3A2 File Offset: 0x00D585A2
+		// Token: 0x0602D3C3 RID: 185283 RVA: 0x00CA84A2 File Offset: 0x00CA66A2
 		protected override void OnBeforeDestroy()
 		{
 			this.SequencePlayer.Clear();
 		}
 
-		// Token: 0x060384C7 RID: 230599 RVA: 0x00D5A3AF File Offset: 0x00D585AF
+		// Token: 0x0602D3C4 RID: 185284 RVA: 0x00CA84AF File Offset: 0x00CA66AF
 		private void OnChangeRoleClick()
 		{
 			if (this.ChangeClickCall != null)
@@ -59,14 +59,14 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x060384C8 RID: 230600 RVA: 0x00D5A3C4 File Offset: 0x00D585C4
+		// Token: 0x0602D3C5 RID: 185285 RVA: 0x00CA84C4 File Offset: 0x00CA66C4
 		[NullableContext(1)]
 		public void BindChangeRoleClick(Action func)
 		{
 			this.ChangeClickCall = func;
 		}
 
-		// Token: 0x060384C9 RID: 230601 RVA: 0x00D5A3D0 File Offset: 0x00D585D0
+		// Token: 0x0602D3C6 RID: 185286 RVA: 0x00CA84D0 File Offset: 0x00CA66D0
 		public void SetExpNum(int count, int single, int sum, int times)
 		{
 			int num = single * sum;
@@ -98,13 +98,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetText(0).SetText(newText2, true);
 		}
 
-		// Token: 0x060384CA RID: 230602 RVA: 0x00D5A4D5 File Offset: 0x00D586D5
+		// Token: 0x0602D3C7 RID: 185287 RVA: 0x00CA85D5 File Offset: 0x00CA67D5
 		public void SetExpVisible(bool visible)
 		{
 			base.GetText(0).SetUIActive(visible);
 		}
 
-		// Token: 0x060384CB RID: 230603 RVA: 0x00D5A4E4 File Offset: 0x00D586E4
+		// Token: 0x0602D3C8 RID: 185288 RVA: 0x00CA85E4 File Offset: 0x00CA67E4
 		public void SetRoleTexture(int roleId, int itemId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x060384CC RID: 230604 RVA: 0x00D5A580 File Offset: 0x00D58780
+		// Token: 0x0602D3C9 RID: 185289 RVA: 0x00CA8680 File Offset: 0x00CA6880
 		public void SetTypeContent(string content = null)
 		{
 			UUIText text = base.GetText(3);
@@ -144,26 +144,26 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			text.SetUIActive(false);
 		}
 
-		// Token: 0x0401D98F RID: 121231
+		// Token: 0x0401841A RID: 99354
 		private Action ChangeClickCall;
 
-		// Token: 0x0401D990 RID: 121232
+		// Token: 0x0401841B RID: 99355
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200B830 RID: 47152
+		// Token: 0x0200A258 RID: 41560
 		[NullableContext(0)]
 		private class EProficiencyViewComponents
 		{
-			// Token: 0x04037BDC RID: 228316
+			// Token: 0x040325FA RID: 206330
 			public const int TxtAddNum = 0;
 
-			// Token: 0x04037BDD RID: 228317
+			// Token: 0x040325FB RID: 206331
 			public const int TexRole = 1;
 
-			// Token: 0x04037BDE RID: 228318
+			// Token: 0x040325FC RID: 206332
 			public const int BtnChange = 2;
 
-			// Token: 0x04037BDF RID: 228319
+			// Token: 0x040325FD RID: 206333
 			public const int TxtType = 3;
 		}
 	}

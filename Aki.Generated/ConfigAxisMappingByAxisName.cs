@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000C6 RID: 198
+	// Token: 0x020000D5 RID: 213
 	public class ConfigAxisMappingByAxisName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060004A5 RID: 1189 RVA: 0x00073FFB File Offset: 0x000721FB
+		// Token: 0x060004FF RID: 1279 RVA: 0x0007995F File Offset: 0x00077B5F
 		static ConfigAxisMappingByAxisName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAxisMappingByAxisName.CreateStaticDefaultValue), new Action(ConfigAxisMappingByAxisName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060004A6 RID: 1190 RVA: 0x0007401C File Offset: 0x0007221C
+		// Token: 0x06000500 RID: 1280 RVA: 0x00079980 File Offset: 0x00077B80
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAxisMappingByAxisName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060004A7 RID: 1191 RVA: 0x0007409B File Offset: 0x0007229B
+		// Token: 0x06000501 RID: 1281 RVA: 0x000799FF File Offset: 0x00077BFF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAxisMappingByAxisName.LogPair = null;
 			ConfigAxisMappingByAxisName.HandleId = 0;
 		}
 
-		// Token: 0x060004A8 RID: 1192 RVA: 0x000740A9 File Offset: 0x000722A9
+		// Token: 0x06000502 RID: 1282 RVA: 0x00079A0D File Offset: 0x00077C0D
 		public static void Init()
 		{
 			ConfigAxisMappingByAxisName.HandleId = ConfigCommon.InitDataStatement(ConfigAxisMappingByAxisName.HandleId, "db_input_settings.db", "select BinData from `AxisMapping` where AxisName=?");
 		}
 
-		// Token: 0x060004A9 RID: 1193 RVA: 0x000740C4 File Offset: 0x000722C4
+		// Token: 0x06000503 RID: 1283 RVA: 0x00079A28 File Offset: 0x00077C28
 		public static AxisMapping? GetConfig(string p0AxisName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAxisMappingByAxisName.HandleId, ConfigAxisMappingByAxisName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new AxisMapping?(rootAsAxisMapping);
 		}
 
-		// Token: 0x0400054E RID: 1358
+		// Token: 0x040005B7 RID: 1463
 		private const string DB = "db_input_settings.db";
 
-		// Token: 0x0400054F RID: 1359
+		// Token: 0x040005B8 RID: 1464
 		private const string FILE = "s.输入配置.xlsx";
 
-		// Token: 0x04000550 RID: 1360
+		// Token: 0x040005B9 RID: 1465
 		private const string TABLE = "AxisMapping";
 
-		// Token: 0x04000551 RID: 1361
+		// Token: 0x040005BA RID: 1466
 		private const string COMMAND = "select BinData from `AxisMapping` where AxisName=?";
 
-		// Token: 0x04000552 RID: 1362
+		// Token: 0x040005BB RID: 1467
 		private const string KEY_PREFIX = "AxisMappingByAxisName";
 
-		// Token: 0x04000553 RID: 1363
+		// Token: 0x040005BC RID: 1468
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000554 RID: 1364
+		// Token: 0x040005BD RID: 1469
 		private static int HandleId;
 	}
 }

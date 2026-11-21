@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200363A RID: 13882
+// Token: 0x02002BAF RID: 11183
 public class __TsTaskNpcSetRideSpline_InheritProxy : TsTaskNpcSetRideSpline
 {
-	// Token: 0x0601E20F RID: 123407 RVA: 0x00881C70 File Offset: 0x0087FE70
+	// Token: 0x0601BF37 RID: 114487 RVA: 0x008A9D04 File Offset: 0x008A7F04
 	[NullableContext(1)]
 	public __TsTaskNpcSetRideSpline_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcSetRideSpline.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E210 RID: 123408 RVA: 0x00881CA3 File Offset: 0x0087FEA3
+	// Token: 0x0601BF38 RID: 114488 RVA: 0x008A9D37 File Offset: 0x008A7F37
 	protected __TsTaskNpcSetRideSpline_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E211 RID: 123409 RVA: 0x00881CAC File Offset: 0x0087FEAC
+	// Token: 0x0601BF39 RID: 114489 RVA: 0x008A9D40 File Offset: 0x008A7F40
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

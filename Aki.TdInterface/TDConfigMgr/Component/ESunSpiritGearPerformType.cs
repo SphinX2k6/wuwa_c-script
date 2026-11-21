@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000148 RID: 328
+	// Token: 0x0200015B RID: 347
 	[EnumExtensions]
 	public enum ESunSpiritGearPerformType
 	{
-		// Token: 0x04000659 RID: 1625
+		// Token: 0x0400069E RID: 1694
 		ToGearRelativePos,
-		// Token: 0x0400065A RID: 1626
+		// Token: 0x0400069F RID: 1695
 		ScaleUp
 	}
 }

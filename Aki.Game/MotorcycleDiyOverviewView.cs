@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022AC RID: 8876
+// Token: 0x02001790 RID: 6032
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleDiyOverviewView : UiViewBase
 {
-	// Token: 0x06011614 RID: 71188 RVA: 0x00440E83 File Offset: 0x0043F083
+	// Token: 0x0600EAAC RID: 60076 RVA: 0x0044DA7B File Offset: 0x0044BC7B
 	public MotorcycleDiyOverviewView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011615 RID: 71189 RVA: 0x00440EA4 File Offset: 0x0043F0A4
+	// Token: 0x0600EAAD RID: 60077 RVA: 0x0044DA9C File Offset: 0x0044BC9C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011616 RID: 71190 RVA: 0x00440F14 File Offset: 0x0043F114
+	// Token: 0x0600EAAE RID: 60078 RVA: 0x0044DB0C File Offset: 0x0044BD0C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleDiyOverviewView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -41,20 +41,20 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011617 RID: 71191 RVA: 0x00440F58 File Offset: 0x0043F158
+	// Token: 0x0600EAAF RID: 60079 RVA: 0x0044DB50 File Offset: 0x0044BD50
 	protected override void OnBeforeShow()
 	{
 		int index = this.CurrentSelectPart - 1;
 		this.PartTabComponent.SelectToggleByIndex(index, false, true);
 	}
 
-	// Token: 0x06011618 RID: 71192 RVA: 0x00440F7C File Offset: 0x0043F17C
+	// Token: 0x0600EAB0 RID: 60080 RVA: 0x0044DB74 File Offset: 0x0044BD74
 	private MotorcycleDiyPartTabItem InitPartTabItem([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new MotorcycleDiyPartTabItem();
 	}
 
-	// Token: 0x06011619 RID: 71193 RVA: 0x00440F84 File Offset: 0x0043F184
+	// Token: 0x0600EAB1 RID: 60081 RVA: 0x0044DB7C File Offset: 0x0044BD7C
 	private void ToggleCallBack(int index)
 	{
 		MotorcycleDiyPartTabItemData motorcycleDiyPartTabItemData = this.PartTabItemDataList[index];
@@ -62,7 +62,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		this.RefreshScrollViewByData(motorcycleDiyPartTabItemData.PartId, true);
 	}
 
-	// Token: 0x0601161A RID: 71194 RVA: 0x00440FB7 File Offset: 0x0043F1B7
+	// Token: 0x0600EAB2 RID: 60082 RVA: 0x0044DBAF File Offset: 0x0044BDAF
 	private MotorcycleDiyStickerDecoItem CreateOverviewItem()
 	{
 		return new MotorcycleDiyStickerDecoItem
@@ -71,7 +71,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601161B RID: 71195 RVA: 0x00440FD0 File Offset: 0x0043F1D0
+	// Token: 0x0600EAB3 RID: 60083 RVA: 0x0044DBC8 File Offset: 0x0044BDC8
 	private List<MotorcycleDiyStickerDecoItemData> GetItemDataList(int partId)
 	{
 		if (this.CurrentOutlookType == EOutlookType.Sticker)
@@ -85,7 +85,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		return new List<MotorcycleDiyStickerDecoItemData>();
 	}
 
-	// Token: 0x0601161C RID: 71196 RVA: 0x00440FFC File Offset: 0x0043F1FC
+	// Token: 0x0600EAB4 RID: 60084 RVA: 0x0044DBF4 File Offset: 0x0044BDF4
 	private List<MotorcycleDiyStickerDecoItemData> GetStickerItemDataList(int partId)
 	{
 		List<MotorcycleDiyStickerDecoItemData> list = new List<MotorcycleDiyStickerDecoItemData>();
@@ -130,7 +130,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0601161D RID: 71197 RVA: 0x004411C8 File Offset: 0x0043F3C8
+	// Token: 0x0600EAB5 RID: 60085 RVA: 0x0044DDC0 File Offset: 0x0044BFC0
 	private List<MotorcycleDiyStickerDecoItemData> GetDecorationItemDataList(int partId)
 	{
 		List<MotorcycleDiyStickerDecoItemData> list = new List<MotorcycleDiyStickerDecoItemData>();
@@ -175,7 +175,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0601161E RID: 71198 RVA: 0x00441394 File Offset: 0x0043F594
+	// Token: 0x0600EAB6 RID: 60086 RVA: 0x0044DF8C File Offset: 0x0044C18C
 	private int SortItemFunc(MotorcycleDiyStickerDecoItemData dataA, MotorcycleDiyStickerDecoItemData dataB)
 	{
 		EOutLookState itemState = MotorcycleDiyModel.Instance.GetItemState(this.CurrentOutlookType, dataA.ItemId);
@@ -200,7 +200,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		return dataB.SortIndex - sortIndex;
 	}
 
-	// Token: 0x0601161F RID: 71199 RVA: 0x00441434 File Offset: 0x0043F634
+	// Token: 0x0600EAB7 RID: 60087 RVA: 0x0044E02C File Offset: 0x0044C22C
 	private void RefreshScrollViewByData(int partId, bool isNeedRefresh)
 	{
 		if (isNeedRefresh)
@@ -218,7 +218,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		this.OverviewScrollView.RefreshByData(this.CachedDataList, true, null, false);
 	}
 
-	// Token: 0x06011620 RID: 71200 RVA: 0x004414DC File Offset: 0x0043F6DC
+	// Token: 0x0600EAB8 RID: 60088 RVA: 0x0044E0D4 File Offset: 0x0044C2D4
 	private void AutoSelectGridByDataList(int partId, List<MotorcycleDiyStickerDecoItemData> dataList)
 	{
 		int gridIndex = 0;
@@ -245,7 +245,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		this.OverviewScrollView.SelectGridProxy(gridIndex, false);
 	}
 
-	// Token: 0x06011621 RID: 71201 RVA: 0x00441580 File Offset: 0x0043F780
+	// Token: 0x0600EAB9 RID: 60089 RVA: 0x0044E178 File Offset: 0x0044C378
 	private void OnClickOverView(int itemId, UUIExtendToggle toggle, UUIItem newItem)
 	{
 		EOutLookState itemState = MotorcycleDiyModel.Instance.GetItemState(this.CurrentOutlookType, itemId);
@@ -306,17 +306,17 @@ public class MotorcycleDiyOverviewView : UiViewBase
 		this.RefreshScrollViewByData(this.CurrentSelectPart, false);
 	}
 
-	// Token: 0x06011622 RID: 71202 RVA: 0x00441713 File Offset: 0x0043F913
+	// Token: 0x0600EABA RID: 60090 RVA: 0x0044E30B File Offset: 0x0044C50B
 	private void OnBackButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04008410 RID: 33808
+	// Token: 0x0400854E RID: 34126
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04008411 RID: 33809
+	// Token: 0x0400854F RID: 34127
 	[Nullable(new byte[]
 	{
 		2,
@@ -324,7 +324,7 @@ public class MotorcycleDiyOverviewView : UiViewBase
 	})]
 	private TabComponent<MotorcycleDiyPartTabItem> PartTabComponent;
 
-	// Token: 0x04008412 RID: 33810
+	// Token: 0x04008550 RID: 34128
 	[Nullable(new byte[]
 	{
 		2,
@@ -333,42 +333,42 @@ public class MotorcycleDiyOverviewView : UiViewBase
 	})]
 	private LoopScrollView<MotorcycleDiyStickerDecoItem, MotorcycleDiyStickerDecoItemData> OverviewScrollView;
 
-	// Token: 0x04008413 RID: 33811
+	// Token: 0x04008551 RID: 34129
 	private readonly List<MotorcycleDiyPartTabItemData> PartTabItemDataList = new List<MotorcycleDiyPartTabItemData>();
 
-	// Token: 0x04008414 RID: 33812
+	// Token: 0x04008552 RID: 34130
 	private List<MotorcycleDiyStickerDecoItemData> CachedDataList = new List<MotorcycleDiyStickerDecoItemData>();
 
-	// Token: 0x04008415 RID: 33813
+	// Token: 0x04008553 RID: 34131
 	[Nullable(2)]
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x04008416 RID: 33814
+	// Token: 0x04008554 RID: 34132
 	private int CurrentSelectPart;
 
-	// Token: 0x04008417 RID: 33815
+	// Token: 0x04008555 RID: 34133
 	private EOutlookType CurrentOutlookType;
 
-	// Token: 0x0200880F RID: 34831
+	// Token: 0x02007995 RID: 31125
 	[NullableContext(0)]
 	private class EMotorDiyOverviewComponent
 	{
-		// Token: 0x0402C37B RID: 181115
+		// Token: 0x04027683 RID: 161411
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402C37C RID: 181116
+		// Token: 0x04027684 RID: 161412
 		public const int TabScrollView = 1;
 
-		// Token: 0x0402C37D RID: 181117
+		// Token: 0x04027685 RID: 161413
 		public const int TabContent = 2;
 
-		// Token: 0x0402C37E RID: 181118
+		// Token: 0x04027686 RID: 161414
 		public const int TabItem = 3;
 
-		// Token: 0x0402C37F RID: 181119
+		// Token: 0x04027687 RID: 161415
 		public const int OverviewScrollView = 4;
 
-		// Token: 0x0402C380 RID: 181120
+		// Token: 0x04027688 RID: 161416
 		public const int OverviewItem = 5;
 	}
 }

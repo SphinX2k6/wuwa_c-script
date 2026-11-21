@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C57 RID: 23639
+	// Token: 0x02004C37 RID: 19511
 	public enum EBattleScoreType
 	{
-		// Token: 0x0401F1DA RID: 127450
+		// Token: 0x04019C8B RID: 105611
 		Rogue = 1,
-		// Token: 0x0401F1DB RID: 127451
+		// Token: 0x04019C8C RID: 105612
 		BossRush,
-		// Token: 0x0401F1DC RID: 127452
+		// Token: 0x04019C8D RID: 105613
 		TowerDefense,
-		// Token: 0x0401F1DD RID: 127453
+		// Token: 0x04019C8E RID: 105614
 		BattleLink,
-		// Token: 0x0401F1DE RID: 127454
+		// Token: 0x04019C8F RID: 105615
 		DreamLink,
-		// Token: 0x0401F1DF RID: 127455
+		// Token: 0x04019C90 RID: 105616
 		LevelPlayReport,
-		// Token: 0x0401F1E0 RID: 127456
+		// Token: 0x04019C91 RID: 105617
 		WeeklyRogue,
-		// Token: 0x0401F1E1 RID: 127457
+		// Token: 0x04019C92 RID: 105618
 		VisionArena,
-		// Token: 0x0401F1E2 RID: 127458
+		// Token: 0x04019C93 RID: 105619
 		ShipTower,
-		// Token: 0x0401F1E3 RID: 127459
+		// Token: 0x04019C94 RID: 105620
 		BossPiling
 	}
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x0200268C RID: 9868
+// Token: 0x02001B77 RID: 7031
 public enum EQuestTreeNodeState
 {
-	// Token: 0x04009829 RID: 38953
+	// Token: 0x04009981 RID: 39297
 	None,
-	// Token: 0x0400982A RID: 38954
+	// Token: 0x04009982 RID: 39298
 	Locked,
-	// Token: 0x0400982B RID: 38955
+	// Token: 0x04009983 RID: 39299
 	Available,
-	// Token: 0x0400982C RID: 38956
+	// Token: 0x04009984 RID: 39300
 	InProgress,
-	// Token: 0x0400982D RID: 38957
+	// Token: 0x04009985 RID: 39301
 	Finished
 }

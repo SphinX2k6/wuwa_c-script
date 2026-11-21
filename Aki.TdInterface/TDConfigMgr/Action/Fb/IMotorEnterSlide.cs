@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027F4 RID: 10228
+	// Token: 0x02002AC7 RID: 10951
 	public class IMotorEnterSlide : ILeisureInteractType
 	{
-		// Token: 0x0600E324 RID: 58148 RVA: 0x00218099 File Offset: 0x00216299
-		[NullableContext(1)]
+		// Token: 0x0600F149 RID: 61769 RVA: 0x00234EFC File Offset: 0x002330FC
 		public static IMotorEnterSlide Create(IMotorEnterSlide? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044FE RID: 17662
-		// (get) Token: 0x0600E325 RID: 58149 RVA: 0x002180B8 File Offset: 0x002162B8
+		// Token: 0x17004869 RID: 18537
+		// (get) Token: 0x0600F14A RID: 61770 RVA: 0x00234F1B File Offset: 0x0023311B
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044FF RID: 17663
-		// (get) Token: 0x0600E326 RID: 58150 RVA: 0x002180C5 File Offset: 0x002162C5
+		// Token: 0x1700486A RID: 18538
+		// (get) Token: 0x0600F14B RID: 61771 RVA: 0x00234F28 File Offset: 0x00233128
 		public virtual int EntityId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004500 RID: 17664
-		// (get) Token: 0x0600E327 RID: 58151 RVA: 0x002180D4 File Offset: 0x002162D4
+		// Token: 0x1700486B RID: 18539
+		// (get) Token: 0x0600F14C RID: 61772 RVA: 0x00234F38 File Offset: 0x00233138
 		public virtual EMotorEnterSlideMode? EnterMode
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DD8 RID: 32216
+		// Token: 0x04008495 RID: 33941
 		private IMotorEnterSlide Instance;
 	}
 }

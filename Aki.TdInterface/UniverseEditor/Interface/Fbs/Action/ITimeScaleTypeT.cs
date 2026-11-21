@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073E6 RID: 29670
+	// Token: 0x02007BD0 RID: 31696
 	public class ITimeScaleTypeT
 	{
-		// Token: 0x1700E160 RID: 57696
-		// (get) Token: 0x06035E65 RID: 220773 RVA: 0x00755E5A File Offset: 0x0075405A
-		// (set) Token: 0x06035E66 RID: 220774 RVA: 0x00755E62 File Offset: 0x00754062
+		// Token: 0x1700ED75 RID: 60789
+		// (get) Token: 0x06039218 RID: 234008 RVA: 0x007B85CE File Offset: 0x007B67CE
+		// (set) Token: 0x06039219 RID: 234009 RVA: 0x007B85D6 File Offset: 0x007B67D6
 		public ETimeScaleType Type { get; set; }
 
-		// Token: 0x06035E67 RID: 220775 RVA: 0x00755E6B File Offset: 0x0075406B
+		// Token: 0x0603921A RID: 234010 RVA: 0x007B85DF File Offset: 0x007B67DF
 		public ITimeScaleTypeT()
 		{
 			this.Type = ETimeScaleType.Global;

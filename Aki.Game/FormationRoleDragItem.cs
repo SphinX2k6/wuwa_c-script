@@ -9,10 +9,10 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001C0B RID: 7179
+// Token: 0x020010CA RID: 4298
 public class FormationRoleDragItem : UiPanelBase
 {
-	// Token: 0x0600D6CC RID: 54988 RVA: 0x0031A8FC File Offset: 0x00318AFC
+	// Token: 0x0600AADF RID: 43743 RVA: 0x00325BF0 File Offset: 0x00323DF0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -26,7 +26,7 @@ public class FormationRoleDragItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D6CD RID: 54989 RVA: 0x0031A968 File Offset: 0x00318B68
+	// Token: 0x0600AAE0 RID: 43744 RVA: 0x00325C5C File Offset: 0x00323E5C
 	public virtual void RefreshRoleIcon(int configId, int roleSkinId)
 	{
 		FormationRoleDragItem.<>c__DisplayClass2_0 CS$<>8__locals1 = new FormationRoleDragItem.<>c__DisplayClass2_0();
@@ -61,12 +61,12 @@ public class FormationRoleDragItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x020081BD RID: 33213
+	// Token: 0x02007346 RID: 29510
 	private enum EChildType
 	{
-		// Token: 0x0402A55E RID: 173406
+		// Token: 0x04025885 RID: 153733
 		RoleIconSpine = 2,
-		// Token: 0x0402A55F RID: 173407
+		// Token: 0x04025886 RID: 153734
 		RoleItem
 	}
 }

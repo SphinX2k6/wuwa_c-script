@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EDD RID: 7901
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002116 RID: 8470
 	public class ISubScreenModeExit : ISubScreenModeConfig
 	{
-		// Token: 0x0600A90C RID: 43276 RVA: 0x0017D658 File Offset: 0x0017B858
+		// Token: 0x0600B3DE RID: 46046 RVA: 0x00193650 File Offset: 0x00191850
 		private ISubScreenModeExit_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A90D RID: 43277 RVA: 0x0017D690 File Offset: 0x0017B890
+		// Token: 0x0600B3DF RID: 46047 RVA: 0x00193688 File Offset: 0x00191888
 		public static ISubScreenModeExit Create([Nullable(2)] ISubScreenModeExit instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A90E RID: 43278 RVA: 0x0017D6A3 File Offset: 0x0017B8A3
+		// Token: 0x0600B3E0 RID: 46048 RVA: 0x0019369B File Offset: 0x0019189B
 		public static ISubScreenModeExit CreateFromSetValue([Nullable(2)] ISubScreenModeExit_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A90F RID: 43279 RVA: 0x0017D6B6 File Offset: 0x0017B8B6
+		// Token: 0x0600B3E1 RID: 46049 RVA: 0x001936AE File Offset: 0x001918AE
 		public new ISubScreenModeExit_SetValue ToSetValue()
 		{
 			return new ISubScreenModeExit_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003392 RID: 13202
-		// (get) Token: 0x0600A910 RID: 43280 RVA: 0x0017D6D5 File Offset: 0x0017B8D5
-		// (set) Token: 0x0600A911 RID: 43281 RVA: 0x0017D700 File Offset: 0x0017B900
+		// Token: 0x1700365D RID: 13917
+		// (get) Token: 0x0600B3E2 RID: 46050 RVA: 0x001936CD File Offset: 0x001918CD
+		// (set) Token: 0x0600B3E3 RID: 46051 RVA: 0x001936F8 File Offset: 0x001918F8
 		public override ESubScreenOperationType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003393 RID: 13203
-		// (get) Token: 0x0600A912 RID: 43282 RVA: 0x0017D710 File Offset: 0x0017B910
-		// (set) Token: 0x0600A913 RID: 43283 RVA: 0x0017D7A3 File Offset: 0x0017B9A3
+		// Token: 0x1700365E RID: 13918
+		// (get) Token: 0x0600B3E4 RID: 46052 RVA: 0x00193708 File Offset: 0x00191908
+		// (set) Token: 0x0600B3E5 RID: 46053 RVA: 0x0019379B File Offset: 0x0019199B
 		public virtual List<ISetSubScreenData> ExitConfigs
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064A3 RID: 25763
+		// Token: 0x04006A92 RID: 27282
 		[Nullable(2)]
 		protected new ISubScreenModeExit FbInstance;
 
-		// Token: 0x040064A4 RID: 25764
+		// Token: 0x04006A93 RID: 27283
 		[Nullable(2)]
 		protected new ISubScreenModeExit_SetValue PocoInterface;
 
-		// Token: 0x040064A5 RID: 25765
+		// Token: 0x04006A94 RID: 27284
 		private List<ISetSubScreenData> _ExitConfigsCache;
 
-		// Token: 0x040064A6 RID: 25766
+		// Token: 0x04006A95 RID: 27285
 		private bool _ExitConfigsInited;
 	}
 }

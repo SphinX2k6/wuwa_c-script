@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F1 RID: 4849
+	// Token: 0x02001437 RID: 5175
 	public class IKuroSimpleCombatKillMonsterSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006EAB RID: 28331 RVA: 0x0010B565 File Offset: 0x00109765
-		[NullableContext(1)]
+		// Token: 0x0600752B RID: 29995 RVA: 0x00119865 File Offset: 0x00117A65
 		public static IKuroSimpleCombatKillMonsterSystemConfig Create(IKuroSimpleCombatKillMonsterSystemConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700229C RID: 8860
-		// (get) Token: 0x06006EAC RID: 28332 RVA: 0x0010B584 File Offset: 0x00109784
+		// Token: 0x1700245F RID: 9311
+		// (get) Token: 0x0600752C RID: 29996 RVA: 0x00119884 File Offset: 0x00117A84
 		public override EEnableSystemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F6F RID: 16239
+		// Token: 0x040042DD RID: 17117
 		private IKuroSimpleCombatKillMonsterSystemConfig Instance;
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011C6 RID: 4550
+	// Token: 0x020012FC RID: 4860
 	public struct FloatArray : IFlatbufferObject
 	{
-		// Token: 0x17003EE1 RID: 16097
-		// (get) Token: 0x0600EA61 RID: 60001 RVA: 0x00347F50 File Offset: 0x00346150
+		// Token: 0x17004246 RID: 16966
+		// (get) Token: 0x0600F7D2 RID: 63442 RVA: 0x00372BDC File Offset: 0x00370DDC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,38 +18,38 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EA62 RID: 60002 RVA: 0x00347F5D File Offset: 0x0034615D
+		// Token: 0x0600F7D3 RID: 63443 RVA: 0x00372BE9 File Offset: 0x00370DE9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EA63 RID: 60003 RVA: 0x00347F64 File Offset: 0x00346164
+		// Token: 0x0600F7D4 RID: 63444 RVA: 0x00372BF0 File Offset: 0x00370DF0
 		public static FloatArray GetRootAsFloatArray(ByteBuffer _bb)
 		{
 			return FloatArray.GetRootAsFloatArray(_bb, default(FloatArray));
 		}
 
-		// Token: 0x0600EA64 RID: 60004 RVA: 0x00347F80 File Offset: 0x00346180
+		// Token: 0x0600F7D5 RID: 63445 RVA: 0x00372C0C File Offset: 0x00370E0C
 		public static FloatArray GetRootAsFloatArray(ByteBuffer _bb, FloatArray obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EA65 RID: 60005 RVA: 0x00347F9D File Offset: 0x0034619D
+		// Token: 0x0600F7D6 RID: 63446 RVA: 0x00372C29 File Offset: 0x00370E29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EA66 RID: 60006 RVA: 0x00347FAC File Offset: 0x003461AC
+		// Token: 0x0600F7D7 RID: 63447 RVA: 0x00372C38 File Offset: 0x00370E38
 		public FloatArray __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0600EA67 RID: 60007 RVA: 0x00347FBC File Offset: 0x003461BC
+		// Token: 0x0600F7D8 RID: 63448 RVA: 0x00372C48 File Offset: 0x00370E48
 		public float ArrayFloat(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -60,8 +60,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003EE2 RID: 16098
-		// (get) Token: 0x0600EA68 RID: 60008 RVA: 0x00348000 File Offset: 0x00346200
+		// Token: 0x17004247 RID: 16967
+		// (get) Token: 0x0600F7D9 RID: 63449 RVA: 0x00372C8C File Offset: 0x00370E8C
 		public int ArrayFloatLength
 		{
 			get
@@ -75,37 +75,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EA69 RID: 60009 RVA: 0x0034802B File Offset: 0x0034622B
+		// Token: 0x0600F7DA RID: 63450 RVA: 0x00372CB7 File Offset: 0x00370EB7
 		public Span<float> GetArrayFloatBytes()
 		{
 			return this.__p.__vector_as_span<float>(4, 4);
 		}
 
-		// Token: 0x0600EA6A RID: 60010 RVA: 0x0034803A File Offset: 0x0034623A
+		// Token: 0x0600F7DB RID: 63451 RVA: 0x00372CC6 File Offset: 0x00370EC6
 		public float[] GetArrayFloatArray()
 		{
 			return this.__p.__vector_as_array<float>(4) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x0600EA6B RID: 60011 RVA: 0x00348054 File Offset: 0x00346254
+		// Token: 0x0600F7DC RID: 63452 RVA: 0x00372CDD File Offset: 0x00370EDD
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ArrayFloatIter()或GetArrayFloatBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] ArrayFloat()
+		public float[] ArrayFloat()
 		{
-			FloatArray floatArray = this;
-			return floatArray.GetArrayFloatArray() ?? Array.Empty<float>();
+			return this.GetArrayFloatArray();
 		}
 
-		// Token: 0x0600EA6C RID: 60012 RVA: 0x00348078 File Offset: 0x00346278
+		// Token: 0x0600F7DD RID: 63453 RVA: 0x00372CE5 File Offset: 0x00370EE5
 		[NullableContext(1)]
-		public readonly IEnumerable<float> ArrayFloatIter()
+		public IEnumerable<float> ArrayFloatIter()
 		{
 			FloatArray.<ArrayFloatIter>d__14 <ArrayFloatIter>d__ = new FloatArray.<ArrayFloatIter>d__14(-2);
 			<ArrayFloatIter>d__.<>3__<>4__this = this;
 			return <ArrayFloatIter>d__;
 		}
 
-		// Token: 0x04005329 RID: 21289
+		// Token: 0x0400596C RID: 22892
 		private Table __p;
 	}
 }

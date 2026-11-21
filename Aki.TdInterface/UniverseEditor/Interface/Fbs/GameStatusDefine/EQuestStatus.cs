@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046E5 RID: 18149
+	// Token: 0x02004B4D RID: 19277
 	public enum EQuestStatus : byte
 	{
-		// Token: 0x0400C96D RID: 51565
+		// Token: 0x0400D39C RID: 54172
 		None,
-		// Token: 0x0400C96E RID: 51566
+		// Token: 0x0400D39D RID: 54173
 		Ready,
-		// Token: 0x0400C96F RID: 51567
+		// Token: 0x0400D39E RID: 54174
 		Progress
 	}
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F56 RID: 12118
+// Token: 0x020024A9 RID: 9385
 [NullableContext(1)]
 [Nullable(0)]
 public class DynamicModifyBuffStackEffect : BuffEffect
 {
-	// Token: 0x06019CA4 RID: 105636 RVA: 0x006B9BFC File Offset: 0x006B7DFC
+	// Token: 0x060175AF RID: 95663 RVA: 0x006DFF18 File Offset: 0x006DE118
 	public DynamicModifyBuffStackEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019CA5 RID: 105637 RVA: 0x006B9C18 File Offset: 0x006B7E18
+	// Token: 0x060175B0 RID: 95664 RVA: 0x006DFF34 File Offset: 0x006DE134
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -29,19 +29,19 @@ public class DynamicModifyBuffStackEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CA6 RID: 105638 RVA: 0x006B9C8B File Offset: 0x006B7E8B
+	// Token: 0x060175B1 RID: 95665 RVA: 0x006DFFA7 File Offset: 0x006DE1A7
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019CA7 RID: 105639 RVA: 0x006B9C8E File Offset: 0x006B7E8E
+	// Token: 0x060175B2 RID: 95666 RVA: 0x006DFFAA File Offset: 0x006DE1AA
 	public override void OnCreated()
 	{
 	}
 
-	// Token: 0x06019CA8 RID: 105640 RVA: 0x006B9C90 File Offset: 0x006B7E90
+	// Token: 0x060175B3 RID: 95667 RVA: 0x006DFFAC File Offset: 0x006DE1AC
 	public override void OnRemoved(bool bPremature)
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -54,6 +54,6 @@ public class DynamicModifyBuffStackEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x0400C26D RID: 49773
+	// Token: 0x0400C60F RID: 50703
 	public long[] BuffIds = Array.Empty<long>();
 }

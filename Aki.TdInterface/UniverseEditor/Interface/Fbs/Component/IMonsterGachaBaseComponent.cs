@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005578 RID: 21880
+	// Token: 0x02005B16 RID: 23318
 	public struct IMonsterGachaBaseComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A1AD RID: 41389
-		// (get) Token: 0x06024351 RID: 148305 RVA: 0x0050024A File Offset: 0x004FE44A
+		// Token: 0x1700AA35 RID: 43573
+		// (get) Token: 0x0602655E RID: 157022 RVA: 0x005407C2 File Offset: 0x0053E9C2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024352 RID: 148306 RVA: 0x00500257 File Offset: 0x004FE457
+		// Token: 0x0602655F RID: 157023 RVA: 0x005407CF File Offset: 0x0053E9CF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024353 RID: 148307 RVA: 0x00500260 File Offset: 0x004FE460
+		// Token: 0x06026560 RID: 157024 RVA: 0x005407D8 File Offset: 0x0053E9D8
 		public static IMonsterGachaBaseComponent GetRootAsIMonsterGachaBaseComponent(ByteBuffer _bb)
 		{
 			return IMonsterGachaBaseComponent.GetRootAsIMonsterGachaBaseComponent(_bb, default(IMonsterGachaBaseComponent));
 		}
 
-		// Token: 0x06024354 RID: 148308 RVA: 0x0050027C File Offset: 0x004FE47C
+		// Token: 0x06026561 RID: 157025 RVA: 0x005407F4 File Offset: 0x0053E9F4
 		public static IMonsterGachaBaseComponent GetRootAsIMonsterGachaBaseComponent(ByteBuffer _bb, IMonsterGachaBaseComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024355 RID: 148309 RVA: 0x00500299 File Offset: 0x004FE499
+		// Token: 0x06026562 RID: 157026 RVA: 0x00540811 File Offset: 0x0053EA11
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024356 RID: 148310 RVA: 0x005002A8 File Offset: 0x004FE4A8
+		// Token: 0x06026563 RID: 157027 RVA: 0x00540820 File Offset: 0x0053EA20
 		public IMonsterGachaBaseComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A1AE RID: 41390
-		// (get) Token: 0x06024357 RID: 148311 RVA: 0x005002B8 File Offset: 0x004FE4B8
+		// Token: 0x1700AA36 RID: 43574
+		// (get) Token: 0x06026564 RID: 157028 RVA: 0x00540830 File Offset: 0x0053EA30
 		public bool Disabled
 		{
 			get
@@ -59,7 +59,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024358 RID: 148312 RVA: 0x005002F8 File Offset: 0x004FE4F8
+		// Token: 0x06026565 RID: 157029 RVA: 0x00540870 File Offset: 0x0053EA70
 		public int MonsterEntityIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700A1AF RID: 41391
-		// (get) Token: 0x06024359 RID: 148313 RVA: 0x00500338 File Offset: 0x004FE538
+		// Token: 0x1700AA37 RID: 43575
+		// (get) Token: 0x06026566 RID: 157030 RVA: 0x005408B0 File Offset: 0x0053EAB0
 		public int MonsterEntityIdsLength
 		{
 			get
@@ -85,19 +85,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602435A RID: 148314 RVA: 0x00500363 File Offset: 0x004FE563
+		// Token: 0x06026567 RID: 157031 RVA: 0x005408DB File Offset: 0x0053EADB
 		public Span<int> GetMonsterEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0602435B RID: 148315 RVA: 0x00500372 File Offset: 0x004FE572
+		// Token: 0x06026568 RID: 157032 RVA: 0x005408EA File Offset: 0x0053EAEA
 		public int[] GetMonsterEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x0602435C RID: 148316 RVA: 0x00500380 File Offset: 0x004FE580
+		// Token: 0x06026569 RID: 157033 RVA: 0x005408F8 File Offset: 0x0053EAF8
 		public IMonsterGachaSlot? Config(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IMonsterGachaSlot?(default(IMonsterGachaSlot).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A1B0 RID: 41392
-		// (get) Token: 0x0602435D RID: 148317 RVA: 0x005003E0 File Offset: 0x004FE5E0
+		// Token: 0x1700AA38 RID: 43576
+		// (get) Token: 0x0602656A RID: 157034 RVA: 0x00540958 File Offset: 0x0053EB58
 		public int ConfigLength
 		{
 			get
@@ -123,7 +123,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602435E RID: 148318 RVA: 0x0050040C File Offset: 0x004FE60C
+		// Token: 0x0602656B RID: 157035 RVA: 0x00540984 File Offset: 0x0053EB84
 		public IMonsterFormation? Formation(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -134,8 +134,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IMonsterFormation?(default(IMonsterFormation).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A1B1 RID: 41393
-		// (get) Token: 0x0602435F RID: 148319 RVA: 0x00500470 File Offset: 0x004FE670
+		// Token: 0x1700AA39 RID: 43577
+		// (get) Token: 0x0602656C RID: 157036 RVA: 0x005409E8 File Offset: 0x0053EBE8
 		public int FormationLength
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A1B2 RID: 41394
-		// (get) Token: 0x06024360 RID: 148320 RVA: 0x0050049C File Offset: 0x004FE69C
+		// Token: 0x1700AA3A RID: 43578
+		// (get) Token: 0x0602656D RID: 157037 RVA: 0x00540A14 File Offset: 0x0053EC14
 		public byte NullMask
 		{
 			get
@@ -164,7 +164,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024361 RID: 148321 RVA: 0x005004D9 File Offset: 0x004FE6D9
+		// Token: 0x0602656E RID: 157038 RVA: 0x00540A51 File Offset: 0x0053EC51
 		public static Offset<IMonsterGachaBaseComponent> CreateIMonsterGachaBaseComponent(FlatBufferBuilder builder, bool Disabled = false, VectorOffset MonsterEntityIdsOffset = default(VectorOffset), VectorOffset ConfigOffset = default(VectorOffset), VectorOffset FormationOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -176,25 +176,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterGachaBaseComponent.EndIMonsterGachaBaseComponent(builder);
 		}
 
-		// Token: 0x06024362 RID: 148322 RVA: 0x0050050D File Offset: 0x004FE70D
+		// Token: 0x0602656F RID: 157039 RVA: 0x00540A85 File Offset: 0x0053EC85
 		public static void StartIMonsterGachaBaseComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06024363 RID: 148323 RVA: 0x00500516 File Offset: 0x004FE716
+		// Token: 0x06026570 RID: 157040 RVA: 0x00540A8E File Offset: 0x0053EC8E
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06024364 RID: 148324 RVA: 0x00500521 File Offset: 0x004FE721
+		// Token: 0x06026571 RID: 157041 RVA: 0x00540A99 File Offset: 0x0053EC99
 		public static void AddMonsterEntityIds(FlatBufferBuilder builder, VectorOffset monsterEntityIdsOffset)
 		{
 			builder.AddOffset(1, monsterEntityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06024365 RID: 148325 RVA: 0x00500534 File Offset: 0x004FE734
+		// Token: 0x06026572 RID: 157042 RVA: 0x00540AAC File Offset: 0x0053ECAC
 		public static VectorOffset CreateMonsterEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024366 RID: 148326 RVA: 0x0050056B File Offset: 0x004FE76B
+		// Token: 0x06026573 RID: 157043 RVA: 0x00540AE3 File Offset: 0x0053ECE3
 		public static VectorOffset CreateMonsterEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024367 RID: 148327 RVA: 0x00500585 File Offset: 0x004FE785
+		// Token: 0x06026574 RID: 157044 RVA: 0x00540AFD File Offset: 0x0053ECFD
 		public static VectorOffset CreateMonsterEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024368 RID: 148328 RVA: 0x005005A3 File Offset: 0x004FE7A3
+		// Token: 0x06026575 RID: 157045 RVA: 0x00540B1B File Offset: 0x0053ED1B
 		public static VectorOffset CreateMonsterEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -229,19 +229,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024369 RID: 148329 RVA: 0x005005BC File Offset: 0x004FE7BC
+		// Token: 0x06026576 RID: 157046 RVA: 0x00540B34 File Offset: 0x0053ED34
 		public static void StartMonsterEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602436A RID: 148330 RVA: 0x005005C7 File Offset: 0x004FE7C7
+		// Token: 0x06026577 RID: 157047 RVA: 0x00540B3F File Offset: 0x0053ED3F
 		public static void AddConfig(FlatBufferBuilder builder, VectorOffset configOffset)
 		{
 			builder.AddOffset(2, configOffset.Value, 0);
 		}
 
-		// Token: 0x0602436B RID: 148331 RVA: 0x005005D8 File Offset: 0x004FE7D8
+		// Token: 0x06026578 RID: 157048 RVA: 0x00540B50 File Offset: 0x0053ED50
 		public static VectorOffset CreateConfigVector(FlatBufferBuilder builder, Offset<IMonsterGachaSlot>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -252,7 +252,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602436C RID: 148332 RVA: 0x00500618 File Offset: 0x004FE818
+		// Token: 0x06026579 RID: 157049 RVA: 0x00540B90 File Offset: 0x0053ED90
 		public static VectorOffset CreateConfigVectorBlock(FlatBufferBuilder builder, Offset<IMonsterGachaSlot>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -260,7 +260,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602436D RID: 148333 RVA: 0x00500632 File Offset: 0x004FE832
+		// Token: 0x0602657A RID: 157050 RVA: 0x00540BAA File Offset: 0x0053EDAA
 		public static VectorOffset CreateConfigVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IMonsterGachaSlot>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -268,7 +268,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602436E RID: 148334 RVA: 0x00500650 File Offset: 0x004FE850
+		// Token: 0x0602657B RID: 157051 RVA: 0x00540BC8 File Offset: 0x0053EDC8
 		public static VectorOffset CreateConfigVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -276,19 +276,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602436F RID: 148335 RVA: 0x00500669 File Offset: 0x004FE869
+		// Token: 0x0602657C RID: 157052 RVA: 0x00540BE1 File Offset: 0x0053EDE1
 		public static void StartConfigVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06024370 RID: 148336 RVA: 0x00500674 File Offset: 0x004FE874
+		// Token: 0x0602657D RID: 157053 RVA: 0x00540BEC File Offset: 0x0053EDEC
 		public static void AddFormation(FlatBufferBuilder builder, VectorOffset formationOffset)
 		{
 			builder.AddOffset(3, formationOffset.Value, 0);
 		}
 
-		// Token: 0x06024371 RID: 148337 RVA: 0x00500684 File Offset: 0x004FE884
+		// Token: 0x0602657E RID: 157054 RVA: 0x00540BFC File Offset: 0x0053EDFC
 		public static VectorOffset CreateFormationVector(FlatBufferBuilder builder, Offset<IMonsterFormation>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -299,7 +299,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024372 RID: 148338 RVA: 0x005006C4 File Offset: 0x004FE8C4
+		// Token: 0x0602657F RID: 157055 RVA: 0x00540C3C File Offset: 0x0053EE3C
 		public static VectorOffset CreateFormationVectorBlock(FlatBufferBuilder builder, Offset<IMonsterFormation>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -307,7 +307,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024373 RID: 148339 RVA: 0x005006DE File Offset: 0x004FE8DE
+		// Token: 0x06026580 RID: 157056 RVA: 0x00540C56 File Offset: 0x0053EE56
 		public static VectorOffset CreateFormationVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IMonsterFormation>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -315,7 +315,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024374 RID: 148340 RVA: 0x005006FC File Offset: 0x004FE8FC
+		// Token: 0x06026581 RID: 157057 RVA: 0x00540C74 File Offset: 0x0053EE74
 		public static VectorOffset CreateFormationVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -323,25 +323,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024375 RID: 148341 RVA: 0x00500715 File Offset: 0x004FE915
+		// Token: 0x06026582 RID: 157058 RVA: 0x00540C8D File Offset: 0x0053EE8D
 		public static void StartFormationVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06024376 RID: 148342 RVA: 0x00500720 File Offset: 0x004FE920
+		// Token: 0x06026583 RID: 157059 RVA: 0x00540C98 File Offset: 0x0053EE98
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06024377 RID: 148343 RVA: 0x0050072B File Offset: 0x004FE92B
+		// Token: 0x06026584 RID: 157060 RVA: 0x00540CA3 File Offset: 0x0053EEA3
 		public static Offset<IMonsterGachaBaseComponent> EndIMonsterGachaBaseComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterGachaBaseComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06024378 RID: 148344 RVA: 0x00500738 File Offset: 0x004FE938
+		// Token: 0x06026585 RID: 157061 RVA: 0x00540CB0 File Offset: 0x0053EEB0
 		public IMonsterGachaBaseComponentT UnPack()
 		{
 			IMonsterGachaBaseComponentT monsterGachaBaseComponentT = new IMonsterGachaBaseComponentT();
@@ -349,7 +349,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return monsterGachaBaseComponentT;
 		}
 
-		// Token: 0x06024379 RID: 148345 RVA: 0x00500754 File Offset: 0x004FE954
+		// Token: 0x06026586 RID: 157062 RVA: 0x00540CCC File Offset: 0x0053EECC
 		public void UnPackTo(IMonsterGachaBaseComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -371,7 +371,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602437A RID: 148346 RVA: 0x00500854 File Offset: 0x004FEA54
+		// Token: 0x06026587 RID: 157063 RVA: 0x00540DCC File Offset: 0x0053EFCC
 		public static Offset<IMonsterGachaBaseComponent> Pack(FlatBufferBuilder builder, IMonsterGachaBaseComponentT _o)
 		{
 			if (_o == null)
@@ -407,7 +407,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterGachaBaseComponent.CreateIMonsterGachaBaseComponent(builder, _o.Disabled, monsterEntityIdsOffset, configOffset, formationOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E8A2 RID: 59554
+		// Token: 0x0400F504 RID: 62724
 		private Table __p;
 	}
 }

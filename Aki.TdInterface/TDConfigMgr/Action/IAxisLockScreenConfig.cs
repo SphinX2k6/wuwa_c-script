@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017F4 RID: 6132
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200197D RID: 6525
 	public class IAxisLockScreenConfig : ActionParams
 	{
-		// Token: 0x060083B1 RID: 33713 RVA: 0x0013A478 File Offset: 0x00138678
+		// Token: 0x06008ACD RID: 35533 RVA: 0x00149B60 File Offset: 0x00147D60
 		private IAxisLockScreenConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060083B2 RID: 33714 RVA: 0x0013A4B0 File Offset: 0x001386B0
+		// Token: 0x06008ACE RID: 35534 RVA: 0x00149B98 File Offset: 0x00147D98
 		public static IAxisLockScreenConfig Create([Nullable(2)] IAxisLockScreenConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083B3 RID: 33715 RVA: 0x0013A4C3 File Offset: 0x001386C3
+		// Token: 0x06008ACF RID: 35535 RVA: 0x00149BAB File Offset: 0x00147DAB
 		public static IAxisLockScreenConfig CreateFromSetValue([Nullable(2)] IAxisLockScreenConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083B4 RID: 33716 RVA: 0x0013A4D6 File Offset: 0x001386D6
+		// Token: 0x06008AD0 RID: 35536 RVA: 0x00149BBE File Offset: 0x00147DBE
 		public IAxisLockScreenConfig_SetValue ToSetValue()
 		{
 			return new IAxisLockScreenConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B3F RID: 11071
-		// (get) Token: 0x060083B5 RID: 33717 RVA: 0x0013A501 File Offset: 0x00138701
-		// (set) Token: 0x060083B6 RID: 33718 RVA: 0x0013A530 File Offset: 0x00138730
+		// Token: 0x17002D37 RID: 11575
+		// (get) Token: 0x06008AD1 RID: 35537 RVA: 0x00149BE9 File Offset: 0x00147DE9
+		// (set) Token: 0x06008AD2 RID: 35538 RVA: 0x00149C18 File Offset: 0x00147E18
 		public virtual float TriggerAngle
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B40 RID: 11072
-		// (get) Token: 0x060083B7 RID: 33719 RVA: 0x0013A53E File Offset: 0x0013873E
-		// (set) Token: 0x060083B8 RID: 33720 RVA: 0x0013A56D File Offset: 0x0013876D
+		// Token: 0x17002D38 RID: 11576
+		// (get) Token: 0x06008AD3 RID: 35539 RVA: 0x00149C26 File Offset: 0x00147E26
+		// (set) Token: 0x06008AD4 RID: 35540 RVA: 0x00149C55 File Offset: 0x00147E55
 		public virtual float FadeInTime
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B41 RID: 11073
-		// (get) Token: 0x060083B9 RID: 33721 RVA: 0x0013A57B File Offset: 0x0013877B
-		// (set) Token: 0x060083BA RID: 33722 RVA: 0x0013A5AA File Offset: 0x001387AA
+		// Token: 0x17002D39 RID: 11577
+		// (get) Token: 0x06008AD5 RID: 35541 RVA: 0x00149C63 File Offset: 0x00147E63
+		// (set) Token: 0x06008AD6 RID: 35542 RVA: 0x00149C92 File Offset: 0x00147E92
 		public virtual float FadeOutTime
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005382 RID: 21378
+		// Token: 0x040057CA RID: 22474
 		[Nullable(2)]
 		protected new IAxisLockScreenConfig FbInstance;
 
-		// Token: 0x04005383 RID: 21379
+		// Token: 0x040057CB RID: 22475
 		[Nullable(2)]
 		protected IAxisLockScreenConfig_SetValue PocoInterface;
 	}

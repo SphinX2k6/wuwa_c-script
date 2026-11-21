@@ -12,12 +12,12 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.Plot;
 
-// Token: 0x02001D93 RID: 7571
+// Token: 0x02001255 RID: 4693
 [NullableContext(2)]
 [Nullable(0)]
 public class GeneralLogicTreeUtil : Singleton
 {
-	// Token: 0x0600E5BC RID: 58812 RVA: 0x00361F30 File Offset: 0x00360130
+	// Token: 0x0600B9DA RID: 47578 RVA: 0x0036DB90 File Offset: 0x0036BD90
 	public global::Vector GetEntityConfigPosition(int pbDataId, int? mapId = null)
 	{
 		global::Vector result = null;
@@ -34,7 +34,7 @@ public class GeneralLogicTreeUtil : Singleton
 		return result;
 	}
 
-	// Token: 0x0600E5BD RID: 58813 RVA: 0x00361FD4 File Offset: 0x003601D4
+	// Token: 0x0600B9DB RID: 47579 RVA: 0x0036DC34 File Offset: 0x0036BE34
 	public global::Rotator GetEntityConfigRotator(int pbDataId)
 	{
 		global::Rotator result = null;
@@ -84,7 +84,7 @@ public class GeneralLogicTreeUtil : Singleton
 		return result;
 	}
 
-	// Token: 0x0600E5BE RID: 58814 RVA: 0x003620AC File Offset: 0x003602AC
+	// Token: 0x0600B9DC RID: 47580 RVA: 0x0036DD0C File Offset: 0x0036BF0C
 	public global::Transform GetEntityConfigTransform(int pbDataId)
 	{
 		global::Transform result = null;
@@ -180,7 +180,7 @@ public class GeneralLogicTreeUtil : Singleton
 		return result;
 	}
 
-	// Token: 0x0600E5BF RID: 58815 RVA: 0x003622E4 File Offset: 0x003604E4
+	// Token: 0x0600B9DD RID: 47581 RVA: 0x0036DF44 File Offset: 0x0036C144
 	public global::Vector GetPlayerLocation()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -196,7 +196,7 @@ public class GeneralLogicTreeUtil : Singleton
 		return component.ActorLocationProxy;
 	}
 
-	// Token: 0x0600E5C0 RID: 58816 RVA: 0x00362318 File Offset: 0x00360518
+	// Token: 0x0600B9DE RID: 47582 RVA: 0x0036DF78 File Offset: 0x0036C178
 	public unsafe double GetEntitySpeed(EntityHandle entityHandle)
 	{
 		Entity entity = (entityHandle != null) ? entityHandle.Entity : null;
@@ -225,7 +225,7 @@ public class GeneralLogicTreeUtil : Singleton
 		return baseActorComponent.SafeActorVelocityProxy.Size();
 	}
 
-	// Token: 0x0600E5C1 RID: 58817 RVA: 0x003623E0 File Offset: 0x003605E0
+	// Token: 0x0600B9DF RID: 47583 RVA: 0x0036E040 File Offset: 0x0036C240
 	public IBtNode GetNodeConfig(BtType btType, int treeConfigId, int nodeId)
 	{
 		IBtNode result = null;
@@ -243,7 +243,7 @@ public class GeneralLogicTreeUtil : Singleton
 		return result;
 	}
 
-	// Token: 0x0600E5C2 RID: 58818 RVA: 0x0036242C File Offset: 0x0036062C
+	// Token: 0x0600B9E0 RID: 47584 RVA: 0x0036E08C File Offset: 0x0036C28C
 	public LogicTreeContainer GetLogicTreeContainer(BtType btType, int treeConfigId)
 	{
 		LogicTreeContainer result = null;
@@ -263,7 +263,7 @@ public class GeneralLogicTreeUtil : Singleton
 		return result;
 	}
 
-	// Token: 0x0600E5C3 RID: 58819 RVA: 0x00362484 File Offset: 0x00360684
+	// Token: 0x0600B9E1 RID: 47585 RVA: 0x0036E0E4 File Offset: 0x0036C2E4
 	public void OpenQuestChapterView(PromptQuestChapterUI @params, int questId, Action closeCallback = null)
 	{
 		if (@params == null)
@@ -286,7 +286,7 @@ public class GeneralLogicTreeUtil : Singleton
 		KuroSdkReport.Instance.OnChapterStart(showQuestChapterIdFromConfig.Value, (int)@params.ChapterState);
 	}
 
-	// Token: 0x0600E5C4 RID: 58820 RVA: 0x00362520 File Offset: 0x00360720
+	// Token: 0x0600B9E2 RID: 47586 RVA: 0x0036E180 File Offset: 0x0036C380
 	public unsafe void OpenChapterViewV2(int chapterState, int chapterId, bool bSequenceCall = false, string conditionText = null)
 	{
 		QuestChapter? config = ConfigQuestChapterById.GetConfig(chapterId, true);
@@ -366,8 +366,8 @@ public class GeneralLogicTreeUtil : Singleton
 		KuroSdkReport.Instance.OnChapterStart(chapterId, chapterState);
 	}
 
-	// Token: 0x17001257 RID: 4695
-	// (get) Token: 0x0600E5C5 RID: 58821 RVA: 0x00362765 File Offset: 0x00360965
+	// Token: 0x17001281 RID: 4737
+	// (get) Token: 0x0600B9E3 RID: 47587 RVA: 0x0036E3C5 File Offset: 0x0036C5C5
 	[Nullable(1)]
 	public static GeneralLogicTreeUtil Instance
 	{
@@ -383,12 +383,12 @@ public class GeneralLogicTreeUtil : Singleton
 		}
 	}
 
-	// Token: 0x0600E5C6 RID: 58822 RVA: 0x00362788 File Offset: 0x00360988
+	// Token: 0x0600B9E4 RID: 47588 RVA: 0x0036E3E8 File Offset: 0x0036C5E8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E5C7 RID: 58823 RVA: 0x0036278A File Offset: 0x0036098A
+	// Token: 0x0600B9E5 RID: 47589 RVA: 0x0036E3EA File Offset: 0x0036C5EA
 	public static void ResetStaticDefaultValue()
 	{
 		GeneralLogicTreeUtil instance = GeneralLogicTreeUtil._instance;
@@ -399,16 +399,16 @@ public class GeneralLogicTreeUtil : Singleton
 		GeneralLogicTreeUtil._instance = null;
 	}
 
-	// Token: 0x0600E5C8 RID: 58824 RVA: 0x003627A3 File Offset: 0x003609A3
+	// Token: 0x0600B9E6 RID: 47590 RVA: 0x0036E403 File Offset: 0x0036C603
 	static GeneralLogicTreeUtil()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GeneralLogicTreeUtil.CreateStaticDefaultValue), new Action(GeneralLogicTreeUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006A5A RID: 27226
+	// Token: 0x04006B3B RID: 27451
 	[Nullable(1)]
 	public const string GENERAL_LOGIC_TREE_DEBUG_KEY = "GeneralLogicTree";
 
-	// Token: 0x04006A5B RID: 27227
+	// Token: 0x04006B3C RID: 27452
 	private static GeneralLogicTreeUtil _instance;
 }

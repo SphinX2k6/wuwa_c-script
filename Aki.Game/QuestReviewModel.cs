@@ -5,12 +5,12 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common;
 
-// Token: 0x02002679 RID: 9849
+// Token: 0x02001B64 RID: 7012
 [NullableContext(2)]
 [Nullable(0)]
 public class QuestReviewModel : ModelBase
 {
-	// Token: 0x060142D7 RID: 82647 RVA: 0x00517ED0 File Offset: 0x005160D0
+	// Token: 0x060117B9 RID: 71609 RVA: 0x00526C28 File Offset: 0x00524E28
 	protected override bool OnInit()
 	{
 		IReadOnlyList<QuestReviewEntry> configList = ConfigQuestReviewEntryAll.GetConfigList(true);
@@ -27,7 +27,7 @@ public class QuestReviewModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060142D8 RID: 82648 RVA: 0x00517F50 File Offset: 0x00516150
+	// Token: 0x060117BA RID: 71610 RVA: 0x00526CA8 File Offset: 0x00524EA8
 	protected override bool OnClear()
 	{
 		foreach (Dictionary<int, object> dictionary in this.DataMap.Values)
@@ -38,7 +38,7 @@ public class QuestReviewModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060142D9 RID: 82649 RVA: 0x00517FB4 File Offset: 0x005161B4
+	// Token: 0x060117BB RID: 71611 RVA: 0x00526D0C File Offset: 0x00524F0C
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	private TData GetOrCreateData<[Nullable(1)] TData, TConfig>(int id, [Nullable(new byte[]
@@ -69,7 +69,7 @@ public class QuestReviewModel : ModelBase
 		return dictionary[id] as TData;
 	}
 
-	// Token: 0x060142DA RID: 82650 RVA: 0x00518050 File Offset: 0x00516250
+	// Token: 0x060117BC RID: 71612 RVA: 0x00526DA8 File Offset: 0x00524FA8
 	public QuestReviewNodeData GetQuestReviewNodeDataById(int id)
 	{
 		if (id == 0)
@@ -80,7 +80,7 @@ public class QuestReviewModel : ModelBase
 		return this.GetOrCreateData<QuestReviewNodeData, QuestReviewNode>(id, (QuestReviewNode config) => new QuestReviewNodeData(config), config2);
 	}
 
-	// Token: 0x060142DB RID: 82651 RVA: 0x00518094 File Offset: 0x00516294
+	// Token: 0x060117BD RID: 71613 RVA: 0x00526DEC File Offset: 0x00524FEC
 	public QuestReviewTabData GetQuestReviewTabDataById(int id)
 	{
 		if (id == 0)
@@ -91,7 +91,7 @@ public class QuestReviewModel : ModelBase
 		return this.GetOrCreateData<QuestReviewTabData, QuestReviewTab>(id, (QuestReviewTab config) => new QuestReviewTabData(config), config2);
 	}
 
-	// Token: 0x060142DC RID: 82652 RVA: 0x005180D8 File Offset: 0x005162D8
+	// Token: 0x060117BE RID: 71614 RVA: 0x00526E30 File Offset: 0x00525030
 	public QuestReviewTreeData GetQuestReviewTreeDataById(int id)
 	{
 		if (id == 0)
@@ -102,7 +102,7 @@ public class QuestReviewModel : ModelBase
 		return this.GetOrCreateData<QuestReviewTreeData, QuestReviewTree>(id, (QuestReviewTree config) => new QuestReviewTreeData(config), config2);
 	}
 
-	// Token: 0x060142DD RID: 82653 RVA: 0x0051811C File Offset: 0x0051631C
+	// Token: 0x060117BF RID: 71615 RVA: 0x00526E74 File Offset: 0x00525074
 	public QuestReviewEntryData GetQuestReviewEntryDataById(int id)
 	{
 		if (id == 0)
@@ -113,7 +113,7 @@ public class QuestReviewModel : ModelBase
 		return this.GetOrCreateData<QuestReviewEntryData, QuestReviewEntry>(id, (QuestReviewEntry config) => new QuestReviewEntryData(config), config2);
 	}
 
-	// Token: 0x060142DE RID: 82654 RVA: 0x00518160 File Offset: 0x00516360
+	// Token: 0x060117C0 RID: 71616 RVA: 0x00526EB8 File Offset: 0x005250B8
 	public QuestReviewLineData GetQuestReviewLineDataById(int id)
 	{
 		if (id == 0)
@@ -124,7 +124,7 @@ public class QuestReviewModel : ModelBase
 		return this.GetOrCreateData<QuestReviewLineData, QuestReviewLine>(id, (QuestReviewLine config) => new QuestReviewLineData(config), config2);
 	}
 
-	// Token: 0x060142DF RID: 82655 RVA: 0x005181A4 File Offset: 0x005163A4
+	// Token: 0x060117C1 RID: 71617 RVA: 0x00526EFC File Offset: 0x005250FC
 	public List<int> GetNodeIdListByQuestLineId(int questLineId)
 	{
 		QuestReviewLineData questReviewLineDataById = this.GetQuestReviewLineDataById(questLineId);
@@ -159,7 +159,7 @@ public class QuestReviewModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060142E0 RID: 82656 RVA: 0x00518234 File Offset: 0x00516434
+	// Token: 0x060117C2 RID: 71618 RVA: 0x00526F8C File Offset: 0x0052518C
 	public bool IsQuestLineHasAnyVisibleNode(int questLineId)
 	{
 		if (this.GetQuestReviewLineDataById(questLineId) == null)
@@ -181,7 +181,7 @@ public class QuestReviewModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060142E1 RID: 82657 RVA: 0x005182A4 File Offset: 0x005164A4
+	// Token: 0x060117C3 RID: 71619 RVA: 0x00526FFC File Offset: 0x005251FC
 	public QuestReviewNodeData GetSuccessorNodeByNodeId(int nodeId)
 	{
 		QuestReviewNodeData questReviewNodeDataById = this.GetQuestReviewNodeDataById(nodeId);
@@ -192,7 +192,7 @@ public class QuestReviewModel : ModelBase
 		return this.GetQuestReviewNodeDataById(questReviewNodeDataById.Successor);
 	}
 
-	// Token: 0x060142E2 RID: 82658 RVA: 0x005182CC File Offset: 0x005164CC
+	// Token: 0x060117C4 RID: 71620 RVA: 0x00527024 File Offset: 0x00525224
 	public QuestReviewNodeData GetPredecessorNodeByNodeId(int nodeId)
 	{
 		QuestReviewNodeData questReviewNodeDataById = this.GetQuestReviewNodeDataById(nodeId);
@@ -203,7 +203,7 @@ public class QuestReviewModel : ModelBase
 		return this.GetQuestReviewNodeDataById(questReviewNodeDataById.Predecessor);
 	}
 
-	// Token: 0x060142E3 RID: 82659 RVA: 0x005182F4 File Offset: 0x005164F4
+	// Token: 0x060117C5 RID: 71621 RVA: 0x0052704C File Offset: 0x0052524C
 	public QuestReviewEntryData GetQuestEntryDataByQuestId(int questId)
 	{
 		int id;
@@ -214,7 +214,7 @@ public class QuestReviewModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060142E4 RID: 82660 RVA: 0x0051831C File Offset: 0x0051651C
+	// Token: 0x060117C6 RID: 71622 RVA: 0x00527074 File Offset: 0x00525274
 	public bool TabHasRedDot(int tabId)
 	{
 		QuestReviewTabData questReviewTabDataById = this.GetQuestReviewTabDataById(tabId);
@@ -250,7 +250,7 @@ public class QuestReviewModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060142E5 RID: 82661 RVA: 0x0051841C File Offset: 0x0051661C
+	// Token: 0x060117C7 RID: 71623 RVA: 0x00527174 File Offset: 0x00525374
 	public QuestReviewLineData GetTempLineData()
 	{
 		QuestReviewLine? config = ConfigQuestReviewLineById.GetConfig(1100, true);
@@ -264,7 +264,7 @@ public class QuestReviewModel : ModelBase
 		};
 	}
 
-	// Token: 0x060142E6 RID: 82662 RVA: 0x00518454 File Offset: 0x00516654
+	// Token: 0x060117C8 RID: 71624 RVA: 0x005271AC File Offset: 0x005253AC
 	public bool IsNodeVisible(int nodeId)
 	{
 		QuestReviewNodeData questReviewNodeDataById = this.GetQuestReviewNodeDataById(nodeId);
@@ -280,27 +280,27 @@ public class QuestReviewModel : ModelBase
 		return predecessorNodeByNodeId == null || predecessorNodeByNodeId.State == EQuestReviewNodeState.Finished;
 	}
 
-	// Token: 0x060142E7 RID: 82663 RVA: 0x00518497 File Offset: 0x00516697
+	// Token: 0x060117C9 RID: 71625 RVA: 0x005271EF File Offset: 0x005253EF
 	public bool HasQuestLineFused()
 	{
 		return LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.QuestReviewHasFused, false);
 	}
 
-	// Token: 0x060142E8 RID: 82664 RVA: 0x005184A4 File Offset: 0x005166A4
+	// Token: 0x060117CA RID: 71626 RVA: 0x005271FC File Offset: 0x005253FC
 	public void SetQuestLineFused()
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.QuestReviewHasFused, true);
 	}
 
-	// Token: 0x060142E9 RID: 82665 RVA: 0x005184B4 File Offset: 0x005166B4
+	// Token: 0x060117CB RID: 71627 RVA: 0x0052720C File Offset: 0x0052540C
 	public bool IsFirstEntry()
 	{
 		return LocalStorage.GetPlayer<bool?>(ELocalStoragePlayerKey.QuestReviewMainViewEntryAnim, null).GetValueOrDefault(true);
 	}
 
-	// Token: 0x060142EA RID: 82666 RVA: 0x005184E0 File Offset: 0x005166E0
+	// Token: 0x060117CC RID: 71628 RVA: 0x00527238 File Offset: 0x00525438
 	[NullableContext(1)]
-	public void UpdateAllQuestReviewEntryData(List<QuestReviewEntryInfo> dataList)
+	public void UpdateAllQuestReviewEntryData(IEnumerable<QuestReviewEntryInfo> dataList)
 	{
 		foreach (QuestReviewEntryInfo questReviewEntryInfo in dataList)
 		{
@@ -312,9 +312,9 @@ public class QuestReviewModel : ModelBase
 		}
 	}
 
-	// Token: 0x060142EB RID: 82667 RVA: 0x00518540 File Offset: 0x00516740
+	// Token: 0x060117CD RID: 71629 RVA: 0x00527290 File Offset: 0x00525490
 	[NullableContext(1)]
-	public void UpdateAllQuestReviewLineData(List<QuestReviewLineInfo> dataList)
+	public void UpdateAllQuestReviewLineData(IEnumerable<QuestReviewLineInfo> dataList)
 	{
 		foreach (QuestReviewLineInfo questReviewLineInfo in dataList)
 		{
@@ -326,9 +326,9 @@ public class QuestReviewModel : ModelBase
 		}
 	}
 
-	// Token: 0x060142EC RID: 82668 RVA: 0x005185A0 File Offset: 0x005167A0
+	// Token: 0x060117CE RID: 71630 RVA: 0x005272E8 File Offset: 0x005254E8
 	[NullableContext(1)]
-	public void UpdateAllQuestReviewNodeData(List<QuestReviewNodeInfo> dataList)
+	public void UpdateAllQuestReviewNodeData(IEnumerable<QuestReviewNodeInfo> dataList)
 	{
 		foreach (QuestReviewNodeInfo questReviewNodeInfo in dataList)
 		{
@@ -340,9 +340,9 @@ public class QuestReviewModel : ModelBase
 		}
 	}
 
-	// Token: 0x060142ED RID: 82669 RVA: 0x00518600 File Offset: 0x00516800
+	// Token: 0x060117CF RID: 71631 RVA: 0x00527340 File Offset: 0x00525540
 	[NullableContext(1)]
-	public void UpdateAllQuestReviewTabData(List<QuestReviewTabInfo> dataList)
+	public void UpdateAllQuestReviewTabData(IEnumerable<QuestReviewTabInfo> dataList)
 	{
 		foreach (QuestReviewTabInfo questReviewTabInfo in dataList)
 		{
@@ -354,8 +354,8 @@ public class QuestReviewModel : ModelBase
 		}
 	}
 
-	// Token: 0x170019F4 RID: 6644
-	// (get) Token: 0x060142EE RID: 82670 RVA: 0x00518660 File Offset: 0x00516860
+	// Token: 0x17001A2C RID: 6700
+	// (get) Token: 0x060117D0 RID: 71632 RVA: 0x00527398 File Offset: 0x00525598
 	[Nullable(1)]
 	public static QuestReviewModel Instance
 	{
@@ -366,7 +366,7 @@ public class QuestReviewModel : ModelBase
 		}
 	}
 
-	// Token: 0x060142EF RID: 82671 RVA: 0x00518667 File Offset: 0x00516867
+	// Token: 0x060117D1 RID: 71633 RVA: 0x0052739F File Offset: 0x0052559F
 	[NullableContext(1)]
 	public static QuestReviewModel GetOrCreateInstance()
 	{
@@ -377,7 +377,7 @@ public class QuestReviewModel : ModelBase
 		return QuestReviewModel._Instance;
 	}
 
-	// Token: 0x060142F0 RID: 82672 RVA: 0x0051867B File Offset: 0x0051687B
+	// Token: 0x060117D2 RID: 71634 RVA: 0x005273B3 File Offset: 0x005255B3
 	public static bool CreateInstance()
 	{
 		if (QuestReviewModel._Instance != null)
@@ -388,31 +388,31 @@ public class QuestReviewModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060142F1 RID: 82673 RVA: 0x00518691 File Offset: 0x00516891
+	// Token: 0x060117D3 RID: 71635 RVA: 0x005273C9 File Offset: 0x005255C9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060142F2 RID: 82674 RVA: 0x00518693 File Offset: 0x00516893
+	// Token: 0x060117D4 RID: 71636 RVA: 0x005273CB File Offset: 0x005255CB
 	public static void ResetStaticDefaultValue()
 	{
 		QuestReviewModel._Instance = null;
 	}
 
-	// Token: 0x060142F3 RID: 82675 RVA: 0x0051869B File Offset: 0x0051689B
+	// Token: 0x060117D5 RID: 71637 RVA: 0x005273D3 File Offset: 0x005255D3
 	static QuestReviewModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestReviewModel.CreateStaticDefaultValue), new Action(QuestReviewModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040097F5 RID: 38901
+	// Token: 0x0400994D RID: 39245
 	[Nullable(1)]
 	private readonly Dictionary<string, Dictionary<int, object>> DataMap = new Dictionary<string, Dictionary<int, object>>();
 
-	// Token: 0x040097F6 RID: 38902
+	// Token: 0x0400994E RID: 39246
 	[Nullable(1)]
 	private readonly Dictionary<int, int> QuestEntryMap = new Dictionary<int, int>();
 
-	// Token: 0x040097F7 RID: 38903
+	// Token: 0x0400994F RID: 39247
 	private static QuestReviewModel _Instance;
 }

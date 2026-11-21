@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 {
-	// Token: 0x020047EF RID: 18415
+	// Token: 0x02003720 RID: 14112
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffPopupRightItem : PopupTypeRightItem
 	{
-		// Token: 0x060303B1 RID: 197553 RVA: 0x00B2DF10 File Offset: 0x00B2C110
+		// Token: 0x06024B81 RID: 150401 RVA: 0x00A5DE54 File Offset: 0x00A5C054
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060303B2 RID: 197554 RVA: 0x00B2E019 File Offset: 0x00B2C219
+		// Token: 0x06024B82 RID: 150402 RVA: 0x00A5DF5D File Offset: 0x00A5C15D
 		public override UUIItem GetAttachParent()
 		{
 			return base.GetItem(0);
 		}
 
-		// Token: 0x060303B3 RID: 197555 RVA: 0x00B2E024 File Offset: 0x00B2C224
+		// Token: 0x06024B83 RID: 150403 RVA: 0x00A5DF68 File Offset: 0x00A5C168
 		protected override void OnStart()
 		{
 			UUIButtonComponent button = base.GetButton(4);
@@ -61,21 +61,21 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			uuiitem.SetUIActive(false);
 		}
 
-		// Token: 0x060303B4 RID: 197556 RVA: 0x00B2E058 File Offset: 0x00B2C258
+		// Token: 0x06024B84 RID: 150404 RVA: 0x00A5DF9C File Offset: 0x00A5C19C
 		public void SetTitleIcon(string resourceId)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(resourceId);
 			base.TrySetSpriteByPath(resourcePath, base.GetSprite(2), false, null, null);
 		}
 
-		// Token: 0x060303B5 RID: 197557 RVA: 0x00B2E08C File Offset: 0x00B2C28C
+		// Token: 0x06024B85 RID: 150405 RVA: 0x00A5DFD0 File Offset: 0x00A5C1D0
 		[NullableContext(2)]
 		public void SetTitleIconByPath(string path)
 		{
 			base.TrySetSpriteByPath(path, base.GetSprite(2), false, null, null);
 		}
 
-		// Token: 0x060303B6 RID: 197558 RVA: 0x00B2E0B2 File Offset: 0x00B2C2B2
+		// Token: 0x06024B86 RID: 150406 RVA: 0x00A5DFF6 File Offset: 0x00A5C1F6
 		public override void SetTitleText(string txt)
 		{
 			UUIText text = base.GetText(3);
@@ -86,23 +86,23 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			text.SetText(txt, true);
 		}
 
-		// Token: 0x0200AAB4 RID: 43700
+		// Token: 0x02009466 RID: 37990
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x04033ED4 RID: 212692
+			// Token: 0x0402E65A RID: 190042
 			public const int Content = 0;
 
-			// Token: 0x04033ED5 RID: 212693
+			// Token: 0x0402E65B RID: 190043
 			public const int BackBtn = 1;
 
-			// Token: 0x04033ED6 RID: 212694
+			// Token: 0x0402E65C RID: 190044
 			public const int SprIcon = 2;
 
-			// Token: 0x04033ED7 RID: 212695
+			// Token: 0x0402E65D RID: 190045
 			public const int TextName = 3;
 
-			// Token: 0x04033ED8 RID: 212696
+			// Token: 0x0402E65E RID: 190046
 			public const int BtnClose = 4;
 		}
 	}

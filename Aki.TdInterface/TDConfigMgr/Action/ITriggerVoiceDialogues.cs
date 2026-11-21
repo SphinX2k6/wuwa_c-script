@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002004 RID: 8196
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200224B RID: 8779
 	public class ITriggerVoiceDialogues : IInteractEffect
 	{
-		// Token: 0x0600B43A RID: 46138 RVA: 0x001A3254 File Offset: 0x001A1454
+		// Token: 0x0600BF52 RID: 48978 RVA: 0x001B9818 File Offset: 0x001B7A18
 		private ITriggerVoiceDialogues_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B43B RID: 46139 RVA: 0x001A328C File Offset: 0x001A148C
+		// Token: 0x0600BF53 RID: 48979 RVA: 0x001B9850 File Offset: 0x001B7A50
 		public static ITriggerVoiceDialogues Create([Nullable(2)] ITriggerVoiceDialogues instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B43C RID: 46140 RVA: 0x001A329F File Offset: 0x001A149F
+		// Token: 0x0600BF54 RID: 48980 RVA: 0x001B9863 File Offset: 0x001B7A63
 		public static ITriggerVoiceDialogues CreateFromSetValue([Nullable(2)] ITriggerVoiceDialogues_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B43D RID: 46141 RVA: 0x001A32B2 File Offset: 0x001A14B2
+		// Token: 0x0600BF55 RID: 48981 RVA: 0x001B9876 File Offset: 0x001B7A76
 		public new ITriggerVoiceDialogues_SetValue ToSetValue()
 		{
 			return new ITriggerVoiceDialogues_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700376F RID: 14191
-		// (get) Token: 0x0600B43E RID: 46142 RVA: 0x001A32E9 File Offset: 0x001A14E9
-		// (set) Token: 0x0600B43F RID: 46143 RVA: 0x001A3314 File Offset: 0x001A1514
+		// Token: 0x17003A48 RID: 14920
+		// (get) Token: 0x0600BF56 RID: 48982 RVA: 0x001B98AD File Offset: 0x001B7AAD
+		// (set) Token: 0x0600BF57 RID: 48983 RVA: 0x001B98D8 File Offset: 0x001B7AD8
 		public override EInteractEffectType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003770 RID: 14192
-		// (get) Token: 0x0600B440 RID: 46144 RVA: 0x001A3324 File Offset: 0x001A1524
-		// (set) Token: 0x0600B441 RID: 46145 RVA: 0x001A335E File Offset: 0x001A155E
+		// Token: 0x17003A49 RID: 14921
+		// (get) Token: 0x0600BF58 RID: 48984 RVA: 0x001B98E8 File Offset: 0x001B7AE8
+		// (set) Token: 0x0600BF59 RID: 48985 RVA: 0x001B9922 File Offset: 0x001B7B22
 		public override float? DelayTime
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003771 RID: 14193
-		// (get) Token: 0x0600B442 RID: 46146 RVA: 0x001A336C File Offset: 0x001A156C
-		// (set) Token: 0x0600B443 RID: 46147 RVA: 0x001A33CD File Offset: 0x001A15CD
+		// Token: 0x17003A4A RID: 14922
+		// (get) Token: 0x0600BF5A RID: 48986 RVA: 0x001B9930 File Offset: 0x001B7B30
+		// (set) Token: 0x0600BF5B RID: 48987 RVA: 0x001B9991 File Offset: 0x001B7B91
 		public virtual PlayFlow Flow
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003772 RID: 14194
-		// (get) Token: 0x0600B444 RID: 46148 RVA: 0x001A33E4 File Offset: 0x001A15E4
-		// (set) Token: 0x0600B445 RID: 46149 RVA: 0x001A341E File Offset: 0x001A161E
+		// Token: 0x17003A4B RID: 14923
+		// (get) Token: 0x0600BF5C RID: 48988 RVA: 0x001B99A8 File Offset: 0x001B7BA8
+		// (set) Token: 0x0600BF5D RID: 48989 RVA: 0x001B99E2 File Offset: 0x001B7BE2
 		public virtual bool? ShowTalker
 		{
 			get
@@ -163,18 +161,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CA0 RID: 27808
+		// Token: 0x040072A3 RID: 29347
 		[Nullable(2)]
 		protected new ITriggerVoiceDialogues FbInstance;
 
-		// Token: 0x04006CA1 RID: 27809
+		// Token: 0x040072A4 RID: 29348
 		[Nullable(2)]
 		protected new ITriggerVoiceDialogues_SetValue PocoInterface;
 
-		// Token: 0x04006CA2 RID: 27810
+		// Token: 0x040072A5 RID: 29349
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04006CA3 RID: 27811
+		// Token: 0x040072A6 RID: 29350
 		private bool _FlowInited;
 	}
 }

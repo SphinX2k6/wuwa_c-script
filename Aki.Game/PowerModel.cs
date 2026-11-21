@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Buffers;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020025F9 RID: 9721
+// Token: 0x02001AE4 RID: 6884
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PowerModel : ModelBase
 {
-	// Token: 0x17001955 RID: 6485
-	// (get) Token: 0x06013C5E RID: 80990 RVA: 0x004F4FB0 File Offset: 0x004F31B0
+	// Token: 0x1700198D RID: 6541
+	// (get) Token: 0x06011140 RID: 69952 RVA: 0x00503D3C File Offset: 0x00501F3C
 	public unsafe List<PowerItemInfo> PowerItemInfoList
 	{
 		get
@@ -54,7 +53,7 @@ public class PowerModel : ModelBase
 				{
 					ArrayPool<ItemInfo?>.Shared.Return(array, false);
 				}
-				List<int> confSortList = confSortRule.Keys.ToList<int>();
+				List<int> confSortList = new List<int>(confSortRule.Keys);
 				this.PowerItemInfos.Sort(delegate(PowerItemInfo info1, PowerItemInfo info2)
 				{
 					int num5 = confSortList.IndexOf(info1.ItemId);
@@ -111,7 +110,7 @@ public class PowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013C5F RID: 80991 RVA: 0x004F5364 File Offset: 0x004F3564
+	// Token: 0x06011141 RID: 69953 RVA: 0x005040F0 File Offset: 0x005022F0
 	[NullableContext(2)]
 	public PowerItemInfo GetPowerItemInfos(int itemId)
 	{
@@ -125,8 +124,8 @@ public class PowerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x17001956 RID: 6486
-	// (get) Token: 0x06013C60 RID: 80992 RVA: 0x004F53C0 File Offset: 0x004F35C0
+	// Token: 0x1700198E RID: 6542
+	// (get) Token: 0x06011142 RID: 69954 RVA: 0x0050414C File Offset: 0x0050234C
 	public bool NeedUpdateCountDown
 	{
 		get
@@ -135,8 +134,8 @@ public class PowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001957 RID: 6487
-	// (get) Token: 0x06013C61 RID: 80993 RVA: 0x004F53CE File Offset: 0x004F35CE
+	// Token: 0x1700198F RID: 6543
+	// (get) Token: 0x06011143 RID: 69955 RVA: 0x0050415A File Offset: 0x0050235A
 	public int PowerCount
 	{
 		get
@@ -145,8 +144,8 @@ public class PowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001958 RID: 6488
-	// (get) Token: 0x06013C62 RID: 80994 RVA: 0x004F53DC File Offset: 0x004F35DC
+	// Token: 0x17001990 RID: 6544
+	// (get) Token: 0x06011144 RID: 69956 RVA: 0x00504168 File Offset: 0x00502368
 	public int PowerWithConvertedCount
 	{
 		get
@@ -157,7 +156,7 @@ public class PowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013C63 RID: 80995 RVA: 0x004F5404 File Offset: 0x004F3604
+	// Token: 0x06011145 RID: 69957 RVA: 0x00504190 File Offset: 0x00502390
 	protected override bool OnInit()
 	{
 		this.PowerItemMap[10800] = 5;
@@ -166,14 +165,14 @@ public class PowerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013C64 RID: 80996 RVA: 0x004F542C File Offset: 0x004F362C
+	// Token: 0x06011146 RID: 69958 RVA: 0x005041B8 File Offset: 0x005023B8
 	protected override bool OnClear()
 	{
 		this.CanShowPowerTip = false;
 		return true;
 	}
 
-	// Token: 0x06013C65 RID: 80997 RVA: 0x004F5438 File Offset: 0x004F3638
+	// Token: 0x06011147 RID: 69959 RVA: 0x005041C4 File Offset: 0x005023C4
 	public void UpdatePowerRenewTimer()
 	{
 		foreach (KeyValuePair<int, PowerData> keyValuePair in this.PowerMap)
@@ -182,7 +181,7 @@ public class PowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013C66 RID: 80998 RVA: 0x004F5490 File Offset: 0x004F3690
+	// Token: 0x06011148 RID: 69960 RVA: 0x0050421C File Offset: 0x0050241C
 	public void UpdatePowerData([Nullable(new byte[]
 	{
 		2,
@@ -205,7 +204,7 @@ public class PowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013C67 RID: 80999 RVA: 0x004F54E4 File Offset: 0x004F36E4
+	// Token: 0x06011149 RID: 69961 RVA: 0x00504270 File Offset: 0x00502470
 	[NullableContext(2)]
 	public void RefreshPowerInfos(EnergyInfo data)
 	{
@@ -217,13 +216,13 @@ public class PowerModel : ModelBase
 		this.GetPowerDataById(id).Phrase(id, data.EnergyCount, (double)data.LastRenewEnergyTime);
 	}
 
-	// Token: 0x06013C68 RID: 81000 RVA: 0x004F5516 File Offset: 0x004F3716
+	// Token: 0x0601114A RID: 69962 RVA: 0x005042A2 File Offset: 0x005024A2
 	public bool CheckItemIfPowerItem(int itemId)
 	{
-		return this.PowerItemKeyArray.Contains(itemId);
+		return Array.IndexOf<int>(this.PowerItemKeyArray, itemId) >= 0;
 	}
 
-	// Token: 0x06013C69 RID: 81001 RVA: 0x004F5524 File Offset: 0x004F3724
+	// Token: 0x0601114B RID: 69963 RVA: 0x005042B8 File Offset: 0x005024B8
 	public PowerData GetPowerDataById(int itemId)
 	{
 		int key = itemId;
@@ -248,7 +247,7 @@ public class PowerModel : ModelBase
 		return powerData;
 	}
 
-	// Token: 0x06013C6A RID: 81002 RVA: 0x004F5578 File Offset: 0x004F3778
+	// Token: 0x0601114C RID: 69964 RVA: 0x0050430C File Offset: 0x0050250C
 	private List<ShopItemFullInfo> GetShopItemInfoByShopId(int shopId)
 	{
 		List<ShopItemFullInfo> shopItemList = ShopModel.Instance.GetShopItemList(shopId);
@@ -261,21 +260,21 @@ public class PowerModel : ModelBase
 		return shopItemList;
 	}
 
-	// Token: 0x06013C6B RID: 81003 RVA: 0x004F55E0 File Offset: 0x004F37E0
+	// Token: 0x0601114D RID: 69965 RVA: 0x00504374 File Offset: 0x00502574
 	public bool IsPowerEnough(int? neededPower)
 	{
 		bool flag = (neededPower ?? 0) == 0;
 		return flag || this.PowerCount >= neededPower.Value;
 	}
 
-	// Token: 0x06013C6C RID: 81004 RVA: 0x004F561C File Offset: 0x004F381C
+	// Token: 0x0601114E RID: 69966 RVA: 0x005043B0 File Offset: 0x005025B0
 	public bool IsPowerWithConvertedEnough(int? neededPower)
 	{
 		bool flag = (neededPower ?? 0) == 0;
 		return flag || this.PowerWithConvertedCount >= neededPower.Value;
 	}
 
-	// Token: 0x06013C6D RID: 81005 RVA: 0x004F5658 File Offset: 0x004F3858
+	// Token: 0x0601114F RID: 69967 RVA: 0x005043EC File Offset: 0x005025EC
 	public int GetCurrentNeedPower(int? neededPower)
 	{
 		if (this.IsPowerEnough(neededPower))
@@ -289,26 +288,26 @@ public class PowerModel : ModelBase
 		return neededPower.Value - this.PowerCount;
 	}
 
-	// Token: 0x06013C6E RID: 81006 RVA: 0x004F567E File Offset: 0x004F387E
+	// Token: 0x06011150 RID: 69968 RVA: 0x00504412 File Offset: 0x00502612
 	public ShopFixed? GetOverPowerShopConfig()
 	{
 		return ShopConfig.Instance.GetShopFixedInfoByItemId(7, 17);
 	}
 
-	// Token: 0x06013C6F RID: 81007 RVA: 0x004F568D File Offset: 0x004F388D
+	// Token: 0x06011151 RID: 69969 RVA: 0x00504421 File Offset: 0x00502621
 	public bool GetCanShowPowerTip()
 	{
 		return this.CanShowPowerTip;
 	}
 
-	// Token: 0x06013C70 RID: 81008 RVA: 0x004F5695 File Offset: 0x004F3895
+	// Token: 0x06011152 RID: 69970 RVA: 0x00504429 File Offset: 0x00502629
 	public void SetCanShowPowerTip(bool state)
 	{
 		this.CanShowPowerTip = state;
 	}
 
-	// Token: 0x17001959 RID: 6489
-	// (get) Token: 0x06013C71 RID: 81009 RVA: 0x004F569E File Offset: 0x004F389E
+	// Token: 0x17001991 RID: 6545
+	// (get) Token: 0x06011153 RID: 69971 RVA: 0x00504432 File Offset: 0x00502632
 	public static PowerModel Instance
 	{
 		get
@@ -317,7 +316,7 @@ public class PowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013C72 RID: 81010 RVA: 0x004F56A5 File Offset: 0x004F38A5
+	// Token: 0x06011154 RID: 69972 RVA: 0x00504439 File Offset: 0x00502639
 	public static PowerModel GetOrCreateInstance()
 	{
 		if (PowerModel._Instance == null)
@@ -327,7 +326,7 @@ public class PowerModel : ModelBase
 		return PowerModel._Instance;
 	}
 
-	// Token: 0x06013C73 RID: 81011 RVA: 0x004F56B9 File Offset: 0x004F38B9
+	// Token: 0x06011155 RID: 69973 RVA: 0x0050444D File Offset: 0x0050264D
 	public static bool CreateInstance()
 	{
 		if (PowerModel._Instance != null)
@@ -338,43 +337,43 @@ public class PowerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013C74 RID: 81012 RVA: 0x004F56CF File Offset: 0x004F38CF
+	// Token: 0x06011156 RID: 69974 RVA: 0x00504463 File Offset: 0x00502663
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013C75 RID: 81013 RVA: 0x004F56D1 File Offset: 0x004F38D1
+	// Token: 0x06011157 RID: 69975 RVA: 0x00504465 File Offset: 0x00502665
 	public static void ResetStaticDefaultValue()
 	{
 		PowerModel._Instance = null;
 	}
 
-	// Token: 0x06013C76 RID: 81014 RVA: 0x004F56D9 File Offset: 0x004F38D9
+	// Token: 0x06011158 RID: 69976 RVA: 0x0050446D File Offset: 0x0050266D
 	static PowerModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PowerModel.CreateStaticDefaultValue), new Action(PowerModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009505 RID: 38149
+	// Token: 0x0400965C RID: 38492
 	private const int OVERPOWERSHOPID = 17;
 
-	// Token: 0x04009506 RID: 38150
+	// Token: 0x0400965D RID: 38493
 	private readonly Dictionary<int, int> PowerItemMap = new Dictionary<int, int>();
 
-	// Token: 0x04009507 RID: 38151
+	// Token: 0x0400965E RID: 38494
 	public int CurrentNeedPower;
 
-	// Token: 0x04009508 RID: 38152
+	// Token: 0x0400965F RID: 38495
 	public int[] PowerItemKeyArray = new int[]
 	{
 		5,
 		6
 	};
 
-	// Token: 0x04009509 RID: 38153
+	// Token: 0x04009660 RID: 38496
 	private readonly Dictionary<int, PowerData> PowerMap = new Dictionary<int, PowerData>();
 
-	// Token: 0x0400950A RID: 38154
+	// Token: 0x04009661 RID: 38497
 	[Nullable(new byte[]
 	{
 		2,
@@ -382,22 +381,22 @@ public class PowerModel : ModelBase
 	})]
 	private List<PowerItemInfo> PowerItemInfos;
 
-	// Token: 0x0400950B RID: 38155
+	// Token: 0x04009662 RID: 38498
 	private bool CanShowPowerTip = true;
 
-	// Token: 0x0400950C RID: 38156
+	// Token: 0x04009663 RID: 38499
 	[Nullable(2)]
 	private static PowerModel _Instance;
 
-	// Token: 0x02008C28 RID: 35880
+	// Token: 0x02007DB1 RID: 32177
 	[NullableContext(0)]
 	public enum EOverPowerRecoveryMode
 	{
-		// Token: 0x0402D7FF RID: 186367
+		// Token: 0x04028B17 RID: 166679
 		Update,
-		// Token: 0x0402D800 RID: 186368
+		// Token: 0x04028B18 RID: 166680
 		Stop,
-		// Token: 0x0402D801 RID: 186369
+		// Token: 0x04028B19 RID: 166681
 		Full
 	}
 }

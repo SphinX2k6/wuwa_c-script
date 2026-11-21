@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B5B RID: 2907
+	// Token: 0x02000C3B RID: 3131
 	public struct CalabashDevelopCondition : IFlatbufferObject
 	{
-		// Token: 0x170006AB RID: 1707
-		// (get) Token: 0x06005191 RID: 20881 RVA: 0x001ED4E4 File Offset: 0x001EB6E4
+		// Token: 0x170006EB RID: 1771
+		// (get) Token: 0x06005753 RID: 22355 RVA: 0x0020D310 File Offset: 0x0020B510
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005192 RID: 20882 RVA: 0x001ED4F1 File Offset: 0x001EB6F1
+		// Token: 0x06005754 RID: 22356 RVA: 0x0020D31D File Offset: 0x0020B51D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005193 RID: 20883 RVA: 0x001ED4F8 File Offset: 0x001EB6F8
+		// Token: 0x06005755 RID: 22357 RVA: 0x0020D324 File Offset: 0x0020B524
 		public static CalabashDevelopCondition GetRootAsCalabashDevelopCondition(ByteBuffer _bb)
 		{
 			return CalabashDevelopCondition.GetRootAsCalabashDevelopCondition(_bb, default(CalabashDevelopCondition));
 		}
 
-		// Token: 0x06005194 RID: 20884 RVA: 0x001ED514 File Offset: 0x001EB714
+		// Token: 0x06005756 RID: 22358 RVA: 0x0020D340 File Offset: 0x0020B540
 		public static CalabashDevelopCondition GetRootAsCalabashDevelopCondition(ByteBuffer _bb, CalabashDevelopCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005195 RID: 20885 RVA: 0x001ED531 File Offset: 0x001EB731
+		// Token: 0x06005757 RID: 22359 RVA: 0x0020D35D File Offset: 0x0020B55D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005196 RID: 20886 RVA: 0x001ED540 File Offset: 0x001EB740
+		// Token: 0x06005758 RID: 22360 RVA: 0x0020D36C File Offset: 0x0020B56C
 		public CalabashDevelopCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170006AC RID: 1708
-		// (get) Token: 0x06005197 RID: 20887 RVA: 0x001ED550 File Offset: 0x001EB750
+		// Token: 0x170006EC RID: 1772
+		// (get) Token: 0x06005759 RID: 22361 RVA: 0x0020D37C File Offset: 0x0020B57C
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170006AD RID: 1709
-		// (get) Token: 0x06005198 RID: 20888 RVA: 0x001ED58C File Offset: 0x001EB78C
+		// Token: 0x170006ED RID: 1773
+		// (get) Token: 0x0600575A RID: 22362 RVA: 0x0020D3B8 File Offset: 0x0020B5B8
 		public int Condition
 		{
 			get
@@ -81,7 +81,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005199 RID: 20889 RVA: 0x001ED5C8 File Offset: 0x001EB7C8
+		// Token: 0x0600575B RID: 22363 RVA: 0x0020D3F4 File Offset: 0x0020B5F4
 		public int ConditionParam(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -92,8 +92,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170006AE RID: 1710
-		// (get) Token: 0x0600519A RID: 20890 RVA: 0x001ED608 File Offset: 0x001EB808
+		// Token: 0x170006EE RID: 1774
+		// (get) Token: 0x0600575C RID: 22364 RVA: 0x0020D434 File Offset: 0x0020B634
 		public int ConditionParamLength
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600519B RID: 20891 RVA: 0x001ED633 File Offset: 0x001EB833
+		// Token: 0x0600575D RID: 22365 RVA: 0x0020D45F File Offset: 0x0020B65F
 		public Span<int> GetConditionParamBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600519C RID: 20892 RVA: 0x001ED642 File Offset: 0x001EB842
+		// Token: 0x0600575E RID: 22366 RVA: 0x0020D46E File Offset: 0x0020B66E
 		public int[] GetConditionParamArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170006AF RID: 1711
-		// (get) Token: 0x0600519D RID: 20893 RVA: 0x001ED65C File Offset: 0x001EB85C
+		// Token: 0x170006EF RID: 1775
+		// (get) Token: 0x0600575F RID: 22367 RVA: 0x0020D488 File Offset: 0x0020B688
 		public string Description
 		{
 			get
@@ -134,19 +134,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600519E RID: 20894 RVA: 0x001ED694 File Offset: 0x001EB894
+		// Token: 0x06005760 RID: 22368 RVA: 0x0020D4C0 File Offset: 0x0020B6C0
 		public Span<byte> GetDescriptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600519F RID: 20895 RVA: 0x001ED6A4 File Offset: 0x001EB8A4
+		// Token: 0x06005761 RID: 22369 RVA: 0x0020D4D0 File Offset: 0x0020B6D0
 		public byte[] GetDescriptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x060051A0 RID: 20896 RVA: 0x001ED6BC File Offset: 0x001EB8BC
+		// Token: 0x06005762 RID: 22370 RVA: 0x0020D4E8 File Offset: 0x0020B6E8
 		public DicIntInt? RewardExp(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -157,8 +157,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170006B0 RID: 1712
-		// (get) Token: 0x060051A1 RID: 20897 RVA: 0x001ED720 File Offset: 0x001EB920
+		// Token: 0x170006F0 RID: 1776
+		// (get) Token: 0x06005763 RID: 22371 RVA: 0x0020D54C File Offset: 0x0020B74C
 		public int RewardExpLength
 		{
 			get
@@ -172,42 +172,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060051A2 RID: 20898 RVA: 0x001ED74C File Offset: 0x001EB94C
+		// Token: 0x06005764 RID: 22372 RVA: 0x0020D578 File Offset: 0x0020B778
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ConditionParamIter()或GetConditionParamBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ConditionParam()
+		public int[] ConditionParam()
 		{
-			CalabashDevelopCondition calabashDevelopCondition = this;
-			return calabashDevelopCondition.GetConditionParamArray() ?? Array.Empty<int>();
+			return this.GetConditionParamArray();
 		}
 
-		// Token: 0x060051A3 RID: 20899 RVA: 0x001ED770 File Offset: 0x001EB970
+		// Token: 0x06005765 RID: 22373 RVA: 0x0020D580 File Offset: 0x0020B780
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ConditionParamIter()
+		public IEnumerable<int> ConditionParamIter()
 		{
 			CalabashDevelopCondition.<ConditionParamIter>d__25 <ConditionParamIter>d__ = new CalabashDevelopCondition.<ConditionParamIter>d__25(-2);
 			<ConditionParamIter>d__.<>3__<>4__this = this;
 			return <ConditionParamIter>d__;
 		}
 
-		// Token: 0x060051A4 RID: 20900 RVA: 0x001ED788 File Offset: 0x001EB988
+		// Token: 0x06005766 RID: 22374 RVA: 0x0020D598 File Offset: 0x0020B798
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用RewardExpFrozenDict()缓存字典，遍历请使用RewardExpIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> RewardExp()
+		public Dictionary<int, int> RewardExp()
 		{
 			return this.RewardExpIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x060051A5 RID: 20901 RVA: 0x001ED7DE File Offset: 0x001EB9DE
+		// Token: 0x06005767 RID: 22375 RVA: 0x0020D5EE File Offset: 0x0020B7EE
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> RewardExpIter()
+		public IEnumerable<DicIntInt> RewardExpIter()
 		{
 			CalabashDevelopCondition.<RewardExpIter>d__27 <RewardExpIter>d__ = new CalabashDevelopCondition.<RewardExpIter>d__27(-2);
 			<RewardExpIter>d__.<>3__<>4__this = this;
 			return <RewardExpIter>d__;
 		}
 
-		// Token: 0x060051A6 RID: 20902 RVA: 0x001ED7F4 File Offset: 0x001EB9F4
+		// Token: 0x06005768 RID: 22376 RVA: 0x0020D604 File Offset: 0x0020B804
 		public int? GetRewardExp(int key)
 		{
 			this.EnsureRewardExpCacheIfNeeded();
@@ -219,7 +216,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x060051A7 RID: 20903 RVA: 0x001ED828 File Offset: 0x001EBA28
+		// Token: 0x06005769 RID: 22377 RVA: 0x0020D638 File Offset: 0x0020B838
 		private void EnsureRewardExpCacheIfNeeded()
 		{
 			if (this.RewardExpCache != null)
@@ -229,18 +226,18 @@ namespace Aki.Config
 			this.RewardExpCache = this.RewardExpIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x060051A8 RID: 20904 RVA: 0x001ED88E File Offset: 0x001EBA8E
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetRewardExpFrozenDict(int key)
+		// Token: 0x0600576A RID: 22378 RVA: 0x0020D69E File Offset: 0x0020B89E
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetRewardExpFrozenDict()
 		{
 			this.EnsureRewardExpCacheIfNeeded();
 			return this.RewardExpCache;
 		}
 
-		// Token: 0x04004B58 RID: 19288
+		// Token: 0x04005138 RID: 20792
 		private Table __p;
 
-		// Token: 0x04004B59 RID: 19289
+		// Token: 0x04005139 RID: 20793
 		[Nullable(2)]
 		private FrozenDictionary<int, int> RewardExpCache;
 	}

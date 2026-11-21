@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Plot.Sequence;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050C6 RID: 20678
+	// Token: 0x02004096 RID: 16534
 	public class FlowActionOpenSystemBoard : FlowActionLevelAsyncAction
 	{
-		// Token: 0x06034F00 RID: 216832 RVA: 0x00C89F1D File Offset: 0x00C8811D
+		// Token: 0x06029DF9 RID: 171513 RVA: 0x00BD7205 File Offset: 0x00BD5405
 		protected override void OnExecute()
 		{
 			if (SequenceModel.Instance.IsPlaying)
@@ -17,13 +17,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.OnExecute();
 		}
 
-		// Token: 0x06034F01 RID: 216833 RVA: 0x00C89F46 File Offset: 0x00C88146
+		// Token: 0x06029DFA RID: 171514 RVA: 0x00BD722E File Offset: 0x00BD542E
 		protected override void OnBackgroundExecute()
 		{
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034F02 RID: 216834 RVA: 0x00C89F50 File Offset: 0x00C88150
+		// Token: 0x06029DFB RID: 171515 RVA: 0x00BD7238 File Offset: 0x00BD5438
 		protected override void OnActionFinish(bool result)
 		{
 			if (SequenceModel.Instance.IsPlaying)
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x0401C309 RID: 115465
+		// Token: 0x04016D3A RID: 93498
 		[Nullable(1)]
 		private const string EnableSkipReason = "OpenSystemBoard";
 	}

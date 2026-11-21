@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000C7 RID: 199
+	// Token: 0x020000CF RID: 207
 	[EnumExtensions]
 	public enum EInteractTurnAround
 	{
-		// Token: 0x04000466 RID: 1126
+		// Token: 0x0400048A RID: 1162
 		FaceEachOther,
-		// Token: 0x04000467 RID: 1127
+		// Token: 0x0400048B RID: 1163
 		FaceEachOtherWithRecoveryImmediately,
-		// Token: 0x04000468 RID: 1128
+		// Token: 0x0400048C RID: 1164
 		PlayerTurnToInteractor
 	}
 }

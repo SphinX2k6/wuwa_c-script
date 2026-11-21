@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001DBB RID: 7611
+// Token: 0x0200127D RID: 4733
 public class GuideDefine : IStaticVariableResetter
 {
-	// Token: 0x0600E724 RID: 59172 RVA: 0x0036734C File Offset: 0x0036554C
+	// Token: 0x0600BB42 RID: 47938 RVA: 0x00372FAC File Offset: 0x003711AC
 	static GuideDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GuideDefine.CreateStaticDefaultValue), new Action(GuideDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600E725 RID: 59173 RVA: 0x0036736B File Offset: 0x0036556B
+	// Token: 0x0600BB43 RID: 47939 RVA: 0x00372FCB File Offset: 0x003711CB
 	public static void CreateStaticDefaultValue()
 	{
 		GuideDefine.guideTipsAllowedViews = new List<EUiViewName>
@@ -22,13 +22,13 @@ public class GuideDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0600E726 RID: 59174 RVA: 0x0036738D File Offset: 0x0036558D
+	// Token: 0x0600BB44 RID: 47940 RVA: 0x00372FED File Offset: 0x003711ED
 	public static void ResetStaticDefaultValue()
 	{
 		GuideDefine.guideTipsAllowedViews = null;
 	}
 
-	// Token: 0x0600E727 RID: 59175 RVA: 0x00367398 File Offset: 0x00365598
+	// Token: 0x0600BB45 RID: 47941 RVA: 0x00372FF8 File Offset: 0x003711F8
 	[NullableContext(1)]
 	public static bool isCustomTabViewForGuide(object viewObj)
 	{
@@ -36,22 +36,22 @@ public class GuideDefine : IStaticVariableResetter
 		return customTabViewForGuide != null && new Func<string>(customTabViewForGuide.GetViewName) != null;
 	}
 
-	// Token: 0x04006AEB RID: 27371
+	// Token: 0x04006BCC RID: 27596
 	[Nullable(1)]
 	public static List<EUiViewName> guideTipsAllowedViews;
 
-	// Token: 0x02008390 RID: 33680
+	// Token: 0x02007518 RID: 29976
 	[NullableContext(1)]
 	public interface ICustomTabViewForGuide
 	{
-		// Token: 0x0604A4A3 RID: 304291
+		// Token: 0x060408A6 RID: 264358
 		string GetViewName();
 	}
 
-	// Token: 0x02008391 RID: 33681
+	// Token: 0x02007519 RID: 29977
 	public class CustomTabViewForGuide : GuideDefine.ICustomTabViewForGuide
 	{
-		// Token: 0x0604A4A4 RID: 304292 RVA: 0x013565DA File Offset: 0x013547DA
+		// Token: 0x060408A7 RID: 264359 RVA: 0x012F99FE File Offset: 0x012F7BFE
 		[NullableContext(1)]
 		public string GetViewName()
 		{

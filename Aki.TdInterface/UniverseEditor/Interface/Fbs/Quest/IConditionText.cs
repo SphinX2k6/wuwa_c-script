@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DB8 RID: 15800
+	// Token: 0x020041CF RID: 16847
 	public struct IConditionText : IFlatbufferObject
 	{
-		// Token: 0x17006D0C RID: 27916
-		// (get) Token: 0x0601608E RID: 90254 RVA: 0x0032F9C5 File Offset: 0x0032DBC5
+		// Token: 0x170072C6 RID: 29382
+		// (get) Token: 0x060175C7 RID: 95687 RVA: 0x00356D4D File Offset: 0x00354F4D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601608F RID: 90255 RVA: 0x0032F9D2 File Offset: 0x0032DBD2
+		// Token: 0x060175C8 RID: 95688 RVA: 0x00356D5A File Offset: 0x00354F5A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016090 RID: 90256 RVA: 0x0032F9DC File Offset: 0x0032DBDC
+		// Token: 0x060175C9 RID: 95689 RVA: 0x00356D64 File Offset: 0x00354F64
 		public static IConditionText GetRootAsIConditionText(ByteBuffer _bb)
 		{
 			return IConditionText.GetRootAsIConditionText(_bb, default(IConditionText));
 		}
 
-		// Token: 0x06016091 RID: 90257 RVA: 0x0032F9F8 File Offset: 0x0032DBF8
+		// Token: 0x060175CA RID: 95690 RVA: 0x00356D80 File Offset: 0x00354F80
 		public static IConditionText GetRootAsIConditionText(ByteBuffer _bb, IConditionText obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016092 RID: 90258 RVA: 0x0032FA15 File Offset: 0x0032DC15
+		// Token: 0x060175CB RID: 95691 RVA: 0x00356D9D File Offset: 0x00354F9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016093 RID: 90259 RVA: 0x0032FA24 File Offset: 0x0032DC24
+		// Token: 0x060175CC RID: 95692 RVA: 0x00356DAC File Offset: 0x00354FAC
 		public IConditionText __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006D0D RID: 27917
-		// (get) Token: 0x06016094 RID: 90260 RVA: 0x0032FA34 File Offset: 0x0032DC34
+		// Token: 0x170072C7 RID: 29383
+		// (get) Token: 0x060175CD RID: 95693 RVA: 0x00356DBC File Offset: 0x00354FBC
 		public IConditionGroup? Condition
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006D0E RID: 27918
-		// (get) Token: 0x06016095 RID: 90261 RVA: 0x0032FA94 File Offset: 0x0032DC94
+		// Token: 0x170072C8 RID: 29384
+		// (get) Token: 0x060175CE RID: 95694 RVA: 0x00356E1C File Offset: 0x0035501C
 		public string TidTitle
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016096 RID: 90262 RVA: 0x0032FACB File Offset: 0x0032DCCB
+		// Token: 0x060175CF RID: 95695 RVA: 0x00356E53 File Offset: 0x00355053
 		public Span<byte> GetTidTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06016097 RID: 90263 RVA: 0x0032FADA File Offset: 0x0032DCDA
+		// Token: 0x060175D0 RID: 95696 RVA: 0x00356E62 File Offset: 0x00355062
 		public byte[] GetTidTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17006D0F RID: 27919
-		// (get) Token: 0x06016098 RID: 90264 RVA: 0x0032FAE8 File Offset: 0x0032DCE8
+		// Token: 0x170072C9 RID: 29385
+		// (get) Token: 0x060175D1 RID: 95697 RVA: 0x00356E70 File Offset: 0x00355070
 		public TQuestSchedule QuestScheduleTypeType
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016099 RID: 90265 RVA: 0x0032FB24 File Offset: 0x0032DD24
+		// Token: 0x060175D2 RID: 95698 RVA: 0x00356EAC File Offset: 0x003550AC
 		public TTable? QuestScheduleType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -116,86 +116,86 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601609A RID: 90266 RVA: 0x0032FB6C File Offset: 0x0032DD6C
+		// Token: 0x060175D3 RID: 95699 RVA: 0x00356EF4 File Offset: 0x003550F4
 		public IQuestScheduleBtTreeVar QuestScheduleTypeAsIQuestScheduleBtTreeVar()
 		{
 			return this.QuestScheduleType<IQuestScheduleBtTreeVar>().Value;
 		}
 
-		// Token: 0x0601609B RID: 90267 RVA: 0x0032FB88 File Offset: 0x0032DD88
+		// Token: 0x060175D4 RID: 95700 RVA: 0x00356F10 File Offset: 0x00355110
 		public IQuestScheduleChildQuestCompleted QuestScheduleTypeAsIQuestScheduleChildQuestCompleted()
 		{
 			return this.QuestScheduleType<IQuestScheduleChildQuestCompleted>().Value;
 		}
 
-		// Token: 0x0601609C RID: 90268 RVA: 0x0032FBA4 File Offset: 0x0032DDA4
+		// Token: 0x060175D5 RID: 95701 RVA: 0x00356F2C File Offset: 0x0035512C
 		public IQuestScheduleChildQuestCompletedCount QuestScheduleTypeAsIQuestScheduleChildQuestCompletedCount()
 		{
 			return this.QuestScheduleType<IQuestScheduleChildQuestCompletedCount>().Value;
 		}
 
-		// Token: 0x0601609D RID: 90269 RVA: 0x0032FBC0 File Offset: 0x0032DDC0
+		// Token: 0x060175D6 RID: 95702 RVA: 0x00356F48 File Offset: 0x00355148
 		public IQuestScheduleDistanceValue QuestScheduleTypeAsIQuestScheduleDistanceValue()
 		{
 			return this.QuestScheduleType<IQuestScheduleDistanceValue>().Value;
 		}
 
-		// Token: 0x0601609E RID: 90270 RVA: 0x0032FBDC File Offset: 0x0032DDDC
+		// Token: 0x060175D7 RID: 95703 RVA: 0x00356F64 File Offset: 0x00355164
 		public IQuestScheduleEntityHP QuestScheduleTypeAsIQuestScheduleEntityHP()
 		{
 			return this.QuestScheduleType<IQuestScheduleEntityHP>().Value;
 		}
 
-		// Token: 0x0601609F RID: 90271 RVA: 0x0032FBF8 File Offset: 0x0032DDF8
+		// Token: 0x060175D8 RID: 95704 RVA: 0x00356F80 File Offset: 0x00355180
 		public IQuestScheduleMeetCondition QuestScheduleTypeAsIQuestScheduleMeetCondition()
 		{
 			return this.QuestScheduleType<IQuestScheduleMeetCondition>().Value;
 		}
 
-		// Token: 0x060160A0 RID: 90272 RVA: 0x0032FC14 File Offset: 0x0032DE14
+		// Token: 0x060175D9 RID: 95705 RVA: 0x00356F9C File Offset: 0x0035519C
 		public IQuestScheduleMultiBtTreeVar QuestScheduleTypeAsIQuestScheduleMultiBtTreeVar()
 		{
 			return this.QuestScheduleType<IQuestScheduleMultiBtTreeVar>().Value;
 		}
 
-		// Token: 0x060160A1 RID: 90273 RVA: 0x0032FC30 File Offset: 0x0032DE30
+		// Token: 0x060175DA RID: 95706 RVA: 0x00356FB8 File Offset: 0x003551B8
 		public IQuestScheduleNone QuestScheduleTypeAsIQuestScheduleNone()
 		{
 			return this.QuestScheduleType<IQuestScheduleNone>().Value;
 		}
 
-		// Token: 0x060160A2 RID: 90274 RVA: 0x0032FC4C File Offset: 0x0032DE4C
+		// Token: 0x060175DB RID: 95707 RVA: 0x00356FD4 File Offset: 0x003551D4
 		public IQuestScheduleProgressValue QuestScheduleTypeAsIQuestScheduleProgressValue()
 		{
 			return this.QuestScheduleType<IQuestScheduleProgressValue>().Value;
 		}
 
-		// Token: 0x060160A3 RID: 90275 RVA: 0x0032FC68 File Offset: 0x0032DE68
+		// Token: 0x060175DC RID: 95708 RVA: 0x00356FF0 File Offset: 0x003551F0
 		public IQuestScheduleRoleTowerChallengeTitle QuestScheduleTypeAsIQuestScheduleRoleTowerChallengeTitle()
 		{
 			return this.QuestScheduleType<IQuestScheduleRoleTowerChallengeTitle>().Value;
 		}
 
-		// Token: 0x060160A4 RID: 90276 RVA: 0x0032FC84 File Offset: 0x0032DE84
+		// Token: 0x060175DD RID: 95709 RVA: 0x0035700C File Offset: 0x0035520C
 		public IQuestScheduleScore QuestScheduleTypeAsIQuestScheduleScore()
 		{
 			return this.QuestScheduleType<IQuestScheduleScore>().Value;
 		}
 
-		// Token: 0x060160A5 RID: 90277 RVA: 0x0032FCA0 File Offset: 0x0032DEA0
+		// Token: 0x060175DE RID: 95710 RVA: 0x00357028 File Offset: 0x00355228
 		public IQuestScheduleTimeLeft QuestScheduleTypeAsIQuestScheduleTimeLeft()
 		{
 			return this.QuestScheduleType<IQuestScheduleTimeLeft>().Value;
 		}
 
-		// Token: 0x060160A6 RID: 90278 RVA: 0x0032FCBC File Offset: 0x0032DEBC
+		// Token: 0x060175DF RID: 95711 RVA: 0x00357044 File Offset: 0x00355244
 		public IQuestScheduleTowerChallengeTitle QuestScheduleTypeAsIQuestScheduleTowerChallengeTitle()
 		{
 			return this.QuestScheduleType<IQuestScheduleTowerChallengeTitle>().Value;
 		}
 
-		// Token: 0x17006D10 RID: 27920
-		// (get) Token: 0x060160A7 RID: 90279 RVA: 0x0032FCD8 File Offset: 0x0032DED8
+		// Token: 0x170072CA RID: 29386
+		// (get) Token: 0x060175E0 RID: 95712 RVA: 0x00357060 File Offset: 0x00355260
 		public IProgressBar? ProgressBar
 		{
 			get
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060160A8 RID: 90280 RVA: 0x0032FD36 File Offset: 0x0032DF36
+		// Token: 0x060175E1 RID: 95713 RVA: 0x003570BE File Offset: 0x003552BE
 		public static Offset<IConditionText> CreateIConditionText(FlatBufferBuilder builder, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), StringOffset TidTitleOffset = default(StringOffset), TQuestSchedule QuestScheduleType_type = TQuestSchedule.NONE, int QuestScheduleTypeOffset = 0, Offset<IProgressBar> ProgressBarOffset = default(Offset<IProgressBar>))
 		{
 			builder.StartTable(5);
@@ -221,49 +221,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IConditionText.EndIConditionText(builder);
 		}
 
-		// Token: 0x060160A9 RID: 90281 RVA: 0x0032FD6A File Offset: 0x0032DF6A
+		// Token: 0x060175E2 RID: 95714 RVA: 0x003570F2 File Offset: 0x003552F2
 		public static void StartIConditionText(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x060160AA RID: 90282 RVA: 0x0032FD73 File Offset: 0x0032DF73
+		// Token: 0x060175E3 RID: 95715 RVA: 0x003570FB File Offset: 0x003552FB
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(0, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x060160AB RID: 90283 RVA: 0x0032FD83 File Offset: 0x0032DF83
+		// Token: 0x060175E4 RID: 95716 RVA: 0x0035710B File Offset: 0x0035530B
 		public static void AddTidTitle(FlatBufferBuilder builder, StringOffset tidTitleOffset)
 		{
 			builder.AddOffset(1, tidTitleOffset.Value, 0);
 		}
 
-		// Token: 0x060160AC RID: 90284 RVA: 0x0032FD93 File Offset: 0x0032DF93
+		// Token: 0x060175E5 RID: 95717 RVA: 0x0035711B File Offset: 0x0035531B
 		public static void AddQuestScheduleTypeType(FlatBufferBuilder builder, TQuestSchedule questScheduleTypeType)
 		{
 			builder.AddByte(2, (byte)questScheduleTypeType, 0);
 		}
 
-		// Token: 0x060160AD RID: 90285 RVA: 0x0032FD9E File Offset: 0x0032DF9E
+		// Token: 0x060175E6 RID: 95718 RVA: 0x00357126 File Offset: 0x00355326
 		public static void AddQuestScheduleType(FlatBufferBuilder builder, int questScheduleTypeOffset)
 		{
 			builder.AddOffset(3, questScheduleTypeOffset, 0);
 		}
 
-		// Token: 0x060160AE RID: 90286 RVA: 0x0032FDA9 File Offset: 0x0032DFA9
+		// Token: 0x060175E7 RID: 95719 RVA: 0x00357131 File Offset: 0x00355331
 		public static void AddProgressBar(FlatBufferBuilder builder, Offset<IProgressBar> progressBarOffset)
 		{
 			builder.AddOffset(4, progressBarOffset.Value, 0);
 		}
 
-		// Token: 0x060160AF RID: 90287 RVA: 0x0032FDB9 File Offset: 0x0032DFB9
+		// Token: 0x060175E8 RID: 95720 RVA: 0x00357141 File Offset: 0x00355341
 		public static Offset<IConditionText> EndIConditionText(FlatBufferBuilder builder)
 		{
 			return new Offset<IConditionText>(builder.EndTable());
 		}
 
-		// Token: 0x060160B0 RID: 90288 RVA: 0x0032FDC8 File Offset: 0x0032DFC8
+		// Token: 0x060175E9 RID: 95721 RVA: 0x00357150 File Offset: 0x00355350
 		public IConditionTextT UnPack()
 		{
 			IConditionTextT conditionTextT = new IConditionTextT();
@@ -271,7 +271,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return conditionTextT;
 		}
 
-		// Token: 0x060160B1 RID: 90289 RVA: 0x0032FDE4 File Offset: 0x0032DFE4
+		// Token: 0x060175EA RID: 95722 RVA: 0x0035716C File Offset: 0x0035536C
 		public void UnPackTo(IConditionTextT _o)
 		{
 			_o.Condition = ((this.Condition != null) ? this.Condition.Value.UnPack() : null);
@@ -323,7 +323,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.ProgressBar = ((this.ProgressBar != null) ? this.ProgressBar.Value.UnPack() : null);
 		}
 
-		// Token: 0x060160B2 RID: 90290 RVA: 0x003301C4 File Offset: 0x0032E3C4
+		// Token: 0x060175EB RID: 95723 RVA: 0x0035754C File Offset: 0x0035574C
 		public static Offset<IConditionText> Pack(FlatBufferBuilder builder, IConditionTextT _o)
 		{
 			if (_o == null)
@@ -338,7 +338,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IConditionText.CreateIConditionText(builder, conditionOffset, tidTitleOffset, questScheduleType_type, questScheduleTypeOffset, progressBarOffset);
 		}
 
-		// Token: 0x0400B6F6 RID: 46838
+		// Token: 0x0400C0A3 RID: 49315
 		private Table __p;
 	}
 }

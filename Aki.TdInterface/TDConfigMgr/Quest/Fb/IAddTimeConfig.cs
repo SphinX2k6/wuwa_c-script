@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200143A RID: 5178
+	// Token: 0x02001592 RID: 5522
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IAddTimeConfig
 	{
-		// Token: 0x060075B5 RID: 30133 RVA: 0x001191B6 File Offset: 0x001173B6
-		[NullableContext(1)]
+		// Token: 0x06007C7A RID: 31866 RVA: 0x00127C02 File Offset: 0x00125E02
+		[NullableContext(0)]
 		public static IAddTimeConfig Create(IAddTimeConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002714 RID: 10004
-		// (get) Token: 0x060075B6 RID: 30134 RVA: 0x001191D5 File Offset: 0x001173D5
+		// Token: 0x170028F8 RID: 10488
+		// (get) Token: 0x06007C7B RID: 31867 RVA: 0x00127C21 File Offset: 0x00125E21
 		public virtual IKillMonster MonsterConfig
 		{
 			get
@@ -40,19 +40,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002715 RID: 10005
-		// (get) Token: 0x060075B7 RID: 30135 RVA: 0x0011920C File Offset: 0x0011740C
+		// Token: 0x170028F9 RID: 10489
+		// (get) Token: 0x06007C7C RID: 31868 RVA: 0x00127C58 File Offset: 0x00125E58
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IAddTimeStateCondition> StateConfig
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -75,24 +75,24 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004434 RID: 17460
+		// Token: 0x040047C8 RID: 18376
 		private IAddTimeConfig Instance;
 
-		// Token: 0x04004435 RID: 17461
+		// Token: 0x040047C9 RID: 18377
 		private IKillMonster _MonsterConfigCache;
 
-		// Token: 0x04004436 RID: 17462
+		// Token: 0x040047CA RID: 18378
 		private bool _MonsterConfigInited;
 
-		// Token: 0x04004437 RID: 17463
+		// Token: 0x040047CB RID: 18379
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IAddTimeStateCondition> _StateConfigCache;
 
-		// Token: 0x04004438 RID: 17464
+		// Token: 0x040047CC RID: 18380
 		private bool _StateConfigInited;
 	}
 }

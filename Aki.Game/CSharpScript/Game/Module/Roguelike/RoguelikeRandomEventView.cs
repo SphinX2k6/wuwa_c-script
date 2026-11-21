@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E16 RID: 19990
+	// Token: 0x02003DDF RID: 15839
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeRandomEventView : UiViewBase
 	{
-		// Token: 0x0603390C RID: 211212 RVA: 0x00C0E052 File Offset: 0x00C0C252
+		// Token: 0x06028777 RID: 165751 RVA: 0x00B5755E File Offset: 0x00B5575E
 		public RoguelikeRandomEventView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603390D RID: 211213 RVA: 0x00C0E074 File Offset: 0x00C0C274
+		// Token: 0x06028778 RID: 165752 RVA: 0x00B57580 File Offset: 0x00B55780
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -46,32 +46,32 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603390E RID: 211214 RVA: 0x00C0E15C File Offset: 0x00C0C35C
+		// Token: 0x06028779 RID: 165753 RVA: 0x00B57668 File Offset: 0x00B55868
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<RogueGainEntry, RogueGainEntry, bool, int, RoguelikeChooseDataResultResponse>(EEventName.RoguelikeChooseDataResult, new Action<RogueGainEntry, RogueGainEntry, bool, int, RoguelikeChooseDataResultResponse>(this.RoguelikeChooseDataResult));
 		}
 
-		// Token: 0x0603390F RID: 211215 RVA: 0x00C0E17A File Offset: 0x00C0C37A
+		// Token: 0x0602877A RID: 165754 RVA: 0x00B57686 File Offset: 0x00B55886
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoguelikeChooseDataResult, new Action<RogueGainEntry, RogueGainEntry, bool, int, RoguelikeChooseDataResultResponse>(this.RoguelikeChooseDataResult));
 		}
 
-		// Token: 0x06033910 RID: 211216 RVA: 0x00C0E198 File Offset: 0x00C0C398
+		// Token: 0x0602877B RID: 165755 RVA: 0x00B576A4 File Offset: 0x00B558A4
 		protected void OnBtnConfirm()
 		{
 			RoguelikeController.Instance.RogueChooseDataResultRequest(EPerkType.Event);
 		}
 
-		// Token: 0x06033911 RID: 211217 RVA: 0x00C0E1A5 File Offset: 0x00C0C3A5
+		// Token: 0x0602877C RID: 165756 RVA: 0x00B576B1 File Offset: 0x00B558B1
 		protected override void OnStart()
 		{
 			this.GenericLayout = new GenericLayout<RoguelikeRandomEventItem, RogueGainEntry>(base.GetVerticalLayout(0), new Func<RoguelikeRandomEventItem>(this.CreateElement), null, false, true);
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06033912 RID: 211218 RVA: 0x00C0E1D9 File Offset: 0x00C0C3D9
+		// Token: 0x0602877D RID: 165757 RVA: 0x00B576E5 File Offset: 0x00B558E5
 		private RoguelikeRandomEventItem CreateElement()
 		{
 			return new RoguelikeRandomEventItem
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			};
 		}
 
-		// Token: 0x06033913 RID: 211219 RVA: 0x00C0E1F4 File Offset: 0x00C0C3F4
+		// Token: 0x0602877E RID: 165758 RVA: 0x00B57700 File Offset: 0x00B55900
 		protected void RoguelikeChooseDataResult(RogueGainEntry newRogueGainEntry, RogueGainEntry oldRogueGainEntry, bool isSuccess, int bindId, RoguelikeChooseDataResultResponse response)
 		{
 			RoguelikeChooseData data = RoguelikeModel.Instance.GetRoguelikeChooseDataById(-2);
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			action(null);
 		}
 
-		// Token: 0x06033914 RID: 211220 RVA: 0x00C0E288 File Offset: 0x00C0C488
+		// Token: 0x0602877F RID: 165759 RVA: 0x00B57794 File Offset: 0x00B55994
 		protected void OnSelectHandle(RoguelikeRandomEventItem item, EToggleState state)
 		{
 			if (this.LastSelectItem != null && this.LastSelectItem != item && state == EToggleState.ETT_Checked)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetButton(2).SetSelfInteractive(isSelect);
 		}
 
-		// Token: 0x06033915 RID: 211221 RVA: 0x00C0E300 File Offset: 0x00C0C500
+		// Token: 0x06028780 RID: 165760 RVA: 0x00B5780C File Offset: 0x00B55A0C
 		protected override void OnBeforeShow()
 		{
 			base.GetButton(2).RootUIComp.Get().SetUIActive(false);
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.UpdateEventList(data, true);
 		}
 
-		// Token: 0x06033916 RID: 211222 RVA: 0x00C0E378 File Offset: 0x00C0C578
+		// Token: 0x06028781 RID: 165761 RVA: 0x00B57884 File Offset: 0x00B55A84
 		protected override void OnBeforeDestroy()
 		{
 			this.EventItemList.ForEach(delegate(RoguelikeRandomEventItem item)
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			selectCallback((this.LastSelectItem != null) ? this.LastSelectItem.Data.ConfigId : 0);
 		}
 
-		// Token: 0x06033917 RID: 211223 RVA: 0x00C0E414 File Offset: 0x00C0C614
+		// Token: 0x06028782 RID: 165762 RVA: 0x00B57920 File Offset: 0x00B55B20
 		public void UpdateEventList(RoguelikeChooseData data, bool isPlayPlot = true)
 		{
 			RoguelikeRandomEventView.<>c__DisplayClass19_0 CS$<>8__locals1 = new RoguelikeRandomEventView.<>c__DisplayClass19_0();
@@ -211,14 +211,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			CS$<>8__locals1.<UpdateEventList>g__EventFunc|0().AsTask();
 		}
 
-		// Token: 0x06033918 RID: 211224 RVA: 0x00C0E468 File Offset: 0x00C0C668
+		// Token: 0x06028783 RID: 165763 RVA: 0x00B57974 File Offset: 0x00B55B74
 		private void SetPanelActive(bool isActive)
 		{
 			base.GetItem(3).SetUIActive(isActive);
 			base.GetButton(2).RootUIComp.Get().SetUIActive(isActive);
 		}
 
-		// Token: 0x06033919 RID: 211225 RVA: 0x00C0E49C File Offset: 0x00C0C69C
+		// Token: 0x06028784 RID: 165764 RVA: 0x00B579A8 File Offset: 0x00B55BA8
 		[NullableContext(2)]
 		private bool CheckEventRoleBuff(Action callback = null)
 		{
@@ -237,41 +237,41 @@ namespace CSharpScript.Game.Module.Roguelike
 			return false;
 		}
 
-		// Token: 0x0401B599 RID: 112025
+		// Token: 0x04015F6C RID: 89964
 		public List<RoguelikeRandomEventItem> EventItemList = new List<RoguelikeRandomEventItem>();
 
-		// Token: 0x0401B59A RID: 112026
+		// Token: 0x04015F6D RID: 89965
 		public List<UUIItem> EventActorList = new List<UUIItem>();
 
-		// Token: 0x0401B59B RID: 112027
+		// Token: 0x04015F6E RID: 89966
 		public TimerHandle DelayShowTimerId;
 
-		// Token: 0x0401B59C RID: 112028
+		// Token: 0x04015F6F RID: 89967
 		public RoguelikeRandomEventItem LastSelectItem;
 
-		// Token: 0x0401B59D RID: 112029
+		// Token: 0x04015F70 RID: 89968
 		public GenericLayout<RoguelikeRandomEventItem, RogueGainEntry> GenericLayout;
 
-		// Token: 0x0401B59E RID: 112030
+		// Token: 0x04015F71 RID: 89969
 		public LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B59F RID: 112031
+		// Token: 0x04015F72 RID: 89970
 		private readonly bool IsEnd;
 
-		// Token: 0x0200AFAE RID: 44974
+		// Token: 0x020099E3 RID: 39395
 		[NullableContext(0)]
 		private class ERoguelikeRandomEventViewDefine
 		{
-			// Token: 0x0403555C RID: 218460
+			// Token: 0x0402FF8F RID: 196495
 			public const int EventContainer = 0;
 
-			// Token: 0x0403555D RID: 218461
+			// Token: 0x0402FF90 RID: 196496
 			public const int EventItem = 1;
 
-			// Token: 0x0403555E RID: 218462
+			// Token: 0x0402FF91 RID: 196497
 			public const int BtnConfirm = 2;
 
-			// Token: 0x0403555F RID: 218463
+			// Token: 0x0402FF92 RID: 196498
 			public const int BgPanel = 3;
 		}
 	}

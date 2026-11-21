@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020011F2 RID: 4594
+// Token: 0x020006A6 RID: 1702
 public enum ECorniceMeetingRewardState
 {
-	// Token: 0x04003834 RID: 14388
+	// Token: 0x040038CD RID: 14541
 	Unfinished,
-	// Token: 0x04003835 RID: 14389
+	// Token: 0x040038CE RID: 14542
 	Finished,
-	// Token: 0x04003836 RID: 14390
+	// Token: 0x040038CF RID: 14543
 	Rewarded
 }

@@ -5,38 +5,38 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 {
-	// Token: 0x02006431 RID: 25649
+	// Token: 0x020053AF RID: 21423
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class MotorDecalLinkConfig : ConfigBase
 	{
-		// Token: 0x060407D4 RID: 264148 RVA: 0x00F9BC02 File Offset: 0x00F99E02
+		// Token: 0x06035495 RID: 218261 RVA: 0x00EE2B7E File Offset: 0x00EE0D7E
 		public IReadOnlyList<MotorDecalIp> GetIpConfigListByActivityId(int activityId)
 		{
 			return ConfigMotorDecalIpByActivityId.GetConfigList(activityId, true) ?? new List<MotorDecalIp>();
 		}
 
-		// Token: 0x060407D5 RID: 264149 RVA: 0x00F9BC14 File Offset: 0x00F99E14
+		// Token: 0x06035496 RID: 218262 RVA: 0x00EE2B90 File Offset: 0x00EE0D90
 		public IReadOnlyList<MotorDecalQuest> GetTaskConfigListByIpId(int ipId)
 		{
 			return ConfigMotorDecalQuestByIp.GetConfigList(ipId, true) ?? new List<MotorDecalQuest>();
 		}
 
-		// Token: 0x060407D6 RID: 264150 RVA: 0x00F9BC26 File Offset: 0x00F99E26
+		// Token: 0x06035497 RID: 218263 RVA: 0x00EE2BA2 File Offset: 0x00EE0DA2
 		public MotorDecalQuest? GetTaskConfig(int taskId)
 		{
 			return ConfigMotorDecalQuestByTaskId.GetConfig(taskId, true);
 		}
 
-		// Token: 0x060407D7 RID: 264151 RVA: 0x00F9BC2F File Offset: 0x00F99E2F
+		// Token: 0x06035498 RID: 218264 RVA: 0x00EE2BAB File Offset: 0x00EE0DAB
 		public MotorDecalPreview? GetStickerPreviewConfig(int stickerId)
 		{
 			return ConfigMotorDecalPreviewByStickerId.GetConfig(stickerId, true);
 		}
 
-		// Token: 0x1700947C RID: 38012
-		// (get) Token: 0x060407D8 RID: 264152 RVA: 0x00F9BC38 File Offset: 0x00F99E38
+		// Token: 0x170067DE RID: 26590
+		// (get) Token: 0x06035499 RID: 218265 RVA: 0x00EE2BB4 File Offset: 0x00EE0DB4
 		public static MotorDecalLinkConfig Instance
 		{
 			get
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x060407D9 RID: 264153 RVA: 0x00F9BC3F File Offset: 0x00F99E3F
+		// Token: 0x0603549A RID: 218266 RVA: 0x00EE2BBB File Offset: 0x00EE0DBB
 		public static MotorDecalLinkConfig GetOrCreateInstance()
 		{
 			if (MotorDecalLinkConfig._Instance == null)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return MotorDecalLinkConfig._Instance;
 		}
 
-		// Token: 0x060407DA RID: 264154 RVA: 0x00F9BC53 File Offset: 0x00F99E53
+		// Token: 0x0603549B RID: 218267 RVA: 0x00EE2BCF File Offset: 0x00EE0DCF
 		public static bool CreateInstance()
 		{
 			if (MotorDecalLinkConfig._Instance != null)
@@ -66,24 +66,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return true;
 		}
 
-		// Token: 0x060407DB RID: 264155 RVA: 0x00F9BC69 File Offset: 0x00F99E69
+		// Token: 0x0603549C RID: 218268 RVA: 0x00EE2BE5 File Offset: 0x00EE0DE5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060407DC RID: 264156 RVA: 0x00F9BC6B File Offset: 0x00F99E6B
+		// Token: 0x0603549D RID: 218269 RVA: 0x00EE2BE7 File Offset: 0x00EE0DE7
 		public static void ResetStaticDefaultValue()
 		{
 			MotorDecalLinkConfig._Instance = null;
 		}
 
-		// Token: 0x060407DD RID: 264157 RVA: 0x00F9BC73 File Offset: 0x00F99E73
+		// Token: 0x0603549E RID: 218270 RVA: 0x00EE2BEF File Offset: 0x00EE0DEF
 		static MotorDecalLinkConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorDecalLinkConfig.CreateStaticDefaultValue), new Action(MotorDecalLinkConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021869 RID: 137321
+		// Token: 0x0401C198 RID: 115096
 		[Nullable(2)]
 		private static MotorDecalLinkConfig _Instance;
 	}

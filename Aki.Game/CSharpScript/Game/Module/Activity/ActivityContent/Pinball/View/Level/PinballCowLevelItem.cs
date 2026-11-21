@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 {
-	// Token: 0x0200633B RID: 25403
+	// Token: 0x020052B9 RID: 21177
 	public class PinballCowLevelItem : UiPanelBase
 	{
-		// Token: 0x0603FED1 RID: 261841 RVA: 0x00F7761C File Offset: 0x00F7581C
+		// Token: 0x06034B92 RID: 215954 RVA: 0x00EBE578 File Offset: 0x00EBC778
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,20 +39,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FED2 RID: 261842 RVA: 0x00F77704 File Offset: 0x00F75904
+		// Token: 0x06034B93 RID: 215955 RVA: 0x00EBE660 File Offset: 0x00EBC860
 		private bool IsLevelLock(int levelId)
 		{
 			return PinballModel.Instance.ActivityData.GetLevelLockStatus(levelId) != EPinballChapterLevelLockStatus.Activated;
 		}
 
-		// Token: 0x0603FED3 RID: 261843 RVA: 0x00F7771C File Offset: 0x00F7591C
+		// Token: 0x06034B94 RID: 215956 RVA: 0x00EBE678 File Offset: 0x00EBC878
 		[NullableContext(1)]
 		private string GetLevelLockTexts(int levelId)
 		{
 			return PinballModel.Instance.ActivityData.GetLevelPreConditionLockTexts(levelId);
 		}
 
-		// Token: 0x0603FED4 RID: 261844 RVA: 0x00F77730 File Offset: 0x00F75930
+		// Token: 0x06034B95 RID: 215957 RVA: 0x00EBE68C File Offset: 0x00EBC88C
 		[NullableContext(1)]
 		public void Refresh(PinballLevelRecordData data)
 		{
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			base.SetTextureByPath(pinballLevelConfigById.Value.Icon, base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x0603FED5 RID: 261845 RVA: 0x00F777AD File Offset: 0x00F759AD
+		// Token: 0x06034B96 RID: 215958 RVA: 0x00EBE709 File Offset: 0x00EBC909
 		public void SelectLevel()
 		{
 			this.OnTogClick();
 		}
 
-		// Token: 0x0603FED6 RID: 261846 RVA: 0x00F777B8 File Offset: 0x00F759B8
+		// Token: 0x06034B97 RID: 215959 RVA: 0x00EBE714 File Offset: 0x00EBC914
 		private void OnTogClick()
 		{
 			if (this.Data == null)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			onTogLevelClick(this.Data, arg, base.GetExtendToggle(0));
 		}
 
-		// Token: 0x04021585 RID: 136581
+		// Token: 0x0401BEB4 RID: 114356
 		[Nullable(new byte[]
 		{
 			2,
@@ -106,20 +106,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 		})]
 		public Action<PinballLevelRecordData, IPinballLevelInfoData, UUIExtendToggle> OnTogLevelClick;
 
-		// Token: 0x04021586 RID: 136582
+		// Token: 0x0401BEB5 RID: 114357
 		[Nullable(2)]
 		private PinballLevelRecordData Data;
 
-		// Token: 0x0200C54C RID: 50508
+		// Token: 0x0200AF33 RID: 44851
 		private enum EComponent
 		{
-			// Token: 0x0403B8BE RID: 243902
+			// Token: 0x04036220 RID: 221728
 			TogItem,
-			// Token: 0x0403B8BF RID: 243903
+			// Token: 0x04036221 RID: 221729
 			LockItem,
-			// Token: 0x0403B8C0 RID: 243904
+			// Token: 0x04036222 RID: 221730
 			SprIcon,
-			// Token: 0x0403B8C1 RID: 243905
+			// Token: 0x04036223 RID: 221731
 			FinishedItem
 		}
 	}

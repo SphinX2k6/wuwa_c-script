@@ -3,57 +3,57 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003304 RID: 13060
+// Token: 0x02002876 RID: 10358
 [NullableContext(1)]
 [Nullable(0)]
 public class AssetRecord : IDbAssetElement
 {
-	// Token: 0x17002765 RID: 10085
-	// (get) Token: 0x0601C759 RID: 116569 RVA: 0x007FC726 File Offset: 0x007FA926
-	// (set) Token: 0x0601C75A RID: 116570 RVA: 0x007FC72E File Offset: 0x007FA92E
+	// Token: 0x17002B02 RID: 11010
+	// (get) Token: 0x0601A452 RID: 107602 RVA: 0x00822C92 File Offset: 0x00820E92
+	// (set) Token: 0x0601A453 RID: 107603 RVA: 0x00822C9A File Offset: 0x00820E9A
 	public HashSet<string> AssetSet { get; set; } = new HashSet<string>();
 
-	// Token: 0x17002766 RID: 10086
-	// (get) Token: 0x0601C75B RID: 116571 RVA: 0x007FC737 File Offset: 0x007FA937
-	// (set) Token: 0x0601C75C RID: 116572 RVA: 0x007FC73F File Offset: 0x007FA93F
+	// Token: 0x17002B03 RID: 11011
+	// (get) Token: 0x0601A454 RID: 107604 RVA: 0x00822CA3 File Offset: 0x00820EA3
+	// (set) Token: 0x0601A455 RID: 107605 RVA: 0x00822CAB File Offset: 0x00820EAB
 	public List<string> ActorClass { get; set; } = new List<string>();
 
-	// Token: 0x17002767 RID: 10087
-	// (get) Token: 0x0601C75D RID: 116573 RVA: 0x007FC748 File Offset: 0x007FA948
-	// (set) Token: 0x0601C75E RID: 116574 RVA: 0x007FC750 File Offset: 0x007FA950
+	// Token: 0x17002B04 RID: 11012
+	// (get) Token: 0x0601A456 RID: 107606 RVA: 0x00822CB4 File Offset: 0x00820EB4
+	// (set) Token: 0x0601A457 RID: 107607 RVA: 0x00822CBC File Offset: 0x00820EBC
 	public List<string> Animations { get; set; } = new List<string>();
 
-	// Token: 0x17002768 RID: 10088
-	// (get) Token: 0x0601C75F RID: 116575 RVA: 0x007FC759 File Offset: 0x007FA959
-	// (set) Token: 0x0601C760 RID: 116576 RVA: 0x007FC761 File Offset: 0x007FA961
+	// Token: 0x17002B05 RID: 11013
+	// (get) Token: 0x0601A458 RID: 107608 RVA: 0x00822CC5 File Offset: 0x00820EC5
+	// (set) Token: 0x0601A459 RID: 107609 RVA: 0x00822CCD File Offset: 0x00820ECD
 	public List<string> Effects { get; set; } = new List<string>();
 
-	// Token: 0x17002769 RID: 10089
-	// (get) Token: 0x0601C761 RID: 116577 RVA: 0x007FC76A File Offset: 0x007FA96A
-	// (set) Token: 0x0601C762 RID: 116578 RVA: 0x007FC772 File Offset: 0x007FA972
+	// Token: 0x17002B06 RID: 11014
+	// (get) Token: 0x0601A45A RID: 107610 RVA: 0x00822CD6 File Offset: 0x00820ED6
+	// (set) Token: 0x0601A45B RID: 107611 RVA: 0x00822CDE File Offset: 0x00820EDE
 	public List<string> Audios { get; set; } = new List<string>();
 
-	// Token: 0x1700276A RID: 10090
-	// (get) Token: 0x0601C763 RID: 116579 RVA: 0x007FC77B File Offset: 0x007FA97B
-	// (set) Token: 0x0601C764 RID: 116580 RVA: 0x007FC783 File Offset: 0x007FA983
+	// Token: 0x17002B07 RID: 11015
+	// (get) Token: 0x0601A45C RID: 107612 RVA: 0x00822CE7 File Offset: 0x00820EE7
+	// (set) Token: 0x0601A45D RID: 107613 RVA: 0x00822CEF File Offset: 0x00820EEF
 	public List<string> Meshes { get; set; } = new List<string>();
 
-	// Token: 0x1700276B RID: 10091
-	// (get) Token: 0x0601C765 RID: 116581 RVA: 0x007FC78C File Offset: 0x007FA98C
-	// (set) Token: 0x0601C766 RID: 116582 RVA: 0x007FC794 File Offset: 0x007FA994
+	// Token: 0x17002B08 RID: 11016
+	// (get) Token: 0x0601A45E RID: 107614 RVA: 0x00822CF8 File Offset: 0x00820EF8
+	// (set) Token: 0x0601A45F RID: 107615 RVA: 0x00822D00 File Offset: 0x00820F00
 	public List<string> Materials { get; set; } = new List<string>();
 
-	// Token: 0x1700276C RID: 10092
-	// (get) Token: 0x0601C767 RID: 116583 RVA: 0x007FC79D File Offset: 0x007FA99D
-	// (set) Token: 0x0601C768 RID: 116584 RVA: 0x007FC7A5 File Offset: 0x007FA9A5
+	// Token: 0x17002B09 RID: 11017
+	// (get) Token: 0x0601A460 RID: 107616 RVA: 0x00822D09 File Offset: 0x00820F09
+	// (set) Token: 0x0601A461 RID: 107617 RVA: 0x00822D11 File Offset: 0x00820F11
 	public List<string> AnimationBlueprints { get; set; } = new List<string>();
 
-	// Token: 0x1700276D RID: 10093
-	// (get) Token: 0x0601C769 RID: 116585 RVA: 0x007FC7AE File Offset: 0x007FA9AE
-	// (set) Token: 0x0601C76A RID: 116586 RVA: 0x007FC7B6 File Offset: 0x007FA9B6
+	// Token: 0x17002B0A RID: 11018
+	// (get) Token: 0x0601A462 RID: 107618 RVA: 0x00822D1A File Offset: 0x00820F1A
+	// (set) Token: 0x0601A463 RID: 107619 RVA: 0x00822D22 File Offset: 0x00820F22
 	public List<string> Others { get; set; } = new List<string>();
 
-	// Token: 0x0601C76B RID: 116587 RVA: 0x007FC7BF File Offset: 0x007FA9BF
+	// Token: 0x0601A464 RID: 107620 RVA: 0x00822D2B File Offset: 0x00820F2B
 	public bool AddActorClass(string path)
 	{
 		if (!this.AddAsset(path))
@@ -64,7 +64,7 @@ public class AssetRecord : IDbAssetElement
 		return true;
 	}
 
-	// Token: 0x0601C76C RID: 116588 RVA: 0x007FC7D9 File Offset: 0x007FA9D9
+	// Token: 0x0601A465 RID: 107621 RVA: 0x00822D45 File Offset: 0x00820F45
 	public void AddAnimation(string path)
 	{
 		if (!this.AddAsset(path))
@@ -74,7 +74,7 @@ public class AssetRecord : IDbAssetElement
 		this.Animations.Add(path);
 	}
 
-	// Token: 0x0601C76D RID: 116589 RVA: 0x007FC7F4 File Offset: 0x007FA9F4
+	// Token: 0x0601A466 RID: 107622 RVA: 0x00822D60 File Offset: 0x00820F60
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -96,7 +96,7 @@ public class AssetRecord : IDbAssetElement
 		return new ValueTuple<bool, bool, UObject>(this.AddOther(path2), false, uobject);
 	}
 
-	// Token: 0x0601C76E RID: 116590 RVA: 0x007FC862 File Offset: 0x007FAA62
+	// Token: 0x0601A467 RID: 107623 RVA: 0x00822DCE File Offset: 0x00820FCE
 	public bool AddEffect(string path)
 	{
 		if (!this.AddAsset(path))
@@ -107,7 +107,7 @@ public class AssetRecord : IDbAssetElement
 		return true;
 	}
 
-	// Token: 0x0601C76F RID: 116591 RVA: 0x007FC87C File Offset: 0x007FAA7C
+	// Token: 0x0601A468 RID: 107624 RVA: 0x00822DE8 File Offset: 0x00820FE8
 	public void AddAudio(string path)
 	{
 		if (!this.AddAsset(path))
@@ -117,7 +117,7 @@ public class AssetRecord : IDbAssetElement
 		this.Audios.Add(path);
 	}
 
-	// Token: 0x0601C770 RID: 116592 RVA: 0x007FC894 File Offset: 0x007FAA94
+	// Token: 0x0601A469 RID: 107625 RVA: 0x00822E00 File Offset: 0x00821000
 	public void AddMesh(string path)
 	{
 		if (!this.AddAsset(path))
@@ -127,7 +127,7 @@ public class AssetRecord : IDbAssetElement
 		this.Meshes.Add(path);
 	}
 
-	// Token: 0x0601C771 RID: 116593 RVA: 0x007FC8AC File Offset: 0x007FAAAC
+	// Token: 0x0601A46A RID: 107626 RVA: 0x00822E18 File Offset: 0x00821018
 	public void AddMaterial(string path)
 	{
 		if (!this.AddAsset(path))
@@ -137,7 +137,7 @@ public class AssetRecord : IDbAssetElement
 		this.Materials.Add(path);
 	}
 
-	// Token: 0x0601C772 RID: 116594 RVA: 0x007FC8C4 File Offset: 0x007FAAC4
+	// Token: 0x0601A46B RID: 107627 RVA: 0x00822E30 File Offset: 0x00821030
 	public void AddAnimationBlueprint(string path)
 	{
 		if (!this.AddAsset(path))
@@ -147,7 +147,7 @@ public class AssetRecord : IDbAssetElement
 		this.AnimationBlueprints.Add(path);
 	}
 
-	// Token: 0x0601C773 RID: 116595 RVA: 0x007FC8DC File Offset: 0x007FAADC
+	// Token: 0x0601A46C RID: 107628 RVA: 0x00822E48 File Offset: 0x00821048
 	public bool AddOther(string path)
 	{
 		if (!this.AddAsset(path))
@@ -158,7 +158,7 @@ public class AssetRecord : IDbAssetElement
 		return true;
 	}
 
-	// Token: 0x0601C774 RID: 116596 RVA: 0x007FC8F8 File Offset: 0x007FAAF8
+	// Token: 0x0601A46D RID: 107629 RVA: 0x00822E64 File Offset: 0x00821064
 	private bool AddAsset(string path)
 	{
 		if (string.IsNullOrEmpty(path))
@@ -178,7 +178,7 @@ public class AssetRecord : IDbAssetElement
 		return this.AssetSet.Add(path);
 	}
 
-	// Token: 0x0601C775 RID: 116597 RVA: 0x007FC958 File Offset: 0x007FAB58
+	// Token: 0x0601A46E RID: 107630 RVA: 0x00822EC4 File Offset: 0x008210C4
 	public bool Copy(AssetRecord other)
 	{
 		foreach (string path in other.ActorClass)

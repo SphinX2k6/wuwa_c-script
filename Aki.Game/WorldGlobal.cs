@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.SeamlessTravel;
@@ -12,24 +11,24 @@ using CSharpScript.Game.Render;
 using CSharpScript.Game.World.Controller;
 using UnrealEngine;
 
-// Token: 0x0200354C RID: 13644
+// Token: 0x02002AC1 RID: 10945
 [NullableContext(1)]
 [Nullable(0)]
 public class WorldGlobal : IStaticVariableResetter
 {
-	// Token: 0x0601DF5E RID: 122718 RVA: 0x00865700 File Offset: 0x00863900
+	// Token: 0x0601BC86 RID: 113798 RVA: 0x0088D338 File Offset: 0x0088B538
 	static WorldGlobal()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WorldGlobal.CreateStaticDefaultValue), new Action(WorldGlobal.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601DF5F RID: 122719 RVA: 0x0086571F File Offset: 0x0086391F
+	// Token: 0x0601BC87 RID: 113799 RVA: 0x0088D357 File Offset: 0x0088B557
 	public static void CreateStaticDefaultValue()
 	{
 		WorldGlobal.SweepHitResult = null;
 	}
 
-	// Token: 0x0601DF60 RID: 122720 RVA: 0x00865727 File Offset: 0x00863927
+	// Token: 0x0601BC88 RID: 113800 RVA: 0x0088D35F File Offset: 0x0088B55F
 	public static void ResetStaticDefaultValue()
 	{
 		WorldGlobal.BeginTravelLoadMapDelegate = null;
@@ -41,7 +40,7 @@ public class WorldGlobal : IStaticVariableResetter
 		WorldGlobal.SweepHitResult = null;
 	}
 
-	// Token: 0x0601DF61 RID: 122721 RVA: 0x00865754 File Offset: 0x00863954
+	// Token: 0x0601BC89 RID: 113801 RVA: 0x0088D38C File Offset: 0x0088B58C
 	public static void Initialize()
 	{
 		GlobalData.GameInstance.场景加载通知器 = new ULoadMapNotify(GlobalData.GameInstance, null, EObjectFlags.RF_NoFlags);
@@ -90,7 +89,7 @@ public class WorldGlobal : IStaticVariableResetter
 		GlobalData.GameInstance.场景加载通知器.BindUnLoadStreamLevel(WorldGlobal.UnLoadStreamLevelHandler);
 	}
 
-	// Token: 0x0601DF62 RID: 122722 RVA: 0x008658DC File Offset: 0x00863ADC
+	// Token: 0x0601BC8A RID: 113802 RVA: 0x0088D514 File Offset: 0x0088B714
 	public static void Clear()
 	{
 		Action<string> callBack;
@@ -132,7 +131,7 @@ public class WorldGlobal : IStaticVariableResetter
 		GlobalData.GameInstance.场景加载通知器.Clear();
 	}
 
-	// Token: 0x0601DF63 RID: 122723 RVA: 0x008659B8 File Offset: 0x00863BB8
+	// Token: 0x0601BC8B RID: 113803 RVA: 0x0088D5F0 File Offset: 0x0088B7F0
 	public static void LoadFromMap(int id)
 	{
 		AkiMapSource? akiMapSourceConfig = WorldMapConfig.Instance.GetAkiMapSourceConfig(id);
@@ -149,7 +148,7 @@ public class WorldGlobal : IStaticVariableResetter
 		WorldGlobal.OpenLevel(akiMapSourceConfig.Value.MapPath);
 	}
 
-	// Token: 0x0601DF64 RID: 122724 RVA: 0x00865A1C File Offset: 0x00863C1C
+	// Token: 0x0601BC8C RID: 113804 RVA: 0x0088D654 File Offset: 0x0088B854
 	public static void OpenLevel(string levelName)
 	{
 		if (SeamlessTravelModel.Instance.IsSeamlessTravel && SeamlessTravelController.Instance.StartTravel(levelName))
@@ -171,13 +170,13 @@ public class WorldGlobal : IStaticVariableResetter
 		WorldGlobal.PlayerClientTravel(Global.PlayerController, levelName);
 	}
 
-	// Token: 0x0601DF65 RID: 122725 RVA: 0x00865A90 File Offset: 0x00863C90
+	// Token: 0x0601BC8D RID: 113805 RVA: 0x0088D6C8 File Offset: 0x0088B8C8
 	public static void PlayerClientTravel(APlayerController playerController, string url)
 	{
 		playerController.ClientTravel(url, ETravelType.TRAVEL_Relative, true, default(FGuid));
 	}
 
-	// Token: 0x0601DF66 RID: 122726 RVA: 0x00865AB0 File Offset: 0x00863CB0
+	// Token: 0x0601BC8E RID: 113806 RVA: 0x0088D6E8 File Offset: 0x0088B8E8
 	public static void ToUeInt32Array([Nullable(2)] IList<int> inItems, TArray<int> outItems)
 	{
 		outItems.Empty(true);
@@ -191,7 +190,7 @@ public class WorldGlobal : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DF67 RID: 122727 RVA: 0x00865B04 File Offset: 0x00863D04
+	// Token: 0x0601BC8F RID: 113807 RVA: 0x0088D73C File Offset: 0x0088B93C
 	public static void ToUeInt64Array([Nullable(2)] IList<long> inItems, TArray<long> outItems)
 	{
 		outItems.Empty(true);
@@ -205,7 +204,7 @@ public class WorldGlobal : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DF68 RID: 122728 RVA: 0x00865B58 File Offset: 0x00863D58
+	// Token: 0x0601BC90 RID: 113808 RVA: 0x0088D790 File Offset: 0x0088B990
 	public static void ToUeFloatArray([Nullable(2)] IList<float> inItems, TArray<float> outItems)
 	{
 		outItems.Empty(true);
@@ -219,7 +218,7 @@ public class WorldGlobal : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DF69 RID: 122729 RVA: 0x00865BAC File Offset: 0x00863DAC
+	// Token: 0x0601BC91 RID: 113809 RVA: 0x0088D7E4 File Offset: 0x0088B9E4
 	public static void ToUeStringArray([Nullable(new byte[]
 	{
 		2,
@@ -237,7 +236,7 @@ public class WorldGlobal : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DF6A RID: 122730 RVA: 0x00865C00 File Offset: 0x00863E00
+	// Token: 0x0601BC92 RID: 113810 RVA: 0x0088D838 File Offset: 0x0088BA38
 	public static void ToTsArray<[Nullable(2)] T>([Nullable(new byte[]
 	{
 		2,
@@ -257,7 +256,7 @@ public class WorldGlobal : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DF6B RID: 122731 RVA: 0x00865C3D File Offset: 0x00863E3D
+	// Token: 0x0601BC93 RID: 113811 RVA: 0x0088D875 File Offset: 0x0088BA75
 	public static void ResetArraySize<[Nullable(2)] T>(TArray<T> items, int newSize, T defaultValue)
 	{
 		while (items.Num() > newSize)
@@ -270,7 +269,7 @@ public class WorldGlobal : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DF6C RID: 122732 RVA: 0x00865C6A File Offset: 0x00863E6A
+	// Token: 0x0601BC94 RID: 113812 RVA: 0x0088D8A2 File Offset: 0x0088BAA2
 	public static void ResetTsArraySize<[Nullable(2)] T>(List<T> items, int newSize, T defaultValue)
 	{
 		while (items.Count > newSize)
@@ -283,7 +282,7 @@ public class WorldGlobal : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DF6D RID: 122733 RVA: 0x00865C97 File Offset: 0x00863E97
+	// Token: 0x0601BC95 RID: 113813 RVA: 0x0088D8CF File Offset: 0x0088BACF
 	public static Aki.Protocol.Vector ToTsVector(FVectorDouble value)
 	{
 		return new Aki.Protocol.Vector
@@ -294,7 +293,7 @@ public class WorldGlobal : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0601DF6E RID: 122734 RVA: 0x00865CC5 File Offset: 0x00863EC5
+	// Token: 0x0601BC96 RID: 113814 RVA: 0x0088D8FD File Offset: 0x0088BAFD
 	public static Aki.Protocol.Vector ToTsVector(IVector value)
 	{
 		return new Aki.Protocol.Vector
@@ -305,7 +304,7 @@ public class WorldGlobal : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0601DF6F RID: 122735 RVA: 0x00865CF3 File Offset: 0x00863EF3
+	// Token: 0x0601BC97 RID: 113815 RVA: 0x0088D92B File Offset: 0x0088BB2B
 	[NullableContext(2)]
 	public static FVector ToUeVectorOld(Aki.Protocol.Vector value)
 	{
@@ -316,7 +315,7 @@ public class WorldGlobal : IStaticVariableResetter
 		return new FVector(value.X, value.Y, value.Z);
 	}
 
-	// Token: 0x0601DF70 RID: 122736 RVA: 0x00865D15 File Offset: 0x00863F15
+	// Token: 0x0601BC98 RID: 113816 RVA: 0x0088D94D File Offset: 0x0088BB4D
 	[NullableContext(2)]
 	public static FVectorDouble ToUeVector(IVector value)
 	{
@@ -327,7 +326,7 @@ public class WorldGlobal : IStaticVariableResetter
 		return new FVectorDouble(value.X, value.Y, value.Z);
 	}
 
-	// Token: 0x0601DF71 RID: 122737 RVA: 0x00865D37 File Offset: 0x00863F37
+	// Token: 0x0601BC99 RID: 113817 RVA: 0x0088D96F File Offset: 0x0088BB6F
 	public static Aki.Protocol.Rotator ToTsRotator(FRotator value)
 	{
 		Aki.Protocol.Rotator rotator = Aki.Protocol.Rotator.Create();
@@ -337,7 +336,7 @@ public class WorldGlobal : IStaticVariableResetter
 		return rotator;
 	}
 
-	// Token: 0x0601DF72 RID: 122738 RVA: 0x00865D62 File Offset: 0x00863F62
+	// Token: 0x0601BC9A RID: 113818 RVA: 0x0088D99A File Offset: 0x0088BB9A
 	[NullableContext(2)]
 	public static FRotator ToUeRotator(Aki.Protocol.Rotator value)
 	{
@@ -348,7 +347,7 @@ public class WorldGlobal : IStaticVariableResetter
 		return new FRotator(value.Pitch, value.Yaw, value.Roll);
 	}
 
-	// Token: 0x0601DF73 RID: 122739 RVA: 0x00865D84 File Offset: 0x00863F84
+	// Token: 0x0601BC9B RID: 113819 RVA: 0x0088D9BC File Offset: 0x0088BBBC
 	public static FGameplayAttributeData ToUeGameplayAttribute([Nullable(2)] GameplayAttributeData attribute)
 	{
 		FGameplayAttributeData fgameplayAttributeData = new FGameplayAttributeData();
@@ -362,81 +361,55 @@ public class WorldGlobal : IStaticVariableResetter
 		return fgameplayAttributeData;
 	}
 
-	// Token: 0x0601DF74 RID: 122740 RVA: 0x00865DC3 File Offset: 0x00863FC3
+	// Token: 0x0601BC9C RID: 113820 RVA: 0x0088D9FB File Offset: 0x0088BBFB
 	public static void OnStatStart()
 	{
-		if (GlobalData.World == null || Info.Instance.IsBuildShipping)
-		{
-			return;
-		}
-		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "STAT STARTFILE", null);
+		UWorld world = GlobalData.World;
 	}
 
-	// Token: 0x0601DF75 RID: 122741 RVA: 0x00865DE9 File Offset: 0x00863FE9
+	// Token: 0x0601BC9D RID: 113821 RVA: 0x0088DA03 File Offset: 0x0088BC03
 	public static void OnStatStop()
 	{
-		if (GlobalData.World == null || Info.Instance.IsBuildShipping)
-		{
-			return;
-		}
-		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "STAT STOPFILE", null);
+		UWorld world = GlobalData.World;
 	}
 
-	// Token: 0x0601DF76 RID: 122742 RVA: 0x00865E0F File Offset: 0x0086400F
+	// Token: 0x0601BC9E RID: 113822 RVA: 0x0088DA0B File Offset: 0x0088BC0B
 	public static void ResetLoadTime()
 	{
-		if (GlobalData.World == null || Info.Instance.IsBuildShipping)
-		{
-			return;
-		}
-		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "LoadTimes.TestTime 0", null);
+		UWorld world = GlobalData.World;
 	}
 
-	// Token: 0x0601DF77 RID: 122743 RVA: 0x00865E35 File Offset: 0x00864035
+	// Token: 0x0601BC9F RID: 113823 RVA: 0x0088DA13 File Offset: 0x0088BC13
 	public static float GetLoadTime()
 	{
-		if (Info.Instance.IsBuildShipping)
-		{
-			return 0f;
-		}
-		return UKismetSystemLibrary.GetConsoleVariableFloatValue("LoadTimes.TestTime");
+		return 0f;
 	}
 
-	// Token: 0x0601DF78 RID: 122744 RVA: 0x00865E53 File Offset: 0x00864053
+	// Token: 0x0601BCA0 RID: 113824 RVA: 0x0088DA1A File Offset: 0x0088BC1A
 	public static void LoadTimesCheckBegin(string groupName = "default")
 	{
-		if (GlobalData.World == null || Info.Instance.IsBuildShipping)
-		{
-			return;
-		}
-		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "LoadTimes.TestSwitch 1", null);
-		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "LoadTimes.DumpTest Start " + groupName, null);
+		UWorld world = GlobalData.World;
 	}
 
-	// Token: 0x0601DF79 RID: 122745 RVA: 0x00865E8F File Offset: 0x0086408F
+	// Token: 0x0601BCA1 RID: 113825 RVA: 0x0088DA22 File Offset: 0x0088BC22
 	public static void LoadTimesCheckEnd()
 	{
-		if (GlobalData.World == null || Info.Instance.IsBuildShipping)
-		{
-			return;
-		}
-		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "LoadTimes.DumpTest LOWTIME=-1", null);
-		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "LoadTimes.TestSwitch 0", null);
+		UWorld world = GlobalData.World;
 	}
 
-	// Token: 0x0601DF7A RID: 122746 RVA: 0x00865EC5 File Offset: 0x008640C5
+	// Token: 0x0601BCA2 RID: 113826 RVA: 0x0088DA2A File Offset: 0x0088BC2A
 	private static void BeginTravelLoadMap(string mapName)
 	{
 		EventSystem.Instance.Emit(EEventName.BeforeTravelMap);
 	}
 
-	// Token: 0x0601DF7B RID: 122747 RVA: 0x00865ED7 File Offset: 0x008640D7
+	// Token: 0x0601BCA3 RID: 113827 RVA: 0x0088DA3C File Offset: 0x0088BC3C
 	private static void AfterEnterTransitionMap(string mapName)
 	{
 		EventSystem.Instance.Emit(EEventName.OnEnterTransitionMap);
 	}
 
-	// Token: 0x0601DF7C RID: 122748 RVA: 0x00865EE9 File Offset: 0x008640E9
+	// Token: 0x0601BCA4 RID: 113828 RVA: 0x0088DA4E File Offset: 0x0088BC4E
 	private static void BeginLoadMap(string mapName)
 	{
 		if (GameModeModel.Instance.MapPath != mapName)
@@ -446,7 +419,7 @@ public class WorldGlobal : IStaticVariableResetter
 		GameModeController.Instance.BeforeLoadMap();
 	}
 
-	// Token: 0x0601DF7D RID: 122749 RVA: 0x00865F08 File Offset: 0x00864108
+	// Token: 0x0601BCA5 RID: 113829 RVA: 0x0088DA70 File Offset: 0x0088BC70
 	private static void EndLoadMap(string mapName)
 	{
 		if (GlobalData.World == null || !GlobalData.World.IsValid())
@@ -467,7 +440,7 @@ public class WorldGlobal : IStaticVariableResetter
 		EventSystem.Instance.Emit(EEventName.EndTravelMap);
 	}
 
-	// Token: 0x0601DF7E RID: 122750 RVA: 0x00865F7C File Offset: 0x0086417C
+	// Token: 0x0601BCA6 RID: 113830 RVA: 0x0088DAE4 File Offset: 0x0088BCE4
 	[NullableContext(2)]
 	private static void LoadSubLevel(int linkId, FName levelName, ULevelStreaming level)
 	{
@@ -484,7 +457,7 @@ public class WorldGlobal : IStaticVariableResetter
 		SubLevelController.Instance.OnLoadSubLevel(linkId, levelName.ToString(), level);
 	}
 
-	// Token: 0x0601DF7F RID: 122751 RVA: 0x00865FE8 File Offset: 0x008641E8
+	// Token: 0x0601BCA7 RID: 113831 RVA: 0x0088DB50 File Offset: 0x0088BD50
 	private unsafe static void UnLoadSubLevel(int linkId, FName levelName)
 	{
 		Log instance = Log.Instance;
@@ -502,48 +475,48 @@ public class WorldGlobal : IStaticVariableResetter
 		SubLevelController.Instance.OnUnLoadSubLevel(linkId, levelName.ToString());
 	}
 
-	// Token: 0x0400EB5C RID: 60252
+	// Token: 0x0400F019 RID: 61465
 	public const float RAY_DISTANCE = 200f;
 
-	// Token: 0x0400EB5D RID: 60253
+	// Token: 0x0400F01A RID: 61466
 	public const int ONE_SECOND_FOR_MILLISECOND = 1000;
 
-	// Token: 0x0400EB5E RID: 60254
+	// Token: 0x0400F01B RID: 61467
 	public const int ONE_METER_FOR_CENTIMETER = 100;
 
-	// Token: 0x0400EB5F RID: 60255
+	// Token: 0x0400F01C RID: 61468
 	[Nullable(2)]
 	private static FBeginTravelLoadMapDelegate BeginTravelLoadMapDelegate;
 
-	// Token: 0x0400EB60 RID: 60256
+	// Token: 0x0400F01D RID: 61469
 	[Nullable(2)]
 	private static FEndLoadTransitionMapDelegate EndLoadTransitionMapHandler;
 
-	// Token: 0x0400EB61 RID: 60257
+	// Token: 0x0400F01E RID: 61470
 	[Nullable(2)]
 	private static FBeginLoadMapDelegate BeginLoadMapHandler;
 
-	// Token: 0x0400EB62 RID: 60258
+	// Token: 0x0400F01F RID: 61471
 	[Nullable(2)]
 	private static FEndLoadMapDelegate EndLoadMapHandler;
 
-	// Token: 0x0400EB63 RID: 60259
+	// Token: 0x0400F020 RID: 61472
 	[Nullable(2)]
 	private static FLoadStreamLevelDelegate LoadStreamLevelHandler;
 
-	// Token: 0x0400EB64 RID: 60260
+	// Token: 0x0400F021 RID: 61473
 	[Nullable(2)]
 	private static FUnLoadStreamLevelDelegate UnLoadStreamLevelHandler;
 
-	// Token: 0x0400EB65 RID: 60261
+	// Token: 0x0400F022 RID: 61474
 	[Nullable(2)]
 	public static FHitResult SweepHitResult;
 
-	// Token: 0x020099C9 RID: 39369
+	// Token: 0x02008BE3 RID: 35811
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030E4B RID: 200267
+		// Token: 0x0402C4CE RID: 181454
 		[Nullable(new byte[]
 		{
 			0,
@@ -551,7 +524,7 @@ public class WorldGlobal : IStaticVariableResetter
 		})]
 		public static Action<string> <0>__BeginTravelLoadMap;
 
-		// Token: 0x04030E4C RID: 200268
+		// Token: 0x0402C4CF RID: 181455
 		[Nullable(new byte[]
 		{
 			0,
@@ -559,7 +532,7 @@ public class WorldGlobal : IStaticVariableResetter
 		})]
 		public static Action<string> <1>__AfterEnterTransitionMap;
 
-		// Token: 0x04030E4D RID: 200269
+		// Token: 0x0402C4D0 RID: 181456
 		[Nullable(new byte[]
 		{
 			0,
@@ -567,7 +540,7 @@ public class WorldGlobal : IStaticVariableResetter
 		})]
 		public static Action<string> <2>__BeginLoadMap;
 
-		// Token: 0x04030E4E RID: 200270
+		// Token: 0x0402C4D1 RID: 181457
 		[Nullable(new byte[]
 		{
 			0,
@@ -575,7 +548,7 @@ public class WorldGlobal : IStaticVariableResetter
 		})]
 		public static Action<string> <3>__EndLoadMap;
 
-		// Token: 0x04030E4F RID: 200271
+		// Token: 0x0402C4D2 RID: 181458
 		[Nullable(new byte[]
 		{
 			0,
@@ -583,7 +556,7 @@ public class WorldGlobal : IStaticVariableResetter
 		})]
 		public static Action<int, FName, ULevelStreaming> <4>__LoadSubLevel;
 
-		// Token: 0x04030E50 RID: 200272
+		// Token: 0x0402C4D3 RID: 181459
 		[Nullable(0)]
 		public static Action<int, FName> <5>__UnLoadSubLevel;
 	}

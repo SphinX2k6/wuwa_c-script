@@ -1,43 +1,43 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020026F8 RID: 9976
+// Token: 0x02001BE3 RID: 7139
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsDangoActorData : IRacingBetsDangoActorData
 {
-	// Token: 0x17001AB3 RID: 6835
-	// (get) Token: 0x0601473F RID: 83775 RVA: 0x0052BA95 File Offset: 0x00529C95
-	// (set) Token: 0x06014740 RID: 83776 RVA: 0x0052BA9D File Offset: 0x00529C9D
+	// Token: 0x17001AEB RID: 6891
+	// (get) Token: 0x06011C21 RID: 72737 RVA: 0x0053A7B1 File Offset: 0x005389B1
+	// (set) Token: 0x06011C22 RID: 72738 RVA: 0x0053A7B9 File Offset: 0x005389B9
 	public EUiModelUseWay UiModelUseWay { get; set; }
 
-	// Token: 0x17001AB4 RID: 6836
-	// (get) Token: 0x06014741 RID: 83777 RVA: 0x0052BAA6 File Offset: 0x00529CA6
-	// (set) Token: 0x06014742 RID: 83778 RVA: 0x0052BAAE File Offset: 0x00529CAE
+	// Token: 0x17001AEC RID: 6892
+	// (get) Token: 0x06011C23 RID: 72739 RVA: 0x0053A7C2 File Offset: 0x005389C2
+	// (set) Token: 0x06011C24 RID: 72740 RVA: 0x0053A7CA File Offset: 0x005389CA
 	public int DangoId { get; set; }
 
-	// Token: 0x17001AB5 RID: 6837
-	// (get) Token: 0x06014743 RID: 83779 RVA: 0x0052BAB7 File Offset: 0x00529CB7
-	// (set) Token: 0x06014744 RID: 83780 RVA: 0x0052BABF File Offset: 0x00529CBF
+	// Token: 0x17001AED RID: 6893
+	// (get) Token: 0x06011C25 RID: 72741 RVA: 0x0053A7D3 File Offset: 0x005389D3
+	// (set) Token: 0x06011C26 RID: 72742 RVA: 0x0053A7DB File Offset: 0x005389DB
 	public int Odds { get; set; }
 
-	// Token: 0x17001AB6 RID: 6838
-	// (get) Token: 0x06014745 RID: 83781 RVA: 0x0052BAC8 File Offset: 0x00529CC8
-	// (set) Token: 0x06014746 RID: 83782 RVA: 0x0052BAD0 File Offset: 0x00529CD0
+	// Token: 0x17001AEE RID: 6894
+	// (get) Token: 0x06011C27 RID: 72743 RVA: 0x0053A7E4 File Offset: 0x005389E4
+	// (set) Token: 0x06011C28 RID: 72744 RVA: 0x0053A7EC File Offset: 0x005389EC
 	public string DangoPointCase { get; set; }
 
-	// Token: 0x17001AB7 RID: 6839
-	// (get) Token: 0x06014747 RID: 83783 RVA: 0x0052BAD9 File Offset: 0x00529CD9
-	// (set) Token: 0x06014748 RID: 83784 RVA: 0x0052BAE1 File Offset: 0x00529CE1
+	// Token: 0x17001AEF RID: 6895
+	// (get) Token: 0x06011C29 RID: 72745 RVA: 0x0053A7F5 File Offset: 0x005389F5
+	// (set) Token: 0x06011C2A RID: 72746 RVA: 0x0053A7FD File Offset: 0x005389FD
 	public string DangoCamera { get; set; }
 
-	// Token: 0x17001AB8 RID: 6840
-	// (get) Token: 0x06014749 RID: 83785 RVA: 0x0052BAEA File Offset: 0x00529CEA
-	// (set) Token: 0x0601474A RID: 83786 RVA: 0x0052BAF2 File Offset: 0x00529CF2
+	// Token: 0x17001AF0 RID: 6896
+	// (get) Token: 0x06011C2B RID: 72747 RVA: 0x0053A806 File Offset: 0x00538A06
+	// (set) Token: 0x06011C2C RID: 72748 RVA: 0x0053A80E File Offset: 0x00538A0E
 	public float DangoOffset { get; set; }
 
-	// Token: 0x17001AB9 RID: 6841
-	// (get) Token: 0x0601474B RID: 83787 RVA: 0x0052BAFB File Offset: 0x00529CFB
-	// (set) Token: 0x0601474C RID: 83788 RVA: 0x0052BB03 File Offset: 0x00529D03
+	// Token: 0x17001AF1 RID: 6897
+	// (get) Token: 0x06011C2D RID: 72749 RVA: 0x0053A817 File Offset: 0x00538A17
+	// (set) Token: 0x06011C2E RID: 72750 RVA: 0x0053A81F File Offset: 0x00538A1F
 	public bool IsAbuDango { get; set; }
 }

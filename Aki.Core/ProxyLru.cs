@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000059 RID: 89
+// Token: 0x0200005B RID: 91
 [NullableContext(1)]
 [Nullable(0)]
 public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 {
-	// Token: 0x06000284 RID: 644 RVA: 0x0000DF18 File Offset: 0x0000C118
+	// Token: 0x060002BF RID: 703 RVA: 0x0000ED00 File Offset: 0x0000CF00
 	public ProxyLru(int capacity, Func<TK, TV> creator, [Nullable(new byte[]
 	{
 		2,
@@ -24,9 +24,9 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 		this.ProxyEnable = ProxyLruConstants.ProxyLruEnable;
 	}
 
-	// Token: 0x17000058 RID: 88
-	// (get) Token: 0x06000285 RID: 645 RVA: 0x0000DF69 File Offset: 0x0000C169
-	// (set) Token: 0x06000286 RID: 646 RVA: 0x0000DF76 File Offset: 0x0000C176
+	// Token: 0x1700005F RID: 95
+	// (get) Token: 0x060002C0 RID: 704 RVA: 0x0000ED51 File Offset: 0x0000CF51
+	// (set) Token: 0x060002C1 RID: 705 RVA: 0x0000ED5E File Offset: 0x0000CF5E
 	public bool Enable
 	{
 		get
@@ -39,8 +39,8 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x17000059 RID: 89
-	// (get) Token: 0x06000287 RID: 647 RVA: 0x0000DF84 File Offset: 0x0000C184
+	// Token: 0x17000060 RID: 96
+	// (get) Token: 0x060002C2 RID: 706 RVA: 0x0000ED6C File Offset: 0x0000CF6C
 	public int Size
 	{
 		get
@@ -49,9 +49,9 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700005A RID: 90
-	// (get) Token: 0x06000288 RID: 648 RVA: 0x0000DF91 File Offset: 0x0000C191
-	// (set) Token: 0x06000289 RID: 649 RVA: 0x0000DF9E File Offset: 0x0000C19E
+	// Token: 0x17000061 RID: 97
+	// (get) Token: 0x060002C3 RID: 707 RVA: 0x0000ED79 File Offset: 0x0000CF79
+	// (set) Token: 0x060002C4 RID: 708 RVA: 0x0000ED86 File Offset: 0x0000CF86
 	public int Capacity
 	{
 		get
@@ -64,8 +64,8 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700005B RID: 91
-	// (get) Token: 0x0600028A RID: 650 RVA: 0x0000DFAC File Offset: 0x0000C1AC
+	// Token: 0x17000062 RID: 98
+	// (get) Token: 0x060002C5 RID: 709 RVA: 0x0000ED94 File Offset: 0x0000CF94
 	public float HitRate
 	{
 		get
@@ -74,8 +74,8 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700005C RID: 92
-	// (get) Token: 0x0600028B RID: 651 RVA: 0x0000DFB9 File Offset: 0x0000C1B9
+	// Token: 0x17000063 RID: 99
+	// (get) Token: 0x060002C6 RID: 710 RVA: 0x0000EDA1 File Offset: 0x0000CFA1
 	public float UsedAvg
 	{
 		get
@@ -84,8 +84,8 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700005D RID: 93
-	// (get) Token: 0x0600028C RID: 652 RVA: 0x0000DFC6 File Offset: 0x0000C1C6
+	// Token: 0x17000064 RID: 100
+	// (get) Token: 0x060002C7 RID: 711 RVA: 0x0000EDAE File Offset: 0x0000CFAE
 	public float ThresholdUsedRate
 	{
 		get
@@ -94,21 +94,21 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x0600028D RID: 653 RVA: 0x0000DFD3 File Offset: 0x0000C1D3
+	// Token: 0x060002C8 RID: 712 RVA: 0x0000EDBB File Offset: 0x0000CFBB
 	[return: Nullable(2)]
 	public TV Create(TK key)
 	{
 		return this.Lru.Create(key);
 	}
 
-	// Token: 0x0600028E RID: 654 RVA: 0x0000DFE1 File Offset: 0x0000C1E1
+	// Token: 0x060002C9 RID: 713 RVA: 0x0000EDC9 File Offset: 0x0000CFC9
 	[return: Nullable(2)]
 	public TV Get(TK key)
 	{
 		return this.Lru.Get(key);
 	}
 
-	// Token: 0x0600028F RID: 655 RVA: 0x0000DFF0 File Offset: 0x0000C1F0
+	// Token: 0x060002CA RID: 714 RVA: 0x0000EDD8 File Offset: 0x0000CFD8
 	public bool Put(TV value)
 	{
 		if (!this.ProxyEnable)
@@ -149,19 +149,19 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 		return this.Lru.Put(revocableObject.Value);
 	}
 
-	// Token: 0x06000290 RID: 656 RVA: 0x0000E12C File Offset: 0x0000C32C
+	// Token: 0x060002CB RID: 715 RVA: 0x0000EF14 File Offset: 0x0000D114
 	public void Clear()
 	{
 		this.Lru.Clear();
 	}
 
-	// Token: 0x06000291 RID: 657 RVA: 0x0000E139 File Offset: 0x0000C339
+	// Token: 0x060002CC RID: 716 RVA: 0x0000EF21 File Offset: 0x0000D121
 	public int GetCount(TK key)
 	{
 		return this.Lru.GetCount(key);
 	}
 
-	// Token: 0x040001E4 RID: 484
+	// Token: 0x040001FA RID: 506
 	[Nullable(new byte[]
 	{
 		2,
@@ -170,13 +170,13 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 	})]
 	private readonly Lru<TK, TV> Lru;
 
-	// Token: 0x040001E5 RID: 485
+	// Token: 0x040001FB RID: 507
 	private readonly ConditionalWeakTable<TV, IRevocableObject<TK, TV>> RevocableWeakMap = new ConditionalWeakTable<TV, IRevocableObject<TK, TV>>();
 
-	// Token: 0x040001E6 RID: 486
+	// Token: 0x040001FC RID: 508
 	private readonly ConditionalWeakTable<object, Dictionary<object, IRevocable<object>>> ProxyToOwnRevocableMap = new ConditionalWeakTable<object, Dictionary<object, IRevocable<object>>>();
 
-	// Token: 0x040001E7 RID: 487
+	// Token: 0x040001FD RID: 509
 	[Nullable(new byte[]
 	{
 		2,
@@ -185,6 +185,6 @@ public class ProxyLru<[Nullable(2)] TK, TV> where TV : class
 	})]
 	private readonly Func<object, object, bool> Checker;
 
-	// Token: 0x040001E8 RID: 488
+	// Token: 0x040001FE RID: 510
 	private readonly bool ProxyEnable = true;
 }

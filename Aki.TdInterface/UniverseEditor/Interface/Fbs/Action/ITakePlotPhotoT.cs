@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200728D RID: 29325
+	// Token: 0x02007A62 RID: 31330
 	public class ITakePlotPhotoT
 	{
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001775 RID: 6005
+	// Token: 0x020018F6 RID: 6390
 	public class IActorFxEmoteType_SetValue
 	{
-		// Token: 0x040050DD RID: 20701
+		// Token: 0x04005513 RID: 21779
 		public EActorFxEmoteType Type;
 	}
 }

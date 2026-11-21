@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200041C RID: 1052
+	// Token: 0x02000432 RID: 1074
 	public class ConfigInfluenceAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060018B1 RID: 6321 RVA: 0x000E553D File Offset: 0x000E373D
+		// Token: 0x06001935 RID: 6453 RVA: 0x000EBC91 File Offset: 0x000E9E91
 		static ConfigInfluenceAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfluenceAll.CreateStaticDefaultValue), new Action(ConfigInfluenceAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060018B2 RID: 6322 RVA: 0x000E555C File Offset: 0x000E375C
+		// Token: 0x06001936 RID: 6454 RVA: 0x000EBCB0 File Offset: 0x000E9EB0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfluenceAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060018B3 RID: 6323 RVA: 0x000E55DB File Offset: 0x000E37DB
+		// Token: 0x06001937 RID: 6455 RVA: 0x000EBD2F File Offset: 0x000E9F2F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfluenceAll.LogPair = null;
 			ConfigInfluenceAll.HandleId = 0;
 		}
 
-		// Token: 0x060018B4 RID: 6324 RVA: 0x000E55E9 File Offset: 0x000E37E9
+		// Token: 0x06001938 RID: 6456 RVA: 0x000EBD3D File Offset: 0x000E9F3D
 		public static void Init()
 		{
 			ConfigInfluenceAll.HandleId = ConfigCommon.InitDataStatement(ConfigInfluenceAll.HandleId, "db_influence.db", "select BinData from `Influence`");
 		}
 
-		// Token: 0x060018B5 RID: 6325 RVA: 0x000E5604 File Offset: 0x000E3804
+		// Token: 0x06001939 RID: 6457 RVA: 0x000EBD58 File Offset: 0x000E9F58
 		[NullableContext(2)]
 		public static IReadOnlyList<Influence> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001CA8 RID: 7336
+		// Token: 0x04001D42 RID: 7490
 		private const string DB = "db_influence.db";
 
-		// Token: 0x04001CA9 RID: 7337
+		// Token: 0x04001D43 RID: 7491
 		private const string FILE = "s.势力.xlsx";
 
-		// Token: 0x04001CAA RID: 7338
+		// Token: 0x04001D44 RID: 7492
 		private const string TABLE = "Influence";
 
-		// Token: 0x04001CAB RID: 7339
+		// Token: 0x04001D45 RID: 7493
 		private const string COMMAND = "select BinData from `Influence`";
 
-		// Token: 0x04001CAC RID: 7340
+		// Token: 0x04001D46 RID: 7494
 		private const string KEY_PREFIX = "InfluenceAll";
 
-		// Token: 0x04001CAD RID: 7341
+		// Token: 0x04001D47 RID: 7495
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001CAE RID: 7342
+		// Token: 0x04001D48 RID: 7496
 		private static int HandleId;
 	}
 }

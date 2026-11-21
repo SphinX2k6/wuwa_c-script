@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000301 RID: 769
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000348 RID: 840
 	public class IElementalRangeTypeBase
 	{
-		// Token: 0x06000ED9 RID: 3801 RVA: 0x00035248 File Offset: 0x00033448
+		// Token: 0x06001009 RID: 4105 RVA: 0x0003817C File Offset: 0x0003637C
 		private IElementalRangeTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000EDA RID: 3802 RVA: 0x00035280 File Offset: 0x00033480
+		// Token: 0x0600100A RID: 4106 RVA: 0x000381B4 File Offset: 0x000363B4
 		public static IElementalRangeTypeBase Create([Nullable(2)] IElementalRangeTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000EDB RID: 3803 RVA: 0x00035293 File Offset: 0x00033493
+		// Token: 0x0600100B RID: 4107 RVA: 0x000381C7 File Offset: 0x000363C7
 		public static IElementalRangeTypeBase CreateFromSetValue([Nullable(2)] IElementalRangeTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000EDC RID: 3804 RVA: 0x000352A6 File Offset: 0x000334A6
+		// Token: 0x0600100C RID: 4108 RVA: 0x000381DA File Offset: 0x000363DA
 		public IElementalRangeTypeBase_SetValue ToSetValue()
 		{
 			return new IElementalRangeTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000448 RID: 1096
-		// (get) Token: 0x06000EDD RID: 3805 RVA: 0x000352B9 File Offset: 0x000334B9
-		// (set) Token: 0x06000EDE RID: 3806 RVA: 0x000352E4 File Offset: 0x000334E4
+		// Token: 0x17000495 RID: 1173
+		// (get) Token: 0x0600100D RID: 4109 RVA: 0x000381ED File Offset: 0x000363ED
+		// (set) Token: 0x0600100E RID: 4110 RVA: 0x00038218 File Offset: 0x00036418
 		public virtual EElementalRangeType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000CFD RID: 3325
+		// Token: 0x04000DE7 RID: 3559
 		[Nullable(2)]
 		protected IElementalRangeTypeBase FbInstance;
 
-		// Token: 0x04000CFE RID: 3326
+		// Token: 0x04000DE8 RID: 3560
 		[Nullable(2)]
 		protected IElementalRangeTypeBase_SetValue PocoInterface;
 	}

@@ -5,16 +5,16 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.ExploreInteractiveCondition
 {
-	// Token: 0x020071FF RID: 29183
+	// Token: 0x020062B4 RID: 25268
 	public class QuantumDiffusionConditionListener : CustomConditionListener
 	{
-		// Token: 0x060476D1 RID: 292561 RVA: 0x0122F6CF File Offset: 0x0122D8CF
+		// Token: 0x0603CFD9 RID: 249817 RVA: 0x01189291 File Offset: 0x01187491
 		[NullableContext(1)]
 		public QuantumDiffusionConditionListener(Action<bool> onConditionChange) : base(onConditionChange)
 		{
 		}
 
-		// Token: 0x060476D2 RID: 292562 RVA: 0x0122F6D8 File Offset: 0x0122D8D8
+		// Token: 0x0603CFDA RID: 249818 RVA: 0x0118929C File Offset: 0x0118749C
 		public override bool CheckCondition()
 		{
 			int playerId = CreatureModel.Instance.GetPlayerId();
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.ExploreInteractiveCondition
 			return component != null && component.HasTag(GameplayTagDefine.EGameplayTagId["辅助机.量子转换.持有中"]);
 		}
 
-		// Token: 0x060476D3 RID: 292563 RVA: 0x0122F756 File Offset: 0x0122D956
+		// Token: 0x0603CFDB RID: 249819 RVA: 0x0118931A File Offset: 0x0118751A
 		public override void SetListenerEnable(bool enable)
 		{
 			if (enable)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.ExploreInteractiveCondition
 			this.RemoveEvents();
 		}
 
-		// Token: 0x060476D4 RID: 292564 RVA: 0x0122F768 File Offset: 0x0122D968
+		// Token: 0x0603CFDC RID: 249820 RVA: 0x0118932C File Offset: 0x0118752C
 		private void AddEvents()
 		{
 			if (!EventSystem.Instance.Has<bool>(EEventName.OnPlayerFollowerEnableChange, new Action<bool>(this.OnPlayerFollowerEnableChange)))
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.ExploreInteractiveCondition
 			}
 		}
 
-		// Token: 0x060476D5 RID: 292565 RVA: 0x0122F7A3 File Offset: 0x0122D9A3
+		// Token: 0x0603CFDD RID: 249821 RVA: 0x01189367 File Offset: 0x01187567
 		private void RemoveEvents()
 		{
 			if (EventSystem.Instance.Has<bool>(EEventName.OnPlayerFollowerEnableChange, new Action<bool>(this.OnPlayerFollowerEnableChange)))
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.ExploreInteractiveCondition
 			}
 		}
 
-		// Token: 0x060476D6 RID: 292566 RVA: 0x0122F7DE File Offset: 0x0122D9DE
+		// Token: 0x0603CFDE RID: 249822 RVA: 0x011893A2 File Offset: 0x011875A2
 		private void OnPlayerFollowerEnableChange(bool isEnable)
 		{
 			Action<bool> onConditionChange = this.OnConditionChange;

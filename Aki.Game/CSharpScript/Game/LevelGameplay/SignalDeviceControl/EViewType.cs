@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 {
-	// Token: 0x02006A4C RID: 27212
+	// Token: 0x02005BA9 RID: 23465
 	public enum EViewType
 	{
-		// Token: 0x04023550 RID: 144720
+		// Token: 0x0401E742 RID: 124738
 		Normal,
-		// Token: 0x04023551 RID: 144721
+		// Token: 0x0401E743 RID: 124739
 		ChasingMoon
 	}
 }

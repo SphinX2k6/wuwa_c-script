@@ -3,60 +3,60 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x02003030 RID: 12336
+// Token: 0x02002586 RID: 9606
 [NullableContext(1)]
 [Nullable(0)]
 [RequiredMember]
 public class HitContext
 {
-	// Token: 0x0601A23F RID: 107071 RVA: 0x006DDCB6 File Offset: 0x006DBEB6
+	// Token: 0x06017B9E RID: 97182 RVA: 0x007059C0 File Offset: 0x00703BC0
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public HitContext()
 	{
 	}
 
-	// Token: 0x0400C670 RID: 50800
+	// Token: 0x0400CA3F RID: 51775
 	public bool HasBeHitAnim;
 
-	// Token: 0x0400C671 RID: 50801
+	// Token: 0x0400CA40 RID: 51776
 	public EHitAnim BeHitAnim;
 
-	// Token: 0x0400C672 RID: 50802
+	// Token: 0x0400CA41 RID: 51777
 	public int VisionCounterAttackId;
 
-	// Token: 0x0400C673 RID: 50803
+	// Token: 0x0400CA42 RID: 51778
 	public ECounterAttackType CounterAttackType;
 
-	// Token: 0x0400C674 RID: 50804
+	// Token: 0x0400CA43 RID: 51779
 	public int SkillId;
 
-	// Token: 0x0400C675 RID: 50805
+	// Token: 0x0400CA44 RID: 51780
 	public int? SkillHitCount;
 
-	// Token: 0x0400C676 RID: 50806
+	// Token: 0x0400CA45 RID: 51781
 	public int? SkillHitCountByVictim;
 
-	// Token: 0x0400C677 RID: 50807
+	// Token: 0x0400CA46 RID: 51782
 	public int? BulletHitCount;
 
-	// Token: 0x0400C678 RID: 50808
+	// Token: 0x0400CA47 RID: 51783
 	public int? BulletHitCountByVictim;
 
-	// Token: 0x0400C679 RID: 50809
+	// Token: 0x0400CA48 RID: 51784
 	public IReadOnlyList<ESkillGenre> SkillGenres = Array.Empty<ESkillGenre>();
 
-	// Token: 0x0400C67A RID: 50810
+	// Token: 0x0400CA49 RID: 51785
 	public string[] BattleFlags = Array.Empty<string>();
 
-	// Token: 0x0400C67B RID: 50811
+	// Token: 0x0400CA4A RID: 51786
 	[Nullable(2)]
 	public Entity Attacker;
 
-	// Token: 0x0400C67C RID: 50812
+	// Token: 0x0400CA4B RID: 51787
 	[RequiredMember]
 	public Entity Target;
 
-	// Token: 0x0400C67D RID: 50813
+	// Token: 0x0400CA4C RID: 51788
 	public long BulletId;
 }

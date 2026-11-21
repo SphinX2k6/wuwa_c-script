@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005474 RID: 21620
+	// Token: 0x020059FA RID: 23034
 	public class IInteractSectorRangeT
 	{
-		// Token: 0x17009F24 RID: 40740
-		// (get) Token: 0x0602390F RID: 145679 RVA: 0x004EB27C File Offset: 0x004E947C
-		// (set) Token: 0x06023910 RID: 145680 RVA: 0x004EB284 File Offset: 0x004E9484
+		// Token: 0x1700A75E RID: 42846
+		// (get) Token: 0x060259C7 RID: 154055 RVA: 0x005282F0 File Offset: 0x005264F0
+		// (set) Token: 0x060259C8 RID: 154056 RVA: 0x005282F8 File Offset: 0x005264F8
 		public float Begin { get; set; }
 
-		// Token: 0x17009F25 RID: 40741
-		// (get) Token: 0x06023911 RID: 145681 RVA: 0x004EB28D File Offset: 0x004E948D
-		// (set) Token: 0x06023912 RID: 145682 RVA: 0x004EB295 File Offset: 0x004E9495
+		// Token: 0x1700A75F RID: 42847
+		// (get) Token: 0x060259C9 RID: 154057 RVA: 0x00528301 File Offset: 0x00526501
+		// (set) Token: 0x060259CA RID: 154058 RVA: 0x00528309 File Offset: 0x00526509
 		public float End { get; set; }
 
-		// Token: 0x06023913 RID: 145683 RVA: 0x004EB29E File Offset: 0x004E949E
+		// Token: 0x060259CB RID: 154059 RVA: 0x00528312 File Offset: 0x00526512
 		public IInteractSectorRangeT()
 		{
 			this.Begin = 0f;

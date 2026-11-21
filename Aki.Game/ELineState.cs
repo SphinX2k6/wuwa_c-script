@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020028A8 RID: 10408
+// Token: 0x02001E23 RID: 7715
 public enum ELineState
 {
-	// Token: 0x0400A012 RID: 40978
+	// Token: 0x0400A3FB RID: 41979
 	None = 1,
-	// Token: 0x0400A013 RID: 40979
+	// Token: 0x0400A3FC RID: 41980
 	InActive,
-	// Token: 0x0400A014 RID: 40980
+	// Token: 0x0400A3FD RID: 41981
 	Active
 }

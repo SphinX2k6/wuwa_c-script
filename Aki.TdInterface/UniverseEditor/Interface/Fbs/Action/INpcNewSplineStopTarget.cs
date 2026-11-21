@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BDF RID: 27615
+	// Token: 0x02007343 RID: 29507
 	public struct INpcNewSplineStopTarget : IFlatbufferObject
 	{
-		// Token: 0x1700CD31 RID: 52529
-		// (get) Token: 0x06030832 RID: 198706 RVA: 0x0069617E File Offset: 0x0069437E
+		// Token: 0x1700D83D RID: 55357
+		// (get) Token: 0x0603374E RID: 210766 RVA: 0x006EFA7E File Offset: 0x006EDC7E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030833 RID: 198707 RVA: 0x0069618B File Offset: 0x0069438B
+		// Token: 0x0603374F RID: 210767 RVA: 0x006EFA8B File Offset: 0x006EDC8B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030834 RID: 198708 RVA: 0x00696194 File Offset: 0x00694394
+		// Token: 0x06033750 RID: 210768 RVA: 0x006EFA94 File Offset: 0x006EDC94
 		public static INpcNewSplineStopTarget GetRootAsINpcNewSplineStopTarget(ByteBuffer _bb)
 		{
 			return INpcNewSplineStopTarget.GetRootAsINpcNewSplineStopTarget(_bb, default(INpcNewSplineStopTarget));
 		}
 
-		// Token: 0x06030835 RID: 198709 RVA: 0x006961B0 File Offset: 0x006943B0
+		// Token: 0x06033751 RID: 210769 RVA: 0x006EFAB0 File Offset: 0x006EDCB0
 		public static INpcNewSplineStopTarget GetRootAsINpcNewSplineStopTarget(ByteBuffer _bb, INpcNewSplineStopTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030836 RID: 198710 RVA: 0x006961CD File Offset: 0x006943CD
+		// Token: 0x06033752 RID: 210770 RVA: 0x006EFACD File Offset: 0x006EDCCD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030837 RID: 198711 RVA: 0x006961DC File Offset: 0x006943DC
+		// Token: 0x06033753 RID: 210771 RVA: 0x006EFADC File Offset: 0x006EDCDC
 		public INpcNewSplineStopTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CD32 RID: 52530
-		// (get) Token: 0x06030838 RID: 198712 RVA: 0x006961EC File Offset: 0x006943EC
+		// Token: 0x1700D83E RID: 55358
+		// (get) Token: 0x06033754 RID: 210772 RVA: 0x006EFAEC File Offset: 0x006EDCEC
 		public ENewSplineMoveTargetType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD33 RID: 52531
-		// (get) Token: 0x06030839 RID: 198713 RVA: 0x00696228 File Offset: 0x00694428
+		// Token: 0x1700D83F RID: 55359
+		// (get) Token: 0x06033755 RID: 210773 RVA: 0x006EFB28 File Offset: 0x006EDD28
 		public int NpcId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603083A RID: 198714 RVA: 0x00696264 File Offset: 0x00694464
+		// Token: 0x06033756 RID: 210774 RVA: 0x006EFB64 File Offset: 0x006EDD64
 		public static Offset<INpcNewSplineStopTarget> CreateINpcNewSplineStopTarget(FlatBufferBuilder builder, ENewSplineMoveTargetType Type = ENewSplineMoveTargetType.Player, int NpcId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INpcNewSplineStopTarget.EndINpcNewSplineStopTarget(builder);
 		}
 
-		// Token: 0x0603083B RID: 198715 RVA: 0x00696281 File Offset: 0x00694481
+		// Token: 0x06033757 RID: 210775 RVA: 0x006EFB81 File Offset: 0x006EDD81
 		public static void StartINpcNewSplineStopTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603083C RID: 198716 RVA: 0x0069628A File Offset: 0x0069448A
+		// Token: 0x06033758 RID: 210776 RVA: 0x006EFB8A File Offset: 0x006EDD8A
 		public static void AddType(FlatBufferBuilder builder, ENewSplineMoveTargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603083D RID: 198717 RVA: 0x00696295 File Offset: 0x00694495
+		// Token: 0x06033759 RID: 210777 RVA: 0x006EFB95 File Offset: 0x006EDD95
 		public static void AddNpcId(FlatBufferBuilder builder, int npcId)
 		{
 			builder.AddInt(1, npcId, 0);
 		}
 
-		// Token: 0x0603083E RID: 198718 RVA: 0x006962A0 File Offset: 0x006944A0
+		// Token: 0x0603375A RID: 210778 RVA: 0x006EFBA0 File Offset: 0x006EDDA0
 		public static Offset<INpcNewSplineStopTarget> EndINpcNewSplineStopTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcNewSplineStopTarget>(builder.EndTable());
 		}
 
-		// Token: 0x0603083F RID: 198719 RVA: 0x006962B0 File Offset: 0x006944B0
+		// Token: 0x0603375B RID: 210779 RVA: 0x006EFBB0 File Offset: 0x006EDDB0
 		public INpcNewSplineStopTargetT UnPack()
 		{
 			INpcNewSplineStopTargetT npcNewSplineStopTargetT = new INpcNewSplineStopTargetT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return npcNewSplineStopTargetT;
 		}
 
-		// Token: 0x06030840 RID: 198720 RVA: 0x006962CB File Offset: 0x006944CB
+		// Token: 0x0603375C RID: 210780 RVA: 0x006EFBCB File Offset: 0x006EDDCB
 		public void UnPackTo(INpcNewSplineStopTargetT _o)
 		{
 			_o.Type = this.Type;
 			_o.NpcId = this.NpcId;
 		}
 
-		// Token: 0x06030841 RID: 198721 RVA: 0x006962E8 File Offset: 0x006944E8
+		// Token: 0x0603375D RID: 210781 RVA: 0x006EFBE8 File Offset: 0x006EDDE8
 		public static Offset<INpcNewSplineStopTarget> Pack(FlatBufferBuilder builder, INpcNewSplineStopTargetT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INpcNewSplineStopTarget.CreateINpcNewSplineStopTarget(builder, _o.Type, _o.NpcId);
 		}
 
-		// Token: 0x040114C3 RID: 70851
+		// Token: 0x04012412 RID: 74770
 		private Table __p;
 	}
 }

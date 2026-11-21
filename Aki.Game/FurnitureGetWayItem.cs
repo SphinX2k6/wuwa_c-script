@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000FD3 RID: 4051
+// Token: 0x02000488 RID: 1160
 [NullableContext(2)]
 [Nullable(0)]
 public class FurnitureGetWayItem : UiPanelBase
 {
-	// Token: 0x06006806 RID: 26630 RVA: 0x0014AA44 File Offset: 0x00148C44
+	// Token: 0x06003B9E RID: 15262 RVA: 0x00153308 File Offset: 0x00151508
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006807 RID: 26631 RVA: 0x0014AB5C File Offset: 0x00148D5C
+	// Token: 0x06003B9F RID: 15263 RVA: 0x00153420 File Offset: 0x00151620
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FurnitureGetWayItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006808 RID: 26632 RVA: 0x0014AB9F File Offset: 0x00148D9F
+	// Token: 0x06003BA0 RID: 15264 RVA: 0x00153463 File Offset: 0x00151663
 	[NullableContext(1)]
 	public void Refresh(IFurnitureGetWayViewData data)
 	{
@@ -57,7 +57,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		this.RefreshAtmosphereItem();
 	}
 
-	// Token: 0x06006809 RID: 26633 RVA: 0x0014ABCC File Offset: 0x00148DCC
+	// Token: 0x06003BA1 RID: 15265 RVA: 0x00153490 File Offset: 0x00151690
 	public void UpdateItemsVisible()
 	{
 		IFurnitureGetWayViewData data = this.Data;
@@ -101,7 +101,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		item.SetUIActive(!flag && flag6);
 	}
 
-	// Token: 0x0600680A RID: 26634 RVA: 0x0014ACFC File Offset: 0x00148EFC
+	// Token: 0x06003BA2 RID: 15266 RVA: 0x001535C0 File Offset: 0x001517C0
 	public void RefreshFurnitureInfo()
 	{
 		IFurnitureGetWayViewData data = this.Data;
@@ -117,7 +117,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		instance2.SetLocalTextNew(text2, ((data3 != null) ? data3.FurnitureConfig.AttributesDescription : null) ?? "", Array.Empty<object>());
 	}
 
-	// Token: 0x0600680B RID: 26635 RVA: 0x0014ADB0 File Offset: 0x00148FB0
+	// Token: 0x06003BA3 RID: 15267 RVA: 0x00153674 File Offset: 0x00151874
 	public void RefreshOccupiedItem()
 	{
 		IFurnitureGetWayViewData data = this.Data;
@@ -138,7 +138,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600680C RID: 26636 RVA: 0x0014AE20 File Offset: 0x00149020
+	// Token: 0x06003BA4 RID: 15268 RVA: 0x001536E4 File Offset: 0x001518E4
 	public void RefreshShopItem()
 	{
 		IFurnitureGetWayViewData data = this.Data;
@@ -162,7 +162,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600680D RID: 26637 RVA: 0x0014AE84 File Offset: 0x00149084
+	// Token: 0x06003BA5 RID: 15269 RVA: 0x00153748 File Offset: 0x00151948
 	public void RefreshGiftItem()
 	{
 		IFurnitureGetWayViewData data = this.Data;
@@ -186,7 +186,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600680E RID: 26638 RVA: 0x0014AEE6 File Offset: 0x001490E6
+	// Token: 0x06003BA6 RID: 15270 RVA: 0x001537AA File Offset: 0x001519AA
 	public void RefreshAtmosphereItem()
 	{
 		IFurnitureGetWayViewData data = this.Data;
@@ -197,7 +197,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		this.RefreshLockReasonText();
 	}
 
-	// Token: 0x0600680F RID: 26639 RVA: 0x0014AF0C File Offset: 0x0014910C
+	// Token: 0x06003BA7 RID: 15271 RVA: 0x001537D0 File Offset: 0x001519D0
 	private void RefreshLockReasonText()
 	{
 		IFurnitureGetWayViewData data = this.Data;
@@ -213,7 +213,7 @@ public class FurnitureGetWayItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(9), this.Data.LockReasonTextId, Array.Empty<object>());
 	}
 
-	// Token: 0x06006810 RID: 26640 RVA: 0x0014AF86 File Offset: 0x00149186
+	// Token: 0x06003BA8 RID: 15272 RVA: 0x0015384A File Offset: 0x00151A4A
 	private void OnClickConfirmButton()
 	{
 		IFurnitureGetWayViewData data = this.Data;
@@ -229,15 +229,15 @@ public class FurnitureGetWayItem : UiPanelBase
 		confirmFunction();
 	}
 
-	// Token: 0x04002F79 RID: 12153
+	// Token: 0x04003012 RID: 12306
 	private IFurnitureGetWayViewData Data;
 
-	// Token: 0x04002F7A RID: 12154
+	// Token: 0x04003013 RID: 12307
 	private FurnitureGetWayButtonItem OccupiedItem;
 
-	// Token: 0x04002F7B RID: 12155
+	// Token: 0x04003014 RID: 12308
 	private FurnitureGetWayButtonItem ShopItem;
 
-	// Token: 0x04002F7C RID: 12156
+	// Token: 0x04003015 RID: 12309
 	private FurnitureGetWayButtonItem GiftItem;
 }

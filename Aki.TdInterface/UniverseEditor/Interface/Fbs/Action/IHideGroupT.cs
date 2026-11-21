@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068E6 RID: 26854
+	// Token: 0x02006F96 RID: 28566
 	public class IHideGroupT
 	{
-		// Token: 0x1700C744 RID: 51012
-		// (get) Token: 0x0602ED93 RID: 191891 RVA: 0x00664543 File Offset: 0x00662743
-		// (set) Token: 0x0602ED94 RID: 191892 RVA: 0x0066454B File Offset: 0x0066274B
+		// Token: 0x1700D13E RID: 53566
+		// (get) Token: 0x06031745 RID: 202565 RVA: 0x006B468B File Offset: 0x006B288B
+		// (set) Token: 0x06031746 RID: 202566 RVA: 0x006B4693 File Offset: 0x006B2893
 		public string GroupKey { get; set; }
 
-		// Token: 0x1700C745 RID: 51013
-		// (get) Token: 0x0602ED95 RID: 191893 RVA: 0x00664554 File Offset: 0x00662754
-		// (set) Token: 0x0602ED96 RID: 191894 RVA: 0x0066455C File Offset: 0x0066275C
+		// Token: 0x1700D13F RID: 53567
+		// (get) Token: 0x06031747 RID: 202567 RVA: 0x006B469C File Offset: 0x006B289C
+		// (set) Token: 0x06031748 RID: 202568 RVA: 0x006B46A4 File Offset: 0x006B28A4
 		public THideGroupConfigUnion HideConfig { get; set; }
 
-		// Token: 0x1700C746 RID: 51014
-		// (get) Token: 0x0602ED97 RID: 191895 RVA: 0x00664565 File Offset: 0x00662765
-		// (set) Token: 0x0602ED98 RID: 191896 RVA: 0x0066456D File Offset: 0x0066276D
+		// Token: 0x1700D140 RID: 53568
+		// (get) Token: 0x06031749 RID: 202569 RVA: 0x006B46AD File Offset: 0x006B28AD
+		// (set) Token: 0x0603174A RID: 202570 RVA: 0x006B46B5 File Offset: 0x006B28B5
 		public bool IsHidePasserByNpc { get; set; }
 
-		// Token: 0x1700C747 RID: 51015
-		// (get) Token: 0x0602ED99 RID: 191897 RVA: 0x00664576 File Offset: 0x00662776
-		// (set) Token: 0x0602ED9A RID: 191898 RVA: 0x0066457E File Offset: 0x0066277E
+		// Token: 0x1700D141 RID: 53569
+		// (get) Token: 0x0603174B RID: 202571 RVA: 0x006B46BE File Offset: 0x006B28BE
+		// (set) Token: 0x0603174C RID: 202572 RVA: 0x006B46C6 File Offset: 0x006B28C6
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602ED9B RID: 191899 RVA: 0x00664587 File Offset: 0x00662787
+		// Token: 0x0603174D RID: 202573 RVA: 0x006B46CF File Offset: 0x006B28CF
 		public IHideGroupT()
 		{
 			this.GroupKey = null;

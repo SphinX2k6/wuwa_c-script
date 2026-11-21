@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C8C RID: 7308
+	// Token: 0x02001E91 RID: 7825
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IOpenAirWall : IToggleAirWallType
 	{
-		// Token: 0x06009CC1 RID: 40129 RVA: 0x00167604 File Offset: 0x00165804
-		[NullableContext(1)]
+		// Token: 0x0600A65B RID: 42587 RVA: 0x0017AFF8 File Offset: 0x001791F8
+		[NullableContext(0)]
 		private IOpenAirWall_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009CC2 RID: 40130 RVA: 0x0016763C File Offset: 0x0016583C
-		[NullableContext(1)]
+		// Token: 0x0600A65C RID: 42588 RVA: 0x0017B030 File Offset: 0x00179230
+		[NullableContext(0)]
 		public static IOpenAirWall Create([Nullable(2)] IOpenAirWall instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009CC3 RID: 40131 RVA: 0x0016764F File Offset: 0x0016584F
-		[NullableContext(1)]
+		// Token: 0x0600A65D RID: 42589 RVA: 0x0017B043 File Offset: 0x00179243
+		[NullableContext(0)]
 		public static IOpenAirWall CreateFromSetValue([Nullable(2)] IOpenAirWall_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009CC4 RID: 40132 RVA: 0x00167664 File Offset: 0x00165864
-		[NullableContext(1)]
+		// Token: 0x0600A65E RID: 42590 RVA: 0x0017B058 File Offset: 0x00179258
+		[NullableContext(0)]
 		public new IOpenAirWall_SetValue ToSetValue()
 		{
 			return new IOpenAirWall_SetValue
@@ -64,15 +64,16 @@ namespace Aki.TDConfigMgr.Action
 				HitCd = this.HitCd,
 				AirWallEffectData = this.AirWallEffectData,
 				VectorArrayAirWallEffectData = this.VectorArrayAirWallEffectData,
+				AirWallEffectSplineEntityId = this.AirWallEffectSplineEntityId,
 				AirWallEffectHeight = this.AirWallEffectHeight,
 				AirWallEffectThickness = this.AirWallEffectThickness,
 				CollisionPreset = this.CollisionPreset
 			};
 		}
 
-		// Token: 0x170030E5 RID: 12517
-		// (get) Token: 0x06009CC5 RID: 40133 RVA: 0x001676D6 File Offset: 0x001658D6
-		// (set) Token: 0x06009CC6 RID: 40134 RVA: 0x00167701 File Offset: 0x00165901
+		// Token: 0x17003362 RID: 13154
+		// (get) Token: 0x0600A65F RID: 42591 RVA: 0x0017B0D6 File Offset: 0x001792D6
+		// (set) Token: 0x0600A660 RID: 42592 RVA: 0x0017B101 File Offset: 0x00179301
 		public override EToggleAirWall Type
 		{
 			get
@@ -93,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030E6 RID: 12518
-		// (get) Token: 0x06009CC7 RID: 40135 RVA: 0x0016770F File Offset: 0x0016590F
-		// (set) Token: 0x06009CC8 RID: 40136 RVA: 0x00167736 File Offset: 0x00165936
+		// Token: 0x17003363 RID: 13155
+		// (get) Token: 0x0600A661 RID: 42593 RVA: 0x0017B10F File Offset: 0x0017930F
+		// (set) Token: 0x0600A662 RID: 42594 RVA: 0x0017B136 File Offset: 0x00179336
 		public virtual string HitEffectData
 		{
 			get
@@ -117,9 +118,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030E7 RID: 12519
-		// (get) Token: 0x06009CC9 RID: 40137 RVA: 0x00167744 File Offset: 0x00165944
-		// (set) Token: 0x06009CCA RID: 40138 RVA: 0x0016777E File Offset: 0x0016597E
+		// Token: 0x17003364 RID: 13156
+		// (get) Token: 0x0600A663 RID: 42595 RVA: 0x0017B144 File Offset: 0x00179344
+		// (set) Token: 0x0600A664 RID: 42596 RVA: 0x0017B17E File Offset: 0x0017937E
 		public virtual float? HitCd
 		{
 			get
@@ -141,9 +142,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030E8 RID: 12520
-		// (get) Token: 0x06009CCB RID: 40139 RVA: 0x0016778C File Offset: 0x0016598C
-		// (set) Token: 0x06009CCC RID: 40140 RVA: 0x001677B3 File Offset: 0x001659B3
+		// Token: 0x17003365 RID: 13157
+		// (get) Token: 0x0600A665 RID: 42597 RVA: 0x0017B18C File Offset: 0x0017938C
+		// (set) Token: 0x0600A666 RID: 42598 RVA: 0x0017B1B3 File Offset: 0x001793B3
 		public virtual string AirWallEffectData
 		{
 			get
@@ -165,9 +166,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030E9 RID: 12521
-		// (get) Token: 0x06009CCD RID: 40141 RVA: 0x001677C1 File Offset: 0x001659C1
-		// (set) Token: 0x06009CCE RID: 40142 RVA: 0x001677E8 File Offset: 0x001659E8
+		// Token: 0x17003366 RID: 13158
+		// (get) Token: 0x0600A667 RID: 42599 RVA: 0x0017B1C1 File Offset: 0x001793C1
+		// (set) Token: 0x0600A668 RID: 42600 RVA: 0x0017B1E8 File Offset: 0x001793E8
 		public virtual string VectorArrayAirWallEffectData
 		{
 			get
@@ -189,9 +190,33 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030EA RID: 12522
-		// (get) Token: 0x06009CCF RID: 40143 RVA: 0x001677F8 File Offset: 0x001659F8
-		// (set) Token: 0x06009CD0 RID: 40144 RVA: 0x00167832 File Offset: 0x00165A32
+		// Token: 0x17003367 RID: 13159
+		// (get) Token: 0x0600A669 RID: 42601 RVA: 0x0017B1F8 File Offset: 0x001793F8
+		// (set) Token: 0x0600A66A RID: 42602 RVA: 0x0017B232 File Offset: 0x00179432
+		public virtual int? AirWallEffectSplineEntityId
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.AirWallEffectSplineEntityId;
+				}
+				IOpenAirWall_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.AirWallEffectSplineEntityId;
+			}
+			set
+			{
+				this.GetOrCreatePoco().AirWallEffectSplineEntityId = value;
+			}
+		}
+
+		// Token: 0x17003368 RID: 13160
+		// (get) Token: 0x0600A66B RID: 42603 RVA: 0x0017B240 File Offset: 0x00179440
+		// (set) Token: 0x0600A66C RID: 42604 RVA: 0x0017B27A File Offset: 0x0017947A
 		public virtual float? AirWallEffectHeight
 		{
 			get
@@ -213,9 +238,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030EB RID: 12523
-		// (get) Token: 0x06009CD1 RID: 40145 RVA: 0x00167840 File Offset: 0x00165A40
-		// (set) Token: 0x06009CD2 RID: 40146 RVA: 0x0016787A File Offset: 0x00165A7A
+		// Token: 0x17003369 RID: 13161
+		// (get) Token: 0x0600A66D RID: 42605 RVA: 0x0017B288 File Offset: 0x00179488
+		// (set) Token: 0x0600A66E RID: 42606 RVA: 0x0017B2C2 File Offset: 0x001794C2
 		public virtual float? AirWallEffectThickness
 		{
 			get
@@ -237,9 +262,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030EC RID: 12524
-		// (get) Token: 0x06009CD3 RID: 40147 RVA: 0x00167888 File Offset: 0x00165A88
-		// (set) Token: 0x06009CD4 RID: 40148 RVA: 0x001678B3 File Offset: 0x00165AB3
+		// Token: 0x1700336A RID: 13162
+		// (get) Token: 0x0600A66F RID: 42607 RVA: 0x0017B2D0 File Offset: 0x001794D0
+		// (set) Token: 0x0600A670 RID: 42608 RVA: 0x0017B2FB File Offset: 0x001794FB
 		public virtual EAirWallCollisionPreset CollisionPreset
 		{
 			get
@@ -260,10 +285,10 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F02 RID: 24322
+		// Token: 0x04006455 RID: 25685
 		protected new IOpenAirWall FbInstance;
 
-		// Token: 0x04005F03 RID: 24323
+		// Token: 0x04006456 RID: 25686
 		protected new IOpenAirWall_SetValue PocoInterface;
 	}
 }

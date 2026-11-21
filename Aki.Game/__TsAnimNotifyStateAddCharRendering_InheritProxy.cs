@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200395A RID: 14682
+// Token: 0x02002ED5 RID: 11989
 public class __TsAnimNotifyStateAddCharRendering_InheritProxy : TsAnimNotifyStateAddCharRendering
 {
-	// Token: 0x0601EC97 RID: 126103 RVA: 0x0089B1B4 File Offset: 0x008993B4
+	// Token: 0x0601C928 RID: 117032 RVA: 0x008BE1D0 File Offset: 0x008BC3D0
 	[NullableContext(1)]
 	public __TsAnimNotifyStateAddCharRendering_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateAddCharRendering.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601EC98 RID: 126104 RVA: 0x0089B1E7 File Offset: 0x008993E7
+	// Token: 0x0601C929 RID: 117033 RVA: 0x008BE203 File Offset: 0x008BC403
 	protected __TsAnimNotifyStateAddCharRendering_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601EC99 RID: 126105 RVA: 0x0089B1F0 File Offset: 0x008993F0
+	// Token: 0x0601C92A RID: 117034 RVA: 0x008BE20C File Offset: 0x008BC40C
 	protected unsafe override void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);

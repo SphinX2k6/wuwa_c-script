@@ -2,22 +2,22 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001728 RID: 5928
+	// Token: 0x020018A5 RID: 6309
 	public class FireBulletEffect_SetValue
 	{
-		// Token: 0x04005017 RID: 20503
+		// Token: 0x04005446 RID: 21574
 		public int Id;
 
-		// Token: 0x04005018 RID: 20504
+		// Token: 0x04005447 RID: 21575
 		public int X;
 
-		// Token: 0x04005019 RID: 20505
+		// Token: 0x04005448 RID: 21576
 		public int Y;
 
-		// Token: 0x0400501A RID: 20506
+		// Token: 0x04005449 RID: 21577
 		public int Z;
 
-		// Token: 0x0400501B RID: 20507
+		// Token: 0x0400544A RID: 21578
 		public EBulletLauncher? Launcher;
 	}
 }

@@ -4,7 +4,7 @@ using UnrealEngine;
 // Token: 0x020000F5 RID: 245
 public class FastUeFloatRange
 {
-	// Token: 0x06000777 RID: 1911 RVA: 0x0002888C File Offset: 0x00026A8C
+	// Token: 0x060007B1 RID: 1969 RVA: 0x00028BC4 File Offset: 0x00026DC4
 	public FastUeFloatRange(FFloatRange range)
 	{
 		this.LowerBoundValue = (double)range.LowerBound.Value;
@@ -13,15 +13,15 @@ public class FastUeFloatRange
 		this.UpperBoundType = range.UpperBound.Type;
 	}
 
-	// Token: 0x040005D1 RID: 1489
+	// Token: 0x040005DC RID: 1500
 	public double LowerBoundValue;
 
-	// Token: 0x040005D2 RID: 1490
+	// Token: 0x040005DD RID: 1501
 	public double UpperBoundValue;
 
-	// Token: 0x040005D3 RID: 1491
+	// Token: 0x040005DE RID: 1502
 	public ERangeBoundTypes LowerBoundType;
 
-	// Token: 0x040005D4 RID: 1492
+	// Token: 0x040005DF RID: 1503
 	public ERangeBoundTypes UpperBoundType;
 }

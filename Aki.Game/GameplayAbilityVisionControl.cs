@@ -4,22 +4,22 @@ using Aki.Protocol;
 using Aki.Protocol.Summon;
 using AkiClient.Game.Aki.Character.Vision;
 
-// Token: 0x020031A8 RID: 12712
+// Token: 0x02002717 RID: 10007
 public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVariableResetter
 {
-	// Token: 0x0601B654 RID: 112212 RVA: 0x0077D3A6 File Offset: 0x0077B5A6
+	// Token: 0x06019182 RID: 102786 RVA: 0x007A5686 File Offset: 0x007A3886
 	static GameplayAbilityVisionControl()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameplayAbilityVisionControl.CreateStaticDefaultValue), new Action(GameplayAbilityVisionControl.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601B655 RID: 112213 RVA: 0x0077D3C5 File Offset: 0x0077B5C5
+	// Token: 0x06019183 RID: 102787 RVA: 0x007A56A5 File Offset: 0x007A38A5
 	[NullableContext(1)]
 	public GameplayAbilityVisionControl(CharacterVisionComponent visionComponent) : base(visionComponent)
 	{
 	}
 
-	// Token: 0x0601B656 RID: 112214 RVA: 0x0077D3D0 File Offset: 0x0077B5D0
+	// Token: 0x06019184 RID: 102788 RVA: 0x007A56B0 File Offset: 0x007A38B0
 	protected override void OnCreate()
 	{
 		if (base.CreatureDataComponent.SummonType == ESummonType.ConcomitantPhantomRole)
@@ -47,7 +47,7 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		}
 	}
 
-	// Token: 0x0601B657 RID: 112215 RVA: 0x0077D4B8 File Offset: 0x0077B6B8
+	// Token: 0x06019185 RID: 102789 RVA: 0x007A5798 File Offset: 0x007A3998
 	protected override void OnDestroy()
 	{
 		if (base.CreatureDataComponent.SummonType == ESummonType.ConcomitantPhantomRole)
@@ -71,7 +71,7 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		}
 	}
 
-	// Token: 0x0601B658 RID: 112216 RVA: 0x0077D57C File Offset: 0x0077B77C
+	// Token: 0x06019186 RID: 102790 RVA: 0x007A585C File Offset: 0x007A3A5C
 	protected override bool OnActivateAbility()
 	{
 		Log.Instance.Info(ELogModule.Battle, ELogAuthor.HXY, "GameplayAbilityVisionControl.OnActivateAbility", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -97,7 +97,7 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601B659 RID: 112217 RVA: 0x0077D618 File Offset: 0x0077B818
+	// Token: 0x06019187 RID: 102791 RVA: 0x007A58F8 File Offset: 0x007A3AF8
 	protected override bool OnEndAbility()
 	{
 		Log.Instance.Info(ELogModule.Battle, ELogAuthor.HXY, "GameplayAbilityVisionControl.OnEndAbility", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -110,7 +110,7 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601B65A RID: 112218 RVA: 0x0077D660 File Offset: 0x0077B860
+	// Token: 0x06019188 RID: 102792 RVA: 0x007A5940 File Offset: 0x007A3B40
 	private void SetSummonerVisionControlCreatureDataId(long? id)
 	{
 		EntityHandle entity = CreatureModel.Instance.GetEntity(base.CreatureDataComponent.GetSummonerId());
@@ -120,7 +120,7 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		}
 	}
 
-	// Token: 0x0601B65B RID: 112219 RVA: 0x0077D698 File Offset: 0x0077B898
+	// Token: 0x06019189 RID: 102793 RVA: 0x007A5978 File Offset: 0x007A3B78
 	private void OnAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		if (newValue < 1.1754944E-38f)
@@ -157,7 +157,7 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		}
 	}
 
-	// Token: 0x0601B65C RID: 112220 RVA: 0x0077D708 File Offset: 0x0077B908
+	// Token: 0x0601918A RID: 102794 RVA: 0x007A59E8 File Offset: 0x007A3BE8
 	private void EndSummonerVisionControl()
 	{
 		EntityHandle entity = CreatureModel.Instance.GetEntity(base.CreatureDataComponent.GetSummonerId());
@@ -169,7 +169,7 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		GameplayAbilityVisionControl.VisionControlHandle = null;
 	}
 
-	// Token: 0x0601B65D RID: 112221 RVA: 0x0077D750 File Offset: 0x0077B950
+	// Token: 0x0601918B RID: 102795 RVA: 0x007A5A30 File Offset: 0x007A3C30
 	[NullableContext(1)]
 	private void Recover(EntityHandle handle)
 	{
@@ -184,7 +184,7 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		}
 	}
 
-	// Token: 0x0601B65E RID: 112222 RVA: 0x0077D79C File Offset: 0x0077B99C
+	// Token: 0x0601918C RID: 102796 RVA: 0x007A5A7C File Offset: 0x007A3C7C
 	private void PlayEndEffect()
 	{
 		TimerHandle capturedVisionHiddenTimer = null;
@@ -218,7 +218,7 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		}));
 	}
 
-	// Token: 0x0601B65F RID: 112223 RVA: 0x0077D870 File Offset: 0x0077BA70
+	// Token: 0x0601918D RID: 102797 RVA: 0x007A5B50 File Offset: 0x007A3D50
 	private void SwitchBackToRole()
 	{
 		this.IsEnding = false;
@@ -249,32 +249,32 @@ public class GameplayAbilityVisionControl : GameplayAbilityVisionBase, IStaticVa
 		GameplayAbilityVisionControl.VisionControlHandle = null;
 	}
 
-	// Token: 0x0601B660 RID: 112224 RVA: 0x0077D929 File Offset: 0x0077BB29
+	// Token: 0x0601918E RID: 102798 RVA: 0x007A5C09 File Offset: 0x007A3E09
 	public static void CreateStaticDefaultValue()
 	{
 		GameplayAbilityVisionControl.VisionControlHandle = null;
 	}
 
-	// Token: 0x0601B661 RID: 112225 RVA: 0x0077D931 File Offset: 0x0077BB31
+	// Token: 0x0601918F RID: 102799 RVA: 0x007A5C11 File Offset: 0x007A3E11
 	public static void ResetStaticDefaultValue()
 	{
 		GameplayAbilityVisionControl.VisionControlHandle = null;
 	}
 
-	// Token: 0x0400D68B RID: 54923
+	// Token: 0x0400DB11 RID: 56081
 	[Nullable(2)]
 	private ITagTask WaitDisableHideActorTagRemoveTask;
 
-	// Token: 0x0400D68C RID: 54924
+	// Token: 0x0400DB12 RID: 56082
 	private ETeamGroupType? LastGroupType;
 
-	// Token: 0x0400D68D RID: 54925
+	// Token: 0x0400DB13 RID: 56083
 	[Nullable(2)]
 	public static EntityHandle VisionControlHandle;
 
-	// Token: 0x0400D68E RID: 54926
+	// Token: 0x0400DB14 RID: 56084
 	private int CueHandle;
 
-	// Token: 0x0400D68F RID: 54927
+	// Token: 0x0400DB15 RID: 56085
 	private bool IsEnding;
 }

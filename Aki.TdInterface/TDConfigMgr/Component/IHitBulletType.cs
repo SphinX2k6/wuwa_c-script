@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200040E RID: 1038
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000467 RID: 1127
 	public class IHitBulletType
 	{
-		// Token: 0x060014F5 RID: 5365 RVA: 0x00042490 File Offset: 0x00040690
+		// Token: 0x0600168F RID: 5775 RVA: 0x000461D8 File Offset: 0x000443D8
 		private IHitBulletType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060014F6 RID: 5366 RVA: 0x000424C8 File Offset: 0x000406C8
+		// Token: 0x06001690 RID: 5776 RVA: 0x00046210 File Offset: 0x00044410
 		public static IHitBulletType Create([Nullable(2)] IHitBulletType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014F7 RID: 5367 RVA: 0x000424DB File Offset: 0x000406DB
+		// Token: 0x06001691 RID: 5777 RVA: 0x00046223 File Offset: 0x00044423
 		public static IHitBulletType CreateFromSetValue([Nullable(2)] IHitBulletType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014F8 RID: 5368 RVA: 0x000424EE File Offset: 0x000406EE
+		// Token: 0x06001692 RID: 5778 RVA: 0x00046236 File Offset: 0x00044436
 		public IHitBulletType_SetValue ToSetValue()
 		{
 			return new IHitBulletType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005C3 RID: 1475
-		// (get) Token: 0x060014F9 RID: 5369 RVA: 0x00042501 File Offset: 0x00040701
-		// (set) Token: 0x060014FA RID: 5370 RVA: 0x0004252C File Offset: 0x0004072C
+		// Token: 0x1700062A RID: 1578
+		// (get) Token: 0x06001693 RID: 5779 RVA: 0x00046249 File Offset: 0x00044449
+		// (set) Token: 0x06001694 RID: 5780 RVA: 0x00046274 File Offset: 0x00044474
 		public virtual EHitBulletType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001056 RID: 4182
+		// Token: 0x04001178 RID: 4472
 		[Nullable(2)]
 		protected IHitBulletType FbInstance;
 
-		// Token: 0x04001057 RID: 4183
+		// Token: 0x04001179 RID: 4473
 		[Nullable(2)]
 		protected IHitBulletType_SetValue PocoInterface;
 	}

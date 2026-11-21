@@ -6,29 +6,29 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000CCD RID: 3277
+	// Token: 0x02000220 RID: 544
 	[UnrealObjectPath("/Script/Engine.KismetGuidLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKismetGuidLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600A5A7 RID: 42407 RVA: 0x000EC4F9 File Offset: 0x000EA6F9
+		// Token: 0x0600251D RID: 9501 RVA: 0x000357B8 File Offset: 0x000339B8
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKismetGuidLibrary._ClassPtr;
 		}
 
-		// Token: 0x0600A5A8 RID: 42408 RVA: 0x000EC508 File Offset: 0x000EA708
+		// Token: 0x0600251E RID: 9502 RVA: 0x000357C4 File Offset: 0x000339C4
 		public UKismetGuidLibrary() : this(BuiltinUtils.AllocNativeUObject(UKismetGuidLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600A5A9 RID: 42409 RVA: 0x000EC530 File Offset: 0x000EA730
+		// Token: 0x0600251F RID: 9503 RVA: 0x000357EC File Offset: 0x000339EC
 		[NullableContext(1)]
 		public UKismetGuidLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKismetGuidLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0600A5AA RID: 42410 RVA: 0x000EC564 File Offset: 0x000EA764
+		// Token: 0x06002520 RID: 9504 RVA: 0x00035820 File Offset: 0x00033A20
 		[NullableContext(1)]
 		public unsafe static void Parse_StringToGuid(string GuidString, ref FGuid OutGuid, ref bool Success)
 		{
@@ -46,60 +46,60 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A5AB RID: 42411
+		// Token: 0x06002521 RID: 9505
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NotEqual_GuidGuid(in FGuid A, in FGuid B);
 
-		// Token: 0x0600A5AC RID: 42412
+		// Token: 0x06002522 RID: 9506
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FGuid NewGuid();
 
-		// Token: 0x0600A5AD RID: 42413
+		// Token: 0x06002523 RID: 9507
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsValid_Guid(in FGuid InGuid);
 
-		// Token: 0x0600A5AE RID: 42414
+		// Token: 0x06002524 RID: 9508
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Invalidate_Guid(ref FGuid InGuid);
 
-		// Token: 0x0600A5AF RID: 42415
+		// Token: 0x06002525 RID: 9509
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool EqualEqual_GuidGuid(in FGuid A, in FGuid B);
 
-		// Token: 0x0600A5B0 RID: 42416 RVA: 0x000EC59D File Offset: 0x000EA79D
+		// Token: 0x06002526 RID: 9510 RVA: 0x00035859 File Offset: 0x00033A59
 		[NullableContext(1)]
 		public static string Conv_GuidToString(in FGuid InGuid)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKismetGuidLibrary.__Conv_GuidToString_Internal(InGuid));
 		}
 
-		// Token: 0x0600A5B1 RID: 42417
+		// Token: 0x06002527 RID: 9511
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Parse_StringToGuid_Internal(in FString GuidString, ref FGuid OutGuid, ref bool Success);
 
-		// Token: 0x0600A5B2 RID: 42418
+		// Token: 0x06002528 RID: 9512
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __Conv_GuidToString_Internal(in FGuid InGuid);
 
-		// Token: 0x0600A5B3 RID: 42419 RVA: 0x000EC5AA File Offset: 0x000EA7AA
+		// Token: 0x06002529 RID: 9513 RVA: 0x00035866 File Offset: 0x00033A66
 		static UKismetGuidLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.KismetGuidLibrary");
 		}
 
-		// Token: 0x0600A5B4 RID: 42420 RVA: 0x000EC5B8 File Offset: 0x000EA7B8
+		// Token: 0x0600252A RID: 9514 RVA: 0x00035874 File Offset: 0x00033A74
 		protected UKismetGuidLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005B2A RID: 23338
+		// Token: 0x04000E04 RID: 3588
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.KismetGuidLibrary";
 
-		// Token: 0x04005B2B RID: 23339
+		// Token: 0x04000E05 RID: 3589
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005B2C RID: 23340
+		// Token: 0x04000E06 RID: 3590
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

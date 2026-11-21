@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Component;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.NewWorld.SceneItem;
 using CSharpScript.Game.Ui;
@@ -13,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200604F RID: 24655
+	// Token: 0x02004FCD RID: 20429
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorPhantomExhibitView : UiViewBase
 	{
-		// Token: 0x0603E62E RID: 255534 RVA: 0x00F1132E File Offset: 0x00F0F52E
+		// Token: 0x060332F2 RID: 209650 RVA: 0x00E580F2 File Offset: 0x00E562F2
 		public SpringManorPhantomExhibitView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E62F RID: 255535 RVA: 0x00F1136C File Offset: 0x00F0F56C
+		// Token: 0x060332F3 RID: 209651 RVA: 0x00E58130 File Offset: 0x00E56330
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E630 RID: 255536 RVA: 0x00F11444 File Offset: 0x00F0F644
+		// Token: 0x060332F4 RID: 209652 RVA: 0x00E58208 File Offset: 0x00E56408
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorPhantomExhibitView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -53,16 +54,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E631 RID: 255537 RVA: 0x00F11487 File Offset: 0x00F0F687
+		// Token: 0x060332F5 RID: 209653 RVA: 0x00E5824B File Offset: 0x00E5644B
 		protected override void OnBeforeShow()
 		{
 			this.RefreshPhantomList();
 		}
 
-		// Token: 0x0603E632 RID: 255538 RVA: 0x00F1148F File Offset: 0x00F0F68F
+		// Token: 0x060332F6 RID: 209654 RVA: 0x00E58253 File Offset: 0x00E56453
 		protected override void OnBeforeDestroy()
 		{
-			UiCameraAnimationManager.Instance.EnablePlayerActor();
+			UiCameraModel.Instance.EnablePlayerActor();
 			FilterSortEntrance<int> filterSortComponent = this.FilterSortComponent;
 			if (filterSortComponent == null)
 			{
@@ -71,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			filterSortComponent.ClearData(EFilterSortGroupId.MonsterHandBook);
 		}
 
-		// Token: 0x0603E633 RID: 255539 RVA: 0x00F114B0 File Offset: 0x00F0F6B0
+		// Token: 0x060332F7 RID: 209655 RVA: 0x00E58274 File Offset: 0x00E56474
 		private void InitPhantomScrollView()
 		{
 			UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(2);
@@ -84,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.PhantomScrollView = new LoopScrollView<SpringManorPhantomExhibitGrid, SpringManorPhantomDisplayItem>(loopScrollViewComponent, auibaseActor, new Func<SpringManorPhantomExhibitGrid>(this.CreatePhantomGrid), false);
 		}
 
-		// Token: 0x0603E634 RID: 255540 RVA: 0x00F114FF File Offset: 0x00F0F6FF
+		// Token: 0x060332F8 RID: 209656 RVA: 0x00E582C3 File Offset: 0x00E564C3
 		private SpringManorPhantomExhibitGrid CreatePhantomGrid()
 		{
 			return new SpringManorPhantomExhibitGrid
@@ -93,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E635 RID: 255541 RVA: 0x00F11518 File Offset: 0x00F0F718
+		// Token: 0x060332F9 RID: 209657 RVA: 0x00E582DC File Offset: 0x00E564DC
 		private void InitFilterSortEntrance()
 		{
 			UUIItem item = base.GetItem(4);
@@ -104,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.FilterSortComponent = new FilterSortEntrance<int>(item, new TUpdateDataListFunction<int>(this.OnFilterSortRefresh));
 		}
 
-		// Token: 0x0603E636 RID: 255542 RVA: 0x00F1154C File Offset: 0x00F0F74C
+		// Token: 0x060332FA RID: 209658 RVA: 0x00E58310 File Offset: 0x00E56510
 		private void RefreshPhantomList()
 		{
 			IEnumerable<ExhibitPhantom> phantomExtraConfigByBodySize = SpringManorConfig.Instance.GetPhantomExtraConfigByBodySize(this.PhantomBodySize);
@@ -129,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.UpdatePhantomGridDataSource(list);
 		}
 
-		// Token: 0x0603E637 RID: 255543 RVA: 0x00F1161C File Offset: 0x00F0F81C
+		// Token: 0x060332FB RID: 209659 RVA: 0x00E583E0 File Offset: 0x00E565E0
 		private void UpdatePhantomGridDataSource(List<int> handbookIdList)
 		{
 			bool flag = handbookIdList.Count > 0;
@@ -199,13 +200,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshOperationButtonState();
 		}
 
-		// Token: 0x0603E638 RID: 255544 RVA: 0x00F11810 File Offset: 0x00F0FA10
+		// Token: 0x060332FC RID: 209660 RVA: 0x00E585D4 File Offset: 0x00E567D4
 		private void OnFilterSortRefresh(List<int> list, bool isOutSideChange, EFilterSortType operationType)
 		{
 			this.UpdatePhantomGridDataSource(list);
 		}
 
-		// Token: 0x0603E639 RID: 255545 RVA: 0x00F11826 File Offset: 0x00F0FA26
+		// Token: 0x060332FD RID: 209661 RVA: 0x00E585EA File Offset: 0x00E567EA
 		private void OnPhantomGridSelected(int phantomId, int gridIndex)
 		{
 			this.CurrentSelectedPhantomId = new int?(phantomId);
@@ -219,7 +220,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			phantomScrollView.SelectGridProxy(gridIndex, false);
 		}
 
-		// Token: 0x0603E63A RID: 255546 RVA: 0x00F11854 File Offset: 0x00F0FA54
+		// Token: 0x060332FE RID: 209662 RVA: 0x00E58618 File Offset: 0x00E56818
 		private void RefreshOperationButtonState()
 		{
 			bool flag = this.CurrentSelectedPhantomId != null;
@@ -261,7 +262,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E63B RID: 255547 RVA: 0x00F11948 File Offset: 0x00F0FB48
+		// Token: 0x060332FF RID: 209663 RVA: 0x00E5870C File Offset: 0x00E5690C
 		private void UpdatePhantomSelectionState(int phantomId, bool isSelected)
 		{
 			int i = 0;
@@ -286,7 +287,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E63C RID: 255548 RVA: 0x00F119A5 File Offset: 0x00F0FBA5
+		// Token: 0x06033300 RID: 209664 RVA: 0x00E58769 File Offset: 0x00E56969
 		private void PreviewPhantomSelection(int phantomId)
 		{
 			if (this.EntityId == null)
@@ -297,7 +298,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshSceneItemExhibit(this.EntityId.Value, phantomId);
 		}
 
-		// Token: 0x0603E63D RID: 255549 RVA: 0x00F119D4 File Offset: 0x00F0FBD4
+		// Token: 0x06033301 RID: 209665 RVA: 0x00E58798 File Offset: 0x00E56998
 		private UniTask InitCaptionAsync()
 		{
 			SpringManorPhantomExhibitView.<InitCaptionAsync>d__27 <InitCaptionAsync>d__;
@@ -308,7 +309,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <InitCaptionAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E63E RID: 255550 RVA: 0x00F11A18 File Offset: 0x00F0FC18
+		// Token: 0x06033302 RID: 209666 RVA: 0x00E587DC File Offset: 0x00E569DC
 		private bool RefreshSceneItemExhibit(int entityId, int itemId)
 		{
 			SceneItemExhibitComponent exhibitComponent = this.GetExhibitComponent(entityId);
@@ -331,7 +332,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return true;
 		}
 
-		// Token: 0x0603E63F RID: 255551 RVA: 0x00F11A54 File Offset: 0x00F0FC54
+		// Token: 0x06033303 RID: 209667 RVA: 0x00E58818 File Offset: 0x00E56A18
 		private List<EntityItemBundleInfo> BuildPhantomBundleInfos(int? phantomId = null)
 		{
 			int? num = phantomId;
@@ -355,7 +356,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E640 RID: 255552 RVA: 0x00F11AEC File Offset: 0x00F0FCEC
+		// Token: 0x06033304 RID: 209668 RVA: 0x00E588B0 File Offset: 0x00E56AB0
 		private EPhantomExhibitSizeType? GetSize()
 		{
 			SceneItemExhibitComponent exhibitComponent = this.GetExhibitComponent(this.EntityId.Value);
@@ -367,7 +368,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return new EPhantomExhibitSizeType?(phantomExhibitConfig.PhantomSize);
 		}
 
-		// Token: 0x0603E641 RID: 255553 RVA: 0x00F11B34 File Offset: 0x00F0FD34
+		// Token: 0x06033305 RID: 209669 RVA: 0x00E588F8 File Offset: 0x00E56AF8
 		[NullableContext(2)]
 		private SceneItemExhibitComponent GetExhibitComponent(int entityId)
 		{
@@ -392,7 +393,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return component;
 		}
 
-		// Token: 0x0603E642 RID: 255554 RVA: 0x00F11BAC File Offset: 0x00F0FDAC
+		// Token: 0x06033306 RID: 209670 RVA: 0x00E58970 File Offset: 0x00E56B70
 		private void SaveIfChange()
 		{
 			int valueOrDefault = this.PlacedPhantomId.GetValueOrDefault();
@@ -403,7 +404,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E643 RID: 255555 RVA: 0x00F11BE8 File Offset: 0x00F0FDE8
+		// Token: 0x06033307 RID: 209671 RVA: 0x00E589AC File Offset: 0x00E56BAC
 		private void OnClickCloseBtn()
 		{
 			int valueOrDefault = this.PreviewPhantomId.GetValueOrDefault();
@@ -436,7 +437,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603E644 RID: 255556 RVA: 0x00F11C6C File Offset: 0x00F0FE6C
+		// Token: 0x06033308 RID: 209672 RVA: 0x00E58A30 File Offset: 0x00E56C30
 		private void OnClickBtnPlace(int _)
 		{
 			if (this.CurrentSelectedPhantomId == null)
@@ -460,7 +461,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			ScrollingTipsController.Instance.ShowTipsByTextId("PhantomDisplayUpdated_Tips", Array.Empty<object>());
 		}
 
-		// Token: 0x0603E645 RID: 255557 RVA: 0x00F11D24 File Offset: 0x00F0FF24
+		// Token: 0x06033309 RID: 209673 RVA: 0x00E58AE8 File Offset: 0x00E56CE8
 		private void OnClickBtnRemove()
 		{
 			if (this.CurrentSelectedPhantomId == null)
@@ -484,7 +485,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshOperationButtonState();
 		}
 
-		// Token: 0x04020988 RID: 133512
+		// Token: 0x0401B2B5 RID: 111285
 		[Nullable(new byte[]
 		{
 			2,
@@ -493,36 +494,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private LoopScrollView<SpringManorPhantomExhibitGrid, SpringManorPhantomDisplayItem> PhantomScrollView;
 
-		// Token: 0x04020989 RID: 133513
+		// Token: 0x0401B2B6 RID: 111286
 		private List<SpringManorPhantomDisplayItem> PhantomGridDataSource = new List<SpringManorPhantomDisplayItem>();
 
-		// Token: 0x0402098A RID: 133514
+		// Token: 0x0401B2B7 RID: 111287
 		[Nullable(2)]
 		private FilterSortEntrance<int> FilterSortComponent;
 
-		// Token: 0x0402098B RID: 133515
+		// Token: 0x0401B2B8 RID: 111288
 		private int? CurrentSelectedPhantomId;
 
-		// Token: 0x0402098C RID: 133516
+		// Token: 0x0401B2B9 RID: 111289
 		private int? PreviewPhantomId;
 
-		// Token: 0x0402098D RID: 133517
+		// Token: 0x0401B2BA RID: 111290
 		private int? PlacedPhantomId;
 
-		// Token: 0x0402098E RID: 133518
+		// Token: 0x0401B2BB RID: 111291
 		private int PhantomBodySize = 1;
 
-		// Token: 0x0402098F RID: 133519
+		// Token: 0x0401B2BC RID: 111292
 		private int? EntityId;
 
-		// Token: 0x04020990 RID: 133520
+		// Token: 0x0401B2BD RID: 111293
 		private int OriginItemId;
 
-		// Token: 0x04020991 RID: 133521
+		// Token: 0x0401B2BE RID: 111294
 		[Nullable(2)]
 		private ButtonItem PlaceButtonItem;
 
-		// Token: 0x04020992 RID: 133522
+		// Token: 0x0401B2BF RID: 111295
 		private readonly Dictionary<EPhantomExhibitSizeType, int> phantomExhibitBodySizeRecord = new Dictionary<EPhantomExhibitSizeType, int>
 		{
 			{
@@ -539,19 +540,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		};
 
-		// Token: 0x0200C2C6 RID: 49862
+		// Token: 0x0200ACB1 RID: 44209
 		[NullableContext(0)]
 		[RequiredMember]
 		public class Params
 		{
-			// Token: 0x060506EE RID: 329454 RVA: 0x015A43EE File Offset: 0x015A25EE
+			// Token: 0x06046BE0 RID: 289760 RVA: 0x0155C182 File Offset: 0x0155A382
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public Params()
 			{
 			}
 
-			// Token: 0x0403AD35 RID: 240949
+			// Token: 0x0403569D RID: 218781
 			[RequiredMember]
 			public int TargetPhantomExhibitEntity;
 		}

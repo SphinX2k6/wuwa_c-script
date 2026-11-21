@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015C2 RID: 5570
+// Token: 0x02000A7A RID: 2682
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class WheelTowerScoreLevelTargetItem : GridProxyAbstract<WheelTowerScoreLevelTargetData>
 {
-	// Token: 0x06009DF2 RID: 40434 RVA: 0x00225794 File Offset: 0x00223994
+	// Token: 0x060071D0 RID: 29136 RVA: 0x0022F544 File Offset: 0x0022D744
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -34,7 +34,7 @@ public class WheelTowerScoreLevelTargetItem : GridProxyAbstract<WheelTowerScoreL
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009DF3 RID: 40435 RVA: 0x00225840 File Offset: 0x00223A40
+	// Token: 0x060071D1 RID: 29137 RVA: 0x0022F5F0 File Offset: 0x0022D7F0
 	public override void Refresh(WheelTowerScoreLevelTargetData data, bool isSelected, int gridIndex)
 	{
 		NewTowerScoreLevel? scoreLevelConfigById = WheelTowerConfig.Instance.GetScoreLevelConfigById(data.LevelId);

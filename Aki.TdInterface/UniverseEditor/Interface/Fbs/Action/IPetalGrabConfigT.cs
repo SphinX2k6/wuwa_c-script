@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C9A RID: 27802
+	// Token: 0x02007404 RID: 29700
 	public class IPetalGrabConfigT
 	{
-		// Token: 0x1700CF0C RID: 53004
-		// (get) Token: 0x06030FF9 RID: 200697 RVA: 0x006A6D94 File Offset: 0x006A4F94
-		// (set) Token: 0x06030FFA RID: 200698 RVA: 0x006A6D9C File Offset: 0x006A4F9C
+		// Token: 0x1700DA2A RID: 55850
+		// (get) Token: 0x06033F66 RID: 212838 RVA: 0x0070140C File Offset: 0x006FF60C
+		// (set) Token: 0x06033F67 RID: 212839 RVA: 0x00701414 File Offset: 0x006FF614
 		public ESportStateType Type { get; set; }
 
-		// Token: 0x1700CF0D RID: 53005
-		// (get) Token: 0x06030FFB RID: 200699 RVA: 0x006A6DA5 File Offset: 0x006A4FA5
-		// (set) Token: 0x06030FFC RID: 200700 RVA: 0x006A6DAD File Offset: 0x006A4FAD
+		// Token: 0x1700DA2B RID: 55851
+		// (get) Token: 0x06033F68 RID: 212840 RVA: 0x0070141D File Offset: 0x006FF61D
+		// (set) Token: 0x06033F69 RID: 212841 RVA: 0x00701425 File Offset: 0x006FF625
 		public int FirstGrabEntityId { get; set; }
 
-		// Token: 0x06030FFD RID: 200701 RVA: 0x006A6DB6 File Offset: 0x006A4FB6
+		// Token: 0x06033F6A RID: 212842 RVA: 0x0070142E File Offset: 0x006FF62E
 		public IPetalGrabConfigT()
 		{
 			this.Type = ESportStateType.Slide;

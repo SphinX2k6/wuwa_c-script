@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E8E RID: 28302
+	// Token: 0x02007612 RID: 30226
 	public struct IResetPlayerCameraFocus : IFlatbufferObject
 	{
-		// Token: 0x1700D2BC RID: 53948
-		// (get) Token: 0x0603204B RID: 204875 RVA: 0x006C3EBA File Offset: 0x006C20BA
+		// Token: 0x1700DE13 RID: 56851
+		// (get) Token: 0x0603508B RID: 217227 RVA: 0x0071FBEE File Offset: 0x0071DDEE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603204C RID: 204876 RVA: 0x006C3EC7 File Offset: 0x006C20C7
+		// Token: 0x0603508C RID: 217228 RVA: 0x0071FBFB File Offset: 0x0071DDFB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603204D RID: 204877 RVA: 0x006C3ED0 File Offset: 0x006C20D0
+		// Token: 0x0603508D RID: 217229 RVA: 0x0071FC04 File Offset: 0x0071DE04
 		public static IResetPlayerCameraFocus GetRootAsIResetPlayerCameraFocus(ByteBuffer _bb)
 		{
 			return IResetPlayerCameraFocus.GetRootAsIResetPlayerCameraFocus(_bb, default(IResetPlayerCameraFocus));
 		}
 
-		// Token: 0x0603204E RID: 204878 RVA: 0x006C3EEC File Offset: 0x006C20EC
+		// Token: 0x0603508E RID: 217230 RVA: 0x0071FC20 File Offset: 0x0071DE20
 		public static IResetPlayerCameraFocus GetRootAsIResetPlayerCameraFocus(ByteBuffer _bb, IResetPlayerCameraFocus obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603204F RID: 204879 RVA: 0x006C3F09 File Offset: 0x006C2109
+		// Token: 0x0603508F RID: 217231 RVA: 0x0071FC3D File Offset: 0x0071DE3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032050 RID: 204880 RVA: 0x006C3F18 File Offset: 0x006C2118
+		// Token: 0x06035090 RID: 217232 RVA: 0x0071FC4C File Offset: 0x0071DE4C
 		public IResetPlayerCameraFocus __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D2BD RID: 53949
-		// (get) Token: 0x06032051 RID: 204881 RVA: 0x006C3F28 File Offset: 0x006C2128
+		// Token: 0x1700DE14 RID: 56852
+		// (get) Token: 0x06035091 RID: 217233 RVA: 0x0071FC5C File Offset: 0x0071DE5C
 		public TResetPlayerFocusType ResetTypeType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032052 RID: 204882 RVA: 0x006C3F64 File Offset: 0x006C2164
+		// Token: 0x06035092 RID: 217234 RVA: 0x0071FC98 File Offset: 0x0071DE98
 		public TTable? ResetType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06032053 RID: 204883 RVA: 0x006C3FA8 File Offset: 0x006C21A8
+		// Token: 0x06035093 RID: 217235 RVA: 0x0071FCDC File Offset: 0x0071DEDC
 		public IResetPlayerFocusToDefaultDirection ResetTypeAsIResetPlayerFocusToDefaultDirection()
 		{
 			return this.ResetType<IResetPlayerFocusToDefaultDirection>().Value;
 		}
 
-		// Token: 0x06032054 RID: 204884 RVA: 0x006C3FC4 File Offset: 0x006C21C4
+		// Token: 0x06035094 RID: 217236 RVA: 0x0071FCF8 File Offset: 0x0071DEF8
 		public IResetPlayerFocusToFixedDirection ResetTypeAsIResetPlayerFocusToFixedDirection()
 		{
 			return this.ResetType<IResetPlayerFocusToFixedDirection>().Value;
 		}
 
-		// Token: 0x1700D2BE RID: 53950
-		// (get) Token: 0x06032055 RID: 204885 RVA: 0x006C3FE0 File Offset: 0x006C21E0
+		// Token: 0x1700DE15 RID: 56853
+		// (get) Token: 0x06035095 RID: 217237 RVA: 0x0071FD14 File Offset: 0x0071DF14
 		public float FadeInTime
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D2BF RID: 53951
-		// (get) Token: 0x06032056 RID: 204886 RVA: 0x006C4020 File Offset: 0x006C2220
+		// Token: 0x1700DE16 RID: 56854
+		// (get) Token: 0x06035096 RID: 217238 RVA: 0x0071FD54 File Offset: 0x0071DF54
 		public bool CannotInterrupt
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D2C0 RID: 53952
-		// (get) Token: 0x06032057 RID: 204887 RVA: 0x006C4060 File Offset: 0x006C2260
+		// Token: 0x1700DE17 RID: 56855
+		// (get) Token: 0x06035097 RID: 217239 RVA: 0x0071FD94 File Offset: 0x0071DF94
 		public float Duration
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D2C1 RID: 53953
-		// (get) Token: 0x06032058 RID: 204888 RVA: 0x006C40A4 File Offset: 0x006C22A4
+		// Token: 0x1700DE18 RID: 56856
+		// (get) Token: 0x06035098 RID: 217240 RVA: 0x0071FDD8 File Offset: 0x0071DFD8
 		public byte NullMask
 		{
 			get
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032059 RID: 204889 RVA: 0x006C40E1 File Offset: 0x006C22E1
+		// Token: 0x06035099 RID: 217241 RVA: 0x0071FE15 File Offset: 0x0071E015
 		public static Offset<IResetPlayerCameraFocus> CreateIResetPlayerCameraFocus(FlatBufferBuilder builder, TResetPlayerFocusType ResetType_type = TResetPlayerFocusType.NONE, int ResetTypeOffset = 0, float FadeInTime = 0f, bool CannotInterrupt = false, float Duration = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -154,55 +154,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetPlayerCameraFocus.EndIResetPlayerCameraFocus(builder);
 		}
 
-		// Token: 0x0603205A RID: 204890 RVA: 0x006C411D File Offset: 0x006C231D
+		// Token: 0x0603509A RID: 217242 RVA: 0x0071FE51 File Offset: 0x0071E051
 		public static void StartIResetPlayerCameraFocus(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0603205B RID: 204891 RVA: 0x006C4126 File Offset: 0x006C2326
+		// Token: 0x0603509B RID: 217243 RVA: 0x0071FE5A File Offset: 0x0071E05A
 		public static void AddResetTypeType(FlatBufferBuilder builder, TResetPlayerFocusType resetTypeType)
 		{
 			builder.AddByte(0, (byte)resetTypeType, 0);
 		}
 
-		// Token: 0x0603205C RID: 204892 RVA: 0x006C4131 File Offset: 0x006C2331
+		// Token: 0x0603509C RID: 217244 RVA: 0x0071FE65 File Offset: 0x0071E065
 		public static void AddResetType(FlatBufferBuilder builder, int resetTypeOffset)
 		{
 			builder.AddOffset(1, resetTypeOffset, 0);
 		}
 
-		// Token: 0x0603205D RID: 204893 RVA: 0x006C413C File Offset: 0x006C233C
+		// Token: 0x0603509D RID: 217245 RVA: 0x0071FE70 File Offset: 0x0071E070
 		public static void AddFadeInTime(FlatBufferBuilder builder, float fadeInTime)
 		{
 			builder.AddFloat(2, fadeInTime, 0.0);
 		}
 
-		// Token: 0x0603205E RID: 204894 RVA: 0x006C414F File Offset: 0x006C234F
+		// Token: 0x0603509E RID: 217246 RVA: 0x0071FE83 File Offset: 0x0071E083
 		public static void AddCannotInterrupt(FlatBufferBuilder builder, bool cannotInterrupt)
 		{
 			builder.AddBool(3, cannotInterrupt, false);
 		}
 
-		// Token: 0x0603205F RID: 204895 RVA: 0x006C415A File Offset: 0x006C235A
+		// Token: 0x0603509F RID: 217247 RVA: 0x0071FE8E File Offset: 0x0071E08E
 		public static void AddDuration(FlatBufferBuilder builder, float duration)
 		{
 			builder.AddFloat(4, duration, 0.0);
 		}
 
-		// Token: 0x06032060 RID: 204896 RVA: 0x006C416D File Offset: 0x006C236D
+		// Token: 0x060350A0 RID: 217248 RVA: 0x0071FEA1 File Offset: 0x0071E0A1
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06032061 RID: 204897 RVA: 0x006C4178 File Offset: 0x006C2378
+		// Token: 0x060350A1 RID: 217249 RVA: 0x0071FEAC File Offset: 0x0071E0AC
 		public static Offset<IResetPlayerCameraFocus> EndIResetPlayerCameraFocus(FlatBufferBuilder builder)
 		{
 			return new Offset<IResetPlayerCameraFocus>(builder.EndTable());
 		}
 
-		// Token: 0x06032062 RID: 204898 RVA: 0x006C4188 File Offset: 0x006C2388
+		// Token: 0x060350A2 RID: 217250 RVA: 0x0071FEBC File Offset: 0x0071E0BC
 		public IResetPlayerCameraFocusT UnPack()
 		{
 			IResetPlayerCameraFocusT resetPlayerCameraFocusT = new IResetPlayerCameraFocusT();
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return resetPlayerCameraFocusT;
 		}
 
-		// Token: 0x06032063 RID: 204899 RVA: 0x006C41A4 File Offset: 0x006C23A4
+		// Token: 0x060350A3 RID: 217251 RVA: 0x0071FED8 File Offset: 0x0071E0D8
 		public void UnPackTo(IResetPlayerCameraFocusT _o)
 		{
 			_o.ResetType = new TResetPlayerFocusTypeUnion();
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06032064 RID: 204900 RVA: 0x006C427C File Offset: 0x006C247C
+		// Token: 0x060350A4 RID: 217252 RVA: 0x0071FFB0 File Offset: 0x0071E1B0
 		public static Offset<IResetPlayerCameraFocus> Pack(FlatBufferBuilder builder, IResetPlayerCameraFocusT _o)
 		{
 			if (_o == null)
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetPlayerCameraFocus.CreateIResetPlayerCameraFocus(builder, resetType_type, resetTypeOffset, _o.FadeInTime, _o.CannotInterrupt, _o.Duration, _o.NullMask);
 		}
 
-		// Token: 0x0401187A RID: 71802
+		// Token: 0x040127FF RID: 75775
 		private Table __p;
 	}
 }

@@ -3,32 +3,32 @@ using CSharpScript.Game.NewWorld.Character.Common.Controller;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070F2 RID: 28914
+	// Token: 0x020063A2 RID: 25506
 	public class JumpProjectileParamsImpl : IJumpProjectileParams
 	{
-		// Token: 0x17009CD0 RID: 40144
-		// (get) Token: 0x06046959 RID: 289113 RVA: 0x011C2963 File Offset: 0x011C0B63
-		// (set) Token: 0x0604695A RID: 289114 RVA: 0x011C296B File Offset: 0x011C0B6B
+		// Token: 0x17007559 RID: 30041
+		// (get) Token: 0x0603DD52 RID: 253266 RVA: 0x011F1B17 File Offset: 0x011EFD17
+		// (set) Token: 0x0603DD53 RID: 253267 RVA: 0x011F1B1F File Offset: 0x011EFD1F
 		public float Length { get; set; }
 
-		// Token: 0x17009CD1 RID: 40145
-		// (get) Token: 0x0604695B RID: 289115 RVA: 0x011C2974 File Offset: 0x011C0B74
-		// (set) Token: 0x0604695C RID: 289116 RVA: 0x011C297C File Offset: 0x011C0B7C
+		// Token: 0x1700755A RID: 30042
+		// (get) Token: 0x0603DD54 RID: 253268 RVA: 0x011F1B28 File Offset: 0x011EFD28
+		// (set) Token: 0x0603DD55 RID: 253269 RVA: 0x011F1B30 File Offset: 0x011EFD30
 		public float AllTime { get; set; }
 
-		// Token: 0x17009CD2 RID: 40146
-		// (get) Token: 0x0604695D RID: 289117 RVA: 0x011C2985 File Offset: 0x011C0B85
-		// (set) Token: 0x0604695E RID: 289118 RVA: 0x011C298D File Offset: 0x011C0B8D
+		// Token: 0x1700755B RID: 30043
+		// (get) Token: 0x0603DD56 RID: 253270 RVA: 0x011F1B39 File Offset: 0x011EFD39
+		// (set) Token: 0x0603DD57 RID: 253271 RVA: 0x011F1B41 File Offset: 0x011EFD41
 		public float Height0 { get; set; }
 
-		// Token: 0x17009CD3 RID: 40147
-		// (get) Token: 0x0604695F RID: 289119 RVA: 0x011C2996 File Offset: 0x011C0B96
-		// (set) Token: 0x06046960 RID: 289120 RVA: 0x011C299E File Offset: 0x011C0B9E
+		// Token: 0x1700755C RID: 30044
+		// (get) Token: 0x0603DD58 RID: 253272 RVA: 0x011F1B4A File Offset: 0x011EFD4A
+		// (set) Token: 0x0603DD59 RID: 253273 RVA: 0x011F1B52 File Offset: 0x011EFD52
 		public float ProjectileA { get; set; }
 
-		// Token: 0x17009CD4 RID: 40148
-		// (get) Token: 0x06046961 RID: 289121 RVA: 0x011C29A7 File Offset: 0x011C0BA7
-		// (set) Token: 0x06046962 RID: 289122 RVA: 0x011C29AF File Offset: 0x011C0BAF
+		// Token: 0x1700755D RID: 30045
+		// (get) Token: 0x0603DD5A RID: 253274 RVA: 0x011F1B5B File Offset: 0x011EFD5B
+		// (set) Token: 0x0603DD5B RID: 253275 RVA: 0x011F1B63 File Offset: 0x011EFD63
 		public float ProjectileB { get; set; }
 	}
 }

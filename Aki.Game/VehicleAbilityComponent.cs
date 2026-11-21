@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020032C3 RID: 12995
+// Token: 0x02002834 RID: 10292
 public class VehicleAbilityComponent : BaseAbilityComponent
 {
-	// Token: 0x0601C35D RID: 115549 RVA: 0x007DB098 File Offset: 0x007D9298
+	// Token: 0x06019FAB RID: 106411 RVA: 0x00802038 File Offset: 0x00800238
 	[NullableContext(2)]
 	protected override UBaseAbilitySystemComponent GetAbilitySystemComponent()
 	{
@@ -18,15 +18,43 @@ public class VehicleAbilityComponent : BaseAbilityComponent
 		return component.Actor.AbilitySystemComponent;
 	}
 
-	// Token: 0x0601C35E RID: 115550 RVA: 0x007DB0CC File Offset: 0x007D92CC
-	[NullableContext(1)]
-	public override bool ClearComponent(EntityComponent componentTemplate)
+	// Token: 0x17002A1A RID: 10778
+	// (get) Token: 0x06019FAC RID: 106412 RVA: 0x0080206C File Offset: 0x0080026C
+	public override bool NeedClearInternal
 	{
-		if (!base.ClearComponent(componentTemplate))
+		get
 		{
-			return false;
+			return true;
 		}
-		VehicleAbilityComponent vehicleAbilityComponent = (VehicleAbilityComponent)componentTemplate;
-		return true;
+	}
+
+	// Token: 0x17002A1B RID: 10779
+	// (get) Token: 0x06019FAD RID: 106413 RVA: 0x0080206F File Offset: 0x0080026F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A1C RID: 10780
+	// (get) Token: 0x06019FAE RID: 106414 RVA: 0x00802072 File Offset: 0x00800272
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A1D RID: 10781
+	// (get) Token: 0x06019FAF RID: 106415 RVA: 0x00802075 File Offset: 0x00800275
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
 	}
 }

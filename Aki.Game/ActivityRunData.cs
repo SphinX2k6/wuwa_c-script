@@ -7,18 +7,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x020014D6 RID: 5334
+// Token: 0x0200098E RID: 2446
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRunData : ActivityExData
 {
-	// Token: 0x0600979F RID: 38815 RVA: 0x0020C19D File Offset: 0x0020A39D
+	// Token: 0x06006B79 RID: 27513 RVA: 0x00215EDD File Offset: 0x002140DD
 	public ActivityRunData(int activityId) : base(activityId)
 	{
 	}
 
-	// Token: 0x17000D15 RID: 3349
-	// (get) Token: 0x060097A0 RID: 38816 RVA: 0x0020C1B1 File Offset: 0x0020A3B1
+	// Token: 0x17000D36 RID: 3382
+	// (get) Token: 0x06006B7A RID: 27514 RVA: 0x00215EF1 File Offset: 0x002140F1
 	public int Id
 	{
 		get
@@ -27,25 +27,25 @@ public class ActivityRunData : ActivityExData
 		}
 	}
 
-	// Token: 0x060097A1 RID: 38817 RVA: 0x0020C1B9 File Offset: 0x0020A3B9
+	// Token: 0x06006B7B RID: 27515 RVA: 0x00215EF9 File Offset: 0x002140F9
 	public int GetMaxScore()
 	{
 		return this.MaxScore;
 	}
 
-	// Token: 0x060097A2 RID: 38818 RVA: 0x0020C1C1 File Offset: 0x0020A3C1
+	// Token: 0x06006B7C RID: 27516 RVA: 0x00215F01 File Offset: 0x00214101
 	public int GetMiniTime()
 	{
 		return this.MinTime;
 	}
 
-	// Token: 0x060097A3 RID: 38819 RVA: 0x0020C1C9 File Offset: 0x0020A3C9
+	// Token: 0x06006B7D RID: 27517 RVA: 0x00215F09 File Offset: 0x00214109
 	public bool GetRedPoint()
 	{
 		return this.GetIsShow() && (this.GetChallengeNewLocalRedPoint() || this.GetScoreRedPoint());
 	}
 
-	// Token: 0x060097A4 RID: 38820 RVA: 0x0020C1EC File Offset: 0x0020A3EC
+	// Token: 0x06006B7E RID: 27518 RVA: 0x00215F2C File Offset: 0x0021412C
 	public List<int> GetScoreArray()
 	{
 		List<int> list = new List<int>();
@@ -59,7 +59,7 @@ public class ActivityRunData : ActivityExData
 		return list;
 	}
 
-	// Token: 0x060097A5 RID: 38821 RVA: 0x0020C258 File Offset: 0x0020A458
+	// Token: 0x06006B7F RID: 27519 RVA: 0x00215F98 File Offset: 0x00214198
 	public int GetScoreIndexScore(int scoreIndex)
 	{
 		ValueTuple<int, int> valueTuple;
@@ -70,7 +70,7 @@ public class ActivityRunData : ActivityExData
 		return 0;
 	}
 
-	// Token: 0x060097A6 RID: 38822 RVA: 0x0020C288 File Offset: 0x0020A488
+	// Token: 0x06006B80 RID: 27520 RVA: 0x00215FC8 File Offset: 0x002141C8
 	public List<TItem> GetScoreIndexPreviewItem(int index)
 	{
 		List<int> list = new List<int>();
@@ -110,7 +110,7 @@ public class ActivityRunData : ActivityExData
 		return list2;
 	}
 
-	// Token: 0x060097A7 RID: 38823 RVA: 0x0020C39C File Offset: 0x0020A59C
+	// Token: 0x06006B81 RID: 27521 RVA: 0x002160DC File Offset: 0x002142DC
 	public int GetScoreIndex(int score)
 	{
 		List<int> list = new List<int>();
@@ -130,7 +130,7 @@ public class ActivityRunData : ActivityExData
 		return 0;
 	}
 
-	// Token: 0x060097A8 RID: 38824 RVA: 0x0020C400 File Offset: 0x0020A600
+	// Token: 0x06006B82 RID: 27522 RVA: 0x00216140 File Offset: 0x00214340
 	public EActivityRunStateEnum GetScoreIndexCannotGetReward(int index)
 	{
 		List<int> list = new List<int>();
@@ -155,7 +155,7 @@ public class ActivityRunData : ActivityExData
 		return EActivityRunStateEnum.HaveGetReward;
 	}
 
-	// Token: 0x060097A9 RID: 38825 RVA: 0x0020C474 File Offset: 0x0020A674
+	// Token: 0x06006B83 RID: 27523 RVA: 0x002161B4 File Offset: 0x002143B4
 	private bool GetScoreRedPoint()
 	{
 		List<int> list = new List<int>();
@@ -174,7 +174,7 @@ public class ActivityRunData : ActivityExData
 		return false;
 	}
 
-	// Token: 0x060097AA RID: 38826 RVA: 0x0020C4C0 File Offset: 0x0020A6C0
+	// Token: 0x06006B84 RID: 27524 RVA: 0x00216200 File Offset: 0x00214400
 	public bool GetIfRewardAllFinished()
 	{
 		List<int> list = new List<int>();
@@ -193,25 +193,25 @@ public class ActivityRunData : ActivityExData
 		return true;
 	}
 
-	// Token: 0x060097AB RID: 38827 RVA: 0x0020C50C File Offset: 0x0020A70C
+	// Token: 0x06006B85 RID: 27525 RVA: 0x0021624C File Offset: 0x0021444C
 	public string GetTitle()
 	{
 		return ActivityRunConfig.Instance.GetActivityRunTitle(this.IdInternal);
 	}
 
-	// Token: 0x060097AC RID: 38828 RVA: 0x0020C51E File Offset: 0x0020A71E
+	// Token: 0x06006B86 RID: 27526 RVA: 0x0021625E File Offset: 0x0021445E
 	public long GetMarkId()
 	{
 		return (long)ActivityRunConfig.Instance.GetActivityRunMarkId(this.IdInternal);
 	}
 
-	// Token: 0x060097AD RID: 38829 RVA: 0x0020C531 File Offset: 0x0020A731
+	// Token: 0x06006B87 RID: 27527 RVA: 0x00216271 File Offset: 0x00214471
 	public string GetBackgroundTexturePath()
 	{
 		return ActivityRunConfig.Instance.GetActivityRunTexture(this.IdInternal);
 	}
 
-	// Token: 0x060097AE RID: 38830 RVA: 0x0020C543 File Offset: 0x0020A743
+	// Token: 0x06006B88 RID: 27528 RVA: 0x00216283 File Offset: 0x00214483
 	public void SetChallengeLocalRedPointState(bool state)
 	{
 		ActivityModel.Instance.SaveActivityData(this.ActivityId, this.IdInternal, 0, 0, (state > false) ? 1 : 0);
@@ -219,26 +219,26 @@ public class ActivityRunData : ActivityExData
 		base.RefreshActivityRedPoint();
 	}
 
-	// Token: 0x060097AF RID: 38831 RVA: 0x0020C57D File Offset: 0x0020A77D
+	// Token: 0x06006B89 RID: 27529 RVA: 0x002162BD File Offset: 0x002144BD
 	public bool GetChallengeNewLocalRedPoint()
 	{
 		return ActivityModel.Instance.GetActivityCacheData(this.ActivityId, 1, this.IdInternal, 0, 0) == 1;
 	}
 
-	// Token: 0x060097B0 RID: 38832 RVA: 0x0020C59B File Offset: 0x0020A79B
+	// Token: 0x06006B8A RID: 27530 RVA: 0x002162DB File Offset: 0x002144DB
 	public bool GetIsShow()
 	{
 		return this.IsOpen && this.CheckIfInShowTime();
 	}
 
-	// Token: 0x060097B1 RID: 38833 RVA: 0x0020C5B0 File Offset: 0x0020A7B0
+	// Token: 0x06006B8B RID: 27531 RVA: 0x002162F0 File Offset: 0x002144F0
 	public void SetIsOpen(bool state)
 	{
 		this.IsOpen = state;
 	}
 
-	// Token: 0x17000D16 RID: 3350
-	// (get) Token: 0x060097B2 RID: 38834 RVA: 0x0020C5B9 File Offset: 0x0020A7B9
+	// Token: 0x17000D37 RID: 3383
+	// (get) Token: 0x06006B8C RID: 27532 RVA: 0x002162F9 File Offset: 0x002144F9
 	public long BeginOpenTime
 	{
 		get
@@ -247,8 +247,8 @@ public class ActivityRunData : ActivityExData
 		}
 	}
 
-	// Token: 0x17000D17 RID: 3351
-	// (get) Token: 0x060097B3 RID: 38835 RVA: 0x0020C5C1 File Offset: 0x0020A7C1
+	// Token: 0x17000D38 RID: 3384
+	// (get) Token: 0x06006B8D RID: 27533 RVA: 0x00216301 File Offset: 0x00214501
 	public long EndOpenTime
 	{
 		get
@@ -257,7 +257,7 @@ public class ActivityRunData : ActivityExData
 		}
 	}
 
-	// Token: 0x060097B4 RID: 38836 RVA: 0x0020C5C9 File Offset: 0x0020A7C9
+	// Token: 0x06006B8E RID: 27534 RVA: 0x00216309 File Offset: 0x00214509
 	public void OnGetScoreReward(int scoreIndex)
 	{
 		if (!this.TakenScoresIndex.Contains(scoreIndex))
@@ -268,7 +268,7 @@ public class ActivityRunData : ActivityExData
 		}
 	}
 
-	// Token: 0x060097B5 RID: 38837 RVA: 0x0020C604 File Offset: 0x0020A804
+	// Token: 0x06006B8F RID: 27535 RVA: 0x00216344 File Offset: 0x00214544
 	public bool CheckIfInShowTime()
 	{
 		if (this.BeginOpenTime == 0L && this.EndOpenTime == 0L)
@@ -279,7 +279,7 @@ public class ActivityRunData : ActivityExData
 		return serverTime >= (double)this.BeginOpenTime && serverTime <= (double)this.EndOpenTime;
 	}
 
-	// Token: 0x060097B6 RID: 38838 RVA: 0x0020C648 File Offset: 0x0020A848
+	// Token: 0x06006B90 RID: 27536 RVA: 0x00216388 File Offset: 0x00214588
 	public void OnChallengeEnd(ParkourChallengeEndNotify data)
 	{
 		this.CurrentScore = data.Score;
@@ -296,7 +296,7 @@ public class ActivityRunData : ActivityExData
 		base.RefreshActivityRedPoint();
 	}
 
-	// Token: 0x060097B7 RID: 38839 RVA: 0x0020C6C8 File Offset: 0x0020A8C8
+	// Token: 0x06006B91 RID: 27537 RVA: 0x00216408 File Offset: 0x00214608
 	public void Phrase(object data)
 	{
 		Aki.Protocol.ParkourChallenge parkourChallenge = data as Aki.Protocol.ParkourChallenge;
@@ -332,34 +332,34 @@ public class ActivityRunData : ActivityExData
 		base.RefreshActivityRedPoint();
 	}
 
-	// Token: 0x040042BB RID: 17083
+	// Token: 0x04004360 RID: 17248
 	private int IdInternal;
 
-	// Token: 0x040042BC RID: 17084
+	// Token: 0x04004361 RID: 17249
 	private List<int> TakenScoresIndex = new List<int>();
 
-	// Token: 0x040042BD RID: 17085
+	// Token: 0x04004362 RID: 17250
 	private int MaxScore;
 
-	// Token: 0x040042BE RID: 17086
+	// Token: 0x04004363 RID: 17251
 	private int MinTime;
 
-	// Token: 0x040042BF RID: 17087
+	// Token: 0x04004364 RID: 17252
 	private int CurrentScore;
 
-	// Token: 0x040042C0 RID: 17088
+	// Token: 0x04004365 RID: 17253
 	private int CurrentTime;
 
-	// Token: 0x040042C1 RID: 17089
+	// Token: 0x04004366 RID: 17254
 	private bool IsOpen;
 
-	// Token: 0x040042C2 RID: 17090
+	// Token: 0x04004367 RID: 17255
 	private long BeginOpenTimeInternal;
 
-	// Token: 0x040042C3 RID: 17091
+	// Token: 0x04004368 RID: 17256
 	private long EndOpenTimeInternal;
 
-	// Token: 0x040042C4 RID: 17092
+	// Token: 0x04004369 RID: 17257
 	[Nullable(new byte[]
 	{
 		2,

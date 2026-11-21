@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F96 RID: 8086
+// Token: 0x02001458 RID: 5208
 [NullableContext(1)]
 [Nullable(0)]
 public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 {
-	// Token: 0x0600FB20 RID: 64288 RVA: 0x003CD5D0 File Offset: 0x003CB7D0
+	// Token: 0x0600CF42 RID: 53058 RVA: 0x003D9190 File Offset: 0x003D7390
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -35,7 +35,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FB21 RID: 64289 RVA: 0x003CD698 File Offset: 0x003CB898
+	// Token: 0x0600CF43 RID: 53059 RVA: 0x003D9258 File Offset: 0x003D7458
 	protected override void OnStart()
 	{
 		this.TextTimer = base.GetText(0);
@@ -50,7 +50,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600FB22 RID: 64290 RVA: 0x003CD6F1 File Offset: 0x003CB8F1
+	// Token: 0x0600CF44 RID: 53060 RVA: 0x003D92B1 File Offset: 0x003D74B1
 	protected override void OnBeforeDestroy()
 	{
 		InfoDisplayAudioPlayerImpl audioPlayer = this.AudioPlayer;
@@ -61,7 +61,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		audioPlayer.Release();
 	}
 
-	// Token: 0x0600FB23 RID: 64291 RVA: 0x003CD703 File Offset: 0x003CB903
+	// Token: 0x0600CF45 RID: 53061 RVA: 0x003D92C3 File Offset: 0x003D74C3
 	public void Stop()
 	{
 		InfoDisplayAudioPlayerImpl audioPlayer = this.AudioPlayer;
@@ -72,7 +72,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		audioPlayer.Stop();
 	}
 
-	// Token: 0x0600FB24 RID: 64292 RVA: 0x003CD718 File Offset: 0x003CB918
+	// Token: 0x0600CF46 RID: 53062 RVA: 0x003D92D8 File Offset: 0x003D74D8
 	public UniTask InitAudioPlayer(string clipPath)
 	{
 		InfoDisplayAudioPlayerWithProgress.<InitAudioPlayer>d__9 <InitAudioPlayer>d__;
@@ -84,7 +84,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		return <InitAudioPlayer>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FB25 RID: 64293 RVA: 0x003CD763 File Offset: 0x003CB963
+	// Token: 0x0600CF47 RID: 53063 RVA: 0x003D9323 File Offset: 0x003D7523
 	public void SetOnAudioEnd(Action callback)
 	{
 		if (this.AudioPlayer == null)
@@ -94,7 +94,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		this.AudioPlayer.OverrideEndCallBack = callback;
 	}
 
-	// Token: 0x0600FB26 RID: 64294 RVA: 0x003CD77A File Offset: 0x003CB97A
+	// Token: 0x0600CF48 RID: 53064 RVA: 0x003D933A File Offset: 0x003D753A
 	public void SetOnPlay(Action callback)
 	{
 		if (this.AudioPlayer == null)
@@ -104,7 +104,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		this.AudioPlayer.OnPlay = callback;
 	}
 
-	// Token: 0x0600FB27 RID: 64295 RVA: 0x003CD791 File Offset: 0x003CB991
+	// Token: 0x0600CF49 RID: 53065 RVA: 0x003D9351 File Offset: 0x003D7551
 	public void SetOnPause(Action callback)
 	{
 		if (this.AudioPlayer == null)
@@ -114,7 +114,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		this.AudioPlayer.OnPause = callback;
 	}
 
-	// Token: 0x0600FB28 RID: 64296 RVA: 0x003CD7A8 File Offset: 0x003CB9A8
+	// Token: 0x0600CF4A RID: 53066 RVA: 0x003D9368 File Offset: 0x003D7568
 	public void Tick(float deltaTime)
 	{
 		InfoDisplayAudioPlayerImpl audioPlayer = this.AudioPlayer;
@@ -131,7 +131,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600FB29 RID: 64297 RVA: 0x003CD7F5 File Offset: 0x003CB9F5
+	// Token: 0x0600CF4B RID: 53067 RVA: 0x003D93B5 File Offset: 0x003D75B5
 	private void TickTextTimer(float playingTime)
 	{
 		if (this.TextTimer != null)
@@ -140,7 +140,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600FB2A RID: 64298 RVA: 0x003CD818 File Offset: 0x003CBA18
+	// Token: 0x0600CF4C RID: 53068 RVA: 0x003D93D8 File Offset: 0x003D75D8
 	private void TickSliderProgress(float playingTime)
 	{
 		if (this.SliderProgress != null)
@@ -150,7 +150,7 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600FB2B RID: 64299 RVA: 0x003CD84F File Offset: 0x003CBA4F
+	// Token: 0x0600CF4D RID: 53069 RVA: 0x003D940F File Offset: 0x003D760F
 	private void OnClickPlayAudioBtn(EToggleState toggleState)
 	{
 		InfoDisplayAudioPlayerImpl audioPlayer = this.AudioPlayer;
@@ -161,32 +161,32 @@ public class InfoDisplayAudioPlayerWithProgress : UiPanelBase
 		audioPlayer.OnClickPlayAudioBtn();
 	}
 
-	// Token: 0x040074D9 RID: 29913
+	// Token: 0x040075BB RID: 30139
 	[Nullable(2)]
 	private InfoDisplayAudioPlayerImpl AudioPlayer;
 
-	// Token: 0x040074DA RID: 29914
+	// Token: 0x040075BC RID: 30140
 	[Nullable(2)]
 	private UUIText TextTimer;
 
-	// Token: 0x040074DB RID: 29915
+	// Token: 0x040075BD RID: 30141
 	[Nullable(2)]
 	private UUISliderComponent SliderProgress;
 
-	// Token: 0x040074DC RID: 29916
+	// Token: 0x040075BE RID: 30142
 	private float AudioDuration = 1f;
 
-	// Token: 0x02008583 RID: 34179
+	// Token: 0x02007708 RID: 30472
 	[NullableContext(0)]
 	private class EInfoDisplayAudioPlayerWithProgressComponents
 	{
-		// Token: 0x0402B786 RID: 178054
+		// Token: 0x04026AA9 RID: 158377
 		public const int TextTimer = 0;
 
-		// Token: 0x0402B787 RID: 178055
+		// Token: 0x04026AAA RID: 158378
 		public const int SliderProgress = 1;
 
-		// Token: 0x0402B788 RID: 178056
+		// Token: 0x04026AAB RID: 158379
 		public const int TogglePlay = 2;
 	}
 }

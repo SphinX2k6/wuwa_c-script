@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002379 RID: 9081
+	// Token: 0x0200076A RID: 1898
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieSceneTracks.MovieSceneFadeSection")]
-	[UnrealStructLayout(488, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 488)]
+	[UnrealStructLayout(504, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 504)]
 	public class UMovieSceneFadeSection : UMovieSceneSection, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022421 RID: 140321 RVA: 0x0032A939 File Offset: 0x00328B39
+		// Token: 0x0600A4B6 RID: 42166 RVA: 0x000F34A1 File Offset: 0x000F16A1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneFadeSection._ClassPtr;
 		}
 
-		// Token: 0x06022422 RID: 140322 RVA: 0x0032A948 File Offset: 0x00328B48
+		// Token: 0x0600A4B7 RID: 42167 RVA: 0x000F34B0 File Offset: 0x000F16B0
 		public UMovieSceneFadeSection() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneFadeSection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022423 RID: 140323 RVA: 0x0032A970 File Offset: 0x00328B70
+		// Token: 0x0600A4B8 RID: 42168 RVA: 0x000F34D8 File Offset: 0x000F16D8
 		public UMovieSceneFadeSection(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneFadeSection.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700842B RID: 33835
-		// (get) Token: 0x06022424 RID: 140324 RVA: 0x0032A9A4 File Offset: 0x00328BA4
-		// (set) Token: 0x06022425 RID: 140325 RVA: 0x0032A9DD File Offset: 0x00328BDD
+		// Token: 0x17001E71 RID: 7793
+		// (get) Token: 0x0600A4B9 RID: 42169 RVA: 0x000F350C File Offset: 0x000F170C
+		// (set) Token: 0x0600A4BA RID: 42170 RVA: 0x000F3545 File Offset: 0x000F1745
 		public FMovieSceneFloatChannel FloatCurve
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700842C RID: 33836
-		// (get) Token: 0x06022426 RID: 140326 RVA: 0x0032A9FE File Offset: 0x00328BFE
-		// (set) Token: 0x06022427 RID: 140327 RVA: 0x0032AA12 File Offset: 0x00328C12
+		// Token: 0x17001E72 RID: 7794
+		// (get) Token: 0x0600A4BB RID: 42171 RVA: 0x000F3566 File Offset: 0x000F1766
+		// (set) Token: 0x0600A4BC RID: 42172 RVA: 0x000F357A File Offset: 0x000F177A
 		public unsafe FLinearColor FadeColor
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700842D RID: 33837
-		// (get) Token: 0x06022428 RID: 140328 RVA: 0x0032AA27 File Offset: 0x00328C27
-		// (set) Token: 0x06022429 RID: 140329 RVA: 0x0032AA40 File Offset: 0x00328C40
+		// Token: 0x17001E73 RID: 7795
+		// (get) Token: 0x0600A4BD RID: 42173 RVA: 0x000F358F File Offset: 0x000F178F
+		// (set) Token: 0x0600A4BE RID: 42174 RVA: 0x000F35A8 File Offset: 0x000F17A8
 		public unsafe bool bFadeAudio
 		{
 			get
@@ -80,40 +80,40 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0602242A RID: 140330 RVA: 0x0032AA70 File Offset: 0x00328C70
+		// Token: 0x0600A4BF RID: 42175 RVA: 0x000F35D8 File Offset: 0x000F17D8
 		static UMovieSceneFadeSection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieSceneTracks.MovieSceneFadeSection");
 		}
 
-		// Token: 0x0602242B RID: 140331 RVA: 0x0032AA7E File Offset: 0x00328C7E
+		// Token: 0x0600A4C0 RID: 42176 RVA: 0x000F35E6 File Offset: 0x000F17E6
 		protected UMovieSceneFadeSection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04012499 RID: 74905
+		// Token: 0x04004647 RID: 17991
 		public new const string __ObjectPath = "/Script/MovieSceneTracks.MovieSceneFadeSection";
 
-		// Token: 0x0401249A RID: 74906
+		// Token: 0x04004648 RID: 17992
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401249B RID: 74907
+		// Token: 0x04004649 RID: 17993
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401249C RID: 74908
+		// Token: 0x0400464A RID: 17994
 		internal static int __PropertyOffset_FloatCurve;
 
-		// Token: 0x0401249D RID: 74909
+		// Token: 0x0400464B RID: 17995
 		[Nullable(2)]
 		private FMovieSceneFloatChannel _FloatCurve;
 
-		// Token: 0x0401249E RID: 74910
+		// Token: 0x0400464C RID: 17996
 		internal static int __PropertyOffset_FadeColor;
 
-		// Token: 0x0401249F RID: 74911
+		// Token: 0x0400464D RID: 17997
 		internal static int __PropertyOffset_bFadeAudio;
 
-		// Token: 0x040124A0 RID: 74912
+		// Token: 0x0400464E RID: 17998
 		internal static byte __PropertyMask_bFadeAudio;
 	}
 }

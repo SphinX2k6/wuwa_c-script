@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A68 RID: 23144
+	// Token: 0x02004A44 RID: 19012
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 	})]
 	public class FlagChallengeLevelTabItem : GridProxyAbstract<FlagChallengeLevelData>
 	{
-		// Token: 0x0603AA66 RID: 240230 RVA: 0x00DF69D0 File Offset: 0x00DF4BD0
+		// Token: 0x0602F9AF RID: 194991 RVA: 0x00D46F54 File Offset: 0x00D45154
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA67 RID: 240231 RVA: 0x00DF6B18 File Offset: 0x00DF4D18
+		// Token: 0x0602F9B0 RID: 194992 RVA: 0x00D4709C File Offset: 0x00D4529C
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			EventSystem.Instance.Add(EEventName.OnFlagChallengeUpdateLevelData, new Action(this.OnLevelDataUpdate));
 		}
 
-		// Token: 0x0603AA68 RID: 240232 RVA: 0x00DF6B78 File Offset: 0x00DF4D78
+		// Token: 0x0602F9B1 RID: 194993 RVA: 0x00D470FC File Offset: 0x00D452FC
 		protected override void OnBeforeDestroy()
 		{
 			if (this.IsInitRedDot && this.Data != null)
@@ -61,20 +61,20 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			EventSystem.Instance.Remove(EEventName.OnFlagChallengeUpdateLevelData, new Action(this.OnLevelDataUpdate));
 		}
 
-		// Token: 0x0603AA69 RID: 240233 RVA: 0x00DF6BE0 File Offset: 0x00DF4DE0
+		// Token: 0x0602F9B2 RID: 194994 RVA: 0x00D47164 File Offset: 0x00D45364
 		public override void Refresh(FlagChallengeLevelData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			this.RefreshView(isSelected);
 		}
 
-		// Token: 0x0603AA6A RID: 240234 RVA: 0x00DF6BF0 File Offset: 0x00DF4DF0
+		// Token: 0x0602F9B3 RID: 194995 RVA: 0x00D47174 File Offset: 0x00D45374
 		public override object GetKey(FlagChallengeLevelData data, int displayIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x0603AA6B RID: 240235 RVA: 0x00DF6C00 File Offset: 0x00DF4E00
+		// Token: 0x0602F9B4 RID: 194996 RVA: 0x00D47184 File Offset: 0x00D45384
 		private void RefreshView(bool isSelected)
 		{
 			this.RemoveTimer();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.SetTextureByPath(UiResourceConfig.Instance.GetResourcePath(dictionary["LevelTabItemSelect"]), base.GetTexture(4), null, null);
 		}
 
-		// Token: 0x0603AA6C RID: 240236 RVA: 0x00DF6E7D File Offset: 0x00DF507D
+		// Token: 0x0602F9B5 RID: 194997 RVA: 0x00D47401 File Offset: 0x00D45601
 		private void AddTimer()
 		{
 			this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(delegate(float _)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}, (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 		}
 
-		// Token: 0x0603AA6D RID: 240237 RVA: 0x00DF6EAE File Offset: 0x00DF50AE
+		// Token: 0x0602F9B6 RID: 194998 RVA: 0x00D47432 File Offset: 0x00D45632
 		private void RemoveTimer()
 		{
 			if (this.TimerHandle != null)
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA6E RID: 240238 RVA: 0x00DF6ED0 File Offset: 0x00DF50D0
+		// Token: 0x0602F9B7 RID: 194999 RVA: 0x00D47454 File Offset: 0x00D45654
 		private void RefreshRemainTime()
 		{
 			double remainTime = this.Data.GetRemainTime();
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			text.SetText(countDownText, true);
 		}
 
-		// Token: 0x0603AA6F RID: 240239 RVA: 0x00DF6F2C File Offset: 0x00DF512C
+		// Token: 0x0602F9B8 RID: 195000 RVA: 0x00D474B0 File Offset: 0x00D456B0
 		public void SetToggleState(bool state, bool fireEvent = false)
 		{
 			if (state)
@@ -192,31 +192,31 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.GetExtendToggle(0).SetToggleStateForce(state2, fireEvent, false, false);
 		}
 
-		// Token: 0x0603AA70 RID: 240240 RVA: 0x00DF6F84 File Offset: 0x00DF5184
+		// Token: 0x0602F9B9 RID: 195001 RVA: 0x00D47508 File Offset: 0x00D45708
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true, fireEvent);
 		}
 
-		// Token: 0x0603AA71 RID: 240241 RVA: 0x00DF6F8E File Offset: 0x00DF518E
+		// Token: 0x0602F9BA RID: 195002 RVA: 0x00D47512 File Offset: 0x00D45712
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false, fireEvent);
 		}
 
-		// Token: 0x0603AA72 RID: 240242 RVA: 0x00DF6F98 File Offset: 0x00DF5198
+		// Token: 0x0602F9BB RID: 195003 RVA: 0x00D4751C File Offset: 0x00D4571C
 		public void SetToggleCallback(Action<int> cb)
 		{
 			this.ToggleCallback = cb;
 		}
 
-		// Token: 0x0603AA73 RID: 240243 RVA: 0x00DF6FA1 File Offset: 0x00DF51A1
+		// Token: 0x0602F9BC RID: 195004 RVA: 0x00D47525 File Offset: 0x00D45725
 		public void SetCanExecuteCallback(Func<int, bool> cb)
 		{
 			this.CanExecuteCallback = cb;
 		}
 
-		// Token: 0x0603AA74 RID: 240244 RVA: 0x00DF6FAA File Offset: 0x00DF51AA
+		// Token: 0x0602F9BD RID: 195005 RVA: 0x00D4752E File Offset: 0x00D4572E
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<int> toggleCallback = this.ToggleCallback;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			toggleCallback(this.Data.Id);
 		}
 
-		// Token: 0x0603AA75 RID: 240245 RVA: 0x00DF6FC7 File Offset: 0x00DF51C7
+		// Token: 0x0602F9BE RID: 195006 RVA: 0x00D4754B File Offset: 0x00D4574B
 		private bool OnCanExecuteChange()
 		{
 			if (this.Data.IsLocked())
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return canExecuteCallback == null || canExecuteCallback(this.Data.Id);
 		}
 
-		// Token: 0x0603AA76 RID: 240246 RVA: 0x00DF6FF4 File Offset: 0x00DF51F4
+		// Token: 0x0602F9BF RID: 195007 RVA: 0x00D47578 File Offset: 0x00D45778
 		private void OnUndeterminedClicked()
 		{
 			if (!this.Data.IsLocked())
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			});
 		}
 
-		// Token: 0x0603AA77 RID: 240247 RVA: 0x00DF7084 File Offset: 0x00DF5284
+		// Token: 0x0602F9C0 RID: 195008 RVA: 0x00D47608 File Offset: 0x00D45808
 		private void OnLevelDataUpdate()
 		{
 			if (this.Data == null)
@@ -271,21 +271,21 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.RefreshView(extendToggle.GetToggleState() == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x0401E966 RID: 125286
+		// Token: 0x0401940D RID: 103437
 		private FlagChallengeLevelData Data;
 
-		// Token: 0x0401E967 RID: 125287
+		// Token: 0x0401940E RID: 103438
 		[Nullable(2)]
 		private Action<int> ToggleCallback;
 
-		// Token: 0x0401E968 RID: 125288
+		// Token: 0x0401940F RID: 103439
 		[Nullable(2)]
 		private Func<int, bool> CanExecuteCallback;
 
-		// Token: 0x0401E969 RID: 125289
+		// Token: 0x04019410 RID: 103440
 		private bool IsInitRedDot;
 
-		// Token: 0x0401E96A RID: 125290
+		// Token: 0x04019411 RID: 103441
 		[Nullable(2)]
 		protected TimerHandle TimerHandle;
 	}

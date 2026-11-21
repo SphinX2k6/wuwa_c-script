@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F6E RID: 8046
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021A9 RID: 8617
 	public class ITalkOptionConditionSystemConfigBase
 	{
-		// Token: 0x0600B116 RID: 45334 RVA: 0x0019D830 File Offset: 0x0019BA30
+		// Token: 0x0600BBF0 RID: 48112 RVA: 0x001B3784 File Offset: 0x001B1984
 		private ITalkOptionConditionSystemConfigBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B117 RID: 45335 RVA: 0x0019D868 File Offset: 0x0019BA68
+		// Token: 0x0600BBF1 RID: 48113 RVA: 0x001B37BC File Offset: 0x001B19BC
 		public static ITalkOptionConditionSystemConfigBase Create([Nullable(2)] ITalkOptionConditionSystemConfigBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B118 RID: 45336 RVA: 0x0019D87B File Offset: 0x0019BA7B
+		// Token: 0x0600BBF2 RID: 48114 RVA: 0x001B37CF File Offset: 0x001B19CF
 		public static ITalkOptionConditionSystemConfigBase CreateFromSetValue([Nullable(2)] ITalkOptionConditionSystemConfigBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B119 RID: 45337 RVA: 0x0019D88E File Offset: 0x0019BA8E
+		// Token: 0x0600BBF3 RID: 48115 RVA: 0x001B37E2 File Offset: 0x001B19E2
 		public ITalkOptionConditionSystemConfigBase_SetValue ToSetValue()
 		{
 			return new ITalkOptionConditionSystemConfigBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036BE RID: 14014
-		// (get) Token: 0x0600B11A RID: 45338 RVA: 0x0019D8A1 File Offset: 0x0019BAA1
-		// (set) Token: 0x0600B11B RID: 45339 RVA: 0x0019D8CC File Offset: 0x0019BACC
+		// Token: 0x1700398A RID: 14730
+		// (get) Token: 0x0600BBF4 RID: 48116 RVA: 0x001B37F5 File Offset: 0x001B19F5
+		// (set) Token: 0x0600BBF5 RID: 48117 RVA: 0x001B3820 File Offset: 0x001B1A20
 		public virtual ETalkOptionConditionSystem Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B29 RID: 27433
+		// Token: 0x04007111 RID: 28945
 		[Nullable(2)]
 		protected ITalkOptionConditionSystemConfigBase FbInstance;
 
-		// Token: 0x04006B2A RID: 27434
+		// Token: 0x04007112 RID: 28946
 		[Nullable(2)]
 		protected ITalkOptionConditionSystemConfigBase_SetValue PocoInterface;
 	}

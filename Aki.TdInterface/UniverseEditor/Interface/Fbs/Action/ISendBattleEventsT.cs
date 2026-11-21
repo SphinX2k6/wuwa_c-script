@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F61 RID: 28513
+	// Token: 0x02007724 RID: 30500
 	public class ISendBattleEventsT
 	{
-		// Token: 0x1700D3D8 RID: 54232
-		// (get) Token: 0x060325FF RID: 206335 RVA: 0x006CD08F File Offset: 0x006CB28F
-		// (set) Token: 0x06032600 RID: 206336 RVA: 0x006CD097 File Offset: 0x006CB297
+		// Token: 0x1700DFA4 RID: 57252
+		// (get) Token: 0x0603583D RID: 219197 RVA: 0x0072C8CF File Offset: 0x0072AACF
+		// (set) Token: 0x0603583E RID: 219198 RVA: 0x0072C8D7 File Offset: 0x0072AAD7
 		public EExecBattleActionType Type { get; set; }
 
-		// Token: 0x1700D3D9 RID: 54233
-		// (get) Token: 0x06032601 RID: 206337 RVA: 0x006CD0A0 File Offset: 0x006CB2A0
-		// (set) Token: 0x06032602 RID: 206338 RVA: 0x006CD0A8 File Offset: 0x006CB2A8
+		// Token: 0x1700DFA5 RID: 57253
+		// (get) Token: 0x0603583F RID: 219199 RVA: 0x0072C8E0 File Offset: 0x0072AAE0
+		// (set) Token: 0x06035840 RID: 219200 RVA: 0x0072C8E8 File Offset: 0x0072AAE8
 		public List<ISetBattleTagConfigT> Configs { get; set; }
 
-		// Token: 0x06032603 RID: 206339 RVA: 0x006CD0B1 File Offset: 0x006CB2B1
+		// Token: 0x06035841 RID: 219201 RVA: 0x0072C8F1 File Offset: 0x0072AAF1
 		public ISendBattleEventsT()
 		{
 			this.Type = EExecBattleActionType.SetBattleTags;

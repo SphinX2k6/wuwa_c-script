@@ -5,10 +5,10 @@ using CSharpScript.Launcher.Update;
 
 namespace CSharpScript.Launcher.DiffPatch.Procedure
 {
-	// Token: 0x02000219 RID: 537
+	// Token: 0x0200021E RID: 542
 	public class OthersDiffPatchProcedure : BaseDiffPatchProcedure
 	{
-		// Token: 0x06000DF4 RID: 3572 RVA: 0x000541AE File Offset: 0x000523AE
+		// Token: 0x06000E35 RID: 3637 RVA: 0x00056CA2 File Offset: 0x00054EA2
 		[NullableContext(1)]
 		public OthersDiffPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr) : base(pathMisc, viewMgr)
 		{

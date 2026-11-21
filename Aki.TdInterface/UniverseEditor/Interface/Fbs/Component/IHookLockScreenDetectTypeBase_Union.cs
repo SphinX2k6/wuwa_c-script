@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053CE RID: 21454
+	// Token: 0x02005954 RID: 22868
 	public enum IHookLockScreenDetectTypeBase_Union : byte
 	{
-		// Token: 0x0400E602 RID: 58882
+		// Token: 0x0400F233 RID: 62003
 		NONE,
-		// Token: 0x0400E603 RID: 58883
+		// Token: 0x0400F234 RID: 62004
 		IHookLockScreenDetectTypeBase,
-		// Token: 0x0400E604 RID: 58884
+		// Token: 0x0400F235 RID: 62005
 		IHookLockScreenDetectTypeCentralEllipse,
-		// Token: 0x0400E605 RID: 58885
+		// Token: 0x0400F236 RID: 62006
 		IHookLockScreenDetectTypeFullScreen
 	}
 }

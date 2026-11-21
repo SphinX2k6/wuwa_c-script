@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Model
 {
-	// Token: 0x020071D8 RID: 29144
+	// Token: 0x0200628D RID: 25229
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SceneItemBuffModel : ModelBase
 	{
-		// Token: 0x06047541 RID: 292161 RVA: 0x0122344C File Offset: 0x0122164C
+		// Token: 0x0603CE43 RID: 249411 RVA: 0x0117D280 File Offset: 0x0117B480
 		public bool Add(int targetEntityId, long buffId, int producerEntityId)
 		{
 			Dictionary<long, List<int>> dictionary;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return false;
 		}
 
-		// Token: 0x06047542 RID: 292162 RVA: 0x012234A8 File Offset: 0x012216A8
+		// Token: 0x0603CE44 RID: 249412 RVA: 0x0117D2DC File Offset: 0x0117B4DC
 		public List<int> Remove(int targetEntityId, long buffId, int deltaCount, int? producerEntityId = null)
 		{
 			List<int> result = new List<int>();
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return result;
 		}
 
-		// Token: 0x06047543 RID: 292163 RVA: 0x0122356E File Offset: 0x0122176E
+		// Token: 0x0603CE45 RID: 249413 RVA: 0x0117D3A2 File Offset: 0x0117B5A2
 		public bool RemoveAll(int targetEntityId)
 		{
 			return this.SceneItemBuffCacheMap.Remove(targetEntityId);
 		}
 
-		// Token: 0x06047544 RID: 292164 RVA: 0x0122357C File Offset: 0x0122177C
+		// Token: 0x0603CE46 RID: 249414 RVA: 0x0117D3B0 File Offset: 0x0117B5B0
 		public bool Switch(int newTargetEntityId, int oldTargetEntityId)
 		{
 			Dictionary<long, List<int>> value;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x06047545 RID: 292165 RVA: 0x012235C4 File Offset: 0x012217C4
+		// Token: 0x0603CE47 RID: 249415 RVA: 0x0117D3F8 File Offset: 0x0117B5F8
 		[NullableContext(2)]
 		public List<int> GetSceneItemIds(int targetEntityId)
 		{
@@ -115,8 +115,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return list;
 		}
 
-		// Token: 0x17009DF2 RID: 40434
-		// (get) Token: 0x06047546 RID: 292166 RVA: 0x01223668 File Offset: 0x01221868
+		// Token: 0x17007349 RID: 29513
+		// (get) Token: 0x0603CE48 RID: 249416 RVA: 0x0117D49C File Offset: 0x0117B69C
 		public static SceneItemBuffModel Instance
 		{
 			get
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x06047547 RID: 292167 RVA: 0x0122366F File Offset: 0x0122186F
+		// Token: 0x0603CE49 RID: 249417 RVA: 0x0117D4A3 File Offset: 0x0117B6A3
 		public static SceneItemBuffModel GetOrCreateInstance()
 		{
 			if (SceneItemBuffModel._Instance == null)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return SceneItemBuffModel._Instance;
 		}
 
-		// Token: 0x06047548 RID: 292168 RVA: 0x01223683 File Offset: 0x01221883
+		// Token: 0x0603CE4A RID: 249418 RVA: 0x0117D4B7 File Offset: 0x0117B6B7
 		public static bool CreateInstance()
 		{
 			if (SceneItemBuffModel._Instance != null)
@@ -146,27 +146,27 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x06047549 RID: 292169 RVA: 0x01223699 File Offset: 0x01221899
+		// Token: 0x0603CE4B RID: 249419 RVA: 0x0117D4CD File Offset: 0x0117B6CD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604754A RID: 292170 RVA: 0x0122369B File Offset: 0x0122189B
+		// Token: 0x0603CE4C RID: 249420 RVA: 0x0117D4CF File Offset: 0x0117B6CF
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemBuffModel._Instance = null;
 		}
 
-		// Token: 0x0604754B RID: 292171 RVA: 0x012236A3 File Offset: 0x012218A3
+		// Token: 0x0603CE4D RID: 249421 RVA: 0x0117D4D7 File Offset: 0x0117B6D7
 		static SceneItemBuffModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemBuffModel.CreateStaticDefaultValue), new Action(SceneItemBuffModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025810 RID: 153616
+		// Token: 0x0402047F RID: 132223
 		private readonly Dictionary<int, Dictionary<long, List<int>>> SceneItemBuffCacheMap = new Dictionary<int, Dictionary<long, List<int>>>();
 
-		// Token: 0x04025811 RID: 153617
+		// Token: 0x04020480 RID: 132224
 		[Nullable(2)]
 		private static SceneItemBuffModel _Instance;
 	}

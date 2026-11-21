@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007171 RID: 29041
+	// Token: 0x02006225 RID: 25125
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemCameraAlertComponent : EntityComponent
 	{
-		// Token: 0x06046E85 RID: 290437 RVA: 0x011E6A38 File Offset: 0x011E4C38
+		// Token: 0x0603C6E9 RID: 247529 RVA: 0x01141F90 File Offset: 0x01140190
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E86 RID: 290438 RVA: 0x011E6AD8 File Offset: 0x011E4CD8
+		// Token: 0x0603C6EA RID: 247530 RVA: 0x01142030 File Offset: 0x01140230
 		protected unsafe override bool OnStart()
 		{
 			this.RangeComp = base.Entity.GetComponent<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>();
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E87 RID: 290439 RVA: 0x011E6D61 File Offset: 0x011E4F61
+		// Token: 0x0603C6EB RID: 247531 RVA: 0x011422B9 File Offset: 0x011404B9
 		protected override void OnActivate()
 		{
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.OnSceneInteractionLoadCompleted, new Action(this.OnSceneInteractionLoadCompleted));
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnSceneInteractionLoadCompleted();
 		}
 
-		// Token: 0x06046E88 RID: 290440 RVA: 0x011E6DA0 File Offset: 0x011E4FA0
+		// Token: 0x0603C6EC RID: 247532 RVA: 0x011422F8 File Offset: 0x011404F8
 		private void InitLineTrace()
 		{
 			this.LineTrace = new UTraceLineElement();
@@ -121,25 +121,25 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.LineTrace.SetTraceTypeQuery(KuroTraceTypeQuery.Camera);
 		}
 
-		// Token: 0x06046E89 RID: 290441 RVA: 0x011E6E1C File Offset: 0x011E501C
+		// Token: 0x0603C6ED RID: 247533 RVA: 0x01142374 File Offset: 0x01140574
 		private bool CheckCanCast()
 		{
 			return this.IsEnterRange && this.IsSceneInteractionActorReady && !this.StateComp.IsInState(SceneItemStateComponent.ESceneItemState.Born) && !this.StateComp.IsInState(SceneItemStateComponent.ESceneItemState.Destroy) && this.CheckIsInAvailableState();
 		}
 
-		// Token: 0x06046E8A RID: 290442 RVA: 0x011E6E52 File Offset: 0x011E5052
+		// Token: 0x0603C6EE RID: 247534 RVA: 0x011423AA File Offset: 0x011405AA
 		private bool CheckIsInAvailableState()
 		{
 			return this.CameraAvailableStates == null || this.CameraAvailableStates.Contains(this.StateComp.StateTagId);
 		}
 
-		// Token: 0x06046E8B RID: 290443 RVA: 0x011E6E74 File Offset: 0x011E5074
+		// Token: 0x0603C6EF RID: 247535 RVA: 0x011423CC File Offset: 0x011405CC
 		private bool CheckAlertLocation(Vector checkLocation)
 		{
 			return MathUtils.Instance.IsLocationInsideCone(this.ConeTip, this.ConeTopToDownDirection, (double)this.ConeHeight, (double)this.ConeRadius, this.TempVector) && !this.CheckCollision(checkLocation, this.ConeTip);
 		}
 
-		// Token: 0x06046E8C RID: 290444 RVA: 0x011E6EB4 File Offset: 0x011E50B4
+		// Token: 0x0603C6F0 RID: 247536 RVA: 0x0114240C File Offset: 0x0114060C
 		private bool CheckCollision(Vector startLocation, Vector endLocation)
 		{
 			TraceElementCommon.Instance.SetStartLocation(this.LineTrace, startLocation);
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return TraceElementCommon.Instance.LineTrace(this.LineTrace, "SceneItemCameraAlertComponent_LineTrace");
 		}
 
-		// Token: 0x06046E8D RID: 290445 RVA: 0x011E6EED File Offset: 0x011E50ED
+		// Token: 0x0603C6F1 RID: 247537 RVA: 0x01142445 File Offset: 0x01140645
 		[NullableContext(2)]
 		private AActor GetConeAttachActor()
 		{
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return result;
 		}
 
-		// Token: 0x06046E8E RID: 290446 RVA: 0x011E6F20 File Offset: 0x011E5120
+		// Token: 0x0603C6F2 RID: 247538 RVA: 0x01142478 File Offset: 0x01140678
 		private void UpdateConeInfo()
 		{
 			AActor coneAttachActor = this.GetConeAttachActor();
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ConeTip.DeepCopy(this.TempVector);
 		}
 
-		// Token: 0x06046E8F RID: 290447 RVA: 0x011E7040 File Offset: 0x011E5240
+		// Token: 0x0603C6F3 RID: 247539 RVA: 0x01142598 File Offset: 0x01140798
 		private void UpdateCameraAlert()
 		{
 			if (!this.CheckCanCast())
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdateCameraAlertState(false);
 		}
 
-		// Token: 0x06046E90 RID: 290448 RVA: 0x011E714C File Offset: 0x011E534C
+		// Token: 0x0603C6F4 RID: 247540 RVA: 0x011426A4 File Offset: 0x011408A4
 		private void UpdateLineTraceActors()
 		{
 			TArray<AActor> sceneInteractionAllActorsInLevel = SceneInteractionManager.Get().GetSceneInteractionAllActorsInLevel(this.ActorComp.GetSceneInteractionLevelHandleId());
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E91 RID: 290449 RVA: 0x011E71BC File Offset: 0x011E53BC
+		// Token: 0x0603C6F5 RID: 247541 RVA: 0x01142714 File Offset: 0x01140914
 		private void UpdateCameraAlertState(bool isAlert)
 		{
 			if (!this.CheckIsInAvailableState())
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			LevelGeneralNetworks.RequestEntityCameraAlertStateChange(base.Entity.GetComponent<CreatureDataComponent>().GetCreatureDataId(), isAlert);
 		}
 
-		// Token: 0x06046E92 RID: 290450 RVA: 0x011E7210 File Offset: 0x011E5410
+		// Token: 0x0603C6F6 RID: 247542 RVA: 0x01142768 File Offset: 0x01140968
 		private void UpdateComponentTickState()
 		{
 			if (this.CheckCanCast() && !this.IsEnableForceTick)
@@ -293,19 +293,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E93 RID: 290451 RVA: 0x011E7266 File Offset: 0x011E5466
+		// Token: 0x0603C6F7 RID: 247543 RVA: 0x011427BE File Offset: 0x011409BE
 		public bool IsAlertState()
 		{
 			return this.IsAlert;
 		}
 
-		// Token: 0x06046E94 RID: 290452 RVA: 0x011E726E File Offset: 0x011E546E
+		// Token: 0x0603C6F8 RID: 247544 RVA: 0x011427C6 File Offset: 0x011409C6
 		private void ForceTickInternal(float deltaSeconds)
 		{
 			this.UpdateCameraAlert();
 		}
 
-		// Token: 0x06046E95 RID: 290453 RVA: 0x011E7278 File Offset: 0x011E5478
+		// Token: 0x0603C6F9 RID: 247545 RVA: 0x011427D0 File Offset: 0x011409D0
 		private unsafe void OnSceneInteractionLoadCompleted()
 		{
 			this.IsSceneInteractionActorReady = true;
@@ -334,13 +334,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E96 RID: 290454 RVA: 0x011E7387 File Offset: 0x011E5587
+		// Token: 0x0603C6FA RID: 247546 RVA: 0x011428DF File Offset: 0x01140ADF
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			this.OnSceneItemStateChange();
 		}
 
-		// Token: 0x06046E97 RID: 290455 RVA: 0x011E738F File Offset: 0x011E558F
+		// Token: 0x0603C6FB RID: 247547 RVA: 0x011428E7 File Offset: 0x01140AE7
 		private void OnSceneItemStateChange()
 		{
 			this.UpdateComponentTickState();
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E98 RID: 290456 RVA: 0x011E73A6 File Offset: 0x011E55A6
+		// Token: 0x0603C6FC RID: 247548 RVA: 0x011428FE File Offset: 0x01140AFE
 		private void OnEntityInOutRangeLocal(bool isEnterRange)
 		{
 			this.IsEnterRange = isEnterRange;
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdateCameraAlertState(false);
 		}
 
-		// Token: 0x06046E99 RID: 290457 RVA: 0x011E73D0 File Offset: 0x011E55D0
+		// Token: 0x0603C6FD RID: 247549 RVA: 0x01142928 File Offset: 0x01140B28
 		protected override bool OnEnd()
 		{
 			this.IsAlert = false;
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E9A RID: 290458 RVA: 0x011E74F8 File Offset: 0x011E56F8
+		// Token: 0x0603C6FE RID: 247550 RVA: 0x01142A50 File Offset: 0x01140C50
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -406,176 +406,170 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemCameraAlertComponent sceneItemCameraAlertComponent = (SceneItemCameraAlertComponent)componentTemplate;
-			if (base.CanResetComponentProperty("RangeComp"))
+			if (sceneItemCameraAlertComponent.RangeComp == null)
 			{
-				if (sceneItemCameraAlertComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
+				this.RangeComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemCameraAlertComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (sceneItemCameraAlertComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ConeTip") && sceneItemCameraAlertComponent.ConeTip != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.ConeTip), "ConeTip"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ConeTopToDownDirection") && sceneItemCameraAlertComponent.ConeTopToDownDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.ConeTopToDownDirection), "ConeTopToDownDirection"))
+			if (sceneItemCameraAlertComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ConeCenter") && sceneItemCameraAlertComponent.ConeCenter != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.ConeCenter), "ConeCenter"))
+			if (sceneItemCameraAlertComponent.StateComp == null)
+			{
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ConeHeight"))
-			{
-				this.ConeHeight = sceneItemCameraAlertComponent.ConeHeight;
-			}
-			if (base.CanResetComponentProperty("ConeRadius"))
-			{
-				this.ConeRadius = sceneItemCameraAlertComponent.ConeRadius;
-			}
-			if (base.CanResetComponentProperty("TempVector") && sceneItemCameraAlertComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector"))
+			if (sceneItemCameraAlertComponent.ConeTip != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConeTip), "ConeTip"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempVector2") && sceneItemCameraAlertComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector2), "TempVector2"))
+			if (sceneItemCameraAlertComponent.ConeTopToDownDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConeTopToDownDirection), "ConeTopToDownDirection"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsEnterRange"))
+			if (sceneItemCameraAlertComponent.ConeCenter != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConeCenter), "ConeCenter"))
 			{
-				this.IsEnterRange = sceneItemCameraAlertComponent.IsEnterRange;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsSceneInteractionActorReady"))
+			this.ConeHeight = sceneItemCameraAlertComponent.ConeHeight;
+			this.ConeRadius = sceneItemCameraAlertComponent.ConeRadius;
+			if (sceneItemCameraAlertComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
 			{
-				this.IsSceneInteractionActorReady = sceneItemCameraAlertComponent.IsSceneInteractionActorReady;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsAlert"))
+			if (sceneItemCameraAlertComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
 			{
-				this.IsAlert = sceneItemCameraAlertComponent.IsAlert;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LineTrace"))
+			this.IsEnterRange = sceneItemCameraAlertComponent.IsEnterRange;
+			this.IsSceneInteractionActorReady = sceneItemCameraAlertComponent.IsSceneInteractionActorReady;
+			this.IsAlert = sceneItemCameraAlertComponent.IsAlert;
+			if (sceneItemCameraAlertComponent.LineTrace == null)
 			{
-				if (sceneItemCameraAlertComponent.LineTrace == null)
-				{
-					this.LineTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.LineTrace), "LineTrace"))
-				{
-					return false;
-				}
+				this.LineTrace = null;
 			}
-			if (base.CanResetComponentProperty("IsEnableForceTick"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LineTrace), "LineTrace"))
 			{
-				this.IsEnableForceTick = sceneItemCameraAlertComponent.IsEnableForceTick;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CameraAvailableStates"))
+			this.IsEnableForceTick = sceneItemCameraAlertComponent.IsEnableForceTick;
+			if (sceneItemCameraAlertComponent.CameraAvailableStates == null)
 			{
-				if (sceneItemCameraAlertComponent.CameraAvailableStates == null)
-				{
-					this.CameraAvailableStates = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.CameraAvailableStates), "CameraAvailableStates"))
-				{
-					return false;
-				}
+				this.CameraAvailableStates = null;
 			}
-			if (base.CanResetComponentProperty("AttachPointName"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.CameraAvailableStates), "CameraAvailableStates"))
 			{
-				this.AttachPointName = sceneItemCameraAlertComponent.AttachPointName;
+				return false;
 			}
+			this.AttachPointName = sceneItemCameraAlertComponent.AttachPointName;
 			return true;
 		}
 
-		// Token: 0x040253A2 RID: 152482
+		// Token: 0x17007223 RID: 29219
+		// (get) Token: 0x0603C6FF RID: 247551 RVA: 0x01142C45 File Offset: 0x01140E45
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007224 RID: 29220
+		// (get) Token: 0x0603C700 RID: 247552 RVA: 0x01142C48 File Offset: 0x01140E48
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007225 RID: 29221
+		// (get) Token: 0x0603C701 RID: 247553 RVA: 0x01142C4B File Offset: 0x01140E4B
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020009 RID: 131081
 		private const string PROFILE_KEY = "SceneItemCameraAlertComponent_LineTrace";
 
-		// Token: 0x040253A3 RID: 152483
+		// Token: 0x0402000A RID: 131082
 		private const string INTERACTION_BODY = "Body";
 
-		// Token: 0x040253A4 RID: 152484
+		// Token: 0x0402000B RID: 131083
 		[StaticVariableRuleIgnore]
 		private static readonly Stat SceneItemCameraAlertComponentStat = Stat.Create("SceneItemCameraAlertComponentStat", "", "");
 
-		// Token: 0x040253A5 RID: 152485
+		// Token: 0x0402000C RID: 131084
 		[Nullable(2)]
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x040253A6 RID: 152486
+		// Token: 0x0402000D RID: 131085
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040253A7 RID: 152487
+		// Token: 0x0402000E RID: 131086
 		[Nullable(2)]
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x040253A8 RID: 152488
+		// Token: 0x0402000F RID: 131087
 		private readonly Vector ConeTip = Vector.Create();
 
-		// Token: 0x040253A9 RID: 152489
+		// Token: 0x04020010 RID: 131088
 		private readonly Vector ConeTopToDownDirection = Vector.Create();
 
-		// Token: 0x040253AA RID: 152490
+		// Token: 0x04020011 RID: 131089
 		private readonly Vector ConeCenter = Vector.Create();
 
-		// Token: 0x040253AB RID: 152491
+		// Token: 0x04020012 RID: 131090
 		private float ConeHeight;
 
-		// Token: 0x040253AC RID: 152492
+		// Token: 0x04020013 RID: 131091
 		private float ConeRadius;
 
-		// Token: 0x040253AD RID: 152493
+		// Token: 0x04020014 RID: 131092
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x040253AE RID: 152494
+		// Token: 0x04020015 RID: 131093
 		private readonly Vector TempVector2 = Vector.Create();
 
-		// Token: 0x040253AF RID: 152495
+		// Token: 0x04020016 RID: 131094
 		private bool IsEnterRange;
 
-		// Token: 0x040253B0 RID: 152496
+		// Token: 0x04020017 RID: 131095
 		private bool IsSceneInteractionActorReady;
 
-		// Token: 0x040253B1 RID: 152497
+		// Token: 0x04020018 RID: 131096
 		private bool IsAlert;
 
-		// Token: 0x040253B2 RID: 152498
+		// Token: 0x04020019 RID: 131097
 		[Nullable(2)]
 		private UTraceLineElement LineTrace;
 
-		// Token: 0x040253B3 RID: 152499
+		// Token: 0x0402001A RID: 131098
 		private bool IsEnableForceTick;
 
-		// Token: 0x040253B4 RID: 152500
+		// Token: 0x0402001B RID: 131099
 		[Nullable(2)]
 		private HashSet<int> CameraAvailableStates;
 
-		// Token: 0x040253B5 RID: 152501
+		// Token: 0x0402001C RID: 131100
 		[Nullable(2)]
 		private string AttachPointName;
 	}

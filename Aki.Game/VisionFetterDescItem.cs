@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002441 RID: 9281
+// Token: 0x02001926 RID: 6438
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class VisionFetterDescItem : GridProxyAbstract<VisionFetterDescData>
 {
-	// Token: 0x060129C9 RID: 76233 RVA: 0x00497DEC File Offset: 0x00495FEC
+	// Token: 0x0600FE7F RID: 65151 RVA: 0x004A53C0 File Offset: 0x004A35C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,7 +28,7 @@ public class VisionFetterDescItem : GridProxyAbstract<VisionFetterDescData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060129CA RID: 76234 RVA: 0x00497E58 File Offset: 0x00496058
+	// Token: 0x0600FE80 RID: 65152 RVA: 0x004A542C File Offset: 0x004A362C
 	[NullableContext(1)]
 	public override void Refresh(VisionFetterDescData data, bool isSelected, int gridIndex)
 	{
@@ -37,7 +37,7 @@ public class VisionFetterDescItem : GridProxyAbstract<VisionFetterDescData>
 		this.RefreshName(value, data.Key);
 	}
 
-	// Token: 0x060129CB RID: 76235 RVA: 0x00497E80 File Offset: 0x00496080
+	// Token: 0x0600FE81 RID: 65153 RVA: 0x004A5454 File Offset: 0x004A3654
 	private void RefreshName(int fetterId, int needNum)
 	{
 		string localTextNew = ConfigMultiTextLang.GetLocalTextNew(PhantomBattleConfig.Instance.GetPhantomFetterById(fetterId).Name, null);
@@ -53,20 +53,20 @@ public class VisionFetterDescItem : GridProxyAbstract<VisionFetterDescData>
 		}));
 	}
 
-	// Token: 0x060129CC RID: 76236 RVA: 0x00497EF4 File Offset: 0x004960F4
+	// Token: 0x0600FE82 RID: 65154 RVA: 0x004A54C8 File Offset: 0x004A36C8
 	private void RefreshContent(int fetterId)
 	{
 		PhantomFetter phantomFetterById = PhantomBattleConfig.Instance.GetPhantomFetterById(fetterId);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), phantomFetterById.EffectDescription, phantomFetterById.EffectDescriptionParam());
 	}
 
-	// Token: 0x020089CC RID: 35276
+	// Token: 0x02007B53 RID: 31571
 	private class EVisionFetterDescItem
 	{
-		// Token: 0x0402CC43 RID: 183363
+		// Token: 0x04027F59 RID: 163673
 		public const int TitleText = 0;
 
-		// Token: 0x0402CC44 RID: 183364
+		// Token: 0x04027F5A RID: 163674
 		public const int ContentTextOne = 1;
 	}
 }

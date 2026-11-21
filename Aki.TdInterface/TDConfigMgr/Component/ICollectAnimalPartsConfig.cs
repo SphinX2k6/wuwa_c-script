@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000249 RID: 585
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200028A RID: 650
 	public class ICollectAnimalPartsConfig
 	{
-		// Token: 0x06000A86 RID: 2694 RVA: 0x0002BB24 File Offset: 0x00029D24
+		// Token: 0x06000B94 RID: 2964 RVA: 0x0002E6D4 File Offset: 0x0002C8D4
 		private ICollectAnimalPartsConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000A87 RID: 2695 RVA: 0x0002BB5C File Offset: 0x00029D5C
+		// Token: 0x06000B95 RID: 2965 RVA: 0x0002E70C File Offset: 0x0002C90C
 		public static ICollectAnimalPartsConfig Create([Nullable(2)] ICollectAnimalPartsConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A88 RID: 2696 RVA: 0x0002BB6F File Offset: 0x00029D6F
+		// Token: 0x06000B96 RID: 2966 RVA: 0x0002E71F File Offset: 0x0002C91F
 		public static ICollectAnimalPartsConfig CreateFromSetValue([Nullable(2)] ICollectAnimalPartsConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A89 RID: 2697 RVA: 0x0002BB82 File Offset: 0x00029D82
+		// Token: 0x06000B97 RID: 2967 RVA: 0x0002E732 File Offset: 0x0002C932
 		public ICollectAnimalPartsConfig_SetValue ToSetValue()
 		{
 			return new ICollectAnimalPartsConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000333 RID: 819
-		// (get) Token: 0x06000A8A RID: 2698 RVA: 0x0002BBAD File Offset: 0x00029DAD
-		// (set) Token: 0x06000A8B RID: 2699 RVA: 0x0002BBD8 File Offset: 0x00029DD8
+		// Token: 0x17000378 RID: 888
+		// (get) Token: 0x06000B98 RID: 2968 RVA: 0x0002E75D File Offset: 0x0002C95D
+		// (set) Token: 0x06000B99 RID: 2969 RVA: 0x0002E788 File Offset: 0x0002C988
 		public virtual ECollectAnimalPartSlot Slot
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000334 RID: 820
-		// (get) Token: 0x06000A8C RID: 2700 RVA: 0x0002BBE6 File Offset: 0x00029DE6
-		// (set) Token: 0x06000A8D RID: 2701 RVA: 0x0002BC11 File Offset: 0x00029E11
+		// Token: 0x17000379 RID: 889
+		// (get) Token: 0x06000B9A RID: 2970 RVA: 0x0002E796 File Offset: 0x0002C996
+		// (set) Token: 0x06000B9B RID: 2971 RVA: 0x0002E7C1 File Offset: 0x0002C9C1
 		public virtual string Skeleton
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000335 RID: 821
-		// (get) Token: 0x06000A8E RID: 2702 RVA: 0x0002BC1F File Offset: 0x00029E1F
-		// (set) Token: 0x06000A8F RID: 2703 RVA: 0x0002BC4A File Offset: 0x00029E4A
+		// Token: 0x1700037A RID: 890
+		// (get) Token: 0x06000B9C RID: 2972 RVA: 0x0002E7CF File Offset: 0x0002C9CF
+		// (set) Token: 0x06000B9D RID: 2973 RVA: 0x0002E7FA File Offset: 0x0002C9FA
 		public virtual int CollectEntity
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A79 RID: 2681
+		// Token: 0x04000B55 RID: 2901
 		[Nullable(2)]
 		protected ICollectAnimalPartsConfig FbInstance;
 
-		// Token: 0x04000A7A RID: 2682
+		// Token: 0x04000B56 RID: 2902
 		[Nullable(2)]
 		protected ICollectAnimalPartsConfig_SetValue PocoInterface;
 	}

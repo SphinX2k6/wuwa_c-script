@@ -2,32 +2,32 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200242B RID: 9259
+	// Token: 0x020026CC RID: 9932
 	public static class ESplineMoveTargetTypeExtensions
 	{
-		// Token: 0x0600C940 RID: 51520 RVA: 0x001D7824 File Offset: 0x001D5A24
+		// Token: 0x0600D5F0 RID: 54768 RVA: 0x001F1678 File Offset: 0x001EF878
 		public static string ToEnumString(this ESplineMoveTargetType value)
 		{
 			string result;
-			if (value != ESplineMoveTargetType.Entity)
+			switch (value)
 			{
-				if (value != ESplineMoveTargetType.Player)
-				{
-					result = value.ToString();
-				}
-				else
-				{
-					result = "Player";
-				}
-			}
-			else
-			{
+			case ESplineMoveTargetType.Entity:
 				result = "Entity";
+				break;
+			case ESplineMoveTargetType.Player:
+				result = "Player";
+				break;
+			case ESplineMoveTargetType.AssistCharacter:
+				result = "AssistCharacter";
+				break;
+			default:
+				result = value.ToString();
+				break;
 			}
 			return result;
 		}
 
-		// Token: 0x0600C941 RID: 51521 RVA: 0x001D785C File Offset: 0x001D5A5C
+		// Token: 0x0600D5F1 RID: 54769 RVA: 0x001F16C0 File Offset: 0x001EF8C0
 		public static ESplineMoveTargetType FromString(string name)
 		{
 			ESplineMoveTargetType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C942 RID: 51522 RVA: 0x001D7885 File Offset: 0x001D5A85
+		// Token: 0x0600D5F2 RID: 54770 RVA: 0x001F16EC File Offset: 0x001EF8EC
 		public static bool TryFromString(string name, out ESplineMoveTargetType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -51,42 +51,50 @@ namespace Aki.TDConfigMgr.Action
 				value = ESplineMoveTargetType.Entity;
 				return true;
 			}
-			if (!(name == "Player"))
+			if (name == "Player")
+			{
+				value = ESplineMoveTargetType.Player;
+				return true;
+			}
+			if (!(name == "AssistCharacter"))
 			{
 				value = ESplineMoveTargetType.Entity;
 				return false;
 			}
-			value = ESplineMoveTargetType.Player;
+			value = ESplineMoveTargetType.AssistCharacter;
 			return true;
 		}
 
-		// Token: 0x0600C943 RID: 51523 RVA: 0x001D78BE File Offset: 0x001D5ABE
+		// Token: 0x0600D5F3 RID: 54771 RVA: 0x001F1742 File Offset: 0x001EF942
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
 				"Entity",
-				"Player"
+				"Player",
+				"AssistCharacter"
 			};
 		}
 
-		// Token: 0x0600C944 RID: 51524 RVA: 0x001D78D6 File Offset: 0x001D5AD6
+		// Token: 0x0600D5F4 RID: 54772 RVA: 0x001F1762 File Offset: 0x001EF962
 		public static ESplineMoveTargetType[] GetValues()
 		{
 			return new ESplineMoveTargetType[]
 			{
 				ESplineMoveTargetType.Entity,
-				ESplineMoveTargetType.Player
+				ESplineMoveTargetType.Player,
+				ESplineMoveTargetType.AssistCharacter
 			};
 		}
 
-		// Token: 0x0600C945 RID: 51525 RVA: 0x001D78E2 File Offset: 0x001D5AE2
+		// Token: 0x0600D5F5 RID: 54773 RVA: 0x001F1772 File Offset: 0x001EF972
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
 				"Entity",
-				"Player"
+				"Player",
+				"AssistCharacter"
 			};
 		}
 	}

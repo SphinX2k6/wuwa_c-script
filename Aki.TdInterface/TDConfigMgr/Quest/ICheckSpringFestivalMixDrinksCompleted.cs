@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EFE RID: 3838
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001014 RID: 4116
 	public class ICheckSpringFestivalMixDrinksCompleted : ICheckSpringFestivalGameplayType
 	{
-		// Token: 0x060054A8 RID: 21672 RVA: 0x000CFB68 File Offset: 0x000CDD68
+		// Token: 0x06005A24 RID: 23076 RVA: 0x000DBD10 File Offset: 0x000D9F10
 		private ICheckSpringFestivalMixDrinksCompleted_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060054A9 RID: 21673 RVA: 0x000CFBA0 File Offset: 0x000CDDA0
+		// Token: 0x06005A25 RID: 23077 RVA: 0x000DBD48 File Offset: 0x000D9F48
 		public static ICheckSpringFestivalMixDrinksCompleted Create([Nullable(2)] ICheckSpringFestivalMixDrinksCompleted instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054AA RID: 21674 RVA: 0x000CFBB3 File Offset: 0x000CDDB3
+		// Token: 0x06005A26 RID: 23078 RVA: 0x000DBD5B File Offset: 0x000D9F5B
 		public static ICheckSpringFestivalMixDrinksCompleted CreateFromSetValue([Nullable(2)] ICheckSpringFestivalMixDrinksCompleted_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054AB RID: 21675 RVA: 0x000CFBC6 File Offset: 0x000CDDC6
+		// Token: 0x06005A27 RID: 23079 RVA: 0x000DBD6E File Offset: 0x000D9F6E
 		public new ICheckSpringFestivalMixDrinksCompleted_SetValue ToSetValue()
 		{
 			return new ICheckSpringFestivalMixDrinksCompleted_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C58 RID: 7256
-		// (get) Token: 0x060054AC RID: 21676 RVA: 0x000CFBE5 File Offset: 0x000CDDE5
-		// (set) Token: 0x060054AD RID: 21677 RVA: 0x000CFC10 File Offset: 0x000CDE10
+		// Token: 0x17001DF0 RID: 7664
+		// (get) Token: 0x06005A28 RID: 23080 RVA: 0x000DBD8D File Offset: 0x000D9F8D
+		// (set) Token: 0x06005A29 RID: 23081 RVA: 0x000DBDB8 File Offset: 0x000D9FB8
 		public override ESpringFestivalGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C59 RID: 7257
-		// (get) Token: 0x060054AE RID: 21678 RVA: 0x000CFC20 File Offset: 0x000CDE20
-		// (set) Token: 0x060054AF RID: 21679 RVA: 0x000CFC5A File Offset: 0x000CDE5A
+		// Token: 0x17001DF1 RID: 7665
+		// (get) Token: 0x06005A2A RID: 23082 RVA: 0x000DBDC8 File Offset: 0x000D9FC8
+		// (set) Token: 0x06005A2B RID: 23083 RVA: 0x000DBE02 File Offset: 0x000DA002
 		public virtual int? Id
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003343 RID: 13123
+		// Token: 0x04003650 RID: 13904
 		[Nullable(2)]
 		protected new ICheckSpringFestivalMixDrinksCompleted FbInstance;
 
-		// Token: 0x04003344 RID: 13124
+		// Token: 0x04003651 RID: 13905
 		[Nullable(2)]
 		protected new ICheckSpringFestivalMixDrinksCompleted_SetValue PocoInterface;
 	}

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A19 RID: 2585
+	// Token: 0x02000ADE RID: 2782
 	public class ESpecialNpcMarkTypeJsonConverter : JsonConverter<ESpecialNpcMarkType>
 	{
-		// Token: 0x06003923 RID: 14627 RVA: 0x00093898 File Offset: 0x00091A98
+		// Token: 0x06003CFB RID: 15611 RVA: 0x0009C1CC File Offset: 0x0009A3CC
 		public override ESpecialNpcMarkType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ESpecialNpcMarkTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003924 RID: 14628 RVA: 0x000938BC File Offset: 0x00091ABC
+		// Token: 0x06003CFC RID: 15612 RVA: 0x0009C1F0 File Offset: 0x0009A3F0
 		public override void Write(Utf8JsonWriter writer, ESpecialNpcMarkType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

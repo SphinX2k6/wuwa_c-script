@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000654 RID: 1620
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006F1 RID: 1777
 	public class IRandomNpcRule : IRefreshRule
 	{
-		// Token: 0x060022A8 RID: 8872 RVA: 0x0005F38C File Offset: 0x0005D58C
+		// Token: 0x060025AE RID: 9646 RVA: 0x000660A0 File Offset: 0x000642A0
 		private IRandomNpcRule_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060022A9 RID: 8873 RVA: 0x0005F3C4 File Offset: 0x0005D5C4
+		// Token: 0x060025AF RID: 9647 RVA: 0x000660D8 File Offset: 0x000642D8
 		public static IRandomNpcRule Create([Nullable(2)] IRandomNpcRule instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022AA RID: 8874 RVA: 0x0005F3D7 File Offset: 0x0005D5D7
+		// Token: 0x060025B0 RID: 9648 RVA: 0x000660EB File Offset: 0x000642EB
 		public static IRandomNpcRule CreateFromSetValue([Nullable(2)] IRandomNpcRule_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022AB RID: 8875 RVA: 0x0005F3EA File Offset: 0x0005D5EA
+		// Token: 0x060025B1 RID: 9649 RVA: 0x000660FE File Offset: 0x000642FE
 		public new IRandomNpcRule_SetValue ToSetValue()
 		{
 			return new IRandomNpcRule_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000935 RID: 2357
-		// (get) Token: 0x060022AC RID: 8876 RVA: 0x0005F415 File Offset: 0x0005D615
-		// (set) Token: 0x060022AD RID: 8877 RVA: 0x0005F440 File Offset: 0x0005D640
+		// Token: 0x170009EC RID: 2540
+		// (get) Token: 0x060025B2 RID: 9650 RVA: 0x00066129 File Offset: 0x00064329
+		// (set) Token: 0x060025B3 RID: 9651 RVA: 0x00066154 File Offset: 0x00064354
 		public override ERefreshRule Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000936 RID: 2358
-		// (get) Token: 0x060022AE RID: 8878 RVA: 0x0005F450 File Offset: 0x0005D650
-		// (set) Token: 0x060022AF RID: 8879 RVA: 0x0005F4E3 File Offset: 0x0005D6E3
+		// Token: 0x170009ED RID: 2541
+		// (get) Token: 0x060025B4 RID: 9652 RVA: 0x00066164 File Offset: 0x00064364
+		// (set) Token: 0x060025B5 RID: 9653 RVA: 0x000661F7 File Offset: 0x000643F7
 		public virtual List<IFixedDateTime> DateTimeList
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000937 RID: 2359
-		// (get) Token: 0x060022B0 RID: 8880 RVA: 0x0005F4F8 File Offset: 0x0005D6F8
-		// (set) Token: 0x060022B1 RID: 8881 RVA: 0x0005F559 File Offset: 0x0005D759
+		// Token: 0x170009EE RID: 2542
+		// (get) Token: 0x060025B6 RID: 9654 RVA: 0x0006620C File Offset: 0x0006440C
+		// (set) Token: 0x060025B7 RID: 9655 RVA: 0x0006626D File Offset: 0x0006446D
 		public virtual IProbabilityRefreshGroup ProbabilityRefreshGroup
 		{
 			get
@@ -153,24 +151,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001811 RID: 6161
+		// Token: 0x04001A03 RID: 6659
 		[Nullable(2)]
 		protected new IRandomNpcRule FbInstance;
 
-		// Token: 0x04001812 RID: 6162
+		// Token: 0x04001A04 RID: 6660
 		[Nullable(2)]
 		protected new IRandomNpcRule_SetValue PocoInterface;
 
-		// Token: 0x04001813 RID: 6163
+		// Token: 0x04001A05 RID: 6661
 		private List<IFixedDateTime> _DateTimeListCache;
 
-		// Token: 0x04001814 RID: 6164
+		// Token: 0x04001A06 RID: 6662
 		private bool _DateTimeListInited;
 
-		// Token: 0x04001815 RID: 6165
+		// Token: 0x04001A07 RID: 6663
 		private IProbabilityRefreshGroup _ProbabilityRefreshGroupCache;
 
-		// Token: 0x04001816 RID: 6166
+		// Token: 0x04001A08 RID: 6664
 		private bool _ProbabilityRefreshGroupInited;
 	}
 }

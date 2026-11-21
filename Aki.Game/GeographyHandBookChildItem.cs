@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DDB RID: 7643
+// Token: 0x0200129D RID: 4765
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemData>
 {
-	// Token: 0x0600E8A6 RID: 59558 RVA: 0x00371622 File Offset: 0x0036F822
+	// Token: 0x0600BCC5 RID: 48325 RVA: 0x0037D30E File Offset: 0x0037B50E
 	public GeographyHandBookChildItem(UUIItem uiItem = null)
 	{
 		if (uiItem != null)
@@ -24,7 +24,7 @@ public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemDa
 		}
 	}
 
-	// Token: 0x0600E8A7 RID: 59559 RVA: 0x0037163C File Offset: 0x0036F83C
+	// Token: 0x0600BCC6 RID: 48326 RVA: 0x0037D328 File Offset: 0x0037B528
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,13 +37,13 @@ public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemDa
 		};
 	}
 
-	// Token: 0x0600E8A8 RID: 59560 RVA: 0x003716C2 File Offset: 0x0036F8C2
+	// Token: 0x0600BCC7 RID: 48327 RVA: 0x0037D3AE File Offset: 0x0037B5AE
 	protected override void OnStart()
 	{
 		this.GetTog().SetToggleStateForce(EToggleState.ETT_UnChecked, false, true, false);
 	}
 
-	// Token: 0x0600E8A9 RID: 59561 RVA: 0x003716D4 File Offset: 0x0036F8D4
+	// Token: 0x0600BCC8 RID: 48328 RVA: 0x0037D3C0 File Offset: 0x0037B5C0
 	[NullableContext(1)]
 	public override void Refresh(HandBookCommonItemData data, bool isSelected, int gridIndex)
 	{
@@ -66,13 +66,13 @@ public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemDa
 		tog.SetEnable(!isLock);
 	}
 
-	// Token: 0x0600E8AA RID: 59562 RVA: 0x00371782 File Offset: 0x0036F982
+	// Token: 0x0600BCC9 RID: 48329 RVA: 0x0037D46E File Offset: 0x0037B66E
 	private void OnTextureToggleClick(EToggleState state)
 	{
 		this.ToggleClick();
 	}
 
-	// Token: 0x0600E8AB RID: 59563 RVA: 0x0037178C File Offset: 0x0036F98C
+	// Token: 0x0600BCCA RID: 48330 RVA: 0x0037D478 File Offset: 0x0037B678
 	public void ToggleClick()
 	{
 		GeographyHandBook geographyHandBook = (GeographyHandBook)this.HandBookCommonItemData.Config;
@@ -123,19 +123,19 @@ public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemDa
 		UiManager.Instance.OpenView(EUiViewName.HandBookPhotoView, handBookPhotoData, null);
 	}
 
-	// Token: 0x0600E8AC RID: 59564 RVA: 0x0037196F File Offset: 0x0036FB6F
+	// Token: 0x0600BCCB RID: 48331 RVA: 0x0037D65B File Offset: 0x0037B85B
 	public HandBookCommonItemData GetData()
 	{
 		return this.HandBookCommonItemData;
 	}
 
-	// Token: 0x0600E8AD RID: 59565 RVA: 0x00371977 File Offset: 0x0036FB77
+	// Token: 0x0600BCCC RID: 48332 RVA: 0x0037D663 File Offset: 0x0037B863
 	public void SetNewState(bool isNew)
 	{
 		base.GetItem(2).SetUIActive(isNew);
 	}
 
-	// Token: 0x0600E8AE RID: 59566 RVA: 0x00371986 File Offset: 0x0036FB86
+	// Token: 0x0600BCCD RID: 48333 RVA: 0x0037D672 File Offset: 0x0037B872
 	public void SetToggleState(EToggleState state)
 	{
 		base.GetExtendToggle(4).SetToggleStateForce(state, false, true, false);
@@ -145,7 +145,7 @@ public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemDa
 		}
 	}
 
-	// Token: 0x0600E8AF RID: 59567 RVA: 0x003719A4 File Offset: 0x0036FBA4
+	// Token: 0x0600BCCE RID: 48334 RVA: 0x0037D690 File Offset: 0x0037B890
 	private void ReadHandBook()
 	{
 		if (this.HandBookCommonItemData.IsNew)
@@ -155,7 +155,7 @@ public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemDa
 		}
 	}
 
-	// Token: 0x0600E8B0 RID: 59568 RVA: 0x003719E1 File Offset: 0x0036FBE1
+	// Token: 0x0600BCCF RID: 48335 RVA: 0x0037D6CD File Offset: 0x0037B8CD
 	private int SortIndex(GeographyHandBook a, GeographyHandBook b)
 	{
 		if (a.Type == b.Type)
@@ -165,25 +165,25 @@ public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemDa
 		return a.Type - b.Type;
 	}
 
-	// Token: 0x0600E8B1 RID: 59569 RVA: 0x00371A12 File Offset: 0x0036FC12
+	// Token: 0x0600BCD0 RID: 48336 RVA: 0x0037D6FE File Offset: 0x0037B8FE
 	protected override void OnBeforeDestroy()
 	{
 		this.HandBookCommonItemData = null;
 	}
 
-	// Token: 0x0600E8B2 RID: 59570 RVA: 0x00371A1B File Offset: 0x0036FC1B
+	// Token: 0x0600BCD1 RID: 48337 RVA: 0x0037D707 File Offset: 0x0037B907
 	public UUIExtendToggle GetTog()
 	{
 		return base.GetExtendToggle(4);
 	}
 
-	// Token: 0x0600E8B3 RID: 59571 RVA: 0x00371A24 File Offset: 0x0036FC24
+	// Token: 0x0600BCD2 RID: 48338 RVA: 0x0037D710 File Offset: 0x0037B910
 	public bool GetIsUnlock()
 	{
 		return this.HandBookCommonItemData != null && !this.HandBookCommonItemData.IsLock;
 	}
 
-	// Token: 0x0600E8B4 RID: 59572 RVA: 0x00371A3E File Offset: 0x0036FC3E
+	// Token: 0x0600BCD3 RID: 48339 RVA: 0x0037D72A File Offset: 0x0037B92A
 	private void ClearToggleEvent()
 	{
 		UUIExtendToggle tog = this.GetTog();
@@ -198,7 +198,7 @@ public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemDa
 		tog.CanExecuteChange.Unbind();
 	}
 
-	// Token: 0x0600E8B5 RID: 59573 RVA: 0x00371A66 File Offset: 0x0036FC66
+	// Token: 0x0600BCD4 RID: 48340 RVA: 0x0037D752 File Offset: 0x0037B952
 	private void AddToggleEvent()
 	{
 		UUIExtendToggle tog = this.GetTog();
@@ -209,6 +209,6 @@ public class GeographyHandBookChildItem : GridProxyAbstract<HandBookCommonItemDa
 		tog.OnStateChange.Add(new Action<EToggleState>(this.OnTextureToggleClick));
 	}
 
-	// Token: 0x04006BC3 RID: 27587
+	// Token: 0x04006CA4 RID: 27812
 	private HandBookCommonItemData HandBookCommonItemData;
 }

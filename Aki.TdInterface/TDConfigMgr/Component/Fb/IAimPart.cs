@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B99 RID: 2969
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C67 RID: 3175
 	public class IAimPart
 	{
-		// Token: 0x0600442D RID: 17453 RVA: 0x000AD4EE File Offset: 0x000AB6EE
+		// Token: 0x06004886 RID: 18566 RVA: 0x000B75B2 File Offset: 0x000B57B2
 		public static IAimPart Create(IAimPart? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012B8 RID: 4792
-		// (get) Token: 0x0600442E RID: 17454 RVA: 0x000AD50D File Offset: 0x000AB70D
+		// Token: 0x170013B3 RID: 5043
+		// (get) Token: 0x06004887 RID: 18567 RVA: 0x000B75D1 File Offset: 0x000B57D1
 		[Nullable(2)]
 		public virtual string BoneName
 		{
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012B9 RID: 4793
-		// (get) Token: 0x0600442F RID: 17455 RVA: 0x000AD51A File Offset: 0x000AB71A
+		// Token: 0x170013B4 RID: 5044
+		// (get) Token: 0x06004888 RID: 18568 RVA: 0x000B75DE File Offset: 0x000B57DE
 		public virtual VectorInfo Offset
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012BA RID: 4794
-		// (get) Token: 0x06004430 RID: 17456 RVA: 0x000AD54E File Offset: 0x000AB74E
+		// Token: 0x170013B5 RID: 5045
+		// (get) Token: 0x06004889 RID: 18569 RVA: 0x000B7612 File Offset: 0x000B5812
 		public virtual int RadiusIn
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012BB RID: 4795
-		// (get) Token: 0x06004431 RID: 17457 RVA: 0x000AD55B File Offset: 0x000AB75B
+		// Token: 0x170013B6 RID: 5046
+		// (get) Token: 0x0600488A RID: 18570 RVA: 0x000B761F File Offset: 0x000B581F
 		public virtual int RadiusOut
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012BC RID: 4796
-		// (get) Token: 0x06004432 RID: 17458 RVA: 0x000AD568 File Offset: 0x000AB768
+		// Token: 0x170013B7 RID: 5047
+		// (get) Token: 0x0600488B RID: 18571 RVA: 0x000B762C File Offset: 0x000B582C
 		public virtual int RadiusOutOnStart
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012BD RID: 4797
-		// (get) Token: 0x06004433 RID: 17459 RVA: 0x000AD575 File Offset: 0x000AB775
+		// Token: 0x170013B8 RID: 5048
+		// (get) Token: 0x0600488C RID: 18572 RVA: 0x000B7639 File Offset: 0x000B5839
 		public virtual float MobileCorrect
 		{
 			get
@@ -91,8 +89,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012BE RID: 4798
-		// (get) Token: 0x06004434 RID: 17460 RVA: 0x000AD582 File Offset: 0x000AB782
+		// Token: 0x170013B9 RID: 5049
+		// (get) Token: 0x0600488D RID: 18573 RVA: 0x000B7646 File Offset: 0x000B5846
 		public virtual float GamePadCorrect
 		{
 			get
@@ -101,14 +99,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002678 RID: 9848
+		// Token: 0x040028C0 RID: 10432
 		private IAimPart Instance;
 
-		// Token: 0x04002679 RID: 9849
+		// Token: 0x040028C1 RID: 10433
 		[Nullable(2)]
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x0400267A RID: 9850
+		// Token: 0x040028C2 RID: 10434
 		private bool _OffsetInited;
 	}
 }

@@ -5,23 +5,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070C5 RID: 28869
-	public class CharacterLinkedAnimInstComponent : EntityComponent, IComponentDependency
+	// Token: 0x02006329 RID: 25385
+	[NullableContext(1)]
+	[Nullable(0)]
+	public class CharacterLinkedAnimInstComponent : EntityComponent
 	{
-		// Token: 0x17009C8E RID: 40078
-		// (get) Token: 0x06046677 RID: 288375 RVA: 0x011A8430 File Offset: 0x011A6630
-		[Nullable(new byte[]
+		// Token: 0x17007493 RID: 29843
+		// (get) Token: 0x0603D75D RID: 251741 RVA: 0x011C7A93 File Offset: 0x011C5C93
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -33,7 +25,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046678 RID: 288376 RVA: 0x011A845F File Offset: 0x011A665F
+		// Token: 0x0603D75E RID: 251742 RVA: 0x011C7AC2 File Offset: 0x011C5CC2
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -41,7 +33,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046679 RID: 288377 RVA: 0x011A8484 File Offset: 0x011A6684
+		// Token: 0x0603D75F RID: 251743 RVA: 0x011C7AE8 File Offset: 0x011C5CE8
 		public virtual bool SyncLinkGameplayAnimBlueprint(EGameplayABPType gameplayType)
 		{
 			if (this.CurrentActivate == gameplayType)
@@ -74,8 +66,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return uskeletalMeshComponent2 != null && uskeletalMeshComponent2.IsValid();
 		}
 
-		// Token: 0x0604667A RID: 288378 RVA: 0x011A8510 File Offset: 0x011A6710
-		[NullableContext(1)]
+		// Token: 0x0603D760 RID: 251744 RVA: 0x011C7B74 File Offset: 0x011C5D74
 		protected string GetGameplayABPAssetPath(EGameplayABPType gameplayABPType)
 		{
 			if (gameplayABPType == EGameplayABPType.None)
@@ -98,8 +89,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return "";
 		}
 
-		// Token: 0x0604667B RID: 288379 RVA: 0x011A85B8 File Offset: 0x011A67B8
-		[NullableContext(1)]
+		// Token: 0x0603D761 RID: 251745 RVA: 0x011C7C1C File Offset: 0x011C5E1C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -107,44 +97,45 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterLinkedAnimInstComponent characterLinkedAnimInstComponent = (CharacterLinkedAnimInstComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterLinkedAnimInstComponent.ActorComp == null)
 			{
-				if (characterLinkedAnimInstComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("AnimComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (characterLinkedAnimInstComponent.AnimComp == null)
-				{
-					this.AnimComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentActivate"))
+			if (characterLinkedAnimInstComponent.AnimComp == null)
 			{
-				this.CurrentActivate = characterLinkedAnimInstComponent.CurrentActivate;
+				this.AnimComp = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
+			{
+				return false;
+			}
+			this.CurrentActivate = characterLinkedAnimInstComponent.CurrentActivate;
 			return true;
 		}
 
-		// Token: 0x04024E4A RID: 151114
+		// Token: 0x17007494 RID: 29844
+		// (get) Token: 0x0603D762 RID: 251746 RVA: 0x011C7C9E File Offset: 0x011C5E9E
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020988 RID: 133512
 		[Nullable(2)]
 		public CharacterActorComponent ActorComp;
 
-		// Token: 0x04024E4B RID: 151115
+		// Token: 0x04020989 RID: 133513
 		[Nullable(2)]
 		public CharacterAnimationComponent AnimComp;
 
-		// Token: 0x04024E4C RID: 151116
+		// Token: 0x0402098A RID: 133514
 		protected EGameplayABPType CurrentActivate;
 	}
 }

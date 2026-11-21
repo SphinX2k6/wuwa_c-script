@@ -5,8 +5,8 @@ using System.Runtime.CompilerServices;
 // Token: 0x02000102 RID: 258
 public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class where TState : struct, Enum
 {
-	// Token: 0x170000FB RID: 251
-	// (get) Token: 0x060009B0 RID: 2480 RVA: 0x000318F8 File Offset: 0x0002FAF8
+	// Token: 0x1700010D RID: 269
+	// (get) Token: 0x06000A01 RID: 2561 RVA: 0x00032254 File Offset: 0x00030454
 	public TState? CurrentState
 	{
 		get
@@ -15,7 +15,7 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 		}
 	}
 
-	// Token: 0x060009B1 RID: 2481 RVA: 0x00031928 File Offset: 0x0002FB28
+	// Token: 0x06000A02 RID: 2562 RVA: 0x00032284 File Offset: 0x00030484
 	[NullableContext(1)]
 	public StateMachine(TObject owner, [Nullable(new byte[]
 	{
@@ -28,7 +28,7 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 		this.OnSwitchState = onSwitchState;
 	}
 
-	// Token: 0x060009B2 RID: 2482 RVA: 0x0003194C File Offset: 0x0002FB4C
+	// Token: 0x06000A03 RID: 2563 RVA: 0x000322A8 File Offset: 0x000304A8
 	public bool Start(TState state)
 	{
 		if (this.CurrentNode != null)
@@ -54,7 +54,7 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 		return true;
 	}
 
-	// Token: 0x060009B3 RID: 2483 RVA: 0x000319C8 File Offset: 0x0002FBC8
+	// Token: 0x06000A04 RID: 2564 RVA: 0x00032324 File Offset: 0x00030524
 	public void Destroy()
 	{
 		foreach (StateBase<TObject, TState> stateBase in this.StateMap.Values)
@@ -63,7 +63,7 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 		}
 	}
 
-	// Token: 0x060009B4 RID: 2484 RVA: 0x00031A20 File Offset: 0x0002FC20
+	// Token: 0x06000A05 RID: 2565 RVA: 0x0003237C File Offset: 0x0003057C
 	public bool Switch(TState state)
 	{
 		if (this.CurrentNode == null)
@@ -108,7 +108,7 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 		}
 	}
 
-	// Token: 0x060009B5 RID: 2485 RVA: 0x00031AF0 File Offset: 0x0002FCF0
+	// Token: 0x06000A06 RID: 2566 RVA: 0x0003244C File Offset: 0x0003064C
 	public void Update(float delta)
 	{
 		if (this.CurrentNode != null)
@@ -117,7 +117,7 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 		}
 	}
 
-	// Token: 0x060009B6 RID: 2486 RVA: 0x00031B08 File Offset: 0x0002FD08
+	// Token: 0x06000A07 RID: 2567 RVA: 0x00032464 File Offset: 0x00030664
 	public void AddState<T>(TState state, [Nullable(2)] IEntityArgs args = null) where T : StateBase<TObject, TState>
 	{
 		if (this.StateMap.ContainsKey(state))
@@ -140,7 +140,7 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 		t.Create(args);
 	}
 
-	// Token: 0x060009B7 RID: 2487 RVA: 0x00031BAC File Offset: 0x0002FDAC
+	// Token: 0x06000A08 RID: 2568 RVA: 0x00032508 File Offset: 0x00030708
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -163,11 +163,11 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 		return null;
 	}
 
-	// Token: 0x04000665 RID: 1637
+	// Token: 0x04000670 RID: 1648
 	[Nullable(1)]
 	public readonly TObject Owner;
 
-	// Token: 0x04000666 RID: 1638
+	// Token: 0x04000671 RID: 1649
 	[Nullable(new byte[]
 	{
 		1,
@@ -178,7 +178,7 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 	})]
 	private readonly Dictionary<TState, StateBase<TObject, TState>> StateMap = new Dictionary<TState, StateBase<TObject, TState>>();
 
-	// Token: 0x04000667 RID: 1639
+	// Token: 0x04000672 RID: 1650
 	[Nullable(new byte[]
 	{
 		2,
@@ -187,7 +187,7 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 	})]
 	private StateBase<TObject, TState> CurrentNode;
 
-	// Token: 0x04000668 RID: 1640
+	// Token: 0x04000673 RID: 1651
 	[Nullable(new byte[]
 	{
 		2,
@@ -196,22 +196,22 @@ public class StateMachine<[Nullable(1)] TObject, TState> where TObject : class w
 	})]
 	private readonly Action<TState, TState> OnSwitchState;
 
-	// Token: 0x04000669 RID: 1641
+	// Token: 0x04000674 RID: 1652
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Stat Stat0 = Stat.Create("StateMachine.Stat0", "", "");
 
-	// Token: 0x0400066A RID: 1642
+	// Token: 0x04000675 RID: 1653
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Stat Stat1 = Stat.Create("StateMachine.Stat1", "", "");
 
-	// Token: 0x0400066B RID: 1643
+	// Token: 0x04000676 RID: 1654
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Stat Stat2 = Stat.Create("StateMachine.Stat2", "", "");
 
-	// Token: 0x0400066C RID: 1644
+	// Token: 0x04000677 RID: 1655
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Stat Stat3 = Stat.Create("StateMachine.Stat3", "", "");

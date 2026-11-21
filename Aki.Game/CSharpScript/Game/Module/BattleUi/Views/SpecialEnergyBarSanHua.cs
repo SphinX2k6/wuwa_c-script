@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DFF RID: 24063
+	// Token: 0x02004DE4 RID: 19940
 	public class SpecialEnergyBarSanHua : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D2DF RID: 250591 RVA: 0x00EBC7C4 File Offset: 0x00EBA9C4
+		// Token: 0x0603226E RID: 205422 RVA: 0x00E0DD24 File Offset: 0x00E0BF24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D2E0 RID: 250592 RVA: 0x00EBC890 File Offset: 0x00EBAA90
+		// Token: 0x0603226F RID: 205423 RVA: 0x00E0DDF0 File Offset: 0x00E0BFF0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarSanHua.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D2E1 RID: 250593 RVA: 0x00EBC8D4 File Offset: 0x00EBAAD4
+		// Token: 0x06032270 RID: 205424 RVA: 0x00E0DE34 File Offset: 0x00E0C034
 		[NullableContext(1)]
 		protected UniTask InitPointItem(UUIItem pointItem)
 		{
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitPointItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D2E2 RID: 250594 RVA: 0x00EBC920 File Offset: 0x00EBAB20
+		// Token: 0x06032271 RID: 205425 RVA: 0x00E0DE80 File Offset: 0x00E0C080
 		protected override void OnStart()
 		{
 			if (this.Config == null)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(true, true);
 		}
 
-		// Token: 0x0603D2E3 RID: 250595 RVA: 0x00EBC99C File Offset: 0x00EBAB9C
+		// Token: 0x06032272 RID: 205426 RVA: 0x00E0DEFC File Offset: 0x00E0C0FC
 		private void RefreshPercentRange()
 		{
 			int buffCountByBuffId = base.GetBuffCountByBuffId(1102012003L);
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurRightPercent = this.Config.ExtraFloatParams[buffCountByBuffId * 2 + 1] / currentValue;
 		}
 
-		// Token: 0x0603D2E4 RID: 250596 RVA: 0x00EBCA08 File Offset: 0x00EBAC08
+		// Token: 0x06032273 RID: 205427 RVA: 0x00E0DF68 File Offset: 0x00E0C168
 		protected void RefreshBarPercent(bool isStart = false)
 		{
 			float targetPercent = this.PercentMachine.GetTargetPercent();
@@ -107,13 +107,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2E5 RID: 250597 RVA: 0x00EBCA99 File Offset: 0x00EBAC99
+		// Token: 0x06032274 RID: 205428 RVA: 0x00E0DFF9 File Offset: 0x00E0C1F9
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D2E6 RID: 250598 RVA: 0x00EBCAA2 File Offset: 0x00EBACA2
+		// Token: 0x06032275 RID: 205429 RVA: 0x00E0E002 File Offset: 0x00E0C202
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			pointItem.Tick(delta);
 		}
 
-		// Token: 0x0603D2E7 RID: 250599 RVA: 0x00EBCABC File Offset: 0x00EBACBC
+		// Token: 0x06032276 RID: 205430 RVA: 0x00E0E01C File Offset: 0x00E0C21C
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForTagCountChanged(SpecialEnergyBarSanHua.BuffTagId, new BaseTagComponent.TTagChangedCallback(this.OnBuffTagCountChange));
 		}
 
-		// Token: 0x0603D2E8 RID: 250600 RVA: 0x00EBCAF4 File Offset: 0x00EBACF4
+		// Token: 0x06032277 RID: 205431 RVA: 0x00E0E054 File Offset: 0x00E0C254
 		private void OnSuccessTagCountChange(int count, int tagId, int exactTagId, int oldCount)
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(3);
@@ -146,61 +146,61 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uiNiagara.SetUIActive(false);
 		}
 
-		// Token: 0x0603D2E9 RID: 250601 RVA: 0x00EBCB34 File Offset: 0x00EBAD34
+		// Token: 0x06032278 RID: 205432 RVA: 0x00E0E094 File Offset: 0x00E0C294
 		private void OnBuffTagCountChange(int count, int tagId, int exactTagId, int oldCount)
 		{
 			this.RefreshPercentRange();
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0401FE67 RID: 130663
+		// Token: 0x0401A92E RID: 108846
 		private const int POINT_NUM = 41;
 
-		// Token: 0x0401FE68 RID: 130664
+		// Token: 0x0401A92F RID: 108847
 		private const float POINT_WIDTH = 9f;
 
-		// Token: 0x0401FE69 RID: 130665
+		// Token: 0x0401A930 RID: 108848
 		private const float TOTAL_WIDTH = 369f;
 
-		// Token: 0x0401FE6A RID: 130666
+		// Token: 0x0401A931 RID: 108849
 		[StaticVariableRuleIgnore]
 		private static readonly int SuccessTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1SanhuaMd10011.状态标识.蓄力判定成功暂停"];
 
-		// Token: 0x0401FE6B RID: 130667
+		// Token: 0x0401A932 RID: 108850
 		[StaticVariableRuleIgnore]
 		private static readonly int BuffTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1SanhuaMd10011.状态标识.蓄力被动触发"];
 
-		// Token: 0x0401FE6C RID: 130668
+		// Token: 0x0401A933 RID: 108851
 		private const int BUFF_ID = 1102012003;
 
-		// Token: 0x0401FE6D RID: 130669
+		// Token: 0x0401A934 RID: 108852
 		[Nullable(2)]
 		private SpecialEnergyBarPointItem PointItem;
 
-		// Token: 0x0401FE6E RID: 130670
+		// Token: 0x0401A935 RID: 108853
 		private bool TipEffectEnable;
 
-		// Token: 0x0401FE6F RID: 130671
+		// Token: 0x0401A936 RID: 108854
 		private float CurLeftPercent;
 
-		// Token: 0x0401FE70 RID: 130672
+		// Token: 0x0401A937 RID: 108855
 		private float CurRightPercent = 1f;
 
-		// Token: 0x0401FE71 RID: 130673
+		// Token: 0x0401A938 RID: 108856
 		private float LastPercent;
 
-		// Token: 0x0200C14F RID: 49487
+		// Token: 0x0200AB5E RID: 43870
 		private enum EChildType
 		{
-			// Token: 0x0403A650 RID: 239184
+			// Token: 0x04035042 RID: 217154
 			PointItem,
-			// Token: 0x0403A651 RID: 239185
+			// Token: 0x04035043 RID: 217155
 			SliderItem,
-			// Token: 0x0403A652 RID: 239186
+			// Token: 0x04035044 RID: 217156
 			PointTipEffect,
-			// Token: 0x0403A653 RID: 239187
+			// Token: 0x04035045 RID: 217157
 			PointSuccessEffect,
-			// Token: 0x0403A654 RID: 239188
+			// Token: 0x04035046 RID: 217158
 			KeyContainerItem
 		}
 	}

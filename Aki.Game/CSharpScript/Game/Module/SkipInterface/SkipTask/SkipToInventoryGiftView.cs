@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.GenericPrompt;
@@ -10,10 +9,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BAE RID: 19374
+	// Token: 0x02003B58 RID: 15192
 	public class SkipToInventoryGiftView : SkipTask
 	{
-		// Token: 0x060322E8 RID: 205544 RVA: 0x00BA8F80 File Offset: 0x00BA7180
+		// Token: 0x06027079 RID: 159865 RVA: 0x00AED1F4 File Offset: 0x00AEB3F4
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,
@@ -69,13 +68,13 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			base.Finish();
 		}
 
-		// Token: 0x060322E9 RID: 205545 RVA: 0x00BA910C File Offset: 0x00BA730C
+		// Token: 0x0602707A RID: 159866 RVA: 0x00AED380 File Offset: 0x00AEB580
 		private void ShowUnMatchTips()
 		{
 			ScrollingTipsController.Instance.ShowTipsByTextId("InventoryToGift_GiftNotFound", Array.Empty<object>());
 		}
 
-		// Token: 0x060322EA RID: 205546 RVA: 0x00BA9124 File Offset: 0x00BA7324
+		// Token: 0x0602707B RID: 159867 RVA: 0x00AED398 File Offset: 0x00AEB598
 		private int GetGiftInnerCount(int giftItemId, int targetItemId)
 		{
 			ItemInfo? config = ItemConfig.Instance.GetConfig(giftItemId);
@@ -88,7 +87,14 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			{
 				return 0;
 			}
-			int id = dictionary.Values.First<int>();
+			int id = 0;
+			using (Dictionary<int, int>.ValueCollection.Enumerator enumerator = dictionary.Values.GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					id = enumerator.Current;
+				}
+			}
 			GiftPackage? giftPackageConfig = GiftPackageConfig.Instance.GetGiftPackageConfig(id);
 			if (giftPackageConfig == null || giftPackageConfig.Value.Content() == null)
 			{

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B0F RID: 11023
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002E03 RID: 11779
 	public class SetElementalBoxToTarget : ActionParams
 	{
-		// Token: 0x0600F153 RID: 61779 RVA: 0x0022FE9A File Offset: 0x0022E09A
+		// Token: 0x06010009 RID: 65545 RVA: 0x0024DBA6 File Offset: 0x0024BDA6
 		public static SetElementalBoxToTarget Create(ISetElementalBoxToTarget? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CF7 RID: 19703
-		// (get) Token: 0x0600F154 RID: 61780 RVA: 0x0022FEB9 File Offset: 0x0022E0B9
+		// Token: 0x170050B1 RID: 20657
+		// (get) Token: 0x0601000A RID: 65546 RVA: 0x0024DBC5 File Offset: 0x0024BDC5
 		public virtual int ElementalBoxId
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CF8 RID: 19704
-		// (get) Token: 0x0600F155 RID: 61781 RVA: 0x0022FEC6 File Offset: 0x0022E0C6
+		// Token: 0x170050B2 RID: 20658
+		// (get) Token: 0x0601000B RID: 65547 RVA: 0x0024DBD2 File Offset: 0x0024BDD2
 		public virtual ITargetEntityType Target
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040084B7 RID: 33975
+		// Token: 0x04008BBB RID: 35771
 		private ISetElementalBoxToTarget Instance;
 
-		// Token: 0x040084B8 RID: 33976
+		// Token: 0x04008BBC RID: 35772
 		private ITargetEntityType _TargetCache;
 
-		// Token: 0x040084B9 RID: 33977
+		// Token: 0x04008BBD RID: 35773
 		private bool _TargetInited;
 	}
 }

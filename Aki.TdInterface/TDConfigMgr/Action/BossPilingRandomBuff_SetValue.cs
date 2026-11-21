@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014AF RID: 5295
+	// Token: 0x02001608 RID: 5640
 	public class BossPilingRandomBuff_SetValue
 	{
-		// Token: 0x04004610 RID: 17936
+		// Token: 0x040049AB RID: 18859
 		public int BuffPoolId;
 	}
 }

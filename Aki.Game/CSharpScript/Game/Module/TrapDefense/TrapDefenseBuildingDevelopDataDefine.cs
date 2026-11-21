@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A25 RID: 18981
+	// Token: 0x020039CD RID: 14797
 	internal class TrapDefenseBuildingDevelopDataDefine
 	{
-		// Token: 0x0401A578 RID: 107896
+		// Token: 0x04014ECF RID: 85711
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ETrapDefensePlacementType, string> placementAttrIcon = new Dictionary<ETrapDefensePlacementType, string>

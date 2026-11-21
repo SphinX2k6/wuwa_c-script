@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A2D RID: 14893
+	// Token: 0x02003E08 RID: 15880
 	public struct IBvbCardFilterCheckHasBattleFactor : IFlatbufferObject
 	{
-		// Token: 0x1700660E RID: 26126
-		// (get) Token: 0x0601424D RID: 82509 RVA: 0x002F22CE File Offset: 0x002F04CE
+		// Token: 0x17006B3E RID: 27454
+		// (get) Token: 0x06015569 RID: 87401 RVA: 0x003154BA File Offset: 0x003136BA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x0601424E RID: 82510 RVA: 0x002F22DB File Offset: 0x002F04DB
+		// Token: 0x0601556A RID: 87402 RVA: 0x003154C7 File Offset: 0x003136C7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601424F RID: 82511 RVA: 0x002F22E4 File Offset: 0x002F04E4
+		// Token: 0x0601556B RID: 87403 RVA: 0x003154D0 File Offset: 0x003136D0
 		public static IBvbCardFilterCheckHasBattleFactor GetRootAsIBvbCardFilterCheckHasBattleFactor(ByteBuffer _bb)
 		{
 			return IBvbCardFilterCheckHasBattleFactor.GetRootAsIBvbCardFilterCheckHasBattleFactor(_bb, default(IBvbCardFilterCheckHasBattleFactor));
 		}
 
-		// Token: 0x06014250 RID: 82512 RVA: 0x002F2300 File Offset: 0x002F0500
+		// Token: 0x0601556C RID: 87404 RVA: 0x003154EC File Offset: 0x003136EC
 		public static IBvbCardFilterCheckHasBattleFactor GetRootAsIBvbCardFilterCheckHasBattleFactor(ByteBuffer _bb, IBvbCardFilterCheckHasBattleFactor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014251 RID: 82513 RVA: 0x002F231D File Offset: 0x002F051D
+		// Token: 0x0601556D RID: 87405 RVA: 0x00315509 File Offset: 0x00313709
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014252 RID: 82514 RVA: 0x002F232C File Offset: 0x002F052C
+		// Token: 0x0601556E RID: 87406 RVA: 0x00315518 File Offset: 0x00313718
 		public IBvbCardFilterCheckHasBattleFactor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700660F RID: 26127
-		// (get) Token: 0x06014253 RID: 82515 RVA: 0x002F233C File Offset: 0x002F053C
+		// Token: 0x17006B3F RID: 27455
+		// (get) Token: 0x0601556F RID: 87407 RVA: 0x00315528 File Offset: 0x00313728
 		public EBvbCardFilterType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014254 RID: 82516 RVA: 0x002F2378 File Offset: 0x002F0578
+		// Token: 0x06015570 RID: 87408 RVA: 0x00315564 File Offset: 0x00313764
 		public int BattleFactorList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17006610 RID: 26128
-		// (get) Token: 0x06014255 RID: 82517 RVA: 0x002F23B8 File Offset: 0x002F05B8
+		// Token: 0x17006B40 RID: 27456
+		// (get) Token: 0x06015571 RID: 87409 RVA: 0x003155A4 File Offset: 0x003137A4
 		public int BattleFactorListLength
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014256 RID: 82518 RVA: 0x002F23E3 File Offset: 0x002F05E3
+		// Token: 0x06015572 RID: 87410 RVA: 0x003155CF File Offset: 0x003137CF
 		public Span<int> GetBattleFactorListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06014257 RID: 82519 RVA: 0x002F23F2 File Offset: 0x002F05F2
+		// Token: 0x06015573 RID: 87411 RVA: 0x003155DE File Offset: 0x003137DE
 		public int[] GetBattleFactorListArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x06014258 RID: 82520 RVA: 0x002F2400 File Offset: 0x002F0600
+		// Token: 0x06015574 RID: 87412 RVA: 0x003155EC File Offset: 0x003137EC
 		public static Offset<IBvbCardFilterCheckHasBattleFactor> CreateIBvbCardFilterCheckHasBattleFactor(FlatBufferBuilder builder, EBvbCardFilterType Type = EBvbCardFilterType.CompareCost, VectorOffset BattleFactorListOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -110,25 +110,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbCardFilterCheckHasBattleFactor.EndIBvbCardFilterCheckHasBattleFactor(builder);
 		}
 
-		// Token: 0x06014259 RID: 82521 RVA: 0x002F241D File Offset: 0x002F061D
+		// Token: 0x06015575 RID: 87413 RVA: 0x00315609 File Offset: 0x00313809
 		public static void StartIBvbCardFilterCheckHasBattleFactor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601425A RID: 82522 RVA: 0x002F2426 File Offset: 0x002F0626
+		// Token: 0x06015576 RID: 87414 RVA: 0x00315612 File Offset: 0x00313812
 		public static void AddType(FlatBufferBuilder builder, EBvbCardFilterType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601425B RID: 82523 RVA: 0x002F2431 File Offset: 0x002F0631
+		// Token: 0x06015577 RID: 87415 RVA: 0x0031561D File Offset: 0x0031381D
 		public static void AddBattleFactorList(FlatBufferBuilder builder, VectorOffset battleFactorListOffset)
 		{
 			builder.AddOffset(1, battleFactorListOffset.Value, 0);
 		}
 
-		// Token: 0x0601425C RID: 82524 RVA: 0x002F2444 File Offset: 0x002F0644
+		// Token: 0x06015578 RID: 87416 RVA: 0x00315630 File Offset: 0x00313830
 		public static VectorOffset CreateBattleFactorListVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601425D RID: 82525 RVA: 0x002F247B File Offset: 0x002F067B
+		// Token: 0x06015579 RID: 87417 RVA: 0x00315667 File Offset: 0x00313867
 		public static VectorOffset CreateBattleFactorListVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601425E RID: 82526 RVA: 0x002F2495 File Offset: 0x002F0695
+		// Token: 0x0601557A RID: 87418 RVA: 0x00315681 File Offset: 0x00313881
 		public static VectorOffset CreateBattleFactorListVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601425F RID: 82527 RVA: 0x002F24B3 File Offset: 0x002F06B3
+		// Token: 0x0601557B RID: 87419 RVA: 0x0031569F File Offset: 0x0031389F
 		public static VectorOffset CreateBattleFactorListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -163,19 +163,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014260 RID: 82528 RVA: 0x002F24CC File Offset: 0x002F06CC
+		// Token: 0x0601557C RID: 87420 RVA: 0x003156B8 File Offset: 0x003138B8
 		public static void StartBattleFactorListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06014261 RID: 82529 RVA: 0x002F24D7 File Offset: 0x002F06D7
+		// Token: 0x0601557D RID: 87421 RVA: 0x003156C3 File Offset: 0x003138C3
 		public static Offset<IBvbCardFilterCheckHasBattleFactor> EndIBvbCardFilterCheckHasBattleFactor(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbCardFilterCheckHasBattleFactor>(builder.EndTable());
 		}
 
-		// Token: 0x06014262 RID: 82530 RVA: 0x002F24E4 File Offset: 0x002F06E4
+		// Token: 0x0601557E RID: 87422 RVA: 0x003156D0 File Offset: 0x003138D0
 		public IBvbCardFilterCheckHasBattleFactorT UnPack()
 		{
 			IBvbCardFilterCheckHasBattleFactorT bvbCardFilterCheckHasBattleFactorT = new IBvbCardFilterCheckHasBattleFactorT();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbCardFilterCheckHasBattleFactorT;
 		}
 
-		// Token: 0x06014263 RID: 82531 RVA: 0x002F2500 File Offset: 0x002F0700
+		// Token: 0x0601557F RID: 87423 RVA: 0x003156EC File Offset: 0x003138EC
 		public void UnPackTo(IBvbCardFilterCheckHasBattleFactorT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014264 RID: 82532 RVA: 0x002F2548 File Offset: 0x002F0748
+		// Token: 0x06015580 RID: 87424 RVA: 0x00315734 File Offset: 0x00313934
 		public static Offset<IBvbCardFilterCheckHasBattleFactor> Pack(FlatBufferBuilder builder, IBvbCardFilterCheckHasBattleFactorT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbCardFilterCheckHasBattleFactor.CreateIBvbCardFilterCheckHasBattleFactor(builder, _o.Type, battleFactorListOffset);
 		}
 
-		// Token: 0x0400AEAC RID: 44716
+		// Token: 0x0400B7CE RID: 47054
 		private Table __p;
 	}
 }

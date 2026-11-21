@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DC6 RID: 28102
+	// Token: 0x02005F45 RID: 24389
 	public class LevelAiTaskSuccess : LevelAiTask
 	{
-		// Token: 0x060448E7 RID: 280807 RVA: 0x010E8727 File Offset: 0x010E6927
+		// Token: 0x0603AA4B RID: 240203 RVA: 0x01092977 File Offset: 0x01090B77
 		[NullableContext(1)]
 		protected override void CreatePlanSteps(PlanningContext context, LevelAiWorldState worldStateAfterTask)
 		{
 			context.SubmitCandidatePlanStep(this, worldStateAfterTask, this.Cost);
 		}
 
-		// Token: 0x04023A6E RID: 146030
+		// Token: 0x0401ED10 RID: 126224
 		public int Cost;
 	}
 }

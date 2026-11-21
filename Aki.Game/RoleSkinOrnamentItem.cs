@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002A5E RID: 10846
+// Token: 0x02001FD9 RID: 8153
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 {
-	// Token: 0x060169B5 RID: 92597 RVA: 0x005BAE30 File Offset: 0x005B9030
+	// Token: 0x060143D6 RID: 82902 RVA: 0x005E6FB8 File Offset: 0x005E51B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -44,20 +44,20 @@ public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060169B6 RID: 92598 RVA: 0x005BAF84 File Offset: 0x005B9184
+	// Token: 0x060143D7 RID: 82903 RVA: 0x005E710C File Offset: 0x005E530C
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OrnamentRedDotRefresh, new Action<int>(this.OnOrnamentRedDotRefresh));
 		this.OrnamentLayout = new GenericLayout<RoleOrnamentGridItem, IRoleOrnamentGridData>(base.GetMultiTemplateLayout(6), new Func<RoleOrnamentGridItem>(this.CreateOrnamentItem), base.GetItem(7).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x060169B7 RID: 92599 RVA: 0x005BAFDE File Offset: 0x005B91DE
+	// Token: 0x060143D8 RID: 82904 RVA: 0x005E7166 File Offset: 0x005E5366
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OrnamentRedDotRefresh, new Action<int>(this.OnOrnamentRedDotRefresh));
 	}
 
-	// Token: 0x060169B8 RID: 92600 RVA: 0x005BAFFC File Offset: 0x005B91FC
+	// Token: 0x060143D9 RID: 82905 RVA: 0x005E7184 File Offset: 0x005E5384
 	public override void Refresh(RoleSkinData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -66,7 +66,7 @@ public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 		this.RefreshLayout();
 	}
 
-	// Token: 0x060169B9 RID: 92601 RVA: 0x005BB018 File Offset: 0x005B9218
+	// Token: 0x060143DA RID: 82906 RVA: 0x005E71A0 File Offset: 0x005E53A0
 	private void UpdateItemDataList()
 	{
 		int itemId = this.Data.GetItemId();
@@ -84,7 +84,7 @@ public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 		this.ItemDataList = list;
 	}
 
-	// Token: 0x060169BA RID: 92602 RVA: 0x005BB084 File Offset: 0x005B9284
+	// Token: 0x060143DB RID: 82907 RVA: 0x005E720C File Offset: 0x005E540C
 	public void RefreshView()
 	{
 		RoleSkinData data = this.Data;
@@ -107,13 +107,13 @@ public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 		this.SetSpriteByPath(UiResourceConfig.Instance.GetResourcePath(resourceId), base.GetSprite(8), false, null, null);
 	}
 
-	// Token: 0x060169BB RID: 92603 RVA: 0x005BB189 File Offset: 0x005B9389
+	// Token: 0x060143DC RID: 82908 RVA: 0x005E7311 File Offset: 0x005E5511
 	public void RefreshLayout()
 	{
 		this.OrnamentLayout.RefreshByData(this.ItemDataList, new Action(this.RefreshGridSelected), false);
 	}
 
-	// Token: 0x060169BC RID: 92604 RVA: 0x005BB1AC File Offset: 0x005B93AC
+	// Token: 0x060143DD RID: 82909 RVA: 0x005E7334 File Offset: 0x005E5534
 	public void RefreshGridSelected()
 	{
 		Func<int> getPreviewSkinIdFunc = this.GetPreviewSkinIdFunc;
@@ -141,31 +141,31 @@ public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 		this.OrnamentLayout.SelectGridProxy(gridIndex, true);
 	}
 
-	// Token: 0x060169BD RID: 92605 RVA: 0x005BB277 File Offset: 0x005B9477
+	// Token: 0x060143DE RID: 82910 RVA: 0x005E73FF File Offset: 0x005E55FF
 	public void RefreshOrnamentItems()
 	{
 		this.OrnamentLayout.RefreshWithoutDataSync();
 	}
 
-	// Token: 0x060169BE RID: 92606 RVA: 0x005BB284 File Offset: 0x005B9484
+	// Token: 0x060143DF RID: 82911 RVA: 0x005E740C File Offset: 0x005E560C
 	public void SetClickOrnamentCallback(Action<int, int> callback)
 	{
 		this.ClickOrnamentCallback = callback;
 	}
 
-	// Token: 0x060169BF RID: 92607 RVA: 0x005BB28D File Offset: 0x005B948D
+	// Token: 0x060143E0 RID: 82912 RVA: 0x005E7415 File Offset: 0x005E5615
 	public void SetGetPreviewSkinIdFunc(Func<int> func)
 	{
 		this.GetPreviewSkinIdFunc = func;
 	}
 
-	// Token: 0x060169C0 RID: 92608 RVA: 0x005BB296 File Offset: 0x005B9496
+	// Token: 0x060143E1 RID: 82913 RVA: 0x005E741E File Offset: 0x005E561E
 	public void SetGetPreviewOrnamentIdFunc(Func<int> func)
 	{
 		this.GetPreviewOrnamentIdFunc = func;
 	}
 
-	// Token: 0x060169C1 RID: 92609 RVA: 0x005BB29F File Offset: 0x005B949F
+	// Token: 0x060143E2 RID: 82914 RVA: 0x005E7427 File Offset: 0x005E5627
 	private RoleOrnamentGridItem CreateOrnamentItem()
 	{
 		RoleOrnamentGridItem roleOrnamentGridItem = new RoleOrnamentGridItem();
@@ -174,7 +174,7 @@ public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 		return roleOrnamentGridItem;
 	}
 
-	// Token: 0x060169C2 RID: 92610 RVA: 0x005BB2CC File Offset: 0x005B94CC
+	// Token: 0x060143E3 RID: 82915 RVA: 0x005E7454 File Offset: 0x005E5654
 	private void OnOrnamentItemClick(MediumItemGridExtendCallback parameters)
 	{
 		IRoleOrnamentGridData roleOrnamentGridData = parameters.Data as IRoleOrnamentGridData;
@@ -190,7 +190,7 @@ public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 		clickOrnamentCallback(this.Data.GetItemId(), roleOrnamentGridData.OrnamentId);
 	}
 
-	// Token: 0x060169C3 RID: 92611 RVA: 0x005BB30C File Offset: 0x005B950C
+	// Token: 0x060143E4 RID: 82916 RVA: 0x005E7494 File Offset: 0x005E5694
 	[NullableContext(2)]
 	private bool OrnamentItemCanExecuteChange(object parameters, bool _, EToggleState __)
 	{
@@ -212,7 +212,7 @@ public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 		return true;
 	}
 
-	// Token: 0x060169C4 RID: 92612 RVA: 0x005BB3A0 File Offset: 0x005B95A0
+	// Token: 0x060143E5 RID: 82917 RVA: 0x005E7528 File Offset: 0x005E5728
 	private void OnOrnamentRedDotRefresh(int ornamentId)
 	{
 		RoleOrnamentGridItem layoutItemByKey = this.OrnamentLayout.GetLayoutItemByKey(ornamentId);
@@ -223,48 +223,48 @@ public class RoleSkinOrnamentItem : GridProxyAbstract<RoleSkinData>
 		layoutItemByKey.RefreshRedDotVisible();
 	}
 
-	// Token: 0x0400A7B0 RID: 42928
+	// Token: 0x0400ABB4 RID: 43956
 	private RoleSkinData Data;
 
-	// Token: 0x0400A7B1 RID: 42929
+	// Token: 0x0400ABB5 RID: 43957
 	private List<IRoleOrnamentGridData> ItemDataList;
 
-	// Token: 0x0400A7B2 RID: 42930
+	// Token: 0x0400ABB6 RID: 43958
 	private GenericLayout<RoleOrnamentGridItem, IRoleOrnamentGridData> OrnamentLayout;
 
-	// Token: 0x0400A7B3 RID: 42931
+	// Token: 0x0400ABB7 RID: 43959
 	[Nullable(2)]
 	private Action<int, int> ClickOrnamentCallback;
 
-	// Token: 0x0400A7B4 RID: 42932
+	// Token: 0x0400ABB8 RID: 43960
 	[Nullable(2)]
 	private Func<int> GetPreviewSkinIdFunc;
 
-	// Token: 0x0400A7B5 RID: 42933
+	// Token: 0x0400ABB9 RID: 43961
 	[Nullable(2)]
 	private Func<int> GetPreviewOrnamentIdFunc;
 
-	// Token: 0x020090A2 RID: 37026
+	// Token: 0x020082E9 RID: 33513
 	[NullableContext(0)]
 	private enum EComponentType
 	{
-		// Token: 0x0402EDD2 RID: 191954
+		// Token: 0x0402A4CC RID: 173260
 		UnlockItem,
-		// Token: 0x0402EDD3 RID: 191955
+		// Token: 0x0402A4CD RID: 173261
 		EquipSprite,
-		// Token: 0x0402EDD4 RID: 191956
+		// Token: 0x0402A4CE RID: 173262
 		LockItem,
-		// Token: 0x0402EDD5 RID: 191957
+		// Token: 0x0402A4CF RID: 173263
 		RoleTexture,
-		// Token: 0x0402EDD6 RID: 191958
+		// Token: 0x0402A4D0 RID: 173264
 		RoleLockTexture,
-		// Token: 0x0402EDD7 RID: 191959
+		// Token: 0x0402A4D1 RID: 173265
 		NameText,
-		// Token: 0x0402EDD8 RID: 191960
+		// Token: 0x0402A4D2 RID: 173266
 		OrnamentLayout,
-		// Token: 0x0402EDD9 RID: 191961
+		// Token: 0x0402A4D3 RID: 173267
 		OrnamentItem,
-		// Token: 0x0402EDDA RID: 191962
+		// Token: 0x0402A4D4 RID: 173268
 		BgSprite
 	}
 }

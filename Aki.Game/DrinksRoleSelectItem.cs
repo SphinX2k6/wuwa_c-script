@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000F6C RID: 3948
+// Token: 0x02000421 RID: 1057
 [NullableContext(2)]
 [Nullable(0)]
 public class DrinksRoleSelectItem : GridProxyAbstract<int>
 {
-	// Token: 0x060064F7 RID: 25847 RVA: 0x00140B50 File Offset: 0x0013ED50
+	// Token: 0x0600388F RID: 14479 RVA: 0x001493EC File Offset: 0x001475EC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,13 +27,13 @@ public class DrinksRoleSelectItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x060064F8 RID: 25848 RVA: 0x00140C02 File Offset: 0x0013EE02
+	// Token: 0x06003890 RID: 14480 RVA: 0x0014949E File Offset: 0x0014769E
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 	}
 
-	// Token: 0x060064F9 RID: 25849 RVA: 0x00140C21 File Offset: 0x0013EE21
+	// Token: 0x06003891 RID: 14481 RVA: 0x001494BD File Offset: 0x001476BD
 	public override void OnSelected(bool fireEvent)
 	{
 		if (this.IsSelectOnCb != null && this.ConfigId != -1)
@@ -42,7 +42,7 @@ public class DrinksRoleSelectItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060064FA RID: 25850 RVA: 0x00140C4C File Offset: 0x0013EE4C
+	// Token: 0x06003892 RID: 14482 RVA: 0x001494E8 File Offset: 0x001476E8
 	public override void Refresh(int configId, bool isSelected, int gridIndex)
 	{
 		this.ConfigId = configId;
@@ -86,13 +86,13 @@ public class DrinksRoleSelectItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060064FB RID: 25851 RVA: 0x00140DD8 File Offset: 0x0013EFD8
+	// Token: 0x06003893 RID: 14483 RVA: 0x00149674 File Offset: 0x00147874
 	private void SetSelected(bool bSelectOn, bool bFireEvent = false)
 	{
 		base.GetExtendToggle(0).SetToggleState(bSelectOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, bFireEvent, false, false);
 	}
 
-	// Token: 0x060064FC RID: 25852 RVA: 0x00140DF1 File Offset: 0x0013EFF1
+	// Token: 0x06003894 RID: 14484 RVA: 0x0014968D File Offset: 0x0014788D
 	private void OnToggleStateChange(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked && this.OnToggleStateChangeFunction != null)
@@ -106,15 +106,15 @@ public class DrinksRoleSelectItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x04002DE1 RID: 11745
+	// Token: 0x04002E7A RID: 11898
 	private int ConfigId = -1;
 
-	// Token: 0x04002DE2 RID: 11746
+	// Token: 0x04002E7B RID: 11899
 	public Action<int> ClickCallBack;
 
-	// Token: 0x04002DE3 RID: 11747
+	// Token: 0x04002E7C RID: 11900
 	public Func<int, bool> IsSelectOnCb;
 
-	// Token: 0x04002DE4 RID: 11748
+	// Token: 0x04002E7D RID: 11901
 	public Action<int> OnToggleStateChangeFunction;
 }

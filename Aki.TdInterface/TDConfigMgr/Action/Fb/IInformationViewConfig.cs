@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002657 RID: 9815
+	// Token: 0x0200291B RID: 10523
 	public class IInformationViewConfig
 	{
-		// Token: 0x0600DC0D RID: 56333 RVA: 0x0020BF9B File Offset: 0x0020A19B
-		[NullableContext(1)]
+		// Token: 0x0600E9E9 RID: 59881 RVA: 0x00228873 File Offset: 0x00226A73
 		public static IInformationViewConfig Create(IInformationViewConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004121 RID: 16673
-		// (get) Token: 0x0600DC0E RID: 56334 RVA: 0x0020BFBC File Offset: 0x0020A1BC
+		// Token: 0x17004461 RID: 17505
+		// (get) Token: 0x0600E9EA RID: 59882 RVA: 0x00228894 File Offset: 0x00226A94
 		public virtual int? InfoDisplayGroup
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A53 RID: 31315
+		// Token: 0x040080F5 RID: 33013
 		private IInformationViewConfig Instance;
 	}
 }

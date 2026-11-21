@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006815 RID: 26645
+	// Token: 0x02005765 RID: 22373
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlEventTips : UiPanelBase
 	{
-		// Token: 0x06042799 RID: 272281 RVA: 0x010262F0 File Offset: 0x010244F0
+		// Token: 0x060372EE RID: 226030 RVA: 0x00F67834 File Offset: 0x00F65A34
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604279A RID: 272282 RVA: 0x0102637C File Offset: 0x0102457C
+		// Token: 0x060372EF RID: 226031 RVA: 0x00F678C0 File Offset: 0x00F65AC0
 		protected override void OnBeforeCreateImplement()
 		{
 			this.TipsSequence = new UiBehaviorLevelSequence(this);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.TipsSequence.AddSequenceFinishEvent("Close", new Action<string>(this.OnTipsCloseSequenceFinish), false);
 		}
 
-		// Token: 0x0604279B RID: 272283 RVA: 0x010263DC File Offset: 0x010245DC
+		// Token: 0x060372F0 RID: 226032 RVA: 0x00F67920 File Offset: 0x00F65B20
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlEventTips.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -50,21 +50,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604279C RID: 272284 RVA: 0x0102641F File Offset: 0x0102461F
+		// Token: 0x060372F1 RID: 226033 RVA: 0x00F67963 File Offset: 0x00F65B63
 		protected override void OnBeforeDestroy()
 		{
 			this.UnbindGlobalInput();
 			this.OnTipsClosed = null;
 		}
 
-		// Token: 0x0604279D RID: 272285 RVA: 0x0102642E File Offset: 0x0102462E
+		// Token: 0x060372F2 RID: 226034 RVA: 0x00F67972 File Offset: 0x00F65B72
 		[NullableContext(2)]
 		public void SetKeepOpenItem(UUIItem item)
 		{
 			this.KeepOpenItem = item;
 		}
 
-		// Token: 0x0604279E RID: 272286 RVA: 0x01026438 File Offset: 0x01024638
+		// Token: 0x060372F3 RID: 226035 RVA: 0x00F6797C File Offset: 0x00F65B7C
 		public void Show(bool locked)
 		{
 			if (!this.TipsWantVisible)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.UnbindGlobalInput();
 		}
 
-		// Token: 0x0604279F RID: 272287 RVA: 0x0102649C File Offset: 0x0102469C
+		// Token: 0x060372F4 RID: 226036 RVA: 0x00F679E0 File Offset: 0x00F65BE0
 		public void Hide()
 		{
 			if (!this.TipsWantVisible)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onTipsClosed();
 		}
 
-		// Token: 0x060427A0 RID: 272288 RVA: 0x010264FC File Offset: 0x010246FC
+		// Token: 0x060372F5 RID: 226037 RVA: 0x00F67A40 File Offset: 0x00F65C40
 		public void Refresh(int[] eventIds)
 		{
 			int num = eventIds.Length;
@@ -137,13 +137,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060427A1 RID: 272289 RVA: 0x0102655E File Offset: 0x0102475E
+		// Token: 0x060372F6 RID: 226038 RVA: 0x00F67AA2 File Offset: 0x00F65CA2
 		private void OnTipsStartSequenceStart(string _)
 		{
 			base.SetUiActive(true);
 		}
 
-		// Token: 0x060427A2 RID: 272290 RVA: 0x01026567 File Offset: 0x01024767
+		// Token: 0x060372F7 RID: 226039 RVA: 0x00F67AAB File Offset: 0x00F65CAB
 		private void OnTipsCloseSequenceFinish(string _)
 		{
 			if (!this.TipsWantVisible)
@@ -152,19 +152,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060427A3 RID: 272291 RVA: 0x01026578 File Offset: 0x01024778
+		// Token: 0x060372F8 RID: 226040 RVA: 0x00F67ABC File Offset: 0x00F65CBC
 		private void BindGlobalInput()
 		{
 			InputDistributeController.Instance.BindActionIgnoreLimit("UI左键点击", new TInputHandle<InputDistributeDefine.EActionType>(this.OnGlobalClickAction));
 		}
 
-		// Token: 0x060427A4 RID: 272292 RVA: 0x01026595 File Offset: 0x01024795
+		// Token: 0x060372F9 RID: 226041 RVA: 0x00F67AD9 File Offset: 0x00F65CD9
 		private void UnbindGlobalInput()
 		{
 			InputDistributeController.Instance.UnBindActionIgnoreLimit("UI左键点击", new TInputHandle<InputDistributeDefine.EActionType>(this.OnGlobalClickAction));
 		}
 
-		// Token: 0x060427A5 RID: 272293 RVA: 0x010265B4 File Offset: 0x010247B4
+		// Token: 0x060372FA RID: 226042 RVA: 0x00F67AF8 File Offset: 0x00F65CF8
 		private void OnGlobalClickAction(string _, InputDistributeDefine.EActionType actionType, InputIdentification __)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Press)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.Hide();
 		}
 
-		// Token: 0x060427A6 RID: 272294 RVA: 0x010265E0 File Offset: 0x010247E0
+		// Token: 0x060372FB RID: 226043 RVA: 0x00F67B24 File Offset: 0x00F65D24
 		[NullableContext(2)]
 		private bool IsHitOnSelfOrKeepOpen(UUIItem hit)
 		{
@@ -201,33 +201,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return false;
 		}
 
-		// Token: 0x04022A3C RID: 141884
+		// Token: 0x0401D299 RID: 119449
 		private List<DangoBrawlEventTipsItem> EventTipsItemList = new List<DangoBrawlEventTipsItem>();
 
-		// Token: 0x04022A3D RID: 141885
+		// Token: 0x0401D29A RID: 119450
 		[Nullable(2)]
 		private UiBehaviorLevelSequence TipsSequence;
 
-		// Token: 0x04022A3E RID: 141886
+		// Token: 0x0401D29B RID: 119451
 		private bool TipsWantVisible;
 
-		// Token: 0x04022A3F RID: 141887
+		// Token: 0x0401D29C RID: 119452
 		[Nullable(2)]
 		private UUIItem KeepOpenItem;
 
-		// Token: 0x04022A40 RID: 141888
+		// Token: 0x0401D29D RID: 119453
 		[Nullable(2)]
 		public Action OnTipsClosed;
 
-		// Token: 0x0200C9A3 RID: 51619
+		// Token: 0x0200B370 RID: 45936
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403CE6D RID: 249453
+			// Token: 0x0403775A RID: 227162
 			PnlListEvent1,
-			// Token: 0x0403CE6E RID: 249454
+			// Token: 0x0403775B RID: 227163
 			PnlLine,
-			// Token: 0x0403CE6F RID: 249455
+			// Token: 0x0403775C RID: 227164
 			PnlListEvent2
 		}
 	}

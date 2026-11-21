@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001646 RID: 5702
+	// Token: 0x020002E9 RID: 745
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroAnim.ERailSlideAnimType")]
 	public enum ERailSlideAnimType : byte
 	{
-		// Token: 0x0400B36D RID: 45933
+		// Token: 0x04002064 RID: 8292
 		Normal,
-		// Token: 0x0400B36E RID: 45934
+		// Token: 0x04002065 RID: 8293
 		SlopeSlide,
-		// Token: 0x0400B36F RID: 45935
+		// Token: 0x04002066 RID: 8294
 		SwordRiding,
-		// Token: 0x0400B370 RID: 45936
+		// Token: 0x04002067 RID: 8295
 		ERailSlideAnimType_MAX
 	}
 }

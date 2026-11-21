@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C79 RID: 27769
+	// Token: 0x020073E0 RID: 29664
 	public class IPerformAiHideSelfT
 	{
 	}

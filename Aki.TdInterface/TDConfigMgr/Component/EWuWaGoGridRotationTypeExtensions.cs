@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A4A RID: 2634
+	// Token: 0x02000B13 RID: 2835
 	public static class EWuWaGoGridRotationTypeExtensions
 	{
-		// Token: 0x060039FE RID: 14846 RVA: 0x00095AC0 File Offset: 0x00093CC0
+		// Token: 0x06003DE8 RID: 15848 RVA: 0x0009E690 File Offset: 0x0009C890
 		public static string ToEnumString(this EWuWaGoGridRotationType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060039FF RID: 14847 RVA: 0x00095B14 File Offset: 0x00093D14
+		// Token: 0x06003DE9 RID: 15849 RVA: 0x0009E6E4 File Offset: 0x0009C8E4
 		public static EWuWaGoGridRotationType FromString(string name)
 		{
 			EWuWaGoGridRotationType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003A00 RID: 14848 RVA: 0x00095B40 File Offset: 0x00093D40
+		// Token: 0x06003DEA RID: 15850 RVA: 0x0009E710 File Offset: 0x0009C910
 		public static bool TryFromString(string name, out EWuWaGoGridRotationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003A01 RID: 14849 RVA: 0x00095BA8 File Offset: 0x00093DA8
+		// Token: 0x06003DEB RID: 15851 RVA: 0x0009E778 File Offset: 0x0009C978
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003A02 RID: 14850 RVA: 0x00095BD0 File Offset: 0x00093DD0
+		// Token: 0x06003DEC RID: 15852 RVA: 0x0009E7A0 File Offset: 0x0009C9A0
 		public static EWuWaGoGridRotationType[] GetValues()
 		{
 			return new EWuWaGoGridRotationType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003A03 RID: 14851 RVA: 0x00095BE3 File Offset: 0x00093DE3
+		// Token: 0x06003DED RID: 15853 RVA: 0x0009E7B3 File Offset: 0x0009C9B3
 		public static string[] GetNames()
 		{
 			return new string[]

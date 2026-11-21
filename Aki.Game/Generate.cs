@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02000E97 RID: 3735
+// Token: 0x0200034C RID: 844
 public class Generate : IGenerate
 {
-	// Token: 0x170006B7 RID: 1719
-	// (get) Token: 0x06005B9E RID: 23454 RVA: 0x0010B7E3 File Offset: 0x001099E3
-	// (set) Token: 0x06005B9F RID: 23455 RVA: 0x0010B7EB File Offset: 0x001099EB
+	// Token: 0x170006DB RID: 1755
+	// (get) Token: 0x06002F35 RID: 12085 RVA: 0x0011347B File Offset: 0x0011167B
+	// (set) Token: 0x06002F36 RID: 12086 RVA: 0x00113483 File Offset: 0x00111683
 	public int BornTrack { get; set; }
 
-	// Token: 0x170006B8 RID: 1720
-	// (get) Token: 0x06005BA0 RID: 23456 RVA: 0x0010B7F4 File Offset: 0x001099F4
-	// (set) Token: 0x06005BA1 RID: 23457 RVA: 0x0010B7FC File Offset: 0x001099FC
+	// Token: 0x170006DC RID: 1756
+	// (get) Token: 0x06002F37 RID: 12087 RVA: 0x0011348C File Offset: 0x0011168C
+	// (set) Token: 0x06002F38 RID: 12088 RVA: 0x00113494 File Offset: 0x00111694
 	public float BornDistance { get; set; }
 
-	// Token: 0x170006B9 RID: 1721
-	// (get) Token: 0x06005BA2 RID: 23458 RVA: 0x0010B805 File Offset: 0x00109A05
-	// (set) Token: 0x06005BA3 RID: 23459 RVA: 0x0010B80D File Offset: 0x00109A0D
+	// Token: 0x170006DD RID: 1757
+	// (get) Token: 0x06002F39 RID: 12089 RVA: 0x0011349D File Offset: 0x0011169D
+	// (set) Token: 0x06002F3A RID: 12090 RVA: 0x001134A5 File Offset: 0x001116A5
 	public EGenerateType GenerateType { get; set; }
 
-	// Token: 0x170006BA RID: 1722
-	// (get) Token: 0x06005BA4 RID: 23460 RVA: 0x0010B816 File Offset: 0x00109A16
-	// (set) Token: 0x06005BA5 RID: 23461 RVA: 0x0010B81E File Offset: 0x00109A1E
+	// Token: 0x170006DE RID: 1758
+	// (get) Token: 0x06002F3B RID: 12091 RVA: 0x001134AE File Offset: 0x001116AE
+	// (set) Token: 0x06002F3C RID: 12092 RVA: 0x001134B6 File Offset: 0x001116B6
 	public int RefreshId { get; set; }
 
-	// Token: 0x170006BB RID: 1723
-	// (get) Token: 0x06005BA6 RID: 23462 RVA: 0x0010B827 File Offset: 0x00109A27
-	// (set) Token: 0x06005BA7 RID: 23463 RVA: 0x0010B82F File Offset: 0x00109A2F
+	// Token: 0x170006DF RID: 1759
+	// (get) Token: 0x06002F3D RID: 12093 RVA: 0x001134BF File Offset: 0x001116BF
+	// (set) Token: 0x06002F3E RID: 12094 RVA: 0x001134C7 File Offset: 0x001116C7
 	public int BuffGateBornGroup { get; set; }
 }

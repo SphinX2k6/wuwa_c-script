@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F8 RID: 4856
+	// Token: 0x02001448 RID: 5192
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IQuestBuffActiveRange
 	{
-		// Token: 0x06006EC3 RID: 28355 RVA: 0x0010B7FA File Offset: 0x001099FA
-		[NullableContext(1)]
+		// Token: 0x06007563 RID: 30051 RVA: 0x00119D66 File Offset: 0x00117F66
+		[NullableContext(0)]
 		public static IQuestBuffActiveRange Create(IQuestBuffActiveRange? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022A6 RID: 8870
-		// (get) Token: 0x06006EC4 RID: 28356 RVA: 0x0010B819 File Offset: 0x00109A19
+		// Token: 0x17002475 RID: 9333
+		// (get) Token: 0x06007564 RID: 30052 RVA: 0x00119D85 File Offset: 0x00117F85
 		public virtual IQuestBuffActiveCenterRange QuestBuffActiveCenterRange
 		{
 			get
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022A7 RID: 8871
-		// (get) Token: 0x06006EC5 RID: 28357 RVA: 0x0010B850 File Offset: 0x00109A50
+		// Token: 0x17002476 RID: 9334
+		// (get) Token: 0x06007565 RID: 30053 RVA: 0x00119DBC File Offset: 0x00117FBC
 		public virtual List<int> QuestBuffActiveRangeEntities
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022A8 RID: 8872
-		// (get) Token: 0x06006EC6 RID: 28358 RVA: 0x0010B8C8 File Offset: 0x00109AC8
+		// Token: 0x17002477 RID: 9335
+		// (get) Token: 0x06007566 RID: 30054 RVA: 0x00119E34 File Offset: 0x00118034
 		public virtual List<int> QuestBuffActiveRangeAreaIds
 		{
 			get
@@ -90,25 +90,25 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F7E RID: 16254
+		// Token: 0x040042FA RID: 17146
 		private IQuestBuffActiveRange Instance;
 
-		// Token: 0x04003F7F RID: 16255
+		// Token: 0x040042FB RID: 17147
 		private IQuestBuffActiveCenterRange _QuestBuffActiveCenterRangeCache;
 
-		// Token: 0x04003F80 RID: 16256
+		// Token: 0x040042FC RID: 17148
 		private bool _QuestBuffActiveCenterRangeInited;
 
-		// Token: 0x04003F81 RID: 16257
+		// Token: 0x040042FD RID: 17149
 		private List<int> _QuestBuffActiveRangeEntitiesCache;
 
-		// Token: 0x04003F82 RID: 16258
+		// Token: 0x040042FE RID: 17150
 		private bool _QuestBuffActiveRangeEntitiesInited;
 
-		// Token: 0x04003F83 RID: 16259
+		// Token: 0x040042FF RID: 17151
 		private List<int> _QuestBuffActiveRangeAreaIdsCache;
 
-		// Token: 0x04003F84 RID: 16260
+		// Token: 0x04004300 RID: 17152
 		private bool _QuestBuffActiveRangeAreaIdsInited;
 	}
 }

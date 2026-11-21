@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AE4 RID: 6884
+	// Token: 0x02001C8B RID: 7307
 	public class IGroupAiCommunicateRemoveTag_SetValue
 	{
-		// Token: 0x04005AA4 RID: 23204
+		// Token: 0x04005F2E RID: 24366
 		public EGroupAiCommunicateType Type;
 
-		// Token: 0x04005AA5 RID: 23205
-		[Nullable(1)]
+		// Token: 0x04005F2F RID: 24367
 		public List<string> Tags;
 	}
 }

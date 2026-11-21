@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001CF RID: 463
+	// Token: 0x020001E1 RID: 481
 	public class ConfigDangoBrawlItemTypeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000ADD RID: 2781 RVA: 0x00096FBC File Offset: 0x000951BC
+		// Token: 0x06000B49 RID: 2889 RVA: 0x0009CEF4 File Offset: 0x0009B0F4
 		static ConfigDangoBrawlItemTypeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDangoBrawlItemTypeAll.CreateStaticDefaultValue), new Action(ConfigDangoBrawlItemTypeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000ADE RID: 2782 RVA: 0x00096FDC File Offset: 0x000951DC
+		// Token: 0x06000B4A RID: 2890 RVA: 0x0009CF14 File Offset: 0x0009B114
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDangoBrawlItemTypeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000ADF RID: 2783 RVA: 0x0009705B File Offset: 0x0009525B
+		// Token: 0x06000B4B RID: 2891 RVA: 0x0009CF93 File Offset: 0x0009B193
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDangoBrawlItemTypeAll.LogPair = null;
 			ConfigDangoBrawlItemTypeAll.HandleId = 0;
 		}
 
-		// Token: 0x06000AE0 RID: 2784 RVA: 0x00097069 File Offset: 0x00095269
+		// Token: 0x06000B4C RID: 2892 RVA: 0x0009CFA1 File Offset: 0x0009B1A1
 		public static void Init()
 		{
 			ConfigDangoBrawlItemTypeAll.HandleId = ConfigCommon.InitDataStatement(ConfigDangoBrawlItemTypeAll.HandleId, "db_dangobrawl.db", "select BinData from `DangoBrawlItemType`");
 		}
 
-		// Token: 0x06000AE1 RID: 2785 RVA: 0x00097084 File Offset: 0x00095284
+		// Token: 0x06000B4D RID: 2893 RVA: 0x0009CFBC File Offset: 0x0009B1BC
 		[NullableContext(2)]
 		public static IReadOnlyList<DangoBrawlItemType> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000C8D RID: 3213
+		// Token: 0x04000D0B RID: 3339
 		private const string DB = "db_dangobrawl.db";
 
-		// Token: 0x04000C8E RID: 3214
+		// Token: 0x04000D0C RID: 3340
 		private const string FILE = "t.团子乱斗外围.xlsx";
 
-		// Token: 0x04000C8F RID: 3215
+		// Token: 0x04000D0D RID: 3341
 		private const string TABLE = "DangoBrawlItemType";
 
-		// Token: 0x04000C90 RID: 3216
+		// Token: 0x04000D0E RID: 3342
 		private const string COMMAND = "select BinData from `DangoBrawlItemType`";
 
-		// Token: 0x04000C91 RID: 3217
+		// Token: 0x04000D0F RID: 3343
 		private const string KEY_PREFIX = "DangoBrawlItemTypeAll";
 
-		// Token: 0x04000C92 RID: 3218
+		// Token: 0x04000D10 RID: 3344
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000C93 RID: 3219
+		// Token: 0x04000D11 RID: 3345
 		private static int HandleId;
 	}
 }

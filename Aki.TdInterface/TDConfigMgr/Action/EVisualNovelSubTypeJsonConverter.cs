@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020024B8 RID: 9400
+	// Token: 0x0200275F RID: 10079
 	public class EVisualNovelSubTypeJsonConverter : JsonConverter<EVisualNovelSubType>
 	{
-		// Token: 0x0600CBBC RID: 52156 RVA: 0x001DFFD8 File Offset: 0x001DE1D8
+		// Token: 0x0600D887 RID: 55431 RVA: 0x001FA3C4 File Offset: 0x001F85C4
 		public override EVisualNovelSubType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EVisualNovelSubTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CBBD RID: 52157 RVA: 0x001DFFFC File Offset: 0x001DE1FC
+		// Token: 0x0600D888 RID: 55432 RVA: 0x001FA3E8 File Offset: 0x001F85E8
 		public override void Write(Utf8JsonWriter writer, EVisualNovelSubType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

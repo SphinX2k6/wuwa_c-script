@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067FB RID: 26619
+	// Token: 0x0200574B RID: 22347
 	public class DangoBrawlCardRefreshBtn : UiPanelBase
 	{
-		// Token: 0x0604264B RID: 271947 RVA: 0x0101F61C File Offset: 0x0101D81C
+		// Token: 0x060371A0 RID: 225696 RVA: 0x00F60B60 File Offset: 0x00F5ED60
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604264C RID: 271948 RVA: 0x0101F6E3 File Offset: 0x0101D8E3
+		// Token: 0x060371A1 RID: 225697 RVA: 0x00F60C27 File Offset: 0x00F5EE27
 		[NullableContext(1)]
 		public void SetRefreshCallback(Action callback)
 		{
 			this.RefreshCallback = callback;
 		}
 
-		// Token: 0x0604264D RID: 271949 RVA: 0x0101F6EC File Offset: 0x0101D8EC
+		// Token: 0x060371A2 RID: 225698 RVA: 0x00F60C30 File Offset: 0x00F5EE30
 		public void RefreshRemain(int remainNum)
 		{
 			bool flag = remainNum <= 0;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.GetText(1).SetText(remainNum.ToString(), true);
 		}
 
-		// Token: 0x0604264E RID: 271950 RVA: 0x0101F741 File Offset: 0x0101D941
+		// Token: 0x060371A3 RID: 225699 RVA: 0x00F60C85 File Offset: 0x00F5EE85
 		private void OnClickRefresh()
 		{
 			Action refreshCallback = this.RefreshCallback;
@@ -68,24 +68,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			refreshCallback();
 		}
 
-		// Token: 0x0604264F RID: 271951 RVA: 0x0101F753 File Offset: 0x0101D953
+		// Token: 0x060371A4 RID: 225700 RVA: 0x00F60C97 File Offset: 0x00F5EE97
 		public void SetInteractive(bool bInteractive)
 		{
 			base.GetButton(0).SetSelfInteractive(bInteractive);
 		}
 
-		// Token: 0x040229BD RID: 141757
+		// Token: 0x0401D21A RID: 119322
 		[Nullable(2)]
 		private Action RefreshCallback;
 
-		// Token: 0x0200C969 RID: 51561
+		// Token: 0x0200B336 RID: 45878
 		private enum EComponents
 		{
-			// Token: 0x0403CD1E RID: 249118
+			// Token: 0x0403760B RID: 226827
 			RefreshBtn,
-			// Token: 0x0403CD1F RID: 249119
+			// Token: 0x0403760C RID: 226828
 			TxtNum,
-			// Token: 0x0403CD20 RID: 249120
+			// Token: 0x0403760D RID: 226829
 			PnlNum
 		}
 	}

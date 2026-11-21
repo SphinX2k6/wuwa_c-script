@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F8C RID: 28556
+	// Token: 0x0200610D RID: 24845
 	public class LevelFlowHideHookEffectAction : LevelFlowActionBase
 	{
-		// Token: 0x06045717 RID: 284439 RVA: 0x01138733 File Offset: 0x01136933
+		// Token: 0x0603B8C5 RID: 243909 RVA: 0x010E2537 File Offset: 0x010E0737
 		[NullableContext(1)]
 		public LevelFlowHideHookEffectAction Init(int entityId)
 		{
@@ -14,14 +14,14 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045718 RID: 284440 RVA: 0x0113873D File Offset: 0x0113693D
+		// Token: 0x0603B8C6 RID: 243910 RVA: 0x010E2541 File Offset: 0x010E0741
 		protected override void OnExecute()
 		{
 			LevelFlowResourceManager.HideHookEffect(this.EntityId);
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243BE RID: 148414
+		// Token: 0x0401F673 RID: 128627
 		private int EntityId;
 	}
 }

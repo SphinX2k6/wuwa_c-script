@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D41 RID: 27969
+	// Token: 0x02005EBE RID: 24254
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionItemCheck : LevelConditionBase
 	{
-		// Token: 0x06044727 RID: 280359 RVA: 0x010E1F6C File Offset: 0x010E016C
+		// Token: 0x0603A887 RID: 239751 RVA: 0x0108C0F8 File Offset: 0x0108A2F8
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			if (inConditionInfo.LimitParamsLength == 0)
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return limitParams != null && InventoryModel.Instance.GetItemCountByConfigId(int.Parse(limitParams), 0) >= needNum;
 		}
 
-		// Token: 0x06044728 RID: 280360 RVA: 0x010E1FB8 File Offset: 0x010E01B8
+		// Token: 0x0603A888 RID: 239752 RVA: 0x0108C144 File Offset: 0x0108A344
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			if (inConditionInfo == null)

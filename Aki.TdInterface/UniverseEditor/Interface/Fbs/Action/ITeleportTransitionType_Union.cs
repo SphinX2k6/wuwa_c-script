@@ -2,34 +2,34 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073A6 RID: 29606
+	// Token: 0x02007B8D RID: 31629
 	public enum ITeleportTransitionType_Union : byte
 	{
-		// Token: 0x040121CE RID: 74190
+		// Token: 0x040131E7 RID: 78311
 		NONE,
-		// Token: 0x040121CF RID: 74191
+		// Token: 0x040131E8 RID: 78312
 		ITeleportTransitionType,
-		// Token: 0x040121D0 RID: 74192
+		// Token: 0x040131E9 RID: 78313
 		ITeleportTransitionWithMp4,
-		// Token: 0x040121D1 RID: 74193
+		// Token: 0x040131EA RID: 78314
 		ITeleportTransitionWithEffect,
-		// Token: 0x040121D2 RID: 74194
+		// Token: 0x040131EB RID: 78315
 		ITeleportTransitionWithCenterText,
-		// Token: 0x040121D3 RID: 74195
+		// Token: 0x040131EC RID: 78316
 		ITeleportTransitionWithFadeInScreen,
-		// Token: 0x040121D4 RID: 74196
+		// Token: 0x040131ED RID: 78317
 		ITeleportTransitionInDigitalScreen,
-		// Token: 0x040121D5 RID: 74197
+		// Token: 0x040131EE RID: 78318
 		ITeleportTransitionWithCustomLoading,
-		// Token: 0x040121D6 RID: 74198
+		// Token: 0x040131EF RID: 78319
 		ITeleportTransitionWithSpecialCustomLoading,
-		// Token: 0x040121D7 RID: 74199
+		// Token: 0x040131F0 RID: 78320
 		ITeleportTransitionWithPlayFlow,
-		// Token: 0x040121D8 RID: 74200
+		// Token: 0x040131F1 RID: 78321
 		ITeleportTransitionWithCustomScreen,
-		// Token: 0x040121D9 RID: 74201
+		// Token: 0x040131F2 RID: 78322
 		ITeleportTransitionInSeamlessType,
-		// Token: 0x040121DA RID: 74202
+		// Token: 0x040131F3 RID: 78323
 		ITeleportTransitionWithCharacterDisplay
 	}
 }

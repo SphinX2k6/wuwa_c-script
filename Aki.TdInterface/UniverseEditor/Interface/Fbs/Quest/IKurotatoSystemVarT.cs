@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EF4 RID: 16116
+	// Token: 0x02004332 RID: 17202
 	public class IKurotatoSystemVarT
 	{
-		// Token: 0x17006FCC RID: 28620
-		// (get) Token: 0x06016CDE RID: 93406 RVA: 0x0034A1B7 File Offset: 0x003483B7
-		// (set) Token: 0x06016CDF RID: 93407 RVA: 0x0034A1BF File Offset: 0x003483BF
+		// Token: 0x170075BB RID: 30139
+		// (get) Token: 0x06018335 RID: 99125 RVA: 0x00373383 File Offset: 0x00371583
+		// (set) Token: 0x06018336 RID: 99126 RVA: 0x0037338B File Offset: 0x0037158B
 		public EKurotatoSystemVarType VarType { get; set; }
 
-		// Token: 0x17006FCD RID: 28621
-		// (get) Token: 0x06016CE0 RID: 93408 RVA: 0x0034A1C8 File Offset: 0x003483C8
-		// (set) Token: 0x06016CE1 RID: 93409 RVA: 0x0034A1D0 File Offset: 0x003483D0
+		// Token: 0x170075BC RID: 30140
+		// (get) Token: 0x06018337 RID: 99127 RVA: 0x00373394 File Offset: 0x00371594
+		// (set) Token: 0x06018338 RID: 99128 RVA: 0x0037339C File Offset: 0x0037159C
 		public TVarRefUnion VarRef { get; set; }
 
-		// Token: 0x06016CE2 RID: 93410 RVA: 0x0034A1D9 File Offset: 0x003483D9
+		// Token: 0x06018339 RID: 99129 RVA: 0x003733A5 File Offset: 0x003715A5
 		public IKurotatoSystemVarT()
 		{
 			this.VarType = EKurotatoSystemVarType.Gold;

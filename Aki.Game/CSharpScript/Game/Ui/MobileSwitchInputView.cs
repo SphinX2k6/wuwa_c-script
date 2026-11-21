@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046B4 RID: 18100
+	// Token: 0x020035E5 RID: 13797
 	public class MobileSwitchInputView : UiViewBase
 	{
-		// Token: 0x0602EAE6 RID: 191206 RVA: 0x00ACDEDB File Offset: 0x00ACC0DB
+		// Token: 0x06023232 RID: 143922 RVA: 0x009FC7AF File Offset: 0x009FA9AF
 		[NullableContext(1)]
 		public MobileSwitchInputView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0602EAE7 RID: 191207 RVA: 0x00ACDEE4 File Offset: 0x00ACC0E4
+		// Token: 0x06023233 RID: 143923 RVA: 0x009FC7B8 File Offset: 0x009FA9B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Ui
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602EAE8 RID: 191208 RVA: 0x00ACDF50 File Offset: 0x00ACC150
+		// Token: 0x06023234 RID: 143924 RVA: 0x009FC824 File Offset: 0x009FAA24
 		protected override void OnStart()
 		{
 			bool flag = (bool)this.OpenParam;
@@ -46,19 +46,19 @@ namespace CSharpScript.Game.Ui
 			item2.SetUIActive(flag);
 		}
 
-		// Token: 0x0602EAE9 RID: 191209 RVA: 0x00ACDF91 File Offset: 0x00ACC191
+		// Token: 0x06023235 RID: 143925 RVA: 0x009FC865 File Offset: 0x009FAA65
 		protected override void OnAfterPlayStartSequence()
 		{
 			base.CloseMe(new Action<bool>(MobileSwitchInputController.Instance.ReOpenBattleView));
 		}
 
-		// Token: 0x0200A8F3 RID: 43251
+		// Token: 0x020092AE RID: 37550
 		private class EComponentDefine
 		{
-			// Token: 0x040336CF RID: 210639
+			// Token: 0x0402DE63 RID: 188003
 			public const int MobileTex = 0;
 
-			// Token: 0x040336D0 RID: 210640
+			// Token: 0x0402DE64 RID: 188004
 			public const int GamepadTex = 1;
 		}
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A9A RID: 2714
+	// Token: 0x02000B6F RID: 2927
 	public class ConfigWorldLevelById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003FB1 RID: 16305 RVA: 0x001C287C File Offset: 0x001C0A7C
+		// Token: 0x060044AF RID: 17583 RVA: 0x001E1C10 File Offset: 0x001DFE10
 		static ConfigWorldLevelById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWorldLevelById.CreateStaticDefaultValue), new Action(ConfigWorldLevelById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003FB2 RID: 16306 RVA: 0x001C289C File Offset: 0x001C0A9C
+		// Token: 0x060044B0 RID: 17584 RVA: 0x001E1C30 File Offset: 0x001DFE30
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWorldLevelById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003FB3 RID: 16307 RVA: 0x001C291B File Offset: 0x001C0B1B
+		// Token: 0x060044B1 RID: 17585 RVA: 0x001E1CAF File Offset: 0x001DFEAF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWorldLevelById.LogPair = null;
 			ConfigWorldLevelById.HandleId = 0;
 		}
 
-		// Token: 0x06003FB4 RID: 16308 RVA: 0x001C2929 File Offset: 0x001C0B29
+		// Token: 0x060044B2 RID: 17586 RVA: 0x001E1CBD File Offset: 0x001DFEBD
 		public static void Init()
 		{
 			ConfigWorldLevelById.HandleId = ConfigCommon.InitDataStatement(ConfigWorldLevelById.HandleId, "db_worldlevel.db", "select BinData from `WorldLevel` where Id = ?");
 		}
 
-		// Token: 0x06003FB5 RID: 16309 RVA: 0x001C2944 File Offset: 0x001C0B44
+		// Token: 0x060044B3 RID: 17587 RVA: 0x001E1CD8 File Offset: 0x001DFED8
 		public static WorldLevel? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWorldLevelById.HandleId, ConfigWorldLevelById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new WorldLevel?(rootAsWorldLevel);
 		}
 
-		// Token: 0x04004A1C RID: 18972
+		// Token: 0x04004FEF RID: 20463
 		private const string DB = "db_worldlevel.db";
 
-		// Token: 0x04004A1D RID: 18973
+		// Token: 0x04004FF0 RID: 20464
 		private const string FILE = "s.世界等级.xlsx";
 
-		// Token: 0x04004A1E RID: 18974
+		// Token: 0x04004FF1 RID: 20465
 		private const string TABLE = "WorldLevel";
 
-		// Token: 0x04004A1F RID: 18975
+		// Token: 0x04004FF2 RID: 20466
 		private const string COMMAND = "select BinData from `WorldLevel` where Id = ?";
 
-		// Token: 0x04004A20 RID: 18976
+		// Token: 0x04004FF3 RID: 20467
 		private const string KEY_PREFIX = "WorldLevelById";
 
-		// Token: 0x04004A21 RID: 18977
+		// Token: 0x04004FF4 RID: 20468
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004A22 RID: 18978
+		// Token: 0x04004FF5 RID: 20469
 		private static int HandleId;
 	}
 }

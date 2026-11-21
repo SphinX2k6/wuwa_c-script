@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E69 RID: 24169
+	// Token: 0x02004E4E RID: 20046
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AutoPilotCirclePathResult
 	{
-		// Token: 0x0603D72A RID: 251690 RVA: 0x00ED315C File Offset: 0x00ED135C
+		// Token: 0x060326BA RID: 206522 RVA: 0x00E246CC File Offset: 0x00E228CC
 		public AutoPilotCirclePathResult(int circleId, bool isInCircle)
 		{
 			this.CircleId = circleId;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.CircleRoadWaysIds = ((config != null) ? config.GetValueOrDefault().GetWaySplinesArray() : null);
 		}
 
-		// Token: 0x0603D72B RID: 251691 RVA: 0x00ED31F4 File Offset: 0x00ED13F4
+		// Token: 0x060326BB RID: 206523 RVA: 0x00E24764 File Offset: 0x00E22964
 		public void RefreshPathToCircleDataInAutoPilot(float? _ = null)
 		{
 			CharacterActorComponent actorComp = AutoPilotModel.Instance.ActorComp;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			AutoPilotUtil.ProcessSplinePointsForAutoPilotRoute(this.PathToCircleRoadWays[num2.Value], this.PathToCircleSplinePoints, actorComp.ActorLocationProxy, this.RoadWaySplinePointsMap);
 		}
 
-		// Token: 0x0603D72C RID: 251692 RVA: 0x00ED32D8 File Offset: 0x00ED14D8
+		// Token: 0x060326BC RID: 206524 RVA: 0x00E24848 File Offset: 0x00E22A48
 		public void RefreshPathToCircleData()
 		{
 			if (this.IsInCircle)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			AutoPilotController.Instance.AddTick(new Action<float?>(this.RefreshPathToCircleDataInAutoPilot));
 		}
 
-		// Token: 0x0603D72D RID: 251693 RVA: 0x00ED3430 File Offset: 0x00ED1630
+		// Token: 0x060326BD RID: 206525 RVA: 0x00E249A0 File Offset: 0x00E22BA0
 		[NullableContext(2)]
 		public UAutopilotRoute GenerateAutopilotRoute()
 		{
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return TransportNetworkController.Instance.GetAssembleAutopilotRoute(this.CircleRoadWaysIds, true, AutoPilotModel.Instance.IsDebugMode);
 		}
 
-		// Token: 0x0603D72E RID: 251694 RVA: 0x00ED34D4 File Offset: 0x00ED16D4
+		// Token: 0x060326BE RID: 206526 RVA: 0x00E24A44 File Offset: 0x00E22C44
 		public void RefreshIsInCircle(bool isInCircle)
 		{
 			if (this.IsInCircle == isInCircle)
@@ -145,35 +145,35 @@ namespace CSharpScript.Game.Module.AutoPilot
 			EventSystem.Instance.Emit<bool>(EEventName.OnCircleStateChange, isInCircle);
 		}
 
-		// Token: 0x0603D72F RID: 251695 RVA: 0x00ED3511 File Offset: 0x00ED1711
+		// Token: 0x060326BF RID: 206527 RVA: 0x00E24A81 File Offset: 0x00E22C81
 		public bool GetIsInCircle()
 		{
 			return this.IsInCircle;
 		}
 
-		// Token: 0x04020107 RID: 131335
+		// Token: 0x0401ABCE RID: 109518
 		public int MapId;
 
-		// Token: 0x04020108 RID: 131336
+		// Token: 0x0401ABCF RID: 109519
 		public int CircleId;
 
-		// Token: 0x04020109 RID: 131337
+		// Token: 0x0401ABD0 RID: 109520
 		[Nullable(2)]
 		public int[] CircleRoadWaysIds;
 
-		// Token: 0x0402010A RID: 131338
+		// Token: 0x0401ABD1 RID: 109521
 		public readonly TArray<FVector2D> PathToCircleSplinePoints = new TArray<FVector2D>();
 
-		// Token: 0x0402010B RID: 131339
+		// Token: 0x0401ABD2 RID: 109522
 		private readonly List<UKuroRoadway> PathToCircleRoadWays = new List<UKuroRoadway>();
 
-		// Token: 0x0402010C RID: 131340
+		// Token: 0x0401ABD3 RID: 109523
 		private bool IsInCircle;
 
-		// Token: 0x0402010D RID: 131341
+		// Token: 0x0401ABD4 RID: 109524
 		public readonly global::Vector EnterCirclePoint = global::Vector.Create();
 
-		// Token: 0x0402010E RID: 131342
+		// Token: 0x0401ABD5 RID: 109525
 		private readonly Dictionary<int, List<double>> RoadWaySplinePointsMap = new Dictionary<int, List<double>>();
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F92 RID: 3986
+	// Token: 0x02001079 RID: 4217
 	public struct RacingBetsSeason : IFlatbufferObject
 	{
-		// Token: 0x17002CDB RID: 11483
-		// (get) Token: 0x0600B8C1 RID: 47297 RVA: 0x002D6B54 File Offset: 0x002D4D54
+		// Token: 0x17002D53 RID: 11603
+		// (get) Token: 0x0600BEFE RID: 48894 RVA: 0x002F3404 File Offset: 0x002F1604
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8C2 RID: 47298 RVA: 0x002D6B61 File Offset: 0x002D4D61
+		// Token: 0x0600BEFF RID: 48895 RVA: 0x002F3411 File Offset: 0x002F1611
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B8C3 RID: 47299 RVA: 0x002D6B68 File Offset: 0x002D4D68
+		// Token: 0x0600BF00 RID: 48896 RVA: 0x002F3418 File Offset: 0x002F1618
 		public static RacingBetsSeason GetRootAsRacingBetsSeason(ByteBuffer _bb)
 		{
 			return RacingBetsSeason.GetRootAsRacingBetsSeason(_bb, default(RacingBetsSeason));
 		}
 
-		// Token: 0x0600B8C4 RID: 47300 RVA: 0x002D6B84 File Offset: 0x002D4D84
+		// Token: 0x0600BF01 RID: 48897 RVA: 0x002F3434 File Offset: 0x002F1634
 		public static RacingBetsSeason GetRootAsRacingBetsSeason(ByteBuffer _bb, RacingBetsSeason obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B8C5 RID: 47301 RVA: 0x002D6BA1 File Offset: 0x002D4DA1
+		// Token: 0x0600BF02 RID: 48898 RVA: 0x002F3451 File Offset: 0x002F1651
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B8C6 RID: 47302 RVA: 0x002D6BB0 File Offset: 0x002D4DB0
+		// Token: 0x0600BF03 RID: 48899 RVA: 0x002F3460 File Offset: 0x002F1660
 		public RacingBetsSeason __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002CDC RID: 11484
-		// (get) Token: 0x0600B8C7 RID: 47303 RVA: 0x002D6BC0 File Offset: 0x002D4DC0
+		// Token: 0x17002D54 RID: 11604
+		// (get) Token: 0x0600BF04 RID: 48900 RVA: 0x002F3470 File Offset: 0x002F1670
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CDD RID: 11485
-		// (get) Token: 0x0600B8C8 RID: 47304 RVA: 0x002D6BFC File Offset: 0x002D4DFC
+		// Token: 0x17002D55 RID: 11605
+		// (get) Token: 0x0600BF05 RID: 48901 RVA: 0x002F34AC File Offset: 0x002F16AC
 		public int MoneyId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CDE RID: 11486
-		// (get) Token: 0x0600B8C9 RID: 47305 RVA: 0x002D6C38 File Offset: 0x002D4E38
+		// Token: 0x17002D56 RID: 11606
+		// (get) Token: 0x0600BF06 RID: 48902 RVA: 0x002F34E8 File Offset: 0x002F16E8
 		public int MoneyUpperLimitCount
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CDF RID: 11487
-		// (get) Token: 0x0600B8CA RID: 47306 RVA: 0x002D6C74 File Offset: 0x002D4E74
+		// Token: 0x17002D57 RID: 11607
+		// (get) Token: 0x0600BF07 RID: 48903 RVA: 0x002F3524 File Offset: 0x002F1724
 		public int EndReward
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8CB RID: 47307 RVA: 0x002D6CB4 File Offset: 0x002D4EB4
+		// Token: 0x0600BF08 RID: 48904 RVA: 0x002F3564 File Offset: 0x002F1764
 		public int GroupMatches(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002CE0 RID: 11488
-		// (get) Token: 0x0600B8CC RID: 47308 RVA: 0x002D6CF4 File Offset: 0x002D4EF4
+		// Token: 0x17002D58 RID: 11608
+		// (get) Token: 0x0600BF09 RID: 48905 RVA: 0x002F35A4 File Offset: 0x002F17A4
 		public int GroupMatchesLength
 		{
 			get
@@ -135,19 +135,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8CD RID: 47309 RVA: 0x002D6D20 File Offset: 0x002D4F20
+		// Token: 0x0600BF0A RID: 48906 RVA: 0x002F35D0 File Offset: 0x002F17D0
 		public Span<int> GetGroupMatchesBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600B8CE RID: 47310 RVA: 0x002D6D30 File Offset: 0x002D4F30
+		// Token: 0x0600BF0B RID: 48907 RVA: 0x002F35E0 File Offset: 0x002F17E0
 		public int[] GetGroupMatchesArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600B8CF RID: 47311 RVA: 0x002D6D48 File Offset: 0x002D4F48
+		// Token: 0x0600BF0C RID: 48908 RVA: 0x002F35F8 File Offset: 0x002F17F8
 		public int EliminateMatches(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -158,8 +158,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002CE1 RID: 11489
-		// (get) Token: 0x0600B8D0 RID: 47312 RVA: 0x002D6D88 File Offset: 0x002D4F88
+		// Token: 0x17002D59 RID: 11609
+		// (get) Token: 0x0600BF0D RID: 48909 RVA: 0x002F3638 File Offset: 0x002F1838
 		public int EliminateMatchesLength
 		{
 			get
@@ -173,19 +173,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8D1 RID: 47313 RVA: 0x002D6DB4 File Offset: 0x002D4FB4
+		// Token: 0x0600BF0E RID: 48910 RVA: 0x002F3664 File Offset: 0x002F1864
 		public Span<int> GetEliminateMatchesBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x0600B8D2 RID: 47314 RVA: 0x002D6DC4 File Offset: 0x002D4FC4
+		// Token: 0x0600BF0F RID: 48911 RVA: 0x002F3674 File Offset: 0x002F1874
 		public int[] GetEliminateMatchesArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600B8D3 RID: 47315 RVA: 0x002D6DDC File Offset: 0x002D4FDC
+		// Token: 0x0600BF10 RID: 48912 RVA: 0x002F368C File Offset: 0x002F188C
 		public int EliminateMatchesSecond(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -196,8 +196,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002CE2 RID: 11490
-		// (get) Token: 0x0600B8D4 RID: 47316 RVA: 0x002D6E1C File Offset: 0x002D501C
+		// Token: 0x17002D5A RID: 11610
+		// (get) Token: 0x0600BF11 RID: 48913 RVA: 0x002F36CC File Offset: 0x002F18CC
 		public int EliminateMatchesSecondLength
 		{
 			get
@@ -211,20 +211,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8D5 RID: 47317 RVA: 0x002D6E48 File Offset: 0x002D5048
+		// Token: 0x0600BF12 RID: 48914 RVA: 0x002F36F8 File Offset: 0x002F18F8
 		public Span<int> GetEliminateMatchesSecondBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x0600B8D6 RID: 47318 RVA: 0x002D6E58 File Offset: 0x002D5058
+		// Token: 0x0600BF13 RID: 48915 RVA: 0x002F3708 File Offset: 0x002F1908
 		public int[] GetEliminateMatchesSecondArray()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002CE3 RID: 11491
-		// (get) Token: 0x0600B8D7 RID: 47319 RVA: 0x002D6E70 File Offset: 0x002D5070
+		// Token: 0x17002D5B RID: 11611
+		// (get) Token: 0x0600BF14 RID: 48916 RVA: 0x002F3720 File Offset: 0x002F1920
 		public int FinalMatches
 		{
 			get
@@ -238,8 +238,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CE4 RID: 11492
-		// (get) Token: 0x0600B8D8 RID: 47320 RVA: 0x002D6EB0 File Offset: 0x002D50B0
+		// Token: 0x17002D5C RID: 11612
+		// (get) Token: 0x0600BF15 RID: 48917 RVA: 0x002F3760 File Offset: 0x002F1960
 		public int FinalCurtainGroupMatch
 		{
 			get
@@ -253,8 +253,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CE5 RID: 11493
-		// (get) Token: 0x0600B8D9 RID: 47321 RVA: 0x002D6EF0 File Offset: 0x002D50F0
+		// Token: 0x17002D5D RID: 11613
+		// (get) Token: 0x0600BF16 RID: 48918 RVA: 0x002F37A0 File Offset: 0x002F19A0
 		public int FinalCurtainEliminateMatch
 		{
 			get
@@ -268,7 +268,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8DA RID: 47322 RVA: 0x002D6F30 File Offset: 0x002D5130
+		// Token: 0x0600BF17 RID: 48919 RVA: 0x002F37E0 File Offset: 0x002F19E0
 		public int OddsUpdate(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -279,8 +279,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002CE6 RID: 11494
-		// (get) Token: 0x0600B8DB RID: 47323 RVA: 0x002D6F70 File Offset: 0x002D5170
+		// Token: 0x17002D5E RID: 11614
+		// (get) Token: 0x0600BF18 RID: 48920 RVA: 0x002F3820 File Offset: 0x002F1A20
 		public int OddsUpdateLength
 		{
 			get
@@ -294,20 +294,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8DC RID: 47324 RVA: 0x002D6F9C File Offset: 0x002D519C
+		// Token: 0x0600BF19 RID: 48921 RVA: 0x002F384C File Offset: 0x002F1A4C
 		public Span<int> GetOddsUpdateBytes()
 		{
 			return this.__p.__vector_as_span<int>(24, 4);
 		}
 
-		// Token: 0x0600B8DD RID: 47325 RVA: 0x002D6FAC File Offset: 0x002D51AC
+		// Token: 0x0600BF1A RID: 48922 RVA: 0x002F385C File Offset: 0x002F1A5C
 		public int[] GetOddsUpdateArray()
 		{
 			return this.__p.__vector_as_array<int>(24) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002CE7 RID: 11495
-		// (get) Token: 0x0600B8DE RID: 47326 RVA: 0x002D6FC4 File Offset: 0x002D51C4
+		// Token: 0x17002D5F RID: 11615
+		// (get) Token: 0x0600BF1B RID: 48923 RVA: 0x002F3874 File Offset: 0x002F1A74
 		public int GearNum
 		{
 			get
@@ -321,8 +321,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CE8 RID: 11496
-		// (get) Token: 0x0600B8DF RID: 47327 RVA: 0x002D7004 File Offset: 0x002D5204
+		// Token: 0x17002D60 RID: 11616
+		// (get) Token: 0x0600BF1C RID: 48924 RVA: 0x002F38B4 File Offset: 0x002F1AB4
 		public int LegMatchRoundMinTime
 		{
 			get
@@ -336,8 +336,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CE9 RID: 11497
-		// (get) Token: 0x0600B8E0 RID: 47328 RVA: 0x002D7044 File Offset: 0x002D5244
+		// Token: 0x17002D61 RID: 11617
+		// (get) Token: 0x0600BF1D RID: 48925 RVA: 0x002F38F4 File Offset: 0x002F1AF4
 		public int DungeonInstanceId
 		{
 			get
@@ -351,8 +351,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CEA RID: 11498
-		// (get) Token: 0x0600B8E1 RID: 47329 RVA: 0x002D7084 File Offset: 0x002D5284
+		// Token: 0x17002D62 RID: 11618
+		// (get) Token: 0x0600BF1E RID: 48926 RVA: 0x002F3934 File Offset: 0x002F1B34
 		public int DungeonEntranceId
 		{
 			get
@@ -366,8 +366,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CEB RID: 11499
-		// (get) Token: 0x0600B8E2 RID: 47330 RVA: 0x002D70C4 File Offset: 0x002D52C4
+		// Token: 0x17002D63 RID: 11619
+		// (get) Token: 0x0600BF1F RID: 48927 RVA: 0x002F3974 File Offset: 0x002F1B74
 		public int ButtleScreenCD
 		{
 			get
@@ -381,8 +381,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CEC RID: 11500
-		// (get) Token: 0x0600B8E3 RID: 47331 RVA: 0x002D7104 File Offset: 0x002D5304
+		// Token: 0x17002D64 RID: 11620
+		// (get) Token: 0x0600BF20 RID: 48928 RVA: 0x002F39B4 File Offset: 0x002F1BB4
 		public int RandomSeedIndex
 		{
 			get
@@ -396,8 +396,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CED RID: 11501
-		// (get) Token: 0x0600B8E4 RID: 47332 RVA: 0x002D7144 File Offset: 0x002D5344
+		// Token: 0x17002D65 RID: 11621
+		// (get) Token: 0x0600BF21 RID: 48929 RVA: 0x002F39F4 File Offset: 0x002F1BF4
 		public int EndMailId
 		{
 			get
@@ -411,8 +411,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CEE RID: 11502
-		// (get) Token: 0x0600B8E5 RID: 47333 RVA: 0x002D7184 File Offset: 0x002D5384
+		// Token: 0x17002D66 RID: 11622
+		// (get) Token: 0x0600BF22 RID: 48930 RVA: 0x002F3A34 File Offset: 0x002F1C34
 		public int CalcRankDelay
 		{
 			get
@@ -426,79 +426,71 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8E6 RID: 47334 RVA: 0x002D71C4 File Offset: 0x002D53C4
+		// Token: 0x0600BF23 RID: 48931 RVA: 0x002F3A71 File Offset: 0x002F1C71
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用EliminateMatchesIter()或GetEliminateMatchesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] EliminateMatches()
+		public int[] EliminateMatches()
 		{
-			RacingBetsSeason racingBetsSeason = this;
-			return racingBetsSeason.GetEliminateMatchesArray() ?? Array.Empty<int>();
+			return this.GetEliminateMatchesArray();
 		}
 
-		// Token: 0x0600B8E7 RID: 47335 RVA: 0x002D71E8 File Offset: 0x002D53E8
+		// Token: 0x0600BF24 RID: 48932 RVA: 0x002F3A79 File Offset: 0x002F1C79
 		[NullableContext(1)]
-		public readonly IEnumerable<int> EliminateMatchesIter()
+		public IEnumerable<int> EliminateMatchesIter()
 		{
 			RacingBetsSeason.<EliminateMatchesIter>d__59 <EliminateMatchesIter>d__ = new RacingBetsSeason.<EliminateMatchesIter>d__59(-2);
 			<EliminateMatchesIter>d__.<>3__<>4__this = this;
 			return <EliminateMatchesIter>d__;
 		}
 
-		// Token: 0x0600B8E8 RID: 47336 RVA: 0x002D7200 File Offset: 0x002D5400
+		// Token: 0x0600BF25 RID: 48933 RVA: 0x002F3A8E File Offset: 0x002F1C8E
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用EliminateMatchesSecondIter()或GetEliminateMatchesSecondBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] EliminateMatchesSecond()
+		public int[] EliminateMatchesSecond()
 		{
-			RacingBetsSeason racingBetsSeason = this;
-			return racingBetsSeason.GetEliminateMatchesSecondArray() ?? Array.Empty<int>();
+			return this.GetEliminateMatchesSecondArray();
 		}
 
-		// Token: 0x0600B8E9 RID: 47337 RVA: 0x002D7224 File Offset: 0x002D5424
+		// Token: 0x0600BF26 RID: 48934 RVA: 0x002F3A96 File Offset: 0x002F1C96
 		[NullableContext(1)]
-		public readonly IEnumerable<int> EliminateMatchesSecondIter()
+		public IEnumerable<int> EliminateMatchesSecondIter()
 		{
 			RacingBetsSeason.<EliminateMatchesSecondIter>d__61 <EliminateMatchesSecondIter>d__ = new RacingBetsSeason.<EliminateMatchesSecondIter>d__61(-2);
 			<EliminateMatchesSecondIter>d__.<>3__<>4__this = this;
 			return <EliminateMatchesSecondIter>d__;
 		}
 
-		// Token: 0x0600B8EA RID: 47338 RVA: 0x002D723C File Offset: 0x002D543C
+		// Token: 0x0600BF27 RID: 48935 RVA: 0x002F3AAB File Offset: 0x002F1CAB
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GroupMatchesIter()或GetGroupMatchesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GroupMatches()
+		public int[] GroupMatches()
 		{
-			RacingBetsSeason racingBetsSeason = this;
-			return racingBetsSeason.GetGroupMatchesArray() ?? Array.Empty<int>();
+			return this.GetGroupMatchesArray();
 		}
 
-		// Token: 0x0600B8EB RID: 47339 RVA: 0x002D7260 File Offset: 0x002D5460
+		// Token: 0x0600BF28 RID: 48936 RVA: 0x002F3AB3 File Offset: 0x002F1CB3
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GroupMatchesIter()
+		public IEnumerable<int> GroupMatchesIter()
 		{
 			RacingBetsSeason.<GroupMatchesIter>d__63 <GroupMatchesIter>d__ = new RacingBetsSeason.<GroupMatchesIter>d__63(-2);
 			<GroupMatchesIter>d__.<>3__<>4__this = this;
 			return <GroupMatchesIter>d__;
 		}
 
-		// Token: 0x0600B8EC RID: 47340 RVA: 0x002D7278 File Offset: 0x002D5478
+		// Token: 0x0600BF29 RID: 48937 RVA: 0x002F3AC8 File Offset: 0x002F1CC8
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用OddsUpdateIter()或GetOddsUpdateBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] OddsUpdate()
+		public int[] OddsUpdate()
 		{
-			RacingBetsSeason racingBetsSeason = this;
-			return racingBetsSeason.GetOddsUpdateArray() ?? Array.Empty<int>();
+			return this.GetOddsUpdateArray();
 		}
 
-		// Token: 0x0600B8ED RID: 47341 RVA: 0x002D729C File Offset: 0x002D549C
+		// Token: 0x0600BF2A RID: 48938 RVA: 0x002F3AD0 File Offset: 0x002F1CD0
 		[NullableContext(1)]
-		public readonly IEnumerable<int> OddsUpdateIter()
+		public IEnumerable<int> OddsUpdateIter()
 		{
 			RacingBetsSeason.<OddsUpdateIter>d__65 <OddsUpdateIter>d__ = new RacingBetsSeason.<OddsUpdateIter>d__65(-2);
 			<OddsUpdateIter>d__.<>3__<>4__this = this;
 			return <OddsUpdateIter>d__;
 		}
 
-		// Token: 0x04005062 RID: 20578
+		// Token: 0x04005649 RID: 22089
 		private Table __p;
 	}
 }

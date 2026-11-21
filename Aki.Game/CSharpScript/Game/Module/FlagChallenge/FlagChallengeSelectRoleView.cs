@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -13,13 +12,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A75 RID: 23157
+	// Token: 0x02004A51 RID: 19025
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeSelectRoleView : UiViewBase
 	{
-		// Token: 0x17008BFC RID: 35836
-		// (get) Token: 0x0603AAB9 RID: 240313 RVA: 0x00DF882A File Offset: 0x00DF6A2A
+		// Token: 0x17005FCA RID: 24522
+		// (get) Token: 0x0602FA02 RID: 195074 RVA: 0x00D48DAE File Offset: 0x00D46FAE
 		[Nullable(2)]
 		public new FlagChallengeSelectRoleViewParams OpenParam
 		{
@@ -30,12 +29,12 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AABA RID: 240314 RVA: 0x00DF8837 File Offset: 0x00DF6A37
+		// Token: 0x0602FA03 RID: 195075 RVA: 0x00D48DBB File Offset: 0x00D46FBB
 		public FlagChallengeSelectRoleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603AABB RID: 240315 RVA: 0x00DF884C File Offset: 0x00DF6A4C
+		// Token: 0x0602FA04 RID: 195076 RVA: 0x00D48DD0 File Offset: 0x00D46FD0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -63,7 +62,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AABC RID: 240316 RVA: 0x00DF89F0 File Offset: 0x00DF6BF0
+		// Token: 0x0602FA05 RID: 195077 RVA: 0x00D48F74 File Offset: 0x00D47174
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FlagChallengeSelectRoleView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AABD RID: 240317 RVA: 0x00DF8A34 File Offset: 0x00DF6C34
+		// Token: 0x0602FA06 RID: 195078 RVA: 0x00D48FB8 File Offset: 0x00D471B8
 		protected override void OnStart()
 		{
 			this.PopupCaption = new PopupCaptionItem(base.GetItem(0));
@@ -103,7 +102,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.GetItem(14).SetUIActive(!strongholdData.IsPass && totalLevel < strongholdConfig.Value.RecommendLevel);
 		}
 
-		// Token: 0x0603AABE RID: 240318 RVA: 0x00DF8C34 File Offset: 0x00DF6E34
+		// Token: 0x0602FA07 RID: 195079 RVA: 0x00D491B8 File Offset: 0x00D473B8
 		protected override void OnBeforeDestroy()
 		{
 			List<int> formationRoleIdList = this.GetFormationRoleIdList();
@@ -111,7 +110,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			RoleSelectModel.Instance.ClearData();
 		}
 
-		// Token: 0x0603AABF RID: 240319 RVA: 0x00DF8C68 File Offset: 0x00DF6E68
+		// Token: 0x0602FA08 RID: 195080 RVA: 0x00D491EC File Offset: 0x00D473EC
 		private void InitViewData()
 		{
 			FlagChallengeSelectRoleViewParams openParam = this.OpenParam;
@@ -169,7 +168,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AAC0 RID: 240320 RVA: 0x00DF8EC4 File Offset: 0x00DF70C4
+		// Token: 0x0602FA09 RID: 195081 RVA: 0x00D49448 File Offset: 0x00D47648
 		private void RefreshScrollView(List<RoleDataBase> ownRoleList)
 		{
 			List<FlagChallengeRoleCategoryItemData> list = new List<FlagChallengeRoleCategoryItemData>();
@@ -204,7 +203,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}, false);
 		}
 
-		// Token: 0x0603AAC1 RID: 240321 RVA: 0x00DF8FB0 File Offset: 0x00DF71B0
+		// Token: 0x0602FA0A RID: 195082 RVA: 0x00D49534 File Offset: 0x00D47734
 		private List<RoleDataBase> GetTrialRoleDataList()
 		{
 			List<RoleDataBase> list = new List<RoleDataBase>();
@@ -226,7 +225,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return list;
 		}
 
-		// Token: 0x0603AAC2 RID: 240322 RVA: 0x00DF9058 File Offset: 0x00DF7258
+		// Token: 0x0602FA0B RID: 195083 RVA: 0x00D495DC File Offset: 0x00D477DC
 		private List<int> GetTrialRoleIdList()
 		{
 			int instId = FlagChallengeConfig.Instance.GetLevelConfig(this.LevelId).Value.InstId;
@@ -242,10 +241,10 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			{
 				return new List<int>();
 			}
-			return fightFormation.Value.TrialRoleIter().ToList<int>();
+			return new List<int>(fightFormation.Value.TrialRoleIter());
 		}
 
-		// Token: 0x0603AAC3 RID: 240323 RVA: 0x00DF9104 File Offset: 0x00DF7304
+		// Token: 0x0602FA0C RID: 195084 RVA: 0x00D49688 File Offset: 0x00D47888
 		private void RefreshFormationRoles()
 		{
 			RoleSelectModel instance = RoleSelectModel.Instance;
@@ -264,7 +263,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.RoleLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603AAC4 RID: 240324 RVA: 0x00DF9164 File Offset: 0x00DF7364
+		// Token: 0x0602FA0D RID: 195085 RVA: 0x00D496E8 File Offset: 0x00D478E8
 		private List<int> GetFormationRoleIdList()
 		{
 			List<int> list = new List<int>();
@@ -279,7 +278,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return list;
 		}
 
-		// Token: 0x0603AAC5 RID: 240325 RVA: 0x00DF91A8 File Offset: 0x00DF73A8
+		// Token: 0x0602FA0E RID: 195086 RVA: 0x00D4972C File Offset: 0x00D4792C
 		private void UpdateRoleList(List<RoleDataBase> list, bool isShowText, EFilterSortType _)
 		{
 			Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -302,26 +301,26 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.RefreshScrollView(list2);
 		}
 
-		// Token: 0x0603AAC6 RID: 240326 RVA: 0x00DF9244 File Offset: 0x00DF7444
+		// Token: 0x0602FA0F RID: 195087 RVA: 0x00D497C8 File Offset: 0x00D479C8
 		private FlagChallengeRoleCategoryItem CreateRoleCategoryItem()
 		{
 			return new FlagChallengeRoleCategoryItem();
 		}
 
-		// Token: 0x0603AAC7 RID: 240327 RVA: 0x00DF924B File Offset: 0x00DF744B
+		// Token: 0x0602FA10 RID: 195088 RVA: 0x00D497CF File Offset: 0x00D479CF
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603AAC8 RID: 240328 RVA: 0x00DF9254 File Offset: 0x00DF7454
+		// Token: 0x0602FA11 RID: 195089 RVA: 0x00D497D8 File Offset: 0x00D479D8
 		private void OnHelpClick()
 		{
 			int formationHelpId = FlagChallengeConfig.Instance.GetFormationHelpId();
 			HelpController.Instance.OpenHelpById(formationHelpId);
 		}
 
-		// Token: 0x0603AAC9 RID: 240329 RVA: 0x00DF9278 File Offset: 0x00DF7478
+		// Token: 0x0602FA12 RID: 195090 RVA: 0x00D497FC File Offset: 0x00D479FC
 		private void OnConfirmBtnClick()
 		{
 			List<int> ids = this.GetFormationRoleIdList();
@@ -344,11 +343,11 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			FlagChallengeController.Instance.RequestChallenge(levelConfig.Value.InstId, this.StrongholdId, ids);
 		}
 
-		// Token: 0x0603AACA RID: 240330 RVA: 0x00DF9340 File Offset: 0x00DF7540
+		// Token: 0x0602FA13 RID: 195091 RVA: 0x00D498C4 File Offset: 0x00D47AC4
 		private void OnDetailBtnClick()
 		{
 			IEnumerable<int> trialRoleIdList = this.GetTrialRoleIdList();
-			List<int> roleIdList = RoleModel.Instance.GetRoleIdList();
+			List<int> roleIdList = RoleModel.Instance.GetRoleIdList(null);
 			List<int> list = new List<int>(trialRoleIdList);
 			list.AddRange(roleIdList);
 			HashSet<int> selectedRoleSet = RoleSelectModel.Instance.SelectedRoleSet;
@@ -370,7 +369,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			});
 		}
 
-		// Token: 0x0603AACB RID: 240331 RVA: 0x00DF9404 File Offset: 0x00DF7604
+		// Token: 0x0602FA14 RID: 195092 RVA: 0x00D4998C File Offset: 0x00D47B8C
 		private bool CanSelectRole(int roleId, EToggleState state)
 		{
 			if (state != EToggleState.ETT_UnChecked)
@@ -382,7 +381,10 @@ namespace CSharpScript.Game.Module.FlagChallenge
 				ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamRoleFull", Array.Empty<object>());
 				return false;
 			}
-			if (RoleUtils.HasSameRole(roleId, RoleSelectModel.Instance.SelectedRoleSet.ToArray<int>(), null))
+			HashSet<int> selectedRoleSet = RoleSelectModel.Instance.SelectedRoleSet;
+			int[] array = new int[selectedRoleSet.Count];
+			selectedRoleSet.CopyTo(array);
+			if (RoleUtils.HasSameRole(roleId, array, null))
 			{
 				ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamSameRole", Array.Empty<object>());
 				return false;
@@ -390,7 +392,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return true;
 		}
 
-		// Token: 0x0603AACC RID: 240332 RVA: 0x00DF9478 File Offset: 0x00DF7678
+		// Token: 0x0602FA15 RID: 195093 RVA: 0x00D49A0C File Offset: 0x00D47C0C
 		private void OnSelectRole(int roleId, EToggleState state)
 		{
 			RoleSelectModel instance = RoleSelectModel.Instance;
@@ -422,7 +424,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.RefreshFormationRoles();
 		}
 
-		// Token: 0x0603AACD RID: 240333 RVA: 0x00DF954C File Offset: 0x00DF774C
+		// Token: 0x0602FA16 RID: 195094 RVA: 0x00D49AE0 File Offset: 0x00D47CE0
 		private FlagChallengeFormationRoleItem CreateFormationRoleItem()
 		{
 			FlagChallengeFormationRoleItem flagChallengeFormationRoleItem = new FlagChallengeFormationRoleItem();
@@ -430,7 +432,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return flagChallengeFormationRoleItem;
 		}
 
-		// Token: 0x0603AACE RID: 240334 RVA: 0x00DF9565 File Offset: 0x00DF7765
+		// Token: 0x0602FA17 RID: 195095 RVA: 0x00D49AF9 File Offset: 0x00D47CF9
 		private void OnClickFormationRoleItem(int roleId)
 		{
 			if (!RoleSelectModel.Instance.SelectedRoleSet.Contains(roleId))
@@ -441,22 +443,22 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			EventSystem.Instance.Emit<int>(EEventName.OnFlagChallengeRoleSelectCategoryUpdate, roleId);
 		}
 
-		// Token: 0x0401E9DB RID: 125403
+		// Token: 0x04019482 RID: 103554
 		private int ActivityId;
 
-		// Token: 0x0401E9DC RID: 125404
+		// Token: 0x04019483 RID: 103555
 		private int LevelId;
 
-		// Token: 0x0401E9DD RID: 125405
+		// Token: 0x04019484 RID: 103556
 		private int StrongholdId;
 
-		// Token: 0x0401E9DE RID: 125406
+		// Token: 0x04019485 RID: 103557
 		private PopupCaptionItem PopupCaption;
 
-		// Token: 0x0401E9DF RID: 125407
+		// Token: 0x04019486 RID: 103558
 		private GenericScrollViewNew<FlagChallengeRoleCategoryItem, FlagChallengeRoleCategoryItemData> RoleCategoryScroll;
 
-		// Token: 0x0401E9E0 RID: 125408
+		// Token: 0x04019487 RID: 103559
 		[Nullable(new byte[]
 		{
 			2,
@@ -464,13 +466,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 		})]
 		private FilterSortEntrance<RoleDataBase> FilterSortEntrance;
 
-		// Token: 0x0401E9E1 RID: 125409
+		// Token: 0x04019488 RID: 103560
 		private FlagChallengeStrongholdPanel StrongholdPanel;
 
-		// Token: 0x0401E9E2 RID: 125410
+		// Token: 0x04019489 RID: 103561
 		private List<RoleDataBase> RoleDataList = new List<RoleDataBase>();
 
-		// Token: 0x0401E9E3 RID: 125411
+		// Token: 0x0401948A RID: 103562
 		private GenericLayout<FlagChallengeFormationRoleItem, IFlagChallengeFormationRoleItemData> RoleLayout;
 	}
 }

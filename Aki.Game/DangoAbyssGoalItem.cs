@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001A36 RID: 6710
+// Token: 0x02000EF5 RID: 3829
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class DangoAbyssGoalItem : GridProxyAbstract<GoalPanelData>
 {
-	// Token: 0x0600C55D RID: 50525 RVA: 0x002CC840 File Offset: 0x002CAA40
+	// Token: 0x0600996D RID: 39277 RVA: 0x002D7964 File Offset: 0x002D5B64
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -27,7 +27,7 @@ public class DangoAbyssGoalItem : GridProxyAbstract<GoalPanelData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C55E RID: 50526 RVA: 0x002CC8A9 File Offset: 0x002CAAA9
+	// Token: 0x0600996E RID: 39278 RVA: 0x002D79CD File Offset: 0x002D5BCD
 	[NullableContext(1)]
 	public override void Refresh(GoalPanelData data, bool isSelected, int gridIndex)
 	{
@@ -35,12 +35,12 @@ public class DangoAbyssGoalItem : GridProxyAbstract<GoalPanelData>
 		base.GetText(1).SetText(data.Desc ?? "", true);
 	}
 
-	// Token: 0x02007F7F RID: 32639
+	// Token: 0x0200710E RID: 28942
 	private enum EGoalComponent
 	{
-		// Token: 0x040299ED RID: 170477
+		// Token: 0x04024D2A RID: 150826
 		Desc,
-		// Token: 0x040299EE RID: 170478
+		// Token: 0x04024D2B RID: 150827
 		GoalText
 	}
 }

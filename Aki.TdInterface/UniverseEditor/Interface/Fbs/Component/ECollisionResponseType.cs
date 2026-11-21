@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D80 RID: 19840
+	// Token: 0x02005281 RID: 21121
 	public enum ECollisionResponseType : byte
 	{
-		// Token: 0x0400D855 RID: 55381
+		// Token: 0x0400E397 RID: 58263
 		Ignore,
-		// Token: 0x0400D856 RID: 55382
+		// Token: 0x0400E398 RID: 58264
 		Overlap,
-		// Token: 0x0400D857 RID: 55383
+		// Token: 0x0400E399 RID: 58265
 		Block
 	}
 }

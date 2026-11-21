@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F11 RID: 3857
+	// Token: 0x02001027 RID: 4135
 	public class ICiacconaAvgBoard_SetValue
 	{
-		// Token: 0x0400339F RID: 13215
+		// Token: 0x040036AC RID: 13996
 		public EShowUiType Type;
 
-		// Token: 0x040033A0 RID: 13216
+		// Token: 0x040036AD RID: 13997
 		public int? EndingId;
 	}
 }

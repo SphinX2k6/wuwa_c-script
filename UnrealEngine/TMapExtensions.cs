@@ -3,42 +3,42 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000075 RID: 117
+	// Token: 0x0200005A RID: 90
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class TMapExtensions
 	{
-		// Token: 0x06000E4C RID: 3660 RVA: 0x0001534A File Offset: 0x0001354A
+		// Token: 0x060009DE RID: 2526 RVA: 0x00010052 File Offset: 0x0000E252
 		public static void CopyTo<K, [Nullable(2)] V>(this TMap<K, V> Self, IntPtr Dest)
 		{
 			FCScriptMapHelperWrapper.CopyTo(Dest, Self.NativePtr);
 		}
 
-		// Token: 0x06000E4D RID: 3661 RVA: 0x00015358 File Offset: 0x00013558
+		// Token: 0x060009DF RID: 2527 RVA: 0x00010060 File Offset: 0x0000E260
 		public static void MoveTo<K, [Nullable(2)] V>(this TMap<K, V> Self, IntPtr Dest)
 		{
 			FCScriptMapHelperWrapper.MoveTo(Dest, Self.NativePtr);
 		}
 
-		// Token: 0x06000E4E RID: 3662 RVA: 0x00015366 File Offset: 0x00013566
+		// Token: 0x060009E0 RID: 2528 RVA: 0x0001006E File Offset: 0x0000E26E
 		public static void CopyTo<K, [Nullable(2)] V>(this TMap<K, V> Self, TMap<K, V> Dest)
 		{
 			FCScriptMapHelperWrapper.CopyTo(Dest.NativeMapPtr, Self.NativePtr);
 		}
 
-		// Token: 0x06000E4F RID: 3663 RVA: 0x00015379 File Offset: 0x00013579
+		// Token: 0x060009E1 RID: 2529 RVA: 0x00010081 File Offset: 0x0000E281
 		public static void CopyAssign<K, [Nullable(2)] V>(this TMap<K, V> Self, TMap<K, V> Src)
 		{
 			FCScriptMapHelperWrapper.CopyTo(Self.NativeMapPtr, Src.NativePtr);
 		}
 
-		// Token: 0x06000E50 RID: 3664 RVA: 0x0001538C File Offset: 0x0001358C
+		// Token: 0x060009E2 RID: 2530 RVA: 0x00010094 File Offset: 0x0000E294
 		public static void MoveTo<K, [Nullable(2)] V>(this TMap<K, V> Self, TMap<K, V> Dest)
 		{
 			FCScriptMapHelperWrapper.MoveTo(Dest.NativeMapPtr, Self.NativePtr);
 		}
 
-		// Token: 0x06000E51 RID: 3665 RVA: 0x0001539F File Offset: 0x0001359F
+		// Token: 0x060009E3 RID: 2531 RVA: 0x000100A7 File Offset: 0x0000E2A7
 		public static void MoveAssign<K, [Nullable(2)] V>(this TMap<K, V> Self, TMap<K, V> Src)
 		{
 			FCScriptMapHelperWrapper.MoveTo(Self.NativeMapPtr, Src.NativePtr);

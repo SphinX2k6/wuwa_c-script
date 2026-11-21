@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011A2 RID: 4514
+	// Token: 0x020012D8 RID: 4824
 	public struct WeekCardContent : IFlatbufferObject
 	{
-		// Token: 0x17003E56 RID: 15958
-		// (get) Token: 0x0600E8F7 RID: 59639 RVA: 0x00345118 File Offset: 0x00343318
+		// Token: 0x170041BB RID: 16827
+		// (get) Token: 0x0600F668 RID: 63080 RVA: 0x0036FDA4 File Offset: 0x0036DFA4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8F8 RID: 59640 RVA: 0x00345125 File Offset: 0x00343325
+		// Token: 0x0600F669 RID: 63081 RVA: 0x0036FDB1 File Offset: 0x0036DFB1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E8F9 RID: 59641 RVA: 0x0034512C File Offset: 0x0034332C
+		// Token: 0x0600F66A RID: 63082 RVA: 0x0036FDB8 File Offset: 0x0036DFB8
 		public static WeekCardContent GetRootAsWeekCardContent(ByteBuffer _bb)
 		{
 			return WeekCardContent.GetRootAsWeekCardContent(_bb, default(WeekCardContent));
 		}
 
-		// Token: 0x0600E8FA RID: 59642 RVA: 0x00345148 File Offset: 0x00343348
+		// Token: 0x0600F66B RID: 63083 RVA: 0x0036FDD4 File Offset: 0x0036DFD4
 		public static WeekCardContent GetRootAsWeekCardContent(ByteBuffer _bb, WeekCardContent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E8FB RID: 59643 RVA: 0x00345165 File Offset: 0x00343365
+		// Token: 0x0600F66C RID: 63084 RVA: 0x0036FDF1 File Offset: 0x0036DFF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E8FC RID: 59644 RVA: 0x00345174 File Offset: 0x00343374
+		// Token: 0x0600F66D RID: 63085 RVA: 0x0036FE00 File Offset: 0x0036E000
 		public WeekCardContent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003E57 RID: 15959
-		// (get) Token: 0x0600E8FD RID: 59645 RVA: 0x00345184 File Offset: 0x00343384
+		// Token: 0x170041BC RID: 16828
+		// (get) Token: 0x0600F66E RID: 63086 RVA: 0x0036FE10 File Offset: 0x0036E010
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E58 RID: 15960
-		// (get) Token: 0x0600E8FE RID: 59646 RVA: 0x003451C0 File Offset: 0x003433C0
+		// Token: 0x170041BD RID: 16829
+		// (get) Token: 0x0600F66F RID: 63087 RVA: 0x0036FE4C File Offset: 0x0036E04C
 		public string RewardTexture
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8FF RID: 59647 RVA: 0x003451F7 File Offset: 0x003433F7
+		// Token: 0x0600F670 RID: 63088 RVA: 0x0036FE83 File Offset: 0x0036E083
 		public Span<byte> GetRewardTextureBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600E900 RID: 59648 RVA: 0x00345206 File Offset: 0x00343406
+		// Token: 0x0600F671 RID: 63089 RVA: 0x0036FE92 File Offset: 0x0036E092
 		public byte[] GetRewardTextureArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x040052EE RID: 21230
+		// Token: 0x04005931 RID: 22833
 		private Table __p;
 	}
 }

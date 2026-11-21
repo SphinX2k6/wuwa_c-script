@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F06 RID: 3846
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200101C RID: 4124
 	public class ICheckTrapDefenseEventCondition : IQuestCondition
 	{
-		// Token: 0x060054D0 RID: 21712 RVA: 0x000CFFB4 File Offset: 0x000CE1B4
+		// Token: 0x06005A4C RID: 23116 RVA: 0x000DC15C File Offset: 0x000DA35C
 		private ICheckTrapDefenseEventCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060054D1 RID: 21713 RVA: 0x000CFFEC File Offset: 0x000CE1EC
+		// Token: 0x06005A4D RID: 23117 RVA: 0x000DC194 File Offset: 0x000DA394
 		public static ICheckTrapDefenseEventCondition Create([Nullable(2)] ICheckTrapDefenseEventCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054D2 RID: 21714 RVA: 0x000CFFFF File Offset: 0x000CE1FF
+		// Token: 0x06005A4E RID: 23118 RVA: 0x000DC1A7 File Offset: 0x000DA3A7
 		public static ICheckTrapDefenseEventCondition CreateFromSetValue([Nullable(2)] ICheckTrapDefenseEventCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054D3 RID: 21715 RVA: 0x000D0012 File Offset: 0x000CE212
+		// Token: 0x06005A4F RID: 23119 RVA: 0x000DC1BA File Offset: 0x000DA3BA
 		public new ICheckTrapDefenseEventCondition_SetValue ToSetValue()
 		{
 			return new ICheckTrapDefenseEventCondition_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C60 RID: 7264
-		// (get) Token: 0x060054D4 RID: 21716 RVA: 0x000D003D File Offset: 0x000CE23D
-		// (set) Token: 0x060054D5 RID: 21717 RVA: 0x000D0068 File Offset: 0x000CE268
+		// Token: 0x17001DF8 RID: 7672
+		// (get) Token: 0x06005A50 RID: 23120 RVA: 0x000DC1E5 File Offset: 0x000DA3E5
+		// (set) Token: 0x06005A51 RID: 23121 RVA: 0x000DC210 File Offset: 0x000DA410
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C61 RID: 7265
-		// (get) Token: 0x060054D6 RID: 21718 RVA: 0x000D0078 File Offset: 0x000CE278
-		// (set) Token: 0x060054D7 RID: 21719 RVA: 0x000D00D9 File Offset: 0x000CE2D9
+		// Token: 0x17001DF9 RID: 7673
+		// (get) Token: 0x06005A52 RID: 23122 RVA: 0x000DC220 File Offset: 0x000DA420
+		// (set) Token: 0x06005A53 RID: 23123 RVA: 0x000DC281 File Offset: 0x000DA481
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C62 RID: 7266
-		// (get) Token: 0x060054D8 RID: 21720 RVA: 0x000D00EE File Offset: 0x000CE2EE
-		// (set) Token: 0x060054D9 RID: 21721 RVA: 0x000D0115 File Offset: 0x000CE315
+		// Token: 0x17001DFA RID: 7674
+		// (get) Token: 0x06005A54 RID: 23124 RVA: 0x000DC296 File Offset: 0x000DA496
+		// (set) Token: 0x06005A55 RID: 23125 RVA: 0x000DC2BD File Offset: 0x000DA4BD
 		public virtual ICheckTrapDefenseEventBase Config
 		{
 			get
@@ -142,18 +140,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003355 RID: 13141
+		// Token: 0x04003662 RID: 13922
 		[Nullable(2)]
 		protected new ICheckTrapDefenseEventCondition FbInstance;
 
-		// Token: 0x04003356 RID: 13142
+		// Token: 0x04003663 RID: 13923
 		[Nullable(2)]
 		protected new ICheckTrapDefenseEventCondition_SetValue PocoInterface;
 
-		// Token: 0x04003357 RID: 13143
+		// Token: 0x04003664 RID: 13924
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003358 RID: 13144
+		// Token: 0x04003665 RID: 13925
 		private bool _PreConditionsInited;
 	}
 }

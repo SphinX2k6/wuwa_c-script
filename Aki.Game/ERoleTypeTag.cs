@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020027D8 RID: 10200
+// Token: 0x02001D53 RID: 7507
 public enum ERoleTypeTag
 {
-	// Token: 0x04009DA6 RID: 40358
+	// Token: 0x0400A18F RID: 41359
 	Forecast,
-	// Token: 0x04009DA7 RID: 40359
+	// Token: 0x0400A190 RID: 41360
 	Rerun,
-	// Token: 0x04009DA8 RID: 40360
+	// Token: 0x0400A191 RID: 41361
 	Summon,
-	// Token: 0x04009DA9 RID: 40361
+	// Token: 0x0400A192 RID: 41362
 	None
 }

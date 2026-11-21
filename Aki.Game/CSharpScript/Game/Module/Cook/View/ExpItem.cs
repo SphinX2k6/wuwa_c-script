@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B1E RID: 23326
+	// Token: 0x02004AFF RID: 19199
 	public class ExpItem : UiPanelBase
 	{
-		// Token: 0x0603B0C5 RID: 241861 RVA: 0x00E13FC6 File Offset: 0x00E121C6
+		// Token: 0x06030037 RID: 196663 RVA: 0x00D64CDF File Offset: 0x00D62EDF
 		[NullableContext(1)]
 		public ExpItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B0C6 RID: 241862 RVA: 0x00E13FDC File Offset: 0x00E121DC
+		// Token: 0x06030038 RID: 196664 RVA: 0x00D64CF4 File Offset: 0x00D62EF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B0C7 RID: 241863 RVA: 0x00E14088 File Offset: 0x00E12288
+		// Token: 0x06030039 RID: 196665 RVA: 0x00D64DA0 File Offset: 0x00D62FA0
 		public void SetExpSprite(int last, int sum)
 		{
 			double num = MathUtils.Instance.GetFloatPointFloor((double)last / (double)sum, 3);
@@ -43,34 +43,34 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetSprite(0).SetFillAmount((float)num);
 		}
 
-		// Token: 0x0603B0C8 RID: 241864 RVA: 0x00E140CD File Offset: 0x00E122CD
+		// Token: 0x0603003A RID: 196666 RVA: 0x00D64DE5 File Offset: 0x00D62FE5
 		public void SetAddText(int add)
 		{
 			base.GetText(1).SetText(add.ToString(), true);
 		}
 
-		// Token: 0x0603B0C9 RID: 241865 RVA: 0x00E140E3 File Offset: 0x00E122E3
+		// Token: 0x0603003B RID: 196667 RVA: 0x00D64DFB File Offset: 0x00D62FFB
 		public void SetLastText(int last)
 		{
 			base.GetText(2).SetText(last.ToString(), true);
 		}
 
-		// Token: 0x0603B0CA RID: 241866 RVA: 0x00E140F9 File Offset: 0x00E122F9
+		// Token: 0x0603003C RID: 196668 RVA: 0x00D64E11 File Offset: 0x00D63011
 		public void SetSumText(int sum)
 		{
 			base.GetText(3).SetText(sum.ToString(), true);
 		}
 
-		// Token: 0x0200BD56 RID: 48470
+		// Token: 0x0200A75F RID: 42847
 		private enum EExpItemDefine
 		{
-			// Token: 0x040391B3 RID: 233907
+			// Token: 0x04033B7F RID: 211839
 			ExpSprite,
-			// Token: 0x040391B4 RID: 233908
+			// Token: 0x04033B80 RID: 211840
 			AddText,
-			// Token: 0x040391B5 RID: 233909
+			// Token: 0x04033B81 RID: 211841
 			LastText,
-			// Token: 0x040391B6 RID: 233910
+			// Token: 0x04033B82 RID: 211842
 			SumText
 		}
 	}

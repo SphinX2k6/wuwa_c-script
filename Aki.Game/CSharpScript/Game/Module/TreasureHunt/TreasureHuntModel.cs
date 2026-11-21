@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TreasureHunt
 {
-	// Token: 0x02004A14 RID: 18964
+	// Token: 0x020039BC RID: 14780
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class TreasureHuntModel : ModelBase
 	{
-		// Token: 0x060313A8 RID: 201640 RVA: 0x00B6A578 File Offset: 0x00B68778
+		// Token: 0x06026138 RID: 155960 RVA: 0x00AAE574 File Offset: 0x00AAC774
 		protected override bool OnInit()
 		{
 			IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("TreasureCompassTrackInfo");
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			return true;
 		}
 
-		// Token: 0x060313A9 RID: 201641 RVA: 0x00B6A5AB File Offset: 0x00B687AB
+		// Token: 0x06026139 RID: 155961 RVA: 0x00AAE5A7 File Offset: 0x00AAC7A7
 		protected override bool OnLeaveLevel()
 		{
 			this.TreasureMap = null;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			return true;
 		}
 
-		// Token: 0x060313AA RID: 201642 RVA: 0x00B6A5D6 File Offset: 0x00B687D6
+		// Token: 0x0602613A RID: 155962 RVA: 0x00AAE5D2 File Offset: 0x00AAC7D2
 		public bool IsCompassActive()
 		{
 			return this.IsCompassActiveInternal;
 		}
 
-		// Token: 0x060313AB RID: 201643 RVA: 0x00B6A5DE File Offset: 0x00B687DE
+		// Token: 0x0602613B RID: 155963 RVA: 0x00AAE5DA File Offset: 0x00AAC7DA
 		public void SetCompassActive(bool isActive)
 		{
 			bool flag = isActive != this.IsCompassActiveInternal;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			}
 		}
 
-		// Token: 0x060313AC RID: 201644 RVA: 0x00B6A608 File Offset: 0x00B68808
+		// Token: 0x0602613C RID: 155964 RVA: 0x00AAE604 File Offset: 0x00AAC804
 		public void AddCompassTrack(int entityId)
 		{
 			if (this.TreasureMap == null)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			TreasureHuntController.Instance.SetCompassActive(true, EShowTrackReason.TrackCount, true);
 		}
 
-		// Token: 0x060313AD RID: 201645 RVA: 0x00B6A904 File Offset: 0x00B68B04
+		// Token: 0x0602613D RID: 155965 RVA: 0x00AAE900 File Offset: 0x00AACB00
 		public void RemoveCompassTrack(int entityId)
 		{
 			if (this.TreasureMap == null)
@@ -135,32 +135,32 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			}
 		}
 
-		// Token: 0x060313AE RID: 201646 RVA: 0x00B6A959 File Offset: 0x00B68B59
+		// Token: 0x0602613E RID: 155966 RVA: 0x00AAE955 File Offset: 0x00AACB55
 		public bool IsEnableCompassTrack(EVehicleType vehicleType)
 		{
 			return vehicleType == EVehicleType.Gongduola || vehicleType == EVehicleType.FishingBoat;
 		}
 
-		// Token: 0x060313AF RID: 201647 RVA: 0x00B6A964 File Offset: 0x00B68B64
+		// Token: 0x0602613F RID: 155967 RVA: 0x00AAE960 File Offset: 0x00AACB60
 		public bool IsInTracking(int entityId)
 		{
 			Dictionary<int, ITreasureData> treasureMap = this.TreasureMap;
 			return treasureMap != null && treasureMap.ContainsKey(entityId);
 		}
 
-		// Token: 0x060313B0 RID: 201648 RVA: 0x00B6A978 File Offset: 0x00B68B78
+		// Token: 0x06026140 RID: 155968 RVA: 0x00AAE974 File Offset: 0x00AACB74
 		public void SetNearbyTrack(int entityId)
 		{
 			this.NearbyTrackingEntityId = entityId;
 		}
 
-		// Token: 0x060313B1 RID: 201649 RVA: 0x00B6A981 File Offset: 0x00B68B81
+		// Token: 0x06026141 RID: 155969 RVA: 0x00AAE97D File Offset: 0x00AACB7D
 		public void ClearNearbyTrack()
 		{
 			this.NearbyTrackingEntityId = 0;
 		}
 
-		// Token: 0x060313B2 RID: 201650 RVA: 0x00B6A98A File Offset: 0x00B68B8A
+		// Token: 0x06026142 RID: 155970 RVA: 0x00AAE986 File Offset: 0x00AACB86
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			return this.TreasureMap;
 		}
 
-		// Token: 0x060313B3 RID: 201651 RVA: 0x00B6A994 File Offset: 0x00B68B94
+		// Token: 0x06026143 RID: 155971 RVA: 0x00AAE990 File Offset: 0x00AACB90
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			return this.TreasureList;
 		}
 
-		// Token: 0x060313B4 RID: 201652 RVA: 0x00B6AA68 File Offset: 0x00B68C68
+		// Token: 0x06026144 RID: 155972 RVA: 0x00AAEA64 File Offset: 0x00AACC64
 		private int CompareDistance(ITreasureData treasureData1, ITreasureData treasureData2)
 		{
 			if (treasureData1.DistSquared == null || treasureData2.DistSquared == null)
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			return treasureData1.DistSquared.Value.CompareTo(treasureData2.DistSquared.Value);
 		}
 
-		// Token: 0x060313B5 RID: 201653 RVA: 0x00B6AABC File Offset: 0x00B68CBC
+		// Token: 0x06026145 RID: 155973 RVA: 0x00AAEAB8 File Offset: 0x00AACCB8
 		public void SetDetectVehicleType(EVehicleType? vehicleType)
 		{
 			this.DetectVehicleType = vehicleType;
@@ -245,8 +245,8 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			}
 		}
 
-		// Token: 0x17007A15 RID: 31253
-		// (get) Token: 0x060313B6 RID: 201654 RVA: 0x00B6AB48 File Offset: 0x00B68D48
+		// Token: 0x17004DC2 RID: 19906
+		// (get) Token: 0x06026146 RID: 155974 RVA: 0x00AAEB44 File Offset: 0x00AACD44
 		public static TreasureHuntModel Instance
 		{
 			get
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			}
 		}
 
-		// Token: 0x060313B7 RID: 201655 RVA: 0x00B6AB4F File Offset: 0x00B68D4F
+		// Token: 0x06026147 RID: 155975 RVA: 0x00AAEB4B File Offset: 0x00AACD4B
 		public static TreasureHuntModel GetOrCreateInstance()
 		{
 			if (TreasureHuntModel._Instance == null)
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			return TreasureHuntModel._Instance;
 		}
 
-		// Token: 0x060313B8 RID: 201656 RVA: 0x00B6AB63 File Offset: 0x00B68D63
+		// Token: 0x06026148 RID: 155976 RVA: 0x00AAEB5F File Offset: 0x00AACD5F
 		public static bool CreateInstance()
 		{
 			if (TreasureHuntModel._Instance != null)
@@ -276,27 +276,27 @@ namespace CSharpScript.Game.Module.TreasureHunt
 			return true;
 		}
 
-		// Token: 0x060313B9 RID: 201657 RVA: 0x00B6AB79 File Offset: 0x00B68D79
+		// Token: 0x06026149 RID: 155977 RVA: 0x00AAEB75 File Offset: 0x00AACD75
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060313BA RID: 201658 RVA: 0x00B6AB7B File Offset: 0x00B68D7B
+		// Token: 0x0602614A RID: 155978 RVA: 0x00AAEB77 File Offset: 0x00AACD77
 		public static void ResetStaticDefaultValue()
 		{
 			TreasureHuntModel._Instance = null;
 		}
 
-		// Token: 0x060313BB RID: 201659 RVA: 0x00B6AB83 File Offset: 0x00B68D83
+		// Token: 0x0602614B RID: 155979 RVA: 0x00AAEB7F File Offset: 0x00AACD7F
 		static TreasureHuntModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TreasureHuntModel.CreateStaticDefaultValue), new Action(TreasureHuntModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A526 RID: 107814
+		// Token: 0x04014E7D RID: 85629
 		public const float NEARBY_TRACK_DIST_DEFAULT = 2000f;
 
-		// Token: 0x0401A527 RID: 107815
+		// Token: 0x04014E7E RID: 85630
 		[Nullable(new byte[]
 		{
 			2,
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.TreasureHunt
 		})]
 		private Dictionary<int, ITreasureData> TreasureMap;
 
-		// Token: 0x0401A528 RID: 107816
+		// Token: 0x04014E7F RID: 85631
 		[Nullable(new byte[]
 		{
 			2,
@@ -312,19 +312,19 @@ namespace CSharpScript.Game.Module.TreasureHunt
 		})]
 		private List<ITreasureData> TreasureList;
 
-		// Token: 0x0401A529 RID: 107817
+		// Token: 0x04014E80 RID: 85632
 		private bool IsCompassActiveInternal;
 
-		// Token: 0x0401A52A RID: 107818
+		// Token: 0x04014E81 RID: 85633
 		private int NearbyTrackingEntityId;
 
-		// Token: 0x0401A52B RID: 107819
+		// Token: 0x04014E82 RID: 85634
 		private float NearbyTrackDist = 2000f;
 
-		// Token: 0x0401A52C RID: 107820
+		// Token: 0x04014E83 RID: 85635
 		private EVehicleType? DetectVehicleType;
 
-		// Token: 0x0401A52D RID: 107821
+		// Token: 0x04014E84 RID: 85636
 		[Nullable(2)]
 		private static TreasureHuntModel _Instance;
 	}

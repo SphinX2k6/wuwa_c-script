@@ -8,54 +8,54 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001292 RID: 4754
+// Token: 0x02000746 RID: 1862
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class LifePointDrawActivityController : ActivityControllerBase
 {
-	// Token: 0x060081FD RID: 33277 RVA: 0x001B90B8 File Offset: 0x001B72B8
+	// Token: 0x06005594 RID: 21908 RVA: 0x001C1D88 File Offset: 0x001BFF88
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x060081FE RID: 33278 RVA: 0x001B90BA File Offset: 0x001B72BA
+	// Token: 0x06005595 RID: 21909 RVA: 0x001C1D8A File Offset: 0x001BFF8A
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityColorfulMain";
 	}
 
-	// Token: 0x060081FF RID: 33279 RVA: 0x001B90C1 File Offset: 0x001B72C1
+	// Token: 0x06005596 RID: 21910 RVA: 0x001C1D91 File Offset: 0x001BFF91
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new LifePointSubView();
 	}
 
-	// Token: 0x06008200 RID: 33280 RVA: 0x001B90C8 File Offset: 0x001B72C8
+	// Token: 0x06005597 RID: 21911 RVA: 0x001C1D98 File Offset: 0x001BFF98
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new LifePointDrawActivityData();
 	}
 
-	// Token: 0x06008201 RID: 33281 RVA: 0x001B90CF File Offset: 0x001B72CF
+	// Token: 0x06005598 RID: 21912 RVA: 0x001C1D9F File Offset: 0x001BFF9F
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06008202 RID: 33282 RVA: 0x001B90D2 File Offset: 0x001B72D2
+	// Token: 0x06005599 RID: 21913 RVA: 0x001C1DA2 File Offset: 0x001BFFA2
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.LifePointChallengeUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnLifePointUpdate));
 	}
 
-	// Token: 0x06008203 RID: 33283 RVA: 0x001B90F0 File Offset: 0x001B72F0
+	// Token: 0x0600559A RID: 21914 RVA: 0x001C1DC0 File Offset: 0x001BFFC0
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.LifePointChallengeUpdateNotify);
 	}
 
-	// Token: 0x06008204 RID: 33284 RVA: 0x001B9102 File Offset: 0x001B7302
+	// Token: 0x0600559B RID: 21915 RVA: 0x001C1DD2 File Offset: 0x001BFFD2
 	[NullableContext(2)]
 	private LifePointDrawActivityData GetActivityDataById(int id)
 	{
@@ -66,7 +66,7 @@ public class LifePointDrawActivityController : ActivityControllerBase
 		return ActivityModel.Instance.GetActivityById(id) as LifePointDrawActivityData;
 	}
 
-	// Token: 0x06008205 RID: 33285 RVA: 0x001B9124 File Offset: 0x001B7324
+	// Token: 0x0600559C RID: 21916 RVA: 0x001C1DF4 File Offset: 0x001BFFF4
 	[NullableContext(2)]
 	private void OnLifePointUpdate(IMessage msg, Net.CallbackStatus _)
 	{
@@ -101,7 +101,7 @@ public class LifePointDrawActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008206 RID: 33286 RVA: 0x001B929C File Offset: 0x001B749C
+	// Token: 0x0600559D RID: 21917 RVA: 0x001C1F6C File Offset: 0x001C016C
 	public void RequestStartChallenge(int activityId, int challengeId)
 	{
 		LifePointChallengeStartRequest lifePointChallengeStartRequest = LifePointChallengeStartRequest.Create();
@@ -112,12 +112,12 @@ public class LifePointDrawActivityController : ActivityControllerBase
 			LifePointChallengeStartResponse lifePointChallengeStartResponse = (LifePointChallengeStartResponse)msg;
 			if (lifePointChallengeStartResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(lifePointChallengeStartResponse.ErrorCode, 29239, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(lifePointChallengeStartResponse.ErrorCode, 22206, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06008207 RID: 33287 RVA: 0x001B92FC File Offset: 0x001B74FC
+	// Token: 0x0600559E RID: 21918 RVA: 0x001C1FCC File Offset: 0x001C01CC
 	[NullableContext(0)]
 	public UniTask<bool> OpenLifePointDrawActivityView()
 	{
@@ -128,8 +128,8 @@ public class LifePointDrawActivityController : ActivityControllerBase
 		return <OpenLifePointDrawActivityView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17000B2C RID: 2860
-	// (get) Token: 0x06008208 RID: 33288 RVA: 0x001B9337 File Offset: 0x001B7537
+	// Token: 0x17000B4C RID: 2892
+	// (get) Token: 0x0600559F RID: 21919 RVA: 0x001C2007 File Offset: 0x001C0207
 	public static LifePointDrawActivityController Instance
 	{
 		get
@@ -138,7 +138,7 @@ public class LifePointDrawActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008209 RID: 33289 RVA: 0x001B933E File Offset: 0x001B753E
+	// Token: 0x060055A0 RID: 21920 RVA: 0x001C200E File Offset: 0x001C020E
 	public static LifePointDrawActivityController GetOrCreateInstance()
 	{
 		if (LifePointDrawActivityController._Instance == null)
@@ -148,7 +148,7 @@ public class LifePointDrawActivityController : ActivityControllerBase
 		return LifePointDrawActivityController._Instance;
 	}
 
-	// Token: 0x0600820A RID: 33290 RVA: 0x001B9352 File Offset: 0x001B7552
+	// Token: 0x060055A1 RID: 21921 RVA: 0x001C2022 File Offset: 0x001C0222
 	public static bool CreateInstance()
 	{
 		if (LifePointDrawActivityController._Instance != null)
@@ -159,24 +159,24 @@ public class LifePointDrawActivityController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x0600820B RID: 33291 RVA: 0x001B9368 File Offset: 0x001B7568
+	// Token: 0x060055A2 RID: 21922 RVA: 0x001C2038 File Offset: 0x001C0238
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600820C RID: 33292 RVA: 0x001B936A File Offset: 0x001B756A
+	// Token: 0x060055A3 RID: 21923 RVA: 0x001C203A File Offset: 0x001C023A
 	public static void ResetStaticDefaultValue()
 	{
 		LifePointDrawActivityController._Instance = null;
 	}
 
-	// Token: 0x0600820D RID: 33293 RVA: 0x001B9372 File Offset: 0x001B7572
+	// Token: 0x060055A4 RID: 21924 RVA: 0x001C2042 File Offset: 0x001C0242
 	static LifePointDrawActivityController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LifePointDrawActivityController.CreateStaticDefaultValue), new Action(LifePointDrawActivityController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003AD1 RID: 15057
+	// Token: 0x04003B69 RID: 15209
 	[Nullable(2)]
 	private static LifePointDrawActivityController _Instance;
 }

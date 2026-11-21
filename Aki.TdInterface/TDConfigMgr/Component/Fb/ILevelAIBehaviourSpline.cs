@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C98 RID: 3224
+	// Token: 0x02000D7A RID: 3450
 	public class ILevelAIBehaviourSpline : ILevelAIBehaviourBase
 	{
-		// Token: 0x060049B9 RID: 18873 RVA: 0x000B8CFE File Offset: 0x000B6EFE
-		[NullableContext(1)]
+		// Token: 0x06004E67 RID: 20071 RVA: 0x000C370E File Offset: 0x000C190E
 		public static ILevelAIBehaviourSpline Create(ILevelAIBehaviourSpline? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001646 RID: 5702
-		// (get) Token: 0x060049BA RID: 18874 RVA: 0x000B8D1D File Offset: 0x000B6F1D
+		// Token: 0x1700176E RID: 5998
+		// (get) Token: 0x06004E68 RID: 20072 RVA: 0x000C372D File Offset: 0x000C192D
 		public override ELevelAIBehaviourType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001647 RID: 5703
-		// (get) Token: 0x060049BB RID: 18875 RVA: 0x000B8D2C File Offset: 0x000B6F2C
+		// Token: 0x1700176F RID: 5999
+		// (get) Token: 0x06004E69 RID: 20073 RVA: 0x000C373C File Offset: 0x000C193C
 		public virtual int? SplineEntityId
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A1B RID: 10779
+		// Token: 0x04002C95 RID: 11413
 		private ILevelAIBehaviourSpline Instance;
 	}
 }

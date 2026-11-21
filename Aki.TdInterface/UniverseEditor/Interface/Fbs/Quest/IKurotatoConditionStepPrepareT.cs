@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EE2 RID: 16098
+	// Token: 0x02004320 RID: 17184
 	public class IKurotatoConditionStepPrepareT
 	{
-		// Token: 0x17006FB7 RID: 28599
-		// (get) Token: 0x06016C5F RID: 93279 RVA: 0x003493F6 File Offset: 0x003475F6
-		// (set) Token: 0x06016C60 RID: 93280 RVA: 0x003493FE File Offset: 0x003475FE
+		// Token: 0x170075A6 RID: 30118
+		// (get) Token: 0x060182B6 RID: 98998 RVA: 0x003725C2 File Offset: 0x003707C2
+		// (set) Token: 0x060182B7 RID: 98999 RVA: 0x003725CA File Offset: 0x003707CA
 		public EKurotatoConditionStep Type { get; set; }
 
-		// Token: 0x06016C61 RID: 93281 RVA: 0x00349407 File Offset: 0x00347607
+		// Token: 0x060182B8 RID: 99000 RVA: 0x003725D3 File Offset: 0x003707D3
 		public IKurotatoConditionStepPrepareT()
 		{
 			this.Type = EKurotatoConditionStep.Prepare;

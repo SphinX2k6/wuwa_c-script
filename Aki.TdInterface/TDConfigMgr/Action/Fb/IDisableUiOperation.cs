@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002952 RID: 10578
+	// Token: 0x02002C34 RID: 11316
 	public class IDisableUiOperation : IUiOperationType
 	{
-		// Token: 0x0600EA89 RID: 60041 RVA: 0x00225772 File Offset: 0x00223972
-		[NullableContext(1)]
+		// Token: 0x0600F8F4 RID: 63732 RVA: 0x00242D52 File Offset: 0x00240F52
 		public static IDisableUiOperation Create(IDisableUiOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049A7 RID: 18855
-		// (get) Token: 0x0600EA8A RID: 60042 RVA: 0x00225791 File Offset: 0x00223991
+		// Token: 0x17004D3A RID: 19770
+		// (get) Token: 0x0600F8F5 RID: 63733 RVA: 0x00242D71 File Offset: 0x00240F71
 		public override EUiOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008142 RID: 33090
+		// Token: 0x0400881E RID: 34846
 		private IDisableUiOperation Instance;
 	}
 }

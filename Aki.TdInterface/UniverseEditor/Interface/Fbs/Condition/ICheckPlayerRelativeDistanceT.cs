@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AFD RID: 19197
+	// Token: 0x02004FD8 RID: 20440
 	public class ICheckPlayerRelativeDistanceT
 	{
-		// Token: 0x17008B3E RID: 35646
-		// (get) Token: 0x0601E2E7 RID: 123623 RVA: 0x0043B899 File Offset: 0x00439A99
-		// (set) Token: 0x0601E2E8 RID: 123624 RVA: 0x0043B8A1 File Offset: 0x00439AA1
+		// Token: 0x1700923F RID: 37439
+		// (get) Token: 0x0601FE28 RID: 130600 RVA: 0x0046D945 File Offset: 0x0046BB45
+		// (set) Token: 0x0601FE29 RID: 130601 RVA: 0x0046D94D File Offset: 0x0046BB4D
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008B3F RID: 35647
-		// (get) Token: 0x0601E2E9 RID: 123625 RVA: 0x0043B8AA File Offset: 0x00439AAA
-		// (set) Token: 0x0601E2EA RID: 123626 RVA: 0x0043B8B2 File Offset: 0x00439AB2
+		// Token: 0x17009240 RID: 37440
+		// (get) Token: 0x0601FE2A RID: 130602 RVA: 0x0046D956 File Offset: 0x0046BB56
+		// (set) Token: 0x0601FE2B RID: 130603 RVA: 0x0046D95E File Offset: 0x0046BB5E
 		public int TargetEntityId { get; set; }
 
-		// Token: 0x17008B40 RID: 35648
-		// (get) Token: 0x0601E2EB RID: 123627 RVA: 0x0043B8BB File Offset: 0x00439ABB
-		// (set) Token: 0x0601E2EC RID: 123628 RVA: 0x0043B8C3 File Offset: 0x00439AC3
+		// Token: 0x17009241 RID: 37441
+		// (get) Token: 0x0601FE2C RID: 130604 RVA: 0x0046D967 File Offset: 0x0046BB67
+		// (set) Token: 0x0601FE2D RID: 130605 RVA: 0x0046D96F File Offset: 0x0046BB6F
 		public List<IDistanceRangeT> ValidDistanceRanges { get; set; }
 
-		// Token: 0x0601E2ED RID: 123629 RVA: 0x0043B8CC File Offset: 0x00439ACC
+		// Token: 0x0601FE2E RID: 130606 RVA: 0x0046D978 File Offset: 0x0046BB78
 		public ICheckPlayerRelativeDistanceT()
 		{
 			this.Type = ECondition.CompareVar;

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E78 RID: 7800
+	// Token: 0x020020AD RID: 8365
 	public class ISkiConfig_SetValue
 	{
-		// Token: 0x040063A9 RID: 25513
+		// Token: 0x0400698D RID: 27021
 		public ESportStateType Type;
 
-		// Token: 0x040063AA RID: 25514
-		[Nullable(1)]
+		// Token: 0x0400698E RID: 27022
 		public ISkiConfigType Config;
 	}
 }

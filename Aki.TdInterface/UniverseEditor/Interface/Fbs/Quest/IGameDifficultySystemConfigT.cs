@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E76 RID: 15990
+	// Token: 0x020042B1 RID: 17073
 	public class IGameDifficultySystemConfigT
 	{
-		// Token: 0x17006EE4 RID: 28388
-		// (get) Token: 0x06016873 RID: 92275 RVA: 0x003416A2 File Offset: 0x0033F8A2
-		// (set) Token: 0x06016874 RID: 92276 RVA: 0x003416AA File Offset: 0x0033F8AA
+		// Token: 0x170074CC RID: 29900
+		// (get) Token: 0x06017EAA RID: 97962 RVA: 0x0036A426 File Offset: 0x00368626
+		// (set) Token: 0x06017EAB RID: 97963 RVA: 0x0036A42E File Offset: 0x0036862E
 		public EEnableSystemType Type { get; set; }
 
-		// Token: 0x06016875 RID: 92277 RVA: 0x003416B3 File Offset: 0x0033F8B3
+		// Token: 0x06017EAC RID: 97964 RVA: 0x0036A437 File Offset: 0x00368637
 		public IGameDifficultySystemConfigT()
 		{
 			this.Type = EEnableSystemType.GradingSystem;

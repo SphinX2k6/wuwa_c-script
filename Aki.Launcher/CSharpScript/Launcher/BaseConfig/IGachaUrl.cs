@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000264 RID: 612
+	// Token: 0x02000269 RID: 617
 	public class IGachaUrl
 	{
-		// Token: 0x040009EE RID: 2542
+		// Token: 0x04000A3A RID: 2618
 		[Nullable(1)]
 		public string GachaRecord;
 	}

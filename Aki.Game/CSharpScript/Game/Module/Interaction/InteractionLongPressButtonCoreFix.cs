@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005857 RID: 22615
+	// Token: 0x0200482F RID: 18479
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InteractionLongPressButtonCoreFix : InteractionLongPressButton
 	{
-		// Token: 0x06039801 RID: 235521 RVA: 0x00DA6F1C File Offset: 0x00DA511C
+		// Token: 0x0602E71E RID: 190238 RVA: 0x00CF5C44 File Offset: 0x00CF3E44
 		protected override void OnRegisterComponent()
 		{
 			this.IsMobile = Info.Instance.IsInTouch();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039802 RID: 235522 RVA: 0x00DA6FAC File Offset: 0x00DA51AC
+		// Token: 0x0602E71F RID: 190239 RVA: 0x00CF5CD4 File Offset: 0x00CF3ED4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InteractionLongPressButtonCoreFix.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.Interaction
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039803 RID: 235523 RVA: 0x00DA6FEF File Offset: 0x00DA51EF
+		// Token: 0x0602E720 RID: 190240 RVA: 0x00CF5D17 File Offset: 0x00CF3F17
 		protected override void ResolveComponents()
 		{
 			this.ProgressRing = base.GetTexture(1);
 			base.SetupPressButton(base.GetButton(0));
 		}
 
-		// Token: 0x06039804 RID: 235524 RVA: 0x00DA700B File Offset: 0x00DA520B
+		// Token: 0x0602E721 RID: 190241 RVA: 0x00CF5D33 File Offset: 0x00CF3F33
 		protected override void SetProgress(float progress)
 		{
 			UUITexture progressRing = this.ProgressRing;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Interaction
 			progressRing.SetFillAmount(progress);
 		}
 
-		// Token: 0x06039805 RID: 235525 RVA: 0x00DA701E File Offset: 0x00DA521E
+		// Token: 0x0602E722 RID: 190242 RVA: 0x00CF5D46 File Offset: 0x00CF3F46
 		protected override void RefreshKeyItem(string actionName)
 		{
 			if (this.KeyItem == null)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.KeyItem.SetActive(true);
 		}
 
-		// Token: 0x06039806 RID: 235526 RVA: 0x00DA7056 File Offset: 0x00DA5256
+		// Token: 0x0602E723 RID: 190243 RVA: 0x00CF5D7E File Offset: 0x00CF3F7E
 		protected override void HideKeyItem()
 		{
 			InputMultiKeyItem keyItem = this.KeyItem;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Interaction
 			keyItem.SetActive(false);
 		}
 
-		// Token: 0x06039807 RID: 235527 RVA: 0x00DA7069 File Offset: 0x00DA5269
+		// Token: 0x0602E724 RID: 190244 RVA: 0x00CF5D91 File Offset: 0x00CF3F91
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
@@ -91,26 +91,26 @@ namespace CSharpScript.Game.Module.Interaction
 			this.KeyItem = null;
 		}
 
-		// Token: 0x0401E103 RID: 123139
+		// Token: 0x04018BA0 RID: 101280
 		private UUITexture ProgressRing;
 
-		// Token: 0x0401E104 RID: 123140
+		// Token: 0x04018BA1 RID: 101281
 		private InputMultiKeyItem KeyItem;
 
-		// Token: 0x0401E105 RID: 123141
+		// Token: 0x04018BA2 RID: 101282
 		private bool IsMobile;
 
-		// Token: 0x0200BA7F RID: 47743
+		// Token: 0x0200A496 RID: 42134
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040385FA RID: 230906
+			// Token: 0x04032FF1 RID: 208881
 			Button,
-			// Token: 0x040385FB RID: 230907
+			// Token: 0x04032FF2 RID: 208882
 			ProgressRing,
-			// Token: 0x040385FC RID: 230908
+			// Token: 0x04032FF3 RID: 208883
 			TipsPop,
-			// Token: 0x040385FD RID: 230909
+			// Token: 0x04032FF4 RID: 208884
 			HotKey
 		}
 	}

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002589 RID: 9609
+// Token: 0x02001A74 RID: 6772
 public enum EPhotoMotionSelectMode
 {
-	// Token: 0x040092BC RID: 37564
+	// Token: 0x04009414 RID: 37908
 	None,
-	// Token: 0x040092BD RID: 37565
+	// Token: 0x04009415 RID: 37909
 	PhotoMontage,
-	// Token: 0x040092BE RID: 37566
+	// Token: 0x04009416 RID: 37910
 	Selfie
 }

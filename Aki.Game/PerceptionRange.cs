@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Perception;
 using UnrealEngine;
 
-// Token: 0x02003286 RID: 12934
+// Token: 0x020027F7 RID: 10231
 [NullableContext(1)]
 [Nullable(0)]
 public class PerceptionRange
 {
-	// Token: 0x0601BFD4 RID: 114644 RVA: 0x007C72F8 File Offset: 0x007C54F8
+	// Token: 0x06019BD8 RID: 105432 RVA: 0x007EE688 File Offset: 0x007EC888
 	public void InitStatic(Vector center, float range, byte group, bool needRecord = false, [Nullable(new byte[]
 	{
 		2,
@@ -54,7 +54,7 @@ public class PerceptionRange
 		}
 	}
 
-	// Token: 0x0601BFD5 RID: 114645 RVA: 0x007C7400 File Offset: 0x007C5600
+	// Token: 0x06019BD9 RID: 105433 RVA: 0x007EE790 File Offset: 0x007EC990
 	public void InitDynamic(uint? entityToken, float range, byte group, [Nullable(new byte[]
 	{
 		2,
@@ -108,7 +108,7 @@ public class PerceptionRange
 		}
 	}
 
-	// Token: 0x0601BFD6 RID: 114646 RVA: 0x007C7550 File Offset: 0x007C5750
+	// Token: 0x06019BDA RID: 105434 RVA: 0x007EE8E0 File Offset: 0x007ECAE0
 	public void Clear()
 	{
 		this.EnterCondition = null;
@@ -128,7 +128,7 @@ public class PerceptionRange
 		}
 	}
 
-	// Token: 0x0601BFD7 RID: 114647 RVA: 0x007C75C0 File Offset: 0x007C57C0
+	// Token: 0x06019BDB RID: 105435 RVA: 0x007EE950 File Offset: 0x007ECB50
 	public void UpdateRange(float range)
 	{
 		if (this.RangeToken == 0U)
@@ -143,7 +143,7 @@ public class PerceptionRange
 		UKuroPerceptionInterface.UpdatePerceptionRange(this.RangeToken, range);
 	}
 
-	// Token: 0x0601BFD8 RID: 114648 RVA: 0x007C760C File Offset: 0x007C580C
+	// Token: 0x06019BDC RID: 105436 RVA: 0x007EE99C File Offset: 0x007ECB9C
 	private bool EnterConditionInternal(object element)
 	{
 		if (this.EnterCondition == null)
@@ -154,7 +154,7 @@ public class PerceptionRange
 		return this.EnterCondition(arg);
 	}
 
-	// Token: 0x0601BFD9 RID: 114649 RVA: 0x007C7638 File Offset: 0x007C5838
+	// Token: 0x06019BDD RID: 105437 RVA: 0x007EE9C8 File Offset: 0x007ECBC8
 	private void voidOnEnterInternal(object element)
 	{
 		Entity entity = element as Entity;
@@ -169,7 +169,7 @@ public class PerceptionRange
 		this.OnEnter(entity);
 	}
 
-	// Token: 0x0601BFDA RID: 114650 RVA: 0x007C767C File Offset: 0x007C587C
+	// Token: 0x06019BDE RID: 105438 RVA: 0x007EEA0C File Offset: 0x007ECC0C
 	private void OnLeaveInternal(object element)
 	{
 		Entity entity = element as Entity;
@@ -184,7 +184,7 @@ public class PerceptionRange
 		this.OnLeave(entity);
 	}
 
-	// Token: 0x0601BFDB RID: 114651 RVA: 0x007C76BF File Offset: 0x007C58BF
+	// Token: 0x06019BDF RID: 105439 RVA: 0x007EEA4F File Offset: 0x007ECC4F
 	private FVectorDouble GetLocationProxyInternal()
 	{
 		if (this.GetLocationProxy == null)
@@ -195,7 +195,7 @@ public class PerceptionRange
 		return this.LocationCache.ToUeVector(false);
 	}
 
-	// Token: 0x0400DD3D RID: 56637
+	// Token: 0x0400E1E3 RID: 57827
 	[Nullable(new byte[]
 	{
 		2,
@@ -203,7 +203,7 @@ public class PerceptionRange
 	})]
 	private Func<Entity, bool> EnterCondition;
 
-	// Token: 0x0400DD3E RID: 56638
+	// Token: 0x0400E1E4 RID: 57828
 	[Nullable(new byte[]
 	{
 		2,
@@ -211,7 +211,7 @@ public class PerceptionRange
 	})]
 	private Action<Entity> OnEnter;
 
-	// Token: 0x0400DD3F RID: 56639
+	// Token: 0x0400E1E5 RID: 57829
 	[Nullable(new byte[]
 	{
 		2,
@@ -219,7 +219,7 @@ public class PerceptionRange
 	})]
 	private Action<Entity> OnLeave;
 
-	// Token: 0x0400DD40 RID: 56640
+	// Token: 0x0400E1E6 RID: 57830
 	[Nullable(new byte[]
 	{
 		2,
@@ -227,16 +227,16 @@ public class PerceptionRange
 	})]
 	private Func<Vector> GetLocationProxy;
 
-	// Token: 0x0400DD41 RID: 56641
+	// Token: 0x0400E1E7 RID: 57831
 	private readonly Vector LocationCache = Vector.Create();
 
-	// Token: 0x0400DD42 RID: 56642
+	// Token: 0x0400E1E8 RID: 57832
 	private uint RangeToken;
 
-	// Token: 0x0400DD43 RID: 56643
+	// Token: 0x0400E1E9 RID: 57833
 	[Nullable(2)]
 	private HashSet<int> InsideEntity;
 
-	// Token: 0x0400DD44 RID: 56644
+	// Token: 0x0400E1EA RID: 57834
 	private GCHandle PerceptionRangeGCHandle;
 }

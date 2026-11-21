@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062CF RID: 25295
+	// Token: 0x0200524D RID: 21069
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 	})]
 	public class PinballLimitedRewardTaskItem : GridProxyAbstract<PinballTaskData>
 	{
-		// Token: 0x0603FA77 RID: 260727 RVA: 0x00F663F8 File Offset: 0x00F645F8
+		// Token: 0x06034738 RID: 214840 RVA: 0x00EAD354 File Offset: 0x00EAB554
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FA78 RID: 260728 RVA: 0x00F66586 File Offset: 0x00F64786
+		// Token: 0x06034739 RID: 214841 RVA: 0x00EAD4E2 File Offset: 0x00EAB6E2
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(3), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, null);
 		}
 
-		// Token: 0x0603FA79 RID: 260729 RVA: 0x00F665AC File Offset: 0x00F647AC
+		// Token: 0x0603473A RID: 214842 RVA: 0x00EAD508 File Offset: 0x00EAB708
 		public override void Refresh(PinballTaskData data, bool isSelected, int gridIndex)
 		{
 			this.TaskData = data;
@@ -87,13 +87,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			text2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603FA7A RID: 260730 RVA: 0x00F666B5 File Offset: 0x00F648B5
+		// Token: 0x0603473B RID: 214843 RVA: 0x00EAD611 File Offset: 0x00EAB811
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603FA7B RID: 260731 RVA: 0x00F666BC File Offset: 0x00F648BC
+		// Token: 0x0603473C RID: 214844 RVA: 0x00EAD618 File Offset: 0x00EAB818
 		private void OnRewardBtnClick()
 		{
 			UiAsyncTask task = new UiAsyncTask("PinballTaskItem.RequestTaskReward", delegate()
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FA7C RID: 260732 RVA: 0x00F666F0 File Offset: 0x00F648F0
+		// Token: 0x0603473D RID: 214845 RVA: 0x00EAD64C File Offset: 0x00EAB84C
 		private UniTask OnRewardBtnClickAsync()
 		{
 			PinballLimitedRewardTaskItem.<OnRewardBtnClickAsync>d__8 <OnRewardBtnClickAsync>d__;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return <OnRewardBtnClickAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0402142E RID: 136238
+		// Token: 0x0401BD5D RID: 114013
 		[Nullable(new byte[]
 		{
 			2,
@@ -127,35 +127,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x0402142F RID: 136239
+		// Token: 0x0401BD5E RID: 114014
 		[Nullable(2)]
 		private PinballTaskData TaskData;
 
-		// Token: 0x04021430 RID: 136240
+		// Token: 0x0401BD5F RID: 114015
 		[Nullable(2)]
 		public Func<int, UniTask> OnTaskRewardClick;
 
-		// Token: 0x0200C4B0 RID: 50352
+		// Token: 0x0200AE97 RID: 44695
 		[NullableContext(0)]
 		private enum ETaskComponents
 		{
-			// Token: 0x0403B597 RID: 243095
+			// Token: 0x04035EF9 RID: 220921
 			BtnStrip,
-			// Token: 0x0403B598 RID: 243096
+			// Token: 0x04035EFA RID: 220922
 			TxtName,
-			// Token: 0x0403B599 RID: 243097
+			// Token: 0x04035EFB RID: 220923
 			TxtNum,
-			// Token: 0x0403B59A RID: 243098
+			// Token: 0x04035EFC RID: 220924
 			ItemLayout,
-			// Token: 0x0403B59B RID: 243099
+			// Token: 0x04035EFD RID: 220925
 			ItemBaseB,
-			// Token: 0x0403B59C RID: 243100
+			// Token: 0x04035EFE RID: 220926
 			TxtDoing,
-			// Token: 0x0403B59D RID: 243101
+			// Token: 0x04035EFF RID: 220927
 			BtnConfirmBaseA,
-			// Token: 0x0403B59E RID: 243102
+			// Token: 0x04035F00 RID: 220928
 			RedPoint,
-			// Token: 0x0403B59F RID: 243103
+			// Token: 0x04035F01 RID: 220929
 			PanelDone
 		}
 	}

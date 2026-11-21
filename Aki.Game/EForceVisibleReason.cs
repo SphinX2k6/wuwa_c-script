@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020031EC RID: 12780
+// Token: 0x0200275B RID: 10075
 public enum EForceVisibleReason
 {
-	// Token: 0x0400D8CA RID: 55498
+	// Token: 0x0400DD68 RID: 56680
 	TrackMark,
-	// Token: 0x0400D8CB RID: 55499
+	// Token: 0x0400DD69 RID: 56681
 	Plot
 }

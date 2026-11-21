@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004C2 RID: 1218
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200051B RID: 1307
 	public class ILevelPrefabParamsConfig
 	{
-		// Token: 0x060018B8 RID: 6328 RVA: 0x00049CF8 File Offset: 0x00047EF8
+		// Token: 0x06001A52 RID: 6738 RVA: 0x0004DA40 File Offset: 0x0004BC40
 		private ILevelPrefabParamsConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060018B9 RID: 6329 RVA: 0x00049D30 File Offset: 0x00047F30
+		// Token: 0x06001A53 RID: 6739 RVA: 0x0004DA78 File Offset: 0x0004BC78
 		public static ILevelPrefabParamsConfig Create([Nullable(2)] ILevelPrefabParamsConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018BA RID: 6330 RVA: 0x00049D43 File Offset: 0x00047F43
+		// Token: 0x06001A54 RID: 6740 RVA: 0x0004DA8B File Offset: 0x0004BC8B
 		public static ILevelPrefabParamsConfig CreateFromSetValue([Nullable(2)] ILevelPrefabParamsConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018BB RID: 6331 RVA: 0x00049D56 File Offset: 0x00047F56
+		// Token: 0x06001A55 RID: 6741 RVA: 0x0004DA9E File Offset: 0x0004BC9E
 		public ILevelPrefabParamsConfig_SetValue ToSetValue()
 		{
 			return new ILevelPrefabParamsConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000698 RID: 1688
-		// (get) Token: 0x060018BC RID: 6332 RVA: 0x00049D75 File Offset: 0x00047F75
-		// (set) Token: 0x060018BD RID: 6333 RVA: 0x00049DA0 File Offset: 0x00047FA0
+		// Token: 0x170006FF RID: 1791
+		// (get) Token: 0x06001A56 RID: 6742 RVA: 0x0004DABD File Offset: 0x0004BCBD
+		// (set) Token: 0x06001A57 RID: 6743 RVA: 0x0004DAE8 File Offset: 0x0004BCE8
 		public virtual string ReferenceActorKey
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000699 RID: 1689
-		// (get) Token: 0x060018BE RID: 6334 RVA: 0x00049DAE File Offset: 0x00047FAE
-		// (set) Token: 0x060018BF RID: 6335 RVA: 0x00049DD5 File Offset: 0x00047FD5
+		// Token: 0x17000700 RID: 1792
+		// (get) Token: 0x06001A58 RID: 6744 RVA: 0x0004DAF6 File Offset: 0x0004BCF6
+		// (set) Token: 0x06001A59 RID: 6745 RVA: 0x0004DB1D File Offset: 0x0004BD1D
 		public virtual IParamsPreset Params
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001250 RID: 4688
+		// Token: 0x04001372 RID: 4978
 		[Nullable(2)]
 		protected ILevelPrefabParamsConfig FbInstance;
 
-		// Token: 0x04001251 RID: 4689
+		// Token: 0x04001373 RID: 4979
 		[Nullable(2)]
 		protected ILevelPrefabParamsConfig_SetValue PocoInterface;
 	}

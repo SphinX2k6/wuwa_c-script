@@ -3,22 +3,22 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x02006566 RID: 25958
+	// Token: 0x020054E4 RID: 21732
 	public class LineCrossGroupRedDot : RedDotBase
 	{
-		// Token: 0x060410CE RID: 266446 RVA: 0x00FC410D File Offset: 0x00FC230D
+		// Token: 0x06035D93 RID: 220563 RVA: 0x00F0B0F1 File Offset: 0x00F092F1
 		protected override void AddCheckEvent()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshLineCrossGroupRedDot, new Action<int>(base.EventCheckWithUid));
 		}
 
-		// Token: 0x060410CF RID: 266447 RVA: 0x00FC412B File Offset: 0x00FC232B
+		// Token: 0x06035D94 RID: 220564 RVA: 0x00F0B10F File Offset: 0x00F0930F
 		protected override void RemoveCheckEvent()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshLineCrossGroupRedDot, new Action<int>(base.EventCheckWithUid));
 		}
 
-		// Token: 0x060410D0 RID: 266448 RVA: 0x00FC4149 File Offset: 0x00FC2349
+		// Token: 0x06035D95 RID: 220565 RVA: 0x00F0B12D File Offset: 0x00F0932D
 		protected override bool OnCheck(int groupId)
 		{
 			return LineCrossModel.Instance.GetGroupRedDotState(groupId);

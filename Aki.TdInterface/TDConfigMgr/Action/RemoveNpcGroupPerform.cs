@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002150 RID: 8528
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023B1 RID: 9137
 	public class RemoveNpcGroupPerform : ActionParams
 	{
-		// Token: 0x0600BBB2 RID: 48050 RVA: 0x001B1380 File Offset: 0x001AF580
+		// Token: 0x0600C740 RID: 51008 RVA: 0x001C8534 File Offset: 0x001C6734
 		private RemoveNpcGroupPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BBB3 RID: 48051 RVA: 0x001B13B8 File Offset: 0x001AF5B8
+		// Token: 0x0600C741 RID: 51009 RVA: 0x001C856C File Offset: 0x001C676C
 		public static RemoveNpcGroupPerform Create([Nullable(2)] RemoveNpcGroupPerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBB4 RID: 48052 RVA: 0x001B13CB File Offset: 0x001AF5CB
+		// Token: 0x0600C742 RID: 51010 RVA: 0x001C857F File Offset: 0x001C677F
 		public static RemoveNpcGroupPerform CreateFromSetValue([Nullable(2)] RemoveNpcGroupPerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBB5 RID: 48053 RVA: 0x001B13DE File Offset: 0x001AF5DE
+		// Token: 0x0600C743 RID: 51011 RVA: 0x001C8592 File Offset: 0x001C6792
 		public RemoveNpcGroupPerform_SetValue ToSetValue()
 		{
 			return new RemoveNpcGroupPerform_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700393E RID: 14654
-		// (get) Token: 0x0600BBB6 RID: 48054 RVA: 0x001B13F1 File Offset: 0x001AF5F1
-		// (set) Token: 0x0600BBB7 RID: 48055 RVA: 0x001B141C File Offset: 0x001AF61C
+		// Token: 0x17003C2B RID: 15403
+		// (get) Token: 0x0600C744 RID: 51012 RVA: 0x001C85A5 File Offset: 0x001C67A5
+		// (set) Token: 0x0600C745 RID: 51013 RVA: 0x001C85D0 File Offset: 0x001C67D0
 		public virtual string Key
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007034 RID: 28724
+		// Token: 0x04007669 RID: 30313
 		[Nullable(2)]
 		protected new RemoveNpcGroupPerform FbInstance;
 
-		// Token: 0x04007035 RID: 28725
+		// Token: 0x0400766A RID: 30314
 		[Nullable(2)]
 		protected RemoveNpcGroupPerform_SetValue PocoInterface;
 	}

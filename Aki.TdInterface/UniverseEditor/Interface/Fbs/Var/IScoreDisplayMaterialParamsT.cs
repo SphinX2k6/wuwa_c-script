@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AC4 RID: 15044
+	// Token: 0x02003EC6 RID: 16070
 	public class IScoreDisplayMaterialParamsT
 	{
-		// Token: 0x17006739 RID: 26425
-		// (get) Token: 0x06014768 RID: 83816 RVA: 0x002FB49F File Offset: 0x002F969F
-		// (set) Token: 0x06014769 RID: 83817 RVA: 0x002FB4A7 File Offset: 0x002F96A7
+		// Token: 0x17006CD4 RID: 27860
+		// (get) Token: 0x06015C12 RID: 89106 RVA: 0x0032172F File Offset: 0x0031F92F
+		// (set) Token: 0x06015C13 RID: 89107 RVA: 0x00321737 File Offset: 0x0031F937
 		public EParamsPreset Type { get; set; }
 
-		// Token: 0x1700673A RID: 26426
-		// (get) Token: 0x0601476A RID: 83818 RVA: 0x002FB4B0 File Offset: 0x002F96B0
-		// (set) Token: 0x0601476B RID: 83819 RVA: 0x002FB4B8 File Offset: 0x002F96B8
+		// Token: 0x17006CD5 RID: 27861
+		// (get) Token: 0x06015C14 RID: 89108 RVA: 0x00321740 File Offset: 0x0031F940
+		// (set) Token: 0x06015C15 RID: 89109 RVA: 0x00321748 File Offset: 0x0031F948
 		public IScoreDisplayParamsVarT ScoreDisplayParams { get; set; }
 
-		// Token: 0x0601476C RID: 83820 RVA: 0x002FB4C1 File Offset: 0x002F96C1
+		// Token: 0x06015C16 RID: 89110 RVA: 0x00321751 File Offset: 0x0031F951
 		public IScoreDisplayMaterialParamsT()
 		{
 			this.Type = EParamsPreset.Decal;

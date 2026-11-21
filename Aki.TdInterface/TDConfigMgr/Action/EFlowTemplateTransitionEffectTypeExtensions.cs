@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200233F RID: 9023
+	// Token: 0x020025B0 RID: 9648
 	public static class EFlowTemplateTransitionEffectTypeExtensions
 	{
-		// Token: 0x0600C51A RID: 50458 RVA: 0x001CC53C File Offset: 0x001CA73C
+		// Token: 0x0600D0F2 RID: 53490 RVA: 0x001E45F4 File Offset: 0x001E27F4
 		public static string ToEnumString(this EFlowTemplateTransitionEffectType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C51B RID: 50459 RVA: 0x001CC564 File Offset: 0x001CA764
+		// Token: 0x0600D0F3 RID: 53491 RVA: 0x001E461C File Offset: 0x001E281C
 		public static EFlowTemplateTransitionEffectType FromString(string name)
 		{
 			EFlowTemplateTransitionEffectType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C51C RID: 50460 RVA: 0x001CC58D File Offset: 0x001CA78D
+		// Token: 0x0600D0F4 RID: 53492 RVA: 0x001E4645 File Offset: 0x001E2845
 		public static bool TryFromString(string name, out EFlowTemplateTransitionEffectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C51D RID: 50461 RVA: 0x001CC5B2 File Offset: 0x001CA7B2
+		// Token: 0x0600D0F5 RID: 53493 RVA: 0x001E466A File Offset: 0x001E286A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C51E RID: 50462 RVA: 0x001CC5C2 File Offset: 0x001CA7C2
+		// Token: 0x0600D0F6 RID: 53494 RVA: 0x001E467A File Offset: 0x001E287A
 		public static EFlowTemplateTransitionEffectType[] GetValues()
 		{
 			return new EFlowTemplateTransitionEffectType[1];
 		}
 
-		// Token: 0x0600C51F RID: 50463 RVA: 0x001CC5CA File Offset: 0x001CA7CA
+		// Token: 0x0600D0F7 RID: 53495 RVA: 0x001E4682 File Offset: 0x001E2882
 		public static string[] GetNames()
 		{
 			return new string[]

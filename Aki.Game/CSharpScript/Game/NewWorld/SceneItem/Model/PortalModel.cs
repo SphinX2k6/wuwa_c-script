@@ -6,20 +6,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Model
 {
-	// Token: 0x020071D5 RID: 29141
+	// Token: 0x0200628A RID: 25226
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class PortalModel : ModelBase
 	{
-		// Token: 0x0604751B RID: 292123 RVA: 0x0122307F File Offset: 0x0122127F
+		// Token: 0x0603CE1D RID: 249373 RVA: 0x0117CEB3 File Offset: 0x0117B0B3
 		protected override bool OnInit()
 		{
 			this.PortalCache = new Dictionary<long, BP_Portal_C>();
 			return true;
 		}
 
-		// Token: 0x0604751C RID: 292124 RVA: 0x0122308D File Offset: 0x0122128D
+		// Token: 0x0603CE1E RID: 249374 RVA: 0x0117CEC1 File Offset: 0x0117B0C1
 		public void AddPortalPair(long portalId, BP_Portal_C portal)
 		{
 			if (this.PortalCache.ContainsKey(portalId))
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			this.PortalCache[portalId] = portal;
 		}
 
-		// Token: 0x0604751D RID: 292125 RVA: 0x012230AB File Offset: 0x012212AB
+		// Token: 0x0603CE1F RID: 249375 RVA: 0x0117CEDF File Offset: 0x0117B0DF
 		public void RemovePortalPair(long portalFixId)
 		{
 			this.PortalCache.Remove(portalFixId);
 		}
 
-		// Token: 0x0604751E RID: 292126 RVA: 0x012230BC File Offset: 0x012212BC
+		// Token: 0x0603CE20 RID: 249376 RVA: 0x0117CEF0 File Offset: 0x0117B0F0
 		[NullableContext(2)]
 		public BP_Portal_C GetPortal(long portalId)
 		{
@@ -47,13 +47,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return null;
 		}
 
-		// Token: 0x0604751F RID: 292127 RVA: 0x012230DC File Offset: 0x012212DC
+		// Token: 0x0603CE21 RID: 249377 RVA: 0x0117CF10 File Offset: 0x0117B110
 		public IReadOnlyDictionary<long, BP_Portal_C> GetPortals()
 		{
 			return this.PortalCache;
 		}
 
-		// Token: 0x06047520 RID: 292128 RVA: 0x012230E4 File Offset: 0x012212E4
+		// Token: 0x0603CE22 RID: 249378 RVA: 0x0117CF18 File Offset: 0x0117B118
 		protected override bool OnClear()
 		{
 			this.PortalCache = null;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x06047521 RID: 292129 RVA: 0x01223114 File Offset: 0x01221314
+		// Token: 0x0603CE23 RID: 249379 RVA: 0x0117CF48 File Offset: 0x0117B148
 		protected override bool OnLeaveLevel()
 		{
 			if (this.PortalInternal != null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x06047522 RID: 292130 RVA: 0x0122313D File Offset: 0x0122133D
+		// Token: 0x0603CE24 RID: 249380 RVA: 0x0117CF71 File Offset: 0x0117B171
 		public BP_Portal_C GetBpPortalActor()
 		{
 			if (this.PortalInternal == null)
@@ -86,8 +86,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return this.PortalInternal;
 		}
 
-		// Token: 0x17009DEF RID: 40431
-		// (get) Token: 0x06047523 RID: 292131 RVA: 0x0122316D File Offset: 0x0122136D
+		// Token: 0x17007346 RID: 29510
+		// (get) Token: 0x0603CE25 RID: 249381 RVA: 0x0117CFA1 File Offset: 0x0117B1A1
 		public static PortalModel Instance
 		{
 			get
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x06047524 RID: 292132 RVA: 0x01223174 File Offset: 0x01221374
+		// Token: 0x0603CE26 RID: 249382 RVA: 0x0117CFA8 File Offset: 0x0117B1A8
 		public static PortalModel GetOrCreateInstance()
 		{
 			if (PortalModel._Instance == null)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return PortalModel._Instance;
 		}
 
-		// Token: 0x06047525 RID: 292133 RVA: 0x01223188 File Offset: 0x01221388
+		// Token: 0x0603CE27 RID: 249383 RVA: 0x0117CFBC File Offset: 0x0117B1BC
 		public static bool CreateInstance()
 		{
 			if (PortalModel._Instance != null)
@@ -117,24 +117,24 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x06047526 RID: 292134 RVA: 0x0122319E File Offset: 0x0122139E
+		// Token: 0x0603CE28 RID: 249384 RVA: 0x0117CFD2 File Offset: 0x0117B1D2
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047527 RID: 292135 RVA: 0x012231A0 File Offset: 0x012213A0
+		// Token: 0x0603CE29 RID: 249385 RVA: 0x0117CFD4 File Offset: 0x0117B1D4
 		public static void ResetStaticDefaultValue()
 		{
 			PortalModel._Instance = null;
 		}
 
-		// Token: 0x06047528 RID: 292136 RVA: 0x012231A8 File Offset: 0x012213A8
+		// Token: 0x0603CE2A RID: 249386 RVA: 0x0117CFDC File Offset: 0x0117B1DC
 		static PortalModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PortalModel.CreateStaticDefaultValue), new Action(PortalModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025808 RID: 153608
+		// Token: 0x04020477 RID: 132215
 		[Nullable(new byte[]
 		{
 			2,
@@ -142,11 +142,11 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 		})]
 		private Dictionary<long, BP_Portal_C> PortalCache;
 
-		// Token: 0x04025809 RID: 153609
+		// Token: 0x04020478 RID: 132216
 		[Nullable(2)]
 		private BP_Portal_C PortalInternal;
 
-		// Token: 0x0402580A RID: 153610
+		// Token: 0x04020479 RID: 132217
 		[Nullable(2)]
 		private static PortalModel _Instance;
 	}

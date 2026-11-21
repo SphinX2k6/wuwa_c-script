@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002321 RID: 8993
+	// Token: 0x02002590 RID: 9616
 	public static class EEnterOrbitalCameraTypeExtensions
 	{
-		// Token: 0x0600C493 RID: 50323 RVA: 0x001CB0DC File Offset: 0x001C92DC
+		// Token: 0x0600D062 RID: 53346 RVA: 0x001E2FA4 File Offset: 0x001E11A4
 		public static string ToEnumString(this EEnterOrbitalCameraType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C494 RID: 50324 RVA: 0x001CB104 File Offset: 0x001C9304
+		// Token: 0x0600D063 RID: 53347 RVA: 0x001E2FCC File Offset: 0x001E11CC
 		public static EEnterOrbitalCameraType FromString(string name)
 		{
 			EEnterOrbitalCameraType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C495 RID: 50325 RVA: 0x001CB12D File Offset: 0x001C932D
+		// Token: 0x0600D064 RID: 53348 RVA: 0x001E2FF5 File Offset: 0x001E11F5
 		public static bool TryFromString(string name, out EEnterOrbitalCameraType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C496 RID: 50326 RVA: 0x001CB152 File Offset: 0x001C9352
+		// Token: 0x0600D065 RID: 53349 RVA: 0x001E301A File Offset: 0x001E121A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C497 RID: 50327 RVA: 0x001CB162 File Offset: 0x001C9362
+		// Token: 0x0600D066 RID: 53350 RVA: 0x001E302A File Offset: 0x001E122A
 		public static EEnterOrbitalCameraType[] GetValues()
 		{
 			return new EEnterOrbitalCameraType[1];
 		}
 
-		// Token: 0x0600C498 RID: 50328 RVA: 0x001CB16A File Offset: 0x001C936A
+		// Token: 0x0600D067 RID: 53351 RVA: 0x001E3032 File Offset: 0x001E1232
 		public static string[] GetNames()
 		{
 			return new string[]

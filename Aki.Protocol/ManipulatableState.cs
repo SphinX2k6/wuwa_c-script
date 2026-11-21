@@ -3,46 +3,46 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001653 RID: 5715
+	// Token: 0x020016C9 RID: 5833
 	public enum ManipulatableState
 	{
-		// Token: 0x0400C10F RID: 49423
+		// Token: 0x0400C616 RID: 50710
 		[OriginalName("ManipulatableStateNone")]
 		None,
-		// Token: 0x0400C110 RID: 49424
+		// Token: 0x0400C617 RID: 50711
 		[OriginalName("ManipulatableStateReset")]
 		Reset,
-		// Token: 0x0400C111 RID: 49425
+		// Token: 0x0400C618 RID: 50712
 		[OriginalName("ManipulatableStateBeChanting")]
 		BeChanting,
-		// Token: 0x0400C112 RID: 49426
+		// Token: 0x0400C619 RID: 50713
 		[OriginalName("ManipulatableStateBeDrawing")]
 		BeDrawing,
-		// Token: 0x0400C113 RID: 49427
+		// Token: 0x0400C61A RID: 50714
 		[OriginalName("ManipulatableStateBeHolding")]
 		BeHolding,
-		// Token: 0x0400C114 RID: 49428
+		// Token: 0x0400C61B RID: 50715
 		[OriginalName("ManipulatableStateBePrecasting")]
 		BePrecasting,
-		// Token: 0x0400C115 RID: 49429
+		// Token: 0x0400C61C RID: 50716
 		[OriginalName("ManipulatableStateBeCastingToTarget")]
 		BeCastingToTarget,
-		// Token: 0x0400C116 RID: 49430
+		// Token: 0x0400C61D RID: 50717
 		[OriginalName("ManipulatableStateBeCastingToOutlet")]
 		BeCastingToOutlet,
-		// Token: 0x0400C117 RID: 49431
+		// Token: 0x0400C61E RID: 50718
 		[OriginalName("ManipulatableStateBeCastingProjectile")]
 		BeCastingProjectile,
-		// Token: 0x0400C118 RID: 49432
+		// Token: 0x0400C61F RID: 50719
 		[OriginalName("ManipulatableStateBeCastingFree")]
 		BeCastingFree,
-		// Token: 0x0400C119 RID: 49433
+		// Token: 0x0400C620 RID: 50720
 		[OriginalName("ManipulatableStateMatchingOutlet")]
 		MatchingOutlet,
-		// Token: 0x0400C11A RID: 49434
+		// Token: 0x0400C621 RID: 50721
 		[OriginalName("ManipulatableStateBeDropping")]
 		BeDropping,
-		// Token: 0x0400C11B RID: 49435
+		// Token: 0x0400C622 RID: 50722
 		[OriginalName("ManipulatableStateBeAdsorbed")]
 		BeAdsorbed
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005941 RID: 22849
+	// Token: 0x02005F4E RID: 24398
 	public struct ISpawnConfigType : IFlatbufferObject
 	{
-		// Token: 0x1700AB83 RID: 43907
-		// (get) Token: 0x06026AA4 RID: 158372 RVA: 0x00553356 File Offset: 0x00551556
+		// Token: 0x1700B4B7 RID: 46263
+		// (get) Token: 0x0602900E RID: 167950 RVA: 0x00599FC2 File Offset: 0x005981C2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026AA5 RID: 158373 RVA: 0x00553363 File Offset: 0x00551563
+		// Token: 0x0602900F RID: 167951 RVA: 0x00599FCF File Offset: 0x005981CF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026AA6 RID: 158374 RVA: 0x0055336C File Offset: 0x0055156C
+		// Token: 0x06029010 RID: 167952 RVA: 0x00599FD8 File Offset: 0x005981D8
 		public static ISpawnConfigType GetRootAsISpawnConfigType(ByteBuffer _bb)
 		{
 			return ISpawnConfigType.GetRootAsISpawnConfigType(_bb, default(ISpawnConfigType));
 		}
 
-		// Token: 0x06026AA7 RID: 158375 RVA: 0x00553388 File Offset: 0x00551588
+		// Token: 0x06029011 RID: 167953 RVA: 0x00599FF4 File Offset: 0x005981F4
 		public static ISpawnConfigType GetRootAsISpawnConfigType(ByteBuffer _bb, ISpawnConfigType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026AA8 RID: 158376 RVA: 0x005533A5 File Offset: 0x005515A5
+		// Token: 0x06029012 RID: 167954 RVA: 0x0059A011 File Offset: 0x00598211
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026AA9 RID: 158377 RVA: 0x005533B4 File Offset: 0x005515B4
+		// Token: 0x06029013 RID: 167955 RVA: 0x0059A020 File Offset: 0x00598220
 		public ISpawnConfigType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AB84 RID: 43908
-		// (get) Token: 0x06026AAA RID: 158378 RVA: 0x005533C4 File Offset: 0x005515C4
+		// Token: 0x1700B4B8 RID: 46264
+		// (get) Token: 0x06029014 RID: 167956 RVA: 0x0059A030 File Offset: 0x00598230
 		public ESpawnConfigType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026AAB RID: 158379 RVA: 0x00553400 File Offset: 0x00551600
+		// Token: 0x06029015 RID: 167957 RVA: 0x0059A06C File Offset: 0x0059826C
 		public static Offset<ISpawnConfigType> CreateISpawnConfigType(FlatBufferBuilder builder, ESpawnConfigType Type = ESpawnConfigType.TemplateMatrix)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpawnConfigType.EndISpawnConfigType(builder);
 		}
 
-		// Token: 0x06026AAC RID: 158380 RVA: 0x00553416 File Offset: 0x00551616
+		// Token: 0x06029016 RID: 167958 RVA: 0x0059A082 File Offset: 0x00598282
 		public static void StartISpawnConfigType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06026AAD RID: 158381 RVA: 0x0055341F File Offset: 0x0055161F
+		// Token: 0x06029017 RID: 167959 RVA: 0x0059A08B File Offset: 0x0059828B
 		public static void AddType(FlatBufferBuilder builder, ESpawnConfigType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026AAE RID: 158382 RVA: 0x0055342A File Offset: 0x0055162A
+		// Token: 0x06029018 RID: 167960 RVA: 0x0059A096 File Offset: 0x00598296
 		public static Offset<ISpawnConfigType> EndISpawnConfigType(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpawnConfigType>(builder.EndTable());
 		}
 
-		// Token: 0x06026AAF RID: 158383 RVA: 0x00553438 File Offset: 0x00551638
+		// Token: 0x06029019 RID: 167961 RVA: 0x0059A0A4 File Offset: 0x005982A4
 		public ISpawnConfigTypeT UnPack()
 		{
 			ISpawnConfigTypeT spawnConfigTypeT = new ISpawnConfigTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return spawnConfigTypeT;
 		}
 
-		// Token: 0x06026AB0 RID: 158384 RVA: 0x00553453 File Offset: 0x00551653
+		// Token: 0x0602901A RID: 167962 RVA: 0x0059A0BF File Offset: 0x005982BF
 		public void UnPackTo(ISpawnConfigTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06026AB1 RID: 158385 RVA: 0x00553464 File Offset: 0x00551664
+		// Token: 0x0602901B RID: 167963 RVA: 0x0059A0D0 File Offset: 0x005982D0
 		public static Offset<ISpawnConfigType> Pack(FlatBufferBuilder builder, ISpawnConfigTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpawnConfigType.CreateISpawnConfigType(builder, _o.Type);
 		}
 
-		// Token: 0x0400EF13 RID: 61203
+		// Token: 0x0400FC08 RID: 64520
 		private Table __p;
 	}
 }

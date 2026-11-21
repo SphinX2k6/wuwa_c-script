@@ -1,10 +1,10 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020012B2 RID: 4786
+// Token: 0x02000766 RID: 1894
 public class ActivitySubViewTheme26 : ActivitySubViewSevenHills
 {
-	// Token: 0x06008382 RID: 33666 RVA: 0x001C04AB File Offset: 0x001BE6AB
+	// Token: 0x06005719 RID: 22297 RVA: 0x001C923B File Offset: 0x001C743B
 	protected override void OnConfirmBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.Theme26MainView, this.ActivityData, null);

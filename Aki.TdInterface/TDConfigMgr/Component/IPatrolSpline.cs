@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005EA RID: 1514
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000687 RID: 1671
 	public class IPatrolSpline : ISplineType
 	{
-		// Token: 0x06002010 RID: 8208 RVA: 0x000596F8 File Offset: 0x000578F8
+		// Token: 0x0600230E RID: 8974 RVA: 0x0006026C File Offset: 0x0005E46C
 		private IPatrolSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002011 RID: 8209 RVA: 0x00059730 File Offset: 0x00057930
+		// Token: 0x0600230F RID: 8975 RVA: 0x000602A4 File Offset: 0x0005E4A4
 		public static IPatrolSpline Create([Nullable(2)] IPatrolSpline instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002012 RID: 8210 RVA: 0x00059743 File Offset: 0x00057943
+		// Token: 0x06002310 RID: 8976 RVA: 0x000602B7 File Offset: 0x0005E4B7
 		public static IPatrolSpline CreateFromSetValue([Nullable(2)] IPatrolSpline_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002013 RID: 8211 RVA: 0x00059758 File Offset: 0x00057958
+		// Token: 0x06002311 RID: 8977 RVA: 0x000602CC File Offset: 0x0005E4CC
 		public new IPatrolSpline_SetValue ToSetValue()
 		{
 			return new IPatrolSpline_SetValue
@@ -61,14 +59,15 @@ namespace Aki.TDConfigMgr.Component
 				IsNavigation = this.IsNavigation,
 				TurnSpeed = this.TurnSpeed,
 				IsFloating = this.IsFloating,
+				PositionRefreshConfigs = this.PositionRefreshConfigs,
 				Points = this.Points,
 				PatrolRange = this.PatrolRange
 			};
 		}
 
-		// Token: 0x17000888 RID: 2184
-		// (get) Token: 0x06002014 RID: 8212 RVA: 0x000597BE File Offset: 0x000579BE
-		// (set) Token: 0x06002015 RID: 8213 RVA: 0x000597E9 File Offset: 0x000579E9
+		// Token: 0x1700093B RID: 2363
+		// (get) Token: 0x06002312 RID: 8978 RVA: 0x0006033E File Offset: 0x0005E53E
+		// (set) Token: 0x06002313 RID: 8979 RVA: 0x00060369 File Offset: 0x0005E569
 		public override ESplineType Type
 		{
 			get
@@ -89,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000889 RID: 2185
-		// (get) Token: 0x06002016 RID: 8214 RVA: 0x000597F7 File Offset: 0x000579F7
-		// (set) Token: 0x06002017 RID: 8215 RVA: 0x0005981E File Offset: 0x00057A1E
+		// Token: 0x1700093C RID: 2364
+		// (get) Token: 0x06002314 RID: 8980 RVA: 0x00060377 File Offset: 0x0005E577
+		// (set) Token: 0x06002315 RID: 8981 RVA: 0x0006039E File Offset: 0x0005E59E
 		[Nullable(2)]
 		public virtual ICycleModeType CycleOption
 		{
@@ -116,9 +115,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700088A RID: 2186
-		// (get) Token: 0x06002018 RID: 8216 RVA: 0x0005982C File Offset: 0x00057A2C
-		// (set) Token: 0x06002019 RID: 8217 RVA: 0x00059866 File Offset: 0x00057A66
+		// Token: 0x1700093D RID: 2365
+		// (get) Token: 0x06002316 RID: 8982 RVA: 0x000603AC File Offset: 0x0005E5AC
+		// (set) Token: 0x06002317 RID: 8983 RVA: 0x000603E6 File Offset: 0x0005E5E6
 		public virtual bool? IsNavigation
 		{
 			get
@@ -140,9 +139,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700088B RID: 2187
-		// (get) Token: 0x0600201A RID: 8218 RVA: 0x00059874 File Offset: 0x00057A74
-		// (set) Token: 0x0600201B RID: 8219 RVA: 0x000598AE File Offset: 0x00057AAE
+		// Token: 0x1700093E RID: 2366
+		// (get) Token: 0x06002318 RID: 8984 RVA: 0x000603F4 File Offset: 0x0005E5F4
+		// (set) Token: 0x06002319 RID: 8985 RVA: 0x0006042E File Offset: 0x0005E62E
 		public virtual float? TurnSpeed
 		{
 			get
@@ -164,9 +163,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700088C RID: 2188
-		// (get) Token: 0x0600201C RID: 8220 RVA: 0x000598BC File Offset: 0x00057ABC
-		// (set) Token: 0x0600201D RID: 8221 RVA: 0x000598F6 File Offset: 0x00057AF6
+		// Token: 0x1700093F RID: 2367
+		// (get) Token: 0x0600231A RID: 8986 RVA: 0x0006043C File Offset: 0x0005E63C
+		// (set) Token: 0x0600231B RID: 8987 RVA: 0x00060476 File Offset: 0x0005E676
 		public virtual bool? IsFloating
 		{
 			get
@@ -188,9 +187,62 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700088D RID: 2189
-		// (get) Token: 0x0600201E RID: 8222 RVA: 0x00059904 File Offset: 0x00057B04
-		// (set) Token: 0x0600201F RID: 8223 RVA: 0x00059997 File Offset: 0x00057B97
+		// Token: 0x17000940 RID: 2368
+		// (get) Token: 0x0600231C RID: 8988 RVA: 0x00060484 File Offset: 0x0005E684
+		// (set) Token: 0x0600231D RID: 8989 RVA: 0x00060517 File Offset: 0x0005E717
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		public virtual List<IPatrolPositionRefreshConfig> PositionRefreshConfigs
+		{
+			[return: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			get
+			{
+				if (this._PositionRefreshConfigsInited)
+				{
+					return this._PositionRefreshConfigsCache;
+				}
+				this._PositionRefreshConfigsInited = true;
+				if (this.FbInstance != null)
+				{
+					List<IPatrolPositionRefreshConfig> positionRefreshConfigs = this.FbInstance.PositionRefreshConfigs;
+					if (positionRefreshConfigs != null)
+					{
+						this._PositionRefreshConfigsCache = new List<IPatrolPositionRefreshConfig>(positionRefreshConfigs.Count);
+						for (int i = 0; i < positionRefreshConfigs.Count; i++)
+						{
+							this._PositionRefreshConfigsCache.Add(IPatrolPositionRefreshConfig.Create(positionRefreshConfigs[i]));
+						}
+					}
+				}
+				else
+				{
+					IPatrolSpline_SetValue pocoInterface = this.PocoInterface;
+					this._PositionRefreshConfigsCache = ((pocoInterface != null) ? pocoInterface.PositionRefreshConfigs : null);
+				}
+				return this._PositionRefreshConfigsCache;
+			}
+			[param: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			set
+			{
+				this.GetOrCreatePoco().PositionRefreshConfigs = value;
+				this._PositionRefreshConfigsInited = false;
+			}
+		}
+
+		// Token: 0x17000941 RID: 2369
+		// (get) Token: 0x0600231E RID: 8990 RVA: 0x0006052C File Offset: 0x0005E72C
+		// (set) Token: 0x0600231F RID: 8991 RVA: 0x000605BF File Offset: 0x0005E7BF
 		public virtual List<IPatrolSplinePoint> Points
 		{
 			get
@@ -226,9 +278,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700088E RID: 2190
-		// (get) Token: 0x06002020 RID: 8224 RVA: 0x000599AC File Offset: 0x00057BAC
-		// (set) Token: 0x06002021 RID: 8225 RVA: 0x00059A0D File Offset: 0x00057C0D
+		// Token: 0x17000942 RID: 2370
+		// (get) Token: 0x06002320 RID: 8992 RVA: 0x000605D4 File Offset: 0x0005E7D4
+		// (set) Token: 0x06002321 RID: 8993 RVA: 0x00060635 File Offset: 0x0005E835
 		[Nullable(2)]
 		public virtual IPatrolRange PatrolRange
 		{
@@ -259,24 +311,35 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001686 RID: 5766
+		// Token: 0x04001872 RID: 6258
 		[Nullable(2)]
 		protected new IPatrolSpline FbInstance;
 
-		// Token: 0x04001687 RID: 5767
+		// Token: 0x04001873 RID: 6259
 		[Nullable(2)]
 		protected new IPatrolSpline_SetValue PocoInterface;
 
-		// Token: 0x04001688 RID: 5768
+		// Token: 0x04001874 RID: 6260
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		private List<IPatrolPositionRefreshConfig> _PositionRefreshConfigsCache;
+
+		// Token: 0x04001875 RID: 6261
+		private bool _PositionRefreshConfigsInited;
+
+		// Token: 0x04001876 RID: 6262
 		private List<IPatrolSplinePoint> _PointsCache;
 
-		// Token: 0x04001689 RID: 5769
+		// Token: 0x04001877 RID: 6263
 		private bool _PointsInited;
 
-		// Token: 0x0400168A RID: 5770
+		// Token: 0x04001878 RID: 6264
 		private IPatrolRange _PatrolRangeCache;
 
-		// Token: 0x0400168B RID: 5771
+		// Token: 0x04001879 RID: 6265
 		private bool _PatrolRangeInited;
 	}
 }

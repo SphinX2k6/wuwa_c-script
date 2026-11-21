@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 {
-	// Token: 0x02004819 RID: 18457
+	// Token: 0x0200374A RID: 14154
 	public class HonamiScanMachinePanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x0603053D RID: 197949 RVA: 0x00B377B1 File Offset: 0x00B359B1
+		// Token: 0x06024D0D RID: 150797 RVA: 0x00A6786D File Offset: 0x00A65A6D
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x0603053E RID: 197950 RVA: 0x00B377B8 File Offset: 0x00B359B8
+		// Token: 0x06024D0E RID: 150798 RVA: 0x00A67874 File Offset: 0x00A65A74
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603053F RID: 197951 RVA: 0x00B37834 File Offset: 0x00B35A34
+		// Token: 0x06024D0F RID: 150799 RVA: 0x00A678F0 File Offset: 0x00A65AF0
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			}
 		}
 
-		// Token: 0x06030540 RID: 197952 RVA: 0x00B378D4 File Offset: 0x00B35AD4
+		// Token: 0x06024D10 RID: 150800 RVA: 0x00A67990 File Offset: 0x00A65B90
 		private void UpdateConfirmButtonEnableClickByTeleportState()
 		{
 			HonamiScanMarkItem honamiScanMarkItem = this.LayoutContext.MarkItem as HonamiScanMarkItem;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			layoutContext.SetConfirmBtnEnableClick(honamiScanMarkItem == null || !honamiScanMarkItem.IsLocked);
 		}
 
-		// Token: 0x06030541 RID: 197953 RVA: 0x00B37911 File Offset: 0x00B35B11
+		// Token: 0x06024D11 RID: 150801 RVA: 0x00A679CD File Offset: 0x00A65BCD
 		protected override void HandleTeleportAndTrack()
 		{
 			if (this.HandleTeleport())
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			this.HandleTrack();
 		}
 
-		// Token: 0x06030542 RID: 197954 RVA: 0x00B37924 File Offset: 0x00B35B24
+		// Token: 0x06024D12 RID: 150802 RVA: 0x00A679E0 File Offset: 0x00A65BE0
 		protected unsafe override bool HandleTeleport()
 		{
 			HonamiScanMarkItem honamiScanMarkItem = this.LayoutContext.MarkItem as HonamiScanMarkItem;
@@ -132,10 +132,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			return true;
 		}
 
-		// Token: 0x0200AAF0 RID: 43760
+		// Token: 0x0200949F RID: 38047
 		public static class EComponents
 		{
-			// Token: 0x04033F82 RID: 212866
+			// Token: 0x0402E702 RID: 190210
 			public const int HonamiScanMachinePanel = 0;
 		}
 	}

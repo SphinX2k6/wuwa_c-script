@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D67 RID: 23911
+	// Token: 0x02004D49 RID: 19785
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleQuestUpdateTipsView : BattleChildView
 	{
-		// Token: 0x0603CB56 RID: 248662 RVA: 0x00E9395C File Offset: 0x00E91B5C
+		// Token: 0x06031AB2 RID: 203442 RVA: 0x00DE41A4 File Offset: 0x00DE23A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CB57 RID: 248663 RVA: 0x00E93A8C File Offset: 0x00E91C8C
+		// Token: 0x06031AB3 RID: 203443 RVA: 0x00DE42D4 File Offset: 0x00DE24D4
 		protected override void OnStart()
 		{
 			base.GetText(0).OnSelfLanguageChange.Bind(new Action(this.UpdateQuestName));
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(4).SetUIActive(true);
 		}
 
-		// Token: 0x0603CB58 RID: 248664 RVA: 0x00E93AE0 File Offset: 0x00E91CE0
+		// Token: 0x06031AB4 RID: 203444 RVA: 0x00DE4328 File Offset: 0x00DE2528
 		[NullableContext(2)]
 		protected override UniTask InitializeAsync(object param = null)
 		{
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB59 RID: 248665 RVA: 0x00E93B23 File Offset: 0x00E91D23
+		// Token: 0x06031AB5 RID: 203445 RVA: 0x00DE436B File Offset: 0x00DE256B
 		protected override void OnBeforeDestroy()
 		{
 			base.GetText(0).OnSelfLanguageChange.Unbind();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputDistributeController.Instance.UnBindAction("任务追踪", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x0603CB5A RID: 248666 RVA: 0x00E93B62 File Offset: 0x00E91D62
+		// Token: 0x06031AB6 RID: 203446 RVA: 0x00DE43AA File Offset: 0x00DE25AA
 		public void OnBeforePlayShowSequence(QuestUpdateTipsShowData info)
 		{
 			this.UpdateData(info);
@@ -84,14 +84,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputDistributeController.Instance.BindAction("任务追踪", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x0603CB5B RID: 248667 RVA: 0x00E93BA1 File Offset: 0x00E91DA1
+		// Token: 0x06031AB7 RID: 203447 RVA: 0x00DE43E9 File Offset: 0x00DE25E9
 		public void OnBeforePlayHideSequence()
 		{
 			InputDistributeController.Instance.UnBindAction("任务追踪", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 			this.IsPlayCloseSequence = true;
 		}
 
-		// Token: 0x0603CB5C RID: 248668 RVA: 0x00E93BC8 File Offset: 0x00E91DC8
+		// Token: 0x06031AB8 RID: 203448 RVA: 0x00DE4410 File Offset: 0x00DE2610
 		public void OnAfterPlayHideSequence()
 		{
 			InputDistributeController.Instance.UnBindAction("任务追踪", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowData = null;
 		}
 
-		// Token: 0x0603CB5D RID: 248669 RVA: 0x00E93C3A File Offset: 0x00E91E3A
+		// Token: 0x06031AB9 RID: 203449 RVA: 0x00DE4482 File Offset: 0x00DE2682
 		public void UpdateData(QuestUpdateTipsShowData info)
 		{
 			this.IsClicked = false;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB5E RID: 248670 RVA: 0x00E93C74 File Offset: 0x00E91E74
+		// Token: 0x06031ABA RID: 203450 RVA: 0x00DE44BC File Offset: 0x00DE26BC
 		public void RefreshUi(QuestUpdateTipsShowData data)
 		{
 			this.ShowData = data;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateNodeDescribe();
 		}
 
-		// Token: 0x0603CB5F RID: 248671 RVA: 0x00E93CD0 File Offset: 0x00E91ED0
+		// Token: 0x06031ABB RID: 203451 RVA: 0x00DE4518 File Offset: 0x00DE2718
 		private void SetIcon()
 		{
 			QuestUpdateTipsShowData showData = this.ShowData;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetSpriteByPath(questTypeMark, sprite, false, null, null);
 		}
 
-		// Token: 0x0603CB60 RID: 248672 RVA: 0x00E93D1C File Offset: 0x00E91F1C
+		// Token: 0x06031ABC RID: 203452 RVA: 0x00DE4564 File Offset: 0x00DE2764
 		private void UpdateQuestName()
 		{
 			if (this.ShowData == null)
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetText(0).SetText(quest.Name, true);
 		}
 
-		// Token: 0x0603CB61 RID: 248673 RVA: 0x00E93D8C File Offset: 0x00E91F8C
+		// Token: 0x06031ABD RID: 203453 RVA: 0x00DE45D4 File Offset: 0x00DE27D4
 		private void UpdateNodeDescribe()
 		{
 			if (this.ShowData == null)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetText(1).SetText(text, true);
 		}
 
-		// Token: 0x0603CB62 RID: 248674 RVA: 0x00E93E50 File Offset: 0x00E92050
+		// Token: 0x06031ABE RID: 203454 RVA: 0x00DE4698 File Offset: 0x00DE2898
 		private void OpenNewMissionTipsView()
 		{
 			if (this.ShowData == null)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB63 RID: 248675 RVA: 0x00E93F10 File Offset: 0x00E92110
+		// Token: 0x06031ABF RID: 203455 RVA: 0x00DE4758 File Offset: 0x00DE2958
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Release)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnClickTrack();
 		}
 
-		// Token: 0x0603CB64 RID: 248676 RVA: 0x00E93F20 File Offset: 0x00E92120
+		// Token: 0x06031AC0 RID: 203456 RVA: 0x00DE4768 File Offset: 0x00DE2968
 		private void OnClickTrack()
 		{
 			if (this.LockClickTrack || this.ShowData == null || this.ShowData.QuestId == 0)
@@ -247,44 +247,44 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			});
 		}
 
-		// Token: 0x0603CB65 RID: 248677 RVA: 0x00E93F96 File Offset: 0x00E92196
+		// Token: 0x06031AC1 RID: 203457 RVA: 0x00DE47DE File Offset: 0x00DE29DE
 		public bool IsClosing()
 		{
 			return this.IsPlayCloseSequence;
 		}
 
-		// Token: 0x0401F9F7 RID: 129527
+		// Token: 0x0401A4AF RID: 107695
 		[Nullable(2)]
 		private CombineKeyItem KeyItem;
 
-		// Token: 0x0401F9F8 RID: 129528
+		// Token: 0x0401A4B0 RID: 107696
 		[Nullable(2)]
 		private QuestUpdateTipsShowData ShowData;
 
-		// Token: 0x0401F9F9 RID: 129529
+		// Token: 0x0401A4B1 RID: 107697
 		private bool LockClickTrack;
 
-		// Token: 0x0401F9FA RID: 129530
+		// Token: 0x0401A4B2 RID: 107698
 		private bool IsPlayCloseSequence;
 
-		// Token: 0x0401F9FB RID: 129531
+		// Token: 0x0401A4B3 RID: 107699
 		private bool IsClicked;
 
-		// Token: 0x0200C018 RID: 49176
+		// Token: 0x0200AA1E RID: 43550
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039F74 RID: 237428
+			// Token: 0x04034937 RID: 215351
 			QuestNameText,
-			// Token: 0x04039F75 RID: 237429
+			// Token: 0x04034938 RID: 215352
 			NodeDescribeText,
-			// Token: 0x04039F76 RID: 237430
+			// Token: 0x04034939 RID: 215353
 			QuestIcon,
-			// Token: 0x04039F77 RID: 237431
+			// Token: 0x0403493A RID: 215354
 			TrackBtn,
-			// Token: 0x04039F78 RID: 237432
+			// Token: 0x0403493B RID: 215355
 			Step1Item,
-			// Token: 0x04039F79 RID: 237433
+			// Token: 0x0403493C RID: 215356
 			KeyItem
 		}
 	}

@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005936 RID: 22838
+	// Token: 0x02005F43 RID: 24387
 	public class ISlideRailComponentT
 	{
-		// Token: 0x1700AB65 RID: 43877
-		// (get) Token: 0x06026A42 RID: 158274 RVA: 0x0055281D File Offset: 0x00550A1D
-		// (set) Token: 0x06026A43 RID: 158275 RVA: 0x00552825 File Offset: 0x00550A25
+		// Token: 0x1700B499 RID: 46233
+		// (get) Token: 0x06028FAC RID: 167852 RVA: 0x00599489 File Offset: 0x00597689
+		// (set) Token: 0x06028FAD RID: 167853 RVA: 0x00599491 File Offset: 0x00597691
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AB66 RID: 43878
-		// (get) Token: 0x06026A44 RID: 158276 RVA: 0x0055282E File Offset: 0x00550A2E
-		// (set) Token: 0x06026A45 RID: 158277 RVA: 0x00552836 File Offset: 0x00550A36
+		// Token: 0x1700B49A RID: 46234
+		// (get) Token: 0x06028FAE RID: 167854 RVA: 0x0059949A File Offset: 0x0059769A
+		// (set) Token: 0x06028FAF RID: 167855 RVA: 0x005994A2 File Offset: 0x005976A2
 		public int SlideSpeed { get; set; }
 
-		// Token: 0x1700AB67 RID: 43879
-		// (get) Token: 0x06026A46 RID: 158278 RVA: 0x0055283F File Offset: 0x00550A3F
-		// (set) Token: 0x06026A47 RID: 158279 RVA: 0x00552847 File Offset: 0x00550A47
+		// Token: 0x1700B49B RID: 46235
+		// (get) Token: 0x06028FB0 RID: 167856 RVA: 0x005994AB File Offset: 0x005976AB
+		// (set) Token: 0x06028FB1 RID: 167857 RVA: 0x005994B3 File Offset: 0x005976B3
 		public int UpSpeed { get; set; }
 
-		// Token: 0x1700AB68 RID: 43880
-		// (get) Token: 0x06026A48 RID: 158280 RVA: 0x00552850 File Offset: 0x00550A50
-		// (set) Token: 0x06026A49 RID: 158281 RVA: 0x00552858 File Offset: 0x00550A58
+		// Token: 0x1700B49C RID: 46236
+		// (get) Token: 0x06028FB2 RID: 167858 RVA: 0x005994BC File Offset: 0x005976BC
+		// (set) Token: 0x06028FB3 RID: 167859 RVA: 0x005994C4 File Offset: 0x005976C4
 		public int DownSpeed { get; set; }
 
-		// Token: 0x1700AB69 RID: 43881
-		// (get) Token: 0x06026A4A RID: 158282 RVA: 0x00552861 File Offset: 0x00550A61
-		// (set) Token: 0x06026A4B RID: 158283 RVA: 0x00552869 File Offset: 0x00550A69
+		// Token: 0x1700B49D RID: 46237
+		// (get) Token: 0x06028FB4 RID: 167860 RVA: 0x005994CD File Offset: 0x005976CD
+		// (set) Token: 0x06028FB5 RID: 167861 RVA: 0x005994D5 File Offset: 0x005976D5
 		public int RailSplineEntityId { get; set; }
 
-		// Token: 0x1700AB6A RID: 43882
-		// (get) Token: 0x06026A4C RID: 158284 RVA: 0x00552872 File Offset: 0x00550A72
-		// (set) Token: 0x06026A4D RID: 158285 RVA: 0x0055287A File Offset: 0x00550A7A
+		// Token: 0x1700B49E RID: 46238
+		// (get) Token: 0x06028FB6 RID: 167862 RVA: 0x005994DE File Offset: 0x005976DE
+		// (set) Token: 0x06028FB7 RID: 167863 RVA: 0x005994E6 File Offset: 0x005976E6
 		public List<IExchangeSlideRailConfigT> ExchangeRailConfigs { get; set; }
 
-		// Token: 0x1700AB6B RID: 43883
-		// (get) Token: 0x06026A4E RID: 158286 RVA: 0x00552883 File Offset: 0x00550A83
-		// (set) Token: 0x06026A4F RID: 158287 RVA: 0x0055288B File Offset: 0x00550A8B
+		// Token: 0x1700B49F RID: 46239
+		// (get) Token: 0x06028FB8 RID: 167864 RVA: 0x005994EF File Offset: 0x005976EF
+		// (set) Token: 0x06028FB9 RID: 167865 RVA: 0x005994F7 File Offset: 0x005976F7
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026A50 RID: 158288 RVA: 0x00552894 File Offset: 0x00550A94
+		// Token: 0x06028FBA RID: 167866 RVA: 0x00599500 File Offset: 0x00597700
 		public ISlideRailComponentT()
 		{
 			this.Disabled = false;

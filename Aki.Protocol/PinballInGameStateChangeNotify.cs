@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D4C RID: 3404
+	// Token: 0x02000D3C RID: 3388
 	[NetMessage(EMessageId.PinballInGameStateChangeNotify)]
 	public sealed class PinballInGameStateChangeNotify : IMessage<PinballInGameStateChangeNotify>, IMessage, IEquatable<PinballInGameStateChangeNotify>, IDeepCloneable<PinballInGameStateChangeNotify>, IBufferMessage
 	{
-		// Token: 0x060125C9 RID: 75209 RVA: 0x002ADC70 File Offset: 0x002ABE70
+		// Token: 0x060124CD RID: 74957 RVA: 0x002AC054 File Offset: 0x002AA254
 		[NullableContext(1)]
 		public static PinballInGameStateChangeNotify Create()
 		{
 			return new PinballInGameStateChangeNotify();
 		}
 
-		// Token: 0x17003CD5 RID: 15573
-		// (get) Token: 0x060125CA RID: 75210 RVA: 0x002ADC77 File Offset: 0x002ABE77
+		// Token: 0x17003CA0 RID: 15520
+		// (get) Token: 0x060124CE RID: 74958 RVA: 0x002AC05B File Offset: 0x002AA25B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CD6 RID: 15574
-		// (get) Token: 0x060125CB RID: 75211 RVA: 0x002ADC7A File Offset: 0x002ABE7A
+		// Token: 0x17003CA1 RID: 15521
+		// (get) Token: 0x060124CF RID: 74959 RVA: 0x002AC05E File Offset: 0x002AA25E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060125CC RID: 75212 RVA: 0x002ADC81 File Offset: 0x002ABE81
+		// Token: 0x060124D0 RID: 74960 RVA: 0x002AC065 File Offset: 0x002AA265
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballInGameStateChangeNotify()
 		{
 		}
 
-		// Token: 0x060125CD RID: 75213 RVA: 0x002ADC8C File Offset: 0x002ABE8C
+		// Token: 0x060124D1 RID: 74961 RVA: 0x002AC070 File Offset: 0x002AA270
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballInGameStateChangeNotify(PinballInGameStateChangeNotify other) : this()
@@ -57,21 +57,21 @@ namespace Aki.Protocol
 			this.inGameState_ = other.inGameState_;
 			this.changeReason_ = other.changeReason_;
 			PinballInGameStateChangeNotify.StateInfoPbOneofCase stateInfoPbCase = other.StateInfoPbCase;
-			if (stateInfoPbCase != PinballInGameStateChangeNotify.StateInfoPbOneofCase.InProgressPb)
+			if (stateInfoPbCase != PinballInGameStateChangeNotify.StateInfoPbOneofCase.SettlePreSubmitPb)
 			{
-				if (stateInfoPbCase == PinballInGameStateChangeNotify.StateInfoPbOneofCase.SettlePreSubmitPb)
+				if (stateInfoPbCase == PinballInGameStateChangeNotify.StateInfoPbOneofCase.InProgressPb)
 				{
-					this.SettlePreSubmitPb = other.SettlePreSubmitPb.Clone();
+					this.InProgressPb = other.InProgressPb.Clone();
 				}
 			}
 			else
 			{
-				this.InProgressPb = other.InProgressPb.Clone();
+				this.SettlePreSubmitPb = other.SettlePreSubmitPb.Clone();
 			}
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060125CE RID: 75214 RVA: 0x002ADCFF File Offset: 0x002ABEFF
+		// Token: 0x060124D2 RID: 74962 RVA: 0x002AC0E1 File Offset: 0x002AA2E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballInGameStateChangeNotify Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new PinballInGameStateChangeNotify(this);
 		}
 
-		// Token: 0x17003CD7 RID: 15575
-		// (get) Token: 0x060125CF RID: 75215 RVA: 0x002ADD07 File Offset: 0x002ABF07
-		// (set) Token: 0x060125D0 RID: 75216 RVA: 0x002ADD0F File Offset: 0x002ABF0F
+		// Token: 0x17003CA2 RID: 15522
+		// (get) Token: 0x060124D3 RID: 74963 RVA: 0x002AC0E9 File Offset: 0x002AA2E9
+		// (set) Token: 0x060124D4 RID: 74964 RVA: 0x002AC0F1 File Offset: 0x002AA2F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballInGameStatePb InGameState
@@ -96,9 +96,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CD8 RID: 15576
-		// (get) Token: 0x060125D1 RID: 75217 RVA: 0x002ADD18 File Offset: 0x002ABF18
-		// (set) Token: 0x060125D2 RID: 75218 RVA: 0x002ADD20 File Offset: 0x002ABF20
+		// Token: 0x17003CA3 RID: 15523
+		// (get) Token: 0x060124D5 RID: 74965 RVA: 0x002AC0FA File Offset: 0x002AA2FA
+		// (set) Token: 0x060124D6 RID: 74966 RVA: 0x002AC102 File Offset: 0x002AA302
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballStateChangeReasonPb ChangeReason
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CD9 RID: 15577
-		// (get) Token: 0x060125D3 RID: 75219 RVA: 0x002ADD29 File Offset: 0x002ABF29
-		// (set) Token: 0x060125D4 RID: 75220 RVA: 0x002ADD42 File Offset: 0x002ABF42
+		// Token: 0x17003CA4 RID: 15524
+		// (get) Token: 0x060124D7 RID: 74967 RVA: 0x002AC10B File Offset: 0x002AA30B
+		// (set) Token: 0x060124D8 RID: 74968 RVA: 0x002AC124 File Offset: 0x002AA324
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballInProgressPb InProgressPb
@@ -135,9 +135,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CDA RID: 15578
-		// (get) Token: 0x060125D5 RID: 75221 RVA: 0x002ADD59 File Offset: 0x002ABF59
-		// (set) Token: 0x060125D6 RID: 75222 RVA: 0x002ADD72 File Offset: 0x002ABF72
+		// Token: 0x17003CA5 RID: 15525
+		// (get) Token: 0x060124D9 RID: 74969 RVA: 0x002AC13B File Offset: 0x002AA33B
+		// (set) Token: 0x060124DA RID: 74970 RVA: 0x002AC154 File Offset: 0x002AA354
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballSettlePreSubmitPb SettlePreSubmitPb
@@ -157,8 +157,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CDB RID: 15579
-		// (get) Token: 0x060125D7 RID: 75223 RVA: 0x002ADD89 File Offset: 0x002ABF89
+		// Token: 0x17003CA6 RID: 15526
+		// (get) Token: 0x060124DB RID: 74971 RVA: 0x002AC16B File Offset: 0x002AA36B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballInGameStateChangeNotify.StateInfoPbOneofCase StateInfoPbCase
@@ -169,7 +169,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060125D8 RID: 75224 RVA: 0x002ADD91 File Offset: 0x002ABF91
+		// Token: 0x060124DC RID: 74972 RVA: 0x002AC173 File Offset: 0x002AA373
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearStateInfoPb()
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			this.stateInfoPb_ = null;
 		}
 
-		// Token: 0x060125D9 RID: 75225 RVA: 0x002ADDA1 File Offset: 0x002ABFA1
+		// Token: 0x060124DD RID: 74973 RVA: 0x002AC183 File Offset: 0x002AA383
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PinballInGameStateChangeNotify);
 		}
 
-		// Token: 0x060125DA RID: 75226 RVA: 0x002ADDB0 File Offset: 0x002ABFB0
+		// Token: 0x060124DE RID: 74974 RVA: 0x002AC194 File Offset: 0x002AA394
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PinballInGameStateChangeNotify other)
@@ -194,7 +194,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.InGameState == other.InGameState && this.ChangeReason == other.ChangeReason && object.Equals(this.InProgressPb, other.InProgressPb) && object.Equals(this.SettlePreSubmitPb, other.SettlePreSubmitPb) && this.StateInfoPbCase == other.StateInfoPbCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060125DB RID: 75227 RVA: 0x002ADE34 File Offset: 0x002AC034
+		// Token: 0x060124DF RID: 74975 RVA: 0x002AC218 File Offset: 0x002AA418
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060125DC RID: 75228 RVA: 0x002ADED1 File Offset: 0x002AC0D1
+		// Token: 0x060124E0 RID: 74976 RVA: 0x002AC2B5 File Offset: 0x002AA4B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -232,7 +232,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060125DD RID: 75229 RVA: 0x002ADEDE File Offset: 0x002AC0DE
+		// Token: 0x060124E1 RID: 74977 RVA: 0x002AC2C2 File Offset: 0x002AA4C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -240,30 +240,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060125DE RID: 75230 RVA: 0x002ADEE8 File Offset: 0x002AC0E8
+		// Token: 0x060124E2 RID: 74978 RVA: 0x002AC2CC File Offset: 0x002AA4CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.ChangeReason != PinballStateChangeReasonPb.SettlePreSubmitAllTeamDeadNoRevive)
-			{
-				output.WriteRawTag(80);
-				output.WriteEnum((int)this.ChangeReason);
-			}
 			if (this.InGameState != PinballInGameStatePb.NotInitiated)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(56);
 				output.WriteEnum((int)this.InGameState);
-			}
-			if (this.stateInfoPbCase_ == PinballInGameStateChangeNotify.StateInfoPbOneofCase.InProgressPb)
-			{
-				output.WriteRawTag(106);
-				output.WriteMessage(this.InProgressPb);
 			}
 			if (this.stateInfoPbCase_ == PinballInGameStateChangeNotify.StateInfoPbOneofCase.SettlePreSubmitPb)
 			{
-				output.WriteRawTag(114);
+				output.WriteRawTag(90);
 				output.WriteMessage(this.SettlePreSubmitPb);
+			}
+			if (this.stateInfoPbCase_ == PinballInGameStateChangeNotify.StateInfoPbOneofCase.InProgressPb)
+			{
+				output.WriteRawTag(98);
+				output.WriteMessage(this.InProgressPb);
+			}
+			if (this.ChangeReason != PinballStateChangeReasonPb.SettlePreSubmitAllTeamDeadNoRevive)
+			{
+				output.WriteRawTag(112);
+				output.WriteEnum((int)this.ChangeReason);
 			}
 			if (this._unknownFields != null)
 			{
@@ -271,7 +271,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060125DF RID: 75231 RVA: 0x002ADF80 File Offset: 0x002AC180
+		// Token: 0x060124E3 RID: 74979 RVA: 0x002AC364 File Offset: 0x002AA564
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -300,7 +300,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060125E0 RID: 75232 RVA: 0x002AE00C File Offset: 0x002AC20C
+		// Token: 0x060124E4 RID: 74980 RVA: 0x002AC3F0 File Offset: 0x002AA5F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PinballInGameStateChangeNotify other)
@@ -318,29 +318,29 @@ namespace Aki.Protocol
 				this.ChangeReason = other.ChangeReason;
 			}
 			PinballInGameStateChangeNotify.StateInfoPbOneofCase stateInfoPbCase = other.StateInfoPbCase;
-			if (stateInfoPbCase != PinballInGameStateChangeNotify.StateInfoPbOneofCase.InProgressPb)
+			if (stateInfoPbCase != PinballInGameStateChangeNotify.StateInfoPbOneofCase.SettlePreSubmitPb)
 			{
-				if (stateInfoPbCase == PinballInGameStateChangeNotify.StateInfoPbOneofCase.SettlePreSubmitPb)
+				if (stateInfoPbCase == PinballInGameStateChangeNotify.StateInfoPbOneofCase.InProgressPb)
 				{
-					if (this.SettlePreSubmitPb == null)
+					if (this.InProgressPb == null)
 					{
-						this.SettlePreSubmitPb = new PinballSettlePreSubmitPb();
+						this.InProgressPb = new PinballInProgressPb();
 					}
-					this.SettlePreSubmitPb.MergeFrom(other.SettlePreSubmitPb);
+					this.InProgressPb.MergeFrom(other.InProgressPb);
 				}
 			}
 			else
 			{
-				if (this.InProgressPb == null)
+				if (this.SettlePreSubmitPb == null)
 				{
-					this.InProgressPb = new PinballInProgressPb();
+					this.SettlePreSubmitPb = new PinballSettlePreSubmitPb();
 				}
-				this.InProgressPb.MergeFrom(other.InProgressPb);
+				this.SettlePreSubmitPb.MergeFrom(other.SettlePreSubmitPb);
 			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060125E1 RID: 75233 RVA: 0x002AE0B9 File Offset: 0x002AC2B9
+		// Token: 0x060124E5 RID: 74981 RVA: 0x002AC49B File Offset: 0x002AA69B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -348,7 +348,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060125E2 RID: 75234 RVA: 0x002AE0C4 File Offset: 0x002AC2C4
+		// Token: 0x060124E6 RID: 74982 RVA: 0x002AC4A4 File Offset: 0x002AA6A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -360,33 +360,14 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 96U)
+				if (num <= 90U)
 				{
-					if (num == 80U)
-					{
-						this.ChangeReason = (PinballStateChangeReasonPb)input.ReadEnum();
-						continue;
-					}
-					if (num == 96U)
+					if (num == 56U)
 					{
 						this.InGameState = (PinballInGameStatePb)input.ReadEnum();
 						continue;
 					}
-				}
-				else
-				{
-					if (num == 106U)
-					{
-						PinballInProgressPb pinballInProgressPb = new PinballInProgressPb();
-						if (this.stateInfoPbCase_ == PinballInGameStateChangeNotify.StateInfoPbOneofCase.InProgressPb)
-						{
-							pinballInProgressPb.MergeFrom(this.InProgressPb);
-						}
-						input.ReadMessage(pinballInProgressPb);
-						this.InProgressPb = pinballInProgressPb;
-						continue;
-					}
-					if (num == 114U)
+					if (num == 90U)
 					{
 						PinballSettlePreSubmitPb pinballSettlePreSubmitPb = new PinballSettlePreSubmitPb();
 						if (this.stateInfoPbCase_ == PinballInGameStateChangeNotify.StateInfoPbOneofCase.SettlePreSubmitPb)
@@ -398,46 +379,65 @@ namespace Aki.Protocol
 						continue;
 					}
 				}
+				else
+				{
+					if (num == 98U)
+					{
+						PinballInProgressPb pinballInProgressPb = new PinballInProgressPb();
+						if (this.stateInfoPbCase_ == PinballInGameStateChangeNotify.StateInfoPbOneofCase.InProgressPb)
+						{
+							pinballInProgressPb.MergeFrom(this.InProgressPb);
+						}
+						input.ReadMessage(pinballInProgressPb);
+						this.InProgressPb = pinballInProgressPb;
+						continue;
+					}
+					if (num == 112U)
+					{
+						this.ChangeReason = (PinballStateChangeReasonPb)input.ReadEnum();
+						continue;
+					}
+				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x0400725B RID: 29275
+		// Token: 0x04007273 RID: 29299
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400725C RID: 29276
-		public const int InGameStateFieldNumber = 12;
+		// Token: 0x04007274 RID: 29300
+		public const int InGameStateFieldNumber = 7;
 
-		// Token: 0x0400725D RID: 29277
+		// Token: 0x04007275 RID: 29301
 		private PinballInGameStatePb inGameState_;
 
-		// Token: 0x0400725E RID: 29278
-		public const int ChangeReasonFieldNumber = 10;
+		// Token: 0x04007276 RID: 29302
+		public const int ChangeReasonFieldNumber = 14;
 
-		// Token: 0x0400725F RID: 29279
+		// Token: 0x04007277 RID: 29303
 		private PinballStateChangeReasonPb changeReason_;
 
-		// Token: 0x04007260 RID: 29280
-		public const int InProgressPbFieldNumber = 13;
+		// Token: 0x04007278 RID: 29304
+		public const int InProgressPbFieldNumber = 12;
 
-		// Token: 0x04007261 RID: 29281
-		public const int SettlePreSubmitPbFieldNumber = 14;
+		// Token: 0x04007279 RID: 29305
+		public const int SettlePreSubmitPbFieldNumber = 11;
 
-		// Token: 0x04007262 RID: 29282
+		// Token: 0x0400727A RID: 29306
 		private object stateInfoPb_;
 
-		// Token: 0x04007263 RID: 29283
+		// Token: 0x0400727B RID: 29307
 		private PinballInGameStateChangeNotify.StateInfoPbOneofCase stateInfoPbCase_;
 
-		// Token: 0x020018D1 RID: 6353
+		// Token: 0x02001949 RID: 6473
 		public enum StateInfoPbOneofCase
 		{
-			// Token: 0x0400C8D7 RID: 51415
+			// Token: 0x0400CE02 RID: 52738
 			None,
-			// Token: 0x0400C8D8 RID: 51416
-			InProgressPb = 13,
-			// Token: 0x0400C8D9 RID: 51417
-			SettlePreSubmitPb
+			// Token: 0x0400CE03 RID: 52739
+			InProgressPb = 12,
+			// Token: 0x0400CE04 RID: 52740
+			SettlePreSubmitPb = 11
 		}
 	}
 }

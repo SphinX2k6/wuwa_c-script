@@ -8,17 +8,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B0C RID: 27404
+	// Token: 0x02005C84 RID: 23684
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventCommonTip2 : LevelEventBase
 	{
-		// Token: 0x0604407C RID: 278652 RVA: 0x010B8531 File Offset: 0x010B6731
+		// Token: 0x0603A1CE RID: 238030 RVA: 0x01061DBD File Offset: 0x0105FFBD
 		public LevelEventCommonTip2(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604407D RID: 278653 RVA: 0x010B853C File Offset: 0x010B673C
+		// Token: 0x0603A1CF RID: 238031 RVA: 0x01061DC8 File Offset: 0x0105FFC8
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			CommonTip2 commonTip = inParams as CommonTip2;
@@ -80,13 +80,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604407E RID: 278654 RVA: 0x010B86A4 File Offset: 0x010B68A4
+		// Token: 0x0603A1D0 RID: 238032 RVA: 0x01061F30 File Offset: 0x01060130
 		private void OnCountDownEnd()
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604407F RID: 278655 RVA: 0x010B86B0 File Offset: 0x010B68B0
+		// Token: 0x0603A1D1 RID: 238033 RVA: 0x01061F3C File Offset: 0x0106013C
 		protected override void OnFinish()
 		{
 			EventSystem.Instance.Remove(EEventName.LevelGamePlayPrepareCountDownEnd, new Action(this.OnCountDownEnd));
@@ -98,13 +98,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.IsBlockInput = false;
 		}
 
-		// Token: 0x040238D2 RID: 145618
+		// Token: 0x0401EB74 RID: 125812
 		private const string BLOCK_INPUTTAG = "BlockAllInputTag";
 
-		// Token: 0x040238D3 RID: 145619
+		// Token: 0x0401EB75 RID: 125813
 		private EUiViewName? ViewName;
 
-		// Token: 0x040238D4 RID: 145620
+		// Token: 0x0401EB76 RID: 125814
 		private bool IsBlockInput;
 	}
 }

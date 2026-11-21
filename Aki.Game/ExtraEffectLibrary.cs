@@ -6,16 +6,16 @@ using Aki.Protocol.Summon;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities;
 
-// Token: 0x02002F3E RID: 12094
+// Token: 0x02002491 RID: 9361
 public class ExtraEffectLibrary
 {
-	// Token: 0x0400C221 RID: 49697
+	// Token: 0x0400C5C3 RID: 50627
 	private const float ADD_BULLET_MIN_INTERVAL = 0.5f;
 
-	// Token: 0x02009601 RID: 38401
+	// Token: 0x02008826 RID: 34854
 	public class BuffExtraEffectLibrary
 	{
-		// Token: 0x0604C19A RID: 311706 RVA: 0x0140F480 File Offset: 0x0140D680
+		// Token: 0x0604262B RID: 271915 RVA: 0x013BA004 File Offset: 0x013B8204
 		[NullableContext(1)]
 		public unsafe static RequireAndLimits ResolveRequireAndLimits(long buffId, ExtraEffectParameters parameters, int level)
 		{

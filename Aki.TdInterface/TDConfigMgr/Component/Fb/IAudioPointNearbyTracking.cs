@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BF0 RID: 3056
+	// Token: 0x02000CBF RID: 3263
 	public class IAudioPointNearbyTracking : INearbyTracking
 	{
-		// Token: 0x06004630 RID: 17968 RVA: 0x000B16B6 File Offset: 0x000AF8B6
-		[NullableContext(1)]
+		// Token: 0x06004A8E RID: 19086 RVA: 0x000BB832 File Offset: 0x000B9A32
 		public static IAudioPointNearbyTracking Create(IAudioPointNearbyTracking? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700140D RID: 5133
-		// (get) Token: 0x06004631 RID: 17969 RVA: 0x000B16D5 File Offset: 0x000AF8D5
+		// Token: 0x1700150B RID: 5387
+		// (get) Token: 0x06004A8F RID: 19087 RVA: 0x000BB851 File Offset: 0x000B9A51
 		public override ENearbyTrackingType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700140E RID: 5134
-		// (get) Token: 0x06004632 RID: 17970 RVA: 0x000B16E2 File Offset: 0x000AF8E2
+		// Token: 0x1700150C RID: 5388
+		// (get) Token: 0x06004A90 RID: 19088 RVA: 0x000BB85E File Offset: 0x000B9A5E
 		public virtual int NearRadius
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700140F RID: 5135
-		// (get) Token: 0x06004633 RID: 17971 RVA: 0x000B16EF File Offset: 0x000AF8EF
+		// Token: 0x1700150D RID: 5389
+		// (get) Token: 0x06004A91 RID: 19089 RVA: 0x000BB86B File Offset: 0x000B9A6B
 		public virtual int MiddleRadius
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001410 RID: 5136
-		// (get) Token: 0x06004634 RID: 17972 RVA: 0x000B16FC File Offset: 0x000AF8FC
+		// Token: 0x1700150E RID: 5390
+		// (get) Token: 0x06004A92 RID: 19090 RVA: 0x000BB878 File Offset: 0x000B9A78
 		public virtual int FarRadius
 		{
 			get
@@ -61,7 +59,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027F9 RID: 10233
+		// Token: 0x04002A44 RID: 10820
 		private IAudioPointNearbyTracking Instance;
 	}
 }

@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020012B3 RID: 4787
+// Token: 0x02000767 RID: 1895
 public class Theme26MainView : SevenHillsMainView, IUiViewResource
 {
-	// Token: 0x06008384 RID: 33668 RVA: 0x001C04CB File Offset: 0x001BE6CB
+	// Token: 0x0600571B RID: 22299 RVA: 0x001C925B File Offset: 0x001C745B
 	[NullableContext(1)]
 	public Theme26MainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008385 RID: 33669 RVA: 0x001C04D4 File Offset: 0x001BE6D4
+	// Token: 0x0600571C RID: 22300 RVA: 0x001C9264 File Offset: 0x001C7464
 	protected override void OnClickStageItem(int stageId)
 	{
 		UiManager.Instance.OpenView(EUiViewName.Theme26StageTaskView, new object[]
@@ -21,12 +21,12 @@ public class Theme26MainView : SevenHillsMainView, IUiViewResource
 		}, null);
 	}
 
-	// Token: 0x06008386 RID: 33670 RVA: 0x001C04FE File Offset: 0x001BE6FE
+	// Token: 0x0600571D RID: 22301 RVA: 0x001C928E File Offset: 0x001C748E
 	protected override void RefreshTitleIcon()
 	{
 	}
 
-	// Token: 0x06008387 RID: 33671 RVA: 0x001C0500 File Offset: 0x001BE700
+	// Token: 0x0600571E RID: 22302 RVA: 0x001C9290 File Offset: 0x001C7490
 	[NullableContext(1)]
 	public string GetExtraResourceId([Nullable(2)] object param = null)
 	{

@@ -2,14 +2,14 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001706 RID: 5894
+	// Token: 0x02001883 RID: 6275
 	public enum EWuYinQuState
 	{
-		// Token: 0x04004FD3 RID: 20435
+		// Token: 0x04005402 RID: 21506
 		End,
-		// Token: 0x04004FD4 RID: 20436
+		// Token: 0x04005403 RID: 21507
 		Start,
-		// Token: 0x04004FD5 RID: 20437
+		// Token: 0x04005404 RID: 21508
 		Nothing = 4
 	}
 }

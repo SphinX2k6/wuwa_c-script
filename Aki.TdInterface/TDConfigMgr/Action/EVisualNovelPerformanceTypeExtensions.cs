@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020024B1 RID: 9393
+	// Token: 0x02002754 RID: 10068
 	public static class EVisualNovelPerformanceTypeExtensions
 	{
-		// Token: 0x0600CB9B RID: 52123 RVA: 0x001DF740 File Offset: 0x001DD940
+		// Token: 0x0600D854 RID: 55380 RVA: 0x001F9940 File Offset: 0x001F7B40
 		public static string ToEnumString(this EVisualNovelPerformanceType value)
 		{
 			string result;
@@ -25,9 +25,6 @@ namespace Aki.TDConfigMgr.Action
 				break;
 			case EVisualNovelPerformanceType.PortraitEffect:
 				result = "PortraitEffect";
-				break;
-			case EVisualNovelPerformanceType.UiShake:
-				result = "UiShake";
 				break;
 			case EVisualNovelPerformanceType.BackgroundMove:
 				result = "BackgroundMove";
@@ -69,7 +66,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB9C RID: 52124 RVA: 0x001DF83C File Offset: 0x001DDA3C
+		// Token: 0x0600D855 RID: 55381 RVA: 0x001F9A2C File Offset: 0x001F7C2C
 		public static EVisualNovelPerformanceType FromString(string name)
 		{
 			EVisualNovelPerformanceType result;
@@ -80,7 +77,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB9D RID: 52125 RVA: 0x001DF868 File Offset: 0x001DDA68
+		// Token: 0x0600D856 RID: 55382 RVA: 0x001F9A58 File Offset: 0x001F7C58
 		public static bool TryFromString(string name, out EVisualNovelPerformanceType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -90,7 +87,8 @@ namespace Aki.TDConfigMgr.Action
 			}
 			if (name != null)
 			{
-				switch (name.Length)
+				int length = name.Length;
+				switch (length)
 				{
 				case 4:
 				{
@@ -128,11 +126,8 @@ namespace Aki.TDConfigMgr.Action
 					}
 					break;
 				case 7:
-					if (name == "UiShake")
-					{
-						value = EVisualNovelPerformanceType.UiShake;
-						return true;
-					}
+				case 8:
+				case 9:
 					break;
 				case 10:
 				{
@@ -155,109 +150,112 @@ namespace Aki.TDConfigMgr.Action
 					}
 					break;
 				}
-				case 14:
-				{
-					char c = name[0];
-					if (c <= 'B')
+				default:
+					if (length != 14)
 					{
-						if (c != 'A')
+						if (length == 16)
 						{
-							if (c == 'B')
+							char c = name[1];
+							if (c <= 'o')
 							{
-								if (name == "BackgroundMove")
+								if (c != 'e')
 								{
-									value = EVisualNovelPerformanceType.BackgroundMove;
+									switch (c)
+									{
+									case 'l':
+										if (name == "PlayScreenEffect")
+										{
+											value = EVisualNovelPerformanceType.PlayScreenEffect;
+											return true;
+										}
+										break;
+									case 'n':
+										if (name == "EnterBlackScreen")
+										{
+											value = EVisualNovelPerformanceType.EnterBlackScreen;
+											return true;
+										}
+										break;
+									case 'o':
+										if (name == "RoleIntroduction")
+										{
+											value = EVisualNovelPerformanceType.RoleIntroduction;
+											return true;
+										}
+										break;
+									}
+								}
+								else if (name == "LeaveBlackScreen")
+								{
+									value = EVisualNovelPerformanceType.LeaveBlackScreen;
 									return true;
 								}
 							}
-						}
-						else if (name == "ActivityAction")
-						{
-							value = EVisualNovelPerformanceType.ActivityAction;
-							return true;
-						}
-					}
-					else if (c != 'P')
-					{
-						if (c == 'S')
-						{
-							if (name == "SendAudioEvent")
+							else if (c != 't')
 							{
-								value = EVisualNovelPerformanceType.SendAudioEvent;
+								if (c == 'w')
+								{
+									if (name == "SwitchAudioState")
+									{
+										value = EVisualNovelPerformanceType.SwitchAudioState;
+										return true;
+									}
+								}
+							}
+							else if (name == "StopScreenEffect")
+							{
+								value = EVisualNovelPerformanceType.StopScreenEffect;
 								return true;
 							}
 						}
 					}
-					else if (name == "PortraitEffect")
+					else
 					{
-						value = EVisualNovelPerformanceType.PortraitEffect;
-						return true;
-					}
-					break;
-				}
-				case 16:
-				{
-					char c = name[1];
-					if (c <= 'o')
-					{
-						if (c != 'e')
+						char c = name[0];
+						if (c <= 'B')
 						{
-							switch (c)
+							if (c != 'A')
 							{
-							case 'l':
-								if (name == "PlayScreenEffect")
+								if (c == 'B')
 								{
-									value = EVisualNovelPerformanceType.PlayScreenEffect;
-									return true;
+									if (name == "BackgroundMove")
+									{
+										value = EVisualNovelPerformanceType.BackgroundMove;
+										return true;
+									}
 								}
-								break;
-							case 'n':
-								if (name == "EnterBlackScreen")
-								{
-									value = EVisualNovelPerformanceType.EnterBlackScreen;
-									return true;
-								}
-								break;
-							case 'o':
-								if (name == "RoleIntroduction")
-								{
-									value = EVisualNovelPerformanceType.RoleIntroduction;
-									return true;
-								}
-								break;
 							}
-						}
-						else if (name == "LeaveBlackScreen")
-						{
-							value = EVisualNovelPerformanceType.LeaveBlackScreen;
-							return true;
-						}
-					}
-					else if (c != 't')
-					{
-						if (c == 'w')
-						{
-							if (name == "SwitchAudioState")
+							else if (name == "ActivityAction")
 							{
-								value = EVisualNovelPerformanceType.SwitchAudioState;
+								value = EVisualNovelPerformanceType.ActivityAction;
 								return true;
 							}
 						}
-					}
-					else if (name == "StopScreenEffect")
-					{
-						value = EVisualNovelPerformanceType.StopScreenEffect;
-						return true;
+						else if (c != 'P')
+						{
+							if (c == 'S')
+							{
+								if (name == "SendAudioEvent")
+								{
+									value = EVisualNovelPerformanceType.SendAudioEvent;
+									return true;
+								}
+							}
+						}
+						else if (name == "PortraitEffect")
+						{
+							value = EVisualNovelPerformanceType.PortraitEffect;
+							return true;
+						}
 					}
 					break;
-				}
 				}
 			}
 			value = EVisualNovelPerformanceType.Enter;
 			return false;
 		}
 
-		// Token: 0x0600CB9E RID: 52126 RVA: 0x001DFB34 File Offset: 0x001DDD34
+		// Token: 0x0600D857 RID: 55383 RVA: 0x001F9CFC File Offset: 0x001F7EFC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -267,7 +265,6 @@ namespace Aki.TDConfigMgr.Action
 				"Move",
 				"ModifyRole",
 				"PortraitEffect",
-				"UiShake",
 				"BackgroundMove",
 				"CgMove",
 				"EnterBlackScreen",
@@ -282,7 +279,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB9F RID: 52127 RVA: 0x001DFBD8 File Offset: 0x001DDDD8
+		// Token: 0x0600D858 RID: 55384 RVA: 0x001F9D97 File Offset: 0x001F7F97
 		public static EVisualNovelPerformanceType[] GetValues()
 		{
 			return new EVisualNovelPerformanceType[]
@@ -292,7 +289,6 @@ namespace Aki.TDConfigMgr.Action
 				EVisualNovelPerformanceType.Move,
 				EVisualNovelPerformanceType.ModifyRole,
 				EVisualNovelPerformanceType.PortraitEffect,
-				EVisualNovelPerformanceType.UiShake,
 				EVisualNovelPerformanceType.BackgroundMove,
 				EVisualNovelPerformanceType.CgMove,
 				EVisualNovelPerformanceType.EnterBlackScreen,
@@ -307,7 +303,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CBA0 RID: 52128 RVA: 0x001DFBEC File Offset: 0x001DDDEC
+		// Token: 0x0600D859 RID: 55385 RVA: 0x001F9DAC File Offset: 0x001F7FAC
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -317,7 +313,6 @@ namespace Aki.TDConfigMgr.Action
 				"Move",
 				"ModifyRole",
 				"PortraitEffect",
-				"UiShake",
 				"BackgroundMove",
 				"CgMove",
 				"EnterBlackScreen",

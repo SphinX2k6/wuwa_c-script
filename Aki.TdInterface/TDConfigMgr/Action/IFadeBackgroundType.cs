@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A53 RID: 6739
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BE8 RID: 7144
 	[JsonConverter(typeof(IFadeBackgroundTypeConverter))]
 	public class IFadeBackgroundType
 	{
-		// Token: 0x06009046 RID: 36934 RVA: 0x00150674 File Offset: 0x0014E874
+		// Token: 0x060097B0 RID: 38832 RVA: 0x001605A0 File Offset: 0x0015E7A0
 		private IFadeBackgroundType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009047 RID: 36935 RVA: 0x001506AC File Offset: 0x0014E8AC
+		// Token: 0x060097B1 RID: 38833 RVA: 0x001605D8 File Offset: 0x0015E7D8
 		public static IFadeBackgroundType Create([Nullable(2)] IFadeBackgroundType instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009048 RID: 36936 RVA: 0x001506BF File Offset: 0x0014E8BF
+		// Token: 0x060097B2 RID: 38834 RVA: 0x001605EB File Offset: 0x0015E7EB
 		public static IFadeBackgroundType CreateFromSetValue([Nullable(2)] IFadeBackgroundType_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009049 RID: 36937 RVA: 0x001506D2 File Offset: 0x0014E8D2
+		// Token: 0x060097B3 RID: 38835 RVA: 0x001605FE File Offset: 0x0015E7FE
 		public IFadeBackgroundType_SetValue ToSetValue()
 		{
 			return new IFadeBackgroundType_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DFC RID: 11772
-		// (get) Token: 0x0600904A RID: 36938 RVA: 0x001506E5 File Offset: 0x0014E8E5
-		// (set) Token: 0x0600904B RID: 36939 RVA: 0x00150710 File Offset: 0x0014E910
+		// Token: 0x17003009 RID: 12297
+		// (get) Token: 0x060097B4 RID: 38836 RVA: 0x00160611 File Offset: 0x0015E811
+		// (set) Token: 0x060097B5 RID: 38837 RVA: 0x0016063C File Offset: 0x0015E83C
 		public virtual EFadeBackgroundType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400591F RID: 22815
+		// Token: 0x04005D84 RID: 23940
 		[Nullable(2)]
 		protected IFadeBackgroundType FbInstance;
 
-		// Token: 0x04005920 RID: 22816
+		// Token: 0x04005D85 RID: 23941
 		[Nullable(2)]
 		protected IFadeBackgroundType_SetValue PocoInterface;
 	}

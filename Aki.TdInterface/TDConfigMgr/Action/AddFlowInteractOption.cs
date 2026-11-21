@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001491 RID: 5265
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015EA RID: 5610
 	public class AddFlowInteractOption : ActionParams
 	{
-		// Token: 0x060077C2 RID: 30658 RVA: 0x0011F53C File Offset: 0x0011D73C
+		// Token: 0x06007E8F RID: 32399 RVA: 0x0012E188 File Offset: 0x0012C388
 		private AddFlowInteractOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060077C3 RID: 30659 RVA: 0x0011F574 File Offset: 0x0011D774
+		// Token: 0x06007E90 RID: 32400 RVA: 0x0012E1C0 File Offset: 0x0012C3C0
 		public static AddFlowInteractOption Create([Nullable(2)] AddFlowInteractOption instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060077C4 RID: 30660 RVA: 0x0011F587 File Offset: 0x0011D787
+		// Token: 0x06007E91 RID: 32401 RVA: 0x0012E1D3 File Offset: 0x0012C3D3
 		public static AddFlowInteractOption CreateFromSetValue([Nullable(2)] AddFlowInteractOption_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060077C5 RID: 30661 RVA: 0x0011F59A File Offset: 0x0011D79A
+		// Token: 0x06007E92 RID: 32402 RVA: 0x0012E1E6 File Offset: 0x0012C3E6
 		public AddFlowInteractOption_SetValue ToSetValue()
 		{
 			return new AddFlowInteractOption_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700283D RID: 10301
-		// (get) Token: 0x060077C6 RID: 30662 RVA: 0x0011F5D4 File Offset: 0x0011D7D4
-		// (set) Token: 0x060077C7 RID: 30663 RVA: 0x0011F635 File Offset: 0x0011D835
+		// Token: 0x17002A27 RID: 10791
+		// (get) Token: 0x06007E93 RID: 32403 RVA: 0x0012E220 File Offset: 0x0012C420
+		// (set) Token: 0x06007E94 RID: 32404 RVA: 0x0012E281 File Offset: 0x0012C481
 		public virtual IInteractOption Option
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700283E RID: 10302
-		// (get) Token: 0x060077C8 RID: 30664 RVA: 0x0011F64A File Offset: 0x0011D84A
-		// (set) Token: 0x060077C9 RID: 30665 RVA: 0x0011F675 File Offset: 0x0011D875
+		// Token: 0x17002A28 RID: 10792
+		// (get) Token: 0x06007E95 RID: 32405 RVA: 0x0012E296 File Offset: 0x0012C496
+		// (set) Token: 0x06007E96 RID: 32406 RVA: 0x0012E2C1 File Offset: 0x0012C4C1
 		public virtual int EntityId
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700283F RID: 10303
-		// (get) Token: 0x060077CA RID: 30666 RVA: 0x0011F684 File Offset: 0x0011D884
-		// (set) Token: 0x060077CB RID: 30667 RVA: 0x0011F6BE File Offset: 0x0011D8BE
+		// Token: 0x17002A29 RID: 10793
+		// (get) Token: 0x06007E97 RID: 32407 RVA: 0x0012E2D0 File Offset: 0x0012C4D0
+		// (set) Token: 0x06007E98 RID: 32408 RVA: 0x0012E30A File Offset: 0x0012C50A
 		public virtual bool? DelayRemoveByQuestEnd
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002840 RID: 10304
-		// (get) Token: 0x060077CC RID: 30668 RVA: 0x0011F6CC File Offset: 0x0011D8CC
-		// (set) Token: 0x060077CD RID: 30669 RVA: 0x0011F6F3 File Offset: 0x0011D8F3
+		// Token: 0x17002A2A RID: 10794
+		// (get) Token: 0x06007E99 RID: 32409 RVA: 0x0012E318 File Offset: 0x0012C518
+		// (set) Token: 0x06007E9A RID: 32410 RVA: 0x0012E33F File Offset: 0x0012C53F
 		[Nullable(2)]
 		public virtual string InteractToken
 		{
@@ -166,18 +164,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040045A1 RID: 17825
+		// Token: 0x0400493C RID: 18748
 		[Nullable(2)]
 		protected new AddFlowInteractOption FbInstance;
 
-		// Token: 0x040045A2 RID: 17826
+		// Token: 0x0400493D RID: 18749
 		[Nullable(2)]
 		protected AddFlowInteractOption_SetValue PocoInterface;
 
-		// Token: 0x040045A3 RID: 17827
+		// Token: 0x0400493E RID: 18750
 		private IInteractOption _OptionCache;
 
-		// Token: 0x040045A4 RID: 17828
+		// Token: 0x0400493F RID: 18751
 		private bool _OptionInited;
 	}
 }

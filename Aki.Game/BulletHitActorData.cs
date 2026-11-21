@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002E0D RID: 11789
+// Token: 0x02002369 RID: 9065
 [NullableContext(2)]
 [Nullable(0)]
 public class BulletHitActorData
 {
-	// Token: 0x1700224F RID: 8783
-	// (get) Token: 0x06018CA6 RID: 101542 RVA: 0x0065A96C File Offset: 0x00658B6C
+	// Token: 0x170022B7 RID: 8887
+	// (get) Token: 0x06016567 RID: 91495 RVA: 0x00680B40 File Offset: 0x0067ED40
 	public Entity Entity
 	{
 		get
@@ -23,7 +23,7 @@ public class BulletHitActorData
 		}
 	}
 
-	// Token: 0x06018CA7 RID: 101543 RVA: 0x0065A97F File Offset: 0x00658B7F
+	// Token: 0x06016568 RID: 91496 RVA: 0x00680B53 File Offset: 0x0067ED53
 	[NullableContext(1)]
 	public void AddComponent(UPrimitiveComponent comp)
 	{
@@ -34,7 +34,7 @@ public class BulletHitActorData
 		this.Components.Add(comp);
 	}
 
-	// Token: 0x06018CA8 RID: 101544 RVA: 0x0065A9A0 File Offset: 0x00658BA0
+	// Token: 0x06016569 RID: 91497 RVA: 0x00680B74 File Offset: 0x0067ED74
 	public void AddHitResult(UKuroHitResult hitResult, int index)
 	{
 		if (this.HitResult == null)
@@ -44,7 +44,7 @@ public class BulletHitActorData
 		this.HitResult.AppendHitResult(hitResult, index);
 	}
 
-	// Token: 0x06018CA9 RID: 101545 RVA: 0x0065A9C2 File Offset: 0x00658BC2
+	// Token: 0x0601656A RID: 91498 RVA: 0x00680B96 File Offset: 0x0067ED96
 	[NullableContext(1)]
 	public void AddHitTempResult(BulletHitTempResult hitTempResult, string boneName)
 	{
@@ -55,7 +55,7 @@ public class BulletHitActorData
 		this.HitResult.AppendHitTempResult(hitTempResult, boneName);
 	}
 
-	// Token: 0x06018CAA RID: 101546 RVA: 0x0065A9E4 File Offset: 0x00658BE4
+	// Token: 0x0601656B RID: 91499 RVA: 0x00680BB8 File Offset: 0x0067EDB8
 	[NullableContext(1)]
 	public bool HasComponent(UPrimitiveComponent comp)
 	{
@@ -63,7 +63,7 @@ public class BulletHitActorData
 		return components != null && components.Contains(comp);
 	}
 
-	// Token: 0x06018CAB RID: 101547 RVA: 0x0065A9F8 File Offset: 0x00658BF8
+	// Token: 0x0601656C RID: 91500 RVA: 0x00680BCC File Offset: 0x0067EDCC
 	public void Clear()
 	{
 		this.Type = EBulletHitActorType.Ignore;
@@ -84,16 +84,16 @@ public class BulletHitActorData
 		this.ConditionResult = null;
 	}
 
-	// Token: 0x0400B966 RID: 47462
+	// Token: 0x0400BCF4 RID: 48372
 	public EBulletHitActorType Type;
 
-	// Token: 0x0400B967 RID: 47463
+	// Token: 0x0400BCF5 RID: 48373
 	public EntityHandle EntityHandle;
 
-	// Token: 0x0400B968 RID: 47464
+	// Token: 0x0400BCF6 RID: 48374
 	public int BulletEntityId;
 
-	// Token: 0x0400B969 RID: 47465
+	// Token: 0x0400BCF7 RID: 48375
 	[Nullable(new byte[]
 	{
 		2,
@@ -101,27 +101,27 @@ public class BulletHitActorData
 	})]
 	public List<UPrimitiveComponent> Components;
 
-	// Token: 0x0400B96A RID: 47466
+	// Token: 0x0400BCF8 RID: 48376
 	public AActor Actor;
 
-	// Token: 0x0400B96B RID: 47467
+	// Token: 0x0400BCF9 RID: 48377
 	public bool IsValidHit;
 
-	// Token: 0x0400B96C RID: 47468
+	// Token: 0x0400BCFA RID: 48378
 	public bool IsContinueHit;
 
-	// Token: 0x0400B96D RID: 47469
+	// Token: 0x0400BCFB RID: 48379
 	public bool FromObstaclesCollision;
 
-	// Token: 0x0400B96E RID: 47470
+	// Token: 0x0400BCFC RID: 48380
 	public int Priority;
 
-	// Token: 0x0400B96F RID: 47471
+	// Token: 0x0400BCFD RID: 48381
 	public int ValidProcessIndex;
 
-	// Token: 0x0400B970 RID: 47472
+	// Token: 0x0400BCFE RID: 48382
 	public BulletHitResult HitResult;
 
-	// Token: 0x0400B971 RID: 47473
+	// Token: 0x0400BCFF RID: 48383
 	public BulletConditionResult ConditionResult;
 }

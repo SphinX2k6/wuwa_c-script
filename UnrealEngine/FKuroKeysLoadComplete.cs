@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A11 RID: 6673
+	// Token: 0x02000492 RID: 1170
 	public sealed class FKuroKeysLoadComplete : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018B6F RID: 101231 RVA: 0x002478AC File Offset: 0x00245AAC
+		// Token: 0x06006DAC RID: 28076 RVA: 0x000A09E8 File Offset: 0x0009EBE8
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroKeysLoadComplete.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018B70 RID: 101232 RVA: 0x002478B8 File Offset: 0x00245AB8
+		// Token: 0x06006DAD RID: 28077 RVA: 0x000A09F4 File Offset: 0x0009EBF4
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroKeysLoadComplete._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FKuroKeysLoadComplete._FunctionPtr;
 		}
 
-		// Token: 0x06018B71 RID: 101233 RVA: 0x002478DB File Offset: 0x00245ADB
+		// Token: 0x06006DAE RID: 28078 RVA: 0x000A0A17 File Offset: 0x0009EC17
 		public FKuroKeysLoadComplete()
 		{
 		}
 
-		// Token: 0x06018B72 RID: 101234 RVA: 0x002478E3 File Offset: 0x00245AE3
+		// Token: 0x06006DAF RID: 28079 RVA: 0x000A0A1F File Offset: 0x0009EC1F
 		[NullableContext(2)]
 		public FKuroKeysLoadComplete(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018B73 RID: 101235 RVA: 0x002478ED File Offset: 0x00245AED
+		// Token: 0x06006DB0 RID: 28080 RVA: 0x000A0A29 File Offset: 0x0009EC29
 		public FKuroKeysLoadComplete(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018B74 RID: 101236 RVA: 0x002478F8 File Offset: 0x00245AF8
+		// Token: 0x06006DB1 RID: 28081 RVA: 0x000A0A34 File Offset: 0x0009EC34
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<bool, string>) ?? ((Action<bool, string>)Delegate.CreateDelegate(typeof(Action<bool, string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018B75 RID: 101237 RVA: 0x0024792A File Offset: 0x00245B2A
+		// Token: 0x06006DB2 RID: 28082 RVA: 0x000A0A66 File Offset: 0x0009EC66
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<bool, string> Callback)
 		{
 			if (FKuroKeysLoadComplete.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroKeysLoadComplete.RegisterId);
 		}
 
-		// Token: 0x06018B76 RID: 101238 RVA: 0x00247964 File Offset: 0x00245B64
+		// Token: 0x06006DB3 RID: 28083 RVA: 0x000A0AA0 File Offset: 0x0009ECA0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool Success, string Tag)
 		{
 			FKuroKeysLoadComplete.__FKuroKeysLoadComplete_DelegateParams* ptr = stackalloc FKuroKeysLoadComplete.__FKuroKeysLoadComplete_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FKuroKeysLoadComplete.__FKuroKeysLoadComplete_DelegateParams) & -16L;
@@ -79,10 +77,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FKuroKeysLoadComplete._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06018B77 RID: 101239 RVA: 0x002479C0 File Offset: 0x00245BC0
+		// Token: 0x06006DB4 RID: 28084 RVA: 0x000A0AFC File Offset: 0x0009ECFC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, string> action = target as Action<bool, string>;
@@ -94,35 +91,35 @@ namespace UnrealEngine
 			action(((FKuroKeysLoadComplete.__FKuroKeysLoadComplete_DelegateParams*)__Parameters)->Success, arg);
 		}
 
-		// Token: 0x0400D58A RID: 54666
+		// Token: 0x04002EC7 RID: 11975
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D58B RID: 54667
+		// Token: 0x04002EC8 RID: 11976
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroPakKey.KuroKeysLoadComplete__DelegateSignature";
 
-		// Token: 0x0400D58C RID: 54668
+		// Token: 0x04002EC9 RID: 11977
 		private static int RegisterId;
 
-		// Token: 0x020030C9 RID: 12489
+		// Token: 0x02000BA6 RID: 2982
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FKuroKeysLoadComplete_DelegateParams
+		private ref struct __FKuroKeysLoadComplete_DelegateParams
 		{
-			// Token: 0x04016E27 RID: 93735
+			// Token: 0x04005D2D RID: 23853
 			[FieldOffset(0)]
 			public bool Success;
 
-			// Token: 0x04016E28 RID: 93736
+			// Token: 0x04005D2E RID: 23854
 			[FieldOffset(8)]
 			public FString Tag;
 		}
 
-		// Token: 0x020030CA RID: 12490
+		// Token: 0x02000BA7 RID: 2983
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016E29 RID: 93737
+			// Token: 0x04005D2F RID: 23855
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

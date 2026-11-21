@@ -7,7 +7,7 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 [Nullable(0)]
 internal class CurveMoveParams
 {
-	// Token: 0x060011A5 RID: 4517 RVA: 0x00063150 File Offset: 0x00061350
+	// Token: 0x060011AB RID: 4523 RVA: 0x00064868 File Offset: 0x00062A68
 	public bool RefreshTarget(string key, string socket, EPositionDatumTarget datum, ECurveMoveTargetBlackboardType? keyType = null)
 	{
 		BaseActorComponent targetActorComp = this.TargetActorComp;
@@ -102,7 +102,7 @@ internal class CurveMoveParams
 		return true;
 	}
 
-	// Token: 0x060011A6 RID: 4518 RVA: 0x00063370 File Offset: 0x00061570
+	// Token: 0x060011AC RID: 4524 RVA: 0x00064A88 File Offset: 0x00062C88
 	[return: Nullable(2)]
 	private Entity GetTargetEntity(string key, ECurveMoveTargetBlackboardType? keyType)
 	{
@@ -151,7 +151,7 @@ internal class CurveMoveParams
 		return EntitySystem.Instance.Get(num.Value);
 	}
 
-	// Token: 0x060011A7 RID: 4519 RVA: 0x00063469 File Offset: 0x00061669
+	// Token: 0x060011AD RID: 4525 RVA: 0x00064B81 File Offset: 0x00062D81
 	public void Clear()
 	{
 		this.CharActorComp = null;
@@ -162,65 +162,65 @@ internal class CurveMoveParams
 		this.SocketName = "";
 	}
 
-	// Token: 0x04000D26 RID: 3366
+	// Token: 0x04000D2E RID: 3374
 	[Nullable(2)]
 	public CharacterActorComponent CharActorComp;
 
-	// Token: 0x04000D27 RID: 3367
+	// Token: 0x04000D2F RID: 3375
 	[Nullable(2)]
 	public CharacterUnifiedStateComponent CharUnifiedComp;
 
-	// Token: 0x04000D28 RID: 3368
+	// Token: 0x04000D30 RID: 3376
 	[Nullable(2)]
 	public CharacterSkillComponent CharSkillComp;
 
-	// Token: 0x04000D29 RID: 3369
+	// Token: 0x04000D31 RID: 3377
 	[Nullable(2)]
 	public BaseActorComponent TargetActorComp;
 
-	// Token: 0x04000D2A RID: 3370
+	// Token: 0x04000D32 RID: 3378
 	[Nullable(2)]
 	public CharacterActorComponent TargetCharActorComp;
 
-	// Token: 0x04000D2B RID: 3371
+	// Token: 0x04000D33 RID: 3379
 	public double NowTime;
 
-	// Token: 0x04000D2C RID: 3372
+	// Token: 0x04000D34 RID: 3380
 	public double TotalTime;
 
-	// Token: 0x04000D2D RID: 3373
+	// Token: 0x04000D35 RID: 3381
 	public string SocketName = "";
 
-	// Token: 0x04000D2E RID: 3374
+	// Token: 0x04000D36 RID: 3382
 	public readonly Vector LastLocation = Vector.Create();
 
-	// Token: 0x04000D2F RID: 3375
+	// Token: 0x04000D37 RID: 3383
 	public readonly Vector InitLocation = Vector.Create();
 
-	// Token: 0x04000D30 RID: 3376
+	// Token: 0x04000D38 RID: 3384
 	public readonly Vector TargetOffset = Vector.Create();
 
-	// Token: 0x04000D31 RID: 3377
+	// Token: 0x04000D39 RID: 3385
 	public readonly Vector TargetPos = Vector.Create();
 
-	// Token: 0x04000D32 RID: 3378
+	// Token: 0x04000D3A RID: 3386
 	public readonly Vector LastTargetPos = Vector.Create();
 
-	// Token: 0x04000D33 RID: 3379
+	// Token: 0x04000D3B RID: 3387
 	public readonly Vector TargetVec = Vector.Create();
 
-	// Token: 0x04000D34 RID: 3380
+	// Token: 0x04000D3C RID: 3388
 	public bool AlongStraightLine;
 
-	// Token: 0x04000D35 RID: 3381
+	// Token: 0x04000D3D RID: 3389
 	public bool AllowMovement;
 
-	// Token: 0x04000D36 RID: 3382
+	// Token: 0x04000D3E RID: 3390
 	public bool CanSetActorTargetPos;
 
-	// Token: 0x04000D37 RID: 3383
+	// Token: 0x04000D3F RID: 3391
 	public bool FlyingMove;
 
-	// Token: 0x04000D38 RID: 3384
+	// Token: 0x04000D40 RID: 3392
 	public float LastSplineDistance;
 }

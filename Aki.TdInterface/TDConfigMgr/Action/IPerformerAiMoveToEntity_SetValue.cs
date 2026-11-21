@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CD1 RID: 7377
+	// Token: 0x02001ED8 RID: 7896
 	public class IPerformerAiMoveToEntity_SetValue
 	{
-		// Token: 0x04005FB9 RID: 24505
+		// Token: 0x04006515 RID: 25877
 		public EPerformerAiMoveToType Type;
 
-		// Token: 0x04005FBA RID: 24506
+		// Token: 0x04006516 RID: 25878
 		public int EntityId;
 	}
 }

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000F7E RID: 3966
+// Token: 0x02000433 RID: 1075
 public enum EFurnitureFunctionType
 {
-	// Token: 0x04002E1F RID: 11807
+	// Token: 0x04002EB8 RID: 11960
 	DIY = 3,
-	// Token: 0x04002E20 RID: 11808
+	// Token: 0x04002EB9 RID: 11961
 	DIYShop,
-	// Token: 0x04002E21 RID: 11809
+	// Token: 0x04002EBA RID: 11962
 	Preset,
-	// Token: 0x04002E22 RID: 11810
+	// Token: 0x04002EBB RID: 11963
 	Exhibition
 }

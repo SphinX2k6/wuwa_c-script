@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000882 RID: 2178
+	// Token: 0x0200089E RID: 2206
 	public class ConfigRogueWhiteCatInstById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600331E RID: 13086 RVA: 0x0017A614 File Offset: 0x00178814
+		// Token: 0x060033C6 RID: 13254 RVA: 0x001818FC File Offset: 0x0017FAFC
 		static ConfigRogueWhiteCatInstById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueWhiteCatInstById.CreateStaticDefaultValue), new Action(ConfigRogueWhiteCatInstById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600331F RID: 13087 RVA: 0x0017A634 File Offset: 0x00178834
+		// Token: 0x060033C7 RID: 13255 RVA: 0x0018191C File Offset: 0x0017FB1C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueWhiteCatInstById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003320 RID: 13088 RVA: 0x0017A6B3 File Offset: 0x001788B3
+		// Token: 0x060033C8 RID: 13256 RVA: 0x0018199B File Offset: 0x0017FB9B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueWhiteCatInstById.LogPair = null;
 			ConfigRogueWhiteCatInstById.HandleId = 0;
 		}
 
-		// Token: 0x06003321 RID: 13089 RVA: 0x0017A6C1 File Offset: 0x001788C1
+		// Token: 0x060033C9 RID: 13257 RVA: 0x001819A9 File Offset: 0x0017FBA9
 		public static void Init()
 		{
 			ConfigRogueWhiteCatInstById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueWhiteCatInstById.HandleId, "db_dreamlink.db", "select BinData from `RogueWhiteCatInst` where Id=?");
 		}
 
-		// Token: 0x06003322 RID: 13090 RVA: 0x0017A6DC File Offset: 0x001788DC
+		// Token: 0x060033CA RID: 13258 RVA: 0x001819C4 File Offset: 0x0017FBC4
 		public static RogueWhiteCatInst? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueWhiteCatInstById.HandleId, ConfigRogueWhiteCatInstById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueWhiteCatInst?(rootAsRogueWhiteCatInst);
 		}
 
-		// Token: 0x04003B74 RID: 15220
+		// Token: 0x04003C38 RID: 15416
 		private const string DB = "db_dreamlink.db";
 
-		// Token: 0x04003B75 RID: 15221
+		// Token: 0x04003C39 RID: 15417
 		private const string FILE = "m.梦境链接活动.xlsx";
 
-		// Token: 0x04003B76 RID: 15222
+		// Token: 0x04003C3A RID: 15418
 		private const string TABLE = "RogueWhiteCatInst";
 
-		// Token: 0x04003B77 RID: 15223
+		// Token: 0x04003C3B RID: 15419
 		private const string COMMAND = "select BinData from `RogueWhiteCatInst` where Id=?";
 
-		// Token: 0x04003B78 RID: 15224
+		// Token: 0x04003C3C RID: 15420
 		private const string KEY_PREFIX = "RogueWhiteCatInstById";
 
-		// Token: 0x04003B79 RID: 15225
+		// Token: 0x04003C3D RID: 15421
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003B7A RID: 15226
+		// Token: 0x04003C3E RID: 15422
 		private static int HandleId;
 	}
 }

@@ -11,40 +11,40 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02002071 RID: 8305
+// Token: 0x02001544 RID: 5444
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class LoadingController : UiControllerBase
 {
-	// Token: 0x0601059F RID: 66975 RVA: 0x003FD49D File Offset: 0x003FB69D
+	// Token: 0x0600DA07 RID: 55815 RVA: 0x004098E5 File Offset: 0x00407AE5
 	protected override bool OnInit()
 	{
 		LoadingModel.Instance.Speed = 25;
 		return true;
 	}
 
-	// Token: 0x060105A0 RID: 66976 RVA: 0x003FD4AC File Offset: 0x003FB6AC
+	// Token: 0x0600DA08 RID: 55816 RVA: 0x004098F4 File Offset: 0x00407AF4
 	protected override bool OnClear()
 	{
 		UNavigationSystemV1.SetGameLoadingFlag(GlobalData.GameInstance, false);
 		return true;
 	}
 
-	// Token: 0x060105A1 RID: 66977 RVA: 0x003FD4BA File Offset: 0x003FB6BA
+	// Token: 0x0600DA09 RID: 55817 RVA: 0x00409902 File Offset: 0x00407B02
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PushDataCompleteNotify, new Action<IMessage, Net.CallbackStatus>(this.OnPushDataCompleteNotify));
 		Net.Instance.Register(ENotifyMessageId.ServerConfigVersionInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnServerConfigVersionInfoNotify));
 	}
 
-	// Token: 0x060105A2 RID: 66978 RVA: 0x003FD4F1 File Offset: 0x003FB6F1
+	// Token: 0x0600DA0A RID: 55818 RVA: 0x00409939 File Offset: 0x00407B39
 	private void OnPushDataCompleteNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		EventSystem.Instance.Emit(EEventName.OnLoadingNetDataDone);
 	}
 
-	// Token: 0x060105A3 RID: 66979 RVA: 0x003FD504 File Offset: 0x003FB704
+	// Token: 0x0600DA0B RID: 55819 RVA: 0x0040994C File Offset: 0x00407B4C
 	private unsafe void OnServerConfigVersionInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ServerConfigVersionInfoNotify serverConfigVersionInfoNotify = (ServerConfigVersionInfoNotify)msg;
@@ -67,14 +67,14 @@ public class LoadingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060105A4 RID: 66980 RVA: 0x003FD5B1 File Offset: 0x003FB7B1
+	// Token: 0x0600DA0C RID: 55820 RVA: 0x004099F9 File Offset: 0x00407BF9
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PushDataCompleteNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.ServerConfigVersionInfoNotify);
 	}
 
-	// Token: 0x060105A5 RID: 66981 RVA: 0x003FD5D0 File Offset: 0x003FB7D0
+	// Token: 0x0600DA0D RID: 55821 RVA: 0x00409A18 File Offset: 0x00407C18
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.BeforeLoadMap, new Action(this.OnBeforeLoadMap));
@@ -86,7 +86,7 @@ public class LoadingController : UiControllerBase
 		EventSystem.Instance.Add<int, int>(EEventName.OnInstanceChange, new Action<int, int>(this.OnInstanceChange));
 	}
 
-	// Token: 0x060105A6 RID: 66982 RVA: 0x003FD6A4 File Offset: 0x003FB8A4
+	// Token: 0x0600DA0E RID: 55822 RVA: 0x00409AEC File Offset: 0x00407CEC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.BeforeLoadMap, new Action(this.OnBeforeLoadMap));
@@ -98,56 +98,56 @@ public class LoadingController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.OnInstanceChange, new Action<int, int>(this.OnInstanceChange));
 	}
 
-	// Token: 0x060105A7 RID: 66983 RVA: 0x003FD775 File Offset: 0x003FB975
+	// Token: 0x0600DA0F RID: 55823 RVA: 0x00409BBD File Offset: 0x00407DBD
 	private void OnWorldDone()
 	{
 		this.UpdateUidViewShow();
 	}
 
-	// Token: 0x060105A8 RID: 66984 RVA: 0x003FD77D File Offset: 0x003FB97D
+	// Token: 0x0600DA10 RID: 55824 RVA: 0x00409BC5 File Offset: 0x00407DC5
 	private void OnWorldDoneAndCloseLoading()
 	{
 		this.OnLoadingEnd();
 	}
 
-	// Token: 0x060105A9 RID: 66985 RVA: 0x003FD785 File Offset: 0x003FB985
+	// Token: 0x0600DA11 RID: 55825 RVA: 0x00409BCD File Offset: 0x00407DCD
 	private void OnBeforeLoadMap()
 	{
 		this.OnLoadingStart();
 	}
 
-	// Token: 0x060105AA RID: 66986 RVA: 0x003FD78D File Offset: 0x003FB98D
+	// Token: 0x0600DA12 RID: 55826 RVA: 0x00409BD5 File Offset: 0x00407DD5
 	private void OnTeleportStart(bool b)
 	{
 		this.OnLoadingStart();
 	}
 
-	// Token: 0x060105AB RID: 66987 RVA: 0x003FD795 File Offset: 0x003FB995
+	// Token: 0x0600DA13 RID: 55827 RVA: 0x00409BDD File Offset: 0x00407DDD
 	private void OnTeleportComplete(TeleportContext teleportContext)
 	{
 		this.OnLoadingEnd();
 	}
 
-	// Token: 0x060105AC RID: 66988 RVA: 0x003FD79D File Offset: 0x003FB99D
+	// Token: 0x0600DA14 RID: 55828 RVA: 0x00409BE5 File Offset: 0x00407DE5
 	private void OnInstanceChange(int lastInsId, int newInsId)
 	{
 		LoadingModel.Instance.LastInstanceId = lastInsId;
 	}
 
-	// Token: 0x060105AD RID: 66989 RVA: 0x003FD7AA File Offset: 0x003FB9AA
+	// Token: 0x0600DA15 RID: 55829 RVA: 0x00409BF2 File Offset: 0x00407DF2
 	private void OnLoadingStart()
 	{
 		UNavigationSystemV1.SetGameLoadingFlag(GlobalData.GameInstance, true);
 	}
 
-	// Token: 0x060105AE RID: 66990 RVA: 0x003FD7B7 File Offset: 0x003FB9B7
+	// Token: 0x0600DA16 RID: 55830 RVA: 0x00409BFF File Offset: 0x00407DFF
 	private void OnLoadingEnd()
 	{
 		UNavigationSystemV1.SetGameLoadingFlag(GlobalData.GameInstance, false);
 		LoadingModel.Instance.LastInstanceId = 0;
 	}
 
-	// Token: 0x060105AF RID: 66991 RVA: 0x003FD7D0 File Offset: 0x003FB9D0
+	// Token: 0x0600DA17 RID: 55831 RVA: 0x00409C18 File Offset: 0x00407E18
 	public void UpdateUidViewShow()
 	{
 		bool isShowUidView = LoadingModel.Instance.IsShowUidView;
@@ -176,7 +176,7 @@ public class LoadingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060105B0 RID: 66992 RVA: 0x003FD89A File Offset: 0x003FBA9A
+	// Token: 0x0600DA18 RID: 55832 RVA: 0x00409CE2 File Offset: 0x00407EE2
 	private void OnChangeTeam()
 	{
 		if (!LoadingModel.Instance.IsLoadingView)
@@ -186,7 +186,7 @@ public class LoadingController : UiControllerBase
 		this.HandleRoleBuffChangeInLoading();
 	}
 
-	// Token: 0x060105B1 RID: 66993 RVA: 0x003FD8B0 File Offset: 0x003FBAB0
+	// Token: 0x0600DA19 RID: 55833 RVA: 0x00409CF8 File Offset: 0x00407EF8
 	private UniTask HandleRoleBuffChangeInLoading()
 	{
 		LoadingController.<HandleRoleBuffChangeInLoading>d__18 <HandleRoleBuffChangeInLoading>d__;
@@ -196,7 +196,7 @@ public class LoadingController : UiControllerBase
 		return <HandleRoleBuffChangeInLoading>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060105B2 RID: 66994 RVA: 0x003FD8EC File Offset: 0x003FBAEC
+	// Token: 0x0600DA1A RID: 55834 RVA: 0x00409D34 File Offset: 0x00407F34
 	public UniTask GameModeOpenLoading(Action<bool> openCallback = null)
 	{
 		LoadingController.<GameModeOpenLoading>d__19 <GameModeOpenLoading>d__;
@@ -208,7 +208,7 @@ public class LoadingController : UiControllerBase
 		return <GameModeOpenLoading>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060105B3 RID: 66995 RVA: 0x003FD938 File Offset: 0x003FBB38
+	// Token: 0x0600DA1B RID: 55835 RVA: 0x00409D80 File Offset: 0x00407F80
 	public UniTask GameModeCloseLoading()
 	{
 		LoadingController.<GameModeCloseLoading>d__20 <GameModeCloseLoading>d__;
@@ -219,7 +219,7 @@ public class LoadingController : UiControllerBase
 		return <GameModeCloseLoading>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060105B4 RID: 66996 RVA: 0x003FD97C File Offset: 0x003FBB7C
+	// Token: 0x0600DA1C RID: 55836 RVA: 0x00409DC4 File Offset: 0x00407FC4
 	public void OpenLoadingView(Action<bool> loadCallback = null, Action<bool> finishCallback = null)
 	{
 		NormalLoadingViewGlobalData.CreateFirstProgressPromise();
@@ -255,7 +255,7 @@ public class LoadingController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060105B5 RID: 66997 RVA: 0x003FD9E8 File Offset: 0x003FBBE8
+	// Token: 0x0600DA1D RID: 55837 RVA: 0x00409E30 File Offset: 0x00408030
 	public UniTask CloseLoadingView()
 	{
 		LoadingController.<CloseLoadingView>d__22 <CloseLoadingView>d__;
@@ -266,44 +266,44 @@ public class LoadingController : UiControllerBase
 		return <CloseLoadingView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060105B6 RID: 66998 RVA: 0x003FDA2B File Offset: 0x003FBC2B
+	// Token: 0x0600DA1E RID: 55838 RVA: 0x00409E73 File Offset: 0x00408073
 	public void OpenFadeLoadingView(TOpenViewCallBack finishCallback = null)
 	{
 		UiManager.Instance.OpenView(EUiViewName.FadeLoadingView, null, finishCallback);
 	}
 
-	// Token: 0x060105B7 RID: 66999 RVA: 0x003FDA3E File Offset: 0x003FBC3E
+	// Token: 0x0600DA1F RID: 55839 RVA: 0x00409E86 File Offset: 0x00408086
 	public void CloseFadeLoadingView(Action<bool> finishCallback = null)
 	{
 		UiManager.Instance.CloseView(EUiViewName.FadeLoadingView, finishCallback);
 	}
 
-	// Token: 0x060105B8 RID: 67000 RVA: 0x003FDA50 File Offset: 0x003FBC50
+	// Token: 0x0600DA20 RID: 55840 RVA: 0x00409E98 File Offset: 0x00408098
 	public void OpenVideoCenterView(TOpenViewCallBack finishCallback = null, string textKey = null)
 	{
 		UiManager.Instance.OpenView(EUiViewName.PlotTransitionView, textKey, finishCallback);
 	}
 
-	// Token: 0x060105B9 RID: 67001 RVA: 0x003FDA63 File Offset: 0x003FBC63
+	// Token: 0x0600DA21 RID: 55841 RVA: 0x00409EAB File Offset: 0x004080AB
 	public void CloseVideoCenterView(Action<bool> finishCallback = null)
 	{
 		UiManager.Instance.CloseView(EUiViewName.PlotTransitionView, finishCallback);
 	}
 
-	// Token: 0x060105BA RID: 67002 RVA: 0x003FDA75 File Offset: 0x003FBC75
+	// Token: 0x0600DA22 RID: 55842 RVA: 0x00409EBD File Offset: 0x004080BD
 	[NullableContext(1)]
 	public void OpenSpecialTransitionView(ISpecialTransitionViewParams @params, [Nullable(2)] TOpenViewCallBack finishCallback)
 	{
 		UiManager.Instance.OpenView(EUiViewName.SpecialTransitionView, @params, finishCallback);
 	}
 
-	// Token: 0x060105BB RID: 67003 RVA: 0x003FDA88 File Offset: 0x003FBC88
+	// Token: 0x0600DA23 RID: 55843 RVA: 0x00409ED0 File Offset: 0x004080D0
 	public void CloseSpecialTransitionView(Action<bool> finishCallback)
 	{
 		UiManager.Instance.CloseView(EUiViewName.SpecialTransitionView, finishCallback);
 	}
 
-	// Token: 0x060105BC RID: 67004 RVA: 0x003FDA9C File Offset: 0x003FBC9C
+	// Token: 0x0600DA24 RID: 55844 RVA: 0x00409EE4 File Offset: 0x004080E4
 	public void SetProgress(int progress, Action reachHandle = null, int speedRate = 1, bool reset = false, bool smooth = true)
 	{
 		Log instance = Log.Instance;
@@ -331,7 +331,7 @@ public class LoadingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060105BD RID: 67005 RVA: 0x003FDB38 File Offset: 0x003FBD38
+	// Token: 0x0600DA25 RID: 55845 RVA: 0x00409F80 File Offset: 0x00408180
 	public unsafe void AddProgress(float progress, int maxProgress)
 	{
 		LoadingModel instance = LoadingModel.Instance;
@@ -357,7 +357,7 @@ public class LoadingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060105BE RID: 67006 RVA: 0x003FDC20 File Offset: 0x003FBE20
+	// Token: 0x0600DA26 RID: 55846 RVA: 0x0040A068 File Offset: 0x00408268
 	[NullableContext(0)]
 	public UniTask<bool> RequestLoadingConfigAsync()
 	{
@@ -368,8 +368,8 @@ public class LoadingController : UiControllerBase
 		return <RequestLoadingConfigAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x1700142E RID: 5166
-	// (get) Token: 0x060105BF RID: 67007 RVA: 0x003FDC5B File Offset: 0x003FBE5B
+	// Token: 0x1700145B RID: 5211
+	// (get) Token: 0x0600DA27 RID: 55847 RVA: 0x0040A0A3 File Offset: 0x004082A3
 	[Nullable(1)]
 	public static LoadingController Instance
 	{
@@ -380,7 +380,7 @@ public class LoadingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060105C0 RID: 67008 RVA: 0x003FDC62 File Offset: 0x003FBE62
+	// Token: 0x0600DA28 RID: 55848 RVA: 0x0040A0AA File Offset: 0x004082AA
 	[NullableContext(1)]
 	public static LoadingController GetOrCreateInstance()
 	{
@@ -391,7 +391,7 @@ public class LoadingController : UiControllerBase
 		return LoadingController._Instance;
 	}
 
-	// Token: 0x060105C1 RID: 67009 RVA: 0x003FDC76 File Offset: 0x003FBE76
+	// Token: 0x0600DA29 RID: 55849 RVA: 0x0040A0BE File Offset: 0x004082BE
 	public static bool CreateInstance()
 	{
 		if (LoadingController._Instance != null)
@@ -402,31 +402,31 @@ public class LoadingController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060105C2 RID: 67010 RVA: 0x003FDC8C File Offset: 0x003FBE8C
+	// Token: 0x0600DA2A RID: 55850 RVA: 0x0040A0D4 File Offset: 0x004082D4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060105C3 RID: 67011 RVA: 0x003FDC8E File Offset: 0x003FBE8E
+	// Token: 0x0600DA2B RID: 55851 RVA: 0x0040A0D6 File Offset: 0x004082D6
 	public static void ResetStaticDefaultValue()
 	{
 		LoadingController._Instance = null;
 	}
 
-	// Token: 0x060105C4 RID: 67012 RVA: 0x003FDC96 File Offset: 0x003FBE96
+	// Token: 0x0600DA2C RID: 55852 RVA: 0x0040A0DE File Offset: 0x004082DE
 	static LoadingController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LoadingController.CreateStaticDefaultValue), new Action(LoadingController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040078C8 RID: 30920
+	// Token: 0x040079B1 RID: 31153
 	private static LoadingController _Instance;
 
-	// Token: 0x0200865B RID: 34395
+	// Token: 0x020077E2 RID: 30690
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402BB7C RID: 179068
+		// Token: 0x04026E8B RID: 159371
 		[Nullable(0)]
 		public static Action <0>__FinishEndPromise;
 	}

@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020028E9 RID: 10473
+// Token: 0x02001E64 RID: 7780
 public class TrialRoleCreateData : ITrialRoleCreateData
 {
-	// Token: 0x17001D0A RID: 7434
-	// (get) Token: 0x060159F2 RID: 88562 RVA: 0x00574ED8 File Offset: 0x005730D8
-	// (set) Token: 0x060159F3 RID: 88563 RVA: 0x00574EE0 File Offset: 0x005730E0
+	// Token: 0x17001D64 RID: 7524
+	// (get) Token: 0x060133F6 RID: 78838 RVA: 0x0059FDA0 File Offset: 0x0059DFA0
+	// (set) Token: 0x060133F7 RID: 78839 RVA: 0x0059FDA8 File Offset: 0x0059DFA8
 	public int TrialRoleId { get; set; }
 
-	// Token: 0x17001D0B RID: 7435
-	// (get) Token: 0x060159F4 RID: 88564 RVA: 0x00574EE9 File Offset: 0x005730E9
-	// (set) Token: 0x060159F5 RID: 88565 RVA: 0x00574EF1 File Offset: 0x005730F1
+	// Token: 0x17001D65 RID: 7525
+	// (get) Token: 0x060133F8 RID: 78840 RVA: 0x0059FDB1 File Offset: 0x0059DFB1
+	// (set) Token: 0x060133F9 RID: 78841 RVA: 0x0059FDB9 File Offset: 0x0059DFB9
 	public bool IsUnlocked { get; set; }
 }

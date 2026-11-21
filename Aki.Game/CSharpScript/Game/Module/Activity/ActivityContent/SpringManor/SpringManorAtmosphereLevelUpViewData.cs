@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006094 RID: 24724
+	// Token: 0x02005012 RID: 20498
 	public class SpringManorAtmosphereLevelUpViewData
 	{
-		// Token: 0x17009078 RID: 36984
-		// (get) Token: 0x0603E7E1 RID: 255969 RVA: 0x00F1AEA9 File Offset: 0x00F190A9
-		// (set) Token: 0x0603E7E2 RID: 255970 RVA: 0x00F1AEB1 File Offset: 0x00F190B1
+		// Token: 0x170063DA RID: 25562
+		// (get) Token: 0x060334A5 RID: 210085 RVA: 0x00E61C6D File Offset: 0x00E5FE6D
+		// (set) Token: 0x060334A6 RID: 210086 RVA: 0x00E61C75 File Offset: 0x00E5FE75
 		public int OldLevel { get; set; }
 
-		// Token: 0x17009079 RID: 36985
-		// (get) Token: 0x0603E7E3 RID: 255971 RVA: 0x00F1AEBA File Offset: 0x00F190BA
-		// (set) Token: 0x0603E7E4 RID: 255972 RVA: 0x00F1AEC2 File Offset: 0x00F190C2
+		// Token: 0x170063DB RID: 25563
+		// (get) Token: 0x060334A7 RID: 210087 RVA: 0x00E61C7E File Offset: 0x00E5FE7E
+		// (set) Token: 0x060334A8 RID: 210088 RVA: 0x00E61C86 File Offset: 0x00E5FE86
 		public int NewLevel { get; set; }
 
-		// Token: 0x1700907A RID: 36986
-		// (get) Token: 0x0603E7E5 RID: 255973 RVA: 0x00F1AECB File Offset: 0x00F190CB
-		// (set) Token: 0x0603E7E6 RID: 255974 RVA: 0x00F1AED3 File Offset: 0x00F190D3
+		// Token: 0x170063DC RID: 25564
+		// (get) Token: 0x060334A9 RID: 210089 RVA: 0x00E61C8F File Offset: 0x00E5FE8F
+		// (set) Token: 0x060334AA RID: 210090 RVA: 0x00E61C97 File Offset: 0x00E5FE97
 		public int OldAtmosphere { get; set; }
 
-		// Token: 0x1700907B RID: 36987
-		// (get) Token: 0x0603E7E7 RID: 255975 RVA: 0x00F1AEDC File Offset: 0x00F190DC
-		// (set) Token: 0x0603E7E8 RID: 255976 RVA: 0x00F1AEE4 File Offset: 0x00F190E4
+		// Token: 0x170063DD RID: 25565
+		// (get) Token: 0x060334AB RID: 210091 RVA: 0x00E61CA0 File Offset: 0x00E5FEA0
+		// (set) Token: 0x060334AC RID: 210092 RVA: 0x00E61CA8 File Offset: 0x00E5FEA8
 		public int NewAtmosphere { get; set; }
 
-		// Token: 0x1700907C RID: 36988
-		// (get) Token: 0x0603E7E9 RID: 255977 RVA: 0x00F1AEED File Offset: 0x00F190ED
-		// (set) Token: 0x0603E7EA RID: 255978 RVA: 0x00F1AEF5 File Offset: 0x00F190F5
+		// Token: 0x170063DE RID: 25566
+		// (get) Token: 0x060334AD RID: 210093 RVA: 0x00E61CB1 File Offset: 0x00E5FEB1
+		// (set) Token: 0x060334AE RID: 210094 RVA: 0x00E61CB9 File Offset: 0x00E5FEB9
 		public int MaxAtmosphere { get; set; }
 	}
 }

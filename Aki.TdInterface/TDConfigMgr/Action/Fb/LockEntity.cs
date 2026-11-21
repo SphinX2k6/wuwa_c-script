@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002646 RID: 9798
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002906 RID: 10502
 	public class LockEntity : ActionParams
 	{
-		// Token: 0x0600DBCE RID: 56270 RVA: 0x0020B695 File Offset: 0x00209895
+		// Token: 0x0600E99C RID: 59804 RVA: 0x00227E61 File Offset: 0x00226061
 		public static LockEntity Create(ILockEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004104 RID: 16644
-		// (get) Token: 0x0600DBCF RID: 56271 RVA: 0x0020B6B4 File Offset: 0x002098B4
+		// Token: 0x1700443E RID: 17470
+		// (get) Token: 0x0600E99D RID: 59805 RVA: 0x00227E80 File Offset: 0x00226080
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A26 RID: 31270
+		// Token: 0x040080C2 RID: 32962
 		private ILockEntity Instance;
 
-		// Token: 0x04007A27 RID: 31271
+		// Token: 0x040080C3 RID: 32963
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007A28 RID: 31272
+		// Token: 0x040080C4 RID: 32964
 		private bool _EntityIdsInited;
 	}
 }

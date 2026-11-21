@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000991 RID: 2449
+	// Token: 0x02000A66 RID: 2662
 	public class ConfigStateMachinePreloadByFsmKey : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600397A RID: 14714 RVA: 0x0019E7C7 File Offset: 0x0019C9C7
+		// Token: 0x06003E78 RID: 15992 RVA: 0x001BDB5B File Offset: 0x001BBD5B
 		static ConfigStateMachinePreloadByFsmKey()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigStateMachinePreloadByFsmKey.CreateStaticDefaultValue), new Action(ConfigStateMachinePreloadByFsmKey.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600397B RID: 14715 RVA: 0x0019E7E8 File Offset: 0x0019C9E8
+		// Token: 0x06003E79 RID: 15993 RVA: 0x001BDB7C File Offset: 0x001BBD7C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigStateMachinePreloadByFsmKey.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600397C RID: 14716 RVA: 0x0019E867 File Offset: 0x0019CA67
+		// Token: 0x06003E7A RID: 15994 RVA: 0x001BDBFB File Offset: 0x001BBDFB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigStateMachinePreloadByFsmKey.LogPair = null;
 			ConfigStateMachinePreloadByFsmKey.HandleId = 0;
 		}
 
-		// Token: 0x0600397D RID: 14717 RVA: 0x0019E875 File Offset: 0x0019CA75
+		// Token: 0x06003E7B RID: 15995 RVA: 0x001BDC09 File Offset: 0x001BBE09
 		public static void Init()
 		{
 			ConfigStateMachinePreloadByFsmKey.HandleId = ConfigCommon.InitDataStatement(ConfigStateMachinePreloadByFsmKey.HandleId, "db_state_machine_preload.db", "select BinData from `StateMachinePreload` where FsmKey=?");
 		}
 
-		// Token: 0x0600397E RID: 14718 RVA: 0x0019E890 File Offset: 0x0019CA90
+		// Token: 0x06003E7C RID: 15996 RVA: 0x001BDC24 File Offset: 0x001BBE24
 		public static StateMachinePreload? GetConfig(string p0FsmKey, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigStateMachinePreloadByFsmKey.HandleId, ConfigStateMachinePreloadByFsmKey.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new StateMachinePreload?(rootAsStateMachinePreload);
 		}
 
-		// Token: 0x040042DD RID: 17117
+		// Token: 0x040048B0 RID: 18608
 		private const string DB = "db_state_machine_preload.db";
 
-		// Token: 0x040042DE RID: 17118
+		// Token: 0x040048B1 RID: 18609
 		private const string FILE = "Preload/StateMachinePreload.csv";
 
-		// Token: 0x040042DF RID: 17119
+		// Token: 0x040048B2 RID: 18610
 		private const string TABLE = "StateMachinePreload";
 
-		// Token: 0x040042E0 RID: 17120
+		// Token: 0x040048B3 RID: 18611
 		private const string COMMAND = "select BinData from `StateMachinePreload` where FsmKey=?";
 
-		// Token: 0x040042E1 RID: 17121
+		// Token: 0x040048B4 RID: 18612
 		private const string KEY_PREFIX = "StateMachinePreloadByFsmKey";
 
-		// Token: 0x040042E2 RID: 17122
+		// Token: 0x040048B5 RID: 18613
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040042E3 RID: 17123
+		// Token: 0x040048B6 RID: 18614
 		private static int HandleId;
 	}
 }

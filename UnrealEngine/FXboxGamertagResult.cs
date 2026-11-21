@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F15 RID: 7957
+	// Token: 0x02000620 RID: 1568
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.XboxGamertagResult")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FXboxGamertagResult : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E312 RID: 123666 RVA: 0x002CE3DF File Offset: 0x002CC5DF
+		// Token: 0x06008936 RID: 35126 RVA: 0x000CF021 File Offset: 0x000CD221
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FXboxGamertagResult._ScriptStructPtr != 0) ? FXboxGamertagResult._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.XboxGamertagResult", ref FXboxGamertagResult._ScriptStructPtr);
 		}
 
-		// Token: 0x170077E8 RID: 30696
-		// (get) Token: 0x0601E313 RID: 123667 RVA: 0x002CE403 File Offset: 0x002CC603
-		// (set) Token: 0x0601E314 RID: 123668 RVA: 0x002CE413 File Offset: 0x002CC613
+		// Token: 0x17001998 RID: 6552
+		// (get) Token: 0x06008937 RID: 35127 RVA: 0x000CF045 File Offset: 0x000CD245
+		// (set) Token: 0x06008938 RID: 35128 RVA: 0x000CF055 File Offset: 0x000CD255
 		public unsafe bool bSuccess
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077E9 RID: 30697
-		// (get) Token: 0x0601E315 RID: 123669 RVA: 0x002CE424 File Offset: 0x002CC624
-		// (set) Token: 0x0601E316 RID: 123670 RVA: 0x002CE438 File Offset: 0x002CC638
+		// Token: 0x17001999 RID: 6553
+		// (get) Token: 0x06008939 RID: 35129 RVA: 0x000CF066 File Offset: 0x000CD266
+		// (set) Token: 0x0600893A RID: 35130 RVA: 0x000CF07A File Offset: 0x000CD27A
 		public unsafe string Gamertag
 		{
 			get
@@ -48,57 +48,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E317 RID: 123671 RVA: 0x002CE44D File Offset: 0x002CC64D
+		// Token: 0x0600893B RID: 35131 RVA: 0x000CF08F File Offset: 0x000CD28F
 		public FXboxGamertagResult()
 		{
 		}
 
-		// Token: 0x0601E318 RID: 123672 RVA: 0x002CE455 File Offset: 0x002CC655
-		public FXboxGamertagResult(bool bSuccess, string Gamertag)
-		{
-			this.bSuccess = bSuccess;
-			this.Gamertag = Gamertag;
-		}
-
-		// Token: 0x0601E319 RID: 123673 RVA: 0x002CE46B File Offset: 0x002CC66B
+		// Token: 0x0600893C RID: 35132 RVA: 0x000CF097 File Offset: 0x000CD297
 		protected override IntPtr GetUStructPtr()
 		{
 			return FXboxGamertagResult.StaticStruct();
 		}
 
-		// Token: 0x0601E31A RID: 123674 RVA: 0x002CE477 File Offset: 0x002CC677
+		// Token: 0x0600893D RID: 35133 RVA: 0x000CF0A3 File Offset: 0x000CD2A3
 		[NullableContext(2)]
 		public FXboxGamertagResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E31B RID: 123675 RVA: 0x002CE481 File Offset: 0x002CC681
+		// Token: 0x0600893E RID: 35134 RVA: 0x000CF0AD File Offset: 0x000CD2AD
 		public FXboxGamertagResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E31C RID: 123676 RVA: 0x002CE48C File Offset: 0x002CC68C
+		// Token: 0x0600893F RID: 35135 RVA: 0x000CF0B8 File Offset: 0x000CD2B8
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FXboxGamertagResult(Pointer, false, true);
 		}
 
-		// Token: 0x0601E31D RID: 123677 RVA: 0x002CE496 File Offset: 0x002CC696
+		// Token: 0x06008940 RID: 35136 RVA: 0x000CF0C2 File Offset: 0x000CD2C2
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FXboxGamertagResult(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040104C3 RID: 66755
+		// Token: 0x04003B8E RID: 15246
 		public const string __ObjectPath = "/Script/KuroUtility.XboxGamertagResult";
 
-		// Token: 0x040104C4 RID: 66756
+		// Token: 0x04003B8F RID: 15247
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040104C5 RID: 66757
+		// Token: 0x04003B90 RID: 15248
 		internal static int __PropertyOffset_bSuccess;
 
-		// Token: 0x040104C6 RID: 66758
+		// Token: 0x04003B91 RID: 15249
 		internal static int __PropertyOffset_Gamertag;
 	}
 }

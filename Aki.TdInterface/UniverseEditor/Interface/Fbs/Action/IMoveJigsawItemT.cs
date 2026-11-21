@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B49 RID: 27465
+	// Token: 0x0200728F RID: 29327
 	public class IMoveJigsawItemT
 	{
-		// Token: 0x1700CC15 RID: 52245
-		// (get) Token: 0x0603035D RID: 197469 RVA: 0x0068D2A3 File Offset: 0x0068B4A3
-		// (set) Token: 0x0603035E RID: 197470 RVA: 0x0068D2AB File Offset: 0x0068B4AB
+		// Token: 0x1700D6FA RID: 55034
+		// (get) Token: 0x060331B4 RID: 209332 RVA: 0x006E585F File Offset: 0x006E3A5F
+		// (set) Token: 0x060331B5 RID: 209333 RVA: 0x006E5867 File Offset: 0x006E3A67
 		public ESetJigsawItemType Type { get; set; }
 
-		// Token: 0x1700CC16 RID: 52246
-		// (get) Token: 0x0603035F RID: 197471 RVA: 0x0068D2B4 File Offset: 0x0068B4B4
-		// (set) Token: 0x06030360 RID: 197472 RVA: 0x0068D2BC File Offset: 0x0068B4BC
+		// Token: 0x1700D6FB RID: 55035
+		// (get) Token: 0x060331B6 RID: 209334 RVA: 0x006E5870 File Offset: 0x006E3A70
+		// (set) Token: 0x060331B7 RID: 209335 RVA: 0x006E5878 File Offset: 0x006E3A78
 		public int ItemEntityId { get; set; }
 
-		// Token: 0x1700CC17 RID: 52247
-		// (get) Token: 0x06030361 RID: 197473 RVA: 0x0068D2C5 File Offset: 0x0068B4C5
-		// (set) Token: 0x06030362 RID: 197474 RVA: 0x0068D2CD File Offset: 0x0068B4CD
+		// Token: 0x1700D6FC RID: 55036
+		// (get) Token: 0x060331B8 RID: 209336 RVA: 0x006E5881 File Offset: 0x006E3A81
+		// (set) Token: 0x060331B9 RID: 209337 RVA: 0x006E5889 File Offset: 0x006E3A89
 		public int FoundationEntityId { get; set; }
 
-		// Token: 0x1700CC18 RID: 52248
-		// (get) Token: 0x06030363 RID: 197475 RVA: 0x0068D2D6 File Offset: 0x0068B4D6
-		// (set) Token: 0x06030364 RID: 197476 RVA: 0x0068D2DE File Offset: 0x0068B4DE
+		// Token: 0x1700D6FD RID: 55037
+		// (get) Token: 0x060331BA RID: 209338 RVA: 0x006E5892 File Offset: 0x006E3A92
+		// (set) Token: 0x060331BB RID: 209339 RVA: 0x006E589A File Offset: 0x006E3A9A
 		public IPieceIndexT Destination { get; set; }
 
-		// Token: 0x06030365 RID: 197477 RVA: 0x0068D2E7 File Offset: 0x0068B4E7
+		// Token: 0x060331BC RID: 209340 RVA: 0x006E58A3 File Offset: 0x006E3AA3
 		public IMoveJigsawItemT()
 		{
 			this.Type = ESetJigsawItemType.MoveJigsawItem;

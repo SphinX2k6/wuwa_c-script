@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E90 RID: 7824
+	// Token: 0x020020C5 RID: 8389
 	public class ISlopeSlidePerformStart_SetValue
 	{
-		// Token: 0x040063DE RID: 25566
+		// Token: 0x040069C2 RID: 27074
 		public ESlidePerformType Type;
 
-		// Token: 0x040063DF RID: 25567
-		[Nullable(1)]
+		// Token: 0x040069C3 RID: 27075
 		public string SlopeSlidePerformDaPath;
 	}
 }

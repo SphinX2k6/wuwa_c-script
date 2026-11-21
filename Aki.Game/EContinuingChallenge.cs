@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020022E5 RID: 8933
+// Token: 0x020017C9 RID: 6089
 public enum EContinuingChallenge
 {
-	// Token: 0x04008589 RID: 34185
+	// Token: 0x040086C7 RID: 34503
 	Accept,
-	// Token: 0x0400858A RID: 34186
+	// Token: 0x040086C8 RID: 34504
 	Leave,
-	// Token: 0x0400858B RID: 34187
+	// Token: 0x040086C9 RID: 34505
 	Pending
 }

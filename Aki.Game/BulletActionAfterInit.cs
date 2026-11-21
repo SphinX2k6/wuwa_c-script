@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
-using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002D7E RID: 11646
+// Token: 0x020022D8 RID: 8920
 public class BulletActionAfterInit : BulletActionBase
 {
-	// Token: 0x060187B4 RID: 100276 RVA: 0x0063AC2B File Offset: 0x00638E2B
+	// Token: 0x06016056 RID: 90198 RVA: 0x00660C5B File Offset: 0x0065EE5B
 	public BulletActionAfterInit(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187B5 RID: 100277 RVA: 0x0063AC34 File Offset: 0x00638E34
+	// Token: 0x06016057 RID: 90199 RVA: 0x00660C64 File Offset: 0x0065EE64
 	protected unsafe override void OnExecute()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -30,10 +28,6 @@ public class BulletActionAfterInit : BulletActionBase
 				fgameplayEventData.OptionalObject = bulletInfo.Actor;
 				UAbilitySystemBlueprintLibrary.SendGameplayEventToActor(aactor, sendGameplayEventTagToAttackerOnStart, fgameplayEventData);
 			}
-		}
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			EventSystem.Instance.EmitWithTarget<BulletInfo>(attacker, EEventName.BulletCreate, bulletInfo);
 		}
 		bulletInfo.IsInit = true;
 		if (!bulletInfo.BulletInitParams.FromRemote)
@@ -106,7 +100,7 @@ public class BulletActionAfterInit : BulletActionBase
 		bulletInfo.ActionLogicComponent.OnAfterInit();
 	}
 
-	// Token: 0x060187B6 RID: 100278 RVA: 0x0063AFB4 File Offset: 0x006391B4
+	// Token: 0x06016058 RID: 90200 RVA: 0x00660FC4 File Offset: 0x0065F1C4
 	private static long? GetCreatureDataId(int entityId)
 	{
 		CreatureDataComponent component = EntitySystem.Instance.GetComponent<CreatureDataComponent>(entityId);
@@ -117,7 +111,7 @@ public class BulletActionAfterInit : BulletActionBase
 		return new long?(component.GetCreatureDataId());
 	}
 
-	// Token: 0x060187B7 RID: 100279 RVA: 0x0063AFE4 File Offset: 0x006391E4
+	// Token: 0x06016059 RID: 90201 RVA: 0x00660FF4 File Offset: 0x0065F1F4
 	[NullableContext(1)]
 	private void CompressData(CreateBulletPush data)
 	{

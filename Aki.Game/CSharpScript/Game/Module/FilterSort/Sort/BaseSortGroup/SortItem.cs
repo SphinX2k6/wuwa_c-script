@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FilterSort.Sort.BaseSortGroup
 {
-	// Token: 0x02005B38 RID: 23352
+	// Token: 0x02004B19 RID: 19225
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class SortItem : UiPanelBase
 	{
-		// Token: 0x0603B202 RID: 242178 RVA: 0x00E195F2 File Offset: 0x00E177F2
+		// Token: 0x06030174 RID: 196980 RVA: 0x00D6A30A File Offset: 0x00D6850A
 		public SortItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B203 RID: 242179 RVA: 0x00E1961C File Offset: 0x00E1781C
+		// Token: 0x06030175 RID: 196981 RVA: 0x00D6A334 File Offset: 0x00D68534
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.BaseSortGroup
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B204 RID: 242180 RVA: 0x00E196E3 File Offset: 0x00E178E3
+		// Token: 0x06030176 RID: 196982 RVA: 0x00D6A3FB File Offset: 0x00D685FB
 		private void ToggleEvent(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -55,32 +55,32 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.BaseSortGroup
 			}
 		}
 
-		// Token: 0x0603B205 RID: 242181 RVA: 0x00E19705 File Offset: 0x00E17905
+		// Token: 0x06030177 RID: 196983 RVA: 0x00D6A41D File Offset: 0x00D6861D
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(1).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 		}
 
-		// Token: 0x0603B206 RID: 242182 RVA: 0x00E19724 File Offset: 0x00E17924
+		// Token: 0x06030178 RID: 196984 RVA: 0x00D6A43C File Offset: 0x00D6863C
 		private bool CanExecuteChange()
 		{
 			return this.CanExecuteChangeInternal == null || this.CanExecuteChangeInternal(this.RuleId);
 		}
 
-		// Token: 0x0603B207 RID: 242183 RVA: 0x00E19741 File Offset: 0x00E17941
+		// Token: 0x06030179 RID: 196985 RVA: 0x00D6A459 File Offset: 0x00D68659
 		protected override void OnBeforeDestroy()
 		{
 			base.GetExtendToggle(1).CanExecuteChange.Unbind();
 		}
 
-		// Token: 0x0603B208 RID: 242184 RVA: 0x00E19754 File Offset: 0x00E17954
+		// Token: 0x0603017A RID: 196986 RVA: 0x00D6A46C File Offset: 0x00D6866C
 		private void SetName()
 		{
 			this.Name = SortConfig.Instance.GetSortRuleName(this.RuleId, this.DataType);
 			base.GetText(0).SetText(this.Name, true);
 		}
 
-		// Token: 0x0603B209 RID: 242185 RVA: 0x00E19788 File Offset: 0x00E17988
+		// Token: 0x0603017B RID: 196987 RVA: 0x00D6A4A0 File Offset: 0x00D686A0
 		private void SetTexture()
 		{
 			int sortRuleAttributeId = SortConfig.Instance.GetSortRuleAttributeId(this.RuleId, this.DataType);
@@ -100,19 +100,19 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.BaseSortGroup
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x0603B20A RID: 242186 RVA: 0x00E19820 File Offset: 0x00E17A20
+		// Token: 0x0603017C RID: 196988 RVA: 0x00D6A538 File Offset: 0x00D68738
 		public void SetToggleFunction(TSortItemToggleEvent toggleFunction)
 		{
 			this.ToggleFunction = toggleFunction;
 		}
 
-		// Token: 0x0603B20B RID: 242187 RVA: 0x00E19829 File Offset: 0x00E17A29
+		// Token: 0x0603017D RID: 196989 RVA: 0x00D6A541 File Offset: 0x00D68741
 		public void SetCanExecuteChange(TCanExecuteChange callback)
 		{
 			this.CanExecuteChangeInternal = callback;
 		}
 
-		// Token: 0x0603B20C RID: 242188 RVA: 0x00E19834 File Offset: 0x00E17A34
+		// Token: 0x0603017E RID: 196990 RVA: 0x00D6A54C File Offset: 0x00D6874C
 		public void SetToggleStateForce(bool bSelected)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.BaseSortGroup
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x0603B20D RID: 242189 RVA: 0x00E19859 File Offset: 0x00E17A59
+		// Token: 0x0603017F RID: 196991 RVA: 0x00D6A571 File Offset: 0x00D68771
 		public void ShowSortItem(int ruleId, ESortDataType dateType, bool bSelected)
 		{
 			this.RuleId = ruleId;
@@ -130,32 +130,32 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.BaseSortGroup
 			this.SetToggleStateForce(bSelected);
 		}
 
-		// Token: 0x0401ED23 RID: 126243
+		// Token: 0x040197DF RID: 104415
 		private int RuleId;
 
-		// Token: 0x0401ED24 RID: 126244
+		// Token: 0x040197E0 RID: 104416
 		private ESortDataType DataType = ESortDataType.Role;
 
-		// Token: 0x0401ED25 RID: 126245
+		// Token: 0x040197E1 RID: 104417
 		private string Name = "";
 
-		// Token: 0x0401ED26 RID: 126246
+		// Token: 0x040197E2 RID: 104418
 		[Nullable(2)]
 		private TSortItemToggleEvent ToggleFunction;
 
-		// Token: 0x0401ED27 RID: 126247
+		// Token: 0x040197E3 RID: 104419
 		[Nullable(2)]
 		private TCanExecuteChange CanExecuteChangeInternal;
 
-		// Token: 0x0200BD6E RID: 48494
+		// Token: 0x0200A777 RID: 42871
 		[NullableContext(0)]
 		private enum ESortItemDefine
 		{
-			// Token: 0x0403923E RID: 234046
+			// Token: 0x04033C0A RID: 211978
 			Name,
-			// Token: 0x0403923F RID: 234047
+			// Token: 0x04033C0B RID: 211979
 			Toggle,
-			// Token: 0x04039240 RID: 234048
+			// Token: 0x04033C0C RID: 211980
 			Icon
 		}
 	}

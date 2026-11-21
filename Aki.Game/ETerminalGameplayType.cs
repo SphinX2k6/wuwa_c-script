@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002D72 RID: 11634
+// Token: 0x020022CC RID: 8908
 public enum ETerminalGameplayType
 {
-	// Token: 0x0400B560 RID: 46432
+	// Token: 0x0400B8D5 RID: 47317
 	Activity,
-	// Token: 0x0400B561 RID: 46433
+	// Token: 0x0400B8D6 RID: 47318
 	Function
 }

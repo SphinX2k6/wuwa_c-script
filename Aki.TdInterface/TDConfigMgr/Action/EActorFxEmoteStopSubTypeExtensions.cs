@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200228D RID: 8845
+	// Token: 0x020024FA RID: 9466
 	public static class EActorFxEmoteStopSubTypeExtensions
 	{
-		// Token: 0x0600C1F9 RID: 49657 RVA: 0x001C523C File Offset: 0x001C343C
+		// Token: 0x0600CDBF RID: 52671 RVA: 0x001DCF30 File Offset: 0x001DB130
 		public static string ToEnumString(this EActorFxEmoteStopSubType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1FA RID: 49658 RVA: 0x001C5274 File Offset: 0x001C3474
+		// Token: 0x0600CDC0 RID: 52672 RVA: 0x001DCF68 File Offset: 0x001DB168
 		public static EActorFxEmoteStopSubType FromString(string name)
 		{
 			EActorFxEmoteStopSubType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1FB RID: 49659 RVA: 0x001C529D File Offset: 0x001C349D
+		// Token: 0x0600CDC1 RID: 52673 RVA: 0x001DCF91 File Offset: 0x001DB191
 		public static bool TryFromString(string name, out EActorFxEmoteStopSubType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C1FC RID: 49660 RVA: 0x001C52D6 File Offset: 0x001C34D6
+		// Token: 0x0600CDC2 RID: 52674 RVA: 0x001DCFCA File Offset: 0x001DB1CA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1FD RID: 49661 RVA: 0x001C52EE File Offset: 0x001C34EE
+		// Token: 0x0600CDC3 RID: 52675 RVA: 0x001DCFE2 File Offset: 0x001DB1E2
 		public static EActorFxEmoteStopSubType[] GetValues()
 		{
 			return new EActorFxEmoteStopSubType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1FE RID: 49662 RVA: 0x001C52FA File Offset: 0x001C34FA
+		// Token: 0x0600CDC4 RID: 52676 RVA: 0x001DCFEE File Offset: 0x001DB1EE
 		public static string[] GetNames()
 		{
 			return new string[]

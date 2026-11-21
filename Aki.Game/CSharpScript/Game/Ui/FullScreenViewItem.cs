@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200464B RID: 17995
+	// Token: 0x0200357C RID: 13692
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FullScreenViewItem : CommonPopViewBase, ICommonPopView
 	{
-		// Token: 0x0602E718 RID: 190232 RVA: 0x00ABB068 File Offset: 0x00AB9268
+		// Token: 0x06022E62 RID: 142946 RVA: 0x009E8698 File Offset: 0x009E6898
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,68 +25,68 @@ namespace CSharpScript.Game.Ui
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602E719 RID: 190233 RVA: 0x00ABB0D1 File Offset: 0x00AB92D1
+		// Token: 0x06022E63 RID: 142947 RVA: 0x009E8701 File Offset: 0x009E6901
 		protected override void OnStart()
 		{
 			this.PopupCaptionItem = new PopupCaptionItem(base.GetItem(0));
 			this.PopupCaptionItem.SetCloseCallBack(new Action(base.TryHideSelf));
 		}
 
-		// Token: 0x0602E71A RID: 190234 RVA: 0x00ABB0FC File Offset: 0x00AB92FC
+		// Token: 0x06022E64 RID: 142948 RVA: 0x009E872C File Offset: 0x009E692C
 		public override UUIItem GetAttachParent()
 		{
 			return base.GetItem(1);
 		}
 
-		// Token: 0x0602E71B RID: 190235 RVA: 0x00ABB105 File Offset: 0x00AB9305
+		// Token: 0x06022E65 RID: 142949 RVA: 0x009E8735 File Offset: 0x009E6935
 		public void SetCaptionTitleIconVisible(bool bVisible)
 		{
 			this.PopupCaptionItem.SetTitleIconVisible(bVisible);
 		}
 
-		// Token: 0x0602E71C RID: 190236 RVA: 0x00ABB113 File Offset: 0x00AB9313
+		// Token: 0x06022E66 RID: 142950 RVA: 0x009E8743 File Offset: 0x009E6943
 		public void SetCaptionTitleVisible(bool bVisible)
 		{
 			this.PopupCaptionItem.SetTitleTextActive(bVisible);
 		}
 
-		// Token: 0x0602E71D RID: 190237 RVA: 0x00ABB121 File Offset: 0x00AB9321
+		// Token: 0x06022E67 RID: 142951 RVA: 0x009E8751 File Offset: 0x009E6951
 		public override void OnSetTitleByTextIdAndArg(string textId, params object[] args)
 		{
 			this.PopupCaptionItem.SetTitleByTextIdAndArg(textId, args);
 		}
 
-		// Token: 0x0602E71E RID: 190238 RVA: 0x00ABB130 File Offset: 0x00AB9330
+		// Token: 0x06022E68 RID: 142952 RVA: 0x009E8760 File Offset: 0x009E6960
 		public override void OnSetCloseBtnInteractive(bool state)
 		{
 		}
 
-		// Token: 0x0602E71F RID: 190239 RVA: 0x00ABB132 File Offset: 0x00AB9332
+		// Token: 0x06022E69 RID: 142953 RVA: 0x009E8762 File Offset: 0x009E6962
 		public override void OnSetHelpButtonActive(bool state)
 		{
 		}
 
-		// Token: 0x0602E720 RID: 190240 RVA: 0x00ABB134 File Offset: 0x00AB9334
+		// Token: 0x06022E6A RID: 142954 RVA: 0x009E8764 File Offset: 0x009E6964
 		public override void OnSetBackBtnShowState(bool state)
 		{
 		}
 
-		// Token: 0x0602E721 RID: 190241 RVA: 0x00ABB136 File Offset: 0x00AB9336
+		// Token: 0x06022E6B RID: 142955 RVA: 0x009E8766 File Offset: 0x009E6966
 		public override void OnRefreshCost(CommonCurrencyItem[] commonCurrencyItemList)
 		{
 		}
 
-		// Token: 0x04018E22 RID: 101922
+		// Token: 0x0401347B RID: 78971
 		private PopupCaptionItem PopupCaptionItem;
 
-		// Token: 0x0200A8A6 RID: 43174
+		// Token: 0x02009262 RID: 37474
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403357E RID: 210302
+			// Token: 0x0402DD14 RID: 187668
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403357F RID: 210303
+			// Token: 0x0402DD15 RID: 187669
 			public const int ContentItem = 1;
 		}
 	}

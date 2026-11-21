@@ -1,64 +1,64 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200179A RID: 6042
+// Token: 0x02000C53 RID: 3155
 [NullableContext(1)]
 [Nullable(0)]
 public class PrivateChatRoom : ChatRoom
 {
-	// Token: 0x0600B01C RID: 45084 RVA: 0x0027C0B2 File Offset: 0x0027A2B2
+	// Token: 0x06008404 RID: 33796 RVA: 0x002865CE File Offset: 0x002847CE
 	public PrivateChatRoom(int targetPlayerId, int configId) : base(EChatRoomType.Private, configId)
 	{
 		this.TargetPlayerId = targetPlayerId;
 	}
 
-	// Token: 0x0600B01D RID: 45085 RVA: 0x0027C0C3 File Offset: 0x0027A2C3
+	// Token: 0x06008405 RID: 33797 RVA: 0x002865DF File Offset: 0x002847DF
 	public FriendData GetFriendData()
 	{
 		return FriendModel.Instance.GetFriendById(this.TargetPlayerId);
 	}
 
-	// Token: 0x0600B01E RID: 45086 RVA: 0x0027C0D5 File Offset: 0x0027A2D5
+	// Token: 0x06008406 RID: 33798 RVA: 0x002865F1 File Offset: 0x002847F1
 	public int GetTargetPlayerId()
 	{
 		return this.TargetPlayerId;
 	}
 
-	// Token: 0x0600B01F RID: 45087 RVA: 0x0027C0DD File Offset: 0x0027A2DD
+	// Token: 0x06008407 RID: 33799 RVA: 0x002865F9 File Offset: 0x002847F9
 	public override int GetUniqueId()
 	{
 		return this.TargetPlayerId;
 	}
 
-	// Token: 0x0600B020 RID: 45088 RVA: 0x0027C0E5 File Offset: 0x0027A2E5
+	// Token: 0x06008408 RID: 33800 RVA: 0x00286601 File Offset: 0x00284801
 	public string GetPlayerName()
 	{
 		FriendData friendData = this.GetFriendData();
 		return ((friendData != null) ? friendData.PlayerName : null) ?? "";
 	}
 
-	// Token: 0x0600B021 RID: 45089 RVA: 0x0027C102 File Offset: 0x0027A302
+	// Token: 0x06008409 RID: 33801 RVA: 0x0028661E File Offset: 0x0028481E
 	public string GetPlayerRemarks()
 	{
 		FriendData friendData = this.GetFriendData();
 		return ((friendData != null) ? friendData.FriendRemark : null) ?? "";
 	}
 
-	// Token: 0x0600B022 RID: 45090 RVA: 0x0027C11F File Offset: 0x0027A31F
+	// Token: 0x0600840A RID: 33802 RVA: 0x0028663B File Offset: 0x0028483B
 	public bool IsOnline()
 	{
 		FriendData friendData = this.GetFriendData();
 		return friendData != null && friendData.PlayerIsOnline;
 	}
 
-	// Token: 0x0600B023 RID: 45091 RVA: 0x0027C132 File Offset: 0x0027A332
+	// Token: 0x0600840B RID: 33803 RVA: 0x0028664E File Offset: 0x0028484E
 	public string GetThirdPartyUserId()
 	{
 		FriendData friendData = this.GetFriendData();
 		return ((friendData != null) ? friendData.GetSdkUserId() : null) ?? "";
 	}
 
-	// Token: 0x0600B024 RID: 45092 RVA: 0x0027C14F File Offset: 0x0027A34F
+	// Token: 0x0600840C RID: 33804 RVA: 0x0028666B File Offset: 0x0028486B
 	[NullableContext(2)]
 	public string GetThirdPartyOnlineId()
 	{
@@ -70,13 +70,13 @@ public class PrivateChatRoom : ChatRoom
 		return friendData.GetSdkOnlineId();
 	}
 
-	// Token: 0x0600B025 RID: 45093 RVA: 0x0027C164 File Offset: 0x0027A364
+	// Token: 0x0600840D RID: 33805 RVA: 0x00286680 File Offset: 0x00284880
 	public bool CanChat()
 	{
 		FriendModel instance = FriendModel.Instance;
 		return !instance.HasBlockedPlayer(this.TargetPlayerId) && instance.HasFriend(this.TargetPlayerId);
 	}
 
-	// Token: 0x04005004 RID: 20484
+	// Token: 0x040050AE RID: 20654
 	private readonly int TargetPlayerId;
 }

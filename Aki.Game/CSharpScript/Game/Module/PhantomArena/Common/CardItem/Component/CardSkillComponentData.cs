@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051F0 RID: 20976
+	// Token: 0x020041C0 RID: 16832
 	public class CardSkillComponentData : ICardSkillComponentData
 	{
-		// Token: 0x170081D3 RID: 33235
-		// (get) Token: 0x06035A71 RID: 219761 RVA: 0x00CB52D2 File Offset: 0x00CB34D2
-		// (set) Token: 0x06035A72 RID: 219762 RVA: 0x00CB52DA File Offset: 0x00CB34DA
+		// Token: 0x17005593 RID: 21907
+		// (get) Token: 0x0602A96C RID: 174444 RVA: 0x00C0290E File Offset: 0x00C00B0E
+		// (set) Token: 0x0602A96D RID: 174445 RVA: 0x00C02916 File Offset: 0x00C00B16
 		public int SkillCd { get; set; }
 
-		// Token: 0x170081D4 RID: 33236
-		// (get) Token: 0x06035A73 RID: 219763 RVA: 0x00CB52E3 File Offset: 0x00CB34E3
-		// (set) Token: 0x06035A74 RID: 219764 RVA: 0x00CB52EB File Offset: 0x00CB34EB
+		// Token: 0x17005594 RID: 21908
+		// (get) Token: 0x0602A96E RID: 174446 RVA: 0x00C0291F File Offset: 0x00C00B1F
+		// (set) Token: 0x0602A96F RID: 174447 RVA: 0x00C02927 File Offset: 0x00C00B27
 		public bool InSelect { get; set; }
 
-		// Token: 0x170081D5 RID: 33237
-		// (get) Token: 0x06035A75 RID: 219765 RVA: 0x00CB52F4 File Offset: 0x00CB34F4
-		// (set) Token: 0x06035A76 RID: 219766 RVA: 0x00CB52FC File Offset: 0x00CB34FC
+		// Token: 0x17005595 RID: 21909
+		// (get) Token: 0x0602A970 RID: 174448 RVA: 0x00C02930 File Offset: 0x00C00B30
+		// (set) Token: 0x0602A971 RID: 174449 RVA: 0x00C02938 File Offset: 0x00C00B38
 		public bool InFight { get; set; }
 	}
 }

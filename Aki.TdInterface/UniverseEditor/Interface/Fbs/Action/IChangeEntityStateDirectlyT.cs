@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062F1 RID: 25329
+	// Token: 0x02006962 RID: 26978
 	public class IChangeEntityStateDirectlyT
 	{
-		// Token: 0x1700BD0C RID: 48396
-		// (get) Token: 0x0602BC9B RID: 179355 RVA: 0x00605ECD File Offset: 0x006040CD
-		// (set) Token: 0x0602BC9C RID: 179356 RVA: 0x00605ED5 File Offset: 0x006040D5
+		// Token: 0x1700C696 RID: 50838
+		// (get) Token: 0x0602E404 RID: 189444 RVA: 0x00650ED9 File Offset: 0x0064F0D9
+		// (set) Token: 0x0602E405 RID: 189445 RVA: 0x00650EE1 File Offset: 0x0064F0E1
 		public EChangeEntityState Type { get; set; }
 
-		// Token: 0x1700BD0D RID: 48397
-		// (get) Token: 0x0602BC9D RID: 179357 RVA: 0x00605EDE File Offset: 0x006040DE
-		// (set) Token: 0x0602BC9E RID: 179358 RVA: 0x00605EE6 File Offset: 0x006040E6
+		// Token: 0x1700C697 RID: 50839
+		// (get) Token: 0x0602E406 RID: 189446 RVA: 0x00650EEA File Offset: 0x0064F0EA
+		// (set) Token: 0x0602E407 RID: 189447 RVA: 0x00650EF2 File Offset: 0x0064F0F2
 		public int EntityId { get; set; }
 
-		// Token: 0x1700BD0E RID: 48398
-		// (get) Token: 0x0602BC9F RID: 179359 RVA: 0x00605EEF File Offset: 0x006040EF
-		// (set) Token: 0x0602BCA0 RID: 179360 RVA: 0x00605EF7 File Offset: 0x006040F7
+		// Token: 0x1700C698 RID: 50840
+		// (get) Token: 0x0602E408 RID: 189448 RVA: 0x00650EFB File Offset: 0x0064F0FB
+		// (set) Token: 0x0602E409 RID: 189449 RVA: 0x00650F03 File Offset: 0x0064F103
 		public string State { get; set; }
 
-		// Token: 0x1700BD0F RID: 48399
-		// (get) Token: 0x0602BCA1 RID: 179361 RVA: 0x00605F00 File Offset: 0x00604100
-		// (set) Token: 0x0602BCA2 RID: 179362 RVA: 0x00605F08 File Offset: 0x00604108
+		// Token: 0x1700C699 RID: 50841
+		// (get) Token: 0x0602E40A RID: 189450 RVA: 0x00650F0C File Offset: 0x0064F10C
+		// (set) Token: 0x0602E40B RID: 189451 RVA: 0x00650F14 File Offset: 0x0064F114
 		public bool DelayChange { get; set; }
 
-		// Token: 0x1700BD10 RID: 48400
-		// (get) Token: 0x0602BCA3 RID: 179363 RVA: 0x00605F11 File Offset: 0x00604111
-		// (set) Token: 0x0602BCA4 RID: 179364 RVA: 0x00605F19 File Offset: 0x00604119
+		// Token: 0x1700C69A RID: 50842
+		// (get) Token: 0x0602E40C RID: 189452 RVA: 0x00650F1D File Offset: 0x0064F11D
+		// (set) Token: 0x0602E40D RID: 189453 RVA: 0x00650F25 File Offset: 0x0064F125
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602BCA5 RID: 179365 RVA: 0x00605F22 File Offset: 0x00604122
+		// Token: 0x0602E40E RID: 189454 RVA: 0x00650F2E File Offset: 0x0064F12E
 		public IChangeEntityStateDirectlyT()
 		{
 			this.Type = EChangeEntityState.Directly;

@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D9B RID: 19867
+	// Token: 0x02003D64 RID: 15716
 	public enum EPerkType
 	{
-		// Token: 0x0401B3FD RID: 111613
+		// Token: 0x04015DD0 RID: 89552
 		Phantom = 1,
-		// Token: 0x0401B3FE RID: 111614
+		// Token: 0x04015DD1 RID: 89553
 		Common,
-		// Token: 0x0401B3FF RID: 111615
+		// Token: 0x04015DD2 RID: 89554
 		Role,
-		// Token: 0x0401B400 RID: 111616
+		// Token: 0x04015DD3 RID: 89555
 		Temp,
-		// Token: 0x0401B401 RID: 111617
+		// Token: 0x04015DD4 RID: 89556
 		CommonRole,
-		// Token: 0x0401B402 RID: 111618
+		// Token: 0x04015DD5 RID: 89557
 		Shop,
-		// Token: 0x0401B403 RID: 111619
+		// Token: 0x04015DD6 RID: 89558
 		Event,
-		// Token: 0x0401B404 RID: 111620
+		// Token: 0x04015DD7 RID: 89559
 		Special
 	}
 }

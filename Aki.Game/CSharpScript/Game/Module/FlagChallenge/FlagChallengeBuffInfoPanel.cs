@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A59 RID: 23129
+	// Token: 0x02004A35 RID: 18997
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeBuffInfoPanel : UiPanelBase
 	{
-		// Token: 0x0603AA18 RID: 240152 RVA: 0x00DF51A8 File Offset: 0x00DF33A8
+		// Token: 0x0602F961 RID: 194913 RVA: 0x00D4572C File Offset: 0x00D4392C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA19 RID: 240153 RVA: 0x00DF52E2 File Offset: 0x00DF34E2
+		// Token: 0x0602F962 RID: 194914 RVA: 0x00D45866 File Offset: 0x00D43A66
 		protected override void OnStart()
 		{
 			base.GetItem(0).SetUIActive(false);
 		}
 
-		// Token: 0x0603AA1A RID: 240154 RVA: 0x00DF52F4 File Offset: 0x00DF34F4
+		// Token: 0x0602F963 RID: 194915 RVA: 0x00D45878 File Offset: 0x00D43A78
 		public void RefreshView(FlagChallengeBuffData data)
 		{
 			this.BuffData = data;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.GetText(3).ShowTextNew(data.Config.BuffDescDetail);
 		}
 
-		// Token: 0x0603AA1B RID: 240155 RVA: 0x00DF5344 File Offset: 0x00DF3544
+		// Token: 0x0602F964 RID: 194916 RVA: 0x00D458C8 File Offset: 0x00D43AC8
 		private void UpdateState()
 		{
 			switch (this.BuffData.GetBuffStatus())
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA1C RID: 240156 RVA: 0x00DF5384 File Offset: 0x00DF3584
+		// Token: 0x0602F965 RID: 194917 RVA: 0x00D45908 File Offset: 0x00D43B08
 		public void SetStateActive()
 		{
 			this.SetActiveStateText("Morale_32_Buff_Activated", false);
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.SetStateItemShow(null);
 		}
 
-		// Token: 0x0603AA1D RID: 240157 RVA: 0x00DF53EC File Offset: 0x00DF35EC
+		// Token: 0x0602F966 RID: 194918 RVA: 0x00D45970 File Offset: 0x00D43B70
 		public void SetStateTempActive()
 		{
 			this.SetActiveStateText("Morale_32_Buff_TempActivated", false);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.SetStateItemShow(new int?(9));
 		}
 
-		// Token: 0x0603AA1E RID: 240158 RVA: 0x00DF5450 File Offset: 0x00DF3650
+		// Token: 0x0602F967 RID: 194919 RVA: 0x00D459D4 File Offset: 0x00D43BD4
 		public void SetStateNotActive()
 		{
 			this.SetActiveStateText("Morale_32_Buff_NotActivated", true);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.SetStateItemShow(new int?(6));
 		}
 
-		// Token: 0x0603AA1F RID: 240159 RVA: 0x00DF54B4 File Offset: 0x00DF36B4
+		// Token: 0x0602F968 RID: 194920 RVA: 0x00D45A38 File Offset: 0x00D43C38
 		private void SetActiveStateText(string key, bool useChangeColor = false)
 		{
 			UUIText text = base.GetText(12);
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			uuiitem.SetChangeColor(useChangeColor, fcolor);
 		}
 
-		// Token: 0x0603AA20 RID: 240160 RVA: 0x00DF54E8 File Offset: 0x00DF36E8
+		// Token: 0x0602F969 RID: 194921 RVA: 0x00D45A6C File Offset: 0x00D43C6C
 		private void SetActiveStateBg(string resId)
 		{
 			UUISprite sprite = base.GetSprite(11);
@@ -120,14 +120,14 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.SetSpriteByPath(resourcePath, sprite, false, null, null);
 		}
 
-		// Token: 0x0603AA21 RID: 240161 RVA: 0x00DF5520 File Offset: 0x00DF3720
+		// Token: 0x0602F96A RID: 194922 RVA: 0x00D45AA4 File Offset: 0x00D43CA4
 		private void SetIcon(string path)
 		{
 			UUITexture texture = base.GetTexture(4);
 			base.SetTextureByPath(path, texture, null, null);
 		}
 
-		// Token: 0x0603AA22 RID: 240162 RVA: 0x00DF5548 File Offset: 0x00DF3748
+		// Token: 0x0602F96B RID: 194923 RVA: 0x00D45ACC File Offset: 0x00D43CCC
 		private void SetIconChangeColor(bool useChangeColor)
 		{
 			UUITexture texture = base.GetTexture(4);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			uuiitem.SetChangeColor(useChangeColor, fcolor);
 		}
 
-		// Token: 0x0603AA23 RID: 240163 RVA: 0x00DF5574 File Offset: 0x00DF3774
+		// Token: 0x0602F96C RID: 194924 RVA: 0x00D45AF8 File Offset: 0x00D43CF8
 		private void SetBg(string resId)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.SetTextureByPath(resourcePath, texture, null, null);
 		}
 
-		// Token: 0x0603AA24 RID: 240164 RVA: 0x00DF55A8 File Offset: 0x00DF37A8
+		// Token: 0x0602F96D RID: 194925 RVA: 0x00D45B2C File Offset: 0x00D43D2C
 		private void SetStateNiagaraShow(int index)
 		{
 			foreach (int num in new List<int>
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA25 RID: 240165 RVA: 0x00DF5620 File Offset: 0x00DF3820
+		// Token: 0x0602F96E RID: 194926 RVA: 0x00D45BA4 File Offset: 0x00D43DA4
 		private void SetStateItemShow(int? index = null)
 		{
 			foreach (int num in new List<int>
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0401E90F RID: 125199
+		// Token: 0x040193B6 RID: 103350
 		[Nullable(2)]
 		private FlagChallengeBuffData BuffData;
 	}

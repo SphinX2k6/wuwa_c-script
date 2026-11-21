@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200144A RID: 5194
+	// Token: 0x020015A2 RID: 5538
 	public class ISaveNew : ISaveConfigType
 	{
-		// Token: 0x0600761B RID: 30235 RVA: 0x0011A1E5 File Offset: 0x001183E5
-		[NullableContext(1)]
+		// Token: 0x06007CE3 RID: 31971 RVA: 0x00128CB9 File Offset: 0x00126EB9
 		public static ISaveNew Create(ISaveNew? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700275A RID: 10074
-		// (get) Token: 0x0600761C RID: 30236 RVA: 0x0011A204 File Offset: 0x00118404
+		// Token: 0x17002941 RID: 10561
+		// (get) Token: 0x06007CE4 RID: 31972 RVA: 0x00128CD8 File Offset: 0x00126ED8
 		public override ESaveConfig Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004492 RID: 17554
+		// Token: 0x04004828 RID: 18472
 		private ISaveNew Instance;
 	}
 }

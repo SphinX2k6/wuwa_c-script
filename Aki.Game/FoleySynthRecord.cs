@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200301B RID: 12315
+// Token: 0x02002571 RID: 9585
 public class FoleySynthRecord
 {
-	// Token: 0x0400C5C1 RID: 50625
+	// Token: 0x0400C98E RID: 51598
 	public double Speed;
 
-	// Token: 0x0400C5C2 RID: 50626
+	// Token: 0x0400C98F RID: 51599
 	public double BoneSpeed;
 
-	// Token: 0x0400C5C3 RID: 50627
+	// Token: 0x0400C990 RID: 51600
 	public double Acceleration;
 }

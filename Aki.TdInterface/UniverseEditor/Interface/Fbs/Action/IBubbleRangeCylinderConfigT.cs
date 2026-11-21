@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006234 RID: 25140
+	// Token: 0x020068A5 RID: 26789
 	public class IBubbleRangeCylinderConfigT
 	{
-		// Token: 0x1700BB55 RID: 47957
-		// (get) Token: 0x0602B56A RID: 177514 RVA: 0x005F7A2A File Offset: 0x005F5C2A
-		// (set) Token: 0x0602B56B RID: 177515 RVA: 0x005F7A32 File Offset: 0x005F5C32
+		// Token: 0x1700C4DD RID: 50397
+		// (get) Token: 0x0602DCCB RID: 187595 RVA: 0x00642832 File Offset: 0x00640A32
+		// (set) Token: 0x0602DCCC RID: 187596 RVA: 0x0064283A File Offset: 0x00640A3A
 		public IBubbleCylinderConfigT InnerConfig { get; set; }
 
-		// Token: 0x1700BB56 RID: 47958
-		// (get) Token: 0x0602B56C RID: 177516 RVA: 0x005F7A3B File Offset: 0x005F5C3B
-		// (set) Token: 0x0602B56D RID: 177517 RVA: 0x005F7A43 File Offset: 0x005F5C43
+		// Token: 0x1700C4DE RID: 50398
+		// (get) Token: 0x0602DCCD RID: 187597 RVA: 0x00642843 File Offset: 0x00640A43
+		// (set) Token: 0x0602DCCE RID: 187598 RVA: 0x0064284B File Offset: 0x00640A4B
 		public IBubbleCylinderConfigT OuterConfig { get; set; }
 
-		// Token: 0x0602B56E RID: 177518 RVA: 0x005F7A4C File Offset: 0x005F5C4C
+		// Token: 0x0602DCCF RID: 187599 RVA: 0x00642854 File Offset: 0x00640A54
 		public IBubbleRangeCylinderConfigT()
 		{
 			this.InnerConfig = null;

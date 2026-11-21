@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F9C RID: 12188
+// Token: 0x020024F0 RID: 9456
 [NullableContext(1)]
 [Nullable(0)]
 public class ChangeBuffStackCount : PeriodExecution
 {
-	// Token: 0x06019DD0 RID: 105936 RVA: 0x006C1CE0 File Offset: 0x006BFEE0
+	// Token: 0x060176E2 RID: 95970 RVA: 0x006E85A8 File Offset: 0x006E67A8
 	public ChangeBuffStackCount(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DD1 RID: 105937 RVA: 0x006C1D18 File Offset: 0x006BFF18
+	// Token: 0x060176E3 RID: 95971 RVA: 0x006E85E0 File Offset: 0x006E67E0
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -76,7 +76,7 @@ public class ChangeBuffStackCount : PeriodExecution
 		this.StackPeriodResetPolicy = Array.Empty<EBuffStackPeriodResetOverride>();
 	}
 
-	// Token: 0x06019DD2 RID: 105938 RVA: 0x006C1EC8 File Offset: 0x006C00C8
+	// Token: 0x060176E4 RID: 95972 RVA: 0x006E8790 File Offset: 0x006E6990
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -100,7 +100,7 @@ public class ChangeBuffStackCount : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DD3 RID: 105939 RVA: 0x006C1F70 File Offset: 0x006C0170
+	// Token: 0x060176E5 RID: 95973 RVA: 0x006E8838 File Offset: 0x006E6A38
 	public override string GetDebugEffectString()
 	{
 		List<string> list = new List<string>();
@@ -124,15 +124,15 @@ public class ChangeBuffStackCount : PeriodExecution
 		return string.Join("\n", list);
 	}
 
-	// Token: 0x0400C373 RID: 50035
+	// Token: 0x0400C71C RID: 50972
 	protected long[] BuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C374 RID: 50036
+	// Token: 0x0400C71D RID: 50973
 	protected int[] StackChange = Array.Empty<int>();
 
-	// Token: 0x0400C375 RID: 50037
+	// Token: 0x0400C71E RID: 50974
 	protected EBuffStackDurationOverride[] StackDurationRefreshPolicy = Array.Empty<EBuffStackDurationOverride>();
 
-	// Token: 0x0400C376 RID: 50038
+	// Token: 0x0400C71F RID: 50975
 	protected EBuffStackPeriodResetOverride[] StackPeriodResetPolicy = Array.Empty<EBuffStackPeriodResetOverride>();
 }

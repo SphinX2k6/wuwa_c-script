@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -16,19 +15,19 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200559B RID: 21915
+	// Token: 0x02004571 RID: 17777
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MapRogueController : UiControllerBase
 	{
-		// Token: 0x06037DD2 RID: 228818 RVA: 0x00D3CE48 File Offset: 0x00D3B048
+		// Token: 0x0602CCD0 RID: 183504 RVA: 0x00C8AB90 File Offset: 0x00C88D90
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06037DD3 RID: 228819 RVA: 0x00D3CE4C File Offset: 0x00D3B04C
+		// Token: 0x0602CCD1 RID: 183505 RVA: 0x00C8AB94 File Offset: 0x00C88D94
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.RogueResOpDataUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRogueResOpDataUpdateNotify));
@@ -40,7 +39,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			Net.Instance.Register(ENotifyMessageId.RogueResMoodRangeUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRogueResMoodRangeUpdateNotify));
 		}
 
-		// Token: 0x06037DD4 RID: 228820 RVA: 0x00D3CF20 File Offset: 0x00D3B120
+		// Token: 0x0602CCD2 RID: 183506 RVA: 0x00C8AC68 File Offset: 0x00C88E68
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.RogueResOpDataUpdateNotify);
@@ -52,19 +51,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			Net.Instance.UnRegister(ENotifyMessageId.RogueResMoodRangeUpdateNotify);
 		}
 
-		// Token: 0x06037DD5 RID: 228821 RVA: 0x00D3CF9D File Offset: 0x00D3B19D
+		// Token: 0x0602CCD3 RID: 183507 RVA: 0x00C8ACE5 File Offset: 0x00C88EE5
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 		}
 
-		// Token: 0x06037DD6 RID: 228822 RVA: 0x00D3CFBB File Offset: 0x00D3B1BB
+		// Token: 0x0602CCD4 RID: 183508 RVA: 0x00C8AD03 File Offset: 0x00C88F03
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 		}
 
-		// Token: 0x06037DD7 RID: 228823 RVA: 0x00D3CFDC File Offset: 0x00D3B1DC
+		// Token: 0x0602CCD5 RID: 183509 RVA: 0x00C8AD24 File Offset: 0x00C88F24
 		private void OnRogueResInstGlobalDataNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResInstGlobalDataNotify rogueResInstGlobalDataNotify = (RogueResInstGlobalDataNotify)msg;
@@ -111,12 +110,12 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 			if (rogueResInstGlobalDataNotify.RogueResFormations != null)
 			{
-				RogueBattleModel.Instance.InitFormationData(rogueResInstGlobalDataNotify.RogueResFormations.ToList<RogueResFormation>());
+				RogueBattleModel.Instance.InitFormationData(new List<RogueResFormation>(rogueResInstGlobalDataNotify.RogueResFormations));
 			}
 			RogueBattleModel.Instance.MaxRoleStar = rogueResInstGlobalDataNotify.RoleMaxStar;
 		}
 
-		// Token: 0x06037DD8 RID: 228824 RVA: 0x00D3D164 File Offset: 0x00D3B364
+		// Token: 0x0602CCD6 RID: 183510 RVA: 0x00C8AEAC File Offset: 0x00C890AC
 		private void OnRogueResGridDataUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResGridDataUpdateNotify rogueResGridDataUpdateNotify = (RogueResGridDataUpdateNotify)msg;
@@ -137,7 +136,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037DD9 RID: 228825 RVA: 0x00D3D1F4 File Offset: 0x00D3B3F4
+		// Token: 0x0602CCD7 RID: 183511 RVA: 0x00C8AF3C File Offset: 0x00C8913C
 		private void OnRogueResMoodUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResMoodUpdateNotify rogueResMoodUpdateNotify = (RogueResMoodUpdateNotify)msg;
@@ -149,7 +148,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			MapRogueModel.Instance.GameInfo.MoodRuleId = rogueResMoodUpdateNotify.MoodRuleId;
 		}
 
-		// Token: 0x06037DDA RID: 228826 RVA: 0x00D3D264 File Offset: 0x00D3B464
+		// Token: 0x0602CCD8 RID: 183512 RVA: 0x00C8AFAC File Offset: 0x00C891AC
 		private void OnRogueResMoodRangeUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResMoodRangeUpdateNotify rogueResMoodRangeUpdateNotify = (RogueResMoodRangeUpdateNotify)msg;
@@ -161,7 +160,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			gameInfo.SetMood(gameInfo.Mood, null, new int?(rogueResMoodRangeUpdateNotify.MinMood), new int?(rogueResMoodRangeUpdateNotify.MaxMood), false);
 		}
 
-		// Token: 0x06037DDB RID: 228827 RVA: 0x00D3D2B4 File Offset: 0x00D3B4B4
+		// Token: 0x0602CCD9 RID: 183513 RVA: 0x00C8AFFC File Offset: 0x00C891FC
 		private void OnRogueResPlayerStatusUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResPlayerStatusUpdateNotify rogueResPlayerStatusUpdateNotify = (RogueResPlayerStatusUpdateNotify)msg;
@@ -208,7 +207,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037DDC RID: 228828 RVA: 0x00D3D3E4 File Offset: 0x00D3B5E4
+		// Token: 0x0602CCDA RID: 183514 RVA: 0x00C8B12C File Offset: 0x00C8932C
 		private void OnRogueResTeamLevelUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResTeamLevelUpdateNotify rogueResTeamLevelUpdateNotify = (RogueResTeamLevelUpdateNotify)msg;
@@ -220,7 +219,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			MapRogueModel.Instance.SetRoleLevel(rogueResTeamLevelUpdateNotify.RoleLevel);
 		}
 
-		// Token: 0x06037DDD RID: 228829 RVA: 0x00D3D438 File Offset: 0x00D3B638
+		// Token: 0x0602CCDB RID: 183515 RVA: 0x00C8B180 File Offset: 0x00C89380
 		public UniTask RequestInstResultEnd()
 		{
 			MapRogueController.<RequestInstResultEnd>d__11 <RequestInstResultEnd>d__;
@@ -230,7 +229,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <RequestInstResultEnd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037DDE RID: 228830 RVA: 0x00D3D474 File Offset: 0x00D3B674
+		// Token: 0x0602CCDC RID: 183516 RVA: 0x00C8B1BC File Offset: 0x00C893BC
 		public void RequestInstLeave()
 		{
 			int instanceId = InstanceDungeonEntranceModel.Instance.InstanceId;
@@ -256,7 +255,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			});
 		}
 
-		// Token: 0x06037DDF RID: 228831 RVA: 0x00D3D4E4 File Offset: 0x00D3B6E4
+		// Token: 0x0602CCDD RID: 183517 RVA: 0x00C8B22C File Offset: 0x00C8942C
 		public void RequestBackToMap(Action<bool> callback = null)
 		{
 			RogueResGridEventRequest message = RogueResGridEventRequest.Create();
@@ -297,7 +296,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}, 0);
 		}
 
-		// Token: 0x06037DE0 RID: 228832 RVA: 0x00D3D521 File Offset: 0x00D3B721
+		// Token: 0x0602CCDE RID: 183518 RVA: 0x00C8B269 File Offset: 0x00C89469
 		private void OnWorldDoneAndCloseLoading()
 		{
 			if (MapRogueModel.Instance.GameInfo == null)
@@ -311,7 +310,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			MapRogueModel.Instance.ExecuteOpDataList();
 		}
 
-		// Token: 0x06037DE1 RID: 228833 RVA: 0x00D3D544 File Offset: 0x00D3B744
+		// Token: 0x0602CCDF RID: 183519 RVA: 0x00C8B28C File Offset: 0x00C8948C
 		private void OnRogueResOpDataUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResOpDataUpdateNotify rogueResOpDataUpdateNotify = (RogueResOpDataUpdateNotify)msg;
@@ -334,7 +333,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			MapRogueModel.Instance.ExecuteOpDataList();
 		}
 
-		// Token: 0x06037DE2 RID: 228834 RVA: 0x00D3D638 File Offset: 0x00D3B838
+		// Token: 0x0602CCE0 RID: 183520 RVA: 0x00C8B380 File Offset: 0x00C89580
 		[NullableContext(1)]
 		public void RequestMove(List<int> pathList, [Nullable(2)] Action<bool> callback = null)
 		{
@@ -379,7 +378,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}, 0);
 		}
 
-		// Token: 0x06037DE3 RID: 228835 RVA: 0x00D3D690 File Offset: 0x00D3B890
+		// Token: 0x0602CCE1 RID: 183521 RVA: 0x00C8B3D8 File Offset: 0x00C895D8
 		public void RequestExecuteOp(int incId, int clientId, Action<bool> callback = null)
 		{
 			RogueResOpDoneRequest rogueResOpDoneRequest = RogueResOpDoneRequest.Create();
@@ -425,7 +424,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}, 0);
 		}
 
-		// Token: 0x06037DE4 RID: 228836 RVA: 0x00D3D6DC File Offset: 0x00D3B8DC
+		// Token: 0x0602CCE2 RID: 183522 RVA: 0x00C8B424 File Offset: 0x00C89624
 		[NullableContext(1)]
 		public void RequestExecuteOpMultiSelect(int incId, List<int> clientIds, [Nullable(2)] Action<bool> callback = null)
 		{
@@ -472,7 +471,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}, 0);
 		}
 
-		// Token: 0x06037DE5 RID: 228837 RVA: 0x00D3D72C File Offset: 0x00D3B92C
+		// Token: 0x0602CCE3 RID: 183523 RVA: 0x00C8B474 File Offset: 0x00C89674
 		public bool CheckInMapRogueInstance()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -484,19 +483,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			return config != null && config.Value.InstSubType == 34;
 		}
 
-		// Token: 0x06037DE6 RID: 228838 RVA: 0x00D3D77D File Offset: 0x00D3B97D
+		// Token: 0x0602CCE4 RID: 183524 RVA: 0x00C8B4C5 File Offset: 0x00C896C5
 		protected override void OnAddOpenViewCheckFunction()
 		{
 			UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.MapRogueMainView, new Func<EUiViewName, object, bool>(this.CanOpenMainView), "MapRogueController.CanOpenMainView");
 		}
 
-		// Token: 0x06037DE7 RID: 228839 RVA: 0x00D3D79F File Offset: 0x00D3B99F
+		// Token: 0x0602CCE5 RID: 183525 RVA: 0x00C8B4E7 File Offset: 0x00C896E7
 		protected override void OnRemoveOpenViewCheckFunction()
 		{
 			UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.MapRogueMainView, new Func<EUiViewName, object, bool>(this.CanOpenMainView));
 		}
 
-		// Token: 0x06037DE8 RID: 228840 RVA: 0x00D3D7BC File Offset: 0x00D3B9BC
+		// Token: 0x0602CCE6 RID: 183526 RVA: 0x00C8B504 File Offset: 0x00C89704
 		[NullableContext(1)]
 		private bool CanOpenMainView(EUiViewName viewName, object param)
 		{
@@ -508,7 +507,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return gameInfo != null && !gameInfo.InBattle;
 		}
 
-		// Token: 0x06037DE9 RID: 228841 RVA: 0x00D3D7F0 File Offset: 0x00D3B9F0
+		// Token: 0x0602CCE7 RID: 183527 RVA: 0x00C8B538 File Offset: 0x00C89738
 		[NullableContext(1)]
 		public void OpenRogueTipsView(ERogueTipsType type, string textId, [Nullable(new byte[]
 		{
@@ -530,13 +529,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			UiManager.Instance.OpenView(EUiViewName.MapRogueFloatTipsBView, param, null);
 		}
 
-		// Token: 0x06037DEA RID: 228842 RVA: 0x00D3D849 File Offset: 0x00D3BA49
+		// Token: 0x0602CCE8 RID: 183528 RVA: 0x00C8B591 File Offset: 0x00C89791
 		public void OpenRogueMenuView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueBattleMapSummaryView, null, null);
 		}
 
-		// Token: 0x06037DEB RID: 228843 RVA: 0x00D3D85C File Offset: 0x00D3BA5C
+		// Token: 0x0602CCE9 RID: 183529 RVA: 0x00C8B5A4 File Offset: 0x00C897A4
 		public void OpenRogueFetterView(int? fetterId = null)
 		{
 			RogueBattleMapSummeryOpenInfo param = new RogueBattleMapSummeryOpenInfo
@@ -547,7 +546,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			UiManager.Instance.OpenView(EUiViewName.RogueBattleMapSummaryView, param, null);
 		}
 
-		// Token: 0x06037DEC RID: 228844 RVA: 0x00D3D894 File Offset: 0x00D3BA94
+		// Token: 0x0602CCEA RID: 183530 RVA: 0x00C8B5DC File Offset: 0x00C897DC
 		public void OpenExploreEnd(bool exitToMap = false)
 		{
 			ExploreEndViewData exploreEndViewData = new ExploreEndViewData();
@@ -555,21 +554,21 @@ namespace CSharpScript.Game.Module.MapRogue
 			UiManager.Instance.OpenView(EUiViewName.MapRogueExploreEndView, exploreEndViewData, null);
 		}
 
-		// Token: 0x06037DED RID: 228845 RVA: 0x00D3D8C0 File Offset: 0x00D3BAC0
+		// Token: 0x0602CCEB RID: 183531 RVA: 0x00C8B608 File Offset: 0x00C89808
 		public void OpenExplore()
 		{
 			ExploreEndViewData param = new ExploreEndViewData();
 			UiManager.Instance.OpenView(EUiViewName.MapRogueExploreView, param, null);
 		}
 
-		// Token: 0x06037DEE RID: 228846 RVA: 0x00D3D8E4 File Offset: 0x00D3BAE4
+		// Token: 0x0602CCEC RID: 183532 RVA: 0x00C8B62C File Offset: 0x00C8982C
 		public void OpenMapHelpView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueBattleMapHelpView, null, null);
 		}
 
-		// Token: 0x1700867E RID: 34430
-		// (get) Token: 0x06037DEF RID: 228847 RVA: 0x00D3D8F7 File Offset: 0x00D3BAF7
+		// Token: 0x17005A45 RID: 23109
+		// (get) Token: 0x0602CCED RID: 183533 RVA: 0x00C8B63F File Offset: 0x00C8983F
 		[Nullable(1)]
 		public static MapRogueController Instance
 		{
@@ -580,7 +579,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037DF0 RID: 228848 RVA: 0x00D3D8FE File Offset: 0x00D3BAFE
+		// Token: 0x0602CCEE RID: 183534 RVA: 0x00C8B646 File Offset: 0x00C89846
 		[NullableContext(1)]
 		public static MapRogueController GetOrCreateInstance()
 		{
@@ -591,7 +590,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return MapRogueController._Instance;
 		}
 
-		// Token: 0x06037DF1 RID: 228849 RVA: 0x00D3D912 File Offset: 0x00D3BB12
+		// Token: 0x0602CCEF RID: 183535 RVA: 0x00C8B65A File Offset: 0x00C8985A
 		public static bool CreateInstance()
 		{
 			if (MapRogueController._Instance != null)
@@ -602,24 +601,24 @@ namespace CSharpScript.Game.Module.MapRogue
 			return true;
 		}
 
-		// Token: 0x06037DF2 RID: 228850 RVA: 0x00D3D928 File Offset: 0x00D3BB28
+		// Token: 0x0602CCF0 RID: 183536 RVA: 0x00C8B670 File Offset: 0x00C89870
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06037DF3 RID: 228851 RVA: 0x00D3D92A File Offset: 0x00D3BB2A
+		// Token: 0x0602CCF1 RID: 183537 RVA: 0x00C8B672 File Offset: 0x00C89872
 		public static void ResetStaticDefaultValue()
 		{
 			MapRogueController._Instance = null;
 		}
 
-		// Token: 0x06037DF4 RID: 228852 RVA: 0x00D3D932 File Offset: 0x00D3BB32
+		// Token: 0x0602CCF2 RID: 183538 RVA: 0x00C8B67A File Offset: 0x00C8987A
 		static MapRogueController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MapRogueController.CreateStaticDefaultValue), new Action(MapRogueController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D583 RID: 120195
+		// Token: 0x0401800E RID: 98318
 		private static MapRogueController _Instance;
 	}
 }

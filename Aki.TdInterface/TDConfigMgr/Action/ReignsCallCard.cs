@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002139 RID: 8505
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200239A RID: 9114
 	public class ReignsCallCard : ActionParams
 	{
-		// Token: 0x0600BB4C RID: 47948 RVA: 0x001B0938 File Offset: 0x001AEB38
+		// Token: 0x0600C6DA RID: 50906 RVA: 0x001C7AEC File Offset: 0x001C5CEC
 		private ReignsCallCard_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB4D RID: 47949 RVA: 0x001B0970 File Offset: 0x001AEB70
+		// Token: 0x0600C6DB RID: 50907 RVA: 0x001C7B24 File Offset: 0x001C5D24
 		public static ReignsCallCard Create([Nullable(2)] ReignsCallCard instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB4E RID: 47950 RVA: 0x001B0983 File Offset: 0x001AEB83
+		// Token: 0x0600C6DC RID: 50908 RVA: 0x001C7B37 File Offset: 0x001C5D37
 		public static ReignsCallCard CreateFromSetValue([Nullable(2)] ReignsCallCard_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB4F RID: 47951 RVA: 0x001B0996 File Offset: 0x001AEB96
+		// Token: 0x0600C6DD RID: 50909 RVA: 0x001C7B4A File Offset: 0x001C5D4A
 		public ReignsCallCard_SetValue ToSetValue()
 		{
 			return new ReignsCallCard_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700392D RID: 14637
-		// (get) Token: 0x0600BB50 RID: 47952 RVA: 0x001B09A9 File Offset: 0x001AEBA9
-		// (set) Token: 0x0600BB51 RID: 47953 RVA: 0x001B09D4 File Offset: 0x001AEBD4
+		// Token: 0x17003C1A RID: 15386
+		// (get) Token: 0x0600C6DE RID: 50910 RVA: 0x001C7B5D File Offset: 0x001C5D5D
+		// (set) Token: 0x0600C6DF RID: 50911 RVA: 0x001C7B88 File Offset: 0x001C5D88
 		public virtual int CardId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007008 RID: 28680
+		// Token: 0x0400763D RID: 30269
 		[Nullable(2)]
 		protected new ReignsCallCard FbInstance;
 
-		// Token: 0x04007009 RID: 28681
+		// Token: 0x0400763E RID: 30270
 		[Nullable(2)]
 		protected ReignsCallCard_SetValue PocoInterface;
 	}

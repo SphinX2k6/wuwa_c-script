@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200084A RID: 2122
+	// Token: 0x02000183 RID: 387
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.AnimTrack")]
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class FAnimTrack : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600724D RID: 29261 RVA: 0x000A39A2 File Offset: 0x000A1BA2
+		// Token: 0x060018DB RID: 6363 RVA: 0x00025AA9 File Offset: 0x00023CA9
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAnimTrack._ScriptStructPtr != 0) ? FAnimTrack._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.AnimTrack", ref FAnimTrack._ScriptStructPtr);
 		}
 
-		// Token: 0x17001AE4 RID: 6884
-		// (get) Token: 0x0600724E RID: 29262 RVA: 0x000A39C8 File Offset: 0x000A1BC8
-		// (set) Token: 0x0600724F RID: 29263 RVA: 0x000A3A0B File Offset: 0x000A1C0B
+		// Token: 0x170002C2 RID: 706
+		// (get) Token: 0x060018DC RID: 6364 RVA: 0x00025AD0 File Offset: 0x00023CD0
+		// (set) Token: 0x060018DD RID: 6365 RVA: 0x00025B13 File Offset: 0x00023D13
 		public TArray<FAnimSegment> AnimSegments
 		{
 			get
@@ -39,56 +39,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06007250 RID: 29264 RVA: 0x000A3A19 File Offset: 0x000A1C19
+		// Token: 0x060018DE RID: 6366 RVA: 0x00025B21 File Offset: 0x00023D21
 		public FAnimTrack()
 		{
 		}
 
-		// Token: 0x06007251 RID: 29265 RVA: 0x000A3A21 File Offset: 0x000A1C21
-		public FAnimTrack(TArray<FAnimSegment> AnimSegments)
-		{
-			this.AnimSegments = AnimSegments;
-		}
-
-		// Token: 0x06007252 RID: 29266 RVA: 0x000A3A30 File Offset: 0x000A1C30
+		// Token: 0x060018DF RID: 6367 RVA: 0x00025B29 File Offset: 0x00023D29
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAnimTrack.StaticStruct();
 		}
 
-		// Token: 0x06007253 RID: 29267 RVA: 0x000A3A3C File Offset: 0x000A1C3C
+		// Token: 0x060018E0 RID: 6368 RVA: 0x00025B35 File Offset: 0x00023D35
 		[NullableContext(2)]
 		public FAnimTrack(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06007254 RID: 29268 RVA: 0x000A3A46 File Offset: 0x000A1C46
+		// Token: 0x060018E1 RID: 6369 RVA: 0x00025B3F File Offset: 0x00023D3F
 		public FAnimTrack(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06007255 RID: 29269 RVA: 0x000A3A51 File Offset: 0x000A1C51
+		// Token: 0x060018E2 RID: 6370 RVA: 0x00025B4A File Offset: 0x00023D4A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAnimTrack(Pointer, false, true);
 		}
 
-		// Token: 0x06007256 RID: 29270 RVA: 0x000A3A5B File Offset: 0x000A1C5B
+		// Token: 0x060018E3 RID: 6371 RVA: 0x00025B54 File Offset: 0x00023D54
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAnimTrack(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040036DE RID: 14046
+		// Token: 0x040007E5 RID: 2021
 		public const string __ObjectPath = "/Script/Engine.AnimTrack";
 
-		// Token: 0x040036DF RID: 14047
+		// Token: 0x040007E6 RID: 2022
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040036E0 RID: 14048
+		// Token: 0x040007E7 RID: 2023
 		internal static int __PropertyOffset_AnimSegments;
 
-		// Token: 0x040036E1 RID: 14049
+		// Token: 0x040007E8 RID: 2024
 		[Nullable(new byte[]
 		{
 			2,

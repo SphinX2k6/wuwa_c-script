@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200154D RID: 5453
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x020016A9 RID: 5801
 	public class IUiOperationTypeConverter : JsonConverter<IUiOperationType>
 	{
-		// Token: 0x06007B55 RID: 31573 RVA: 0x00129380 File Offset: 0x00127580
+		// Token: 0x06008229 RID: 33321 RVA: 0x0013832C File Offset: 0x0013652C
 		[return: Nullable(2)]
 		public override IUiOperationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -61,7 +55,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B56 RID: 31574 RVA: 0x0012943C File Offset: 0x0012763C
+		// Token: 0x0600822A RID: 33322 RVA: 0x001383E8 File Offset: 0x001365E8
 		public override void Write(Utf8JsonWriter writer, IUiOperationType value, JsonSerializerOptions options)
 		{
 			IEnableUiOperation enableUiOperation = value as IEnableUiOperation;

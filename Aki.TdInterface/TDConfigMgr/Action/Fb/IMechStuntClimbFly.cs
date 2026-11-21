@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200280C RID: 10252
+	// Token: 0x02002ADF RID: 10975
 	public class IMechStuntClimbFly : IMechStuntConfigType
 	{
-		// Token: 0x0600E37B RID: 58235 RVA: 0x002186BA File Offset: 0x002168BA
-		[NullableContext(1)]
+		// Token: 0x0600F1A0 RID: 61856 RVA: 0x0023551E File Offset: 0x0023371E
 		public static IMechStuntClimbFly Create(IMechStuntClimbFly? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004525 RID: 17701
-		// (get) Token: 0x0600E37C RID: 58236 RVA: 0x002186D9 File Offset: 0x002168D9
+		// Token: 0x17004890 RID: 18576
+		// (get) Token: 0x0600F1A1 RID: 61857 RVA: 0x0023553D File Offset: 0x0023373D
 		public override EMechStuntType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DF2 RID: 32242
+		// Token: 0x040084AF RID: 33967
 		private IMechStuntClimbFly Instance;
 	}
 }

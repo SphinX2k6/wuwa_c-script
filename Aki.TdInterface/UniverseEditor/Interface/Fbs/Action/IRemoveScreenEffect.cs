@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E6A RID: 28266
+	// Token: 0x020075EE RID: 30190
 	public struct IRemoveScreenEffect : IFlatbufferObject
 	{
-		// Token: 0x1700D287 RID: 53895
-		// (get) Token: 0x06031F2E RID: 204590 RVA: 0x006C1DC7 File Offset: 0x006BFFC7
+		// Token: 0x1700DDDE RID: 56798
+		// (get) Token: 0x06034F6E RID: 216942 RVA: 0x0071DAF9 File Offset: 0x0071BCF9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031F2F RID: 204591 RVA: 0x006C1DD4 File Offset: 0x006BFFD4
+		// Token: 0x06034F6F RID: 216943 RVA: 0x0071DB06 File Offset: 0x0071BD06
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031F30 RID: 204592 RVA: 0x006C1DDC File Offset: 0x006BFFDC
+		// Token: 0x06034F70 RID: 216944 RVA: 0x0071DB10 File Offset: 0x0071BD10
 		public static IRemoveScreenEffect GetRootAsIRemoveScreenEffect(ByteBuffer _bb)
 		{
 			return IRemoveScreenEffect.GetRootAsIRemoveScreenEffect(_bb, default(IRemoveScreenEffect));
 		}
 
-		// Token: 0x06031F31 RID: 204593 RVA: 0x006C1DF8 File Offset: 0x006BFFF8
+		// Token: 0x06034F71 RID: 216945 RVA: 0x0071DB2C File Offset: 0x0071BD2C
 		public static IRemoveScreenEffect GetRootAsIRemoveScreenEffect(ByteBuffer _bb, IRemoveScreenEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031F32 RID: 204594 RVA: 0x006C1E15 File Offset: 0x006C0015
+		// Token: 0x06034F72 RID: 216946 RVA: 0x0071DB49 File Offset: 0x0071BD49
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031F33 RID: 204595 RVA: 0x006C1E24 File Offset: 0x006C0024
+		// Token: 0x06034F73 RID: 216947 RVA: 0x0071DB58 File Offset: 0x0071BD58
 		public IRemoveScreenEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D288 RID: 53896
-		// (get) Token: 0x06031F34 RID: 204596 RVA: 0x006C1E34 File Offset: 0x006C0034
+		// Token: 0x1700DDDF RID: 56799
+		// (get) Token: 0x06034F74 RID: 216948 RVA: 0x0071DB68 File Offset: 0x0071BD68
 		public EEffectType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D289 RID: 53897
-		// (get) Token: 0x06031F35 RID: 204597 RVA: 0x006C1E70 File Offset: 0x006C0070
+		// Token: 0x1700DDE0 RID: 56800
+		// (get) Token: 0x06034F75 RID: 216949 RVA: 0x0071DBA4 File Offset: 0x0071BDA4
 		public string Path
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031F36 RID: 204598 RVA: 0x006C1EA7 File Offset: 0x006C00A7
+		// Token: 0x06034F76 RID: 216950 RVA: 0x0071DBDB File Offset: 0x0071BDDB
 		public Span<byte> GetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06031F37 RID: 204599 RVA: 0x006C1EB6 File Offset: 0x006C00B6
+		// Token: 0x06034F77 RID: 216951 RVA: 0x0071DBEA File Offset: 0x0071BDEA
 		public byte[] GetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06031F38 RID: 204600 RVA: 0x006C1EC4 File Offset: 0x006C00C4
+		// Token: 0x06034F78 RID: 216952 RVA: 0x0071DBF8 File Offset: 0x0071BDF8
 		public static Offset<IRemoveScreenEffect> CreateIRemoveScreenEffect(FlatBufferBuilder builder, EEffectType Type = EEffectType.Effect, StringOffset PathOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRemoveScreenEffect.EndIRemoveScreenEffect(builder);
 		}
 
-		// Token: 0x06031F39 RID: 204601 RVA: 0x006C1EE1 File Offset: 0x006C00E1
+		// Token: 0x06034F79 RID: 216953 RVA: 0x0071DC15 File Offset: 0x0071BE15
 		public static void StartIRemoveScreenEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06031F3A RID: 204602 RVA: 0x006C1EEA File Offset: 0x006C00EA
+		// Token: 0x06034F7A RID: 216954 RVA: 0x0071DC1E File Offset: 0x0071BE1E
 		public static void AddType(FlatBufferBuilder builder, EEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031F3B RID: 204603 RVA: 0x006C1EF5 File Offset: 0x006C00F5
+		// Token: 0x06034F7B RID: 216955 RVA: 0x0071DC29 File Offset: 0x0071BE29
 		public static void AddPath(FlatBufferBuilder builder, StringOffset pathOffset)
 		{
 			builder.AddOffset(1, pathOffset.Value, 0);
 		}
 
-		// Token: 0x06031F3C RID: 204604 RVA: 0x006C1F05 File Offset: 0x006C0105
+		// Token: 0x06034F7C RID: 216956 RVA: 0x0071DC39 File Offset: 0x0071BE39
 		public static Offset<IRemoveScreenEffect> EndIRemoveScreenEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IRemoveScreenEffect>(builder.EndTable());
 		}
 
-		// Token: 0x06031F3D RID: 204605 RVA: 0x006C1F14 File Offset: 0x006C0114
+		// Token: 0x06034F7D RID: 216957 RVA: 0x0071DC48 File Offset: 0x0071BE48
 		public IRemoveScreenEffectT UnPack()
 		{
 			IRemoveScreenEffectT removeScreenEffectT = new IRemoveScreenEffectT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return removeScreenEffectT;
 		}
 
-		// Token: 0x06031F3E RID: 204606 RVA: 0x006C1F2F File Offset: 0x006C012F
+		// Token: 0x06034F7E RID: 216958 RVA: 0x0071DC63 File Offset: 0x0071BE63
 		public void UnPackTo(IRemoveScreenEffectT _o)
 		{
 			_o.Type = this.Type;
 			_o.Path = this.Path;
 		}
 
-		// Token: 0x06031F3F RID: 204607 RVA: 0x006C1F4C File Offset: 0x006C014C
+		// Token: 0x06034F7F RID: 216959 RVA: 0x0071DC80 File Offset: 0x0071BE80
 		public static Offset<IRemoveScreenEffect> Pack(FlatBufferBuilder builder, IRemoveScreenEffectT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRemoveScreenEffect.CreateIRemoveScreenEffect(builder, _o.Type, pathOffset);
 		}
 
-		// Token: 0x04011854 RID: 71764
+		// Token: 0x040127D9 RID: 75737
 		private Table __p;
 	}
 }

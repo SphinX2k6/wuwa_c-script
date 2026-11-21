@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077BB RID: 30651
+	// Token: 0x02007FF3 RID: 32755
 	public static class TSwitchSubLevelsVerify
 	{
-		// Token: 0x060379CD RID: 227789 RVA: 0x00785AC8 File Offset: 0x00783CC8
+		// Token: 0x0603AF4E RID: 241486 RVA: 0x007EB098 File Offset: 0x007E9298
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

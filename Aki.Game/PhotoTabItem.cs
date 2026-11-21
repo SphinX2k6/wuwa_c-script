@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200257D RID: 9597
+// Token: 0x02001A68 RID: 6760
 public class PhotoTabItem : GridProxyAbstract<PhotoTab>
 {
-	// Token: 0x0601365B RID: 79451 RVA: 0x004D4250 File Offset: 0x004D2450
+	// Token: 0x06010B3C RID: 68412 RVA: 0x004E2C20 File Offset: 0x004E0E20
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,13 +23,13 @@ public class PhotoTabItem : GridProxyAbstract<PhotoTab>
 		};
 	}
 
-	// Token: 0x0601365C RID: 79452 RVA: 0x004D42CD File Offset: 0x004D24CD
+	// Token: 0x06010B3D RID: 68413 RVA: 0x004E2C9D File Offset: 0x004E0E9D
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x0601365D RID: 79453 RVA: 0x004D42DC File Offset: 0x004D24DC
+	// Token: 0x06010B3E RID: 68414 RVA: 0x004E2CAC File Offset: 0x004E0EAC
 	public override void Refresh(PhotoTab data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -42,7 +42,7 @@ public class PhotoTabItem : GridProxyAbstract<PhotoTab>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0601365E RID: 79454 RVA: 0x004D4321 File Offset: 0x004D2521
+	// Token: 0x06010B3F RID: 68415 RVA: 0x004E2CF1 File Offset: 0x004E0EF1
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -53,7 +53,7 @@ public class PhotoTabItem : GridProxyAbstract<PhotoTab>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0601365F RID: 79455 RVA: 0x004D4338 File Offset: 0x004D2538
+	// Token: 0x06010B40 RID: 68416 RVA: 0x004E2D08 File Offset: 0x004E0F08
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -64,14 +64,14 @@ public class PhotoTabItem : GridProxyAbstract<PhotoTab>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06013660 RID: 79456 RVA: 0x004D434F File Offset: 0x004D254F
+	// Token: 0x06010B41 RID: 68417 RVA: 0x004E2D1F File Offset: 0x004E0F1F
 	[NullableContext(1)]
 	public override object GetKey(PhotoTab data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x06013661 RID: 79457 RVA: 0x004D435D File Offset: 0x004D255D
+	// Token: 0x06010B42 RID: 68418 RVA: 0x004E2D2D File Offset: 0x004E0F2D
 	private void OnSelfStateChanged(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -81,23 +81,23 @@ public class PhotoTabItem : GridProxyAbstract<PhotoTab>
 		this.OnTabClick(this.Data);
 	}
 
-	// Token: 0x040091FC RID: 37372
+	// Token: 0x04009354 RID: 37716
 	private PhotoTab Data;
 
-	// Token: 0x040091FD RID: 37373
+	// Token: 0x04009355 RID: 37717
 	[Nullable(1)]
 	public Action<PhotoTab> OnTabClick = delegate(PhotoTab data)
 	{
 	};
 
-	// Token: 0x02008B7B RID: 35707
+	// Token: 0x02007D01 RID: 32001
 	private enum EComponents
 	{
-		// Token: 0x0402D4B3 RID: 185523
+		// Token: 0x040287C0 RID: 165824
 		ToggleSelf,
-		// Token: 0x0402D4B4 RID: 185524
+		// Token: 0x040287C1 RID: 165825
 		SpriteIcon,
-		// Token: 0x0402D4B5 RID: 185525
+		// Token: 0x040287C2 RID: 165826
 		ItemRedDot
 	}
 }

@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061D1 RID: 25041
+	// Token: 0x0200514F RID: 20815
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookLevelTipsView : UiViewBase
 	{
-		// Token: 0x0603F3C3 RID: 259011 RVA: 0x00F47474 File Offset: 0x00F45674
+		// Token: 0x06034084 RID: 213124 RVA: 0x00E8E3CC File Offset: 0x00E8C5CC
 		public RoadBookLevelTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F3C4 RID: 259012 RVA: 0x00F474AC File Offset: 0x00F456AC
+		// Token: 0x06034085 RID: 213125 RVA: 0x00E8E404 File Offset: 0x00E8C604
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F3C5 RID: 259013 RVA: 0x00F47548 File Offset: 0x00F45748
+		// Token: 0x06034086 RID: 213126 RVA: 0x00E8E4A0 File Offset: 0x00E8C6A0
 		protected override void OnStart()
 		{
 			this.OffsetTweenX = new LguiFloatTween();
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.RefreshLayout(activityRoadBookData.MaxTravelLevel);
 		}
 
-		// Token: 0x0603F3C6 RID: 259014 RVA: 0x00F476A6 File Offset: 0x00F458A6
+		// Token: 0x06034087 RID: 213127 RVA: 0x00E8E5FE File Offset: 0x00E8C7FE
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603F3C7 RID: 259015 RVA: 0x00F476C4 File Offset: 0x00F458C4
+		// Token: 0x06034088 RID: 213128 RVA: 0x00E8E61C File Offset: 0x00E8C81C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603F3C8 RID: 259016 RVA: 0x00F476E2 File Offset: 0x00F458E2
+		// Token: 0x06034089 RID: 213129 RVA: 0x00E8E63A File Offset: 0x00E8C83A
 		private void OnActivitySequenceEmitEvent(string param)
 		{
 			if (param == "TipsChange")
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3C9 RID: 259017 RVA: 0x00F476F8 File Offset: 0x00F458F8
+		// Token: 0x0603408A RID: 213130 RVA: 0x00E8E650 File Offset: 0x00E8C850
 		protected override void OnBeforeShow()
 		{
 			this.TickHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.Refresh), 20f, 1f, null, null, true);
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3CA RID: 259018 RVA: 0x00F477D4 File Offset: 0x00F459D4
+		// Token: 0x0603408B RID: 213131 RVA: 0x00E8E72C File Offset: 0x00E8C92C
 		protected override void OnAfterShow()
 		{
 			switch (this.TipsType)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3CB RID: 259019 RVA: 0x00F4781E File Offset: 0x00F45A1E
+		// Token: 0x0603408C RID: 213132 RVA: 0x00E8E776 File Offset: 0x00E8C976
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveTick();
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			offsetTweenX.Destroy();
 		}
 
-		// Token: 0x0603F3CC RID: 259020 RVA: 0x00F47836 File Offset: 0x00F45A36
+		// Token: 0x0603408D RID: 213133 RVA: 0x00E8E78E File Offset: 0x00E8C98E
 		private void UpdateOffsetX(float value)
 		{
 			UUIItem rootUiItem = this.LevelLayout.GetRootUiItem();
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			rootUiItem.SetAnchorOffsetX(value);
 		}
 
-		// Token: 0x0603F3CD RID: 259021 RVA: 0x00F4784E File Offset: 0x00F45A4E
+		// Token: 0x0603408E RID: 213134 RVA: 0x00E8E7A6 File Offset: 0x00E8C9A6
 		private void OnCompleteOffsetX()
 		{
 			LevelItemGrid layoutItemByIndex = this.LevelLayout.GetLayoutItemByIndex(this.CurLevel);
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			layoutItemByIndex.PlayLevelUpAnim();
 		}
 
-		// Token: 0x0603F3CE RID: 259022 RVA: 0x00F4786C File Offset: 0x00F45A6C
+		// Token: 0x0603408F RID: 213135 RVA: 0x00E8E7C4 File Offset: 0x00E8C9C4
 		private void RefreshLayout(int maxLevel)
 		{
 			List<int> list = new List<int>();
@@ -199,19 +199,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			rootUiItem.SetAnchorOffsetX(this.GetOffsetX(this.PreLevel));
 		}
 
-		// Token: 0x0603F3CF RID: 259023 RVA: 0x00F478CC File Offset: 0x00F45ACC
+		// Token: 0x06034090 RID: 213136 RVA: 0x00E8E824 File Offset: 0x00E8CA24
 		private float GetOffsetX(int index)
 		{
 			return -((float)index * (this.LevelItemWidth + this.LevelItemSpacing) + this.LevelItemWidth * 0.5f);
 		}
 
-		// Token: 0x0603F3D0 RID: 259024 RVA: 0x00F478EC File Offset: 0x00F45AEC
+		// Token: 0x06034091 RID: 213137 RVA: 0x00E8E844 File Offset: 0x00E8CA44
 		private LevelItemGrid OnCreateItem()
 		{
 			return new LevelItemGrid();
 		}
 
-		// Token: 0x0603F3D1 RID: 259025 RVA: 0x00F478F4 File Offset: 0x00F45AF4
+		// Token: 0x06034092 RID: 213138 RVA: 0x00E8E84C File Offset: 0x00E8CA4C
 		private UniTask RunExpAdd()
 		{
 			RoadBookLevelTipsView.<RunExpAdd>d__27 <RunExpAdd>d__;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <RunExpAdd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F3D2 RID: 259026 RVA: 0x00F47938 File Offset: 0x00F45B38
+		// Token: 0x06034093 RID: 213139 RVA: 0x00E8E890 File Offset: 0x00E8CA90
 		private UniTask RunLevelUp()
 		{
 			RoadBookLevelTipsView.<RunLevelUp>d__28 <RunLevelUp>d__;
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <RunLevelUp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F3D3 RID: 259027 RVA: 0x00F4797C File Offset: 0x00F45B7C
+		// Token: 0x06034094 RID: 213140 RVA: 0x00E8E8D4 File Offset: 0x00E8CAD4
 		protected void Refresh(float delta)
 		{
 			if (!this.RunBarAnim)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3D4 RID: 259028 RVA: 0x00F479E8 File Offset: 0x00F45BE8
+		// Token: 0x06034095 RID: 213141 RVA: 0x00E8E940 File Offset: 0x00E8CB40
 		private UniTask StartBarAnim(float current, float target, float end)
 		{
 			RoadBookLevelTipsView.<StartBarAnim>d__38 <StartBarAnim>d__;
@@ -263,14 +263,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <StartBarAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F3D5 RID: 259029 RVA: 0x00F47A43 File Offset: 0x00F45C43
+		// Token: 0x06034096 RID: 213142 RVA: 0x00E8E99B File Offset: 0x00E8CB9B
 		private void EndBarAnim()
 		{
 			this.RunBarAnim = false;
 			this.BarAnimPromise.SetResult();
 		}
 
-		// Token: 0x0603F3D6 RID: 259030 RVA: 0x00F47A57 File Offset: 0x00F45C57
+		// Token: 0x06034097 RID: 213143 RVA: 0x00E8E9AF File Offset: 0x00E8CBAF
 		private void RemoveTick()
 		{
 			if (this.TickHandle != null)
@@ -280,95 +280,95 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3D7 RID: 259031 RVA: 0x00F47A7C File Offset: 0x00F45C7C
+		// Token: 0x06034098 RID: 213144 RVA: 0x00E8E9D4 File Offset: 0x00E8CBD4
 		private void RefreshBar(float current, float target)
 		{
 			float fillAmount = MathUtils.Instance.Clamp(current / target, 0f, 1f);
 			base.GetSprite(5).SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0603F3D8 RID: 259032 RVA: 0x00F47AAE File Offset: 0x00F45CAE
+		// Token: 0x06034099 RID: 213145 RVA: 0x00E8EA06 File Offset: 0x00E8CC06
 		private void SetExpTextVisible(bool bVisible)
 		{
 			base.GetText(1).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603F3D9 RID: 259033 RVA: 0x00F47ABD File Offset: 0x00F45CBD
+		// Token: 0x0603409A RID: 213146 RVA: 0x00E8EA15 File Offset: 0x00E8CC15
 		private void SetExpText(int expCount)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "RoadBookLevelUpTipsExp_Text", new <>z__ReadOnlySingleElementList<object>(expCount));
 		}
 
-		// Token: 0x0603F3DA RID: 259034 RVA: 0x00F47AE0 File Offset: 0x00F45CE0
+		// Token: 0x0603409B RID: 213147 RVA: 0x00E8EA38 File Offset: 0x00E8CC38
 		private void SetExpMaxText()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "RoadBookLevelCanUp_Text", Array.Empty<object>());
 			this.SetExpTextVisible(true);
 		}
 
-		// Token: 0x04020F5C RID: 135004
+		// Token: 0x0401B88B RID: 112779
 		private ETipsType TipsType;
 
-		// Token: 0x04020F5D RID: 135005
+		// Token: 0x0401B88C RID: 112780
 		private int PreLevel;
 
-		// Token: 0x04020F5E RID: 135006
+		// Token: 0x0401B88D RID: 112781
 		private int CurLevel;
 
-		// Token: 0x04020F5F RID: 135007
+		// Token: 0x0401B88E RID: 112782
 		private int PreExpTotalCount;
 
-		// Token: 0x04020F60 RID: 135008
+		// Token: 0x0401B88F RID: 112783
 		private int CurExpTotalCount;
 
-		// Token: 0x04020F61 RID: 135009
+		// Token: 0x0401B890 RID: 112784
 		private int PreLevelTargetExp;
 
-		// Token: 0x04020F62 RID: 135010
+		// Token: 0x0401B891 RID: 112785
 		private int PreCurExpCount;
 
-		// Token: 0x04020F63 RID: 135011
+		// Token: 0x0401B892 RID: 112786
 		private int CurExpCount;
 
-		// Token: 0x04020F64 RID: 135012
+		// Token: 0x0401B893 RID: 112787
 		private int CurTargetExp;
 
-		// Token: 0x04020F65 RID: 135013
+		// Token: 0x0401B894 RID: 112788
 		private GenericLayout<LevelItemGrid, int> LevelLayout;
 
-		// Token: 0x04020F66 RID: 135014
+		// Token: 0x0401B895 RID: 112789
 		private float LevelItemWidth;
 
-		// Token: 0x04020F67 RID: 135015
+		// Token: 0x0401B896 RID: 112790
 		[Nullable(2)]
 		private LguiFloatTween OffsetTweenX;
 
-		// Token: 0x04020F68 RID: 135016
+		// Token: 0x0401B897 RID: 112791
 		private float LevelItemSpacing;
 
-		// Token: 0x04020F69 RID: 135017
+		// Token: 0x0401B898 RID: 112792
 		[Nullable(2)]
 		protected TimerHandle TickHandle;
 
-		// Token: 0x04020F6A RID: 135018
+		// Token: 0x0401B899 RID: 112793
 		protected int BarAnimTime = ConfigCommonParamById.GetIntConfig("TravelExpBarDisplayTime").Value;
 
-		// Token: 0x04020F6B RID: 135019
+		// Token: 0x0401B89A RID: 112794
 		protected bool RunBarAnim;
 
-		// Token: 0x04020F6C RID: 135020
+		// Token: 0x0401B89B RID: 112795
 		protected float RunBarAnimTime;
 
-		// Token: 0x04020F6D RID: 135021
+		// Token: 0x0401B89C RID: 112796
 		protected float StartValue;
 
-		// Token: 0x04020F6E RID: 135022
+		// Token: 0x0401B89D RID: 112797
 		protected float TargetValue;
 
-		// Token: 0x04020F6F RID: 135023
+		// Token: 0x0401B89E RID: 112798
 		protected float EndValue;
 
-		// Token: 0x04020F70 RID: 135024
+		// Token: 0x0401B89F RID: 112799
 		protected CustomPromise BarAnimPromise = new CustomPromise();
 	}
 }

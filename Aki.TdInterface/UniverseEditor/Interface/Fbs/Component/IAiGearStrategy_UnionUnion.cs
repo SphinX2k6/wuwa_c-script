@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E81 RID: 20097
+	// Token: 0x02005392 RID: 21394
 	public class IAiGearStrategy_UnionUnion
 	{
-		// Token: 0x17008FFC RID: 36860
-		// (get) Token: 0x0601F982 RID: 129410 RVA: 0x00466A10 File Offset: 0x00464C10
-		// (set) Token: 0x0601F983 RID: 129411 RVA: 0x00466A18 File Offset: 0x00464C18
+		// Token: 0x17009735 RID: 38709
+		// (get) Token: 0x060215CD RID: 136653 RVA: 0x0049AA28 File Offset: 0x00498C28
+		// (set) Token: 0x060215CE RID: 136654 RVA: 0x0049AA30 File Offset: 0x00498C30
 		public IAiGearStrategy_Union Type { get; set; }
 
-		// Token: 0x17008FFD RID: 36861
-		// (get) Token: 0x0601F984 RID: 129412 RVA: 0x00466A21 File Offset: 0x00464C21
-		// (set) Token: 0x0601F985 RID: 129413 RVA: 0x00466A29 File Offset: 0x00464C29
+		// Token: 0x17009736 RID: 38710
+		// (get) Token: 0x060215CF RID: 136655 RVA: 0x0049AA39 File Offset: 0x00498C39
+		// (set) Token: 0x060215D0 RID: 136656 RVA: 0x0049AA41 File Offset: 0x00498C41
 		public object Value { get; set; }
 
-		// Token: 0x0601F986 RID: 129414 RVA: 0x00466A32 File Offset: 0x00464C32
+		// Token: 0x060215D1 RID: 136657 RVA: 0x0049AA4A File Offset: 0x00498C4A
 		public IAiGearStrategy_UnionUnion()
 		{
 			this.Type = IAiGearStrategy_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F987 RID: 129415 RVA: 0x00466A48 File Offset: 0x00464C48
+		// Token: 0x060215D2 RID: 136658 RVA: 0x0049AA60 File Offset: 0x00498C60
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F988 RID: 129416 RVA: 0x00466A5A File Offset: 0x00464C5A
+		// Token: 0x060215D3 RID: 136659 RVA: 0x0049AA72 File Offset: 0x00498C72
 		public IAiGearStrategyT AsIAiGearStrategy()
 		{
 			return this.As<IAiGearStrategyT>();
 		}
 
-		// Token: 0x0601F989 RID: 129417 RVA: 0x00466A62 File Offset: 0x00464C62
+		// Token: 0x060215D4 RID: 136660 RVA: 0x0049AA7A File Offset: 0x00498C7A
 		public static IAiGearStrategy_UnionUnion FromIAiGearStrategy(IAiGearStrategyT _iaigearstrategy)
 		{
 			return new IAiGearStrategy_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0601F98A RID: 129418 RVA: 0x00466A77 File Offset: 0x00464C77
+		// Token: 0x060215D5 RID: 136661 RVA: 0x0049AA8F File Offset: 0x00498C8F
 		public IRenjuStrategyT AsIRenjuStrategy()
 		{
 			return this.As<IRenjuStrategyT>();
 		}
 
-		// Token: 0x0601F98B RID: 129419 RVA: 0x00466A7F File Offset: 0x00464C7F
+		// Token: 0x060215D6 RID: 136662 RVA: 0x0049AA97 File Offset: 0x00498C97
 		public static IAiGearStrategy_UnionUnion FromIRenjuStrategy(IRenjuStrategyT _irenjustrategy)
 		{
 			return new IAiGearStrategy_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0601F98C RID: 129420 RVA: 0x00466A94 File Offset: 0x00464C94
+		// Token: 0x060215D7 RID: 136663 RVA: 0x0049AAAC File Offset: 0x00498CAC
 		public IRaceStrategyT AsIRaceStrategy()
 		{
 			return this.As<IRaceStrategyT>();
 		}
 
-		// Token: 0x0601F98D RID: 129421 RVA: 0x00466A9C File Offset: 0x00464C9C
+		// Token: 0x060215D8 RID: 136664 RVA: 0x0049AAB4 File Offset: 0x00498CB4
 		public static IAiGearStrategy_UnionUnion FromIRaceStrategy(IRaceStrategyT _iracestrategy)
 		{
 			return new IAiGearStrategy_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0601F98E RID: 129422 RVA: 0x00466AB4 File Offset: 0x00464CB4
+		// Token: 0x060215D9 RID: 136665 RVA: 0x0049AACC File Offset: 0x00498CCC
 		public static int Pack(FlatBufferBuilder builder, IAiGearStrategy_UnionUnion _o)
 		{
 			switch (_o.Type)

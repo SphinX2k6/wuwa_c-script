@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D57 RID: 19799
+	// Token: 0x02003D20 RID: 15648
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 	})]
 	public class RoleDevelopTabItem : SyncGridProxyAbstract<RoleDevelopTabItemCellData>
 	{
-		// Token: 0x06033291 RID: 209553 RVA: 0x00BEEFA0 File Offset: 0x00BED1A0
+		// Token: 0x060280FB RID: 164091 RVA: 0x00B380D4 File Offset: 0x00B362D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033292 RID: 209554 RVA: 0x00BEF152 File Offset: 0x00BED352
+		// Token: 0x060280FC RID: 164092 RVA: 0x00B38286 File Offset: 0x00B36486
 		protected override void OnStart()
 		{
 			this.Toggle = base.GetExtendToggle(0);
@@ -67,25 +67,25 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			toggle.CanExecuteChange.Bind(new Func<bool>(this.CanToggleExecuteChange));
 		}
 
-		// Token: 0x06033293 RID: 209555 RVA: 0x00BEF182 File Offset: 0x00BED382
+		// Token: 0x060280FD RID: 164093 RVA: 0x00B382B6 File Offset: 0x00B364B6
 		public void BindOnToggleFunc(Action<int, UUIExtendToggle> toggleFunc)
 		{
 			this.ToggleFunc = toggleFunc;
 		}
 
-		// Token: 0x06033294 RID: 209556 RVA: 0x00BEF18B File Offset: 0x00BED38B
+		// Token: 0x060280FE RID: 164094 RVA: 0x00B382BF File Offset: 0x00B364BF
 		public void BindCanToggleExecuteChange(Func<int, bool> toggle)
 		{
 			this.OnCanToggleClicked = toggle;
 		}
 
-		// Token: 0x06033295 RID: 209557 RVA: 0x00BEF194 File Offset: 0x00BED394
+		// Token: 0x060280FF RID: 164095 RVA: 0x00B382C8 File Offset: 0x00B364C8
 		private bool CanToggleExecuteChange()
 		{
 			return this.OnCanToggleClicked == null || this.OnCanToggleClicked(this.TypeId);
 		}
 
-		// Token: 0x06033296 RID: 209558 RVA: 0x00BEF1B1 File Offset: 0x00BED3B1
+		// Token: 0x06028100 RID: 164096 RVA: 0x00B382E5 File Offset: 0x00B364E5
 		public override void Refresh(RoleDevelopTabItemCellData data)
 		{
 			this.TypeId = data.TypeId;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.RefreshView();
 		}
 
-		// Token: 0x06033297 RID: 209559 RVA: 0x00BEF1D8 File Offset: 0x00BED3D8
+		// Token: 0x06028101 RID: 164097 RVA: 0x00B3830C File Offset: 0x00B3650C
 		private void RefreshView()
 		{
 			int devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.RefreshDevelopTagItem(ERoleDevelopHotRoleTag.None);
 		}
 
-		// Token: 0x06033298 RID: 209560 RVA: 0x00BEF2E0 File Offset: 0x00BED4E0
+		// Token: 0x06028102 RID: 164098 RVA: 0x00B38414 File Offset: 0x00B36614
 		private void RefreshDevelopTagItem(ERoleDevelopHotRoleTag roleTagType)
 		{
 			RoleDevelopTagItem roleDevelopTagItem = new RoleDevelopTagItem();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.LoadDevelopTagItemAsync(roleDevelopTagItem, roleTagType).Forget();
 		}
 
-		// Token: 0x06033299 RID: 209561 RVA: 0x00BEF308 File Offset: 0x00BED508
+		// Token: 0x06028103 RID: 164099 RVA: 0x00B3843C File Offset: 0x00B3663C
 		private UniTask LoadDevelopTagItemAsync(RoleDevelopTagItem item, ERoleDevelopHotRoleTag roleTagType)
 		{
 			RoleDevelopTabItem.<LoadDevelopTagItemAsync>d__14 <LoadDevelopTagItemAsync>d__;
@@ -136,14 +136,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <LoadDevelopTagItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603329A RID: 209562 RVA: 0x00BEF35B File Offset: 0x00BED55B
+		// Token: 0x06028104 RID: 164100 RVA: 0x00B3848F File Offset: 0x00B3668F
 		public void SetSelectToggle(EToggleState state = EToggleState.ETT_Checked)
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(state, false, false, true);
 			this.ToggleFunc(this.TypeId, this.Toggle);
 		}
 
-		// Token: 0x0603329B RID: 209563 RVA: 0x00BEF384 File Offset: 0x00BED584
+		// Token: 0x06028105 RID: 164101 RVA: 0x00B384B8 File Offset: 0x00B366B8
 		[NullableContext(2)]
 		public UUIItem GetButtonItem()
 		{
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return tweakObjectPtr.GetValueOrDefault();
 		}
 
-		// Token: 0x0603329C RID: 209564 RVA: 0x00BEF3C9 File Offset: 0x00BED5C9
+		// Token: 0x06028106 RID: 164102 RVA: 0x00B384FD File Offset: 0x00B366FD
 		private void OnToggleClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -165,26 +165,26 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x0603329D RID: 209565 RVA: 0x00BEF3E8 File Offset: 0x00BED5E8
+		// Token: 0x06028107 RID: 164103 RVA: 0x00B3851C File Offset: 0x00B3671C
 		private void OnAddButtonClick()
 		{
 			RoleController.OpenRoleDevelopSelectTargetView(ERoleDevelopUpdateTargetSource.Detection, null);
 		}
 
-		// Token: 0x0603329E RID: 209566 RVA: 0x00BEF404 File Offset: 0x00BED604
+		// Token: 0x06028108 RID: 164104 RVA: 0x00B38538 File Offset: 0x00B36738
 		private void OnChangeButtonClick()
 		{
 			RoleController.OpenRoleDevelopSelectTargetView(ERoleDevelopUpdateTargetSource.Detection, new int?(RoleDevelopModel.Instance.DevTargetRoleId));
 		}
 
-		// Token: 0x0401B300 RID: 111360
+		// Token: 0x04015CD1 RID: 89297
 		private int TypeId;
 
-		// Token: 0x0401B301 RID: 111361
+		// Token: 0x04015CD2 RID: 89298
 		[Nullable(2)]
 		private UUIExtendToggle Toggle;
 
-		// Token: 0x0401B302 RID: 111362
+		// Token: 0x04015CD3 RID: 89299
 		[Nullable(new byte[]
 		{
 			2,
@@ -192,41 +192,34 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 		})]
 		private Action<int, UUIExtendToggle> ToggleFunc;
 
-		// Token: 0x0401B303 RID: 111363
+		// Token: 0x04015CD4 RID: 89300
 		[Nullable(2)]
 		private Func<int, bool> OnCanToggleClicked;
 
-		// Token: 0x0401B304 RID: 111364
+		// Token: 0x04015CD5 RID: 89301
 		[Nullable(2)]
 		private RoleDevelopTagItem DevelopTagItem;
 
-		// Token: 0x0200AECD RID: 44749
+		// Token: 0x02009900 RID: 39168
 		[NullableContext(0)]
-		public static class EComponentType
+		private enum EComponentType
 		{
-			// Token: 0x0403517A RID: 217466
-			public const int Toggle = 0;
-
-			// Token: 0x0403517B RID: 217467
-			public const int RoleTexture = 1;
-
-			// Token: 0x0403517C RID: 217468
-			public const int DevelopTagItem = 2;
-
-			// Token: 0x0403517D RID: 217469
-			public const int EmptyTexture = 3;
-
-			// Token: 0x0403517E RID: 217470
-			public const int TitleText = 4;
-
-			// Token: 0x0403517F RID: 217471
-			public const int NameText = 5;
-
-			// Token: 0x04035180 RID: 217472
-			public const int AddButton = 6;
-
-			// Token: 0x04035181 RID: 217473
-			public const int ChangeButton = 7;
+			// Token: 0x0402FBA9 RID: 195497
+			Toggle,
+			// Token: 0x0402FBAA RID: 195498
+			RoleTexture,
+			// Token: 0x0402FBAB RID: 195499
+			DevelopTagItem,
+			// Token: 0x0402FBAC RID: 195500
+			EmptyTexture,
+			// Token: 0x0402FBAD RID: 195501
+			TitleText,
+			// Token: 0x0402FBAE RID: 195502
+			NameText,
+			// Token: 0x0402FBAF RID: 195503
+			AddButton,
+			// Token: 0x0402FBB0 RID: 195504
+			ChangeButton
 		}
 	}
 }

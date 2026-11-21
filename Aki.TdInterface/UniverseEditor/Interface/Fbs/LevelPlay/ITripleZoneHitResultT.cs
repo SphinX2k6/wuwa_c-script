@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045D9 RID: 17881
+	// Token: 0x02004A41 RID: 19009
 	public class ITripleZoneHitResultT
 	{
-		// Token: 0x17007F20 RID: 32544
-		// (get) Token: 0x0601B109 RID: 110857 RVA: 0x003DB745 File Offset: 0x003D9945
-		// (set) Token: 0x0601B10A RID: 110858 RVA: 0x003DB74D File Offset: 0x003D994D
+		// Token: 0x17008561 RID: 34145
+		// (get) Token: 0x0601C8DE RID: 116958 RVA: 0x004079E1 File Offset: 0x00405BE1
+		// (set) Token: 0x0601C8DF RID: 116959 RVA: 0x004079E9 File Offset: 0x00405BE9
 		public EDartSkillResultType Type { get; set; }
 
-		// Token: 0x17007F21 RID: 32545
-		// (get) Token: 0x0601B10B RID: 110859 RVA: 0x003DB756 File Offset: 0x003D9956
-		// (set) Token: 0x0601B10C RID: 110860 RVA: 0x003DB75E File Offset: 0x003D995E
+		// Token: 0x17008562 RID: 34146
+		// (get) Token: 0x0601C8E0 RID: 116960 RVA: 0x004079F2 File Offset: 0x00405BF2
+		// (set) Token: 0x0601C8E1 RID: 116961 RVA: 0x004079FA File Offset: 0x00405BFA
 		public int Probability { get; set; }
 
-		// Token: 0x17007F22 RID: 32546
-		// (get) Token: 0x0601B10D RID: 110861 RVA: 0x003DB767 File Offset: 0x003D9967
-		// (set) Token: 0x0601B10E RID: 110862 RVA: 0x003DB76F File Offset: 0x003D996F
+		// Token: 0x17008563 RID: 34147
+		// (get) Token: 0x0601C8E2 RID: 116962 RVA: 0x00407A03 File Offset: 0x00405C03
+		// (set) Token: 0x0601C8E3 RID: 116963 RVA: 0x00407A0B File Offset: 0x00405C0B
 		public List<TDartboardZoneUnion> Zones { get; set; }
 
-		// Token: 0x0601B10F RID: 110863 RVA: 0x003DB778 File Offset: 0x003D9978
+		// Token: 0x0601C8E4 RID: 116964 RVA: 0x00407A14 File Offset: 0x00405C14
 		public ITripleZoneHitResultT()
 		{
 			this.Type = EDartSkillResultType.NoBust;

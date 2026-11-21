@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200281A RID: 10266
+	// Token: 0x02002AED RID: 10989
 	public class INpcExitCurrentInteract : INpcLeisureInteractType
 	{
-		// Token: 0x0600E3BE RID: 58302 RVA: 0x00218D87 File Offset: 0x00216F87
-		[NullableContext(1)]
+		// Token: 0x0600F1E3 RID: 61923 RVA: 0x00235BEB File Offset: 0x00233DEB
 		public static INpcExitCurrentInteract Create(INpcExitCurrentInteract? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700454C RID: 17740
-		// (get) Token: 0x0600E3BF RID: 58303 RVA: 0x00218DA6 File Offset: 0x00216FA6
+		// Token: 0x170048B7 RID: 18615
+		// (get) Token: 0x0600F1E4 RID: 61924 RVA: 0x00235C0A File Offset: 0x00233E0A
 		public override ENpcLeisureInteract Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700454D RID: 17741
-		// (get) Token: 0x0600E3C0 RID: 58304 RVA: 0x00218DB4 File Offset: 0x00216FB4
+		// Token: 0x170048B8 RID: 18616
+		// (get) Token: 0x0600F1E5 RID: 61925 RVA: 0x00235C18 File Offset: 0x00233E18
 		public override bool? KeepState
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E10 RID: 32272
+		// Token: 0x040084CD RID: 33997
 		private INpcExitCurrentInteract Instance;
 	}
 }

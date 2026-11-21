@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C87 RID: 15495
+	// Token: 0x02004099 RID: 16537
 	public static class TTriggerShapeVerify
 	{
-		// Token: 0x06015752 RID: 87890 RVA: 0x00319980 File Offset: 0x00317B80
+		// Token: 0x06016C8A RID: 93322 RVA: 0x00340BF8 File Offset: 0x0033EDF8
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

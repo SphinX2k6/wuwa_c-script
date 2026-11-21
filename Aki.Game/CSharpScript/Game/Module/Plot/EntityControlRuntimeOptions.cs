@@ -3,31 +3,31 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FFA RID: 20474
+	// Token: 0x02003FC4 RID: 16324
 	public sealed class EntityControlRuntimeOptions
 	{
-		// Token: 0x17007FDF RID: 32735
-		// (get) Token: 0x060345F3 RID: 214515 RVA: 0x00C4EA94 File Offset: 0x00C4CC94
-		// (set) Token: 0x060345F4 RID: 214516 RVA: 0x00C4EA9C File Offset: 0x00C4CC9C
+		// Token: 0x17005394 RID: 21396
+		// (get) Token: 0x0602947E RID: 169086 RVA: 0x00B98AF4 File Offset: 0x00B96CF4
+		// (set) Token: 0x0602947F RID: 169087 RVA: 0x00B98AFC File Offset: 0x00B96CFC
 		public bool IsEnabled { get; set; }
 
-		// Token: 0x17007FE0 RID: 32736
-		// (get) Token: 0x060345F5 RID: 214517 RVA: 0x00C4EAA5 File Offset: 0x00C4CCA5
-		// (set) Token: 0x060345F6 RID: 214518 RVA: 0x00C4EAAD File Offset: 0x00C4CCAD
+		// Token: 0x17005395 RID: 21397
+		// (get) Token: 0x06029480 RID: 169088 RVA: 0x00B98B05 File Offset: 0x00B96D05
+		// (set) Token: 0x06029481 RID: 169089 RVA: 0x00B98B0D File Offset: 0x00B96D0D
 		public EEntityControlCameraMode? CameraMode { get; set; }
 
-		// Token: 0x17007FE1 RID: 32737
-		// (get) Token: 0x060345F7 RID: 214519 RVA: 0x00C4EAB6 File Offset: 0x00C4CCB6
-		// (set) Token: 0x060345F8 RID: 214520 RVA: 0x00C4EABE File Offset: 0x00C4CCBE
+		// Token: 0x17005396 RID: 21398
+		// (get) Token: 0x06029482 RID: 169090 RVA: 0x00B98B16 File Offset: 0x00B96D16
+		// (set) Token: 0x06029483 RID: 169091 RVA: 0x00B98B1E File Offset: 0x00B96D1E
 		public bool HandlePlayer { get; set; }
 
-		// Token: 0x17007FE2 RID: 32738
-		// (get) Token: 0x060345F9 RID: 214521 RVA: 0x00C4EAC7 File Offset: 0x00C4CCC7
-		// (set) Token: 0x060345FA RID: 214522 RVA: 0x00C4EACF File Offset: 0x00C4CCCF
+		// Token: 0x17005397 RID: 21399
+		// (get) Token: 0x06029484 RID: 169092 RVA: 0x00B98B27 File Offset: 0x00B96D27
+		// (set) Token: 0x06029485 RID: 169093 RVA: 0x00B98B2F File Offset: 0x00B96D2F
 		public bool HideSkipButton { get; set; }
 
-		// Token: 0x17007FE3 RID: 32739
-		// (get) Token: 0x060345FB RID: 214523 RVA: 0x00C4EAD8 File Offset: 0x00C4CCD8
+		// Token: 0x17005398 RID: 21400
+		// (get) Token: 0x06029486 RID: 169094 RVA: 0x00B98B38 File Offset: 0x00B96D38
 		public bool UseSequenceCamera
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x17007FE4 RID: 32740
-		// (get) Token: 0x060345FC RID: 214524 RVA: 0x00C4EB00 File Offset: 0x00C4CD00
+		// Token: 0x17005399 RID: 21401
+		// (get) Token: 0x06029487 RID: 169095 RVA: 0x00B98B60 File Offset: 0x00B96D60
 		public bool FollowSequencePlayer
 		{
 			get

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A5B RID: 23131
+	// Token: 0x02006068 RID: 24680
 	public struct ITempleGuid : IFlatbufferObject
 	{
-		// Token: 0x1700AE11 RID: 44561
-		// (get) Token: 0x060275A8 RID: 161192 RVA: 0x0056A6A7 File Offset: 0x005688A7
+		// Token: 0x1700B749 RID: 46921
+		// (get) Token: 0x06029B20 RID: 170784 RVA: 0x005B16B3 File Offset: 0x005AF8B3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060275A9 RID: 161193 RVA: 0x0056A6B4 File Offset: 0x005688B4
+		// Token: 0x06029B21 RID: 170785 RVA: 0x005B16C0 File Offset: 0x005AF8C0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060275AA RID: 161194 RVA: 0x0056A6BC File Offset: 0x005688BC
+		// Token: 0x06029B22 RID: 170786 RVA: 0x005B16C8 File Offset: 0x005AF8C8
 		public static ITempleGuid GetRootAsITempleGuid(ByteBuffer _bb)
 		{
 			return ITempleGuid.GetRootAsITempleGuid(_bb, default(ITempleGuid));
 		}
 
-		// Token: 0x060275AB RID: 161195 RVA: 0x0056A6D8 File Offset: 0x005688D8
+		// Token: 0x06029B23 RID: 170787 RVA: 0x005B16E4 File Offset: 0x005AF8E4
 		public static ITempleGuid GetRootAsITempleGuid(ByteBuffer _bb, ITempleGuid obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060275AC RID: 161196 RVA: 0x0056A6F5 File Offset: 0x005688F5
+		// Token: 0x06029B24 RID: 170788 RVA: 0x005B1701 File Offset: 0x005AF901
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060275AD RID: 161197 RVA: 0x0056A704 File Offset: 0x00568904
+		// Token: 0x06029B25 RID: 170789 RVA: 0x005B1710 File Offset: 0x005AF910
 		public ITempleGuid __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AE12 RID: 44562
-		// (get) Token: 0x060275AE RID: 161198 RVA: 0x0056A714 File Offset: 0x00568914
+		// Token: 0x1700B74A RID: 46922
+		// (get) Token: 0x06029B26 RID: 170790 RVA: 0x005B1720 File Offset: 0x005AF920
 		public int TempleGuid
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060275AF RID: 161199 RVA: 0x0056A750 File Offset: 0x00568950
+		// Token: 0x06029B27 RID: 170791 RVA: 0x005B175C File Offset: 0x005AF95C
 		public static Offset<ITempleGuid> CreateITempleGuid(FlatBufferBuilder builder, int TempleGuid = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITempleGuid.EndITempleGuid(builder);
 		}
 
-		// Token: 0x060275B0 RID: 161200 RVA: 0x0056A766 File Offset: 0x00568966
+		// Token: 0x06029B28 RID: 170792 RVA: 0x005B1772 File Offset: 0x005AF972
 		public static void StartITempleGuid(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060275B1 RID: 161201 RVA: 0x0056A76F File Offset: 0x0056896F
+		// Token: 0x06029B29 RID: 170793 RVA: 0x005B177B File Offset: 0x005AF97B
 		public static void AddTempleGuid(FlatBufferBuilder builder, int templeGuid)
 		{
 			builder.AddInt(0, templeGuid, 0);
 		}
 
-		// Token: 0x060275B2 RID: 161202 RVA: 0x0056A77A File Offset: 0x0056897A
+		// Token: 0x06029B2A RID: 170794 RVA: 0x005B1786 File Offset: 0x005AF986
 		public static Offset<ITempleGuid> EndITempleGuid(FlatBufferBuilder builder)
 		{
 			return new Offset<ITempleGuid>(builder.EndTable());
 		}
 
-		// Token: 0x060275B3 RID: 161203 RVA: 0x0056A788 File Offset: 0x00568988
+		// Token: 0x06029B2B RID: 170795 RVA: 0x005B1794 File Offset: 0x005AF994
 		public ITempleGuidT UnPack()
 		{
 			ITempleGuidT templeGuidT = new ITempleGuidT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return templeGuidT;
 		}
 
-		// Token: 0x060275B4 RID: 161204 RVA: 0x0056A7A3 File Offset: 0x005689A3
+		// Token: 0x06029B2C RID: 170796 RVA: 0x005B17AF File Offset: 0x005AF9AF
 		public void UnPackTo(ITempleGuidT _o)
 		{
 			_o.TempleGuid = this.TempleGuid;
 		}
 
-		// Token: 0x060275B5 RID: 161205 RVA: 0x0056A7B4 File Offset: 0x005689B4
+		// Token: 0x06029B2D RID: 170797 RVA: 0x005B17C0 File Offset: 0x005AF9C0
 		public static Offset<ITempleGuid> Pack(FlatBufferBuilder builder, ITempleGuidT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITempleGuid.CreateITempleGuid(builder, _o.TempleGuid);
 		}
 
-		// Token: 0x0400F0EB RID: 61675
+		// Token: 0x0400FDE2 RID: 64994
 		private Table __p;
 	}
 }

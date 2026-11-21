@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Match;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200577C RID: 22396
+	// Token: 0x02005D83 RID: 23939
 	public class IPrefabEffectConfigT
 	{
-		// Token: 0x1700A70F RID: 42767
-		// (get) Token: 0x060258B3 RID: 153779 RVA: 0x0052DEA4 File Offset: 0x0052C0A4
-		// (set) Token: 0x060258B4 RID: 153780 RVA: 0x0052DEAC File Offset: 0x0052C0AC
+		// Token: 0x1700B033 RID: 45107
+		// (get) Token: 0x06027DD3 RID: 163283 RVA: 0x00574030 File Offset: 0x00572230
+		// (set) Token: 0x06027DD4 RID: 163284 RVA: 0x00574038 File Offset: 0x00572238
 		public int LevelTag { get; set; }
 
-		// Token: 0x1700A710 RID: 42768
-		// (get) Token: 0x060258B5 RID: 153781 RVA: 0x0052DEB5 File Offset: 0x0052C0B5
-		// (set) Token: 0x060258B6 RID: 153782 RVA: 0x0052DEBD File Offset: 0x0052C0BD
+		// Token: 0x1700B034 RID: 45108
+		// (get) Token: 0x06027DD5 RID: 163285 RVA: 0x00574041 File Offset: 0x00572241
+		// (set) Token: 0x06027DD6 RID: 163286 RVA: 0x00574049 File Offset: 0x00572249
 		public ESceneInteractionEffectState SceneInteractionEffectState { get; set; }
 
-		// Token: 0x060258B7 RID: 153783 RVA: 0x0052DEC6 File Offset: 0x0052C0C6
+		// Token: 0x06027DD7 RID: 163287 RVA: 0x00574052 File Offset: 0x00572252
 		public IPrefabEffectConfigT()
 		{
 			this.LevelTag = 0;

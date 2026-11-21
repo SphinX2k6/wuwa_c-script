@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E5D RID: 15965
+	// Token: 0x02004298 RID: 17048
 	public struct IFlipperConditionStepBase : IFlatbufferObject
 	{
-		// Token: 0x17006EB5 RID: 28341
-		// (get) Token: 0x0601679A RID: 92058 RVA: 0x0033FDB8 File Offset: 0x0033DFB8
+		// Token: 0x17007499 RID: 29849
+		// (get) Token: 0x06017DC1 RID: 97729 RVA: 0x003688E8 File Offset: 0x00366AE8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601679B RID: 92059 RVA: 0x0033FDC5 File Offset: 0x0033DFC5
+		// Token: 0x06017DC2 RID: 97730 RVA: 0x003688F5 File Offset: 0x00366AF5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601679C RID: 92060 RVA: 0x0033FDCC File Offset: 0x0033DFCC
+		// Token: 0x06017DC3 RID: 97731 RVA: 0x003688FC File Offset: 0x00366AFC
 		public static IFlipperConditionStepBase GetRootAsIFlipperConditionStepBase(ByteBuffer _bb)
 		{
 			return IFlipperConditionStepBase.GetRootAsIFlipperConditionStepBase(_bb, default(IFlipperConditionStepBase));
 		}
 
-		// Token: 0x0601679D RID: 92061 RVA: 0x0033FDE8 File Offset: 0x0033DFE8
+		// Token: 0x06017DC4 RID: 97732 RVA: 0x00368918 File Offset: 0x00366B18
 		public static IFlipperConditionStepBase GetRootAsIFlipperConditionStepBase(ByteBuffer _bb, IFlipperConditionStepBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601679E RID: 92062 RVA: 0x0033FE05 File Offset: 0x0033E005
+		// Token: 0x06017DC5 RID: 97733 RVA: 0x00368935 File Offset: 0x00366B35
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601679F RID: 92063 RVA: 0x0033FE14 File Offset: 0x0033E014
+		// Token: 0x06017DC6 RID: 97734 RVA: 0x00368944 File Offset: 0x00366B44
 		public IFlipperConditionStepBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006EB6 RID: 28342
-		// (get) Token: 0x060167A0 RID: 92064 RVA: 0x0033FE24 File Offset: 0x0033E024
+		// Token: 0x1700749A RID: 29850
+		// (get) Token: 0x06017DC7 RID: 97735 RVA: 0x00368954 File Offset: 0x00366B54
 		public EFlipperConditionStep Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060167A1 RID: 92065 RVA: 0x0033FE60 File Offset: 0x0033E060
+		// Token: 0x06017DC8 RID: 97736 RVA: 0x00368990 File Offset: 0x00366B90
 		public static Offset<IFlipperConditionStepBase> CreateIFlipperConditionStepBase(FlatBufferBuilder builder, EFlipperConditionStep Type = EFlipperConditionStep.Fight)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFlipperConditionStepBase.EndIFlipperConditionStepBase(builder);
 		}
 
-		// Token: 0x060167A2 RID: 92066 RVA: 0x0033FE76 File Offset: 0x0033E076
+		// Token: 0x06017DC9 RID: 97737 RVA: 0x003689A6 File Offset: 0x00366BA6
 		public static void StartIFlipperConditionStepBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060167A3 RID: 92067 RVA: 0x0033FE7F File Offset: 0x0033E07F
+		// Token: 0x06017DCA RID: 97738 RVA: 0x003689AF File Offset: 0x00366BAF
 		public static void AddType(FlatBufferBuilder builder, EFlipperConditionStep type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060167A4 RID: 92068 RVA: 0x0033FE8A File Offset: 0x0033E08A
+		// Token: 0x06017DCB RID: 97739 RVA: 0x003689BA File Offset: 0x00366BBA
 		public static Offset<IFlipperConditionStepBase> EndIFlipperConditionStepBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IFlipperConditionStepBase>(builder.EndTable());
 		}
 
-		// Token: 0x060167A5 RID: 92069 RVA: 0x0033FE98 File Offset: 0x0033E098
+		// Token: 0x06017DCC RID: 97740 RVA: 0x003689C8 File Offset: 0x00366BC8
 		public IFlipperConditionStepBaseT UnPack()
 		{
 			IFlipperConditionStepBaseT flipperConditionStepBaseT = new IFlipperConditionStepBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return flipperConditionStepBaseT;
 		}
 
-		// Token: 0x060167A6 RID: 92070 RVA: 0x0033FEB3 File Offset: 0x0033E0B3
+		// Token: 0x06017DCD RID: 97741 RVA: 0x003689E3 File Offset: 0x00366BE3
 		public void UnPackTo(IFlipperConditionStepBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060167A7 RID: 92071 RVA: 0x0033FEC4 File Offset: 0x0033E0C4
+		// Token: 0x06017DCE RID: 97742 RVA: 0x003689F4 File Offset: 0x00366BF4
 		public static Offset<IFlipperConditionStepBase> Pack(FlatBufferBuilder builder, IFlipperConditionStepBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFlipperConditionStepBase.CreateIFlipperConditionStepBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400B80D RID: 47117
+		// Token: 0x0400C1E4 RID: 49636
 		private Table __p;
 	}
 }

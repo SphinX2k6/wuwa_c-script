@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065F5 RID: 26101
+	// Token: 0x02005573 RID: 21875
 	public interface IPanelPosRange
 	{
-		// Token: 0x170095BE RID: 38334
-		// (get) Token: 0x060416CE RID: 267982
-		// (set) Token: 0x060416CF RID: 267983
+		// Token: 0x17006920 RID: 26912
+		// (get) Token: 0x06036393 RID: 222099
+		// (set) Token: 0x06036394 RID: 222100
 		int RowStartIndex { get; set; }
 
-		// Token: 0x170095BF RID: 38335
-		// (get) Token: 0x060416D0 RID: 267984
-		// (set) Token: 0x060416D1 RID: 267985
+		// Token: 0x17006921 RID: 26913
+		// (get) Token: 0x06036395 RID: 222101
+		// (set) Token: 0x06036396 RID: 222102
 		int RowEndIndex { get; set; }
 
-		// Token: 0x170095C0 RID: 38336
-		// (get) Token: 0x060416D2 RID: 267986
-		// (set) Token: 0x060416D3 RID: 267987
+		// Token: 0x17006922 RID: 26914
+		// (get) Token: 0x06036397 RID: 222103
+		// (set) Token: 0x06036398 RID: 222104
 		int ColStartIndex { get; set; }
 
-		// Token: 0x170095C1 RID: 38337
-		// (get) Token: 0x060416D4 RID: 267988
-		// (set) Token: 0x060416D5 RID: 267989
+		// Token: 0x17006923 RID: 26915
+		// (get) Token: 0x06036399 RID: 222105
+		// (set) Token: 0x0603639A RID: 222106
 		int ColEndIndex { get; set; }
 	}
 }

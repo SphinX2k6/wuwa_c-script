@@ -7,16 +7,16 @@ using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200234F RID: 9039
+// Token: 0x02001834 RID: 6196
 public class MonthCardRewardView : UiViewBase
 {
-	// Token: 0x06011FEB RID: 73707 RVA: 0x004697BE File Offset: 0x004679BE
+	// Token: 0x0600F49B RID: 62619 RVA: 0x00476886 File Offset: 0x00474A86
 	[NullableContext(1)]
 	public MonthCardRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011FEC RID: 73708 RVA: 0x004697C8 File Offset: 0x004679C8
+	// Token: 0x0600F49C RID: 62620 RVA: 0x00476890 File Offset: 0x00474A90
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,19 +37,19 @@ public class MonthCardRewardView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011FED RID: 73709 RVA: 0x0046986E File Offset: 0x00467A6E
+	// Token: 0x0600F49D RID: 62621 RVA: 0x00476936 File Offset: 0x00474B36
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.ReceiveMonthCardDataEvent, new Action(this.OnRefreshView));
 	}
 
-	// Token: 0x06011FEE RID: 73710 RVA: 0x0046988C File Offset: 0x00467A8C
+	// Token: 0x0600F49E RID: 62622 RVA: 0x00476954 File Offset: 0x00474B54
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ReceiveMonthCardDataEvent, new Action(this.OnRefreshView));
 	}
 
-	// Token: 0x06011FEF RID: 73711 RVA: 0x004698AC File Offset: 0x00467AAC
+	// Token: 0x0600F49F RID: 62623 RVA: 0x00476974 File Offset: 0x00474B74
 	private void OnClickedClose()
 	{
 		MonthCardRewardView.<>c__DisplayClass7_0 CS$<>8__locals1 = new MonthCardRewardView.<>c__DisplayClass7_0();
@@ -65,7 +65,7 @@ public class MonthCardRewardView : UiViewBase
 		UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x06011FF0 RID: 73712 RVA: 0x0046993C File Offset: 0x00467B3C
+	// Token: 0x0600F4A0 RID: 62624 RVA: 0x00476A04 File Offset: 0x00474C04
 	protected override void OnBeforeShow()
 	{
 		TItem? localDailyReward = MonthCardModel.Instance.LocalDailyReward;
@@ -75,31 +75,31 @@ public class MonthCardRewardView : UiViewBase
 		this.UiViewSequence.PlaySequence("Loop", false, null);
 	}
 
-	// Token: 0x06011FF1 RID: 73713 RVA: 0x0046999D File Offset: 0x00467B9D
+	// Token: 0x0600F4A1 RID: 62625 RVA: 0x00476A65 File Offset: 0x00474C65
 	private void OnRefreshView()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06011FF2 RID: 73714 RVA: 0x004699A8 File Offset: 0x00467BA8
+	// Token: 0x0600F4A2 RID: 62626 RVA: 0x00476A70 File Offset: 0x00474C70
 	private void RefreshView()
 	{
 		MonthCardModel.Instance.CanShowDailyRewardView = false;
 		base.GetText(1).SetText(MonthCardModel.Instance.GetRemainDays().ToString(), true);
 	}
 
-	// Token: 0x040087EF RID: 34799
+	// Token: 0x04008932 RID: 35122
 	private int RewardId;
 
-	// Token: 0x040087F0 RID: 34800
+	// Token: 0x04008933 RID: 35123
 	private int RewardCount;
 
-	// Token: 0x020088C9 RID: 35017
+	// Token: 0x02007A52 RID: 31314
 	private enum EMonthCardRewardViewComponents
 	{
-		// Token: 0x0402C75F RID: 182111
+		// Token: 0x04027A73 RID: 162419
 		CloseButton,
-		// Token: 0x0402C760 RID: 182112
+		// Token: 0x04027A74 RID: 162420
 		RemainDaysText
 	}
 }

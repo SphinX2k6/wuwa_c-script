@@ -2,10 +2,10 @@
 
 namespace UnrealEngine
 {
-	// Token: 0x02002AD8 RID: 10968
+	// Token: 0x02000887 RID: 2183
 	public static class UnrealEngineBuildInfo
 	{
-		// Token: 0x04016260 RID: 90720
+		// Token: 0x0400567B RID: 22139
 		public const bool NativeWrapperEnabled = true;
 	}
 }

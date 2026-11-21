@@ -2,25 +2,25 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x0200648B RID: 25739
+	// Token: 0x02005409 RID: 21513
 	public class MoonChasingMainViewModel
 	{
-		// Token: 0x040219D9 RID: 137689
+		// Token: 0x0401C30A RID: 115466
 		public EMoonChasingSkipDefine SkipTarget;
 
-		// Token: 0x040219DA RID: 137690
+		// Token: 0x0401C30B RID: 115467
 		public bool BuildingBackToBusiness;
 
-		// Token: 0x040219DB RID: 137691
+		// Token: 0x0401C30C RID: 115468
 		public int RefreshBuildingId;
 
-		// Token: 0x040219DC RID: 137692
+		// Token: 0x0401C30D RID: 115469
 		public bool IsInBuildingModule;
 
-		// Token: 0x040219DD RID: 137693
+		// Token: 0x0401C30E RID: 115470
 		public EMoonChasingTaskType TaskType = EMoonChasingTaskType.MainLine;
 
-		// Token: 0x040219DE RID: 137694
+		// Token: 0x0401C30F RID: 115471
 		public bool IsLastTask;
 	}
 }

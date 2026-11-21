@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FA5 RID: 4005
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010CF RID: 4303
 	public class IGradingSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x0600593A RID: 22842 RVA: 0x000D97A4 File Offset: 0x000D79A4
+		// Token: 0x06005F10 RID: 24336 RVA: 0x000E6264 File Offset: 0x000E4464
 		private IGradingSystemConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600593B RID: 22843 RVA: 0x000D97DC File Offset: 0x000D79DC
+		// Token: 0x06005F11 RID: 24337 RVA: 0x000E629C File Offset: 0x000E449C
 		public static IGradingSystemConfig Create([Nullable(2)] IGradingSystemConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600593C RID: 22844 RVA: 0x000D97EF File Offset: 0x000D79EF
+		// Token: 0x06005F12 RID: 24338 RVA: 0x000E62AF File Offset: 0x000E44AF
 		public static IGradingSystemConfig CreateFromSetValue([Nullable(2)] IGradingSystemConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600593D RID: 22845 RVA: 0x000D9802 File Offset: 0x000D7A02
+		// Token: 0x06005F13 RID: 24339 RVA: 0x000E62C2 File Offset: 0x000E44C2
 		public new IGradingSystemConfig_SetValue ToSetValue()
 		{
 			return new IGradingSystemConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DA7 RID: 7591
-		// (get) Token: 0x0600593E RID: 22846 RVA: 0x000D982D File Offset: 0x000D7A2D
-		// (set) Token: 0x0600593F RID: 22847 RVA: 0x000D9858 File Offset: 0x000D7A58
+		// Token: 0x17001F4E RID: 8014
+		// (get) Token: 0x06005F14 RID: 24340 RVA: 0x000E62ED File Offset: 0x000E44ED
+		// (set) Token: 0x06005F15 RID: 24341 RVA: 0x000E6318 File Offset: 0x000E4518
 		public override EEnableSystemType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DA8 RID: 7592
-		// (get) Token: 0x06005940 RID: 22848 RVA: 0x000D9866 File Offset: 0x000D7A66
-		// (set) Token: 0x06005941 RID: 22849 RVA: 0x000D9891 File Offset: 0x000D7A91
+		// Token: 0x17001F4F RID: 8015
+		// (get) Token: 0x06005F16 RID: 24342 RVA: 0x000E6326 File Offset: 0x000E4526
+		// (set) Token: 0x06005F17 RID: 24343 RVA: 0x000E6351 File Offset: 0x000E4551
 		public virtual int GradingSystemId
 		{
 			get
@@ -108,20 +106,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DA9 RID: 7593
-		// (get) Token: 0x06005942 RID: 22850 RVA: 0x000D98A0 File Offset: 0x000D7AA0
-		// (set) Token: 0x06005943 RID: 22851 RVA: 0x000D9933 File Offset: 0x000D7B33
+		// Token: 0x17001F50 RID: 8016
+		// (get) Token: 0x06005F18 RID: 24344 RVA: 0x000E6360 File Offset: 0x000E4560
+		// (set) Token: 0x06005F19 RID: 24345 RVA: 0x000E63F3 File Offset: 0x000E45F3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IGradingSystemVar> Vars
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -152,7 +150,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -161,23 +159,23 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035DE RID: 13790
+		// Token: 0x04003910 RID: 14608
 		[Nullable(2)]
 		protected new IGradingSystemConfig FbInstance;
 
-		// Token: 0x040035DF RID: 13791
+		// Token: 0x04003911 RID: 14609
 		[Nullable(2)]
 		protected new IGradingSystemConfig_SetValue PocoInterface;
 
-		// Token: 0x040035E0 RID: 13792
+		// Token: 0x04003912 RID: 14610
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IGradingSystemVar> _VarsCache;
 
-		// Token: 0x040035E1 RID: 13793
+		// Token: 0x04003913 RID: 14611
 		private bool _VarsInited;
 	}
 }

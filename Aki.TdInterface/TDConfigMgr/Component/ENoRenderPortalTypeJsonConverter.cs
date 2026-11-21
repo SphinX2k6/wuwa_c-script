@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009B3 RID: 2483
+	// Token: 0x02000A68 RID: 2664
 	public class ENoRenderPortalTypeJsonConverter : JsonConverter<ENoRenderPortalType>
 	{
-		// Token: 0x06003758 RID: 14168 RVA: 0x0008FF48 File Offset: 0x0008E148
+		// Token: 0x06003AE8 RID: 15080 RVA: 0x0009803C File Offset: 0x0009623C
 		public override ENoRenderPortalType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ENoRenderPortalTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003759 RID: 14169 RVA: 0x0008FF6C File Offset: 0x0008E16C
+		// Token: 0x06003AE9 RID: 15081 RVA: 0x00098060 File Offset: 0x00096260
 		public override void Write(Utf8JsonWriter writer, ENoRenderPortalType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

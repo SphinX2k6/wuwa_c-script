@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F64 RID: 24420
+	// Token: 0x020065A8 RID: 26024
 	public enum EEntityControlCameraMode : byte
 	{
-		// Token: 0x0400FD30 RID: 64816
+		// Token: 0x04010AAE RID: 68270
 		UseSequenceCamera,
-		// Token: 0x0400FD31 RID: 64817
+		// Token: 0x04010AAF RID: 68271
 		FollowSequencePlayer
 	}
 }

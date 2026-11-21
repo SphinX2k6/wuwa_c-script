@@ -3,59 +3,59 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x020047A0 RID: 18336
+	// Token: 0x020036D1 RID: 14033
 	[NullableContext(2)]
 	public interface IMapSubViewListItemData
 	{
-		// Token: 0x17007801 RID: 30721
-		// (get) Token: 0x0602FF2A RID: 196394
-		// (set) Token: 0x0602FF2B RID: 196395
+		// Token: 0x17004ABD RID: 19133
+		// (get) Token: 0x060246F5 RID: 149237
+		// (set) Token: 0x060246F6 RID: 149238
 		[Nullable(1)]
 		string LeftTextId { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x17007802 RID: 30722
-		// (get) Token: 0x0602FF2C RID: 196396
-		// (set) Token: 0x0602FF2D RID: 196397
+		// Token: 0x17004ABE RID: 19134
+		// (get) Token: 0x060246F7 RID: 149239
+		// (set) Token: 0x060246F8 RID: 149240
 		string LeftText { get; set; }
 
-		// Token: 0x17007803 RID: 30723
-		// (get) Token: 0x0602FF2E RID: 196398
-		// (set) Token: 0x0602FF2F RID: 196399
+		// Token: 0x17004ABF RID: 19135
+		// (get) Token: 0x060246F9 RID: 149241
+		// (set) Token: 0x060246FA RID: 149242
 		string RightTextId { get; set; }
 
-		// Token: 0x17007804 RID: 30724
-		// (get) Token: 0x0602FF30 RID: 196400
-		// (set) Token: 0x0602FF31 RID: 196401
+		// Token: 0x17004AC0 RID: 19136
+		// (get) Token: 0x060246FB RID: 149243
+		// (set) Token: 0x060246FC RID: 149244
 		string RightText { get; set; }
 
-		// Token: 0x17007805 RID: 30725
-		// (get) Token: 0x0602FF32 RID: 196402
-		// (set) Token: 0x0602FF33 RID: 196403
+		// Token: 0x17004AC1 RID: 19137
+		// (get) Token: 0x060246FD RID: 149245
+		// (set) Token: 0x060246FE RID: 149246
 		bool ShowBtnHelp { get; set; }
 
-		// Token: 0x17007806 RID: 30726
-		// (get) Token: 0x0602FF34 RID: 196404
-		// (set) Token: 0x0602FF35 RID: 196405
+		// Token: 0x17004AC2 RID: 19138
+		// (get) Token: 0x060246FF RID: 149247
+		// (set) Token: 0x06024700 RID: 149248
 		Action OnBtnClickCb { get; set; }
 
-		// Token: 0x17007807 RID: 30727
-		// (get) Token: 0x0602FF36 RID: 196406
-		// (set) Token: 0x0602FF37 RID: 196407
+		// Token: 0x17004AC3 RID: 19139
+		// (get) Token: 0x06024701 RID: 149249
+		// (set) Token: 0x06024702 RID: 149250
 		bool ShowIcon { get; set; }
 
-		// Token: 0x17007808 RID: 30728
-		// (get) Token: 0x0602FF38 RID: 196408
-		// (set) Token: 0x0602FF39 RID: 196409
+		// Token: 0x17004AC4 RID: 19140
+		// (get) Token: 0x06024703 RID: 149251
+		// (set) Token: 0x06024704 RID: 149252
 		bool ShowSprite { get; set; }
 
-		// Token: 0x17007809 RID: 30729
-		// (get) Token: 0x0602FF3A RID: 196410
-		// (set) Token: 0x0602FF3B RID: 196411
+		// Token: 0x17004AC5 RID: 19141
+		// (get) Token: 0x06024705 RID: 149253
+		// (set) Token: 0x06024706 RID: 149254
 		bool ShowScaleIcon { get; set; }
 
-		// Token: 0x1700780A RID: 30730
-		// (get) Token: 0x0602FF3C RID: 196412
-		// (set) Token: 0x0602FF3D RID: 196413
+		// Token: 0x17004AC6 RID: 19142
+		// (get) Token: 0x06024707 RID: 149255
+		// (set) Token: 0x06024708 RID: 149256
 		string ScaleIconPath { get; set; }
 	}
 }

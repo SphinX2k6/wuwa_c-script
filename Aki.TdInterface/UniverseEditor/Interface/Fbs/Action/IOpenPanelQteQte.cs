@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C12 RID: 27666
+	// Token: 0x02007379 RID: 29561
 	public struct IOpenPanelQteQte : IFlatbufferObject
 	{
-		// Token: 0x1700CDC8 RID: 52680
-		// (get) Token: 0x06030A7B RID: 199291 RVA: 0x0069B0CA File Offset: 0x006992CA
+		// Token: 0x1700D8E3 RID: 55523
+		// (get) Token: 0x060339CF RID: 211407 RVA: 0x006F53C6 File Offset: 0x006F35C6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030A7C RID: 199292 RVA: 0x0069B0D7 File Offset: 0x006992D7
+		// Token: 0x060339D0 RID: 211408 RVA: 0x006F53D3 File Offset: 0x006F35D3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030A7D RID: 199293 RVA: 0x0069B0E0 File Offset: 0x006992E0
+		// Token: 0x060339D1 RID: 211409 RVA: 0x006F53DC File Offset: 0x006F35DC
 		public static IOpenPanelQteQte GetRootAsIOpenPanelQteQte(ByteBuffer _bb)
 		{
 			return IOpenPanelQteQte.GetRootAsIOpenPanelQteQte(_bb, default(IOpenPanelQteQte));
 		}
 
-		// Token: 0x06030A7E RID: 199294 RVA: 0x0069B0FC File Offset: 0x006992FC
+		// Token: 0x060339D2 RID: 211410 RVA: 0x006F53F8 File Offset: 0x006F35F8
 		public static IOpenPanelQteQte GetRootAsIOpenPanelQteQte(ByteBuffer _bb, IOpenPanelQteQte obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030A7F RID: 199295 RVA: 0x0069B119 File Offset: 0x00699319
+		// Token: 0x060339D3 RID: 211411 RVA: 0x006F5415 File Offset: 0x006F3615
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030A80 RID: 199296 RVA: 0x0069B128 File Offset: 0x00699328
+		// Token: 0x060339D4 RID: 211412 RVA: 0x006F5424 File Offset: 0x006F3624
 		public IOpenPanelQteQte __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CDC9 RID: 52681
-		// (get) Token: 0x06030A81 RID: 199297 RVA: 0x0069B138 File Offset: 0x00699338
+		// Token: 0x1700D8E4 RID: 55524
+		// (get) Token: 0x060339D5 RID: 211413 RVA: 0x006F5434 File Offset: 0x006F3634
 		public EOpenQteType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CDCA RID: 52682
-		// (get) Token: 0x06030A82 RID: 199298 RVA: 0x0069B174 File Offset: 0x00699374
+		// Token: 0x1700D8E5 RID: 55525
+		// (get) Token: 0x060339D6 RID: 211414 RVA: 0x006F5470 File Offset: 0x006F3670
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030A83 RID: 199299 RVA: 0x0069B1B0 File Offset: 0x006993B0
+		// Token: 0x060339D7 RID: 211415 RVA: 0x006F54AC File Offset: 0x006F36AC
 		public static Offset<IOpenPanelQteQte> CreateIOpenPanelQteQte(FlatBufferBuilder builder, EOpenQteType Type = EOpenQteType.PanelQte, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenPanelQteQte.EndIOpenPanelQteQte(builder);
 		}
 
-		// Token: 0x06030A84 RID: 199300 RVA: 0x0069B1CD File Offset: 0x006993CD
+		// Token: 0x060339D8 RID: 211416 RVA: 0x006F54C9 File Offset: 0x006F36C9
 		public static void StartIOpenPanelQteQte(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06030A85 RID: 199301 RVA: 0x0069B1D6 File Offset: 0x006993D6
+		// Token: 0x060339D9 RID: 211417 RVA: 0x006F54D2 File Offset: 0x006F36D2
 		public static void AddType(FlatBufferBuilder builder, EOpenQteType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030A86 RID: 199302 RVA: 0x0069B1E1 File Offset: 0x006993E1
+		// Token: 0x060339DA RID: 211418 RVA: 0x006F54DD File Offset: 0x006F36DD
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06030A87 RID: 199303 RVA: 0x0069B1EC File Offset: 0x006993EC
+		// Token: 0x060339DB RID: 211419 RVA: 0x006F54E8 File Offset: 0x006F36E8
 		public static Offset<IOpenPanelQteQte> EndIOpenPanelQteQte(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenPanelQteQte>(builder.EndTable());
 		}
 
-		// Token: 0x06030A88 RID: 199304 RVA: 0x0069B1FC File Offset: 0x006993FC
+		// Token: 0x060339DC RID: 211420 RVA: 0x006F54F8 File Offset: 0x006F36F8
 		public IOpenPanelQteQteT UnPack()
 		{
 			IOpenPanelQteQteT openPanelQteQteT = new IOpenPanelQteQteT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openPanelQteQteT;
 		}
 
-		// Token: 0x06030A89 RID: 199305 RVA: 0x0069B217 File Offset: 0x00699417
+		// Token: 0x060339DD RID: 211421 RVA: 0x006F5513 File Offset: 0x006F3713
 		public void UnPackTo(IOpenPanelQteQteT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x06030A8A RID: 199306 RVA: 0x0069B234 File Offset: 0x00699434
+		// Token: 0x060339DE RID: 211422 RVA: 0x006F5530 File Offset: 0x006F3730
 		public static Offset<IOpenPanelQteQte> Pack(FlatBufferBuilder builder, IOpenPanelQteQteT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenPanelQteQte.CreateIOpenPanelQteQte(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x04011517 RID: 70935
+		// Token: 0x0401246E RID: 74862
 		private Table __p;
 	}
 }

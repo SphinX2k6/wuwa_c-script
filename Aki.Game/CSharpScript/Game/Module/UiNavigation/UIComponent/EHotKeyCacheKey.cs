@@ -2,12 +2,14 @@
 
 namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 {
-	// Token: 0x02004A02 RID: 18946
+	// Token: 0x0200397E RID: 14718
 	public enum EHotKeyCacheKey
 	{
-		// Token: 0x0401A4EB RID: 107755
+		// Token: 0x04014D6E RID: 85358
 		RewardTakeDataCallback,
-		// Token: 0x0401A4EC RID: 107756
-		PhonePetInteractCallback
+		// Token: 0x04014D6F RID: 85359
+		PhonePetInteractCallback,
+		// Token: 0x04014D70 RID: 85360
+		FreeDrag2D
 	}
 }

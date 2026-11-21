@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 {
-	// Token: 0x02006A28 RID: 27176
+	// Token: 0x02005B85 RID: 23429
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemSplineMoveConfig : ISceneItemSplineMoveConfig
 	{
-		// Token: 0x170098D5 RID: 39125
-		// (get) Token: 0x06043987 RID: 276871 RVA: 0x0108B009 File Offset: 0x01089209
-		// (set) Token: 0x06043988 RID: 276872 RVA: 0x0108B011 File Offset: 0x01089211
+		// Token: 0x17006DBA RID: 28090
+		// (get) Token: 0x060399D5 RID: 235989 RVA: 0x0102F839 File Offset: 0x0102DA39
+		// (set) Token: 0x060399D6 RID: 235990 RVA: 0x0102F841 File Offset: 0x0102DA41
 		public ISceneItemSplineMoveSegmentConfig GlobalConfig { get; set; }
 
-		// Token: 0x170098D6 RID: 39126
-		// (get) Token: 0x06043989 RID: 276873 RVA: 0x0108B01A File Offset: 0x0108921A
-		// (set) Token: 0x0604398A RID: 276874 RVA: 0x0108B022 File Offset: 0x01089222
+		// Token: 0x17006DBB RID: 28091
+		// (get) Token: 0x060399D7 RID: 235991 RVA: 0x0102F84A File Offset: 0x0102DA4A
+		// (set) Token: 0x060399D8 RID: 235992 RVA: 0x0102F852 File Offset: 0x0102DA52
 		[Nullable(new byte[]
 		{
 			2,
@@ -32,24 +32,24 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			1
 		})] set; }
 
-		// Token: 0x170098D7 RID: 39127
-		// (get) Token: 0x0604398B RID: 276875 RVA: 0x0108B02B File Offset: 0x0108922B
-		// (set) Token: 0x0604398C RID: 276876 RVA: 0x0108B033 File Offset: 0x01089233
+		// Token: 0x17006DBC RID: 28092
+		// (get) Token: 0x060399D9 RID: 235993 RVA: 0x0102F85B File Offset: 0x0102DA5B
+		// (set) Token: 0x060399DA RID: 235994 RVA: 0x0102F863 File Offset: 0x0102DA63
 		public ISceneItemSplineMoveRange SplineMoveRange { get; set; }
 
-		// Token: 0x170098D8 RID: 39128
-		// (get) Token: 0x0604398D RID: 276877 RVA: 0x0108B03C File Offset: 0x0108923C
-		// (set) Token: 0x0604398E RID: 276878 RVA: 0x0108B044 File Offset: 0x01089244
+		// Token: 0x17006DBD RID: 28093
+		// (get) Token: 0x060399DB RID: 235995 RVA: 0x0102F86C File Offset: 0x0102DA6C
+		// (set) Token: 0x060399DC RID: 235996 RVA: 0x0102F874 File Offset: 0x0102DA74
 		public int MoveCount { get; set; }
 
-		// Token: 0x170098D9 RID: 39129
-		// (get) Token: 0x0604398F RID: 276879 RVA: 0x0108B04D File Offset: 0x0108924D
-		// (set) Token: 0x06043990 RID: 276880 RVA: 0x0108B055 File Offset: 0x01089255
+		// Token: 0x17006DBE RID: 28094
+		// (get) Token: 0x060399DD RID: 235997 RVA: 0x0102F87D File Offset: 0x0102DA7D
+		// (set) Token: 0x060399DE RID: 235998 RVA: 0x0102F885 File Offset: 0x0102DA85
 		public bool IsClosedLoop { get; set; }
 
-		// Token: 0x170098DA RID: 39130
-		// (get) Token: 0x06043991 RID: 276881 RVA: 0x0108B05E File Offset: 0x0108925E
-		// (set) Token: 0x06043992 RID: 276882 RVA: 0x0108B066 File Offset: 0x01089266
+		// Token: 0x17006DBF RID: 28095
+		// (get) Token: 0x060399DF RID: 235999 RVA: 0x0102F88E File Offset: 0x0102DA8E
+		// (set) Token: 0x060399E0 RID: 236000 RVA: 0x0102F896 File Offset: 0x0102DA96
 		public bool IsLookDir { get; set; }
 	}
 }

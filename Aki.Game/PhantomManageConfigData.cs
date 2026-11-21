@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001FD5 RID: 8149
+// Token: 0x020014A8 RID: 5288
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManageConfigData
 {
-	// Token: 0x0600FF54 RID: 65364 RVA: 0x003E2C88 File Offset: 0x003E0E88
+	// Token: 0x0600D3BC RID: 54204 RVA: 0x003EF260 File Offset: 0x003ED460
 	public PhantomManageConfigData(int index)
 	{
 		this.Index = index;
@@ -22,25 +21,25 @@ public class PhantomManageConfigData
 		this.Name = TextConfig.Instance.GetMultiText("PhantomProject_EmptyProject", Array.Empty<string>());
 	}
 
-	// Token: 0x0600FF55 RID: 65365 RVA: 0x003E2D40 File Offset: 0x003E0F40
+	// Token: 0x0600D3BD RID: 54205 RVA: 0x003EF318 File Offset: 0x003ED518
 	public void SetDisplayIndex(int displayIndex)
 	{
 		this.DisplayIndex = displayIndex;
 	}
 
-	// Token: 0x0600FF56 RID: 65366 RVA: 0x003E2D49 File Offset: 0x003E0F49
+	// Token: 0x0600D3BE RID: 54206 RVA: 0x003EF321 File Offset: 0x003ED521
 	public int GetDisplayIndex()
 	{
 		return this.DisplayIndex;
 	}
 
-	// Token: 0x0600FF57 RID: 65367 RVA: 0x003E2D51 File Offset: 0x003E0F51
+	// Token: 0x0600D3BF RID: 54207 RVA: 0x003EF329 File Offset: 0x003ED529
 	public int GetIndex()
 	{
 		return this.Index;
 	}
 
-	// Token: 0x0600FF58 RID: 65368 RVA: 0x003E2D5C File Offset: 0x003E0F5C
+	// Token: 0x0600D3C0 RID: 54208 RVA: 0x003EF334 File Offset: 0x003ED534
 	public string GetIndexString()
 	{
 		int num = this.Index + 1;
@@ -54,37 +53,37 @@ public class PhantomManageConfigData
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600FF59 RID: 65369 RVA: 0x003E2DA3 File Offset: 0x003E0FA3
+	// Token: 0x0600D3C1 RID: 54209 RVA: 0x003EF37B File Offset: 0x003ED57B
 	public bool GetIsOn()
 	{
 		return this.IsOn;
 	}
 
-	// Token: 0x0600FF5A RID: 65370 RVA: 0x003E2DAB File Offset: 0x003E0FAB
+	// Token: 0x0600D3C2 RID: 54210 RVA: 0x003EF383 File Offset: 0x003ED583
 	public void SetIsOn(bool isOn)
 	{
 		this.IsOn = isOn;
 	}
 
-	// Token: 0x0600FF5B RID: 65371 RVA: 0x003E2DB4 File Offset: 0x003E0FB4
+	// Token: 0x0600D3C3 RID: 54211 RVA: 0x003EF38C File Offset: 0x003ED58C
 	public string GetName()
 	{
 		return this.Name;
 	}
 
-	// Token: 0x0600FF5C RID: 65372 RVA: 0x003E2DBC File Offset: 0x003E0FBC
+	// Token: 0x0600D3C4 RID: 54212 RVA: 0x003EF394 File Offset: 0x003ED594
 	public void SetName(string name)
 	{
 		this.Name = name;
 	}
 
-	// Token: 0x0600FF5D RID: 65373 RVA: 0x003E2DC5 File Offset: 0x003E0FC5
+	// Token: 0x0600D3C5 RID: 54213 RVA: 0x003EF39D File Offset: 0x003ED59D
 	public new PhantomSettingType GetType()
 	{
 		return this.Type;
 	}
 
-	// Token: 0x0600FF5E RID: 65374 RVA: 0x003E2DD0 File Offset: 0x003E0FD0
+	// Token: 0x0600D3C6 RID: 54214 RVA: 0x003EF3A8 File Offset: 0x003ED5A8
 	public int[] GetValueListByRuleId(int ruleId)
 	{
 		int[] result;
@@ -95,13 +94,13 @@ public class PhantomManageConfigData
 		return Array.Empty<int>();
 	}
 
-	// Token: 0x0600FF5F RID: 65375 RVA: 0x003E2DF4 File Offset: 0x003E0FF4
+	// Token: 0x0600D3C7 RID: 54215 RVA: 0x003EF3CC File Offset: 0x003ED5CC
 	public Dictionary<int, int[]> GetRuleIdMapValueList()
 	{
 		return new Dictionary<int, int[]>(this.RuleIdMapValueList);
 	}
 
-	// Token: 0x0600FF60 RID: 65376 RVA: 0x003E2E04 File Offset: 0x003E1004
+	// Token: 0x0600D3C8 RID: 54216 RVA: 0x003EF3DC File Offset: 0x003ED5DC
 	public void SetRuleIdMapValueList(Dictionary<int, int[]> map)
 	{
 		this.RuleIdMapValueList.Clear();
@@ -121,13 +120,13 @@ public class PhantomManageConfigData
 		}
 	}
 
-	// Token: 0x0600FF61 RID: 65377 RVA: 0x003E2E95 File Offset: 0x003E1095
+	// Token: 0x0600D3C9 RID: 54217 RVA: 0x003EF46D File Offset: 0x003ED66D
 	public void SetType(PhantomSettingType type)
 	{
 		this.Type = type;
 	}
 
-	// Token: 0x0600FF62 RID: 65378 RVA: 0x003E2EA0 File Offset: 0x003E10A0
+	// Token: 0x0600D3CA RID: 54218 RVA: 0x003EF478 File Offset: 0x003ED678
 	public bool IsEmpty()
 	{
 		if (this.RuleIdMapValueList.Count == 0)
@@ -147,7 +146,7 @@ public class PhantomManageConfigData
 		return true;
 	}
 
-	// Token: 0x0600FF63 RID: 65379 RVA: 0x003E2F0C File Offset: 0x003E110C
+	// Token: 0x0600D3CB RID: 54219 RVA: 0x003EF4E4 File Offset: 0x003ED6E4
 	public bool IsEqual(bool editSwitch, [Nullable(new byte[]
 	{
 		2,
@@ -180,7 +179,7 @@ public class PhantomManageConfigData
 		return true;
 	}
 
-	// Token: 0x0600FF64 RID: 65380 RVA: 0x003E2FB8 File Offset: 0x003E11B8
+	// Token: 0x0600D3CC RID: 54220 RVA: 0x003EF590 File Offset: 0x003ED790
 	public void Parse(OnePhantomSetting setting)
 	{
 		this.Reset(true, true);
@@ -191,16 +190,20 @@ public class PhantomManageConfigData
 		{
 			if (this.RuleIdMapValueList.ContainsKey(oneItemFilterRule.FilterRuleId))
 			{
-				this.RuleIdMapValueList[oneItemFilterRule.FilterRuleId] = oneItemFilterRule.IdList.ToArray<int>();
+				int[] array = new int[oneItemFilterRule.IdList.Count];
+				oneItemFilterRule.IdList.CopyTo(array, 0);
+				this.RuleIdMapValueList[oneItemFilterRule.FilterRuleId] = array;
 			}
 			else
 			{
-				this.RuleIdMapValueList.Add(oneItemFilterRule.FilterRuleId, oneItemFilterRule.IdList.ToArray<int>());
+				int[] array2 = new int[oneItemFilterRule.IdList.Count];
+				oneItemFilterRule.IdList.CopyTo(array2, 0);
+				this.RuleIdMapValueList.Add(oneItemFilterRule.FilterRuleId, array2);
 			}
 		}
 	}
 
-	// Token: 0x0600FF65 RID: 65381 RVA: 0x003E3078 File Offset: 0x003E1278
+	// Token: 0x0600D3CD RID: 54221 RVA: 0x003EF67C File Offset: 0x003ED87C
 	public OnePhantomSetting Integrate()
 	{
 		List<OneItemFilterRule> list = new List<OneItemFilterRule>();
@@ -219,7 +222,7 @@ public class PhantomManageConfigData
 		return onePhantomSetting;
 	}
 
-	// Token: 0x0600FF66 RID: 65382 RVA: 0x003E312C File Offset: 0x003E132C
+	// Token: 0x0600D3CE RID: 54222 RVA: 0x003EF730 File Offset: 0x003ED930
 	public void Reset(bool indexReset = false, bool nameReset = false)
 	{
 		this.Index = (indexReset ? -1 : this.Index);
@@ -233,7 +236,7 @@ public class PhantomManageConfigData
 		}
 	}
 
-	// Token: 0x0600FF67 RID: 65383 RVA: 0x003E31D4 File Offset: 0x003E13D4
+	// Token: 0x0600D3CF RID: 54223 RVA: 0x003EF7D8 File Offset: 0x003ED9D8
 	public PhantomManageConfigData Clone()
 	{
 		return new PhantomManageConfigData(this.Index)
@@ -245,21 +248,21 @@ public class PhantomManageConfigData
 		};
 	}
 
-	// Token: 0x0400762F RID: 30255
+	// Token: 0x04007718 RID: 30488
 	private PhantomSettingType Type;
 
-	// Token: 0x04007630 RID: 30256
+	// Token: 0x04007719 RID: 30489
 	private int Index = -1;
 
-	// Token: 0x04007631 RID: 30257
+	// Token: 0x0400771A RID: 30490
 	private bool IsOn;
 
-	// Token: 0x04007632 RID: 30258
+	// Token: 0x0400771B RID: 30491
 	private string Name;
 
-	// Token: 0x04007633 RID: 30259
+	// Token: 0x0400771C RID: 30492
 	private Dictionary<int, int[]> RuleIdMapValueList = new Dictionary<int, int[]>();
 
-	// Token: 0x04007634 RID: 30260
+	// Token: 0x0400771D RID: 30493
 	private int DisplayIndex = -1;
 }

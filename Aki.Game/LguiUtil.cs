@@ -13,12 +13,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CD9 RID: 11481
+// Token: 0x02002232 RID: 8754
 [NullableContext(1)]
 [Nullable(0)]
 public class LguiUtil : Singleton
 {
-	// Token: 0x0601814C RID: 98636 RVA: 0x0061F48C File Offset: 0x0061D68C
+	// Token: 0x060159C9 RID: 88521 RVA: 0x00645044 File Offset: 0x00643244
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -39,7 +39,7 @@ public class LguiUtil : Singleton
 		return <LoadPrefabByResourceIdAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601814D RID: 98637 RVA: 0x0061F4FC File Offset: 0x0061D6FC
+	// Token: 0x060159CA RID: 88522 RVA: 0x006450B4 File Offset: 0x006432B4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -60,21 +60,20 @@ public class LguiUtil : Singleton
 		return <LoadPrefabByAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601814E RID: 98638 RVA: 0x0061F569 File Offset: 0x0061D769
+	// Token: 0x060159CB RID: 88523 RVA: 0x00645121 File Offset: 0x00643321
 	public UUIItem CopyItem(UUIItem item, [Nullable(2)] USceneComponent parent)
 	{
 		return this.DuplicateActor(item.GetOwner(), parent).GetComponentByClass(UUIItem.StaticClass()) as UUIItem;
 	}
 
-	// Token: 0x0601814F RID: 98639 RVA: 0x0061F58C File Offset: 0x0061D78C
+	// Token: 0x060159CC RID: 88524 RVA: 0x00645144 File Offset: 0x00643344
 	[NullableContext(2)]
 	public AActor DuplicateActor([Nullable(1)] AActor actor, USceneComponent parent)
 	{
-		bool enable = Stat.Enable;
 		return ULGUIBPLibrary.DuplicateActor(actor, parent);
 	}
 
-	// Token: 0x06018150 RID: 98640 RVA: 0x0061F59C File Offset: 0x0061D79C
+	// Token: 0x060159CD RID: 88525 RVA: 0x00645150 File Offset: 0x00643350
 	public void SetLocalText([Nullable(2)] UUIText uiText, string textTableId, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -85,7 +84,7 @@ public class LguiUtil : Singleton
 		this.SetLocalTextNew(uiText, textContentIdById, args);
 	}
 
-	// Token: 0x06018151 RID: 98641 RVA: 0x0061F5C0 File Offset: 0x0061D7C0
+	// Token: 0x060159CE RID: 88526 RVA: 0x00645174 File Offset: 0x00643374
 	[NullableContext(2)]
 	public void SetLocalTextNew(UUIText uiText, string textStringId, [ParamCollection] [Nullable(new byte[]
 	{
@@ -148,7 +147,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x06018152 RID: 98642 RVA: 0x0061F6F0 File Offset: 0x0061D8F0
+	// Token: 0x060159CF RID: 88527 RVA: 0x006452A4 File Offset: 0x006434A4
 	[NullableContext(2)]
 	public void SetLocalTextNew(UUIText uiText, [Nullable(1)] string textStringId, int[] args)
 	{
@@ -166,7 +165,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x06018153 RID: 98643 RVA: 0x0061F72C File Offset: 0x0061D92C
+	// Token: 0x060159D0 RID: 88528 RVA: 0x006452E0 File Offset: 0x006434E0
 	[NullableContext(2)]
 	public void SetLocalTextNew(UUIText uiText, [Nullable(1)] string textStringId, float[] args)
 	{
@@ -184,7 +183,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x06018154 RID: 98644 RVA: 0x0061F768 File Offset: 0x0061D968
+	// Token: 0x060159D1 RID: 88529 RVA: 0x0064531C File Offset: 0x0064351C
 	[NullableContext(2)]
 	public void SetLocalTextNew(UUIText uiText, [Nullable(1)] string textStringId, double[] args)
 	{
@@ -202,7 +201,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x06018155 RID: 98645 RVA: 0x0061F7A4 File Offset: 0x0061D9A4
+	// Token: 0x060159D2 RID: 88530 RVA: 0x00645358 File Offset: 0x00643558
 	[NullableContext(2)]
 	public void SetLocalTextNew(UUIText uiText, [Nullable(1)] string textStringId, long[] args)
 	{
@@ -220,7 +219,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x06018156 RID: 98646 RVA: 0x0061F7E0 File Offset: 0x0061D9E0
+	// Token: 0x060159D3 RID: 88531 RVA: 0x00645394 File Offset: 0x00643594
 	public void SetLocalTextNew([Nullable(2)] UUIText uiText, string textStringId, [Nullable(new byte[]
 	{
 		2,
@@ -241,7 +240,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x06018157 RID: 98647 RVA: 0x0061F81C File Offset: 0x0061DA1C
+	// Token: 0x060159D4 RID: 88532 RVA: 0x006453D0 File Offset: 0x006435D0
 	public void SetLocalTextNew([Nullable(2)] UUIText uiText, string textStringId, [Nullable(new byte[]
 	{
 		2,
@@ -262,7 +261,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x06018158 RID: 98648 RVA: 0x0061F85C File Offset: 0x0061DA5C
+	// Token: 0x060159D5 RID: 88533 RVA: 0x00645410 File Offset: 0x00643610
 	[NullableContext(2)]
 	public void TrySetLocalTextNew(UUIText uiText, string textStringId, [ParamCollection] [Nullable(new byte[]
 	{
@@ -288,7 +287,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x06018159 RID: 98649 RVA: 0x0061F884 File Offset: 0x0061DA84
+	// Token: 0x060159D6 RID: 88534 RVA: 0x00645438 File Offset: 0x00643638
 	[NullableContext(2)]
 	public void ReplaceWildCard(UUIText uiText)
 	{
@@ -319,7 +318,7 @@ public class LguiUtil : Singleton
 		uiText.SetText(text2, true);
 	}
 
-	// Token: 0x0601815A RID: 98650 RVA: 0x0061F94C File Offset: 0x0061DB4C
+	// Token: 0x060159D7 RID: 88535 RVA: 0x00645500 File Offset: 0x00643700
 	public string ConvertToPcKeyIconRichText(string inString)
 	{
 		MatchCollection matchCollection = LguiUtil.pcKeyFormatRegex.Matches(inString);
@@ -336,7 +335,7 @@ public class LguiUtil : Singleton
 		return text;
 	}
 
-	// Token: 0x0601815B RID: 98651 RVA: 0x0061F9D8 File Offset: 0x0061DBD8
+	// Token: 0x060159D8 RID: 88536 RVA: 0x0064558C File Offset: 0x0064378C
 	public string ConvertToGamepadKeyIconRichText(string inString)
 	{
 		MatchCollection matchCollection = LguiUtil.gamepadFormatRegex.Matches(inString);
@@ -353,7 +352,7 @@ public class LguiUtil : Singleton
 		return text;
 	}
 
-	// Token: 0x0601815C RID: 98652 RVA: 0x0061FA64 File Offset: 0x0061DC64
+	// Token: 0x060159D9 RID: 88537 RVA: 0x00645618 File Offset: 0x00643818
 	public string ConvertToActionIconRichText(string inString)
 	{
 		MatchCollection matchCollection = LguiUtil.actionFormatRegex.Matches(inString);
@@ -377,7 +376,7 @@ public class LguiUtil : Singleton
 		return text;
 	}
 
-	// Token: 0x0601815D RID: 98653 RVA: 0x0061FB30 File Offset: 0x0061DD30
+	// Token: 0x060159DA RID: 88538 RVA: 0x006456E4 File Offset: 0x006438E4
 	public string ConvertToDataTableSkillIconRichText(string inString)
 	{
 		MatchCollection matchCollection = LguiUtil.dtSkillFormatRegex.Matches(inString);
@@ -399,7 +398,7 @@ public class LguiUtil : Singleton
 		return text;
 	}
 
-	// Token: 0x0601815E RID: 98654 RVA: 0x0061FBD0 File Offset: 0x0061DDD0
+	// Token: 0x060159DB RID: 88539 RVA: 0x00645784 File Offset: 0x00643984
 	public string ConvertToSkillIconRichText(string inString)
 	{
 		MatchCollection matchCollection = LguiUtil.skillFormatRegex.Matches(inString);
@@ -426,7 +425,7 @@ public class LguiUtil : Singleton
 		return text;
 	}
 
-	// Token: 0x0601815F RID: 98655 RVA: 0x0061FC90 File Offset: 0x0061DE90
+	// Token: 0x060159DC RID: 88540 RVA: 0x00645844 File Offset: 0x00643A44
 	public string ConvertToToExploreIconRichText(string inString)
 	{
 		MatchCollection matchCollection = LguiUtil.exploreFormatRegex.Matches(inString);
@@ -453,7 +452,7 @@ public class LguiUtil : Singleton
 		return text;
 	}
 
-	// Token: 0x06018160 RID: 98656 RVA: 0x0061FD50 File Offset: 0x0061DF50
+	// Token: 0x060159DD RID: 88541 RVA: 0x00645904 File Offset: 0x00643B04
 	public string ConvertToToPhantomIconRichText(string inString)
 	{
 		MatchCollection matchCollection = LguiUtil.phantomFormatRegex.Matches(inString);
@@ -480,7 +479,7 @@ public class LguiUtil : Singleton
 		return text;
 	}
 
-	// Token: 0x06018161 RID: 98657 RVA: 0x0061FE10 File Offset: 0x0061E010
+	// Token: 0x060159DE RID: 88542 RVA: 0x006459C4 File Offset: 0x00643BC4
 	public string ConvertToToPlatformIconRichText(string inString)
 	{
 		MatchCollection matchCollection = LguiUtil.iconFormatRegex.Matches(inString);
@@ -497,7 +496,7 @@ public class LguiUtil : Singleton
 		return text;
 	}
 
-	// Token: 0x06018162 RID: 98658 RVA: 0x0061FE9C File Offset: 0x0061E09C
+	// Token: 0x060159DF RID: 88543 RVA: 0x00645A50 File Offset: 0x00643C50
 	[return: Nullable(2)]
 	private string ReplacePcKey(string inString, string replaceString, int pcKeyId)
 	{
@@ -527,7 +526,7 @@ public class LguiUtil : Singleton
 		return inString.Replace(replaceString, newValue);
 	}
 
-	// Token: 0x06018163 RID: 98659 RVA: 0x0061FF58 File Offset: 0x0061E158
+	// Token: 0x060159E0 RID: 88544 RVA: 0x00645B0C File Offset: 0x00643D0C
 	[return: Nullable(2)]
 	private string ReplaceGamepadKey(string inString, string replaceString, int gamepadKeyId)
 	{
@@ -557,7 +556,7 @@ public class LguiUtil : Singleton
 		return inString.Replace(replaceString, newValue);
 	}
 
-	// Token: 0x06018164 RID: 98660 RVA: 0x00620010 File Offset: 0x0061E210
+	// Token: 0x060159E1 RID: 88545 RVA: 0x00645BC4 File Offset: 0x00643DC4
 	[return: Nullable(2)]
 	private string ReplaceSkillIcon(string inString, string replaceString, int skillId)
 	{
@@ -587,7 +586,7 @@ public class LguiUtil : Singleton
 		return inString.Replace(replaceString, newValue);
 	}
 
-	// Token: 0x06018165 RID: 98661 RVA: 0x006200C8 File Offset: 0x0061E2C8
+	// Token: 0x060159E2 RID: 88546 RVA: 0x00645C7C File Offset: 0x00643E7C
 	[return: Nullable(2)]
 	private string ReplaceActionKey(string inString, string replaceString, int actionId)
 	{
@@ -617,7 +616,7 @@ public class LguiUtil : Singleton
 		return inString.Replace(replaceString, newValue);
 	}
 
-	// Token: 0x06018166 RID: 98662 RVA: 0x00620174 File Offset: 0x0061E374
+	// Token: 0x060159E3 RID: 88547 RVA: 0x00645D28 File Offset: 0x00643F28
 	[return: Nullable(2)]
 	private string ReplaceExploreIcon(string inString, string replaceString, int phantomSkillId)
 	{
@@ -647,7 +646,7 @@ public class LguiUtil : Singleton
 		return inString.Replace(replaceString, newValue);
 	}
 
-	// Token: 0x06018167 RID: 98663 RVA: 0x0062022C File Offset: 0x0061E42C
+	// Token: 0x060159E4 RID: 88548 RVA: 0x00645DE0 File Offset: 0x00643FE0
 	[return: Nullable(2)]
 	private string ReplacePhantomIcon(string inString, string replaceString, int phantomId)
 	{
@@ -688,7 +687,7 @@ public class LguiUtil : Singleton
 		return inString.Replace(replaceString, newValue);
 	}
 
-	// Token: 0x06018168 RID: 98664 RVA: 0x00620320 File Offset: 0x0061E520
+	// Token: 0x060159E5 RID: 88549 RVA: 0x00645ED4 File Offset: 0x006440D4
 	[return: Nullable(2)]
 	private string ReplacePlatformIcon(string inString, string replaceString, int iconId)
 	{
@@ -722,7 +721,7 @@ public class LguiUtil : Singleton
 		return inString.Replace(replaceString, newValue);
 	}
 
-	// Token: 0x06018169 RID: 98665 RVA: 0x006203F4 File Offset: 0x0061E5F4
+	// Token: 0x060159E6 RID: 88550 RVA: 0x00645FA8 File Offset: 0x006441A8
 	private int? ParseWildCardToId(string inString, Regex regexp)
 	{
 		Match match = regexp.Match(inString);
@@ -733,7 +732,7 @@ public class LguiUtil : Singleton
 		return new int?(int.Parse(match.Value.Split('=', StringSplitOptions.None)[1]));
 	}
 
-	// Token: 0x0601816A RID: 98666 RVA: 0x00620438 File Offset: 0x0061E638
+	// Token: 0x060159E7 RID: 88551 RVA: 0x00645FEC File Offset: 0x006441EC
 	public string GetActorFullPath([Nullable(2)] AActor actor)
 	{
 		string empty = string.Empty;
@@ -741,18 +740,18 @@ public class LguiUtil : Singleton
 		return empty;
 	}
 
-	// Token: 0x0601816B RID: 98667 RVA: 0x0062045A File Offset: 0x0061E65A
+	// Token: 0x060159E8 RID: 88552 RVA: 0x0064600E File Offset: 0x0064420E
 	public string ScreenShot(string path, bool bAddFilenameSuffix)
 	{
 		return UBlueprintPathsLibrary.ProjectUserDir() + path;
 	}
 
-	// Token: 0x0601816C RID: 98668 RVA: 0x00620467 File Offset: 0x0061E667
+	// Token: 0x060159E9 RID: 88553 RVA: 0x0064601B File Offset: 0x0064421B
 	public void ResetShot()
 	{
 	}
 
-	// Token: 0x0601816D RID: 98669 RVA: 0x0062046C File Offset: 0x0061E66C
+	// Token: 0x060159EA RID: 88554 RVA: 0x00646020 File Offset: 0x00644220
 	public void ClearAttachChildren(UUIItem item)
 	{
 		for (int i = item.AttachChildren.Num() - 1; i >= 0; i--)
@@ -761,7 +760,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x0601816E RID: 98670 RVA: 0x006204A8 File Offset: 0x0061E6A8
+	// Token: 0x060159EB RID: 88555 RVA: 0x0064605C File Offset: 0x0064425C
 	public void LoadAndSetText(UUIText text, string content, string[] prefabs, Action<AActor[]> callback, string memoryTag = "js_undefined")
 	{
 		this.ClearAttachChildren(text);
@@ -814,7 +813,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x0601816F RID: 98671 RVA: 0x00620580 File Offset: 0x0061E780
+	// Token: 0x060159EC RID: 88556 RVA: 0x00646134 File Offset: 0x00644334
 	[NullableContext(2)]
 	public void SetActorIsPermanent(AActor actor, bool isPermanent, bool hasChild)
 	{
@@ -831,7 +830,7 @@ public class LguiUtil : Singleton
 		UKuroStaticLibrary.SetActorPermanent(actor, isPermanent, hasChild);
 	}
 
-	// Token: 0x06018170 RID: 98672 RVA: 0x006205E0 File Offset: 0x0061E7E0
+	// Token: 0x060159ED RID: 88557 RVA: 0x00646194 File Offset: 0x00644394
 	[return: Nullable(2)]
 	public AUIBaseActor GetChildActorByHierarchyIndex(AUIBaseActor actor, int findHierarchyIndex = 0)
 	{
@@ -844,14 +843,14 @@ public class LguiUtil : Singleton
 		return ((attachUIChild != null) ? attachUIChild.GetOwner() : null) as AUIBaseActor;
 	}
 
-	// Token: 0x06018171 RID: 98673 RVA: 0x00620611 File Offset: 0x0061E811
+	// Token: 0x060159EE RID: 88558 RVA: 0x006461C5 File Offset: 0x006443C5
 	[NullableContext(2)]
 	public ULGUIComponentsRegistry GetComponentsRegistry(AActor findActor)
 	{
 		return ((findActor != null) ? findActor.GetComponentByClass(ULGUIComponentsRegistry.StaticClass()) : null) as ULGUIComponentsRegistry;
 	}
 
-	// Token: 0x06018172 RID: 98674 RVA: 0x00620630 File Offset: 0x0061E830
+	// Token: 0x060159EF RID: 88559 RVA: 0x006461E4 File Offset: 0x006443E4
 	[NullableContext(2)]
 	[return: Nullable(1)]
 	public string GetRootActorMemoryTag(UUIItem uiItem, string memoryTag = null)
@@ -887,7 +886,7 @@ public class LguiUtil : Singleton
 		return text.ToString();
 	}
 
-	// Token: 0x06018173 RID: 98675 RVA: 0x006206C0 File Offset: 0x0061E8C0
+	// Token: 0x060159F0 RID: 88560 RVA: 0x00646274 File Offset: 0x00644474
 	public static void SetRootActorMemoryTag([Nullable(2)] AActor actor, string memoryTag)
 	{
 		if (actor == null)
@@ -905,7 +904,7 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x06018174 RID: 98676 RVA: 0x00620700 File Offset: 0x0061E900
+	// Token: 0x060159F1 RID: 88561 RVA: 0x006462B4 File Offset: 0x006444B4
 	public void ConvertPointerPositionToLguiCenterPosition(FVector vector, Vector2D outVector)
 	{
 		ULGUICanvasScaler canvasScaler = UiLayer.Instance.UiRootItem.GetCanvasScaler();
@@ -926,7 +925,7 @@ public class LguiUtil : Singleton
 		outVector.Y -= (double)(height / 2f);
 	}
 
-	// Token: 0x06018175 RID: 98677 RVA: 0x006207D8 File Offset: 0x0061E9D8
+	// Token: 0x060159F2 RID: 88562 RVA: 0x0064638C File Offset: 0x0064458C
 	public void ConvertPointerPositionToLguiCenterPosition(FVector2D vector, Vector2D outVector)
 	{
 		ULGUICanvasScaler canvasScaler = UiLayer.Instance.UiRootItem.GetCanvasScaler();
@@ -947,7 +946,28 @@ public class LguiUtil : Singleton
 		outVector.Y -= (double)(height / 2f);
 	}
 
-	// Token: 0x06018176 RID: 98678 RVA: 0x006208B0 File Offset: 0x0061EAB0
+	// Token: 0x060159F3 RID: 88563 RVA: 0x00646464 File Offset: 0x00644664
+	public FVector2D ConvertPointerPositionToLguiCenterPosition(FVector vector)
+	{
+		UUIItem uiRootItem = UiLayer.Instance.UiRootItem;
+		ULGUICanvasScaler canvasScaler = uiRootItem.GetCanvasScaler();
+		if (canvasScaler == null)
+		{
+			return new FVector2D(float.NaN, float.NaN);
+		}
+		float width = uiRootItem.GetWidth();
+		float height = uiRootItem.GetHeight();
+		ULGUICanvasScaler ulguicanvasScaler = canvasScaler;
+		FVector2D fvector2D = new FVector2D(vector.X, vector.Y);
+		FVector2D fvector2D2 = ulguicanvasScaler.ConvertPositionFromViewportToLGUICanvas(fvector2D);
+		fvector2D2.X = MathCommon.Clamp(fvector2D2.X, 0f, width);
+		fvector2D2.Y = MathCommon.Clamp(fvector2D2.Y, 0f, height);
+		fvector2D2.X -= width / 2f;
+		fvector2D2.Y -= height / 2f;
+		return fvector2D2;
+	}
+
+	// Token: 0x060159F4 RID: 88564 RVA: 0x0064651C File Offset: 0x0064471C
 	public void ConvertPointerPositionToLguiPosition(FVector vector, Vector2D outVector)
 	{
 		ULGUICanvasScaler canvasScaler = UiLayer.Instance.UiRootItem.GetCanvasScaler();
@@ -966,7 +986,7 @@ public class LguiUtil : Singleton
 		outVector.Y = MathCommon.Clamp(outVector.Y, 0.0, (double)height);
 	}
 
-	// Token: 0x06018177 RID: 98679 RVA: 0x0062095C File Offset: 0x0061EB5C
+	// Token: 0x060159F5 RID: 88565 RVA: 0x006465C8 File Offset: 0x006447C8
 	public void ConvertPointerPositionToLguiPosition(FVector2D vector, Vector2D outVector)
 	{
 		ULGUICanvasScaler canvasScaler = UiLayer.Instance.UiRootItem.GetCanvasScaler();
@@ -985,13 +1005,13 @@ public class LguiUtil : Singleton
 		outVector.Y = MathCommon.Clamp(outVector.Y, 0.0, (double)height);
 	}
 
-	// Token: 0x06018178 RID: 98680 RVA: 0x00620A07 File Offset: 0x0061EC07
+	// Token: 0x060159F6 RID: 88566 RVA: 0x00646673 File Offset: 0x00644873
 	public void ConvertSceneActorPositionToLguiPosition(AActor actor, global::Vector outVector)
 	{
 		this.ConvertWorldPositionToLguiPosition(actor.D_K2_GetActorLocation(), outVector);
 	}
 
-	// Token: 0x06018179 RID: 98681 RVA: 0x00620A18 File Offset: 0x0061EC18
+	// Token: 0x060159F7 RID: 88567 RVA: 0x00646684 File Offset: 0x00644884
 	public void ConvertWorldPositionToLguiPosition(FVectorDouble worldPosition, global::Vector outVector)
 	{
 		ULGUICanvasScaler canvasScaler = UiLayer.Instance.UiRootItem.GetCanvasScaler();
@@ -1010,7 +1030,7 @@ public class LguiUtil : Singleton
 		outVector.Set((double)(fvector2D2.X - width / 2f), 0.0, (double)(fvector2D2.Y - height / 2f));
 	}
 
-	// Token: 0x0601817A RID: 98682 RVA: 0x00620AAB File Offset: 0x0061ECAB
+	// Token: 0x060159F8 RID: 88568 RVA: 0x00646717 File Offset: 0x00644917
 	public global::Vector GetAdaptiveTipsPosition(UUIItem clickItem, UUIItem tipsItem, float realWidth = 0f)
 	{
 		return this.GetAdaptiveTipsPositionByParam(clickItem, tipsItem, new AdaptiveTipsPositionParam
@@ -1019,7 +1039,7 @@ public class LguiUtil : Singleton
 		});
 	}
 
-	// Token: 0x0601817B RID: 98683 RVA: 0x00620AC4 File Offset: 0x0061ECC4
+	// Token: 0x060159F9 RID: 88569 RVA: 0x00646730 File Offset: 0x00644930
 	public global::Vector GetAdaptiveTipsPositionByParam(UUIItem clickItem, UUIItem tipsItem, [Nullable(2)] AdaptiveTipsPositionParam param = null)
 	{
 		float num = (param != null) ? param.RealWidth : 0f;
@@ -1063,7 +1083,7 @@ public class LguiUtil : Singleton
 		return global::Vector.Create((double)num14, (double)uiworldPosition2.Y, (double)num15);
 	}
 
-	// Token: 0x0601817C RID: 98684 RVA: 0x00620C54 File Offset: 0x0061EE54
+	// Token: 0x060159FA RID: 88570 RVA: 0x006468C0 File Offset: 0x00644AC0
 	public static float AdaptFieldOfViewByViewport(float fov, float aspectRatio)
 	{
 		Vector2D viewportSize = UiLayer.Instance.GetViewportSize();
@@ -1072,7 +1092,7 @@ public class LguiUtil : Singleton
 		return MathCommon.RadianToDegree((float)(Math.Atan((double)aspectRatio / num2 * Math.Tan((double)(num / 2f))) * 2.0));
 	}
 
-	// Token: 0x0601817D RID: 98685 RVA: 0x00620CA8 File Offset: 0x0061EEA8
+	// Token: 0x060159FB RID: 88571 RVA: 0x00646914 File Offset: 0x00644B14
 	public LTweenEase CoverEaseTypeToTweenEase(EEaseType easeType)
 	{
 		LTweenEase result;
@@ -1100,8 +1120,8 @@ public class LguiUtil : Singleton
 		return result;
 	}
 
-	// Token: 0x17002077 RID: 8311
-	// (get) Token: 0x0601817E RID: 98686 RVA: 0x00620CE9 File Offset: 0x0061EEE9
+	// Token: 0x170020CA RID: 8394
+	// (get) Token: 0x060159FC RID: 88572 RVA: 0x00646955 File Offset: 0x00644B55
 	public static LguiUtil Instance
 	{
 		get
@@ -1115,12 +1135,12 @@ public class LguiUtil : Singleton
 		}
 	}
 
-	// Token: 0x0601817F RID: 98687 RVA: 0x00620D0C File Offset: 0x0061EF0C
+	// Token: 0x060159FD RID: 88573 RVA: 0x00646978 File Offset: 0x00644B78
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06018180 RID: 98688 RVA: 0x00620D0E File Offset: 0x0061EF0E
+	// Token: 0x060159FE RID: 88574 RVA: 0x0064697A File Offset: 0x00644B7A
 	public static void ResetStaticDefaultValue()
 	{
 		LguiUtil instance = LguiUtil._instance;
@@ -1131,121 +1151,121 @@ public class LguiUtil : Singleton
 		LguiUtil._instance = null;
 	}
 
-	// Token: 0x06018181 RID: 98689 RVA: 0x00620D28 File Offset: 0x0061EF28
+	// Token: 0x060159FF RID: 88575 RVA: 0x00646994 File Offset: 0x00644B94
 	static LguiUtil()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LguiUtil.CreateStaticDefaultValue), new Action(LguiUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B322 RID: 45858
+	// Token: 0x0400B68E RID: 46734
 	private const string PC_KEY_ID = "PcKeyId=";
 
-	// Token: 0x0400B323 RID: 45859
+	// Token: 0x0400B68F RID: 46735
 	private const string GAMEPAD_KEY_ID = "GamepadKeyId=";
 
-	// Token: 0x0400B324 RID: 45860
+	// Token: 0x0400B690 RID: 46736
 	private const string ACTION_ID_KEY = "ActionId=";
 
-	// Token: 0x0400B325 RID: 45861
+	// Token: 0x0400B691 RID: 46737
 	private const string SKILL_ID_KEY = "SkillId=";
 
-	// Token: 0x0400B326 RID: 45862
+	// Token: 0x0400B692 RID: 46738
 	private const string ROLE_ID_KEY = "RoleId=";
 
-	// Token: 0x0400B327 RID: 45863
+	// Token: 0x0400B693 RID: 46739
 	private const string EXPLORE_ID_KEY = "ExploreId=";
 
-	// Token: 0x0400B328 RID: 45864
+	// Token: 0x0400B694 RID: 46740
 	private const string PHANTOM_ID_KEY = "PhantomId=";
 
-	// Token: 0x0400B329 RID: 45865
+	// Token: 0x0400B695 RID: 46741
 	private const string ICON_ID_KEY = "IconId=";
 
-	// Token: 0x0400B32A RID: 45866
+	// Token: 0x0400B696 RID: 46742
 	private const string PC_KEY_ID_MATCH = "PcKeyId=[0-9]+";
 
-	// Token: 0x0400B32B RID: 45867
+	// Token: 0x0400B697 RID: 46743
 	private const string GAMEPAD_KEY_ID_MATCH = "GamepadKeyId=[0-9]+";
 
-	// Token: 0x0400B32C RID: 45868
+	// Token: 0x0400B698 RID: 46744
 	private const string ACTION_ID_MATCH = "ActionId=[0-9]+";
 
-	// Token: 0x0400B32D RID: 45869
+	// Token: 0x0400B699 RID: 46745
 	private const string SKILL_ID_MATCH = "SkillId=[0-9]+";
 
-	// Token: 0x0400B32E RID: 45870
+	// Token: 0x0400B69A RID: 46746
 	private const string ROLE_ID_MATCH = "RoleId=[0-9]+";
 
-	// Token: 0x0400B32F RID: 45871
+	// Token: 0x0400B69B RID: 46747
 	private const string EXPLORE_ID_MATCH = "ExploreId=[0-9]+";
 
-	// Token: 0x0400B330 RID: 45872
+	// Token: 0x0400B69C RID: 46748
 	private const string PHANTOM_ID_MATCH = "PhantomId=[0-9]+";
 
-	// Token: 0x0400B331 RID: 45873
+	// Token: 0x0400B69D RID: 46749
 	private const string ICON_ID_MATCH = "IconId=[0-9]+";
 
-	// Token: 0x0400B332 RID: 45874
+	// Token: 0x0400B69E RID: 46750
 	[StaticVariableRuleIgnore]
 	private static Regex pcKeyFormatRegex = new Regex("{<PcKeyId=[0-9]+>}");
 
-	// Token: 0x0400B333 RID: 45875
+	// Token: 0x0400B69F RID: 46751
 	[StaticVariableRuleIgnore]
 	private static Regex gamepadFormatRegex = new Regex("{<GamepadKeyId=[0-9]+>}");
 
-	// Token: 0x0400B334 RID: 45876
+	// Token: 0x0400B6A0 RID: 46752
 	[StaticVariableRuleIgnore]
 	private static Regex actionFormatRegex = new Regex("{<ActionId=[0-9]+>}");
 
-	// Token: 0x0400B335 RID: 45877
+	// Token: 0x0400B6A1 RID: 46753
 	[StaticVariableRuleIgnore]
 	private static Regex skillFormatRegex = new Regex("{<ActionId=[0-9]+><SkillId=[0-9]+>}");
 
-	// Token: 0x0400B336 RID: 45878
+	// Token: 0x0400B6A2 RID: 46754
 	[StaticVariableRuleIgnore]
 	private static Regex dtSkillFormatRegex = new Regex("{<ActionId=[0-9]+><RoleId=[0-9]+><SkillId=[0-9]+>}");
 
-	// Token: 0x0400B337 RID: 45879
+	// Token: 0x0400B6A3 RID: 46755
 	[StaticVariableRuleIgnore]
 	private static Regex exploreFormatRegex = new Regex("{<ActionId=[0-9]+><ExploreId=[0-9]+>}");
 
-	// Token: 0x0400B338 RID: 45880
+	// Token: 0x0400B6A4 RID: 46756
 	[StaticVariableRuleIgnore]
 	private static Regex phantomFormatRegex = new Regex("{<ActionId=[0-9]+><PhantomId=[0-9]+>}");
 
-	// Token: 0x0400B339 RID: 45881
+	// Token: 0x0400B6A5 RID: 46757
 	[StaticVariableRuleIgnore]
 	private static Regex iconFormatRegex = new Regex("{<IconId=[0-9]+>}");
 
-	// Token: 0x0400B33A RID: 45882
+	// Token: 0x0400B6A6 RID: 46758
 	[StaticVariableRuleIgnore]
 	private static Regex pcKeyIdFormatRegex = new Regex("PcKeyId=[0-9]+");
 
-	// Token: 0x0400B33B RID: 45883
+	// Token: 0x0400B6A7 RID: 46759
 	[StaticVariableRuleIgnore]
 	private static Regex gamepadIdFormatRegex = new Regex("GamepadKeyId=[0-9]+");
 
-	// Token: 0x0400B33C RID: 45884
+	// Token: 0x0400B6A8 RID: 46760
 	[StaticVariableRuleIgnore]
 	private static Regex actionIdFormatRegex = new Regex("ActionId=[0-9]+");
 
-	// Token: 0x0400B33D RID: 45885
+	// Token: 0x0400B6A9 RID: 46761
 	[StaticVariableRuleIgnore]
 	private static Regex skillIdFormatRegex = new Regex("SkillId=[0-9]+");
 
-	// Token: 0x0400B33E RID: 45886
+	// Token: 0x0400B6AA RID: 46762
 	[StaticVariableRuleIgnore]
 	private static Regex exploreIdFormatRegex = new Regex("ExploreId=[0-9]+");
 
-	// Token: 0x0400B33F RID: 45887
+	// Token: 0x0400B6AB RID: 46763
 	[StaticVariableRuleIgnore]
 	private static Regex phantomIdFormatRegex = new Regex("PhantomId=[0-9]+");
 
-	// Token: 0x0400B340 RID: 45888
+	// Token: 0x0400B6AC RID: 46764
 	[StaticVariableRuleIgnore]
 	private static Regex iconIdFormatRegex = new Regex("IconId=[0-9]+");
 
-	// Token: 0x0400B341 RID: 45889
+	// Token: 0x0400B6AD RID: 46765
 	[Nullable(2)]
 	private static LguiUtil _instance;
 }

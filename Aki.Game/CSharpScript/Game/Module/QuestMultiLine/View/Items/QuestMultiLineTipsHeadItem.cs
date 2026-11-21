@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FCA RID: 20426
+	// Token: 0x02003F93 RID: 16275
 	public class QuestMultiLineTipsHeadItem : UiPanelBase
 	{
-		// Token: 0x0603443C RID: 214076 RVA: 0x00C46150 File Offset: 0x00C44350
+		// Token: 0x060292AA RID: 168618 RVA: 0x00B8F908 File Offset: 0x00B8DB08
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603443D RID: 214077 RVA: 0x00C461E4 File Offset: 0x00C443E4
+		// Token: 0x060292AB RID: 168619 RVA: 0x00B8F99C File Offset: 0x00B8DB9C
 		[NullableContext(1)]
 		public void RefreshHead(QuestMultiLineComponentData componentData)
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			base.SetTextureByPath(QuestMultiLineUtils.GetComponentIconTexture(this.ComponentData), base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0401BCD3 RID: 113875
+		// Token: 0x040166A8 RID: 91816
 		[Nullable(2)]
 		private QuestMultiLineComponentData ComponentData;
 	}

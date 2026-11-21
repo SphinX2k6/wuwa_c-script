@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001206 RID: 4614
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001342 RID: 4930
 	public class IWalkingPatternCondition : IQuestCondition
 	{
-		// Token: 0x060068B8 RID: 26808 RVA: 0x000F9E4C File Offset: 0x000F804C
+		// Token: 0x06006EF9 RID: 28409 RVA: 0x00107758 File Offset: 0x00105958
 		private IWalkingPatternCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060068B9 RID: 26809 RVA: 0x000F9E84 File Offset: 0x000F8084
+		// Token: 0x06006EFA RID: 28410 RVA: 0x00107790 File Offset: 0x00105990
 		public static IWalkingPatternCondition Create([Nullable(2)] IWalkingPatternCondition instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068BA RID: 26810 RVA: 0x000F9E97 File Offset: 0x000F8097
+		// Token: 0x06006EFB RID: 28411 RVA: 0x001077A3 File Offset: 0x001059A3
 		public static IWalkingPatternCondition CreateFromSetValue([Nullable(2)] IWalkingPatternCondition_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068BB RID: 26811 RVA: 0x000F9EAC File Offset: 0x000F80AC
+		// Token: 0x06006EFC RID: 28412 RVA: 0x001077B8 File Offset: 0x001059B8
 		public new IWalkingPatternCondition_SetValue ToSetValue()
 		{
 			return new IWalkingPatternCondition_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021D8 RID: 8664
-		// (get) Token: 0x060068BC RID: 26812 RVA: 0x000F9EFA File Offset: 0x000F80FA
-		// (set) Token: 0x060068BD RID: 26813 RVA: 0x000F9F25 File Offset: 0x000F8125
+		// Token: 0x17002399 RID: 9113
+		// (get) Token: 0x06006EFD RID: 28413 RVA: 0x00107806 File Offset: 0x00105A06
+		// (set) Token: 0x06006EFE RID: 28414 RVA: 0x00107831 File Offset: 0x00105A31
 		public override EChildQuest Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021D9 RID: 8665
-		// (get) Token: 0x060068BE RID: 26814 RVA: 0x000F9F34 File Offset: 0x000F8134
-		// (set) Token: 0x060068BF RID: 26815 RVA: 0x000F9F95 File Offset: 0x000F8195
+		// Token: 0x1700239A RID: 9114
+		// (get) Token: 0x06006EFF RID: 28415 RVA: 0x00107840 File Offset: 0x00105A40
+		// (set) Token: 0x06006F00 RID: 28416 RVA: 0x001078A1 File Offset: 0x00105AA1
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -121,9 +119,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021DA RID: 8666
-		// (get) Token: 0x060068C0 RID: 26816 RVA: 0x000F9FAA File Offset: 0x000F81AA
-		// (set) Token: 0x060068C1 RID: 26817 RVA: 0x000F9FD5 File Offset: 0x000F81D5
+		// Token: 0x1700239B RID: 9115
+		// (get) Token: 0x06006F01 RID: 28417 RVA: 0x001078B6 File Offset: 0x00105AB6
+		// (set) Token: 0x06006F02 RID: 28418 RVA: 0x001078E1 File Offset: 0x00105AE1
 		public virtual int SplineEntityId
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021DB RID: 8667
-		// (get) Token: 0x060068C2 RID: 26818 RVA: 0x000F9FE3 File Offset: 0x000F81E3
-		// (set) Token: 0x060068C3 RID: 26819 RVA: 0x000FA00E File Offset: 0x000F820E
+		// Token: 0x1700239C RID: 9116
+		// (get) Token: 0x06006F03 RID: 28419 RVA: 0x001078EF File Offset: 0x00105AEF
+		// (set) Token: 0x06006F04 RID: 28420 RVA: 0x0010791A File Offset: 0x00105B1A
 		public virtual int EndEntityId
 		{
 			get
@@ -167,9 +165,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021DC RID: 8668
-		// (get) Token: 0x060068C4 RID: 26820 RVA: 0x000FA01C File Offset: 0x000F821C
-		// (set) Token: 0x060068C5 RID: 26821 RVA: 0x000FA043 File Offset: 0x000F8243
+		// Token: 0x1700239D RID: 9117
+		// (get) Token: 0x06006F05 RID: 28421 RVA: 0x00107928 File Offset: 0x00105B28
+		// (set) Token: 0x06006F06 RID: 28422 RVA: 0x0010794F File Offset: 0x00105B4F
 		public virtual VarRef ScoreVar
 		{
 			get
@@ -191,18 +189,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003EAB RID: 16043
+		// Token: 0x04004219 RID: 16921
 		[Nullable(2)]
 		protected new IWalkingPatternCondition FbInstance;
 
-		// Token: 0x04003EAC RID: 16044
+		// Token: 0x0400421A RID: 16922
 		[Nullable(2)]
 		protected new IWalkingPatternCondition_SetValue PocoInterface;
 
-		// Token: 0x04003EAD RID: 16045
+		// Token: 0x0400421B RID: 16923
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003EAE RID: 16046
+		// Token: 0x0400421C RID: 16924
 		private bool _PreConditionsInited;
 	}
 }

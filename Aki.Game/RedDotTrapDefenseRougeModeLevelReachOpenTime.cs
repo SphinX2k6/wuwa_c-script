@@ -2,28 +2,28 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.TrapDefense;
 
-// Token: 0x02003446 RID: 13382
+// Token: 0x020029BA RID: 10682
 public class RedDotTrapDefenseRougeModeLevelReachOpenTime : RedDotBase
 {
-	// Token: 0x0601CE2A RID: 118314 RVA: 0x0080DD56 File Offset: 0x0080BF56
+	// Token: 0x0601AB2A RID: 109354 RVA: 0x0083443E File Offset: 0x0083263E
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.TrapDefenseRougeLevel);
 	}
 
-	// Token: 0x0601CE2B RID: 118315 RVA: 0x0080DD62 File Offset: 0x0080BF62
+	// Token: 0x0601AB2B RID: 109355 RVA: 0x0083444A File Offset: 0x0083264A
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RedDotUpdateTrapDefenseRougeModeLevelReachOpenTime, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CE2C RID: 118316 RVA: 0x0080DD80 File Offset: 0x0080BF80
+	// Token: 0x0601AB2C RID: 109356 RVA: 0x00834468 File Offset: 0x00832668
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RedDotUpdateTrapDefenseRougeModeLevelReachOpenTime, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CE2D RID: 118317 RVA: 0x0080DD9E File Offset: 0x0080BF9E
+	// Token: 0x0601AB2D RID: 109357 RVA: 0x00834486 File Offset: 0x00832686
 	protected override bool OnCheck(int uId = 0)
 	{
 		return TrapDefenseModel.Instance.RougeModeData.RedDotLevelReachOpenTime();

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 
-// Token: 0x02002F54 RID: 12116
+// Token: 0x020024A7 RID: 9383
 [NullableContext(1)]
 [Nullable(0)]
 public class SyncTimescaleGroup
 {
-	// Token: 0x06019C95 RID: 105621 RVA: 0x006B96AC File Offset: 0x006B78AC
+	// Token: 0x060175A0 RID: 95648 RVA: 0x006DF9C8 File Offset: 0x006DDBC8
 	public SyncTimescaleGroup(EntityHandle instigatorHandle, long buffId)
 	{
 		this.InstigatorHandle = instigatorHandle;
@@ -19,7 +19,7 @@ public class SyncTimescaleGroup
 		EventSystem.Instance.AddWithTarget(this.InstigatorHandle.Entity, EEventName.CharBeHitTimeScale, new Action<float, ETimeScaleSourceType>(this.OnInstigatorTimeScaleChanged));
 	}
 
-	// Token: 0x06019C96 RID: 105622 RVA: 0x006B9719 File Offset: 0x006B7919
+	// Token: 0x060175A1 RID: 95649 RVA: 0x006DFA35 File Offset: 0x006DDC35
 	public void Release()
 	{
 		if (this.InstigatorHandle.Valid)
@@ -28,13 +28,13 @@ public class SyncTimescaleGroup
 		}
 	}
 
-	// Token: 0x06019C97 RID: 105623 RVA: 0x006B974C File Offset: 0x006B794C
+	// Token: 0x060175A2 RID: 95650 RVA: 0x006DFA68 File Offset: 0x006DDC68
 	public bool HasOwner(int ownerId)
 	{
 		return this.OwnerIds.ContainsKey(ownerId);
 	}
 
-	// Token: 0x06019C98 RID: 105624 RVA: 0x006B975C File Offset: 0x006B795C
+	// Token: 0x060175A3 RID: 95651 RVA: 0x006DFA78 File Offset: 0x006DDC78
 	[NullableContext(2)]
 	public unsafe void AddOwner(Entity ownerEntity = null)
 	{
@@ -70,13 +70,13 @@ public class SyncTimescaleGroup
 		}
 	}
 
-	// Token: 0x06019C99 RID: 105625 RVA: 0x006B9863 File Offset: 0x006B7A63
+	// Token: 0x060175A4 RID: 95652 RVA: 0x006DFB7F File Offset: 0x006DDD7F
 	public string GetOwnerInfo()
 	{
 		return string.Join<int>(",", this.OwnerIds.Keys);
 	}
 
-	// Token: 0x06019C9A RID: 105626 RVA: 0x006B987C File Offset: 0x006B7A7C
+	// Token: 0x060175A5 RID: 95653 RVA: 0x006DFB98 File Offset: 0x006DDD98
 	public void RemoveOwner(int entityId)
 	{
 		CharacterTimeScaleComponent characterTimeScaleComponent;
@@ -87,7 +87,7 @@ public class SyncTimescaleGroup
 		this.OwnerIds.Remove(entityId);
 	}
 
-	// Token: 0x06019C9B RID: 105627 RVA: 0x006B98BC File Offset: 0x006B7ABC
+	// Token: 0x060175A6 RID: 95654 RVA: 0x006DFBD8 File Offset: 0x006DDDD8
 	public void OnInstigatorTimeScaleChanged(float timeScale, ETimeScaleSourceType sourceType)
 	{
 		foreach (CharacterTimeScaleComponent characterTimeScaleComponent in this.OwnerIds.Values)
@@ -99,25 +99,25 @@ public class SyncTimescaleGroup
 		}
 	}
 
-	// Token: 0x06019C9C RID: 105628 RVA: 0x006B9928 File Offset: 0x006B7B28
+	// Token: 0x060175A7 RID: 95655 RVA: 0x006DFC44 File Offset: 0x006DDE44
 	public bool CanRelease()
 	{
 		return this.OwnerIds.Count <= 0;
 	}
 
-	// Token: 0x0400C266 RID: 49766
+	// Token: 0x0400C608 RID: 50696
 	private const string ForceTimeScaleLockKey = "ExtraEffect.SyncTimeScale";
 
-	// Token: 0x0400C267 RID: 49767
+	// Token: 0x0400C609 RID: 50697
 	private readonly Dictionary<int, CharacterTimeScaleComponent> OwnerIds = new Dictionary<int, CharacterTimeScaleComponent>();
 
-	// Token: 0x0400C268 RID: 49768
+	// Token: 0x0400C60A RID: 50698
 	[Nullable(2)]
 	public readonly CharacterTimeScaleComponent InstigatorTimeScaleComp;
 
-	// Token: 0x0400C269 RID: 49769
+	// Token: 0x0400C60B RID: 50699
 	public readonly EntityHandle InstigatorHandle;
 
-	// Token: 0x0400C26A RID: 49770
+	// Token: 0x0400C60C RID: 50700
 	private readonly long BuffId;
 }

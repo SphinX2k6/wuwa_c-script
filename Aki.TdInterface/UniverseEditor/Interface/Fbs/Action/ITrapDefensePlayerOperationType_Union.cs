@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007469 RID: 29801
+	// Token: 0x02007C5C RID: 31836
 	public enum ITrapDefensePlayerOperationType_Union : byte
 	{
-		// Token: 0x040122F0 RID: 74480
+		// Token: 0x04013317 RID: 78615
 		NONE,
-		// Token: 0x040122F1 RID: 74481
+		// Token: 0x04013318 RID: 78616
 		ITrapDefensePlayerOperationType,
-		// Token: 0x040122F2 RID: 74482
+		// Token: 0x04013319 RID: 78617
 		ITrapDefensePlayerOperationRecycleTrap,
-		// Token: 0x040122F3 RID: 74483
+		// Token: 0x0401331A RID: 78618
 		ITrapDefensePlayerOperationConstructTrap,
-		// Token: 0x040122F4 RID: 74484
+		// Token: 0x0401331B RID: 78619
 		ITrapDefensePlayerOperationSpawnMonster
 	}
 }

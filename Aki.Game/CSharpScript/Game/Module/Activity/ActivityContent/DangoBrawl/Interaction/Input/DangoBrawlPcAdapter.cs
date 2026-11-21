@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Input
 {
-	// Token: 0x02006880 RID: 26752
+	// Token: 0x020057D0 RID: 22480
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlPcAdapter : IDangobrawlInputAdapter
 	{
-		// Token: 0x170097B4 RID: 38836
-		// (get) Token: 0x06042CAF RID: 273583 RVA: 0x0104192B File Offset: 0x0103FB2B
+		// Token: 0x17006AF4 RID: 27380
+		// (get) Token: 0x06037807 RID: 227335 RVA: 0x00F82EA3 File Offset: 0x00F810A3
 		public EInputPlatform Platform
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x170097B5 RID: 38837
-		// (get) Token: 0x06042CB0 RID: 273584 RVA: 0x0104192E File Offset: 0x0103FB2E
+		// Token: 0x17006AF5 RID: 27381
+		// (get) Token: 0x06037808 RID: 227336 RVA: 0x00F82EA6 File Offset: 0x00F810A6
 		[Nullable(2)]
 		private TsCharacterController CharacterController
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042CB1 RID: 273585 RVA: 0x01041935 File Offset: 0x0103FB35
+		// Token: 0x06037809 RID: 227337 RVA: 0x00F82EAD File Offset: 0x00F810AD
 		public DangoBrawlPcAdapter(DangoBrawlDragCtrl dragCtrl, DangoBrawlStickyCtrl sticky, InteractionStateMachine fsm)
 		{
 			this.DragCtrl = dragCtrl;
@@ -43,24 +43,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.Fsm = fsm;
 		}
 
-		// Token: 0x06042CB2 RID: 273586 RVA: 0x01041952 File Offset: 0x0103FB52
+		// Token: 0x0603780A RID: 227338 RVA: 0x00F82ECA File Offset: 0x00F810CA
 		public void Start()
 		{
 		}
 
-		// Token: 0x06042CB3 RID: 273587 RVA: 0x01041954 File Offset: 0x0103FB54
+		// Token: 0x0603780B RID: 227339 RVA: 0x00F82ECC File Offset: 0x00F810CC
 		public void Stop()
 		{
 		}
 
-		// Token: 0x06042CB4 RID: 273588 RVA: 0x01041958 File Offset: 0x0103FB58
+		// Token: 0x0603780C RID: 227340 RVA: 0x00F82ED0 File Offset: 0x00F810D0
 		public void OnTick(float _)
 		{
 			if (this.CharacterController == null)
 			{
 				return;
 			}
-			bool flag = this.CharacterController.IsInputKeyDown(new FKey(new FName(EKey.LeftMouseButton)));
+			bool flag = this.CharacterController.IsInputKeyDown(new FKey
+			{
+				KeyName = new FName(EKey.LeftMouseButton)
+			});
 			bool flag2 = this.PrevLeftMouseDown && !flag;
 			this.PrevLeftMouseDown = flag;
 			Vector2D cursorPosition = this.CharacterController.GetCursorPosition();
@@ -91,43 +94,43 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.WasStickyLastFrame = flag3;
 		}
 
-		// Token: 0x06042CB5 RID: 273589 RVA: 0x01041A44 File Offset: 0x0103FC44
+		// Token: 0x0603780D RID: 227341 RVA: 0x00F82FC2 File Offset: 0x00F811C2
 		public UniTask OnPointerClick(EDragSourceKind source, IDangoBrawlDraggableView view, FVector pointerPos)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x06042CB6 RID: 273590 RVA: 0x01041A4B File Offset: 0x0103FC4B
+		// Token: 0x0603780E RID: 227342 RVA: 0x00F82FC9 File Offset: 0x00F811C9
 		public UniTask OnPointerBeginDrag(EDragSourceKind source, IDangoBrawlDraggableView view, FVector pointerPos)
 		{
 			return this.DragCtrl.BeginDrag(source, view, pointerPos);
 		}
 
-		// Token: 0x06042CB7 RID: 273591 RVA: 0x01041A5B File Offset: 0x0103FC5B
+		// Token: 0x0603780F RID: 227343 RVA: 0x00F82FD9 File Offset: 0x00F811D9
 		public void OnPointerDrag(FVector pointerPos)
 		{
 			this.DragCtrl.UpdateDrag(pointerPos);
 		}
 
-		// Token: 0x06042CB8 RID: 273592 RVA: 0x01041A69 File Offset: 0x0103FC69
+		// Token: 0x06037810 RID: 227344 RVA: 0x00F82FE7 File Offset: 0x00F811E7
 		public UniTask OnPointerEndDrag(FVector pointerPos)
 		{
 			return this.DragCtrl.EndDrag(pointerPos);
 		}
 
-		// Token: 0x04022C2D RID: 142381
+		// Token: 0x0401D489 RID: 119945
 		private readonly DangoBrawlDragCtrl DragCtrl;
 
-		// Token: 0x04022C2E RID: 142382
+		// Token: 0x0401D48A RID: 119946
 		private readonly DangoBrawlStickyCtrl Sticky;
 
-		// Token: 0x04022C2F RID: 142383
+		// Token: 0x0401D48B RID: 119947
 		private readonly InteractionStateMachine Fsm;
 
-		// Token: 0x04022C30 RID: 142384
+		// Token: 0x0401D48C RID: 119948
 		private bool PrevLeftMouseDown;
 
-		// Token: 0x04022C31 RID: 142385
+		// Token: 0x0401D48D RID: 119949
 		private bool WasStickyLastFrame;
 	}
 }

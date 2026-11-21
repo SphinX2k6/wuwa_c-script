@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B73 RID: 7027
+// Token: 0x02001032 RID: 4146
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchRecommendTipView : UiViewBase
 {
-	// Token: 0x0600D103 RID: 53507 RVA: 0x002FCDB9 File Offset: 0x002FAFB9
+	// Token: 0x0600A514 RID: 42260 RVA: 0x00307E91 File Offset: 0x00306091
 	public FloroRanchRecommendTipView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D104 RID: 53508 RVA: 0x002FCDE0 File Offset: 0x002FAFE0
+	// Token: 0x0600A515 RID: 42261 RVA: 0x00307EB8 File Offset: 0x003060B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -42,7 +42,7 @@ public class FloroRanchRecommendTipView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D105 RID: 53509 RVA: 0x002FCEC8 File Offset: 0x002FB0C8
+	// Token: 0x0600A516 RID: 42262 RVA: 0x00307FA0 File Offset: 0x003061A0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchRecommendTipView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ public class FloroRanchRecommendTipView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D106 RID: 53510 RVA: 0x002FCF0C File Offset: 0x002FB10C
+	// Token: 0x0600A517 RID: 42263 RVA: 0x00307FE4 File Offset: 0x003061E4
 	private UniTask CreateRecommendItem(FloroRanchUnlockDataBase data)
 	{
 		FloroRanchRecommendTipView.<CreateRecommendItem>d__9 <CreateRecommendItem>d__;
@@ -65,7 +65,7 @@ public class FloroRanchRecommendTipView : UiViewBase
 		return <CreateRecommendItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D107 RID: 53511 RVA: 0x002FCF58 File Offset: 0x002FB158
+	// Token: 0x0600A518 RID: 42264 RVA: 0x00308030 File Offset: 0x00306230
 	private UniTask RefreshRecommendViewAsync()
 	{
 		FloroRanchRecommendTipView.<RefreshRecommendViewAsync>d__10 <RefreshRecommendViewAsync>d__;
@@ -76,7 +76,7 @@ public class FloroRanchRecommendTipView : UiViewBase
 		return <RefreshRecommendViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D108 RID: 53512 RVA: 0x002FCF9C File Offset: 0x002FB19C
+	// Token: 0x0600A519 RID: 42265 RVA: 0x00308074 File Offset: 0x00306274
 	private void SetRecommendSlotItemsAlphaVisible()
 	{
 		foreach (FloroRanchHandBookSmallSlotItem floroRanchHandBookSmallSlotItem in this.RecommendItemList)
@@ -85,7 +85,7 @@ public class FloroRanchRecommendTipView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D109 RID: 53513 RVA: 0x002FCFF8 File Offset: 0x002FB1F8
+	// Token: 0x0600A51A RID: 42266 RVA: 0x003080D0 File Offset: 0x003062D0
 	private void OnClickRecommendItem(FloroRanchHandBookSmallSlotItem item)
 	{
 		int num = this.RecommendItemList.IndexOf(item);
@@ -96,7 +96,7 @@ public class FloroRanchRecommendTipView : UiViewBase
 		this.ShowRecommendTip(num);
 	}
 
-	// Token: 0x0600D10A RID: 53514 RVA: 0x002FD020 File Offset: 0x002FB220
+	// Token: 0x0600A51B RID: 42267 RVA: 0x003080F8 File Offset: 0x003062F8
 	private void HideRecommendTip()
 	{
 		if (this.CurSelectIndex < 0)
@@ -110,7 +110,7 @@ public class FloroRanchRecommendTipView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D10B RID: 53515 RVA: 0x002FD054 File Offset: 0x002FB254
+	// Token: 0x0600A51C RID: 42268 RVA: 0x0030812C File Offset: 0x0030632C
 	private void ShowRecommendTip(int index)
 	{
 		if (index < 0 || index >= this.RefreshDataList.Count)
@@ -133,7 +133,7 @@ public class FloroRanchRecommendTipView : UiViewBase
 		this.RecommendTipItem.RefreshInfoTipByParam(floroRanchCommonTipParam);
 	}
 
-	// Token: 0x0600D10C RID: 53516 RVA: 0x002FD0C0 File Offset: 0x002FB2C0
+	// Token: 0x0600A51D RID: 42269 RVA: 0x00308198 File Offset: 0x00306398
 	[return: Nullable(2)]
 	private FloroRanchCommonTipParam BuildTipParam(FloroRanchUnlockDataBase data)
 	{
@@ -158,42 +158,42 @@ public class FloroRanchRecommendTipView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x0600D10D RID: 53517 RVA: 0x002FD114 File Offset: 0x002FB314
+	// Token: 0x0600A51E RID: 42270 RVA: 0x003081EC File Offset: 0x003063EC
 	private void OnClickCloseButton()
 	{
 		base.CloseMe(null);
 		this.CurSelectIndex = -1;
 	}
 
-	// Token: 0x04005FEC RID: 24556
+	// Token: 0x040060BB RID: 24763
 	private readonly List<FloroRanchHandBookSmallSlotItem> RecommendItemList = new List<FloroRanchHandBookSmallSlotItem>();
 
-	// Token: 0x04005FED RID: 24557
+	// Token: 0x040060BC RID: 24764
 	private readonly List<FloroRanchUnlockDataBase> RefreshDataList = new List<FloroRanchUnlockDataBase>();
 
-	// Token: 0x04005FEE RID: 24558
+	// Token: 0x040060BD RID: 24765
 	private int CurSelectIndex = -1;
 
-	// Token: 0x04005FEF RID: 24559
+	// Token: 0x040060BE RID: 24766
 	private FloroRanchCommonTipItem RecommendTipItem;
 
-	// Token: 0x04005FF0 RID: 24560
+	// Token: 0x040060BF RID: 24767
 	private EFloroRanchActivityDataType ActivityDataType;
 
-	// Token: 0x020080EA RID: 33002
+	// Token: 0x02007278 RID: 29304
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A101 RID: 172289
+		// Token: 0x04025435 RID: 152629
 		public const int CloseButton = 0;
 
-		// Token: 0x0402A102 RID: 172290
+		// Token: 0x04025436 RID: 152630
 		public const int RecommendTipItem = 1;
 
-		// Token: 0x0402A103 RID: 172291
+		// Token: 0x04025437 RID: 152631
 		public const int RecommendLayout = 2;
 
-		// Token: 0x0402A104 RID: 172292
+		// Token: 0x04025438 RID: 152632
 		public const int RecommendItemTemplate = 3;
 	}
 }

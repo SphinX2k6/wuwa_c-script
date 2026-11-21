@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200726E RID: 29294
+	// Token: 0x02007A43 RID: 31299
 	public struct ISwitchSubLevelsDirectly : IFlatbufferObject
 	{
-		// Token: 0x1700D956 RID: 55638
-		// (get) Token: 0x06033F78 RID: 212856 RVA: 0x006FD095 File Offset: 0x006FB295
+		// Token: 0x1700E54F RID: 58703
+		// (get) Token: 0x0603727A RID: 225914 RVA: 0x0075E3F5 File Offset: 0x0075C5F5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F79 RID: 212857 RVA: 0x006FD0A2 File Offset: 0x006FB2A2
+		// Token: 0x0603727B RID: 225915 RVA: 0x0075E402 File Offset: 0x0075C602
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033F7A RID: 212858 RVA: 0x006FD0AC File Offset: 0x006FB2AC
+		// Token: 0x0603727C RID: 225916 RVA: 0x0075E40C File Offset: 0x0075C60C
 		public static ISwitchSubLevelsDirectly GetRootAsISwitchSubLevelsDirectly(ByteBuffer _bb)
 		{
 			return ISwitchSubLevelsDirectly.GetRootAsISwitchSubLevelsDirectly(_bb, default(ISwitchSubLevelsDirectly));
 		}
 
-		// Token: 0x06033F7B RID: 212859 RVA: 0x006FD0C8 File Offset: 0x006FB2C8
+		// Token: 0x0603727D RID: 225917 RVA: 0x0075E428 File Offset: 0x0075C628
 		public static ISwitchSubLevelsDirectly GetRootAsISwitchSubLevelsDirectly(ByteBuffer _bb, ISwitchSubLevelsDirectly obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033F7C RID: 212860 RVA: 0x006FD0E5 File Offset: 0x006FB2E5
+		// Token: 0x0603727E RID: 225918 RVA: 0x0075E445 File Offset: 0x0075C645
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033F7D RID: 212861 RVA: 0x006FD0F4 File Offset: 0x006FB2F4
+		// Token: 0x0603727F RID: 225919 RVA: 0x0075E454 File Offset: 0x0075C654
 		public ISwitchSubLevelsDirectly __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D957 RID: 55639
-		// (get) Token: 0x06033F7E RID: 212862 RVA: 0x006FD104 File Offset: 0x006FB304
+		// Token: 0x1700E550 RID: 58704
+		// (get) Token: 0x06037280 RID: 225920 RVA: 0x0075E464 File Offset: 0x0075C664
 		public ESwitchSubLevelsType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F7F RID: 212863 RVA: 0x006FD140 File Offset: 0x006FB340
+		// Token: 0x06037281 RID: 225921 RVA: 0x0075E4A0 File Offset: 0x0075C6A0
 		public string LoadLevels(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700D958 RID: 55640
-		// (get) Token: 0x06033F80 RID: 212864 RVA: 0x006FD17C File Offset: 0x006FB37C
+		// Token: 0x1700E551 RID: 58705
+		// (get) Token: 0x06037282 RID: 225922 RVA: 0x0075E4DC File Offset: 0x0075C6DC
 		public int LoadLevelsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F81 RID: 212865 RVA: 0x006FD1A8 File Offset: 0x006FB3A8
+		// Token: 0x06037283 RID: 225923 RVA: 0x0075E508 File Offset: 0x0075C708
 		public string UnloadLevels(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700D959 RID: 55641
-		// (get) Token: 0x06033F82 RID: 212866 RVA: 0x006FD1E4 File Offset: 0x006FB3E4
+		// Token: 0x1700E552 RID: 58706
+		// (get) Token: 0x06037284 RID: 225924 RVA: 0x0075E544 File Offset: 0x0075C744
 		public int UnloadLevelsLength
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D95A RID: 55642
-		// (get) Token: 0x06033F83 RID: 212867 RVA: 0x006FD210 File Offset: 0x006FB410
+		// Token: 0x1700E553 RID: 58707
+		// (get) Token: 0x06037285 RID: 225925 RVA: 0x0075E570 File Offset: 0x0075C770
 		public int TeleportEntityId
 		{
 			get
@@ -130,8 +130,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D95B RID: 55643
-		// (get) Token: 0x06033F84 RID: 212868 RVA: 0x006FD250 File Offset: 0x006FB450
+		// Token: 0x1700E554 RID: 58708
+		// (get) Token: 0x06037286 RID: 225926 RVA: 0x0075E5B0 File Offset: 0x0075C7B0
 		public bool IsWaitForSwitchComplete
 		{
 			get
@@ -141,8 +141,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D95C RID: 55644
-		// (get) Token: 0x06033F85 RID: 212869 RVA: 0x006FD290 File Offset: 0x006FB490
+		// Token: 0x1700E555 RID: 58709
+		// (get) Token: 0x06037287 RID: 225927 RVA: 0x0075E5F0 File Offset: 0x0075C7F0
 		public byte NullMask
 		{
 			get
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F86 RID: 212870 RVA: 0x006FD2CD File Offset: 0x006FB4CD
+		// Token: 0x06037288 RID: 225928 RVA: 0x0075E62D File Offset: 0x0075C82D
 		public static Offset<ISwitchSubLevelsDirectly> CreateISwitchSubLevelsDirectly(FlatBufferBuilder builder, ESwitchSubLevelsType Type = ESwitchSubLevelsType.Directly, VectorOffset LoadLevelsOffset = default(VectorOffset), VectorOffset UnloadLevelsOffset = default(VectorOffset), int TeleportEntityId = 0, bool IsWaitForSwitchComplete = false, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -169,25 +169,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwitchSubLevelsDirectly.EndISwitchSubLevelsDirectly(builder);
 		}
 
-		// Token: 0x06033F87 RID: 212871 RVA: 0x006FD309 File Offset: 0x006FB509
+		// Token: 0x06037289 RID: 225929 RVA: 0x0075E669 File Offset: 0x0075C869
 		public static void StartISwitchSubLevelsDirectly(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06033F88 RID: 212872 RVA: 0x006FD312 File Offset: 0x006FB512
+		// Token: 0x0603728A RID: 225930 RVA: 0x0075E672 File Offset: 0x0075C872
 		public static void AddType(FlatBufferBuilder builder, ESwitchSubLevelsType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033F89 RID: 212873 RVA: 0x006FD31D File Offset: 0x006FB51D
+		// Token: 0x0603728B RID: 225931 RVA: 0x0075E67D File Offset: 0x0075C87D
 		public static void AddLoadLevels(FlatBufferBuilder builder, VectorOffset loadLevelsOffset)
 		{
 			builder.AddOffset(1, loadLevelsOffset.Value, 0);
 		}
 
-		// Token: 0x06033F8A RID: 212874 RVA: 0x006FD330 File Offset: 0x006FB530
+		// Token: 0x0603728C RID: 225932 RVA: 0x0075E690 File Offset: 0x0075C890
 		public static VectorOffset CreateLoadLevelsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -198,7 +198,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F8B RID: 212875 RVA: 0x006FD370 File Offset: 0x006FB570
+		// Token: 0x0603728D RID: 225933 RVA: 0x0075E6D0 File Offset: 0x0075C8D0
 		public static VectorOffset CreateLoadLevelsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F8C RID: 212876 RVA: 0x006FD38A File Offset: 0x006FB58A
+		// Token: 0x0603728E RID: 225934 RVA: 0x0075E6EA File Offset: 0x0075C8EA
 		public static VectorOffset CreateLoadLevelsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F8D RID: 212877 RVA: 0x006FD3A8 File Offset: 0x006FB5A8
+		// Token: 0x0603728F RID: 225935 RVA: 0x0075E708 File Offset: 0x0075C908
 		public static VectorOffset CreateLoadLevelsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -222,19 +222,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F8E RID: 212878 RVA: 0x006FD3C1 File Offset: 0x006FB5C1
+		// Token: 0x06037290 RID: 225936 RVA: 0x0075E721 File Offset: 0x0075C921
 		public static void StartLoadLevelsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06033F8F RID: 212879 RVA: 0x006FD3CC File Offset: 0x006FB5CC
+		// Token: 0x06037291 RID: 225937 RVA: 0x0075E72C File Offset: 0x0075C92C
 		public static void AddUnloadLevels(FlatBufferBuilder builder, VectorOffset unloadLevelsOffset)
 		{
 			builder.AddOffset(2, unloadLevelsOffset.Value, 0);
 		}
 
-		// Token: 0x06033F90 RID: 212880 RVA: 0x006FD3DC File Offset: 0x006FB5DC
+		// Token: 0x06037292 RID: 225938 RVA: 0x0075E73C File Offset: 0x0075C93C
 		public static VectorOffset CreateUnloadLevelsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F91 RID: 212881 RVA: 0x006FD41C File Offset: 0x006FB61C
+		// Token: 0x06037293 RID: 225939 RVA: 0x0075E77C File Offset: 0x0075C97C
 		public static VectorOffset CreateUnloadLevelsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -253,7 +253,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F92 RID: 212882 RVA: 0x006FD436 File Offset: 0x006FB636
+		// Token: 0x06037294 RID: 225940 RVA: 0x0075E796 File Offset: 0x0075C996
 		public static VectorOffset CreateUnloadLevelsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -261,7 +261,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F93 RID: 212883 RVA: 0x006FD454 File Offset: 0x006FB654
+		// Token: 0x06037295 RID: 225941 RVA: 0x0075E7B4 File Offset: 0x0075C9B4
 		public static VectorOffset CreateUnloadLevelsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -269,37 +269,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F94 RID: 212884 RVA: 0x006FD46D File Offset: 0x006FB66D
+		// Token: 0x06037296 RID: 225942 RVA: 0x0075E7CD File Offset: 0x0075C9CD
 		public static void StartUnloadLevelsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06033F95 RID: 212885 RVA: 0x006FD478 File Offset: 0x006FB678
+		// Token: 0x06037297 RID: 225943 RVA: 0x0075E7D8 File Offset: 0x0075C9D8
 		public static void AddTeleportEntityId(FlatBufferBuilder builder, int teleportEntityId)
 		{
 			builder.AddInt(3, teleportEntityId, 0);
 		}
 
-		// Token: 0x06033F96 RID: 212886 RVA: 0x006FD483 File Offset: 0x006FB683
+		// Token: 0x06037298 RID: 225944 RVA: 0x0075E7E3 File Offset: 0x0075C9E3
 		public static void AddIsWaitForSwitchComplete(FlatBufferBuilder builder, bool isWaitForSwitchComplete)
 		{
 			builder.AddBool(4, isWaitForSwitchComplete, false);
 		}
 
-		// Token: 0x06033F97 RID: 212887 RVA: 0x006FD48E File Offset: 0x006FB68E
+		// Token: 0x06037299 RID: 225945 RVA: 0x0075E7EE File Offset: 0x0075C9EE
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06033F98 RID: 212888 RVA: 0x006FD499 File Offset: 0x006FB699
+		// Token: 0x0603729A RID: 225946 RVA: 0x0075E7F9 File Offset: 0x0075C9F9
 		public static Offset<ISwitchSubLevelsDirectly> EndISwitchSubLevelsDirectly(FlatBufferBuilder builder)
 		{
 			return new Offset<ISwitchSubLevelsDirectly>(builder.EndTable());
 		}
 
-		// Token: 0x06033F99 RID: 212889 RVA: 0x006FD4A8 File Offset: 0x006FB6A8
+		// Token: 0x0603729B RID: 225947 RVA: 0x0075E808 File Offset: 0x0075CA08
 		public ISwitchSubLevelsDirectlyT UnPack()
 		{
 			ISwitchSubLevelsDirectlyT switchSubLevelsDirectlyT = new ISwitchSubLevelsDirectlyT();
@@ -307,7 +307,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return switchSubLevelsDirectlyT;
 		}
 
-		// Token: 0x06033F9A RID: 212890 RVA: 0x006FD4C4 File Offset: 0x006FB6C4
+		// Token: 0x0603729C RID: 225948 RVA: 0x0075E824 File Offset: 0x0075CA24
 		public void UnPackTo(ISwitchSubLevelsDirectlyT _o)
 		{
 			_o.Type = this.Type;
@@ -326,7 +326,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06033F9B RID: 212891 RVA: 0x006FD560 File Offset: 0x006FB760
+		// Token: 0x0603729D RID: 225949 RVA: 0x0075E8C0 File Offset: 0x0075CAC0
 		public static Offset<ISwitchSubLevelsDirectly> Pack(FlatBufferBuilder builder, ISwitchSubLevelsDirectlyT _o)
 		{
 			if (_o == null)
@@ -356,7 +356,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwitchSubLevelsDirectly.CreateISwitchSubLevelsDirectly(builder, _o.Type, loadLevelsOffset, unloadLevelsOffset, _o.TeleportEntityId, _o.IsWaitForSwitchComplete, _o.NullMask);
 		}
 
-		// Token: 0x04011D6B RID: 73067
+		// Token: 0x04012D6D RID: 77165
 		private Table __p;
 	}
 }

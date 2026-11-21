@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D31 RID: 23857
+	// Token: 0x02006368 RID: 25448
 	public struct IBvbAiGetBestRearrangeData : IFlatbufferObject
 	{
-		// Token: 0x1700B2D2 RID: 45778
-		// (get) Token: 0x06028C95 RID: 167061 RVA: 0x0059A708 File Offset: 0x00598908
+		// Token: 0x1700BC33 RID: 48179
+		// (get) Token: 0x0602B2FF RID: 176895 RVA: 0x005E3178 File Offset: 0x005E1378
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028C96 RID: 167062 RVA: 0x0059A715 File Offset: 0x00598915
+		// Token: 0x0602B300 RID: 176896 RVA: 0x005E3185 File Offset: 0x005E1385
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028C97 RID: 167063 RVA: 0x0059A71C File Offset: 0x0059891C
+		// Token: 0x0602B301 RID: 176897 RVA: 0x005E318C File Offset: 0x005E138C
 		public static IBvbAiGetBestRearrangeData GetRootAsIBvbAiGetBestRearrangeData(ByteBuffer _bb)
 		{
 			return IBvbAiGetBestRearrangeData.GetRootAsIBvbAiGetBestRearrangeData(_bb, default(IBvbAiGetBestRearrangeData));
 		}
 
-		// Token: 0x06028C98 RID: 167064 RVA: 0x0059A738 File Offset: 0x00598938
+		// Token: 0x0602B302 RID: 176898 RVA: 0x005E31A8 File Offset: 0x005E13A8
 		public static IBvbAiGetBestRearrangeData GetRootAsIBvbAiGetBestRearrangeData(ByteBuffer _bb, IBvbAiGetBestRearrangeData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028C99 RID: 167065 RVA: 0x0059A755 File Offset: 0x00598955
+		// Token: 0x0602B303 RID: 176899 RVA: 0x005E31C5 File Offset: 0x005E13C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028C9A RID: 167066 RVA: 0x0059A764 File Offset: 0x00598964
+		// Token: 0x0602B304 RID: 176900 RVA: 0x005E31D4 File Offset: 0x005E13D4
 		public IBvbAiGetBestRearrangeData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B2D3 RID: 45779
-		// (get) Token: 0x06028C9B RID: 167067 RVA: 0x0059A774 File Offset: 0x00598974
+		// Token: 0x1700BC34 RID: 48180
+		// (get) Token: 0x0602B305 RID: 176901 RVA: 0x005E31E4 File Offset: 0x005E13E4
 		public EBvbEventName Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B2D4 RID: 45780
-		// (get) Token: 0x06028C9C RID: 167068 RVA: 0x0059A7B0 File Offset: 0x005989B0
+		// Token: 0x1700BC35 RID: 48181
+		// (get) Token: 0x0602B306 RID: 176902 RVA: 0x005E3220 File Offset: 0x005E1420
 		public TVarRef BoardCardStoredType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028C9D RID: 167069 RVA: 0x0059A7EC File Offset: 0x005989EC
+		// Token: 0x0602B307 RID: 176903 RVA: 0x005E325C File Offset: 0x005E145C
 		public TTable? BoardCardStored<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,38 +89,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06028C9E RID: 167070 RVA: 0x0059A830 File Offset: 0x00598A30
+		// Token: 0x0602B308 RID: 176904 RVA: 0x005E32A0 File Offset: 0x005E14A0
 		public IConstVarRef BoardCardStoredAsIConstVarRef()
 		{
 			return this.BoardCardStored<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06028C9F RID: 167071 RVA: 0x0059A84C File Offset: 0x00598A4C
+		// Token: 0x0602B309 RID: 176905 RVA: 0x005E32BC File Offset: 0x005E14BC
 		public IGlobalVarRef BoardCardStoredAsIGlobalVarRef()
 		{
 			return this.BoardCardStored<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06028CA0 RID: 167072 RVA: 0x0059A868 File Offset: 0x00598A68
+		// Token: 0x0602B30A RID: 176906 RVA: 0x005E32D8 File Offset: 0x005E14D8
 		public IOtherVarRef BoardCardStoredAsIOtherVarRef()
 		{
 			return this.BoardCardStored<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06028CA1 RID: 167073 RVA: 0x0059A884 File Offset: 0x00598A84
+		// Token: 0x0602B30B RID: 176907 RVA: 0x005E32F4 File Offset: 0x005E14F4
 		public ISelfVarRef BoardCardStoredAsISelfVarRef()
 		{
 			return this.BoardCardStored<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06028CA2 RID: 167074 RVA: 0x0059A8A0 File Offset: 0x00598AA0
+		// Token: 0x0602B30C RID: 176908 RVA: 0x005E3310 File Offset: 0x005E1510
 		public ISystemVarRef BoardCardStoredAsISystemVarRef()
 		{
 			return this.BoardCardStored<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x1700B2D5 RID: 45781
-		// (get) Token: 0x06028CA3 RID: 167075 RVA: 0x0059A8BC File Offset: 0x00598ABC
+		// Token: 0x1700BC36 RID: 48182
+		// (get) Token: 0x0602B30D RID: 176909 RVA: 0x005E332C File Offset: 0x005E152C
 		public TVarRef BoardPosStoredType
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028CA4 RID: 167076 RVA: 0x0059A8FC File Offset: 0x00598AFC
+		// Token: 0x0602B30E RID: 176910 RVA: 0x005E336C File Offset: 0x005E156C
 		public TTable? BoardPosStored<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -145,37 +145,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06028CA5 RID: 167077 RVA: 0x0059A944 File Offset: 0x00598B44
+		// Token: 0x0602B30F RID: 176911 RVA: 0x005E33B4 File Offset: 0x005E15B4
 		public IConstVarRef BoardPosStoredAsIConstVarRef()
 		{
 			return this.BoardPosStored<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06028CA6 RID: 167078 RVA: 0x0059A960 File Offset: 0x00598B60
+		// Token: 0x0602B310 RID: 176912 RVA: 0x005E33D0 File Offset: 0x005E15D0
 		public IGlobalVarRef BoardPosStoredAsIGlobalVarRef()
 		{
 			return this.BoardPosStored<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06028CA7 RID: 167079 RVA: 0x0059A97C File Offset: 0x00598B7C
+		// Token: 0x0602B311 RID: 176913 RVA: 0x005E33EC File Offset: 0x005E15EC
 		public IOtherVarRef BoardPosStoredAsIOtherVarRef()
 		{
 			return this.BoardPosStored<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06028CA8 RID: 167080 RVA: 0x0059A998 File Offset: 0x00598B98
+		// Token: 0x0602B312 RID: 176914 RVA: 0x005E3408 File Offset: 0x005E1608
 		public ISelfVarRef BoardPosStoredAsISelfVarRef()
 		{
 			return this.BoardPosStored<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06028CA9 RID: 167081 RVA: 0x0059A9B4 File Offset: 0x00598BB4
+		// Token: 0x0602B313 RID: 176915 RVA: 0x005E3424 File Offset: 0x005E1624
 		public ISystemVarRef BoardPosStoredAsISystemVarRef()
 		{
 			return this.BoardPosStored<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x06028CAA RID: 167082 RVA: 0x0059A9CF File Offset: 0x00598BCF
+		// Token: 0x0602B314 RID: 176916 RVA: 0x005E343F File Offset: 0x005E163F
 		public static Offset<IBvbAiGetBestRearrangeData> CreateIBvbAiGetBestRearrangeData(FlatBufferBuilder builder, EBvbEventName Type = EBvbEventName.AIEvolution, TVarRef BoardCardStored_type = TVarRef.NONE, int BoardCardStoredOffset = 0, TVarRef BoardPosStored_type = TVarRef.NONE, int BoardPosStoredOffset = 0)
 		{
 			builder.StartTable(5);
@@ -187,49 +187,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbAiGetBestRearrangeData.EndIBvbAiGetBestRearrangeData(builder);
 		}
 
-		// Token: 0x06028CAB RID: 167083 RVA: 0x0059AA03 File Offset: 0x00598C03
+		// Token: 0x0602B315 RID: 176917 RVA: 0x005E3473 File Offset: 0x005E1673
 		public static void StartIBvbAiGetBestRearrangeData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06028CAC RID: 167084 RVA: 0x0059AA0C File Offset: 0x00598C0C
+		// Token: 0x0602B316 RID: 176918 RVA: 0x005E347C File Offset: 0x005E167C
 		public static void AddType(FlatBufferBuilder builder, EBvbEventName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028CAD RID: 167085 RVA: 0x0059AA17 File Offset: 0x00598C17
+		// Token: 0x0602B317 RID: 176919 RVA: 0x005E3487 File Offset: 0x005E1687
 		public static void AddBoardCardStoredType(FlatBufferBuilder builder, TVarRef boardCardStoredType)
 		{
 			builder.AddByte(1, (byte)boardCardStoredType, 0);
 		}
 
-		// Token: 0x06028CAE RID: 167086 RVA: 0x0059AA22 File Offset: 0x00598C22
+		// Token: 0x0602B318 RID: 176920 RVA: 0x005E3492 File Offset: 0x005E1692
 		public static void AddBoardCardStored(FlatBufferBuilder builder, int boardCardStoredOffset)
 		{
 			builder.AddOffset(2, boardCardStoredOffset, 0);
 		}
 
-		// Token: 0x06028CAF RID: 167087 RVA: 0x0059AA2D File Offset: 0x00598C2D
+		// Token: 0x0602B319 RID: 176921 RVA: 0x005E349D File Offset: 0x005E169D
 		public static void AddBoardPosStoredType(FlatBufferBuilder builder, TVarRef boardPosStoredType)
 		{
 			builder.AddByte(3, (byte)boardPosStoredType, 0);
 		}
 
-		// Token: 0x06028CB0 RID: 167088 RVA: 0x0059AA38 File Offset: 0x00598C38
+		// Token: 0x0602B31A RID: 176922 RVA: 0x005E34A8 File Offset: 0x005E16A8
 		public static void AddBoardPosStored(FlatBufferBuilder builder, int boardPosStoredOffset)
 		{
 			builder.AddOffset(4, boardPosStoredOffset, 0);
 		}
 
-		// Token: 0x06028CB1 RID: 167089 RVA: 0x0059AA43 File Offset: 0x00598C43
+		// Token: 0x0602B31B RID: 176923 RVA: 0x005E34B3 File Offset: 0x005E16B3
 		public static Offset<IBvbAiGetBestRearrangeData> EndIBvbAiGetBestRearrangeData(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbAiGetBestRearrangeData>(builder.EndTable());
 		}
 
-		// Token: 0x06028CB2 RID: 167090 RVA: 0x0059AA50 File Offset: 0x00598C50
+		// Token: 0x0602B31C RID: 176924 RVA: 0x005E34C0 File Offset: 0x005E16C0
 		public IBvbAiGetBestRearrangeDataT UnPack()
 		{
 			IBvbAiGetBestRearrangeDataT bvbAiGetBestRearrangeDataT = new IBvbAiGetBestRearrangeDataT();
@@ -237,7 +237,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return bvbAiGetBestRearrangeDataT;
 		}
 
-		// Token: 0x06028CB3 RID: 167091 RVA: 0x0059AA6C File Offset: 0x00598C6C
+		// Token: 0x0602B31D RID: 176925 RVA: 0x005E34DC File Offset: 0x005E16DC
 		public void UnPackTo(IBvbAiGetBestRearrangeDataT _o)
 		{
 			_o.Type = this.Type;
@@ -285,7 +285,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028CB4 RID: 167092 RVA: 0x0059AD38 File Offset: 0x00598F38
+		// Token: 0x0602B31E RID: 176926 RVA: 0x005E37A8 File Offset: 0x005E19A8
 		public static Offset<IBvbAiGetBestRearrangeData> Pack(FlatBufferBuilder builder, IBvbAiGetBestRearrangeDataT _o)
 		{
 			if (_o == null)
@@ -299,7 +299,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbAiGetBestRearrangeData.CreateIBvbAiGetBestRearrangeData(builder, _o.Type, boardCardStored_type, boardCardStoredOffset, boardPosStored_type, boardPosStoredOffset);
 		}
 
-		// Token: 0x0400F6E3 RID: 63203
+		// Token: 0x04010435 RID: 66613
 		private Table __p;
 	}
 }

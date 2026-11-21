@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Dango
 {
-	// Token: 0x02005ADF RID: 23263
+	// Token: 0x02004AC0 RID: 19136
 	internal enum EBuffPanelComponent
 	{
-		// Token: 0x0401EBF1 RID: 125937
+		// Token: 0x040196AD RID: 104109
 		Title,
-		// Token: 0x0401EBF2 RID: 125938
+		// Token: 0x040196AE RID: 104110
 		TagHorizontalLayout,
-		// Token: 0x0401EBF3 RID: 125939
+		// Token: 0x040196AF RID: 104111
 		TagItem,
-		// Token: 0x0401EBF4 RID: 125940
+		// Token: 0x040196B0 RID: 104112
 		AllBtn
 	}
 }

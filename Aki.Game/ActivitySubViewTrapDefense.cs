@@ -7,14 +7,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200152E RID: 5422
+// Token: 0x020009E6 RID: 2534
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivitySubViewTrapDefense : ActivitySubViewBase
 {
-	// Token: 0x17000D4C RID: 3404
-	// (get) Token: 0x06009AA2 RID: 39586 RVA: 0x00217356 File Offset: 0x00215556
-	// (set) Token: 0x06009AA3 RID: 39587 RVA: 0x00217363 File Offset: 0x00215563
+	// Token: 0x17000D6D RID: 3437
+	// (get) Token: 0x06006E80 RID: 28288 RVA: 0x002210F3 File Offset: 0x0021F2F3
+	// (set) Token: 0x06006E81 RID: 28289 RVA: 0x00221100 File Offset: 0x0021F300
 	protected new ActivityTrapDefenseData ActivityBaseData
 	{
 		get
@@ -27,7 +27,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009AA4 RID: 39588 RVA: 0x0021736C File Offset: 0x0021556C
+	// Token: 0x06006E82 RID: 28290 RVA: 0x0022110C File Offset: 0x0021F30C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06009AA5 RID: 39589 RVA: 0x00217408 File Offset: 0x00215608
+	// Token: 0x06006E83 RID: 28291 RVA: 0x002211A8 File Offset: 0x0021F3A8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewTrapDefense.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009AA6 RID: 39590 RVA: 0x0021744C File Offset: 0x0021564C
+	// Token: 0x06006E84 RID: 28292 RVA: 0x002211EC File Offset: 0x0021F3EC
 	protected override void OnAddEventListener()
 	{
 		ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -72,7 +72,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		this.LimitRewardItem.BindRedDot(ERedDotName.TrapDefenseLimitReward, 0);
 	}
 
-	// Token: 0x06009AA7 RID: 39591 RVA: 0x002174A8 File Offset: 0x002156A8
+	// Token: 0x06006E85 RID: 28293 RVA: 0x00221248 File Offset: 0x0021F448
 	protected override void OnRemoveEventListener()
 	{
 		ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -92,7 +92,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		this.LimitRewardItem.UnBindGivenUid(0);
 	}
 
-	// Token: 0x06009AA8 RID: 39592 RVA: 0x002174F5 File Offset: 0x002156F5
+	// Token: 0x06006E86 RID: 28294 RVA: 0x00221295 File Offset: 0x0021F495
 	protected override void OnRefreshView()
 	{
 		this.UpdateFixedReward();
@@ -100,7 +100,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		this.UpdateRougeModeTips();
 	}
 
-	// Token: 0x06009AA9 RID: 39593 RVA: 0x00217509 File Offset: 0x00215709
+	// Token: 0x06006E87 RID: 28295 RVA: 0x002212A9 File Offset: 0x0021F4A9
 	[NullableContext(2)]
 	private void ClickCommonInfo(ActivityBaseData _)
 	{
@@ -125,7 +125,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06009AAA RID: 39594 RVA: 0x00217527 File Offset: 0x00215727
+	// Token: 0x06006E88 RID: 28296 RVA: 0x002212C7 File Offset: 0x0021F4C7
 	public void OnClickBtnFixedReward()
 	{
 		TrapDefenseModel instance = TrapDefenseModel.Instance;
@@ -136,7 +136,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		instance.OpenViewFixedReward();
 	}
 
-	// Token: 0x06009AAB RID: 39595 RVA: 0x00217538 File Offset: 0x00215738
+	// Token: 0x06006E89 RID: 28297 RVA: 0x002212D8 File Offset: 0x0021F4D8
 	public void OnClickBtnLimitReward()
 	{
 		TrapDefenseModel instance = TrapDefenseModel.Instance;
@@ -147,7 +147,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		instance.OpenViewLimitReward();
 	}
 
-	// Token: 0x06009AAC RID: 39596 RVA: 0x0021754C File Offset: 0x0021574C
+	// Token: 0x06006E8A RID: 28298 RVA: 0x002212EC File Offset: 0x0021F4EC
 	public void UpdateFixedReward()
 	{
 		ValueTuple<int, int> fixedRewardTotalProgress = TrapDefenseModel.Instance.RewardData.GetFixedRewardTotalProgress();
@@ -156,7 +156,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		this.FixedRewardItem.GetProgressText().SetText(item.ToString() + "/" + item2.ToString(), true);
 	}
 
-	// Token: 0x06009AAD RID: 39597 RVA: 0x002175A0 File Offset: 0x002157A0
+	// Token: 0x06006E8B RID: 28299 RVA: 0x00221340 File Offset: 0x0021F540
 	public void UpdateLimitReward()
 	{
 		TrapDefenseRewardData rewardData = TrapDefenseModel.Instance.RewardData;
@@ -172,7 +172,7 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009AAE RID: 39598 RVA: 0x00217610 File Offset: 0x00215810
+	// Token: 0x06006E8C RID: 28300 RVA: 0x002213B0 File Offset: 0x0021F5B0
 	public void UpdateLimitRewardDownTime()
 	{
 		UUIText text = base.GetText(1);
@@ -186,13 +186,13 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009AAF RID: 39599 RVA: 0x00217650 File Offset: 0x00215850
+	// Token: 0x06006E8D RID: 28301 RVA: 0x002213F0 File Offset: 0x0021F5F0
 	protected override void OnTimer(float gap)
 	{
 		this.UpdateLimitRewardDownTime();
 	}
 
-	// Token: 0x06009AB0 RID: 39600 RVA: 0x00217658 File Offset: 0x00215858
+	// Token: 0x06006E8E RID: 28302 RVA: 0x002213F8 File Offset: 0x0021F5F8
 	public UniTask UpdateSpine()
 	{
 		ActivitySubViewTrapDefense.<UpdateSpine>d__20 <UpdateSpine>d__;
@@ -203,46 +203,46 @@ public class ActivitySubViewTrapDefense : ActivitySubViewBase
 		return <UpdateSpine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009AB1 RID: 39601 RVA: 0x0021769C File Offset: 0x0021589C
+	// Token: 0x06006E8F RID: 28303 RVA: 0x0022143C File Offset: 0x0021F63C
 	public void UpdateRougeModeTips()
 	{
 		bool active = TrapDefenseModel.Instance.RougeModeData.IsShowRougeModeTipsToActivity();
 		this.PanelRougeModeTips.SetActive(active);
 	}
 
-	// Token: 0x0400440B RID: 17419
+	// Token: 0x040044B1 RID: 17585
 	[Nullable(2)]
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x0400440C RID: 17420
+	// Token: 0x040044B2 RID: 17586
 	public ActivityTrapDefenseRewardBtn FixedRewardItem;
 
-	// Token: 0x0400440D RID: 17421
+	// Token: 0x040044B3 RID: 17587
 	public ActivityTrapDefenseRewardBtn LimitRewardItem;
 
-	// Token: 0x0400440E RID: 17422
+	// Token: 0x040044B4 RID: 17588
 	public RecommendQuestTipsSubPanel PanelRougeModeTips;
 
-	// Token: 0x02007B55 RID: 31573
+	// Token: 0x02006CE0 RID: 27872
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x040288E5 RID: 166117
+		// Token: 0x04023C20 RID: 146464
 		public const int ItemCommonPanel = 0;
 
-		// Token: 0x040288E6 RID: 166118
+		// Token: 0x04023C21 RID: 146465
 		public const int TextDownTime = 1;
 
-		// Token: 0x040288E7 RID: 166119
+		// Token: 0x04023C22 RID: 146466
 		public const int ItemFixedReward = 2;
 
-		// Token: 0x040288E8 RID: 166120
+		// Token: 0x04023C23 RID: 146467
 		public const int ItemLimitReward = 3;
 
-		// Token: 0x040288E9 RID: 166121
+		// Token: 0x04023C24 RID: 146468
 		public const int ItemRougeModeOpenTips = 4;
 
-		// Token: 0x040288EA RID: 166122
+		// Token: 0x04023C25 RID: 146469
 		public const int SpineMainRole = 5;
 	}
 }

@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200257B RID: 9595
+// Token: 0x02001A66 RID: 6758
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoRightPanel : UiPanelBase
 {
-	// Token: 0x06013623 RID: 79395 RVA: 0x004D2DE4 File Offset: 0x004D0FE4
+	// Token: 0x06010B06 RID: 68358 RVA: 0x004E1A4C File Offset: 0x004DFC4C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ public class PhotoRightPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013624 RID: 79396 RVA: 0x004D301C File Offset: 0x004D121C
+	// Token: 0x06010B07 RID: 68359 RVA: 0x004E1C84 File Offset: 0x004DFE84
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(10).bLockStateOnSelect = true;
@@ -78,7 +78,7 @@ public class PhotoRightPanel : UiPanelBase
 		this.InitFovSlider();
 	}
 
-	// Token: 0x06013625 RID: 79397 RVA: 0x004D3154 File Offset: 0x004D1354
+	// Token: 0x06010B08 RID: 68360 RVA: 0x004E1DBC File Offset: 0x004DFFBC
 	private void InitFovSlider()
 	{
 		PhotoCamera photoCamera = this.GetPhotoCamera();
@@ -94,7 +94,7 @@ public class PhotoRightPanel : UiPanelBase
 		this.RefreshFovText(photoCamera.VirtualCamera.Fov);
 	}
 
-	// Token: 0x06013626 RID: 79398 RVA: 0x004D31D8 File Offset: 0x004D13D8
+	// Token: 0x06010B09 RID: 68361 RVA: 0x004E1E40 File Offset: 0x004E0040
 	private float ReverseFov(float value)
 	{
 		PhotoCamera photoCamera = this.GetPhotoCamera();
@@ -106,15 +106,16 @@ public class PhotoRightPanel : UiPanelBase
 		return PhotoCameraUtil.ReverseFovByRange(value, bp_PhotoCameraConfig_C.CommonConfig.FovRange.X, bp_PhotoCameraConfig_C.CommonConfig.FovRange.Y);
 	}
 
-	// Token: 0x06013627 RID: 79399 RVA: 0x004D3224 File Offset: 0x004D1424
+	// Token: 0x06010B0A RID: 68362 RVA: 0x004E1E8C File Offset: 0x004E008C
 	private void RefreshFovText(float fov)
 	{
 		base.GetText(1).SetText(Math.Round((double)fov).ToString(), true);
 	}
 
-	// Token: 0x06013628 RID: 79400 RVA: 0x004D3250 File Offset: 0x004D1450
+	// Token: 0x06010B0B RID: 68363 RVA: 0x004E1EB8 File Offset: 0x004E00B8
 	protected override void OnBeforeDestroy()
 	{
+		UiLayer.Instance.SetShowMaskLayer("PhotoCameraModeSwitch", false);
 		base.GetSlider(0).OnValueChangeCb.Unbind();
 		base.GetButton(2).OnPointDownCallBack.Unbind();
 		base.GetButton(2).OnPointUpCallBack.Unbind();
@@ -130,7 +131,7 @@ public class PhotoRightPanel : UiPanelBase
 		this.ViewModel.FovInputValue = 0f;
 	}
 
-	// Token: 0x06013629 RID: 79401 RVA: 0x004D32F6 File Offset: 0x004D14F6
+	// Token: 0x06010B0C RID: 68364 RVA: 0x004E1F6E File Offset: 0x004E016E
 	public void SetStickerEditing(bool editing)
 	{
 		UUIItem item = base.GetItem(13);
@@ -146,14 +147,14 @@ public class PhotoRightPanel : UiPanelBase
 		item2.SetUIActive(!editing);
 	}
 
-	// Token: 0x0601362A RID: 79402 RVA: 0x004D3325 File Offset: 0x004D1525
+	// Token: 0x06010B0D RID: 68365 RVA: 0x004E1F9D File Offset: 0x004E019D
 	public void ChangeFovByDelta(float delta)
 	{
 		UUISliderComponent slider = base.GetSlider(0);
 		slider.SetValue(slider.GetValue() + delta, true);
 	}
 
-	// Token: 0x0601362B RID: 79403 RVA: 0x004D333C File Offset: 0x004D153C
+	// Token: 0x06010B0E RID: 68366 RVA: 0x004E1FB4 File Offset: 0x004E01B4
 	private void OnFovValueChanged(float value)
 	{
 		float fov = this.ReverseFov(value);
@@ -165,7 +166,7 @@ public class PhotoRightPanel : UiPanelBase
 		this.RefreshFovText(fov);
 	}
 
-	// Token: 0x0601362C RID: 79404 RVA: 0x004D3370 File Offset: 0x004D1570
+	// Token: 0x06010B0F RID: 68367 RVA: 0x004E1FE8 File Offset: 0x004E01E8
 	private void OnFovButtonReleased()
 	{
 		this.ViewModel.FovInputValue = 0f;
@@ -174,7 +175,7 @@ public class PhotoRightPanel : UiPanelBase
 		this.RefreshFovText((photoCamera != null) ? photoCamera.VirtualCamera.Fov : 0f);
 	}
 
-	// Token: 0x0601362D RID: 79405 RVA: 0x004D33C4 File Offset: 0x004D15C4
+	// Token: 0x06010B10 RID: 68368 RVA: 0x004E203C File Offset: 0x004E023C
 	public void SyncFovFromCamera()
 	{
 		PhotoCamera photoCamera = this.GetPhotoCamera();
@@ -193,7 +194,7 @@ public class PhotoRightPanel : UiPanelBase
 		this.RefreshFovText(fov);
 	}
 
-	// Token: 0x0601362E RID: 79406 RVA: 0x004D341C File Offset: 0x004D161C
+	// Token: 0x06010B11 RID: 68369 RVA: 0x004E2094 File Offset: 0x004E0294
 	private void SwitchModeByToggle(EToggleState state, PhotoCameraType target)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -208,25 +209,25 @@ public class PhotoRightPanel : UiPanelBase
 		this.SyncModeToggles(this.ViewModel.CurrentMode);
 	}
 
-	// Token: 0x0601362F RID: 79407 RVA: 0x004D3449 File Offset: 0x004D1649
+	// Token: 0x06010B12 RID: 68370 RVA: 0x004E20C1 File Offset: 0x004E02C1
 	private void SwitchMode(PhotoCameraType target)
 	{
 		this.SwitchModeAsync(target).Forget();
 	}
 
-	// Token: 0x06013630 RID: 79408 RVA: 0x004D3458 File Offset: 0x004D1658
+	// Token: 0x06010B13 RID: 68371 RVA: 0x004E20D0 File Offset: 0x004E02D0
 	private UniTask SwitchModeAsync(PhotoCameraType target)
 	{
-		PhotoRightPanel.<SwitchModeAsync>d__20 <SwitchModeAsync>d__;
+		PhotoRightPanel.<SwitchModeAsync>d__19 <SwitchModeAsync>d__;
 		<SwitchModeAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<SwitchModeAsync>d__.<>4__this = this;
 		<SwitchModeAsync>d__.target = target;
 		<SwitchModeAsync>d__.<>1__state = -1;
-		<SwitchModeAsync>d__.<>t__builder.Start<PhotoRightPanel.<SwitchModeAsync>d__20>(ref <SwitchModeAsync>d__);
+		<SwitchModeAsync>d__.<>t__builder.Start<PhotoRightPanel.<SwitchModeAsync>d__19>(ref <SwitchModeAsync>d__);
 		return <SwitchModeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013631 RID: 79409 RVA: 0x004D34A4 File Offset: 0x004D16A4
+	// Token: 0x06010B14 RID: 68372 RVA: 0x004E211C File Offset: 0x004E031C
 	private void SetSwitchingModeInteractive(bool interactive)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(10);
@@ -257,7 +258,7 @@ public class PhotoRightPanel : UiPanelBase
 		button.SetSelfInteractive(interactive);
 	}
 
-	// Token: 0x06013632 RID: 79410 RVA: 0x004D3514 File Offset: 0x004D1714
+	// Token: 0x06010B15 RID: 68373 RVA: 0x004E218C File Offset: 0x004E038C
 	[return: Nullable(2)]
 	private string ApplyModeSwitch(PhotoCamera photoCamera, PhotoCameraType prev, PhotoCameraType target)
 	{
@@ -284,13 +285,13 @@ public class PhotoRightPanel : UiPanelBase
 		return template.TemplateDaPath;
 	}
 
-	// Token: 0x06013633 RID: 79411 RVA: 0x004D35B6 File Offset: 0x004D17B6
+	// Token: 0x06010B16 RID: 68374 RVA: 0x004E222E File Offset: 0x004E042E
 	private bool IsInheritModeByType(PhotoCameraType mode)
 	{
 		return mode == PhotoCameraType.Drone;
 	}
 
-	// Token: 0x06013634 RID: 79412 RVA: 0x004D35BC File Offset: 0x004D17BC
+	// Token: 0x06010B17 RID: 68375 RVA: 0x004E2234 File Offset: 0x004E0434
 	private void SaveCurrentToSession(PhotoCamera photoCamera)
 	{
 		PhotoCameraType? currentMode = photoCamera.CurrentMode;
@@ -306,7 +307,7 @@ public class PhotoRightPanel : UiPanelBase
 		PhotoSnapshotController.Instance.GetOrCreateSessionSnapshot(photoModeIdByType).Capture();
 	}
 
-	// Token: 0x06013635 RID: 79413 RVA: 0x004D3608 File Offset: 0x004D1808
+	// Token: 0x06010B18 RID: 68376 RVA: 0x004E2280 File Offset: 0x004E0480
 	private void OnModeChanged()
 	{
 		PhotoCamera photoCamera = this.GetPhotoCamera();
@@ -320,7 +321,7 @@ public class PhotoRightPanel : UiPanelBase
 		this.InitFovSlider();
 	}
 
-	// Token: 0x06013636 RID: 79414 RVA: 0x004D3660 File Offset: 0x004D1860
+	// Token: 0x06010B19 RID: 68377 RVA: 0x004E22D8 File Offset: 0x004E04D8
 	private void SyncModeToggles(PhotoCameraType mode)
 	{
 		bool flag = mode == PhotoCameraType.Normal || mode == PhotoCameraType.Drone;
@@ -356,7 +357,7 @@ public class PhotoRightPanel : UiPanelBase
 		extendToggle5.RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06013637 RID: 79415 RVA: 0x004D3731 File Offset: 0x004D1931
+	// Token: 0x06010B1A RID: 68378 RVA: 0x004E23A9 File Offset: 0x004E05A9
 	private EToggleState GetToggleState(bool isChecked)
 	{
 		if (!isChecked)
@@ -366,7 +367,7 @@ public class PhotoRightPanel : UiPanelBase
 		return EToggleState.ETT_Checked;
 	}
 
-	// Token: 0x06013638 RID: 79416 RVA: 0x004D3739 File Offset: 0x004D1939
+	// Token: 0x06010B1B RID: 68379 RVA: 0x004E23B1 File Offset: 0x004E05B1
 	private void OnCloseClick()
 	{
 		Action onRequestClose = this.ViewModel.OnRequestClose;
@@ -377,7 +378,7 @@ public class PhotoRightPanel : UiPanelBase
 		onRequestClose();
 	}
 
-	// Token: 0x06013639 RID: 79417 RVA: 0x004D3750 File Offset: 0x004D1950
+	// Token: 0x06010B1C RID: 68380 RVA: 0x004E23C8 File Offset: 0x004E05C8
 	private void OnPhotographClick()
 	{
 		if (this.IsCapturing || this.ViewModel.IsSwitchingMode)
@@ -388,77 +389,18 @@ public class PhotoRightPanel : UiPanelBase
 		this.CapturePhotoAsync().Forget();
 	}
 
-	// Token: 0x0601363A RID: 79418 RVA: 0x004D377C File Offset: 0x004D197C
+	// Token: 0x06010B1D RID: 68381 RVA: 0x004E23F4 File Offset: 0x004E05F4
 	private UniTask CapturePhotoAsync()
 	{
-		PhotoRightPanel.<CapturePhotoAsync>d__30 <CapturePhotoAsync>d__;
+		PhotoRightPanel.<CapturePhotoAsync>d__29 <CapturePhotoAsync>d__;
 		<CapturePhotoAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<CapturePhotoAsync>d__.<>4__this = this;
 		<CapturePhotoAsync>d__.<>1__state = -1;
-		<CapturePhotoAsync>d__.<>t__builder.Start<PhotoRightPanel.<CapturePhotoAsync>d__30>(ref <CapturePhotoAsync>d__);
+		<CapturePhotoAsync>d__.<>t__builder.Start<PhotoRightPanel.<CapturePhotoAsync>d__29>(ref <CapturePhotoAsync>d__);
 		return <CapturePhotoAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601363B RID: 79419 RVA: 0x004D37C0 File Offset: 0x004D19C0
-	private unsafe void CacheAndApplyPsoCvars()
-	{
-		if (GlobalData.World == null || this.CachedPsoCvarValues.Count > 0)
-		{
-			return;
-		}
-		foreach (KeyValuePair<string, int> keyValuePair in this.PhotoPsoCvarOverrides)
-		{
-			int consoleVariableIntValue = UKismetSystemLibrary.GetConsoleVariableIntValue(keyValuePair.Key);
-			this.CachedPsoCvarValues[keyValuePair.Key] = consoleVariableIntValue;
-			UObject world = GlobalData.World;
-			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-			defaultInterpolatedStringHandler.AppendFormatted(keyValuePair.Key);
-			defaultInterpolatedStringHandler.AppendLiteral(" ");
-			defaultInterpolatedStringHandler.AppendFormatted<int>(keyValuePair.Value);
-			UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
-			Log instance = Log.Instance;
-			ELogModule module = ELogModule.Photo;
-			ELogAuthor author = ELogAuthor.CXJ;
-			string message = "[拍照]截图前修改PSO CVar";
-			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("cvar", keyValuePair.Key);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("origin", consoleVariableIntValue);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("target", keyValuePair.Value);
-			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
-		}
-	}
-
-	// Token: 0x0601363C RID: 79420 RVA: 0x004D391C File Offset: 0x004D1B1C
-	private unsafe void RestorePsoCvars()
-	{
-		if (this.CachedPsoCvarValues.Count <= 0)
-		{
-			return;
-		}
-		if (GlobalData.World != null)
-		{
-			foreach (KeyValuePair<string, int> keyValuePair in this.CachedPsoCvarValues)
-			{
-				UObject world = GlobalData.World;
-				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-				defaultInterpolatedStringHandler.AppendFormatted(keyValuePair.Key);
-				defaultInterpolatedStringHandler.AppendLiteral(" ");
-				defaultInterpolatedStringHandler.AppendFormatted<int>(keyValuePair.Value);
-				UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
-				Log instance = Log.Instance;
-				ELogModule module = ELogModule.Photo;
-				ELogAuthor author = ELogAuthor.CXJ;
-				string message = "[拍照]截图后恢复PSO CVar";
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("cvar", keyValuePair.Key);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("origin", keyValuePair.Value);
-				instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-			}
-		}
-		this.CachedPsoCvarValues.Clear();
-	}
-
-	// Token: 0x0601363D RID: 79421 RVA: 0x004D3A3C File Offset: 0x004D1C3C
+	// Token: 0x06010B1E RID: 68382 RVA: 0x004E2438 File Offset: 0x004E0638
 	private void ReportTakePhoto()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -526,7 +468,7 @@ public class PhotoRightPanel : UiPanelBase
 		LogReportController.Instance.LogReport(photographTakePhotoLogData);
 	}
 
-	// Token: 0x0601363E RID: 79422 RVA: 0x004D3CA0 File Offset: 0x004D1EA0
+	// Token: 0x06010B1F RID: 68383 RVA: 0x004E269C File Offset: 0x004E089C
 	private int GetActionId()
 	{
 		PhotoMode? photoModeConfigByType = PhotographConfig.Instance.GetPhotoModeConfigByType((int)this.ViewModel.CurrentMode);
@@ -541,13 +483,13 @@ public class PhotoRightPanel : UiPanelBase
 		return this.ViewModel.CurrentSelfieMotionId;
 	}
 
-	// Token: 0x0601363F RID: 79423 RVA: 0x004D3CF8 File Offset: 0x004D1EF8
+	// Token: 0x06010B20 RID: 68384 RVA: 0x004E26F4 File Offset: 0x004E08F4
 	private int GetSetupOption(EPhotoSetupValueType valueType)
 	{
 		return (int)PhotographModel.Instance.GetPhotographOption(valueType).GetValueOrDefault();
 	}
 
-	// Token: 0x06013640 RID: 79424 RVA: 0x004D3D1C File Offset: 0x004D1F1C
+	// Token: 0x06010B21 RID: 68385 RVA: 0x004E2718 File Offset: 0x004E0918
 	private int GetFilterIntensity(int filterId)
 	{
 		float[] array;
@@ -558,7 +500,7 @@ public class PhotoRightPanel : UiPanelBase
 		return (int)Math.Round((double)(array[2] * 100f));
 	}
 
-	// Token: 0x06013641 RID: 79425 RVA: 0x004D3D58 File Offset: 0x004D1F58
+	// Token: 0x06010B22 RID: 68386 RVA: 0x004E2754 File Offset: 0x004E0954
 	private string GetGameHourText()
 	{
 		int value = (int)Math.Floor(TodDayTime.ConvertToHour(TimeOfDayModel.Instance.GameTime.Second));
@@ -568,7 +510,7 @@ public class PhotoRightPanel : UiPanelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06013642 RID: 79426 RVA: 0x004D3DA9 File Offset: 0x004D1FA9
+	// Token: 0x06010B23 RID: 68387 RVA: 0x004E27A5 File Offset: 0x004E09A5
 	private void OnResetClick()
 	{
 		PhotoCamera photoCamera = this.GetPhotoCamera();
@@ -586,7 +528,7 @@ public class PhotoRightPanel : UiPanelBase
 		onCameraReset();
 	}
 
-	// Token: 0x06013643 RID: 79427 RVA: 0x004D3DE1 File Offset: 0x004D1FE1
+	// Token: 0x06010B24 RID: 68388 RVA: 0x004E27DD File Offset: 0x004E09DD
 	private void OnVisibleClick()
 	{
 		Action onRequestHideUi = this.ViewModel.OnRequestHideUi;
@@ -597,26 +539,26 @@ public class PhotoRightPanel : UiPanelBase
 		onRequestHideUi();
 	}
 
-	// Token: 0x06013644 RID: 79428 RVA: 0x004D3DF8 File Offset: 0x004D1FF8
+	// Token: 0x06010B25 RID: 68389 RVA: 0x004E27F4 File Offset: 0x004E09F4
 	public void SetViewModel(PhotoMainViewModel viewModel)
 	{
 		this.ViewModel = viewModel;
 	}
 
-	// Token: 0x06013645 RID: 79429 RVA: 0x004D3E01 File Offset: 0x004D2001
+	// Token: 0x06010B26 RID: 68390 RVA: 0x004E27FD File Offset: 0x004E09FD
 	[NullableContext(2)]
 	private PhotoCamera GetPhotoCamera()
 	{
 		return PhotographController.Instance.GetPhotoCamera();
 	}
 
-	// Token: 0x06013646 RID: 79430 RVA: 0x004D3E0D File Offset: 0x004D200D
+	// Token: 0x06010B27 RID: 68391 RVA: 0x004E2809 File Offset: 0x004E0A09
 	private void OnStandStateChanged(EToggleState state)
 	{
 		this.SwitchModeByToggle(state, PhotoCameraType.Normal);
 	}
 
-	// Token: 0x06013647 RID: 79431 RVA: 0x004D3E18 File Offset: 0x004D2018
+	// Token: 0x06010B28 RID: 68392 RVA: 0x004E2814 File Offset: 0x004E0A14
 	private void OnSelfieStateChanged(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked && !FunctionModel.Instance.IsOpen(EFunctionType.PhotoSelfie))
@@ -628,80 +570,67 @@ public class PhotoRightPanel : UiPanelBase
 		this.SwitchModeByToggle(state, PhotoCameraType.Selfie);
 	}
 
-	// Token: 0x06013648 RID: 79432 RVA: 0x004D3E68 File Offset: 0x004D2068
+	// Token: 0x06010B29 RID: 68393 RVA: 0x004E2864 File Offset: 0x004E0A64
 	private void OnHandheldStateChanged(EToggleState state)
 	{
 		this.SwitchModeByToggle(state, PhotoCameraType.FirstPerson);
 	}
 
-	// Token: 0x06013649 RID: 79433 RVA: 0x004D3E74 File Offset: 0x004D2074
+	// Token: 0x06010B2A RID: 68394 RVA: 0x004E2870 File Offset: 0x004E0A70
 	private void OnChangeDroneModeStateChanged(EToggleState state)
 	{
 		PhotoCameraType target = (state == EToggleState.ETT_Checked) ? PhotoCameraType.Drone : PhotoCameraType.Normal;
 		this.SwitchMode(target);
 	}
 
-	// Token: 0x040091F1 RID: 37361
+	// Token: 0x0400934A RID: 37706
 	private PhotoMainViewModel ViewModel;
 
-	// Token: 0x040091F2 RID: 37362
+	// Token: 0x0400934B RID: 37707
 	private bool IsCapturing;
 
-	// Token: 0x040091F3 RID: 37363
+	// Token: 0x0400934C RID: 37708
 	private const float FOV_AXIS_VALUE = 0.1f;
 
-	// Token: 0x040091F4 RID: 37364
+	// Token: 0x0400934D RID: 37709
 	private const float FOV_SYNC_TOLERANCE = 0.01f;
 
-	// Token: 0x040091F5 RID: 37365
-	private readonly Dictionary<string, int> PhotoPsoCvarOverrides = new Dictionary<string, int>
-	{
-		{
-			"r.PSO.IgnoreCreationHints",
-			1
-		},
-		{
-			"r.PSO.CompilationMode",
-			1
-		}
-	};
+	// Token: 0x0400934E RID: 37710
+	private const string MODE_SWITCH_MASK_TAG = "PhotoCameraModeSwitch";
 
-	// Token: 0x040091F6 RID: 37366
-	private readonly Dictionary<string, int> CachedPsoCvarValues = new Dictionary<string, int>();
-
-	// Token: 0x02008B74 RID: 35700
+	// Token: 0x02007CFA RID: 31994
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D483 RID: 185475
+		// Token: 0x04028790 RID: 165776
 		SliderFov,
-		// Token: 0x0402D484 RID: 185476
+		// Token: 0x04028791 RID: 165777
 		TextFovValue,
-		// Token: 0x0402D485 RID: 185477
+		// Token: 0x04028792 RID: 165778
 		BtnAdd,
-		// Token: 0x0402D486 RID: 185478
+		// Token: 0x04028793 RID: 165779
 		BtnReduce,
-		// Token: 0x0402D487 RID: 185479
+		// Token: 0x04028794 RID: 165780
 		ToggleChangeDroneMode,
-		// Token: 0x0402D488 RID: 185480
+		// Token: 0x04028795 RID: 165781
 		ToggleStopAnim,
-		// Token: 0x0402D489 RID: 185481
+		// Token: 0x04028796 RID: 165782
 		BtnReset,
-		// Token: 0x0402D48A RID: 185482
+		// Token: 0x04028797 RID: 165783
 		BtnVisible,
-		// Token: 0x0402D48B RID: 185483
+		// Token: 0x04028798 RID: 165784
 		BtnClose,
-		// Token: 0x0402D48C RID: 185484
+		// Token: 0x04028799 RID: 165785
 		BtnPhotograph,
-		// Token: 0x0402D48D RID: 185485
+		// Token: 0x0402879A RID: 165786
 		ToggleStand,
-		// Token: 0x0402D48E RID: 185486
+		// Token: 0x0402879B RID: 165787
 		ToggleSelfie,
-		// Token: 0x0402D48F RID: 185487
+		// Token: 0x0402879C RID: 165788
 		ToggleHandheld,
-		// Token: 0x0402D490 RID: 185488
+		// Token: 0x0402879D RID: 165789
 		ItemFovSliderPanel,
-		// Token: 0x0402D491 RID: 185489
+		// Token: 0x0402879E RID: 165790
 		ItemBottomTogglePanel
 	}
 }

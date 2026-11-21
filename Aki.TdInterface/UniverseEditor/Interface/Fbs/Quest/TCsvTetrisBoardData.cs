@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042C6 RID: 17094
+	// Token: 0x02004722 RID: 18210
 	public struct TCsvTetrisBoardData : IFlatbufferObject
 	{
-		// Token: 0x17007939 RID: 31033
-		// (get) Token: 0x060195AB RID: 103851 RVA: 0x003A36A6 File Offset: 0x003A18A6
+		// Token: 0x17007F6A RID: 32618
+		// (get) Token: 0x0601AD17 RID: 109847 RVA: 0x003CED7E File Offset: 0x003CCF7E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060195AC RID: 103852 RVA: 0x003A36B3 File Offset: 0x003A18B3
+		// Token: 0x0601AD18 RID: 109848 RVA: 0x003CED8B File Offset: 0x003CCF8B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060195AD RID: 103853 RVA: 0x003A36BC File Offset: 0x003A18BC
+		// Token: 0x0601AD19 RID: 109849 RVA: 0x003CED94 File Offset: 0x003CCF94
 		public static TCsvTetrisBoardData GetRootAsTCsvTetrisBoardData(ByteBuffer _bb)
 		{
 			return TCsvTetrisBoardData.GetRootAsTCsvTetrisBoardData(_bb, default(TCsvTetrisBoardData));
 		}
 
-		// Token: 0x060195AE RID: 103854 RVA: 0x003A36D8 File Offset: 0x003A18D8
+		// Token: 0x0601AD1A RID: 109850 RVA: 0x003CEDB0 File Offset: 0x003CCFB0
 		public static TCsvTetrisBoardData GetRootAsTCsvTetrisBoardData(ByteBuffer _bb, TCsvTetrisBoardData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060195AF RID: 103855 RVA: 0x003A36F5 File Offset: 0x003A18F5
+		// Token: 0x0601AD1B RID: 109851 RVA: 0x003CEDCD File Offset: 0x003CCFCD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060195B0 RID: 103856 RVA: 0x003A3704 File Offset: 0x003A1904
+		// Token: 0x0601AD1C RID: 109852 RVA: 0x003CEDDC File Offset: 0x003CCFDC
 		public TCsvTetrisBoardData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700793A RID: 31034
-		// (get) Token: 0x060195B1 RID: 103857 RVA: 0x003A3714 File Offset: 0x003A1914
+		// Token: 0x17007F6B RID: 32619
+		// (get) Token: 0x0601AD1D RID: 109853 RVA: 0x003CEDEC File Offset: 0x003CCFEC
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700793B RID: 31035
-		// (get) Token: 0x060195B2 RID: 103858 RVA: 0x003A3750 File Offset: 0x003A1950
+		// Token: 0x17007F6C RID: 32620
+		// (get) Token: 0x0601AD1E RID: 109854 RVA: 0x003CEE28 File Offset: 0x003CD028
 		public ITetrisBoard? Data
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060195B3 RID: 103859 RVA: 0x003A37AD File Offset: 0x003A19AD
+		// Token: 0x0601AD1F RID: 109855 RVA: 0x003CEE85 File Offset: 0x003CD085
 		public static Offset<TCsvTetrisBoardData> CreateTCsvTetrisBoardData(FlatBufferBuilder builder, int Id = 0, Offset<ITetrisBoard> DataOffset = default(Offset<ITetrisBoard>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return TCsvTetrisBoardData.EndTCsvTetrisBoardData(builder);
 		}
 
-		// Token: 0x060195B4 RID: 103860 RVA: 0x003A37CA File Offset: 0x003A19CA
+		// Token: 0x0601AD20 RID: 109856 RVA: 0x003CEEA2 File Offset: 0x003CD0A2
 		public static void StartTCsvTetrisBoardData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060195B5 RID: 103861 RVA: 0x003A37D3 File Offset: 0x003A19D3
+		// Token: 0x0601AD21 RID: 109857 RVA: 0x003CEEAB File Offset: 0x003CD0AB
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x060195B6 RID: 103862 RVA: 0x003A37DE File Offset: 0x003A19DE
+		// Token: 0x0601AD22 RID: 109858 RVA: 0x003CEEB6 File Offset: 0x003CD0B6
 		public static void AddData(FlatBufferBuilder builder, Offset<ITetrisBoard> dataOffset)
 		{
 			builder.AddOffset(1, dataOffset.Value, 0);
 		}
 
-		// Token: 0x060195B7 RID: 103863 RVA: 0x003A37EE File Offset: 0x003A19EE
+		// Token: 0x0601AD23 RID: 109859 RVA: 0x003CEEC6 File Offset: 0x003CD0C6
 		public static Offset<TCsvTetrisBoardData> EndTCsvTetrisBoardData(FlatBufferBuilder builder)
 		{
 			return new Offset<TCsvTetrisBoardData>(builder.EndTable());
 		}
 
-		// Token: 0x060195B8 RID: 103864 RVA: 0x003A37FC File Offset: 0x003A19FC
+		// Token: 0x0601AD24 RID: 109860 RVA: 0x003CEED4 File Offset: 0x003CD0D4
 		public TCsvTetrisBoardDataT UnPack()
 		{
 			TCsvTetrisBoardDataT tcsvTetrisBoardDataT = new TCsvTetrisBoardDataT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return tcsvTetrisBoardDataT;
 		}
 
-		// Token: 0x060195B9 RID: 103865 RVA: 0x003A3818 File Offset: 0x003A1A18
+		// Token: 0x0601AD25 RID: 109861 RVA: 0x003CEEF0 File Offset: 0x003CD0F0
 		public void UnPackTo(TCsvTetrisBoardDataT _o)
 		{
 			_o.Id = this.Id;
 			_o.Data = ((this.Data != null) ? this.Data.Value.UnPack() : null);
 		}
 
-		// Token: 0x060195BA RID: 103866 RVA: 0x003A3860 File Offset: 0x003A1A60
+		// Token: 0x0601AD26 RID: 109862 RVA: 0x003CEF38 File Offset: 0x003CD138
 		public static Offset<TCsvTetrisBoardData> Pack(FlatBufferBuilder builder, TCsvTetrisBoardDataT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return TCsvTetrisBoardData.CreateTCsvTetrisBoardData(builder, _o.Id, dataOffset);
 		}
 
-		// Token: 0x0400BFCD RID: 49101
+		// Token: 0x0400C9DA RID: 51674
 		private Table __p;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002036 RID: 8246
+	// Token: 0x0200227F RID: 8831
 	public class IVehicleEnteringNpcTarget_SetValue
 	{
-		// Token: 0x04006D15 RID: 27925
+		// Token: 0x0400731E RID: 29470
 		public EVehicleEnteringTarget Type;
 
-		// Token: 0x04006D16 RID: 27926
+		// Token: 0x0400731F RID: 29471
 		public int? TargetVehicle;
 
-		// Token: 0x04006D17 RID: 27927
+		// Token: 0x04007320 RID: 29472
 		public int TargetNpc;
 	}
 }

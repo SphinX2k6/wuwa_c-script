@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.Teleport;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Render;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A34 RID: 6708
+// Token: 0x02000EF3 RID: 3827
 [NullableContext(1)]
 [Nullable(0)]
-public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
+public class DangoAbyssEntranceView : UiTickViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x0600C53D RID: 50493 RVA: 0x002CBE3B File Offset: 0x002CA03B
+	// Token: 0x0600994D RID: 39245 RVA: 0x002D6F57 File Offset: 0x002D5157
 	public DangoAbyssEntranceView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C53E RID: 50494 RVA: 0x002CBE44 File Offset: 0x002CA044
+	// Token: 0x0600994E RID: 39246 RVA: 0x002D6F60 File Offset: 0x002D5160
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -65,13 +65,13 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C53F RID: 50495 RVA: 0x002CC05C File Offset: 0x002CA25C
-	public override bool GetLoopAudioEventSwitch()
+	// Token: 0x0600994F RID: 39247 RVA: 0x002D7178 File Offset: 0x002D5378
+	public override bool GetBgmSwitch()
 	{
 		return !DangoAbyssModel.Instance.CheckIfInSmallWorldInstance();
 	}
 
-	// Token: 0x0600C540 RID: 50496 RVA: 0x002CC06C File Offset: 0x002CA26C
+	// Token: 0x06009950 RID: 39248 RVA: 0x002D7188 File Offset: 0x002D5388
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssEntranceView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -82,12 +82,25 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C541 RID: 50497 RVA: 0x002CC0B0 File Offset: 0x002CA2B0
+	// Token: 0x06009951 RID: 39249 RVA: 0x002D71CC File Offset: 0x002D53CC
 	private void OnCloseBtnClick()
 	{
 		int instanceId = CreatureModel.Instance.GetInstanceId();
 		IReadOnlyList<int> smallWorldInsIdList = DangoAbyssConfig.Instance.GetSmallWorldInsIdList();
-		if (!((smallWorldInsIdList != null) ? new bool?(smallWorldInsIdList.Contains(instanceId)) : null).GetValueOrDefault())
+		bool? flag = null;
+		if (smallWorldInsIdList != null)
+		{
+			flag = new bool?(false);
+			for (int i = 0; i < smallWorldInsIdList.Count; i++)
+			{
+				if (smallWorldInsIdList[i] == instanceId)
+				{
+					flag = new bool?(true);
+					break;
+				}
+			}
+		}
+		if (!flag.GetValueOrDefault())
 		{
 			base.CloseMe(null);
 			return;
@@ -97,21 +110,20 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600C542 RID: 50498 RVA: 0x002CC130 File Offset: 0x002CA330
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x06009952 RID: 39250 RVA: 0x002D726A File Offset: 0x002D546A
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationController.Instance.PushCameraHandle((EUiViewName)"DangoAbyssStart", new int?(viewId), isBlend);
-		UiCameraAnimationManager.Instance.PushCameraHandleByHandleName("DangoAbyssLoop", true, true, "1001", false, null, null);
+		UiCameraController.Instance.PushCameraHandleByOpenView((EUiViewName)"DangoAbyssStart", viewId, operationType);
+		UiCameraModel.Instance.PushCameraHandleByHandleName("DangoAbyssLoop", true, true, "1001", false, null);
 	}
 
-	// Token: 0x0600C543 RID: 50499 RVA: 0x002CC17A File Offset: 0x002CA37A
-	[NullableContext(2)]
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x06009953 RID: 39251 RVA: 0x002D729B File Offset: 0x002D549B
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationController.Instance.PopCameraHandle((EUiViewName)"DangoAbyssStart", stackTopInfo, closeViewId, popOrDelete);
+		UiCameraController.Instance.PopCameraHandleByCloseView((EUiViewName)"DangoAbyssStart", nextViewName, closeViewId, operationType);
 	}
 
-	// Token: 0x0600C544 RID: 50500 RVA: 0x002CC194 File Offset: 0x002CA394
+	// Token: 0x06009954 RID: 39252 RVA: 0x002D72B8 File Offset: 0x002D54B8
 	protected override void OnHandleLoadScene()
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath("Ani_Tuanzi_Start0");
@@ -122,7 +134,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x0600C545 RID: 50501 RVA: 0x002CC1C8 File Offset: 0x002CA3C8
+	// Token: 0x06009955 RID: 39253 RVA: 0x002D72EC File Offset: 0x002D54EC
 	private void OnWorldEntranceBtnClick()
 	{
 		if (DangoAbyssModel.Instance.CheckIfInSmallWorldInstance())
@@ -158,17 +170,17 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600C546 RID: 50502 RVA: 0x002CC28C File Offset: 0x002CA48C
+	// Token: 0x06009956 RID: 39254 RVA: 0x002D73B0 File Offset: 0x002D55B0
 	private void OnAbyssInsEntranceBtnClick()
 	{
 		int activityId = this.CurrentData.ActivityId;
 		DangoAbyssController.Instance.OpenAbyssSelectViewByActivityId(activityId);
 	}
 
-	// Token: 0x0600C547 RID: 50503 RVA: 0x002CC2B0 File Offset: 0x002CA4B0
+	// Token: 0x06009957 RID: 39255 RVA: 0x002D73D4 File Offset: 0x002D55D4
 	protected override void OnBeforeShow()
 	{
-		this.PushCameraHandle((EUiViewName)"DangoAbyssLoop", base.GetViewId(), true);
+		this.PushCameraHandleByOpenView((EUiViewName)"DangoAbyssLoop", base.GetViewId(), EUiCameraHandleOperationType.Blend);
 		DangoAbyssActivityData activityData = this.GetActivityData();
 		this.RefreshSceneNiagaraByCurrentChallenge(activityData);
 		this.RefreshView();
@@ -177,7 +189,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		this.RefreshBtns();
 	}
 
-	// Token: 0x0600C548 RID: 50504 RVA: 0x002CC2FC File Offset: 0x002CA4FC
+	// Token: 0x06009958 RID: 39256 RVA: 0x002D7420 File Offset: 0x002D5620
 	private void RefreshBtns()
 	{
 		bool dangoUpAvailable = DangoAbyssModel.Instance.GetDangoUpAvailable();
@@ -186,7 +198,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		this.ShopItem.SetUiActive(shopAvailable);
 	}
 
-	// Token: 0x0600C549 RID: 50505 RVA: 0x002CC338 File Offset: 0x002CA538
+	// Token: 0x06009959 RID: 39257 RVA: 0x002D745C File Offset: 0x002D565C
 	public void RefreshRedDot()
 	{
 		AbyssButtonItem limitRewadItem = this.LimitRewadItem;
@@ -216,7 +228,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		dangoUpItem.BindRedDot(ERedDotName.RedDotDangoDevelop, null);
 	}
 
-	// Token: 0x0600C54A RID: 50506 RVA: 0x002CC3EC File Offset: 0x002CA5EC
+	// Token: 0x0600995A RID: 39258 RVA: 0x002D7510 File Offset: 0x002D5710
 	private void UnbindRedDot()
 	{
 		AbyssButtonItem limitRewadItem = this.LimitRewadItem;
@@ -242,7 +254,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		dangoUpItem.UnBindRedDot();
 	}
 
-	// Token: 0x0600C54B RID: 50507 RVA: 0x002CC43C File Offset: 0x002CA63C
+	// Token: 0x0600995B RID: 39259 RVA: 0x002D7560 File Offset: 0x002D5760
 	private void PlaySceneLevelSequence(string levelSequencePath, bool needLoop, [Nullable(2)] Action finishCallBack = null)
 	{
 		string[] sceneActors = DangoAbyssConfig.Instance.GetAbyssActivityData(this.CurrentData.ActivityId).Value.SceneActor.Split(',', StringSplitOptions.None);
@@ -308,13 +320,13 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		}, 100, this.MemoryTag);
 	}
 
-	// Token: 0x0600C54C RID: 50508 RVA: 0x002CC4B7 File Offset: 0x002CA6B7
+	// Token: 0x0600995C RID: 39260 RVA: 0x002D75DB File Offset: 0x002D57DB
 	protected override void OnBeforeHide()
 	{
 		this.UnbindRedDot();
 	}
 
-	// Token: 0x0600C54D RID: 50509 RVA: 0x002CC4C0 File Offset: 0x002CA6C0
+	// Token: 0x0600995D RID: 39261 RVA: 0x002D75E4 File Offset: 0x002D57E4
 	protected override void OnBeforeDestroy()
 	{
 		ULevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -345,7 +357,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		dangoWorldQuestItem.Clear();
 	}
 
-	// Token: 0x0600C54E RID: 50510 RVA: 0x002CC538 File Offset: 0x002CA738
+	// Token: 0x0600995E RID: 39262 RVA: 0x002D765C File Offset: 0x002D585C
 	private void RefreshView()
 	{
 		DangoWorldQuestItem dangoWorldQuestItem = this.DangoWorldQuestItem;
@@ -361,7 +373,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		this.RefreshRewardProgressText(activityData);
 	}
 
-	// Token: 0x0600C54F RID: 50511 RVA: 0x002CC580 File Offset: 0x002CA780
+	// Token: 0x0600995F RID: 39263 RVA: 0x002D76A4 File Offset: 0x002D58A4
 	private void RefreshDangaoShowState(DangoAbyssActivityData data)
 	{
 		int currentLastFinishChallengeId = data.GetCurrentLastFinishChallengeId();
@@ -380,13 +392,13 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600C550 RID: 50512 RVA: 0x002CC5FD File Offset: 0x002CA7FD
+	// Token: 0x06009960 RID: 39264 RVA: 0x002D7721 File Offset: 0x002D5921
 	private DangoAbyssActivityData GetActivityData()
 	{
 		return ActivityModel.Instance.GetActivityById(this.CurrentData.ActivityId) as DangoAbyssActivityData;
 	}
 
-	// Token: 0x0600C551 RID: 50513 RVA: 0x002CC61C File Offset: 0x002CA81C
+	// Token: 0x06009961 RID: 39265 RVA: 0x002D7740 File Offset: 0x002D5940
 	private void RefreshSceneNiagaraByCurrentChallenge(DangoAbyssActivityData data)
 	{
 		AActor actorWithTag = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("shenyuan").Value, ECollectActorType.UI);
@@ -403,7 +415,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600C552 RID: 50514 RVA: 0x002CC6A8 File Offset: 0x002CA8A8
+	// Token: 0x06009962 RID: 39266 RVA: 0x002D77CC File Offset: 0x002D59CC
 	private void RefreshLimitItemShowState(DangoAbyssActivityData data)
 	{
 		bool flag = data.CheckInLimitTime();
@@ -420,26 +432,26 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x0600C553 RID: 50515 RVA: 0x002CC6E4 File Offset: 0x002CA8E4
+	// Token: 0x06009963 RID: 39267 RVA: 0x002D7808 File Offset: 0x002D5A08
 	private void RefreshCurrentTargetText(DangoAbyssActivityData data)
 	{
 	}
 
-	// Token: 0x0600C554 RID: 50516 RVA: 0x002CC6E8 File Offset: 0x002CA8E8
+	// Token: 0x06009964 RID: 39268 RVA: 0x002D780C File Offset: 0x002D5A0C
 	private void RefreshWorldProgressText(DangoAbyssActivityData data)
 	{
 		string abyssWorldProgressText = data.GetAbyssWorldProgressText();
 		base.GetText(2).SetText(abyssWorldProgressText, true);
 	}
 
-	// Token: 0x0600C555 RID: 50517 RVA: 0x002CC70C File Offset: 0x002CA90C
+	// Token: 0x06009965 RID: 39269 RVA: 0x002D7830 File Offset: 0x002D5A30
 	private void RefreshAbyssInsProgressText(DangoAbyssActivityData data)
 	{
 		string abyssProgressText = data.GetAbyssProgressText();
 		base.GetText(4).SetText(abyssProgressText, true);
 	}
 
-	// Token: 0x0600C556 RID: 50518 RVA: 0x002CC730 File Offset: 0x002CA930
+	// Token: 0x06009966 RID: 39270 RVA: 0x002D7854 File Offset: 0x002D5A54
 	private void RefreshRewardProgressText(DangoAbyssActivityData data)
 	{
 		string rewardFinishProgressText = data.GetRewardFinishProgressText();
@@ -451,7 +463,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		activityRewardItem.SetNumText(rewardFinishProgressText);
 	}
 
-	// Token: 0x0600C557 RID: 50519 RVA: 0x002CC755 File Offset: 0x002CA955
+	// Token: 0x06009967 RID: 39271 RVA: 0x002D7879 File Offset: 0x002D5A79
 	private void OnClickDangoUp()
 	{
 		if (!DangoAbyssModel.Instance.GetDangoUpAvailable())
@@ -461,7 +473,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		DangoAbyssActivityController.Instance.OpenCurrentRoleUpView();
 	}
 
-	// Token: 0x0600C558 RID: 50520 RVA: 0x002CC76E File Offset: 0x002CA96E
+	// Token: 0x06009968 RID: 39272 RVA: 0x002D7892 File Offset: 0x002D5A92
 	private void OnClickShop()
 	{
 		if (!DangoAbyssModel.Instance.GetShopAvailable())
@@ -471,7 +483,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		UiManager.Instance.OpenView(EUiViewName.DangoAbyssShopView, null, null);
 	}
 
-	// Token: 0x0600C559 RID: 50521 RVA: 0x002CC78E File Offset: 0x002CA98E
+	// Token: 0x06009969 RID: 39273 RVA: 0x002D78B2 File Offset: 0x002D5AB2
 	protected override void OnTick(float delta)
 	{
 		DangoWorldQuestItem dangoWorldQuestItem = this.DangoWorldQuestItem;
@@ -482,7 +494,7 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		dangoWorldQuestItem.Tick();
 	}
 
-	// Token: 0x0600C55A RID: 50522 RVA: 0x002CC7A0 File Offset: 0x002CA9A0
+	// Token: 0x0600996A RID: 39274 RVA: 0x002D78C4 File Offset: 0x002D5AC4
 	[CompilerGenerated]
 	internal static void <OnCloseBtnClick>g__callBack|15_0()
 	{
@@ -504,69 +516,69 @@ public class DangoAbyssEntranceView : UiTickViewBase, IUiCameraBehavior
 		InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon().Forget<bool>();
 	}
 
-	// Token: 0x04005AED RID: 23277
+	// Token: 0x04005BBC RID: 23484
 	[Nullable(2)]
 	private DangoAbyssEntraceViewData CurrentData;
 
-	// Token: 0x04005AEE RID: 23278
+	// Token: 0x04005BBD RID: 23485
 	[Nullable(2)]
 	private AbyssButtonItem LimitRewadItem;
 
-	// Token: 0x04005AEF RID: 23279
+	// Token: 0x04005BBE RID: 23486
 	[Nullable(2)]
 	private AbyssButtonItem ActivityRewardItem;
 
-	// Token: 0x04005AF0 RID: 23280
+	// Token: 0x04005BBF RID: 23487
 	[Nullable(2)]
 	private AbyssButtonItem DangoUpItem;
 
-	// Token: 0x04005AF1 RID: 23281
+	// Token: 0x04005BC0 RID: 23488
 	[Nullable(2)]
 	private AbyssButtonItem ShopItem;
 
-	// Token: 0x04005AF2 RID: 23282
+	// Token: 0x04005BC1 RID: 23489
 	[Nullable(2)]
 	private ULevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04005AF3 RID: 23283
+	// Token: 0x04005BC2 RID: 23490
 	[Nullable(2)]
 	private ALevelSequenceActor SequenceActor;
 
-	// Token: 0x04005AF4 RID: 23284
+	// Token: 0x04005BC3 RID: 23491
 	[Nullable(2)]
 	private DangoWorldQuestItem DangoWorldQuestItem;
 
-	// Token: 0x04005AF5 RID: 23285
+	// Token: 0x04005BC4 RID: 23492
 	private const string STARTCAMERAPOS = "DangoAbyssStart";
 
-	// Token: 0x04005AF6 RID: 23286
+	// Token: 0x04005BC5 RID: 23493
 	private const string ENTRANCELOOP = "DangoAbyssLoop";
 
-	// Token: 0x02007F7A RID: 32634
+	// Token: 0x02007109 RID: 28937
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x040299D4 RID: 170452
+		// Token: 0x04024D11 RID: 150801
 		CloseBtn,
-		// Token: 0x040299D5 RID: 170453
+		// Token: 0x04024D12 RID: 150802
 		WorldEntranceBtn,
-		// Token: 0x040299D6 RID: 170454
+		// Token: 0x04024D13 RID: 150803
 		WorldProgressText,
-		// Token: 0x040299D7 RID: 170455
+		// Token: 0x04024D14 RID: 150804
 		AbyssInsEntranceBtn,
-		// Token: 0x040299D8 RID: 170456
+		// Token: 0x04024D15 RID: 150805
 		AbyssInsProgressText,
-		// Token: 0x040299D9 RID: 170457
+		// Token: 0x04024D16 RID: 150806
 		LimitRewardItem,
-		// Token: 0x040299DA RID: 170458
+		// Token: 0x04024D17 RID: 150807
 		ActivityRewardItem,
-		// Token: 0x040299DB RID: 170459
+		// Token: 0x04024D18 RID: 150808
 		DangoUpItem,
-		// Token: 0x040299DC RID: 170460
+		// Token: 0x04024D19 RID: 150809
 		ShopItem,
-		// Token: 0x040299DD RID: 170461
+		// Token: 0x04024D1A RID: 150810
 		GoalScroller,
-		// Token: 0x040299DE RID: 170462
+		// Token: 0x04024D1B RID: 150811
 		GoalItem
 	}
 }

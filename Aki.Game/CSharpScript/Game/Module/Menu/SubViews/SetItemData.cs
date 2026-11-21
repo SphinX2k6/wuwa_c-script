@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200543E RID: 21566
+	// Token: 0x02004421 RID: 17441
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SetItemData : ISetItemData
 	{
-		// Token: 0x17008440 RID: 33856
-		// (get) Token: 0x06037111 RID: 225553 RVA: 0x00D0CFB6 File Offset: 0x00D0B1B6
-		// (set) Token: 0x06037112 RID: 225554 RVA: 0x00D0CFBE File Offset: 0x00D0B1BE
+		// Token: 0x1700580C RID: 22540
+		// (get) Token: 0x0602C05A RID: 180314 RVA: 0x00C5C3D6 File Offset: 0x00C5A5D6
+		// (set) Token: 0x0602C05B RID: 180315 RVA: 0x00C5C3DE File Offset: 0x00C5A5DE
 		public int Index { get; set; }
 
-		// Token: 0x17008441 RID: 33857
-		// (get) Token: 0x06037113 RID: 225555 RVA: 0x00D0CFC7 File Offset: 0x00D0B1C7
-		// (set) Token: 0x06037114 RID: 225556 RVA: 0x00D0CFCF File Offset: 0x00D0B1CF
+		// Token: 0x1700580D RID: 22541
+		// (get) Token: 0x0602C05C RID: 180316 RVA: 0x00C5C3E7 File Offset: 0x00C5A5E7
+		// (set) Token: 0x0602C05D RID: 180317 RVA: 0x00C5C3EF File Offset: 0x00C5A5EF
 		public int Value { get; set; }
 
-		// Token: 0x17008442 RID: 33858
-		// (get) Token: 0x06037115 RID: 225557 RVA: 0x00D0CFD8 File Offset: 0x00D0B1D8
-		// (set) Token: 0x06037116 RID: 225558 RVA: 0x00D0CFE0 File Offset: 0x00D0B1E0
+		// Token: 0x1700580E RID: 22542
+		// (get) Token: 0x0602C05E RID: 180318 RVA: 0x00C5C3F8 File Offset: 0x00C5A5F8
+		// (set) Token: 0x0602C05F RID: 180319 RVA: 0x00C5C400 File Offset: 0x00C5A600
 		public string Name { get; set; } = "";
 	}
 }

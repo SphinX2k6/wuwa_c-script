@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053AD RID: 21421
+	// Token: 0x02005933 RID: 22835
 	public struct IHoldConfig : IFlatbufferObject
 	{
-		// Token: 0x17009D5E RID: 40286
-		// (get) Token: 0x06023164 RID: 143716 RVA: 0x004DB687 File Offset: 0x004D9887
+		// Token: 0x1700A596 RID: 42390
+		// (get) Token: 0x06025218 RID: 152088 RVA: 0x0051855B File Offset: 0x0051675B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023165 RID: 143717 RVA: 0x004DB694 File Offset: 0x004D9894
+		// Token: 0x06025219 RID: 152089 RVA: 0x00518568 File Offset: 0x00516768
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023166 RID: 143718 RVA: 0x004DB69C File Offset: 0x004D989C
+		// Token: 0x0602521A RID: 152090 RVA: 0x00518570 File Offset: 0x00516770
 		public static IHoldConfig GetRootAsIHoldConfig(ByteBuffer _bb)
 		{
 			return IHoldConfig.GetRootAsIHoldConfig(_bb, default(IHoldConfig));
 		}
 
-		// Token: 0x06023167 RID: 143719 RVA: 0x004DB6B8 File Offset: 0x004D98B8
+		// Token: 0x0602521B RID: 152091 RVA: 0x0051858C File Offset: 0x0051678C
 		public static IHoldConfig GetRootAsIHoldConfig(ByteBuffer _bb, IHoldConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023168 RID: 143720 RVA: 0x004DB6D5 File Offset: 0x004D98D5
+		// Token: 0x0602521C RID: 152092 RVA: 0x005185A9 File Offset: 0x005167A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023169 RID: 143721 RVA: 0x004DB6E4 File Offset: 0x004D98E4
+		// Token: 0x0602521D RID: 152093 RVA: 0x005185B8 File Offset: 0x005167B8
 		public IHoldConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009D5F RID: 40287
-		// (get) Token: 0x0602316A RID: 143722 RVA: 0x004DB6F4 File Offset: 0x004D98F4
+		// Token: 0x1700A597 RID: 42391
+		// (get) Token: 0x0602521E RID: 152094 RVA: 0x005185C8 File Offset: 0x005167C8
 		public int HoldSwingFreq
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D60 RID: 40288
-		// (get) Token: 0x0602316B RID: 143723 RVA: 0x004DB730 File Offset: 0x004D9930
+		// Token: 0x1700A598 RID: 42392
+		// (get) Token: 0x0602521F RID: 152095 RVA: 0x00518604 File Offset: 0x00516804
 		public int HoldAngularVelocity
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D61 RID: 40289
-		// (get) Token: 0x0602316C RID: 143724 RVA: 0x004DB76C File Offset: 0x004D996C
+		// Token: 0x1700A599 RID: 42393
+		// (get) Token: 0x06025220 RID: 152096 RVA: 0x00518640 File Offset: 0x00516840
 		public IVectorInfo? HoldRotation
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D62 RID: 40290
-		// (get) Token: 0x0602316D RID: 143725 RVA: 0x004DB7CC File Offset: 0x004D99CC
+		// Token: 0x1700A59A RID: 42394
+		// (get) Token: 0x06025221 RID: 152097 RVA: 0x005186A0 File Offset: 0x005168A0
 		public IVectorInfo? HoldOffset
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D63 RID: 40291
-		// (get) Token: 0x0602316E RID: 143726 RVA: 0x004DB82C File Offset: 0x004D9A2C
+		// Token: 0x1700A59B RID: 42395
+		// (get) Token: 0x06025222 RID: 152098 RVA: 0x00518700 File Offset: 0x00516900
 		public IVectorInfo? SecondaryOffset
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D64 RID: 40292
-		// (get) Token: 0x0602316F RID: 143727 RVA: 0x004DB88C File Offset: 0x004D9A8C
+		// Token: 0x1700A59C RID: 42396
+		// (get) Token: 0x06025223 RID: 152099 RVA: 0x00518760 File Offset: 0x00516960
 		public int HoldSwingRange
 		{
 			get
@@ -138,8 +138,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D65 RID: 40293
-		// (get) Token: 0x06023170 RID: 143728 RVA: 0x004DB8CC File Offset: 0x004D9ACC
+		// Token: 0x1700A59D RID: 42397
+		// (get) Token: 0x06025224 RID: 152100 RVA: 0x005187A0 File Offset: 0x005169A0
 		public string HoldCameraShake
 		{
 			get
@@ -153,20 +153,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023171 RID: 143729 RVA: 0x004DB904 File Offset: 0x004D9B04
+		// Token: 0x06025225 RID: 152101 RVA: 0x005187D8 File Offset: 0x005169D8
 		public Span<byte> GetHoldCameraShakeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06023172 RID: 143730 RVA: 0x004DB914 File Offset: 0x004D9B14
+		// Token: 0x06025226 RID: 152102 RVA: 0x005187E8 File Offset: 0x005169E8
 		public byte[] GetHoldCameraShakeArray()
 		{
 			return this.__p.__vector_as_array<byte>(16);
 		}
 
-		// Token: 0x17009D66 RID: 40294
-		// (get) Token: 0x06023173 RID: 143731 RVA: 0x004DB924 File Offset: 0x004D9B24
+		// Token: 0x1700A59E RID: 42398
+		// (get) Token: 0x06025227 RID: 152103 RVA: 0x005187F8 File Offset: 0x005169F8
 		public string HoldCameraStateTag
 		{
 			get
@@ -180,19 +180,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023174 RID: 143732 RVA: 0x004DB95C File Offset: 0x004D9B5C
+		// Token: 0x06025228 RID: 152104 RVA: 0x00518830 File Offset: 0x00516A30
 		public Span<byte> GetHoldCameraStateTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x06023175 RID: 143733 RVA: 0x004DB96C File Offset: 0x004D9B6C
+		// Token: 0x06025229 RID: 152105 RVA: 0x00518840 File Offset: 0x00516A40
 		public byte[] GetHoldCameraStateTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(18);
 		}
 
-		// Token: 0x06023176 RID: 143734 RVA: 0x004DB97C File Offset: 0x004D9B7C
+		// Token: 0x0602522A RID: 152106 RVA: 0x00518850 File Offset: 0x00516A50
 		public static Offset<IHoldConfig> CreateIHoldConfig(FlatBufferBuilder builder, int HoldSwingFreq = 0, int HoldAngularVelocity = 0, Offset<IVectorInfo> HoldRotationOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> HoldOffsetOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> SecondaryOffsetOffset = default(Offset<IVectorInfo>), int HoldSwingRange = 0, StringOffset HoldCameraShakeOffset = default(StringOffset), StringOffset HoldCameraStateTagOffset = default(StringOffset))
 		{
 			builder.StartTable(8);
@@ -207,67 +207,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHoldConfig.EndIHoldConfig(builder);
 		}
 
-		// Token: 0x06023177 RID: 143735 RVA: 0x004DB9D3 File Offset: 0x004D9BD3
+		// Token: 0x0602522B RID: 152107 RVA: 0x005188A7 File Offset: 0x00516AA7
 		public static void StartIHoldConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06023178 RID: 143736 RVA: 0x004DB9DC File Offset: 0x004D9BDC
+		// Token: 0x0602522C RID: 152108 RVA: 0x005188B0 File Offset: 0x00516AB0
 		public static void AddHoldSwingFreq(FlatBufferBuilder builder, int holdSwingFreq)
 		{
 			builder.AddInt(0, holdSwingFreq, 0);
 		}
 
-		// Token: 0x06023179 RID: 143737 RVA: 0x004DB9E7 File Offset: 0x004D9BE7
+		// Token: 0x0602522D RID: 152109 RVA: 0x005188BB File Offset: 0x00516ABB
 		public static void AddHoldAngularVelocity(FlatBufferBuilder builder, int holdAngularVelocity)
 		{
 			builder.AddInt(1, holdAngularVelocity, 0);
 		}
 
-		// Token: 0x0602317A RID: 143738 RVA: 0x004DB9F2 File Offset: 0x004D9BF2
+		// Token: 0x0602522E RID: 152110 RVA: 0x005188C6 File Offset: 0x00516AC6
 		public static void AddHoldRotation(FlatBufferBuilder builder, Offset<IVectorInfo> holdRotationOffset)
 		{
 			builder.AddOffset(2, holdRotationOffset.Value, 0);
 		}
 
-		// Token: 0x0602317B RID: 143739 RVA: 0x004DBA02 File Offset: 0x004D9C02
+		// Token: 0x0602522F RID: 152111 RVA: 0x005188D6 File Offset: 0x00516AD6
 		public static void AddHoldOffset(FlatBufferBuilder builder, Offset<IVectorInfo> holdOffsetOffset)
 		{
 			builder.AddOffset(3, holdOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602317C RID: 143740 RVA: 0x004DBA12 File Offset: 0x004D9C12
+		// Token: 0x06025230 RID: 152112 RVA: 0x005188E6 File Offset: 0x00516AE6
 		public static void AddSecondaryOffset(FlatBufferBuilder builder, Offset<IVectorInfo> secondaryOffsetOffset)
 		{
 			builder.AddOffset(4, secondaryOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602317D RID: 143741 RVA: 0x004DBA22 File Offset: 0x004D9C22
+		// Token: 0x06025231 RID: 152113 RVA: 0x005188F6 File Offset: 0x00516AF6
 		public static void AddHoldSwingRange(FlatBufferBuilder builder, int holdSwingRange)
 		{
 			builder.AddInt(5, holdSwingRange, 0);
 		}
 
-		// Token: 0x0602317E RID: 143742 RVA: 0x004DBA2D File Offset: 0x004D9C2D
+		// Token: 0x06025232 RID: 152114 RVA: 0x00518901 File Offset: 0x00516B01
 		public static void AddHoldCameraShake(FlatBufferBuilder builder, StringOffset holdCameraShakeOffset)
 		{
 			builder.AddOffset(6, holdCameraShakeOffset.Value, 0);
 		}
 
-		// Token: 0x0602317F RID: 143743 RVA: 0x004DBA3D File Offset: 0x004D9C3D
+		// Token: 0x06025233 RID: 152115 RVA: 0x00518911 File Offset: 0x00516B11
 		public static void AddHoldCameraStateTag(FlatBufferBuilder builder, StringOffset holdCameraStateTagOffset)
 		{
 			builder.AddOffset(7, holdCameraStateTagOffset.Value, 0);
 		}
 
-		// Token: 0x06023180 RID: 143744 RVA: 0x004DBA4D File Offset: 0x004D9C4D
+		// Token: 0x06025234 RID: 152116 RVA: 0x00518921 File Offset: 0x00516B21
 		public static Offset<IHoldConfig> EndIHoldConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IHoldConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06023181 RID: 143745 RVA: 0x004DBA5C File Offset: 0x004D9C5C
+		// Token: 0x06025235 RID: 152117 RVA: 0x00518930 File Offset: 0x00516B30
 		public IHoldConfigT UnPack()
 		{
 			IHoldConfigT holdConfigT = new IHoldConfigT();
@@ -275,7 +275,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return holdConfigT;
 		}
 
-		// Token: 0x06023182 RID: 143746 RVA: 0x004DBA78 File Offset: 0x004D9C78
+		// Token: 0x06025236 RID: 152118 RVA: 0x0051894C File Offset: 0x00516B4C
 		public void UnPackTo(IHoldConfigT _o)
 		{
 			_o.HoldSwingFreq = this.HoldSwingFreq;
@@ -288,7 +288,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.HoldCameraStateTag = this.HoldCameraStateTag;
 		}
 
-		// Token: 0x06023183 RID: 143747 RVA: 0x004DBB50 File Offset: 0x004D9D50
+		// Token: 0x06025237 RID: 152119 RVA: 0x00518A24 File Offset: 0x00516C24
 		public static Offset<IHoldConfig> Pack(FlatBufferBuilder builder, IHoldConfigT _o)
 		{
 			if (_o == null)
@@ -303,7 +303,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHoldConfig.CreateIHoldConfig(builder, _o.HoldSwingFreq, _o.HoldAngularVelocity, holdRotationOffset, holdOffsetOffset, secondaryOffsetOffset, _o.HoldSwingRange, holdCameraShakeOffset, holdCameraStateTagOffset);
 		}
 
-		// Token: 0x0400E5A0 RID: 58784
+		// Token: 0x0400F1D0 RID: 61904
 		private Table __p;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 {
-	// Token: 0x02006455 RID: 25685
+	// Token: 0x020053D3 RID: 21459
 	public class MotorLinkageStickerItem : UiPanelBase
 	{
-		// Token: 0x060408D9 RID: 264409 RVA: 0x00FA00B4 File Offset: 0x00F9E2B4
+		// Token: 0x0603559A RID: 218522 RVA: 0x00EE7030 File Offset: 0x00EE5230
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			};
 		}
 
-		// Token: 0x060408DA RID: 264410 RVA: 0x00FA011C File Offset: 0x00F9E31C
+		// Token: 0x0603559B RID: 218523 RVA: 0x00EE7098 File Offset: 0x00EE5298
 		public void Refresh(int stickerId)
 		{
 			this.StickerId = stickerId;
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x060408DB RID: 264411 RVA: 0x00FA0149 File Offset: 0x00F9E349
+		// Token: 0x0603559C RID: 218524 RVA: 0x00EE70C5 File Offset: 0x00EE52C5
 		public bool IsReceived()
 		{
 			return ActivityMotorLinkageController.Instance.ActivityData.IsStickerReceived(this.StickerId);
 		}
 
-		// Token: 0x060408DC RID: 264412 RVA: 0x00FA0160 File Offset: 0x00F9E360
+		// Token: 0x0603559D RID: 218525 RVA: 0x00EE70DC File Offset: 0x00EE52DC
 		public void SetToggleSelect(bool isSelected, bool? fireEvent = null)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent.GetValueOrDefault(), false, false);
 		}
 
-		// Token: 0x060408DD RID: 264413 RVA: 0x00FA0183 File Offset: 0x00F9E383
+		// Token: 0x0603559E RID: 218526 RVA: 0x00EE70FF File Offset: 0x00EE52FF
 		private void OnClickToggle(EToggleState state)
 		{
 			if (this.StickerId == 0)
@@ -68,10 +68,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			clickToggleCallback();
 		}
 
-		// Token: 0x04021923 RID: 137507
+		// Token: 0x0401C252 RID: 115282
 		private int StickerId;
 
-		// Token: 0x04021924 RID: 137508
+		// Token: 0x0401C253 RID: 115283
 		[Nullable(2)]
 		public Action ClickToggleCallback;
 	}

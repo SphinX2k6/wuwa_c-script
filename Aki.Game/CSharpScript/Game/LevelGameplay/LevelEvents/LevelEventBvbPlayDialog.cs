@@ -7,15 +7,15 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AF7 RID: 27383
+	// Token: 0x02005C6F RID: 23663
 	public class LevelEventBvbPlayDialog : LevelEventBase
 	{
-		// Token: 0x06044016 RID: 278550 RVA: 0x010B1ECE File Offset: 0x010B00CE
+		// Token: 0x0603A168 RID: 237928 RVA: 0x0105B79E File Offset: 0x0105999E
 		public LevelEventBvbPlayDialog(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044017 RID: 278551 RVA: 0x010B1ED8 File Offset: 0x010B00D8
+		// Token: 0x0603A169 RID: 237929 RVA: 0x0105B7A8 File Offset: 0x010599A8
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

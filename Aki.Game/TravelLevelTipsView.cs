@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012E5 RID: 4837
+// Token: 0x02000799 RID: 1945
 [NullableContext(1)]
 [Nullable(0)]
 public class TravelLevelTipsView : UiViewBase
 {
-	// Token: 0x06008579 RID: 34169 RVA: 0x001C6D50 File Offset: 0x001C4F50
+	// Token: 0x06005914 RID: 22804 RVA: 0x001CFBBC File Offset: 0x001CDDBC
 	public TravelLevelTipsView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600857A RID: 34170 RVA: 0x001C6D88 File Offset: 0x001C4F88
+	// Token: 0x06005915 RID: 22805 RVA: 0x001CFBF4 File Offset: 0x001CDDF4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -35,7 +35,7 @@ public class TravelLevelTipsView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600857B RID: 34171 RVA: 0x001C6E14 File Offset: 0x001C5014
+	// Token: 0x06005916 RID: 22806 RVA: 0x001CFC80 File Offset: 0x001CDE80
 	protected override void OnStart()
 	{
 		ActivityMapTravelData activityMapTravelData = this.OpenParam as ActivityMapTravelData;
@@ -72,19 +72,19 @@ public class TravelLevelTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600857C RID: 34172 RVA: 0x001C6EE3 File Offset: 0x001C50E3
+	// Token: 0x06005917 RID: 22807 RVA: 0x001CFD4F File Offset: 0x001CDF4F
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600857D RID: 34173 RVA: 0x001C6F01 File Offset: 0x001C5101
+	// Token: 0x06005918 RID: 22808 RVA: 0x001CFD6D File Offset: 0x001CDF6D
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600857E RID: 34174 RVA: 0x001C6F1F File Offset: 0x001C511F
+	// Token: 0x06005919 RID: 22809 RVA: 0x001CFD8B File Offset: 0x001CDF8B
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "TipsChange")
@@ -93,7 +93,7 @@ public class TravelLevelTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600857F RID: 34175 RVA: 0x001C6F34 File Offset: 0x001C5134
+	// Token: 0x0600591A RID: 22810 RVA: 0x001CFDA0 File Offset: 0x001CDFA0
 	protected override void OnBeforeShow()
 	{
 		this.TickHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.Refresh), 20f, 1f, null, null, true);
@@ -120,7 +120,7 @@ public class TravelLevelTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008580 RID: 34176 RVA: 0x001C701C File Offset: 0x001C521C
+	// Token: 0x0600591B RID: 22811 RVA: 0x001CFE88 File Offset: 0x001CE088
 	protected override void OnAfterShow()
 	{
 		switch (this.TipsType)
@@ -139,13 +139,13 @@ public class TravelLevelTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008581 RID: 34177 RVA: 0x001C705A File Offset: 0x001C525A
+	// Token: 0x0600591C RID: 22812 RVA: 0x001CFEC6 File Offset: 0x001CE0C6
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveTick();
 	}
 
-	// Token: 0x06008582 RID: 34178 RVA: 0x001C7064 File Offset: 0x001C5264
+	// Token: 0x0600591D RID: 22813 RVA: 0x001CFED0 File Offset: 0x001CE0D0
 	private UniTask RunExpAdd()
 	{
 		TravelLevelTipsView.<RunExpAdd>d__20 <RunExpAdd>d__;
@@ -156,7 +156,7 @@ public class TravelLevelTipsView : UiViewBase
 		return <RunExpAdd>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008583 RID: 34179 RVA: 0x001C70A8 File Offset: 0x001C52A8
+	// Token: 0x0600591E RID: 22814 RVA: 0x001CFF14 File Offset: 0x001CE114
 	private UniTask RunLevelUp()
 	{
 		TravelLevelTipsView.<RunLevelUp>d__21 <RunLevelUp>d__;
@@ -167,7 +167,7 @@ public class TravelLevelTipsView : UiViewBase
 		return <RunLevelUp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008584 RID: 34180 RVA: 0x001C70EC File Offset: 0x001C52EC
+	// Token: 0x0600591F RID: 22815 RVA: 0x001CFF58 File Offset: 0x001CE158
 	protected void Refresh(float delta)
 	{
 		if (!this.RunBarAnim)
@@ -183,7 +183,7 @@ public class TravelLevelTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008585 RID: 34181 RVA: 0x001C7158 File Offset: 0x001C5358
+	// Token: 0x06005920 RID: 22816 RVA: 0x001CFFC4 File Offset: 0x001CE1C4
 	private UniTask StartBarAnim(float current, float target, float end)
 	{
 		TravelLevelTipsView.<StartBarAnim>d__31 <StartBarAnim>d__;
@@ -197,14 +197,14 @@ public class TravelLevelTipsView : UiViewBase
 		return <StartBarAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008586 RID: 34182 RVA: 0x001C71B3 File Offset: 0x001C53B3
+	// Token: 0x06005921 RID: 22817 RVA: 0x001D001F File Offset: 0x001CE21F
 	private void EndBarAnim()
 	{
 		this.RunBarAnim = false;
 		this.BarAnimPromise.SetResult();
 	}
 
-	// Token: 0x06008587 RID: 34183 RVA: 0x001C71C7 File Offset: 0x001C53C7
+	// Token: 0x06005922 RID: 22818 RVA: 0x001D0033 File Offset: 0x001CE233
 	private void RemoveTick()
 	{
 		if (this.TickHandle != null)
@@ -214,112 +214,112 @@ public class TravelLevelTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008588 RID: 34184 RVA: 0x001C71EC File Offset: 0x001C53EC
+	// Token: 0x06005923 RID: 22819 RVA: 0x001D0058 File Offset: 0x001CE258
 	private void RefreshBar(float current, float target)
 	{
 		float fillAmount = MathUtils.Instance.Clamp(current / target, 0f, 1f);
 		base.GetSprite(2).SetFillAmount(fillAmount);
 	}
 
-	// Token: 0x06008589 RID: 34185 RVA: 0x001C721E File Offset: 0x001C541E
+	// Token: 0x06005924 RID: 22820 RVA: 0x001D008A File Offset: 0x001CE28A
 	private void SetExpTextVisible(bool bVisible)
 	{
 		base.GetText(1).SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600858A RID: 34186 RVA: 0x001C722D File Offset: 0x001C542D
+	// Token: 0x06005925 RID: 22821 RVA: 0x001D0099 File Offset: 0x001CE299
 	private void SetExpText(int expCount)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "MapTravelLevelUp_Text", new <>z__ReadOnlySingleElementList<object>(expCount));
 	}
 
-	// Token: 0x0600858B RID: 34187 RVA: 0x001C7250 File Offset: 0x001C5450
+	// Token: 0x06005926 RID: 22822 RVA: 0x001D00BC File Offset: 0x001CE2BC
 	private void SetExpMaxText()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "MapTravelLevelCanUp_Text", Array.Empty<object>());
 		this.SetExpTextVisible(true);
 	}
 
-	// Token: 0x0600858C RID: 34188 RVA: 0x001C7274 File Offset: 0x001C5474
+	// Token: 0x06005927 RID: 22823 RVA: 0x001D00E0 File Offset: 0x001CE2E0
 	private void SetLevelText(int level)
 	{
 		base.GetText(0).SetText(level.ToString(), true);
 	}
 
-	// Token: 0x04003BE3 RID: 15331
+	// Token: 0x04003C7B RID: 15483
 	private TravelLevelTipsView.ETipsType TipsType;
 
-	// Token: 0x04003BE4 RID: 15332
+	// Token: 0x04003C7C RID: 15484
 	private int PreLevel;
 
-	// Token: 0x04003BE5 RID: 15333
+	// Token: 0x04003C7D RID: 15485
 	private int CurLevel;
 
-	// Token: 0x04003BE6 RID: 15334
+	// Token: 0x04003C7E RID: 15486
 	private int PreExpTotalCount;
 
-	// Token: 0x04003BE7 RID: 15335
+	// Token: 0x04003C7F RID: 15487
 	private int CurExpTotalCount;
 
-	// Token: 0x04003BE8 RID: 15336
+	// Token: 0x04003C80 RID: 15488
 	private int PreLevelTargetExp;
 
-	// Token: 0x04003BE9 RID: 15337
+	// Token: 0x04003C81 RID: 15489
 	private int PreCurExpCount;
 
-	// Token: 0x04003BEA RID: 15338
+	// Token: 0x04003C82 RID: 15490
 	private int CurExpCount;
 
-	// Token: 0x04003BEB RID: 15339
+	// Token: 0x04003C83 RID: 15491
 	private int CurTargetExp;
 
-	// Token: 0x04003BEC RID: 15340
+	// Token: 0x04003C84 RID: 15492
 	protected TimerHandle TickHandle;
 
-	// Token: 0x04003BED RID: 15341
+	// Token: 0x04003C85 RID: 15493
 	protected int BarAnimTime = ConfigCommonParamById.GetIntConfig("TravelExpBarDisplayTime").Value;
 
-	// Token: 0x04003BEE RID: 15342
+	// Token: 0x04003C86 RID: 15494
 	protected bool RunBarAnim;
 
-	// Token: 0x04003BEF RID: 15343
+	// Token: 0x04003C87 RID: 15495
 	protected float RunBarAnimTime;
 
-	// Token: 0x04003BF0 RID: 15344
+	// Token: 0x04003C88 RID: 15496
 	protected float StartValue;
 
-	// Token: 0x04003BF1 RID: 15345
+	// Token: 0x04003C89 RID: 15497
 	protected float TargetValue;
 
-	// Token: 0x04003BF2 RID: 15346
+	// Token: 0x04003C8A RID: 15498
 	protected float EndValue;
 
-	// Token: 0x04003BF3 RID: 15347
+	// Token: 0x04003C8B RID: 15499
 	protected CustomPromise BarAnimPromise = new CustomPromise();
 
-	// Token: 0x02007903 RID: 30979
+	// Token: 0x02006A8D RID: 27277
 	[NullableContext(0)]
 	private enum ETipsType
 	{
-		// Token: 0x04027DE7 RID: 163303
+		// Token: 0x04023114 RID: 143636
 		ExpAdd,
-		// Token: 0x04027DE8 RID: 163304
+		// Token: 0x04023115 RID: 143637
 		LevelUp,
-		// Token: 0x04027DE9 RID: 163305
+		// Token: 0x04023116 RID: 143638
 		LevelUpAndExpAdd
 	}
 
-	// Token: 0x02007904 RID: 30980
+	// Token: 0x02006A8E RID: 27278
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027DEA RID: 163306
+		// Token: 0x04023117 RID: 143639
 		public const int TxtLv = 0;
 
-		// Token: 0x04027DEB RID: 163307
+		// Token: 0x04023118 RID: 143640
 		public const int TxtExp = 1;
 
-		// Token: 0x04027DEC RID: 163308
+		// Token: 0x04023119 RID: 143641
 		public const int BarExp = 2;
 	}
 }

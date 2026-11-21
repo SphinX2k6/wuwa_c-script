@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02003135 RID: 12597
+// Token: 0x02002691 RID: 9873
 public enum ESkillRotateType
 {
-	// Token: 0x0400D298 RID: 53912
+	// Token: 0x0400D6C2 RID: 54978
 	None,
-	// Token: 0x0400D299 RID: 53913
+	// Token: 0x0400D6C3 RID: 54979
 	Location,
-	// Token: 0x0400D29A RID: 53914
+	// Token: 0x0400D6C4 RID: 54980
 	Direct,
-	// Token: 0x0400D29B RID: 53915
+	// Token: 0x0400D6C5 RID: 54981
 	BlackBoardEntityId,
-	// Token: 0x0400D29C RID: 53916
+	// Token: 0x0400D6C6 RID: 54982
 	BlackBoardLocation,
-	// Token: 0x0400D29D RID: 53917
+	// Token: 0x0400D6C7 RID: 54983
 	BlackBoardDirect,
-	// Token: 0x0400D29E RID: 53918
+	// Token: 0x0400D6C8 RID: 54984
 	BlackBoardInt,
-	// Token: 0x0400D29F RID: 53919
+	// Token: 0x0400D6C9 RID: 54985
 	StandBy
 }

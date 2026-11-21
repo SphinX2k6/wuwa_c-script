@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062AE RID: 25262
+	// Token: 0x0200691F RID: 26911
 	public struct ICaptureElementalBox : IFlatbufferObject
 	{
-		// Token: 0x1700BC93 RID: 48275
-		// (get) Token: 0x0602BA67 RID: 178791 RVA: 0x00602144 File Offset: 0x00600344
+		// Token: 0x1700C61B RID: 50715
+		// (get) Token: 0x0602E1C8 RID: 188872 RVA: 0x0064CF4C File Offset: 0x0064B14C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BA68 RID: 178792 RVA: 0x00602151 File Offset: 0x00600351
+		// Token: 0x0602E1C9 RID: 188873 RVA: 0x0064CF59 File Offset: 0x0064B159
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BA69 RID: 178793 RVA: 0x00602158 File Offset: 0x00600358
+		// Token: 0x0602E1CA RID: 188874 RVA: 0x0064CF60 File Offset: 0x0064B160
 		public static ICaptureElementalBox GetRootAsICaptureElementalBox(ByteBuffer _bb)
 		{
 			return ICaptureElementalBox.GetRootAsICaptureElementalBox(_bb, default(ICaptureElementalBox));
 		}
 
-		// Token: 0x0602BA6A RID: 178794 RVA: 0x00602174 File Offset: 0x00600374
+		// Token: 0x0602E1CB RID: 188875 RVA: 0x0064CF7C File Offset: 0x0064B17C
 		public static ICaptureElementalBox GetRootAsICaptureElementalBox(ByteBuffer _bb, ICaptureElementalBox obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BA6B RID: 178795 RVA: 0x00602191 File Offset: 0x00600391
+		// Token: 0x0602E1CC RID: 188876 RVA: 0x0064CF99 File Offset: 0x0064B199
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BA6C RID: 178796 RVA: 0x006021A0 File Offset: 0x006003A0
+		// Token: 0x0602E1CD RID: 188877 RVA: 0x0064CFA8 File Offset: 0x0064B1A8
 		public ICaptureElementalBox __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BC94 RID: 48276
-		// (get) Token: 0x0602BA6D RID: 178797 RVA: 0x006021B0 File Offset: 0x006003B0
+		// Token: 0x1700C61C RID: 50716
+		// (get) Token: 0x0602E1CE RID: 188878 RVA: 0x0064CFB8 File Offset: 0x0064B1B8
 		public TControlElementalBoxType CtrlConfigType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BA6E RID: 178798 RVA: 0x006021EC File Offset: 0x006003EC
+		// Token: 0x0602E1CF RID: 188879 RVA: 0x0064CFF4 File Offset: 0x0064B1F4
 		public TTable? CtrlConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602BA6F RID: 178799 RVA: 0x00602230 File Offset: 0x00600430
+		// Token: 0x0602E1D0 RID: 188880 RVA: 0x0064D038 File Offset: 0x0064B238
 		public IControlElementalBoxCapture CtrlConfigAsIControlElementalBoxCapture()
 		{
 			return this.CtrlConfig<IControlElementalBoxCapture>().Value;
 		}
 
-		// Token: 0x0602BA70 RID: 178800 RVA: 0x0060224C File Offset: 0x0060044C
+		// Token: 0x0602E1D1 RID: 188881 RVA: 0x0064D054 File Offset: 0x0064B254
 		public IControlElementalBoxReturn CtrlConfigAsIControlElementalBoxReturn()
 		{
 			return this.CtrlConfig<IControlElementalBoxReturn>().Value;
 		}
 
-		// Token: 0x1700BC95 RID: 48277
-		// (get) Token: 0x0602BA71 RID: 178801 RVA: 0x00602268 File Offset: 0x00600468
+		// Token: 0x1700C61D RID: 50717
+		// (get) Token: 0x0602E1D2 RID: 188882 RVA: 0x0064D070 File Offset: 0x0064B270
 		public TElementalBoxTargetPosType TargetPosConfigType
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BA72 RID: 178802 RVA: 0x006022A4 File Offset: 0x006004A4
+		// Token: 0x0602E1D3 RID: 188883 RVA: 0x0064D0AC File Offset: 0x0064B2AC
 		public TTable? TargetPosConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -111,20 +111,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602BA73 RID: 178803 RVA: 0x006022EC File Offset: 0x006004EC
+		// Token: 0x0602E1D4 RID: 188884 RVA: 0x0064D0F4 File Offset: 0x0064B2F4
 		public IElementalBoxTargetPrefabPos TargetPosConfigAsIElementalBoxTargetPrefabPos()
 		{
 			return this.TargetPosConfig<IElementalBoxTargetPrefabPos>().Value;
 		}
 
-		// Token: 0x0602BA74 RID: 178804 RVA: 0x00602308 File Offset: 0x00600508
+		// Token: 0x0602E1D5 RID: 188885 RVA: 0x0064D110 File Offset: 0x0064B310
 		public IElementalBoxTargetRelativePos TargetPosConfigAsIElementalBoxTargetRelativePos()
 		{
 			return this.TargetPosConfig<IElementalBoxTargetRelativePos>().Value;
 		}
 
-		// Token: 0x1700BC96 RID: 48278
-		// (get) Token: 0x0602BA75 RID: 178805 RVA: 0x00602324 File Offset: 0x00600524
+		// Token: 0x1700C61E RID: 50718
+		// (get) Token: 0x0602E1D6 RID: 188886 RVA: 0x0064D12C File Offset: 0x0064B32C
 		public float MoveSpeed
 		{
 			get
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BA76 RID: 178806 RVA: 0x00602365 File Offset: 0x00600565
+		// Token: 0x0602E1D7 RID: 188887 RVA: 0x0064D16D File Offset: 0x0064B36D
 		public static Offset<ICaptureElementalBox> CreateICaptureElementalBox(FlatBufferBuilder builder, TControlElementalBoxType CtrlConfig_type = TControlElementalBoxType.NONE, int CtrlConfigOffset = 0, TElementalBoxTargetPosType TargetPosConfig_type = TElementalBoxTargetPosType.NONE, int TargetPosConfigOffset = 0, float MoveSpeed = 0f)
 		{
 			builder.StartTable(5);
@@ -150,49 +150,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICaptureElementalBox.EndICaptureElementalBox(builder);
 		}
 
-		// Token: 0x0602BA77 RID: 178807 RVA: 0x00602399 File Offset: 0x00600599
+		// Token: 0x0602E1D8 RID: 188888 RVA: 0x0064D1A1 File Offset: 0x0064B3A1
 		public static void StartICaptureElementalBox(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602BA78 RID: 178808 RVA: 0x006023A2 File Offset: 0x006005A2
+		// Token: 0x0602E1D9 RID: 188889 RVA: 0x0064D1AA File Offset: 0x0064B3AA
 		public static void AddCtrlConfigType(FlatBufferBuilder builder, TControlElementalBoxType ctrlConfigType)
 		{
 			builder.AddByte(0, (byte)ctrlConfigType, 0);
 		}
 
-		// Token: 0x0602BA79 RID: 178809 RVA: 0x006023AD File Offset: 0x006005AD
+		// Token: 0x0602E1DA RID: 188890 RVA: 0x0064D1B5 File Offset: 0x0064B3B5
 		public static void AddCtrlConfig(FlatBufferBuilder builder, int ctrlConfigOffset)
 		{
 			builder.AddOffset(1, ctrlConfigOffset, 0);
 		}
 
-		// Token: 0x0602BA7A RID: 178810 RVA: 0x006023B8 File Offset: 0x006005B8
+		// Token: 0x0602E1DB RID: 188891 RVA: 0x0064D1C0 File Offset: 0x0064B3C0
 		public static void AddTargetPosConfigType(FlatBufferBuilder builder, TElementalBoxTargetPosType targetPosConfigType)
 		{
 			builder.AddByte(2, (byte)targetPosConfigType, 0);
 		}
 
-		// Token: 0x0602BA7B RID: 178811 RVA: 0x006023C3 File Offset: 0x006005C3
+		// Token: 0x0602E1DC RID: 188892 RVA: 0x0064D1CB File Offset: 0x0064B3CB
 		public static void AddTargetPosConfig(FlatBufferBuilder builder, int targetPosConfigOffset)
 		{
 			builder.AddOffset(3, targetPosConfigOffset, 0);
 		}
 
-		// Token: 0x0602BA7C RID: 178812 RVA: 0x006023CE File Offset: 0x006005CE
+		// Token: 0x0602E1DD RID: 188893 RVA: 0x0064D1D6 File Offset: 0x0064B3D6
 		public static void AddMoveSpeed(FlatBufferBuilder builder, float moveSpeed)
 		{
 			builder.AddFloat(4, moveSpeed, 0.0);
 		}
 
-		// Token: 0x0602BA7D RID: 178813 RVA: 0x006023E1 File Offset: 0x006005E1
+		// Token: 0x0602E1DE RID: 188894 RVA: 0x0064D1E9 File Offset: 0x0064B3E9
 		public static Offset<ICaptureElementalBox> EndICaptureElementalBox(FlatBufferBuilder builder)
 		{
 			return new Offset<ICaptureElementalBox>(builder.EndTable());
 		}
 
-		// Token: 0x0602BA7E RID: 178814 RVA: 0x006023F0 File Offset: 0x006005F0
+		// Token: 0x0602E1DF RID: 188895 RVA: 0x0064D1F8 File Offset: 0x0064B3F8
 		public ICaptureElementalBoxT UnPack()
 		{
 			ICaptureElementalBoxT captureElementalBoxT = new ICaptureElementalBoxT();
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return captureElementalBoxT;
 		}
 
-		// Token: 0x0602BA7F RID: 178815 RVA: 0x0060240C File Offset: 0x0060060C
+		// Token: 0x0602E1E0 RID: 188896 RVA: 0x0064D214 File Offset: 0x0064B414
 		public void UnPackTo(ICaptureElementalBoxT _o)
 		{
 			_o.CtrlConfig = new TControlElementalBoxTypeUnion();
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.MoveSpeed = this.MoveSpeed;
 		}
 
-		// Token: 0x0602BA80 RID: 178816 RVA: 0x00602560 File Offset: 0x00600760
+		// Token: 0x0602E1E1 RID: 188897 RVA: 0x0064D368 File Offset: 0x0064B568
 		public static Offset<ICaptureElementalBox> Pack(FlatBufferBuilder builder, ICaptureElementalBoxT _o)
 		{
 			if (_o == null)
@@ -248,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICaptureElementalBox.CreateICaptureElementalBox(builder, ctrlConfig_type, ctrlConfigOffset, targetPosConfig_type, targetPosConfigOffset, _o.MoveSpeed);
 		}
 
-		// Token: 0x0401084B RID: 67659
+		// Token: 0x04011660 RID: 71264
 		private Table __p;
 	}
 }

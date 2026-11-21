@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000136 RID: 310
+	// Token: 0x02000149 RID: 329
 	[EnumExtensions]
 	public enum ESceneTextGuideUiScaleType
 	{
-		// Token: 0x04000613 RID: 1555
+		// Token: 0x04000657 RID: 1623
 		FarBigNearSmall,
-		// Token: 0x04000614 RID: 1556
+		// Token: 0x04000658 RID: 1624
 		FarSmallNearBig
 	}
 }

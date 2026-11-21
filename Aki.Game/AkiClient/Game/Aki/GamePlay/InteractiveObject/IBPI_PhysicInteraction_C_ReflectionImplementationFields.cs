@@ -2,19 +2,19 @@
 
 namespace AkiClient.Game.Aki.GamePlay.InteractiveObject
 {
-	// Token: 0x02003E64 RID: 15972
+	// Token: 0x02003153 RID: 12627
 	internal static class IBPI_PhysicInteraction_C_ReflectionImplementationFields
 	{
-		// Token: 0x04014718 RID: 83736
+		// Token: 0x04010979 RID: 67961
 		public static IntPtr __IsPhysicInteracted_NativeFunctionPtr;
 
-		// Token: 0x04014719 RID: 83737
+		// Token: 0x0401097A RID: 67962
 		public static IntPtr __WeightResponse_NativeFunctionPtr;
 
-		// Token: 0x0401471A RID: 83738
+		// Token: 0x0401097B RID: 67963
 		public static IntPtr __ScanResponse_NativeFunctionPtr;
 
-		// Token: 0x0401471B RID: 83739
+		// Token: 0x0401097C RID: 67964
 		public static IntPtr __GrabedResponse_NativeFunctionPtr;
 	}
 }

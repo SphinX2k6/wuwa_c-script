@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006937 RID: 26935
+	// Token: 0x02006FEA RID: 28650
 	public class IHonamiStoryWeaponEquipSettingT
 	{
-		// Token: 0x1700C7D9 RID: 51161
-		// (get) Token: 0x0602F084 RID: 192644 RVA: 0x006696D4 File Offset: 0x006678D4
-		// (set) Token: 0x0602F085 RID: 192645 RVA: 0x006696DC File Offset: 0x006678DC
+		// Token: 0x1700D1DC RID: 53724
+		// (get) Token: 0x06031A54 RID: 203348 RVA: 0x006B9BBC File Offset: 0x006B7DBC
+		// (set) Token: 0x06031A55 RID: 203349 RVA: 0x006B9BC4 File Offset: 0x006B7DC4
 		public EHonamiStoryRoleSlot RoleSlot { get; set; }
 
-		// Token: 0x1700C7DA RID: 51162
-		// (get) Token: 0x0602F086 RID: 192646 RVA: 0x006696E5 File Offset: 0x006678E5
-		// (set) Token: 0x0602F087 RID: 192647 RVA: 0x006696ED File Offset: 0x006678ED
+		// Token: 0x1700D1DD RID: 53725
+		// (get) Token: 0x06031A56 RID: 203350 RVA: 0x006B9BCD File Offset: 0x006B7DCD
+		// (set) Token: 0x06031A57 RID: 203351 RVA: 0x006B9BD5 File Offset: 0x006B7DD5
 		public int WeaponId { get; set; }
 
-		// Token: 0x0602F088 RID: 192648 RVA: 0x006696F6 File Offset: 0x006678F6
+		// Token: 0x06031A58 RID: 203352 RVA: 0x006B9BDE File Offset: 0x006B7DDE
 		public IHonamiStoryWeaponEquipSettingT()
 		{
 			this.RoleSlot = EHonamiStoryRoleSlot.None;

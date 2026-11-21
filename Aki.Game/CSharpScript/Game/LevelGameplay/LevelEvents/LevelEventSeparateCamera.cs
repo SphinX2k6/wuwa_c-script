@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B6D RID: 27501
+	// Token: 0x02005CE5 RID: 23781
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSeparateCamera : LevelEventBase
 	{
-		// Token: 0x0604421D RID: 279069 RVA: 0x010C67A4 File Offset: 0x010C49A4
+		// Token: 0x0603A36F RID: 238447 RVA: 0x01070418 File Offset: 0x0106E618
 		public LevelEventSeparateCamera(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604421E RID: 279070 RVA: 0x010C67D0 File Offset: 0x010C49D0
+		// Token: 0x0603A370 RID: 238448 RVA: 0x01070444 File Offset: 0x0106E644
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			SetSubScreenMode setSubScreenMode = inParams as SetSubScreenMode;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.ExecuteInternal().Forget();
 		}
 
-		// Token: 0x0604421F RID: 279071 RVA: 0x010C6820 File Offset: 0x010C4A20
+		// Token: 0x0603A371 RID: 238449 RVA: 0x01070494 File Offset: 0x0106E694
 		private UniTask ExecuteInternal()
 		{
 			LevelEventSeparateCamera.<ExecuteInternal>d__7 <ExecuteInternal>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <ExecuteInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044220 RID: 279072 RVA: 0x010C6864 File Offset: 0x010C4A64
+		// Token: 0x0603A372 RID: 238450 RVA: 0x010704D8 File Offset: 0x0106E6D8
 		private UniTask WaitForResource()
 		{
 			LevelEventSeparateCamera.<WaitForResource>d__8 <WaitForResource>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <WaitForResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044221 RID: 279073 RVA: 0x010C68A8 File Offset: 0x010C4AA8
+		// Token: 0x0603A373 RID: 238451 RVA: 0x0107051C File Offset: 0x0106E71C
 		private void ApplySeparateCamera()
 		{
 			switch (this.Params.Config.Type)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044222 RID: 279074 RVA: 0x010C6E60 File Offset: 0x010C5060
+		// Token: 0x0603A374 RID: 238452 RVA: 0x01070AD4 File Offset: 0x0106ECD4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <LoadCurveFloat>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044223 RID: 279075 RVA: 0x010C6EA4 File Offset: 0x010C50A4
+		// Token: 0x0603A375 RID: 238453 RVA: 0x01070B18 File Offset: 0x0106ED18
 		[return: Nullable(2)]
 		private UCurveFloat GetLoadedCurveFloat(string path)
 		{
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return null;
 		}
 
-		// Token: 0x06044224 RID: 279076 RVA: 0x010C6F18 File Offset: 0x010C5118
+		// Token: 0x0603A376 RID: 238454 RVA: 0x01070B8C File Offset: 0x0106ED8C
 		private Vector2D GetInitViewLocation(ESubScreenInitPreset presetAnchor, Vector2D outVector2D)
 		{
 			switch (presetAnchor)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return outVector2D;
 		}
 
-		// Token: 0x06044225 RID: 279077 RVA: 0x010C6FC0 File Offset: 0x010C51C0
+		// Token: 0x0603A377 RID: 238455 RVA: 0x01070C34 File Offset: 0x0106EE34
 		private Vector2D GetInitViewSize(ESubScreenInitPreset presetAnchor, Vector2D outVector2D)
 		{
 			switch (presetAnchor)
@@ -232,21 +232,21 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return outVector2D;
 		}
 
-		// Token: 0x06044226 RID: 279078 RVA: 0x010C7066 File Offset: 0x010C5266
+		// Token: 0x0603A378 RID: 238456 RVA: 0x01070CDA File Offset: 0x0106EEDA
 		protected override void OnReset()
 		{
 			this.LoadedCurveFloatArray.Clear();
 		}
 
-		// Token: 0x04023944 RID: 145732
+		// Token: 0x0401EBE6 RID: 125926
 		[Nullable(2)]
 		public SetSubScreenMode Params;
 
-		// Token: 0x04023945 RID: 145733
+		// Token: 0x0401EBE7 RID: 125927
 		[Nullable(2)]
 		public CameraModelInstance CameraModel;
 
-		// Token: 0x04023946 RID: 145734
+		// Token: 0x0401EBE8 RID: 125928
 		[Nullable(new byte[]
 		{
 			1,
@@ -254,10 +254,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 		})]
 		private readonly List<UCurveFloat> LoadedCurveFloatArray = new List<UCurveFloat>();
 
-		// Token: 0x04023947 RID: 145735
+		// Token: 0x0401EBE9 RID: 125929
 		private readonly Vector2D ViewLocation = Vector2D.Create();
 
-		// Token: 0x04023948 RID: 145736
+		// Token: 0x0401EBEA RID: 125930
 		private readonly Vector2D ViewSize = Vector2D.Create();
 	}
 }

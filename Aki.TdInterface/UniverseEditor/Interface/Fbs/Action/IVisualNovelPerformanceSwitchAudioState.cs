@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075C5 RID: 30149
+	// Token: 0x02007DBE RID: 32190
 	public struct IVisualNovelPerformanceSwitchAudioState : IFlatbufferObject
 	{
-		// Token: 0x1700E4F7 RID: 58615
-		// (get) Token: 0x06036E7E RID: 224894 RVA: 0x00773E60 File Offset: 0x00772060
+		// Token: 0x1700F124 RID: 61732
+		// (get) Token: 0x0603A2AD RID: 238253 RVA: 0x007D75E7 File Offset: 0x007D57E7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036E7F RID: 224895 RVA: 0x00773E6D File Offset: 0x0077206D
+		// Token: 0x0603A2AE RID: 238254 RVA: 0x007D75F4 File Offset: 0x007D57F4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036E80 RID: 224896 RVA: 0x00773E74 File Offset: 0x00772074
+		// Token: 0x0603A2AF RID: 238255 RVA: 0x007D75FC File Offset: 0x007D57FC
 		public static IVisualNovelPerformanceSwitchAudioState GetRootAsIVisualNovelPerformanceSwitchAudioState(ByteBuffer _bb)
 		{
 			return IVisualNovelPerformanceSwitchAudioState.GetRootAsIVisualNovelPerformanceSwitchAudioState(_bb, default(IVisualNovelPerformanceSwitchAudioState));
 		}
 
-		// Token: 0x06036E81 RID: 224897 RVA: 0x00773E90 File Offset: 0x00772090
+		// Token: 0x0603A2B0 RID: 238256 RVA: 0x007D7618 File Offset: 0x007D5818
 		public static IVisualNovelPerformanceSwitchAudioState GetRootAsIVisualNovelPerformanceSwitchAudioState(ByteBuffer _bb, IVisualNovelPerformanceSwitchAudioState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036E82 RID: 224898 RVA: 0x00773EAD File Offset: 0x007720AD
+		// Token: 0x0603A2B1 RID: 238257 RVA: 0x007D7635 File Offset: 0x007D5835
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036E83 RID: 224899 RVA: 0x00773EBC File Offset: 0x007720BC
+		// Token: 0x0603A2B2 RID: 238258 RVA: 0x007D7644 File Offset: 0x007D5844
 		public IVisualNovelPerformanceSwitchAudioState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E4F8 RID: 58616
-		// (get) Token: 0x06036E84 RID: 224900 RVA: 0x00773ECC File Offset: 0x007720CC
+		// Token: 0x1700F125 RID: 61733
+		// (get) Token: 0x0603A2B3 RID: 238259 RVA: 0x007D7654 File Offset: 0x007D5854
 		public EVisualNovelPerformanceType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E4F9 RID: 58617
-		// (get) Token: 0x06036E85 RID: 224901 RVA: 0x00773F08 File Offset: 0x00772108
+		// Token: 0x1700F126 RID: 61734
+		// (get) Token: 0x0603A2B4 RID: 238260 RVA: 0x007D7690 File Offset: 0x007D5890
 		public float StartTime
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E4FA RID: 58618
-		// (get) Token: 0x06036E86 RID: 224902 RVA: 0x00773F48 File Offset: 0x00772148
+		// Token: 0x1700F127 RID: 61735
+		// (get) Token: 0x0603A2B5 RID: 238261 RVA: 0x007D76D0 File Offset: 0x007D58D0
 		public IAudioState? AudioState
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E4FB RID: 58619
-		// (get) Token: 0x06036E87 RID: 224903 RVA: 0x00773FA8 File Offset: 0x007721A8
+		// Token: 0x1700F128 RID: 61736
+		// (get) Token: 0x0603A2B6 RID: 238262 RVA: 0x007D7730 File Offset: 0x007D5930
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036E88 RID: 224904 RVA: 0x00773FE5 File Offset: 0x007721E5
+		// Token: 0x0603A2B7 RID: 238263 RVA: 0x007D776D File Offset: 0x007D596D
 		public static Offset<IVisualNovelPerformanceSwitchAudioState> CreateIVisualNovelPerformanceSwitchAudioState(FlatBufferBuilder builder, EVisualNovelPerformanceType Type = EVisualNovelPerformanceType.Enter, float StartTime = 0f, Offset<IAudioState> AudioStateOffset = default(Offset<IAudioState>), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelPerformanceSwitchAudioState.EndIVisualNovelPerformanceSwitchAudioState(builder);
 		}
 
-		// Token: 0x06036E89 RID: 224905 RVA: 0x00774011 File Offset: 0x00772211
+		// Token: 0x0603A2B8 RID: 238264 RVA: 0x007D7799 File Offset: 0x007D5999
 		public static void StartIVisualNovelPerformanceSwitchAudioState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06036E8A RID: 224906 RVA: 0x0077401A File Offset: 0x0077221A
+		// Token: 0x0603A2B9 RID: 238265 RVA: 0x007D77A2 File Offset: 0x007D59A2
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelPerformanceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036E8B RID: 224907 RVA: 0x00774025 File Offset: 0x00772225
+		// Token: 0x0603A2BA RID: 238266 RVA: 0x007D77AD File Offset: 0x007D59AD
 		public static void AddStartTime(FlatBufferBuilder builder, float startTime)
 		{
 			builder.AddFloat(1, startTime, 0.0);
 		}
 
-		// Token: 0x06036E8C RID: 224908 RVA: 0x00774038 File Offset: 0x00772238
+		// Token: 0x0603A2BB RID: 238267 RVA: 0x007D77C0 File Offset: 0x007D59C0
 		public static void AddAudioState(FlatBufferBuilder builder, Offset<IAudioState> audioStateOffset)
 		{
 			builder.AddOffset(2, audioStateOffset.Value, 0);
 		}
 
-		// Token: 0x06036E8D RID: 224909 RVA: 0x00774048 File Offset: 0x00772248
+		// Token: 0x0603A2BC RID: 238268 RVA: 0x007D77D0 File Offset: 0x007D59D0
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06036E8E RID: 224910 RVA: 0x00774053 File Offset: 0x00772253
+		// Token: 0x0603A2BD RID: 238269 RVA: 0x007D77DB File Offset: 0x007D59DB
 		public static Offset<IVisualNovelPerformanceSwitchAudioState> EndIVisualNovelPerformanceSwitchAudioState(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelPerformanceSwitchAudioState>(builder.EndTable());
 		}
 
-		// Token: 0x06036E8F RID: 224911 RVA: 0x00774060 File Offset: 0x00772260
+		// Token: 0x0603A2BE RID: 238270 RVA: 0x007D77E8 File Offset: 0x007D59E8
 		public IVisualNovelPerformanceSwitchAudioStateT UnPack()
 		{
 			IVisualNovelPerformanceSwitchAudioStateT visualNovelPerformanceSwitchAudioStateT = new IVisualNovelPerformanceSwitchAudioStateT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelPerformanceSwitchAudioStateT;
 		}
 
-		// Token: 0x06036E90 RID: 224912 RVA: 0x0077407C File Offset: 0x0077227C
+		// Token: 0x0603A2BF RID: 238271 RVA: 0x007D7804 File Offset: 0x007D5A04
 		public void UnPackTo(IVisualNovelPerformanceSwitchAudioStateT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06036E91 RID: 224913 RVA: 0x007740DC File Offset: 0x007722DC
+		// Token: 0x0603A2C0 RID: 238272 RVA: 0x007D7864 File Offset: 0x007D5A64
 		public static Offset<IVisualNovelPerformanceSwitchAudioState> Pack(FlatBufferBuilder builder, IVisualNovelPerformanceSwitchAudioStateT _o)
 		{
 			if (_o == null)
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelPerformanceSwitchAudioState.CreateIVisualNovelPerformanceSwitchAudioState(builder, _o.Type, _o.StartTime, audioStateOffset, _o.NullMask);
 		}
 
-		// Token: 0x04012519 RID: 75033
+		// Token: 0x0401354C RID: 79180
 		private Table __p;
 	}
 }

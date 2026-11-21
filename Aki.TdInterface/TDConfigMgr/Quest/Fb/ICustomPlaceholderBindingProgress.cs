@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001339 RID: 4921
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001489 RID: 5257
 	public class ICustomPlaceholderBindingProgress
 	{
-		// Token: 0x060070C7 RID: 28871 RVA: 0x001100A4 File Offset: 0x0010E2A4
+		// Token: 0x06007767 RID: 30567 RVA: 0x0011E610 File Offset: 0x0011C810
 		public static ICustomPlaceholderBindingProgress Create(ICustomPlaceholderBindingProgress? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002428 RID: 9256
-		// (get) Token: 0x060070C8 RID: 28872 RVA: 0x001100C3 File Offset: 0x0010E2C3
+		// Token: 0x170025F7 RID: 9719
+		// (get) Token: 0x06007768 RID: 30568 RVA: 0x0011E62F File Offset: 0x0011C82F
 		public virtual string PlaceHolderName
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002429 RID: 9257
-		// (get) Token: 0x060070C9 RID: 28873 RVA: 0x001100D0 File Offset: 0x0010E2D0
+		// Token: 0x170025F8 RID: 9720
+		// (get) Token: 0x06007769 RID: 30569 RVA: 0x0011E63C File Offset: 0x0011C83C
 		public virtual IPlayerHavingItemCount BindingProgressType
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400410F RID: 16655
+		// Token: 0x0400448B RID: 17547
 		private ICustomPlaceholderBindingProgress Instance;
 
-		// Token: 0x04004110 RID: 16656
+		// Token: 0x0400448C RID: 17548
 		[Nullable(2)]
 		private IPlayerHavingItemCount _BindingProgressTypeCache;
 
-		// Token: 0x04004111 RID: 16657
+		// Token: 0x0400448D RID: 17549
 		private bool _BindingProgressTypeInited;
 	}
 }

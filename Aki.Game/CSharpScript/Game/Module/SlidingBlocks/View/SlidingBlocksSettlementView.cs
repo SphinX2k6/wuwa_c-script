@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View
 {
-	// Token: 0x02004B96 RID: 19350
+	// Token: 0x02003B40 RID: 15168
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SlidingBlocksSettlementView : UiViewBase
 	{
-		// Token: 0x0603222F RID: 205359 RVA: 0x00BA5B96 File Offset: 0x00BA3D96
+		// Token: 0x06026FBF RID: 159679 RVA: 0x00AE9CE2 File Offset: 0x00AE7EE2
 		public SlidingBlocksSettlementView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06032230 RID: 205360 RVA: 0x00BA5BAC File Offset: 0x00BA3DAC
+		// Token: 0x06026FC0 RID: 159680 RVA: 0x00AE9CF8 File Offset: 0x00AE7EF8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			};
 		}
 
-		// Token: 0x06032231 RID: 205361 RVA: 0x00BA5CE8 File Offset: 0x00BA3EE8
+		// Token: 0x06026FC1 RID: 159681 RVA: 0x00AE9E34 File Offset: 0x00AE8034
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SlidingBlocksSettlementView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032232 RID: 205362 RVA: 0x00BA5D2C File Offset: 0x00BA3F2C
+		// Token: 0x06026FC2 RID: 159682 RVA: 0x00AE9E78 File Offset: 0x00AE8078
 		private UniTask NewCubeResult(int historyScore, List<TItem> rewardList)
 		{
 			SlidingBlocksSettlementView.<NewCubeResult>d__7 <NewCubeResult>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <NewCubeResult>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032233 RID: 205363 RVA: 0x00BA5D80 File Offset: 0x00BA3F80
+		// Token: 0x06026FC3 RID: 159683 RVA: 0x00AE9ECC File Offset: 0x00AE80CC
 		private void InitButtons(int instanceId)
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(instanceId);
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 				IsClickedCloseView = false,
 				OnClickedCallback = delegate(int index)
 				{
-					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon().Finally(delegate()
+					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false).Finally(delegate()
 					{
 						base.CloseMe(null);
 					});
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			}
 		}
 
-		// Token: 0x06032234 RID: 205364 RVA: 0x00BA5EDC File Offset: 0x00BA40DC
+		// Token: 0x06026FC4 RID: 159684 RVA: 0x00AEA028 File Offset: 0x00AE8228
 		private RewardExploreConfirmButton NewButton(IRewardExploreConfirmButton buttonData, int buttonIndex)
 		{
 			UUIItem item = base.GetItem(5);
@@ -131,61 +131,61 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return rewardExploreConfirmButton;
 		}
 
-		// Token: 0x06032235 RID: 205365 RVA: 0x00BA5F2C File Offset: 0x00BA412C
+		// Token: 0x06026FC5 RID: 159685 RVA: 0x00AEA078 File Offset: 0x00AE8278
 		protected override void OnAfterShow()
 		{
 		}
 
-		// Token: 0x06032236 RID: 205366 RVA: 0x00BA5F30 File Offset: 0x00BA4130
+		// Token: 0x06026FC6 RID: 159686 RVA: 0x00AEA07C File Offset: 0x00AE827C
 		protected override void OnAfterPlayStartSequence()
 		{
 			this.UiViewSequence.PlaySequence(this.IsSuccess ? "Success" : "Fail", true, null);
 		}
 
-		// Token: 0x06032237 RID: 205367 RVA: 0x00BA5F66 File Offset: 0x00BA4166
+		// Token: 0x06026FC7 RID: 159687 RVA: 0x00AEA0B2 File Offset: 0x00AE82B2
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0401AB55 RID: 109397
+		// Token: 0x040154A9 RID: 87209
 		[Nullable(2)]
 		private CubeResultItem CubeResultItem;
 
-		// Token: 0x0401AB56 RID: 109398
+		// Token: 0x040154AA RID: 87210
 		private readonly List<RewardExploreConfirmButton> ButtonList = new List<RewardExploreConfirmButton>();
 
-		// Token: 0x0401AB57 RID: 109399
+		// Token: 0x040154AB RID: 87211
 		private bool IsSuccess;
 
-		// Token: 0x0200ADA7 RID: 44455
+		// Token: 0x020097C6 RID: 38854
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04034BD5 RID: 216021
+			// Token: 0x0402F57C RID: 193916
 			TitleItem,
-			// Token: 0x04034BD6 RID: 216022
+			// Token: 0x0402F57D RID: 193917
 			TitleText,
-			// Token: 0x04034BD7 RID: 216023
+			// Token: 0x0402F57E RID: 193918
 			TitleTexture,
-			// Token: 0x04034BD8 RID: 216024
+			// Token: 0x0402F57F RID: 193919
 			ContentItem,
-			// Token: 0x04034BD9 RID: 216025
+			// Token: 0x0402F580 RID: 193920
 			ButtonHorizontalItem,
-			// Token: 0x04034BDA RID: 216026
+			// Token: 0x0402F581 RID: 193921
 			ButtonItem,
-			// Token: 0x04034BDB RID: 216027
+			// Token: 0x0402F582 RID: 193922
 			ToggleItem,
-			// Token: 0x04034BDC RID: 216028
+			// Token: 0x0402F583 RID: 193923
 			DoubleTip = 18,
-			// Token: 0x04034BDD RID: 216029
+			// Token: 0x0402F584 RID: 193924
 			DoubleTipTxt,
-			// Token: 0x04034BDE RID: 216030
+			// Token: 0x0402F585 RID: 193925
 			Content,
-			// Token: 0x04034BDF RID: 216031
+			// Token: 0x0402F586 RID: 193926
 			FriendItem,
-			// Token: 0x04034BE0 RID: 216032
+			// Token: 0x0402F587 RID: 193927
 			FriendGrid,
-			// Token: 0x04034BE1 RID: 216033
+			// Token: 0x0402F588 RID: 193928
 			ItemTeam
 		}
 	}

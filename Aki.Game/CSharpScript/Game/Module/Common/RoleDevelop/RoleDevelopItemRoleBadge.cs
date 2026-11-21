@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common.RoleDevelop
 {
-	// Token: 0x02005B4D RID: 23373
+	// Token: 0x02004B2C RID: 19244
 	public class RoleDevelopItemRoleBadge : UiPanelBase
 	{
-		// Token: 0x0603B2C3 RID: 242371 RVA: 0x00E1BD44 File Offset: 0x00E19F44
+		// Token: 0x0603020C RID: 197132 RVA: 0x00D6C18C File Offset: 0x00D6A38C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Common.RoleDevelop
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B2C4 RID: 242372 RVA: 0x00E1BDD0 File Offset: 0x00E19FD0
+		// Token: 0x0603020D RID: 197133 RVA: 0x00D6C218 File Offset: 0x00D6A418
 		[NullableContext(1)]
 		public void SetRoleHeadIconPath(string iconPath)
 		{

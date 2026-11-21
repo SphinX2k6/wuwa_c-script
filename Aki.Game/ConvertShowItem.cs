@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001FD0 RID: 8144
+// Token: 0x020014A3 RID: 5283
 [NullableContext(1)]
 [Nullable(0)]
 internal class ConvertShowItem : UiPanelBase
 {
-	// Token: 0x0600FF37 RID: 65335 RVA: 0x003E247C File Offset: 0x003E067C
+	// Token: 0x0600D39F RID: 54175 RVA: 0x003EEA58 File Offset: 0x003ECC58
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -28,30 +27,30 @@ internal class ConvertShowItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FF38 RID: 65336 RVA: 0x003E2506 File Offset: 0x003E0706
+	// Token: 0x0600D3A0 RID: 54176 RVA: 0x003EEAE2 File Offset: 0x003ECCE2
 	protected override void OnStart()
 	{
 		this.ItemScrollView = new LoopScrollView<CommonItemSmallItemGrid, TItem>(base.GetLoopScrollViewComponent(1), base.GetItem(2).GetOwner() as AUIBaseActor, new Func<CommonItemSmallItemGrid>(this.OnGridProxyCreate), false);
 	}
 
-	// Token: 0x0600FF39 RID: 65337 RVA: 0x003E2538 File Offset: 0x003E0738
+	// Token: 0x0600D3A1 RID: 54177 RVA: 0x003EEB14 File Offset: 0x003ECD14
 	private CommonItemSmallItemGrid OnGridProxyCreate()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600FF3A RID: 65338 RVA: 0x003E253F File Offset: 0x003E073F
+	// Token: 0x0600D3A2 RID: 54178 RVA: 0x003EEB1B File Offset: 0x003ECD1B
 	public void Refresh(string title, IReadOnlyList<TItem> itemList)
 	{
 		LoopScrollView<CommonItemSmallItemGrid, TItem> itemScrollView = this.ItemScrollView;
 		if (itemScrollView != null)
 		{
-			itemScrollView.RefreshByData(itemList.ToList<TItem>(), false, null, false);
+			itemScrollView.RefreshByData(itemList, false, null, false);
 		}
 		base.GetText(0).ShowTextNew(title);
 	}
 
-	// Token: 0x0400761C RID: 30236
+	// Token: 0x04007705 RID: 30469
 	[Nullable(new byte[]
 	{
 		2,

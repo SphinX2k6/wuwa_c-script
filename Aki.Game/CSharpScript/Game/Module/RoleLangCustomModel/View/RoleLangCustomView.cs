@@ -18,17 +18,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 {
-	// Token: 0x02004D7B RID: 19835
+	// Token: 0x02003D44 RID: 15684
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleLangCustomView : UiTickViewBase
 	{
-		// Token: 0x06033441 RID: 209985 RVA: 0x00BF5079 File Offset: 0x00BF3279
+		// Token: 0x060282AF RID: 164527 RVA: 0x00B3E299 File Offset: 0x00B3C499
 		public RoleLangCustomView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033442 RID: 209986 RVA: 0x00BF50A8 File Offset: 0x00BF32A8
+		// Token: 0x060282B0 RID: 164528 RVA: 0x00B3E2C0 File Offset: 0x00B3C4C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -73,30 +73,30 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033443 RID: 209987 RVA: 0x00BF52E2 File Offset: 0x00BF34E2
+		// Token: 0x060282B1 RID: 164529 RVA: 0x00B3E4FA File Offset: 0x00B3C6FA
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RoleLangCustomRefresh, new Action<int>(this.OnRoleLangCustomRefresh));
 		}
 
-		// Token: 0x06033444 RID: 209988 RVA: 0x00BF5300 File Offset: 0x00BF3500
+		// Token: 0x060282B2 RID: 164530 RVA: 0x00B3E518 File Offset: 0x00B3C718
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RoleLangCustomRefresh, new Action<int>(this.OnRoleLangCustomRefresh));
 		}
 
-		// Token: 0x06033445 RID: 209989 RVA: 0x00BF5320 File Offset: 0x00BF3520
+		// Token: 0x060282B3 RID: 164531 RVA: 0x00B3E538 File Offset: 0x00B3C738
 		protected override UniTask OnBeforeStartAsync()
 		{
-			RoleLangCustomView.<OnBeforeStartAsync>d__29 <OnBeforeStartAsync>d__;
+			RoleLangCustomView.<OnBeforeStartAsync>d__30 <OnBeforeStartAsync>d__;
 			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeStartAsync>d__.<>4__this = this;
 			<OnBeforeStartAsync>d__.<>1__state = -1;
-			<OnBeforeStartAsync>d__.<>t__builder.Start<RoleLangCustomView.<OnBeforeStartAsync>d__29>(ref <OnBeforeStartAsync>d__);
+			<OnBeforeStartAsync>d__.<>t__builder.Start<RoleLangCustomView.<OnBeforeStartAsync>d__30>(ref <OnBeforeStartAsync>d__);
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033446 RID: 209990 RVA: 0x00BF5364 File Offset: 0x00BF3564
+		// Token: 0x060282B4 RID: 164532 RVA: 0x00B3E57C File Offset: 0x00B3C77C
 		protected override void OnStart()
 		{
 			this.FromRoleView = (MenuModel.Instance.GetMenuDataByFunctionId(53) == null);
@@ -131,13 +131,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.InitTab();
 		}
 
-		// Token: 0x06033447 RID: 209991 RVA: 0x00BF550D File Offset: 0x00BF370D
+		// Token: 0x060282B5 RID: 164533 RVA: 0x00B3E725 File Offset: 0x00B3C925
 		protected override void OnAfterShow()
 		{
 			RoleLangCustomModel.Instance.CheckServerVoiceDataSame(true);
 		}
 
-		// Token: 0x06033448 RID: 209992 RVA: 0x00BF551B File Offset: 0x00BF371B
+		// Token: 0x060282B6 RID: 164534 RVA: 0x00B3E733 File Offset: 0x00B3C933
 		protected override void OnBeforeDestroy()
 		{
 			if (this.FromRoleView)
@@ -151,10 +151,10 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			{
 				ResourceManagerController.Instance.RestoreHttpTickFrequency();
 			}
-			this.StopCurrentAudioEvent();
+			this.StopCurrentAudioEvent("OnBeforeDestroy");
 		}
 
-		// Token: 0x06033449 RID: 209993 RVA: 0x00BF5554 File Offset: 0x00BF3754
+		// Token: 0x060282B7 RID: 164535 RVA: 0x00B3E770 File Offset: 0x00B3C970
 		protected override void OnTick(float delta)
 		{
 			List<RoleLangCustomLangSelectItem> scrollItemList = this.VoiceScroll.GetScrollItemList();
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x0603344A RID: 209994 RVA: 0x00BF55C0 File Offset: 0x00BF37C0
+		// Token: 0x060282B8 RID: 164536 RVA: 0x00B3E7DC File Offset: 0x00B3C9DC
 		protected void InitTab()
 		{
 			this.CurElement = -1;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}, false);
 		}
 
-		// Token: 0x0603344B RID: 209995 RVA: 0x00BF5654 File Offset: 0x00BF3854
+		// Token: 0x060282B9 RID: 164537 RVA: 0x00B3E870 File Offset: 0x00B3CA70
 		protected void RefreshVoiceItemButtonState()
 		{
 			foreach (RoleLangCustomLangSelectItem roleLangCustomLangSelectItem in this.VoiceScroll.GetScrollItemList())
@@ -201,12 +201,28 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x0603344C RID: 209996 RVA: 0x00BF56AC File Offset: 0x00BF38AC
-		protected void StopCurrentAudioEvent()
+		// Token: 0x060282BA RID: 164538 RVA: 0x00B3E8C8 File Offset: 0x00B3CAC8
+		protected unsafe void StopCurrentAudioEvent(string debugReason)
 		{
+			int? currentAudioPlayId = this.CurrentAudioPlayId;
+			this.CurrentAudioPlayId = null;
+			this.CurrentIsPlayingInfo = null;
 			if (!string.IsNullOrEmpty(this.OldAudioCode))
 			{
 				string roleLangStateGroup = RoleConfig.Instance.GetRoleLangStateGroup(this.OldCodeRoleId.Value);
+				Log instance = Log.Instance;
+				ELogModule module = ELogModule.Role;
+				ELogAuthor author = ELogAuthor.WHJ;
+				string message = "[RoleLangCustomDebug] RestoreLanguage";
+				<>y__InlineArray7<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray7<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("reason", debugReason);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("currentPlayId", currentAudioPlayId);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("roleId", this.OldCodeRoleId);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("stateGroup", roleLangStateGroup);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("state", this.OldAudioCode);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 5) = new ValueTuple<string, object>("check", false);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 6) = new ValueTuple<string, object>("currentHandle", this.PlayAudioHandle);
+				instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 7));
 				AudioSystem.Instance.SetState(roleLangStateGroup, this.OldAudioCode, false);
 			}
 			if (this.PlayAudioHandle != null && this.PlayAudioHandle.Value != 0)
@@ -218,7 +234,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.OldCodeRoleId = null;
 		}
 
-		// Token: 0x0603344D RID: 209997 RVA: 0x00BF5748 File Offset: 0x00BF3948
+		// Token: 0x060282BB RID: 164539 RVA: 0x00B3EA70 File Offset: 0x00B3CC70
 		protected void RefreshConfirmBtn()
 		{
 			IRoleLangCustomLangSelectInfo curStateData = this.CurStateData;
@@ -298,13 +314,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x0603344E RID: 209998 RVA: 0x00BF5874 File Offset: 0x00BF3A74
+		// Token: 0x060282BC RID: 164540 RVA: 0x00B3EB9C File Offset: 0x00B3CD9C
 		private void OnClickedBtnClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603344F RID: 209999 RVA: 0x00BF5880 File Offset: 0x00BF3A80
+		// Token: 0x060282BD RID: 164541 RVA: 0x00B3EBA8 File Offset: 0x00B3CDA8
 		private void OnClickedBtnRoleVoiceActing()
 		{
 			if (this.FromRoleView && MenuModel.Instance.GetMenuDataByFunctionId(53) == null)
@@ -318,7 +334,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			instance.OpenView(voiceLanguageDownloadView, array, null);
 		}
 
-		// Token: 0x06033450 RID: 210000 RVA: 0x00BF58D8 File Offset: 0x00BF3AD8
+		// Token: 0x060282BE RID: 164542 RVA: 0x00B3EC00 File Offset: 0x00B3CE00
 		private void OnClickedBtnConfirmB(int id)
 		{
 			switch (RoleLangCustomModel.Instance.GetDownloadStatus(new RoleLangCustomLangPackageInfo
@@ -360,7 +376,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 			case ELanguageDownloadStatus.Done:
 			{
-				this.StopCurrentAudioEvent();
+				this.StopCurrentAudioEvent("ApplyVoice");
 				RoleLangSetVoiceParam playerVoice = new RoleLangSetVoiceParam
 				{
 					RoleId = this.CurRoleId,
@@ -372,6 +388,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 				RoleLangCustomModel.Instance.SetPlayerVoice(playerVoice);
 				ScrollingTipsController.Instance.ShowTipsByTextId("Notice_VoiceDIY_Setting_Success", Array.Empty<object>());
 				this.PlayAudioHandle = new int?(RoleLangCustomModel.Instance.PlayVoiceOnSetVoice(this.CurRoleId));
+				this.RefreshVoiceItemButtonState();
 				return;
 			}
 			default:
@@ -379,7 +396,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x06033451 RID: 210001 RVA: 0x00BF5A30 File Offset: 0x00BF3C30
+		// Token: 0x060282BF RID: 164543 RVA: 0x00B3ED60 File Offset: 0x00B3CF60
 		private void SetCurStateItemNeedTick()
 		{
 			foreach (RoleLangCustomLangSelectItem roleLangCustomLangSelectItem in this.VoiceScroll.GetScrollItemList())
@@ -392,7 +409,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x06033452 RID: 210002 RVA: 0x00BF5ABC File Offset: 0x00BF3CBC
+		// Token: 0x060282C0 RID: 164544 RVA: 0x00B3EDEC File Offset: 0x00B3CFEC
 		private void OnClickedBtnFunctionDel()
 		{
 			RoleLangCustomDeleteInfo param = new RoleLangCustomDeleteInfo
@@ -408,13 +425,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			base.GetScrollViewWithScrollbar(7).RootUIComp.Get().SetAlpha(0f);
 		}
 
-		// Token: 0x06033453 RID: 210003 RVA: 0x00BF5B30 File Offset: 0x00BF3D30
+		// Token: 0x060282C1 RID: 164545 RVA: 0x00B3EE60 File Offset: 0x00B3D060
 		private void OnCloseDelete()
 		{
 			base.GetScrollViewWithScrollbar(7).RootUIComp.Get().SetAlpha(1f);
 		}
 
-		// Token: 0x06033454 RID: 210004 RVA: 0x00BF5B5B File Offset: 0x00BF3D5B
+		// Token: 0x060282C2 RID: 164546 RVA: 0x00B3EE8B File Offset: 0x00B3D08B
 		private RoleLangCustomElementTabItem CreateTopElementItem()
 		{
 			return new RoleLangCustomElementTabItem
@@ -424,7 +441,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			};
 		}
 
-		// Token: 0x06033455 RID: 210005 RVA: 0x00BF5B88 File Offset: 0x00BF3D88
+		// Token: 0x060282C3 RID: 164547 RVA: 0x00B3EEB8 File Offset: 0x00B3D0B8
 		private void OnTopElementItemToggleStateChanged(int elementId)
 		{
 			this.CurElement = elementId;
@@ -481,13 +498,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}, true);
 		}
 
-		// Token: 0x06033456 RID: 210006 RVA: 0x00BF5CC4 File Offset: 0x00BF3EC4
+		// Token: 0x060282C4 RID: 164548 RVA: 0x00B3EFF4 File Offset: 0x00B3D1F4
 		private bool CheckTopElementItemSelectedCallback(int elementId)
 		{
 			return elementId == this.CurElement;
 		}
 
-		// Token: 0x06033457 RID: 210007 RVA: 0x00BF5CCF File Offset: 0x00BF3ECF
+		// Token: 0x060282C5 RID: 164549 RVA: 0x00B3EFFF File Offset: 0x00B3D1FF
 		private RoleLangCustomRoleItem CreateRoleItem()
 		{
 			return new RoleLangCustomRoleItem
@@ -497,7 +514,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			};
 		}
 
-		// Token: 0x06033458 RID: 210008 RVA: 0x00BF5CFC File Offset: 0x00BF3EFC
+		// Token: 0x060282C6 RID: 164550 RVA: 0x00B3F02C File Offset: 0x00B3D22C
 		private void OnRoleItemToggleStateChanged(int roleId)
 		{
 			this.CurRoleId = roleId;
@@ -518,7 +535,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 				}
 				list.Add(roleLangCustomLangSelectInfo);
 			}
-			this.StopCurrentAudioEvent();
+			this.StopCurrentAudioEvent("ChangeRole");
 			this.CurrentIsPlayingInfo = null;
 			this.VoiceScroll.RefreshByData(list, null, false);
 			ButtonItem confirmBtn = this.ConfirmBtn;
@@ -558,13 +575,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x06033459 RID: 210009 RVA: 0x00BF5EA8 File Offset: 0x00BF40A8
+		// Token: 0x060282C7 RID: 164551 RVA: 0x00B3F1DC File Offset: 0x00B3D3DC
 		private bool CheckRoleSelectedCallback(int roleId)
 		{
 			return roleId == this.CurRoleId;
 		}
 
-		// Token: 0x0603345A RID: 210010 RVA: 0x00BF5EB4 File Offset: 0x00BF40B4
+		// Token: 0x060282C8 RID: 164552 RVA: 0x00B3F1E8 File Offset: 0x00B3D3E8
 		private RoleLangCustomLangSelectItem CreateVoiceActingItem()
 		{
 			return new RoleLangCustomLangSelectItem
@@ -576,7 +593,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			};
 		}
 
-		// Token: 0x0603345B RID: 210011 RVA: 0x00BF5F10 File Offset: 0x00BF4110
+		// Token: 0x060282C9 RID: 164553 RVA: 0x00B3F244 File Offset: 0x00B3D444
 		private void OnVoiceItemToggleStateChanged(IRoleLangCustomLangSelectInfo data)
 		{
 			this.CurVoiceIndex = data.LangIndex;
@@ -588,61 +605,123 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x0603345C RID: 210012 RVA: 0x00BF5F90 File Offset: 0x00BF4190
+		// Token: 0x060282CA RID: 164554 RVA: 0x00B3F2C4 File Offset: 0x00B3D4C4
 		private bool CheckVoiceCurrentIsPlayingCallback(IRoleLangCustomLangSelectInfo data)
 		{
 			return this.PlayAudioHandle != null && data == this.CurrentIsPlayingInfo;
 		}
 
-		// Token: 0x0603345D RID: 210013 RVA: 0x00BF5FAC File Offset: 0x00BF41AC
-		private void OnPlayAudio(IRoleLangCustomLangSelectInfo data)
+		// Token: 0x060282CB RID: 164555 RVA: 0x00B3F2E0 File Offset: 0x00B3D4E0
+		private unsafe void OnPlayAudio(IRoleLangCustomLangSelectInfo data)
 		{
-			this.StopCurrentAudioEvent();
-			if (data == this.CurrentIsPlayingInfo)
+			RoleLangCustomView.<>c__DisplayClass54_0 CS$<>8__locals1 = new RoleLangCustomView.<>c__DisplayClass54_0();
+			CS$<>8__locals1.<>4__this = this;
+			CS$<>8__locals1.data = data;
+			bool flag = CS$<>8__locals1.data == this.CurrentIsPlayingInfo;
+			this.StopCurrentAudioEvent(flag ? "OnPlayAudio.Pause" : "OnPlayAudio.Play");
+			this.RefreshVoiceItemButtonState();
+			if (flag)
 			{
-				this.CurrentIsPlayingInfo = null;
 				return;
 			}
-			if (this.CurrentIsPlayingInfo != null)
-			{
-				this.IsNormalEnd = false;
-				this.StopCurrentAudioEvent();
-				this.RefreshVoiceItemButtonState();
-			}
-			this.CurrentIsPlayingInfo = data;
-			int roleLangType = RoleLangCustomModel.Instance.GetRoleLangType(data.RoleId);
+			this.CurrentIsPlayingInfo = CS$<>8__locals1.data;
+			int roleLangType = RoleLangCustomModel.Instance.GetRoleLangType(CS$<>8__locals1.data.RoleId);
 			this.OldAudioCode = LanguageSystem.Instance.GetLanguageDefineByType(roleLangType).AudioCode;
-			this.OldCodeRoleId = new int?(data.RoleId);
-			int langIndex = data.LangIndex;
+			this.OldCodeRoleId = new int?(CS$<>8__locals1.data.RoleId);
+			int langIndex = CS$<>8__locals1.data.LangIndex;
 			global::LanguageDefine languageDefineByType = LanguageSystem.Instance.GetLanguageDefineByType(langIndex);
-			string roleLangStateGroup = RoleConfig.Instance.GetRoleLangStateGroup(data.RoleId);
+			string roleLangStateGroup = RoleConfig.Instance.GetRoleLangStateGroup(CS$<>8__locals1.data.RoleId);
+			RoleLangCustomView.<>c__DisplayClass54_0 CS$<>8__locals2 = CS$<>8__locals1;
+			int num = this.AudioPlayId + 1;
+			this.AudioPlayId = num;
+			CS$<>8__locals2.playId = num;
+			this.CurrentAudioPlayId = new int?(CS$<>8__locals1.playId);
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Role;
+			ELogAuthor author = ELogAuthor.WHJ;
+			string message = "[RoleLangCustomDebug] SetTemporaryLanguage";
+			<>y__InlineArray7<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray7<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("playId", CS$<>8__locals1.playId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("roleId", CS$<>8__locals1.data.RoleId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("langIndex", CS$<>8__locals1.data.LangIndex);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("stateGroup", roleLangStateGroup);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("state", languageDefineByType.AudioCode);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 5) = new ValueTuple<string, object>("oldState", this.OldAudioCode);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 6) = new ValueTuple<string, object>("check", false);
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 7));
 			AudioSystem.Instance.SetState(roleLangStateGroup, languageDefineByType.AudioCode, false);
-			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(data.RoleId, true);
+			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(CS$<>8__locals1.data.RoleId, true);
 			RoleSkinAudio? roleConfig = AudioConfig.Instance.GetRoleConfig(roleDataById.GetRoleSkinId());
+			Log instance2 = Log.Instance;
+			ELogModule module2 = ELogModule.Role;
+			ELogAuthor author2 = ELogAuthor.WHJ;
+			string message2 = "[RoleLangCustomDebug] PostEvent.Request";
+			<>y__InlineArray7<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray7<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("playId", CS$<>8__locals1.playId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("roleId", CS$<>8__locals1.data.RoleId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("langIndex", CS$<>8__locals1.data.LangIndex);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("event", roleConfig.Value.JoinTeamEvent);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 4) = new ValueTuple<string, object>("stateGroup", roleLangStateGroup);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 5) = new ValueTuple<string, object>("requestedState", languageDefineByType.AudioCode);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 6) = new ValueTuple<string, object>("callbackMask", ECallbackMask.EndOfEvent);
+			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 7));
 			this.PlayAudioHandle = new int?(AudioSystem.Instance.PostEvent(roleConfig.Value.JoinTeamEvent, null, new PostEventArgs?(new PostEventArgs
 			{
 				CallbackMask = new ECallbackMask?(ECallbackMask.EndOfEvent),
 				CallbackHandler = delegate(EAkCallbackType callbackType, UAkCallbackInfo callbackInfo)
 				{
-					if (callbackType == EAkCallbackType.EndOfEvent && this.IsNormalEnd)
+					Log instance4 = Log.Instance;
+					ELogModule module4 = ELogModule.Role;
+					ELogAuthor author4 = ELogAuthor.WHJ;
+					string message4 = "[RoleLangCustomDebug] PostEvent.Callback";
+					<>y__InlineArray8<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray8<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("callbackPlayId", CS$<>8__locals1.playId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1) = new ValueTuple<string, object>("currentPlayId", CS$<>8__locals1.<>4__this.CurrentAudioPlayId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 2) = new ValueTuple<string, object>("callbackType", callbackType);
+					ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 3);
+					string item = "playingId";
+					UAkEventCallbackInfo uakEventCallbackInfo = callbackInfo as UAkEventCallbackInfo;
+					ptr = new ValueTuple<string, object>(item, (uakEventCallbackInfo != null) ? new int?(uakEventCallbackInfo.PlayingID) : null);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 4) = new ValueTuple<string, object>("roleId", CS$<>8__locals1.data.RoleId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 5) = new ValueTuple<string, object>("langIndex", CS$<>8__locals1.data.LangIndex);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 6) = new ValueTuple<string, object>("currentHandle", CS$<>8__locals1.<>4__this.PlayAudioHandle);
+					ref ValueTuple<string, object> ptr2 = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 7);
+					string item2 = "ignored";
+					int playId = CS$<>8__locals1.playId;
+					int? currentAudioPlayId = CS$<>8__locals1.<>4__this.CurrentAudioPlayId;
+					ptr2 = new ValueTuple<string, object>(item2, !(playId == currentAudioPlayId.GetValueOrDefault() & currentAudioPlayId != null));
+					instance4.Info(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray8<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 8));
+					int playId2 = CS$<>8__locals1.playId;
+					currentAudioPlayId = CS$<>8__locals1.<>4__this.CurrentAudioPlayId;
+					if (!(playId2 == currentAudioPlayId.GetValueOrDefault() & currentAudioPlayId != null))
 					{
-						this.PlayAudioHandle = null;
-						this.StopCurrentAudioEvent();
-						this.RefreshVoiceItemButtonState();
-						this.CurrentIsPlayingInfo = null;
+						return;
 					}
-					this.IsNormalEnd = true;
+					if (callbackType == EAkCallbackType.EndOfEvent)
+					{
+						CS$<>8__locals1.<>4__this.PlayAudioHandle = null;
+						CS$<>8__locals1.<>4__this.StopCurrentAudioEvent("EndOfEvent");
+						CS$<>8__locals1.<>4__this.RefreshVoiceItemButtonState();
+					}
 				}
 			})));
+			Log instance3 = Log.Instance;
+			ELogModule module3 = ELogModule.Role;
+			ELogAuthor author3 = ELogAuthor.WHJ;
+			string message3 = "[RoleLangCustomDebug] PostEvent.Return";
+			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("playId", CS$<>8__locals1.playId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("handle", this.PlayAudioHandle);
+			instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
 		}
 
-		// Token: 0x0603345E RID: 210014 RVA: 0x00BF60DD File Offset: 0x00BF42DD
+		// Token: 0x060282CC RID: 164556 RVA: 0x00B3F6E9 File Offset: 0x00B3D8E9
 		private bool CheckVoiceSelectedCallback(IRoleLangCustomLangSelectInfo data)
 		{
 			return this.CurVoiceIndex == data.LangIndex;
 		}
 
-		// Token: 0x0603345F RID: 210015 RVA: 0x00BF60ED File Offset: 0x00BF42ED
+		// Token: 0x060282CD RID: 164557 RVA: 0x00B3F6F9 File Offset: 0x00B3D8F9
 		private void OnRoleLangCustomRefresh(int roleId)
 		{
 			if (roleId != this.CurRoleId && roleId != -1)
@@ -652,13 +731,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.OnRoleItemToggleStateChanged(this.CurRoleId);
 		}
 
-		// Token: 0x06033460 RID: 210016 RVA: 0x00BF6109 File Offset: 0x00BF4309
+		// Token: 0x060282CE RID: 164558 RVA: 0x00B3F715 File Offset: 0x00B3D915
 		private void OnClickedBtnInfo()
 		{
 			HelpController.Instance.OpenHelpById(615);
 		}
 
-		// Token: 0x06033461 RID: 210017 RVA: 0x00BF611C File Offset: 0x00BF431C
+		// Token: 0x060282CF RID: 164559 RVA: 0x00B3F728 File Offset: 0x00B3D928
 		private void OnChangeLanguageFilter(int langType)
 		{
 			if (langType < 0)
@@ -714,110 +793,113 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}, true);
 		}
 
-		// Token: 0x0401B34E RID: 111438
+		// Token: 0x04015D20 RID: 89376
 		private const int HELP_ID = 615;
 
-		// Token: 0x0401B34F RID: 111439
+		// Token: 0x04015D21 RID: 89377
 		private const int FILTER_RULE_ID = 1;
 
-		// Token: 0x0401B350 RID: 111440
+		// Token: 0x04015D22 RID: 89378
 		private static readonly EFilterSortGroupId filterGroupId = EFilterSortGroupId.Role;
 
-		// Token: 0x0401B351 RID: 111441
+		// Token: 0x04015D23 RID: 89379
 		private static readonly FilterDefine.EFilterType filterTypeId = FilterDefine.EFilterType.Element;
 
-		// Token: 0x0401B352 RID: 111442
+		// Token: 0x04015D24 RID: 89380
 		private static readonly FilterDefine.EFilterType filterTypeLanguageId = FilterDefine.EFilterType.RoleLangCustomType;
 
-		// Token: 0x0401B353 RID: 111443
+		// Token: 0x04015D25 RID: 89381
 		private const int FILTER_ALL_ID = 0;
 
-		// Token: 0x0401B354 RID: 111444
+		// Token: 0x04015D26 RID: 89382
 		protected int CurElement = -1;
 
-		// Token: 0x0401B355 RID: 111445
+		// Token: 0x04015D27 RID: 89383
 		protected int CurRoleId;
 
-		// Token: 0x0401B356 RID: 111446
+		// Token: 0x04015D28 RID: 89384
 		protected int CurVoiceIndex;
 
-		// Token: 0x0401B357 RID: 111447
+		// Token: 0x04015D29 RID: 89385
 		protected IRoleLangCustomLangSelectInfo CurStateData;
 
-		// Token: 0x0401B358 RID: 111448
+		// Token: 0x04015D2A RID: 89386
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B359 RID: 111449
+		// Token: 0x04015D2B RID: 89387
 		protected RoleLangCustomLangFilter RoleCustomItem;
 
-		// Token: 0x0401B35A RID: 111450
+		// Token: 0x04015D2C RID: 89388
 		protected GenericScrollViewNew<RoleLangCustomElementTabItem, int> TopElementScroll;
 
-		// Token: 0x0401B35B RID: 111451
+		// Token: 0x04015D2D RID: 89389
 		protected GenericScrollViewNew<RoleLangCustomRoleItem, RoleInstance> RoleItemScroll;
 
-		// Token: 0x0401B35C RID: 111452
+		// Token: 0x04015D2E RID: 89390
 		protected GenericScrollViewNew<RoleLangCustomLangSelectItem, IRoleLangCustomLangSelectInfo> VoiceScroll;
 
-		// Token: 0x0401B35D RID: 111453
+		// Token: 0x04015D2F RID: 89391
 		protected List<RoleInstance> RoleList = new List<RoleInstance>();
 
-		// Token: 0x0401B35E RID: 111454
+		// Token: 0x04015D30 RID: 89392
 		protected Dictionary<FilterDefine.EFilterType, Dictionary<int, string>> FilterRuleMap = new Dictionary<FilterDefine.EFilterType, Dictionary<int, string>>();
 
-		// Token: 0x0401B35F RID: 111455
+		// Token: 0x04015D31 RID: 89393
 		[Nullable(2)]
 		protected IRoleLangCustomLangSelectInfo CurrentIsPlayingInfo;
 
-		// Token: 0x0401B360 RID: 111456
+		// Token: 0x04015D32 RID: 89394
 		protected int? PlayAudioHandle;
 
-		// Token: 0x0401B361 RID: 111457
+		// Token: 0x04015D33 RID: 89395
 		[Nullable(2)]
 		protected string OldAudioCode;
 
-		// Token: 0x0401B362 RID: 111458
+		// Token: 0x04015D34 RID: 89396
 		protected int? OldCodeRoleId;
 
-		// Token: 0x0401B363 RID: 111459
-		protected bool IsNormalEnd = true;
+		// Token: 0x04015D35 RID: 89397
+		private int AudioPlayId;
 
-		// Token: 0x0401B364 RID: 111460
+		// Token: 0x04015D36 RID: 89398
+		private int? CurrentAudioPlayId;
+
+		// Token: 0x04015D37 RID: 89399
 		[Nullable(2)]
 		protected ButtonItem ConfirmBtn;
 
-		// Token: 0x0401B365 RID: 111461
+		// Token: 0x04015D38 RID: 89400
 		protected bool FromRoleView;
 
-		// Token: 0x0200AEEB RID: 44779
+		// Token: 0x0200991E RID: 39198
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x040351FD RID: 217597
+			// Token: 0x0402FC2E RID: 195630
 			Caption,
-			// Token: 0x040351FE RID: 217598
+			// Token: 0x0402FC2F RID: 195631
 			BtnRoleVoiceActing,
-			// Token: 0x040351FF RID: 217599
+			// Token: 0x0402FC30 RID: 195632
 			PanelEmpty,
-			// Token: 0x04035200 RID: 217600
+			// Token: 0x0402FC31 RID: 195633
 			RoleItemScroll,
-			// Token: 0x04035201 RID: 217601
+			// Token: 0x0402FC32 RID: 195634
 			RoleVoiceActingCardItem,
-			// Token: 0x04035202 RID: 217602
+			// Token: 0x0402FC33 RID: 195635
 			PanelRight,
-			// Token: 0x04035203 RID: 217603
+			// Token: 0x0402FC34 RID: 195636
 			TxtTitle,
-			// Token: 0x04035204 RID: 217604
+			// Token: 0x0402FC35 RID: 195637
 			VoiceActingItemScroll,
-			// Token: 0x04035205 RID: 217605
+			// Token: 0x0402FC36 RID: 195638
 			VoiceActingItem,
-			// Token: 0x04035206 RID: 217606
+			// Token: 0x0402FC37 RID: 195639
 			RoleVoiceSort,
-			// Token: 0x04035207 RID: 217607
+			// Token: 0x0402FC38 RID: 195640
 			BtnConfirmB,
-			// Token: 0x04035208 RID: 217608
+			// Token: 0x0402FC39 RID: 195641
 			BtnFunctionDel,
-			// Token: 0x04035209 RID: 217609
+			// Token: 0x0402FC3A RID: 195642
 			TopMenuItemScroll
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DF1 RID: 15857
+	// Token: 0x0200422C RID: 16940
 	public struct IEnableSystemConfig : IFlatbufferObject
 	{
-		// Token: 0x17006D9C RID: 28060
-		// (get) Token: 0x060162B9 RID: 90809 RVA: 0x00333E16 File Offset: 0x00332016
+		// Token: 0x17007382 RID: 29570
+		// (get) Token: 0x060178E4 RID: 96484 RVA: 0x0035C9CB File Offset: 0x0035ABCB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060162BA RID: 90810 RVA: 0x00333E23 File Offset: 0x00332023
+		// Token: 0x060178E5 RID: 96485 RVA: 0x0035C9D8 File Offset: 0x0035ABD8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060162BB RID: 90811 RVA: 0x00333E2C File Offset: 0x0033202C
+		// Token: 0x060178E6 RID: 96486 RVA: 0x0035C9E0 File Offset: 0x0035ABE0
 		public static IEnableSystemConfig GetRootAsIEnableSystemConfig(ByteBuffer _bb)
 		{
 			return IEnableSystemConfig.GetRootAsIEnableSystemConfig(_bb, default(IEnableSystemConfig));
 		}
 
-		// Token: 0x060162BC RID: 90812 RVA: 0x00333E48 File Offset: 0x00332048
+		// Token: 0x060178E7 RID: 96487 RVA: 0x0035C9FC File Offset: 0x0035ABFC
 		public static IEnableSystemConfig GetRootAsIEnableSystemConfig(ByteBuffer _bb, IEnableSystemConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060162BD RID: 90813 RVA: 0x00333E65 File Offset: 0x00332065
+		// Token: 0x060178E8 RID: 96488 RVA: 0x0035CA19 File Offset: 0x0035AC19
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060162BE RID: 90814 RVA: 0x00333E74 File Offset: 0x00332074
+		// Token: 0x060178E9 RID: 96489 RVA: 0x0035CA28 File Offset: 0x0035AC28
 		public IEnableSystemConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006D9D RID: 28061
-		// (get) Token: 0x060162BF RID: 90815 RVA: 0x00333E84 File Offset: 0x00332084
+		// Token: 0x17007383 RID: 29571
+		// (get) Token: 0x060178EA RID: 96490 RVA: 0x0035CA38 File Offset: 0x0035AC38
 		public EEnableSystemType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060162C0 RID: 90816 RVA: 0x00333EC0 File Offset: 0x003320C0
+		// Token: 0x060178EB RID: 96491 RVA: 0x0035CA74 File Offset: 0x0035AC74
 		public static Offset<IEnableSystemConfig> CreateIEnableSystemConfig(FlatBufferBuilder builder, EEnableSystemType Type = EEnableSystemType.GradingSystem)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IEnableSystemConfig.EndIEnableSystemConfig(builder);
 		}
 
-		// Token: 0x060162C1 RID: 90817 RVA: 0x00333ED6 File Offset: 0x003320D6
+		// Token: 0x060178EC RID: 96492 RVA: 0x0035CA8A File Offset: 0x0035AC8A
 		public static void StartIEnableSystemConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060162C2 RID: 90818 RVA: 0x00333EDF File Offset: 0x003320DF
+		// Token: 0x060178ED RID: 96493 RVA: 0x0035CA93 File Offset: 0x0035AC93
 		public static void AddType(FlatBufferBuilder builder, EEnableSystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060162C3 RID: 90819 RVA: 0x00333EEA File Offset: 0x003320EA
+		// Token: 0x060178EE RID: 96494 RVA: 0x0035CA9E File Offset: 0x0035AC9E
 		public static Offset<IEnableSystemConfig> EndIEnableSystemConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnableSystemConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060162C4 RID: 90820 RVA: 0x00333EF8 File Offset: 0x003320F8
+		// Token: 0x060178EF RID: 96495 RVA: 0x0035CAAC File Offset: 0x0035ACAC
 		public IEnableSystemConfigT UnPack()
 		{
 			IEnableSystemConfigT enableSystemConfigT = new IEnableSystemConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return enableSystemConfigT;
 		}
 
-		// Token: 0x060162C5 RID: 90821 RVA: 0x00333F13 File Offset: 0x00332113
+		// Token: 0x060178F0 RID: 96496 RVA: 0x0035CAC7 File Offset: 0x0035ACC7
 		public void UnPackTo(IEnableSystemConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060162C6 RID: 90822 RVA: 0x00333F24 File Offset: 0x00332124
+		// Token: 0x060178F1 RID: 96497 RVA: 0x0035CAD8 File Offset: 0x0035ACD8
 		public static Offset<IEnableSystemConfig> Pack(FlatBufferBuilder builder, IEnableSystemConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IEnableSystemConfig.CreateIEnableSystemConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400B74D RID: 46925
+		// Token: 0x0400C124 RID: 49444
 		private Table __p;
 	}
 }

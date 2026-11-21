@@ -8,14 +8,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001A6 RID: 422
+// Token: 0x020001AA RID: 426
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyChangeWeather.TsAnimNotifyChangeWeather_C")]
 public class TsAnimNotifyChangeWeather : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000458 RID: 1112
-	// (get) Token: 0x06001AC3 RID: 6851 RVA: 0x0008B37F File Offset: 0x0008957F
-	// (set) Token: 0x06001AC4 RID: 6852 RVA: 0x0008B38F File Offset: 0x0008958F
+	// Token: 0x1700047A RID: 1146
+	// (get) Token: 0x06001B60 RID: 7008 RVA: 0x00091AA3 File Offset: 0x0008FCA3
+	// (set) Token: 0x06001B61 RID: 7009 RVA: 0x00091AB3 File Offset: 0x0008FCB3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int Weather
 	{
@@ -29,7 +29,7 @@ public class TsAnimNotifyChangeWeather : TsAnimNotifyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x06001AC5 RID: 6853 RVA: 0x0008B3A0 File Offset: 0x000895A0
+	// Token: 0x06001B62 RID: 7010 RVA: 0x00091AC4 File Offset: 0x0008FCC4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
@@ -43,7 +43,7 @@ public class TsAnimNotifyChangeWeather : TsAnimNotifyBase, IUnrealUObject, IUnre
 		return true;
 	}
 
-	// Token: 0x06001AC6 RID: 6854 RVA: 0x0008B3EA File Offset: 0x000895EA
+	// Token: 0x06001B63 RID: 7011 RVA: 0x00091B0E File Offset: 0x0008FD0E
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override string GetNotifyName()
@@ -51,7 +51,7 @@ public class TsAnimNotifyChangeWeather : TsAnimNotifyBase, IUnrealUObject, IUnre
 		return "切换天气";
 	}
 
-	// Token: 0x06001AC7 RID: 6855 RVA: 0x0008B3F1 File Offset: 0x000895F1
+	// Token: 0x06001B64 RID: 7012 RVA: 0x00091B15 File Offset: 0x0008FD15
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyChangeWeather._ClassPtr == IntPtr.Zero)
@@ -61,23 +61,23 @@ public class TsAnimNotifyChangeWeather : TsAnimNotifyBase, IUnrealUObject, IUnre
 		return TsAnimNotifyChangeWeather._ClassPtr;
 	}
 
-	// Token: 0x06001AC8 RID: 6856 RVA: 0x0008B418 File Offset: 0x00089618
+	// Token: 0x06001B65 RID: 7013 RVA: 0x00091B3C File Offset: 0x0008FD3C
 	public TsAnimNotifyChangeWeather() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyChangeWeather.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001AC9 RID: 6857 RVA: 0x0008B440 File Offset: 0x00089640
+	// Token: 0x06001B66 RID: 7014 RVA: 0x00091B64 File Offset: 0x0008FD64
 	[NullableContext(1)]
 	public TsAnimNotifyChangeWeather(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyChangeWeather.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001ACA RID: 6858 RVA: 0x0008B473 File Offset: 0x00089673
+	// Token: 0x06001B67 RID: 7015 RVA: 0x00091B97 File Offset: 0x0008FD97
 	protected TsAnimNotifyChangeWeather(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001ACB RID: 6859 RVA: 0x0008B47C File Offset: 0x0008967C
+	// Token: 0x06001B68 RID: 7016 RVA: 0x00091BA0 File Offset: 0x0008FDA0
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -85,22 +85,22 @@ public class TsAnimNotifyChangeWeather : TsAnimNotifyBase, IUnrealUObject, IUnre
 		__Params->__Result = this.K2_Notify(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001ACC RID: 6860 RVA: 0x0008B4AF File Offset: 0x000896AF
+	// Token: 0x06001B69 RID: 7017 RVA: 0x00091BD3 File Offset: 0x0008FDD3
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName());
 	}
 
-	// Token: 0x04001149 RID: 4425
+	// Token: 0x0400118C RID: 4492
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyChangeWeather.TsAnimNotifyChangeWeather_C";
 
-	// Token: 0x0400114A RID: 4426
+	// Token: 0x0400118D RID: 4493
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400114B RID: 4427
+	// Token: 0x0400118E RID: 4494
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400114C RID: 4428
+	// Token: 0x0400118F RID: 4495
 	private static int __PropertyOffset_Weather;
 }

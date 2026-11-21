@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CA6 RID: 3238
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D88 RID: 3464
 	public class ICaptureStrategicPoint : IProgressBarControl
 	{
-		// Token: 0x06004A06 RID: 18950 RVA: 0x000B98BA File Offset: 0x000B7ABA
+		// Token: 0x06004EB4 RID: 20148 RVA: 0x000C42CA File Offset: 0x000C24CA
 		public static ICaptureStrategicPoint Create(ICaptureStrategicPoint? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001677 RID: 5751
-		// (get) Token: 0x06004A07 RID: 18951 RVA: 0x000B98D9 File Offset: 0x000B7AD9
+		// Token: 0x1700179F RID: 6047
+		// (get) Token: 0x06004EB5 RID: 20149 RVA: 0x000C42E9 File Offset: 0x000C24E9
 		public override EProgressBarControlType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001678 RID: 5752
-		// (get) Token: 0x06004A08 RID: 18952 RVA: 0x000B98E6 File Offset: 0x000B7AE6
+		// Token: 0x170017A0 RID: 6048
+		// (get) Token: 0x06004EB6 RID: 20150 RVA: 0x000C42F6 File Offset: 0x000C24F6
 		public override int MaxValue
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001679 RID: 5753
-		// (get) Token: 0x06004A09 RID: 18953 RVA: 0x000B98F3 File Offset: 0x000B7AF3
+		// Token: 0x170017A1 RID: 6049
+		// (get) Token: 0x06004EB7 RID: 20151 RVA: 0x000C4303 File Offset: 0x000C2503
 		public override int InitValue
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700167A RID: 5754
-		// (get) Token: 0x06004A0A RID: 18954 RVA: 0x000B9900 File Offset: 0x000B7B00
+		// Token: 0x170017A2 RID: 6050
+		// (get) Token: 0x06004EB8 RID: 20152 RVA: 0x000C4310 File Offset: 0x000C2510
 		public override int? ProgressPerformanceAttribute
 		{
 			get
@@ -66,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700167B RID: 5755
-		// (get) Token: 0x06004A0B RID: 18955 RVA: 0x000B9936 File Offset: 0x000B7B36
+		// Token: 0x170017A3 RID: 6051
+		// (get) Token: 0x06004EB9 RID: 20153 RVA: 0x000C4346 File Offset: 0x000C2546
 		public virtual int IncreaseSpeed
 		{
 			get
@@ -76,8 +74,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700167C RID: 5756
-		// (get) Token: 0x06004A0C RID: 18956 RVA: 0x000B9943 File Offset: 0x000B7B43
+		// Token: 0x170017A4 RID: 6052
+		// (get) Token: 0x06004EBA RID: 20154 RVA: 0x000C4353 File Offset: 0x000C2553
 		public virtual int DecreaseSpeed
 		{
 			get
@@ -86,8 +84,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700167D RID: 5757
-		// (get) Token: 0x06004A0D RID: 18957 RVA: 0x000B9950 File Offset: 0x000B7B50
+		// Token: 0x170017A5 RID: 6053
+		// (get) Token: 0x06004EBB RID: 20155 RVA: 0x000C4360 File Offset: 0x000C2560
 		public virtual int? UnoccupiedDecreaseSpeed
 		{
 			get
@@ -100,8 +98,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700167E RID: 5758
-		// (get) Token: 0x06004A0E RID: 18958 RVA: 0x000B9986 File Offset: 0x000B7B86
+		// Token: 0x170017A6 RID: 6054
+		// (get) Token: 0x06004EBC RID: 20156 RVA: 0x000C4396 File Offset: 0x000C2596
 		public virtual IStaticEntitiyMatch EnemyEntitiyMatch
 		{
 			get
@@ -116,8 +114,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700167F RID: 5759
-		// (get) Token: 0x06004A0F RID: 18959 RVA: 0x000B99BC File Offset: 0x000B7BBC
+		// Token: 0x170017A7 RID: 6055
+		// (get) Token: 0x06004EBD RID: 20157 RVA: 0x000C43CC File Offset: 0x000C25CC
 		public virtual ECaptureStateType? CaptureType
 		{
 			get
@@ -130,14 +128,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A4B RID: 10827
+		// Token: 0x04002CC5 RID: 11461
 		private ICaptureStrategicPoint Instance;
 
-		// Token: 0x04002A4C RID: 10828
+		// Token: 0x04002CC6 RID: 11462
 		[Nullable(2)]
 		private IStaticEntitiyMatch _EnemyEntitiyMatchCache;
 
-		// Token: 0x04002A4D RID: 10829
+		// Token: 0x04002CC7 RID: 11463
 		private bool _EnemyEntitiyMatchInited;
 	}
 }

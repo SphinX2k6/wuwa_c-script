@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019FB RID: 6651
+// Token: 0x02000EBA RID: 3770
 [NullableContext(1)]
 [Nullable(0)]
 public class DailyActivityRewardPanel : UiPanelBase
 {
-	// Token: 0x0600C292 RID: 49810 RVA: 0x002BEBE0 File Offset: 0x002BCDE0
+	// Token: 0x0600969F RID: 38559 RVA: 0x002C9BB8 File Offset: 0x002C7DB8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,19 +22,19 @@ public class DailyActivityRewardPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C293 RID: 49811 RVA: 0x002BEC19 File Offset: 0x002BCE19
+	// Token: 0x060096A0 RID: 38560 RVA: 0x002C9BF1 File Offset: 0x002C7DF1
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<DailyActivityRewardItem, DailyActivityRewardData>(base.GetHorizontalLayout(0), new Func<DailyActivityRewardItem>(this.OnCreateRewardItem), null, false, true);
 	}
 
-	// Token: 0x0600C294 RID: 49812 RVA: 0x002BEC3C File Offset: 0x002BCE3C
+	// Token: 0x060096A1 RID: 38561 RVA: 0x002C9C14 File Offset: 0x002C7E14
 	protected override void OnBeforeDestroy()
 	{
 		this.RefreshIdContainer = null;
 	}
 
-	// Token: 0x0600C295 RID: 49813 RVA: 0x002BEC48 File Offset: 0x002BCE48
+	// Token: 0x060096A2 RID: 38562 RVA: 0x002C9C20 File Offset: 0x002C7E20
 	public void Init()
 	{
 		DailyActivityDefine.IActivityRewardPanelDataAdapter activityRewardPanelDataAdapter = this.DataAdapter ?? new DailyActivityRewardAdapter();
@@ -58,14 +58,14 @@ public class DailyActivityRewardPanel : UiPanelBase
 		this.SetProgressBarPercent(num);
 	}
 
-	// Token: 0x0600C296 RID: 49814 RVA: 0x002BED40 File Offset: 0x002BCF40
+	// Token: 0x060096A3 RID: 38563 RVA: 0x002C9D18 File Offset: 0x002C7F18
 	[NullableContext(2)]
 	public UUIItem GetRewardItemByIndex(int index)
 	{
 		return this.RewardLayout.GetItemByIndex(index);
 	}
 
-	// Token: 0x0600C297 RID: 49815 RVA: 0x002BED50 File Offset: 0x002BCF50
+	// Token: 0x060096A4 RID: 38564 RVA: 0x002C9D28 File Offset: 0x002C7F28
 	private void RefreshAllRewardItem()
 	{
 		foreach (DailyActivityRewardItem dailyActivityRewardItem in this.RewardLayout.GetLayoutItemList())
@@ -74,7 +74,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C298 RID: 49816 RVA: 0x002BEDA8 File Offset: 0x002BCFA8
+	// Token: 0x060096A5 RID: 38565 RVA: 0x002C9D80 File Offset: 0x002C7F80
 	private void RefreshRewardItem(int goalId)
 	{
 		int num = -1;
@@ -93,7 +93,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		this.RewardLayout.GetLayoutItemList()[num].RefreshSelf();
 	}
 
-	// Token: 0x0600C299 RID: 49817 RVA: 0x002BEE00 File Offset: 0x002BD000
+	// Token: 0x060096A6 RID: 38566 RVA: 0x002C9DD8 File Offset: 0x002C7FD8
 	private void RefreshRewardItemDynamic(double value)
 	{
 		if (this.RefreshIdContainer.Count != 0)
@@ -107,7 +107,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C29A RID: 49818 RVA: 0x002BEE4C File Offset: 0x002BD04C
+	// Token: 0x060096A7 RID: 38567 RVA: 0x002C9E24 File Offset: 0x002C8024
 	private UniTask PlayItemRewardAnimAsync(int goalId)
 	{
 		DailyActivityRewardPanel.<PlayItemRewardAnimAsync>d__20 <PlayItemRewardAnimAsync>d__;
@@ -119,7 +119,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		return <PlayItemRewardAnimAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C29B RID: 49819 RVA: 0x002BEE98 File Offset: 0x002BD098
+	// Token: 0x060096A8 RID: 38568 RVA: 0x002C9E70 File Offset: 0x002C8070
 	private UniTask GroupPlayItemRewardAnimAsync(List<int> goalIds)
 	{
 		DailyActivityRewardPanel.<GroupPlayItemRewardAnimAsync>d__21 <GroupPlayItemRewardAnimAsync>d__;
@@ -131,7 +131,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		return <GroupPlayItemRewardAnimAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C29C RID: 49820 RVA: 0x002BEEE4 File Offset: 0x002BD0E4
+	// Token: 0x060096A9 RID: 38569 RVA: 0x002C9EBC File Offset: 0x002C80BC
 	private void GroupPlayItemRewardAnim(List<int> goalIds)
 	{
 		DailyActivityRewardPanel.<>c__DisplayClass22_0 CS$<>8__locals1 = new DailyActivityRewardPanel.<>c__DisplayClass22_0();
@@ -149,7 +149,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0600C29D RID: 49821 RVA: 0x002BEF28 File Offset: 0x002BD128
+	// Token: 0x060096AA RID: 38570 RVA: 0x002C9F00 File Offset: 0x002C8100
 	public void OnTickRefresh(float deltaTime)
 	{
 		if (!this.IsShowAnimate)
@@ -168,7 +168,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C29E RID: 49822 RVA: 0x002BF000 File Offset: 0x002BD200
+	// Token: 0x060096AB RID: 38571 RVA: 0x002C9FD8 File Offset: 0x002C81D8
 	private void SetProgressBarPercent(double percent)
 	{
 		foreach (DailyActivityRewardItem dailyActivityRewardItem in this.RewardLayout.GetLayoutItemList())
@@ -177,7 +177,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C29F RID: 49823 RVA: 0x002BF058 File Offset: 0x002BD258
+	// Token: 0x060096AC RID: 38572 RVA: 0x002CA030 File Offset: 0x002C8230
 	private void StartProgressAnimate(float goalValue)
 	{
 		this.GoalValue = goalValue;
@@ -186,7 +186,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		this.IsShowAnimate = true;
 	}
 
-	// Token: 0x0600C2A0 RID: 49824 RVA: 0x002BF084 File Offset: 0x002BD284
+	// Token: 0x060096AD RID: 38573 RVA: 0x002CA05C File Offset: 0x002C825C
 	private void EndProgressAnimate()
 	{
 		this.IsShowAnimate = false;
@@ -196,7 +196,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		this.SetProgressBarPercent(progressBarPercent);
 	}
 
-	// Token: 0x0600C2A1 RID: 49825 RVA: 0x002BF0FC File Offset: 0x002BD2FC
+	// Token: 0x060096AE RID: 38574 RVA: 0x002CA0D4 File Offset: 0x002C82D4
 	public void RefreshProgressBarDynamic(float value)
 	{
 		if ((double)value <= this.CurrentValue)
@@ -221,7 +221,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		this.StartProgressAnimate(value);
 	}
 
-	// Token: 0x0600C2A2 RID: 49826 RVA: 0x002BF1BC File Offset: 0x002BD3BC
+	// Token: 0x060096AF RID: 38575 RVA: 0x002CA194 File Offset: 0x002C8394
 	private void OnRewardTake(IReadOnlyList<int> ids)
 	{
 		foreach (int goalId in ids)
@@ -230,7 +230,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C2A3 RID: 49827 RVA: 0x002BF204 File Offset: 0x002BD404
+	// Token: 0x060096B0 RID: 38576 RVA: 0x002CA1DC File Offset: 0x002C83DC
 	private void RequestGetAllAvailableReward()
 	{
 		DailyActivityDefine.IActivityRewardPanelDataAdapter activityRewardPanelDataAdapter = this.DataAdapter ?? new DailyActivityRewardAdapter();
@@ -242,7 +242,7 @@ public class DailyActivityRewardPanel : UiPanelBase
 		activityRewardPanelDataAdapter.RequestReward(idList, onClose);
 	}
 
-	// Token: 0x0600C2A4 RID: 49828 RVA: 0x002BF254 File Offset: 0x002BD454
+	// Token: 0x060096B1 RID: 38577 RVA: 0x002CA22C File Offset: 0x002C842C
 	private DailyActivityRewardItem OnCreateRewardItem()
 	{
 		return new DailyActivityRewardItem
@@ -252,10 +252,10 @@ public class DailyActivityRewardPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x040059A5 RID: 22949
+	// Token: 0x04005A74 RID: 23156
 	private const float PROGRESS_ANIMATE_TIME = 0.5f;
 
-	// Token: 0x040059A6 RID: 22950
+	// Token: 0x04005A75 RID: 23157
 	[Nullable(new byte[]
 	{
 		2,
@@ -264,25 +264,25 @@ public class DailyActivityRewardPanel : UiPanelBase
 	})]
 	private GenericLayout<DailyActivityRewardItem, DailyActivityRewardData> RewardLayout;
 
-	// Token: 0x040059A7 RID: 22951
+	// Token: 0x04005A76 RID: 23158
 	private double CurrentValue;
 
-	// Token: 0x040059A8 RID: 22952
+	// Token: 0x04005A77 RID: 23159
 	private double MaxValue;
 
-	// Token: 0x040059A9 RID: 22953
+	// Token: 0x04005A78 RID: 23160
 	private float GoalValue;
 
-	// Token: 0x040059AA RID: 22954
+	// Token: 0x04005A79 RID: 23161
 	private double CurrentSaveValue;
 
-	// Token: 0x040059AB RID: 22955
+	// Token: 0x04005A7A RID: 23162
 	private bool IsShowAnimate;
 
-	// Token: 0x040059AC RID: 22956
+	// Token: 0x04005A7B RID: 23163
 	private double AnimateRunTime;
 
-	// Token: 0x040059AD RID: 22957
+	// Token: 0x04005A7C RID: 23164
 	[Nullable(new byte[]
 	{
 		2,
@@ -290,13 +290,13 @@ public class DailyActivityRewardPanel : UiPanelBase
 	})]
 	private List<ValueTuple<int, int>> RefreshIdContainer = new List<ValueTuple<int, int>>();
 
-	// Token: 0x040059AE RID: 22958
+	// Token: 0x04005A7D RID: 23165
 	private List<DailyActivityRewardData> RewardDataList = new List<DailyActivityRewardData>();
 
-	// Token: 0x040059AF RID: 22959
+	// Token: 0x04005A7E RID: 23166
 	private int TotalRewardCount;
 
-	// Token: 0x040059B0 RID: 22960
+	// Token: 0x04005A7F RID: 23167
 	[Nullable(2)]
 	public DailyActivityDefine.IActivityRewardPanelDataAdapter DataAdapter;
 }

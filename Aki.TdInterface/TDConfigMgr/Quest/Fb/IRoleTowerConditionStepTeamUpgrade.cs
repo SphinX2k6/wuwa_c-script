@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013F5 RID: 5109
+	// Token: 0x0200154C RID: 5452
 	public class IRoleTowerConditionStepTeamUpgrade : IRoleTowerConditionStepBase
 	{
-		// Token: 0x0600744A RID: 29770 RVA: 0x001164FE File Offset: 0x001146FE
-		[NullableContext(1)]
+		// Token: 0x06007B0B RID: 31499 RVA: 0x00124EE2 File Offset: 0x001230E2
 		public static IRoleTowerConditionStepTeamUpgrade Create(IRoleTowerConditionStepTeamUpgrade? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002633 RID: 9779
-		// (get) Token: 0x0600744B RID: 29771 RVA: 0x0011651D File Offset: 0x0011471D
+		// Token: 0x17002815 RID: 10261
+		// (get) Token: 0x06007B0C RID: 31500 RVA: 0x00124F01 File Offset: 0x00123101
 		public override ERoleTowerConditionStep Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004349 RID: 17225
+		// Token: 0x040046DA RID: 18138
 		private IRoleTowerConditionStepTeamUpgrade Instance;
 	}
 }

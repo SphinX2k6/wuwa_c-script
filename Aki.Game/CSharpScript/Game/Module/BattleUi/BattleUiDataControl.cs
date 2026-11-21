@@ -9,13 +9,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C6F RID: 23663
+	// Token: 0x02004C4F RID: 19535
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class BattleUiDataControl : UiControllerBase
 	{
-		// Token: 0x0603BD04 RID: 244996 RVA: 0x00E4A0B0 File Offset: 0x00E482B0
+		// Token: 0x06030C52 RID: 199762 RVA: 0x00D9A62C File Offset: 0x00D9882C
 		protected override void OnAddEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			instance5.Add<long, ETreeRemoveReason>(name5, handle5);
 		}
 
-		// Token: 0x0603BD05 RID: 244997 RVA: 0x00E4A190 File Offset: 0x00E48390
+		// Token: 0x06030C53 RID: 199763 RVA: 0x00D9A70C File Offset: 0x00D9890C
 		protected override void OnRemoveEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			instance6.UnBindActions(actionNames2, actionCallback);
 		}
 
-		// Token: 0x0603BD06 RID: 244998 RVA: 0x00E4A2A3 File Offset: 0x00E484A3
+		// Token: 0x06030C54 RID: 199764 RVA: 0x00D9A81F File Offset: 0x00D98A1F
 		private static void OnOpenView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.GuideFocusView)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.ExploreModeData.UpdateGuidingState(true);
 		}
 
-		// Token: 0x0603BD07 RID: 244999 RVA: 0x00E4A2C3 File Offset: 0x00E484C3
+		// Token: 0x06030C55 RID: 199765 RVA: 0x00D9A83F File Offset: 0x00D98A3F
 		private static void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.GuideFocusView)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.ExploreModeData.UpdateGuidingState(false);
 		}
 
-		// Token: 0x0603BD08 RID: 245000 RVA: 0x00E4A2E4 File Offset: 0x00E484E4
+		// Token: 0x06030C56 RID: 199766 RVA: 0x00D9A860 File Offset: 0x00D98A60
 		private static void OnLogicTreeNodeProgressChange(GeneralContext context, ChildQuestNodeProgress progress)
 		{
 			GeneralLogicTreeContext generalLogicTreeContext = context as GeneralLogicTreeContext;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.MergeHeadStateData.UpdateProgress(generalLogicTreeContext.TreeIncId, generalLogicTreeContext.NodeId, progress.MonsterCreator, monsterCreatorQuestCondition.TidMonsterGroupName, monsterCreatorQuestCondition.MonsterMergedHpBarSettings);
 		}
 
-		// Token: 0x0603BD09 RID: 245001 RVA: 0x00E4A3A8 File Offset: 0x00E485A8
+		// Token: 0x06030C57 RID: 199767 RVA: 0x00D9A924 File Offset: 0x00D98B24
 		private static void OnLogicTreeNodeStatusChange(GeneralContext context, NodeStatus oldStatus, NodeStatus newStatus, ENodeStatusUpdateReason reason)
 		{
 			GeneralLogicTreeContext generalLogicTreeContext = context as GeneralLogicTreeContext;
@@ -182,20 +182,20 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD0A RID: 245002 RVA: 0x00E4A3E6 File Offset: 0x00E485E6
+		// Token: 0x06030C58 RID: 199768 RVA: 0x00D9A962 File Offset: 0x00D98B62
 		private static void OnGeneralLogicTreeRemove(long treeId, ETreeRemoveReason eTreeRemoveReason)
 		{
 			BattleUiModel.Instance.MergeHeadStateData.RemoveTree(treeId);
 		}
 
-		// Token: 0x0603BD0B RID: 245003 RVA: 0x00E4A3F8 File Offset: 0x00E485F8
+		// Token: 0x06030C59 RID: 199769 RVA: 0x00D9A974 File Offset: 0x00D98B74
 		private static void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			BattleUiModel.Instance.ExploreModeData.InputAction(actionName, actionType == InputDistributeDefine.EActionType.Press);
 		}
 
-		// Token: 0x17008DC4 RID: 36292
-		// (get) Token: 0x0603BD0C RID: 245004 RVA: 0x00E4A40E File Offset: 0x00E4860E
+		// Token: 0x17006196 RID: 24982
+		// (get) Token: 0x06030C5A RID: 199770 RVA: 0x00D9A98A File Offset: 0x00D98B8A
 		public static BattleUiDataControl Instance
 		{
 			get
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD0D RID: 245005 RVA: 0x00E4A415 File Offset: 0x00E48615
+		// Token: 0x06030C5B RID: 199771 RVA: 0x00D9A991 File Offset: 0x00D98B91
 		public static BattleUiDataControl GetOrCreateInstance()
 		{
 			if (BattleUiDataControl._Instance == null)
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return BattleUiDataControl._Instance;
 		}
 
-		// Token: 0x0603BD0E RID: 245006 RVA: 0x00E4A429 File Offset: 0x00E48629
+		// Token: 0x06030C5C RID: 199772 RVA: 0x00D9A9A5 File Offset: 0x00D98BA5
 		public static bool CreateInstance()
 		{
 			if (BattleUiDataControl._Instance != null)
@@ -225,40 +225,40 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BD0F RID: 245007 RVA: 0x00E4A43F File Offset: 0x00E4863F
+		// Token: 0x06030C5D RID: 199773 RVA: 0x00D9A9BB File Offset: 0x00D98BBB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BD10 RID: 245008 RVA: 0x00E4A441 File Offset: 0x00E48641
+		// Token: 0x06030C5E RID: 199774 RVA: 0x00D9A9BD File Offset: 0x00D98BBD
 		public static void ResetStaticDefaultValue()
 		{
 			BattleUiDataControl._Instance = null;
 		}
 
-		// Token: 0x0603BD11 RID: 245009 RVA: 0x00E4A449 File Offset: 0x00E48649
+		// Token: 0x06030C5F RID: 199775 RVA: 0x00D9A9C5 File Offset: 0x00D98BC5
 		static BattleUiDataControl()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleUiDataControl.CreateStaticDefaultValue), new Action(BattleUiDataControl.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F295 RID: 127637
+		// Token: 0x04019D49 RID: 105801
 		[Nullable(2)]
 		private static BattleUiDataControl _Instance;
 
-		// Token: 0x0200BE77 RID: 48759
+		// Token: 0x0200A87D RID: 43133
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403970C RID: 235276
+			// Token: 0x040340CD RID: 213197
 			[Nullable(0)]
 			public static Action<EUiViewName, int> <0>__OnOpenView;
 
-			// Token: 0x0403970D RID: 235277
+			// Token: 0x040340CE RID: 213198
 			[Nullable(0)]
 			public static Action<EUiViewName, int> <1>__OnCloseView;
 
-			// Token: 0x0403970E RID: 235278
+			// Token: 0x040340CF RID: 213199
 			[Nullable(new byte[]
 			{
 				0,
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<GeneralContext, ChildQuestNodeProgress> <2>__OnLogicTreeNodeProgressChange;
 
-			// Token: 0x0403970F RID: 235279
+			// Token: 0x040340D0 RID: 213200
 			[Nullable(new byte[]
 			{
 				0,
@@ -275,11 +275,11 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<GeneralContext, NodeStatus, NodeStatus, ENodeStatusUpdateReason> <3>__OnLogicTreeNodeStatusChange;
 
-			// Token: 0x04039710 RID: 235280
+			// Token: 0x040340D1 RID: 213201
 			[Nullable(0)]
 			public static Action<long, ETreeRemoveReason> <4>__OnGeneralLogicTreeRemove;
 
-			// Token: 0x04039711 RID: 235281
+			// Token: 0x040340D2 RID: 213202
 			[Nullable(0)]
 			public static TInputHandle<InputDistributeDefine.EActionType> <5>__OnInputAction;
 		}

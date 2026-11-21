@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200658B RID: 25995
+	// Token: 0x02005509 RID: 21769
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardBackpackData
 	{
-		// Token: 0x0604126B RID: 266859 RVA: 0x00FCA21C File Offset: 0x00FC841C
+		// Token: 0x06035F30 RID: 220976 RVA: 0x00F111CC File Offset: 0x00F0F3CC
 		public DockyardBackpackData(bool isQuicklySellOpen)
 		{
 			this.InitQuicklySellData(isQuicklySellOpen);
@@ -19,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.InitItemBlockDataMap();
 		}
 
-		// Token: 0x0604126C RID: 266860 RVA: 0x00FCA270 File Offset: 0x00FC8470
+		// Token: 0x06035F31 RID: 220977 RVA: 0x00F11220 File Offset: 0x00F0F420
 		private void InitQuicklySellData(bool isQuicklySellOpen)
 		{
 			if (isQuicklySellOpen)
@@ -32,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604126D RID: 266861 RVA: 0x00FCA29C File Offset: 0x00FC849C
+		// Token: 0x06035F32 RID: 220978 RVA: 0x00F1124C File Offset: 0x00F0F44C
 		private void InitGridDataMap()
 		{
 			int fishingCabinShape = DockyardModel.Instance.FishingCabinShape;
@@ -72,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604126E RID: 266862 RVA: 0x00FCA3A4 File Offset: 0x00FC85A4
+		// Token: 0x06035F33 RID: 220979 RVA: 0x00F11354 File Offset: 0x00F0F554
 		private void ClearGridDataMapItemBlockId()
 		{
 			for (int i = 0; i < 7; i++)
@@ -88,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604126F RID: 266863 RVA: 0x00FCA3F4 File Offset: 0x00FC85F4
+		// Token: 0x06035F34 RID: 220980 RVA: 0x00F113A4 File Offset: 0x00F0F5A4
 		private void InitItemBlockDataMap()
 		{
 			this.ItemBlockDataMap.Clear();
@@ -100,14 +99,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041270 RID: 266864 RVA: 0x00FCA470 File Offset: 0x00FC8670
+		// Token: 0x06035F35 RID: 220981 RVA: 0x00F11420 File Offset: 0x00F0F620
 		public void RefreshBackpackData()
 		{
 			this.ClearGridDataMapItemBlockId();
 			this.InitItemBlockDataMap();
 		}
 
-		// Token: 0x06041271 RID: 266865 RVA: 0x00FCA480 File Offset: 0x00FC8680
+		// Token: 0x06035F36 RID: 220982 RVA: 0x00F11430 File Offset: 0x00F0F630
 		private void RefreshBackpackGrid(DockyardItemBlockData itemBlockData)
 		{
 			IPanelPosRange panelRange = itemBlockData.PanelRange;
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041272 RID: 266866 RVA: 0x00FCA504 File Offset: 0x00FC8704
+		// Token: 0x06035F37 RID: 220983 RVA: 0x00F114B4 File Offset: 0x00F0F6B4
 		private void SetGridDataInQuicklySellType()
 		{
 			int count = this.QuicklySellData.PosDataDoublyList.Count;
@@ -148,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041273 RID: 266867 RVA: 0x00FCA5A4 File Offset: 0x00FC87A4
+		// Token: 0x06035F38 RID: 220984 RVA: 0x00F11554 File Offset: 0x00F0F754
 		private void ResetGridDataInQuicklySellType()
 		{
 			foreach (DockyardBackpackGridData dockyardBackpackGridData in this.GridDataMap.Values)
@@ -157,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041274 RID: 266868 RVA: 0x00FCA5FC File Offset: 0x00FC87FC
+		// Token: 0x06035F39 RID: 220985 RVA: 0x00F115AC File Offset: 0x00F0F7AC
 		public void RefreshQuicklySellOpen(bool isQuicklySellOpen)
 		{
 			if (isQuicklySellOpen)
@@ -170,37 +169,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ResetGridDataInQuicklySellType();
 		}
 
-		// Token: 0x06041275 RID: 266869 RVA: 0x00FCA630 File Offset: 0x00FC8830
+		// Token: 0x06035F3A RID: 220986 RVA: 0x00F115E0 File Offset: 0x00F0F7E0
 		public List<IPanelPos> GetBackpackDataList()
 		{
 			return this.PosDataList;
 		}
 
-		// Token: 0x06041276 RID: 266870 RVA: 0x00FCA638 File Offset: 0x00FC8838
+		// Token: 0x06035F3B RID: 220987 RVA: 0x00F115E8 File Offset: 0x00F0F7E8
 		public IPanelPos GetBackpackPosByPos(int rowIndex, int colIndex)
 		{
 			return this.PosDataDoublyList[rowIndex][colIndex];
 		}
 
-		// Token: 0x06041277 RID: 266871 RVA: 0x00FCA64C File Offset: 0x00FC884C
+		// Token: 0x06035F3C RID: 220988 RVA: 0x00F115FC File Offset: 0x00F0F7FC
 		public List<DockyardItemBlockData> GetBackpackItemList()
 		{
-			return this.ItemBlockDataMap.Values.ToList<DockyardItemBlockData>();
+			return new List<DockyardItemBlockData>(this.ItemBlockDataMap.Values);
 		}
 
-		// Token: 0x06041278 RID: 266872 RVA: 0x00FCA65E File Offset: 0x00FC885E
+		// Token: 0x06035F3D RID: 220989 RVA: 0x00F1160E File Offset: 0x00F0F80E
 		public Dictionary<int, DockyardItemBlockData> GetBackpackItemMap()
 		{
 			return this.ItemBlockDataMap;
 		}
 
-		// Token: 0x06041279 RID: 266873 RVA: 0x00FCA666 File Offset: 0x00FC8866
+		// Token: 0x06035F3E RID: 220990 RVA: 0x00F11616 File Offset: 0x00F0F816
 		public DockyardBackpackGridData GetBackpackGridData(IPanelPos pos)
 		{
 			return this.GridDataMap[pos];
 		}
 
-		// Token: 0x0604127A RID: 266874 RVA: 0x00FCA674 File Offset: 0x00FC8874
+		// Token: 0x06035F3F RID: 220991 RVA: 0x00F11624 File Offset: 0x00F0F824
 		public DockyardItemBlockData AddItemBlockData(DockyardItemBlockOriginalData data)
 		{
 			DockyardItemBlockData dockyardItemBlockData = new DockyardItemBlockData(data);
@@ -208,33 +207,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return dockyardItemBlockData;
 		}
 
-		// Token: 0x0604127B RID: 266875 RVA: 0x00FCA69B File Offset: 0x00FC889B
+		// Token: 0x06035F40 RID: 220992 RVA: 0x00F1164B File Offset: 0x00F0F84B
 		public void DeleteItemBlockData(int incId)
 		{
 			this.ItemBlockDataMap.Remove(incId);
 		}
 
-		// Token: 0x0604127C RID: 266876 RVA: 0x00FCA6AA File Offset: 0x00FC88AA
+		// Token: 0x06035F41 RID: 220993 RVA: 0x00F1165A File Offset: 0x00F0F85A
 		[NullableContext(2)]
 		public DockyardItemBlockData GetItemBlockData(int incId)
 		{
 			return this.ItemBlockDataMap.GetValueOrDefault(incId);
 		}
 
-		// Token: 0x04021F01 RID: 139009
+		// Token: 0x0401C832 RID: 116786
 		private readonly Dictionary<IPanelPos, DockyardBackpackGridData> GridDataMap = new Dictionary<IPanelPos, DockyardBackpackGridData>();
 
-		// Token: 0x04021F02 RID: 139010
+		// Token: 0x0401C833 RID: 116787
 		private readonly List<List<IPanelPos>> PosDataDoublyList = new List<List<IPanelPos>>();
 
-		// Token: 0x04021F03 RID: 139011
+		// Token: 0x0401C834 RID: 116788
 		private readonly Dictionary<int, DockyardItemBlockData> ItemBlockDataMap = new Dictionary<int, DockyardItemBlockData>();
 
-		// Token: 0x04021F04 RID: 139012
+		// Token: 0x0401C835 RID: 116789
 		[Nullable(2)]
 		private DockyardQuicklySellData QuicklySellData;
 
-		// Token: 0x04021F05 RID: 139013
+		// Token: 0x0401C836 RID: 116790
 		private readonly List<IPanelPos> PosDataList = new List<IPanelPos>();
 	}
 }

@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View
 {
-	// Token: 0x02004FAF RID: 20399
+	// Token: 0x02003F78 RID: 16248
 	public class QuestMultiLineViewParams
 	{
-		// Token: 0x0401BC33 RID: 113715
+		// Token: 0x04016608 RID: 91656
 		[Nullable(1)]
 		public List<QuestMultiLineTimePointData> TimePoints;
 
-		// Token: 0x0401BC34 RID: 113716
+		// Token: 0x04016609 RID: 91657
 		public int ShowTimePointId;
 
-		// Token: 0x0401BC35 RID: 113717
+		// Token: 0x0401660A RID: 91658
 		public bool PlayTimePointComponentAnim;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200021A RID: 538
+	// Token: 0x0200022C RID: 556
 	public class ConfigDownLoadVersionByType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C9F RID: 3231 RVA: 0x000A0E00 File Offset: 0x0009F000
+		// Token: 0x06000D0B RID: 3339 RVA: 0x000A6D38 File Offset: 0x000A4F38
 		static ConfigDownLoadVersionByType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDownLoadVersionByType.CreateStaticDefaultValue), new Action(ConfigDownLoadVersionByType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000CA0 RID: 3232 RVA: 0x000A0E20 File Offset: 0x0009F020
+		// Token: 0x06000D0C RID: 3340 RVA: 0x000A6D58 File Offset: 0x000A4F58
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDownLoadVersionByType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000CA1 RID: 3233 RVA: 0x000A0E9F File Offset: 0x0009F09F
+		// Token: 0x06000D0D RID: 3341 RVA: 0x000A6DD7 File Offset: 0x000A4FD7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDownLoadVersionByType.LogPair = null;
 			ConfigDownLoadVersionByType.HandleId = 0;
 		}
 
-		// Token: 0x06000CA2 RID: 3234 RVA: 0x000A0EAD File Offset: 0x0009F0AD
+		// Token: 0x06000D0E RID: 3342 RVA: 0x000A6DE5 File Offset: 0x000A4FE5
 		public static void Init()
 		{
 			ConfigDownLoadVersionByType.HandleId = ConfigCommon.InitDataStatement(ConfigDownLoadVersionByType.HandleId, "db_download.db", "select BinData from `DownLoadVersion` where Type=?");
 		}
 
-		// Token: 0x06000CA3 RID: 3235 RVA: 0x000A0EC8 File Offset: 0x0009F0C8
+		// Token: 0x06000D0F RID: 3343 RVA: 0x000A6E00 File Offset: 0x000A5000
 		[NullableContext(2)]
 		public static IReadOnlyList<DownLoadVersion> GetConfigList(int p0Type, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000E9A RID: 3738
+		// Token: 0x04000F18 RID: 3864
 		private const string DB = "db_download.db";
 
-		// Token: 0x04000E9B RID: 3739
+		// Token: 0x04000F19 RID: 3865
 		private const string FILE = "b.包体管理.xlsx";
 
-		// Token: 0x04000E9C RID: 3740
+		// Token: 0x04000F1A RID: 3866
 		private const string TABLE = "DownLoadVersion";
 
-		// Token: 0x04000E9D RID: 3741
+		// Token: 0x04000F1B RID: 3867
 		private const string COMMAND = "select BinData from `DownLoadVersion` where Type=?";
 
-		// Token: 0x04000E9E RID: 3742
+		// Token: 0x04000F1C RID: 3868
 		private const string KEY_PREFIX = "DownLoadVersionByType";
 
-		// Token: 0x04000E9F RID: 3743
+		// Token: 0x04000F1D RID: 3869
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000EA0 RID: 3744
+		// Token: 0x04000F1E RID: 3870
 		private static int HandleId;
 	}
 }

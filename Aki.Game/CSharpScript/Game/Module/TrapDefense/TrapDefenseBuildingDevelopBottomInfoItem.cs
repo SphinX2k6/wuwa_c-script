@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A92 RID: 19090
+	// Token: 0x02003A3A RID: 14906
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBuildingDevelopBottomInfoItem : UiPanelBase
 	{
-		// Token: 0x060317B0 RID: 202672 RVA: 0x00B77F1C File Offset: 0x00B7611C
+		// Token: 0x06026540 RID: 156992 RVA: 0x00ABBED0 File Offset: 0x00ABA0D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060317B1 RID: 202673 RVA: 0x00B77FE8 File Offset: 0x00B761E8
+		// Token: 0x06026541 RID: 156993 RVA: 0x00ABBF9C File Offset: 0x00ABA19C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseBuildingDevelopBottomInfoItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -45,32 +45,32 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060317B2 RID: 202674 RVA: 0x00B7802B File Offset: 0x00B7622B
+		// Token: 0x06026542 RID: 156994 RVA: 0x00ABBFDF File Offset: 0x00ABA1DF
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetExtendToggle(0).RootUIComp);
 			this.BindEvent();
 		}
 
-		// Token: 0x060317B3 RID: 202675 RVA: 0x00B7804F File Offset: 0x00B7624F
+		// Token: 0x06026543 RID: 156995 RVA: 0x00ABC003 File Offset: 0x00ABA203
 		protected override void OnBeforeDestroy()
 		{
 			this.UnbindEvent();
 		}
 
-		// Token: 0x060317B4 RID: 202676 RVA: 0x00B78057 File Offset: 0x00B76257
+		// Token: 0x06026544 RID: 156996 RVA: 0x00ABC00B File Offset: 0x00ABA20B
 		protected void BindEvent()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 		}
 
-		// Token: 0x060317B5 RID: 202677 RVA: 0x00B78076 File Offset: 0x00B76276
+		// Token: 0x06026545 RID: 156997 RVA: 0x00ABC02A File Offset: 0x00ABA22A
 		protected void UnbindEvent()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Unbind();
 		}
 
-		// Token: 0x060317B6 RID: 202678 RVA: 0x00B7808C File Offset: 0x00B7628C
+		// Token: 0x06026546 RID: 156998 RVA: 0x00ABC040 File Offset: 0x00ABA240
 		public void Refresh(TrapDefenseBuildingSlotData data)
 		{
 			this.SlotData = data;
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			dragLogic.Refresh(slotData);
 		}
 
-		// Token: 0x060317B7 RID: 202679 RVA: 0x00B7811D File Offset: 0x00B7631D
+		// Token: 0x06026547 RID: 156999 RVA: 0x00ABC0D1 File Offset: 0x00ABA2D1
 		private bool CanExecuteChange()
 		{
 			return false;
 		}
 
-		// Token: 0x060317B8 RID: 202680 RVA: 0x00B78120 File Offset: 0x00B76320
+		// Token: 0x06026548 RID: 157000 RVA: 0x00ABC0D4 File Offset: 0x00ABA2D4
 		public void OnClickedItem()
 		{
 			if (this.OnClickCb != null)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060317B9 RID: 202681 RVA: 0x00B7813C File Offset: 0x00B7633C
+		// Token: 0x06026549 RID: 157001 RVA: 0x00ABC0F0 File Offset: 0x00ABA2F0
 		public void SetSelected(bool isSelected)
 		{
 			EToggleState state = isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -124,13 +124,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x060317BA RID: 202682 RVA: 0x00B78166 File Offset: 0x00B76366
+		// Token: 0x0602654A RID: 157002 RVA: 0x00ABC11A File Offset: 0x00ABA31A
 		public UUIDraggableComponent GetDragComp()
 		{
 			return this.DragItem.GetDraggableComp();
 		}
 
-		// Token: 0x060317BB RID: 202683 RVA: 0x00B78174 File Offset: 0x00B76374
+		// Token: 0x0602654B RID: 157003 RVA: 0x00ABC128 File Offset: 0x00ABA328
 		public void ResetPosition()
 		{
 			UUIItem item = base.GetItem(1);
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060317BC RID: 202684 RVA: 0x00B78220 File Offset: 0x00B76420
+		// Token: 0x0602654C RID: 157004 RVA: 0x00ABC1D4 File Offset: 0x00ABA3D4
 		public void OnItemOverlay(int _)
 		{
 			this.LevelSequencePlayer.StopPlayingSequence(false, true);
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.IsOverlaying = true;
 		}
 
-		// Token: 0x060317BD RID: 202685 RVA: 0x00B7825C File Offset: 0x00B7645C
+		// Token: 0x0602654D RID: 157005 RVA: 0x00ABC210 File Offset: 0x00ABA410
 		public void OnItemUnOverlay(int _)
 		{
 			this.IsOverlaying = false;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Normal", false, null, false);
 		}
 
-		// Token: 0x060317BE RID: 202686 RVA: 0x00B78298 File Offset: 0x00B76498
+		// Token: 0x0602654E RID: 157006 RVA: 0x00ABC24C File Offset: 0x00ABA44C
 		public void OnScrollToScrollViewEvent(int _)
 		{
 			UUIItem item = base.GetItem(1);
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.GetSprite(2).SetUIActive(false);
 		}
 
-		// Token: 0x060317BF RID: 202687 RVA: 0x00B782BA File Offset: 0x00B764BA
+		// Token: 0x0602654F RID: 157007 RVA: 0x00ABC26E File Offset: 0x00ABA46E
 		public void OnRemoveFromScrollViewEvent(int _)
 		{
 			UUIItem item = base.GetItem(1);
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.GetSprite(2).SetUIActive(true);
 		}
 
-		// Token: 0x060317C0 RID: 202688 RVA: 0x00B782DC File Offset: 0x00B764DC
+		// Token: 0x06026550 RID: 157008 RVA: 0x00ABC290 File Offset: 0x00ABA490
 		public void OnDragBegin(int _)
 		{
 			base.GetSprite(2).SetUIActive(true);
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.DragItem.OnStartDrag();
 		}
 
-		// Token: 0x060317C1 RID: 202689 RVA: 0x00B78304 File Offset: 0x00B76504
+		// Token: 0x06026551 RID: 157009 RVA: 0x00ABC2B8 File Offset: 0x00ABA4B8
 		public void OnDragEnd(int _)
 		{
 			TrapDefenseBuildingDevelopItemData slotData = this.SlotData.GetSlotData();
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.GetSprite(2).SetUIActive(slotData == null);
 		}
 
-		// Token: 0x060317C2 RID: 202690 RVA: 0x00B78338 File Offset: 0x00B76538
+		// Token: 0x06026552 RID: 157010 RVA: 0x00ABC2EC File Offset: 0x00ABA4EC
 		public void SetDragLogic(CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData> logic)
 		{
 			this.DragLogic = logic;
@@ -215,44 +215,44 @@ namespace CSharpScript.Game.Module.TrapDefense
 			dragLogic.Refresh((slotData != null) ? slotData.GetSlotData() : null);
 		}
 
-		// Token: 0x0401A745 RID: 108357
+		// Token: 0x04015097 RID: 86167
 		protected TrapDefenseBuildingDevelopBottomDragItem DragItem;
 
-		// Token: 0x0401A746 RID: 108358
+		// Token: 0x04015098 RID: 86168
 		protected TrapDefenseBuildingSlotData SlotData;
 
-		// Token: 0x0401A747 RID: 108359
+		// Token: 0x04015099 RID: 86169
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401A748 RID: 108360
+		// Token: 0x0401509A RID: 86170
 		public Action<TrapDefenseBuildingSlotData> OnClickCb;
 
-		// Token: 0x0401A749 RID: 108361
+		// Token: 0x0401509B RID: 86171
 		public Func<TrapDefenseBuildingSlotData, bool> CanExecuteChangeCb;
 
-		// Token: 0x0401A74A RID: 108362
+		// Token: 0x0401509C RID: 86172
 		private bool IsOverlaying;
 
-		// Token: 0x0401A74B RID: 108363
+		// Token: 0x0401509D RID: 86173
 		protected CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData> DragLogic;
 
-		// Token: 0x0200ABE4 RID: 44004
+		// Token: 0x02009604 RID: 38404
 		[NullableContext(0)]
 		private class EDefine
 		{
-			// Token: 0x040343C4 RID: 213956
+			// Token: 0x0402ED75 RID: 191861
 			public const int Toggle = 0;
 
-			// Token: 0x040343C5 RID: 213957
+			// Token: 0x0402ED76 RID: 191862
 			public const int PanelMove = 1;
 
-			// Token: 0x040343C6 RID: 213958
+			// Token: 0x0402ED77 RID: 191863
 			public const int SpriteEmpty = 2;
 
-			// Token: 0x040343C7 RID: 213959
+			// Token: 0x0402ED78 RID: 191864
 			public const int DragItem = 3;
 
-			// Token: 0x040343C8 RID: 213960
+			// Token: 0x0402ED79 RID: 191865
 			public const int PanelLockState = 4;
 		}
 	}

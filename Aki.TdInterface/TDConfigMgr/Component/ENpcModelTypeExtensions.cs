@@ -2,32 +2,32 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009B4 RID: 2484
+	// Token: 0x02000A69 RID: 2665
 	public static class ENpcModelTypeExtensions
 	{
-		// Token: 0x0600375B RID: 14171 RVA: 0x0008FF84 File Offset: 0x0008E184
+		// Token: 0x06003AEB RID: 15083 RVA: 0x00098078 File Offset: 0x00096278
 		public static string ToEnumString(this ENpcModelType value)
 		{
 			string result;
-			if (value != ENpcModelType.Mesh)
+			switch (value)
 			{
-				if (value != ENpcModelType.Da)
-				{
-					result = value.ToString();
-				}
-				else
-				{
-					result = "Da";
-				}
-			}
-			else
-			{
+			case ENpcModelType.Mesh:
 				result = "Mesh";
+				break;
+			case ENpcModelType.Da:
+				result = "Da";
+				break;
+			case ENpcModelType.CombineDa:
+				result = "CombineDa";
+				break;
+			default:
+				result = value.ToString();
+				break;
 			}
 			return result;
 		}
 
-		// Token: 0x0600375C RID: 14172 RVA: 0x0008FFBC File Offset: 0x0008E1BC
+		// Token: 0x06003AEC RID: 15084 RVA: 0x000980C0 File Offset: 0x000962C0
 		public static ENpcModelType FromString(string name)
 		{
 			ENpcModelType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600375D RID: 14173 RVA: 0x0008FFE5 File Offset: 0x0008E1E5
+		// Token: 0x06003AED RID: 15085 RVA: 0x000980EC File Offset: 0x000962EC
 		public static bool TryFromString(string name, out ENpcModelType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -51,42 +51,50 @@ namespace Aki.TDConfigMgr.Component
 				value = ENpcModelType.Mesh;
 				return true;
 			}
-			if (!(name == "Da"))
+			if (name == "Da")
+			{
+				value = ENpcModelType.Da;
+				return true;
+			}
+			if (!(name == "CombineDa"))
 			{
 				value = ENpcModelType.Mesh;
 				return false;
 			}
-			value = ENpcModelType.Da;
+			value = ENpcModelType.CombineDa;
 			return true;
 		}
 
-		// Token: 0x0600375E RID: 14174 RVA: 0x0009001E File Offset: 0x0008E21E
+		// Token: 0x06003AEE RID: 15086 RVA: 0x00098142 File Offset: 0x00096342
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
 				"Mesh",
-				"Da"
+				"Da",
+				"CombineDa"
 			};
 		}
 
-		// Token: 0x0600375F RID: 14175 RVA: 0x00090036 File Offset: 0x0008E236
+		// Token: 0x06003AEF RID: 15087 RVA: 0x00098162 File Offset: 0x00096362
 		public static ENpcModelType[] GetValues()
 		{
 			return new ENpcModelType[]
 			{
 				ENpcModelType.Mesh,
-				ENpcModelType.Da
+				ENpcModelType.Da,
+				ENpcModelType.CombineDa
 			};
 		}
 
-		// Token: 0x06003760 RID: 14176 RVA: 0x00090042 File Offset: 0x0008E242
+		// Token: 0x06003AF0 RID: 15088 RVA: 0x00098172 File Offset: 0x00096372
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
 				"Mesh",
-				"Da"
+				"Da",
+				"CombineDa"
 			};
 		}
 	}

@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054E3 RID: 21731
+	// Token: 0x02005A69 RID: 23145
 	public class ILevelPrefabT
 	{
-		// Token: 0x1700A044 RID: 41028
-		// (get) Token: 0x06023D80 RID: 146816 RVA: 0x004F4A44 File Offset: 0x004F2C44
-		// (set) Token: 0x06023D81 RID: 146817 RVA: 0x004F4A4C File Offset: 0x004F2C4C
+		// Token: 0x1700A87E RID: 43134
+		// (get) Token: 0x06025E38 RID: 155192 RVA: 0x00531AB8 File Offset: 0x0052FCB8
+		// (set) Token: 0x06025E39 RID: 155193 RVA: 0x00531AC0 File Offset: 0x0052FCC0
 		public EModelType Type { get; set; }
 
-		// Token: 0x1700A045 RID: 41029
-		// (get) Token: 0x06023D82 RID: 146818 RVA: 0x004F4A55 File Offset: 0x004F2C55
-		// (set) Token: 0x06023D83 RID: 146819 RVA: 0x004F4A5D File Offset: 0x004F2C5D
+		// Token: 0x1700A87F RID: 43135
+		// (get) Token: 0x06025E3A RID: 155194 RVA: 0x00531AC9 File Offset: 0x0052FCC9
+		// (set) Token: 0x06025E3B RID: 155195 RVA: 0x00531AD1 File Offset: 0x0052FCD1
 		public ELevelPrefabBpType BlueprintPath { get; set; }
 
-		// Token: 0x1700A046 RID: 41030
-		// (get) Token: 0x06023D84 RID: 146820 RVA: 0x004F4A66 File Offset: 0x004F2C66
-		// (set) Token: 0x06023D85 RID: 146821 RVA: 0x004F4A6E File Offset: 0x004F2C6E
+		// Token: 0x1700A880 RID: 43136
+		// (get) Token: 0x06025E3C RID: 155196 RVA: 0x00531ADA File Offset: 0x0052FCDA
+		// (set) Token: 0x06025E3D RID: 155197 RVA: 0x00531AE2 File Offset: 0x0052FCE2
 		public string PrefabPath { get; set; }
 
-		// Token: 0x1700A047 RID: 41031
-		// (get) Token: 0x06023D86 RID: 146822 RVA: 0x004F4A77 File Offset: 0x004F2C77
-		// (set) Token: 0x06023D87 RID: 146823 RVA: 0x004F4A7F File Offset: 0x004F2C7F
+		// Token: 0x1700A881 RID: 43137
+		// (get) Token: 0x06025E3E RID: 155198 RVA: 0x00531AEB File Offset: 0x0052FCEB
+		// (set) Token: 0x06025E3F RID: 155199 RVA: 0x00531AF3 File Offset: 0x0052FCF3
 		public int NameOffsetZ { get; set; }
 
-		// Token: 0x1700A048 RID: 41032
-		// (get) Token: 0x06023D88 RID: 146824 RVA: 0x004F4A88 File Offset: 0x004F2C88
-		// (set) Token: 0x06023D89 RID: 146825 RVA: 0x004F4A90 File Offset: 0x004F2C90
+		// Token: 0x1700A882 RID: 43138
+		// (get) Token: 0x06025E40 RID: 155200 RVA: 0x00531AFC File Offset: 0x0052FCFC
+		// (set) Token: 0x06025E41 RID: 155201 RVA: 0x00531B04 File Offset: 0x0052FD04
 		public List<IPrefabStateConfigT> PrefabStateList { get; set; }
 
-		// Token: 0x1700A049 RID: 41033
-		// (get) Token: 0x06023D8A RID: 146826 RVA: 0x004F4A99 File Offset: 0x004F2C99
-		// (set) Token: 0x06023D8B RID: 146827 RVA: 0x004F4AA1 File Offset: 0x004F2CA1
+		// Token: 0x1700A883 RID: 43139
+		// (get) Token: 0x06025E42 RID: 155202 RVA: 0x00531B0D File Offset: 0x0052FD0D
+		// (set) Token: 0x06025E43 RID: 155203 RVA: 0x00531B15 File Offset: 0x0052FD15
 		public List<IPrefabEffectConfigT> EffectStateList { get; set; }
 
-		// Token: 0x1700A04A RID: 41034
-		// (get) Token: 0x06023D8C RID: 146828 RVA: 0x004F4AAA File Offset: 0x004F2CAA
-		// (set) Token: 0x06023D8D RID: 146829 RVA: 0x004F4AB2 File Offset: 0x004F2CB2
+		// Token: 0x1700A884 RID: 43140
+		// (get) Token: 0x06025E44 RID: 155204 RVA: 0x00531B1E File Offset: 0x0052FD1E
+		// (set) Token: 0x06025E45 RID: 155205 RVA: 0x00531B26 File Offset: 0x0052FD26
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023D8E RID: 146830 RVA: 0x004F4ABB File Offset: 0x004F2CBB
+		// Token: 0x06025E46 RID: 155206 RVA: 0x00531B2F File Offset: 0x0052FD2F
 		public ILevelPrefabT()
 		{
 			this.Type = EModelType.LevelPrefab;

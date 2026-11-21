@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200184A RID: 6218
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019D5 RID: 6613
 	[JsonConverter(typeof(ICameraOperationTypeConverter))]
 	public class ICameraOperationType
 	{
-		// Token: 0x06008591 RID: 34193 RVA: 0x0013DA88 File Offset: 0x0013BC88
+		// Token: 0x06008CB7 RID: 36023 RVA: 0x0014D27C File Offset: 0x0014B47C
 		private ICameraOperationType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008592 RID: 34194 RVA: 0x0013DAC0 File Offset: 0x0013BCC0
+		// Token: 0x06008CB8 RID: 36024 RVA: 0x0014D2B4 File Offset: 0x0014B4B4
 		public static ICameraOperationType Create([Nullable(2)] ICameraOperationType instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008593 RID: 34195 RVA: 0x0013DAD3 File Offset: 0x0013BCD3
+		// Token: 0x06008CB9 RID: 36025 RVA: 0x0014D2C7 File Offset: 0x0014B4C7
 		public static ICameraOperationType CreateFromSetValue([Nullable(2)] ICameraOperationType_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008594 RID: 34196 RVA: 0x0013DAE6 File Offset: 0x0013BCE6
+		// Token: 0x06008CBA RID: 36026 RVA: 0x0014D2DA File Offset: 0x0014B4DA
 		public ICameraOperationType_SetValue ToSetValue()
 		{
 			return new ICameraOperationType_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BAE RID: 11182
-		// (get) Token: 0x06008595 RID: 34197 RVA: 0x0013DAF9 File Offset: 0x0013BCF9
-		// (set) Token: 0x06008596 RID: 34198 RVA: 0x0013DB24 File Offset: 0x0013BD24
+		// Token: 0x17002DA8 RID: 11688
+		// (get) Token: 0x06008CBB RID: 36027 RVA: 0x0014D2ED File Offset: 0x0014B4ED
+		// (set) Token: 0x06008CBC RID: 36028 RVA: 0x0014D318 File Offset: 0x0014B518
 		public virtual ECameraOperationType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400545B RID: 21595
+		// Token: 0x040058A7 RID: 22695
 		[Nullable(2)]
 		protected ICameraOperationType FbInstance;
 
-		// Token: 0x0400545C RID: 21596
+		// Token: 0x040058A8 RID: 22696
 		[Nullable(2)]
 		protected ICameraOperationType_SetValue PocoInterface;
 	}

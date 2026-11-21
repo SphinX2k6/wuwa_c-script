@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Effect
 {
-	// Token: 0x02007262 RID: 29282
+	// Token: 0x020063E1 RID: 25569
 	public static class EEffectCreateFromTypeHelper
 	{
-		// Token: 0x04025B90 RID: 154512
+		// Token: 0x04020E4E RID: 134734
 		public const EEffectCreateFromType NEED_CHECK_DISABLE_MASK = EEffectCreateFromType.An;
 	}
 }

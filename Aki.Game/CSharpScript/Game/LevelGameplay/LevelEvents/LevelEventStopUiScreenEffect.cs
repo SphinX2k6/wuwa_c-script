@@ -6,15 +6,15 @@ using CSharpScript.Game.Render.Effect.ScreenEffectSystem;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B9D RID: 27549
+	// Token: 0x02005D15 RID: 23829
 	public class LevelEventStopUiScreenEffect : LevelEventBase
 	{
-		// Token: 0x060442E4 RID: 279268 RVA: 0x010CDA91 File Offset: 0x010CBC91
+		// Token: 0x0603A438 RID: 238648 RVA: 0x010778C9 File Offset: 0x01075AC9
 		public LevelEventStopUiScreenEffect(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442E5 RID: 279269 RVA: 0x010CDA9C File Offset: 0x010CBC9C
+		// Token: 0x0603A439 RID: 238649 RVA: 0x010778D4 File Offset: 0x01075AD4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

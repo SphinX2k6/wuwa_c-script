@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001640 RID: 5696
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017AD RID: 6061
 	public class EnableKey4Func : ActionParams
 	{
-		// Token: 0x06007C5F RID: 31839 RVA: 0x0012B170 File Offset: 0x00129370
+		// Token: 0x0600833D RID: 33597 RVA: 0x0013A21C File Offset: 0x0013841C
 		private EnableKey4Func_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C60 RID: 31840 RVA: 0x0012B1A8 File Offset: 0x001293A8
+		// Token: 0x0600833E RID: 33598 RVA: 0x0013A254 File Offset: 0x00138454
 		public static EnableKey4Func Create([Nullable(2)] EnableKey4Func instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C61 RID: 31841 RVA: 0x0012B1BB File Offset: 0x001293BB
+		// Token: 0x0600833F RID: 33599 RVA: 0x0013A267 File Offset: 0x00138467
 		public static EnableKey4Func CreateFromSetValue([Nullable(2)] EnableKey4Func_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C62 RID: 31842 RVA: 0x0012B1CE File Offset: 0x001293CE
+		// Token: 0x06008340 RID: 33600 RVA: 0x0013A27A File Offset: 0x0013847A
 		public EnableKey4Func_SetValue ToSetValue()
 		{
 			return new EnableKey4Func_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002922 RID: 10530
-		// (get) Token: 0x06007C63 RID: 31843 RVA: 0x0012B1ED File Offset: 0x001293ED
-		// (set) Token: 0x06007C64 RID: 31844 RVA: 0x0012B218 File Offset: 0x00129418
+		// Token: 0x17002B0D RID: 11021
+		// (get) Token: 0x06008341 RID: 33601 RVA: 0x0013A299 File Offset: 0x00138499
+		// (set) Token: 0x06008342 RID: 33602 RVA: 0x0013A2C4 File Offset: 0x001384C4
 		public virtual bool IsEnable
 		{
 			get
@@ -79,9 +77,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002923 RID: 10531
-		// (get) Token: 0x06007C65 RID: 31845 RVA: 0x0012B226 File Offset: 0x00129426
-		// (set) Token: 0x06007C66 RID: 31846 RVA: 0x0012B251 File Offset: 0x00129451
+		// Token: 0x17002B0E RID: 11022
+		// (get) Token: 0x06008343 RID: 33603 RVA: 0x0013A2D2 File Offset: 0x001384D2
+		// (set) Token: 0x06008344 RID: 33604 RVA: 0x0013A2FD File Offset: 0x001384FD
 		public virtual EEnableKey4FuncKey FuncKey
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C66 RID: 19558
+		// Token: 0x0400505A RID: 20570
 		[Nullable(2)]
 		protected new EnableKey4Func FbInstance;
 
-		// Token: 0x04004C67 RID: 19559
+		// Token: 0x0400505B RID: 20571
 		[Nullable(2)]
 		protected EnableKey4Func_SetValue PocoInterface;
 	}

@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002329 RID: 9001
+// Token: 0x0200180E RID: 6158
 public class BattlePassBackgroundPanel : UiPanelBase
 {
-	// Token: 0x06011D26 RID: 72998 RVA: 0x00463B18 File Offset: 0x00461D18
+	// Token: 0x0600F1D6 RID: 61910 RVA: 0x00470BDC File Offset: 0x0046EDDC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -56,7 +56,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011D27 RID: 72999 RVA: 0x00463D54 File Offset: 0x00461F54
+	// Token: 0x0600F1D7 RID: 61911 RVA: 0x00470E18 File Offset: 0x0046F018
 	private void OnClickBuyLevelBtn(int _)
 	{
 		UiManager.Instance.OpenView(EUiViewName.BattlePassBuyLevelView, null, null);
@@ -65,7 +65,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		LogReportController.Instance.LogReport(onBattlePassOperationLogEvent);
 	}
 
-	// Token: 0x06011D28 RID: 73000 RVA: 0x00463D8C File Offset: 0x00461F8C
+	// Token: 0x0600F1D8 RID: 61912 RVA: 0x00470E50 File Offset: 0x0046F050
 	private void OnClickBuyPassBtn()
 	{
 		BattlePassBackgroundPanelParam battlePassBackgroundPanelParam = (BattlePassBackgroundPanelParam)this.OpenParam;
@@ -76,7 +76,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		LogReportController.Instance.LogReport(onBattlePassOperationLogEvent);
 	}
 
-	// Token: 0x06011D29 RID: 73001 RVA: 0x00463DDE File Offset: 0x00461FDE
+	// Token: 0x0600F1D9 RID: 61913 RVA: 0x00470EA2 File Offset: 0x0046F0A2
 	private void OnClickReceiveBtn()
 	{
 		if (this.IsRewardPanel)
@@ -87,7 +87,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		BattlePassController.Instance.TryRequestTaskList(BattlePassModel.Instance.GetAllFinishedTask());
 	}
 
-	// Token: 0x06011D2A RID: 73002 RVA: 0x00463E08 File Offset: 0x00462008
+	// Token: 0x0600F1DA RID: 61914 RVA: 0x00470ECC File Offset: 0x0046F0CC
 	protected override UniTask OnCreateAsync()
 	{
 		BattlePassBackgroundPanel.<OnCreateAsync>d__10 <OnCreateAsync>d__;
@@ -98,7 +98,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D2B RID: 73003 RVA: 0x00463E4C File Offset: 0x0046204C
+	// Token: 0x0600F1DB RID: 61915 RVA: 0x00470F10 File Offset: 0x0046F110
 	private UniTask LoadRedSprite()
 	{
 		BattlePassBackgroundPanel.<LoadRedSprite>d__11 <LoadRedSprite>d__;
@@ -109,7 +109,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		return <LoadRedSprite>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D2C RID: 73004 RVA: 0x00463E90 File Offset: 0x00462090
+	// Token: 0x0600F1DC RID: 61916 RVA: 0x00470F54 File Offset: 0x0046F154
 	private UniTask LoadGreenSprite()
 	{
 		BattlePassBackgroundPanel.<LoadGreenSprite>d__12 <LoadGreenSprite>d__;
@@ -120,7 +120,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		return <LoadGreenSprite>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D2D RID: 73005 RVA: 0x00463ED4 File Offset: 0x004620D4
+	// Token: 0x0600F1DD RID: 61917 RVA: 0x00470F98 File Offset: 0x0046F198
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add<int?>(EEventName.GetBattlePassRewardEvent, new Action<int?>(this.OnGetBattlePassRewardEvent));
@@ -129,7 +129,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		EventSystem.Instance.Add(EEventName.NotifyBattlePassToBuyEvent, new Action(this.OnClickBuyPassBtn));
 	}
 
-	// Token: 0x06011D2E RID: 73006 RVA: 0x00463F54 File Offset: 0x00462154
+	// Token: 0x0600F1DE RID: 61918 RVA: 0x00471018 File Offset: 0x0046F218
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.GetBattlePassRewardEvent, new Action<int?>(this.OnGetBattlePassRewardEvent));
@@ -138,7 +138,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		EventSystem.Instance.Remove(EEventName.NotifyBattlePassToBuyEvent, new Action(this.OnClickBuyPassBtn));
 	}
 
-	// Token: 0x06011D2F RID: 73007 RVA: 0x00463FD4 File Offset: 0x004621D4
+	// Token: 0x0600F1DF RID: 61919 RVA: 0x00471098 File Offset: 0x0046F298
 	protected override void OnStart()
 	{
 		this.BuyLevelBtn = new ButtonItem(base.GetItem(6));
@@ -149,7 +149,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		this.AddEventListener();
 	}
 
-	// Token: 0x06011D30 RID: 73008 RVA: 0x0046402E File Offset: 0x0046222E
+	// Token: 0x0600F1E0 RID: 61920 RVA: 0x004710F2 File Offset: 0x0046F2F2
 	protected override void OnBeforeShow()
 	{
 		base.GetItem(10).SetUIActive(false);
@@ -157,25 +157,25 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		RedDotController.Instance.BindRedDot(ERedDotName.BattlePassPayButton, base.GetItem(12), null, 0);
 	}
 
-	// Token: 0x06011D31 RID: 73009 RVA: 0x00464065 File Offset: 0x00462265
+	// Token: 0x0600F1E1 RID: 61921 RVA: 0x00471129 File Offset: 0x0046F329
 	protected override void OnBeforeHide()
 	{
 		RedDotController.Instance.UnBindRedDot(ERedDotName.BattlePassPayButton);
 	}
 
-	// Token: 0x06011D32 RID: 73010 RVA: 0x00464076 File Offset: 0x00462276
+	// Token: 0x0600F1E2 RID: 61922 RVA: 0x0047113A File Offset: 0x0046F33A
 	protected override void OnAfterShow()
 	{
 		base.AddChild(this.BuyLevelBtn);
 	}
 
-	// Token: 0x06011D33 RID: 73011 RVA: 0x00464084 File Offset: 0x00462284
+	// Token: 0x0600F1E3 RID: 61923 RVA: 0x00471148 File Offset: 0x0046F348
 	private void OnGetBattlePassRewardEvent(int? _)
 	{
 		this.RefreshButton();
 	}
 
-	// Token: 0x06011D34 RID: 73012 RVA: 0x0046408C File Offset: 0x0046228C
+	// Token: 0x0600F1E4 RID: 61924 RVA: 0x00471150 File Offset: 0x0046F350
 	private void RefreshButton()
 	{
 		if (this.IsRewardPanel)
@@ -186,7 +186,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		base.GetButton(7).RootUIComp.Get().SetUIActive(BattlePassModel.Instance.CheckHasTaskWaitTake());
 	}
 
-	// Token: 0x06011D35 RID: 73013 RVA: 0x004640E8 File Offset: 0x004622E8
+	// Token: 0x0600F1E5 RID: 61925 RVA: 0x004711AC File Offset: 0x0046F3AC
 	private void RefreshMainView()
 	{
 		int battlePassLevel = BattlePassModel.Instance.BattlePassLevel;
@@ -212,7 +212,7 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		this.RefreshButton();
 	}
 
-	// Token: 0x06011D36 RID: 73014 RVA: 0x0046425A File Offset: 0x0046245A
+	// Token: 0x0600F1E6 RID: 61926 RVA: 0x0047131E File Offset: 0x0046F51E
 	protected override void OnBeforeDestroy()
 	{
 		this.BuyLevelBtn = null;
@@ -221,58 +221,58 @@ public class BattlePassBackgroundPanel : UiPanelBase
 		this.GreenSprite = null;
 	}
 
-	// Token: 0x0400870E RID: 34574
+	// Token: 0x04008851 RID: 34897
 	[Nullable(2)]
 	private ButtonItem BuyLevelBtn;
 
-	// Token: 0x0400870F RID: 34575
+	// Token: 0x04008852 RID: 34898
 	private bool IsRewardPanel;
 
-	// Token: 0x04008710 RID: 34576
+	// Token: 0x04008853 RID: 34899
 	[Nullable(2)]
 	private ULGUISpriteData_BaseObject RedSprite;
 
-	// Token: 0x04008711 RID: 34577
+	// Token: 0x04008854 RID: 34900
 	[Nullable(2)]
 	private ULGUISpriteData_BaseObject GreenSprite;
 
-	// Token: 0x020088A9 RID: 34985
+	// Token: 0x02007A32 RID: 31282
 	private enum EReportOperation
 	{
-		// Token: 0x0402C6AA RID: 181930
+		// Token: 0x040279BE RID: 162238
 		BuyLevelBtn,
-		// Token: 0x0402C6AB RID: 181931
+		// Token: 0x040279BF RID: 162239
 		BuyPassBtn
 	}
 
-	// Token: 0x020088AA RID: 34986
+	// Token: 0x02007A33 RID: 31283
 	private enum EComponents
 	{
-		// Token: 0x0402C6AD RID: 181933
+		// Token: 0x040279C1 RID: 162241
 		Panel,
-		// Token: 0x0402C6AE RID: 181934
+		// Token: 0x040279C2 RID: 162242
 		TxtLevel,
-		// Token: 0x0402C6AF RID: 181935
+		// Token: 0x040279C3 RID: 162243
 		ExpSlider,
-		// Token: 0x0402C6B0 RID: 181936
+		// Token: 0x040279C4 RID: 162244
 		PicFull,
-		// Token: 0x0402C6B1 RID: 181937
+		// Token: 0x040279C5 RID: 162245
 		TxtExp,
-		// Token: 0x0402C6B2 RID: 181938
+		// Token: 0x040279C6 RID: 162246
 		TxtLimit,
-		// Token: 0x0402C6B3 RID: 181939
+		// Token: 0x040279C7 RID: 162247
 		BtnBuyLevel,
-		// Token: 0x0402C6B4 RID: 181940
+		// Token: 0x040279C8 RID: 162248
 		BtnReceive,
-		// Token: 0x0402C6B5 RID: 181941
+		// Token: 0x040279C9 RID: 162249
 		BtnBuyPass,
-		// Token: 0x0402C6B6 RID: 181942
+		// Token: 0x040279CA RID: 162250
 		TxtBtnBuyPass,
-		// Token: 0x0402C6B7 RID: 181943
+		// Token: 0x040279CB RID: 162251
 		EffectGreen,
-		// Token: 0x0402C6B8 RID: 181944
+		// Token: 0x040279CC RID: 162252
 		EffectRed,
-		// Token: 0x0402C6B9 RID: 181945
+		// Token: 0x040279CD RID: 162253
 		PayButtonRedDotItem
 	}
 }

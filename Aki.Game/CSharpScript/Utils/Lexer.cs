@@ -5,18 +5,18 @@ using System.Text.RegularExpressions;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044EF RID: 17647
+	// Token: 0x02003411 RID: 13329
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Lexer
 	{
-		// Token: 0x0602D754 RID: 186196 RVA: 0x00A42DA3 File Offset: 0x00A40FA3
+		// Token: 0x06021E24 RID: 138788 RVA: 0x0096EBB3 File Offset: 0x0096CDB3
 		public Lexer(string inputString)
 		{
 			this.InputString = inputString;
 		}
 
-		// Token: 0x0602D755 RID: 186197 RVA: 0x00A42DB4 File Offset: 0x00A40FB4
+		// Token: 0x06021E25 RID: 138789 RVA: 0x0096EBC4 File Offset: 0x0096CDC4
 		public List<IToken> Tokenize()
 		{
 			List<IToken> list = new List<IToken>();
@@ -104,7 +104,7 @@ namespace CSharpScript.Utils
 			return list;
 		}
 
-		// Token: 0x0602D756 RID: 186198 RVA: 0x00A42FF8 File Offset: 0x00A411F8
+		// Token: 0x06021E26 RID: 138790 RVA: 0x0096EE08 File Offset: 0x0096D008
 		private IToken ReadNumber()
 		{
 			string text = "";
@@ -144,7 +144,7 @@ namespace CSharpScript.Utils
 			};
 		}
 
-		// Token: 0x0602D757 RID: 186199 RVA: 0x00A43140 File Offset: 0x00A41340
+		// Token: 0x06021E27 RID: 138791 RVA: 0x0096EF50 File Offset: 0x0096D150
 		private IToken ReadIdentifier()
 		{
 			string text = "";
@@ -209,7 +209,7 @@ namespace CSharpScript.Utils
 			};
 		}
 
-		// Token: 0x0602D758 RID: 186200 RVA: 0x00A43298 File Offset: 0x00A41498
+		// Token: 0x06021E28 RID: 138792 RVA: 0x0096F0A8 File Offset: 0x0096D2A8
 		private IToken ReadString()
 		{
 			string inputString = this.InputString;
@@ -238,7 +238,7 @@ namespace CSharpScript.Utils
 			throw new Exception("Invalid string: " + text);
 		}
 
-		// Token: 0x0602D759 RID: 186201 RVA: 0x00A43338 File Offset: 0x00A41538
+		// Token: 0x06021E29 RID: 138793 RVA: 0x0096F148 File Offset: 0x0096D348
 		private IToken ReadOperator()
 		{
 			string text = "";
@@ -261,10 +261,10 @@ namespace CSharpScript.Utils
 			};
 		}
 
-		// Token: 0x040184E2 RID: 99554
+		// Token: 0x04012B0A RID: 76554
 		private int Position;
 
-		// Token: 0x040184E3 RID: 99555
+		// Token: 0x04012B0B RID: 76555
 		private readonly string InputString;
 	}
 }

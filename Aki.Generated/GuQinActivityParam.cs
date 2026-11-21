@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D1F RID: 3359
+	// Token: 0x02000E04 RID: 3588
 	public struct GuQinActivityParam : IFlatbufferObject
 	{
-		// Token: 0x170016B9 RID: 5817
-		// (get) Token: 0x06007D8B RID: 32139 RVA: 0x0025213A File Offset: 0x0025033A
+		// Token: 0x1700171C RID: 5916
+		// (get) Token: 0x060083A5 RID: 33701 RVA: 0x00270A66 File Offset: 0x0026EC66
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D8C RID: 32140 RVA: 0x00252147 File Offset: 0x00250347
+		// Token: 0x060083A6 RID: 33702 RVA: 0x00270A73 File Offset: 0x0026EC73
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007D8D RID: 32141 RVA: 0x00252150 File Offset: 0x00250350
+		// Token: 0x060083A7 RID: 33703 RVA: 0x00270A7C File Offset: 0x0026EC7C
 		public static GuQinActivityParam GetRootAsGuQinActivityParam(ByteBuffer _bb)
 		{
 			return GuQinActivityParam.GetRootAsGuQinActivityParam(_bb, default(GuQinActivityParam));
 		}
 
-		// Token: 0x06007D8E RID: 32142 RVA: 0x0025216C File Offset: 0x0025036C
+		// Token: 0x060083A8 RID: 33704 RVA: 0x00270A98 File Offset: 0x0026EC98
 		public static GuQinActivityParam GetRootAsGuQinActivityParam(ByteBuffer _bb, GuQinActivityParam obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007D8F RID: 32143 RVA: 0x00252189 File Offset: 0x00250389
+		// Token: 0x060083A9 RID: 33705 RVA: 0x00270AB5 File Offset: 0x0026ECB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007D90 RID: 32144 RVA: 0x00252198 File Offset: 0x00250398
+		// Token: 0x060083AA RID: 33706 RVA: 0x00270AC4 File Offset: 0x0026ECC4
 		public GuQinActivityParam __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170016BA RID: 5818
-		// (get) Token: 0x06007D91 RID: 32145 RVA: 0x002521A8 File Offset: 0x002503A8
+		// Token: 0x1700171D RID: 5917
+		// (get) Token: 0x060083AB RID: 33707 RVA: 0x00270AD4 File Offset: 0x0026ECD4
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170016BB RID: 5819
-		// (get) Token: 0x06007D92 RID: 32146 RVA: 0x002521E4 File Offset: 0x002503E4
+		// Token: 0x1700171E RID: 5918
+		// (get) Token: 0x060083AC RID: 33708 RVA: 0x00270B10 File Offset: 0x0026ED10
 		public int RecommendQuestId
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D93 RID: 32147 RVA: 0x00252220 File Offset: 0x00250420
+		// Token: 0x060083AD RID: 33709 RVA: 0x00270B4C File Offset: 0x0026ED4C
 		public int RecommendQuestLinkList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170016BC RID: 5820
-		// (get) Token: 0x06007D94 RID: 32148 RVA: 0x00252260 File Offset: 0x00250460
+		// Token: 0x1700171F RID: 5919
+		// (get) Token: 0x060083AE RID: 33710 RVA: 0x00270B8C File Offset: 0x0026ED8C
 		public int RecommendQuestLinkListLength
 		{
 			get
@@ -106,20 +106,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D95 RID: 32149 RVA: 0x0025228B File Offset: 0x0025048B
+		// Token: 0x060083AF RID: 33711 RVA: 0x00270BB7 File Offset: 0x0026EDB7
 		public Span<int> GetRecommendQuestLinkListBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06007D96 RID: 32150 RVA: 0x0025229A File Offset: 0x0025049A
+		// Token: 0x060083B0 RID: 33712 RVA: 0x00270BC6 File Offset: 0x0026EDC6
 		public int[] GetRecommendQuestLinkListArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170016BD RID: 5821
-		// (get) Token: 0x06007D97 RID: 32151 RVA: 0x002522B4 File Offset: 0x002504B4
+		// Token: 0x17001720 RID: 5920
+		// (get) Token: 0x060083B1 RID: 33713 RVA: 0x00270BE0 File Offset: 0x0026EDE0
 		public string RecommendQuestLabel
 		{
 			get
@@ -133,19 +133,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D98 RID: 32152 RVA: 0x002522EC File Offset: 0x002504EC
+		// Token: 0x060083B2 RID: 33714 RVA: 0x00270C18 File Offset: 0x0026EE18
 		public Span<byte> GetRecommendQuestLabelBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06007D99 RID: 32153 RVA: 0x002522FC File Offset: 0x002504FC
+		// Token: 0x060083B3 RID: 33715 RVA: 0x00270C28 File Offset: 0x0026EE28
 		public byte[] GetRecommendQuestLabelArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06007D9A RID: 32154 RVA: 0x00252314 File Offset: 0x00250514
+		// Token: 0x060083B4 RID: 33716 RVA: 0x00270C40 File Offset: 0x0026EE40
 		public string MaleMontagePaths(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -156,8 +156,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170016BE RID: 5822
-		// (get) Token: 0x06007D9B RID: 32155 RVA: 0x00252350 File Offset: 0x00250550
+		// Token: 0x17001721 RID: 5921
+		// (get) Token: 0x060083B5 RID: 33717 RVA: 0x00270C7C File Offset: 0x0026EE7C
 		public int MaleMontagePathsLength
 		{
 			get
@@ -171,7 +171,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D9C RID: 32156 RVA: 0x0025237C File Offset: 0x0025057C
+		// Token: 0x060083B6 RID: 33718 RVA: 0x00270CA8 File Offset: 0x0026EEA8
 		public string FemaleMontagePaths(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -182,8 +182,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170016BF RID: 5823
-		// (get) Token: 0x06007D9D RID: 32157 RVA: 0x002523B8 File Offset: 0x002505B8
+		// Token: 0x17001722 RID: 5922
+		// (get) Token: 0x060083B7 RID: 33719 RVA: 0x00270CE4 File Offset: 0x0026EEE4
 		public int FemaleMontagePathsLength
 		{
 			get
@@ -197,8 +197,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170016C0 RID: 5824
-		// (get) Token: 0x06007D9E RID: 32158 RVA: 0x002523E4 File Offset: 0x002505E4
+		// Token: 0x17001723 RID: 5923
+		// (get) Token: 0x060083B8 RID: 33720 RVA: 0x00270D10 File Offset: 0x0026EF10
 		public string UiCameraId
 		{
 			get
@@ -212,71 +212,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D9F RID: 32159 RVA: 0x0025241C File Offset: 0x0025061C
+		// Token: 0x060083B9 RID: 33721 RVA: 0x00270D48 File Offset: 0x0026EF48
 		public Span<byte> GetUiCameraIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06007DA0 RID: 32160 RVA: 0x0025242C File Offset: 0x0025062C
+		// Token: 0x060083BA RID: 33722 RVA: 0x00270D58 File Offset: 0x0026EF58
 		public byte[] GetUiCameraIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06007DA1 RID: 32161 RVA: 0x00252444 File Offset: 0x00250644
+		// Token: 0x060083BB RID: 33723 RVA: 0x00270D70 File Offset: 0x0026EF70
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FemaleMontagePathsIter()或GetFemaleMontagePathsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] FemaleMontagePaths()
+		public string[] FemaleMontagePaths()
 		{
 			return this.FemaleMontagePathsIter().ToArray<string>();
 		}
 
-		// Token: 0x06007DA2 RID: 32162 RVA: 0x00252451 File Offset: 0x00250651
+		// Token: 0x060083BC RID: 33724 RVA: 0x00270D7D File Offset: 0x0026EF7D
 		[NullableContext(1)]
-		public readonly IEnumerable<string> FemaleMontagePathsIter()
+		public IEnumerable<string> FemaleMontagePathsIter()
 		{
 			GuQinActivityParam.<FemaleMontagePathsIter>d__32 <FemaleMontagePathsIter>d__ = new GuQinActivityParam.<FemaleMontagePathsIter>d__32(-2);
 			<FemaleMontagePathsIter>d__.<>3__<>4__this = this;
 			return <FemaleMontagePathsIter>d__;
 		}
 
-		// Token: 0x06007DA3 RID: 32163 RVA: 0x00252466 File Offset: 0x00250666
+		// Token: 0x060083BD RID: 33725 RVA: 0x00270D92 File Offset: 0x0026EF92
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MaleMontagePathsIter()或GetMaleMontagePathsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] MaleMontagePaths()
+		public string[] MaleMontagePaths()
 		{
 			return this.MaleMontagePathsIter().ToArray<string>();
 		}
 
-		// Token: 0x06007DA4 RID: 32164 RVA: 0x00252473 File Offset: 0x00250673
+		// Token: 0x060083BE RID: 33726 RVA: 0x00270D9F File Offset: 0x0026EF9F
 		[NullableContext(1)]
-		public readonly IEnumerable<string> MaleMontagePathsIter()
+		public IEnumerable<string> MaleMontagePathsIter()
 		{
 			GuQinActivityParam.<MaleMontagePathsIter>d__34 <MaleMontagePathsIter>d__ = new GuQinActivityParam.<MaleMontagePathsIter>d__34(-2);
 			<MaleMontagePathsIter>d__.<>3__<>4__this = this;
 			return <MaleMontagePathsIter>d__;
 		}
 
-		// Token: 0x06007DA5 RID: 32165 RVA: 0x00252488 File Offset: 0x00250688
+		// Token: 0x060083BF RID: 33727 RVA: 0x00270DB4 File Offset: 0x0026EFB4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RecommendQuestLinkListIter()或GetRecommendQuestLinkListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RecommendQuestLinkList()
+		public int[] RecommendQuestLinkList()
 		{
-			GuQinActivityParam guQinActivityParam = this;
-			return guQinActivityParam.GetRecommendQuestLinkListArray() ?? Array.Empty<int>();
+			return this.GetRecommendQuestLinkListArray();
 		}
 
-		// Token: 0x06007DA6 RID: 32166 RVA: 0x002524AC File Offset: 0x002506AC
+		// Token: 0x060083C0 RID: 33728 RVA: 0x00270DBC File Offset: 0x0026EFBC
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RecommendQuestLinkListIter()
+		public IEnumerable<int> RecommendQuestLinkListIter()
 		{
 			GuQinActivityParam.<RecommendQuestLinkListIter>d__36 <RecommendQuestLinkListIter>d__ = new GuQinActivityParam.<RecommendQuestLinkListIter>d__36(-2);
 			<RecommendQuestLinkListIter>d__.<>3__<>4__this = this;
 			return <RecommendQuestLinkListIter>d__;
 		}
 
-		// Token: 0x04004D97 RID: 19863
+		// Token: 0x0400537C RID: 21372
 		private Table __p;
 	}
 }

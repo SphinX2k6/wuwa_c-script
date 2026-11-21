@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000536 RID: 1334
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200059D RID: 1437
 	public class IMovementPerformConfig
 	{
-		// Token: 0x06001B42 RID: 6978 RVA: 0x0004EEBC File Offset: 0x0004D0BC
+		// Token: 0x06001D3E RID: 7486 RVA: 0x00053C78 File Offset: 0x00051E78
 		private IMovementPerformConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001B43 RID: 6979 RVA: 0x0004EEF4 File Offset: 0x0004D0F4
+		// Token: 0x06001D3F RID: 7487 RVA: 0x00053CB0 File Offset: 0x00051EB0
 		public static IMovementPerformConfig Create([Nullable(2)] IMovementPerformConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001B44 RID: 6980 RVA: 0x0004EF07 File Offset: 0x0004D107
+		// Token: 0x06001D40 RID: 7488 RVA: 0x00053CC3 File Offset: 0x00051EC3
 		public static IMovementPerformConfig CreateFromSetValue([Nullable(2)] IMovementPerformConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001B45 RID: 6981 RVA: 0x0004EF1A File Offset: 0x0004D11A
+		// Token: 0x06001D41 RID: 7489 RVA: 0x00053CD6 File Offset: 0x00051ED6
 		public IMovementPerformConfig_SetValue ToSetValue()
 		{
 			return new IMovementPerformConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700072F RID: 1839
-		// (get) Token: 0x06001B46 RID: 6982 RVA: 0x0004EF3C File Offset: 0x0004D13C
-		// (set) Token: 0x06001B47 RID: 6983 RVA: 0x0004EFCF File Offset: 0x0004D1CF
+		// Token: 0x170007B2 RID: 1970
+		// (get) Token: 0x06001D42 RID: 7490 RVA: 0x00053CF8 File Offset: 0x00051EF8
+		// (set) Token: 0x06001D43 RID: 7491 RVA: 0x00053D8B File Offset: 0x00051F8B
 		public virtual List<IVehicleMontagePlayConfig> VehicleMontagePlayConfigs
 		{
 			get
@@ -99,20 +97,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000730 RID: 1840
-		// (get) Token: 0x06001B48 RID: 6984 RVA: 0x0004EFE4 File Offset: 0x0004D1E4
-		// (set) Token: 0x06001B49 RID: 6985 RVA: 0x0004F077 File Offset: 0x0004D277
+		// Token: 0x170007B3 RID: 1971
+		// (get) Token: 0x06001D44 RID: 7492 RVA: 0x00053DA0 File Offset: 0x00051FA0
+		// (set) Token: 0x06001D45 RID: 7493 RVA: 0x00053E33 File Offset: 0x00052033
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ISpeedEffectConfig> PlayerSpeedEffectConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -143,7 +141,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -152,29 +150,29 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040013A5 RID: 5029
+		// Token: 0x0400150F RID: 5391
 		[Nullable(2)]
 		protected IMovementPerformConfig FbInstance;
 
-		// Token: 0x040013A6 RID: 5030
+		// Token: 0x04001510 RID: 5392
 		[Nullable(2)]
 		protected IMovementPerformConfig_SetValue PocoInterface;
 
-		// Token: 0x040013A7 RID: 5031
+		// Token: 0x04001511 RID: 5393
 		private List<IVehicleMontagePlayConfig> _VehicleMontagePlayConfigsCache;
 
-		// Token: 0x040013A8 RID: 5032
+		// Token: 0x04001512 RID: 5394
 		private bool _VehicleMontagePlayConfigsInited;
 
-		// Token: 0x040013A9 RID: 5033
+		// Token: 0x04001513 RID: 5395
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ISpeedEffectConfig> _PlayerSpeedEffectConfigsCache;
 
-		// Token: 0x040013AA RID: 5034
+		// Token: 0x04001514 RID: 5396
 		private bool _PlayerSpeedEffectConfigsInited;
 	}
 }

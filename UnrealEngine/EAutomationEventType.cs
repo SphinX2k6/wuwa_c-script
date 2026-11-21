@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000712 RID: 1810
+	// Token: 0x020000FD RID: 253
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/CoreUObject.EAutomationEventType")]
 	public enum EAutomationEventType : byte
 	{
-		// Token: 0x04002DC2 RID: 11714
+		// Token: 0x04000451 RID: 1105
 		Info,
-		// Token: 0x04002DC3 RID: 11715
+		// Token: 0x04000452 RID: 1106
 		Warning,
-		// Token: 0x04002DC4 RID: 11716
+		// Token: 0x04000453 RID: 1107
 		Error,
-		// Token: 0x04002DC5 RID: 11717
+		// Token: 0x04000454 RID: 1108
 		EAutomationEventType_MAX
 	}
 }

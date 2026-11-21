@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002962 RID: 10594
+// Token: 0x02001EDD RID: 7901
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkProtocolData
 {
-	// Token: 0x06015E70 RID: 89712 RVA: 0x00586750 File Offset: 0x00584950
+	// Token: 0x06013874 RID: 79988 RVA: 0x005B1754 File Offset: 0x005AF954
 	public static SdkProtocolData Create(string url, string title)
 	{
 		return new SdkProtocolData
@@ -16,9 +16,9 @@ public class SdkProtocolData
 		};
 	}
 
-	// Token: 0x0400A2FC RID: 41724
+	// Token: 0x0400A6E6 RID: 42726
 	public string Url = "";
 
-	// Token: 0x0400A2FD RID: 41725
+	// Token: 0x0400A6E7 RID: 42727
 	public string Title = "";
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200450F RID: 17679
+	// Token: 0x02004977 RID: 18807
 	public struct ILevelPlayRefreshCd : IFlatbufferObject
 	{
-		// Token: 0x17007D58 RID: 32088
-		// (get) Token: 0x0601A907 RID: 108807 RVA: 0x003CB381 File Offset: 0x003C9581
+		// Token: 0x17008399 RID: 33689
+		// (get) Token: 0x0601C0DC RID: 114908 RVA: 0x003F761D File Offset: 0x003F581D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A908 RID: 108808 RVA: 0x003CB38E File Offset: 0x003C958E
+		// Token: 0x0601C0DD RID: 114909 RVA: 0x003F762A File Offset: 0x003F582A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A909 RID: 108809 RVA: 0x003CB398 File Offset: 0x003C9598
+		// Token: 0x0601C0DE RID: 114910 RVA: 0x003F7634 File Offset: 0x003F5834
 		public static ILevelPlayRefreshCd GetRootAsILevelPlayRefreshCd(ByteBuffer _bb)
 		{
 			return ILevelPlayRefreshCd.GetRootAsILevelPlayRefreshCd(_bb, default(ILevelPlayRefreshCd));
 		}
 
-		// Token: 0x0601A90A RID: 108810 RVA: 0x003CB3B4 File Offset: 0x003C95B4
+		// Token: 0x0601C0DF RID: 114911 RVA: 0x003F7650 File Offset: 0x003F5850
 		public static ILevelPlayRefreshCd GetRootAsILevelPlayRefreshCd(ByteBuffer _bb, ILevelPlayRefreshCd obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A90B RID: 108811 RVA: 0x003CB3D1 File Offset: 0x003C95D1
+		// Token: 0x0601C0E0 RID: 114912 RVA: 0x003F766D File Offset: 0x003F586D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A90C RID: 108812 RVA: 0x003CB3E0 File Offset: 0x003C95E0
+		// Token: 0x0601C0E1 RID: 114913 RVA: 0x003F767C File Offset: 0x003F587C
 		public ILevelPlayRefreshCd __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007D59 RID: 32089
-		// (get) Token: 0x0601A90D RID: 108813 RVA: 0x003CB3F0 File Offset: 0x003C95F0
+		// Token: 0x1700839A RID: 33690
+		// (get) Token: 0x0601C0E2 RID: 114914 RVA: 0x003F768C File Offset: 0x003F588C
 		public int MinRefreshCd
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D5A RID: 32090
-		// (get) Token: 0x0601A90E RID: 108814 RVA: 0x003CB42C File Offset: 0x003C962C
+		// Token: 0x1700839B RID: 33691
+		// (get) Token: 0x0601C0E3 RID: 114915 RVA: 0x003F76C8 File Offset: 0x003F58C8
 		public int MaxRefreshCd
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A90F RID: 108815 RVA: 0x003CB468 File Offset: 0x003C9668
+		// Token: 0x0601C0E4 RID: 114916 RVA: 0x003F7704 File Offset: 0x003F5904
 		public static Offset<ILevelPlayRefreshCd> CreateILevelPlayRefreshCd(FlatBufferBuilder builder, int MinRefreshCd = 0, int MaxRefreshCd = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ILevelPlayRefreshCd.EndILevelPlayRefreshCd(builder);
 		}
 
-		// Token: 0x0601A910 RID: 108816 RVA: 0x003CB485 File Offset: 0x003C9685
+		// Token: 0x0601C0E5 RID: 114917 RVA: 0x003F7721 File Offset: 0x003F5921
 		public static void StartILevelPlayRefreshCd(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601A911 RID: 108817 RVA: 0x003CB48E File Offset: 0x003C968E
+		// Token: 0x0601C0E6 RID: 114918 RVA: 0x003F772A File Offset: 0x003F592A
 		public static void AddMinRefreshCd(FlatBufferBuilder builder, int minRefreshCd)
 		{
 			builder.AddInt(0, minRefreshCd, 0);
 		}
 
-		// Token: 0x0601A912 RID: 108818 RVA: 0x003CB499 File Offset: 0x003C9699
+		// Token: 0x0601C0E7 RID: 114919 RVA: 0x003F7735 File Offset: 0x003F5935
 		public static void AddMaxRefreshCd(FlatBufferBuilder builder, int maxRefreshCd)
 		{
 			builder.AddInt(1, maxRefreshCd, 0);
 		}
 
-		// Token: 0x0601A913 RID: 108819 RVA: 0x003CB4A4 File Offset: 0x003C96A4
+		// Token: 0x0601C0E8 RID: 114920 RVA: 0x003F7740 File Offset: 0x003F5940
 		public static Offset<ILevelPlayRefreshCd> EndILevelPlayRefreshCd(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelPlayRefreshCd>(builder.EndTable());
 		}
 
-		// Token: 0x0601A914 RID: 108820 RVA: 0x003CB4B4 File Offset: 0x003C96B4
+		// Token: 0x0601C0E9 RID: 114921 RVA: 0x003F7750 File Offset: 0x003F5950
 		public ILevelPlayRefreshCdT UnPack()
 		{
 			ILevelPlayRefreshCdT levelPlayRefreshCdT = new ILevelPlayRefreshCdT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return levelPlayRefreshCdT;
 		}
 
-		// Token: 0x0601A915 RID: 108821 RVA: 0x003CB4CF File Offset: 0x003C96CF
+		// Token: 0x0601C0EA RID: 114922 RVA: 0x003F776B File Offset: 0x003F596B
 		public void UnPackTo(ILevelPlayRefreshCdT _o)
 		{
 			_o.MinRefreshCd = this.MinRefreshCd;
 			_o.MaxRefreshCd = this.MaxRefreshCd;
 		}
 
-		// Token: 0x0601A916 RID: 108822 RVA: 0x003CB4EC File Offset: 0x003C96EC
+		// Token: 0x0601C0EB RID: 114923 RVA: 0x003F7788 File Offset: 0x003F5988
 		public static Offset<ILevelPlayRefreshCd> Pack(FlatBufferBuilder builder, ILevelPlayRefreshCdT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ILevelPlayRefreshCd.CreateILevelPlayRefreshCd(builder, _o.MinRefreshCd, _o.MaxRefreshCd);
 		}
 
-		// Token: 0x0400C579 RID: 50553
+		// Token: 0x0400CFA8 RID: 53160
 		private Table __p;
 	}
 }

@@ -1,26 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002155 RID: 8533
+	// Token: 0x020023B6 RID: 9142
 	public class RemoveTrialCharacter_SetValue
 	{
-		// Token: 0x0400703C RID: 28732
+		// Token: 0x04007671 RID: 30321
 		public int CharacterId;
 
-		// Token: 0x0400703D RID: 28733
-		[Nullable(1)]
+		// Token: 0x04007672 RID: 30322
 		public List<int> CharacterGroup;
 
-		// Token: 0x0400703E RID: 28734
+		// Token: 0x04007673 RID: 30323
 		public bool? IsRemoveTips;
 
-		// Token: 0x0400703F RID: 28735
+		// Token: 0x04007674 RID: 30324
 		public bool? EnableSeamlessTeamSwitch;
 
-		// Token: 0x04007040 RID: 28736
+		// Token: 0x04007675 RID: 30325
 		public bool? OnlyLowMemoryDeviceExecute;
 	}
 }

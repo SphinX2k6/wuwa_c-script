@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 {
-	// Token: 0x020069F7 RID: 27127
+	// Token: 0x02005B54 RID: 23380
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SunSpiritLauncherHintView : UiPanelBase
 	{
-		// Token: 0x060437C2 RID: 276418 RVA: 0x01080224 File Offset: 0x0107E424
+		// Token: 0x0603980B RID: 235531 RVA: 0x0102486C File Offset: 0x01022A6C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			};
 		}
 
-		// Token: 0x060437C3 RID: 276419 RVA: 0x010802C0 File Offset: 0x0107E4C0
+		// Token: 0x0603980C RID: 235532 RVA: 0x01024908 File Offset: 0x01022B08
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.AddEvents();
 		}
 
-		// Token: 0x060437C4 RID: 276420 RVA: 0x01080374 File Offset: 0x0107E574
+		// Token: 0x0603980D RID: 235533 RVA: 0x010249BC File Offset: 0x01022BBC
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearTargetLauncherComp();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.RemoveEvents();
 		}
 
-		// Token: 0x060437C5 RID: 276421 RVA: 0x01080390 File Offset: 0x0107E590
+		// Token: 0x0603980E RID: 235534 RVA: 0x010249D8 File Offset: 0x01022BD8
 		private void AddEvents()
 		{
 			if (!EventSystem.Instance.Has<SceneItemSunSpiritLauncherComponent, SceneItemSunSpiritLauncherComponent>(EEventName.OnSunSpiritLauncherWatchSelectedChanged, new Action<SceneItemSunSpiritLauncherComponent, SceneItemSunSpiritLauncherComponent>(this.OnSunSpiritLauncherWatchSelectedChanged)))
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.ChangeTargetLauncherComp(this.GetWatchSelectedLauncherComp());
 		}
 
-		// Token: 0x060437C6 RID: 276422 RVA: 0x010803E2 File Offset: 0x0107E5E2
+		// Token: 0x0603980F RID: 235535 RVA: 0x01024A2A File Offset: 0x01022C2A
 		private void RemoveEvents()
 		{
 			if (EventSystem.Instance.Has<SceneItemSunSpiritLauncherComponent, SceneItemSunSpiritLauncherComponent>(EEventName.OnSunSpiritLauncherWatchSelectedChanged, new Action<SceneItemSunSpiritLauncherComponent, SceneItemSunSpiritLauncherComponent>(this.OnSunSpiritLauncherWatchSelectedChanged)))
@@ -95,20 +95,20 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437C7 RID: 276423 RVA: 0x0108041D File Offset: 0x0107E61D
+		// Token: 0x06039810 RID: 235536 RVA: 0x01024A65 File Offset: 0x01022C65
 		public void Tick(double delta)
 		{
 			this.CheckAndUpdateVisible();
 			this.UpdateLocation(delta);
 		}
 
-		// Token: 0x060437C8 RID: 276424 RVA: 0x0108042C File Offset: 0x0107E62C
+		// Token: 0x06039811 RID: 235537 RVA: 0x01024A74 File Offset: 0x01022C74
 		private void OnSunSpiritLauncherWatchSelectedChanged(SceneItemSunSpiritLauncherComponent oldSunSpiritLauncher, SceneItemSunSpiritLauncherComponent newSunSpiritLauncher)
 		{
 			this.ChangeTargetLauncherComp(this.GetWatchSelectedLauncherComp());
 		}
 
-		// Token: 0x060437C9 RID: 276425 RVA: 0x0108043C File Offset: 0x0107E63C
+		// Token: 0x06039812 RID: 235538 RVA: 0x01024A84 File Offset: 0x01022C84
 		private void ShowHintView()
 		{
 			base.SetUiActive(true);
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437CA RID: 276426 RVA: 0x01080490 File Offset: 0x0107E690
+		// Token: 0x06039813 RID: 235539 RVA: 0x01024AD8 File Offset: 0x01022CD8
 		private void HideHintView()
 		{
 			if (this.SequencePlayer == null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437CB RID: 276427 RVA: 0x010804E4 File Offset: 0x0107E6E4
+		// Token: 0x06039814 RID: 235540 RVA: 0x01024B2C File Offset: 0x01022D2C
 		private void ToggleLoopSequence(bool bEnable)
 		{
 			if (this.SequencePlayer == null)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437CC RID: 276428 RVA: 0x0108053F File Offset: 0x0107E73F
+		// Token: 0x06039815 RID: 235541 RVA: 0x01024B87 File Offset: 0x01022D87
 		[NullableContext(1)]
 		private void OnEndSequenceEvent(string seqName)
 		{
@@ -174,19 +174,19 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437CD RID: 276429 RVA: 0x0108056A File Offset: 0x0107E76A
+		// Token: 0x06039816 RID: 235542 RVA: 0x01024BB2 File Offset: 0x01022DB2
 		private void OnSunSpiritOccupiedByGearChanged()
 		{
 			this.UpdateHint();
 		}
 
-		// Token: 0x060437CE RID: 276430 RVA: 0x01080572 File Offset: 0x0107E772
+		// Token: 0x06039817 RID: 235543 RVA: 0x01024BBA File Offset: 0x01022DBA
 		private void OnSunSpiritOccupiedByPlayerChanged()
 		{
 			this.UpdateHint();
 		}
 
-		// Token: 0x060437CF RID: 276431 RVA: 0x0108057C File Offset: 0x0107E77C
+		// Token: 0x06039818 RID: 235544 RVA: 0x01024BC4 File Offset: 0x01022DC4
 		private SceneItemSunSpiritLauncherComponent GetWatchSelectedLauncherComp()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			return component.GetSunSpiritLauncherUiTarget();
 		}
 
-		// Token: 0x060437D0 RID: 276432 RVA: 0x010805C4 File Offset: 0x0107E7C4
+		// Token: 0x06039819 RID: 235545 RVA: 0x01024C0C File Offset: 0x01022E0C
 		private void ChangeTargetLauncherComp(SceneItemSunSpiritLauncherComponent newSunSpiritLauncher)
 		{
 			if (newSunSpiritLauncher == this.TargetLauncherComp)
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.UpdateHint();
 		}
 
-		// Token: 0x060437D1 RID: 276433 RVA: 0x010805EC File Offset: 0x0107E7EC
+		// Token: 0x0603981A RID: 235546 RVA: 0x01024C34 File Offset: 0x01022E34
 		private void ClearTargetLauncherComp()
 		{
 			if (this.TargetGearComp != null && EventSystem.Instance.HasWithTarget(this.TargetGearComp.Entity, EEventName.OnSunSpiritOccupiedByGearChanged, new Action(this.OnSunSpiritOccupiedByGearChanged)))
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.TargetGearComp = null;
 		}
 
-		// Token: 0x060437D2 RID: 276434 RVA: 0x01080698 File Offset: 0x0107E898
+		// Token: 0x0603981B RID: 235547 RVA: 0x01024CE0 File Offset: 0x01022EE0
 		[NullableContext(1)]
 		private void SetupTargetLauncherComp(SceneItemSunSpiritLauncherComponent newSunSpiritLauncher)
 		{
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437D3 RID: 276435 RVA: 0x01080750 File Offset: 0x0107E950
+		// Token: 0x0603981C RID: 235548 RVA: 0x01024D98 File Offset: 0x01022F98
 		private void CheckAndUpdateVisible()
 		{
 			if (this.TargetLauncherComp != null)
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437D4 RID: 276436 RVA: 0x010807A4 File Offset: 0x0107E9A4
+		// Token: 0x0603981D RID: 235549 RVA: 0x01024DEC File Offset: 0x01022FEC
 		private void SwitchToEnough()
 		{
 			UUIItem item = base.GetItem(2);
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			text2.SetUIActive(true);
 		}
 
-		// Token: 0x060437D5 RID: 276437 RVA: 0x010807FC File Offset: 0x0107E9FC
+		// Token: 0x0603981E RID: 235550 RVA: 0x01024E44 File Offset: 0x01023044
 		private void SwitchToNotEnough()
 		{
 			UUIItem item = base.GetItem(4);
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			text2.SetUIActive(true);
 		}
 
-		// Token: 0x060437D6 RID: 276438 RVA: 0x01080854 File Offset: 0x0107EA54
+		// Token: 0x0603981F RID: 235551 RVA: 0x01024E9C File Offset: 0x0102309C
 		private void UpdateHint()
 		{
 			if (this.TargetLauncherComp != null)
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437D7 RID: 276439 RVA: 0x010808AD File Offset: 0x0107EAAD
+		// Token: 0x06039820 RID: 235552 RVA: 0x01024EF5 File Offset: 0x010230F5
 		private void UpdateTxtNum(int num)
 		{
 			UUIText text = base.GetText(5);
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			text2.SetText(num.ToString(), true);
 		}
 
-		// Token: 0x060437D8 RID: 276440 RVA: 0x010808E4 File Offset: 0x0107EAE4
+		// Token: 0x06039821 RID: 235553 RVA: 0x01024F2C File Offset: 0x0102312C
 		private void UpdateLocation(double delta)
 		{
 			SceneItemSunSpiritLauncherComponent targetLauncherComp = this.TargetLauncherComp;
@@ -437,24 +437,24 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			rootItem.SetAnchorOffset(this.CurrentAnchorOffset.ToUeVector2D(false));
 		}
 
-		// Token: 0x040233A1 RID: 144289
+		// Token: 0x0401E593 RID: 124307
 		private SceneItemSunSpiritLauncherComponent TargetLauncherComp;
 
-		// Token: 0x040233A2 RID: 144290
+		// Token: 0x0401E594 RID: 124308
 		private SceneItemSunSpiritGearComponent TargetGearComp;
 
-		// Token: 0x040233A3 RID: 144291
+		// Token: 0x0401E595 RID: 124309
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x040233A4 RID: 144292
+		// Token: 0x0401E596 RID: 124310
 		[Nullable(1)]
 		private readonly Vector2D TargetAnchorOffset = Vector2D.Create();
 
-		// Token: 0x040233A5 RID: 144293
+		// Token: 0x0401E597 RID: 124311
 		[Nullable(1)]
 		private readonly Vector2D CurrentAnchorOffset = Vector2D.Create();
 
-		// Token: 0x040233A6 RID: 144294
+		// Token: 0x0401E598 RID: 124312
 		[Nullable(1)]
 		private readonly Vector TmpVector = Vector.Create();
 	}

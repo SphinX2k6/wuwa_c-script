@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EBB RID: 7867
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020F4 RID: 8436
 	public class IStateProgramSpecialProcessChangeTeamOptimization : IStateProgramSpecialProcessBase
 	{
-		// Token: 0x0600A870 RID: 43120 RVA: 0x0017C5A4 File Offset: 0x0017A7A4
+		// Token: 0x0600B342 RID: 45890 RVA: 0x0019259C File Offset: 0x0019079C
 		private IStateProgramSpecialProcessChangeTeamOptimization_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A871 RID: 43121 RVA: 0x0017C5DC File Offset: 0x0017A7DC
+		// Token: 0x0600B343 RID: 45891 RVA: 0x001925D4 File Offset: 0x001907D4
 		public static IStateProgramSpecialProcessChangeTeamOptimization Create([Nullable(2)] IStateProgramSpecialProcessChangeTeamOptimization instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A872 RID: 43122 RVA: 0x0017C5EF File Offset: 0x0017A7EF
+		// Token: 0x0600B344 RID: 45892 RVA: 0x001925E7 File Offset: 0x001907E7
 		public static IStateProgramSpecialProcessChangeTeamOptimization CreateFromSetValue([Nullable(2)] IStateProgramSpecialProcessChangeTeamOptimization_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A873 RID: 43123 RVA: 0x0017C602 File Offset: 0x0017A802
+		// Token: 0x0600B345 RID: 45893 RVA: 0x001925FA File Offset: 0x001907FA
 		public new IStateProgramSpecialProcessChangeTeamOptimization_SetValue ToSetValue()
 		{
 			return new IStateProgramSpecialProcessChangeTeamOptimization_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003377 RID: 13175
-		// (get) Token: 0x0600A874 RID: 43124 RVA: 0x0017C621 File Offset: 0x0017A821
-		// (set) Token: 0x0600A875 RID: 43125 RVA: 0x0017C64C File Offset: 0x0017A84C
+		// Token: 0x17003642 RID: 13890
+		// (get) Token: 0x0600B346 RID: 45894 RVA: 0x00192619 File Offset: 0x00190819
+		// (set) Token: 0x0600B347 RID: 45895 RVA: 0x00192644 File Offset: 0x00190844
 		public override ELogicProgramSpecialProcess Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003378 RID: 13176
-		// (get) Token: 0x0600A876 RID: 43126 RVA: 0x0017C65C File Offset: 0x0017A85C
-		// (set) Token: 0x0600A877 RID: 43127 RVA: 0x0017C696 File Offset: 0x0017A896
+		// Token: 0x17003643 RID: 13891
+		// (get) Token: 0x0600B348 RID: 45896 RVA: 0x00192654 File Offset: 0x00190854
+		// (set) Token: 0x0600B349 RID: 45897 RVA: 0x0019268E File Offset: 0x0019088E
 		public virtual bool? IsOpenBlackScreen
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400645C RID: 25692
+		// Token: 0x04006A4B RID: 27211
 		[Nullable(2)]
 		protected new IStateProgramSpecialProcessChangeTeamOptimization FbInstance;
 
-		// Token: 0x0400645D RID: 25693
+		// Token: 0x04006A4C RID: 27212
 		[Nullable(2)]
 		protected new IStateProgramSpecialProcessChangeTeamOptimization_SetValue PocoInterface;
 	}

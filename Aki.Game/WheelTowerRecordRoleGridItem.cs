@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x020015A3 RID: 5539
+// Token: 0x02000A5B RID: 2651
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,14 +14,14 @@ using UnrealEngine;
 })]
 public class WheelTowerRecordRoleGridItem : LoopScrollMediumItemGrid<RoleDataWithBranch>
 {
-	// Token: 0x06009D98 RID: 40344 RVA: 0x00223562 File Offset: 0x00221762
+	// Token: 0x06007176 RID: 29046 RVA: 0x0022D312 File Offset: 0x0022B512
 	protected override void OnStart()
 	{
 		base.BindOnCanExecuteChange((object _, bool _, EToggleState _) => false);
 		base.SetToggleInteractive(false);
 	}
 
-	// Token: 0x06009D99 RID: 40345 RVA: 0x00223590 File Offset: 0x00221790
+	// Token: 0x06007177 RID: 29047 RVA: 0x0022D340 File Offset: 0x0022B540
 	protected override void OnRefresh(RoleDataWithBranch data, bool isSelected, int gridIndex)
 	{
 		int roleId = data.RoleId;

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077C6 RID: 30662
+	// Token: 0x02007FFE RID: 32766
 	public class TTalkItemStyleUnion
 	{
-		// Token: 0x1700E6C7 RID: 59079
-		// (get) Token: 0x060379FA RID: 227834 RVA: 0x00785F22 File Offset: 0x00784122
-		// (set) Token: 0x060379FB RID: 227835 RVA: 0x00785F2A File Offset: 0x0078412A
+		// Token: 0x1700F321 RID: 62241
+		// (get) Token: 0x0603AF7D RID: 241533 RVA: 0x007EB536 File Offset: 0x007E9736
+		// (set) Token: 0x0603AF7E RID: 241534 RVA: 0x007EB53E File Offset: 0x007E973E
 		public TTalkItemStyle Type { get; set; }
 
-		// Token: 0x1700E6C8 RID: 59080
-		// (get) Token: 0x060379FC RID: 227836 RVA: 0x00785F33 File Offset: 0x00784133
-		// (set) Token: 0x060379FD RID: 227837 RVA: 0x00785F3B File Offset: 0x0078413B
+		// Token: 0x1700F322 RID: 62242
+		// (get) Token: 0x0603AF7F RID: 241535 RVA: 0x007EB547 File Offset: 0x007E9747
+		// (set) Token: 0x0603AF80 RID: 241536 RVA: 0x007EB54F File Offset: 0x007E974F
 		public object Value { get; set; }
 
-		// Token: 0x060379FE RID: 227838 RVA: 0x00785F44 File Offset: 0x00784144
+		// Token: 0x0603AF81 RID: 241537 RVA: 0x007EB558 File Offset: 0x007E9758
 		public TTalkItemStyleUnion()
 		{
 			this.Type = TTalkItemStyle.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060379FF RID: 227839 RVA: 0x00785F5A File Offset: 0x0078415A
+		// Token: 0x0603AF82 RID: 241538 RVA: 0x007EB56E File Offset: 0x007E976E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037A00 RID: 227840 RVA: 0x00785F6C File Offset: 0x0078416C
+		// Token: 0x0603AF83 RID: 241539 RVA: 0x007EB580 File Offset: 0x007E9780
 		public ITalkItemStyleInnerVoiceT AsITalkItemStyleInnerVoice()
 		{
 			return this.As<ITalkItemStyleInnerVoiceT>();
 		}
 
-		// Token: 0x06037A01 RID: 227841 RVA: 0x00785F74 File Offset: 0x00784174
+		// Token: 0x0603AF84 RID: 241540 RVA: 0x007EB588 File Offset: 0x007E9788
 		public static TTalkItemStyleUnion FromITalkItemStyleInnerVoice(ITalkItemStyleInnerVoiceT _italkitemstyleinnervoice)
 		{
 			return new TTalkItemStyleUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037A02 RID: 227842 RVA: 0x00785F89 File Offset: 0x00784189
+		// Token: 0x0603AF85 RID: 241541 RVA: 0x007EB59D File Offset: 0x007E979D
 		public ITalkItemStylePhoneSendErrorT AsITalkItemStylePhoneSendError()
 		{
 			return this.As<ITalkItemStylePhoneSendErrorT>();
 		}
 
-		// Token: 0x06037A03 RID: 227843 RVA: 0x00785F91 File Offset: 0x00784191
+		// Token: 0x0603AF86 RID: 241542 RVA: 0x007EB5A5 File Offset: 0x007E97A5
 		public static TTalkItemStyleUnion FromITalkItemStylePhoneSendError(ITalkItemStylePhoneSendErrorT _italkitemstylephonesenderror)
 		{
 			return new TTalkItemStyleUnion
@@ -61,19 +61,36 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037A04 RID: 227844 RVA: 0x00785FA8 File Offset: 0x007841A8
+		// Token: 0x0603AF87 RID: 241543 RVA: 0x007EB5BA File Offset: 0x007E97BA
+		public ITalkItemStyleSceneUiSubtitleT AsITalkItemStyleSceneUiSubtitle()
+		{
+			return this.As<ITalkItemStyleSceneUiSubtitleT>();
+		}
+
+		// Token: 0x0603AF88 RID: 241544 RVA: 0x007EB5C2 File Offset: 0x007E97C2
+		public static TTalkItemStyleUnion FromITalkItemStyleSceneUiSubtitle(ITalkItemStyleSceneUiSubtitleT _italkitemstylesceneuisubtitle)
+		{
+			return new TTalkItemStyleUnion
+			{
+				Type = TTalkItemStyle.ITalkItemStyleSceneUiSubtitle,
+				Value = _italkitemstylesceneuisubtitle
+			};
+		}
+
+		// Token: 0x0603AF89 RID: 241545 RVA: 0x007EB5D8 File Offset: 0x007E97D8
 		public static int Pack(FlatBufferBuilder builder, TTalkItemStyleUnion _o)
 		{
-			TTalkItemStyle type = _o.Type;
-			if (type == TTalkItemStyle.ITalkItemStyleInnerVoice)
+			switch (_o.Type)
 			{
+			case TTalkItemStyle.ITalkItemStyleInnerVoice:
 				return ITalkItemStyleInnerVoice.Pack(builder, _o.AsITalkItemStyleInnerVoice()).Value;
-			}
-			if (type != TTalkItemStyle.ITalkItemStylePhoneSendError)
-			{
+			case TTalkItemStyle.ITalkItemStylePhoneSendError:
+				return ITalkItemStylePhoneSendError.Pack(builder, _o.AsITalkItemStylePhoneSendError()).Value;
+			case TTalkItemStyle.ITalkItemStyleSceneUiSubtitle:
+				return ITalkItemStyleSceneUiSubtitle.Pack(builder, _o.AsITalkItemStyleSceneUiSubtitle()).Value;
+			default:
 				return 0;
 			}
-			return ITalkItemStylePhoneSendError.Pack(builder, _o.AsITalkItemStylePhoneSendError()).Value;
 		}
 	}
 }

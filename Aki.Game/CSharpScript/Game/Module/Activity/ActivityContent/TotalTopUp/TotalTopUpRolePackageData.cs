@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.RoleUi;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F8A RID: 24458
+	// Token: 0x02004F71 RID: 20337
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpRolePackageData
 	{
-		// Token: 0x0603E11A RID: 254234 RVA: 0x00EFC774 File Offset: 0x00EFA974
+		// Token: 0x060330B4 RID: 209076 RVA: 0x00E4E42C File Offset: 0x00E4C62C
 		[NullableContext(2)]
 		public static TotalTopUpRolePackageData TryParsePackageData(int itemId)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return totalTopUpRolePackageData;
 		}
 
-		// Token: 0x0603E11B RID: 254235 RVA: 0x00EFC940 File Offset: 0x00EFAB40
+		// Token: 0x060330B5 RID: 209077 RVA: 0x00E4E5F8 File Offset: 0x00E4C7F8
 		private static int RoleIdToTrialId(int roleId)
 		{
 			GachaTextureInfo? gachaTextureInfo = GachaConfig.Instance.GetGachaTextureInfo(roleId);
@@ -76,19 +76,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return gachaTextureInfo.GetValueOrDefault().TrialId;
 		}
 
-		// Token: 0x04020694 RID: 132756
+		// Token: 0x0401B166 RID: 110950
 		public int GiftBagItemId;
 
-		// Token: 0x04020695 RID: 132757
+		// Token: 0x0401B167 RID: 110951
 		public List<int> RoleList = new List<int>();
 
-		// Token: 0x04020696 RID: 132758
+		// Token: 0x0401B168 RID: 110952
 		public List<int> RoleTrialIdList = new List<int>();
 
-		// Token: 0x04020697 RID: 132759
+		// Token: 0x0401B169 RID: 110953
 		public int ItemId;
 
-		// Token: 0x04020698 RID: 132760
+		// Token: 0x0401B16A RID: 110954
 		public int ItemCount;
 	}
 }

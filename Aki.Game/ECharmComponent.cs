@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002523 RID: 9507
+// Token: 0x02001A0A RID: 6666
 public enum ECharmComponent
 {
-	// Token: 0x0400905F RID: 36959
+	// Token: 0x040091B4 RID: 37300
 	TogItem,
-	// Token: 0x04009060 RID: 36960
+	// Token: 0x040091B5 RID: 37301
 	PanelBgTex,
-	// Token: 0x04009061 RID: 36961
+	// Token: 0x040091B6 RID: 37302
 	TextBg,
-	// Token: 0x04009062 RID: 36962
+	// Token: 0x040091B7 RID: 37303
 	SpriteCheck,
-	// Token: 0x04009063 RID: 36963
+	// Token: 0x040091B8 RID: 37304
 	PanelLock,
-	// Token: 0x04009064 RID: 36964
+	// Token: 0x040091B9 RID: 37305
 	RedDot
 }

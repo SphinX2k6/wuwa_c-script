@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.FunctionalTest
 {
-	// Token: 0x0200471F RID: 18207
+	// Token: 0x02004B87 RID: 19335
 	public class ITestCaseT
 	{
-		// Token: 0x17008278 RID: 33400
-		// (get) Token: 0x0601BF6F RID: 114543 RVA: 0x003F6A60 File Offset: 0x003F4C60
-		// (set) Token: 0x0601BF70 RID: 114544 RVA: 0x003F6A68 File Offset: 0x003F4C68
+		// Token: 0x170088B9 RID: 35001
+		// (get) Token: 0x0601D744 RID: 120644 RVA: 0x00422CFC File Offset: 0x00420EFC
+		// (set) Token: 0x0601D745 RID: 120645 RVA: 0x00422D04 File Offset: 0x00420F04
 		public string Id { get; set; }
 
-		// Token: 0x17008279 RID: 33401
-		// (get) Token: 0x0601BF71 RID: 114545 RVA: 0x003F6A71 File Offset: 0x003F4C71
-		// (set) Token: 0x0601BF72 RID: 114546 RVA: 0x003F6A79 File Offset: 0x003F4C79
+		// Token: 0x170088BA RID: 35002
+		// (get) Token: 0x0601D746 RID: 120646 RVA: 0x00422D0D File Offset: 0x00420F0D
+		// (set) Token: 0x0601D747 RID: 120647 RVA: 0x00422D15 File Offset: 0x00420F15
 		public string Name { get; set; }
 
-		// Token: 0x1700827A RID: 33402
-		// (get) Token: 0x0601BF73 RID: 114547 RVA: 0x003F6A82 File Offset: 0x003F4C82
-		// (set) Token: 0x0601BF74 RID: 114548 RVA: 0x003F6A8A File Offset: 0x003F4C8A
+		// Token: 0x170088BB RID: 35003
+		// (get) Token: 0x0601D748 RID: 120648 RVA: 0x00422D1E File Offset: 0x00420F1E
+		// (set) Token: 0x0601D749 RID: 120649 RVA: 0x00422D26 File Offset: 0x00420F26
 		public string Author { get; set; }
 
-		// Token: 0x1700827B RID: 33403
-		// (get) Token: 0x0601BF75 RID: 114549 RVA: 0x003F6A93 File Offset: 0x003F4C93
-		// (set) Token: 0x0601BF76 RID: 114550 RVA: 0x003F6A9B File Offset: 0x003F4C9B
+		// Token: 0x170088BC RID: 35004
+		// (get) Token: 0x0601D74A RID: 120650 RVA: 0x00422D2F File Offset: 0x00420F2F
+		// (set) Token: 0x0601D74B RID: 120651 RVA: 0x00422D37 File Offset: 0x00420F37
 		public string Desc { get; set; }
 
-		// Token: 0x1700827C RID: 33404
-		// (get) Token: 0x0601BF77 RID: 114551 RVA: 0x003F6AA4 File Offset: 0x003F4CA4
-		// (set) Token: 0x0601BF78 RID: 114552 RVA: 0x003F6AAC File Offset: 0x003F4CAC
+		// Token: 0x170088BD RID: 35005
+		// (get) Token: 0x0601D74C RID: 120652 RVA: 0x00422D40 File Offset: 0x00420F40
+		// (set) Token: 0x0601D74D RID: 120653 RVA: 0x00422D48 File Offset: 0x00420F48
 		public List<string> Steps { get; set; }
 
-		// Token: 0x1700827D RID: 33405
-		// (get) Token: 0x0601BF79 RID: 114553 RVA: 0x003F6AB5 File Offset: 0x003F4CB5
-		// (set) Token: 0x0601BF7A RID: 114554 RVA: 0x003F6ABD File Offset: 0x003F4CBD
+		// Token: 0x170088BE RID: 35006
+		// (get) Token: 0x0601D74E RID: 120654 RVA: 0x00422D51 File Offset: 0x00420F51
+		// (set) Token: 0x0601D74F RID: 120655 RVA: 0x00422D59 File Offset: 0x00420F59
 		public string Result { get; set; }
 
-		// Token: 0x1700827E RID: 33406
-		// (get) Token: 0x0601BF7B RID: 114555 RVA: 0x003F6AC6 File Offset: 0x003F4CC6
-		// (set) Token: 0x0601BF7C RID: 114556 RVA: 0x003F6ACE File Offset: 0x003F4CCE
+		// Token: 0x170088BF RID: 35007
+		// (get) Token: 0x0601D750 RID: 120656 RVA: 0x00422D62 File Offset: 0x00420F62
+		// (set) Token: 0x0601D751 RID: 120657 RVA: 0x00422D6A File Offset: 0x00420F6A
 		public int EntityId { get; set; }
 
-		// Token: 0x0601BF7D RID: 114557 RVA: 0x003F6AD7 File Offset: 0x003F4CD7
+		// Token: 0x0601D752 RID: 120658 RVA: 0x00422D73 File Offset: 0x00420F73
 		public ITestCaseT()
 		{
 			this.Id = null;

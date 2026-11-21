@@ -2,67 +2,69 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
+using CSharpScript.Game.Module.UiCamera;
 using UnrealEngine;
 
-// Token: 0x0200259B RID: 9627
+// Token: 0x02001A86 RID: 6790
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PhotographModel : ModelBase
 {
-	// Token: 0x060137E8 RID: 79848 RVA: 0x004DE8F1 File Offset: 0x004DCAF1
+	// Token: 0x06010CCA RID: 68810 RVA: 0x004ED415 File Offset: 0x004EB615
 	protected override bool OnInit()
 	{
 		this.SavePath = ConfigCommonParamById.GetStringConfig("ScreenShotSavePath");
 		return true;
 	}
 
-	// Token: 0x060137E9 RID: 79849 RVA: 0x004DE904 File Offset: 0x004DCB04
+	// Token: 0x06010CCB RID: 68811 RVA: 0x004ED428 File Offset: 0x004EB628
 	protected override bool OnClear()
 	{
 		this.DestroyUiCamera();
 		return true;
 	}
 
-	// Token: 0x060137EA RID: 79850 RVA: 0x004DE90D File Offset: 0x004DCB0D
+	// Token: 0x06010CCC RID: 68812 RVA: 0x004ED431 File Offset: 0x004EB631
 	protected override bool OnLeaveLevel()
 	{
 		this.DestroyUiCamera();
 		return true;
 	}
 
-	// Token: 0x060137EB RID: 79851 RVA: 0x004DE918 File Offset: 0x004DCB18
-	public UiCameraPhotographerStructure SpawnPhotographerStructure(FVectorDouble playerLocation, FQuat rotation, FVectorDouble scale, FVectorDouble cameraLocation)
+	// Token: 0x06010CCD RID: 68813 RVA: 0x004ED43C File Offset: 0x004EB63C
+	public UiCameraPhotographerComponent SpawnPhotographerComponent(FVectorDouble playerLocation, FQuat rotation, FVectorDouble scale, FVectorDouble cameraLocation)
 	{
 		this.SpawnTransformCache.SetLocation(playerLocation);
 		this.SpawnTransformCache.SetRotation(rotation);
 		this.SpawnTransformCache.SetScale3D(scale);
-		UiCamera uiCamera = UiCameraManager.Get();
-		this.UiCameraPhotographerStructure = uiCamera.PushStructure<UiCameraPhotographerStructure>();
-		this.UiCameraPhotographerStructure.SetActorTransform(this.SpawnTransformCache);
+		UiCameraModel instance = UiCameraModel.Instance;
+		instance.SwitchMode(EUiCameraMode.Photographer);
+		this.PhotographerComponent = instance.GetOrCreateCamera().GetMode<UiCameraPhotographerMode>().GetComponent<UiCameraPhotographerComponent>();
+		this.PhotographerComponent.SetActorTransform(this.SpawnTransformCache);
 		if (PhotographController.Instance.CheckIfInFightPhotographCamera())
 		{
-			this.UiCameraPhotographerStructure.SetCameraArmTargetOffset(cameraLocation, true);
+			this.PhotographerComponent.SetCameraArmTargetOffset(cameraLocation, true);
 		}
-		uiCamera.GetUiCameraComponent<UiCameraPostEffectComponent>().SetCameraFocalDistance(300f);
-		return this.UiCameraPhotographerStructure;
+		instance.GetOrCreateCamera().GetUiCameraComponent<UiCameraDisplayComponent>().SetCameraFocalDistance(300f);
+		return this.PhotographerComponent;
 	}
 
-	// Token: 0x060137EC RID: 79852 RVA: 0x004DE99F File Offset: 0x004DCB9F
+	// Token: 0x06010CCE RID: 68814 RVA: 0x004ED4D9 File Offset: 0x004EB6D9
 	public void DestroyUiCamera()
 	{
-		UiCameraManager.Destroy(0.5f, EViewTargetBlendFunction.VTBlend_Linear, 0f);
-		this.UiCameraPhotographerStructure = null;
+		UiCameraModel.Instance.ClearDisplay();
+		this.PhotographerComponent = null;
 	}
 
-	// Token: 0x060137ED RID: 79853 RVA: 0x004DE9B8 File Offset: 0x004DCBB8
+	// Token: 0x06010CCF RID: 68815 RVA: 0x004ED4EC File Offset: 0x004EB6EC
 	[NullableContext(2)]
-	public UiCameraPhotographerStructure GetPhotographerStructure()
+	public UiCameraPhotographerComponent GetPhotographerComponent()
 	{
-		return this.UiCameraPhotographerStructure;
+		return this.PhotographerComponent;
 	}
 
-	// Token: 0x060137EE RID: 79854 RVA: 0x004DE9C0 File Offset: 0x004DCBC0
+	// Token: 0x06010CD0 RID: 68816 RVA: 0x004ED4F4 File Offset: 0x004EB6F4
 	public void SetPhotographOption(EPhotoSetupValueType valueType, float value)
 	{
 		if (this.PhotographOptionMap.ContainsKey(valueType))
@@ -73,13 +75,13 @@ public class PhotographModel : ModelBase
 		this.PhotographOptionMap.Add(valueType, value);
 	}
 
-	// Token: 0x060137EF RID: 79855 RVA: 0x004DE9EB File Offset: 0x004DCBEB
+	// Token: 0x06010CD1 RID: 68817 RVA: 0x004ED51F File Offset: 0x004EB71F
 	public void ClearPhotographOption()
 	{
 		this.PhotographOptionMap.Clear();
 	}
 
-	// Token: 0x060137F0 RID: 79856 RVA: 0x004DE9F8 File Offset: 0x004DCBF8
+	// Token: 0x06010CD2 RID: 68818 RVA: 0x004ED52C File Offset: 0x004EB72C
 	public float? GetPhotographOption(EPhotoSetupValueType valueType)
 	{
 		float value;
@@ -90,13 +92,13 @@ public class PhotographModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060137F1 RID: 79857 RVA: 0x004DEA25 File Offset: 0x004DCC25
+	// Token: 0x06010CD3 RID: 68819 RVA: 0x004ED559 File Offset: 0x004EB759
 	public IReadOnlyDictionary<EPhotoSetupValueType, float> GetAllPhotographOption()
 	{
 		return this.PhotographOptionMap;
 	}
 
-	// Token: 0x060137F2 RID: 79858 RVA: 0x004DEA30 File Offset: 0x004DCC30
+	// Token: 0x06010CD4 RID: 68820 RVA: 0x004ED564 File Offset: 0x004EB764
 	public void SetEntityEnable(EntityHandle handle, bool bEnable)
 	{
 		if (handle == null || !handle.Valid || handle.Entity == null || !handle.Entity.Valid)
@@ -128,7 +130,7 @@ public class PhotographModel : ModelBase
 		this.ResetEntityEnable();
 	}
 
-	// Token: 0x060137F3 RID: 79859 RVA: 0x004DEAFC File Offset: 0x004DCCFC
+	// Token: 0x06010CD5 RID: 68821 RVA: 0x004ED630 File Offset: 0x004EB830
 	public void ResetEntityEnable()
 	{
 		if (this.SetDisableEntity != null)
@@ -143,13 +145,13 @@ public class PhotographModel : ModelBase
 		this.SetDisableEntity = null;
 	}
 
-	// Token: 0x060137F4 RID: 79860 RVA: 0x004DEB4B File Offset: 0x004DCD4B
+	// Token: 0x06010CD6 RID: 68822 RVA: 0x004ED67F File Offset: 0x004EB87F
 	public void SetPhotographFilter(int filterId)
 	{
 		this.FilterId = filterId;
 	}
 
-	// Token: 0x060137F5 RID: 79861 RVA: 0x004DEB54 File Offset: 0x004DCD54
+	// Token: 0x06010CD7 RID: 68823 RVA: 0x004ED688 File Offset: 0x004EB888
 	public void ClearPhotographFilter()
 	{
 		this.ClearSelectedPhotographFilter();
@@ -157,20 +159,20 @@ public class PhotographModel : ModelBase
 		this.IsFilterToggleOpen = true;
 	}
 
-	// Token: 0x060137F6 RID: 79862 RVA: 0x004DEB6E File Offset: 0x004DCD6E
+	// Token: 0x06010CD8 RID: 68824 RVA: 0x004ED6A2 File Offset: 0x004EB8A2
 	public void ClearSelectedPhotographFilter()
 	{
 		this.FilterId = 0;
 		PhotographController.Instance.InitPostProcessVolBlendWeight(1);
 	}
 
-	// Token: 0x060137F7 RID: 79863 RVA: 0x004DEB82 File Offset: 0x004DCD82
+	// Token: 0x06010CD9 RID: 68825 RVA: 0x004ED6B6 File Offset: 0x004EB8B6
 	public int GetPhotographFilter()
 	{
 		return this.FilterId;
 	}
 
-	// Token: 0x060137F8 RID: 79864 RVA: 0x004DEB8C File Offset: 0x004DCD8C
+	// Token: 0x06010CDA RID: 68826 RVA: 0x004ED6C0 File Offset: 0x004EB8C0
 	public void InitFilterPostProcessVolume()
 	{
 		string key = "Filter";
@@ -203,13 +205,13 @@ public class PhotographModel : ModelBase
 		}
 	}
 
-	// Token: 0x060137F9 RID: 79865 RVA: 0x004DEC6E File Offset: 0x004DCE6E
+	// Token: 0x06010CDB RID: 68827 RVA: 0x004ED7A2 File Offset: 0x004EB9A2
 	public Dictionary<string, APostProcessVolume> GetFilterPostProcessVolumeMap()
 	{
 		return this.PostProcessVolumeMap;
 	}
 
-	// Token: 0x060137FA RID: 79866 RVA: 0x004DEC78 File Offset: 0x004DCE78
+	// Token: 0x06010CDC RID: 68828 RVA: 0x004ED7AC File Offset: 0x004EB9AC
 	public float GetFilterStrengthByFilterId(int filterId)
 	{
 		float result;
@@ -220,7 +222,7 @@ public class PhotographModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060137FB RID: 79867 RVA: 0x004DEC9C File Offset: 0x004DCE9C
+	// Token: 0x06010CDD RID: 68829 RVA: 0x004ED7D0 File Offset: 0x004EB9D0
 	public void SetFilterStrength(int filterId, float filterStrength)
 	{
 		if (this.FilterStrengthMap.ContainsKey(filterId))
@@ -231,19 +233,19 @@ public class PhotographModel : ModelBase
 		this.FilterStrengthMap.Add(filterId, filterStrength);
 	}
 
-	// Token: 0x060137FC RID: 79868 RVA: 0x004DECC7 File Offset: 0x004DCEC7
+	// Token: 0x06010CDE RID: 68830 RVA: 0x004ED7FB File Offset: 0x004EB9FB
 	public void SetFilterToggleState(bool isOpen)
 	{
 		this.IsFilterToggleOpen = isOpen;
 	}
 
-	// Token: 0x060137FD RID: 79869 RVA: 0x004DECD0 File Offset: 0x004DCED0
+	// Token: 0x06010CDF RID: 68831 RVA: 0x004ED804 File Offset: 0x004EBA04
 	public bool GetFilterToggleState()
 	{
 		return this.IsFilterToggleOpen;
 	}
 
-	// Token: 0x060137FE RID: 79870 RVA: 0x004DECD8 File Offset: 0x004DCED8
+	// Token: 0x06010CE0 RID: 68832 RVA: 0x004ED80C File Offset: 0x004EBA0C
 	public void SetPhotographTimeDilation(float timeDilation)
 	{
 		Log instance = Log.Instance;
@@ -260,8 +262,8 @@ public class PhotographModel : ModelBase
 		GameModeController.Instance.SetTimeDilation(timeDilation, ETimeDilationType.Photograph);
 	}
 
-	// Token: 0x1700190D RID: 6413
-	// (get) Token: 0x060137FF RID: 79871 RVA: 0x004DED4D File Offset: 0x004DCF4D
+	// Token: 0x17001947 RID: 6471
+	// (get) Token: 0x06010CE1 RID: 68833 RVA: 0x004ED881 File Offset: 0x004EBA81
 	public static PhotographModel Instance
 	{
 		get
@@ -270,7 +272,7 @@ public class PhotographModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013800 RID: 79872 RVA: 0x004DED54 File Offset: 0x004DCF54
+	// Token: 0x06010CE2 RID: 68834 RVA: 0x004ED888 File Offset: 0x004EBA88
 	public static PhotographModel GetOrCreateInstance()
 	{
 		if (PhotographModel._Instance == null)
@@ -280,7 +282,7 @@ public class PhotographModel : ModelBase
 		return PhotographModel._Instance;
 	}
 
-	// Token: 0x06013801 RID: 79873 RVA: 0x004DED68 File Offset: 0x004DCF68
+	// Token: 0x06010CE3 RID: 68835 RVA: 0x004ED89C File Offset: 0x004EBA9C
 	public static bool CreateInstance()
 	{
 		if (PhotographModel._Instance != null)
@@ -291,96 +293,96 @@ public class PhotographModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013802 RID: 79874 RVA: 0x004DED7E File Offset: 0x004DCF7E
+	// Token: 0x06010CE4 RID: 68836 RVA: 0x004ED8B2 File Offset: 0x004EBAB2
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013803 RID: 79875 RVA: 0x004DED80 File Offset: 0x004DCF80
+	// Token: 0x06010CE5 RID: 68837 RVA: 0x004ED8B4 File Offset: 0x004EBAB4
 	public static void ResetStaticDefaultValue()
 	{
 		PhotographModel._Instance = null;
 	}
 
-	// Token: 0x06013804 RID: 79876 RVA: 0x004DED88 File Offset: 0x004DCF88
+	// Token: 0x06010CE6 RID: 68838 RVA: 0x004ED8BC File Offset: 0x004EBABC
 	static PhotographModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhotographModel.CreateStaticDefaultValue), new Action(PhotographModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009322 RID: 37666
+	// Token: 0x0400947A RID: 38010
 	[Nullable(2)]
-	private UiCameraPhotographerStructure UiCameraPhotographerStructure;
+	private UiCameraPhotographerComponent PhotographerComponent;
 
-	// Token: 0x04009323 RID: 37667
+	// Token: 0x0400947B RID: 38011
 	[Nullable(2)]
 	public EntityHandle PlayMontageEntity;
 
-	// Token: 0x04009324 RID: 37668
+	// Token: 0x0400947C RID: 38012
 	public int MontageId;
 
-	// Token: 0x04009325 RID: 37669
+	// Token: 0x0400947D RID: 38013
 	public int FilterId;
 
-	// Token: 0x04009326 RID: 37670
+	// Token: 0x0400947E RID: 38014
 	private readonly Dictionary<EPhotoSetupValueType, float> PhotographOptionMap = new Dictionary<EPhotoSetupValueType, float>();
 
-	// Token: 0x04009327 RID: 37671
+	// Token: 0x0400947F RID: 38015
 	private readonly Dictionary<string, APostProcessVolume> PostProcessVolumeMap = new Dictionary<string, APostProcessVolume>();
 
-	// Token: 0x04009328 RID: 37672
+	// Token: 0x04009480 RID: 38016
 	private readonly Dictionary<int, float> FilterStrengthMap = new Dictionary<int, float>();
 
-	// Token: 0x04009329 RID: 37673
+	// Token: 0x04009481 RID: 38017
 	private FTransformDouble SpawnTransformCache = new FTransformDouble();
 
-	// Token: 0x0400932A RID: 37674
+	// Token: 0x04009482 RID: 38018
 	public float RightValue;
 
-	// Token: 0x0400932B RID: 37675
+	// Token: 0x04009483 RID: 38019
 	public float UpValue;
 
-	// Token: 0x0400932C RID: 37676
+	// Token: 0x04009484 RID: 38020
 	public float ForwardValue;
 
-	// Token: 0x0400932D RID: 37677
+	// Token: 0x04009485 RID: 38021
 	private int? EntityDisableId = new int?(0);
 
-	// Token: 0x0400932E RID: 37678
+	// Token: 0x04009486 RID: 38022
 	[Nullable(2)]
 	private EntityHandle SetDisableEntity;
 
-	// Token: 0x0400932F RID: 37679
+	// Token: 0x04009487 RID: 38023
 	public bool IsOpenPhotograph;
 
-	// Token: 0x04009330 RID: 37680
+	// Token: 0x04009488 RID: 38024
 	public string SavePath = "";
 
-	// Token: 0x04009331 RID: 37681
+	// Token: 0x04009489 RID: 38025
 	public bool IsSaveButtonVisible;
 
-	// Token: 0x04009332 RID: 37682
+	// Token: 0x0400948A RID: 38026
 	public bool IsFilterToggleOpen = true;
 
-	// Token: 0x04009333 RID: 37683
+	// Token: 0x0400948B RID: 38027
 	public int? PlayerActionSortId;
 
-	// Token: 0x04009334 RID: 37684
+	// Token: 0x0400948C RID: 38028
 	public Transform CameraTransformProxy = Transform.Create();
 
-	// Token: 0x04009335 RID: 37685
+	// Token: 0x0400948D RID: 38029
 	public HashSet<string> SequenceInValidSectionSet = new HashSet<string>();
 
-	// Token: 0x04009336 RID: 37686
+	// Token: 0x0400948E RID: 38030
 	public Dictionary<int, HashSet<string>> MontageTagSet = new Dictionary<int, HashSet<string>>();
 
-	// Token: 0x04009337 RID: 37687
+	// Token: 0x0400948F RID: 38031
 	public HashSet<int> NpcFaceSet = new HashSet<int>();
 
-	// Token: 0x04009338 RID: 37688
+	// Token: 0x04009490 RID: 38032
 	public double ChangeNpcFaceRangeSquared = 9000000.0;
 
-	// Token: 0x04009339 RID: 37689
+	// Token: 0x04009491 RID: 38033
 	[Nullable(2)]
 	private static PhotographModel _Instance;
 }

@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059E4 RID: 23012
+	// Token: 0x020049BD RID: 18877
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TakePicturesWithTimeScaleChildQuestNode : TickBehaviorNode
 	{
-		// Token: 0x0603A518 RID: 238872 RVA: 0x00DDEED0 File Offset: 0x00DDD0D0
+		// Token: 0x0602F43F RID: 193599 RVA: 0x00D2E73C File Offset: 0x00D2C93C
 		public TakePicturesWithTimeScaleChildQuestNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A519 RID: 238873 RVA: 0x00DDEEDC File Offset: 0x00DDD0DC
+		// Token: 0x0602F440 RID: 193600 RVA: 0x00D2E748 File Offset: 0x00D2C948
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			if (!base.OnCreate(nodeConfig))
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A51A RID: 238874 RVA: 0x00DDEFA8 File Offset: 0x00DDD1A8
+		// Token: 0x0602F441 RID: 193601 RVA: 0x00D2E814 File Offset: 0x00D2CA14
 		protected override void AddEventsOnChildQuestStart()
 		{
 			base.AddEventsOnChildQuestStart();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		}
 
-		// Token: 0x0603A51B RID: 238875 RVA: 0x00DDF008 File Offset: 0x00DDD208
+		// Token: 0x0602F442 RID: 193602 RVA: 0x00D2E874 File Offset: 0x00D2CA74
 		protected override void RemoveEventsOnChildQuestEnd()
 		{
 			base.RemoveEventsOnChildQuestEnd();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		}
 
-		// Token: 0x0603A51C RID: 238876 RVA: 0x00DDF068 File Offset: 0x00DDD268
+		// Token: 0x0602F443 RID: 193603 RVA: 0x00D2E8D4 File Offset: 0x00D2CAD4
 		protected override void OnTick(float delta)
 		{
 			if (PhotographController.Instance.CheckIfInFightPhotographCamera())
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A51D RID: 238877 RVA: 0x00DDF1DC File Offset: 0x00DDD3DC
+		// Token: 0x0602F444 RID: 193604 RVA: 0x00D2EA48 File Offset: 0x00D2CC48
 		private void HighLightExploreSkill(bool isHighLight)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			characterExploreComponent2.HideHighlightExploreSkill();
 		}
 
-		// Token: 0x0603A51E RID: 238878 RVA: 0x00DDF258 File Offset: 0x00DDD458
+		// Token: 0x0602F445 RID: 193605 RVA: 0x00D2EAC4 File Offset: 0x00D2CCC4
 		public int? GetTargetRoleId()
 		{
 			IPhotographCondition photographCondition = this.PhotographCondition;
@@ -178,14 +178,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return null;
 		}
 
-		// Token: 0x0603A51F RID: 238879 RVA: 0x00DDF28E File Offset: 0x00DDD48E
+		// Token: 0x0602F446 RID: 193606 RVA: 0x00D2EAFA File Offset: 0x00D2CCFA
 		private void UpdateAllEffectState()
 		{
 			this.UpdatePostEffect();
 			this.UpdateScreenEffect();
 		}
 
-		// Token: 0x0603A520 RID: 238880 RVA: 0x00DDF29C File Offset: 0x00DDD49C
+		// Token: 0x0602F447 RID: 193607 RVA: 0x00D2EB08 File Offset: 0x00D2CD08
 		private void UpdatePostEffect()
 		{
 			if (!EffectSystem.Instance.IsValid(this.PostEffectHandle))
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			EffectSystem.Instance.SetEffectHidden(this.PostEffectHandle, true, null, false);
 		}
 
-		// Token: 0x0603A521 RID: 238881 RVA: 0x00DDF314 File Offset: 0x00DDD514
+		// Token: 0x0602F448 RID: 193608 RVA: 0x00D2EB80 File Offset: 0x00D2CD80
 		private void UpdateScreenEffect()
 		{
 			if (this.ScreenEffectHandle != 0)
@@ -219,13 +219,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.ScreenEffectHandle = ScreenEffectModel.Instance.PlayScreenEffect("/Game/Aki/Effect/DataAsset/ScreenDA/SD_Fight/Bigworld/DA_Fx_Screen_ForTimeStop_White.DA_Fx_Screen_ForTimeStop_White", null, null);
 		}
 
-		// Token: 0x0603A522 RID: 238882 RVA: 0x00DDF361 File Offset: 0x00DDD561
+		// Token: 0x0602F449 RID: 193609 RVA: 0x00D2EBCD File Offset: 0x00D2CDCD
 		private void OnFightPhotoTaskFinish()
 		{
 			this.SubmitNode(null);
 		}
 
-		// Token: 0x0603A523 RID: 238883 RVA: 0x00DDF36A File Offset: 0x00DDD56A
+		// Token: 0x0602F44A RID: 193610 RVA: 0x00D2EBD6 File Offset: 0x00D2CDD6
 		private void OnEffectLoaded(ELoadEffectResult result, int handle)
 		{
 			if (result != ELoadEffectResult.Success)
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.UpdatePostEffect();
 		}
 
-		// Token: 0x0603A524 RID: 238884 RVA: 0x00DDF377 File Offset: 0x00DDD577
+		// Token: 0x0602F44B RID: 193611 RVA: 0x00D2EBE3 File Offset: 0x00D2CDE3
 		private void OnOpenView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.FightPhotographView)
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.UpdateAllEffectState();
 		}
 
-		// Token: 0x0603A525 RID: 238885 RVA: 0x00DDF394 File Offset: 0x00DDD594
+		// Token: 0x0602F44C RID: 193612 RVA: 0x00D2EC00 File Offset: 0x00D2CE00
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.FightPhotographView)
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.UpdateAllEffectState();
 		}
 
-		// Token: 0x0603A526 RID: 238886 RVA: 0x00DDF3B4 File Offset: 0x00DDD5B4
+		// Token: 0x0602F44D RID: 193613 RVA: 0x00D2EC20 File Offset: 0x00D2CE20
 		protected override void OnEnd(bool bFinished)
 		{
 			if (this.IsInAutoViewFinderState)
@@ -279,39 +279,39 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			base.OnEnd(bFinished);
 		}
 
-		// Token: 0x0401E677 RID: 124535
+		// Token: 0x04019116 RID: 102678
 		private const string POST_EFFECT_PATH = "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Post_ForTimeStop_White.DA_Fx_Group_Post_ForTimeStop_White";
 
-		// Token: 0x0401E678 RID: 124536
+		// Token: 0x04019117 RID: 102679
 		private const string SCREEN_EFFECT_PATH = "/Game/Aki/Effect/DataAsset/ScreenDA/SD_Fight/Bigworld/DA_Fx_Screen_ForTimeStop_White.DA_Fx_Screen_ForTimeStop_White";
 
-		// Token: 0x0401E679 RID: 124537
+		// Token: 0x04019118 RID: 102680
 		public ETimeScaledPhotographTip? TipType;
 
-		// Token: 0x0401E67A RID: 124538
+		// Token: 0x04019119 RID: 102681
 		[Nullable(2)]
 		public IPhotographCondition PhotographCondition;
 
-		// Token: 0x0401E67B RID: 124539
+		// Token: 0x0401911A RID: 102682
 		[Nullable(2)]
 		public ICameraCondition CameraCondition;
 
-		// Token: 0x0401E67C RID: 124540
+		// Token: 0x0401911B RID: 102683
 		private bool LastStateIsCanFinishTask;
 
-		// Token: 0x0401E67D RID: 124541
+		// Token: 0x0401911C RID: 102684
 		private bool IsInAutoViewFinderState;
 
-		// Token: 0x0401E67E RID: 124542
+		// Token: 0x0401911D RID: 102685
 		private bool IsForceUpdate;
 
-		// Token: 0x0401E67F RID: 124543
+		// Token: 0x0401911E RID: 102686
 		private int PostEffectHandle;
 
-		// Token: 0x0401E680 RID: 124544
+		// Token: 0x0401911F RID: 102687
 		private int ScreenEffectHandle;
 
-		// Token: 0x0401E681 RID: 124545
+		// Token: 0x04019120 RID: 102688
 		private bool IsPhotographViewOpen;
 	}
 }

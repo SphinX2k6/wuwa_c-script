@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200149C RID: 5276
+// Token: 0x02000950 RID: 2384
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityRegressSignPanel : UiPanelBase
 {
-	// Token: 0x0600957D RID: 38269 RVA: 0x00204124 File Offset: 0x00202324
+	// Token: 0x06006912 RID: 26898 RVA: 0x0020D08C File Offset: 0x0020B28C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class ActivityRegressSignPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600957E RID: 38270 RVA: 0x002041EC File Offset: 0x002023EC
+	// Token: 0x06006913 RID: 26899 RVA: 0x0020D154 File Offset: 0x0020B354
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressSignPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -38,13 +38,13 @@ public class ActivityRegressSignPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600957F RID: 38271 RVA: 0x00204230 File Offset: 0x00202430
+	// Token: 0x06006914 RID: 26900 RVA: 0x0020D198 File Offset: 0x0020B398
 	protected override void OnBeforeShow()
 	{
 		this.SequencePlayer.PlaySequence("Start", false, null);
 	}
 
-	// Token: 0x06009580 RID: 38272 RVA: 0x00204258 File Offset: 0x00202458
+	// Token: 0x06006915 RID: 26901 RVA: 0x0020D1C0 File Offset: 0x0020B3C0
 	protected override UniTask OnBeforeHideAsync()
 	{
 		ActivityRegressSignPanel.<OnBeforeHideAsync>d__8 <OnBeforeHideAsync>d__;
@@ -55,20 +55,20 @@ public class ActivityRegressSignPanel : UiPanelBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009581 RID: 38273 RVA: 0x0020429B File Offset: 0x0020249B
+	// Token: 0x06006916 RID: 26902 RVA: 0x0020D203 File Offset: 0x0020B403
 	protected override void OnAfterHide()
 	{
 		this.ClearTimer();
 	}
 
-	// Token: 0x06009582 RID: 38274 RVA: 0x002042A3 File Offset: 0x002024A3
+	// Token: 0x06006917 RID: 26903 RVA: 0x0020D20B File Offset: 0x0020B40B
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearTimer();
 		ActivityRegressModel.Instance.ClearSignRewardConfig();
 	}
 
-	// Token: 0x06009583 RID: 38275 RVA: 0x002042B5 File Offset: 0x002024B5
+	// Token: 0x06006918 RID: 26904 RVA: 0x0020D21D File Offset: 0x0020B41D
 	public void RefreshView()
 	{
 		ActivityRegressModel.Instance.SetupSignRewardConfig();
@@ -76,7 +76,7 @@ public class ActivityRegressSignPanel : UiPanelBase
 		this.RefreshSignInItems();
 	}
 
-	// Token: 0x06009584 RID: 38276 RVA: 0x002042D0 File Offset: 0x002024D0
+	// Token: 0x06006919 RID: 26905 RVA: 0x0020D238 File Offset: 0x0020B438
 	private void RefreshTitle()
 	{
 		this.TitleComponent.SetTitleByTextId("RecallActivity_Sign_Title", Array.Empty<string>());
@@ -92,7 +92,7 @@ public class ActivityRegressSignPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009585 RID: 38277 RVA: 0x00204340 File Offset: 0x00202540
+	// Token: 0x0600691A RID: 26906 RVA: 0x0020D2A8 File Offset: 0x0020B4A8
 	private void RefreshSignInItems()
 	{
 		for (int i = 0; i < this.SignInRewardItems.Count; i++)
@@ -101,13 +101,13 @@ public class ActivityRegressSignPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009586 RID: 38278 RVA: 0x00204375 File Offset: 0x00202575
+	// Token: 0x0600691B RID: 26907 RVA: 0x0020D2DD File Offset: 0x0020B4DD
 	private void OnTimerRefresh(float gap)
 	{
 		this.RefreshTitle();
 	}
 
-	// Token: 0x06009587 RID: 38279 RVA: 0x0020437D File Offset: 0x0020257D
+	// Token: 0x0600691C RID: 26908 RVA: 0x0020D2E5 File Offset: 0x0020B4E5
 	private void ClearTimer()
 	{
 		if (TimerSystem.Instance.Has(this.RefreshTimerHandle))
@@ -117,52 +117,52 @@ public class ActivityRegressSignPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009588 RID: 38280 RVA: 0x002043AC File Offset: 0x002025AC
+	// Token: 0x0600691D RID: 26909 RVA: 0x0020D314 File Offset: 0x0020B514
 	private void OnRewardItemClick(int index)
 	{
 		int signRewardEntityId = ActivityRegressModel.Instance.ActivityData.GetSignRewardEntityId(index + 1);
 		ActivityRegressController.Instance.RequestClaimSignReward(signRewardEntityId);
 	}
 
-	// Token: 0x0400421B RID: 16923
+	// Token: 0x040042B3 RID: 17075
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x0400421C RID: 16924
+	// Token: 0x040042B4 RID: 17076
 	[Nullable(1)]
 	private readonly List<ActivityRegressSignInRewardItem> SignInRewardItems = new List<ActivityRegressSignInRewardItem>();
 
-	// Token: 0x0400421D RID: 16925
+	// Token: 0x040042B5 RID: 17077
 	private TimerHandle RefreshTimerHandle;
 
-	// Token: 0x0400421E RID: 16926
+	// Token: 0x040042B6 RID: 17078
 	private UiSequencePlayer SequencePlayer;
 
-	// Token: 0x02007AD0 RID: 31440
+	// Token: 0x02006C54 RID: 27732
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04028674 RID: 165492
+		// Token: 0x0402398E RID: 145806
 		public const int ComActivityTitle = 0;
 
-		// Token: 0x04028675 RID: 165493
+		// Token: 0x0402398F RID: 145807
 		public const int SignInItem1 = 1;
 
-		// Token: 0x04028676 RID: 165494
+		// Token: 0x04023990 RID: 145808
 		public const int SignInItem2 = 2;
 
-		// Token: 0x04028677 RID: 165495
+		// Token: 0x04023991 RID: 145809
 		public const int SignInItem3 = 3;
 
-		// Token: 0x04028678 RID: 165496
+		// Token: 0x04023992 RID: 145810
 		public const int SignInItem4 = 4;
 
-		// Token: 0x04028679 RID: 165497
+		// Token: 0x04023993 RID: 145811
 		public const int SignInItem5 = 5;
 
-		// Token: 0x0402867A RID: 165498
+		// Token: 0x04023994 RID: 145812
 		public const int SignInItem6 = 6;
 
-		// Token: 0x0402867B RID: 165499
+		// Token: 0x04023995 RID: 145813
 		public const int SignInItem7 = 7;
 	}
 }

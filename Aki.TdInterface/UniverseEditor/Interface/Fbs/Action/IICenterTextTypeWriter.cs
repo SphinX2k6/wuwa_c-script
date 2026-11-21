@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006942 RID: 26946
+	// Token: 0x02006FF5 RID: 28661
 	public struct IICenterTextTypeWriter : IFlatbufferObject
 	{
-		// Token: 0x1700C7EA RID: 51178
-		// (get) Token: 0x0602F0CC RID: 192716 RVA: 0x00669D65 File Offset: 0x00667F65
+		// Token: 0x1700D1ED RID: 53741
+		// (get) Token: 0x06031A9C RID: 203420 RVA: 0x006BA24D File Offset: 0x006B844D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F0CD RID: 192717 RVA: 0x00669D72 File Offset: 0x00667F72
+		// Token: 0x06031A9D RID: 203421 RVA: 0x006BA25A File Offset: 0x006B845A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F0CE RID: 192718 RVA: 0x00669D7C File Offset: 0x00667F7C
+		// Token: 0x06031A9E RID: 203422 RVA: 0x006BA264 File Offset: 0x006B8464
 		public static IICenterTextTypeWriter GetRootAsIICenterTextTypeWriter(ByteBuffer _bb)
 		{
 			return IICenterTextTypeWriter.GetRootAsIICenterTextTypeWriter(_bb, default(IICenterTextTypeWriter));
 		}
 
-		// Token: 0x0602F0CF RID: 192719 RVA: 0x00669D98 File Offset: 0x00667F98
+		// Token: 0x06031A9F RID: 203423 RVA: 0x006BA280 File Offset: 0x006B8480
 		public static IICenterTextTypeWriter GetRootAsIICenterTextTypeWriter(ByteBuffer _bb, IICenterTextTypeWriter obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F0D0 RID: 192720 RVA: 0x00669DB5 File Offset: 0x00667FB5
+		// Token: 0x06031AA0 RID: 203424 RVA: 0x006BA29D File Offset: 0x006B849D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F0D1 RID: 192721 RVA: 0x00669DC4 File Offset: 0x00667FC4
+		// Token: 0x06031AA1 RID: 203425 RVA: 0x006BA2AC File Offset: 0x006B84AC
 		public IICenterTextTypeWriter __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C7EB RID: 51179
-		// (get) Token: 0x0602F0D2 RID: 192722 RVA: 0x00669DD4 File Offset: 0x00667FD4
+		// Token: 0x1700D1EE RID: 53742
+		// (get) Token: 0x06031AA2 RID: 203426 RVA: 0x006BA2BC File Offset: 0x006B84BC
 		public ECenterTextShowAnim Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C7EC RID: 51180
-		// (get) Token: 0x0602F0D3 RID: 192723 RVA: 0x00669E10 File Offset: 0x00668010
+		// Token: 0x1700D1EF RID: 53743
+		// (get) Token: 0x06031AA3 RID: 203427 RVA: 0x006BA2F8 File Offset: 0x006B84F8
 		public int TextCountPerSecond
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F0D4 RID: 192724 RVA: 0x00669E4C File Offset: 0x0066804C
+		// Token: 0x06031AA4 RID: 203428 RVA: 0x006BA334 File Offset: 0x006B8534
 		public static Offset<IICenterTextTypeWriter> CreateIICenterTextTypeWriter(FlatBufferBuilder builder, ECenterTextShowAnim Type = ECenterTextShowAnim.ShowAll, int TextCountPerSecond = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IICenterTextTypeWriter.EndIICenterTextTypeWriter(builder);
 		}
 
-		// Token: 0x0602F0D5 RID: 192725 RVA: 0x00669E69 File Offset: 0x00668069
+		// Token: 0x06031AA5 RID: 203429 RVA: 0x006BA351 File Offset: 0x006B8551
 		public static void StartIICenterTextTypeWriter(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602F0D6 RID: 192726 RVA: 0x00669E72 File Offset: 0x00668072
+		// Token: 0x06031AA6 RID: 203430 RVA: 0x006BA35A File Offset: 0x006B855A
 		public static void AddType(FlatBufferBuilder builder, ECenterTextShowAnim type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F0D7 RID: 192727 RVA: 0x00669E7D File Offset: 0x0066807D
+		// Token: 0x06031AA7 RID: 203431 RVA: 0x006BA365 File Offset: 0x006B8565
 		public static void AddTextCountPerSecond(FlatBufferBuilder builder, int textCountPerSecond)
 		{
 			builder.AddInt(1, textCountPerSecond, 0);
 		}
 
-		// Token: 0x0602F0D8 RID: 192728 RVA: 0x00669E88 File Offset: 0x00668088
+		// Token: 0x06031AA8 RID: 203432 RVA: 0x006BA370 File Offset: 0x006B8570
 		public static Offset<IICenterTextTypeWriter> EndIICenterTextTypeWriter(FlatBufferBuilder builder)
 		{
 			return new Offset<IICenterTextTypeWriter>(builder.EndTable());
 		}
 
-		// Token: 0x0602F0D9 RID: 192729 RVA: 0x00669E98 File Offset: 0x00668098
+		// Token: 0x06031AA9 RID: 203433 RVA: 0x006BA380 File Offset: 0x006B8580
 		public IICenterTextTypeWriterT UnPack()
 		{
 			IICenterTextTypeWriterT iicenterTextTypeWriterT = new IICenterTextTypeWriterT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return iicenterTextTypeWriterT;
 		}
 
-		// Token: 0x0602F0DA RID: 192730 RVA: 0x00669EB3 File Offset: 0x006680B3
+		// Token: 0x06031AAA RID: 203434 RVA: 0x006BA39B File Offset: 0x006B859B
 		public void UnPackTo(IICenterTextTypeWriterT _o)
 		{
 			_o.Type = this.Type;
 			_o.TextCountPerSecond = this.TextCountPerSecond;
 		}
 
-		// Token: 0x0602F0DB RID: 192731 RVA: 0x00669ED0 File Offset: 0x006680D0
+		// Token: 0x06031AAB RID: 203435 RVA: 0x006BA3B8 File Offset: 0x006B85B8
 		public static Offset<IICenterTextTypeWriter> Pack(FlatBufferBuilder builder, IICenterTextTypeWriterT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IICenterTextTypeWriter.CreateIICenterTextTypeWriter(builder, _o.Type, _o.TextCountPerSecond);
 		}
 
-		// Token: 0x040110C0 RID: 69824
+		// Token: 0x04011F2C RID: 73516
 		private Table __p;
 	}
 }

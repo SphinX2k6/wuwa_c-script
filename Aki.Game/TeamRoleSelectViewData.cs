@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002794 RID: 10132
+// Token: 0x02001C7F RID: 7295
 [NullableContext(2)]
 [Nullable(0)]
 public class TeamRoleSelectViewData : UiPopViewData
 {
-	// Token: 0x06014C9B RID: 85147 RVA: 0x00544050 File Offset: 0x00542250
+	// Token: 0x06012186 RID: 74118 RVA: 0x0055314C File Offset: 0x0055134C
 	public TeamRoleSelectViewData(EFilterSortGroupId useWay, int currentRoleId, [Nullable(1)] List<RoleDataBase> roleList, Action<int> confirmFunction, Action backFunction, int? position = null, ETeamRoleUseFunction? forFunction = null)
 	{
 		this.UseWay = new EFilterSortGroupId?(useWay);
@@ -21,14 +21,14 @@ public class TeamRoleSelectViewData : UiPopViewData
 		this.ForFunction = forFunction.GetValueOrDefault();
 	}
 
-	// Token: 0x06014C9C RID: 85148 RVA: 0x005440AE File Offset: 0x005422AE
+	// Token: 0x06012187 RID: 74119 RVA: 0x005531AA File Offset: 0x005513AA
 	[NullableContext(1)]
 	public void SetHideFinishCallBack(Action hideFinishFunction)
 	{
 		this.OnHideFinishCallBack = hideFinishFunction;
 	}
 
-	// Token: 0x06014C9D RID: 85149 RVA: 0x005440B7 File Offset: 0x005422B7
+	// Token: 0x06012188 RID: 74120 RVA: 0x005531B3 File Offset: 0x005513B3
 	public void SetGetConfirmButtonTextFunction([Nullable(new byte[]
 	{
 		1,
@@ -38,34 +38,34 @@ public class TeamRoleSelectViewData : UiPopViewData
 		this.GetConfirmButtonTextCallBack = getConfirmButtonTextCallBack;
 	}
 
-	// Token: 0x06014C9E RID: 85150 RVA: 0x005440C0 File Offset: 0x005422C0
+	// Token: 0x06012189 RID: 74121 RVA: 0x005531BC File Offset: 0x005513BC
 	[NullableContext(1)]
 	public void SetGetConfirmButtonEnableFunction(Func<int, bool> getConfirmButtonEnableCallBack)
 	{
 		this.GetConfirmButtonEnableCallBack = getConfirmButtonEnableCallBack;
 	}
 
-	// Token: 0x06014C9F RID: 85151 RVA: 0x005440C9 File Offset: 0x005422C9
+	// Token: 0x0601218A RID: 74122 RVA: 0x005531C5 File Offset: 0x005513C5
 	[NullableContext(1)]
 	public void SetOtherTeamSlotData(List<BattleRoleSlotData> dataList)
 	{
 		this.BattleRoleSlotDataList = dataList;
 	}
 
-	// Token: 0x06014CA0 RID: 85152 RVA: 0x005440D2 File Offset: 0x005422D2
+	// Token: 0x0601218B RID: 74123 RVA: 0x005531CE File Offset: 0x005513CE
 	[NullableContext(1)]
 	public void SetConfirmCheckFunction(Func<int, bool> getConfirmCheckCallBack)
 	{
 		this.CanConfirmFunc = getConfirmCheckCallBack;
 	}
 
-	// Token: 0x04009C6A RID: 40042
+	// Token: 0x04009DCE RID: 40398
 	public EFilterSortGroupId? UseWay;
 
-	// Token: 0x04009C6B RID: 40043
+	// Token: 0x04009DCF RID: 40399
 	public int CurrentRoleId;
 
-	// Token: 0x04009C6C RID: 40044
+	// Token: 0x04009DD0 RID: 40400
 	[Nullable(new byte[]
 	{
 		2,
@@ -73,7 +73,7 @@ public class TeamRoleSelectViewData : UiPopViewData
 	})]
 	public List<RoleDataBase> RoleList;
 
-	// Token: 0x04009C6D RID: 40045
+	// Token: 0x04009DD1 RID: 40401
 	[Nullable(new byte[]
 	{
 		2,
@@ -81,49 +81,49 @@ public class TeamRoleSelectViewData : UiPopViewData
 	})]
 	public List<BattleRoleSlotData> BattleRoleSlotDataList;
 
-	// Token: 0x04009C6E RID: 40046
+	// Token: 0x04009DD2 RID: 40402
 	public int? Position = new int?(0);
 
-	// Token: 0x04009C6F RID: 40047
+	// Token: 0x04009DD3 RID: 40403
 	public ETeamRoleUseFunction ForFunction;
 
-	// Token: 0x04009C70 RID: 40048
+	// Token: 0x04009DD4 RID: 40404
 	public int[] FormationRoleList;
 
-	// Token: 0x04009C71 RID: 40049
+	// Token: 0x04009DD5 RID: 40405
 	public bool CanUseSpecialTrialRole;
 
-	// Token: 0x04009C72 RID: 40050
+	// Token: 0x04009DD6 RID: 40406
 	public Action<int> ConfirmCallBack;
 
-	// Token: 0x04009C73 RID: 40051
+	// Token: 0x04009DD7 RID: 40407
 	public Action OnHideFinishCallBack;
 
-	// Token: 0x04009C74 RID: 40052
+	// Token: 0x04009DD8 RID: 40408
 	public Action BackCallBack;
 
-	// Token: 0x04009C75 RID: 40053
+	// Token: 0x04009DD9 RID: 40409
 	public Func<int, string> GetConfirmButtonTextCallBack;
 
-	// Token: 0x04009C76 RID: 40054
+	// Token: 0x04009DDA RID: 40410
 	public Func<int, bool> GetConfirmButtonEnableCallBack;
 
-	// Token: 0x04009C77 RID: 40055
+	// Token: 0x04009DDB RID: 40411
 	public Func<int, bool> IsNeedRevive;
 
-	// Token: 0x04009C78 RID: 40056
+	// Token: 0x04009DDC RID: 40412
 	public Func<int, bool> CanConfirmFunc;
 
-	// Token: 0x04009C79 RID: 40057
+	// Token: 0x04009DDD RID: 40413
 	public Func<int, bool> CanJoinTeam;
 
-	// Token: 0x04009C7A RID: 40058
+	// Token: 0x04009DDE RID: 40414
 	public Action<int> OnRoleSelect;
 
-	// Token: 0x04009C7B RID: 40059
+	// Token: 0x04009DDF RID: 40415
 	public Action<UUIItem> OnModelLoadingAnchorChanged;
 
-	// Token: 0x04009C7C RID: 40060
+	// Token: 0x04009DE0 RID: 40416
 	[Nullable(new byte[]
 	{
 		2,
@@ -132,19 +132,19 @@ public class TeamRoleSelectViewData : UiPopViewData
 	})]
 	public Func<int, List<TeamRoleSkillData>> GetCustomSkillShowData;
 
-	// Token: 0x04009C7D RID: 40061
+	// Token: 0x04009DE1 RID: 40417
 	public Action<int> DetailCallback;
 
-	// Token: 0x04009C7E RID: 40062
+	// Token: 0x04009DE2 RID: 40418
 	public Action OnDetailOpen;
 
-	// Token: 0x04009C7F RID: 40063
+	// Token: 0x04009DE3 RID: 40419
 	public Action OnDetailClose;
 
-	// Token: 0x04009C80 RID: 40064
+	// Token: 0x04009DE4 RID: 40420
 	public Func<int, bool> ShowLockPanel;
 
-	// Token: 0x04009C81 RID: 40065
+	// Token: 0x04009DE5 RID: 40421
 	[Nullable(new byte[]
 	{
 		2,
@@ -152,10 +152,10 @@ public class TeamRoleSelectViewData : UiPopViewData
 	})]
 	public Func<int, string> GetLockTextCallBack;
 
-	// Token: 0x04009C82 RID: 40066
+	// Token: 0x04009DE6 RID: 40422
 	public Func<int, bool> GetDetailButtonVisible;
 
-	// Token: 0x04009C83 RID: 40067
+	// Token: 0x04009DE7 RID: 40423
 	[Nullable(new byte[]
 	{
 		2,

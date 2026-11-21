@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003489 RID: 13449
+// Token: 0x020029FD RID: 10749
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Render/Scene/Item/MaterialController/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Scene/Item/MaterialController/ItemMaterialControllerActorData.ItemMaterialControllerActorData_C")]
 public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002821 RID: 10273
-	// (get) Token: 0x0601D278 RID: 119416 RVA: 0x0081FC9B File Offset: 0x0081DE9B
-	// (set) Token: 0x0601D279 RID: 119417 RVA: 0x0081FCAB File Offset: 0x0081DEAB
+	// Token: 0x17002BBF RID: 11199
+	// (get) Token: 0x0601AF7F RID: 110463 RVA: 0x00846FA7 File Offset: 0x008451A7
+	// (set) Token: 0x0601AF80 RID: 110464 RVA: 0x00846FB7 File Offset: 0x008451B7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float StartTime
 	{
@@ -29,9 +29,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002822 RID: 10274
-	// (get) Token: 0x0601D27A RID: 119418 RVA: 0x0081FCBC File Offset: 0x0081DEBC
-	// (set) Token: 0x0601D27B RID: 119419 RVA: 0x0081FCCC File Offset: 0x0081DECC
+	// Token: 0x17002BC0 RID: 11200
+	// (get) Token: 0x0601AF81 RID: 110465 RVA: 0x00846FC8 File Offset: 0x008451C8
+	// (set) Token: 0x0601AF82 RID: 110466 RVA: 0x00846FD8 File Offset: 0x008451D8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float LoopTime
 	{
@@ -45,9 +45,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002823 RID: 10275
-	// (get) Token: 0x0601D27C RID: 119420 RVA: 0x0081FCDD File Offset: 0x0081DEDD
-	// (set) Token: 0x0601D27D RID: 119421 RVA: 0x0081FCED File Offset: 0x0081DEED
+	// Token: 0x17002BC1 RID: 11201
+	// (get) Token: 0x0601AF83 RID: 110467 RVA: 0x00846FE9 File Offset: 0x008451E9
+	// (set) Token: 0x0601AF84 RID: 110468 RVA: 0x00846FF9 File Offset: 0x008451F9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float EndTime
 	{
@@ -61,9 +61,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002824 RID: 10276
-	// (get) Token: 0x0601D27E RID: 119422 RVA: 0x0081FCFE File Offset: 0x0081DEFE
-	// (set) Token: 0x0601D27F RID: 119423 RVA: 0x0081FD0E File Offset: 0x0081DF0E
+	// Token: 0x17002BC2 RID: 11202
+	// (get) Token: 0x0601AF85 RID: 110469 RVA: 0x0084700A File Offset: 0x0084520A
+	// (set) Token: 0x0601AF86 RID: 110470 RVA: 0x0084701A File Offset: 0x0084521A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableBaseColorScale
 	{
@@ -77,9 +77,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002825 RID: 10277
-	// (get) Token: 0x0601D280 RID: 119424 RVA: 0x0081FD20 File Offset: 0x0081DF20
-	// (set) Token: 0x0601D281 RID: 119425 RVA: 0x0081FD59 File Offset: 0x0081DF59
+	// Token: 0x17002BC3 RID: 11203
+	// (get) Token: 0x0601AF87 RID: 110471 RVA: 0x0084702C File Offset: 0x0084522C
+	// (set) Token: 0x0601AF88 RID: 110472 RVA: 0x00847065 File Offset: 0x00845265
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat BaseColorScale
 	{
@@ -99,9 +99,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002826 RID: 10278
-	// (get) Token: 0x0601D282 RID: 119426 RVA: 0x0081FD81 File Offset: 0x0081DF81
-	// (set) Token: 0x0601D283 RID: 119427 RVA: 0x0081FD91 File Offset: 0x0081DF91
+	// Token: 0x17002BC4 RID: 11204
+	// (get) Token: 0x0601AF89 RID: 110473 RVA: 0x0084708D File Offset: 0x0084528D
+	// (set) Token: 0x0601AF8A RID: 110474 RVA: 0x0084709D File Offset: 0x0084529D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableAddEmissionColor
 	{
@@ -115,9 +115,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002827 RID: 10279
-	// (get) Token: 0x0601D284 RID: 119428 RVA: 0x0081FDA4 File Offset: 0x0081DFA4
-	// (set) Token: 0x0601D285 RID: 119429 RVA: 0x0081FDDD File Offset: 0x0081DFDD
+	// Token: 0x17002BC5 RID: 11205
+	// (get) Token: 0x0601AF8B RID: 110475 RVA: 0x008470B0 File Offset: 0x008452B0
+	// (set) Token: 0x0601AF8C RID: 110476 RVA: 0x008470E9 File Offset: 0x008452E9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor AddEmissionColor
 	{
@@ -137,9 +137,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002828 RID: 10280
-	// (get) Token: 0x0601D286 RID: 119430 RVA: 0x0081FE05 File Offset: 0x0081E005
-	// (set) Token: 0x0601D287 RID: 119431 RVA: 0x0081FE15 File Offset: 0x0081E015
+	// Token: 0x17002BC6 RID: 11206
+	// (get) Token: 0x0601AF8D RID: 110477 RVA: 0x00847111 File Offset: 0x00845311
+	// (set) Token: 0x0601AF8E RID: 110478 RVA: 0x00847121 File Offset: 0x00845321
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableEmissionChange
 	{
@@ -153,9 +153,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002829 RID: 10281
-	// (get) Token: 0x0601D288 RID: 119432 RVA: 0x0081FE28 File Offset: 0x0081E028
-	// (set) Token: 0x0601D289 RID: 119433 RVA: 0x0081FE61 File Offset: 0x0081E061
+	// Token: 0x17002BC7 RID: 11207
+	// (get) Token: 0x0601AF8F RID: 110479 RVA: 0x00847134 File Offset: 0x00845334
+	// (set) Token: 0x0601AF90 RID: 110480 RVA: 0x0084716D File Offset: 0x0084536D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat EmissionLightColorChangeProgress
 	{
@@ -175,9 +175,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700282A RID: 10282
-	// (get) Token: 0x0601D28A RID: 119434 RVA: 0x0081FE8C File Offset: 0x0081E08C
-	// (set) Token: 0x0601D28B RID: 119435 RVA: 0x0081FEC5 File Offset: 0x0081E0C5
+	// Token: 0x17002BC8 RID: 11208
+	// (get) Token: 0x0601AF91 RID: 110481 RVA: 0x00847198 File Offset: 0x00845398
+	// (set) Token: 0x0601AF92 RID: 110482 RVA: 0x008471D1 File Offset: 0x008453D1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat EmissionLightColorChangeStrength
 	{
@@ -197,9 +197,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700282B RID: 10283
-	// (get) Token: 0x0601D28C RID: 119436 RVA: 0x0081FEF0 File Offset: 0x0081E0F0
-	// (set) Token: 0x0601D28D RID: 119437 RVA: 0x0081FF29 File Offset: 0x0081E129
+	// Token: 0x17002BC9 RID: 11209
+	// (get) Token: 0x0601AF93 RID: 110483 RVA: 0x008471FC File Offset: 0x008453FC
+	// (set) Token: 0x0601AF94 RID: 110484 RVA: 0x00847235 File Offset: 0x00845435
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor EmissionLightColorChangeColor
 	{
@@ -219,9 +219,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700282C RID: 10284
-	// (get) Token: 0x0601D28E RID: 119438 RVA: 0x0081FF51 File Offset: 0x0081E151
-	// (set) Token: 0x0601D28F RID: 119439 RVA: 0x0081FF61 File Offset: 0x0081E161
+	// Token: 0x17002BCA RID: 11210
+	// (get) Token: 0x0601AF95 RID: 110485 RVA: 0x0084725D File Offset: 0x0084545D
+	// (set) Token: 0x0601AF96 RID: 110486 RVA: 0x0084726D File Offset: 0x0084546D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableRimLight
 	{
@@ -235,9 +235,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700282D RID: 10285
-	// (get) Token: 0x0601D290 RID: 119440 RVA: 0x0081FF74 File Offset: 0x0081E174
-	// (set) Token: 0x0601D291 RID: 119441 RVA: 0x0081FFAD File Offset: 0x0081E1AD
+	// Token: 0x17002BCB RID: 11211
+	// (get) Token: 0x0601AF97 RID: 110487 RVA: 0x00847280 File Offset: 0x00845480
+	// (set) Token: 0x0601AF98 RID: 110488 RVA: 0x008472B9 File Offset: 0x008454B9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor RimLightColor
 	{
@@ -257,9 +257,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700282E RID: 10286
-	// (get) Token: 0x0601D292 RID: 119442 RVA: 0x0081FFD8 File Offset: 0x0081E1D8
-	// (set) Token: 0x0601D293 RID: 119443 RVA: 0x00820011 File Offset: 0x0081E211
+	// Token: 0x17002BCC RID: 11212
+	// (get) Token: 0x0601AF99 RID: 110489 RVA: 0x008472E4 File Offset: 0x008454E4
+	// (set) Token: 0x0601AF9A RID: 110490 RVA: 0x0084731D File Offset: 0x0084551D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat RimPower
 	{
@@ -279,9 +279,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700282F RID: 10287
-	// (get) Token: 0x0601D294 RID: 119444 RVA: 0x00820039 File Offset: 0x0081E239
-	// (set) Token: 0x0601D295 RID: 119445 RVA: 0x00820049 File Offset: 0x0081E249
+	// Token: 0x17002BCD RID: 11213
+	// (get) Token: 0x0601AF9B RID: 110491 RVA: 0x00847345 File Offset: 0x00845545
+	// (set) Token: 0x0601AF9C RID: 110492 RVA: 0x00847355 File Offset: 0x00845555
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableDissolve
 	{
@@ -295,9 +295,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002830 RID: 10288
-	// (get) Token: 0x0601D296 RID: 119446 RVA: 0x0082005C File Offset: 0x0081E25C
-	// (set) Token: 0x0601D297 RID: 119447 RVA: 0x00820095 File Offset: 0x0081E295
+	// Token: 0x17002BCE RID: 11214
+	// (get) Token: 0x0601AF9D RID: 110493 RVA: 0x00847368 File Offset: 0x00845568
+	// (set) Token: 0x0601AF9E RID: 110494 RVA: 0x008473A1 File Offset: 0x008455A1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat DissolveProgress
 	{
@@ -317,9 +317,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002831 RID: 10289
-	// (get) Token: 0x0601D298 RID: 119448 RVA: 0x008200C0 File Offset: 0x0081E2C0
-	// (set) Token: 0x0601D299 RID: 119449 RVA: 0x008200F9 File Offset: 0x0081E2F9
+	// Token: 0x17002BCF RID: 11215
+	// (get) Token: 0x0601AF9F RID: 110495 RVA: 0x008473CC File Offset: 0x008455CC
+	// (set) Token: 0x0601AFA0 RID: 110496 RVA: 0x00847405 File Offset: 0x00845605
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat DissolveAdjustment
 	{
@@ -339,9 +339,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002832 RID: 10290
-	// (get) Token: 0x0601D29A RID: 119450 RVA: 0x00820124 File Offset: 0x0081E324
-	// (set) Token: 0x0601D29B RID: 119451 RVA: 0x0082015D File Offset: 0x0081E35D
+	// Token: 0x17002BD0 RID: 11216
+	// (get) Token: 0x0601AFA1 RID: 110497 RVA: 0x00847430 File Offset: 0x00845630
+	// (set) Token: 0x0601AFA2 RID: 110498 RVA: 0x00847469 File Offset: 0x00845669
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat DissolveEdageWidth
 	{
@@ -361,9 +361,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002833 RID: 10291
-	// (get) Token: 0x0601D29C RID: 119452 RVA: 0x00820188 File Offset: 0x0081E388
-	// (set) Token: 0x0601D29D RID: 119453 RVA: 0x008201C1 File Offset: 0x0081E3C1
+	// Token: 0x17002BD1 RID: 11217
+	// (get) Token: 0x0601AFA3 RID: 110499 RVA: 0x00847494 File Offset: 0x00845694
+	// (set) Token: 0x0601AFA4 RID: 110500 RVA: 0x008474CD File Offset: 0x008456CD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor DissolveEdageColor
 	{
@@ -383,9 +383,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002834 RID: 10292
-	// (get) Token: 0x0601D29E RID: 119454 RVA: 0x008201EC File Offset: 0x0081E3EC
-	// (set) Token: 0x0601D29F RID: 119455 RVA: 0x00820225 File Offset: 0x0081E425
+	// Token: 0x17002BD2 RID: 11218
+	// (get) Token: 0x0601AFA5 RID: 110501 RVA: 0x008474F8 File Offset: 0x008456F8
+	// (set) Token: 0x0601AFA6 RID: 110502 RVA: 0x00847531 File Offset: 0x00845731
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat DissolveEdageStrength
 	{
@@ -405,9 +405,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002835 RID: 10293
-	// (get) Token: 0x0601D2A0 RID: 119456 RVA: 0x00820250 File Offset: 0x0081E450
-	// (set) Token: 0x0601D2A1 RID: 119457 RVA: 0x00820289 File Offset: 0x0081E489
+	// Token: 0x17002BD3 RID: 11219
+	// (get) Token: 0x0601AFA7 RID: 110503 RVA: 0x0084755C File Offset: 0x0084575C
+	// (set) Token: 0x0601AFA8 RID: 110504 RVA: 0x00847595 File Offset: 0x00845795
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor DissolveTexSpeed
 	{
@@ -427,9 +427,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002836 RID: 10294
-	// (get) Token: 0x0601D2A2 RID: 119458 RVA: 0x008202B1 File Offset: 0x0081E4B1
-	// (set) Token: 0x0601D2A3 RID: 119459 RVA: 0x008202C1 File Offset: 0x0081E4C1
+	// Token: 0x17002BD4 RID: 11220
+	// (get) Token: 0x0601AFA9 RID: 110505 RVA: 0x008475BD File Offset: 0x008457BD
+	// (set) Token: 0x0601AFAA RID: 110506 RVA: 0x008475CD File Offset: 0x008457CD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECharacterControllerUVSwitch DissolveUv
 	{
@@ -443,9 +443,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002837 RID: 10295
-	// (get) Token: 0x0601D2A4 RID: 119460 RVA: 0x008202D4 File Offset: 0x0081E4D4
-	// (set) Token: 0x0601D2A5 RID: 119461 RVA: 0x0082030D File Offset: 0x0081E50D
+	// Token: 0x17002BD5 RID: 11221
+	// (get) Token: 0x0601AFAB RID: 110507 RVA: 0x008475E0 File Offset: 0x008457E0
+	// (set) Token: 0x0601AFAC RID: 110508 RVA: 0x00847619 File Offset: 0x00845819
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor DissolveTexScaleOffset
 	{
@@ -465,9 +465,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002838 RID: 10296
-	// (get) Token: 0x0601D2A6 RID: 119462 RVA: 0x00820335 File Offset: 0x0081E535
-	// (set) Token: 0x0601D2A7 RID: 119463 RVA: 0x00820345 File Offset: 0x0081E545
+	// Token: 0x17002BD6 RID: 11222
+	// (get) Token: 0x0601AFAD RID: 110509 RVA: 0x00847641 File Offset: 0x00845841
+	// (set) Token: 0x0601AFAE RID: 110510 RVA: 0x00847651 File Offset: 0x00845851
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableScanning
 	{
@@ -481,9 +481,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002839 RID: 10297
-	// (get) Token: 0x0601D2A8 RID: 119464 RVA: 0x00820358 File Offset: 0x0081E558
-	// (set) Token: 0x0601D2A9 RID: 119465 RVA: 0x00820391 File Offset: 0x0081E591
+	// Token: 0x17002BD7 RID: 11223
+	// (get) Token: 0x0601AFAF RID: 110511 RVA: 0x00847664 File Offset: 0x00845864
+	// (set) Token: 0x0601AFB0 RID: 110512 RVA: 0x0084769D File Offset: 0x0084589D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat ScanningOutlineMixNoiseStrength
 	{
@@ -503,9 +503,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700283A RID: 10298
-	// (get) Token: 0x0601D2AA RID: 119466 RVA: 0x008203BC File Offset: 0x0081E5BC
-	// (set) Token: 0x0601D2AB RID: 119467 RVA: 0x008203F5 File Offset: 0x0081E5F5
+	// Token: 0x17002BD8 RID: 11224
+	// (get) Token: 0x0601AFB1 RID: 110513 RVA: 0x008476C8 File Offset: 0x008458C8
+	// (set) Token: 0x0601AFB2 RID: 110514 RVA: 0x00847701 File Offset: 0x00845901
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat ScanningOutlineStrength
 	{
@@ -525,9 +525,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700283B RID: 10299
-	// (get) Token: 0x0601D2AC RID: 119468 RVA: 0x00820420 File Offset: 0x0081E620
-	// (set) Token: 0x0601D2AD RID: 119469 RVA: 0x00820459 File Offset: 0x0081E659
+	// Token: 0x17002BD9 RID: 11225
+	// (get) Token: 0x0601AFB3 RID: 110515 RVA: 0x0084772C File Offset: 0x0084592C
+	// (set) Token: 0x0601AFB4 RID: 110516 RVA: 0x00847765 File Offset: 0x00845965
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor ScanningOutlineTexScaleOffset
 	{
@@ -547,9 +547,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700283C RID: 10300
-	// (get) Token: 0x0601D2AE RID: 119470 RVA: 0x00820484 File Offset: 0x0081E684
-	// (set) Token: 0x0601D2AF RID: 119471 RVA: 0x008204BD File Offset: 0x0081E6BD
+	// Token: 0x17002BDA RID: 11226
+	// (get) Token: 0x0601AFB5 RID: 110517 RVA: 0x00847790 File Offset: 0x00845990
+	// (set) Token: 0x0601AFB6 RID: 110518 RVA: 0x008477C9 File Offset: 0x008459C9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor ScanningOutlineColor
 	{
@@ -569,9 +569,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700283D RID: 10301
-	// (get) Token: 0x0601D2B0 RID: 119472 RVA: 0x008204E8 File Offset: 0x0081E6E8
-	// (set) Token: 0x0601D2B1 RID: 119473 RVA: 0x00820521 File Offset: 0x0081E721
+	// Token: 0x17002BDB RID: 11227
+	// (get) Token: 0x0601AFB7 RID: 110519 RVA: 0x008477F4 File Offset: 0x008459F4
+	// (set) Token: 0x0601AFB8 RID: 110520 RVA: 0x0084782D File Offset: 0x00845A2D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat VertexAnimTimeDebug
 	{
@@ -591,9 +591,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700283E RID: 10302
-	// (get) Token: 0x0601D2B2 RID: 119474 RVA: 0x0082054C File Offset: 0x0081E74C
-	// (set) Token: 0x0601D2B3 RID: 119475 RVA: 0x00820585 File Offset: 0x0081E785
+	// Token: 0x17002BDC RID: 11228
+	// (get) Token: 0x0601AFB9 RID: 110521 RVA: 0x00847858 File Offset: 0x00845A58
+	// (set) Token: 0x0601AFBA RID: 110522 RVA: 0x00847891 File Offset: 0x00845A91
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat VertexAnimFrame
 	{
@@ -613,9 +613,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700283F RID: 10303
-	// (get) Token: 0x0601D2B4 RID: 119476 RVA: 0x008205B0 File Offset: 0x0081E7B0
-	// (set) Token: 0x0601D2B5 RID: 119477 RVA: 0x008205E9 File Offset: 0x0081E7E9
+	// Token: 0x17002BDD RID: 11229
+	// (get) Token: 0x0601AFBB RID: 110523 RVA: 0x008478BC File Offset: 0x00845ABC
+	// (set) Token: 0x0601AFBC RID: 110524 RVA: 0x008478F5 File Offset: 0x00845AF5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor PivotPainterTransform
 	{
@@ -635,9 +635,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002840 RID: 10304
-	// (get) Token: 0x0601D2B6 RID: 119478 RVA: 0x00820614 File Offset: 0x0081E814
-	// (set) Token: 0x0601D2B7 RID: 119479 RVA: 0x0082064D File Offset: 0x0081E84D
+	// Token: 0x17002BDE RID: 11230
+	// (get) Token: 0x0601AFBD RID: 110525 RVA: 0x00847920 File Offset: 0x00845B20
+	// (set) Token: 0x0601AFBE RID: 110526 RVA: 0x00847959 File Offset: 0x00845B59
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat FloatingThreshold
 	{
@@ -657,9 +657,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002841 RID: 10305
-	// (get) Token: 0x0601D2B8 RID: 119480 RVA: 0x00820675 File Offset: 0x0081E875
-	// (set) Token: 0x0601D2B9 RID: 119481 RVA: 0x00820685 File Offset: 0x0081E885
+	// Token: 0x17002BDF RID: 11231
+	// (get) Token: 0x0601AFBF RID: 110527 RVA: 0x00847981 File Offset: 0x00845B81
+	// (set) Token: 0x0601AFC0 RID: 110528 RVA: 0x00847991 File Offset: 0x00845B91
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnablePivotPainterWorldPositionOffset
 	{
@@ -673,9 +673,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002842 RID: 10306
-	// (get) Token: 0x0601D2BA RID: 119482 RVA: 0x00820696 File Offset: 0x0081E896
-	// (set) Token: 0x0601D2BB RID: 119483 RVA: 0x008206A6 File Offset: 0x0081E8A6
+	// Token: 0x17002BE0 RID: 11232
+	// (get) Token: 0x0601AFC1 RID: 110529 RVA: 0x008479A2 File Offset: 0x00845BA2
+	// (set) Token: 0x0601AFC2 RID: 110530 RVA: 0x008479B2 File Offset: 0x00845BB2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableWorldPositionOffset
 	{
@@ -689,9 +689,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002843 RID: 10307
-	// (get) Token: 0x0601D2BC RID: 119484 RVA: 0x008206B7 File Offset: 0x0081E8B7
-	// (set) Token: 0x0601D2BD RID: 119485 RVA: 0x008206C7 File Offset: 0x0081E8C7
+	// Token: 0x17002BE1 RID: 11233
+	// (get) Token: 0x0601AFC3 RID: 110531 RVA: 0x008479C3 File Offset: 0x00845BC3
+	// (set) Token: 0x0601AFC4 RID: 110532 RVA: 0x008479D3 File Offset: 0x00845BD3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisableFoliageEffect
 	{
@@ -705,9 +705,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002844 RID: 10308
-	// (get) Token: 0x0601D2BE RID: 119486 RVA: 0x008206D8 File Offset: 0x0081E8D8
-	// (set) Token: 0x0601D2BF RID: 119487 RVA: 0x008206E8 File Offset: 0x0081E8E8
+	// Token: 0x17002BE2 RID: 11234
+	// (get) Token: 0x0601AFC5 RID: 110533 RVA: 0x008479E4 File Offset: 0x00845BE4
+	// (set) Token: 0x0601AFC6 RID: 110534 RVA: 0x008479F4 File Offset: 0x00845BF4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableFoliageEffect
 	{
@@ -721,9 +721,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002845 RID: 10309
-	// (get) Token: 0x0601D2C0 RID: 119488 RVA: 0x008206FC File Offset: 0x0081E8FC
-	// (set) Token: 0x0601D2C1 RID: 119489 RVA: 0x00820735 File Offset: 0x0081E935
+	// Token: 0x17002BE3 RID: 11235
+	// (get) Token: 0x0601AFC7 RID: 110535 RVA: 0x00847A08 File Offset: 0x00845C08
+	// (set) Token: 0x0601AFC8 RID: 110536 RVA: 0x00847A41 File Offset: 0x00845C41
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor RimLightColorSpecil
 	{
@@ -743,9 +743,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002846 RID: 10310
-	// (get) Token: 0x0601D2C2 RID: 119490 RVA: 0x0082075D File Offset: 0x0081E95D
-	// (set) Token: 0x0601D2C3 RID: 119491 RVA: 0x0082076D File Offset: 0x0081E96D
+	// Token: 0x17002BE4 RID: 11236
+	// (get) Token: 0x0601AFC9 RID: 110537 RVA: 0x00847A69 File Offset: 0x00845C69
+	// (set) Token: 0x0601AFCA RID: 110538 RVA: 0x00847A79 File Offset: 0x00845C79
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UseRimlightColorSpecil
 	{
@@ -759,9 +759,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002847 RID: 10311
-	// (get) Token: 0x0601D2C4 RID: 119492 RVA: 0x00820780 File Offset: 0x0081E980
-	// (set) Token: 0x0601D2C5 RID: 119493 RVA: 0x008207B9 File Offset: 0x0081E9B9
+	// Token: 0x17002BE5 RID: 11237
+	// (get) Token: 0x0601AFCB RID: 110539 RVA: 0x00847A8C File Offset: 0x00845C8C
+	// (set) Token: 0x0601AFCC RID: 110540 RVA: 0x00847AC5 File Offset: 0x00845CC5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat RimlightColorStrength
 	{
@@ -781,9 +781,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002848 RID: 10312
-	// (get) Token: 0x0601D2C6 RID: 119494 RVA: 0x008207E1 File Offset: 0x0081E9E1
-	// (set) Token: 0x0601D2C7 RID: 119495 RVA: 0x008207F1 File Offset: 0x0081E9F1
+	// Token: 0x17002BE6 RID: 11238
+	// (get) Token: 0x0601AFCD RID: 110541 RVA: 0x00847AED File Offset: 0x00845CED
+	// (set) Token: 0x0601AFCE RID: 110542 RVA: 0x00847AFD File Offset: 0x00845CFD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UseEmissionTex
 	{
@@ -797,9 +797,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002849 RID: 10313
-	// (get) Token: 0x0601D2C8 RID: 119496 RVA: 0x00820804 File Offset: 0x0081EA04
-	// (set) Token: 0x0601D2C9 RID: 119497 RVA: 0x0082083D File Offset: 0x0081EA3D
+	// Token: 0x17002BE7 RID: 11239
+	// (get) Token: 0x0601AFCF RID: 110543 RVA: 0x00847B10 File Offset: 0x00845D10
+	// (set) Token: 0x0601AFD0 RID: 110544 RVA: 0x00847B49 File Offset: 0x00845D49
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat EmissionTexStrength
 	{
@@ -819,9 +819,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700284A RID: 10314
-	// (get) Token: 0x0601D2CA RID: 119498 RVA: 0x00820868 File Offset: 0x0081EA68
-	// (set) Token: 0x0601D2CB RID: 119499 RVA: 0x008208A1 File Offset: 0x0081EAA1
+	// Token: 0x17002BE8 RID: 11240
+	// (get) Token: 0x0601AFD1 RID: 110545 RVA: 0x00847B74 File Offset: 0x00845D74
+	// (set) Token: 0x0601AFD2 RID: 110546 RVA: 0x00847BAD File Offset: 0x00845DAD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat WorldPositionOffsetNormal
 	{
@@ -841,9 +841,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700284B RID: 10315
-	// (get) Token: 0x0601D2CC RID: 119500 RVA: 0x008208CC File Offset: 0x0081EACC
-	// (set) Token: 0x0601D2CD RID: 119501 RVA: 0x00820905 File Offset: 0x0081EB05
+	// Token: 0x17002BE9 RID: 11241
+	// (get) Token: 0x0601AFD3 RID: 110547 RVA: 0x00847BD8 File Offset: 0x00845DD8
+	// (set) Token: 0x0601AFD4 RID: 110548 RVA: 0x00847C11 File Offset: 0x00845E11
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor WorldPositionOffsetOffset
 	{
@@ -863,9 +863,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700284C RID: 10316
-	// (get) Token: 0x0601D2CE RID: 119502 RVA: 0x00820930 File Offset: 0x0081EB30
-	// (set) Token: 0x0601D2CF RID: 119503 RVA: 0x00820969 File Offset: 0x0081EB69
+	// Token: 0x17002BEA RID: 11242
+	// (get) Token: 0x0601AFD5 RID: 110549 RVA: 0x00847C3C File Offset: 0x00845E3C
+	// (set) Token: 0x0601AFD6 RID: 110550 RVA: 0x00847C75 File Offset: 0x00845E75
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat SimpleUspeed
 	{
@@ -885,9 +885,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700284D RID: 10317
-	// (get) Token: 0x0601D2D0 RID: 119504 RVA: 0x00820994 File Offset: 0x0081EB94
-	// (set) Token: 0x0601D2D1 RID: 119505 RVA: 0x008209CD File Offset: 0x0081EBCD
+	// Token: 0x17002BEB RID: 11243
+	// (get) Token: 0x0601AFD7 RID: 110551 RVA: 0x00847CA0 File Offset: 0x00845EA0
+	// (set) Token: 0x0601AFD8 RID: 110552 RVA: 0x00847CD9 File Offset: 0x00845ED9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat SimpleVspeed
 	{
@@ -907,9 +907,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700284E RID: 10318
-	// (get) Token: 0x0601D2D2 RID: 119506 RVA: 0x008209F8 File Offset: 0x0081EBF8
-	// (set) Token: 0x0601D2D3 RID: 119507 RVA: 0x00820A31 File Offset: 0x0081EC31
+	// Token: 0x17002BEC RID: 11244
+	// (get) Token: 0x0601AFD9 RID: 110553 RVA: 0x00847D04 File Offset: 0x00845F04
+	// (set) Token: 0x0601AFDA RID: 110554 RVA: 0x00847D3D File Offset: 0x00845F3D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat SimpleUseFlow
 	{
@@ -929,9 +929,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700284F RID: 10319
-	// (get) Token: 0x0601D2D4 RID: 119508 RVA: 0x00820A59 File Offset: 0x0081EC59
-	// (set) Token: 0x0601D2D5 RID: 119509 RVA: 0x00820A69 File Offset: 0x0081EC69
+	// Token: 0x17002BED RID: 11245
+	// (get) Token: 0x0601AFDB RID: 110555 RVA: 0x00847D65 File Offset: 0x00845F65
+	// (set) Token: 0x0601AFDC RID: 110556 RVA: 0x00847D75 File Offset: 0x00845F75
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableQuanXiPinTu
 	{
@@ -945,9 +945,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002850 RID: 10320
-	// (get) Token: 0x0601D2D6 RID: 119510 RVA: 0x00820A7C File Offset: 0x0081EC7C
-	// (set) Token: 0x0601D2D7 RID: 119511 RVA: 0x00820AB5 File Offset: 0x0081ECB5
+	// Token: 0x17002BEE RID: 11246
+	// (get) Token: 0x0601AFDD RID: 110557 RVA: 0x00847D88 File Offset: 0x00845F88
+	// (set) Token: 0x0601AFDE RID: 110558 RVA: 0x00847DC1 File Offset: 0x00845FC1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat TransparencyQuanXiPinTu
 	{
@@ -967,9 +967,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002851 RID: 10321
-	// (get) Token: 0x0601D2D8 RID: 119512 RVA: 0x00820AE0 File Offset: 0x0081ECE0
-	// (set) Token: 0x0601D2D9 RID: 119513 RVA: 0x00820B19 File Offset: 0x0081ED19
+	// Token: 0x17002BEF RID: 11247
+	// (get) Token: 0x0601AFDF RID: 110559 RVA: 0x00847DEC File Offset: 0x00845FEC
+	// (set) Token: 0x0601AFE0 RID: 110560 RVA: 0x00847E25 File Offset: 0x00846025
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor TransparentColorQuanXiPinTu
 	{
@@ -989,9 +989,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002852 RID: 10322
-	// (get) Token: 0x0601D2DA RID: 119514 RVA: 0x00820B44 File Offset: 0x0081ED44
-	// (set) Token: 0x0601D2DB RID: 119515 RVA: 0x00820B7D File Offset: 0x0081ED7D
+	// Token: 0x17002BF0 RID: 11248
+	// (get) Token: 0x0601AFE1 RID: 110561 RVA: 0x00847E50 File Offset: 0x00846050
+	// (set) Token: 0x0601AFE2 RID: 110562 RVA: 0x00847E89 File Offset: 0x00846089
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor OpaqueColorQuanXiPinTu
 	{
@@ -1011,9 +1011,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002853 RID: 10323
-	// (get) Token: 0x0601D2DC RID: 119516 RVA: 0x00820BA5 File Offset: 0x0081EDA5
-	// (set) Token: 0x0601D2DD RID: 119517 RVA: 0x00820BB5 File Offset: 0x0081EDB5
+	// Token: 0x17002BF1 RID: 11249
+	// (get) Token: 0x0601AFE3 RID: 110563 RVA: 0x00847EB1 File Offset: 0x008460B1
+	// (set) Token: 0x0601AFE4 RID: 110564 RVA: 0x00847EC1 File Offset: 0x008460C1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableQuanXiFengSuo
 	{
@@ -1027,9 +1027,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002854 RID: 10324
-	// (get) Token: 0x0601D2DE RID: 119518 RVA: 0x00820BC8 File Offset: 0x0081EDC8
-	// (set) Token: 0x0601D2DF RID: 119519 RVA: 0x00820C01 File Offset: 0x0081EE01
+	// Token: 0x17002BF2 RID: 11250
+	// (get) Token: 0x0601AFE5 RID: 110565 RVA: 0x00847ED4 File Offset: 0x008460D4
+	// (set) Token: 0x0601AFE6 RID: 110566 RVA: 0x00847F0D File Offset: 0x0084610D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveFloat TransparencyQuanXiFengSuo
 	{
@@ -1049,9 +1049,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002855 RID: 10325
-	// (get) Token: 0x0601D2E0 RID: 119520 RVA: 0x00820C2C File Offset: 0x0081EE2C
-	// (set) Token: 0x0601D2E1 RID: 119521 RVA: 0x00820C65 File Offset: 0x0081EE65
+	// Token: 0x17002BF3 RID: 11251
+	// (get) Token: 0x0601AFE7 RID: 110567 RVA: 0x00847F38 File Offset: 0x00846138
+	// (set) Token: 0x0601AFE8 RID: 110568 RVA: 0x00847F71 File Offset: 0x00846171
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FKuroCurveLinearColor TransparentColorQuanXiFengSuo
 	{
@@ -1071,8 +1071,8 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002856 RID: 10326
-	// (get) Token: 0x0601D2E2 RID: 119522 RVA: 0x00820C90 File Offset: 0x0081EE90
+	// Token: 0x17002BF4 RID: 11252
+	// (get) Token: 0x0601AFE9 RID: 110569 RVA: 0x00847F9C File Offset: 0x0084619C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<FName, FKuroCurveFloat> CustomScalarParMap
 	{
@@ -1088,8 +1088,8 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002857 RID: 10327
-	// (get) Token: 0x0601D2E3 RID: 119523 RVA: 0x00820CCC File Offset: 0x0081EECC
+	// Token: 0x17002BF5 RID: 11253
+	// (get) Token: 0x0601AFEA RID: 110570 RVA: 0x00847FD8 File Offset: 0x008461D8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<FName, FKuroCurveLinearColor> CustomColorParMap
 	{
@@ -1105,8 +1105,8 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002858 RID: 10328
-	// (get) Token: 0x0601D2E4 RID: 119524 RVA: 0x00820D08 File Offset: 0x0081EF08
+	// Token: 0x17002BF6 RID: 11254
+	// (get) Token: 0x0601AFEB RID: 110571 RVA: 0x00848014 File Offset: 0x00846214
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<FName, UTexture> CustomTexParMap
 	{
@@ -1122,9 +1122,9 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002859 RID: 10329
-	// (get) Token: 0x0601D2E5 RID: 119525 RVA: 0x00820D41 File Offset: 0x0081EF41
-	// (set) Token: 0x0601D2E6 RID: 119526 RVA: 0x00820D51 File Offset: 0x0081EF51
+	// Token: 0x17002BF7 RID: 11255
+	// (get) Token: 0x0601AFEC RID: 110572 RVA: 0x0084804D File Offset: 0x0084624D
+	// (set) Token: 0x0601AFED RID: 110573 RVA: 0x0084805D File Offset: 0x0084625D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool RevertCustomTexParOnDestroy
 	{
@@ -1138,7 +1138,7 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		}
 	}
 
-	// Token: 0x0601D2E7 RID: 119527 RVA: 0x00820D62 File Offset: 0x0081EF62
+	// Token: 0x0601AFEE RID: 110574 RVA: 0x0084806E File Offset: 0x0084626E
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (ItemMaterialControllerActorData._ClassPtr == IntPtr.Zero)
@@ -1148,333 +1148,333 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 		return ItemMaterialControllerActorData._ClassPtr;
 	}
 
-	// Token: 0x0601D2E8 RID: 119528 RVA: 0x00820D88 File Offset: 0x0081EF88
+	// Token: 0x0601AFEF RID: 110575 RVA: 0x00848094 File Offset: 0x00846294
 	public ItemMaterialControllerActorData() : this(BuiltinUtils.AllocNativeUObject(ItemMaterialControllerActorData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D2E9 RID: 119529 RVA: 0x00820DB0 File Offset: 0x0081EFB0
+	// Token: 0x0601AFF0 RID: 110576 RVA: 0x008480BC File Offset: 0x008462BC
 	public ItemMaterialControllerActorData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ItemMaterialControllerActorData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D2EA RID: 119530 RVA: 0x00820DE3 File Offset: 0x0081EFE3
+	// Token: 0x0601AFF1 RID: 110577 RVA: 0x008480EF File Offset: 0x008462EF
 	protected ItemMaterialControllerActorData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400E5B9 RID: 58809
+	// Token: 0x0400EA70 RID: 60016
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Scene/Item/MaterialController/ItemMaterialControllerActorData.ItemMaterialControllerActorData_C";
 
-	// Token: 0x0400E5BA RID: 58810
+	// Token: 0x0400EA71 RID: 60017
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E5BB RID: 58811
+	// Token: 0x0400EA72 RID: 60018
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E5BC RID: 58812
+	// Token: 0x0400EA73 RID: 60019
 	private static int __PropertyOffset_StartTime;
 
-	// Token: 0x0400E5BD RID: 58813
+	// Token: 0x0400EA74 RID: 60020
 	private static int __PropertyOffset_LoopTime;
 
-	// Token: 0x0400E5BE RID: 58814
+	// Token: 0x0400EA75 RID: 60021
 	private static int __PropertyOffset_EndTime;
 
-	// Token: 0x0400E5BF RID: 58815
+	// Token: 0x0400EA76 RID: 60022
 	private static int __PropertyOffset_EnableBaseColorScale;
 
-	// Token: 0x0400E5C0 RID: 58816
+	// Token: 0x0400EA77 RID: 60023
 	private static int __PropertyOffset_BaseColorScale;
 
-	// Token: 0x0400E5C1 RID: 58817
+	// Token: 0x0400EA78 RID: 60024
 	[Nullable(2)]
 	private FKuroCurveFloat _BaseColorScale;
 
-	// Token: 0x0400E5C2 RID: 58818
+	// Token: 0x0400EA79 RID: 60025
 	private static int __PropertyOffset_EnableAddEmissionColor;
 
-	// Token: 0x0400E5C3 RID: 58819
+	// Token: 0x0400EA7A RID: 60026
 	private static int __PropertyOffset_AddEmissionColor;
 
-	// Token: 0x0400E5C4 RID: 58820
+	// Token: 0x0400EA7B RID: 60027
 	[Nullable(2)]
 	private FKuroCurveLinearColor _AddEmissionColor;
 
-	// Token: 0x0400E5C5 RID: 58821
+	// Token: 0x0400EA7C RID: 60028
 	private static int __PropertyOffset_EnableEmissionChange;
 
-	// Token: 0x0400E5C6 RID: 58822
+	// Token: 0x0400EA7D RID: 60029
 	private static int __PropertyOffset_EmissionLightColorChangeProgress;
 
-	// Token: 0x0400E5C7 RID: 58823
+	// Token: 0x0400EA7E RID: 60030
 	[Nullable(2)]
 	private FKuroCurveFloat _EmissionLightColorChangeProgress;
 
-	// Token: 0x0400E5C8 RID: 58824
+	// Token: 0x0400EA7F RID: 60031
 	private static int __PropertyOffset_EmissionLightColorChangeStrength;
 
-	// Token: 0x0400E5C9 RID: 58825
+	// Token: 0x0400EA80 RID: 60032
 	[Nullable(2)]
 	private FKuroCurveFloat _EmissionLightColorChangeStrength;
 
-	// Token: 0x0400E5CA RID: 58826
+	// Token: 0x0400EA81 RID: 60033
 	private static int __PropertyOffset_EmissionLightColorChangeColor;
 
-	// Token: 0x0400E5CB RID: 58827
+	// Token: 0x0400EA82 RID: 60034
 	[Nullable(2)]
 	private FKuroCurveLinearColor _EmissionLightColorChangeColor;
 
-	// Token: 0x0400E5CC RID: 58828
+	// Token: 0x0400EA83 RID: 60035
 	private static int __PropertyOffset_EnableRimLight;
 
-	// Token: 0x0400E5CD RID: 58829
+	// Token: 0x0400EA84 RID: 60036
 	private static int __PropertyOffset_RimLightColor;
 
-	// Token: 0x0400E5CE RID: 58830
+	// Token: 0x0400EA85 RID: 60037
 	[Nullable(2)]
 	private FKuroCurveLinearColor _RimLightColor;
 
-	// Token: 0x0400E5CF RID: 58831
+	// Token: 0x0400EA86 RID: 60038
 	private static int __PropertyOffset_RimPower;
 
-	// Token: 0x0400E5D0 RID: 58832
+	// Token: 0x0400EA87 RID: 60039
 	[Nullable(2)]
 	private FKuroCurveFloat _RimPower;
 
-	// Token: 0x0400E5D1 RID: 58833
+	// Token: 0x0400EA88 RID: 60040
 	private static int __PropertyOffset_EnableDissolve;
 
-	// Token: 0x0400E5D2 RID: 58834
+	// Token: 0x0400EA89 RID: 60041
 	private static int __PropertyOffset_DissolveProgress;
 
-	// Token: 0x0400E5D3 RID: 58835
+	// Token: 0x0400EA8A RID: 60042
 	[Nullable(2)]
 	private FKuroCurveFloat _DissolveProgress;
 
-	// Token: 0x0400E5D4 RID: 58836
+	// Token: 0x0400EA8B RID: 60043
 	private static int __PropertyOffset_DissolveAdjustment;
 
-	// Token: 0x0400E5D5 RID: 58837
+	// Token: 0x0400EA8C RID: 60044
 	[Nullable(2)]
 	private FKuroCurveFloat _DissolveAdjustment;
 
-	// Token: 0x0400E5D6 RID: 58838
+	// Token: 0x0400EA8D RID: 60045
 	private static int __PropertyOffset_DissolveEdageWidth;
 
-	// Token: 0x0400E5D7 RID: 58839
+	// Token: 0x0400EA8E RID: 60046
 	[Nullable(2)]
 	private FKuroCurveFloat _DissolveEdageWidth;
 
-	// Token: 0x0400E5D8 RID: 58840
+	// Token: 0x0400EA8F RID: 60047
 	private static int __PropertyOffset_DissolveEdageColor;
 
-	// Token: 0x0400E5D9 RID: 58841
+	// Token: 0x0400EA90 RID: 60048
 	[Nullable(2)]
 	private FKuroCurveLinearColor _DissolveEdageColor;
 
-	// Token: 0x0400E5DA RID: 58842
+	// Token: 0x0400EA91 RID: 60049
 	private static int __PropertyOffset_DissolveEdageStrength;
 
-	// Token: 0x0400E5DB RID: 58843
+	// Token: 0x0400EA92 RID: 60050
 	[Nullable(2)]
 	private FKuroCurveFloat _DissolveEdageStrength;
 
-	// Token: 0x0400E5DC RID: 58844
+	// Token: 0x0400EA93 RID: 60051
 	private static int __PropertyOffset_DissolveTexSpeed;
 
-	// Token: 0x0400E5DD RID: 58845
+	// Token: 0x0400EA94 RID: 60052
 	[Nullable(2)]
 	private FKuroCurveLinearColor _DissolveTexSpeed;
 
-	// Token: 0x0400E5DE RID: 58846
+	// Token: 0x0400EA95 RID: 60053
 	private static int __PropertyOffset_DissolveUv;
 
-	// Token: 0x0400E5DF RID: 58847
+	// Token: 0x0400EA96 RID: 60054
 	private static int __PropertyOffset_DissolveTexScaleOffset;
 
-	// Token: 0x0400E5E0 RID: 58848
+	// Token: 0x0400EA97 RID: 60055
 	[Nullable(2)]
 	private FKuroCurveLinearColor _DissolveTexScaleOffset;
 
-	// Token: 0x0400E5E1 RID: 58849
+	// Token: 0x0400EA98 RID: 60056
 	private static int __PropertyOffset_EnableScanning;
 
-	// Token: 0x0400E5E2 RID: 58850
+	// Token: 0x0400EA99 RID: 60057
 	private static int __PropertyOffset_ScanningOutlineMixNoiseStrength;
 
-	// Token: 0x0400E5E3 RID: 58851
+	// Token: 0x0400EA9A RID: 60058
 	[Nullable(2)]
 	private FKuroCurveFloat _ScanningOutlineMixNoiseStrength;
 
-	// Token: 0x0400E5E4 RID: 58852
+	// Token: 0x0400EA9B RID: 60059
 	private static int __PropertyOffset_ScanningOutlineStrength;
 
-	// Token: 0x0400E5E5 RID: 58853
+	// Token: 0x0400EA9C RID: 60060
 	[Nullable(2)]
 	private FKuroCurveFloat _ScanningOutlineStrength;
 
-	// Token: 0x0400E5E6 RID: 58854
+	// Token: 0x0400EA9D RID: 60061
 	private static int __PropertyOffset_ScanningOutlineTexScaleOffset;
 
-	// Token: 0x0400E5E7 RID: 58855
+	// Token: 0x0400EA9E RID: 60062
 	[Nullable(2)]
 	private FKuroCurveLinearColor _ScanningOutlineTexScaleOffset;
 
-	// Token: 0x0400E5E8 RID: 58856
+	// Token: 0x0400EA9F RID: 60063
 	private static int __PropertyOffset_ScanningOutlineColor;
 
-	// Token: 0x0400E5E9 RID: 58857
+	// Token: 0x0400EAA0 RID: 60064
 	[Nullable(2)]
 	private FKuroCurveLinearColor _ScanningOutlineColor;
 
-	// Token: 0x0400E5EA RID: 58858
+	// Token: 0x0400EAA1 RID: 60065
 	private static int __PropertyOffset_VertexAnimTimeDebug;
 
-	// Token: 0x0400E5EB RID: 58859
+	// Token: 0x0400EAA2 RID: 60066
 	[Nullable(2)]
 	private FKuroCurveFloat _VertexAnimTimeDebug;
 
-	// Token: 0x0400E5EC RID: 58860
+	// Token: 0x0400EAA3 RID: 60067
 	private static int __PropertyOffset_VertexAnimFrame;
 
-	// Token: 0x0400E5ED RID: 58861
+	// Token: 0x0400EAA4 RID: 60068
 	[Nullable(2)]
 	private FKuroCurveFloat _VertexAnimFrame;
 
-	// Token: 0x0400E5EE RID: 58862
+	// Token: 0x0400EAA5 RID: 60069
 	private static int __PropertyOffset_PivotPainterTransform;
 
-	// Token: 0x0400E5EF RID: 58863
+	// Token: 0x0400EAA6 RID: 60070
 	[Nullable(2)]
 	private FKuroCurveLinearColor _PivotPainterTransform;
 
-	// Token: 0x0400E5F0 RID: 58864
+	// Token: 0x0400EAA7 RID: 60071
 	private static int __PropertyOffset_FloatingThreshold;
 
-	// Token: 0x0400E5F1 RID: 58865
+	// Token: 0x0400EAA8 RID: 60072
 	[Nullable(2)]
 	private FKuroCurveFloat _FloatingThreshold;
 
-	// Token: 0x0400E5F2 RID: 58866
+	// Token: 0x0400EAA9 RID: 60073
 	private static int __PropertyOffset_EnablePivotPainterWorldPositionOffset;
 
-	// Token: 0x0400E5F3 RID: 58867
+	// Token: 0x0400EAAA RID: 60074
 	private static int __PropertyOffset_EnableWorldPositionOffset;
 
-	// Token: 0x0400E5F4 RID: 58868
+	// Token: 0x0400EAAB RID: 60075
 	private static int __PropertyOffset_DisableFoliageEffect;
 
-	// Token: 0x0400E5F5 RID: 58869
+	// Token: 0x0400EAAC RID: 60076
 	private static int __PropertyOffset_EnableFoliageEffect;
 
-	// Token: 0x0400E5F6 RID: 58870
+	// Token: 0x0400EAAD RID: 60077
 	private static int __PropertyOffset_RimLightColorSpecil;
 
-	// Token: 0x0400E5F7 RID: 58871
+	// Token: 0x0400EAAE RID: 60078
 	[Nullable(2)]
 	private FKuroCurveLinearColor _RimLightColorSpecil;
 
-	// Token: 0x0400E5F8 RID: 58872
+	// Token: 0x0400EAAF RID: 60079
 	private static int __PropertyOffset_UseRimlightColorSpecil;
 
-	// Token: 0x0400E5F9 RID: 58873
+	// Token: 0x0400EAB0 RID: 60080
 	private static int __PropertyOffset_RimlightColorStrength;
 
-	// Token: 0x0400E5FA RID: 58874
+	// Token: 0x0400EAB1 RID: 60081
 	[Nullable(2)]
 	private FKuroCurveFloat _RimlightColorStrength;
 
-	// Token: 0x0400E5FB RID: 58875
+	// Token: 0x0400EAB2 RID: 60082
 	private static int __PropertyOffset_UseEmissionTex;
 
-	// Token: 0x0400E5FC RID: 58876
+	// Token: 0x0400EAB3 RID: 60083
 	private static int __PropertyOffset_EmissionTexStrength;
 
-	// Token: 0x0400E5FD RID: 58877
+	// Token: 0x0400EAB4 RID: 60084
 	[Nullable(2)]
 	private FKuroCurveFloat _EmissionTexStrength;
 
-	// Token: 0x0400E5FE RID: 58878
+	// Token: 0x0400EAB5 RID: 60085
 	private static int __PropertyOffset_WorldPositionOffsetNormal;
 
-	// Token: 0x0400E5FF RID: 58879
+	// Token: 0x0400EAB6 RID: 60086
 	[Nullable(2)]
 	private FKuroCurveFloat _WorldPositionOffsetNormal;
 
-	// Token: 0x0400E600 RID: 58880
+	// Token: 0x0400EAB7 RID: 60087
 	private static int __PropertyOffset_WorldPositionOffsetOffset;
 
-	// Token: 0x0400E601 RID: 58881
+	// Token: 0x0400EAB8 RID: 60088
 	[Nullable(2)]
 	private FKuroCurveLinearColor _WorldPositionOffsetOffset;
 
-	// Token: 0x0400E602 RID: 58882
+	// Token: 0x0400EAB9 RID: 60089
 	private static int __PropertyOffset_SimpleUspeed;
 
-	// Token: 0x0400E603 RID: 58883
+	// Token: 0x0400EABA RID: 60090
 	[Nullable(2)]
 	private FKuroCurveFloat _SimpleUspeed;
 
-	// Token: 0x0400E604 RID: 58884
+	// Token: 0x0400EABB RID: 60091
 	private static int __PropertyOffset_SimpleVspeed;
 
-	// Token: 0x0400E605 RID: 58885
+	// Token: 0x0400EABC RID: 60092
 	[Nullable(2)]
 	private FKuroCurveFloat _SimpleVspeed;
 
-	// Token: 0x0400E606 RID: 58886
+	// Token: 0x0400EABD RID: 60093
 	private static int __PropertyOffset_SimpleUseFlow;
 
-	// Token: 0x0400E607 RID: 58887
+	// Token: 0x0400EABE RID: 60094
 	[Nullable(2)]
 	private FKuroCurveFloat _SimpleUseFlow;
 
-	// Token: 0x0400E608 RID: 58888
+	// Token: 0x0400EABF RID: 60095
 	private static int __PropertyOffset_EnableQuanXiPinTu;
 
-	// Token: 0x0400E609 RID: 58889
+	// Token: 0x0400EAC0 RID: 60096
 	private static int __PropertyOffset_TransparencyQuanXiPinTu;
 
-	// Token: 0x0400E60A RID: 58890
+	// Token: 0x0400EAC1 RID: 60097
 	[Nullable(2)]
 	private FKuroCurveFloat _TransparencyQuanXiPinTu;
 
-	// Token: 0x0400E60B RID: 58891
+	// Token: 0x0400EAC2 RID: 60098
 	private static int __PropertyOffset_TransparentColorQuanXiPinTu;
 
-	// Token: 0x0400E60C RID: 58892
+	// Token: 0x0400EAC3 RID: 60099
 	[Nullable(2)]
 	private FKuroCurveLinearColor _TransparentColorQuanXiPinTu;
 
-	// Token: 0x0400E60D RID: 58893
+	// Token: 0x0400EAC4 RID: 60100
 	private static int __PropertyOffset_OpaqueColorQuanXiPinTu;
 
-	// Token: 0x0400E60E RID: 58894
+	// Token: 0x0400EAC5 RID: 60101
 	[Nullable(2)]
 	private FKuroCurveLinearColor _OpaqueColorQuanXiPinTu;
 
-	// Token: 0x0400E60F RID: 58895
+	// Token: 0x0400EAC6 RID: 60102
 	private static int __PropertyOffset_EnableQuanXiFengSuo;
 
-	// Token: 0x0400E610 RID: 58896
+	// Token: 0x0400EAC7 RID: 60103
 	private static int __PropertyOffset_TransparencyQuanXiFengSuo;
 
-	// Token: 0x0400E611 RID: 58897
+	// Token: 0x0400EAC8 RID: 60104
 	[Nullable(2)]
 	private FKuroCurveFloat _TransparencyQuanXiFengSuo;
 
-	// Token: 0x0400E612 RID: 58898
+	// Token: 0x0400EAC9 RID: 60105
 	private static int __PropertyOffset_TransparentColorQuanXiFengSuo;
 
-	// Token: 0x0400E613 RID: 58899
+	// Token: 0x0400EACA RID: 60106
 	[Nullable(2)]
 	private FKuroCurveLinearColor _TransparentColorQuanXiFengSuo;
 
-	// Token: 0x0400E614 RID: 58900
+	// Token: 0x0400EACB RID: 60107
 	private static int __PropertyOffset_CustomScalarParMap;
 
-	// Token: 0x0400E615 RID: 58901
+	// Token: 0x0400EACC RID: 60108
 	[Nullable(new byte[]
 	{
 		2,
@@ -1482,10 +1482,10 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 	})]
 	private TMap<FName, FKuroCurveFloat> _CustomScalarParMap;
 
-	// Token: 0x0400E616 RID: 58902
+	// Token: 0x0400EACD RID: 60109
 	private static int __PropertyOffset_CustomColorParMap;
 
-	// Token: 0x0400E617 RID: 58903
+	// Token: 0x0400EACE RID: 60110
 	[Nullable(new byte[]
 	{
 		2,
@@ -1493,10 +1493,10 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 	})]
 	private TMap<FName, FKuroCurveLinearColor> _CustomColorParMap;
 
-	// Token: 0x0400E618 RID: 58904
+	// Token: 0x0400EACF RID: 60111
 	private static int __PropertyOffset_CustomTexParMap;
 
-	// Token: 0x0400E619 RID: 58905
+	// Token: 0x0400EAD0 RID: 60112
 	[Nullable(new byte[]
 	{
 		2,
@@ -1504,6 +1504,6 @@ public class ItemMaterialControllerActorData : UPrimaryDataAsset, IUnrealUObject
 	})]
 	private TMap<FName, UTexture> _CustomTexParMap;
 
-	// Token: 0x0400E61A RID: 58906
+	// Token: 0x0400EAD1 RID: 60113
 	private static int __PropertyOffset_RevertCustomTexParOnDestroy;
 }

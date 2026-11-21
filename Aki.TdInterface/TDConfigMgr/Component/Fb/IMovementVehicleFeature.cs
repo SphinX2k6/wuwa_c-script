@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D46 RID: 3398
+	// Token: 0x02000E40 RID: 3648
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMovementVehicleFeature : IVehicleFeature
 	{
-		// Token: 0x06004D7D RID: 19837 RVA: 0x000C0C12 File Offset: 0x000BEE12
-		[NullableContext(1)]
+		// Token: 0x06005299 RID: 21145 RVA: 0x000CC356 File Offset: 0x000CA556
+		[NullableContext(0)]
 		public static IMovementVehicleFeature Create(IMovementVehicleFeature? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018AE RID: 6318
-		// (get) Token: 0x06004D7E RID: 19838 RVA: 0x000C0C31 File Offset: 0x000BEE31
+		// Token: 0x17001A14 RID: 6676
+		// (get) Token: 0x0600529A RID: 21146 RVA: 0x000CC375 File Offset: 0x000CA575
 		public override EVehicleFeatureFlag Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018AF RID: 6319
-		// (get) Token: 0x06004D7F RID: 19839 RVA: 0x000C0C40 File Offset: 0x000BEE40
+		// Token: 0x17001A15 RID: 6677
+		// (get) Token: 0x0600529B RID: 21147 RVA: 0x000CC384 File Offset: 0x000CA584
 		public virtual int? MoveSpline
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018B0 RID: 6320
-		// (get) Token: 0x06004D80 RID: 19840 RVA: 0x000C0C76 File Offset: 0x000BEE76
+		// Token: 0x17001A16 RID: 6678
+		// (get) Token: 0x0600529C RID: 21148 RVA: 0x000CC3BA File Offset: 0x000CA5BA
 		public virtual IMovementPerformConfig MovePerformConfig
 		{
 			get
@@ -63,13 +63,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C6D RID: 11373
+		// Token: 0x04002F2D RID: 12077
 		private IMovementVehicleFeature Instance;
 
-		// Token: 0x04002C6E RID: 11374
+		// Token: 0x04002F2E RID: 12078
 		private IMovementPerformConfig _MovePerformConfigCache;
 
-		// Token: 0x04002C6F RID: 11375
+		// Token: 0x04002F2F RID: 12079
 		private bool _MovePerformConfigInited;
 	}
 }

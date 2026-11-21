@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001ABA RID: 6842
+// Token: 0x02000F79 RID: 3961
 public class ExploreMissionItem : UiPanelBase, IGridProxy<ExploreAreaMissionData>
 {
-	// Token: 0x170010C5 RID: 4293
-	// (get) Token: 0x0600CACE RID: 51918 RVA: 0x002E3506 File Offset: 0x002E1706
-	// (set) Token: 0x0600CACF RID: 51919 RVA: 0x002E350E File Offset: 0x002E170E
+	// Token: 0x170010EA RID: 4330
+	// (get) Token: 0x06009EDF RID: 40671 RVA: 0x002EE666 File Offset: 0x002EC866
+	// (set) Token: 0x06009EE0 RID: 40672 RVA: 0x002EE66E File Offset: 0x002EC86E
 	[Nullable(new byte[]
 	{
 		2,
@@ -35,17 +35,17 @@ public class ExploreMissionItem : UiPanelBase, IGridProxy<ExploreAreaMissionData
 		1
 	})] set; }
 
-	// Token: 0x170010C6 RID: 4294
-	// (get) Token: 0x0600CAD0 RID: 51920 RVA: 0x002E3517 File Offset: 0x002E1717
-	// (set) Token: 0x0600CAD1 RID: 51921 RVA: 0x002E351F File Offset: 0x002E171F
+	// Token: 0x170010EB RID: 4331
+	// (get) Token: 0x06009EE1 RID: 40673 RVA: 0x002EE677 File Offset: 0x002EC877
+	// (set) Token: 0x06009EE2 RID: 40674 RVA: 0x002EE67F File Offset: 0x002EC87F
 	public int GridIndex { get; set; }
 
-	// Token: 0x170010C7 RID: 4295
-	// (get) Token: 0x0600CAD2 RID: 51922 RVA: 0x002E3528 File Offset: 0x002E1728
-	// (set) Token: 0x0600CAD3 RID: 51923 RVA: 0x002E3530 File Offset: 0x002E1730
+	// Token: 0x170010EC RID: 4332
+	// (get) Token: 0x06009EE3 RID: 40675 RVA: 0x002EE688 File Offset: 0x002EC888
+	// (set) Token: 0x06009EE4 RID: 40676 RVA: 0x002EE690 File Offset: 0x002EC890
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600CAD4 RID: 51924 RVA: 0x002E353C File Offset: 0x002E173C
+	// Token: 0x06009EE5 RID: 40677 RVA: 0x002EE69C File Offset: 0x002EC89C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -76,7 +76,7 @@ public class ExploreMissionItem : UiPanelBase, IGridProxy<ExploreAreaMissionData
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CAD5 RID: 51925 RVA: 0x002E3687 File Offset: 0x002E1887
+	// Token: 0x06009EE6 RID: 40678 RVA: 0x002EE7E7 File Offset: 0x002EC9E7
 	private void OnClickJumpToButton()
 	{
 		if (this.ExploreAreaMissionData == null)
@@ -90,7 +90,7 @@ public class ExploreMissionItem : UiPanelBase, IGridProxy<ExploreAreaMissionData
 		UiManager.Instance.CloseView(EUiViewName.ExploreMissionView, null);
 	}
 
-	// Token: 0x0600CAD6 RID: 51926 RVA: 0x002E36C4 File Offset: 0x002E18C4
+	// Token: 0x06009EE7 RID: 40679 RVA: 0x002EE824 File Offset: 0x002ECA24
 	[NullableContext(1)]
 	public void Refresh(ExploreAreaMissionData data, bool isSelected, int gridIndex)
 	{
@@ -170,48 +170,48 @@ public class ExploreMissionItem : UiPanelBase, IGridProxy<ExploreAreaMissionData
 		}
 	}
 
-	// Token: 0x0600CAD7 RID: 51927 RVA: 0x002E37E4 File Offset: 0x002E19E4
+	// Token: 0x06009EE8 RID: 40680 RVA: 0x002EE944 File Offset: 0x002ECB44
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0600CAD8 RID: 51928 RVA: 0x002E37E6 File Offset: 0x002E19E6
+	// Token: 0x06009EE9 RID: 40681 RVA: 0x002EE946 File Offset: 0x002ECB46
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600CAD9 RID: 51929 RVA: 0x002E37E8 File Offset: 0x002E19E8
+	// Token: 0x06009EEA RID: 40682 RVA: 0x002EE948 File Offset: 0x002ECB48
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600CADA RID: 51930 RVA: 0x002E37EA File Offset: 0x002E19EA
+	// Token: 0x06009EEB RID: 40683 RVA: 0x002EE94A File Offset: 0x002ECB4A
 	[NullableContext(1)]
 	public object GetKey(ExploreAreaMissionData data, int gridIndex)
 	{
 		return this.GridIndex;
 	}
 
-	// Token: 0x04005D5D RID: 23901
+	// Token: 0x04005E2C RID: 24108
 	[Nullable(2)]
 	private ExploreAreaMissionData ExploreAreaMissionData;
 
-	// Token: 0x02008011 RID: 32785
+	// Token: 0x020071A0 RID: 29088
 	private enum EChildType
 	{
-		// Token: 0x04029CEB RID: 171243
+		// Token: 0x04025025 RID: 151589
 		BlueBgSprite,
-		// Token: 0x04029CEC RID: 171244
+		// Token: 0x04025026 RID: 151590
 		GreenBgSprite,
-		// Token: 0x04029CED RID: 171245
+		// Token: 0x04025027 RID: 151591
 		MissionNameText,
-		// Token: 0x04029CEE RID: 171246
+		// Token: 0x04025028 RID: 151592
 		JumpToButton,
-		// Token: 0x04029CEF RID: 171247
+		// Token: 0x04025029 RID: 151593
 		JumpToButtonItem,
-		// Token: 0x04029CF0 RID: 171248
+		// Token: 0x0402502A RID: 151594
 		DoneSprite,
-		// Token: 0x04029CF1 RID: 171249
+		// Token: 0x0402502B RID: 151595
 		UnDoneText
 	}
 }

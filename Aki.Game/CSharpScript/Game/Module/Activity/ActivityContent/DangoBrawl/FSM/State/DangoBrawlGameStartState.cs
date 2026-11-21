@@ -3,10 +3,10 @@ using CSharpScript.Game.Module.ActivityGamePlay.CommonFSMManager;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 {
-	// Token: 0x0200688D RID: 26765
+	// Token: 0x020057DD RID: 22493
 	public class DangoBrawlGameStartState : ActivityGameplayTurnStateBase<EDangoBrawlFsmState>
 	{
-		// Token: 0x06042CFB RID: 273659 RVA: 0x01043614 File Offset: 0x01041814
+		// Token: 0x06037853 RID: 227411 RVA: 0x00F84B94 File Offset: 0x00F82D94
 		public override void Enter(EDangoBrawlFsmState? prev)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 			battleFsm.ChangeState(stateType);
 		}
 
-		// Token: 0x06042CFC RID: 273660 RVA: 0x0104366F File Offset: 0x0104186F
+		// Token: 0x06037854 RID: 227412 RVA: 0x00F84BEF File Offset: 0x00F82DEF
 		public override void Exit(EDangoBrawlFsmState? next)
 		{
 		}

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049BF RID: 18879
+	// Token: 0x02004E79 RID: 20089
 	public class ICheckDangoCultivationProgressType_UnionUnion
 	{
-		// Token: 0x17008880 RID: 34944
-		// (get) Token: 0x0601D790 RID: 120720 RVA: 0x00426D59 File Offset: 0x00424F59
-		// (set) Token: 0x0601D791 RID: 120721 RVA: 0x00426D61 File Offset: 0x00424F61
+		// Token: 0x17008F42 RID: 36674
+		// (get) Token: 0x0601F1CF RID: 127439 RVA: 0x004574A1 File Offset: 0x004556A1
+		// (set) Token: 0x0601F1D0 RID: 127440 RVA: 0x004574A9 File Offset: 0x004556A9
 		public ICheckDangoCultivationProgressType_Union Type { get; set; }
 
-		// Token: 0x17008881 RID: 34945
-		// (get) Token: 0x0601D792 RID: 120722 RVA: 0x00426D6A File Offset: 0x00424F6A
-		// (set) Token: 0x0601D793 RID: 120723 RVA: 0x00426D72 File Offset: 0x00424F72
+		// Token: 0x17008F43 RID: 36675
+		// (get) Token: 0x0601F1D1 RID: 127441 RVA: 0x004574B2 File Offset: 0x004556B2
+		// (set) Token: 0x0601F1D2 RID: 127442 RVA: 0x004574BA File Offset: 0x004556BA
 		public object Value { get; set; }
 
-		// Token: 0x0601D794 RID: 120724 RVA: 0x00426D7B File Offset: 0x00424F7B
+		// Token: 0x0601F1D3 RID: 127443 RVA: 0x004574C3 File Offset: 0x004556C3
 		public ICheckDangoCultivationProgressType_UnionUnion()
 		{
 			this.Type = ICheckDangoCultivationProgressType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601D795 RID: 120725 RVA: 0x00426D91 File Offset: 0x00424F91
+		// Token: 0x0601F1D4 RID: 127444 RVA: 0x004574D9 File Offset: 0x004556D9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601D796 RID: 120726 RVA: 0x00426DA3 File Offset: 0x00424FA3
+		// Token: 0x0601F1D5 RID: 127445 RVA: 0x004574EB File Offset: 0x004556EB
 		public ICheckDangoCultivationProgressTypeT AsICheckDangoCultivationProgressType()
 		{
 			return this.As<ICheckDangoCultivationProgressTypeT>();
 		}
 
-		// Token: 0x0601D797 RID: 120727 RVA: 0x00426DAB File Offset: 0x00424FAB
+		// Token: 0x0601F1D6 RID: 127446 RVA: 0x004574F3 File Offset: 0x004556F3
 		public static ICheckDangoCultivationProgressType_UnionUnion FromICheckDangoCultivationProgressType(ICheckDangoCultivationProgressTypeT _icheckdangocultivationprogresstype)
 		{
 			return new ICheckDangoCultivationProgressType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D798 RID: 120728 RVA: 0x00426DC0 File Offset: 0x00424FC0
+		// Token: 0x0601F1D7 RID: 127447 RVA: 0x00457508 File Offset: 0x00455708
 		public ICountDangoOverTargetLevelT AsICountDangoOverTargetLevel()
 		{
 			return this.As<ICountDangoOverTargetLevelT>();
 		}
 
-		// Token: 0x0601D799 RID: 120729 RVA: 0x00426DC8 File Offset: 0x00424FC8
+		// Token: 0x0601F1D8 RID: 127448 RVA: 0x00457510 File Offset: 0x00455710
 		public static ICheckDangoCultivationProgressType_UnionUnion FromICountDangoOverTargetLevel(ICountDangoOverTargetLevelT _icountdangoovertargetlevel)
 		{
 			return new ICheckDangoCultivationProgressType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D79A RID: 120730 RVA: 0x00426DE0 File Offset: 0x00424FE0
+		// Token: 0x0601F1D9 RID: 127449 RVA: 0x00457528 File Offset: 0x00455728
 		public static int Pack(FlatBufferBuilder builder, ICheckDangoCultivationProgressType_UnionUnion _o)
 		{
 			ICheckDangoCultivationProgressType_Union type = _o.Type;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02003445 RID: 13381
+// Token: 0x020029B9 RID: 10681
 public class RedDotTrapDefenseRougeLevel : RedDotBase
 {
 }

@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049F8 RID: 18936
+	// Token: 0x02004EB8 RID: 20152
 	public class ICheckEntitiesExistT
 	{
-		// Token: 0x170088F3 RID: 35059
-		// (get) Token: 0x0601D976 RID: 121206 RVA: 0x0042A1A9 File Offset: 0x004283A9
-		// (set) Token: 0x0601D977 RID: 121207 RVA: 0x0042A1B1 File Offset: 0x004283B1
+		// Token: 0x17008FC3 RID: 36803
+		// (get) Token: 0x0601F3E9 RID: 127977 RVA: 0x0045AE15 File Offset: 0x00459015
+		// (set) Token: 0x0601F3EA RID: 127978 RVA: 0x0045AE1D File Offset: 0x0045901D
 		public ECondition Type { get; set; }
 
-		// Token: 0x170088F4 RID: 35060
-		// (get) Token: 0x0601D978 RID: 121208 RVA: 0x0042A1BA File Offset: 0x004283BA
-		// (set) Token: 0x0601D979 RID: 121209 RVA: 0x0042A1C2 File Offset: 0x004283C2
+		// Token: 0x17008FC4 RID: 36804
+		// (get) Token: 0x0601F3EB RID: 127979 RVA: 0x0045AE26 File Offset: 0x00459026
+		// (set) Token: 0x0601F3EC RID: 127980 RVA: 0x0045AE2E File Offset: 0x0045902E
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x170088F5 RID: 35061
-		// (get) Token: 0x0601D97A RID: 121210 RVA: 0x0042A1CB File Offset: 0x004283CB
-		// (set) Token: 0x0601D97B RID: 121211 RVA: 0x0042A1D3 File Offset: 0x004283D3
+		// Token: 0x17008FC5 RID: 36805
+		// (get) Token: 0x0601F3ED RID: 127981 RVA: 0x0045AE37 File Offset: 0x00459037
+		// (set) Token: 0x0601F3EE RID: 127982 RVA: 0x0045AE3F File Offset: 0x0045903F
 		public bool IsExist { get; set; }
 
-		// Token: 0x170088F6 RID: 35062
-		// (get) Token: 0x0601D97C RID: 121212 RVA: 0x0042A1DC File Offset: 0x004283DC
-		// (set) Token: 0x0601D97D RID: 121213 RVA: 0x0042A1E4 File Offset: 0x004283E4
+		// Token: 0x17008FC6 RID: 36806
+		// (get) Token: 0x0601F3EF RID: 127983 RVA: 0x0045AE48 File Offset: 0x00459048
+		// (set) Token: 0x0601F3F0 RID: 127984 RVA: 0x0045AE50 File Offset: 0x00459050
 		public bool IsFinishLoading { get; set; }
 
-		// Token: 0x170088F7 RID: 35063
-		// (get) Token: 0x0601D97E RID: 121214 RVA: 0x0042A1ED File Offset: 0x004283ED
-		// (set) Token: 0x0601D97F RID: 121215 RVA: 0x0042A1F5 File Offset: 0x004283F5
+		// Token: 0x17008FC7 RID: 36807
+		// (get) Token: 0x0601F3F1 RID: 127985 RVA: 0x0045AE59 File Offset: 0x00459059
+		// (set) Token: 0x0601F3F2 RID: 127986 RVA: 0x0045AE61 File Offset: 0x00459061
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601D980 RID: 121216 RVA: 0x0042A1FE File Offset: 0x004283FE
+		// Token: 0x0601F3F3 RID: 127987 RVA: 0x0045AE6A File Offset: 0x0045906A
 		public ICheckEntitiesExistT()
 		{
 			this.Type = ECondition.CompareVar;

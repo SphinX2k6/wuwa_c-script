@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060BF RID: 24767
+	// Token: 0x02006721 RID: 26401
 	public enum IActorFxEmoteStopSubType_Union : byte
 	{
-		// Token: 0x04010463 RID: 66659
+		// Token: 0x04011267 RID: 70247
 		NONE,
-		// Token: 0x04010464 RID: 66660
+		// Token: 0x04011268 RID: 70248
 		IActorFxEmoteStopSubType,
-		// Token: 0x04010465 RID: 66661
+		// Token: 0x04011269 RID: 70249
 		IActorFxEmoteStopAll,
-		// Token: 0x04010466 RID: 66662
+		// Token: 0x0401126A RID: 70250
 		IActorFxEmoteStopSockets
 	}
 }

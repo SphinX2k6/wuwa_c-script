@@ -6,13 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DC6 RID: 3526
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000EC2 RID: 3778
 	public class ISearchlightRotate : IProceduralVisualBase
 	{
-		// Token: 0x06005000 RID: 20480 RVA: 0x000C5CAB File Offset: 0x000C3EAB
-		[NullableContext(1)]
+		// Token: 0x06005525 RID: 21797 RVA: 0x000D14FB File Offset: 0x000CF6FB
 		public static ISearchlightRotate Create(ISearchlightRotate? instance)
 		{
 			if (instance == null)
@@ -25,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A31 RID: 6705
-		// (get) Token: 0x06005001 RID: 20481 RVA: 0x000C5CCA File Offset: 0x000C3ECA
+		// Token: 0x17001B9C RID: 7068
+		// (get) Token: 0x06005526 RID: 21798 RVA: 0x000D151A File Offset: 0x000CF71A
 		public override EProceduralVisualType Type
 		{
 			get
@@ -35,10 +32,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A32 RID: 6706
-		// (get) Token: 0x06005002 RID: 20482 RVA: 0x000C5CD7 File Offset: 0x000C3ED7
+		// Token: 0x17001B9D RID: 7069
+		// (get) Token: 0x06005527 RID: 21799 RVA: 0x000D1527 File Offset: 0x000CF727
+		[Nullable(2)]
 		public override IConditionGroup Condition
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._ConditionInited)
@@ -51,18 +50,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A33 RID: 6707
-		// (get) Token: 0x06005003 RID: 20483 RVA: 0x000C5D0B File Offset: 0x000C3F0B
+		// Token: 0x17001B9E RID: 7070
+		// (get) Token: 0x06005528 RID: 21800 RVA: 0x000D155B File Offset: 0x000CF75B
+		[Nullable(2)]
 		public virtual string RotateNode
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.RotateNode;
 			}
 		}
 
-		// Token: 0x17001A34 RID: 6708
-		// (get) Token: 0x06005004 RID: 20484 RVA: 0x000C5D18 File Offset: 0x000C3F18
+		// Token: 0x17001B9F RID: 7071
+		// (get) Token: 0x06005529 RID: 21801 RVA: 0x000D1568 File Offset: 0x000CF768
 		public virtual float? MaxAngleSpeed
 		{
 			get
@@ -75,8 +76,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A35 RID: 6709
-		// (get) Token: 0x06005005 RID: 20485 RVA: 0x000C5D4E File Offset: 0x000C3F4E
+		// Token: 0x17001BA0 RID: 7072
+		// (get) Token: 0x0600552A RID: 21802 RVA: 0x000D159E File Offset: 0x000CF79E
 		public virtual ESearchlightRotateAxis Axis
 		{
 			get
@@ -85,12 +86,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A36 RID: 6710
-		// (get) Token: 0x06005006 RID: 20486 RVA: 0x000C5D5C File Offset: 0x000C3F5C
-		[Nullable(1)]
+		// Token: 0x17001BA1 RID: 7073
+		// (get) Token: 0x0600552B RID: 21803 RVA: 0x000D15AC File Offset: 0x000CF7AC
 		public virtual List<ISnapAngleConfig> SnapConfigs
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._SnapConfigsInited)
@@ -108,20 +107,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DDD RID: 11741
+		// Token: 0x040030A3 RID: 12451
 		private ISearchlightRotate Instance;
 
-		// Token: 0x04002DDE RID: 11742
+		// Token: 0x040030A4 RID: 12452
+		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002DDF RID: 11743
+		// Token: 0x040030A5 RID: 12453
 		private bool _ConditionInited;
 
-		// Token: 0x04002DE0 RID: 11744
-		[Nullable(1)]
+		// Token: 0x040030A6 RID: 12454
 		private List<ISnapAngleConfig> _SnapConfigsCache;
 
-		// Token: 0x04002DE1 RID: 11745
+		// Token: 0x040030A7 RID: 12455
 		private bool _SnapConfigsInited;
 	}
 }

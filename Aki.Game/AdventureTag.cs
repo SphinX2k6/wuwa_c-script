@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200143C RID: 5180
+// Token: 0x020008F0 RID: 2288
 internal class AdventureTag : UiPanelBase
 {
-	// Token: 0x0600924A RID: 37450 RVA: 0x001F4BA0 File Offset: 0x001F2DA0
+	// Token: 0x060065DF RID: 26079 RVA: 0x001FD6DC File Offset: 0x001FB8DC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ internal class AdventureTag : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600924B RID: 37451 RVA: 0x001F4BDC File Offset: 0x001F2DDC
+	// Token: 0x060065E0 RID: 26080 RVA: 0x001FD718 File Offset: 0x001FB918
 	public void RefreshItem(bool isActivity)
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath(isActivity ? "SP_TagFrameBgOrange" : "SP_TagFrameBgYellow");

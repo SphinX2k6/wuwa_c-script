@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AFC RID: 11004
+	// Token: 0x02002DF0 RID: 11760
 	public class DollGrabItemDelivery : ActionParams
 	{
-		// Token: 0x0600F10C RID: 61708 RVA: 0x0022F959 File Offset: 0x0022DB59
-		[NullableContext(1)]
+		// Token: 0x0600FFC2 RID: 65474 RVA: 0x0024D665 File Offset: 0x0024B865
 		public static DollGrabItemDelivery Create(IDollGrabItemDelivery? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CD6 RID: 19670
-		// (get) Token: 0x0600F10D RID: 61709 RVA: 0x0022F978 File Offset: 0x0022DB78
+		// Token: 0x17005090 RID: 20624
+		// (get) Token: 0x0600FFC3 RID: 65475 RVA: 0x0024D684 File Offset: 0x0024B884
 		public virtual int ShowcaseId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400849A RID: 33946
+		// Token: 0x04008B9E RID: 35742
 		private IDollGrabItemDelivery Instance;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200089F RID: 2207
+	// Token: 0x020008BB RID: 2235
 	public class ConfigRoleDevProsRoleItemByItemGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060033CC RID: 13260 RVA: 0x0017E107 File Offset: 0x0017C307
+		// Token: 0x06003474 RID: 13428 RVA: 0x001853EF File Offset: 0x001835EF
 		static ConfigRoleDevProsRoleItemByItemGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleDevProsRoleItemByItemGroupId.CreateStaticDefaultValue), new Action(ConfigRoleDevProsRoleItemByItemGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060033CD RID: 13261 RVA: 0x0017E128 File Offset: 0x0017C328
+		// Token: 0x06003475 RID: 13429 RVA: 0x00185410 File Offset: 0x00183610
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleDevProsRoleItemByItemGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060033CE RID: 13262 RVA: 0x0017E1A7 File Offset: 0x0017C3A7
+		// Token: 0x06003476 RID: 13430 RVA: 0x0018548F File Offset: 0x0018368F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleDevProsRoleItemByItemGroupId.LogPair = null;
 			ConfigRoleDevProsRoleItemByItemGroupId.HandleId = 0;
 		}
 
-		// Token: 0x060033CF RID: 13263 RVA: 0x0017E1B5 File Offset: 0x0017C3B5
+		// Token: 0x06003477 RID: 13431 RVA: 0x0018549D File Offset: 0x0018369D
 		public static void Init()
 		{
 			ConfigRoleDevProsRoleItemByItemGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigRoleDevProsRoleItemByItemGroupId.HandleId, "db_roledev.db", "select BinData from `RoleDevProsRoleItem` where ItemGroupId=?");
 		}
 
-		// Token: 0x060033D0 RID: 13264 RVA: 0x0017E1D0 File Offset: 0x0017C3D0
+		// Token: 0x06003478 RID: 13432 RVA: 0x001854B8 File Offset: 0x001836B8
 		public static RoleDevProsRoleItem? GetConfig(int p0ItemGroupId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleDevProsRoleItemByItemGroupId.HandleId, ConfigRoleDevProsRoleItemByItemGroupId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleDevProsRoleItem?(rootAsRoleDevProsRoleItem);
 		}
 
-		// Token: 0x04003C3F RID: 15423
+		// Token: 0x04003D03 RID: 15619
 		private const string DB = "db_roledev.db";
 
-		// Token: 0x04003C40 RID: 15424
+		// Token: 0x04003D04 RID: 15620
 		private const string FILE = "g.共鸣者培养计划.xlsx";
 
-		// Token: 0x04003C41 RID: 15425
+		// Token: 0x04003D05 RID: 15621
 		private const string TABLE = "RoleDevProsRoleItem";
 
-		// Token: 0x04003C42 RID: 15426
+		// Token: 0x04003D06 RID: 15622
 		private const string COMMAND = "select BinData from `RoleDevProsRoleItem` where ItemGroupId=?";
 
-		// Token: 0x04003C43 RID: 15427
+		// Token: 0x04003D07 RID: 15623
 		private const string KEY_PREFIX = "RoleDevProsRoleItemByItemGroupId";
 
-		// Token: 0x04003C44 RID: 15428
+		// Token: 0x04003D08 RID: 15624
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003C45 RID: 15429
+		// Token: 0x04003D09 RID: 15625
 		private static int HandleId;
 	}
 }

@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x02004375 RID: 17269
+	// Token: 0x02003396 RID: 13206
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_BindStateSkillCounter.BP_SM_BindStateSkillCounter_C")]
 	[UnrealStructLayout(96, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 89)]
 	public class BP_SM_BindStateSkillCounter_C : UASMBindState, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CC02 RID: 183298 RVA: 0x00A279E6 File Offset: 0x00A25BE6
+		// Token: 0x06021820 RID: 137248 RVA: 0x0096283A File Offset: 0x00960A3A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_BindStateSkillCounter_C._ClassPtr == IntPtr.Zero)
@@ -24,19 +24,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_BindStateSkillCounter_C._ClassPtr;
 		}
 
-		// Token: 0x0602CC03 RID: 183299 RVA: 0x00A27A0C File Offset: 0x00A25C0C
+		// Token: 0x06021821 RID: 137249 RVA: 0x00962860 File Offset: 0x00960A60
 		public BP_SM_BindStateSkillCounter_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_BindStateSkillCounter_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CC04 RID: 183300 RVA: 0x00A27A34 File Offset: 0x00A25C34
+		// Token: 0x06021822 RID: 137250 RVA: 0x00962888 File Offset: 0x00960A88
 		public BP_SM_BindStateSkillCounter_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_BindStateSkillCounter_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070AF RID: 28847
-		// (get) Token: 0x0602CC05 RID: 183301 RVA: 0x00A27A68 File Offset: 0x00A25C68
-		// (set) Token: 0x0602CC06 RID: 183302 RVA: 0x00A27AA1 File Offset: 0x00A25CA1
+		// Token: 0x170044B1 RID: 17585
+		// (get) Token: 0x06021823 RID: 137251 RVA: 0x009628BC File Offset: 0x00960ABC
+		// (set) Token: 0x06021824 RID: 137252 RVA: 0x009628F5 File Offset: 0x00960AF5
 		public TArray<int> SkillIds
 		{
 			get
@@ -45,7 +45,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 				TArray<int> result;
 				if ((result = this._SkillIds) == null)
 				{
-					result = (this._SkillIds = new TArray<int>(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_0, this));
+					result = (this._SkillIds = new TArray<int>(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_SkillIds, this));
 				}
 				return result;
 			}
@@ -55,97 +55,97 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			}
 		}
 
-		// Token: 0x170070B0 RID: 28848
-		// (get) Token: 0x0602CC07 RID: 183303 RVA: 0x00A27AAF File Offset: 0x00A25CAF
-		// (set) Token: 0x0602CC08 RID: 183304 RVA: 0x00A27AC3 File Offset: 0x00A25CC3
+		// Token: 0x170044B2 RID: 17586
+		// (get) Token: 0x06021825 RID: 137253 RVA: 0x00962903 File Offset: 0x00960B03
+		// (set) Token: 0x06021826 RID: 137254 RVA: 0x00962917 File Offset: 0x00960B17
 		public unsafe string 黑板Key
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_黑板Key)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_黑板Key)), value);
 			}
 		}
 
-		// Token: 0x170070B1 RID: 28849
-		// (get) Token: 0x0602CC09 RID: 183305 RVA: 0x00A27AD8 File Offset: 0x00A25CD8
-		// (set) Token: 0x0602CC0A RID: 183306 RVA: 0x00A27AE8 File Offset: 0x00A25CE8
+		// Token: 0x170044B3 RID: 17587
+		// (get) Token: 0x06021827 RID: 137255 RVA: 0x0096292C File Offset: 0x00960B2C
+		// (set) Token: 0x06021828 RID: 137256 RVA: 0x0096293C File Offset: 0x00960B3C
 		public unsafe int 增加值Min
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_增加值Min);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_增加值Min) = value;
 			}
 		}
 
-		// Token: 0x170070B2 RID: 28850
-		// (get) Token: 0x0602CC0B RID: 183307 RVA: 0x00A27AF9 File Offset: 0x00A25CF9
-		// (set) Token: 0x0602CC0C RID: 183308 RVA: 0x00A27B09 File Offset: 0x00A25D09
+		// Token: 0x170044B4 RID: 17588
+		// (get) Token: 0x06021829 RID: 137257 RVA: 0x0096294D File Offset: 0x00960B4D
+		// (set) Token: 0x0602182A RID: 137258 RVA: 0x0096295D File Offset: 0x00960B5D
 		public unsafe int 增加值Max
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_增加值Max);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_增加值Max) = value;
 			}
 		}
 
-		// Token: 0x170070B3 RID: 28851
-		// (get) Token: 0x0602CC0D RID: 183309 RVA: 0x00A27B1A File Offset: 0x00A25D1A
-		// (set) Token: 0x0602CC0E RID: 183310 RVA: 0x00A27B2A File Offset: 0x00A25D2A
+		// Token: 0x170044B5 RID: 17589
+		// (get) Token: 0x0602182B RID: 137259 RVA: 0x0096296E File Offset: 0x00960B6E
+		// (set) Token: 0x0602182C RID: 137260 RVA: 0x0096297E File Offset: 0x00960B7E
 		public unsafe bool 重置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_重置) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SM_BindStateSkillCounter_C.__PropertyOffset_重置) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602CC0F RID: 183311 RVA: 0x00A27B3B File Offset: 0x00A25D3B
+		// Token: 0x0602182D RID: 137261 RVA: 0x0096298F File Offset: 0x00960B8F
 		protected BP_SM_BindStateSkillCounter_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040179A0 RID: 96672
+		// Token: 0x04012521 RID: 75041
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_BindStateSkillCounter.BP_SM_BindStateSkillCounter_C";
 
-		// Token: 0x040179A1 RID: 96673
+		// Token: 0x04012522 RID: 75042
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040179A2 RID: 96674
+		// Token: 0x04012523 RID: 75043
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040179A3 RID: 96675
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012524 RID: 75044
+		internal static int __PropertyOffset_SkillIds;
 
-		// Token: 0x040179A4 RID: 96676
+		// Token: 0x04012525 RID: 75045
 		[Nullable(2)]
 		private TArray<int> _SkillIds;
 
-		// Token: 0x040179A5 RID: 96677
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012526 RID: 75046
+		internal static int __PropertyOffset_黑板Key;
 
-		// Token: 0x040179A6 RID: 96678
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012527 RID: 75047
+		internal static int __PropertyOffset_增加值Min;
 
-		// Token: 0x040179A7 RID: 96679
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012528 RID: 75048
+		internal static int __PropertyOffset_增加值Max;
 
-		// Token: 0x040179A8 RID: 96680
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012529 RID: 75049
+		internal static int __PropertyOffset_重置;
 	}
 }

@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002EB5 RID: 11957
+// Token: 0x02002408 RID: 9224
 [NullableContext(1)]
 [Nullable(0)]
 public class CustomSetCollision : CustomActionBase
 {
-	// Token: 0x0601988C RID: 104588 RVA: 0x00699927 File Offset: 0x00697B27
+	// Token: 0x06017172 RID: 94578 RVA: 0x006BFBE7 File Offset: 0x006BDDE7
 	public CustomSetCollision(CharacterActorComponent actorComp, BaseActorComponent targetActor, bool ignoreCollision, [Nullable(2)] Action callback = null)
 	{
 		this.ActorComp = actorComp;
@@ -16,7 +16,7 @@ public class CustomSetCollision : CustomActionBase
 		this.Callback = callback;
 	}
 
-	// Token: 0x0601988D RID: 104589 RVA: 0x0069994C File Offset: 0x00697B4C
+	// Token: 0x06017173 RID: 94579 RVA: 0x006BFC0C File Offset: 0x006BDE0C
 	protected unsafe override void OnRunAction()
 	{
 		if (this.TargetActor == null || this.ActorComp == null)
@@ -46,12 +46,12 @@ public class CustomSetCollision : CustomActionBase
 		base.Finish(true);
 	}
 
-	// Token: 0x0400BEAD RID: 48813
+	// Token: 0x0400C248 RID: 49736
 	private readonly CharacterActorComponent ActorComp;
 
-	// Token: 0x0400BEAE RID: 48814
+	// Token: 0x0400C249 RID: 49737
 	private readonly BaseActorComponent TargetActor;
 
-	// Token: 0x0400BEAF RID: 48815
+	// Token: 0x0400C24A RID: 49738
 	private readonly bool IgnoreCollision;
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005942 RID: 22850
+	// Token: 0x02005F4F RID: 24399
 	public class ISpawnConfigTypeT
 	{
-		// Token: 0x1700AB85 RID: 43909
-		// (get) Token: 0x06026AB2 RID: 158386 RVA: 0x0055348A File Offset: 0x0055168A
-		// (set) Token: 0x06026AB3 RID: 158387 RVA: 0x00553492 File Offset: 0x00551692
+		// Token: 0x1700B4B9 RID: 46265
+		// (get) Token: 0x0602901C RID: 167964 RVA: 0x0059A0F6 File Offset: 0x005982F6
+		// (set) Token: 0x0602901D RID: 167965 RVA: 0x0059A0FE File Offset: 0x005982FE
 		public ESpawnConfigType Type { get; set; }
 
-		// Token: 0x06026AB4 RID: 158388 RVA: 0x0055349B File Offset: 0x0055169B
+		// Token: 0x0602901E RID: 167966 RVA: 0x0059A107 File Offset: 0x00598307
 		public ISpawnConfigTypeT()
 		{
 			this.Type = ESpawnConfigType.TemplateMatrix;

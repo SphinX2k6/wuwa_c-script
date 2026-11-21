@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AD8 RID: 27352
+	// Token: 0x02005C50 RID: 23632
 	public class LevelConditionListenerCheckClientEvent : LevelListenerBase
 	{
-		// Token: 0x06043F55 RID: 278357 RVA: 0x010AAF2C File Offset: 0x010A912C
+		// Token: 0x0603A09E RID: 237726 RVA: 0x010545DC File Offset: 0x010527DC
 		private void EventHandle(FGameplayTag eventName)
 		{
 			if (eventName == GameplayTagUtils.GetGameplayTagByName((this.ListeningInfo as ICheckClientEvent).EventName))
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F56 RID: 278358 RVA: 0x010AAF9C File Offset: 0x010A919C
+		// Token: 0x0603A09F RID: 237727 RVA: 0x0105464C File Offset: 0x0105284C
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F57 RID: 278359 RVA: 0x010AB104 File Offset: 0x010A9304
+		// Token: 0x0603A0A0 RID: 237728 RVA: 0x010547B4 File Offset: 0x010529B4
 		protected override void OnUnListen()
 		{
 			if (EventSystem.Instance.Has(EEventName.CheckClientEvent, new Action<FGameplayTag>(this.EventHandle)))
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
 		}
 
-		// Token: 0x04023859 RID: 145497
+		// Token: 0x0401EAF9 RID: 125689
 		[Nullable(2)]
 		private ICheckClientEvent Info;
 	}

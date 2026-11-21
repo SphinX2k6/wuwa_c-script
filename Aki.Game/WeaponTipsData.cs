@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020019CA RID: 6602
+// Token: 0x02000E89 RID: 3721
 public class WeaponTipsData : CommonTipsData
 {
-	// Token: 0x0400569F RID: 22175
+	// Token: 0x04005751 RID: 22353
 	public int ResonanceLevel;
 }

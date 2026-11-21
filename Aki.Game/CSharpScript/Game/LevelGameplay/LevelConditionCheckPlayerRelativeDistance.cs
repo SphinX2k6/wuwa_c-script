@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006952 RID: 26962
+	// Token: 0x02005AAD RID: 23213
 	public class LevelConditionCheckPlayerRelativeDistance : LevelConditionBase
 	{
-		// Token: 0x060432E5 RID: 275173 RVA: 0x01061884 File Offset: 0x0105FA84
+		// Token: 0x0603931C RID: 234268 RVA: 0x01005AE4 File Offset: 0x01003CE4
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, AActor inTrigger, params object[] eventArgs)
 		{

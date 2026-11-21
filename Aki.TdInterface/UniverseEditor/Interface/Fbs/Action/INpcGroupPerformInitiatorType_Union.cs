@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BBB RID: 27579
+	// Token: 0x02007307 RID: 29447
 	public enum INpcGroupPerformInitiatorType_Union : byte
 	{
-		// Token: 0x04011490 RID: 70800
+		// Token: 0x040123C2 RID: 74690
 		NONE,
-		// Token: 0x04011491 RID: 70801
+		// Token: 0x040123C3 RID: 74691
 		INpcGroupPerformInitiatorType,
-		// Token: 0x04011492 RID: 70802
+		// Token: 0x040123C4 RID: 74692
 		IPlayerInitiator
 	}
 }

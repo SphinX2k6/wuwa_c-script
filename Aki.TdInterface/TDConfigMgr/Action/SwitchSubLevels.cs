@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200222A RID: 8746
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002495 RID: 9365
 	public class SwitchSubLevels : ActionParams
 	{
-		// Token: 0x0600BFFA RID: 49146 RVA: 0x001B9324 File Offset: 0x001B7524
+		// Token: 0x0600CBB8 RID: 52152 RVA: 0x001D09F0 File Offset: 0x001CEBF0
 		private SwitchSubLevels_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BFFB RID: 49147 RVA: 0x001B935C File Offset: 0x001B755C
+		// Token: 0x0600CBB9 RID: 52153 RVA: 0x001D0A28 File Offset: 0x001CEC28
 		public static SwitchSubLevels Create([Nullable(2)] SwitchSubLevels instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFFC RID: 49148 RVA: 0x001B936F File Offset: 0x001B756F
+		// Token: 0x0600CBBA RID: 52154 RVA: 0x001D0A3B File Offset: 0x001CEC3B
 		public static SwitchSubLevels CreateFromSetValue([Nullable(2)] SwitchSubLevels_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFFD RID: 49149 RVA: 0x001B9382 File Offset: 0x001B7582
+		// Token: 0x0600CBBB RID: 52155 RVA: 0x001D0A4E File Offset: 0x001CEC4E
 		public SwitchSubLevels_SetValue ToSetValue()
 		{
 			return new SwitchSubLevels_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A23 RID: 14883
-		// (get) Token: 0x0600BFFE RID: 49150 RVA: 0x001B9395 File Offset: 0x001B7595
-		// (set) Token: 0x0600BFFF RID: 49151 RVA: 0x001B93C0 File Offset: 0x001B75C0
+		// Token: 0x17003D19 RID: 15641
+		// (get) Token: 0x0600CBBC RID: 52156 RVA: 0x001D0A61 File Offset: 0x001CEC61
+		// (set) Token: 0x0600CBBD RID: 52157 RVA: 0x001D0A8C File Offset: 0x001CEC8C
 		public virtual ESwitchSubLevelsType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007277 RID: 29303
+		// Token: 0x040078C1 RID: 30913
 		[Nullable(2)]
 		protected new SwitchSubLevels FbInstance;
 
-		// Token: 0x04007278 RID: 29304
+		// Token: 0x040078C2 RID: 30914
 		[Nullable(2)]
 		protected SwitchSubLevels_SetValue PocoInterface;
 	}

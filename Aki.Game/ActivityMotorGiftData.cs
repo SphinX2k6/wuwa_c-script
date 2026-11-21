@@ -4,10 +4,10 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001370 RID: 4976
+// Token: 0x02000824 RID: 2084
 public class ActivityMotorGiftData : ActivityBaseData
 {
-	// Token: 0x06008AD7 RID: 35543 RVA: 0x001DA6A0 File Offset: 0x001D88A0
+	// Token: 0x06005E72 RID: 24178 RVA: 0x001E34FC File Offset: 0x001E16FC
 	[NullableContext(1)]
 	protected override void PhraseEx(ActivityData data)
 	{
@@ -15,19 +15,19 @@ public class ActivityMotorGiftData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06008AD8 RID: 35544 RVA: 0x001DA6CE File Offset: 0x001D88CE
+	// Token: 0x06005E73 RID: 24179 RVA: 0x001E352A File Offset: 0x001E172A
 	public int GetMotorPreviewId()
 	{
 		return 1007;
 	}
 
-	// Token: 0x06008AD9 RID: 35545 RVA: 0x001DA6D5 File Offset: 0x001D88D5
+	// Token: 0x06005E74 RID: 24180 RVA: 0x001E3531 File Offset: 0x001E1731
 	public MotorGeneralPreview? GetMotorPreviewConfig()
 	{
 		return MotorDiyConfig.Instance.GetMotorGeneralPreviewConfig(1007);
 	}
 
-	// Token: 0x06008ADA RID: 35546 RVA: 0x001DA6E8 File Offset: 0x001D88E8
+	// Token: 0x06005E75 RID: 24181 RVA: 0x001E3544 File Offset: 0x001E1744
 	public void OpenMotorPreviewView()
 	{
 		if (this.GetMotorPreviewConfig() == null)
@@ -37,25 +37,25 @@ public class ActivityMotorGiftData : ActivityBaseData
 		MotorcycleDiyController.Instance.OpenMotorGeneralPreviewView(1007);
 	}
 
-	// Token: 0x06008ADB RID: 35547 RVA: 0x001DA718 File Offset: 0x001D8918
+	// Token: 0x06005E76 RID: 24182 RVA: 0x001E3574 File Offset: 0x001E1774
 	public bool IsRewardObtained()
 	{
 		MotorGeneralPreview? motorPreviewConfig = this.GetMotorPreviewConfig();
 		return motorPreviewConfig != null && motorPreviewConfig.Value.Frame > 0 && MotorcycleDiyModel.Instance.HasFrame(motorPreviewConfig.Value.Frame);
 	}
 
-	// Token: 0x06008ADC RID: 35548 RVA: 0x001DA762 File Offset: 0x001D8962
+	// Token: 0x06005E77 RID: 24183 RVA: 0x001E35BE File Offset: 0x001E17BE
 	protected override bool GetExDataFinishShowState()
 	{
 		return this.IsRewardObtained();
 	}
 
-	// Token: 0x06008ADD RID: 35549 RVA: 0x001DA76A File Offset: 0x001D896A
+	// Token: 0x06005E78 RID: 24184 RVA: 0x001E35C6 File Offset: 0x001E17C6
 	public override bool GetExDataRedPointShowState()
 	{
 		return false;
 	}
 
-	// Token: 0x04003DC5 RID: 15813
+	// Token: 0x04003E5D RID: 15965
 	private const int MotorGiftMotorPreviewId = 1007;
 }

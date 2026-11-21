@@ -7,29 +7,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E6C RID: 28268
+	// Token: 0x02005FED RID: 24557
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalCoreMatchAbility : PlayerElementalCoreFollowAbilityBase
 	{
-		// Token: 0x06044E27 RID: 282151 RVA: 0x011013A8 File Offset: 0x010FF5A8
+		// Token: 0x0603AFB7 RID: 241591 RVA: 0x010AB910 File Offset: 0x010A9B10
 		public PlayerElementalCoreMatchAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044E28 RID: 282152 RVA: 0x01101484 File Offset: 0x010FF684
+		// Token: 0x0603AFB8 RID: 241592 RVA: 0x010AB9EC File Offset: 0x010A9BEC
 		public override bool ShouldActivate(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>().ElementalCoreState == EPlayerElementalCoreState.Matching;
 		}
 
-		// Token: 0x06044E29 RID: 282153 RVA: 0x01101494 File Offset: 0x010FF694
+		// Token: 0x0603AFB9 RID: 241593 RVA: 0x010AB9FC File Offset: 0x010A9BFC
 		public override bool ShouldDeactivate(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>().ElementalCoreState != EPlayerElementalCoreState.Matching;
 		}
 
-		// Token: 0x06044E2A RID: 282154 RVA: 0x011014A8 File Offset: 0x010FF6A8
+		// Token: 0x0603AFBA RID: 241594 RVA: 0x010ABA10 File Offset: 0x010A9C10
 		public override void OnActivated(Entity entity)
 		{
 			PlayerElementalCasketComponent component = entity.GetComponent<PlayerElementalCasketComponent>();
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E2B RID: 282155 RVA: 0x01101624 File Offset: 0x010FF824
+		// Token: 0x0603AFBB RID: 241595 RVA: 0x010ABB8C File Offset: 0x010A9D8C
 		public override void OnDeactivated(Entity entity)
 		{
 			this.Timer = 0f;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.TempRotation.Reset();
 		}
 
-		// Token: 0x06044E2C RID: 282156 RVA: 0x011016A8 File Offset: 0x010FF8A8
+		// Token: 0x0603AFBC RID: 241596 RVA: 0x010ABC10 File Offset: 0x010A9E10
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			PlayerElementalCasketComponent component = entity.GetComponent<PlayerElementalCasketComponent>();
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			component.ElementalCoreState = EPlayerElementalCoreState.Matched;
 		}
 
-		// Token: 0x06044E2D RID: 282157 RVA: 0x011018E0 File Offset: 0x010FFAE0
+		// Token: 0x0603AFBD RID: 241597 RVA: 0x010ABE48 File Offset: 0x010AA048
 		private int GetMatchPerformTagId()
 		{
 			ElementalCoreData playerElementalCoreData = ElementalCasketModel.Instance.PlayerElementalCoreData;
@@ -198,40 +198,50 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x04023DC5 RID: 146885
+		// Token: 0x17006F6A RID: 28522
+		// (get) Token: 0x0603AFBE RID: 241598 RVA: 0x010ABEB1 File Offset: 0x010AA0B1
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F07A RID: 127098
 		private const float MAX_MOVE_DISTANCE = 800f;
 
-		// Token: 0x04023DC6 RID: 146886
+		// Token: 0x0401F07B RID: 127099
 		private float Timer;
 
-		// Token: 0x04023DC7 RID: 146887
+		// Token: 0x0401F07C RID: 127100
 		private float TotalDuration;
 
-		// Token: 0x04023DC8 RID: 146888
+		// Token: 0x0401F07D RID: 127101
 		private bool IsMoveFinish;
 
-		// Token: 0x04023DC9 RID: 146889
+		// Token: 0x0401F07E RID: 127102
 		private readonly Vector StartLocation = Vector.Create();
 
-		// Token: 0x04023DCA RID: 146890
+		// Token: 0x0401F07F RID: 127103
 		private readonly Quat StartQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04023DCB RID: 146891
+		// Token: 0x0401F080 RID: 127104
 		private readonly Vector TargetLocation = Vector.Create();
 
-		// Token: 0x04023DCC RID: 146892
+		// Token: 0x0401F081 RID: 127105
 		private readonly Rotator TargetRotation = Rotator.Create();
 
-		// Token: 0x04023DCD RID: 146893
+		// Token: 0x0401F082 RID: 127106
 		private readonly Quat TargetQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04023DCE RID: 146894
+		// Token: 0x0401F083 RID: 127107
 		private readonly Vector TempLocation = Vector.Create();
 
-		// Token: 0x04023DCF RID: 146895
+		// Token: 0x0401F084 RID: 127108
 		private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04023DD0 RID: 146896
+		// Token: 0x0401F085 RID: 127109
 		private readonly Rotator TempRotation = Rotator.Create();
 	}
 }

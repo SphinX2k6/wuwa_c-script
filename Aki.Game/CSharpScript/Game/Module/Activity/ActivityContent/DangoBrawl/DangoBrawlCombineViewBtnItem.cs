@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067EF RID: 26607
+	// Token: 0x0200573F RID: 22335
 	internal class DangoBrawlCombineViewBtnItem : UiPanelBase
 	{
-		// Token: 0x060424C2 RID: 271554 RVA: 0x01018884 File Offset: 0x01016A84
+		// Token: 0x06037017 RID: 225303 RVA: 0x00F59D14 File Offset: 0x00F57F14
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060424C3 RID: 271555 RVA: 0x0101896C File Offset: 0x01016B6C
+		// Token: 0x06037018 RID: 225304 RVA: 0x00F59DFC File Offset: 0x00F57FFC
 		public void SetLock(bool isLock)
 		{
 			UUIItem item = base.GetItem(2);
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item2.SetUIActive(!isLock);
 		}
 
-		// Token: 0x060424C4 RID: 271556 RVA: 0x01018996 File Offset: 0x01016B96
+		// Token: 0x06037019 RID: 225305 RVA: 0x00F59E26 File Offset: 0x00F58026
 		private void OnClickCombine()
 		{
 			Action onClickOperationCombine = this.OnClickOperationCombine;
@@ -62,20 +62,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickOperationCombine();
 		}
 
-		// Token: 0x04022969 RID: 141673
+		// Token: 0x0401D1C6 RID: 119238
 		[Nullable(2)]
 		public Action OnClickOperationCombine;
 
-		// Token: 0x0200C92F RID: 51503
+		// Token: 0x0200B2FC RID: 45820
 		private enum EBtnComponents
 		{
-			// Token: 0x0403CBD0 RID: 248784
+			// Token: 0x040374C0 RID: 226496
 			BtnItem,
-			// Token: 0x0403CBD1 RID: 248785
+			// Token: 0x040374C1 RID: 226497
 			PnlNormal,
-			// Token: 0x0403CBD2 RID: 248786
+			// Token: 0x040374C2 RID: 226498
 			PnlLock,
-			// Token: 0x0403CBD3 RID: 248787
+			// Token: 0x040374C3 RID: 226499
 			TxtBtnName
 		}
 	}

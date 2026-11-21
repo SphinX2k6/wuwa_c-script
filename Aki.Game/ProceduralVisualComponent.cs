@@ -7,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay;
 using UnrealEngine;
 
-// Token: 0x020032A1 RID: 12961
+// Token: 0x02002812 RID: 10258
 [NullableContext(2)]
 [Nullable(0)]
 public class ProceduralVisualComponent : EntityComponent
 {
-	// Token: 0x0601C0D9 RID: 114905 RVA: 0x007CC5C4 File Offset: 0x007CA7C4
+	// Token: 0x06019D0B RID: 105739 RVA: 0x007F3868 File Offset: 0x007F1A68
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		object param = args.GetP1<CreateEntityData>().GetParam<global::ProceduralVisualComponent>();
@@ -20,7 +20,7 @@ public class ProceduralVisualComponent : EntityComponent
 		return this.Config != null;
 	}
 
-	// Token: 0x0601C0DA RID: 114906 RVA: 0x007CC5F4 File Offset: 0x007CA7F4
+	// Token: 0x06019D0C RID: 105740 RVA: 0x007F3898 File Offset: 0x007F1A98
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -32,7 +32,7 @@ public class ProceduralVisualComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C0DB RID: 114907 RVA: 0x007CC628 File Offset: 0x007CA828
+	// Token: 0x06019D0D RID: 105741 RVA: 0x007F38CC File Offset: 0x007F1ACC
 	protected override void OnTick(float delta)
 	{
 		if (this.Config == null)
@@ -56,7 +56,7 @@ public class ProceduralVisualComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C0DC RID: 114908 RVA: 0x007CC6B0 File Offset: 0x007CA8B0
+	// Token: 0x06019D0E RID: 105742 RVA: 0x007F3954 File Offset: 0x007F1B54
 	[NullableContext(1)]
 	private void ApplyRotateMode(ELookAtRotateMode? rotateMode, Rotator fromRotation, Rotator targetRotation)
 	{
@@ -71,7 +71,7 @@ public class ProceduralVisualComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C0DD RID: 114909 RVA: 0x007CC6E0 File Offset: 0x007CA8E0
+	// Token: 0x06019D0F RID: 105743 RVA: 0x007F3984 File Offset: 0x007F1B84
 	private void OnTickLookAt(float delta, IProceduralVisualLookAt config)
 	{
 		if (this.ActorComp == null || config == null)
@@ -192,7 +192,7 @@ public class ProceduralVisualComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C0DE RID: 114910 RVA: 0x007CC9A8 File Offset: 0x007CABA8
+	// Token: 0x06019D10 RID: 105744 RVA: 0x007F3C4C File Offset: 0x007F1E4C
 	private void OnTickSearchlightRotate(float delta, ISearchlightRotate config)
 	{
 		if (this.ActorComp == null || config == null)
@@ -291,7 +291,7 @@ public class ProceduralVisualComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.OnEntitySelfDirectionUpdate);
 	}
 
-	// Token: 0x0601C0DF RID: 114911 RVA: 0x007CCC80 File Offset: 0x007CAE80
+	// Token: 0x06019D11 RID: 105745 RVA: 0x007F3F24 File Offset: 0x007F2124
 	private Number? FindSnapIndex([Nullable(new byte[]
 	{
 		2,
@@ -314,7 +314,7 @@ public class ProceduralVisualComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601C0E0 RID: 114912 RVA: 0x007CCD00 File Offset: 0x007CAF00
+	// Token: 0x06019D12 RID: 105746 RVA: 0x007F3FA4 File Offset: 0x007F21A4
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -323,45 +323,59 @@ public class ProceduralVisualComponent : EntityComponent
 			return false;
 		}
 		global::ProceduralVisualComponent proceduralVisualComponent = (global::ProceduralVisualComponent)componentTemplate;
-		if (base.CanResetComponentProperty("Config"))
+		if (proceduralVisualComponent.Config == null)
 		{
-			if (proceduralVisualComponent.Config == null)
-			{
-				this.Config = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Aki.TDConfigMgr.Component.ProceduralVisualComponent>(this.Config), "Config"))
-			{
-				return false;
-			}
+			this.Config = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 		{
-			if (proceduralVisualComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		return (!base.CanResetComponentProperty("DefaultLookAtDir") || proceduralVisualComponent.DefaultLookAtDir == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.DefaultLookAtDir), "DefaultLookAtDir")) && (!base.CanResetComponentProperty("SearchlightRuntimeMap") || proceduralVisualComponent.SearchlightRuntimeMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ISearchlightRotate, ISearchlightRuntime>>(this.SearchlightRuntimeMap), "SearchlightRuntimeMap"));
+		if (proceduralVisualComponent.ActorComp == null)
+		{
+			this.ActorComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+		{
+			return false;
+		}
+		return (proceduralVisualComponent.DefaultLookAtDir == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultLookAtDir), "DefaultLookAtDir")) && (proceduralVisualComponent.SearchlightRuntimeMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.SearchlightRuntimeMap), "SearchlightRuntimeMap"));
 	}
 
-	// Token: 0x0400DDB7 RID: 56759
+	// Token: 0x1700299F RID: 10655
+	// (get) Token: 0x06019D13 RID: 105747 RVA: 0x007F405E File Offset: 0x007F225E
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029A0 RID: 10656
+	// (get) Token: 0x06019D14 RID: 105748 RVA: 0x007F4061 File Offset: 0x007F2261
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E25E RID: 57950
 	private const float DEFAULT_ROTATION_LERP_SPEED = 0.1f;
 
-	// Token: 0x0400DDB8 RID: 56760
+	// Token: 0x0400E25F RID: 57951
 	private Aki.TDConfigMgr.Component.ProceduralVisualComponent Config;
 
-	// Token: 0x0400DDB9 RID: 56761
+	// Token: 0x0400E260 RID: 57952
 	private SceneItemActorComponent ActorComp;
 
-	// Token: 0x0400DDBA RID: 56762
+	// Token: 0x0400E261 RID: 57953
 	[Nullable(1)]
 	private readonly Vector DefaultLookAtDir = Vector.Create(1.0, 0.0, 0.0);
 
-	// Token: 0x0400DDBB RID: 56763
+	// Token: 0x0400E262 RID: 57954
 	[Nullable(1)]
 	private readonly Dictionary<ISearchlightRotate, ISearchlightRuntime> SearchlightRuntimeMap = new Dictionary<ISearchlightRotate, ISearchlightRuntime>();
 }

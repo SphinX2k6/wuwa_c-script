@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005882 RID: 22658
+	// Token: 0x02005E8F RID: 24207
 	public struct IRollBlockComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A972 RID: 43378
-		// (get) Token: 0x060262D0 RID: 156368 RVA: 0x00543532 File Offset: 0x00541732
+		// Token: 0x1700B2A2 RID: 45730
+		// (get) Token: 0x06028832 RID: 165938 RVA: 0x0058A07E File Offset: 0x0058827E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060262D1 RID: 156369 RVA: 0x0054353F File Offset: 0x0054173F
+		// Token: 0x06028833 RID: 165939 RVA: 0x0058A08B File Offset: 0x0058828B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060262D2 RID: 156370 RVA: 0x00543548 File Offset: 0x00541748
+		// Token: 0x06028834 RID: 165940 RVA: 0x0058A094 File Offset: 0x00588294
 		public static IRollBlockComponent GetRootAsIRollBlockComponent(ByteBuffer _bb)
 		{
 			return IRollBlockComponent.GetRootAsIRollBlockComponent(_bb, default(IRollBlockComponent));
 		}
 
-		// Token: 0x060262D3 RID: 156371 RVA: 0x00543564 File Offset: 0x00541764
+		// Token: 0x06028835 RID: 165941 RVA: 0x0058A0B0 File Offset: 0x005882B0
 		public static IRollBlockComponent GetRootAsIRollBlockComponent(ByteBuffer _bb, IRollBlockComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060262D4 RID: 156372 RVA: 0x00543581 File Offset: 0x00541781
+		// Token: 0x06028836 RID: 165942 RVA: 0x0058A0CD File Offset: 0x005882CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060262D5 RID: 156373 RVA: 0x00543590 File Offset: 0x00541790
+		// Token: 0x06028837 RID: 165943 RVA: 0x0058A0DC File Offset: 0x005882DC
 		public IRollBlockComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A973 RID: 43379
-		// (get) Token: 0x060262D6 RID: 156374 RVA: 0x005435A0 File Offset: 0x005417A0
+		// Token: 0x1700B2A3 RID: 45731
+		// (get) Token: 0x06028838 RID: 165944 RVA: 0x0058A0EC File Offset: 0x005882EC
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A974 RID: 43380
-		// (get) Token: 0x060262D7 RID: 156375 RVA: 0x005435E0 File Offset: 0x005417E0
+		// Token: 0x1700B2A4 RID: 45732
+		// (get) Token: 0x06028839 RID: 165945 RVA: 0x0058A12C File Offset: 0x0058832C
 		public byte NullMask
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060262D8 RID: 156376 RVA: 0x0054361C File Offset: 0x0054181C
+		// Token: 0x0602883A RID: 165946 RVA: 0x0058A168 File Offset: 0x00588368
 		public static Offset<IRollBlockComponent> CreateIRollBlockComponent(FlatBufferBuilder builder, bool Disabled = false, byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRollBlockComponent.EndIRollBlockComponent(builder);
 		}
 
-		// Token: 0x060262D9 RID: 156377 RVA: 0x00543639 File Offset: 0x00541839
+		// Token: 0x0602883B RID: 165947 RVA: 0x0058A185 File Offset: 0x00588385
 		public static void StartIRollBlockComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060262DA RID: 156378 RVA: 0x00543642 File Offset: 0x00541842
+		// Token: 0x0602883C RID: 165948 RVA: 0x0058A18E File Offset: 0x0058838E
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060262DB RID: 156379 RVA: 0x0054364D File Offset: 0x0054184D
+		// Token: 0x0602883D RID: 165949 RVA: 0x0058A199 File Offset: 0x00588399
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x060262DC RID: 156380 RVA: 0x00543658 File Offset: 0x00541858
+		// Token: 0x0602883E RID: 165950 RVA: 0x0058A1A4 File Offset: 0x005883A4
 		public static Offset<IRollBlockComponent> EndIRollBlockComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IRollBlockComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060262DD RID: 156381 RVA: 0x00543668 File Offset: 0x00541868
+		// Token: 0x0602883F RID: 165951 RVA: 0x0058A1B4 File Offset: 0x005883B4
 		public IRollBlockComponentT UnPack()
 		{
 			IRollBlockComponentT rollBlockComponentT = new IRollBlockComponentT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return rollBlockComponentT;
 		}
 
-		// Token: 0x060262DE RID: 156382 RVA: 0x00543683 File Offset: 0x00541883
+		// Token: 0x06028840 RID: 165952 RVA: 0x0058A1CF File Offset: 0x005883CF
 		public void UnPackTo(IRollBlockComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060262DF RID: 156383 RVA: 0x005436A0 File Offset: 0x005418A0
+		// Token: 0x06028841 RID: 165953 RVA: 0x0058A1EC File Offset: 0x005883EC
 		public static Offset<IRollBlockComponent> Pack(FlatBufferBuilder builder, IRollBlockComponentT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRollBlockComponent.CreateIRollBlockComponent(builder, _o.Disabled, _o.NullMask);
 		}
 
-		// Token: 0x0400EDCD RID: 60877
+		// Token: 0x0400FAC0 RID: 64192
 		private Table __p;
 	}
 }

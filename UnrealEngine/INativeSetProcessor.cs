@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200006B RID: 107
+	// Token: 0x02000050 RID: 80
 	[NullableContext(1)]
 	public interface INativeSetProcessor<[Nullable(2)] T>
 	{
-		// Token: 0x06000DAD RID: 3501
+		// Token: 0x0600093B RID: 2363
 		[NullableContext(2)]
 		T Get(IntPtr data, int index);
 
-		// Token: 0x06000DAE RID: 3502
+		// Token: 0x0600093C RID: 2364
 		void Set(IntPtr data, int index, T value);
 
-		// Token: 0x06000DAF RID: 3503
+		// Token: 0x0600093D RID: 2365
 		int Add(T value);
 
-		// Token: 0x06000DB0 RID: 3504
+		// Token: 0x0600093E RID: 2366
 		public static extern void AllocNativeMemory();
 
-		// Token: 0x06000DB1 RID: 3505
+		// Token: 0x0600093F RID: 2367
 		public static extern void CopyNativeMemory(IntPtr Src);
 	}
 }

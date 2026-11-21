@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002290 RID: 8848
+	// Token: 0x020024FD RID: 9469
 	public class EActorFxEmoteTypeJsonConverter : JsonConverter<EActorFxEmoteType>
 	{
-		// Token: 0x0600C208 RID: 49672 RVA: 0x001C5428 File Offset: 0x001C3628
+		// Token: 0x0600CDCE RID: 52686 RVA: 0x001DD11C File Offset: 0x001DB31C
 		public override EActorFxEmoteType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EActorFxEmoteTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C209 RID: 49673 RVA: 0x001C544C File Offset: 0x001C364C
+		// Token: 0x0600CDCF RID: 52687 RVA: 0x001DD140 File Offset: 0x001DB340
 		public override void Write(Utf8JsonWriter writer, EActorFxEmoteType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

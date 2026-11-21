@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x020014E3 RID: 5347
+// Token: 0x0200099B RID: 2459
 public enum ECellSequenceType
 {
-	// Token: 0x040042FA RID: 17146
+	// Token: 0x0400439F RID: 17311
 	Center,
-	// Token: 0x040042FB RID: 17147
+	// Token: 0x040043A0 RID: 17312
 	Left,
-	// Token: 0x040042FC RID: 17148
+	// Token: 0x040043A1 RID: 17313
 	Right,
-	// Token: 0x040042FD RID: 17149
+	// Token: 0x040043A2 RID: 17314
 	Top,
-	// Token: 0x040042FE RID: 17150
+	// Token: 0x040043A3 RID: 17315
 	Bottom,
-	// Token: 0x040042FF RID: 17151
+	// Token: 0x040043A4 RID: 17316
 	Last,
-	// Token: 0x04004300 RID: 17152
+	// Token: 0x040043A5 RID: 17317
 	Warning,
-	// Token: 0x04004301 RID: 17153
+	// Token: 0x040043A6 RID: 17318
 	Reveal
 }

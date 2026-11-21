@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C6B RID: 19563
+	// Token: 0x02003C1C RID: 15388
 	public class SheriffMainCluePagePoint : GridProxyAbstract<bool>
 	{
-		// Token: 0x06032926 RID: 207142 RVA: 0x00BC9710 File Offset: 0x00BC7910
+		// Token: 0x060276D9 RID: 161497 RVA: 0x00B0E374 File Offset: 0x00B0C574
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,20 +23,20 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032927 RID: 207143 RVA: 0x00BC9779 File Offset: 0x00BC7979
+		// Token: 0x060276DA RID: 161498 RVA: 0x00B0E3DD File Offset: 0x00B0C5DD
 		public override void Refresh(bool data, bool isSelected, int gridIndex)
 		{
 			base.GetSprite(1).SetUIActive(data);
 			base.GetSprite(0).SetUIActive(!data);
 		}
 
-		// Token: 0x0200AE1E RID: 44574
+		// Token: 0x0200983C RID: 38972
 		private static class EPagePoint
 		{
-			// Token: 0x04034E1C RID: 216604
+			// Token: 0x0402F7C1 RID: 194497
 			public const int SpriteBg = 0;
 
-			// Token: 0x04034E1D RID: 216605
+			// Token: 0x0402F7C2 RID: 194498
 			public const int SpriteSelect = 1;
 		}
 	}

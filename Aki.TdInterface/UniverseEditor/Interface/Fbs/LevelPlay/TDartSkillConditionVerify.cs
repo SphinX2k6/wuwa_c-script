@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004601 RID: 17921
+	// Token: 0x02004A69 RID: 19049
 	public static class TDartSkillConditionVerify
 	{
-		// Token: 0x0601B266 RID: 111206 RVA: 0x003DE4BC File Offset: 0x003DC6BC
+		// Token: 0x0601CA3B RID: 117307 RVA: 0x0040A758 File Offset: 0x00408958
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

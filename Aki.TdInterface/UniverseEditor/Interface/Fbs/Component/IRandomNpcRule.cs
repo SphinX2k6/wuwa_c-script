@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057ED RID: 22509
+	// Token: 0x02005DF4 RID: 24052
 	public struct IRandomNpcRule : IFlatbufferObject
 	{
-		// Token: 0x1700A81E RID: 43038
-		// (get) Token: 0x06025D30 RID: 154928 RVA: 0x005376C8 File Offset: 0x005358C8
+		// Token: 0x1700B142 RID: 45378
+		// (get) Token: 0x06028250 RID: 164432 RVA: 0x0057D854 File Offset: 0x0057BA54
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025D31 RID: 154929 RVA: 0x005376D5 File Offset: 0x005358D5
+		// Token: 0x06028251 RID: 164433 RVA: 0x0057D861 File Offset: 0x0057BA61
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025D32 RID: 154930 RVA: 0x005376DC File Offset: 0x005358DC
+		// Token: 0x06028252 RID: 164434 RVA: 0x0057D868 File Offset: 0x0057BA68
 		public static IRandomNpcRule GetRootAsIRandomNpcRule(ByteBuffer _bb)
 		{
 			return IRandomNpcRule.GetRootAsIRandomNpcRule(_bb, default(IRandomNpcRule));
 		}
 
-		// Token: 0x06025D33 RID: 154931 RVA: 0x005376F8 File Offset: 0x005358F8
+		// Token: 0x06028253 RID: 164435 RVA: 0x0057D884 File Offset: 0x0057BA84
 		public static IRandomNpcRule GetRootAsIRandomNpcRule(ByteBuffer _bb, IRandomNpcRule obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025D34 RID: 154932 RVA: 0x00537715 File Offset: 0x00535915
+		// Token: 0x06028254 RID: 164436 RVA: 0x0057D8A1 File Offset: 0x0057BAA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025D35 RID: 154933 RVA: 0x00537724 File Offset: 0x00535924
+		// Token: 0x06028255 RID: 164437 RVA: 0x0057D8B0 File Offset: 0x0057BAB0
 		public IRandomNpcRule __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A81F RID: 43039
-		// (get) Token: 0x06025D36 RID: 154934 RVA: 0x00537734 File Offset: 0x00535934
+		// Token: 0x1700B143 RID: 45379
+		// (get) Token: 0x06028256 RID: 164438 RVA: 0x0057D8C0 File Offset: 0x0057BAC0
 		public ERefreshRule Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025D37 RID: 154935 RVA: 0x00537770 File Offset: 0x00535970
+		// Token: 0x06028257 RID: 164439 RVA: 0x0057D8FC File Offset: 0x0057BAFC
 		public IFixedDateTime? DateTimeList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IFixedDateTime?(default(IFixedDateTime).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A820 RID: 43040
-		// (get) Token: 0x06025D38 RID: 154936 RVA: 0x005377D0 File Offset: 0x005359D0
+		// Token: 0x1700B144 RID: 45380
+		// (get) Token: 0x06028258 RID: 164440 RVA: 0x0057D95C File Offset: 0x0057BB5C
 		public int DateTimeListLength
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A821 RID: 43041
-		// (get) Token: 0x06025D39 RID: 154937 RVA: 0x005377FC File Offset: 0x005359FC
+		// Token: 0x1700B145 RID: 45381
+		// (get) Token: 0x06028259 RID: 164441 RVA: 0x0057D988 File Offset: 0x0057BB88
 		public IProbabilityRefreshGroup? ProbabilityRefreshGroup
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025D3A RID: 154938 RVA: 0x00537859 File Offset: 0x00535A59
+		// Token: 0x0602825A RID: 164442 RVA: 0x0057D9E5 File Offset: 0x0057BBE5
 		public static Offset<IRandomNpcRule> CreateIRandomNpcRule(FlatBufferBuilder builder, ERefreshRule Type = ERefreshRule.CD, VectorOffset DateTimeListOffset = default(VectorOffset), Offset<IProbabilityRefreshGroup> ProbabilityRefreshGroupOffset = default(Offset<IProbabilityRefreshGroup>))
 		{
 			builder.StartTable(3);
@@ -114,25 +114,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRandomNpcRule.EndIRandomNpcRule(builder);
 		}
 
-		// Token: 0x06025D3B RID: 154939 RVA: 0x0053787D File Offset: 0x00535A7D
+		// Token: 0x0602825B RID: 164443 RVA: 0x0057DA09 File Offset: 0x0057BC09
 		public static void StartIRandomNpcRule(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06025D3C RID: 154940 RVA: 0x00537886 File Offset: 0x00535A86
+		// Token: 0x0602825C RID: 164444 RVA: 0x0057DA12 File Offset: 0x0057BC12
 		public static void AddType(FlatBufferBuilder builder, ERefreshRule type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025D3D RID: 154941 RVA: 0x00537891 File Offset: 0x00535A91
+		// Token: 0x0602825D RID: 164445 RVA: 0x0057DA1D File Offset: 0x0057BC1D
 		public static void AddDateTimeList(FlatBufferBuilder builder, VectorOffset dateTimeListOffset)
 		{
 			builder.AddOffset(1, dateTimeListOffset.Value, 0);
 		}
 
-		// Token: 0x06025D3E RID: 154942 RVA: 0x005378A4 File Offset: 0x00535AA4
+		// Token: 0x0602825E RID: 164446 RVA: 0x0057DA30 File Offset: 0x0057BC30
 		public static VectorOffset CreateDateTimeListVector(FlatBufferBuilder builder, Offset<IFixedDateTime>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025D3F RID: 154943 RVA: 0x005378E4 File Offset: 0x00535AE4
+		// Token: 0x0602825F RID: 164447 RVA: 0x0057DA70 File Offset: 0x0057BC70
 		public static VectorOffset CreateDateTimeListVectorBlock(FlatBufferBuilder builder, Offset<IFixedDateTime>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -151,7 +151,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025D40 RID: 154944 RVA: 0x005378FE File Offset: 0x00535AFE
+		// Token: 0x06028260 RID: 164448 RVA: 0x0057DA8A File Offset: 0x0057BC8A
 		public static VectorOffset CreateDateTimeListVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IFixedDateTime>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025D41 RID: 154945 RVA: 0x0053791C File Offset: 0x00535B1C
+		// Token: 0x06028261 RID: 164449 RVA: 0x0057DAA8 File Offset: 0x0057BCA8
 		public static VectorOffset CreateDateTimeListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -167,25 +167,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025D42 RID: 154946 RVA: 0x00537935 File Offset: 0x00535B35
+		// Token: 0x06028262 RID: 164450 RVA: 0x0057DAC1 File Offset: 0x0057BCC1
 		public static void StartDateTimeListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06025D43 RID: 154947 RVA: 0x00537940 File Offset: 0x00535B40
+		// Token: 0x06028263 RID: 164451 RVA: 0x0057DACC File Offset: 0x0057BCCC
 		public static void AddProbabilityRefreshGroup(FlatBufferBuilder builder, Offset<IProbabilityRefreshGroup> probabilityRefreshGroupOffset)
 		{
 			builder.AddOffset(2, probabilityRefreshGroupOffset.Value, 0);
 		}
 
-		// Token: 0x06025D44 RID: 154948 RVA: 0x00537950 File Offset: 0x00535B50
+		// Token: 0x06028264 RID: 164452 RVA: 0x0057DADC File Offset: 0x0057BCDC
 		public static Offset<IRandomNpcRule> EndIRandomNpcRule(FlatBufferBuilder builder)
 		{
 			return new Offset<IRandomNpcRule>(builder.EndTable());
 		}
 
-		// Token: 0x06025D45 RID: 154949 RVA: 0x00537960 File Offset: 0x00535B60
+		// Token: 0x06028265 RID: 164453 RVA: 0x0057DAEC File Offset: 0x0057BCEC
 		public IRandomNpcRuleT UnPack()
 		{
 			IRandomNpcRuleT randomNpcRuleT = new IRandomNpcRuleT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return randomNpcRuleT;
 		}
 
-		// Token: 0x06025D46 RID: 154950 RVA: 0x0053797C File Offset: 0x00535B7C
+		// Token: 0x06028266 RID: 164454 RVA: 0x0057DB08 File Offset: 0x0057BD08
 		public void UnPackTo(IRandomNpcRuleT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.ProbabilityRefreshGroup = ((this.ProbabilityRefreshGroup != null) ? this.ProbabilityRefreshGroup.Value.UnPack() : null);
 		}
 
-		// Token: 0x06025D47 RID: 154951 RVA: 0x00537A18 File Offset: 0x00535C18
+		// Token: 0x06028267 RID: 164455 RVA: 0x0057DBA4 File Offset: 0x0057BDA4
 		public static Offset<IRandomNpcRule> Pack(FlatBufferBuilder builder, IRandomNpcRuleT _o)
 		{
 			if (_o == null)
@@ -226,7 +226,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRandomNpcRule.CreateIRandomNpcRule(builder, _o.Type, dateTimeListOffset, probabilityRefreshGroupOffset);
 		}
 
-		// Token: 0x0400ECDF RID: 60639
+		// Token: 0x0400F9CA RID: 63946
 		private Table __p;
 	}
 }

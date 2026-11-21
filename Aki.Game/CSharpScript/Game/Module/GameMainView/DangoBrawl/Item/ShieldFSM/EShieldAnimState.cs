@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 {
-	// Token: 0x02005A14 RID: 23060
+	// Token: 0x020049F0 RID: 18928
 	public enum EShieldAnimState
 	{
-		// Token: 0x0401E77F RID: 124799
+		// Token: 0x04019226 RID: 102950
 		Idle,
-		// Token: 0x0401E780 RID: 124800
+		// Token: 0x04019227 RID: 102951
 		Start,
-		// Token: 0x0401E781 RID: 124801
+		// Token: 0x04019228 RID: 102952
 		Up,
-		// Token: 0x0401E782 RID: 124802
+		// Token: 0x04019229 RID: 102953
 		Down,
-		// Token: 0x0401E783 RID: 124803
+		// Token: 0x0401922A RID: 102954
 		Close
 	}
 }

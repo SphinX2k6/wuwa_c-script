@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FDE RID: 20446
+	// Token: 0x0200553D RID: 21821
 	public static class IComponentBase_UnionVerify
 	{
-		// Token: 0x06020AB0 RID: 133808 RVA: 0x0048A08C File Offset: 0x0048828C
+		// Token: 0x060229D0 RID: 141776 RVA: 0x004C3ABC File Offset: 0x004C1CBC
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -611,6 +611,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				break;
 			case 200:
 				result = INoiseRemovalComponentVerify.Verify(verifier, tablePos);
+				break;
+			case 201:
+				result = IFrequencyPaintComponentVerify.Verify(verifier, tablePos);
+				break;
+			case 202:
+				result = ITurntableConnectorComponentVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

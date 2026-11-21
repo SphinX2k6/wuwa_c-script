@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020022C7 RID: 8903
+// Token: 0x020017AB RID: 6059
 public class MusicUiData : IMusicUiData
 {
-	// Token: 0x17001642 RID: 5698
-	// (get) Token: 0x060117BD RID: 71613 RVA: 0x00449B54 File Offset: 0x00447D54
-	// (set) Token: 0x060117BE RID: 71614 RVA: 0x00449B5C File Offset: 0x00447D5C
+	// Token: 0x17001679 RID: 5753
+	// (get) Token: 0x0600EC54 RID: 60500 RVA: 0x0045687C File Offset: 0x00454A7C
+	// (set) Token: 0x0600EC55 RID: 60501 RVA: 0x00456884 File Offset: 0x00454A84
 	public int Id { get; set; }
 
-	// Token: 0x17001643 RID: 5699
-	// (get) Token: 0x060117BF RID: 71615 RVA: 0x00449B65 File Offset: 0x00447D65
-	// (set) Token: 0x060117C0 RID: 71616 RVA: 0x00449B6D File Offset: 0x00447D6D
+	// Token: 0x1700167A RID: 5754
+	// (get) Token: 0x0600EC56 RID: 60502 RVA: 0x0045688D File Offset: 0x00454A8D
+	// (set) Token: 0x0600EC57 RID: 60503 RVA: 0x00456895 File Offset: 0x00454A95
 	public bool? IsFavorite { get; set; }
 }

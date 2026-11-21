@@ -8,25 +8,24 @@ namespace Aki.TDConfigMgr.Component
 	// Token: 0x0200005D RID: 93
 	public class DynamicEntityRewardComponent_SetValue
 	{
-		// Token: 0x040001F2 RID: 498
+		// Token: 0x040001F7 RID: 503
 		public bool? Disabled;
 
-		// Token: 0x040001F3 RID: 499
+		// Token: 0x040001F8 RID: 504
 		public bool? EdIsLocked;
 
-		// Token: 0x040001F4 RID: 500
-		[Nullable(1)]
+		// Token: 0x040001F9 RID: 505
 		public IDynamicTrafficReward RewardType;
 
-		// Token: 0x040001F5 RID: 501
+		// Token: 0x040001FA RID: 506
 		[Nullable(2)]
 		public List<EClaimDynamicEntityRewardType> ClaimTypes;
 
-		// Token: 0x040001F6 RID: 502
+		// Token: 0x040001FB RID: 507
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> RewardActions;
 	}

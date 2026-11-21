@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x02003A00 RID: 14848
+	// Token: 0x02003057 RID: 12375
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 界面生命周期改变 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F1B0 RID: 127408 RVA: 0x008AAC8C File Offset: 0x008A8E8C
+		// Token: 0x0601D611 RID: 120337 RVA: 0x008F32EC File Offset: 0x008F14EC
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 界面生命周期改变.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F1B1 RID: 127409 RVA: 0x008AAC98 File Offset: 0x008A8E98
+		// Token: 0x0601D612 RID: 120338 RVA: 0x008F32F8 File Offset: 0x008F14F8
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__界面生命周期改变__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,31 +28,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__界面生命周期改变__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F1B2 RID: 127410 RVA: 0x008AACBB File Offset: 0x008A8EBB
+		// Token: 0x0601D613 RID: 120339 RVA: 0x008F331B File Offset: 0x008F151B
 		public 界面生命周期改变()
 		{
 		}
 
-		// Token: 0x0601F1B3 RID: 127411 RVA: 0x008AACC3 File Offset: 0x008A8EC3
+		// Token: 0x0601D614 RID: 120340 RVA: 0x008F3323 File Offset: 0x008F1523
 		[NullableContext(2)]
 		public 界面生命周期改变(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F1B4 RID: 127412 RVA: 0x008AACCD File Offset: 0x008A8ECD
+		// Token: 0x0601D615 RID: 120341 RVA: 0x008F332D File Offset: 0x008F152D
 		public 界面生命周期改变(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F1B5 RID: 127413 RVA: 0x008AACD8 File Offset: 0x008A8ED8
+		// Token: 0x0601D616 RID: 120342 RVA: 0x008F3338 File Offset: 0x008F1538
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<byte, UObject>) ?? ((Action<byte, UObject>)Delegate.CreateDelegate(typeof(Action<byte, UObject>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F1B6 RID: 127414 RVA: 0x008AAD0A File Offset: 0x008A8F0A
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D617 RID: 120343 RVA: 0x008F336A File Offset: 0x008F156A
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 界面生命周期改变.RegisterId);
 		}
 
-		// Token: 0x0601F1B7 RID: 127415 RVA: 0x008AAD44 File Offset: 0x008A8F44
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D618 RID: 120344 RVA: 0x008F33A4 File Offset: 0x008F15A4
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -82,10 +80,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F1B8 RID: 127416 RVA: 0x008AAD50 File Offset: 0x008A8F50
+		// Token: 0x0601D619 RID: 120345 RVA: 0x008F33B0 File Offset: 0x008F15B0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(byte 生命周期类型, UObject 界面实例)
 		{
 			界面生命周期改变.__界面生命周期改变_DelegateParams* ptr = stackalloc 界面生命周期改变.__界面生命周期改变_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(界面生命周期改变.__界面生命周期改变_DelegateParams) & -16L;
@@ -95,10 +92,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F1B9 RID: 127417 RVA: 0x008AADA4 File Offset: 0x008A8FA4
+		// Token: 0x0601D61A RID: 120346 RVA: 0x008F3404 File Offset: 0x008F1604
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<byte, UObject> action = target as Action<byte, UObject>;
@@ -110,32 +106,32 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(((界面生命周期改变.__界面生命周期改变_DelegateParams*)__Parameters)->生命周期类型, orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400EE42 RID: 60994
+		// Token: 0x0400F76A RID: 63338
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:界面生命周期改变__DelegateSignature";
 
-		// Token: 0x0400EE43 RID: 60995
+		// Token: 0x0400F76B RID: 63339
 		private static int RegisterId;
 
-		// Token: 0x02009A0B RID: 39435
+		// Token: 0x02008CBF RID: 36031
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __界面生命周期改变_DelegateParams
+		private ref struct __界面生命周期改变_DelegateParams
 		{
-			// Token: 0x04030EEB RID: 200427
+			// Token: 0x0402C7CB RID: 182219
 			[FieldOffset(0)]
 			public byte 生命周期类型;
 
-			// Token: 0x04030EEC RID: 200428
+			// Token: 0x0402C7CC RID: 182220
 			[FieldOffset(8)]
 			public IntPtr 界面实例;
 		}
 
-		// Token: 0x02009A0C RID: 39436
+		// Token: 0x02008CC0 RID: 36032
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EED RID: 200429
+			// Token: 0x0402C7CD RID: 182221
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

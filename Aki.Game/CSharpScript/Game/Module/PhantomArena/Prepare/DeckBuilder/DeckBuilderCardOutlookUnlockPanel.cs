@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005193 RID: 20883
+	// Token: 0x02004163 RID: 16739
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DeckBuilderCardOutlookUnlockPanel : UiPanelBase, IDeckBuilderCardInfoViewPanelSequencePlayer
 	{
-		// Token: 0x0603567E RID: 218750 RVA: 0x00CA60B8 File Offset: 0x00CA42B8
+		// Token: 0x0602A579 RID: 173433 RVA: 0x00BF366C File Offset: 0x00BF186C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x0603567F RID: 218751 RVA: 0x00CA6114 File Offset: 0x00CA4314
+		// Token: 0x0602A57A RID: 173434 RVA: 0x00BF36C8 File Offset: 0x00BF18C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DeckBuilderCardOutlookUnlockPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035680 RID: 218752 RVA: 0x00CA6157 File Offset: 0x00CA4357
+		// Token: 0x0602A57B RID: 173435 RVA: 0x00BF370B File Offset: 0x00BF190B
 		[NullableContext(1)]
 		public void Refresh(IDeckBuilderCardOutlookUnlockPanelData data)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.RefreshOutlookUnlockedState();
 		}
 
-		// Token: 0x06035681 RID: 218753 RVA: 0x00CA6178 File Offset: 0x00CA4378
+		// Token: 0x0602A57C RID: 173436 RVA: 0x00BF372C File Offset: 0x00BF192C
 		public void RefreshOutlookUnlockedState()
 		{
 			bool flag = PhantomArenaModel.Instance.IsCardOutlookUnlock(this.Data.CardId);
@@ -77,47 +77,47 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035682 RID: 218754 RVA: 0x00CA62DA File Offset: 0x00CA44DA
+		// Token: 0x0602A57D RID: 173437 RVA: 0x00BF388E File Offset: 0x00BF1A8E
 		private void OnUnlockBtnClick(int _)
 		{
 			PhantomArenaController.Instance.CardOutLookUpRequest(this.Data.CardId, null);
 		}
 
-		// Token: 0x06035683 RID: 218755 RVA: 0x00CA62F4 File Offset: 0x00CA44F4
+		// Token: 0x0602A57E RID: 173438 RVA: 0x00BF38A8 File Offset: 0x00BF1AA8
 		public void PlaySwitchSequence()
 		{
 			this.SequencePlayer.PlayOrReplaySequenceByName("Switch", false, null);
 		}
 
-		// Token: 0x06035684 RID: 218756 RVA: 0x00CA631C File Offset: 0x00CA451C
+		// Token: 0x0602A57F RID: 173439 RVA: 0x00BF38D0 File Offset: 0x00BF1AD0
 		public void PlayShowSequence()
 		{
 			this.SequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
 		}
 
-		// Token: 0x0401C61A RID: 116250
+		// Token: 0x0401704F RID: 94287
 		private IDeckBuilderCardOutlookUnlockPanelData Data;
 
-		// Token: 0x0401C61B RID: 116251
+		// Token: 0x04017050 RID: 94288
 		private CardOutlookPreviewItem CardItem;
 
-		// Token: 0x0401C61C RID: 116252
+		// Token: 0x04017051 RID: 94289
 		private ButtonItem UnlockBtnItem;
 
-		// Token: 0x0401C61D RID: 116253
+		// Token: 0x04017052 RID: 94290
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200B304 RID: 45828
+		// Token: 0x02009D3D RID: 40253
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403640F RID: 222223
+			// Token: 0x04030E64 RID: 200292
 			public const int CardItem = 0;
 
-			// Token: 0x04036410 RID: 222224
+			// Token: 0x04030E65 RID: 200293
 			public const int UnlockTipText = 1;
 
-			// Token: 0x04036411 RID: 222225
+			// Token: 0x04030E66 RID: 200294
 			public const int UnlockBtnItem = 2;
 		}
 	}

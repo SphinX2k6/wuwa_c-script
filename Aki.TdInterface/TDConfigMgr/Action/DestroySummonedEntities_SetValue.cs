@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200156A RID: 5482
+	// Token: 0x020016C8 RID: 5832
 	public class DestroySummonedEntities_SetValue
 	{
-		// Token: 0x04004742 RID: 18242
-		[Nullable(1)]
+		// Token: 0x04004AE2 RID: 19170
 		public IDestroySummonedVehicle DestroyEntitiesConfig;
 	}
 }

@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A67 RID: 2663
+	// Token: 0x02000B31 RID: 2865
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IStateRotationConfig
 	{
-		// Token: 0x06003D5E RID: 15710 RVA: 0x0009D90F File Offset: 0x0009BB0F
-		[NullableContext(1)]
+		// Token: 0x06004186 RID: 16774 RVA: 0x000A6E4C File Offset: 0x000A504C
+		[NullableContext(0)]
 		public static IStateRotationConfig Create(IStateRotationConfig? instance)
 		{
 			if (instance == null)
@@ -24,20 +24,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E4D RID: 3661
-		// (get) Token: 0x06003D5F RID: 15711 RVA: 0x0009D92E File Offset: 0x0009BB2E
-		[Nullable(1)]
+		// Token: 0x17000F1F RID: 3871
+		// (get) Token: 0x06004187 RID: 16775 RVA: 0x000A6E6B File Offset: 0x000A506B
+		[Nullable(0)]
 		public virtual string State
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.State;
 			}
 		}
 
-		// Token: 0x17000E4E RID: 3662
-		// (get) Token: 0x06003D60 RID: 15712 RVA: 0x0009D93B File Offset: 0x0009BB3B
+		// Token: 0x17000F20 RID: 3872
+		// (get) Token: 0x06004188 RID: 16776 RVA: 0x000A6E78 File Offset: 0x000A5078
 		public virtual bool IsLoop
 		{
 			get
@@ -46,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E4F RID: 3663
-		// (get) Token: 0x06003D61 RID: 15713 RVA: 0x0009D948 File Offset: 0x0009BB48
+		// Token: 0x17000F21 RID: 3873
+		// (get) Token: 0x06004189 RID: 16777 RVA: 0x000A6E85 File Offset: 0x000A5085
 		public virtual IStartRotationConfig StartRotationConfig
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E50 RID: 3664
-		// (get) Token: 0x06003D62 RID: 15714 RVA: 0x0009D97C File Offset: 0x0009BB7C
+		// Token: 0x17000F22 RID: 3874
+		// (get) Token: 0x0600418A RID: 16778 RVA: 0x000A6EB9 File Offset: 0x000A50B9
 		public virtual string RotatePoint
 		{
 			get
@@ -72,19 +72,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E51 RID: 3665
-		// (get) Token: 0x06003D63 RID: 15715 RVA: 0x0009D98C File Offset: 0x0009BB8C
+		// Token: 0x17000F23 RID: 3875
+		// (get) Token: 0x0600418B RID: 16779 RVA: 0x000A6EC8 File Offset: 0x000A50C8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IRotationConfig> RotationConfig
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -107,19 +107,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E52 RID: 3666
-		// (get) Token: 0x06003D64 RID: 15716 RVA: 0x0009DA08 File Offset: 0x0009BC08
+		// Token: 0x17000F24 RID: 3876
+		// (get) Token: 0x0600418C RID: 16780 RVA: 0x000A6F44 File Offset: 0x000A5144
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IKeyRotatorConfig> KeyRotatorConfig
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -142,13 +142,48 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E53 RID: 3667
-		// (get) Token: 0x06003D65 RID: 15717 RVA: 0x0009DA84 File Offset: 0x0009BC84
+		// Token: 0x17000F25 RID: 3877
+		// (get) Token: 0x0600418D RID: 16781 RVA: 0x000A6FC0 File Offset: 0x000A51C0
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		public virtual List<IAxisAngleMethodConfig> AxisAngleMethodConfig
+		{
+			[return: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			get
+			{
+				if (this._AxisAngleMethodConfigInited)
+				{
+					return this._AxisAngleMethodConfigCache;
+				}
+				this._AxisAngleMethodConfigInited = true;
+				if ((this.Instance.NullMask & 4) == 0)
+				{
+					return null;
+				}
+				int axisAngleMethodConfigLength = this.Instance.AxisAngleMethodConfigLength;
+				this._AxisAngleMethodConfigCache = new List<IAxisAngleMethodConfig>(axisAngleMethodConfigLength);
+				for (int i = 0; i < axisAngleMethodConfigLength; i++)
+				{
+					this._AxisAngleMethodConfigCache.Add(IAxisAngleMethodConfig.Create(this.Instance.AxisAngleMethodConfig(i)));
+				}
+				return this._AxisAngleMethodConfigCache;
+			}
+		}
+
+		// Token: 0x17000F26 RID: 3878
+		// (get) Token: 0x0600418E RID: 16782 RVA: 0x000A703C File Offset: 0x000A523C
 		public virtual bool? KeepLastRotation
 		{
 			get
 			{
-				if ((this.Instance.NullMask & 4) == 0)
+				if ((this.Instance.NullMask & 8) == 0)
 				{
 					return null;
 				}
@@ -156,35 +191,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400222E RID: 8750
+		// Token: 0x04002448 RID: 9288
 		private IStateRotationConfig Instance;
 
-		// Token: 0x0400222F RID: 8751
+		// Token: 0x04002449 RID: 9289
 		private IStartRotationConfig _StartRotationConfigCache;
 
-		// Token: 0x04002230 RID: 8752
+		// Token: 0x0400244A RID: 9290
 		private bool _StartRotationConfigInited;
 
-		// Token: 0x04002231 RID: 8753
+		// Token: 0x0400244B RID: 9291
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IRotationConfig> _RotationConfigCache;
 
-		// Token: 0x04002232 RID: 8754
+		// Token: 0x0400244C RID: 9292
 		private bool _RotationConfigInited;
 
-		// Token: 0x04002233 RID: 8755
+		// Token: 0x0400244D RID: 9293
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IKeyRotatorConfig> _KeyRotatorConfigCache;
 
-		// Token: 0x04002234 RID: 8756
+		// Token: 0x0400244E RID: 9294
 		private bool _KeyRotatorConfigInited;
+
+		// Token: 0x0400244F RID: 9295
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		private List<IAxisAngleMethodConfig> _AxisAngleMethodConfigCache;
+
+		// Token: 0x04002450 RID: 9296
+		private bool _AxisAngleMethodConfigInited;
 	}
 }

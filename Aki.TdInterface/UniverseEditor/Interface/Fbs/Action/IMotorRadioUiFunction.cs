@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B2D RID: 27437
+	// Token: 0x02007273 RID: 29299
 	public struct IMotorRadioUiFunction : IFlatbufferObject
 	{
-		// Token: 0x1700CBE4 RID: 52196
-		// (get) Token: 0x0603027D RID: 197245 RVA: 0x0068B96C File Offset: 0x00689B6C
+		// Token: 0x1700D6C9 RID: 54985
+		// (get) Token: 0x060330D2 RID: 209106 RVA: 0x006E3E70 File Offset: 0x006E2070
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603027E RID: 197246 RVA: 0x0068B979 File Offset: 0x00689B79
+		// Token: 0x060330D3 RID: 209107 RVA: 0x006E3E7D File Offset: 0x006E207D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603027F RID: 197247 RVA: 0x0068B980 File Offset: 0x00689B80
+		// Token: 0x060330D4 RID: 209108 RVA: 0x006E3E84 File Offset: 0x006E2084
 		public static IMotorRadioUiFunction GetRootAsIMotorRadioUiFunction(ByteBuffer _bb)
 		{
 			return IMotorRadioUiFunction.GetRootAsIMotorRadioUiFunction(_bb, default(IMotorRadioUiFunction));
 		}
 
-		// Token: 0x06030280 RID: 197248 RVA: 0x0068B99C File Offset: 0x00689B9C
+		// Token: 0x060330D5 RID: 209109 RVA: 0x006E3EA0 File Offset: 0x006E20A0
 		public static IMotorRadioUiFunction GetRootAsIMotorRadioUiFunction(ByteBuffer _bb, IMotorRadioUiFunction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030281 RID: 197249 RVA: 0x0068B9B9 File Offset: 0x00689BB9
+		// Token: 0x060330D6 RID: 209110 RVA: 0x006E3EBD File Offset: 0x006E20BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030282 RID: 197250 RVA: 0x0068B9C8 File Offset: 0x00689BC8
+		// Token: 0x060330D7 RID: 209111 RVA: 0x006E3ECC File Offset: 0x006E20CC
 		public IMotorRadioUiFunction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CBE5 RID: 52197
-		// (get) Token: 0x06030283 RID: 197251 RVA: 0x0068B9D8 File Offset: 0x00689BD8
+		// Token: 0x1700D6CA RID: 54986
+		// (get) Token: 0x060330D8 RID: 209112 RVA: 0x006E3EDC File Offset: 0x006E20DC
 		public EEnableFunctionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CBE6 RID: 52198
-		// (get) Token: 0x06030284 RID: 197252 RVA: 0x0068BA14 File Offset: 0x00689C14
+		// Token: 0x1700D6CB RID: 54987
+		// (get) Token: 0x060330D9 RID: 209113 RVA: 0x006E3F18 File Offset: 0x006E2118
 		public TMotorRadioOperationRestriction DisplayModeType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030285 RID: 197253 RVA: 0x0068BA50 File Offset: 0x00689C50
+		// Token: 0x060330DA RID: 209114 RVA: 0x006E3F54 File Offset: 0x006E2154
 		public TTable? DisplayMode<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,19 +88,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06030286 RID: 197254 RVA: 0x0068BA94 File Offset: 0x00689C94
+		// Token: 0x060330DB RID: 209115 RVA: 0x006E3F98 File Offset: 0x006E2198
 		public IDisableAllMotorRadioOperation DisplayModeAsIDisableAllMotorRadioOperation()
 		{
 			return this.DisplayMode<IDisableAllMotorRadioOperation>().Value;
 		}
 
-		// Token: 0x06030287 RID: 197255 RVA: 0x0068BAB0 File Offset: 0x00689CB0
+		// Token: 0x060330DC RID: 209116 RVA: 0x006E3FB4 File Offset: 0x006E21B4
+		public IDisableInRangeMotorRadioOperation DisplayModeAsIDisableInRangeMotorRadioOperation()
+		{
+			return this.DisplayMode<IDisableInRangeMotorRadioOperation>().Value;
+		}
+
+		// Token: 0x060330DD RID: 209117 RVA: 0x006E3FD0 File Offset: 0x006E21D0
 		public IEnableAllMotorRadioOperation DisplayModeAsIEnableAllMotorRadioOperation()
 		{
 			return this.DisplayMode<IEnableAllMotorRadioOperation>().Value;
 		}
 
-		// Token: 0x06030288 RID: 197256 RVA: 0x0068BACB File Offset: 0x00689CCB
+		// Token: 0x060330DE RID: 209118 RVA: 0x006E3FEC File Offset: 0x006E21EC
+		public IEnableInRangeMotorRadioOperation DisplayModeAsIEnableInRangeMotorRadioOperation()
+		{
+			return this.DisplayMode<IEnableInRangeMotorRadioOperation>().Value;
+		}
+
+		// Token: 0x060330DF RID: 209119 RVA: 0x006E4007 File Offset: 0x006E2207
 		public static Offset<IMotorRadioUiFunction> CreateIMotorRadioUiFunction(FlatBufferBuilder builder, EEnableFunctionType Type = EEnableFunctionType.TeleportDungeon, TMotorRadioOperationRestriction DisplayMode_type = TMotorRadioOperationRestriction.NONE, int DisplayModeOffset = 0)
 		{
 			builder.StartTable(3);
@@ -110,37 +122,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorRadioUiFunction.EndIMotorRadioUiFunction(builder);
 		}
 
-		// Token: 0x06030289 RID: 197257 RVA: 0x0068BAEF File Offset: 0x00689CEF
+		// Token: 0x060330E0 RID: 209120 RVA: 0x006E402B File Offset: 0x006E222B
 		public static void StartIMotorRadioUiFunction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0603028A RID: 197258 RVA: 0x0068BAF8 File Offset: 0x00689CF8
+		// Token: 0x060330E1 RID: 209121 RVA: 0x006E4034 File Offset: 0x006E2234
 		public static void AddType(FlatBufferBuilder builder, EEnableFunctionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603028B RID: 197259 RVA: 0x0068BB03 File Offset: 0x00689D03
+		// Token: 0x060330E2 RID: 209122 RVA: 0x006E403F File Offset: 0x006E223F
 		public static void AddDisplayModeType(FlatBufferBuilder builder, TMotorRadioOperationRestriction displayModeType)
 		{
 			builder.AddByte(1, (byte)displayModeType, 0);
 		}
 
-		// Token: 0x0603028C RID: 197260 RVA: 0x0068BB0E File Offset: 0x00689D0E
+		// Token: 0x060330E3 RID: 209123 RVA: 0x006E404A File Offset: 0x006E224A
 		public static void AddDisplayMode(FlatBufferBuilder builder, int displayModeOffset)
 		{
 			builder.AddOffset(2, displayModeOffset, 0);
 		}
 
-		// Token: 0x0603028D RID: 197261 RVA: 0x0068BB19 File Offset: 0x00689D19
+		// Token: 0x060330E4 RID: 209124 RVA: 0x006E4055 File Offset: 0x006E2255
 		public static Offset<IMotorRadioUiFunction> EndIMotorRadioUiFunction(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorRadioUiFunction>(builder.EndTable());
 		}
 
-		// Token: 0x0603028E RID: 197262 RVA: 0x0068BB28 File Offset: 0x00689D28
+		// Token: 0x060330E5 RID: 209125 RVA: 0x006E4064 File Offset: 0x006E2264
 		public IMotorRadioUiFunctionT UnPack()
 		{
 			IMotorRadioUiFunctionT motorRadioUiFunctionT = new IMotorRadioUiFunctionT();
@@ -148,26 +160,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return motorRadioUiFunctionT;
 		}
 
-		// Token: 0x0603028F RID: 197263 RVA: 0x0068BB44 File Offset: 0x00689D44
+		// Token: 0x060330E6 RID: 209126 RVA: 0x006E4080 File Offset: 0x006E2280
 		public void UnPackTo(IMotorRadioUiFunctionT _o)
 		{
 			_o.Type = this.Type;
 			_o.DisplayMode = new TMotorRadioOperationRestrictionUnion();
 			_o.DisplayMode.Type = this.DisplayModeType;
-			TMotorRadioOperationRestriction displayModeType = this.DisplayModeType;
-			if (displayModeType == TMotorRadioOperationRestriction.IDisableAllMotorRadioOperation)
+			switch (this.DisplayModeType)
 			{
+			case TMotorRadioOperationRestriction.IDisableAllMotorRadioOperation:
 				_o.DisplayMode.Value = ((this.DisplayMode<IDisableAllMotorRadioOperation>() != null) ? this.DisplayMode<IDisableAllMotorRadioOperation>().Value.UnPack() : null);
 				return;
-			}
-			if (displayModeType != TMotorRadioOperationRestriction.IEnableAllMotorRadioOperation)
-			{
+			case TMotorRadioOperationRestriction.IDisableInRangeMotorRadioOperation:
+				_o.DisplayMode.Value = ((this.DisplayMode<IDisableInRangeMotorRadioOperation>() != null) ? this.DisplayMode<IDisableInRangeMotorRadioOperation>().Value.UnPack() : null);
+				return;
+			case TMotorRadioOperationRestriction.IEnableAllMotorRadioOperation:
+				_o.DisplayMode.Value = ((this.DisplayMode<IEnableAllMotorRadioOperation>() != null) ? this.DisplayMode<IEnableAllMotorRadioOperation>().Value.UnPack() : null);
+				return;
+			case TMotorRadioOperationRestriction.IEnableInRangeMotorRadioOperation:
+				_o.DisplayMode.Value = ((this.DisplayMode<IEnableInRangeMotorRadioOperation>() != null) ? this.DisplayMode<IEnableInRangeMotorRadioOperation>().Value.UnPack() : null);
+				return;
+			default:
 				return;
 			}
-			_o.DisplayMode.Value = ((this.DisplayMode<IEnableAllMotorRadioOperation>() != null) ? this.DisplayMode<IEnableAllMotorRadioOperation>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06030290 RID: 197264 RVA: 0x0068BBF4 File Offset: 0x00689DF4
+		// Token: 0x060330E7 RID: 209127 RVA: 0x006E41B0 File Offset: 0x006E23B0
 		public static Offset<IMotorRadioUiFunction> Pack(FlatBufferBuilder builder, IMotorRadioUiFunctionT _o)
 		{
 			if (_o == null)
@@ -179,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorRadioUiFunction.CreateIMotorRadioUiFunction(builder, _o.Type, displayMode_type, displayModeOffset);
 		}
 
-		// Token: 0x040113C6 RID: 70598
+		// Token: 0x040122EF RID: 74479
 		private Table __p;
 	}
 }

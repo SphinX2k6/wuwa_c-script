@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Gameplay.WuWaGo;
 using CSharpScript.Game.Effect;
@@ -14,19 +13,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x02004773 RID: 18291
+	// Token: 0x020036A4 RID: 13988
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MovableFloorController : GameplayEntityControllerBase
 	{
-		// Token: 0x0602FD20 RID: 195872 RVA: 0x00B14A7B File Offset: 0x00B12C7B
+		// Token: 0x060244EA RID: 148714 RVA: 0x00A44AEF File Offset: 0x00A42CEF
 		public MovableFloorController(WuWaGoGameplayEntityBase entity, WuWaGoGameData gameData, WuWaGoGameModeBase gameMode) : base(entity, gameData, gameMode)
 		{
 		}
 
-		// Token: 0x1700776D RID: 30573
-		// (get) Token: 0x0602FD21 RID: 195873 RVA: 0x00B14A91 File Offset: 0x00B12C91
+		// Token: 0x17004A29 RID: 18985
+		// (get) Token: 0x060244EB RID: 148715 RVA: 0x00A44B05 File Offset: 0x00A42D05
 		private WuWaGoMovableFloorEntity MovableFloor
 		{
 			get
@@ -35,7 +34,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FD22 RID: 195874 RVA: 0x00B14A9E File Offset: 0x00B12C9E
+		// Token: 0x060244EC RID: 148716 RVA: 0x00A44B12 File Offset: 0x00A42D12
 		protected override bool OnCreate()
 		{
 			if (!base.OnCreate())
@@ -47,7 +46,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return true;
 		}
 
-		// Token: 0x0602FD23 RID: 195875 RVA: 0x00B14AB8 File Offset: 0x00B12CB8
+		// Token: 0x060244ED RID: 148717 RVA: 0x00A44B2C File Offset: 0x00A42D2C
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			base.UnregisterAttachedGridMoveParticipant();
 		}
 
-		// Token: 0x0602FD24 RID: 195876 RVA: 0x00B14AD4 File Offset: 0x00B12CD4
+		// Token: 0x060244EE RID: 148718 RVA: 0x00A44B48 File Offset: 0x00A42D48
 		protected override UniTask OnExecuteAction()
 		{
 			MovableFloorController.<OnExecuteAction>d__6 <OnExecuteAction>d__;
@@ -66,7 +65,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <OnExecuteAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FD25 RID: 195877 RVA: 0x00B14B10 File Offset: 0x00B12D10
+		// Token: 0x060244EF RID: 148719 RVA: 0x00A44B84 File Offset: 0x00A42D84
 		[NullableContext(2)]
 		public IMovableFloorMoveRequest CreateMoveRequest()
 		{
@@ -105,36 +104,38 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			};
 		}
 
-		// Token: 0x0602FD26 RID: 195878 RVA: 0x00B14BFA File Offset: 0x00B12DFA
+		// Token: 0x060244F0 RID: 148720 RVA: 0x00A44C6E File Offset: 0x00A42E6E
 		public void FinishMoveRequest()
 		{
 			this.MovableFloor.FinishMove();
 		}
 
-		// Token: 0x0602FD27 RID: 195879 RVA: 0x00B14C07 File Offset: 0x00B12E07
+		// Token: 0x060244F1 RID: 148721 RVA: 0x00A44C7B File Offset: 0x00A42E7B
 		public void CancelPendingMove()
 		{
 			this.MovableFloor.CancelPendingMove();
 		}
 
-		// Token: 0x0602FD28 RID: 195880 RVA: 0x00B14C14 File Offset: 0x00B12E14
+		// Token: 0x060244F2 RID: 148722 RVA: 0x00A44C88 File Offset: 0x00A42E88
 		public void PlayMoveAudio()
 		{
 			base.PostAudioEventOnEntity(EWuWaGoAudioEventIndex.MovableFloorMove);
 			this.PlayMoveSmokeEffect();
 		}
 
-		// Token: 0x0602FD29 RID: 195881 RVA: 0x00B14C24 File Offset: 0x00B12E24
+		// Token: 0x060244F3 RID: 148723 RVA: 0x00A44C98 File Offset: 0x00A42E98
 		public void StopMoveSmokeEffect(bool immediately)
 		{
-			foreach (int handle in this.MoveSmokeEffectHandles.ToList<int>())
+			int[] array = new int[this.MoveSmokeEffectHandles.Count];
+			this.MoveSmokeEffectHandles.CopyTo(array, 0);
+			foreach (int handle in array)
 			{
 				this.StopMoveSmokeEffectByHandle(handle, "WuWaGo.MovableFloor.MoveSmoke.Stop", immediately);
 			}
 			this.MoveSmokeEffectHandles.Clear();
 		}
 
-		// Token: 0x0602FD2A RID: 195882 RVA: 0x00B14C90 File Offset: 0x00B12E90
+		// Token: 0x060244F4 RID: 148724 RVA: 0x00A44CF0 File Offset: 0x00A42EF0
 		private void PlayMoveSmokeEffect()
 		{
 			MovableFloorController.<>c__DisplayClass12_0 CS$<>8__locals1 = new MovableFloorController.<>c__DisplayClass12_0();
@@ -170,7 +171,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			});
 		}
 
-		// Token: 0x0602FD2B RID: 195883 RVA: 0x00B14D90 File Offset: 0x00B12F90
+		// Token: 0x060244F5 RID: 148725 RVA: 0x00A44DF0 File Offset: 0x00A42FF0
 		private void StopMoveSmokeEffectByHandle(int handle, string reason, bool immediately)
 		{
 			this.MoveSmokeEffectHandles.Remove(handle);
@@ -180,13 +181,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FD2C RID: 195884 RVA: 0x00B14DCE File Offset: 0x00B12FCE
+		// Token: 0x060244F6 RID: 148726 RVA: 0x00A44E2E File Offset: 0x00A4302E
 		private void CleanupMoveSmokeEffectHandle(int handle)
 		{
 			this.MoveSmokeEffectHandles.Remove(handle);
 		}
 
-		// Token: 0x0602FD2D RID: 195885 RVA: 0x00B14DE0 File Offset: 0x00B12FE0
+		// Token: 0x060244F7 RID: 148727 RVA: 0x00A44E40 File Offset: 0x00A43040
 		private void RestoreInitialPosition()
 		{
 			Vector initialCoordinate = this.MovableFloor.GetInitialCoordinate();
@@ -224,7 +225,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			this.MovableFloor.ResetToInitialState();
 		}
 
-		// Token: 0x04019CC5 RID: 105669
+		// Token: 0x04014375 RID: 82805
 		private readonly HashSet<int> MoveSmokeEffectHandles = new HashSet<int>();
 	}
 }

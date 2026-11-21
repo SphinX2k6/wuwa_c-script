@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000089 RID: 137
+	// Token: 0x02000091 RID: 145
 	public class ConfigAiSenseGroupById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000336 RID: 822 RVA: 0x0006BB04 File Offset: 0x00069D04
+		// Token: 0x06000366 RID: 870 RVA: 0x000703B8 File Offset: 0x0006E5B8
 		static ConfigAiSenseGroupById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiSenseGroupById.CreateStaticDefaultValue), new Action(ConfigAiSenseGroupById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000337 RID: 823 RVA: 0x0006BB24 File Offset: 0x00069D24
+		// Token: 0x06000367 RID: 871 RVA: 0x000703D8 File Offset: 0x0006E5D8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiSenseGroupById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000338 RID: 824 RVA: 0x0006BBA3 File Offset: 0x00069DA3
+		// Token: 0x06000368 RID: 872 RVA: 0x00070457 File Offset: 0x0006E657
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiSenseGroupById.LogPair = null;
 			ConfigAiSenseGroupById.HandleId = 0;
 		}
 
-		// Token: 0x06000339 RID: 825 RVA: 0x0006BBB1 File Offset: 0x00069DB1
+		// Token: 0x06000369 RID: 873 RVA: 0x00070465 File Offset: 0x0006E665
 		public static void Init()
 		{
 			ConfigAiSenseGroupById.HandleId = ConfigCommon.InitDataStatement(ConfigAiSenseGroupById.HandleId, "db_ai.db", "select BinData from `AiSenseGroup` where Id=?");
 		}
 
-		// Token: 0x0600033A RID: 826 RVA: 0x0006BBCC File Offset: 0x00069DCC
+		// Token: 0x0600036A RID: 874 RVA: 0x00070480 File Offset: 0x0006E680
 		public static AiSenseGroup? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiSenseGroupById.HandleId, ConfigAiSenseGroupById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AiSenseGroup?(rootAsAiSenseGroup);
 		}
 
-		// Token: 0x040003A3 RID: 931
+		// Token: 0x040003DB RID: 987
 		private const string DB = "db_ai.db";
 
-		// Token: 0x040003A4 RID: 932
+		// Token: 0x040003DC RID: 988
 		private const string FILE = "a.AI感知.xlsx";
 
-		// Token: 0x040003A5 RID: 933
+		// Token: 0x040003DD RID: 989
 		private const string TABLE = "AiSenseGroup";
 
-		// Token: 0x040003A6 RID: 934
+		// Token: 0x040003DE RID: 990
 		private const string COMMAND = "select BinData from `AiSenseGroup` where Id=?";
 
-		// Token: 0x040003A7 RID: 935
+		// Token: 0x040003DF RID: 991
 		private const string KEY_PREFIX = "AiSenseGroupById";
 
-		// Token: 0x040003A8 RID: 936
+		// Token: 0x040003E0 RID: 992
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003A9 RID: 937
+		// Token: 0x040003E1 RID: 993
 		private static int HandleId;
 	}
 }

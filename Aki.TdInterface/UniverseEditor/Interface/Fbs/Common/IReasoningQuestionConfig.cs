@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E4B RID: 24139
+	// Token: 0x0200648B RID: 25739
 	public struct IReasoningQuestionConfig : IFlatbufferObject
 	{
-		// Token: 0x1700B476 RID: 46198
-		// (get) Token: 0x06029521 RID: 169249 RVA: 0x005AA428 File Offset: 0x005A8628
+		// Token: 0x1700BDDF RID: 48607
+		// (get) Token: 0x0602BBBD RID: 179133 RVA: 0x005F32D0 File Offset: 0x005F14D0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029522 RID: 169250 RVA: 0x005AA435 File Offset: 0x005A8635
+		// Token: 0x0602BBBE RID: 179134 RVA: 0x005F32DD File Offset: 0x005F14DD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029523 RID: 169251 RVA: 0x005AA43C File Offset: 0x005A863C
+		// Token: 0x0602BBBF RID: 179135 RVA: 0x005F32E4 File Offset: 0x005F14E4
 		public static IReasoningQuestionConfig GetRootAsIReasoningQuestionConfig(ByteBuffer _bb)
 		{
 			return IReasoningQuestionConfig.GetRootAsIReasoningQuestionConfig(_bb, default(IReasoningQuestionConfig));
 		}
 
-		// Token: 0x06029524 RID: 169252 RVA: 0x005AA458 File Offset: 0x005A8658
+		// Token: 0x0602BBC0 RID: 179136 RVA: 0x005F3300 File Offset: 0x005F1500
 		public static IReasoningQuestionConfig GetRootAsIReasoningQuestionConfig(ByteBuffer _bb, IReasoningQuestionConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029525 RID: 169253 RVA: 0x005AA475 File Offset: 0x005A8675
+		// Token: 0x0602BBC1 RID: 179137 RVA: 0x005F331D File Offset: 0x005F151D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029526 RID: 169254 RVA: 0x005AA484 File Offset: 0x005A8684
+		// Token: 0x0602BBC2 RID: 179138 RVA: 0x005F332C File Offset: 0x005F152C
 		public IReasoningQuestionConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B477 RID: 46199
-		// (get) Token: 0x06029527 RID: 169255 RVA: 0x005AA494 File Offset: 0x005A8694
+		// Token: 0x1700BDE0 RID: 48608
+		// (get) Token: 0x0602BBC3 RID: 179139 RVA: 0x005F333C File Offset: 0x005F153C
 		public int QuestionId
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029528 RID: 169256 RVA: 0x005AA4D0 File Offset: 0x005A86D0
+		// Token: 0x0602BBC4 RID: 179140 RVA: 0x005F3378 File Offset: 0x005F1578
 		public IReasoningResultConfig? ResultConfigs(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return new IReasoningResultConfig?(default(IReasoningResultConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B478 RID: 46200
-		// (get) Token: 0x06029529 RID: 169257 RVA: 0x005AA530 File Offset: 0x005A8730
+		// Token: 0x1700BDE1 RID: 48609
+		// (get) Token: 0x0602BBC5 RID: 179141 RVA: 0x005F33D8 File Offset: 0x005F15D8
 		public int ResultConfigsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x0602952A RID: 169258 RVA: 0x005AA55B File Offset: 0x005A875B
+		// Token: 0x0602BBC6 RID: 179142 RVA: 0x005F3403 File Offset: 0x005F1603
 		public static Offset<IReasoningQuestionConfig> CreateIReasoningQuestionConfig(FlatBufferBuilder builder, int QuestionId = 0, VectorOffset ResultConfigsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IReasoningQuestionConfig.EndIReasoningQuestionConfig(builder);
 		}
 
-		// Token: 0x0602952B RID: 169259 RVA: 0x005AA578 File Offset: 0x005A8778
+		// Token: 0x0602BBC7 RID: 179143 RVA: 0x005F3420 File Offset: 0x005F1620
 		public static void StartIReasoningQuestionConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602952C RID: 169260 RVA: 0x005AA581 File Offset: 0x005A8781
+		// Token: 0x0602BBC8 RID: 179144 RVA: 0x005F3429 File Offset: 0x005F1629
 		public static void AddQuestionId(FlatBufferBuilder builder, int questionId)
 		{
 			builder.AddInt(0, questionId, 0);
 		}
 
-		// Token: 0x0602952D RID: 169261 RVA: 0x005AA58C File Offset: 0x005A878C
+		// Token: 0x0602BBC9 RID: 179145 RVA: 0x005F3434 File Offset: 0x005F1634
 		public static void AddResultConfigs(FlatBufferBuilder builder, VectorOffset resultConfigsOffset)
 		{
 			builder.AddOffset(1, resultConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x0602952E RID: 169262 RVA: 0x005AA59C File Offset: 0x005A879C
+		// Token: 0x0602BBCA RID: 179146 RVA: 0x005F3444 File Offset: 0x005F1644
 		public static VectorOffset CreateResultConfigsVector(FlatBufferBuilder builder, Offset<IReasoningResultConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602952F RID: 169263 RVA: 0x005AA5DC File Offset: 0x005A87DC
+		// Token: 0x0602BBCB RID: 179147 RVA: 0x005F3484 File Offset: 0x005F1684
 		public static VectorOffset CreateResultConfigsVectorBlock(FlatBufferBuilder builder, Offset<IReasoningResultConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029530 RID: 169264 RVA: 0x005AA5F6 File Offset: 0x005A87F6
+		// Token: 0x0602BBCC RID: 179148 RVA: 0x005F349E File Offset: 0x005F169E
 		public static VectorOffset CreateResultConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IReasoningResultConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029531 RID: 169265 RVA: 0x005AA614 File Offset: 0x005A8814
+		// Token: 0x0602BBCD RID: 179149 RVA: 0x005F34BC File Offset: 0x005F16BC
 		public static VectorOffset CreateResultConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029532 RID: 169266 RVA: 0x005AA62D File Offset: 0x005A882D
+		// Token: 0x0602BBCE RID: 179150 RVA: 0x005F34D5 File Offset: 0x005F16D5
 		public static void StartResultConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06029533 RID: 169267 RVA: 0x005AA638 File Offset: 0x005A8838
+		// Token: 0x0602BBCF RID: 179151 RVA: 0x005F34E0 File Offset: 0x005F16E0
 		public static Offset<IReasoningQuestionConfig> EndIReasoningQuestionConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IReasoningQuestionConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06029534 RID: 169268 RVA: 0x005AA648 File Offset: 0x005A8848
+		// Token: 0x0602BBD0 RID: 179152 RVA: 0x005F34F0 File Offset: 0x005F16F0
 		public IReasoningQuestionConfigT UnPack()
 		{
 			IReasoningQuestionConfigT reasoningQuestionConfigT = new IReasoningQuestionConfigT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return reasoningQuestionConfigT;
 		}
 
-		// Token: 0x06029535 RID: 169269 RVA: 0x005AA664 File Offset: 0x005A8864
+		// Token: 0x0602BBD1 RID: 179153 RVA: 0x005F350C File Offset: 0x005F170C
 		public void UnPackTo(IReasoningQuestionConfigT _o)
 		{
 			_o.QuestionId = this.QuestionId;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029536 RID: 169270 RVA: 0x005AA6D0 File Offset: 0x005A88D0
+		// Token: 0x0602BBD2 RID: 179154 RVA: 0x005F3578 File Offset: 0x005F1778
 		public static Offset<IReasoningQuestionConfig> Pack(FlatBufferBuilder builder, IReasoningQuestionConfigT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IReasoningQuestionConfig.CreateIReasoningQuestionConfig(builder, _o.QuestionId, resultConfigsOffset);
 		}
 
-		// Token: 0x0400F84E RID: 63566
+		// Token: 0x040105AB RID: 66987
 		private Table __p;
 	}
 }

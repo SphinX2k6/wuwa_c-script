@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020016CE RID: 5838
+// Token: 0x02000B86 RID: 2950
 public enum EActiveCreateWordType
 {
-	// Token: 0x04004B70 RID: 19312
+	// Token: 0x04004C17 RID: 19479
 	NormalWord,
-	// Token: 0x04004B71 RID: 19313
+	// Token: 0x04004C18 RID: 19480
 	Conjunction
 }

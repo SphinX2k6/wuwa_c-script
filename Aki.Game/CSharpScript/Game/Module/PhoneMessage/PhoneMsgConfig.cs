@@ -1,25 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.PhoneMessage
 {
-	// Token: 0x020050E9 RID: 20713
+	// Token: 0x020040B9 RID: 16569
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class PhoneMsgConfig : ConfigBase
 	{
-		// Token: 0x06034FA5 RID: 216997 RVA: 0x00C8C737 File Offset: 0x00C8A937
+		// Token: 0x06029E9E RID: 171678 RVA: 0x00BD9A1F File Offset: 0x00BD7C1F
 		public ShortMessage? GetPhoneMsgConfig(int shortMessageId)
 		{
 			return ConfigShortMessageById.GetConfig(shortMessageId, true);
 		}
 
-		// Token: 0x06034FA6 RID: 216998 RVA: 0x00C8C740 File Offset: 0x00C8A940
+		// Token: 0x06029E9F RID: 171679 RVA: 0x00BD9A28 File Offset: 0x00BD7C28
 		public ShortMessage? GetShortMessageByQuestId(int questId)
 		{
 			if (questId <= 0)
@@ -49,71 +48,71 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			return new ShortMessage?(value2);
 		}
 
-		// Token: 0x06034FA7 RID: 216999 RVA: 0x00C8C800 File Offset: 0x00C8AA00
+		// Token: 0x06029EA0 RID: 171680 RVA: 0x00BD9AE8 File Offset: 0x00BD7CE8
 		public ChatPartner? GetChatPartnerConfig(int partnerId)
 		{
 			return ConfigChatPartnerById.GetConfig(partnerId, true);
 		}
 
-		// Token: 0x06034FA8 RID: 217000 RVA: 0x00C8C809 File Offset: 0x00C8AA09
+		// Token: 0x06029EA1 RID: 171681 RVA: 0x00BD9AF1 File Offset: 0x00BD7CF1
 		public ChatBg? GetChatBgConfig(int bgId)
 		{
 			return ConfigChatBgById.GetConfig(bgId, true);
 		}
 
-		// Token: 0x06034FA9 RID: 217001 RVA: 0x00C8C812 File Offset: 0x00C8AA12
+		// Token: 0x06029EA2 RID: 171682 RVA: 0x00BD9AFA File Offset: 0x00BD7CFA
 		[NullableContext(2)]
 		public IReadOnlyList<ChatBg> GetAllChatBgConfigList()
 		{
 			return ConfigChatBgAll.GetConfigList(true);
 		}
 
-		// Token: 0x06034FAA RID: 217002 RVA: 0x00C8C81A File Offset: 0x00C8AA1A
+		// Token: 0x06029EA3 RID: 171683 RVA: 0x00BD9B02 File Offset: 0x00BD7D02
 		public ChatDialog? GetChatDialogConfig(int dialogId)
 		{
 			return ConfigChatDialogById.GetConfig(dialogId, true);
 		}
 
-		// Token: 0x06034FAB RID: 217003 RVA: 0x00C8C823 File Offset: 0x00C8AA23
+		// Token: 0x06029EA4 RID: 171684 RVA: 0x00BD9B0B File Offset: 0x00BD7D0B
 		[NullableContext(2)]
 		public IReadOnlyList<ChatDialog> GetAllChatDialogConfigList()
 		{
 			return ConfigChatDialogAll.GetConfigList(true);
 		}
 
-		// Token: 0x06034FAC RID: 217004 RVA: 0x00C8C82B File Offset: 0x00C8AA2B
+		// Token: 0x06029EA5 RID: 171685 RVA: 0x00BD9B13 File Offset: 0x00BD7D13
 		public ChatTheme? GetChatThemeConfig(int themeId)
 		{
 			return ConfigChatThemeById.GetConfig(themeId, true);
 		}
 
-		// Token: 0x06034FAD RID: 217005 RVA: 0x00C8C834 File Offset: 0x00C8AA34
+		// Token: 0x06029EA6 RID: 171686 RVA: 0x00BD9B1C File Offset: 0x00BD7D1C
 		[NullableContext(2)]
 		public IReadOnlyList<ChatTheme> GetAllChatThemeConfigList()
 		{
 			return ConfigChatThemeAll.GetConfigList(true);
 		}
 
-		// Token: 0x06034FAE RID: 217006 RVA: 0x00C8C83C File Offset: 0x00C8AA3C
+		// Token: 0x06029EA7 RID: 171687 RVA: 0x00BD9B24 File Offset: 0x00BD7D24
 		public ChatCharm? GetChatCharmConfig(int charmId)
 		{
 			return ConfigChatCharmById.GetConfig(charmId, true);
 		}
 
-		// Token: 0x06034FAF RID: 217007 RVA: 0x00C8C845 File Offset: 0x00C8AA45
+		// Token: 0x06029EA8 RID: 171688 RVA: 0x00BD9B2D File Offset: 0x00BD7D2D
 		[NullableContext(2)]
 		public IReadOnlyList<ChatCharm> GetAllChatCharmConfigList()
 		{
 			return ConfigChatCharmAll.GetConfigList(true);
 		}
 
-		// Token: 0x06034FB0 RID: 217008 RVA: 0x00C8C84D File Offset: 0x00C8AA4D
+		// Token: 0x06029EA9 RID: 171689 RVA: 0x00BD9B35 File Offset: 0x00BD7D35
 		public PhoneInputTime? GetPhoneInputTimeConfig(int id)
 		{
 			return ConfigPhoneInputTimeById.GetConfig(id, true);
 		}
 
-		// Token: 0x06034FB1 RID: 217009 RVA: 0x00C8C858 File Offset: 0x00C8AA58
+		// Token: 0x06029EAA RID: 171690 RVA: 0x00BD9B40 File Offset: 0x00BD7D40
 		public ShortMessage? GetShortMessageConfigByPlayFlow(PlayFlow playFlow)
 		{
 			string flowListName = playFlow.FlowListName;
@@ -140,31 +139,31 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			return null;
 		}
 
-		// Token: 0x06034FB2 RID: 217010 RVA: 0x00C8C938 File Offset: 0x00C8AB38
+		// Token: 0x06029EAB RID: 171691 RVA: 0x00BD9C20 File Offset: 0x00BD7E20
 		public ChatFilterType? GetChatFilterTypeConfig(int filterTypeId)
 		{
 			return ConfigChatFilterTypeById.GetConfig(filterTypeId, true);
 		}
 
-		// Token: 0x06034FB3 RID: 217011 RVA: 0x00C8C941 File Offset: 0x00C8AB41
+		// Token: 0x06029EAC RID: 171692 RVA: 0x00BD9C29 File Offset: 0x00BD7E29
 		public IEnumerable<ChatFilterType> GetAllChatFilterTypeConfigList()
 		{
 			return ConfigChatFilterTypeAll.GetConfigList(true);
 		}
 
-		// Token: 0x06034FB4 RID: 217012 RVA: 0x00C8C949 File Offset: 0x00C8AB49
+		// Token: 0x06029EAD RID: 171693 RVA: 0x00BD9C31 File Offset: 0x00BD7E31
 		public ChatPartnerFilter? GetChatPartnerFilterConfig(int filterId)
 		{
 			return ConfigChatPartnerFilterById.GetConfig(filterId, true);
 		}
 
-		// Token: 0x06034FB5 RID: 217013 RVA: 0x00C8C954 File Offset: 0x00C8AB54
+		// Token: 0x06029EAE RID: 171694 RVA: 0x00BD9C3C File Offset: 0x00BD7E3C
 		public IEnumerable<ChatPartnerFilter> GetChatPartnerFilterConfigListByFilterType(int filterTypeId)
 		{
 			IReadOnlyList<ChatPartnerFilter> configList = ConfigChatPartnerFilterAll.GetConfigList(true);
 			if (configList == null)
 			{
-				return Enumerable.Empty<ChatPartnerFilter>();
+				return Array.Empty<ChatPartnerFilter>();
 			}
 			List<ChatPartnerFilter> list = new List<ChatPartnerFilter>();
 			foreach (ChatPartnerFilter item in configList)
@@ -178,15 +177,14 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			return list;
 		}
 
-		// Token: 0x06034FB6 RID: 217014 RVA: 0x00C8C9E4 File Offset: 0x00C8ABE4
+		// Token: 0x06029EAF RID: 171695 RVA: 0x00BD9CCC File Offset: 0x00BD7ECC
 		public IEnumerable<ChatPartnerFilter> GetAllChatPartnerFilterConfigList()
 		{
-			IEnumerable<ChatPartnerFilter> configList = ConfigChatPartnerFilterAll.GetConfigList(true);
-			return configList ?? Enumerable.Empty<ChatPartnerFilter>();
+			return ConfigChatPartnerFilterAll.GetConfigList(true) ?? Array.Empty<ChatPartnerFilter>();
 		}
 
-		// Token: 0x17008098 RID: 32920
-		// (get) Token: 0x06034FB7 RID: 217015 RVA: 0x00C8CA02 File Offset: 0x00C8AC02
+		// Token: 0x17005458 RID: 21592
+		// (get) Token: 0x06029EB0 RID: 171696 RVA: 0x00BD9CDD File Offset: 0x00BD7EDD
 		public static PhoneMsgConfig Instance
 		{
 			get
@@ -195,7 +193,7 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			}
 		}
 
-		// Token: 0x06034FB8 RID: 217016 RVA: 0x00C8CA09 File Offset: 0x00C8AC09
+		// Token: 0x06029EB1 RID: 171697 RVA: 0x00BD9CE4 File Offset: 0x00BD7EE4
 		public static PhoneMsgConfig GetOrCreateInstance()
 		{
 			if (PhoneMsgConfig._Instance == null)
@@ -205,7 +203,7 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			return PhoneMsgConfig._Instance;
 		}
 
-		// Token: 0x06034FB9 RID: 217017 RVA: 0x00C8CA1D File Offset: 0x00C8AC1D
+		// Token: 0x06029EB2 RID: 171698 RVA: 0x00BD9CF8 File Offset: 0x00BD7EF8
 		public static bool CreateInstance()
 		{
 			if (PhoneMsgConfig._Instance != null)
@@ -216,28 +214,28 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			return true;
 		}
 
-		// Token: 0x06034FBA RID: 217018 RVA: 0x00C8CA33 File Offset: 0x00C8AC33
+		// Token: 0x06029EB3 RID: 171699 RVA: 0x00BD9D0E File Offset: 0x00BD7F0E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034FBB RID: 217019 RVA: 0x00C8CA35 File Offset: 0x00C8AC35
+		// Token: 0x06029EB4 RID: 171700 RVA: 0x00BD9D10 File Offset: 0x00BD7F10
 		public static void ResetStaticDefaultValue()
 		{
 			PhoneMsgConfig._Instance = null;
 		}
 
-		// Token: 0x06034FBC RID: 217020 RVA: 0x00C8CA3D File Offset: 0x00C8AC3D
+		// Token: 0x06029EB5 RID: 171701 RVA: 0x00BD9D18 File Offset: 0x00BD7F18
 		static PhoneMsgConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PhoneMsgConfig.CreateStaticDefaultValue), new Action(PhoneMsgConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401C331 RID: 115505
+		// Token: 0x04016D62 RID: 93538
 		[Nullable(2)]
 		private Dictionary<int, ShortMessage> QuestId2ShortMessageMap;
 
-		// Token: 0x0401C332 RID: 115506
+		// Token: 0x04016D63 RID: 93539
 		[Nullable(2)]
 		private static PhoneMsgConfig _Instance;
 	}

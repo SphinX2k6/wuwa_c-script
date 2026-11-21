@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200613D RID: 24893
+	// Token: 0x020067A2 RID: 26530
 	public struct IAddTrialFollowShooter : IFlatbufferObject
 	{
-		// Token: 0x1700B7A9 RID: 47017
-		// (get) Token: 0x0602A979 RID: 174457 RVA: 0x005DD919 File Offset: 0x005DBB19
+		// Token: 0x1700C119 RID: 49433
+		// (get) Token: 0x0602D072 RID: 184434 RVA: 0x00627AF5 File Offset: 0x00625CF5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A97A RID: 174458 RVA: 0x005DD926 File Offset: 0x005DBB26
+		// Token: 0x0602D073 RID: 184435 RVA: 0x00627B02 File Offset: 0x00625D02
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A97B RID: 174459 RVA: 0x005DD930 File Offset: 0x005DBB30
+		// Token: 0x0602D074 RID: 184436 RVA: 0x00627B0C File Offset: 0x00625D0C
 		public static IAddTrialFollowShooter GetRootAsIAddTrialFollowShooter(ByteBuffer _bb)
 		{
 			return IAddTrialFollowShooter.GetRootAsIAddTrialFollowShooter(_bb, default(IAddTrialFollowShooter));
 		}
 
-		// Token: 0x0602A97C RID: 174460 RVA: 0x005DD94C File Offset: 0x005DBB4C
+		// Token: 0x0602D075 RID: 184437 RVA: 0x00627B28 File Offset: 0x00625D28
 		public static IAddTrialFollowShooter GetRootAsIAddTrialFollowShooter(ByteBuffer _bb, IAddTrialFollowShooter obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A97D RID: 174461 RVA: 0x005DD969 File Offset: 0x005DBB69
+		// Token: 0x0602D076 RID: 184438 RVA: 0x00627B45 File Offset: 0x00625D45
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A97E RID: 174462 RVA: 0x005DD978 File Offset: 0x005DBB78
+		// Token: 0x0602D077 RID: 184439 RVA: 0x00627B54 File Offset: 0x00625D54
 		public IAddTrialFollowShooter __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B7AA RID: 47018
-		// (get) Token: 0x0602A97F RID: 174463 RVA: 0x005DD988 File Offset: 0x005DBB88
+		// Token: 0x1700C11A RID: 49434
+		// (get) Token: 0x0602D078 RID: 184440 RVA: 0x00627B64 File Offset: 0x00625D64
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B7AB RID: 47019
-		// (get) Token: 0x0602A980 RID: 174464 RVA: 0x005DD9C4 File Offset: 0x005DBBC4
+		// Token: 0x1700C11B RID: 49435
+		// (get) Token: 0x0602D079 RID: 184441 RVA: 0x00627BA0 File Offset: 0x00625DA0
 		public IActiveRange? ActiveRange
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A981 RID: 174465 RVA: 0x005DDA21 File Offset: 0x005DBC21
+		// Token: 0x0602D07A RID: 184442 RVA: 0x00627BFD File Offset: 0x00625DFD
 		public static Offset<IAddTrialFollowShooter> CreateIAddTrialFollowShooter(FlatBufferBuilder builder, int Id = 0, Offset<IActiveRange> ActiveRangeOffset = default(Offset<IActiveRange>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAddTrialFollowShooter.EndIAddTrialFollowShooter(builder);
 		}
 
-		// Token: 0x0602A982 RID: 174466 RVA: 0x005DDA3E File Offset: 0x005DBC3E
+		// Token: 0x0602D07B RID: 184443 RVA: 0x00627C1A File Offset: 0x00625E1A
 		public static void StartIAddTrialFollowShooter(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602A983 RID: 174467 RVA: 0x005DDA47 File Offset: 0x005DBC47
+		// Token: 0x0602D07C RID: 184444 RVA: 0x00627C23 File Offset: 0x00625E23
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0602A984 RID: 174468 RVA: 0x005DDA52 File Offset: 0x005DBC52
+		// Token: 0x0602D07D RID: 184445 RVA: 0x00627C2E File Offset: 0x00625E2E
 		public static void AddActiveRange(FlatBufferBuilder builder, Offset<IActiveRange> activeRangeOffset)
 		{
 			builder.AddOffset(1, activeRangeOffset.Value, 0);
 		}
 
-		// Token: 0x0602A985 RID: 174469 RVA: 0x005DDA62 File Offset: 0x005DBC62
+		// Token: 0x0602D07E RID: 184446 RVA: 0x00627C3E File Offset: 0x00625E3E
 		public static Offset<IAddTrialFollowShooter> EndIAddTrialFollowShooter(FlatBufferBuilder builder)
 		{
 			return new Offset<IAddTrialFollowShooter>(builder.EndTable());
 		}
 
-		// Token: 0x0602A986 RID: 174470 RVA: 0x005DDA70 File Offset: 0x005DBC70
+		// Token: 0x0602D07F RID: 184447 RVA: 0x00627C4C File Offset: 0x00625E4C
 		public IAddTrialFollowShooterT UnPack()
 		{
 			IAddTrialFollowShooterT addTrialFollowShooterT = new IAddTrialFollowShooterT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return addTrialFollowShooterT;
 		}
 
-		// Token: 0x0602A987 RID: 174471 RVA: 0x005DDA8C File Offset: 0x005DBC8C
+		// Token: 0x0602D080 RID: 184448 RVA: 0x00627C68 File Offset: 0x00625E68
 		public void UnPackTo(IAddTrialFollowShooterT _o)
 		{
 			_o.Id = this.Id;
 			_o.ActiveRange = ((this.ActiveRange != null) ? this.ActiveRange.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602A988 RID: 174472 RVA: 0x005DDAD4 File Offset: 0x005DBCD4
+		// Token: 0x0602D081 RID: 184449 RVA: 0x00627CB0 File Offset: 0x00625EB0
 		public static Offset<IAddTrialFollowShooter> Pack(FlatBufferBuilder builder, IAddTrialFollowShooterT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAddTrialFollowShooter.CreateIAddTrialFollowShooter(builder, _o.Id, activeRangeOffset);
 		}
 
-		// Token: 0x0401052C RID: 66860
+		// Token: 0x04011333 RID: 70451
 		private Table __p;
 	}
 }

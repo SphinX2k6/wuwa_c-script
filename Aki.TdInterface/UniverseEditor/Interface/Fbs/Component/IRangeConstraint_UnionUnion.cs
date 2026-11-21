@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005803 RID: 22531
+	// Token: 0x02005E0A RID: 24074
 	public class IRangeConstraint_UnionUnion
 	{
-		// Token: 0x1700A851 RID: 43089
-		// (get) Token: 0x06025E05 RID: 155141 RVA: 0x005394F1 File Offset: 0x005376F1
-		// (set) Token: 0x06025E06 RID: 155142 RVA: 0x005394F9 File Offset: 0x005376F9
+		// Token: 0x1700B175 RID: 45429
+		// (get) Token: 0x06028325 RID: 164645 RVA: 0x0057F67D File Offset: 0x0057D87D
+		// (set) Token: 0x06028326 RID: 164646 RVA: 0x0057F685 File Offset: 0x0057D885
 		public IRangeConstraint_Union Type { get; set; }
 
-		// Token: 0x1700A852 RID: 43090
-		// (get) Token: 0x06025E07 RID: 155143 RVA: 0x00539502 File Offset: 0x00537702
-		// (set) Token: 0x06025E08 RID: 155144 RVA: 0x0053950A File Offset: 0x0053770A
+		// Token: 0x1700B176 RID: 45430
+		// (get) Token: 0x06028327 RID: 164647 RVA: 0x0057F68E File Offset: 0x0057D88E
+		// (set) Token: 0x06028328 RID: 164648 RVA: 0x0057F696 File Offset: 0x0057D896
 		public object Value { get; set; }
 
-		// Token: 0x06025E09 RID: 155145 RVA: 0x00539513 File Offset: 0x00537713
+		// Token: 0x06028329 RID: 164649 RVA: 0x0057F69F File Offset: 0x0057D89F
 		public IRangeConstraint_UnionUnion()
 		{
 			this.Type = IRangeConstraint_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06025E0A RID: 155146 RVA: 0x00539529 File Offset: 0x00537729
+		// Token: 0x0602832A RID: 164650 RVA: 0x0057F6B5 File Offset: 0x0057D8B5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06025E0B RID: 155147 RVA: 0x0053953B File Offset: 0x0053773B
+		// Token: 0x0602832B RID: 164651 RVA: 0x0057F6C7 File Offset: 0x0057D8C7
 		public IRangeConstraintT AsIRangeConstraint()
 		{
 			return this.As<IRangeConstraintT>();
 		}
 
-		// Token: 0x06025E0C RID: 155148 RVA: 0x00539543 File Offset: 0x00537743
+		// Token: 0x0602832C RID: 164652 RVA: 0x0057F6CF File Offset: 0x0057D8CF
 		public static IRangeConstraint_UnionUnion FromIRangeConstraint(IRangeConstraintT _irangeconstraint)
 		{
 			return new IRangeConstraint_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06025E0D RID: 155149 RVA: 0x00539558 File Offset: 0x00537758
+		// Token: 0x0602832D RID: 164653 RVA: 0x0057F6E4 File Offset: 0x0057D8E4
 		public ISearchSpawnMonsterPointT AsISearchSpawnMonsterPoint()
 		{
 			return this.As<ISearchSpawnMonsterPointT>();
 		}
 
-		// Token: 0x06025E0E RID: 155150 RVA: 0x00539560 File Offset: 0x00537760
+		// Token: 0x0602832E RID: 164654 RVA: 0x0057F6EC File Offset: 0x0057D8EC
 		public static IRangeConstraint_UnionUnion FromISearchSpawnMonsterPoint(ISearchSpawnMonsterPointT _isearchspawnmonsterpoint)
 		{
 			return new IRangeConstraint_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06025E0F RID: 155151 RVA: 0x00539578 File Offset: 0x00537778
+		// Token: 0x0602832F RID: 164655 RVA: 0x0057F704 File Offset: 0x0057D904
 		public static int Pack(FlatBufferBuilder builder, IRangeConstraint_UnionUnion _o)
 		{
 			IRangeConstraint_Union type = _o.Type;

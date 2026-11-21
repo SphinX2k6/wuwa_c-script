@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001384 RID: 4996
+// Token: 0x02000838 RID: 2104
 [NullableContext(2)]
 [Nullable(0)]
 public class MowingTowerMainView : UiViewBase
 {
-	// Token: 0x06008BEF RID: 35823 RVA: 0x001DF37B File Offset: 0x001DD57B
+	// Token: 0x06005F8A RID: 24458 RVA: 0x001E81CF File Offset: 0x001E63CF
 	[NullableContext(1)]
 	public MowingTowerMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008BF0 RID: 35824 RVA: 0x001DF384 File Offset: 0x001DD584
+	// Token: 0x06005F8B RID: 24459 RVA: 0x001E81D8 File Offset: 0x001E63D8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -61,21 +61,21 @@ public class MowingTowerMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008BF1 RID: 35825 RVA: 0x001DF63E File Offset: 0x001DD83E
+	// Token: 0x06005F8C RID: 24460 RVA: 0x001E8492 File Offset: 0x001E6692
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.ChangeMowingTowerMainView, new Action<int>(this.OnChangeMowingTowerMainView));
 		EventSystem.Instance.Add(EEventName.ChangeMowingTowerBuff, new Action(this.OnSelectBuff));
 	}
 
-	// Token: 0x06008BF2 RID: 35826 RVA: 0x001DF678 File Offset: 0x001DD878
+	// Token: 0x06005F8D RID: 24461 RVA: 0x001E84CC File Offset: 0x001E66CC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ChangeMowingTowerMainView, new Action<int>(this.OnChangeMowingTowerMainView));
 		EventSystem.Instance.Remove(EEventName.ChangeMowingTowerBuff, new Action(this.OnSelectBuff));
 	}
 
-	// Token: 0x06008BF3 RID: 35827 RVA: 0x001DF6B4 File Offset: 0x001DD8B4
+	// Token: 0x06005F8E RID: 24462 RVA: 0x001E8508 File Offset: 0x001E6708
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MowingTowerMainView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -86,7 +86,7 @@ public class MowingTowerMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008BF4 RID: 35828 RVA: 0x001DF6F8 File Offset: 0x001DD8F8
+	// Token: 0x06005F8F RID: 24463 RVA: 0x001E854C File Offset: 0x001E674C
 	protected override void OnStart()
 	{
 		MowingTowerModel.Instance.CurrentSelectActivityId = (int)this.OpenParam;
@@ -116,7 +116,7 @@ public class MowingTowerMainView : UiViewBase
 		this.RefreshSubView(true);
 	}
 
-	// Token: 0x06008BF5 RID: 35829 RVA: 0x001DF760 File Offset: 0x001DD960
+	// Token: 0x06005F90 RID: 24464 RVA: 0x001E85B4 File Offset: 0x001E67B4
 	protected override void OnBeforeShow()
 	{
 		if (this.CurrentShowView == EMowingTowerSubViewName.LevelView)
@@ -127,13 +127,13 @@ public class MowingTowerMainView : UiViewBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshMowingTowerRewardRedDot, this.MowingTowerData.Id);
 	}
 
-	// Token: 0x06008BF6 RID: 35830 RVA: 0x001DF7BA File Offset: 0x001DD9BA
+	// Token: 0x06005F91 RID: 24465 RVA: 0x001E860E File Offset: 0x001E680E
 	protected override void OnBeforeHide()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.MowingTowerReward, base.GetItem(25), this.MowingTowerData.Id);
 	}
 
-	// Token: 0x06008BF7 RID: 35831 RVA: 0x001DF7E0 File Offset: 0x001DD9E0
+	// Token: 0x06005F92 RID: 24466 RVA: 0x001E8634 File Offset: 0x001E6834
 	private void RefreshSelectLevelView(bool scrollToUnFinishItem = false)
 	{
 		this.CaptionItem.SetTitleByTextIdAndArgNew("MowingTowerSelectViewTitle", Array.Empty<object>());
@@ -151,7 +151,7 @@ public class MowingTowerMainView : UiViewBase
 		text.SetText(this.MowingTowerData.GetFullScore().ToString() ?? "", true);
 	}
 
-	// Token: 0x06008BF8 RID: 35832 RVA: 0x001DF858 File Offset: 0x001DDA58
+	// Token: 0x06005F93 RID: 24467 RVA: 0x001E86AC File Offset: 0x001E68AC
 	private void RefreshLevelView()
 	{
 		this.CaptionItem.SetTitleByTextIdAndArgNew("MowingTowerLevelViewTitle", Array.Empty<object>());
@@ -174,7 +174,7 @@ public class MowingTowerMainView : UiViewBase
 		this.RefreshLowLevelTips();
 	}
 
-	// Token: 0x06008BF9 RID: 35833 RVA: 0x001DF8E8 File Offset: 0x001DDAE8
+	// Token: 0x06005F94 RID: 24468 RVA: 0x001E873C File Offset: 0x001E693C
 	[NullableContext(1)]
 	private void RefreshLevelViewTexture(MowingTowerLevelDetailInfo data)
 	{
@@ -258,7 +258,7 @@ public class MowingTowerMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008BFA RID: 35834 RVA: 0x001DFA5C File Offset: 0x001DDC5C
+	// Token: 0x06005F95 RID: 24469 RVA: 0x001E88B0 File Offset: 0x001E6AB0
 	[NullableContext(1)]
 	private void RefreshLevelViewScore(MowingTowerLevelDetailInfo data)
 	{
@@ -282,20 +282,20 @@ public class MowingTowerMainView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(16), data.GetLevelTips() ?? "", Array.Empty<object>());
 	}
 
-	// Token: 0x06008BFB RID: 35835 RVA: 0x001DFB3C File Offset: 0x001DDD3C
+	// Token: 0x06005F96 RID: 24470 RVA: 0x001E8990 File Offset: 0x001E6B90
 	private void RefreshLowLevelTips()
 	{
 		bool ifLevelTooLow = this.CurrentTeamInfo.GetIfLevelTooLow();
 		base.GetItem(20).SetUIActive(ifLevelTooLow);
 	}
 
-	// Token: 0x06008BFC RID: 35836 RVA: 0x001DFB63 File Offset: 0x001DDD63
+	// Token: 0x06005F97 RID: 24471 RVA: 0x001E89B7 File Offset: 0x001E6BB7
 	private void OnSelectBuff()
 	{
 		this.RefreshBuffEntry();
 	}
 
-	// Token: 0x06008BFD RID: 35837 RVA: 0x001DFB6C File Offset: 0x001DDD6C
+	// Token: 0x06005F98 RID: 24472 RVA: 0x001E89C0 File Offset: 0x001E6BC0
 	private void RefreshBuffEntry()
 	{
 		List<MowingTowerBuffInfo> prepareSelectBuff = this.CurrentTeamInfo.GetPrepareSelectBuff();
@@ -307,7 +307,7 @@ public class MowingTowerMainView : UiViewBase
 		buffEntryItem.Refresh(prepareSelectBuff[0]);
 	}
 
-	// Token: 0x06008BFE RID: 35838 RVA: 0x001DFB9C File Offset: 0x001DDD9C
+	// Token: 0x06005F99 RID: 24473 RVA: 0x001E89F0 File Offset: 0x001E6BF0
 	[NullableContext(1)]
 	private void RefreshLevelViewMonsterDes(MowingTowerLevelDetailInfo data)
 	{
@@ -315,7 +315,7 @@ public class MowingTowerMainView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(24), "MowingTowerMonsterTimes", new <>z__ReadOnlySingleElementList<object>((data.GetConfig() != null) ? mowTowerLevelsRe.GetValueOrDefault().MonsterDes : null));
 	}
 
-	// Token: 0x06008BFF RID: 35839 RVA: 0x001DFBE8 File Offset: 0x001DDDE8
+	// Token: 0x06005F9A RID: 24474 RVA: 0x001E8A3C File Offset: 0x001E6C3C
 	private void RefreshSubView(bool scrollToUnFinishItem = false)
 	{
 		if (this.CurrentShowView == EMowingTowerSubViewName.SelectView)
@@ -353,21 +353,21 @@ public class MowingTowerMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008C00 RID: 35840 RVA: 0x001DFC84 File Offset: 0x001DDE84
+	// Token: 0x06005F9B RID: 24475 RVA: 0x001E8AD8 File Offset: 0x001E6CD8
 	[NullableContext(1)]
 	private MowingTowerMainLevelItem OnCreateItem()
 	{
 		return new MowingTowerMainLevelItem();
 	}
 
-	// Token: 0x06008C01 RID: 35841 RVA: 0x001DFC8B File Offset: 0x001DDE8B
+	// Token: 0x06005F9C RID: 24476 RVA: 0x001E8ADF File Offset: 0x001E6CDF
 	private void OnChangeMowingTowerMainView(int view)
 	{
 		this.CurrentShowView = (EMowingTowerSubViewName)view;
 		this.RefreshSubView(false);
 	}
 
-	// Token: 0x06008C02 RID: 35842 RVA: 0x001DFC9B File Offset: 0x001DDE9B
+	// Token: 0x06005F9D RID: 24477 RVA: 0x001E8AEF File Offset: 0x001E6CEF
 	private void OnClickSelectViewRewardBtn()
 	{
 		if (!UiManager.Instance.IsViewOpen(EUiViewName.MowingTowerRewardView))
@@ -376,7 +376,7 @@ public class MowingTowerMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008C03 RID: 35843 RVA: 0x001DFCC0 File Offset: 0x001DDEC0
+	// Token: 0x06005F9E RID: 24478 RVA: 0x001E8B14 File Offset: 0x001E6D14
 	private void OnClickLevelViewConfirmBtn()
 	{
 		MowingTowerTeamInfo currentTeamInfo = this.CurrentTeamInfo;
@@ -389,7 +389,7 @@ public class MowingTowerMainView : UiViewBase
 		MowingTowerController.Instance.RequestStartMowingTowerByTeamData(this.CurrentTeamInfo);
 	}
 
-	// Token: 0x06008C04 RID: 35844 RVA: 0x001DFD50 File Offset: 0x001DDF50
+	// Token: 0x06005F9F RID: 24479 RVA: 0x001E8BA4 File Offset: 0x001E6DA4
 	private void OnClickLevelViewMonsterBtn()
 	{
 		UiManager instance = UiManager.Instance;
@@ -408,19 +408,19 @@ public class MowingTowerMainView : UiViewBase
 		instance.OpenView(instanceDungeonMonsterPreView, num, null);
 	}
 
-	// Token: 0x04003E0C RID: 15884
+	// Token: 0x04003EA4 RID: 16036
 	private MowingTowerData MowingTowerData;
 
-	// Token: 0x04003E0D RID: 15885
+	// Token: 0x04003EA5 RID: 16037
 	private MowingTowerTeamInfo CurrentTeamInfo;
 
-	// Token: 0x04003E0E RID: 15886
+	// Token: 0x04003EA6 RID: 16038
 	private EMowingTowerSubViewName CurrentShowView;
 
-	// Token: 0x04003E0F RID: 15887
+	// Token: 0x04003EA7 RID: 16039
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003E10 RID: 15888
+	// Token: 0x04003EA8 RID: 16040
 	[Nullable(new byte[]
 	{
 		2,
@@ -429,101 +429,101 @@ public class MowingTowerMainView : UiViewBase
 	})]
 	private GenericScrollViewNew<MowingTowerMainLevelItem, MowingTowerLevelDetailInfo> LevelScrollView;
 
-	// Token: 0x04003E11 RID: 15889
+	// Token: 0x04003EA9 RID: 16041
 	private MowingBuffEntry BuffEntryItem;
 
-	// Token: 0x04003E12 RID: 15890
+	// Token: 0x04003EAA RID: 16042
 	private TeamListItem FirstPartTeamListItem;
 
-	// Token: 0x04003E13 RID: 15891
+	// Token: 0x04003EAB RID: 16043
 	private TeamListItem LowPartTeamListItem;
 
-	// Token: 0x04003E14 RID: 15892
+	// Token: 0x04003EAC RID: 16044
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04003E15 RID: 15893
+	// Token: 0x04003EAD RID: 16045
 	private const int ROLE_TEAM_SIZE = 3;
 
-	// Token: 0x020079F7 RID: 31223
+	// Token: 0x02006B81 RID: 27521
 	[NullableContext(0)]
 	private static class EComponent
 	{
-		// Token: 0x0402823C RID: 164412
+		// Token: 0x04023569 RID: 144745
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402823D RID: 164413
+		// Token: 0x0402356A RID: 144746
 		public const int SelectViewRewardBtn = 1;
 
-		// Token: 0x0402823E RID: 164414
+		// Token: 0x0402356B RID: 144747
 		public const int SelectViewScoreText = 2;
 
-		// Token: 0x0402823F RID: 164415
+		// Token: 0x0402356C RID: 144748
 		public const int SelectViewLevelScrollView = 3;
 
-		// Token: 0x04028240 RID: 164416
+		// Token: 0x0402356D RID: 144749
 		public const int SelectViewLevelItem = 4;
 
-		// Token: 0x04028241 RID: 164417
+		// Token: 0x0402356E RID: 144750
 		public const int SelectViewRootItem = 5;
 
-		// Token: 0x04028242 RID: 164418
+		// Token: 0x0402356F RID: 144751
 		public const int LevelViewLevelTexture = 6;
 
-		// Token: 0x04028243 RID: 164419
+		// Token: 0x04023570 RID: 144752
 		public const int LevelViewSingleItem = 7;
 
-		// Token: 0x04028244 RID: 164420
+		// Token: 0x04023571 RID: 144753
 		public const int LevelViewDoubleItem = 8;
 
-		// Token: 0x04028245 RID: 164421
+		// Token: 0x04023572 RID: 144754
 		public const int LevelViewBgItem = 9;
 
-		// Token: 0x04028246 RID: 164422
+		// Token: 0x04023573 RID: 144755
 		public const int LevelViewLevelText = 10;
 
-		// Token: 0x04028247 RID: 164423
+		// Token: 0x04023574 RID: 144756
 		public const int LevelViewHaveScoreItem = 11;
 
-		// Token: 0x04028248 RID: 164424
+		// Token: 0x04023575 RID: 144757
 		public const int LevelViewScoreText = 12;
 
-		// Token: 0x04028249 RID: 164425
+		// Token: 0x04023576 RID: 144758
 		public const int LevelViewUnFinishScoreItem = 13;
 
-		// Token: 0x0402824A RID: 164426
+		// Token: 0x04023577 RID: 144759
 		public const int LevelViewFirstHalfScoreText = 14;
 
-		// Token: 0x0402824B RID: 164427
+		// Token: 0x04023578 RID: 144760
 		public const int LevelViewLowerHalfScoreText = 15;
 
-		// Token: 0x0402824C RID: 164428
+		// Token: 0x04023579 RID: 144761
 		public const int LevelViewLevelDesText = 16;
 
-		// Token: 0x0402824D RID: 164429
+		// Token: 0x0402357A RID: 144762
 		public const int LevelViewLevelBuffItem = 17;
 
-		// Token: 0x0402824E RID: 164430
+		// Token: 0x0402357B RID: 144763
 		public const int LevelViewFormationItem1 = 18;
 
-		// Token: 0x0402824F RID: 164431
+		// Token: 0x0402357C RID: 144764
 		public const int LevelViewFormationItem2 = 19;
 
-		// Token: 0x04028250 RID: 164432
+		// Token: 0x0402357D RID: 144765
 		public const int LevelViewLowLevelTipItem = 20;
 
-		// Token: 0x04028251 RID: 164433
+		// Token: 0x0402357E RID: 144766
 		public const int LevelViewConfirmBtn = 21;
 
-		// Token: 0x04028252 RID: 164434
+		// Token: 0x0402357F RID: 144767
 		public const int LevelViewRootItem = 22;
 
-		// Token: 0x04028253 RID: 164435
+		// Token: 0x04023580 RID: 144768
 		public const int LevelViewMonsterBtn = 23;
 
-		// Token: 0x04028254 RID: 164436
+		// Token: 0x04023581 RID: 144769
 		public const int LevelViewMonsterText = 24;
 
-		// Token: 0x04028255 RID: 164437
+		// Token: 0x04023582 RID: 144770
 		public const int SelectViewRewardRedDotItem = 25;
 	}
 }

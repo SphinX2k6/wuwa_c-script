@@ -8,14 +8,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002E31 RID: 11825
+// Token: 0x0200238D RID: 9101
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class CharacterController : ControllerBase
 {
-	// Token: 0x17002281 RID: 8833
-	// (get) Token: 0x06018E73 RID: 102003 RVA: 0x0066B4DC File Offset: 0x006696DC
+	// Token: 0x170022F4 RID: 8948
+	// (get) Token: 0x06016740 RID: 91968 RVA: 0x006913CC File Offset: 0x0068F5CC
 	protected override bool IsTickEvenPausedInternal
 	{
 		get
@@ -24,14 +24,14 @@ public class CharacterController : ControllerBase
 		}
 	}
 
-	// Token: 0x06018E74 RID: 102004 RVA: 0x0066B4DF File Offset: 0x006696DF
+	// Token: 0x06016741 RID: 91969 RVA: 0x006913CF File Offset: 0x0068F5CF
 	protected override bool OnInit()
 	{
 		this.LastDate = new DateTime?(DateTime.Now);
 		return true;
 	}
 
-	// Token: 0x06018E75 RID: 102005 RVA: 0x0066B4F2 File Offset: 0x006696F2
+	// Token: 0x06016742 RID: 91970 RVA: 0x006913E2 File Offset: 0x0068F5E2
 	protected override void OnTick(float deltaTime)
 	{
 		if (!this.IsQueueEmpty())
@@ -44,7 +44,7 @@ public class CharacterController : ControllerBase
 		}
 	}
 
-	// Token: 0x06018E76 RID: 102006 RVA: 0x0066B518 File Offset: 0x00669718
+	// Token: 0x06016743 RID: 91971 RVA: 0x00691408 File Offset: 0x0068F608
 	private UniTask TestMessage()
 	{
 		CharacterController.<TestMessage>d__6 <TestMessage>d__;
@@ -55,22 +55,22 @@ public class CharacterController : ControllerBase
 		return <TestMessage>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018E77 RID: 102007 RVA: 0x0066B55B File Offset: 0x0066975B
+	// Token: 0x06016744 RID: 91972 RVA: 0x0069144B File Offset: 0x0068F64B
 	private bool IsQueueEmpty()
 	{
 		return this.IsEmpty();
 	}
 
-	// Token: 0x06018E78 RID: 102008 RVA: 0x0066B563 File Offset: 0x00669763
+	// Token: 0x06016745 RID: 91973 RVA: 0x00691453 File Offset: 0x0068F653
 	private void ConsumeQueue()
 	{
 		this.AwakeEntity();
 	}
 
-	// Token: 0x06018E79 RID: 102009 RVA: 0x0066B56B File Offset: 0x0066976B
+	// Token: 0x06016746 RID: 91974 RVA: 0x0069145B File Offset: 0x0068F65B
 	public bool InitData<[Nullable(0)] T>(EntityHandle handle, T entity, [Nullable(2)] IEntityArgs args = null) where T : Entity
 	{
-		if (!EntitySystem.Instance.InitData<T>(entity, args))
+		if (!EntitySystem.Instance.InitData(entity, args))
 		{
 			CharacterModel.Instance.ClearHandle(handle);
 			return false;
@@ -78,10 +78,10 @@ public class CharacterController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06018E7A RID: 102010 RVA: 0x0066B589 File Offset: 0x00669789
+	// Token: 0x06016747 RID: 91975 RVA: 0x0069147E File Offset: 0x0068F67E
 	public bool Respawn<[Nullable(0)] T>(EntityHandle handle, T entity, int priority = 0, [Nullable(2)] IEntityArgs args = null) where T : Entity
 	{
-		if (!EntitySystem.Instance.Respawn<T>(entity, true, priority, args))
+		if (!EntitySystem.Instance.Respawn(entity, true, priority, args))
 		{
 			CharacterModel.Instance.ClearHandle(handle);
 			return false;
@@ -89,7 +89,7 @@ public class CharacterController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06018E7B RID: 102011 RVA: 0x0066B5AC File Offset: 0x006697AC
+	// Token: 0x06016748 RID: 91976 RVA: 0x006914A4 File Offset: 0x0068F6A4
 	public unsafe void AddEntityToAwakeQueue(EntityHandle handle, Action<bool> callback)
 	{
 		CharacterController.<>c__DisplayClass11_0 CS$<>8__locals1 = new CharacterController.<>c__DisplayClass11_0();
@@ -113,7 +113,7 @@ public class CharacterController : ControllerBase
 		CharacterModel.Instance.PushAwakeHandler(CS$<>8__locals1.handle, new Func<bool>(CS$<>8__locals1.<AddEntityToAwakeQueue>g__initHandle|0), new Func<bool>(CS$<>8__locals1.<AddEntityToAwakeQueue>g__startHandle|1));
 	}
 
-	// Token: 0x06018E7C RID: 102012 RVA: 0x0066B6D0 File Offset: 0x006698D0
+	// Token: 0x06016749 RID: 91977 RVA: 0x006915C8 File Offset: 0x0068F7C8
 	public unsafe bool InitEntity(EntityHandle handle)
 	{
 		if (!handle.Valid)
@@ -155,7 +155,7 @@ public class CharacterController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06018E7D RID: 102013 RVA: 0x0066B848 File Offset: 0x00669A48
+	// Token: 0x0601674A RID: 91978 RVA: 0x00691740 File Offset: 0x0068F940
 	public unsafe bool StartEntity(EntityHandle handle)
 	{
 		if (!handle.Valid)
@@ -197,7 +197,7 @@ public class CharacterController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06018E7E RID: 102014 RVA: 0x0066B9C4 File Offset: 0x00669BC4
+	// Token: 0x0601674B RID: 91979 RVA: 0x006918BC File Offset: 0x0068FABC
 	public void ActivateEntity(EntityHandle handle)
 	{
 		if (!handle.Valid)
@@ -209,7 +209,7 @@ public class CharacterController : ControllerBase
 		entity.SetTimeDilation(Time.Instance.TimeDilation);
 	}
 
-	// Token: 0x06018E7F RID: 102015 RVA: 0x0066B9FC File Offset: 0x00669BFC
+	// Token: 0x0601674C RID: 91980 RVA: 0x006918F4 File Offset: 0x0068FAF4
 	[NullableContext(2)]
 	public bool Destroy(EntityHandle handle)
 	{
@@ -227,10 +227,10 @@ public class CharacterController : ControllerBase
 		WorldEntity entity = handle.Entity;
 		handle.Entity = null;
 		CharacterModel.Instance.EntityPool.RemoveExternal(entity);
-		return EntitySystem.Instance.Destroy<WorldEntity>(entity);
+		return EntitySystem.Instance.Destroy(entity);
 	}
 
-	// Token: 0x06018E80 RID: 102016 RVA: 0x0066BA94 File Offset: 0x00669C94
+	// Token: 0x0601674D RID: 91981 RVA: 0x0069198C File Offset: 0x0068FB8C
 	[NullableContext(2)]
 	public bool DestroyToLru(EntityHandle handle)
 	{
@@ -252,7 +252,7 @@ public class CharacterController : ControllerBase
 		CharacterModel.Instance.ClearHandle(handle);
 		WorldEntity worldEntity = handle.Entity;
 		handle.Entity = null;
-		if (!EntitySystem.Instance.DeSpawn<Entity>(entity))
+		if (!EntitySystem.Instance.DeSpawn(entity))
 		{
 			CharacterModel.Instance.EntityPool.RemoveExternal(worldEntity);
 			return false;
@@ -274,19 +274,19 @@ public class CharacterController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06018E81 RID: 102017 RVA: 0x0066BB74 File Offset: 0x00669D74
+	// Token: 0x0601674E RID: 91982 RVA: 0x00691A6C File Offset: 0x0068FC6C
 	[return: Nullable(2)]
 	public EntityHandle CreateEntity(BigInteger componentsKey, CreateEntityData createData)
 	{
 		WorldEntity entity = CharacterModel.Instance.EntityPool.Create(componentsKey);
-		if (!EntitySystem.Instance.CreateExternal<WorldEntity>(entity, createData.Priority, new EntityArgs<CreateEntityData>(createData)))
+		if (!EntitySystem.Instance.CreateExternal(entity, createData.Priority, new EntityArgs<CreateEntityData>(createData)))
 		{
 			return null;
 		}
 		return CharacterModel.Instance.CreateHandle(entity);
 	}
 
-	// Token: 0x06018E82 RID: 102018 RVA: 0x0066BBC0 File Offset: 0x00669DC0
+	// Token: 0x0601674F RID: 91983 RVA: 0x00691AB8 File Offset: 0x0068FCB8
 	[NullableContext(2)]
 	public EntityHandle SpawnEntity(BigInteger componentsKey)
 	{
@@ -295,14 +295,14 @@ public class CharacterController : ControllerBase
 		{
 			return null;
 		}
-		if (!ObjectSystem.Instance.CreateExternal<WorldEntity>(worldEntity))
+		if (!ObjectSystem.Instance.CreateExternal(worldEntity))
 		{
 			return null;
 		}
 		return CharacterModel.Instance.CreateHandle(worldEntity);
 	}
 
-	// Token: 0x06018E83 RID: 102019 RVA: 0x0066BC00 File Offset: 0x00669E00
+	// Token: 0x06016750 RID: 91984 RVA: 0x00691AF8 File Offset: 0x0068FCF8
 	[NullableContext(2)]
 	public CharacterActorComponent GetCharacterActorComponent(Entity entity)
 	{
@@ -318,7 +318,7 @@ public class CharacterController : ControllerBase
 		return component;
 	}
 
-	// Token: 0x06018E84 RID: 102020 RVA: 0x0066BC3C File Offset: 0x00669E3C
+	// Token: 0x06016751 RID: 91985 RVA: 0x00691B34 File Offset: 0x0068FD34
 	[NullableContext(2)]
 	public CharacterActorComponent GetCharacterActorComponentById(int id)
 	{
@@ -335,7 +335,7 @@ public class CharacterController : ControllerBase
 		return component;
 	}
 
-	// Token: 0x06018E85 RID: 102021 RVA: 0x0066BC84 File Offset: 0x00669E84
+	// Token: 0x06016752 RID: 91986 RVA: 0x00691B7C File Offset: 0x0068FD7C
 	[NullableContext(2)]
 	public TsBaseCharacter GetCharacter(Entity entity)
 	{
@@ -351,7 +351,7 @@ public class CharacterController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x06018E86 RID: 102022 RVA: 0x0066BCC8 File Offset: 0x00669EC8
+	// Token: 0x06016753 RID: 91987 RVA: 0x00691BC0 File Offset: 0x0068FDC0
 	[NullableContext(2)]
 	public AActor GetActor(EntityHandle entity)
 	{
@@ -367,7 +367,7 @@ public class CharacterController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x06018E87 RID: 102023 RVA: 0x0066BCFC File Offset: 0x00669EFC
+	// Token: 0x06016754 RID: 91988 RVA: 0x00691BF4 File Offset: 0x0068FDF4
 	[return: Nullable(2)]
 	public AActor GetActorByEntity(Entity entity)
 	{
@@ -383,7 +383,7 @@ public class CharacterController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x06018E88 RID: 102024 RVA: 0x0066BD30 File Offset: 0x00669F30
+	// Token: 0x06016755 RID: 91989 RVA: 0x00691C28 File Offset: 0x0068FE28
 	[return: Nullable(2)]
 	public BaseActorComponent GetActorComponent(EntityHandle handle)
 	{
@@ -399,7 +399,7 @@ public class CharacterController : ControllerBase
 		return component;
 	}
 
-	// Token: 0x06018E89 RID: 102025 RVA: 0x0066BD68 File Offset: 0x00669F68
+	// Token: 0x06016756 RID: 91990 RVA: 0x00691C60 File Offset: 0x0068FE60
 	[return: Nullable(2)]
 	public TsBaseCharacter GetTsBaseCharacterByEntity(EntityHandle handle)
 	{
@@ -411,7 +411,7 @@ public class CharacterController : ControllerBase
 		return component.Actor;
 	}
 
-	// Token: 0x06018E8A RID: 102026 RVA: 0x0066BD80 File Offset: 0x00669F80
+	// Token: 0x06016757 RID: 91991 RVA: 0x00691C78 File Offset: 0x0068FE78
 	[return: Nullable(2)]
 	public TsBaseCharacter GetUeTsBaseCharacterByEntity(Entity entity)
 	{
@@ -423,13 +423,13 @@ public class CharacterController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x06018E8B RID: 102027 RVA: 0x0066BD9F File Offset: 0x00669F9F
+	// Token: 0x06016758 RID: 91992 RVA: 0x00691C97 File Offset: 0x0068FE97
 	public Entity GetEntityByUeTsBaseCharacter(TsBaseCharacter @char)
 	{
 		return @char.CharacterActorComponent.Entity;
 	}
 
-	// Token: 0x06018E8C RID: 102028 RVA: 0x0066BDAC File Offset: 0x00669FAC
+	// Token: 0x06016759 RID: 91993 RVA: 0x00691CA4 File Offset: 0x0068FEA4
 	public void SetTimeDilation(float timeDilation)
 	{
 		CreatureModel instance = CreatureModel.Instance;
@@ -449,13 +449,13 @@ public class CharacterController : ControllerBase
 		}
 	}
 
-	// Token: 0x06018E8D RID: 102029 RVA: 0x0066BE5C File Offset: 0x0066A05C
+	// Token: 0x0601675A RID: 91994 RVA: 0x00691D54 File Offset: 0x0068FF54
 	private bool IsEmpty()
 	{
 		return this.StartItem == null && CharacterModel.Instance.AwakeQueue.Size == 0;
 	}
 
-	// Token: 0x06018E8E RID: 102030 RVA: 0x0066BE80 File Offset: 0x0066A080
+	// Token: 0x0601675B RID: 91995 RVA: 0x00691D78 File Offset: 0x0068FF78
 	private void AwakeEntity()
 	{
 		CharacterModel instance = CharacterModel.Instance;
@@ -486,7 +486,7 @@ public class CharacterController : ControllerBase
 		}
 	}
 
-	// Token: 0x06018E8F RID: 102031 RVA: 0x0066BF0C File Offset: 0x0066A10C
+	// Token: 0x0601675C RID: 91996 RVA: 0x00691E04 File Offset: 0x00690004
 	[NullableContext(2)]
 	public void SortItem(EntityHandle handle)
 	{
@@ -505,7 +505,7 @@ public class CharacterController : ControllerBase
 		CharacterModel.Instance.SortItem(handle);
 	}
 
-	// Token: 0x06018E90 RID: 102032 RVA: 0x0066BF5C File Offset: 0x0066A15C
+	// Token: 0x0601675D RID: 91997 RVA: 0x00691E54 File Offset: 0x00690054
 	protected override bool OnChangeMode()
 	{
 		if (!GameModeModel.Instance.IsMulti)
@@ -522,38 +522,38 @@ public class CharacterController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06018E91 RID: 102033 RVA: 0x0066BFC8 File Offset: 0x0066A1C8
+	// Token: 0x0601675E RID: 91998 RVA: 0x00691EC0 File Offset: 0x006900C0
 	public void EnterSelfCenteredMode(ESelfCenteredMode mode, float timeDilation, float duration = -1f)
 	{
 		CharacterModel.Instance.EnterSelfCenteredMode(mode, timeDilation, duration);
 	}
 
-	// Token: 0x06018E92 RID: 102034 RVA: 0x0066BFD7 File Offset: 0x0066A1D7
+	// Token: 0x0601675F RID: 91999 RVA: 0x00691ECF File Offset: 0x006900CF
 	public void ExitSelfCenteredMode(ESelfCenteredMode mode)
 	{
 		CharacterModel.Instance.ExitSelfCenteredMode(mode);
 	}
 
-	// Token: 0x06018E93 RID: 102035 RVA: 0x0066BFE4 File Offset: 0x0066A1E4
+	// Token: 0x06016760 RID: 92000 RVA: 0x00691EDC File Offset: 0x006900DC
 	public void ExitSkillSelfCenteredMode()
 	{
 		CharacterModel.Instance.ExitSkillSelfCenteredMode();
 	}
 
-	// Token: 0x06018E94 RID: 102036 RVA: 0x0066BFF0 File Offset: 0x0066A1F0
+	// Token: 0x06016761 RID: 92001 RVA: 0x00691EE8 File Offset: 0x006900E8
 	public void ExitAllSelfCenteredMode()
 	{
 		CharacterModel.Instance.ExitAllSelfCenteredMode();
 	}
 
-	// Token: 0x06018E95 RID: 102037 RVA: 0x0066BFFC File Offset: 0x0066A1FC
+	// Token: 0x06016762 RID: 92002 RVA: 0x00691EF4 File Offset: 0x006900F4
 	public bool IsSelfCenteredModeEnabled(ESelfCenteredMode mode)
 	{
 		return CharacterModel.Instance.IsSelfCenteredModeEnabled(mode);
 	}
 
-	// Token: 0x17002282 RID: 8834
-	// (get) Token: 0x06018E96 RID: 102038 RVA: 0x0066C009 File Offset: 0x0066A209
+	// Token: 0x170022F5 RID: 8949
+	// (get) Token: 0x06016763 RID: 92003 RVA: 0x00691F01 File Offset: 0x00690101
 	public static CharacterController Instance
 	{
 		get
@@ -562,7 +562,7 @@ public class CharacterController : ControllerBase
 		}
 	}
 
-	// Token: 0x06018E97 RID: 102039 RVA: 0x0066C010 File Offset: 0x0066A210
+	// Token: 0x06016764 RID: 92004 RVA: 0x00691F08 File Offset: 0x00690108
 	public static CharacterController GetOrCreateInstance()
 	{
 		if (CharacterController._Instance == null)
@@ -572,7 +572,7 @@ public class CharacterController : ControllerBase
 		return CharacterController._Instance;
 	}
 
-	// Token: 0x06018E98 RID: 102040 RVA: 0x0066C024 File Offset: 0x0066A224
+	// Token: 0x06016765 RID: 92005 RVA: 0x00691F1C File Offset: 0x0069011C
 	public static bool CreateInstance()
 	{
 		if (CharacterController._Instance != null)
@@ -583,24 +583,24 @@ public class CharacterController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06018E99 RID: 102041 RVA: 0x0066C03A File Offset: 0x0066A23A
+	// Token: 0x06016766 RID: 92006 RVA: 0x00691F32 File Offset: 0x00690132
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06018E9A RID: 102042 RVA: 0x0066C03C File Offset: 0x0066A23C
+	// Token: 0x06016767 RID: 92007 RVA: 0x00691F34 File Offset: 0x00690134
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterController._Instance = null;
 	}
 
-	// Token: 0x06018E9B RID: 102043 RVA: 0x0066C044 File Offset: 0x0066A244
+	// Token: 0x06016768 RID: 92008 RVA: 0x00691F3C File Offset: 0x0069013C
 	static CharacterController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterController.CreateStaticDefaultValue), new Action(CharacterController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400BAE5 RID: 47845
+	// Token: 0x0400BE73 RID: 48755
 	[Nullable(new byte[]
 	{
 		0,
@@ -610,10 +610,10 @@ public class CharacterController : ControllerBase
 	})]
 	private ValueTuple<EntityHandle, Func<bool>, Func<bool>>? StartItem;
 
-	// Token: 0x0400BAE6 RID: 47846
+	// Token: 0x0400BE74 RID: 48756
 	private DateTime? LastDate;
 
-	// Token: 0x0400BAE7 RID: 47847
+	// Token: 0x0400BE75 RID: 48757
 	[Nullable(2)]
 	private static CharacterController _Instance;
 }

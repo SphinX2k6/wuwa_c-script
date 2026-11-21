@@ -1,27 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002EE7 RID: 12007
+// Token: 0x0200243A RID: 9274
 [NullableContext(1)]
 [Nullable(0)]
 public class TagContainer : IClear
 {
-	// Token: 0x06019A5A RID: 105050 RVA: 0x006AA71C File Offset: 0x006A891C
+	// Token: 0x0601735D RID: 95069 RVA: 0x006D088C File Offset: 0x006CEA8C
 	public IEnumerable<int> GetAllExactTags()
 	{
 		return this.ExactTags.Keys;
 	}
 
-	// Token: 0x06019A5B RID: 105051 RVA: 0x006AA729 File Offset: 0x006A8929
+	// Token: 0x0601735E RID: 95070 RVA: 0x006D0899 File Offset: 0x006CEA99
 	public IEnumerable<ETagChannel> GetAllChannels()
 	{
 		return this.RawTags.Keys;
 	}
 
-	// Token: 0x06019A5C RID: 105052 RVA: 0x006AA738 File Offset: 0x006A8938
+	// Token: 0x0601735F RID: 95071 RVA: 0x006D08A8 File Offset: 0x006CEAA8
 	[NullableContext(2)]
 	public void BindTsTagContainer(UBaseAbilitySystemComponent tsAbilityComponent)
 	{
@@ -40,7 +39,7 @@ public class TagContainer : IClear
 		}
 	}
 
-	// Token: 0x06019A5D RID: 105053 RVA: 0x006AA7C0 File Offset: 0x006A89C0
+	// Token: 0x06017360 RID: 95072 RVA: 0x006D0930 File Offset: 0x006CEB30
 	public bool Clear()
 	{
 		this.ExactTags.Clear();
@@ -52,13 +51,13 @@ public class TagContainer : IClear
 		return true;
 	}
 
-	// Token: 0x06019A5E RID: 105054 RVA: 0x006AA80C File Offset: 0x006A8A0C
+	// Token: 0x06017361 RID: 95073 RVA: 0x006D097C File Offset: 0x006CEB7C
 	public bool ClearObject()
 	{
 		return this.Clear();
 	}
 
-	// Token: 0x06019A5F RID: 105055 RVA: 0x006AA814 File Offset: 0x006A8A14
+	// Token: 0x06017362 RID: 95074 RVA: 0x006D0984 File Offset: 0x006CEB84
 	[return: TupleElementNames(new string[]
 	{
 		"tagId",
@@ -127,7 +126,7 @@ public class TagContainer : IClear
 		return list.ToArray();
 	}
 
-	// Token: 0x06019A60 RID: 105056 RVA: 0x006AA934 File Offset: 0x006A8B34
+	// Token: 0x06017363 RID: 95075 RVA: 0x006D0AA4 File Offset: 0x006CECA4
 	private void InvokeEvents([TupleElementNames(new string[]
 	{
 		"tagId",
@@ -154,7 +153,9 @@ public class TagContainer : IClear
 			int item5 = valueTuple.Item5;
 			if (item4)
 			{
-				foreach (TAnyTagChangeCallback tanyTagChangeCallback in this.AnyExactTagListeners.ToArray<TAnyTagChangeCallback>())
+				TAnyTagChangeCallback[] array = new TAnyTagChangeCallback[this.AnyExactTagListeners.Count];
+				this.AnyExactTagListeners.CopyTo(array);
+				foreach (TAnyTagChangeCallback tanyTagChangeCallback in array)
 				{
 					try
 					{
@@ -172,7 +173,9 @@ public class TagContainer : IClear
 					}
 				}
 			}
-			foreach (TAnyTagChangeCallback tanyTagChangeCallback2 in this.AnyTagListeners.ToArray<TAnyTagChangeCallback>())
+			TAnyTagChangeCallback[] array3 = new TAnyTagChangeCallback[this.AnyTagListeners.Count];
+			this.AnyTagListeners.CopyTo(array3);
+			foreach (TAnyTagChangeCallback tanyTagChangeCallback2 in array3)
 			{
 				try
 				{
@@ -192,7 +195,7 @@ public class TagContainer : IClear
 		}
 	}
 
-	// Token: 0x06019A61 RID: 105057 RVA: 0x006AAA84 File Offset: 0x006A8C84
+	// Token: 0x06017364 RID: 95076 RVA: 0x006D0C24 File Offset: 0x006CEE24
 	public void AddExactTag(ETagChannel tagChannel, int tagId)
 	{
 		Dictionary<int, int> dictionary;
@@ -206,7 +209,7 @@ public class TagContainer : IClear
 		this.InvokeEvents(callbackList);
 	}
 
-	// Token: 0x06019A62 RID: 105058 RVA: 0x006AAAD8 File Offset: 0x006A8CD8
+	// Token: 0x06017365 RID: 95077 RVA: 0x006D0C78 File Offset: 0x006CEE78
 	public void RemoveTag(ETagChannel tagChannel, int tagId)
 	{
 		Dictionary<int, int> dictionary;
@@ -234,7 +237,10 @@ public class TagContainer : IClear
 				ValueTuple<int, int, int, bool, int>[] array2 = this.ModifyTagInner(num2, -valueOrDefault2);
 				if (array2 != null)
 				{
-					array = array.Concat(array2).ToArray<ValueTuple<int, int, int, bool, int>>();
+					ValueTuple<int, int, int, bool, int>[] array3 = new ValueTuple<int, int, int, bool, int>[array.Length + array2.Length];
+					array.CopyTo(array3, 0);
+					array2.CopyTo(array3, array.Length);
+					array = array3;
 				}
 			}
 		}
@@ -245,7 +251,7 @@ public class TagContainer : IClear
 		this.InvokeEvents(array);
 	}
 
-	// Token: 0x06019A63 RID: 105059 RVA: 0x006AAC10 File Offset: 0x006A8E10
+	// Token: 0x06017366 RID: 95078 RVA: 0x006D0DC8 File Offset: 0x006CEFC8
 	public void RemoveExactTag(ETagChannel tagChannel, int tagId)
 	{
 		Dictionary<int, int> dictionary;
@@ -267,7 +273,7 @@ public class TagContainer : IClear
 		this.InvokeEvents(callbackList);
 	}
 
-	// Token: 0x06019A64 RID: 105060 RVA: 0x006AAC6C File Offset: 0x006A8E6C
+	// Token: 0x06017367 RID: 95079 RVA: 0x006D0E24 File Offset: 0x006CF024
 	public void UpdateExactTag(ETagChannel tagChannel, int tagId, int deltaCount)
 	{
 		Dictionary<int, int> dictionary;
@@ -298,19 +304,19 @@ public class TagContainer : IClear
 		this.InvokeEvents(callbackList);
 	}
 
-	// Token: 0x06019A65 RID: 105061 RVA: 0x006AACF3 File Offset: 0x006A8EF3
+	// Token: 0x06017368 RID: 95080 RVA: 0x006D0EAB File Offset: 0x006CF0AB
 	public bool ContainsTag(int tagId)
 	{
 		return this.ExactTags.ContainsKey(tagId) || this.ParentTags.ContainsKey(tagId);
 	}
 
-	// Token: 0x06019A66 RID: 105062 RVA: 0x006AAD11 File Offset: 0x006A8F11
+	// Token: 0x06017369 RID: 95081 RVA: 0x006D0EC9 File Offset: 0x006CF0C9
 	public bool ContainsExactTag(int tagId)
 	{
 		return this.ExactTags.ContainsKey(tagId);
 	}
 
-	// Token: 0x06019A67 RID: 105063 RVA: 0x006AAD20 File Offset: 0x006A8F20
+	// Token: 0x0601736A RID: 95082 RVA: 0x006D0ED8 File Offset: 0x006CF0D8
 	public int GetRawTagCount(ETagChannel channel, int tagId)
 	{
 		Dictionary<int, int> dictionary;
@@ -321,67 +327,109 @@ public class TagContainer : IClear
 		return 0;
 	}
 
-	// Token: 0x06019A68 RID: 105064 RVA: 0x006AAD47 File Offset: 0x006A8F47
+	// Token: 0x0601736B RID: 95083 RVA: 0x006D0EFF File Offset: 0x006CF0FF
 	public int GetTagCount(int tagId)
 	{
 		return this.ExactTags.GetValueOrDefault(tagId, 0) + this.ParentTags.GetValueOrDefault(tagId, 0);
 	}
 
-	// Token: 0x06019A69 RID: 105065 RVA: 0x006AAD64 File Offset: 0x006A8F64
+	// Token: 0x0601736C RID: 95084 RVA: 0x006D0F1C File Offset: 0x006CF11C
 	public int GetExactTagCount(int tagId)
 	{
 		return this.ExactTags.GetValueOrDefault(tagId, 0);
 	}
 
-	// Token: 0x06019A6A RID: 105066 RVA: 0x006AAD73 File Offset: 0x006A8F73
+	// Token: 0x0601736D RID: 95085 RVA: 0x006D0F2B File Offset: 0x006CF12B
 	public void AddAnyTagListener(TAnyTagChangeCallback listener)
 	{
 		this.AnyTagListeners.Add(listener);
 	}
 
-	// Token: 0x06019A6B RID: 105067 RVA: 0x006AAD82 File Offset: 0x006A8F82
+	// Token: 0x0601736E RID: 95086 RVA: 0x006D0F3A File Offset: 0x006CF13A
 	public void RemoveAnyTagListener(TAnyTagChangeCallback listener)
 	{
 		this.AnyTagListeners.Remove(listener);
 	}
 
-	// Token: 0x06019A6C RID: 105068 RVA: 0x006AAD91 File Offset: 0x006A8F91
+	// Token: 0x0601736F RID: 95087 RVA: 0x006D0F49 File Offset: 0x006CF149
 	public void AddAnyExactTagListener(TAnyTagChangeCallback listener)
 	{
 		this.AnyExactTagListeners.Add(listener);
 	}
 
-	// Token: 0x06019A6D RID: 105069 RVA: 0x006AADA0 File Offset: 0x006A8FA0
+	// Token: 0x06017370 RID: 95088 RVA: 0x006D0F58 File Offset: 0x006CF158
 	public void RemoveExactAnyTagListener(TAnyTagChangeCallback listener)
 	{
 		this.AnyExactTagListeners.Remove(listener);
 	}
 
-	// Token: 0x06019A6E RID: 105070 RVA: 0x006AADB0 File Offset: 0x006A8FB0
+	// Token: 0x06017371 RID: 95089 RVA: 0x006D0F68 File Offset: 0x006CF168
 	public string GetDebugString()
 	{
-		return "汇总tag:\n" + this.GetExactTagsDebugString() + "\n\n父tag:\n" + string.Join("", from s in this.ParentTags.Select(delegate(KeyValuePair<int, int> kvp)
+		string text = "汇总tag:\n";
+		text += this.GetExactTagsDebugString();
+		text += "\n\n父tag:\n";
+		List<ValueTuple<string, int>> list = new List<ValueTuple<string, int>>();
+		int num = 0;
+		foreach (KeyValuePair<int, int> keyValuePair in this.ParentTags)
 		{
+			List<ValueTuple<string, int>> list2 = list;
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(4, 2);
-			defaultInterpolatedStringHandler.AppendFormatted(GameplayTagUtils.GetNameByTagId(kvp.Key));
+			defaultInterpolatedStringHandler.AppendFormatted(GameplayTagUtils.GetNameByTagId(keyValuePair.Key));
 			defaultInterpolatedStringHandler.AppendLiteral(" * ");
-			defaultInterpolatedStringHandler.AppendFormatted<int>(kvp.Value);
+			defaultInterpolatedStringHandler.AppendFormatted<int>(keyValuePair.Value);
 			defaultInterpolatedStringHandler.AppendLiteral("\n");
-			return defaultInterpolatedStringHandler.ToStringAndClear();
-		})
-		orderby s
-		select s);
+			list2.Add(new ValueTuple<string, int>(defaultInterpolatedStringHandler.ToStringAndClear(), num));
+			num++;
+		}
+		list.Sort(delegate([TupleElementNames(new string[]
+		{
+			"text",
+			"order"
+		})] [Nullable(new byte[]
+		{
+			0,
+			1
+		})] ValueTuple<string, int> left, [TupleElementNames(new string[]
+		{
+			"text",
+			"order"
+		})] [Nullable(new byte[]
+		{
+			0,
+			1
+		})] ValueTuple<string, int> right)
+		{
+			int num2 = Comparer<string>.Default.Compare(left.Item1, right.Item1);
+			if (num2 == 0)
+			{
+				return left.Item2.CompareTo(right.Item2);
+			}
+			return num2;
+		});
+		text += string.Join("", list.ConvertAll<string>(([TupleElementNames(new string[]
+		{
+			"text",
+			"order"
+		})] [Nullable(new byte[]
+		{
+			0,
+			1
+		})] ValueTuple<string, int> item) => item.Item1));
+		return text;
 	}
 
-	// Token: 0x06019A6F RID: 105071 RVA: 0x006AAE34 File Offset: 0x006A9034
+	// Token: 0x06017372 RID: 95090 RVA: 0x006D1094 File Offset: 0x006CF294
 	public string GetExactTagsDebugString()
 	{
-		return string.Join("", from s in this.ExactTags.Select(delegate(KeyValuePair<int, int> kvp)
+		List<ValueTuple<string, int>> list = new List<ValueTuple<string, int>>();
+		int num = 0;
+		foreach (KeyValuePair<int, int> keyValuePair in this.ExactTags)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(4, 2);
-			defaultInterpolatedStringHandler.AppendFormatted(GameplayTagUtils.GetNameByTagId(kvp.Key));
+			defaultInterpolatedStringHandler.AppendFormatted(GameplayTagUtils.GetNameByTagId(keyValuePair.Key));
 			defaultInterpolatedStringHandler.AppendLiteral(" x ");
-			defaultInterpolatedStringHandler.AppendFormatted<int>(kvp.Value);
+			defaultInterpolatedStringHandler.AppendFormatted<int>(keyValuePair.Value);
 			defaultInterpolatedStringHandler.AppendLiteral("(");
 			string text = defaultInterpolatedStringHandler.ToStringAndClear();
 			foreach (ETagChannel key in this.RawTags.Keys)
@@ -389,7 +437,7 @@ public class TagContainer : IClear
 				Dictionary<int, int> dictionary;
 				if (this.RawTags.TryGetValue(key, out dictionary))
 				{
-					int valueOrDefault = dictionary.GetValueOrDefault(kvp.Key, 0);
+					int valueOrDefault = dictionary.GetValueOrDefault(keyValuePair.Key, 0);
 					if (valueOrDefault != 0)
 					{
 						string str = text;
@@ -401,13 +449,46 @@ public class TagContainer : IClear
 					}
 				}
 			}
-			return text + ")\n";
-		})
-		orderby s
-		select s);
+			list.Add(new ValueTuple<string, int>(text + ")\n", num));
+			num++;
+		}
+		list.Sort(delegate([TupleElementNames(new string[]
+		{
+			"text",
+			"order"
+		})] [Nullable(new byte[]
+		{
+			0,
+			1
+		})] ValueTuple<string, int> left, [TupleElementNames(new string[]
+		{
+			"text",
+			"order"
+		})] [Nullable(new byte[]
+		{
+			0,
+			1
+		})] ValueTuple<string, int> right)
+		{
+			int num2 = Comparer<string>.Default.Compare(left.Item1, right.Item1);
+			if (num2 == 0)
+			{
+				return left.Item2.CompareTo(right.Item2);
+			}
+			return num2;
+		});
+		return string.Join("", list.ConvertAll<string>(([TupleElementNames(new string[]
+		{
+			"text",
+			"order"
+		})] [Nullable(new byte[]
+		{
+			0,
+			1
+		})] ValueTuple<string, int> item) => item.Item1));
 	}
 
-	// Token: 0x06019A70 RID: 105072 RVA: 0x006AAE88 File Offset: 0x006A9088
+	// Token: 0x06017373 RID: 95091 RVA: 0x006D126C File Offset: 0x006CF46C
 	public bool HasAnyTag(TagContainer otherContainer)
 	{
 		foreach (int tagId in otherContainer.GetAllExactTags())
@@ -420,7 +501,7 @@ public class TagContainer : IClear
 		return false;
 	}
 
-	// Token: 0x06019A71 RID: 105073 RVA: 0x006AAEE0 File Offset: 0x006A90E0
+	// Token: 0x06017374 RID: 95092 RVA: 0x006D12C4 File Offset: 0x006CF4C4
 	public bool HasAllTag(TagContainer otherContainer)
 	{
 		foreach (int tagId in otherContainer.GetAllExactTags())
@@ -433,7 +514,7 @@ public class TagContainer : IClear
 		return true;
 	}
 
-	// Token: 0x06019A72 RID: 105074 RVA: 0x006AAF38 File Offset: 0x006A9138
+	// Token: 0x06017375 RID: 95093 RVA: 0x006D131C File Offset: 0x006CF51C
 	public bool NotHasAnyTag(TagContainer otherContainer)
 	{
 		foreach (int tagId in otherContainer.GetAllExactTags())
@@ -446,7 +527,7 @@ public class TagContainer : IClear
 		return false;
 	}
 
-	// Token: 0x06019A73 RID: 105075 RVA: 0x006AAF90 File Offset: 0x006A9190
+	// Token: 0x06017376 RID: 95094 RVA: 0x006D1374 File Offset: 0x006CF574
 	public bool NotHasAllTag(TagContainer otherContainer)
 	{
 		foreach (int tagId in otherContainer.GetAllExactTags())
@@ -459,7 +540,7 @@ public class TagContainer : IClear
 		return true;
 	}
 
-	// Token: 0x06019A75 RID: 105077 RVA: 0x006AB028 File Offset: 0x006A9228
+	// Token: 0x06017378 RID: 95096 RVA: 0x006D140C File Offset: 0x006CF60C
 	// Note: this type is marked as 'beforefieldinit'.
 	static TagContainer()
 	{
@@ -479,46 +560,46 @@ public class TagContainer : IClear
 		TagContainer.UpdateExactTagStat = Stat.Create("TagContainer.UpdateExactTag", "STATGROUP_KuroBattle", "");
 	}
 
-	// Token: 0x0400C028 RID: 49192
+	// Token: 0x0400C3C3 RID: 50115
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<ETagChannel, string> channelDebugName;
 
-	// Token: 0x0400C029 RID: 49193
+	// Token: 0x0400C3C4 RID: 50116
 	private readonly Dictionary<ETagChannel, Dictionary<int, int>> RawTags = new Dictionary<ETagChannel, Dictionary<int, int>>();
 
-	// Token: 0x0400C02A RID: 49194
+	// Token: 0x0400C3C5 RID: 50117
 	private readonly Dictionary<int, int> ExactTags = new Dictionary<int, int>();
 
-	// Token: 0x0400C02B RID: 49195
+	// Token: 0x0400C3C6 RID: 50118
 	private readonly Dictionary<int, int> ParentTags = new Dictionary<int, int>();
 
-	// Token: 0x0400C02C RID: 49196
+	// Token: 0x0400C3C7 RID: 50119
 	private readonly HashSet<TAnyTagChangeCallback> AnyTagListeners = new HashSet<TAnyTagChangeCallback>();
 
-	// Token: 0x0400C02D RID: 49197
+	// Token: 0x0400C3C8 RID: 50120
 	private readonly HashSet<TAnyTagChangeCallback> AnyExactTagListeners = new HashSet<TAnyTagChangeCallback>();
 
-	// Token: 0x0400C02E RID: 49198
+	// Token: 0x0400C3C9 RID: 50121
 	[Nullable(2)]
 	private UBaseAbilitySystemComponent UeContainer;
 
-	// Token: 0x0400C02F RID: 49199
+	// Token: 0x0400C3CA RID: 50122
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ModifyTagInnerStat;
 
-	// Token: 0x0400C030 RID: 49200
+	// Token: 0x0400C3CB RID: 50123
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ModifyTagInnerModifyCountStat;
 
-	// Token: 0x0400C031 RID: 49201
+	// Token: 0x0400C3CC RID: 50124
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ModifyTagInnerUpdateUeStat;
 
-	// Token: 0x0400C032 RID: 49202
+	// Token: 0x0400C3CD RID: 50125
 	[StaticVariableRuleIgnore]
 	private static readonly Stat InvokeEventsStat;
 
-	// Token: 0x0400C033 RID: 49203
+	// Token: 0x0400C3CE RID: 50126
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateExactTagStat;
 }

@@ -4,29 +4,29 @@ using CSharpScript.Game.Module.Map.Marks.MarkItem;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047CB RID: 18379
+	// Token: 0x020036FC RID: 14076
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NavigateIconItemData : INavigateIconItemData
 	{
-		// Token: 0x170078A7 RID: 30887
-		// (get) Token: 0x060302AA RID: 197290 RVA: 0x00B29A22 File Offset: 0x00B27C22
-		// (set) Token: 0x060302AB RID: 197291 RVA: 0x00B29A2A File Offset: 0x00B27C2A
+		// Token: 0x17004B64 RID: 19300
+		// (get) Token: 0x06024A7A RID: 150138 RVA: 0x00A598BC File Offset: 0x00A57ABC
+		// (set) Token: 0x06024A7B RID: 150139 RVA: 0x00A598C4 File Offset: 0x00A57AC4
 		public int Id { get; set; }
 
-		// Token: 0x170078A8 RID: 30888
-		// (get) Token: 0x060302AC RID: 197292 RVA: 0x00B29A33 File Offset: 0x00B27C33
-		// (set) Token: 0x060302AD RID: 197293 RVA: 0x00B29A3B File Offset: 0x00B27C3B
+		// Token: 0x17004B65 RID: 19301
+		// (get) Token: 0x06024A7C RID: 150140 RVA: 0x00A598CD File Offset: 0x00A57ACD
+		// (set) Token: 0x06024A7D RID: 150141 RVA: 0x00A598D5 File Offset: 0x00A57AD5
 		public string IconId { get; set; }
 
-		// Token: 0x170078A9 RID: 30889
-		// (get) Token: 0x060302AE RID: 197294 RVA: 0x00B29A44 File Offset: 0x00B27C44
-		// (set) Token: 0x060302AF RID: 197295 RVA: 0x00B29A4C File Offset: 0x00B27C4C
+		// Token: 0x17004B66 RID: 19302
+		// (get) Token: 0x06024A7E RID: 150142 RVA: 0x00A598DE File Offset: 0x00A57ADE
+		// (set) Token: 0x06024A7F RID: 150143 RVA: 0x00A598E6 File Offset: 0x00A57AE6
 		public string IconPath { get; set; }
 
-		// Token: 0x170078AA RID: 30890
-		// (get) Token: 0x060302B0 RID: 197296 RVA: 0x00B29A55 File Offset: 0x00B27C55
-		// (set) Token: 0x060302B1 RID: 197297 RVA: 0x00B29A5D File Offset: 0x00B27C5D
+		// Token: 0x17004B67 RID: 19303
+		// (get) Token: 0x06024A80 RID: 150144 RVA: 0x00A598EF File Offset: 0x00A57AEF
+		// (set) Token: 0x06024A81 RID: 150145 RVA: 0x00A598F7 File Offset: 0x00A57AF7
 		[Nullable(new byte[]
 		{
 			1,
@@ -42,9 +42,9 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			2
 		})] set; }
 
-		// Token: 0x170078AB RID: 30891
-		// (get) Token: 0x060302B2 RID: 197298 RVA: 0x00B29A66 File Offset: 0x00B27C66
-		// (set) Token: 0x060302B3 RID: 197299 RVA: 0x00B29A6E File Offset: 0x00B27C6E
+		// Token: 0x17004B68 RID: 19304
+		// (get) Token: 0x06024A82 RID: 150146 RVA: 0x00A59900 File Offset: 0x00A57B00
+		// (set) Token: 0x06024A83 RID: 150147 RVA: 0x00A59908 File Offset: 0x00A57B08
 		public MarkItem MarkItem { get; set; }
 	}
 }

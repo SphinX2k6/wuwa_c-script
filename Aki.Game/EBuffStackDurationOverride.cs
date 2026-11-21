@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002E88 RID: 11912
+// Token: 0x020023DA RID: 9178
 public enum EBuffStackDurationOverride
 {
-	// Token: 0x0400BDA1 RID: 48545
+	// Token: 0x0400C138 RID: 49464
 	Default,
-	// Token: 0x0400BDA2 RID: 48546
+	// Token: 0x0400C139 RID: 49465
 	ForceNoRefresh
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011D5 RID: 4565
+	// Token: 0x02001311 RID: 4881
 	public class ITrapDefenseConditionStepPreview_SetValue
 	{
-		// Token: 0x04003E39 RID: 15929
+		// Token: 0x040041A7 RID: 16807
 		public ETrapDefenseConditionStep Type;
 	}
 }

@@ -13,12 +13,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200587B RID: 22651
+	// Token: 0x02004853 RID: 18515
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonModel : ModelBase
 	{
-		// Token: 0x06039A2C RID: 236076 RVA: 0x00DB252F File Offset: 0x00DB072F
+		// Token: 0x0602E94E RID: 190798 RVA: 0x00D0143B File Offset: 0x00CFF63B
 		protected override bool OnLeaveLevel()
 		{
 			InstanceDungeonInfo instanceDungeonInfo = this.InstanceDungeonInfo;
@@ -26,55 +26,61 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			{
 				instanceDungeonInfo.SetTrack(false, ESetTrackReason.None);
 			}
-			this.InstanceFinishSuccess = EInstanceFinishState.UnFinish;
-			this.InstanceRewardHaveTake = false;
+			this.ResetInstanceRoundState();
 			this.ClearInstanceDungeonInfo();
 			return true;
 		}
 
-		// Token: 0x06039A2D RID: 236077 RVA: 0x00DB2559 File Offset: 0x00DB0759
+		// Token: 0x0602E94F RID: 190799 RVA: 0x00D0145D File Offset: 0x00CFF65D
+		internal void ResetInstanceRoundState()
+		{
+			this.InstanceFinishSuccess = EInstanceFinishState.UnFinish;
+			this.InstanceRewardHaveTake = false;
+		}
+
+		// Token: 0x0602E950 RID: 190800 RVA: 0x00D0146D File Offset: 0x00CFF66D
 		public int GetInstanceId()
 		{
 			return this.InstanceId;
 		}
 
-		// Token: 0x06039A2E RID: 236078 RVA: 0x00DB2561 File Offset: 0x00DB0761
+		// Token: 0x0602E951 RID: 190801 RVA: 0x00D01475 File Offset: 0x00CFF675
 		public void SetInstanceId(int instanceId)
 		{
 			this.InstanceId = instanceId;
 		}
 
-		// Token: 0x17008A79 RID: 35449
-		// (get) Token: 0x06039A2F RID: 236079 RVA: 0x00DB256A File Offset: 0x00DB076A
-		// (set) Token: 0x06039A30 RID: 236080 RVA: 0x00DB2572 File Offset: 0x00DB0772
+		// Token: 0x17005E45 RID: 24133
+		// (get) Token: 0x0602E952 RID: 190802 RVA: 0x00D0147E File Offset: 0x00CFF67E
+		// (set) Token: 0x0602E953 RID: 190803 RVA: 0x00D01486 File Offset: 0x00CFF686
 		public bool InstanceContinue { get; set; }
 
-		// Token: 0x06039A31 RID: 236081 RVA: 0x00DB257B File Offset: 0x00DB077B
+		// Token: 0x0602E954 RID: 190804 RVA: 0x00D0148F File Offset: 0x00CFF68F
 		public void SetMatchTeamInfo(MatchTeamInfo matchTeamInfo)
 		{
 			this.MatchTeamInfo = matchTeamInfo;
 		}
 
-		// Token: 0x06039A32 RID: 236082 RVA: 0x00DB2584 File Offset: 0x00DB0784
+		// Token: 0x0602E955 RID: 190805 RVA: 0x00D01498 File Offset: 0x00CFF698
 		[NullableContext(2)]
 		public MatchTeamInfo GetMatchTeamInfo()
 		{
 			return this.MatchTeamInfo;
 		}
 
-		// Token: 0x06039A33 RID: 236083 RVA: 0x00DB258C File Offset: 0x00DB078C
+		// Token: 0x0602E956 RID: 190806 RVA: 0x00D014A0 File Offset: 0x00CFF6A0
 		public void SetMatchTeamHost(int id)
 		{
 			this.MatchTeamInfo.HostId = id;
 		}
 
-		// Token: 0x06039A34 RID: 236084 RVA: 0x00DB259A File Offset: 0x00DB079A
+		// Token: 0x0602E957 RID: 190807 RVA: 0x00D014AE File Offset: 0x00CFF6AE
 		public void SetMatchTeamState(MatchTeamState state)
 		{
 			this.MatchTeamInfo.TeamState = state;
 		}
 
-		// Token: 0x06039A35 RID: 236085 RVA: 0x00DB25A8 File Offset: 0x00DB07A8
+		// Token: 0x0602E958 RID: 190808 RVA: 0x00D014BC File Offset: 0x00CFF6BC
 		[NullableContext(2)]
 		public string GetMatchTeamName(int playerId)
 		{
@@ -94,7 +100,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return null;
 		}
 
-		// Token: 0x06039A36 RID: 236086 RVA: 0x00DB2634 File Offset: 0x00DB0834
+		// Token: 0x0602E959 RID: 190809 RVA: 0x00D01548 File Offset: 0x00CFF748
 		[NullableContext(2)]
 		public string GetMatchTeamOnlineId(int playerId)
 		{
@@ -118,7 +124,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return null;
 		}
 
-		// Token: 0x06039A37 RID: 236087 RVA: 0x00DB26D4 File Offset: 0x00DB08D4
+		// Token: 0x0602E95A RID: 190810 RVA: 0x00D015E8 File Offset: 0x00CFF7E8
 		public List<int> GetMatchTeamRoleCfgId(int playerId)
 		{
 			List<int> list = new List<int>();
@@ -135,7 +141,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return list;
 		}
 
-		// Token: 0x06039A38 RID: 236088 RVA: 0x00DB2774 File Offset: 0x00DB0974
+		// Token: 0x0602E95B RID: 190811 RVA: 0x00D01688 File Offset: 0x00CFF888
 		public bool IsMatchTeamHost()
 		{
 			int playerId = CreatureModel.Instance.GetPlayerId();
@@ -144,19 +150,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return playerId == num.GetValueOrDefault() & num != null;
 		}
 
-		// Token: 0x06039A39 RID: 236089 RVA: 0x00DB27BC File Offset: 0x00DB09BC
+		// Token: 0x0602E95C RID: 190812 RVA: 0x00D016D0 File Offset: 0x00CFF8D0
 		public bool IsTeamNotFull()
 		{
 			return this.GetTeamSize() < 3;
 		}
 
-		// Token: 0x06039A3A RID: 236090 RVA: 0x00DB27C7 File Offset: 0x00DB09C7
+		// Token: 0x0602E95D RID: 190813 RVA: 0x00D016DB File Offset: 0x00CFF8DB
 		public int GetNeedMatchSize()
 		{
 			return 3 - this.GetTeamSize();
 		}
 
-		// Token: 0x06039A3B RID: 236091 RVA: 0x00DB27D4 File Offset: 0x00DB09D4
+		// Token: 0x0602E95E RID: 190814 RVA: 0x00D016E8 File Offset: 0x00CFF8E8
 		private int GetTeamSize()
 		{
 			RepeatedField<MatchPlayerInfo> playerInfos = this.MatchTeamInfo.PlayerInfos;
@@ -179,7 +185,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return num;
 		}
 
-		// Token: 0x06039A3C RID: 236092 RVA: 0x00DB287C File Offset: 0x00DB0A7C
+		// Token: 0x0602E95F RID: 190815 RVA: 0x00D01790 File Offset: 0x00CFF990
 		public bool IsAllPlayerInMatchTeam()
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -203,7 +209,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return result;
 		}
 
-		// Token: 0x06039A3D RID: 236093 RVA: 0x00DB291C File Offset: 0x00DB0B1C
+		// Token: 0x0602E960 RID: 190816 RVA: 0x00D01830 File Offset: 0x00CFFA30
 		public void InitMatchingTeamConfirmReadyState(RepeatedField<MatchPlayerInfo> players)
 		{
 			foreach (MatchPlayerInfo matchPlayerInfo in players)
@@ -220,13 +226,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A3E RID: 236094 RVA: 0x00DB29E4 File Offset: 0x00DB0BE4
+		// Token: 0x0602E961 RID: 190817 RVA: 0x00D018F8 File Offset: 0x00CFFAF8
 		public void SetMatchingPlayerConfirmState(int playerId, bool confirm)
 		{
 			this.MatchingTeamConfirmState[playerId] = confirm;
 		}
 
-		// Token: 0x06039A3F RID: 236095 RVA: 0x00DB29F4 File Offset: 0x00DB0BF4
+		// Token: 0x0602E962 RID: 190818 RVA: 0x00D01908 File Offset: 0x00CFFB08
 		public bool? GetMatchingPlayerConfirmStateByPlayerId(int playerId)
 		{
 			bool value;
@@ -237,13 +243,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return null;
 		}
 
-		// Token: 0x06039A40 RID: 236096 RVA: 0x00DB2A21 File Offset: 0x00DB0C21
+		// Token: 0x0602E963 RID: 190819 RVA: 0x00D01935 File Offset: 0x00CFFB35
 		public bool GetMatchingTeamReady()
 		{
 			return this.MatchTeamInfo.TeamState == MatchTeamState.ReadyConfirm;
 		}
 
-		// Token: 0x06039A41 RID: 236097 RVA: 0x00DB2A34 File Offset: 0x00DB0C34
+		// Token: 0x0602E964 RID: 190820 RVA: 0x00D01948 File Offset: 0x00CFFB48
 		public EMatchPlayerUiState GetPlayerUiState(int playerId)
 		{
 			foreach (MatchPlayerInfo matchPlayerInfo in this.MatchTeamInfo.PlayerInfos)
@@ -256,7 +262,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return EMatchPlayerUiState.Wait;
 		}
 
-		// Token: 0x06039A42 RID: 236098 RVA: 0x00DB2A94 File Offset: 0x00DB0C94
+		// Token: 0x0602E965 RID: 190821 RVA: 0x00D019A8 File Offset: 0x00CFFBA8
 		public void SetPlayerUiState(int playerId, EMatchPlayerUiState uiState)
 		{
 			foreach (MatchPlayerInfo matchPlayerInfo in this.MatchTeamInfo.PlayerInfos)
@@ -269,7 +275,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			EventSystem.Instance.Emit<int>(EEventName.OnRefreshPlayerUiState, playerId);
 		}
 
-		// Token: 0x06039A43 RID: 236099 RVA: 0x00DB2B00 File Offset: 0x00DB0D00
+		// Token: 0x0602E966 RID: 190822 RVA: 0x00D01A14 File Offset: 0x00CFFC14
 		public void SetPrewarPlayerReadyState(int playerId, bool ready)
 		{
 			this.PrewarPlayerReadyState[playerId] = ready;
@@ -282,38 +288,38 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A44 RID: 236100 RVA: 0x00DB2B6C File Offset: 0x00DB0D6C
+		// Token: 0x0602E967 RID: 190823 RVA: 0x00D01A80 File Offset: 0x00CFFC80
 		public void RemovePrewarPlayerReadyState(int playerId)
 		{
 			this.PrewarPlayerReadyState.Remove(playerId);
 		}
 
-		// Token: 0x06039A45 RID: 236101 RVA: 0x00DB2B7B File Offset: 0x00DB0D7B
+		// Token: 0x0602E968 RID: 190824 RVA: 0x00D01A8F File Offset: 0x00CFFC8F
 		public void ClearPrewarPlayerReadyState()
 		{
 			this.PrewarPlayerReadyState.Clear();
 		}
 
-		// Token: 0x06039A46 RID: 236102 RVA: 0x00DB2B88 File Offset: 0x00DB0D88
+		// Token: 0x0602E969 RID: 190825 RVA: 0x00D01A9C File Offset: 0x00CFFC9C
 		public void RemoveMatchingTeamConfirmState(int playerId)
 		{
 			this.MatchingTeamConfirmState.Remove(playerId);
 		}
 
-		// Token: 0x06039A47 RID: 236103 RVA: 0x00DB2B97 File Offset: 0x00DB0D97
+		// Token: 0x0602E96A RID: 190826 RVA: 0x00D01AAB File Offset: 0x00CFFCAB
 		public void ClearMatchingTeamConfirmState()
 		{
 			this.MatchingTeamConfirmState.Clear();
 		}
 
-		// Token: 0x06039A48 RID: 236104 RVA: 0x00DB2BA4 File Offset: 0x00DB0DA4
+		// Token: 0x0602E96B RID: 190827 RVA: 0x00D01AB8 File Offset: 0x00CFFCB8
 		public bool GetPrewarPlayerReadyState(int playerId)
 		{
 			bool flag;
 			return this.PrewarPlayerReadyState.TryGetValue(playerId, out flag) && flag && flag;
 		}
 
-		// Token: 0x06039A49 RID: 236105 RVA: 0x00DB2BC7 File Offset: 0x00DB0DC7
+		// Token: 0x0602E96C RID: 190828 RVA: 0x00D01ADB File Offset: 0x00CFFCDB
 		private void ParseMatchRoleInfo(PrewarFormationData data, MatchRoleInfo info)
 		{
 			data.SetLevel(info.RoleLevel);
@@ -322,7 +328,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			data.SetMultiSkillBranchId(info.SkillBranchId);
 		}
 
-		// Token: 0x06039A4A RID: 236106 RVA: 0x00DB2BFC File Offset: 0x00DB0DFC
+		// Token: 0x0602E96D RID: 190829 RVA: 0x00D01B10 File Offset: 0x00CFFD10
 		public void SetPrewarFormationDataList()
 		{
 			this.ClearPrewarData();
@@ -347,7 +353,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.SortPrewarFormationData();
 		}
 
-		// Token: 0x06039A4B RID: 236107 RVA: 0x00DB2CE0 File Offset: 0x00DB0EE0
+		// Token: 0x0602E96E RID: 190830 RVA: 0x00D01BF4 File Offset: 0x00CFFDF4
 		public void AddPrewarFormationDataByPlayerInfo(MatchPlayerInfo playerInfo, bool bChangeTeamInfo = true)
 		{
 			if (bChangeTeamInfo)
@@ -367,7 +373,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.SortPrewarFormationData();
 		}
 
-		// Token: 0x06039A4C RID: 236108 RVA: 0x00DB2D88 File Offset: 0x00DB0F88
+		// Token: 0x0602E96F RID: 190831 RVA: 0x00D01C9C File Offset: 0x00CFFE9C
 		private void SortPrewarFormationData()
 		{
 			int hostId = this.GetMatchTeamInfo().HostId;
@@ -393,7 +399,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.PrewarFormationDataList.Sort((PrewarFormationData a, PrewarFormationData b) => a.GetIndex() - b.GetIndex());
 		}
 
-		// Token: 0x06039A4D RID: 236109 RVA: 0x00DB2E90 File Offset: 0x00DB1090
+		// Token: 0x0602E970 RID: 190832 RVA: 0x00D01DA4 File Offset: 0x00CFFFA4
 		public void SetMatchTeamInfoPlayerRole(int playerId, RepeatedField<MatchRoleInfo> roleInfos)
 		{
 			foreach (MatchPlayerInfo matchPlayerInfo in this.MatchTeamInfo.PlayerInfos)
@@ -422,13 +428,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			EventSystem.Instance.Emit(EEventName.PrewarFormationChanged);
 		}
 
-		// Token: 0x06039A4E RID: 236110 RVA: 0x00DB2F48 File Offset: 0x00DB1148
+		// Token: 0x0602E971 RID: 190833 RVA: 0x00D01E5C File Offset: 0x00D0005C
 		public IReadOnlyList<PrewarFormationData> GetPrewarFormationDataList()
 		{
 			return this.PrewarFormationDataList;
 		}
 
-		// Token: 0x06039A4F RID: 236111 RVA: 0x00DB2F50 File Offset: 0x00DB1150
+		// Token: 0x0602E972 RID: 190834 RVA: 0x00D01E64 File Offset: 0x00D00064
 		public bool RemovePrewarFormationDataByPlayer(int playerId)
 		{
 			bool result = false;
@@ -455,7 +461,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return result;
 		}
 
-		// Token: 0x06039A50 RID: 236112 RVA: 0x00DB2FFC File Offset: 0x00DB11FC
+		// Token: 0x0602E973 RID: 190835 RVA: 0x00D01F10 File Offset: 0x00D00110
 		private void ChangePrewarFormationDataRole(MatchPlayerInfo playerInfo)
 		{
 			int count = this.PrewarFormationDataList.Count;
@@ -471,7 +477,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A51 RID: 236113 RVA: 0x00DB305C File Offset: 0x00DB125C
+		// Token: 0x0602E974 RID: 190836 RVA: 0x00D01F70 File Offset: 0x00D00170
 		private void RemovePrewarFormationDataByPlayerInfo(MatchPlayerInfo playerInfo)
 		{
 			int playerId = playerInfo.PlayerId;
@@ -502,7 +508,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.SortPrewarFormationData();
 		}
 
-		// Token: 0x06039A52 RID: 236114 RVA: 0x00DB3108 File Offset: 0x00DB1308
+		// Token: 0x0602E975 RID: 190837 RVA: 0x00D0201C File Offset: 0x00D0021C
 		private void ResetPrewarFormationDataByPlayer(int playerId)
 		{
 			for (int i = this.PrewarFormationDataList.Count - 1; i >= 0; i--)
@@ -514,7 +520,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A53 RID: 236115 RVA: 0x00DB3150 File Offset: 0x00DB1350
+		// Token: 0x0602E976 RID: 190838 RVA: 0x00D02064 File Offset: 0x00D00264
 		public bool IsInPrewarFormation(int playerId)
 		{
 			using (List<PrewarFormationData>.Enumerator enumerator = this.PrewarFormationDataList.GetEnumerator())
@@ -530,20 +536,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return false;
 		}
 
-		// Token: 0x06039A54 RID: 236116 RVA: 0x00DB31AC File Offset: 0x00DB13AC
+		// Token: 0x0602E977 RID: 190839 RVA: 0x00D020C0 File Offset: 0x00D002C0
 		public void ClearPrewarData()
 		{
 			this.PrewarFormationDataList.Clear();
 		}
 
-		// Token: 0x06039A55 RID: 236117 RVA: 0x00DB31B9 File Offset: 0x00DB13B9
+		// Token: 0x0602E978 RID: 190840 RVA: 0x00D020CD File Offset: 0x00D002CD
 		public int MatchingPlayerCount()
 		{
 			return this.MatchingTeamConfirmState.Count;
 		}
 
-		// Token: 0x17008A7A RID: 35450
-		// (get) Token: 0x06039A56 RID: 236118 RVA: 0x00DB31C8 File Offset: 0x00DB13C8
+		// Token: 0x17005E46 RID: 24134
+		// (get) Token: 0x0602E979 RID: 190841 RVA: 0x00D020DC File Offset: 0x00D002DC
 		public int FormationAverageRoleLevel
 		{
 			get
@@ -574,7 +580,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A57 RID: 236119 RVA: 0x00DB3254 File Offset: 0x00DB1454
+		// Token: 0x0602E97A RID: 190842 RVA: 0x00D02168 File Offset: 0x00D00368
 		public bool CheckPrewarFormationAverageLowLevel(int instanceId)
 		{
 			int fightFormationId = InstanceDungeonConfig.Instance.GetConfig(instanceId).Value.FightFormationId;
@@ -597,7 +603,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return formationAverageRoleLevel < InstanceDungeonConfig.Instance.GetRecommendLevel(instanceId, WorldLevelModel.Instance.CurWorldLevel);
 		}
 
-		// Token: 0x06039A58 RID: 236120 RVA: 0x00DB3302 File Offset: 0x00DB1502
+		// Token: 0x0602E97B RID: 190843 RVA: 0x00D02216 File Offset: 0x00D00416
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -608,7 +614,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return this.InstanceBeInviteDataList;
 		}
 
-		// Token: 0x06039A59 RID: 236121 RVA: 0x00DB330A File Offset: 0x00DB150A
+		// Token: 0x0602E97C RID: 190844 RVA: 0x00D0221E File Offset: 0x00D0041E
 		[NullableContext(2)]
 		public void AddInstanceBeInviteData(InstanceBeInviteData data)
 		{
@@ -627,7 +633,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.InstanceBeInviteDataList.Add(data);
 		}
 
-		// Token: 0x06039A5A RID: 236122 RVA: 0x00DB3340 File Offset: 0x00DB1540
+		// Token: 0x0602E97D RID: 190845 RVA: 0x00D02254 File Offset: 0x00D00454
 		public bool RemoveInstanceBeInviteData(int playerId)
 		{
 			for (int i = 0; i < this.InstanceBeInviteDataList.Count; i++)
@@ -641,7 +647,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return false;
 		}
 
-		// Token: 0x06039A5B RID: 236123 RVA: 0x00DB3388 File Offset: 0x00DB1588
+		// Token: 0x0602E97E RID: 190846 RVA: 0x00D0229C File Offset: 0x00D0049C
 		public long GetInvitePlayerCd(int playerId)
 		{
 			long num;
@@ -652,13 +658,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return 0L;
 		}
 
-		// Token: 0x06039A5C RID: 236124 RVA: 0x00DB33AC File Offset: 0x00DB15AC
+		// Token: 0x0602E97F RID: 190847 RVA: 0x00D022C0 File Offset: 0x00D004C0
 		public void SetInvitePlayerCd(int playerId, long value)
 		{
 			this.InviteCdMap[playerId] = value;
 		}
 
-		// Token: 0x06039A5D RID: 236125 RVA: 0x00DB33BB File Offset: 0x00DB15BB
+		// Token: 0x0602E980 RID: 190848 RVA: 0x00D022CF File Offset: 0x00D004CF
 		public InstanceDungeonInfo CreateInstanceInfo(int id)
 		{
 			this.InstanceDungeonInfo = new InstanceDungeonInfo(id);
@@ -666,7 +672,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return this.InstanceDungeonInfo;
 		}
 
-		// Token: 0x06039A5E RID: 236126 RVA: 0x00DB33DA File Offset: 0x00DB15DA
+		// Token: 0x0602E981 RID: 190849 RVA: 0x00D022EE File Offset: 0x00D004EE
 		public void ClearInstanceDungeonInfo()
 		{
 			if (this.InstanceDungeonInfo == null)
@@ -678,14 +684,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			instanceDungeonInfo.Destroy();
 		}
 
-		// Token: 0x06039A5F RID: 236127 RVA: 0x00DB33F7 File Offset: 0x00DB15F7
+		// Token: 0x0602E982 RID: 190850 RVA: 0x00D0230B File Offset: 0x00D0050B
 		[NullableContext(2)]
 		public InstanceDungeonInfo GetInstanceDungeonInfo()
 		{
 			return this.InstanceDungeonInfo;
 		}
 
-		// Token: 0x06039A60 RID: 236128 RVA: 0x00DB33FF File Offset: 0x00DB15FF
+		// Token: 0x0602E983 RID: 190851 RVA: 0x00D02313 File Offset: 0x00D00513
 		public void ResetData()
 		{
 			this.ClearPrewarData();
@@ -694,26 +700,26 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.MatchTeamInfo = null;
 		}
 
-		// Token: 0x17008A7B RID: 35451
-		// (get) Token: 0x06039A61 RID: 236129 RVA: 0x00DB341A File Offset: 0x00DB161A
-		// (set) Token: 0x06039A62 RID: 236130 RVA: 0x00DB3422 File Offset: 0x00DB1622
+		// Token: 0x17005E47 RID: 24135
+		// (get) Token: 0x0602E984 RID: 190852 RVA: 0x00D0232E File Offset: 0x00D0052E
+		// (set) Token: 0x0602E985 RID: 190853 RVA: 0x00D02336 File Offset: 0x00D00536
 		[Nullable(2)]
 		public List<int> LastEnterRoleList { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x06039A63 RID: 236131 RVA: 0x00DB342B File Offset: 0x00DB162B
+		// Token: 0x0602E986 RID: 190854 RVA: 0x00D0233F File Offset: 0x00D0053F
 		public void SetInstanceDungeonName(string name)
 		{
 			this.InstanceDungeonName = name;
 		}
 
-		// Token: 0x06039A64 RID: 236132 RVA: 0x00DB3434 File Offset: 0x00DB1634
+		// Token: 0x0602E987 RID: 190855 RVA: 0x00D02348 File Offset: 0x00D00548
 		[NullableContext(2)]
 		public string GetInstanceDungeonName()
 		{
 			return this.InstanceDungeonName;
 		}
 
-		// Token: 0x06039A65 RID: 236133 RVA: 0x00DB343C File Offset: 0x00DB163C
+		// Token: 0x0602E988 RID: 190856 RVA: 0x00D02350 File Offset: 0x00D00550
 		public void ConstructCurrentDungeonAreaName()
 		{
 			this.InstanceDungeonName = null;
@@ -723,13 +729,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A66 RID: 236134 RVA: 0x00DB3461 File Offset: 0x00DB1661
+		// Token: 0x0602E989 RID: 190857 RVA: 0x00D02375 File Offset: 0x00D00575
 		public void ClearInstanceEnterContentText()
 		{
 			this.InstanceEnterContentText = new EnterInstContext();
 		}
 
-		// Token: 0x06039A67 RID: 236135 RVA: 0x00DB3470 File Offset: 0x00DB1670
+		// Token: 0x0602E98A RID: 190858 RVA: 0x00D02384 File Offset: 0x00D00584
 		public unsafe IInstanceDungeonExitConfirmBoxData ParseExitDungeonConfirmData(InstanceDungeon dungeonConfig)
 		{
 			Span<int> exitDungeonConfirmIdBytes = dungeonConfig.GetExitDungeonConfirmIdBytes();
@@ -743,7 +749,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			};
 		}
 
-		// Token: 0x06039A68 RID: 236136 RVA: 0x00DB354C File Offset: 0x00DB174C
+		// Token: 0x0602E98B RID: 190859 RVA: 0x00D02460 File Offset: 0x00D00660
 		public IInstanceDungeonExitConfirmBoxData GetCurrentDungeonExitConfirmData()
 		{
 			IInstanceDungeonExitConfirmBoxData instanceDungeonExitConfirmBoxData = this.ParseExitDungeonConfirmData(GameModeModel.Instance.InstanceDungeon.Value);
@@ -785,7 +791,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return instanceDungeonExitConfirmBoxData;
 		}
 
-		// Token: 0x06039A69 RID: 236137 RVA: 0x00DB369C File Offset: 0x00DB189C
+		// Token: 0x0602E98C RID: 190860 RVA: 0x00D025B0 File Offset: 0x00D007B0
 		public int? GetCurrentDungeonExitConfirmId()
 		{
 			IInstanceDungeonExitConfirmBoxData currentDungeonExitConfirmData = this.GetCurrentDungeonExitConfirmData();
@@ -796,7 +802,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return currentDungeonExitConfirmData.UnfinishedBoxId;
 		}
 
-		// Token: 0x06039A6A RID: 236138 RVA: 0x00DB36C8 File Offset: 0x00DB18C8
+		// Token: 0x0602E98D RID: 190861 RVA: 0x00D025DC File Offset: 0x00D007DC
 		public int? GetCurrentDungeonTelExitConfirmId()
 		{
 			IInstanceDungeonExitConfirmBoxData currentDungeonExitConfirmData = this.GetCurrentDungeonExitConfirmData();
@@ -807,13 +813,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return currentDungeonExitConfirmData.UnfinishedTelBoxId;
 		}
 
-		// Token: 0x06039A6B RID: 236139 RVA: 0x00DB36F5 File Offset: 0x00DB18F5
+		// Token: 0x0602E98E RID: 190862 RVA: 0x00D02609 File Offset: 0x00D00809
 		public void ClearInstanceIdsWithSaveData()
 		{
 			this.InstanceIdsWithSaveData.Clear();
 		}
 
-		// Token: 0x06039A6C RID: 236140 RVA: 0x00DB3704 File Offset: 0x00DB1904
+		// Token: 0x0602E98F RID: 190863 RVA: 0x00D02618 File Offset: 0x00D00818
 		public void AddInstanceIdsWithSaveData(params int[] ids)
 		{
 			foreach (int item in ids)
@@ -822,7 +828,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A6D RID: 236141 RVA: 0x00DB3732 File Offset: 0x00DB1932
+		// Token: 0x0602E990 RID: 190864 RVA: 0x00D02646 File Offset: 0x00D00846
 		public bool GetIfInstanceHasSaveData(int instId)
 		{
 			if (RecallQuestModel.Instance.IsInRecallInstance())
@@ -832,8 +838,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return this.InstanceIdsWithSaveData.Contains(instId);
 		}
 
-		// Token: 0x17008A7C RID: 35452
-		// (get) Token: 0x06039A6E RID: 236142 RVA: 0x00DB3758 File Offset: 0x00DB1958
+		// Token: 0x17005E48 RID: 24136
+		// (get) Token: 0x0602E991 RID: 190865 RVA: 0x00D0266C File Offset: 0x00D0086C
 		public static InstanceDungeonModel Instance
 		{
 			get
@@ -842,7 +848,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A6F RID: 236143 RVA: 0x00DB375F File Offset: 0x00DB195F
+		// Token: 0x0602E992 RID: 190866 RVA: 0x00D02673 File Offset: 0x00D00873
 		public static InstanceDungeonModel GetOrCreateInstance()
 		{
 			if (InstanceDungeonModel._Instance == null)
@@ -852,7 +858,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return InstanceDungeonModel._Instance;
 		}
 
-		// Token: 0x06039A70 RID: 236144 RVA: 0x00DB3773 File Offset: 0x00DB1973
+		// Token: 0x0602E993 RID: 190867 RVA: 0x00D02687 File Offset: 0x00D00887
 		public static bool CreateInstance()
 		{
 			if (InstanceDungeonModel._Instance != null)
@@ -863,43 +869,43 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return true;
 		}
 
-		// Token: 0x06039A71 RID: 236145 RVA: 0x00DB3789 File Offset: 0x00DB1989
+		// Token: 0x0602E994 RID: 190868 RVA: 0x00D0269D File Offset: 0x00D0089D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06039A72 RID: 236146 RVA: 0x00DB378B File Offset: 0x00DB198B
+		// Token: 0x0602E995 RID: 190869 RVA: 0x00D0269F File Offset: 0x00D0089F
 		public static void ResetStaticDefaultValue()
 		{
 			InstanceDungeonModel._Instance = null;
 		}
 
-		// Token: 0x06039A73 RID: 236147 RVA: 0x00DB3793 File Offset: 0x00DB1993
+		// Token: 0x0602E996 RID: 190870 RVA: 0x00D026A7 File Offset: 0x00D008A7
 		static InstanceDungeonModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InstanceDungeonModel.CreateStaticDefaultValue), new Action(InstanceDungeonModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E1F9 RID: 123385
+		// Token: 0x04018C96 RID: 101526
 		private const int MATCHINGTEAMSIZE = 3;
 
-		// Token: 0x0401E1FA RID: 123386
+		// Token: 0x04018C97 RID: 101527
 		private int InstanceId;
 
-		// Token: 0x0401E1FC RID: 123388
+		// Token: 0x04018C99 RID: 101529
 		[Nullable(2)]
 		private MatchTeamInfo MatchTeamInfo;
 
-		// Token: 0x0401E1FD RID: 123389
+		// Token: 0x04018C9A RID: 101530
 		private readonly Dictionary<int, bool> MatchingTeamConfirmState = new Dictionary<int, bool>();
 
-		// Token: 0x0401E1FE RID: 123390
+		// Token: 0x04018C9B RID: 101531
 		private readonly List<PrewarFormationData> PrewarFormationDataList = new List<PrewarFormationData>();
 
-		// Token: 0x0401E1FF RID: 123391
+		// Token: 0x04018C9C RID: 101532
 		private readonly Dictionary<int, bool> PrewarPlayerReadyState = new Dictionary<int, bool>();
 
-		// Token: 0x0401E200 RID: 123392
+		// Token: 0x04018C9D RID: 101533
 		[Nullable(new byte[]
 		{
 			2,
@@ -907,39 +913,39 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private List<InstanceBeInviteData> InstanceBeInviteDataList;
 
-		// Token: 0x0401E201 RID: 123393
+		// Token: 0x04018C9E RID: 101534
 		private readonly Dictionary<int, long> InviteCdMap = new Dictionary<int, long>();
 
-		// Token: 0x0401E202 RID: 123394
+		// Token: 0x04018C9F RID: 101535
 		public EInstanceFinishState InstanceFinishSuccess;
 
-		// Token: 0x0401E203 RID: 123395
+		// Token: 0x04018CA0 RID: 101536
 		public bool InstanceRewardHaveTake;
 
-		// Token: 0x0401E204 RID: 123396
+		// Token: 0x04018CA1 RID: 101537
 		[Nullable(2)]
 		private InstanceDungeonInfo InstanceDungeonInfo;
 
-		// Token: 0x0401E206 RID: 123398
+		// Token: 0x04018CA3 RID: 101539
 		[Nullable(2)]
 		private string InstanceDungeonName;
 
-		// Token: 0x0401E207 RID: 123399
+		// Token: 0x04018CA4 RID: 101540
 		public bool? CurrentInstanceIsFinish = new bool?(false);
 
-		// Token: 0x0401E208 RID: 123400
+		// Token: 0x04018CA5 RID: 101541
 		public bool HidePowerLackConfirmBox;
 
-		// Token: 0x0401E209 RID: 123401
+		// Token: 0x04018CA6 RID: 101542
 		public EnterInstContext InstanceEnterContentText = new EnterInstContext();
 
-		// Token: 0x0401E20A RID: 123402
+		// Token: 0x04018CA7 RID: 101543
 		public List<int> TrialRoleDungeonWhiteList = new List<int>();
 
-		// Token: 0x0401E20B RID: 123403
+		// Token: 0x04018CA8 RID: 101544
 		private readonly HashSet<int> InstanceIdsWithSaveData = new HashSet<int>();
 
-		// Token: 0x0401E20C RID: 123404
+		// Token: 0x04018CA9 RID: 101545
 		[Nullable(2)]
 		private static InstanceDungeonModel _Instance;
 	}

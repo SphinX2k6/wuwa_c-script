@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -16,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B4C RID: 19276
+	// Token: 0x02003AF4 RID: 15092
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TowerDefenseLevelDetailPanel : UiPanelBase
 	{
-		// Token: 0x06031EA0 RID: 204448 RVA: 0x00B936EC File Offset: 0x00B918EC
+		// Token: 0x06026C30 RID: 158768 RVA: 0x00AD774C File Offset: 0x00AD594C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 21;
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031EA1 RID: 204449 RVA: 0x00B93A38 File Offset: 0x00B91C38
+		// Token: 0x06026C31 RID: 158769 RVA: 0x00AD7A98 File Offset: 0x00AD5C98
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseLevelDetailPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -93,7 +92,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031EA2 RID: 204450 RVA: 0x00B93A7C File Offset: 0x00B91C7C
+		// Token: 0x06026C32 RID: 158770 RVA: 0x00AD7ADC File Offset: 0x00AD5CDC
 		protected override void OnStart()
 		{
 			this.ElementScroll = new GenericScrollViewNew<TowerDefenseLevelDetailElementItem, string>(base.GetScrollViewWithScrollbar(5), () => new TowerDefenseLevelDetailElementItem(), null, false, null);
@@ -111,7 +110,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			});
 		}
 
-		// Token: 0x06031EA3 RID: 204451 RVA: 0x00B93B7C File Offset: 0x00B91D7C
+		// Token: 0x06026C33 RID: 158771 RVA: 0x00AD7BDC File Offset: 0x00AD5DDC
 		public void RefreshItem(int instanceId)
 		{
 			this.CurrentInstanceId = instanceId;
@@ -140,7 +139,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshBossPanel(instanceId);
 		}
 
-		// Token: 0x06031EA4 RID: 204452 RVA: 0x00B93CAC File Offset: 0x00B91EAC
+		// Token: 0x06026C34 RID: 158772 RVA: 0x00AD7D0C File Offset: 0x00AD5F0C
 		private void RefreshLockPanel(int instanceId, bool unlocked)
 		{
 			UUIItem item = base.GetItem(20);
@@ -163,7 +162,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EA5 RID: 204453 RVA: 0x00B93D28 File Offset: 0x00B91F28
+		// Token: 0x06026C35 RID: 158773 RVA: 0x00AD7D88 File Offset: 0x00AD5F88
 		private void RefreshChallengeButtonsVisibility(int instanceId, bool unlocked)
 		{
 			if (!unlocked)
@@ -244,7 +243,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EA6 RID: 204454 RVA: 0x00B93E44 File Offset: 0x00B92044
+		// Token: 0x06026C36 RID: 158774 RVA: 0x00AD7EA4 File Offset: 0x00AD60A4
 		public void RefreshChallengeBtnMatchingState()
 		{
 			bool flag = InstanceDungeonEntranceModel.Instance.GetMatchingState() == EInstanceMatchState.Matching;
@@ -271,7 +270,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			singleChallengeBtn2.SetEnableClick(!flag);
 		}
 
-		// Token: 0x06031EA7 RID: 204455 RVA: 0x00B93ED0 File Offset: 0x00B920D0
+		// Token: 0x06026C37 RID: 158775 RVA: 0x00AD7F30 File Offset: 0x00AD6130
 		private void RefreshBestRecordPanel(int instanceId)
 		{
 			TowerDefenseRankGlobalData rankData = TowerDefenseModel.Instance.RankData;
@@ -289,7 +288,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(15), "ChallengeOL_Bestrecord", new <>z__ReadOnlySingleElementList<object>(bestRecordText));
 		}
 
-		// Token: 0x06031EA8 RID: 204456 RVA: 0x00B93F48 File Offset: 0x00B92148
+		// Token: 0x06026C38 RID: 158776 RVA: 0x00AD7FA8 File Offset: 0x00AD61A8
 		private void RefreshBossPanel(int instanceId)
 		{
 			TowerDefenceInstance? towerDefenseInstanceByInstance = InstanceDungeonConfig.Instance.GetTowerDefenseInstanceByInstance(instanceId);
@@ -316,7 +315,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			bossScroll.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06031EA9 RID: 204457 RVA: 0x00B94000 File Offset: 0x00B92200
+		// Token: 0x06026C39 RID: 158777 RVA: 0x00AD8060 File Offset: 0x00AD6260
 		private void RefreshPhantomPanel(int instanceId)
 		{
 			TowerDefenceInstance? towerDefenseInstanceByInstance = InstanceDungeonConfig.Instance.GetTowerDefenseInstanceByInstance(instanceId);
@@ -341,15 +340,20 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}, false);
 		}
 
-		// Token: 0x06031EAA RID: 204458 RVA: 0x00B94084 File Offset: 0x00B92284
+		// Token: 0x06026C3A RID: 158778 RVA: 0x00AD80E4 File Offset: 0x00AD62E4
 		private void RefreshBuffPanel(int instanceId)
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(instanceId);
 			string text = (config != null) ? (config.Value.MonsterTips ?? "") : "";
 			bool flag = config != null && config.Value.MonsterPreviewLength > 0;
-			List<string> list = (from line in text.Split('\n', StringSplitOptions.None)
-			where line.Length > 0
-			select line).ToList<string>();
+			List<string> list = new List<string>();
+			foreach (string text2 in text.Split('\n', StringSplitOptions.None))
+			{
+				if (text2.Length > 0)
+				{
+					list.Add(text2);
+				}
+			}
 			UUIItem item = base.GetItem(2);
 			if (item != null)
 			{
@@ -373,7 +377,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			elementScroll.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06031EAB RID: 204459 RVA: 0x00B94188 File Offset: 0x00B92388
+		// Token: 0x06026C3B RID: 158779 RVA: 0x00AD81F4 File Offset: 0x00AD63F4
 		private void OnClickBtnBuffTips()
 		{
 			if (this.CurrentInstanceId <= 0)
@@ -388,7 +392,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			UiManager.Instance.OpenView(EUiViewName.InstanceDungeonMonsterPreView, param, null);
 		}
 
-		// Token: 0x06031EAC RID: 204460 RVA: 0x00B941D0 File Offset: 0x00B923D0
+		// Token: 0x06026C3C RID: 158780 RVA: 0x00AD823C File Offset: 0x00AD643C
 		private void OnClickBtnBestRecord()
 		{
 			if (this.CurrentInstanceId <= 0)
@@ -400,7 +404,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			UiManager.Instance.OpenView(EUiViewName.TowerDefenseRankViewV2, towerDefenseRankViewModelV, null);
 		}
 
-		// Token: 0x06031EAD RID: 204461 RVA: 0x00B9420A File Offset: 0x00B9240A
+		// Token: 0x06026C3D RID: 158781 RVA: 0x00AD8276 File Offset: 0x00AD6476
 		private bool GetIsAllowedClickBegin()
 		{
 			if (this.NextCanClickButtonTime > TimeUtil.Instance.GetServerTimeStamp())
@@ -411,7 +415,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return true;
 		}
 
-		// Token: 0x06031EAE RID: 204462 RVA: 0x00B9423C File Offset: 0x00B9243C
+		// Token: 0x06026C3E RID: 158782 RVA: 0x00AD82A8 File Offset: 0x00AD64A8
 		private bool CheckOnlineChallengeGuard()
 		{
 			if (!OnlineController.Instance.ShowTipsWhenOnlineDisabled(null))
@@ -441,7 +445,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return true;
 		}
 
-		// Token: 0x06031EAF RID: 204463 RVA: 0x00B942F4 File Offset: 0x00B924F4
+		// Token: 0x06026C3F RID: 158783 RVA: 0x00AD8360 File Offset: 0x00AD6560
 		private bool CheckSoloChallengeGuard()
 		{
 			if (!InstanceDungeonEntranceModel.Instance.CheckInstanceCanChallenge(this.CurrentInstanceId))
@@ -462,7 +466,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return true;
 		}
 
-		// Token: 0x06031EB0 RID: 204464 RVA: 0x00B94374 File Offset: 0x00B92574
+		// Token: 0x06026C40 RID: 158784 RVA: 0x00AD83E0 File Offset: 0x00AD65E0
 		private void OnClickBtnMultiChallenge()
 		{
 			if (this.CurrentInstanceId <= 0 || !this.GetIsAllowedClickBegin())
@@ -504,7 +508,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			ScrollingTipsController.Instance.ShowTipsById("CanNotMatching", Array.Empty<object>());
 		}
 
-		// Token: 0x06031EB1 RID: 204465 RVA: 0x00B9446C File Offset: 0x00B9266C
+		// Token: 0x06026C41 RID: 158785 RVA: 0x00AD84D8 File Offset: 0x00AD66D8
 		private void OnClickBtnSingleChallenge()
 		{
 			if (this.CurrentInstanceId <= 0 || !this.GetIsAllowedClickBegin())
@@ -552,13 +556,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x0401A9EA RID: 109034
+		// Token: 0x0401533C RID: 86844
 		private const int CLICK_INSTANCE_BEGIN_BUTTON_CD = 500;
 
-		// Token: 0x0401A9EB RID: 109035
+		// Token: 0x0401533D RID: 86845
 		private int CurrentInstanceId;
 
-		// Token: 0x0401A9EC RID: 109036
+		// Token: 0x0401533E RID: 86846
 		[Nullable(new byte[]
 		{
 			2,
@@ -567,7 +571,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private GenericScrollViewNew<TowerDefenseLevelDetailElementItem, string> ElementScroll;
 
-		// Token: 0x0401A9ED RID: 109037
+		// Token: 0x0401533F RID: 86847
 		[Nullable(new byte[]
 		{
 			2,
@@ -575,7 +579,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> PhantomScroll;
 
-		// Token: 0x0401A9EE RID: 109038
+		// Token: 0x04015340 RID: 86848
 		[Nullable(new byte[]
 		{
 			2,
@@ -583,86 +587,86 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private GenericScrollViewNew<TowerDefenseLevelBossItem, int> BossScroll;
 
-		// Token: 0x0401A9EF RID: 109039
+		// Token: 0x04015341 RID: 86849
 		private FunctionalPanelConditionLock LockPanel;
 
-		// Token: 0x0401A9F0 RID: 109040
+		// Token: 0x04015342 RID: 86850
 		private ButtonItem MultiChallengeBtn;
 
-		// Token: 0x0401A9F1 RID: 109041
+		// Token: 0x04015343 RID: 86851
 		private ButtonItem SingleChallengeBtn;
 
-		// Token: 0x0401A9F2 RID: 109042
+		// Token: 0x04015344 RID: 86852
 		private bool ShouldShowSingleChallengeBtn;
 
-		// Token: 0x0401A9F3 RID: 109043
+		// Token: 0x04015345 RID: 86853
 		private double NextCanClickButtonTime;
 
-		// Token: 0x0200ACCA RID: 44234
+		// Token: 0x020096EA RID: 38634
 		[NullableContext(0)]
 		private class ELevelDetailComponent
 		{
-			// Token: 0x040347EC RID: 215020
+			// Token: 0x0402F19D RID: 192925
 			public const int TitleTxt = 0;
 
-			// Token: 0x040347ED RID: 215021
+			// Token: 0x0402F19E RID: 192926
 			public const int TopDescTxt = 1;
 
-			// Token: 0x040347EE RID: 215022
+			// Token: 0x0402F19F RID: 192927
 			public const int BuffPnl = 2;
 
-			// Token: 0x040347EF RID: 215023
+			// Token: 0x0402F1A0 RID: 192928
 			public const int BuffTitleTxt = 3;
 
-			// Token: 0x040347F0 RID: 215024
+			// Token: 0x0402F1A1 RID: 192929
 			public const int BuffTipsBtn = 4;
 
-			// Token: 0x040347F1 RID: 215025
+			// Token: 0x0402F1A2 RID: 192930
 			public const int ElementScorll = 5;
 
-			// Token: 0x040347F2 RID: 215026
+			// Token: 0x0402F1A3 RID: 192931
 			public const int ElementItem = 6;
 
-			// Token: 0x040347F3 RID: 215027
+			// Token: 0x0402F1A4 RID: 192932
 			public const int PhantomPnl = 7;
 
-			// Token: 0x040347F4 RID: 215028
+			// Token: 0x0402F1A5 RID: 192933
 			public const int PhantomScroll = 8;
 
-			// Token: 0x040347F5 RID: 215029
+			// Token: 0x0402F1A6 RID: 192934
 			public const int PhantomItem = 9;
 
-			// Token: 0x040347F6 RID: 215030
+			// Token: 0x0402F1A7 RID: 192935
 			public const int BossPnl = 10;
 
-			// Token: 0x040347F7 RID: 215031
+			// Token: 0x0402F1A8 RID: 192936
 			public const int BossScroll = 11;
 
-			// Token: 0x040347F8 RID: 215032
+			// Token: 0x0402F1A9 RID: 192937
 			public const int BossItem = 12;
 
-			// Token: 0x040347F9 RID: 215033
+			// Token: 0x0402F1AA RID: 192938
 			public const int BestRecordPnl = 13;
 
-			// Token: 0x040347FA RID: 215034
+			// Token: 0x0402F1AB RID: 192939
 			public const int BestRecordBtn = 14;
 
-			// Token: 0x040347FB RID: 215035
+			// Token: 0x0402F1AC RID: 192940
 			public const int BestRecordTxt = 15;
 
-			// Token: 0x040347FC RID: 215036
+			// Token: 0x0402F1AD RID: 192941
 			public const int LevelTipsPnl = 16;
 
-			// Token: 0x040347FD RID: 215037
+			// Token: 0x0402F1AE RID: 192942
 			public const int LevelTipsTxt = 17;
 
-			// Token: 0x040347FE RID: 215038
+			// Token: 0x0402F1AF RID: 192943
 			public const int MultiChallengeBtn = 18;
 
-			// Token: 0x040347FF RID: 215039
+			// Token: 0x0402F1B0 RID: 192944
 			public const int SingleChallengeBtn = 19;
 
-			// Token: 0x04034800 RID: 215040
+			// Token: 0x0402F1B1 RID: 192945
 			public const int LockPnl = 20;
 		}
 	}

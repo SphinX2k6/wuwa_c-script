@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AC0 RID: 23232
+	// Token: 0x020060CD RID: 24781
 	public struct ITrafficAudioControl : IFlatbufferObject
 	{
-		// Token: 0x1700AEF5 RID: 44789
-		// (get) Token: 0x06027960 RID: 162144 RVA: 0x00571C3D File Offset: 0x0056FE3D
+		// Token: 0x1700B831 RID: 47153
+		// (get) Token: 0x06029EE6 RID: 171750 RVA: 0x005B8F25 File Offset: 0x005B7125
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027961 RID: 162145 RVA: 0x00571C4A File Offset: 0x0056FE4A
+		// Token: 0x06029EE7 RID: 171751 RVA: 0x005B8F32 File Offset: 0x005B7132
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027962 RID: 162146 RVA: 0x00571C54 File Offset: 0x0056FE54
+		// Token: 0x06029EE8 RID: 171752 RVA: 0x005B8F3C File Offset: 0x005B713C
 		public static ITrafficAudioControl GetRootAsITrafficAudioControl(ByteBuffer _bb)
 		{
 			return ITrafficAudioControl.GetRootAsITrafficAudioControl(_bb, default(ITrafficAudioControl));
 		}
 
-		// Token: 0x06027963 RID: 162147 RVA: 0x00571C70 File Offset: 0x0056FE70
+		// Token: 0x06029EE9 RID: 171753 RVA: 0x005B8F58 File Offset: 0x005B7158
 		public static ITrafficAudioControl GetRootAsITrafficAudioControl(ByteBuffer _bb, ITrafficAudioControl obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027964 RID: 162148 RVA: 0x00571C8D File Offset: 0x0056FE8D
+		// Token: 0x06029EEA RID: 171754 RVA: 0x005B8F75 File Offset: 0x005B7175
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027965 RID: 162149 RVA: 0x00571C9C File Offset: 0x0056FE9C
+		// Token: 0x06029EEB RID: 171755 RVA: 0x005B8F84 File Offset: 0x005B7184
 		public ITrafficAudioControl __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AEF6 RID: 44790
-		// (get) Token: 0x06027966 RID: 162150 RVA: 0x00571CAC File Offset: 0x0056FEAC
+		// Token: 0x1700B832 RID: 47154
+		// (get) Token: 0x06029EEC RID: 171756 RVA: 0x005B8F94 File Offset: 0x005B7194
 		public EAudioControlType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AEF7 RID: 44791
-		// (get) Token: 0x06027967 RID: 162151 RVA: 0x00571CE8 File Offset: 0x0056FEE8
+		// Token: 0x1700B833 RID: 47155
+		// (get) Token: 0x06029EED RID: 171757 RVA: 0x005B8FD0 File Offset: 0x005B71D0
 		public string EngineAudio
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027968 RID: 162152 RVA: 0x00571D1F File Offset: 0x0056FF1F
+		// Token: 0x06029EEE RID: 171758 RVA: 0x005B9007 File Offset: 0x005B7207
 		public Span<byte> GetEngineAudioBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06027969 RID: 162153 RVA: 0x00571D2E File Offset: 0x0056FF2E
+		// Token: 0x06029EEF RID: 171759 RVA: 0x005B9016 File Offset: 0x005B7216
 		public byte[] GetEngineAudioArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700AEF8 RID: 44792
-		// (get) Token: 0x0602796A RID: 162154 RVA: 0x00571D3C File Offset: 0x0056FF3C
+		// Token: 0x1700B834 RID: 47156
+		// (get) Token: 0x06029EF0 RID: 171760 RVA: 0x005B9024 File Offset: 0x005B7224
 		public string BrakingAudio
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602796B RID: 162155 RVA: 0x00571D73 File Offset: 0x0056FF73
+		// Token: 0x06029EF1 RID: 171761 RVA: 0x005B905B File Offset: 0x005B725B
 		public Span<byte> GetBrakingAudioBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0602796C RID: 162156 RVA: 0x00571D82 File Offset: 0x0056FF82
+		// Token: 0x06029EF2 RID: 171762 RVA: 0x005B906A File Offset: 0x005B726A
 		public byte[] GetBrakingAudioArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700AEF9 RID: 44793
-		// (get) Token: 0x0602796D RID: 162157 RVA: 0x00571D90 File Offset: 0x0056FF90
+		// Token: 0x1700B835 RID: 47157
+		// (get) Token: 0x06029EF3 RID: 171763 RVA: 0x005B9078 File Offset: 0x005B7278
 		public string BrakingShortAudio
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602796E RID: 162158 RVA: 0x00571DC8 File Offset: 0x0056FFC8
+		// Token: 0x06029EF4 RID: 171764 RVA: 0x005B90B0 File Offset: 0x005B72B0
 		public Span<byte> GetBrakingShortAudioBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0602796F RID: 162159 RVA: 0x00571DD8 File Offset: 0x0056FFD8
+		// Token: 0x06029EF5 RID: 171765 RVA: 0x005B90C0 File Offset: 0x005B72C0
 		public byte[] GetBrakingShortAudioArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700AEFA RID: 44794
-		// (get) Token: 0x06027970 RID: 162160 RVA: 0x00571DE8 File Offset: 0x0056FFE8
+		// Token: 0x1700B836 RID: 47158
+		// (get) Token: 0x06029EF6 RID: 171766 RVA: 0x005B90D0 File Offset: 0x005B72D0
 		public string HornAudio
 		{
 			get
@@ -158,19 +158,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027971 RID: 162161 RVA: 0x00571E20 File Offset: 0x00570020
+		// Token: 0x06029EF7 RID: 171767 RVA: 0x005B9108 File Offset: 0x005B7308
 		public Span<byte> GetHornAudioBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06027972 RID: 162162 RVA: 0x00571E30 File Offset: 0x00570030
+		// Token: 0x06029EF8 RID: 171768 RVA: 0x005B9118 File Offset: 0x005B7318
 		public byte[] GetHornAudioArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x06027973 RID: 162163 RVA: 0x00571E3F File Offset: 0x0057003F
+		// Token: 0x06029EF9 RID: 171769 RVA: 0x005B9127 File Offset: 0x005B7327
 		public static Offset<ITrafficAudioControl> CreateITrafficAudioControl(FlatBufferBuilder builder, EAudioControlType Type = EAudioControlType.Gramophone, StringOffset EngineAudioOffset = default(StringOffset), StringOffset BrakingAudioOffset = default(StringOffset), StringOffset BrakingShortAudioOffset = default(StringOffset), StringOffset HornAudioOffset = default(StringOffset))
 		{
 			builder.StartTable(5);
@@ -182,49 +182,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITrafficAudioControl.EndITrafficAudioControl(builder);
 		}
 
-		// Token: 0x06027974 RID: 162164 RVA: 0x00571E73 File Offset: 0x00570073
+		// Token: 0x06029EFA RID: 171770 RVA: 0x005B915B File Offset: 0x005B735B
 		public static void StartITrafficAudioControl(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06027975 RID: 162165 RVA: 0x00571E7C File Offset: 0x0057007C
+		// Token: 0x06029EFB RID: 171771 RVA: 0x005B9164 File Offset: 0x005B7364
 		public static void AddType(FlatBufferBuilder builder, EAudioControlType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06027976 RID: 162166 RVA: 0x00571E87 File Offset: 0x00570087
+		// Token: 0x06029EFC RID: 171772 RVA: 0x005B916F File Offset: 0x005B736F
 		public static void AddEngineAudio(FlatBufferBuilder builder, StringOffset engineAudioOffset)
 		{
 			builder.AddOffset(1, engineAudioOffset.Value, 0);
 		}
 
-		// Token: 0x06027977 RID: 162167 RVA: 0x00571E97 File Offset: 0x00570097
+		// Token: 0x06029EFD RID: 171773 RVA: 0x005B917F File Offset: 0x005B737F
 		public static void AddBrakingAudio(FlatBufferBuilder builder, StringOffset brakingAudioOffset)
 		{
 			builder.AddOffset(2, brakingAudioOffset.Value, 0);
 		}
 
-		// Token: 0x06027978 RID: 162168 RVA: 0x00571EA7 File Offset: 0x005700A7
+		// Token: 0x06029EFE RID: 171774 RVA: 0x005B918F File Offset: 0x005B738F
 		public static void AddBrakingShortAudio(FlatBufferBuilder builder, StringOffset brakingShortAudioOffset)
 		{
 			builder.AddOffset(3, brakingShortAudioOffset.Value, 0);
 		}
 
-		// Token: 0x06027979 RID: 162169 RVA: 0x00571EB7 File Offset: 0x005700B7
+		// Token: 0x06029EFF RID: 171775 RVA: 0x005B919F File Offset: 0x005B739F
 		public static void AddHornAudio(FlatBufferBuilder builder, StringOffset hornAudioOffset)
 		{
 			builder.AddOffset(4, hornAudioOffset.Value, 0);
 		}
 
-		// Token: 0x0602797A RID: 162170 RVA: 0x00571EC7 File Offset: 0x005700C7
+		// Token: 0x06029F00 RID: 171776 RVA: 0x005B91AF File Offset: 0x005B73AF
 		public static Offset<ITrafficAudioControl> EndITrafficAudioControl(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrafficAudioControl>(builder.EndTable());
 		}
 
-		// Token: 0x0602797B RID: 162171 RVA: 0x00571ED4 File Offset: 0x005700D4
+		// Token: 0x06029F01 RID: 171777 RVA: 0x005B91BC File Offset: 0x005B73BC
 		public ITrafficAudioControlT UnPack()
 		{
 			ITrafficAudioControlT trafficAudioControlT = new ITrafficAudioControlT();
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return trafficAudioControlT;
 		}
 
-		// Token: 0x0602797C RID: 162172 RVA: 0x00571EEF File Offset: 0x005700EF
+		// Token: 0x06029F02 RID: 171778 RVA: 0x005B91D7 File Offset: 0x005B73D7
 		public void UnPackTo(ITrafficAudioControlT _o)
 		{
 			_o.Type = this.Type;
@@ -242,7 +242,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.HornAudio = this.HornAudio;
 		}
 
-		// Token: 0x0602797D RID: 162173 RVA: 0x00571F30 File Offset: 0x00570130
+		// Token: 0x06029F03 RID: 171779 RVA: 0x005B9218 File Offset: 0x005B7418
 		public static Offset<ITrafficAudioControl> Pack(FlatBufferBuilder builder, ITrafficAudioControlT _o)
 		{
 			if (_o == null)
@@ -256,7 +256,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITrafficAudioControl.CreateITrafficAudioControl(builder, _o.Type, engineAudioOffset, brakingAudioOffset, brakingShortAudioOffset, hornAudioOffset);
 		}
 
-		// Token: 0x0400F189 RID: 61833
+		// Token: 0x0400FE82 RID: 65154
 		private Table __p;
 	}
 }

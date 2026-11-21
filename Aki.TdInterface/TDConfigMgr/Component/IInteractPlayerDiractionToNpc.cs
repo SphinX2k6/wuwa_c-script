@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000485 RID: 1157
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004DE RID: 1246
 	public class IInteractPlayerDiractionToNpc : IInteractPlayerDiractionType
 	{
-		// Token: 0x0600174A RID: 5962 RVA: 0x00046C1C File Offset: 0x00044E1C
+		// Token: 0x060018E4 RID: 6372 RVA: 0x0004A964 File Offset: 0x00048B64
 		private IInteractPlayerDiractionToNpc_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600174B RID: 5963 RVA: 0x00046C54 File Offset: 0x00044E54
+		// Token: 0x060018E5 RID: 6373 RVA: 0x0004A99C File Offset: 0x00048B9C
 		public static IInteractPlayerDiractionToNpc Create([Nullable(2)] IInteractPlayerDiractionToNpc instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600174C RID: 5964 RVA: 0x00046C67 File Offset: 0x00044E67
+		// Token: 0x060018E6 RID: 6374 RVA: 0x0004A9AF File Offset: 0x00048BAF
 		public static IInteractPlayerDiractionToNpc CreateFromSetValue([Nullable(2)] IInteractPlayerDiractionToNpc_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600174D RID: 5965 RVA: 0x00046C7A File Offset: 0x00044E7A
+		// Token: 0x060018E7 RID: 6375 RVA: 0x0004A9C2 File Offset: 0x00048BC2
 		public new IInteractPlayerDiractionToNpc_SetValue ToSetValue()
 		{
 			return new IInteractPlayerDiractionToNpc_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700063C RID: 1596
-		// (get) Token: 0x0600174E RID: 5966 RVA: 0x00046C8D File Offset: 0x00044E8D
-		// (set) Token: 0x0600174F RID: 5967 RVA: 0x00046CB8 File Offset: 0x00044EB8
+		// Token: 0x170006A3 RID: 1699
+		// (get) Token: 0x060018E8 RID: 6376 RVA: 0x0004A9D5 File Offset: 0x00048BD5
+		// (set) Token: 0x060018E9 RID: 6377 RVA: 0x0004AA00 File Offset: 0x00048C00
 		public override EInteractPlayerDiractionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400117F RID: 4479
+		// Token: 0x040012A1 RID: 4769
 		[Nullable(2)]
 		protected new IInteractPlayerDiractionToNpc FbInstance;
 
-		// Token: 0x04001180 RID: 4480
+		// Token: 0x040012A2 RID: 4770
 		[Nullable(2)]
 		protected new IInteractPlayerDiractionToNpc_SetValue PocoInterface;
 	}

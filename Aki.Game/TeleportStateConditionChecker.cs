@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Map;
 
-// Token: 0x02002A73 RID: 10867
+// Token: 0x02001FEE RID: 8174
 public class TeleportStateConditionChecker : ISkipConditionChecker
 {
-	// Token: 0x06016A1E RID: 92702 RVA: 0x005BC22B File Offset: 0x005BA42B
+	// Token: 0x0601443F RID: 83007 RVA: 0x005E83B3 File Offset: 0x005E65B3
 	[NullableContext(1)]
 	public ISkipCondition<ESkipConditionType> Parse(int[] @params)
 	{
@@ -17,7 +17,7 @@ public class TeleportStateConditionChecker : ISkipConditionChecker
 		};
 	}
 
-	// Token: 0x06016A1F RID: 92703 RVA: 0x005BC24C File Offset: 0x005BA44C
+	// Token: 0x06014440 RID: 83008 RVA: 0x005E83D4 File Offset: 0x005E65D4
 	[NullableContext(1)]
 	public bool Check(int[] @params)
 	{

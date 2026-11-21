@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FB5 RID: 20405
+	// Token: 0x02005511 RID: 21777
 	public struct ICollectComponent : IFlatbufferObject
 	{
-		// Token: 0x170093CA RID: 37834
-		// (get) Token: 0x060207AF RID: 133039 RVA: 0x00484CFA File Offset: 0x00482EFA
+		// Token: 0x17009BA2 RID: 39842
+		// (get) Token: 0x060226A3 RID: 140963 RVA: 0x004BE1DE File Offset: 0x004BC3DE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060207B0 RID: 133040 RVA: 0x00484D07 File Offset: 0x00482F07
+		// Token: 0x060226A4 RID: 140964 RVA: 0x004BE1EB File Offset: 0x004BC3EB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060207B1 RID: 133041 RVA: 0x00484D10 File Offset: 0x00482F10
+		// Token: 0x060226A5 RID: 140965 RVA: 0x004BE1F4 File Offset: 0x004BC3F4
 		public static ICollectComponent GetRootAsICollectComponent(ByteBuffer _bb)
 		{
 			return ICollectComponent.GetRootAsICollectComponent(_bb, default(ICollectComponent));
 		}
 
-		// Token: 0x060207B2 RID: 133042 RVA: 0x00484D2C File Offset: 0x00482F2C
+		// Token: 0x060226A6 RID: 140966 RVA: 0x004BE210 File Offset: 0x004BC410
 		public static ICollectComponent GetRootAsICollectComponent(ByteBuffer _bb, ICollectComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060207B3 RID: 133043 RVA: 0x00484D49 File Offset: 0x00482F49
+		// Token: 0x060226A7 RID: 140967 RVA: 0x004BE22D File Offset: 0x004BC42D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060207B4 RID: 133044 RVA: 0x00484D58 File Offset: 0x00482F58
+		// Token: 0x060226A8 RID: 140968 RVA: 0x004BE23C File Offset: 0x004BC43C
 		public ICollectComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170093CB RID: 37835
-		// (get) Token: 0x060207B5 RID: 133045 RVA: 0x00484D68 File Offset: 0x00482F68
+		// Token: 0x17009BA3 RID: 39843
+		// (get) Token: 0x060226A9 RID: 140969 RVA: 0x004BE24C File Offset: 0x004BC44C
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170093CC RID: 37836
-		// (get) Token: 0x060207B6 RID: 133046 RVA: 0x00484DA8 File Offset: 0x00482FA8
+		// Token: 0x17009BA4 RID: 39844
+		// (get) Token: 0x060226AA RID: 140970 RVA: 0x004BE28C File Offset: 0x004BC48C
 		public bool IsDisableOneClickCollection
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170093CD RID: 37837
-		// (get) Token: 0x060207B7 RID: 133047 RVA: 0x00484DE8 File Offset: 0x00482FE8
+		// Token: 0x17009BA5 RID: 39845
+		// (get) Token: 0x060226AB RID: 140971 RVA: 0x004BE2CC File Offset: 0x004BC4CC
 		public byte NullMask
 		{
 			get
@@ -84,7 +84,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060207B8 RID: 133048 RVA: 0x00484E24 File Offset: 0x00483024
+		// Token: 0x060226AC RID: 140972 RVA: 0x004BE308 File Offset: 0x004BC508
 		public static Offset<ICollectComponent> CreateICollectComponent(FlatBufferBuilder builder, bool Disabled = false, bool IsDisableOneClickCollection = false, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -94,37 +94,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICollectComponent.EndICollectComponent(builder);
 		}
 
-		// Token: 0x060207B9 RID: 133049 RVA: 0x00484E48 File Offset: 0x00483048
+		// Token: 0x060226AD RID: 140973 RVA: 0x004BE32C File Offset: 0x004BC52C
 		public static void StartICollectComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060207BA RID: 133050 RVA: 0x00484E51 File Offset: 0x00483051
+		// Token: 0x060226AE RID: 140974 RVA: 0x004BE335 File Offset: 0x004BC535
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060207BB RID: 133051 RVA: 0x00484E5C File Offset: 0x0048305C
+		// Token: 0x060226AF RID: 140975 RVA: 0x004BE340 File Offset: 0x004BC540
 		public static void AddIsDisableOneClickCollection(FlatBufferBuilder builder, bool isDisableOneClickCollection)
 		{
 			builder.AddBool(1, isDisableOneClickCollection, false);
 		}
 
-		// Token: 0x060207BC RID: 133052 RVA: 0x00484E67 File Offset: 0x00483067
+		// Token: 0x060226B0 RID: 140976 RVA: 0x004BE34B File Offset: 0x004BC54B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x060207BD RID: 133053 RVA: 0x00484E72 File Offset: 0x00483072
+		// Token: 0x060226B1 RID: 140977 RVA: 0x004BE356 File Offset: 0x004BC556
 		public static Offset<ICollectComponent> EndICollectComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ICollectComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060207BE RID: 133054 RVA: 0x00484E80 File Offset: 0x00483080
+		// Token: 0x060226B2 RID: 140978 RVA: 0x004BE364 File Offset: 0x004BC564
 		public ICollectComponentT UnPack()
 		{
 			ICollectComponentT collectComponentT = new ICollectComponentT();
@@ -132,7 +132,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return collectComponentT;
 		}
 
-		// Token: 0x060207BF RID: 133055 RVA: 0x00484E9B File Offset: 0x0048309B
+		// Token: 0x060226B3 RID: 140979 RVA: 0x004BE37F File Offset: 0x004BC57F
 		public void UnPackTo(ICollectComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060207C0 RID: 133056 RVA: 0x00484EC4 File Offset: 0x004830C4
+		// Token: 0x060226B4 RID: 140980 RVA: 0x004BE3A8 File Offset: 0x004BC5A8
 		public static Offset<ICollectComponent> Pack(FlatBufferBuilder builder, ICollectComponentT _o)
 		{
 			if (_o == null)
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICollectComponent.CreateICollectComponent(builder, _o.Disabled, _o.IsDisableOneClickCollection, _o.NullMask);
 		}
 
-		// Token: 0x0400DE8F RID: 56975
+		// Token: 0x0400EA7D RID: 60029
 		private Table __p;
 	}
 }

@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B1F RID: 2847
+	// Token: 0x02000BFF RID: 3071
 	public struct BabelTowerDeTerm : IFlatbufferObject
 	{
-		// Token: 0x170003F5 RID: 1013
-		// (get) Token: 0x06004ABD RID: 19133 RVA: 0x001DCD14 File Offset: 0x001DAF14
+		// Token: 0x17000435 RID: 1077
+		// (get) Token: 0x0600507F RID: 20607 RVA: 0x001FD238 File Offset: 0x001FB438
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004ABE RID: 19134 RVA: 0x001DCD21 File Offset: 0x001DAF21
+		// Token: 0x06005080 RID: 20608 RVA: 0x001FD245 File Offset: 0x001FB445
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004ABF RID: 19135 RVA: 0x001DCD28 File Offset: 0x001DAF28
+		// Token: 0x06005081 RID: 20609 RVA: 0x001FD24C File Offset: 0x001FB44C
 		public static BabelTowerDeTerm GetRootAsBabelTowerDeTerm(ByteBuffer _bb)
 		{
 			return BabelTowerDeTerm.GetRootAsBabelTowerDeTerm(_bb, default(BabelTowerDeTerm));
 		}
 
-		// Token: 0x06004AC0 RID: 19136 RVA: 0x001DCD44 File Offset: 0x001DAF44
+		// Token: 0x06005082 RID: 20610 RVA: 0x001FD268 File Offset: 0x001FB468
 		public static BabelTowerDeTerm GetRootAsBabelTowerDeTerm(ByteBuffer _bb, BabelTowerDeTerm obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004AC1 RID: 19137 RVA: 0x001DCD61 File Offset: 0x001DAF61
+		// Token: 0x06005083 RID: 20611 RVA: 0x001FD285 File Offset: 0x001FB485
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004AC2 RID: 19138 RVA: 0x001DCD70 File Offset: 0x001DAF70
+		// Token: 0x06005084 RID: 20612 RVA: 0x001FD294 File Offset: 0x001FB494
 		public BabelTowerDeTerm __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170003F6 RID: 1014
-		// (get) Token: 0x06004AC3 RID: 19139 RVA: 0x001DCD80 File Offset: 0x001DAF80
+		// Token: 0x17000436 RID: 1078
+		// (get) Token: 0x06005085 RID: 20613 RVA: 0x001FD2A4 File Offset: 0x001FB4A4
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003F7 RID: 1015
-		// (get) Token: 0x06004AC4 RID: 19140 RVA: 0x001DCDBC File Offset: 0x001DAFBC
+		// Token: 0x17000437 RID: 1079
+		// (get) Token: 0x06005086 RID: 20614 RVA: 0x001FD2E0 File Offset: 0x001FB4E0
 		public int GroupId
 		{
 			get
@@ -81,7 +81,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004AC5 RID: 19141 RVA: 0x001DCDF8 File Offset: 0x001DAFF8
+		// Token: 0x06005087 RID: 20615 RVA: 0x001FD31C File Offset: 0x001FB51C
 		public int DifficultPreLevel(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -92,8 +92,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170003F8 RID: 1016
-		// (get) Token: 0x06004AC6 RID: 19142 RVA: 0x001DCE38 File Offset: 0x001DB038
+		// Token: 0x17000438 RID: 1080
+		// (get) Token: 0x06005088 RID: 20616 RVA: 0x001FD35C File Offset: 0x001FB55C
 		public int DifficultPreLevelLength
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004AC7 RID: 19143 RVA: 0x001DCE63 File Offset: 0x001DB063
+		// Token: 0x06005089 RID: 20617 RVA: 0x001FD387 File Offset: 0x001FB587
 		public Span<int> GetDifficultPreLevelBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06004AC8 RID: 19144 RVA: 0x001DCE72 File Offset: 0x001DB072
+		// Token: 0x0600508A RID: 20618 RVA: 0x001FD396 File Offset: 0x001FB596
 		public int[] GetDifficultPreLevelArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004AC9 RID: 19145 RVA: 0x001DCE8C File Offset: 0x001DB08C
+		// Token: 0x0600508B RID: 20619 RVA: 0x001FD3B0 File Offset: 0x001FB5B0
 		public DicIntInt? DifficultPreLevelStar(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -130,8 +130,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170003F9 RID: 1017
-		// (get) Token: 0x06004ACA RID: 19146 RVA: 0x001DCEF0 File Offset: 0x001DB0F0
+		// Token: 0x17000439 RID: 1081
+		// (get) Token: 0x0600508C RID: 20620 RVA: 0x001FD414 File Offset: 0x001FB614
 		public int DifficultPreLevelStarLength
 		{
 			get
@@ -145,8 +145,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003FA RID: 1018
-		// (get) Token: 0x06004ACB RID: 19147 RVA: 0x001DCF1C File Offset: 0x001DB11C
+		// Token: 0x1700043A RID: 1082
+		// (get) Token: 0x0600508D RID: 20621 RVA: 0x001FD440 File Offset: 0x001FB640
 		public int Star
 		{
 			get
@@ -160,8 +160,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003FB RID: 1019
-		// (get) Token: 0x06004ACC RID: 19148 RVA: 0x001DCF5C File Offset: 0x001DB15C
+		// Token: 0x1700043B RID: 1083
+		// (get) Token: 0x0600508E RID: 20622 RVA: 0x001FD480 File Offset: 0x001FB680
 		public int Line
 		{
 			get
@@ -175,8 +175,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003FC RID: 1020
-		// (get) Token: 0x06004ACD RID: 19149 RVA: 0x001DCF9C File Offset: 0x001DB19C
+		// Token: 0x1700043C RID: 1084
+		// (get) Token: 0x0600508F RID: 20623 RVA: 0x001FD4C0 File Offset: 0x001FB6C0
 		public string Texture
 		{
 			get
@@ -190,20 +190,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004ACE RID: 19150 RVA: 0x001DCFD4 File Offset: 0x001DB1D4
+		// Token: 0x06005090 RID: 20624 RVA: 0x001FD4F8 File Offset: 0x001FB6F8
 		public Span<byte> GetTextureBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06004ACF RID: 19151 RVA: 0x001DCFE4 File Offset: 0x001DB1E4
+		// Token: 0x06005091 RID: 20625 RVA: 0x001FD508 File Offset: 0x001FB708
 		public byte[] GetTextureArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170003FD RID: 1021
-		// (get) Token: 0x06004AD0 RID: 19152 RVA: 0x001DCFFC File Offset: 0x001DB1FC
+		// Token: 0x1700043D RID: 1085
+		// (get) Token: 0x06005092 RID: 20626 RVA: 0x001FD520 File Offset: 0x001FB720
 		public string NameText
 		{
 			get
@@ -217,20 +217,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004AD1 RID: 19153 RVA: 0x001DD034 File Offset: 0x001DB234
+		// Token: 0x06005093 RID: 20627 RVA: 0x001FD558 File Offset: 0x001FB758
 		public Span<byte> GetNameTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x06004AD2 RID: 19154 RVA: 0x001DD044 File Offset: 0x001DB244
+		// Token: 0x06005094 RID: 20628 RVA: 0x001FD568 File Offset: 0x001FB768
 		public byte[] GetNameTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170003FE RID: 1022
-		// (get) Token: 0x06004AD3 RID: 19155 RVA: 0x001DD05C File Offset: 0x001DB25C
+		// Token: 0x1700043E RID: 1086
+		// (get) Token: 0x06005095 RID: 20629 RVA: 0x001FD580 File Offset: 0x001FB780
 		public string DesText
 		{
 			get
@@ -244,54 +244,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004AD4 RID: 19156 RVA: 0x001DD094 File Offset: 0x001DB294
+		// Token: 0x06005096 RID: 20630 RVA: 0x001FD5B8 File Offset: 0x001FB7B8
 		public Span<byte> GetDesTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x06004AD5 RID: 19157 RVA: 0x001DD0A4 File Offset: 0x001DB2A4
+		// Token: 0x06005097 RID: 20631 RVA: 0x001FD5C8 File Offset: 0x001FB7C8
 		public byte[] GetDesTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06004AD6 RID: 19158 RVA: 0x001DD0BC File Offset: 0x001DB2BC
+		// Token: 0x06005098 RID: 20632 RVA: 0x001FD5E0 File Offset: 0x001FB7E0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DifficultPreLevelIter()或GetDifficultPreLevelBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DifficultPreLevel()
+		public int[] DifficultPreLevel()
 		{
-			BabelTowerDeTerm babelTowerDeTerm = this;
-			return babelTowerDeTerm.GetDifficultPreLevelArray() ?? Array.Empty<int>();
+			return this.GetDifficultPreLevelArray();
 		}
 
-		// Token: 0x06004AD7 RID: 19159 RVA: 0x001DD0E0 File Offset: 0x001DB2E0
+		// Token: 0x06005099 RID: 20633 RVA: 0x001FD5E8 File Offset: 0x001FB7E8
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DifficultPreLevelIter()
+		public IEnumerable<int> DifficultPreLevelIter()
 		{
 			BabelTowerDeTerm.<DifficultPreLevelIter>d__37 <DifficultPreLevelIter>d__ = new BabelTowerDeTerm.<DifficultPreLevelIter>d__37(-2);
 			<DifficultPreLevelIter>d__.<>3__<>4__this = this;
 			return <DifficultPreLevelIter>d__;
 		}
 
-		// Token: 0x06004AD8 RID: 19160 RVA: 0x001DD0F8 File Offset: 0x001DB2F8
+		// Token: 0x0600509A RID: 20634 RVA: 0x001FD600 File Offset: 0x001FB800
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用DifficultPreLevelStarFrozenDict()缓存字典，遍历请使用DifficultPreLevelStarIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> DifficultPreLevelStar()
+		public Dictionary<int, int> DifficultPreLevelStar()
 		{
 			return this.DifficultPreLevelStarIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06004AD9 RID: 19161 RVA: 0x001DD14E File Offset: 0x001DB34E
+		// Token: 0x0600509B RID: 20635 RVA: 0x001FD656 File Offset: 0x001FB856
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> DifficultPreLevelStarIter()
+		public IEnumerable<DicIntInt> DifficultPreLevelStarIter()
 		{
 			BabelTowerDeTerm.<DifficultPreLevelStarIter>d__39 <DifficultPreLevelStarIter>d__ = new BabelTowerDeTerm.<DifficultPreLevelStarIter>d__39(-2);
 			<DifficultPreLevelStarIter>d__.<>3__<>4__this = this;
 			return <DifficultPreLevelStarIter>d__;
 		}
 
-		// Token: 0x06004ADA RID: 19162 RVA: 0x001DD164 File Offset: 0x001DB364
+		// Token: 0x0600509C RID: 20636 RVA: 0x001FD66C File Offset: 0x001FB86C
 		public int? GetDifficultPreLevelStar(int key)
 		{
 			this.EnsureDifficultPreLevelStarCacheIfNeeded();
@@ -303,7 +300,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06004ADB RID: 19163 RVA: 0x001DD198 File Offset: 0x001DB398
+		// Token: 0x0600509D RID: 20637 RVA: 0x001FD6A0 File Offset: 0x001FB8A0
 		private void EnsureDifficultPreLevelStarCacheIfNeeded()
 		{
 			if (this.DifficultPreLevelStarCache != null)
@@ -313,18 +310,18 @@ namespace Aki.Config
 			this.DifficultPreLevelStarCache = this.DifficultPreLevelStarIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06004ADC RID: 19164 RVA: 0x001DD1FE File Offset: 0x001DB3FE
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetDifficultPreLevelStarFrozenDict(int key)
+		// Token: 0x0600509E RID: 20638 RVA: 0x001FD706 File Offset: 0x001FB906
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetDifficultPreLevelStarFrozenDict()
 		{
 			this.EnsureDifficultPreLevelStarCacheIfNeeded();
 			return this.DifficultPreLevelStarCache;
 		}
 
-		// Token: 0x04004B0F RID: 19215
+		// Token: 0x040050EF RID: 20719
 		private Table __p;
 
-		// Token: 0x04004B10 RID: 19216
+		// Token: 0x040050F0 RID: 20720
 		[Nullable(2)]
 		private FrozenDictionary<int, int> DifficultPreLevelStarCache;
 	}

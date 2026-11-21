@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020013F6 RID: 5110
+// Token: 0x020008AA RID: 2218
 public class PinballLevelScoreData : IPinballLevelScoreData
 {
-	// Token: 0x17000C2F RID: 3119
-	// (get) Token: 0x0600907D RID: 36989 RVA: 0x001F2AF8 File Offset: 0x001F0CF8
-	// (set) Token: 0x0600907E RID: 36990 RVA: 0x001F2B00 File Offset: 0x001F0D00
+	// Token: 0x17000C4F RID: 3151
+	// (get) Token: 0x06006412 RID: 25618 RVA: 0x001FB634 File Offset: 0x001F9834
+	// (set) Token: 0x06006413 RID: 25619 RVA: 0x001FB63C File Offset: 0x001F983C
 	public int CurScore { get; set; }
 
-	// Token: 0x17000C30 RID: 3120
-	// (get) Token: 0x0600907F RID: 36991 RVA: 0x001F2B09 File Offset: 0x001F0D09
-	// (set) Token: 0x06009080 RID: 36992 RVA: 0x001F2B11 File Offset: 0x001F0D11
+	// Token: 0x17000C50 RID: 3152
+	// (get) Token: 0x06006414 RID: 25620 RVA: 0x001FB645 File Offset: 0x001F9845
+	// (set) Token: 0x06006415 RID: 25621 RVA: 0x001FB64D File Offset: 0x001F984D
 	public int ConfigScore { get; set; }
 
-	// Token: 0x17000C31 RID: 3121
-	// (get) Token: 0x06009081 RID: 36993 RVA: 0x001F2B1A File Offset: 0x001F0D1A
-	// (set) Token: 0x06009082 RID: 36994 RVA: 0x001F2B22 File Offset: 0x001F0D22
+	// Token: 0x17000C51 RID: 3153
+	// (get) Token: 0x06006416 RID: 25622 RVA: 0x001FB656 File Offset: 0x001F9856
+	// (set) Token: 0x06006417 RID: 25623 RVA: 0x001FB65E File Offset: 0x001F985E
 	public int ConfigDropId { get; set; }
 }

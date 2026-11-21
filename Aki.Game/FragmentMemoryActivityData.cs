@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001C18 RID: 7192
+// Token: 0x020010D7 RID: 4311
 public class FragmentMemoryActivityData : ActivityBaseData
 {
-	// Token: 0x0600D7B9 RID: 55225 RVA: 0x0031F048 File Offset: 0x0031D248
+	// Token: 0x0600ABCD RID: 43981 RVA: 0x0032A398 File Offset: 0x00328598
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.EntranceRedDot();
 	}
 
-	// Token: 0x0600D7BA RID: 55226 RVA: 0x0031F050 File Offset: 0x0031D250
+	// Token: 0x0600ABCE RID: 43982 RVA: 0x0032A3A0 File Offset: 0x003285A0
 	protected override bool GetExDataFinishShowState()
 	{
 		int topicId = FragmentMemoryConfig.Instance.GetPhotoMemoryActivityById(base.Id).Value.TopicId;
@@ -17,13 +17,13 @@ public class FragmentMemoryActivityData : ActivityBaseData
 		return topicDataById != null && topicDataById.GetCollectRewardDoneState();
 	}
 
-	// Token: 0x0600D7BB RID: 55227 RVA: 0x0031F098 File Offset: 0x0031D298
+	// Token: 0x0600ABCF RID: 43983 RVA: 0x0032A3E8 File Offset: 0x003285E8
 	public bool EntranceRedDot()
 	{
 		return FragmentMemoryModel.Instance.GetRedDotState();
 	}
 
-	// Token: 0x0600D7BC RID: 55228 RVA: 0x0031F0A4 File Offset: 0x0031D2A4
+	// Token: 0x0600ABD0 RID: 43984 RVA: 0x0032A3F4 File Offset: 0x003285F4
 	public int GetCurrentTopicId()
 	{
 		return FragmentMemoryConfig.Instance.GetPhotoMemoryActivityById(base.Id).Value.TopicId;

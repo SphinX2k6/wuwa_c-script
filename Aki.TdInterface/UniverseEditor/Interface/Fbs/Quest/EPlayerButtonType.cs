@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CB1 RID: 15537
+	// Token: 0x020040C5 RID: 16581
 	public enum EPlayerButtonType : byte
 	{
-		// Token: 0x0400B41C RID: 46108
+		// Token: 0x0400BDBE RID: 48574
 		ChallengeAgain,
-		// Token: 0x0400B41D RID: 46109
+		// Token: 0x0400BDBF RID: 48575
 		ExitChallenge
 	}
 }

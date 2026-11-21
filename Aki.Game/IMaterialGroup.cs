@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020027E1 RID: 10209
+// Token: 0x02001D5C RID: 7516
 [NullableContext(1)]
 public interface IMaterialGroup
 {
-	// Token: 0x17001B66 RID: 7014
-	// (get) Token: 0x06014F6A RID: 85866
-	// (set) Token: 0x06014F6B RID: 85867
+	// Token: 0x17001BBE RID: 7102
+	// (get) Token: 0x0601296A RID: 76138
+	// (set) Token: 0x0601296B RID: 76139
 	int Type { get; set; }
 
-	// Token: 0x17001B67 RID: 7015
-	// (get) Token: 0x06014F6C RID: 85868
-	// (set) Token: 0x06014F6D RID: 85869
+	// Token: 0x17001BBF RID: 7103
+	// (get) Token: 0x0601296C RID: 76140
+	// (set) Token: 0x0601296D RID: 76141
 	List<IItemMaterial> Materials { get; set; }
 }

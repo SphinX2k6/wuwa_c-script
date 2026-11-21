@@ -9,29 +9,29 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062B4 RID: 25268
+	// Token: 0x02005232 RID: 21042
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityPreWarmCollectItemData : ActivityExData
 	{
-		// Token: 0x0603F8C3 RID: 260291 RVA: 0x00F5ED2A File Offset: 0x00F5CF2A
+		// Token: 0x06034584 RID: 214404 RVA: 0x00EA5C86 File Offset: 0x00EA3E86
 		public ActivityPreWarmCollectItemData(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0603F8C4 RID: 260292 RVA: 0x00F5ED33 File Offset: 0x00F5CF33
+		// Token: 0x06034585 RID: 214405 RVA: 0x00EA5C8F File Offset: 0x00EA3E8F
 		public void SetId(int id)
 		{
 			this.Id = id;
 		}
 
-		// Token: 0x0603F8C5 RID: 260293 RVA: 0x00F5ED3C File Offset: 0x00F5CF3C
+		// Token: 0x06034586 RID: 214406 RVA: 0x00EA5C98 File Offset: 0x00EA3E98
 		public int GetId()
 		{
 			return this.Id;
 		}
 
-		// Token: 0x0603F8C6 RID: 260294 RVA: 0x00F5ED44 File Offset: 0x00F5CF44
+		// Token: 0x06034587 RID: 214407 RVA: 0x00EA5CA0 File Offset: 0x00EA3EA0
 		public List<TItem> GetPreviewReward()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return list;
 		}
 
-		// Token: 0x0603F8C7 RID: 260295 RVA: 0x00F5EE6C File Offset: 0x00F5D06C
+		// Token: 0x06034588 RID: 214408 RVA: 0x00EA5DC8 File Offset: 0x00EA3FC8
 		public string GetTitleNumIconPath()
 		{
 			UiResourceConfig instance = UiResourceConfig.Instance;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return instance.GetResourcePath(ActivityPreWarmDefine.titleNumIcons[this.Id]);
 		}
 
-		// Token: 0x0603F8C8 RID: 260296 RVA: 0x00F5EE90 File Offset: 0x00F5D090
+		// Token: 0x06034589 RID: 214409 RVA: 0x00EA5DEC File Offset: 0x00EA3FEC
 		public string GetTitle()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return preHeatTaskActivity.GetValueOrDefault().Title;
 		}
 
-		// Token: 0x0603F8C9 RID: 260297 RVA: 0x00F5EED8 File Offset: 0x00F5D0D8
+		// Token: 0x0603458A RID: 214410 RVA: 0x00EA5E34 File Offset: 0x00EA4034
 		public string GetDesc()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return preHeatTaskActivity.GetValueOrDefault().Desc;
 		}
 
-		// Token: 0x0603F8CA RID: 260298 RVA: 0x00F5EF20 File Offset: 0x00F5D120
+		// Token: 0x0603458B RID: 214411 RVA: 0x00EA5E7C File Offset: 0x00EA407C
 		public string GetIconPath()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return preHeatTaskActivity.GetValueOrDefault().IconPath;
 		}
 
-		// Token: 0x0603F8CB RID: 260299 RVA: 0x00F5EF68 File Offset: 0x00F5D168
+		// Token: 0x0603458C RID: 214412 RVA: 0x00EA5EC4 File Offset: 0x00EA40C4
 		public string GetShadowIconPath()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return preHeatTaskActivity.GetValueOrDefault().ShadowIconPath;
 		}
 
-		// Token: 0x0603F8CC RID: 260300 RVA: 0x00F5EFB0 File Offset: 0x00F5D1B0
+		// Token: 0x0603458D RID: 214413 RVA: 0x00EA5F0C File Offset: 0x00EA410C
 		public string GetBgPath()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return preHeatTaskActivity.GetValueOrDefault().BgPath;
 		}
 
-		// Token: 0x0603F8CD RID: 260301 RVA: 0x00F5EFF8 File Offset: 0x00F5D1F8
+		// Token: 0x0603458E RID: 214414 RVA: 0x00EA5F54 File Offset: 0x00EA4154
 		public int? GetQuestId()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return new int?(preHeatTaskActivity.GetValueOrDefault().QuestId);
 		}
 
-		// Token: 0x0603F8CE RID: 260302 RVA: 0x00F5F04C File Offset: 0x00F5D24C
+		// Token: 0x0603458F RID: 214415 RVA: 0x00EA5FA8 File Offset: 0x00EA41A8
 		public EQuestState? GetQuestState()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return new EQuestState?(instance2.GetQuestState(preHeatTaskActivity.Value.QuestId));
 		}
 
-		// Token: 0x0603F8CF RID: 260303 RVA: 0x00F5F0B8 File Offset: 0x00F5D2B8
+		// Token: 0x06034590 RID: 214416 RVA: 0x00EA6014 File Offset: 0x00EA4214
 		public string GetItemIconPath()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return preHeatTaskActivity.GetValueOrDefault().ItemIconPath;
 		}
 
-		// Token: 0x0603F8D0 RID: 260304 RVA: 0x00F5F100 File Offset: 0x00F5D300
+		// Token: 0x06034591 RID: 214417 RVA: 0x00EA605C File Offset: 0x00EA425C
 		public string GetShadowItemIconPath()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return preHeatTaskActivity.GetValueOrDefault().ShadowItemIconPath;
 		}
 
-		// Token: 0x0603F8D1 RID: 260305 RVA: 0x00F5F148 File Offset: 0x00F5D348
+		// Token: 0x06034592 RID: 214418 RVA: 0x00EA60A4 File Offset: 0x00EA42A4
 		private long GetQuestUnlockStamp()
 		{
 			DateTime utcDateTime = DateTimeOffset.FromUnixTimeSeconds(ActivityModel.Instance.GetActivityById(this.ActivityId).BeginOpenTime).UtcDateTime;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return num + (long)(openDay * TimeUtil.Instance.OneDaySeconds);
 		}
 
-		// Token: 0x0603F8D2 RID: 260306 RVA: 0x00F5F1DC File Offset: 0x00F5D3DC
+		// Token: 0x06034593 RID: 214419 RVA: 0x00EA6138 File Offset: 0x00EA4338
 		[NullableContext(1)]
 		public IActivityPreWarmQuestUnlockState GetIsUnlock()
 		{
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			};
 		}
 
-		// Token: 0x0603F8D3 RID: 260307 RVA: 0x00F5F250 File Offset: 0x00F5D450
+		// Token: 0x06034594 RID: 214420 RVA: 0x00EA61AC File Offset: 0x00EA43AC
 		public int GetOpenDay()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return preHeatTaskActivity.GetValueOrDefault().OpenDay;
 		}
 
-		// Token: 0x0603F8D4 RID: 260308 RVA: 0x00F5F298 File Offset: 0x00F5D498
+		// Token: 0x06034595 RID: 214421 RVA: 0x00EA61F4 File Offset: 0x00EA43F4
 		public string GetParsingMatPath()
 		{
 			ActivityPreWarmConfig instance = ActivityPreWarmConfig.Instance;
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return preHeatTaskActivity.GetValueOrDefault().ParsingMatPath;
 		}
 
-		// Token: 0x040213CB RID: 136139
+		// Token: 0x0401BCFA RID: 113914
 		private int Id;
 	}
 }

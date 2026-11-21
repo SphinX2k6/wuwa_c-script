@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B52 RID: 11090
+// Token: 0x020020CE RID: 8398
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsTalentTreeSkillNodeItem : UiPanelBase
 {
-	// Token: 0x17001EAC RID: 7852
-	// (get) Token: 0x06017009 RID: 94217 RVA: 0x005D7247 File Offset: 0x005D5447
+	// Token: 0x17001F04 RID: 7940
+	// (get) Token: 0x06014A3A RID: 84538 RVA: 0x00603DB3 File Offset: 0x00601FB3
 	public SurvivorsTalentNode Node
 	{
 		get
@@ -21,7 +21,7 @@ public class SurvivorsTalentTreeSkillNodeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601700A RID: 94218 RVA: 0x005D7250 File Offset: 0x005D5450
+	// Token: 0x06014A3B RID: 84539 RVA: 0x00603DBC File Offset: 0x00601FBC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class SurvivorsTalentTreeSkillNodeItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601700B RID: 94219 RVA: 0x005D7328 File Offset: 0x005D5528
+	// Token: 0x06014A3C RID: 84540 RVA: 0x00603E94 File Offset: 0x00602094
 	public UniTask RefreshNodeAsyncByData(SurvivorsTalentNode talentNode)
 	{
 		SurvivorsTalentTreeSkillNodeItem.<RefreshNodeAsyncByData>d__5 <RefreshNodeAsyncByData>d__;
@@ -52,7 +52,7 @@ public class SurvivorsTalentTreeSkillNodeItem : UiPanelBase
 		return <RefreshNodeAsyncByData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601700C RID: 94220 RVA: 0x005D7374 File Offset: 0x005D5574
+	// Token: 0x06014A3D RID: 84541 RVA: 0x00603EE0 File Offset: 0x006020E0
 	public UniTask RefreshNodeAsync()
 	{
 		SurvivorsTalentTreeSkillNodeItem.<RefreshNodeAsync>d__6 <RefreshNodeAsync>d__;
@@ -63,13 +63,13 @@ public class SurvivorsTalentTreeSkillNodeItem : UiPanelBase
 		return <RefreshNodeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601700D RID: 94221 RVA: 0x005D73B7 File Offset: 0x005D55B7
+	// Token: 0x06014A3E RID: 84542 RVA: 0x00603F23 File Offset: 0x00602123
 	public void SelectNode()
 	{
 		this.OnClickToggle(EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x0601700E RID: 94222 RVA: 0x005D73C0 File Offset: 0x005D55C0
+	// Token: 0x06014A3F RID: 84543 RVA: 0x00603F2C File Offset: 0x0060212C
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<SurvivorsTalentNode, UUIExtendToggle> onClickToggleBack = this.OnClickToggleBack;
@@ -80,10 +80,10 @@ public class SurvivorsTalentTreeSkillNodeItem : UiPanelBase
 		onClickToggleBack(this.NodeData, base.GetExtendToggle(6));
 	}
 
-	// Token: 0x0400ABBE RID: 43966
+	// Token: 0x0400AFC4 RID: 44996
 	private SurvivorsTalentNode NodeData;
 
-	// Token: 0x0400ABBF RID: 43967
+	// Token: 0x0400AFC5 RID: 44997
 	[Nullable(new byte[]
 	{
 		2,

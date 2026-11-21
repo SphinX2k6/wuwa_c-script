@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001A2E RID: 6702
+// Token: 0x02000EED RID: 3821
 public class DangoAbyssBattleTreasureItem : UiPanelBase
 {
-	// Token: 0x0600C524 RID: 50468 RVA: 0x002CB7C2 File Offset: 0x002C99C2
+	// Token: 0x06009934 RID: 39220 RVA: 0x002D68E2 File Offset: 0x002D4AE2
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,7 +15,7 @@ public class DangoAbyssBattleTreasureItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C525 RID: 50469 RVA: 0x002CB7E5 File Offset: 0x002C99E5
+	// Token: 0x06009935 RID: 39221 RVA: 0x002D6905 File Offset: 0x002D4B05
 	public void RefreshByCurrentPercentage(float currentPercentage)
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -26,16 +26,16 @@ public class DangoAbyssBattleTreasureItem : UiPanelBase
 		sprite.SetUIActive(this.NeedPercentage <= currentPercentage);
 	}
 
-	// Token: 0x04005ADE RID: 23262
+	// Token: 0x04005BAD RID: 23469
 	public float NeedPercentage;
 
-	// Token: 0x04005ADF RID: 23263
+	// Token: 0x04005BAE RID: 23470
 	public int RewardId;
 
-	// Token: 0x02007F76 RID: 32630
+	// Token: 0x02007105 RID: 28933
 	private enum ERewardTreasureItemComponent
 	{
-		// Token: 0x040299C4 RID: 170436
+		// Token: 0x04024D01 RID: 150785
 		LightSprite
 	}
 }

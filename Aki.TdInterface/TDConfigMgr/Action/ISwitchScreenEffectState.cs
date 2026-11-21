@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F05 RID: 7941
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200213E RID: 8510
 	public class ISwitchScreenEffectState : ISwitchEffectStateEffectBase
 	{
-		// Token: 0x0600A9D0 RID: 43472 RVA: 0x0017EA78 File Offset: 0x0017CC78
+		// Token: 0x0600B4A2 RID: 46242 RVA: 0x00194A70 File Offset: 0x00192C70
 		private ISwitchScreenEffectState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A9D1 RID: 43473 RVA: 0x0017EAB0 File Offset: 0x0017CCB0
+		// Token: 0x0600B4A3 RID: 46243 RVA: 0x00194AA8 File Offset: 0x00192CA8
 		public static ISwitchScreenEffectState Create([Nullable(2)] ISwitchScreenEffectState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9D2 RID: 43474 RVA: 0x0017EAC3 File Offset: 0x0017CCC3
+		// Token: 0x0600B4A4 RID: 46244 RVA: 0x00194ABB File Offset: 0x00192CBB
 		public static ISwitchScreenEffectState CreateFromSetValue([Nullable(2)] ISwitchScreenEffectState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9D3 RID: 43475 RVA: 0x0017EAD6 File Offset: 0x0017CCD6
+		// Token: 0x0600B4A5 RID: 46245 RVA: 0x00194ACE File Offset: 0x00192CCE
 		public new ISwitchScreenEffectState_SetValue ToSetValue()
 		{
 			return new ISwitchScreenEffectState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033B8 RID: 13240
-		// (get) Token: 0x0600A9D4 RID: 43476 RVA: 0x0017EAF5 File Offset: 0x0017CCF5
-		// (set) Token: 0x0600A9D5 RID: 43477 RVA: 0x0017EB20 File Offset: 0x0017CD20
+		// Token: 0x17003683 RID: 13955
+		// (get) Token: 0x0600B4A6 RID: 46246 RVA: 0x00194AED File Offset: 0x00192CED
+		// (set) Token: 0x0600B4A7 RID: 46247 RVA: 0x00194B18 File Offset: 0x00192D18
 		public override ESwitchEffectStateEffectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033B9 RID: 13241
-		// (get) Token: 0x0600A9D6 RID: 43478 RVA: 0x0017EB2E File Offset: 0x0017CD2E
-		// (set) Token: 0x0600A9D7 RID: 43479 RVA: 0x0017EB59 File Offset: 0x0017CD59
+		// Token: 0x17003684 RID: 13956
+		// (get) Token: 0x0600B4A8 RID: 46248 RVA: 0x00194B26 File Offset: 0x00192D26
+		// (set) Token: 0x0600B4A9 RID: 46249 RVA: 0x00194B51 File Offset: 0x00192D51
 		public virtual string Path
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064F5 RID: 25845
+		// Token: 0x04006AE4 RID: 27364
 		[Nullable(2)]
 		protected new ISwitchScreenEffectState FbInstance;
 
-		// Token: 0x040064F6 RID: 25846
+		// Token: 0x04006AE5 RID: 27365
 		[Nullable(2)]
 		protected new ISwitchScreenEffectState_SetValue PocoInterface;
 	}

@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DE5 RID: 7653
+	// Token: 0x02001FFE RID: 8190
 	public class ISceneItemNewSplineMoveTarget_SetValue
 	{
-		// Token: 0x0400622D RID: 25133
+		// Token: 0x040067BA RID: 26554
 		public ENewSplineMoveTargetType Type;
 
-		// Token: 0x0400622E RID: 25134
+		// Token: 0x040067BB RID: 26555
 		public int EntityId;
 
-		// Token: 0x0400622F RID: 25135
+		// Token: 0x040067BC RID: 26556
 		public bool? IsLookDir;
 	}
 }

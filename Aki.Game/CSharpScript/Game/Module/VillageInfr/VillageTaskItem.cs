@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004887 RID: 18567
+	// Token: 0x020037FE RID: 14334
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 	})]
 	public class VillageTaskItem : GridProxyAbstract<VillageInfrLimitTaskData>
 	{
-		// Token: 0x06030919 RID: 198937 RVA: 0x00B47F24 File Offset: 0x00B46124
+		// Token: 0x06025445 RID: 152645 RVA: 0x00A82CF8 File Offset: 0x00A80EF8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x0603091A RID: 198938 RVA: 0x00B48025 File Offset: 0x00B46225
+		// Token: 0x06025446 RID: 152646 RVA: 0x00A82DF9 File Offset: 0x00A80FF9
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(2), () => new CommonItemSmallItemGrid(), null, false, true);
 		}
 
-		// Token: 0x0603091B RID: 198939 RVA: 0x00B4805C File Offset: 0x00B4625C
+		// Token: 0x06025447 RID: 152647 RVA: 0x00A82E30 File Offset: 0x00A81030
 		public override void Refresh(VillageInfrLimitTaskData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603091C RID: 198940 RVA: 0x00B48181 File Offset: 0x00B46381
+		// Token: 0x06025448 RID: 152648 RVA: 0x00A82F55 File Offset: 0x00A81155
 		public void SetOnClickConfirm([Nullable(new byte[]
 		{
 			2,
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.OnClickConfirmCb = callback;
 		}
 
-		// Token: 0x0603091D RID: 198941 RVA: 0x00B4818A File Offset: 0x00B4638A
+		// Token: 0x06025449 RID: 152649 RVA: 0x00A82F5E File Offset: 0x00A8115E
 		private void OnClickConfirm()
 		{
 			Action<VillageInfrLimitTaskData> onClickConfirmCb = this.OnClickConfirmCb;
@@ -88,11 +88,11 @@ namespace CSharpScript.Game.Module.VillageInfr
 			onClickConfirmCb(this.Data);
 		}
 
-		// Token: 0x0401A19D RID: 106909
+		// Token: 0x04014A10 RID: 84496
 		[Nullable(2)]
 		private VillageInfrLimitTaskData Data;
 
-		// Token: 0x0401A19E RID: 106910
+		// Token: 0x04014A11 RID: 84497
 		[Nullable(new byte[]
 		{
 			2,
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 		})]
 		private Action<VillageInfrLimitTaskData> OnClickConfirmCb;
 
-		// Token: 0x0401A19F RID: 106911
+		// Token: 0x04014A12 RID: 84498
 		[Nullable(new byte[]
 		{
 			2,

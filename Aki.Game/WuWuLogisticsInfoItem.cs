@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001665 RID: 5733
+// Token: 0x02000B1D RID: 2845
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class WuWuLogisticsInfoItem : GridProxyAbstract<IWuWuLogisticsInfoItemData>
 {
-	// Token: 0x0600A19D RID: 41373 RVA: 0x0023A830 File Offset: 0x00238A30
+	// Token: 0x0600757B RID: 30075 RVA: 0x002446CC File Offset: 0x002428CC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class WuWuLogisticsInfoItem : GridProxyAbstract<IWuWuLogisticsInfoItemDat
 		};
 	}
 
-	// Token: 0x0600A19E RID: 41374 RVA: 0x0023A88C File Offset: 0x00238A8C
+	// Token: 0x0600757C RID: 30076 RVA: 0x00244728 File Offset: 0x00242928
 	public override void Refresh(IWuWuLogisticsInfoItemData data, bool isSelected, int gridIndex)
 	{
 		UUIText text = base.GetText(2);

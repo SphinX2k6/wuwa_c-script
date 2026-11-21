@@ -3,10 +3,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005551 RID: 21841
+	// Token: 0x02004523 RID: 17699
 	public class ConfigMarkCreateInfo : MarkCreateInfo
 	{
-		// Token: 0x06037B9A RID: 228250 RVA: 0x00D38961 File Offset: 0x00D36B61
+		// Token: 0x0602CA6A RID: 182890 RVA: 0x00C86435 File Offset: 0x00C84635
 		public ConfigMarkCreateInfo(MapMark markConfig, int? markId) : base(EMarkCreateType.ConfigMark)
 		{
 			this.MarkConfig = markConfig;
@@ -16,10 +16,10 @@ namespace CSharpScript.Game.Module.Map.MapDefine
 			}
 		}
 
-		// Token: 0x0401D456 RID: 119894
+		// Token: 0x04017EDF RID: 98015
 		public int MarkId;
 
-		// Token: 0x0401D457 RID: 119895
+		// Token: 0x04017EE0 RID: 98016
 		public MapMark MarkConfig;
 	}
 }

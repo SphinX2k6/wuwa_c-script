@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061E3 RID: 25059
+	// Token: 0x02006851 RID: 26705
 	public class IBasePos2T
 	{
-		// Token: 0x1700BAD8 RID: 47832
-		// (get) Token: 0x0602B31D RID: 176925 RVA: 0x005F3FC6 File Offset: 0x005F21C6
-		// (set) Token: 0x0602B31E RID: 176926 RVA: 0x005F3FCE File Offset: 0x005F21CE
+		// Token: 0x1700C45B RID: 50267
+		// (get) Token: 0x0602DA64 RID: 186980 RVA: 0x0063EA3A File Offset: 0x0063CC3A
+		// (set) Token: 0x0602DA65 RID: 186981 RVA: 0x0063EA42 File Offset: 0x0063CC42
 		public EPos2 Type { get; set; }
 
-		// Token: 0x0602B31F RID: 176927 RVA: 0x005F3FD7 File Offset: 0x005F21D7
+		// Token: 0x0602DA66 RID: 186982 RVA: 0x0063EA4B File Offset: 0x0063CC4B
 		public IBasePos2T()
 		{
 			this.Type = EPos2.Player;

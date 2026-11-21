@@ -6,94 +6,94 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200430A RID: 17162
+	// Token: 0x02003348 RID: 13128
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SCustomValueRecordRow.SCustomValueRecordRow")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 88)]
 	public class SCustomValueRecordRow : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C627 RID: 181799 RVA: 0x00A1E9AD File Offset: 0x00A1CBAD
+		// Token: 0x0602134E RID: 136014 RVA: 0x0095BA13 File Offset: 0x00959C13
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCustomValueRecordRow._ScriptStructPtr != 0) ? SCustomValueRecordRow._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SCustomValueRecordRow.SCustomValueRecordRow", ref SCustomValueRecordRow._ScriptStructPtr);
 		}
 
-		// Token: 0x17006F05 RID: 28421
-		// (get) Token: 0x0602C628 RID: 181800 RVA: 0x00A1E9D1 File Offset: 0x00A1CBD1
-		// (set) Token: 0x0602C629 RID: 181801 RVA: 0x00A1E9E5 File Offset: 0x00A1CBE5
+		// Token: 0x17004323 RID: 17187
+		// (get) Token: 0x0602134F RID: 136015 RVA: 0x0095BA37 File Offset: 0x00959C37
+		// (set) Token: 0x06021350 RID: 136016 RVA: 0x0095BA4B File Offset: 0x00959C4B
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECustomValueReturn> ReturnType
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_ReturnType);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_ReturnType) = value;
 			}
 		}
 
-		// Token: 0x17006F06 RID: 28422
-		// (get) Token: 0x0602C62A RID: 181802 RVA: 0x00A1E9FA File Offset: 0x00A1CBFA
-		// (set) Token: 0x0602C62B RID: 181803 RVA: 0x00A1EA0E File Offset: 0x00A1CC0E
+		// Token: 0x17004324 RID: 17188
+		// (get) Token: 0x06021351 RID: 136017 RVA: 0x0095BA60 File Offset: 0x00959C60
+		// (set) Token: 0x06021352 RID: 136018 RVA: 0x0095BA74 File Offset: 0x00959C74
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECustomValueSourceNum> NumSource
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_NumSource);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_NumSource) = value;
 			}
 		}
 
-		// Token: 0x17006F07 RID: 28423
-		// (get) Token: 0x0602C62C RID: 181804 RVA: 0x00A1EA23 File Offset: 0x00A1CC23
-		// (set) Token: 0x0602C62D RID: 181805 RVA: 0x00A1EA37 File Offset: 0x00A1CC37
+		// Token: 0x17004325 RID: 17189
+		// (get) Token: 0x06021353 RID: 136019 RVA: 0x0095BA89 File Offset: 0x00959C89
+		// (set) Token: 0x06021354 RID: 136020 RVA: 0x0095BA9D File Offset: 0x00959C9D
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECustomValueSourceVector> VecSource
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_VecSource);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_VecSource) = value;
 			}
 		}
 
-		// Token: 0x17006F08 RID: 28424
-		// (get) Token: 0x0602C62E RID: 181806 RVA: 0x00A1EA4C File Offset: 0x00A1CC4C
-		// (set) Token: 0x0602C62F RID: 181807 RVA: 0x00A1EA60 File Offset: 0x00A1CC60
+		// Token: 0x17004326 RID: 17190
+		// (get) Token: 0x06021355 RID: 136021 RVA: 0x0095BAB2 File Offset: 0x00959CB2
+		// (set) Token: 0x06021356 RID: 136022 RVA: 0x0095BAC6 File Offset: 0x00959CC6
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECustomValueSourceRotator> RotSource
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_RotSource);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_RotSource) = value;
 			}
 		}
 
-		// Token: 0x17006F09 RID: 28425
-		// (get) Token: 0x0602C630 RID: 181808 RVA: 0x00A1EA78 File Offset: 0x00A1CC78
-		// (set) Token: 0x0602C631 RID: 181809 RVA: 0x00A1EABB File Offset: 0x00A1CCBB
+		// Token: 0x17004327 RID: 17191
+		// (get) Token: 0x06021357 RID: 136023 RVA: 0x0095BADC File Offset: 0x00959CDC
+		// (set) Token: 0x06021358 RID: 136024 RVA: 0x0095BB1F File Offset: 0x00959D1F
 		public TArray<float> NumberValue
 		{
 			get
@@ -102,7 +102,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<float> result;
 				if ((result = this._NumberValue) == null)
 				{
-					result = (this._NumberValue = new TArray<float>(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._NumberValue = new TArray<float>(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_NumberValue, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -112,9 +112,9 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006F0A RID: 28426
-		// (get) Token: 0x0602C632 RID: 181810 RVA: 0x00A1EACC File Offset: 0x00A1CCCC
-		// (set) Token: 0x0602C633 RID: 181811 RVA: 0x00A1EB0F File Offset: 0x00A1CD0F
+		// Token: 0x17004328 RID: 17192
+		// (get) Token: 0x06021359 RID: 136025 RVA: 0x0095BB30 File Offset: 0x00959D30
+		// (set) Token: 0x0602135A RID: 136026 RVA: 0x0095BB73 File Offset: 0x00959D73
 		public TArray<FVectorDouble> VectorValue
 		{
 			get
@@ -123,7 +123,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<FVectorDouble> result;
 				if ((result = this._VectorValue) == null)
 				{
-					result = (this._VectorValue = new TArray<FVectorDouble>(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_5, base.MemoryOwner ?? this));
+					result = (this._VectorValue = new TArray<FVectorDouble>(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_VectorValue, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -133,9 +133,9 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006F0B RID: 28427
-		// (get) Token: 0x0602C634 RID: 181812 RVA: 0x00A1EB20 File Offset: 0x00A1CD20
-		// (set) Token: 0x0602C635 RID: 181813 RVA: 0x00A1EB63 File Offset: 0x00A1CD63
+		// Token: 0x17004329 RID: 17193
+		// (get) Token: 0x0602135B RID: 136027 RVA: 0x0095BB84 File Offset: 0x00959D84
+		// (set) Token: 0x0602135C RID: 136028 RVA: 0x0095BBC7 File Offset: 0x00959DC7
 		public TArray<FRotator> RotatorValue
 		{
 			get
@@ -144,7 +144,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<FRotator> result;
 				if ((result = this._RotatorValue) == null)
 				{
-					result = (this._RotatorValue = new TArray<FRotator>(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_6, base.MemoryOwner ?? this));
+					result = (this._RotatorValue = new TArray<FRotator>(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_RotatorValue, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -154,9 +154,9 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006F0C RID: 28428
-		// (get) Token: 0x0602C636 RID: 181814 RVA: 0x00A1EB74 File Offset: 0x00A1CD74
-		// (set) Token: 0x0602C637 RID: 181815 RVA: 0x00A1EBB7 File Offset: 0x00A1CDB7
+		// Token: 0x1700432A RID: 17194
+		// (get) Token: 0x0602135D RID: 136029 RVA: 0x0095BBD8 File Offset: 0x00959DD8
+		// (set) Token: 0x0602135E RID: 136030 RVA: 0x0095BC1B File Offset: 0x00959E1B
 		public TArray<SCustomValueFormula> FormulaList
 		{
 			get
@@ -165,7 +165,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<SCustomValueFormula> result;
 				if ((result = this._FormulaList) == null)
 				{
-					result = (this._FormulaList = new TArray<SCustomValueFormula>(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_7, base.MemoryOwner ?? this));
+					result = (this._FormulaList = new TArray<SCustomValueFormula>(base.NativePtr + (IntPtr)SCustomValueRecordRow.__PropertyOffset_FormulaList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -175,112 +175,98 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006F0D RID: 28429
-		// (get) Token: 0x0602C638 RID: 181816 RVA: 0x00A1EBC5 File Offset: 0x00A1CDC5
-		// (set) Token: 0x0602C639 RID: 181817 RVA: 0x00A1EBD9 File Offset: 0x00A1CDD9
+		// Token: 0x1700432B RID: 17195
+		// (get) Token: 0x0602135F RID: 136031 RVA: 0x0095BC29 File Offset: 0x00959E29
+		// (set) Token: 0x06021360 RID: 136032 RVA: 0x0095BC3D File Offset: 0x00959E3D
 		public unsafe string Notes
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCustomValueRecordRow.__PropertyOffset_8)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCustomValueRecordRow.__PropertyOffset_Notes)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCustomValueRecordRow.__PropertyOffset_8)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCustomValueRecordRow.__PropertyOffset_Notes)), value);
 			}
 		}
 
-		// Token: 0x0602C63A RID: 181818 RVA: 0x00A1EBEE File Offset: 0x00A1CDEE
+		// Token: 0x06021361 RID: 136033 RVA: 0x0095BC52 File Offset: 0x00959E52
 		public SCustomValueRecordRow()
 		{
 		}
 
-		// Token: 0x0602C63B RID: 181819 RVA: 0x00A1EBF8 File Offset: 0x00A1CDF8
-		public SCustomValueRecordRow([Nullable(0)] TEnumAsByte<ECustomValueReturn> ReturnType, [Nullable(0)] TEnumAsByte<ECustomValueSourceNum> NumSource, [Nullable(0)] TEnumAsByte<ECustomValueSourceVector> VecSource, [Nullable(0)] TEnumAsByte<ECustomValueSourceRotator> RotSource, TArray<float> NumberValue, TArray<FVectorDouble> VectorValue, TArray<FRotator> RotatorValue, TArray<SCustomValueFormula> FormulaList, string Notes)
-		{
-			this.ReturnType = ReturnType;
-			this.NumSource = NumSource;
-			this.VecSource = VecSource;
-			this.RotSource = RotSource;
-			this.NumberValue = NumberValue;
-			this.VectorValue = VectorValue;
-			this.RotatorValue = RotatorValue;
-			this.FormulaList = FormulaList;
-			this.Notes = Notes;
-		}
-
-		// Token: 0x0602C63C RID: 181820 RVA: 0x00A1EC50 File Offset: 0x00A1CE50
+		// Token: 0x06021362 RID: 136034 RVA: 0x0095BC5A File Offset: 0x00959E5A
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCustomValueRecordRow.StaticStruct();
 		}
 
-		// Token: 0x0602C63D RID: 181821 RVA: 0x00A1EC5C File Offset: 0x00A1CE5C
+		// Token: 0x06021363 RID: 136035 RVA: 0x0095BC66 File Offset: 0x00959E66
 		[NullableContext(2)]
 		public SCustomValueRecordRow(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C63E RID: 181822 RVA: 0x00A1EC66 File Offset: 0x00A1CE66
+		// Token: 0x06021364 RID: 136036 RVA: 0x0095BC70 File Offset: 0x00959E70
 		public SCustomValueRecordRow(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C63F RID: 181823 RVA: 0x00A1EC71 File Offset: 0x00A1CE71
+		// Token: 0x06021365 RID: 136037 RVA: 0x0095BC7B File Offset: 0x00959E7B
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCustomValueRecordRow(Pointer, false, true);
 		}
 
-		// Token: 0x0602C640 RID: 181824 RVA: 0x00A1EC7B File Offset: 0x00A1CE7B
+		// Token: 0x06021366 RID: 136038 RVA: 0x0095BC85 File Offset: 0x00959E85
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCustomValueRecordRow(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017673 RID: 95859
+		// Token: 0x0401227C RID: 74364
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SCustomValueRecordRow.SCustomValueRecordRow";
 
-		// Token: 0x04017674 RID: 95860
+		// Token: 0x0401227D RID: 74365
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017675 RID: 95861
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401227E RID: 74366
+		internal static int __PropertyOffset_ReturnType;
 
-		// Token: 0x04017676 RID: 95862
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401227F RID: 74367
+		internal static int __PropertyOffset_NumSource;
 
-		// Token: 0x04017677 RID: 95863
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012280 RID: 74368
+		internal static int __PropertyOffset_VecSource;
 
-		// Token: 0x04017678 RID: 95864
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012281 RID: 74369
+		internal static int __PropertyOffset_RotSource;
 
-		// Token: 0x04017679 RID: 95865
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012282 RID: 74370
+		internal static int __PropertyOffset_NumberValue;
 
-		// Token: 0x0401767A RID: 95866
+		// Token: 0x04012283 RID: 74371
 		[Nullable(2)]
 		private TArray<float> _NumberValue;
 
-		// Token: 0x0401767B RID: 95867
-		internal static int __PropertyOffset_5;
+		// Token: 0x04012284 RID: 74372
+		internal static int __PropertyOffset_VectorValue;
 
-		// Token: 0x0401767C RID: 95868
+		// Token: 0x04012285 RID: 74373
 		[Nullable(2)]
 		private TArray<FVectorDouble> _VectorValue;
 
-		// Token: 0x0401767D RID: 95869
-		internal static int __PropertyOffset_6;
+		// Token: 0x04012286 RID: 74374
+		internal static int __PropertyOffset_RotatorValue;
 
-		// Token: 0x0401767E RID: 95870
+		// Token: 0x04012287 RID: 74375
 		[Nullable(2)]
 		private TArray<FRotator> _RotatorValue;
 
-		// Token: 0x0401767F RID: 95871
-		internal static int __PropertyOffset_7;
+		// Token: 0x04012288 RID: 74376
+		internal static int __PropertyOffset_FormulaList;
 
-		// Token: 0x04017680 RID: 95872
+		// Token: 0x04012289 RID: 74377
 		[Nullable(new byte[]
 		{
 			2,
@@ -288,7 +274,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 		})]
 		private TArray<SCustomValueFormula> _FormulaList;
 
-		// Token: 0x04017681 RID: 95873
-		internal static int __PropertyOffset_8;
+		// Token: 0x0401228A RID: 74378
+		internal static int __PropertyOffset_Notes;
 	}
 }

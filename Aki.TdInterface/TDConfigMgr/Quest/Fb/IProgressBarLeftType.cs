@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200132C RID: 4908
+	// Token: 0x0200147C RID: 5244
 	public class IProgressBarLeftType
 	{
-		// Token: 0x06007095 RID: 28821 RVA: 0x0010FBDC File Offset: 0x0010DDDC
-		[NullableContext(1)]
+		// Token: 0x06007735 RID: 30517 RVA: 0x0011E148 File Offset: 0x0011C348
 		public static IProgressBarLeftType Create(IProgressBarLeftType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002410 RID: 9232
-		// (get) Token: 0x06007096 RID: 28822 RVA: 0x0010FBFB File Offset: 0x0010DDFB
+		// Token: 0x170025DF RID: 9695
+		// (get) Token: 0x06007736 RID: 30518 RVA: 0x0011E167 File Offset: 0x0011C367
 		public virtual EProgressBarLeftType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040F0 RID: 16624
+		// Token: 0x0400446C RID: 17516
 		private IProgressBarLeftType Instance;
 	}
 }

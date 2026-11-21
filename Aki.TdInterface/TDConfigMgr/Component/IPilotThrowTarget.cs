@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000600 RID: 1536
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200069D RID: 1693
 	public class IPilotThrowTarget
 	{
-		// Token: 0x060020C6 RID: 8390 RVA: 0x0005B2D4 File Offset: 0x000594D4
+		// Token: 0x060023CC RID: 9164 RVA: 0x00061FE8 File Offset: 0x000601E8
 		private IPilotThrowTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060020C7 RID: 8391 RVA: 0x0005B30C File Offset: 0x0005950C
+		// Token: 0x060023CD RID: 9165 RVA: 0x00062020 File Offset: 0x00060220
 		public static IPilotThrowTarget Create([Nullable(2)] IPilotThrowTarget instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060020C8 RID: 8392 RVA: 0x0005B31F File Offset: 0x0005951F
+		// Token: 0x060023CE RID: 9166 RVA: 0x00062033 File Offset: 0x00060233
 		public static IPilotThrowTarget CreateFromSetValue([Nullable(2)] IPilotThrowTarget_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060020C9 RID: 8393 RVA: 0x0005B334 File Offset: 0x00059534
+		// Token: 0x060023CF RID: 9167 RVA: 0x00062048 File Offset: 0x00060248
 		public IPilotThrowTarget_SetValue ToSetValue()
 		{
 			return new IPilotThrowTarget_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008C2 RID: 2242
-		// (get) Token: 0x060020CA RID: 8394 RVA: 0x0005B39A File Offset: 0x0005959A
-		// (set) Token: 0x060020CB RID: 8395 RVA: 0x0005B3C5 File Offset: 0x000595C5
+		// Token: 0x17000979 RID: 2425
+		// (get) Token: 0x060023D0 RID: 9168 RVA: 0x000620AE File Offset: 0x000602AE
+		// (set) Token: 0x060023D1 RID: 9169 RVA: 0x000620D9 File Offset: 0x000602D9
 		public virtual string TidTargetName
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008C3 RID: 2243
-		// (get) Token: 0x060020CC RID: 8396 RVA: 0x0005B3D4 File Offset: 0x000595D4
-		// (set) Token: 0x060020CD RID: 8397 RVA: 0x0005B435 File Offset: 0x00059635
+		// Token: 0x1700097A RID: 2426
+		// (get) Token: 0x060023D2 RID: 9170 RVA: 0x000620E8 File Offset: 0x000602E8
+		// (set) Token: 0x060023D3 RID: 9171 RVA: 0x00062149 File Offset: 0x00060349
 		public virtual VectorInfo Position
 		{
 			get
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008C4 RID: 2244
-		// (get) Token: 0x060020CE RID: 8398 RVA: 0x0005B44A File Offset: 0x0005964A
-		// (set) Token: 0x060020CF RID: 8399 RVA: 0x0005B475 File Offset: 0x00059675
+		// Token: 0x1700097B RID: 2427
+		// (get) Token: 0x060023D4 RID: 9172 RVA: 0x0006215E File Offset: 0x0006035E
+		// (set) Token: 0x060023D5 RID: 9173 RVA: 0x00062189 File Offset: 0x00060389
 		public virtual EPilotThrowPointVisualType VisualType
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008C5 RID: 2245
-		// (get) Token: 0x060020D0 RID: 8400 RVA: 0x0005B484 File Offset: 0x00059684
-		// (set) Token: 0x060020D1 RID: 8401 RVA: 0x0005B4E5 File Offset: 0x000596E5
+		// Token: 0x1700097C RID: 2428
+		// (get) Token: 0x060023D6 RID: 9174 RVA: 0x00062198 File Offset: 0x00060398
+		// (set) Token: 0x060023D7 RID: 9175 RVA: 0x000621F9 File Offset: 0x000603F9
 		[Nullable(2)]
 		public virtual IConditionGroup Conditions
 		{
@@ -176,9 +174,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008C6 RID: 2246
-		// (get) Token: 0x060020D2 RID: 8402 RVA: 0x0005B4FC File Offset: 0x000596FC
-		// (set) Token: 0x060020D3 RID: 8403 RVA: 0x0005B536 File Offset: 0x00059736
+		// Token: 0x1700097D RID: 2429
+		// (get) Token: 0x060023D8 RID: 9176 RVA: 0x00062210 File Offset: 0x00060410
+		// (set) Token: 0x060023D9 RID: 9177 RVA: 0x0006224A File Offset: 0x0006044A
 		public virtual bool? IsQuest
 		{
 			get
@@ -200,9 +198,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008C7 RID: 2247
-		// (get) Token: 0x060020D4 RID: 8404 RVA: 0x0005B544 File Offset: 0x00059744
-		// (set) Token: 0x060020D5 RID: 8405 RVA: 0x0005B57E File Offset: 0x0005977E
+		// Token: 0x1700097E RID: 2430
+		// (get) Token: 0x060023DA RID: 9178 RVA: 0x00062258 File Offset: 0x00060458
+		// (set) Token: 0x060023DB RID: 9179 RVA: 0x00062292 File Offset: 0x00060492
 		public virtual float? UiScale
 		{
 			get
@@ -224,9 +222,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008C8 RID: 2248
-		// (get) Token: 0x060020D6 RID: 8406 RVA: 0x0005B58C File Offset: 0x0005978C
-		// (set) Token: 0x060020D7 RID: 8407 RVA: 0x0005B5A3 File Offset: 0x000597A3
+		// Token: 0x1700097F RID: 2431
+		// (get) Token: 0x060023DC RID: 9180 RVA: 0x000622A0 File Offset: 0x000604A0
+		// (set) Token: 0x060023DD RID: 9181 RVA: 0x000622B7 File Offset: 0x000604B7
 		[Nullable(2)]
 		public virtual string EdTidTargetName
 		{
@@ -246,24 +244,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040016FA RID: 5882
+		// Token: 0x040018EC RID: 6380
 		[Nullable(2)]
 		protected IPilotThrowTarget FbInstance;
 
-		// Token: 0x040016FB RID: 5883
+		// Token: 0x040018ED RID: 6381
 		[Nullable(2)]
 		protected IPilotThrowTarget_SetValue PocoInterface;
 
-		// Token: 0x040016FC RID: 5884
+		// Token: 0x040018EE RID: 6382
 		private VectorInfo _PositionCache;
 
-		// Token: 0x040016FD RID: 5885
+		// Token: 0x040018EF RID: 6383
 		private bool _PositionInited;
 
-		// Token: 0x040016FE RID: 5886
+		// Token: 0x040018F0 RID: 6384
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x040016FF RID: 5887
+		// Token: 0x040018F1 RID: 6385
 		private bool _ConditionsInited;
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006C9 RID: 1737
+	// Token: 0x0200076A RID: 1898
 	public class ISharingVehicleFeature_SetValue
 	{
-		// Token: 0x04001980 RID: 6528
+		// Token: 0x04001B7F RID: 7039
 		public EVehicleFeatureFlag Type;
 
-		// Token: 0x04001981 RID: 6529
+		// Token: 0x04001B80 RID: 7040
 		public EAffectionDegreeSourceType? AffectionDegreeSourceType;
 	}
 }

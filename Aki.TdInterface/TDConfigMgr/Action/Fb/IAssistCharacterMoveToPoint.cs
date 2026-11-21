@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002702 RID: 9986
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029C8 RID: 10696
 	public class IAssistCharacterMoveToPoint : IExecClientBattleActionType
 	{
-		// Token: 0x0600DEE5 RID: 57061 RVA: 0x00210CC7 File Offset: 0x0020EEC7
+		// Token: 0x0600ECCD RID: 60621 RVA: 0x0022D62F File Offset: 0x0022B82F
 		public static IAssistCharacterMoveToPoint Create(IAssistCharacterMoveToPoint? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042A3 RID: 17059
-		// (get) Token: 0x0600DEE6 RID: 57062 RVA: 0x00210CE6 File Offset: 0x0020EEE6
+		// Token: 0x170045EB RID: 17899
+		// (get) Token: 0x0600ECCE RID: 60622 RVA: 0x0022D64E File Offset: 0x0022B84E
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042A4 RID: 17060
-		// (get) Token: 0x0600DEE7 RID: 57063 RVA: 0x00210CF3 File Offset: 0x0020EEF3
+		// Token: 0x170045EC RID: 17900
+		// (get) Token: 0x0600ECCF RID: 60623 RVA: 0x0022D65B File Offset: 0x0022B85B
 		public virtual int AssistCharacterId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042A5 RID: 17061
-		// (get) Token: 0x0600DEE8 RID: 57064 RVA: 0x00210D00 File Offset: 0x0020EF00
+		// Token: 0x170045ED RID: 17901
+		// (get) Token: 0x0600ECD0 RID: 60624 RVA: 0x0022D668 File Offset: 0x0022B868
 		public virtual IAssistCharacterMoveType MoveType
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BB4 RID: 31668
+		// Token: 0x04008258 RID: 33368
 		private IAssistCharacterMoveToPoint Instance;
 
-		// Token: 0x04007BB5 RID: 31669
+		// Token: 0x04008259 RID: 33369
 		private IAssistCharacterMoveType _MoveTypeCache;
 
-		// Token: 0x04007BB6 RID: 31670
+		// Token: 0x0400825A RID: 33370
 		private bool _MoveTypeInited;
 	}
 }

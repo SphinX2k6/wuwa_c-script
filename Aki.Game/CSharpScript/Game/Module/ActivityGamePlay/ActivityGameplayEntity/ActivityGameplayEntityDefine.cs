@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Compon
 
 namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 {
-	// Token: 0x02006939 RID: 26937
+	// Token: 0x0200588A RID: 22666
 	public class ActivityGameplayEntityDefine
 	{
-		// Token: 0x06043248 RID: 275016 RVA: 0x0105DF64 File Offset: 0x0105C164
+		// Token: 0x06037DA5 RID: 228773 RVA: 0x00F9F5D4 File Offset: 0x00F9D7D4
 		[NullableContext(1)]
 		public static Dictionary<EActivityEntityKind, IActivityEntityComposition> GetActivityEntityComposeMap()
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			return ActivityGameplayEntityDefine.composeMap;
 		}
 
-		// Token: 0x04022F59 RID: 143193
+		// Token: 0x0401D7B6 RID: 120758
 		[Nullable(new byte[]
 		{
 			2,

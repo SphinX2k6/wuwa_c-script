@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007022 RID: 28706
+	// Token: 0x020077EB RID: 30699
 	public struct ISetMotorSpeedTargetSpeed : IFlatbufferObject
 	{
-		// Token: 0x1700D528 RID: 54568
-		// (get) Token: 0x06032C6B RID: 207979 RVA: 0x006D99B3 File Offset: 0x006D7BB3
+		// Token: 0x1700E0FC RID: 57596
+		// (get) Token: 0x06035ED1 RID: 220881 RVA: 0x007395F7 File Offset: 0x007377F7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C6C RID: 207980 RVA: 0x006D99C0 File Offset: 0x006D7BC0
+		// Token: 0x06035ED2 RID: 220882 RVA: 0x00739604 File Offset: 0x00737804
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032C6D RID: 207981 RVA: 0x006D99C8 File Offset: 0x006D7BC8
+		// Token: 0x06035ED3 RID: 220883 RVA: 0x0073960C File Offset: 0x0073780C
 		public static ISetMotorSpeedTargetSpeed GetRootAsISetMotorSpeedTargetSpeed(ByteBuffer _bb)
 		{
 			return ISetMotorSpeedTargetSpeed.GetRootAsISetMotorSpeedTargetSpeed(_bb, default(ISetMotorSpeedTargetSpeed));
 		}
 
-		// Token: 0x06032C6E RID: 207982 RVA: 0x006D99E4 File Offset: 0x006D7BE4
+		// Token: 0x06035ED4 RID: 220884 RVA: 0x00739628 File Offset: 0x00737828
 		public static ISetMotorSpeedTargetSpeed GetRootAsISetMotorSpeedTargetSpeed(ByteBuffer _bb, ISetMotorSpeedTargetSpeed obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032C6F RID: 207983 RVA: 0x006D9A01 File Offset: 0x006D7C01
+		// Token: 0x06035ED5 RID: 220885 RVA: 0x00739645 File Offset: 0x00737845
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032C70 RID: 207984 RVA: 0x006D9A10 File Offset: 0x006D7C10
+		// Token: 0x06035ED6 RID: 220886 RVA: 0x00739654 File Offset: 0x00737854
 		public ISetMotorSpeedTargetSpeed __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D529 RID: 54569
-		// (get) Token: 0x06032C71 RID: 207985 RVA: 0x006D9A20 File Offset: 0x006D7C20
+		// Token: 0x1700E0FD RID: 57597
+		// (get) Token: 0x06035ED7 RID: 220887 RVA: 0x00739664 File Offset: 0x00737864
 		public EMotorSpeedType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D52A RID: 54570
-		// (get) Token: 0x06032C72 RID: 207986 RVA: 0x006D9A5C File Offset: 0x006D7C5C
+		// Token: 0x1700E0FE RID: 57598
+		// (get) Token: 0x06035ED8 RID: 220888 RVA: 0x007396A0 File Offset: 0x007378A0
 		public float TargetSpeed
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D52B RID: 54571
-		// (get) Token: 0x06032C73 RID: 207987 RVA: 0x006D9A9C File Offset: 0x006D7C9C
+		// Token: 0x1700E0FF RID: 57599
+		// (get) Token: 0x06035ED9 RID: 220889 RVA: 0x007396E0 File Offset: 0x007378E0
 		public float TransitionTime
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D52C RID: 54572
-		// (get) Token: 0x06032C74 RID: 207988 RVA: 0x006D9ADC File Offset: 0x006D7CDC
+		// Token: 0x1700E100 RID: 57600
+		// (get) Token: 0x06035EDA RID: 220890 RVA: 0x00739720 File Offset: 0x00737920
 		public TEaseCurveType ChangeSpeedCurveType
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C75 RID: 207989 RVA: 0x006D9B1C File Offset: 0x006D7D1C
+		// Token: 0x06035EDB RID: 220891 RVA: 0x00739760 File Offset: 0x00737960
 		public TTable? ChangeSpeedCurve<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -119,20 +119,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06032C76 RID: 207990 RVA: 0x006D9B64 File Offset: 0x006D7D64
+		// Token: 0x06035EDC RID: 220892 RVA: 0x007397A8 File Offset: 0x007379A8
 		public IEaseCurveCustom ChangeSpeedCurveAsIEaseCurveCustom()
 		{
 			return this.ChangeSpeedCurve<IEaseCurveCustom>().Value;
 		}
 
-		// Token: 0x06032C77 RID: 207991 RVA: 0x006D9B80 File Offset: 0x006D7D80
+		// Token: 0x06035EDD RID: 220893 RVA: 0x007397C4 File Offset: 0x007379C4
 		public IEaseCurvePreset ChangeSpeedCurveAsIEaseCurvePreset()
 		{
 			return this.ChangeSpeedCurve<IEaseCurvePreset>().Value;
 		}
 
-		// Token: 0x1700D52D RID: 54573
-		// (get) Token: 0x06032C78 RID: 207992 RVA: 0x006D9B9C File Offset: 0x006D7D9C
+		// Token: 0x1700E101 RID: 57601
+		// (get) Token: 0x06035EDE RID: 220894 RVA: 0x007397E0 File Offset: 0x007379E0
 		public bool NotAllowSpeedAdjustmentIfExceed
 		{
 			get
@@ -142,8 +142,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D52E RID: 54574
-		// (get) Token: 0x06032C79 RID: 207993 RVA: 0x006D9BDC File Offset: 0x006D7DDC
+		// Token: 0x1700E102 RID: 57602
+		// (get) Token: 0x06035EDF RID: 220895 RVA: 0x00739820 File Offset: 0x00737A20
 		public bool NotAllowSpeedAdjustmentIfBelow
 		{
 			get
@@ -153,8 +153,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D52F RID: 54575
-		// (get) Token: 0x06032C7A RID: 207994 RVA: 0x006D9C1C File Offset: 0x006D7E1C
+		// Token: 0x1700E103 RID: 57603
+		// (get) Token: 0x06035EE0 RID: 220896 RVA: 0x00739860 File Offset: 0x00737A60
 		public byte NullMask
 		{
 			get
@@ -168,7 +168,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C7B RID: 207995 RVA: 0x006D9C5C File Offset: 0x006D7E5C
+		// Token: 0x06035EE1 RID: 220897 RVA: 0x007398A0 File Offset: 0x00737AA0
 		public static Offset<ISetMotorSpeedTargetSpeed> CreateISetMotorSpeedTargetSpeed(FlatBufferBuilder builder, EMotorSpeedType Type = EMotorSpeedType.TargetSpeed, float TargetSpeed = 0f, float TransitionTime = 0f, TEaseCurveType ChangeSpeedCurve_type = TEaseCurveType.NONE, int ChangeSpeedCurveOffset = 0, bool NotAllowSpeedAdjustmentIfExceed = false, bool NotAllowSpeedAdjustmentIfBelow = false, byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -183,67 +183,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetMotorSpeedTargetSpeed.EndISetMotorSpeedTargetSpeed(builder);
 		}
 
-		// Token: 0x06032C7C RID: 207996 RVA: 0x006D9CB3 File Offset: 0x006D7EB3
+		// Token: 0x06035EE2 RID: 220898 RVA: 0x007398F7 File Offset: 0x00737AF7
 		public static void StartISetMotorSpeedTargetSpeed(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06032C7D RID: 207997 RVA: 0x006D9CBC File Offset: 0x006D7EBC
+		// Token: 0x06035EE3 RID: 220899 RVA: 0x00739900 File Offset: 0x00737B00
 		public static void AddType(FlatBufferBuilder builder, EMotorSpeedType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032C7E RID: 207998 RVA: 0x006D9CC7 File Offset: 0x006D7EC7
+		// Token: 0x06035EE4 RID: 220900 RVA: 0x0073990B File Offset: 0x00737B0B
 		public static void AddTargetSpeed(FlatBufferBuilder builder, float targetSpeed)
 		{
 			builder.AddFloat(1, targetSpeed, 0.0);
 		}
 
-		// Token: 0x06032C7F RID: 207999 RVA: 0x006D9CDA File Offset: 0x006D7EDA
+		// Token: 0x06035EE5 RID: 220901 RVA: 0x0073991E File Offset: 0x00737B1E
 		public static void AddTransitionTime(FlatBufferBuilder builder, float transitionTime)
 		{
 			builder.AddFloat(2, transitionTime, 0.0);
 		}
 
-		// Token: 0x06032C80 RID: 208000 RVA: 0x006D9CED File Offset: 0x006D7EED
+		// Token: 0x06035EE6 RID: 220902 RVA: 0x00739931 File Offset: 0x00737B31
 		public static void AddChangeSpeedCurveType(FlatBufferBuilder builder, TEaseCurveType changeSpeedCurveType)
 		{
 			builder.AddByte(3, (byte)changeSpeedCurveType, 0);
 		}
 
-		// Token: 0x06032C81 RID: 208001 RVA: 0x006D9CF8 File Offset: 0x006D7EF8
+		// Token: 0x06035EE7 RID: 220903 RVA: 0x0073993C File Offset: 0x00737B3C
 		public static void AddChangeSpeedCurve(FlatBufferBuilder builder, int changeSpeedCurveOffset)
 		{
 			builder.AddOffset(4, changeSpeedCurveOffset, 0);
 		}
 
-		// Token: 0x06032C82 RID: 208002 RVA: 0x006D9D03 File Offset: 0x006D7F03
+		// Token: 0x06035EE8 RID: 220904 RVA: 0x00739947 File Offset: 0x00737B47
 		public static void AddNotAllowSpeedAdjustmentIfExceed(FlatBufferBuilder builder, bool notAllowSpeedAdjustmentIfExceed)
 		{
 			builder.AddBool(5, notAllowSpeedAdjustmentIfExceed, false);
 		}
 
-		// Token: 0x06032C83 RID: 208003 RVA: 0x006D9D0E File Offset: 0x006D7F0E
+		// Token: 0x06035EE9 RID: 220905 RVA: 0x00739952 File Offset: 0x00737B52
 		public static void AddNotAllowSpeedAdjustmentIfBelow(FlatBufferBuilder builder, bool notAllowSpeedAdjustmentIfBelow)
 		{
 			builder.AddBool(6, notAllowSpeedAdjustmentIfBelow, false);
 		}
 
-		// Token: 0x06032C84 RID: 208004 RVA: 0x006D9D19 File Offset: 0x006D7F19
+		// Token: 0x06035EEA RID: 220906 RVA: 0x0073995D File Offset: 0x00737B5D
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06032C85 RID: 208005 RVA: 0x006D9D24 File Offset: 0x006D7F24
+		// Token: 0x06035EEB RID: 220907 RVA: 0x00739968 File Offset: 0x00737B68
 		public static Offset<ISetMotorSpeedTargetSpeed> EndISetMotorSpeedTargetSpeed(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetMotorSpeedTargetSpeed>(builder.EndTable());
 		}
 
-		// Token: 0x06032C86 RID: 208006 RVA: 0x006D9D34 File Offset: 0x006D7F34
+		// Token: 0x06035EEC RID: 220908 RVA: 0x00739978 File Offset: 0x00737B78
 		public ISetMotorSpeedTargetSpeedT UnPack()
 		{
 			ISetMotorSpeedTargetSpeedT setMotorSpeedTargetSpeedT = new ISetMotorSpeedTargetSpeedT();
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setMotorSpeedTargetSpeedT;
 		}
 
-		// Token: 0x06032C87 RID: 208007 RVA: 0x006D9D50 File Offset: 0x006D7F50
+		// Token: 0x06035EED RID: 220909 RVA: 0x00739994 File Offset: 0x00737B94
 		public void UnPackTo(ISetMotorSpeedTargetSpeedT _o)
 		{
 			_o.Type = this.Type;
@@ -276,7 +276,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06032C88 RID: 208008 RVA: 0x006D9E40 File Offset: 0x006D8040
+		// Token: 0x06035EEE RID: 220910 RVA: 0x00739A84 File Offset: 0x00737C84
 		public static Offset<ISetMotorSpeedTargetSpeed> Pack(FlatBufferBuilder builder, ISetMotorSpeedTargetSpeedT _o)
 		{
 			if (_o == null)
@@ -288,7 +288,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetMotorSpeedTargetSpeed.CreateISetMotorSpeedTargetSpeed(builder, _o.Type, _o.TargetSpeed, _o.TransitionTime, changeSpeedCurve_type, changeSpeedCurveOffset, _o.NotAllowSpeedAdjustmentIfExceed, _o.NotAllowSpeedAdjustmentIfBelow, _o.NullMask);
 		}
 
-		// Token: 0x04011A4B RID: 72267
+		// Token: 0x04012A30 RID: 76336
 		private Table __p;
 	}
 }

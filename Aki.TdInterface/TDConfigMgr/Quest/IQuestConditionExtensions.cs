@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200106F RID: 4207
+	// Token: 0x0200119D RID: 4509
 	public static class IQuestConditionExtensions
 	{
-		// Token: 0x06005E9E RID: 24222 RVA: 0x000E4ED0 File Offset: 0x000E30D0
-		[NullableContext(1)]
+		// Token: 0x06006492 RID: 25746 RVA: 0x000F1F28 File Offset: 0x000F0128
 		public static IReadOnlyList<object> GetConditions(this IQuestCondition p)
 		{
 			ICheckEntityStateQuestCondition checkEntityStateQuestCondition = p as ICheckEntityStateQuestCondition;
@@ -43,6 +41,27 @@ namespace Aki.TDConfigMgr.Quest
 				conditions = checkEntityStateQuestCondition.Conditions;
 			}
 			return conditions;
+		}
+
+		// Token: 0x06006493 RID: 25747 RVA: 0x000F1FAC File Offset: 0x000F01AC
+		public static IReadOnlyList<ISpecificMonsterDeadPosition> GetSpecificMonsterDeadPositions(this IQuestCondition p)
+		{
+			IKillChildQuestCondition killChildQuestCondition = p as IKillChildQuestCondition;
+			List<ISpecificMonsterDeadPosition> specificMonsterDeadPositions;
+			if (killChildQuestCondition == null)
+			{
+				IMonsterCreatorQuestCondition monsterCreatorQuestCondition = p as IMonsterCreatorQuestCondition;
+				if (monsterCreatorQuestCondition == null)
+				{
+					throw new NotImplementedException("获取类型:" + p.GetType().Name + "的SpecificMonsterDeadPositions的字段失败");
+				}
+				specificMonsterDeadPositions = monsterCreatorQuestCondition.SpecificMonsterDeadPositions;
+			}
+			else
+			{
+				specificMonsterDeadPositions = killChildQuestCondition.SpecificMonsterDeadPositions;
+			}
+			return specificMonsterDeadPositions;
 		}
 	}
 }

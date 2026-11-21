@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EE6 RID: 24294
+	// Token: 0x02004ECD RID: 20173
 	public enum EComponentDefine_PeriodicityChallengeView
 	{
-		// Token: 0x0402041A RID: 132122
+		// Token: 0x0401AEEC RID: 110316
 		TypeScroll,
-		// Token: 0x0402041B RID: 132123
+		// Token: 0x0401AEED RID: 110317
 		TypeContent,
-		// Token: 0x0402041C RID: 132124
+		// Token: 0x0401AEEE RID: 110318
 		TypeItem,
-		// Token: 0x0402041D RID: 132125
+		// Token: 0x0401AEEF RID: 110319
 		PlayScroll,
-		// Token: 0x0402041E RID: 132126
+		// Token: 0x0401AEF0 RID: 110320
 		PlayContent,
-		// Token: 0x0402041F RID: 132127
+		// Token: 0x0401AEF1 RID: 110321
 		PlayItem
 	}
 }

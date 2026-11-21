@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001F5E RID: 8030
+// Token: 0x02001420 RID: 5152
 public enum EMotorcycleAutoMovingItemChildType
 {
-	// Token: 0x040073BF RID: 29631
+	// Token: 0x040074A0 RID: 29856
 	AcceleratorNode,
-	// Token: 0x040073C0 RID: 29632
+	// Token: 0x040074A1 RID: 29857
 	AcceleratorIconSprite,
-	// Token: 0x040073C1 RID: 29633
+	// Token: 0x040074A2 RID: 29858
 	NitrogenNode,
-	// Token: 0x040073C2 RID: 29634
+	// Token: 0x040074A3 RID: 29859
 	NitrogenIconSprite,
-	// Token: 0x040073C3 RID: 29635
+	// Token: 0x040074A4 RID: 29860
 	AnimFull,
-	// Token: 0x040073C4 RID: 29636
+	// Token: 0x040074A5 RID: 29861
 	AnimOut,
-	// Token: 0x040073C5 RID: 29637
+	// Token: 0x040074A6 RID: 29862
 	AnimIn
 }

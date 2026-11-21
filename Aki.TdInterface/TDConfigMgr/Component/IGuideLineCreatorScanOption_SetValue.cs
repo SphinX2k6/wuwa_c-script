@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000405 RID: 1029
+	// Token: 0x0200045E RID: 1118
 	public class IGuideLineCreatorScanOption_SetValue
 	{
-		// Token: 0x0400103E RID: 4158
+		// Token: 0x04001160 RID: 4448
 		public int ResponseRange;
 	}
 }

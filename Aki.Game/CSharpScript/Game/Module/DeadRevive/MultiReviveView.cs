@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005AC6 RID: 23238
+	// Token: 0x02004AA7 RID: 19111
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MultiReviveView : UiTickViewBase
 	{
-		// Token: 0x0603ADA7 RID: 241063 RVA: 0x00E06F72 File Offset: 0x00E05172
+		// Token: 0x0602FD19 RID: 195865 RVA: 0x00D57C52 File Offset: 0x00D55E52
 		public MultiReviveView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603ADA8 RID: 241064 RVA: 0x00E06FA4 File Offset: 0x00E051A4
+		// Token: 0x0602FD1A RID: 195866 RVA: 0x00D57C84 File Offset: 0x00D55E84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ADA9 RID: 241065 RVA: 0x00E07204 File Offset: 0x00E05404
+		// Token: 0x0602FD1B RID: 195867 RVA: 0x00D57EE4 File Offset: 0x00D560E4
 		protected override void OnAddEventListener()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADAA RID: 241066 RVA: 0x00E07258 File Offset: 0x00E05458
+		// Token: 0x0602FD1C RID: 195868 RVA: 0x00D57F38 File Offset: 0x00D56138
 		protected override void OnRemoveEventListener()
 		{
 			if (EventSystem.Instance.Has(EEventName.PlayerChallengeStateChange, new Action<int, EContinuingChallenge>(this.OnlineTeamPlayerAccept)))
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADAB RID: 241067 RVA: 0x00E072D8 File Offset: 0x00E054D8
+		// Token: 0x0602FD1D RID: 195869 RVA: 0x00D57FB8 File Offset: 0x00D561B8
 		protected override void OnBeforeShow()
 		{
 			bool flag = GameModeController.Instance.IsInInstance();
@@ -110,13 +110,13 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.InitRevive();
 		}
 
-		// Token: 0x0603ADAC RID: 241068 RVA: 0x00E07364 File Offset: 0x00E05564
+		// Token: 0x0602FD1E RID: 195870 RVA: 0x00D58044 File Offset: 0x00D56244
 		protected override void OnBeforeDestroy()
 		{
 			this.ResetData();
 		}
 
-		// Token: 0x0603ADAD RID: 241069 RVA: 0x00E0736C File Offset: 0x00E0556C
+		// Token: 0x0602FD1F RID: 195871 RVA: 0x00D5804C File Offset: 0x00D5624C
 		private void ResetData()
 		{
 			this.ReviveNumber = -1;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADAE RID: 241070 RVA: 0x00E073D4 File Offset: 0x00E055D4
+		// Token: 0x0602FD20 RID: 195872 RVA: 0x00D580B4 File Offset: 0x00D562B4
 		private void InitRevive()
 		{
 			Revive? reviveConfig = DeadReviveModel.Instance.ReviveConfig;
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			text.SetText(itemCountByConfigId.ToString(), true);
 		}
 
-		// Token: 0x0603ADAF RID: 241071 RVA: 0x00E07620 File Offset: 0x00E05820
+		// Token: 0x0602FD21 RID: 195873 RVA: 0x00D58300 File Offset: 0x00D56500
 		private void OnClickReviveBtn()
 		{
 			if (this.ReviveNumber == 0)
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.RequestRevive(false);
 		}
 
-		// Token: 0x0603ADB0 RID: 241072 RVA: 0x00E07648 File Offset: 0x00E05848
+		// Token: 0x0602FD22 RID: 195874 RVA: 0x00D58328 File Offset: 0x00D56528
 		private void OnClickReviveAtLocationBtn()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.UsingItemRevive);
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603ADB1 RID: 241073 RVA: 0x00E076A0 File Offset: 0x00E058A0
+		// Token: 0x0602FD23 RID: 195875 RVA: 0x00D58380 File Offset: 0x00D56580
 		private void RequestRevive(bool useItem)
 		{
 			DeadReviveController.Instance.ReviveRequest(useItem, delegate(bool result)
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}, null);
 		}
 
-		// Token: 0x0603ADB2 RID: 241074 RVA: 0x00E076D0 File Offset: 0x00E058D0
+		// Token: 0x0602FD24 RID: 195876 RVA: 0x00D583B0 File Offset: 0x00D565B0
 		private void UpdateOnlineTeamPlayer()
 		{
 			UUIText text = base.GetText(0);
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADB3 RID: 241075 RVA: 0x00E07870 File Offset: 0x00E05A70
+		// Token: 0x0602FD25 RID: 195877 RVA: 0x00D58550 File Offset: 0x00D56750
 		private void UpdateOnlineText()
 		{
 			if (CreatureModel.Instance.IsMyWorld())
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			LguiUtil.Instance.SetLocalText(base.GetText(6), "SuggestChallengeAgain", Array.Empty<object>());
 		}
 
-		// Token: 0x0603ADB4 RID: 241076 RVA: 0x00E078C0 File Offset: 0x00E05AC0
+		// Token: 0x0602FD26 RID: 195878 RVA: 0x00D585A0 File Offset: 0x00D567A0
 		private void SetTeamPlayerSprite(EContinuingChallenge state, UUISprite playerSprite)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(OnlineDefine.onlineContinuingChallengeIcon[state]);
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADB5 RID: 241077 RVA: 0x00E07900 File Offset: 0x00E05B00
+		// Token: 0x0602FD27 RID: 195879 RVA: 0x00D585E0 File Offset: 0x00D567E0
 		private void OnClickQuitBtn()
 		{
 			if (SceneTeamModel.Instance.IsAllDid())
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603ADB6 RID: 241078 RVA: 0x00E0796C File Offset: 0x00E05B6C
+		// Token: 0x0602FD28 RID: 195880 RVA: 0x00D5864C File Offset: 0x00D5684C
 		private void OnClickAgainBtn()
 		{
 			if (!SceneTeamModel.Instance.IsAllDid())
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADB7 RID: 241079 RVA: 0x00E07A74 File Offset: 0x00E05C74
+		// Token: 0x0602FD29 RID: 195881 RVA: 0x00D58754 File Offset: 0x00D56954
 		private void OnlineTeamPlayerAccept(int playerId, EContinuingChallenge state)
 		{
 			UUISprite uuisprite;
@@ -394,79 +394,79 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.SetTeamPlayerSprite(state, uuisprite);
 		}
 
-		// Token: 0x0603ADB8 RID: 241080 RVA: 0x00E07A9C File Offset: 0x00E05C9C
+		// Token: 0x0602FD2A RID: 195882 RVA: 0x00D5877C File Offset: 0x00D5697C
 		private void OnTeamLivingStateChange(bool b, ETeamGroupType eTeamGroupType, ETeamLivingState arg3, ETeamLivingState arg4)
 		{
 			this.UpdateOnlineTeamPlayer();
 		}
 
-		// Token: 0x0401EB6A RID: 125802
+		// Token: 0x04019626 RID: 103974
 		private const int TIME_SECOND = 1000;
 
-		// Token: 0x0401EB6B RID: 125803
+		// Token: 0x04019627 RID: 103975
 		private const int AUTO_REVIVE_TIME = 60;
 
-		// Token: 0x0401EB6C RID: 125804
+		// Token: 0x04019628 RID: 103976
 		private readonly Dictionary<int, UUISprite> PlayerStateItemMap = new Dictionary<int, UUISprite>();
 
-		// Token: 0x0401EB6D RID: 125805
+		// Token: 0x04019629 RID: 103977
 		private string ReviveAtLocationName = "";
 
-		// Token: 0x0401EB6E RID: 125806
+		// Token: 0x0401962A RID: 103978
 		private string ReviveAtLocationCd = "";
 
-		// Token: 0x0401EB6F RID: 125807
+		// Token: 0x0401962B RID: 103979
 		private int ReviveNumber = -1;
 
-		// Token: 0x0401EB70 RID: 125808
+		// Token: 0x0401962C RID: 103980
 		private int AutoReviveTime;
 
-		// Token: 0x0401EB71 RID: 125809
+		// Token: 0x0401962D RID: 103981
 		[Nullable(2)]
 		private TimerHandle AutoReviveTimer;
 
-		// Token: 0x0401EB72 RID: 125810
+		// Token: 0x0401962E RID: 103982
 		[Nullable(2)]
 		private UUIText AutoReviveText;
 
-		// Token: 0x0200BD18 RID: 48408
+		// Token: 0x0200A720 RID: 42784
 		[NullableContext(0)]
 		private class EOnlineInstanceDungeonDeathPanel
 		{
-			// Token: 0x0403907D RID: 233597
+			// Token: 0x04033A47 RID: 211527
 			public const int TextTips = 0;
 
-			// Token: 0x0403907E RID: 233598
+			// Token: 0x04033A48 RID: 211528
 			public const int QuitButton = 1;
 
-			// Token: 0x0403907F RID: 233599
+			// Token: 0x04033A49 RID: 211529
 			public const int AgainButton = 2;
 
-			// Token: 0x04039080 RID: 233600
+			// Token: 0x04033A4A RID: 211530
 			public const int TeamPlayerStateItem = 3;
 
-			// Token: 0x04039081 RID: 233601
+			// Token: 0x04033A4B RID: 211531
 			public const int TeamPlayer1Sprite = 4;
 
-			// Token: 0x04039082 RID: 233602
+			// Token: 0x04033A4C RID: 211532
 			public const int TeamPlayer2Sprite = 5;
 
-			// Token: 0x04039083 RID: 233603
+			// Token: 0x04033A4D RID: 211533
 			public const int TextAgain = 6;
 
-			// Token: 0x04039084 RID: 233604
+			// Token: 0x04033A4E RID: 211534
 			public const int ReviveBtn = 7;
 
-			// Token: 0x04039085 RID: 233605
+			// Token: 0x04033A4F RID: 211535
 			public const int AutoReviveText = 8;
 
-			// Token: 0x04039086 RID: 233606
+			// Token: 0x04033A50 RID: 211536
 			public const int ReviveAtLocationBtn = 9;
 
-			// Token: 0x04039087 RID: 233607
+			// Token: 0x04033A51 RID: 211537
 			public const int ReviveAtLocationTexture = 10;
 
-			// Token: 0x04039088 RID: 233608
+			// Token: 0x04033A52 RID: 211538
 			public const int ReviveAtLocationText = 11;
 		}
 	}

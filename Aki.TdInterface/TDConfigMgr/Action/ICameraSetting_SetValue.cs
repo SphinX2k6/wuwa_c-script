@@ -2,22 +2,22 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001851 RID: 6225
+	// Token: 0x020019DC RID: 6620
 	public class ICameraSetting_SetValue
 	{
-		// Token: 0x04005475 RID: 21621
+		// Token: 0x040058C1 RID: 22721
 		public float Aperture;
 
-		// Token: 0x04005476 RID: 21622
+		// Token: 0x040058C2 RID: 22722
 		public float FocalLength;
 
-		// Token: 0x04005477 RID: 21623
+		// Token: 0x040058C3 RID: 22723
 		public float FocusDistance;
 
-		// Token: 0x04005478 RID: 21624
+		// Token: 0x040058C4 RID: 22724
 		public float FocalRegion;
 
-		// Token: 0x04005479 RID: 21625
+		// Token: 0x040058C5 RID: 22725
 		public float? Fov;
 	}
 }

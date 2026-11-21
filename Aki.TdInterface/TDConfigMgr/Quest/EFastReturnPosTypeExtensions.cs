@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200123E RID: 4670
+	// Token: 0x0200137E RID: 4990
 	public static class EFastReturnPosTypeExtensions
 	{
-		// Token: 0x060069BE RID: 27070 RVA: 0x000FD65C File Offset: 0x000FB85C
+		// Token: 0x06007011 RID: 28689 RVA: 0x0010B288 File Offset: 0x00109488
 		public static string ToEnumString(this EFastReturnPosType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069BF RID: 27071 RVA: 0x000FD694 File Offset: 0x000FB894
+		// Token: 0x06007012 RID: 28690 RVA: 0x0010B2C0 File Offset: 0x001094C0
 		public static EFastReturnPosType FromString(string name)
 		{
 			EFastReturnPosType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069C0 RID: 27072 RVA: 0x000FD6BD File Offset: 0x000FB8BD
+		// Token: 0x06007013 RID: 28691 RVA: 0x0010B2E9 File Offset: 0x001094E9
 		public static bool TryFromString(string name, out EFastReturnPosType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x060069C1 RID: 27073 RVA: 0x000FD6F6 File Offset: 0x000FB8F6
+		// Token: 0x06007014 RID: 28692 RVA: 0x0010B322 File Offset: 0x00109522
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060069C2 RID: 27074 RVA: 0x000FD70E File Offset: 0x000FB90E
+		// Token: 0x06007015 RID: 28693 RVA: 0x0010B33A File Offset: 0x0010953A
 		public static EFastReturnPosType[] GetValues()
 		{
 			return new EFastReturnPosType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060069C3 RID: 27075 RVA: 0x000FD71A File Offset: 0x000FB91A
+		// Token: 0x06007016 RID: 28694 RVA: 0x0010B346 File Offset: 0x00109546
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol.Summon;
 using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020017C8 RID: 6088
+// Token: 0x02000C81 RID: 3201
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ComboTeachingModel : ModelBase
 {
-	// Token: 0x17000ECE RID: 3790
-	// (get) Token: 0x0600B1D0 RID: 45520 RVA: 0x0028363D File Offset: 0x0028183D
-	// (set) Token: 0x0600B1D1 RID: 45521 RVA: 0x00283645 File Offset: 0x00281845
+	// Token: 0x17000EF1 RID: 3825
+	// (get) Token: 0x060085B8 RID: 34232 RVA: 0x0028DBE5 File Offset: 0x0028BDE5
+	// (set) Token: 0x060085B9 RID: 34233 RVA: 0x0028DBED File Offset: 0x0028BDED
 	public float BeforeJumpTime
 	{
 		get
@@ -28,9 +27,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ECF RID: 3791
-	// (get) Token: 0x0600B1D2 RID: 45522 RVA: 0x0028364E File Offset: 0x0028184E
-	// (set) Token: 0x0600B1D3 RID: 45523 RVA: 0x00283656 File Offset: 0x00281856
+	// Token: 0x17000EF2 RID: 3826
+	// (get) Token: 0x060085BA RID: 34234 RVA: 0x0028DBF6 File Offset: 0x0028BDF6
+	// (set) Token: 0x060085BB RID: 34235 RVA: 0x0028DBFE File Offset: 0x0028BDFE
 	public bool IsClose
 	{
 		get
@@ -43,9 +42,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED0 RID: 3792
-	// (get) Token: 0x0600B1D4 RID: 45524 RVA: 0x0028365F File Offset: 0x0028185F
-	// (set) Token: 0x0600B1D5 RID: 45525 RVA: 0x00283667 File Offset: 0x00281867
+	// Token: 0x17000EF3 RID: 3827
+	// (get) Token: 0x060085BC RID: 34236 RVA: 0x0028DC07 File Offset: 0x0028BE07
+	// (set) Token: 0x060085BD RID: 34237 RVA: 0x0028DC0F File Offset: 0x0028BE0F
 	public bool IsEmit
 	{
 		get
@@ -58,9 +57,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED1 RID: 3793
-	// (get) Token: 0x0600B1D6 RID: 45526 RVA: 0x00283670 File Offset: 0x00281870
-	// (set) Token: 0x0600B1D7 RID: 45527 RVA: 0x00283678 File Offset: 0x00281878
+	// Token: 0x17000EF4 RID: 3828
+	// (get) Token: 0x060085BE RID: 34238 RVA: 0x0028DC18 File Offset: 0x0028BE18
+	// (set) Token: 0x060085BF RID: 34239 RVA: 0x0028DC20 File Offset: 0x0028BE20
 	public int RecoveryComboId
 	{
 		get
@@ -73,8 +72,8 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED2 RID: 3794
-	// (get) Token: 0x0600B1D8 RID: 45528 RVA: 0x00283681 File Offset: 0x00281881
+	// Token: 0x17000EF5 RID: 3829
+	// (get) Token: 0x060085C0 RID: 34240 RVA: 0x0028DC29 File Offset: 0x0028BE29
 	public List<long> AddBuffList
 	{
 		get
@@ -83,8 +82,8 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED3 RID: 3795
-	// (get) Token: 0x0600B1D9 RID: 45529 RVA: 0x00283689 File Offset: 0x00281889
+	// Token: 0x17000EF6 RID: 3830
+	// (get) Token: 0x060085C1 RID: 34241 RVA: 0x0028DC31 File Offset: 0x0028BE31
 	public List<string> AddTagList
 	{
 		get
@@ -93,9 +92,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED4 RID: 3796
-	// (get) Token: 0x0600B1DA RID: 45530 RVA: 0x00283691 File Offset: 0x00281891
-	// (set) Token: 0x0600B1DB RID: 45531 RVA: 0x00283699 File Offset: 0x00281899
+	// Token: 0x17000EF7 RID: 3831
+	// (get) Token: 0x060085C2 RID: 34242 RVA: 0x0028DC39 File Offset: 0x0028BE39
+	// (set) Token: 0x060085C3 RID: 34243 RVA: 0x0028DC41 File Offset: 0x0028BE41
 	public long NextAttrSkillId
 	{
 		get
@@ -108,9 +107,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED5 RID: 3797
-	// (get) Token: 0x0600B1DD RID: 45533 RVA: 0x002836AB File Offset: 0x002818AB
-	// (set) Token: 0x0600B1DC RID: 45532 RVA: 0x002836A2 File Offset: 0x002818A2
+	// Token: 0x17000EF8 RID: 3832
+	// (get) Token: 0x060085C5 RID: 34245 RVA: 0x0028DC53 File Offset: 0x0028BE53
+	// (set) Token: 0x060085C4 RID: 34244 RVA: 0x0028DC4A File Offset: 0x0028BE4A
 	public long UseSkillId
 	{
 		get
@@ -123,9 +122,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED6 RID: 3798
-	// (get) Token: 0x0600B1DF RID: 45535 RVA: 0x002836BC File Offset: 0x002818BC
-	// (set) Token: 0x0600B1DE RID: 45534 RVA: 0x002836B3 File Offset: 0x002818B3
+	// Token: 0x17000EF9 RID: 3833
+	// (get) Token: 0x060085C7 RID: 34247 RVA: 0x0028DC64 File Offset: 0x0028BE64
+	// (set) Token: 0x060085C6 RID: 34246 RVA: 0x0028DC5B File Offset: 0x0028BE5B
 	public float UseSkillTime
 	{
 		get
@@ -138,9 +137,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED7 RID: 3799
-	// (get) Token: 0x0600B1E1 RID: 45537 RVA: 0x002836CD File Offset: 0x002818CD
-	// (set) Token: 0x0600B1E0 RID: 45536 RVA: 0x002836C4 File Offset: 0x002818C4
+	// Token: 0x17000EFA RID: 3834
+	// (get) Token: 0x060085C9 RID: 34249 RVA: 0x0028DC75 File Offset: 0x0028BE75
+	// (set) Token: 0x060085C8 RID: 34248 RVA: 0x0028DC6C File Offset: 0x0028BE6C
 	public bool PreNextAttr
 	{
 		get
@@ -153,9 +152,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED8 RID: 3800
-	// (get) Token: 0x0600B1E3 RID: 45539 RVA: 0x002836EA File Offset: 0x002818EA
-	// (set) Token: 0x0600B1E2 RID: 45538 RVA: 0x002836D5 File Offset: 0x002818D5
+	// Token: 0x17000EFB RID: 3835
+	// (get) Token: 0x060085CB RID: 34251 RVA: 0x0028DC92 File Offset: 0x0028BE92
+	// (set) Token: 0x060085CA RID: 34250 RVA: 0x0028DC7D File Offset: 0x0028BE7D
 	public bool NextAttr
 	{
 		get
@@ -169,9 +168,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000ED9 RID: 3801
-	// (get) Token: 0x0600B1E5 RID: 45541 RVA: 0x0028370B File Offset: 0x0028190B
-	// (set) Token: 0x0600B1E4 RID: 45540 RVA: 0x002836F2 File Offset: 0x002818F2
+	// Token: 0x17000EFC RID: 3836
+	// (get) Token: 0x060085CD RID: 34253 RVA: 0x0028DCB3 File Offset: 0x0028BEB3
+	// (set) Token: 0x060085CC RID: 34252 RVA: 0x0028DC9A File Offset: 0x0028BE9A
 	public int CurrentNodeIndex
 	{
 		get
@@ -185,9 +184,9 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000EDA RID: 3802
-	// (get) Token: 0x0600B1E6 RID: 45542 RVA: 0x00283713 File Offset: 0x00281913
-	// (set) Token: 0x0600B1E7 RID: 45543 RVA: 0x00283722 File Offset: 0x00281922
+	// Token: 0x17000EFD RID: 3837
+	// (get) Token: 0x060085CE RID: 34254 RVA: 0x0028DCBB File Offset: 0x0028BEBB
+	// (set) Token: 0x060085CF RID: 34255 RVA: 0x0028DCCA File Offset: 0x0028BECA
 	public bool InitStart
 	{
 		get
@@ -202,7 +201,7 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600B1E8 RID: 45544 RVA: 0x0028372C File Offset: 0x0028192C
+	// Token: 0x060085D0 RID: 34256 RVA: 0x0028DCD4 File Offset: 0x0028BED4
 	public void RefreshComboList(int comboId)
 	{
 		this.CurrentNodeIndex = 0;
@@ -221,7 +220,7 @@ public class ComboTeachingModel : ModelBase
 		this.AddTagList.Clear();
 		foreach (KeyValuePair<string, List<string>> keyValuePair in ComboTeachingDefine.banKeyMap)
 		{
-			if (!comboTeachingConfig.Value.InputEnums().Contains(keyValuePair.Key))
+			if (Array.IndexOf<string>(comboTeachingConfig.Value.InputEnums(), keyValuePair.Key) < 0)
 			{
 				this.AddTagList.AddRange(keyValuePair.Value);
 			}
@@ -263,7 +262,7 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600B1E9 RID: 45545 RVA: 0x00283A40 File Offset: 0x00281C40
+	// Token: 0x060085D1 RID: 34257 RVA: 0x0028DFE8 File Offset: 0x0028C1E8
 	public void OnComboListEnd()
 	{
 		if (Global.BaseCharacter == null)
@@ -294,7 +293,7 @@ public class ComboTeachingModel : ModelBase
 		this.AddBuffList.Clear();
 	}
 
-	// Token: 0x0600B1EA RID: 45546 RVA: 0x00283B84 File Offset: 0x00281D84
+	// Token: 0x060085D2 RID: 34258 RVA: 0x0028E12C File Offset: 0x0028C32C
 	public IComboTeachingInfo CreateComboNodeInfo(int index, ComboTeaching comboConfig)
 	{
 		ComboTeachingCondition value = ComboTeachingConfig.Instance.GetComboTeachingConditionConfig(comboConfig.CommandID()[index]).Value;
@@ -351,7 +350,7 @@ public class ComboTeachingModel : ModelBase
 		return comboTeachingInfo;
 	}
 
-	// Token: 0x0600B1EB RID: 45547 RVA: 0x00283D78 File Offset: 0x00281F78
+	// Token: 0x060085D3 RID: 34259 RVA: 0x0028E320 File Offset: 0x0028C520
 	public void ResetComboConfig()
 	{
 		this.UseSkillId = 0L;
@@ -360,20 +359,46 @@ public class ComboTeachingModel : ModelBase
 		this.PreNextAttr = false;
 	}
 
-	// Token: 0x0600B1EC RID: 45548 RVA: 0x00283D9C File Offset: 0x00281F9C
+	// Token: 0x060085D4 RID: 34260 RVA: 0x0028E344 File Offset: 0x0028C544
 	public bool CheckFailCondition(IComboTeachingInfo data, EComboTeachingFailCondition condition)
 	{
 		ComboTeaching config = data.Config;
 		int index = data.Index;
-		return ComboTeachingConfig.Instance.GetComboTeachingConditionConfig(config.CommandID()[index]).Value.FailedCondition().Contains((int)condition);
+		return Array.IndexOf<int>(ComboTeachingConfig.Instance.GetComboTeachingConditionConfig(config.CommandID()[index]).Value.FailedCondition(), (int)condition) >= 0;
 	}
 
-	// Token: 0x0600B1ED RID: 45549 RVA: 0x00283DE0 File Offset: 0x00281FE0
+	// Token: 0x060085D5 RID: 34261 RVA: 0x0028E390 File Offset: 0x0028C590
 	public void OnCurIndexChanged(IComboTeachingInfo data)
 	{
 		ComboTeaching config = data.Config;
 		int index = data.Index;
 		ComboTeachingCondition value = ComboTeachingConfig.Instance.GetComboTeachingConditionConfig(config.CommandID()[index]).Value;
+		if (value.RemoveBuff().Length == 0 && value.RemoveBullet().Length == 0)
+		{
+			int summonPos = value.SummonPos;
+		}
+		string text = "";
+		foreach (BaseCheckCondition baseCheckCondition in data.FailUpdateCondition)
+		{
+			string str = text;
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(2, 2);
+			defaultInterpolatedStringHandler.AppendFormatted<EComboTeachingFailCondition>((EComboTeachingFailCondition)baseCheckCondition.GetConditionType());
+			defaultInterpolatedStringHandler.AppendLiteral("=");
+			defaultInterpolatedStringHandler.AppendFormatted(baseCheckCondition.OriginString);
+			defaultInterpolatedStringHandler.AppendLiteral(";");
+			text = str + defaultInterpolatedStringHandler.ToStringAndClear();
+		}
+		string text2 = "";
+		foreach (BaseCheckCondition baseCheckCondition2 in data.FailEventCondition)
+		{
+			string str2 = text2;
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(2, 2);
+			defaultInterpolatedStringHandler.AppendFormatted<EComboTeachingFailCondition>((EComboTeachingFailCondition)baseCheckCondition2.GetConditionType());
+			defaultInterpolatedStringHandler.AppendLiteral("=");
+			defaultInterpolatedStringHandler.AppendFormatted(baseCheckCondition2.OriginString);
+			defaultInterpolatedStringHandler.AppendLiteral(";");
+			text2 = str2 + defaultInterpolatedStringHandler.ToStringAndClear();
+		}
 		int entityIdNoBlueprint = Global.BaseCharacter.GetEntityIdNoBlueprint();
 		Entity entity = EntitySystem.Instance.Get(entityIdNoBlueprint);
 		if (value.RemoveBuff().Length != 0)
@@ -395,19 +420,19 @@ public class ComboTeachingModel : ModelBase
 			{
 				dictionary[keyValuePair.Value.GetBulletInfo().BulletRowName] = keyValuePair.Value.Id;
 			}
-			foreach (string text in value.RemoveBullet())
+			foreach (string text3 in value.RemoveBullet())
 			{
 				bool summonChild = false;
 				string key;
-				if (text.Contains(';'))
+				if (text3.Contains(';'))
 				{
-					string[] array3 = text.Split(';', StringSplitOptions.None);
+					string[] array3 = text3.Split(';', StringSplitOptions.None);
 					key = array3[0];
 					summonChild = bool.Parse(array3[1]);
 				}
 				else
 				{
-					key = text;
+					key = text3;
 				}
 				int id;
 				if (dictionary.TryGetValue(key, out id))
@@ -424,7 +449,7 @@ public class ComboTeachingModel : ModelBase
 		data.NeedTickSummon = false;
 	}
 
-	// Token: 0x0600B1EE RID: 45550 RVA: 0x00283FC4 File Offset: 0x002821C4
+	// Token: 0x060085D6 RID: 34262 RVA: 0x0028E6B0 File Offset: 0x0028C8B0
 	public void CheckSummonBuffAdd(IComboTeachingInfo data)
 	{
 		ComboTeaching config = data.Config;
@@ -461,8 +486,8 @@ public class ComboTeachingModel : ModelBase
 		data.NeedTickSummon = false;
 	}
 
-	// Token: 0x17000EDB RID: 3803
-	// (get) Token: 0x0600B1EF RID: 45551 RVA: 0x002840E5 File Offset: 0x002822E5
+	// Token: 0x17000EFE RID: 3838
+	// (get) Token: 0x060085D7 RID: 34263 RVA: 0x0028E7D1 File Offset: 0x0028C9D1
 	public static ComboTeachingModel Instance
 	{
 		get
@@ -471,7 +496,7 @@ public class ComboTeachingModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600B1F0 RID: 45552 RVA: 0x002840EC File Offset: 0x002822EC
+	// Token: 0x060085D8 RID: 34264 RVA: 0x0028E7D8 File Offset: 0x0028C9D8
 	public static ComboTeachingModel GetOrCreateInstance()
 	{
 		if (ComboTeachingModel._Instance == null)
@@ -481,7 +506,7 @@ public class ComboTeachingModel : ModelBase
 		return ComboTeachingModel._Instance;
 	}
 
-	// Token: 0x0600B1F1 RID: 45553 RVA: 0x00284100 File Offset: 0x00282300
+	// Token: 0x060085D9 RID: 34265 RVA: 0x0028E7EC File Offset: 0x0028C9EC
 	public static bool CreateInstance()
 	{
 		if (ComboTeachingModel._Instance != null)
@@ -492,63 +517,63 @@ public class ComboTeachingModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600B1F2 RID: 45554 RVA: 0x00284116 File Offset: 0x00282316
+	// Token: 0x060085DA RID: 34266 RVA: 0x0028E802 File Offset: 0x0028CA02
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B1F3 RID: 45555 RVA: 0x00284118 File Offset: 0x00282318
+	// Token: 0x060085DB RID: 34267 RVA: 0x0028E804 File Offset: 0x0028CA04
 	public static void ResetStaticDefaultValue()
 	{
 		ComboTeachingModel._Instance = null;
 	}
 
-	// Token: 0x0600B1F4 RID: 45556 RVA: 0x00284120 File Offset: 0x00282320
+	// Token: 0x060085DC RID: 34268 RVA: 0x0028E80C File Offset: 0x0028CA0C
 	static ComboTeachingModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ComboTeachingModel.CreateStaticDefaultValue), new Action(ComboTeachingModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040050AD RID: 20653
+	// Token: 0x04005158 RID: 20824
 	private long UseSkillIdInternal;
 
-	// Token: 0x040050AE RID: 20654
+	// Token: 0x04005159 RID: 20825
 	private float UseSkillTimeInternal;
 
-	// Token: 0x040050AF RID: 20655
+	// Token: 0x0400515A RID: 20826
 	private bool PreNextAttrInternal;
 
-	// Token: 0x040050B0 RID: 20656
+	// Token: 0x0400515B RID: 20827
 	private bool NextAttrInternal;
 
-	// Token: 0x040050B1 RID: 20657
+	// Token: 0x0400515C RID: 20828
 	private int CurrentNodeIndexInternal;
 
-	// Token: 0x040050B2 RID: 20658
+	// Token: 0x0400515D RID: 20829
 	private long NextAttrSkillIdInternal;
 
-	// Token: 0x040050B3 RID: 20659
+	// Token: 0x0400515E RID: 20830
 	private readonly List<long> AddBuffListInternal = new List<long>();
 
-	// Token: 0x040050B4 RID: 20660
+	// Token: 0x0400515F RID: 20831
 	private readonly List<string> AddTagListInternal = new List<string>();
 
-	// Token: 0x040050B5 RID: 20661
+	// Token: 0x04005160 RID: 20832
 	private int RecoveryComboIdInternal;
 
-	// Token: 0x040050B6 RID: 20662
+	// Token: 0x04005161 RID: 20833
 	private bool IsEmitInternal;
 
-	// Token: 0x040050B7 RID: 20663
+	// Token: 0x04005162 RID: 20834
 	private bool IsCloseInternal;
 
-	// Token: 0x040050B8 RID: 20664
+	// Token: 0x04005163 RID: 20835
 	private float BeforeJumpTimeInternal;
 
-	// Token: 0x040050B9 RID: 20665
+	// Token: 0x04005164 RID: 20836
 	private bool InitStartInternal;
 
-	// Token: 0x040050BA RID: 20666
+	// Token: 0x04005165 RID: 20837
 	[Nullable(2)]
 	private static ComboTeachingModel _Instance;
 }

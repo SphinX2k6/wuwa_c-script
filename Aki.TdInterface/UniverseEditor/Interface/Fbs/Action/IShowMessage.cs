@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070E5 RID: 28901
+	// Token: 0x020078B1 RID: 30897
 	public struct IShowMessage : IFlatbufferObject
 	{
-		// Token: 0x1700D6C6 RID: 54982
-		// (get) Token: 0x06033347 RID: 209735 RVA: 0x006E714C File Offset: 0x006E534C
+		// Token: 0x1700E2A9 RID: 58025
+		// (get) Token: 0x060365E9 RID: 222697 RVA: 0x00747758 File Offset: 0x00745958
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033348 RID: 209736 RVA: 0x006E7159 File Offset: 0x006E5359
+		// Token: 0x060365EA RID: 222698 RVA: 0x00747765 File Offset: 0x00745965
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033349 RID: 209737 RVA: 0x006E7160 File Offset: 0x006E5360
+		// Token: 0x060365EB RID: 222699 RVA: 0x0074776C File Offset: 0x0074596C
 		public static IShowMessage GetRootAsIShowMessage(ByteBuffer _bb)
 		{
 			return IShowMessage.GetRootAsIShowMessage(_bb, default(IShowMessage));
 		}
 
-		// Token: 0x0603334A RID: 209738 RVA: 0x006E717C File Offset: 0x006E537C
+		// Token: 0x060365EC RID: 222700 RVA: 0x00747788 File Offset: 0x00745988
 		public static IShowMessage GetRootAsIShowMessage(ByteBuffer _bb, IShowMessage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603334B RID: 209739 RVA: 0x006E7199 File Offset: 0x006E5399
+		// Token: 0x060365ED RID: 222701 RVA: 0x007477A5 File Offset: 0x007459A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603334C RID: 209740 RVA: 0x006E71A8 File Offset: 0x006E53A8
+		// Token: 0x060365EE RID: 222702 RVA: 0x007477B4 File Offset: 0x007459B4
 		public IShowMessage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D6C7 RID: 54983
-		// (get) Token: 0x0603334D RID: 209741 RVA: 0x006E71B8 File Offset: 0x006E53B8
+		// Token: 0x1700E2AA RID: 58026
+		// (get) Token: 0x060365EF RID: 222703 RVA: 0x007477C4 File Offset: 0x007459C4
 		public string Content
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603334E RID: 209742 RVA: 0x006E71EF File Offset: 0x006E53EF
+		// Token: 0x060365F0 RID: 222704 RVA: 0x007477FB File Offset: 0x007459FB
 		public Span<byte> GetContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0603334F RID: 209743 RVA: 0x006E71FE File Offset: 0x006E53FE
+		// Token: 0x060365F1 RID: 222705 RVA: 0x0074780A File Offset: 0x00745A0A
 		public byte[] GetContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x06033350 RID: 209744 RVA: 0x006E720C File Offset: 0x006E540C
+		// Token: 0x060365F2 RID: 222706 RVA: 0x00747818 File Offset: 0x00745A18
 		public static Offset<IShowMessage> CreateIShowMessage(FlatBufferBuilder builder, StringOffset ContentOffset = default(StringOffset))
 		{
 			builder.StartTable(1);
@@ -82,25 +82,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IShowMessage.EndIShowMessage(builder);
 		}
 
-		// Token: 0x06033351 RID: 209745 RVA: 0x006E7222 File Offset: 0x006E5422
+		// Token: 0x060365F3 RID: 222707 RVA: 0x0074782E File Offset: 0x00745A2E
 		public static void StartIShowMessage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06033352 RID: 209746 RVA: 0x006E722B File Offset: 0x006E542B
+		// Token: 0x060365F4 RID: 222708 RVA: 0x00747837 File Offset: 0x00745A37
 		public static void AddContent(FlatBufferBuilder builder, StringOffset contentOffset)
 		{
 			builder.AddOffset(0, contentOffset.Value, 0);
 		}
 
-		// Token: 0x06033353 RID: 209747 RVA: 0x006E723B File Offset: 0x006E543B
+		// Token: 0x060365F5 RID: 222709 RVA: 0x00747847 File Offset: 0x00745A47
 		public static Offset<IShowMessage> EndIShowMessage(FlatBufferBuilder builder)
 		{
 			return new Offset<IShowMessage>(builder.EndTable());
 		}
 
-		// Token: 0x06033354 RID: 209748 RVA: 0x006E7248 File Offset: 0x006E5448
+		// Token: 0x060365F6 RID: 222710 RVA: 0x00747854 File Offset: 0x00745A54
 		public IShowMessageT UnPack()
 		{
 			IShowMessageT showMessageT = new IShowMessageT();
@@ -108,13 +108,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return showMessageT;
 		}
 
-		// Token: 0x06033355 RID: 209749 RVA: 0x006E7263 File Offset: 0x006E5463
+		// Token: 0x060365F7 RID: 222711 RVA: 0x0074786F File Offset: 0x00745A6F
 		public void UnPackTo(IShowMessageT _o)
 		{
 			_o.Content = this.Content;
 		}
 
-		// Token: 0x06033356 RID: 209750 RVA: 0x006E7274 File Offset: 0x006E5474
+		// Token: 0x060365F8 RID: 222712 RVA: 0x00747880 File Offset: 0x00745A80
 		public static Offset<IShowMessage> Pack(FlatBufferBuilder builder, IShowMessageT _o)
 		{
 			if (_o == null)
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IShowMessage.CreateIShowMessage(builder, contentOffset);
 		}
 
-		// Token: 0x04011B62 RID: 72546
+		// Token: 0x04012B50 RID: 76624
 		private Table __p;
 	}
 }

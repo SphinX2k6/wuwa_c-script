@@ -4,17 +4,17 @@ using CSharpScript.Game.Module.Functional;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004699 RID: 18073
+	// Token: 0x020035CA RID: 13770
 	public class ViewHotKeyHandleBackpackView : ViewHotKeyHandle
 	{
-		// Token: 0x0602E9C9 RID: 190921 RVA: 0x00ACAC80 File Offset: 0x00AC8E80
+		// Token: 0x06023115 RID: 143637 RVA: 0x009F9554 File Offset: 0x009F7754
 		[NullableContext(1)]
 		public ViewHotKeyHandleBackpackView(IOpenAndCloseViewHotKey parameters) : base(parameters)
 		{
 		}
 
-		// Token: 0x17007633 RID: 30259
-		// (get) Token: 0x0602E9CA RID: 190922 RVA: 0x00ACAC89 File Offset: 0x00AC8E89
+		// Token: 0x170048EF RID: 18671
+		// (get) Token: 0x06023116 RID: 143638 RVA: 0x009F955D File Offset: 0x009F775D
 		public override EUiViewName? ViewName
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E9CB RID: 190923 RVA: 0x00ACACA3 File Offset: 0x00AC8EA3
+		// Token: 0x06023117 RID: 143639 RVA: 0x009F9577 File Offset: 0x009F7777
 		protected override void OnOpenViewImplement()
 		{
 			if (HonamiStoryUtil.CheckInHonamiStoryDungeon())

@@ -7,12 +7,12 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007082 RID: 28802
+	// Token: 0x02006203 RID: 25091
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CustomAudioControlComponent : EntityComponent
 	{
-		// Token: 0x06046264 RID: 287332 RVA: 0x011861F8 File Offset: 0x011843F8
+		// Token: 0x0603C47A RID: 246906 RVA: 0x0112F7F0 File Offset: 0x0112D9F0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			EntityCustomAudioComponent entityCustomAudioComponent = args.GetP1<CreateEntityData>().GetParam<CustomAudioControlComponent>() as EntityCustomAudioComponent;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046265 RID: 287333 RVA: 0x01186240 File Offset: 0x01184440
+		// Token: 0x0603C47B RID: 246907 RVA: 0x0112F838 File Offset: 0x0112DA38
 		protected override bool OnStart()
 		{
 			switch (this.AudioRangeType)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046266 RID: 287334 RVA: 0x011863A8 File Offset: 0x011845A8
+		// Token: 0x0603C47C RID: 246908 RVA: 0x0112F9A0 File Offset: 0x0112DBA0
 		protected override bool OnEnd()
 		{
 			switch (this.AudioRangeType)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046267 RID: 287335 RVA: 0x0118645C File Offset: 0x0118465C
+		// Token: 0x0603C47D RID: 246909 RVA: 0x0112FA54 File Offset: 0x0112DC54
 		[NullableContext(1)]
 		protected override void OnDisable(string reason)
 		{
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046268 RID: 287336 RVA: 0x011864A4 File Offset: 0x011846A4
+		// Token: 0x0603C47E RID: 246910 RVA: 0x0112FA9C File Offset: 0x0112DC9C
 		protected override void OnEnable()
 		{
 			IAudioControlType audioControlConfig = this.AudioControlConfig;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046269 RID: 287337 RVA: 0x011864EC File Offset: 0x011846EC
+		// Token: 0x0603C47F RID: 246911 RVA: 0x0112FAE4 File Offset: 0x0112DCE4
 		private void OnPlayerInOutRange(bool isEnter)
 		{
 			if (isEnter == this.PlayerInRangeReal)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604626A RID: 287338 RVA: 0x01186543 File Offset: 0x01184743
+		// Token: 0x0603C480 RID: 246912 RVA: 0x0112FB3B File Offset: 0x0112DD3B
 		private void HandlePlayerInOutGramophoneRange(bool isEnter)
 		{
 			if (isEnter)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			PhonographController.Instance.StopMusicByEntityId(base.Entity.Id);
 		}
 
-		// Token: 0x0604626B RID: 287339 RVA: 0x01186573 File Offset: 0x01184773
+		// Token: 0x0603C481 RID: 246913 RVA: 0x0112FB6B File Offset: 0x0112DD6B
 		[NullableContext(1)]
 		private void HandleDisableGramophone(string reason)
 		{
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604626C RID: 287340 RVA: 0x01186584 File Offset: 0x01184784
+		// Token: 0x0603C482 RID: 246914 RVA: 0x0112FB7C File Offset: 0x0112DD7C
 		private void HandleEnableGramophone()
 		{
 			if (this.PlayerInRangeReal)
@@ -163,13 +163,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604626D RID: 287341 RVA: 0x01186595 File Offset: 0x01184795
+		// Token: 0x0603C483 RID: 246915 RVA: 0x0112FB8D File Offset: 0x0112DD8D
 		public IAudioControlType GetAudioControlConfig()
 		{
 			return this.AudioControlConfig;
 		}
 
-		// Token: 0x0604626E RID: 287342 RVA: 0x011865A0 File Offset: 0x011847A0
+		// Token: 0x0603C484 RID: 246916 RVA: 0x0112FB98 File Offset: 0x0112DD98
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -178,63 +178,88 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			CustomAudioControlComponent customAudioControlComponent = (CustomAudioControlComponent)componentTemplate;
-			if (base.CanResetComponentProperty("AudioControlConfig"))
+			if (customAudioControlComponent.AudioControlConfig == null)
 			{
-				if (customAudioControlComponent.AudioControlConfig == null)
-				{
-					this.AudioControlConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IAudioControlType>(this.AudioControlConfig), "AudioControlConfig"))
-				{
-					return false;
-				}
+				this.AudioControlConfig = null;
 			}
-			if (base.CanResetComponentProperty("AudioRangeType"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AudioControlConfig), "AudioControlConfig"))
 			{
-				this.AudioRangeType = customAudioControlComponent.AudioRangeType;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			this.AudioRangeType = customAudioControlComponent.AudioRangeType;
+			if (customAudioControlComponent.CreatureDataComp == null)
 			{
-				if (customAudioControlComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("RefComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (customAudioControlComponent.RefComp == null)
-				{
-					this.RefComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemReferenceComponent>(this.RefComp), "RefComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PlayerInRangeReal"))
+			if (customAudioControlComponent.RefComp == null)
 			{
-				this.PlayerInRangeReal = customAudioControlComponent.PlayerInRangeReal;
+				this.RefComp = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RefComp), "RefComp"))
+			{
+				return false;
+			}
+			this.PlayerInRangeReal = customAudioControlComponent.PlayerInRangeReal;
 			return true;
 		}
 
-		// Token: 0x04024BF8 RID: 150520
+		// Token: 0x170071BF RID: 29119
+		// (get) Token: 0x0603C485 RID: 246917 RVA: 0x0112FC51 File Offset: 0x0112DE51
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071C0 RID: 29120
+		// (get) Token: 0x0603C486 RID: 246918 RVA: 0x0112FC54 File Offset: 0x0112DE54
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071C1 RID: 29121
+		// (get) Token: 0x0603C487 RID: 246919 RVA: 0x0112FC57 File Offset: 0x0112DE57
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071C2 RID: 29122
+		// (get) Token: 0x0603C488 RID: 246920 RVA: 0x0112FC5A File Offset: 0x0112DE5A
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FEB3 RID: 130739
 		private IAudioControlType AudioControlConfig;
 
-		// Token: 0x04024BF9 RID: 150521
+		// Token: 0x0401FEB4 RID: 130740
 		private EAudioRangeType AudioRangeType = EAudioRangeType.AOI;
 
-		// Token: 0x04024BFA RID: 150522
+		// Token: 0x0401FEB5 RID: 130741
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024BFB RID: 150523
+		// Token: 0x0401FEB6 RID: 130742
 		private SceneItemReferenceComponent RefComp;
 
-		// Token: 0x04024BFC RID: 150524
+		// Token: 0x0401FEB7 RID: 130743
 		private bool PlayerInRangeReal;
 	}
 }

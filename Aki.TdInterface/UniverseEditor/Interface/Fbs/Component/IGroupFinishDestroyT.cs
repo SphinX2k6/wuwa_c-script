@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005354 RID: 21332
+	// Token: 0x020058DA RID: 22746
 	public class IGroupFinishDestroyT
 	{
-		// Token: 0x17009CBA RID: 40122
-		// (get) Token: 0x06022E56 RID: 142934 RVA: 0x004D568B File Offset: 0x004D388B
-		// (set) Token: 0x06022E57 RID: 142935 RVA: 0x004D5693 File Offset: 0x004D3893
+		// Token: 0x1700A4F2 RID: 42226
+		// (get) Token: 0x06024F0A RID: 151306 RVA: 0x0051255F File Offset: 0x0051075F
+		// (set) Token: 0x06024F0B RID: 151307 RVA: 0x00512567 File Offset: 0x00510767
 		public EGroupFinishConfig Type { get; set; }
 
-		// Token: 0x17009CBB RID: 40123
-		// (get) Token: 0x06022E58 RID: 142936 RVA: 0x004D569C File Offset: 0x004D389C
-		// (set) Token: 0x06022E59 RID: 142937 RVA: 0x004D56A4 File Offset: 0x004D38A4
+		// Token: 0x1700A4F3 RID: 42227
+		// (get) Token: 0x06024F0C RID: 151308 RVA: 0x00512570 File Offset: 0x00510770
+		// (set) Token: 0x06024F0D RID: 151309 RVA: 0x00512578 File Offset: 0x00510778
 		public IEntityStateT SwitchSpecifiedStatus { get; set; }
 
-		// Token: 0x06022E5A RID: 142938 RVA: 0x004D56AD File Offset: 0x004D38AD
+		// Token: 0x06024F0E RID: 151310 RVA: 0x00512581 File Offset: 0x00510781
 		public IGroupFinishDestroyT()
 		{
 			this.Type = EGroupFinishConfig.Silence;

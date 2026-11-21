@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077FE RID: 30718
+	// Token: 0x0200803C RID: 32828
 	public enum TVehicleControlType : byte
 	{
-		// Token: 0x04012A79 RID: 76409
+		// Token: 0x04013B43 RID: 80707
 		NONE,
-		// Token: 0x04012A7A RID: 76410
+		// Token: 0x04013B44 RID: 80708
 		IVehicleEnterPathMove,
-		// Token: 0x04012A7B RID: 76411
+		// Token: 0x04013B45 RID: 80709
 		IVehicleExitPathMove
 	}
 }

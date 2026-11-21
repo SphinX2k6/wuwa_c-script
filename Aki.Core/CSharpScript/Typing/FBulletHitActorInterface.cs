@@ -4,14 +4,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Typing
 {
-	// Token: 0x02000119 RID: 281
+	// Token: 0x0200011A RID: 282
 	public static class FBulletHitActorInterface
 	{
-		// Token: 0x06000A1C RID: 2588
+		// Token: 0x06000A73 RID: 2675
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Execute_OnBulletHit_Internal(IntPtr obj, int bulletEntityId, FVector hitPoint);
 
-		// Token: 0x06000A1D RID: 2589 RVA: 0x0003393C File Offset: 0x00031B3C
+		// Token: 0x06000A74 RID: 2676 RVA: 0x000343B0 File Offset: 0x000325B0
 		[NullableContext(2)]
 		public static void Execute_OnBulletHit(UObject obj, int bulletEntityId, FVector hitPoint)
 		{

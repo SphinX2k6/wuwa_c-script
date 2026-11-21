@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F4B RID: 16203
+	// Token: 0x02004389 RID: 17289
 	public class IMotorRacingSystemConfigT
 	{
-		// Token: 0x170070AF RID: 28847
-		// (get) Token: 0x060170A2 RID: 94370 RVA: 0x003528B9 File Offset: 0x00350AB9
-		// (set) Token: 0x060170A3 RID: 94371 RVA: 0x003528C1 File Offset: 0x00350AC1
+		// Token: 0x170076A0 RID: 30368
+		// (get) Token: 0x06018704 RID: 100100 RVA: 0x0037BD2D File Offset: 0x00379F2D
+		// (set) Token: 0x06018705 RID: 100101 RVA: 0x0037BD35 File Offset: 0x00379F35
 		public EEnableSystemType Type { get; set; }
 
-		// Token: 0x170070B0 RID: 28848
-		// (get) Token: 0x060170A4 RID: 94372 RVA: 0x003528CA File Offset: 0x00350ACA
-		// (set) Token: 0x060170A5 RID: 94373 RVA: 0x003528D2 File Offset: 0x00350AD2
+		// Token: 0x170076A1 RID: 30369
+		// (get) Token: 0x06018706 RID: 100102 RVA: 0x0037BD3E File Offset: 0x00379F3E
+		// (set) Token: 0x06018707 RID: 100103 RVA: 0x0037BD46 File Offset: 0x00379F46
 		public int MotorParkourId { get; set; }
 
-		// Token: 0x170070B1 RID: 28849
-		// (get) Token: 0x060170A6 RID: 94374 RVA: 0x003528DB File Offset: 0x00350ADB
-		// (set) Token: 0x060170A7 RID: 94375 RVA: 0x003528E3 File Offset: 0x00350AE3
+		// Token: 0x170076A2 RID: 30370
+		// (get) Token: 0x06018708 RID: 100104 RVA: 0x0037BD4F File Offset: 0x00379F4F
+		// (set) Token: 0x06018709 RID: 100105 RVA: 0x0037BD57 File Offset: 0x00379F57
 		public List<IMotorParkourSystemVarT> SystemVars { get; set; }
 
-		// Token: 0x060170A8 RID: 94376 RVA: 0x003528EC File Offset: 0x00350AEC
+		// Token: 0x0601870A RID: 100106 RVA: 0x0037BD60 File Offset: 0x00379F60
 		public IMotorRacingSystemConfigT()
 		{
 			this.Type = EEnableSystemType.GradingSystem;

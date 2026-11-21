@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000695 RID: 1685
+	// Token: 0x02000681 RID: 1665
 	public sealed class GachaPoolDetail : IMessage<GachaPoolDetail>, IMessage, IEquatable<GachaPoolDetail>, IDeepCloneable<GachaPoolDetail>, IBufferMessage
 	{
-		// Token: 0x06009A3F RID: 39487 RVA: 0x00173C76 File Offset: 0x00171E76
+		// Token: 0x060098E9 RID: 39145 RVA: 0x00171242 File Offset: 0x0016F442
 		[NullableContext(1)]
 		public static GachaPoolDetail Create()
 		{
 			return new GachaPoolDetail();
 		}
 
-		// Token: 0x17001ECF RID: 7887
-		// (get) Token: 0x06009A40 RID: 39488 RVA: 0x00173C7D File Offset: 0x00171E7D
+		// Token: 0x17001E85 RID: 7813
+		// (get) Token: 0x060098EA RID: 39146 RVA: 0x00171249 File Offset: 0x0016F449
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001ED0 RID: 7888
-		// (get) Token: 0x06009A41 RID: 39489 RVA: 0x00173C80 File Offset: 0x00171E80
+		// Token: 0x17001E86 RID: 7814
+		// (get) Token: 0x060098EB RID: 39147 RVA: 0x0017124C File Offset: 0x0016F44C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009A42 RID: 39490 RVA: 0x00173C88 File Offset: 0x00171E88
+		// Token: 0x060098EC RID: 39148 RVA: 0x00171254 File Offset: 0x0016F454
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaPoolDetail()
 		{
 		}
 
-		// Token: 0x06009A43 RID: 39491 RVA: 0x00173D20 File Offset: 0x00171F20
+		// Token: 0x060098ED RID: 39149 RVA: 0x001712EC File Offset: 0x0016F4EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaPoolDetail(GachaPoolDetail other) : this()
@@ -69,7 +69,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06009A44 RID: 39492 RVA: 0x00173DED File Offset: 0x00171FED
+		// Token: 0x060098EE RID: 39150 RVA: 0x001713B9 File Offset: 0x0016F5B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaPoolDetail Clone()
@@ -77,9 +77,9 @@ namespace Aki.Protocol
 			return new GachaPoolDetail(this);
 		}
 
-		// Token: 0x17001ED1 RID: 7889
-		// (get) Token: 0x06009A45 RID: 39493 RVA: 0x00173DF5 File Offset: 0x00171FF5
-		// (set) Token: 0x06009A46 RID: 39494 RVA: 0x00173DFD File Offset: 0x00171FFD
+		// Token: 0x17001E87 RID: 7815
+		// (get) Token: 0x060098EF RID: 39151 RVA: 0x001713C1 File Offset: 0x0016F5C1
+		// (set) Token: 0x060098F0 RID: 39152 RVA: 0x001713C9 File Offset: 0x0016F5C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string Detail
@@ -94,8 +94,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001ED2 RID: 7890
-		// (get) Token: 0x06009A47 RID: 39495 RVA: 0x00173E10 File Offset: 0x00172010
+		// Token: 0x17001E88 RID: 7816
+		// (get) Token: 0x060098F1 RID: 39153 RVA: 0x001713DC File Offset: 0x0016F5DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GachaPoolDrop> FiveStarRoleList
@@ -106,8 +106,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001ED3 RID: 7891
-		// (get) Token: 0x06009A48 RID: 39496 RVA: 0x00173E18 File Offset: 0x00172018
+		// Token: 0x17001E89 RID: 7817
+		// (get) Token: 0x060098F2 RID: 39154 RVA: 0x001713E4 File Offset: 0x0016F5E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GachaPoolDrop> FiveStarWeaponList
@@ -118,8 +118,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001ED4 RID: 7892
-		// (get) Token: 0x06009A49 RID: 39497 RVA: 0x00173E20 File Offset: 0x00172020
+		// Token: 0x17001E8A RID: 7818
+		// (get) Token: 0x060098F3 RID: 39155 RVA: 0x001713EC File Offset: 0x0016F5EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GachaPoolDrop> FourStarRoleList
@@ -130,8 +130,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001ED5 RID: 7893
-		// (get) Token: 0x06009A4A RID: 39498 RVA: 0x00173E28 File Offset: 0x00172028
+		// Token: 0x17001E8B RID: 7819
+		// (get) Token: 0x060098F4 RID: 39156 RVA: 0x001713F4 File Offset: 0x0016F5F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GachaPoolDrop> FourStarWeaponList
@@ -142,8 +142,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001ED6 RID: 7894
-		// (get) Token: 0x06009A4B RID: 39499 RVA: 0x00173E30 File Offset: 0x00172030
+		// Token: 0x17001E8C RID: 7820
+		// (get) Token: 0x060098F5 RID: 39157 RVA: 0x001713FC File Offset: 0x0016F5FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GachaPoolDrop> ThreeStarWeaponList
@@ -154,9 +154,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001ED7 RID: 7895
-		// (get) Token: 0x06009A4C RID: 39500 RVA: 0x00173E38 File Offset: 0x00172038
-		// (set) Token: 0x06009A4D RID: 39501 RVA: 0x00173E40 File Offset: 0x00172040
+		// Token: 0x17001E8D RID: 7821
+		// (get) Token: 0x060098F6 RID: 39158 RVA: 0x00171404 File Offset: 0x0016F604
+		// (set) Token: 0x060098F7 RID: 39159 RVA: 0x0017140C File Offset: 0x0016F60C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string FiveStarTitle
@@ -171,9 +171,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001ED8 RID: 7896
-		// (get) Token: 0x06009A4E RID: 39502 RVA: 0x00173E53 File Offset: 0x00172053
-		// (set) Token: 0x06009A4F RID: 39503 RVA: 0x00173E5B File Offset: 0x0017205B
+		// Token: 0x17001E8E RID: 7822
+		// (get) Token: 0x060098F8 RID: 39160 RVA: 0x0017141F File Offset: 0x0016F61F
+		// (set) Token: 0x060098F9 RID: 39161 RVA: 0x00171427 File Offset: 0x0016F627
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string FiveStarDetail
@@ -188,9 +188,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001ED9 RID: 7897
-		// (get) Token: 0x06009A50 RID: 39504 RVA: 0x00173E6E File Offset: 0x0017206E
-		// (set) Token: 0x06009A51 RID: 39505 RVA: 0x00173E76 File Offset: 0x00172076
+		// Token: 0x17001E8F RID: 7823
+		// (get) Token: 0x060098FA RID: 39162 RVA: 0x0017143A File Offset: 0x0016F63A
+		// (set) Token: 0x060098FB RID: 39163 RVA: 0x00171442 File Offset: 0x0016F642
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string FourStarTitle
@@ -205,9 +205,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EDA RID: 7898
-		// (get) Token: 0x06009A52 RID: 39506 RVA: 0x00173E89 File Offset: 0x00172089
-		// (set) Token: 0x06009A53 RID: 39507 RVA: 0x00173E91 File Offset: 0x00172091
+		// Token: 0x17001E90 RID: 7824
+		// (get) Token: 0x060098FC RID: 39164 RVA: 0x00171455 File Offset: 0x0016F655
+		// (set) Token: 0x060098FD RID: 39165 RVA: 0x0017145D File Offset: 0x0016F65D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string FourStarDetail
@@ -222,9 +222,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EDB RID: 7899
-		// (get) Token: 0x06009A54 RID: 39508 RVA: 0x00173EA4 File Offset: 0x001720A4
-		// (set) Token: 0x06009A55 RID: 39509 RVA: 0x00173EAC File Offset: 0x001720AC
+		// Token: 0x17001E91 RID: 7825
+		// (get) Token: 0x060098FE RID: 39166 RVA: 0x00171470 File Offset: 0x0016F670
+		// (set) Token: 0x060098FF RID: 39167 RVA: 0x00171478 File Offset: 0x0016F678
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ThreeStarTitle
@@ -239,9 +239,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EDC RID: 7900
-		// (get) Token: 0x06009A56 RID: 39510 RVA: 0x00173EBF File Offset: 0x001720BF
-		// (set) Token: 0x06009A57 RID: 39511 RVA: 0x00173EC7 File Offset: 0x001720C7
+		// Token: 0x17001E92 RID: 7826
+		// (get) Token: 0x06009900 RID: 39168 RVA: 0x0017148B File Offset: 0x0016F68B
+		// (set) Token: 0x06009901 RID: 39169 RVA: 0x00171493 File Offset: 0x0016F693
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ThreeStarDetail
@@ -256,7 +256,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009A58 RID: 39512 RVA: 0x00173EDA File Offset: 0x001720DA
+		// Token: 0x06009902 RID: 39170 RVA: 0x001714A6 File Offset: 0x0016F6A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -264,7 +264,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GachaPoolDetail);
 		}
 
-		// Token: 0x06009A59 RID: 39513 RVA: 0x00173EE8 File Offset: 0x001720E8
+		// Token: 0x06009903 RID: 39171 RVA: 0x001714B4 File Offset: 0x0016F6B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GachaPoolDetail other)
@@ -272,7 +272,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (!(this.Detail != other.Detail) && this.fiveStarRoleList_.Equals(other.fiveStarRoleList_) && this.fiveStarWeaponList_.Equals(other.fiveStarWeaponList_) && this.fourStarRoleList_.Equals(other.fourStarRoleList_) && this.fourStarWeaponList_.Equals(other.fourStarWeaponList_) && this.threeStarWeaponList_.Equals(other.threeStarWeaponList_) && !(this.FiveStarTitle != other.FiveStarTitle) && !(this.FiveStarDetail != other.FiveStarDetail) && !(this.FourStarTitle != other.FourStarTitle) && !(this.FourStarDetail != other.FourStarDetail) && !(this.ThreeStarTitle != other.ThreeStarTitle) && !(this.ThreeStarDetail != other.ThreeStarDetail) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06009A5A RID: 39514 RVA: 0x00174010 File Offset: 0x00172210
+		// Token: 0x06009904 RID: 39172 RVA: 0x001715DC File Offset: 0x0016F7DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -318,7 +318,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009A5B RID: 39515 RVA: 0x00174139 File Offset: 0x00172339
+		// Token: 0x06009905 RID: 39173 RVA: 0x00171705 File Offset: 0x0016F905
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -326,7 +326,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06009A5C RID: 39516 RVA: 0x00174146 File Offset: 0x00172346
+		// Token: 0x06009906 RID: 39174 RVA: 0x00171712 File Offset: 0x0016F912
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -334,7 +334,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06009A5D RID: 39517 RVA: 0x00174150 File Offset: 0x00172350
+		// Token: 0x06009907 RID: 39175 RVA: 0x0017171C File Offset: 0x0016F91C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -385,7 +385,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009A5E RID: 39518 RVA: 0x001742B0 File Offset: 0x001724B0
+		// Token: 0x06009908 RID: 39176 RVA: 0x0017187C File Offset: 0x0016FA7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -431,7 +431,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009A5F RID: 39519 RVA: 0x00174400 File Offset: 0x00172600
+		// Token: 0x06009909 RID: 39177 RVA: 0x001719CC File Offset: 0x0016FBCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GachaPoolDetail other)
@@ -476,7 +476,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06009A60 RID: 39520 RVA: 0x0017452C File Offset: 0x0017272C
+		// Token: 0x0600990A RID: 39178 RVA: 0x00171AF8 File Offset: 0x0016FCF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -484,7 +484,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06009A61 RID: 39521 RVA: 0x00174538 File Offset: 0x00172738
+		// Token: 0x0600990B RID: 39179 RVA: 0x00171B04 File Offset: 0x0016FD04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -575,94 +575,94 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040048EC RID: 18668
+		// Token: 0x040048E5 RID: 18661
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040048ED RID: 18669
+		// Token: 0x040048E6 RID: 18662
 		public const int DetailFieldNumber = 1;
 
-		// Token: 0x040048EE RID: 18670
+		// Token: 0x040048E7 RID: 18663
 		private string detail_ = "";
 
-		// Token: 0x040048EF RID: 18671
+		// Token: 0x040048E8 RID: 18664
 		public const int FiveStarRoleListFieldNumber = 2;
 
-		// Token: 0x040048F0 RID: 18672
+		// Token: 0x040048E9 RID: 18665
 		private static readonly FieldCodec<GachaPoolDrop> _repeated_fiveStarRoleList_codec = FieldCodec.ForMessage<GachaPoolDrop>(18U, GachaPoolDrop.Parser);
 
-		// Token: 0x040048F1 RID: 18673
+		// Token: 0x040048EA RID: 18666
 		private readonly RepeatedField<GachaPoolDrop> fiveStarRoleList_ = new RepeatedField<GachaPoolDrop>();
 
-		// Token: 0x040048F2 RID: 18674
+		// Token: 0x040048EB RID: 18667
 		public const int FiveStarWeaponListFieldNumber = 3;
 
-		// Token: 0x040048F3 RID: 18675
+		// Token: 0x040048EC RID: 18668
 		private static readonly FieldCodec<GachaPoolDrop> _repeated_fiveStarWeaponList_codec = FieldCodec.ForMessage<GachaPoolDrop>(26U, GachaPoolDrop.Parser);
 
-		// Token: 0x040048F4 RID: 18676
+		// Token: 0x040048ED RID: 18669
 		private readonly RepeatedField<GachaPoolDrop> fiveStarWeaponList_ = new RepeatedField<GachaPoolDrop>();
 
-		// Token: 0x040048F5 RID: 18677
+		// Token: 0x040048EE RID: 18670
 		public const int FourStarRoleListFieldNumber = 4;
 
-		// Token: 0x040048F6 RID: 18678
+		// Token: 0x040048EF RID: 18671
 		private static readonly FieldCodec<GachaPoolDrop> _repeated_fourStarRoleList_codec = FieldCodec.ForMessage<GachaPoolDrop>(34U, GachaPoolDrop.Parser);
 
-		// Token: 0x040048F7 RID: 18679
+		// Token: 0x040048F0 RID: 18672
 		private readonly RepeatedField<GachaPoolDrop> fourStarRoleList_ = new RepeatedField<GachaPoolDrop>();
 
-		// Token: 0x040048F8 RID: 18680
+		// Token: 0x040048F1 RID: 18673
 		public const int FourStarWeaponListFieldNumber = 5;
 
-		// Token: 0x040048F9 RID: 18681
+		// Token: 0x040048F2 RID: 18674
 		private static readonly FieldCodec<GachaPoolDrop> _repeated_fourStarWeaponList_codec = FieldCodec.ForMessage<GachaPoolDrop>(42U, GachaPoolDrop.Parser);
 
-		// Token: 0x040048FA RID: 18682
+		// Token: 0x040048F3 RID: 18675
 		private readonly RepeatedField<GachaPoolDrop> fourStarWeaponList_ = new RepeatedField<GachaPoolDrop>();
 
-		// Token: 0x040048FB RID: 18683
+		// Token: 0x040048F4 RID: 18676
 		public const int ThreeStarWeaponListFieldNumber = 6;
 
-		// Token: 0x040048FC RID: 18684
+		// Token: 0x040048F5 RID: 18677
 		private static readonly FieldCodec<GachaPoolDrop> _repeated_threeStarWeaponList_codec = FieldCodec.ForMessage<GachaPoolDrop>(50U, GachaPoolDrop.Parser);
 
-		// Token: 0x040048FD RID: 18685
+		// Token: 0x040048F6 RID: 18678
 		private readonly RepeatedField<GachaPoolDrop> threeStarWeaponList_ = new RepeatedField<GachaPoolDrop>();
 
-		// Token: 0x040048FE RID: 18686
+		// Token: 0x040048F7 RID: 18679
 		public const int FiveStarTitleFieldNumber = 7;
 
-		// Token: 0x040048FF RID: 18687
+		// Token: 0x040048F8 RID: 18680
 		private string fiveStarTitle_ = "";
 
-		// Token: 0x04004900 RID: 18688
+		// Token: 0x040048F9 RID: 18681
 		public const int FiveStarDetailFieldNumber = 8;
 
-		// Token: 0x04004901 RID: 18689
+		// Token: 0x040048FA RID: 18682
 		private string fiveStarDetail_ = "";
 
-		// Token: 0x04004902 RID: 18690
+		// Token: 0x040048FB RID: 18683
 		public const int FourStarTitleFieldNumber = 9;
 
-		// Token: 0x04004903 RID: 18691
+		// Token: 0x040048FC RID: 18684
 		private string fourStarTitle_ = "";
 
-		// Token: 0x04004904 RID: 18692
+		// Token: 0x040048FD RID: 18685
 		public const int FourStarDetailFieldNumber = 10;
 
-		// Token: 0x04004905 RID: 18693
+		// Token: 0x040048FE RID: 18686
 		private string fourStarDetail_ = "";
 
-		// Token: 0x04004906 RID: 18694
+		// Token: 0x040048FF RID: 18687
 		public const int ThreeStarTitleFieldNumber = 11;
 
-		// Token: 0x04004907 RID: 18695
+		// Token: 0x04004900 RID: 18688
 		private string threeStarTitle_ = "";
 
-		// Token: 0x04004908 RID: 18696
+		// Token: 0x04004901 RID: 18689
 		public const int ThreeStarDetailFieldNumber = 12;
 
-		// Token: 0x04004909 RID: 18697
+		// Token: 0x04004902 RID: 18690
 		private string threeStarDetail_ = "";
 	}
 }

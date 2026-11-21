@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DA9 RID: 11689
+// Token: 0x02002303 RID: 8963
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataBase
 {
-	// Token: 0x17002126 RID: 8486
-	// (get) Token: 0x060188FA RID: 100602 RVA: 0x00646E0D File Offset: 0x0064500D
+	// Token: 0x17002181 RID: 8577
+	// (get) Token: 0x060161A1 RID: 90529 RVA: 0x0066CCB4 File Offset: 0x0066AEB4
 	public bool IgnoreGradient
 	{
 		get
@@ -23,8 +23,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002127 RID: 8487
-	// (get) Token: 0x060188FB RID: 100603 RVA: 0x00646E3D File Offset: 0x0064503D
+	// Token: 0x17002182 RID: 8578
+	// (get) Token: 0x060161A2 RID: 90530 RVA: 0x0066CCE4 File Offset: 0x0066AEE4
 	public Vector CenterOffset
 	{
 		get
@@ -37,8 +37,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002128 RID: 8488
-	// (get) Token: 0x060188FC RID: 100604 RVA: 0x00646E68 File Offset: 0x00645068
+	// Token: 0x17002183 RID: 8579
+	// (get) Token: 0x060161A3 RID: 90531 RVA: 0x0066CD0F File Offset: 0x0066AF0F
 	public long DamageId
 	{
 		get
@@ -51,8 +51,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002129 RID: 8489
-	// (get) Token: 0x060188FD RID: 100605 RVA: 0x00646E98 File Offset: 0x00645098
+	// Token: 0x17002184 RID: 8580
+	// (get) Token: 0x060161A4 RID: 90532 RVA: 0x0066CD40 File Offset: 0x0066AF40
 	[Nullable(2)]
 	public long[] MultiDamageId
 	{
@@ -77,8 +77,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700212A RID: 8490
-	// (get) Token: 0x060188FE RID: 100606 RVA: 0x00646EF8 File Offset: 0x006450F8
+	// Token: 0x17002185 RID: 8581
+	// (get) Token: 0x060161A5 RID: 90533 RVA: 0x0066CDA0 File Offset: 0x0066AFA0
 	public bool EnablePartHitAudio
 	{
 		get
@@ -91,8 +91,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700212B RID: 8491
-	// (get) Token: 0x060188FF RID: 100607 RVA: 0x00646F28 File Offset: 0x00645128
+	// Token: 0x17002186 RID: 8582
+	// (get) Token: 0x060161A6 RID: 90534 RVA: 0x0066CDD0 File Offset: 0x0066AFD0
 	public bool IntervalAfterHit
 	{
 		get
@@ -105,8 +105,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700212C RID: 8492
-	// (get) Token: 0x06018900 RID: 100608 RVA: 0x00646F58 File Offset: 0x00645158
+	// Token: 0x17002187 RID: 8583
+	// (get) Token: 0x060161A7 RID: 90535 RVA: 0x0066CE00 File Offset: 0x0066B000
 	public float Interval
 	{
 		get
@@ -119,8 +119,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700212D RID: 8493
-	// (get) Token: 0x06018901 RID: 100609 RVA: 0x00646F88 File Offset: 0x00645188
+	// Token: 0x17002188 RID: 8584
+	// (get) Token: 0x060161A8 RID: 90536 RVA: 0x0066CE30 File Offset: 0x0066B030
 	public bool ShareCounter
 	{
 		get
@@ -133,8 +133,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700212E RID: 8494
-	// (get) Token: 0x06018902 RID: 100610 RVA: 0x00646FB8 File Offset: 0x006451B8
+	// Token: 0x17002189 RID: 8585
+	// (get) Token: 0x060161A9 RID: 90537 RVA: 0x0066CE60 File Offset: 0x0066B060
 	public Vector BornPosition
 	{
 		get
@@ -147,8 +147,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700212F RID: 8495
-	// (get) Token: 0x06018903 RID: 100611 RVA: 0x00646FE3 File Offset: 0x006451E3
+	// Token: 0x1700218A RID: 8586
+	// (get) Token: 0x060161AA RID: 90538 RVA: 0x0066CE8B File Offset: 0x0066B08B
 	public EPositionStandard BornPositionStandard
 	{
 		get
@@ -161,8 +161,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002130 RID: 8496
-	// (get) Token: 0x06018904 RID: 100612 RVA: 0x00647018 File Offset: 0x00645218
+	// Token: 0x1700218B RID: 8587
+	// (get) Token: 0x060161AB RID: 90539 RVA: 0x0066CEC0 File Offset: 0x0066B0C0
 	public Vector BornPositionRandom
 	{
 		get
@@ -175,8 +175,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002131 RID: 8497
-	// (get) Token: 0x06018905 RID: 100613 RVA: 0x00647043 File Offset: 0x00645243
+	// Token: 0x1700218C RID: 8588
+	// (get) Token: 0x060161AC RID: 90540 RVA: 0x0066CEEB File Offset: 0x0066B0EB
 	public Vector Size
 	{
 		get
@@ -189,8 +189,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002132 RID: 8498
-	// (get) Token: 0x06018906 RID: 100614 RVA: 0x0064706E File Offset: 0x0064526E
+	// Token: 0x1700218D RID: 8589
+	// (get) Token: 0x060161AD RID: 90541 RVA: 0x0066CF16 File Offset: 0x0066B116
 	public Rotator Rotator
 	{
 		get
@@ -203,8 +203,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002133 RID: 8499
-	// (get) Token: 0x06018907 RID: 100615 RVA: 0x00647099 File Offset: 0x00645299
+	// Token: 0x1700218E RID: 8590
+	// (get) Token: 0x060161AE RID: 90542 RVA: 0x0066CF41 File Offset: 0x0066B141
 	public int VictimCount
 	{
 		get
@@ -217,8 +217,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002134 RID: 8500
-	// (get) Token: 0x06018908 RID: 100616 RVA: 0x006470C9 File Offset: 0x006452C9
+	// Token: 0x1700218F RID: 8591
+	// (get) Token: 0x060161AF RID: 90543 RVA: 0x0066CF71 File Offset: 0x0066B171
 	public int HitConditionTagId
 	{
 		get
@@ -228,7 +228,7 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x06018909 RID: 100617 RVA: 0x006470D8 File Offset: 0x006452D8
+	// Token: 0x060161B0 RID: 90544 RVA: 0x0066CF80 File Offset: 0x0066B180
 	private void InitHitConditionTag()
 	{
 		if (!this.HitConditionTagInit)
@@ -244,8 +244,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002135 RID: 8501
-	// (get) Token: 0x0601890A RID: 100618 RVA: 0x00647122 File Offset: 0x00645322
+	// Token: 0x17002190 RID: 8592
+	// (get) Token: 0x060161B1 RID: 90545 RVA: 0x0066CFCA File Offset: 0x0066B1CA
 	public int HitType
 	{
 		get
@@ -258,8 +258,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002136 RID: 8502
-	// (get) Token: 0x0601890B RID: 100619 RVA: 0x00647157 File Offset: 0x00645357
+	// Token: 0x17002191 RID: 8593
+	// (get) Token: 0x060161B2 RID: 90546 RVA: 0x0066CFFF File Offset: 0x0066B1FF
 	public FName DaHitTypePreset
 	{
 		get
@@ -269,7 +269,7 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x0601890C RID: 100620 RVA: 0x00647168 File Offset: 0x00645368
+	// Token: 0x060161B3 RID: 90547 RVA: 0x0066D010 File Offset: 0x0066B210
 	private void InitBulletCamp()
 	{
 		if (this.DaHitTypePresetInit)
@@ -285,8 +285,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002137 RID: 8503
-	// (get) Token: 0x0601890D RID: 100621 RVA: 0x006471ED File Offset: 0x006453ED
+	// Token: 0x17002192 RID: 8594
+	// (get) Token: 0x060161B4 RID: 90548 RVA: 0x0066D095 File Offset: 0x0066B295
 	public EBulletRelativeDir RelativeDirection
 	{
 		get
@@ -299,8 +299,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002138 RID: 8504
-	// (get) Token: 0x0601890E RID: 100622 RVA: 0x00647222 File Offset: 0x00645422
+	// Token: 0x17002193 RID: 8595
+	// (get) Token: 0x060161B5 RID: 90549 RVA: 0x0066D0CA File Offset: 0x0066B2CA
 	public EBulletShape Shape
 	{
 		get
@@ -313,8 +313,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002139 RID: 8505
-	// (get) Token: 0x0601890F RID: 100623 RVA: 0x00647257 File Offset: 0x00645457
+	// Token: 0x17002194 RID: 8596
+	// (get) Token: 0x060161B6 RID: 90550 RVA: 0x0066D0FF File Offset: 0x0066B2FF
 	public Rotator AttackDirection
 	{
 		get
@@ -327,8 +327,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700213A RID: 8506
-	// (get) Token: 0x06018910 RID: 100624 RVA: 0x00647282 File Offset: 0x00645482
+	// Token: 0x17002195 RID: 8597
+	// (get) Token: 0x060161B7 RID: 90551 RVA: 0x0066D12A File Offset: 0x0066B32A
 	public int TagId
 	{
 		get
@@ -338,7 +338,7 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x06018911 RID: 100625 RVA: 0x00647290 File Offset: 0x00645490
+	// Token: 0x060161B8 RID: 90552 RVA: 0x0066D138 File Offset: 0x0066B338
 	private void InitTag()
 	{
 		if (this.TagInit)
@@ -355,8 +355,8 @@ public class BulletDataBase
 		this.TagIdInternal = 0;
 	}
 
-	// Token: 0x1700213B RID: 8507
-	// (get) Token: 0x06018912 RID: 100626 RVA: 0x006472DB File Offset: 0x006454DB
+	// Token: 0x17002196 RID: 8598
+	// (get) Token: 0x060161B9 RID: 90553 RVA: 0x0066D183 File Offset: 0x0066B383
 	public int[] BornRequireTagIds
 	{
 		get
@@ -366,8 +366,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700213C RID: 8508
-	// (get) Token: 0x06018913 RID: 100627 RVA: 0x006472E9 File Offset: 0x006454E9
+	// Token: 0x17002197 RID: 8599
+	// (get) Token: 0x060161BA RID: 90554 RVA: 0x0066D191 File Offset: 0x0066B391
 	public int[] BornForbidTagIds
 	{
 		get
@@ -377,7 +377,7 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x06018914 RID: 100628 RVA: 0x006472F8 File Offset: 0x006454F8
+	// Token: 0x060161BB RID: 90555 RVA: 0x0066D1A0 File Offset: 0x0066B3A0
 	private void InitBornTag()
 	{
 		if (this.BornTagInit)
@@ -425,8 +425,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700213D RID: 8509
-	// (get) Token: 0x06018915 RID: 100629 RVA: 0x006473F3 File Offset: 0x006455F3
+	// Token: 0x17002198 RID: 8600
+	// (get) Token: 0x060161BC RID: 90556 RVA: 0x0066D29B File Offset: 0x0066B49B
 	public FName HitEffectWeakness
 	{
 		get
@@ -440,8 +440,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700213E RID: 8510
-	// (get) Token: 0x06018916 RID: 100630 RVA: 0x00647428 File Offset: 0x00645628
+	// Token: 0x17002199 RID: 8601
+	// (get) Token: 0x060161BD RID: 90557 RVA: 0x0066D2D0 File Offset: 0x0066B4D0
 	[Nullable(2)]
 	public FName[] MultiHitEffectWeakness
 	{
@@ -466,8 +466,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700213F RID: 8511
-	// (get) Token: 0x06018917 RID: 100631 RVA: 0x0064748C File Offset: 0x0064568C
+	// Token: 0x1700219A RID: 8602
+	// (get) Token: 0x060161BE RID: 90558 RVA: 0x0066D334 File Offset: 0x0066B534
 	public int HitCountMax
 	{
 		get
@@ -480,8 +480,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002140 RID: 8512
-	// (get) Token: 0x06018918 RID: 100632 RVA: 0x006474BC File Offset: 0x006456BC
+	// Token: 0x1700219B RID: 8603
+	// (get) Token: 0x060161BF RID: 90559 RVA: 0x0066D364 File Offset: 0x0066B564
 	public bool DestroyOnSkillEnd
 	{
 		get
@@ -494,8 +494,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002141 RID: 8513
-	// (get) Token: 0x06018919 RID: 100633 RVA: 0x006474EC File Offset: 0x006456EC
+	// Token: 0x1700219C RID: 8604
+	// (get) Token: 0x060161C0 RID: 90560 RVA: 0x0066D394 File Offset: 0x0066B594
 	public float Duration
 	{
 		get
@@ -508,8 +508,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002142 RID: 8514
-	// (get) Token: 0x0601891A RID: 100634 RVA: 0x0064751C File Offset: 0x0064571C
+	// Token: 0x1700219D RID: 8605
+	// (get) Token: 0x060161C1 RID: 90561 RVA: 0x0066D3C4 File Offset: 0x0066B5C4
 	public string BlackboardKey
 	{
 		get
@@ -523,8 +523,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002143 RID: 8515
-	// (get) Token: 0x0601891B RID: 100635 RVA: 0x00647544 File Offset: 0x00645744
+	// Token: 0x1700219E RID: 8606
+	// (get) Token: 0x060161C2 RID: 90562 RVA: 0x0066D3EC File Offset: 0x0066B5EC
 	public bool ContinuesCollision
 	{
 		get
@@ -537,8 +537,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002144 RID: 8516
-	// (get) Token: 0x0601891C RID: 100636 RVA: 0x00647574 File Offset: 0x00645774
+	// Token: 0x1700219F RID: 8607
+	// (get) Token: 0x060161C3 RID: 90563 RVA: 0x0066D41C File Offset: 0x0066B61C
 	public bool StickGround
 	{
 		get
@@ -551,8 +551,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002145 RID: 8517
-	// (get) Token: 0x0601891D RID: 100637 RVA: 0x006475A4 File Offset: 0x006457A4
+	// Token: 0x170021A0 RID: 8608
+	// (get) Token: 0x060161C4 RID: 90564 RVA: 0x0066D44C File Offset: 0x0066B64C
 	public bool StickWater
 	{
 		get
@@ -565,8 +565,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002146 RID: 8518
-	// (get) Token: 0x0601891E RID: 100638 RVA: 0x006475D4 File Offset: 0x006457D4
+	// Token: 0x170021A1 RID: 8609
+	// (get) Token: 0x060161C5 RID: 90565 RVA: 0x0066D47C File Offset: 0x0066B67C
 	public bool NotFollowMovePlatform
 	{
 		get
@@ -579,8 +579,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002147 RID: 8519
-	// (get) Token: 0x0601891F RID: 100639 RVA: 0x00647604 File Offset: 0x00645804
+	// Token: 0x170021A2 RID: 8610
+	// (get) Token: 0x060161C6 RID: 90566 RVA: 0x0066D4AC File Offset: 0x0066B6AC
 	public float StickTraceLen
 	{
 		get
@@ -593,8 +593,22 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002148 RID: 8520
-	// (get) Token: 0x06018920 RID: 100640 RVA: 0x00647634 File Offset: 0x00645834
+	// Token: 0x170021A3 RID: 8611
+	// (get) Token: 0x060161C7 RID: 90567 RVA: 0x0066D4DC File Offset: 0x0066B6DC
+	public float StickGroundAngleLimit
+	{
+		get
+		{
+			if (this.StickGroundAngleLimitInternal == null)
+			{
+				this.StickGroundAngleLimitInternal = new float?(this.Data.贴地角度限制);
+			}
+			return this.StickGroundAngleLimitInternal.Value;
+		}
+	}
+
+	// Token: 0x170021A4 RID: 8612
+	// (get) Token: 0x060161C8 RID: 90568 RVA: 0x0066D50C File Offset: 0x0066B70C
 	public int HitCountPerVictim
 	{
 		get
@@ -607,8 +621,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002149 RID: 8521
-	// (get) Token: 0x06018921 RID: 100641 RVA: 0x00647664 File Offset: 0x00645864
+	// Token: 0x170021A5 RID: 8613
+	// (get) Token: 0x060161C9 RID: 90569 RVA: 0x0066D53C File Offset: 0x0066B73C
 	public Dictionary<EBulletBaseSpecificParam, string> SpecialParams
 	{
 		get
@@ -630,8 +644,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700214A RID: 8522
-	// (get) Token: 0x06018922 RID: 100642 RVA: 0x006476EC File Offset: 0x006458EC
+	// Token: 0x170021A6 RID: 8614
+	// (get) Token: 0x060161CA RID: 90570 RVA: 0x0066D5CC File Offset: 0x0066B7CC
 	public float CollisionActiveDelay
 	{
 		get
@@ -644,8 +658,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700214B RID: 8523
-	// (get) Token: 0x06018923 RID: 100643 RVA: 0x0064771C File Offset: 0x0064591C
+	// Token: 0x170021A7 RID: 8615
+	// (get) Token: 0x060161CB RID: 90571 RVA: 0x0066D5FC File Offset: 0x0066B7FC
 	public float CollisionActiveDuration
 	{
 		get
@@ -658,8 +672,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700214C RID: 8524
-	// (get) Token: 0x06018924 RID: 100644 RVA: 0x0064774C File Offset: 0x0064594C
+	// Token: 0x170021A8 RID: 8616
+	// (get) Token: 0x060161CC RID: 90572 RVA: 0x0066D62C File Offset: 0x0066B82C
 	public EBulletSyncTypeTs SyncType
 	{
 		get
@@ -672,8 +686,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700214D RID: 8525
-	// (get) Token: 0x06018925 RID: 100645 RVA: 0x00647781 File Offset: 0x00645981
+	// Token: 0x170021A9 RID: 8617
+	// (get) Token: 0x060161CD RID: 90573 RVA: 0x0066D661 File Offset: 0x0066B861
 	public FName BeHitEffect
 	{
 		get
@@ -687,8 +701,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700214E RID: 8526
-	// (get) Token: 0x06018926 RID: 100646 RVA: 0x006477B4 File Offset: 0x006459B4
+	// Token: 0x170021AA RID: 8618
+	// (get) Token: 0x060161CE RID: 90574 RVA: 0x0066D694 File Offset: 0x0066B894
 	[Nullable(2)]
 	public FName[] MultiBeHitEffect
 	{
@@ -713,8 +727,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x1700214F RID: 8527
-	// (get) Token: 0x06018927 RID: 100647 RVA: 0x00647818 File Offset: 0x00645A18
+	// Token: 0x170021AB RID: 8619
+	// (get) Token: 0x060161CF RID: 90575 RVA: 0x0066D6F8 File Offset: 0x0066B8F8
 	public Vector BornDistLimit
 	{
 		get
@@ -727,8 +741,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002150 RID: 8528
-	// (get) Token: 0x06018928 RID: 100648 RVA: 0x00647843 File Offset: 0x00645A43
+	// Token: 0x170021AC RID: 8620
+	// (get) Token: 0x060161D0 RID: 90576 RVA: 0x0066D723 File Offset: 0x0066B923
 	public int BanHitTagId
 	{
 		get
@@ -738,7 +752,7 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x06018929 RID: 100649 RVA: 0x00647854 File Offset: 0x00645A54
+	// Token: 0x060161D1 RID: 90577 RVA: 0x0066D734 File Offset: 0x0066B934
 	private void InitBanHitTag()
 	{
 		if (!this.BanHitTagInit)
@@ -754,8 +768,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002151 RID: 8529
-	// (get) Token: 0x0601892A RID: 100650 RVA: 0x0064789E File Offset: 0x00645A9E
+	// Token: 0x170021AD RID: 8621
+	// (get) Token: 0x060161D2 RID: 90578 RVA: 0x0066D77E File Offset: 0x0066B97E
 	public bool DebugShowProgress
 	{
 		get
@@ -768,8 +782,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002152 RID: 8530
-	// (get) Token: 0x0601892B RID: 100651 RVA: 0x006478CE File Offset: 0x00645ACE
+	// Token: 0x170021AE RID: 8622
+	// (get) Token: 0x060161D3 RID: 90579 RVA: 0x0066D7AE File Offset: 0x0066B9AE
 	public bool BigRangeHitSceneItem
 	{
 		get
@@ -782,8 +796,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002153 RID: 8531
-	// (get) Token: 0x0601892C RID: 100652 RVA: 0x006478FE File Offset: 0x00645AFE
+	// Token: 0x170021AF RID: 8623
+	// (get) Token: 0x060161D4 RID: 90580 RVA: 0x0066D7DE File Offset: 0x0066B9DE
 	public int HitActorType
 	{
 		get
@@ -796,8 +810,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002154 RID: 8532
-	// (get) Token: 0x0601892D RID: 100653 RVA: 0x00647933 File Offset: 0x00645B33
+	// Token: 0x170021B0 RID: 8624
+	// (get) Token: 0x060161D5 RID: 90581 RVA: 0x0066D813 File Offset: 0x0066BA13
 	public int BigRangeSearchType
 	{
 		get
@@ -810,8 +824,8 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x17002155 RID: 8533
-	// (get) Token: 0x0601892E RID: 100654 RVA: 0x00647963 File Offset: 0x00645B63
+	// Token: 0x170021B1 RID: 8625
+	// (get) Token: 0x060161D6 RID: 90582 RVA: 0x0066D843 File Offset: 0x0066BA43
 	public bool IsRandomVictim
 	{
 		get
@@ -824,13 +838,13 @@ public class BulletDataBase
 		}
 	}
 
-	// Token: 0x0601892F RID: 100655 RVA: 0x00647993 File Offset: 0x00645B93
+	// Token: 0x060161D7 RID: 90583 RVA: 0x0066D873 File Offset: 0x0066BA73
 	public BulletDataBase(SReBulletDataBase data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x06018930 RID: 100656 RVA: 0x006479B0 File Offset: 0x00645BB0
+	// Token: 0x060161D8 RID: 90584 RVA: 0x0066D890 File Offset: 0x0066BA90
 	public bool Preload()
 	{
 		this.InitBulletCamp();
@@ -857,156 +871,159 @@ public class BulletDataBase
 		return true;
 	}
 
-	// Token: 0x0400B60D RID: 46605
+	// Token: 0x0400B986 RID: 47494
 	private readonly SReBulletDataBase Data;
 
-	// Token: 0x0400B60E RID: 46606
+	// Token: 0x0400B987 RID: 47495
 	private bool? IgnoreGradientInternal;
 
-	// Token: 0x0400B60F RID: 46607
+	// Token: 0x0400B988 RID: 47496
 	[Nullable(2)]
 	private Vector CenterOffsetInternal;
 
-	// Token: 0x0400B610 RID: 46608
+	// Token: 0x0400B989 RID: 47497
 	private long? DamageIdInternal;
 
-	// Token: 0x0400B611 RID: 46609
+	// Token: 0x0400B98A RID: 47498
 	private bool InitedMultiDamageId;
 
-	// Token: 0x0400B612 RID: 46610
+	// Token: 0x0400B98B RID: 47499
 	[Nullable(2)]
 	private long[] MultiDamageIdInternal;
 
-	// Token: 0x0400B613 RID: 46611
+	// Token: 0x0400B98C RID: 47500
 	private bool? EnablePartHitAudioInternal;
 
-	// Token: 0x0400B614 RID: 46612
+	// Token: 0x0400B98D RID: 47501
 	private bool? IntervalAfterHitInternal;
 
-	// Token: 0x0400B615 RID: 46613
+	// Token: 0x0400B98E RID: 47502
 	private float? IntervalInternal;
 
-	// Token: 0x0400B616 RID: 46614
+	// Token: 0x0400B98F RID: 47503
 	private bool? ShareCounterInternal;
 
-	// Token: 0x0400B617 RID: 46615
+	// Token: 0x0400B990 RID: 47504
 	[Nullable(2)]
 	private Vector BornPositionInternal;
 
-	// Token: 0x0400B618 RID: 46616
+	// Token: 0x0400B991 RID: 47505
 	private EPositionStandard? BornPositionStandardInternal;
 
-	// Token: 0x0400B619 RID: 46617
+	// Token: 0x0400B992 RID: 47506
 	[Nullable(2)]
 	private Vector BornPositionRandomInternal;
 
-	// Token: 0x0400B61A RID: 46618
+	// Token: 0x0400B993 RID: 47507
 	[Nullable(2)]
 	private Vector SizeInternal;
 
-	// Token: 0x0400B61B RID: 46619
+	// Token: 0x0400B994 RID: 47508
 	public bool IsOversizeForTrace;
 
-	// Token: 0x0400B61C RID: 46620
+	// Token: 0x0400B995 RID: 47509
 	[Nullable(2)]
 	private Rotator RotatorInternal;
 
-	// Token: 0x0400B61D RID: 46621
+	// Token: 0x0400B996 RID: 47510
 	private int? VictimCountInternal;
 
-	// Token: 0x0400B61E RID: 46622
+	// Token: 0x0400B997 RID: 47511
 	private int HitConditionTagIdInternal;
 
-	// Token: 0x0400B61F RID: 46623
+	// Token: 0x0400B998 RID: 47512
 	private bool HitConditionTagInit;
 
-	// Token: 0x0400B620 RID: 46624
+	// Token: 0x0400B999 RID: 47513
 	private int? HitTypeInternal;
 
-	// Token: 0x0400B621 RID: 46625
+	// Token: 0x0400B99A RID: 47514
 	private bool DaHitTypePresetInit;
 
-	// Token: 0x0400B622 RID: 46626
+	// Token: 0x0400B99B RID: 47515
 	private FName DaHitTypePresetInternal = FName.NAME_None;
 
-	// Token: 0x0400B623 RID: 46627
+	// Token: 0x0400B99C RID: 47516
 	public int? BulletCamp;
 
-	// Token: 0x0400B624 RID: 46628
+	// Token: 0x0400B99D RID: 47517
 	private EBulletRelativeDir? RelativeDirectionInternal;
 
-	// Token: 0x0400B625 RID: 46629
+	// Token: 0x0400B99E RID: 47518
 	private EBulletShape? ShapeInternal;
 
-	// Token: 0x0400B626 RID: 46630
+	// Token: 0x0400B99F RID: 47519
 	[Nullable(2)]
 	private Rotator AttackDirectionInternal;
 
-	// Token: 0x0400B627 RID: 46631
+	// Token: 0x0400B9A0 RID: 47520
 	private int TagIdInternal;
 
-	// Token: 0x0400B628 RID: 46632
+	// Token: 0x0400B9A1 RID: 47521
 	private bool TagInit;
 
-	// Token: 0x0400B629 RID: 46633
+	// Token: 0x0400B9A2 RID: 47522
 	[Nullable(2)]
 	private int[] BornRequireTagIdsInternal;
 
-	// Token: 0x0400B62A RID: 46634
+	// Token: 0x0400B9A3 RID: 47523
 	[Nullable(2)]
 	private int[] BornForbidTagIdsInternal;
 
-	// Token: 0x0400B62B RID: 46635
+	// Token: 0x0400B9A4 RID: 47524
 	private bool BornTagInit;
 
-	// Token: 0x0400B62C RID: 46636
+	// Token: 0x0400B9A5 RID: 47525
 	private bool HitEffectWeaknessInit;
 
-	// Token: 0x0400B62D RID: 46637
+	// Token: 0x0400B9A6 RID: 47526
 	private FName? HitEffectWeaknessInternal;
 
-	// Token: 0x0400B62E RID: 46638
+	// Token: 0x0400B9A7 RID: 47527
 	private bool MultiHitEffectWeaknessInit;
 
-	// Token: 0x0400B62F RID: 46639
+	// Token: 0x0400B9A8 RID: 47528
 	[Nullable(2)]
 	private FName[] MultiHitEffectWeaknessInternal;
 
-	// Token: 0x0400B630 RID: 46640
+	// Token: 0x0400B9A9 RID: 47529
 	private int? HitCountMaxInternal;
 
-	// Token: 0x0400B631 RID: 46641
+	// Token: 0x0400B9AA RID: 47530
 	private bool? DestroyOnSkillEndInternal;
 
-	// Token: 0x0400B632 RID: 46642
+	// Token: 0x0400B9AB RID: 47531
 	private float? DurationInternal;
 
-	// Token: 0x0400B633 RID: 46643
+	// Token: 0x0400B9AC RID: 47532
 	private bool BlackboardKeyInit;
 
-	// Token: 0x0400B634 RID: 46644
+	// Token: 0x0400B9AD RID: 47533
 	[Nullable(2)]
 	private string BlackboardKeyInternal;
 
-	// Token: 0x0400B635 RID: 46645
+	// Token: 0x0400B9AE RID: 47534
 	private bool? ContinuesCollisionInternal;
 
-	// Token: 0x0400B636 RID: 46646
+	// Token: 0x0400B9AF RID: 47535
 	private bool? StickGroundInternal;
 
-	// Token: 0x0400B637 RID: 46647
+	// Token: 0x0400B9B0 RID: 47536
 	private bool? StickWaterInternal;
 
-	// Token: 0x0400B638 RID: 46648
+	// Token: 0x0400B9B1 RID: 47537
 	private bool? NotFollowMovePlatformInternal;
 
-	// Token: 0x0400B639 RID: 46649
+	// Token: 0x0400B9B2 RID: 47538
 	private float? StickTraceLenInternal;
 
-	// Token: 0x0400B63A RID: 46650
+	// Token: 0x0400B9B3 RID: 47539
+	private float? StickGroundAngleLimitInternal;
+
+	// Token: 0x0400B9B4 RID: 47540
 	private int? HitCountPerVictimInternal;
 
-	// Token: 0x0400B63B RID: 46651
+	// Token: 0x0400B9B5 RID: 47541
 	[Nullable(new byte[]
 	{
 		2,
@@ -1014,50 +1031,50 @@ public class BulletDataBase
 	})]
 	private Dictionary<EBulletBaseSpecificParam, string> SpecialParamsInternal;
 
-	// Token: 0x0400B63C RID: 46652
+	// Token: 0x0400B9B6 RID: 47542
 	private float? CollisionActiveDelayInternal;
 
-	// Token: 0x0400B63D RID: 46653
+	// Token: 0x0400B9B7 RID: 47543
 	private float? CollisionActiveDurationInternal;
 
-	// Token: 0x0400B63E RID: 46654
+	// Token: 0x0400B9B8 RID: 47544
 	private EBulletSyncTypeTs? SyncTypeInternal;
 
-	// Token: 0x0400B63F RID: 46655
+	// Token: 0x0400B9B9 RID: 47545
 	private bool BeHitEffectInit;
 
-	// Token: 0x0400B640 RID: 46656
+	// Token: 0x0400B9BA RID: 47546
 	private FName? BeHitEffectInternal;
 
-	// Token: 0x0400B641 RID: 46657
+	// Token: 0x0400B9BB RID: 47547
 	private bool MultiBeHitEffectInit;
 
-	// Token: 0x0400B642 RID: 46658
+	// Token: 0x0400B9BC RID: 47548
 	[Nullable(2)]
 	private FName[] MultiBeHitEffectInternal;
 
-	// Token: 0x0400B643 RID: 46659
+	// Token: 0x0400B9BD RID: 47549
 	[Nullable(2)]
 	private Vector BornDistLimitInternal;
 
-	// Token: 0x0400B644 RID: 46660
+	// Token: 0x0400B9BE RID: 47550
 	private int BanHitTagIdInternal;
 
-	// Token: 0x0400B645 RID: 46661
+	// Token: 0x0400B9BF RID: 47551
 	private bool BanHitTagInit;
 
-	// Token: 0x0400B646 RID: 46662
+	// Token: 0x0400B9C0 RID: 47552
 	private bool? DebugShowProgressInternal;
 
-	// Token: 0x0400B647 RID: 46663
+	// Token: 0x0400B9C1 RID: 47553
 	private bool? BigRangeHitSceneItemInternal;
 
-	// Token: 0x0400B648 RID: 46664
+	// Token: 0x0400B9C2 RID: 47554
 	private int? HitActorTypeInternal;
 
-	// Token: 0x0400B649 RID: 46665
+	// Token: 0x0400B9C3 RID: 47555
 	private int? BigRangeSearchTypeInternal;
 
-	// Token: 0x0400B64A RID: 46666
+	// Token: 0x0400B9C4 RID: 47556
 	private bool? IsRandomVictimInternal;
 }

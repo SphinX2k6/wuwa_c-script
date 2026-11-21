@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200447A RID: 17530
+	// Token: 0x020048E2 RID: 18658
 	public class IDartPreciseJudgeT
 	{
-		// Token: 0x17007BBA RID: 31674
-		// (get) Token: 0x0601A228 RID: 107048 RVA: 0x003BBB1A File Offset: 0x003B9D1A
-		// (set) Token: 0x0601A229 RID: 107049 RVA: 0x003BBB22 File Offset: 0x003B9D22
+		// Token: 0x170081F9 RID: 33273
+		// (get) Token: 0x0601B9F9 RID: 113145 RVA: 0x003E7D26 File Offset: 0x003E5F26
+		// (set) Token: 0x0601B9FA RID: 113146 RVA: 0x003E7D2E File Offset: 0x003E5F2E
 		public int Probability { get; set; }
 
-		// Token: 0x0601A22A RID: 107050 RVA: 0x003BBB2B File Offset: 0x003B9D2B
+		// Token: 0x0601B9FB RID: 113147 RVA: 0x003E7D37 File Offset: 0x003E5F37
 		public IDartPreciseJudgeT()
 		{
 			this.Probability = 0;

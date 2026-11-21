@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002FB0 RID: 12208
+// Token: 0x02002504 RID: 9476
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayCueAnimBeam : GameplayCueBase
 {
-	// Token: 0x06019E1F RID: 106015 RVA: 0x006C4670 File Offset: 0x006C2870
+	// Token: 0x06017731 RID: 96049 RVA: 0x006EAF0C File Offset: 0x006E910C
 	protected override void OnInit()
 	{
 		string[] array = this.CueConfig.Socket.Split('#', StringSplitOptions.None);
@@ -20,41 +19,45 @@ public class GameplayCueAnimBeam : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E20 RID: 106016 RVA: 0x006C46D0 File Offset: 0x006C28D0
+	// Token: 0x06017732 RID: 96050 RVA: 0x006EAF6C File Offset: 0x006E916C
 	protected override void OnTick(float delta)
 	{
-		FVectorDouble[] points = (from socket in this.Sockets
-		select this.ActorInternal.Mesh.D_GetSocketLocation(socket)).ToArray<FVectorDouble>();
-		this.BeamItem.Tick(points, delta);
+		List<FName> sockets = this.Sockets;
+		FVectorDouble[] array = new FVectorDouble[sockets.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = this.ActorInternal.Mesh.D_GetSocketLocation(sockets[i]);
+		}
+		this.BeamItem.Tick(array, delta);
 	}
 
-	// Token: 0x06019E21 RID: 106017 RVA: 0x006C4707 File Offset: 0x006C2907
+	// Token: 0x06017733 RID: 96051 RVA: 0x006EAFC5 File Offset: 0x006E91C5
 	protected override void OnCreate()
 	{
 		this.BeamItem = GameplayCueBeamCommonItem.Spawn(this.ActorInternal, this.CueConfig.Path, null);
 	}
 
-	// Token: 0x06019E22 RID: 106018 RVA: 0x006C4726 File Offset: 0x006C2926
+	// Token: 0x06017734 RID: 96052 RVA: 0x006EAFE4 File Offset: 0x006E91E4
 	protected override void OnDestroy()
 	{
 		this.BeamItem.Destroy();
 	}
 
-	// Token: 0x06019E23 RID: 106019 RVA: 0x006C4733 File Offset: 0x006C2933
+	// Token: 0x06017735 RID: 96053 RVA: 0x006EAFF1 File Offset: 0x006E91F1
 	public override void OnEnable()
 	{
 		this.BeamItem.GetOwner().SetActorHiddenInGame(false);
 	}
 
-	// Token: 0x06019E24 RID: 106020 RVA: 0x006C4746 File Offset: 0x006C2946
+	// Token: 0x06017736 RID: 96054 RVA: 0x006EB004 File Offset: 0x006E9204
 	public override void OnDisable()
 	{
 		this.BeamItem.GetOwner().SetActorHiddenInGame(true);
 	}
 
-	// Token: 0x0400C3C4 RID: 50116
+	// Token: 0x0400C76D RID: 51053
 	private GameplayCueBeamCommonItem BeamItem;
 
-	// Token: 0x0400C3C5 RID: 50117
+	// Token: 0x0400C76E RID: 51054
 	private List<FName> Sockets;
 }

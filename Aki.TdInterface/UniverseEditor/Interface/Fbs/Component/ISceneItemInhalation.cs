@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058C4 RID: 22724
+	// Token: 0x02005ED1 RID: 24273
 	public struct ISceneItemInhalation : IFlatbufferObject
 	{
-		// Token: 0x1700AA26 RID: 43558
-		// (get) Token: 0x06026590 RID: 157072 RVA: 0x00548F83 File Offset: 0x00547183
+		// Token: 0x1700B356 RID: 45910
+		// (get) Token: 0x06028AF2 RID: 166642 RVA: 0x0058FACF File Offset: 0x0058DCCF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026591 RID: 157073 RVA: 0x00548F90 File Offset: 0x00547190
+		// Token: 0x06028AF3 RID: 166643 RVA: 0x0058FADC File Offset: 0x0058DCDC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026592 RID: 157074 RVA: 0x00548F98 File Offset: 0x00547198
+		// Token: 0x06028AF4 RID: 166644 RVA: 0x0058FAE4 File Offset: 0x0058DCE4
 		public static ISceneItemInhalation GetRootAsISceneItemInhalation(ByteBuffer _bb)
 		{
 			return ISceneItemInhalation.GetRootAsISceneItemInhalation(_bb, default(ISceneItemInhalation));
 		}
 
-		// Token: 0x06026593 RID: 157075 RVA: 0x00548FB4 File Offset: 0x005471B4
+		// Token: 0x06028AF5 RID: 166645 RVA: 0x0058FB00 File Offset: 0x0058DD00
 		public static ISceneItemInhalation GetRootAsISceneItemInhalation(ByteBuffer _bb, ISceneItemInhalation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026594 RID: 157076 RVA: 0x00548FD1 File Offset: 0x005471D1
+		// Token: 0x06028AF6 RID: 166646 RVA: 0x0058FB1D File Offset: 0x0058DD1D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026595 RID: 157077 RVA: 0x00548FE0 File Offset: 0x005471E0
+		// Token: 0x06028AF7 RID: 166647 RVA: 0x0058FB2C File Offset: 0x0058DD2C
 		public ISceneItemInhalation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AA27 RID: 43559
-		// (get) Token: 0x06026596 RID: 157078 RVA: 0x00548FF0 File Offset: 0x005471F0
+		// Token: 0x1700B357 RID: 45911
+		// (get) Token: 0x06028AF8 RID: 166648 RVA: 0x0058FB3C File Offset: 0x0058DD3C
 		public EInhalationPerformanceType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026597 RID: 157079 RVA: 0x0054902C File Offset: 0x0054722C
+		// Token: 0x06028AF9 RID: 166649 RVA: 0x0058FB78 File Offset: 0x0058DD78
 		public static Offset<ISceneItemInhalation> CreateISceneItemInhalation(FlatBufferBuilder builder, EInhalationPerformanceType Type = EInhalationPerformanceType.Role)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneItemInhalation.EndISceneItemInhalation(builder);
 		}
 
-		// Token: 0x06026598 RID: 157080 RVA: 0x00549042 File Offset: 0x00547242
+		// Token: 0x06028AFA RID: 166650 RVA: 0x0058FB8E File Offset: 0x0058DD8E
 		public static void StartISceneItemInhalation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06026599 RID: 157081 RVA: 0x0054904B File Offset: 0x0054724B
+		// Token: 0x06028AFB RID: 166651 RVA: 0x0058FB97 File Offset: 0x0058DD97
 		public static void AddType(FlatBufferBuilder builder, EInhalationPerformanceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602659A RID: 157082 RVA: 0x00549056 File Offset: 0x00547256
+		// Token: 0x06028AFC RID: 166652 RVA: 0x0058FBA2 File Offset: 0x0058DDA2
 		public static Offset<ISceneItemInhalation> EndISceneItemInhalation(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneItemInhalation>(builder.EndTable());
 		}
 
-		// Token: 0x0602659B RID: 157083 RVA: 0x00549064 File Offset: 0x00547264
+		// Token: 0x06028AFD RID: 166653 RVA: 0x0058FBB0 File Offset: 0x0058DDB0
 		public ISceneItemInhalationT UnPack()
 		{
 			ISceneItemInhalationT sceneItemInhalationT = new ISceneItemInhalationT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sceneItemInhalationT;
 		}
 
-		// Token: 0x0602659C RID: 157084 RVA: 0x0054907F File Offset: 0x0054727F
+		// Token: 0x06028AFE RID: 166654 RVA: 0x0058FBCB File Offset: 0x0058DDCB
 		public void UnPackTo(ISceneItemInhalationT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602659D RID: 157085 RVA: 0x00549090 File Offset: 0x00547290
+		// Token: 0x06028AFF RID: 166655 RVA: 0x0058FBDC File Offset: 0x0058DDDC
 		public static Offset<ISceneItemInhalation> Pack(FlatBufferBuilder builder, ISceneItemInhalationT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneItemInhalation.CreateISceneItemInhalation(builder, _o.Type);
 		}
 
-		// Token: 0x0400EE3B RID: 60987
+		// Token: 0x0400FB2E RID: 64302
 		private Table __p;
 	}
 }

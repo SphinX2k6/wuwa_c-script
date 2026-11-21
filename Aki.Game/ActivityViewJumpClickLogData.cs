@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020E0 RID: 8416
+// Token: 0x020015B7 RID: 5559
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityViewJumpClickLogData : PlayerCommonLogData
 {
-	// Token: 0x17001488 RID: 5256
-	// (get) Token: 0x060108E0 RID: 67808 RVA: 0x0040AD4E File Offset: 0x00408F4E
-	// (set) Token: 0x060108E1 RID: 67809 RVA: 0x0040AD56 File Offset: 0x00408F56
+	// Token: 0x170014B5 RID: 5301
+	// (get) Token: 0x0600DD50 RID: 56656 RVA: 0x0041745E File Offset: 0x0041565E
+	// (set) Token: 0x0600DD51 RID: 56657 RVA: 0x00417466 File Offset: 0x00415666
 	public override string event_id { get; set; } = "1021";
 
-	// Token: 0x04007BFB RID: 31739
+	// Token: 0x04007CFA RID: 31994
 	public int i_activity_id;
 
-	// Token: 0x04007BFC RID: 31740
+	// Token: 0x04007CFB RID: 31995
 	public int i_activity_type;
 
-	// Token: 0x04007BFD RID: 31741
+	// Token: 0x04007CFC RID: 31996
 	public int i_unlock;
 
-	// Token: 0x04007BFE RID: 31742
+	// Token: 0x04007CFD RID: 31997
 	public int i_scene;
 }

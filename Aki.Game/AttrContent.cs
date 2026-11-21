@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020024BA RID: 9402
+// Token: 0x020019A1 RID: 6561
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class AttrContent : GridProxyAbstract<RecommendItemData>
 {
-	// Token: 0x06012DCD RID: 77261 RVA: 0x004A8430 File Offset: 0x004A6630
+	// Token: 0x0601028D RID: 66189 RVA: 0x004B5FE4 File Offset: 0x004B41E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class AttrContent : GridProxyAbstract<RecommendItemData>
 		};
 	}
 
-	// Token: 0x06012DCE RID: 77262 RVA: 0x004A84C3 File Offset: 0x004A66C3
+	// Token: 0x0601028E RID: 66190 RVA: 0x004B6077 File Offset: 0x004B4277
 	private void OnClickTogOption(EToggleState toggleState)
 	{
 		if (this.CurrentData == null)
@@ -43,7 +43,7 @@ public class AttrContent : GridProxyAbstract<RecommendItemData>
 		}
 	}
 
-	// Token: 0x06012DCF RID: 77263 RVA: 0x004A84F4 File Offset: 0x004A66F4
+	// Token: 0x0601028F RID: 66191 RVA: 0x004B60A8 File Offset: 0x004B42A8
 	public override void Refresh(RecommendItemData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentData = data;
@@ -67,7 +67,7 @@ public class AttrContent : GridProxyAbstract<RecommendItemData>
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x04008E1E RID: 36382
+	// Token: 0x04008F68 RID: 36712
 	[Nullable(2)]
 	private RecommendItemData CurrentData;
 }

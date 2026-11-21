@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02002384 RID: 9092
+// Token: 0x02001869 RID: 6249
 public interface IPayShopUnionData
 {
 }

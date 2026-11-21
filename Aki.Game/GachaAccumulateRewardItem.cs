@@ -10,7 +10,7 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001C5E RID: 7262
+// Token: 0x0200111D RID: 4381
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -19,7 +19,7 @@ using UnrealEngine;
 })]
 public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateRewardItemData>
 {
-	// Token: 0x0600DAF9 RID: 56057 RVA: 0x0032DD24 File Offset: 0x0032BF24
+	// Token: 0x0600AF0F RID: 44815 RVA: 0x0033916C File Offset: 0x0033736C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -64,7 +64,7 @@ public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateReward
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DAFA RID: 56058 RVA: 0x0032DF5C File Offset: 0x0032C15C
+	// Token: 0x0600AF10 RID: 44816 RVA: 0x003393A4 File Offset: 0x003375A4
 	protected override void OnStart()
 	{
 		this.CommonItemGrid = new CommonItemSmallItemGrid();
@@ -72,18 +72,18 @@ public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateReward
 		this.CommonItemGrid.SetAllowClickBack(false);
 	}
 
-	// Token: 0x0600DAFB RID: 56059 RVA: 0x0032DF8C File Offset: 0x0032C18C
+	// Token: 0x0600AF11 RID: 44817 RVA: 0x003393D4 File Offset: 0x003375D4
 	public void RefreshSpriteWidth(float width)
 	{
 		base.GetSprite(11).SetWidth(width);
 	}
 
-	// Token: 0x0600DAFC RID: 56060 RVA: 0x0032DF9C File Offset: 0x0032C19C
+	// Token: 0x0600AF12 RID: 44818 RVA: 0x003393E4 File Offset: 0x003375E4
 	private void OnClickButton()
 	{
 		if (this.Data.Data.Status != EGachaAccumulateRewardStatus.CanClaim)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.Data.Data.GetRewardItemList()[0].ConfigId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.Data.Data.GetRewardItemList()[0].ConfigId, true, null, false);
 			return;
 		}
 		if (this.Data.IfSpecial)
@@ -114,7 +114,7 @@ public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateReward
 		GachaAccumulateController.Instance.ClaimAccumulateRewardAsync(this.Data.AccumulateId, list.ToArray(), Array.Empty<int>()).Forget<bool>();
 	}
 
-	// Token: 0x0600DAFD RID: 56061 RVA: 0x0032E0D4 File Offset: 0x0032C2D4
+	// Token: 0x0600AF13 RID: 44819 RVA: 0x00339520 File Offset: 0x00337720
 	public override void Refresh(GachaAccumulateRewardItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -128,7 +128,7 @@ public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateReward
 		this.RefreshSpriteBar(data);
 	}
 
-	// Token: 0x0600DAFE RID: 56062 RVA: 0x0032E120 File Offset: 0x0032C320
+	// Token: 0x0600AF14 RID: 44820 RVA: 0x0033956C File Offset: 0x0033776C
 	private void RefreshSpriteBar(GachaAccumulateRewardItemData data)
 	{
 		UUISprite sprite = base.GetSprite(11);
@@ -147,13 +147,13 @@ public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateReward
 		sprite.SetFillAmount((num4 < 0f) ? 0f : ((num4 > 1f) ? 1f : num4));
 	}
 
-	// Token: 0x0600DAFF RID: 56063 RVA: 0x0032E1C4 File Offset: 0x0032C3C4
+	// Token: 0x0600AF15 RID: 44821 RVA: 0x00339610 File Offset: 0x00337810
 	private void RefreshProgressText(GachaAccumulateRewardItemData data)
 	{
 		base.GetText(6).SetText(data.Data.GachaNum.ToString(), true);
 	}
 
-	// Token: 0x0600DB00 RID: 56064 RVA: 0x0032E1E4 File Offset: 0x0032C3E4
+	// Token: 0x0600AF16 RID: 44822 RVA: 0x00339630 File Offset: 0x00337830
 	private void RefreshItem(GachaAccumulateRewardItemData data)
 	{
 		RewardItemData rewardItemData = data.Data.GetRewardItemList()[0];
@@ -165,7 +165,7 @@ public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateReward
 		this.CommonItemGrid.Refresh(data2);
 	}
 
-	// Token: 0x0600DB01 RID: 56065 RVA: 0x0032E238 File Offset: 0x0032C438
+	// Token: 0x0600AF17 RID: 44823 RVA: 0x00339684 File Offset: 0x00337884
 	private void RefreshTextBg(GachaAccumulateRewardItemData data)
 	{
 		UUIItem item = base.GetItem(7);
@@ -175,7 +175,7 @@ public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateReward
 		item2.SetUIActive(flag);
 	}
 
-	// Token: 0x0600DB02 RID: 56066 RVA: 0x0032E284 File Offset: 0x0032C484
+	// Token: 0x0600AF18 RID: 44824 RVA: 0x003396D0 File Offset: 0x003378D0
 	private void RefreshCanFinishItem(GachaAccumulateRewardItemData data)
 	{
 		bool flag = data.Data.Status == EGachaAccumulateRewardStatus.Claimed || data.Data.Status == EGachaAccumulateRewardStatus.CanClaim;
@@ -191,7 +191,7 @@ public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateReward
 		base.GetItem(flag ? 1 : 2).SetUIActive(true);
 	}
 
-	// Token: 0x0600DB03 RID: 56067 RVA: 0x0032E314 File Offset: 0x0032C514
+	// Token: 0x0600AF19 RID: 44825 RVA: 0x00339760 File Offset: 0x00337960
 	private void RefreshFinishItem(GachaAccumulateRewardItemData data)
 	{
 		bool uiactive = data.Data.Status == EGachaAccumulateRewardStatus.Claimed;
@@ -205,23 +205,23 @@ public class GachaAccumulateRewardItem : GridProxyAbstract<GachaAccumulateReward
 		base.GetItem(13).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600DB04 RID: 56068 RVA: 0x0032E371 File Offset: 0x0032C571
+	// Token: 0x0600AF1A RID: 44826 RVA: 0x003397BD File Offset: 0x003379BD
 	private void RefreshSelectTag(GachaAccumulateRewardItemData data)
 	{
 		base.GetItem(9).SetUIActive(data.IfSpecial);
 	}
 
-	// Token: 0x0600DB05 RID: 56069 RVA: 0x0032E386 File Offset: 0x0032C586
+	// Token: 0x0600AF1B RID: 44827 RVA: 0x003397D2 File Offset: 0x003379D2
 	private void RefreshRedDot(GachaAccumulateRewardItemData data)
 	{
 		base.GetItem(10).SetUIActive(data.Data.Status == EGachaAccumulateRewardStatus.CanClaim);
 	}
 
-	// Token: 0x0400643F RID: 25663
+	// Token: 0x04006511 RID: 25873
 	[Nullable(2)]
 	private GachaAccumulateRewardItemData Data;
 
-	// Token: 0x04006440 RID: 25664
+	// Token: 0x04006512 RID: 25874
 	[Nullable(2)]
 	private CommonItemSmallItemGrid CommonItemGrid;
 }

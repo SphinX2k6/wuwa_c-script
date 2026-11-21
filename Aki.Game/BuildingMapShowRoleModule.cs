@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012EF RID: 4847
+// Token: 0x020007A3 RID: 1955
 public class BuildingMapShowRoleModule : UiPanelBase
 {
-	// Token: 0x0600860C RID: 34316 RVA: 0x001C8F00 File Offset: 0x001C7100
+	// Token: 0x060059A7 RID: 22951 RVA: 0x001D1D6C File Offset: 0x001CFF6C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class BuildingMapShowRoleModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600860D RID: 34317 RVA: 0x001C903C File Offset: 0x001C723C
+	// Token: 0x060059A8 RID: 22952 RVA: 0x001D1EA8 File Offset: 0x001D00A8
 	[NullableContext(1)]
 	protected List<UUITexture> GetRoleTextureList()
 	{
@@ -52,7 +52,7 @@ public class BuildingMapShowRoleModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600860E RID: 34318 RVA: 0x001C90FC File Offset: 0x001C72FC
+	// Token: 0x060059A9 RID: 22953 RVA: 0x001D1F68 File Offset: 0x001D0168
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BuildingMapShowRoleModule.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -63,46 +63,46 @@ public class BuildingMapShowRoleModule : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x02007911 RID: 30993
+	// Token: 0x02006A9B RID: 27291
 	private static class EComponents
 	{
-		// Token: 0x04027E27 RID: 163367
+		// Token: 0x04023154 RID: 143700
 		public const int RoleItem1 = 0;
 
-		// Token: 0x04027E28 RID: 163368
+		// Token: 0x04023155 RID: 143701
 		public const int RoleItem2 = 1;
 
-		// Token: 0x04027E29 RID: 163369
+		// Token: 0x04023156 RID: 143702
 		public const int RoleItem3 = 2;
 
-		// Token: 0x04027E2A RID: 163370
+		// Token: 0x04023157 RID: 143703
 		public const int RoleItem4 = 3;
 
-		// Token: 0x04027E2B RID: 163371
+		// Token: 0x04023158 RID: 143704
 		public const int RoleItem5 = 4;
 
-		// Token: 0x04027E2C RID: 163372
+		// Token: 0x04023159 RID: 143705
 		public const int RoleItem6 = 5;
 
-		// Token: 0x04027E2D RID: 163373
+		// Token: 0x0402315A RID: 143706
 		public const int RoleItem7 = 6;
 
-		// Token: 0x04027E2E RID: 163374
+		// Token: 0x0402315B RID: 143707
 		public const int RoleItem8 = 7;
 
-		// Token: 0x04027E2F RID: 163375
+		// Token: 0x0402315C RID: 143708
 		public const int RoleItem9 = 8;
 
-		// Token: 0x04027E30 RID: 163376
+		// Token: 0x0402315D RID: 143709
 		public const int RoleItem10 = 9;
 
-		// Token: 0x04027E31 RID: 163377
+		// Token: 0x0402315E RID: 143710
 		public const int RoleItem11 = 10;
 
-		// Token: 0x04027E32 RID: 163378
+		// Token: 0x0402315F RID: 143711
 		public const int RoleItem12 = 11;
 
-		// Token: 0x04027E33 RID: 163379
+		// Token: 0x04023160 RID: 143712
 		public const int RoleItem13 = 12;
 	}
 }

@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021D0 RID: 8656
+	// Token: 0x0200243B RID: 9275
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SetPlotMode : ActionParams
 	{
-		// Token: 0x0600BE17 RID: 48663 RVA: 0x001B5A10 File Offset: 0x001B3C10
-		[NullableContext(1)]
+		// Token: 0x0600C9D3 RID: 51667 RVA: 0x001CD09C File Offset: 0x001CB29C
+		[NullableContext(0)]
 		private SetPlotMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE18 RID: 48664 RVA: 0x001B5A48 File Offset: 0x001B3C48
-		[NullableContext(1)]
+		// Token: 0x0600C9D4 RID: 51668 RVA: 0x001CD0D4 File Offset: 0x001CB2D4
+		[NullableContext(0)]
 		public static SetPlotMode Create([Nullable(2)] SetPlotMode instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE19 RID: 48665 RVA: 0x001B5A5B File Offset: 0x001B3C5B
-		[NullableContext(1)]
+		// Token: 0x0600C9D5 RID: 51669 RVA: 0x001CD0E7 File Offset: 0x001CB2E7
+		[NullableContext(0)]
 		public static SetPlotMode CreateFromSetValue([Nullable(2)] SetPlotMode_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE1A RID: 48666 RVA: 0x001B5A70 File Offset: 0x001B3C70
-		[NullableContext(1)]
+		// Token: 0x0600C9D6 RID: 51670 RVA: 0x001CD0FC File Offset: 0x001CB2FC
+		[NullableContext(0)]
 		public SetPlotMode_SetValue ToSetValue()
 		{
 			return new SetPlotMode_SetValue
@@ -84,13 +84,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039B5 RID: 14773
-		// (get) Token: 0x0600BE1B RID: 48667 RVA: 0x001B5B8A File Offset: 0x001B3D8A
-		// (set) Token: 0x0600BE1C RID: 48668 RVA: 0x001B5BB5 File Offset: 0x001B3DB5
-		[Nullable(1)]
+		// Token: 0x17003CAA RID: 15530
+		// (get) Token: 0x0600C9D7 RID: 51671 RVA: 0x001CD216 File Offset: 0x001CB416
+		// (set) Token: 0x0600C9D8 RID: 51672 RVA: 0x001CD241 File Offset: 0x001CB441
+		[Nullable(0)]
 		public virtual string Mode
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -103,16 +103,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this.PocoInterface.Mode;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().Mode = value;
 			}
 		}
 
-		// Token: 0x170039B6 RID: 14774
-		// (get) Token: 0x0600BE1D RID: 48669 RVA: 0x001B5BC4 File Offset: 0x001B3DC4
-		// (set) Token: 0x0600BE1E RID: 48670 RVA: 0x001B5BFE File Offset: 0x001B3DFE
+		// Token: 0x17003CAB RID: 15531
+		// (get) Token: 0x0600C9D9 RID: 51673 RVA: 0x001CD250 File Offset: 0x001CB450
+		// (set) Token: 0x0600C9DA RID: 51674 RVA: 0x001CD28A File Offset: 0x001CB48A
 		public virtual bool? IsSwitchMainRole
 		{
 			get
@@ -134,9 +134,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039B7 RID: 14775
-		// (get) Token: 0x0600BE1F RID: 48671 RVA: 0x001B5C0C File Offset: 0x001B3E0C
-		// (set) Token: 0x0600BE20 RID: 48672 RVA: 0x001B5C46 File Offset: 0x001B3E46
+		// Token: 0x17003CAC RID: 15532
+		// (get) Token: 0x0600C9DB RID: 51675 RVA: 0x001CD298 File Offset: 0x001CB498
+		// (set) Token: 0x0600C9DC RID: 51676 RVA: 0x001CD2D2 File Offset: 0x001CB4D2
 		public virtual bool? UseFlowCamera
 		{
 			get
@@ -158,9 +158,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039B8 RID: 14776
-		// (get) Token: 0x0600BE21 RID: 48673 RVA: 0x001B5C54 File Offset: 0x001B3E54
-		// (set) Token: 0x0600BE22 RID: 48674 RVA: 0x001B5C8E File Offset: 0x001B3E8E
+		// Token: 0x17003CAD RID: 15533
+		// (get) Token: 0x0600C9DD RID: 51677 RVA: 0x001CD2E0 File Offset: 0x001CB4E0
+		// (set) Token: 0x0600C9DE RID: 51678 RVA: 0x001CD31A File Offset: 0x001CB51A
 		public virtual bool? Interruptible
 		{
 			get
@@ -182,9 +182,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039B9 RID: 14777
-		// (get) Token: 0x0600BE23 RID: 48675 RVA: 0x001B5C9C File Offset: 0x001B3E9C
-		// (set) Token: 0x0600BE24 RID: 48676 RVA: 0x001B5CD6 File Offset: 0x001B3ED6
+		// Token: 0x17003CAE RID: 15534
+		// (get) Token: 0x0600C9DF RID: 51679 RVA: 0x001CD328 File Offset: 0x001CB528
+		// (set) Token: 0x0600C9E0 RID: 51680 RVA: 0x001CD362 File Offset: 0x001CB562
 		public virtual bool? NoSkip
 		{
 			get
@@ -206,9 +206,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039BA RID: 14778
-		// (get) Token: 0x0600BE25 RID: 48677 RVA: 0x001B5CE4 File Offset: 0x001B3EE4
-		// (set) Token: 0x0600BE26 RID: 48678 RVA: 0x001B5D1E File Offset: 0x001B3F1E
+		// Token: 0x17003CAF RID: 15535
+		// (get) Token: 0x0600C9E1 RID: 51681 RVA: 0x001CD370 File Offset: 0x001CB570
+		// (set) Token: 0x0600C9E2 RID: 51682 RVA: 0x001CD3AA File Offset: 0x001CB5AA
 		public virtual bool? DisableAutoFadeOut
 		{
 			get
@@ -230,9 +230,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039BB RID: 14779
-		// (get) Token: 0x0600BE27 RID: 48679 RVA: 0x001B5D2C File Offset: 0x001B3F2C
-		// (set) Token: 0x0600BE28 RID: 48680 RVA: 0x001B5D66 File Offset: 0x001B3F66
+		// Token: 0x17003CB0 RID: 15536
+		// (get) Token: 0x0600C9E3 RID: 51683 RVA: 0x001CD3B8 File Offset: 0x001CB5B8
+		// (set) Token: 0x0600C9E4 RID: 51684 RVA: 0x001CD3F2 File Offset: 0x001CB5F2
 		public virtual bool? WaitForPlayerMotionEnd
 		{
 			get
@@ -254,9 +254,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039BC RID: 14780
-		// (get) Token: 0x0600BE29 RID: 48681 RVA: 0x001B5D74 File Offset: 0x001B3F74
-		// (set) Token: 0x0600BE2A RID: 48682 RVA: 0x001B5DAE File Offset: 0x001B3FAE
+		// Token: 0x17003CB1 RID: 15537
+		// (get) Token: 0x0600C9E5 RID: 51685 RVA: 0x001CD400 File Offset: 0x001CB600
+		// (set) Token: 0x0600C9E6 RID: 51686 RVA: 0x001CD43A File Offset: 0x001CB63A
 		public virtual bool? NoUiEnterAnimation
 		{
 			get
@@ -278,9 +278,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039BD RID: 14781
-		// (get) Token: 0x0600BE2B RID: 48683 RVA: 0x001B5DBC File Offset: 0x001B3FBC
-		// (set) Token: 0x0600BE2C RID: 48684 RVA: 0x001B5E1D File Offset: 0x001B401D
+		// Token: 0x17003CB2 RID: 15538
+		// (get) Token: 0x0600C9E7 RID: 51687 RVA: 0x001CD448 File Offset: 0x001CB648
+		// (set) Token: 0x0600C9E8 RID: 51688 RVA: 0x001CD4A9 File Offset: 0x001CB6A9
 		public virtual FadeInScreen FastFadeIn
 		{
 			get
@@ -308,9 +308,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039BE RID: 14782
-		// (get) Token: 0x0600BE2D RID: 48685 RVA: 0x001B5E34 File Offset: 0x001B4034
-		// (set) Token: 0x0600BE2E RID: 48686 RVA: 0x001B5E6E File Offset: 0x001B406E
+		// Token: 0x17003CB3 RID: 15539
+		// (get) Token: 0x0600C9E9 RID: 51689 RVA: 0x001CD4C0 File Offset: 0x001CB6C0
+		// (set) Token: 0x0600C9EA RID: 51690 RVA: 0x001CD4FA File Offset: 0x001CB6FA
 		public virtual bool? KeepMainRolePose
 		{
 			get
@@ -332,9 +332,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039BF RID: 14783
-		// (get) Token: 0x0600BE2F RID: 48687 RVA: 0x001B5E7C File Offset: 0x001B407C
-		// (set) Token: 0x0600BE30 RID: 48688 RVA: 0x001B5EA3 File Offset: 0x001B40A3
+		// Token: 0x17003CB4 RID: 15540
+		// (get) Token: 0x0600C9EB RID: 51691 RVA: 0x001CD508 File Offset: 0x001CB708
+		// (set) Token: 0x0600C9EC RID: 51692 RVA: 0x001CD52F File Offset: 0x001CB72F
 		public virtual IPromptStyleBase PromptStyle
 		{
 			get
@@ -356,9 +356,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C0 RID: 14784
-		// (get) Token: 0x0600BE31 RID: 48689 RVA: 0x001B5EB1 File Offset: 0x001B40B1
-		// (set) Token: 0x0600BE32 RID: 48690 RVA: 0x001B5ED8 File Offset: 0x001B40D8
+		// Token: 0x17003CB5 RID: 15541
+		// (get) Token: 0x0600C9ED RID: 51693 RVA: 0x001CD53D File Offset: 0x001CB73D
+		// (set) Token: 0x0600C9EE RID: 51694 RVA: 0x001CD564 File Offset: 0x001CB764
 		public virtual ISubtitleStyleBase SubtitleStyle
 		{
 			get
@@ -380,9 +380,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C1 RID: 14785
-		// (get) Token: 0x0600BE33 RID: 48691 RVA: 0x001B5EE8 File Offset: 0x001B40E8
-		// (set) Token: 0x0600BE34 RID: 48692 RVA: 0x001B5F49 File Offset: 0x001B4149
+		// Token: 0x17003CB6 RID: 15542
+		// (get) Token: 0x0600C9EF RID: 51695 RVA: 0x001CD574 File Offset: 0x001CB774
+		// (set) Token: 0x0600C9F0 RID: 51696 RVA: 0x001CD5D5 File Offset: 0x001CB7D5
 		public virtual IPhoneMessageConfig PhoneMessageConfig
 		{
 			get
@@ -410,9 +410,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C2 RID: 14786
-		// (get) Token: 0x0600BE35 RID: 48693 RVA: 0x001B5F60 File Offset: 0x001B4160
-		// (set) Token: 0x0600BE36 RID: 48694 RVA: 0x001B5F9A File Offset: 0x001B419A
+		// Token: 0x17003CB7 RID: 15543
+		// (get) Token: 0x0600C9F1 RID: 51697 RVA: 0x001CD5EC File Offset: 0x001CB7EC
+		// (set) Token: 0x0600C9F2 RID: 51698 RVA: 0x001CD626 File Offset: 0x001CB826
 		public virtual int? SystemGameDialogConfigId
 		{
 			get
@@ -434,9 +434,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C3 RID: 14787
-		// (get) Token: 0x0600BE37 RID: 48695 RVA: 0x001B5FA8 File Offset: 0x001B41A8
-		// (set) Token: 0x0600BE38 RID: 48696 RVA: 0x001B5FE2 File Offset: 0x001B41E2
+		// Token: 0x17003CB8 RID: 15544
+		// (get) Token: 0x0600C9F3 RID: 51699 RVA: 0x001CD634 File Offset: 0x001CB834
+		// (set) Token: 0x0600C9F4 RID: 51700 RVA: 0x001CD66E File Offset: 0x001CB86E
 		public virtual EMainCharacterSkin? MainCharacterSkin
 		{
 			get
@@ -458,9 +458,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C4 RID: 14788
-		// (get) Token: 0x0600BE39 RID: 48697 RVA: 0x001B5FF0 File Offset: 0x001B41F0
-		// (set) Token: 0x0600BE3A RID: 48698 RVA: 0x001B6051 File Offset: 0x001B4251
+		// Token: 0x17003CB9 RID: 15545
+		// (get) Token: 0x0600C9F5 RID: 51701 RVA: 0x001CD67C File Offset: 0x001CB87C
+		// (set) Token: 0x0600C9F6 RID: 51702 RVA: 0x001CD6DD File Offset: 0x001CB8DD
 		public virtual IPlotFilmModeConfig FilmModeConfig
 		{
 			get
@@ -488,9 +488,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C5 RID: 14789
-		// (get) Token: 0x0600BE3B RID: 48699 RVA: 0x001B6068 File Offset: 0x001B4268
-		// (set) Token: 0x0600BE3C RID: 48700 RVA: 0x001B60A2 File Offset: 0x001B42A2
+		// Token: 0x17003CBA RID: 15546
+		// (get) Token: 0x0600C9F7 RID: 51703 RVA: 0x001CD6F4 File Offset: 0x001CB8F4
+		// (set) Token: 0x0600C9F8 RID: 51704 RVA: 0x001CD72E File Offset: 0x001CB92E
 		public virtual EOverrideAudioLevel? OverrideAudioLevel
 		{
 			get
@@ -512,9 +512,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C6 RID: 14790
-		// (get) Token: 0x0600BE3D RID: 48701 RVA: 0x001B60B0 File Offset: 0x001B42B0
-		// (set) Token: 0x0600BE3E RID: 48702 RVA: 0x001B60EA File Offset: 0x001B42EA
+		// Token: 0x17003CBB RID: 15547
+		// (get) Token: 0x0600C9F9 RID: 51705 RVA: 0x001CD73C File Offset: 0x001CB93C
+		// (set) Token: 0x0600C9FA RID: 51706 RVA: 0x001CD776 File Offset: 0x001CB976
 		public virtual bool? Mp4Mode
 		{
 			get
@@ -536,9 +536,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C7 RID: 14791
-		// (get) Token: 0x0600BE3F RID: 48703 RVA: 0x001B60F8 File Offset: 0x001B42F8
-		// (set) Token: 0x0600BE40 RID: 48704 RVA: 0x001B6159 File Offset: 0x001B4359
+		// Token: 0x17003CBC RID: 15548
+		// (get) Token: 0x0600C9FB RID: 51707 RVA: 0x001CD784 File Offset: 0x001CB984
+		// (set) Token: 0x0600C9FC RID: 51708 RVA: 0x001CD7E5 File Offset: 0x001CB9E5
 		public virtual IEntityControlConfig EntityControlConfig
 		{
 			get
@@ -566,9 +566,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C8 RID: 14792
-		// (get) Token: 0x0600BE41 RID: 48705 RVA: 0x001B6170 File Offset: 0x001B4370
-		// (set) Token: 0x0600BE42 RID: 48706 RVA: 0x001B61D1 File Offset: 0x001B43D1
+		// Token: 0x17003CBD RID: 15549
+		// (get) Token: 0x0600C9FD RID: 51709 RVA: 0x001CD7FC File Offset: 0x001CB9FC
+		// (set) Token: 0x0600C9FE RID: 51710 RVA: 0x001CD85D File Offset: 0x001CBA5D
 		public virtual IVisualNovelConfig VisualNovelConfig
 		{
 			get
@@ -596,9 +596,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039C9 RID: 14793
-		// (get) Token: 0x0600BE43 RID: 48707 RVA: 0x001B61E8 File Offset: 0x001B43E8
-		// (set) Token: 0x0600BE44 RID: 48708 RVA: 0x001B6249 File Offset: 0x001B4449
+		// Token: 0x17003CBE RID: 15550
+		// (get) Token: 0x0600C9FF RID: 51711 RVA: 0x001CD874 File Offset: 0x001CBA74
+		// (set) Token: 0x0600CA00 RID: 51712 RVA: 0x001CD8D5 File Offset: 0x001CBAD5
 		public virtual IPlotModeUiStyleLevelD UiStyle
 		{
 			get
@@ -626,9 +626,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039CA RID: 14794
-		// (get) Token: 0x0600BE45 RID: 48709 RVA: 0x001B6260 File Offset: 0x001B4460
-		// (set) Token: 0x0600BE46 RID: 48710 RVA: 0x001B62C1 File Offset: 0x001B44C1
+		// Token: 0x17003CBF RID: 15551
+		// (get) Token: 0x0600CA01 RID: 51713 RVA: 0x001CD8EC File Offset: 0x001CBAEC
+		// (set) Token: 0x0600CA02 RID: 51714 RVA: 0x001CD94D File Offset: 0x001CBB4D
 		public virtual IPlotAudioConfig AudioConfig
 		{
 			get
@@ -656,59 +656,59 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400716D RID: 29037
+		// Token: 0x040077B6 RID: 30646
 		protected new SetPlotMode FbInstance;
 
-		// Token: 0x0400716E RID: 29038
+		// Token: 0x040077B7 RID: 30647
 		protected SetPlotMode_SetValue PocoInterface;
 
-		// Token: 0x0400716F RID: 29039
-		[Nullable(1)]
+		// Token: 0x040077B8 RID: 30648
+		[Nullable(0)]
 		private FadeInScreen _FastFadeInCache;
 
-		// Token: 0x04007170 RID: 29040
+		// Token: 0x040077B9 RID: 30649
 		private bool _FastFadeInInited;
 
-		// Token: 0x04007171 RID: 29041
-		[Nullable(1)]
+		// Token: 0x040077BA RID: 30650
+		[Nullable(0)]
 		private IPhoneMessageConfig _PhoneMessageConfigCache;
 
-		// Token: 0x04007172 RID: 29042
+		// Token: 0x040077BB RID: 30651
 		private bool _PhoneMessageConfigInited;
 
-		// Token: 0x04007173 RID: 29043
-		[Nullable(1)]
+		// Token: 0x040077BC RID: 30652
+		[Nullable(0)]
 		private IPlotFilmModeConfig _FilmModeConfigCache;
 
-		// Token: 0x04007174 RID: 29044
+		// Token: 0x040077BD RID: 30653
 		private bool _FilmModeConfigInited;
 
-		// Token: 0x04007175 RID: 29045
-		[Nullable(1)]
+		// Token: 0x040077BE RID: 30654
+		[Nullable(0)]
 		private IEntityControlConfig _EntityControlConfigCache;
 
-		// Token: 0x04007176 RID: 29046
+		// Token: 0x040077BF RID: 30655
 		private bool _EntityControlConfigInited;
 
-		// Token: 0x04007177 RID: 29047
-		[Nullable(1)]
+		// Token: 0x040077C0 RID: 30656
+		[Nullable(0)]
 		private IVisualNovelConfig _VisualNovelConfigCache;
 
-		// Token: 0x04007178 RID: 29048
+		// Token: 0x040077C1 RID: 30657
 		private bool _VisualNovelConfigInited;
 
-		// Token: 0x04007179 RID: 29049
-		[Nullable(1)]
+		// Token: 0x040077C2 RID: 30658
+		[Nullable(0)]
 		private IPlotModeUiStyleLevelD _UiStyleCache;
 
-		// Token: 0x0400717A RID: 29050
+		// Token: 0x040077C3 RID: 30659
 		private bool _UiStyleInited;
 
-		// Token: 0x0400717B RID: 29051
-		[Nullable(1)]
+		// Token: 0x040077C4 RID: 30660
+		[Nullable(0)]
 		private IPlotAudioConfig _AudioConfigCache;
 
-		// Token: 0x0400717C RID: 29052
+		// Token: 0x040077C5 RID: 30661
 		private bool _AudioConfigInited;
 	}
 }

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AB9 RID: 23225
+	// Token: 0x02004A95 RID: 19093
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.DreamLink
 	})]
 	public class DreamLinkBossInstanceItem : GridProxyAbstract<DreamLinkBossInstanceData>
 	{
-		// Token: 0x0603AD37 RID: 240951 RVA: 0x00E043F0 File Offset: 0x00E025F0
+		// Token: 0x0602FC83 RID: 195715 RVA: 0x00D549B8 File Offset: 0x00D52BB8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603AD38 RID: 240952 RVA: 0x00E045A0 File Offset: 0x00E027A0
+		// Token: 0x0602FC84 RID: 195716 RVA: 0x00D54B68 File Offset: 0x00D52D68
 		protected override void OnStart()
 		{
 			base.GetItem(3).SetUIActive(false);
@@ -62,12 +62,12 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ActivityDataBase = DreamLinkController.Instance.GetCurrentActivityData();
 		}
 
-		// Token: 0x0603AD39 RID: 240953 RVA: 0x00E045CC File Offset: 0x00E027CC
+		// Token: 0x0602FC85 RID: 195717 RVA: 0x00D54B94 File Offset: 0x00D52D94
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603AD3A RID: 240954 RVA: 0x00E045D0 File Offset: 0x00E027D0
+		// Token: 0x0602FC86 RID: 195718 RVA: 0x00D54B98 File Offset: 0x00D52D98
 		public override void Refresh(DreamLinkBossInstanceData data, bool isSelected, int gridIndex)
 		{
 			this.InstData = data;
@@ -97,19 +97,19 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603AD3B RID: 240955 RVA: 0x00E046ED File Offset: 0x00E028ED
+		// Token: 0x0602FC87 RID: 195719 RVA: 0x00D54CB5 File Offset: 0x00D52EB5
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleSelected(true);
 		}
 
-		// Token: 0x0603AD3C RID: 240956 RVA: 0x00E046F6 File Offset: 0x00E028F6
+		// Token: 0x0602FC88 RID: 195720 RVA: 0x00D54CBE File Offset: 0x00D52EBE
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleSelected(false);
 		}
 
-		// Token: 0x0603AD3D RID: 240957 RVA: 0x00E04700 File Offset: 0x00E02900
+		// Token: 0x0602FC89 RID: 195721 RVA: 0x00D54CC8 File Offset: 0x00D52EC8
 		private void RefreshRedDot()
 		{
 			bool bossInstRedDotState = this.ActivityDataBase.GetBossInstRedDotState(this.InstData.InstId);
@@ -117,13 +117,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetItem(9).SetUIActive(bossInstRedDotState);
 		}
 
-		// Token: 0x0603AD3E RID: 240958 RVA: 0x00E0473F File Offset: 0x00E0293F
+		// Token: 0x0602FC8A RID: 195722 RVA: 0x00D54D07 File Offset: 0x00D52F07
 		private void SetToggleSelected(bool bOn)
 		{
 			base.GetExtendToggle(0).SetToggleState(bOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, true, false, false);
 		}
 
-		// Token: 0x0603AD3F RID: 240959 RVA: 0x00E04758 File Offset: 0x00E02958
+		// Token: 0x0602FC8B RID: 195723 RVA: 0x00D54D20 File Offset: 0x00D52F20
 		private void ToggleFunctionInternal(EToggleState toggleState)
 		{
 			if (toggleState == EToggleState.ETT_Checked)
@@ -139,21 +139,21 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AD40 RID: 240960 RVA: 0x00E04796 File Offset: 0x00E02996
+		// Token: 0x0602FC8C RID: 195724 RVA: 0x00D54D5E File Offset: 0x00D52F5E
 		public override object GetKey(DreamLinkBossInstanceData data, int displayIndex)
 		{
 			return this.InstData.InstId;
 		}
 
-		// Token: 0x0401EB29 RID: 125737
+		// Token: 0x040195D0 RID: 103888
 		[Nullable(2)]
 		protected DreamLinkBossInstanceData InstData;
 
-		// Token: 0x0401EB2A RID: 125738
+		// Token: 0x040195D1 RID: 103889
 		[Nullable(2)]
 		protected DreamLinkData ActivityDataBase;
 
-		// Token: 0x0401EB2B RID: 125739
+		// Token: 0x040195D2 RID: 103890
 		[Nullable(new byte[]
 		{
 			2,
@@ -161,38 +161,38 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		public Action<DreamLinkBossInstanceData, int> ToggleFunction;
 
-		// Token: 0x0200BD0C RID: 48396
+		// Token: 0x0200A714 RID: 42772
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04039035 RID: 233525
+			// Token: 0x040339FF RID: 211455
 			public const int Toggle = 0;
 
-			// Token: 0x04039036 RID: 233526
+			// Token: 0x04033A00 RID: 211456
 			public const int TxtTitleB = 1;
 
-			// Token: 0x04039037 RID: 233527
+			// Token: 0x04033A01 RID: 211457
 			public const int TxtScoreB = 2;
 
-			// Token: 0x04039038 RID: 233528
+			// Token: 0x04033A02 RID: 211458
 			public const int PanelDoneB = 3;
 
-			// Token: 0x04039039 RID: 233529
+			// Token: 0x04033A03 RID: 211459
 			public const int PanelLockB = 4;
 
-			// Token: 0x0403903A RID: 233530
+			// Token: 0x04033A04 RID: 211460
 			public const int RedDotB = 5;
 
-			// Token: 0x0403903B RID: 233531
+			// Token: 0x04033A05 RID: 211461
 			public const int TxtTitleA = 6;
 
-			// Token: 0x0403903C RID: 233532
+			// Token: 0x04033A06 RID: 211462
 			public const int PanelDoneA = 7;
 
-			// Token: 0x0403903D RID: 233533
+			// Token: 0x04033A07 RID: 211463
 			public const int PanelLockA = 8;
 
-			// Token: 0x0403903E RID: 233534
+			// Token: 0x04033A08 RID: 211464
 			public const int RedDotA = 9;
 		}
 	}

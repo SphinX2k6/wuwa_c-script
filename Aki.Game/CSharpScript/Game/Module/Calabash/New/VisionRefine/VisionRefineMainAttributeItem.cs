@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Calabash.New.VisionRefine
 {
-	// Token: 0x02005BF7 RID: 23543
+	// Token: 0x02004BD7 RID: 19415
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Calabash.New.VisionRefine
 	})]
 	public class VisionRefineMainAttributeItem : GridProxyAbstract<VisionRefineAttributeItemData>
 	{
-		// Token: 0x0603B7F9 RID: 243705 RVA: 0x00E309C4 File Offset: 0x00E2EBC4
+		// Token: 0x06030744 RID: 198468 RVA: 0x00D80CC8 File Offset: 0x00D7EEC8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Calabash.New.VisionRefine
 			};
 		}
 
-		// Token: 0x0603B7FA RID: 243706 RVA: 0x00E30A20 File Offset: 0x00E2EC20
+		// Token: 0x06030745 RID: 198469 RVA: 0x00D80D24 File Offset: 0x00D7EF24
 		[NullableContext(1)]
 		public override void Refresh(VisionRefineAttributeItemData data, bool isSelected, int gridIndex)
 		{
@@ -42,14 +42,14 @@ namespace CSharpScript.Game.Module.Calabash.New.VisionRefine
 			base.SetTextureByPath(data.IconPath ?? "", base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x0200BDE2 RID: 48610
+		// Token: 0x0200A7EA RID: 42986
 		private enum EComp
 		{
-			// Token: 0x04039413 RID: 234515
+			// Token: 0x04033DD6 RID: 212438
 			Name,
-			// Token: 0x04039414 RID: 234516
+			// Token: 0x04033DD7 RID: 212439
 			Num,
-			// Token: 0x04039415 RID: 234517
+			// Token: 0x04033DD8 RID: 212440
 			Icon
 		}
 	}

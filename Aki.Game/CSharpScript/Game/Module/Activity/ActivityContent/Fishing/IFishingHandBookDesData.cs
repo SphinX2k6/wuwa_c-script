@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006601 RID: 26113
+	// Token: 0x0200557F RID: 21887
 	[NullableContext(1)]
 	public interface IFishingHandBookDesData
 	{
-		// Token: 0x170095E6 RID: 38374
-		// (get) Token: 0x06041724 RID: 268068
-		// (set) Token: 0x06041725 RID: 268069
+		// Token: 0x17006948 RID: 26952
+		// (get) Token: 0x060363E9 RID: 222185
+		// (set) Token: 0x060363EA RID: 222186
 		string DesText { get; set; }
 
-		// Token: 0x170095E7 RID: 38375
-		// (get) Token: 0x06041726 RID: 268070
-		// (set) Token: 0x06041727 RID: 268071
+		// Token: 0x17006949 RID: 26953
+		// (get) Token: 0x060363EB RID: 222187
+		// (set) Token: 0x060363EC RID: 222188
 		string DataText { get; set; }
 
-		// Token: 0x170095E8 RID: 38376
-		// (get) Token: 0x06041728 RID: 268072
-		// (set) Token: 0x06041729 RID: 268073
+		// Token: 0x1700694A RID: 26954
+		// (get) Token: 0x060363ED RID: 222189
+		// (set) Token: 0x060363EE RID: 222190
 		bool? IsGolden { get; set; }
 
-		// Token: 0x170095E9 RID: 38377
-		// (get) Token: 0x0604172A RID: 268074
-		// (set) Token: 0x0604172B RID: 268075
+		// Token: 0x1700694B RID: 26955
+		// (get) Token: 0x060363EF RID: 222191
+		// (set) Token: 0x060363F0 RID: 222192
 		bool? IsSliver { get; set; }
 	}
 }

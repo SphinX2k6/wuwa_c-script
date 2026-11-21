@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Controller
 {
-	// Token: 0x0200727D RID: 29309
+	// Token: 0x020063FC RID: 25596
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerInputHandle
 	{
-		// Token: 0x06047D68 RID: 294248 RVA: 0x012615B0 File Offset: 0x0125F7B0
+		// Token: 0x0603E128 RID: 254248 RVA: 0x01201DF0 File Offset: 0x011FFFF0
 		public void Initialize()
 		{
 			this.CombinationActionHandle = new CombinationActionHandle();
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Controller
 			EventSystem.Instance.Add(EEventName.EnableActionRecord, new Action<bool>(this.OnEnableActionRecord));
 		}
 
-		// Token: 0x06047D69 RID: 294249 RVA: 0x01261688 File Offset: 0x0125F888
+		// Token: 0x0603E129 RID: 254249 RVA: 0x01201EC8 File Offset: 0x012000C8
 		public void Clear()
 		{
 			CombinationActionHandle combinationActionHandle = this.CombinationActionHandle;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Controller
 			EventSystem.Instance.Remove(EEventName.EnableActionRecord, new Action<bool>(this.OnEnableActionRecord));
 		}
 
-		// Token: 0x06047D6A RID: 294250 RVA: 0x0126178F File Offset: 0x0125F98F
+		// Token: 0x0603E12A RID: 254250 RVA: 0x01201FCF File Offset: 0x012001CF
 		private void OnShowMouseCursor(bool value)
 		{
 			if (this.LastShowMouseCursor != value)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D6B RID: 294251 RVA: 0x012617AC File Offset: 0x0125F9AC
+		// Token: 0x0603E12B RID: 254251 RVA: 0x01201FEC File Offset: 0x012001EC
 		private void OnMobileGamepadDisconnect()
 		{
 			Log.Instance.Info(ELogModule.MobileInputSwitch, ELogAuthor.XXJ, "手柄断开,清理输入缓存", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Controller
 			this.OptimizeTickAxisValueMap.Clear();
 		}
 
-		// Token: 0x06047D6C RID: 294252 RVA: 0x01261898 File Offset: 0x0125FA98
+		// Token: 0x0603E12C RID: 254252 RVA: 0x012020D8 File Offset: 0x012002D8
 		private void OnClearAxisInputCache(string axisName)
 		{
 			this.AlwaysTickAxisValueMap.Remove(axisName);
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Controller
 			InputDistributeController.Instance.InputAxis(axisName, 0f, true);
 		}
 
-		// Token: 0x06047D6D RID: 294253 RVA: 0x012618C8 File Offset: 0x0125FAC8
+		// Token: 0x0603E12D RID: 254253 RVA: 0x01202108 File Offset: 0x01200308
 		public void Tick(float delta)
 		{
 			CombinationAxisHandle combinationAxisHandle = this.CombinationAxisHandle;
@@ -138,35 +138,91 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D6E RID: 294254 RVA: 0x01261A74 File Offset: 0x0125FC74
-		public void InputAction(string actionName, bool bPress, FKey key)
+		// Token: 0x0603E12E RID: 254254 RVA: 0x012022B4 File Offset: 0x012004B4
+		public unsafe void InputAction(string actionName, bool bPress, FKey key)
 		{
+			bool flag = actionName == "通用交互" && Info.Instance.IsInGamepad();
 			if (!this.CustomKeyActionData.IsActionEnable(actionName))
 			{
+				if (flag)
+				{
+					Log instance = Log.Instance;
+					ELogModule module = ELogModule.Input;
+					ELogAuthor author = ELogAuthor.CFT;
+					string message = "[破弱排查]1 通用交互被拦截: CustomKeyActionData.IsActionEnable为false";
+					ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("bPress", bPress);
+					instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				}
 				return;
 			}
-			string keyName = key.KeyName.ToString();
-			if (!this.CanInputActionOnMobilePlatform(keyName))
+			string text = key.KeyName.ToString();
+			if (!this.CanInputActionOnMobilePlatform(text))
 			{
+				if (flag)
+				{
+					Log instance2 = Log.Instance;
+					ELogModule module2 = ELogModule.Input;
+					ELogAuthor author2 = ELogAuthor.CFT;
+					string message2 = "[破弱排查]2 通用交互被拦截: CanInputActionOnMobilePlatform为false";
+					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("bPress", bPress);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("key", text);
+					instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+				}
 				return;
 			}
-			if (!this.IsInputActionSameAsInputType(keyName))
+			if (!this.IsInputActionSameAsInputType(text))
 			{
+				if (flag)
+				{
+					Log instance3 = Log.Instance;
+					ELogModule module3 = ELogModule.Input;
+					ELogAuthor author3 = ELogAuthor.CFT;
+					string message3 = "[破弱排查]2 通用交互被拦截: IsInputActionSameAsInputType为false(按键与当前输入设备类型不一致)";
+					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("bPress", bPress);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("key", text);
+					instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
+				}
 				return;
 			}
 			if (this.IsRecording)
 			{
 				EventSystem.Instance.Emit<string, bool, FKey>(EEventName.CharInputAction, actionName, bPress, key);
 			}
-			if (!this.CheckCombinationAction(actionName) || this.IsKeyBlockedByCombination(keyName))
+			if (!this.CheckCombinationAction(actionName) || this.IsKeyBlockedByCombination(text))
 			{
+				if (flag)
+				{
+					Log instance4 = Log.Instance;
+					ELogModule module4 = ELogModule.Input;
+					ELogAuthor author4 = ELogAuthor.CFT;
+					string message4 = "[破弱排查]3 通用交互被组合键拦截";
+					<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray4<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("bPress", bPress);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("key", text);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 2) = new ValueTuple<string, object>("CheckCombinationAction", this.CheckCombinationAction(actionName));
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 3) = new ValueTuple<string, object>("IsKeyBlockedByCombination", this.IsKeyBlockedByCombination(text));
+					instance4.Info(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 4));
+				}
 				this.HandleInputActionInCombinationAction(actionName, bPress);
 				return;
+			}
+			if (flag)
+			{
+				Log instance5 = Log.Instance;
+				ELogModule module5 = ELogModule.Input;
+				ELogAuthor author5 = ELogAuthor.CFT;
+				string message5 = "[破弱排查]通用交互进入InputDistribute";
+				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("bPress", bPress);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1) = new ValueTuple<string, object>("key", text);
+				instance5.Info(module5, author5, message5, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 2));
 			}
 			InputDistributeController.Instance.InputAction(actionName, bPress);
 		}
 
-		// Token: 0x06047D6F RID: 294255 RVA: 0x01261AFC File Offset: 0x0125FCFC
+		// Token: 0x0603E12F RID: 254255 RVA: 0x01202540 File Offset: 0x01200740
 		public void InputAxis(string axisName, float value, bool alwaysTick = false)
 		{
 			if (Info.Instance.IsMobileInputModel() && Info.Instance.IsInTouch())
@@ -197,7 +253,7 @@ namespace CSharpScript.Game.Controller
 			this.HandleInputAxisInCombinationAxis(axisName, value, alwaysTick);
 		}
 
-		// Token: 0x06047D70 RID: 294256 RVA: 0x01261BA4 File Offset: 0x0125FDA4
+		// Token: 0x0603E130 RID: 254256 RVA: 0x012025E8 File Offset: 0x012007E8
 		public void TouchBegin(ETouchIndex touchIndex, FVector position)
 		{
 			Vector touchPosition = this.SetTouchVector((int)touchIndex, position);
@@ -212,7 +268,7 @@ namespace CSharpScript.Game.Controller
 			InputDistributeController.Instance.InputTouch((int)touchIndex, touchData);
 		}
 
-		// Token: 0x06047D71 RID: 294257 RVA: 0x01261BFC File Offset: 0x0125FDFC
+		// Token: 0x0603E131 RID: 254257 RVA: 0x01202640 File Offset: 0x01200840
 		public void TouchEnd(ETouchIndex touchIndex, FVector position)
 		{
 			Vector touchPosition = this.SetTouchVector((int)touchIndex, position);
@@ -227,7 +283,7 @@ namespace CSharpScript.Game.Controller
 			InputDistributeController.Instance.InputTouch((int)touchIndex, touchData);
 		}
 
-		// Token: 0x06047D72 RID: 294258 RVA: 0x01261C54 File Offset: 0x0125FE54
+		// Token: 0x0603E132 RID: 254258 RVA: 0x01202698 File Offset: 0x01200898
 		public void TouchMove(ETouchIndex touchIndex, FVector position)
 		{
 			Vector touchPosition = this.SetTouchVector((int)touchIndex, position);
@@ -242,7 +298,7 @@ namespace CSharpScript.Game.Controller
 			InputDistributeController.Instance.InputTouch((int)touchIndex, touchData);
 		}
 
-		// Token: 0x06047D73 RID: 294259 RVA: 0x01261CAC File Offset: 0x0125FEAC
+		// Token: 0x0603E133 RID: 254259 RVA: 0x012026F0 File Offset: 0x012008F0
 		public void PressAnyKey(FKey key)
 		{
 			if (Info.Instance.IsMobileInputModel() && Info.Instance.IsInTouch() && PlatformModel.Instance.IsKeyFromGamepadKey(key.KeyName.ToString()))
@@ -274,7 +330,7 @@ namespace CSharpScript.Game.Controller
 			EventSystem.Instance.Emit<bool, FKey>(EEventName.OnInputAnyKey, true, key);
 		}
 
-		// Token: 0x06047D74 RID: 294260 RVA: 0x01261D80 File Offset: 0x0125FF80
+		// Token: 0x0603E134 RID: 254260 RVA: 0x012027C4 File Offset: 0x012009C4
 		public void ReleaseAnyKey(FKey key)
 		{
 			if (Info.Instance.IsMobileInputModel() && Info.Instance.IsInTouch() && PlatformModel.Instance.IsKeyFromGamepadKey(key.KeyName.ToString()))
@@ -306,7 +362,7 @@ namespace CSharpScript.Game.Controller
 			EventSystem.Instance.Emit<bool, FKey>(EEventName.OnInputAnyKey, false, key);
 		}
 
-		// Token: 0x06047D75 RID: 294261 RVA: 0x01261E54 File Offset: 0x01260054
+		// Token: 0x0603E135 RID: 254261 RVA: 0x01202898 File Offset: 0x01200A98
 		private void TryInputCustomAction(string keyName, bool bPress)
 		{
 			IReadOnlySet<string> customActionName = this.CustomKeyActionData.GetCustomActionName(keyName);
@@ -336,25 +392,25 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D76 RID: 294262 RVA: 0x01261EE4 File Offset: 0x012600E4
+		// Token: 0x0603E136 RID: 254262 RVA: 0x01202928 File Offset: 0x01200B28
 		private void OnDisableCustomInputData(string reason)
 		{
 			this.CustomKeyActionData.DisableCustomInputData(reason);
 		}
 
-		// Token: 0x06047D77 RID: 294263 RVA: 0x01261EF2 File Offset: 0x012600F2
+		// Token: 0x0603E137 RID: 254263 RVA: 0x01202936 File Offset: 0x01200B36
 		private void OnEnableCacheCustomInputData(string reason)
 		{
 			this.CustomKeyActionData.EnableCustomInputData(reason);
 		}
 
-		// Token: 0x06047D78 RID: 294264 RVA: 0x01261F00 File Offset: 0x01260100
+		// Token: 0x0603E138 RID: 254264 RVA: 0x01202944 File Offset: 0x01200B44
 		private void OnEnableActionRecord(bool isRecording)
 		{
 			this.IsRecording = isRecording;
 		}
 
-		// Token: 0x06047D79 RID: 294265 RVA: 0x01261F0C File Offset: 0x0126010C
+		// Token: 0x0603E139 RID: 254265 RVA: 0x01202950 File Offset: 0x01200B50
 		private bool CanInputActionOnMobilePlatform(string keyName)
 		{
 			if (Info.Instance.IsMobileInputModel())
@@ -375,20 +431,20 @@ namespace CSharpScript.Game.Controller
 			return true;
 		}
 
-		// Token: 0x06047D7A RID: 294266 RVA: 0x01261F78 File Offset: 0x01260178
+		// Token: 0x0603E13A RID: 254266 RVA: 0x012029BC File Offset: 0x01200BBC
 		private bool CheckCombinationAction(string actionName)
 		{
 			CombinationActionHandle combinationActionHandle = this.CombinationActionHandle;
 			return combinationActionHandle == null || combinationActionHandle.CheckCombinationAction(actionName);
 		}
 
-		// Token: 0x06047D7B RID: 294267 RVA: 0x01261F8C File Offset: 0x0126018C
+		// Token: 0x0603E13B RID: 254267 RVA: 0x012029D0 File Offset: 0x01200BD0
 		private bool IsKeyBlockedByCombination(string keyName)
 		{
 			return this.CombinationActionHandle.GetBlockInputKeySet().Contains(keyName) || this.CombinationAxisHandle.GetBlockInputKeySet().Contains(keyName);
 		}
 
-		// Token: 0x06047D7C RID: 294268 RVA: 0x01261FB4 File Offset: 0x012601B4
+		// Token: 0x0603E13C RID: 254268 RVA: 0x012029F8 File Offset: 0x01200BF8
 		private bool IsAxisBlockedByCombination(string axisName)
 		{
 			IReadOnlySet<string> blockInputKeySet = this.CombinationActionHandle.GetBlockInputKeySet();
@@ -414,7 +470,7 @@ namespace CSharpScript.Game.Controller
 			return false;
 		}
 
-		// Token: 0x06047D7D RID: 294269 RVA: 0x01262074 File Offset: 0x01260274
+		// Token: 0x0603E13D RID: 254269 RVA: 0x01202AB8 File Offset: 0x01200CB8
 		private void HandleInputActionInCombinationAction(string actionName, bool bPress)
 		{
 			if (!bPress && InputDistributeModel.Instance.IsActionInPress(actionName))
@@ -423,7 +479,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D7E RID: 294270 RVA: 0x01262094 File Offset: 0x01260294
+		// Token: 0x0603E13E RID: 254270 RVA: 0x01202AD8 File Offset: 0x01200CD8
 		private void HandleInputAxisInCombinationAxis(string axisName, float value, bool alwaysTick)
 		{
 			if (value != 0f)
@@ -450,7 +506,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D7F RID: 294271 RVA: 0x0126210C File Offset: 0x0126030C
+		// Token: 0x0603E13F RID: 254271 RVA: 0x01202B50 File Offset: 0x01200D50
 		[NullableContext(2)]
 		private Vector GetTouchVector(int touchId)
 		{
@@ -462,7 +518,7 @@ namespace CSharpScript.Game.Controller
 			return result;
 		}
 
-		// Token: 0x06047D80 RID: 294272 RVA: 0x0126212C File Offset: 0x0126032C
+		// Token: 0x0603E140 RID: 254272 RVA: 0x01202B70 File Offset: 0x01200D70
 		private Vector SetTouchVector(int touchId, FVector ueVector)
 		{
 			Vector touchVector = this.GetTouchVector(touchId);
@@ -474,7 +530,7 @@ namespace CSharpScript.Game.Controller
 			return this.NewTouchVector(touchId, ueVector);
 		}
 
-		// Token: 0x06047D81 RID: 294273 RVA: 0x0126216C File Offset: 0x0126036C
+		// Token: 0x0603E141 RID: 254273 RVA: 0x01202BB0 File Offset: 0x01200DB0
 		private Vector NewTouchVector(int touchId, FVector ueVector)
 		{
 			Vector vector = Vector.Create(ueVector);
@@ -482,32 +538,32 @@ namespace CSharpScript.Game.Controller
 			return vector;
 		}
 
-		// Token: 0x06047D82 RID: 294274 RVA: 0x01262194 File Offset: 0x01260394
+		// Token: 0x0603E142 RID: 254274 RVA: 0x01202BD8 File Offset: 0x01200DD8
 		private bool IsInputActionSameAsInputType(string keyName)
 		{
 			return Info.Instance.IsGmLockGamepad || ((!Info.Instance.IsInGamepad() || !InputSettings.Instance.IsKeyboardKey(keyName)) && (!Info.Instance.IsInKeyBoard() || !InputSettings.Instance.IsGamepadKey(keyName)));
 		}
 
-		// Token: 0x06047D83 RID: 294275 RVA: 0x012621E6 File Offset: 0x012603E6
+		// Token: 0x0603E143 RID: 254275 RVA: 0x01202C2A File Offset: 0x01200E2A
 		public void SetCustomAction(string keyName, string actionName)
 		{
 			this.CustomKeyActionData.SetCustomAction(keyName, actionName);
 		}
 
-		// Token: 0x06047D84 RID: 294276 RVA: 0x012621F5 File Offset: 0x012603F5
+		// Token: 0x0603E144 RID: 254276 RVA: 0x01202C39 File Offset: 0x01200E39
 		public void ResetAllCustomAction(string keyName)
 		{
 			this.TryInputCustomAction(keyName, false);
 			this.CustomKeyActionData.ResetAllCustomAction(keyName);
 		}
 
-		// Token: 0x06047D85 RID: 294277 RVA: 0x0126220B File Offset: 0x0126040B
+		// Token: 0x0603E145 RID: 254277 RVA: 0x01202C4F File Offset: 0x01200E4F
 		public void ResetCustomAction(string keyName, string actionName)
 		{
 			this.CustomKeyActionData.ResetCustomAction(keyName, actionName);
 		}
 
-		// Token: 0x06047D86 RID: 294278 RVA: 0x0126221A File Offset: 0x0126041A
+		// Token: 0x0603E146 RID: 254278 RVA: 0x01202C5E File Offset: 0x01200E5E
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -518,45 +574,45 @@ namespace CSharpScript.Game.Controller
 			return this.CustomKeyActionData.GetCurrentPlatformCustomActionKeyNameList(actionName);
 		}
 
-		// Token: 0x06047D87 RID: 294279 RVA: 0x01262228 File Offset: 0x01260428
+		// Token: 0x0603E147 RID: 254279 RVA: 0x01202C6C File Offset: 0x01200E6C
 		public void SetActionEnable(string actionName, bool bEnable)
 		{
 			this.CustomKeyActionData.SetActionEnable(actionName, bEnable);
 		}
 
-		// Token: 0x04025C51 RID: 154705
+		// Token: 0x04020F11 RID: 134929
 		private readonly Dictionary<int, Vector> TouchVectorMap = new Dictionary<int, Vector>();
 
-		// Token: 0x04025C52 RID: 154706
+		// Token: 0x04020F12 RID: 134930
 		public bool IsPrintKeyName;
 
-		// Token: 0x04025C53 RID: 154707
+		// Token: 0x04020F13 RID: 134931
 		public bool IsRecording;
 
-		// Token: 0x04025C54 RID: 154708
+		// Token: 0x04020F14 RID: 134932
 		[Nullable(2)]
 		private CombinationActionHandle CombinationActionHandle;
 
-		// Token: 0x04025C55 RID: 154709
+		// Token: 0x04020F15 RID: 134933
 		[Nullable(2)]
 		private CombinationAxisHandle CombinationAxisHandle;
 
-		// Token: 0x04025C56 RID: 154710
+		// Token: 0x04020F16 RID: 134934
 		private readonly Dictionary<string, float> AlwaysTickAxisValueMap = new Dictionary<string, float>();
 
-		// Token: 0x04025C57 RID: 154711
+		// Token: 0x04020F17 RID: 134935
 		private readonly Dictionary<string, float> OptimizeTickAxisValueMap = new Dictionary<string, float>();
 
-		// Token: 0x04025C58 RID: 154712
+		// Token: 0x04020F18 RID: 134936
 		private readonly CustomKeyActionData CustomKeyActionData = new CustomKeyActionData();
 
-		// Token: 0x04025C59 RID: 154713
+		// Token: 0x04020F19 RID: 134937
 		private bool LastShowMouseCursor;
 
-		// Token: 0x04025C5A RID: 154714
+		// Token: 0x04020F1A RID: 134938
 		private bool LastFrameShowMouseCursor;
 
-		// Token: 0x04025C5B RID: 154715
+		// Token: 0x04020F1B RID: 134939
 		private readonly List<string> BlockCheckKeyNameList = new List<string>();
 	}
 }

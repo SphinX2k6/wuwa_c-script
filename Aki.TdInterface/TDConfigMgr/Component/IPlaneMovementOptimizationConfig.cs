@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000602 RID: 1538
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200069F RID: 1695
 	public class IPlaneMovementOptimizationConfig : IPerformanceOptimization
 	{
-		// Token: 0x060020DA RID: 8410 RVA: 0x0005B5C4 File Offset: 0x000597C4
+		// Token: 0x060023E0 RID: 9184 RVA: 0x000622D8 File Offset: 0x000604D8
 		private IPlaneMovementOptimizationConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060020DB RID: 8411 RVA: 0x0005B5FC File Offset: 0x000597FC
+		// Token: 0x060023E1 RID: 9185 RVA: 0x00062310 File Offset: 0x00060510
 		public static IPlaneMovementOptimizationConfig Create([Nullable(2)] IPlaneMovementOptimizationConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060020DC RID: 8412 RVA: 0x0005B60F File Offset: 0x0005980F
+		// Token: 0x060023E2 RID: 9186 RVA: 0x00062323 File Offset: 0x00060523
 		public static IPlaneMovementOptimizationConfig CreateFromSetValue([Nullable(2)] IPlaneMovementOptimizationConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060020DD RID: 8413 RVA: 0x0005B622 File Offset: 0x00059822
+		// Token: 0x060023E3 RID: 9187 RVA: 0x00062336 File Offset: 0x00060536
 		public new IPlaneMovementOptimizationConfig_SetValue ToSetValue()
 		{
 			return new IPlaneMovementOptimizationConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008C9 RID: 2249
-		// (get) Token: 0x060020DE RID: 8414 RVA: 0x0005B635 File Offset: 0x00059835
-		// (set) Token: 0x060020DF RID: 8415 RVA: 0x0005B660 File Offset: 0x00059860
+		// Token: 0x17000980 RID: 2432
+		// (get) Token: 0x060023E4 RID: 9188 RVA: 0x00062349 File Offset: 0x00060549
+		// (set) Token: 0x060023E5 RID: 9189 RVA: 0x00062374 File Offset: 0x00060574
 		public override EPerformanceOptimizationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001707 RID: 5895
+		// Token: 0x040018F9 RID: 6393
 		[Nullable(2)]
 		protected new IPlaneMovementOptimizationConfig FbInstance;
 
-		// Token: 0x04001708 RID: 5896
+		// Token: 0x040018FA RID: 6394
 		[Nullable(2)]
 		protected new IPlaneMovementOptimizationConfig_SetValue PocoInterface;
 	}

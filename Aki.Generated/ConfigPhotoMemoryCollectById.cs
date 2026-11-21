@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006E2 RID: 1762
+	// Token: 0x020006FA RID: 1786
 	public class ConfigPhotoMemoryCollectById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600295C RID: 10588 RVA: 0x001431D4 File Offset: 0x001413D4
+		// Token: 0x060029EC RID: 10732 RVA: 0x00149C50 File Offset: 0x00147E50
 		static ConfigPhotoMemoryCollectById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoMemoryCollectById.CreateStaticDefaultValue), new Action(ConfigPhotoMemoryCollectById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600295D RID: 10589 RVA: 0x001431F4 File Offset: 0x001413F4
+		// Token: 0x060029ED RID: 10733 RVA: 0x00149C70 File Offset: 0x00147E70
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoMemoryCollectById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600295E RID: 10590 RVA: 0x00143273 File Offset: 0x00141473
+		// Token: 0x060029EE RID: 10734 RVA: 0x00149CEF File Offset: 0x00147EEF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoMemoryCollectById.LogPair = null;
 			ConfigPhotoMemoryCollectById.HandleId = 0;
 		}
 
-		// Token: 0x0600295F RID: 10591 RVA: 0x00143281 File Offset: 0x00141481
+		// Token: 0x060029EF RID: 10735 RVA: 0x00149CFD File Offset: 0x00147EFD
 		public static void Init()
 		{
 			ConfigPhotoMemoryCollectById.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoMemoryCollectById.HandleId, "db_fragmentmemory.db", "select BinData from `PhotoMemoryCollect` where Id=?");
 		}
 
-		// Token: 0x06002960 RID: 10592 RVA: 0x0014329C File Offset: 0x0014149C
+		// Token: 0x060029F0 RID: 10736 RVA: 0x00149D18 File Offset: 0x00147F18
 		public static PhotoMemoryCollect? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhotoMemoryCollectById.HandleId, ConfigPhotoMemoryCollectById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhotoMemoryCollect?(rootAsPhotoMemoryCollect);
 		}
 
-		// Token: 0x04003014 RID: 12308
+		// Token: 0x040030BC RID: 12476
 		private const string DB = "db_fragmentmemory.db";
 
-		// Token: 0x04003015 RID: 12309
+		// Token: 0x040030BD RID: 12477
 		private const string FILE = "j.记忆手册.xlsx";
 
-		// Token: 0x04003016 RID: 12310
+		// Token: 0x040030BE RID: 12478
 		private const string TABLE = "PhotoMemoryCollect";
 
-		// Token: 0x04003017 RID: 12311
+		// Token: 0x040030BF RID: 12479
 		private const string COMMAND = "select BinData from `PhotoMemoryCollect` where Id=?";
 
-		// Token: 0x04003018 RID: 12312
+		// Token: 0x040030C0 RID: 12480
 		private const string KEY_PREFIX = "PhotoMemoryCollectById";
 
-		// Token: 0x04003019 RID: 12313
+		// Token: 0x040030C1 RID: 12481
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400301A RID: 12314
+		// Token: 0x040030C2 RID: 12482
 		private static int HandleId;
 	}
 }

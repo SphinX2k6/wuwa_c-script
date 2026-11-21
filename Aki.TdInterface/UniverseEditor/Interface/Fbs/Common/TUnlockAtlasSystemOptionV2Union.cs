@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E97 RID: 24215
+	// Token: 0x020064DA RID: 25818
 	public class TUnlockAtlasSystemOptionV2Union
 	{
-		// Token: 0x1700B4E1 RID: 46305
-		// (get) Token: 0x0602976A RID: 169834 RVA: 0x005AE5DA File Offset: 0x005AC7DA
-		// (set) Token: 0x0602976B RID: 169835 RVA: 0x005AE5E2 File Offset: 0x005AC7E2
+		// Token: 0x1700BE4C RID: 48716
+		// (get) Token: 0x0602BE12 RID: 179730 RVA: 0x005F757E File Offset: 0x005F577E
+		// (set) Token: 0x0602BE13 RID: 179731 RVA: 0x005F7586 File Offset: 0x005F5786
 		public TUnlockAtlasSystemOptionV2 Type { get; set; }
 
-		// Token: 0x1700B4E2 RID: 46306
-		// (get) Token: 0x0602976C RID: 169836 RVA: 0x005AE5EB File Offset: 0x005AC7EB
-		// (set) Token: 0x0602976D RID: 169837 RVA: 0x005AE5F3 File Offset: 0x005AC7F3
+		// Token: 0x1700BE4D RID: 48717
+		// (get) Token: 0x0602BE14 RID: 179732 RVA: 0x005F758F File Offset: 0x005F578F
+		// (set) Token: 0x0602BE15 RID: 179733 RVA: 0x005F7597 File Offset: 0x005F5797
 		public object Value { get; set; }
 
-		// Token: 0x0602976E RID: 169838 RVA: 0x005AE5FC File Offset: 0x005AC7FC
+		// Token: 0x0602BE16 RID: 179734 RVA: 0x005F75A0 File Offset: 0x005F57A0
 		public TUnlockAtlasSystemOptionV2Union()
 		{
 			this.Type = TUnlockAtlasSystemOptionV2.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602976F RID: 169839 RVA: 0x005AE612 File Offset: 0x005AC812
+		// Token: 0x0602BE17 RID: 179735 RVA: 0x005F75B6 File Offset: 0x005F57B6
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06029770 RID: 169840 RVA: 0x005AE624 File Offset: 0x005AC824
+		// Token: 0x0602BE18 RID: 179736 RVA: 0x005F75C8 File Offset: 0x005F57C8
 		public IUnlockGeographicalAtlasV2T AsIUnlockGeographicalAtlasV2()
 		{
 			return this.As<IUnlockGeographicalAtlasV2T>();
 		}
 
-		// Token: 0x06029771 RID: 169841 RVA: 0x005AE62C File Offset: 0x005AC82C
+		// Token: 0x0602BE19 RID: 179737 RVA: 0x005F75D0 File Offset: 0x005F57D0
 		public static TUnlockAtlasSystemOptionV2Union FromIUnlockGeographicalAtlasV2(IUnlockGeographicalAtlasV2T _iunlockgeographicalatlasv2)
 		{
 			return new TUnlockAtlasSystemOptionV2Union
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029772 RID: 169842 RVA: 0x005AE641 File Offset: 0x005AC841
+		// Token: 0x0602BE1A RID: 179738 RVA: 0x005F75E5 File Offset: 0x005F57E5
 		public IUnlockNounAtlasV2T AsIUnlockNounAtlasV2()
 		{
 			return this.As<IUnlockNounAtlasV2T>();
 		}
 
-		// Token: 0x06029773 RID: 169843 RVA: 0x005AE649 File Offset: 0x005AC849
+		// Token: 0x0602BE1B RID: 179739 RVA: 0x005F75ED File Offset: 0x005F57ED
 		public static TUnlockAtlasSystemOptionV2Union FromIUnlockNounAtlasV2(IUnlockNounAtlasV2T _iunlocknounatlasv2)
 		{
 			return new TUnlockAtlasSystemOptionV2Union
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029774 RID: 169844 RVA: 0x005AE65E File Offset: 0x005AC85E
+		// Token: 0x0602BE1C RID: 179740 RVA: 0x005F7602 File Offset: 0x005F5802
 		public IUnlockPanoramaAtlasV2T AsIUnlockPanoramaAtlasV2()
 		{
 			return this.As<IUnlockPanoramaAtlasV2T>();
 		}
 
-		// Token: 0x06029775 RID: 169845 RVA: 0x005AE666 File Offset: 0x005AC866
+		// Token: 0x0602BE1D RID: 179741 RVA: 0x005F760A File Offset: 0x005F580A
 		public static TUnlockAtlasSystemOptionV2Union FromIUnlockPanoramaAtlasV2(IUnlockPanoramaAtlasV2T _iunlockpanoramaatlasv2)
 		{
 			return new TUnlockAtlasSystemOptionV2Union
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029776 RID: 169846 RVA: 0x005AE67B File Offset: 0x005AC87B
+		// Token: 0x0602BE1E RID: 179742 RVA: 0x005F761F File Offset: 0x005F581F
 		public IUnlockPlotPhotoAtlasV2T AsIUnlockPlotPhotoAtlasV2()
 		{
 			return this.As<IUnlockPlotPhotoAtlasV2T>();
 		}
 
-		// Token: 0x06029777 RID: 169847 RVA: 0x005AE683 File Offset: 0x005AC883
+		// Token: 0x0602BE1F RID: 179743 RVA: 0x005F7627 File Offset: 0x005F5827
 		public static TUnlockAtlasSystemOptionV2Union FromIUnlockPlotPhotoAtlasV2(IUnlockPlotPhotoAtlasV2T _iunlockplotphotoatlasv2)
 		{
 			return new TUnlockAtlasSystemOptionV2Union
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029778 RID: 169848 RVA: 0x005AE698 File Offset: 0x005AC898
+		// Token: 0x0602BE20 RID: 179744 RVA: 0x005F763C File Offset: 0x005F583C
 		public static int Pack(FlatBufferBuilder builder, TUnlockAtlasSystemOptionV2Union _o)
 		{
 			switch (_o.Type)

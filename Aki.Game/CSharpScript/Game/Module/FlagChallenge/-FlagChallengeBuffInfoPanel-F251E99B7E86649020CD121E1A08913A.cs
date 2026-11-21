@@ -2,34 +2,34 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A58 RID: 23128
+	// Token: 0x02004A34 RID: 18996
 	internal enum <FlagChallengeBuffInfoPanel>F251E99B7E86649020CD121E1A08913A993AEDA134918A496B98667A881D7559B__EComponentType
 	{
-		// Token: 0x0401E902 RID: 125186
+		// Token: 0x040193A9 RID: 103337
 		DescItem,
-		// Token: 0x0401E903 RID: 125187
+		// Token: 0x040193AA RID: 103338
 		BgTex,
-		// Token: 0x0401E904 RID: 125188
+		// Token: 0x040193AB RID: 103339
 		NameTxt,
-		// Token: 0x0401E905 RID: 125189
+		// Token: 0x040193AC RID: 103340
 		DescTxt,
-		// Token: 0x0401E906 RID: 125190
+		// Token: 0x040193AD RID: 103341
 		IconTex,
-		// Token: 0x0401E907 RID: 125191
+		// Token: 0x040193AE RID: 103342
 		LockNiagara,
-		// Token: 0x0401E908 RID: 125192
+		// Token: 0x040193AF RID: 103343
 		LockItem,
-		// Token: 0x0401E909 RID: 125193
+		// Token: 0x040193B0 RID: 103344
 		ActiveNiagara,
-		// Token: 0x0401E90A RID: 125194
+		// Token: 0x040193B1 RID: 103345
 		TempActiveNiagara,
-		// Token: 0x0401E90B RID: 125195
+		// Token: 0x040193B2 RID: 103346
 		TempActiveItem,
-		// Token: 0x0401E90C RID: 125196
+		// Token: 0x040193B3 RID: 103347
 		ActiveItem,
-		// Token: 0x0401E90D RID: 125197
+		// Token: 0x040193B4 RID: 103348
 		ActiveBgSprite,
-		// Token: 0x0401E90E RID: 125198
+		// Token: 0x040193B5 RID: 103349
 		ActiveTxt
 	}
 }

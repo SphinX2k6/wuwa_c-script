@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F75 RID: 24437
+	// Token: 0x020065BA RID: 26042
 	public enum EFlowTemplateTransitionEffectType : byte
 	{
-		// Token: 0x0400FD83 RID: 64899
+		// Token: 0x04010B07 RID: 68359
 		Blur
 	}
 }

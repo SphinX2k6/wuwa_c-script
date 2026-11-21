@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D51 RID: 23889
+	// Token: 0x02004D33 RID: 19763
 	public class BattleHonamiStoryMapLevelHoverItem : UiPanelBase
 	{
-		// Token: 0x0603CA66 RID: 248422 RVA: 0x00E8E5FC File Offset: 0x00E8C7FC
+		// Token: 0x060319BF RID: 203199 RVA: 0x00DDEDB0 File Offset: 0x00DDCFB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CA67 RID: 248423 RVA: 0x00E8E668 File Offset: 0x00E8C868
+		// Token: 0x060319C0 RID: 203200 RVA: 0x00DDEE1C File Offset: 0x00DDD01C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleHonamiStoryMapLevelHoverItem.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CA68 RID: 248424 RVA: 0x00E8E6AC File Offset: 0x00E8C8AC
+		// Token: 0x060319C1 RID: 203201 RVA: 0x00DDEE60 File Offset: 0x00DDD060
 		protected override void OnStart()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SequencePlayer = new UiSequencePlayer(rootItem);
 		}
 
-		// Token: 0x0603CA69 RID: 248425 RVA: 0x00E8E6F0 File Offset: 0x00E8C8F0
+		// Token: 0x060319C2 RID: 203202 RVA: 0x00DDEEA4 File Offset: 0x00DDD0A4
 		protected override void OnBeforeShow()
 		{
 			this.SequencePlayer.StopPrevSequence(false, true);
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 8000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603CA6A RID: 248426 RVA: 0x00E8E748 File Offset: 0x00E8C948
+		// Token: 0x060319C3 RID: 203203 RVA: 0x00DDEEFC File Offset: 0x00DDD0FC
 		protected override UniTask OnBeforeHideAsync()
 		{
 			BattleHonamiStoryMapLevelHoverItem.<OnBeforeHideAsync>d__13 <OnBeforeHideAsync>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CA6B RID: 248427 RVA: 0x00E8E78B File Offset: 0x00E8C98B
+		// Token: 0x060319C4 RID: 203204 RVA: 0x00DDEF3F File Offset: 0x00DDD13F
 		public void Refresh()
 		{
 			BattleHonamiStoryMapLevelHoverItem.HonamiStoryHoverInfoItem infoItem = this.InfoItem;
@@ -94,62 +94,62 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			infoItem.Refresh();
 		}
 
-		// Token: 0x0603CA6C RID: 248428 RVA: 0x00E8E79D File Offset: 0x00E8C99D
+		// Token: 0x060319C5 RID: 203205 RVA: 0x00DDEF51 File Offset: 0x00DDD151
 		[NullableContext(1)]
 		public void RegisterOnAutoClose(Action onAutoClose)
 		{
 			this.OnAutoClose = onAutoClose;
 		}
 
-		// Token: 0x0401F97B RID: 129403
+		// Token: 0x0401A434 RID: 107572
 		[Nullable(2)]
 		private BattleHonamiStoryMapLevelHoverItem.HonamiStoryHoverInfoItem InfoItem;
 
-		// Token: 0x0401F97C RID: 129404
+		// Token: 0x0401A435 RID: 107573
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401F97D RID: 129405
+		// Token: 0x0401A436 RID: 107574
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401F97E RID: 129406
+		// Token: 0x0401A437 RID: 107575
 		[Nullable(2)]
 		private Action OnAutoClose;
 
-		// Token: 0x0200BFF7 RID: 49143
+		// Token: 0x0200A9FD RID: 43517
 		private enum EHoverItemType
 		{
-			// Token: 0x04039EDB RID: 237275
+			// Token: 0x0403489D RID: 215197
 			SpriteBg,
-			// Token: 0x04039EDC RID: 237276
+			// Token: 0x0403489E RID: 215198
 			ItemInfo
 		}
 
-		// Token: 0x0200BFF8 RID: 49144
+		// Token: 0x0200A9FE RID: 43518
 		private enum EInfoItemType
 		{
-			// Token: 0x04039EDE RID: 237278
+			// Token: 0x040348A0 RID: 215200
 			TxtTitle,
-			// Token: 0x04039EDF RID: 237279
+			// Token: 0x040348A1 RID: 215201
 			ItemDescInfo,
-			// Token: 0x04039EE0 RID: 237280
+			// Token: 0x040348A2 RID: 215202
 			LayoutContent
 		}
 
-		// Token: 0x0200BFF9 RID: 49145
+		// Token: 0x0200A9FF RID: 43519
 		private enum EDescItemType
 		{
-			// Token: 0x04039EE2 RID: 237282
+			// Token: 0x040348A4 RID: 215204
 			TitleText,
-			// Token: 0x04039EE3 RID: 237283
+			// Token: 0x040348A5 RID: 215205
 			DescText
 		}
 
-		// Token: 0x0200BFFA RID: 49146
+		// Token: 0x0200AA00 RID: 43520
 		public class HonamiStoryHoverDescItem : UiPanelBase
 		{
-			// Token: 0x06050287 RID: 328327 RVA: 0x0158235C File Offset: 0x0158055C
+			// Token: 0x060467CA RID: 288714 RVA: 0x0153B6F4 File Offset: 0x015398F4
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 2;
@@ -163,13 +163,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.ComponentRegisterInfos = list;
 			}
 
-			// Token: 0x06050288 RID: 328328 RVA: 0x015823C5 File Offset: 0x015805C5
+			// Token: 0x060467CB RID: 288715 RVA: 0x0153B75D File Offset: 0x0153995D
 			protected override void OnStart()
 			{
 				base.GetText(0).SetUIActive(false);
 			}
 
-			// Token: 0x06050289 RID: 328329 RVA: 0x015823D4 File Offset: 0x015805D4
+			// Token: 0x060467CC RID: 288716 RVA: 0x0153B76C File Offset: 0x0153996C
 			public void Refresh()
 			{
 				int pollutionLevel = HonamiStoryModel.Instance.PollutionLevel;
@@ -195,10 +195,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0200BFFB RID: 49147
+		// Token: 0x0200AA01 RID: 43521
 		public class HonamiStoryHoverInfoItem : UiPanelBase
 		{
-			// Token: 0x0605028B RID: 328331 RVA: 0x015824B8 File Offset: 0x015806B8
+			// Token: 0x060467CE RID: 288718 RVA: 0x0153B850 File Offset: 0x01539A50
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 3;
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.ComponentRegisterInfos = list;
 			}
 
-			// Token: 0x0605028C RID: 328332 RVA: 0x01582544 File Offset: 0x01580744
+			// Token: 0x060467CF RID: 288719 RVA: 0x0153B8DC File Offset: 0x01539ADC
 			protected override UniTask OnBeforeStartAsync()
 			{
 				BattleHonamiStoryMapLevelHoverItem.HonamiStoryHoverInfoItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -225,19 +225,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				return <OnBeforeStartAsync>d__.<>t__builder.Task;
 			}
 
-			// Token: 0x0605028D RID: 328333 RVA: 0x01582587 File Offset: 0x01580787
+			// Token: 0x060467D0 RID: 288720 RVA: 0x0153B91F File Offset: 0x01539B1F
 			protected override void OnStart()
 			{
 				LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "HonamiStory_PollutionLevel", Array.Empty<object>());
 			}
 
-			// Token: 0x0605028E RID: 328334 RVA: 0x015825A4 File Offset: 0x015807A4
+			// Token: 0x060467D1 RID: 288721 RVA: 0x0153B93C File Offset: 0x01539B3C
 			protected override void OnBeforeShow()
 			{
 				this.Refresh();
 			}
 
-			// Token: 0x0605028F RID: 328335 RVA: 0x015825AC File Offset: 0x015807AC
+			// Token: 0x060467D2 RID: 288722 RVA: 0x0153B944 File Offset: 0x01539B44
 			public void Refresh()
 			{
 				BattleHonamiStoryMapLevelHoverItem.HonamiStoryHoverDescItem descItem = this.DescItem;
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				descItem.Refresh();
 			}
 
-			// Token: 0x04039EE4 RID: 237284
+			// Token: 0x040348A6 RID: 215206
 			[Nullable(2)]
 			private BattleHonamiStoryMapLevelHoverItem.HonamiStoryHoverDescItem DescItem;
 		}

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A9F RID: 19103
+	// Token: 0x02003A47 RID: 14919
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseDevelopPreviewLevelBranchItem : GridProxyAbstract<ITrapDefenseDevelopPreviewLevelInfo>
 	{
-		// Token: 0x06031830 RID: 202800 RVA: 0x00B7A748 File Offset: 0x00B78948
+		// Token: 0x060265C0 RID: 157120 RVA: 0x00ABE6FC File Offset: 0x00ABC8FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031831 RID: 202801 RVA: 0x00B7A7F4 File Offset: 0x00B789F4
+		// Token: 0x060265C1 RID: 157121 RVA: 0x00ABE7A8 File Offset: 0x00ABC9A8
 		public override void Refresh(ITrapDefenseDevelopPreviewLevelInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -84,23 +84,23 @@ namespace CSharpScript.Game.Module.TrapDefense
 			rootItem.SetAlpha(data.NeedAlpha.GetValueOrDefault() ? 0.5f : 1f);
 		}
 
-		// Token: 0x0401A775 RID: 108405
+		// Token: 0x040150C7 RID: 86215
 		protected ITrapDefenseDevelopPreviewLevelInfo Data;
 
-		// Token: 0x0200ABF7 RID: 44023
+		// Token: 0x02009617 RID: 38423
 		[NullableContext(0)]
 		private class EBranch
 		{
-			// Token: 0x04034416 RID: 214038
+			// Token: 0x0402EDC7 RID: 191943
 			public const int PanelTitleLayout = 0;
 
-			// Token: 0x04034417 RID: 214039
+			// Token: 0x0402EDC8 RID: 191944
 			public const int TxtBranch = 1;
 
-			// Token: 0x04034418 RID: 214040
+			// Token: 0x0402EDC9 RID: 191945
 			public const int TxtDesc = 2;
 
-			// Token: 0x04034419 RID: 214041
+			// Token: 0x0402EDCA RID: 191946
 			public const int Arrow = 3;
 		}
 	}

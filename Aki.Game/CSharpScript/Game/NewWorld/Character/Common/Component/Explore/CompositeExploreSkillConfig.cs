@@ -3,31 +3,31 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x02007120 RID: 28960
+	// Token: 0x0200634E RID: 25422
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class CompositeExploreSkillConfig : ICompositeExploreSkillConfig
 	{
-		// Token: 0x17009D26 RID: 40230
-		// (get) Token: 0x06046B64 RID: 289636 RVA: 0x011CF630 File Offset: 0x011CD830
-		// (set) Token: 0x06046B65 RID: 289637 RVA: 0x011CF638 File Offset: 0x011CD838
+		// Token: 0x170074F2 RID: 29938
+		// (get) Token: 0x0603D9AF RID: 252335 RVA: 0x011D8280 File Offset: 0x011D6480
+		// (set) Token: 0x0603D9B0 RID: 252336 RVA: 0x011D8288 File Offset: 0x011D6488
 		[RequiredMember]
 		public string Name { get; set; }
 
-		// Token: 0x17009D27 RID: 40231
-		// (get) Token: 0x06046B66 RID: 289638 RVA: 0x011CF641 File Offset: 0x011CD841
-		// (set) Token: 0x06046B67 RID: 289639 RVA: 0x011CF649 File Offset: 0x011CD849
+		// Token: 0x170074F3 RID: 29939
+		// (get) Token: 0x0603D9B1 RID: 252337 RVA: 0x011D8291 File Offset: 0x011D6491
+		// (set) Token: 0x0603D9B2 RID: 252338 RVA: 0x011D8299 File Offset: 0x011D6499
 		[RequiredMember]
 		public int EntrySkillId { get; set; }
 
-		// Token: 0x17009D28 RID: 40232
-		// (get) Token: 0x06046B68 RID: 289640 RVA: 0x011CF652 File Offset: 0x011CD852
-		// (set) Token: 0x06046B69 RID: 289641 RVA: 0x011CF65A File Offset: 0x011CD85A
+		// Token: 0x170074F4 RID: 29940
+		// (get) Token: 0x0603D9B3 RID: 252339 RVA: 0x011D82A2 File Offset: 0x011D64A2
+		// (set) Token: 0x0603D9B4 RID: 252340 RVA: 0x011D82AA File Offset: 0x011D64AA
 		[RequiredMember]
 		public int ExitSkillId { get; set; }
 
-		// Token: 0x06046B6A RID: 289642 RVA: 0x011CF663 File Offset: 0x011CD863
+		// Token: 0x0603D9B5 RID: 252341 RVA: 0x011D82B3 File Offset: 0x011D64B3
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public CompositeExploreSkillConfig()

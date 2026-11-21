@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000862 RID: 2146
+	// Token: 0x02000905 RID: 2309
 	public class PullingFoundation_SetValue
 	{
-		// Token: 0x04001F4E RID: 8014
+		// Token: 0x04002160 RID: 8544
 		public bool? Disabled;
 
-		// Token: 0x04001F4F RID: 8015
+		// Token: 0x04002161 RID: 8545
 		public bool? EdIsLocked;
 
-		// Token: 0x04001F50 RID: 8016
-		[Nullable(1)]
+		// Token: 0x04002162 RID: 8546
 		public IPullingCategoryMatchingFoundation Config;
 	}
 }

@@ -10,35 +10,35 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D69 RID: 23913
+	// Token: 0x02004D4B RID: 19787
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MissionPanelChildStep : StepWithStatusItem, IStaticVariableResetter
 	{
-		// Token: 0x0603CB6B RID: 248683 RVA: 0x00E94060 File Offset: 0x00E92260
+		// Token: 0x06031AC7 RID: 203463 RVA: 0x00DE48A8 File Offset: 0x00DE2AA8
 		public MissionPanelChildStep(EMissionItemView viewId, int stepId) : base(viewId, stepId)
 		{
 		}
 
-		// Token: 0x0603CB6C RID: 248684 RVA: 0x00E940C3 File Offset: 0x00E922C3
+		// Token: 0x06031AC8 RID: 203464 RVA: 0x00DE490B File Offset: 0x00DE2B0B
 		static MissionPanelChildStep()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MissionPanelChildStep.CreateStaticDefaultValue), new Action(MissionPanelChildStep.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603CB6D RID: 248685 RVA: 0x00E940E2 File Offset: 0x00E922E2
+		// Token: 0x06031AC9 RID: 203465 RVA: 0x00DE492A File Offset: 0x00DE2B2A
 		public static void CreateStaticDefaultValue()
 		{
 			MissionPanelChildStep.UnlockAnimEventPlayTag = 0;
 		}
 
-		// Token: 0x0603CB6E RID: 248686 RVA: 0x00E940EA File Offset: 0x00E922EA
+		// Token: 0x06031ACA RID: 203466 RVA: 0x00DE4932 File Offset: 0x00DE2B32
 		public static void ResetStaticDefaultValue()
 		{
 			MissionPanelChildStep.UnlockAnimEventPlayTag = 0;
 		}
 
-		// Token: 0x0603CB6F RID: 248687 RVA: 0x00E940F4 File Offset: 0x00E922F4
+		// Token: 0x06031ACB RID: 203467 RVA: 0x00DE493C File Offset: 0x00DE2B3C
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(7, typeof(UUIItem)));
 		}
 
-		// Token: 0x0603CB70 RID: 248688 RVA: 0x00E94158 File Offset: 0x00E92358
+		// Token: 0x06031ACC RID: 203468 RVA: 0x00DE49A0 File Offset: 0x00DE2BA0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MissionPanelChildStep.<OnBeforeStartAsync>d__26 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB71 RID: 248689 RVA: 0x00E9419C File Offset: 0x00E9239C
+		// Token: 0x06031ACD RID: 203469 RVA: 0x00DE49E4 File Offset: 0x00DE2BE4
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateRootVisibleByTextVisible();
 		}
 
-		// Token: 0x0603CB72 RID: 248690 RVA: 0x00E94276 File Offset: 0x00E92476
+		// Token: 0x06031ACE RID: 203470 RVA: 0x00DE4ABE File Offset: 0x00DE2CBE
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB73 RID: 248691 RVA: 0x00E942B4 File Offset: 0x00E924B4
+		// Token: 0x06031ACF RID: 203471 RVA: 0x00DE4AFC File Offset: 0x00DE2CFC
 		protected override void OnAfterShow()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateRootVisibleByTextVisible();
 		}
 
-		// Token: 0x0603CB74 RID: 248692 RVA: 0x00E942CD File Offset: 0x00E924CD
+		// Token: 0x06031AD0 RID: 203472 RVA: 0x00DE4B15 File Offset: 0x00DE2D15
 		protected override void OnAfterHide()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -125,8 +125,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer.PauseSequence();
 		}
 
-		// Token: 0x17008E1A RID: 36378
-		// (get) Token: 0x0603CB75 RID: 248693 RVA: 0x00E942DF File Offset: 0x00E924DF
+		// Token: 0x170061EC RID: 25068
+		// (get) Token: 0x06031AD1 RID: 203473 RVA: 0x00DE4B27 File Offset: 0x00DE2D27
 		public override bool IsDescribeTextVisible
 		{
 			get
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB76 RID: 248694 RVA: 0x00E942F4 File Offset: 0x00E924F4
+		// Token: 0x06031AD2 RID: 203474 RVA: 0x00DE4B3C File Offset: 0x00DE2D3C
 		public UniTask StartShow(bool bSkipAnim)
 		{
 			MissionPanelChildStep.<StartShow>d__33 <StartShow>d__;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <StartShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB77 RID: 248695 RVA: 0x00E94340 File Offset: 0x00E92540
+		// Token: 0x06031AD3 RID: 203475 RVA: 0x00DE4B88 File Offset: 0x00DE2D88
 		public UniTask EndShow(bool bSkipAnim)
 		{
 			MissionPanelChildStep.<EndShow>d__34 <EndShow>d__;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <EndShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB78 RID: 248696 RVA: 0x00E9438B File Offset: 0x00E9258B
+		// Token: 0x06031AD4 RID: 203476 RVA: 0x00DE4BD3 File Offset: 0x00DE2DD3
 		public override bool CheckVisible()
 		{
 			bool result = base.CheckVisible();
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return result;
 		}
 
-		// Token: 0x0603CB79 RID: 248697 RVA: 0x00E9439C File Offset: 0x00E9259C
+		// Token: 0x06031AD5 RID: 203477 RVA: 0x00DE4BE4 File Offset: 0x00DE2DE4
 		public override UniTask OnReset()
 		{
 			MissionPanelChildStep.<OnReset>d__36 <OnReset>d__;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnReset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB7A RID: 248698 RVA: 0x00E943E0 File Offset: 0x00E925E0
+		// Token: 0x06031AD6 RID: 203478 RVA: 0x00DE4C28 File Offset: 0x00DE2E28
 		protected override void UpdateStepInfo()
 		{
 			this.UpdateSpriteAndColor();
@@ -197,12 +197,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateProgressBar();
 		}
 
-		// Token: 0x0603CB7B RID: 248699 RVA: 0x00E94445 File Offset: 0x00E92645
+		// Token: 0x06031AD7 RID: 203479 RVA: 0x00DE4C8D File Offset: 0x00DE2E8D
 		private void UpdateProgressBar()
 		{
 		}
 
-		// Token: 0x0603CB7C RID: 248700 RVA: 0x00E94447 File Offset: 0x00E92647
+		// Token: 0x06031AD8 RID: 203480 RVA: 0x00DE4C8F File Offset: 0x00DE2E8F
 		private void UpdateRootVisibleByTextVisible()
 		{
 			UUIItem item = base.GetItem(5);
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(this.IsDescribeTextVisible);
 		}
 
-		// Token: 0x0603CB7D RID: 248701 RVA: 0x00E94460 File Offset: 0x00E92660
+		// Token: 0x06031AD9 RID: 203481 RVA: 0x00DE4CA8 File Offset: 0x00DE2EA8
 		private void UpdatePreCondition()
 		{
 			if (this.IsUnlockAnimPlaying)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB7E RID: 248702 RVA: 0x00E944F0 File Offset: 0x00E926F0
+		// Token: 0x06031ADA RID: 203482 RVA: 0x00DE4D38 File Offset: 0x00DE2F38
 		public UniTask PlayUnlockAnim()
 		{
 			MissionPanelChildStep.<PlayUnlockAnim>d__41 <PlayUnlockAnim>d__;
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <PlayUnlockAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB7F RID: 248703 RVA: 0x00E94533 File Offset: 0x00E92733
+		// Token: 0x06031ADB RID: 203483 RVA: 0x00DE4D7B File Offset: 0x00DE2F7B
 		protected override bool CheckCanShowStatusRoot()
 		{
 			if (!this.IsMeetPreCondition)
@@ -269,13 +269,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return base.CheckCanShowStatusRoot();
 		}
 
-		// Token: 0x0603CB80 RID: 248704 RVA: 0x00E9454A File Offset: 0x00E9274A
+		// Token: 0x06031ADC RID: 203484 RVA: 0x00DE4D92 File Offset: 0x00DE2F92
 		protected override bool CheckCanUpdateStatusNode()
 		{
 			return this.IsMeetPreCondition;
 		}
 
-		// Token: 0x0603CB81 RID: 248705 RVA: 0x00E94554 File Offset: 0x00E92754
+		// Token: 0x06031ADD RID: 203485 RVA: 0x00DE4D9C File Offset: 0x00DE2F9C
 		protected bool CheckMeetPreCondition()
 		{
 			BehaviorTreeStepTextInfo behaviorTreeStepTextInfo = this.Config as BehaviorTreeStepTextInfo;
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CB82 RID: 248706 RVA: 0x00E94624 File Offset: 0x00E92824
+		// Token: 0x06031ADE RID: 203486 RVA: 0x00DE4E6C File Offset: 0x00DE306C
 		private void UpdateSpriteAndColor()
 		{
 			if (this.Config == null)
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB83 RID: 248707 RVA: 0x00E94914 File Offset: 0x00E92B14
+		// Token: 0x06031ADF RID: 203487 RVA: 0x00DE515C File Offset: 0x00DE335C
 		protected override void OnStatusChanged(EStatusType status, EStepStatusRefreshReason reason)
 		{
 			string text = null;
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB84 RID: 248708 RVA: 0x00E949F0 File Offset: 0x00E92BF0
+		// Token: 0x06031AE0 RID: 203488 RVA: 0x00DE5238 File Offset: 0x00DE3438
 		protected override UniTask OnConfigRefresh(IMissionItemViewShowData showData, [Nullable(2)] MissionViewStepTextInfoBase config)
 		{
 			MissionPanelChildStep.<OnConfigRefresh>d__47 <OnConfigRefresh>d__;
@@ -434,14 +434,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnConfigRefresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB85 RID: 248709 RVA: 0x00E94A44 File Offset: 0x00E92C44
+		// Token: 0x06031AE1 RID: 203489 RVA: 0x00DE528C File Offset: 0x00DE348C
 		private bool CheckOriginalTextVisible()
 		{
 			StepControllerBase stepControllerBase;
 			return (!this.StepControllers.TryGetValue(EStepControllerType.MotionArtText, out stepControllerBase) || !stepControllerBase.Enable) && this.ShowData != null && this.Config != null && !StringUtils.IsBlank(MissionViewStepTextUtil.GetStepTextByConfig(this.ShowData.Id, this.Config));
 		}
 
-		// Token: 0x0603CB86 RID: 248710 RVA: 0x00E94AA0 File Offset: 0x00E92CA0
+		// Token: 0x06031AE2 RID: 203490 RVA: 0x00DE52E8 File Offset: 0x00DE34E8
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Success")
@@ -504,13 +504,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB87 RID: 248711 RVA: 0x00E94C16 File Offset: 0x00E92E16
+		// Token: 0x06031AE3 RID: 203491 RVA: 0x00DE545E File Offset: 0x00DE365E
 		private void OnActivitySequenceEmitEvent(string sequenceName)
 		{
 			this.OnSequencePlayEvent(sequenceName, null);
 		}
 
-		// Token: 0x0603CB88 RID: 248712 RVA: 0x00E94C20 File Offset: 0x00E92E20
+		// Token: 0x06031AE4 RID: 203492 RVA: 0x00DE5468 File Offset: 0x00DE3668
 		private void OnSequencePlayEvent(string sequenceName, string _)
 		{
 			if (sequenceName == "Unlock")
@@ -527,45 +527,45 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F9FC RID: 129532
+		// Token: 0x0401A4B4 RID: 107700
 		private const string UNLOCK_ANIM = "Unlock";
 
-		// Token: 0x0401F9FD RID: 129533
+		// Token: 0x0401A4B5 RID: 107701
 		private readonly FColor WhiteColor = FColor.FromHex("ECE5D8FF");
 
-		// Token: 0x0401F9FE RID: 129534
+		// Token: 0x0401A4B6 RID: 107702
 		private readonly FColor GrayColor = FColor.FromHex("ADADADFF");
 
-		// Token: 0x0401F9FF RID: 129535
+		// Token: 0x0401A4B7 RID: 107703
 		private readonly FColor GreenColor = FColor.FromHex("C9F797FF");
 
-		// Token: 0x0401FA00 RID: 129536
+		// Token: 0x0401A4B8 RID: 107704
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FA01 RID: 129537
+		// Token: 0x0401A4B9 RID: 107705
 		[Nullable(2)]
 		private CustomPromise<bool> StartSequencePromise;
 
-		// Token: 0x0401FA02 RID: 129538
+		// Token: 0x0401A4BA RID: 107706
 		[Nullable(2)]
 		private CustomPromise<bool> CloseSequencePromise;
 
-		// Token: 0x0401FA03 RID: 129539
+		// Token: 0x0401A4BB RID: 107707
 		[Nullable(2)]
 		private CustomPromise<bool> UnlockSequenceEndPromise;
 
-		// Token: 0x0401FA04 RID: 129540
+		// Token: 0x0401A4BC RID: 107708
 		[Nullable(2)]
 		private CustomPromise<bool> UnlockSequenceEventPromise;
 
-		// Token: 0x0401FA05 RID: 129541
+		// Token: 0x0401A4BD RID: 107709
 		private FColor? CompletedColor;
 
-		// Token: 0x0401FA06 RID: 129542
+		// Token: 0x0401A4BE RID: 107710
 		private FColor? FailedColor;
 
-		// Token: 0x0401FA07 RID: 129543
+		// Token: 0x0401A4BF RID: 107711
 		[Nullable(new byte[]
 		{
 			0,
@@ -573,40 +573,40 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private OneOf<string, EQuestScheduleType> CurType = EQuestScheduleType.None;
 
-		// Token: 0x0401FA08 RID: 129544
+		// Token: 0x0401A4C0 RID: 107712
 		private bool IsMeetPreCondition = true;
 
-		// Token: 0x0401FA09 RID: 129545
+		// Token: 0x0401A4C1 RID: 107713
 		private bool IsUnlockAnimPlaying;
 
-		// Token: 0x0401FA0A RID: 129546
+		// Token: 0x0401A4C2 RID: 107714
 		private bool UnlockAnimEventPlay;
 
-		// Token: 0x0401FA0B RID: 129547
+		// Token: 0x0401A4C3 RID: 107715
 		private bool IsDeferHideForCompleteAnim;
 
-		// Token: 0x0401FA0C RID: 129548
+		// Token: 0x0401A4C4 RID: 107716
 		[Nullable(2)]
 		private TimerHandle DeferHideForCompleteAnimDelayHandle;
 
-		// Token: 0x0401FA0D RID: 129549
+		// Token: 0x0401A4C5 RID: 107717
 		private string LastValidDescribeText = string.Empty;
 
-		// Token: 0x0401FA0E RID: 129550
+		// Token: 0x0401A4C6 RID: 107718
 		private static int UnlockAnimEventPlayTag;
 
-		// Token: 0x0401FA0F RID: 129551
+		// Token: 0x0401A4C7 RID: 107719
 		private int CurUnlockAnimEventTag;
 
-		// Token: 0x0200C01C RID: 49180
+		// Token: 0x0200AA22 RID: 43554
 		[NullableContext(0)]
 		private enum EChildComponent
 		{
-			// Token: 0x04039F82 RID: 237442
+			// Token: 0x04034945 RID: 215365
 			Root = 5,
-			// Token: 0x04039F83 RID: 237443
+			// Token: 0x04034946 RID: 215366
 			LockIcon,
-			// Token: 0x04039F84 RID: 237444
+			// Token: 0x04034947 RID: 215367
 			ProgressBar
 		}
 	}

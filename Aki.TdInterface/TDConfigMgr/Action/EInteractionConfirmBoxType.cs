@@ -2,14 +2,14 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015FF RID: 5631
+	// Token: 0x02001761 RID: 5985
 	public enum EInteractionConfirmBoxType
 	{
-		// Token: 0x04004B61 RID: 19297
+		// Token: 0x04004F27 RID: 20263
 		Common,
-		// Token: 0x04004B62 RID: 19298
+		// Token: 0x04004F28 RID: 20264
 		HonamiStoryCorruptedChest,
-		// Token: 0x04004B63 RID: 19299
+		// Token: 0x04004F29 RID: 20265
 		HonamiStoryEvacuateConfirm
 	}
 }

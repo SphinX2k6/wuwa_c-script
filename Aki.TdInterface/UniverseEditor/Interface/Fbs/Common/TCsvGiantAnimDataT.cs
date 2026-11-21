@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E73 RID: 24179
+	// Token: 0x020064B6 RID: 25782
 	public class TCsvGiantAnimDataT
 	{
-		// Token: 0x1700B4C1 RID: 46273
-		// (get) Token: 0x060296B2 RID: 169650 RVA: 0x005AD28B File Offset: 0x005AB48B
-		// (set) Token: 0x060296B3 RID: 169651 RVA: 0x005AD293 File Offset: 0x005AB493
+		// Token: 0x1700BE2C RID: 48684
+		// (get) Token: 0x0602BD5A RID: 179546 RVA: 0x005F622F File Offset: 0x005F442F
+		// (set) Token: 0x0602BD5B RID: 179547 RVA: 0x005F6237 File Offset: 0x005F4437
 		public int Id { get; set; }
 
-		// Token: 0x1700B4C2 RID: 46274
-		// (get) Token: 0x060296B4 RID: 169652 RVA: 0x005AD29C File Offset: 0x005AB49C
-		// (set) Token: 0x060296B5 RID: 169653 RVA: 0x005AD2A4 File Offset: 0x005AB4A4
+		// Token: 0x1700BE2D RID: 48685
+		// (get) Token: 0x0602BD5C RID: 179548 RVA: 0x005F6240 File Offset: 0x005F4440
+		// (set) Token: 0x0602BD5D RID: 179549 RVA: 0x005F6248 File Offset: 0x005F4448
 		public IGiantAnimDataType_UnionUnion Data { get; set; }
 
-		// Token: 0x060296B6 RID: 169654 RVA: 0x005AD2AD File Offset: 0x005AB4AD
+		// Token: 0x0602BD5E RID: 179550 RVA: 0x005F6251 File Offset: 0x005F4451
 		public TCsvGiantAnimDataT()
 		{
 			this.Id = 0;

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071E2 RID: 29154
+	// Token: 0x02006297 RID: 25239
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemManipulableCastState : SceneItemManipulableBaseState
 	{
-		// Token: 0x060475BC RID: 292284 RVA: 0x012250D8 File Offset: 0x012232D8
+		// Token: 0x0603CEBE RID: 249534 RVA: 0x0117EF0C File Offset: 0x0117D10C
 		[NullableContext(1)]
 		public SceneItemManipulableCastState(SceneItemManipulatableComponent sceneItem, [Nullable(new byte[]
 		{
@@ -23,14 +23,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.GamepadShake = gamepadShake;
 		}
 
-		// Token: 0x060475BD RID: 292285 RVA: 0x0122513F File Offset: 0x0122333F
+		// Token: 0x0603CEBF RID: 249535 RVA: 0x0117EF73 File Offset: 0x0117D173
 		[NullableContext(1)]
 		public void SetFinishCallback(Action callback)
 		{
 			this.FinishCallback = callback;
 		}
 
-		// Token: 0x060475BE RID: 292286 RVA: 0x01225148 File Offset: 0x01223348
+		// Token: 0x0603CEC0 RID: 249536 RVA: 0x0117EF7C File Offset: 0x0117D17C
 		public void SetHitCallback([Nullable(new byte[]
 		{
 			1,
@@ -42,14 +42,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.HitCallback = callback;
 		}
 
-		// Token: 0x060475BF RID: 292287 RVA: 0x01225151 File Offset: 0x01223351
+		// Token: 0x0603CEC1 RID: 249537 RVA: 0x0117EF85 File Offset: 0x0117D185
 		[NullableContext(1)]
 		public virtual void SetEnterCallback(Action callback)
 		{
 			this.EnterCallback = callback;
 		}
 
-		// Token: 0x060475C0 RID: 292288 RVA: 0x0122515C File Offset: 0x0122335C
+		// Token: 0x0603CEC2 RID: 249538 RVA: 0x0117EF90 File Offset: 0x0117D190
 		protected override void OnEnter()
 		{
 			base.StartCameraShake(this.CameraShake);
@@ -122,18 +122,18 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475C1 RID: 292289 RVA: 0x012253EC File Offset: 0x012235EC
+		// Token: 0x0603CEC3 RID: 249539 RVA: 0x0117F224 File Offset: 0x0117D424
 		private void ModifyAfterHit(AActor selfActor, AActor otherActor, FVector vector, [Nullable(1)] FHitResult hitResult)
 		{
 			this.AfterHit = true;
 		}
 
-		// Token: 0x060475C2 RID: 292290 RVA: 0x012253F5 File Offset: 0x012235F5
+		// Token: 0x0603CEC4 RID: 249540 RVA: 0x0117F22D File Offset: 0x0117D42D
 		protected override void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x060475C3 RID: 292291 RVA: 0x012253F8 File Offset: 0x012235F8
+		// Token: 0x0603CEC5 RID: 249541 RVA: 0x0117F230 File Offset: 0x0117D430
 		protected override void OnExit()
 		{
 			base.StopCameraShake();
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.CueComp = null;
 		}
 
-		// Token: 0x060475C4 RID: 292292 RVA: 0x012254F4 File Offset: 0x012236F4
+		// Token: 0x0603CEC6 RID: 249542 RVA: 0x0117F32C File Offset: 0x0117D52C
 		protected void StartCast()
 		{
 			double num = Vector.Dist(this.SceneItem.ActorComp.ActorLocationProxy, this.SceneItem.TargetActorComponent.ActorLocationProxy);
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.ActorComp.PhysicsMode = SceneItemActorComponent.EPhysicsMode.Kinematic;
 		}
 
-		// Token: 0x060475C5 RID: 292293 RVA: 0x012255C8 File Offset: 0x012237C8
+		// Token: 0x0603CEC7 RID: 249543 RVA: 0x0117F400 File Offset: 0x0117D600
 		protected void CalcDirection()
 		{
 			this.SceneItem.CalcCastTargetPoint();
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.CastHorizontalDirection.Normalize(9.99999993922529E-09);
 		}
 
-		// Token: 0x060475C6 RID: 292294 RVA: 0x012256E8 File Offset: 0x012238E8
+		// Token: 0x0603CEC8 RID: 249544 RVA: 0x0117F520 File Offset: 0x0117D720
 		protected virtual void UpdateRotationAccordingToVelocity()
 		{
 			if (!this.SceneItem.ManipulateBaseConfig.随速度调整朝向)
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.ActorComp.SetActorRotation(value, "[ManipulableCastState.UpdateRotationAccordingToVelocity]", false);
 		}
 
-		// Token: 0x060475C7 RID: 292295 RVA: 0x0122578C File Offset: 0x0122398C
+		// Token: 0x0603CEC9 RID: 249545 RVA: 0x0117F5C4 File Offset: 0x0117D7C4
 		protected virtual void UpdateLocation(float alpha)
 		{
 			if (this.SceneItem.PlayingMatchSequence)
@@ -253,13 +253,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.ActorComp.SetActorLocation(vector.ToUeVector(false), "[ManipulableCastState.UpdateLocation]", this.HitCallback != null);
 		}
 
-		// Token: 0x060475C8 RID: 292296 RVA: 0x012258B5 File Offset: 0x01223AB5
+		// Token: 0x0603CECA RID: 249546 RVA: 0x0117F6ED File Offset: 0x0117D8ED
 		public bool HasHitCallback()
 		{
 			return this.HitCallback != null;
 		}
 
-		// Token: 0x060475C9 RID: 292297 RVA: 0x012258C0 File Offset: 0x01223AC0
+		// Token: 0x0603CECB RID: 249547 RVA: 0x0117F6F8 File Offset: 0x0117D8F8
 		public void CallHitCallback(AActor selfActor, AActor otherActor)
 		{
 			Action<AActor, AActor, FVector, FHitResult> hitCallback = this.HitCallback;
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			hitCallback(selfActor, otherActor, new FVector(), new FHitResult());
 		}
 
-		// Token: 0x04025853 RID: 153683
+		// Token: 0x040204C2 RID: 132290
 		[Nullable(new byte[]
 		{
 			0,
@@ -278,34 +278,34 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		})]
 		private readonly TSubclassOf<UCameraShakeBase>? CameraShake;
 
-		// Token: 0x04025854 RID: 153684
+		// Token: 0x040204C3 RID: 132291
 		private readonly UKuroForceFeedbackEffect GamepadShake;
 
-		// Token: 0x04025855 RID: 153685
+		// Token: 0x040204C4 RID: 132292
 		protected float CastDuration = --0f;
 
-		// Token: 0x04025856 RID: 153686
+		// Token: 0x040204C5 RID: 132293
 		protected Vector CastRotAxis;
 
-		// Token: 0x04025857 RID: 153687
+		// Token: 0x040204C6 RID: 132294
 		protected Vector StartLoc;
 
-		// Token: 0x04025858 RID: 153688
+		// Token: 0x040204C7 RID: 132295
 		protected Rotator StartRot;
 
-		// Token: 0x04025859 RID: 153689
+		// Token: 0x040204C8 RID: 132296
 		protected bool IsUsePath;
 
-		// Token: 0x0402585A RID: 153690
+		// Token: 0x040204C9 RID: 132297
 		protected float PathScaleFactor = --0f;
 
-		// Token: 0x0402585B RID: 153691
+		// Token: 0x040204CA RID: 132298
 		protected Vector CastDirection;
 
-		// Token: 0x0402585C RID: 153692
+		// Token: 0x040204CB RID: 132299
 		protected Action FinishCallback;
 
-		// Token: 0x0402585D RID: 153693
+		// Token: 0x040204CC RID: 132300
 		[Nullable(new byte[]
 		{
 			2,
@@ -315,28 +315,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		})]
 		protected Action<AActor, AActor, FVector, FHitResult> HitCallback;
 
-		// Token: 0x0402585E RID: 153694
+		// Token: 0x040204CD RID: 132301
 		[Nullable(1)]
 		private readonly Vector CastHorizontalDirection = Vector.Create();
 
-		// Token: 0x0402585F RID: 153695
+		// Token: 0x040204CE RID: 132302
 		[Nullable(1)]
 		private readonly Vector CastVerticalDirection = Vector.Create();
 
-		// Token: 0x04025860 RID: 153696
+		// Token: 0x040204CF RID: 132303
 		protected bool AfterHit;
 
-		// Token: 0x04025861 RID: 153697
+		// Token: 0x040204D0 RID: 132304
 		public bool NeedResetPhysicsMode = true;
 
-		// Token: 0x04025862 RID: 153698
+		// Token: 0x040204D1 RID: 132305
 		public bool NeedNotifyServer = true;
 
-		// Token: 0x04025863 RID: 153699
+		// Token: 0x040204D2 RID: 132306
 		[Nullable(1)]
 		private readonly Dictionary<int, TimerHandle> CueTimerHandles = new Dictionary<int, TimerHandle>();
 
-		// Token: 0x04025864 RID: 153700
+		// Token: 0x040204D3 RID: 132307
 		private BaseGameplayCueComponent CueComp;
 	}
 }

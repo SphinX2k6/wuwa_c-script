@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002979 RID: 10617
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C5F RID: 11359
 	public class IFaceExpressionMorphConfig : IFaceExpressionConfig
 	{
-		// Token: 0x0600EB3F RID: 60223 RVA: 0x00226B36 File Offset: 0x00224D36
+		// Token: 0x0600F9BA RID: 63930 RVA: 0x0024428E File Offset: 0x0024248E
 		public static IFaceExpressionMorphConfig Create(IFaceExpressionMorphConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A0F RID: 18959
-		// (get) Token: 0x0600EB40 RID: 60224 RVA: 0x00226B55 File Offset: 0x00224D55
+		// Token: 0x17004DAA RID: 19882
+		// (get) Token: 0x0600F9BB RID: 63931 RVA: 0x002442AD File Offset: 0x002424AD
 		public override EFaceExpressionConfigType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A10 RID: 18960
-		// (get) Token: 0x0600EB41 RID: 60225 RVA: 0x00226B62 File Offset: 0x00224D62
+		// Token: 0x17004DAB RID: 19883
+		// (get) Token: 0x0600F9BC RID: 63932 RVA: 0x002442BA File Offset: 0x002424BA
 		public virtual string MorphData
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008191 RID: 33169
+		// Token: 0x04008875 RID: 34933
 		private IFaceExpressionMorphConfig Instance;
 	}
 }

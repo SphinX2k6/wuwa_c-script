@@ -5,30 +5,30 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000246 RID: 582
+	// Token: 0x02000287 RID: 647
 	public class IClientHookActionConfig_SetValue
 	{
-		// Token: 0x04000A70 RID: 2672
+		// Token: 0x04000B4C RID: 2892
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> HookActions;
 
-		// Token: 0x04000A71 RID: 2673
+		// Token: 0x04000B4D RID: 2893
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitHookActions;
 
-		// Token: 0x04000A72 RID: 2674
+		// Token: 0x04000B4E RID: 2894
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> FinishActions;
 	}

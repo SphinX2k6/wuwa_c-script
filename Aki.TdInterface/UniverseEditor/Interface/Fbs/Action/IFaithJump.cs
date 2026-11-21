@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200679B RID: 26523
+	// Token: 0x02006E1B RID: 28187
 	public struct IFaithJump : IFlatbufferObject
 	{
-		// Token: 0x1700C4E3 RID: 50403
-		// (get) Token: 0x0602E26C RID: 189036 RVA: 0x0064DC10 File Offset: 0x0064BE10
+		// Token: 0x1700CE99 RID: 52889
+		// (get) Token: 0x06030AB2 RID: 199346 RVA: 0x0069B354 File Offset: 0x00699554
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E26D RID: 189037 RVA: 0x0064DC1D File Offset: 0x0064BE1D
+		// Token: 0x06030AB3 RID: 199347 RVA: 0x0069B361 File Offset: 0x00699561
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E26E RID: 189038 RVA: 0x0064DC24 File Offset: 0x0064BE24
+		// Token: 0x06030AB4 RID: 199348 RVA: 0x0069B368 File Offset: 0x00699568
 		public static IFaithJump GetRootAsIFaithJump(ByteBuffer _bb)
 		{
 			return IFaithJump.GetRootAsIFaithJump(_bb, default(IFaithJump));
 		}
 
-		// Token: 0x0602E26F RID: 189039 RVA: 0x0064DC40 File Offset: 0x0064BE40
+		// Token: 0x06030AB5 RID: 199349 RVA: 0x0069B384 File Offset: 0x00699584
 		public static IFaithJump GetRootAsIFaithJump(ByteBuffer _bb, IFaithJump obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E270 RID: 189040 RVA: 0x0064DC5D File Offset: 0x0064BE5D
+		// Token: 0x06030AB6 RID: 199350 RVA: 0x0069B3A1 File Offset: 0x006995A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E271 RID: 189041 RVA: 0x0064DC6C File Offset: 0x0064BE6C
+		// Token: 0x06030AB7 RID: 199351 RVA: 0x0069B3B0 File Offset: 0x006995B0
 		public IFaithJump __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C4E4 RID: 50404
-		// (get) Token: 0x0602E272 RID: 189042 RVA: 0x0064DC7C File Offset: 0x0064BE7C
+		// Token: 0x1700CE9A RID: 52890
+		// (get) Token: 0x06030AB8 RID: 199352 RVA: 0x0069B3C0 File Offset: 0x006995C0
 		public ELeisureInteract Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E273 RID: 189043 RVA: 0x0064DCB8 File Offset: 0x0064BEB8
+		// Token: 0x06030AB9 RID: 199353 RVA: 0x0069B3FC File Offset: 0x006995FC
 		public static Offset<IFaithJump> CreateIFaithJump(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaithJump.EndIFaithJump(builder);
 		}
 
-		// Token: 0x0602E274 RID: 189044 RVA: 0x0064DCCE File Offset: 0x0064BECE
+		// Token: 0x06030ABA RID: 199354 RVA: 0x0069B412 File Offset: 0x00699612
 		public static void StartIFaithJump(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602E275 RID: 189045 RVA: 0x0064DCD7 File Offset: 0x0064BED7
+		// Token: 0x06030ABB RID: 199355 RVA: 0x0069B41B File Offset: 0x0069961B
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E276 RID: 189046 RVA: 0x0064DCE2 File Offset: 0x0064BEE2
+		// Token: 0x06030ABC RID: 199356 RVA: 0x0069B426 File Offset: 0x00699626
 		public static Offset<IFaithJump> EndIFaithJump(FlatBufferBuilder builder)
 		{
 			return new Offset<IFaithJump>(builder.EndTable());
 		}
 
-		// Token: 0x0602E277 RID: 189047 RVA: 0x0064DCF0 File Offset: 0x0064BEF0
+		// Token: 0x06030ABD RID: 199357 RVA: 0x0069B434 File Offset: 0x00699634
 		public IFaithJumpT UnPack()
 		{
 			IFaithJumpT faithJumpT = new IFaithJumpT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return faithJumpT;
 		}
 
-		// Token: 0x0602E278 RID: 189048 RVA: 0x0064DD0B File Offset: 0x0064BF0B
+		// Token: 0x06030ABE RID: 199358 RVA: 0x0069B44F File Offset: 0x0069964F
 		public void UnPackTo(IFaithJumpT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602E279 RID: 189049 RVA: 0x0064DD1C File Offset: 0x0064BF1C
+		// Token: 0x06030ABF RID: 199359 RVA: 0x0069B460 File Offset: 0x00699660
 		public static Offset<IFaithJump> Pack(FlatBufferBuilder builder, IFaithJumpT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaithJump.CreateIFaithJump(builder, _o.Type);
 		}
 
-		// Token: 0x04010EAA RID: 69290
+		// Token: 0x04011CDC RID: 72924
 		private Table __p;
 	}
 }

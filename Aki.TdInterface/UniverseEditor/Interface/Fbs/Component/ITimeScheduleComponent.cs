@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A90 RID: 23184
+	// Token: 0x0200609D RID: 24733
 	public struct ITimeScheduleComponent : IFlatbufferObject
 	{
-		// Token: 0x1700AEA6 RID: 44710
-		// (get) Token: 0x060277EC RID: 161772 RVA: 0x0056F276 File Offset: 0x0056D476
+		// Token: 0x1700B7DE RID: 47070
+		// (get) Token: 0x06029D64 RID: 171364 RVA: 0x005B6282 File Offset: 0x005B4482
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060277ED RID: 161773 RVA: 0x0056F283 File Offset: 0x0056D483
+		// Token: 0x06029D65 RID: 171365 RVA: 0x005B628F File Offset: 0x005B448F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060277EE RID: 161774 RVA: 0x0056F28C File Offset: 0x0056D48C
+		// Token: 0x06029D66 RID: 171366 RVA: 0x005B6298 File Offset: 0x005B4498
 		public static ITimeScheduleComponent GetRootAsITimeScheduleComponent(ByteBuffer _bb)
 		{
 			return ITimeScheduleComponent.GetRootAsITimeScheduleComponent(_bb, default(ITimeScheduleComponent));
 		}
 
-		// Token: 0x060277EF RID: 161775 RVA: 0x0056F2A8 File Offset: 0x0056D4A8
+		// Token: 0x06029D67 RID: 171367 RVA: 0x005B62B4 File Offset: 0x005B44B4
 		public static ITimeScheduleComponent GetRootAsITimeScheduleComponent(ByteBuffer _bb, ITimeScheduleComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060277F0 RID: 161776 RVA: 0x0056F2C5 File Offset: 0x0056D4C5
+		// Token: 0x06029D68 RID: 171368 RVA: 0x005B62D1 File Offset: 0x005B44D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060277F1 RID: 161777 RVA: 0x0056F2D4 File Offset: 0x0056D4D4
+		// Token: 0x06029D69 RID: 171369 RVA: 0x005B62E0 File Offset: 0x005B44E0
 		public ITimeScheduleComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AEA7 RID: 44711
-		// (get) Token: 0x060277F2 RID: 161778 RVA: 0x0056F2E4 File Offset: 0x0056D4E4
+		// Token: 0x1700B7DF RID: 47071
+		// (get) Token: 0x06029D6A RID: 171370 RVA: 0x005B62F0 File Offset: 0x005B44F0
 		public bool Disabled
 		{
 			get
@@ -59,7 +59,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060277F3 RID: 161779 RVA: 0x0056F324 File Offset: 0x0056D524
+		// Token: 0x06029D6B RID: 171371 RVA: 0x005B6330 File Offset: 0x005B4530
 		public ITimeScheduleConfig? TimeScheduleConfigs(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new ITimeScheduleConfig?(default(ITimeScheduleConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700AEA8 RID: 44712
-		// (get) Token: 0x060277F4 RID: 161780 RVA: 0x0056F384 File Offset: 0x0056D584
+		// Token: 0x1700B7E0 RID: 47072
+		// (get) Token: 0x06029D6C RID: 171372 RVA: 0x005B6390 File Offset: 0x005B4590
 		public int TimeScheduleConfigsLength
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AEA9 RID: 44713
-		// (get) Token: 0x060277F5 RID: 161781 RVA: 0x0056F3B0 File Offset: 0x0056D5B0
+		// Token: 0x1700B7E1 RID: 47073
+		// (get) Token: 0x06029D6D RID: 171373 RVA: 0x005B63BC File Offset: 0x005B45BC
 		public byte NullMask
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060277F6 RID: 161782 RVA: 0x0056F3EC File Offset: 0x0056D5EC
+		// Token: 0x06029D6E RID: 171374 RVA: 0x005B63F8 File Offset: 0x005B45F8
 		public static Offset<ITimeScheduleComponent> CreateITimeScheduleComponent(FlatBufferBuilder builder, bool Disabled = false, VectorOffset TimeScheduleConfigsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -110,25 +110,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimeScheduleComponent.EndITimeScheduleComponent(builder);
 		}
 
-		// Token: 0x060277F7 RID: 161783 RVA: 0x0056F410 File Offset: 0x0056D610
+		// Token: 0x06029D6F RID: 171375 RVA: 0x005B641C File Offset: 0x005B461C
 		public static void StartITimeScheduleComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060277F8 RID: 161784 RVA: 0x0056F419 File Offset: 0x0056D619
+		// Token: 0x06029D70 RID: 171376 RVA: 0x005B6425 File Offset: 0x005B4625
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060277F9 RID: 161785 RVA: 0x0056F424 File Offset: 0x0056D624
+		// Token: 0x06029D71 RID: 171377 RVA: 0x005B6430 File Offset: 0x005B4630
 		public static void AddTimeScheduleConfigs(FlatBufferBuilder builder, VectorOffset timeScheduleConfigsOffset)
 		{
 			builder.AddOffset(1, timeScheduleConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x060277FA RID: 161786 RVA: 0x0056F434 File Offset: 0x0056D634
+		// Token: 0x06029D72 RID: 171378 RVA: 0x005B6440 File Offset: 0x005B4640
 		public static VectorOffset CreateTimeScheduleConfigsVector(FlatBufferBuilder builder, Offset<ITimeScheduleConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060277FB RID: 161787 RVA: 0x0056F474 File Offset: 0x0056D674
+		// Token: 0x06029D73 RID: 171379 RVA: 0x005B6480 File Offset: 0x005B4680
 		public static VectorOffset CreateTimeScheduleConfigsVectorBlock(FlatBufferBuilder builder, Offset<ITimeScheduleConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060277FC RID: 161788 RVA: 0x0056F48E File Offset: 0x0056D68E
+		// Token: 0x06029D74 RID: 171380 RVA: 0x005B649A File Offset: 0x005B469A
 		public static VectorOffset CreateTimeScheduleConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ITimeScheduleConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060277FD RID: 161789 RVA: 0x0056F4AC File Offset: 0x0056D6AC
+		// Token: 0x06029D75 RID: 171381 RVA: 0x005B64B8 File Offset: 0x005B46B8
 		public static VectorOffset CreateTimeScheduleConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -163,25 +163,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060277FE RID: 161790 RVA: 0x0056F4C5 File Offset: 0x0056D6C5
+		// Token: 0x06029D76 RID: 171382 RVA: 0x005B64D1 File Offset: 0x005B46D1
 		public static void StartTimeScheduleConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060277FF RID: 161791 RVA: 0x0056F4D0 File Offset: 0x0056D6D0
+		// Token: 0x06029D77 RID: 171383 RVA: 0x005B64DC File Offset: 0x005B46DC
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06027800 RID: 161792 RVA: 0x0056F4DB File Offset: 0x0056D6DB
+		// Token: 0x06029D78 RID: 171384 RVA: 0x005B64E7 File Offset: 0x005B46E7
 		public static Offset<ITimeScheduleComponent> EndITimeScheduleComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimeScheduleComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06027801 RID: 161793 RVA: 0x0056F4E8 File Offset: 0x0056D6E8
+		// Token: 0x06029D79 RID: 171385 RVA: 0x005B64F4 File Offset: 0x005B46F4
 		public ITimeScheduleComponentT UnPack()
 		{
 			ITimeScheduleComponentT timeScheduleComponentT = new ITimeScheduleComponentT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return timeScheduleComponentT;
 		}
 
-		// Token: 0x06027802 RID: 161794 RVA: 0x0056F504 File Offset: 0x0056D704
+		// Token: 0x06029D7A RID: 171386 RVA: 0x005B6510 File Offset: 0x005B4710
 		public void UnPackTo(ITimeScheduleComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027803 RID: 161795 RVA: 0x0056F57C File Offset: 0x0056D77C
+		// Token: 0x06029D7B RID: 171387 RVA: 0x005B6588 File Offset: 0x005B4788
 		public static Offset<ITimeScheduleComponent> Pack(FlatBufferBuilder builder, ITimeScheduleComponentT _o)
 		{
 			if (_o == null)
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimeScheduleComponent.CreateITimeScheduleComponent(builder, _o.Disabled, timeScheduleConfigsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F14C RID: 61772
+		// Token: 0x0400FE43 RID: 65091
 		private Table __p;
 	}
 }

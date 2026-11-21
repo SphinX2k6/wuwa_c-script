@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005315 RID: 21269
+	// Token: 0x0200589B RID: 22683
 	public struct IGraph3dEffectComponent : IFlatbufferObject
 	{
-		// Token: 0x17009C28 RID: 39976
-		// (get) Token: 0x06022BE4 RID: 142308 RVA: 0x004D0482 File Offset: 0x004CE682
+		// Token: 0x1700A460 RID: 42080
+		// (get) Token: 0x06024C98 RID: 150680 RVA: 0x0050D356 File Offset: 0x0050B556
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022BE5 RID: 142309 RVA: 0x004D048F File Offset: 0x004CE68F
+		// Token: 0x06024C99 RID: 150681 RVA: 0x0050D363 File Offset: 0x0050B563
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022BE6 RID: 142310 RVA: 0x004D0498 File Offset: 0x004CE698
+		// Token: 0x06024C9A RID: 150682 RVA: 0x0050D36C File Offset: 0x0050B56C
 		public static IGraph3dEffectComponent GetRootAsIGraph3dEffectComponent(ByteBuffer _bb)
 		{
 			return IGraph3dEffectComponent.GetRootAsIGraph3dEffectComponent(_bb, default(IGraph3dEffectComponent));
 		}
 
-		// Token: 0x06022BE7 RID: 142311 RVA: 0x004D04B4 File Offset: 0x004CE6B4
+		// Token: 0x06024C9B RID: 150683 RVA: 0x0050D388 File Offset: 0x0050B588
 		public static IGraph3dEffectComponent GetRootAsIGraph3dEffectComponent(ByteBuffer _bb, IGraph3dEffectComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022BE8 RID: 142312 RVA: 0x004D04D1 File Offset: 0x004CE6D1
+		// Token: 0x06024C9C RID: 150684 RVA: 0x0050D3A5 File Offset: 0x0050B5A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022BE9 RID: 142313 RVA: 0x004D04E0 File Offset: 0x004CE6E0
+		// Token: 0x06024C9D RID: 150685 RVA: 0x0050D3B4 File Offset: 0x0050B5B4
 		public IGraph3dEffectComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009C29 RID: 39977
-		// (get) Token: 0x06022BEA RID: 142314 RVA: 0x004D04F0 File Offset: 0x004CE6F0
+		// Token: 0x1700A461 RID: 42081
+		// (get) Token: 0x06024C9E RID: 150686 RVA: 0x0050D3C4 File Offset: 0x0050B5C4
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C2A RID: 39978
-		// (get) Token: 0x06022BEB RID: 142315 RVA: 0x004D0530 File Offset: 0x004CE730
+		// Token: 0x1700A462 RID: 42082
+		// (get) Token: 0x06024C9F RID: 150687 RVA: 0x0050D404 File Offset: 0x0050B604
 		public int Graph3dEntityId
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C2B RID: 39979
-		// (get) Token: 0x06022BEC RID: 142316 RVA: 0x004D056C File Offset: 0x004CE76C
+		// Token: 0x1700A463 RID: 42083
+		// (get) Token: 0x06024CA0 RID: 150688 RVA: 0x0050D440 File Offset: 0x0050B640
 		public IFireBoxFishEffect? EffectType
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C2C RID: 39980
-		// (get) Token: 0x06022BED RID: 142317 RVA: 0x004D05CC File Offset: 0x004CE7CC
+		// Token: 0x1700A464 RID: 42084
+		// (get) Token: 0x06024CA1 RID: 150689 RVA: 0x0050D4A0 File Offset: 0x0050B6A0
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022BEE RID: 142318 RVA: 0x004D0609 File Offset: 0x004CE809
+		// Token: 0x06024CA2 RID: 150690 RVA: 0x0050D4DD File Offset: 0x0050B6DD
 		public static Offset<IGraph3dEffectComponent> CreateIGraph3dEffectComponent(FlatBufferBuilder builder, bool Disabled = false, int Graph3dEntityId = 0, Offset<IFireBoxFishEffect> EffectTypeOffset = default(Offset<IFireBoxFishEffect>), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGraph3dEffectComponent.EndIGraph3dEffectComponent(builder);
 		}
 
-		// Token: 0x06022BEF RID: 142319 RVA: 0x004D0635 File Offset: 0x004CE835
+		// Token: 0x06024CA3 RID: 150691 RVA: 0x0050D509 File Offset: 0x0050B709
 		public static void StartIGraph3dEffectComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06022BF0 RID: 142320 RVA: 0x004D063E File Offset: 0x004CE83E
+		// Token: 0x06024CA4 RID: 150692 RVA: 0x0050D512 File Offset: 0x0050B712
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06022BF1 RID: 142321 RVA: 0x004D0649 File Offset: 0x004CE849
+		// Token: 0x06024CA5 RID: 150693 RVA: 0x0050D51D File Offset: 0x0050B71D
 		public static void AddGraph3dEntityId(FlatBufferBuilder builder, int graph3dEntityId)
 		{
 			builder.AddInt(1, graph3dEntityId, 0);
 		}
 
-		// Token: 0x06022BF2 RID: 142322 RVA: 0x004D0654 File Offset: 0x004CE854
+		// Token: 0x06024CA6 RID: 150694 RVA: 0x0050D528 File Offset: 0x0050B728
 		public static void AddEffectType(FlatBufferBuilder builder, Offset<IFireBoxFishEffect> effectTypeOffset)
 		{
 			builder.AddOffset(2, effectTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06022BF3 RID: 142323 RVA: 0x004D0664 File Offset: 0x004CE864
+		// Token: 0x06024CA7 RID: 150695 RVA: 0x0050D538 File Offset: 0x0050B738
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06022BF4 RID: 142324 RVA: 0x004D066F File Offset: 0x004CE86F
+		// Token: 0x06024CA8 RID: 150696 RVA: 0x0050D543 File Offset: 0x0050B743
 		public static Offset<IGraph3dEffectComponent> EndIGraph3dEffectComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IGraph3dEffectComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06022BF5 RID: 142325 RVA: 0x004D067C File Offset: 0x004CE87C
+		// Token: 0x06024CA9 RID: 150697 RVA: 0x0050D550 File Offset: 0x0050B750
 		public IGraph3dEffectComponentT UnPack()
 		{
 			IGraph3dEffectComponentT graph3dEffectComponentT = new IGraph3dEffectComponentT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return graph3dEffectComponentT;
 		}
 
-		// Token: 0x06022BF6 RID: 142326 RVA: 0x004D0698 File Offset: 0x004CE898
+		// Token: 0x06024CAA RID: 150698 RVA: 0x0050D56C File Offset: 0x0050B76C
 		public void UnPackTo(IGraph3dEffectComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022BF7 RID: 142327 RVA: 0x004D06F8 File Offset: 0x004CE8F8
+		// Token: 0x06024CAB RID: 150699 RVA: 0x0050D5CC File Offset: 0x0050B7CC
 		public static Offset<IGraph3dEffectComponent> Pack(FlatBufferBuilder builder, IGraph3dEffectComponentT _o)
 		{
 			if (_o == null)
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGraph3dEffectComponent.CreateIGraph3dEffectComponent(builder, _o.Disabled, _o.Graph3dEntityId, effectTypeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E4CC RID: 58572
+		// Token: 0x0400F0FC RID: 61692
 		private Table __p;
 	}
 }

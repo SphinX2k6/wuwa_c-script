@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002762 RID: 10082
+	// Token: 0x02002A34 RID: 10804
 	public class ICommonTip2Type
 	{
-		// Token: 0x0600E09D RID: 57501 RVA: 0x00213367 File Offset: 0x00211567
-		[NullableContext(1)]
+		// Token: 0x0600EEBB RID: 61115 RVA: 0x002300FB File Offset: 0x0022E2FB
 		public static ICommonTip2Type Create(ICommonTip2Type? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700439B RID: 17307
-		// (get) Token: 0x0600E09E RID: 57502 RVA: 0x00213386 File Offset: 0x00211586
+		// Token: 0x17004701 RID: 18177
+		// (get) Token: 0x0600EEBC RID: 61116 RVA: 0x0023011A File Offset: 0x0022E31A
 		public virtual ECommonTip2Type Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C64 RID: 31844
+		// Token: 0x0400831A RID: 33562
 		private ICommonTip2Type Instance;
 	}
 }

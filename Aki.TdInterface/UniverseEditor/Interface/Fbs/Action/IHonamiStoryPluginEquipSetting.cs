@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200692A RID: 26922
+	// Token: 0x02006FDD RID: 28637
 	public struct IHonamiStoryPluginEquipSetting : IFlatbufferObject
 	{
-		// Token: 0x1700C7B6 RID: 51126
-		// (get) Token: 0x0602EFF0 RID: 192496 RVA: 0x006684B2 File Offset: 0x006666B2
+		// Token: 0x1700D1B9 RID: 53689
+		// (get) Token: 0x060319C0 RID: 203200 RVA: 0x006B899A File Offset: 0x006B6B9A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EFF1 RID: 192497 RVA: 0x006684BF File Offset: 0x006666BF
+		// Token: 0x060319C1 RID: 203201 RVA: 0x006B89A7 File Offset: 0x006B6BA7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602EFF2 RID: 192498 RVA: 0x006684C8 File Offset: 0x006666C8
+		// Token: 0x060319C2 RID: 203202 RVA: 0x006B89B0 File Offset: 0x006B6BB0
 		public static IHonamiStoryPluginEquipSetting GetRootAsIHonamiStoryPluginEquipSetting(ByteBuffer _bb)
 		{
 			return IHonamiStoryPluginEquipSetting.GetRootAsIHonamiStoryPluginEquipSetting(_bb, default(IHonamiStoryPluginEquipSetting));
 		}
 
-		// Token: 0x0602EFF3 RID: 192499 RVA: 0x006684E4 File Offset: 0x006666E4
+		// Token: 0x060319C3 RID: 203203 RVA: 0x006B89CC File Offset: 0x006B6BCC
 		public static IHonamiStoryPluginEquipSetting GetRootAsIHonamiStoryPluginEquipSetting(ByteBuffer _bb, IHonamiStoryPluginEquipSetting obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EFF4 RID: 192500 RVA: 0x00668501 File Offset: 0x00666701
+		// Token: 0x060319C4 RID: 203204 RVA: 0x006B89E9 File Offset: 0x006B6BE9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EFF5 RID: 192501 RVA: 0x00668510 File Offset: 0x00666710
+		// Token: 0x060319C5 RID: 203205 RVA: 0x006B89F8 File Offset: 0x006B6BF8
 		public IHonamiStoryPluginEquipSetting __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C7B7 RID: 51127
-		// (get) Token: 0x0602EFF6 RID: 192502 RVA: 0x00668520 File Offset: 0x00666720
+		// Token: 0x1700D1BA RID: 53690
+		// (get) Token: 0x060319C6 RID: 203206 RVA: 0x006B8A08 File Offset: 0x006B6C08
 		public EHonamiStoryRoleSlot RoleSlot
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C7B8 RID: 51128
-		// (get) Token: 0x0602EFF7 RID: 192503 RVA: 0x0066855C File Offset: 0x0066675C
+		// Token: 0x1700D1BB RID: 53691
+		// (get) Token: 0x060319C7 RID: 203207 RVA: 0x006B8A44 File Offset: 0x006B6C44
 		public EHonamiStoryPluginSlot PluginSlot
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C7B9 RID: 51129
-		// (get) Token: 0x0602EFF8 RID: 192504 RVA: 0x00668598 File Offset: 0x00666798
+		// Token: 0x1700D1BC RID: 53692
+		// (get) Token: 0x060319C8 RID: 203208 RVA: 0x006B8A80 File Offset: 0x006B6C80
 		public int PluginId
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EFF9 RID: 192505 RVA: 0x006685D4 File Offset: 0x006667D4
+		// Token: 0x060319C9 RID: 203209 RVA: 0x006B8ABC File Offset: 0x006B6CBC
 		public static Offset<IHonamiStoryPluginEquipSetting> CreateIHonamiStoryPluginEquipSetting(FlatBufferBuilder builder, EHonamiStoryRoleSlot RoleSlot = EHonamiStoryRoleSlot.None, EHonamiStoryPluginSlot PluginSlot = EHonamiStoryPluginSlot.None, int PluginId = 0)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHonamiStoryPluginEquipSetting.EndIHonamiStoryPluginEquipSetting(builder);
 		}
 
-		// Token: 0x0602EFFA RID: 192506 RVA: 0x006685F8 File Offset: 0x006667F8
+		// Token: 0x060319CA RID: 203210 RVA: 0x006B8AE0 File Offset: 0x006B6CE0
 		public static void StartIHonamiStoryPluginEquipSetting(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602EFFB RID: 192507 RVA: 0x00668601 File Offset: 0x00666801
+		// Token: 0x060319CB RID: 203211 RVA: 0x006B8AE9 File Offset: 0x006B6CE9
 		public static void AddRoleSlot(FlatBufferBuilder builder, EHonamiStoryRoleSlot roleSlot)
 		{
 			builder.AddByte(0, (byte)roleSlot, 0);
 		}
 
-		// Token: 0x0602EFFC RID: 192508 RVA: 0x0066860C File Offset: 0x0066680C
+		// Token: 0x060319CC RID: 203212 RVA: 0x006B8AF4 File Offset: 0x006B6CF4
 		public static void AddPluginSlot(FlatBufferBuilder builder, EHonamiStoryPluginSlot pluginSlot)
 		{
 			builder.AddByte(1, (byte)pluginSlot, 0);
 		}
 
-		// Token: 0x0602EFFD RID: 192509 RVA: 0x00668617 File Offset: 0x00666817
+		// Token: 0x060319CD RID: 203213 RVA: 0x006B8AFF File Offset: 0x006B6CFF
 		public static void AddPluginId(FlatBufferBuilder builder, int pluginId)
 		{
 			builder.AddInt(2, pluginId, 0);
 		}
 
-		// Token: 0x0602EFFE RID: 192510 RVA: 0x00668622 File Offset: 0x00666822
+		// Token: 0x060319CE RID: 203214 RVA: 0x006B8B0A File Offset: 0x006B6D0A
 		public static Offset<IHonamiStoryPluginEquipSetting> EndIHonamiStoryPluginEquipSetting(FlatBufferBuilder builder)
 		{
 			return new Offset<IHonamiStoryPluginEquipSetting>(builder.EndTable());
 		}
 
-		// Token: 0x0602EFFF RID: 192511 RVA: 0x00668630 File Offset: 0x00666830
+		// Token: 0x060319CF RID: 203215 RVA: 0x006B8B18 File Offset: 0x006B6D18
 		public IHonamiStoryPluginEquipSettingT UnPack()
 		{
 			IHonamiStoryPluginEquipSettingT honamiStoryPluginEquipSettingT = new IHonamiStoryPluginEquipSettingT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return honamiStoryPluginEquipSettingT;
 		}
 
-		// Token: 0x0602F000 RID: 192512 RVA: 0x0066864B File Offset: 0x0066684B
+		// Token: 0x060319D0 RID: 203216 RVA: 0x006B8B33 File Offset: 0x006B6D33
 		public void UnPackTo(IHonamiStoryPluginEquipSettingT _o)
 		{
 			_o.RoleSlot = this.RoleSlot;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.PluginId = this.PluginId;
 		}
 
-		// Token: 0x0602F001 RID: 192513 RVA: 0x00668674 File Offset: 0x00666874
+		// Token: 0x060319D1 RID: 203217 RVA: 0x006B8B5C File Offset: 0x006B6D5C
 		public static Offset<IHonamiStoryPluginEquipSetting> Pack(FlatBufferBuilder builder, IHonamiStoryPluginEquipSettingT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHonamiStoryPluginEquipSetting.CreateIHonamiStoryPluginEquipSetting(builder, _o.RoleSlot, _o.PluginSlot, _o.PluginId);
 		}
 
-		// Token: 0x040110A2 RID: 69794
+		// Token: 0x04011F0E RID: 73486
 		private Table __p;
 	}
 }

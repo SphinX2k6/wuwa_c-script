@@ -8,12 +8,12 @@ using CSharpScript.Game.LevelGamePlay.Common;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020025E3 RID: 9699
+// Token: 0x02001ACE RID: 6862
 [NullableContext(1)]
 [Nullable(0)]
 public class PilotThrowTargetItem : CommonMarkItem
 {
-	// Token: 0x06013B7C RID: 80764 RVA: 0x004F1978 File Offset: 0x004EFB78
+	// Token: 0x0601105E RID: 69726 RVA: 0x005006A8 File Offset: 0x004FE8A8
 	public PilotThrowTargetItem(IPilotThrowTarget config)
 	{
 		FVectorDouble fvectorDouble = Vector.Create((double)config.Position.X.GetValueOrDefault(), (double)config.Position.Y.GetValueOrDefault(), (double)config.Position.Z.GetValueOrDefault()).ToUeVector(false);
@@ -23,7 +23,7 @@ public class PilotThrowTargetItem : CommonMarkItem
 		this.IsPlantFlagTarget = (config.VisualType == EPilotThrowPointVisualType.PlantFlag);
 	}
 
-	// Token: 0x06013B7D RID: 80765 RVA: 0x004F1A38 File Offset: 0x004EFC38
+	// Token: 0x0601105F RID: 69727 RVA: 0x00500768 File Offset: 0x004FE968
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class PilotThrowTargetItem : CommonMarkItem
 		};
 	}
 
-	// Token: 0x06013B7E RID: 80766 RVA: 0x004F1B18 File Offset: 0x004EFD18
+	// Token: 0x06011060 RID: 69728 RVA: 0x00500848 File Offset: 0x004FEA48
 	protected override void OnStart()
 	{
 		Rotator rootActorRotation = this.RootActorRotation;
@@ -126,7 +126,7 @@ public class PilotThrowTargetItem : CommonMarkItem
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06013B7F RID: 80767 RVA: 0x004F1CF4 File Offset: 0x004EFEF4
+	// Token: 0x06011061 RID: 69729 RVA: 0x00500A24 File Offset: 0x004FEC24
 	private void InitEffect()
 	{
 		if (PilotThrowTargetItem.LineTrace == null)
@@ -151,7 +151,7 @@ public class PilotThrowTargetItem : CommonMarkItem
 		}
 	}
 
-	// Token: 0x06013B80 RID: 80768 RVA: 0x004F1DF4 File Offset: 0x004EFFF4
+	// Token: 0x06011062 RID: 69730 RVA: 0x00500B24 File Offset: 0x004FED24
 	private static void InitLineTraceInfo()
 	{
 		PilotThrowTargetItem.LineTrace = new UTraceLineElement();
@@ -164,7 +164,7 @@ public class PilotThrowTargetItem : CommonMarkItem
 		TraceElementCommon.Instance.SetTraceHitColor(PilotThrowTargetItem.LineTrace, new FLinearColor(0f, 1f, 0f, 1f));
 	}
 
-	// Token: 0x06013B81 RID: 80769 RVA: 0x004F1E86 File Offset: 0x004F0086
+	// Token: 0x06011063 RID: 69731 RVA: 0x00500BB6 File Offset: 0x004FEDB6
 	private void OnSequenceClose(string sequenceName)
 	{
 		if (!(sequenceName == "Lock_Out_new"))
@@ -183,7 +183,7 @@ public class PilotThrowTargetItem : CommonMarkItem
 		lockContent.SetUIActive(false);
 	}
 
-	// Token: 0x06013B82 RID: 80770 RVA: 0x004F1EC0 File Offset: 0x004F00C0
+	// Token: 0x06011064 RID: 69732 RVA: 0x00500BF0 File Offset: 0x004FEDF0
 	public void Close()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -204,7 +204,7 @@ public class PilotThrowTargetItem : CommonMarkItem
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06013B83 RID: 80771 RVA: 0x004F1F64 File Offset: 0x004F0164
+	// Token: 0x06011065 RID: 69733 RVA: 0x00500C94 File Offset: 0x004FEE94
 	public override void OnTick(float delta)
 	{
 		this.UpdateRotation();
@@ -244,7 +244,7 @@ public class PilotThrowTargetItem : CommonMarkItem
 		}
 	}
 
-	// Token: 0x06013B84 RID: 80772 RVA: 0x004F203C File Offset: 0x004F023C
+	// Token: 0x06011066 RID: 69734 RVA: 0x00500D6C File Offset: 0x004FEF6C
 	public void UpdateRotation()
 	{
 		Rotator cameraRotator = CameraController.Instance.MainModel.CameraRotator;
@@ -256,7 +256,7 @@ public class PilotThrowTargetItem : CommonMarkItem
 		rootItem.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x06013B85 RID: 80773 RVA: 0x004F20B0 File Offset: 0x004F02B0
+	// Token: 0x06011067 RID: 69735 RVA: 0x00500DE0 File Offset: 0x004FEFE0
 	public void UpdateScale()
 	{
 		float inTime = (float)Vector.Dist(Vector.Create(CameraController.Instance.MainModel.CameraLocation), this.AimTarget) / 100f;
@@ -269,79 +269,79 @@ public class PilotThrowTargetItem : CommonMarkItem
 		rootItem.SetRelativeScale3D(new FVector(floatValue, floatValue, floatValue));
 	}
 
-	// Token: 0x0400948E RID: 38030
+	// Token: 0x040095E5 RID: 38373
 	[Nullable(2)]
 	private UUIItem LockContent;
 
-	// Token: 0x0400948F RID: 38031
+	// Token: 0x040095E6 RID: 38374
 	protected Rotator RootActorRotation = Rotator.Create();
 
-	// Token: 0x04009490 RID: 38032
+	// Token: 0x040095E7 RID: 38375
 	private readonly Vector AimTarget = Vector.Create();
 
-	// Token: 0x04009491 RID: 38033
+	// Token: 0x040095E8 RID: 38376
 	private readonly bool IsMainStoryTarget;
 
-	// Token: 0x04009492 RID: 38034
+	// Token: 0x040095E9 RID: 38377
 	private readonly bool IsPlantFlagTarget;
 
-	// Token: 0x04009493 RID: 38035
+	// Token: 0x040095EA RID: 38378
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04009494 RID: 38036
+	// Token: 0x040095EB RID: 38379
 	[Nullable(2)]
 	public Action<bool> OnTargetInOutRange;
 
-	// Token: 0x04009495 RID: 38037
+	// Token: 0x040095EC RID: 38380
 	[Nullable(2)]
 	[StaticVariableRuleIgnore]
 	private static UTraceLineElement LineTrace = null;
 
-	// Token: 0x04009496 RID: 38038
+	// Token: 0x040095ED RID: 38381
 	private int? EffectHandle;
 
-	// Token: 0x04009497 RID: 38039
+	// Token: 0x040095EE RID: 38382
 	private bool LastInTargetRange;
 
-	// Token: 0x04009498 RID: 38040
+	// Token: 0x040095EF RID: 38383
 	private const string EFFECT_PATH = "/Game/Aki/Effect/EffectGroup/BigWorld/LHL/DA_Fx_Group_Sl2_LHL_Guangzhu_60M.DA_Fx_Group_Sl2_LHL_Guangzhu_60M";
 
-	// Token: 0x04009499 RID: 38041
+	// Token: 0x040095F0 RID: 38384
 	private static readonly FLinearColor LineTraceColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x0400949A RID: 38042
+	// Token: 0x040095F1 RID: 38385
 	private const string TEXT_TARGET_NAME_KEY = "FlagChallenge_BossWarning";
 
-	// Token: 0x02008C1B RID: 35867
+	// Token: 0x02007DA4 RID: 32164
 	[NullableContext(0)]
 	private class EViewComponent
 	{
-		// Token: 0x0402D7C0 RID: 186304
+		// Token: 0x04028AD8 RID: 166616
 		public const int DirectionItem = 0;
 
-		// Token: 0x0402D7C1 RID: 186305
+		// Token: 0x04028AD9 RID: 166617
 		public const int DefaultContent = 1;
 
-		// Token: 0x0402D7C2 RID: 186306
+		// Token: 0x04028ADA RID: 166618
 		public const int MainContent = 2;
 
-		// Token: 0x0402D7C3 RID: 186307
+		// Token: 0x04028ADB RID: 166619
 		public const int LockContent = 3;
 
-		// Token: 0x0402D7C4 RID: 186308
+		// Token: 0x04028ADC RID: 166620
 		public const int MainEffect = 4;
 
-		// Token: 0x0402D7C5 RID: 186309
+		// Token: 0x04028ADD RID: 166621
 		public const int PnlInfo = 5;
 
-		// Token: 0x0402D7C6 RID: 186310
+		// Token: 0x04028ADE RID: 166622
 		public const int LockDefaultContent = 6;
 
-		// Token: 0x0402D7C7 RID: 186311
+		// Token: 0x04028ADF RID: 166623
 		public const int LockMainContent = 7;
 
-		// Token: 0x0402D7C8 RID: 186312
+		// Token: 0x04028AE0 RID: 166624
 		public const int TargetNameText = 8;
 	}
 }

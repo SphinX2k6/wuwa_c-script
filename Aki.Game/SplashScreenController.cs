@@ -1,31 +1,30 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.MovieMode;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002A89 RID: 10889
+// Token: 0x02002005 RID: 8197
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class SplashScreenController : ControllerBase
 {
-	// Token: 0x06016AC7 RID: 92871 RVA: 0x005BDD82 File Offset: 0x005BBF82
+	// Token: 0x060144EC RID: 83180 RVA: 0x005E9FB2 File Offset: 0x005E81B2
 	protected override bool OnInit()
 	{
 		this.AddEvents();
 		return true;
 	}
 
-	// Token: 0x06016AC8 RID: 92872 RVA: 0x005BDD8B File Offset: 0x005BBF8B
+	// Token: 0x060144ED RID: 83181 RVA: 0x005E9FBB File Offset: 0x005E81BB
 	protected override bool OnClear()
 	{
 		this.RemoveEvents();
 		return true;
 	}
 
-	// Token: 0x06016AC9 RID: 92873 RVA: 0x005BDD94 File Offset: 0x005BBF94
+	// Token: 0x060144EE RID: 83182 RVA: 0x005E9FC4 File Offset: 0x005E81C4
 	private void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
@@ -34,7 +33,7 @@ public class SplashScreenController : ControllerBase
 		EventSystem.Instance.Add(EEventName.BeforeLoadMap, new Action(this.OnBeforeLoadMap));
 	}
 
-	// Token: 0x06016ACA RID: 92874 RVA: 0x005BDE14 File Offset: 0x005BC014
+	// Token: 0x060144EF RID: 83183 RVA: 0x005EA044 File Offset: 0x005E8244
 	private void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
@@ -43,60 +42,51 @@ public class SplashScreenController : ControllerBase
 		EventSystem.Instance.Remove(EEventName.BeforeLoadMap, new Action(this.OnBeforeLoadMap));
 	}
 
-	// Token: 0x06016ACB RID: 92875 RVA: 0x005BDE94 File Offset: 0x005BC094
+	// Token: 0x060144F0 RID: 83184 RVA: 0x005EA0C4 File Offset: 0x005E82C4
 	private void OnWorldDoneAndCloseLoading()
 	{
 		Log.Instance.Info(ELogModule.SplashScreenTask, ELogAuthor.CXJ, "WorldDoneAndCloseLoading 尝试运行开屏动画任务", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.TryRunSplashScreenTask();
 	}
 
-	// Token: 0x06016ACC RID: 92876 RVA: 0x005BDEC8 File Offset: 0x005BC0C8
+	// Token: 0x060144F1 RID: 83185 RVA: 0x005EA0F8 File Offset: 0x005E82F8
 	private void OnActiveBattleView()
 	{
 		Log.Instance.Info(ELogModule.SplashScreenTask, ELogAuthor.CXJ, "ActiveBattleView 尝试运行开屏动画任务", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.TryRunSplashScreenTask();
 	}
 
-	// Token: 0x06016ACD RID: 92877 RVA: 0x005BDEFC File Offset: 0x005BC0FC
+	// Token: 0x060144F2 RID: 83186 RVA: 0x005EA12C File Offset: 0x005E832C
 	private void OnResetModuleByResetToBattleView()
 	{
 		Log.Instance.Info(ELogModule.SplashScreenTask, ELogAuthor.CXJ, "ResetModuleByResetToBattleView 尝试运行开屏动画任务", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.TryRunSplashScreenTask();
 	}
 
-	// Token: 0x06016ACE RID: 92878 RVA: 0x005BDF2E File Offset: 0x005BC12E
+	// Token: 0x060144F3 RID: 83187 RVA: 0x005EA15E File Offset: 0x005E835E
 	private void OnBeforeLoadMap()
 	{
 		this.ClearAllTasks();
 	}
 
-	// Token: 0x06016ACF RID: 92879 RVA: 0x005BDF38 File Offset: 0x005BC138
+	// Token: 0x060144F4 RID: 83188 RVA: 0x005EA168 File Offset: 0x005E8368
 	public void PushSplashScreenTask(SplashScreenTask splashScreenTask, bool isInstantly = false)
 	{
-		if (splashScreenTask.Type == ESplashScreenType.Config && Info.Instance.IsPlayInEditor && this.IsForbidAddTask)
+		ESplashScreenType type = splashScreenTask.Type;
+		this.SplashScreenQueue.EnQueue(splashScreenTask);
+		if (isInstantly)
 		{
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.SplashScreenTask;
 			ELogAuthor author = ELogAuthor.CXJ;
-			string message = "添加开屏动画任务失败，当前处于禁止添加任务状态";
+			string message = "添加开屏动画任务且立即执行";
 			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("TaskSourceModule", splashScreenTask.SourceModule);
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-			return;
-		}
-		this.SplashScreenQueue.EnQueue(splashScreenTask);
-		if (isInstantly)
-		{
-			Log instance2 = Log.Instance;
-			ELogModule module2 = ELogModule.SplashScreenTask;
-			ELogAuthor author2 = ELogAuthor.CXJ;
-			string message2 = "添加开屏动画任务且立即执行";
-			ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("TaskSourceModule", splashScreenTask.SourceModule);
-			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 			this.TryRunSplashScreenTask();
 		}
 	}
 
-	// Token: 0x06016AD0 RID: 92880 RVA: 0x005BDFE0 File Offset: 0x005BC1E0
+	// Token: 0x060144F5 RID: 83189 RVA: 0x005EA1C8 File Offset: 0x005E83C8
 	public void FinishCurTask(ESplashScreenSourceModuleType taskSourceModule = ESplashScreenSourceModuleType.None)
 	{
 		if (this.SplashScreenQueue.FinishTask(taskSourceModule))
@@ -106,7 +96,7 @@ public class SplashScreenController : ControllerBase
 		}
 	}
 
-	// Token: 0x06016AD1 RID: 92881 RVA: 0x005BE020 File Offset: 0x005BC220
+	// Token: 0x060144F6 RID: 83190 RVA: 0x005EA208 File Offset: 0x005E8408
 	public void TryRunSplashScreenTask()
 	{
 		if (this.SplashScreenQueue.TaskQueue == null || this.SplashScreenQueue.TaskQueue.Count == 0)
@@ -161,14 +151,14 @@ public class SplashScreenController : ControllerBase
 		this.SplashScreenQueue.ProcessQueue();
 	}
 
-	// Token: 0x06016AD2 RID: 92882 RVA: 0x005BE229 File Offset: 0x005BC429
+	// Token: 0x060144F7 RID: 83191 RVA: 0x005EA411 File Offset: 0x005E8611
 	public void ClearAllTasks()
 	{
 		this.SplashScreenQueue.ClearAllTask();
 	}
 
-	// Token: 0x17001E35 RID: 7733
-	// (get) Token: 0x06016AD3 RID: 92883 RVA: 0x005BE236 File Offset: 0x005BC436
+	// Token: 0x17001E8D RID: 7821
+	// (get) Token: 0x060144F8 RID: 83192 RVA: 0x005EA41E File Offset: 0x005E861E
 	public static SplashScreenController Instance
 	{
 		get
@@ -177,7 +167,7 @@ public class SplashScreenController : ControllerBase
 		}
 	}
 
-	// Token: 0x06016AD4 RID: 92884 RVA: 0x005BE23D File Offset: 0x005BC43D
+	// Token: 0x060144F9 RID: 83193 RVA: 0x005EA425 File Offset: 0x005E8625
 	public static SplashScreenController GetOrCreateInstance()
 	{
 		if (SplashScreenController._Instance == null)
@@ -187,7 +177,7 @@ public class SplashScreenController : ControllerBase
 		return SplashScreenController._Instance;
 	}
 
-	// Token: 0x06016AD5 RID: 92885 RVA: 0x005BE251 File Offset: 0x005BC451
+	// Token: 0x060144FA RID: 83194 RVA: 0x005EA439 File Offset: 0x005E8639
 	public static bool CreateInstance()
 	{
 		if (SplashScreenController._Instance != null)
@@ -198,30 +188,30 @@ public class SplashScreenController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06016AD6 RID: 92886 RVA: 0x005BE267 File Offset: 0x005BC467
+	// Token: 0x060144FB RID: 83195 RVA: 0x005EA44F File Offset: 0x005E864F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016AD7 RID: 92887 RVA: 0x005BE269 File Offset: 0x005BC469
+	// Token: 0x060144FC RID: 83196 RVA: 0x005EA451 File Offset: 0x005E8651
 	public static void ResetStaticDefaultValue()
 	{
 		SplashScreenController._Instance = null;
 	}
 
-	// Token: 0x06016AD8 RID: 92888 RVA: 0x005BE271 File Offset: 0x005BC471
+	// Token: 0x060144FD RID: 83197 RVA: 0x005EA459 File Offset: 0x005E8659
 	static SplashScreenController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SplashScreenController.CreateStaticDefaultValue), new Action(SplashScreenController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A82E RID: 43054
+	// Token: 0x0400AC33 RID: 44083
 	protected SplashScreenQueue SplashScreenQueue = new SplashScreenQueue();
 
-	// Token: 0x0400A82F RID: 43055
+	// Token: 0x0400AC34 RID: 44084
 	public bool IsForbidAddTask = true;
 
-	// Token: 0x0400A830 RID: 43056
+	// Token: 0x0400AC35 RID: 44085
 	[Nullable(2)]
 	private static SplashScreenController _Instance;
 }

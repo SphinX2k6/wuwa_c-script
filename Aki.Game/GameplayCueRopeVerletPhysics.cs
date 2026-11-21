@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002FD1 RID: 12241
+// Token: 0x02002525 RID: 9509
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueRopeVerletPhysics : GameplayCueBase
 {
-	// Token: 0x06019F30 RID: 106288 RVA: 0x006CA0F4 File Offset: 0x006C82F4
+	// Token: 0x06017842 RID: 96322 RVA: 0x006F09E8 File Offset: 0x006EEBE8
 	protected override void OnInit()
 	{
 		string[] array = this.CueConfig.Socket.Split('#', StringSplitOptions.None);
@@ -20,7 +20,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		this.FallbackFollowActor = this.ParseParamBool("FallbackFollowActor", false);
 	}
 
-	// Token: 0x06019F31 RID: 106289 RVA: 0x006CA164 File Offset: 0x006C8364
+	// Token: 0x06017843 RID: 96323 RVA: 0x006F0A58 File Offset: 0x006EEC58
 	protected override void OnTick(float delta)
 	{
 		if (this.RopeComponent == null || !this.RopeReady)
@@ -53,7 +53,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		ropeActor2.SetActorHiddenInGame(true);
 	}
 
-	// Token: 0x06019F32 RID: 106290 RVA: 0x006CA1FC File Offset: 0x006C83FC
+	// Token: 0x06017844 RID: 96324 RVA: 0x006F0AF0 File Offset: 0x006EECF0
 	protected override void OnCreate()
 	{
 		this.RefreshTarget();
@@ -73,7 +73,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		this.LoadDataAssetAndSetup();
 	}
 
-	// Token: 0x06019F33 RID: 106291 RVA: 0x006CA29C File Offset: 0x006C849C
+	// Token: 0x06017845 RID: 96325 RVA: 0x006F0B90 File Offset: 0x006EED90
 	protected override void OnDestroy()
 	{
 		this.IsActive = false;
@@ -87,20 +87,20 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		this.RopeComponent = null;
 	}
 
-	// Token: 0x06019F34 RID: 106292 RVA: 0x006CA2F2 File Offset: 0x006C84F2
+	// Token: 0x06017846 RID: 96326 RVA: 0x006F0BE6 File Offset: 0x006EEDE6
 	public new static bool IsSingleInstance()
 	{
 		return false;
 	}
 
-	// Token: 0x06019F35 RID: 106293 RVA: 0x006CA2F5 File Offset: 0x006C84F5
+	// Token: 0x06017847 RID: 96327 RVA: 0x006F0BE9 File Offset: 0x006EEDE9
 	private bool HasTarget()
 	{
 		TsBaseCharacter targetActor = this.TargetActor;
 		return targetActor != null && targetActor.IsValid() && this.TargetActor != this.ActorInternal;
 	}
 
-	// Token: 0x06019F36 RID: 106294 RVA: 0x006CA320 File Offset: 0x006C8520
+	// Token: 0x06017848 RID: 96328 RVA: 0x006F0C14 File Offset: 0x006EEE14
 	private void RefreshTarget()
 	{
 		ValueTuple<TsBaseCharacter, string> valueTuple = this.ResolveLockOnOrSkillTarget();
@@ -110,7 +110,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		this.TargetSocketName = item2;
 	}
 
-	// Token: 0x06019F37 RID: 106295 RVA: 0x006CA350 File Offset: 0x006C8550
+	// Token: 0x06017849 RID: 96329 RVA: 0x006F0C44 File Offset: 0x006EEE44
 	[return: TupleElementNames(new string[]
 	{
 		"Target",
@@ -173,7 +173,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		return new ValueTuple<TsBaseCharacter, string>((component != null) ? component.Actor : null, item);
 	}
 
-	// Token: 0x06019F38 RID: 106296 RVA: 0x006CA470 File Offset: 0x006C8670
+	// Token: 0x0601784A RID: 96330 RVA: 0x006F0D64 File Offset: 0x006EEF64
 	private FVector GetSelfPoint()
 	{
 		List<FName> sockets = this.Sockets;
@@ -181,7 +181,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		return GameplayCueRopeVerletPhysics.GetMeshSocketLocation(this.ActorInternal, socket);
 	}
 
-	// Token: 0x06019F39 RID: 106297 RVA: 0x006CA4AC File Offset: 0x006C86AC
+	// Token: 0x0601784B RID: 96331 RVA: 0x006F0DA0 File Offset: 0x006EEFA0
 	private FVector ComputeTargetPoint()
 	{
 		if (!this.HasTarget())
@@ -219,7 +219,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019F3A RID: 106298 RVA: 0x006CA574 File Offset: 0x006C8774
+	// Token: 0x0601784C RID: 96332 RVA: 0x006F0E68 File Offset: 0x006EF068
 	private FVector GetFallbackPoint()
 	{
 		FVector fvector = this.ActorInternal.K2_GetActorLocation();
@@ -228,7 +228,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		return new FVector(fvector.X + actorForwardVector.X * fallbackForwardOffset, fvector.Y + actorForwardVector.Y * fallbackForwardOffset, fvector.Z + actorForwardVector.Z * fallbackForwardOffset);
 	}
 
-	// Token: 0x06019F3B RID: 106299 RVA: 0x006CA5D4 File Offset: 0x006C87D4
+	// Token: 0x0601784D RID: 96333 RVA: 0x006F0EC8 File Offset: 0x006EF0C8
 	private static FVector GetMeshSocketLocation(ABaseCharacter actor, FName? socket)
 	{
 		USkeletalMeshComponent mesh = actor.Mesh;
@@ -239,7 +239,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		return actor.K2_GetActorLocation();
 	}
 
-	// Token: 0x06019F3C RID: 106300 RVA: 0x006CA608 File Offset: 0x006C8808
+	// Token: 0x0601784E RID: 96334 RVA: 0x006F0EFC File Offset: 0x006EF0FC
 	private void InitializeSpline(FVector point1, FVector point2)
 	{
 		URopeVerletComponent ropeComponent = this.RopeComponent;
@@ -252,7 +252,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		ropeComponent.SetEndPosition(point2);
 	}
 
-	// Token: 0x06019F3D RID: 106301 RVA: 0x006CA648 File Offset: 0x006C8848
+	// Token: 0x0601784F RID: 96335 RVA: 0x006F0F3C File Offset: 0x006EF13C
 	[NullableContext(2)]
 	private AActor CreateRopeActor()
 	{
@@ -269,7 +269,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		return aactor;
 	}
 
-	// Token: 0x06019F3E RID: 106302 RVA: 0x006CA6B8 File Offset: 0x006C88B8
+	// Token: 0x06017850 RID: 96336 RVA: 0x006F0FAC File Offset: 0x006EF1AC
 	private void LoadDataAssetAndSetup()
 	{
 		URopeVerletComponent comp = this.RopeComponent;
@@ -303,7 +303,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06019F3F RID: 106303 RVA: 0x006CA734 File Offset: 0x006C8934
+	// Token: 0x06017851 RID: 96337 RVA: 0x006F1028 File Offset: 0x006EF228
 	private void SetupRope(URopeVerletComponent rope, URopeVerletDataAsset dataAsset)
 	{
 		rope.ApplyDataAsset(dataAsset);
@@ -323,7 +323,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		this.RopeReady = true;
 	}
 
-	// Token: 0x06019F40 RID: 106304 RVA: 0x006CA7B8 File Offset: 0x006C89B8
+	// Token: 0x06017852 RID: 96338 RVA: 0x006F10AC File Offset: 0x006EF2AC
 	private void LoadNiagaraEffect(int generation)
 	{
 		if (this.RopeComponent == null || this.RopeActor == null)
@@ -355,7 +355,7 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06019F41 RID: 106305 RVA: 0x006CA814 File Offset: 0x006C8A14
+	// Token: 0x06017853 RID: 96339 RVA: 0x006F1108 File Offset: 0x006EF308
 	private bool ParseParamBool(string key, bool defaultValue)
 	{
 		int parametersLength = this.CueConfig.ParametersLength;
@@ -371,43 +371,43 @@ public class GameplayCueRopeVerletPhysics : GameplayCueBase
 		return defaultValue;
 	}
 
-	// Token: 0x0400C46B RID: 50283
+	// Token: 0x0400C814 RID: 51220
 	[Nullable(2)]
 	private TsBaseCharacter TargetActor;
 
-	// Token: 0x0400C46C RID: 50284
+	// Token: 0x0400C815 RID: 51221
 	private string TargetSocketName = string.Empty;
 
-	// Token: 0x0400C46D RID: 50285
+	// Token: 0x0400C816 RID: 51222
 	[Nullable(2)]
 	private List<FName> Sockets;
 
-	// Token: 0x0400C46E RID: 50286
+	// Token: 0x0400C817 RID: 51223
 	[Nullable(2)]
 	private URopeVerletComponent RopeComponent;
 
-	// Token: 0x0400C46F RID: 50287
+	// Token: 0x0400C818 RID: 51224
 	[Nullable(2)]
 	private AActor RopeActor;
 
-	// Token: 0x0400C470 RID: 50288
+	// Token: 0x0400C819 RID: 51225
 	private float FallbackForwardOffset;
 
-	// Token: 0x0400C471 RID: 50289
+	// Token: 0x0400C81A RID: 51226
 	private bool FallbackFollowActor;
 
-	// Token: 0x0400C472 RID: 50290
+	// Token: 0x0400C81B RID: 51227
 	private FVector? CachedFallbackPoint;
 
-	// Token: 0x0400C473 RID: 50291
+	// Token: 0x0400C81C RID: 51228
 	private int LoadGeneration;
 
-	// Token: 0x0400C474 RID: 50292
+	// Token: 0x0400C81D RID: 51229
 	private bool RopeReady;
 
-	// Token: 0x0400C475 RID: 50293
+	// Token: 0x0400C81E RID: 51230
 	private const string STATIC_ROPE_DATA_ASSET_PATH = "/Game/Aki/Render/RuntimeBP/RopeEffectComponent/DA/StaticRopeVerletDA.StaticRopeVerletDA";
 
-	// Token: 0x0400C476 RID: 50294
+	// Token: 0x0400C81F RID: 51231
 	private const string DYNAMIC_ROPE_DATA_ASSET_PATH = "/Game/Aki/Render/RuntimeBP/RopeEffectComponent/DA/DynamicRopeVerletDA.DynamicRopeVerletDA";
 }

@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001653 RID: 5715
+	// Token: 0x020017C1 RID: 6081
 	[EnumExtensions]
 	public enum ENpcGroupPerformInitiatorType
 	{
-		// Token: 0x04004C8E RID: 19598
+		// Token: 0x04005084 RID: 20612
 		Player
 	}
 }

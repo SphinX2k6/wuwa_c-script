@@ -6,24 +6,24 @@ using CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Canvas
 {
-	// Token: 0x020052C7 RID: 21191
+	// Token: 0x02004297 RID: 17047
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaCanvasManager
 	{
-		// Token: 0x0603633E RID: 222014 RVA: 0x00CD2A6F File Offset: 0x00CD0C6F
+		// Token: 0x0602B239 RID: 176697 RVA: 0x00C20197 File Offset: 0x00C1E397
 		public void AddAreaCanvas(IAreaCanvas areaCanvas)
 		{
 			this.AreaCanvasList.Add(areaCanvas);
 		}
 
-		// Token: 0x0603633F RID: 222015 RVA: 0x00CD2A7D File Offset: 0x00CD0C7D
+		// Token: 0x0602B23A RID: 176698 RVA: 0x00C201A5 File Offset: 0x00C1E3A5
 		public void ClearAreaCanvas()
 		{
 			this.AreaCanvasList = new List<IAreaCanvas>();
 		}
 
-		// Token: 0x06036340 RID: 222016 RVA: 0x00CD2A8C File Offset: 0x00CD0C8C
+		// Token: 0x0602B23B RID: 176699 RVA: 0x00C201B4 File Offset: 0x00C1E3B4
 		public void SortOrderAreaCanvas(List<EPhantomArenaInteractTag> tagList, ISkillTriggerInfo skillTriggerInfo, ISkillInteractMainUiInteract uiInteract)
 		{
 			foreach (IAreaCanvas areaCanvas in this.AreaCanvasList)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Canvas
 			}
 		}
 
-		// Token: 0x06036341 RID: 222017 RVA: 0x00CD2AF0 File Offset: 0x00CD0CF0
+		// Token: 0x0602B23C RID: 176700 RVA: 0x00C20218 File Offset: 0x00C1E418
 		public void ResetAreaCanvas()
 		{
 			foreach (IAreaCanvas areaCanvas in this.AreaCanvasList)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Canvas
 			}
 		}
 
-		// Token: 0x0401CAAE RID: 117422
+		// Token: 0x040174E3 RID: 95459
 		protected List<IAreaCanvas> AreaCanvasList = new List<IAreaCanvas>();
 	}
 }

@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000354 RID: 852
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200039D RID: 925
 	public class IExploreSkillMechascoutDrag : IExploreSkillInteractType
 	{
-		// Token: 0x060010E5 RID: 4325 RVA: 0x00039ED4 File Offset: 0x000380D4
+		// Token: 0x06001229 RID: 4649 RVA: 0x0003D1B8 File Offset: 0x0003B3B8
 		private IExploreSkillMechascoutDrag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060010E6 RID: 4326 RVA: 0x00039F0C File Offset: 0x0003810C
+		// Token: 0x0600122A RID: 4650 RVA: 0x0003D1F0 File Offset: 0x0003B3F0
 		public static IExploreSkillMechascoutDrag Create([Nullable(2)] IExploreSkillMechascoutDrag instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010E7 RID: 4327 RVA: 0x00039F1F File Offset: 0x0003811F
+		// Token: 0x0600122B RID: 4651 RVA: 0x0003D203 File Offset: 0x0003B403
 		public static IExploreSkillMechascoutDrag CreateFromSetValue([Nullable(2)] IExploreSkillMechascoutDrag_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010E8 RID: 4328 RVA: 0x00039F32 File Offset: 0x00038132
+		// Token: 0x0600122C RID: 4652 RVA: 0x0003D216 File Offset: 0x0003B416
 		public new IExploreSkillMechascoutDrag_SetValue ToSetValue()
 		{
 			return new IExploreSkillMechascoutDrag_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004D2 RID: 1234
-		// (get) Token: 0x060010E9 RID: 4329 RVA: 0x00039F69 File Offset: 0x00038169
-		// (set) Token: 0x060010EA RID: 4330 RVA: 0x00039F94 File Offset: 0x00038194
+		// Token: 0x17000526 RID: 1318
+		// (get) Token: 0x0600122D RID: 4653 RVA: 0x0003D24D File Offset: 0x0003B44D
+		// (set) Token: 0x0600122E RID: 4654 RVA: 0x0003D278 File Offset: 0x0003B478
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004D3 RID: 1235
-		// (get) Token: 0x060010EB RID: 4331 RVA: 0x00039FA2 File Offset: 0x000381A2
-		// (set) Token: 0x060010EC RID: 4332 RVA: 0x00039FC9 File Offset: 0x000381C9
+		// Token: 0x17000527 RID: 1319
+		// (get) Token: 0x0600122F RID: 4655 RVA: 0x0003D286 File Offset: 0x0003B486
+		// (set) Token: 0x06001230 RID: 4656 RVA: 0x0003D2AD File Offset: 0x0003B4AD
 		public virtual IMechascoutDragTypeBase DragType
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004D4 RID: 1236
-		// (get) Token: 0x060010ED RID: 4333 RVA: 0x00039FD7 File Offset: 0x000381D7
-		// (set) Token: 0x060010EE RID: 4334 RVA: 0x00039FFE File Offset: 0x000381FE
+		// Token: 0x17000528 RID: 1320
+		// (get) Token: 0x06001231 RID: 4657 RVA: 0x0003D2BB File Offset: 0x0003B4BB
+		// (set) Token: 0x06001232 RID: 4658 RVA: 0x0003D2E2 File Offset: 0x0003B4E2
 		public virtual List<int> TriggerPointList
 		{
 			get
@@ -136,20 +134,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004D5 RID: 1237
-		// (get) Token: 0x060010EF RID: 4335 RVA: 0x0003A00C File Offset: 0x0003820C
-		// (set) Token: 0x060010F0 RID: 4336 RVA: 0x0003A09F File Offset: 0x0003829F
+		// Token: 0x17000529 RID: 1321
+		// (get) Token: 0x06001233 RID: 4659 RVA: 0x0003D2F0 File Offset: 0x0003B4F0
+		// (set) Token: 0x06001234 RID: 4660 RVA: 0x0003D383 File Offset: 0x0003B583
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> FinishedActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -180,7 +178,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -189,23 +187,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E13 RID: 3603
+		// Token: 0x04000F0A RID: 3850
 		[Nullable(2)]
 		protected new IExploreSkillMechascoutDrag FbInstance;
 
-		// Token: 0x04000E14 RID: 3604
+		// Token: 0x04000F0B RID: 3851
 		[Nullable(2)]
 		protected new IExploreSkillMechascoutDrag_SetValue PocoInterface;
 
-		// Token: 0x04000E15 RID: 3605
+		// Token: 0x04000F0C RID: 3852
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _FinishedActionsCache;
 
-		// Token: 0x04000E16 RID: 3606
+		// Token: 0x04000F0D RID: 3853
 		private bool _FinishedActionsInited;
 	}
 }

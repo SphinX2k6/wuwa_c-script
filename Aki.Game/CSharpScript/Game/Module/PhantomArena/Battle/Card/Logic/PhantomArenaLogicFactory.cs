@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.PhantomArena.Battle.View;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 {
-	// Token: 0x020052C3 RID: 21187
+	// Token: 0x02004293 RID: 17043
 	public class PhantomArenaLogicFactory
 	{
-		// Token: 0x06036322 RID: 221986 RVA: 0x00CD21F4 File Offset: 0x00CD03F4
+		// Token: 0x0602B21D RID: 176669 RVA: 0x00C1F91C File Offset: 0x00C1DB1C
 		[NullableContext(1)]
 		public static PhantomArenaCardLogic CreateLogic(PhantomArenaCard card, EPhantomArenaCardType type, PhantomArenaBattleProxy viewProxy)
 		{

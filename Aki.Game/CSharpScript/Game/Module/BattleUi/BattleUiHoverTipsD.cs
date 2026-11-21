@@ -5,40 +5,40 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C7B RID: 23675
+	// Token: 0x02004C5B RID: 19547
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiHoverTipsD : IBattleUiHoverTipsD
 	{
-		// Token: 0x17008DCB RID: 36299
-		// (get) Token: 0x0603BD22 RID: 245026 RVA: 0x00E4A68C File Offset: 0x00E4888C
-		// (set) Token: 0x0603BD23 RID: 245027 RVA: 0x00E4A694 File Offset: 0x00E48894
+		// Token: 0x1700619D RID: 24989
+		// (get) Token: 0x06030C70 RID: 199792 RVA: 0x00D9AC08 File Offset: 0x00D98E08
+		// (set) Token: 0x06030C71 RID: 199793 RVA: 0x00D9AC10 File Offset: 0x00D98E10
 		public string TitleKey { get; set; }
 
-		// Token: 0x17008DCC RID: 36300
-		// (get) Token: 0x0603BD24 RID: 245028 RVA: 0x00E4A69D File Offset: 0x00E4889D
-		// (set) Token: 0x0603BD25 RID: 245029 RVA: 0x00E4A6A5 File Offset: 0x00E488A5
+		// Token: 0x1700619E RID: 24990
+		// (get) Token: 0x06030C72 RID: 199794 RVA: 0x00D9AC19 File Offset: 0x00D98E19
+		// (set) Token: 0x06030C73 RID: 199795 RVA: 0x00D9AC21 File Offset: 0x00D98E21
 		public FColor? TitleColor { get; set; }
 
-		// Token: 0x17008DCD RID: 36301
-		// (get) Token: 0x0603BD26 RID: 245030 RVA: 0x00E4A6AE File Offset: 0x00E488AE
-		// (set) Token: 0x0603BD27 RID: 245031 RVA: 0x00E4A6B6 File Offset: 0x00E488B6
+		// Token: 0x1700619F RID: 24991
+		// (get) Token: 0x06030C74 RID: 199796 RVA: 0x00D9AC2A File Offset: 0x00D98E2A
+		// (set) Token: 0x06030C75 RID: 199797 RVA: 0x00D9AC32 File Offset: 0x00D98E32
 		[Nullable(2)]
 		public string SubTitleKey { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008DCE RID: 36302
-		// (get) Token: 0x0603BD28 RID: 245032 RVA: 0x00E4A6BF File Offset: 0x00E488BF
-		// (set) Token: 0x0603BD29 RID: 245033 RVA: 0x00E4A6C7 File Offset: 0x00E488C7
+		// Token: 0x170061A0 RID: 24992
+		// (get) Token: 0x06030C76 RID: 199798 RVA: 0x00D9AC3B File Offset: 0x00D98E3B
+		// (set) Token: 0x06030C77 RID: 199799 RVA: 0x00D9AC43 File Offset: 0x00D98E43
 		public IMediumItemGridBase ItemInfo { get; set; }
 
-		// Token: 0x17008DCF RID: 36303
-		// (get) Token: 0x0603BD2A RID: 245034 RVA: 0x00E4A6D0 File Offset: 0x00E488D0
-		// (set) Token: 0x0603BD2B RID: 245035 RVA: 0x00E4A6D8 File Offset: 0x00E488D8
+		// Token: 0x170061A1 RID: 24993
+		// (get) Token: 0x06030C78 RID: 199800 RVA: 0x00D9AC4C File Offset: 0x00D98E4C
+		// (set) Token: 0x06030C79 RID: 199801 RVA: 0x00D9AC54 File Offset: 0x00D98E54
 		public List<IBattleUiHoverTipsDescInfo> DescInfoList { get; set; }
 
-		// Token: 0x17008DD0 RID: 36304
-		// (get) Token: 0x0603BD2C RID: 245036 RVA: 0x00E4A6E1 File Offset: 0x00E488E1
-		// (set) Token: 0x0603BD2D RID: 245037 RVA: 0x00E4A6E9 File Offset: 0x00E488E9
+		// Token: 0x170061A2 RID: 24994
+		// (get) Token: 0x06030C7A RID: 199802 RVA: 0x00D9AC5D File Offset: 0x00D98E5D
+		// (set) Token: 0x06030C7B RID: 199803 RVA: 0x00D9AC65 File Offset: 0x00D98E65
 		[Nullable(2)]
 		public string DescTitleKey { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

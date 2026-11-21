@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BE8 RID: 7144
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DD7 RID: 7639
 	public class IModifyMaterialConfig
 	{
-		// Token: 0x06009901 RID: 39169 RVA: 0x00160584 File Offset: 0x0015E784
+		// Token: 0x0600A22F RID: 41519 RVA: 0x0017347C File Offset: 0x0017167C
 		private IModifyMaterialConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009902 RID: 39170 RVA: 0x001605BC File Offset: 0x0015E7BC
+		// Token: 0x0600A230 RID: 41520 RVA: 0x001734B4 File Offset: 0x001716B4
 		public static IModifyMaterialConfig Create([Nullable(2)] IModifyMaterialConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009903 RID: 39171 RVA: 0x001605CF File Offset: 0x0015E7CF
+		// Token: 0x0600A231 RID: 41521 RVA: 0x001734C7 File Offset: 0x001716C7
 		public static IModifyMaterialConfig CreateFromSetValue([Nullable(2)] IModifyMaterialConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009904 RID: 39172 RVA: 0x001605E2 File Offset: 0x0015E7E2
+		// Token: 0x0600A232 RID: 41522 RVA: 0x001734DA File Offset: 0x001716DA
 		public IModifyMaterialConfig_SetValue ToSetValue()
 		{
 			return new IModifyMaterialConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FFB RID: 12283
-		// (get) Token: 0x06009905 RID: 39173 RVA: 0x001605F5 File Offset: 0x0015E7F5
-		// (set) Token: 0x06009906 RID: 39174 RVA: 0x00160620 File Offset: 0x0015E820
+		// Token: 0x17003263 RID: 12899
+		// (get) Token: 0x0600A233 RID: 41523 RVA: 0x001734ED File Offset: 0x001716ED
+		// (set) Token: 0x0600A234 RID: 41524 RVA: 0x00173518 File Offset: 0x00171718
 		public virtual EModifyActorMaterialType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D3A RID: 23866
+		// Token: 0x04006260 RID: 25184
 		[Nullable(2)]
 		protected IModifyMaterialConfig FbInstance;
 
-		// Token: 0x04005D3B RID: 23867
+		// Token: 0x04006261 RID: 25185
 		[Nullable(2)]
 		protected IModifyMaterialConfig_SetValue PocoInterface;
 	}

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200122F RID: 4655
+	// Token: 0x0200136B RID: 4971
 	public class ECheckPlayerInputTypeJsonConverter : JsonConverter<ECheckPlayerInputType>
 	{
-		// Token: 0x0600697C RID: 27004 RVA: 0x000FB720 File Offset: 0x000F9920
+		// Token: 0x06006FBD RID: 28605 RVA: 0x0010902C File Offset: 0x0010722C
 		public override ECheckPlayerInputType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ECheckPlayerInputTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600697D RID: 27005 RVA: 0x000FB744 File Offset: 0x000F9944
+		// Token: 0x06006FBE RID: 28606 RVA: 0x00109050 File Offset: 0x00107250
 		public override void Write(Utf8JsonWriter writer, ECheckPlayerInputType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

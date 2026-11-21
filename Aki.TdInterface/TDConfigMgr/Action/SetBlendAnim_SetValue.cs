@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021A4 RID: 8612
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200240F RID: 9231
 	public class SetBlendAnim_SetValue
 	{
-		// Token: 0x040070DC RID: 28892
+		// Token: 0x04007724 RID: 30500
 		public IPlayerBlendAnimTarget Target;
 
-		// Token: 0x040070DD RID: 28893
+		// Token: 0x04007725 RID: 30501
 		public IBlendAnimTypeBase BlendType;
 	}
 }

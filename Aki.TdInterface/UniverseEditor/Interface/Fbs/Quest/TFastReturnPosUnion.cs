@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042D3 RID: 17107
+	// Token: 0x02004732 RID: 18226
 	public class TFastReturnPosUnion
 	{
-		// Token: 0x17007944 RID: 31044
-		// (get) Token: 0x060195FD RID: 103933 RVA: 0x003A3F4A File Offset: 0x003A214A
-		// (set) Token: 0x060195FE RID: 103934 RVA: 0x003A3F52 File Offset: 0x003A2152
+		// Token: 0x17007F77 RID: 32631
+		// (get) Token: 0x0601AD7F RID: 109951 RVA: 0x003CF87A File Offset: 0x003CDA7A
+		// (set) Token: 0x0601AD80 RID: 109952 RVA: 0x003CF882 File Offset: 0x003CDA82
 		public TFastReturnPos Type { get; set; }
 
-		// Token: 0x17007945 RID: 31045
-		// (get) Token: 0x060195FF RID: 103935 RVA: 0x003A3F5B File Offset: 0x003A215B
-		// (set) Token: 0x06019600 RID: 103936 RVA: 0x003A3F63 File Offset: 0x003A2163
+		// Token: 0x17007F78 RID: 32632
+		// (get) Token: 0x0601AD81 RID: 109953 RVA: 0x003CF88B File Offset: 0x003CDA8B
+		// (set) Token: 0x0601AD82 RID: 109954 RVA: 0x003CF893 File Offset: 0x003CDA93
 		public object Value { get; set; }
 
-		// Token: 0x06019601 RID: 103937 RVA: 0x003A3F6C File Offset: 0x003A216C
+		// Token: 0x0601AD83 RID: 109955 RVA: 0x003CF89C File Offset: 0x003CDA9C
 		public TFastReturnPosUnion()
 		{
 			this.Type = TFastReturnPos.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019602 RID: 103938 RVA: 0x003A3F82 File Offset: 0x003A2182
+		// Token: 0x0601AD84 RID: 109956 RVA: 0x003CF8B2 File Offset: 0x003CDAB2
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019603 RID: 103939 RVA: 0x003A3F94 File Offset: 0x003A2194
+		// Token: 0x0601AD85 RID: 109957 RVA: 0x003CF8C4 File Offset: 0x003CDAC4
 		public IFastReturnEntityPosT AsIFastReturnEntityPos()
 		{
 			return this.As<IFastReturnEntityPosT>();
 		}
 
-		// Token: 0x06019604 RID: 103940 RVA: 0x003A3F9C File Offset: 0x003A219C
+		// Token: 0x0601AD86 RID: 109958 RVA: 0x003CF8CC File Offset: 0x003CDACC
 		public static TFastReturnPosUnion FromIFastReturnEntityPos(IFastReturnEntityPosT _ifastreturnentitypos)
 		{
 			return new TFastReturnPosUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019605 RID: 103941 RVA: 0x003A3FB1 File Offset: 0x003A21B1
+		// Token: 0x0601AD87 RID: 109959 RVA: 0x003CF8E1 File Offset: 0x003CDAE1
 		public IFastReturnGravityEntityPosT AsIFastReturnGravityEntityPos()
 		{
 			return this.As<IFastReturnGravityEntityPosT>();
 		}
 
-		// Token: 0x06019606 RID: 103942 RVA: 0x003A3FB9 File Offset: 0x003A21B9
+		// Token: 0x0601AD88 RID: 109960 RVA: 0x003CF8E9 File Offset: 0x003CDAE9
 		public static TFastReturnPosUnion FromIFastReturnGravityEntityPos(IFastReturnGravityEntityPosT _ifastreturngravityentitypos)
 		{
 			return new TFastReturnPosUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019607 RID: 103943 RVA: 0x003A3FD0 File Offset: 0x003A21D0
+		// Token: 0x0601AD89 RID: 109961 RVA: 0x003CF900 File Offset: 0x003CDB00
 		public static int Pack(FlatBufferBuilder builder, TFastReturnPosUnion _o)
 		{
 			TFastReturnPos type = _o.Type;

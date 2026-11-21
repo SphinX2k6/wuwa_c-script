@@ -4,15 +4,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200498B RID: 18827
+	// Token: 0x02003905 RID: 14597
 	public class MapZoomComponent : MapInteractComponentBase
 	{
-		// Token: 0x0603110E RID: 200974 RVA: 0x00B634CC File Offset: 0x00B616CC
+		// Token: 0x06025C44 RID: 154692 RVA: 0x00A9E41C File Offset: 0x00A9C61C
 		public MapZoomComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603110F RID: 200975 RVA: 0x00B634D5 File Offset: 0x00B616D5
+		// Token: 0x06025C45 RID: 154693 RVA: 0x00A9E425 File Offset: 0x00A9C625
 		[NullableContext(1)]
 		protected override void OnInputAxis(string axisName, float value)
 		{

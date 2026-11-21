@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AD9 RID: 6873
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C80 RID: 7296
 	public class IGravityControlOption : ISystemOptionType
 	{
-		// Token: 0x0600934C RID: 37708 RVA: 0x00155E68 File Offset: 0x00154068
+		// Token: 0x06009B0A RID: 39690 RVA: 0x00166688 File Offset: 0x00164888
 		private IGravityControlOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600934D RID: 37709 RVA: 0x00155EA0 File Offset: 0x001540A0
+		// Token: 0x06009B0B RID: 39691 RVA: 0x001666C0 File Offset: 0x001648C0
 		public static IGravityControlOption Create([Nullable(2)] IGravityControlOption instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600934E RID: 37710 RVA: 0x00155EB3 File Offset: 0x001540B3
+		// Token: 0x06009B0C RID: 39692 RVA: 0x001666D3 File Offset: 0x001648D3
 		public static IGravityControlOption CreateFromSetValue([Nullable(2)] IGravityControlOption_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600934F RID: 37711 RVA: 0x00155EC6 File Offset: 0x001540C6
+		// Token: 0x06009B0D RID: 39693 RVA: 0x001666E6 File Offset: 0x001648E6
 		public new IGravityControlOption_SetValue ToSetValue()
 		{
 			return new IGravityControlOption_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EB6 RID: 11958
-		// (get) Token: 0x06009350 RID: 37712 RVA: 0x00155EF1 File Offset: 0x001540F1
-		// (set) Token: 0x06009351 RID: 37713 RVA: 0x00155F1C File Offset: 0x0015411C
+		// Token: 0x170030D2 RID: 12498
+		// (get) Token: 0x06009B0E RID: 39694 RVA: 0x00166711 File Offset: 0x00164911
+		// (set) Token: 0x06009B0F RID: 39695 RVA: 0x0016673C File Offset: 0x0016493C
 		public override ESystemOptionType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EB7 RID: 11959
-		// (get) Token: 0x06009352 RID: 37714 RVA: 0x00155F2C File Offset: 0x0015412C
-		// (set) Token: 0x06009353 RID: 37715 RVA: 0x00155FBF File Offset: 0x001541BF
+		// Token: 0x170030D3 RID: 12499
+		// (get) Token: 0x06009B10 RID: 39696 RVA: 0x0016674C File Offset: 0x0016494C
+		// (set) Token: 0x06009B11 RID: 39697 RVA: 0x001667DF File Offset: 0x001649DF
 		public override List<ISystemOption> SystemOptions
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EB8 RID: 11960
-		// (get) Token: 0x06009354 RID: 37716 RVA: 0x00155FD4 File Offset: 0x001541D4
-		// (set) Token: 0x06009355 RID: 37717 RVA: 0x0015600E File Offset: 0x0015420E
+		// Token: 0x170030D4 RID: 12500
+		// (get) Token: 0x06009B12 RID: 39698 RVA: 0x001667F4 File Offset: 0x001649F4
+		// (set) Token: 0x06009B13 RID: 39699 RVA: 0x0016682E File Offset: 0x00164A2E
 		public override bool? KeepPreTalkItem
 		{
 			get
@@ -147,18 +145,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A8B RID: 23179
+		// Token: 0x04005F15 RID: 24341
 		[Nullable(2)]
 		protected new IGravityControlOption FbInstance;
 
-		// Token: 0x04005A8C RID: 23180
+		// Token: 0x04005F16 RID: 24342
 		[Nullable(2)]
 		protected new IGravityControlOption_SetValue PocoInterface;
 
-		// Token: 0x04005A8D RID: 23181
+		// Token: 0x04005F17 RID: 24343
 		private List<ISystemOption> _SystemOptionsCache;
 
-		// Token: 0x04005A8E RID: 23182
+		// Token: 0x04005F18 RID: 24344
 		private bool _SystemOptionsInited;
 	}
 }

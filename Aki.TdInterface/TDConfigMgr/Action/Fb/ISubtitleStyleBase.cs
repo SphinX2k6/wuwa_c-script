@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025C4 RID: 9668
+	// Token: 0x02002873 RID: 10355
 	public class ISubtitleStyleBase
 	{
-		// Token: 0x0600D962 RID: 55650 RVA: 0x00206C6C File Offset: 0x00204E6C
-		[NullableContext(1)]
+		// Token: 0x0600E6DC RID: 59100 RVA: 0x00222940 File Offset: 0x00220B40
 		public static ISubtitleStyleBase Create(ISubtitleStyleBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F9C RID: 16284
-		// (get) Token: 0x0600D963 RID: 55651 RVA: 0x00206C8B File Offset: 0x00204E8B
+		// Token: 0x170042A4 RID: 17060
+		// (get) Token: 0x0600E6DD RID: 59101 RVA: 0x0022295F File Offset: 0x00220B5F
 		public virtual ESubtitleStyle Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078BC RID: 30908
+		// Token: 0x04007F23 RID: 32547
 		private ISubtitleStyleBase Instance;
 	}
 }

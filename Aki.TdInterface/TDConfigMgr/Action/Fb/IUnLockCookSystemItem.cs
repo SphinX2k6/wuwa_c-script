@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200270E RID: 9998
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029D5 RID: 10709
 	public class IUnLockCookSystemItem : IUnlockSystemItemType
 	{
-		// Token: 0x0600DF11 RID: 57105 RVA: 0x00211089 File Offset: 0x0020F289
+		// Token: 0x0600ECFD RID: 60669 RVA: 0x0022DA31 File Offset: 0x0022BC31
 		public static IUnLockCookSystemItem Create(IUnLockCookSystemItem? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042B7 RID: 17079
-		// (get) Token: 0x0600DF12 RID: 57106 RVA: 0x002110A8 File Offset: 0x0020F2A8
+		// Token: 0x17004601 RID: 17921
+		// (get) Token: 0x0600ECFE RID: 60670 RVA: 0x0022DA50 File Offset: 0x0022BC50
 		public override EUnlockSystemItemType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042B8 RID: 17080
-		// (get) Token: 0x0600DF13 RID: 57107 RVA: 0x002110B5 File Offset: 0x0020F2B5
+		// Token: 0x17004602 RID: 17922
+		// (get) Token: 0x0600ECFF RID: 60671 RVA: 0x0022DA5D File Offset: 0x0022BC5D
 		public virtual IUnlockCookSystemCookBook UnlockOption
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BCA RID: 31690
+		// Token: 0x0400826F RID: 33391
 		private IUnLockCookSystemItem Instance;
 
-		// Token: 0x04007BCB RID: 31691
+		// Token: 0x04008270 RID: 33392
 		[Nullable(2)]
 		private IUnlockCookSystemCookBook _UnlockOptionCache;
 
-		// Token: 0x04007BCC RID: 31692
+		// Token: 0x04008271 RID: 33393
 		private bool _UnlockOptionInited;
 	}
 }

@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002B17 RID: 11031
+// Token: 0x02002093 RID: 8339
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct ESurvivorsLevelInfoSeqName
 {
-	// Token: 0x06016EBC RID: 93884 RVA: 0x005D1189 File Offset: 0x005CF389
+	// Token: 0x060148ED RID: 84205 RVA: 0x005FDD05 File Offset: 0x005FBF05
 	private ESurvivorsLevelInfoSeqName(string value)
 	{
 		this._Value = value;
 	}
 
-	// Token: 0x06016EBD RID: 93885 RVA: 0x005D1192 File Offset: 0x005CF392
+	// Token: 0x060148EE RID: 84206 RVA: 0x005FDD0E File Offset: 0x005FBF0E
 	public override string ToString()
 	{
 		return this._Value;
 	}
 
-	// Token: 0x0400AA6E RID: 43630
+	// Token: 0x0400AE74 RID: 44660
 	private readonly string _Value;
 
-	// Token: 0x0400AA6F RID: 43631
+	// Token: 0x0400AE75 RID: 44661
 	public static readonly ESurvivorsLevelInfoSeqName EndlessOpen = new ESurvivorsLevelInfoSeqName("EndlessOpen");
 
-	// Token: 0x0400AA70 RID: 43632
+	// Token: 0x0400AE76 RID: 44662
 	public static readonly ESurvivorsLevelInfoSeqName Unlock = new ESurvivorsLevelInfoSeqName("Unlock");
 
-	// Token: 0x0400AA71 RID: 43633
+	// Token: 0x0400AE77 RID: 44663
 	public static readonly ESurvivorsLevelInfoSeqName Complete = new ESurvivorsLevelInfoSeqName("Complete");
 }

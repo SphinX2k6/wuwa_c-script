@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045AC RID: 17836
+	// Token: 0x02004A14 RID: 18964
 	public class IRoundIndexConditionT
 	{
-		// Token: 0x17007EC5 RID: 32453
-		// (get) Token: 0x0601AF75 RID: 110453 RVA: 0x003D8930 File Offset: 0x003D6B30
-		// (set) Token: 0x0601AF76 RID: 110454 RVA: 0x003D8938 File Offset: 0x003D6B38
+		// Token: 0x17008506 RID: 34054
+		// (get) Token: 0x0601C74A RID: 116554 RVA: 0x00404BCC File Offset: 0x00402DCC
+		// (set) Token: 0x0601C74B RID: 116555 RVA: 0x00404BD4 File Offset: 0x00402DD4
 		public EDartSkillConditionType Type { get; set; }
 
-		// Token: 0x17007EC6 RID: 32454
-		// (get) Token: 0x0601AF77 RID: 110455 RVA: 0x003D8941 File Offset: 0x003D6B41
-		// (set) Token: 0x0601AF78 RID: 110456 RVA: 0x003D8949 File Offset: 0x003D6B49
+		// Token: 0x17008507 RID: 34055
+		// (get) Token: 0x0601C74C RID: 116556 RVA: 0x00404BDD File Offset: 0x00402DDD
+		// (set) Token: 0x0601C74D RID: 116557 RVA: 0x00404BE5 File Offset: 0x00402DE5
 		public int Round { get; set; }
 
-		// Token: 0x0601AF79 RID: 110457 RVA: 0x003D8952 File Offset: 0x003D6B52
+		// Token: 0x0601C74E RID: 116558 RVA: 0x00404BEE File Offset: 0x00402DEE
 		public IRoundIndexConditionT()
 		{
 			this.Type = EDartSkillConditionType.RemainScoreGe;

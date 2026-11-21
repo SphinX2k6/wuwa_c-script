@@ -5,16 +5,16 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 {
-	// Token: 0x0200710F RID: 28943
+	// Token: 0x0200633D RID: 25405
 	public class CustomInteractHandler : ManipulateInteractHandlerBase
 	{
-		// Token: 0x06046A9E RID: 289438 RVA: 0x011CA158 File Offset: 0x011C8358
+		// Token: 0x0603D8E3 RID: 252131 RVA: 0x011D2F5D File Offset: 0x011D115D
 		[NullableContext(1)]
 		public CustomInteractHandler(IManipulateInteractContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06046A9F RID: 289439 RVA: 0x011CA164 File Offset: 0x011C8364
+		// Token: 0x0603D8E4 RID: 252132 RVA: 0x011D2F68 File Offset: 0x011D1168
 		public override bool Start()
 		{
 			if (!this.Context.CheckBeforeInteract(EExploreSkillInteractType.Custom))
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			return true;
 		}
 
-		// Token: 0x06046AA0 RID: 289440 RVA: 0x011CA1CA File Offset: 0x011C83CA
+		// Token: 0x0603D8E5 RID: 252133 RVA: 0x011D2FCE File Offset: 0x011D11CE
 		public override void End()
 		{
 			this.Context.Interacting = false;

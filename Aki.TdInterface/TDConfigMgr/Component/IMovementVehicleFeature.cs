@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200053C RID: 1340
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005A3 RID: 1443
 	public class IMovementVehicleFeature : IVehicleFeature
 	{
-		// Token: 0x06001B66 RID: 7014 RVA: 0x0004F510 File Offset: 0x0004D710
+		// Token: 0x06001D62 RID: 7522 RVA: 0x000542CC File Offset: 0x000524CC
 		private IMovementVehicleFeature_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001B67 RID: 7015 RVA: 0x0004F548 File Offset: 0x0004D748
+		// Token: 0x06001D63 RID: 7523 RVA: 0x00054304 File Offset: 0x00052504
 		public static IMovementVehicleFeature Create([Nullable(2)] IMovementVehicleFeature instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001B68 RID: 7016 RVA: 0x0004F55B File Offset: 0x0004D75B
+		// Token: 0x06001D64 RID: 7524 RVA: 0x00054317 File Offset: 0x00052517
 		public static IMovementVehicleFeature CreateFromSetValue([Nullable(2)] IMovementVehicleFeature_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001B69 RID: 7017 RVA: 0x0004F56E File Offset: 0x0004D76E
+		// Token: 0x06001D65 RID: 7525 RVA: 0x0005432A File Offset: 0x0005252A
 		public new IMovementVehicleFeature_SetValue ToSetValue()
 		{
 			return new IMovementVehicleFeature_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000738 RID: 1848
-		// (get) Token: 0x06001B6A RID: 7018 RVA: 0x0004F599 File Offset: 0x0004D799
-		// (set) Token: 0x06001B6B RID: 7019 RVA: 0x0004F5C4 File Offset: 0x0004D7C4
+		// Token: 0x170007BB RID: 1979
+		// (get) Token: 0x06001D66 RID: 7526 RVA: 0x00054355 File Offset: 0x00052555
+		// (set) Token: 0x06001D67 RID: 7527 RVA: 0x00054380 File Offset: 0x00052580
 		public override EVehicleFeatureFlag Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000739 RID: 1849
-		// (get) Token: 0x06001B6C RID: 7020 RVA: 0x0004F5D4 File Offset: 0x0004D7D4
-		// (set) Token: 0x06001B6D RID: 7021 RVA: 0x0004F60E File Offset: 0x0004D80E
+		// Token: 0x170007BC RID: 1980
+		// (get) Token: 0x06001D68 RID: 7528 RVA: 0x00054390 File Offset: 0x00052590
+		// (set) Token: 0x06001D69 RID: 7529 RVA: 0x000543CA File Offset: 0x000525CA
 		public virtual int? MoveSpline
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700073A RID: 1850
-		// (get) Token: 0x06001B6E RID: 7022 RVA: 0x0004F61C File Offset: 0x0004D81C
-		// (set) Token: 0x06001B6F RID: 7023 RVA: 0x0004F67D File Offset: 0x0004D87D
+		// Token: 0x170007BD RID: 1981
+		// (get) Token: 0x06001D6A RID: 7530 RVA: 0x000543D8 File Offset: 0x000525D8
+		// (set) Token: 0x06001D6B RID: 7531 RVA: 0x00054439 File Offset: 0x00052639
 		[Nullable(2)]
 		public virtual IMovementPerformConfig MovePerformConfig
 		{
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040013C0 RID: 5056
+		// Token: 0x0400152A RID: 5418
 		[Nullable(2)]
 		protected new IMovementVehicleFeature FbInstance;
 
-		// Token: 0x040013C1 RID: 5057
+		// Token: 0x0400152B RID: 5419
 		[Nullable(2)]
 		protected new IMovementVehicleFeature_SetValue PocoInterface;
 
-		// Token: 0x040013C2 RID: 5058
+		// Token: 0x0400152C RID: 5420
 		private IMovementPerformConfig _MovePerformConfigCache;
 
-		// Token: 0x040013C3 RID: 5059
+		// Token: 0x0400152D RID: 5421
 		private bool _MovePerformConfigInited;
 	}
 }

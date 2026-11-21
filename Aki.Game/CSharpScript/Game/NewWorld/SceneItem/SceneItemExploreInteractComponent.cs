@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -28,31 +27,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200717A RID: 29050
+	// Token: 0x0200622E RID: 25134
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemExploreInteractComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x06046F39 RID: 290617 RVA: 0x011EF02C File Offset: 0x011ED22C
+		// Token: 0x0603C7BD RID: 247741 RVA: 0x0114A010 File Offset: 0x01148210
 		static SceneItemExploreInteractComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemExploreInteractComponent.CreateStaticDefaultValue), new Action(SceneItemExploreInteractComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06046F3A RID: 290618 RVA: 0x011EF0E7 File Offset: 0x011ED2E7
+		// Token: 0x0603C7BE RID: 247742 RVA: 0x0114A0CB File Offset: 0x011482CB
 		public static void CreateStaticDefaultValue()
 		{
 			SceneItemExploreInteractComponent.StatueTraceDebug = false;
 		}
 
-		// Token: 0x06046F3B RID: 290619 RVA: 0x011EF0EF File Offset: 0x011ED2EF
+		// Token: 0x0603C7BF RID: 247743 RVA: 0x0114A0D3 File Offset: 0x011482D3
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemExploreInteractComponent.StatueTraceDebug = false;
 		}
 
-		// Token: 0x17009D61 RID: 40289
-		// (get) Token: 0x06046F3C RID: 290620 RVA: 0x011EF0F8 File Offset: 0x011ED2F8
+		// Token: 0x17007244 RID: 29252
+		// (get) Token: 0x0603C7C0 RID: 247744 RVA: 0x0114A0DC File Offset: 0x011482DC
 		[Nullable(1)]
 		private UTraceBoxElement StatueInteractBoxTrace
 		{
@@ -100,8 +99,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D62 RID: 40290
-		// (get) Token: 0x06046F3D RID: 290621 RVA: 0x011EF287 File Offset: 0x011ED487
+		// Token: 0x17007245 RID: 29253
+		// (get) Token: 0x0603C7C1 RID: 247745 RVA: 0x0114A26B File Offset: 0x0114846B
 		[Nullable(1)]
 		public global::Vector Location
 		{
@@ -112,8 +111,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D63 RID: 40291
-		// (get) Token: 0x06046F3E RID: 290622 RVA: 0x011EF29E File Offset: 0x011ED49E
+		// Token: 0x17007246 RID: 29254
+		// (get) Token: 0x0603C7C2 RID: 247746 RVA: 0x0114A282 File Offset: 0x01148482
 		public long CreatureDataId
 		{
 			get
@@ -122,8 +121,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D64 RID: 40292
-		// (get) Token: 0x06046F3F RID: 290623 RVA: 0x011EF2AB File Offset: 0x011ED4AB
+		// Token: 0x17007247 RID: 29255
+		// (get) Token: 0x0603C7C3 RID: 247747 RVA: 0x0114A28F File Offset: 0x0114848F
 		public bool IsLocked
 		{
 			get
@@ -132,8 +131,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D65 RID: 40293
-		// (get) Token: 0x06046F40 RID: 290624 RVA: 0x011EF2B8 File Offset: 0x011ED4B8
+		// Token: 0x17007248 RID: 29256
+		// (get) Token: 0x0603C7C4 RID: 247748 RVA: 0x0114A29C File Offset: 0x0114849C
 		public bool IsForbidden
 		{
 			get
@@ -142,8 +141,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D66 RID: 40294
-		// (get) Token: 0x06046F41 RID: 290625 RVA: 0x011EF2C0 File Offset: 0x011ED4C0
+		// Token: 0x17007249 RID: 29257
+		// (get) Token: 0x0603C7C5 RID: 247749 RVA: 0x0114A2A4 File Offset: 0x011484A4
 		[Nullable(new byte[]
 		{
 			2,
@@ -177,8 +176,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D67 RID: 40295
-		// (get) Token: 0x06046F42 RID: 290626 RVA: 0x011EF350 File Offset: 0x011ED550
+		// Token: 0x1700724A RID: 29258
+		// (get) Token: 0x0603C7C6 RID: 247750 RVA: 0x0114A334 File Offset: 0x01148534
 		public bool OnlineTypeCanInteract
 		{
 			get
@@ -187,8 +186,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D68 RID: 40296
-		// (get) Token: 0x06046F43 RID: 290627 RVA: 0x011EF368 File Offset: 0x011ED568
+		// Token: 0x1700724B RID: 29259
+		// (get) Token: 0x0603C7C7 RID: 247751 RVA: 0x0114A34C File Offset: 0x0114854C
 		public EExploreSkillInteractType? Type
 		{
 			get
@@ -202,8 +201,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D69 RID: 40297
-		// (get) Token: 0x06046F44 RID: 290628 RVA: 0x011EF398 File Offset: 0x011ED598
+		// Token: 0x1700724C RID: 29260
+		// (get) Token: 0x0603C7C8 RID: 247752 RVA: 0x0114A37C File Offset: 0x0114857C
 		public IExploreSkillArrowInteractPoint ShootSwordOption
 		{
 			get
@@ -217,8 +216,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D6A RID: 40298
-		// (get) Token: 0x06046F45 RID: 290629 RVA: 0x011EF3C9 File Offset: 0x011ED5C9
+		// Token: 0x1700724D RID: 29261
+		// (get) Token: 0x0603C7C9 RID: 247753 RVA: 0x0114A3AD File Offset: 0x011485AD
 		public bool IsShootSwordInteractPoint
 		{
 			get
@@ -228,8 +227,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D6B RID: 40299
-		// (get) Token: 0x06046F46 RID: 290630 RVA: 0x011EF3E5 File Offset: 0x011ED5E5
+		// Token: 0x1700724E RID: 29262
+		// (get) Token: 0x0603C7CA RID: 247754 RVA: 0x0114A3C9 File Offset: 0x011485C9
 		public double? ShootSwordInteractEnterTime
 		{
 			get
@@ -238,8 +237,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D6C RID: 40300
-		// (get) Token: 0x06046F47 RID: 290631 RVA: 0x011EF3ED File Offset: 0x011ED5ED
+		// Token: 0x1700724F RID: 29263
+		// (get) Token: 0x0603C7CB RID: 247755 RVA: 0x0114A3D1 File Offset: 0x011485D1
 		public IExploreSkillMechascoutDrag MechascoutDragOption
 		{
 			get
@@ -253,7 +252,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F48 RID: 290632 RVA: 0x011EF420 File Offset: 0x011ED620
+		// Token: 0x0603C7CC RID: 247756 RVA: 0x0114A404 File Offset: 0x01148604
 		public AkiClient.Game.Aki.Data.Gameplay.MechascoutDrag.EMechascoutDragType GetUeDragType()
 		{
 			IExploreSkillMechascoutDrag mechascoutDragOption = this.MechascoutDragOption;
@@ -273,7 +272,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return AkiClient.Game.Aki.Data.Gameplay.MechascoutDrag.EMechascoutDragType.LongPress;
 		}
 
-		// Token: 0x06046F49 RID: 290633 RVA: 0x011EF454 File Offset: 0x011ED654
+		// Token: 0x0603C7CD RID: 247757 RVA: 0x0114A438 File Offset: 0x01148638
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public global::Vector FindNearestTriggerPoint(global::Vector charLocation)
@@ -304,8 +303,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return result;
 		}
 
-		// Token: 0x17009D6D RID: 40301
-		// (get) Token: 0x06046F4A RID: 290634 RVA: 0x011EF52C File Offset: 0x011ED72C
+		// Token: 0x17007250 RID: 29264
+		// (get) Token: 0x0603C7CE RID: 247758 RVA: 0x0114A510 File Offset: 0x01148710
 		public string ExploreSkillUiResource
 		{
 			get
@@ -319,7 +318,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F4B RID: 290635 RVA: 0x011EF540 File Offset: 0x011ED740
+		// Token: 0x0603C7CF RID: 247759 RVA: 0x0114A524 File Offset: 0x01148724
 		protected unsafe override bool OnInitData(IEntityArgs args = null)
 		{
 			ExploreSkillInteractComponent config = args.GetP1<CreateEntityData>().GetParam<SceneItemExploreInteractComponent>() as ExploreSkillInteractComponent;
@@ -356,7 +355,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F4C RID: 290636 RVA: 0x011EF646 File Offset: 0x011ED846
+		// Token: 0x0603C7D0 RID: 247760 RVA: 0x0114A62A File Offset: 0x0114882A
 		[NullableContext(1)]
 		private void PushCondition(IConditionGroup group)
 		{
@@ -367,7 +366,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ConditionGroups.Add(group);
 		}
 
-		// Token: 0x06046F4D RID: 290637 RVA: 0x011EF668 File Offset: 0x011ED868
+		// Token: 0x0603C7D1 RID: 247761 RVA: 0x0114A64C File Offset: 0x0114884C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -411,7 +410,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F4E RID: 290638 RVA: 0x011EF7CC File Offset: 0x011ED9CC
+		// Token: 0x0603C7D2 RID: 247762 RVA: 0x0114A7B0 File Offset: 0x011489B0
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.Has<EAddEntityType, EntityHandle, AActor>(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnAddEntity)))
@@ -427,7 +426,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F4F RID: 290639 RVA: 0x011EF82C File Offset: 0x011EDA2C
+		// Token: 0x0603C7D3 RID: 247763 RVA: 0x0114A810 File Offset: 0x01148A10
 		private void InitIgnoreActorsAndEntities()
 		{
 			ExploreSkillInteractComponent config = this.Config;
@@ -495,7 +494,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F50 RID: 290640 RVA: 0x011EFA24 File Offset: 0x011EDC24
+		// Token: 0x0603C7D4 RID: 247764 RVA: 0x0114AA08 File Offset: 0x01148C08
 		[NullableContext(1)]
 		public bool CheckTraceResult(bool checkResult, UTraceBaseElement element)
 		{
@@ -526,7 +525,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06046F51 RID: 290641 RVA: 0x011EFACB File Offset: 0x011EDCCB
+		// Token: 0x0603C7D5 RID: 247765 RVA: 0x0114AAAF File Offset: 0x01148CAF
 		protected override void OnTick(float delta)
 		{
 			if (this.Config.Option.Type == EExploreSkillInteractType.PullStatue)
@@ -535,7 +534,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F52 RID: 290642 RVA: 0x011EFAE8 File Offset: 0x011EDCE8
+		// Token: 0x0603C7D6 RID: 247766 RVA: 0x0114AACC File Offset: 0x01148CCC
 		private void OnSceneInteractionLoadCompleted()
 		{
 			SceneInteractionActor sceneInteractionActor = this.ActorComp.GetInteractionMainActor() as SceneInteractionActor;
@@ -571,7 +570,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ChangeManipulateInteractPointState(SceneItemExploreInteractComponent.EManipulateInteractPointState.Normal);
 		}
 
-		// Token: 0x06046F53 RID: 290643 RVA: 0x011EFB74 File Offset: 0x011EDD74
+		// Token: 0x0603C7D7 RID: 247767 RVA: 0x0114AB58 File Offset: 0x01148D58
 		private void InitMarkTag()
 		{
 			switch (this.Config.Option.Type)
@@ -614,8 +613,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D6E RID: 40302
-		// (get) Token: 0x06046F54 RID: 290644 RVA: 0x011EFCCB File Offset: 0x011EDECB
+		// Token: 0x17007251 RID: 29265
+		// (get) Token: 0x0603C7D8 RID: 247768 RVA: 0x0114ACAF File Offset: 0x01148EAF
 		public int? MarkTagId
 		{
 			get
@@ -624,7 +623,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F55 RID: 290645 RVA: 0x011EFCD4 File Offset: 0x011EDED4
+		// Token: 0x0603C7D9 RID: 247769 RVA: 0x0114ACB8 File Offset: 0x01148EB8
 		private void InitStatueInteractPoint()
 		{
 			if (this.Config == null || this.Config.Option.Type != EExploreSkillInteractType.PullStatue)
@@ -643,7 +642,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdateStatueInteractPoint();
 		}
 
-		// Token: 0x06046F56 RID: 290646 RVA: 0x011EFD84 File Offset: 0x011EDF84
+		// Token: 0x0603C7DA RID: 247770 RVA: 0x0114AD68 File Offset: 0x01148F68
 		private unsafe void UpdateStatueInteractPoint()
 		{
 			if (this.StatueInteractPoint == null || this.Config == null || this.Config.Option.Type != EExploreSkillInteractType.PullStatue)
@@ -687,7 +686,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F57 RID: 290647 RVA: 0x011EFF5C File Offset: 0x011EE15C
+		// Token: 0x0603C7DB RID: 247771 RVA: 0x0114AF40 File Offset: 0x01149140
 		[NullableContext(1)]
 		private void OnAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
@@ -699,7 +698,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F58 RID: 290648 RVA: 0x011EFF9C File Offset: 0x011EE19C
+		// Token: 0x0603C7DC RID: 247772 RVA: 0x0114AF80 File Offset: 0x01149180
 		[NullableContext(1)]
 		private bool CheckStatueInteractPoint(EntityHandle handle)
 		{
@@ -725,7 +724,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F59 RID: 290649 RVA: 0x011F0028 File Offset: 0x011EE228
+		// Token: 0x0603C7DD RID: 247773 RVA: 0x0114B00C File Offset: 0x0114920C
 		[NullableContext(1)]
 		private bool CheckIgnoreEntities(EntityHandle handle)
 		{
@@ -745,8 +744,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.WaitIgnoreEntities.Count == 0;
 		}
 
-		// Token: 0x17009D6F RID: 40303
-		// (get) Token: 0x06046F5A RID: 290650 RVA: 0x011F00A0 File Offset: 0x011EE2A0
+		// Token: 0x17007252 RID: 29266
+		// (get) Token: 0x0603C7DE RID: 247774 RVA: 0x0114B084 File Offset: 0x01149284
 		public double PullTime
 		{
 			get
@@ -764,8 +763,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D70 RID: 40304
-		// (get) Token: 0x06046F5B RID: 290651 RVA: 0x011F00FE File Offset: 0x011EE2FE
+		// Token: 0x17007253 RID: 29267
+		// (get) Token: 0x0603C7DF RID: 247775 RVA: 0x0114B0E2 File Offset: 0x011492E2
 		[Nullable(new byte[]
 		{
 			2,
@@ -789,7 +788,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F5C RID: 290652 RVA: 0x011F0114 File Offset: 0x011EE314
+		// Token: 0x0603C7E0 RID: 247776 RVA: 0x0114B0F8 File Offset: 0x011492F8
 		private void OnPlayerOverlapCallback(bool isEnter)
 		{
 			EExploreSkillInteractType type = this.Config.Option.Type;
@@ -813,7 +812,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F5D RID: 290653 RVA: 0x011F01B4 File Offset: 0x011EE3B4
+		// Token: 0x0603C7E1 RID: 247777 RVA: 0x0114B198 File Offset: 0x01149398
 		protected override bool OnClear()
 		{
 			CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent rangeComp = this.RangeComp;
@@ -824,19 +823,30 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F5E RID: 290654 RVA: 0x011F01D4 File Offset: 0x011EE3D4
+		// Token: 0x0603C7E2 RID: 247778 RVA: 0x0114B1B8 File Offset: 0x011493B8
 		public bool CheckCondition()
 		{
-			return this.ConditionGroups == null || this.ConditionGroups.Count == 0 || this.ConditionGroups.All((IConditionGroup conditionGroup) => LevelGeneralController.Instance.CheckConditionNew(conditionGroup, this.ActorComp.Owner, EntityContext.Create(base.Entity.Id, null), null));
+			if (this.ConditionGroups == null || this.ConditionGroups.Count == 0)
+			{
+				return true;
+			}
+			foreach (IConditionGroup conditionGroup in this.ConditionGroups)
+			{
+				if (!LevelGeneralController.Instance.CheckConditionNew(conditionGroup, this.ActorComp.Owner, EntityContext.Create(base.Entity.Id, null), null))
+				{
+					return false;
+				}
+			}
+			return true;
 		}
 
-		// Token: 0x06046F5F RID: 290655 RVA: 0x011F0204 File Offset: 0x011EE404
+		// Token: 0x0603C7E3 RID: 247779 RVA: 0x0114B260 File Offset: 0x01149460
 		public bool TypeSpecialCheck()
 		{
 			return this.Config.Option.Type != EExploreSkillInteractType.StatueInteractPoint || this.StatueInteractPointCheck();
 		}
 
-		// Token: 0x06046F60 RID: 290656 RVA: 0x011F0221 File Offset: 0x011EE421
+		// Token: 0x0603C7E4 RID: 247780 RVA: 0x0114B27D File Offset: 0x0114947D
 		public void TryChangeManipulateInteractPointState(SceneItemExploreInteractComponent.EManipulateInteractPointState newState)
 		{
 			if (this.IsForbidByCustomCondition)
@@ -846,7 +856,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ChangeManipulateInteractPointState(newState);
 		}
 
-		// Token: 0x06046F61 RID: 290657 RVA: 0x011F0234 File Offset: 0x011EE434
+		// Token: 0x0603C7E5 RID: 247781 RVA: 0x0114B290 File Offset: 0x01149490
 		[NullableContext(1)]
 		public bool IsShootSwordInteractTooClose(global::Vector charLoc)
 		{
@@ -854,7 +864,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return shootSwordOption != null && global::Vector.DistSquared(charLoc, this.Location) < (double)(shootSwordOption.MinDistance * shootSwordOption.MinDistance);
 		}
 
-		// Token: 0x06046F62 RID: 290658 RVA: 0x011F026C File Offset: 0x011EE46C
+		// Token: 0x0603C7E6 RID: 247782 RVA: 0x0114B2C8 File Offset: 0x011494C8
 		private void ChangeManipulateInteractPointState(SceneItemExploreInteractComponent.EManipulateInteractPointState newState)
 		{
 			if (!base.Valid)
@@ -870,7 +880,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TagComp.AddTag(new int?(SceneItemExploreInteractComponent.manipulateInteractPointPointStateTagMap.GetValueOrDefault(this.State, 0)));
 		}
 
-		// Token: 0x06046F63 RID: 290659 RVA: 0x011F02D8 File Offset: 0x011EE4D8
+		// Token: 0x0603C7E7 RID: 247783 RVA: 0x0114B334 File Offset: 0x01149534
 		[NullableContext(1)]
 		public double GetLockWeight(global::Vector charLoc)
 		{
@@ -892,7 +902,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return 0.0;
 		}
 
-		// Token: 0x06046F64 RID: 290660 RVA: 0x011F0334 File Offset: 0x011EE534
+		// Token: 0x0603C7E8 RID: 247784 RVA: 0x0114B390 File Offset: 0x01149590
 		[NullableContext(1)]
 		public double CalcAngleWeight(global::Vector charLoc)
 		{
@@ -922,7 +932,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return num * num4;
 		}
 
-		// Token: 0x06046F65 RID: 290661 RVA: 0x011F0484 File Offset: 0x011EE684
+		// Token: 0x0603C7E9 RID: 247785 RVA: 0x0114B4E0 File Offset: 0x011496E0
 		private void PullStatueTick(float delta)
 		{
 			if (this.StatueInteractPoint == null)
@@ -965,7 +975,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.StatueInteractPoint.AttachStatueInteractPoint = aactor;
 		}
 
-		// Token: 0x06046F66 RID: 290662 RVA: 0x011F05DC File Offset: 0x011EE7DC
+		// Token: 0x0603C7EA RID: 247786 RVA: 0x0114B638 File Offset: 0x01149838
 		[NullableContext(1)]
 		public void StartMove(global::Vector targetLoc, global::Rotator targetRot, float time)
 		{
@@ -1007,21 +1017,21 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.MoveComp.AddSimpleRotation(this.ActorComp.Owner, this.ActorComp.ActorRotationProxy, targetRot, time);
 		}
 
-		// Token: 0x06046F67 RID: 290663 RVA: 0x011F06D9 File Offset: 0x011EE8D9
+		// Token: 0x0603C7EB RID: 247787 RVA: 0x0114B735 File Offset: 0x01149935
 		public void StartInteractPullStatue()
 		{
 			this.IsInteracting = true;
 			this.ChooseBestOutlet = this.CurBestOutlet;
 		}
 
-		// Token: 0x06046F68 RID: 290664 RVA: 0x011F06EE File Offset: 0x011EE8EE
+		// Token: 0x0603C7EC RID: 247788 RVA: 0x0114B74A File Offset: 0x0114994A
 		public void EndInteractPullStatue()
 		{
 			this.IsInteracting = false;
 			this.ChooseBestOutlet = null;
 		}
 
-		// Token: 0x06046F69 RID: 290665 RVA: 0x011F0700 File Offset: 0x011EE900
+		// Token: 0x0603C7ED RID: 247789 RVA: 0x0114B75C File Offset: 0x0114995C
 		[NullableContext(1)]
 		public bool TraceToOutlet(global::Vector targetLoc, global::Rotator targetRot)
 		{
@@ -1068,8 +1078,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x17009D71 RID: 40305
-		// (get) Token: 0x06046F6A RID: 290666 RVA: 0x011F0826 File Offset: 0x011EEA26
+		// Token: 0x17007254 RID: 29268
+		// (get) Token: 0x0603C7EE RID: 247790 RVA: 0x0114B882 File Offset: 0x01149A82
 		[Nullable(new byte[]
 		{
 			2,
@@ -1092,9 +1102,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D72 RID: 40306
-		// (get) Token: 0x06046F6B RID: 290667 RVA: 0x011F0852 File Offset: 0x011EEA52
-		// (set) Token: 0x06046F6C RID: 290668 RVA: 0x011F085C File Offset: 0x011EEA5C
+		// Token: 0x17007255 RID: 29269
+		// (get) Token: 0x0603C7EF RID: 247791 RVA: 0x0114B8AE File Offset: 0x01149AAE
+		// (set) Token: 0x0603C7F0 RID: 247792 RVA: 0x0114B8B8 File Offset: 0x01149AB8
 		public AActor AttachStatueInteractPoint
 		{
 			get
@@ -1137,7 +1147,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F6D RID: 290669 RVA: 0x011F08CC File Offset: 0x011EEACC
+		// Token: 0x0603C7F1 RID: 247793 RVA: 0x0114B928 File Offset: 0x01149B28
 		public void MoveToOutlet()
 		{
 			if (this.Type.GetValueOrDefault() != EExploreSkillInteractType.StatueInteractPoint)
@@ -1157,7 +1167,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CurBestOutlet = null;
 		}
 
-		// Token: 0x06046F6E RID: 290670 RVA: 0x011F0990 File Offset: 0x011EEB90
+		// Token: 0x0603C7F2 RID: 247794 RVA: 0x0114B9EC File Offset: 0x01149BEC
 		private bool StatueInteractPointCheck()
 		{
 			if (this.IsInteracting)
@@ -1271,7 +1281,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.CurBestOutlet != null;
 		}
 
-		// Token: 0x06046F6F RID: 290671 RVA: 0x011F0CF8 File Offset: 0x011EEEF8
+		// Token: 0x0603C7F3 RID: 247795 RVA: 0x0114BD54 File Offset: 0x01149F54
 		public void SaveAndDisableActorCollision()
 		{
 			if (this.MechascoutSavedCollisionMap != null)
@@ -1300,7 +1310,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F70 RID: 290672 RVA: 0x011F0DAC File Offset: 0x011EEFAC
+		// Token: 0x0603C7F4 RID: 247796 RVA: 0x0114BE08 File Offset: 0x0114A008
 		public void RestoreActorCollision()
 		{
 			if (this.MechascoutSavedCollisionMap == null)
@@ -1322,21 +1332,21 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.MechascoutSavedCollisionMap = null;
 		}
 
-		// Token: 0x06046F71 RID: 290673 RVA: 0x011F0E2C File Offset: 0x011EF02C
+		// Token: 0x0603C7F5 RID: 247797 RVA: 0x0114BE88 File Offset: 0x0114A088
 		private void OnInteractiveConditionChange(bool result)
 		{
 			this.IsForbidByCustomCondition = !result;
 			this.ChangeManipulateInteractPointState(result ? SceneItemExploreInteractComponent.EManipulateInteractPointState.Normal : SceneItemExploreInteractComponent.EManipulateInteractPointState.NonInteractive);
 		}
 
-		// Token: 0x06046F72 RID: 290674 RVA: 0x011F0E45 File Offset: 0x011EF045
+		// Token: 0x0603C7F6 RID: 247798 RVA: 0x0114BEA1 File Offset: 0x0114A0A1
 		private void ResetForbidByCondition()
 		{
 			this.IsForbidByCustomCondition = false;
 			this.ChangeManipulateInteractPointState(SceneItemExploreInteractComponent.EManipulateInteractPointState.Normal);
 		}
 
-		// Token: 0x06046F73 RID: 290675 RVA: 0x011F0E58 File Offset: 0x011EF058
+		// Token: 0x0603C7F7 RID: 247799 RVA: 0x0114BEB4 File Offset: 0x0114A0B4
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -1345,311 +1355,264 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemExploreInteractComponent sceneItemExploreInteractComponent = (SceneItemExploreInteractComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemExploreInteractComponent.Config == null)
 			{
-				if (sceneItemExploreInteractComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ExploreSkillInteractComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemExploreInteractComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (sceneItemExploreInteractComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PropertyComp"))
-			{
-				if (sceneItemExploreInteractComponent.PropertyComp == null)
-				{
-					this.PropertyComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.PropertyComp), "PropertyComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RangeComp"))
-			{
-				if (sceneItemExploreInteractComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MoveComp"))
-			{
-				if (sceneItemExploreInteractComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ConditionGroups"))
-			{
-				if (sceneItemExploreInteractComponent.ConditionGroups == null)
-				{
-					this.ConditionGroups = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<IConditionGroup>>(this.ConditionGroups), "ConditionGroups"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemExploreInteractComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("State"))
-			{
-				this.State = sceneItemExploreInteractComponent.State;
-			}
-			if (base.CanResetComponentProperty("MarkTagIdInternal"))
-			{
-				this.MarkTagIdInternal = sceneItemExploreInteractComponent.MarkTagIdInternal;
-			}
-			if (base.CanResetComponentProperty("OnlineType"))
-			{
-				this.OnlineType = sceneItemExploreInteractComponent.OnlineType;
-			}
-			if (base.CanResetComponentProperty("InteractPointPbDataId"))
-			{
-				this.InteractPointPbDataId = sceneItemExploreInteractComponent.InteractPointPbDataId;
-			}
-			if (base.CanResetComponentProperty("StatueInteractPoint"))
-			{
-				if (sceneItemExploreInteractComponent.StatueInteractPoint == null)
-				{
-					this.StatueInteractPoint = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemExploreInteractComponent>(this.StatueInteractPoint), "StatueInteractPoint"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HangPointDataSet"))
-			{
-				if (sceneItemExploreInteractComponent.HangPointDataSet == null)
-				{
-					this.HangPointDataSet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemExploreInteractComponent.HangPointData>(this.HangPointDataSet), "HangPointDataSet"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsMoving"))
-			{
-				this.IsMoving = sceneItemExploreInteractComponent.IsMoving;
-			}
-			if (base.CanResetComponentProperty("TargetOutlet"))
-			{
-				if (sceneItemExploreInteractComponent.TargetOutlet == null)
-				{
-					this.TargetOutlet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemGenericOutletComponent>(this.TargetOutlet), "TargetOutlet"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurAttachStatueInteractPoint"))
-			{
-				if (sceneItemExploreInteractComponent.CurAttachStatueInteractPoint == null)
-				{
-					this.CurAttachStatueInteractPoint = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.CurAttachStatueInteractPoint), "CurAttachStatueInteractPoint"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("AttachParent"))
-			{
-				if (sceneItemExploreInteractComponent.AttachParent == null)
-				{
-					this.AttachParent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemExploreInteractComponent>(this.AttachParent), "AttachParent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("QueryEntityResultCache") && sceneItemExploreInteractComponent.QueryEntityResultCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<EntityHandle>>(this.QueryEntityResultCache), "QueryEntityResultCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CurBestOutlet"))
+			if (sceneItemExploreInteractComponent.ActorComp == null)
 			{
-				if (sceneItemExploreInteractComponent.CurBestOutlet == null)
-				{
-					this.CurBestOutlet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemGenericOutletComponent>(this.CurBestOutlet), "CurBestOutlet"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ChooseBestOutlet"))
-			{
-				if (sceneItemExploreInteractComponent.ChooseBestOutlet == null)
-				{
-					this.ChooseBestOutlet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemGenericOutletComponent>(this.ChooseBestOutlet), "ChooseBestOutlet"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsInteracting"))
-			{
-				this.IsInteracting = sceneItemExploreInteractComponent.IsInteracting;
-			}
-			if (base.CanResetComponentProperty("MechascoutSavedCollisionMap"))
-			{
-				if (sceneItemExploreInteractComponent.MechascoutSavedCollisionMap == null)
-				{
-					this.MechascoutSavedCollisionMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<AActor, bool>>(this.MechascoutSavedCollisionMap), "MechascoutSavedCollisionMap"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OverwriteLocation"))
-			{
-				if (sceneItemExploreInteractComponent.OverwriteLocation == null)
-				{
-					this.OverwriteLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.OverwriteLocation), "OverwriteLocation"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsForbidByCustomCondition"))
-			{
-				this.IsForbidByCustomCondition = sceneItemExploreInteractComponent.IsForbidByCustomCondition;
-			}
-			if (base.CanResetComponentProperty("CustomConditionListener"))
-			{
-				if (sceneItemExploreInteractComponent.CustomConditionListener == null)
-				{
-					this.CustomConditionListener = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomConditionListener>(this.CustomConditionListener), "CustomConditionListener"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ShootSwordInteractEnterTimeInternal"))
-			{
-				this.ShootSwordInteractEnterTimeInternal = sceneItemExploreInteractComponent.ShootSwordInteractEnterTimeInternal;
-			}
-			if (base.CanResetComponentProperty("ActorSubsystem"))
-			{
-				if (sceneItemExploreInteractComponent.ActorSubsystem == null)
-				{
-					this.ActorSubsystem = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroActorSubsystem>(this.ActorSubsystem), "ActorSubsystem"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OnCollisionActorAdd"))
-			{
-				if (sceneItemExploreInteractComponent.OnCollisionActorAdd == null)
-				{
-					this.OnCollisionActorAdd = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<FName>>(this.OnCollisionActorAdd), "OnCollisionActorAdd"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IgnoreActors") && sceneItemExploreInteractComponent.IgnoreActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.IgnoreActors), "IgnoreActors"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("WaitIgnoreActors") && sceneItemExploreInteractComponent.WaitIgnoreActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.WaitIgnoreActors), "WaitIgnoreActors"))
+			if (sceneItemExploreInteractComponent.CreatureDataComp == null)
+			{
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IgnoreEntities") && sceneItemExploreInteractComponent.IgnoreEntities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.IgnoreEntities), "IgnoreEntities"))
+			if (sceneItemExploreInteractComponent.PropertyComp == null)
+			{
+				this.PropertyComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PropertyComp), "PropertyComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("WaitIgnoreEntities") && sceneItemExploreInteractComponent.WaitIgnoreEntities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.WaitIgnoreEntities), "WaitIgnoreEntities"))
+			if (sceneItemExploreInteractComponent.RangeComp == null)
+			{
+				this.RangeComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("BoxTraceBoundSize") && sceneItemExploreInteractComponent.BoxTraceBoundSize != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.BoxTraceBoundSize), "BoxTraceBoundSize"))
+			if (sceneItemExploreInteractComponent.MoveComp == null)
+			{
+				this.MoveComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("StatueInteractBoxTraceInternal"))
+			if (sceneItemExploreInteractComponent.ConditionGroups == null)
 			{
-				if (sceneItemExploreInteractComponent.StatueInteractBoxTraceInternal == null)
-				{
-					this.StatueInteractBoxTraceInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceBoxElement>(this.StatueInteractBoxTraceInternal), "StatueInteractBoxTraceInternal"))
-				{
-					return false;
-				}
+				this.ConditionGroups = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConditionGroups), "ConditionGroups"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			this.State = sceneItemExploreInteractComponent.State;
+			this.MarkTagIdInternal = sceneItemExploreInteractComponent.MarkTagIdInternal;
+			this.OnlineType = sceneItemExploreInteractComponent.OnlineType;
+			this.InteractPointPbDataId = sceneItemExploreInteractComponent.InteractPointPbDataId;
+			if (sceneItemExploreInteractComponent.StatueInteractPoint == null)
+			{
+				this.StatueInteractPoint = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatueInteractPoint), "StatueInteractPoint"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.HangPointDataSet == null)
+			{
+				this.HangPointDataSet = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemExploreInteractComponent.HangPointData>(this.HangPointDataSet), "HangPointDataSet"))
+			{
+				return false;
+			}
+			this.IsMoving = sceneItemExploreInteractComponent.IsMoving;
+			if (sceneItemExploreInteractComponent.TargetOutlet == null)
+			{
+				this.TargetOutlet = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetOutlet), "TargetOutlet"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.CurAttachStatueInteractPoint == null)
+			{
+				this.CurAttachStatueInteractPoint = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurAttachStatueInteractPoint), "CurAttachStatueInteractPoint"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.AttachParent == null)
+			{
+				this.AttachParent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttachParent), "AttachParent"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.QueryEntityResultCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.QueryEntityResultCache), "QueryEntityResultCache"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.CurBestOutlet == null)
+			{
+				this.CurBestOutlet = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurBestOutlet), "CurBestOutlet"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.ChooseBestOutlet == null)
+			{
+				this.ChooseBestOutlet = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChooseBestOutlet), "ChooseBestOutlet"))
+			{
+				return false;
+			}
+			this.IsInteracting = sceneItemExploreInteractComponent.IsInteracting;
+			if (sceneItemExploreInteractComponent.MechascoutSavedCollisionMap == null)
+			{
+				this.MechascoutSavedCollisionMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MechascoutSavedCollisionMap), "MechascoutSavedCollisionMap"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.OverwriteLocation == null)
+			{
+				this.OverwriteLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OverwriteLocation), "OverwriteLocation"))
+			{
+				return false;
+			}
+			this.IsForbidByCustomCondition = sceneItemExploreInteractComponent.IsForbidByCustomCondition;
+			if (sceneItemExploreInteractComponent.CustomConditionListener == null)
+			{
+				this.CustomConditionListener = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CustomConditionListener), "CustomConditionListener"))
+			{
+				return false;
+			}
+			this.ShootSwordInteractEnterTimeInternal = sceneItemExploreInteractComponent.ShootSwordInteractEnterTimeInternal;
+			if (sceneItemExploreInteractComponent.ActorSubsystem == null)
+			{
+				this.ActorSubsystem = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorSubsystem), "ActorSubsystem"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.OnCollisionActorAdd == null)
+			{
+				this.OnCollisionActorAdd = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnCollisionActorAdd), "OnCollisionActorAdd"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.IgnoreActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.IgnoreActors), "IgnoreActors"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.WaitIgnoreActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.WaitIgnoreActors), "WaitIgnoreActors"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.IgnoreEntities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.IgnoreEntities), "IgnoreEntities"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.WaitIgnoreEntities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.WaitIgnoreEntities), "WaitIgnoreEntities"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.BoxTraceBoundSize != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BoxTraceBoundSize), "BoxTraceBoundSize"))
+			{
+				return false;
+			}
+			if (sceneItemExploreInteractComponent.StatueInteractBoxTraceInternal == null)
+			{
+				this.StatueInteractBoxTraceInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatueInteractBoxTraceInternal), "StatueInteractBoxTraceInternal"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025443 RID: 152643
+		// Token: 0x17007256 RID: 29270
+		// (get) Token: 0x0603C7F8 RID: 247800 RVA: 0x0114C387 File Offset: 0x0114A587
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007257 RID: 29271
+		// (get) Token: 0x0603C7F9 RID: 247801 RVA: 0x0114C38A File Offset: 0x0114A58A
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007258 RID: 29272
+		// (get) Token: 0x0603C7FA RID: 247802 RVA: 0x0114C38D File Offset: 0x0114A58D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007259 RID: 29273
+		// (get) Token: 0x0603C7FB RID: 247803 RVA: 0x0114C390 File Offset: 0x0114A590
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040200AA RID: 131242
 		[StaticVariableRuleIgnore]
 		private static readonly double OUTLET_ANGLE_LIMIT_COS_VALUE = Math.Cos(0.5235987755982988);
 
-		// Token: 0x04025444 RID: 152644
+		// Token: 0x040200AB RID: 131243
 		private const double DEFAULT_MAX_DISTANCE = 60.0;
 
-		// Token: 0x04025445 RID: 152645
+		// Token: 0x040200AC RID: 131244
 		[Nullable(1)]
 		private const string OVERWRITE_HOOK_LOCATION_KEY = "OverwriteLocation";
 
-		// Token: 0x04025446 RID: 152646
+		// Token: 0x040200AD RID: 131245
 		public static bool StatueTraceDebug = false;
 
-		// Token: 0x04025447 RID: 152647
+		// Token: 0x040200AE RID: 131246
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<SceneItemExploreInteractComponent.EManipulateInteractPointState, int> manipulateInteractPointPointStateTagMap = new Dictionary<SceneItemExploreInteractComponent.EManipulateInteractPointState, int>
@@ -1676,25 +1639,25 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		};
 
-		// Token: 0x04025448 RID: 152648
+		// Token: 0x040200AF RID: 131247
 		private ExploreSkillInteractComponent Config;
 
-		// Token: 0x04025449 RID: 152649
+		// Token: 0x040200B0 RID: 131248
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x0402544A RID: 152650
+		// Token: 0x040200B1 RID: 131249
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x0402544B RID: 152651
+		// Token: 0x040200B2 RID: 131250
 		private SceneItemPropertyComponent PropertyComp;
 
-		// Token: 0x0402544C RID: 152652
+		// Token: 0x040200B3 RID: 131251
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x0402544D RID: 152653
+		// Token: 0x040200B4 RID: 131252
 		private SceneItemMoveComponent MoveComp;
 
-		// Token: 0x0402544E RID: 152654
+		// Token: 0x040200B5 RID: 131253
 		[Nullable(new byte[]
 		{
 			2,
@@ -1702,54 +1665,54 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private List<IConditionGroup> ConditionGroups;
 
-		// Token: 0x0402544F RID: 152655
+		// Token: 0x040200B6 RID: 131254
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04025450 RID: 152656
+		// Token: 0x040200B7 RID: 131255
 		private SceneItemExploreInteractComponent.EManipulateInteractPointState State = SceneItemExploreInteractComponent.EManipulateInteractPointState.None;
 
-		// Token: 0x04025451 RID: 152657
+		// Token: 0x040200B8 RID: 131256
 		private int? MarkTagIdInternal;
 
-		// Token: 0x04025452 RID: 152658
+		// Token: 0x040200B9 RID: 131257
 		private EOnlineInteractType? OnlineType;
 
-		// Token: 0x04025453 RID: 152659
+		// Token: 0x040200BA RID: 131258
 		private int InteractPointPbDataId = -1;
 
-		// Token: 0x04025454 RID: 152660
+		// Token: 0x040200BB RID: 131259
 		private SceneItemExploreInteractComponent StatueInteractPoint;
 
-		// Token: 0x04025455 RID: 152661
+		// Token: 0x040200BC RID: 131260
 		[Nullable(1)]
 		public HashSet<SceneItemExploreInteractComponent.HangPointData> HangPointDataSet = new HashSet<SceneItemExploreInteractComponent.HangPointData>();
 
-		// Token: 0x04025456 RID: 152662
+		// Token: 0x040200BD RID: 131261
 		public bool IsMoving;
 
-		// Token: 0x04025457 RID: 152663
+		// Token: 0x040200BE RID: 131262
 		private SceneItemGenericOutletComponent TargetOutlet;
 
-		// Token: 0x04025458 RID: 152664
+		// Token: 0x040200BF RID: 131263
 		private AActor CurAttachStatueInteractPoint;
 
-		// Token: 0x04025459 RID: 152665
+		// Token: 0x040200C0 RID: 131264
 		public SceneItemExploreInteractComponent AttachParent;
 
-		// Token: 0x0402545A RID: 152666
+		// Token: 0x040200C1 RID: 131265
 		[Nullable(1)]
 		private readonly List<EntityHandle> QueryEntityResultCache = new List<EntityHandle>();
 
-		// Token: 0x0402545B RID: 152667
+		// Token: 0x040200C2 RID: 131266
 		private SceneItemGenericOutletComponent CurBestOutlet;
 
-		// Token: 0x0402545C RID: 152668
+		// Token: 0x040200C3 RID: 131267
 		private SceneItemGenericOutletComponent ChooseBestOutlet;
 
-		// Token: 0x0402545D RID: 152669
+		// Token: 0x040200C4 RID: 131268
 		private bool IsInteracting;
 
-		// Token: 0x0402545E RID: 152670
+		// Token: 0x040200C5 RID: 131269
 		[Nullable(new byte[]
 		{
 			2,
@@ -1757,77 +1720,77 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<AActor, bool> MechascoutSavedCollisionMap;
 
-		// Token: 0x0402545F RID: 152671
+		// Token: 0x040200C6 RID: 131270
 		private global::Vector OverwriteLocation;
 
-		// Token: 0x04025460 RID: 152672
+		// Token: 0x040200C7 RID: 131271
 		private bool IsForbidByCustomCondition;
 
-		// Token: 0x04025461 RID: 152673
+		// Token: 0x040200C8 RID: 131272
 		private CustomConditionListener CustomConditionListener;
 
-		// Token: 0x04025462 RID: 152674
+		// Token: 0x040200C9 RID: 131273
 		private double? ShootSwordInteractEnterTimeInternal;
 
-		// Token: 0x04025463 RID: 152675
+		// Token: 0x040200CA RID: 131274
 		private UKuroActorSubsystem ActorSubsystem;
 
-		// Token: 0x04025464 RID: 152676
+		// Token: 0x040200CB RID: 131275
 		private Action<FName> OnCollisionActorAdd;
 
-		// Token: 0x04025465 RID: 152677
+		// Token: 0x040200CC RID: 131276
 		[Nullable(1)]
 		private readonly HashSet<AActor> IgnoreActors = new HashSet<AActor>();
 
-		// Token: 0x04025466 RID: 152678
+		// Token: 0x040200CD RID: 131277
 		[Nullable(1)]
 		private readonly HashSet<string> WaitIgnoreActors = new HashSet<string>();
 
-		// Token: 0x04025467 RID: 152679
+		// Token: 0x040200CE RID: 131278
 		[Nullable(1)]
 		private readonly HashSet<Entity> IgnoreEntities = new HashSet<Entity>();
 
-		// Token: 0x04025468 RID: 152680
+		// Token: 0x040200CF RID: 131279
 		[Nullable(1)]
 		private readonly HashSet<int> WaitIgnoreEntities = new HashSet<int>();
 
-		// Token: 0x04025469 RID: 152681
+		// Token: 0x040200D0 RID: 131280
 		[Nullable(1)]
 		private readonly global::Vector BoxTraceBoundSize = global::Vector.Create(50.0, 50.0, 150.0);
 
-		// Token: 0x0402546A RID: 152682
+		// Token: 0x040200D1 RID: 131281
 		private UTraceBoxElement StatueInteractBoxTraceInternal;
 
-		// Token: 0x0200CEB8 RID: 52920
+		// Token: 0x0200BA4E RID: 47694
 		[NullableContext(0)]
 		public enum EManipulateInteractPointState
 		{
-			// Token: 0x0403E348 RID: 254792
+			// Token: 0x0403966E RID: 235118
 			Normal,
-			// Token: 0x0403E349 RID: 254793
+			// Token: 0x0403966F RID: 235119
 			Interactive,
-			// Token: 0x0403E34A RID: 254794
+			// Token: 0x04039670 RID: 235120
 			NonInteractive,
-			// Token: 0x0403E34B RID: 254795
+			// Token: 0x04039671 RID: 235121
 			Interacting,
-			// Token: 0x0403E34C RID: 254796
+			// Token: 0x04039672 RID: 235122
 			None
 		}
 
-		// Token: 0x0200CEB9 RID: 52921
+		// Token: 0x0200BA4F RID: 47695
 		[NullableContext(1)]
 		[Nullable(0)]
 		public class HangPointData
 		{
-			// Token: 0x06051F41 RID: 335681 RVA: 0x01645055 File Offset: 0x01643255
+			// Token: 0x060486EB RID: 296683 RVA: 0x0161717D File Offset: 0x0161537D
 			public HangPointData(AActor actor, global::Vector dir)
 			{
 			}
 
-			// Token: 0x0403E34D RID: 254797
+			// Token: 0x04039673 RID: 235123
 			public AActor HangPointActor = actor;
 
-			// Token: 0x0403E34E RID: 254798
+			// Token: 0x04039674 RID: 235124
 			public global::Vector HangPointDir = dir;
 		}
 	}

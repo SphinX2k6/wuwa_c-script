@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x0200116C RID: 4460
+// Token: 0x02000620 RID: 1568
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +13,7 @@ using UnrealEngine;
 })]
 public class BabelTowerRoleListItem : SyncGridProxyAbstract<BabelTowerRoleListItemData>
 {
-	// Token: 0x060075BD RID: 30141 RVA: 0x001855E4 File Offset: 0x001837E4
+	// Token: 0x06004954 RID: 18772 RVA: 0x0018E19C File Offset: 0x0018C39C
 	protected override void OnStart()
 	{
 		this.RoleGrid.Initialize(this.RootActor);
@@ -24,10 +23,11 @@ public class BabelTowerRoleListItem : SyncGridProxyAbstract<BabelTowerRoleListIt
 		this.RoleGrid.SetUseFixedAsync(true);
 	}
 
-	// Token: 0x060075BE RID: 30142 RVA: 0x00185648 File Offset: 0x00183848
+	// Token: 0x06004955 RID: 18773 RVA: 0x0018E200 File Offset: 0x0018C400
 	[NullableContext(2)]
 	private bool OnCanGridToggleStateChange(object data, bool isForceSelected, EToggleState state)
 	{
+		BabelTowerRoleListItem.<>c__DisplayClass4_0 CS$<>8__locals1 = new BabelTowerRoleListItem.<>c__DisplayClass4_0();
 		if (state != EToggleState.ETT_UnChecked)
 		{
 			return true;
@@ -37,10 +37,10 @@ public class BabelTowerRoleListItem : SyncGridProxyAbstract<BabelTowerRoleListIt
 		{
 			return true;
 		}
-		int configId = this.Data.RoleData.GetDataId();
-		int roleId = this.Data.RoleData.GetRoleId();
-		HashSet<int> selectedSet = RoleSelectModel.Instance.SelectedRoleSet;
-		if (selectedSet.Count >= 3 && !selectedSet.Contains(configId))
+		CS$<>8__locals1.configId = this.Data.RoleData.GetDataId();
+		CS$<>8__locals1.roleId = this.Data.RoleData.GetRoleId();
+		CS$<>8__locals1.selectedSet = RoleSelectModel.Instance.SelectedRoleSet;
+		if (CS$<>8__locals1.selectedSet.Count >= 3 && !CS$<>8__locals1.selectedSet.Contains(CS$<>8__locals1.configId))
 		{
 			ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamRoleFull", Array.Empty<object>());
 			Action onMaxSelectReached = ownerPanel.OnMaxSelectReached;
@@ -50,11 +50,9 @@ public class BabelTowerRoleListItem : SyncGridProxyAbstract<BabelTowerRoleListIt
 			}
 			return false;
 		}
-		IEnumerable<RoleDataBase> first = RoleModel.Instance.GetRoleList().Cast<RoleDataBase>().ToList<RoleDataBase>();
+		IEnumerable<RoleInstance> roleList = RoleModel.Instance.GetRoleList();
 		List<RoleDataBase> trialRoleList = ownerPanel.GetTrialRoleList();
-		if ((from r in first.Concat(trialRoleList)
-		where selectedSet.Contains(r.GetDataId())
-		select r).ToList<RoleDataBase>().Any((RoleDataBase r) => r.GetRoleId() == roleId && r.GetDataId() != configId))
+		if (NoLinq.Any<RoleInstance>(roleList, new Func<RoleInstance, bool>(CS$<>8__locals1.<OnCanGridToggleStateChange>g__IsSameSelectedRole|0)) || NoLinq.Any<RoleDataBase>(trialRoleList, new Func<RoleDataBase, bool>(CS$<>8__locals1.<OnCanGridToggleStateChange>g__IsSameSelectedRole|0)))
 		{
 			ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamSameRole", Array.Empty<object>());
 			return false;
@@ -62,7 +60,7 @@ public class BabelTowerRoleListItem : SyncGridProxyAbstract<BabelTowerRoleListIt
 		return true;
 	}
 
-	// Token: 0x060075BF RID: 30143 RVA: 0x00185758 File Offset: 0x00183958
+	// Token: 0x06004956 RID: 18774 RVA: 0x0018E300 File Offset: 0x0018C500
 	private void OnGridToggleStateChanged(MediumItemGridExtendCallback @params)
 	{
 		BabelTowerRoleSelectPanel ownerPanel = this.Data.OwnerPanel;
@@ -105,7 +103,7 @@ public class BabelTowerRoleListItem : SyncGridProxyAbstract<BabelTowerRoleListIt
 		}
 	}
 
-	// Token: 0x060075C0 RID: 30144 RVA: 0x00185854 File Offset: 0x00183A54
+	// Token: 0x06004957 RID: 18775 RVA: 0x0018E3FC File Offset: 0x0018C5FC
 	private void RebuildRoleIndexMap(HashSet<int> selectedSet)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -128,7 +126,7 @@ public class BabelTowerRoleListItem : SyncGridProxyAbstract<BabelTowerRoleListIt
 		}
 	}
 
-	// Token: 0x060075C1 RID: 30145 RVA: 0x001858F4 File Offset: 0x00183AF4
+	// Token: 0x06004958 RID: 18776 RVA: 0x0018E49C File Offset: 0x0018C69C
 	public override void Refresh(BabelTowerRoleListItemData data)
 	{
 		this.Data = data;
@@ -167,12 +165,12 @@ public class BabelTowerRoleListItem : SyncGridProxyAbstract<BabelTowerRoleListIt
 		this.RoleGrid.GetItemGridExtendToggle().SetToggleStateForce(flag ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0400360A RID: 13834
+	// Token: 0x040036A3 RID: 13987
 	private const int MAX_SELECT_ROLE_COUNT = 3;
 
-	// Token: 0x0400360B RID: 13835
+	// Token: 0x040036A4 RID: 13988
 	public BabelTowerRoleListItemData Data;
 
-	// Token: 0x0400360C RID: 13836
+	// Token: 0x040036A5 RID: 13989
 	private readonly MediumItemGrid RoleGrid = new MediumItemGrid();
 }

@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018BF RID: 6335
+// Token: 0x02000D78 RID: 3448
 internal class StarItem : UiPanelBase
 {
-	// Token: 0x0600B9CD RID: 47565 RVA: 0x002A1F65 File Offset: 0x002A0165
+	// Token: 0x06008DB6 RID: 36278 RVA: 0x002AC6BD File Offset: 0x002AA8BD
 	[NullableContext(1)]
 	public StarItem(UUIItem uiItem)
 	{

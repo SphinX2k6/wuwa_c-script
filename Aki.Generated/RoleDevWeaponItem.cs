@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001049 RID: 4169
+	// Token: 0x02001131 RID: 4401
 	public struct RoleDevWeaponItem : IFlatbufferObject
 	{
-		// Token: 0x17003257 RID: 12887
-		// (get) Token: 0x0600C860 RID: 51296 RVA: 0x002F9FB5 File Offset: 0x002F81B5
+		// Token: 0x170032D2 RID: 13010
+		// (get) Token: 0x0600CEAA RID: 52906 RVA: 0x00315C9D File Offset: 0x00313E9D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C861 RID: 51297 RVA: 0x002F9FC2 File Offset: 0x002F81C2
+		// Token: 0x0600CEAB RID: 52907 RVA: 0x00315CAA File Offset: 0x00313EAA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C862 RID: 51298 RVA: 0x002F9FCC File Offset: 0x002F81CC
+		// Token: 0x0600CEAC RID: 52908 RVA: 0x00315CB4 File Offset: 0x00313EB4
 		public static RoleDevWeaponItem GetRootAsRoleDevWeaponItem(ByteBuffer _bb)
 		{
 			return RoleDevWeaponItem.GetRootAsRoleDevWeaponItem(_bb, default(RoleDevWeaponItem));
 		}
 
-		// Token: 0x0600C863 RID: 51299 RVA: 0x002F9FE8 File Offset: 0x002F81E8
+		// Token: 0x0600CEAD RID: 52909 RVA: 0x00315CD0 File Offset: 0x00313ED0
 		public static RoleDevWeaponItem GetRootAsRoleDevWeaponItem(ByteBuffer _bb, RoleDevWeaponItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C864 RID: 51300 RVA: 0x002FA005 File Offset: 0x002F8205
+		// Token: 0x0600CEAE RID: 52910 RVA: 0x00315CED File Offset: 0x00313EED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C865 RID: 51301 RVA: 0x002FA014 File Offset: 0x002F8214
+		// Token: 0x0600CEAF RID: 52911 RVA: 0x00315CFC File Offset: 0x00313EFC
 		public RoleDevWeaponItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003258 RID: 12888
-		// (get) Token: 0x0600C866 RID: 51302 RVA: 0x002FA024 File Offset: 0x002F8224
+		// Token: 0x170032D3 RID: 13011
+		// (get) Token: 0x0600CEB0 RID: 52912 RVA: 0x00315D0C File Offset: 0x00313F0C
 		public int WeaponType
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003259 RID: 12889
-		// (get) Token: 0x0600C867 RID: 51303 RVA: 0x002FA060 File Offset: 0x002F8260
+		// Token: 0x170032D4 RID: 13012
+		// (get) Token: 0x0600CEB1 RID: 52913 RVA: 0x00315D48 File Offset: 0x00313F48
 		public int WeaponItemGroup
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C868 RID: 51304 RVA: 0x002FA09C File Offset: 0x002F829C
+		// Token: 0x0600CEB2 RID: 52914 RVA: 0x00315D84 File Offset: 0x00313F84
 		public int WeaponTypeExperience(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700325A RID: 12890
-		// (get) Token: 0x0600C869 RID: 51305 RVA: 0x002FA0DC File Offset: 0x002F82DC
+		// Token: 0x170032D5 RID: 13013
+		// (get) Token: 0x0600CEB3 RID: 52915 RVA: 0x00315DC4 File Offset: 0x00313FC4
 		public int WeaponTypeExperienceLength
 		{
 			get
@@ -105,20 +105,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C86A RID: 51306 RVA: 0x002FA107 File Offset: 0x002F8307
+		// Token: 0x0600CEB4 RID: 52916 RVA: 0x00315DEF File Offset: 0x00313FEF
 		public Span<int> GetWeaponTypeExperienceBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600C86B RID: 51307 RVA: 0x002FA116 File Offset: 0x002F8316
+		// Token: 0x0600CEB5 RID: 52917 RVA: 0x00315DFE File Offset: 0x00313FFE
 		public int[] GetWeaponTypeExperienceArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700325B RID: 12891
-		// (get) Token: 0x0600C86C RID: 51308 RVA: 0x002FA130 File Offset: 0x002F8330
+		// Token: 0x170032D6 RID: 13014
+		// (get) Token: 0x0600CEB6 RID: 52918 RVA: 0x00315E18 File Offset: 0x00314018
 		public string WeaponTypeIcon
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C86D RID: 51309 RVA: 0x002FA168 File Offset: 0x002F8368
+		// Token: 0x0600CEB7 RID: 52919 RVA: 0x00315E50 File Offset: 0x00314050
 		public Span<byte> GetWeaponTypeIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600C86E RID: 51310 RVA: 0x002FA178 File Offset: 0x002F8378
+		// Token: 0x0600CEB8 RID: 52920 RVA: 0x00315E60 File Offset: 0x00314060
 		public byte[] GetWeaponTypeIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700325C RID: 12892
-		// (get) Token: 0x0600C86F RID: 51311 RVA: 0x002FA190 File Offset: 0x002F8390
+		// Token: 0x170032D7 RID: 13015
+		// (get) Token: 0x0600CEB9 RID: 52921 RVA: 0x00315E78 File Offset: 0x00314078
 		public string WeaponTypeDescribe
 		{
 			get
@@ -159,37 +159,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C870 RID: 51312 RVA: 0x002FA1C8 File Offset: 0x002F83C8
+		// Token: 0x0600CEBA RID: 52922 RVA: 0x00315EB0 File Offset: 0x003140B0
 		public Span<byte> GetWeaponTypeDescribeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600C871 RID: 51313 RVA: 0x002FA1D8 File Offset: 0x002F83D8
+		// Token: 0x0600CEBB RID: 52923 RVA: 0x00315EC0 File Offset: 0x003140C0
 		public byte[] GetWeaponTypeDescribeArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600C872 RID: 51314 RVA: 0x002FA1F0 File Offset: 0x002F83F0
+		// Token: 0x0600CEBC RID: 52924 RVA: 0x00315ED8 File Offset: 0x003140D8
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WeaponTypeExperienceIter()或GetWeaponTypeExperienceBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WeaponTypeExperience()
+		public int[] WeaponTypeExperience()
 		{
-			RoleDevWeaponItem roleDevWeaponItem = this;
-			return roleDevWeaponItem.GetWeaponTypeExperienceArray() ?? Array.Empty<int>();
+			return this.GetWeaponTypeExperienceArray();
 		}
 
-		// Token: 0x0600C873 RID: 51315 RVA: 0x002FA214 File Offset: 0x002F8414
+		// Token: 0x0600CEBD RID: 52925 RVA: 0x00315EE0 File Offset: 0x003140E0
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WeaponTypeExperienceIter()
+		public IEnumerable<int> WeaponTypeExperienceIter()
 		{
 			RoleDevWeaponItem.<WeaponTypeExperienceIter>d__26 <WeaponTypeExperienceIter>d__ = new RoleDevWeaponItem.<WeaponTypeExperienceIter>d__26(-2);
 			<WeaponTypeExperienceIter>d__.<>3__<>4__this = this;
 			return <WeaponTypeExperienceIter>d__;
 		}
 
-		// Token: 0x04005147 RID: 20807
+		// Token: 0x0400572F RID: 22319
 		private Table __p;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045B4 RID: 17844
+	// Token: 0x02004A1C RID: 18972
 	public struct ITrapDefenseBatch : IFlatbufferObject
 	{
-		// Token: 0x17007ED5 RID: 32469
-		// (get) Token: 0x0601AFAF RID: 110511 RVA: 0x003D8EBC File Offset: 0x003D70BC
+		// Token: 0x17008516 RID: 34070
+		// (get) Token: 0x0601C784 RID: 116612 RVA: 0x00405158 File Offset: 0x00403358
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AFB0 RID: 110512 RVA: 0x003D8EC9 File Offset: 0x003D70C9
+		// Token: 0x0601C785 RID: 116613 RVA: 0x00405165 File Offset: 0x00403365
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AFB1 RID: 110513 RVA: 0x003D8ED0 File Offset: 0x003D70D0
+		// Token: 0x0601C786 RID: 116614 RVA: 0x0040516C File Offset: 0x0040336C
 		public static ITrapDefenseBatch GetRootAsITrapDefenseBatch(ByteBuffer _bb)
 		{
 			return ITrapDefenseBatch.GetRootAsITrapDefenseBatch(_bb, default(ITrapDefenseBatch));
 		}
 
-		// Token: 0x0601AFB2 RID: 110514 RVA: 0x003D8EEC File Offset: 0x003D70EC
+		// Token: 0x0601C787 RID: 116615 RVA: 0x00405188 File Offset: 0x00403388
 		public static ITrapDefenseBatch GetRootAsITrapDefenseBatch(ByteBuffer _bb, ITrapDefenseBatch obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AFB3 RID: 110515 RVA: 0x003D8F09 File Offset: 0x003D7109
+		// Token: 0x0601C788 RID: 116616 RVA: 0x004051A5 File Offset: 0x004033A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AFB4 RID: 110516 RVA: 0x003D8F18 File Offset: 0x003D7118
+		// Token: 0x0601C789 RID: 116617 RVA: 0x004051B4 File Offset: 0x004033B4
 		public ITrapDefenseBatch __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0601AFB5 RID: 110517 RVA: 0x003D8F28 File Offset: 0x003D7128
+		// Token: 0x0601C78A RID: 116618 RVA: 0x004051C4 File Offset: 0x004033C4
 		public int Ids(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007ED6 RID: 32470
-		// (get) Token: 0x0601AFB6 RID: 110518 RVA: 0x003D8F68 File Offset: 0x003D7168
+		// Token: 0x17008517 RID: 34071
+		// (get) Token: 0x0601C78B RID: 116619 RVA: 0x00405204 File Offset: 0x00403404
 		public int IdsLength
 		{
 			get
@@ -74,20 +74,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AFB7 RID: 110519 RVA: 0x003D8F93 File Offset: 0x003D7193
+		// Token: 0x0601C78C RID: 116620 RVA: 0x0040522F File Offset: 0x0040342F
 		public Span<int> GetIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(4, 4);
 		}
 
-		// Token: 0x0601AFB8 RID: 110520 RVA: 0x003D8FA2 File Offset: 0x003D71A2
+		// Token: 0x0601C78D RID: 116621 RVA: 0x0040523E File Offset: 0x0040343E
 		public int[] GetIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(4);
 		}
 
-		// Token: 0x17007ED7 RID: 32471
-		// (get) Token: 0x0601AFB9 RID: 110521 RVA: 0x003D8FB0 File Offset: 0x003D71B0
+		// Token: 0x17008518 RID: 34072
+		// (get) Token: 0x0601C78E RID: 116622 RVA: 0x0040524C File Offset: 0x0040344C
 		public int RepeatTimes
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AFBA RID: 110522 RVA: 0x003D8FEC File Offset: 0x003D71EC
+		// Token: 0x0601C78F RID: 116623 RVA: 0x00405288 File Offset: 0x00403488
 		public static Offset<ITrapDefenseBatch> CreateITrapDefenseBatch(FlatBufferBuilder builder, VectorOffset IdsOffset = default(VectorOffset), int RepeatTimes = 0)
 		{
 			builder.StartTable(2);
@@ -110,19 +110,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseBatch.EndITrapDefenseBatch(builder);
 		}
 
-		// Token: 0x0601AFBB RID: 110523 RVA: 0x003D9009 File Offset: 0x003D7209
+		// Token: 0x0601C790 RID: 116624 RVA: 0x004052A5 File Offset: 0x004034A5
 		public static void StartITrapDefenseBatch(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601AFBC RID: 110524 RVA: 0x003D9012 File Offset: 0x003D7212
+		// Token: 0x0601C791 RID: 116625 RVA: 0x004052AE File Offset: 0x004034AE
 		public static void AddIds(FlatBufferBuilder builder, VectorOffset idsOffset)
 		{
 			builder.AddOffset(0, idsOffset.Value, 0);
 		}
 
-		// Token: 0x0601AFBD RID: 110525 RVA: 0x003D9024 File Offset: 0x003D7224
+		// Token: 0x0601C792 RID: 116626 RVA: 0x004052C0 File Offset: 0x004034C0
 		public static VectorOffset CreateIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601AFBE RID: 110526 RVA: 0x003D905B File Offset: 0x003D725B
+		// Token: 0x0601C793 RID: 116627 RVA: 0x004052F7 File Offset: 0x004034F7
 		public static VectorOffset CreateIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601AFBF RID: 110527 RVA: 0x003D9075 File Offset: 0x003D7275
+		// Token: 0x0601C794 RID: 116628 RVA: 0x00405311 File Offset: 0x00403511
 		public static VectorOffset CreateIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601AFC0 RID: 110528 RVA: 0x003D9093 File Offset: 0x003D7293
+		// Token: 0x0601C795 RID: 116629 RVA: 0x0040532F File Offset: 0x0040352F
 		public static VectorOffset CreateIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -157,25 +157,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601AFC1 RID: 110529 RVA: 0x003D90AC File Offset: 0x003D72AC
+		// Token: 0x0601C796 RID: 116630 RVA: 0x00405348 File Offset: 0x00403548
 		public static void StartIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601AFC2 RID: 110530 RVA: 0x003D90B7 File Offset: 0x003D72B7
+		// Token: 0x0601C797 RID: 116631 RVA: 0x00405353 File Offset: 0x00403553
 		public static void AddRepeatTimes(FlatBufferBuilder builder, int repeatTimes)
 		{
 			builder.AddInt(1, repeatTimes, 0);
 		}
 
-		// Token: 0x0601AFC3 RID: 110531 RVA: 0x003D90C2 File Offset: 0x003D72C2
+		// Token: 0x0601C798 RID: 116632 RVA: 0x0040535E File Offset: 0x0040355E
 		public static Offset<ITrapDefenseBatch> EndITrapDefenseBatch(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrapDefenseBatch>(builder.EndTable());
 		}
 
-		// Token: 0x0601AFC4 RID: 110532 RVA: 0x003D90D0 File Offset: 0x003D72D0
+		// Token: 0x0601C799 RID: 116633 RVA: 0x0040536C File Offset: 0x0040356C
 		public ITrapDefenseBatchT UnPack()
 		{
 			ITrapDefenseBatchT trapDefenseBatchT = new ITrapDefenseBatchT();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return trapDefenseBatchT;
 		}
 
-		// Token: 0x0601AFC5 RID: 110533 RVA: 0x003D90EC File Offset: 0x003D72EC
+		// Token: 0x0601C79A RID: 116634 RVA: 0x00405388 File Offset: 0x00403588
 		public void UnPackTo(ITrapDefenseBatchT _o)
 		{
 			_o.Ids = new List<int>();
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.RepeatTimes = this.RepeatTimes;
 		}
 
-		// Token: 0x0601AFC6 RID: 110534 RVA: 0x003D9134 File Offset: 0x003D7334
+		// Token: 0x0601C79B RID: 116635 RVA: 0x004053D0 File Offset: 0x004035D0
 		public static Offset<ITrapDefenseBatch> Pack(FlatBufferBuilder builder, ITrapDefenseBatchT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseBatch.CreateITrapDefenseBatch(builder, idsOffset, _o.RepeatTimes);
 		}
 
-		// Token: 0x0400C67E RID: 50814
+		// Token: 0x0400D0AD RID: 53421
 		private Table __p;
 	}
 }

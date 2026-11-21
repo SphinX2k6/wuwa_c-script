@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B04 RID: 2820
+	// Token: 0x02000BDE RID: 3038
 	public struct AreaMapGroup : IFlatbufferObject
 	{
-		// Token: 0x1700033A RID: 826
-		// (get) Token: 0x06004898 RID: 18584 RVA: 0x001D7D51 File Offset: 0x001D5F51
+		// Token: 0x17000351 RID: 849
+		// (get) Token: 0x06004DDF RID: 19935 RVA: 0x001F759D File Offset: 0x001F579D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004899 RID: 18585 RVA: 0x001D7D5E File Offset: 0x001D5F5E
+		// Token: 0x06004DE0 RID: 19936 RVA: 0x001F75AA File Offset: 0x001F57AA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600489A RID: 18586 RVA: 0x001D7D68 File Offset: 0x001D5F68
+		// Token: 0x06004DE1 RID: 19937 RVA: 0x001F75B4 File Offset: 0x001F57B4
 		public static AreaMapGroup GetRootAsAreaMapGroup(ByteBuffer _bb)
 		{
 			return AreaMapGroup.GetRootAsAreaMapGroup(_bb, default(AreaMapGroup));
 		}
 
-		// Token: 0x0600489B RID: 18587 RVA: 0x001D7D84 File Offset: 0x001D5F84
+		// Token: 0x06004DE2 RID: 19938 RVA: 0x001F75D0 File Offset: 0x001F57D0
 		public static AreaMapGroup GetRootAsAreaMapGroup(ByteBuffer _bb, AreaMapGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600489C RID: 18588 RVA: 0x001D7DA1 File Offset: 0x001D5FA1
+		// Token: 0x06004DE3 RID: 19939 RVA: 0x001F75ED File Offset: 0x001F57ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600489D RID: 18589 RVA: 0x001D7DB0 File Offset: 0x001D5FB0
+		// Token: 0x06004DE4 RID: 19940 RVA: 0x001F75FC File Offset: 0x001F57FC
 		public AreaMapGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700033B RID: 827
-		// (get) Token: 0x0600489E RID: 18590 RVA: 0x001D7DC0 File Offset: 0x001D5FC0
+		// Token: 0x17000352 RID: 850
+		// (get) Token: 0x06004DE5 RID: 19941 RVA: 0x001F760C File Offset: 0x001F580C
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700033C RID: 828
-		// (get) Token: 0x0600489F RID: 18591 RVA: 0x001D7DFC File Offset: 0x001D5FFC
+		// Token: 0x17000353 RID: 851
+		// (get) Token: 0x06004DE6 RID: 19942 RVA: 0x001F7648 File Offset: 0x001F5848
 		public int MapId
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060048A0 RID: 18592 RVA: 0x001D7E38 File Offset: 0x001D6038
+		// Token: 0x06004DE7 RID: 19943 RVA: 0x001F7684 File Offset: 0x001F5884
 		public PosRectangle? BlockBorder(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.Config
 			return new PosRectangle?(default(PosRectangle).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700033D RID: 829
-		// (get) Token: 0x060048A1 RID: 18593 RVA: 0x001D7E98 File Offset: 0x001D6098
+		// Token: 0x17000354 RID: 852
+		// (get) Token: 0x06004DE8 RID: 19944 RVA: 0x001F76E4 File Offset: 0x001F58E4
 		public int BlockBorderLength
 		{
 			get
@@ -106,7 +106,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060048A2 RID: 18594 RVA: 0x001D7EC4 File Offset: 0x001D60C4
+		// Token: 0x06004DE9 RID: 19945 RVA: 0x001F7710 File Offset: 0x001F5910
 		public int InstanceDungeon(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700033E RID: 830
-		// (get) Token: 0x060048A3 RID: 18595 RVA: 0x001D7F04 File Offset: 0x001D6104
+		// Token: 0x17000355 RID: 853
+		// (get) Token: 0x06004DEA RID: 19946 RVA: 0x001F7750 File Offset: 0x001F5950
 		public int InstanceDungeonLength
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060048A4 RID: 18596 RVA: 0x001D7F30 File Offset: 0x001D6130
+		// Token: 0x06004DEB RID: 19947 RVA: 0x001F777C File Offset: 0x001F597C
 		public Span<int> GetInstanceDungeonBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x060048A5 RID: 18597 RVA: 0x001D7F40 File Offset: 0x001D6140
+		// Token: 0x06004DEC RID: 19948 RVA: 0x001F778C File Offset: 0x001F598C
 		public int[] GetInstanceDungeonArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700033F RID: 831
-		// (get) Token: 0x060048A6 RID: 18598 RVA: 0x001D7F58 File Offset: 0x001D6158
+		// Token: 0x17000356 RID: 854
+		// (get) Token: 0x06004DED RID: 19949 RVA: 0x001F77A4 File Offset: 0x001F59A4
 		public int UnlockCondition
 		{
 			get
@@ -159,42 +159,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060048A7 RID: 18599 RVA: 0x001D7F95 File Offset: 0x001D6195
+		// Token: 0x06004DEE RID: 19950 RVA: 0x001F77E1 File Offset: 0x001F59E1
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BlockBorderIter()或GetBlockBorderBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly PosRectangle[] BlockBorder()
+		public PosRectangle[] BlockBorder()
 		{
 			return this.BlockBorderIter().ToArray<PosRectangle>();
 		}
 
-		// Token: 0x060048A8 RID: 18600 RVA: 0x001D7FA2 File Offset: 0x001D61A2
+		// Token: 0x06004DEF RID: 19951 RVA: 0x001F77EE File Offset: 0x001F59EE
 		[NullableContext(1)]
-		public readonly IEnumerable<PosRectangle> BlockBorderIter()
+		public IEnumerable<PosRectangle> BlockBorderIter()
 		{
 			AreaMapGroup.<BlockBorderIter>d__23 <BlockBorderIter>d__ = new AreaMapGroup.<BlockBorderIter>d__23(-2);
 			<BlockBorderIter>d__.<>3__<>4__this = this;
 			return <BlockBorderIter>d__;
 		}
 
-		// Token: 0x060048A9 RID: 18601 RVA: 0x001D7FB8 File Offset: 0x001D61B8
+		// Token: 0x06004DF0 RID: 19952 RVA: 0x001F7803 File Offset: 0x001F5A03
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用InstanceDungeonIter()或GetInstanceDungeonBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] InstanceDungeon()
+		public int[] InstanceDungeon()
 		{
-			AreaMapGroup areaMapGroup = this;
-			return areaMapGroup.GetInstanceDungeonArray() ?? Array.Empty<int>();
+			return this.GetInstanceDungeonArray();
 		}
 
-		// Token: 0x060048AA RID: 18602 RVA: 0x001D7FDC File Offset: 0x001D61DC
+		// Token: 0x06004DF1 RID: 19953 RVA: 0x001F780B File Offset: 0x001F5A0B
 		[NullableContext(1)]
-		public readonly IEnumerable<int> InstanceDungeonIter()
+		public IEnumerable<int> InstanceDungeonIter()
 		{
 			AreaMapGroup.<InstanceDungeonIter>d__25 <InstanceDungeonIter>d__ = new AreaMapGroup.<InstanceDungeonIter>d__25(-2);
 			<InstanceDungeonIter>d__.<>3__<>4__this = this;
 			return <InstanceDungeonIter>d__;
 		}
 
-		// Token: 0x04004AE9 RID: 19177
+		// Token: 0x040050C3 RID: 20675
 		private Table __p;
 	}
 }

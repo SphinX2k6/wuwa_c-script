@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002680 RID: 9856
+// Token: 0x02001B6B RID: 7019
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,9 +17,9 @@ using UnrealEngine;
 })]
 public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 {
-	// Token: 0x170019F5 RID: 6645
-	// (get) Token: 0x06014325 RID: 82725 RVA: 0x005199CF File Offset: 0x00517BCF
-	// (set) Token: 0x06014326 RID: 82726 RVA: 0x005199D7 File Offset: 0x00517BD7
+	// Token: 0x17001A2D RID: 6701
+	// (get) Token: 0x06011807 RID: 71687 RVA: 0x00528707 File Offset: 0x00526907
+	// (set) Token: 0x06011808 RID: 71688 RVA: 0x0052870F File Offset: 0x0052690F
 	private TimerHandle Timer
 	{
 		get
@@ -36,7 +36,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		}
 	}
 
-	// Token: 0x06014327 RID: 82727 RVA: 0x00519A0C File Offset: 0x00517C0C
+	// Token: 0x06011809 RID: 71689 RVA: 0x00528744 File Offset: 0x00526944
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -58,7 +58,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014328 RID: 82728 RVA: 0x00519AFC File Offset: 0x00517CFC
+	// Token: 0x0601180A RID: 71690 RVA: 0x00528834 File Offset: 0x00526A34
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestReviewNodeItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -69,21 +69,21 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014329 RID: 82729 RVA: 0x00519B3F File Offset: 0x00517D3F
+	// Token: 0x0601180B RID: 71691 RVA: 0x00528877 File Offset: 0x00526A77
 	protected override void OnStart()
 	{
 		this.SeqPlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEndEvent), false);
 		EventSystem.Instance.Add(EEventName.OnQuestReviewMainViewBeforeHide, new Action(this.OnMainViewBeforeHide));
 	}
 
-	// Token: 0x0601432A RID: 82730 RVA: 0x00519B75 File Offset: 0x00517D75
+	// Token: 0x0601180C RID: 71692 RVA: 0x005288AD File Offset: 0x00526AAD
 	protected override void OnBeforeDestroy()
 	{
 		this.Timer = null;
 		EventSystem.Instance.Remove(EEventName.OnQuestReviewMainViewBeforeHide, new Action(this.OnMainViewBeforeHide));
 	}
 
-	// Token: 0x0601432B RID: 82731 RVA: 0x00519B9C File Offset: 0x00517D9C
+	// Token: 0x0601180D RID: 71693 RVA: 0x005288D4 File Offset: 0x00526AD4
 	public override void Refresh(QuestReviewNodeParam param, bool isSelected, int gridIndex)
 	{
 		this.Param = param;
@@ -135,7 +135,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		this.HandleAnim(param);
 	}
 
-	// Token: 0x0601432C RID: 82732 RVA: 0x00519CF4 File Offset: 0x00517EF4
+	// Token: 0x0601180E RID: 71694 RVA: 0x00528A2C File Offset: 0x00526C2C
 	private void HandleAnim(IQuestReviewNodeParam param)
 	{
 		QuestReviewLineData questReviewLineDataById = QuestReviewModel.Instance.GetQuestReviewLineDataById(param.LineId);
@@ -237,7 +237,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		this.SeqPlayer.PlayLevelSequenceByName("ActivateStart", false, null, false);
 	}
 
-	// Token: 0x0601432D RID: 82733 RVA: 0x00519F3C File Offset: 0x0051813C
+	// Token: 0x0601180F RID: 71695 RVA: 0x00528C74 File Offset: 0x00526E74
 	private bool ShouldShowNormal(IQuestReviewNodeParam param)
 	{
 		if (param == null)
@@ -250,13 +250,13 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		return param.Data != null && param.Data.State != EQuestReviewNodeState.Locked && !param.IsDestroy && (param.Data.ShowOnceUnlock || predecessorNodeByNodeId == null || (predecessorNodeByNodeId != null && predecessorNodeByNodeId.State == EQuestReviewNodeState.Finished));
 	}
 
-	// Token: 0x0601432E RID: 82734 RVA: 0x00519FAA File Offset: 0x005181AA
+	// Token: 0x06011810 RID: 71696 RVA: 0x00528CE2 File Offset: 0x00526EE2
 	private bool ShouldShowDestroy(IQuestReviewNodeParam param)
 	{
 		return param != null && param.Data != null && param.IsDestroy;
 	}
 
-	// Token: 0x0601432F RID: 82735 RVA: 0x00519FC4 File Offset: 0x005181C4
+	// Token: 0x06011811 RID: 71697 RVA: 0x00528CFC File Offset: 0x00526EFC
 	private bool ShouldShowStar(IQuestReviewNodeParam param)
 	{
 		if (param == null)
@@ -269,7 +269,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		return (param.Data == null || param.Data.State == EQuestReviewNodeState.Locked || (!param.Data.ShowOnceUnlock && predecessorNodeByNodeId != null && predecessorNodeByNodeId.State < EQuestReviewNodeState.Finished)) && !param.IsDestroy;
 	}
 
-	// Token: 0x06014330 RID: 82736 RVA: 0x0051A02C File Offset: 0x0051822C
+	// Token: 0x06011812 RID: 71698 RVA: 0x00528D64 File Offset: 0x00526F64
 	private bool ShouldShowStarDestroy(IQuestReviewNodeParam param)
 	{
 		if (param == null)
@@ -282,7 +282,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		return (param.Data == null || param.Data.State == EQuestReviewNodeState.Locked || (!param.Data.ShowOnceUnlock && predecessorNodeByNodeId != null && predecessorNodeByNodeId.State < EQuestReviewNodeState.Finished)) && param.IsDestroy;
 	}
 
-	// Token: 0x06014331 RID: 82737 RVA: 0x0051A094 File Offset: 0x00518294
+	// Token: 0x06011813 RID: 71699 RVA: 0x00528DCC File Offset: 0x00526FCC
 	private void PlayFirstShowAnim(IQuestReviewNodeParam param)
 	{
 		QuestReviewNodeNormalItem itemNormal = this.ItemNormal;
@@ -318,7 +318,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		}, 20f, null, null, true, 1f);
 	}
 
-	// Token: 0x06014332 RID: 82738 RVA: 0x0051A140 File Offset: 0x00518340
+	// Token: 0x06011814 RID: 71700 RVA: 0x00528E78 File Offset: 0x00527078
 	private void PlayFirstEntryNodeAnim(IQuestReviewNodeParam param)
 	{
 		QuestReviewNodeNormalItem itemNormal = this.ItemNormal;
@@ -353,7 +353,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		}, 1800f, null, null, true, 1f);
 	}
 
-	// Token: 0x06014333 RID: 82739 RVA: 0x0051A1D0 File Offset: 0x005183D0
+	// Token: 0x06011815 RID: 71701 RVA: 0x00528F08 File Offset: 0x00527108
 	private UniTask PlayFirstLineDestroyAnim(IQuestReviewNodeParam param)
 	{
 		QuestReviewNodeItem.<PlayFirstLineDestroyAnim>d__22 <PlayFirstLineDestroyAnim>d__;
@@ -365,7 +365,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		return <PlayFirstLineDestroyAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014334 RID: 82740 RVA: 0x0051A21C File Offset: 0x0051841C
+	// Token: 0x06011816 RID: 71702 RVA: 0x00528F54 File Offset: 0x00527154
 	private UniTask PlayFirstLineStarAnim(IQuestReviewNodeParam param)
 	{
 		QuestReviewNodeItem.<PlayFirstLineStarAnim>d__23 <PlayFirstLineStarAnim>d__;
@@ -377,7 +377,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		return <PlayFirstLineStarAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014335 RID: 82741 RVA: 0x0051A268 File Offset: 0x00518468
+	// Token: 0x06011817 RID: 71703 RVA: 0x00528FA0 File Offset: 0x005271A0
 	private void OnMainViewBeforeHide()
 	{
 		string sequenceName = "ActivateClose";
@@ -405,7 +405,7 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		seqPlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 	}
 
-	// Token: 0x06014336 RID: 82742 RVA: 0x0051A2F0 File Offset: 0x005184F0
+	// Token: 0x06011818 RID: 71704 RVA: 0x00529028 File Offset: 0x00527228
 	private void OnSequenceEndEvent(string seqName)
 	{
 		if (!base.GetRootActor().IsValid())
@@ -445,47 +445,47 @@ public class QuestReviewNodeItem : GridProxyAbstract<QuestReviewNodeParam>
 		}
 	}
 
-	// Token: 0x04009806 RID: 38918
+	// Token: 0x0400995E RID: 39262
 	private QuestReviewNodeNormalItem ItemNormal;
 
-	// Token: 0x04009807 RID: 38919
+	// Token: 0x0400995F RID: 39263
 	private QuestReviewNodeDestroyItem ItemDestroy;
 
-	// Token: 0x04009808 RID: 38920
+	// Token: 0x04009960 RID: 39264
 	private QuestReviewNodeStarItem ItemStar;
 
-	// Token: 0x04009809 RID: 38921
+	// Token: 0x04009961 RID: 39265
 	private QuestReviewNodeStarDestroyItem ItemStarDestroy;
 
-	// Token: 0x0400980A RID: 38922
+	// Token: 0x04009962 RID: 39266
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x0400980B RID: 38923
+	// Token: 0x04009963 RID: 39267
 	private TimerHandle TimerInternal;
 
-	// Token: 0x0400980C RID: 38924
+	// Token: 0x04009964 RID: 39268
 	private QuestReviewNodeParam Param;
 
-	// Token: 0x02008CCB RID: 36043
+	// Token: 0x02007E54 RID: 32340
 	[NullableContext(0)]
 	private class ENodeComponentDefine
 	{
-		// Token: 0x0402DB05 RID: 187141
+		// Token: 0x04028E1C RID: 167452
 		public const int ItemSelf = 0;
 
-		// Token: 0x0402DB06 RID: 187142
+		// Token: 0x04028E1D RID: 167453
 		public const int ItemNormal = 1;
 
-		// Token: 0x0402DB07 RID: 187143
+		// Token: 0x04028E1E RID: 167454
 		public const int ItemDestroy = 2;
 
-		// Token: 0x0402DB08 RID: 187144
+		// Token: 0x04028E1F RID: 167455
 		public const int ItemStar = 3;
 
-		// Token: 0x0402DB09 RID: 187145
+		// Token: 0x04028E20 RID: 167456
 		public const int ItemStarDestroy = 4;
 
-		// Token: 0x0402DB0A RID: 187146
+		// Token: 0x04028E21 RID: 167457
 		public const int ItemRedDot = 5;
 	}
 }

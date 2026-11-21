@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A43 RID: 6723
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BD8 RID: 7128
 	[JsonConverter(typeof(IFadeBackgroundFadeInEffectScreenEffectConverter))]
 	public class IFadeBackgroundFadeInEffectScreenEffect : IFadeBackgroundFadeInEffectTypeBase
 	{
-		// Token: 0x06008FF0 RID: 36848 RVA: 0x0014FC8C File Offset: 0x0014DE8C
+		// Token: 0x0600975A RID: 38746 RVA: 0x0015FBB8 File Offset: 0x0015DDB8
 		private IFadeBackgroundFadeInEffectScreenEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008FF1 RID: 36849 RVA: 0x0014FCC4 File Offset: 0x0014DEC4
+		// Token: 0x0600975B RID: 38747 RVA: 0x0015FBF0 File Offset: 0x0015DDF0
 		public static IFadeBackgroundFadeInEffectScreenEffect Create([Nullable(2)] IFadeBackgroundFadeInEffectScreenEffect instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008FF2 RID: 36850 RVA: 0x0014FCD7 File Offset: 0x0014DED7
+		// Token: 0x0600975C RID: 38748 RVA: 0x0015FC03 File Offset: 0x0015DE03
 		public static IFadeBackgroundFadeInEffectScreenEffect CreateFromSetValue([Nullable(2)] IFadeBackgroundFadeInEffectScreenEffect_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008FF3 RID: 36851 RVA: 0x0014FCEA File Offset: 0x0014DEEA
+		// Token: 0x0600975D RID: 38749 RVA: 0x0015FC16 File Offset: 0x0015DE16
 		public new IFadeBackgroundFadeInEffectScreenEffect_SetValue ToSetValue()
 		{
 			return new IFadeBackgroundFadeInEffectScreenEffect_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DE9 RID: 11753
-		// (get) Token: 0x06008FF4 RID: 36852 RVA: 0x0014FD09 File Offset: 0x0014DF09
-		// (set) Token: 0x06008FF5 RID: 36853 RVA: 0x0014FD34 File Offset: 0x0014DF34
+		// Token: 0x17002FF6 RID: 12278
+		// (get) Token: 0x0600975E RID: 38750 RVA: 0x0015FC35 File Offset: 0x0015DE35
+		// (set) Token: 0x0600975F RID: 38751 RVA: 0x0015FC60 File Offset: 0x0015DE60
 		public override EFadeBackgroundFadeInEffectType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DEA RID: 11754
-		// (get) Token: 0x06008FF6 RID: 36854 RVA: 0x0014FD42 File Offset: 0x0014DF42
-		// (set) Token: 0x06008FF7 RID: 36855 RVA: 0x0014FD6D File Offset: 0x0014DF6D
+		// Token: 0x17002FF7 RID: 12279
+		// (get) Token: 0x06009760 RID: 38752 RVA: 0x0015FC6E File Offset: 0x0015DE6E
+		// (set) Token: 0x06009761 RID: 38753 RVA: 0x0015FC99 File Offset: 0x0015DE99
 		public virtual string ScreenEffect
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040058F4 RID: 22772
+		// Token: 0x04005D59 RID: 23897
 		[Nullable(2)]
 		protected new IFadeBackgroundFadeInEffectScreenEffect FbInstance;
 
-		// Token: 0x040058F5 RID: 22773
+		// Token: 0x04005D5A RID: 23898
 		[Nullable(2)]
 		protected new IFadeBackgroundFadeInEffectScreenEffect_SetValue PocoInterface;
 	}

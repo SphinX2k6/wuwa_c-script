@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BC5 RID: 7109
+// Token: 0x02001084 RID: 4228
 public class DangoExtensionPanel : UiPanelBase
 {
-	// Token: 0x0600D401 RID: 54273 RVA: 0x0030C8E4 File Offset: 0x0030AAE4
+	// Token: 0x0600A813 RID: 43027 RVA: 0x00317A58 File Offset: 0x00315C58
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -23,21 +23,21 @@ public class DangoExtensionPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D402 RID: 54274 RVA: 0x0030C92D File Offset: 0x0030AB2D
+	// Token: 0x0600A814 RID: 43028 RVA: 0x00317AA1 File Offset: 0x00315CA1
 	private void AddEventListeners()
 	{
 		EventSystem.Instance.Add(EEventName.OnAbyssDangoLevelUp, new Action<int, int>(this.OnAbyssDangoLevelUp));
 		EventSystem.Instance.Add(EEventName.OnAbyssRoleInfoUpdate, new Action(this.OnAbyssRoleInfoUpdate));
 	}
 
-	// Token: 0x0600D403 RID: 54275 RVA: 0x0030C967 File Offset: 0x0030AB67
+	// Token: 0x0600A815 RID: 43029 RVA: 0x00317ADB File Offset: 0x00315CDB
 	private void RemoveEventListeners()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAbyssDangoLevelUp, new Action<int, int>(this.OnAbyssDangoLevelUp));
 		EventSystem.Instance.Remove(EEventName.OnAbyssRoleInfoUpdate, new Action(this.OnAbyssRoleInfoUpdate));
 	}
 
-	// Token: 0x0600D404 RID: 54276 RVA: 0x0030C9A1 File Offset: 0x0030ABA1
+	// Token: 0x0600A816 RID: 43030 RVA: 0x00317B15 File Offset: 0x00315D15
 	private void OnAbyssDangoLevelUp(int dangoId, int level)
 	{
 		DangoItem_Tmp_E dangoItem = this.DangoItem;
@@ -48,7 +48,7 @@ public class DangoExtensionPanel : UiPanelBase
 		dangoItem.OnLevelUp(dangoId, level);
 	}
 
-	// Token: 0x0600D405 RID: 54277 RVA: 0x0030C9B5 File Offset: 0x0030ABB5
+	// Token: 0x0600A817 RID: 43031 RVA: 0x00317B29 File Offset: 0x00315D29
 	private void OnAbyssRoleInfoUpdate()
 	{
 		DangoItem_Tmp_E dangoItem = this.DangoItem;
@@ -59,7 +59,7 @@ public class DangoExtensionPanel : UiPanelBase
 		dangoItem.OnDangoInfoUpdate();
 	}
 
-	// Token: 0x0600D406 RID: 54278 RVA: 0x0030C9C8 File Offset: 0x0030ABC8
+	// Token: 0x0600A818 RID: 43032 RVA: 0x00317B3C File Offset: 0x00315D3C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoExtensionPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -70,25 +70,25 @@ public class DangoExtensionPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D407 RID: 54279 RVA: 0x0030CA0B File Offset: 0x0030AC0B
+	// Token: 0x0600A819 RID: 43033 RVA: 0x00317B7F File Offset: 0x00315D7F
 	protected override void OnStart()
 	{
 		this.AddEventListeners();
 	}
 
-	// Token: 0x0600D408 RID: 54280 RVA: 0x0030CA13 File Offset: 0x0030AC13
+	// Token: 0x0600A81A RID: 43034 RVA: 0x00317B87 File Offset: 0x00315D87
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListeners();
 	}
 
-	// Token: 0x0600D409 RID: 54281 RVA: 0x0030CA1B File Offset: 0x0030AC1B
+	// Token: 0x0600A81B RID: 43035 RVA: 0x00317B8F File Offset: 0x00315D8F
 	public void SetRelativeUiActive(bool active)
 	{
 		base.GetItem(26).SetUIActive(active);
 	}
 
-	// Token: 0x0600D40A RID: 54282 RVA: 0x0030CA2C File Offset: 0x0030AC2C
+	// Token: 0x0600A81C RID: 43036 RVA: 0x00317BA0 File Offset: 0x00315DA0
 	public void Refresh(int index, int roleCfgId, int playerId)
 	{
 		DangoAbyssModel.Instance.RefreshOwnDataAfterChange(playerId);
@@ -105,7 +105,7 @@ public class DangoExtensionPanel : UiPanelBase
 		this.DangoItem.Refresh(dangoItemData_Tmp);
 	}
 
-	// Token: 0x0600D40B RID: 54283 RVA: 0x0030CAD4 File Offset: 0x0030ACD4
+	// Token: 0x0600A81D RID: 43037 RVA: 0x00317C48 File Offset: 0x00315E48
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -131,14 +131,14 @@ public class DangoExtensionPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x040060F2 RID: 24818
+	// Token: 0x040061C1 RID: 25025
 	[Nullable(2)]
 	private DangoItem_Tmp_E DangoItem;
 
-	// Token: 0x02008180 RID: 33152
+	// Token: 0x0200730E RID: 29454
 	private enum EComponent
 	{
-		// Token: 0x0402A41B RID: 173083
+		// Token: 0x0402574F RID: 153423
 		DangoNode = 26
 	}
 }

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C7E RID: 7294
+// Token: 0x0200113D RID: 4413
 public class GachaDiscountTagItem : UiPanelBase
 {
-	// Token: 0x0600DBF8 RID: 56312 RVA: 0x00333714 File Offset: 0x00331914
+	// Token: 0x0600B00E RID: 45070 RVA: 0x0033EB74 File Offset: 0x0033CD74
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,24 +20,24 @@ public class GachaDiscountTagItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DBF9 RID: 56313 RVA: 0x0033375C File Offset: 0x0033195C
+	// Token: 0x0600B00F RID: 45071 RVA: 0x0033EBBC File Offset: 0x0033CDBC
 	[NullableContext(1)]
 	public void SetContent(string text)
 	{
 		base.GetText(0).SetText(text, true);
 	}
 
-	// Token: 0x0600DBFA RID: 56314 RVA: 0x0033376C File Offset: 0x0033196C
+	// Token: 0x0600B010 RID: 45072 RVA: 0x0033EBCC File Offset: 0x0033CDCC
 	[NullableContext(1)]
 	public void SetLocalText(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 	}
 
-	// Token: 0x02008241 RID: 33345
+	// Token: 0x020073CA RID: 29642
 	private enum EComponent
 	{
-		// Token: 0x0402A7F6 RID: 174070
+		// Token: 0x04025B1C RID: 154396
 		TextContent
 	}
 }

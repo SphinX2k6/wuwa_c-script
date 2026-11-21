@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02003440 RID: 13376
+// Token: 0x020029B4 RID: 10676
 public class RedDotTrapDefenseDevelopBranchAll : RedDotBase
 {
 }

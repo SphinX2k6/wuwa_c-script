@@ -8,18 +8,18 @@ using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005A9C RID: 23196
+	// Token: 0x02004A78 RID: 19064
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DreamLinkRunTaskData
 	{
-		// Token: 0x0603AC21 RID: 240673 RVA: 0x00DFEF16 File Offset: 0x00DFD116
+		// Token: 0x0602FB6A RID: 195434 RVA: 0x00D4F47E File Offset: 0x00D4D67E
 		public DreamLinkRunTaskData(int id)
 		{
 			this.Id = id;
 		}
 
-		// Token: 0x0603AC22 RID: 240674 RVA: 0x00DFEF4C File Offset: 0x00DFD14C
+		// Token: 0x0602FB6B RID: 195435 RVA: 0x00D4F4B4 File Offset: 0x00D4D6B4
 		public string GetLockTxt()
 		{
 			string result = "";
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			return result;
 		}
 
-		// Token: 0x0603AC23 RID: 240675 RVA: 0x00DFEFBF File Offset: 0x00DFD1BF
+		// Token: 0x0602FB6C RID: 195436 RVA: 0x00D4F527 File Offset: 0x00D4D727
 		public bool IsTimeLock()
 		{
 			return (double)this.UnlockTime > TimeUtil.Instance.GetServerTime();
 		}
 
-		// Token: 0x0603AC24 RID: 240676 RVA: 0x00DFEFD4 File Offset: 0x00DFD1D4
+		// Token: 0x0602FB6D RID: 195437 RVA: 0x00D4F53C File Offset: 0x00D4D73C
 		public List<IItemGridData> GetRewardData()
 		{
 			List<IItemGridData> list = new List<IItemGridData>();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return list;
 		}
 
-		// Token: 0x0603AC25 RID: 240677 RVA: 0x00DFF04C File Offset: 0x00DFD24C
+		// Token: 0x0602FB6E RID: 195438 RVA: 0x00D4F5B4 File Offset: 0x00D4D7B4
 		public void JumpDelegate()
 		{
 			WorldMapController.Instance.OpenView(EOpenMapType.Mouse, false, null, delegate(bool success, int viewId)
@@ -73,34 +73,34 @@ namespace CSharpScript.Game.Module.DreamLink
 			});
 		}
 
-		// Token: 0x0603AC26 RID: 240678 RVA: 0x00DFF067 File Offset: 0x00DFD267
+		// Token: 0x0602FB6F RID: 195439 RVA: 0x00D4F5CF File Offset: 0x00D4D7CF
 		public void ReceiveDelegate()
 		{
 			DreamLinkController.Instance.RunTaskRewardRequest(this.Id);
 		}
 
-		// Token: 0x0401EA97 RID: 125591
+		// Token: 0x0401953E RID: 103742
 		public int Id;
 
-		// Token: 0x0401EA98 RID: 125592
+		// Token: 0x0401953F RID: 103743
 		public EDreamLinkRunTaskState Status = EDreamLinkRunTaskState.Active;
 
-		// Token: 0x0401EA99 RID: 125593
+		// Token: 0x04019540 RID: 103744
 		public int ConditionGroupId;
 
-		// Token: 0x0401EA9A RID: 125594
+		// Token: 0x04019541 RID: 103745
 		public string TitleTextId = "";
 
-		// Token: 0x0401EA9B RID: 125595
+		// Token: 0x04019542 RID: 103746
 		public List<TItem> RewardList = new List<TItem>();
 
-		// Token: 0x0401EA9C RID: 125596
+		// Token: 0x04019543 RID: 103747
 		public long UnlockTime;
 
-		// Token: 0x0401EA9D RID: 125597
+		// Token: 0x04019544 RID: 103748
 		public int MarkId;
 
-		// Token: 0x0401EA9E RID: 125598
+		// Token: 0x04019545 RID: 103749
 		public int PlayTime = -1;
 	}
 }

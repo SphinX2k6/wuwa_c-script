@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051B7 RID: 20919
+	// Token: 0x0200571C RID: 22300
 	public class IEntityStateAudioConfigT
 	{
-		// Token: 0x170098ED RID: 39149
-		// (get) Token: 0x06021E02 RID: 138754 RVA: 0x004B2EA9 File Offset: 0x004B10A9
-		// (set) Token: 0x06021E03 RID: 138755 RVA: 0x004B2EB1 File Offset: 0x004B10B1
+		// Token: 0x1700A0DC RID: 41180
+		// (get) Token: 0x06023D5A RID: 146778 RVA: 0x004ECF11 File Offset: 0x004EB111
+		// (set) Token: 0x06023D5B RID: 146779 RVA: 0x004ECF19 File Offset: 0x004EB119
 		public string State { get; set; }
 
-		// Token: 0x170098EE RID: 39150
-		// (get) Token: 0x06021E04 RID: 138756 RVA: 0x004B2EBA File Offset: 0x004B10BA
-		// (set) Token: 0x06021E05 RID: 138757 RVA: 0x004B2EC2 File Offset: 0x004B10C2
+		// Token: 0x1700A0DD RID: 41181
+		// (get) Token: 0x06023D5C RID: 146780 RVA: 0x004ECF22 File Offset: 0x004EB122
+		// (set) Token: 0x06023D5D RID: 146781 RVA: 0x004ECF2A File Offset: 0x004EB12A
 		public string AkEvent { get; set; }
 
-		// Token: 0x170098EF RID: 39151
-		// (get) Token: 0x06021E06 RID: 138758 RVA: 0x004B2ECB File Offset: 0x004B10CB
-		// (set) Token: 0x06021E07 RID: 138759 RVA: 0x004B2ED3 File Offset: 0x004B10D3
+		// Token: 0x1700A0DE RID: 41182
+		// (get) Token: 0x06023D5E RID: 146782 RVA: 0x004ECF33 File Offset: 0x004EB133
+		// (set) Token: 0x06023D5F RID: 146783 RVA: 0x004ECF3B File Offset: 0x004EB13B
 		public string LeaveAkEvent { get; set; }
 
-		// Token: 0x170098F0 RID: 39152
-		// (get) Token: 0x06021E08 RID: 138760 RVA: 0x004B2EDC File Offset: 0x004B10DC
-		// (set) Token: 0x06021E09 RID: 138761 RVA: 0x004B2EE4 File Offset: 0x004B10E4
+		// Token: 0x1700A0DF RID: 41183
+		// (get) Token: 0x06023D60 RID: 146784 RVA: 0x004ECF44 File Offset: 0x004EB144
+		// (set) Token: 0x06023D61 RID: 146785 RVA: 0x004ECF4C File Offset: 0x004EB14C
 		public IAudioFadeT AudioFade { get; set; }
 
-		// Token: 0x170098F1 RID: 39153
-		// (get) Token: 0x06021E0A RID: 138762 RVA: 0x004B2EED File Offset: 0x004B10ED
-		// (set) Token: 0x06021E0B RID: 138763 RVA: 0x004B2EF5 File Offset: 0x004B10F5
+		// Token: 0x1700A0E0 RID: 41184
+		// (get) Token: 0x06023D62 RID: 146786 RVA: 0x004ECF55 File Offset: 0x004EB155
+		// (set) Token: 0x06023D63 RID: 146787 RVA: 0x004ECF5D File Offset: 0x004EB15D
 		public bool IsBanVehicleRadio { get; set; }
 
-		// Token: 0x170098F2 RID: 39154
-		// (get) Token: 0x06021E0C RID: 138764 RVA: 0x004B2EFE File Offset: 0x004B10FE
-		// (set) Token: 0x06021E0D RID: 138765 RVA: 0x004B2F06 File Offset: 0x004B1106
+		// Token: 0x1700A0E1 RID: 41185
+		// (get) Token: 0x06023D64 RID: 146788 RVA: 0x004ECF66 File Offset: 0x004EB166
+		// (set) Token: 0x06023D65 RID: 146789 RVA: 0x004ECF6E File Offset: 0x004EB16E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021E0E RID: 138766 RVA: 0x004B2F0F File Offset: 0x004B110F
+		// Token: 0x06023D66 RID: 146790 RVA: 0x004ECF77 File Offset: 0x004EB177
 		public IEntityStateAudioConfigT()
 		{
 			this.State = null;

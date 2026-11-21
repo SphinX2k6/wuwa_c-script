@@ -7,10 +7,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BB9 RID: 19385
+	// Token: 0x02003B63 RID: 15203
 	public class SkipTaskTrackNewSoundArea : SkipTask
 	{
-		// Token: 0x06032300 RID: 205568 RVA: 0x00BA971C File Offset: 0x00BA791C
+		// Token: 0x06027091 RID: 159889 RVA: 0x00AED9C8 File Offset: 0x00AEBBC8
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

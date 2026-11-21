@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200259C RID: 9628
+// Token: 0x02001A87 RID: 6791
 [NullableContext(1)]
 public interface ISatisfiedTrackingPoint
 {
-	// Token: 0x1700190E RID: 6414
-	// (get) Token: 0x06013806 RID: 79878
-	// (set) Token: 0x06013807 RID: 79879
+	// Token: 0x17001948 RID: 6472
+	// (get) Token: 0x06010CE8 RID: 68840
+	// (set) Token: 0x06010CE9 RID: 68841
 	Vector Position { get; set; }
 
-	// Token: 0x1700190F RID: 6415
-	// (get) Token: 0x06013808 RID: 79880
-	// (set) Token: 0x06013809 RID: 79881
+	// Token: 0x17001949 RID: 6473
+	// (get) Token: 0x06010CEA RID: 68842
+	// (set) Token: 0x06010CEB RID: 68843
 	bool IsOptional { get; set; }
 
-	// Token: 0x17001910 RID: 6416
-	// (get) Token: 0x0601380A RID: 79882
-	// (set) Token: 0x0601380B RID: 79883
+	// Token: 0x1700194A RID: 6474
+	// (get) Token: 0x06010CEC RID: 68844
+	// (set) Token: 0x06010CED RID: 68845
 	string Id { get; set; }
 }

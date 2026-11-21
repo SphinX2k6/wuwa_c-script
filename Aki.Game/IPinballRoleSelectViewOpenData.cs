@@ -3,33 +3,33 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.Pinball;
 
-// Token: 0x020013FB RID: 5115
+// Token: 0x020008AF RID: 2223
 [NullableContext(1)]
 public interface IPinballRoleSelectViewOpenData
 {
-	// Token: 0x17000C32 RID: 3122
-	// (get) Token: 0x0600908A RID: 37002
-	// (set) Token: 0x0600908B RID: 37003
+	// Token: 0x17000C52 RID: 3154
+	// (get) Token: 0x0600641F RID: 25631
+	// (set) Token: 0x06006420 RID: 25632
 	PinballActivityData ActivityData { get; set; }
 
-	// Token: 0x17000C33 RID: 3123
-	// (get) Token: 0x0600908C RID: 37004
-	// (set) Token: 0x0600908D RID: 37005
+	// Token: 0x17000C53 RID: 3155
+	// (get) Token: 0x06006421 RID: 25633
+	// (set) Token: 0x06006422 RID: 25634
 	int SelectedRoleId { get; set; }
 
-	// Token: 0x17000C34 RID: 3124
-	// (get) Token: 0x0600908E RID: 37006
-	// (set) Token: 0x0600908F RID: 37007
+	// Token: 0x17000C54 RID: 3156
+	// (get) Token: 0x06006423 RID: 25635
+	// (set) Token: 0x06006424 RID: 25636
 	List<PinballRoleDataBase> RoleDataList { get; set; }
 
-	// Token: 0x17000C35 RID: 3125
-	// (get) Token: 0x06009090 RID: 37008
-	// (set) Token: 0x06009091 RID: 37009
+	// Token: 0x17000C55 RID: 3157
+	// (get) Token: 0x06006425 RID: 25637
+	// (set) Token: 0x06006426 RID: 25638
 	[Nullable(2)]
 	int[] FormationRoleIds { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000C36 RID: 3126
-	// (get) Token: 0x06009092 RID: 37010
-	// (set) Token: 0x06009093 RID: 37011
+	// Token: 0x17000C56 RID: 3158
+	// (get) Token: 0x06006427 RID: 25639
+	// (set) Token: 0x06006428 RID: 25640
 	Action<int> OnSelectConfirm { get; set; }
 }

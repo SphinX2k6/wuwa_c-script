@@ -6,53 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001BD0 RID: 7120
+	// Token: 0x020004E6 RID: 1254
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroTODData")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 128)]
 	public class UKuroTODData : UDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601B539 RID: 111929 RVA: 0x00284248 File Offset: 0x00282448
+		// Token: 0x06007661 RID: 30305 RVA: 0x000ACD4A File Offset: 0x000AAF4A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroTODData._ClassPtr;
 		}
 
-		// Token: 0x0601B53A RID: 111930 RVA: 0x00284254 File Offset: 0x00282454
+		// Token: 0x06007662 RID: 30306 RVA: 0x000ACD58 File Offset: 0x000AAF58
 		public UKuroTODData() : this(BuiltinUtils.AllocNativeUObject(UKuroTODData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601B53B RID: 111931 RVA: 0x0028427C File Offset: 0x0028247C
+		// Token: 0x06007663 RID: 30307 RVA: 0x000ACD80 File Offset: 0x000AAF80
 		public UKuroTODData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroTODData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006DCC RID: 28108
-		// (get) Token: 0x0601B53C RID: 111932 RVA: 0x002842B0 File Offset: 0x002824B0
-		// (set) Token: 0x0601B53D RID: 111933 RVA: 0x002842E9 File Offset: 0x002824E9
-		public TArray<FKuroTODEntryData> EntryDatas
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKuroTODEntryData> result;
-				if ((result = this._EntryDatas) == null)
-				{
-					result = (this._EntryDatas = new TArray<FKuroTODEntryData>(base.NativePtr + (IntPtr)UKuroTODData.__PropertyOffset_EntryDatas, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.EntryDatas.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006DCD RID: 28109
-		// (get) Token: 0x0601B53E RID: 111934 RVA: 0x002842F8 File Offset: 0x002824F8
-		// (set) Token: 0x0601B53F RID: 111935 RVA: 0x00284331 File Offset: 0x00282531
+		// Token: 0x170016D0 RID: 5840
+		// (get) Token: 0x06007664 RID: 30308 RVA: 0x000ACDB4 File Offset: 0x000AAFB4
+		// (set) Token: 0x06007665 RID: 30309 RVA: 0x000ACDED File Offset: 0x000AAFED
 		public TArray<UKuroWeatherDataAsset> TODConfigs
 		{
 			get
@@ -71,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DCE RID: 28110
-		// (get) Token: 0x0601B540 RID: 111936 RVA: 0x0028433F File Offset: 0x0028253F
-		// (set) Token: 0x0601B541 RID: 111937 RVA: 0x0028434F File Offset: 0x0028254F
+		// Token: 0x170016D1 RID: 5841
+		// (get) Token: 0x06007666 RID: 30310 RVA: 0x000ACDFB File Offset: 0x000AAFFB
+		// (set) Token: 0x06007667 RID: 30311 RVA: 0x000ACE0B File Offset: 0x000AB00B
 		public unsafe bool bSpecialBlend
 		{
 			get
@@ -86,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DCF RID: 28111
-		// (get) Token: 0x0601B542 RID: 111938 RVA: 0x00284360 File Offset: 0x00282560
-		// (set) Token: 0x0601B543 RID: 111939 RVA: 0x00284370 File Offset: 0x00282570
+		// Token: 0x170016D2 RID: 5842
+		// (get) Token: 0x06007668 RID: 30312 RVA: 0x000ACE1C File Offset: 0x000AB01C
+		// (set) Token: 0x06007669 RID: 30313 RVA: 0x000ACE2C File Offset: 0x000AB02C
 		public unsafe bool bPolarDaynight
 		{
 			get
@@ -101,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DD0 RID: 28112
-		// (get) Token: 0x0601B544 RID: 111940 RVA: 0x00284381 File Offset: 0x00282581
-		// (set) Token: 0x0601B545 RID: 111941 RVA: 0x00284391 File Offset: 0x00282591
+		// Token: 0x170016D3 RID: 5843
+		// (get) Token: 0x0600766A RID: 30314 RVA: 0x000ACE3D File Offset: 0x000AB03D
+		// (set) Token: 0x0600766B RID: 30315 RVA: 0x000ACE4D File Offset: 0x000AB04D
 		public unsafe float FixedSunHorizonAngle
 		{
 			get
@@ -116,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DD1 RID: 28113
-		// (get) Token: 0x0601B546 RID: 111942 RVA: 0x002843A2 File Offset: 0x002825A2
-		// (set) Token: 0x0601B547 RID: 111943 RVA: 0x002843B2 File Offset: 0x002825B2
+		// Token: 0x170016D4 RID: 5844
+		// (get) Token: 0x0600766C RID: 30316 RVA: 0x000ACE5E File Offset: 0x000AB05E
+		// (set) Token: 0x0600766D RID: 30317 RVA: 0x000ACE6E File Offset: 0x000AB06E
 		public unsafe float FixedSunVerticalAngle
 		{
 			get
@@ -131,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DD2 RID: 28114
-		// (get) Token: 0x0601B548 RID: 111944 RVA: 0x002843C3 File Offset: 0x002825C3
-		// (set) Token: 0x0601B549 RID: 111945 RVA: 0x002843D3 File Offset: 0x002825D3
+		// Token: 0x170016D5 RID: 5845
+		// (get) Token: 0x0600766E RID: 30318 RVA: 0x000ACE7F File Offset: 0x000AB07F
+		// (set) Token: 0x0600766F RID: 30319 RVA: 0x000ACE8F File Offset: 0x000AB08F
 		public unsafe float FixedTime
 		{
 			get
@@ -146,9 +125,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DD3 RID: 28115
-		// (get) Token: 0x0601B54A RID: 111946 RVA: 0x002843E4 File Offset: 0x002825E4
-		// (set) Token: 0x0601B54B RID: 111947 RVA: 0x002843F4 File Offset: 0x002825F4
+		// Token: 0x170016D6 RID: 5846
+		// (get) Token: 0x06007670 RID: 30320 RVA: 0x000ACEA0 File Offset: 0x000AB0A0
+		// (set) Token: 0x06007671 RID: 30321 RVA: 0x000ACEB0 File Offset: 0x000AB0B0
 		public unsafe bool bDayNightSwitchInPolarDayNight
 		{
 			get
@@ -161,9 +140,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DD4 RID: 28116
-		// (get) Token: 0x0601B54C RID: 111948 RVA: 0x00284405 File Offset: 0x00282605
-		// (set) Token: 0x0601B54D RID: 111949 RVA: 0x00284415 File Offset: 0x00282615
+		// Token: 0x170016D7 RID: 5847
+		// (get) Token: 0x06007672 RID: 30322 RVA: 0x000ACEC1 File Offset: 0x000AB0C1
+		// (set) Token: 0x06007673 RID: 30323 RVA: 0x000ACED1 File Offset: 0x000AB0D1
 		public unsafe bool bCustomSunDirection
 		{
 			get
@@ -176,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DD5 RID: 28117
-		// (get) Token: 0x0601B54E RID: 111950 RVA: 0x00284426 File Offset: 0x00282626
-		// (set) Token: 0x0601B54F RID: 111951 RVA: 0x00284436 File Offset: 0x00282636
+		// Token: 0x170016D8 RID: 5848
+		// (get) Token: 0x06007674 RID: 30324 RVA: 0x000ACEE2 File Offset: 0x000AB0E2
+		// (set) Token: 0x06007675 RID: 30325 RVA: 0x000ACEF2 File Offset: 0x000AB0F2
 		public unsafe float TODSunHorizonAngle
 		{
 			get
@@ -191,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006DD6 RID: 28118
-		// (get) Token: 0x0601B550 RID: 111952 RVA: 0x00284447 File Offset: 0x00282647
-		// (set) Token: 0x0601B551 RID: 111953 RVA: 0x00284457 File Offset: 0x00282657
+		// Token: 0x170016D9 RID: 5849
+		// (get) Token: 0x06007676 RID: 30326 RVA: 0x000ACF03 File Offset: 0x000AB103
+		// (set) Token: 0x06007677 RID: 30327 RVA: 0x000ACF13 File Offset: 0x000AB113
 		public unsafe float TODSunVerticalAngle
 		{
 			get
@@ -206,41 +185,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601B552 RID: 111954 RVA: 0x00284468 File Offset: 0x00282668
+		// Token: 0x06007678 RID: 30328 RVA: 0x000ACF24 File Offset: 0x000AB124
 		static UKuroTODData()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroTODData");
 		}
 
-		// Token: 0x0601B553 RID: 111955 RVA: 0x00284476 File Offset: 0x00282676
+		// Token: 0x06007679 RID: 30329 RVA: 0x000ACF32 File Offset: 0x000AB132
 		protected UKuroTODData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400EB68 RID: 60264
+		// Token: 0x040031E3 RID: 12771
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroTODData";
 
-		// Token: 0x0400EB69 RID: 60265
+		// Token: 0x040031E4 RID: 12772
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400EB6A RID: 60266
+		// Token: 0x040031E5 RID: 12773
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400EB6B RID: 60267
-		internal static int __PropertyOffset_EntryDatas;
-
-		// Token: 0x0400EB6C RID: 60268
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKuroTODEntryData> _EntryDatas;
-
-		// Token: 0x0400EB6D RID: 60269
+		// Token: 0x040031E6 RID: 12774
 		internal static int __PropertyOffset_TODConfigs;
 
-		// Token: 0x0400EB6E RID: 60270
+		// Token: 0x040031E7 RID: 12775
 		[Nullable(new byte[]
 		{
 			2,
@@ -248,31 +216,31 @@ namespace UnrealEngine
 		})]
 		private TArray<UKuroWeatherDataAsset> _TODConfigs;
 
-		// Token: 0x0400EB6F RID: 60271
+		// Token: 0x040031E8 RID: 12776
 		internal static int __PropertyOffset_bSpecialBlend;
 
-		// Token: 0x0400EB70 RID: 60272
+		// Token: 0x040031E9 RID: 12777
 		internal static int __PropertyOffset_bPolarDaynight;
 
-		// Token: 0x0400EB71 RID: 60273
+		// Token: 0x040031EA RID: 12778
 		internal static int __PropertyOffset_FixedSunHorizonAngle;
 
-		// Token: 0x0400EB72 RID: 60274
+		// Token: 0x040031EB RID: 12779
 		internal static int __PropertyOffset_FixedSunVerticalAngle;
 
-		// Token: 0x0400EB73 RID: 60275
+		// Token: 0x040031EC RID: 12780
 		internal static int __PropertyOffset_FixedTime;
 
-		// Token: 0x0400EB74 RID: 60276
+		// Token: 0x040031ED RID: 12781
 		internal static int __PropertyOffset_bDayNightSwitchInPolarDayNight;
 
-		// Token: 0x0400EB75 RID: 60277
+		// Token: 0x040031EE RID: 12782
 		internal static int __PropertyOffset_bCustomSunDirection;
 
-		// Token: 0x0400EB76 RID: 60278
+		// Token: 0x040031EF RID: 12783
 		internal static int __PropertyOffset_TODSunHorizonAngle;
 
-		// Token: 0x0400EB77 RID: 60279
+		// Token: 0x040031F0 RID: 12784
 		internal static int __PropertyOffset_TODSunVerticalAngle;
 	}
 }

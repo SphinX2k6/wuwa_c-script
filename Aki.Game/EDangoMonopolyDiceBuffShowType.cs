@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001238 RID: 4664
+// Token: 0x020006EC RID: 1772
 public enum EDangoMonopolyDiceBuffShowType
 {
-	// Token: 0x0400397B RID: 14715
+	// Token: 0x04003A13 RID: 14867
 	Double,
-	// Token: 0x0400397C RID: 14716
+	// Token: 0x04003A14 RID: 14868
 	AddOne
 }

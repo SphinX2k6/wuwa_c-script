@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001E84 RID: 7812
+// Token: 0x02001346 RID: 4934
 [NullableContext(1)]
 public interface IHonamiStoryBackpackData
 {
-	// Token: 0x0600EE12 RID: 60946
+	// Token: 0x0600C231 RID: 49713
 	int GetCapacity();
 
-	// Token: 0x0600EE13 RID: 60947
+	// Token: 0x0600C232 RID: 49714
 	int GetWidthCount();
 
-	// Token: 0x0600EE14 RID: 60948
+	// Token: 0x0600C233 RID: 49715
 	int GetHeightCount();
 
-	// Token: 0x0600EE15 RID: 60949
+	// Token: 0x0600C234 RID: 49716
 	int GetCellWidth();
 
-	// Token: 0x0600EE16 RID: 60950
+	// Token: 0x0600C235 RID: 49717
 	int GetCellHeight();
 
-	// Token: 0x0600EE17 RID: 60951
+	// Token: 0x0600C236 RID: 49718
 	int GetCellHorizontalInterval();
 
-	// Token: 0x0600EE18 RID: 60952
+	// Token: 0x0600C237 RID: 49719
 	int GetCellVerticalInterval();
 
-	// Token: 0x0600EE19 RID: 60953
+	// Token: 0x0600C238 RID: 49720
 	List<HonamiStoryItemDataBase> GetItemDataList();
 }

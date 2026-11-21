@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027F8 RID: 10232
+	// Token: 0x02002ACB RID: 10955
 	public class IQiuyuanQinggongExploration2 : ILeisureInteractType
 	{
-		// Token: 0x0600E332 RID: 58162 RVA: 0x002181AE File Offset: 0x002163AE
-		[NullableContext(1)]
+		// Token: 0x0600F157 RID: 61783 RVA: 0x00235012 File Offset: 0x00233212
 		public static IQiuyuanQinggongExploration2 Create(IQiuyuanQinggongExploration2? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004504 RID: 17668
-		// (get) Token: 0x0600E333 RID: 58163 RVA: 0x002181CD File Offset: 0x002163CD
+		// Token: 0x1700486F RID: 18543
+		// (get) Token: 0x0600F158 RID: 61784 RVA: 0x00235031 File Offset: 0x00233231
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DDC RID: 32220
+		// Token: 0x04008499 RID: 33945
 		private IQiuyuanQinggongExploration2 Instance;
 	}
 }

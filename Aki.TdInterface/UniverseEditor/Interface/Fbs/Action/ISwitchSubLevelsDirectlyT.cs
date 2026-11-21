@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200726F RID: 29295
+	// Token: 0x02007A44 RID: 31300
 	public class ISwitchSubLevelsDirectlyT
 	{
-		// Token: 0x1700D95D RID: 55645
-		// (get) Token: 0x06033F9C RID: 212892 RVA: 0x006FD64A File Offset: 0x006FB84A
-		// (set) Token: 0x06033F9D RID: 212893 RVA: 0x006FD652 File Offset: 0x006FB852
+		// Token: 0x1700E556 RID: 58710
+		// (get) Token: 0x0603729E RID: 225950 RVA: 0x0075E9AA File Offset: 0x0075CBAA
+		// (set) Token: 0x0603729F RID: 225951 RVA: 0x0075E9B2 File Offset: 0x0075CBB2
 		public ESwitchSubLevelsType Type { get; set; }
 
-		// Token: 0x1700D95E RID: 55646
-		// (get) Token: 0x06033F9E RID: 212894 RVA: 0x006FD65B File Offset: 0x006FB85B
-		// (set) Token: 0x06033F9F RID: 212895 RVA: 0x006FD663 File Offset: 0x006FB863
+		// Token: 0x1700E557 RID: 58711
+		// (get) Token: 0x060372A0 RID: 225952 RVA: 0x0075E9BB File Offset: 0x0075CBBB
+		// (set) Token: 0x060372A1 RID: 225953 RVA: 0x0075E9C3 File Offset: 0x0075CBC3
 		public List<string> LoadLevels { get; set; }
 
-		// Token: 0x1700D95F RID: 55647
-		// (get) Token: 0x06033FA0 RID: 212896 RVA: 0x006FD66C File Offset: 0x006FB86C
-		// (set) Token: 0x06033FA1 RID: 212897 RVA: 0x006FD674 File Offset: 0x006FB874
+		// Token: 0x1700E558 RID: 58712
+		// (get) Token: 0x060372A2 RID: 225954 RVA: 0x0075E9CC File Offset: 0x0075CBCC
+		// (set) Token: 0x060372A3 RID: 225955 RVA: 0x0075E9D4 File Offset: 0x0075CBD4
 		public List<string> UnloadLevels { get; set; }
 
-		// Token: 0x1700D960 RID: 55648
-		// (get) Token: 0x06033FA2 RID: 212898 RVA: 0x006FD67D File Offset: 0x006FB87D
-		// (set) Token: 0x06033FA3 RID: 212899 RVA: 0x006FD685 File Offset: 0x006FB885
+		// Token: 0x1700E559 RID: 58713
+		// (get) Token: 0x060372A4 RID: 225956 RVA: 0x0075E9DD File Offset: 0x0075CBDD
+		// (set) Token: 0x060372A5 RID: 225957 RVA: 0x0075E9E5 File Offset: 0x0075CBE5
 		public int TeleportEntityId { get; set; }
 
-		// Token: 0x1700D961 RID: 55649
-		// (get) Token: 0x06033FA4 RID: 212900 RVA: 0x006FD68E File Offset: 0x006FB88E
-		// (set) Token: 0x06033FA5 RID: 212901 RVA: 0x006FD696 File Offset: 0x006FB896
+		// Token: 0x1700E55A RID: 58714
+		// (get) Token: 0x060372A6 RID: 225958 RVA: 0x0075E9EE File Offset: 0x0075CBEE
+		// (set) Token: 0x060372A7 RID: 225959 RVA: 0x0075E9F6 File Offset: 0x0075CBF6
 		public bool IsWaitForSwitchComplete { get; set; }
 
-		// Token: 0x1700D962 RID: 55650
-		// (get) Token: 0x06033FA6 RID: 212902 RVA: 0x006FD69F File Offset: 0x006FB89F
-		// (set) Token: 0x06033FA7 RID: 212903 RVA: 0x006FD6A7 File Offset: 0x006FB8A7
+		// Token: 0x1700E55B RID: 58715
+		// (get) Token: 0x060372A8 RID: 225960 RVA: 0x0075E9FF File Offset: 0x0075CBFF
+		// (set) Token: 0x060372A9 RID: 225961 RVA: 0x0075EA07 File Offset: 0x0075CC07
 		public byte NullMask { get; set; }
 
-		// Token: 0x06033FA8 RID: 212904 RVA: 0x006FD6B0 File Offset: 0x006FB8B0
+		// Token: 0x060372AA RID: 225962 RVA: 0x0075EA10 File Offset: 0x0075CC10
 		public ISwitchSubLevelsDirectlyT()
 		{
 			this.Type = ESwitchSubLevelsType.Directly;

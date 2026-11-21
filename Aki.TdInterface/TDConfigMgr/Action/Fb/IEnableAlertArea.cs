@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029F1 RID: 10737
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CDE RID: 11486
 	public class IEnableAlertArea : IAlertSystemOption
 	{
-		// Token: 0x0600ED0D RID: 60685 RVA: 0x0022964B File Offset: 0x0022784B
+		// Token: 0x0600FBA4 RID: 64420 RVA: 0x00246FCF File Offset: 0x002451CF
 		public static IEnableAlertArea Create(IEnableAlertArea? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AED RID: 19181
-		// (get) Token: 0x0600ED0E RID: 60686 RVA: 0x0022966A File Offset: 0x0022786A
+		// Token: 0x17004E96 RID: 20118
+		// (get) Token: 0x0600FBA5 RID: 64421 RVA: 0x00246FEE File Offset: 0x002451EE
 		public override EAlertSystemOption Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AEE RID: 19182
-		// (get) Token: 0x0600ED0F RID: 60687 RVA: 0x00229677 File Offset: 0x00227877
+		// Token: 0x17004E97 RID: 20119
+		// (get) Token: 0x0600FBA6 RID: 64422 RVA: 0x00246FFB File Offset: 0x002451FB
 		public override int AreaId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AEF RID: 19183
-		// (get) Token: 0x0600ED10 RID: 60688 RVA: 0x00229684 File Offset: 0x00227884
+		// Token: 0x17004E98 RID: 20120
+		// (get) Token: 0x0600FBA7 RID: 64423 RVA: 0x00247008 File Offset: 0x00245208
 		public virtual bool IsEnable
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AF0 RID: 19184
-		// (get) Token: 0x0600ED11 RID: 60689 RVA: 0x00229691 File Offset: 0x00227891
+		// Token: 0x17004E99 RID: 20121
+		// (get) Token: 0x0600FBA8 RID: 64424 RVA: 0x00247015 File Offset: 0x00245215
 		public virtual IDisableAlertAreaCondition AutoDisableCondition
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008289 RID: 33417
+		// Token: 0x0400897A RID: 35194
 		private IEnableAlertArea Instance;
 
-		// Token: 0x0400828A RID: 33418
+		// Token: 0x0400897B RID: 35195
 		private IDisableAlertAreaCondition _AutoDisableConditionCache;
 
-		// Token: 0x0400828B RID: 33419
+		// Token: 0x0400897C RID: 35196
 		private bool _AutoDisableConditionInited;
 	}
 }

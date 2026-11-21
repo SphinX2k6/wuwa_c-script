@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001179 RID: 4473
+	// Token: 0x020012AF RID: 4783
 	public struct TrialRoleInfo : IFlatbufferObject
 	{
-		// Token: 0x17003CDE RID: 15582
-		// (get) Token: 0x0600E56B RID: 58731 RVA: 0x0033CB15 File Offset: 0x0033AD15
+		// Token: 0x17004042 RID: 16450
+		// (get) Token: 0x0600F2D9 RID: 62169 RVA: 0x0036792D File Offset: 0x00365B2D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E56C RID: 58732 RVA: 0x0033CB22 File Offset: 0x0033AD22
+		// Token: 0x0600F2DA RID: 62170 RVA: 0x0036793A File Offset: 0x00365B3A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E56D RID: 58733 RVA: 0x0033CB2C File Offset: 0x0033AD2C
+		// Token: 0x0600F2DB RID: 62171 RVA: 0x00367944 File Offset: 0x00365B44
 		public static TrialRoleInfo GetRootAsTrialRoleInfo(ByteBuffer _bb)
 		{
 			return TrialRoleInfo.GetRootAsTrialRoleInfo(_bb, default(TrialRoleInfo));
 		}
 
-		// Token: 0x0600E56E RID: 58734 RVA: 0x0033CB48 File Offset: 0x0033AD48
+		// Token: 0x0600F2DC RID: 62172 RVA: 0x00367960 File Offset: 0x00365B60
 		public static TrialRoleInfo GetRootAsTrialRoleInfo(ByteBuffer _bb, TrialRoleInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E56F RID: 58735 RVA: 0x0033CB65 File Offset: 0x0033AD65
+		// Token: 0x0600F2DD RID: 62173 RVA: 0x0036797D File Offset: 0x00365B7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E570 RID: 58736 RVA: 0x0033CB74 File Offset: 0x0033AD74
+		// Token: 0x0600F2DE RID: 62174 RVA: 0x0036798C File Offset: 0x00365B8C
 		public TrialRoleInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003CDF RID: 15583
-		// (get) Token: 0x0600E571 RID: 58737 RVA: 0x0033CB84 File Offset: 0x0033AD84
+		// Token: 0x17004043 RID: 16451
+		// (get) Token: 0x0600F2DF RID: 62175 RVA: 0x0036799C File Offset: 0x00365B9C
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE0 RID: 15584
-		// (get) Token: 0x0600E572 RID: 58738 RVA: 0x0033CBC0 File Offset: 0x0033ADC0
+		// Token: 0x17004044 RID: 16452
+		// (get) Token: 0x0600F2E0 RID: 62176 RVA: 0x003679D8 File Offset: 0x00365BD8
 		public int GroupId
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE1 RID: 15585
-		// (get) Token: 0x0600E573 RID: 58739 RVA: 0x0033CBFC File Offset: 0x0033ADFC
+		// Token: 0x17004045 RID: 16453
+		// (get) Token: 0x0600F2E1 RID: 62177 RVA: 0x00367A14 File Offset: 0x00365C14
 		public int Type
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE2 RID: 15586
-		// (get) Token: 0x0600E574 RID: 58740 RVA: 0x0033CC38 File Offset: 0x0033AE38
+		// Token: 0x17004046 RID: 16454
+		// (get) Token: 0x0600F2E2 RID: 62178 RVA: 0x00367A50 File Offset: 0x00365C50
 		public int WorldLevel
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE3 RID: 15587
-		// (get) Token: 0x0600E575 RID: 58741 RVA: 0x0033CC78 File Offset: 0x0033AE78
+		// Token: 0x17004047 RID: 16455
+		// (get) Token: 0x0600F2E3 RID: 62179 RVA: 0x00367A90 File Offset: 0x00365C90
 		public int Gender
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE4 RID: 15588
-		// (get) Token: 0x0600E576 RID: 58742 RVA: 0x0033CCB8 File Offset: 0x0033AEB8
+		// Token: 0x17004048 RID: 16456
+		// (get) Token: 0x0600F2E4 RID: 62180 RVA: 0x00367AD0 File Offset: 0x00365CD0
 		public bool OnlyTrial
 		{
 			get
@@ -136,8 +136,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE5 RID: 15589
-		// (get) Token: 0x0600E577 RID: 58743 RVA: 0x0033CCF8 File Offset: 0x0033AEF8
+		// Token: 0x17004049 RID: 16457
+		// (get) Token: 0x0600F2E5 RID: 62181 RVA: 0x00367B10 File Offset: 0x00365D10
 		public bool HideTrialLabel
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE6 RID: 15590
-		// (get) Token: 0x0600E578 RID: 58744 RVA: 0x0033CD38 File Offset: 0x0033AF38
+		// Token: 0x1700404A RID: 16458
+		// (get) Token: 0x0600F2E6 RID: 62182 RVA: 0x00367B50 File Offset: 0x00365D50
 		public int ParentId
 		{
 			get
@@ -162,8 +162,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE7 RID: 15591
-		// (get) Token: 0x0600E579 RID: 58745 RVA: 0x0033CD78 File Offset: 0x0033AF78
+		// Token: 0x1700404B RID: 16459
+		// (get) Token: 0x0600F2E7 RID: 62183 RVA: 0x00367B90 File Offset: 0x00365D90
 		public int Level
 		{
 			get
@@ -177,8 +177,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE8 RID: 15592
-		// (get) Token: 0x0600E57A RID: 58746 RVA: 0x0033CDB8 File Offset: 0x0033AFB8
+		// Token: 0x1700404C RID: 16460
+		// (get) Token: 0x0600F2E8 RID: 62184 RVA: 0x00367BD0 File Offset: 0x00365DD0
 		public int ResonanceLevel
 		{
 			get
@@ -192,8 +192,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CE9 RID: 15593
-		// (get) Token: 0x0600E57B RID: 58747 RVA: 0x0033CDF8 File Offset: 0x0033AFF8
+		// Token: 0x1700404D RID: 16461
+		// (get) Token: 0x0600F2E9 RID: 62185 RVA: 0x00367C10 File Offset: 0x00365E10
 		public int UnlockSkillLevel
 		{
 			get
@@ -207,7 +207,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E57C RID: 58748 RVA: 0x0033CE38 File Offset: 0x0033B038
+		// Token: 0x0600F2EA RID: 62186 RVA: 0x00367C50 File Offset: 0x00365E50
 		public int UnlockSkillNodeList(int j)
 		{
 			int num = this.__p.__offset(26);
@@ -218,8 +218,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003CEA RID: 15594
-		// (get) Token: 0x0600E57D RID: 58749 RVA: 0x0033CE78 File Offset: 0x0033B078
+		// Token: 0x1700404E RID: 16462
+		// (get) Token: 0x0600F2EB RID: 62187 RVA: 0x00367C90 File Offset: 0x00365E90
 		public int UnlockSkillNodeListLength
 		{
 			get
@@ -233,20 +233,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E57E RID: 58750 RVA: 0x0033CEA4 File Offset: 0x0033B0A4
+		// Token: 0x0600F2EC RID: 62188 RVA: 0x00367CBC File Offset: 0x00365EBC
 		public Span<int> GetUnlockSkillNodeListBytes()
 		{
 			return this.__p.__vector_as_span<int>(26, 4);
 		}
 
-		// Token: 0x0600E57F RID: 58751 RVA: 0x0033CEB4 File Offset: 0x0033B0B4
+		// Token: 0x0600F2ED RID: 62189 RVA: 0x00367CCC File Offset: 0x00365ECC
 		public int[] GetUnlockSkillNodeListArray()
 		{
 			return this.__p.__vector_as_array<int>(26) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003CEB RID: 15595
-		// (get) Token: 0x0600E580 RID: 58752 RVA: 0x0033CECC File Offset: 0x0033B0CC
+		// Token: 0x1700404F RID: 16463
+		// (get) Token: 0x0600F2EE RID: 62190 RVA: 0x00367CE4 File Offset: 0x00365EE4
 		public int DefaultSkillBranchId
 		{
 			get
@@ -260,8 +260,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CEC RID: 15596
-		// (get) Token: 0x0600E581 RID: 58753 RVA: 0x0033CF0C File Offset: 0x0033B10C
+		// Token: 0x17004050 RID: 16464
+		// (get) Token: 0x0600F2EF RID: 62191 RVA: 0x00367D24 File Offset: 0x00365F24
 		public int RoleSkin
 		{
 			get
@@ -275,8 +275,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CED RID: 15597
-		// (get) Token: 0x0600E582 RID: 58754 RVA: 0x0033CF4C File Offset: 0x0033B14C
+		// Token: 0x17004051 RID: 16465
+		// (get) Token: 0x0600F2F0 RID: 62192 RVA: 0x00367D64 File Offset: 0x00365F64
 		public int TrailWeapon
 		{
 			get
@@ -290,7 +290,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E583 RID: 58755 RVA: 0x0033CF8C File Offset: 0x0033B18C
+		// Token: 0x0600F2F1 RID: 62193 RVA: 0x00367DA4 File Offset: 0x00365FA4
 		public IntPair? PhantomEquipList(int j)
 		{
 			int num = this.__p.__offset(34);
@@ -301,8 +301,8 @@ namespace Aki.Config
 			return new IntPair?(default(IntPair).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003CEE RID: 15598
-		// (get) Token: 0x0600E584 RID: 58756 RVA: 0x0033CFF0 File Offset: 0x0033B1F0
+		// Token: 0x17004052 RID: 16466
+		// (get) Token: 0x0600F2F2 RID: 62194 RVA: 0x00367E08 File Offset: 0x00366008
 		public int PhantomEquipListLength
 		{
 			get
@@ -316,8 +316,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CEF RID: 15599
-		// (get) Token: 0x0600E585 RID: 58757 RVA: 0x0033D01C File Offset: 0x0033B21C
+		// Token: 0x17004053 RID: 16467
+		// (get) Token: 0x0600F2F3 RID: 62195 RVA: 0x00367E34 File Offset: 0x00366034
 		public string SpinePrefabResource
 		{
 			get
@@ -331,20 +331,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E586 RID: 58758 RVA: 0x0033D054 File Offset: 0x0033B254
+		// Token: 0x0600F2F4 RID: 62196 RVA: 0x00367E6C File Offset: 0x0036606C
 		public Span<byte> GetSpinePrefabResourceBytes()
 		{
 			return this.__p.__vector_as_span<byte>(36, 1);
 		}
 
-		// Token: 0x0600E587 RID: 58759 RVA: 0x0033D064 File Offset: 0x0033B264
+		// Token: 0x0600F2F5 RID: 62197 RVA: 0x00367E7C File Offset: 0x0036607C
 		public byte[] GetSpinePrefabResourceArray()
 		{
 			return this.__p.__vector_as_array<byte>(36) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003CF0 RID: 15600
-		// (get) Token: 0x0600E588 RID: 58760 RVA: 0x0033D07C File Offset: 0x0033B27C
+		// Token: 0x17004054 RID: 16468
+		// (get) Token: 0x0600F2F6 RID: 62198 RVA: 0x00367E94 File Offset: 0x00366094
 		public string ContentTexturePath
 		{
 			get
@@ -358,54 +358,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E589 RID: 58761 RVA: 0x0033D0B4 File Offset: 0x0033B2B4
+		// Token: 0x0600F2F7 RID: 62199 RVA: 0x00367ECC File Offset: 0x003660CC
 		public Span<byte> GetContentTexturePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(38, 1);
 		}
 
-		// Token: 0x0600E58A RID: 58762 RVA: 0x0033D0C4 File Offset: 0x0033B2C4
+		// Token: 0x0600F2F8 RID: 62200 RVA: 0x00367EDC File Offset: 0x003660DC
 		public byte[] GetContentTexturePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(38) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600E58B RID: 58763 RVA: 0x0033D0DC File Offset: 0x0033B2DC
+		// Token: 0x0600F2F9 RID: 62201 RVA: 0x00367EF4 File Offset: 0x003660F4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PhantomEquipListIter()或GetPhantomEquipListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntPair[] PhantomEquipList()
+		public IntPair[] PhantomEquipList()
 		{
 			return this.PhantomEquipListIter().ToArray<IntPair>();
 		}
 
-		// Token: 0x0600E58C RID: 58764 RVA: 0x0033D0E9 File Offset: 0x0033B2E9
+		// Token: 0x0600F2FA RID: 62202 RVA: 0x00367F01 File Offset: 0x00366101
 		[NullableContext(1)]
-		public readonly IEnumerable<IntPair> PhantomEquipListIter()
+		public IEnumerable<IntPair> PhantomEquipListIter()
 		{
 			TrialRoleInfo.<PhantomEquipListIter>d__53 <PhantomEquipListIter>d__ = new TrialRoleInfo.<PhantomEquipListIter>d__53(-2);
 			<PhantomEquipListIter>d__.<>3__<>4__this = this;
 			return <PhantomEquipListIter>d__;
 		}
 
-		// Token: 0x0600E58D RID: 58765 RVA: 0x0033D100 File Offset: 0x0033B300
+		// Token: 0x0600F2FB RID: 62203 RVA: 0x00367F16 File Offset: 0x00366116
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用UnlockSkillNodeListIter()或GetUnlockSkillNodeListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] UnlockSkillNodeList()
+		public int[] UnlockSkillNodeList()
 		{
-			TrialRoleInfo trialRoleInfo = this;
-			return trialRoleInfo.GetUnlockSkillNodeListArray() ?? Array.Empty<int>();
+			return this.GetUnlockSkillNodeListArray();
 		}
 
-		// Token: 0x0600E58E RID: 58766 RVA: 0x0033D124 File Offset: 0x0033B324
+		// Token: 0x0600F2FC RID: 62204 RVA: 0x00367F1E File Offset: 0x0036611E
 		[NullableContext(1)]
-		public readonly IEnumerable<int> UnlockSkillNodeListIter()
+		public IEnumerable<int> UnlockSkillNodeListIter()
 		{
 			TrialRoleInfo.<UnlockSkillNodeListIter>d__55 <UnlockSkillNodeListIter>d__ = new TrialRoleInfo.<UnlockSkillNodeListIter>d__55(-2);
 			<UnlockSkillNodeListIter>d__.<>3__<>4__this = this;
 			return <UnlockSkillNodeListIter>d__;
 		}
 
-		// Token: 0x040052BF RID: 21183
+		// Token: 0x04005902 RID: 22786
 		private Table __p;
 	}
 }

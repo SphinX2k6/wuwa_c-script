@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021D0 RID: 8656
+	// Token: 0x02000732 RID: 1842
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.UITextParagraphHorizontalAlign")]
 	public enum UITextParagraphHorizontalAlign : byte
 	{
-		// Token: 0x040119AC RID: 72108
+		// Token: 0x040044CD RID: 17613
 		Left,
-		// Token: 0x040119AD RID: 72109
+		// Token: 0x040044CE RID: 17614
 		Center,
-		// Token: 0x040119AE RID: 72110
+		// Token: 0x040044CF RID: 17615
 		Right,
-		// Token: 0x040119AF RID: 72111
+		// Token: 0x040044D0 RID: 17616
 		UITextParagraphHorizontalAlign_MAX
 	}
 }

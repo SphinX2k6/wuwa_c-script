@@ -5,26 +5,26 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004647 RID: 17991
+	// Token: 0x02003578 RID: 13688
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonDragLogicDataItem<T> where T : class
 	{
-		// Token: 0x0602E6DB RID: 190171 RVA: 0x00ABA8F6 File Offset: 0x00AB8AF6
+		// Token: 0x06022E25 RID: 142885 RVA: 0x009E7F26 File Offset: 0x009E6126
 		[NullableContext(2)]
 		public void SetCurrentData(T data)
 		{
 			this.CurrentData = data;
 		}
 
-		// Token: 0x0602E6DC RID: 190172 RVA: 0x00ABA8FF File Offset: 0x00AB8AFF
+		// Token: 0x06022E26 RID: 142886 RVA: 0x009E7F2F File Offset: 0x009E612F
 		[NullableContext(2)]
 		public T GetCurrentData()
 		{
 			return this.CurrentData;
 		}
 
-		// Token: 0x0602E6DD RID: 190173 RVA: 0x00ABA908 File Offset: 0x00AB8B08
+		// Token: 0x06022E27 RID: 142887 RVA: 0x009E7F38 File Offset: 0x009E6138
 		public void SetDragComponent(UUIDraggableComponent drag)
 		{
 			this.DragComponent = drag;
@@ -32,54 +32,54 @@ namespace CSharpScript.Game.Ui
 			this.SourceHeight = this.DragComponent.RootUIComp.Get().Height;
 		}
 
-		// Token: 0x0602E6DE RID: 190174 RVA: 0x00ABA958 File Offset: 0x00AB8B58
+		// Token: 0x06022E28 RID: 142888 RVA: 0x009E7F88 File Offset: 0x009E6188
 		public void SetCurrentIndex(int index)
 		{
 			this.Index = index;
 		}
 
-		// Token: 0x0602E6DF RID: 190175 RVA: 0x00ABA961 File Offset: 0x00AB8B61
+		// Token: 0x06022E29 RID: 142889 RVA: 0x009E7F91 File Offset: 0x009E6191
 		public int GetCurrentIndex()
 		{
 			return this.Index;
 		}
 
-		// Token: 0x0602E6E0 RID: 190176 RVA: 0x00ABA969 File Offset: 0x00AB8B69
+		// Token: 0x06022E2A RID: 142890 RVA: 0x009E7F99 File Offset: 0x009E6199
 		public virtual bool CheckIfCanDrag()
 		{
 			return true;
 		}
 
-		// Token: 0x0602E6E1 RID: 190177 RVA: 0x00ABA96C File Offset: 0x00AB8B6C
+		// Token: 0x06022E2B RID: 142891 RVA: 0x009E7F9C File Offset: 0x009E619C
 		public virtual bool CheckIfCurrentDragIndex(int index)
 		{
 			return true;
 		}
 
-		// Token: 0x0602E6E2 RID: 190178 RVA: 0x00ABA96F File Offset: 0x00AB8B6F
+		// Token: 0x06022E2C RID: 142892 RVA: 0x009E7F9F File Offset: 0x009E619F
 		public virtual void SetCurrentDragIndex(int index)
 		{
 		}
 
-		// Token: 0x0602E6E3 RID: 190179 RVA: 0x00ABA971 File Offset: 0x00AB8B71
+		// Token: 0x06022E2D RID: 142893 RVA: 0x009E7FA1 File Offset: 0x009E61A1
 		public virtual void ClearCurrentDragIndex()
 		{
 		}
 
-		// Token: 0x0602E6E4 RID: 190180 RVA: 0x00ABA974 File Offset: 0x00AB8B74
+		// Token: 0x06022E2E RID: 142894 RVA: 0x009E7FA4 File Offset: 0x009E61A4
 		[NullableContext(0)]
 		public ValueTuple<float, float> GetMiddlePosition()
 		{
 			return new ValueTuple<float, float>(this.DragComponent.RootUIComp.Get().GetLGUISpaceCenterAbsolutePosition().X, this.DragComponent.RootUIComp.Get().GetLGUISpaceCenterAbsolutePosition().Y);
 		}
 
-		// Token: 0x0602E6E5 RID: 190181 RVA: 0x00ABA9C0 File Offset: 0x00AB8BC0
+		// Token: 0x06022E2F RID: 142895 RVA: 0x009E7FF0 File Offset: 0x009E61F0
 		public bool CheckIfSelfItem(int index)
 		{
 			return index == this.Index;
 		}
 
-		// Token: 0x0602E6E6 RID: 190182 RVA: 0x00ABA9CC File Offset: 0x00AB8BCC
+		// Token: 0x06022E30 RID: 142896 RVA: 0x009E7FFC File Offset: 0x009E61FC
 		public bool CheckOverlap(Vector2D inX, Vector2D inY)
 		{
 			double x = inX.X;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Ui
 			return x < y3 && x3 < y && x2 < y4 && x4 < y2;
 		}
 
-		// Token: 0x0602E6E7 RID: 190183 RVA: 0x00ABAA3C File Offset: 0x00AB8C3C
+		// Token: 0x06022E31 RID: 142897 RVA: 0x009E806C File Offset: 0x009E626C
 		public Vector2D GetBounceX()
 		{
 			float num = PhantomBattleConfig.Instance.GetVisionScrollerOffsetX() * (float)PhantomBattleConfig.Instance.GetVisionScrollerOffsetXDir();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Ui
 			return this.BounceX;
 		}
 
-		// Token: 0x0602E6E8 RID: 190184 RVA: 0x00ABAAC8 File Offset: 0x00AB8CC8
+		// Token: 0x06022E32 RID: 142898 RVA: 0x009E80F8 File Offset: 0x009E62F8
 		public Vector2D GetBounceY()
 		{
 			float num = PhantomBattleConfig.Instance.GetVisionScrollerOffsetY() * (float)PhantomBattleConfig.Instance.GetVisionScrollerOffsetYDir();
@@ -119,19 +119,19 @@ namespace CSharpScript.Game.Ui
 			return this.BounceY;
 		}
 
-		// Token: 0x0602E6E9 RID: 190185 RVA: 0x00ABAB53 File Offset: 0x00AB8D53
+		// Token: 0x06022E33 RID: 142899 RVA: 0x009E8183 File Offset: 0x009E6383
 		public void SetOnUnOverlayCallBack(Action<int> callBack)
 		{
 			this.OnUnOverlayCallBack = callBack;
 		}
 
-		// Token: 0x0602E6EA RID: 190186 RVA: 0x00ABAB5C File Offset: 0x00AB8D5C
+		// Token: 0x06022E34 RID: 142900 RVA: 0x009E818C File Offset: 0x009E638C
 		public void SetOnOverlayCallBack(Action<int> callBack)
 		{
 			this.OnOverlayCallBack = callBack;
 		}
 
-		// Token: 0x0602E6EB RID: 190187 RVA: 0x00ABAB65 File Offset: 0x00AB8D65
+		// Token: 0x06022E35 RID: 142901 RVA: 0x009E8195 File Offset: 0x009E6395
 		public void OnUnOverlay()
 		{
 			Action<int> onUnOverlayCallBack = this.OnUnOverlayCallBack;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Ui
 			onUnOverlayCallBack(this.GetCurrentIndex());
 		}
 
-		// Token: 0x0602E6EC RID: 190188 RVA: 0x00ABAB7D File Offset: 0x00AB8D7D
+		// Token: 0x06022E36 RID: 142902 RVA: 0x009E81AD File Offset: 0x009E63AD
 		public void OnOverlay()
 		{
 			Action<int> onOverlayCallBack = this.OnOverlayCallBack;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Ui
 			onOverlayCallBack(this.GetCurrentIndex());
 		}
 
-		// Token: 0x0602E6ED RID: 190189 RVA: 0x00ABAB98 File Offset: 0x00AB8D98
+		// Token: 0x06022E37 RID: 142903 RVA: 0x009E81C8 File Offset: 0x009E63C8
 		public int GetOverlapIndex(List<CommonDragLogicDataItem<T>> targets)
 		{
 			int count = targets.Count;
@@ -184,40 +184,40 @@ namespace CSharpScript.Game.Ui
 			return currentIndex;
 		}
 
-		// Token: 0x0602E6EE RID: 190190 RVA: 0x00ABAC89 File Offset: 0x00AB8E89
+		// Token: 0x06022E38 RID: 142904 RVA: 0x009E82B9 File Offset: 0x009E64B9
 		public virtual float GetClickTime()
 		{
 			return 300f;
 		}
 
-		// Token: 0x04018E11 RID: 101905
+		// Token: 0x0401346A RID: 78954
 		[Nullable(2)]
 		private UUIDraggableComponent DragComponent;
 
-		// Token: 0x04018E12 RID: 101906
+		// Token: 0x0401346B RID: 78955
 		private int Index = -1;
 
-		// Token: 0x04018E13 RID: 101907
+		// Token: 0x0401346C RID: 78956
 		[Nullable(2)]
 		private T CurrentData;
 
-		// Token: 0x04018E14 RID: 101908
+		// Token: 0x0401346D RID: 78957
 		private readonly Vector2D BounceX = new Vector2D(0.0, 0.0);
 
-		// Token: 0x04018E15 RID: 101909
+		// Token: 0x0401346E RID: 78958
 		private readonly Vector2D BounceY = new Vector2D(0.0, 0.0);
 
-		// Token: 0x04018E16 RID: 101910
+		// Token: 0x0401346F RID: 78959
 		private float SourceWidth;
 
-		// Token: 0x04018E17 RID: 101911
+		// Token: 0x04013470 RID: 78960
 		private float SourceHeight;
 
-		// Token: 0x04018E18 RID: 101912
+		// Token: 0x04013471 RID: 78961
 		[Nullable(2)]
 		private Action<int> OnOverlayCallBack;
 
-		// Token: 0x04018E19 RID: 101913
+		// Token: 0x04013472 RID: 78962
 		[Nullable(2)]
 		private Action<int> OnUnOverlayCallBack;
 	}

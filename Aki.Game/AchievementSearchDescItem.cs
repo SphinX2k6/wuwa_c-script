@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F2E RID: 3886
+// Token: 0x020003E3 RID: 995
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementSearchDescItem : UiPanelBase
 {
-	// Token: 0x06006294 RID: 25236 RVA: 0x00134D9C File Offset: 0x00132F9C
+	// Token: 0x0600362C RID: 13868 RVA: 0x0013D6C4 File Offset: 0x0013B8C4
 	public AchievementSearchDescItem(UUIItem uiItem)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x06006295 RID: 25237 RVA: 0x00134DAC File Offset: 0x00132FAC
+	// Token: 0x0600362D RID: 13869 RVA: 0x0013D6D4 File Offset: 0x0013B8D4
 	public UniTask Init()
 	{
 		AchievementSearchDescItem.<Init>d__3 <Init>d__;
@@ -29,7 +29,7 @@ public class AchievementSearchDescItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006296 RID: 25238 RVA: 0x00134DF0 File Offset: 0x00132FF0
+	// Token: 0x0600362E RID: 13870 RVA: 0x0013D718 File Offset: 0x0013B918
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -41,24 +41,24 @@ public class AchievementSearchDescItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006297 RID: 25239 RVA: 0x00134E38 File Offset: 0x00133038
+	// Token: 0x0600362F RID: 13871 RVA: 0x0013D760 File Offset: 0x0013B960
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06006298 RID: 25240 RVA: 0x00134E3A File Offset: 0x0013303A
+	// Token: 0x06003630 RID: 13872 RVA: 0x0013D762 File Offset: 0x0013B962
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x06006299 RID: 25241 RVA: 0x00134E3C File Offset: 0x0013303C
+	// Token: 0x06003631 RID: 13873 RVA: 0x0013D764 File Offset: 0x0013B964
 	public void Update(AchievementSearchData data)
 	{
 		this.Data = data;
 		this.RefreshDesc();
 	}
 
-	// Token: 0x0600629A RID: 25242 RVA: 0x00134E4B File Offset: 0x0013304B
+	// Token: 0x06003632 RID: 13874 RVA: 0x0013D773 File Offset: 0x0013B973
 	private void RefreshDesc()
 	{
 		if (this.Data != null)
@@ -67,7 +67,7 @@ public class AchievementSearchDescItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600629B RID: 25243 RVA: 0x00134E78 File Offset: 0x00133078
+	// Token: 0x06003633 RID: 13875 RVA: 0x0013D7A0 File Offset: 0x0013B9A0
 	public FVector2D GetItemSize(Vector2D vector)
 	{
 		UUIItem rootItem = base.GetRootItem();
@@ -75,31 +75,31 @@ public class AchievementSearchDescItem : UiPanelBase
 		return vector.ToUeVector2D(false);
 	}
 
-	// Token: 0x0600629C RID: 25244 RVA: 0x00134EA7 File Offset: 0x001330A7
+	// Token: 0x06003634 RID: 13876 RVA: 0x0013D7CF File Offset: 0x0013B9CF
 	public AUIBaseActor GetUsingItem()
 	{
 		return (AUIBaseActor)base.GetRootItem().GetOwner();
 	}
 
-	// Token: 0x0600629D RID: 25245 RVA: 0x00134EB9 File Offset: 0x001330B9
+	// Token: 0x06003635 RID: 13877 RVA: 0x0013D7E1 File Offset: 0x0013B9E1
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x04002CB9 RID: 11449
+	// Token: 0x04002D52 RID: 11602
 	[Nullable(2)]
 	private AchievementSearchData Data;
 
-	// Token: 0x04002CBA RID: 11450
+	// Token: 0x04002D53 RID: 11603
 	[Nullable(2)]
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x02007577 RID: 30071
+	// Token: 0x0200670B RID: 26379
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04026D63 RID: 159075
+		// Token: 0x040220AE RID: 139438
 		Text
 	}
 }

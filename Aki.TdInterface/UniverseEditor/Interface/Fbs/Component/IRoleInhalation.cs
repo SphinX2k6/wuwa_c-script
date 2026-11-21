@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005876 RID: 22646
+	// Token: 0x02005E83 RID: 24195
 	public struct IRoleInhalation : IFlatbufferObject
 	{
-		// Token: 0x1700A963 RID: 43363
-		// (get) Token: 0x06026286 RID: 156294 RVA: 0x00542E2A File Offset: 0x0054102A
+		// Token: 0x1700B293 RID: 45715
+		// (get) Token: 0x060287E8 RID: 165864 RVA: 0x00589976 File Offset: 0x00587B76
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026287 RID: 156295 RVA: 0x00542E37 File Offset: 0x00541037
+		// Token: 0x060287E9 RID: 165865 RVA: 0x00589983 File Offset: 0x00587B83
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026288 RID: 156296 RVA: 0x00542E40 File Offset: 0x00541040
+		// Token: 0x060287EA RID: 165866 RVA: 0x0058998C File Offset: 0x00587B8C
 		public static IRoleInhalation GetRootAsIRoleInhalation(ByteBuffer _bb)
 		{
 			return IRoleInhalation.GetRootAsIRoleInhalation(_bb, default(IRoleInhalation));
 		}
 
-		// Token: 0x06026289 RID: 156297 RVA: 0x00542E5C File Offset: 0x0054105C
+		// Token: 0x060287EB RID: 165867 RVA: 0x005899A8 File Offset: 0x00587BA8
 		public static IRoleInhalation GetRootAsIRoleInhalation(ByteBuffer _bb, IRoleInhalation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602628A RID: 156298 RVA: 0x00542E79 File Offset: 0x00541079
+		// Token: 0x060287EC RID: 165868 RVA: 0x005899C5 File Offset: 0x00587BC5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602628B RID: 156299 RVA: 0x00542E88 File Offset: 0x00541088
+		// Token: 0x060287ED RID: 165869 RVA: 0x005899D4 File Offset: 0x00587BD4
 		public IRoleInhalation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A964 RID: 43364
-		// (get) Token: 0x0602628C RID: 156300 RVA: 0x00542E98 File Offset: 0x00541098
+		// Token: 0x1700B294 RID: 45716
+		// (get) Token: 0x060287EE RID: 165870 RVA: 0x005899E4 File Offset: 0x00587BE4
 		public EInhalationPerformanceType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602628D RID: 156301 RVA: 0x00542ED4 File Offset: 0x005410D4
+		// Token: 0x060287EF RID: 165871 RVA: 0x00589A20 File Offset: 0x00587C20
 		public static Offset<IRoleInhalation> CreateIRoleInhalation(FlatBufferBuilder builder, EInhalationPerformanceType Type = EInhalationPerformanceType.Role)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRoleInhalation.EndIRoleInhalation(builder);
 		}
 
-		// Token: 0x0602628E RID: 156302 RVA: 0x00542EEA File Offset: 0x005410EA
+		// Token: 0x060287F0 RID: 165872 RVA: 0x00589A36 File Offset: 0x00587C36
 		public static void StartIRoleInhalation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602628F RID: 156303 RVA: 0x00542EF3 File Offset: 0x005410F3
+		// Token: 0x060287F1 RID: 165873 RVA: 0x00589A3F File Offset: 0x00587C3F
 		public static void AddType(FlatBufferBuilder builder, EInhalationPerformanceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026290 RID: 156304 RVA: 0x00542EFE File Offset: 0x005410FE
+		// Token: 0x060287F2 RID: 165874 RVA: 0x00589A4A File Offset: 0x00587C4A
 		public static Offset<IRoleInhalation> EndIRoleInhalation(FlatBufferBuilder builder)
 		{
 			return new Offset<IRoleInhalation>(builder.EndTable());
 		}
 
-		// Token: 0x06026291 RID: 156305 RVA: 0x00542F0C File Offset: 0x0054110C
+		// Token: 0x060287F3 RID: 165875 RVA: 0x00589A58 File Offset: 0x00587C58
 		public IRoleInhalationT UnPack()
 		{
 			IRoleInhalationT roleInhalationT = new IRoleInhalationT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return roleInhalationT;
 		}
 
-		// Token: 0x06026292 RID: 156306 RVA: 0x00542F27 File Offset: 0x00541127
+		// Token: 0x060287F4 RID: 165876 RVA: 0x00589A73 File Offset: 0x00587C73
 		public void UnPackTo(IRoleInhalationT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06026293 RID: 156307 RVA: 0x00542F38 File Offset: 0x00541138
+		// Token: 0x060287F5 RID: 165877 RVA: 0x00589A84 File Offset: 0x00587C84
 		public static Offset<IRoleInhalation> Pack(FlatBufferBuilder builder, IRoleInhalationT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRoleInhalation.CreateIRoleInhalation(builder, _o.Type);
 		}
 
-		// Token: 0x0400EDBF RID: 60863
+		// Token: 0x0400FAB2 RID: 64178
 		private Table __p;
 	}
 }

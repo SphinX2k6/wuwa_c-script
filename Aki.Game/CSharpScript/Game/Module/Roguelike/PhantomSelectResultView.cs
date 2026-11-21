@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DF0 RID: 19952
+	// Token: 0x02003DB9 RID: 15801
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomSelectResultView : RogueSelectResultBaseView
 	{
-		// Token: 0x060337CB RID: 210891 RVA: 0x00C07BBF File Offset: 0x00C05DBF
+		// Token: 0x06028636 RID: 165430 RVA: 0x00B510CF File Offset: 0x00B4F2CF
 		public PhantomSelectResultView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060337CC RID: 210892 RVA: 0x00C07BC8 File Offset: 0x00C05DC8
+		// Token: 0x06028637 RID: 165431 RVA: 0x00B510D8 File Offset: 0x00B4F2D8
 		protected override UniTask OnCreateAsync()
 		{
 			PhantomSelectResultView.<OnCreateAsync>d__4 <OnCreateAsync>d__;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060337CD RID: 210893 RVA: 0x00C07C0C File Offset: 0x00C05E0C
+		// Token: 0x06028638 RID: 165432 RVA: 0x00B5111C File Offset: 0x00B4F31C
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.PhantomSelectItemLayout = new GenericLayout<PhantomSelectItem, IPhantomSelectItemContextData>(base.GetHorizontalLayout(3), new Func<PhantomSelectItem>(this.CreatePhantomSelectItem), null, false, true);
 		}
 
-		// Token: 0x060337CE RID: 210894 RVA: 0x00C07C6E File Offset: 0x00C05E6E
+		// Token: 0x06028639 RID: 165433 RVA: 0x00B5117E File Offset: 0x00B4F37E
 		private PhantomSelectItem CreatePhantomSelectItem()
 		{
 			return new PhantomSelectItem(false);
 		}
 
-		// Token: 0x060337CF RID: 210895 RVA: 0x00C07C76 File Offset: 0x00C05E76
+		// Token: 0x0602863A RID: 165434 RVA: 0x00B51186 File Offset: 0x00B4F386
 		protected override void OnBeforeDestroy()
 		{
 			if (this.UiPoolActorPrivate != null)
@@ -54,26 +54,26 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060337D0 RID: 210896 RVA: 0x00C07C95 File Offset: 0x00C05E95
+		// Token: 0x0602863B RID: 165435 RVA: 0x00B511A5 File Offset: 0x00B4F3A5
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x060337D1 RID: 210897 RVA: 0x00C07C9D File Offset: 0x00C05E9D
+		// Token: 0x0602863C RID: 165436 RVA: 0x00B511AD File Offset: 0x00B4F3AD
 		protected override void OnDescModelChange()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x060337D2 RID: 210898 RVA: 0x00C07CA5 File Offset: 0x00C05EA5
+		// Token: 0x0602863D RID: 165437 RVA: 0x00B511B5 File Offset: 0x00B4F3B5
 		protected override void Refresh()
 		{
 			this.RefreshPhantomSelectItemList();
 			this.RefreshTitleText();
 		}
 
-		// Token: 0x060337D3 RID: 210899 RVA: 0x00C07CB4 File Offset: 0x00C05EB4
+		// Token: 0x0602863E RID: 165438 RVA: 0x00B511C4 File Offset: 0x00B4F3C4
 		private unsafe void RefreshPhantomSelectItemList()
 		{
 			PhantomSelectItemContextData phantomSelectItemContextData = new PhantomSelectItemContextData
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.PhantomSelectItemLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x060337D4 RID: 210900 RVA: 0x00C07D1B File Offset: 0x00C05F1B
+		// Token: 0x0602863F RID: 165439 RVA: 0x00B5122B File Offset: 0x00B4F42B
 		protected void RefreshTitleText()
 		{
 			if (this.RogueSelectResult.OldRogueGainEntry == null)
@@ -102,11 +102,11 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetText(4).ShowTextNew("RoguelikeView_19_Text");
 		}
 
-		// Token: 0x0401B533 RID: 111923
+		// Token: 0x04015F06 RID: 89862
 		[Nullable(2)]
 		private RogueSelectResult RogueSelectResult;
 
-		// Token: 0x0401B534 RID: 111924
+		// Token: 0x04015F07 RID: 89863
 		[Nullable(new byte[]
 		{
 			2,
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<PhantomSelectItem, IPhantomSelectItemContextData> PhantomSelectItemLayout;
 
-		// Token: 0x0401B535 RID: 111925
+		// Token: 0x04015F08 RID: 89864
 		[Nullable(2)]
 		private UiPoolActor UiPoolActorPrivate;
 	}

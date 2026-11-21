@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020034E5 RID: 13541
+// Token: 0x02002A59 RID: 10841
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ResetTimeController : ControllerBase
 {
-	// Token: 0x0601DABA RID: 121530 RVA: 0x0084FAE8 File Offset: 0x0084DCE8
+	// Token: 0x0601B7C8 RID: 112584 RVA: 0x00877E60 File Offset: 0x00876060
 	protected unsafe override bool OnInit()
 	{
 		Log instance = Log.Instance;
@@ -42,7 +42,7 @@ public class ResetTimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DABB RID: 121531 RVA: 0x0084FBC7 File Offset: 0x0084DDC7
+	// Token: 0x0601B7C9 RID: 112585 RVA: 0x00877F3F File Offset: 0x0087613F
 	public override bool Clear()
 	{
 		this.ResetTime();
@@ -50,13 +50,13 @@ public class ResetTimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DABC RID: 121532 RVA: 0x0084FBEC File Offset: 0x0084DDEC
+	// Token: 0x0601B7CA RID: 112586 RVA: 0x00877F64 File Offset: 0x00876164
 	private void OnInputAnyKey(bool press, FKey key)
 	{
 		this.LastInputTime = Time.Instance.NowSeconds;
 	}
 
-	// Token: 0x0601DABD RID: 121533 RVA: 0x0084FC00 File Offset: 0x0084DE00
+	// Token: 0x0601B7CB RID: 112587 RVA: 0x00877F78 File Offset: 0x00876178
 	public unsafe void ResetTime()
 	{
 		Log instance = Log.Instance;
@@ -83,8 +83,8 @@ public class ResetTimeController : ControllerBase
 		world.ResetAllTimeSeconds(0f);
 	}
 
-	// Token: 0x170028E9 RID: 10473
-	// (get) Token: 0x0601DABE RID: 121534 RVA: 0x0084FCE3 File Offset: 0x0084DEE3
+	// Token: 0x17002C81 RID: 11393
+	// (get) Token: 0x0601B7CC RID: 112588 RVA: 0x0087805B File Offset: 0x0087625B
 	public static ResetTimeController Instance
 	{
 		get
@@ -93,7 +93,7 @@ public class ResetTimeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DABF RID: 121535 RVA: 0x0084FCEA File Offset: 0x0084DEEA
+	// Token: 0x0601B7CD RID: 112589 RVA: 0x00878062 File Offset: 0x00876262
 	public static ResetTimeController GetOrCreateInstance()
 	{
 		if (ResetTimeController._Instance == null)
@@ -103,7 +103,7 @@ public class ResetTimeController : ControllerBase
 		return ResetTimeController._Instance;
 	}
 
-	// Token: 0x0601DAC0 RID: 121536 RVA: 0x0084FCFE File Offset: 0x0084DEFE
+	// Token: 0x0601B7CE RID: 112590 RVA: 0x00878076 File Offset: 0x00876276
 	public static bool CreateInstance()
 	{
 		if (ResetTimeController._Instance != null)
@@ -114,43 +114,43 @@ public class ResetTimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DAC1 RID: 121537 RVA: 0x0084FD14 File Offset: 0x0084DF14
+	// Token: 0x0601B7CF RID: 112591 RVA: 0x0087808C File Offset: 0x0087628C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DAC2 RID: 121538 RVA: 0x0084FD16 File Offset: 0x0084DF16
+	// Token: 0x0601B7D0 RID: 112592 RVA: 0x0087808E File Offset: 0x0087628E
 	public static void ResetStaticDefaultValue()
 	{
 		ResetTimeController._Instance = null;
 	}
 
-	// Token: 0x0601DAC3 RID: 121539 RVA: 0x0084FD1E File Offset: 0x0084DF1E
+	// Token: 0x0601B7D1 RID: 112593 RVA: 0x00878096 File Offset: 0x00876296
 	static ResetTimeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ResetTimeController.CreateStaticDefaultValue), new Action(ResetTimeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E8C7 RID: 59591
+	// Token: 0x0400ED7E RID: 60798
 	public const int PLAY_TIME_SECONDS = 172800;
 
-	// Token: 0x0400E8C8 RID: 59592
+	// Token: 0x0400ED7F RID: 60799
 	public const int AFK_TIME_SECONDS = 3600;
 
-	// Token: 0x0400E8C9 RID: 59593
+	// Token: 0x0400ED80 RID: 60800
 	public const int UPDATE_INTERVAL = 60000;
 
-	// Token: 0x0400E8CA RID: 59594
+	// Token: 0x0400ED81 RID: 60801
 	private int PassSeconds;
 
-	// Token: 0x0400E8CB RID: 59595
+	// Token: 0x0400ED82 RID: 60802
 	private double LastInputTime;
 
-	// Token: 0x0400E8CC RID: 59596
+	// Token: 0x0400ED83 RID: 60803
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x0400E8CD RID: 59597
+	// Token: 0x0400ED84 RID: 60804
 	[Nullable(2)]
 	private static ResetTimeController _Instance;
 }

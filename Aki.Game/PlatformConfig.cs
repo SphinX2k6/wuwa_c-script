@@ -2,20 +2,20 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020025E5 RID: 9701
+// Token: 0x02001AD0 RID: 6864
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class PlatformConfig : ConfigBase
 {
-	// Token: 0x06013B99 RID: 80793 RVA: 0x004F263F File Offset: 0x004F083F
+	// Token: 0x0601107B RID: 69755 RVA: 0x0050136F File Offset: 0x004FF56F
 	public DevicePlatform? GetDeviceConfigByProductIdAndVendorId(string productIdAndVendorId)
 	{
 		return ConfigDevicePlatformByPidAndVid.GetConfig(productIdAndVendorId, true);
 	}
 
-	// Token: 0x1700194B RID: 6475
-	// (get) Token: 0x06013B9A RID: 80794 RVA: 0x004F2648 File Offset: 0x004F0848
+	// Token: 0x17001983 RID: 6531
+	// (get) Token: 0x0601107C RID: 69756 RVA: 0x00501378 File Offset: 0x004FF578
 	public static PlatformConfig Instance
 	{
 		get
@@ -24,7 +24,7 @@ public class PlatformConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06013B9B RID: 80795 RVA: 0x004F264F File Offset: 0x004F084F
+	// Token: 0x0601107D RID: 69757 RVA: 0x0050137F File Offset: 0x004FF57F
 	public static PlatformConfig GetOrCreateInstance()
 	{
 		if (PlatformConfig._Instance == null)
@@ -34,7 +34,7 @@ public class PlatformConfig : ConfigBase
 		return PlatformConfig._Instance;
 	}
 
-	// Token: 0x06013B9C RID: 80796 RVA: 0x004F2663 File Offset: 0x004F0863
+	// Token: 0x0601107E RID: 69758 RVA: 0x00501393 File Offset: 0x004FF593
 	public static bool CreateInstance()
 	{
 		if (PlatformConfig._Instance != null)
@@ -45,24 +45,24 @@ public class PlatformConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06013B9D RID: 80797 RVA: 0x004F2679 File Offset: 0x004F0879
+	// Token: 0x0601107F RID: 69759 RVA: 0x005013A9 File Offset: 0x004FF5A9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013B9E RID: 80798 RVA: 0x004F267B File Offset: 0x004F087B
+	// Token: 0x06011080 RID: 69760 RVA: 0x005013AB File Offset: 0x004FF5AB
 	public static void ResetStaticDefaultValue()
 	{
 		PlatformConfig._Instance = null;
 	}
 
-	// Token: 0x06013B9F RID: 80799 RVA: 0x004F2683 File Offset: 0x004F0883
+	// Token: 0x06011081 RID: 69761 RVA: 0x005013B3 File Offset: 0x004FF5B3
 	static PlatformConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PlatformConfig.CreateStaticDefaultValue), new Action(PlatformConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400949E RID: 38046
+	// Token: 0x040095F5 RID: 38389
 	[Nullable(2)]
 	private static PlatformConfig _Instance;
 }

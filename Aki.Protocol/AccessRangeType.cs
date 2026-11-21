@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001620 RID: 5664
+	// Token: 0x02001693 RID: 5779
 	public enum AccessRangeType
 	{
-		// Token: 0x0400C00B RID: 49163
+		// Token: 0x0400C505 RID: 50437
 		[OriginalName("RangeEnter")]
 		RangeEnter,
-		// Token: 0x0400C00C RID: 49164
+		// Token: 0x0400C506 RID: 50438
 		[OriginalName("RangeLeave")]
 		RangeLeave,
-		// Token: 0x0400C00D RID: 49165
+		// Token: 0x0400C507 RID: 50439
 		[OriginalName("RangeInit")]
 		RangeInit,
-		// Token: 0x0400C00E RID: 49166
+		// Token: 0x0400C508 RID: 50440
 		[OriginalName("RangeInitOut")]
 		RangeInitOut
 	}

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CB1 RID: 27825
+	// Token: 0x02005E2B RID: 24107
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckInTodTimeSpan : LevelConditionBase
 	{
-		// Token: 0x060445F3 RID: 280051 RVA: 0x010DC4D0 File Offset: 0x010DA6D0
+		// Token: 0x0603A74D RID: 239437 RVA: 0x0108647C File Offset: 0x0108467C
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			if (inConditionInfo.LimitParamsLength == 0)
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return limitParams2 != null && TimeOfDayController.Instance.CheckInMinuteSpan(int.Parse(limitParams), int.Parse(limitParams2));
 		}
 
-		// Token: 0x060445F4 RID: 280052 RVA: 0x010DC524 File Offset: 0x010DA724
+		// Token: 0x0603A74E RID: 239438 RVA: 0x010864D0 File Offset: 0x010846D0
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			if (inConditionInfo == null)

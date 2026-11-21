@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048C9 RID: 18633
+	// Token: 0x02003840 RID: 14400
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GenericLayout<TProxy, [Nullable(2)] TData> : IGridPreserver where TProxy : class, IGridProxy<TData>
 	{
-		// Token: 0x06030B40 RID: 199488 RVA: 0x00B4F218 File Offset: 0x00B4D418
+		// Token: 0x0602566C RID: 153196 RVA: 0x00A8A020 File Offset: 0x00A88220
 		public GenericLayout(UUILayoutBase layout, Func<TProxy> gridProxyCreateFunction, [Nullable(2)] AUIBaseActor gridActor = null, bool isRefreshAsync = false, bool isGridShowWhenCreate = true)
 		{
 			this.IsRefreshAsync = isRefreshAsync;
@@ -42,8 +42,8 @@ namespace CSharpScript.Game.Module.Util
 			this.GridsController.RegisterAnimController();
 		}
 
-		// Token: 0x17007985 RID: 31109
-		// (get) Token: 0x06030B41 RID: 199489 RVA: 0x00B4F321 File Offset: 0x00B4D521
+		// Token: 0x17004CED RID: 19693
+		// (get) Token: 0x0602566D RID: 153197 RVA: 0x00A8A129 File Offset: 0x00A88329
 		public bool IsLock
 		{
 			get
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030B42 RID: 199490 RVA: 0x00B4F329 File Offset: 0x00B4D529
+		// Token: 0x0602566E RID: 153198 RVA: 0x00A8A131 File Offset: 0x00A88331
 		private void Lock()
 		{
 			this.Operating = true;
 		}
 
-		// Token: 0x06030B43 RID: 199491 RVA: 0x00B4F334 File Offset: 0x00B4D534
+		// Token: 0x0602566F RID: 153199 RVA: 0x00A8A13C File Offset: 0x00A8833C
 		private void Unlock()
 		{
 			this.Operating = false;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030B44 RID: 199492 RVA: 0x00B4F37C File Offset: 0x00B4D57C
+		// Token: 0x06025670 RID: 153200 RVA: 0x00A8A184 File Offset: 0x00A88384
 		[NullableContext(2)]
 		public UUIItem GetRootUiItem()
 		{
@@ -82,14 +82,14 @@ namespace CSharpScript.Game.Module.Util
 			return tweakObjectPtr.GetValueOrDefault();
 		}
 
-		// Token: 0x06030B45 RID: 199493 RVA: 0x00B4F3C0 File Offset: 0x00B4D5C0
+		// Token: 0x06025671 RID: 153201 RVA: 0x00A8A1C8 File Offset: 0x00A883C8
 		[NullableContext(2)]
 		private UUIItem CreateGrid()
 		{
 			return LguiUtil.Instance.CopyItem(this.TemplateGridActor.GetUIItem(), this.GetRootUiItem());
 		}
 
-		// Token: 0x06030B46 RID: 199494 RVA: 0x00B4F3E0 File Offset: 0x00B4D5E0
+		// Token: 0x06025672 RID: 153202 RVA: 0x00A8A1E8 File Offset: 0x00A883E8
 		[NullableContext(2)]
 		public object GetKey(int gridIndex)
 		{
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Util
 			return tproxy.GetKey(datas[gridIndex], gridIndex);
 		}
 
-		// Token: 0x06030B47 RID: 199495 RVA: 0x00B4F438 File Offset: 0x00B4D638
+		// Token: 0x06025673 RID: 153203 RVA: 0x00A8A240 File Offset: 0x00A88440
 		public int? GetGridIndexByKey<[Nullable(2)] T>(T key)
 		{
 			TProxy tproxy;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Util
 			return null;
 		}
 
-		// Token: 0x06030B48 RID: 199496 RVA: 0x00B4F474 File Offset: 0x00B4D674
+		// Token: 0x06025674 RID: 153204 RVA: 0x00A8A27C File Offset: 0x00A8847C
 		public void ClearChildren()
 		{
 			foreach (UUIItem uuiitem in this.GridItemList)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Util
 			this.ProxyMap.Clear();
 		}
 
-		// Token: 0x06030B49 RID: 199497 RVA: 0x00B4F504 File Offset: 0x00B4D704
+		// Token: 0x06025675 RID: 153205 RVA: 0x00A8A30C File Offset: 0x00A8850C
 		public UniTask LoadGrid(int length, bool bShow = true)
 		{
 			GenericLayout<TProxy, TData>.<LoadGrid>d__24 <LoadGrid>d__;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Util
 			return <LoadGrid>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030B4A RID: 199498 RVA: 0x00B4F558 File Offset: 0x00B4D758
+		// Token: 0x06025676 RID: 153206 RVA: 0x00A8A360 File Offset: 0x00A88560
 		[NullableContext(0)]
 		public UniTask<bool> RefreshByDataDirectly([Nullable(1)] IReadOnlyList<TData> data)
 		{
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Util
 			return <RefreshByDataDirectly>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030B4B RID: 199499 RVA: 0x00B4F5A4 File Offset: 0x00B4D7A4
+		// Token: 0x06025677 RID: 153207 RVA: 0x00A8A3AC File Offset: 0x00A885AC
 		public bool RefreshByDataDirectlySync(IReadOnlyList<TData> data)
 		{
 			int count = data.Count;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Util
 			return true;
 		}
 
-		// Token: 0x06030B4C RID: 199500 RVA: 0x00B4F6C0 File Offset: 0x00B4D8C0
+		// Token: 0x06025678 RID: 153208 RVA: 0x00A8A4C8 File Offset: 0x00A886C8
 		public void RefreshByData(IReadOnlyList<TData> data, [Nullable(2)] Action callBack = null, bool playGridAnim = false)
 		{
 			if (this.IsLock)
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Util
 			}).Forget();
 		}
 
-		// Token: 0x06030B4D RID: 199501 RVA: 0x00B4F734 File Offset: 0x00B4D934
+		// Token: 0x06025679 RID: 153209 RVA: 0x00A8A53C File Offset: 0x00A8873C
 		public UniTask RefreshByDataAsync(IReadOnlyList<TData> data, bool playGridAnim = false, int? length = null)
 		{
 			GenericLayout<TProxy, TData>.<RefreshByDataAsync>d__28 <RefreshByDataAsync>d__;
@@ -233,13 +233,13 @@ namespace CSharpScript.Game.Module.Util
 			return <RefreshByDataAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030B4E RID: 199502 RVA: 0x00B4F78F File Offset: 0x00B4D98F
+		// Token: 0x0602567A RID: 153210 RVA: 0x00A8A597 File Offset: 0x00A88797
 		public void RefreshWithoutDataSync()
 		{
 			this.RefreshDisplayProxyListSync();
 		}
 
-		// Token: 0x06030B4F RID: 199503 RVA: 0x00B4F798 File Offset: 0x00B4D998
+		// Token: 0x0602567B RID: 153211 RVA: 0x00A8A5A0 File Offset: 0x00A887A0
 		private void RefreshDisplayProxyListSync()
 		{
 			if (this.GridDisplayItemList.Count == 0)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030B50 RID: 199504 RVA: 0x00B4F7D0 File Offset: 0x00B4D9D0
+		// Token: 0x0602567C RID: 153212 RVA: 0x00A8A5D8 File Offset: 0x00A887D8
 		private UniTask RefreshDisplayProxyListAsync()
 		{
 			GenericLayout<TProxy, TData>.<RefreshDisplayProxyListAsync>d__31 <RefreshDisplayProxyListAsync>d__;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Util
 			return <RefreshDisplayProxyListAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030B51 RID: 199505 RVA: 0x00B4F814 File Offset: 0x00B4DA14
+		// Token: 0x0602567D RID: 153213 RVA: 0x00A8A61C File Offset: 0x00A8881C
 		private void RefreshDisplayProxyInternalSync(int index)
 		{
 			this.Delegate.RefreshGridProxy(index, index);
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030B52 RID: 199506 RVA: 0x00B4F854 File Offset: 0x00B4DA54
+		// Token: 0x0602567E RID: 153214 RVA: 0x00A8A65C File Offset: 0x00A8885C
 		private UniTask RefreshDisplayProxyInternalAsync(int index)
 		{
 			GenericLayout<TProxy, TData>.<RefreshDisplayProxyInternalAsync>d__33 <RefreshDisplayProxyInternalAsync>d__;
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.Util
 			return <RefreshDisplayProxyInternalAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030B53 RID: 199507 RVA: 0x00B4F8A0 File Offset: 0x00B4DAA0
+		// Token: 0x0602567F RID: 153215 RVA: 0x00A8A6A8 File Offset: 0x00A888A8
 		private UniTask UpdateDataInternal(IReadOnlyList<TData> data, int length)
 		{
 			GenericLayout<TProxy, TData>.<UpdateDataInternal>d__34 <UpdateDataInternal>d__;
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.Util
 			return <UpdateDataInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030B54 RID: 199508 RVA: 0x00B4F8F3 File Offset: 0x00B4DAF3
+		// Token: 0x06025680 RID: 153216 RVA: 0x00A8A6FB File Offset: 0x00A888FB
 		[NullableContext(2)]
 		public UUIItem GetItemByIndex(int index)
 		{
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.Util
 			return this.GridDisplayItemList[index];
 		}
 
-		// Token: 0x06030B55 RID: 199509 RVA: 0x00B4F918 File Offset: 0x00B4DB18
+		// Token: 0x06025681 RID: 153217 RVA: 0x00A8A720 File Offset: 0x00A88920
 		[return: Nullable(2)]
 		public UUIItem GetItemByKey(object key)
 		{
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.Util
 			return this.GridDisplayItemList[layoutItemByKey.GridIndex];
 		}
 
-		// Token: 0x06030B56 RID: 199510 RVA: 0x00B4F944 File Offset: 0x00B4DB44
+		// Token: 0x06025682 RID: 153218 RVA: 0x00A8A74C File Offset: 0x00A8894C
 		[return: Nullable(2)]
 		public TProxy GetLayoutItemByKey(object key)
 		{
@@ -331,19 +331,19 @@ namespace CSharpScript.Game.Module.Util
 			return default(TProxy);
 		}
 
-		// Token: 0x06030B57 RID: 199511 RVA: 0x00B4F96C File Offset: 0x00B4DB6C
+		// Token: 0x06025683 RID: 153219 RVA: 0x00A8A774 File Offset: 0x00A88974
 		public Dictionary<object, TProxy> GetLayoutItemMap()
 		{
 			return this.ProxyMap;
 		}
 
-		// Token: 0x06030B58 RID: 199512 RVA: 0x00B4F974 File Offset: 0x00B4DB74
+		// Token: 0x06025684 RID: 153220 RVA: 0x00A8A77C File Offset: 0x00A8897C
 		public List<TProxy> GetLayoutItemList()
 		{
 			return this.ProxyDisplayList;
 		}
 
-		// Token: 0x06030B59 RID: 199513 RVA: 0x00B4F97C File Offset: 0x00B4DB7C
+		// Token: 0x06025685 RID: 153221 RVA: 0x00A8A784 File Offset: 0x00A88984
 		[NullableContext(2)]
 		public TProxy GetLayoutItemByIndex(int index)
 		{
@@ -354,19 +354,19 @@ namespace CSharpScript.Game.Module.Util
 			return this.ProxyDisplayList[index];
 		}
 
-		// Token: 0x06030B5A RID: 199514 RVA: 0x00B4F9B1 File Offset: 0x00B4DBB1
+		// Token: 0x06025686 RID: 153222 RVA: 0x00A8A7B9 File Offset: 0x00A889B9
 		public IReadOnlyList<TData> GetDatas()
 		{
 			return this.Delegate.GetDatas();
 		}
 
-		// Token: 0x06030B5B RID: 199515 RVA: 0x00B4F9BE File Offset: 0x00B4DBBE
+		// Token: 0x06025687 RID: 153223 RVA: 0x00A8A7C6 File Offset: 0x00A889C6
 		public void SelectGridProxy(int gridIndex, bool fireEvent = false)
 		{
 			this.Delegate.SelectGridProxy(gridIndex, gridIndex, fireEvent);
 		}
 
-		// Token: 0x06030B5C RID: 199516 RVA: 0x00B4F9D0 File Offset: 0x00B4DBD0
+		// Token: 0x06025688 RID: 153224 RVA: 0x00A8A7D8 File Offset: 0x00A889D8
 		public void SelectGridProxyByKey(object key, bool fireEvent = false)
 		{
 			int? gridIndexByKey = this.GetGridIndexByKey<object>(key);
@@ -376,38 +376,38 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030B5D RID: 199517 RVA: 0x00B4F9FC File Offset: 0x00B4DBFC
+		// Token: 0x06025689 RID: 153225 RVA: 0x00A8A804 File Offset: 0x00A88A04
 		public void DeselectCurrentGridProxy()
 		{
 			this.Delegate.DeselectCurrentGridProxy(false);
 		}
 
-		// Token: 0x06030B5E RID: 199518 RVA: 0x00B4FA0A File Offset: 0x00B4DC0A
+		// Token: 0x0602568A RID: 153226 RVA: 0x00A8A812 File Offset: 0x00A88A12
 		public int GetSelectedGridIndex()
 		{
 			return this.Delegate.GetSelectedGridIndex();
 		}
 
-		// Token: 0x06030B5F RID: 199519 RVA: 0x00B4FA17 File Offset: 0x00B4DC17
+		// Token: 0x0602568B RID: 153227 RVA: 0x00A8A81F File Offset: 0x00A88A1F
 		[NullableContext(2)]
 		public TProxy GetSelectedProxy()
 		{
 			return this.Delegate.GetSelectedProxy();
 		}
 
-		// Token: 0x06030B60 RID: 199520 RVA: 0x00B4FA24 File Offset: 0x00B4DC24
+		// Token: 0x0602568C RID: 153228 RVA: 0x00A8A82C File Offset: 0x00A88A2C
 		public void BindLateUpdate(Action<float> callBack)
 		{
 			this.Layout.OnLateUpdate.Bind(callBack);
 		}
 
-		// Token: 0x06030B61 RID: 199521 RVA: 0x00B4FA37 File Offset: 0x00B4DC37
+		// Token: 0x0602568D RID: 153229 RVA: 0x00A8A83F File Offset: 0x00A88A3F
 		public void UnBindLateUpdate()
 		{
 			this.Layout.OnLateUpdate.Unbind();
 		}
 
-		// Token: 0x06030B62 RID: 199522 RVA: 0x00B4FA4C File Offset: 0x00B4DC4C
+		// Token: 0x0602568E RID: 153230 RVA: 0x00A8A854 File Offset: 0x00A88A54
 		public void SetActive(bool bActive)
 		{
 			UUILayoutBase layout = this.Layout;
@@ -418,38 +418,38 @@ namespace CSharpScript.Game.Module.Util
 			layout.RootUIComp.Get().SetUIActive(bActive);
 		}
 
-		// Token: 0x06030B63 RID: 199523 RVA: 0x00B4FA77 File Offset: 0x00B4DC77
+		// Token: 0x0602568F RID: 153231 RVA: 0x00A8A87F File Offset: 0x00A88A7F
 		[NullableContext(2)]
 		private void OnDestroy(AActor actor)
 		{
 			this.UnBindLateUpdate();
 		}
 
-		// Token: 0x06030B64 RID: 199524 RVA: 0x00B4FA7F File Offset: 0x00B4DC7F
+		// Token: 0x06025690 RID: 153232 RVA: 0x00A8A887 File Offset: 0x00A88A87
 		public int GetDisplayGridNum()
 		{
 			return this.ProxyDisplayList.Count;
 		}
 
-		// Token: 0x06030B65 RID: 199525 RVA: 0x00B4FA8C File Offset: 0x00B4DC8C
+		// Token: 0x06025691 RID: 153233 RVA: 0x00A8A894 File Offset: 0x00A88A94
 		public int GetPreservedGridNum()
 		{
 			return this.GridItemList.Count;
 		}
 
-		// Token: 0x06030B66 RID: 199526 RVA: 0x00B4FA99 File Offset: 0x00B4DC99
+		// Token: 0x06025692 RID: 153234 RVA: 0x00A8A8A1 File Offset: 0x00A88AA1
 		public int GetDisplayGridStartIndex()
 		{
 			return 0;
 		}
 
-		// Token: 0x06030B67 RID: 199527 RVA: 0x00B4FA9C File Offset: 0x00B4DC9C
+		// Token: 0x06025693 RID: 153235 RVA: 0x00A8A8A4 File Offset: 0x00A88AA4
 		public int GetDisplayGridEndIndex()
 		{
 			return this.GetDisplayGridNum() - 1;
 		}
 
-		// Token: 0x06030B68 RID: 199528 RVA: 0x00B4FAA6 File Offset: 0x00B4DCA6
+		// Token: 0x06025694 RID: 153236 RVA: 0x00A8A8AE File Offset: 0x00A88AAE
 		public UUIItem GetGrid(int gridIndex)
 		{
 			if (gridIndex < 0 || gridIndex >= this.GridDisplayItemList.Count)
@@ -459,37 +459,37 @@ namespace CSharpScript.Game.Module.Util
 			return this.GridDisplayItemList[gridIndex];
 		}
 
-		// Token: 0x06030B69 RID: 199529 RVA: 0x00B4FAC8 File Offset: 0x00B4DCC8
+		// Token: 0x06025695 RID: 153237 RVA: 0x00A8A8D0 File Offset: 0x00A88AD0
 		public UUIItem GetGridByDisplayIndex(int displayIndex)
 		{
 			return this.GetGrid(displayIndex);
 		}
 
-		// Token: 0x06030B6A RID: 199530 RVA: 0x00B4FAD1 File Offset: 0x00B4DCD1
+		// Token: 0x06025696 RID: 153238 RVA: 0x00A8A8D9 File Offset: 0x00A88AD9
 		public float GetGridAnimationInterval()
 		{
 			return this.Layout.GetGridAnimationInterval();
 		}
 
-		// Token: 0x06030B6B RID: 199531 RVA: 0x00B4FADE File Offset: 0x00B4DCDE
+		// Token: 0x06025697 RID: 153239 RVA: 0x00A8A8E6 File Offset: 0x00A88AE6
 		public float GetGridAnimationStartTime()
 		{
 			return this.Layout.GetGridAnimationStartTime();
 		}
 
-		// Token: 0x06030B6C RID: 199532 RVA: 0x00B4FAEB File Offset: 0x00B4DCEB
+		// Token: 0x06025698 RID: 153240 RVA: 0x00A8A8F3 File Offset: 0x00A88AF3
 		public void NotifyAnimationStart()
 		{
 			this.Layout.SetInAnimation(true);
 		}
 
-		// Token: 0x06030B6D RID: 199533 RVA: 0x00B4FAF9 File Offset: 0x00B4DCF9
+		// Token: 0x06025699 RID: 153241 RVA: 0x00A8A901 File Offset: 0x00A88B01
 		public void NotifyAnimationEnd()
 		{
 			this.Layout.SetInAnimation(false);
 		}
 
-		// Token: 0x06030B6E RID: 199534 RVA: 0x00B4FB07 File Offset: 0x00B4DD07
+		// Token: 0x0602569A RID: 153242 RVA: 0x00A8A90F File Offset: 0x00A88B0F
 		[NullableContext(2)]
 		public UUIInturnAnimController GetUiAnimController()
 		{
@@ -501,7 +501,7 @@ namespace CSharpScript.Game.Module.Util
 			return this.AnimControllerComponent;
 		}
 
-		// Token: 0x06030B6F RID: 199535 RVA: 0x00B4FB43 File Offset: 0x00B4DD43
+		// Token: 0x0602569B RID: 153243 RVA: 0x00A8A94B File Offset: 0x00A88B4B
 		public void PlayGridAnim()
 		{
 			if (this.GridsController != null)
@@ -510,7 +510,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030B70 RID: 199536 RVA: 0x00B4FB60 File Offset: 0x00B4DD60
+		// Token: 0x0602569C RID: 153244 RVA: 0x00A8A968 File Offset: 0x00A88B68
 		public void RefreshGridProxyByKey<[Nullable(2)] T>(T key)
 		{
 			int? gridIndexByKey = this.GetGridIndexByKey<T>(key);
@@ -520,11 +520,11 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x0401A2AA RID: 107178
+		// Token: 0x04014B1D RID: 84765
 		[Nullable(2)]
 		private readonly UUILayoutBase Layout;
 
-		// Token: 0x0401A2AB RID: 107179
+		// Token: 0x04014B1E RID: 84766
 		[Nullable(new byte[]
 		{
 			2,
@@ -533,31 +533,31 @@ namespace CSharpScript.Game.Module.Util
 		})]
 		private readonly ScrollViewDelegate<TProxy, TData> Delegate;
 
-		// Token: 0x0401A2AC RID: 107180
+		// Token: 0x04014B1F RID: 84767
 		[Nullable(2)]
 		private GridAppearAnimationBase GridsController;
 
-		// Token: 0x0401A2AD RID: 107181
+		// Token: 0x04014B20 RID: 84768
 		[Nullable(2)]
 		public UUIInturnAnimController AnimControllerComponent;
 
-		// Token: 0x0401A2AE RID: 107182
+		// Token: 0x04014B21 RID: 84769
 		private readonly List<UUIItem> GridItemList = new List<UUIItem>();
 
-		// Token: 0x0401A2AF RID: 107183
+		// Token: 0x04014B22 RID: 84770
 		private readonly List<UUIItem> GridDisplayItemList = new List<UUIItem>();
 
-		// Token: 0x0401A2B0 RID: 107184
+		// Token: 0x04014B23 RID: 84771
 		private readonly List<TProxy> ProxyDisplayList = new List<TProxy>();
 
-		// Token: 0x0401A2B1 RID: 107185
+		// Token: 0x04014B24 RID: 84772
 		private readonly Dictionary<object, TProxy> ProxyMap = new Dictionary<object, TProxy>();
 
-		// Token: 0x0401A2B2 RID: 107186
+		// Token: 0x04014B25 RID: 84773
 		[Nullable(2)]
 		private readonly AUIBaseActor TemplateGridActor;
 
-		// Token: 0x0401A2B3 RID: 107187
+		// Token: 0x04014B26 RID: 84774
 		[Nullable(new byte[]
 		{
 			1,
@@ -567,21 +567,21 @@ namespace CSharpScript.Game.Module.Util
 		})]
 		private readonly Queue<GenericLayout<TProxy, TData>.OperationParam> OperationQueue = new Queue<GenericLayout<TProxy, TData>.OperationParam>(4);
 
-		// Token: 0x0401A2B4 RID: 107188
+		// Token: 0x04014B27 RID: 84775
 		private bool Operating;
 
-		// Token: 0x0401A2B5 RID: 107189
+		// Token: 0x04014B28 RID: 84776
 		public readonly bool IsRefreshAsync;
 
-		// Token: 0x0401A2B6 RID: 107190
+		// Token: 0x04014B29 RID: 84777
 		public readonly bool IsGridShowWhenCreate = true;
 
-		// Token: 0x0200AB7C RID: 43900
+		// Token: 0x02009589 RID: 38281
 		[NullableContext(2)]
 		[Nullable(0)]
 		private class OperationParam
 		{
-			// Token: 0x0604DAC4 RID: 318148 RVA: 0x0147CF4A File Offset: 0x0147B14A
+			// Token: 0x06044084 RID: 278660 RVA: 0x01434BF2 File Offset: 0x01432DF2
 			public OperationParam([Nullable(new byte[]
 			{
 				2,
@@ -593,7 +593,7 @@ namespace CSharpScript.Game.Module.Util
 				this.PlayGridAnim = playGridAnim;
 			}
 
-			// Token: 0x04034185 RID: 213381
+			// Token: 0x0402EAFC RID: 191228
 			[Nullable(new byte[]
 			{
 				2,
@@ -601,10 +601,10 @@ namespace CSharpScript.Game.Module.Util
 			})]
 			public IReadOnlyList<TData> Data;
 
-			// Token: 0x04034186 RID: 213382
+			// Token: 0x0402EAFD RID: 191229
 			public Action CallBack;
 
-			// Token: 0x04034187 RID: 213383
+			// Token: 0x0402EAFE RID: 191230
 			public bool PlayGridAnim;
 		}
 	}

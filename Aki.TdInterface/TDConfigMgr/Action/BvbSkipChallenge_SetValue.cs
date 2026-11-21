@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014B9 RID: 5305
+	// Token: 0x02001612 RID: 5650
 	public class BvbSkipChallenge_SetValue
 	{
-		// Token: 0x04004622 RID: 17954
+		// Token: 0x040049BD RID: 18877
 		public int ChallengeId;
 	}
 }

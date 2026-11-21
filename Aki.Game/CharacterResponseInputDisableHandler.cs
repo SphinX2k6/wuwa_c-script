@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020030B8 RID: 12472
+// Token: 0x02002610 RID: 9744
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 })]
 public class CharacterResponseInputDisableHandler : DisableHandler<InputFunctionContext>
 {
-	// Token: 0x0601AB71 RID: 109425 RVA: 0x007325E9 File Offset: 0x007307E9
+	// Token: 0x06018580 RID: 99712 RVA: 0x00757F55 File Offset: 0x00756155
 	protected override bool ShouldStop(InputFunctionContext context)
 	{
 		return !InputFunctionCommon.CanCharacterResponseInput();

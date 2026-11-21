@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004948 RID: 18760
+	// Token: 0x02004DFF RID: 19967
 	public enum EPlayerCheckType : byte
 	{
-		// Token: 0x0400D0E8 RID: 53480
+		// Token: 0x0400DBAE RID: 56238
 		AnyRole,
-		// Token: 0x0400D0E9 RID: 53481
+		// Token: 0x0400DBAF RID: 56239
 		Team
 	}
 }

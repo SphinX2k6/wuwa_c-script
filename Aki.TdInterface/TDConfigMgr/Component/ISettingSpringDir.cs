@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006C6 RID: 1734
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000767 RID: 1895
 	public class ISettingSpringDir
 	{
-		// Token: 0x06002542 RID: 9538 RVA: 0x00064760 File Offset: 0x00062960
+		// Token: 0x06002862 RID: 10338 RVA: 0x0006B7D0 File Offset: 0x000699D0
 		private ISettingSpringDir_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002543 RID: 9539 RVA: 0x00064798 File Offset: 0x00062998
+		// Token: 0x06002863 RID: 10339 RVA: 0x0006B808 File Offset: 0x00069A08
 		public static ISettingSpringDir Create([Nullable(2)] ISettingSpringDir instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002544 RID: 9540 RVA: 0x000647AB File Offset: 0x000629AB
+		// Token: 0x06002864 RID: 10340 RVA: 0x0006B81B File Offset: 0x00069A1B
 		public static ISettingSpringDir CreateFromSetValue([Nullable(2)] ISettingSpringDir_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002545 RID: 9541 RVA: 0x000647BE File Offset: 0x000629BE
+		// Token: 0x06002865 RID: 10341 RVA: 0x0006B82E File Offset: 0x00069A2E
 		public ISettingSpringDir_SetValue ToSetValue()
 		{
 			return new ISettingSpringDir_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009D7 RID: 2519
-		// (get) Token: 0x06002546 RID: 9542 RVA: 0x000647E9 File Offset: 0x000629E9
-		// (set) Token: 0x06002547 RID: 9543 RVA: 0x00064814 File Offset: 0x00062A14
+		// Token: 0x17000A95 RID: 2709
+		// (get) Token: 0x06002866 RID: 10342 RVA: 0x0006B859 File Offset: 0x00069A59
+		// (set) Token: 0x06002867 RID: 10343 RVA: 0x0006B884 File Offset: 0x00069A84
 		public virtual bool IsSettingDir
 		{
 			get
@@ -81,9 +79,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009D8 RID: 2520
-		// (get) Token: 0x06002548 RID: 9544 RVA: 0x00064822 File Offset: 0x00062A22
-		// (set) Token: 0x06002549 RID: 9545 RVA: 0x0006484D File Offset: 0x00062A4D
+		// Token: 0x17000A96 RID: 2710
+		// (get) Token: 0x06002868 RID: 10344 RVA: 0x0006B892 File Offset: 0x00069A92
+		// (set) Token: 0x06002869 RID: 10345 RVA: 0x0006B8BD File Offset: 0x00069ABD
 		public virtual bool IsRotator
 		{
 			get
@@ -100,9 +98,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009D9 RID: 2521
-		// (get) Token: 0x0600254A RID: 9546 RVA: 0x0006485C File Offset: 0x00062A5C
-		// (set) Token: 0x0600254B RID: 9547 RVA: 0x000648BD File Offset: 0x00062ABD
+		// Token: 0x17000A97 RID: 2711
+		// (get) Token: 0x0600286A RID: 10346 RVA: 0x0006B8CC File Offset: 0x00069ACC
+		// (set) Token: 0x0600286B RID: 10347 RVA: 0x0006B92D File Offset: 0x00069B2D
 		public virtual VectorInfo SpringDir
 		{
 			get
@@ -130,18 +128,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001977 RID: 6519
+		// Token: 0x04001B76 RID: 7030
 		[Nullable(2)]
 		protected ISettingSpringDir FbInstance;
 
-		// Token: 0x04001978 RID: 6520
+		// Token: 0x04001B77 RID: 7031
 		[Nullable(2)]
 		protected ISettingSpringDir_SetValue PocoInterface;
 
-		// Token: 0x04001979 RID: 6521
+		// Token: 0x04001B78 RID: 7032
 		private VectorInfo _SpringDirCache;
 
-		// Token: 0x0400197A RID: 6522
+		// Token: 0x04001B79 RID: 7033
 		private bool _SpringDirInited;
 	}
 }

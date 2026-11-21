@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020009AB RID: 2475
+	// Token: 0x020001C6 RID: 454
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.DecalActor")]
 	[UnrealStructLayout(1072, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1072)]
 	public class ADecalActor : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06008BC4 RID: 35780 RVA: 0x000C8384 File Offset: 0x000C6584
+		// Token: 0x0600211E RID: 8478 RVA: 0x00030B23 File Offset: 0x0002ED23
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ADecalActor._ClassPtr;
 		}
 
-		// Token: 0x06008BC5 RID: 35781 RVA: 0x000C8390 File Offset: 0x000C6590
+		// Token: 0x0600211F RID: 8479 RVA: 0x00030B30 File Offset: 0x0002ED30
 		public ADecalActor() : this(BuiltinUtils.AllocNativeUObject(ADecalActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06008BC6 RID: 35782 RVA: 0x000C83B8 File Offset: 0x000C65B8
+		// Token: 0x06002120 RID: 8480 RVA: 0x00030B58 File Offset: 0x0002ED58
 		[NullableContext(1)]
 		public ADecalActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ADecalActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170020E4 RID: 8420
-		// (get) Token: 0x06008BC7 RID: 35783 RVA: 0x000C83EB File Offset: 0x000C65EB
-		// (set) Token: 0x06008BC8 RID: 35784 RVA: 0x000C83FF File Offset: 0x000C65FF
+		// Token: 0x17000499 RID: 1177
+		// (get) Token: 0x06002121 RID: 8481 RVA: 0x00030B8B File Offset: 0x0002ED8B
+		// (set) Token: 0x06002122 RID: 8482 RVA: 0x00030B9F File Offset: 0x0002ED9F
 		public unsafe UDecalComponent Decal
 		{
 			get
@@ -45,58 +45,58 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06008BC9 RID: 35785 RVA: 0x000C8414 File Offset: 0x000C6614
+		// Token: 0x06002123 RID: 8483 RVA: 0x00030BB4 File Offset: 0x0002EDB4
 		public void SetDecalMaterial(UMaterialInterface NewDecalMaterial)
 		{
 			ADecalActor.__SetDecalMaterial_Internal(base.NativePtr, (NewDecalMaterial != null) ? NewDecalMaterial.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06008BCA RID: 35786 RVA: 0x000C8431 File Offset: 0x000C6631
+		// Token: 0x06002124 RID: 8484 RVA: 0x00030BD1 File Offset: 0x0002EDD1
 		public UMaterialInterface GetDecalMaterial()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMaterialInterface>(ADecalActor.__GetDecalMaterial_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06008BCB RID: 35787 RVA: 0x000C8443 File Offset: 0x000C6643
+		// Token: 0x06002125 RID: 8485 RVA: 0x00030BE3 File Offset: 0x0002EDE3
 		public UMaterialInstanceDynamic CreateDynamicMaterialInstance()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMaterialInstanceDynamic>(ADecalActor.__CreateDynamicMaterialInstance_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06008BCC RID: 35788
+		// Token: 0x06002126 RID: 8486
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDecalMaterial_Internal(IntPtr @this, IntPtr NewDecalMaterial);
 
-		// Token: 0x06008BCD RID: 35789
+		// Token: 0x06002127 RID: 8487
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDecalMaterial_Internal(IntPtr @this);
 
-		// Token: 0x06008BCE RID: 35790
+		// Token: 0x06002128 RID: 8488
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __CreateDynamicMaterialInstance_Internal(IntPtr @this);
 
-		// Token: 0x06008BCF RID: 35791 RVA: 0x000C8455 File Offset: 0x000C6655
+		// Token: 0x06002129 RID: 8489 RVA: 0x00030BF5 File Offset: 0x0002EDF5
 		static ADecalActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.DecalActor");
 		}
 
-		// Token: 0x06008BD0 RID: 35792 RVA: 0x000C8463 File Offset: 0x000C6663
+		// Token: 0x0600212A RID: 8490 RVA: 0x00030C03 File Offset: 0x0002EE03
 		protected ADecalActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04004265 RID: 16997
+		// Token: 0x04000B0D RID: 2829
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.DecalActor";
 
-		// Token: 0x04004266 RID: 16998
+		// Token: 0x04000B0E RID: 2830
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04004267 RID: 16999
+		// Token: 0x04000B0F RID: 2831
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04004268 RID: 17000
+		// Token: 0x04000B10 RID: 2832
 		internal static int __PropertyOffset_Decal;
 	}
 }

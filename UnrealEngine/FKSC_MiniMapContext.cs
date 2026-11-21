@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001DFF RID: 7679
+	// Token: 0x0200057D RID: 1405
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_MiniMapContext")]
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class FKSC_MiniMapContext : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601D556 RID: 120150 RVA: 0x002B4EA6 File Offset: 0x002B30A6
+		// Token: 0x06007FC6 RID: 32710 RVA: 0x000BCF6D File Offset: 0x000BB16D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKSC_MiniMapContext._ScriptStructPtr != 0) ? FKSC_MiniMapContext._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroSimpleCombat.KSC_MiniMapContext", ref FKSC_MiniMapContext._ScriptStructPtr);
 		}
 
-		// Token: 0x1700766B RID: 30315
-		// (get) Token: 0x0601D557 RID: 120151 RVA: 0x002B4ECA File Offset: 0x002B30CA
-		// (set) Token: 0x0601D558 RID: 120152 RVA: 0x002B4EDA File Offset: 0x002B30DA
+		// Token: 0x170018E1 RID: 6369
+		// (get) Token: 0x06007FC7 RID: 32711 RVA: 0x000BCF91 File Offset: 0x000BB191
+		// (set) Token: 0x06007FC8 RID: 32712 RVA: 0x000BCFA1 File Offset: 0x000BB1A1
 		public unsafe int EnemyType
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700766C RID: 30316
-		// (get) Token: 0x0601D559 RID: 120153 RVA: 0x002B4EEB File Offset: 0x002B30EB
-		// (set) Token: 0x0601D55A RID: 120154 RVA: 0x002B4EFF File Offset: 0x002B30FF
+		// Token: 0x170018E2 RID: 6370
+		// (get) Token: 0x06007FC9 RID: 32713 RVA: 0x000BCFB2 File Offset: 0x000BB1B2
+		// (set) Token: 0x06007FCA RID: 32714 RVA: 0x000BCFC6 File Offset: 0x000BB1C6
 		public unsafe FVectorDouble Location
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700766D RID: 30317
-		// (get) Token: 0x0601D55B RID: 120155 RVA: 0x002B4F14 File Offset: 0x002B3114
-		// (set) Token: 0x0601D55C RID: 120156 RVA: 0x002B4F24 File Offset: 0x002B3124
+		// Token: 0x170018E3 RID: 6371
+		// (get) Token: 0x06007FCB RID: 32715 RVA: 0x000BCFDB File Offset: 0x000BB1DB
+		// (set) Token: 0x06007FCC RID: 32716 RVA: 0x000BCFEB File Offset: 0x000BB1EB
 		public unsafe float Distance
 		{
 			get
@@ -61,64 +61,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D55D RID: 120157 RVA: 0x002B4F35 File Offset: 0x002B3135
+		// Token: 0x06007FCD RID: 32717 RVA: 0x000BCFFC File Offset: 0x000BB1FC
 		public FKSC_MiniMapContext()
 		{
 		}
 
-		// Token: 0x0601D55E RID: 120158 RVA: 0x002B4F3D File Offset: 0x002B313D
-		public FKSC_MiniMapContext(int EnemyType, FVectorDouble Location, float Distance)
-		{
-			this.EnemyType = EnemyType;
-			this.Location = Location;
-			this.Distance = Distance;
-		}
-
-		// Token: 0x0601D55F RID: 120159 RVA: 0x002B4F5A File Offset: 0x002B315A
+		// Token: 0x06007FCE RID: 32718 RVA: 0x000BD004 File Offset: 0x000BB204
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKSC_MiniMapContext.StaticStruct();
 		}
 
-		// Token: 0x0601D560 RID: 120160 RVA: 0x002B4F66 File Offset: 0x002B3166
+		// Token: 0x06007FCF RID: 32719 RVA: 0x000BD010 File Offset: 0x000BB210
 		[NullableContext(2)]
 		public FKSC_MiniMapContext(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601D561 RID: 120161 RVA: 0x002B4F70 File Offset: 0x002B3170
+		// Token: 0x06007FD0 RID: 32720 RVA: 0x000BD01A File Offset: 0x000BB21A
 		public FKSC_MiniMapContext(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601D562 RID: 120162 RVA: 0x002B4F7B File Offset: 0x002B317B
+		// Token: 0x06007FD1 RID: 32721 RVA: 0x000BD025 File Offset: 0x000BB225
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKSC_MiniMapContext(Pointer, false, true);
 		}
 
-		// Token: 0x0601D563 RID: 120163 RVA: 0x002B4F85 File Offset: 0x002B3185
+		// Token: 0x06007FD2 RID: 32722 RVA: 0x000BD02F File Offset: 0x000BB22F
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKSC_MiniMapContext(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400FE9E RID: 65182
+		// Token: 0x040037CD RID: 14285
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_MiniMapContext";
 
-		// Token: 0x0400FE9F RID: 65183
+		// Token: 0x040037CE RID: 14286
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400FEA0 RID: 65184
+		// Token: 0x040037CF RID: 14287
 		internal static int __PropertyOffset_EnemyType;
 
-		// Token: 0x0400FEA1 RID: 65185
+		// Token: 0x040037D0 RID: 14288
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400FEA2 RID: 65186
+		// Token: 0x040037D1 RID: 14289
 		internal static int __PropertyOffset_Distance;
 	}
 }

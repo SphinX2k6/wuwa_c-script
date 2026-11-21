@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200076A RID: 1898
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200080B RID: 2059
 	public class IThrowMotion
 	{
-		// Token: 0x06002907 RID: 10503 RVA: 0x0006C778 File Offset: 0x0006A978
+		// Token: 0x06002C2B RID: 11307 RVA: 0x00073920 File Offset: 0x00071B20
 		private IThrowMotion_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002908 RID: 10504 RVA: 0x0006C7B0 File Offset: 0x0006A9B0
+		// Token: 0x06002C2C RID: 11308 RVA: 0x00073958 File Offset: 0x00071B58
 		public static IThrowMotion Create([Nullable(2)] IThrowMotion instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002909 RID: 10505 RVA: 0x0006C7C3 File Offset: 0x0006A9C3
+		// Token: 0x06002C2D RID: 11309 RVA: 0x0007396B File Offset: 0x00071B6B
 		public static IThrowMotion CreateFromSetValue([Nullable(2)] IThrowMotion_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600290A RID: 10506 RVA: 0x0006C7D6 File Offset: 0x0006A9D6
+		// Token: 0x06002C2E RID: 11310 RVA: 0x0007397E File Offset: 0x00071B7E
 		public IThrowMotion_SetValue ToSetValue()
 		{
 			return new IThrowMotion_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AC5 RID: 2757
-		// (get) Token: 0x0600290B RID: 10507 RVA: 0x0006C7E9 File Offset: 0x0006A9E9
-		// (set) Token: 0x0600290C RID: 10508 RVA: 0x0006C814 File Offset: 0x0006AA14
+		// Token: 0x17000B85 RID: 2949
+		// (get) Token: 0x06002C2F RID: 11311 RVA: 0x00073991 File Offset: 0x00071B91
+		// (set) Token: 0x06002C30 RID: 11312 RVA: 0x000739BC File Offset: 0x00071BBC
 		public virtual EThrowMotion Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B92 RID: 7058
+		// Token: 0x04001D97 RID: 7575
 		[Nullable(2)]
 		protected IThrowMotion FbInstance;
 
-		// Token: 0x04001B93 RID: 7059
+		// Token: 0x04001D98 RID: 7576
 		[Nullable(2)]
 		protected IThrowMotion_SetValue PocoInterface;
 	}

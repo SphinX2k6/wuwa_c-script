@@ -4,18 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002145 RID: 8517
+	// Token: 0x020023A6 RID: 9126
 	public class RemoveBuffFromEntity_SetValue
 	{
-		// Token: 0x0400701C RID: 28700
+		// Token: 0x04007651 RID: 30289
 		public int? EntityId;
 
-		// Token: 0x0400701D RID: 28701
+		// Token: 0x04007652 RID: 30290
 		[Nullable(2)]
 		public List<int> EntityIds;
 
-		// Token: 0x0400701E RID: 28702
-		[Nullable(1)]
+		// Token: 0x04007653 RID: 30291
 		public List<long> BuffIds;
 	}
 }

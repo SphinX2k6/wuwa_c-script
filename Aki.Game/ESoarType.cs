@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200305E RID: 12382
+// Token: 0x020025B4 RID: 9652
 public enum ESoarType
 {
-	// Token: 0x0400C930 RID: 51504
+	// Token: 0x0400CD0A RID: 52490
 	Normal,
-	// Token: 0x0400C931 RID: 51505
+	// Token: 0x0400CD0B RID: 52491
 	Roam
 }

@@ -2,25 +2,25 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AB5 RID: 10933
+// Token: 0x02002031 RID: 8241
 [NullableContext(2)]
 [Nullable(0)]
 public class TipsSplineActorData
 {
-	// Token: 0x06016C33 RID: 93235 RVA: 0x005C746E File Offset: 0x005C566E
+	// Token: 0x06014664 RID: 83556 RVA: 0x005F3FC2 File Offset: 0x005F21C2
 	public TipsSplineActorData(int id, int pbDataId)
 	{
 	}
 
-	// Token: 0x0400A907 RID: 43271
+	// Token: 0x0400AD0D RID: 44301
 	public int Id = id;
 
-	// Token: 0x0400A908 RID: 43272
+	// Token: 0x0400AD0E RID: 44302
 	public int PbDataId = pbDataId;
 
-	// Token: 0x0400A909 RID: 43273
+	// Token: 0x0400AD0F RID: 44303
 	public TsGameSplineActor Actor;
 
-	// Token: 0x0400A90A RID: 43274
+	// Token: 0x0400AD10 RID: 44304
 	public USplineComponent SplineComp;
 }

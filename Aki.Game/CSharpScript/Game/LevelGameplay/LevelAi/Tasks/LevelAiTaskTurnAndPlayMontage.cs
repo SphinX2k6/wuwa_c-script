@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DC7 RID: 28103
+	// Token: 0x02005F46 RID: 24390
 	public class LevelAiTaskTurnAndPlayMontage : LevelAiTask
 	{
-		// Token: 0x060448E9 RID: 280809 RVA: 0x010E873F File Offset: 0x010E693F
+		// Token: 0x0603AA4D RID: 240205 RVA: 0x0109298F File Offset: 0x01090B8F
 		protected override ELevelAiNodeResult ExecuteTask()
 		{
 			this.Phase = LevelAiTaskTurnAndPlayMontage.ETaskPhase.ExecuteTurnTo;
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.InProgress;
 		}
 
-		// Token: 0x060448EA RID: 280810 RVA: 0x010E8750 File Offset: 0x010E6950
+		// Token: 0x0603AA4E RID: 240206 RVA: 0x010929A0 File Offset: 0x01090BA0
 		protected override void TickTask(float deltaTime)
 		{
 			switch (this.Phase)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			}
 		}
 
-		// Token: 0x060448EB RID: 280811 RVA: 0x010E880F File Offset: 0x010E6A0F
+		// Token: 0x0603AA4F RID: 240207 RVA: 0x01092A5F File Offset: 0x01090C5F
 		protected override ELevelAiNodeResult AbortTask()
 		{
 			if (this.Phase < LevelAiTaskTurnAndPlayMontage.ETaskPhase.ExecutePlayMontage)
@@ -70,14 +70,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.Aborted;
 		}
 
-		// Token: 0x060448EC RID: 280812 RVA: 0x010E884D File Offset: 0x010E6A4D
+		// Token: 0x0603AA50 RID: 240208 RVA: 0x01092A9D File Offset: 0x01090C9D
 		protected override void OnTaskFinished(ELevelAiNodeResult result)
 		{
 			this.Character = null;
 			this.MovementMode = EMovementMode.MOVE_None;
 		}
 
-		// Token: 0x060448ED RID: 280813 RVA: 0x010E8860 File Offset: 0x010E6A60
+		// Token: 0x0603AA51 RID: 240209 RVA: 0x01092AB0 File Offset: 0x01090CB0
 		private void ExecuteTurnTo()
 		{
 			TurnAndPlayMontageParam turnAndPlayMontageParam = this.Params as TurnAndPlayMontageParam;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			AiControllerLibrary.TurnToTarget(this.Character, targetLocation, 200f, false, 0f);
 		}
 
-		// Token: 0x060448EE RID: 280814 RVA: 0x010E8970 File Offset: 0x010E6B70
+		// Token: 0x0603AA52 RID: 240210 RVA: 0x01092BC0 File Offset: 0x01090DC0
 		private void ExecutePlayMontage()
 		{
 			TurnAndPlayMontageParam turnAndPlayMontageParam = this.Params as TurnAndPlayMontageParam;
@@ -142,43 +142,43 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			}, new float?(this.LoopDuration), new float?((float)this.RepeatTimes), new bool?(false), new bool?(false), new bool?(false));
 		}
 
-		// Token: 0x04023A6F RID: 146031
+		// Token: 0x0401ED11 RID: 126225
 		private const float TURN_SPEED = 200f;
 
-		// Token: 0x04023A70 RID: 146032
+		// Token: 0x0401ED12 RID: 126226
 		private const float TOLERANCE = 10f;
 
-		// Token: 0x04023A71 RID: 146033
+		// Token: 0x0401ED13 RID: 126227
 		[Nullable(2)]
 		private CharacterActorComponent Character;
 
-		// Token: 0x04023A72 RID: 146034
+		// Token: 0x0401ED14 RID: 126228
 		private EMovementMode MovementMode;
 
-		// Token: 0x04023A73 RID: 146035
+		// Token: 0x0401ED15 RID: 126229
 		private int PlayingMontageId;
 
-		// Token: 0x04023A74 RID: 146036
+		// Token: 0x0401ED16 RID: 126230
 		private float LoopDuration;
 
-		// Token: 0x04023A75 RID: 146037
+		// Token: 0x0401ED17 RID: 126231
 		private int RepeatTimes;
 
-		// Token: 0x04023A76 RID: 146038
+		// Token: 0x0401ED18 RID: 126232
 		private LevelAiTaskTurnAndPlayMontage.ETaskPhase Phase;
 
-		// Token: 0x0200CCAB RID: 52395
+		// Token: 0x0200B89B RID: 47259
 		private enum ETaskPhase
 		{
-			// Token: 0x0403DBA4 RID: 252836
+			// Token: 0x04038FC6 RID: 233414
 			None,
-			// Token: 0x0403DBA5 RID: 252837
+			// Token: 0x04038FC7 RID: 233415
 			ExecuteTurnTo,
-			// Token: 0x0403DBA6 RID: 252838
+			// Token: 0x04038FC8 RID: 233416
 			TickTurnTo,
-			// Token: 0x0403DBA7 RID: 252839
+			// Token: 0x04038FC9 RID: 233417
 			ExecutePlayMontage,
-			// Token: 0x0403DBA8 RID: 252840
+			// Token: 0x04038FCA RID: 233418
 			Finish
 		}
 	}

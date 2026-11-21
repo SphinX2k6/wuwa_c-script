@@ -7,35 +7,35 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E69 RID: 28265
+	// Token: 0x02005FEA RID: 24554
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalCoreEffectAbility : LevelEntityAbilityBase
 	{
-		// Token: 0x06044E10 RID: 282128 RVA: 0x01100D33 File Offset: 0x010FEF33
+		// Token: 0x0603AF9E RID: 241566 RVA: 0x010AB296 File Offset: 0x010A9496
 		public PlayerElementalCoreEffectAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044E11 RID: 282129 RVA: 0x01100D40 File Offset: 0x010FEF40
+		// Token: 0x0603AF9F RID: 241567 RVA: 0x010AB2A3 File Offset: 0x010A94A3
 		public override bool ShouldActivate(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>().ElementalCoreVisible;
 		}
 
-		// Token: 0x06044E12 RID: 282130 RVA: 0x01100D4D File Offset: 0x010FEF4D
+		// Token: 0x0603AFA0 RID: 241568 RVA: 0x010AB2B0 File Offset: 0x010A94B0
 		public override bool ShouldDeactivate(Entity entity)
 		{
 			return !entity.GetComponent<PlayerElementalCasketComponent>().ElementalCoreVisible;
 		}
 
-		// Token: 0x06044E13 RID: 282131 RVA: 0x01100D5D File Offset: 0x010FEF5D
+		// Token: 0x0603AFA1 RID: 241569 RVA: 0x010AB2C0 File Offset: 0x010A94C0
 		public override void OnActivated(Entity entity)
 		{
 			this.RefreshReact(entity);
 		}
 
-		// Token: 0x06044E14 RID: 282132 RVA: 0x01100D68 File Offset: 0x010FEF68
+		// Token: 0x0603AFA2 RID: 241570 RVA: 0x010AB2CC File Offset: 0x010A94CC
 		public override void OnDeactivated(Entity entity)
 		{
 			this.CorePrefabElemental = null;
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E15 RID: 282133 RVA: 0x01100DC0 File Offset: 0x010FEFC0
+		// Token: 0x0603AFA3 RID: 241571 RVA: 0x010AB324 File Offset: 0x010A9524
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			this.RefreshReact(entity);
 		}
 
-		// Token: 0x06044E16 RID: 282134 RVA: 0x01100DCC File Offset: 0x010FEFCC
+		// Token: 0x0603AFA4 RID: 241572 RVA: 0x010AB330 File Offset: 0x010A9530
 		private void RefreshReact(Entity entity)
 		{
 			ElementalCoreData playerElementalCoreData = ElementalCasketModel.Instance.PlayerElementalCoreData;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshCoreFieldOpenedPerform(elementalCoreHandleId, component.ElementalCoreState, component.FieldOpened);
 		}
 
-		// Token: 0x06044E17 RID: 282135 RVA: 0x01100E16 File Offset: 0x010FF016
+		// Token: 0x0603AFA5 RID: 241573 RVA: 0x010AB37A File Offset: 0x010A957A
 		private void RefreshCoreFieldOpenedPerform(int handleId, EPlayerElementalCoreState coreState, bool fieldOpened)
 		{
 			if (this.CorePrefabFieldOpened == fieldOpened)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E18 RID: 282136 RVA: 0x01100E50 File Offset: 0x010FF050
+		// Token: 0x0603AFA6 RID: 241574 RVA: 0x010AB3B4 File Offset: 0x010A95B4
 		private void RefreshCoreElementalPerform(int handleId, ElementalCoreData coreData)
 		{
 			EElementalType elementalType = coreData.ElementalType;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.PlayCorePerform(handleId, elementalCorePerformTag);
 		}
 
-		// Token: 0x06044E19 RID: 282137 RVA: 0x01100EF0 File Offset: 0x010FF0F0
+		// Token: 0x0603AFA7 RID: 241575 RVA: 0x010AB454 File Offset: 0x010A9654
 		private void PlayCorePerform(int handleId, int tagId)
 		{
 			FGameplayTag? gameplayTagById = GameplayTagUtils.GetGameplayTagById(tagId);
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E1A RID: 282138 RVA: 0x01100F20 File Offset: 0x010FF120
+		// Token: 0x0603AFA8 RID: 241576 RVA: 0x010AB484 File Offset: 0x010A9684
 		private void StopCorePerform(int handleId, int tagId)
 		{
 			FGameplayTag? gameplayTagById = GameplayTagUtils.GetGameplayTagById(tagId);
@@ -141,16 +141,26 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x04023DB8 RID: 146872
+		// Token: 0x17006F68 RID: 28520
+		// (get) Token: 0x0603AFA9 RID: 241577 RVA: 0x010AB4B3 File Offset: 0x010A96B3
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F06D RID: 127085
 		private EElementalType? CorePrefabElemental;
 
-		// Token: 0x04023DB9 RID: 146873
+		// Token: 0x0401F06E RID: 127086
 		private EElementalCoreState? CorePrefabState;
 
-		// Token: 0x04023DBA RID: 146874
+		// Token: 0x0401F06F RID: 127087
 		private int CorePrefabElementalTagId;
 
-		// Token: 0x04023DBB RID: 146875
+		// Token: 0x0401F070 RID: 127088
 		private bool CorePrefabFieldOpened;
 	}
 }

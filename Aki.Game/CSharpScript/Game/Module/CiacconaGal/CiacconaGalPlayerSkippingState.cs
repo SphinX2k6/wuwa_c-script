@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BC3 RID: 23491
+	// Token: 0x02004BA3 RID: 19363
 	internal class CiacconaGalPlayerSkippingState : BaseCiacconaGalPlayerState
 	{
-		// Token: 0x0603B649 RID: 243273 RVA: 0x00E2A97A File Offset: 0x00E28B7A
+		// Token: 0x06030595 RID: 198037 RVA: 0x00D7AC6E File Offset: 0x00D78E6E
 		[NullableContext(1)]
 		public CiacconaGalPlayerSkippingState(CiacconaGalPlayer owner, ECiacconaGalPlayerState state, [Nullable(new byte[]
 		{
@@ -16,14 +16,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		{
 		}
 
-		// Token: 0x0603B64A RID: 243274 RVA: 0x00E2A985 File Offset: 0x00E28B85
+		// Token: 0x06030596 RID: 198038 RVA: 0x00D7AC79 File Offset: 0x00D78E79
 		protected override void OnEnter(ECiacconaGalPlayerState? lastState)
 		{
 			base.OnEnter(lastState);
 			this.Owner.AnimHandler.Skip();
 		}
 
-		// Token: 0x0603B64B RID: 243275 RVA: 0x00E2A99E File Offset: 0x00E28B9E
+		// Token: 0x06030597 RID: 198039 RVA: 0x00D7AC92 File Offset: 0x00D78E92
 		public override void OnClick(int? id = null)
 		{
 		}

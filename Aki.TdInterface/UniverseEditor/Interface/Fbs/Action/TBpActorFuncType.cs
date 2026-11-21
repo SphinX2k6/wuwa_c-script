@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200764D RID: 30285
+	// Token: 0x02007E5B RID: 32347
 	public enum TBpActorFuncType : byte
 	{
-		// Token: 0x040125FD RID: 75261
+		// Token: 0x04013647 RID: 79431
 		NONE,
-		// Token: 0x040125FE RID: 75262
+		// Token: 0x04013648 RID: 79432
 		IBrokenBridgeEffectInMobileBpActorFunc,
-		// Token: 0x040125FF RID: 75263
+		// Token: 0x04013649 RID: 79433
 		ICarPaintChangeBpActorFunc
 	}
 }

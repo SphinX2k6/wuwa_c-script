@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Flow
 {
-	// Token: 0x02004728 RID: 18216
+	// Token: 0x02004B90 RID: 19344
 	public class ICameraDataT
 	{
-		// Token: 0x17008290 RID: 33424
-		// (get) Token: 0x0601BFD5 RID: 114645 RVA: 0x003F7706 File Offset: 0x003F5906
-		// (set) Token: 0x0601BFD6 RID: 114646 RVA: 0x003F770E File Offset: 0x003F590E
+		// Token: 0x170088D1 RID: 35025
+		// (get) Token: 0x0601D7AA RID: 120746 RVA: 0x004239A2 File Offset: 0x00421BA2
+		// (set) Token: 0x0601D7AB RID: 120747 RVA: 0x004239AA File Offset: 0x00421BAA
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x17008291 RID: 33425
-		// (get) Token: 0x0601BFD7 RID: 114647 RVA: 0x003F7717 File Offset: 0x003F5917
-		// (set) Token: 0x0601BFD8 RID: 114648 RVA: 0x003F771F File Offset: 0x003F591F
+		// Token: 0x170088D2 RID: 35026
+		// (get) Token: 0x0601D7AC RID: 120748 RVA: 0x004239B3 File Offset: 0x00421BB3
+		// (set) Token: 0x0601D7AD RID: 120749 RVA: 0x004239BB File Offset: 0x00421BBB
 		public IVectorInfoT Rot { get; set; }
 
-		// Token: 0x0601BFD9 RID: 114649 RVA: 0x003F7728 File Offset: 0x003F5928
+		// Token: 0x0601D7AE RID: 120750 RVA: 0x004239C4 File Offset: 0x00421BC4
 		public ICameraDataT()
 		{
 			this.Pos = null;

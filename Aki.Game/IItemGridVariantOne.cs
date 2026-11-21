@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020018BD RID: 6333
+// Token: 0x02000D76 RID: 3446
 [NullableContext(2)]
 public interface IItemGridVariantOne
 {
-	// Token: 0x17000F5D RID: 3933
-	// (get) Token: 0x0600B9AF RID: 47535
+	// Token: 0x17000F80 RID: 3968
+	// (get) Token: 0x06008D98 RID: 36248
 	bool IsItemGridVariantOne { get; }
 
-	// Token: 0x0600B9B0 RID: 47536
+	// Token: 0x06008D99 RID: 36249
 	void RefreshStar(int[] starNum);
 
-	// Token: 0x0600B9B1 RID: 47537
+	// Token: 0x06008D9A RID: 36250
 	void RefreshRecoverSprite(bool showState);
 
-	// Token: 0x0600B9B2 RID: 47538
+	// Token: 0x06008D9B RID: 36251
 	void RefreshRightDownLockSprite(bool showState);
 
-	// Token: 0x0600B9B3 RID: 47539
+	// Token: 0x06008D9C RID: 36252
 	void RefreshUpgradePanel(bool showState, string showText);
 }

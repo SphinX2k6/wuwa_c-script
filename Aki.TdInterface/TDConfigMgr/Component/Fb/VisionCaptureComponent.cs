@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B73 RID: 2931
+	// Token: 0x02000C41 RID: 3137
 	public class VisionCaptureComponent : IComponentBase
 	{
-		// Token: 0x06004387 RID: 17287 RVA: 0x000AC207 File Offset: 0x000AA407
-		[NullableContext(1)]
+		// Token: 0x060047E0 RID: 18400 RVA: 0x000B62CB File Offset: 0x000B44CB
 		public static VisionCaptureComponent Create(IVisionCaptureComponent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700125E RID: 4702
-		// (get) Token: 0x06004388 RID: 17288 RVA: 0x000AC228 File Offset: 0x000AA428
+		// Token: 0x17001359 RID: 4953
+		// (get) Token: 0x060047E1 RID: 18401 RVA: 0x000B62EC File Offset: 0x000B44EC
 		public override bool? Disabled
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700125F RID: 4703
-		// (get) Token: 0x06004389 RID: 17289 RVA: 0x000AC260 File Offset: 0x000AA460
+		// Token: 0x1700135A RID: 4954
+		// (get) Token: 0x060047E2 RID: 18402 RVA: 0x000B6324 File Offset: 0x000B4524
 		public override bool? EdIsLocked
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001260 RID: 4704
-		// (get) Token: 0x0600438A RID: 17290 RVA: 0x000AC276 File Offset: 0x000AA476
+		// Token: 0x1700135B RID: 4955
+		// (get) Token: 0x060047E3 RID: 18403 RVA: 0x000B633A File Offset: 0x000B453A
 		public virtual int VisionCaptureId
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001261 RID: 4705
-		// (get) Token: 0x0600438B RID: 17291 RVA: 0x000AC284 File Offset: 0x000AA484
+		// Token: 0x1700135C RID: 4956
+		// (get) Token: 0x060047E4 RID: 18404 RVA: 0x000B6348 File Offset: 0x000B4548
 		public virtual int? VisionCaptureProb
 		{
 			get
@@ -69,7 +67,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400261A RID: 9754
+		// Token: 0x04002862 RID: 10338
 		private IVisionCaptureComponent Instance;
 	}
 }

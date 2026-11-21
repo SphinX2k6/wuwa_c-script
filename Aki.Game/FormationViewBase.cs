@@ -8,33 +8,33 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C09 RID: 7177
+// Token: 0x020010C8 RID: 4296
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class FormationViewBase<[Nullable(0)] TProvider, [Nullable(0)] TValidator, [Nullable(0)] TPresenter> : UiTickViewBase where TProvider : IFormationProvider where TValidator : IFormationValidator where TPresenter : ISlotPresenter
 {
-	// Token: 0x0600D69C RID: 54940 RVA: 0x0031A1E5 File Offset: 0x003183E5
+	// Token: 0x0600AAAF RID: 43695 RVA: 0x003254D5 File Offset: 0x003236D5
 	protected FormationViewBase(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x170011AA RID: 4522
-	// (get) Token: 0x0600D69D RID: 54941
+	// Token: 0x170011CF RID: 4559
+	// (get) Token: 0x0600AAB0 RID: 43696
 	protected abstract TProvider Provider { get; }
 
-	// Token: 0x170011AB RID: 4523
-	// (get) Token: 0x0600D69E RID: 54942
+	// Token: 0x170011D0 RID: 4560
+	// (get) Token: 0x0600AAB1 RID: 43697
 	protected abstract TValidator Validator { get; }
 
-	// Token: 0x170011AC RID: 4524
-	// (get) Token: 0x0600D69F RID: 54943
+	// Token: 0x170011D1 RID: 4561
+	// (get) Token: 0x0600AAB2 RID: 43698
 	protected abstract TPresenter Presenter { get; }
 
-	// Token: 0x170011AD RID: 4525
-	// (get) Token: 0x0600D6A0 RID: 54944
+	// Token: 0x170011D2 RID: 4562
+	// (get) Token: 0x0600AAB3 RID: 43699
 	protected abstract FormationViewKeys Keys { get; }
 
-	// Token: 0x0600D6A1 RID: 54945 RVA: 0x0031A1FC File Offset: 0x003183FC
+	// Token: 0x0600AAB4 RID: 43700 RVA: 0x003254EC File Offset: 0x003236EC
 	protected void InitCommonStartContext()
 	{
 		bool flag = InstanceDungeonEntranceModel.Instance.GetMatchingState() > EInstanceMatchState.Default;
@@ -42,7 +42,7 @@ public abstract class FormationViewBase<[Nullable(0)] TProvider, [Nullable(0)] T
 		this.CanUseSpecialTrailRole = (this.CanShowSpecialTrialRole && !flag);
 	}
 
-	// Token: 0x0600D6A2 RID: 54946 RVA: 0x0031A248 File Offset: 0x00318448
+	// Token: 0x0600AAB5 RID: 43701 RVA: 0x00325538 File Offset: 0x00323738
 	protected void FinalizeStartViewVisibility()
 	{
 		bool isMulti = GameModeModel.Instance.IsMulti;
@@ -52,7 +52,7 @@ public abstract class FormationViewBase<[Nullable(0)] TProvider, [Nullable(0)] T
 		this.SetCloseButtonVisible(true);
 	}
 
-	// Token: 0x0600D6A3 RID: 54947 RVA: 0x0031A2CC File Offset: 0x003184CC
+	// Token: 0x0600AAB6 RID: 43702 RVA: 0x003255BC File Offset: 0x003237BC
 	protected override void OnBeforeDestroy()
 	{
 		TPresenter presenter = this.Presenter;
@@ -65,54 +65,54 @@ public abstract class FormationViewBase<[Nullable(0)] TProvider, [Nullable(0)] T
 		this.WaitingClose = false;
 	}
 
-	// Token: 0x0600D6A4 RID: 54948 RVA: 0x0031A310 File Offset: 0x00318510
+	// Token: 0x0600AAB7 RID: 43703 RVA: 0x00325600 File Offset: 0x00323800
 	protected override void OnTick(float delta)
 	{
 		TPresenter presenter = this.Presenter;
 		presenter.OnTick(delta);
 	}
 
-	// Token: 0x0600D6A5 RID: 54949 RVA: 0x0031A334 File Offset: 0x00318534
+	// Token: 0x0600AAB8 RID: 43704 RVA: 0x00325624 File Offset: 0x00323824
 	protected override void OnHandleLoadScene()
 	{
 		TPresenter presenter = this.Presenter;
 		presenter.OnHandleLoadScene();
 	}
 
-	// Token: 0x0600D6A6 RID: 54950 RVA: 0x0031A358 File Offset: 0x00318558
+	// Token: 0x0600AAB9 RID: 43705 RVA: 0x00325648 File Offset: 0x00323848
 	protected override void OnHandleReleaseScene()
 	{
 		TPresenter presenter = this.Presenter;
 		presenter.OnHandleReleaseScene();
 	}
 
-	// Token: 0x0600D6A7 RID: 54951
+	// Token: 0x0600AABA RID: 43706
 	[NullableContext(2)]
 	protected abstract void OnRefreshRoleView(int[] needRefreshPosition = null);
 
-	// Token: 0x0600D6A8 RID: 54952
+	// Token: 0x0600AABB RID: 43707
 	[NullableContext(2)]
 	protected abstract void RefreshAllRoleView(int formationId, int[] needRefreshPosition = null);
 
-	// Token: 0x0600D6A9 RID: 54953
+	// Token: 0x0600AABC RID: 43708
 	protected abstract void RefreshRoleView(int formationId, int position);
 
-	// Token: 0x0600D6AA RID: 54954
+	// Token: 0x0600AABD RID: 43709
 	protected abstract void RefreshConfirmButton();
 
-	// Token: 0x0600D6AB RID: 54955
+	// Token: 0x0600AABE RID: 43710
 	protected abstract void OnClickConfirm();
 
-	// Token: 0x0600D6AC RID: 54956
+	// Token: 0x0600AABF RID: 43711
 	protected abstract void OnClickClose();
 
-	// Token: 0x0600D6AD RID: 54957
+	// Token: 0x0600AAC0 RID: 43712
 	protected abstract void OnClickQuickSelect();
 
-	// Token: 0x0600D6AE RID: 54958
+	// Token: 0x0600AAC1 RID: 43713
 	protected abstract bool IsAllowClose();
 
-	// Token: 0x0600D6AF RID: 54959 RVA: 0x0031A37C File Offset: 0x0031857C
+	// Token: 0x0600AAC2 RID: 43714 RVA: 0x0032566C File Offset: 0x0032386C
 	protected void SetCloseButtonVisible(bool bVisible)
 	{
 		UUIItem uuiitem = base.GetButton(this.Keys.Close).GetOwner().GetComponentByClass(UUIItem.StaticClass()) as UUIItem;
@@ -123,57 +123,57 @@ public abstract class FormationViewBase<[Nullable(0)] TProvider, [Nullable(0)] T
 		uuiitem.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600D6B0 RID: 54960
+	// Token: 0x0600AAC3 RID: 43715
 	protected abstract void OnAddRoleButtonClicked(int position);
 
-	// Token: 0x0600D6B1 RID: 54961
+	// Token: 0x0600AAC4 RID: 43716
 	protected abstract TeamRoleSelectViewData GetRoleSelectViewData();
 
-	// Token: 0x0600D6B2 RID: 54962
+	// Token: 0x0600AAC5 RID: 43717
 	protected abstract void OnEnsureFormation(int roleId);
 
-	// Token: 0x0600D6B3 RID: 54963 RVA: 0x0031A3BF File Offset: 0x003185BF
+	// Token: 0x0600AAC6 RID: 43718 RVA: 0x003256AF File Offset: 0x003238AF
 	protected void OnSelectBack()
 	{
 		this.SetCloseButtonVisible(true);
 		this.OnExitRoleSelectScene();
 	}
 
-	// Token: 0x0600D6B4 RID: 54964 RVA: 0x0031A3CE File Offset: 0x003185CE
+	// Token: 0x0600AAC7 RID: 43719 RVA: 0x003256BE File Offset: 0x003238BE
 	protected virtual void OnEnterRoleSelectScene(int position)
 	{
 	}
 
-	// Token: 0x0600D6B5 RID: 54965 RVA: 0x0031A3D0 File Offset: 0x003185D0
+	// Token: 0x0600AAC8 RID: 43720 RVA: 0x003256C0 File Offset: 0x003238C0
 	protected virtual void OnExitRoleSelectScene()
 	{
 	}
 
-	// Token: 0x0600D6B6 RID: 54966 RVA: 0x0031A3D4 File Offset: 0x003185D4
+	// Token: 0x0600AAC9 RID: 43721 RVA: 0x003256C4 File Offset: 0x003238C4
 	protected bool OnQuickSelectCanConfirm(int[] roleIdList)
 	{
 		TValidator validator = this.Validator;
-		return validator.CanQuickSelectConfirm(roleIdList);
+		return validator.CanQuickSelectConfirm(roleIdList, this.EditFormationId);
 	}
 
-	// Token: 0x0600D6B7 RID: 54967 RVA: 0x0031A3F8 File Offset: 0x003185F8
+	// Token: 0x0600AACA RID: 43722 RVA: 0x003256EC File Offset: 0x003238EC
 	protected bool OnQuickSelectCanSelect(int roleId, int[] roleIdList)
 	{
 		TValidator validator = this.Validator;
 		return validator.CanSelectRole(roleId, roleIdList);
 	}
 
-	// Token: 0x0600D6B8 RID: 54968
+	// Token: 0x0600AACB RID: 43723
 	protected abstract void OnQuickSelectConfirm(int[] roleIdList);
 
-	// Token: 0x0600D6B9 RID: 54969 RVA: 0x0031A41B File Offset: 0x0031861B
+	// Token: 0x0600AACC RID: 43724 RVA: 0x0032570F File Offset: 0x0032390F
 	protected void OnQuickSelectHideFinishCallBack()
 	{
 		this.OnRefreshRoleView(null);
 		this.SetCloseButtonVisible(true);
 	}
 
-	// Token: 0x0600D6BA RID: 54970 RVA: 0x0031A42C File Offset: 0x0031862C
+	// Token: 0x0600AACD RID: 43725 RVA: 0x00325720 File Offset: 0x00323920
 	protected void PlayJoinTeamAudio(int roleId)
 	{
 		string str = "[" + base.GetType().Name + "]";
@@ -200,7 +200,7 @@ public abstract class FormationViewBase<[Nullable(0)] TProvider, [Nullable(0)] T
 		}
 	}
 
-	// Token: 0x0600D6BB RID: 54971 RVA: 0x0031A51C File Offset: 0x0031871C
+	// Token: 0x0600AACE RID: 43726 RVA: 0x00325810 File Offset: 0x00323A10
 	protected UniTask CreateAllFormationButtons()
 	{
 		FormationViewBase<TProvider, TValidator, TPresenter>.<CreateAllFormationButtons>d__41 <CreateAllFormationButtons>d__;
@@ -211,22 +211,22 @@ public abstract class FormationViewBase<[Nullable(0)] TProvider, [Nullable(0)] T
 		return <CreateAllFormationButtons>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D6BC RID: 54972 RVA: 0x0031A55F File Offset: 0x0031875F
+	// Token: 0x0600AACF RID: 43727 RVA: 0x00325853 File Offset: 0x00323A53
 	protected virtual IFormationTabComponent CreateFormationTabComponent(UUIItem uiItem, CommonTabComponentData<EditFormationTabItem> data)
 	{
 		return new DefaultFormationTabComponent(uiItem, data);
 	}
 
-	// Token: 0x0600D6BD RID: 54973
+	// Token: 0x0600AAD0 RID: 43728
 	protected abstract bool IsCurrentTab(int formationId);
 
-	// Token: 0x0600D6BE RID: 54974 RVA: 0x0031A568 File Offset: 0x00318768
+	// Token: 0x0600AAD1 RID: 43729 RVA: 0x0032585C File Offset: 0x00323A5C
 	protected EditFormationTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new EditFormationTabItem(true);
 	}
 
-	// Token: 0x0600D6BF RID: 54975 RVA: 0x0031A570 File Offset: 0x00318770
+	// Token: 0x0600AAD2 RID: 43730 RVA: 0x00325864 File Offset: 0x00323A64
 	protected CommonTabData GetCommonData(int index)
 	{
 		string resourceId = FormationDefine.FormationIndexSprites[index];
@@ -244,7 +244,7 @@ public abstract class FormationViewBase<[Nullable(0)] TProvider, [Nullable(0)] T
 		return commonTabData;
 	}
 
-	// Token: 0x0600D6C0 RID: 54976 RVA: 0x0031A5F4 File Offset: 0x003187F4
+	// Token: 0x0600AAD3 RID: 43731 RVA: 0x003258E8 File Offset: 0x00323AE8
 	protected virtual void OnFormationButtonClicked(int index)
 	{
 		if (this.WaitingClose)
@@ -267,22 +267,22 @@ public abstract class FormationViewBase<[Nullable(0)] TProvider, [Nullable(0)] T
 		this.RefreshConfirmButton();
 	}
 
-	// Token: 0x0400622B RID: 25131
+	// Token: 0x040062FD RID: 25341
 	protected int EditFormationId;
 
-	// Token: 0x0400622C RID: 25132
+	// Token: 0x040062FE RID: 25342
 	protected int EditPosition;
 
-	// Token: 0x0400622D RID: 25133
+	// Token: 0x040062FF RID: 25343
 	protected bool WaitingClose;
 
-	// Token: 0x0400622E RID: 25134
+	// Token: 0x04006300 RID: 25344
 	protected bool CanUseSpecialTrailRole = true;
 
-	// Token: 0x0400622F RID: 25135
+	// Token: 0x04006301 RID: 25345
 	protected bool CanShowSpecialTrialRole = true;
 
-	// Token: 0x04006230 RID: 25136
+	// Token: 0x04006302 RID: 25346
 	[Nullable(2)]
 	protected IFormationTabComponent TabComponent;
 }

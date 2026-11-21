@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000867 RID: 2151
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200090A RID: 2314
 	public class ReboundComponent : IComponentBase
 	{
-		// Token: 0x06002F9D RID: 12189 RVA: 0x0007ADAC File Offset: 0x00078FAC
+		// Token: 0x060032D9 RID: 13017 RVA: 0x00082294 File Offset: 0x00080494
 		private ReboundComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002F9E RID: 12190 RVA: 0x0007ADE4 File Offset: 0x00078FE4
+		// Token: 0x060032DA RID: 13018 RVA: 0x000822CC File Offset: 0x000804CC
 		public static ReboundComponent Create([Nullable(2)] ReboundComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F9F RID: 12191 RVA: 0x0007ADF7 File Offset: 0x00078FF7
+		// Token: 0x060032DB RID: 13019 RVA: 0x000822DF File Offset: 0x000804DF
 		public static ReboundComponent CreateFromSetValue([Nullable(2)] ReboundComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002FA0 RID: 12192 RVA: 0x0007AE0A File Offset: 0x0007900A
+		// Token: 0x060032DC RID: 13020 RVA: 0x000822F2 File Offset: 0x000804F2
 		public new ReboundComponent_SetValue ToSetValue()
 		{
 			return new ReboundComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C97 RID: 3223
-		// (get) Token: 0x06002FA1 RID: 12193 RVA: 0x0007AE44 File Offset: 0x00079044
-		// (set) Token: 0x06002FA2 RID: 12194 RVA: 0x0007AE7E File Offset: 0x0007907E
+		// Token: 0x17000D60 RID: 3424
+		// (get) Token: 0x060032DD RID: 13021 RVA: 0x0008232C File Offset: 0x0008052C
+		// (set) Token: 0x060032DE RID: 13022 RVA: 0x00082366 File Offset: 0x00080566
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C98 RID: 3224
-		// (get) Token: 0x06002FA3 RID: 12195 RVA: 0x0007AE8C File Offset: 0x0007908C
-		// (set) Token: 0x06002FA4 RID: 12196 RVA: 0x0007AEB6 File Offset: 0x000790B6
+		// Token: 0x17000D61 RID: 3425
+		// (get) Token: 0x060032DF RID: 13023 RVA: 0x00082374 File Offset: 0x00080574
+		// (set) Token: 0x060032E0 RID: 13024 RVA: 0x0008239E File Offset: 0x0008059E
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C99 RID: 3225
-		// (get) Token: 0x06002FA5 RID: 12197 RVA: 0x0007AEC4 File Offset: 0x000790C4
-		// (set) Token: 0x06002FA6 RID: 12198 RVA: 0x0007AEF0 File Offset: 0x000790F0
+		// Token: 0x17000D62 RID: 3426
+		// (get) Token: 0x060032E1 RID: 13025 RVA: 0x000823AC File Offset: 0x000805AC
+		// (set) Token: 0x060032E2 RID: 13026 RVA: 0x000823D8 File Offset: 0x000805D8
 		public virtual long BulletId
 		{
 			get
@@ -128,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C9A RID: 3226
-		// (get) Token: 0x06002FA7 RID: 12199 RVA: 0x0007AF00 File Offset: 0x00079100
-		// (set) Token: 0x06002FA8 RID: 12200 RVA: 0x0007AF61 File Offset: 0x00079161
+		// Token: 0x17000D63 RID: 3427
+		// (get) Token: 0x060032E3 RID: 13027 RVA: 0x000823E8 File Offset: 0x000805E8
+		// (set) Token: 0x060032E4 RID: 13028 RVA: 0x00082449 File Offset: 0x00080649
 		public virtual IForwardFrontRebound Option
 		{
 			get
@@ -158,18 +156,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F69 RID: 8041
+		// Token: 0x0400217B RID: 8571
 		[Nullable(2)]
 		protected new ReboundComponent FbInstance;
 
-		// Token: 0x04001F6A RID: 8042
+		// Token: 0x0400217C RID: 8572
 		[Nullable(2)]
 		protected new ReboundComponent_SetValue PocoInterface;
 
-		// Token: 0x04001F6B RID: 8043
+		// Token: 0x0400217D RID: 8573
 		private IForwardFrontRebound _OptionCache;
 
-		// Token: 0x04001F6C RID: 8044
+		// Token: 0x0400217E RID: 8574
 		private bool _OptionInited;
 	}
 }

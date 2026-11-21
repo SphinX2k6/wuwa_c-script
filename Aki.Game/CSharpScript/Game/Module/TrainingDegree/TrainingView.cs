@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrainingDegree
 {
-	// Token: 0x02004AFA RID: 19194
+	// Token: 0x02003AA2 RID: 15010
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrainingView
 	{
-		// Token: 0x06031B5C RID: 203612 RVA: 0x00B8B554 File Offset: 0x00B89754
+		// Token: 0x060268EC RID: 157932 RVA: 0x00ACF5B0 File Offset: 0x00ACD7B0
 		public void Show(UUILayoutBase layout, [Nullable(new byte[]
 		{
 			2,
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			}
 		}
 
-		// Token: 0x06031B5D RID: 203613 RVA: 0x00B8B5CC File Offset: 0x00B897CC
+		// Token: 0x060268ED RID: 157933 RVA: 0x00ACF628 File Offset: 0x00ACD828
 		private ILayoutItem<TrainingItem> InitTrainingItem(object data, UUIItem uiItem, int index)
 		{
 			TrainingItem trainingItem = new TrainingItem(uiItem);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			};
 		}
 
-		// Token: 0x06031B5E RID: 203614 RVA: 0x00B8B604 File Offset: 0x00B89804
+		// Token: 0x060268EE RID: 157934 RVA: 0x00ACF660 File Offset: 0x00ACD860
 		public void Clear()
 		{
 			if (this.GenericLayout != null)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			this.GenericLayout = null;
 		}
 
-		// Token: 0x0401A8B5 RID: 108725
+		// Token: 0x04015207 RID: 86535
 		[Nullable(new byte[]
 		{
 			2,

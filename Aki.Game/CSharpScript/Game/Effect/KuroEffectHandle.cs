@@ -1,28 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Effect
 {
-	// Token: 0x02007271 RID: 29297
+	// Token: 0x020063F0 RID: 25584
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class KuroEffectHandle
 	{
-		// Token: 0x17009E90 RID: 40592
-		// (get) Token: 0x06047C9D RID: 294045 RVA: 0x0125D60D File Offset: 0x0125B80D
-		// (set) Token: 0x06047C9E RID: 294046 RVA: 0x0125D615 File Offset: 0x0125B815
+		// Token: 0x170075E9 RID: 30185
+		// (get) Token: 0x0603E05A RID: 254042 RVA: 0x011FDF9D File Offset: 0x011FC19D
+		// (set) Token: 0x0603E05B RID: 254043 RVA: 0x011FDFA5 File Offset: 0x011FC1A5
 		public int Id { get; set; }
 
-		// Token: 0x17009E91 RID: 40593
-		// (get) Token: 0x06047C9F RID: 294047 RVA: 0x0125D61E File Offset: 0x0125B81E
-		// (set) Token: 0x06047CA0 RID: 294048 RVA: 0x0125D626 File Offset: 0x0125B826
+		// Token: 0x170075EA RID: 30186
+		// (get) Token: 0x0603E05C RID: 254044 RVA: 0x011FDFAE File Offset: 0x011FC1AE
+		// (set) Token: 0x0603E05D RID: 254045 RVA: 0x011FDFB6 File Offset: 0x011FC1B6
 		public bool IsLoop { get; set; }
 
-		// Token: 0x06047CA1 RID: 294049 RVA: 0x0125D62F File Offset: 0x0125B82F
+		// Token: 0x0603E05E RID: 254046 RVA: 0x011FDFBF File Offset: 0x011FC1BF
 		public void Init(EffectContext context, Action<int> beforeInitCallback = null, Action<ELoadEffectResult, int> callback = null, Action<int> beforePlayCallback = null)
 		{
 			this.Context = context;
@@ -31,7 +30,7 @@ namespace CSharpScript.Game.Effect
 			this.BeforePlayCallback = beforePlayCallback;
 		}
 
-		// Token: 0x06047CA2 RID: 294050 RVA: 0x0125D64E File Offset: 0x0125B84E
+		// Token: 0x0603E05F RID: 254047 RVA: 0x011FDFDE File Offset: 0x011FC1DE
 		public void OnAfterSpawn(int effectId)
 		{
 			this.Id = effectId;
@@ -39,7 +38,7 @@ namespace CSharpScript.Game.Effect
 			this.RegisterFinishCallback();
 		}
 
-		// Token: 0x06047CA3 RID: 294051 RVA: 0x0125D669 File Offset: 0x0125B869
+		// Token: 0x0603E060 RID: 254048 RVA: 0x011FDFF9 File Offset: 0x011FC1F9
 		public void Clear(bool unbind = false)
 		{
 			this.UnregisterFinishCallback();
@@ -55,7 +54,7 @@ namespace CSharpScript.Game.Effect
 			this.OnCustomCheckOwner = null;
 		}
 
-		// Token: 0x06047CA4 RID: 294052 RVA: 0x0125D6A4 File Offset: 0x0125B8A4
+		// Token: 0x0603E061 RID: 254049 RVA: 0x011FE034 File Offset: 0x011FC234
 		internal void OnSpawnDelegatesRegistered(FKuroEffectBeforeInitCallback beforeInitDelegate, FKuroEffectInitCallback initDelegate, FKuroEffectBeforePlayCallback beforePlayDelegate, FKuroEffectOnClearCallback clearDelegate)
 		{
 			this._beforeInitDelegate = beforeInitDelegate;
@@ -64,7 +63,7 @@ namespace CSharpScript.Game.Effect
 			this._clearDelegate = clearDelegate;
 		}
 
-		// Token: 0x06047CA5 RID: 294053 RVA: 0x0125D6C4 File Offset: 0x0125B8C4
+		// Token: 0x0603E062 RID: 254050 RVA: 0x011FE054 File Offset: 0x011FC254
 		private void UnbindDelegates()
 		{
 			if (this._beforeInitDelegate != null)
@@ -109,7 +108,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CA6 RID: 294054 RVA: 0x0125D7D4 File Offset: 0x0125B9D4
+		// Token: 0x0603E063 RID: 254051 RVA: 0x011FE164 File Offset: 0x011FC364
 		public bool CheckOwner()
 		{
 			if (this.OnCustomCheckOwner != null)
@@ -136,25 +135,25 @@ namespace CSharpScript.Game.Effect
 			return this.Context.SourceObject == null || this.Context.SourceObject.IsValid();
 		}
 
-		// Token: 0x06047CA7 RID: 294055 RVA: 0x0125D88E File Offset: 0x0125BA8E
+		// Token: 0x0603E064 RID: 254052 RVA: 0x011FE21E File Offset: 0x011FC41E
 		public bool IsDone()
 		{
 			return this.IsDoneInternal;
 		}
 
-		// Token: 0x06047CA8 RID: 294056 RVA: 0x0125D896 File Offset: 0x0125BA96
+		// Token: 0x0603E065 RID: 254053 RVA: 0x011FE226 File Offset: 0x011FC426
 		public void SetNotRecord(bool value)
 		{
 			this.NotRecordInternal = value;
 		}
 
-		// Token: 0x06047CA9 RID: 294057 RVA: 0x0125D89F File Offset: 0x0125BA9F
+		// Token: 0x0603E066 RID: 254054 RVA: 0x011FE22F File Offset: 0x011FC42F
 		public bool GetNotRecord()
 		{
 			return this.NotRecordInternal;
 		}
 
-		// Token: 0x06047CAA RID: 294058 RVA: 0x0125D8A8 File Offset: 0x0125BAA8
+		// Token: 0x0603E067 RID: 254055 RVA: 0x011FE238 File Offset: 0x011FC438
 		public void RegisterFinishCallback()
 		{
 			if (this.HasRegisterFinishCallback)
@@ -167,7 +166,7 @@ namespace CSharpScript.Game.Effect
 			UKuroEffectSystemFunctionLibrary.AddFinishCallback(this.Id, this._finishDelegate, this._finishClearDelegate);
 		}
 
-		// Token: 0x06047CAB RID: 294059 RVA: 0x0125D90A File Offset: 0x0125BB0A
+		// Token: 0x0603E068 RID: 254056 RVA: 0x011FE29A File Offset: 0x011FC49A
 		private void UnregisterFinishCallback()
 		{
 			if (!this.HasRegisterFinishCallback)
@@ -184,7 +183,7 @@ namespace CSharpScript.Game.Effect
 			onFinishCallbackSet.Clear();
 		}
 
-		// Token: 0x06047CAC RID: 294060 RVA: 0x0125D938 File Offset: 0x0125BB38
+		// Token: 0x0603E069 RID: 254057 RVA: 0x011FE2C8 File Offset: 0x011FC4C8
 		private void OnEffectFinishClear()
 		{
 			if (this._finishDelegate != null)
@@ -203,7 +202,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CAD RID: 294061 RVA: 0x0125D994 File Offset: 0x0125BB94
+		// Token: 0x0603E06A RID: 254058 RVA: 0x011FE324 File Offset: 0x011FC524
 		private void OnEffectFinish(int handle)
 		{
 			if (handle != this.Id && this.Id != 0)
@@ -212,17 +211,19 @@ namespace CSharpScript.Game.Effect
 			}
 			if (this.OnFinishCallbackSet != null)
 			{
-				Action<int>[] array = this.OnFinishCallbackSet.ToArray<Action<int>>();
-				for (int i = 0; i < array.Length; i++)
+				Action<int>[] array = new Action<int>[this.OnFinishCallbackSet.Count];
+				this.OnFinishCallbackSet.CopyTo(array);
+				Action<int>[] array2 = array;
+				for (int i = 0; i < array2.Length; i++)
 				{
-					array[i](handle);
+					array2[i](handle);
 				}
 			}
 			EventSystem.Instance.Emit<int, string, bool>(EEventName.FinishEffect, this.Id, "KuroEffectHandle.OnAfterFinish", true);
 			EffectSystem.Instance.RemoveKuroEffectHandle(this.Id);
 		}
 
-		// Token: 0x06047CAE RID: 294062 RVA: 0x0125DA0A File Offset: 0x0125BC0A
+		// Token: 0x0603E06B RID: 254059 RVA: 0x011FE3AD File Offset: 0x011FC5AD
 		[NullableContext(1)]
 		public void AddFinishCallback(Action<int> callback)
 		{
@@ -240,14 +241,14 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047CAF RID: 294063 RVA: 0x0125DA3E File Offset: 0x0125BC3E
+		// Token: 0x0603E06C RID: 254060 RVA: 0x011FE3E1 File Offset: 0x011FC5E1
 		[NullableContext(1)]
 		public bool RemoveFinishCallback(Action<int> callback)
 		{
 			return this.OnFinishCallbackSet != null && this.OnFinishCallbackSet.Remove(callback);
 		}
 
-		// Token: 0x06047CB0 RID: 294064 RVA: 0x0125DA56 File Offset: 0x0125BC56
+		// Token: 0x0603E06D RID: 254061 RVA: 0x011FE3F9 File Offset: 0x011FC5F9
 		public void OnBeforeInitCallback(int handle)
 		{
 			if (handle != this.Id && this.Id != 0)
@@ -262,7 +263,7 @@ namespace CSharpScript.Game.Effect
 			beforeInitCallback(handle);
 		}
 
-		// Token: 0x06047CB1 RID: 294065 RVA: 0x0125DA7B File Offset: 0x0125BC7B
+		// Token: 0x0603E06E RID: 254062 RVA: 0x011FE41E File Offset: 0x011FC61E
 		public void OnEffectInitCallback(byte result, int handle)
 		{
 			if (handle != this.Id && this.Id != 0)
@@ -277,7 +278,7 @@ namespace CSharpScript.Game.Effect
 			effectInitCallback((ELoadEffectResult)result, handle);
 		}
 
-		// Token: 0x06047CB2 RID: 294066 RVA: 0x0125DAA4 File Offset: 0x0125BCA4
+		// Token: 0x0603E06F RID: 254063 RVA: 0x011FE444 File Offset: 0x011FC644
 		public void OnBeforePlayCallback(int handle)
 		{
 			if (handle != this.Id && this.Id != 0)
@@ -293,7 +294,7 @@ namespace CSharpScript.Game.Effect
 			EventSystem.Instance.Emit<int, string>(EEventName.BeforePlayEffect, this.Id, "KuroEffectHandle.OnBeforePlay");
 		}
 
-		// Token: 0x06047CB3 RID: 294067 RVA: 0x0125DAF8 File Offset: 0x0125BCF8
+		// Token: 0x0603E070 RID: 254064 RVA: 0x011FE498 File Offset: 0x011FC698
 		public void OnInitCallbackClear()
 		{
 			if (this._beforeInitDelegate != null)
@@ -321,7 +322,7 @@ namespace CSharpScript.Game.Effect
 			this.BeforePlayCallback = null;
 		}
 
-		// Token: 0x06047CB4 RID: 294068 RVA: 0x0125DB9C File Offset: 0x0125BD9C
+		// Token: 0x0603E071 RID: 254065 RVA: 0x011FE53C File Offset: 0x011FC73C
 		[NullableContext(1)]
 		public void RegisterDynamicEffectInitCallback(Action<ELoadEffectResult, int> callback)
 		{
@@ -338,7 +339,7 @@ namespace CSharpScript.Game.Effect
 			UKuroEffectSystemFunctionLibrary.DynamicRegisterSpawnCallback(this.Id, this._dynamicInitDelegate, this._dynamicClearDelegate);
 		}
 
-		// Token: 0x06047CB5 RID: 294069 RVA: 0x0125DC2D File Offset: 0x0125BE2D
+		// Token: 0x0603E072 RID: 254066 RVA: 0x011FE5CD File Offset: 0x011FC7CD
 		private void OnDynamicEffectInitCallback(byte result, int handle)
 		{
 			if (handle != this.Id && this.Id != 0)
@@ -353,7 +354,7 @@ namespace CSharpScript.Game.Effect
 			dynamicEffectInitCallback((ELoadEffectResult)result, handle);
 		}
 
-		// Token: 0x06047CB6 RID: 294070 RVA: 0x0125DC54 File Offset: 0x0125BE54
+		// Token: 0x0603E073 RID: 254067 RVA: 0x011FE5F4 File Offset: 0x011FC7F4
 		private void OnDynamicEffectInitCallbackClear()
 		{
 			if (this._dynamicInitDelegate != null)
@@ -369,7 +370,7 @@ namespace CSharpScript.Game.Effect
 			this.DynamicEffectInitCallback = null;
 		}
 
-		// Token: 0x04025BD4 RID: 154580
+		// Token: 0x04020E93 RID: 134803
 		[Nullable(new byte[]
 		{
 			2,
@@ -377,55 +378,55 @@ namespace CSharpScript.Game.Effect
 		})]
 		private HashSet<Action<int>> OnFinishCallbackSet;
 
-		// Token: 0x04025BD5 RID: 154581
+		// Token: 0x04020E94 RID: 134804
 		private Action<int> BeforeInitCallback;
 
-		// Token: 0x04025BD6 RID: 154582
+		// Token: 0x04020E95 RID: 134805
 		private Action<ELoadEffectResult, int> EffectInitCallback;
 
-		// Token: 0x04025BD7 RID: 154583
+		// Token: 0x04020E96 RID: 134806
 		private Action<int> BeforePlayCallback;
 
-		// Token: 0x04025BD8 RID: 154584
+		// Token: 0x04020E97 RID: 134807
 		private Action<ELoadEffectResult, int> DynamicEffectInitCallback;
 
-		// Token: 0x04025BD9 RID: 154585
+		// Token: 0x04020E98 RID: 134808
 		private EffectContext Context;
 
-		// Token: 0x04025BDA RID: 154586
+		// Token: 0x04020E99 RID: 134809
 		public Func<int, bool> OnCustomCheckOwner;
 
-		// Token: 0x04025BDB RID: 154587
+		// Token: 0x04020E9A RID: 134810
 		private FKuroEffectBeforeInitCallback _beforeInitDelegate;
 
-		// Token: 0x04025BDC RID: 154588
+		// Token: 0x04020E9B RID: 134811
 		private FKuroEffectInitCallback _initDelegate;
 
-		// Token: 0x04025BDD RID: 154589
+		// Token: 0x04020E9C RID: 134812
 		private FKuroEffectBeforePlayCallback _beforePlayDelegate;
 
-		// Token: 0x04025BDE RID: 154590
+		// Token: 0x04020E9D RID: 134813
 		private FKuroEffectOnClearCallback _clearDelegate;
 
-		// Token: 0x04025BDF RID: 154591
+		// Token: 0x04020E9E RID: 134814
 		private FKuroEffectFinishCallback _finishDelegate;
 
-		// Token: 0x04025BE0 RID: 154592
+		// Token: 0x04020E9F RID: 134815
 		private FKuroEffectOnClearCallback _finishClearDelegate;
 
-		// Token: 0x04025BE1 RID: 154593
+		// Token: 0x04020EA0 RID: 134816
 		private FKuroEffectInitCallback _dynamicInitDelegate;
 
-		// Token: 0x04025BE2 RID: 154594
+		// Token: 0x04020EA1 RID: 134817
 		private FKuroEffectOnClearCallback _dynamicClearDelegate;
 
-		// Token: 0x04025BE3 RID: 154595
+		// Token: 0x04020EA2 RID: 134818
 		private bool IsDoneInternal;
 
-		// Token: 0x04025BE4 RID: 154596
+		// Token: 0x04020EA3 RID: 134819
 		private bool NotRecordInternal;
 
-		// Token: 0x04025BE5 RID: 154597
+		// Token: 0x04020EA4 RID: 134820
 		private bool HasRegisterFinishCallback;
 	}
 }

@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D84 RID: 3460
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E80 RID: 3712
 	public class IClientConditionListener
 	{
-		// Token: 0x06004EB7 RID: 20151 RVA: 0x000C32AC File Offset: 0x000C14AC
+		// Token: 0x060053DC RID: 21468 RVA: 0x000CEAFC File Offset: 0x000CCCFC
 		public static IClientConditionListener Create(IClientConditionListener? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700196C RID: 6508
-		// (get) Token: 0x06004EB8 RID: 20152 RVA: 0x000C32CB File Offset: 0x000C14CB
+		// Token: 0x17001AD7 RID: 6871
+		// (get) Token: 0x060053DD RID: 21469 RVA: 0x000CEB1B File Offset: 0x000CCD1B
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700196D RID: 6509
-		// (get) Token: 0x06004EB9 RID: 20153 RVA: 0x000C3300 File Offset: 0x000C1500
+		// Token: 0x17001AD8 RID: 6872
+		// (get) Token: 0x060053DE RID: 21470 RVA: 0x000CEB50 File Offset: 0x000CCD50
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700196E RID: 6510
-		// (get) Token: 0x06004EBA RID: 20154 RVA: 0x000C3369 File Offset: 0x000C1569
+		// Token: 0x17001AD9 RID: 6873
+		// (get) Token: 0x060053DF RID: 21471 RVA: 0x000CEBB9 File Offset: 0x000CCDB9
 		[Nullable(2)]
 		public virtual string SendSelfEvent
 		{
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700196F RID: 6511
-		// (get) Token: 0x06004EBB RID: 20155 RVA: 0x000C3378 File Offset: 0x000C1578
+		// Token: 0x17001ADA RID: 6874
+		// (get) Token: 0x060053E0 RID: 21472 RVA: 0x000CEBC8 File Offset: 0x000CCDC8
 		public virtual bool? OnlyTriggerWhenConditionBecomesTrue
 		{
 			get
@@ -88,20 +86,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D2B RID: 11563
+		// Token: 0x04002FF1 RID: 12273
 		private IClientConditionListener Instance;
 
-		// Token: 0x04002D2C RID: 11564
+		// Token: 0x04002FF2 RID: 12274
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002D2D RID: 11565
+		// Token: 0x04002FF3 RID: 12275
 		private bool _ConditionInited;
 
-		// Token: 0x04002D2E RID: 11566
+		// Token: 0x04002FF4 RID: 12276
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002D2F RID: 11567
+		// Token: 0x04002FF5 RID: 12277
 		private bool _ActionsInited;
 	}
 }

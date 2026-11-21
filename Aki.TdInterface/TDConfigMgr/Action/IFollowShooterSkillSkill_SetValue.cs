@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AB6 RID: 6838
+	// Token: 0x02001C55 RID: 7253
 	public class IFollowShooterSkillSkill_SetValue
 	{
-		// Token: 0x04005A41 RID: 23105
+		// Token: 0x04005EBA RID: 24250
 		public EExecClientBattleActionType Type;
 
-		// Token: 0x04005A42 RID: 23106
+		// Token: 0x04005EBB RID: 24251
 		public int SkillId;
 	}
 }

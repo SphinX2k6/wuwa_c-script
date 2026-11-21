@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000524 RID: 1316
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200058B RID: 1419
 	public class IMotorHookAcceleration
 	{
-		// Token: 0x06001ABA RID: 6842 RVA: 0x0004DA50 File Offset: 0x0004BC50
+		// Token: 0x06001CB6 RID: 7350 RVA: 0x0005280C File Offset: 0x00050A0C
 		private IMotorHookAcceleration_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001ABB RID: 6843 RVA: 0x0004DA88 File Offset: 0x0004BC88
+		// Token: 0x06001CB7 RID: 7351 RVA: 0x00052844 File Offset: 0x00050A44
 		public static IMotorHookAcceleration Create([Nullable(2)] IMotorHookAcceleration instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001ABC RID: 6844 RVA: 0x0004DA9B File Offset: 0x0004BC9B
+		// Token: 0x06001CB8 RID: 7352 RVA: 0x00052857 File Offset: 0x00050A57
 		public static IMotorHookAcceleration CreateFromSetValue([Nullable(2)] IMotorHookAcceleration_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001ABD RID: 6845 RVA: 0x0004DAAE File Offset: 0x0004BCAE
+		// Token: 0x06001CB9 RID: 7353 RVA: 0x0005286A File Offset: 0x00050A6A
 		public IMotorHookAcceleration_SetValue ToSetValue()
 		{
 			return new IMotorHookAcceleration_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000706 RID: 1798
-		// (get) Token: 0x06001ABE RID: 6846 RVA: 0x0004DACD File Offset: 0x0004BCCD
-		// (set) Token: 0x06001ABF RID: 6847 RVA: 0x0004DAF8 File Offset: 0x0004BCF8
+		// Token: 0x17000789 RID: 1929
+		// (get) Token: 0x06001CBA RID: 7354 RVA: 0x00052889 File Offset: 0x00050A89
+		// (set) Token: 0x06001CBB RID: 7355 RVA: 0x000528B4 File Offset: 0x00050AB4
 		public virtual int MaxSpeed
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000707 RID: 1799
-		// (get) Token: 0x06001AC0 RID: 6848 RVA: 0x0004DB06 File Offset: 0x0004BD06
-		// (set) Token: 0x06001AC1 RID: 6849 RVA: 0x0004DB31 File Offset: 0x0004BD31
+		// Token: 0x1700078A RID: 1930
+		// (get) Token: 0x06001CBC RID: 7356 RVA: 0x000528C2 File Offset: 0x00050AC2
+		// (set) Token: 0x06001CBD RID: 7357 RVA: 0x000528ED File Offset: 0x00050AED
 		public virtual string SpeedSampleCurve
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400134E RID: 4942
+		// Token: 0x040014B8 RID: 5304
 		[Nullable(2)]
 		protected IMotorHookAcceleration FbInstance;
 
-		// Token: 0x0400134F RID: 4943
+		// Token: 0x040014B9 RID: 5305
 		[Nullable(2)]
 		protected IMotorHookAcceleration_SetValue PocoInterface;
 	}

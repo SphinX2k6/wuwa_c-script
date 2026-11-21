@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200042F RID: 1071
+	// Token: 0x02000488 RID: 1160
 	public class IHitTimeScaleRatio_SetValue
 	{
-		// Token: 0x040010A5 RID: 4261
+		// Token: 0x040011C7 RID: 4551
 		public float TimeRatio;
 
-		// Token: 0x040010A6 RID: 4262
+		// Token: 0x040011C8 RID: 4552
 		public float? MaxExtraTime;
 
-		// Token: 0x040010A7 RID: 4263
+		// Token: 0x040011C9 RID: 4553
 		public float ValueRatio;
 	}
 }

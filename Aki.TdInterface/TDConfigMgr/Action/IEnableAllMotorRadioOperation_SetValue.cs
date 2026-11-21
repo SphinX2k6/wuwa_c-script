@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019DF RID: 6623
+	// Token: 0x02001B6C RID: 7020
 	public class IEnableAllMotorRadioOperation_SetValue
 	{
-		// Token: 0x0400580D RID: 22541
+		// Token: 0x04005C62 RID: 23650
 		public EMotorRadioOperationType Type;
 	}
 }

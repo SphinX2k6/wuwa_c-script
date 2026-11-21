@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026AB RID: 9899
+	// Token: 0x0200296E RID: 10606
 	public class UnlockDungeonEntry : ActionParams
 	{
-		// Token: 0x0600DD86 RID: 56710 RVA: 0x0020E7AE File Offset: 0x0020C9AE
-		[NullableContext(1)]
+		// Token: 0x0600EB5D RID: 60253 RVA: 0x0022AF4E File Offset: 0x0022914E
 		public static UnlockDungeonEntry Create(IUnlockDungeonEntry? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041F2 RID: 16882
-		// (get) Token: 0x0600DD87 RID: 56711 RVA: 0x0020E7CD File Offset: 0x0020C9CD
+		// Token: 0x1700452F RID: 17711
+		// (get) Token: 0x0600EB5E RID: 60254 RVA: 0x0022AF6D File Offset: 0x0022916D
 		public virtual int DungeonEntryId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B03 RID: 31491
+		// Token: 0x040081A0 RID: 33184
 		private IUnlockDungeonEntry Instance;
 	}
 }

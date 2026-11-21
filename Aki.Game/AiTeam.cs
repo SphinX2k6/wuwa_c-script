@@ -10,7 +10,7 @@ using CSharpScript.Game.Common.Event;
 [Nullable(0)]
 public class AiTeam
 {
-	// Token: 0x06000EF0 RID: 3824 RVA: 0x00056D88 File Offset: 0x00054F88
+	// Token: 0x06000EF6 RID: 3830 RVA: 0x00057C58 File Offset: 0x00055E58
 	private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		if (oldEntityHandle == null)
@@ -26,7 +26,7 @@ public class AiTeam
 		}
 	}
 
-	// Token: 0x06000EF1 RID: 3825 RVA: 0x00056DCC File Offset: 0x00054FCC
+	// Token: 0x06000EF7 RID: 3831 RVA: 0x00057C9C File Offset: 0x00055E9C
 	public void Init(int levelId)
 	{
 		AiConfig.Instance.LoadAiTeamConfigNew(this, levelId);
@@ -43,7 +43,7 @@ public class AiTeam
 		}
 	}
 
-	// Token: 0x06000EF2 RID: 3826 RVA: 0x00056E88 File Offset: 0x00055088
+	// Token: 0x06000EF8 RID: 3832 RVA: 0x00057D58 File Offset: 0x00055F58
 	public void Clear()
 	{
 		this.TeamMemberToGroup.Clear();
@@ -51,13 +51,13 @@ public class AiTeam
 		EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 	}
 
-	// Token: 0x06000EF3 RID: 3827 RVA: 0x00056EBC File Offset: 0x000550BC
+	// Token: 0x06000EF9 RID: 3833 RVA: 0x00057D8C File Offset: 0x00055F8C
 	public void AddMember(AiController aiController)
 	{
 		this.TeamMemberToGroup[aiController] = null;
 	}
 
-	// Token: 0x06000EF4 RID: 3828 RVA: 0x00056ECC File Offset: 0x000550CC
+	// Token: 0x06000EFA RID: 3834 RVA: 0x00057D9C File Offset: 0x00055F9C
 	public void RemoveMember(AiController ai)
 	{
 		if (!this.TeamMemberToGroup.Remove(ai))
@@ -70,7 +70,7 @@ public class AiTeam
 		}
 	}
 
-	// Token: 0x06000EF5 RID: 3829 RVA: 0x00056F38 File Offset: 0x00055138
+	// Token: 0x06000EFB RID: 3835 RVA: 0x00057E08 File Offset: 0x00056008
 	public void Tick()
 	{
 		this.ReorganizeGroup();
@@ -80,7 +80,7 @@ public class AiTeam
 		}
 	}
 
-	// Token: 0x06000EF6 RID: 3830 RVA: 0x00056F98 File Offset: 0x00055198
+	// Token: 0x06000EFC RID: 3836 RVA: 0x00057E68 File Offset: 0x00056068
 	private void ReorganizeGroup()
 	{
 		foreach (KeyValuePair<EntityHandle, AiScheduleGroup> keyValuePair in this.TeamScheduleGroups)
@@ -134,7 +134,7 @@ public class AiTeam
 		}
 	}
 
-	// Token: 0x06000EF7 RID: 3831 RVA: 0x000571B0 File Offset: 0x000553B0
+	// Token: 0x06000EFD RID: 3837 RVA: 0x00058080 File Offset: 0x00056280
 	[return: Nullable(2)]
 	public AiAreaMemberData GetAiTeamAreaMemberData(AiController ai)
 	{
@@ -147,10 +147,10 @@ public class AiTeam
 		return aiScheduleGroup.GetMemberData(ai);
 	}
 
-	// Token: 0x04000BE7 RID: 3047
+	// Token: 0x04000BEF RID: 3055
 	public int TeamId;
 
-	// Token: 0x04000BE8 RID: 3048
+	// Token: 0x04000BF0 RID: 3056
 	[Nullable(new byte[]
 	{
 		1,
@@ -159,20 +159,20 @@ public class AiTeam
 	})]
 	public readonly Dictionary<AiController, AiScheduleGroup> TeamMemberToGroup = new Dictionary<AiController, AiScheduleGroup>();
 
-	// Token: 0x04000BE9 RID: 3049
+	// Token: 0x04000BF1 RID: 3057
 	public AiTeamLevelNew? AiTeamLevel;
 
-	// Token: 0x04000BEA RID: 3050
+	// Token: 0x04000BF2 RID: 3058
 	[Nullable(2)]
 	public List<AiTeamAreaNew> AiTeamAreas;
 
-	// Token: 0x04000BEB RID: 3051
+	// Token: 0x04000BF3 RID: 3059
 	[Nullable(2)]
 	public List<AiTeamAttack> AiTeamAttacks;
 
-	// Token: 0x04000BEC RID: 3052
+	// Token: 0x04000BF4 RID: 3060
 	public readonly List<Dictionary<int, int>> AreaCharTypeToPriority = new List<Dictionary<int, int>>();
 
-	// Token: 0x04000BED RID: 3053
+	// Token: 0x04000BF5 RID: 3061
 	private readonly Dictionary<EntityHandle, AiScheduleGroup> TeamScheduleGroups = new Dictionary<EntityHandle, AiScheduleGroup>();
 }

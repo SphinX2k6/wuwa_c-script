@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E98 RID: 7832
+	// Token: 0x020020CD RID: 8397
 	public class ISolarSchoolTime_SetValue
 	{
-		// Token: 0x040063ED RID: 25581
-		[Nullable(1)]
+		// Token: 0x040069D1 RID: 27089
+		[Nullable(2)]
 		public IVisualNovelDate Date;
 
-		// Token: 0x040063EE RID: 25582
+		// Token: 0x040069D2 RID: 27090
 		public int PeriodId;
 	}
 }

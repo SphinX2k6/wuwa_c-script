@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040ED RID: 16621
+	// Token: 0x0200452E RID: 17710
 	public static class IRollBlockLaunchMethodInteractVerify
 	{
-		// Token: 0x06018394 RID: 99220 RVA: 0x0037CDF0 File Offset: 0x0037AFF0
+		// Token: 0x06019A35 RID: 105013 RVA: 0x003A6D40 File Offset: 0x003A4F40
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			return verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 4UL, 4UL, false) && verifier.VerifyTableEnd(tablePos);

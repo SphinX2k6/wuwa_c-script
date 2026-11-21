@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006930 RID: 26928
+	// Token: 0x02006FE3 RID: 28643
 	public struct IHonamiStoryRoleSetting : IFlatbufferObject
 	{
-		// Token: 0x1700C7C6 RID: 51142
-		// (get) Token: 0x0602F02A RID: 192554 RVA: 0x00668A90 File Offset: 0x00666C90
+		// Token: 0x1700D1C9 RID: 53705
+		// (get) Token: 0x060319FA RID: 203258 RVA: 0x006B8F78 File Offset: 0x006B7178
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F02B RID: 192555 RVA: 0x00668A9D File Offset: 0x00666C9D
+		// Token: 0x060319FB RID: 203259 RVA: 0x006B8F85 File Offset: 0x006B7185
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F02C RID: 192556 RVA: 0x00668AA4 File Offset: 0x00666CA4
+		// Token: 0x060319FC RID: 203260 RVA: 0x006B8F8C File Offset: 0x006B718C
 		public static IHonamiStoryRoleSetting GetRootAsIHonamiStoryRoleSetting(ByteBuffer _bb)
 		{
 			return IHonamiStoryRoleSetting.GetRootAsIHonamiStoryRoleSetting(_bb, default(IHonamiStoryRoleSetting));
 		}
 
-		// Token: 0x0602F02D RID: 192557 RVA: 0x00668AC0 File Offset: 0x00666CC0
+		// Token: 0x060319FD RID: 203261 RVA: 0x006B8FA8 File Offset: 0x006B71A8
 		public static IHonamiStoryRoleSetting GetRootAsIHonamiStoryRoleSetting(ByteBuffer _bb, IHonamiStoryRoleSetting obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F02E RID: 192558 RVA: 0x00668ADD File Offset: 0x00666CDD
+		// Token: 0x060319FE RID: 203262 RVA: 0x006B8FC5 File Offset: 0x006B71C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F02F RID: 192559 RVA: 0x00668AEC File Offset: 0x00666CEC
+		// Token: 0x060319FF RID: 203263 RVA: 0x006B8FD4 File Offset: 0x006B71D4
 		public IHonamiStoryRoleSetting __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C7C7 RID: 51143
-		// (get) Token: 0x0602F030 RID: 192560 RVA: 0x00668AFC File Offset: 0x00666CFC
+		// Token: 0x1700D1CA RID: 53706
+		// (get) Token: 0x06031A00 RID: 203264 RVA: 0x006B8FE4 File Offset: 0x006B71E4
 		public EHonamiStoryRoleSlot RoleSlot
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C7C8 RID: 51144
-		// (get) Token: 0x0602F031 RID: 192561 RVA: 0x00668B38 File Offset: 0x00666D38
+		// Token: 0x1700D1CB RID: 53707
+		// (get) Token: 0x06031A01 RID: 203265 RVA: 0x006B9020 File Offset: 0x006B7220
 		public int RoleId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F032 RID: 192562 RVA: 0x00668B74 File Offset: 0x00666D74
+		// Token: 0x06031A02 RID: 203266 RVA: 0x006B905C File Offset: 0x006B725C
 		public static Offset<IHonamiStoryRoleSetting> CreateIHonamiStoryRoleSetting(FlatBufferBuilder builder, EHonamiStoryRoleSlot RoleSlot = EHonamiStoryRoleSlot.None, int RoleId = 0)
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHonamiStoryRoleSetting.EndIHonamiStoryRoleSetting(builder);
 		}
 
-		// Token: 0x0602F033 RID: 192563 RVA: 0x00668B91 File Offset: 0x00666D91
+		// Token: 0x06031A03 RID: 203267 RVA: 0x006B9079 File Offset: 0x006B7279
 		public static void StartIHonamiStoryRoleSetting(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602F034 RID: 192564 RVA: 0x00668B9A File Offset: 0x00666D9A
+		// Token: 0x06031A04 RID: 203268 RVA: 0x006B9082 File Offset: 0x006B7282
 		public static void AddRoleSlot(FlatBufferBuilder builder, EHonamiStoryRoleSlot roleSlot)
 		{
 			builder.AddByte(0, (byte)roleSlot, 0);
 		}
 
-		// Token: 0x0602F035 RID: 192565 RVA: 0x00668BA5 File Offset: 0x00666DA5
+		// Token: 0x06031A05 RID: 203269 RVA: 0x006B908D File Offset: 0x006B728D
 		public static void AddRoleId(FlatBufferBuilder builder, int roleId)
 		{
 			builder.AddInt(1, roleId, 0);
 		}
 
-		// Token: 0x0602F036 RID: 192566 RVA: 0x00668BB0 File Offset: 0x00666DB0
+		// Token: 0x06031A06 RID: 203270 RVA: 0x006B9098 File Offset: 0x006B7298
 		public static Offset<IHonamiStoryRoleSetting> EndIHonamiStoryRoleSetting(FlatBufferBuilder builder)
 		{
 			return new Offset<IHonamiStoryRoleSetting>(builder.EndTable());
 		}
 
-		// Token: 0x0602F037 RID: 192567 RVA: 0x00668BC0 File Offset: 0x00666DC0
+		// Token: 0x06031A07 RID: 203271 RVA: 0x006B90A8 File Offset: 0x006B72A8
 		public IHonamiStoryRoleSettingT UnPack()
 		{
 			IHonamiStoryRoleSettingT honamiStoryRoleSettingT = new IHonamiStoryRoleSettingT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return honamiStoryRoleSettingT;
 		}
 
-		// Token: 0x0602F038 RID: 192568 RVA: 0x00668BDB File Offset: 0x00666DDB
+		// Token: 0x06031A08 RID: 203272 RVA: 0x006B90C3 File Offset: 0x006B72C3
 		public void UnPackTo(IHonamiStoryRoleSettingT _o)
 		{
 			_o.RoleSlot = this.RoleSlot;
 			_o.RoleId = this.RoleId;
 		}
 
-		// Token: 0x0602F039 RID: 192569 RVA: 0x00668BF8 File Offset: 0x00666DF8
+		// Token: 0x06031A09 RID: 203273 RVA: 0x006B90E0 File Offset: 0x006B72E0
 		public static Offset<IHonamiStoryRoleSetting> Pack(FlatBufferBuilder builder, IHonamiStoryRoleSettingT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHonamiStoryRoleSetting.CreateIHonamiStoryRoleSetting(builder, _o.RoleSlot, _o.RoleId);
 		}
 
-		// Token: 0x040110AB RID: 69803
+		// Token: 0x04011F17 RID: 73495
 		private Table __p;
 	}
 }

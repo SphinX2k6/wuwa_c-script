@@ -3,40 +3,40 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001661 RID: 5729
+	// Token: 0x020016DD RID: 5853
 	public enum TransitionType
 	{
-		// Token: 0x0400C16B RID: 49515
+		// Token: 0x0400C694 RID: 50836
 		[OriginalName("Empty")]
 		Empty,
-		// Token: 0x0400C16C RID: 49516
+		// Token: 0x0400C695 RID: 50837
 		[OriginalName("PlayEffect")]
 		PlayEffect,
-		// Token: 0x0400C16D RID: 49517
+		// Token: 0x0400C696 RID: 50838
 		[OriginalName("PlayMp4")]
 		PlayMp4,
-		// Token: 0x0400C16E RID: 49518
+		// Token: 0x0400C697 RID: 50839
 		[OriginalName("CenterText")]
 		CenterText,
-		// Token: 0x0400C16F RID: 49519
+		// Token: 0x0400C698 RID: 50840
 		[OriginalName("FadeInScreen")]
 		FadeInScreen,
-		// Token: 0x0400C170 RID: 49520
+		// Token: 0x0400C699 RID: 50841
 		[OriginalName("Seamless")]
 		Seamless,
-		// Token: 0x0400C171 RID: 49521
+		// Token: 0x0400C69A RID: 50842
 		[OriginalName("WithCharacterDisplay")]
 		WithCharacterDisplay,
-		// Token: 0x0400C172 RID: 49522
+		// Token: 0x0400C69B RID: 50843
 		[OriginalName("WithCustomLoading")]
 		WithCustomLoading,
-		// Token: 0x0400C173 RID: 49523
+		// Token: 0x0400C69C RID: 50844
 		[OriginalName("WithSpine")]
 		WithSpine,
-		// Token: 0x0400C174 RID: 49524
+		// Token: 0x0400C69D RID: 50845
 		[OriginalName("WithSpecialCustomLoading")]
 		WithSpecialCustomLoading,
-		// Token: 0x0400C175 RID: 49525
+		// Token: 0x0400C69E RID: 50846
 		[OriginalName("PlayFlow")]
 		PlayFlow
 	}

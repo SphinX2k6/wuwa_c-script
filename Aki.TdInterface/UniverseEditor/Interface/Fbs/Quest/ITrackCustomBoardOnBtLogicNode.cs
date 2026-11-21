@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041F0 RID: 16880
+	// Token: 0x02004649 RID: 17993
 	public struct ITrackCustomBoardOnBtLogicNode : IFlatbufferObject
 	{
-		// Token: 0x170077CB RID: 30667
-		// (get) Token: 0x06018E64 RID: 101988 RVA: 0x003953C5 File Offset: 0x003935C5
+		// Token: 0x17007DF9 RID: 32249
+		// (get) Token: 0x0601A5BE RID: 107966 RVA: 0x003C0927 File Offset: 0x003BEB27
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018E65 RID: 101989 RVA: 0x003953D2 File Offset: 0x003935D2
+		// Token: 0x0601A5BF RID: 107967 RVA: 0x003C0934 File Offset: 0x003BEB34
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018E66 RID: 101990 RVA: 0x003953DC File Offset: 0x003935DC
+		// Token: 0x0601A5C0 RID: 107968 RVA: 0x003C093C File Offset: 0x003BEB3C
 		public static ITrackCustomBoardOnBtLogicNode GetRootAsITrackCustomBoardOnBtLogicNode(ByteBuffer _bb)
 		{
 			return ITrackCustomBoardOnBtLogicNode.GetRootAsITrackCustomBoardOnBtLogicNode(_bb, default(ITrackCustomBoardOnBtLogicNode));
 		}
 
-		// Token: 0x06018E67 RID: 101991 RVA: 0x003953F8 File Offset: 0x003935F8
+		// Token: 0x0601A5C1 RID: 107969 RVA: 0x003C0958 File Offset: 0x003BEB58
 		public static ITrackCustomBoardOnBtLogicNode GetRootAsITrackCustomBoardOnBtLogicNode(ByteBuffer _bb, ITrackCustomBoardOnBtLogicNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018E68 RID: 101992 RVA: 0x00395415 File Offset: 0x00393615
+		// Token: 0x0601A5C2 RID: 107970 RVA: 0x003C0975 File Offset: 0x003BEB75
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018E69 RID: 101993 RVA: 0x00395424 File Offset: 0x00393624
+		// Token: 0x0601A5C3 RID: 107971 RVA: 0x003C0984 File Offset: 0x003BEB84
 		public ITrackCustomBoardOnBtLogicNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170077CC RID: 30668
-		// (get) Token: 0x06018E6A RID: 101994 RVA: 0x00395434 File Offset: 0x00393634
+		// Token: 0x17007DFA RID: 32250
+		// (get) Token: 0x0601A5C4 RID: 107972 RVA: 0x003C0994 File Offset: 0x003BEB94
 		public IFastReturnMapPos? FastReturnMapPos
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077CD RID: 30669
-		// (get) Token: 0x06018E6B RID: 101995 RVA: 0x00395494 File Offset: 0x00393694
+		// Token: 0x17007DFB RID: 32251
+		// (get) Token: 0x0601A5C5 RID: 107973 RVA: 0x003C09F4 File Offset: 0x003BEBF4
 		public ISheriffAnomalyProgressBoardConfig? SheriffAnomalyProgressBoard
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077CE RID: 30670
-		// (get) Token: 0x06018E6C RID: 101996 RVA: 0x003954F4 File Offset: 0x003936F4
+		// Token: 0x17007DFC RID: 32252
+		// (get) Token: 0x0601A5C6 RID: 107974 RVA: 0x003C0A54 File Offset: 0x003BEC54
 		public ISheriffMainBoardConfig? SheriffMainBoard
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077CF RID: 30671
-		// (get) Token: 0x06018E6D RID: 101997 RVA: 0x00395554 File Offset: 0x00393754
+		// Token: 0x17007DFD RID: 32253
+		// (get) Token: 0x0601A5C7 RID: 107975 RVA: 0x003C0AB4 File Offset: 0x003BECB4
 		public ISheriffClueDetailBoardConfig? SheriffClueDetailBoard
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018E6E RID: 101998 RVA: 0x003955B2 File Offset: 0x003937B2
+		// Token: 0x0601A5C8 RID: 107976 RVA: 0x003C0B12 File Offset: 0x003BED12
 		public static Offset<ITrackCustomBoardOnBtLogicNode> CreateITrackCustomBoardOnBtLogicNode(FlatBufferBuilder builder, Offset<IFastReturnMapPos> FastReturnMapPosOffset = default(Offset<IFastReturnMapPos>), Offset<ISheriffAnomalyProgressBoardConfig> SheriffAnomalyProgressBoardOffset = default(Offset<ISheriffAnomalyProgressBoardConfig>), Offset<ISheriffMainBoardConfig> SheriffMainBoardOffset = default(Offset<ISheriffMainBoardConfig>), Offset<ISheriffClueDetailBoardConfig> SheriffClueDetailBoardOffset = default(Offset<ISheriffClueDetailBoardConfig>))
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrackCustomBoardOnBtLogicNode.EndITrackCustomBoardOnBtLogicNode(builder);
 		}
 
-		// Token: 0x06018E6F RID: 101999 RVA: 0x003955DE File Offset: 0x003937DE
+		// Token: 0x0601A5C9 RID: 107977 RVA: 0x003C0B3E File Offset: 0x003BED3E
 		public static void StartITrackCustomBoardOnBtLogicNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06018E70 RID: 102000 RVA: 0x003955E7 File Offset: 0x003937E7
+		// Token: 0x0601A5CA RID: 107978 RVA: 0x003C0B47 File Offset: 0x003BED47
 		public static void AddFastReturnMapPos(FlatBufferBuilder builder, Offset<IFastReturnMapPos> fastReturnMapPosOffset)
 		{
 			builder.AddOffset(0, fastReturnMapPosOffset.Value, 0);
 		}
 
-		// Token: 0x06018E71 RID: 102001 RVA: 0x003955F7 File Offset: 0x003937F7
+		// Token: 0x0601A5CB RID: 107979 RVA: 0x003C0B57 File Offset: 0x003BED57
 		public static void AddSheriffAnomalyProgressBoard(FlatBufferBuilder builder, Offset<ISheriffAnomalyProgressBoardConfig> sheriffAnomalyProgressBoardOffset)
 		{
 			builder.AddOffset(1, sheriffAnomalyProgressBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06018E72 RID: 102002 RVA: 0x00395607 File Offset: 0x00393807
+		// Token: 0x0601A5CC RID: 107980 RVA: 0x003C0B67 File Offset: 0x003BED67
 		public static void AddSheriffMainBoard(FlatBufferBuilder builder, Offset<ISheriffMainBoardConfig> sheriffMainBoardOffset)
 		{
 			builder.AddOffset(2, sheriffMainBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06018E73 RID: 102003 RVA: 0x00395617 File Offset: 0x00393817
+		// Token: 0x0601A5CD RID: 107981 RVA: 0x003C0B77 File Offset: 0x003BED77
 		public static void AddSheriffClueDetailBoard(FlatBufferBuilder builder, Offset<ISheriffClueDetailBoardConfig> sheriffClueDetailBoardOffset)
 		{
 			builder.AddOffset(3, sheriffClueDetailBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06018E74 RID: 102004 RVA: 0x00395627 File Offset: 0x00393827
+		// Token: 0x0601A5CE RID: 107982 RVA: 0x003C0B87 File Offset: 0x003BED87
 		public static Offset<ITrackCustomBoardOnBtLogicNode> EndITrackCustomBoardOnBtLogicNode(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrackCustomBoardOnBtLogicNode>(builder.EndTable());
 		}
 
-		// Token: 0x06018E75 RID: 102005 RVA: 0x00395634 File Offset: 0x00393834
+		// Token: 0x0601A5CF RID: 107983 RVA: 0x003C0B94 File Offset: 0x003BED94
 		public ITrackCustomBoardOnBtLogicNodeT UnPack()
 		{
 			ITrackCustomBoardOnBtLogicNodeT trackCustomBoardOnBtLogicNodeT = new ITrackCustomBoardOnBtLogicNodeT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return trackCustomBoardOnBtLogicNodeT;
 		}
 
-		// Token: 0x06018E76 RID: 102006 RVA: 0x00395650 File Offset: 0x00393850
+		// Token: 0x0601A5D0 RID: 107984 RVA: 0x003C0BB0 File Offset: 0x003BEDB0
 		public void UnPackTo(ITrackCustomBoardOnBtLogicNodeT _o)
 		{
 			_o.FastReturnMapPos = ((this.FastReturnMapPos != null) ? this.FastReturnMapPos.Value.UnPack() : null);
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.SheriffClueDetailBoard = ((this.SheriffClueDetailBoard != null) ? this.SheriffClueDetailBoard.Value.UnPack() : null);
 		}
 
-		// Token: 0x06018E77 RID: 102007 RVA: 0x00395720 File Offset: 0x00393920
+		// Token: 0x0601A5D1 RID: 107985 RVA: 0x003C0C80 File Offset: 0x003BEE80
 		public static Offset<ITrackCustomBoardOnBtLogicNode> Pack(FlatBufferBuilder builder, ITrackCustomBoardOnBtLogicNodeT _o)
 		{
 			if (_o == null)
@@ -185,7 +185,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrackCustomBoardOnBtLogicNode.CreateITrackCustomBoardOnBtLogicNode(builder, fastReturnMapPosOffset, sheriffAnomalyProgressBoardOffset, sheriffMainBoardOffset, sheriffClueDetailBoardOffset);
 		}
 
-		// Token: 0x0400BE4B RID: 48715
+		// Token: 0x0400C856 RID: 51286
 		private Table __p;
 	}
 }

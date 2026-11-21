@@ -7,23 +7,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 {
-	// Token: 0x020000F7 RID: 247
+	// Token: 0x020000FB RID: 251
 	public class HotFixNetworkDetectionEntryItem : LaunchComponentsAction, IHotFixLayoutItem
 	{
-		// Token: 0x06000815 RID: 2069 RVA: 0x0003CF89 File Offset: 0x0003B189
+		// Token: 0x06000849 RID: 2121 RVA: 0x0003F329 File Offset: 0x0003D529
 		[NullableContext(1)]
 		public void SetRootActor(AActor actor)
 		{
 			base.SetRootActorLaunchComponentsAction(actor);
 		}
 
-		// Token: 0x06000816 RID: 2070 RVA: 0x0003CF92 File Offset: 0x0003B192
+		// Token: 0x0600084A RID: 2122 RVA: 0x0003F332 File Offset: 0x0003D532
 		protected override void OnShow()
 		{
 			this.UpdateView();
 		}
 
-		// Token: 0x06000817 RID: 2071 RVA: 0x0003CF9C File Offset: 0x0003B19C
+		// Token: 0x0600084B RID: 2123 RVA: 0x0003F33C File Offset: 0x0003D53C
 		private void UpdateView()
 		{
 			INetworkDetectionEntry entryData = this.Data.EntryData;
@@ -42,14 +42,14 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			base.GetItem(4).SetUIActive(flag);
 		}
 
-		// Token: 0x06000818 RID: 2072 RVA: 0x0003D090 File Offset: 0x0003B290
+		// Token: 0x0600084C RID: 2124 RVA: 0x0003F430 File Offset: 0x0003D630
 		[NullableContext(1)]
 		public void Refresh(IHotFixLayoutData data)
 		{
 			this.Data = (IHotFixNetworkDetectionLayoutItemData)data;
 		}
 
-		// Token: 0x06000819 RID: 2073 RVA: 0x0003D0A0 File Offset: 0x0003B2A0
+		// Token: 0x0600084D RID: 2125 RVA: 0x0003F440 File Offset: 0x0003D640
 		protected override void OnBeforeDestroy()
 		{
 			if (this.Data.EntryData.Type == ENetworkDetectionType.UdpPort)
@@ -64,7 +64,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			}
 		}
 
-		// Token: 0x0600081A RID: 2074 RVA: 0x0003D0F0 File Offset: 0x0003B2F0
+		// Token: 0x0600084E RID: 2126 RVA: 0x0003F490 File Offset: 0x0003D690
 		public UniTask Proceed()
 		{
 			HotFixNetworkDetectionEntryItem.<Proceed>d__8 <Proceed>d__;
@@ -75,33 +75,33 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			return <Proceed>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0400049F RID: 1183
+		// Token: 0x040004DA RID: 1242
 		[Nullable(2)]
 		public THotFixLayoutItemClickCallBack ItemClickCallBack;
 
-		// Token: 0x040004A0 RID: 1184
+		// Token: 0x040004DB RID: 1243
 		[Nullable(2)]
 		private IHotFixNetworkDetectionLayoutItemData Data;
 
-		// Token: 0x0200038E RID: 910
+		// Token: 0x0200039B RID: 923
 		private static class EComponents
 		{
-			// Token: 0x0400124C RID: 4684
+			// Token: 0x040012C2 RID: 4802
 			public const int TxtName = 0;
 
-			// Token: 0x0400124D RID: 4685
+			// Token: 0x040012C3 RID: 4803
 			public const int ErrorIcon = 1;
 
-			// Token: 0x0400124E RID: 4686
+			// Token: 0x040012C4 RID: 4804
 			public const int CorrectIcon = 2;
 
-			// Token: 0x0400124F RID: 4687
+			// Token: 0x040012C5 RID: 4805
 			public const int ProceedIcon = 3;
 
-			// Token: 0x04001250 RID: 4688
+			// Token: 0x040012C6 RID: 4806
 			public const int PnlError = 4;
 
-			// Token: 0x04001251 RID: 4689
+			// Token: 0x040012C7 RID: 4807
 			public const int TxtError = 5;
 		}
 	}

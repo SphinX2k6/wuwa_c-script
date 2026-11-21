@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B11 RID: 2833
+	// Token: 0x02000BEB RID: 3051
 	public struct AutoPilotCircles : IFlatbufferObject
 	{
-		// Token: 0x1700039F RID: 927
-		// (get) Token: 0x060049B3 RID: 18867 RVA: 0x001DA590 File Offset: 0x001D8790
+		// Token: 0x170003B6 RID: 950
+		// (get) Token: 0x06004EFA RID: 20218 RVA: 0x001F9CC4 File Offset: 0x001F7EC4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060049B4 RID: 18868 RVA: 0x001DA59D File Offset: 0x001D879D
+		// Token: 0x06004EFB RID: 20219 RVA: 0x001F9CD1 File Offset: 0x001F7ED1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060049B5 RID: 18869 RVA: 0x001DA5A4 File Offset: 0x001D87A4
+		// Token: 0x06004EFC RID: 20220 RVA: 0x001F9CD8 File Offset: 0x001F7ED8
 		public static AutoPilotCircles GetRootAsAutoPilotCircles(ByteBuffer _bb)
 		{
 			return AutoPilotCircles.GetRootAsAutoPilotCircles(_bb, default(AutoPilotCircles));
 		}
 
-		// Token: 0x060049B6 RID: 18870 RVA: 0x001DA5C0 File Offset: 0x001D87C0
+		// Token: 0x06004EFD RID: 20221 RVA: 0x001F9CF4 File Offset: 0x001F7EF4
 		public static AutoPilotCircles GetRootAsAutoPilotCircles(ByteBuffer _bb, AutoPilotCircles obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060049B7 RID: 18871 RVA: 0x001DA5DD File Offset: 0x001D87DD
+		// Token: 0x06004EFE RID: 20222 RVA: 0x001F9D11 File Offset: 0x001F7F11
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060049B8 RID: 18872 RVA: 0x001DA5EC File Offset: 0x001D87EC
+		// Token: 0x06004EFF RID: 20223 RVA: 0x001F9D20 File Offset: 0x001F7F20
 		public AutoPilotCircles __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170003A0 RID: 928
-		// (get) Token: 0x060049B9 RID: 18873 RVA: 0x001DA5FC File Offset: 0x001D87FC
+		// Token: 0x170003B7 RID: 951
+		// (get) Token: 0x06004F00 RID: 20224 RVA: 0x001F9D30 File Offset: 0x001F7F30
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003A1 RID: 929
-		// (get) Token: 0x060049BA RID: 18874 RVA: 0x001DA638 File Offset: 0x001D8838
+		// Token: 0x170003B8 RID: 952
+		// (get) Token: 0x06004F01 RID: 20225 RVA: 0x001F9D6C File Offset: 0x001F7F6C
 		public string Name
 		{
 			get
@@ -79,20 +79,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060049BB RID: 18875 RVA: 0x001DA66F File Offset: 0x001D886F
+		// Token: 0x06004F02 RID: 20226 RVA: 0x001F9DA3 File Offset: 0x001F7FA3
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060049BC RID: 18876 RVA: 0x001DA67E File Offset: 0x001D887E
+		// Token: 0x06004F03 RID: 20227 RVA: 0x001F9DB2 File Offset: 0x001F7FB2
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170003A2 RID: 930
-		// (get) Token: 0x060049BD RID: 18877 RVA: 0x001DA698 File Offset: 0x001D8898
+		// Token: 0x170003B9 RID: 953
+		// (get) Token: 0x06004F04 RID: 20228 RVA: 0x001F9DCC File Offset: 0x001F7FCC
 		public string Description
 		{
 			get
@@ -106,20 +106,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060049BE RID: 18878 RVA: 0x001DA6CF File Offset: 0x001D88CF
+		// Token: 0x06004F05 RID: 20229 RVA: 0x001F9E03 File Offset: 0x001F8003
 		public Span<byte> GetDescriptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060049BF RID: 18879 RVA: 0x001DA6DE File Offset: 0x001D88DE
+		// Token: 0x06004F06 RID: 20230 RVA: 0x001F9E12 File Offset: 0x001F8012
 		public byte[] GetDescriptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170003A3 RID: 931
-		// (get) Token: 0x060049C0 RID: 18880 RVA: 0x001DA6F8 File Offset: 0x001D88F8
+		// Token: 0x170003BA RID: 954
+		// (get) Token: 0x06004F07 RID: 20231 RVA: 0x001F9E2C File Offset: 0x001F802C
 		public int CreatorId
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003A4 RID: 932
-		// (get) Token: 0x060049C1 RID: 18881 RVA: 0x001DA738 File Offset: 0x001D8938
+		// Token: 0x170003BB RID: 955
+		// (get) Token: 0x06004F08 RID: 20232 RVA: 0x001F9E6C File Offset: 0x001F806C
 		public int MapId
 		{
 			get
@@ -148,7 +148,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060049C2 RID: 18882 RVA: 0x001DA778 File Offset: 0x001D8978
+		// Token: 0x06004F09 RID: 20233 RVA: 0x001F9EAC File Offset: 0x001F80AC
 		public int WaySplines(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -159,8 +159,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170003A5 RID: 933
-		// (get) Token: 0x060049C3 RID: 18883 RVA: 0x001DA7B8 File Offset: 0x001D89B8
+		// Token: 0x170003BC RID: 956
+		// (get) Token: 0x06004F0A RID: 20234 RVA: 0x001F9EEC File Offset: 0x001F80EC
 		public int WaySplinesLength
 		{
 			get
@@ -174,37 +174,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060049C4 RID: 18884 RVA: 0x001DA7E4 File Offset: 0x001D89E4
+		// Token: 0x06004F0B RID: 20235 RVA: 0x001F9F18 File Offset: 0x001F8118
 		public Span<int> GetWaySplinesBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x060049C5 RID: 18885 RVA: 0x001DA7F4 File Offset: 0x001D89F4
+		// Token: 0x06004F0C RID: 20236 RVA: 0x001F9F28 File Offset: 0x001F8128
 		public int[] GetWaySplinesArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060049C6 RID: 18886 RVA: 0x001DA80C File Offset: 0x001D8A0C
+		// Token: 0x06004F0D RID: 20237 RVA: 0x001F9F40 File Offset: 0x001F8140
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WaySplinesIter()或GetWaySplinesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WaySplines()
+		public int[] WaySplines()
 		{
-			AutoPilotCircles autoPilotCircles = this;
-			return autoPilotCircles.GetWaySplinesArray() ?? Array.Empty<int>();
+			return this.GetWaySplinesArray();
 		}
 
-		// Token: 0x060049C7 RID: 18887 RVA: 0x001DA830 File Offset: 0x001D8A30
+		// Token: 0x06004F0E RID: 20238 RVA: 0x001F9F48 File Offset: 0x001F8148
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WaySplinesIter()
+		public IEnumerable<int> WaySplinesIter()
 		{
 			AutoPilotCircles.<WaySplinesIter>d__28 <WaySplinesIter>d__ = new AutoPilotCircles.<WaySplinesIter>d__28(-2);
 			<WaySplinesIter>d__.<>3__<>4__this = this;
 			return <WaySplinesIter>d__;
 		}
 
-		// Token: 0x04004AF9 RID: 19193
+		// Token: 0x040050D3 RID: 20691
 		private Table __p;
 	}
 }

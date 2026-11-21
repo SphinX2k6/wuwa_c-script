@@ -5,61 +5,61 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x02006681 RID: 26241
+	// Token: 0x020055D1 RID: 21969
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Config(0)]
 	public class DropCatchConfig : ConfigBase
 	{
-		// Token: 0x06041C0C RID: 269324 RVA: 0x00FF33E3 File Offset: 0x00FF15E3
+		// Token: 0x06036758 RID: 223064 RVA: 0x00F347EB File Offset: 0x00F329EB
 		public IReadOnlyList<DropCatchGameplay> GetDropCatchGameplayByActivityId(int activityId)
 		{
 			return ConfigDropCatchGameplayByActivityId.GetConfigList(activityId, true);
 		}
 
-		// Token: 0x06041C0D RID: 269325 RVA: 0x00FF33EC File Offset: 0x00FF15EC
+		// Token: 0x06036759 RID: 223065 RVA: 0x00F347F4 File Offset: 0x00F329F4
 		public IReadOnlyList<DropCatchRole> GetAllDropCatchRole()
 		{
 			return ConfigDropCatchRoleAll.GetConfigList(true);
 		}
 
-		// Token: 0x06041C0E RID: 269326 RVA: 0x00FF33F4 File Offset: 0x00FF15F4
+		// Token: 0x0603675A RID: 223066 RVA: 0x00F347FC File Offset: 0x00F329FC
 		public DropCatchGameplay? GetDropCatchGameplayById(int id)
 		{
 			return ConfigDropCatchGameplayById.GetConfig(id, true);
 		}
 
-		// Token: 0x06041C0F RID: 269327 RVA: 0x00FF33FD File Offset: 0x00FF15FD
+		// Token: 0x0603675B RID: 223067 RVA: 0x00F34805 File Offset: 0x00F32A05
 		public DropCatchRole? GetDropCatchRoleById(int id)
 		{
 			return ConfigDropCatchRoleById.GetConfig(id, true);
 		}
 
-		// Token: 0x06041C10 RID: 269328 RVA: 0x00FF3406 File Offset: 0x00FF1606
+		// Token: 0x0603675C RID: 223068 RVA: 0x00F3480E File Offset: 0x00F32A0E
 		public DropCatchDropItem? GetDropCatchDropItemById(int id)
 		{
 			return ConfigDropCatchDropItemById.GetConfig(id, true);
 		}
 
-		// Token: 0x06041C11 RID: 269329 RVA: 0x00FF340F File Offset: 0x00FF160F
+		// Token: 0x0603675D RID: 223069 RVA: 0x00F34817 File Offset: 0x00F32A17
 		public IReadOnlyList<DropCatchDropItem> GetAllDropItemConfig()
 		{
 			return ConfigDropCatchDropItemAll.GetConfigList(true);
 		}
 
-		// Token: 0x06041C12 RID: 269330 RVA: 0x00FF3417 File Offset: 0x00FF1617
+		// Token: 0x0603675E RID: 223070 RVA: 0x00F3481F File Offset: 0x00F32A1F
 		public DropCatchDropPool? GetDropCatchDropPoolById(int id)
 		{
 			return ConfigDropCatchDropPoolById.GetConfig(id, true);
 		}
 
-		// Token: 0x06041C13 RID: 269331 RVA: 0x00FF3420 File Offset: 0x00FF1620
+		// Token: 0x0603675F RID: 223071 RVA: 0x00F34828 File Offset: 0x00F32A28
 		public DropCatchReward? GetDropCatchRewardById(int id)
 		{
 			return ConfigDropCatchRewardById.GetConfig(id, true);
 		}
 
-		// Token: 0x06041C14 RID: 269332 RVA: 0x00FF342C File Offset: 0x00FF162C
+		// Token: 0x06036760 RID: 223072 RVA: 0x00F34834 File Offset: 0x00F32A34
 		public DropCatchGameplay? GetTargetRoleLevelInfo(int activityId, int roleId)
 		{
 			IReadOnlyList<DropCatchGameplay> dropCatchGameplayByActivityId = this.GetDropCatchGameplayByActivityId(activityId);
@@ -76,20 +76,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return null;
 		}
 
-		// Token: 0x06041C15 RID: 269333 RVA: 0x00FF34A4 File Offset: 0x00FF16A4
+		// Token: 0x06036761 RID: 223073 RVA: 0x00F348AC File Offset: 0x00F32AAC
 		public IReadOnlyList<DropCatchRoleBook> GetDropCatchRoleBookAll()
 		{
 			return ConfigDropCatchRoleBookAll.GetConfigList(true);
 		}
 
-		// Token: 0x06041C16 RID: 269334 RVA: 0x00FF34AC File Offset: 0x00FF16AC
+		// Token: 0x06036762 RID: 223074 RVA: 0x00F348B4 File Offset: 0x00F32AB4
 		public DropCatchRoleBook? GetDropCatchRoleBookById(int id)
 		{
 			return ConfigDropCatchRoleBookById.GetConfig(id, true);
 		}
 
-		// Token: 0x17009641 RID: 38465
-		// (get) Token: 0x06041C17 RID: 269335 RVA: 0x00FF34B5 File Offset: 0x00FF16B5
+		// Token: 0x17006980 RID: 27008
+		// (get) Token: 0x06036763 RID: 223075 RVA: 0x00F348BD File Offset: 0x00F32ABD
 		[Nullable(1)]
 		public static DropCatchConfig Instance
 		{
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C18 RID: 269336 RVA: 0x00FF34BC File Offset: 0x00FF16BC
+		// Token: 0x06036764 RID: 223076 RVA: 0x00F348C4 File Offset: 0x00F32AC4
 		[NullableContext(1)]
 		public static DropCatchConfig GetOrCreateInstance()
 		{
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return DropCatchConfig._Instance;
 		}
 
-		// Token: 0x06041C19 RID: 269337 RVA: 0x00FF34D0 File Offset: 0x00FF16D0
+		// Token: 0x06036765 RID: 223077 RVA: 0x00F348D8 File Offset: 0x00F32AD8
 		public static bool CreateInstance()
 		{
 			if (DropCatchConfig._Instance != null)
@@ -122,24 +122,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return true;
 		}
 
-		// Token: 0x06041C1A RID: 269338 RVA: 0x00FF34E6 File Offset: 0x00FF16E6
+		// Token: 0x06036766 RID: 223078 RVA: 0x00F348EE File Offset: 0x00F32AEE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06041C1B RID: 269339 RVA: 0x00FF34E8 File Offset: 0x00FF16E8
+		// Token: 0x06036767 RID: 223079 RVA: 0x00F348F0 File Offset: 0x00F32AF0
 		public static void ResetStaticDefaultValue()
 		{
 			DropCatchConfig._Instance = null;
 		}
 
-		// Token: 0x06041C1C RID: 269340 RVA: 0x00FF34F0 File Offset: 0x00FF16F0
+		// Token: 0x06036768 RID: 223080 RVA: 0x00F348F8 File Offset: 0x00F32AF8
 		static DropCatchConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DropCatchConfig.CreateStaticDefaultValue), new Action(DropCatchConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022373 RID: 140147
+		// Token: 0x0401CBCC RID: 117708
 		private static DropCatchConfig _Instance;
 	}
 }

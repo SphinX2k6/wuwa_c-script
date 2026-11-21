@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Core.Common;
 using CSharpScript.Game;
 using UnrealEngine;
 
@@ -10,7 +9,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiLibrary
 {
-	// Token: 0x06000CA6 RID: 3238 RVA: 0x00041B9C File Offset: 0x0003FD9C
+	// Token: 0x06000CAC RID: 3244 RVA: 0x0004273C File Offset: 0x0004093C
 	public unsafe static bool IsSkillAvailable(AiController aiController, int skillInfoId, CharacterSkillComponent skillComp, BaseTagComponent tagComp, int ignoreSkillType, double targetAngle, double height, double distance, double angle, bool checkDistanceAndAngle, bool debugLog = false)
 	{
 		AiSkillInfos aiSkillInfos;
@@ -27,7 +26,7 @@ public class AiLibrary
 		{
 			return false;
 		}
-		bool flag = debugLog && !Info.Instance.IsBuildShipping;
+		bool flag = debugLog && false;
 		if (flag)
 		{
 			Log instance = Log.Instance;
@@ -91,7 +90,7 @@ public class AiLibrary
 		return true;
 	}
 
-	// Token: 0x06000CA7 RID: 3239 RVA: 0x00041EC0 File Offset: 0x000400C0
+	// Token: 0x06000CAD RID: 3245 RVA: 0x00042A54 File Offset: 0x00040C54
 	public unsafe static bool SelectSkillWithTarget(AiController aiController, CharacterSkillComponent skillComponent, CharacterActorComponent targetActorComp, int skillType, bool debug = false)
 	{
 		CharacterActorComponent charActorComp = aiController.CharActorComp;
@@ -163,7 +162,7 @@ public class AiLibrary
 		return false;
 	}
 
-	// Token: 0x06000CA8 RID: 3240 RVA: 0x00042168 File Offset: 0x00040368
+	// Token: 0x06000CAE RID: 3246 RVA: 0x00042CFC File Offset: 0x00040EFC
 	public static bool SelectSkillWithoutTarget(AiController aiController, CharacterSkillComponent skillComponent, int skillType)
 	{
 		CharacterActorComponent charActorComp = aiController.CharActorComp;
@@ -222,7 +221,7 @@ public class AiLibrary
 		return false;
 	}
 
-	// Token: 0x06000CA9 RID: 3241 RVA: 0x000423D4 File Offset: 0x000405D4
+	// Token: 0x06000CAF RID: 3247 RVA: 0x00042F68 File Offset: 0x00041168
 	public static void SetupStandPointTraceElement(UTraceSphereElement element, CharacterActorComponent character, float radius, bool debugDraw)
 	{
 		element.WorldContextObject = character.Actor;
@@ -254,7 +253,7 @@ public class AiLibrary
 		element.SetDrawDebugTrace(debugDraw ? EDrawDebugTrace.ForDuration : EDrawDebugTrace.None);
 	}
 
-	// Token: 0x06000CAA RID: 3242 RVA: 0x000424A4 File Offset: 0x000406A4
+	// Token: 0x06000CB0 RID: 3248 RVA: 0x00043038 File Offset: 0x00041238
 	public static bool TryValidateStandPoint(CharacterActorComponent character, UTraceSphereElement element, global::Vector candidate, global::Vector outCenter, double playerFloorZ, float floorDetectRange, float obstacleHeight, float maxHeightDiff, bool checkHeightDiff, bool debugDraw, string profileKey, global::Vector ResultCenterLocation, global::Vector tmpStart, global::Vector tmpEnd)
 	{
 		UCapsuleComponent capsuleComponent = character.Actor.CapsuleComponent;
@@ -303,18 +302,18 @@ public class AiLibrary
 		return true;
 	}
 
-	// Token: 0x04000A12 RID: 2578
+	// Token: 0x04000A1A RID: 2586
 	private const int DETECT_HEIGHT = 2;
 
-	// Token: 0x04000A13 RID: 2579
+	// Token: 0x04000A1B RID: 2587
 	private static readonly FLinearColor TRACE_COLOR_FLOOR = new FLinearColor(0f, 1f, 1f, 0f);
 
-	// Token: 0x04000A14 RID: 2580
+	// Token: 0x04000A1C RID: 2588
 	private static readonly FLinearColor TRACE_COLOR_HEIGHT = new FLinearColor(1f, 0f, 1f, 0f);
 
-	// Token: 0x04000A15 RID: 2581
+	// Token: 0x04000A1D RID: 2589
 	private static readonly FLinearColor TRACE_COLOR_STAND = new FLinearColor(1f, 0.5f, 0f, 0f);
 
-	// Token: 0x04000A16 RID: 2582
+	// Token: 0x04000A1E RID: 2590
 	private static readonly FLinearColor TRACE_COLOR_HIT = new FLinearColor(1f, 0.33f, 0.5f, 1f);
 }

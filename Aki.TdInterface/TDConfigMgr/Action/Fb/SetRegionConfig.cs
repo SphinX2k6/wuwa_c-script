@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002968 RID: 10600
+	// Token: 0x02002C4D RID: 11341
 	public class SetRegionConfig : ActionParams
 	{
-		// Token: 0x0600EAF2 RID: 60146 RVA: 0x002263A1 File Offset: 0x002245A1
-		[NullableContext(1)]
+		// Token: 0x0600F968 RID: 63848 RVA: 0x00243A59 File Offset: 0x00241C59
 		public static SetRegionConfig Create(ISetRegionConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049E4 RID: 18916
-		// (get) Token: 0x0600EAF3 RID: 60147 RVA: 0x002263C0 File Offset: 0x002245C0
+		// Token: 0x17004D7C RID: 19836
+		// (get) Token: 0x0600F969 RID: 63849 RVA: 0x00243A78 File Offset: 0x00241C78
 		public virtual ERegionConfigType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008172 RID: 33138
+		// Token: 0x04008853 RID: 34899
 		private ISetRegionConfig Instance;
 	}
 }

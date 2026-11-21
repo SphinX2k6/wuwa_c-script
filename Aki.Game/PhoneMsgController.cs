@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,11 +13,11 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002501 RID: 9473
+// Token: 0x020019E8 RID: 6632
 [Controller(0)]
 public class PhoneMsgController : ControllerBase
 {
-	// Token: 0x060130AD RID: 77997 RVA: 0x004B6E34 File Offset: 0x004B5034
+	// Token: 0x0601056C RID: 66924 RVA: 0x004C4AC4 File Offset: 0x004C2CC4
 	protected override bool OnInit()
 	{
 		this.OnAddEvents();
@@ -27,7 +26,7 @@ public class PhoneMsgController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060130AE RID: 77998 RVA: 0x004B6E5E File Offset: 0x004B505E
+	// Token: 0x0601056D RID: 66925 RVA: 0x004C4AEE File Offset: 0x004C2CEE
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
@@ -35,7 +34,7 @@ public class PhoneMsgController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060130AF RID: 77999 RVA: 0x004B6E70 File Offset: 0x004B5070
+	// Token: 0x0601056E RID: 66926 RVA: 0x004C4B00 File Offset: 0x004C2D00
 	protected void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -43,7 +42,7 @@ public class PhoneMsgController : ControllerBase
 		EventSystem.Instance.Add(EEventName.OnNewPhoneMsgNeedShowTips, new Action(this.TryShowPhoneMsgTipView));
 	}
 
-	// Token: 0x060130B0 RID: 78000 RVA: 0x004B6ED4 File Offset: 0x004B50D4
+	// Token: 0x0601056F RID: 66927 RVA: 0x004C4B64 File Offset: 0x004C2D64
 	protected void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -51,21 +50,21 @@ public class PhoneMsgController : ControllerBase
 		EventSystem.Instance.Remove(EEventName.OnNewPhoneMsgNeedShowTips, new Action(this.TryShowPhoneMsgTipView));
 	}
 
-	// Token: 0x060130B1 RID: 78001 RVA: 0x004B6F35 File Offset: 0x004B5135
+	// Token: 0x06010570 RID: 66928 RVA: 0x004C4BC5 File Offset: 0x004C2DC5
 	protected void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ShortMessageUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnPhoneMsgNotify));
 		Net.Instance.Register(ENotifyMessageId.ShortMessageItemUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnPhoneMsgDialogAndBgAddNotify));
 	}
 
-	// Token: 0x060130B2 RID: 78002 RVA: 0x004B6F6F File Offset: 0x004B516F
+	// Token: 0x06010571 RID: 66929 RVA: 0x004C4BFF File Offset: 0x004C2DFF
 	protected void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ShortMessageUpdateNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.ShortMessageItemUpdateNotify);
 	}
 
-	// Token: 0x060130B3 RID: 78003 RVA: 0x004B6F91 File Offset: 0x004B5191
+	// Token: 0x06010572 RID: 66930 RVA: 0x004C4C21 File Offset: 0x004C2E21
 	public void OpenPhoneMsgPanelViewBigByShortKey()
 	{
 		if (!FunctionModel.Instance.IsOpen(10130))
@@ -80,7 +79,7 @@ public class PhoneMsgController : ControllerBase
 		UiManager.Instance.CloseView(EUiViewName.PhoneMsgPanelViewBig, null);
 	}
 
-	// Token: 0x060130B4 RID: 78004 RVA: 0x004B6FD0 File Offset: 0x004B51D0
+	// Token: 0x06010573 RID: 66931 RVA: 0x004C4C60 File Offset: 0x004C2E60
 	public void OpenAndJumpShowTipShortMessage(EPhoneMsgOpenWay openWay, EPhoneMsgViewType viewType)
 	{
 		int currentShowingMsgIdInSmallHead = PhoneMsgModel.Instance.CurrentShowingMsgIdInSmallHead;
@@ -105,7 +104,7 @@ public class PhoneMsgController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PhoneMsgPanelViewBig, param, null);
 	}
 
-	// Token: 0x060130B5 RID: 78005 RVA: 0x004B7054 File Offset: 0x004B5254
+	// Token: 0x06010574 RID: 66932 RVA: 0x004C4CE4 File Offset: 0x004C2EE4
 	public void QuickOpenPhoneMsgPanelViewBig(int msgId, EPhoneMsgOpenWay openWay)
 	{
 		ShortMessage? phoneMsgConfig = PhoneMsgConfig.Instance.GetPhoneMsgConfig(msgId);
@@ -124,7 +123,7 @@ public class PhoneMsgController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PhoneMsgPanelViewBig, param, null);
 	}
 
-	// Token: 0x060130B6 RID: 78006 RVA: 0x004B70D8 File Offset: 0x004B52D8
+	// Token: 0x06010575 RID: 66933 RVA: 0x004C4D68 File Offset: 0x004C2F68
 	[NullableContext(2)]
 	private void OnPhoneMsgNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -135,7 +134,7 @@ public class PhoneMsgController : ControllerBase
 		}
 	}
 
-	// Token: 0x060130B7 RID: 78007 RVA: 0x004B70FA File Offset: 0x004B52FA
+	// Token: 0x06010576 RID: 66934 RVA: 0x004C4D8A File Offset: 0x004C2F8A
 	private void TryShowPhoneMsgTipView()
 	{
 		if (!UiModel.Instance.IsInMainView)
@@ -154,7 +153,7 @@ public class PhoneMsgController : ControllerBase
 		this.OpenPhoneMsgTipView();
 	}
 
-	// Token: 0x060130B8 RID: 78008 RVA: 0x004B712C File Offset: 0x004B532C
+	// Token: 0x06010577 RID: 66935 RVA: 0x004C4DBC File Offset: 0x004C2FBC
 	public void OpenPhoneMsgTipView()
 	{
 		List<int> currentToBeNotifiedMsgArray = PhoneMsgModel.Instance.CurrentToBeNotifiedMsgArray;
@@ -218,7 +217,7 @@ public class PhoneMsgController : ControllerBase
 		currentToBeNotifiedMsgArray.Clear();
 	}
 
-	// Token: 0x060130B9 RID: 78009 RVA: 0x004B72BC File Offset: 0x004B54BC
+	// Token: 0x06010578 RID: 66936 RVA: 0x004C4F4C File Offset: 0x004C314C
 	[NullableContext(2)]
 	private void OnPhoneMsgDialogAndBgAddNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -229,13 +228,13 @@ public class PhoneMsgController : ControllerBase
 		}
 	}
 
-	// Token: 0x060130BA RID: 78010 RVA: 0x004B72DE File Offset: 0x004B54DE
+	// Token: 0x06010579 RID: 66937 RVA: 0x004C4F6E File Offset: 0x004C316E
 	private void OnWorldDone()
 	{
 		this.RequestAllMsg();
 	}
 
-	// Token: 0x060130BB RID: 78011 RVA: 0x004B72E8 File Offset: 0x004B54E8
+	// Token: 0x0601057A RID: 66938 RVA: 0x004C4F78 File Offset: 0x004C3178
 	public void TopPanelCheckAndPlayPhoneSequence()
 	{
 		UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.BattleView);
@@ -260,7 +259,7 @@ public class PhoneMsgController : ControllerBase
 		topPanelPhoneMsgButton.CheckAndPlayPhoneSequence();
 	}
 
-	// Token: 0x060130BC RID: 78012 RVA: 0x004B733C File Offset: 0x004B553C
+	// Token: 0x0601057B RID: 66939 RVA: 0x004C4FCC File Offset: 0x004C31CC
 	public void TopPanelCheckAndPopHead(int clickId)
 	{
 		UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.BattleView);
@@ -290,14 +289,14 @@ public class PhoneMsgController : ControllerBase
 		}
 	}
 
-	// Token: 0x060130BD RID: 78013 RVA: 0x004B73B0 File Offset: 0x004B55B0
+	// Token: 0x0601057C RID: 66940 RVA: 0x004C5040 File Offset: 0x004C3240
 	public void RequestAllMsg()
 	{
 		ShortMessageInfoRequest message = ShortMessageInfoRequest.Create();
 		Net.Instance.Call(ERequestMessageId.ShortMessageInfoRequest, message, new Action<IMessage, Net.CallbackStatus>(this.HandleRequestAllMsgResponse), 0);
 	}
 
-	// Token: 0x060130BE RID: 78014 RVA: 0x004B73E0 File Offset: 0x004B55E0
+	// Token: 0x0601057D RID: 66941 RVA: 0x004C5070 File Offset: 0x004C3270
 	[NullableContext(2)]
 	private void HandleRequestAllMsgResponse(IMessage msg, Net.CallbackStatus _)
 	{
@@ -310,11 +309,11 @@ public class PhoneMsgController : ControllerBase
 		if (shortMessageInfos != null)
 		{
 			PhoneMsgModel.Instance.InitChatShow(shortMessageInfoResponse.BubbleId, shortMessageInfoResponse.ChatBgId, shortMessageInfoResponse.ChatThemeId, shortMessageInfoResponse.ChatCharmId, new List<int>(shortMessageInfoResponse.BubbleIds), new List<int>(shortMessageInfoResponse.ChatBgIds), new List<int>(shortMessageInfoResponse.ChatThemeIds), new List<int>(shortMessageInfoResponse.ChatCharmIds));
-			PhoneMsgModel.Instance.AddMessages(shortMessageInfos.ToList<ShortMessageInfo>(), null, false, true);
+			PhoneMsgModel.Instance.AddMessages(shortMessageInfos, null, false, true);
 		}
 	}
 
-	// Token: 0x060130BF RID: 78015 RVA: 0x004B746C File Offset: 0x004B566C
+	// Token: 0x0601057E RID: 66942 RVA: 0x004C50F8 File Offset: 0x004C32F8
 	public UniTask<bool> SetOneMessageAsReadAsync(int shortMessageId)
 	{
 		PhoneMsgController.<SetOneMessageAsReadAsync>d__19 <SetOneMessageAsReadAsync>d__;
@@ -325,7 +324,7 @@ public class PhoneMsgController : ControllerBase
 		return <SetOneMessageAsReadAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060130C0 RID: 78016 RVA: 0x004B74B0 File Offset: 0x004B56B0
+	// Token: 0x0601057F RID: 66943 RVA: 0x004C513C File Offset: 0x004C333C
 	public UniTask<bool> ShortMessageReplyAsync(int shortMessageId, int talkIndex, int selectId)
 	{
 		PhoneMsgController.<ShortMessageReplyAsync>d__20 <ShortMessageReplyAsync>d__;
@@ -338,7 +337,7 @@ public class PhoneMsgController : ControllerBase
 		return <ShortMessageReplyAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060130C1 RID: 78017 RVA: 0x004B7504 File Offset: 0x004B5704
+	// Token: 0x06010580 RID: 66944 RVA: 0x004C5190 File Offset: 0x004C3390
 	public UniTask<bool> ShortMessageReceiveAsync(int shortMessageId)
 	{
 		PhoneMsgController.<ShortMessageReceiveAsync>d__21 <ShortMessageReceiveAsync>d__;
@@ -349,7 +348,7 @@ public class PhoneMsgController : ControllerBase
 		return <ShortMessageReceiveAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060130C2 RID: 78018 RVA: 0x004B7548 File Offset: 0x004B5748
+	// Token: 0x06010581 RID: 66945 RVA: 0x004C51D4 File Offset: 0x004C33D4
 	public UniTask<bool> UpdateProgressOfOneMessageAsync(int shortMessageId, int readIndex, bool isFinish)
 	{
 		PhoneMsgController.<UpdateProgressOfOneMessageAsync>d__22 <UpdateProgressOfOneMessageAsync>d__;
@@ -362,7 +361,7 @@ public class PhoneMsgController : ControllerBase
 		return <UpdateProgressOfOneMessageAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060130C3 RID: 78019 RVA: 0x004B759C File Offset: 0x004B579C
+	// Token: 0x06010582 RID: 66946 RVA: 0x004C5228 File Offset: 0x004C3428
 	public void SendChangeChatDialogAndBgRequest(int chatDialogId, int chatBgId)
 	{
 		ShortMessageShowChangeRequest shortMessageShowChangeRequest = ShortMessageShowChangeRequest.Create();
@@ -382,11 +381,11 @@ public class PhoneMsgController : ControllerBase
 				EventSystem.Instance.Emit(EEventName.OnPhoneMsgChatShowChange);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(shortMessageShowChangeResponse.ErrCode, 29072, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(shortMessageShowChangeResponse.ErrCode, 27652, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060130C4 RID: 78020 RVA: 0x004B75F8 File Offset: 0x004B57F8
+	// Token: 0x06010583 RID: 66947 RVA: 0x004C5284 File Offset: 0x004C3484
 	public void SendChangeChatThemeRequest(int chatThemeId)
 	{
 		ShortMessageChatThemeChangeRequest shortMessageChatThemeChangeRequest = ShortMessageChatThemeChangeRequest.Create();
@@ -404,11 +403,11 @@ public class PhoneMsgController : ControllerBase
 				EventSystem.Instance.Emit(EEventName.OnPhoneMsgChatShowChange);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(shortMessageChatThemeChangeResponse.ErrCode, 19186, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(shortMessageChatThemeChangeResponse.ErrCode, 21146, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060130C5 RID: 78021 RVA: 0x004B7644 File Offset: 0x004B5844
+	// Token: 0x06010584 RID: 66948 RVA: 0x004C52D0 File Offset: 0x004C34D0
 	public void SendChangeChatCharmRequest(int chatCharmId)
 	{
 		ShortMessageChatCharmChangeRequest shortMessageChatCharmChangeRequest = ShortMessageChatCharmChangeRequest.Create();
@@ -426,11 +425,11 @@ public class PhoneMsgController : ControllerBase
 				EventSystem.Instance.Emit(EEventName.OnPhoneMsgChatShowChange);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(shortMessageChatCharmChangeResponse.ErrCode, 18908, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(shortMessageChatCharmChangeResponse.ErrCode, 15958, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060130C6 RID: 78022 RVA: 0x004B7690 File Offset: 0x004B5890
+	// Token: 0x06010585 RID: 66949 RVA: 0x004C531C File Offset: 0x004C351C
 	public void OpenAttachmentImgView(int attachmentId)
 	{
 		PhoneMessageAttachment? config = ConfigPhoneMessageAttachmentById.GetConfig(attachmentId, true);
@@ -497,8 +496,8 @@ public class PhoneMsgController : ControllerBase
 		}
 	}
 
-	// Token: 0x170018CD RID: 6349
-	// (get) Token: 0x060130C7 RID: 78023 RVA: 0x004B78E7 File Offset: 0x004B5AE7
+	// Token: 0x17001907 RID: 6407
+	// (get) Token: 0x06010586 RID: 66950 RVA: 0x004C5573 File Offset: 0x004C3773
 	[Nullable(1)]
 	public static PhoneMsgController Instance
 	{
@@ -509,7 +508,7 @@ public class PhoneMsgController : ControllerBase
 		}
 	}
 
-	// Token: 0x060130C8 RID: 78024 RVA: 0x004B78EE File Offset: 0x004B5AEE
+	// Token: 0x06010587 RID: 66951 RVA: 0x004C557A File Offset: 0x004C377A
 	[NullableContext(1)]
 	public static PhoneMsgController GetOrCreateInstance()
 	{
@@ -520,7 +519,7 @@ public class PhoneMsgController : ControllerBase
 		return PhoneMsgController._Instance;
 	}
 
-	// Token: 0x060130C9 RID: 78025 RVA: 0x004B7902 File Offset: 0x004B5B02
+	// Token: 0x06010588 RID: 66952 RVA: 0x004C558E File Offset: 0x004C378E
 	public static bool CreateInstance()
 	{
 		if (PhoneMsgController._Instance != null)
@@ -531,27 +530,27 @@ public class PhoneMsgController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060130CA RID: 78026 RVA: 0x004B7918 File Offset: 0x004B5B18
+	// Token: 0x06010589 RID: 66953 RVA: 0x004C55A4 File Offset: 0x004C37A4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060130CB RID: 78027 RVA: 0x004B791A File Offset: 0x004B5B1A
+	// Token: 0x0601058A RID: 66954 RVA: 0x004C55A6 File Offset: 0x004C37A6
 	public static void ResetStaticDefaultValue()
 	{
 		PhoneMsgController._Instance = null;
 	}
 
-	// Token: 0x060130CC RID: 78028 RVA: 0x004B7922 File Offset: 0x004B5B22
+	// Token: 0x0601058B RID: 66955 RVA: 0x004C55AE File Offset: 0x004C37AE
 	static PhoneMsgController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhoneMsgController.CreateStaticDefaultValue), new Action(PhoneMsgController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008F6E RID: 36718
+	// Token: 0x040090B8 RID: 37048
 	public bool IsPhoneMsgTipEnable = true;
 
-	// Token: 0x04008F6F RID: 36719
+	// Token: 0x040090B9 RID: 37049
 	[Nullable(2)]
 	private static PhoneMsgController _Instance;
 }

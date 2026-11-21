@@ -8,11 +8,11 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.CombatMessage
 {
-	// Token: 0x02005BAE RID: 23470
+	// Token: 0x02004B8E RID: 19342
 	public class CombatMessageBuffer
 	{
-		// Token: 0x17008CF7 RID: 36087
-		// (get) Token: 0x0603B5A3 RID: 243107 RVA: 0x00E27CDE File Offset: 0x00E25EDE
+		// Token: 0x170060C9 RID: 24777
+		// (get) Token: 0x060304F0 RID: 197872 RVA: 0x00D78041 File Offset: 0x00D76241
 		public double TimelineOffset
 		{
 			get
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x17008CF8 RID: 36088
-		// (get) Token: 0x0603B5A4 RID: 243108 RVA: 0x00E27CED File Offset: 0x00E25EED
+		// Token: 0x170060CA RID: 24778
+		// (get) Token: 0x060304F1 RID: 197873 RVA: 0x00D78050 File Offset: 0x00D76250
 		public double RemainBufferTime
 		{
 			get
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5A5 RID: 243109 RVA: 0x00E27D00 File Offset: 0x00E25F00
+		// Token: 0x060304F2 RID: 197874 RVA: 0x00D78063 File Offset: 0x00D76263
 		public CombatMessageBuffer(long creatureDataId)
 		{
 			this.CreatureDataId = creatureDataId;
 		}
 
-		// Token: 0x0603B5A6 RID: 243110 RVA: 0x00E27D1C File Offset: 0x00E25F1C
+		// Token: 0x060304F3 RID: 197875 RVA: 0x00D78080 File Offset: 0x00D76280
 		[NullableContext(1)]
 		public unsafe void AddToQueue(ENotifyMessageId id, [Nullable(2)] Entity entity, CombatCommon combatCommon, IMessage message)
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			characterCombatMessageComponent.AddToQueue(id, combatCommon, message, executeTime);
 		}
 
-		// Token: 0x0603B5A7 RID: 243111 RVA: 0x00E27EF0 File Offset: 0x00E260F0
+		// Token: 0x060304F4 RID: 197876 RVA: 0x00D78254 File Offset: 0x00D76454
 		public void RecordMessageTime(double messageTime, int pbDataId, bool udpMessage = false)
 		{
 			double nowSeconds = Time.Instance.NowSeconds;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			this.ReportMoveDataReceiveInfo(nowSeconds - messageTime, pbDataId, udpMessage);
 		}
 
-		// Token: 0x0603B5A8 RID: 243112 RVA: 0x00E27F7C File Offset: 0x00E2617C
+		// Token: 0x060304F5 RID: 197877 RVA: 0x00D782E0 File Offset: 0x00D764E0
 		private void RefreshDelayTime()
 		{
 			if (this.MessageReceiveTimeQueue.Size == 0)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			this.RefreshBuffer(0.0);
 		}
 
-		// Token: 0x0603B5A9 RID: 243113 RVA: 0x00E280B4 File Offset: 0x00E262B4
+		// Token: 0x060304F6 RID: 197878 RVA: 0x00D78418 File Offset: 0x00D76618
 		private void RefreshBuffer(double increment = 0.0)
 		{
 			if (this.DesiredBuffer < this.Buffer)
@@ -177,13 +177,13 @@ namespace CSharpScript.Game.Module.CombatMessage
 			this.Buffer = this.DesiredBuffer;
 		}
 
-		// Token: 0x0603B5AA RID: 243114 RVA: 0x00E28118 File Offset: 0x00E26318
+		// Token: 0x060304F7 RID: 197879 RVA: 0x00D7847C File Offset: 0x00D7667C
 		public void OnTick(float delta)
 		{
 			this.RefreshBuffer((double)(delta * 0.1f));
 		}
 
-		// Token: 0x0603B5AB RID: 243115 RVA: 0x00E28128 File Offset: 0x00E26328
+		// Token: 0x060304F8 RID: 197880 RVA: 0x00D7848C File Offset: 0x00D7668C
 		public void ReportMoveDataReceiveInfo(double offset, int pbDataId, bool udpMessage)
 		{
 			string data = Json.Encode(new Dictionary<string, object>
@@ -228,22 +228,22 @@ namespace CSharpScript.Game.Module.CombatMessage
 			CombatDebugController.Instance.DataReport("MOVE_SYNC_RECEIVE_INFO", data);
 		}
 
-		// Token: 0x0401EED2 RID: 126674
+		// Token: 0x04019983 RID: 104835
 		public double TimelineOffsetBase;
 
-		// Token: 0x0401EED3 RID: 126675
+		// Token: 0x04019984 RID: 104836
 		public double DesiredBuffer;
 
-		// Token: 0x0401EED4 RID: 126676
+		// Token: 0x04019985 RID: 104837
 		public double Buffer;
 
-		// Token: 0x0401EED5 RID: 126677
+		// Token: 0x04019986 RID: 104838
 		public double LastNotifyExecuteTime;
 
-		// Token: 0x0401EED6 RID: 126678
+		// Token: 0x04019987 RID: 104839
 		private double LastMessageReceiveTime;
 
-		// Token: 0x0401EED7 RID: 126679
+		// Token: 0x04019988 RID: 104840
 		[Nullable(new byte[]
 		{
 			1,
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 		})]
 		private readonly Queue<ValueTuple<double, double>> MessageReceiveTimeQueue = new Queue<ValueTuple<double, double>>(4);
 
-		// Token: 0x0401EED8 RID: 126680
+		// Token: 0x04019989 RID: 104841
 		protected long CreatureDataId;
 	}
 }

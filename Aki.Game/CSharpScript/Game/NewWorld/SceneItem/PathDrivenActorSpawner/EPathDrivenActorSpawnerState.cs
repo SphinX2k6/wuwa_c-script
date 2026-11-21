@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071C5 RID: 29125
+	// Token: 0x0200627A RID: 25210
 	public enum EPathDrivenActorSpawnerState
 	{
-		// Token: 0x040257D6 RID: 153558
+		// Token: 0x04020445 RID: 132165
 		Idle,
-		// Token: 0x040257D7 RID: 153559
+		// Token: 0x04020446 RID: 132166
 		LoadingActorClass,
-		// Token: 0x040257D8 RID: 153560
+		// Token: 0x04020447 RID: 132167
 		PreparingTracks,
-		// Token: 0x040257D9 RID: 153561
+		// Token: 0x04020448 RID: 132168
 		Running
 	}
 }

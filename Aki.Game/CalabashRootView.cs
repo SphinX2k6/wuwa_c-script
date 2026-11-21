@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001753 RID: 5971
+// Token: 0x02000C0C RID: 3084
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashRootView : UiViewBase
 {
-	// Token: 0x0600ACAE RID: 44206 RVA: 0x0026CCD0 File Offset: 0x0026AED0
+	// Token: 0x06008095 RID: 32917 RVA: 0x00277118 File Offset: 0x00275318
 	public CalabashRootView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600ACAF RID: 44207 RVA: 0x0026CD70 File Offset: 0x0026AF70
+	// Token: 0x06008096 RID: 32918 RVA: 0x002771B8 File Offset: 0x002753B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class CalabashRootView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600ACB0 RID: 44208 RVA: 0x0026CE47 File Offset: 0x0026B047
+	// Token: 0x06008097 RID: 32919 RVA: 0x0027728F File Offset: 0x0027548F
 	private void CloseClick()
 	{
 		if (this.CheckTabViewCloseToRoot())
@@ -48,13 +48,13 @@ public class CalabashRootView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600ACB1 RID: 44209 RVA: 0x0026CE59 File Offset: 0x0026B059
+	// Token: 0x06008098 RID: 32920 RVA: 0x002772A1 File Offset: 0x002754A1
 	private void OnHelpBtnClick()
 	{
 		HelpController.Instance.OpenHelpById(this.HelpId);
 	}
 
-	// Token: 0x0600ACB2 RID: 44210 RVA: 0x0026CE6C File Offset: 0x0026B06C
+	// Token: 0x06008099 RID: 32921 RVA: 0x002772B4 File Offset: 0x002754B4
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.JumpToCalabashCollect, new Action<int>(this.JumpToCalabashCollect));
@@ -64,7 +64,7 @@ public class CalabashRootView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnRefreshCalabashTabShowState, new Action<bool>(this.OnRefreshTabShowState));
 	}
 
-	// Token: 0x0600ACB3 RID: 44211 RVA: 0x0026CF08 File Offset: 0x0026B108
+	// Token: 0x0600809A RID: 32922 RVA: 0x00277350 File Offset: 0x00275550
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.JumpToCalabashCollect, new Action<int>(this.JumpToCalabashCollect));
@@ -74,7 +74,7 @@ public class CalabashRootView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnRefreshCalabashTabShowState, new Action<bool>(this.OnRefreshTabShowState));
 	}
 
-	// Token: 0x0600ACB4 RID: 44212 RVA: 0x0026CFA4 File Offset: 0x0026B1A4
+	// Token: 0x0600809B RID: 32923 RVA: 0x002773EC File Offset: 0x002755EC
 	private void JumpToCalabashCollect(int monsterId)
 	{
 		int index = -1;
@@ -106,7 +106,7 @@ public class CalabashRootView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(index, false);
 	}
 
-	// Token: 0x0600ACB5 RID: 44213 RVA: 0x0026D050 File Offset: 0x0026B250
+	// Token: 0x0600809C RID: 32924 RVA: 0x00277498 File Offset: 0x00275698
 	private void JumpPhantomBattleFettersTabView(int id)
 	{
 		int index = -1;
@@ -134,7 +134,7 @@ public class CalabashRootView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(index, false);
 	}
 
-	// Token: 0x0600ACB6 RID: 44214 RVA: 0x0026D0F8 File Offset: 0x0026B2F8
+	// Token: 0x0600809D RID: 32925 RVA: 0x00277540 File Offset: 0x00275740
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CalabashRootView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -145,7 +145,7 @@ public class CalabashRootView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600ACB7 RID: 44215 RVA: 0x0026D13C File Offset: 0x0026B33C
+	// Token: 0x0600809E RID: 32926 RVA: 0x00277584 File Offset: 0x00275784
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Emit(EEventName.OnVisionRefineSubNeedAck);
@@ -159,13 +159,13 @@ public class CalabashRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600ACB8 RID: 44216 RVA: 0x0026D1E3 File Offset: 0x0026B3E3
+	// Token: 0x0600809F RID: 32927 RVA: 0x0027762B File Offset: 0x0027582B
 	private void InitTabDataList()
 	{
 		this.TabDataList = CalabashModel.Instance.GetViewTabList();
 	}
 
-	// Token: 0x0600ACB9 RID: 44217 RVA: 0x0026D1F8 File Offset: 0x0026B3F8
+	// Token: 0x060080A0 RID: 32928 RVA: 0x00277640 File Offset: 0x00275840
 	private UniTask InitTabComponent()
 	{
 		CalabashRootView.<InitTabComponent>d__23 <InitTabComponent>d__;
@@ -176,13 +176,13 @@ public class CalabashRootView : UiViewBase
 		return <InitTabComponent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600ACBA RID: 44218 RVA: 0x0026D23B File Offset: 0x0026B43B
+	// Token: 0x060080A1 RID: 32929 RVA: 0x00277683 File Offset: 0x00275883
 	private CalabashTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new CalabashTabItem();
 	}
 
-	// Token: 0x0600ACBB RID: 44219 RVA: 0x0026D244 File Offset: 0x0026B444
+	// Token: 0x060080A2 RID: 32930 RVA: 0x0027768C File Offset: 0x0027588C
 	private void ToggleCallBack(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
@@ -200,8 +200,16 @@ public class CalabashRootView : UiViewBase
 			ICalabashRootViewData calabashCollectParams2 = this.CalabashCollectParams;
 			obj = ((calabashCollectParams2 != null) ? calabashCollectParams2.Param : null);
 		}
-		object extraParams = obj;
-		this.TabViewComponent.ToggleCallBackNew(uiDynamicTab, euiTabViewName, tabItemByIndex, extraParams, null);
+		object obj2 = obj;
+		if (euiTabViewName == EUiTabViewName.VisionRecoveryTabView)
+		{
+			obj2 = new VisionRecoveryTabViewParam
+			{
+				RecoveryMode = (obj2 as EVisionRecoveryMode?),
+				OnQuitInternalView = new Action(this.OnQuitInternalView)
+			};
+		}
+		this.TabViewComponent.ToggleCallBackNew(uiDynamicTab, euiTabViewName, tabItemByIndex, obj2, null);
 		if (this.CalabashCollectParams != null)
 		{
 			this.CalabashCollectParams.Param = null;
@@ -214,20 +222,20 @@ public class CalabashRootView : UiViewBase
 		this.ShowCostItemCaption(Array.Empty<int>());
 	}
 
-	// Token: 0x0600ACBC RID: 44220 RVA: 0x0026D354 File Offset: 0x0026B554
+	// Token: 0x060080A3 RID: 32931 RVA: 0x002777D0 File Offset: 0x002759D0
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x0600ACBD RID: 44221 RVA: 0x0026D38C File Offset: 0x0026B58C
+	// Token: 0x060080A4 RID: 32932 RVA: 0x00277808 File Offset: 0x00275A08
 	private void InitTabViewComponent()
 	{
 		this.TabViewComponent = new TabViewComponent<object>(base.GetItem(1), EKeyMode.Default);
 	}
 
-	// Token: 0x0600ACBE RID: 44222 RVA: 0x0026D3A4 File Offset: 0x0026B5A4
+	// Token: 0x060080A5 RID: 32933 RVA: 0x00277820 File Offset: 0x00275A20
 	private void UpdateDetailItem(EUiTabViewName viewName)
 	{
 		bool flag = viewName == EUiTabViewName.CalabashCollectTabView || viewName == EUiTabViewName.PhantomManageConfigNewView;
@@ -268,7 +276,7 @@ public class CalabashRootView : UiViewBase
 		uuiitem2.SetUIActive(viewName == EUiTabViewName.PhantomManageConfigNewView);
 	}
 
-	// Token: 0x0600ACBF RID: 44223 RVA: 0x0026D458 File Offset: 0x0026B658
+	// Token: 0x060080A6 RID: 32934 RVA: 0x002778D4 File Offset: 0x00275AD4
 	private void InitSelectedIndex()
 	{
 		ICalabashRootViewData calabashCollectParams = this.CalabashCollectParams;
@@ -293,7 +301,7 @@ public class CalabashRootView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(index, false);
 	}
 
-	// Token: 0x0600ACC0 RID: 44224 RVA: 0x0026D4F6 File Offset: 0x0026B6F6
+	// Token: 0x060080A7 RID: 32935 RVA: 0x00277972 File Offset: 0x00275B72
 	private void BindRedDot()
 	{
 		this.BindRedDotByName(EUiTabViewName.CalabashLevelUpTabView, ERedDotName.CalabashTab, true);
@@ -301,7 +309,7 @@ public class CalabashRootView : UiViewBase
 		this.BindRedDotByName(EUiTabViewName.VisionRefineTabView, ERedDotName.VisionRefine, true);
 	}
 
-	// Token: 0x0600ACC1 RID: 44225 RVA: 0x0026D524 File Offset: 0x0026B724
+	// Token: 0x060080A8 RID: 32936 RVA: 0x002779A0 File Offset: 0x00275BA0
 	private void BindRedDotByName(EUiTabViewName viewName, ERedDotName redDotName, bool bIsBind)
 	{
 		int num = -1;
@@ -331,19 +339,19 @@ public class CalabashRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600ACC2 RID: 44226 RVA: 0x0026D59D File Offset: 0x0026B79D
+	// Token: 0x060080A9 RID: 32937 RVA: 0x00277A19 File Offset: 0x00275C19
 	private void OnSimplyToggleChange(EToggleState toggleState)
 	{
 		CalabashModel.Instance.SaveIfSimpleState(toggleState != EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x0600ACC3 RID: 44227 RVA: 0x0026D5B0 File Offset: 0x0026B7B0
+	// Token: 0x060080AA RID: 32938 RVA: 0x00277A2C File Offset: 0x00275C2C
 	private void OnClickedShared()
 	{
 		UiManager.Instance.OpenView(EUiViewName.PhantomManagerConfigSharePopItem, null, null);
 	}
 
-	// Token: 0x0600ACC4 RID: 44228 RVA: 0x0026D5C3 File Offset: 0x0026B7C3
+	// Token: 0x060080AB RID: 32939 RVA: 0x00277A3F File Offset: 0x00275C3F
 	protected override void OnBeforeShow()
 	{
 		if (this.IsViewFirstShow)
@@ -358,14 +366,14 @@ public class CalabashRootView : UiViewBase
 		this.BindRedDot();
 	}
 
-	// Token: 0x0600ACC5 RID: 44229 RVA: 0x0026D5EE File Offset: 0x0026B7EE
+	// Token: 0x060080AC RID: 32940 RVA: 0x00277A6A File Offset: 0x00275C6A
 	protected override void OnBeforeHide()
 	{
 		this.UnBindRedDot();
 		this.TabViewComponent.SetCurrentTabViewState(false);
 	}
 
-	// Token: 0x0600ACC6 RID: 44230 RVA: 0x0026D604 File Offset: 0x0026B804
+	// Token: 0x060080AD RID: 32941 RVA: 0x00277A80 File Offset: 0x00275C80
 	protected override void OnAfterHide()
 	{
 		VisionRecoveryTabView visionRecoveryTabView = this.TabViewComponent.GetTabViewByTabKey(EUiTabViewName.VisionRecoveryTabView, null) as VisionRecoveryTabView;
@@ -376,7 +384,7 @@ public class CalabashRootView : UiViewBase
 		visionRecoveryTabView.RemoveAllVisionItemOutside();
 	}
 
-	// Token: 0x0600ACC7 RID: 44231 RVA: 0x0026D63A File Offset: 0x0026B83A
+	// Token: 0x060080AE RID: 32942 RVA: 0x00277AB6 File Offset: 0x00275CB6
 	private void UnBindRedDot()
 	{
 		this.BindRedDotByName(EUiTabViewName.CalabashLevelUpTabView, ERedDotName.CalabashTab, false);
@@ -384,14 +392,14 @@ public class CalabashRootView : UiViewBase
 		this.BindRedDotByName(EUiTabViewName.VisionRefineTabView, ERedDotName.VisionRefine, false);
 	}
 
-	// Token: 0x0600ACC8 RID: 44232 RVA: 0x0026D666 File Offset: 0x0026B866
+	// Token: 0x060080AF RID: 32943 RVA: 0x00277AE2 File Offset: 0x00275CE2
 	protected override void OnBeforeDestroy()
 	{
 		this.TabComponent.Destroy(null);
 		this.TabViewComponent.DestroyTabViewComponent();
 	}
 
-	// Token: 0x0600ACC9 RID: 44233 RVA: 0x0026D680 File Offset: 0x0026B880
+	// Token: 0x060080B0 RID: 32944 RVA: 0x00277AFC File Offset: 0x00275CFC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -440,7 +448,7 @@ public class CalabashRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600ACCA RID: 44234 RVA: 0x0026D754 File Offset: 0x0026B954
+	// Token: 0x060080B1 RID: 32945 RVA: 0x00277BD0 File Offset: 0x00275DD0
 	private bool CheckTabViewCloseToRoot()
 	{
 		if (this.TabViewComponent != null && this.TabViewComponent.GetCurrentTabViewName(null) == EUiTabViewName.VisionRefineTabView)
@@ -451,7 +459,7 @@ public class CalabashRootView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600ACCB RID: 44235 RVA: 0x0026D7BC File Offset: 0x0026B9BC
+	// Token: 0x060080B2 RID: 32946 RVA: 0x00277C38 File Offset: 0x00275E38
 	private void OnEnterInternalView()
 	{
 		TabComponentWithCaptionItem<CalabashTabItem> tabComponent = this.TabComponent;
@@ -462,7 +470,7 @@ public class CalabashRootView : UiViewBase
 		tabComponent.HideItem();
 	}
 
-	// Token: 0x0600ACCC RID: 44236 RVA: 0x0026D7CE File Offset: 0x0026B9CE
+	// Token: 0x060080B3 RID: 32947 RVA: 0x00277C4A File Offset: 0x00275E4A
 	private void OnQuitInternalView()
 	{
 		TabComponentWithCaptionItem<CalabashTabItem> tabComponent = this.TabComponent;
@@ -473,7 +481,7 @@ public class CalabashRootView : UiViewBase
 		tabComponent.ShowItem();
 	}
 
-	// Token: 0x0600ACCD RID: 44237 RVA: 0x0026D7E0 File Offset: 0x0026B9E0
+	// Token: 0x060080B4 RID: 32948 RVA: 0x00277C5C File Offset: 0x00275E5C
 	private void OnRefreshTabShowState(bool isShow)
 	{
 		if (isShow)
@@ -484,14 +492,14 @@ public class CalabashRootView : UiViewBase
 		this.UiViewSequence.PlaySequence("SwitchB", false, null);
 	}
 
-	// Token: 0x0600ACCE RID: 44238 RVA: 0x0026D828 File Offset: 0x0026BA28
+	// Token: 0x060080B5 RID: 32949 RVA: 0x00277CA4 File Offset: 0x00275EA4
 	public bool GetIsVisionRecoveryTabViewOpen()
 	{
 		VisionRecoveryTabView visionRecoveryTabView = this.TabViewComponent.GetTabViewByTabKey(EUiTabViewName.VisionRecoveryTabView, null) as VisionRecoveryTabView;
 		return visionRecoveryTabView != null && visionRecoveryTabView.GetRootItem().IsUIActiveSelf();
 	}
 
-	// Token: 0x0600ACCF RID: 44239 RVA: 0x0026D864 File Offset: 0x0026BA64
+	// Token: 0x060080B6 RID: 32950 RVA: 0x00277CE0 File Offset: 0x00275EE0
 	public void ShowCostItemCaption(int[] itemIdList)
 	{
 		TabComponentWithCaptionItem<CalabashTabItem> tabComponent = this.TabComponent;
@@ -502,19 +510,19 @@ public class CalabashRootView : UiViewBase
 		tabComponent.SetCurrencyItemList(new List<int>(itemIdList));
 	}
 
-	// Token: 0x04004E94 RID: 20116
+	// Token: 0x04004F3D RID: 20285
 	private const int CALABASH_LEVEL_UP_HELP_ID = 48;
 
-	// Token: 0x04004E95 RID: 20117
+	// Token: 0x04004F3E RID: 20286
 	private const int CALABASH_COLLECT_HELP_ID = 47;
 
-	// Token: 0x04004E96 RID: 20118
+	// Token: 0x04004F3F RID: 20287
 	private const int VISION_RECOVERY_HELP_ID = 70;
 
-	// Token: 0x04004E97 RID: 20119
+	// Token: 0x04004F40 RID: 20288
 	private const int VISION_REFINE_HELP_ID = 512;
 
-	// Token: 0x04004E98 RID: 20120
+	// Token: 0x04004F41 RID: 20289
 	private Dictionary<string, int> viewHelpId = new Dictionary<string, int>
 	{
 		{
@@ -539,11 +547,11 @@ public class CalabashRootView : UiViewBase
 		}
 	};
 
-	// Token: 0x04004E99 RID: 20121
+	// Token: 0x04004F42 RID: 20290
 	[Nullable(2)]
 	private UiDynamicTab[] TabDataList;
 
-	// Token: 0x04004E9A RID: 20122
+	// Token: 0x04004F43 RID: 20291
 	[Nullable(new byte[]
 	{
 		2,
@@ -551,7 +559,7 @@ public class CalabashRootView : UiViewBase
 	})]
 	private TabComponentWithCaptionItem<CalabashTabItem> TabComponent;
 
-	// Token: 0x04004E9B RID: 20123
+	// Token: 0x04004F44 RID: 20292
 	[Nullable(new byte[]
 	{
 		2,
@@ -559,31 +567,31 @@ public class CalabashRootView : UiViewBase
 	})]
 	private TabViewComponent<object> TabViewComponent;
 
-	// Token: 0x04004E9C RID: 20124
+	// Token: 0x04004F45 RID: 20293
 	[Nullable(2)]
 	private ICalabashRootViewData CalabashCollectParams;
 
-	// Token: 0x04004E9D RID: 20125
+	// Token: 0x04004F46 RID: 20294
 	private bool IsViewFirstShow;
 
-	// Token: 0x04004E9E RID: 20126
+	// Token: 0x04004F47 RID: 20295
 	private int HelpId;
 
-	// Token: 0x02007D35 RID: 32053
+	// Token: 0x02006EBB RID: 28347
 	[NullableContext(0)]
 	private enum ECompDefine
 	{
-		// Token: 0x04028FFF RID: 167935
+		// Token: 0x0402432A RID: 148266
 		TabItem,
-		// Token: 0x04029000 RID: 167936
+		// Token: 0x0402432B RID: 148267
 		TabViewMountItem,
-		// Token: 0x04029001 RID: 167937
+		// Token: 0x0402432C RID: 148268
 		DetailToggle,
-		// Token: 0x04029002 RID: 167938
+		// Token: 0x0402432D RID: 148269
 		DetailItem,
-		// Token: 0x04029003 RID: 167939
+		// Token: 0x0402432E RID: 148270
 		BtnShared,
-		// Token: 0x04029004 RID: 167940
+		// Token: 0x0402432F RID: 148271
 		DetailToggleTxt
 	}
 }

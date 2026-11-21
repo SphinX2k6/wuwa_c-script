@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000137 RID: 311
+	// Token: 0x02000146 RID: 326
 	public class ConfigCalabashLevelByLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600074B RID: 1867 RVA: 0x00082DEB File Offset: 0x00080FEB
+		// Token: 0x060007A5 RID: 1957 RVA: 0x0008874F File Offset: 0x0008694F
 		static ConfigCalabashLevelByLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCalabashLevelByLevel.CreateStaticDefaultValue), new Action(ConfigCalabashLevelByLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600074C RID: 1868 RVA: 0x00082E0C File Offset: 0x0008100C
+		// Token: 0x060007A6 RID: 1958 RVA: 0x00088770 File Offset: 0x00086970
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCalabashLevelByLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600074D RID: 1869 RVA: 0x00082E8B File Offset: 0x0008108B
+		// Token: 0x060007A7 RID: 1959 RVA: 0x000887EF File Offset: 0x000869EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCalabashLevelByLevel.LogPair = null;
 			ConfigCalabashLevelByLevel.HandleId = 0;
 		}
 
-		// Token: 0x0600074E RID: 1870 RVA: 0x00082E99 File Offset: 0x00081099
+		// Token: 0x060007A8 RID: 1960 RVA: 0x000887FD File Offset: 0x000869FD
 		public static void Init()
 		{
 			ConfigCalabashLevelByLevel.HandleId = ConfigCommon.InitDataStatement(ConfigCalabashLevelByLevel.HandleId, "db_calabash.db", "select BinData from `CalabashLevel` where Level=?");
 		}
 
-		// Token: 0x0600074F RID: 1871 RVA: 0x00082EB4 File Offset: 0x000810B4
+		// Token: 0x060007A9 RID: 1961 RVA: 0x00088818 File Offset: 0x00086A18
 		public static CalabashLevel? GetConfig(int p0Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCalabashLevelByLevel.HandleId, ConfigCalabashLevelByLevel.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CalabashLevel?(rootAsCalabashLevel);
 		}
 
-		// Token: 0x04000865 RID: 2149
+		// Token: 0x040008CE RID: 2254
 		private const string DB = "db_calabash.db";
 
-		// Token: 0x04000866 RID: 2150
+		// Token: 0x040008CF RID: 2255
 		private const string FILE = "h.葫芦.xlsx";
 
-		// Token: 0x04000867 RID: 2151
+		// Token: 0x040008D0 RID: 2256
 		private const string TABLE = "CalabashLevel";
 
-		// Token: 0x04000868 RID: 2152
+		// Token: 0x040008D1 RID: 2257
 		private const string COMMAND = "select BinData from `CalabashLevel` where Level=?";
 
-		// Token: 0x04000869 RID: 2153
+		// Token: 0x040008D2 RID: 2258
 		private const string KEY_PREFIX = "CalabashLevelByLevel";
 
-		// Token: 0x0400086A RID: 2154
+		// Token: 0x040008D3 RID: 2259
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400086B RID: 2155
+		// Token: 0x040008D4 RID: 2260
 		private static int HandleId;
 	}
 }

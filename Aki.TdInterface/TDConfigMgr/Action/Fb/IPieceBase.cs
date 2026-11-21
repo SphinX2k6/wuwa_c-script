@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200296B RID: 10603
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C50 RID: 11344
 	public class IPieceBase
 	{
-		// Token: 0x0600EAFD RID: 60157 RVA: 0x00226457 File Offset: 0x00224657
+		// Token: 0x0600F973 RID: 63859 RVA: 0x00243B0F File Offset: 0x00241D0F
 		public static IPieceBase Create(IPieceBase? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049E9 RID: 18921
-		// (get) Token: 0x0600EAFE RID: 60158 RVA: 0x00226476 File Offset: 0x00224676
+		// Token: 0x17004D81 RID: 19841
+		// (get) Token: 0x0600F974 RID: 63860 RVA: 0x00243B2E File Offset: 0x00241D2E
 		public virtual IPieceIndex Index
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049EA RID: 18922
-		// (get) Token: 0x0600EAFF RID: 60159 RVA: 0x002264AA File Offset: 0x002246AA
+		// Token: 0x17004D82 RID: 19842
+		// (get) Token: 0x0600F975 RID: 63861 RVA: 0x00243B62 File Offset: 0x00241D62
 		public virtual bool Active
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008175 RID: 33141
+		// Token: 0x04008856 RID: 34902
 		private IPieceBase Instance;
 
-		// Token: 0x04008176 RID: 33142
+		// Token: 0x04008857 RID: 34903
 		[Nullable(2)]
 		private IPieceIndex _IndexCache;
 
-		// Token: 0x04008177 RID: 33143
+		// Token: 0x04008858 RID: 34904
 		private bool _IndexInited;
 	}
 }

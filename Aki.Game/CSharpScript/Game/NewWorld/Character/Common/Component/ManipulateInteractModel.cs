@@ -7,14 +7,14 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070C9 RID: 28873
+	// Token: 0x0200632D RID: 25389
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class ManipulateInteractModel : ModelBase
 	{
-		// Token: 0x17009CA6 RID: 40102
-		// (get) Token: 0x06046735 RID: 288565 RVA: 0x011B032F File Offset: 0x011AE52F
+		// Token: 0x170074B7 RID: 29879
+		// (get) Token: 0x0603D829 RID: 251945 RVA: 0x011CF6AB File Offset: 0x011CD8AB
 		public double StatueInteractCheckAngle
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009CA7 RID: 40103
-		// (get) Token: 0x06046736 RID: 288566 RVA: 0x011B0337 File Offset: 0x011AE537
+		// Token: 0x170074B8 RID: 29880
+		// (get) Token: 0x0603D82A RID: 251946 RVA: 0x011CF6B3 File Offset: 0x011CD8B3
 		public double StatueInteractMoveSpeed
 		{
 			get
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009CA8 RID: 40104
-		// (get) Token: 0x06046737 RID: 288567 RVA: 0x011B033F File Offset: 0x011AE53F
+		// Token: 0x170074B9 RID: 29881
+		// (get) Token: 0x0603D82B RID: 251947 RVA: 0x011CF6BB File Offset: 0x011CD8BB
 		public double StatueInteractMaxMoveTime
 		{
 			get
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046738 RID: 288568 RVA: 0x011B0347 File Offset: 0x011AE547
+		// Token: 0x0603D82C RID: 251948 RVA: 0x011CF6C3 File Offset: 0x011CD8C3
 		protected override bool OnInit()
 		{
 			this.GetCommonValue();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046739 RID: 288569 RVA: 0x011B036C File Offset: 0x011AE56C
+		// Token: 0x0603D82D RID: 251949 RVA: 0x011CF6E8 File Offset: 0x011CD8E8
 		private void GetCommonValue()
 		{
 			GlobalConfigFromCsv? config = ConfigGlobalConfigFromCsvByName.GetConfig("StatueInteract.CheckAngle", true);
@@ -71,14 +71,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604673A RID: 288570 RVA: 0x011B0407 File Offset: 0x011AE607
+		// Token: 0x0603D82E RID: 251950 RVA: 0x011CF783 File Offset: 0x011CD983
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove<bool, SceneItemExploreInteractComponent>(EEventName.OnOverlapSceneItemExploreInteractRange, new Action<bool, SceneItemExploreInteractComponent>(this.OnOverlapSceneItemExploreInteractRange));
 			return true;
 		}
 
-		// Token: 0x0604673B RID: 288571 RVA: 0x011B0428 File Offset: 0x011AE628
+		// Token: 0x0603D82F RID: 251951 RVA: 0x011CF7A4 File Offset: 0x011CD9A4
 		private void OnOverlapSceneItemExploreInteractRange(bool isEnter, SceneItemExploreInteractComponent exploreInteractComp)
 		{
 			HashSet<SceneItemExploreInteractComponent> hashSet = exploreInteractComp.IsShootSwordInteractPoint ? this.ShootSwordInRangePoints : this.InRangePoints;
@@ -90,8 +90,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			hashSet.Remove(exploreInteractComp);
 		}
 
-		// Token: 0x17009CA9 RID: 40105
-		// (get) Token: 0x0604673C RID: 288572 RVA: 0x011B0460 File Offset: 0x011AE660
+		// Token: 0x170074BA RID: 29882
+		// (get) Token: 0x0603D830 RID: 251952 RVA: 0x011CF7DC File Offset: 0x011CD9DC
 		public static ManipulateInteractModel Instance
 		{
 			get
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604673D RID: 288573 RVA: 0x011B0467 File Offset: 0x011AE667
+		// Token: 0x0603D831 RID: 251953 RVA: 0x011CF7E3 File Offset: 0x011CD9E3
 		public static ManipulateInteractModel GetOrCreateInstance()
 		{
 			if (ManipulateInteractModel._Instance == null)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return ManipulateInteractModel._Instance;
 		}
 
-		// Token: 0x0604673E RID: 288574 RVA: 0x011B047B File Offset: 0x011AE67B
+		// Token: 0x0603D832 RID: 251954 RVA: 0x011CF7F7 File Offset: 0x011CD9F7
 		public static bool CreateInstance()
 		{
 			if (ManipulateInteractModel._Instance != null)
@@ -121,39 +121,39 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604673F RID: 288575 RVA: 0x011B0491 File Offset: 0x011AE691
+		// Token: 0x0603D833 RID: 251955 RVA: 0x011CF80D File Offset: 0x011CDA0D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06046740 RID: 288576 RVA: 0x011B0493 File Offset: 0x011AE693
+		// Token: 0x0603D834 RID: 251956 RVA: 0x011CF80F File Offset: 0x011CDA0F
 		public static void ResetStaticDefaultValue()
 		{
 			ManipulateInteractModel._Instance = null;
 		}
 
-		// Token: 0x06046741 RID: 288577 RVA: 0x011B049B File Offset: 0x011AE69B
+		// Token: 0x0603D835 RID: 251957 RVA: 0x011CF817 File Offset: 0x011CDA17
 		static ManipulateInteractModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ManipulateInteractModel.CreateStaticDefaultValue), new Action(ManipulateInteractModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024EAF RID: 151215
+		// Token: 0x040209EE RID: 133614
 		private double StatueInteractCheckAngleInternal = -1.0;
 
-		// Token: 0x04024EB0 RID: 151216
+		// Token: 0x040209EF RID: 133615
 		private double StatueInteractMoveSpeedInternal = -1.0;
 
-		// Token: 0x04024EB1 RID: 151217
+		// Token: 0x040209F0 RID: 133616
 		private double StatueInteractMaxMoveTimeInternal = -1.0;
 
-		// Token: 0x04024EB2 RID: 151218
+		// Token: 0x040209F1 RID: 133617
 		public readonly HashSet<SceneItemExploreInteractComponent> InRangePoints = new HashSet<SceneItemExploreInteractComponent>();
 
-		// Token: 0x04024EB3 RID: 151219
+		// Token: 0x040209F2 RID: 133618
 		public readonly HashSet<SceneItemExploreInteractComponent> ShootSwordInRangePoints = new HashSet<SceneItemExploreInteractComponent>();
 
-		// Token: 0x04024EB4 RID: 151220
+		// Token: 0x040209F3 RID: 133619
 		[Nullable(2)]
 		private static ManipulateInteractModel _Instance;
 	}

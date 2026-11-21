@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006179 RID: 24953
+	// Token: 0x020050F7 RID: 20727
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeRoleSelectInfoItem : GridProxyAbstract<RoverlikeRoleSelectInfoItemData>
 	{
-		// Token: 0x0603F12D RID: 258349 RVA: 0x00F3DD60 File Offset: 0x00F3BF60
+		// Token: 0x06033DED RID: 212461 RVA: 0x00E84C28 File Offset: 0x00E82E28
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F12E RID: 258350 RVA: 0x00F3DDCC File Offset: 0x00F3BFCC
+		// Token: 0x06033DEE RID: 212462 RVA: 0x00E84C94 File Offset: 0x00E82E94
 		public override void Refresh(RoverlikeRoleSelectInfoItemData data, bool isSelected, int gridIndex)
 		{
 			UUIText text = base.GetText(0);
@@ -45,20 +45,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F12F RID: 258351 RVA: 0x00F3DE1B File Offset: 0x00F3C01B
+		// Token: 0x06033DEF RID: 212463 RVA: 0x00E84CE3 File Offset: 0x00E82EE3
 		public override object GetKey(RoverlikeRoleSelectInfoItemData data, int gridIndex)
 		{
 			return gridIndex;
 		}
 
-		// Token: 0x0200C3E3 RID: 50147
+		// Token: 0x0200ADCA RID: 44490
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B1C0 RID: 242112
+			// Token: 0x04035B21 RID: 219937
 			public const int TxtInfoTitle = 0;
 
-			// Token: 0x0403B1C1 RID: 242113
+			// Token: 0x04035B22 RID: 219938
 			public const int TxtInfoDescription = 1;
 		}
 	}

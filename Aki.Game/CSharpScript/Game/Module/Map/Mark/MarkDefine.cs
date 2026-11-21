@@ -5,13 +5,13 @@ using CSharpScript.Game.Module.Map.MapDefine;
 
 namespace CSharpScript.Game.Module.Map.Mark
 {
-	// Token: 0x020054BE RID: 21694
+	// Token: 0x020044A0 RID: 17568
 	[NullableContext(1)]
 	[Nullable(0)]
 	[StaticVariableRuleIgnore]
 	public class MarkDefine
 	{
-		// Token: 0x0401D338 RID: 119608
+		// Token: 0x04017DCF RID: 97743
 		public static readonly HashSet<EMarkType> PermanentUpdateTypeSet = new HashSet<EMarkType>
 		{
 			EMarkType.OtherPlayers,
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Module.Map.Mark
 			EMarkType.FishingShip
 		};
 
-		// Token: 0x0401D339 RID: 119609
+		// Token: 0x04017DD0 RID: 97744
 		public static readonly HashSet<EMarkType> CanOutOfBoundUpdateTypeSet = new HashSet<EMarkType>
 		{
 			EMarkType.OtherPlayers
 		};
 
-		// Token: 0x0401D33A RID: 119610
+		// Token: 0x04017DD1 RID: 97745
 		public static readonly HashSet<EMarkType> PermanentShowInGravityLayerTypeSet = new HashSet<EMarkType>
 		{
 			EMarkType.OtherPlayers,
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Map.Mark
 			EMarkType.CalmingWindBell
 		};
 
-		// Token: 0x0401D33B RID: 119611
+		// Token: 0x04017DD2 RID: 97746
 		public static readonly HashSet<EMarkType> AllFloorShowMarkTypeSet = new HashSet<EMarkType>
 		{
 			EMarkType.Custom,
@@ -46,50 +46,50 @@ namespace CSharpScript.Game.Module.Map.Mark
 			EMarkType.TreasureBoxDetector
 		};
 
-		// Token: 0x0401D33C RID: 119612
+		// Token: 0x04017DD3 RID: 97747
 		public const int HONAMI_SCAN_MARK_ITEM_ID = 157012;
 
-		// Token: 0x0200B732 RID: 46898
+		// Token: 0x0200A169 RID: 41321
 		[NullableContext(0)]
 		[RequiredMember]
 		public class FishingShipMarkCacheInfo
 		{
-			// Token: 0x0604F16A RID: 323946 RVA: 0x015228D2 File Offset: 0x01520AD2
+			// Token: 0x0604575E RID: 284510 RVA: 0x014DC798 File Offset: 0x014DA998
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public FishingShipMarkCacheInfo()
 			{
 			}
 
-			// Token: 0x040377AC RID: 227244
+			// Token: 0x04032203 RID: 205315
 			[RequiredMember]
 			public int InstanceId;
 
-			// Token: 0x040377AD RID: 227245
+			// Token: 0x04032204 RID: 205316
 			[RequiredMember]
 			public int TemplateId;
 
-			// Token: 0x040377AE RID: 227246
+			// Token: 0x04032205 RID: 205317
 			[RequiredMember]
 			public double PositionX;
 
-			// Token: 0x040377AF RID: 227247
+			// Token: 0x04032206 RID: 205318
 			[RequiredMember]
 			public double PositionY;
 
-			// Token: 0x040377B0 RID: 227248
+			// Token: 0x04032207 RID: 205319
 			[RequiredMember]
 			public double PositionZ;
 		}
 
-		// Token: 0x0200B733 RID: 46899
+		// Token: 0x0200A16A RID: 41322
 		[NullableContext(0)]
 		public class EMarkLockShowState
 		{
-			// Token: 0x040377B1 RID: 227249
+			// Token: 0x04032208 RID: 205320
 			public const int Hide = 0;
 
-			// Token: 0x040377B2 RID: 227250
+			// Token: 0x04032209 RID: 205321
 			public const int Show = 1;
 		}
 	}

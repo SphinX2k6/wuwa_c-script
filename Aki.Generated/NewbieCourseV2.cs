@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E81 RID: 3713
+	// Token: 0x02000F66 RID: 3942
 	public struct NewbieCourseV2 : IFlatbufferObject
 	{
-		// Token: 0x170022F3 RID: 8947
-		// (get) Token: 0x06009E59 RID: 40537 RVA: 0x0029BFE4 File Offset: 0x0029A1E4
+		// Token: 0x17002358 RID: 9048
+		// (get) Token: 0x0600A479 RID: 42105 RVA: 0x002B9678 File Offset: 0x002B7878
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009E5A RID: 40538 RVA: 0x0029BFF1 File Offset: 0x0029A1F1
+		// Token: 0x0600A47A RID: 42106 RVA: 0x002B9685 File Offset: 0x002B7885
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009E5B RID: 40539 RVA: 0x0029BFF8 File Offset: 0x0029A1F8
+		// Token: 0x0600A47B RID: 42107 RVA: 0x002B968C File Offset: 0x002B788C
 		public static NewbieCourseV2 GetRootAsNewbieCourseV2(ByteBuffer _bb)
 		{
 			return NewbieCourseV2.GetRootAsNewbieCourseV2(_bb, default(NewbieCourseV2));
 		}
 
-		// Token: 0x06009E5C RID: 40540 RVA: 0x0029C014 File Offset: 0x0029A214
+		// Token: 0x0600A47C RID: 42108 RVA: 0x002B96A8 File Offset: 0x002B78A8
 		public static NewbieCourseV2 GetRootAsNewbieCourseV2(ByteBuffer _bb, NewbieCourseV2 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009E5D RID: 40541 RVA: 0x0029C031 File Offset: 0x0029A231
+		// Token: 0x0600A47D RID: 42109 RVA: 0x002B96C5 File Offset: 0x002B78C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009E5E RID: 40542 RVA: 0x0029C040 File Offset: 0x0029A240
+		// Token: 0x0600A47E RID: 42110 RVA: 0x002B96D4 File Offset: 0x002B78D4
 		public NewbieCourseV2 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170022F4 RID: 8948
-		// (get) Token: 0x06009E5F RID: 40543 RVA: 0x0029C050 File Offset: 0x0029A250
+		// Token: 0x17002359 RID: 9049
+		// (get) Token: 0x0600A47F RID: 42111 RVA: 0x002B96E4 File Offset: 0x002B78E4
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022F5 RID: 8949
-		// (get) Token: 0x06009E60 RID: 40544 RVA: 0x0029C08C File Offset: 0x0029A28C
+		// Token: 0x1700235A RID: 9050
+		// (get) Token: 0x0600A480 RID: 42112 RVA: 0x002B9720 File Offset: 0x002B7920
 		public int ActivityId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022F6 RID: 8950
-		// (get) Token: 0x06009E61 RID: 40545 RVA: 0x0029C0C8 File Offset: 0x0029A2C8
+		// Token: 0x1700235B RID: 9051
+		// (get) Token: 0x0600A481 RID: 42113 RVA: 0x002B975C File Offset: 0x002B795C
 		public int TargetLevel
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022F7 RID: 8951
-		// (get) Token: 0x06009E62 RID: 40546 RVA: 0x0029C104 File Offset: 0x0029A304
+		// Token: 0x1700235C RID: 9052
+		// (get) Token: 0x0600A482 RID: 42114 RVA: 0x002B9798 File Offset: 0x002B7998
 		public int Reward
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009E63 RID: 40547 RVA: 0x0029C144 File Offset: 0x0029A344
+		// Token: 0x0600A483 RID: 42115 RVA: 0x002B97D8 File Offset: 0x002B79D8
 		public int WeaponPreviewList(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170022F8 RID: 8952
-		// (get) Token: 0x06009E64 RID: 40548 RVA: 0x0029C184 File Offset: 0x0029A384
+		// Token: 0x1700235D RID: 9053
+		// (get) Token: 0x0600A484 RID: 42116 RVA: 0x002B9818 File Offset: 0x002B7A18
 		public int WeaponPreviewListLength
 		{
 			get
@@ -135,37 +135,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009E65 RID: 40549 RVA: 0x0029C1B0 File Offset: 0x0029A3B0
+		// Token: 0x0600A485 RID: 42117 RVA: 0x002B9844 File Offset: 0x002B7A44
 		public Span<int> GetWeaponPreviewListBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06009E66 RID: 40550 RVA: 0x0029C1C0 File Offset: 0x0029A3C0
+		// Token: 0x0600A486 RID: 42118 RVA: 0x002B9854 File Offset: 0x002B7A54
 		public int[] GetWeaponPreviewListArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06009E67 RID: 40551 RVA: 0x0029C1D8 File Offset: 0x0029A3D8
+		// Token: 0x0600A487 RID: 42119 RVA: 0x002B986C File Offset: 0x002B7A6C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WeaponPreviewListIter()或GetWeaponPreviewListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WeaponPreviewList()
+		public int[] WeaponPreviewList()
 		{
-			NewbieCourseV2 newbieCourseV = this;
-			return newbieCourseV.GetWeaponPreviewListArray() ?? Array.Empty<int>();
+			return this.GetWeaponPreviewListArray();
 		}
 
-		// Token: 0x06009E68 RID: 40552 RVA: 0x0029C1FC File Offset: 0x0029A3FC
+		// Token: 0x0600A488 RID: 42120 RVA: 0x002B9874 File Offset: 0x002B7A74
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WeaponPreviewListIter()
+		public IEnumerable<int> WeaponPreviewListIter()
 		{
 			NewbieCourseV2.<WeaponPreviewListIter>d__22 <WeaponPreviewListIter>d__ = new NewbieCourseV2.<WeaponPreviewListIter>d__22(-2);
 			<WeaponPreviewListIter>d__.<>3__<>4__this = this;
 			return <WeaponPreviewListIter>d__;
 		}
 
-		// Token: 0x04004F2F RID: 20271
+		// Token: 0x04005514 RID: 21780
 		private Table __p;
 	}
 }

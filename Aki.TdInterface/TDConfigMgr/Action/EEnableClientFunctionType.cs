@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015D1 RID: 5585
+	// Token: 0x02001730 RID: 5936
 	[EnumExtensions]
 	public enum EEnableClientFunctionType
 	{
-		// Token: 0x04004A71 RID: 19057
+		// Token: 0x04004E2B RID: 20011
 		HealthBarDisplay
 	}
 }

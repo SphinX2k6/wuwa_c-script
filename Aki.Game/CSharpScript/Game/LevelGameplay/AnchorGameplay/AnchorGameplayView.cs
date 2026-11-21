@@ -14,7 +14,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 {
-	// Token: 0x02006F60 RID: 28512
+	// Token: 0x020060E1 RID: 24801
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 	})]
 	public class AnchorGameplayView : CommonQteViewBase<CommonQteDragContext>
 	{
-		// Token: 0x060455B2 RID: 284082 RVA: 0x0112AB8C File Offset: 0x01128D8C
+		// Token: 0x0603B760 RID: 243552 RVA: 0x010D496C File Offset: 0x010D2B6C
 		[NullableContext(1)]
 		public AnchorGameplayView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060455B3 RID: 284083 RVA: 0x0112ABE0 File Offset: 0x01128DE0
+		// Token: 0x0603B761 RID: 243553 RVA: 0x010D49C0 File Offset: 0x010D2BC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060455B4 RID: 284084 RVA: 0x0112AC70 File Offset: 0x01128E70
+		// Token: 0x0603B762 RID: 243554 RVA: 0x010D4A50 File Offset: 0x010D2C50
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AnchorGameplayView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -57,14 +57,14 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060455B5 RID: 284085 RVA: 0x0112ACB3 File Offset: 0x01128EB3
+		// Token: 0x0603B763 RID: 243555 RVA: 0x010D4A93 File Offset: 0x010D2C93
 		protected override void OnAddEventListener()
 		{
 			this.OnInputControllerChange(EInputControllerType.None, EInputControllerType.None);
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x060455B6 RID: 284086 RVA: 0x0112ACDC File Offset: 0x01128EDC
+		// Token: 0x0603B764 RID: 243556 RVA: 0x010D4ABC File Offset: 0x010D2CBC
 		private void InitDrag()
 		{
 			this.DraggableComponent = base.GetDraggable(0);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			this.BgItem = (((owner != null) ? owner.GetComponentByClass(UUIItem.StaticClass()) : null) as UUIItem);
 		}
 
-		// Token: 0x060455B7 RID: 284087 RVA: 0x0112AD78 File Offset: 0x01128F78
+		// Token: 0x0603B765 RID: 243557 RVA: 0x010D4B58 File Offset: 0x010D2D58
 		private void InitConfig()
 		{
 			this.MoveDistance = ConfigCommonParamById.GetIntConfig("AnchorBtnMoveDistance").Value;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			this.EndPerformPercentagePerMs = 1f / (float)this.EndPerformTime;
 		}
 
-		// Token: 0x060455B8 RID: 284088 RVA: 0x0112AE1C File Offset: 0x0112901C
+		// Token: 0x0603B766 RID: 243558 RVA: 0x010D4BFC File Offset: 0x010D2DFC
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			this.BgItem.SetUIActive(false);
 		}
 
-		// Token: 0x060455B9 RID: 284089 RVA: 0x0112AEEC File Offset: 0x011290EC
+		// Token: 0x0603B767 RID: 243559 RVA: 0x010D4CCC File Offset: 0x010D2ECC
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x060455BA RID: 284090 RVA: 0x0112AF0A File Offset: 0x0112910A
+		// Token: 0x0603B768 RID: 243560 RVA: 0x010D4CEA File Offset: 0x010D2EEA
 		protected override void OnHandleQteEnd()
 		{
 			if (this.CurPercentage != 1f)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			}
 		}
 
-		// Token: 0x060455BB RID: 284091 RVA: 0x0112AF48 File Offset: 0x01129148
+		// Token: 0x0603B769 RID: 243561 RVA: 0x010D4D28 File Offset: 0x010D2F28
 		private unsafe void OnPointerDrag(ULGUIPointerEventData eventData)
 		{
 			if (this.IsQteEnd || this.IsQtePause || this.MoveCurve == null || !this.ClickedBtn)
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			this.LastDragPos.DeepCopy(vector2D);
 		}
 
-		// Token: 0x060455BC RID: 284092 RVA: 0x0112B21C File Offset: 0x0112941C
+		// Token: 0x0603B76A RID: 243562 RVA: 0x010D4FFC File Offset: 0x010D31FC
 		private void OnPointerBeginDrag(ULGUIPointerEventData eventData)
 		{
 			FVector pointerPosition = eventData.pointerPosition;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			Log.Instance.Info(ELogModule.Temp, ELogAuthor.CH, "[AnchorGameplayView] OnPointerBeginDrag", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060455BD RID: 284093 RVA: 0x0112B25C File Offset: 0x0112945C
+		// Token: 0x0603B76B RID: 243563 RVA: 0x010D503C File Offset: 0x010D323C
 		[NullableContext(1)]
 		private void CheckFinish(ULGUIPointerEventData data)
 		{
@@ -227,21 +227,21 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			this.CommonQteContext.QteSuccess();
 		}
 
-		// Token: 0x060455BE RID: 284094 RVA: 0x0112B2E4 File Offset: 0x011294E4
+		// Token: 0x0603B76C RID: 243564 RVA: 0x010D50C4 File Offset: 0x010D32C4
 		private void OnPress()
 		{
 			this.ClickedBtn = true;
 			Log.Instance.Info(ELogModule.Temp, ELogAuthor.CH, "[AnchorGameplayView]OnPress called", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060455BF RID: 284095 RVA: 0x0112B314 File Offset: 0x01129514
+		// Token: 0x0603B76D RID: 243565 RVA: 0x010D50F4 File Offset: 0x010D32F4
 		private void OnRelease()
 		{
 			this.ClickedBtn = false;
 			Log.Instance.Info(ELogModule.Temp, ELogAuthor.CH, "[AnchorGameplayView]OnRelease called", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060455C0 RID: 284096 RVA: 0x0112B344 File Offset: 0x01129544
+		// Token: 0x0603B76E RID: 243566 RVA: 0x010D5124 File Offset: 0x010D3324
 		[NullableContext(1)]
 		public override void SetQteContext(CommonQteContextBase context)
 		{
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			this.PlayQteStart();
 		}
 
-		// Token: 0x060455C1 RID: 284097 RVA: 0x0112B3D8 File Offset: 0x011295D8
+		// Token: 0x0603B76F RID: 243567 RVA: 0x010D51B8 File Offset: 0x010D33B8
 		protected override void OnTick(float delta)
 		{
 			if (this.PlayingEndPerform)
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			}
 		}
 
-		// Token: 0x060455C2 RID: 284098 RVA: 0x0112B49C File Offset: 0x0112969C
+		// Token: 0x0603B770 RID: 243568 RVA: 0x010D527C File Offset: 0x010D347C
 		private void TickEndPerform(float delta)
 		{
 			this.CurPercentage += delta * this.EndPerformPercentagePerMs;
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			}
 		}
 
-		// Token: 0x060455C3 RID: 284099 RVA: 0x0112B524 File Offset: 0x01129724
+		// Token: 0x0603B771 RID: 243569 RVA: 0x010D5304 File Offset: 0x010D3504
 		protected override void OnPlayQteStart()
 		{
 			this.BgItem.SetUIActive(true);
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			levelSequencePlayer.PlayLevelSequenceByName("Start01", false, null, false);
 		}
 
-		// Token: 0x060455C4 RID: 284100 RVA: 0x0112B560 File Offset: 0x01129760
+		// Token: 0x0603B772 RID: 243570 RVA: 0x010D5340 File Offset: 0x010D3540
 		[NullableContext(1)]
 		private void OnSequenceEndEvent(string name)
 		{
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			this.IsQteInteractive = true;
 		}
 
-		// Token: 0x060455C5 RID: 284101 RVA: 0x0112B5E0 File Offset: 0x011297E0
+		// Token: 0x0603B773 RID: 243571 RVA: 0x010D53C0 File Offset: 0x010D35C0
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.CheckFinish(null);
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			}
 		}
 
-		// Token: 0x060455C6 RID: 284102 RVA: 0x0112B62F File Offset: 0x0112982F
+		// Token: 0x0603B774 RID: 243572 RVA: 0x010D540F File Offset: 0x010D360F
 		protected override void OnRemoveEventListener()
 		{
 			if (Info.Instance.IsInGamepad())
@@ -406,19 +406,19 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			}
 		}
 
-		// Token: 0x060455C7 RID: 284103 RVA: 0x0112B643 File Offset: 0x01129843
+		// Token: 0x0603B775 RID: 243573 RVA: 0x010D5423 File Offset: 0x010D3623
 		private void BindGamepadInput()
 		{
 			InputDistributeController.Instance.BindAxis("UiScroll1", new TInputHandle<float>(this.OnGamepadInput));
 		}
 
-		// Token: 0x060455C8 RID: 284104 RVA: 0x0112B660 File Offset: 0x01129860
+		// Token: 0x0603B776 RID: 243574 RVA: 0x010D5440 File Offset: 0x010D3640
 		private void UnbindGamepadInput()
 		{
 			InputDistributeController.Instance.UnBindAxis("UiScroll1", new TInputHandle<float>(this.OnGamepadInput));
 		}
 
-		// Token: 0x060455C9 RID: 284105 RVA: 0x0112B680 File Offset: 0x01129880
+		// Token: 0x0603B777 RID: 243575 RVA: 0x010D5460 File Offset: 0x010D3660
 		[NullableContext(1)]
 		private void OnGamepadInput(string axisName, float value, InputIdentification inputIdentification)
 		{
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			}
 		}
 
-		// Token: 0x060455CA RID: 284106 RVA: 0x0112B758 File Offset: 0x01129958
+		// Token: 0x0603B778 RID: 243576 RVA: 0x010D5538 File Offset: 0x010D3738
 		protected override void RefreshUiOffset()
 		{
 			if (this.CommonQteContext != null)
@@ -465,75 +465,75 @@ namespace CSharpScript.Game.LevelGamePlay.AnchorGameplay
 			}
 		}
 
-		// Token: 0x060455CB RID: 284107 RVA: 0x0112B7B6 File Offset: 0x011299B6
+		// Token: 0x0603B779 RID: 243577 RVA: 0x010D5596 File Offset: 0x010D3796
 		protected override bool IsUseBaseAction()
 		{
 			return false;
 		}
 
-		// Token: 0x040242EB RID: 148203
+		// Token: 0x0401F5A0 RID: 128416
 		private UUIItem BgItem;
 
-		// Token: 0x040242EC RID: 148204
+		// Token: 0x0401F5A1 RID: 128417
 		private UUIDraggableComponent DraggableComponent;
 
-		// Token: 0x040242ED RID: 148205
+		// Token: 0x0401F5A2 RID: 128418
 		private UUIItem MoveItem;
 
-		// Token: 0x040242EE RID: 148206
+		// Token: 0x0401F5A3 RID: 128419
 		private UUIButtonComponent MoveItemBtnComp;
 
-		// Token: 0x040242EF RID: 148207
+		// Token: 0x0401F5A4 RID: 128420
 		private InputMultiKeyItem InputKeyItem;
 
-		// Token: 0x040242F0 RID: 148208
+		// Token: 0x0401F5A5 RID: 128421
 		private bool ClickedBtn;
 
-		// Token: 0x040242F1 RID: 148209
+		// Token: 0x0401F5A6 RID: 128422
 		[Nullable(1)]
 		private readonly Vector2D LastDragPos = Vector2D.Create();
 
-		// Token: 0x040242F2 RID: 148210
+		// Token: 0x0401F5A7 RID: 128423
 		private float CurPercentage;
 
-		// Token: 0x040242F3 RID: 148211
+		// Token: 0x0401F5A8 RID: 128424
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x040242F4 RID: 148212
+		// Token: 0x0401F5A9 RID: 128425
 		private int MoveDistance = 560;
 
-		// Token: 0x040242F5 RID: 148213
+		// Token: 0x0401F5AA RID: 128426
 		private UCurveVector MoveCurve;
 
-		// Token: 0x040242F6 RID: 148214
+		// Token: 0x0401F5AB RID: 128427
 		private int DetachOffset = 100;
 
-		// Token: 0x040242F7 RID: 148215
+		// Token: 0x0401F5AC RID: 128428
 		private float GamepadMovementFactor = -0.05f;
 
-		// Token: 0x040242F8 RID: 148216
+		// Token: 0x0401F5AD RID: 128429
 		private int EndPerformTime = 500;
 
-		// Token: 0x040242F9 RID: 148217
+		// Token: 0x0401F5AE RID: 128430
 		private float EndPerformPercentagePerMs = -1f;
 
-		// Token: 0x040242FA RID: 148218
+		// Token: 0x0401F5AF RID: 128431
 		private bool PlayingEndPerform;
 
-		// Token: 0x040242FB RID: 148219
+		// Token: 0x0401F5B0 RID: 128432
 		private Action OnFinishEndPerformCallback;
 
-		// Token: 0x0200CD97 RID: 52631
+		// Token: 0x0200B989 RID: 47497
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403DF24 RID: 253732
+			// Token: 0x04039353 RID: 234323
 			public const int DraggableArea = 0;
 
-			// Token: 0x0403DF25 RID: 253733
+			// Token: 0x04039354 RID: 234324
 			public const int MoveItem = 1;
 
-			// Token: 0x0403DF26 RID: 253734
+			// Token: 0x04039355 RID: 234325
 			public const int KeyItem = 2;
 		}
 	}

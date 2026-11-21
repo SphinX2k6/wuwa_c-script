@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DCB RID: 7627
+// Token: 0x0200128D RID: 4749
 public class GuideTutorialPagePanel : UiPanelBase
 {
-	// Token: 0x0600E812 RID: 59410 RVA: 0x0036D774 File Offset: 0x0036B974
+	// Token: 0x0600BC31 RID: 48177 RVA: 0x00379474 File Offset: 0x00377674
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -27,7 +27,7 @@ public class GuideTutorialPagePanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E813 RID: 59411 RVA: 0x0036D81F File Offset: 0x0036BA1F
+	// Token: 0x0600BC32 RID: 48178 RVA: 0x0037951F File Offset: 0x0037771F
 	protected override void OnStart()
 	{
 		this.GuideDescribeNew = new GuideDescribeNew(base.GetText(2));
@@ -35,14 +35,14 @@ public class GuideTutorialPagePanel : UiPanelBase
 		base.GetTexture(3).SetUIActive(false);
 	}
 
-	// Token: 0x0600E814 RID: 59412 RVA: 0x0036D851 File Offset: 0x0036BA51
+	// Token: 0x0600BC33 RID: 48179 RVA: 0x00379551 File Offset: 0x00377751
 	protected override void OnBeforeDestroy()
 	{
 		this.LevelSequencePlayer.Clear();
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0600E815 RID: 59413 RVA: 0x0036D865 File Offset: 0x0036BA65
+	// Token: 0x0600BC34 RID: 48180 RVA: 0x00379565 File Offset: 0x00377765
 	[NullableContext(1)]
 	public void Init(UUIItem uiItem)
 	{
@@ -52,7 +52,7 @@ public class GuideTutorialPagePanel : UiPanelBase
 		base.GetTexture(3).SetUIActive(false);
 	}
 
-	// Token: 0x0600E816 RID: 59414 RVA: 0x0036D8A4 File Offset: 0x0036BAA4
+	// Token: 0x0600BC35 RID: 48181 RVA: 0x003795A4 File Offset: 0x003777A4
 	public void RefreshPage(GuideTutorialPage? pageConfig)
 	{
 		if (pageConfig == null)
@@ -79,30 +79,30 @@ public class GuideTutorialPagePanel : UiPanelBase
 		this.GuideDescribeNew.SetUpText(pageConfig.Value.Content, pageConfig.Value.Button());
 	}
 
-	// Token: 0x0600E817 RID: 59415 RVA: 0x0036D990 File Offset: 0x0036BB90
+	// Token: 0x0600BC36 RID: 48182 RVA: 0x00379690 File Offset: 0x00377890
 	public void PlayAnime(bool isShow)
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName(isShow ? "Show" : "Hide", false, null, false);
 	}
 
-	// Token: 0x04006B5A RID: 27482
+	// Token: 0x04006C3B RID: 27707
 	[Nullable(2)]
 	private GuideDescribeNew GuideDescribeNew;
 
-	// Token: 0x04006B5B RID: 27483
+	// Token: 0x04006C3C RID: 27708
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x020083A9 RID: 33705
+	// Token: 0x02007530 RID: 30000
 	private enum ETutorialsPageComponents
 	{
-		// Token: 0x0402AE19 RID: 175641
+		// Token: 0x0402613E RID: 155966
 		PnlOffset,
-		// Token: 0x0402AE1A RID: 175642
+		// Token: 0x0402613F RID: 155967
 		TxtSubTitle,
-		// Token: 0x0402AE1B RID: 175643
+		// Token: 0x04026140 RID: 155968
 		TxtTutorials,
-		// Token: 0x0402AE1C RID: 175644
+		// Token: 0x04026141 RID: 155969
 		TexPicture
 	}
 }

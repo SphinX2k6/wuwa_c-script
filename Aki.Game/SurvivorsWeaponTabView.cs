@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Util;
@@ -8,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B32 RID: 11058
+// Token: 0x020020AE RID: 8366
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,8 +17,8 @@ using UnrealEngine;
 })]
 public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem, SurvivorsHandbookWeaponData>
 {
-	// Token: 0x17001E9F RID: 7839
-	// (get) Token: 0x06016F37 RID: 94007 RVA: 0x005D31AB File Offset: 0x005D13AB
+	// Token: 0x17001EF7 RID: 7927
+	// (get) Token: 0x06014968 RID: 84328 RVA: 0x005FFD1F File Offset: 0x005FDF1F
 	protected override ESurvivorsRogueItemType ItemType
 	{
 		get
@@ -28,7 +27,7 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 		}
 	}
 
-	// Token: 0x06016F38 RID: 94008 RVA: 0x005D31B0 File Offset: 0x005D13B0
+	// Token: 0x06014969 RID: 84329 RVA: 0x005FFD24 File Offset: 0x005FDF24
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,19 +45,19 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06016F39 RID: 94009 RVA: 0x005D3299 File Offset: 0x005D1499
+	// Token: 0x0601496A RID: 84330 RVA: 0x005FFE0D File Offset: 0x005FE00D
 	protected override int GetLoopItemIndex()
 	{
 		return 3;
 	}
 
-	// Token: 0x06016F3A RID: 94010 RVA: 0x005D329C File Offset: 0x005D149C
+	// Token: 0x0601496B RID: 84331 RVA: 0x005FFE10 File Offset: 0x005FE010
 	protected override int GetLoopScrollComponentIndex()
 	{
 		return 1;
 	}
 
-	// Token: 0x06016F3B RID: 94011 RVA: 0x005D32A0 File Offset: 0x005D14A0
+	// Token: 0x0601496C RID: 84332 RVA: 0x005FFE14 File Offset: 0x005FE014
 	protected override UniTask InitSubComponents()
 	{
 		SurvivorsWeaponTabView.<InitSubComponents>d__6 <InitSubComponents>d__;
@@ -69,7 +68,7 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 		return <InitSubComponents>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016F3C RID: 94012 RVA: 0x005D32E3 File Offset: 0x005D14E3
+	// Token: 0x0601496D RID: 84333 RVA: 0x005FFE57 File Offset: 0x005FE057
 	protected override void OnTriggerSequenceStartEvent()
 	{
 		GenericScrollViewNew<SurvivorsWeaponDetailItem, int> weaponEvolveScroll = this.WeaponEvolveScroll;
@@ -80,13 +79,13 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 		weaponEvolveScroll.GetGenericLayout().PlayGridAnim();
 	}
 
-	// Token: 0x06016F3D RID: 94013 RVA: 0x005D32FA File Offset: 0x005D14FA
+	// Token: 0x0601496E RID: 84334 RVA: 0x005FFE6E File Offset: 0x005FE06E
 	private SurvivorsWeaponDetailItem CreateWeaponEvolveItem()
 	{
 		return new SurvivorsWeaponDetailItem();
 	}
 
-	// Token: 0x06016F3E RID: 94014 RVA: 0x005D3301 File Offset: 0x005D1501
+	// Token: 0x0601496F RID: 84335 RVA: 0x005FFE75 File Offset: 0x005FE075
 	protected override SurvivorWeaponTabItem CreateLoopItem()
 	{
 		return new SurvivorWeaponTabItem
@@ -96,7 +95,7 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 		};
 	}
 
-	// Token: 0x06016F3F RID: 94015 RVA: 0x005D332C File Offset: 0x005D152C
+	// Token: 0x06014970 RID: 84336 RVA: 0x005FFEA0 File Offset: 0x005FE0A0
 	[PreserveBaseOverrides]
 	protected new virtual List<SurvivorsHandbookWeaponData> GenerateItemUiDataList()
 	{
@@ -119,7 +118,7 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 		return list;
 	}
 
-	// Token: 0x06016F40 RID: 94016 RVA: 0x005D3408 File Offset: 0x005D1608
+	// Token: 0x06014971 RID: 84337 RVA: 0x005FFF7C File Offset: 0x005FE17C
 	private void SortUiDataList(List<SurvivorsHandbookWeaponData> uiDataList)
 	{
 		uiDataList.Sort(delegate(SurvivorsHandbookWeaponData a, SurvivorsHandbookWeaponData b)
@@ -149,7 +148,7 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 		});
 	}
 
-	// Token: 0x06016F41 RID: 94017 RVA: 0x005D3430 File Offset: 0x005D1630
+	// Token: 0x06014972 RID: 84338 RVA: 0x005FFFA4 File Offset: 0x005FE1A4
 	protected override void OnSelectItem(SurvivorsHandbookWeaponData data, bool isFromClick = true)
 	{
 		SurvivorsWeapon value = SurvivorsRogueConfig.Instance.GetSurvivorsWeapon(data.Id).Value;
@@ -165,7 +164,7 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 				text.ShowTextNew(value.Name);
 			}
 		}
-		this.WeaponEvolveScroll.RefreshByData(this.GenerateWeaponEvolveUiDataList(data).ToList<int>(), delegate
+		this.WeaponEvolveScroll.RefreshByData(this.GenerateWeaponEvolveUiDataList(data), delegate
 		{
 			foreach (SurvivorsWeaponDetailItem survivorsWeaponDetailItem in this.WeaponEvolveScroll.GetScrollItemList())
 			{
@@ -175,7 +174,7 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 		}, isFromClick);
 	}
 
-	// Token: 0x06016F42 RID: 94018 RVA: 0x005D34B0 File Offset: 0x005D16B0
+	// Token: 0x06014973 RID: 84339 RVA: 0x00600020 File Offset: 0x005FE220
 	private IReadOnlyList<int> GenerateWeaponEvolveUiDataList(SurvivorsHandbookWeaponData data)
 	{
 		int id = data.Id;
@@ -199,7 +198,7 @@ public class SurvivorsWeaponTabView : SurvivorsTabViewBase<SurvivorWeaponTabItem
 		return list;
 	}
 
-	// Token: 0x0400AAE8 RID: 43752
+	// Token: 0x0400AEEE RID: 44782
 	[Nullable(new byte[]
 	{
 		2,

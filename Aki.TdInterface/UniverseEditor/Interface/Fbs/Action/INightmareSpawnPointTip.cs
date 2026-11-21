@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BA9 RID: 27561
+	// Token: 0x020072F5 RID: 29429
 	public struct INightmareSpawnPointTip : IFlatbufferObject
 	{
-		// Token: 0x1700CCD6 RID: 52438
-		// (get) Token: 0x06030685 RID: 198277 RVA: 0x00693131 File Offset: 0x00691331
+		// Token: 0x1700D7C2 RID: 55234
+		// (get) Token: 0x060334FF RID: 210175 RVA: 0x006EBAD1 File Offset: 0x006E9CD1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030686 RID: 198278 RVA: 0x0069313E File Offset: 0x0069133E
+		// Token: 0x06033500 RID: 210176 RVA: 0x006EBADE File Offset: 0x006E9CDE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030687 RID: 198279 RVA: 0x00693148 File Offset: 0x00691348
+		// Token: 0x06033501 RID: 210177 RVA: 0x006EBAE8 File Offset: 0x006E9CE8
 		public static INightmareSpawnPointTip GetRootAsINightmareSpawnPointTip(ByteBuffer _bb)
 		{
 			return INightmareSpawnPointTip.GetRootAsINightmareSpawnPointTip(_bb, default(INightmareSpawnPointTip));
 		}
 
-		// Token: 0x06030688 RID: 198280 RVA: 0x00693164 File Offset: 0x00691364
+		// Token: 0x06033502 RID: 210178 RVA: 0x006EBB04 File Offset: 0x006E9D04
 		public static INightmareSpawnPointTip GetRootAsINightmareSpawnPointTip(ByteBuffer _bb, INightmareSpawnPointTip obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030689 RID: 198281 RVA: 0x00693181 File Offset: 0x00691381
+		// Token: 0x06033503 RID: 210179 RVA: 0x006EBB21 File Offset: 0x006E9D21
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603068A RID: 198282 RVA: 0x00693190 File Offset: 0x00691390
+		// Token: 0x06033504 RID: 210180 RVA: 0x006EBB30 File Offset: 0x006E9D30
 		public INightmareSpawnPointTip __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CCD7 RID: 52439
-		// (get) Token: 0x0603068B RID: 198283 RVA: 0x006931A0 File Offset: 0x006913A0
+		// Token: 0x1700D7C3 RID: 55235
+		// (get) Token: 0x06033505 RID: 210181 RVA: 0x006EBB40 File Offset: 0x006E9D40
 		public ECommonTipType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CCD8 RID: 52440
-		// (get) Token: 0x0603068C RID: 198284 RVA: 0x006931DC File Offset: 0x006913DC
+		// Token: 0x1700D7C4 RID: 55236
+		// (get) Token: 0x06033506 RID: 210182 RVA: 0x006EBB7C File Offset: 0x006E9D7C
 		public string TidMainText
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603068D RID: 198285 RVA: 0x00693213 File Offset: 0x00691413
+		// Token: 0x06033507 RID: 210183 RVA: 0x006EBBB3 File Offset: 0x006E9DB3
 		public Span<byte> GetTidMainTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0603068E RID: 198286 RVA: 0x00693222 File Offset: 0x00691422
+		// Token: 0x06033508 RID: 210184 RVA: 0x006EBBC2 File Offset: 0x006E9DC2
 		public byte[] GetTidMainTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700CCD9 RID: 52441
-		// (get) Token: 0x0603068F RID: 198287 RVA: 0x00693230 File Offset: 0x00691430
+		// Token: 0x1700D7C5 RID: 55237
+		// (get) Token: 0x06033509 RID: 210185 RVA: 0x006EBBD0 File Offset: 0x006E9DD0
 		public string TidSubText
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030690 RID: 198288 RVA: 0x00693267 File Offset: 0x00691467
+		// Token: 0x0603350A RID: 210186 RVA: 0x006EBC07 File Offset: 0x006E9E07
 		public Span<byte> GetTidSubTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06030691 RID: 198289 RVA: 0x00693276 File Offset: 0x00691476
+		// Token: 0x0603350B RID: 210187 RVA: 0x006EBC16 File Offset: 0x006E9E16
 		public byte[] GetTidSubTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x06030692 RID: 198290 RVA: 0x00693284 File Offset: 0x00691484
+		// Token: 0x0603350C RID: 210188 RVA: 0x006EBC24 File Offset: 0x006E9E24
 		public static Offset<INightmareSpawnPointTip> CreateINightmareSpawnPointTip(FlatBufferBuilder builder, ECommonTipType Type = ECommonTipType.ChallengeCondition, StringOffset TidMainTextOffset = default(StringOffset), StringOffset TidSubTextOffset = default(StringOffset))
 		{
 			builder.StartTable(3);
@@ -126,37 +126,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INightmareSpawnPointTip.EndINightmareSpawnPointTip(builder);
 		}
 
-		// Token: 0x06030693 RID: 198291 RVA: 0x006932A8 File Offset: 0x006914A8
+		// Token: 0x0603350D RID: 210189 RVA: 0x006EBC48 File Offset: 0x006E9E48
 		public static void StartINightmareSpawnPointTip(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06030694 RID: 198292 RVA: 0x006932B1 File Offset: 0x006914B1
+		// Token: 0x0603350E RID: 210190 RVA: 0x006EBC51 File Offset: 0x006E9E51
 		public static void AddType(FlatBufferBuilder builder, ECommonTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030695 RID: 198293 RVA: 0x006932BC File Offset: 0x006914BC
+		// Token: 0x0603350F RID: 210191 RVA: 0x006EBC5C File Offset: 0x006E9E5C
 		public static void AddTidMainText(FlatBufferBuilder builder, StringOffset tidMainTextOffset)
 		{
 			builder.AddOffset(1, tidMainTextOffset.Value, 0);
 		}
 
-		// Token: 0x06030696 RID: 198294 RVA: 0x006932CC File Offset: 0x006914CC
+		// Token: 0x06033510 RID: 210192 RVA: 0x006EBC6C File Offset: 0x006E9E6C
 		public static void AddTidSubText(FlatBufferBuilder builder, StringOffset tidSubTextOffset)
 		{
 			builder.AddOffset(2, tidSubTextOffset.Value, 0);
 		}
 
-		// Token: 0x06030697 RID: 198295 RVA: 0x006932DC File Offset: 0x006914DC
+		// Token: 0x06033511 RID: 210193 RVA: 0x006EBC7C File Offset: 0x006E9E7C
 		public static Offset<INightmareSpawnPointTip> EndINightmareSpawnPointTip(FlatBufferBuilder builder)
 		{
 			return new Offset<INightmareSpawnPointTip>(builder.EndTable());
 		}
 
-		// Token: 0x06030698 RID: 198296 RVA: 0x006932EC File Offset: 0x006914EC
+		// Token: 0x06033512 RID: 210194 RVA: 0x006EBC8C File Offset: 0x006E9E8C
 		public INightmareSpawnPointTipT UnPack()
 		{
 			INightmareSpawnPointTipT nightmareSpawnPointTipT = new INightmareSpawnPointTipT();
@@ -164,7 +164,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return nightmareSpawnPointTipT;
 		}
 
-		// Token: 0x06030699 RID: 198297 RVA: 0x00693307 File Offset: 0x00691507
+		// Token: 0x06033513 RID: 210195 RVA: 0x006EBCA7 File Offset: 0x006E9EA7
 		public void UnPackTo(INightmareSpawnPointTipT _o)
 		{
 			_o.Type = this.Type;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.TidSubText = this.TidSubText;
 		}
 
-		// Token: 0x0603069A RID: 198298 RVA: 0x00693330 File Offset: 0x00691530
+		// Token: 0x06033514 RID: 210196 RVA: 0x006EBCD0 File Offset: 0x006E9ED0
 		public static Offset<INightmareSpawnPointTip> Pack(FlatBufferBuilder builder, INightmareSpawnPointTipT _o)
 		{
 			if (_o == null)
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INightmareSpawnPointTip.CreateINightmareSpawnPointTip(builder, _o.Type, tidMainTextOffset, tidSubTextOffset);
 		}
 
-		// Token: 0x0401147A RID: 70778
+		// Token: 0x040123AC RID: 74668
 		private Table __p;
 	}
 }

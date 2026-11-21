@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058A9 RID: 22697
+	// Token: 0x02004881 RID: 18561
 	public class InstanceDungeonScoreListItem : UiPanelBase
 	{
-		// Token: 0x06039BC2 RID: 236482 RVA: 0x00DB8894 File Offset: 0x00DB6A94
+		// Token: 0x0602EAE5 RID: 191205 RVA: 0x00D077AC File Offset: 0x00D059AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039BC3 RID: 236483 RVA: 0x00DB89E8 File Offset: 0x00DB6BE8
+		// Token: 0x0602EAE6 RID: 191206 RVA: 0x00D07900 File Offset: 0x00D05B00
 		[NullableContext(2)]
 		public void RefreshItem(InstanceDungeonScoreListItemData data)
 		{
@@ -83,26 +83,26 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x0200BB11 RID: 47889
+		// Token: 0x0200A52A RID: 42282
 		private enum EComponent
 		{
-			// Token: 0x0403882A RID: 231466
+			// Token: 0x0403322B RID: 209451
 			FullRootItem,
-			// Token: 0x0403882B RID: 231467
+			// Token: 0x0403322C RID: 209452
 			TitleText1,
-			// Token: 0x0403882C RID: 231468
+			// Token: 0x0403322D RID: 209453
 			ScoreText1,
-			// Token: 0x0403882D RID: 231469
+			// Token: 0x0403322E RID: 209454
 			TitleText2,
-			// Token: 0x0403882E RID: 231470
+			// Token: 0x0403322F RID: 209455
 			ScoreText2,
-			// Token: 0x0403882F RID: 231471
+			// Token: 0x04033230 RID: 209456
 			TitleText3,
-			// Token: 0x04038830 RID: 231472
+			// Token: 0x04033231 RID: 209457
 			ScoreText3,
-			// Token: 0x04038831 RID: 231473
+			// Token: 0x04033232 RID: 209458
 			EmptyRootItem,
-			// Token: 0x04038832 RID: 231474
+			// Token: 0x04033233 RID: 209459
 			MedalTexture
 		}
 	}

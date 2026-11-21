@@ -9,13 +9,13 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200201E RID: 8222
+// Token: 0x020014F1 RID: 5361
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class SpecialItemController : UiControllerBase
 {
-	// Token: 0x060101CD RID: 65997 RVA: 0x003EC1F8 File Offset: 0x003EA3F8
+	// Token: 0x0600D635 RID: 54837 RVA: 0x003F87F0 File Offset: 0x003F69F0
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnItemUse, new Action<int, int>(this.OnItemUse));
@@ -28,7 +28,7 @@ public class SpecialItemController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.ChangeModeFinish, this.OnChangeModeFinish);
 	}
 
-	// Token: 0x060101CE RID: 65998 RVA: 0x003EC2E0 File Offset: 0x003EA4E0
+	// Token: 0x0600D636 RID: 54838 RVA: 0x003F88D8 File Offset: 0x003F6AD8
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnItemUse, new Action<int, int>(this.OnItemUse));
@@ -41,21 +41,21 @@ public class SpecialItemController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.ChangeModeFinish, this.OnChangeModeFinish);
 	}
 
-	// Token: 0x060101CF RID: 65999 RVA: 0x003EC3C7 File Offset: 0x003EA5C7
+	// Token: 0x0600D637 RID: 54839 RVA: 0x003F89BF File Offset: 0x003F6BBF
 	protected override bool OnInit()
 	{
 		base.PauseTick();
 		return true;
 	}
 
-	// Token: 0x060101D0 RID: 66000 RVA: 0x003EC3D0 File Offset: 0x003EA5D0
+	// Token: 0x0600D638 RID: 54840 RVA: 0x003F89C8 File Offset: 0x003F6BC8
 	protected override void OnTick(float delta)
 	{
 		base.PauseTick();
 		this.RefreshSpecialItemAllowReqUse();
 	}
 
-	// Token: 0x060101D1 RID: 66001 RVA: 0x003EC3E0 File Offset: 0x003EA5E0
+	// Token: 0x0600D639 RID: 54841 RVA: 0x003F89D8 File Offset: 0x003F6BD8
 	[NullableContext(2)]
 	private void RecordToRefreshSpecialItemAllowReqUse(int configId, EntityHandle entityHandle)
 	{
@@ -70,7 +70,7 @@ public class SpecialItemController : UiControllerBase
 		base.ResumeTick();
 	}
 
-	// Token: 0x060101D2 RID: 66002 RVA: 0x003EC460 File Offset: 0x003EA660
+	// Token: 0x0600D63A RID: 54842 RVA: 0x003F8A58 File Offset: 0x003F6C58
 	private unsafe void RefreshSpecialItemAllowReqUse()
 	{
 		if (this.RecordListForRefreshSpecialItemAllowReqUse.Count == 0)
@@ -98,7 +98,7 @@ public class SpecialItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060101D3 RID: 66003 RVA: 0x003EC558 File Offset: 0x003EA758
+	// Token: 0x0600D63B RID: 54843 RVA: 0x003F8B50 File Offset: 0x003F6D50
 	private void OnSpecialItemUpdate(int? configId)
 	{
 		if (configId == null)
@@ -110,7 +110,7 @@ public class SpecialItemController : UiControllerBase
 		this.ListenSpecialItemRelatedTags(configId.Value, getCurrentEntity);
 	}
 
-	// Token: 0x060101D4 RID: 66004 RVA: 0x003EC590 File Offset: 0x003EA790
+	// Token: 0x0600D63C RID: 54844 RVA: 0x003F8B88 File Offset: 0x003F6D88
 	public bool IsSpecialItem(int configId)
 	{
 		if (configId == 0)
@@ -121,7 +121,7 @@ public class SpecialItemController : UiControllerBase
 		return itemConfig != null && itemConfig.GetValueOrDefault().SpecialItem;
 	}
 
-	// Token: 0x060101D5 RID: 66005 RVA: 0x003EC5D0 File Offset: 0x003EA7D0
+	// Token: 0x0600D63D RID: 54845 RVA: 0x003F8BC8 File Offset: 0x003F6DC8
 	public bool AllowReqUseSpecialItem(int configId)
 	{
 		SpecialItem? config = SpecialItemConfig.Instance.GetConfig(configId);
@@ -174,7 +174,7 @@ public class SpecialItemController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060101D6 RID: 66006 RVA: 0x003EC6E0 File Offset: 0x003EA8E0
+	// Token: 0x0600D63E RID: 54846 RVA: 0x003F8CD8 File Offset: 0x003F6ED8
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		int? tagWatchedItemId = SpecialItemModel.Instance.TagWatchedItemId;
@@ -192,7 +192,7 @@ public class SpecialItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060101D7 RID: 66007 RVA: 0x003EC73C File Offset: 0x003EA93C
+	// Token: 0x0600D63F RID: 54847 RVA: 0x003F8D34 File Offset: 0x003F6F34
 	[NullableContext(2)]
 	public void ListenSpecialItemRelatedTags(int configId, EntityHandle entityHandle)
 	{
@@ -241,7 +241,7 @@ public class SpecialItemController : UiControllerBase
 		SpecialItemModel.Instance.TagWatchedEntityHandle = entityHandle;
 	}
 
-	// Token: 0x060101D8 RID: 66008 RVA: 0x003EC84C File Offset: 0x003EAA4C
+	// Token: 0x0600D640 RID: 54848 RVA: 0x003F8E44 File Offset: 0x003F7044
 	public void StopListenSpecialItemRelatedTags()
 	{
 		SpecialItemModel instance = SpecialItemModel.Instance;
@@ -284,7 +284,7 @@ public class SpecialItemController : UiControllerBase
 		SpecialItemModel.Instance.TagWatchedEntityHandle = null;
 	}
 
-	// Token: 0x060101D9 RID: 66009 RVA: 0x003EC96C File Offset: 0x003EAB6C
+	// Token: 0x0600D641 RID: 54849 RVA: 0x003F8F64 File Offset: 0x003F7164
 	private void OnSpecialItemRelatedTagAddOrRemove(int tagId, bool tagExist)
 	{
 		int? tagWatchedItemId = SpecialItemModel.Instance.TagWatchedItemId;
@@ -300,7 +300,7 @@ public class SpecialItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060101DA RID: 66010 RVA: 0x003EC9C0 File Offset: 0x003EABC0
+	// Token: 0x0600D642 RID: 54850 RVA: 0x003F8FB8 File Offset: 0x003F71B8
 	private void OnAddSpecialItem(IReadOnlyList<IProto_NormalItem> itemList)
 	{
 		foreach (IProto_NormalItem proto_NormalItem in itemList)
@@ -312,7 +312,7 @@ public class SpecialItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060101DB RID: 66011 RVA: 0x003ECA20 File Offset: 0x003EAC20
+	// Token: 0x0600D643 RID: 54851 RVA: 0x003F9018 File Offset: 0x003F7218
 	private void OnSpecialItemUse(int configId, int useCount)
 	{
 		if (!this.IsSpecialItem(configId))
@@ -336,19 +336,19 @@ public class SpecialItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060101DC RID: 66012 RVA: 0x003ECA8D File Offset: 0x003EAC8D
+	// Token: 0x0600D644 RID: 54852 RVA: 0x003F9085 File Offset: 0x003F7285
 	private void EquipAndSwitchSpecialItem(int configId, bool needSwitch)
 	{
 		this.EquipSpecialItem(configId, needSwitch, true, EExploreSkillLayer.Roulette);
 	}
 
-	// Token: 0x060101DD RID: 66013 RVA: 0x003ECA9A File Offset: 0x003EAC9A
+	// Token: 0x0600D645 RID: 54853 RVA: 0x003F9092 File Offset: 0x003F7292
 	private void OnUnEquipSpecialItem(int configId)
 	{
 		this.UnEquipSpecialItem(configId);
 	}
 
-	// Token: 0x060101DE RID: 66014 RVA: 0x003ECAA4 File Offset: 0x003EACA4
+	// Token: 0x0600D646 RID: 54854 RVA: 0x003F909C File Offset: 0x003F729C
 	public unsafe bool EquipSpecialItem(int configId, bool needSwitch = true, bool needTips = true, EExploreSkillLayer layer = EExploreSkillLayer.Roulette)
 	{
 		if (!RouletteModel.Instance.IsExploreRouletteOpen(false))
@@ -416,7 +416,7 @@ public class SpecialItemController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060101DF RID: 66015 RVA: 0x003ECC64 File Offset: 0x003EAE64
+	// Token: 0x0600D647 RID: 54855 RVA: 0x003F925C File Offset: 0x003F745C
 	public void UnEquipSpecialItem(int configId)
 	{
 		int? equipSpecialItemId = SpecialItemModel.Instance.GetEquipSpecialItemId();
@@ -426,7 +426,7 @@ public class SpecialItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060101E0 RID: 66016 RVA: 0x003ECCA0 File Offset: 0x003EAEA0
+	// Token: 0x0600D648 RID: 54856 RVA: 0x003F9298 File Offset: 0x003F7498
 	public bool AutoEquipOrUnEquipSpecialItem(int configId)
 	{
 		int? equipSpecialItemId = SpecialItemModel.Instance.GetEquipSpecialItemId();
@@ -443,7 +443,7 @@ public class SpecialItemController : UiControllerBase
 		return !flag;
 	}
 
-	// Token: 0x060101E1 RID: 66017 RVA: 0x003ECCE8 File Offset: 0x003EAEE8
+	// Token: 0x0600D649 RID: 54857 RVA: 0x003F92E0 File Offset: 0x003F74E0
 	private void OnItemUse(int configId, int useCount)
 	{
 		ItemInfo? itemConfig = InventoryConfig.Instance.GetItemConfig(configId);
@@ -462,7 +462,7 @@ public class SpecialItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060101E2 RID: 66018 RVA: 0x003ECD48 File Offset: 0x003EAF48
+	// Token: 0x0600D64A RID: 54858 RVA: 0x003F9340 File Offset: 0x003F7540
 	private void HandleItemUseExploreSkill(int configId, int useCount, int exploreSkillId)
 	{
 		WorldEntity entity = SceneTeamModel.Instance.GetCurrentEntity.Entity;
@@ -481,8 +481,8 @@ public class SpecialItemController : UiControllerBase
 		});
 	}
 
-	// Token: 0x170013B0 RID: 5040
-	// (get) Token: 0x060101E3 RID: 66019 RVA: 0x003ECD9F File Offset: 0x003EAF9F
+	// Token: 0x170013DD RID: 5085
+	// (get) Token: 0x0600D64B RID: 54859 RVA: 0x003F9397 File Offset: 0x003F7597
 	public static SpecialItemController Instance
 	{
 		get
@@ -491,7 +491,7 @@ public class SpecialItemController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060101E4 RID: 66020 RVA: 0x003ECDA6 File Offset: 0x003EAFA6
+	// Token: 0x0600D64C RID: 54860 RVA: 0x003F939E File Offset: 0x003F759E
 	public static SpecialItemController GetOrCreateInstance()
 	{
 		if (SpecialItemController._Instance == null)
@@ -501,7 +501,7 @@ public class SpecialItemController : UiControllerBase
 		return SpecialItemController._Instance;
 	}
 
-	// Token: 0x060101E5 RID: 66021 RVA: 0x003ECDBA File Offset: 0x003EAFBA
+	// Token: 0x0600D64D RID: 54861 RVA: 0x003F93B2 File Offset: 0x003F75B2
 	public static bool CreateInstance()
 	{
 		if (SpecialItemController._Instance != null)
@@ -512,24 +512,24 @@ public class SpecialItemController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060101E6 RID: 66022 RVA: 0x003ECDD0 File Offset: 0x003EAFD0
+	// Token: 0x0600D64E RID: 54862 RVA: 0x003F93C8 File Offset: 0x003F75C8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060101E7 RID: 66023 RVA: 0x003ECDD2 File Offset: 0x003EAFD2
+	// Token: 0x0600D64F RID: 54863 RVA: 0x003F93CA File Offset: 0x003F75CA
 	public static void ResetStaticDefaultValue()
 	{
 		SpecialItemController._Instance = null;
 	}
 
-	// Token: 0x060101E8 RID: 66024 RVA: 0x003ECDDA File Offset: 0x003EAFDA
+	// Token: 0x0600D650 RID: 54864 RVA: 0x003F93D2 File Offset: 0x003F75D2
 	static SpecialItemController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SpecialItemController.CreateStaticDefaultValue), new Action(SpecialItemController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007745 RID: 30533
+	// Token: 0x0400782E RID: 30766
 	[TupleElementNames(new string[]
 	{
 		"ConfigId",
@@ -543,7 +543,7 @@ public class SpecialItemController : UiControllerBase
 	})]
 	private List<ValueTuple<int, EntityHandle>> RecordListForRefreshSpecialItemAllowReqUse = new List<ValueTuple<int, EntityHandle>>();
 
-	// Token: 0x04007746 RID: 30534
+	// Token: 0x0400782F RID: 30767
 	private readonly Action OnChangeModeFinish = delegate()
 	{
 		int? tagWatchedItemId = SpecialItemModel.Instance.TagWatchedItemId;
@@ -559,7 +559,7 @@ public class SpecialItemController : UiControllerBase
 		}
 	};
 
-	// Token: 0x04007747 RID: 30535
+	// Token: 0x04007830 RID: 30768
 	[Nullable(2)]
 	private static SpecialItemController _Instance;
 }

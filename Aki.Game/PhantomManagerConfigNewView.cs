@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200243F RID: 9279
+// Token: 0x02001924 RID: 6436
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManagerConfigNewView : UiTabViewBase
 {
-	// Token: 0x060129A8 RID: 76200 RVA: 0x00496E68 File Offset: 0x00495068
+	// Token: 0x0600FE5E RID: 65118 RVA: 0x004A4434 File Offset: 0x004A2634
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 16;
@@ -73,19 +72,19 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060129A9 RID: 76201 RVA: 0x00497171 File Offset: 0x00495371
+	// Token: 0x0600FE5F RID: 65119 RVA: 0x004A473D File Offset: 0x004A293D
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.OnPhantomConfigManagerDataUpdate, new Action<bool>(this.OnEmitUpdate));
 	}
 
-	// Token: 0x060129AA RID: 76202 RVA: 0x0049718F File Offset: 0x0049538F
+	// Token: 0x0600FE60 RID: 65120 RVA: 0x004A475B File Offset: 0x004A295B
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove<bool>(EEventName.OnPhantomConfigManagerDataUpdate, new Action<bool>(this.OnEmitUpdate));
 	}
 
-	// Token: 0x060129AB RID: 76203 RVA: 0x004971B0 File Offset: 0x004953B0
+	// Token: 0x0600FE61 RID: 65121 RVA: 0x004A477C File Offset: 0x004A297C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomManagerConfigNewView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -96,7 +95,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060129AC RID: 76204 RVA: 0x004971F4 File Offset: 0x004953F4
+	// Token: 0x0600FE62 RID: 65122 RVA: 0x004A47C0 File Offset: 0x004A29C0
 	protected override void OnStart()
 	{
 		this.LevelSequence = new LevelSequencePlayer(base.GetItem(14));
@@ -111,7 +110,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		this.RefreshNormalState(true);
 	}
 
-	// Token: 0x060129AD RID: 76205 RVA: 0x0049729C File Offset: 0x0049549C
+	// Token: 0x0600FE63 RID: 65123 RVA: 0x004A4868 File Offset: 0x004A2A68
 	protected override void OnBeforeShow()
 	{
 		this.FetterGroupInfoDataList.Clear();
@@ -132,7 +131,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		this.ScrollConfig.RefreshByData(this.FetterGroupInfoDataList, false, null, true);
 	}
 
-	// Token: 0x060129AE RID: 76206 RVA: 0x0049739C File Offset: 0x0049559C
+	// Token: 0x0600FE64 RID: 65124 RVA: 0x004A4968 File Offset: 0x004A2B68
 	protected void InitElementList()
 	{
 		Dictionary<int, PhantomFetterGroup> tmpMap = new Dictionary<int, PhantomFetterGroup>();
@@ -148,7 +147,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x060129AF RID: 76207 RVA: 0x00497454 File Offset: 0x00495654
+	// Token: 0x0600FE65 RID: 65125 RVA: 0x004A4A20 File Offset: 0x004A2C20
 	protected void RefreshNormalState(bool isSelectOther = false)
 	{
 		if (this.CurrentSelectId < 0)
@@ -180,7 +179,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		fetterUseBtn.SetLocalTextNew(fetterConfigIsOpen ? "PhantomProject_ClosePlan_Title" : "PhantomProject_StartPlan_Title", Array.Empty<object>());
 	}
 
-	// Token: 0x060129B0 RID: 76208 RVA: 0x00497544 File Offset: 0x00495744
+	// Token: 0x0600FE66 RID: 65126 RVA: 0x004A4B10 File Offset: 0x004A2D10
 	protected List<IPhantomManagerConfigNewSettingInfo> GetDetailDataList(bool needRefresh = false)
 	{
 		List<IPhantomManagerConfigNewSettingInfo> result;
@@ -212,9 +211,9 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 				dictionary[cost2] = dictionary.GetValueOrDefault(cost2, 0) + 1;
 			}
 		}
-		foreach (int num in from o in hashSet
-		orderby o descending
-		select o)
+		List<int> list2 = new List<int>(hashSet);
+		list2.Sort((int a, int b) => b.CompareTo(a));
+		foreach (int num in list2)
 		{
 			list.Add(new PhantomManagerConfigNewSettingInfo
 			{
@@ -229,7 +228,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x060129B1 RID: 76209 RVA: 0x00497758 File Offset: 0x00495958
+	// Token: 0x0600FE67 RID: 65127 RVA: 0x004A4D2C File Offset: 0x004A2F2C
 	private void SetActivatePanelState(bool isVisible, bool noAnim)
 	{
 		if (isVisible)
@@ -294,7 +293,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		}, null, null);
 	}
 
-	// Token: 0x060129B2 RID: 76210 RVA: 0x004977F8 File Offset: 0x004959F8
+	// Token: 0x0600FE68 RID: 65128 RVA: 0x004A4DCC File Offset: 0x004A2FCC
 	private void OnClickedToggleDiscard(EToggleState state)
 	{
 		bool downFiveStarSwitch = this.ConfigData.DownFiveStarSwitch;
@@ -329,7 +328,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x060129B3 RID: 76211 RVA: 0x004978B9 File Offset: 0x00495AB9
+	// Token: 0x0600FE69 RID: 65129 RVA: 0x004A4E8D File Offset: 0x004A308D
 	private void UpdateDiscardToggleState()
 	{
 		PhantomBattleController.Instance.RequestPhBaPlanSetFiveStarSwitch().ContinueWith(delegate(bool value)
@@ -346,7 +345,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		}).Forget();
 	}
 
-	// Token: 0x060129B4 RID: 76212 RVA: 0x004978DB File Offset: 0x00495ADB
+	// Token: 0x0600FE6A RID: 65130 RVA: 0x004A4EAF File Offset: 0x004A30AF
 	private PhantomManagerConfigNewFetterItem CreateConfigItem()
 	{
 		return new PhantomManagerConfigNewFetterItem
@@ -356,19 +355,19 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x060129B5 RID: 76213 RVA: 0x00497906 File Offset: 0x00495B06
+	// Token: 0x0600FE6B RID: 65131 RVA: 0x004A4EDA File Offset: 0x004A30DA
 	private PhantomManagerConfigNewSettingItem CreateSettingTitleItem()
 	{
 		return new PhantomManagerConfigNewSettingItem();
 	}
 
-	// Token: 0x060129B6 RID: 76214 RVA: 0x0049790D File Offset: 0x00495B0D
+	// Token: 0x0600FE6C RID: 65132 RVA: 0x004A4EE1 File Offset: 0x004A30E1
 	private bool GetToggleStateSelected(int awardId)
 	{
 		return this.CurrentSelectId == awardId;
 	}
 
-	// Token: 0x060129B7 RID: 76215 RVA: 0x00497918 File Offset: 0x00495B18
+	// Token: 0x0600FE6D RID: 65133 RVA: 0x004A4EEC File Offset: 0x004A30EC
 	private void OnToggleStateChange(int id)
 	{
 		this.CurrentSelectId = id;
@@ -376,7 +375,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		this.RefreshNormalState(true);
 	}
 
-	// Token: 0x060129B8 RID: 76216 RVA: 0x0049793C File Offset: 0x00495B3C
+	// Token: 0x0600FE6E RID: 65134 RVA: 0x004A4F10 File Offset: 0x004A3110
 	private void OnClickedEdit()
 	{
 		base.GetLoopScrollViewComponent(1).StopMovement();
@@ -386,7 +385,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		{
 			item.SetUIActive(false);
 		}
-		IPhantomManagerFetterInfo phantomManagerFetterInfo = this.FetterGroupInfoDataList.FirstOrDefault((IPhantomManagerFetterInfo o) => o.FetterId == this.CurrentSelectId);
+		IPhantomManagerFetterInfo phantomManagerFetterInfo = this.FetterGroupInfoDataList.Find((IPhantomManagerFetterInfo o) => o.FetterId == this.CurrentSelectId);
 		int count = (phantomManagerFetterInfo != null) ? phantomManagerFetterInfo.Count : 0;
 		UiManager.Instance.OpenView(EUiViewName.PhantomManagerConfigEditPopItem, new PhantomManagerEditPopInfo
 		{
@@ -397,7 +396,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		}, null);
 	}
 
-	// Token: 0x060129B9 RID: 76217 RVA: 0x004979F1 File Offset: 0x00495BF1
+	// Token: 0x0600FE6F RID: 65135 RVA: 0x004A4FC5 File Offset: 0x004A31C5
 	private void OnEmitUpdate(bool needScroll)
 	{
 		if (needScroll)
@@ -409,20 +408,20 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		this.RefreshNormalState(false);
 	}
 
-	// Token: 0x060129BA RID: 76218 RVA: 0x00497A30 File Offset: 0x00495C30
+	// Token: 0x0600FE70 RID: 65136 RVA: 0x004A5004 File Offset: 0x004A3204
 	private void OnClickedDelete()
 	{
 		UiManager.Instance.OpenView(EUiViewName.PhantomManagerConfigResetPopItem, new Action(this.OnDeleteSuccess), null);
 	}
 
-	// Token: 0x060129BB RID: 76219 RVA: 0x00497A4E File Offset: 0x00495C4E
+	// Token: 0x0600FE71 RID: 65137 RVA: 0x004A5022 File Offset: 0x004A3222
 	private void OnDeleteSuccess()
 	{
 		this.ScrollConfig.RefreshByData(this.FetterGroupInfoDataList, false, null, true);
 		this.RefreshNormalState(false);
 	}
 
-	// Token: 0x060129BC RID: 76220 RVA: 0x00497A6C File Offset: 0x00495C6C
+	// Token: 0x0600FE72 RID: 65138 RVA: 0x004A5040 File Offset: 0x004A3240
 	private void OnClickedApplyPlan()
 	{
 		IPhantomManagerApplySettingDetailInfo phantomPlanMatchApplyData = this.ConfigData.GetPhantomPlanMatchApplyData();
@@ -440,7 +439,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		}, false);
 	}
 
-	// Token: 0x060129BD RID: 76221 RVA: 0x00497AE4 File Offset: 0x00495CE4
+	// Token: 0x0600FE73 RID: 65139 RVA: 0x004A50B8 File Offset: 0x004A32B8
 	private void OnClickedRecommendAll()
 	{
 		bool flag = false;
@@ -466,7 +465,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		};
 		confirmBoxDataNew.FunctionMap[2] = delegate()
 		{
-			PhantomBattleController.Instance.RequestPhBaPlanSaveUsePlan(false, this.FetterGroupDataList.ToHashSet<int>()).ContinueWith(delegate(bool value)
+			PhantomBattleController.Instance.RequestPhBaPlanSaveUsePlan(false, new HashSet<int>(this.FetterGroupDataList)).ContinueWith(delegate(bool value)
 			{
 				if (!value)
 				{
@@ -489,13 +488,13 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060129BE RID: 76222 RVA: 0x00497BF4 File Offset: 0x00495DF4
+	// Token: 0x0600FE74 RID: 65140 RVA: 0x004A51C8 File Offset: 0x004A33C8
 	private void OnRecommendAllToggle(bool toggleState)
 	{
 		this.ConfirmBoxRecommendApplyPlan = toggleState;
 	}
 
-	// Token: 0x060129BF RID: 76223 RVA: 0x00497BFD File Offset: 0x00495DFD
+	// Token: 0x0600FE75 RID: 65141 RVA: 0x004A51D1 File Offset: 0x004A33D1
 	private void OnClosedEdit()
 	{
 		UUIItem item = base.GetItem(12);
@@ -506,7 +505,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		item.SetUIActive(true);
 	}
 
-	// Token: 0x060129C0 RID: 76224 RVA: 0x00497C14 File Offset: 0x00495E14
+	// Token: 0x0600FE76 RID: 65142 RVA: 0x004A51E8 File Offset: 0x004A33E8
 	private void OnClickedFetterUsed(int _)
 	{
 		int curFetter = this.CurrentSelectId;
@@ -540,7 +539,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 		}).Forget();
 	}
 
-	// Token: 0x04008C44 RID: 35908
+	// Token: 0x04008D8B RID: 36235
 	[Nullable(new byte[]
 	{
 		2,
@@ -549,7 +548,7 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 	})]
 	private LoopScrollView<PhantomManagerConfigNewFetterItem, IPhantomManagerFetterInfo> ScrollConfig;
 
-	// Token: 0x04008C45 RID: 35909
+	// Token: 0x04008D8C RID: 36236
 	[Nullable(new byte[]
 	{
 		2,
@@ -558,67 +557,67 @@ public class PhantomManagerConfigNewView : UiTabViewBase
 	})]
 	private GenericScrollViewNew<PhantomManagerConfigNewSettingItem, IPhantomManagerConfigNewSettingInfo> ScrollSetting;
 
-	// Token: 0x04008C46 RID: 35910
+	// Token: 0x04008D8D RID: 36237
 	private readonly Dictionary<int, List<IPhantomManagerConfigNewSettingInfo>> FetterDataMap = new Dictionary<int, List<IPhantomManagerConfigNewSettingInfo>>();
 
-	// Token: 0x04008C47 RID: 35911
+	// Token: 0x04008D8E RID: 36238
 	private readonly List<int> FetterGroupDataList = new List<int>();
 
-	// Token: 0x04008C48 RID: 35912
+	// Token: 0x04008D8F RID: 36239
 	private readonly List<IPhantomManagerFetterInfo> FetterGroupInfoDataList = new List<IPhantomManagerFetterInfo>();
 
-	// Token: 0x04008C49 RID: 35913
+	// Token: 0x04008D90 RID: 36240
 	private int CurrentSelectId = -1;
 
-	// Token: 0x04008C4A RID: 35914
+	// Token: 0x04008D91 RID: 36241
 	protected PhantomManagerConfigData ConfigData = new PhantomManagerConfigData();
 
-	// Token: 0x04008C4B RID: 35915
+	// Token: 0x04008D92 RID: 36242
 	[Nullable(2)]
 	protected ButtonItem FetterUseBtn;
 
-	// Token: 0x04008C4C RID: 35916
+	// Token: 0x04008D93 RID: 36243
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequence;
 
-	// Token: 0x04008C4D RID: 35917
+	// Token: 0x04008D94 RID: 36244
 	private bool ConfirmBoxRecommendApplyPlan;
 
-	// Token: 0x020089C5 RID: 35269
+	// Token: 0x02007B4C RID: 31564
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402CC26 RID: 183334
+		// Token: 0x04027F3C RID: 163644
 		ToggleAutoDiscard,
-		// Token: 0x0402CC27 RID: 183335
+		// Token: 0x04027F3D RID: 163645
 		LoopScrollElement,
-		// Token: 0x0402CC28 RID: 183336
+		// Token: 0x04027F3E RID: 163646
 		ElementItem,
-		// Token: 0x0402CC29 RID: 183337
+		// Token: 0x04027F3F RID: 163647
 		BtnLeft1,
-		// Token: 0x0402CC2A RID: 183338
+		// Token: 0x04027F40 RID: 163648
 		BtnLeft2,
-		// Token: 0x0402CC2B RID: 183339
+		// Token: 0x04027F41 RID: 163649
 		BtnDelete,
-		// Token: 0x0402CC2C RID: 183340
+		// Token: 0x04027F42 RID: 163650
 		TexEchoIcon,
-		// Token: 0x0402CC2D RID: 183341
+		// Token: 0x04027F43 RID: 163651
 		TxtPlanName,
-		// Token: 0x0402CC2E RID: 183342
+		// Token: 0x04027F44 RID: 163652
 		TexTitleBg,
-		// Token: 0x0402CC2F RID: 183343
+		// Token: 0x04027F45 RID: 163653
 		PanelActivation,
-		// Token: 0x0402CC30 RID: 183344
+		// Token: 0x04027F46 RID: 163654
 		ScrollSetting,
-		// Token: 0x0402CC31 RID: 183345
+		// Token: 0x04027F47 RID: 163655
 		CostGroupItem,
-		// Token: 0x0402CC32 RID: 183346
+		// Token: 0x04027F48 RID: 163656
 		PanelBtnOverview,
-		// Token: 0x0402CC33 RID: 183347
+		// Token: 0x04027F49 RID: 163657
 		BtnEdit,
-		// Token: 0x0402CC34 RID: 183348
+		// Token: 0x04027F4A RID: 163658
 		BtnActivate,
-		// Token: 0x0402CC35 RID: 183349
+		// Token: 0x04027F4B RID: 163659
 		PanelActivationStatic
 	}
 }

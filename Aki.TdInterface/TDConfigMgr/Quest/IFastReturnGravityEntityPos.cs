@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F69 RID: 3945
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001093 RID: 4243
 	public class IFastReturnGravityEntityPos : IFastReturnPosBase
 	{
-		// Token: 0x060057B0 RID: 22448 RVA: 0x000D6410 File Offset: 0x000D4610
-		[NullableContext(1)]
+		// Token: 0x06005D84 RID: 23940 RVA: 0x000E2E7C File Offset: 0x000E107C
 		private IFastReturnGravityEntityPos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060057B1 RID: 22449 RVA: 0x000D6448 File Offset: 0x000D4648
-		[NullableContext(1)]
+		// Token: 0x06005D85 RID: 23941 RVA: 0x000E2EB4 File Offset: 0x000E10B4
 		public static IFastReturnGravityEntityPos Create([Nullable(2)] IFastReturnGravityEntityPos instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060057B2 RID: 22450 RVA: 0x000D645B File Offset: 0x000D465B
-		[NullableContext(1)]
+		// Token: 0x06005D86 RID: 23942 RVA: 0x000E2EC7 File Offset: 0x000E10C7
 		public static IFastReturnGravityEntityPos CreateFromSetValue([Nullable(2)] IFastReturnGravityEntityPos_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060057B3 RID: 22451 RVA: 0x000D646E File Offset: 0x000D466E
-		[NullableContext(1)]
+		// Token: 0x06005D87 RID: 23943 RVA: 0x000E2EDA File Offset: 0x000E10DA
 		public new IFastReturnGravityEntityPos_SetValue ToSetValue()
 		{
 			return new IFastReturnGravityEntityPos_SetValue
@@ -66,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D3C RID: 7484
-		// (get) Token: 0x060057B4 RID: 22452 RVA: 0x000D6499 File Offset: 0x000D4699
-		// (set) Token: 0x060057B5 RID: 22453 RVA: 0x000D64C4 File Offset: 0x000D46C4
+		// Token: 0x17001EE2 RID: 7906
+		// (get) Token: 0x06005D88 RID: 23944 RVA: 0x000E2F05 File Offset: 0x000E1105
+		// (set) Token: 0x06005D89 RID: 23945 RVA: 0x000E2F30 File Offset: 0x000E1130
 		public override EFastReturnPosType Type
 		{
 			get
@@ -89,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D3D RID: 7485
-		// (get) Token: 0x060057B6 RID: 22454 RVA: 0x000D64D2 File Offset: 0x000D46D2
-		// (set) Token: 0x060057B7 RID: 22455 RVA: 0x000D64FD File Offset: 0x000D46FD
+		// Token: 0x17001EE3 RID: 7907
+		// (get) Token: 0x06005D8A RID: 23946 RVA: 0x000E2F3E File Offset: 0x000E113E
+		// (set) Token: 0x06005D8B RID: 23947 RVA: 0x000E2F69 File Offset: 0x000E1169
 		public virtual int EntityId
 		{
 			get
@@ -112,11 +106,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D3E RID: 7486
-		// (get) Token: 0x060057B8 RID: 22456 RVA: 0x000D650B File Offset: 0x000D470B
-		// (set) Token: 0x060057B9 RID: 22457 RVA: 0x000D6532 File Offset: 0x000D4732
+		// Token: 0x17001EE4 RID: 7908
+		// (get) Token: 0x06005D8C RID: 23948 RVA: 0x000E2F77 File Offset: 0x000E1177
+		// (set) Token: 0x06005D8D RID: 23949 RVA: 0x000E2F9E File Offset: 0x000E119E
+		[Nullable(2)]
 		public virtual ITeleportTransitionType TransitionOption
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -130,16 +126,19 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return pocoInterface.TransitionOption;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().TransitionOption = value;
 			}
 		}
 
-		// Token: 0x040034FF RID: 13567
+		// Token: 0x04003830 RID: 14384
+		[Nullable(2)]
 		protected new IFastReturnGravityEntityPos FbInstance;
 
-		// Token: 0x04003500 RID: 13568
+		// Token: 0x04003831 RID: 14385
+		[Nullable(2)]
 		protected new IFastReturnGravityEntityPos_SetValue PocoInterface;
 	}
 }

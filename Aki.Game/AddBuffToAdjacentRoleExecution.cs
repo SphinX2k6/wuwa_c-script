@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F8E RID: 12174
+// Token: 0x020024E2 RID: 9442
 [NullableContext(1)]
 [Nullable(0)]
 public class AddBuffToAdjacentRoleExecution : InitExecution
 {
-	// Token: 0x06019D97 RID: 105879 RVA: 0x006BF5F9 File Offset: 0x006BD7F9
+	// Token: 0x060176A9 RID: 95913 RVA: 0x006E5ED9 File Offset: 0x006E40D9
 	public AddBuffToAdjacentRoleExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019D98 RID: 105880 RVA: 0x006BF60D File Offset: 0x006BD80D
+	// Token: 0x060176AA RID: 95914 RVA: 0x006E5EED File Offset: 0x006E40ED
 	protected override bool CheckExecutable()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
 		return ownerBuffComponent != null && ownerBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019D99 RID: 105881 RVA: 0x006BF620 File Offset: 0x006BD820
+	// Token: 0x060176AB RID: 95915 RVA: 0x006E5F00 File Offset: 0x006E4100
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -61,7 +61,7 @@ public class AddBuffToAdjacentRoleExecution : InitExecution
 		};
 	}
 
-	// Token: 0x06019D9A RID: 105882 RVA: 0x006BF70C File Offset: 0x006BD90C
+	// Token: 0x060176AC RID: 95916 RVA: 0x006E5FEC File Offset: 0x006E41EC
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -142,13 +142,13 @@ public class AddBuffToAdjacentRoleExecution : InitExecution
 		return null;
 	}
 
-	// Token: 0x0400C340 RID: 49984
+	// Token: 0x0400C6E9 RID: 50921
 	public long[] ApplyBuffId = Array.Empty<long>();
 
-	// Token: 0x0400C341 RID: 49985
+	// Token: 0x0400C6EA RID: 50922
 	public float Distance;
 
-	// Token: 0x0400C342 RID: 49986
+	// Token: 0x0400C6EB RID: 50923
 	[Nullable(2)]
 	public ERoleFormationType[] ApplyRoleFormationType;
 }

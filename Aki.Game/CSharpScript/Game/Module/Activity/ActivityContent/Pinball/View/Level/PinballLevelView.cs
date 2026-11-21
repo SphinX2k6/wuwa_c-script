@@ -13,7 +13,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 {
-	// Token: 0x02006342 RID: 25410
+	// Token: 0x020052C0 RID: 21184
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 	})]
 	public class PinballLevelView : PinballMainChildViewBase<PinballMainViewModel>
 	{
-		// Token: 0x0603FF06 RID: 261894 RVA: 0x00F78BF8 File Offset: 0x00F76DF8
+		// Token: 0x06034BC7 RID: 216007 RVA: 0x00EBFB58 File Offset: 0x00EBDD58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FF07 RID: 261895 RVA: 0x00F78D90 File Offset: 0x00F76F90
+		// Token: 0x06034BC8 RID: 216008 RVA: 0x00EBFCF0 File Offset: 0x00EBDEF0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballLevelView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FF08 RID: 261896 RVA: 0x00F78DD4 File Offset: 0x00F76FD4
+		// Token: 0x06034BC9 RID: 216009 RVA: 0x00EBFD34 File Offset: 0x00EBDF34
 		protected override UniTask OnPlayingStartSequenceAsync()
 		{
 			PinballLevelView.<OnPlayingStartSequenceAsync>d__10 <OnPlayingStartSequenceAsync>d__;
@@ -76,14 +76,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FF09 RID: 261897 RVA: 0x00F78E17 File Offset: 0x00F77017
+		// Token: 0x06034BCA RID: 216010 RVA: 0x00EBFD77 File Offset: 0x00EBDF77
 		protected override void OnBeforeShow()
 		{
 			this.SetCaptionInfo();
 			this.RefreshLevelInfo();
 		}
 
-		// Token: 0x0603FF0A RID: 261898 RVA: 0x00F78E28 File Offset: 0x00F77028
+		// Token: 0x06034BCB RID: 216011 RVA: 0x00EBFD88 File Offset: 0x00EBDF88
 		protected override UniTask OnPlayingCloseSequenceAsync()
 		{
 			PinballLevelView.<OnPlayingCloseSequenceAsync>d__12 <OnPlayingCloseSequenceAsync>d__;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FF0B RID: 261899 RVA: 0x00F78E6C File Offset: 0x00F7706C
+		// Token: 0x06034BCC RID: 216012 RVA: 0x00EBFDCC File Offset: 0x00EBDFCC
 		private void SetCaptionInfo()
 		{
 			if (base.ViewModel != null)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			}
 		}
 
-		// Token: 0x0603FF0C RID: 261900 RVA: 0x00F78F68 File Offset: 0x00F77168
+		// Token: 0x06034BCD RID: 216013 RVA: 0x00EBFEC8 File Offset: 0x00EBE0C8
 		private void RefreshChapterInfo()
 		{
 			PinballChapterData chapterData = base.ViewModel.GetChapterData();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			}
 		}
 
-		// Token: 0x0603FF0D RID: 261901 RVA: 0x00F78FA0 File Offset: 0x00F771A0
+		// Token: 0x06034BCE RID: 216014 RVA: 0x00EBFF00 File Offset: 0x00EBE100
 		private void RefreshLevelInfo()
 		{
 			List<PinballLevelRecordData> levelDataList = base.ViewModel.GetLevelDataList();
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			}
 		}
 
-		// Token: 0x0603FF0E RID: 261902 RVA: 0x00F790D0 File Offset: 0x00F772D0
+		// Token: 0x06034BCF RID: 216015 RVA: 0x00EC0030 File Offset: 0x00EBE230
 		[NullableContext(1)]
 		private PinballLevelRecordData AutoFindTargetLevelData(List<PinballLevelRecordData> levelDataList)
 		{
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			return pinballLevelRecordData ?? levelDataList[levelDataList.Count - 1];
 		}
 
-		// Token: 0x0603FF0F RID: 261903 RVA: 0x00F79150 File Offset: 0x00F77350
+		// Token: 0x06034BD0 RID: 216016 RVA: 0x00EC00B0 File Offset: 0x00EBE2B0
 		[NullableContext(1)]
 		private void OnClickLevel(PinballLevelRecordData data, IPinballLevelInfoData infoData, UUIExtendToggle toggle)
 		{
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			});
 		}
 
-		// Token: 0x0603FF10 RID: 261904 RVA: 0x00F79288 File Offset: 0x00F77488
+		// Token: 0x06034BD1 RID: 216017 RVA: 0x00EC01E8 File Offset: 0x00EBE3E8
 		[NullableContext(1)]
 		private void RefreshRoleSpine(int roleId, string spineAnim, bool bLoop, Action finishCallback)
 		{
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			finishCallback2();
 		}
 
-		// Token: 0x0603FF11 RID: 261905 RVA: 0x00F79310 File Offset: 0x00F77510
+		// Token: 0x06034BD2 RID: 216018 RVA: 0x00EC0270 File Offset: 0x00EBE470
 		private void OnBtnBackClick()
 		{
 			base.ViewModel.ClearSelectLevelData();
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FF12 RID: 261906 RVA: 0x00F79361 File Offset: 0x00F77561
+		// Token: 0x06034BD3 RID: 216019 RVA: 0x00EC02C1 File Offset: 0x00EBE4C1
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -316,54 +316,54 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			return null;
 		}
 
-		// Token: 0x04021592 RID: 136594
+		// Token: 0x0401BEC1 RID: 114369
 		private PinballLevelInfoPanel LevelInfoPanel;
 
-		// Token: 0x04021593 RID: 136595
+		// Token: 0x0401BEC2 RID: 114370
 		private PinballMainChapterItem ChapterItem;
 
-		// Token: 0x04021594 RID: 136596
+		// Token: 0x0401BEC3 RID: 114371
 		private PinballLevelItem CommonLevelItem1;
 
-		// Token: 0x04021595 RID: 136597
+		// Token: 0x0401BEC4 RID: 114372
 		private PinballLevelItem CommonLevelItem2;
 
-		// Token: 0x04021596 RID: 136598
+		// Token: 0x0401BEC5 RID: 114373
 		private PinballLevelItem CommonLevelItem3;
 
-		// Token: 0x04021597 RID: 136599
+		// Token: 0x0401BEC6 RID: 114374
 		private PinballCowLevelItem CowLevelItem;
 
-		// Token: 0x04021598 RID: 136600
+		// Token: 0x0401BEC7 RID: 114375
 		private UUIExtendToggle CurrentLevelToggle;
 
-		// Token: 0x0200C559 RID: 50521
+		// Token: 0x0200AF40 RID: 44864
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B907 RID: 243975
+			// Token: 0x04036269 RID: 221801
 			LevelDetailTips,
-			// Token: 0x0403B908 RID: 243976
+			// Token: 0x0403626A RID: 221802
 			SpineRoleNotDone,
-			// Token: 0x0403B909 RID: 243977
+			// Token: 0x0403626B RID: 221803
 			TxtRescueRole,
-			// Token: 0x0403B90A RID: 243978
+			// Token: 0x0403626C RID: 221804
 			RoleDoneItem,
-			// Token: 0x0403B90B RID: 243979
+			// Token: 0x0403626D RID: 221805
 			SpineRoleDone,
-			// Token: 0x0403B90C RID: 243980
+			// Token: 0x0403626E RID: 221806
 			ComLevelItem1,
-			// Token: 0x0403B90D RID: 243981
+			// Token: 0x0403626F RID: 221807
 			ComLevelItem2,
-			// Token: 0x0403B90E RID: 243982
+			// Token: 0x04036270 RID: 221808
 			ComLevelItem3,
-			// Token: 0x0403B90F RID: 243983
+			// Token: 0x04036271 RID: 221809
 			CowLevelItem,
-			// Token: 0x0403B910 RID: 243984
+			// Token: 0x04036272 RID: 221810
 			ChapterItem,
-			// Token: 0x0403B911 RID: 243985
+			// Token: 0x04036273 RID: 221811
 			RoleNotDoneItem,
-			// Token: 0x0403B912 RID: 243986
+			// Token: 0x04036274 RID: 221812
 			RoleShowItem
 		}
 	}

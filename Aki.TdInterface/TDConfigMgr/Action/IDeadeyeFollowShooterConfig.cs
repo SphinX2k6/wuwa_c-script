@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001978 RID: 6520
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B03 RID: 6915
 	public class IDeadeyeFollowShooterConfig
 	{
-		// Token: 0x06008BA9 RID: 35753 RVA: 0x00148368 File Offset: 0x00146568
+		// Token: 0x060092E1 RID: 37601 RVA: 0x00157DF8 File Offset: 0x00155FF8
 		private IDeadeyeFollowShooterConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008BAA RID: 35754 RVA: 0x001483A0 File Offset: 0x001465A0
+		// Token: 0x060092E2 RID: 37602 RVA: 0x00157E30 File Offset: 0x00156030
 		public static IDeadeyeFollowShooterConfig Create([Nullable(2)] IDeadeyeFollowShooterConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BAB RID: 35755 RVA: 0x001483B3 File Offset: 0x001465B3
+		// Token: 0x060092E3 RID: 37603 RVA: 0x00157E43 File Offset: 0x00156043
 		public static IDeadeyeFollowShooterConfig CreateFromSetValue([Nullable(2)] IDeadeyeFollowShooterConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BAC RID: 35756 RVA: 0x001483C6 File Offset: 0x001465C6
+		// Token: 0x060092E4 RID: 37604 RVA: 0x00157E56 File Offset: 0x00156056
 		public IDeadeyeFollowShooterConfig_SetValue ToSetValue()
 		{
 			return new IDeadeyeFollowShooterConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CF5 RID: 11509
-		// (get) Token: 0x06008BAD RID: 35757 RVA: 0x001483D9 File Offset: 0x001465D9
-		// (set) Token: 0x06008BAE RID: 35758 RVA: 0x00148404 File Offset: 0x00146604
+		// Token: 0x17002EF8 RID: 12024
+		// (get) Token: 0x060092E5 RID: 37605 RVA: 0x00157E69 File Offset: 0x00156069
+		// (set) Token: 0x060092E6 RID: 37606 RVA: 0x00157E94 File Offset: 0x00156094
 		public virtual string DeadeyeShooterDa
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005714 RID: 22292
+		// Token: 0x04005B69 RID: 23401
 		[Nullable(2)]
 		protected IDeadeyeFollowShooterConfig FbInstance;
 
-		// Token: 0x04005715 RID: 22293
+		// Token: 0x04005B6A RID: 23402
 		[Nullable(2)]
 		protected IDeadeyeFollowShooterConfig_SetValue PocoInterface;
 	}

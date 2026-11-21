@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200506F RID: 20591
+	// Token: 0x0200403F RID: 16447
 	public class PlotWordArtView : UiViewBase
 	{
-		// Token: 0x06034C16 RID: 216086 RVA: 0x00C7B8F1 File Offset: 0x00C79AF1
+		// Token: 0x06029B0B RID: 170763 RVA: 0x00BC8CC9 File Offset: 0x00BC6EC9
 		[NullableContext(1)]
 		public PlotWordArtView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06034C17 RID: 216087 RVA: 0x00C7B8FC File Offset: 0x00C79AFC
+		// Token: 0x06029B0C RID: 170764 RVA: 0x00BC8CD4 File Offset: 0x00BC6ED4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034C18 RID: 216088 RVA: 0x00C7B968 File Offset: 0x00C79B68
+		// Token: 0x06029B0D RID: 170765 RVA: 0x00BC8D40 File Offset: 0x00BC6F40
 		protected override void OnStart()
 		{
 			PlotWordArtViewParams plotWordArtViewParams = this.OpenParam as PlotWordArtViewParams;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			global::Log.Instance.Warn(ELogModule.Plot, ELogAuthor.HYF, "PlotWordArtView未配置有效Duration，不会自动关闭", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06034C19 RID: 216089 RVA: 0x00C7BB34 File Offset: 0x00C79D34
+		// Token: 0x06029B0E RID: 170766 RVA: 0x00BC8F0C File Offset: 0x00BC710C
 		protected override void OnBeforeDestroy()
 		{
 			if (this.CloseTimerId != null)
@@ -112,31 +112,31 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0401C1CE RID: 115150
+		// Token: 0x04016BF9 RID: 93177
 		private const int WORD_ART_SUB_VISIBLE_REASON = 2;
 
-		// Token: 0x0401C1CF RID: 115151
+		// Token: 0x04016BFA RID: 93178
 		private const float MAX_WIDTH = 2560f;
 
-		// Token: 0x0401C1D0 RID: 115152
+		// Token: 0x04016BFB RID: 93179
 		private const float MAX_HEIGHT = 1440f;
 
-		// Token: 0x0401C1D1 RID: 115153
+		// Token: 0x04016BFC RID: 93180
 		[Nullable(2)]
 		private TimerHandle CloseTimerId;
 
-		// Token: 0x0401C1D2 RID: 115154
+		// Token: 0x04016BFD RID: 93181
 		private int? CaptionViewId;
 
-		// Token: 0x0401C1D3 RID: 115155
+		// Token: 0x04016BFE RID: 93182
 		private bool IsHideBattleView;
 
-		// Token: 0x0200B20B RID: 45579
+		// Token: 0x02009C44 RID: 40004
 		private enum EComponentDefine
 		{
-			// Token: 0x04035FC7 RID: 221127
+			// Token: 0x04030A1B RID: 199195
 			ItemPivot,
-			// Token: 0x04035FC8 RID: 221128
+			// Token: 0x04030A1C RID: 199196
 			Texture
 		}
 	}

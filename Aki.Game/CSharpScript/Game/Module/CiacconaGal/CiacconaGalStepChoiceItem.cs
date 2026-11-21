@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BD4 RID: 23508
+	// Token: 0x02004BB4 RID: 19380
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 	})]
 	public class CiacconaGalStepChoiceItem : GridProxyAbstract<CiacconaGalChoiceData>
 	{
-		// Token: 0x0603B6E6 RID: 243430 RVA: 0x00E2BD94 File Offset: 0x00E29F94
+		// Token: 0x06030631 RID: 198193 RVA: 0x00D7C09C File Offset: 0x00D7A29C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B6E7 RID: 243431 RVA: 0x00E2BE5B File Offset: 0x00E2A05B
+		// Token: 0x06030632 RID: 198194 RVA: 0x00D7C163 File Offset: 0x00D7A363
 		protected override void OnStart()
 		{
 			this.Toggle = base.GetExtendToggle(0);
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603B6E8 RID: 243432 RVA: 0x00E2BE7C File Offset: 0x00E2A07C
+		// Token: 0x06030633 RID: 198195 RVA: 0x00D7C184 File Offset: 0x00D7A384
 		protected override void OnAfterShow()
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			seqPlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603B6E9 RID: 243433 RVA: 0x00E2BEA9 File Offset: 0x00E2A0A9
+		// Token: 0x06030634 RID: 198196 RVA: 0x00D7C1B1 File Offset: 0x00D7A3B1
 		[NullableContext(1)]
 		public override void Refresh(CiacconaGalChoiceData data, bool isSelected, int gridIndex)
 		{
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.RefreshState();
 		}
 
-		// Token: 0x0603B6EA RID: 243434 RVA: 0x00E2BEBE File Offset: 0x00E2A0BE
+		// Token: 0x06030635 RID: 198197 RVA: 0x00D7C1C6 File Offset: 0x00D7A3C6
 		private void RefreshContent()
 		{
 			if (this.ChoiceData == null)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), this.ChoiceData.Content, Array.Empty<object>());
 		}
 
-		// Token: 0x0603B6EB RID: 243435 RVA: 0x00E2BEEC File Offset: 0x00E2A0EC
+		// Token: 0x06030636 RID: 198198 RVA: 0x00D7C1F4 File Offset: 0x00D7A3F4
 		private void RefreshState()
 		{
 			if (this.ChoiceData == null)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.LastState = this.ChoiceData.State;
 		}
 
-		// Token: 0x0603B6EC RID: 243436 RVA: 0x00E2C084 File Offset: 0x00E2A284
+		// Token: 0x06030637 RID: 198199 RVA: 0x00D7C38C File Offset: 0x00D7A58C
 		[NullableContext(1)]
 		private UniTask UpdateIcon(string resourceName)
 		{
@@ -167,35 +167,35 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <UpdateIcon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B6ED RID: 243437 RVA: 0x00E2C0CF File Offset: 0x00E2A2CF
+		// Token: 0x06030638 RID: 198200 RVA: 0x00D7C3D7 File Offset: 0x00D7A5D7
 		private void OnToggleClicked(EToggleState state)
 		{
 			CiacconaGalController.Instance.GalPlayer.OnClick(new int?(this.ChoiceData.Id));
 		}
 
-		// Token: 0x0401EF7D RID: 126845
+		// Token: 0x04019A2E RID: 105006
 		private CiacconaGalChoiceData ChoiceData;
 
-		// Token: 0x0401EF7E RID: 126846
+		// Token: 0x04019A2F RID: 105007
 		private ECiacconaGalStepState LastState;
 
-		// Token: 0x0401EF7F RID: 126847
+		// Token: 0x04019A30 RID: 105008
 		private UUIExtendToggle Toggle;
 
-		// Token: 0x0401EF80 RID: 126848
+		// Token: 0x04019A31 RID: 105009
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0200BDAD RID: 48557
+		// Token: 0x0200A7B6 RID: 42934
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04039341 RID: 234305
+			// Token: 0x04033D06 RID: 212230
 			public const int Toggle = 0;
 
-			// Token: 0x04039342 RID: 234306
+			// Token: 0x04033D07 RID: 212231
 			public const int TextContent = 1;
 
-			// Token: 0x04039343 RID: 234307
+			// Token: 0x04033D08 RID: 212232
 			public const int ImageIcon = 2;
 		}
 	}

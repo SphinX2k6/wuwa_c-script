@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C05 RID: 15365
+	// Token: 0x02004011 RID: 16401
 	public class IConeTriggerShapeT
 	{
-		// Token: 0x1700698E RID: 27022
-		// (get) Token: 0x06015295 RID: 86677 RVA: 0x00310F1B File Offset: 0x0030F11B
-		// (set) Token: 0x06015296 RID: 86678 RVA: 0x00310F23 File Offset: 0x0030F123
+		// Token: 0x17006F36 RID: 28470
+		// (get) Token: 0x0601678B RID: 92043 RVA: 0x00337AA3 File Offset: 0x00335CA3
+		// (set) Token: 0x0601678C RID: 92044 RVA: 0x00337AAB File Offset: 0x00335CAB
 		public ETriggerShape Type { get; set; }
 
-		// Token: 0x1700698F RID: 27023
-		// (get) Token: 0x06015297 RID: 86679 RVA: 0x00310F2C File Offset: 0x0030F12C
-		// (set) Token: 0x06015298 RID: 86680 RVA: 0x00310F34 File Offset: 0x0030F134
+		// Token: 0x17006F37 RID: 28471
+		// (get) Token: 0x0601678D RID: 92045 RVA: 0x00337AB4 File Offset: 0x00335CB4
+		// (set) Token: 0x0601678E RID: 92046 RVA: 0x00337ABC File Offset: 0x00335CBC
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x17006990 RID: 27024
-		// (get) Token: 0x06015299 RID: 86681 RVA: 0x00310F3D File Offset: 0x0030F13D
-		// (set) Token: 0x0601529A RID: 86682 RVA: 0x00310F45 File Offset: 0x0030F145
+		// Token: 0x17006F38 RID: 28472
+		// (get) Token: 0x0601678F RID: 92047 RVA: 0x00337AC5 File Offset: 0x00335CC5
+		// (set) Token: 0x06016790 RID: 92048 RVA: 0x00337ACD File Offset: 0x00335CCD
 		public int Radius { get; set; }
 
-		// Token: 0x17006991 RID: 27025
-		// (get) Token: 0x0601529B RID: 86683 RVA: 0x00310F4E File Offset: 0x0030F14E
-		// (set) Token: 0x0601529C RID: 86684 RVA: 0x00310F56 File Offset: 0x0030F156
+		// Token: 0x17006F39 RID: 28473
+		// (get) Token: 0x06016791 RID: 92049 RVA: 0x00337AD6 File Offset: 0x00335CD6
+		// (set) Token: 0x06016792 RID: 92050 RVA: 0x00337ADE File Offset: 0x00335CDE
 		public int Height { get; set; }
 
-		// Token: 0x0601529D RID: 86685 RVA: 0x00310F5F File Offset: 0x0030F15F
+		// Token: 0x06016793 RID: 92051 RVA: 0x00337AE7 File Offset: 0x00335CE7
 		public IConeTriggerShapeT()
 		{
 			this.Type = ETriggerShape.Box;

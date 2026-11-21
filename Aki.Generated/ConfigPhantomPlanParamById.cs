@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006AE RID: 1710
+	// Token: 0x020006C6 RID: 1734
 	public class ConfigPhantomPlanParamById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002824 RID: 10276 RVA: 0x0013C910 File Offset: 0x0013AB10
+		// Token: 0x060028B4 RID: 10420 RVA: 0x0014338C File Offset: 0x0014158C
 		static ConfigPhantomPlanParamById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomPlanParamById.CreateStaticDefaultValue), new Action(ConfigPhantomPlanParamById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002825 RID: 10277 RVA: 0x0013C930 File Offset: 0x0013AB30
+		// Token: 0x060028B5 RID: 10421 RVA: 0x001433AC File Offset: 0x001415AC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomPlanParamById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002826 RID: 10278 RVA: 0x0013C9AF File Offset: 0x0013ABAF
+		// Token: 0x060028B6 RID: 10422 RVA: 0x0014342B File Offset: 0x0014162B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomPlanParamById.LogPair = null;
 			ConfigPhantomPlanParamById.HandleId = 0;
 		}
 
-		// Token: 0x06002827 RID: 10279 RVA: 0x0013C9BD File Offset: 0x0013ABBD
+		// Token: 0x060028B7 RID: 10423 RVA: 0x00143439 File Offset: 0x00141639
 		public static void Init()
 		{
 			ConfigPhantomPlanParamById.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomPlanParamById.HandleId, "db_visionrecommend.db", "select BinData from `PhantomPlanParam` where Id=?");
 		}
 
-		// Token: 0x06002828 RID: 10280 RVA: 0x0013C9D8 File Offset: 0x0013ABD8
+		// Token: 0x060028B8 RID: 10424 RVA: 0x00143454 File Offset: 0x00141654
 		public static PhantomPlanParam? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomPlanParamById.HandleId, ConfigPhantomPlanParamById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomPlanParam?(rootAsPhantomPlanParam);
 		}
 
-		// Token: 0x04002EA8 RID: 11944
+		// Token: 0x04002F50 RID: 12112
 		private const string DB = "db_visionrecommend.db";
 
-		// Token: 0x04002EA9 RID: 11945
+		// Token: 0x04002F51 RID: 12113
 		private const string FILE = "h.幻象推荐.xlsx";
 
-		// Token: 0x04002EAA RID: 11946
+		// Token: 0x04002F52 RID: 12114
 		private const string TABLE = "PhantomPlanParam";
 
-		// Token: 0x04002EAB RID: 11947
+		// Token: 0x04002F53 RID: 12115
 		private const string COMMAND = "select BinData from `PhantomPlanParam` where Id=?";
 
-		// Token: 0x04002EAC RID: 11948
+		// Token: 0x04002F54 RID: 12116
 		private const string KEY_PREFIX = "PhantomPlanParamById";
 
-		// Token: 0x04002EAD RID: 11949
+		// Token: 0x04002F55 RID: 12117
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002EAE RID: 11950
+		// Token: 0x04002F56 RID: 12118
 		private static int HandleId;
 	}
 }

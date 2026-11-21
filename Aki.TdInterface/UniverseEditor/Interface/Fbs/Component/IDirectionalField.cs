@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200508A RID: 20618
+	// Token: 0x020055EF RID: 21999
 	public struct IDirectionalField : IFlatbufferObject
 	{
-		// Token: 0x170095B9 RID: 38329
-		// (get) Token: 0x06021167 RID: 135527 RVA: 0x0049918B File Offset: 0x0049738B
+		// Token: 0x17009DA6 RID: 40358
+		// (get) Token: 0x060230BB RID: 143547 RVA: 0x004D3117 File Offset: 0x004D1317
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021168 RID: 135528 RVA: 0x00499198 File Offset: 0x00497398
+		// Token: 0x060230BC RID: 143548 RVA: 0x004D3124 File Offset: 0x004D1324
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021169 RID: 135529 RVA: 0x004991A0 File Offset: 0x004973A0
+		// Token: 0x060230BD RID: 143549 RVA: 0x004D312C File Offset: 0x004D132C
 		public static IDirectionalField GetRootAsIDirectionalField(ByteBuffer _bb)
 		{
 			return IDirectionalField.GetRootAsIDirectionalField(_bb, default(IDirectionalField));
 		}
 
-		// Token: 0x0602116A RID: 135530 RVA: 0x004991BC File Offset: 0x004973BC
+		// Token: 0x060230BE RID: 143550 RVA: 0x004D3148 File Offset: 0x004D1348
 		public static IDirectionalField GetRootAsIDirectionalField(ByteBuffer _bb, IDirectionalField obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602116B RID: 135531 RVA: 0x004991D9 File Offset: 0x004973D9
+		// Token: 0x060230BF RID: 143551 RVA: 0x004D3165 File Offset: 0x004D1365
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602116C RID: 135532 RVA: 0x004991E8 File Offset: 0x004973E8
+		// Token: 0x060230C0 RID: 143552 RVA: 0x004D3174 File Offset: 0x004D1374
 		public IDirectionalField __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170095BA RID: 38330
-		// (get) Token: 0x0602116D RID: 135533 RVA: 0x004991F8 File Offset: 0x004973F8
+		// Token: 0x17009DA7 RID: 40359
+		// (get) Token: 0x060230C1 RID: 143553 RVA: 0x004D3184 File Offset: 0x004D1384
 		public EConveyorBeltFieldType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170095BB RID: 38331
-		// (get) Token: 0x0602116E RID: 135534 RVA: 0x00499234 File Offset: 0x00497434
+		// Token: 0x17009DA8 RID: 40360
+		// (get) Token: 0x060230C2 RID: 143554 RVA: 0x004D31C0 File Offset: 0x004D13C0
 		public IVectorInfo? Direction
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602116F RID: 135535 RVA: 0x00499291 File Offset: 0x00497491
+		// Token: 0x060230C3 RID: 143555 RVA: 0x004D321D File Offset: 0x004D141D
 		public static Offset<IDirectionalField> CreateIDirectionalField(FlatBufferBuilder builder, EConveyorBeltFieldType Type = EConveyorBeltFieldType.DirectionalField, Offset<IVectorInfo> DirectionOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDirectionalField.EndIDirectionalField(builder);
 		}
 
-		// Token: 0x06021170 RID: 135536 RVA: 0x004992AE File Offset: 0x004974AE
+		// Token: 0x060230C4 RID: 143556 RVA: 0x004D323A File Offset: 0x004D143A
 		public static void StartIDirectionalField(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06021171 RID: 135537 RVA: 0x004992B7 File Offset: 0x004974B7
+		// Token: 0x060230C5 RID: 143557 RVA: 0x004D3243 File Offset: 0x004D1443
 		public static void AddType(FlatBufferBuilder builder, EConveyorBeltFieldType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06021172 RID: 135538 RVA: 0x004992C2 File Offset: 0x004974C2
+		// Token: 0x060230C6 RID: 143558 RVA: 0x004D324E File Offset: 0x004D144E
 		public static void AddDirection(FlatBufferBuilder builder, Offset<IVectorInfo> directionOffset)
 		{
 			builder.AddOffset(1, directionOffset.Value, 0);
 		}
 
-		// Token: 0x06021173 RID: 135539 RVA: 0x004992D2 File Offset: 0x004974D2
+		// Token: 0x060230C7 RID: 143559 RVA: 0x004D325E File Offset: 0x004D145E
 		public static Offset<IDirectionalField> EndIDirectionalField(FlatBufferBuilder builder)
 		{
 			return new Offset<IDirectionalField>(builder.EndTable());
 		}
 
-		// Token: 0x06021174 RID: 135540 RVA: 0x004992E0 File Offset: 0x004974E0
+		// Token: 0x060230C8 RID: 143560 RVA: 0x004D326C File Offset: 0x004D146C
 		public IDirectionalFieldT UnPack()
 		{
 			IDirectionalFieldT directionalFieldT = new IDirectionalFieldT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return directionalFieldT;
 		}
 
-		// Token: 0x06021175 RID: 135541 RVA: 0x004992FC File Offset: 0x004974FC
+		// Token: 0x060230C9 RID: 143561 RVA: 0x004D3288 File Offset: 0x004D1488
 		public void UnPackTo(IDirectionalFieldT _o)
 		{
 			_o.Type = this.Type;
 			_o.Direction = ((this.Direction != null) ? this.Direction.Value.UnPack() : null);
 		}
 
-		// Token: 0x06021176 RID: 135542 RVA: 0x00499344 File Offset: 0x00497544
+		// Token: 0x060230CA RID: 143562 RVA: 0x004D32D0 File Offset: 0x004D14D0
 		public static Offset<IDirectionalField> Pack(FlatBufferBuilder builder, IDirectionalFieldT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDirectionalField.CreateIDirectionalField(builder, _o.Type, directionOffset);
 		}
 
-		// Token: 0x0400E0A0 RID: 57504
+		// Token: 0x0400EC9D RID: 60573
 		private Table __p;
 	}
 }

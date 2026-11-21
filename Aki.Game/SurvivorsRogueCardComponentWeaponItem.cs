@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002ACF RID: 10959
+// Token: 0x0200204B RID: 8267
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsRogueCardComponentWeaponItem : SurvivorsRogueCardComponent
 {
-	// Token: 0x06016CC6 RID: 93382 RVA: 0x005CA064 File Offset: 0x005C8264
+	// Token: 0x060146F7 RID: 83703 RVA: 0x005F6BB8 File Offset: 0x005F4DB8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,19 +22,19 @@ public class SurvivorsRogueCardComponentWeaponItem : SurvivorsRogueCardComponent
 		};
 	}
 
-	// Token: 0x06016CC7 RID: 93383 RVA: 0x005CA0BE File Offset: 0x005C82BE
+	// Token: 0x060146F8 RID: 83704 RVA: 0x005F6C12 File Offset: 0x005F4E12
 	protected override string OnGetResourceId()
 	{
 		return "UiItem_SurvivorsCardWeapon";
 	}
 
-	// Token: 0x06016CC8 RID: 93384 RVA: 0x005CA0C5 File Offset: 0x005C82C5
+	// Token: 0x060146F9 RID: 83705 RVA: 0x005F6C19 File Offset: 0x005F4E19
 	public override ECardMountPos GetLayoutLevel()
 	{
 		return ECardMountPos.Center;
 	}
 
-	// Token: 0x06016CC9 RID: 93385 RVA: 0x005CA0C8 File Offset: 0x005C82C8
+	// Token: 0x060146FA RID: 83706 RVA: 0x005F6C1C File Offset: 0x005F4E1C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueCardComponentWeaponItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class SurvivorsRogueCardComponentWeaponItem : SurvivorsRogueCardComponent
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CCA RID: 93386 RVA: 0x005CA10C File Offset: 0x005C830C
+	// Token: 0x060146FB RID: 83707 RVA: 0x005F6C60 File Offset: 0x005F4E60
 	protected override void OnRefresh([Nullable(new byte[]
 	{
 		1,
@@ -72,6 +72,6 @@ public class SurvivorsRogueCardComponentWeaponItem : SurvivorsRogueCardComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0400A961 RID: 43361
+	// Token: 0x0400AD67 RID: 44391
 	private SurvivorsRogueCardAttributeItem AttributeItem;
 }

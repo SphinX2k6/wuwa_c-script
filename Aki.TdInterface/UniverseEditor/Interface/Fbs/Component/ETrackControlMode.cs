@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E31 RID: 20017
+	// Token: 0x02005340 RID: 21312
 	public enum ETrackControlMode : byte
 	{
-		// Token: 0x0400DB94 RID: 56212
+		// Token: 0x0400E706 RID: 59142
 		Sequence,
-		// Token: 0x0400DB95 RID: 56213
+		// Token: 0x0400E707 RID: 59143
 		Entity
 	}
 }

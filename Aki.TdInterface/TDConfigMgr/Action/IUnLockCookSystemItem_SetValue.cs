@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002024 RID: 8228
+	// Token: 0x0200226D RID: 8813
 	public class IUnLockCookSystemItem_SetValue
 	{
-		// Token: 0x04006CF3 RID: 27891
+		// Token: 0x040072FC RID: 29436
 		public EUnlockSystemItemType Type;
 
-		// Token: 0x04006CF4 RID: 27892
-		[Nullable(1)]
+		// Token: 0x040072FD RID: 29437
 		public IUnlockCookSystemCookBook UnlockOption;
 	}
 }

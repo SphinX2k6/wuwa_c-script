@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200744F RID: 29775
+	// Token: 0x02007C42 RID: 31810
 	public class ITransitionPopupStyleT
 	{
-		// Token: 0x1700E20F RID: 57871
-		// (get) Token: 0x06036189 RID: 221577 RVA: 0x0075B4F2 File Offset: 0x007596F2
-		// (set) Token: 0x0603618A RID: 221578 RVA: 0x0075B4FA File Offset: 0x007596FA
+		// Token: 0x1700EE2C RID: 60972
+		// (get) Token: 0x06039572 RID: 234866 RVA: 0x007BE21E File Offset: 0x007BC41E
+		// (set) Token: 0x06039573 RID: 234867 RVA: 0x007BE226 File Offset: 0x007BC426
 		public ETransitionPopupStyleType Type { get; set; }
 
-		// Token: 0x0603618B RID: 221579 RVA: 0x0075B503 File Offset: 0x00759703
+		// Token: 0x06039574 RID: 234868 RVA: 0x007BE22F File Offset: 0x007BC42F
 		public ITransitionPopupStyleT()
 		{
 			this.Type = ETransitionPopupStyleType.LeftTopTip;

@@ -7,15 +7,15 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 {
-	// Token: 0x02004A00 RID: 18944
+	// Token: 0x0200397A RID: 14714
 	public class DangobrawlReplaceComponent : DangobrawlHotKeyComponentBase
 	{
-		// Token: 0x060312CA RID: 201418 RVA: 0x00B67D38 File Offset: 0x00B65F38
+		// Token: 0x06025E00 RID: 155136 RVA: 0x00AA2CF4 File Offset: 0x00AA0EF4
 		public DangobrawlReplaceComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060312CB RID: 201419 RVA: 0x00B67D44 File Offset: 0x00B65F44
+		// Token: 0x06025E01 RID: 155137 RVA: 0x00AA2D00 File Offset: 0x00AA0F00
 		protected override bool ShouldShow()
 		{
 			bool flag = DangobrawlHotKeyComponentBase.InputPlatform.GetValueOrDefault() == EInputPlatform.Pc;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			return flag && isHolding && flag2 && flag4;
 		}
 
-		// Token: 0x060312CC RID: 201420 RVA: 0x00B67DCC File Offset: 0x00B65FCC
+		// Token: 0x06025E02 RID: 155138 RVA: 0x00AA2D88 File Offset: 0x00AA0F88
 		protected override void OnRelease(HotKeyMap config)
 		{
 			DangoBrawlOperationDispatcher dispatcher = DangobrawlHotKeyComponentBase.Dispatcher;

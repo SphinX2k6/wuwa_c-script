@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019C5 RID: 6597
+	// Token: 0x02001B52 RID: 6994
 	public class IDreamlessWarning_SetValue
 	{
-		// Token: 0x040057D1 RID: 22481
+		// Token: 0x04005C26 RID: 23590
 		public ECommonTipType Type;
 
-		// Token: 0x040057D2 RID: 22482
-		[Nullable(1)]
+		// Token: 0x04005C27 RID: 23591
 		public string WarningText;
 	}
 }

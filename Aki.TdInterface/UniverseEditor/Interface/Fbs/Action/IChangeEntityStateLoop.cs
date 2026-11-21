@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062F3 RID: 25331
+	// Token: 0x02006964 RID: 26980
 	public struct IChangeEntityStateLoop : IFlatbufferObject
 	{
-		// Token: 0x1700BD11 RID: 48401
-		// (get) Token: 0x0602BCA7 RID: 179367 RVA: 0x00605FB8 File Offset: 0x006041B8
+		// Token: 0x1700C69B RID: 50843
+		// (get) Token: 0x0602E410 RID: 189456 RVA: 0x00650FC4 File Offset: 0x0064F1C4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BCA8 RID: 179368 RVA: 0x00605FC5 File Offset: 0x006041C5
+		// Token: 0x0602E411 RID: 189457 RVA: 0x00650FD1 File Offset: 0x0064F1D1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BCA9 RID: 179369 RVA: 0x00605FCC File Offset: 0x006041CC
+		// Token: 0x0602E412 RID: 189458 RVA: 0x00650FD8 File Offset: 0x0064F1D8
 		public static IChangeEntityStateLoop GetRootAsIChangeEntityStateLoop(ByteBuffer _bb)
 		{
 			return IChangeEntityStateLoop.GetRootAsIChangeEntityStateLoop(_bb, default(IChangeEntityStateLoop));
 		}
 
-		// Token: 0x0602BCAA RID: 179370 RVA: 0x00605FE8 File Offset: 0x006041E8
+		// Token: 0x0602E413 RID: 189459 RVA: 0x00650FF4 File Offset: 0x0064F1F4
 		public static IChangeEntityStateLoop GetRootAsIChangeEntityStateLoop(ByteBuffer _bb, IChangeEntityStateLoop obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BCAB RID: 179371 RVA: 0x00606005 File Offset: 0x00604205
+		// Token: 0x0602E414 RID: 189460 RVA: 0x00651011 File Offset: 0x0064F211
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BCAC RID: 179372 RVA: 0x00606014 File Offset: 0x00604214
+		// Token: 0x0602E415 RID: 189461 RVA: 0x00651020 File Offset: 0x0064F220
 		public IChangeEntityStateLoop __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BD12 RID: 48402
-		// (get) Token: 0x0602BCAD RID: 179373 RVA: 0x00606024 File Offset: 0x00604224
+		// Token: 0x1700C69C RID: 50844
+		// (get) Token: 0x0602E416 RID: 189462 RVA: 0x00651030 File Offset: 0x0064F230
 		public EChangeEntityState Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BD13 RID: 48403
-		// (get) Token: 0x0602BCAE RID: 179374 RVA: 0x00606060 File Offset: 0x00604260
+		// Token: 0x1700C69D RID: 50845
+		// (get) Token: 0x0602E417 RID: 189463 RVA: 0x0065106C File Offset: 0x0064F26C
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BD14 RID: 48404
-		// (get) Token: 0x0602BCAF RID: 179375 RVA: 0x0060609C File Offset: 0x0060429C
+		// Token: 0x1700C69E RID: 50846
+		// (get) Token: 0x0602E418 RID: 189464 RVA: 0x006510A8 File Offset: 0x0064F2A8
 		public ELoopStateType Circulation
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BCB0 RID: 179376 RVA: 0x006060D8 File Offset: 0x006042D8
+		// Token: 0x0602E419 RID: 189465 RVA: 0x006510E4 File Offset: 0x0064F2E4
 		public static Offset<IChangeEntityStateLoop> CreateIChangeEntityStateLoop(FlatBufferBuilder builder, EChangeEntityState Type = EChangeEntityState.Directly, int EntityId = 0, ELoopStateType Circulation = ELoopStateType.Prev)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeEntityStateLoop.EndIChangeEntityStateLoop(builder);
 		}
 
-		// Token: 0x0602BCB1 RID: 179377 RVA: 0x006060FC File Offset: 0x006042FC
+		// Token: 0x0602E41A RID: 189466 RVA: 0x00651108 File Offset: 0x0064F308
 		public static void StartIChangeEntityStateLoop(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602BCB2 RID: 179378 RVA: 0x00606105 File Offset: 0x00604305
+		// Token: 0x0602E41B RID: 189467 RVA: 0x00651111 File Offset: 0x0064F311
 		public static void AddType(FlatBufferBuilder builder, EChangeEntityState type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602BCB3 RID: 179379 RVA: 0x00606110 File Offset: 0x00604310
+		// Token: 0x0602E41C RID: 189468 RVA: 0x0065111C File Offset: 0x0064F31C
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0602BCB4 RID: 179380 RVA: 0x0060611B File Offset: 0x0060431B
+		// Token: 0x0602E41D RID: 189469 RVA: 0x00651127 File Offset: 0x0064F327
 		public static void AddCirculation(FlatBufferBuilder builder, ELoopStateType circulation)
 		{
 			builder.AddByte(2, (byte)circulation, 0);
 		}
 
-		// Token: 0x0602BCB5 RID: 179381 RVA: 0x00606126 File Offset: 0x00604326
+		// Token: 0x0602E41E RID: 189470 RVA: 0x00651132 File Offset: 0x0064F332
 		public static Offset<IChangeEntityStateLoop> EndIChangeEntityStateLoop(FlatBufferBuilder builder)
 		{
 			return new Offset<IChangeEntityStateLoop>(builder.EndTable());
 		}
 
-		// Token: 0x0602BCB6 RID: 179382 RVA: 0x00606134 File Offset: 0x00604334
+		// Token: 0x0602E41F RID: 189471 RVA: 0x00651140 File Offset: 0x0064F340
 		public IChangeEntityStateLoopT UnPack()
 		{
 			IChangeEntityStateLoopT changeEntityStateLoopT = new IChangeEntityStateLoopT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return changeEntityStateLoopT;
 		}
 
-		// Token: 0x0602BCB7 RID: 179383 RVA: 0x0060614F File Offset: 0x0060434F
+		// Token: 0x0602E420 RID: 189472 RVA: 0x0065115B File Offset: 0x0064F35B
 		public void UnPackTo(IChangeEntityStateLoopT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.Circulation = this.Circulation;
 		}
 
-		// Token: 0x0602BCB8 RID: 179384 RVA: 0x00606178 File Offset: 0x00604378
+		// Token: 0x0602E421 RID: 189473 RVA: 0x00651184 File Offset: 0x0064F384
 		public static Offset<IChangeEntityStateLoop> Pack(FlatBufferBuilder builder, IChangeEntityStateLoopT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeEntityStateLoop.CreateIChangeEntityStateLoop(builder, _o.Type, _o.EntityId, _o.Circulation);
 		}
 
-		// Token: 0x040108A7 RID: 67751
+		// Token: 0x040116BD RID: 71357
 		private Table __p;
 	}
 }

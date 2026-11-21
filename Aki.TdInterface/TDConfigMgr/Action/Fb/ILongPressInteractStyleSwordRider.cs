@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002615 RID: 9749
+	// Token: 0x020028D5 RID: 10453
 	public class ILongPressInteractStyleSwordRider : ILongPressInteractStyleConfig
 	{
-		// Token: 0x0600DADB RID: 56027 RVA: 0x00209879 File Offset: 0x00207A79
-		[NullableContext(1)]
+		// Token: 0x0600E8A8 RID: 59560 RVA: 0x00225FCD File Offset: 0x002241CD
 		public static ILongPressInteractStyleSwordRider Create(ILongPressInteractStyleSwordRider? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004073 RID: 16499
-		// (get) Token: 0x0600DADC RID: 56028 RVA: 0x00209898 File Offset: 0x00207A98
+		// Token: 0x170043AC RID: 17324
+		// (get) Token: 0x0600E8A9 RID: 59561 RVA: 0x00225FEC File Offset: 0x002241EC
 		public override ELongPressInteractStyle Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400798B RID: 31115
+		// Token: 0x04008025 RID: 32805
 		private ILongPressInteractStyleSwordRider Instance;
 	}
 }

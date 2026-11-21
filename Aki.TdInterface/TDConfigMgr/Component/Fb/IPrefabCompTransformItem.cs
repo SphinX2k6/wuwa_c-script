@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D70 RID: 3440
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E6C RID: 3692
 	public class IPrefabCompTransformItem
 	{
-		// Token: 0x06004E4A RID: 20042 RVA: 0x000C24A6 File Offset: 0x000C06A6
+		// Token: 0x0600536F RID: 21359 RVA: 0x000CDCF6 File Offset: 0x000CBEF6
 		public static IPrefabCompTransformItem Create(IPrefabCompTransformItem? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001927 RID: 6439
-		// (get) Token: 0x06004E4B RID: 20043 RVA: 0x000C24C5 File Offset: 0x000C06C5
+		// Token: 0x17001A92 RID: 6802
+		// (get) Token: 0x06005370 RID: 21360 RVA: 0x000CDD15 File Offset: 0x000CBF15
 		public virtual bool IsAbsolute
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001928 RID: 6440
-		// (get) Token: 0x06004E4C RID: 20044 RVA: 0x000C24D2 File Offset: 0x000C06D2
+		// Token: 0x17001A93 RID: 6803
+		// (get) Token: 0x06005371 RID: 21361 RVA: 0x000CDD22 File Offset: 0x000CBF22
 		public virtual VectorInfo Value
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CE7 RID: 11495
+		// Token: 0x04002FAD RID: 12205
 		private IPrefabCompTransformItem Instance;
 
-		// Token: 0x04002CE8 RID: 11496
+		// Token: 0x04002FAE RID: 12206
 		[Nullable(2)]
 		private VectorInfo _ValueCache;
 
-		// Token: 0x04002CE9 RID: 11497
+		// Token: 0x04002FAF RID: 12207
 		private bool _ValueInited;
 	}
 }

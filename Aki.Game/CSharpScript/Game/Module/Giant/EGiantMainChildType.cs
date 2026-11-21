@@ -2,106 +2,106 @@
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005972 RID: 22898
+	// Token: 0x0200494B RID: 18763
 	public class EGiantMainChildType
 	{
-		// Token: 0x0401E4E1 RID: 124129
+		// Token: 0x04018F7F RID: 102271
 		public const int UiItemCaption = 0;
 
-		// Token: 0x0401E4E2 RID: 124130
+		// Token: 0x04018F80 RID: 102272
 		public const int TxtName = 1;
 
-		// Token: 0x0401E4E3 RID: 124131
+		// Token: 0x04018F81 RID: 102273
 		public const int BtnGotoA = 2;
 
-		// Token: 0x0401E4E4 RID: 124132
+		// Token: 0x04018F82 RID: 102274
 		public const int RedDotCaption = 3;
 
-		// Token: 0x0401E4E5 RID: 124133
+		// Token: 0x04018F83 RID: 102275
 		public const int PnlTask = 4;
 
-		// Token: 0x0401E4E6 RID: 124134
+		// Token: 0x04018F84 RID: 102276
 		public const int SprNml = 5;
 
-		// Token: 0x0401E4E7 RID: 124135
+		// Token: 0x04018F85 RID: 102277
 		public const int SprLock = 6;
 
-		// Token: 0x0401E4E8 RID: 124136
+		// Token: 0x04018F86 RID: 102278
 		public const int SprCheck = 7;
 
-		// Token: 0x0401E4E9 RID: 124137
+		// Token: 0x04018F87 RID: 102279
 		public const int TxtTaskTitle = 8;
 
-		// Token: 0x0401E4EA RID: 124138
+		// Token: 0x04018F88 RID: 102280
 		public const int TxtGet = 9;
 
-		// Token: 0x0401E4EB RID: 124139
+		// Token: 0x04018F89 RID: 102281
 		public const int PnlProgress = 10;
 
-		// Token: 0x0401E4EC RID: 124140
+		// Token: 0x04018F8A RID: 102282
 		public const int SprPoint = 11;
 
-		// Token: 0x0401E4ED RID: 124141
+		// Token: 0x04018F8B RID: 102283
 		public const int TxtTaskTitle2 = 12;
 
-		// Token: 0x0401E4EE RID: 124142
+		// Token: 0x04018F8C RID: 102284
 		public const int UiItemItemBaseB = 13;
 
-		// Token: 0x0401E4EF RID: 124143
+		// Token: 0x04018F8D RID: 102285
 		public const int TxtContent = 14;
 
-		// Token: 0x0401E4F0 RID: 124144
+		// Token: 0x04018F8E RID: 102286
 		public const int BtnAttitudeA = 15;
 
-		// Token: 0x0401E4F1 RID: 124145
+		// Token: 0x04018F8F RID: 102287
 		public const int BtnAttitudeB = 16;
 
-		// Token: 0x0401E4F2 RID: 124146
+		// Token: 0x04018F90 RID: 102288
 		public const int TogMainA1 = 17;
 
-		// Token: 0x0401E4F3 RID: 124147
+		// Token: 0x04018F91 RID: 102289
 		public const int TogMainA2 = 18;
 
-		// Token: 0x0401E4F4 RID: 124148
+		// Token: 0x04018F92 RID: 102290
 		public const int TogMainA3 = 19;
 
-		// Token: 0x0401E4F5 RID: 124149
+		// Token: 0x04018F93 RID: 102291
 		public const int BtnGotoInteract = 20;
 
-		// Token: 0x0401E4F6 RID: 124150
+		// Token: 0x04018F94 RID: 102292
 		public const int RedDotInteract = 21;
 
-		// Token: 0x0401E4F7 RID: 124151
+		// Token: 0x04018F95 RID: 102293
 		public const int TxtValue = 22;
 
-		// Token: 0x0401E4F8 RID: 124152
+		// Token: 0x04018F96 RID: 102294
 		public const int SldBar = 23;
 
-		// Token: 0x0401E4F9 RID: 124153
+		// Token: 0x04018F97 RID: 102295
 		public const int PnlHList = 24;
 
-		// Token: 0x0401E4FA RID: 124154
+		// Token: 0x04018F98 RID: 102296
 		public const int TogNodeScale = 25;
 
-		// Token: 0x0401E4FB RID: 124155
+		// Token: 0x04018F99 RID: 102297
 		public const int ConPic1 = 26;
 
-		// Token: 0x0401E4FC RID: 124156
+		// Token: 0x04018F9A RID: 102298
 		public const int ConPic2 = 27;
 
-		// Token: 0x0401E4FD RID: 124157
+		// Token: 0x04018F9B RID: 102299
 		public const int ConPic3 = 28;
 
-		// Token: 0x0401E4FE RID: 124158
+		// Token: 0x04018F9C RID: 102300
 		public const int UiItemItemBaseB2 = 29;
 
-		// Token: 0x0401E4FF RID: 124159
+		// Token: 0x04018F9D RID: 102301
 		public const int TxtConfirm = 30;
 
-		// Token: 0x0401E500 RID: 124160
+		// Token: 0x04018F9E RID: 102302
 		public const int BtnMask = 31;
 
-		// Token: 0x0401E501 RID: 124161
+		// Token: 0x04018F9F RID: 102303
 		public const int BtnGiantSystemMainB = 32;
 	}
 }

@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021D5 RID: 8661
+	// Token: 0x02000736 RID: 1846
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UITextureBase")]
 	[UnrealStructLayout(2256, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2256)]
 	public abstract class UUITextureBase : UUIBatchGeometryRenderable, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06021021 RID: 135201 RVA: 0x0030B317 File Offset: 0x00309517
+		// Token: 0x0600A0FA RID: 41210 RVA: 0x000EE29F File Offset: 0x000EC49F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUITextureBase._ClassPtr;
 		}
 
-		// Token: 0x170080DD RID: 32989
-		// (get) Token: 0x06021022 RID: 135202 RVA: 0x0030B323 File Offset: 0x00309523
-		// (set) Token: 0x06021023 RID: 135203 RVA: 0x0030B337 File Offset: 0x00309537
+		// Token: 0x17001DFA RID: 7674
+		// (get) Token: 0x0600A0FB RID: 41211 RVA: 0x000EE2AB File Offset: 0x000EC4AB
+		// (set) Token: 0x0600A0FC RID: 41212 RVA: 0x000EE2BF File Offset: 0x000EC4BF
 		public unsafe UTexture texture
 		{
 			get
@@ -34,19 +34,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06021024 RID: 135204 RVA: 0x0030B34C File Offset: 0x0030954C
+		// Token: 0x0600A0FD RID: 41213 RVA: 0x000EE2D4 File Offset: 0x000EC4D4
 		public void SetTexture(UTexture newTexture)
 		{
 			UUITextureBase.__SetTexture_Internal(base.NativePtr, (newTexture != null) ? newTexture.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06021025 RID: 135205 RVA: 0x0030B369 File Offset: 0x00309569
+		// Token: 0x0600A0FE RID: 41214 RVA: 0x000EE2F1 File Offset: 0x000EC4F1
 		public void SetSizeFromTexture()
 		{
 			UUITextureBase.__SetSizeFromTexture_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021026 RID: 135206 RVA: 0x0030B378 File Offset: 0x00309578
+		// Token: 0x0600A0FF RID: 41215 RVA: 0x000EE300 File Offset: 0x000EC500
 		[NullableContext(1)]
 		public unsafe void SetDynamicAtlasTextureAsync(string InAtlasTag, [Nullable(2)] FSoftObjectPath InSoftObjectPath)
 		{
@@ -55,65 +55,55 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06021027 RID: 135207 RVA: 0x0030B3B1 File Offset: 0x003095B1
-		public void OnDynamicAtlasSlotBuilt(in FDynamicAtlasSlotManagedHandle ManagedHandle)
-		{
-			UUITextureBase.__OnDynamicAtlasSlotBuilt_Internal(base.NativePtr, (ManagedHandle ?? new FDynamicAtlasSlotManagedHandle()).NativePtr);
-		}
-
-		// Token: 0x06021028 RID: 135208 RVA: 0x0030B3CE File Offset: 0x003095CE
+		// Token: 0x0600A100 RID: 41216 RVA: 0x000EE339 File Offset: 0x000EC539
 		public UTexture GetTexture()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UTexture>(UUITextureBase.__GetTexture_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06021029 RID: 135209
+		// Token: 0x0600A101 RID: 41217
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTexture_Internal(IntPtr @this, IntPtr newTexture);
 
-		// Token: 0x0602102A RID: 135210
+		// Token: 0x0600A102 RID: 41218
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSizeFromTexture_Internal(IntPtr @this);
 
-		// Token: 0x0602102B RID: 135211
+		// Token: 0x0600A103 RID: 41219
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDynamicAtlasTextureAsync_Internal(IntPtr @this, in FString InAtlasTag, IntPtr InSoftObjectPath);
 
-		// Token: 0x0602102C RID: 135212
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __OnDynamicAtlasSlotBuilt_Internal(IntPtr @this, IntPtr ManagedHandle);
-
-		// Token: 0x0602102D RID: 135213
+		// Token: 0x0600A104 RID: 41220
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetTexture_Internal(IntPtr @this);
 
-		// Token: 0x0602102E RID: 135214 RVA: 0x0030B3E0 File Offset: 0x003095E0
+		// Token: 0x0600A105 RID: 41221 RVA: 0x000EE34B File Offset: 0x000EC54B
 		static UUITextureBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UITextureBase");
 		}
 
-		// Token: 0x0602102F RID: 135215 RVA: 0x0030B3F0 File Offset: 0x003095F0
+		// Token: 0x0600A106 RID: 41222 RVA: 0x000EE35C File Offset: 0x000EC55C
 		protected UUITextureBase() : this(BuiltinUtils.AllocNativeUObject(UUITextureBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06021030 RID: 135216 RVA: 0x0030B418 File Offset: 0x00309618
+		// Token: 0x0600A107 RID: 41223 RVA: 0x000EE384 File Offset: 0x000EC584
 		protected UUITextureBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040119DA RID: 72154
+		// Token: 0x040044F3 RID: 17651
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UITextureBase";
 
-		// Token: 0x040119DB RID: 72155
+		// Token: 0x040044F4 RID: 17652
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040119DC RID: 72156
+		// Token: 0x040044F5 RID: 17653
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040119DD RID: 72157
+		// Token: 0x040044F6 RID: 17654
 		internal static int __PropertyOffset_texture;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A54 RID: 14932
+	// Token: 0x02003E2F RID: 15919
 	public struct IBvbFetchHandCard : IFlatbufferObject
 	{
-		// Token: 0x1700665C RID: 26204
-		// (get) Token: 0x060143AA RID: 82858 RVA: 0x002F49FD File Offset: 0x002F2BFD
+		// Token: 0x17006B8C RID: 27532
+		// (get) Token: 0x060156C6 RID: 87750 RVA: 0x00317BE9 File Offset: 0x00315DE9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060143AB RID: 82859 RVA: 0x002F4A0A File Offset: 0x002F2C0A
+		// Token: 0x060156C7 RID: 87751 RVA: 0x00317BF6 File Offset: 0x00315DF6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060143AC RID: 82860 RVA: 0x002F4A14 File Offset: 0x002F2C14
+		// Token: 0x060156C8 RID: 87752 RVA: 0x00317C00 File Offset: 0x00315E00
 		public static IBvbFetchHandCard GetRootAsIBvbFetchHandCard(ByteBuffer _bb)
 		{
 			return IBvbFetchHandCard.GetRootAsIBvbFetchHandCard(_bb, default(IBvbFetchHandCard));
 		}
 
-		// Token: 0x060143AD RID: 82861 RVA: 0x002F4A30 File Offset: 0x002F2C30
+		// Token: 0x060156C9 RID: 87753 RVA: 0x00317C1C File Offset: 0x00315E1C
 		public static IBvbFetchHandCard GetRootAsIBvbFetchHandCard(ByteBuffer _bb, IBvbFetchHandCard obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060143AE RID: 82862 RVA: 0x002F4A4D File Offset: 0x002F2C4D
+		// Token: 0x060156CA RID: 87754 RVA: 0x00317C39 File Offset: 0x00315E39
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060143AF RID: 82863 RVA: 0x002F4A5C File Offset: 0x002F2C5C
+		// Token: 0x060156CB RID: 87755 RVA: 0x00317C48 File Offset: 0x00315E48
 		public IBvbFetchHandCard __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700665D RID: 26205
-		// (get) Token: 0x060143B0 RID: 82864 RVA: 0x002F4A6C File Offset: 0x002F2C6C
+		// Token: 0x17006B8D RID: 27533
+		// (get) Token: 0x060156CC RID: 87756 RVA: 0x00317C58 File Offset: 0x00315E58
 		public ESystemVarName Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x1700665E RID: 26206
-		// (get) Token: 0x060143B1 RID: 82865 RVA: 0x002F4AA8 File Offset: 0x002F2CA8
+		// Token: 0x17006B8E RID: 27534
+		// (get) Token: 0x060156CD RID: 87757 RVA: 0x00317C94 File Offset: 0x00315E94
 		public IBvbCardFilterGroup? Condition
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060143B2 RID: 82866 RVA: 0x002F4B05 File Offset: 0x002F2D05
+		// Token: 0x060156CE RID: 87758 RVA: 0x00317CF1 File Offset: 0x00315EF1
 		public static Offset<IBvbFetchHandCard> CreateIBvbFetchHandCard(FlatBufferBuilder builder, ESystemVarName Type = ESystemVarName.CommonHotFixVar, Offset<IBvbCardFilterGroup> ConditionOffset = default(Offset<IBvbCardFilterGroup>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbFetchHandCard.EndIBvbFetchHandCard(builder);
 		}
 
-		// Token: 0x060143B3 RID: 82867 RVA: 0x002F4B22 File Offset: 0x002F2D22
+		// Token: 0x060156CF RID: 87759 RVA: 0x00317D0E File Offset: 0x00315F0E
 		public static void StartIBvbFetchHandCard(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060143B4 RID: 82868 RVA: 0x002F4B2B File Offset: 0x002F2D2B
+		// Token: 0x060156D0 RID: 87760 RVA: 0x00317D17 File Offset: 0x00315F17
 		public static void AddType(FlatBufferBuilder builder, ESystemVarName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060143B5 RID: 82869 RVA: 0x002F4B36 File Offset: 0x002F2D36
+		// Token: 0x060156D1 RID: 87761 RVA: 0x00317D22 File Offset: 0x00315F22
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IBvbCardFilterGroup> conditionOffset)
 		{
 			builder.AddOffset(1, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x060143B6 RID: 82870 RVA: 0x002F4B46 File Offset: 0x002F2D46
+		// Token: 0x060156D2 RID: 87762 RVA: 0x00317D32 File Offset: 0x00315F32
 		public static Offset<IBvbFetchHandCard> EndIBvbFetchHandCard(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbFetchHandCard>(builder.EndTable());
 		}
 
-		// Token: 0x060143B7 RID: 82871 RVA: 0x002F4B54 File Offset: 0x002F2D54
+		// Token: 0x060156D3 RID: 87763 RVA: 0x00317D40 File Offset: 0x00315F40
 		public IBvbFetchHandCardT UnPack()
 		{
 			IBvbFetchHandCardT bvbFetchHandCardT = new IBvbFetchHandCardT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbFetchHandCardT;
 		}
 
-		// Token: 0x060143B8 RID: 82872 RVA: 0x002F4B70 File Offset: 0x002F2D70
+		// Token: 0x060156D4 RID: 87764 RVA: 0x00317D5C File Offset: 0x00315F5C
 		public void UnPackTo(IBvbFetchHandCardT _o)
 		{
 			_o.Type = this.Type;
 			_o.Condition = ((this.Condition != null) ? this.Condition.Value.UnPack() : null);
 		}
 
-		// Token: 0x060143B9 RID: 82873 RVA: 0x002F4BB8 File Offset: 0x002F2DB8
+		// Token: 0x060156D5 RID: 87765 RVA: 0x00317DA4 File Offset: 0x00315FA4
 		public static Offset<IBvbFetchHandCard> Pack(FlatBufferBuilder builder, IBvbFetchHandCardT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbFetchHandCard.CreateIBvbFetchHandCard(builder, _o.Type, conditionOffset);
 		}
 
-		// Token: 0x0400AED9 RID: 44761
+		// Token: 0x0400B7FB RID: 47099
 		private Table __p;
 	}
 }

@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006198 RID: 24984
+	// Token: 0x02005116 RID: 20758
 	[NullableContext(1)]
 	public interface IRoverlikeSettleRewardItemData
 	{
-		// Token: 0x170091FC RID: 37372
-		// (get) Token: 0x0603F1E6 RID: 258534
-		// (set) Token: 0x0603F1E7 RID: 258535
+		// Token: 0x1700655E RID: 25950
+		// (get) Token: 0x06033EA6 RID: 212646
+		// (set) Token: 0x06033EA7 RID: 212647
 		string IconPath { get; set; }
 
-		// Token: 0x170091FD RID: 37373
-		// (get) Token: 0x0603F1E8 RID: 258536
-		// (set) Token: 0x0603F1E9 RID: 258537
+		// Token: 0x1700655F RID: 25951
+		// (get) Token: 0x06033EA8 RID: 212648
+		// (set) Token: 0x06033EA9 RID: 212649
 		string NameTextId { get; set; }
 
-		// Token: 0x170091FE RID: 37374
-		// (get) Token: 0x0603F1EA RID: 258538
-		// (set) Token: 0x0603F1EB RID: 258539
+		// Token: 0x17006560 RID: 25952
+		// (get) Token: 0x06033EAA RID: 212650
+		// (set) Token: 0x06033EAB RID: 212651
 		int Num { get; set; }
 	}
 }

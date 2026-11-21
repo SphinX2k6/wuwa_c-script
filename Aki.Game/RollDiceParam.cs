@@ -1,44 +1,44 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001258 RID: 4696
+// Token: 0x0200070C RID: 1804
 [NullableContext(2)]
 [Nullable(0)]
 public class RollDiceParam : IRollDiceParam
 {
-	// Token: 0x17000AD9 RID: 2777
-	// (get) Token: 0x06007F95 RID: 32661 RVA: 0x001B02EA File Offset: 0x001AE4EA
-	// (set) Token: 0x06007F96 RID: 32662 RVA: 0x001B02F2 File Offset: 0x001AE4F2
+	// Token: 0x17000AF9 RID: 2809
+	// (get) Token: 0x0600532C RID: 21292 RVA: 0x001B8F9A File Offset: 0x001B719A
+	// (set) Token: 0x0600532D RID: 21293 RVA: 0x001B8FA2 File Offset: 0x001B71A2
 	public float? AniProcess { get; set; }
 
-	// Token: 0x17000ADA RID: 2778
-	// (get) Token: 0x06007F97 RID: 32663 RVA: 0x001B02FB File Offset: 0x001AE4FB
-	// (set) Token: 0x06007F98 RID: 32664 RVA: 0x001B0303 File Offset: 0x001AE503
+	// Token: 0x17000AFA RID: 2810
+	// (get) Token: 0x0600532E RID: 21294 RVA: 0x001B8FAB File Offset: 0x001B71AB
+	// (set) Token: 0x0600532F RID: 21295 RVA: 0x001B8FB3 File Offset: 0x001B71B3
 	public int? AniNum { get; set; }
 
-	// Token: 0x17000ADB RID: 2779
-	// (get) Token: 0x06007F99 RID: 32665 RVA: 0x001B030C File Offset: 0x001AE50C
-	// (set) Token: 0x06007F9A RID: 32666 RVA: 0x001B0314 File Offset: 0x001AE514
+	// Token: 0x17000AFB RID: 2811
+	// (get) Token: 0x06005330 RID: 21296 RVA: 0x001B8FBC File Offset: 0x001B71BC
+	// (set) Token: 0x06005331 RID: 21297 RVA: 0x001B8FC4 File Offset: 0x001B71C4
 	[Nullable(1)]
 	public int[] DicePoints { [NullableContext(1)] get; [NullableContext(1)] set; } = Array.Empty<int>();
 
-	// Token: 0x17000ADC RID: 2780
-	// (get) Token: 0x06007F9B RID: 32667 RVA: 0x001B031D File Offset: 0x001AE51D
-	// (set) Token: 0x06007F9C RID: 32668 RVA: 0x001B0325 File Offset: 0x001AE525
+	// Token: 0x17000AFC RID: 2812
+	// (get) Token: 0x06005332 RID: 21298 RVA: 0x001B8FCD File Offset: 0x001B71CD
+	// (set) Token: 0x06005333 RID: 21299 RVA: 0x001B8FD5 File Offset: 0x001B71D5
 	public bool? IsNormalTimer { get; set; }
 
-	// Token: 0x17000ADD RID: 2781
-	// (get) Token: 0x06007F9D RID: 32669 RVA: 0x001B032E File Offset: 0x001AE52E
-	// (set) Token: 0x06007F9E RID: 32670 RVA: 0x001B0336 File Offset: 0x001AE536
+	// Token: 0x17000AFD RID: 2813
+	// (get) Token: 0x06005334 RID: 21300 RVA: 0x001B8FDE File Offset: 0x001B71DE
+	// (set) Token: 0x06005335 RID: 21301 RVA: 0x001B8FE6 File Offset: 0x001B71E6
 	public ERollDiceCameraMode? CameraMode { get; set; }
 
-	// Token: 0x17000ADE RID: 2782
-	// (get) Token: 0x06007F9F RID: 32671 RVA: 0x001B033F File Offset: 0x001AE53F
-	// (set) Token: 0x06007FA0 RID: 32672 RVA: 0x001B0347 File Offset: 0x001AE547
+	// Token: 0x17000AFE RID: 2814
+	// (get) Token: 0x06005336 RID: 21302 RVA: 0x001B8FEF File Offset: 0x001B71EF
+	// (set) Token: 0x06005337 RID: 21303 RVA: 0x001B8FF7 File Offset: 0x001B71F7
 	public string BpDiceCase { get; set; }
 
-	// Token: 0x17000ADF RID: 2783
-	// (get) Token: 0x06007FA1 RID: 32673 RVA: 0x001B0350 File Offset: 0x001AE550
-	// (set) Token: 0x06007FA2 RID: 32674 RVA: 0x001B0358 File Offset: 0x001AE558
+	// Token: 0x17000AFF RID: 2815
+	// (get) Token: 0x06005338 RID: 21304 RVA: 0x001B9000 File Offset: 0x001B7200
+	// (set) Token: 0x06005339 RID: 21305 RVA: 0x001B9008 File Offset: 0x001B7208
 	public string DiceCameraCase { get; set; }
 }

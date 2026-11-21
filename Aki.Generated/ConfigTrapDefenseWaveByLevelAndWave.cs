@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A46 RID: 2630
+	// Token: 0x02000B1B RID: 2843
 	public class ConfigTrapDefenseWaveByLevelAndWave : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003DB8 RID: 15800 RVA: 0x001B6CF4 File Offset: 0x001B4EF4
+		// Token: 0x060042B6 RID: 17078 RVA: 0x001D6088 File Offset: 0x001D4288
 		static ConfigTrapDefenseWaveByLevelAndWave()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTrapDefenseWaveByLevelAndWave.CreateStaticDefaultValue), new Action(ConfigTrapDefenseWaveByLevelAndWave.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003DB9 RID: 15801 RVA: 0x001B6D14 File Offset: 0x001B4F14
+		// Token: 0x060042B7 RID: 17079 RVA: 0x001D60A8 File Offset: 0x001D42A8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTrapDefenseWaveByLevelAndWave.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003DBA RID: 15802 RVA: 0x001B6D93 File Offset: 0x001B4F93
+		// Token: 0x060042B8 RID: 17080 RVA: 0x001D6127 File Offset: 0x001D4327
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTrapDefenseWaveByLevelAndWave.LogPair = null;
 			ConfigTrapDefenseWaveByLevelAndWave.HandleId = 0;
 		}
 
-		// Token: 0x06003DBB RID: 15803 RVA: 0x001B6DA1 File Offset: 0x001B4FA1
+		// Token: 0x060042B9 RID: 17081 RVA: 0x001D6135 File Offset: 0x001D4335
 		public static void Init()
 		{
 			ConfigTrapDefenseWaveByLevelAndWave.HandleId = ConfigCommon.InitDataStatement(ConfigTrapDefenseWaveByLevelAndWave.HandleId, "db_trapdefense.db", "select BinData from `TrapDefenseWave` where TrapDefenseLevelId=? And WaveId=?");
 		}
 
-		// Token: 0x06003DBC RID: 15804 RVA: 0x001B6DBC File Offset: 0x001B4FBC
+		// Token: 0x060042BA RID: 17082 RVA: 0x001D6150 File Offset: 0x001D4350
 		public static TrapDefenseWave? GetConfig(int p0TrapDefenseLevelId, int p1WaveId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTrapDefenseWaveByLevelAndWave.HandleId, ConfigTrapDefenseWaveByLevelAndWave.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new TrapDefenseWave?(rootAsTrapDefenseWave);
 		}
 
-		// Token: 0x040047D0 RID: 18384
+		// Token: 0x04004DA3 RID: 19875
 		private const string DB = "db_trapdefense.db";
 
-		// Token: 0x040047D1 RID: 18385
+		// Token: 0x04004DA4 RID: 19876
 		private const string FILE = "x.陷阱塔防活动.xlsx";
 
-		// Token: 0x040047D2 RID: 18386
+		// Token: 0x04004DA5 RID: 19877
 		private const string TABLE = "TrapDefenseWave";
 
-		// Token: 0x040047D3 RID: 18387
+		// Token: 0x04004DA6 RID: 19878
 		private const string COMMAND = "select BinData from `TrapDefenseWave` where TrapDefenseLevelId=? And WaveId=?";
 
-		// Token: 0x040047D4 RID: 18388
+		// Token: 0x04004DA7 RID: 19879
 		private const string KEY_PREFIX = "TrapDefenseWaveByLevelAndWave";
 
-		// Token: 0x040047D5 RID: 18389
+		// Token: 0x04004DA8 RID: 19880
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040047D6 RID: 18390
+		// Token: 0x04004DA9 RID: 19881
 		private static int HandleId;
 	}
 }

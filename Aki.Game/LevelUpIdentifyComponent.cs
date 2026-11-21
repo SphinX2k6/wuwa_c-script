@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024C8 RID: 9416
+// Token: 0x020019AF RID: 6575
 [NullableContext(1)]
 [Nullable(0)]
 public class LevelUpIdentifyComponent : UiPanelBase
 {
-	// Token: 0x06012E7B RID: 77435 RVA: 0x004ACA2F File Offset: 0x004AAC2F
+	// Token: 0x0601033A RID: 66362 RVA: 0x004BA62F File Offset: 0x004B882F
 	public LevelUpIdentifyComponent(UUIItem uiItem)
 	{
 		this.ComponentItem = uiItem;
 	}
 
-	// Token: 0x06012E7C RID: 77436 RVA: 0x004ACA40 File Offset: 0x004AAC40
+	// Token: 0x0601033B RID: 66363 RVA: 0x004BA640 File Offset: 0x004B8840
 	public UniTask Init(string sourceView)
 	{
 		LevelUpIdentifyComponent.<Init>d__6 <Init>d__;
@@ -30,7 +30,7 @@ public class LevelUpIdentifyComponent : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E7D RID: 77437 RVA: 0x004ACA8B File Offset: 0x004AAC8B
+	// Token: 0x0601033C RID: 66364 RVA: 0x004BA68B File Offset: 0x004B888B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,20 +40,20 @@ public class LevelUpIdentifyComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012E7E RID: 77438 RVA: 0x004ACAC4 File Offset: 0x004AACC4
+	// Token: 0x0601033D RID: 66365 RVA: 0x004BA6C4 File Offset: 0x004B88C4
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<VisionIdentifyItem, VisionSubPropViewData>(base.GetVerticalLayout(0), new Func<VisionIdentifyItem>(this.InitItem), null, false, true);
 		base.GetItem(1).SetUIActive(false);
 	}
 
-	// Token: 0x06012E7F RID: 77439 RVA: 0x004ACAF4 File Offset: 0x004AACF4
+	// Token: 0x0601033E RID: 66366 RVA: 0x004BA6F4 File Offset: 0x004B88F4
 	private VisionIdentifyItem InitItem()
 	{
 		return new VisionIdentifyItem();
 	}
 
-	// Token: 0x06012E80 RID: 77440 RVA: 0x004ACAFC File Offset: 0x004AACFC
+	// Token: 0x0601033F RID: 66367 RVA: 0x004BA6FC File Offset: 0x004B88FC
 	public UniTask PlayUpdateAnimation(int[] needPlayIndex)
 	{
 		LevelUpIdentifyComponent.<PlayUpdateAnimation>d__10 <PlayUpdateAnimation>d__;
@@ -65,7 +65,7 @@ public class LevelUpIdentifyComponent : UiPanelBase
 		return <PlayUpdateAnimation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E81 RID: 77441 RVA: 0x004ACB48 File Offset: 0x004AAD48
+	// Token: 0x06010340 RID: 66368 RVA: 0x004BA748 File Offset: 0x004B8948
 	public void Update([Nullable(new byte[]
 	{
 		1,
@@ -96,7 +96,7 @@ public class LevelUpIdentifyComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x04008E7B RID: 36475
+	// Token: 0x04008FC5 RID: 36805
 	[Nullable(new byte[]
 	{
 		2,
@@ -105,25 +105,25 @@ public class LevelUpIdentifyComponent : UiPanelBase
 	})]
 	protected GenericLayout<VisionIdentifyItem, VisionSubPropViewData> Layout;
 
-	// Token: 0x04008E7C RID: 36476
+	// Token: 0x04008FC6 RID: 36806
 	[Nullable(2)]
 	private readonly UUIItem ComponentItem;
 
-	// Token: 0x04008E7D RID: 36477
+	// Token: 0x04008FC7 RID: 36807
 	[Nullable(2)]
 	private string SourceViewName;
 
-	// Token: 0x04008E7E RID: 36478
+	// Token: 0x04008FC8 RID: 36808
 	[Nullable(2)]
 	private CustomPromise<bool> ReloadState;
 
-	// Token: 0x02008A4A RID: 35402
+	// Token: 0x02007BD3 RID: 31699
 	[NullableContext(0)]
 	private enum ELevelAttribute
 	{
-		// Token: 0x0402CE6D RID: 183917
+		// Token: 0x0402818B RID: 164235
 		Layout,
-		// Token: 0x0402CE6E RID: 183918
+		// Token: 0x0402818C RID: 164236
 		Item
 	}
 }

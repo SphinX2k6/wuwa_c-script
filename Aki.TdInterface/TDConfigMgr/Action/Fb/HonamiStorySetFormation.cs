@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A95 RID: 10901
+	// Token: 0x02002D89 RID: 11657
 	public class HonamiStorySetFormation : ActionParams
 	{
-		// Token: 0x0600EF73 RID: 61299 RVA: 0x0022CE6A File Offset: 0x0022B06A
-		[NullableContext(1)]
+		// Token: 0x0600FE29 RID: 65065 RVA: 0x0024AB76 File Offset: 0x00248D76
 		public static HonamiStorySetFormation Create(IHonamiStorySetFormation? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C0B RID: 19467
-		// (get) Token: 0x0600EF74 RID: 61300 RVA: 0x0022CE89 File Offset: 0x0022B089
+		// Token: 0x17004FC5 RID: 20421
+		// (get) Token: 0x0600FE2A RID: 65066 RVA: 0x0024AB95 File Offset: 0x00248D95
 		public virtual int ActivityId
 		{
 			get
@@ -32,19 +31,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C0C RID: 19468
-		// (get) Token: 0x0600EF75 RID: 61301 RVA: 0x0022CE98 File Offset: 0x0022B098
+		// Token: 0x17004FC6 RID: 20422
+		// (get) Token: 0x0600FE2B RID: 65067 RVA: 0x0024ABA4 File Offset: 0x00248DA4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHonamiStoryRoleSetting> RoleSetting
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -67,19 +66,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C0D RID: 19469
-		// (get) Token: 0x0600EF76 RID: 61302 RVA: 0x0022CF14 File Offset: 0x0022B114
+		// Token: 0x17004FC7 RID: 20423
+		// (get) Token: 0x0600FE2C RID: 65068 RVA: 0x0024AC20 File Offset: 0x00248E20
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHonamiStoryWeaponEquipSetting> WeaponSetting
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -102,19 +101,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C0E RID: 19470
-		// (get) Token: 0x0600EF77 RID: 61303 RVA: 0x0022CF90 File Offset: 0x0022B190
+		// Token: 0x17004FC8 RID: 20424
+		// (get) Token: 0x0600FE2D RID: 65069 RVA: 0x0024AC9C File Offset: 0x00248E9C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHonamiStoryPluginEquipSetting> PluginSetting
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -137,40 +136,40 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083B7 RID: 33719
+		// Token: 0x04008ABB RID: 35515
 		private IHonamiStorySetFormation Instance;
 
-		// Token: 0x040083B8 RID: 33720
+		// Token: 0x04008ABC RID: 35516
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHonamiStoryRoleSetting> _RoleSettingCache;
 
-		// Token: 0x040083B9 RID: 33721
+		// Token: 0x04008ABD RID: 35517
 		private bool _RoleSettingInited;
 
-		// Token: 0x040083BA RID: 33722
+		// Token: 0x04008ABE RID: 35518
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHonamiStoryWeaponEquipSetting> _WeaponSettingCache;
 
-		// Token: 0x040083BB RID: 33723
+		// Token: 0x04008ABF RID: 35519
 		private bool _WeaponSettingInited;
 
-		// Token: 0x040083BC RID: 33724
+		// Token: 0x04008AC0 RID: 35520
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHonamiStoryPluginEquipSetting> _PluginSettingCache;
 
-		// Token: 0x040083BD RID: 33725
+		// Token: 0x04008AC1 RID: 35521
 		private bool _PluginSettingInited;
 	}
 }

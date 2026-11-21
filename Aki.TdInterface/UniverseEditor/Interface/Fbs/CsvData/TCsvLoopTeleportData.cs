@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 {
-	// Token: 0x02004917 RID: 18711
+	// Token: 0x02004DC7 RID: 19911
 	public struct TCsvLoopTeleportData : IFlatbufferObject
 	{
-		// Token: 0x170087B1 RID: 34737
-		// (get) Token: 0x0601D430 RID: 119856 RVA: 0x00420AB4 File Offset: 0x0041ECB4
+		// Token: 0x17008E6A RID: 36458
+		// (get) Token: 0x0601EE49 RID: 126537 RVA: 0x00450E6A File Offset: 0x0044F06A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x0601D431 RID: 119857 RVA: 0x00420AC1 File Offset: 0x0041ECC1
+		// Token: 0x0601EE4A RID: 126538 RVA: 0x00450E77 File Offset: 0x0044F077
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D432 RID: 119858 RVA: 0x00420AC8 File Offset: 0x0041ECC8
+		// Token: 0x0601EE4B RID: 126539 RVA: 0x00450E80 File Offset: 0x0044F080
 		public static TCsvLoopTeleportData GetRootAsTCsvLoopTeleportData(ByteBuffer _bb)
 		{
 			return TCsvLoopTeleportData.GetRootAsTCsvLoopTeleportData(_bb, default(TCsvLoopTeleportData));
 		}
 
-		// Token: 0x0601D433 RID: 119859 RVA: 0x00420AE4 File Offset: 0x0041ECE4
+		// Token: 0x0601EE4C RID: 126540 RVA: 0x00450E9C File Offset: 0x0044F09C
 		public static TCsvLoopTeleportData GetRootAsTCsvLoopTeleportData(ByteBuffer _bb, TCsvLoopTeleportData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D434 RID: 119860 RVA: 0x00420B01 File Offset: 0x0041ED01
+		// Token: 0x0601EE4D RID: 126541 RVA: 0x00450EB9 File Offset: 0x0044F0B9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D435 RID: 119861 RVA: 0x00420B10 File Offset: 0x0041ED10
+		// Token: 0x0601EE4E RID: 126542 RVA: 0x00450EC8 File Offset: 0x0044F0C8
 		public TCsvLoopTeleportData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170087B2 RID: 34738
-		// (get) Token: 0x0601D436 RID: 119862 RVA: 0x00420B20 File Offset: 0x0041ED20
+		// Token: 0x17008E6B RID: 36459
+		// (get) Token: 0x0601EE4F RID: 126543 RVA: 0x00450ED8 File Offset: 0x0044F0D8
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x170087B3 RID: 34739
-		// (get) Token: 0x0601D437 RID: 119863 RVA: 0x00420B5C File Offset: 0x0041ED5C
+		// Token: 0x17008E6C RID: 36460
+		// (get) Token: 0x0601EE50 RID: 126544 RVA: 0x00450F14 File Offset: 0x0044F114
 		public IConditionGroup? Conditions
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x0601D438 RID: 119864 RVA: 0x00420BBC File Offset: 0x0041EDBC
+		// Token: 0x0601EE51 RID: 126545 RVA: 0x00450F74 File Offset: 0x0044F174
 		public ILoopTeleportClientLogicItemBase_Union ClientLogicType(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return (ILoopTeleportClientLogicItemBase_Union)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x170087B4 RID: 34740
-		// (get) Token: 0x0601D439 RID: 119865 RVA: 0x00420BFC File Offset: 0x0041EDFC
+		// Token: 0x17008E6D RID: 36461
+		// (get) Token: 0x0601EE52 RID: 126546 RVA: 0x00450FB4 File Offset: 0x0044F1B4
 		public int ClientLogicTypeLength
 		{
 			get
@@ -105,13 +105,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x0601D43A RID: 119866 RVA: 0x00420C27 File Offset: 0x0041EE27
+		// Token: 0x0601EE53 RID: 126547 RVA: 0x00450FDF File Offset: 0x0044F1DF
 		public Span<ILoopTeleportClientLogicItemBase_Union> GetClientLogicTypeBytes()
 		{
 			return this.__p.__vector_as_span<ILoopTeleportClientLogicItemBase_Union>(8, 1);
 		}
 
-		// Token: 0x0601D43B RID: 119867 RVA: 0x00420C38 File Offset: 0x0041EE38
+		// Token: 0x0601EE54 RID: 126548 RVA: 0x00450FF0 File Offset: 0x0044F1F0
 		public ILoopTeleportClientLogicItemBase_Union[] GetClientLogicTypeArray()
 		{
 			int num = this.__p.__offset(8);
@@ -129,7 +129,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return array;
 		}
 
-		// Token: 0x0601D43C RID: 119868 RVA: 0x00420CA4 File Offset: 0x0041EEA4
+		// Token: 0x0601EE55 RID: 126549 RVA: 0x0045105C File Offset: 0x0044F25C
 		public TTable? ClientLogic<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -140,8 +140,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x170087B5 RID: 34741
-		// (get) Token: 0x0601D43D RID: 119869 RVA: 0x00420CEC File Offset: 0x0041EEEC
+		// Token: 0x17008E6E RID: 36462
+		// (get) Token: 0x0601EE56 RID: 126550 RVA: 0x004510A4 File Offset: 0x0044F2A4
 		public int ClientLogicLength
 		{
 			get
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x0601D43E RID: 119870 RVA: 0x00420D18 File Offset: 0x0041EF18
+		// Token: 0x0601EE57 RID: 126551 RVA: 0x004510D0 File Offset: 0x0044F2D0
 		public static Offset<TCsvLoopTeleportData> CreateTCsvLoopTeleportData(FlatBufferBuilder builder, int Id = 0, Offset<IConditionGroup> ConditionsOffset = default(Offset<IConditionGroup>), VectorOffset ClientLogic_typeOffset = default(VectorOffset), VectorOffset ClientLogicOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -166,31 +166,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return TCsvLoopTeleportData.EndTCsvLoopTeleportData(builder);
 		}
 
-		// Token: 0x0601D43F RID: 119871 RVA: 0x00420D44 File Offset: 0x0041EF44
+		// Token: 0x0601EE58 RID: 126552 RVA: 0x004510FC File Offset: 0x0044F2FC
 		public static void StartTCsvLoopTeleportData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601D440 RID: 119872 RVA: 0x00420D4D File Offset: 0x0041EF4D
+		// Token: 0x0601EE59 RID: 126553 RVA: 0x00451105 File Offset: 0x0044F305
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601D441 RID: 119873 RVA: 0x00420D58 File Offset: 0x0041EF58
+		// Token: 0x0601EE5A RID: 126554 RVA: 0x00451110 File Offset: 0x0044F310
 		public static void AddConditions(FlatBufferBuilder builder, Offset<IConditionGroup> conditionsOffset)
 		{
 			builder.AddOffset(1, conditionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601D442 RID: 119874 RVA: 0x00420D68 File Offset: 0x0041EF68
+		// Token: 0x0601EE5B RID: 126555 RVA: 0x00451120 File Offset: 0x0044F320
 		public static void AddClientLogicType(FlatBufferBuilder builder, VectorOffset clientLogicTypeOffset)
 		{
 			builder.AddOffset(2, clientLogicTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601D443 RID: 119875 RVA: 0x00420D78 File Offset: 0x0041EF78
+		// Token: 0x0601EE5C RID: 126556 RVA: 0x00451130 File Offset: 0x0044F330
 		public static VectorOffset CreateClientLogicTypeVector(FlatBufferBuilder builder, ILoopTeleportClientLogicItemBase_Union[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D444 RID: 119876 RVA: 0x00420DAF File Offset: 0x0041EFAF
+		// Token: 0x0601EE5D RID: 126557 RVA: 0x00451167 File Offset: 0x0044F367
 		public static VectorOffset CreateClientLogicTypeVectorBlock(FlatBufferBuilder builder, ILoopTeleportClientLogicItemBase_Union[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D445 RID: 119877 RVA: 0x00420DC9 File Offset: 0x0041EFC9
+		// Token: 0x0601EE5E RID: 126558 RVA: 0x00451181 File Offset: 0x0044F381
 		public static VectorOffset CreateClientLogicTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<ILoopTeleportClientLogicItemBase_Union> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D446 RID: 119878 RVA: 0x00420DE7 File Offset: 0x0041EFE7
+		// Token: 0x0601EE5F RID: 126559 RVA: 0x0045119F File Offset: 0x0044F39F
 		public static VectorOffset CreateClientLogicTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -225,19 +225,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D447 RID: 119879 RVA: 0x00420E00 File Offset: 0x0041F000
+		// Token: 0x0601EE60 RID: 126560 RVA: 0x004511B8 File Offset: 0x0044F3B8
 		public static void StartClientLogicTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601D448 RID: 119880 RVA: 0x00420E0B File Offset: 0x0041F00B
+		// Token: 0x0601EE61 RID: 126561 RVA: 0x004511C3 File Offset: 0x0044F3C3
 		public static void AddClientLogic(FlatBufferBuilder builder, VectorOffset clientLogicOffset)
 		{
 			builder.AddOffset(3, clientLogicOffset.Value, 0);
 		}
 
-		// Token: 0x0601D449 RID: 119881 RVA: 0x00420E1C File Offset: 0x0041F01C
+		// Token: 0x0601EE62 RID: 126562 RVA: 0x004511D4 File Offset: 0x0044F3D4
 		public static VectorOffset CreateClientLogicVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -248,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D44A RID: 119882 RVA: 0x00420E53 File Offset: 0x0041F053
+		// Token: 0x0601EE63 RID: 126563 RVA: 0x0045120B File Offset: 0x0044F40B
 		public static VectorOffset CreateClientLogicVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -256,7 +256,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D44B RID: 119883 RVA: 0x00420E6D File Offset: 0x0041F06D
+		// Token: 0x0601EE64 RID: 126564 RVA: 0x00451225 File Offset: 0x0044F425
 		public static VectorOffset CreateClientLogicVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -264,7 +264,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D44C RID: 119884 RVA: 0x00420E8B File Offset: 0x0041F08B
+		// Token: 0x0601EE65 RID: 126565 RVA: 0x00451243 File Offset: 0x0044F443
 		public static VectorOffset CreateClientLogicVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -272,19 +272,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D44D RID: 119885 RVA: 0x00420EA4 File Offset: 0x0041F0A4
+		// Token: 0x0601EE66 RID: 126566 RVA: 0x0045125C File Offset: 0x0044F45C
 		public static void StartClientLogicVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601D44E RID: 119886 RVA: 0x00420EAF File Offset: 0x0041F0AF
+		// Token: 0x0601EE67 RID: 126567 RVA: 0x00451267 File Offset: 0x0044F467
 		public static Offset<TCsvLoopTeleportData> EndTCsvLoopTeleportData(FlatBufferBuilder builder)
 		{
 			return new Offset<TCsvLoopTeleportData>(builder.EndTable());
 		}
 
-		// Token: 0x0601D44F RID: 119887 RVA: 0x00420EBC File Offset: 0x0041F0BC
+		// Token: 0x0601EE68 RID: 126568 RVA: 0x00451274 File Offset: 0x0044F474
 		public TCsvLoopTeleportDataT UnPack()
 		{
 			TCsvLoopTeleportDataT tcsvLoopTeleportDataT = new TCsvLoopTeleportDataT();
@@ -292,7 +292,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return tcsvLoopTeleportDataT;
 		}
 
-		// Token: 0x0601D450 RID: 119888 RVA: 0x00420ED8 File Offset: 0x0041F0D8
+		// Token: 0x0601EE69 RID: 126569 RVA: 0x00451290 File Offset: 0x0044F490
 		public void UnPackTo(TCsvLoopTeleportDataT _o)
 		{
 			_o.Id = this.Id;
@@ -318,7 +318,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x0601D451 RID: 119889 RVA: 0x00420FE0 File Offset: 0x0041F1E0
+		// Token: 0x0601EE6A RID: 126570 RVA: 0x00451398 File Offset: 0x0044F598
 		public static Offset<TCsvLoopTeleportData> Pack(FlatBufferBuilder builder, TCsvLoopTeleportDataT _o)
 		{
 			if (_o == null)
@@ -349,7 +349,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return TCsvLoopTeleportData.CreateTCsvLoopTeleportData(builder, _o.Id, conditionsOffset, clientLogic_typeOffset, clientLogicOffset);
 		}
 
-		// Token: 0x0400CF91 RID: 53137
+		// Token: 0x0400DA3A RID: 55866
 		private Table __p;
 	}
 }

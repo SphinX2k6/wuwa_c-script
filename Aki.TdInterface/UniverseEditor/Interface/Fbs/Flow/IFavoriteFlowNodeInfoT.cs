@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Flow
 {
-	// Token: 0x02004737 RID: 18231
+	// Token: 0x02004B9F RID: 19359
 	public class IFavoriteFlowNodeInfoT
 	{
-		// Token: 0x170082C4 RID: 33476
-		// (get) Token: 0x0601C097 RID: 114839 RVA: 0x003F9146 File Offset: 0x003F7346
-		// (set) Token: 0x0601C098 RID: 114840 RVA: 0x003F914E File Offset: 0x003F734E
+		// Token: 0x17008905 RID: 35077
+		// (get) Token: 0x0601D86C RID: 120940 RVA: 0x004253E2 File Offset: 0x004235E2
+		// (set) Token: 0x0601D86D RID: 120941 RVA: 0x004253EA File Offset: 0x004235EA
 		public string HighLightPath { get; set; }
 
-		// Token: 0x170082C5 RID: 33477
-		// (get) Token: 0x0601C099 RID: 114841 RVA: 0x003F9157 File Offset: 0x003F7357
-		// (set) Token: 0x0601C09A RID: 114842 RVA: 0x003F915F File Offset: 0x003F735F
+		// Token: 0x17008906 RID: 35078
+		// (get) Token: 0x0601D86E RID: 120942 RVA: 0x004253F3 File Offset: 0x004235F3
+		// (set) Token: 0x0601D86F RID: 120943 RVA: 0x004253FB File Offset: 0x004235FB
 		public IFlowStateIndexT FlowStateIndex { get; set; }
 
-		// Token: 0x170082C6 RID: 33478
-		// (get) Token: 0x0601C09B RID: 114843 RVA: 0x003F9168 File Offset: 0x003F7368
-		// (set) Token: 0x0601C09C RID: 114844 RVA: 0x003F9170 File Offset: 0x003F7370
+		// Token: 0x17008907 RID: 35079
+		// (get) Token: 0x0601D870 RID: 120944 RVA: 0x00425404 File Offset: 0x00423604
+		// (set) Token: 0x0601D871 RID: 120945 RVA: 0x0042540C File Offset: 0x0042360C
 		public string Desc { get; set; }
 
-		// Token: 0x0601C09D RID: 114845 RVA: 0x003F9179 File Offset: 0x003F7379
+		// Token: 0x0601D872 RID: 120946 RVA: 0x00425415 File Offset: 0x00423615
 		public IFavoriteFlowNodeInfoT()
 		{
 			this.HighLightPath = null;

@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056B4 RID: 22196
+	// Token: 0x0200468A RID: 18058
 	public class LoginQueueTipsView : UiTickViewBase
 	{
-		// Token: 0x0603875E RID: 231262 RVA: 0x00D678A5 File Offset: 0x00D65AA5
+		// Token: 0x0602D65B RID: 185947 RVA: 0x00CB5A69 File Offset: 0x00CB3C69
 		[NullableContext(1)]
 		public LoginQueueTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603875F RID: 231263 RVA: 0x00D678B0 File Offset: 0x00D65AB0
+		// Token: 0x0602D65C RID: 185948 RVA: 0x00CB5A74 File Offset: 0x00CB3C74
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Login
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038760 RID: 231264 RVA: 0x00D67998 File Offset: 0x00D65B98
+		// Token: 0x0602D65D RID: 185949 RVA: 0x00CB5B5C File Offset: 0x00CB3D5C
 		private void QuitButton()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06038761 RID: 231265 RVA: 0x00D679A1 File Offset: 0x00D65BA1
+		// Token: 0x0602D65E RID: 185950 RVA: 0x00CB5B65 File Offset: 0x00CB3D65
 		protected override void OnBeforeDestroy()
 		{
 			if (LoginModel.Instance.HasAutoLoginPromise())
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x06038762 RID: 231266 RVA: 0x00D679BC File Offset: 0x00D65BBC
+		// Token: 0x0602D65F RID: 185951 RVA: 0x00CB5B80 File Offset: 0x00CB3D80
 		protected override void OnStart()
 		{
 			this.LoginQueueConfig = (this.OpenParam as LoginQueueConfig);
@@ -99,14 +99,14 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x06038763 RID: 231267 RVA: 0x00D67AC1 File Offset: 0x00D65CC1
+		// Token: 0x0602D660 RID: 185952 RVA: 0x00CB5C85 File Offset: 0x00CB3E85
 		protected override void OnTick(float delta)
 		{
 			this.AddTimeMs += delta;
 			this.RefreshAddTimeText();
 		}
 
-		// Token: 0x06038764 RID: 231268 RVA: 0x00D67AD8 File Offset: 0x00D65CD8
+		// Token: 0x0602D661 RID: 185953 RVA: 0x00CB5C9C File Offset: 0x00CB3E9C
 		private void RefreshAddTimeText()
 		{
 			UUIText text = base.GetText(2);
@@ -124,11 +124,11 @@ namespace CSharpScript.Game.Module.Login
 			}));
 		}
 
-		// Token: 0x0401DA6F RID: 121455
+		// Token: 0x040184FA RID: 99578
 		[Nullable(2)]
 		private LoginQueueConfig LoginQueueConfig;
 
-		// Token: 0x0401DA70 RID: 121456
+		// Token: 0x040184FB RID: 99579
 		private float AddTimeMs;
 	}
 }

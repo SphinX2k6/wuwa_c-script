@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004D2 RID: 1234
+	// Token: 0x020004E8 RID: 1256
 	public class ConfigLifeMaxCustomizationById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CF7 RID: 7415 RVA: 0x000FCD51 File Offset: 0x000FAF51
+		// Token: 0x06001D7B RID: 7547 RVA: 0x001034A5 File Offset: 0x001016A5
 		static ConfigLifeMaxCustomizationById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLifeMaxCustomizationById.CreateStaticDefaultValue), new Action(ConfigLifeMaxCustomizationById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CF8 RID: 7416 RVA: 0x000FCD70 File Offset: 0x000FAF70
+		// Token: 0x06001D7C RID: 7548 RVA: 0x001034C4 File Offset: 0x001016C4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLifeMaxCustomizationById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CF9 RID: 7417 RVA: 0x000FCDEF File Offset: 0x000FAFEF
+		// Token: 0x06001D7D RID: 7549 RVA: 0x00103543 File Offset: 0x00101743
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLifeMaxCustomizationById.LogPair = null;
 			ConfigLifeMaxCustomizationById.HandleId = 0;
 		}
 
-		// Token: 0x06001CFA RID: 7418 RVA: 0x000FCDFD File Offset: 0x000FAFFD
+		// Token: 0x06001D7E RID: 7550 RVA: 0x00103551 File Offset: 0x00101751
 		public static void Init()
 		{
 			ConfigLifeMaxCustomizationById.HandleId = ConfigCommon.InitDataStatement(ConfigLifeMaxCustomizationById.HandleId, "db_property.db", "select BinData from `LifeMaxCustomization` where Id = ?");
 		}
 
-		// Token: 0x06001CFB RID: 7419 RVA: 0x000FCE18 File Offset: 0x000FB018
+		// Token: 0x06001D7F RID: 7551 RVA: 0x0010356C File Offset: 0x0010176C
 		public static LifeMaxCustomization? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLifeMaxCustomizationById.HandleId, ConfigLifeMaxCustomizationById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LifeMaxCustomization?(rootAsLifeMaxCustomization);
 		}
 
-		// Token: 0x040021A2 RID: 8610
+		// Token: 0x0400223C RID: 8764
 		private const string DB = "db_property.db";
 
-		// Token: 0x040021A3 RID: 8611
+		// Token: 0x0400223D RID: 8765
 		private const string FILE = "s.属性.xlsx";
 
-		// Token: 0x040021A4 RID: 8612
+		// Token: 0x0400223E RID: 8766
 		private const string TABLE = "LifeMaxCustomization";
 
-		// Token: 0x040021A5 RID: 8613
+		// Token: 0x0400223F RID: 8767
 		private const string COMMAND = "select BinData from `LifeMaxCustomization` where Id = ?";
 
-		// Token: 0x040021A6 RID: 8614
+		// Token: 0x04002240 RID: 8768
 		private const string KEY_PREFIX = "LifeMaxCustomizationById";
 
-		// Token: 0x040021A7 RID: 8615
+		// Token: 0x04002241 RID: 8769
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040021A8 RID: 8616
+		// Token: 0x04002242 RID: 8770
 		private static int HandleId;
 	}
 }

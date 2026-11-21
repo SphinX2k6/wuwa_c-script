@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002015 RID: 8213
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200225E RID: 8798
 	public class IUiStyleGiantSubtitleOfLevelD : IUiStyleBaseOfLevelD
 	{
-		// Token: 0x0600B494 RID: 46228 RVA: 0x001A3D58 File Offset: 0x001A1F58
+		// Token: 0x0600BFB6 RID: 49078 RVA: 0x001BA41C File Offset: 0x001B861C
 		private IUiStyleGiantSubtitleOfLevelD_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B495 RID: 46229 RVA: 0x001A3D90 File Offset: 0x001A1F90
+		// Token: 0x0600BFB7 RID: 49079 RVA: 0x001BA454 File Offset: 0x001B8654
 		public static IUiStyleGiantSubtitleOfLevelD Create([Nullable(2)] IUiStyleGiantSubtitleOfLevelD instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B496 RID: 46230 RVA: 0x001A3DA3 File Offset: 0x001A1FA3
+		// Token: 0x0600BFB8 RID: 49080 RVA: 0x001BA467 File Offset: 0x001B8667
 		public static IUiStyleGiantSubtitleOfLevelD CreateFromSetValue([Nullable(2)] IUiStyleGiantSubtitleOfLevelD_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B497 RID: 46231 RVA: 0x001A3DB6 File Offset: 0x001A1FB6
+		// Token: 0x0600BFB9 RID: 49081 RVA: 0x001BA47A File Offset: 0x001B867A
 		public new IUiStyleGiantSubtitleOfLevelD_SetValue ToSetValue()
 		{
 			return new IUiStyleGiantSubtitleOfLevelD_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003783 RID: 14211
-		// (get) Token: 0x0600B498 RID: 46232 RVA: 0x001A3DD5 File Offset: 0x001A1FD5
-		// (set) Token: 0x0600B499 RID: 46233 RVA: 0x001A3E00 File Offset: 0x001A2000
+		// Token: 0x17003A5E RID: 14942
+		// (get) Token: 0x0600BFBA RID: 49082 RVA: 0x001BA499 File Offset: 0x001B8699
+		// (set) Token: 0x0600BFBB RID: 49083 RVA: 0x001BA4C4 File Offset: 0x001B86C4
 		public override EUiStyleTypeOfLevelD Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003784 RID: 14212
-		// (get) Token: 0x0600B49A RID: 46234 RVA: 0x001A3E0E File Offset: 0x001A200E
-		// (set) Token: 0x0600B49B RID: 46235 RVA: 0x001A3E39 File Offset: 0x001A2039
+		// Token: 0x17003A5F RID: 14943
+		// (get) Token: 0x0600BFBC RID: 49084 RVA: 0x001BA4D2 File Offset: 0x001B86D2
+		// (set) Token: 0x0600BFBD RID: 49085 RVA: 0x001BA4FD File Offset: 0x001B86FD
 		public virtual EGiantSubtitleStyle Style
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CCC RID: 27852
+		// Token: 0x040072D3 RID: 29395
 		[Nullable(2)]
 		protected new IUiStyleGiantSubtitleOfLevelD FbInstance;
 
-		// Token: 0x04006CCD RID: 27853
+		// Token: 0x040072D4 RID: 29396
 		[Nullable(2)]
 		protected new IUiStyleGiantSubtitleOfLevelD_SetValue PocoInterface;
 	}

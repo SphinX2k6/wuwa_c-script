@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.CombatMessage;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02003032 RID: 12338
+// Token: 0x02002588 RID: 9608
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseHitComponent : EntityComponent
 {
-	// Token: 0x0601A251 RID: 107089 RVA: 0x006DE0A4 File Offset: 0x006DC2A4
+	// Token: 0x06017BB0 RID: 97200 RVA: 0x00705DAC File Offset: 0x00703FAC
 	protected void HitRequest(BulletEntity bulletEntity, long attackerCreatureDataId, global::HitInformation hitData, int beHitAnim = 0, bool enterFk = false, bool isHitWeakness = false, ECounterAttackType counterAttackType = ECounterAttackType.None, FRotator? victimRotation = null, bool isChangeVictimRotation = false, int? fightState = null, [Nullable(new byte[]
 	{
 		2,
@@ -79,7 +79,7 @@ public class BaseHitComponent : EntityComponent
 		}, (bulletEntity != null) ? bulletEntity.GetBulletInfo().ContextId : null, null, null, null);
 	}
 
-	// Token: 0x0601A252 RID: 107090 RVA: 0x006DE3DC File Offset: 0x006DC5DC
+	// Token: 0x06017BB1 RID: 97201 RVA: 0x007060E4 File Offset: 0x007042E4
 	private void CompressData(HitRequest data)
 	{
 		if (!GameModeModel.Instance.IsMulti)
@@ -99,14 +99,14 @@ public class BaseHitComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A253 RID: 107091 RVA: 0x006DE490 File Offset: 0x006DC690
+	// Token: 0x06017BB2 RID: 97202 RVA: 0x00706198 File Offset: 0x00704398
 	public static void HitEndRequest(Entity entity)
 	{
 		HitEndPush message = HitEndPush.Create();
 		CombatNet.Instance.Send(EPushMessageId.HitEndPush, entity, message, null, null, null);
 	}
 
-	// Token: 0x0601A254 RID: 107092 RVA: 0x006DE4D0 File Offset: 0x006DC6D0
+	// Token: 0x06017BB3 RID: 97203 RVA: 0x007061D8 File Offset: 0x007043D8
 	[NullableContext(2)]
 	[CombatPreprocess(ENotifyMessageId.HitNotify)]
 	public static bool PreHitNotify(Entity entity, [Nullable(1)] HitNotify notify, CombatCommon combatCommon = null)
@@ -124,7 +124,7 @@ public class BaseHitComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A255 RID: 107093 RVA: 0x006DE534 File Offset: 0x006DC734
+	// Token: 0x06017BB4 RID: 97204 RVA: 0x0070623C File Offset: 0x0070443C
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.HitNotify, true, false)]
 	public static void HitNotify(Entity entity, [Nullable(1)] HitNotify notify, CombatCommon combatCommon = null)
@@ -176,12 +176,12 @@ public class BaseHitComponent : EntityComponent
 		baseHitComponent.BroadcastRemoteEvent(entity3, notify.HitInfo);
 	}
 
-	// Token: 0x0601A256 RID: 107094 RVA: 0x006DE797 File Offset: 0x006DC997
+	// Token: 0x06017BB5 RID: 97205 RVA: 0x0070649F File Offset: 0x0070469F
 	protected virtual void ReceiveOnHit(global::HitInformation hitData, Entity attackEntity, bool hasBeHitData, bool isChangeVictimRotation, bool enterFk, bool isHitWeakness, bool isTriggerCounterattack, bool isTriggerVisionCounterAttack, FRotator victimRotation, int fightState, EHitAnim beHitAnim)
 	{
 	}
 
-	// Token: 0x0601A257 RID: 107095 RVA: 0x006DE79C File Offset: 0x006DC99C
+	// Token: 0x06017BB6 RID: 97206 RVA: 0x007064A4 File Offset: 0x007046A4
 	protected virtual void BroadcastEvent(global::HitInformation hitData)
 	{
 		Entity entity = EntitySystem.Instance.Get<Entity>(hitData.Attacker.Id);
@@ -225,7 +225,7 @@ public class BaseHitComponent : EntityComponent
 		SceneTeamController.Instance.EmitEvent<global::HitInformation, HitContext>(base.Entity, EEventName.CharBeHitLocal, hitData, p);
 	}
 
-	// Token: 0x0601A258 RID: 107096 RVA: 0x006DE928 File Offset: 0x006DCB28
+	// Token: 0x06017BB7 RID: 97207 RVA: 0x00706630 File Offset: 0x00704830
 	[NullableContext(2)]
 	protected void BroadcastRemoteEvent(Entity attackEntity, Aki.Protocol.HitInformation hitInfo)
 	{
@@ -269,16 +269,5 @@ public class BaseHitComponent : EntityComponent
 			SceneTeamController.Instance.EmitEvent<HitContext>(attackEntity, EEventName.CharHitRemote, p);
 			SceneTeamController.Instance.EmitEvent<HitContext>(base.Entity, EEventName.CharBeHitRemote, p);
 		}
-	}
-
-	// Token: 0x0601A259 RID: 107097 RVA: 0x006DEA5E File Offset: 0x006DCC5E
-	public override bool ClearComponent(EntityComponent componentTemplate)
-	{
-		if (!base.ClearComponent(componentTemplate))
-		{
-			return false;
-		}
-		BaseHitComponent baseHitComponent = (BaseHitComponent)componentTemplate;
-		return true;
 	}
 }

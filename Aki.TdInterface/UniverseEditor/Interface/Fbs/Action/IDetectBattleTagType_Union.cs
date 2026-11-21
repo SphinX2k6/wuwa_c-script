@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065BE RID: 26046
+	// Token: 0x02006C26 RID: 27686
 	public enum IDetectBattleTagType_Union : byte
 	{
-		// Token: 0x04010C1C RID: 68636
+		// Token: 0x04011A2E RID: 72238
 		NONE,
-		// Token: 0x04010C1D RID: 68637
+		// Token: 0x04011A2F RID: 72239
 		IDetectBattleTagType,
-		// Token: 0x04010C1E RID: 68638
+		// Token: 0x04011A30 RID: 72240
 		IDetectBattleMonsterOnGround
 	}
 }

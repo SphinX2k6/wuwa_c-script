@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoAttach
 {
-	// Token: 0x02005E81 RID: 24193
+	// Token: 0x02004E66 RID: 20070
 	public abstract class AutoAttachItem<[Nullable(2)] T> : UiPanelBase
 	{
-		// Token: 0x0603D8B9 RID: 252089 RVA: 0x00EDA7F8 File Offset: 0x00ED89F8
+		// Token: 0x06032849 RID: 206921 RVA: 0x00E2BD84 File Offset: 0x00E29F84
 		[NullableContext(2)]
 		public AutoAttachItem(AActor uiItem = null)
 		{
@@ -18,20 +18,20 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D8BA RID: 252090 RVA: 0x00EDA80B File Offset: 0x00ED8A0B
+		// Token: 0x0603284A RID: 206922 RVA: 0x00E2BD97 File Offset: 0x00E29F97
 		[NullableContext(1)]
 		public void SetData(T[] dataArray)
 		{
 			this.AllData = dataArray;
 		}
 
-		// Token: 0x0603D8BB RID: 252091 RVA: 0x00EDA814 File Offset: 0x00ED8A14
+		// Token: 0x0603284B RID: 206923 RVA: 0x00E2BDA0 File Offset: 0x00E29FA0
 		public void SetIfNeedShowFakeItem(bool state)
 		{
 			this.IfNeedShowFakeItem = state;
 		}
 
-		// Token: 0x0603D8BC RID: 252092 RVA: 0x00EDA81D File Offset: 0x00ED8A1D
+		// Token: 0x0603284C RID: 206924 RVA: 0x00E2BDA9 File Offset: 0x00E29FA9
 		[NullableContext(1)]
 		public void SetSourceView(IAutoAttachBaseView<T> view)
 		{
@@ -39,19 +39,19 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.CurrentMoveDirection = this.SourceView.GetCurrentMoveDirection();
 		}
 
-		// Token: 0x0603D8BD RID: 252093 RVA: 0x00EDA837 File Offset: 0x00ED8A37
+		// Token: 0x0603284D RID: 206925 RVA: 0x00E2BDC3 File Offset: 0x00E29FC3
 		public void SetItemIndex(int index)
 		{
 			this.CreateIndex = index;
 		}
 
-		// Token: 0x0603D8BE RID: 252094 RVA: 0x00EDA840 File Offset: 0x00ED8A40
+		// Token: 0x0603284E RID: 206926 RVA: 0x00E2BDCC File Offset: 0x00E29FCC
 		public int GetItemIndex()
 		{
 			return this.CreateIndex;
 		}
 
-		// Token: 0x0603D8BF RID: 252095 RVA: 0x00EDA848 File Offset: 0x00ED8A48
+		// Token: 0x0603284F RID: 206927 RVA: 0x00E2BDD4 File Offset: 0x00E29FD4
 		public void InitItem()
 		{
 			this.TryInitSelectToggle();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.InitPosition();
 		}
 
-		// Token: 0x0603D8C0 RID: 252096 RVA: 0x00EDA8A8 File Offset: 0x00ED8AA8
+		// Token: 0x06032850 RID: 206928 RVA: 0x00E2BE34 File Offset: 0x00E2A034
 		private void InitPosition()
 		{
 			this.ResetPosition();
@@ -98,14 +98,14 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D8C1 RID: 252097 RVA: 0x00EDA963 File Offset: 0x00ED8B63
+		// Token: 0x06032851 RID: 206929 RVA: 0x00E2BEEF File Offset: 0x00E2A0EF
 		private void ResetPosition()
 		{
 			this.RootItem.SetAnchorOffsetX(0f);
 			this.RootItem.SetAnchorOffsetY(0f);
 		}
 
-		// Token: 0x0603D8C2 RID: 252098 RVA: 0x00EDA988 File Offset: 0x00ED8B88
+		// Token: 0x06032852 RID: 206930 RVA: 0x00E2BF14 File Offset: 0x00E2A114
 		public void MoveItem(float offset)
 		{
 			int currentShowItemIndex = this.CurrentShowItemIndex;
@@ -134,14 +134,14 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.OnMoveItem();
 		}
 
-		// Token: 0x0603D8C3 RID: 252099 RVA: 0x00EDAA4C File Offset: 0x00ED8C4C
+		// Token: 0x06032853 RID: 206931 RVA: 0x00E2BFD8 File Offset: 0x00E2A1D8
 		public float GetCurrentMovePercentage()
 		{
 			float viewSize = this.SourceView.GetViewSize();
 			return (this.GetCurrentPosition() + viewSize / 2f) / viewSize;
 		}
 
-		// Token: 0x0603D8C4 RID: 252100 RVA: 0x00EDAA78 File Offset: 0x00ED8C78
+		// Token: 0x06032854 RID: 206932 RVA: 0x00E2C004 File Offset: 0x00E2A204
 		private ValueTuple<float, int> GetMoveOffsetFinalPositionAndShowIndex(float offset)
 		{
 			float checkPosition = this.GetCurrentPosition() + offset;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return this.GetNoCircleMoveOffsetPositionAndShowIndex(checkPosition);
 		}
 
-		// Token: 0x0603D8C5 RID: 252101 RVA: 0x00EDAAAC File Offset: 0x00ED8CAC
+		// Token: 0x06032855 RID: 206933 RVA: 0x00E2C038 File Offset: 0x00E2A238
 		private ValueTuple<float, int> GetCircleMoveOffsetPositionAndShowIndex(float checkPosition)
 		{
 			float num = checkPosition;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return new ValueTuple<float, int>(num, i);
 		}
 
-		// Token: 0x0603D8C6 RID: 252102 RVA: 0x00EDAB80 File Offset: 0x00ED8D80
+		// Token: 0x06032856 RID: 206934 RVA: 0x00E2C10C File Offset: 0x00E2A30C
 		private ValueTuple<float, int> GetNoCircleMoveOffsetPositionAndShowIndex(float checkPosition)
 		{
 			float num = checkPosition;
@@ -232,25 +232,25 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return new ValueTuple<float, int>(num, num2);
 		}
 
-		// Token: 0x0603D8C7 RID: 252103 RVA: 0x00EDAC80 File Offset: 0x00ED8E80
+		// Token: 0x06032857 RID: 206935 RVA: 0x00E2C20C File Offset: 0x00E2A40C
 		public int GetCurrentShowItemIndex()
 		{
 			return this.CurrentShowItemIndex;
 		}
 
-		// Token: 0x0603D8C8 RID: 252104 RVA: 0x00EDAC88 File Offset: 0x00ED8E88
+		// Token: 0x06032858 RID: 206936 RVA: 0x00E2C214 File Offset: 0x00E2A414
 		protected bool GetCurrentSelectedState()
 		{
 			return this.SourceView.GetCurrentSelectIndex() == this.GetCurrentShowItemIndex();
 		}
 
-		// Token: 0x0603D8C9 RID: 252105 RVA: 0x00EDAC9D File Offset: 0x00ED8E9D
+		// Token: 0x06032859 RID: 206937 RVA: 0x00E2C229 File Offset: 0x00E2A429
 		public bool GetSelectedState()
 		{
 			return this.SelectState;
 		}
 
-		// Token: 0x0603D8CA RID: 252106 RVA: 0x00EDACA5 File Offset: 0x00ED8EA5
+		// Token: 0x0603285A RID: 206938 RVA: 0x00E2C231 File Offset: 0x00E2A431
 		public void Select()
 		{
 			if (!this.SelectState)
@@ -261,19 +261,19 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D8CB RID: 252107 RVA: 0x00EDACC2 File Offset: 0x00ED8EC2
+		// Token: 0x0603285B RID: 206939 RVA: 0x00E2C24E File Offset: 0x00E2A44E
 		public void OnControllerDragStart()
 		{
 			this.DragState = true;
 		}
 
-		// Token: 0x0603D8CC RID: 252108 RVA: 0x00EDACCB File Offset: 0x00ED8ECB
+		// Token: 0x0603285C RID: 206940 RVA: 0x00E2C257 File Offset: 0x00E2A457
 		public void OnControllerDragEnd()
 		{
 			this.DragState = false;
 		}
 
-		// Token: 0x0603D8CD RID: 252109 RVA: 0x00EDACD4 File Offset: 0x00ED8ED4
+		// Token: 0x0603285D RID: 206941 RVA: 0x00E2C260 File Offset: 0x00E2A460
 		public void ForceUnSelectItem()
 		{
 			this.SelectState = false;
@@ -281,19 +281,19 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.OnUnSelect();
 		}
 
-		// Token: 0x0603D8CE RID: 252110 RVA: 0x00EDACE9 File Offset: 0x00ED8EE9
+		// Token: 0x0603285E RID: 206942 RVA: 0x00E2C275 File Offset: 0x00E2A475
 		[NullableContext(2)]
 		protected virtual UUIExtendToggle GetSelectToggle()
 		{
 			return null;
 		}
 
-		// Token: 0x0603D8CF RID: 252111 RVA: 0x00EDACEC File Offset: 0x00ED8EEC
+		// Token: 0x0603285F RID: 206943 RVA: 0x00E2C278 File Offset: 0x00E2A478
 		protected virtual void OnSelectToggleClick()
 		{
 		}
 
-		// Token: 0x0603D8D0 RID: 252112 RVA: 0x00EDACEE File Offset: 0x00ED8EEE
+		// Token: 0x06032860 RID: 206944 RVA: 0x00E2C27A File Offset: 0x00E2A47A
 		private void TryInitSelectToggle()
 		{
 			if (this.SelectToggleInited)
@@ -310,14 +310,14 @@ namespace CSharpScript.Game.Module.AutoAttach
 			selectToggle.OnStateChange.Add(new Action<EToggleState>(this.OnSelectToggleStateChange));
 		}
 
-		// Token: 0x0603D8D1 RID: 252113 RVA: 0x00EDAD2D File Offset: 0x00ED8F2D
+		// Token: 0x06032861 RID: 206945 RVA: 0x00E2C2B9 File Offset: 0x00E2A4B9
 		private void OnSelectToggleStateChange(EToggleState state)
 		{
 			this.RefreshSelectToggleState();
 			this.OnSelectToggleClick();
 		}
 
-		// Token: 0x0603D8D2 RID: 252114 RVA: 0x00EDAD3B File Offset: 0x00ED8F3B
+		// Token: 0x06032862 RID: 206946 RVA: 0x00E2C2C7 File Offset: 0x00E2A4C7
 		private void RefreshSelectToggleState()
 		{
 			UUIExtendToggle selectToggle = this.SelectToggle;
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			selectToggle.SetToggleStateForce(this.SelectState ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603D8D3 RID: 252115 RVA: 0x00EDAD5C File Offset: 0x00ED8F5C
+		// Token: 0x06032863 RID: 206947 RVA: 0x00E2C2E8 File Offset: 0x00E2A4E8
 		protected override void OnBeforeDestroyImplement()
 		{
 			base.OnBeforeDestroyImplement();
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.SelectToggle = null;
 		}
 
-		// Token: 0x0603D8D4 RID: 252116 RVA: 0x00EDAD90 File Offset: 0x00ED8F90
+		// Token: 0x06032864 RID: 206948 RVA: 0x00E2C31C File Offset: 0x00E2A51C
 		public float GetCurrentPosition()
 		{
 			EAttachDirection? currentMoveDirection = this.CurrentMoveDirection;
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return this.RootItem.GetAnchorOffsetY();
 		}
 
-		// Token: 0x0603D8D5 RID: 252117 RVA: 0x00EDADD4 File Offset: 0x00ED8FD4
+		// Token: 0x06032865 RID: 206949 RVA: 0x00E2C360 File Offset: 0x00E2A560
 		public void RefreshItem()
 		{
 			T data = default(T);
@@ -373,20 +373,20 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.OnRefreshItem(data);
 		}
 
-		// Token: 0x0603D8D6 RID: 252118
+		// Token: 0x06032866 RID: 206950
 		[NullableContext(1)]
 		protected abstract void OnRefreshItem(T data);
 
-		// Token: 0x0603D8D7 RID: 252119
+		// Token: 0x06032867 RID: 206951
 		public abstract void OnSelect();
 
-		// Token: 0x0603D8D8 RID: 252120
+		// Token: 0x06032868 RID: 206952
 		protected abstract void OnUnSelect();
 
-		// Token: 0x0603D8D9 RID: 252121
+		// Token: 0x06032869 RID: 206953
 		protected abstract void OnMoveItem();
 
-		// Token: 0x0603D8DA RID: 252122 RVA: 0x00EDAE4C File Offset: 0x00ED904C
+		// Token: 0x0603286A RID: 206954 RVA: 0x00E2C3D8 File Offset: 0x00E2A5D8
 		private bool CheckIfInSizeOneBorder(float prePosition)
 		{
 			float itemSize = this.SourceView.GetItemSize();
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return prePosition <= num;
 		}
 
-		// Token: 0x0603D8DB RID: 252123 RVA: 0x00EDAEA8 File Offset: 0x00ED90A8
+		// Token: 0x0603286B RID: 206955 RVA: 0x00E2C434 File Offset: 0x00E2A634
 		private bool CheckIfInSizeTwoBorder(float prePosition)
 		{
 			float itemSize = this.SourceView.GetItemSize();
@@ -406,25 +406,25 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return prePosition >= num;
 		}
 
-		// Token: 0x040201F0 RID: 131568
+		// Token: 0x0401ACB7 RID: 109751
 		protected int CurrentShowItemIndex;
 
-		// Token: 0x040201F1 RID: 131569
+		// Token: 0x0401ACB8 RID: 109752
 		private int CreateIndex;
 
-		// Token: 0x040201F2 RID: 131570
+		// Token: 0x0401ACB9 RID: 109753
 		private int DataLength;
 
-		// Token: 0x040201F3 RID: 131571
+		// Token: 0x0401ACBA RID: 109754
 		protected bool SelectState;
 
-		// Token: 0x040201F4 RID: 131572
+		// Token: 0x0401ACBB RID: 109755
 		private readonly bool IfShowOverSizeItem;
 
-		// Token: 0x040201F5 RID: 131573
+		// Token: 0x0401ACBC RID: 109756
 		private bool IfNeedShowFakeItem;
 
-		// Token: 0x040201F6 RID: 131574
+		// Token: 0x0401ACBD RID: 109757
 		[Nullable(new byte[]
 		{
 			2,
@@ -432,10 +432,10 @@ namespace CSharpScript.Game.Module.AutoAttach
 		})]
 		protected IAutoAttachBaseView<T> SourceView;
 
-		// Token: 0x040201F7 RID: 131575
+		// Token: 0x0401ACBE RID: 109758
 		protected EAttachDirection? CurrentMoveDirection;
 
-		// Token: 0x040201F8 RID: 131576
+		// Token: 0x0401ACBF RID: 109759
 		[Nullable(new byte[]
 		{
 			2,
@@ -443,14 +443,14 @@ namespace CSharpScript.Game.Module.AutoAttach
 		})]
 		protected T[] AllData;
 
-		// Token: 0x040201F9 RID: 131577
+		// Token: 0x0401ACC0 RID: 109760
 		protected bool DragState;
 
-		// Token: 0x040201FA RID: 131578
+		// Token: 0x0401ACC1 RID: 109761
 		[Nullable(2)]
 		private UUIExtendToggle SelectToggle;
 
-		// Token: 0x040201FB RID: 131579
+		// Token: 0x0401ACC2 RID: 109762
 		private bool SelectToggleInited;
 	}
 }

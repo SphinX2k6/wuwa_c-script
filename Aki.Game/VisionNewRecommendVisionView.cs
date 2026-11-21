@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024EA RID: 9450
+// Token: 0x020019D1 RID: 6609
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommendVisionItemData>
 {
-	// Token: 0x0601300E RID: 77838 RVA: 0x004B4E34 File Offset: 0x004B3034
+	// Token: 0x060104CD RID: 66765 RVA: 0x004C2AE0 File Offset: 0x004C0CE0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommend
 		};
 	}
 
-	// Token: 0x0601300F RID: 77839 RVA: 0x004B4EA4 File Offset: 0x004B30A4
+	// Token: 0x060104CE RID: 66766 RVA: 0x004C2B50 File Offset: 0x004C0D50
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionNewRecommendVisionView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommend
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013010 RID: 77840 RVA: 0x004B4EE7 File Offset: 0x004B30E7
+	// Token: 0x060104CF RID: 66767 RVA: 0x004C2B93 File Offset: 0x004C0D93
 	private void SelectedCallback()
 	{
 		Action<int, VisionNewRecommendVisionItemData> onSelectedCallback = this.OnSelectedCallback;
@@ -49,7 +49,7 @@ public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommend
 		onSelectedCallback(base.GridIndex, this.CurrentData);
 	}
 
-	// Token: 0x06013011 RID: 77841 RVA: 0x004B4F08 File Offset: 0x004B3108
+	// Token: 0x060104D0 RID: 66768 RVA: 0x004C2BB4 File Offset: 0x004C0DB4
 	public override void Refresh(VisionNewRecommendVisionItemData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentData = data;
@@ -68,7 +68,7 @@ public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommend
 		visionItem2.SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false);
 	}
 
-	// Token: 0x06013012 RID: 77842 RVA: 0x004B4F60 File Offset: 0x004B3160
+	// Token: 0x060104D1 RID: 66769 RVA: 0x004C2C0C File Offset: 0x004C0E0C
 	private void RefreshUsageText(int usage)
 	{
 		UUIItem item = base.GetItem(2);
@@ -88,7 +88,7 @@ public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommend
 		}
 	}
 
-	// Token: 0x06013013 RID: 77843 RVA: 0x004B4FBD File Offset: 0x004B31BD
+	// Token: 0x060104D2 RID: 66770 RVA: 0x004C2C69 File Offset: 0x004C0E69
 	private void RefreshNotObtainedPanel(bool obtained)
 	{
 		UUIItem item = base.GetItem(1);
@@ -99,7 +99,7 @@ public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommend
 		item.SetUIActive(!obtained);
 	}
 
-	// Token: 0x06013014 RID: 77844 RVA: 0x004B4FD4 File Offset: 0x004B31D4
+	// Token: 0x060104D3 RID: 66771 RVA: 0x004C2C80 File Offset: 0x004C0E80
 	public override void OnSelected(bool fireEvent)
 	{
 		VisionNewRecommendVisionItem visionItem = this.VisionItem;
@@ -110,7 +110,7 @@ public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommend
 		visionItem.SetToggleState(EToggleState.ETT_Checked, fireEvent);
 	}
 
-	// Token: 0x06013015 RID: 77845 RVA: 0x004B4FE8 File Offset: 0x004B31E8
+	// Token: 0x060104D4 RID: 66772 RVA: 0x004C2C94 File Offset: 0x004C0E94
 	public override void OnDeselected(bool fireEvent)
 	{
 		VisionNewRecommendVisionItem visionItem = this.VisionItem;
@@ -121,21 +121,21 @@ public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommend
 		visionItem.SetToggleState(EToggleState.ETT_UnChecked, fireEvent);
 	}
 
-	// Token: 0x06013016 RID: 77846 RVA: 0x004B4FFC File Offset: 0x004B31FC
+	// Token: 0x060104D5 RID: 66773 RVA: 0x004C2CA8 File Offset: 0x004C0EA8
 	public override object GetKey(VisionNewRecommendVisionItemData data, int displayIndex)
 	{
 		return data.VisionMonsterId;
 	}
 
-	// Token: 0x04008F08 RID: 36616
+	// Token: 0x04009052 RID: 36946
 	[Nullable(2)]
 	private VisionNewRecommendVisionItem VisionItem;
 
-	// Token: 0x04008F09 RID: 36617
+	// Token: 0x04009053 RID: 36947
 	[Nullable(2)]
 	private VisionNewRecommendVisionItemData CurrentData;
 
-	// Token: 0x04008F0A RID: 36618
+	// Token: 0x04009054 RID: 36948
 	[Nullable(new byte[]
 	{
 		2,
@@ -143,17 +143,17 @@ public class VisionNewRecommendVisionView : GridProxyAbstract<VisionNewRecommend
 	})]
 	public Action<int, VisionNewRecommendVisionItemData> OnSelectedCallback;
 
-	// Token: 0x02008A7E RID: 35454
+	// Token: 0x02007C06 RID: 31750
 	[NullableContext(0)]
 	private enum EComp
 	{
-		// Token: 0x0402CF98 RID: 184216
+		// Token: 0x040282B0 RID: 164528
 		VisionItem,
-		// Token: 0x0402CF99 RID: 184217
+		// Token: 0x040282B1 RID: 164529
 		PnlNoHave,
-		// Token: 0x0402CF9A RID: 184218
+		// Token: 0x040282B2 RID: 164530
 		PnlUsage,
-		// Token: 0x0402CF9B RID: 184219
+		// Token: 0x040282B3 RID: 164531
 		UsageText
 	}
 }

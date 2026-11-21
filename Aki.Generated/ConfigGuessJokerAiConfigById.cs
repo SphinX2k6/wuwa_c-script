@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003B0 RID: 944
+	// Token: 0x020003C6 RID: 966
 	public class ConfigGuessJokerAiConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001627 RID: 5671 RVA: 0x000D6CCB File Offset: 0x000D4ECB
+		// Token: 0x060016AB RID: 5803 RVA: 0x000DD41F File Offset: 0x000DB61F
 		static ConfigGuessJokerAiConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGuessJokerAiConfigById.CreateStaticDefaultValue), new Action(ConfigGuessJokerAiConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001628 RID: 5672 RVA: 0x000D6CEC File Offset: 0x000D4EEC
+		// Token: 0x060016AC RID: 5804 RVA: 0x000DD440 File Offset: 0x000DB640
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGuessJokerAiConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001629 RID: 5673 RVA: 0x000D6D6B File Offset: 0x000D4F6B
+		// Token: 0x060016AD RID: 5805 RVA: 0x000DD4BF File Offset: 0x000DB6BF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGuessJokerAiConfigById.LogPair = null;
 			ConfigGuessJokerAiConfigById.HandleId = 0;
 		}
 
-		// Token: 0x0600162A RID: 5674 RVA: 0x000D6D79 File Offset: 0x000D4F79
+		// Token: 0x060016AE RID: 5806 RVA: 0x000DD4CD File Offset: 0x000DB6CD
 		public static void Init()
 		{
 			ConfigGuessJokerAiConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigGuessJokerAiConfigById.HandleId, "db_guessjokercard.db", "select BinData from `GuessJokerAiConfig` where RoleId=?");
 		}
 
-		// Token: 0x0600162B RID: 5675 RVA: 0x000D6D94 File Offset: 0x000D4F94
+		// Token: 0x060016AF RID: 5807 RVA: 0x000DD4E8 File Offset: 0x000DB6E8
 		public static GuessJokerAiConfig? GetConfig(int p0RoleId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGuessJokerAiConfigById.HandleId, ConfigGuessJokerAiConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GuessJokerAiConfig?(rootAsGuessJokerAiConfig);
 		}
 
-		// Token: 0x040019B4 RID: 6580
+		// Token: 0x04001A4E RID: 6734
 		private const string DB = "db_guessjokercard.db";
 
-		// Token: 0x040019B5 RID: 6581
+		// Token: 0x04001A4F RID: 6735
 		private const string FILE = "c.猜鬼牌玩法.xlsx";
 
-		// Token: 0x040019B6 RID: 6582
+		// Token: 0x04001A50 RID: 6736
 		private const string TABLE = "GuessJokerAiConfig";
 
-		// Token: 0x040019B7 RID: 6583
+		// Token: 0x04001A51 RID: 6737
 		private const string COMMAND = "select BinData from `GuessJokerAiConfig` where RoleId=?";
 
-		// Token: 0x040019B8 RID: 6584
+		// Token: 0x04001A52 RID: 6738
 		private const string KEY_PREFIX = "GuessJokerAiConfigById";
 
-		// Token: 0x040019B9 RID: 6585
+		// Token: 0x04001A53 RID: 6739
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040019BA RID: 6586
+		// Token: 0x04001A54 RID: 6740
 		private static int HandleId;
 	}
 }

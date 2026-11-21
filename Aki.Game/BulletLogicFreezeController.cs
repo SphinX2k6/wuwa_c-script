@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DD2 RID: 11730
+// Token: 0x0200232C RID: 9004
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,14 +13,14 @@ using UnrealEngine;
 })]
 public class BulletLogicFreezeController : BulletLogicController<LogicDataFreeze, object>
 {
-	// Token: 0x06018A27 RID: 100903 RVA: 0x0064D60E File Offset: 0x0064B80E
+	// Token: 0x060162CF RID: 90831 RVA: 0x006733F2 File Offset: 0x006715F2
 	public BulletLogicFreezeController(LogicDataFreeze bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		this.BulletInfo = this.Bullet.GetBulletInfo();
 		this.Parameter = bulletLogicBase;
 	}
 
-	// Token: 0x06018A28 RID: 100904 RVA: 0x0064D630 File Offset: 0x0064B830
+	// Token: 0x060162D0 RID: 90832 RVA: 0x00673414 File Offset: 0x00671614
 	[NullableContext(2)]
 	public override void BulletLogicAction(object param = null)
 	{
@@ -46,7 +46,7 @@ public class BulletLogicFreezeController : BulletLogicController<LogicDataFreeze
 		BulletUtil.FrozenBulletTime(this.BulletInfo, this.Parameter.FreezeTime);
 	}
 
-	// Token: 0x06018A29 RID: 100905 RVA: 0x0064D6D8 File Offset: 0x0064B8D8
+	// Token: 0x060162D1 RID: 90833 RVA: 0x006734BC File Offset: 0x006716BC
 	private Entity GetBulletCharacterEntity(EBulletObject? bulletObject, Entity victim)
 	{
 		if (bulletObject != null)
@@ -64,9 +64,9 @@ public class BulletLogicFreezeController : BulletLogicController<LogicDataFreeze
 		return this.BulletInfo.Attacker;
 	}
 
-	// Token: 0x0400B773 RID: 46963
+	// Token: 0x0400BAEE RID: 47854
 	private readonly LogicDataFreeze Parameter;
 
-	// Token: 0x0400B774 RID: 46964
+	// Token: 0x0400BAEF RID: 47855
 	private readonly BulletInfo BulletInfo;
 }

@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064B3 RID: 25779
+	// Token: 0x02005431 RID: 21553
 	public enum EPieceClearReason
 	{
-		// Token: 0x04021B33 RID: 138035
+		// Token: 0x0401C464 RID: 115812
 		Matched,
-		// Token: 0x04021B34 RID: 138036
+		// Token: 0x0401C465 RID: 115813
 		BombSelf,
-		// Token: 0x04021B35 RID: 138037
+		// Token: 0x0401C466 RID: 115814
 		SplashedByBomb,
-		// Token: 0x04021B36 RID: 138038
+		// Token: 0x0401C467 RID: 115815
 		ClearSelf,
-		// Token: 0x04021B37 RID: 138039
+		// Token: 0x0401C468 RID: 115816
 		SplashedByCross,
-		// Token: 0x04021B38 RID: 138040
+		// Token: 0x0401C469 RID: 115817
 		UltimateAllPassive,
-		// Token: 0x04021B39 RID: 138041
+		// Token: 0x0401C46A RID: 115818
 		UltimateAllManual
 	}
 }

@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001670 RID: 5744
+	// Token: 0x020017E2 RID: 6114
 	[EnumExtensions]
 	public enum EPhoneSystemInteractType
 	{
-		// Token: 0x04004CED RID: 19693
+		// Token: 0x040050EF RID: 20719
 		SendPhoneMessage,
-		// Token: 0x04004CEE RID: 19694
+		// Token: 0x040050F0 RID: 20720
 		DeletePhoneMessage,
-		// Token: 0x04004CEF RID: 19695
+		// Token: 0x040050F1 RID: 20721
 		OpenPhoneMessageBoard,
-		// Token: 0x04004CF0 RID: 19696
+		// Token: 0x040050F2 RID: 20722
 		FlowOpenPhoneMessage
 	}
 }

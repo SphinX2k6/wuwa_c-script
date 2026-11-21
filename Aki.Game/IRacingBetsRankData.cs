@@ -1,37 +1,37 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020026F9 RID: 9977
+// Token: 0x02001BE4 RID: 7140
 [NullableContext(1)]
 public interface IRacingBetsRankData
 {
-	// Token: 0x17001ABA RID: 6842
-	// (get) Token: 0x0601474E RID: 83790
-	// (set) Token: 0x0601474F RID: 83791
+	// Token: 0x17001AF2 RID: 6898
+	// (get) Token: 0x06011C30 RID: 72752
+	// (set) Token: 0x06011C31 RID: 72753
 	int PlayerId { get; set; }
 
-	// Token: 0x17001ABB RID: 6843
-	// (get) Token: 0x06014750 RID: 83792
-	// (set) Token: 0x06014751 RID: 83793
+	// Token: 0x17001AF3 RID: 6899
+	// (get) Token: 0x06011C32 RID: 72754
+	// (set) Token: 0x06011C33 RID: 72755
 	int PlayerHeadPhoto { get; set; }
 
-	// Token: 0x17001ABC RID: 6844
-	// (get) Token: 0x06014752 RID: 83794
-	// (set) Token: 0x06014753 RID: 83795
+	// Token: 0x17001AF4 RID: 6900
+	// (get) Token: 0x06011C34 RID: 72756
+	// (set) Token: 0x06011C35 RID: 72757
 	int RankNum { get; set; }
 
-	// Token: 0x17001ABD RID: 6845
-	// (get) Token: 0x06014754 RID: 83796
-	// (set) Token: 0x06014755 RID: 83797
+	// Token: 0x17001AF5 RID: 6901
+	// (get) Token: 0x06011C36 RID: 72758
+	// (set) Token: 0x06011C37 RID: 72759
 	string Name { get; set; }
 
-	// Token: 0x17001ABE RID: 6846
-	// (get) Token: 0x06014756 RID: 83798
-	// (set) Token: 0x06014757 RID: 83799
+	// Token: 0x17001AF6 RID: 6902
+	// (get) Token: 0x06011C38 RID: 72760
+	// (set) Token: 0x06011C39 RID: 72761
 	int HitNum { get; set; }
 
-	// Token: 0x17001ABF RID: 6847
-	// (get) Token: 0x06014758 RID: 83800
-	// (set) Token: 0x06014759 RID: 83801
+	// Token: 0x17001AF7 RID: 6903
+	// (get) Token: 0x06011C3A RID: 72762
+	// (set) Token: 0x06011C3B RID: 72763
 	int CashNum { get; set; }
 }

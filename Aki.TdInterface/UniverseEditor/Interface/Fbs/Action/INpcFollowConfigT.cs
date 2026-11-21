@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BB6 RID: 27574
+	// Token: 0x02007302 RID: 29442
 	public class INpcFollowConfigT
 	{
-		// Token: 0x1700CCF5 RID: 52469
-		// (get) Token: 0x06030713 RID: 198419 RVA: 0x00694286 File Offset: 0x00692486
-		// (set) Token: 0x06030714 RID: 198420 RVA: 0x0069428E File Offset: 0x0069248E
+		// Token: 0x1700D7E1 RID: 55265
+		// (get) Token: 0x0603358D RID: 210317 RVA: 0x006ECC26 File Offset: 0x006EAE26
+		// (set) Token: 0x0603358E RID: 210318 RVA: 0x006ECC2E File Offset: 0x006EAE2E
 		public IPerformerRangeBoundaryActionTriggerT PerformerWhenEnter { get; set; }
 
-		// Token: 0x1700CCF6 RID: 52470
-		// (get) Token: 0x06030715 RID: 198421 RVA: 0x00694297 File Offset: 0x00692497
-		// (set) Token: 0x06030716 RID: 198422 RVA: 0x0069429F File Offset: 0x0069249F
+		// Token: 0x1700D7E2 RID: 55266
+		// (get) Token: 0x0603358F RID: 210319 RVA: 0x006ECC37 File Offset: 0x006EAE37
+		// (set) Token: 0x06033590 RID: 210320 RVA: 0x006ECC3F File Offset: 0x006EAE3F
 		public IPerformerRangeBoundaryActionTriggerT PerformerWhenExit { get; set; }
 
-		// Token: 0x06030717 RID: 198423 RVA: 0x006942A8 File Offset: 0x006924A8
+		// Token: 0x06033591 RID: 210321 RVA: 0x006ECC48 File Offset: 0x006EAE48
 		public INpcFollowConfigT()
 		{
 			this.PerformerWhenEnter = null;

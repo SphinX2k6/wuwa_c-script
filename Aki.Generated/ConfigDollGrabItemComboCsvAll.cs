@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000210 RID: 528
+	// Token: 0x02000222 RID: 546
 	public class ConfigDollGrabItemComboCsvAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C63 RID: 3171 RVA: 0x0009FA10 File Offset: 0x0009DC10
+		// Token: 0x06000CCF RID: 3279 RVA: 0x000A5948 File Offset: 0x000A3B48
 		static ConfigDollGrabItemComboCsvAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDollGrabItemComboCsvAll.CreateStaticDefaultValue), new Action(ConfigDollGrabItemComboCsvAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C64 RID: 3172 RVA: 0x0009FA30 File Offset: 0x0009DC30
+		// Token: 0x06000CD0 RID: 3280 RVA: 0x000A5968 File Offset: 0x000A3B68
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDollGrabItemComboCsvAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C65 RID: 3173 RVA: 0x0009FAAF File Offset: 0x0009DCAF
+		// Token: 0x06000CD1 RID: 3281 RVA: 0x000A59E7 File Offset: 0x000A3BE7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDollGrabItemComboCsvAll.LogPair = null;
 			ConfigDollGrabItemComboCsvAll.HandleId = 0;
 		}
 
-		// Token: 0x06000C66 RID: 3174 RVA: 0x0009FABD File Offset: 0x0009DCBD
+		// Token: 0x06000CD2 RID: 3282 RVA: 0x000A59F5 File Offset: 0x000A3BF5
 		public static void Init()
 		{
 			ConfigDollGrabItemComboCsvAll.HandleId = ConfigCommon.InitDataStatement(ConfigDollGrabItemComboCsvAll.HandleId, "db_dollgrabitemcombocsv.db", "select BinData from `DollGrabItemComboCsv`");
 		}
 
-		// Token: 0x06000C67 RID: 3175 RVA: 0x0009FAD8 File Offset: 0x0009DCD8
+		// Token: 0x06000CD3 RID: 3283 RVA: 0x000A5A10 File Offset: 0x000A3C10
 		[NullableContext(2)]
 		public static IReadOnlyList<DollGrabItemComboCsv> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000E54 RID: 3668
+		// Token: 0x04000ED2 RID: 3794
 		private const string DB = "db_dollgrabitemcombocsv.db";
 
-		// Token: 0x04000E55 RID: 3669
+		// Token: 0x04000ED3 RID: 3795
 		private const string FILE = "k.可视化编辑/c.Csv/j.夹娃娃机物品组合/*.csv*";
 
-		// Token: 0x04000E56 RID: 3670
+		// Token: 0x04000ED4 RID: 3796
 		private const string TABLE = "DollGrabItemComboCsv";
 
-		// Token: 0x04000E57 RID: 3671
+		// Token: 0x04000ED5 RID: 3797
 		private const string COMMAND = "select BinData from `DollGrabItemComboCsv`";
 
-		// Token: 0x04000E58 RID: 3672
+		// Token: 0x04000ED6 RID: 3798
 		private const string KEY_PREFIX = "DollGrabItemComboCsvAll";
 
-		// Token: 0x04000E59 RID: 3673
+		// Token: 0x04000ED7 RID: 3799
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E5A RID: 3674
+		// Token: 0x04000ED8 RID: 3800
 		private static int HandleId;
 	}
 }

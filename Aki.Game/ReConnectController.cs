@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Frozen;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,12 +14,30 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x0200274A RID: 10058
+// Token: 0x02001C35 RID: 7221
 [NullableContext(1)]
 [Nullable(0)]
+[Controller(0)]
 public class ReConnectController : UiControllerBase
 {
-	// Token: 0x06014A11 RID: 84497 RVA: 0x005381A8 File Offset: 0x005363A8
+	// Token: 0x17001B40 RID: 6976
+	// (get) Token: 0x06011EF3 RID: 73459 RVA: 0x00546F7C File Offset: 0x0054517C
+	public bool IsAnyNetworkReconnectViewOpen
+	{
+		get
+		{
+			foreach (EUiViewName viewName in this.NetworkReconnectViewNames)
+			{
+				if (UiManager.Instance.IsViewOpen(viewName))
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+	}
+
+	// Token: 0x06011EF4 RID: 73460 RVA: 0x00546FDC File Offset: 0x005451DC
 	protected override bool OnInit()
 	{
 		Heartbeat.Instance.SetMaxTimeOutHandler(new Action(this.OnHeartbeatTimeout));
@@ -32,7 +51,7 @@ public class ReConnectController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06014A12 RID: 84498 RVA: 0x00538231 File Offset: 0x00536431
+	// Token: 0x06011EF5 RID: 73461 RVA: 0x00547065 File Offset: 0x00545265
 	protected override bool OnClear()
 	{
 		if (Info.Instance.IsMobilePlatform())
@@ -42,7 +61,7 @@ public class ReConnectController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06014A13 RID: 84499 RVA: 0x00538257 File Offset: 0x00536457
+	// Token: 0x06011EF6 RID: 73462 RVA: 0x0054708B File Offset: 0x0054528B
 	private void OnRequestMaskAdd(int rpcId)
 	{
 		ReConnectModel.Instance.AddRpc(rpcId);
@@ -50,7 +69,7 @@ public class ReConnectController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.NetWorkMaskRpcAdd, rpcId);
 	}
 
-	// Token: 0x06014A14 RID: 84500 RVA: 0x0053827B File Offset: 0x0053647B
+	// Token: 0x06011EF7 RID: 73463 RVA: 0x005470AF File Offset: 0x005452AF
 	private void OnRequestMaskRemove(int rpcId)
 	{
 		ReConnectModel.Instance.DelRpc(rpcId);
@@ -61,7 +80,7 @@ public class ReConnectController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.NetWorkMaskRpcRemove, rpcId);
 	}
 
-	// Token: 0x06014A15 RID: 84501 RVA: 0x005382B5 File Offset: 0x005364B5
+	// Token: 0x06011EF8 RID: 73464 RVA: 0x005470E9 File Offset: 0x005452E9
 	protected override void OnAddEvents()
 	{
 		ReConnectModel instance = ReConnectModel.Instance;
@@ -69,13 +88,13 @@ public class ReConnectController : UiControllerBase
 		instance.NetworkListener.NetworkChangeDelegate.Add(new Action<byte>(this.OnNetworkTypeChange));
 	}
 
-	// Token: 0x06014A16 RID: 84502 RVA: 0x005382E2 File Offset: 0x005364E2
+	// Token: 0x06011EF9 RID: 73465 RVA: 0x00547116 File Offset: 0x00545316
 	protected override void OnRemoveEvents()
 	{
 		ReConnectModel.Instance.NetworkListener.NetworkChangeDelegate.Remove(new Action<byte>(this.OnNetworkTypeChange));
 	}
 
-	// Token: 0x06014A17 RID: 84503 RVA: 0x00538304 File Offset: 0x00536504
+	// Token: 0x06011EFA RID: 73466 RVA: 0x00547138 File Offset: 0x00545338
 	public unsafe void Logout(ELogoutReason reason)
 	{
 		bool flag = ReConnectModel.Instance.GetReConnectStatus() > EReConnectStatus.NoReConnect;
@@ -95,13 +114,13 @@ public class ReConnectController : UiControllerBase
 		this.BackLoginView(EBackLoginViewReason.Logout, false);
 	}
 
-	// Token: 0x06014A18 RID: 84504 RVA: 0x0053839E File Offset: 0x0053659E
+	// Token: 0x06011EFB RID: 73467 RVA: 0x005471D2 File Offset: 0x005453D2
 	public void GmBackToLoginView(EBackLoginViewReason reason, bool reconnectFail)
 	{
 		this.BackLoginView(reason, reconnectFail);
 	}
 
-	// Token: 0x06014A19 RID: 84505 RVA: 0x005383A8 File Offset: 0x005365A8
+	// Token: 0x06011EFC RID: 73468 RVA: 0x005471DC File Offset: 0x005453DC
 	private void OnHeartbeatTimeout()
 	{
 		if (Net.Instance.IsServerConnected())
@@ -112,7 +131,7 @@ public class ReConnectController : UiControllerBase
 		Log.Instance.Info(ELogModule.Reconnect, ELogAuthor.MZJ, "未完成连接，但是触发心跳超时最大次数", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06014A1A RID: 84506 RVA: 0x005383EC File Offset: 0x005365EC
+	// Token: 0x06011EFD RID: 73469 RVA: 0x00547220 File Offset: 0x00545420
 	public unsafe void TryReConnect(bool isSilent, string reason)
 	{
 		if (!this.CanReconnect(reason))
@@ -143,13 +162,13 @@ public class ReConnectController : UiControllerBase
 		this.ReConnectServer(0).ContinueWith(new Action<ReconnectResult>(this.OnReconnectResult)).Forget(new Action<Exception>(this.OnReconnectReject), true);
 	}
 
-	// Token: 0x06014A1B RID: 84507 RVA: 0x005384DC File Offset: 0x005366DC
+	// Token: 0x06011EFE RID: 73470 RVA: 0x00547310 File Offset: 0x00545510
 	private void OnNetWorkError(int errorCode)
 	{
 		this.TryReConnect(false, "Net.OnNetworkError");
 	}
 
-	// Token: 0x06014A1C RID: 84508 RVA: 0x005384EC File Offset: 0x005366EC
+	// Token: 0x06011EFF RID: 73471 RVA: 0x00547320 File Offset: 0x00545520
 	private void OnNetworkTypeChange(byte newType)
 	{
 		ReConnectModel instance = ReConnectModel.Instance;
@@ -163,7 +182,7 @@ public class ReConnectController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014A1D RID: 84509 RVA: 0x00538528 File Offset: 0x00536728
+	// Token: 0x06011F00 RID: 73472 RVA: 0x0054735C File Offset: 0x0054555C
 	private unsafe void ApplicationHasReactivated()
 	{
 		long num = DateTimeOffset.Now.ToUnixTimeMilliseconds();
@@ -183,7 +202,7 @@ public class ReConnectController : UiControllerBase
 		Heartbeat.Instance.SendHeartbeatImmediately();
 	}
 
-	// Token: 0x06014A1E RID: 84510 RVA: 0x005385DC File Offset: 0x005367DC
+	// Token: 0x06011F01 RID: 73473 RVA: 0x00547410 File Offset: 0x00545610
 	private bool CanReconnect(string reason)
 	{
 		if (ReConnectModel.Instance.GetReConnectStatus() != EReConnectStatus.NoReConnect)
@@ -223,7 +242,7 @@ public class ReConnectController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06014A1F RID: 84511 RVA: 0x00538698 File Offset: 0x00536898
+	// Token: 0x06011F02 RID: 73474 RVA: 0x005474CC File Offset: 0x005456CC
 	private unsafe void BackLoginView(EBackLoginViewReason reason, bool reconnectFail = false)
 	{
 		Log instance = Log.Instance;
@@ -250,17 +269,17 @@ public class ReConnectController : UiControllerBase
 		action(true);
 	}
 
-	// Token: 0x06014A20 RID: 84512 RVA: 0x00538778 File Offset: 0x00536978
+	// Token: 0x06011F03 RID: 73475 RVA: 0x005475AC File Offset: 0x005457AC
 	private UniTask BackToLoginScene()
 	{
-		ReConnectController.<BackToLoginScene>d__18 <BackToLoginScene>d__;
+		ReConnectController.<BackToLoginScene>d__21 <BackToLoginScene>d__;
 		<BackToLoginScene>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<BackToLoginScene>d__.<>1__state = -1;
-		<BackToLoginScene>d__.<>t__builder.Start<ReConnectController.<BackToLoginScene>d__18>(ref <BackToLoginScene>d__);
+		<BackToLoginScene>d__.<>t__builder.Start<ReConnectController.<BackToLoginScene>d__21>(ref <BackToLoginScene>d__);
 		return <BackToLoginScene>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014A21 RID: 84513 RVA: 0x005387B4 File Offset: 0x005369B4
+	// Token: 0x06011F04 RID: 73476 RVA: 0x005475E8 File Offset: 0x005457E8
 	[NullableContext(2)]
 	public unsafe BackToGameData CreateBackToGameData(EBackToGameType backToGameType)
 	{
@@ -317,7 +336,7 @@ public class ReConnectController : UiControllerBase
 		return backToGameData;
 	}
 
-	// Token: 0x06014A22 RID: 84514 RVA: 0x005389C4 File Offset: 0x00536BC4
+	// Token: 0x06011F05 RID: 73477 RVA: 0x005477F8 File Offset: 0x005459F8
 	public bool TryBackToGame()
 	{
 		BackToGameData backToGameData = LoginModel.Instance.GetBackToGameData();
@@ -391,17 +410,17 @@ public class ReConnectController : UiControllerBase
 		Heartbeat.Instance.StopHeartBeat(HeartbeatDefine.EStopHeartbeat.BackLoginAndEnterGame);
 		if (UiManager.Instance.IsViewShow(EUiViewName.NetWorkMaskView))
 		{
-			UiManager.Instance.CloseView(EUiViewName.NetWorkMaskView, new Action<bool>(this.<TryBackToGame>g__CallFunction|20_0));
+			UiManager.Instance.CloseView(EUiViewName.NetWorkMaskView, new Action<bool>(this.<TryBackToGame>g__CallFunction|23_0));
 		}
 		else
 		{
-			this.<TryBackToGame>g__CallFunction|20_0(true);
+			this.<TryBackToGame>g__CallFunction|23_0(true);
 		}
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.FEstimation.Enable 0", null);
 		return true;
 	}
 
-	// Token: 0x06014A23 RID: 84515 RVA: 0x00538CB6 File Offset: 0x00536EB6
+	// Token: 0x06011F06 RID: 73478 RVA: 0x00547AEA File Offset: 0x00545CEA
 	private void PromptBackToLoginView(bool isOpenSuccess)
 	{
 		if (UiManager.Instance.IsInited)
@@ -412,7 +431,7 @@ public class ReConnectController : UiControllerBase
 		ReConnectModel.Instance.DisconnectedFunction = new Action(this.ShowBackLoginConfirmBox);
 	}
 
-	// Token: 0x06014A24 RID: 84516 RVA: 0x00538CE4 File Offset: 0x00536EE4
+	// Token: 0x06011F07 RID: 73479 RVA: 0x00547B18 File Offset: 0x00545D18
 	private void ShowBackLoginConfirmBox()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(LoginModel.Instance.HasBackToGameData() ? EConfirmBoxConfigId.BackToLoginAndEnterGame : EConfirmBoxConfigId.BackLoginView);
@@ -428,7 +447,7 @@ public class ReConnectController : UiControllerBase
 		ConfirmBoxController.Instance.ShowNetWorkConfirmBoxView(confirmBoxDataNew, null);
 	}
 
-	// Token: 0x06014A25 RID: 84517 RVA: 0x00538D2A File Offset: 0x00536F2A
+	// Token: 0x06011F08 RID: 73480 RVA: 0x00547B5E File Offset: 0x00545D5E
 	private void OpenNetworkMaskView()
 	{
 		if (UiManager.Instance.IsInited && !UiManager.Instance.IsViewOpen(EUiViewName.NetWorkMaskView))
@@ -437,7 +456,7 @@ public class ReConnectController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014A26 RID: 84518 RVA: 0x00538D5C File Offset: 0x00536F5C
+	// Token: 0x06011F09 RID: 73481 RVA: 0x00547B90 File Offset: 0x00545D90
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -445,15 +464,15 @@ public class ReConnectController : UiControllerBase
 	})]
 	private UniTask<ReconnectResult> ReConnectServer(int lastReconnectIntervalMs)
 	{
-		ReConnectController.<ReConnectServer>d__24 <ReConnectServer>d__;
+		ReConnectController.<ReConnectServer>d__27 <ReConnectServer>d__;
 		<ReConnectServer>d__.<>t__builder = AsyncUniTaskMethodBuilder<ReconnectResult>.Create();
 		<ReConnectServer>d__.<>4__this = this;
 		<ReConnectServer>d__.<>1__state = -1;
-		<ReConnectServer>d__.<>t__builder.Start<ReConnectController.<ReConnectServer>d__24>(ref <ReConnectServer>d__);
+		<ReConnectServer>d__.<>t__builder.Start<ReConnectController.<ReConnectServer>d__27>(ref <ReConnectServer>d__);
 		return <ReConnectServer>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014A27 RID: 84519 RVA: 0x00538DA0 File Offset: 0x00536FA0
+	// Token: 0x06011F0A RID: 73482 RVA: 0x00547BD4 File Offset: 0x00545DD4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -461,14 +480,14 @@ public class ReConnectController : UiControllerBase
 	})]
 	private UniTask<ReconnectResult> ConnectGateway()
 	{
-		ReConnectController.<ConnectGateway>d__25 <ConnectGateway>d__;
+		ReConnectController.<ConnectGateway>d__28 <ConnectGateway>d__;
 		<ConnectGateway>d__.<>t__builder = AsyncUniTaskMethodBuilder<ReconnectResult>.Create();
 		<ConnectGateway>d__.<>1__state = -1;
-		<ConnectGateway>d__.<>t__builder.Start<ReConnectController.<ConnectGateway>d__25>(ref <ConnectGateway>d__);
+		<ConnectGateway>d__.<>t__builder.Start<ReConnectController.<ConnectGateway>d__28>(ref <ConnectGateway>d__);
 		return <ConnectGateway>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014A28 RID: 84520 RVA: 0x00538DDC File Offset: 0x00536FDC
+	// Token: 0x06011F0B RID: 73483 RVA: 0x00547C10 File Offset: 0x00545E10
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -476,14 +495,14 @@ public class ReConnectController : UiControllerBase
 	})]
 	private UniTask<ReconnectResult> AskProtoKey()
 	{
-		ReConnectController.<AskProtoKey>d__26 <AskProtoKey>d__;
+		ReConnectController.<AskProtoKey>d__29 <AskProtoKey>d__;
 		<AskProtoKey>d__.<>t__builder = AsyncUniTaskMethodBuilder<ReconnectResult>.Create();
 		<AskProtoKey>d__.<>1__state = -1;
-		<AskProtoKey>d__.<>t__builder.Start<ReConnectController.<AskProtoKey>d__26>(ref <AskProtoKey>d__);
+		<AskProtoKey>d__.<>t__builder.Start<ReConnectController.<AskProtoKey>d__29>(ref <AskProtoKey>d__);
 		return <AskProtoKey>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014A29 RID: 84521 RVA: 0x00538E18 File Offset: 0x00537018
+	// Token: 0x06011F0C RID: 73484 RVA: 0x00547C4C File Offset: 0x00545E4C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -491,14 +510,14 @@ public class ReConnectController : UiControllerBase
 	})]
 	private UniTask<ReconnectResult> ReconnectRequest()
 	{
-		ReConnectController.<ReconnectRequest>d__27 <ReconnectRequest>d__;
+		ReConnectController.<ReconnectRequest>d__30 <ReconnectRequest>d__;
 		<ReconnectRequest>d__.<>t__builder = AsyncUniTaskMethodBuilder<ReconnectResult>.Create();
 		<ReconnectRequest>d__.<>1__state = -1;
-		<ReconnectRequest>d__.<>t__builder.Start<ReConnectController.<ReconnectRequest>d__27>(ref <ReconnectRequest>d__);
+		<ReconnectRequest>d__.<>t__builder.Start<ReConnectController.<ReconnectRequest>d__30>(ref <ReconnectRequest>d__);
 		return <ReconnectRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014A2A RID: 84522 RVA: 0x00538E54 File Offset: 0x00537054
+	// Token: 0x06011F0D RID: 73485 RVA: 0x00547C88 File Offset: 0x00545E88
 	private void OnReconnectReject(Exception error)
 	{
 		if (ReConnectModel.Instance != null)
@@ -509,7 +528,7 @@ public class ReConnectController : UiControllerBase
 		this.TryReConnect(false, "ReconnectController.ForceBreakReconnectHandle");
 	}
 
-	// Token: 0x06014A2B RID: 84523 RVA: 0x00538E9C File Offset: 0x0053709C
+	// Token: 0x06011F0E RID: 73486 RVA: 0x00547CD0 File Offset: 0x00545ED0
 	private void OnReconnectResult(ReconnectResult result)
 	{
 		switch (result.Result)
@@ -528,7 +547,7 @@ public class ReConnectController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014A2C RID: 84524 RVA: 0x00538F00 File Offset: 0x00537100
+	// Token: 0x06011F0F RID: 73487 RVA: 0x00547D34 File Offset: 0x00545F34
 	private unsafe void ReconnectSuccess()
 	{
 		ReConnectModel.Instance.CancelShowMaskTimer();
@@ -554,7 +573,7 @@ public class ReConnectController : UiControllerBase
 		Heartbeat.Instance.BeginHeartBeat(HeartbeatDefine.EBeginHeartbeat.ReConnectSuccess);
 	}
 
-	// Token: 0x06014A2D RID: 84525 RVA: 0x0053900C File Offset: 0x0053720C
+	// Token: 0x06011F10 RID: 73488 RVA: 0x00547E40 File Offset: 0x00546040
 	private void ReconnectFail(EReconnectProcessStep step, int? errorCode = null, bool isPermittedSilentLogin = false)
 	{
 		Net.Instance.Disconnect(Net.EDisconnectReason.Reconnect);
@@ -603,8 +622,8 @@ public class ReConnectController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.ReConnectFail);
 	}
 
-	// Token: 0x17001B08 RID: 6920
-	// (get) Token: 0x06014A2E RID: 84526 RVA: 0x0053919B File Offset: 0x0053739B
+	// Token: 0x17001B41 RID: 6977
+	// (get) Token: 0x06011F11 RID: 73489 RVA: 0x00547FCF File Offset: 0x005461CF
 	public static ReConnectController Instance
 	{
 		get
@@ -613,7 +632,7 @@ public class ReConnectController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014A2F RID: 84527 RVA: 0x005391A2 File Offset: 0x005373A2
+	// Token: 0x06011F12 RID: 73490 RVA: 0x00547FD6 File Offset: 0x005461D6
 	public static ReConnectController GetOrCreateInstance()
 	{
 		if (ReConnectController._Instance == null)
@@ -623,7 +642,7 @@ public class ReConnectController : UiControllerBase
 		return ReConnectController._Instance;
 	}
 
-	// Token: 0x06014A30 RID: 84528 RVA: 0x005391B6 File Offset: 0x005373B6
+	// Token: 0x06011F13 RID: 73491 RVA: 0x00547FEA File Offset: 0x005461EA
 	public static bool CreateInstance()
 	{
 		if (ReConnectController._Instance != null)
@@ -634,51 +653,65 @@ public class ReConnectController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06014A31 RID: 84529 RVA: 0x005391CC File Offset: 0x005373CC
+	// Token: 0x06011F14 RID: 73492 RVA: 0x00548000 File Offset: 0x00546200
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06014A32 RID: 84530 RVA: 0x005391CE File Offset: 0x005373CE
+	// Token: 0x06011F15 RID: 73493 RVA: 0x00548002 File Offset: 0x00546202
 	public static void ResetStaticDefaultValue()
 	{
 		ReConnectController._Instance = null;
 	}
 
-	// Token: 0x06014A33 RID: 84531 RVA: 0x005391D6 File Offset: 0x005373D6
+	// Token: 0x06011F16 RID: 73494 RVA: 0x0054800A File Offset: 0x0054620A
 	static ReConnectController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ReConnectController.CreateStaticDefaultValue), new Action(ReConnectController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06014A36 RID: 84534 RVA: 0x00539208 File Offset: 0x00537408
-	[CompilerGenerated]
-	internal static UniTask <BackToLoginScene>g__Callback|18_0()
+	// Token: 0x06011F17 RID: 73495 RVA: 0x0054802C File Offset: 0x0054622C
+	public unsafe ReConnectController()
 	{
-		ReConnectController.<<BackToLoginScene>g__Callback|18_0>d <<BackToLoginScene>g__Callback|18_0>d;
-		<<BackToLoginScene>g__Callback|18_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-		<<BackToLoginScene>g__Callback|18_0>d.<>1__state = -1;
-		<<BackToLoginScene>g__Callback|18_0>d.<>t__builder.Start<ReConnectController.<<BackToLoginScene>g__Callback|18_0>d>(ref <<BackToLoginScene>g__Callback|18_0>d);
-		return <<BackToLoginScene>g__Callback|18_0>d.<>t__builder.Task;
+		<>y__InlineArray3<EUiViewName> <>y__InlineArray = default(<>y__InlineArray3<EUiViewName>);
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<EUiViewName>, EUiViewName>(ref <>y__InlineArray, 0) = EUiViewName.NetWorkMaskView;
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<EUiViewName>, EUiViewName>(ref <>y__InlineArray, 1) = EUiViewName.PlayStationNetWorkMaskView;
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<EUiViewName>, EUiViewName>(ref <>y__InlineArray, 2) = EUiViewName.NetWorkConfirmBoxView;
+		this.NetworkReconnectViewNames = FrozenSet.Create<EUiViewName>(<PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<EUiViewName>, EUiViewName>(<>y__InlineArray, 3));
+		base..ctor();
 	}
 
-	// Token: 0x06014A37 RID: 84535 RVA: 0x00539243 File Offset: 0x00537443
+	// Token: 0x06011F19 RID: 73497 RVA: 0x0054809C File Offset: 0x0054629C
 	[CompilerGenerated]
-	private void <TryBackToGame>g__CallFunction|20_0(bool b)
+	internal static UniTask <BackToLoginScene>g__Callback|21_0()
+	{
+		ReConnectController.<<BackToLoginScene>g__Callback|21_0>d <<BackToLoginScene>g__Callback|21_0>d;
+		<<BackToLoginScene>g__Callback|21_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<<BackToLoginScene>g__Callback|21_0>d.<>1__state = -1;
+		<<BackToLoginScene>g__Callback|21_0>d.<>t__builder.Start<ReConnectController.<<BackToLoginScene>g__Callback|21_0>d>(ref <<BackToLoginScene>g__Callback|21_0>d);
+		return <<BackToLoginScene>g__Callback|21_0>d.<>t__builder.Task;
+	}
+
+	// Token: 0x06011F1A RID: 73498 RVA: 0x005480D7 File Offset: 0x005462D7
+	[CompilerGenerated]
+	private void <TryBackToGame>g__CallFunction|23_0(bool b)
 	{
 		this.BackToLoginScene();
 	}
 
-	// Token: 0x04009AFA RID: 39674
+	// Token: 0x04009C52 RID: 40018
 	private const int ONE_THOUSAND = 1000;
 
-	// Token: 0x04009AFB RID: 39675
+	// Token: 0x04009C53 RID: 40019
 	private const int TWO_THOUSAND = 2000;
 
-	// Token: 0x04009AFC RID: 39676
+	// Token: 0x04009C54 RID: 40020
 	private const int RECONNECT_TIME_OUT = 20000;
 
-	// Token: 0x04009AFD RID: 39677
+	// Token: 0x04009C55 RID: 40021
+	private readonly FrozenSet<EUiViewName> NetworkReconnectViewNames;
+
+	// Token: 0x04009C56 RID: 40022
 	[Nullable(2)]
 	private static ReConnectController _Instance;
 }

@@ -9,31 +9,31 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DAF RID: 7599
+// Token: 0x02001271 RID: 4721
 [NullableContext(1)]
 [Nullable(0)]
 public class GreatSwordLevelSelectView : UiViewBase
 {
-	// Token: 0x0600E6A5 RID: 59045 RVA: 0x003656E3 File Offset: 0x003638E3
+	// Token: 0x0600BAC3 RID: 47811 RVA: 0x00371343 File Offset: 0x0036F543
 	public GreatSwordLevelSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E6A6 RID: 59046 RVA: 0x003656F7 File Offset: 0x003638F7
+	// Token: 0x0600BAC4 RID: 47812 RVA: 0x00371357 File Offset: 0x0036F557
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<ITrialSubChallenge>>(EEventName.GreatSwordLevelRefreshUI, new Action<IReadOnlyList<ITrialSubChallenge>>(this.OnRefreshChallengeUI));
 		EventSystem.Instance.Add<int, int>(EEventName.GreatSwordLevelSelectedComplete, new Action<int, int>(this.OnChallengeConfirmed));
 	}
 
-	// Token: 0x0600E6A7 RID: 59047 RVA: 0x00365731 File Offset: 0x00363931
+	// Token: 0x0600BAC5 RID: 47813 RVA: 0x00371391 File Offset: 0x0036F591
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.GreatSwordLevelRefreshUI, new Action<IReadOnlyList<ITrialSubChallenge>>(this.OnRefreshChallengeUI));
 		EventSystem.Instance.Remove(EEventName.GreatSwordLevelSelectedComplete, new Action<int, int>(this.OnChallengeConfirmed));
 	}
 
-	// Token: 0x0600E6A8 RID: 59048 RVA: 0x0036576C File Offset: 0x0036396C
+	// Token: 0x0600BAC6 RID: 47814 RVA: 0x003713CC File Offset: 0x0036F5CC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -54,7 +54,7 @@ public class GreatSwordLevelSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E6A9 RID: 59049 RVA: 0x00365870 File Offset: 0x00363A70
+	// Token: 0x0600BAC7 RID: 47815 RVA: 0x003714D0 File Offset: 0x0036F6D0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GreatSwordLevelSelectView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -65,13 +65,13 @@ public class GreatSwordLevelSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E6AA RID: 59050 RVA: 0x003658B3 File Offset: 0x00363AB3
+	// Token: 0x0600BAC8 RID: 47816 RVA: 0x00371513 File Offset: 0x0036F713
 	protected override void OnStart()
 	{
 		this.BindStaticUiData();
 	}
 
-	// Token: 0x0600E6AB RID: 59051 RVA: 0x003658BC File Offset: 0x00363ABC
+	// Token: 0x0600BAC9 RID: 47817 RVA: 0x0037151C File Offset: 0x0036F71C
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
@@ -79,14 +79,14 @@ public class GreatSwordLevelSelectView : UiViewBase
 		this.OnClickTrialLevelItem(levelIndex);
 	}
 
-	// Token: 0x0600E6AC RID: 59052 RVA: 0x00365915 File Offset: 0x00363B15
+	// Token: 0x0600BACA RID: 47818 RVA: 0x00371575 File Offset: 0x0036F775
 	protected override void OnAfterDestroy()
 	{
 		GeneralLogicTreeController.Instance.OpenSystemBoardResultRequest(GreatSwordChallengeModel.Instance.GetIsStartChallenge() ? 2 : 0, GreatSwordChallengeModel.Instance.GetActionIncId());
 		GreatSwordChallengeModel.Instance.ClearData();
 	}
 
-	// Token: 0x0600E6AD RID: 59053 RVA: 0x00365945 File Offset: 0x00363B45
+	// Token: 0x0600BACB RID: 47819 RVA: 0x003715A5 File Offset: 0x0036F7A5
 	private void RefreshView()
 	{
 		this.RefreshTrialLevels();
@@ -94,7 +94,7 @@ public class GreatSwordLevelSelectView : UiViewBase
 		this.RefreshTopDescription();
 	}
 
-	// Token: 0x0600E6AE RID: 59054 RVA: 0x0036595C File Offset: 0x00363B5C
+	// Token: 0x0600BACC RID: 47820 RVA: 0x003715BC File Offset: 0x0036F7BC
 	private void BindStaticUiData()
 	{
 		ITrialChallenge challenge = GreatSwordChallengeModel.Instance.GetChallenge();
@@ -108,7 +108,7 @@ public class GreatSwordLevelSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E6AF RID: 59055 RVA: 0x00365A04 File Offset: 0x00363C04
+	// Token: 0x0600BACD RID: 47821 RVA: 0x00371664 File Offset: 0x0036F864
 	private void RefreshTrialLevels()
 	{
 		this.TrialLevelItems = new List<GreatSwordTrialLevelItem>();
@@ -121,7 +121,7 @@ public class GreatSwordLevelSelectView : UiViewBase
 		trialLevelLayout.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x0600E6B0 RID: 59056 RVA: 0x00365A44 File Offset: 0x00363C44
+	// Token: 0x0600BACE RID: 47822 RVA: 0x003716A4 File Offset: 0x0036F8A4
 	private void RefreshChallengeGoals()
 	{
 		List<TrialSubChallenge> list = GreatSwordChallengeModel.Instance.GetSubChallenges() ?? new List<TrialSubChallenge>();
@@ -144,7 +144,7 @@ public class GreatSwordLevelSelectView : UiViewBase
 		challengeGoalLayout.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x0600E6B1 RID: 59057 RVA: 0x00365AA8 File Offset: 0x00363CA8
+	// Token: 0x0600BACF RID: 47823 RVA: 0x00371708 File Offset: 0x0036F908
 	private void RefreshTopDescription()
 	{
 		List<TrialSubChallenge> list = GreatSwordChallengeModel.Instance.GetSubChallenges() ?? new List<TrialSubChallenge>();
@@ -153,25 +153,25 @@ public class GreatSwordLevelSelectView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(7), (trialSubChallenge != null) ? trialSubChallenge.Config.RuleText : "", Array.Empty<object>());
 	}
 
-	// Token: 0x0600E6B2 RID: 59058 RVA: 0x00365B16 File Offset: 0x00363D16
+	// Token: 0x0600BAD0 RID: 47824 RVA: 0x00371776 File Offset: 0x0036F976
 	private void OnClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600E6B3 RID: 59059 RVA: 0x00365B1F File Offset: 0x00363D1F
+	// Token: 0x0600BAD1 RID: 47825 RVA: 0x0037177F File Offset: 0x0036F97F
 	private void OnRefreshChallengeUI(IReadOnlyList<ITrialSubChallenge> challenges)
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600E6B4 RID: 59060 RVA: 0x00365B27 File Offset: 0x00363D27
+	// Token: 0x0600BAD2 RID: 47826 RVA: 0x00371787 File Offset: 0x0036F987
 	private void OnChallengeConfirmed(int boardId, int levelId)
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600E6B5 RID: 59061 RVA: 0x00365B30 File Offset: 0x00363D30
+	// Token: 0x0600BAD3 RID: 47827 RVA: 0x00371790 File Offset: 0x0036F990
 	private void OnClickStartChallenge(int _)
 	{
 		ITrialChallenge challenge = GreatSwordChallengeModel.Instance.GetChallenge();
@@ -183,7 +183,7 @@ public class GreatSwordLevelSelectView : UiViewBase
 		GreatSwordController.Instance.RequestGreatSwordLevelSelected(instId, levelId);
 	}
 
-	// Token: 0x0600E6B6 RID: 59062 RVA: 0x00365BBC File Offset: 0x00363DBC
+	// Token: 0x0600BAD4 RID: 47828 RVA: 0x0037181C File Offset: 0x0036FA1C
 	private GreatSwordTrialLevelItem InitTrialLevelItem()
 	{
 		GreatSwordTrialLevelItem greatSwordTrialLevelItem = new GreatSwordTrialLevelItem();
@@ -193,13 +193,13 @@ public class GreatSwordLevelSelectView : UiViewBase
 		return greatSwordTrialLevelItem;
 	}
 
-	// Token: 0x0600E6B7 RID: 59063 RVA: 0x00365C00 File Offset: 0x00363E00
+	// Token: 0x0600BAD5 RID: 47829 RVA: 0x00371860 File Offset: 0x0036FA60
 	private GreatSwordGoalItem InitPnlListItem()
 	{
 		return new GreatSwordGoalItem();
 	}
 
-	// Token: 0x0600E6B8 RID: 59064 RVA: 0x00365C08 File Offset: 0x00363E08
+	// Token: 0x0600BAD6 RID: 47830 RVA: 0x00371868 File Offset: 0x0036FA68
 	private bool CanClickItem(int levelIndex)
 	{
 		List<TrialSubChallenge> list = GreatSwordChallengeModel.Instance.GetSubChallenges() ?? new List<TrialSubChallenge>();
@@ -212,7 +212,7 @@ public class GreatSwordLevelSelectView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x0600E6B9 RID: 59065 RVA: 0x00365C60 File Offset: 0x00363E60
+	// Token: 0x0600BAD7 RID: 47831 RVA: 0x003718C0 File Offset: 0x0036FAC0
 	private void OnClickTrialLevelItem(int levelIndex)
 	{
 		if (!this.CanClickItem(levelIndex))
@@ -230,7 +230,7 @@ public class GreatSwordLevelSelectView : UiViewBase
 		this.UiViewSequence.PlaySequence("Switch", false, null);
 	}
 
-	// Token: 0x04006AB9 RID: 27321
+	// Token: 0x04006B9A RID: 27546
 	[Nullable(new byte[]
 	{
 		2,
@@ -239,7 +239,7 @@ public class GreatSwordLevelSelectView : UiViewBase
 	})]
 	private GenericLayout<GreatSwordTrialLevelItem, TrialSubChallenge> TrialLevelLayout;
 
-	// Token: 0x04006ABA RID: 27322
+	// Token: 0x04006B9B RID: 27547
 	[Nullable(new byte[]
 	{
 		2,
@@ -248,10 +248,10 @@ public class GreatSwordLevelSelectView : UiViewBase
 	})]
 	private GenericLayout<GreatSwordGoalItem, TrialSubChallenge> ChallengeGoalLayout;
 
-	// Token: 0x04006ABB RID: 27323
+	// Token: 0x04006B9C RID: 27548
 	private List<GreatSwordTrialLevelItem> TrialLevelItems = new List<GreatSwordTrialLevelItem>();
 
-	// Token: 0x04006ABC RID: 27324
+	// Token: 0x04006B9D RID: 27549
 	[Nullable(2)]
 	private ButtonItem ConfirmButton;
 }

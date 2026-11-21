@@ -5,17 +5,17 @@ using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x02003186 RID: 12678
+// Token: 0x020026F3 RID: 9971
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 {
-	// Token: 0x0601B464 RID: 111716 RVA: 0x00770C62 File Offset: 0x0076EE62
+	// Token: 0x06018F69 RID: 102249 RVA: 0x007985C6 File Offset: 0x007967C6
 	public CodeSkill_Rebecca_BurstAttack(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B465 RID: 111717 RVA: 0x00770C84 File Offset: 0x0076EE84
+	// Token: 0x06018F6A RID: 102250 RVA: 0x007985E8 File Offset: 0x007967E8
 	public override void OnBegin(Skill skill)
 	{
 		this.ActiveSkill = skill;
@@ -46,7 +46,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		this.StartNormalFlow();
 	}
 
-	// Token: 0x0601B466 RID: 111718 RVA: 0x00770DA8 File Offset: 0x0076EFA8
+	// Token: 0x06018F6B RID: 102251 RVA: 0x0079870C File Offset: 0x0079690C
 	public override void OnTick(float delta, Skill skill)
 	{
 		if (this.TickMode == CodeSkill_Rebecca_BurstAttack.EBurstTickMode.None)
@@ -69,7 +69,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B467 RID: 111719 RVA: 0x00770E28 File Offset: 0x0076F028
+	// Token: 0x06018F6C RID: 102252 RVA: 0x0079878C File Offset: 0x0079698C
 	public override void OnEnd(Skill skill)
 	{
 		this.TickMode = CodeSkill_Rebecca_BurstAttack.EBurstTickMode.None;
@@ -99,7 +99,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		this.ActiveSkill = null;
 	}
 
-	// Token: 0x0601B468 RID: 111720 RVA: 0x00770F5C File Offset: 0x0076F15C
+	// Token: 0x06018F6D RID: 102253 RVA: 0x007988C0 File Offset: 0x00796AC0
 	private void StartNormalFlow()
 	{
 		this.TickMode = CodeSkill_Rebecca_BurstAttack.EBurstTickMode.Normal;
@@ -115,7 +115,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		}, 1000f, null, null, true, 1f));
 	}
 
-	// Token: 0x0601B469 RID: 111721 RVA: 0x00770FC0 File Offset: 0x0076F1C0
+	// Token: 0x06018F6E RID: 102254 RVA: 0x00798924 File Offset: 0x00796B24
 	private void StartMowingFlow()
 	{
 		this.TickMode = CodeSkill_Rebecca_BurstAttack.EBurstTickMode.Mowing;
@@ -129,7 +129,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		}, 1000f, null, null, true, 1f));
 	}
 
-	// Token: 0x0601B46A RID: 111722 RVA: 0x00770FF4 File Offset: 0x0076F1F4
+	// Token: 0x06018F6F RID: 102255 RVA: 0x00798958 File Offset: 0x00796B58
 	private void RegisterStage2Event(float delayToStage3Ms)
 	{
 		TTimerAction <>9__1;
@@ -158,7 +158,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		});
 	}
 
-	// Token: 0x0601B46B RID: 111723 RVA: 0x00771036 File Offset: 0x0076F236
+	// Token: 0x06018F70 RID: 102256 RVA: 0x0079899A File Offset: 0x00796B9A
 	private void RegisterStage3Event()
 	{
 		this.RegisterOnceGameplayEvent(GameplayTagDefine.EGameplayTagId["角色.R2T1RebeccaMd10011.技能ID.大招组.连射三阶"], delegate
@@ -175,7 +175,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		});
 	}
 
-	// Token: 0x0601B46C RID: 111724 RVA: 0x0077105C File Offset: 0x0076F25C
+	// Token: 0x06018F71 RID: 102257 RVA: 0x007989C0 File Offset: 0x00796BC0
 	private void RegisterHorizontalCameraListener()
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -195,7 +195,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		}, null) : null);
 	}
 
-	// Token: 0x0601B46D RID: 111725 RVA: 0x007710A8 File Offset: 0x0076F2A8
+	// Token: 0x06018F72 RID: 102258 RVA: 0x00798A0C File Offset: 0x00796C0C
 	private void RegisterBulletEventListeners()
 	{
 		BaseAbilityComponent component = base.Entity.GetComponent<BaseAbilityComponent>();
@@ -209,7 +209,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		this.EventListenersActive = true;
 	}
 
-	// Token: 0x0601B46E RID: 111726 RVA: 0x00771130 File Offset: 0x0076F330
+	// Token: 0x06018F73 RID: 102259 RVA: 0x00798A94 File Offset: 0x00796C94
 	private void RemoveBulletEventListeners()
 	{
 		if (!this.EventListenersActive)
@@ -233,7 +233,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		component.RemoveGameplayEventListener(GameplayTagDefine.EGameplayTagId["角色.R2T1RebeccaMd10011.大招GA指令.创建子弹3"], new TGameplayEventCallback(this.OnCreateBullet3Event));
 	}
 
-	// Token: 0x0601B46F RID: 111727 RVA: 0x007711CC File Offset: 0x0076F3CC
+	// Token: 0x06018F74 RID: 102260 RVA: 0x00798B30 File Offset: 0x00796D30
 	private void RegisterOnceGameplayEvent(int tagId, Action callback)
 	{
 		BaseAbilityComponent component = base.Entity.GetComponent<BaseAbilityComponent>();
@@ -257,7 +257,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B470 RID: 111728 RVA: 0x00771240 File Offset: 0x0076F440
+	// Token: 0x06018F75 RID: 102261 RVA: 0x00798BA4 File Offset: 0x00796DA4
 	private void RemoveOnceGameplayEventListeners()
 	{
 		foreach (IGameplayEventTask gameplayEventTask in this.OnceEventTasks)
@@ -267,25 +267,25 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		this.OnceEventTasks.Clear();
 	}
 
-	// Token: 0x0601B471 RID: 111729 RVA: 0x0077129C File Offset: 0x0076F49C
+	// Token: 0x06018F76 RID: 102262 RVA: 0x00798C00 File Offset: 0x00796E00
 	private void OnCreateBullet1Event(int tagId, FGameplayEventData payload)
 	{
 		this.SpawnTargetedBullet(this.HasResonance3() ? "1308201003" : "1308201002");
 	}
 
-	// Token: 0x0601B472 RID: 111730 RVA: 0x007712B8 File Offset: 0x0076F4B8
+	// Token: 0x06018F77 RID: 102263 RVA: 0x00798C1C File Offset: 0x00796E1C
 	private void OnCreateBullet2Event(int tagId, FGameplayEventData payload)
 	{
 		this.SpawnTargetedBullet(this.HasResonance3() ? "1308202003" : "1308202002");
 	}
 
-	// Token: 0x0601B473 RID: 111731 RVA: 0x007712D4 File Offset: 0x0076F4D4
+	// Token: 0x06018F78 RID: 102264 RVA: 0x00798C38 File Offset: 0x00796E38
 	private void OnCreateBullet3Event(int tagId, FGameplayEventData payload)
 	{
 		this.SpawnTargetedBullet(this.HasResonance3() ? "1308203003" : "1308203002");
 	}
 
-	// Token: 0x0601B474 RID: 111732 RVA: 0x007712F0 File Offset: 0x0076F4F0
+	// Token: 0x06018F79 RID: 102265 RVA: 0x00798C54 File Offset: 0x00796E54
 	private void OnFinishEvent()
 	{
 		Skill activeSkill = this.ActiveSkill;
@@ -295,7 +295,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B475 RID: 111733 RVA: 0x00771310 File Offset: 0x0076F510
+	// Token: 0x06018F7A RID: 102266 RVA: 0x00798C74 File Offset: 0x00796E74
 	private void TryBeginFinishSkill(Skill skill)
 	{
 		if (this.BurstFinishTriggered)
@@ -328,7 +328,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B476 RID: 111734 RVA: 0x007713B4 File Offset: 0x0076F5B4
+	// Token: 0x06018F7B RID: 102267 RVA: 0x00798D18 File Offset: 0x00796F18
 	private void SpawnTargetedBullet(string bulletId)
 	{
 		Skill activeSkill = this.ActiveSkill;
@@ -350,7 +350,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B477 RID: 111735 RVA: 0x00771444 File Offset: 0x0076F644
+	// Token: 0x06018F7C RID: 102268 RVA: 0x00798DA8 File Offset: 0x00796FA8
 	private void FaceToFightCameraYaw()
 	{
 		CharacterActorComponent component = base.Entity.GetComponent<CharacterActorComponent>();
@@ -363,7 +363,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		component.SetActorRotation(new FRotator(0f, fightCameraRotation.Yaw, frotator.Roll), "CodeSkill_Rebecca_BurstAttack.FaceToFightCameraYaw", false);
 	}
 
-	// Token: 0x0601B478 RID: 111736 RVA: 0x0077149F File Offset: 0x0076F69F
+	// Token: 0x06018F7D RID: 102269 RVA: 0x00798E03 File Offset: 0x00797003
 	private void EnterAiming()
 	{
 		CharacterUnifiedStateComponent component = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
@@ -374,7 +374,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		component.EnterAimStatus(EAimViewState.Rebecca瞄准);
 	}
 
-	// Token: 0x0601B479 RID: 111737 RVA: 0x007714B7 File Offset: 0x0076F6B7
+	// Token: 0x06018F7E RID: 102270 RVA: 0x00798E1B File Offset: 0x0079701B
 	private void ExitAiming()
 	{
 		CharacterUnifiedStateComponent component = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
@@ -385,20 +385,20 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		component.ExitAimStatus();
 	}
 
-	// Token: 0x0601B47A RID: 111738 RVA: 0x007714CE File Offset: 0x0076F6CE
+	// Token: 0x06018F7F RID: 102271 RVA: 0x00798E32 File Offset: 0x00797032
 	private bool HasResonance3()
 	{
 		return this.HasTag(GameplayTagDefine.EGameplayTagId["角色.R2T1RebeccaMd10011.共鸣链.共鸣3"]);
 	}
 
-	// Token: 0x0601B47B RID: 111739 RVA: 0x007714E5 File Offset: 0x0076F6E5
+	// Token: 0x06018F80 RID: 102272 RVA: 0x00798E49 File Offset: 0x00797049
 	private bool HasTag(int tagId)
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
 		return component != null && component.HasTag(tagId);
 	}
 
-	// Token: 0x0601B47C RID: 111740 RVA: 0x007714FE File Offset: 0x0076F6FE
+	// Token: 0x06018F81 RID: 102273 RVA: 0x00798E62 File Offset: 0x00797062
 	private void AddTag(int tagId)
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -409,7 +409,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		component.AddTag(new int?(tagId));
 	}
 
-	// Token: 0x0601B47D RID: 111741 RVA: 0x0077151B File Offset: 0x0076F71B
+	// Token: 0x06018F82 RID: 102274 RVA: 0x00798E7F File Offset: 0x0079707F
 	private void RemoveTag(int tagId)
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -420,7 +420,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		component.RemoveTag(new int?(tagId));
 	}
 
-	// Token: 0x0601B47E RID: 111742 RVA: 0x0077153C File Offset: 0x0076F73C
+	// Token: 0x06018F83 RID: 102275 RVA: 0x00798EA0 File Offset: 0x007970A0
 	private void AddBuff(long buffId, Skill skill)
 	{
 		CharacterBuffComponent component = base.Entity.GetComponent<CharacterBuffComponent>();
@@ -451,7 +451,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B47F RID: 111743 RVA: 0x00771634 File Offset: 0x0076F834
+	// Token: 0x06018F84 RID: 102276 RVA: 0x00798F98 File Offset: 0x00797198
 	private void RemoveBuff(long buffId, Skill skill)
 	{
 		BaseBuffComponent component = base.Entity.GetComponent<BaseBuffComponent>();
@@ -462,7 +462,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		component.RemoveBuff(buffId, -1, "CodeSkill_Rebecca_BurstAttack.RemoveBuff", skill.CombatMessageId, null, null);
 	}
 
-	// Token: 0x0601B480 RID: 111744 RVA: 0x00771675 File Offset: 0x0076F875
+	// Token: 0x06018F85 RID: 102277 RVA: 0x00798FD9 File Offset: 0x007971D9
 	[NullableContext(2)]
 	private void AddTimer(TimerHandle timer)
 	{
@@ -473,7 +473,7 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		this.Timers.Add(timer);
 	}
 
-	// Token: 0x0601B481 RID: 111745 RVA: 0x00771688 File Offset: 0x0076F888
+	// Token: 0x06018F86 RID: 102278 RVA: 0x00798FEC File Offset: 0x007971EC
 	private void ClearTimers()
 	{
 		foreach (TimerHandle handle in this.Timers)
@@ -483,92 +483,92 @@ public class CodeSkill_Rebecca_BurstAttack : CodeSkillBase
 		this.Timers.Clear();
 	}
 
-	// Token: 0x0400D4F3 RID: 54515
+	// Token: 0x0400D956 RID: 55638
 	private const int BURST_FINISH_SKILL_ID = 1308302;
 
-	// Token: 0x0400D4F4 RID: 54516
+	// Token: 0x0400D957 RID: 55639
 	private const float DURATION = 9.5f;
 
-	// Token: 0x0400D4F5 RID: 54517
+	// Token: 0x0400D958 RID: 55640
 	private const int INTERRUPT_PRIORITY = 9;
 
-	// Token: 0x0400D4F6 RID: 54518
+	// Token: 0x0400D959 RID: 55641
 	private const int ENERGY_FINISH_THRESHOLD = 9000;
 
-	// Token: 0x0400D4F7 RID: 54519
+	// Token: 0x0400D95A RID: 55642
 	private const long BUFF_STAGE_1 = 1308504001L;
 
-	// Token: 0x0400D4F8 RID: 54520
+	// Token: 0x0400D95B RID: 55643
 	private const long BUFF_STAGE_2 = 1308504002L;
 
-	// Token: 0x0400D4F9 RID: 54521
+	// Token: 0x0400D95C RID: 55644
 	private const long BUFF_STAGE_3 = 1308504003L;
 
-	// Token: 0x0400D4FA RID: 54522
+	// Token: 0x0400D95D RID: 55645
 	private const long BUFF_BURST_END = 1308301006L;
 
-	// Token: 0x0400D4FB RID: 54523
+	// Token: 0x0400D95E RID: 55646
 	private const string BULLET_EVENT_1_NORMAL = "1308201002";
 
-	// Token: 0x0400D4FC RID: 54524
+	// Token: 0x0400D95F RID: 55647
 	private const string BULLET_EVENT_1_RESONANCE_3 = "1308201003";
 
-	// Token: 0x0400D4FD RID: 54525
+	// Token: 0x0400D960 RID: 55648
 	private const string BULLET_EVENT_2_NORMAL = "1308202002";
 
-	// Token: 0x0400D4FE RID: 54526
+	// Token: 0x0400D961 RID: 55649
 	private const string BULLET_EVENT_2_RESONANCE_3 = "1308202003";
 
-	// Token: 0x0400D4FF RID: 54527
+	// Token: 0x0400D962 RID: 55650
 	private const string BULLET_EVENT_3_NORMAL = "1308203002";
 
-	// Token: 0x0400D500 RID: 54528
+	// Token: 0x0400D963 RID: 55651
 	private const string BULLET_EVENT_3_RESONANCE_3 = "1308203003";
 
-	// Token: 0x0400D501 RID: 54529
+	// Token: 0x0400D964 RID: 55652
 	private const float DELAY_STAGE_2_MS = 1000f;
 
-	// Token: 0x0400D502 RID: 54530
+	// Token: 0x0400D965 RID: 55653
 	private const float DELAY_STAGE_3_MS = 1000f;
 
-	// Token: 0x0400D503 RID: 54531
+	// Token: 0x0400D966 RID: 55654
 	private const float DELAY_NORMAL_FINISH_MS = 8500f;
 
-	// Token: 0x0400D504 RID: 54532
+	// Token: 0x0400D967 RID: 55655
 	private const float DELAY_MOWING_FINISH_MS = 29000f;
 
-	// Token: 0x0400D505 RID: 54533
+	// Token: 0x0400D968 RID: 55656
 	[Nullable(2)]
 	private Skill ActiveSkill;
 
-	// Token: 0x0400D506 RID: 54534
+	// Token: 0x0400D969 RID: 55657
 	private CodeSkill_Rebecca_BurstAttack.EBurstTickMode TickMode;
 
-	// Token: 0x0400D507 RID: 54535
+	// Token: 0x0400D96A RID: 55658
 	private bool BurstFinishTriggered;
 
-	// Token: 0x0400D508 RID: 54536
+	// Token: 0x0400D96B RID: 55659
 	private bool EventListenersActive;
 
-	// Token: 0x0400D509 RID: 54537
+	// Token: 0x0400D96C RID: 55660
 	private readonly List<IGameplayEventTask> OnceEventTasks = new List<IGameplayEventTask>();
 
-	// Token: 0x0400D50A RID: 54538
+	// Token: 0x0400D96D RID: 55661
 	[Nullable(2)]
 	private ITagTask HorizontalCameraTask;
 
-	// Token: 0x0400D50B RID: 54539
+	// Token: 0x0400D96E RID: 55662
 	private readonly List<TimerHandle> Timers = new List<TimerHandle>();
 
-	// Token: 0x020096DB RID: 38619
+	// Token: 0x02008901 RID: 35073
 	[NullableContext(0)]
 	private enum EBurstTickMode
 	{
-		// Token: 0x0403054E RID: 197966
+		// Token: 0x0402BBE3 RID: 179171
 		None,
-		// Token: 0x0403054F RID: 197967
+		// Token: 0x0402BBE4 RID: 179172
 		Normal,
-		// Token: 0x04030550 RID: 197968
+		// Token: 0x0402BBE5 RID: 179173
 		Mowing
 	}
 }

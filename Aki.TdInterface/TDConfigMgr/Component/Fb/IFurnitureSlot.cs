@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DCD RID: 3533
+	// Token: 0x02000EC9 RID: 3785
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFurnitureSlot
 	{
-		// Token: 0x06005029 RID: 20521 RVA: 0x000C61D5 File Offset: 0x000C43D5
-		[NullableContext(1)]
+		// Token: 0x0600554E RID: 21838 RVA: 0x000D1A25 File Offset: 0x000CFC25
+		[NullableContext(0)]
 		public static IFurnitureSlot Create(IFurnitureSlot? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A4C RID: 6732
-		// (get) Token: 0x0600502A RID: 20522 RVA: 0x000C61F4 File Offset: 0x000C43F4
+		// Token: 0x17001BB7 RID: 7095
+		// (get) Token: 0x0600554F RID: 21839 RVA: 0x000D1A44 File Offset: 0x000CFC44
 		public virtual IFurnitureCamera SlotCamera
 		{
 			get
@@ -40,12 +40,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A4D RID: 6733
-		// (get) Token: 0x0600502B RID: 20523 RVA: 0x000C6228 File Offset: 0x000C4428
-		[Nullable(1)]
+		// Token: 0x17001BB8 RID: 7096
+		// (get) Token: 0x06005550 RID: 21840 RVA: 0x000D1A78 File Offset: 0x000CFC78
+		[Nullable(0)]
 		public virtual ISlotShape SlotShape
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._SlotShapeInited)
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A4E RID: 6734
-		// (get) Token: 0x0600502C RID: 20524 RVA: 0x000C625C File Offset: 0x000C445C
+		// Token: 0x17001BB9 RID: 7097
+		// (get) Token: 0x06005551 RID: 21841 RVA: 0x000D1AAC File Offset: 0x000CFCAC
 		public virtual int FurnitureTag
 		{
 			get
@@ -68,8 +68,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A4F RID: 6735
-		// (get) Token: 0x0600502D RID: 20525 RVA: 0x000C626C File Offset: 0x000C446C
+		// Token: 0x17001BBA RID: 7098
+		// (get) Token: 0x06005552 RID: 21842 RVA: 0x000D1ABC File Offset: 0x000CFCBC
 		public virtual List<int> ExcludedFurnitureIds
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A50 RID: 6736
-		// (get) Token: 0x0600502E RID: 20526 RVA: 0x000C62E4 File Offset: 0x000C44E4
+		// Token: 0x17001BBB RID: 7099
+		// (get) Token: 0x06005553 RID: 21843 RVA: 0x000D1B34 File Offset: 0x000CFD34
 		public virtual int? EdPreviewFurnitureId
 		{
 			get
@@ -103,25 +103,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DFC RID: 11772
+		// Token: 0x040030C2 RID: 12482
 		private IFurnitureSlot Instance;
 
-		// Token: 0x04002DFD RID: 11773
+		// Token: 0x040030C3 RID: 12483
 		private IFurnitureCamera _SlotCameraCache;
 
-		// Token: 0x04002DFE RID: 11774
+		// Token: 0x040030C4 RID: 12484
 		private bool _SlotCameraInited;
 
-		// Token: 0x04002DFF RID: 11775
+		// Token: 0x040030C5 RID: 12485
 		private ISlotShape _SlotShapeCache;
 
-		// Token: 0x04002E00 RID: 11776
+		// Token: 0x040030C6 RID: 12486
 		private bool _SlotShapeInited;
 
-		// Token: 0x04002E01 RID: 11777
+		// Token: 0x040030C7 RID: 12487
 		private List<int> _ExcludedFurnitureIdsCache;
 
-		// Token: 0x04002E02 RID: 11778
+		// Token: 0x040030C8 RID: 12488
 		private bool _ExcludedFurnitureIdsInited;
 	}
 }

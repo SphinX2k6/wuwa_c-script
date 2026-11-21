@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020032A7 RID: 12967
+// Token: 0x02002818 RID: 10264
 public enum EItemMovementState
 {
-	// Token: 0x0400DDCF RID: 56783
+	// Token: 0x0400E276 RID: 57974
 	Born,
-	// Token: 0x0400DDD0 RID: 56784
+	// Token: 0x0400E277 RID: 57975
 	Fall,
-	// Token: 0x0400DDD1 RID: 56785
+	// Token: 0x0400E278 RID: 57976
 	Stay
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D99 RID: 3481
+	// Token: 0x02000E95 RID: 3733
 	public class RollBlockComponent : IComponentBase
 	{
-		// Token: 0x06004F2A RID: 20266 RVA: 0x000C44D6 File Offset: 0x000C26D6
-		[NullableContext(1)]
+		// Token: 0x0600544F RID: 21583 RVA: 0x000CFD26 File Offset: 0x000CDF26
 		public static RollBlockComponent Create(IRollBlockComponent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019B5 RID: 6581
-		// (get) Token: 0x06004F2B RID: 20267 RVA: 0x000C44F8 File Offset: 0x000C26F8
+		// Token: 0x17001B20 RID: 6944
+		// (get) Token: 0x06005450 RID: 21584 RVA: 0x000CFD48 File Offset: 0x000CDF48
 		public override bool? Disabled
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019B6 RID: 6582
-		// (get) Token: 0x06004F2C RID: 20268 RVA: 0x000C4530 File Offset: 0x000C2730
+		// Token: 0x17001B21 RID: 6945
+		// (get) Token: 0x06005451 RID: 21585 RVA: 0x000CFD80 File Offset: 0x000CDF80
 		public override bool? EdIsLocked
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D7A RID: 11642
+		// Token: 0x04003040 RID: 12352
 		private IRollBlockComponent Instance;
 	}
 }

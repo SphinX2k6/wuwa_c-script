@@ -2,54 +2,54 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043F4 RID: 17396
+	// Token: 0x02004859 RID: 18521
 	public enum ESceneInteractionState : byte
 	{
-		// Token: 0x0400C31D RID: 49949
+		// Token: 0x0400CD45 RID: 52549
 		State1,
-		// Token: 0x0400C31E RID: 49950
+		// Token: 0x0400CD46 RID: 52550
 		State2,
-		// Token: 0x0400C31F RID: 49951
+		// Token: 0x0400CD47 RID: 52551
 		State3,
-		// Token: 0x0400C320 RID: 49952
+		// Token: 0x0400CD48 RID: 52552
 		State4,
-		// Token: 0x0400C321 RID: 49953
+		// Token: 0x0400CD49 RID: 52553
 		State5,
-		// Token: 0x0400C322 RID: 49954
+		// Token: 0x0400CD4A RID: 52554
 		State6,
-		// Token: 0x0400C323 RID: 49955
+		// Token: 0x0400CD4B RID: 52555
 		State7,
-		// Token: 0x0400C324 RID: 49956
+		// Token: 0x0400CD4C RID: 52556
 		State8,
-		// Token: 0x0400C325 RID: 49957
+		// Token: 0x0400CD4D RID: 52557
 		State9,
-		// Token: 0x0400C326 RID: 49958
+		// Token: 0x0400CD4E RID: 52558
 		State10,
-		// Token: 0x0400C327 RID: 49959
+		// Token: 0x0400CD4F RID: 52559
 		State11,
-		// Token: 0x0400C328 RID: 49960
+		// Token: 0x0400CD50 RID: 52560
 		State12,
-		// Token: 0x0400C329 RID: 49961
+		// Token: 0x0400CD51 RID: 52561
 		State13,
-		// Token: 0x0400C32A RID: 49962
+		// Token: 0x0400CD52 RID: 52562
 		State14,
-		// Token: 0x0400C32B RID: 49963
+		// Token: 0x0400CD53 RID: 52563
 		State15,
-		// Token: 0x0400C32C RID: 49964
+		// Token: 0x0400CD54 RID: 52564
 		State16,
-		// Token: 0x0400C32D RID: 49965
+		// Token: 0x0400CD55 RID: 52565
 		State17,
-		// Token: 0x0400C32E RID: 49966
+		// Token: 0x0400CD56 RID: 52566
 		State18,
-		// Token: 0x0400C32F RID: 49967
+		// Token: 0x0400CD57 RID: 52567
 		State19,
-		// Token: 0x0400C330 RID: 49968
+		// Token: 0x0400CD58 RID: 52568
 		State20,
-		// Token: 0x0400C331 RID: 49969
+		// Token: 0x0400CD59 RID: 52569
 		ConcealedState,
-		// Token: 0x0400C332 RID: 49970
+		// Token: 0x0400CD5A RID: 52570
 		Error,
-		// Token: 0x0400C333 RID: 49971
+		// Token: 0x0400CD5B RID: 52571
 		KuroSceneInteractionStateMAX
 	}
 }

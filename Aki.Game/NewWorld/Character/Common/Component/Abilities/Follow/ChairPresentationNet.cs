@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Aki.Protocol;
@@ -10,30 +9,30 @@ using Google.Protobuf;
 
 namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x020044BC RID: 17596
+	// Token: 0x02002F8E RID: 12174
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChairPresentationNet : IStaticVariableResetter
 	{
-		// Token: 0x0602D5B1 RID: 185777 RVA: 0x00A3B242 File Offset: 0x00A39442
+		// Token: 0x0601CDD7 RID: 118231 RVA: 0x008D199A File Offset: 0x008CFB9A
 		static ChairPresentationNet()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ChairPresentationNet.CreateStaticDefaultValue), new Action(ChairPresentationNet.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602D5B2 RID: 185778 RVA: 0x00A3B261 File Offset: 0x00A39461
+		// Token: 0x0601CDD8 RID: 118232 RVA: 0x008D19B9 File Offset: 0x008CFBB9
 		public static void CreateStaticDefaultValue()
 		{
 			ChairPresentationNet.PresentationSnapshots = new Dictionary<ValueTuple<int, long>, ChairPresentationNet.ChairPresentationSnapshot>();
 		}
 
-		// Token: 0x0602D5B3 RID: 185779 RVA: 0x00A3B26D File Offset: 0x00A3946D
+		// Token: 0x0601CDD9 RID: 118233 RVA: 0x008D19C5 File Offset: 0x008CFBC5
 		public static void ResetStaticDefaultValue()
 		{
 			ChairPresentationNet.PresentationSnapshots = null;
 		}
 
-		// Token: 0x0602D5B4 RID: 185780 RVA: 0x00A3B278 File Offset: 0x00A39478
+		// Token: 0x0601CDDA RID: 118234 RVA: 0x008D19D0 File Offset: 0x008CFBD0
 		public static void SendChairPresentationPush(long chairCreatureDataId, bool isShow, global::Vector location = null, global::Rotator rotation = null)
 		{
 			FollowerChairPresentationPush followerChairPresentationPush = FollowerChairPresentationPush.Create();
@@ -55,7 +54,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			Net.Instance.Send(EPushMessageId.FollowerChairPresentationPush, followerChairPresentationPush);
 		}
 
-		// Token: 0x0602D5B5 RID: 185781 RVA: 0x00A3B318 File Offset: 0x00A39518
+		// Token: 0x0601CDDB RID: 118235 RVA: 0x008D1A70 File Offset: 0x008CFC70
 		public static void Register()
 		{
 			Net instance = Net.Instance;
@@ -76,7 +75,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			instance2.Add<int>(name, handle);
 		}
 
-		// Token: 0x0602D5B6 RID: 185782 RVA: 0x00A3B37C File Offset: 0x00A3957C
+		// Token: 0x0601CDDC RID: 118236 RVA: 0x008D1AD4 File Offset: 0x008CFCD4
 		public static void UnRegister()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.FollowerChairPresentationChangeNotify);
@@ -96,7 +95,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			ChairPresentationNet.PresentationSnapshots = null;
 		}
 
-		// Token: 0x0602D5B7 RID: 185783 RVA: 0x00A3B3DA File Offset: 0x00A395DA
+		// Token: 0x0601CDDD RID: 118237 RVA: 0x008D1B32 File Offset: 0x008CFD32
 		public static void RemoveSnapshot(int playerId, long chairCreatureDataId)
 		{
 			if (playerId <= 0 || chairCreatureDataId <= 0L)
@@ -111,14 +110,16 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			presentationSnapshots.Remove(new ValueTuple<int, long>(playerId, chairCreatureDataId));
 		}
 
-		// Token: 0x0602D5B8 RID: 185784 RVA: 0x00A3B400 File Offset: 0x00A39600
+		// Token: 0x0601CDDE RID: 118238 RVA: 0x008D1B58 File Offset: 0x008CFD58
 		private static void RemovePlayerSnapshots(int playerId)
 		{
 			if (playerId <= 0 || ChairPresentationNet.PresentationSnapshots == null)
 			{
 				return;
 			}
-			foreach (ValueTuple<int, long> valueTuple in ChairPresentationNet.PresentationSnapshots.Keys.ToArray<ValueTuple<int, long>>())
+			ValueTuple<int, long>[] array = new ValueTuple<int, long>[ChairPresentationNet.PresentationSnapshots.Count];
+			ChairPresentationNet.PresentationSnapshots.Keys.CopyTo(array, 0);
+			foreach (ValueTuple<int, long> valueTuple in array)
 			{
 				if (valueTuple.Item1 == playerId)
 				{
@@ -127,7 +128,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x0602D5B9 RID: 185785 RVA: 0x00A3B454 File Offset: 0x00A39654
+		// Token: 0x0601CDDF RID: 118239 RVA: 0x008D1BC0 File Offset: 0x008CFDC0
 		[NullableContext(1)]
 		public static bool ApplyCachedPresentation(int playerId, long chairCreatureDataId, IPlayerFollowerChairHandler chairHandler)
 		{
@@ -144,7 +145,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x0602D5BA RID: 185786 RVA: 0x00A3B4A4 File Offset: 0x00A396A4
+		// Token: 0x0601CDE0 RID: 118240 RVA: 0x008D1C10 File Offset: 0x008CFE10
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public static ChairPresentationNet.ChairPresentationSnapshot FindNearbyShownChair(long chairCreatureDataId, global::Vector location, double minDistanceSquared)
@@ -167,7 +168,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return null;
 		}
 
-		// Token: 0x0602D5BB RID: 185787 RVA: 0x00A3B560 File Offset: 0x00A39760
+		// Token: 0x0601CDE1 RID: 118241 RVA: 0x008D1CCC File Offset: 0x008CFECC
 		private unsafe static void OnChairPresentationChangeNotify(IMessage message, Net.CallbackStatus _)
 		{
 			FollowerChairPresentationChangeNotify followerChairPresentationChangeNotify = message as FollowerChairPresentationChangeNotify;
@@ -206,7 +207,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			playerFollowHandler.OnRemoteChairPresentationNotify(entityId, followerChairPresentationChangeNotify.IsShow, followerChairPresentationChangeNotify.Location, followerChairPresentationChangeNotify.Rotation);
 		}
 
-		// Token: 0x040183EB RID: 99307
+		// Token: 0x0400F375 RID: 62325
 		[TupleElementNames(new string[]
 		{
 			"PlayerId",
@@ -220,11 +221,11 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 		})]
 		private static Dictionary<ValueTuple<int, long>, ChairPresentationNet.ChairPresentationSnapshot> PresentationSnapshots;
 
-		// Token: 0x0200A708 RID: 42760
+		// Token: 0x02008C29 RID: 35881
 		[Nullable(0)]
 		public sealed class ChairPresentationSnapshot : IEquatable<ChairPresentationNet.ChairPresentationSnapshot>
 		{
-			// Token: 0x0604C7BD RID: 313277 RVA: 0x014308E3 File Offset: 0x0142EAE3
+			// Token: 0x06042C7A RID: 273530 RVA: 0x013DD7AF File Offset: 0x013DB9AF
 			public ChairPresentationSnapshot(int PlayerId, long ChairCreatureDataId, bool IsShow, Aki.Protocol.Vector Location, Aki.Protocol.Rotator Rotation)
 			{
 				this.PlayerId = PlayerId;
@@ -235,8 +236,8 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				base..ctor();
 			}
 
-			// Token: 0x1700A140 RID: 41280
-			// (get) Token: 0x0604C7BE RID: 313278 RVA: 0x01430910 File Offset: 0x0142EB10
+			// Token: 0x170078CF RID: 30927
+			// (get) Token: 0x06042C7B RID: 273531 RVA: 0x013DD7DC File Offset: 0x013DB9DC
 			[Nullable(1)]
 			[CompilerGenerated]
 			private Type EqualityContract
@@ -249,32 +250,32 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				}
 			}
 
-			// Token: 0x1700A141 RID: 41281
-			// (get) Token: 0x0604C7BF RID: 313279 RVA: 0x0143091C File Offset: 0x0142EB1C
-			// (set) Token: 0x0604C7C0 RID: 313280 RVA: 0x01430924 File Offset: 0x0142EB24
+			// Token: 0x170078D0 RID: 30928
+			// (get) Token: 0x06042C7C RID: 273532 RVA: 0x013DD7E8 File Offset: 0x013DB9E8
+			// (set) Token: 0x06042C7D RID: 273533 RVA: 0x013DD7F0 File Offset: 0x013DB9F0
 			public int PlayerId { get; set; }
 
-			// Token: 0x1700A142 RID: 41282
-			// (get) Token: 0x0604C7C1 RID: 313281 RVA: 0x0143092D File Offset: 0x0142EB2D
-			// (set) Token: 0x0604C7C2 RID: 313282 RVA: 0x01430935 File Offset: 0x0142EB35
+			// Token: 0x170078D1 RID: 30929
+			// (get) Token: 0x06042C7E RID: 273534 RVA: 0x013DD7F9 File Offset: 0x013DB9F9
+			// (set) Token: 0x06042C7F RID: 273535 RVA: 0x013DD801 File Offset: 0x013DBA01
 			public long ChairCreatureDataId { get; set; }
 
-			// Token: 0x1700A143 RID: 41283
-			// (get) Token: 0x0604C7C3 RID: 313283 RVA: 0x0143093E File Offset: 0x0142EB3E
-			// (set) Token: 0x0604C7C4 RID: 313284 RVA: 0x01430946 File Offset: 0x0142EB46
+			// Token: 0x170078D2 RID: 30930
+			// (get) Token: 0x06042C80 RID: 273536 RVA: 0x013DD80A File Offset: 0x013DBA0A
+			// (set) Token: 0x06042C81 RID: 273537 RVA: 0x013DD812 File Offset: 0x013DBA12
 			public bool IsShow { get; set; }
 
-			// Token: 0x1700A144 RID: 41284
-			// (get) Token: 0x0604C7C5 RID: 313285 RVA: 0x0143094F File Offset: 0x0142EB4F
-			// (set) Token: 0x0604C7C6 RID: 313286 RVA: 0x01430957 File Offset: 0x0142EB57
+			// Token: 0x170078D3 RID: 30931
+			// (get) Token: 0x06042C82 RID: 273538 RVA: 0x013DD81B File Offset: 0x013DBA1B
+			// (set) Token: 0x06042C83 RID: 273539 RVA: 0x013DD823 File Offset: 0x013DBA23
 			public Aki.Protocol.Vector Location { get; set; }
 
-			// Token: 0x1700A145 RID: 41285
-			// (get) Token: 0x0604C7C7 RID: 313287 RVA: 0x01430960 File Offset: 0x0142EB60
-			// (set) Token: 0x0604C7C8 RID: 313288 RVA: 0x01430968 File Offset: 0x0142EB68
+			// Token: 0x170078D4 RID: 30932
+			// (get) Token: 0x06042C84 RID: 273540 RVA: 0x013DD82C File Offset: 0x013DBA2C
+			// (set) Token: 0x06042C85 RID: 273541 RVA: 0x013DD834 File Offset: 0x013DBA34
 			public Aki.Protocol.Rotator Rotation { get; set; }
 
-			// Token: 0x0604C7C9 RID: 313289 RVA: 0x01430974 File Offset: 0x0142EB74
+			// Token: 0x06042C86 RID: 273542 RVA: 0x013DD840 File Offset: 0x013DBA40
 			[NullableContext(1)]
 			[CompilerGenerated]
 			public override string ToString()
@@ -290,7 +291,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				return stringBuilder.ToString();
 			}
 
-			// Token: 0x0604C7CA RID: 313290 RVA: 0x014309C0 File Offset: 0x0142EBC0
+			// Token: 0x06042C87 RID: 273543 RVA: 0x013DD88C File Offset: 0x013DBA8C
 			[NullableContext(1)]
 			[CompilerGenerated]
 			private bool PrintMembers(StringBuilder builder)
@@ -309,42 +310,42 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				return true;
 			}
 
-			// Token: 0x0604C7CB RID: 313291 RVA: 0x01430A7A File Offset: 0x0142EC7A
+			// Token: 0x06042C88 RID: 273544 RVA: 0x013DD946 File Offset: 0x013DBB46
 			[CompilerGenerated]
 			public static bool operator !=(ChairPresentationNet.ChairPresentationSnapshot left, ChairPresentationNet.ChairPresentationSnapshot right)
 			{
 				return !(left == right);
 			}
 
-			// Token: 0x0604C7CC RID: 313292 RVA: 0x01430A86 File Offset: 0x0142EC86
+			// Token: 0x06042C89 RID: 273545 RVA: 0x013DD952 File Offset: 0x013DBB52
 			[CompilerGenerated]
 			public static bool operator ==(ChairPresentationNet.ChairPresentationSnapshot left, ChairPresentationNet.ChairPresentationSnapshot right)
 			{
 				return left == right || (left != null && left.Equals(right));
 			}
 
-			// Token: 0x0604C7CD RID: 313293 RVA: 0x01430A9C File Offset: 0x0142EC9C
+			// Token: 0x06042C8A RID: 273546 RVA: 0x013DD968 File Offset: 0x013DBB68
 			[CompilerGenerated]
 			public override int GetHashCode()
 			{
 				return ((((EqualityComparer<Type>.Default.GetHashCode(this.EqualityContract) * -1521134295 + EqualityComparer<int>.Default.GetHashCode(this.<PlayerId>k__BackingField)) * -1521134295 + EqualityComparer<long>.Default.GetHashCode(this.<ChairCreatureDataId>k__BackingField)) * -1521134295 + EqualityComparer<bool>.Default.GetHashCode(this.<IsShow>k__BackingField)) * -1521134295 + EqualityComparer<Aki.Protocol.Vector>.Default.GetHashCode(this.<Location>k__BackingField)) * -1521134295 + EqualityComparer<Aki.Protocol.Rotator>.Default.GetHashCode(this.<Rotation>k__BackingField);
 			}
 
-			// Token: 0x0604C7CE RID: 313294 RVA: 0x01430B2C File Offset: 0x0142ED2C
+			// Token: 0x06042C8B RID: 273547 RVA: 0x013DD9F8 File Offset: 0x013DBBF8
 			[CompilerGenerated]
 			public override bool Equals(object obj)
 			{
 				return this.Equals(obj as ChairPresentationNet.ChairPresentationSnapshot);
 			}
 
-			// Token: 0x0604C7CF RID: 313295 RVA: 0x01430B3C File Offset: 0x0142ED3C
+			// Token: 0x06042C8C RID: 273548 RVA: 0x013DDA08 File Offset: 0x013DBC08
 			[CompilerGenerated]
 			public bool Equals(ChairPresentationNet.ChairPresentationSnapshot other)
 			{
 				return this == other || (other != null && this.EqualityContract == other.EqualityContract && EqualityComparer<int>.Default.Equals(this.<PlayerId>k__BackingField, other.<PlayerId>k__BackingField) && EqualityComparer<long>.Default.Equals(this.<ChairCreatureDataId>k__BackingField, other.<ChairCreatureDataId>k__BackingField) && EqualityComparer<bool>.Default.Equals(this.<IsShow>k__BackingField, other.<IsShow>k__BackingField) && EqualityComparer<Aki.Protocol.Vector>.Default.Equals(this.<Location>k__BackingField, other.<Location>k__BackingField) && EqualityComparer<Aki.Protocol.Rotator>.Default.Equals(this.<Rotation>k__BackingField, other.<Rotation>k__BackingField));
 			}
 
-			// Token: 0x0604C7D1 RID: 313297 RVA: 0x01430BEC File Offset: 0x0142EDEC
+			// Token: 0x06042C8E RID: 273550 RVA: 0x013DDAB8 File Offset: 0x013DBCB8
 			[CompilerGenerated]
 			private ChairPresentationSnapshot([Nullable(1)] ChairPresentationNet.ChairPresentationSnapshot original)
 			{
@@ -355,7 +356,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				this.Rotation = original.<Rotation>k__BackingField;
 			}
 
-			// Token: 0x0604C7D2 RID: 313298 RVA: 0x01430C3B File Offset: 0x0142EE3B
+			// Token: 0x06042C8F RID: 273551 RVA: 0x013DDB07 File Offset: 0x013DBD07
 			[CompilerGenerated]
 			public void Deconstruct(out int PlayerId, out long ChairCreatureDataId, out bool IsShow, out Aki.Protocol.Vector Location, out Aki.Protocol.Rotator Rotation)
 			{
@@ -367,11 +368,11 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x0200A709 RID: 42761
+		// Token: 0x02008C2A RID: 35882
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403273B RID: 206651
+			// Token: 0x0402C607 RID: 181767
 			[Nullable(new byte[]
 			{
 				0,
@@ -380,7 +381,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <0>__OnChairPresentationChangeNotify;
 
-			// Token: 0x0403273C RID: 206652
+			// Token: 0x0402C608 RID: 181768
 			[Nullable(0)]
 			public static Action<int> <1>__RemovePlayerSnapshots;
 		}

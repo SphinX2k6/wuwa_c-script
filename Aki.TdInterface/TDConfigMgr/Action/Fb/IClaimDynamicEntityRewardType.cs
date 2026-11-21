@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200267F RID: 9855
+	// Token: 0x02002942 RID: 10562
 	public class IClaimDynamicEntityRewardType
 	{
-		// Token: 0x0600DCC9 RID: 56521 RVA: 0x0020D4FD File Offset: 0x0020B6FD
-		[NullableContext(1)]
+		// Token: 0x0600EAA0 RID: 60064 RVA: 0x00229C9B File Offset: 0x00227E9B
 		public static IClaimDynamicEntityRewardType Create(IClaimDynamicEntityRewardType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700418D RID: 16781
-		// (get) Token: 0x0600DCCA RID: 56522 RVA: 0x0020D51C File Offset: 0x0020B71C
+		// Token: 0x170044CA RID: 17610
+		// (get) Token: 0x0600EAA1 RID: 60065 RVA: 0x00229CBA File Offset: 0x00227EBA
 		public virtual EDynamicEntityRewardType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AAF RID: 31407
+		// Token: 0x0400814C RID: 33100
 		private IClaimDynamicEntityRewardType Instance;
 	}
 }

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200530F RID: 21263
+	// Token: 0x020042DF RID: 17119
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -17,19 +17,19 @@ namespace CSharpScript.Game.Module.PermanentRogue
 	})]
 	public class RogueEndingCollectionItem : GridProxyAbstract<IRogueEndingItemParam>
 	{
-		// Token: 0x06036637 RID: 222775 RVA: 0x00CDE512 File Offset: 0x00CDC712
+		// Token: 0x0602B533 RID: 177459 RVA: 0x00C2BEE2 File Offset: 0x00C2A0E2
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add(EEventName.RogueResEndingRedDotUpdate, new Action(this.RefreshEndingRedDot));
 		}
 
-		// Token: 0x06036638 RID: 222776 RVA: 0x00CDE530 File Offset: 0x00CDC730
+		// Token: 0x0602B534 RID: 177460 RVA: 0x00C2BF00 File Offset: 0x00C2A100
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueResEndingRedDotUpdate, new Action(this.RefreshEndingRedDot));
 		}
 
-		// Token: 0x06036639 RID: 222777 RVA: 0x00CDE550 File Offset: 0x00CDC750
+		// Token: 0x0602B535 RID: 177461 RVA: 0x00C2BF20 File Offset: 0x00C2A120
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x0603663A RID: 222778 RVA: 0x00CDE63C File Offset: 0x00CDC83C
+		// Token: 0x0602B536 RID: 177462 RVA: 0x00C2C00C File Offset: 0x00C2A20C
 		[NullableContext(1)]
 		public override void Refresh(IRogueEndingItemParam data, bool isSelected, int gridIndex)
 		{
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			owner.K2_SetActorRotation(rotator.ToUeRotator(), false);
 		}
 
-		// Token: 0x0603663B RID: 222779 RVA: 0x00CDE857 File Offset: 0x00CDCA57
+		// Token: 0x0602B537 RID: 177463 RVA: 0x00C2C227 File Offset: 0x00C2A427
 		private void OnClickBtn()
 		{
 			if (this.OnItemClickCall != null)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0603663C RID: 222780 RVA: 0x00CDE878 File Offset: 0x00CDCA78
+		// Token: 0x0602B538 RID: 177464 RVA: 0x00C2C248 File Offset: 0x00C2A448
 		private void SetRedDotActive()
 		{
 			if (this.Config.IsSubView)
@@ -175,16 +175,16 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0603663D RID: 222781 RVA: 0x00CDE90A File Offset: 0x00CDCB0A
+		// Token: 0x0602B539 RID: 177465 RVA: 0x00C2C2DA File Offset: 0x00C2A4DA
 		private void RefreshEndingRedDot()
 		{
 			this.SetRedDotActive();
 		}
 
-		// Token: 0x0401CBCF RID: 117711
+		// Token: 0x04017605 RID: 95749
 		private IRogueEndingItemParam Config;
 
-		// Token: 0x0401CBD0 RID: 117712
+		// Token: 0x04017606 RID: 95750
 		public Action<int> OnItemClickCall;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026CC RID: 9932
+	// Token: 0x02002990 RID: 10640
 	public class ICenterTextShowType
 	{
-		// Token: 0x0600DE0E RID: 56846 RVA: 0x0020F566 File Offset: 0x0020D766
-		[NullableContext(1)]
+		// Token: 0x0600EBEA RID: 60394 RVA: 0x0022BDA6 File Offset: 0x00229FA6
 		public static ICenterTextShowType Create(ICenterTextShowType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004238 RID: 16952
-		// (get) Token: 0x0600DE0F RID: 56847 RVA: 0x0020F585 File Offset: 0x0020D785
+		// Token: 0x17004578 RID: 17784
+		// (get) Token: 0x0600EBEB RID: 60395 RVA: 0x0022BDC5 File Offset: 0x00229FC5
 		public virtual ECenterTextShowAnim Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B4A RID: 31562
+		// Token: 0x040081EA RID: 33258
 		private ICenterTextShowType Instance;
 	}
 }

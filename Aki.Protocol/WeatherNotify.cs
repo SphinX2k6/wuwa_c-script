@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001501 RID: 5377
+	// Token: 0x02001577 RID: 5495
 	[NetMessage(EMessageId.WeatherNotify)]
 	public sealed class WeatherNotify : IMessage<WeatherNotify>, IMessage, IEquatable<WeatherNotify>, IDeepCloneable<WeatherNotify>, IBufferMessage
 	{
-		// Token: 0x0601C6BE RID: 116414 RVA: 0x0041AF35 File Offset: 0x00419135
+		// Token: 0x0601D185 RID: 119173 RVA: 0x004369F5 File Offset: 0x00434BF5
 		[NullableContext(1)]
 		public static WeatherNotify Create()
 		{
 			return new WeatherNotify();
 		}
 
-		// Token: 0x17005FCE RID: 24526
-		// (get) Token: 0x0601C6BF RID: 116415 RVA: 0x0041AF3C File Offset: 0x0041913C
+		// Token: 0x1700626F RID: 25199
+		// (get) Token: 0x0601D186 RID: 119174 RVA: 0x004369FC File Offset: 0x00434BFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005FCF RID: 24527
-		// (get) Token: 0x0601C6C0 RID: 116416 RVA: 0x0041AF3F File Offset: 0x0041913F
+		// Token: 0x17006270 RID: 25200
+		// (get) Token: 0x0601D187 RID: 119175 RVA: 0x004369FF File Offset: 0x00434BFF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C6C1 RID: 116417 RVA: 0x0041AF46 File Offset: 0x00419146
+		// Token: 0x0601D188 RID: 119176 RVA: 0x00436A06 File Offset: 0x00434C06
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeatherNotify()
 		{
 		}
 
-		// Token: 0x0601C6C2 RID: 116418 RVA: 0x0041AF4E File Offset: 0x0041914E
+		// Token: 0x0601D189 RID: 119177 RVA: 0x00436A0E File Offset: 0x00434C0E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeatherNotify(WeatherNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601C6C3 RID: 116419 RVA: 0x0041AF7F File Offset: 0x0041917F
+		// Token: 0x0601D18A RID: 119178 RVA: 0x00436A3F File Offset: 0x00434C3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeatherNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new WeatherNotify(this);
 		}
 
-		// Token: 0x17005FD0 RID: 24528
-		// (get) Token: 0x0601C6C4 RID: 116420 RVA: 0x0041AF87 File Offset: 0x00419187
-		// (set) Token: 0x0601C6C5 RID: 116421 RVA: 0x0041AF8F File Offset: 0x0041918F
+		// Token: 0x17006271 RID: 25201
+		// (get) Token: 0x0601D18B RID: 119179 RVA: 0x00436A47 File Offset: 0x00434C47
+		// (set) Token: 0x0601D18C RID: 119180 RVA: 0x00436A4F File Offset: 0x00434C4F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WeatherId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005FD1 RID: 24529
-		// (get) Token: 0x0601C6C6 RID: 116422 RVA: 0x0041AF98 File Offset: 0x00419198
-		// (set) Token: 0x0601C6C7 RID: 116423 RVA: 0x0041AFA0 File Offset: 0x004191A0
+		// Token: 0x17006272 RID: 25202
+		// (get) Token: 0x0601D18D RID: 119181 RVA: 0x00436A58 File Offset: 0x00434C58
+		// (set) Token: 0x0601D18E RID: 119182 RVA: 0x00436A60 File Offset: 0x00434C60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsClient
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C6C8 RID: 116424 RVA: 0x0041AFA9 File Offset: 0x004191A9
+		// Token: 0x0601D18F RID: 119183 RVA: 0x00436A69 File Offset: 0x00434C69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as WeatherNotify);
 		}
 
-		// Token: 0x0601C6C9 RID: 116425 RVA: 0x0041AFB7 File Offset: 0x004191B7
+		// Token: 0x0601D190 RID: 119184 RVA: 0x00436A77 File Offset: 0x00434C77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(WeatherNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.WeatherId == other.WeatherId && this.IsClient == other.IsClient && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601C6CA RID: 116426 RVA: 0x0041AFF8 File Offset: 0x004191F8
+		// Token: 0x0601D191 RID: 119185 RVA: 0x00436AB8 File Offset: 0x00434CB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C6CB RID: 116427 RVA: 0x0041B050 File Offset: 0x00419250
+		// Token: 0x0601D192 RID: 119186 RVA: 0x00436B10 File Offset: 0x00434D10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601C6CC RID: 116428 RVA: 0x0041B05D File Offset: 0x0041925D
+		// Token: 0x0601D193 RID: 119187 RVA: 0x00436B1D File Offset: 0x00434D1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601C6CD RID: 116429 RVA: 0x0041B068 File Offset: 0x00419268
+		// Token: 0x0601D194 RID: 119188 RVA: 0x00436B28 File Offset: 0x00434D28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.WeatherId != 0)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(72);
 				output.WriteInt32(this.WeatherId);
 			}
 			if (this.IsClient)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(104);
 				output.WriteBool(this.IsClient);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C6CE RID: 116430 RVA: 0x0041B0C4 File Offset: 0x004192C4
+		// Token: 0x0601D195 RID: 119189 RVA: 0x00436B84 File Offset: 0x00434D84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C6CF RID: 116431 RVA: 0x0041B110 File Offset: 0x00419310
+		// Token: 0x0601D196 RID: 119190 RVA: 0x00436BD0 File Offset: 0x00434DD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(WeatherNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601C6D0 RID: 116432 RVA: 0x0041B160 File Offset: 0x00419360
+		// Token: 0x0601D197 RID: 119191 RVA: 0x00436C20 File Offset: 0x00434E20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601C6D1 RID: 116433 RVA: 0x0041B16C File Offset: 0x0041936C
+		// Token: 0x0601D198 RID: 119192 RVA: 0x00436C2C File Offset: 0x00434E2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 48U)
+				if (num != 72U)
 				{
-					if (num != 56U)
+					if (num != 104U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400A2B8 RID: 41656
+		// Token: 0x0400A711 RID: 42769
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400A2B9 RID: 41657
-		public const int WeatherIdFieldNumber = 6;
+		// Token: 0x0400A712 RID: 42770
+		public const int WeatherIdFieldNumber = 9;
 
-		// Token: 0x0400A2BA RID: 41658
+		// Token: 0x0400A713 RID: 42771
 		private int weatherId_;
 
-		// Token: 0x0400A2BB RID: 41659
-		public const int IsClientFieldNumber = 7;
+		// Token: 0x0400A714 RID: 42772
+		public const int IsClientFieldNumber = 13;
 
-		// Token: 0x0400A2BC RID: 41660
+		// Token: 0x0400A715 RID: 42773
 		private bool isClient_;
 	}
 }

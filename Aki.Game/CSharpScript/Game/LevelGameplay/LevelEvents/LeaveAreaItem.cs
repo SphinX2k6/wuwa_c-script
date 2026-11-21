@@ -3,27 +3,27 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B34 RID: 27444
+	// Token: 0x02005CAC RID: 23724
 	internal class LeaveAreaItem : ILeaveAreaItem
 	{
-		// Token: 0x17009986 RID: 39302
-		// (get) Token: 0x06044131 RID: 278833 RVA: 0x010BCFEB File Offset: 0x010BB1EB
-		// (set) Token: 0x06044132 RID: 278834 RVA: 0x010BCFF3 File Offset: 0x010BB1F3
+		// Token: 0x17006E89 RID: 28297
+		// (get) Token: 0x0603A283 RID: 238211 RVA: 0x01066877 File Offset: 0x01064A77
+		// (set) Token: 0x0603A284 RID: 238212 RVA: 0x0106687F File Offset: 0x01064A7F
 		public int QuestId { get; set; }
 
-		// Token: 0x17009987 RID: 39303
-		// (get) Token: 0x06044133 RID: 278835 RVA: 0x010BCFFC File Offset: 0x010BB1FC
-		// (set) Token: 0x06044134 RID: 278836 RVA: 0x010BD004 File Offset: 0x010BB204
+		// Token: 0x17006E8A RID: 28298
+		// (get) Token: 0x0603A285 RID: 238213 RVA: 0x01066888 File Offset: 0x01064A88
+		// (set) Token: 0x0603A286 RID: 238214 RVA: 0x01066890 File Offset: 0x01064A90
 		public int NodeId { get; set; }
 
-		// Token: 0x17009988 RID: 39304
-		// (get) Token: 0x06044135 RID: 278837 RVA: 0x010BD00D File Offset: 0x010BB20D
-		// (set) Token: 0x06044136 RID: 278838 RVA: 0x010BD015 File Offset: 0x010BB215
+		// Token: 0x17006E8B RID: 28299
+		// (get) Token: 0x0603A287 RID: 238215 RVA: 0x01066899 File Offset: 0x01064A99
+		// (set) Token: 0x0603A288 RID: 238216 RVA: 0x010668A1 File Offset: 0x01064AA1
 		public int LeaveAreaId { get; set; }
 
-		// Token: 0x17009989 RID: 39305
-		// (get) Token: 0x06044137 RID: 278839 RVA: 0x010BD01E File Offset: 0x010BB21E
-		// (set) Token: 0x06044138 RID: 278840 RVA: 0x010BD026 File Offset: 0x010BB226
+		// Token: 0x17006E8C RID: 28300
+		// (get) Token: 0x0603A289 RID: 238217 RVA: 0x010668AA File Offset: 0x01064AAA
+		// (set) Token: 0x0603A28A RID: 238218 RVA: 0x010668B2 File Offset: 0x01064AB2
 		public NodeStatus NodeState { get; set; }
 	}
 }

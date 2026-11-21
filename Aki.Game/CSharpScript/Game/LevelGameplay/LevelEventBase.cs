@@ -6,22 +6,22 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200698A RID: 27018
+	// Token: 0x02005AE6 RID: 23270
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventBase
 	{
-		// Token: 0x060433F5 RID: 275445 RVA: 0x01064A79 File Offset: 0x01062C79
+		// Token: 0x0603942D RID: 234541 RVA: 0x01008CE1 File Offset: 0x01006EE1
 		public LevelEventBase(int id)
 		{
 			this.Id = id;
 		}
 
-		// Token: 0x17009848 RID: 38984
-		// (get) Token: 0x060433F6 RID: 275446 RVA: 0x01064AA5 File Offset: 0x01062CA5
+		// Token: 0x17006D28 RID: 27944
+		// (get) Token: 0x0603942E RID: 234542 RVA: 0x01008D0D File Offset: 0x01006F0D
 		public int Id { get; }
 
-		// Token: 0x060433F7 RID: 275447 RVA: 0x01064AB0 File Offset: 0x01062CB0
+		// Token: 0x0603942F RID: 234543 RVA: 0x01008D18 File Offset: 0x01006F18
 		public unsafe virtual void ExecuteAction(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			this.BaseContext = context;
@@ -68,30 +68,30 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060433F8 RID: 275448 RVA: 0x01064BB4 File Offset: 0x01062DB4
+		// Token: 0x06039430 RID: 234544 RVA: 0x01008E1C File Offset: 0x0100701C
 		public virtual void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 		}
 
-		// Token: 0x060433F9 RID: 275449 RVA: 0x01064BB6 File Offset: 0x01062DB6
+		// Token: 0x06039431 RID: 234545 RVA: 0x01008E1E File Offset: 0x0100701E
 		protected virtual void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			this.ExecuteNew(inParams, context, actionId);
 		}
 
-		// Token: 0x060433FA RID: 275450 RVA: 0x01064BC1 File Offset: 0x01062DC1
+		// Token: 0x06039432 RID: 234546 RVA: 0x01008E29 File Offset: 0x01007029
 		protected void CreateWaitEntityTask(List<int> entityIds)
 		{
 			this.CreateWaitEntityTaskInternal(entityIds);
 		}
 
-		// Token: 0x060433FB RID: 275451 RVA: 0x01064BCF File Offset: 0x01062DCF
+		// Token: 0x06039433 RID: 234547 RVA: 0x01008E37 File Offset: 0x01007037
 		protected void CreateWaitEntityTask(int entityId)
 		{
 			this.CreateWaitEntityTaskInternal(entityId);
 		}
 
-		// Token: 0x060433FC RID: 275452 RVA: 0x01064BE0 File Offset: 0x01062DE0
+		// Token: 0x06039434 RID: 234548 RVA: 0x01008E48 File Offset: 0x01007048
 		private unsafe void CreateWaitEntityTaskInternal([Nullable(new byte[]
 		{
 			0,
@@ -151,19 +151,19 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 30000 * count, true, false);
 		}
 
-		// Token: 0x060433FD RID: 275453 RVA: 0x01064CFF File Offset: 0x01062EFF
+		// Token: 0x06039435 RID: 234549 RVA: 0x01008F67 File Offset: 0x01007167
 		protected void CreateWaitEntityTaskBigInt(List<long> entityIds)
 		{
 			this.CreateWaitEntityTaskBigIntInternal(entityIds);
 		}
 
-		// Token: 0x060433FE RID: 275454 RVA: 0x01064D0D File Offset: 0x01062F0D
+		// Token: 0x06039436 RID: 234550 RVA: 0x01008F75 File Offset: 0x01007175
 		protected void CreateWaitEntityTaskBigInt(long entityId)
 		{
 			this.CreateWaitEntityTaskBigIntInternal(entityId);
 		}
 
-		// Token: 0x060433FF RID: 275455 RVA: 0x01064D1C File Offset: 0x01062F1C
+		// Token: 0x06039437 RID: 234551 RVA: 0x01008F84 File Offset: 0x01007184
 		private unsafe void CreateWaitEntityTaskBigIntInternal([Nullable(new byte[]
 		{
 			0,
@@ -219,12 +219,12 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, count * 30000, true, false);
 		}
 
-		// Token: 0x06043400 RID: 275456 RVA: 0x01064E20 File Offset: 0x01063020
+		// Token: 0x06039438 RID: 234552 RVA: 0x01009088 File Offset: 0x01007288
 		protected virtual void ExecuteWhenEntitiesReady()
 		{
 		}
 
-		// Token: 0x06043401 RID: 275457 RVA: 0x01064E22 File Offset: 0x01063022
+		// Token: 0x06039439 RID: 234553 RVA: 0x0100908A File Offset: 0x0100728A
 		public void OpenTick()
 		{
 			this.IsWaitEnd = true;
@@ -232,19 +232,19 @@ namespace CSharpScript.Game.LevelGamePlay
 			EventSystem.Instance.Emit<bool, LevelEventBase>(EEventName.AddToTickList, true, this);
 		}
 
-		// Token: 0x06043402 RID: 275458 RVA: 0x01064E44 File Offset: 0x01063044
+		// Token: 0x0603943A RID: 234554 RVA: 0x010090AC File Offset: 0x010072AC
 		public virtual bool Tick(float deltaTime)
 		{
 			this.OnTick(deltaTime);
 			return this.IsFinished;
 		}
 
-		// Token: 0x06043403 RID: 275459 RVA: 0x01064E53 File Offset: 0x01063053
+		// Token: 0x0603943B RID: 234555 RVA: 0x010090BB File Offset: 0x010072BB
 		protected virtual void OnTick(float deltaTime)
 		{
 		}
 
-		// Token: 0x06043404 RID: 275460 RVA: 0x01064E55 File Offset: 0x01063055
+		// Token: 0x0603943C RID: 234556 RVA: 0x010090BD File Offset: 0x010072BD
 		protected void FinishExecute(bool value, bool isError = false, bool showLog = true)
 		{
 			this.IsFinished = value;
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x06043405 RID: 275461 RVA: 0x01064E70 File Offset: 0x01063070
+		// Token: 0x0603943D RID: 234557 RVA: 0x010090D8 File Offset: 0x010072D8
 		public void Finish()
 		{
 			this.OnFinish();
@@ -272,23 +272,23 @@ namespace CSharpScript.Game.LevelGamePlay
 			EventSystem.Instance.Emit<int>(EEventName.HandleNextAction, this.GroupId);
 		}
 
-		// Token: 0x06043406 RID: 275462 RVA: 0x01064EDD File Offset: 0x010630DD
+		// Token: 0x0603943E RID: 234558 RVA: 0x01009145 File Offset: 0x01007345
 		protected virtual void OnFinish()
 		{
 		}
 
-		// Token: 0x06043407 RID: 275463 RVA: 0x01064EDF File Offset: 0x010630DF
+		// Token: 0x0603943F RID: 234559 RVA: 0x01009147 File Offset: 0x01007347
 		public void UpdateGuarantee()
 		{
 			this.OnUpdateGuarantee();
 		}
 
-		// Token: 0x06043408 RID: 275464 RVA: 0x01064EE7 File Offset: 0x010630E7
+		// Token: 0x06039440 RID: 234560 RVA: 0x0100914F File Offset: 0x0100734F
 		protected virtual void OnUpdateGuarantee()
 		{
 		}
 
-		// Token: 0x06043409 RID: 275465 RVA: 0x01064EEC File Offset: 0x010630EC
+		// Token: 0x06039441 RID: 234561 RVA: 0x01009154 File Offset: 0x01007354
 		public void Failure(bool isError = false, bool showLog = true)
 		{
 			if (GlobalData.IsPlayInEditor)
@@ -306,12 +306,12 @@ namespace CSharpScript.Game.LevelGamePlay
 			EventSystem.Instance.Emit<int, string, bool, bool>(EEventName.HandleActionFailure, this.GroupId, this.Type, isError, showLog);
 		}
 
-		// Token: 0x0604340A RID: 275466 RVA: 0x01064F72 File Offset: 0x01063172
+		// Token: 0x06039442 RID: 234562 RVA: 0x010091DA File Offset: 0x010073DA
 		protected virtual void OnFailure()
 		{
 		}
 
-		// Token: 0x0604340B RID: 275467 RVA: 0x01064F74 File Offset: 0x01063174
+		// Token: 0x06039443 RID: 234563 RVA: 0x010091DC File Offset: 0x010073DC
 		public virtual void Release()
 		{
 			if (this.IsWaitEnd)
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x0604340C RID: 275468 RVA: 0x01064F90 File Offset: 0x01063190
+		// Token: 0x06039444 RID: 234564 RVA: 0x010091F8 File Offset: 0x010073F8
 		public void Reset()
 		{
 			this.OnReset();
@@ -332,39 +332,39 @@ namespace CSharpScript.Game.LevelGamePlay
 			this.ActionIndex = -1;
 		}
 
-		// Token: 0x0604340D RID: 275469 RVA: 0x01064FC2 File Offset: 0x010631C2
+		// Token: 0x06039445 RID: 234565 RVA: 0x0100922A File Offset: 0x0100742A
 		protected virtual void OnReset()
 		{
 		}
 
-		// Token: 0x04023061 RID: 143457
+		// Token: 0x0401E24B RID: 123467
 		public const int EACH_WAIT_ENTITY_OVER_TIME = 30000;
 
-		// Token: 0x04023062 RID: 143458
+		// Token: 0x0401E24C RID: 123468
 		public int GroupId;
 
-		// Token: 0x04023063 RID: 143459
+		// Token: 0x0401E24D RID: 123469
 		public string Type = "";
 
-		// Token: 0x04023064 RID: 143460
+		// Token: 0x0401E24E RID: 123470
 		public bool IsWaitEnd;
 
-		// Token: 0x04023065 RID: 143461
+		// Token: 0x0401E24F RID: 123471
 		public bool IsAsync;
 
-		// Token: 0x04023066 RID: 143462
+		// Token: 0x0401E250 RID: 123472
 		public int SessionId = -1;
 
-		// Token: 0x04023067 RID: 143463
+		// Token: 0x0401E251 RID: 123473
 		public int ActionIndex;
 
-		// Token: 0x04023068 RID: 143464
+		// Token: 0x0401E252 RID: 123474
 		public string ActionGuid = "";
 
-		// Token: 0x04023069 RID: 143465
+		// Token: 0x0401E253 RID: 123475
 		private bool IsFinished;
 
-		// Token: 0x0402306A RID: 143466
+		// Token: 0x0401E254 RID: 123476
 		[Nullable(2)]
 		public GeneralContext BaseContext;
 	}

@@ -4,10 +4,10 @@ using CSharpScript.Game.Input;
 
 namespace CSharpScript.Game.Module.ComboTimeline.Entry
 {
-	// Token: 0x02005B9C RID: 23452
+	// Token: 0x02004B7C RID: 19324
 	public class ComboTimelineReplayInputBlocker
 	{
-		// Token: 0x0603B51B RID: 242971 RVA: 0x00E22CFC File Offset: 0x00E20EFC
+		// Token: 0x06030468 RID: 197736 RVA: 0x00D7324C File Offset: 0x00D7144C
 		public void Enable(int unitId)
 		{
 			if (unitId != 0)
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			InputController.Instance.SetMoveControlEnabled(false, false, false, false);
 		}
 
-		// Token: 0x0603B51C RID: 242972 RVA: 0x00E22D3D File Offset: 0x00E20F3D
+		// Token: 0x06030469 RID: 197737 RVA: 0x00D7328D File Offset: 0x00D7148D
 		public void Disable()
 		{
 			if (this.Layer != null)
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			InputController.Instance.SetMoveControlEnabled(true, true, true, true);
 		}
 
-		// Token: 0x0401EEB0 RID: 126640
+		// Token: 0x04019961 RID: 104801
 		[Nullable(2)]
 		private InputLayer Layer;
 	}

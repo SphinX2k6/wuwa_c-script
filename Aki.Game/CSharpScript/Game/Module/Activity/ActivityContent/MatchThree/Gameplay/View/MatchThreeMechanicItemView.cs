@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064DC RID: 25820
+	// Token: 0x0200545A RID: 21594
 	public class MatchThreeMechanicItemView : GridProxyAbstract<MechanicDisplayData>
 	{
-		// Token: 0x06040CE6 RID: 265446 RVA: 0x00FB2598 File Offset: 0x00FB0798
+		// Token: 0x060359AA RID: 219562 RVA: 0x00EF95C8 File Offset: 0x00EF77C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040CE7 RID: 265447 RVA: 0x00FB26A4 File Offset: 0x00FB08A4
+		// Token: 0x060359AB RID: 219563 RVA: 0x00EF96D4 File Offset: 0x00EF78D4
 		public override void Refresh(MechanicDisplayData data, bool isSelected, int gridIndex)
 		{
 			this.Data = new MechanicDisplayData?(data);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			base.TrySetSpriteByPath((item2 == null) ? null : UiResourceConfig.Instance.GetResourcePath(item2), sprite, false, null, null);
 		}
 
-		// Token: 0x06040CE8 RID: 265448 RVA: 0x00FB2768 File Offset: 0x00FB0968
+		// Token: 0x060359AC RID: 219564 RVA: 0x00EF9798 File Offset: 0x00EF7998
 		private void OnClicked()
 		{
 			if (this.Data == null || this.Data.Value.EnvId <= 0)
@@ -85,21 +85,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			ActivityMatchThreeController.Instance.OpenPopupInfoByLevel(context.LevelId, context.RoleId, true, 0, this.Data.Value.EnvId);
 		}
 
-		// Token: 0x04021C30 RID: 138288
+		// Token: 0x0401C561 RID: 116065
 		private MechanicDisplayData? Data;
 
-		// Token: 0x0200C70C RID: 50956
+		// Token: 0x0200B0F2 RID: 45298
 		private enum EComponent
 		{
-			// Token: 0x0403C223 RID: 246307
+			// Token: 0x04036B7E RID: 224126
 			BtnEnvEffect,
-			// Token: 0x0403C224 RID: 246308
+			// Token: 0x04036B7F RID: 224127
 			SprIcon,
-			// Token: 0x0403C225 RID: 246309
+			// Token: 0x04036B80 RID: 224128
 			TxtRemainTime,
-			// Token: 0x0403C226 RID: 246310
+			// Token: 0x04036B81 RID: 224129
 			TxtGenerateNum,
-			// Token: 0x0403C227 RID: 246311
+			// Token: 0x04036B82 RID: 224130
 			PnlRemainTime
 		}
 	}

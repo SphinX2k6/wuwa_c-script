@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007230 RID: 29232
+	// Token: 0x02007A05 RID: 31237
 	public class ISummonEntityT
 	{
-		// Token: 0x1700D8F4 RID: 55540
-		// (get) Token: 0x06033DA2 RID: 212386 RVA: 0x006FA175 File Offset: 0x006F8375
-		// (set) Token: 0x06033DA3 RID: 212387 RVA: 0x006FA17D File Offset: 0x006F837D
+		// Token: 0x1700E4ED RID: 58605
+		// (get) Token: 0x060370A4 RID: 225444 RVA: 0x0075B4D5 File Offset: 0x007596D5
+		// (set) Token: 0x060370A5 RID: 225445 RVA: 0x0075B4DD File Offset: 0x007596DD
 		public ISummonVehicleT SummonEntityConfig { get; set; }
 
-		// Token: 0x06033DA4 RID: 212388 RVA: 0x006FA186 File Offset: 0x006F8386
+		// Token: 0x060370A6 RID: 225446 RVA: 0x0075B4E6 File Offset: 0x007596E6
 		public ISummonEntityT()
 		{
 			this.SummonEntityConfig = null;

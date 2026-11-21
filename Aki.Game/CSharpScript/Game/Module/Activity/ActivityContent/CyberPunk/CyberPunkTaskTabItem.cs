@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068BC RID: 26812
+	// Token: 0x0200580C RID: 22540
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 	})]
 	public class CyberPunkTaskTabItem : GridProxyAbstract<CyberPunkTaskTabData>
 	{
-		// Token: 0x06042E76 RID: 274038 RVA: 0x0104A150 File Offset: 0x01048350
+		// Token: 0x060379CE RID: 227790 RVA: 0x00F8B778 File Offset: 0x00F89978
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042E77 RID: 274039 RVA: 0x0104A25C File Offset: 0x0104845C
+		// Token: 0x060379CF RID: 227791 RVA: 0x00F8B884 File Offset: 0x00F89A84
 		[NullableContext(1)]
 		public override void Refresh(CyberPunkTaskTabData data, bool isSelected, int gridIndex)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.BindRedDot();
 		}
 
-		// Token: 0x06042E78 RID: 274040 RVA: 0x0104A2C4 File Offset: 0x010484C4
+		// Token: 0x060379D0 RID: 227792 RVA: 0x00F8B8EC File Offset: 0x00F89AEC
 		private void BindRedDot()
 		{
 			UUIItem item = base.GetItem(4);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E79 RID: 274041 RVA: 0x0104A2F4 File Offset: 0x010484F4
+		// Token: 0x060379D1 RID: 227793 RVA: 0x00F8B91C File Offset: 0x00F89B1C
 		private void UnBindRedDot()
 		{
 			UUIItem item = base.GetItem(4);
@@ -85,13 +85,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E7A RID: 274042 RVA: 0x0104A322 File Offset: 0x01048522
+		// Token: 0x060379D2 RID: 227794 RVA: 0x00F8B94A File Offset: 0x00F89B4A
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x06042E7B RID: 274043 RVA: 0x0104A32A File Offset: 0x0104852A
+		// Token: 0x060379D3 RID: 227795 RVA: 0x00F8B952 File Offset: 0x00F89B52
 		public void SetRedDotVisible(bool visible)
 		{
 			UUIItem item = base.GetItem(4);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			item.SetUIActive(visible);
 		}
 
-		// Token: 0x06042E7C RID: 274044 RVA: 0x0104A340 File Offset: 0x01048540
+		// Token: 0x060379D4 RID: 227796 RVA: 0x00F8B968 File Offset: 0x00F89B68
 		public void SetSelected(bool selected, bool fireEvent = false)
 		{
 			UUIItem item = base.GetItem(3);
@@ -126,13 +126,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E7D RID: 274045 RVA: 0x0104A396 File Offset: 0x01048596
+		// Token: 0x060379D5 RID: 227797 RVA: 0x00F8B9BE File Offset: 0x00F89BBE
 		public int GetTabId()
 		{
 			return this.TabId;
 		}
 
-		// Token: 0x06042E7E RID: 274046 RVA: 0x0104A3A0 File Offset: 0x010485A0
+		// Token: 0x060379D6 RID: 227798 RVA: 0x00F8B9C8 File Offset: 0x00F89BC8
 		public void SetTabIconByTabId(int tabId)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(11, 1);
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E7F RID: 274047 RVA: 0x0104A400 File Offset: 0x01048600
+		// Token: 0x060379D7 RID: 227799 RVA: 0x00F8BA28 File Offset: 0x00F89C28
 		private void OnClickTab(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -160,10 +160,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x04022CF6 RID: 142582
+		// Token: 0x0401D552 RID: 120146
 		private int TabId;
 
-		// Token: 0x04022CF7 RID: 142583
+		// Token: 0x0401D553 RID: 120147
 		[Nullable(new byte[]
 		{
 			2,
@@ -171,22 +171,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		public Action<int, CyberPunkTaskTabItem> OnTabClickCallback;
 
-		// Token: 0x0200CA8D RID: 51853
+		// Token: 0x0200B455 RID: 46165
 		private static class ETabComponents
 		{
-			// Token: 0x0403D393 RID: 250771
+			// Token: 0x04037C6D RID: 228461
 			public const int TogTab = 0;
 
-			// Token: 0x0403D394 RID: 250772
+			// Token: 0x04037C6E RID: 228462
 			public const int TogBgSprite = 1;
 
-			// Token: 0x0403D395 RID: 250773
+			// Token: 0x04037C6F RID: 228463
 			public const int TxtTabName = 2;
 
-			// Token: 0x0403D396 RID: 250774
+			// Token: 0x04037C70 RID: 228464
 			public const int PitchState = 3;
 
-			// Token: 0x0403D397 RID: 250775
+			// Token: 0x04037C71 RID: 228465
 			public const int Red = 4;
 		}
 	}

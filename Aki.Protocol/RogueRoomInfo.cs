@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001014 RID: 4116
+	// Token: 0x02001004 RID: 4100
 	public sealed class RogueRoomInfo : IMessage<RogueRoomInfo>, IMessage, IEquatable<RogueRoomInfo>, IDeepCloneable<RogueRoomInfo>, IBufferMessage
 	{
-		// Token: 0x0601601D RID: 90141 RVA: 0x00332FE6 File Offset: 0x003311E6
+		// Token: 0x06015F38 RID: 89912 RVA: 0x0033192A File Offset: 0x0032FB2A
 		[NullableContext(1)]
 		public static RogueRoomInfo Create()
 		{
 			return new RogueRoomInfo();
 		}
 
-		// Token: 0x1700498F RID: 18831
-		// (get) Token: 0x0601601E RID: 90142 RVA: 0x00332FED File Offset: 0x003311ED
+		// Token: 0x17004965 RID: 18789
+		// (get) Token: 0x06015F39 RID: 89913 RVA: 0x00331931 File Offset: 0x0032FB31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004990 RID: 18832
-		// (get) Token: 0x0601601F RID: 90143 RVA: 0x00332FF0 File Offset: 0x003311F0
+		// Token: 0x17004966 RID: 18790
+		// (get) Token: 0x06015F3A RID: 89914 RVA: 0x00331934 File Offset: 0x0032FB34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016020 RID: 90144 RVA: 0x00332FF7 File Offset: 0x003311F7
+		// Token: 0x06015F3B RID: 89915 RVA: 0x0033193B File Offset: 0x0032FB3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueRoomInfo()
 		{
 		}
 
-		// Token: 0x06016021 RID: 90145 RVA: 0x0033300A File Offset: 0x0033120A
+		// Token: 0x06015F3C RID: 89916 RVA: 0x0033194E File Offset: 0x0032FB4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueRoomInfo(RogueRoomInfo other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06016022 RID: 90146 RVA: 0x00333034 File Offset: 0x00331234
+		// Token: 0x06015F3D RID: 89917 RVA: 0x00331978 File Offset: 0x0032FB78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueRoomInfo Clone()
@@ -66,8 +66,8 @@ namespace Aki.Protocol
 			return new RogueRoomInfo(this);
 		}
 
-		// Token: 0x17004991 RID: 18833
-		// (get) Token: 0x06016023 RID: 90147 RVA: 0x0033303C File Offset: 0x0033123C
+		// Token: 0x17004967 RID: 18791
+		// (get) Token: 0x06015F3E RID: 89918 RVA: 0x00331980 File Offset: 0x0032FB80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<string, int> RogueRoomDict
@@ -78,7 +78,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016024 RID: 90148 RVA: 0x00333044 File Offset: 0x00331244
+		// Token: 0x06015F3F RID: 89919 RVA: 0x00331988 File Offset: 0x0032FB88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -86,7 +86,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueRoomInfo);
 		}
 
-		// Token: 0x06016025 RID: 90149 RVA: 0x00333052 File Offset: 0x00331252
+		// Token: 0x06015F40 RID: 89920 RVA: 0x00331996 File Offset: 0x0032FB96
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueRoomInfo other)
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RogueRoomDict.Equals(other.RogueRoomDict) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06016026 RID: 90150 RVA: 0x00333088 File Offset: 0x00331288
+		// Token: 0x06015F41 RID: 89921 RVA: 0x003319CC File Offset: 0x0032FBCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016027 RID: 90151 RVA: 0x003330BC File Offset: 0x003312BC
+		// Token: 0x06015F42 RID: 89922 RVA: 0x00331A00 File Offset: 0x0032FC00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06016028 RID: 90152 RVA: 0x003330C9 File Offset: 0x003312C9
+		// Token: 0x06015F43 RID: 89923 RVA: 0x00331A0D File Offset: 0x0032FC0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06016029 RID: 90153 RVA: 0x003330D2 File Offset: 0x003312D2
+		// Token: 0x06015F44 RID: 89924 RVA: 0x00331A16 File Offset: 0x0032FC16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601602A RID: 90154 RVA: 0x003330FC File Offset: 0x003312FC
+		// Token: 0x06015F45 RID: 89925 RVA: 0x00331A40 File Offset: 0x0032FC40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601602B RID: 90155 RVA: 0x00333135 File Offset: 0x00331335
+		// Token: 0x06015F46 RID: 89926 RVA: 0x00331A79 File Offset: 0x0032FC79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueRoomInfo other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601602C RID: 90156 RVA: 0x00333163 File Offset: 0x00331363
+		// Token: 0x06015F47 RID: 89927 RVA: 0x00331AA7 File Offset: 0x0032FCA7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601602D RID: 90157 RVA: 0x0033316C File Offset: 0x0033136C
+		// Token: 0x06015F48 RID: 89928 RVA: 0x00331AB0 File Offset: 0x0032FCB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -194,16 +194,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040083FD RID: 33789
+		// Token: 0x04008427 RID: 33831
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040083FE RID: 33790
+		// Token: 0x04008428 RID: 33832
 		public const int RogueRoomDictFieldNumber = 1;
 
-		// Token: 0x040083FF RID: 33791
+		// Token: 0x04008429 RID: 33833
 		private static readonly MapField<string, int>.Codec _map_rogueRoomDict_codec = new MapField<string, int>.Codec(FieldCodec.ForString(10U, ""), FieldCodec.ForInt32(16U, 0), 10U);
 
-		// Token: 0x04008400 RID: 33792
+		// Token: 0x0400842A RID: 33834
 		private readonly MapField<string, int> rogueRoomDict_ = new MapField<string, int>();
 	}
 }

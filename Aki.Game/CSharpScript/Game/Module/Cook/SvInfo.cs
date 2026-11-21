@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AFA RID: 23290
+	// Token: 0x02004ADB RID: 19163
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SvInfo : UiPanelBase
 	{
-		// Token: 0x0603AF3B RID: 241467 RVA: 0x00E0E30C File Offset: 0x00E0C50C
+		// Token: 0x0602FEAD RID: 196269 RVA: 0x00D5F000 File Offset: 0x00D5D200
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603AF3C RID: 241468 RVA: 0x00E0E404 File Offset: 0x00E0C604
+		// Token: 0x0602FEAE RID: 196270 RVA: 0x00D5F0F8 File Offset: 0x00D5D2F8
 		protected override void OnStart()
 		{
 			this.InventoryViewComponent = new GenericLayoutNew<MachiningClueItem>(base.GetVerticalLayout(6), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<MachiningClueItem>(this.InitMachining), null);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Cook
 			base.GetText(3).SetUIActive(true);
 		}
 
-		// Token: 0x0603AF3D RID: 241469 RVA: 0x00E0E45D File Offset: 0x00E0C65D
+		// Token: 0x0602FEAF RID: 196271 RVA: 0x00D5F151 File Offset: 0x00D5D351
 		protected override void OnBeforeDestroy()
 		{
 			this.InventoryViewComponent = null;
@@ -58,17 +58,17 @@ namespace CSharpScript.Game.Module.Cook
 			this.RemoveEventListener();
 		}
 
-		// Token: 0x0603AF3E RID: 241470 RVA: 0x00E0E473 File Offset: 0x00E0C673
+		// Token: 0x0602FEB0 RID: 196272 RVA: 0x00D5F167 File Offset: 0x00D5D367
 		private void AddEventListener()
 		{
 		}
 
-		// Token: 0x0603AF3F RID: 241471 RVA: 0x00E0E475 File Offset: 0x00E0C675
+		// Token: 0x0602FEB1 RID: 196273 RVA: 0x00D5F169 File Offset: 0x00D5D369
 		private void RemoveEventListener()
 		{
 		}
 
-		// Token: 0x0603AF40 RID: 241472 RVA: 0x00E0E478 File Offset: 0x00E0C678
+		// Token: 0x0602FEB2 RID: 196274 RVA: 0x00D5F16C File Offset: 0x00D5D36C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Cook
 			};
 		}
 
-		// Token: 0x0603AF41 RID: 241473 RVA: 0x00E0E4C4 File Offset: 0x00E0C6C4
+		// Token: 0x0602FEB3 RID: 196275 RVA: 0x00D5F1B8 File Offset: 0x00D5D3B8
 		[NullableContext(2)]
 		public void SetTypeName(string tag = null)
 		{
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Cook
 			text.SetUIActive(false);
 		}
 
-		// Token: 0x0603AF42 RID: 241474 RVA: 0x00E0E4F4 File Offset: 0x00E0C6F4
+		// Token: 0x0602FEB4 RID: 196276 RVA: 0x00D5F1E8 File Offset: 0x00D5D3E8
 		public void RefreshCooking(ICookingData data, int times)
 		{
 			if (!this.CheckDataValid(data))
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Cook
 			base.GetText(5).SetText(newText, true);
 		}
 
-		// Token: 0x0603AF43 RID: 241475 RVA: 0x00E0E5C4 File Offset: 0x00E0C7C4
+		// Token: 0x0602FEB5 RID: 196277 RVA: 0x00D5F2B8 File Offset: 0x00D5D4B8
 		private bool CheckDataValid(object itemData)
 		{
 			if (itemData == null)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Cook
 			return true;
 		}
 
-		// Token: 0x0603AF44 RID: 241476 RVA: 0x00E0E5F8 File Offset: 0x00E0C7F8
+		// Token: 0x0602FEB6 RID: 196278 RVA: 0x00D5F2EC File Offset: 0x00D5D4EC
 		public void RefreshMachining(IMachiningData data)
 		{
 			if (!this.CheckDataValid(data))
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.InventoryViewComponent.RebuildLayoutByDataNew<IMachiningClueData>(list, null);
 		}
 
-		// Token: 0x0401EC57 RID: 126039
+		// Token: 0x04019713 RID: 104211
 		[Nullable(new byte[]
 		{
 			2,
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Cook
 		})]
 		private GenericLayoutNew<MachiningClueItem> InventoryViewComponent;
 
-		// Token: 0x0401EC58 RID: 126040
+		// Token: 0x04019714 RID: 104212
 		[Nullable(2)]
 		private object ItemData;
 	}

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058B1 RID: 22705
+	// Token: 0x02004889 RID: 18569
 	public class InstanceDungeonTowerDefensePanelItem : UiPanelBase
 	{
-		// Token: 0x06039BE3 RID: 236515 RVA: 0x00DB95FC File Offset: 0x00DB77FC
+		// Token: 0x0602EB06 RID: 191238 RVA: 0x00D08514 File Offset: 0x00D06714
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039BE4 RID: 236516 RVA: 0x00DB96E4 File Offset: 0x00DB78E4
+		// Token: 0x0602EB07 RID: 191239 RVA: 0x00D085FC File Offset: 0x00D067FC
 		protected override void OnStart()
 		{
 			if (this.ItemDataHandle != null && this.ItemDataHandle.HaveRefresh)
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039BE5 RID: 236517 RVA: 0x00DB9704 File Offset: 0x00DB7904
+		// Token: 0x0602EB08 RID: 191240 RVA: 0x00D0861C File Offset: 0x00D0681C
 		public void RefreshItem()
 		{
 			if (base.InAsyncLoading())
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "TowerDefence_PintDesc", Array.Empty<object>());
 		}
 
-		// Token: 0x06039BE6 RID: 236518 RVA: 0x00DB9780 File Offset: 0x00DB7980
+		// Token: 0x0602EB09 RID: 191241 RVA: 0x00D08698 File Offset: 0x00D06898
 		private void OnClickBtnScoreReward()
 		{
 			IActivityRewardViewData param = TowerDefenseController.Instance.BuildPreviewRewardData();
@@ -79,20 +79,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			});
 		}
 
-		// Token: 0x0401E27F RID: 123519
+		// Token: 0x04018D1C RID: 101660
 		[Nullable(2)]
 		private IInstanceDungeonTowerDefensePanelItem ItemDataHandle;
 
-		// Token: 0x0200BB17 RID: 47895
+		// Token: 0x0200A530 RID: 42288
 		private enum EChildType
 		{
-			// Token: 0x04038848 RID: 231496
+			// Token: 0x04033249 RID: 209481
 			BtnScoreReward,
-			// Token: 0x04038849 RID: 231497
+			// Token: 0x0403324A RID: 209482
 			TxtScore,
-			// Token: 0x0403884A RID: 231498
+			// Token: 0x0403324B RID: 209483
 			ScoreRedDot,
-			// Token: 0x0403884B RID: 231499
+			// Token: 0x0403324C RID: 209484
 			TxtDesc
 		}
 	}

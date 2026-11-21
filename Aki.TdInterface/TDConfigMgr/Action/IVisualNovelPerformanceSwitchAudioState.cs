@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002097 RID: 8343
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022E2 RID: 8930
 	public class IVisualNovelPerformanceSwitchAudioState : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600B778 RID: 46968 RVA: 0x001A91BC File Offset: 0x001A73BC
+		// Token: 0x0600C2A8 RID: 49832 RVA: 0x001BFA6C File Offset: 0x001BDC6C
 		private IVisualNovelPerformanceSwitchAudioState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B779 RID: 46969 RVA: 0x001A91F4 File Offset: 0x001A73F4
+		// Token: 0x0600C2A9 RID: 49833 RVA: 0x001BFAA4 File Offset: 0x001BDCA4
 		public static IVisualNovelPerformanceSwitchAudioState Create([Nullable(2)] IVisualNovelPerformanceSwitchAudioState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B77A RID: 46970 RVA: 0x001A9207 File Offset: 0x001A7407
+		// Token: 0x0600C2AA RID: 49834 RVA: 0x001BFAB7 File Offset: 0x001BDCB7
 		public static IVisualNovelPerformanceSwitchAudioState CreateFromSetValue([Nullable(2)] IVisualNovelPerformanceSwitchAudioState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B77B RID: 46971 RVA: 0x001A921A File Offset: 0x001A741A
+		// Token: 0x0600C2AB RID: 49835 RVA: 0x001BFACA File Offset: 0x001BDCCA
 		public new IVisualNovelPerformanceSwitchAudioState_SetValue ToSetValue()
 		{
 			return new IVisualNovelPerformanceSwitchAudioState_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003832 RID: 14386
-		// (get) Token: 0x0600B77C RID: 46972 RVA: 0x001A9245 File Offset: 0x001A7445
-		// (set) Token: 0x0600B77D RID: 46973 RVA: 0x001A9270 File Offset: 0x001A7470
+		// Token: 0x17003B11 RID: 15121
+		// (get) Token: 0x0600C2AC RID: 49836 RVA: 0x001BFAF5 File Offset: 0x001BDCF5
+		// (set) Token: 0x0600C2AD RID: 49837 RVA: 0x001BFB20 File Offset: 0x001BDD20
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003833 RID: 14387
-		// (get) Token: 0x0600B77E RID: 46974 RVA: 0x001A9280 File Offset: 0x001A7480
-		// (set) Token: 0x0600B77F RID: 46975 RVA: 0x001A92BA File Offset: 0x001A74BA
+		// Token: 0x17003B12 RID: 15122
+		// (get) Token: 0x0600C2AE RID: 49838 RVA: 0x001BFB30 File Offset: 0x001BDD30
+		// (set) Token: 0x0600C2AF RID: 49839 RVA: 0x001BFB6A File Offset: 0x001BDD6A
 		public override float? StartTime
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003834 RID: 14388
-		// (get) Token: 0x0600B780 RID: 46976 RVA: 0x001A92C8 File Offset: 0x001A74C8
-		// (set) Token: 0x0600B781 RID: 46977 RVA: 0x001A9329 File Offset: 0x001A7529
+		// Token: 0x17003B13 RID: 15123
+		// (get) Token: 0x0600C2B0 RID: 49840 RVA: 0x001BFB78 File Offset: 0x001BDD78
+		// (set) Token: 0x0600C2B1 RID: 49841 RVA: 0x001BFBD9 File Offset: 0x001BDDD9
 		public virtual IAudioState AudioState
 		{
 			get
@@ -138,18 +136,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E21 RID: 28193
+		// Token: 0x04007430 RID: 29744
 		[Nullable(2)]
 		protected new IVisualNovelPerformanceSwitchAudioState FbInstance;
 
-		// Token: 0x04006E22 RID: 28194
+		// Token: 0x04007431 RID: 29745
 		[Nullable(2)]
 		protected new IVisualNovelPerformanceSwitchAudioState_SetValue PocoInterface;
 
-		// Token: 0x04006E23 RID: 28195
+		// Token: 0x04007432 RID: 29746
 		private IAudioState _AudioStateCache;
 
-		// Token: 0x04006E24 RID: 28196
+		// Token: 0x04007433 RID: 29747
 		private bool _AudioStateInited;
 	}
 }

@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B2B RID: 11051
+// Token: 0x020020A7 RID: 8359
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 internal class SurvivorsAttributeDescItem : GridProxyAbstract<ISurvivorsAttributeUiData>
 {
-	// Token: 0x06016F09 RID: 93961 RVA: 0x005D2818 File Offset: 0x005D0A18
+	// Token: 0x0601493A RID: 84282 RVA: 0x005FF38C File Offset: 0x005FD58C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ internal class SurvivorsAttributeDescItem : GridProxyAbstract<ISurvivorsAttribut
 		};
 	}
 
-	// Token: 0x06016F0A RID: 93962 RVA: 0x005D28CC File Offset: 0x005D0ACC
+	// Token: 0x0601493B RID: 84283 RVA: 0x005FF440 File Offset: 0x005FD640
 	public override void Refresh(ISurvivorsAttributeUiData data, bool isSelected, int gridIndex)
 	{
 		SurvivorsProperty value = SurvivorsRogueConfig.Instance.GetPropertyConfig(data.AttrId).Value;
@@ -39,13 +39,13 @@ internal class SurvivorsAttributeDescItem : GridProxyAbstract<ISurvivorsAttribut
 		this.SetBgVisible(gridIndex % 2 == 0);
 	}
 
-	// Token: 0x06016F0B RID: 93963 RVA: 0x005D292C File Offset: 0x005D0B2C
+	// Token: 0x0601493C RID: 84284 RVA: 0x005FF4A0 File Offset: 0x005FD6A0
 	public void SetIcon(string icon)
 	{
 		base.SetTextureByPath(icon, base.GetTexture(4), null, null);
 	}
 
-	// Token: 0x06016F0C RID: 93964 RVA: 0x005D2954 File Offset: 0x005D0B54
+	// Token: 0x0601493D RID: 84285 RVA: 0x005FF4C8 File Offset: 0x005FD6C8
 	public void SetValue(double value, bool isPercent = false)
 	{
 		UUIText text = base.GetText(1);
@@ -60,7 +60,7 @@ internal class SurvivorsAttributeDescItem : GridProxyAbstract<ISurvivorsAttribut
 		}
 	}
 
-	// Token: 0x06016F0D RID: 93965 RVA: 0x005D29B9 File Offset: 0x005D0BB9
+	// Token: 0x0601493E RID: 84286 RVA: 0x005FF52D File Offset: 0x005FD72D
 	public void SetTextByTextId(string textId)
 	{
 		UUIText text = base.GetText(0);
@@ -71,7 +71,7 @@ internal class SurvivorsAttributeDescItem : GridProxyAbstract<ISurvivorsAttribut
 		text.ShowTextNew(textId);
 	}
 
-	// Token: 0x06016F0E RID: 93966 RVA: 0x005D29CD File Offset: 0x005D0BCD
+	// Token: 0x0601493F RID: 84287 RVA: 0x005FF541 File Offset: 0x005FD741
 	public void SetBgVisible(bool visible)
 	{
 		UUISprite sprite = base.GetSprite(5);

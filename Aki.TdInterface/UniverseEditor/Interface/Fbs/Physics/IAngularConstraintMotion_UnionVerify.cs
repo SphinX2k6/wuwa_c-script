@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Physics
 {
-	// Token: 0x0200434A RID: 17226
+	// Token: 0x020047AC RID: 18348
 	public static class IAngularConstraintMotion_UnionVerify
 	{
-		// Token: 0x060198A2 RID: 104610 RVA: 0x003A7FA0 File Offset: 0x003A61A0
+		// Token: 0x0601B030 RID: 110640 RVA: 0x003D39C8 File Offset: 0x003D1BC8
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

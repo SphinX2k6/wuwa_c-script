@@ -4,29 +4,29 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005071 RID: 20593
+	// Token: 0x02004041 RID: 16449
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TransitionPopupViewParams
 	{
-		// Token: 0x17008041 RID: 32833
-		// (get) Token: 0x06034C21 RID: 216097 RVA: 0x00C7BDFB File Offset: 0x00C79FFB
-		// (set) Token: 0x06034C22 RID: 216098 RVA: 0x00C7BE03 File Offset: 0x00C7A003
+		// Token: 0x17005401 RID: 21505
+		// (get) Token: 0x06029B16 RID: 170774 RVA: 0x00BC91D3 File Offset: 0x00BC73D3
+		// (set) Token: 0x06029B17 RID: 170775 RVA: 0x00BC91DB File Offset: 0x00BC73DB
 		public int? BoardId { get; set; }
 
-		// Token: 0x17008042 RID: 32834
-		// (get) Token: 0x06034C23 RID: 216099 RVA: 0x00C7BE0C File Offset: 0x00C7A00C
-		// (set) Token: 0x06034C24 RID: 216100 RVA: 0x00C7BE14 File Offset: 0x00C7A014
+		// Token: 0x17005402 RID: 21506
+		// (get) Token: 0x06029B18 RID: 170776 RVA: 0x00BC91E4 File Offset: 0x00BC73E4
+		// (set) Token: 0x06029B19 RID: 170777 RVA: 0x00BC91EC File Offset: 0x00BC73EC
 		public bool InPlot { get; set; }
 
-		// Token: 0x17008043 RID: 32835
-		// (get) Token: 0x06034C25 RID: 216101 RVA: 0x00C7BE1D File Offset: 0x00C7A01D
-		// (set) Token: 0x06034C26 RID: 216102 RVA: 0x00C7BE25 File Offset: 0x00C7A025
+		// Token: 0x17005403 RID: 21507
+		// (get) Token: 0x06029B1A RID: 170778 RVA: 0x00BC91F5 File Offset: 0x00BC73F5
+		// (set) Token: 0x06029B1B RID: 170779 RVA: 0x00BC91FD File Offset: 0x00BC73FD
 		public float? Duration { get; set; }
 
-		// Token: 0x17008044 RID: 32836
-		// (get) Token: 0x06034C27 RID: 216103 RVA: 0x00C7BE2E File Offset: 0x00C7A02E
-		// (set) Token: 0x06034C28 RID: 216104 RVA: 0x00C7BE36 File Offset: 0x00C7A036
+		// Token: 0x17005404 RID: 21508
+		// (get) Token: 0x06029B1C RID: 170780 RVA: 0x00BC9206 File Offset: 0x00BC7406
+		// (set) Token: 0x06029B1D RID: 170781 RVA: 0x00BC920E File Offset: 0x00BC740E
 		public ITransitionPopupStyle Style { get; set; }
 	}
 }

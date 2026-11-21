@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x0200646F RID: 25711
+	// Token: 0x020053ED RID: 21485
 	public enum ESetScaleSource
 	{
-		// Token: 0x04021965 RID: 137573
+		// Token: 0x0401C294 RID: 115348
 		PointerScroll,
-		// Token: 0x04021966 RID: 137574
+		// Token: 0x0401C295 RID: 115349
 		MultiTouch,
-		// Token: 0x04021967 RID: 137575
+		// Token: 0x0401C296 RID: 115350
 		LongPress,
-		// Token: 0x04021968 RID: 137576
+		// Token: 0x0401C297 RID: 115351
 		Slider,
-		// Token: 0x04021969 RID: 137577
+		// Token: 0x0401C298 RID: 115352
 		Tween,
-		// Token: 0x0402196A RID: 137578
+		// Token: 0x0401C299 RID: 115353
 		Other
 	}
 }

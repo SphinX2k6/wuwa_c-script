@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F19 RID: 7961
+	// Token: 0x02000623 RID: 1571
 	[UnrealObjectPath("/Script/KuroUtility.XboxPermissionCheckResult")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FXboxPermissionCheckResult : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E354 RID: 123732 RVA: 0x002CE855 File Offset: 0x002CCA55
+		// Token: 0x06008963 RID: 35171 RVA: 0x000CF2F5 File Offset: 0x000CD4F5
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FXboxPermissionCheckResult._ScriptStructPtr != 0) ? FXboxPermissionCheckResult._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.XboxPermissionCheckResult", ref FXboxPermissionCheckResult._ScriptStructPtr);
 		}
 
-		// Token: 0x170077F9 RID: 30713
-		// (get) Token: 0x0601E355 RID: 123733 RVA: 0x002CE879 File Offset: 0x002CCA79
-		// (set) Token: 0x0601E356 RID: 123734 RVA: 0x002CE889 File Offset: 0x002CCA89
+		// Token: 0x170019A4 RID: 6564
+		// (get) Token: 0x06008964 RID: 35172 RVA: 0x000CF319 File Offset: 0x000CD519
+		// (set) Token: 0x06008965 RID: 35173 RVA: 0x000CF329 File Offset: 0x000CD529
 		public unsafe bool bSuccess
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077FA RID: 30714
-		// (get) Token: 0x0601E357 RID: 123735 RVA: 0x002CE89A File Offset: 0x002CCA9A
-		// (set) Token: 0x0601E358 RID: 123736 RVA: 0x002CE8AA File Offset: 0x002CCAAA
+		// Token: 0x170019A5 RID: 6565
+		// (get) Token: 0x06008966 RID: 35174 RVA: 0x000CF33A File Offset: 0x000CD53A
+		// (set) Token: 0x06008967 RID: 35175 RVA: 0x000CF34A File Offset: 0x000CD54A
 		public unsafe bool bIsAllowed
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077FB RID: 30715
-		// (get) Token: 0x0601E359 RID: 123737 RVA: 0x002CE8BB File Offset: 0x002CCABB
-		// (set) Token: 0x0601E35A RID: 123738 RVA: 0x002CE8CB File Offset: 0x002CCACB
+		// Token: 0x170019A6 RID: 6566
+		// (get) Token: 0x06008968 RID: 35176 RVA: 0x000CF35B File Offset: 0x000CD55B
+		// (set) Token: 0x06008969 RID: 35177 RVA: 0x000CF36B File Offset: 0x000CD56B
 		public unsafe long TargetXuid
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077FC RID: 30716
-		// (get) Token: 0x0601E35B RID: 123739 RVA: 0x002CE8DC File Offset: 0x002CCADC
-		// (set) Token: 0x0601E35C RID: 123740 RVA: 0x002CE8EC File Offset: 0x002CCAEC
+		// Token: 0x170019A7 RID: 6567
+		// (get) Token: 0x0600896A RID: 35178 RVA: 0x000CF37C File Offset: 0x000CD57C
+		// (set) Token: 0x0600896B RID: 35179 RVA: 0x000CF38C File Offset: 0x000CD58C
 		public unsafe EXboxPermission Permission
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077FD RID: 30717
-		// (get) Token: 0x0601E35D RID: 123741 RVA: 0x002CE8FD File Offset: 0x002CCAFD
-		// (set) Token: 0x0601E35E RID: 123742 RVA: 0x002CE90D File Offset: 0x002CCB0D
+		// Token: 0x170019A8 RID: 6568
+		// (get) Token: 0x0600896C RID: 35180 RVA: 0x000CF39D File Offset: 0x000CD59D
+		// (set) Token: 0x0600896D RID: 35181 RVA: 0x000CF3AD File Offset: 0x000CD5AD
 		public unsafe int DeniedPermission
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077FE RID: 30718
-		// (get) Token: 0x0601E35F RID: 123743 RVA: 0x002CE91E File Offset: 0x002CCB1E
-		// (set) Token: 0x0601E360 RID: 123744 RVA: 0x002CE92E File Offset: 0x002CCB2E
+		// Token: 0x170019A9 RID: 6569
+		// (get) Token: 0x0600896E RID: 35182 RVA: 0x000CF3BE File Offset: 0x000CD5BE
+		// (set) Token: 0x0600896F RID: 35183 RVA: 0x000CF3CE File Offset: 0x000CD5CE
 		public unsafe int DenyReason
 		{
 			get
@@ -106,76 +106,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E361 RID: 123745 RVA: 0x002CE93F File Offset: 0x002CCB3F
+		// Token: 0x06008970 RID: 35184 RVA: 0x000CF3DF File Offset: 0x000CD5DF
 		public FXboxPermissionCheckResult()
 		{
 		}
 
-		// Token: 0x0601E362 RID: 123746 RVA: 0x002CE947 File Offset: 0x002CCB47
-		public FXboxPermissionCheckResult(bool bSuccess, bool bIsAllowed, long TargetXuid, EXboxPermission Permission, int DeniedPermission, int DenyReason)
-		{
-			this.bSuccess = bSuccess;
-			this.bIsAllowed = bIsAllowed;
-			this.TargetXuid = TargetXuid;
-			this.Permission = Permission;
-			this.DeniedPermission = DeniedPermission;
-			this.DenyReason = DenyReason;
-		}
-
-		// Token: 0x0601E363 RID: 123747 RVA: 0x002CE97C File Offset: 0x002CCB7C
+		// Token: 0x06008971 RID: 35185 RVA: 0x000CF3E7 File Offset: 0x000CD5E7
 		protected override IntPtr GetUStructPtr()
 		{
 			return FXboxPermissionCheckResult.StaticStruct();
 		}
 
-		// Token: 0x0601E364 RID: 123748 RVA: 0x002CE988 File Offset: 0x002CCB88
+		// Token: 0x06008972 RID: 35186 RVA: 0x000CF3F3 File Offset: 0x000CD5F3
 		[NullableContext(2)]
 		public FXboxPermissionCheckResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E365 RID: 123749 RVA: 0x002CE992 File Offset: 0x002CCB92
+		// Token: 0x06008973 RID: 35187 RVA: 0x000CF3FD File Offset: 0x000CD5FD
 		public FXboxPermissionCheckResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E366 RID: 123750 RVA: 0x002CE99D File Offset: 0x002CCB9D
+		// Token: 0x06008974 RID: 35188 RVA: 0x000CF408 File Offset: 0x000CD608
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FXboxPermissionCheckResult(Pointer, false, true);
 		}
 
-		// Token: 0x0601E367 RID: 123751 RVA: 0x002CE9A7 File Offset: 0x002CCBA7
+		// Token: 0x06008975 RID: 35189 RVA: 0x000CF412 File Offset: 0x000CD612
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FXboxPermissionCheckResult(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040104DC RID: 66780
+		// Token: 0x04003BA0 RID: 15264
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.XboxPermissionCheckResult";
 
-		// Token: 0x040104DD RID: 66781
+		// Token: 0x04003BA1 RID: 15265
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040104DE RID: 66782
+		// Token: 0x04003BA2 RID: 15266
 		internal static int __PropertyOffset_bSuccess;
 
-		// Token: 0x040104DF RID: 66783
+		// Token: 0x04003BA3 RID: 15267
 		internal static int __PropertyOffset_bIsAllowed;
 
-		// Token: 0x040104E0 RID: 66784
+		// Token: 0x04003BA4 RID: 15268
 		internal static int __PropertyOffset_TargetXuid;
 
-		// Token: 0x040104E1 RID: 66785
+		// Token: 0x04003BA5 RID: 15269
 		internal static int __PropertyOffset_Permission;
 
-		// Token: 0x040104E2 RID: 66786
+		// Token: 0x04003BA6 RID: 15270
 		internal static int __PropertyOffset_DeniedPermission;
 
-		// Token: 0x040104E3 RID: 66787
+		// Token: 0x04003BA7 RID: 15271
 		internal static int __PropertyOffset_DenyReason;
 	}
 }

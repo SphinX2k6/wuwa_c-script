@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DD2 RID: 7634
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FEB RID: 8171
 	public class IScaleMapData
 	{
-		// Token: 0x0600A377 RID: 41847 RVA: 0x00173284 File Offset: 0x00171484
+		// Token: 0x0600AD8D RID: 44429 RVA: 0x00187ADC File Offset: 0x00185CDC
 		private IScaleMapData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A378 RID: 41848 RVA: 0x001732BC File Offset: 0x001714BC
+		// Token: 0x0600AD8E RID: 44430 RVA: 0x00187B14 File Offset: 0x00185D14
 		public static IScaleMapData Create([Nullable(2)] IScaleMapData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A379 RID: 41849 RVA: 0x001732CF File Offset: 0x001714CF
+		// Token: 0x0600AD8F RID: 44431 RVA: 0x00187B27 File Offset: 0x00185D27
 		public static IScaleMapData CreateFromSetValue([Nullable(2)] IScaleMapData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A37A RID: 41850 RVA: 0x001732E2 File Offset: 0x001714E2
+		// Token: 0x0600AD90 RID: 44432 RVA: 0x00187B3A File Offset: 0x00185D3A
 		public IScaleMapData_SetValue ToSetValue()
 		{
 			return new IScaleMapData_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003257 RID: 12887
-		// (get) Token: 0x0600A37B RID: 41851 RVA: 0x00173301 File Offset: 0x00171501
-		// (set) Token: 0x0600A37C RID: 41852 RVA: 0x0017332C File Offset: 0x0017152C
+		// Token: 0x170034F4 RID: 13556
+		// (get) Token: 0x0600AD91 RID: 44433 RVA: 0x00187B59 File Offset: 0x00185D59
+		// (set) Token: 0x0600AD92 RID: 44434 RVA: 0x00187B84 File Offset: 0x00185D84
 		public virtual string Key
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003258 RID: 12888
-		// (get) Token: 0x0600A37D RID: 41853 RVA: 0x0017333A File Offset: 0x0017153A
-		// (set) Token: 0x0600A37E RID: 41854 RVA: 0x00173369 File Offset: 0x00171569
+		// Token: 0x170034F5 RID: 13557
+		// (get) Token: 0x0600AD93 RID: 44435 RVA: 0x00187B92 File Offset: 0x00185D92
+		// (set) Token: 0x0600AD94 RID: 44436 RVA: 0x00187BC1 File Offset: 0x00185DC1
 		public virtual float Scale
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006200 RID: 25088
+		// Token: 0x0400678D RID: 26509
 		[Nullable(2)]
 		protected IScaleMapData FbInstance;
 
-		// Token: 0x04006201 RID: 25089
+		// Token: 0x0400678E RID: 26510
 		[Nullable(2)]
 		protected IScaleMapData_SetValue PocoInterface;
 	}

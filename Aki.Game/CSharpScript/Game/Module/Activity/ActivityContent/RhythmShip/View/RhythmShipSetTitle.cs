@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006246 RID: 25158
+	// Token: 0x020051C4 RID: 20932
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 	})]
 	public class RhythmShipSetTitle : SyncGridProxyAbstract<RhythmShipSetData>
 	{
-		// Token: 0x0603F637 RID: 259639 RVA: 0x00F531CC File Offset: 0x00F513CC
+		// Token: 0x060342F8 RID: 213752 RVA: 0x00E9A128 File Offset: 0x00E98328
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,14 +29,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F638 RID: 259640 RVA: 0x00F53234 File Offset: 0x00F51434
+		// Token: 0x060342F9 RID: 213753 RVA: 0x00E9A190 File Offset: 0x00E98390
 		public override void Refresh(RhythmShipSetData data)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.Text, Array.Empty<object>());
 			base.GetButton(2).RootUIComp.Get().SetUIActive(data.Type == ERhythmShipSetDataType.TitleWithBtn);
 		}
 
-		// Token: 0x0603F639 RID: 259641 RVA: 0x00F5327F File Offset: 0x00F5147F
+		// Token: 0x060342FA RID: 213754 RVA: 0x00E9A1DB File Offset: 0x00E983DB
 		private void OnClickBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipSetTipsView, null, null);

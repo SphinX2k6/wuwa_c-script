@@ -3,50 +3,50 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048C3 RID: 18627
+	// Token: 0x02004D28 RID: 19752
 	public class IVersionControlSaveConfig_CommitTasksT
 	{
-		// Token: 0x17008733 RID: 34611
-		// (get) Token: 0x0601D1E6 RID: 119270 RVA: 0x0041CAA8 File Offset: 0x0041ACA8
-		// (set) Token: 0x0601D1E7 RID: 119271 RVA: 0x0041CAB0 File Offset: 0x0041ACB0
+		// Token: 0x17008D7B RID: 36219
+		// (get) Token: 0x0601E9D3 RID: 125395 RVA: 0x00449244 File Offset: 0x00447444
+		// (set) Token: 0x0601E9D4 RID: 125396 RVA: 0x0044924C File Offset: 0x0044744C
 		public int SwarmId { get; set; }
 
-		// Token: 0x17008734 RID: 34612
-		// (get) Token: 0x0601D1E8 RID: 119272 RVA: 0x0041CAB9 File Offset: 0x0041ACB9
-		// (set) Token: 0x0601D1E9 RID: 119273 RVA: 0x0041CAC1 File Offset: 0x0041ACC1
+		// Token: 0x17008D7C RID: 36220
+		// (get) Token: 0x0601E9D5 RID: 125397 RVA: 0x00449255 File Offset: 0x00447455
+		// (set) Token: 0x0601E9D6 RID: 125398 RVA: 0x0044925D File Offset: 0x0044745D
 		public int ChangeListId { get; set; }
 
-		// Token: 0x17008735 RID: 34613
-		// (get) Token: 0x0601D1EA RID: 119274 RVA: 0x0041CACA File Offset: 0x0041ACCA
-		// (set) Token: 0x0601D1EB RID: 119275 RVA: 0x0041CAD2 File Offset: 0x0041ACD2
+		// Token: 0x17008D7D RID: 36221
+		// (get) Token: 0x0601E9D7 RID: 125399 RVA: 0x00449266 File Offset: 0x00447466
+		// (set) Token: 0x0601E9D8 RID: 125400 RVA: 0x0044926E File Offset: 0x0044746E
 		public IVersionControlSaveConfig_CommitTasks_SwarmRequestStatusT SwarmRequestStatus { get; set; }
 
-		// Token: 0x17008736 RID: 34614
-		// (get) Token: 0x0601D1EC RID: 119276 RVA: 0x0041CADB File Offset: 0x0041ACDB
-		// (set) Token: 0x0601D1ED RID: 119277 RVA: 0x0041CAE3 File Offset: 0x0041ACE3
+		// Token: 0x17008D7E RID: 36222
+		// (get) Token: 0x0601E9D9 RID: 125401 RVA: 0x00449277 File Offset: 0x00447477
+		// (set) Token: 0x0601E9DA RID: 125402 RVA: 0x0044927F File Offset: 0x0044747F
 		public List<string> SwarmPassDiffFiles { get; set; }
 
-		// Token: 0x17008737 RID: 34615
-		// (get) Token: 0x0601D1EE RID: 119278 RVA: 0x0041CAEC File Offset: 0x0041ACEC
-		// (set) Token: 0x0601D1EF RID: 119279 RVA: 0x0041CAF4 File Offset: 0x0041ACF4
+		// Token: 0x17008D7F RID: 36223
+		// (get) Token: 0x0601E9DB RID: 125403 RVA: 0x00449288 File Offset: 0x00447488
+		// (set) Token: 0x0601E9DC RID: 125404 RVA: 0x00449290 File Offset: 0x00447490
 		public List<string> SwarmPassOccupiedFiles { get; set; }
 
-		// Token: 0x17008738 RID: 34616
-		// (get) Token: 0x0601D1F0 RID: 119280 RVA: 0x0041CAFD File Offset: 0x0041ACFD
-		// (set) Token: 0x0601D1F1 RID: 119281 RVA: 0x0041CB05 File Offset: 0x0041AD05
+		// Token: 0x17008D80 RID: 36224
+		// (get) Token: 0x0601E9DD RID: 125405 RVA: 0x00449299 File Offset: 0x00447499
+		// (set) Token: 0x0601E9DE RID: 125406 RVA: 0x004492A1 File Offset: 0x004474A1
 		public bool IsUpdatingSwarmPassFiles { get; set; }
 
-		// Token: 0x17008739 RID: 34617
-		// (get) Token: 0x0601D1F2 RID: 119282 RVA: 0x0041CB0E File Offset: 0x0041AD0E
-		// (set) Token: 0x0601D1F3 RID: 119283 RVA: 0x0041CB16 File Offset: 0x0041AD16
+		// Token: 0x17008D81 RID: 36225
+		// (get) Token: 0x0601E9DF RID: 125407 RVA: 0x004492AA File Offset: 0x004474AA
+		// (set) Token: 0x0601E9E0 RID: 125408 RVA: 0x004492B2 File Offset: 0x004474B2
 		public List<string> Files { get; set; }
 
-		// Token: 0x1700873A RID: 34618
-		// (get) Token: 0x0601D1F4 RID: 119284 RVA: 0x0041CB1F File Offset: 0x0041AD1F
-		// (set) Token: 0x0601D1F5 RID: 119285 RVA: 0x0041CB27 File Offset: 0x0041AD27
+		// Token: 0x17008D82 RID: 36226
+		// (get) Token: 0x0601E9E1 RID: 125409 RVA: 0x004492BB File Offset: 0x004474BB
+		// (set) Token: 0x0601E9E2 RID: 125410 RVA: 0x004492C3 File Offset: 0x004474C3
 		public long Timestamp { get; set; }
 
-		// Token: 0x0601D1F6 RID: 119286 RVA: 0x0041CB30 File Offset: 0x0041AD30
+		// Token: 0x0601E9E3 RID: 125411 RVA: 0x004492CC File Offset: 0x004474CC
 		public IVersionControlSaveConfig_CommitTasksT()
 		{
 			this.SwarmId = 0;

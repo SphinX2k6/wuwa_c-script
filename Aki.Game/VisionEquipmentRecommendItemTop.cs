@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024C0 RID: 9408
+// Token: 0x020019A7 RID: 6567
 [NullableContext(1)]
 [Nullable(0)]
 internal class VisionEquipmentRecommendItemTop : UiPanelBase
 {
-	// Token: 0x06012DDC RID: 77276 RVA: 0x004A8A64 File Offset: 0x004A6C64
+	// Token: 0x0601029C RID: 66204 RVA: 0x004B6618 File Offset: 0x004B4818
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ internal class VisionEquipmentRecommendItemTop : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012DDD RID: 77277 RVA: 0x004A8ACB File Offset: 0x004A6CCB
+	// Token: 0x0601029D RID: 66205 RVA: 0x004B667F File Offset: 0x004B487F
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<EToggleState> onToggleClickCallback = this.OnToggleClickCallback;
@@ -35,7 +35,7 @@ internal class VisionEquipmentRecommendItemTop : UiPanelBase
 		onToggleClickCallback(state);
 	}
 
-	// Token: 0x06012DDE RID: 77278 RVA: 0x004A8ADE File Offset: 0x004A6CDE
+	// Token: 0x0601029E RID: 66206 RVA: 0x004B6692 File Offset: 0x004B4892
 	public void SetToggleState(EToggleState state)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -46,19 +46,19 @@ internal class VisionEquipmentRecommendItemTop : UiPanelBase
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06012DDF RID: 77279 RVA: 0x004A8AF6 File Offset: 0x004A6CF6
+	// Token: 0x0601029F RID: 66207 RVA: 0x004B66AA File Offset: 0x004B48AA
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<FetterIconItem, IVisionNewRecommendFetterItemData>(base.GetLayoutBase(1), new Func<FetterIconItem>(this.InitElementItem), null, false, true);
 	}
 
-	// Token: 0x06012DE0 RID: 77280 RVA: 0x004A8B19 File Offset: 0x004A6D19
+	// Token: 0x060102A0 RID: 66208 RVA: 0x004B66CD File Offset: 0x004B48CD
 	private FetterIconItem InitElementItem()
 	{
 		return new FetterIconItem();
 	}
 
-	// Token: 0x06012DE1 RID: 77281 RVA: 0x004A8B20 File Offset: 0x004A6D20
+	// Token: 0x060102A1 RID: 66209 RVA: 0x004B66D4 File Offset: 0x004B48D4
 	public void Refresh(List<IVisionNewRecommendFetterItemData> data)
 	{
 		GenericLayout<FetterIconItem, IVisionNewRecommendFetterItemData> layout = this.Layout;
@@ -69,7 +69,7 @@ internal class VisionEquipmentRecommendItemTop : UiPanelBase
 		layout.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x04008E30 RID: 36400
+	// Token: 0x04008F7A RID: 36730
 	[Nullable(new byte[]
 	{
 		2,
@@ -78,7 +78,7 @@ internal class VisionEquipmentRecommendItemTop : UiPanelBase
 	})]
 	private GenericLayout<FetterIconItem, IVisionNewRecommendFetterItemData> Layout;
 
-	// Token: 0x04008E31 RID: 36401
+	// Token: 0x04008F7B RID: 36731
 	[Nullable(2)]
 	public Action<EToggleState> OnToggleClickCallback;
 }

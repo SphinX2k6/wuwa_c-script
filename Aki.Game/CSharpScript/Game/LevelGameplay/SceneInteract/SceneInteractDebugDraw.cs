@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 {
-	// Token: 0x02006A76 RID: 27254
+	// Token: 0x02005BD3 RID: 23507
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneInteractDebugDraw : IStaticVariableResetter
 	{
-		// Token: 0x06043BED RID: 277485 RVA: 0x01094B2C File Offset: 0x01092D2C
+		// Token: 0x06039C3B RID: 236603 RVA: 0x01039358 File Offset: 0x01037558
 		static SceneInteractDebugDraw()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneInteractDebugDraw.CreateStaticDefaultValue), new Action(SceneInteractDebugDraw.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06043BEE RID: 277486 RVA: 0x01094D08 File Offset: 0x01092F08
+		// Token: 0x06039C3C RID: 236604 RVA: 0x01039534 File Offset: 0x01037734
 		public static void CreateStaticDefaultValue()
 		{
 			SceneInteractDebugDraw.TextStackMap = new Dictionary<string, int>();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			SceneInteractDebugDraw.TmpLabelLoc = Vector.Create();
 		}
 
-		// Token: 0x06043BEF RID: 277487 RVA: 0x01094D32 File Offset: 0x01092F32
+		// Token: 0x06039C3D RID: 236605 RVA: 0x0103955E File Offset: 0x0103775E
 		public static void ResetStaticDefaultValue()
 		{
 			SceneInteractDebugDraw.TextStackMap = null;
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			SceneInteractDebugDraw.TmpLabelLoc = null;
 		}
 
-		// Token: 0x17009930 RID: 39216
-		// (get) Token: 0x06043BF0 RID: 277488 RVA: 0x01094D4C File Offset: 0x01092F4C
+		// Token: 0x17006E15 RID: 28181
+		// (get) Token: 0x06039C3E RID: 236606 RVA: 0x01039578 File Offset: 0x01037778
 		public static bool Enabled
 		{
 			get
@@ -46,8 +46,8 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x17009931 RID: 39217
-		// (get) Token: 0x06043BF1 RID: 277489 RVA: 0x01094D59 File Offset: 0x01092F59
+		// Token: 0x17006E16 RID: 28182
+		// (get) Token: 0x06039C3F RID: 236607 RVA: 0x01039585 File Offset: 0x01037785
 		public static bool RangeDrawEnabled
 		{
 			get
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043BF2 RID: 277490 RVA: 0x01094D66 File Offset: 0x01092F66
+		// Token: 0x06039C40 RID: 236608 RVA: 0x01039592 File Offset: 0x01037792
 		private static int GetDebugLevel()
 		{
 			SundryModel instance = SundryModel.Instance;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return instance.GetModuleDebugLevel("FoxJumping");
 		}
 
-		// Token: 0x06043BF3 RID: 277491 RVA: 0x01094D80 File Offset: 0x01092F80
+		// Token: 0x06039C41 RID: 236609 RVA: 0x010395AC File Offset: 0x010377AC
 		public static void DrawInRangePoint(Vector charLoc, ISceneInteractDebugPoint point, double? weight, [Nullable(2)] string failReason, int? enableRangeId = null)
 		{
 			Vector location = point.GetLocation();
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			SceneInteractDebugDraw.DrawInRangeLineAndText(charLoc, location, info);
 		}
 
-		// Token: 0x06043BF4 RID: 277492 RVA: 0x01094EB0 File Offset: 0x010930B0
+		// Token: 0x06039C42 RID: 236610 RVA: 0x010396DC File Offset: 0x010378DC
 		public static void DrawSelectedPoint(Vector charLoc, ISceneInteractDebugPoint point, double weight, [Nullable(2)] string failReason)
 		{
 			Vector location = point.GetLocation();
@@ -123,13 +123,13 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			SceneInteractDebugDraw.DrawSelectedLineAndText(charLoc, location, info);
 		}
 
-		// Token: 0x06043BF5 RID: 277493 RVA: 0x01094F4E File Offset: 0x0109314E
+		// Token: 0x06039C43 RID: 236611 RVA: 0x0103977A File Offset: 0x0103797A
 		public static void DrawSplineLandingCandidate(Vector location, bool isPlaneHit)
 		{
 			UKismetSystemLibrary.D_DrawDebugPoint(GlobalData.World, location.ToUeVector(false), (float)(isPlaneHit ? 16 : 8), isPlaneHit ? SceneInteractDebugDraw.splinePlaneHitColor : SceneInteractDebugDraw.splineCandidateColor, 0f);
 		}
 
-		// Token: 0x06043BF6 RID: 277494 RVA: 0x01094F80 File Offset: 0x01093180
+		// Token: 0x06039C44 RID: 236612 RVA: 0x010397AC File Offset: 0x010379AC
 		public static void DrawSplineLandingResult(Vector jumpPointLoc, Vector landingLoc, bool isPlaneHit, double distToPlayer, int candidateCount, int planeHitCount)
 		{
 			UKismetSystemLibrary.D_DrawDebugLine(GlobalData.World, jumpPointLoc.ToUeVector(false), landingLoc.ToUeVector(false), SceneInteractDebugDraw.splineLandingColor, 0f, 4f);
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			UKismetSystemLibrary.D_DrawDebugString(GlobalData.World, landingLoc.ToUeVector(false), SceneInteractDebugDraw.BuildStackedText(landingLoc, text), null, new FLinearColor?(SceneInteractDebugDraw.splineLandingTextColor), 0f);
 		}
 
-		// Token: 0x06043BF7 RID: 277495 RVA: 0x01095094 File Offset: 0x01093294
+		// Token: 0x06039C45 RID: 236613 RVA: 0x010398C0 File Offset: 0x01037AC0
 		public static void DrawRangeGateBoxes(int enableRangeId, int disableRangeId, int entityId)
 		{
 			FLinearColor color = SceneInteractDebugDraw.rangeGateEnableColor;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			SceneInteractDebugDraw.DrawRangeGateBox(disableRangeId, color2, defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06043BF8 RID: 277496 RVA: 0x0109512C File Offset: 0x0109332C
+		// Token: 0x06039C46 RID: 236614 RVA: 0x01039958 File Offset: 0x01037B58
 		private static void DrawRangeGateBox(int boxId, FLinearColor color, string label)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(4, 1);
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			UKismetSystemLibrary.D_DrawDebugString(GlobalData.World, boxSnapshot.WorldPosition.ToUeVector(false), SceneInteractDebugDraw.BuildStackedText(boxSnapshot.WorldPosition, label), null, new FLinearColor?(color), 0f);
 		}
 
-		// Token: 0x06043BF9 RID: 277497 RVA: 0x010951EC File Offset: 0x010933EC
+		// Token: 0x06039C47 RID: 236615 RVA: 0x01039A18 File Offset: 0x01037C18
 		[NullableContext(2)]
 		public static void DrawEntityTriggerRange(EntityHandle entityHandle)
 		{
@@ -228,7 +228,9 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			FVectorDouble? fvectorDouble2 = fvectorDouble;
 			if (fvectorDouble2 != null)
 			{
-				SceneInteractDebugDraw.TmpLabelLoc.FromUeVector(fvectorDouble2);
+				Vector tmpLabelLoc = SceneInteractDebugDraw.TmpLabelLoc;
+				FVectorDouble? fvectorDouble3 = fvectorDouble2;
+				tmpLabelLoc.FromUeVector((fvectorDouble3 != null) ? fvectorDouble3.GetValueOrDefault() : null);
 				defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(12, 2);
 				defaultInterpolatedStringHandler.AppendLiteral("[触发范围]E=");
 				defaultInterpolatedStringHandler.AppendFormatted<int>(entityHandle.Id);
@@ -272,7 +274,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043BFA RID: 277498 RVA: 0x01095468 File Offset: 0x01093668
+		// Token: 0x06039C48 RID: 236616 RVA: 0x01039CA8 File Offset: 0x01037EA8
 		private static bool TryMarkRangeDrawn(string key)
 		{
 			long frameCount = UKismetSystemLibrary.GetFrameCount();
@@ -289,7 +291,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return true;
 		}
 
-		// Token: 0x06043BFB RID: 277499 RVA: 0x010954B0 File Offset: 0x010936B0
+		// Token: 0x06039C49 RID: 236617 RVA: 0x01039CF0 File Offset: 0x01037EF0
 		private static void DrawRangeShapeComp(UShapeComponent shapeComp)
 		{
 			UBoxComponent uboxComponent = shapeComp as UBoxComponent;
@@ -308,7 +310,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043BFC RID: 277500 RVA: 0x01095534 File Offset: 0x01093734
+		// Token: 0x06039C4A RID: 236618 RVA: 0x01039D74 File Offset: 0x01037F74
 		[NullableContext(2)]
 		private static void DrawRangeCylinder(UMeshComponent meshComp, double height, double radius, double hollowInnerRadius)
 		{
@@ -329,7 +331,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043BFD RID: 277501 RVA: 0x010955D4 File Offset: 0x010937D4
+		// Token: 0x06039C4B RID: 236619 RVA: 0x01039E14 File Offset: 0x01038014
 		public static void DrawTraceSegment(Vector start, Vector end, bool blocked, string blockedLabel)
 		{
 			UKismetSystemLibrary.D_DrawDebugLine(GlobalData.World, start.ToUeVector(false), end.ToUeVector(false), blocked ? SceneInteractDebugDraw.traceBlockedColor : SceneInteractDebugDraw.traceOkColor, 0f, (float)(blocked ? 4 : 1));
@@ -342,7 +344,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043BFE RID: 277502 RVA: 0x01095660 File Offset: 0x01093860
+		// Token: 0x06039C4C RID: 236620 RVA: 0x01039EA0 File Offset: 0x010380A0
 		private static string BuildStackedText(Vector loc, string text)
 		{
 			long frameCount = UKismetSystemLibrary.GetFrameCount();
@@ -368,127 +370,127 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return new string('\n', num) + text;
 		}
 
-		// Token: 0x06043BFF RID: 277503 RVA: 0x0109574C File Offset: 0x0109394C
+		// Token: 0x06039C4D RID: 236621 RVA: 0x01039F8C File Offset: 0x0103818C
 		private static void DrawInRangeLineAndText(Vector charLoc, Vector pointLoc, string info)
 		{
 			UKismetSystemLibrary.D_DrawDebugLine(GlobalData.World, charLoc.ToUeVector(false), pointLoc.ToUeVector(false), SceneInteractDebugDraw.inRangeLineColor, 0f, 1f);
 			UKismetSystemLibrary.D_DrawDebugString(GlobalData.World, pointLoc.ToUeVector(false), SceneInteractDebugDraw.BuildStackedText(pointLoc, info), null, new FLinearColor?(SceneInteractDebugDraw.inRangeTextColor), 0f);
 		}
 
-		// Token: 0x06043C00 RID: 277504 RVA: 0x010957A8 File Offset: 0x010939A8
+		// Token: 0x06039C4E RID: 236622 RVA: 0x01039FE8 File Offset: 0x010381E8
 		private static void DrawSelectedLineAndText(Vector charLoc, Vector pointLoc, string info)
 		{
 			UKismetSystemLibrary.D_DrawDebugLine(GlobalData.World, charLoc.ToUeVector(false), pointLoc.ToUeVector(false), SceneInteractDebugDraw.selectedLineColor, 0f, 4f);
 			UKismetSystemLibrary.D_DrawDebugString(GlobalData.World, pointLoc.ToUeVector(false), SceneInteractDebugDraw.BuildStackedText(pointLoc, info), null, new FLinearColor?(SceneInteractDebugDraw.selectedTextColor), 0f);
 		}
 
-		// Token: 0x0402363E RID: 144958
+		// Token: 0x0401E830 RID: 124976
 		public const string SCENE_INTERACT_DEBUG_KEY = "FoxJumping";
 
-		// Token: 0x0402363F RID: 144959
+		// Token: 0x0401E831 RID: 124977
 		private const int DEBUG_LEVEL_BASIC = 1;
 
-		// Token: 0x04023640 RID: 144960
+		// Token: 0x0401E832 RID: 124978
 		private const int DEBUG_LEVEL_RANGE = 2;
 
-		// Token: 0x04023641 RID: 144961
+		// Token: 0x0401E833 RID: 124979
 		private const int DRAW_DURATION = 0;
 
-		// Token: 0x04023642 RID: 144962
+		// Token: 0x0401E834 RID: 124980
 		private const int LINE_THICKNESS = 1;
 
-		// Token: 0x04023643 RID: 144963
+		// Token: 0x0401E835 RID: 124981
 		private const int SELECTED_LINE_THICKNESS = 4;
 
-		// Token: 0x04023644 RID: 144964
+		// Token: 0x0401E836 RID: 124982
 		private const int TEXT_STACK_QUANTIZE = 25;
 
-		// Token: 0x04023645 RID: 144965
+		// Token: 0x0401E837 RID: 124983
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor inRangeLineColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-		// Token: 0x04023646 RID: 144966
+		// Token: 0x0401E838 RID: 124984
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor selectedLineColor = new FLinearColor(1f, 1f, 0f, 1f);
 
-		// Token: 0x04023647 RID: 144967
+		// Token: 0x0401E839 RID: 124985
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor traceOkColor = new FLinearColor(0f, 0.8f, 1f, 1f);
 
-		// Token: 0x04023648 RID: 144968
+		// Token: 0x0401E83A RID: 124986
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor traceBlockedColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-		// Token: 0x04023649 RID: 144969
+		// Token: 0x0401E83B RID: 124987
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor inRangeTextColor = new FLinearColor(0.6f, 1f, 0.6f, 1f);
 
-		// Token: 0x0402364A RID: 144970
+		// Token: 0x0401E83C RID: 124988
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor selectedTextColor = new FLinearColor(1f, 1f, 0.4f, 1f);
 
-		// Token: 0x0402364B RID: 144971
+		// Token: 0x0401E83D RID: 124989
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor blockedTextColor = new FLinearColor(1f, 0.3f, 0.3f, 1f);
 
-		// Token: 0x0402364C RID: 144972
+		// Token: 0x0401E83E RID: 124990
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor splineCandidateColor = new FLinearColor(1f, 1f, 1f, 1f);
 
-		// Token: 0x0402364D RID: 144973
+		// Token: 0x0401E83F RID: 124991
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor splinePlaneHitColor = new FLinearColor(1f, 0f, 1f, 1f);
 
-		// Token: 0x0402364E RID: 144974
+		// Token: 0x0401E840 RID: 124992
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor splineLandingColor = new FLinearColor(1f, 0.5f, 0f, 1f);
 
-		// Token: 0x0402364F RID: 144975
+		// Token: 0x0401E841 RID: 124993
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor splineLandingTextColor = new FLinearColor(1f, 0.7f, 0.3f, 1f);
 
-		// Token: 0x04023650 RID: 144976
+		// Token: 0x0401E842 RID: 124994
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor rangeGateEnableColor = new FLinearColor(0f, 1f, 0.6f, 1f);
 
-		// Token: 0x04023651 RID: 144977
+		// Token: 0x0401E843 RID: 124995
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor rangeGateDisableColor = new FLinearColor(1f, 0.2f, 0.2f, 1f);
 
-		// Token: 0x04023652 RID: 144978
+		// Token: 0x0401E844 RID: 124996
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor entityRangeColor = new FLinearColor(0.2f, 0.6f, 1f, 1f);
 
-		// Token: 0x04023653 RID: 144979
+		// Token: 0x0401E845 RID: 124997
 		private const int RANGE_DRAW_SEGMENTS = 12;
 
-		// Token: 0x04023654 RID: 144980
+		// Token: 0x0401E846 RID: 124998
 		private const int SPLINE_CANDIDATE_POINT_SIZE = 8;
 
-		// Token: 0x04023655 RID: 144981
+		// Token: 0x0401E847 RID: 124999
 		private const int SPLINE_PLANE_HIT_POINT_SIZE = 16;
 
-		// Token: 0x04023656 RID: 144982
+		// Token: 0x0401E848 RID: 125000
 		private const int SPLINE_LANDING_POINT_SIZE = 24;
 
-		// Token: 0x04023657 RID: 144983
+		// Token: 0x0401E849 RID: 125001
 		private static Dictionary<string, int> TextStackMap;
 
-		// Token: 0x04023658 RID: 144984
+		// Token: 0x0401E84A RID: 125002
 		[StaticVariableRuleIgnore]
 		private static long TextStackFrame = -1L;
 
-		// Token: 0x04023659 RID: 144985
+		// Token: 0x0401E84B RID: 125003
 		private static HashSet<string> DrawnRangeKeys;
 
-		// Token: 0x0402365A RID: 144986
+		// Token: 0x0401E84C RID: 125004
 		[StaticVariableRuleIgnore]
 		private static long DrawnRangeFrame = -1L;
 
-		// Token: 0x0402365B RID: 144987
+		// Token: 0x0401E84D RID: 125005
 		private static Rotator TmpRotator;
 
-		// Token: 0x0402365C RID: 144988
+		// Token: 0x0401E84E RID: 125006
 		private static Vector TmpLabelLoc;
 	}
 }

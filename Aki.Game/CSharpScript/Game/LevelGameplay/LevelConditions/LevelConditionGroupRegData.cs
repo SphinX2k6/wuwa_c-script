@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D78 RID: 28024
+	// Token: 0x02005EF7 RID: 24311
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionGroupRegData
 	{
-		// Token: 0x0604479B RID: 280475 RVA: 0x010E3610 File Offset: 0x010E1810
+		// Token: 0x0603A8FF RID: 239871 RVA: 0x0108D7F4 File Offset: 0x0108B9F4
 		public LevelConditionGroupRegData(int conditionGroupId)
 		{
 			this.ConditionGroupId = conditionGroupId;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x0604479C RID: 280476 RVA: 0x010E371B File Offset: 0x010E191B
+		// Token: 0x0603A900 RID: 239872 RVA: 0x0108D8FF File Offset: 0x0108BAFF
 		public bool IsValid()
 		{
 			return this.ConditionRegDataSet.Count > 0;
 		}
 
-		// Token: 0x0604479D RID: 280477 RVA: 0x010E372C File Offset: 0x010E192C
+		// Token: 0x0603A901 RID: 239873 RVA: 0x0108D910 File Offset: 0x0108BB10
 		private void InvokeCallbacks()
 		{
 			foreach (ConditionPassCallback conditionPassCallback in this.ConditionPassCallbackSet)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x0604479E RID: 280478 RVA: 0x010E3790 File Offset: 0x010E1990
+		// Token: 0x0603A902 RID: 239874 RVA: 0x0108D974 File Offset: 0x0108BB74
 		public void CheckReached()
 		{
 			if (this.ConditionRelation)
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			this.InvokeCallbacks();
 		}
 
-		// Token: 0x0604479F RID: 280479 RVA: 0x010E383C File Offset: 0x010E1A3C
+		// Token: 0x0603A903 RID: 239875 RVA: 0x0108DA20 File Offset: 0x0108BC20
 		public void AddCallBack(ConditionPassCallback conditionPassCallback)
 		{
 			this.ConditionPassCallbackSet.Add(conditionPassCallback);
 		}
 
-		// Token: 0x060447A0 RID: 280480 RVA: 0x010E384C File Offset: 0x010E1A4C
+		// Token: 0x0603A904 RID: 239876 RVA: 0x0108DA30 File Offset: 0x0108BC30
 		public bool RemoveCallBack(ConditionPassCallback conditionPassCallback)
 		{
 			if (!this.ConditionPassCallbackSet.Remove(conditionPassCallback))
@@ -115,16 +115,16 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return true;
 		}
 
-		// Token: 0x040239E4 RID: 145892
+		// Token: 0x0401EC86 RID: 126086
 		public readonly int ConditionGroupId;
 
-		// Token: 0x040239E5 RID: 145893
+		// Token: 0x0401EC87 RID: 126087
 		private readonly bool ConditionRelation;
 
-		// Token: 0x040239E6 RID: 145894
+		// Token: 0x0401EC88 RID: 126088
 		private readonly HashSet<LevelConditionRegData> ConditionRegDataSet = new HashSet<LevelConditionRegData>();
 
-		// Token: 0x040239E7 RID: 145895
+		// Token: 0x0401EC89 RID: 126089
 		private readonly HashSet<ConditionPassCallback> ConditionPassCallbackSet = new HashSet<ConditionPassCallback>();
 	}
 }

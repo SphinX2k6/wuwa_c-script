@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A05 RID: 2565
+	// Token: 0x02000ADA RID: 2778
 	public class ConfigTowerSeasonById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003C32 RID: 15410 RVA: 0x001AE26C File Offset: 0x001AC46C
+		// Token: 0x06004130 RID: 16688 RVA: 0x001CD600 File Offset: 0x001CB800
 		static ConfigTowerSeasonById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTowerSeasonById.CreateStaticDefaultValue), new Action(ConfigTowerSeasonById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003C33 RID: 15411 RVA: 0x001AE28C File Offset: 0x001AC48C
+		// Token: 0x06004131 RID: 16689 RVA: 0x001CD620 File Offset: 0x001CB820
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTowerSeasonById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003C34 RID: 15412 RVA: 0x001AE30B File Offset: 0x001AC50B
+		// Token: 0x06004132 RID: 16690 RVA: 0x001CD69F File Offset: 0x001CB89F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTowerSeasonById.LogPair = null;
 			ConfigTowerSeasonById.HandleId = 0;
 		}
 
-		// Token: 0x06003C35 RID: 15413 RVA: 0x001AE319 File Offset: 0x001AC519
+		// Token: 0x06004133 RID: 16691 RVA: 0x001CD6AD File Offset: 0x001CB8AD
 		public static void Init()
 		{
 			ConfigTowerSeasonById.HandleId = ConfigCommon.InitDataStatement(ConfigTowerSeasonById.HandleId, "db_tower.db", "select BinData from `TowerSeason` where Id = ?");
 		}
 
-		// Token: 0x06003C36 RID: 15414 RVA: 0x001AE334 File Offset: 0x001AC534
+		// Token: 0x06004134 RID: 16692 RVA: 0x001CD6C8 File Offset: 0x001CB8C8
 		public static TowerSeason? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTowerSeasonById.HandleId, ConfigTowerSeasonById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TowerSeason?(rootAsTowerSeason);
 		}
 
-		// Token: 0x04004609 RID: 17929
+		// Token: 0x04004BDC RID: 19420
 		private const string DB = "db_tower.db";
 
-		// Token: 0x0400460A RID: 17930
+		// Token: 0x04004BDD RID: 19421
 		private const string FILE = "p.爬塔新.xlsx";
 
-		// Token: 0x0400460B RID: 17931
+		// Token: 0x04004BDE RID: 19422
 		private const string TABLE = "TowerSeason";
 
-		// Token: 0x0400460C RID: 17932
+		// Token: 0x04004BDF RID: 19423
 		private const string COMMAND = "select BinData from `TowerSeason` where Id = ?";
 
-		// Token: 0x0400460D RID: 17933
+		// Token: 0x04004BE0 RID: 19424
 		private const string KEY_PREFIX = "TowerSeasonById";
 
-		// Token: 0x0400460E RID: 17934
+		// Token: 0x04004BE1 RID: 19425
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400460F RID: 17935
+		// Token: 0x04004BE2 RID: 19426
 		private static int HandleId;
 	}
 }

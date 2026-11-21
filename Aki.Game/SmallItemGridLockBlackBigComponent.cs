@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200197F RID: 6527
+// Token: 0x02000E3C RID: 3644
 public class SmallItemGridLockBlackBigComponent : SmallItemGridVisibleComponent
 {
-	// Token: 0x0600BEFD RID: 48893 RVA: 0x002B310B File Offset: 0x002B130B
+	// Token: 0x06009305 RID: 37637 RVA: 0x002BE08F File Offset: 0x002BC28F
 	[NullableContext(2)]
 	protected override string GetResourceId()
 	{

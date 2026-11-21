@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FF1 RID: 28657
+	// Token: 0x020077BA RID: 30650
 	public static class ISetFlowTemplateVerify
 	{
-		// Token: 0x06032B0D RID: 207629 RVA: 0x006D6F14 File Offset: 0x006D5114
+		// Token: 0x06035D73 RID: 220531 RVA: 0x00736B58 File Offset: 0x00734D58
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -127,41 +127,41 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return false;
 		}
 
-		// Token: 0x02007E3A RID: 32314
+		// Token: 0x020086CF RID: 34511
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040139FA RID: 80378
+			// Token: 0x04014ACB RID: 84683
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040139FB RID: 80379
+			// Token: 0x04014ACC RID: 84684
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x040139FC RID: 80380
+			// Token: 0x04014ACD RID: 84685
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x040139FD RID: 80381
+			// Token: 0x04014ACE RID: 84686
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x040139FE RID: 80382
+			// Token: 0x04014ACF RID: 84687
 			public static VerifyTableAction <4>__Verify;
 
-			// Token: 0x040139FF RID: 80383
+			// Token: 0x04014AD0 RID: 84688
 			public static VerifyTableAction <5>__Verify;
 
-			// Token: 0x04013A00 RID: 80384
+			// Token: 0x04014AD1 RID: 84689
 			public static VerifyUnionAction <6>__Verify;
 
-			// Token: 0x04013A01 RID: 80385
+			// Token: 0x04014AD2 RID: 84690
 			public static VerifyTableAction <7>__Verify;
 
-			// Token: 0x04013A02 RID: 80386
+			// Token: 0x04014AD3 RID: 84691
 			public static VerifyTableAction <8>__Verify;
 
-			// Token: 0x04013A03 RID: 80387
+			// Token: 0x04014AD4 RID: 84692
 			public static VerifyTableAction <9>__Verify;
 
-			// Token: 0x04013A04 RID: 80388
+			// Token: 0x04014AD5 RID: 84693
 			public static VerifyTableAction <10>__Verify;
 		}
 	}

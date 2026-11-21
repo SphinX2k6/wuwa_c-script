@@ -4,48 +4,48 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020027B1 RID: 10161
+// Token: 0x02001D2C RID: 7468
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleFavorData : RoleModuleDataBase
 {
-	// Token: 0x06014E48 RID: 85576 RVA: 0x0054E3DE File Offset: 0x0054C5DE
+	// Token: 0x06012847 RID: 75847 RVA: 0x00579106 File Offset: 0x00577306
 	public RoleFavorData(int roleId) : base(roleId)
 	{
 	}
 
-	// Token: 0x06014E49 RID: 85577 RVA: 0x0054E3F2 File Offset: 0x0054C5F2
+	// Token: 0x06012848 RID: 75848 RVA: 0x0057911A File Offset: 0x0057731A
 	public int GetFavorLevel()
 	{
 		return this.Level;
 	}
 
-	// Token: 0x06014E4A RID: 85578 RVA: 0x0054E3FA File Offset: 0x0054C5FA
+	// Token: 0x06012849 RID: 75849 RVA: 0x00579122 File Offset: 0x00577322
 	public void SetFavorLevel(int level)
 	{
 		this.Level = level;
 	}
 
-	// Token: 0x06014E4B RID: 85579 RVA: 0x0054E403 File Offset: 0x0054C603
+	// Token: 0x0601284A RID: 75850 RVA: 0x0057912B File Offset: 0x0057732B
 	public int GetFavorExp()
 	{
 		return this.Exp;
 	}
 
-	// Token: 0x06014E4C RID: 85580 RVA: 0x0054E40B File Offset: 0x0054C60B
+	// Token: 0x0601284B RID: 75851 RVA: 0x00579133 File Offset: 0x00577333
 	public void SetFavorExp(int exp)
 	{
 		this.Exp = exp;
 		EventSystem.Instance.Emit(EEventName.RoleFavorExpChange);
 	}
 
-	// Token: 0x06014E4D RID: 85581 RVA: 0x0054E424 File Offset: 0x0054C624
+	// Token: 0x0601284C RID: 75852 RVA: 0x0057914C File Offset: 0x0057734C
 	public void UpdateRoleFavorData(EFavorContentType favorContentType, FavorItem[] favorItemList)
 	{
 		this.FavorItemMap[favorContentType] = this.BuildFavorItemInfoList(favorItemList);
 	}
 
-	// Token: 0x06014E4E RID: 85582 RVA: 0x0054E43C File Offset: 0x0054C63C
+	// Token: 0x0601284D RID: 75853 RVA: 0x00579164 File Offset: 0x00577364
 	public void UpdateUnlockId(FavorItemType favorItemType, int roleId, int itemId)
 	{
 		EFavorContentType value = this.GetClientFavorTabType(favorItemType).Value;
@@ -63,7 +63,7 @@ public class RoleFavorData : RoleModuleDataBase
 		EventSystem.Instance.Emit<int, int>(EEventName.UnLockRoleFavorItem, roleId, itemId);
 	}
 
-	// Token: 0x06014E4F RID: 85583 RVA: 0x0054E4BC File Offset: 0x0054C6BC
+	// Token: 0x0601284E RID: 75854 RVA: 0x005791E4 File Offset: 0x005773E4
 	public void UpdateCanUnlockId(FavorItemType favorItemType, int itemId)
 	{
 		EFavorContentType value = this.GetClientFavorTabType(favorItemType).Value;
@@ -97,7 +97,7 @@ public class RoleFavorData : RoleModuleDataBase
 		EventSystem.Instance.Emit<int>(EEventName.UpdateRoleFavorData, this.RoleId);
 	}
 
-	// Token: 0x06014E50 RID: 85584 RVA: 0x0054E594 File Offset: 0x0054C794
+	// Token: 0x0601284F RID: 75855 RVA: 0x005792BC File Offset: 0x005774BC
 	private FavorItemInfo[] BuildFavorItemInfoList(FavorItem[] favorItem)
 	{
 		List<FavorItemInfo> list = new List<FavorItemInfo>();
@@ -110,14 +110,14 @@ public class RoleFavorData : RoleModuleDataBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06014E51 RID: 85585 RVA: 0x0054E5D0 File Offset: 0x0054C7D0
+	// Token: 0x06012850 RID: 75856 RVA: 0x005792F8 File Offset: 0x005774F8
 	private FavorItemInfo BuildFavorItemInfo(FavorItem favorItem)
 	{
 		EFavorItemStatus? clientFavorItemStatus = this.GetClientFavorItemStatus(favorItem.Status);
 		return new FavorItemInfo(favorItem.Id, clientFavorItemStatus.Value);
 	}
 
-	// Token: 0x06014E52 RID: 85586 RVA: 0x0054E5FC File Offset: 0x0054C7FC
+	// Token: 0x06012851 RID: 75857 RVA: 0x00579324 File Offset: 0x00577524
 	public EFavorItemStatus GetFavorItemState(int id, EFavorContentType type)
 	{
 		FavorItemInfo[] array2;
@@ -138,7 +138,7 @@ public class RoleFavorData : RoleModuleDataBase
 		return EFavorItemStatus.ItemLocked;
 	}
 
-	// Token: 0x06014E53 RID: 85587 RVA: 0x0054E64C File Offset: 0x0054C84C
+	// Token: 0x06012852 RID: 75858 RVA: 0x00579374 File Offset: 0x00577574
 	public EFavorItemStatus? GetClientFavorItemStatus(FavorItemStatus favorItemStatus)
 	{
 		EFavorItemStatus? result = null;
@@ -157,7 +157,7 @@ public class RoleFavorData : RoleModuleDataBase
 		return result;
 	}
 
-	// Token: 0x06014E54 RID: 85588 RVA: 0x0054E68C File Offset: 0x0054C88C
+	// Token: 0x06012853 RID: 75859 RVA: 0x005793B4 File Offset: 0x005775B4
 	public EFavorContentType? GetClientFavorTabType(FavorItemType favorItemType)
 	{
 		if (favorItemType == FavorItemType.Word)
@@ -175,7 +175,7 @@ public class RoleFavorData : RoleModuleDataBase
 		return null;
 	}
 
-	// Token: 0x06014E55 RID: 85589 RVA: 0x0054E6C4 File Offset: 0x0054C8C4
+	// Token: 0x06012854 RID: 75860 RVA: 0x005793EC File Offset: 0x005775EC
 	public bool IsExistCanUnlockFavorItem()
 	{
 		foreach (EFavorContentType favorContentType in this.FavorItemMap.Keys)
@@ -188,7 +188,7 @@ public class RoleFavorData : RoleModuleDataBase
 		return false;
 	}
 
-	// Token: 0x06014E56 RID: 85590 RVA: 0x0054E728 File Offset: 0x0054C928
+	// Token: 0x06012855 RID: 75861 RVA: 0x00579450 File Offset: 0x00577650
 	public bool IsFavorItemCanUnlock(EFavorContentType favorContentType)
 	{
 		if (favorContentType == EFavorContentType.Action)
@@ -212,7 +212,7 @@ public class RoleFavorData : RoleModuleDataBase
 		return false;
 	}
 
-	// Token: 0x06014E57 RID: 85591 RVA: 0x0054E784 File Offset: 0x0054C984
+	// Token: 0x06012856 RID: 75862 RVA: 0x005794AC File Offset: 0x005776AC
 	public int[] GetUnlockActionIndexList()
 	{
 		List<int> list = new List<int>();
@@ -234,12 +234,12 @@ public class RoleFavorData : RoleModuleDataBase
 		return list.ToArray();
 	}
 
-	// Token: 0x04009CFF RID: 40191
+	// Token: 0x0400A0E2 RID: 41186
 	protected int Level;
 
-	// Token: 0x04009D00 RID: 40192
+	// Token: 0x0400A0E3 RID: 41187
 	protected int Exp;
 
-	// Token: 0x04009D01 RID: 40193
+	// Token: 0x0400A0E4 RID: 41188
 	private readonly Dictionary<EFavorContentType, FavorItemInfo[]> FavorItemMap = new Dictionary<EFavorContentType, FavorItemInfo[]>();
 }

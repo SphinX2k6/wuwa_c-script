@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D03 RID: 3331
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DFB RID: 3579
 	public class IDynamicBulletConfig
 	{
-		// Token: 0x06004C09 RID: 19465 RVA: 0x000BD9BA File Offset: 0x000BBBBA
+		// Token: 0x06005117 RID: 20759 RVA: 0x000C8EEA File Offset: 0x000C70EA
 		public static IDynamicBulletConfig Create(IDynamicBulletConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017C0 RID: 6080
-		// (get) Token: 0x06004C0A RID: 19466 RVA: 0x000BD9D9 File Offset: 0x000BBBD9
+		// Token: 0x1700191C RID: 6428
+		// (get) Token: 0x06005118 RID: 20760 RVA: 0x000C8F09 File Offset: 0x000C7109
 		public virtual int BulletId
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017C1 RID: 6081
-		// (get) Token: 0x06004C0B RID: 19467 RVA: 0x000BD9E6 File Offset: 0x000BBBE6
+		// Token: 0x1700191D RID: 6429
+		// (get) Token: 0x06005119 RID: 20761 RVA: 0x000C8F16 File Offset: 0x000C7116
 		public virtual EPortalModel PortalModel
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017C2 RID: 6082
-		// (get) Token: 0x06004C0C RID: 19468 RVA: 0x000BD9F3 File Offset: 0x000BBBF3
+		// Token: 0x1700191E RID: 6430
+		// (get) Token: 0x0600511A RID: 20762 RVA: 0x000C8F23 File Offset: 0x000C7123
 		public virtual string TemplateId
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B7A RID: 11130
+		// Token: 0x04002E34 RID: 11828
 		private IDynamicBulletConfig Instance;
 	}
 }

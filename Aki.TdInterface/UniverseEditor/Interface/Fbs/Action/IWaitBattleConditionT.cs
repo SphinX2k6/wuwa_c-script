@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075F9 RID: 30201
+	// Token: 0x02007E07 RID: 32263
 	public class IWaitBattleConditionT
 	{
-		// Token: 0x1700E571 RID: 58737
-		// (get) Token: 0x06037046 RID: 225350 RVA: 0x00777009 File Offset: 0x00775209
-		// (set) Token: 0x06037047 RID: 225351 RVA: 0x00777011 File Offset: 0x00775211
+		// Token: 0x1700F1AF RID: 61871
+		// (get) Token: 0x0603A4EB RID: 238827 RVA: 0x007DB105 File Offset: 0x007D9305
+		// (set) Token: 0x0603A4EC RID: 238828 RVA: 0x007DB10D File Offset: 0x007D930D
 		public IDetectBattleTagT StateOption { get; set; }
 
-		// Token: 0x06037048 RID: 225352 RVA: 0x0077701A File Offset: 0x0077521A
+		// Token: 0x0603A4ED RID: 238829 RVA: 0x007DB116 File Offset: 0x007D9316
 		public IWaitBattleConditionT()
 		{
 			this.StateOption = null;

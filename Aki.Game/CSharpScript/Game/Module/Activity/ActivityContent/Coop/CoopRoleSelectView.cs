@@ -18,13 +18,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068DC RID: 26844
+	// Token: 0x0200582C RID: 22572
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CoopRoleSelectView : UiViewBase
 	{
-		// Token: 0x170097DE RID: 38878
-		// (get) Token: 0x06042F89 RID: 274313 RVA: 0x0104F2E7 File Offset: 0x0104D4E7
+		// Token: 0x17006B1E RID: 27422
+		// (get) Token: 0x06037AE1 RID: 228065 RVA: 0x00F9090F File Offset: 0x00F8EB0F
 		public new CoopRoleSelectViewParams OpenParam
 		{
 			get
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F8A RID: 274314 RVA: 0x0104F2F4 File Offset: 0x0104D4F4
+		// Token: 0x06037AE2 RID: 228066 RVA: 0x00F9091C File Offset: 0x00F8EB1C
 		[NullableContext(1)]
 		public CoopRoleSelectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042F8B RID: 274315 RVA: 0x0104F308 File Offset: 0x0104D508
+		// Token: 0x06037AE3 RID: 228067 RVA: 0x00F90930 File Offset: 0x00F8EB30
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042F8C RID: 274316 RVA: 0x0104F6C0 File Offset: 0x0104D8C0
+		// Token: 0x06037AE4 RID: 228068 RVA: 0x00F90CE8 File Offset: 0x00F8EEE8
 		protected override void OnBeforeCreate()
 		{
 			this.ActivityData = this.OpenParam.ActivityData;
@@ -100,21 +100,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.IsOpenByUpGradeView = this.OpenParam.IsOpenByUpGradeView;
 		}
 
-		// Token: 0x06042F8D RID: 274317 RVA: 0x0104F731 File Offset: 0x0104D931
+		// Token: 0x06037AE5 RID: 228069 RVA: 0x00F90D59 File Offset: 0x00F8EF59
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnCoopLevelUpdate, new Action(this.OnCoopLevelUpdate));
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x06042F8E RID: 274318 RVA: 0x0104F76B File Offset: 0x0104D96B
+		// Token: 0x06037AE6 RID: 228070 RVA: 0x00F90D93 File Offset: 0x00F8EF93
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCoopLevelUpdate, new Action(this.OnCoopLevelUpdate));
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x06042F8F RID: 274319 RVA: 0x0104F7A8 File Offset: 0x0104D9A8
+		// Token: 0x06037AE7 RID: 228071 RVA: 0x00F90DD0 File Offset: 0x00F8EFD0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CoopRoleSelectView.<OnBeforeStartAsync>d__27 <OnBeforeStartAsync>d__;
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042F90 RID: 274320 RVA: 0x0104F7EB File Offset: 0x0104D9EB
+		// Token: 0x06037AE8 RID: 228072 RVA: 0x00F90E13 File Offset: 0x00F8F013
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06042F91 RID: 274321 RVA: 0x0104F7FE File Offset: 0x0104D9FE
+		// Token: 0x06037AE9 RID: 228073 RVA: 0x00F90E26 File Offset: 0x00F8F026
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.SeqPlayer = null;
 		}
 
-		// Token: 0x06042F92 RID: 274322 RVA: 0x0104F818 File Offset: 0x0104DA18
+		// Token: 0x06037AEA RID: 228074 RVA: 0x00F90E40 File Offset: 0x00F8F040
 		protected override UniTask OnBeforeShowAsyncImplementImplement()
 		{
 			CoopRoleSelectView.<OnBeforeShowAsyncImplementImplement>d__30 <OnBeforeShowAsyncImplementImplement>d__;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042F93 RID: 274323 RVA: 0x0104F85B File Offset: 0x0104DA5B
+		// Token: 0x06037AEB RID: 228075 RVA: 0x00F90E83 File Offset: 0x00F8F083
 		[NullableContext(1)]
 		private CoopRoleItem CreateRoleItem()
 		{
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042F94 RID: 274324 RVA: 0x0104F88C File Offset: 0x0104DA8C
+		// Token: 0x06037AEC RID: 228076 RVA: 0x00F90EB4 File Offset: 0x00F8F0B4
 		[NullableContext(1)]
 		private void OnSelectRoleItemByIndex(int gridIndex, CoopRoleData roleData)
 		{
@@ -187,20 +187,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F95 RID: 274325 RVA: 0x0104F934 File Offset: 0x0104DB34
+		// Token: 0x06037AED RID: 228077 RVA: 0x00F90F5C File Offset: 0x00F8F15C
 		private bool CanRoleToggleChange(int index)
 		{
 			return this.RoleItemLayout.GetSelectedGridIndex() != index;
 		}
 
-		// Token: 0x06042F96 RID: 274326 RVA: 0x0104F947 File Offset: 0x0104DB47
+		// Token: 0x06037AEE RID: 228078 RVA: 0x00F90F6F File Offset: 0x00F8F16F
 		[NullableContext(1)]
 		private CoopSubConditionItem CreateSubConditionItem()
 		{
 			return new CoopSubConditionItem();
 		}
 
-		// Token: 0x06042F97 RID: 274327 RVA: 0x0104F94E File Offset: 0x0104DB4E
+		// Token: 0x06037AEF RID: 228079 RVA: 0x00F90F76 File Offset: 0x00F8F176
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
@@ -210,14 +210,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042F98 RID: 274328 RVA: 0x0104F968 File Offset: 0x0104DB68
+		// Token: 0x06037AF0 RID: 228080 RVA: 0x00F90F90 File Offset: 0x00F8F190
 		private bool OnCheckItemTaken(TItem _)
 		{
 			CoopRoleData roleData = this.ActivityData.GetRoleData(this.CurSelectRoleId.Value);
 			return roleData != null && roleData.CurRewardLevel >= this.CurSelectLevel.Value;
 		}
 
-		// Token: 0x06042F99 RID: 274329 RVA: 0x0104F9A7 File Offset: 0x0104DBA7
+		// Token: 0x06037AF1 RID: 228081 RVA: 0x00F90FCF File Offset: 0x00F8F1CF
 		private void UpdateRoleItemList()
 		{
 			if (this.RoleItemLayout != null && this.ActivityData.CoopRoleDataList != null)
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F9A RID: 274330 RVA: 0x0104F9E4 File Offset: 0x0104DBE4
+		// Token: 0x06037AF2 RID: 228082 RVA: 0x00F9100C File Offset: 0x00F8F20C
 		private void ShowCoopRoleLockPanel()
 		{
 			this.SetRolePanelShow(false);
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshRedTipsPanel();
 		}
 
-		// Token: 0x06042F9B RID: 274331 RVA: 0x0104FA38 File Offset: 0x0104DC38
+		// Token: 0x06037AF3 RID: 228083 RVA: 0x00F91060 File Offset: 0x00F8F260
 		private void ShowCoopRoleLevelSelectPanelByRoleTog()
 		{
 			this.SetRolePanelShow(true);
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshCoopLevelTitleList();
 		}
 
-		// Token: 0x06042F9C RID: 274332 RVA: 0x0104FA98 File Offset: 0x0104DC98
+		// Token: 0x06037AF4 RID: 228084 RVA: 0x00F910C0 File Offset: 0x00F8F2C0
 		private void ShowCoopRoleLevelSelectPanel()
 		{
 			this.SetRolePanelShow(true);
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshCoopLevelTitleList();
 		}
 
-		// Token: 0x06042F9D RID: 274333 RVA: 0x0104FAF8 File Offset: 0x0104DCF8
+		// Token: 0x06037AF5 RID: 228085 RVA: 0x00F91120 File Offset: 0x00F8F320
 		private void ShowCoopRoleLevelInfoPanel()
 		{
 			this.SetRolePanelShow(true);
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshCoopLevelInfoPanel();
 		}
 
-		// Token: 0x06042F9E RID: 274334 RVA: 0x0104FB54 File Offset: 0x0104DD54
+		// Token: 0x06037AF6 RID: 228086 RVA: 0x00F9117C File Offset: 0x00F8F37C
 		private void SetRolePanelShow(bool isShow)
 		{
 			base.GetItem(3).SetUIActive(isShow);
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			base.GetText(9).SetUIActive(false);
 		}
 
-		// Token: 0x06042F9F RID: 274335 RVA: 0x0104FC3C File Offset: 0x0104DE3C
+		// Token: 0x06037AF7 RID: 228087 RVA: 0x00F91264 File Offset: 0x00F8F464
 		private void SetCoopLevelShowListOrInfo(bool isShowList)
 		{
 			foreach (CoopLevelToggleItem coopLevelToggleItem in this.CoopLevelItemList)
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			base.GetItem(17).SetUIActive(!isShowList);
 		}
 
-		// Token: 0x06042FA0 RID: 274336 RVA: 0x0104FCA0 File Offset: 0x0104DEA0
+		// Token: 0x06037AF8 RID: 228088 RVA: 0x00F912C8 File Offset: 0x00F8F4C8
 		private void RefreshRedTipsPanel()
 		{
 			int roleCurCoopLevelId = this.ActivityData.GetRoleCurCoopLevelId(this.CurSelectRoleId.Value);
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042FA1 RID: 274337 RVA: 0x0104FE04 File Offset: 0x0104E004
+		// Token: 0x06037AF9 RID: 228089 RVA: 0x00F9142C File Offset: 0x00F8F62C
 		private void RefreshRoleInfoPanel()
 		{
 			CoopRole? coopRoleConfigByRoleId = CoopConfig.Instance.GetCoopRoleConfigByRoleId(this.CurSelectRoleId.Value);
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FA2 RID: 274338 RVA: 0x01050034 File Offset: 0x0104E234
+		// Token: 0x06037AFA RID: 228090 RVA: 0x00F9165C File Offset: 0x00F8F85C
 		private void RefreshCoopLevelTitleList()
 		{
 			CoopRoleData roleData = this.ActivityData.GetRoleData(this.CurSelectRoleId.Value);
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FA3 RID: 274339 RVA: 0x0105019C File Offset: 0x0104E39C
+		// Token: 0x06037AFB RID: 228091 RVA: 0x00F917C4 File Offset: 0x00F8F9C4
 		private void RefreshCoopLevelInfoPanel()
 		{
 			CoopRoleLevel? coopConfigById = CoopConfig.Instance.GetCoopConfigById(this.CurSelectLevelId.Value);
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FA4 RID: 274340 RVA: 0x01050268 File Offset: 0x0104E468
+		// Token: 0x06037AFC RID: 228092 RVA: 0x00F91890 File Offset: 0x00F8FA90
 		[NullableContext(1)]
 		private void RefreshInfoPanelA(CoopLevelData levelData)
 		{
@@ -573,7 +573,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FA5 RID: 274341 RVA: 0x01050540 File Offset: 0x0104E740
+		// Token: 0x06037AFD RID: 228093 RVA: 0x00F91B68 File Offset: 0x00F8FD68
 		private void RefreshCoopLevelRewardItemLayout(CoopRoleLevel config)
 		{
 			if (config.Reward != 0)
@@ -591,7 +591,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FA6 RID: 274342 RVA: 0x01050588 File Offset: 0x0104E788
+		// Token: 0x06037AFE RID: 228094 RVA: 0x00F91BB0 File Offset: 0x00F8FDB0
 		[NullableContext(1)]
 		private void RefreshInfoPanelB(CoopLevelData levelData)
 		{
@@ -610,7 +610,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			coopUnFinishRedTipsItem.SetTextByTextId("Coop_Role_Condition_Lock", Array.Empty<string>());
 		}
 
-		// Token: 0x06042FA7 RID: 274343 RVA: 0x010505D8 File Offset: 0x0104E7D8
+		// Token: 0x06037AFF RID: 228095 RVA: 0x00F91C00 File Offset: 0x00F8FE00
 		[NullableContext(1)]
 		private string GetFinishGuideText(CoopRoleLevel config)
 		{
@@ -641,7 +641,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return config.FinishGuideText1;
 		}
 
-		// Token: 0x06042FA8 RID: 274344 RVA: 0x010506DC File Offset: 0x0104E8DC
+		// Token: 0x06037B00 RID: 228096 RVA: 0x00F91D04 File Offset: 0x00F8FF04
 		[NullableContext(1)]
 		private void OnSelectCoopLevelTog(CoopLevelData data)
 		{
@@ -653,14 +653,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.ShowCoopRoleLevelInfoPanel();
 		}
 
-		// Token: 0x06042FA9 RID: 274345 RVA: 0x01050740 File Offset: 0x0104E940
+		// Token: 0x06037B01 RID: 228097 RVA: 0x00F91D68 File Offset: 0x00F8FF68
 		private bool CanLevelToggleChange(int level)
 		{
 			int? curSelectLevel = this.CurSelectLevel;
 			return !(curSelectLevel.GetValueOrDefault() == level & curSelectLevel != null);
 		}
 
-		// Token: 0x06042FAA RID: 274346 RVA: 0x0105076C File Offset: 0x0104E96C
+		// Token: 0x06037B02 RID: 228098 RVA: 0x00F91D94 File Offset: 0x00F8FF94
 		private void OnCoopLevelUpdate()
 		{
 			this.UpdateRoleItemList();
@@ -682,7 +682,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FAB RID: 274347 RVA: 0x01050818 File Offset: 0x0104EA18
+		// Token: 0x06037B03 RID: 228099 RVA: 0x00F91E40 File Offset: 0x00F90040
 		private void OnClickPictureBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.CoopPhotoPreviewView, new CoopPhotoPreviewViewParams
@@ -700,7 +700,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshRoleInfoPanel();
 		}
 
-		// Token: 0x06042FAC RID: 274348 RVA: 0x010508B4 File Offset: 0x0104EAB4
+		// Token: 0x06037B04 RID: 228100 RVA: 0x00F91EDC File Offset: 0x00F900DC
 		private void OnClickBackBtn()
 		{
 			this.CurSelectLevelId = null;
@@ -712,7 +712,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.ShowCoopRoleLevelSelectPanel();
 		}
 
-		// Token: 0x06042FAD RID: 274349 RVA: 0x01050924 File Offset: 0x0104EB24
+		// Token: 0x06037B05 RID: 228101 RVA: 0x00F91F4C File Offset: 0x00F9014C
 		private void OnClickGoBtn(int _)
 		{
 			CoopRoleLevel? coopConfigById = CoopConfig.Instance.GetCoopConfigById(this.CurSelectLevelId.Value);
@@ -738,7 +738,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FAE RID: 274350 RVA: 0x010509D9 File Offset: 0x0104EBD9
+		// Token: 0x06037B06 RID: 228102 RVA: 0x00F92001 File Offset: 0x00F90201
 		private void OnClickRewardBtn(int _)
 		{
 			if (this.CurSelectLevelId == null)
@@ -748,7 +748,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			CoopActivityController.Instance.RequestCoopRoleReward(this.ActivityData, this.CurSelectLevelId.Value);
 		}
 
-		// Token: 0x06042FAF RID: 274351 RVA: 0x01050A04 File Offset: 0x0104EC04
+		// Token: 0x06037B07 RID: 228103 RVA: 0x00F9202C File Offset: 0x00F9022C
 		private void OnClickNextLevelBtn()
 		{
 			if (this.CurSelectLevel == null)
@@ -767,13 +767,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FB0 RID: 274352 RVA: 0x01050A70 File Offset: 0x0104EC70
+		// Token: 0x06037B08 RID: 228104 RVA: 0x00F92098 File Offset: 0x00F90298
 		private void OpenHelpView()
 		{
 			HelpController.Instance.OpenHelpById(420);
 		}
 
-		// Token: 0x06042FB1 RID: 274353 RVA: 0x01050A81 File Offset: 0x0104EC81
+		// Token: 0x06037B09 RID: 228105 RVA: 0x00F920A9 File Offset: 0x00F902A9
 		private void OnCloseClick()
 		{
 			if (this.IsOpenByUpGradeView)
@@ -783,12 +783,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06042FB2 RID: 274354 RVA: 0x01050AA8 File Offset: 0x0104ECA8
+		// Token: 0x06037B0A RID: 228106 RVA: 0x00F920D0 File Offset: 0x00F902D0
 		private void OnClickRedTipsJumpBtn()
 		{
 		}
 
-		// Token: 0x06042FB3 RID: 274355 RVA: 0x01050AAA File Offset: 0x0104ECAA
+		// Token: 0x06037B0B RID: 228107 RVA: 0x00F920D2 File Offset: 0x00F902D2
 		private void OnRefreshCommonActivityRedDot(int id)
 		{
 			if (id != this.ActivityData.Id)
@@ -798,26 +798,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.UpdateRoleItemList();
 		}
 
-		// Token: 0x06042FB4 RID: 274356 RVA: 0x01050AC1 File Offset: 0x0104ECC1
+		// Token: 0x06037B0C RID: 228108 RVA: 0x00F920E9 File Offset: 0x00F902E9
 		[NullableContext(1)]
-		public void GmSetRoleInfoText(string textId)
+		public void GmSetRoleInfoText(string text)
 		{
-			LguiUtil.Instance.SetLocalTextNew(base.GetText(22), textId, Array.Empty<object>());
+			LguiUtil.Instance.SetLocalTextNew(base.GetText(22), text, Array.Empty<object>());
 		}
 
-		// Token: 0x04022DBB RID: 142779
+		// Token: 0x0401D617 RID: 120343
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022DBC RID: 142780
+		// Token: 0x0401D618 RID: 120344
 		private FunctionalPanelConditionLock CoopRoleLockRedTipsItem;
 
-		// Token: 0x04022DBD RID: 142781
+		// Token: 0x0401D619 RID: 120345
 		private FunctionalPanelConditionLock CoopUnFinishRedTipsItem;
 
-		// Token: 0x04022DBE RID: 142782
+		// Token: 0x0401D61A RID: 120346
 		private CoopActivityData ActivityData;
 
-		// Token: 0x04022DBF RID: 142783
+		// Token: 0x0401D61B RID: 120347
 		[Nullable(new byte[]
 		{
 			2,
@@ -826,7 +826,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 		})]
 		private GenericLayout<CoopSubConditionItem, CoopSubConditionDataBase> SubConditionLayout;
 
-		// Token: 0x04022DC0 RID: 142784
+		// Token: 0x0401D61C RID: 120348
 		[Nullable(new byte[]
 		{
 			2,
@@ -835,29 +835,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 		})]
 		private GenericLayout<CoopRoleItem, CoopRoleData> RoleItemLayout;
 
-		// Token: 0x04022DC1 RID: 142785
+		// Token: 0x0401D61D RID: 120349
 		private ButtonItem JumpOrRewardGetBtnItem;
 
-		// Token: 0x04022DC2 RID: 142786
+		// Token: 0x0401D61E RID: 120350
 		private CoopLevelToggleItem RightRoleLevelItem1;
 
-		// Token: 0x04022DC3 RID: 142787
+		// Token: 0x0401D61F RID: 120351
 		private CoopLevelToggleItem RightRoleLevelItem2;
 
-		// Token: 0x04022DC4 RID: 142788
+		// Token: 0x0401D620 RID: 120352
 		private CoopLevelToggleItem RightRoleLevelItem3;
 
-		// Token: 0x04022DC5 RID: 142789
+		// Token: 0x0401D621 RID: 120353
 		private CoopLevelToggleItem RightRoleLevelItem4;
 
-		// Token: 0x04022DC6 RID: 142790
+		// Token: 0x0401D622 RID: 120354
 		private CoopLevelToggleItem RightRoleLevelItem5;
 
-		// Token: 0x04022DC7 RID: 142791
+		// Token: 0x0401D623 RID: 120355
 		[Nullable(1)]
 		private List<CoopLevelToggleItem> CoopLevelItemList = new List<CoopLevelToggleItem>();
 
-		// Token: 0x04022DC8 RID: 142792
+		// Token: 0x0401D624 RID: 120356
 		[Nullable(new byte[]
 		{
 			2,
@@ -865,22 +865,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardItemLayout;
 
-		// Token: 0x04022DC9 RID: 142793
+		// Token: 0x0401D625 RID: 120357
 		private int? CurSelectRoleIndex;
 
-		// Token: 0x04022DCA RID: 142794
+		// Token: 0x0401D626 RID: 120358
 		private int? CurSelectRoleId;
 
-		// Token: 0x04022DCB RID: 142795
+		// Token: 0x0401D627 RID: 120359
 		private int? CurSelectLevel;
 
-		// Token: 0x04022DCC RID: 142796
+		// Token: 0x0401D628 RID: 120360
 		private int? CurSelectLevelId;
 
-		// Token: 0x04022DCD RID: 142797
+		// Token: 0x0401D629 RID: 120361
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x04022DCE RID: 142798
+		// Token: 0x0401D62A RID: 120362
 		private bool IsOpenByUpGradeView;
 	}
 }

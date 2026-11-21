@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200206A RID: 8298
+	// Token: 0x0200068F RID: 1679
 	public sealed class FLGUIDynScrollViewItemCreateDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F4E7 RID: 128231 RVA: 0x002E7DE3 File Offset: 0x002E5FE3
+		// Token: 0x060090F5 RID: 37109 RVA: 0x000DA0E7 File Offset: 0x000D82E7
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIDynScrollViewItemCreateDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F4E8 RID: 128232 RVA: 0x002E7DEF File Offset: 0x002E5FEF
+		// Token: 0x060090F6 RID: 37110 RVA: 0x000DA0F3 File Offset: 0x000D82F3
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIDynScrollViewItemCreateDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FLGUIDynScrollViewItemCreateDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F4E9 RID: 128233 RVA: 0x002E7E12 File Offset: 0x002E6012
+		// Token: 0x060090F7 RID: 37111 RVA: 0x000DA116 File Offset: 0x000D8316
 		public FLGUIDynScrollViewItemCreateDelegate()
 		{
 		}
 
-		// Token: 0x0601F4EA RID: 128234 RVA: 0x002E7E1A File Offset: 0x002E601A
+		// Token: 0x060090F8 RID: 37112 RVA: 0x000DA11E File Offset: 0x000D831E
 		[NullableContext(2)]
 		public FLGUIDynScrollViewItemCreateDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F4EB RID: 128235 RVA: 0x002E7E24 File Offset: 0x002E6024
+		// Token: 0x060090F9 RID: 37113 RVA: 0x000DA128 File Offset: 0x000D8328
 		public FLGUIDynScrollViewItemCreateDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F4EC RID: 128236 RVA: 0x002E7E2F File Offset: 0x002E602F
+		// Token: 0x060090FA RID: 37114 RVA: 0x000DA133 File Offset: 0x000D8333
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, AUIBaseActor>) ?? ((Action<int, AUIBaseActor>)Delegate.CreateDelegate(typeof(Action<int, AUIBaseActor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F4ED RID: 128237 RVA: 0x002E7E61 File Offset: 0x002E6061
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060090FB RID: 37115 RVA: 0x000DA165 File Offset: 0x000D8365
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIDynScrollViewItemCreateDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F4EE RID: 128238 RVA: 0x002E7E9C File Offset: 0x002E609C
+		// Token: 0x060090FC RID: 37116 RVA: 0x000DA1A0 File Offset: 0x000D83A0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int DisplayIndex, AUIBaseActor Actor)
 		{
 			FLGUIDynScrollViewItemCreateDelegate.__FLGUIDynScrollViewItemCreateDelegate_DelegateParams* ptr = stackalloc FLGUIDynScrollViewItemCreateDelegate.__FLGUIDynScrollViewItemCreateDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FLGUIDynScrollViewItemCreateDelegate.__FLGUIDynScrollViewItemCreateDelegate_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F4EF RID: 128239 RVA: 0x002E7EF0 File Offset: 0x002E60F0
+		// Token: 0x060090FD RID: 37117 RVA: 0x000DA1F4 File Offset: 0x000D83F4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, AUIBaseActor> action = target as Action<int, AUIBaseActor>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			action(((FLGUIDynScrollViewItemCreateDelegate.__FLGUIDynScrollViewItemCreateDelegate_DelegateParams*)__Parameters)->DisplayIndex, orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x04010ECE RID: 69326
+		// Token: 0x04003F46 RID: 16198
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010ECF RID: 69327
+		// Token: 0x04003F47 RID: 16199
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIDynScrollViewItemCreateDelegate__DelegateSignature";
 
-		// Token: 0x04010ED0 RID: 69328
+		// Token: 0x04003F48 RID: 16200
 		private static int RegisterId;
 
-		// Token: 0x0200346E RID: 13422
+		// Token: 0x02000EB1 RID: 3761
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FLGUIDynScrollViewItemCreateDelegate_DelegateParams
+		private ref struct __FLGUIDynScrollViewItemCreateDelegate_DelegateParams
 		{
-			// Token: 0x04017452 RID: 95314
+			// Token: 0x04006261 RID: 25185
 			[FieldOffset(0)]
 			public int DisplayIndex;
 
-			// Token: 0x04017453 RID: 95315
+			// Token: 0x04006262 RID: 25186
 			[FieldOffset(8)]
 			public IntPtr Actor;
 		}
 
-		// Token: 0x0200346F RID: 13423
+		// Token: 0x02000EB2 RID: 3762
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017454 RID: 95316
+			// Token: 0x04006263 RID: 25187
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

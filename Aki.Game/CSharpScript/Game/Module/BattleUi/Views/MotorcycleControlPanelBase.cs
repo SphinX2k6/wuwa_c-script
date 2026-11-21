@@ -6,15 +6,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D9B RID: 23963
+	// Token: 0x02004D7D RID: 19837
 	public class MotorcycleControlPanelBase : BattleVisibleChildView
 	{
-		// Token: 0x0603CD36 RID: 249142 RVA: 0x00E9B7BF File Offset: 0x00E999BF
+		// Token: 0x06031C93 RID: 203923 RVA: 0x00DEC077 File Offset: 0x00DEA277
 		public virtual void Tick(float delta)
 		{
 		}
 
-		// Token: 0x0603CD37 RID: 249143 RVA: 0x00E9B7C4 File Offset: 0x00E999C4
+		// Token: 0x06031C94 RID: 203924 RVA: 0x00DEC07C File Offset: 0x00DEA27C
 		[NullableContext(1)]
 		public UniTask Init(UUIItem parentItem, string resourceId)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CD38 RID: 249144 RVA: 0x00E9B817 File Offset: 0x00E99A17
+		// Token: 0x06031C95 RID: 203925 RVA: 0x00DEC0CF File Offset: 0x00DEA2CF
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();

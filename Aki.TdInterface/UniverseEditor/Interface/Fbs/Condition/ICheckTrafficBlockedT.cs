@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B63 RID: 19299
+	// Token: 0x0200504A RID: 20554
 	public class ICheckTrafficBlockedT
 	{
-		// Token: 0x17008C0C RID: 35852
-		// (get) Token: 0x0601E67B RID: 124539 RVA: 0x00442527 File Offset: 0x00440727
-		// (set) Token: 0x0601E67C RID: 124540 RVA: 0x0044252F File Offset: 0x0044072F
+		// Token: 0x1700931C RID: 37660
+		// (get) Token: 0x06020209 RID: 131593 RVA: 0x00474D73 File Offset: 0x00472F73
+		// (set) Token: 0x0602020A RID: 131594 RVA: 0x00474D7B File Offset: 0x00472F7B
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008C0D RID: 35853
-		// (get) Token: 0x0601E67D RID: 124541 RVA: 0x00442538 File Offset: 0x00440738
-		// (set) Token: 0x0601E67E RID: 124542 RVA: 0x00442540 File Offset: 0x00440740
+		// Token: 0x1700931D RID: 37661
+		// (get) Token: 0x0602020B RID: 131595 RVA: 0x00474D84 File Offset: 0x00472F84
+		// (set) Token: 0x0602020C RID: 131596 RVA: 0x00474D8C File Offset: 0x00472F8C
 		public bool IsBlocked { get; set; }
 
-		// Token: 0x17008C0E RID: 35854
-		// (get) Token: 0x0601E67F RID: 124543 RVA: 0x00442549 File Offset: 0x00440749
-		// (set) Token: 0x0601E680 RID: 124544 RVA: 0x00442551 File Offset: 0x00440751
+		// Token: 0x1700931E RID: 37662
+		// (get) Token: 0x0602020D RID: 131597 RVA: 0x00474D95 File Offset: 0x00472F95
+		// (set) Token: 0x0602020E RID: 131598 RVA: 0x00474D9D File Offset: 0x00472F9D
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x17008C0F RID: 35855
-		// (get) Token: 0x0601E681 RID: 124545 RVA: 0x0044255A File Offset: 0x0044075A
-		// (set) Token: 0x0601E682 RID: 124546 RVA: 0x00442562 File Offset: 0x00440762
+		// Token: 0x1700931F RID: 37663
+		// (get) Token: 0x0602020F RID: 131599 RVA: 0x00474DA6 File Offset: 0x00472FA6
+		// (set) Token: 0x06020210 RID: 131600 RVA: 0x00474DAE File Offset: 0x00472FAE
 		public ITrafficMatchTargetT MatchTarget { get; set; }
 
-		// Token: 0x0601E683 RID: 124547 RVA: 0x0044256B File Offset: 0x0044076B
+		// Token: 0x06020211 RID: 131601 RVA: 0x00474DB7 File Offset: 0x00472FB7
 		public ICheckTrafficBlockedT()
 		{
 			this.Type = ECondition.CompareVar;

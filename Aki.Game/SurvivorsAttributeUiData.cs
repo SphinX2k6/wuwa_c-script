@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x02002AF9 RID: 11001
+// Token: 0x02002075 RID: 8309
 public class SurvivorsAttributeUiData : ISurvivorsAttributeUiData
 {
-	// Token: 0x17001E92 RID: 7826
-	// (get) Token: 0x06016E24 RID: 93732 RVA: 0x005CE55A File Offset: 0x005CC75A
-	// (set) Token: 0x06016E25 RID: 93733 RVA: 0x005CE562 File Offset: 0x005CC762
+	// Token: 0x17001EEA RID: 7914
+	// (get) Token: 0x06014855 RID: 84053 RVA: 0x005FB0DA File Offset: 0x005F92DA
+	// (set) Token: 0x06014856 RID: 84054 RVA: 0x005FB0E2 File Offset: 0x005F92E2
 	public int AttrId { get; set; }
 
-	// Token: 0x17001E93 RID: 7827
-	// (get) Token: 0x06016E26 RID: 93734 RVA: 0x005CE56B File Offset: 0x005CC76B
-	// (set) Token: 0x06016E27 RID: 93735 RVA: 0x005CE573 File Offset: 0x005CC773
+	// Token: 0x17001EEB RID: 7915
+	// (get) Token: 0x06014857 RID: 84055 RVA: 0x005FB0EB File Offset: 0x005F92EB
+	// (set) Token: 0x06014858 RID: 84056 RVA: 0x005FB0F3 File Offset: 0x005F92F3
 	public double Value { get; set; }
 
-	// Token: 0x17001E94 RID: 7828
-	// (get) Token: 0x06016E28 RID: 93736 RVA: 0x005CE57C File Offset: 0x005CC77C
-	// (set) Token: 0x06016E29 RID: 93737 RVA: 0x005CE584 File Offset: 0x005CC784
+	// Token: 0x17001EEC RID: 7916
+	// (get) Token: 0x06014859 RID: 84057 RVA: 0x005FB0FC File Offset: 0x005F92FC
+	// (set) Token: 0x0601485A RID: 84058 RVA: 0x005FB104 File Offset: 0x005F9304
 	public bool IsRecommend { get; set; }
 
-	// Token: 0x17001E95 RID: 7829
-	// (get) Token: 0x06016E2A RID: 93738 RVA: 0x005CE58D File Offset: 0x005CC78D
-	// (set) Token: 0x06016E2B RID: 93739 RVA: 0x005CE595 File Offset: 0x005CC795
+	// Token: 0x17001EED RID: 7917
+	// (get) Token: 0x0601485B RID: 84059 RVA: 0x005FB10D File Offset: 0x005F930D
+	// (set) Token: 0x0601485C RID: 84060 RVA: 0x005FB115 File Offset: 0x005F9315
 	public bool? IsAddition { get; set; }
 }

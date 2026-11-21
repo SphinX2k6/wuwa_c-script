@@ -6,11 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AEB RID: 2795
+	// Token: 0x02000BB6 RID: 2998
 	public class IEntityGroupFailureSequentialState : IEntityGroupFailureCondition
 	{
-		// Token: 0x0600405A RID: 16474 RVA: 0x000A446E File Offset: 0x000A266E
-		[NullableContext(1)]
+		// Token: 0x06004489 RID: 17545 RVA: 0x000ADAA2 File Offset: 0x000ABCA2
 		public static IEntityGroupFailureSequentialState Create(IEntityGroupFailureSequentialState? instance)
 		{
 			if (instance == null)
@@ -23,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001041 RID: 4161
-		// (get) Token: 0x0600405B RID: 16475 RVA: 0x000A448D File Offset: 0x000A268D
+		// Token: 0x17001118 RID: 4376
+		// (get) Token: 0x0600448A RID: 17546 RVA: 0x000ADAC1 File Offset: 0x000ABCC1
 		public override EEntityGroupFailureCondition Type
 		{
 			get
@@ -33,19 +32,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001042 RID: 4162
-		// (get) Token: 0x0600405C RID: 16476 RVA: 0x000A449C File Offset: 0x000A269C
+		// Token: 0x17001119 RID: 4377
+		// (get) Token: 0x0600448B RID: 17547 RVA: 0x000ADAD0 File Offset: 0x000ABCD0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityStateCondition> Order
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -68,18 +67,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023D8 RID: 9176
+		// Token: 0x040025F5 RID: 9717
 		private IEntityGroupFailureSequentialState Instance;
 
-		// Token: 0x040023D9 RID: 9177
+		// Token: 0x040025F6 RID: 9718
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityStateCondition> _OrderCache;
 
-		// Token: 0x040023DA RID: 9178
+		// Token: 0x040025F7 RID: 9719
 		private bool _OrderInited;
 	}
 }

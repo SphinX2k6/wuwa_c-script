@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Flow
 {
-	// Token: 0x02007247 RID: 29255
+	// Token: 0x020063C6 RID: 25542
 	[NullableContext(1)]
 	public interface IFlowListInfo
 	{
-		// Token: 0x17009E56 RID: 40534
-		// (get) Token: 0x06047B8E RID: 293774
-		// (set) Token: 0x06047B8F RID: 293775
+		// Token: 0x170075AE RID: 30126
+		// (get) Token: 0x0603DF46 RID: 253766
+		// (set) Token: 0x0603DF47 RID: 253767
 		int FlowGenId { get; set; }
 
-		// Token: 0x17009E57 RID: 40535
-		// (get) Token: 0x06047B90 RID: 293776
-		// (set) Token: 0x06047B91 RID: 293777
+		// Token: 0x170075AF RID: 30127
+		// (get) Token: 0x0603DF48 RID: 253768
+		// (set) Token: 0x0603DF49 RID: 253769
 		Dictionary<int, ITextConfig> Texts { get; set; }
 
-		// Token: 0x17009E58 RID: 40536
-		// (get) Token: 0x06047B92 RID: 293778
-		// (set) Token: 0x06047B93 RID: 293779
+		// Token: 0x170075B0 RID: 30128
+		// (get) Token: 0x0603DF4A RID: 253770
+		// (set) Token: 0x0603DF4B RID: 253771
 		IFlowInfo[] Flows { get; set; }
 	}
 }

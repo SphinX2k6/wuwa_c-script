@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D03 RID: 19715
+	// Token: 0x020051FF RID: 20991
 	public enum ITrafficMatchTargetType_Union : byte
 	{
-		// Token: 0x0400D6DF RID: 55007
+		// Token: 0x0400E20C RID: 57868
 		NONE,
-		// Token: 0x0400D6E0 RID: 55008
+		// Token: 0x0400E20D RID: 57869
 		ITrafficMatchTargetType,
-		// Token: 0x0400D6E1 RID: 55009
+		// Token: 0x0400E20E RID: 57870
 		ITrafficMatchTargetByEntityLogic
 	}
 }

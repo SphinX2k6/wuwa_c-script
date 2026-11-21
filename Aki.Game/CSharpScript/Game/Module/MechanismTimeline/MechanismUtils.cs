@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MechanismTimeline
 {
-	// Token: 0x0200547F RID: 21631
+	// Token: 0x02004462 RID: 17506
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MechanismUtils
 	{
-		// Token: 0x06037314 RID: 226068 RVA: 0x00D165CF File Offset: 0x00D147CF
+		// Token: 0x0602C25D RID: 180829 RVA: 0x00C65A27 File Offset: 0x00C63C27
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return MechanismUtils.GetAllEvents(sequence, false);
 		}
 
-		// Token: 0x06037315 RID: 226069 RVA: 0x00D165D8 File Offset: 0x00D147D8
+		// Token: 0x0602C25E RID: 180830 RVA: 0x00C65A30 File Offset: 0x00C63C30
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return MechanismUtils.GetAllEvents(sequence, true);
 		}
 
-		// Token: 0x06037316 RID: 226070 RVA: 0x00D165E4 File Offset: 0x00D147E4
+		// Token: 0x0602C25F RID: 180831 RVA: 0x00C65A3C File Offset: 0x00C63C3C
 		public static void GetAllAnimNotifyEventsByPath(string sequencePath, [Nullable(new byte[]
 		{
 			1,
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			});
 		}
 
-		// Token: 0x06037317 RID: 226071 RVA: 0x00D16618 File Offset: 0x00D14818
+		// Token: 0x0602C260 RID: 180832 RVA: 0x00C65A70 File Offset: 0x00C63C70
 		public static void GetAllAnimNotifyStateEventsByPath(string sequencePath, [Nullable(new byte[]
 		{
 			1,
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			});
 		}
 
-		// Token: 0x06037318 RID: 226072 RVA: 0x00D1664C File Offset: 0x00D1484C
+		// Token: 0x0602C261 RID: 180833 RVA: 0x00C65AA4 File Offset: 0x00C63CA4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return <LoadSequenceAsset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037319 RID: 226073 RVA: 0x00D1668F File Offset: 0x00D1488F
+		// Token: 0x0602C262 RID: 180834 RVA: 0x00C65AE7 File Offset: 0x00C63CE7
 		[return: Nullable(new byte[]
 		{
 			2,

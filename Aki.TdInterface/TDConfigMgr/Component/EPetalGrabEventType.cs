@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000113 RID: 275
+	// Token: 0x02000124 RID: 292
 	[EnumExtensions]
 	public enum EPetalGrabEventType
 	{
-		// Token: 0x040005A7 RID: 1447
+		// Token: 0x040005E4 RID: 1508
 		Grabbed,
-		// Token: 0x040005A8 RID: 1448
+		// Token: 0x040005E5 RID: 1509
 		Leave
 	}
 }

@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001350 RID: 4944
+	// Token: 0x020002C2 RID: 706
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/GameplayAbilities.GameplayAbilityLocalAnimMontage")]
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class FGameplayAbilityLocalAnimMontage : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06012228 RID: 74280 RVA: 0x001A9EEA File Offset: 0x001A80EA
+		// Token: 0x06004D79 RID: 19833 RVA: 0x0006C466 File Offset: 0x0006A666
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FGameplayAbilityLocalAnimMontage._ScriptStructPtr != 0) ? FGameplayAbilityLocalAnimMontage._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/GameplayAbilities.GameplayAbilityLocalAnimMontage", ref FGameplayAbilityLocalAnimMontage._ScriptStructPtr);
 		}
 
-		// Token: 0x1700469D RID: 18077
-		// (get) Token: 0x06012229 RID: 74281 RVA: 0x001A9F0E File Offset: 0x001A810E
-		// (set) Token: 0x0601222A RID: 74282 RVA: 0x001A9F22 File Offset: 0x001A8122
+		// Token: 0x17000EDC RID: 3804
+		// (get) Token: 0x06004D7A RID: 19834 RVA: 0x0006C48A File Offset: 0x0006A68A
+		// (set) Token: 0x06004D7B RID: 19835 RVA: 0x0006C49E File Offset: 0x0006A69E
 		public unsafe UAnimMontage AnimMontage
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700469E RID: 18078
-		// (get) Token: 0x0601222B RID: 74283 RVA: 0x001A9F37 File Offset: 0x001A8137
-		// (set) Token: 0x0601222C RID: 74284 RVA: 0x001A9F47 File Offset: 0x001A8147
+		// Token: 0x17000EDD RID: 3805
+		// (get) Token: 0x06004D7C RID: 19836 RVA: 0x0006C4B3 File Offset: 0x0006A6B3
+		// (set) Token: 0x06004D7D RID: 19837 RVA: 0x0006C4C3 File Offset: 0x0006A6C3
 		public unsafe bool PlayBit
 		{
 			get
@@ -49,33 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700469F RID: 18079
-		// (get) Token: 0x0601222D RID: 74285 RVA: 0x001A9F58 File Offset: 0x001A8158
-		// (set) Token: 0x0601222E RID: 74286 RVA: 0x001A9F9B File Offset: 0x001A819B
-		[Nullable(1)]
-		public FPredictionKey PredictionKey
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FPredictionKey result;
-				if ((result = this._PredictionKey) == null)
-				{
-					result = (this._PredictionKey = new FPredictionKey(base.NativePtr + (IntPtr)FGameplayAbilityLocalAnimMontage.__PropertyOffset_PredictionKey, base.MemoryOwner ?? this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPredictionKey.StaticStruct(), base.NativePtr + (IntPtr)FGameplayAbilityLocalAnimMontage.__PropertyOffset_PredictionKey, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170046A0 RID: 18080
-		// (get) Token: 0x0601222F RID: 74287 RVA: 0x001A9FBC File Offset: 0x001A81BC
-		// (set) Token: 0x06012230 RID: 74288 RVA: 0x001A9FD0 File Offset: 0x001A81D0
+		// Token: 0x17000EDE RID: 3806
+		// (get) Token: 0x06004D7E RID: 19838 RVA: 0x0006C4D4 File Offset: 0x0006A6D4
+		// (set) Token: 0x06004D7F RID: 19839 RVA: 0x0006C4E8 File Offset: 0x0006A6E8
 		public unsafe UGameplayAbility AnimatingAbility
 		{
 			get
@@ -88,71 +64,55 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06012231 RID: 74289 RVA: 0x001A9FE5 File Offset: 0x001A81E5
+		// Token: 0x06004D80 RID: 19840 RVA: 0x0006C4FD File Offset: 0x0006A6FD
 		public FGameplayAbilityLocalAnimMontage()
 		{
 		}
 
-		// Token: 0x06012232 RID: 74290 RVA: 0x001A9FED File Offset: 0x001A81ED
-		[NullableContext(1)]
-		public FGameplayAbilityLocalAnimMontage(UAnimMontage AnimMontage, bool PlayBit, FPredictionKey PredictionKey, UGameplayAbility AnimatingAbility)
-		{
-			this.AnimMontage = AnimMontage;
-			this.PlayBit = PlayBit;
-			this.PredictionKey = PredictionKey;
-			this.AnimatingAbility = AnimatingAbility;
-		}
-
-		// Token: 0x06012233 RID: 74291 RVA: 0x001AA012 File Offset: 0x001A8212
+		// Token: 0x06004D81 RID: 19841 RVA: 0x0006C505 File Offset: 0x0006A705
 		protected override IntPtr GetUStructPtr()
 		{
 			return FGameplayAbilityLocalAnimMontage.StaticStruct();
 		}
 
-		// Token: 0x06012234 RID: 74292 RVA: 0x001AA01E File Offset: 0x001A821E
+		// Token: 0x06004D82 RID: 19842 RVA: 0x0006C511 File Offset: 0x0006A711
 		public FGameplayAbilityLocalAnimMontage(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06012235 RID: 74293 RVA: 0x001AA028 File Offset: 0x001A8228
+		// Token: 0x06004D83 RID: 19843 RVA: 0x0006C51B File Offset: 0x0006A71B
 		public FGameplayAbilityLocalAnimMontage(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06012236 RID: 74294 RVA: 0x001AA033 File Offset: 0x001A8233
+		// Token: 0x06004D84 RID: 19844 RVA: 0x0006C526 File Offset: 0x0006A726
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FGameplayAbilityLocalAnimMontage(Pointer, false, true);
 		}
 
-		// Token: 0x06012237 RID: 74295 RVA: 0x001AA03D File Offset: 0x001A823D
+		// Token: 0x06004D85 RID: 19845 RVA: 0x0006C530 File Offset: 0x0006A730
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FGameplayAbilityLocalAnimMontage(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04009B6B RID: 39787
+		// Token: 0x04001EE8 RID: 7912
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/GameplayAbilities.GameplayAbilityLocalAnimMontage";
 
-		// Token: 0x04009B6C RID: 39788
+		// Token: 0x04001EE9 RID: 7913
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04009B6D RID: 39789
+		// Token: 0x04001EEA RID: 7914
 		internal static int __PropertyOffset_AnimMontage;
 
-		// Token: 0x04009B6E RID: 39790
+		// Token: 0x04001EEB RID: 7915
 		internal static int __PropertyOffset_PlayBit;
 
-		// Token: 0x04009B6F RID: 39791
-		internal static int __PropertyOffset_PredictionKey;
-
-		// Token: 0x04009B70 RID: 39792
-		private FPredictionKey _PredictionKey;
-
-		// Token: 0x04009B71 RID: 39793
+		// Token: 0x04001EEC RID: 7916
 		internal static int __PropertyOffset_AnimatingAbility;
 	}
 }

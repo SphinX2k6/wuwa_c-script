@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005F00 RID: 24320
+	// Token: 0x02004EE7 RID: 20199
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CategoryToggleItem : UiPanelBase
 	{
-		// Token: 0x17008EEE RID: 36590
-		// (get) Token: 0x0603DCB9 RID: 253113 RVA: 0x00EF0778 File Offset: 0x00EEE978
-		// (set) Token: 0x0603DCBA RID: 253114 RVA: 0x00EF0780 File Offset: 0x00EEE980
+		// Token: 0x170062C0 RID: 25280
+		// (get) Token: 0x06032C54 RID: 207956 RVA: 0x00E4243C File Offset: 0x00E4063C
+		// (set) Token: 0x06032C55 RID: 207957 RVA: 0x00E42444 File Offset: 0x00E40644
 		public Action<EToggleState> OnToggleClickCallBack { get; set; }
 
-		// Token: 0x0603DCBB RID: 253115 RVA: 0x00EF078C File Offset: 0x00EEE98C
+		// Token: 0x06032C56 RID: 207958 RVA: 0x00E42450 File Offset: 0x00E40650
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DCBC RID: 253116 RVA: 0x00EF0853 File Offset: 0x00EEEA53
+		// Token: 0x06032C57 RID: 207959 RVA: 0x00E42517 File Offset: 0x00E40717
 		private void ToggleClick(EToggleState state)
 		{
 			Action<EToggleState> onToggleClickCallBack = this.OnToggleClickCallBack;
@@ -51,21 +51,21 @@ namespace CSharpScript.Game.Module.Activity
 			onToggleClickCallBack(state);
 		}
 
-		// Token: 0x0603DCBD RID: 253117 RVA: 0x00EF0868 File Offset: 0x00EEEA68
+		// Token: 0x06032C58 RID: 207960 RVA: 0x00E4252C File Offset: 0x00E4072C
 		[NullableContext(1)]
 		public void SetIcon(string iconPath)
 		{
 			this.SetSpriteByPath(iconPath, base.GetSprite(1), false, null, null);
 		}
 
-		// Token: 0x0603DCBE RID: 253118 RVA: 0x00EF088E File Offset: 0x00EEEA8E
+		// Token: 0x06032C59 RID: 207961 RVA: 0x00E42552 File Offset: 0x00E40752
 		[NullableContext(1)]
 		public UUIExtendToggle GetTabToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x0603DCBF RID: 253119 RVA: 0x00EF0897 File Offset: 0x00EEEA97
+		// Token: 0x06032C5A RID: 207962 RVA: 0x00E4255B File Offset: 0x00E4075B
 		public void SetRedDotState(bool bVisible)
 		{
 			UUIItem item = base.GetItem(2);
@@ -76,17 +76,17 @@ namespace CSharpScript.Game.Module.Activity
 			item.SetUIActive(bVisible);
 		}
 
-		// Token: 0x0200C233 RID: 49715
+		// Token: 0x0200AC41 RID: 44097
 		[NullableContext(0)]
 		private class EToggleComponents
 		{
-			// Token: 0x0403AAD2 RID: 240338
+			// Token: 0x040354C6 RID: 218310
 			public const int Toggle = 0;
 
-			// Token: 0x0403AAD3 RID: 240339
+			// Token: 0x040354C7 RID: 218311
 			public const int Icon = 1;
 
-			// Token: 0x0403AAD4 RID: 240340
+			// Token: 0x040354C8 RID: 218312
 			public const int RedDot = 2;
 		}
 	}

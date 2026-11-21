@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072F2 RID: 29426
+	// Token: 0x02006475 RID: 25717
 	[NullableContext(1)]
 	public interface IPhotoInputContext
 	{
-		// Token: 0x17009F5A RID: 40794
-		// (get) Token: 0x0604836A RID: 295786
+		// Token: 0x170076F8 RID: 30456
+		// (get) Token: 0x0603E7B6 RID: 255926
 		[Nullable(2)]
 		TsBaseCharacter Character { [NullableContext(2)] get; }
 
-		// Token: 0x17009F5B RID: 40795
-		// (get) Token: 0x0604836B RID: 295787
+		// Token: 0x170076F9 RID: 30457
+		// (get) Token: 0x0603E7B7 RID: 255927
 		PhotoCameraLogicComponent Logic { get; }
 	}
 }

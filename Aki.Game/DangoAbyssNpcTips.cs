@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.GenericPrompt.View;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001A45 RID: 6725
+// Token: 0x02000F04 RID: 3844
 public class DangoAbyssNpcTips : GenericPromptFloatTipsBase
 {
-	// Token: 0x0600C5E1 RID: 50657 RVA: 0x002CEF99 File Offset: 0x002CD199
+	// Token: 0x060099F1 RID: 39409 RVA: 0x002DA09D File Offset: 0x002D829D
 	[NullableContext(1)]
 	public DangoAbyssNpcTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C5E2 RID: 50658 RVA: 0x002CEFA4 File Offset: 0x002CD1A4
+	// Token: 0x060099F2 RID: 39410 RVA: 0x002DA0A8 File Offset: 0x002D82A8
 	protected override void SetMainText([ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -28,7 +28,7 @@ public class DangoAbyssNpcTips : GenericPromptFloatTipsBase
 		}
 	}
 
-	// Token: 0x0600C5E3 RID: 50659 RVA: 0x002CEFF0 File Offset: 0x002CD1F0
+	// Token: 0x060099F3 RID: 39411 RVA: 0x002DA0F4 File Offset: 0x002D82F4
 	protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 	{
 		1,

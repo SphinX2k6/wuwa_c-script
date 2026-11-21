@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x0200730B RID: 29451
+	// Token: 0x0200648E RID: 25742
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PilotThrowCamera : ISpecialGameplayCamera
 	{
-		// Token: 0x06048475 RID: 296053 RVA: 0x01292A62 File Offset: 0x01290C62
+		// Token: 0x0603E8C2 RID: 256194 RVA: 0x012354E2 File Offset: 0x012336E2
 		[NullableContext(1)]
 		public void OnInit(ACameraActor camera, CameraModelInstance cameraModel)
 		{
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			GamepadController.Instance.TryAddFeedbackReason(EGamepadPsFeedbackReason.PilotThrow, "TieyuThrow");
 		}
 
-		// Token: 0x06048476 RID: 296054 RVA: 0x01292A88 File Offset: 0x01290C88
+		// Token: 0x0603E8C3 RID: 256195 RVA: 0x01235508 File Offset: 0x01233708
 		public void Update(float deltaTime)
 		{
 			if (!this.LerpFinish)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048477 RID: 296055 RVA: 0x01293234 File Offset: 0x01291434
+		// Token: 0x0603E8C4 RID: 256196 RVA: 0x01235CB4 File Offset: 0x01233EB4
 		public void OnDestroy()
 		{
 			this.Character = null;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048478 RID: 296056 RVA: 0x012932F0 File Offset: 0x012914F0
+		// Token: 0x0603E8C5 RID: 256197 RVA: 0x01235D70 File Offset: 0x01233F70
 		private void OnInitInternal()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.LerpDuration = PilotThrowModel.Instance.Setting.启动镜头插值;
 		}
 
-		// Token: 0x06048479 RID: 296057 RVA: 0x012936C0 File Offset: 0x012918C0
+		// Token: 0x0603E8C6 RID: 256198 RVA: 0x01236140 File Offset: 0x01234340
 		private void LerpCamera(float delta)
 		{
 			ACameraActor cameraActor = this.CameraActor;
@@ -318,89 +318,89 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.LerpFinish = true;
 		}
 
-		// Token: 0x0604847A RID: 296058 RVA: 0x0129380F File Offset: 0x01291A0F
+		// Token: 0x0603E8C7 RID: 256199 RVA: 0x0123628F File Offset: 0x0123448F
 		private bool IsInTouch()
 		{
 			return Info.Instance.IsInTouch() || (Info.Instance.IsInGamepad() && ControlScreenModel.Instance.IsTouching);
 		}
 
-		// Token: 0x0604847B RID: 296059 RVA: 0x01293837 File Offset: 0x01291A37
+		// Token: 0x0603E8C8 RID: 256200 RVA: 0x012362B7 File Offset: 0x012344B7
 		private bool IsInGamepad()
 		{
 			return Info.Instance.IsInGamepad() && !ControlScreenModel.Instance.IsTouching;
 		}
 
-		// Token: 0x04026317 RID: 156439
+		// Token: 0x04021604 RID: 136708
 		private CameraModelInstance CameraModel;
 
-		// Token: 0x04026318 RID: 156440
+		// Token: 0x04021605 RID: 136709
 		private ACameraActor CameraActor;
 
-		// Token: 0x04026319 RID: 156441
+		// Token: 0x04021606 RID: 136710
 		private TsBaseCharacter Character;
 
-		// Token: 0x0402631A RID: 156442
+		// Token: 0x04021607 RID: 136711
 		private CharacterInputComponent InputComp;
 
-		// Token: 0x0402631B RID: 156443
+		// Token: 0x04021608 RID: 136712
 		private FightCameraLogicComponent FightCameraLogicComp;
 
-		// Token: 0x0402631C RID: 156444
+		// Token: 0x04021609 RID: 136713
 		private AActor HookActor;
 
-		// Token: 0x0402631D RID: 156445
+		// Token: 0x0402160A RID: 136714
 		private IPilotThrow HookConfig;
 
-		// Token: 0x0402631E RID: 156446
+		// Token: 0x0402160B RID: 136715
 		[Nullable(1)]
 		private readonly Vector TmpVector = Vector.Create();
 
-		// Token: 0x0402631F RID: 156447
+		// Token: 0x0402160C RID: 136716
 		[Nullable(1)]
 		private readonly Rotator TmpRotator = Rotator.Create();
 
-		// Token: 0x04026320 RID: 156448
+		// Token: 0x0402160D RID: 136717
 		[Nullable(1)]
 		private readonly Rotator TmpRotator2 = Rotator.Create();
 
-		// Token: 0x04026321 RID: 156449
+		// Token: 0x0402160E RID: 136718
 		[Nullable(1)]
 		private readonly Rotator TmpRotator3 = Rotator.Create();
 
-		// Token: 0x04026322 RID: 156450
+		// Token: 0x0402160F RID: 136719
 		private double LerpTimer = 0.15;
 
-		// Token: 0x04026323 RID: 156451
+		// Token: 0x04021610 RID: 136720
 		private float YawInput;
 
-		// Token: 0x04026324 RID: 156452
+		// Token: 0x04021611 RID: 136721
 		private float PitchInput;
 
-		// Token: 0x04026325 RID: 156453
+		// Token: 0x04021612 RID: 136722
 		private float EdgeOffset;
 
-		// Token: 0x04026326 RID: 156454
+		// Token: 0x04021613 RID: 136723
 		private Entity TitanEntity;
 
-		// Token: 0x04026327 RID: 156455
+		// Token: 0x04021614 RID: 136724
 		private int HandleAudioEventY = -1;
 
-		// Token: 0x04026328 RID: 156456
+		// Token: 0x04021615 RID: 136725
 		private int HandleAudioEventX = -1;
 
-		// Token: 0x04026329 RID: 156457
+		// Token: 0x04021616 RID: 136726
 		private bool PlayedAudioEventLimit;
 
-		// Token: 0x0402632A RID: 156458
+		// Token: 0x04021617 RID: 136727
 		private bool PlayingForceFeedback;
 
-		// Token: 0x0402632B RID: 156459
+		// Token: 0x04021618 RID: 136728
 		private float LerpCameraTimer;
 
-		// Token: 0x0402632C RID: 156460
+		// Token: 0x04021619 RID: 136729
 		private float LerpDuration = 0.5f;
 
-		// Token: 0x0402632D RID: 156461
+		// Token: 0x0402161A RID: 136730
 		private bool LerpFinish;
 	}
 }

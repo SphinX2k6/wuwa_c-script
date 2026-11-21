@@ -5,12 +5,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand
 {
-	// Token: 0x020069C4 RID: 27076
+	// Token: 0x02005B20 RID: 23328
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TuningStandDefine
 	{
-		// Token: 0x060435EC RID: 275948 RVA: 0x01076184 File Offset: 0x01074384
+		// Token: 0x06039628 RID: 235048 RVA: 0x0101A618 File Offset: 0x01018818
 		// Note: this type is marked as 'beforefieldinit'.
 		static TuningStandDefine()
 		{
@@ -76,45 +76,45 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			TuningStandDefine.gridSpriteMap = dictionary3;
 		}
 
-		// Token: 0x04023246 RID: 143942
+		// Token: 0x0401E436 RID: 123958
 		public const int MAX_ROW = 5;
 
-		// Token: 0x04023247 RID: 143943
+		// Token: 0x0401E437 RID: 123959
 		public const int MAX_LINE = 7;
 
-		// Token: 0x04023248 RID: 143944
+		// Token: 0x0401E438 RID: 123960
 		public const int ANIM_IN_TIME = 330;
 
-		// Token: 0x04023249 RID: 143945
+		// Token: 0x0401E439 RID: 123961
 		public const int RESET_TIMES_THREDHOLD = 3;
 
-		// Token: 0x0402324A RID: 143946
+		// Token: 0x0401E43A RID: 123962
 		public const int RESET_COOL_DOWN = 3;
 
-		// Token: 0x0402324B RID: 143947
+		// Token: 0x0401E43B RID: 123963
 		public const int TOOLONG_DELAY = 60000;
 
-		// Token: 0x0402324C RID: 143948
+		// Token: 0x0401E43C RID: 123964
 		public const int TOOLONG_DELAY_MIN = 3;
 
-		// Token: 0x0402324D RID: 143949
+		// Token: 0x0401E43D RID: 123965
 		public const int TUNINGSTAND_HELP_ID = 346;
 
-		// Token: 0x0402324E RID: 143950
+		// Token: 0x0401E43E RID: 123966
 		public const int FX_FLYING_TIME = 1;
 
-		// Token: 0x0402324F RID: 143951
+		// Token: 0x0401E43F RID: 123967
 		public const float AK_COOL_DOWN = 0.05f;
 
-		// Token: 0x04023250 RID: 143952
+		// Token: 0x0401E440 RID: 123968
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ETuningStandGridType, int> gridValueMap;
 
-		// Token: 0x04023251 RID: 143953
+		// Token: 0x0401E441 RID: 123969
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ETuningStandGridType, EGridMainType> gridMainTypeMap;
 
-		// Token: 0x04023252 RID: 143954
+		// Token: 0x0401E442 RID: 123970
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ETuningStandGridType, string[]> gridSpriteMap;
 	}

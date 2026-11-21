@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 {
-	// Token: 0x020069BD RID: 27069
+	// Token: 0x02005B19 RID: 23321
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TurntableControlView : UiViewBase
 	{
-		// Token: 0x060435CB RID: 275915 RVA: 0x01075B0C File Offset: 0x01073D0C
+		// Token: 0x06039607 RID: 235015 RVA: 0x01019FA0 File Offset: 0x010181A0
 		[NullableContext(1)]
 		public TurntableControlView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060435CC RID: 275916 RVA: 0x01075B18 File Offset: 0x01073D18
+		// Token: 0x06039608 RID: 235016 RVA: 0x01019FAC File Offset: 0x010181AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,21 +38,21 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 				new ValueTuple<int, Delegate>(1, new Action(this.OnBtnSwitchClicked)),
 				new ValueTuple<int, Delegate>(3, new Action(this.OnBtnBackClicked))
 			};
-			if (TurntableControlController.Instance.GetControlType().GetValueOrDefault() == Aki.TDConfigMgr.Component.EControllerType.FixedAngle)
+			if (TurntableControlController.Instance.GetControlType().GetValueOrDefault() == EControllerType.FixedAngle)
 			{
 				this.BtnBindInfo.Add(new ValueTuple<int, Delegate>(2, new Action(this.OnBtnRotateClicked)));
 			}
 		}
 
-		// Token: 0x060435CD RID: 275917 RVA: 0x01075C10 File Offset: 0x01073E10
+		// Token: 0x06039609 RID: 235017 RVA: 0x0101A0A4 File Offset: 0x010182A4
 		protected override void OnStart()
 		{
 			this.BtnReset = base.GetButton(0);
 			this.BtnSwitch = base.GetButton(1);
 			this.BtnRotate = base.GetButton(2);
 			this.BtnBack = base.GetButton(3);
-			Aki.TDConfigMgr.Component.EControllerType? controlType = TurntableControlController.Instance.GetControlType();
-			Aki.TDConfigMgr.Component.EControllerType econtrollerType = Aki.TDConfigMgr.Component.EControllerType.FreeAngle;
+			EControllerType? controlType = TurntableControlController.Instance.GetControlType();
+			EControllerType econtrollerType = EControllerType.FreeAngle;
 			if (controlType.GetValueOrDefault() == econtrollerType & controlType != null)
 			{
 				this.BtnRotate.OnPointDownCallBack.Bind(new Action(this.OnBtnRotateDown));
@@ -61,19 +61,19 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435CE RID: 275918 RVA: 0x01075CB5 File Offset: 0x01073EB5
+		// Token: 0x0603960A RID: 235018 RVA: 0x0101A149 File Offset: 0x01018349
 		protected override void OnBeforeShow()
 		{
 			UiTimeDilation.Instance.AddWaitSetTimeDilationTag("TurntableControl");
 		}
 
-		// Token: 0x060435CF RID: 275919 RVA: 0x01075CC6 File Offset: 0x01073EC6
+		// Token: 0x0603960B RID: 235019 RVA: 0x0101A15A File Offset: 0x0101835A
 		protected override void OnAfterHide()
 		{
 			UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("TurntableControl");
 		}
 
-		// Token: 0x060435D0 RID: 275920 RVA: 0x01075CD8 File Offset: 0x01073ED8
+		// Token: 0x0603960C RID: 235020 RVA: 0x0101A16C File Offset: 0x0101836C
 		protected override void OnBeforeDestroy()
 		{
 			TurntableControlController.Instance.HandleTurntableControlViewClose();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			this.BtnBack = null;
 		}
 
-		// Token: 0x060435D1 RID: 275921 RVA: 0x01075D5C File Offset: 0x01073F5C
+		// Token: 0x0603960D RID: 235021 RVA: 0x0101A1F0 File Offset: 0x010183F0
 		protected override void OnAfterShow()
 		{
 			if (TurntableControlController.Instance.IsAllRingsAtTarget())
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435D2 RID: 275922 RVA: 0x01075DCC File Offset: 0x01073FCC
+		// Token: 0x0603960E RID: 235022 RVA: 0x0101A260 File Offset: 0x01018460
 		protected override void OnAddEventListener()
 		{
 			Entity controllerEntity = TurntableControlController.Instance.GetControllerEntity();
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			EventSystem.Instance.Add(EEventName.OnExecuteUiCameraSequenceEvent, new Action<string>(this.OnExecuteUiCameraSequenceEvent));
 		}
 
-		// Token: 0x060435D3 RID: 275923 RVA: 0x01075E40 File Offset: 0x01074040
+		// Token: 0x0603960F RID: 235023 RVA: 0x0101A2D4 File Offset: 0x010184D4
 		protected override void OnRemoveEventListener()
 		{
 			Entity controllerEntity = TurntableControlController.Instance.GetControllerEntity();
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			EventSystem.Instance.Remove(EEventName.OnExecuteUiCameraSequenceEvent, new Action<string>(this.OnExecuteUiCameraSequenceEvent));
 		}
 
-		// Token: 0x060435D4 RID: 275924 RVA: 0x01075EB4 File Offset: 0x010740B4
+		// Token: 0x06039610 RID: 235024 RVA: 0x0101A348 File Offset: 0x01018548
 		[NullableContext(1)]
 		private void OnExecuteUiCameraSequenceEvent(string sequenceEventName)
 		{
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435D5 RID: 275925 RVA: 0x01075F0C File Offset: 0x0107410C
+		// Token: 0x06039611 RID: 235025 RVA: 0x0101A3A0 File Offset: 0x010185A0
 		private void OnTurntableControllerBusyStateChange(bool isBusyRotating, bool isBusyAnimating)
 		{
 			if (isBusyAnimating)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			{
 				this.BtnReset.SetSelfInteractive(false);
 				this.BtnSwitch.SetSelfInteractive(true);
-				if (TurntableControlController.Instance.GetControlType().GetValueOrDefault() == Aki.TDConfigMgr.Component.EControllerType.FixedAngle)
+				if (TurntableControlController.Instance.GetControlType().GetValueOrDefault() == EControllerType.FixedAngle)
 				{
 					this.BtnRotate.SetSelfInteractive(false);
 				}
@@ -175,14 +175,14 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			this.BtnBack.SetSelfInteractive(true);
 		}
 
-		// Token: 0x060435D6 RID: 275926 RVA: 0x01075FD4 File Offset: 0x010741D4
+		// Token: 0x06039612 RID: 235026 RVA: 0x0101A468 File Offset: 0x01018668
 		private void OnBtnResetClicked()
 		{
 			this.OnTurntableControllerBusyStateChange(false, true);
 			this.OnBtnResetClickedImp();
 		}
 
-		// Token: 0x060435D7 RID: 275927 RVA: 0x01075FE8 File Offset: 0x010741E8
+		// Token: 0x06039613 RID: 235027 RVA: 0x0101A47C File Offset: 0x0101867C
 		private UniTask OnBtnResetClickedImp()
 		{
 			TurntableControlView.<OnBtnResetClickedImp>d__18 <OnBtnResetClickedImp>d__;
@@ -193,62 +193,62 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			return <OnBtnResetClickedImp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060435D8 RID: 275928 RVA: 0x0107602B File Offset: 0x0107422B
+		// Token: 0x06039614 RID: 235028 RVA: 0x0101A4BF File Offset: 0x010186BF
 		private void OnBtnSwitchClicked()
 		{
 			TurntableControlController.Instance.SwitchSelectedRing();
 		}
 
-		// Token: 0x060435D9 RID: 275929 RVA: 0x01076037 File Offset: 0x01074237
+		// Token: 0x06039615 RID: 235029 RVA: 0x0101A4CB File Offset: 0x010186CB
 		private void OnBtnRotateClicked()
 		{
 			TurntableControlController.Instance.StartRotateSelected();
 		}
 
-		// Token: 0x060435DA RID: 275930 RVA: 0x01076043 File Offset: 0x01074243
+		// Token: 0x06039616 RID: 235030 RVA: 0x0101A4D7 File Offset: 0x010186D7
 		private void OnBtnRotateDown()
 		{
 			TurntableControlController.Instance.StartRotateSelected();
 		}
 
-		// Token: 0x060435DB RID: 275931 RVA: 0x0107604F File Offset: 0x0107424F
+		// Token: 0x06039617 RID: 235031 RVA: 0x0101A4E3 File Offset: 0x010186E3
 		private void OnBtnRotateUp()
 		{
 			TurntableControlController.Instance.StopAllRotate();
 		}
 
-		// Token: 0x060435DC RID: 275932 RVA: 0x0107605B File Offset: 0x0107425B
+		// Token: 0x06039618 RID: 235032 RVA: 0x0101A4EF File Offset: 0x010186EF
 		private void OnBtnBackClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0402322B RID: 143915
+		// Token: 0x0401E41B RID: 123931
 		private UUIButtonComponent BtnReset;
 
-		// Token: 0x0402322C RID: 143916
+		// Token: 0x0401E41C RID: 123932
 		private UUIButtonComponent BtnSwitch;
 
-		// Token: 0x0402322D RID: 143917
+		// Token: 0x0401E41D RID: 123933
 		private UUIButtonComponent BtnRotate;
 
-		// Token: 0x0402322E RID: 143918
+		// Token: 0x0401E41E RID: 123934
 		private UUIButtonComponent BtnBack;
 
-		// Token: 0x0402322F RID: 143919
+		// Token: 0x0401E41F RID: 123935
 		private bool OpenViewSeqEventTriggered;
 
-		// Token: 0x0200CB3C RID: 52028
+		// Token: 0x0200B71B RID: 46875
 		[NullableContext(0)]
 		public enum ETurntableControlView
 		{
-			// Token: 0x0403D5E7 RID: 251367
+			// Token: 0x040389C9 RID: 231881
 			BtnReset,
-			// Token: 0x0403D5E8 RID: 251368
+			// Token: 0x040389CA RID: 231882
 			BtnSwitch,
-			// Token: 0x0403D5E9 RID: 251369
+			// Token: 0x040389CB RID: 231883
 			BtnRotate,
-			// Token: 0x0403D5EA RID: 251370
+			// Token: 0x040389CC RID: 231884
 			BtnBack
 		}
 	}

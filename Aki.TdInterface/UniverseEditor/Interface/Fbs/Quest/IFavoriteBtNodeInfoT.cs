@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E2B RID: 15915
+	// Token: 0x02004266 RID: 16998
 	public class IFavoriteBtNodeInfoT
 	{
-		// Token: 0x17006E0A RID: 28170
-		// (get) Token: 0x060164DD RID: 91357 RVA: 0x003385AB File Offset: 0x003367AB
-		// (set) Token: 0x060164DE RID: 91358 RVA: 0x003385B3 File Offset: 0x003367B3
+		// Token: 0x170073F0 RID: 29680
+		// (get) Token: 0x06017B0A RID: 97034 RVA: 0x003611A3 File Offset: 0x0035F3A3
+		// (set) Token: 0x06017B0B RID: 97035 RVA: 0x003611AB File Offset: 0x0035F3AB
 		public int Id { get; set; }
 
-		// Token: 0x17006E0B RID: 28171
-		// (get) Token: 0x060164DF RID: 91359 RVA: 0x003385BC File Offset: 0x003367BC
-		// (set) Token: 0x060164E0 RID: 91360 RVA: 0x003385C4 File Offset: 0x003367C4
+		// Token: 0x170073F1 RID: 29681
+		// (get) Token: 0x06017B0C RID: 97036 RVA: 0x003611B4 File Offset: 0x0035F3B4
+		// (set) Token: 0x06017B0D RID: 97037 RVA: 0x003611BC File Offset: 0x0035F3BC
 		public string Desc { get; set; }
 
-		// Token: 0x060164E1 RID: 91361 RVA: 0x003385CD File Offset: 0x003367CD
+		// Token: 0x06017B0E RID: 97038 RVA: 0x003611C5 File Offset: 0x0035F3C5
 		public IFavoriteBtNodeInfoT()
 		{
 			this.Id = 0;

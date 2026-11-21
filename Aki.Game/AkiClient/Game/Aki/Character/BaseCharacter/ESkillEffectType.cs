@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042D8 RID: 17112
+	// Token: 0x0200332C RID: 13100
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ESkillEffectType.ESkillEffectType")]
 	public enum ESkillEffectType : byte
 	{
-		// Token: 0x040174A2 RID: 95394
+		// Token: 0x04012178 RID: 74104
 		None,
-		// Token: 0x040174A3 RID: 95395
+		// Token: 0x04012179 RID: 74105
 		EndEffect,
-		// Token: 0x040174A4 RID: 95396
+		// Token: 0x0401217A RID: 74106
 		DestroyEffect,
-		// Token: 0x040174A5 RID: 95397
+		// Token: 0x0401217B RID: 74107
 		ESkillEffectType_MAX
 	}
 }

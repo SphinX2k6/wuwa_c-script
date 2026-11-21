@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065D0 RID: 26064
+	// Token: 0x0200554E RID: 21838
 	public class DockyardTrawlListPanelModel : DockyardItemListPanelModel
 	{
-		// Token: 0x060415E8 RID: 267752 RVA: 0x00FD75B4 File Offset: 0x00FD57B4
+		// Token: 0x060362AD RID: 221869 RVA: 0x00F1E5F4 File Offset: 0x00F1C7F4
 		protected override void OnInit()
 		{
 			base.ComponentData.TitleText = "Fishing_CageText5";
@@ -15,14 +15,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.MaxCount = DockyardModel.Instance.TrawlSize;
 		}
 
-		// Token: 0x060415E9 RID: 267753 RVA: 0x00FD75E6 File Offset: 0x00FD57E6
+		// Token: 0x060362AE RID: 221870 RVA: 0x00F1E626 File Offset: 0x00F1C826
 		[NullableContext(1)]
 		public override List<DockyardItemBlockOriginalData> GetShowItemList()
 		{
 			return DockyardModel.Instance.GetTrawlDataList();
 		}
 
-		// Token: 0x060415EA RID: 267754 RVA: 0x00FD75F4 File Offset: 0x00FD57F4
+		// Token: 0x060362AF RID: 221871 RVA: 0x00F1E634 File Offset: 0x00F1C834
 		protected override bool CheckOtherCanDragCondition(bool fromDragResult)
 		{
 			if (base.CheckSelectedInList())
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return flag;
 		}
 
-		// Token: 0x04022024 RID: 139300
+		// Token: 0x0401C955 RID: 117077
 		protected int MaxCount;
 	}
 }

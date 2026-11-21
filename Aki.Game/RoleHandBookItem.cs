@@ -10,10 +10,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200277E RID: 10110
+// Token: 0x02001C69 RID: 7273
 public class RoleHandBookItem : UiPanelBase
 {
-	// Token: 0x06014BE0 RID: 84960 RVA: 0x0053FAE0 File Offset: 0x0053DCE0
+	// Token: 0x060120C3 RID: 73923 RVA: 0x0054E96C File Offset: 0x0054CB6C
 	[NullableContext(1)]
 	public RoleHandBookItem(int roleId, UUIItem item)
 	{
@@ -24,7 +24,7 @@ public class RoleHandBookItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014BE1 RID: 84961 RVA: 0x0053FB04 File Offset: 0x0053DD04
+	// Token: 0x060120C4 RID: 73924 RVA: 0x0054E990 File Offset: 0x0054CB90
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -63,7 +63,7 @@ public class RoleHandBookItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014BE2 RID: 84962 RVA: 0x0053FCD7 File Offset: 0x0053DED7
+	// Token: 0x060120C5 RID: 73925 RVA: 0x0054EB63 File Offset: 0x0054CD63
 	public void PlaySequence()
 	{
 		ALevelSequenceActor showSequence = this.ShowSequence;
@@ -74,7 +74,7 @@ public class RoleHandBookItem : UiPanelBase
 		showSequence.SequencePlayer.Play();
 	}
 
-	// Token: 0x06014BE3 RID: 84963 RVA: 0x0053FCEE File Offset: 0x0053DEEE
+	// Token: 0x060120C6 RID: 73926 RVA: 0x0054EB7A File Offset: 0x0054CD7A
 	private void ConfirmClick(int _)
 	{
 		if (this.IsCanRoleActive())
@@ -85,26 +85,26 @@ public class RoleHandBookItem : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.RoleHandBookRootView, EUiViewName.RoleHandBookSelectionView, null);
 	}
 
-	// Token: 0x06014BE4 RID: 84964 RVA: 0x0053FD28 File Offset: 0x0053DF28
+	// Token: 0x060120C7 RID: 73927 RVA: 0x0054EBB4 File Offset: 0x0054CDB4
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<IProto_NormalItem>>(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
 	}
 
-	// Token: 0x06014BE5 RID: 84965 RVA: 0x0053FD46 File Offset: 0x0053DF46
+	// Token: 0x060120C8 RID: 73928 RVA: 0x0054EBD2 File Offset: 0x0054CDD2
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
 	}
 
-	// Token: 0x06014BE6 RID: 84966 RVA: 0x0053FD64 File Offset: 0x0053DF64
+	// Token: 0x060120C9 RID: 73929 RVA: 0x0054EBF0 File Offset: 0x0054CDF0
 	[NullableContext(1)]
 	private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> _)
 	{
 		this.UpdateCostInfo();
 	}
 
-	// Token: 0x06014BE7 RID: 84967 RVA: 0x0053FD6C File Offset: 0x0053DF6C
+	// Token: 0x060120CA RID: 73930 RVA: 0x0054EBF8 File Offset: 0x0054CDF8
 	protected override void OnStart()
 	{
 		if (this.RoleId == null)
@@ -117,7 +117,7 @@ public class RoleHandBookItem : UiPanelBase
 		this.AddEventListener();
 	}
 
-	// Token: 0x06014BE8 RID: 84968 RVA: 0x0053FDC8 File Offset: 0x0053DFC8
+	// Token: 0x060120CB RID: 73931 RVA: 0x0054EC54 File Offset: 0x0054CE54
 	public void UpdateComponent(int roleId)
 	{
 		this.RoleId = new int?(roleId);
@@ -176,7 +176,7 @@ public class RoleHandBookItem : UiPanelBase
 		}, 100, this.MemoryTag);
 	}
 
-	// Token: 0x06014BE9 RID: 84969 RVA: 0x0053FFD0 File Offset: 0x0053E1D0
+	// Token: 0x060120CC RID: 73932 RVA: 0x0054EE5C File Offset: 0x0054D05C
 	public void UpdateCostInfo()
 	{
 		if (this.RoleId == null)
@@ -205,13 +205,13 @@ public class RoleHandBookItem : UiPanelBase
 		}));
 	}
 
-	// Token: 0x06014BEA RID: 84970 RVA: 0x00540110 File Offset: 0x0053E310
+	// Token: 0x060120CD RID: 73933 RVA: 0x0054EF9C File Offset: 0x0054D19C
 	public bool IsRoleUnlock()
 	{
 		return RoleModel.Instance.GetRoleInstanceById(this.RoleId.Value) != null;
 	}
 
-	// Token: 0x06014BEB RID: 84971 RVA: 0x0054012C File Offset: 0x0053E32C
+	// Token: 0x060120CE RID: 73934 RVA: 0x0054EFB8 File Offset: 0x0054D1B8
 	public bool IsCanRoleActive()
 	{
 		RoleInfo value = RoleConfig.Instance.GetRoleConfig(this.RoleId.Value).Value;
@@ -232,7 +232,7 @@ public class RoleHandBookItem : UiPanelBase
 		return !flag && itemCountByConfigId >= num.Value;
 	}
 
-	// Token: 0x06014BEC RID: 84972 RVA: 0x00540200 File Offset: 0x0053E400
+	// Token: 0x060120CF RID: 73935 RVA: 0x0054F08C File Offset: 0x0054D28C
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
@@ -249,7 +249,7 @@ public class RoleHandBookItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014BED RID: 84973 RVA: 0x00540264 File Offset: 0x0053E464
+	// Token: 0x060120D0 RID: 73936 RVA: 0x0054F0F0 File Offset: 0x0054D2F0
 	protected void OnClickItem()
 	{
 		Dictionary<int, int> dictionary = RoleConfig.Instance.GetRoleConfig(this.RoleId.Value).Value.ExchangeConsume();
@@ -262,44 +262,44 @@ public class RoleHandBookItem : UiPanelBase
 				num = new int?(value);
 			}
 		}
-		ItemController.Instance.OpenItemTipsByItemId(num.Value, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(num.Value, true, null, false);
 	}
 
-	// Token: 0x04009C04 RID: 39940
+	// Token: 0x04009D5C RID: 40284
 	[Nullable(2)]
 	private ButtonItem ConfirmButton;
 
-	// Token: 0x04009C05 RID: 39941
+	// Token: 0x04009D5D RID: 40285
 	private int? RoleId;
 
-	// Token: 0x04009C06 RID: 39942
+	// Token: 0x04009D5E RID: 40286
 	[Nullable(2)]
 	private ALevelSequenceActor ShowSequence;
 
-	// Token: 0x02008DE7 RID: 36327
+	// Token: 0x02007F6E RID: 32622
 	private enum ERoleHandBookItemDefine
 	{
-		// Token: 0x0402E0A1 RID: 188577
+		// Token: 0x040293B5 RID: 168885
 		NameText,
-		// Token: 0x0402E0A2 RID: 188578
+		// Token: 0x040293B6 RID: 168886
 		IconTexture,
-		// Token: 0x0402E0A3 RID: 188579
+		// Token: 0x040293B7 RID: 168887
 		FragmentTitleText,
-		// Token: 0x0402E0A4 RID: 188580
+		// Token: 0x040293B8 RID: 168888
 		FragmentCostText,
-		// Token: 0x0402E0A5 RID: 188581
+		// Token: 0x040293B9 RID: 168889
 		ConfirmButton,
-		// Token: 0x0402E0A6 RID: 188582
+		// Token: 0x040293BA RID: 168890
 		ActiveTimeTitleText,
-		// Token: 0x0402E0A7 RID: 188583
+		// Token: 0x040293BB RID: 168891
 		ActiveTimeText,
-		// Token: 0x0402E0A8 RID: 188584
+		// Token: 0x040293BC RID: 168892
 		ActiveTimeItem,
-		// Token: 0x0402E0A9 RID: 188585
+		// Token: 0x040293BD RID: 168893
 		IconItem,
-		// Token: 0x0402E0AA RID: 188586
+		// Token: 0x040293BE RID: 168894
 		FragmentItem,
-		// Token: 0x0402E0AB RID: 188587
+		// Token: 0x040293BF RID: 168895
 		ItemTipsButton
 	}
 }

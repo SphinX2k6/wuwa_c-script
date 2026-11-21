@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A63 RID: 14947
+	// Token: 0x02003E3E RID: 15934
 	public struct IBvbMaxBoardCardCount : IFlatbufferObject
 	{
-		// Token: 0x17006675 RID: 26229
-		// (get) Token: 0x0601442D RID: 82989 RVA: 0x002F5CBC File Offset: 0x002F3EBC
+		// Token: 0x17006BA5 RID: 27557
+		// (get) Token: 0x06015749 RID: 87881 RVA: 0x00318EA8 File Offset: 0x003170A8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x0601442E RID: 82990 RVA: 0x002F5CC9 File Offset: 0x002F3EC9
+		// Token: 0x0601574A RID: 87882 RVA: 0x00318EB5 File Offset: 0x003170B5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601442F RID: 82991 RVA: 0x002F5CD0 File Offset: 0x002F3ED0
+		// Token: 0x0601574B RID: 87883 RVA: 0x00318EBC File Offset: 0x003170BC
 		public static IBvbMaxBoardCardCount GetRootAsIBvbMaxBoardCardCount(ByteBuffer _bb)
 		{
 			return IBvbMaxBoardCardCount.GetRootAsIBvbMaxBoardCardCount(_bb, default(IBvbMaxBoardCardCount));
 		}
 
-		// Token: 0x06014430 RID: 82992 RVA: 0x002F5CEC File Offset: 0x002F3EEC
+		// Token: 0x0601574C RID: 87884 RVA: 0x00318ED8 File Offset: 0x003170D8
 		public static IBvbMaxBoardCardCount GetRootAsIBvbMaxBoardCardCount(ByteBuffer _bb, IBvbMaxBoardCardCount obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014431 RID: 82993 RVA: 0x002F5D09 File Offset: 0x002F3F09
+		// Token: 0x0601574D RID: 87885 RVA: 0x00318EF5 File Offset: 0x003170F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014432 RID: 82994 RVA: 0x002F5D18 File Offset: 0x002F3F18
+		// Token: 0x0601574E RID: 87886 RVA: 0x00318F04 File Offset: 0x00317104
 		public IBvbMaxBoardCardCount __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006676 RID: 26230
-		// (get) Token: 0x06014433 RID: 82995 RVA: 0x002F5D28 File Offset: 0x002F3F28
+		// Token: 0x17006BA6 RID: 27558
+		// (get) Token: 0x0601574F RID: 87887 RVA: 0x00318F14 File Offset: 0x00317114
 		public ESystemVarName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014434 RID: 82996 RVA: 0x002F5D64 File Offset: 0x002F3F64
+		// Token: 0x06015750 RID: 87888 RVA: 0x00318F50 File Offset: 0x00317150
 		public static Offset<IBvbMaxBoardCardCount> CreateIBvbMaxBoardCardCount(FlatBufferBuilder builder, ESystemVarName Type = ESystemVarName.CommonHotFixVar)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbMaxBoardCardCount.EndIBvbMaxBoardCardCount(builder);
 		}
 
-		// Token: 0x06014435 RID: 82997 RVA: 0x002F5D7A File Offset: 0x002F3F7A
+		// Token: 0x06015751 RID: 87889 RVA: 0x00318F66 File Offset: 0x00317166
 		public static void StartIBvbMaxBoardCardCount(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06014436 RID: 82998 RVA: 0x002F5D83 File Offset: 0x002F3F83
+		// Token: 0x06015752 RID: 87890 RVA: 0x00318F6F File Offset: 0x0031716F
 		public static void AddType(FlatBufferBuilder builder, ESystemVarName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014437 RID: 82999 RVA: 0x002F5D8E File Offset: 0x002F3F8E
+		// Token: 0x06015753 RID: 87891 RVA: 0x00318F7A File Offset: 0x0031717A
 		public static Offset<IBvbMaxBoardCardCount> EndIBvbMaxBoardCardCount(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbMaxBoardCardCount>(builder.EndTable());
 		}
 
-		// Token: 0x06014438 RID: 83000 RVA: 0x002F5D9C File Offset: 0x002F3F9C
+		// Token: 0x06015754 RID: 87892 RVA: 0x00318F88 File Offset: 0x00317188
 		public IBvbMaxBoardCardCountT UnPack()
 		{
 			IBvbMaxBoardCardCountT bvbMaxBoardCardCountT = new IBvbMaxBoardCardCountT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbMaxBoardCardCountT;
 		}
 
-		// Token: 0x06014439 RID: 83001 RVA: 0x002F5DB7 File Offset: 0x002F3FB7
+		// Token: 0x06015755 RID: 87893 RVA: 0x00318FA3 File Offset: 0x003171A3
 		public void UnPackTo(IBvbMaxBoardCardCountT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601443A RID: 83002 RVA: 0x002F5DC8 File Offset: 0x002F3FC8
+		// Token: 0x06015756 RID: 87894 RVA: 0x00318FB4 File Offset: 0x003171B4
 		public static Offset<IBvbMaxBoardCardCount> Pack(FlatBufferBuilder builder, IBvbMaxBoardCardCountT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbMaxBoardCardCount.CreateIBvbMaxBoardCardCount(builder, _o.Type);
 		}
 
-		// Token: 0x0400AEE8 RID: 44776
+		// Token: 0x0400B80A RID: 47114
 		private Table __p;
 	}
 }

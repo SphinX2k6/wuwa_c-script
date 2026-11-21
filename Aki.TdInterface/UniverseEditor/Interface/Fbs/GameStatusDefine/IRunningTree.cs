@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x0200470C RID: 18188
+	// Token: 0x02004B74 RID: 19316
 	public struct IRunningTree : IFlatbufferObject
 	{
-		// Token: 0x17008234 RID: 33332
-		// (get) Token: 0x0601BE59 RID: 114265 RVA: 0x003F437E File Offset: 0x003F257E
+		// Token: 0x17008875 RID: 34933
+		// (get) Token: 0x0601D62E RID: 120366 RVA: 0x0042061A File Offset: 0x0041E81A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BE5A RID: 114266 RVA: 0x003F438B File Offset: 0x003F258B
+		// Token: 0x0601D62F RID: 120367 RVA: 0x00420627 File Offset: 0x0041E827
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601BE5B RID: 114267 RVA: 0x003F4394 File Offset: 0x003F2594
+		// Token: 0x0601D630 RID: 120368 RVA: 0x00420630 File Offset: 0x0041E830
 		public static IRunningTree GetRootAsIRunningTree(ByteBuffer _bb)
 		{
 			return IRunningTree.GetRootAsIRunningTree(_bb, default(IRunningTree));
 		}
 
-		// Token: 0x0601BE5C RID: 114268 RVA: 0x003F43B0 File Offset: 0x003F25B0
+		// Token: 0x0601D631 RID: 120369 RVA: 0x0042064C File Offset: 0x0041E84C
 		public static IRunningTree GetRootAsIRunningTree(ByteBuffer _bb, IRunningTree obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601BE5D RID: 114269 RVA: 0x003F43CD File Offset: 0x003F25CD
+		// Token: 0x0601D632 RID: 120370 RVA: 0x00420669 File Offset: 0x0041E869
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601BE5E RID: 114270 RVA: 0x003F43DC File Offset: 0x003F25DC
+		// Token: 0x0601D633 RID: 120371 RVA: 0x00420678 File Offset: 0x0041E878
 		public IRunningTree __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008235 RID: 33333
-		// (get) Token: 0x0601BE5F RID: 114271 RVA: 0x003F43EC File Offset: 0x003F25EC
+		// Token: 0x17008876 RID: 34934
+		// (get) Token: 0x0601D634 RID: 120372 RVA: 0x00420688 File Offset: 0x0041E888
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x17008236 RID: 33334
-		// (get) Token: 0x0601BE60 RID: 114272 RVA: 0x003F4428 File Offset: 0x003F2628
+		// Token: 0x17008877 RID: 34935
+		// (get) Token: 0x0601D635 RID: 120373 RVA: 0x004206C4 File Offset: 0x0041E8C4
 		public bool IsOccupy
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x17008237 RID: 33335
-		// (get) Token: 0x0601BE61 RID: 114273 RVA: 0x003F4468 File Offset: 0x003F2668
+		// Token: 0x17008878 RID: 34936
+		// (get) Token: 0x0601D636 RID: 120374 RVA: 0x00420704 File Offset: 0x0041E904
 		public bool IsHide
 		{
 			get
@@ -84,8 +84,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x17008238 RID: 33336
-		// (get) Token: 0x0601BE62 RID: 114274 RVA: 0x003F44A8 File Offset: 0x003F26A8
+		// Token: 0x17008879 RID: 34937
+		// (get) Token: 0x0601D637 RID: 120375 RVA: 0x00420744 File Offset: 0x0041E944
 		public bool IsSuspend
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x17008239 RID: 33337
-		// (get) Token: 0x0601BE63 RID: 114275 RVA: 0x003F44E8 File Offset: 0x003F26E8
+		// Token: 0x1700887A RID: 34938
+		// (get) Token: 0x0601D638 RID: 120376 RVA: 0x00420784 File Offset: 0x0041E984
 		public EQuestStatus QuestStatus
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x1700823A RID: 33338
-		// (get) Token: 0x0601BE64 RID: 114276 RVA: 0x003F4528 File Offset: 0x003F2728
+		// Token: 0x1700887B RID: 34939
+		// (get) Token: 0x0601D639 RID: 120377 RVA: 0x004207C4 File Offset: 0x0041E9C4
 		public IRunningTreeConfig? Tree
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x1700823B RID: 33339
-		// (get) Token: 0x0601BE65 RID: 114277 RVA: 0x003F4588 File Offset: 0x003F2788
+		// Token: 0x1700887C RID: 34940
+		// (get) Token: 0x0601D63A RID: 120378 RVA: 0x00420824 File Offset: 0x0041EA24
 		public byte NullMask
 		{
 			get
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BE66 RID: 114278 RVA: 0x003F45C8 File Offset: 0x003F27C8
+		// Token: 0x0601D63B RID: 120379 RVA: 0x00420864 File Offset: 0x0041EA64
 		public static Offset<IRunningTree> CreateIRunningTree(FlatBufferBuilder builder, int Id = 0, bool IsOccupy = false, bool IsHide = false, bool IsSuspend = false, EQuestStatus QuestStatus = EQuestStatus.None, Offset<IRunningTreeConfig> TreeOffset = default(Offset<IRunningTreeConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -154,61 +154,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return IRunningTree.EndIRunningTree(builder);
 		}
 
-		// Token: 0x0601BE67 RID: 114279 RVA: 0x003F4617 File Offset: 0x003F2817
+		// Token: 0x0601D63C RID: 120380 RVA: 0x004208B3 File Offset: 0x0041EAB3
 		public static void StartIRunningTree(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0601BE68 RID: 114280 RVA: 0x003F4620 File Offset: 0x003F2820
+		// Token: 0x0601D63D RID: 120381 RVA: 0x004208BC File Offset: 0x0041EABC
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601BE69 RID: 114281 RVA: 0x003F462B File Offset: 0x003F282B
+		// Token: 0x0601D63E RID: 120382 RVA: 0x004208C7 File Offset: 0x0041EAC7
 		public static void AddIsOccupy(FlatBufferBuilder builder, bool isOccupy)
 		{
 			builder.AddBool(1, isOccupy, false);
 		}
 
-		// Token: 0x0601BE6A RID: 114282 RVA: 0x003F4636 File Offset: 0x003F2836
+		// Token: 0x0601D63F RID: 120383 RVA: 0x004208D2 File Offset: 0x0041EAD2
 		public static void AddIsHide(FlatBufferBuilder builder, bool isHide)
 		{
 			builder.AddBool(2, isHide, false);
 		}
 
-		// Token: 0x0601BE6B RID: 114283 RVA: 0x003F4641 File Offset: 0x003F2841
+		// Token: 0x0601D640 RID: 120384 RVA: 0x004208DD File Offset: 0x0041EADD
 		public static void AddIsSuspend(FlatBufferBuilder builder, bool isSuspend)
 		{
 			builder.AddBool(3, isSuspend, false);
 		}
 
-		// Token: 0x0601BE6C RID: 114284 RVA: 0x003F464C File Offset: 0x003F284C
+		// Token: 0x0601D641 RID: 120385 RVA: 0x004208E8 File Offset: 0x0041EAE8
 		public static void AddQuestStatus(FlatBufferBuilder builder, EQuestStatus questStatus)
 		{
 			builder.AddByte(4, (byte)questStatus, 0);
 		}
 
-		// Token: 0x0601BE6D RID: 114285 RVA: 0x003F4657 File Offset: 0x003F2857
+		// Token: 0x0601D642 RID: 120386 RVA: 0x004208F3 File Offset: 0x0041EAF3
 		public static void AddTree(FlatBufferBuilder builder, Offset<IRunningTreeConfig> treeOffset)
 		{
 			builder.AddOffset(5, treeOffset.Value, 0);
 		}
 
-		// Token: 0x0601BE6E RID: 114286 RVA: 0x003F4667 File Offset: 0x003F2867
+		// Token: 0x0601D643 RID: 120387 RVA: 0x00420903 File Offset: 0x0041EB03
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x0601BE6F RID: 114287 RVA: 0x003F4672 File Offset: 0x003F2872
+		// Token: 0x0601D644 RID: 120388 RVA: 0x0042090E File Offset: 0x0041EB0E
 		public static Offset<IRunningTree> EndIRunningTree(FlatBufferBuilder builder)
 		{
 			return new Offset<IRunningTree>(builder.EndTable());
 		}
 
-		// Token: 0x0601BE70 RID: 114288 RVA: 0x003F4680 File Offset: 0x003F2880
+		// Token: 0x0601D645 RID: 120389 RVA: 0x0042091C File Offset: 0x0041EB1C
 		public IRunningTreeT UnPack()
 		{
 			IRunningTreeT runningTreeT = new IRunningTreeT();
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return runningTreeT;
 		}
 
-		// Token: 0x0601BE71 RID: 114289 RVA: 0x003F469C File Offset: 0x003F289C
+		// Token: 0x0601D646 RID: 120390 RVA: 0x00420938 File Offset: 0x0041EB38
 		public void UnPackTo(IRunningTreeT _o)
 		{
 			_o.Id = this.Id;
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601BE72 RID: 114290 RVA: 0x003F4720 File Offset: 0x003F2920
+		// Token: 0x0601D647 RID: 120391 RVA: 0x004209BC File Offset: 0x0041EBBC
 		public static Offset<IRunningTree> Pack(FlatBufferBuilder builder, IRunningTreeT _o)
 		{
 			if (_o == null)
@@ -239,7 +239,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return IRunningTree.CreateIRunningTree(builder, _o.Id, _o.IsOccupy, _o.IsHide, _o.IsSuspend, _o.QuestStatus, treeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400C9CF RID: 51663
+		// Token: 0x0400D3FE RID: 54270
 		private Table __p;
 	}
 }

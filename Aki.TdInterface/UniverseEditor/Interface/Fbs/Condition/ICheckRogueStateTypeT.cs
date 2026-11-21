@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B18 RID: 19224
+	// Token: 0x02004FFF RID: 20479
 	public class ICheckRogueStateTypeT
 	{
-		// Token: 0x17008B75 RID: 35701
-		// (get) Token: 0x0601E3D4 RID: 123860 RVA: 0x0043D3D6 File Offset: 0x0043B5D6
-		// (set) Token: 0x0601E3D5 RID: 123861 RVA: 0x0043D3DE File Offset: 0x0043B5DE
+		// Token: 0x17009285 RID: 37509
+		// (get) Token: 0x0601FF5F RID: 130911 RVA: 0x0046FB82 File Offset: 0x0046DD82
+		// (set) Token: 0x0601FF60 RID: 130912 RVA: 0x0046FB8A File Offset: 0x0046DD8A
 		public ERogueStateType Type { get; set; }
 
-		// Token: 0x0601E3D6 RID: 123862 RVA: 0x0043D3E7 File Offset: 0x0043B5E7
+		// Token: 0x0601FF61 RID: 130913 RVA: 0x0046FB93 File Offset: 0x0046DD93
 		public ICheckRogueStateTypeT()
 		{
 			this.Type = ERogueStateType.Talent;

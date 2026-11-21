@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E95 RID: 7829
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020CA RID: 8394
 	public class ISoaringChallengeSettlement : IDynamicSettlementConfig
 	{
-		// Token: 0x0600A782 RID: 42882 RVA: 0x0017A8DC File Offset: 0x00178ADC
+		// Token: 0x0600B23A RID: 45626 RVA: 0x001905DC File Offset: 0x0018E7DC
 		private ISoaringChallengeSettlement_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A783 RID: 42883 RVA: 0x0017A914 File Offset: 0x00178B14
+		// Token: 0x0600B23B RID: 45627 RVA: 0x00190614 File Offset: 0x0018E814
 		public static ISoaringChallengeSettlement Create([Nullable(2)] ISoaringChallengeSettlement instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A784 RID: 42884 RVA: 0x0017A927 File Offset: 0x00178B27
+		// Token: 0x0600B23C RID: 45628 RVA: 0x00190627 File Offset: 0x0018E827
 		public static ISoaringChallengeSettlement CreateFromSetValue([Nullable(2)] ISoaringChallengeSettlement_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A785 RID: 42885 RVA: 0x0017A93A File Offset: 0x00178B3A
+		// Token: 0x0600B23D RID: 45629 RVA: 0x0019063A File Offset: 0x0018E83A
 		public new ISoaringChallengeSettlement_SetValue ToSetValue()
 		{
 			return new ISoaringChallengeSettlement_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003339 RID: 13113
-		// (get) Token: 0x0600A786 RID: 42886 RVA: 0x0017A94D File Offset: 0x00178B4D
-		// (set) Token: 0x0600A787 RID: 42887 RVA: 0x0017A978 File Offset: 0x00178B78
+		// Token: 0x170035FD RID: 13821
+		// (get) Token: 0x0600B23E RID: 45630 RVA: 0x0019064D File Offset: 0x0018E84D
+		// (set) Token: 0x0600B23F RID: 45631 RVA: 0x00190678 File Offset: 0x0018E878
 		public override EDynamicSettlementType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063E6 RID: 25574
+		// Token: 0x040069CA RID: 27082
 		[Nullable(2)]
 		protected new ISoaringChallengeSettlement FbInstance;
 
-		// Token: 0x040063E7 RID: 25575
+		// Token: 0x040069CB RID: 27083
 		[Nullable(2)]
 		protected new ISoaringChallengeSettlement_SetValue PocoInterface;
 	}

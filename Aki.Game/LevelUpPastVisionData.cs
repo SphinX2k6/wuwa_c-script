@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002421 RID: 9249
+// Token: 0x02001906 RID: 6406
 public class LevelUpPastVisionData
 {
-	// Token: 0x04008BB0 RID: 35760
+	// Token: 0x04008CF7 RID: 36087
 	public int Level;
 
-	// Token: 0x04008BB1 RID: 35761
+	// Token: 0x04008CF8 RID: 36088
 	public int UniqueId;
 
-	// Token: 0x04008BB2 RID: 35762
+	// Token: 0x04008CF9 RID: 36089
 	[Nullable(new byte[]
 	{
 		2,
@@ -20,7 +20,7 @@ public class LevelUpPastVisionData
 	})]
 	public List<AttrListScrollData> AttrListScrollData;
 
-	// Token: 0x04008BB3 RID: 35763
+	// Token: 0x04008CFA RID: 36090
 	[Nullable(new byte[]
 	{
 		2,
@@ -28,7 +28,7 @@ public class LevelUpPastVisionData
 	})]
 	public List<VisionSlotData> SlotData;
 
-	// Token: 0x04008BB4 RID: 35764
+	// Token: 0x04008CFB RID: 36091
 	[Nullable(new byte[]
 	{
 		2,

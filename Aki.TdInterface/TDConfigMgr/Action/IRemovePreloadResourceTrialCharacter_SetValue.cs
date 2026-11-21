@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D9F RID: 7583
+	// Token: 0x02001FB4 RID: 8116
 	public class IRemovePreloadResourceTrialCharacter_SetValue
 	{
-		// Token: 0x0400619A RID: 24986
+		// Token: 0x0400671E RID: 26398
 		public ERemovePreloadResourceObjectType Type;
 
-		// Token: 0x0400619B RID: 24987
-		[Nullable(1)]
+		// Token: 0x0400671F RID: 26399
 		public List<int> CharacterGroup;
 	}
 }

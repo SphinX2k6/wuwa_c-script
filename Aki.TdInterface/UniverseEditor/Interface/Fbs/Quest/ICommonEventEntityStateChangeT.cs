@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D95 RID: 15765
+	// Token: 0x020041AC RID: 16812
 	public class ICommonEventEntityStateChangeT
 	{
-		// Token: 0x17006C6D RID: 27757
-		// (get) Token: 0x06015E56 RID: 89686 RVA: 0x003295F4 File Offset: 0x003277F4
-		// (set) Token: 0x06015E57 RID: 89687 RVA: 0x003295FC File Offset: 0x003277FC
+		// Token: 0x17007227 RID: 29223
+		// (get) Token: 0x0601738E RID: 95118 RVA: 0x00350920 File Offset: 0x0034EB20
+		// (set) Token: 0x0601738F RID: 95119 RVA: 0x00350928 File Offset: 0x0034EB28
 		public ECommonEventType Type { get; set; }
 
-		// Token: 0x17006C6E RID: 27758
-		// (get) Token: 0x06015E58 RID: 89688 RVA: 0x00329605 File Offset: 0x00327805
-		// (set) Token: 0x06015E59 RID: 89689 RVA: 0x0032960D File Offset: 0x0032780D
+		// Token: 0x17007228 RID: 29224
+		// (get) Token: 0x06017390 RID: 95120 RVA: 0x00350931 File Offset: 0x0034EB31
+		// (set) Token: 0x06017391 RID: 95121 RVA: 0x00350939 File Offset: 0x0034EB39
 		public int EntityId { get; set; }
 
-		// Token: 0x06015E5A RID: 89690 RVA: 0x00329616 File Offset: 0x00327816
+		// Token: 0x06017392 RID: 95122 RVA: 0x00350942 File Offset: 0x0034EB42
 		public ICommonEventEntityStateChangeT()
 		{
 			this.Type = ECommonEventType.VarValueChange;

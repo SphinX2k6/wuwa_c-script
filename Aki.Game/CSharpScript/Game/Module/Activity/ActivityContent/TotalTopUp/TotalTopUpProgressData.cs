@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F89 RID: 24457
+	// Token: 0x02004F70 RID: 20336
 	public class TotalTopUpProgressData
 	{
-		// Token: 0x0603E113 RID: 254227 RVA: 0x00EFC63A File Offset: 0x00EFA83A
+		// Token: 0x060330AD RID: 209069 RVA: 0x00E4E2F2 File Offset: 0x00E4C4F2
 		public void Reset()
 		{
 			this.Score = 0;
 			this.Level.Clear();
 		}
 
-		// Token: 0x0603E114 RID: 254228 RVA: 0x00EFC64E File Offset: 0x00EFA84E
+		// Token: 0x060330AE RID: 209070 RVA: 0x00E4E306 File Offset: 0x00E4C506
 		public void PushLevel(int level)
 		{
 			this.Level.Add(level);
 		}
 
-		// Token: 0x0603E115 RID: 254229 RVA: 0x00EFC65C File Offset: 0x00EFA85C
+		// Token: 0x060330AF RID: 209071 RVA: 0x00E4E314 File Offset: 0x00E4C514
 		public void SortLevel()
 		{
 			this.Level.Sort((int a, int b) => a - b);
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E116 RID: 254230 RVA: 0x00EFC6BF File Offset: 0x00EFA8BF
+		// Token: 0x060330B0 RID: 209072 RVA: 0x00E4E377 File Offset: 0x00E4C577
 		public void SetScore(int score)
 		{
 			this.Score = score;
 		}
 
-		// Token: 0x17008FE3 RID: 36835
-		// (get) Token: 0x0603E117 RID: 254231 RVA: 0x00EFC6C8 File Offset: 0x00EFA8C8
+		// Token: 0x170063B5 RID: 25525
+		// (get) Token: 0x060330B1 RID: 209073 RVA: 0x00E4E380 File Offset: 0x00E4C580
 		public int CurrentScore
 		{
 			get
@@ -46,8 +46,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x17008FE4 RID: 36836
-		// (get) Token: 0x0603E118 RID: 254232 RVA: 0x00EFC6DC File Offset: 0x00EFA8DC
+		// Token: 0x170063B6 RID: 25526
+		// (get) Token: 0x060330B2 RID: 209074 RVA: 0x00E4E394 File Offset: 0x00E4C594
 		public int NextScore
 		{
 			get
@@ -67,14 +67,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x04020691 RID: 132753
+		// Token: 0x0401B163 RID: 110947
 		public int Score;
 
-		// Token: 0x04020692 RID: 132754
+		// Token: 0x0401B164 RID: 110948
 		[Nullable(1)]
 		public List<int> Level = new List<int>();
 
-		// Token: 0x04020693 RID: 132755
+		// Token: 0x0401B165 RID: 110949
 		private int MaxScoreByLevel;
 	}
 }

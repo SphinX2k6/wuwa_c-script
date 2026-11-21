@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002623 RID: 9763
+// Token: 0x02001B0E RID: 6926
 public static class QteInputActions
 {
-	// Token: 0x04009670 RID: 38512
+	// Token: 0x040097C7 RID: 38855
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly string[] Actions = new string[]

@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D7F RID: 23935
+	// Token: 0x02004D61 RID: 19809
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class MissionViewStepTextUtil
 	{
-		// Token: 0x0603CC26 RID: 248870 RVA: 0x00E966F0 File Offset: 0x00E948F0
+		// Token: 0x06031B82 RID: 203650 RVA: 0x00DE6F38 File Offset: 0x00DE5138
 		public static string GetStepTextByConfig(long incId, MissionViewStepTextInfoBase config)
 		{
 			switch (config.ShowSource)
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC27 RID: 248871 RVA: 0x00E96760 File Offset: 0x00E94960
+		// Token: 0x06031B83 RID: 203651 RVA: 0x00DE6FA8 File Offset: 0x00DE51A8
 		private static string GetFishingEntrustStepText(FishingEntrustStepTextInfo config)
 		{
 			string configTextByKey = PublicUtil.Instance.GetConfigTextByKey(config.TidTitle);
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603CC28 RID: 248872 RVA: 0x00E967FE File Offset: 0x00E949FE
+		// Token: 0x06031B84 RID: 203652 RVA: 0x00DE7046 File Offset: 0x00DE5246
 		private static string GetLackResourceQuestStepText(LackResourceQuestTextInfo config)
 		{
 			return TextConfig.Instance.GetTextById(config.TidTitle);
 		}
 
-		// Token: 0x0603CC29 RID: 248873 RVA: 0x00E96810 File Offset: 0x00E94A10
+		// Token: 0x06031B85 RID: 203653 RVA: 0x00DE7058 File Offset: 0x00DE5258
 		public static int GetEntrustProgressTotalCount(int targetItemId)
 		{
 			int currentTraceEntrust = FishingQuestModel.Instance.CurrentTraceEntrust;
@@ -72,14 +72,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return fishingEntrust.Value.GetEntrustTarget(targetItemId).GetValueOrDefault();
 		}
 
-		// Token: 0x0603CC2A RID: 248874 RVA: 0x00E96870 File Offset: 0x00E94A70
+		// Token: 0x06031B86 RID: 203654 RVA: 0x00DE70B8 File Offset: 0x00DE52B8
 		[NullableContext(2)]
 		public static bool CheckStepTextSame(MissionViewStepTextInfoBase a, MissionViewStepTextInfoBase b)
 		{
 			return ((a != null) ? a.TidTitle : null) == ((b != null) ? b.TidTitle : null);
 		}
 
-		// Token: 0x0603CC2B RID: 248875 RVA: 0x00E96890 File Offset: 0x00E94A90
+		// Token: 0x06031B87 RID: 203655 RVA: 0x00DE70D8 File Offset: 0x00DE52D8
 		[NullableContext(2)]
 		public static bool CheckTextEqual(IMissionItemViewShowData data1, IMissionItemViewShowData data2)
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CC2C RID: 248876 RVA: 0x00E96934 File Offset: 0x00E94B34
+		// Token: 0x06031B88 RID: 203656 RVA: 0x00DE717C File Offset: 0x00DE537C
 		public static bool CheckShowConfigEmpty(IMissionItemViewShowData data)
 		{
 			if (!string.IsNullOrEmpty(data.TitleTextKey) && !string.IsNullOrEmpty(PublicUtil.Instance.GetConfigTextByKey(data.TitleTextKey)))

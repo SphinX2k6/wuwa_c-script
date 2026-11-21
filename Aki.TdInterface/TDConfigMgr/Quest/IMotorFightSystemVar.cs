@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200101F RID: 4127
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200114B RID: 4427
 	public class IMotorFightSystemVar
 	{
-		// Token: 0x06005C14 RID: 23572 RVA: 0x000DF2CC File Offset: 0x000DD4CC
+		// Token: 0x060061F6 RID: 25078 RVA: 0x000EBFC4 File Offset: 0x000EA1C4
 		private IMotorFightSystemVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005C15 RID: 23573 RVA: 0x000DF304 File Offset: 0x000DD504
+		// Token: 0x060061F7 RID: 25079 RVA: 0x000EBFFC File Offset: 0x000EA1FC
 		public static IMotorFightSystemVar Create([Nullable(2)] IMotorFightSystemVar instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C16 RID: 23574 RVA: 0x000DF317 File Offset: 0x000DD517
+		// Token: 0x060061F8 RID: 25080 RVA: 0x000EC00F File Offset: 0x000EA20F
 		public static IMotorFightSystemVar CreateFromSetValue([Nullable(2)] IMotorFightSystemVar_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C17 RID: 23575 RVA: 0x000DF32A File Offset: 0x000DD52A
+		// Token: 0x060061F9 RID: 25081 RVA: 0x000EC022 File Offset: 0x000EA222
 		public IMotorFightSystemVar_SetValue ToSetValue()
 		{
 			return new IMotorFightSystemVar_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E5D RID: 7773
-		// (get) Token: 0x06005C18 RID: 23576 RVA: 0x000DF349 File Offset: 0x000DD549
-		// (set) Token: 0x06005C19 RID: 23577 RVA: 0x000DF374 File Offset: 0x000DD574
+		// Token: 0x17002007 RID: 8199
+		// (get) Token: 0x060061FA RID: 25082 RVA: 0x000EC041 File Offset: 0x000EA241
+		// (set) Token: 0x060061FB RID: 25083 RVA: 0x000EC06C File Offset: 0x000EA26C
 		public virtual EMotorFightSystemVar VarType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E5E RID: 7774
-		// (get) Token: 0x06005C1A RID: 23578 RVA: 0x000DF382 File Offset: 0x000DD582
-		// (set) Token: 0x06005C1B RID: 23579 RVA: 0x000DF3A9 File Offset: 0x000DD5A9
+		// Token: 0x17002008 RID: 8200
+		// (get) Token: 0x060061FC RID: 25084 RVA: 0x000EC07A File Offset: 0x000EA27A
+		// (set) Token: 0x060061FD RID: 25085 RVA: 0x000EC0A1 File Offset: 0x000EA2A1
 		public virtual VarRef VarRef
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400376A RID: 14186
+		// Token: 0x04003AA5 RID: 15013
 		[Nullable(2)]
 		protected IMotorFightSystemVar FbInstance;
 
-		// Token: 0x0400376B RID: 14187
+		// Token: 0x04003AA6 RID: 15014
 		[Nullable(2)]
 		protected IMotorFightSystemVar_SetValue PocoInterface;
 	}

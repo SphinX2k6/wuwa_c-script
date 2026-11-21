@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CBF RID: 7359
+	// Token: 0x02001EC6 RID: 7878
 	public class IPainCoveringHead_SetValue
 	{
-		// Token: 0x04005F8F RID: 24463
+		// Token: 0x040064EB RID: 25835
 		public ELeisureInteract Type;
 	}
 }

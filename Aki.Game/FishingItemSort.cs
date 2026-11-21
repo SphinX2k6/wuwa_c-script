@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
 
-// Token: 0x02001886 RID: 6278
+// Token: 0x02000D3F RID: 3391
 [NullableContext(1)]
 [Nullable(0)]
 public class FishingItemSort : CommonSort<EFishingItemSortWayType>
 {
-	// Token: 0x0600B7F5 RID: 47093 RVA: 0x0029A4AC File Offset: 0x002986AC
+	// Token: 0x06008BDE RID: 35806 RVA: 0x002A4BC4 File Offset: 0x002A2DC4
 	private int SortGetState(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -46,7 +46,7 @@ public class FishingItemSort : CommonSort<EFishingItemSortWayType>
 		}
 	}
 
-	// Token: 0x0600B7F6 RID: 47094 RVA: 0x0029A530 File Offset: 0x00298730
+	// Token: 0x06008BDF RID: 35807 RVA: 0x002A4C48 File Offset: 0x002A2E48
 	private int SortHandBookId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -71,7 +71,7 @@ public class FishingItemSort : CommonSort<EFishingItemSortWayType>
 		return num;
 	}
 
-	// Token: 0x0600B7F7 RID: 47095 RVA: 0x0029A56A File Offset: 0x0029876A
+	// Token: 0x06008BE0 RID: 35808 RVA: 0x002A4C82 File Offset: 0x002A2E82
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EFishingItemSortWayType.GetState, new TSortResult(this.SortGetState));

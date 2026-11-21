@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 {
-	// Token: 0x02006DED RID: 28141
+	// Token: 0x02005F6C RID: 24428
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AstrologyPointView : UiPanelBase
 	{
-		// Token: 0x06044A8F RID: 281231 RVA: 0x010F2D70 File Offset: 0x010F0F70
+		// Token: 0x0603ABF3 RID: 240627 RVA: 0x0109CFBC File Offset: 0x0109B1BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,20 +35,20 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06044A90 RID: 281232 RVA: 0x010F2E37 File Offset: 0x010F1037
+		// Token: 0x0603ABF4 RID: 240628 RVA: 0x0109D083 File Offset: 0x0109B283
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 			this.SequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.SequenceEnd));
 		}
 
-		// Token: 0x06044A91 RID: 281233 RVA: 0x010F2E61 File Offset: 0x010F1061
+		// Token: 0x0603ABF5 RID: 240629 RVA: 0x0109D0AD File Offset: 0x0109B2AD
 		protected override void OnBeforeHide()
 		{
 			this.InteractPoint();
 		}
 
-		// Token: 0x06044A92 RID: 281234 RVA: 0x010F2E69 File Offset: 0x010F1069
+		// Token: 0x0603ABF6 RID: 240630 RVA: 0x0109D0B5 File Offset: 0x0109B2B5
 		protected override void OnBeforeDestroy()
 		{
 			this.OnPreInteractPoint = null;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x06044A93 RID: 281235 RVA: 0x010F2E98 File Offset: 0x010F1098
+		// Token: 0x0603ABF7 RID: 240631 RVA: 0x0109D0E4 File Offset: 0x0109B2E4
 		[NullableContext(1)]
 		private void SequenceEnd(string sequenceName)
 		{
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A94 RID: 281236 RVA: 0x010F2EC2 File Offset: 0x010F10C2
+		// Token: 0x0603ABF8 RID: 240632 RVA: 0x0109D10E File Offset: 0x0109B30E
 		private void InteractPoint()
 		{
 			if (this.IsWaitInteract)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A95 RID: 281237 RVA: 0x010F2EE9 File Offset: 0x010F10E9
+		// Token: 0x0603ABF9 RID: 240633 RVA: 0x0109D135 File Offset: 0x0109B335
 		[NullableContext(1)]
 		public void Init(Action onPreInteractPoint, Action<int> onInteractPoint, Func<bool> isInteractEnable)
 		{
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.IsInteractEnable = isInteractEnable;
 		}
 
-		// Token: 0x06044A96 RID: 281238 RVA: 0x010F2F00 File Offset: 0x010F1100
+		// Token: 0x0603ABFA RID: 240634 RVA: 0x0109D14C File Offset: 0x0109B34C
 		public void BindPoint(int tagId, bool isChecked)
 		{
 			this.PointTagId = tagId;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			base.GetItem(2).SetUIActive(isChecked);
 		}
 
-		// Token: 0x06044A97 RID: 281239 RVA: 0x010F2F28 File Offset: 0x010F1128
+		// Token: 0x0603ABFB RID: 240635 RVA: 0x0109D174 File Offset: 0x0109B374
 		public void SetPointActive(bool isActive)
 		{
 			if (isActive == this.IsActive)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.SequencePlayer.PlaySequencePurely("Close", false, false);
 		}
 
-		// Token: 0x06044A98 RID: 281240 RVA: 0x010F2F94 File Offset: 0x010F1194
+		// Token: 0x0603ABFC RID: 240636 RVA: 0x0109D1E0 File Offset: 0x0109B3E0
 		private void OnInteractClick()
 		{
 			if (this.IsInteractEnable == null || !this.IsInteractEnable())
@@ -144,38 +144,38 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.SequencePlayer.PlaySequencePurely("Start2", false, false);
 		}
 
-		// Token: 0x04023B87 RID: 146311
+		// Token: 0x0401EE29 RID: 126505
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04023B88 RID: 146312
+		// Token: 0x0401EE2A RID: 126506
 		private Action OnPreInteractPoint;
 
-		// Token: 0x04023B89 RID: 146313
+		// Token: 0x0401EE2B RID: 126507
 		private Action<int> OnInteractPoint;
 
-		// Token: 0x04023B8A RID: 146314
+		// Token: 0x0401EE2C RID: 126508
 		private Func<bool> IsInteractEnable;
 
-		// Token: 0x04023B8B RID: 146315
+		// Token: 0x0401EE2D RID: 126509
 		private int PointTagId;
 
-		// Token: 0x04023B8C RID: 146316
+		// Token: 0x0401EE2E RID: 126510
 		private bool IsActive;
 
-		// Token: 0x04023B8D RID: 146317
+		// Token: 0x0401EE2F RID: 126511
 		private bool IsWaitInteract;
 
-		// Token: 0x0200CCC9 RID: 52425
+		// Token: 0x0200B8B9 RID: 47289
 		[NullableContext(0)]
 		private class EComponentType
 		{
-			// Token: 0x0403DC33 RID: 252979
+			// Token: 0x04039055 RID: 233557
 			public const int InteractButton = 0;
 
-			// Token: 0x0403DC34 RID: 252980
+			// Token: 0x04039056 RID: 233558
 			public const int YellowItem = 1;
 
-			// Token: 0x0403DC35 RID: 252981
+			// Token: 0x04039057 RID: 233559
 			public const int WhiteItem = 2;
 		}
 	}

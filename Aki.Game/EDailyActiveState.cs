@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020019EB RID: 6635
+// Token: 0x02000EAA RID: 3754
 public enum EDailyActiveState
 {
-	// Token: 0x0400595C RID: 22876
+	// Token: 0x04005A2B RID: 23083
 	FinishedAndNotTaken = 1,
-	// Token: 0x0400595D RID: 22877
+	// Token: 0x04005A2C RID: 23084
 	Unfinished,
-	// Token: 0x0400595E RID: 22878
+	// Token: 0x04005A2D RID: 23085
 	FinishedAndTaken
 }

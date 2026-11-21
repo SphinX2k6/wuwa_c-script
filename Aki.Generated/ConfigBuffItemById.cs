@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000127 RID: 295
+	// Token: 0x02000136 RID: 310
 	public class ConfigBuffItemById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060006EB RID: 1771 RVA: 0x00080C2C File Offset: 0x0007EE2C
+		// Token: 0x06000745 RID: 1861 RVA: 0x00086590 File Offset: 0x00084790
 		static ConfigBuffItemById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBuffItemById.CreateStaticDefaultValue), new Action(ConfigBuffItemById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060006EC RID: 1772 RVA: 0x00080C4C File Offset: 0x0007EE4C
+		// Token: 0x06000746 RID: 1862 RVA: 0x000865B0 File Offset: 0x000847B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBuffItemById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060006ED RID: 1773 RVA: 0x00080CCB File Offset: 0x0007EECB
+		// Token: 0x06000747 RID: 1863 RVA: 0x0008662F File Offset: 0x0008482F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBuffItemById.LogPair = null;
 			ConfigBuffItemById.HandleId = 0;
 		}
 
-		// Token: 0x060006EE RID: 1774 RVA: 0x00080CD9 File Offset: 0x0007EED9
+		// Token: 0x06000748 RID: 1864 RVA: 0x0008663D File Offset: 0x0008483D
 		public static void Init()
 		{
 			ConfigBuffItemById.HandleId = ConfigCommon.InitDataStatement(ConfigBuffItemById.HandleId, "db_itemattributereward.db", "select BinData from `BuffItem` where Id=?");
 		}
 
-		// Token: 0x060006EF RID: 1775 RVA: 0x00080CF4 File Offset: 0x0007EEF4
+		// Token: 0x06000749 RID: 1865 RVA: 0x00086658 File Offset: 0x00084858
 		public static BuffItem? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBuffItemById.HandleId, ConfigBuffItemById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BuffItem?(rootAsBuffItem);
 		}
 
-		// Token: 0x040007F5 RID: 2037
+		// Token: 0x0400085E RID: 2142
 		private const string DB = "db_itemattributereward.db";
 
-		// Token: 0x040007F6 RID: 2038
+		// Token: 0x0400085F RID: 2143
 		private const string FILE = "s.属性奖励.xlsx";
 
-		// Token: 0x040007F7 RID: 2039
+		// Token: 0x04000860 RID: 2144
 		private const string TABLE = "BuffItem";
 
-		// Token: 0x040007F8 RID: 2040
+		// Token: 0x04000861 RID: 2145
 		private const string COMMAND = "select BinData from `BuffItem` where Id=?";
 
-		// Token: 0x040007F9 RID: 2041
+		// Token: 0x04000862 RID: 2146
 		private const string KEY_PREFIX = "BuffItemById";
 
-		// Token: 0x040007FA RID: 2042
+		// Token: 0x04000863 RID: 2147
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040007FB RID: 2043
+		// Token: 0x04000864 RID: 2148
 		private static int HandleId;
 	}
 }

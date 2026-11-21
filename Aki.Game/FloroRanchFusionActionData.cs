@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001AE5 RID: 6885
+// Token: 0x02000FA4 RID: 4004
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchFusionActionData : FloroRanchActionDataBase
 {
-	// Token: 0x0600CC1E RID: 52254 RVA: 0x002E94CF File Offset: 0x002E76CF
+	// Token: 0x0600A02F RID: 41007 RVA: 0x002F4663 File Offset: 0x002F2863
 	public FloroRanchFusionActionData(FloroRanchUnitActionMsg actionData) : base(actionData)
 	{
 		this.FusionActionData = actionData.MixAction;
 	}
 
-	// Token: 0x0600CC1F RID: 52255 RVA: 0x002E94E4 File Offset: 0x002E76E4
+	// Token: 0x0600A030 RID: 41008 RVA: 0x002F4678 File Offset: 0x002F2878
 	public override UniTask OnExecute()
 	{
 		FloroRanchFusionActionData.<OnExecute>d__2 <OnExecute>d__;
@@ -26,6 +26,6 @@ public class FloroRanchFusionActionData : FloroRanchActionDataBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DD4 RID: 24020
+	// Token: 0x04005EA3 RID: 24227
 	private readonly FRMixAction FusionActionData;
 }

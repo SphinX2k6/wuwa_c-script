@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044F3 RID: 17651
+	// Token: 0x02003415 RID: 13333
 	[NullableContext(1)]
 	public interface IStringNode
 	{
-		// Token: 0x170073B6 RID: 29622
-		// (get) Token: 0x0602D762 RID: 186210
-		// (set) Token: 0x0602D763 RID: 186211
+		// Token: 0x1700466E RID: 18030
+		// (get) Token: 0x06021E32 RID: 138802
+		// (set) Token: 0x06021E33 RID: 138803
 		EAstNodeType NodeType { get; set; }
 
-		// Token: 0x170073B7 RID: 29623
-		// (get) Token: 0x0602D764 RID: 186212
-		// (set) Token: 0x0602D765 RID: 186213
+		// Token: 0x1700466F RID: 18031
+		// (get) Token: 0x06021E34 RID: 138804
+		// (set) Token: 0x06021E35 RID: 138805
 		string Value { get; set; }
 	}
 }

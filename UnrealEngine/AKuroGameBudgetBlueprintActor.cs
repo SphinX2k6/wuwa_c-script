@@ -7,37 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001868 RID: 6248
+	// Token: 0x0200039A RID: 922
 	[UnrealObjectPath("/Script/KuroGameBudget.KuroGameBudgetBlueprintActor")]
 	[UnrealStructLayout(1424, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1424)]
-	public class AKuroGameBudgetBlueprintActor : AActor, IUnrealUObject, IUnrealObject, IInterface_KuroGameBudgetBlueprint, IUnrealNativeInterface, IUnrealInterface
+	public class AKuroGameBudgetBlueprintActor : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016FF8 RID: 94200 RVA: 0x002188C4 File Offset: 0x00216AC4
+		// Token: 0x06005B79 RID: 23417 RVA: 0x00080FD3 File Offset: 0x0007F1D3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroGameBudgetBlueprintActor._ClassPtr;
 		}
 
-		// Token: 0x06016FF9 RID: 94201 RVA: 0x002188D0 File Offset: 0x00216AD0
-		int IInterface_KuroGameBudgetBlueprint.InterfaceOffset()
-		{
-			return AKuroGameBudgetBlueprintActor.__InterfaceOffset_IInterface_KuroGameBudgetBlueprint;
-		}
-
-		// Token: 0x06016FFA RID: 94202 RVA: 0x002188D8 File Offset: 0x00216AD8
+		// Token: 0x06005B7A RID: 23418 RVA: 0x00080FE0 File Offset: 0x0007F1E0
 		public AKuroGameBudgetBlueprintActor() : this(BuiltinUtils.AllocNativeUObject(AKuroGameBudgetBlueprintActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016FFB RID: 94203 RVA: 0x00218900 File Offset: 0x00216B00
+		// Token: 0x06005B7B RID: 23419 RVA: 0x00081008 File Offset: 0x0007F208
 		[NullableContext(1)]
 		public AKuroGameBudgetBlueprintActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroGameBudgetBlueprintActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005C9A RID: 23706
-		// (get) Token: 0x06016FFC RID: 94204 RVA: 0x00218934 File Offset: 0x00216B34
-		// (set) Token: 0x06016FFD RID: 94205 RVA: 0x0021896D File Offset: 0x00216B6D
+		// Token: 0x1700120A RID: 4618
+		// (get) Token: 0x06005B7C RID: 23420 RVA: 0x0008103C File Offset: 0x0007F23C
+		// (set) Token: 0x06005B7D RID: 23421 RVA: 0x00081075 File Offset: 0x0007F275
 		[Nullable(1)]
 		public TSet<UActorComponent> TickActorComponents
 		{
@@ -59,70 +53,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C9B RID: 23707
-		// (get) Token: 0x06016FFE RID: 94206 RVA: 0x0021897B File Offset: 0x00216B7B
-		// (set) Token: 0x06016FFF RID: 94207 RVA: 0x0021898F File Offset: 0x00216B8F
-		[Nullable(2)]
-		public unsafe UKuroGameBudgetBoundsComponent GameBudgetBoundsComponent
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroGameBudgetBoundsComponent>(base.NativePtr / (IntPtr)sizeof(void*) + AKuroGameBudgetBlueprintActor.__PropertyOffset_GameBudgetBoundsComponent);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + AKuroGameBudgetBlueprintActor.__PropertyOffset_GameBudgetBoundsComponent, value);
-			}
-		}
-
-		// Token: 0x17005C9C RID: 23708
-		// (get) Token: 0x06017000 RID: 94208 RVA: 0x002189A4 File Offset: 0x00216BA4
-		// (set) Token: 0x06017001 RID: 94209 RVA: 0x002189DD File Offset: 0x00216BDD
-		[Nullable(1)]
-		public FKuroGameBudgetBlueprint GameBudgetBlueprint
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FKuroGameBudgetBlueprint result;
-				if ((result = this._GameBudgetBlueprint) == null)
-				{
-					result = (this._GameBudgetBlueprint = new FKuroGameBudgetBlueprint(base.NativePtr + (IntPtr)AKuroGameBudgetBlueprintActor.__PropertyOffset_GameBudgetBlueprint, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FKuroGameBudgetBlueprint.StaticStruct(), base.NativePtr + (IntPtr)AKuroGameBudgetBlueprintActor.__PropertyOffset_GameBudgetBlueprint, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17005C9D RID: 23709
-		// (get) Token: 0x06017002 RID: 94210 RVA: 0x002189FE File Offset: 0x00216BFE
-		// (set) Token: 0x06017003 RID: 94211 RVA: 0x00218A0E File Offset: 0x00216C0E
-		public unsafe EGameBudgetBlueprintEnvironment GameBudgetBlueprintEnvironment
-		{
-			get
-			{
-				return (EGameBudgetBlueprintEnvironment)(*(base.NativePtr + (IntPtr)AKuroGameBudgetBlueprintActor.__PropertyOffset_GameBudgetBlueprintEnvironment));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)AKuroGameBudgetBlueprintActor.__PropertyOffset_GameBudgetBlueprintEnvironment) = (byte)value;
-			}
-		}
-
-		// Token: 0x06017004 RID: 94212 RVA: 0x00218A1F File Offset: 0x00216C1F
+		// Token: 0x06005B7E RID: 23422 RVA: 0x00081083 File Offset: 0x0007F283
 		public void UpdateSimpleCustomPlayerRangeDistance(float EnterRange, float LeaveRange)
 		{
 			AKuroGameBudgetBlueprintActor.__UpdateSimpleCustomPlayerRangeDistance_Internal(base.NativePtr, EnterRange, LeaveRange);
 		}
 
-		// Token: 0x06017005 RID: 94213 RVA: 0x00218A2E File Offset: 0x00216C2E
+		// Token: 0x06005B7F RID: 23423 RVA: 0x00081092 File Offset: 0x0007F292
 		public void UpdateOverrideBoundsFromSet([Nullable(new byte[]
 		{
 			2,
@@ -132,7 +69,7 @@ namespace UnrealEngine
 			AKuroGameBudgetBlueprintActor.__UpdateOverrideBoundsFromSet_Internal(base.NativePtr, (InActors ?? new TSet<AActor>()).NativeSetPtr);
 		}
 
-		// Token: 0x06017006 RID: 94214 RVA: 0x00218A4A File Offset: 0x00216C4A
+		// Token: 0x06005B80 RID: 23424 RVA: 0x000810AE File Offset: 0x0007F2AE
 		public void UpdateOverrideBounds([Nullable(new byte[]
 		{
 			2,
@@ -142,297 +79,294 @@ namespace UnrealEngine
 			AKuroGameBudgetBlueprintActor.__UpdateOverrideBounds_Internal(base.NativePtr, (InActors ?? new TArray<AActor>()).NativePtr);
 		}
 
-		// Token: 0x06017007 RID: 94215 RVA: 0x00218A66 File Offset: 0x00216C66
+		// Token: 0x06005B81 RID: 23425 RVA: 0x000810CA File Offset: 0x0007F2CA
 		public void UpdateCustomPlayerRangeDistance(FName RangeName, float EnterRange, float LeaveRange)
 		{
 			AKuroGameBudgetBlueprintActor.__UpdateCustomPlayerRangeDistance_Internal(base.NativePtr, RangeName, EnterRange, LeaveRange);
 		}
 
-		// Token: 0x06017008 RID: 94216 RVA: 0x00218A76 File Offset: 0x00216C76
+		// Token: 0x06005B82 RID: 23426 RVA: 0x000810DA File Offset: 0x0007F2DA
 		public void UnregisterCustomPlayerRangeEvent(FName RangeName)
 		{
 			AKuroGameBudgetBlueprintActor.__UnregisterCustomPlayerRangeEvent_Internal(base.NativePtr, RangeName);
 		}
 
-		// Token: 0x06017009 RID: 94217 RVA: 0x00218A84 File Offset: 0x00216C84
+		// Token: 0x06005B83 RID: 23427 RVA: 0x000810E8 File Offset: 0x0007F2E8
 		public void SetCustomPlayerRangeEnabled(bool bEnabled)
 		{
 			AKuroGameBudgetBlueprintActor.__SetCustomPlayerRangeEnabled_Internal(base.NativePtr, bEnabled);
 		}
 
-		// Token: 0x0601700A RID: 94218 RVA: 0x00218A92 File Offset: 0x00216C92
+		// Token: 0x06005B84 RID: 23428 RVA: 0x000810F6 File Offset: 0x0007F2F6
 		public void ResumeGameBudget()
 		{
 			AKuroGameBudgetBlueprintActor.__ResumeGameBudget_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601700B RID: 94219 RVA: 0x00218A9F File Offset: 0x00216C9F
+		// Token: 0x06005B85 RID: 23429 RVA: 0x00081103 File Offset: 0x0007F303
 		public void RegisterOnceTickWithPaused()
 		{
 			AKuroGameBudgetBlueprintActor.__RegisterOnceTickWithPaused_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601700C RID: 94220 RVA: 0x00218AAC File Offset: 0x00216CAC
+		// Token: 0x06005B86 RID: 23430 RVA: 0x00081110 File Offset: 0x0007F310
 		[NullableContext(2)]
 		public void RegisterCustomPlayerRangeEvent(FName RangeName, FCustomPlayerRangeEnterEvent OnEnter, FCustomPlayerRangeLeaveEvent OnLeave)
 		{
 			AKuroGameBudgetBlueprintActor.__RegisterCustomPlayerRangeEvent_Internal(base.NativePtr, RangeName, (OnEnter != null) ? OnEnter.NativePtr : ((IntPtr)0), (OnLeave != null) ? OnLeave.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x0601700D RID: 94221 RVA: 0x00218AD4 File Offset: 0x00216CD4
+		// Token: 0x06005B87 RID: 23431 RVA: 0x00081138 File Offset: 0x0007F338
 		public void PauseGameBudget()
 		{
 			AKuroGameBudgetBlueprintActor.__PauseGameBudget_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601700E RID: 94222 RVA: 0x00218AE1 File Offset: 0x00216CE1
+		// Token: 0x06005B88 RID: 23432 RVA: 0x00081145 File Offset: 0x0007F345
 		public void OverrideUseWasRecentlyPassVisibilityTest(bool bUseWasRecentlyPassVisibilityTest)
 		{
 			AKuroGameBudgetBlueprintActor.__OverrideUseWasRecentlyPassVisibilityTest_Internal(base.NativePtr, bUseWasRecentlyPassVisibilityTest);
 		}
 
-		// Token: 0x0601700F RID: 94223 RVA: 0x00218AEF File Offset: 0x00216CEF
+		// Token: 0x06005B89 RID: 23433 RVA: 0x00081153 File Offset: 0x0007F353
 		public void OverrideTickWithPaused(bool bTickWithPaused)
 		{
 			AKuroGameBudgetBlueprintActor.__OverrideTickWithPaused_Internal(base.NativePtr, bTickWithPaused);
 		}
 
-		// Token: 0x06017010 RID: 94224 RVA: 0x00218AFD File Offset: 0x00216CFD
+		// Token: 0x06005B8A RID: 23434 RVA: 0x00081161 File Offset: 0x0007F361
 		public void OverrideLocationProxy(bool bInOverrideLocationProxy)
 		{
 			AKuroGameBudgetBlueprintActor.__OverrideLocationProxy_Internal(base.NativePtr, bInOverrideLocationProxy);
 		}
 
-		// Token: 0x06017011 RID: 94225 RVA: 0x00218B0B File Offset: 0x00216D0B
+		// Token: 0x06005B8B RID: 23435 RVA: 0x0008116F File Offset: 0x0007F36F
 		public void OverrideGameBudgetGroupType(EGameBudgetBlueprintGroup InOverrideGroupType)
 		{
 			AKuroGameBudgetBlueprintActor.__OverrideGameBudgetGroupType_Internal(base.NativePtr, InOverrideGroupType);
 		}
 
-		// Token: 0x06017012 RID: 94226 RVA: 0x00218B19 File Offset: 0x00216D19
+		// Token: 0x06005B8C RID: 23436 RVA: 0x0008117D File Offset: 0x0007F37D
 		public virtual void OnVisible()
 		{
 			AKuroGameBudgetBlueprintActor.__OnVisible_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017013 RID: 94227 RVA: 0x00218B26 File Offset: 0x00216D26
+		// Token: 0x06005B8D RID: 23437 RVA: 0x0008118A File Offset: 0x0007F38A
 		public virtual void OnLogicEnable()
 		{
 			AKuroGameBudgetBlueprintActor.__OnLogicEnable_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017014 RID: 94228 RVA: 0x00218B33 File Offset: 0x00216D33
+		// Token: 0x06005B8E RID: 23438 RVA: 0x00081197 File Offset: 0x0007F397
 		public virtual void OnLogicDisable()
 		{
 			AKuroGameBudgetBlueprintActor.__OnLogicDisable_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017015 RID: 94229 RVA: 0x00218B40 File Offset: 0x00216D40
+		// Token: 0x06005B8F RID: 23439 RVA: 0x000811A4 File Offset: 0x0007F3A4
 		public virtual void OnInvisible()
 		{
 			AKuroGameBudgetBlueprintActor.__OnInvisible_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017016 RID: 94230 RVA: 0x00218B4D File Offset: 0x00216D4D
+		// Token: 0x06005B90 RID: 23440 RVA: 0x000811B1 File Offset: 0x0007F3B1
 		public virtual void OnEnvInteractChanged(bool bEnableEnvInteract)
 		{
 			AKuroGameBudgetBlueprintActor.__OnEnvInteractChanged_Internal(base.NativePtr, bEnableEnvInteract);
 		}
 
-		// Token: 0x06017017 RID: 94231 RVA: 0x00218B5B File Offset: 0x00216D5B
+		// Token: 0x06005B91 RID: 23441 RVA: 0x000811BF File Offset: 0x0007F3BF
 		public virtual void OnCustomPlayerRangeLeave()
 		{
 			AKuroGameBudgetBlueprintActor.__OnCustomPlayerRangeLeave_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017018 RID: 94232 RVA: 0x00218B68 File Offset: 0x00216D68
+		// Token: 0x06005B92 RID: 23442 RVA: 0x000811CC File Offset: 0x0007F3CC
 		public virtual void OnCustomPlayerRangeEnter()
 		{
 			AKuroGameBudgetBlueprintActor.__OnCustomPlayerRangeEnter_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017019 RID: 94233 RVA: 0x00218B75 File Offset: 0x00216D75
+		// Token: 0x06005B93 RID: 23443 RVA: 0x000811D9 File Offset: 0x0007F3D9
 		public virtual void OnApplyWorldOffset(in FVector InWorldOffset, bool bWorldShift)
 		{
 			AKuroGameBudgetBlueprintActor.__OnApplyWorldOffset_Internal(base.NativePtr, InWorldOffset, bWorldShift);
 		}
 
-		// Token: 0x0601701A RID: 94234 RVA: 0x00218B84 File Offset: 0x00216D84
+		// Token: 0x06005B94 RID: 23444 RVA: 0x000811E8 File Offset: 0x0007F3E8
 		public void MarkSpecialBlueprintActor()
 		{
 			AKuroGameBudgetBlueprintActor.__MarkSpecialBlueprintActor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601701B RID: 94235 RVA: 0x00218B91 File Offset: 0x00216D91
+		// Token: 0x06005B95 RID: 23445 RVA: 0x000811F5 File Offset: 0x0007F3F5
 		public void ManualUnregisterTick()
 		{
 			AKuroGameBudgetBlueprintActor.__ManualUnregisterTick_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601701C RID: 94236 RVA: 0x00218B9E File Offset: 0x00216D9E
+		// Token: 0x06005B96 RID: 23446 RVA: 0x00081202 File Offset: 0x0007F402
 		public void ManualRegisterTick()
 		{
 			AKuroGameBudgetBlueprintActor.__ManualRegisterTick_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601701D RID: 94237 RVA: 0x00218BAB File Offset: 0x00216DAB
+		// Token: 0x06005B97 RID: 23447 RVA: 0x0008120F File Offset: 0x0007F40F
 		public virtual FVectorDouble K2_GetGameBudgetLocationProxy()
 		{
 			return AKuroGameBudgetBlueprintActor.__K2_GetGameBudgetLocationProxy_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601701E RID: 94238 RVA: 0x00218BB8 File Offset: 0x00216DB8
+		// Token: 0x06005B98 RID: 23448 RVA: 0x0008121C File Offset: 0x0007F41C
 		protected virtual FVectorDouble K2_GetGameBudgetLocationProxy_Implementation()
 		{
 			return AKuroGameBudgetBlueprintActor.__K2_GetGameBudgetLocationProxy_Implementation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601701F RID: 94239 RVA: 0x00218BC5 File Offset: 0x00216DC5
+		// Token: 0x06005B99 RID: 23449 RVA: 0x00081229 File Offset: 0x0007F429
 		public virtual void AfterTick(float DeltaSeconds)
 		{
 			AKuroGameBudgetBlueprintActor.__AfterTick_Internal(base.NativePtr, DeltaSeconds);
 		}
 
-		// Token: 0x06017020 RID: 94240
+		// Token: 0x06005B9A RID: 23450
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateSimpleCustomPlayerRangeDistance_Internal(IntPtr @this, float EnterRange, float LeaveRange);
 
-		// Token: 0x06017021 RID: 94241
+		// Token: 0x06005B9B RID: 23451
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateOverrideBoundsFromSet_Internal(IntPtr @this, IntPtr InActors);
 
-		// Token: 0x06017022 RID: 94242
+		// Token: 0x06005B9C RID: 23452
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateOverrideBounds_Internal(IntPtr @this, IntPtr InActors);
 
-		// Token: 0x06017023 RID: 94243
+		// Token: 0x06005B9D RID: 23453
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateCustomPlayerRangeDistance_Internal(IntPtr @this, FName RangeName, float EnterRange, float LeaveRange);
 
-		// Token: 0x06017024 RID: 94244
+		// Token: 0x06005B9E RID: 23454
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterCustomPlayerRangeEvent_Internal(IntPtr @this, FName RangeName);
 
-		// Token: 0x06017025 RID: 94245
+		// Token: 0x06005B9F RID: 23455
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCustomPlayerRangeEnabled_Internal(IntPtr @this, bool bEnabled);
 
-		// Token: 0x06017026 RID: 94246
+		// Token: 0x06005BA0 RID: 23456
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResumeGameBudget_Internal(IntPtr @this);
 
-		// Token: 0x06017027 RID: 94247
+		// Token: 0x06005BA1 RID: 23457
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterOnceTickWithPaused_Internal(IntPtr @this);
 
-		// Token: 0x06017028 RID: 94248
+		// Token: 0x06005BA2 RID: 23458
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterCustomPlayerRangeEvent_Internal(IntPtr @this, FName RangeName, IntPtr OnEnter, IntPtr OnLeave);
 
-		// Token: 0x06017029 RID: 94249
+		// Token: 0x06005BA3 RID: 23459
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PauseGameBudget_Internal(IntPtr @this);
 
-		// Token: 0x0601702A RID: 94250
+		// Token: 0x06005BA4 RID: 23460
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OverrideUseWasRecentlyPassVisibilityTest_Internal(IntPtr @this, bool bUseWasRecentlyPassVisibilityTest);
 
-		// Token: 0x0601702B RID: 94251
+		// Token: 0x06005BA5 RID: 23461
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OverrideTickWithPaused_Internal(IntPtr @this, bool bTickWithPaused);
 
-		// Token: 0x0601702C RID: 94252
+		// Token: 0x06005BA6 RID: 23462
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OverrideLocationProxy_Internal(IntPtr @this, bool bInOverrideLocationProxy);
 
-		// Token: 0x0601702D RID: 94253
+		// Token: 0x06005BA7 RID: 23463
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OverrideGameBudgetGroupType_Internal(IntPtr @this, EGameBudgetBlueprintGroup InOverrideGroupType);
 
-		// Token: 0x0601702E RID: 94254
+		// Token: 0x06005BA8 RID: 23464
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnVisible_Internal(IntPtr @this);
 
-		// Token: 0x0601702F RID: 94255
+		// Token: 0x06005BA9 RID: 23465
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnLogicEnable_Internal(IntPtr @this);
 
-		// Token: 0x06017030 RID: 94256
+		// Token: 0x06005BAA RID: 23466
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnLogicDisable_Internal(IntPtr @this);
 
-		// Token: 0x06017031 RID: 94257
+		// Token: 0x06005BAB RID: 23467
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnInvisible_Internal(IntPtr @this);
 
-		// Token: 0x06017032 RID: 94258
+		// Token: 0x06005BAC RID: 23468
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnEnvInteractChanged_Internal(IntPtr @this, bool bEnableEnvInteract);
 
-		// Token: 0x06017033 RID: 94259
+		// Token: 0x06005BAD RID: 23469
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnCustomPlayerRangeLeave_Internal(IntPtr @this);
 
-		// Token: 0x06017034 RID: 94260
+		// Token: 0x06005BAE RID: 23470
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnCustomPlayerRangeEnter_Internal(IntPtr @this);
 
-		// Token: 0x06017035 RID: 94261
+		// Token: 0x06005BAF RID: 23471
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnApplyWorldOffset_Internal(IntPtr @this, in FVector InWorldOffset, bool bWorldShift);
 
-		// Token: 0x06017036 RID: 94262
+		// Token: 0x06005BB0 RID: 23472
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MarkSpecialBlueprintActor_Internal(IntPtr @this);
 
-		// Token: 0x06017037 RID: 94263
+		// Token: 0x06005BB1 RID: 23473
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ManualUnregisterTick_Internal(IntPtr @this);
 
-		// Token: 0x06017038 RID: 94264
+		// Token: 0x06005BB2 RID: 23474
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ManualRegisterTick_Internal(IntPtr @this);
 
-		// Token: 0x06017039 RID: 94265
+		// Token: 0x06005BB3 RID: 23475
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __K2_GetGameBudgetLocationProxy_Internal(IntPtr @this);
 
-		// Token: 0x0601703A RID: 94266
+		// Token: 0x06005BB4 RID: 23476
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __K2_GetGameBudgetLocationProxy_Implementation_Internal(IntPtr @this);
 
-		// Token: 0x0601703B RID: 94267
+		// Token: 0x06005BB5 RID: 23477
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AfterTick_Internal(IntPtr @this, float DeltaSeconds);
 
-		// Token: 0x0601703C RID: 94268 RVA: 0x00218BD3 File Offset: 0x00216DD3
+		// Token: 0x06005BB6 RID: 23478 RVA: 0x00081237 File Offset: 0x0007F437
 		static AKuroGameBudgetBlueprintActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameBudget.KuroGameBudgetBlueprintActor");
 		}
 
-		// Token: 0x0601703D RID: 94269 RVA: 0x00218BE1 File Offset: 0x00216DE1
+		// Token: 0x06005BB7 RID: 23479 RVA: 0x00081245 File Offset: 0x0007F445
 		protected AKuroGameBudgetBlueprintActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C7D9 RID: 51161
-		internal static int __InterfaceOffset_IInterface_KuroGameBudgetBlueprint;
-
-		// Token: 0x0400C7DA RID: 51162
+		// Token: 0x0400261C RID: 9756
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameBudget.KuroGameBudgetBlueprintActor";
 
-		// Token: 0x0400C7DB RID: 51163
+		// Token: 0x0400261D RID: 9757
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C7DC RID: 51164
+		// Token: 0x0400261E RID: 9758
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C7DD RID: 51165
+		// Token: 0x0400261F RID: 9759
 		internal static int __PropertyOffset_TickActorComponents;
 
-		// Token: 0x0400C7DE RID: 51166
+		// Token: 0x04002620 RID: 9760
 		[Nullable(new byte[]
 		{
 			2,
@@ -440,59 +374,46 @@ namespace UnrealEngine
 		})]
 		private TSet<UActorComponent> _TickActorComponents;
 
-		// Token: 0x0400C7DF RID: 51167
-		internal static int __PropertyOffset_GameBudgetBoundsComponent;
-
-		// Token: 0x0400C7E0 RID: 51168
-		internal static int __PropertyOffset_GameBudgetBlueprint;
-
-		// Token: 0x0400C7E1 RID: 51169
-		[Nullable(2)]
-		private FKuroGameBudgetBlueprint _GameBudgetBlueprint;
-
-		// Token: 0x0400C7E2 RID: 51170
-		internal static int __PropertyOffset_GameBudgetBlueprintEnvironment;
-
-		// Token: 0x02002F72 RID: 12146
+		// Token: 0x02000A9B RID: 2715
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __OnEnvInteractChanged_FunctionParams
 		{
-			// Token: 0x04016B2D RID: 92973
+			// Token: 0x04005AEF RID: 23279
 			[FieldOffset(0)]
 			public bool bEnableEnvInteract;
 		}
 
-		// Token: 0x02002F73 RID: 12147
+		// Token: 0x02000A9C RID: 2716
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OnApplyWorldOffset_FunctionParams
 		{
-			// Token: 0x04016B2E RID: 92974
+			// Token: 0x04005AF0 RID: 23280
 			[FieldOffset(0)]
 			public FVector InWorldOffset;
 
-			// Token: 0x04016B2F RID: 92975
+			// Token: 0x04005AF1 RID: 23281
 			[FieldOffset(12)]
 			public bool bWorldShift;
 		}
 
-		// Token: 0x02002F74 RID: 12148
+		// Token: 0x02000A9D RID: 2717
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __K2_GetGameBudgetLocationProxy_FunctionParams
 		{
-			// Token: 0x04016B30 RID: 92976
+			// Token: 0x04005AF2 RID: 23282
 			[FieldOffset(0)]
 			public FVectorDouble __Result;
 		}
 
-		// Token: 0x02002F75 RID: 12149
+		// Token: 0x02000A9E RID: 2718
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __AfterTick_FunctionParams
 		{
-			// Token: 0x04016B31 RID: 92977
+			// Token: 0x04005AF3 RID: 23283
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

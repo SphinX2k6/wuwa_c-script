@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200625A RID: 25178
+	// Token: 0x020068CB RID: 26827
 	public struct IBvbSelectCard : IFlatbufferObject
 	{
-		// Token: 0x1700BBA6 RID: 48038
-		// (get) Token: 0x0602B6DA RID: 177882 RVA: 0x005FA3A4 File Offset: 0x005F85A4
+		// Token: 0x1700C52E RID: 50478
+		// (get) Token: 0x0602DE3B RID: 187963 RVA: 0x006451AC File Offset: 0x006433AC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B6DB RID: 177883 RVA: 0x005FA3B1 File Offset: 0x005F85B1
+		// Token: 0x0602DE3C RID: 187964 RVA: 0x006451B9 File Offset: 0x006433B9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B6DC RID: 177884 RVA: 0x005FA3B8 File Offset: 0x005F85B8
+		// Token: 0x0602DE3D RID: 187965 RVA: 0x006451C0 File Offset: 0x006433C0
 		public static IBvbSelectCard GetRootAsIBvbSelectCard(ByteBuffer _bb)
 		{
 			return IBvbSelectCard.GetRootAsIBvbSelectCard(_bb, default(IBvbSelectCard));
 		}
 
-		// Token: 0x0602B6DD RID: 177885 RVA: 0x005FA3D4 File Offset: 0x005F85D4
+		// Token: 0x0602DE3E RID: 187966 RVA: 0x006451DC File Offset: 0x006433DC
 		public static IBvbSelectCard GetRootAsIBvbSelectCard(ByteBuffer _bb, IBvbSelectCard obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B6DE RID: 177886 RVA: 0x005FA3F1 File Offset: 0x005F85F1
+		// Token: 0x0602DE3F RID: 187967 RVA: 0x006451F9 File Offset: 0x006433F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B6DF RID: 177887 RVA: 0x005FA400 File Offset: 0x005F8600
+		// Token: 0x0602DE40 RID: 187968 RVA: 0x00645208 File Offset: 0x00643408
 		public IBvbSelectCard __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BBA7 RID: 48039
-		// (get) Token: 0x0602B6E0 RID: 177888 RVA: 0x005FA410 File Offset: 0x005F8610
+		// Token: 0x1700C52F RID: 50479
+		// (get) Token: 0x0602DE41 RID: 187969 RVA: 0x00645218 File Offset: 0x00643418
 		public EBvbPlayerOperationType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B6E1 RID: 177889 RVA: 0x005FA44C File Offset: 0x005F864C
+		// Token: 0x0602DE42 RID: 187970 RVA: 0x00645254 File Offset: 0x00643454
 		public int CardIdList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700BBA8 RID: 48040
-		// (get) Token: 0x0602B6E2 RID: 177890 RVA: 0x005FA48C File Offset: 0x005F868C
+		// Token: 0x1700C530 RID: 50480
+		// (get) Token: 0x0602DE43 RID: 187971 RVA: 0x00645294 File Offset: 0x00643494
 		public int CardIdListLength
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B6E3 RID: 177891 RVA: 0x005FA4B7 File Offset: 0x005F86B7
+		// Token: 0x0602DE44 RID: 187972 RVA: 0x006452BF File Offset: 0x006434BF
 		public Span<int> GetCardIdListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0602B6E4 RID: 177892 RVA: 0x005FA4C6 File Offset: 0x005F86C6
+		// Token: 0x0602DE45 RID: 187973 RVA: 0x006452CE File Offset: 0x006434CE
 		public int[] GetCardIdListArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x1700BBA9 RID: 48041
-		// (get) Token: 0x0602B6E5 RID: 177893 RVA: 0x005FA4D4 File Offset: 0x005F86D4
+		// Token: 0x1700C531 RID: 50481
+		// (get) Token: 0x0602DE46 RID: 187974 RVA: 0x006452DC File Offset: 0x006434DC
 		public byte NullMask
 		{
 			get
@@ -116,7 +116,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B6E6 RID: 177894 RVA: 0x005FA510 File Offset: 0x005F8710
+		// Token: 0x0602DE47 RID: 187975 RVA: 0x00645318 File Offset: 0x00643518
 		public static Offset<IBvbSelectCard> CreateIBvbSelectCard(FlatBufferBuilder builder, EBvbPlayerOperationType Type = EBvbPlayerOperationType.BvbDeploy, VectorOffset CardIdListOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -126,25 +126,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBvbSelectCard.EndIBvbSelectCard(builder);
 		}
 
-		// Token: 0x0602B6E7 RID: 177895 RVA: 0x005FA534 File Offset: 0x005F8734
+		// Token: 0x0602DE48 RID: 187976 RVA: 0x0064533C File Offset: 0x0064353C
 		public static void StartIBvbSelectCard(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602B6E8 RID: 177896 RVA: 0x005FA53D File Offset: 0x005F873D
+		// Token: 0x0602DE49 RID: 187977 RVA: 0x00645345 File Offset: 0x00643545
 		public static void AddType(FlatBufferBuilder builder, EBvbPlayerOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B6E9 RID: 177897 RVA: 0x005FA548 File Offset: 0x005F8748
+		// Token: 0x0602DE4A RID: 187978 RVA: 0x00645350 File Offset: 0x00643550
 		public static void AddCardIdList(FlatBufferBuilder builder, VectorOffset cardIdListOffset)
 		{
 			builder.AddOffset(1, cardIdListOffset.Value, 0);
 		}
 
-		// Token: 0x0602B6EA RID: 177898 RVA: 0x005FA558 File Offset: 0x005F8758
+		// Token: 0x0602DE4B RID: 187979 RVA: 0x00645360 File Offset: 0x00643560
 		public static VectorOffset CreateCardIdListVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602B6EB RID: 177899 RVA: 0x005FA58F File Offset: 0x005F878F
+		// Token: 0x0602DE4C RID: 187980 RVA: 0x00645397 File Offset: 0x00643597
 		public static VectorOffset CreateCardIdListVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602B6EC RID: 177900 RVA: 0x005FA5A9 File Offset: 0x005F87A9
+		// Token: 0x0602DE4D RID: 187981 RVA: 0x006453B1 File Offset: 0x006435B1
 		public static VectorOffset CreateCardIdListVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602B6ED RID: 177901 RVA: 0x005FA5C7 File Offset: 0x005F87C7
+		// Token: 0x0602DE4E RID: 187982 RVA: 0x006453CF File Offset: 0x006435CF
 		public static VectorOffset CreateCardIdListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -179,25 +179,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602B6EE RID: 177902 RVA: 0x005FA5E0 File Offset: 0x005F87E0
+		// Token: 0x0602DE4F RID: 187983 RVA: 0x006453E8 File Offset: 0x006435E8
 		public static void StartCardIdListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602B6EF RID: 177903 RVA: 0x005FA5EB File Offset: 0x005F87EB
+		// Token: 0x0602DE50 RID: 187984 RVA: 0x006453F3 File Offset: 0x006435F3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602B6F0 RID: 177904 RVA: 0x005FA5F6 File Offset: 0x005F87F6
+		// Token: 0x0602DE51 RID: 187985 RVA: 0x006453FE File Offset: 0x006435FE
 		public static Offset<IBvbSelectCard> EndIBvbSelectCard(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbSelectCard>(builder.EndTable());
 		}
 
-		// Token: 0x0602B6F1 RID: 177905 RVA: 0x005FA604 File Offset: 0x005F8804
+		// Token: 0x0602DE52 RID: 187986 RVA: 0x0064540C File Offset: 0x0064360C
 		public IBvbSelectCardT UnPack()
 		{
 			IBvbSelectCardT bvbSelectCardT = new IBvbSelectCardT();
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return bvbSelectCardT;
 		}
 
-		// Token: 0x0602B6F2 RID: 177906 RVA: 0x005FA620 File Offset: 0x005F8820
+		// Token: 0x0602DE53 RID: 187987 RVA: 0x00645428 File Offset: 0x00643628
 		public void UnPackTo(IBvbSelectCardT _o)
 		{
 			_o.Type = this.Type;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602B6F3 RID: 177907 RVA: 0x005FA674 File Offset: 0x005F8874
+		// Token: 0x0602DE54 RID: 187988 RVA: 0x0064547C File Offset: 0x0064367C
 		public static Offset<IBvbSelectCard> Pack(FlatBufferBuilder builder, IBvbSelectCardT _o)
 		{
 			if (_o == null)
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBvbSelectCard.CreateIBvbSelectCard(builder, _o.Type, cardIdListOffset, _o.NullMask);
 		}
 
-		// Token: 0x040107B6 RID: 67510
+		// Token: 0x040115CB RID: 71115
 		private Table __p;
 	}
 }

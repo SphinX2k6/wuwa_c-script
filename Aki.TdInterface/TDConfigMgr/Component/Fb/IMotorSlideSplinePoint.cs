@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C63 RID: 3171
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D3C RID: 3388
 	public class IMotorSlideSplinePoint : IBaseSplinePointType
 	{
-		// Token: 0x060048A4 RID: 18596 RVA: 0x000B66BB File Offset: 0x000B48BB
+		// Token: 0x06004D29 RID: 19753 RVA: 0x000C0CAF File Offset: 0x000BEEAF
 		public static IMotorSlideSplinePoint Create(IMotorSlideSplinePoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700159B RID: 5531
-		// (get) Token: 0x060048A5 RID: 18597 RVA: 0x000B66DA File Offset: 0x000B48DA
+		// Token: 0x170016AC RID: 5804
+		// (get) Token: 0x06004D2A RID: 19754 RVA: 0x000C0CCE File Offset: 0x000BEECE
 		public override VectorInfo Position
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700159C RID: 5532
-		// (get) Token: 0x060048A6 RID: 18598 RVA: 0x000B670E File Offset: 0x000B490E
+		// Token: 0x170016AD RID: 5805
+		// (get) Token: 0x06004D2B RID: 19755 RVA: 0x000C0D02 File Offset: 0x000BEF02
 		public override VectorInfo ArriveTangent
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700159D RID: 5533
-		// (get) Token: 0x060048A7 RID: 18599 RVA: 0x000B6742 File Offset: 0x000B4942
+		// Token: 0x170016AE RID: 5806
+		// (get) Token: 0x06004D2C RID: 19756 RVA: 0x000C0D36 File Offset: 0x000BEF36
 		public override VectorInfo LeaveTangent
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700159E RID: 5534
-		// (get) Token: 0x060048A8 RID: 18600 RVA: 0x000B6776 File Offset: 0x000B4976
+		// Token: 0x170016AF RID: 5807
+		// (get) Token: 0x06004D2D RID: 19757 RVA: 0x000C0D6A File Offset: 0x000BEF6A
 		public override ESplineLine LineType
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700159F RID: 5535
-		// (get) Token: 0x060048A9 RID: 18601 RVA: 0x000B6783 File Offset: 0x000B4983
+		// Token: 0x170016B0 RID: 5808
+		// (get) Token: 0x06004D2E RID: 19758 RVA: 0x000C0D77 File Offset: 0x000BEF77
 		[Nullable(2)]
 		public override VectorInfo Rotation
 		{
@@ -99,8 +97,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015A0 RID: 5536
-		// (get) Token: 0x060048AA RID: 18602 RVA: 0x000B67B8 File Offset: 0x000B49B8
+		// Token: 0x170016B1 RID: 5809
+		// (get) Token: 0x06004D2F RID: 19759 RVA: 0x000C0DAC File Offset: 0x000BEFAC
 		public virtual float? MaxSpeed
 		{
 			get
@@ -113,8 +111,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015A1 RID: 5537
-		// (get) Token: 0x060048AB RID: 18603 RVA: 0x000B67F0 File Offset: 0x000B49F0
+		// Token: 0x170016B2 RID: 5810
+		// (get) Token: 0x06004D30 RID: 19760 RVA: 0x000C0DE4 File Offset: 0x000BEFE4
 		public virtual float? AbsAcceleration
 		{
 			get
@@ -127,8 +125,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015A2 RID: 5538
-		// (get) Token: 0x060048AC RID: 18604 RVA: 0x000B6828 File Offset: 0x000B4A28
+		// Token: 0x170016B3 RID: 5811
+		// (get) Token: 0x06004D31 RID: 19761 RVA: 0x000C0E1C File Offset: 0x000BF01C
 		public virtual EMotorSlideOffDirection? OffDirection
 		{
 			get
@@ -141,8 +139,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015A3 RID: 5539
-		// (get) Token: 0x060048AD RID: 18605 RVA: 0x000B6860 File Offset: 0x000B4A60
+		// Token: 0x170016B4 RID: 5812
+		// (get) Token: 0x06004D32 RID: 19762 RVA: 0x000C0E54 File Offset: 0x000BF054
 		public virtual int? LeftTargetId
 		{
 			get
@@ -155,8 +153,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015A4 RID: 5540
-		// (get) Token: 0x060048AE RID: 18606 RVA: 0x000B6898 File Offset: 0x000B4A98
+		// Token: 0x170016B5 RID: 5813
+		// (get) Token: 0x06004D33 RID: 19763 RVA: 0x000C0E8C File Offset: 0x000BF08C
 		public virtual int? RightTargetId
 		{
 			get
@@ -169,8 +167,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015A5 RID: 5541
-		// (get) Token: 0x060048AF RID: 18607 RVA: 0x000B68D0 File Offset: 0x000B4AD0
+		// Token: 0x170016B6 RID: 5814
+		// (get) Token: 0x06004D34 RID: 19764 RVA: 0x000C0EC4 File Offset: 0x000BF0C4
 		public virtual int? SubCameraTag
 		{
 			get
@@ -183,35 +181,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002968 RID: 10600
+		// Token: 0x04002BC9 RID: 11209
 		private IMotorSlideSplinePoint Instance;
 
-		// Token: 0x04002969 RID: 10601
+		// Token: 0x04002BCA RID: 11210
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x0400296A RID: 10602
+		// Token: 0x04002BCB RID: 11211
 		private bool _PositionInited;
 
-		// Token: 0x0400296B RID: 10603
+		// Token: 0x04002BCC RID: 11212
 		[Nullable(2)]
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x0400296C RID: 10604
+		// Token: 0x04002BCD RID: 11213
 		private bool _ArriveTangentInited;
 
-		// Token: 0x0400296D RID: 10605
+		// Token: 0x04002BCE RID: 11214
 		[Nullable(2)]
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x0400296E RID: 10606
+		// Token: 0x04002BCF RID: 11215
 		private bool _LeaveTangentInited;
 
-		// Token: 0x0400296F RID: 10607
+		// Token: 0x04002BD0 RID: 11216
 		[Nullable(2)]
 		private VectorInfo _RotationCache;
 
-		// Token: 0x04002970 RID: 10608
+		// Token: 0x04002BD1 RID: 11217
 		private bool _RotationInited;
 	}
 }

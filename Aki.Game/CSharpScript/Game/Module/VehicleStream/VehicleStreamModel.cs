@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048B1 RID: 18609
+	// Token: 0x02003828 RID: 14376
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class VehicleStreamModel : ModelBase
 	{
-		// Token: 0x06030A2F RID: 199215 RVA: 0x00B4A784 File Offset: 0x00B48984
+		// Token: 0x0602555B RID: 152923 RVA: 0x00A8558C File Offset: 0x00A8378C
 		protected override bool OnLeaveLevel()
 		{
 			this.TransportSystemInitDone = false;
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return true;
 		}
 
-		// Token: 0x06030A30 RID: 199216 RVA: 0x00B4A7D0 File Offset: 0x00B489D0
+		// Token: 0x0602555C RID: 152924 RVA: 0x00A855D8 File Offset: 0x00A837D8
 		public Dictionary<int, CSharpScript.Game.Module.VehicleStream.StateMachineContainer.VehicleTeam> GetAllVehicleTeam()
 		{
 			return this.VehicleTeamMap;
 		}
 
-		// Token: 0x06030A31 RID: 199217 RVA: 0x00B4A7D8 File Offset: 0x00B489D8
+		// Token: 0x0602555D RID: 152925 RVA: 0x00A855E0 File Offset: 0x00A837E0
 		[NullableContext(2)]
 		public CSharpScript.Game.Module.VehicleStream.StateMachineContainer.VehicleTeam GetVehicleTeam(int teamId)
 		{
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return result;
 		}
 
-		// Token: 0x06030A32 RID: 199218 RVA: 0x00B4A7F5 File Offset: 0x00B489F5
+		// Token: 0x0602555E RID: 152926 RVA: 0x00A855FD File Offset: 0x00A837FD
 		public void AddVehicleTeam(int teamId, CSharpScript.Game.Module.VehicleStream.StateMachineContainer.VehicleTeam team)
 		{
 			this.VehicleTeamMap[teamId] = team;
 		}
 
-		// Token: 0x06030A33 RID: 199219 RVA: 0x00B4A804 File Offset: 0x00B48A04
+		// Token: 0x0602555F RID: 152927 RVA: 0x00A8560C File Offset: 0x00A8380C
 		public bool RemoveTeamMember(long vehicleCreatureDataId)
 		{
 			VehicleTeamMember vehicleTeamMember = this.GetVehicleTeamMember(vehicleCreatureDataId);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return true;
 		}
 
-		// Token: 0x06030A34 RID: 199220 RVA: 0x00B4A840 File Offset: 0x00B48A40
+		// Token: 0x06025560 RID: 152928 RVA: 0x00A85648 File Offset: 0x00A83848
 		[NullableContext(2)]
 		public VehicleTeamMember GetVehicleTeamMember(long vehicleCreatureDataId)
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return result;
 		}
 
-		// Token: 0x06030A35 RID: 199221 RVA: 0x00B4A860 File Offset: 0x00B48A60
+		// Token: 0x06025561 RID: 152929 RVA: 0x00A85668 File Offset: 0x00A83868
 		public void OnAddVehicleTeamMember(long vehicleCreatureDataId, VehicleTeamMember member)
 		{
 			VehicleTeamMember vehicleTeamMember;
@@ -89,13 +89,13 @@ namespace CSharpScript.Game.Module.VehicleStream
 			this.VehicleTeamMemberDict[vehicleCreatureDataId] = member;
 		}
 
-		// Token: 0x06030A36 RID: 199222 RVA: 0x00B4A8BA File Offset: 0x00B48ABA
+		// Token: 0x06025562 RID: 152930 RVA: 0x00A856C2 File Offset: 0x00A838C2
 		public void OnRemoveVehicleTeamMember(long vehicleCreatureDataId)
 		{
 			this.VehicleTeamMemberDict.Remove(vehicleCreatureDataId);
 		}
 
-		// Token: 0x06030A37 RID: 199223 RVA: 0x00B4A8CC File Offset: 0x00B48ACC
+		// Token: 0x06025563 RID: 152931 RVA: 0x00A856D4 File Offset: 0x00A838D4
 		public bool AddIntersection(int intersectionId, TArray<int> inRoadways)
 		{
 			if (this.Intersections.ContainsKey(intersectionId))
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return true;
 		}
 
-		// Token: 0x06030A38 RID: 199224 RVA: 0x00B4A930 File Offset: 0x00B48B30
+		// Token: 0x06025564 RID: 152932 RVA: 0x00A85738 File Offset: 0x00A83938
 		public bool RecordCrossingRoadways(int roadwayId, TArray<int> inCrossingRoadways)
 		{
 			if (this.CrossingRoadway.ContainsKey(roadwayId))
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return true;
 		}
 
-		// Token: 0x06030A39 RID: 199225 RVA: 0x00B4A984 File Offset: 0x00B48B84
+		// Token: 0x06025565 RID: 152933 RVA: 0x00A8578C File Offset: 0x00A8398C
 		[NullableContext(2)]
 		public global::Vector GetRelativePosition(int teamConfigId, int teamMemberIndex)
 		{
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return global::Vector.Create((config != null) ? config.GetValueOrDefault().PositionList(teamMemberIndex) : null);
 		}
 
-		// Token: 0x06030A3A RID: 199226 RVA: 0x00B4AA04 File Offset: 0x00B48C04
+		// Token: 0x06025566 RID: 152934 RVA: 0x00A8580C File Offset: 0x00A83A0C
 		public void EnterRoadway(int roadwayId, long vehicleCreatureDataId)
 		{
 			HashSet<long> hashSet;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			hashSet.Add(vehicleCreatureDataId);
 		}
 
-		// Token: 0x06030A3B RID: 199227 RVA: 0x00B4AA3C File Offset: 0x00B48C3C
+		// Token: 0x06025567 RID: 152935 RVA: 0x00A85844 File Offset: 0x00A83A44
 		public void ExitRoadway(int roadwayId, long vehicleCreatureDataId)
 		{
 			HashSet<long> hashSet;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			hashSet.Remove(vehicleCreatureDataId);
 		}
 
-		// Token: 0x06030A3C RID: 199228 RVA: 0x00B4AA6C File Offset: 0x00B48C6C
+		// Token: 0x06025568 RID: 152936 RVA: 0x00A85874 File Offset: 0x00A83A74
 		[NullableContext(2)]
 		public HashSet<long> GetAllVehicleInRoadway(int roadwayId)
 		{
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return result;
 		}
 
-		// Token: 0x06030A3D RID: 199229 RVA: 0x00B4AA8C File Offset: 0x00B48C8C
+		// Token: 0x06025569 RID: 152937 RVA: 0x00A85894 File Offset: 0x00A83A94
 		public bool CheckIntersectionRoadwayOccupied(int inRoadwayId)
 		{
 			HashSet<long> hashSet;
@@ -209,19 +209,19 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return false;
 		}
 
-		// Token: 0x06030A3E RID: 199230 RVA: 0x00B4AB13 File Offset: 0x00B48D13
+		// Token: 0x0602556A RID: 152938 RVA: 0x00A8591B File Offset: 0x00A83B1B
 		public void AddWaitTransportInitVehicle(long creatureDataId, IRegisterVehicleData data)
 		{
 			this.WaitTransportInitVehicles[creatureDataId] = data;
 		}
 
-		// Token: 0x06030A3F RID: 199231 RVA: 0x00B4AB22 File Offset: 0x00B48D22
+		// Token: 0x0602556B RID: 152939 RVA: 0x00A8592A File Offset: 0x00A83B2A
 		public Dictionary<long, IRegisterVehicleData> GetWaitTransportInitVehicles()
 		{
 			return this.WaitTransportInitVehicles;
 		}
 
-		// Token: 0x06030A40 RID: 199232 RVA: 0x00B4AB2C File Offset: 0x00B48D2C
+		// Token: 0x0602556C RID: 152940 RVA: 0x00A85934 File Offset: 0x00A83B34
 		public int GetIntersectionId(int roadwayId)
 		{
 			int result;
@@ -232,8 +232,8 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return result;
 		}
 
-		// Token: 0x1700796C RID: 31084
-		// (get) Token: 0x06030A41 RID: 199233 RVA: 0x00B4AB4C File Offset: 0x00B48D4C
+		// Token: 0x17004CD4 RID: 19668
+		// (get) Token: 0x0602556D RID: 152941 RVA: 0x00A85954 File Offset: 0x00A83B54
 		public static VehicleStreamModel Instance
 		{
 			get
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			}
 		}
 
-		// Token: 0x06030A42 RID: 199234 RVA: 0x00B4AB53 File Offset: 0x00B48D53
+		// Token: 0x0602556E RID: 152942 RVA: 0x00A8595B File Offset: 0x00A83B5B
 		public static VehicleStreamModel GetOrCreateInstance()
 		{
 			if (VehicleStreamModel._Instance == null)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return VehicleStreamModel._Instance;
 		}
 
-		// Token: 0x06030A43 RID: 199235 RVA: 0x00B4AB67 File Offset: 0x00B48D67
+		// Token: 0x0602556F RID: 152943 RVA: 0x00A8596F File Offset: 0x00A83B6F
 		public static bool CreateInstance()
 		{
 			if (VehicleStreamModel._Instance != null)
@@ -263,75 +263,75 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return true;
 		}
 
-		// Token: 0x06030A44 RID: 199236 RVA: 0x00B4AB7D File Offset: 0x00B48D7D
+		// Token: 0x06025570 RID: 152944 RVA: 0x00A85985 File Offset: 0x00A83B85
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06030A45 RID: 199237 RVA: 0x00B4AB7F File Offset: 0x00B48D7F
+		// Token: 0x06025571 RID: 152945 RVA: 0x00A85987 File Offset: 0x00A83B87
 		public static void ResetStaticDefaultValue()
 		{
 			VehicleStreamModel._Instance = null;
 		}
 
-		// Token: 0x06030A46 RID: 199238 RVA: 0x00B4AB87 File Offset: 0x00B48D87
+		// Token: 0x06025572 RID: 152946 RVA: 0x00A8598F File Offset: 0x00A83B8F
 		static VehicleStreamModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(VehicleStreamModel.CreateStaticDefaultValue), new Action(VehicleStreamModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A22E RID: 107054
+		// Token: 0x04014AA1 RID: 84641
 		public readonly bool EnableDebug;
 
-		// Token: 0x0401A22F RID: 107055
+		// Token: 0x04014AA2 RID: 84642
 		public readonly bool EnableInteractionSinglePass;
 
-		// Token: 0x0401A230 RID: 107056
+		// Token: 0x04014AA3 RID: 84643
 		public readonly bool EnableRotationOptimize = true;
 
-		// Token: 0x0401A231 RID: 107057
+		// Token: 0x04014AA4 RID: 84644
 		public bool TransportSystemInitDone;
 
-		// Token: 0x0401A232 RID: 107058
+		// Token: 0x04014AA5 RID: 84645
 		public readonly global::Vector SplineLocation = global::Vector.Create();
 
-		// Token: 0x0401A233 RID: 107059
+		// Token: 0x04014AA6 RID: 84646
 		public readonly Rotator SplineRotation = Rotator.Create();
 
-		// Token: 0x0401A234 RID: 107060
+		// Token: 0x04014AA7 RID: 84647
 		public readonly global::Vector BasisForwardVector = global::Vector.Create();
 
-		// Token: 0x0401A235 RID: 107061
+		// Token: 0x04014AA8 RID: 84648
 		public readonly global::Vector BasisUpVector = global::Vector.Create();
 
-		// Token: 0x0401A236 RID: 107062
+		// Token: 0x04014AA9 RID: 84649
 		public readonly global::Vector BasisRightVector = global::Vector.Create();
 
-		// Token: 0x0401A237 RID: 107063
+		// Token: 0x04014AAA RID: 84650
 		public readonly global::Vector CacheVector = global::Vector.Create();
 
-		// Token: 0x0401A238 RID: 107064
+		// Token: 0x04014AAB RID: 84651
 		private readonly Dictionary<int, CSharpScript.Game.Module.VehicleStream.StateMachineContainer.VehicleTeam> VehicleTeamMap = new Dictionary<int, CSharpScript.Game.Module.VehicleStream.StateMachineContainer.VehicleTeam>();
 
-		// Token: 0x0401A239 RID: 107065
+		// Token: 0x04014AAC RID: 84652
 		private readonly Dictionary<long, VehicleTeamMember> VehicleTeamMemberDict = new Dictionary<long, VehicleTeamMember>();
 
-		// Token: 0x0401A23A RID: 107066
+		// Token: 0x04014AAD RID: 84653
 		private readonly Dictionary<int, int[]> Intersections = new Dictionary<int, int[]>();
 
-		// Token: 0x0401A23B RID: 107067
+		// Token: 0x04014AAE RID: 84654
 		private readonly Dictionary<int, int> RoadwayId2IntersectionId = new Dictionary<int, int>();
 
-		// Token: 0x0401A23C RID: 107068
+		// Token: 0x04014AAF RID: 84655
 		private readonly Dictionary<int, int[]> CrossingRoadway = new Dictionary<int, int[]>();
 
-		// Token: 0x0401A23D RID: 107069
+		// Token: 0x04014AB0 RID: 84656
 		private readonly Dictionary<int, HashSet<long>> VehiclesInRoadways = new Dictionary<int, HashSet<long>>();
 
-		// Token: 0x0401A23E RID: 107070
+		// Token: 0x04014AB1 RID: 84657
 		private readonly Dictionary<long, IRegisterVehicleData> WaitTransportInitVehicles = new Dictionary<long, IRegisterVehicleData>();
 
-		// Token: 0x0401A23F RID: 107071
+		// Token: 0x04014AB2 RID: 84658
 		[Nullable(2)]
 		private static VehicleStreamModel _Instance;
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F59 RID: 16217
+	// Token: 0x02004397 RID: 17303
 	public struct INewHandInItemsProjectionMachine : IFlatbufferObject
 	{
-		// Token: 0x170070C3 RID: 28867
-		// (get) Token: 0x060170F8 RID: 94456 RVA: 0x0035317A File Offset: 0x0035137A
+		// Token: 0x170076B4 RID: 30388
+		// (get) Token: 0x0601875A RID: 100186 RVA: 0x0037C5EE File Offset: 0x0037A7EE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060170F9 RID: 94457 RVA: 0x00353187 File Offset: 0x00351387
+		// Token: 0x0601875B RID: 100187 RVA: 0x0037C5FB File Offset: 0x0037A7FB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060170FA RID: 94458 RVA: 0x00353190 File Offset: 0x00351390
+		// Token: 0x0601875C RID: 100188 RVA: 0x0037C604 File Offset: 0x0037A804
 		public static INewHandInItemsProjectionMachine GetRootAsINewHandInItemsProjectionMachine(ByteBuffer _bb)
 		{
 			return INewHandInItemsProjectionMachine.GetRootAsINewHandInItemsProjectionMachine(_bb, default(INewHandInItemsProjectionMachine));
 		}
 
-		// Token: 0x060170FB RID: 94459 RVA: 0x003531AC File Offset: 0x003513AC
+		// Token: 0x0601875D RID: 100189 RVA: 0x0037C620 File Offset: 0x0037A820
 		public static INewHandInItemsProjectionMachine GetRootAsINewHandInItemsProjectionMachine(ByteBuffer _bb, INewHandInItemsProjectionMachine obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060170FC RID: 94460 RVA: 0x003531C9 File Offset: 0x003513C9
+		// Token: 0x0601875E RID: 100190 RVA: 0x0037C63D File Offset: 0x0037A83D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060170FD RID: 94461 RVA: 0x003531D8 File Offset: 0x003513D8
+		// Token: 0x0601875F RID: 100191 RVA: 0x0037C64C File Offset: 0x0037A84C
 		public INewHandInItemsProjectionMachine __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170070C4 RID: 28868
-		// (get) Token: 0x060170FE RID: 94462 RVA: 0x003531E8 File Offset: 0x003513E8
+		// Token: 0x170076B5 RID: 30389
+		// (get) Token: 0x06018760 RID: 100192 RVA: 0x0037C65C File Offset: 0x0037A85C
 		public ENewHandInItemsType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170070C5 RID: 28869
-		// (get) Token: 0x060170FF RID: 94463 RVA: 0x00353224 File Offset: 0x00351424
+		// Token: 0x170076B6 RID: 30390
+		// (get) Token: 0x06018761 RID: 100193 RVA: 0x0037C698 File Offset: 0x0037A898
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170070C6 RID: 28870
-		// (get) Token: 0x06017100 RID: 94464 RVA: 0x00353260 File Offset: 0x00351460
+		// Token: 0x170076B7 RID: 30391
+		// (get) Token: 0x06018762 RID: 100194 RVA: 0x0037C6D4 File Offset: 0x0037A8D4
 		public int ItemId
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017101 RID: 94465 RVA: 0x0035329C File Offset: 0x0035149C
+		// Token: 0x06018763 RID: 100195 RVA: 0x0037C710 File Offset: 0x0037A910
 		public static Offset<INewHandInItemsProjectionMachine> CreateINewHandInItemsProjectionMachine(FlatBufferBuilder builder, ENewHandInItemsType Type = ENewHandInItemsType.ProjectionMachine, int EntityId = 0, int ItemId = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return INewHandInItemsProjectionMachine.EndINewHandInItemsProjectionMachine(builder);
 		}
 
-		// Token: 0x06017102 RID: 94466 RVA: 0x003532C0 File Offset: 0x003514C0
+		// Token: 0x06018764 RID: 100196 RVA: 0x0037C734 File Offset: 0x0037A934
 		public static void StartINewHandInItemsProjectionMachine(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06017103 RID: 94467 RVA: 0x003532C9 File Offset: 0x003514C9
+		// Token: 0x06018765 RID: 100197 RVA: 0x0037C73D File Offset: 0x0037A93D
 		public static void AddType(FlatBufferBuilder builder, ENewHandInItemsType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017104 RID: 94468 RVA: 0x003532D4 File Offset: 0x003514D4
+		// Token: 0x06018766 RID: 100198 RVA: 0x0037C748 File Offset: 0x0037A948
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x06017105 RID: 94469 RVA: 0x003532DF File Offset: 0x003514DF
+		// Token: 0x06018767 RID: 100199 RVA: 0x0037C753 File Offset: 0x0037A953
 		public static void AddItemId(FlatBufferBuilder builder, int itemId)
 		{
 			builder.AddInt(2, itemId, 0);
 		}
 
-		// Token: 0x06017106 RID: 94470 RVA: 0x003532EA File Offset: 0x003514EA
+		// Token: 0x06018768 RID: 100200 RVA: 0x0037C75E File Offset: 0x0037A95E
 		public static Offset<INewHandInItemsProjectionMachine> EndINewHandInItemsProjectionMachine(FlatBufferBuilder builder)
 		{
 			return new Offset<INewHandInItemsProjectionMachine>(builder.EndTable());
 		}
 
-		// Token: 0x06017107 RID: 94471 RVA: 0x003532F8 File Offset: 0x003514F8
+		// Token: 0x06018769 RID: 100201 RVA: 0x0037C76C File Offset: 0x0037A96C
 		public INewHandInItemsProjectionMachineT UnPack()
 		{
 			INewHandInItemsProjectionMachineT newHandInItemsProjectionMachineT = new INewHandInItemsProjectionMachineT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return newHandInItemsProjectionMachineT;
 		}
 
-		// Token: 0x06017108 RID: 94472 RVA: 0x00353313 File Offset: 0x00351513
+		// Token: 0x0601876A RID: 100202 RVA: 0x0037C787 File Offset: 0x0037A987
 		public void UnPackTo(INewHandInItemsProjectionMachineT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.ItemId = this.ItemId;
 		}
 
-		// Token: 0x06017109 RID: 94473 RVA: 0x0035333C File Offset: 0x0035153C
+		// Token: 0x0601876B RID: 100203 RVA: 0x0037C7B0 File Offset: 0x0037A9B0
 		public static Offset<INewHandInItemsProjectionMachine> Pack(FlatBufferBuilder builder, INewHandInItemsProjectionMachineT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return INewHandInItemsProjectionMachine.CreateINewHandInItemsProjectionMachine(builder, _o.Type, _o.EntityId, _o.ItemId);
 		}
 
-		// Token: 0x0400B96D RID: 47469
+		// Token: 0x0400C34B RID: 49995
 		private Table __p;
 	}
 }

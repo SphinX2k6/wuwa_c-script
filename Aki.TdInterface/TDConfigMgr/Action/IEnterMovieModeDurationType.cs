@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019FE RID: 6654
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B91 RID: 7057
 	public class IEnterMovieModeDurationType
 	{
-		// Token: 0x06008E8D RID: 36493 RVA: 0x0014D5D8 File Offset: 0x0014B7D8
+		// Token: 0x060095EF RID: 38383 RVA: 0x0015D448 File Offset: 0x0015B648
 		private IEnterMovieModeDurationType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E8E RID: 36494 RVA: 0x0014D610 File Offset: 0x0014B810
+		// Token: 0x060095F0 RID: 38384 RVA: 0x0015D480 File Offset: 0x0015B680
 		public static IEnterMovieModeDurationType Create([Nullable(2)] IEnterMovieModeDurationType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E8F RID: 36495 RVA: 0x0014D623 File Offset: 0x0014B823
+		// Token: 0x060095F1 RID: 38385 RVA: 0x0015D493 File Offset: 0x0015B693
 		public static IEnterMovieModeDurationType CreateFromSetValue([Nullable(2)] IEnterMovieModeDurationType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E90 RID: 36496 RVA: 0x0014D636 File Offset: 0x0014B836
+		// Token: 0x060095F2 RID: 38386 RVA: 0x0015D4A6 File Offset: 0x0015B6A6
 		public IEnterMovieModeDurationType_SetValue ToSetValue()
 		{
 			return new IEnterMovieModeDurationType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D9E RID: 11678
-		// (get) Token: 0x06008E91 RID: 36497 RVA: 0x0014D649 File Offset: 0x0014B849
-		// (set) Token: 0x06008E92 RID: 36498 RVA: 0x0014D674 File Offset: 0x0014B874
+		// Token: 0x17002FAA RID: 12202
+		// (get) Token: 0x060095F3 RID: 38387 RVA: 0x0015D4B9 File Offset: 0x0015B6B9
+		// (set) Token: 0x060095F4 RID: 38388 RVA: 0x0015D4E4 File Offset: 0x0015B6E4
 		public virtual EEnterMovieModeDurationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005857 RID: 22615
+		// Token: 0x04005CB9 RID: 23737
 		[Nullable(2)]
 		protected IEnterMovieModeDurationType FbInstance;
 
-		// Token: 0x04005858 RID: 22616
+		// Token: 0x04005CBA RID: 23738
 		[Nullable(2)]
 		protected IEnterMovieModeDurationType_SetValue PocoInterface;
 	}

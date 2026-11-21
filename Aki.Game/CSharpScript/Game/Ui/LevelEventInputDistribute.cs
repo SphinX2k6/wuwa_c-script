@@ -4,10 +4,10 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004687 RID: 18055
+	// Token: 0x020035B8 RID: 13752
 	public class LevelEventInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E997 RID: 190871 RVA: 0x00ACA2E8 File Offset: 0x00AC84E8
+		// Token: 0x060230E1 RID: 143585 RVA: 0x009F801C File Offset: 0x009F621C
 		public override bool OnRefresh()
 		{
 			if (LevelEventLockInputState.Instance.IsLockInput())

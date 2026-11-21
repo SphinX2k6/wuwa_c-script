@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002A58 RID: 10840
+// Token: 0x02001FD3 RID: 8147
 public class RoleOrnamentGridData : IRoleOrnamentGridData
 {
-	// Token: 0x17001DFE RID: 7678
-	// (get) Token: 0x06016970 RID: 92528 RVA: 0x005B98F7 File Offset: 0x005B7AF7
-	// (set) Token: 0x06016971 RID: 92529 RVA: 0x005B98FF File Offset: 0x005B7AFF
+	// Token: 0x17001E56 RID: 7766
+	// (get) Token: 0x06014391 RID: 82833 RVA: 0x005E5A7B File Offset: 0x005E3C7B
+	// (set) Token: 0x06014392 RID: 82834 RVA: 0x005E5A83 File Offset: 0x005E3C83
 	public int SkinId { get; set; }
 
-	// Token: 0x17001DFF RID: 7679
-	// (get) Token: 0x06016972 RID: 92530 RVA: 0x005B9908 File Offset: 0x005B7B08
-	// (set) Token: 0x06016973 RID: 92531 RVA: 0x005B9910 File Offset: 0x005B7B10
+	// Token: 0x17001E57 RID: 7767
+	// (get) Token: 0x06014393 RID: 82835 RVA: 0x005E5A8C File Offset: 0x005E3C8C
+	// (set) Token: 0x06014394 RID: 82836 RVA: 0x005E5A94 File Offset: 0x005E3C94
 	public int OrnamentId { get; set; }
 }

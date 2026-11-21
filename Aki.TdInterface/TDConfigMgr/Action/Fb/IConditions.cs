@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002603 RID: 9731
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028C3 RID: 10435
 	public class IConditions
 	{
-		// Token: 0x0600DA95 RID: 55957 RVA: 0x002090E9 File Offset: 0x002072E9
+		// Token: 0x0600E862 RID: 59490 RVA: 0x0022583D File Offset: 0x00223A3D
 		public static IConditions Create(IConditions? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004051 RID: 16465
-		// (get) Token: 0x0600DA96 RID: 55958 RVA: 0x00209108 File Offset: 0x00207308
+		// Token: 0x1700438A RID: 17290
+		// (get) Token: 0x0600E863 RID: 59491 RVA: 0x0022585C File Offset: 0x00223A5C
 		public virtual string LogicOpType
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004052 RID: 16466
-		// (get) Token: 0x0600DA97 RID: 55959 RVA: 0x00209118 File Offset: 0x00207318
+		// Token: 0x1700438B RID: 17291
+		// (get) Token: 0x0600E864 RID: 59492 RVA: 0x0022586C File Offset: 0x00223A6C
 		public virtual List<ICondition> Conditions
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007965 RID: 31077
+		// Token: 0x04007FFF RID: 32767
 		private IConditions Instance;
 
-		// Token: 0x04007966 RID: 31078
+		// Token: 0x04008000 RID: 32768
 		private List<ICondition> _ConditionsCache;
 
-		// Token: 0x04007967 RID: 31079
+		// Token: 0x04008001 RID: 32769
 		private bool _ConditionsInited;
 	}
 }

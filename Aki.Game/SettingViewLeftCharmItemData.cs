@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002528 RID: 9512
+// Token: 0x02001A0F RID: 6671
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,13 +11,13 @@ using System.Runtime.CompilerServices;
 })]
 public class SettingViewLeftCharmItemData : MultiTemplateGridDataBase<PhoneMsgCharmItemData, PhoneMsgCharmItem>
 {
-	// Token: 0x0601320C RID: 78348 RVA: 0x004BF7F1 File Offset: 0x004BD9F1
+	// Token: 0x060106CC RID: 67276 RVA: 0x004CD4FD File Offset: 0x004CB6FD
 	public override int GetTemplateIndex()
 	{
 		return 3;
 	}
 
-	// Token: 0x0601320D RID: 78349 RVA: 0x004BF7F4 File Offset: 0x004BD9F4
+	// Token: 0x060106CD RID: 67277 RVA: 0x004CD500 File Offset: 0x004CB700
 	public override PhoneMsgCharmItem CreateProxy()
 	{
 		return new PhoneMsgCharmItem
@@ -26,22 +26,22 @@ public class SettingViewLeftCharmItemData : MultiTemplateGridDataBase<PhoneMsgCh
 		};
 	}
 
-	// Token: 0x0601320E RID: 78350 RVA: 0x004BF807 File Offset: 0x004BDA07
+	// Token: 0x060106CE RID: 67278 RVA: 0x004CD513 File Offset: 0x004CB713
 	public SettingViewLeftCharmItemData(PhoneMsgCharmItemData charmData)
 	{
 		base.Data = charmData;
 	}
 
-	// Token: 0x0601320F RID: 78351 RVA: 0x004BF816 File Offset: 0x004BDA16
+	// Token: 0x060106CF RID: 67279 RVA: 0x004CD522 File Offset: 0x004CB722
 	public int GetCharmId()
 	{
 		return base.Data.CharmId;
 	}
 
-	// Token: 0x0400906C RID: 36972
+	// Token: 0x040091C1 RID: 37313
 	public int Index;
 
-	// Token: 0x0400906D RID: 36973
+	// Token: 0x040091C2 RID: 37314
 	[Nullable(new byte[]
 	{
 		2,

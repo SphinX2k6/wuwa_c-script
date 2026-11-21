@@ -7,15 +7,15 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059C6 RID: 22982
+	// Token: 0x0200499F RID: 18847
 	public class AtomicProcessBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A432 RID: 238642 RVA: 0x00DDAA20 File Offset: 0x00DD8C20
+		// Token: 0x0602F359 RID: 193369 RVA: 0x00D2A2A8 File Offset: 0x00D284A8
 		public AtomicProcessBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A433 RID: 238643 RVA: 0x00DDAA2C File Offset: 0x00DD8C2C
+		// Token: 0x0602F35A RID: 193370 RVA: 0x00D2A2B4 File Offset: 0x00D284B4
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return childQuestBtNode != null && base.OnCreate(nodeConfig) && childQuestBtNode.Condition.Type == EChildQuest.AtomicProcess;
 		}
 
-		// Token: 0x0603A434 RID: 238644 RVA: 0x00DDAA62 File Offset: 0x00DD8C62
+		// Token: 0x0602F35B RID: 193371 RVA: 0x00D2A2EA File Offset: 0x00D284EA
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 			EventSystem.Instance.Add(EEventName.OnLevelFlowFinished, new Action(this.OnLevelFlowFinished));
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			LevelFlowController.Instance.StartLevelFlow(0);
 		}
 
-		// Token: 0x0603A435 RID: 238645 RVA: 0x00DDAAA1 File Offset: 0x00DD8CA1
+		// Token: 0x0602F35C RID: 193372 RVA: 0x00D2A329 File Offset: 0x00D28529
 		protected override void OnEnd(bool bFinished)
 		{
 			if (!bFinished)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			EventSystem.Instance.Remove(EEventName.OnLevelFlowFinished, new Action(this.OnLevelFlowFinished));
 		}
 
-		// Token: 0x0603A436 RID: 238646 RVA: 0x00DDAACC File Offset: 0x00DD8CCC
+		// Token: 0x0602F35D RID: 193373 RVA: 0x00D2A354 File Offset: 0x00D28554
 		private void PrepareRollback()
 		{
 			if (LevelFlowModel.Instance.IsEnd)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			TaskSystem.Instance.AddTask(task);
 		}
 
-		// Token: 0x0603A437 RID: 238647 RVA: 0x00DDAB1E File Offset: 0x00DD8D1E
+		// Token: 0x0602F35E RID: 193374 RVA: 0x00D2A3A6 File Offset: 0x00D285A6
 		private void OnLevelFlowFinished()
 		{
 			this.SubmitNode(null);

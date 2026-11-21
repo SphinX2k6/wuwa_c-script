@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003B6 RID: 950
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000401 RID: 1025
 	public class IFollowTrackToStart : IFollowTrackEndType
 	{
-		// Token: 0x060012F3 RID: 4851 RVA: 0x0003DF8C File Offset: 0x0003C18C
+		// Token: 0x06001449 RID: 5193 RVA: 0x0004152C File Offset: 0x0003F72C
 		private IFollowTrackToStart_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060012F4 RID: 4852 RVA: 0x0003DFC4 File Offset: 0x0003C1C4
+		// Token: 0x0600144A RID: 5194 RVA: 0x00041564 File Offset: 0x0003F764
 		public static IFollowTrackToStart Create([Nullable(2)] IFollowTrackToStart instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012F5 RID: 4853 RVA: 0x0003DFD7 File Offset: 0x0003C1D7
+		// Token: 0x0600144B RID: 5195 RVA: 0x00041577 File Offset: 0x0003F777
 		public static IFollowTrackToStart CreateFromSetValue([Nullable(2)] IFollowTrackToStart_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012F6 RID: 4854 RVA: 0x0003DFEA File Offset: 0x0003C1EA
+		// Token: 0x0600144C RID: 5196 RVA: 0x0004158A File Offset: 0x0003F78A
 		public new IFollowTrackToStart_SetValue ToSetValue()
 		{
 			return new IFollowTrackToStart_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000546 RID: 1350
-		// (get) Token: 0x060012F7 RID: 4855 RVA: 0x0003DFFD File Offset: 0x0003C1FD
-		// (set) Token: 0x060012F8 RID: 4856 RVA: 0x0003E028 File Offset: 0x0003C228
+		// Token: 0x170005A0 RID: 1440
+		// (get) Token: 0x0600144D RID: 5197 RVA: 0x0004159D File Offset: 0x0003F79D
+		// (set) Token: 0x0600144E RID: 5198 RVA: 0x000415C8 File Offset: 0x0003F7C8
 		public override EFollowTrackEndType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F25 RID: 3877
+		// Token: 0x04001026 RID: 4134
 		[Nullable(2)]
 		protected new IFollowTrackToStart FbInstance;
 
-		// Token: 0x04000F26 RID: 3878
+		// Token: 0x04001027 RID: 4135
 		[Nullable(2)]
 		protected new IFollowTrackToStart_SetValue PocoInterface;
 	}

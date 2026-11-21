@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F2A RID: 3882
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001040 RID: 4160
 	public class IConditionSelectorBtNodeSlot
 	{
-		// Token: 0x06005640 RID: 22080 RVA: 0x000D36E8 File Offset: 0x000D18E8
+		// Token: 0x06005BBC RID: 23484 RVA: 0x000DF890 File Offset: 0x000DDA90
 		private IConditionSelectorBtNodeSlot_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005641 RID: 22081 RVA: 0x000D3720 File Offset: 0x000D1920
+		// Token: 0x06005BBD RID: 23485 RVA: 0x000DF8C8 File Offset: 0x000DDAC8
 		public static IConditionSelectorBtNodeSlot Create([Nullable(2)] IConditionSelectorBtNodeSlot instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005642 RID: 22082 RVA: 0x000D3733 File Offset: 0x000D1933
+		// Token: 0x06005BBE RID: 23486 RVA: 0x000DF8DB File Offset: 0x000DDADB
 		public static IConditionSelectorBtNodeSlot CreateFromSetValue([Nullable(2)] IConditionSelectorBtNodeSlot_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005643 RID: 22083 RVA: 0x000D3746 File Offset: 0x000D1946
+		// Token: 0x06005BBF RID: 23487 RVA: 0x000DF8EE File Offset: 0x000DDAEE
 		public IConditionSelectorBtNodeSlot_SetValue ToSetValue()
 		{
 			return new IConditionSelectorBtNodeSlot_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001CE2 RID: 7394
-		// (get) Token: 0x06005644 RID: 22084 RVA: 0x000D3774 File Offset: 0x000D1974
-		// (set) Token: 0x06005645 RID: 22085 RVA: 0x000D37D5 File Offset: 0x000D19D5
+		// Token: 0x17001E7A RID: 7802
+		// (get) Token: 0x06005BC0 RID: 23488 RVA: 0x000DF91C File Offset: 0x000DDB1C
+		// (set) Token: 0x06005BC1 RID: 23489 RVA: 0x000DF97D File Offset: 0x000DDB7D
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CE3 RID: 7395
-		// (get) Token: 0x06005646 RID: 22086 RVA: 0x000D37EA File Offset: 0x000D19EA
-		// (set) Token: 0x06005647 RID: 22087 RVA: 0x000D3811 File Offset: 0x000D1A11
+		// Token: 0x17001E7B RID: 7803
+		// (get) Token: 0x06005BC2 RID: 23490 RVA: 0x000DF992 File Offset: 0x000DDB92
+		// (set) Token: 0x06005BC3 RID: 23491 RVA: 0x000DF9B9 File Offset: 0x000DDBB9
 		public virtual IBtNode Node
 		{
 			get
@@ -117,9 +115,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CE4 RID: 7396
-		// (get) Token: 0x06005648 RID: 22088 RVA: 0x000D3820 File Offset: 0x000D1A20
-		// (set) Token: 0x06005649 RID: 22089 RVA: 0x000D3881 File Offset: 0x000D1A81
+		// Token: 0x17001E7C RID: 7804
+		// (get) Token: 0x06005BC4 RID: 23492 RVA: 0x000DF9C8 File Offset: 0x000DDBC8
+		// (set) Token: 0x06005BC5 RID: 23493 RVA: 0x000DFA29 File Offset: 0x000DDC29
 		[Nullable(2)]
 		public virtual IPerformanceSetting PerformanceSetting
 		{
@@ -150,24 +148,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003445 RID: 13381
+		// Token: 0x04003752 RID: 14162
 		[Nullable(2)]
 		protected IConditionSelectorBtNodeSlot FbInstance;
 
-		// Token: 0x04003446 RID: 13382
+		// Token: 0x04003753 RID: 14163
 		[Nullable(2)]
 		protected IConditionSelectorBtNodeSlot_SetValue PocoInterface;
 
-		// Token: 0x04003447 RID: 13383
+		// Token: 0x04003754 RID: 14164
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04003448 RID: 13384
+		// Token: 0x04003755 RID: 14165
 		private bool _ConditionInited;
 
-		// Token: 0x04003449 RID: 13385
+		// Token: 0x04003756 RID: 14166
 		private IPerformanceSetting _PerformanceSettingCache;
 
-		// Token: 0x0400344A RID: 13386
+		// Token: 0x04003757 RID: 14167
 		private bool _PerformanceSettingInited;
 	}
 }

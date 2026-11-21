@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C2F RID: 3119
+	// Token: 0x02000D12 RID: 3346
 	public struct EncircleMap : IFlatbufferObject
 	{
-		// Token: 0x17000EF7 RID: 3831
-		// (get) Token: 0x060068DA RID: 26842 RVA: 0x00222925 File Offset: 0x00220B25
+		// Token: 0x17000F50 RID: 3920
+		// (get) Token: 0x06006EDC RID: 28380 RVA: 0x00241DFA File Offset: 0x0023FFFA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060068DB RID: 26843 RVA: 0x00222932 File Offset: 0x00220B32
+		// Token: 0x06006EDD RID: 28381 RVA: 0x00241E07 File Offset: 0x00240007
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060068DC RID: 26844 RVA: 0x0022293C File Offset: 0x00220B3C
+		// Token: 0x06006EDE RID: 28382 RVA: 0x00241E10 File Offset: 0x00240010
 		public static EncircleMap GetRootAsEncircleMap(ByteBuffer _bb)
 		{
 			return EncircleMap.GetRootAsEncircleMap(_bb, default(EncircleMap));
 		}
 
-		// Token: 0x060068DD RID: 26845 RVA: 0x00222958 File Offset: 0x00220B58
+		// Token: 0x06006EDF RID: 28383 RVA: 0x00241E2C File Offset: 0x0024002C
 		public static EncircleMap GetRootAsEncircleMap(ByteBuffer _bb, EncircleMap obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060068DE RID: 26846 RVA: 0x00222975 File Offset: 0x00220B75
+		// Token: 0x06006EE0 RID: 28384 RVA: 0x00241E49 File Offset: 0x00240049
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060068DF RID: 26847 RVA: 0x00222984 File Offset: 0x00220B84
+		// Token: 0x06006EE1 RID: 28385 RVA: 0x00241E58 File Offset: 0x00240058
 		public EncircleMap __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000EF8 RID: 3832
-		// (get) Token: 0x060068E0 RID: 26848 RVA: 0x00222994 File Offset: 0x00220B94
+		// Token: 0x17000F51 RID: 3921
+		// (get) Token: 0x06006EE2 RID: 28386 RVA: 0x00241E68 File Offset: 0x00240068
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000EF9 RID: 3833
-		// (get) Token: 0x060068E1 RID: 26849 RVA: 0x002229D0 File Offset: 0x00220BD0
+		// Token: 0x17000F52 RID: 3922
+		// (get) Token: 0x06006EE3 RID: 28387 RVA: 0x00241EA4 File Offset: 0x002400A4
 		public int MapID
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060068E2 RID: 26850 RVA: 0x00222A0C File Offset: 0x00220C0C
+		// Token: 0x06006EE4 RID: 28388 RVA: 0x00241EE0 File Offset: 0x002400E0
 		public int Column1(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000EFA RID: 3834
-		// (get) Token: 0x060068E3 RID: 26851 RVA: 0x00222A4C File Offset: 0x00220C4C
+		// Token: 0x17000F53 RID: 3923
+		// (get) Token: 0x06006EE5 RID: 28389 RVA: 0x00241F20 File Offset: 0x00240120
 		public int Column1Length
 		{
 			get
@@ -105,19 +105,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060068E4 RID: 26852 RVA: 0x00222A77 File Offset: 0x00220C77
+		// Token: 0x06006EE6 RID: 28390 RVA: 0x00241F4B File Offset: 0x0024014B
 		public Span<int> GetColumn1Bytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x060068E5 RID: 26853 RVA: 0x00222A86 File Offset: 0x00220C86
+		// Token: 0x06006EE7 RID: 28391 RVA: 0x00241F5A File Offset: 0x0024015A
 		public int[] GetColumn1Array()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060068E6 RID: 26854 RVA: 0x00222AA0 File Offset: 0x00220CA0
+		// Token: 0x06006EE8 RID: 28392 RVA: 0x00241F74 File Offset: 0x00240174
 		public int Column2(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -128,8 +128,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000EFB RID: 3835
-		// (get) Token: 0x060068E7 RID: 26855 RVA: 0x00222AE0 File Offset: 0x00220CE0
+		// Token: 0x17000F54 RID: 3924
+		// (get) Token: 0x06006EE9 RID: 28393 RVA: 0x00241FB4 File Offset: 0x002401B4
 		public int Column2Length
 		{
 			get
@@ -143,19 +143,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060068E8 RID: 26856 RVA: 0x00222B0C File Offset: 0x00220D0C
+		// Token: 0x06006EEA RID: 28394 RVA: 0x00241FE0 File Offset: 0x002401E0
 		public Span<int> GetColumn2Bytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x060068E9 RID: 26857 RVA: 0x00222B1C File Offset: 0x00220D1C
+		// Token: 0x06006EEB RID: 28395 RVA: 0x00241FF0 File Offset: 0x002401F0
 		public int[] GetColumn2Array()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060068EA RID: 26858 RVA: 0x00222B34 File Offset: 0x00220D34
+		// Token: 0x06006EEC RID: 28396 RVA: 0x00242008 File Offset: 0x00240208
 		public int Column3(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -166,8 +166,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000EFC RID: 3836
-		// (get) Token: 0x060068EB RID: 26859 RVA: 0x00222B74 File Offset: 0x00220D74
+		// Token: 0x17000F55 RID: 3925
+		// (get) Token: 0x06006EED RID: 28397 RVA: 0x00242048 File Offset: 0x00240248
 		public int Column3Length
 		{
 			get
@@ -181,19 +181,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060068EC RID: 26860 RVA: 0x00222BA0 File Offset: 0x00220DA0
+		// Token: 0x06006EEE RID: 28398 RVA: 0x00242074 File Offset: 0x00240274
 		public Span<int> GetColumn3Bytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x060068ED RID: 26861 RVA: 0x00222BB0 File Offset: 0x00220DB0
+		// Token: 0x06006EEF RID: 28399 RVA: 0x00242084 File Offset: 0x00240284
 		public int[] GetColumn3Array()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060068EE RID: 26862 RVA: 0x00222BC8 File Offset: 0x00220DC8
+		// Token: 0x06006EF0 RID: 28400 RVA: 0x0024209C File Offset: 0x0024029C
 		public int Column4(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -204,8 +204,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000EFD RID: 3837
-		// (get) Token: 0x060068EF RID: 26863 RVA: 0x00222C08 File Offset: 0x00220E08
+		// Token: 0x17000F56 RID: 3926
+		// (get) Token: 0x06006EF1 RID: 28401 RVA: 0x002420DC File Offset: 0x002402DC
 		public int Column4Length
 		{
 			get
@@ -219,19 +219,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060068F0 RID: 26864 RVA: 0x00222C34 File Offset: 0x00220E34
+		// Token: 0x06006EF2 RID: 28402 RVA: 0x00242108 File Offset: 0x00240308
 		public Span<int> GetColumn4Bytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x060068F1 RID: 26865 RVA: 0x00222C44 File Offset: 0x00220E44
+		// Token: 0x06006EF3 RID: 28403 RVA: 0x00242118 File Offset: 0x00240318
 		public int[] GetColumn4Array()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060068F2 RID: 26866 RVA: 0x00222C5C File Offset: 0x00220E5C
+		// Token: 0x06006EF4 RID: 28404 RVA: 0x00242130 File Offset: 0x00240330
 		public int Column5(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -242,8 +242,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000EFE RID: 3838
-		// (get) Token: 0x060068F3 RID: 26867 RVA: 0x00222C9C File Offset: 0x00220E9C
+		// Token: 0x17000F57 RID: 3927
+		// (get) Token: 0x06006EF5 RID: 28405 RVA: 0x00242170 File Offset: 0x00240370
 		public int Column5Length
 		{
 			get
@@ -257,19 +257,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060068F4 RID: 26868 RVA: 0x00222CC8 File Offset: 0x00220EC8
+		// Token: 0x06006EF6 RID: 28406 RVA: 0x0024219C File Offset: 0x0024039C
 		public Span<int> GetColumn5Bytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x060068F5 RID: 26869 RVA: 0x00222CD8 File Offset: 0x00220ED8
+		// Token: 0x06006EF7 RID: 28407 RVA: 0x002421AC File Offset: 0x002403AC
 		public int[] GetColumn5Array()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060068F6 RID: 26870 RVA: 0x00222CF0 File Offset: 0x00220EF0
+		// Token: 0x06006EF8 RID: 28408 RVA: 0x002421C4 File Offset: 0x002403C4
 		public int Column6(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -280,8 +280,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000EFF RID: 3839
-		// (get) Token: 0x060068F7 RID: 26871 RVA: 0x00222D30 File Offset: 0x00220F30
+		// Token: 0x17000F58 RID: 3928
+		// (get) Token: 0x06006EF9 RID: 28409 RVA: 0x00242204 File Offset: 0x00240404
 		public int Column6Length
 		{
 			get
@@ -295,19 +295,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060068F8 RID: 26872 RVA: 0x00222D5C File Offset: 0x00220F5C
+		// Token: 0x06006EFA RID: 28410 RVA: 0x00242230 File Offset: 0x00240430
 		public Span<int> GetColumn6Bytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x060068F9 RID: 26873 RVA: 0x00222D6C File Offset: 0x00220F6C
+		// Token: 0x06006EFB RID: 28411 RVA: 0x00242240 File Offset: 0x00240440
 		public int[] GetColumn6Array()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060068FA RID: 26874 RVA: 0x00222D84 File Offset: 0x00220F84
+		// Token: 0x06006EFC RID: 28412 RVA: 0x00242258 File Offset: 0x00240458
 		public int Column7(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -318,8 +318,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000F00 RID: 3840
-		// (get) Token: 0x060068FB RID: 26875 RVA: 0x00222DC4 File Offset: 0x00220FC4
+		// Token: 0x17000F59 RID: 3929
+		// (get) Token: 0x06006EFD RID: 28413 RVA: 0x00242298 File Offset: 0x00240498
 		public int Column7Length
 		{
 			get
@@ -333,19 +333,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060068FC RID: 26876 RVA: 0x00222DF0 File Offset: 0x00220FF0
+		// Token: 0x06006EFE RID: 28414 RVA: 0x002422C4 File Offset: 0x002404C4
 		public Span<int> GetColumn7Bytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x060068FD RID: 26877 RVA: 0x00222E00 File Offset: 0x00221000
+		// Token: 0x06006EFF RID: 28415 RVA: 0x002422D4 File Offset: 0x002404D4
 		public int[] GetColumn7Array()
 		{
 			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060068FE RID: 26878 RVA: 0x00222E18 File Offset: 0x00221018
+		// Token: 0x06006F00 RID: 28416 RVA: 0x002422EC File Offset: 0x002404EC
 		public int Column8(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -356,8 +356,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000F01 RID: 3841
-		// (get) Token: 0x060068FF RID: 26879 RVA: 0x00222E58 File Offset: 0x00221058
+		// Token: 0x17000F5A RID: 3930
+		// (get) Token: 0x06006F01 RID: 28417 RVA: 0x0024232C File Offset: 0x0024052C
 		public int Column8Length
 		{
 			get
@@ -371,19 +371,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006900 RID: 26880 RVA: 0x00222E84 File Offset: 0x00221084
+		// Token: 0x06006F02 RID: 28418 RVA: 0x00242358 File Offset: 0x00240558
 		public Span<int> GetColumn8Bytes()
 		{
 			return this.__p.__vector_as_span<int>(22, 4);
 		}
 
-		// Token: 0x06006901 RID: 26881 RVA: 0x00222E94 File Offset: 0x00221094
+		// Token: 0x06006F03 RID: 28419 RVA: 0x00242368 File Offset: 0x00240568
 		public int[] GetColumn8Array()
 		{
 			return this.__p.__vector_as_array<int>(22) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06006902 RID: 26882 RVA: 0x00222EAC File Offset: 0x002210AC
+		// Token: 0x06006F04 RID: 28420 RVA: 0x00242380 File Offset: 0x00240580
 		public int Column9(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -394,8 +394,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000F02 RID: 3842
-		// (get) Token: 0x06006903 RID: 26883 RVA: 0x00222EEC File Offset: 0x002210EC
+		// Token: 0x17000F5B RID: 3931
+		// (get) Token: 0x06006F05 RID: 28421 RVA: 0x002423C0 File Offset: 0x002405C0
 		public int Column9Length
 		{
 			get
@@ -409,19 +409,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006904 RID: 26884 RVA: 0x00222F18 File Offset: 0x00221118
+		// Token: 0x06006F06 RID: 28422 RVA: 0x002423EC File Offset: 0x002405EC
 		public Span<int> GetColumn9Bytes()
 		{
 			return this.__p.__vector_as_span<int>(24, 4);
 		}
 
-		// Token: 0x06006905 RID: 26885 RVA: 0x00222F28 File Offset: 0x00221128
+		// Token: 0x06006F07 RID: 28423 RVA: 0x002423FC File Offset: 0x002405FC
 		public int[] GetColumn9Array()
 		{
 			return this.__p.__vector_as_array<int>(24) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06006906 RID: 26886 RVA: 0x00222F40 File Offset: 0x00221140
+		// Token: 0x06006F08 RID: 28424 RVA: 0x00242414 File Offset: 0x00240614
 		public int Column10(int j)
 		{
 			int num = this.__p.__offset(26);
@@ -432,8 +432,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000F03 RID: 3843
-		// (get) Token: 0x06006907 RID: 26887 RVA: 0x00222F80 File Offset: 0x00221180
+		// Token: 0x17000F5C RID: 3932
+		// (get) Token: 0x06006F09 RID: 28425 RVA: 0x00242454 File Offset: 0x00240654
 		public int Column10Length
 		{
 			get
@@ -447,19 +447,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006908 RID: 26888 RVA: 0x00222FAC File Offset: 0x002211AC
+		// Token: 0x06006F0A RID: 28426 RVA: 0x00242480 File Offset: 0x00240680
 		public Span<int> GetColumn10Bytes()
 		{
 			return this.__p.__vector_as_span<int>(26, 4);
 		}
 
-		// Token: 0x06006909 RID: 26889 RVA: 0x00222FBC File Offset: 0x002211BC
+		// Token: 0x06006F0B RID: 28427 RVA: 0x00242490 File Offset: 0x00240690
 		public int[] GetColumn10Array()
 		{
 			return this.__p.__vector_as_array<int>(26) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600690A RID: 26890 RVA: 0x00222FD4 File Offset: 0x002211D4
+		// Token: 0x06006F0C RID: 28428 RVA: 0x002424A8 File Offset: 0x002406A8
 		public int Column11(int j)
 		{
 			int num = this.__p.__offset(28);
@@ -470,8 +470,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000F04 RID: 3844
-		// (get) Token: 0x0600690B RID: 26891 RVA: 0x00223014 File Offset: 0x00221214
+		// Token: 0x17000F5D RID: 3933
+		// (get) Token: 0x06006F0D RID: 28429 RVA: 0x002424E8 File Offset: 0x002406E8
 		public int Column11Length
 		{
 			get
@@ -485,217 +485,195 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600690C RID: 26892 RVA: 0x00223040 File Offset: 0x00221240
+		// Token: 0x06006F0E RID: 28430 RVA: 0x00242514 File Offset: 0x00240714
 		public Span<int> GetColumn11Bytes()
 		{
 			return this.__p.__vector_as_span<int>(28, 4);
 		}
 
-		// Token: 0x0600690D RID: 26893 RVA: 0x00223050 File Offset: 0x00221250
+		// Token: 0x06006F0F RID: 28431 RVA: 0x00242524 File Offset: 0x00240724
 		public int[] GetColumn11Array()
 		{
 			return this.__p.__vector_as_array<int>(28) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600690E RID: 26894 RVA: 0x00223068 File Offset: 0x00221268
+		// Token: 0x06006F10 RID: 28432 RVA: 0x0024253C File Offset: 0x0024073C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column1Iter()或GetColumn1Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column1()
+		public int[] Column1()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn1Array() ?? Array.Empty<int>();
+			return this.GetColumn1Array();
 		}
 
-		// Token: 0x0600690F RID: 26895 RVA: 0x0022308C File Offset: 0x0022128C
+		// Token: 0x06006F11 RID: 28433 RVA: 0x00242544 File Offset: 0x00240744
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column1Iter()
+		public IEnumerable<int> Column1Iter()
 		{
 			EncircleMap.<Column1Iter>d__68 <Column1Iter>d__ = new EncircleMap.<Column1Iter>d__68(-2);
 			<Column1Iter>d__.<>3__<>4__this = this;
 			return <Column1Iter>d__;
 		}
 
-		// Token: 0x06006910 RID: 26896 RVA: 0x002230A4 File Offset: 0x002212A4
+		// Token: 0x06006F12 RID: 28434 RVA: 0x00242559 File Offset: 0x00240759
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column10Iter()或GetColumn10Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column10()
+		public int[] Column10()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn10Array() ?? Array.Empty<int>();
+			return this.GetColumn10Array();
 		}
 
-		// Token: 0x06006911 RID: 26897 RVA: 0x002230C8 File Offset: 0x002212C8
+		// Token: 0x06006F13 RID: 28435 RVA: 0x00242561 File Offset: 0x00240761
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column10Iter()
+		public IEnumerable<int> Column10Iter()
 		{
 			EncircleMap.<Column10Iter>d__70 <Column10Iter>d__ = new EncircleMap.<Column10Iter>d__70(-2);
 			<Column10Iter>d__.<>3__<>4__this = this;
 			return <Column10Iter>d__;
 		}
 
-		// Token: 0x06006912 RID: 26898 RVA: 0x002230E0 File Offset: 0x002212E0
+		// Token: 0x06006F14 RID: 28436 RVA: 0x00242576 File Offset: 0x00240776
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column11Iter()或GetColumn11Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column11()
+		public int[] Column11()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn11Array() ?? Array.Empty<int>();
+			return this.GetColumn11Array();
 		}
 
-		// Token: 0x06006913 RID: 26899 RVA: 0x00223104 File Offset: 0x00221304
+		// Token: 0x06006F15 RID: 28437 RVA: 0x0024257E File Offset: 0x0024077E
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column11Iter()
+		public IEnumerable<int> Column11Iter()
 		{
 			EncircleMap.<Column11Iter>d__72 <Column11Iter>d__ = new EncircleMap.<Column11Iter>d__72(-2);
 			<Column11Iter>d__.<>3__<>4__this = this;
 			return <Column11Iter>d__;
 		}
 
-		// Token: 0x06006914 RID: 26900 RVA: 0x0022311C File Offset: 0x0022131C
+		// Token: 0x06006F16 RID: 28438 RVA: 0x00242593 File Offset: 0x00240793
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column2Iter()或GetColumn2Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column2()
+		public int[] Column2()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn2Array() ?? Array.Empty<int>();
+			return this.GetColumn2Array();
 		}
 
-		// Token: 0x06006915 RID: 26901 RVA: 0x00223140 File Offset: 0x00221340
+		// Token: 0x06006F17 RID: 28439 RVA: 0x0024259B File Offset: 0x0024079B
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column2Iter()
+		public IEnumerable<int> Column2Iter()
 		{
 			EncircleMap.<Column2Iter>d__74 <Column2Iter>d__ = new EncircleMap.<Column2Iter>d__74(-2);
 			<Column2Iter>d__.<>3__<>4__this = this;
 			return <Column2Iter>d__;
 		}
 
-		// Token: 0x06006916 RID: 26902 RVA: 0x00223158 File Offset: 0x00221358
+		// Token: 0x06006F18 RID: 28440 RVA: 0x002425B0 File Offset: 0x002407B0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column3Iter()或GetColumn3Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column3()
+		public int[] Column3()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn3Array() ?? Array.Empty<int>();
+			return this.GetColumn3Array();
 		}
 
-		// Token: 0x06006917 RID: 26903 RVA: 0x0022317C File Offset: 0x0022137C
+		// Token: 0x06006F19 RID: 28441 RVA: 0x002425B8 File Offset: 0x002407B8
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column3Iter()
+		public IEnumerable<int> Column3Iter()
 		{
 			EncircleMap.<Column3Iter>d__76 <Column3Iter>d__ = new EncircleMap.<Column3Iter>d__76(-2);
 			<Column3Iter>d__.<>3__<>4__this = this;
 			return <Column3Iter>d__;
 		}
 
-		// Token: 0x06006918 RID: 26904 RVA: 0x00223194 File Offset: 0x00221394
+		// Token: 0x06006F1A RID: 28442 RVA: 0x002425CD File Offset: 0x002407CD
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column4Iter()或GetColumn4Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column4()
+		public int[] Column4()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn4Array() ?? Array.Empty<int>();
+			return this.GetColumn4Array();
 		}
 
-		// Token: 0x06006919 RID: 26905 RVA: 0x002231B8 File Offset: 0x002213B8
+		// Token: 0x06006F1B RID: 28443 RVA: 0x002425D5 File Offset: 0x002407D5
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column4Iter()
+		public IEnumerable<int> Column4Iter()
 		{
 			EncircleMap.<Column4Iter>d__78 <Column4Iter>d__ = new EncircleMap.<Column4Iter>d__78(-2);
 			<Column4Iter>d__.<>3__<>4__this = this;
 			return <Column4Iter>d__;
 		}
 
-		// Token: 0x0600691A RID: 26906 RVA: 0x002231D0 File Offset: 0x002213D0
+		// Token: 0x06006F1C RID: 28444 RVA: 0x002425EA File Offset: 0x002407EA
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column5Iter()或GetColumn5Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column5()
+		public int[] Column5()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn5Array() ?? Array.Empty<int>();
+			return this.GetColumn5Array();
 		}
 
-		// Token: 0x0600691B RID: 26907 RVA: 0x002231F4 File Offset: 0x002213F4
+		// Token: 0x06006F1D RID: 28445 RVA: 0x002425F2 File Offset: 0x002407F2
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column5Iter()
+		public IEnumerable<int> Column5Iter()
 		{
 			EncircleMap.<Column5Iter>d__80 <Column5Iter>d__ = new EncircleMap.<Column5Iter>d__80(-2);
 			<Column5Iter>d__.<>3__<>4__this = this;
 			return <Column5Iter>d__;
 		}
 
-		// Token: 0x0600691C RID: 26908 RVA: 0x0022320C File Offset: 0x0022140C
+		// Token: 0x06006F1E RID: 28446 RVA: 0x00242607 File Offset: 0x00240807
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column6Iter()或GetColumn6Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column6()
+		public int[] Column6()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn6Array() ?? Array.Empty<int>();
+			return this.GetColumn6Array();
 		}
 
-		// Token: 0x0600691D RID: 26909 RVA: 0x00223230 File Offset: 0x00221430
+		// Token: 0x06006F1F RID: 28447 RVA: 0x0024260F File Offset: 0x0024080F
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column6Iter()
+		public IEnumerable<int> Column6Iter()
 		{
 			EncircleMap.<Column6Iter>d__82 <Column6Iter>d__ = new EncircleMap.<Column6Iter>d__82(-2);
 			<Column6Iter>d__.<>3__<>4__this = this;
 			return <Column6Iter>d__;
 		}
 
-		// Token: 0x0600691E RID: 26910 RVA: 0x00223248 File Offset: 0x00221448
+		// Token: 0x06006F20 RID: 28448 RVA: 0x00242624 File Offset: 0x00240824
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column7Iter()或GetColumn7Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column7()
+		public int[] Column7()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn7Array() ?? Array.Empty<int>();
+			return this.GetColumn7Array();
 		}
 
-		// Token: 0x0600691F RID: 26911 RVA: 0x0022326C File Offset: 0x0022146C
+		// Token: 0x06006F21 RID: 28449 RVA: 0x0024262C File Offset: 0x0024082C
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column7Iter()
+		public IEnumerable<int> Column7Iter()
 		{
 			EncircleMap.<Column7Iter>d__84 <Column7Iter>d__ = new EncircleMap.<Column7Iter>d__84(-2);
 			<Column7Iter>d__.<>3__<>4__this = this;
 			return <Column7Iter>d__;
 		}
 
-		// Token: 0x06006920 RID: 26912 RVA: 0x00223284 File Offset: 0x00221484
+		// Token: 0x06006F22 RID: 28450 RVA: 0x00242641 File Offset: 0x00240841
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column8Iter()或GetColumn8Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column8()
+		public int[] Column8()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn8Array() ?? Array.Empty<int>();
+			return this.GetColumn8Array();
 		}
 
-		// Token: 0x06006921 RID: 26913 RVA: 0x002232A8 File Offset: 0x002214A8
+		// Token: 0x06006F23 RID: 28451 RVA: 0x00242649 File Offset: 0x00240849
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column8Iter()
+		public IEnumerable<int> Column8Iter()
 		{
 			EncircleMap.<Column8Iter>d__86 <Column8Iter>d__ = new EncircleMap.<Column8Iter>d__86(-2);
 			<Column8Iter>d__.<>3__<>4__this = this;
 			return <Column8Iter>d__;
 		}
 
-		// Token: 0x06006922 RID: 26914 RVA: 0x002232C0 File Offset: 0x002214C0
+		// Token: 0x06006F24 RID: 28452 RVA: 0x0024265E File Offset: 0x0024085E
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Column9Iter()或GetColumn9Bytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Column9()
+		public int[] Column9()
 		{
-			EncircleMap encircleMap = this;
-			return encircleMap.GetColumn9Array() ?? Array.Empty<int>();
+			return this.GetColumn9Array();
 		}
 
-		// Token: 0x06006923 RID: 26915 RVA: 0x002232E4 File Offset: 0x002214E4
+		// Token: 0x06006F25 RID: 28453 RVA: 0x00242666 File Offset: 0x00240866
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Column9Iter()
+		public IEnumerable<int> Column9Iter()
 		{
 			EncircleMap.<Column9Iter>d__88 <Column9Iter>d__ = new EncircleMap.<Column9Iter>d__88(-2);
 			<Column9Iter>d__.<>3__<>4__this = this;
 			return <Column9Iter>d__;
 		}
 
-		// Token: 0x04004C6F RID: 19567
+		// Token: 0x04005252 RID: 21074
 		private Table __p;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073EF RID: 29679
+	// Token: 0x02007BD9 RID: 31705
 	public class IToggleAirWallTypeT
 	{
-		// Token: 0x1700E16A RID: 57706
-		// (get) Token: 0x06035EA3 RID: 220835 RVA: 0x007565FA File Offset: 0x007547FA
-		// (set) Token: 0x06035EA4 RID: 220836 RVA: 0x00756602 File Offset: 0x00754802
+		// Token: 0x1700ED7F RID: 60799
+		// (get) Token: 0x06039256 RID: 234070 RVA: 0x007B8D6E File Offset: 0x007B6F6E
+		// (set) Token: 0x06039257 RID: 234071 RVA: 0x007B8D76 File Offset: 0x007B6F76
 		public EToggleAirWall Type { get; set; }
 
-		// Token: 0x06035EA5 RID: 220837 RVA: 0x0075660B File Offset: 0x0075480B
+		// Token: 0x06039258 RID: 234072 RVA: 0x007B8D7F File Offset: 0x007B6F7F
 		public IToggleAirWallTypeT()
 		{
 			this.Type = EToggleAirWall.Open;

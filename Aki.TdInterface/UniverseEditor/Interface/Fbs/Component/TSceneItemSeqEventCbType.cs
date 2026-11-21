@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C9F RID: 23711
+	// Token: 0x020062D0 RID: 25296
 	public enum TSceneItemSeqEventCbType : byte
 	{
-		// Token: 0x0400F535 RID: 62773
+		// Token: 0x0401027C RID: 66172
 		NONE,
-		// Token: 0x0400F536 RID: 62774
+		// Token: 0x0401027D RID: 66173
 		IAnEvent,
-		// Token: 0x0400F537 RID: 62775
+		// Token: 0x0401027E RID: 66174
 		IAnsEvent
 	}
 }

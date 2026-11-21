@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200622B RID: 25131
+	// Token: 0x0200689C RID: 26780
 	public class IBubbleCylinderConfigT
 	{
-		// Token: 0x1700BB42 RID: 47938
-		// (get) Token: 0x0602B51E RID: 177438 RVA: 0x005F7174 File Offset: 0x005F5374
-		// (set) Token: 0x0602B51F RID: 177439 RVA: 0x005F717C File Offset: 0x005F537C
+		// Token: 0x1700C4CA RID: 50378
+		// (get) Token: 0x0602DC7F RID: 187519 RVA: 0x00641F7C File Offset: 0x0064017C
+		// (set) Token: 0x0602DC80 RID: 187520 RVA: 0x00641F84 File Offset: 0x00640184
 		public float Radius { get; set; }
 
-		// Token: 0x1700BB43 RID: 47939
-		// (get) Token: 0x0602B520 RID: 177440 RVA: 0x005F7185 File Offset: 0x005F5385
-		// (set) Token: 0x0602B521 RID: 177441 RVA: 0x005F718D File Offset: 0x005F538D
+		// Token: 0x1700C4CB RID: 50379
+		// (get) Token: 0x0602DC81 RID: 187521 RVA: 0x00641F8D File Offset: 0x0064018D
+		// (set) Token: 0x0602DC82 RID: 187522 RVA: 0x00641F95 File Offset: 0x00640195
 		public float Height { get; set; }
 
-		// Token: 0x0602B522 RID: 177442 RVA: 0x005F7196 File Offset: 0x005F5396
+		// Token: 0x0602DC83 RID: 187523 RVA: 0x00641F9E File Offset: 0x0064019E
 		public IBubbleCylinderConfigT()
 		{
 			this.Radius = 0f;

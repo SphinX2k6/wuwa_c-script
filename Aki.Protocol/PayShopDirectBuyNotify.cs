@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000BEB RID: 3051
+	// Token: 0x02000BDB RID: 3035
 	[NetMessage(EMessageId.PayShopDirectBuyNotify)]
 	public sealed class PayShopDirectBuyNotify : IMessage<PayShopDirectBuyNotify>, IMessage, IEquatable<PayShopDirectBuyNotify>, IDeepCloneable<PayShopDirectBuyNotify>, IBufferMessage
 	{
-		// Token: 0x06010888 RID: 67720 RVA: 0x0026A071 File Offset: 0x00268271
+		// Token: 0x06010784 RID: 67460 RVA: 0x002681AD File Offset: 0x002663AD
 		[NullableContext(1)]
 		public static PayShopDirectBuyNotify Create()
 		{
 			return new PayShopDirectBuyNotify();
 		}
 
-		// Token: 0x17003651 RID: 13905
-		// (get) Token: 0x06010889 RID: 67721 RVA: 0x0026A078 File Offset: 0x00268278
+		// Token: 0x17003618 RID: 13848
+		// (get) Token: 0x06010785 RID: 67461 RVA: 0x002681B4 File Offset: 0x002663B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003652 RID: 13906
-		// (get) Token: 0x0601088A RID: 67722 RVA: 0x0026A07B File Offset: 0x0026827B
+		// Token: 0x17003619 RID: 13849
+		// (get) Token: 0x06010786 RID: 67462 RVA: 0x002681B7 File Offset: 0x002663B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601088B RID: 67723 RVA: 0x0026A082 File Offset: 0x00268282
+		// Token: 0x06010787 RID: 67463 RVA: 0x002681BE File Offset: 0x002663BE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PayShopDirectBuyNotify()
 		{
 		}
 
-		// Token: 0x0601088C RID: 67724 RVA: 0x0026A098 File Offset: 0x00268298
+		// Token: 0x06010788 RID: 67464 RVA: 0x002681D4 File Offset: 0x002663D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PayShopDirectBuyNotify(PayShopDirectBuyNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601088D RID: 67725 RVA: 0x0026A0EC File Offset: 0x002682EC
+		// Token: 0x06010789 RID: 67465 RVA: 0x00268228 File Offset: 0x00266428
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PayShopDirectBuyNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new PayShopDirectBuyNotify(this);
 		}
 
-		// Token: 0x17003653 RID: 13907
-		// (get) Token: 0x0601088E RID: 67726 RVA: 0x0026A0F4 File Offset: 0x002682F4
-		// (set) Token: 0x0601088F RID: 67727 RVA: 0x0026A0FC File Offset: 0x002682FC
+		// Token: 0x1700361A RID: 13850
+		// (get) Token: 0x0601078A RID: 67466 RVA: 0x00268230 File Offset: 0x00266430
+		// (set) Token: 0x0601078B RID: 67467 RVA: 0x00268238 File Offset: 0x00266438
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ReceiptId
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003654 RID: 13908
-		// (get) Token: 0x06010890 RID: 67728 RVA: 0x0026A10F File Offset: 0x0026830F
-		// (set) Token: 0x06010891 RID: 67729 RVA: 0x0026A117 File Offset: 0x00268317
+		// Token: 0x1700361B RID: 13851
+		// (get) Token: 0x0601078C RID: 67468 RVA: 0x0026824B File Offset: 0x0026644B
+		// (set) Token: 0x0601078D RID: 67469 RVA: 0x00268253 File Offset: 0x00266453
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ShopItemId
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003655 RID: 13909
-		// (get) Token: 0x06010892 RID: 67730 RVA: 0x0026A120 File Offset: 0x00268320
-		// (set) Token: 0x06010893 RID: 67731 RVA: 0x0026A128 File Offset: 0x00268328
+		// Token: 0x1700361C RID: 13852
+		// (get) Token: 0x0601078E RID: 67470 RVA: 0x0026825C File Offset: 0x0026645C
+		// (set) Token: 0x0601078F RID: 67471 RVA: 0x00268264 File Offset: 0x00266464
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemId
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003656 RID: 13910
-		// (get) Token: 0x06010894 RID: 67732 RVA: 0x0026A131 File Offset: 0x00268331
-		// (set) Token: 0x06010895 RID: 67733 RVA: 0x0026A139 File Offset: 0x00268339
+		// Token: 0x1700361D RID: 13853
+		// (get) Token: 0x06010790 RID: 67472 RVA: 0x0026826D File Offset: 0x0026646D
+		// (set) Token: 0x06010791 RID: 67473 RVA: 0x00268275 File Offset: 0x00266475
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemCount
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010896 RID: 67734 RVA: 0x0026A142 File Offset: 0x00268342
+		// Token: 0x06010792 RID: 67474 RVA: 0x0026827E File Offset: 0x0026647E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PayShopDirectBuyNotify);
 		}
 
-		// Token: 0x06010897 RID: 67735 RVA: 0x0026A150 File Offset: 0x00268350
+		// Token: 0x06010793 RID: 67475 RVA: 0x0026828C File Offset: 0x0026648C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PayShopDirectBuyNotify other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (!(this.ReceiptId != other.ReceiptId) && this.ShopItemId == other.ShopItemId && this.ItemId == other.ItemId && this.ItemCount == other.ItemCount && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06010898 RID: 67736 RVA: 0x0026A1C0 File Offset: 0x002683C0
+		// Token: 0x06010794 RID: 67476 RVA: 0x002682FC File Offset: 0x002664FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010899 RID: 67737 RVA: 0x0026A24C File Offset: 0x0026844C
+		// Token: 0x06010795 RID: 67477 RVA: 0x00268388 File Offset: 0x00266588
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601089A RID: 67738 RVA: 0x0026A259 File Offset: 0x00268459
+		// Token: 0x06010796 RID: 67478 RVA: 0x00268395 File Offset: 0x00266595
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601089B RID: 67739 RVA: 0x0026A264 File Offset: 0x00268464
+		// Token: 0x06010797 RID: 67479 RVA: 0x002683A0 File Offset: 0x002665A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.ReceiptId.Length != 0)
-			{
-				output.WriteRawTag(10);
-				output.WriteString(this.ReceiptId);
-			}
-			if (this.ItemCount != 0)
-			{
-				output.WriteRawTag(16);
-				output.WriteInt32(this.ItemCount);
-			}
 			if (this.ItemId != 0)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(16);
 				output.WriteInt32(this.ItemId);
+			}
+			if (this.ReceiptId.Length != 0)
+			{
+				output.WriteRawTag(50);
+				output.WriteString(this.ReceiptId);
 			}
 			if (this.ShopItemId != 0)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(96);
 				output.WriteInt32(this.ShopItemId);
+			}
+			if (this.ItemCount != 0)
+			{
+				output.WriteRawTag(104);
+				output.WriteInt32(this.ItemCount);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601089C RID: 67740 RVA: 0x0026A2FC File Offset: 0x002684FC
+		// Token: 0x06010798 RID: 67480 RVA: 0x00268438 File Offset: 0x00266638
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601089D RID: 67741 RVA: 0x0026A388 File Offset: 0x00268588
+		// Token: 0x06010799 RID: 67481 RVA: 0x002684C4 File Offset: 0x002666C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PayShopDirectBuyNotify other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601089E RID: 67742 RVA: 0x0026A405 File Offset: 0x00268605
+		// Token: 0x0601079A RID: 67482 RVA: 0x00268541 File Offset: 0x00266741
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601089F RID: 67743 RVA: 0x0026A410 File Offset: 0x00268610
+		// Token: 0x0601079B RID: 67483 RVA: 0x0026854C File Offset: 0x0026674C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -306,29 +306,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 16U)
+				if (num <= 50U)
 				{
-					if (num == 10U)
-					{
-						this.ReceiptId = input.ReadString();
-						continue;
-					}
 					if (num == 16U)
 					{
-						this.ItemCount = input.ReadInt32();
+						this.ItemId = input.ReadInt32();
+						continue;
+					}
+					if (num == 50U)
+					{
+						this.ReceiptId = input.ReadString();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 56U)
-					{
-						this.ItemId = input.ReadInt32();
-						continue;
-					}
-					if (num == 64U)
+					if (num == 96U)
 					{
 						this.ShopItemId = input.ReadInt32();
+						continue;
+					}
+					if (num == 104U)
+					{
+						this.ItemCount = input.ReadInt32();
 						continue;
 					}
 				}
@@ -336,31 +336,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040068E0 RID: 26848
+		// Token: 0x040068F0 RID: 26864
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040068E1 RID: 26849
-		public const int ReceiptIdFieldNumber = 1;
+		// Token: 0x040068F1 RID: 26865
+		public const int ReceiptIdFieldNumber = 6;
 
-		// Token: 0x040068E2 RID: 26850
+		// Token: 0x040068F2 RID: 26866
 		private string receiptId_ = "";
 
-		// Token: 0x040068E3 RID: 26851
-		public const int ShopItemIdFieldNumber = 8;
+		// Token: 0x040068F3 RID: 26867
+		public const int ShopItemIdFieldNumber = 12;
 
-		// Token: 0x040068E4 RID: 26852
+		// Token: 0x040068F4 RID: 26868
 		private int shopItemId_;
 
-		// Token: 0x040068E5 RID: 26853
-		public const int ItemIdFieldNumber = 7;
+		// Token: 0x040068F5 RID: 26869
+		public const int ItemIdFieldNumber = 2;
 
-		// Token: 0x040068E6 RID: 26854
+		// Token: 0x040068F6 RID: 26870
 		private int itemId_;
 
-		// Token: 0x040068E7 RID: 26855
-		public const int ItemCountFieldNumber = 2;
+		// Token: 0x040068F7 RID: 26871
+		public const int ItemCountFieldNumber = 13;
 
-		// Token: 0x040068E8 RID: 26856
+		// Token: 0x040068F8 RID: 26872
 		private int itemCount_;
 	}
 }

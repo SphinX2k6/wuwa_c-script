@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027AB RID: 10155
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A7D RID: 10877
 	public class ToggleDragActorPlay : ActionParams
 	{
-		// Token: 0x0600E1F2 RID: 57842 RVA: 0x00215FBF File Offset: 0x002141BF
+		// Token: 0x0600F010 RID: 61456 RVA: 0x00232D53 File Offset: 0x00230F53
 		public static ToggleDragActorPlay Create(IToggleDragActorPlay? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700445E RID: 17502
-		// (get) Token: 0x0600E1F3 RID: 57843 RVA: 0x00215FDE File Offset: 0x002141DE
+		// Token: 0x170047C4 RID: 18372
+		// (get) Token: 0x0600F011 RID: 61457 RVA: 0x00232D72 File Offset: 0x00230F72
 		public virtual IToggleDragActorPlayType Config
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D49 RID: 32073
+		// Token: 0x040083FF RID: 33791
 		private IToggleDragActorPlay Instance;
 
-		// Token: 0x04007D4A RID: 32074
+		// Token: 0x04008400 RID: 33792
 		private IToggleDragActorPlayType _ConfigCache;
 
-		// Token: 0x04007D4B RID: 32075
+		// Token: 0x04008401 RID: 33793
 		private bool _ConfigInited;
 	}
 }

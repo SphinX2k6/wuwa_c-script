@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200672A RID: 26410
+	// Token: 0x02006DAA RID: 28074
 	public class IExitOrbitalCameraT
 	{
 	}

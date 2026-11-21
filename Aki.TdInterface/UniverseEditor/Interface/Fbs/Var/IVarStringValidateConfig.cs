@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B1A RID: 15130
+	// Token: 0x02003F1C RID: 16156
 	public struct IVarStringValidateConfig : IFlatbufferObject
 	{
-		// Token: 0x170067CB RID: 26571
-		// (get) Token: 0x06014A73 RID: 84595 RVA: 0x00301752 File Offset: 0x002FF952
+		// Token: 0x17006D66 RID: 28006
+		// (get) Token: 0x06015F1D RID: 89885 RVA: 0x003279E2 File Offset: 0x00325BE2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014A74 RID: 84596 RVA: 0x0030175F File Offset: 0x002FF95F
+		// Token: 0x06015F1E RID: 89886 RVA: 0x003279EF File Offset: 0x00325BEF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014A75 RID: 84597 RVA: 0x00301768 File Offset: 0x002FF968
+		// Token: 0x06015F1F RID: 89887 RVA: 0x003279F8 File Offset: 0x00325BF8
 		public static IVarStringValidateConfig GetRootAsIVarStringValidateConfig(ByteBuffer _bb)
 		{
 			return IVarStringValidateConfig.GetRootAsIVarStringValidateConfig(_bb, default(IVarStringValidateConfig));
 		}
 
-		// Token: 0x06014A76 RID: 84598 RVA: 0x00301784 File Offset: 0x002FF984
+		// Token: 0x06015F20 RID: 89888 RVA: 0x00327A14 File Offset: 0x00325C14
 		public static IVarStringValidateConfig GetRootAsIVarStringValidateConfig(ByteBuffer _bb, IVarStringValidateConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014A77 RID: 84599 RVA: 0x003017A1 File Offset: 0x002FF9A1
+		// Token: 0x06015F21 RID: 89889 RVA: 0x00327A31 File Offset: 0x00325C31
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014A78 RID: 84600 RVA: 0x003017B0 File Offset: 0x002FF9B0
+		// Token: 0x06015F22 RID: 89890 RVA: 0x00327A40 File Offset: 0x00325C40
 		public IVarStringValidateConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170067CC RID: 26572
-		// (get) Token: 0x06014A79 RID: 84601 RVA: 0x003017C0 File Offset: 0x002FF9C0
+		// Token: 0x17006D67 RID: 28007
+		// (get) Token: 0x06015F23 RID: 89891 RVA: 0x00327A50 File Offset: 0x00325C50
 		public EVar Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014A7A RID: 84602 RVA: 0x003017FC File Offset: 0x002FF9FC
+		// Token: 0x06015F24 RID: 89892 RVA: 0x00327A8C File Offset: 0x00325C8C
 		public string ValidList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170067CD RID: 26573
-		// (get) Token: 0x06014A7B RID: 84603 RVA: 0x00301838 File Offset: 0x002FFA38
+		// Token: 0x17006D68 RID: 28008
+		// (get) Token: 0x06015F25 RID: 89893 RVA: 0x00327AC8 File Offset: 0x00325CC8
 		public int ValidListLength
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x170067CE RID: 26574
-		// (get) Token: 0x06014A7C RID: 84604 RVA: 0x00301864 File Offset: 0x002FFA64
+		// Token: 0x17006D69 RID: 28009
+		// (get) Token: 0x06015F26 RID: 89894 RVA: 0x00327AF4 File Offset: 0x00325CF4
 		public byte NullMask
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014A7D RID: 84605 RVA: 0x003018A0 File Offset: 0x002FFAA0
+		// Token: 0x06015F27 RID: 89895 RVA: 0x00327B30 File Offset: 0x00325D30
 		public static Offset<IVarStringValidateConfig> CreateIVarStringValidateConfig(FlatBufferBuilder builder, EVar Type = EVar.Boolean, VectorOffset ValidListOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -114,25 +114,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IVarStringValidateConfig.EndIVarStringValidateConfig(builder);
 		}
 
-		// Token: 0x06014A7E RID: 84606 RVA: 0x003018C4 File Offset: 0x002FFAC4
+		// Token: 0x06015F28 RID: 89896 RVA: 0x00327B54 File Offset: 0x00325D54
 		public static void StartIVarStringValidateConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06014A7F RID: 84607 RVA: 0x003018CD File Offset: 0x002FFACD
+		// Token: 0x06015F29 RID: 89897 RVA: 0x00327B5D File Offset: 0x00325D5D
 		public static void AddType(FlatBufferBuilder builder, EVar type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014A80 RID: 84608 RVA: 0x003018D8 File Offset: 0x002FFAD8
+		// Token: 0x06015F2A RID: 89898 RVA: 0x00327B68 File Offset: 0x00325D68
 		public static void AddValidList(FlatBufferBuilder builder, VectorOffset validListOffset)
 		{
 			builder.AddOffset(1, validListOffset.Value, 0);
 		}
 
-		// Token: 0x06014A81 RID: 84609 RVA: 0x003018E8 File Offset: 0x002FFAE8
+		// Token: 0x06015F2B RID: 89899 RVA: 0x00327B78 File Offset: 0x00325D78
 		public static VectorOffset CreateValidListVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014A82 RID: 84610 RVA: 0x00301928 File Offset: 0x002FFB28
+		// Token: 0x06015F2C RID: 89900 RVA: 0x00327BB8 File Offset: 0x00325DB8
 		public static VectorOffset CreateValidListVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -151,7 +151,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014A83 RID: 84611 RVA: 0x00301942 File Offset: 0x002FFB42
+		// Token: 0x06015F2D RID: 89901 RVA: 0x00327BD2 File Offset: 0x00325DD2
 		public static VectorOffset CreateValidListVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014A84 RID: 84612 RVA: 0x00301960 File Offset: 0x002FFB60
+		// Token: 0x06015F2E RID: 89902 RVA: 0x00327BF0 File Offset: 0x00325DF0
 		public static VectorOffset CreateValidListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -167,25 +167,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014A85 RID: 84613 RVA: 0x00301979 File Offset: 0x002FFB79
+		// Token: 0x06015F2F RID: 89903 RVA: 0x00327C09 File Offset: 0x00325E09
 		public static void StartValidListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06014A86 RID: 84614 RVA: 0x00301984 File Offset: 0x002FFB84
+		// Token: 0x06015F30 RID: 89904 RVA: 0x00327C14 File Offset: 0x00325E14
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06014A87 RID: 84615 RVA: 0x0030198F File Offset: 0x002FFB8F
+		// Token: 0x06015F31 RID: 89905 RVA: 0x00327C1F File Offset: 0x00325E1F
 		public static Offset<IVarStringValidateConfig> EndIVarStringValidateConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IVarStringValidateConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06014A88 RID: 84616 RVA: 0x0030199C File Offset: 0x002FFB9C
+		// Token: 0x06015F32 RID: 89906 RVA: 0x00327C2C File Offset: 0x00325E2C
 		public IVarStringValidateConfigT UnPack()
 		{
 			IVarStringValidateConfigT varStringValidateConfigT = new IVarStringValidateConfigT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return varStringValidateConfigT;
 		}
 
-		// Token: 0x06014A89 RID: 84617 RVA: 0x003019B8 File Offset: 0x002FFBB8
+		// Token: 0x06015F33 RID: 89907 RVA: 0x00327C48 File Offset: 0x00325E48
 		public void UnPackTo(IVarStringValidateConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06014A8A RID: 84618 RVA: 0x00301A0C File Offset: 0x002FFC0C
+		// Token: 0x06015F34 RID: 89908 RVA: 0x00327C9C File Offset: 0x00325E9C
 		public static Offset<IVarStringValidateConfig> Pack(FlatBufferBuilder builder, IVarStringValidateConfigT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IVarStringValidateConfig.CreateIVarStringValidateConfig(builder, _o.Type, validListOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400AFE8 RID: 45032
+		// Token: 0x0400B955 RID: 47445
 		private Table __p;
 	}
 }

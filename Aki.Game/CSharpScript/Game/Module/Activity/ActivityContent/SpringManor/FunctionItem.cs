@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200608C RID: 24716
+	// Token: 0x0200500A RID: 20490
 	public class FunctionItem : UiPanelBase
 	{
-		// Token: 0x0603E7BA RID: 255930 RVA: 0x00F1A104 File Offset: 0x00F18304
+		// Token: 0x0603347E RID: 210046 RVA: 0x00E60EC8 File Offset: 0x00E5F0C8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,26 +31,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E7BB RID: 255931 RVA: 0x00F1A21C File Offset: 0x00F1841C
+		// Token: 0x0603347F RID: 210047 RVA: 0x00E60FE0 File Offset: 0x00E5F1E0
 		public FunctionItem(ESpringFunctionType functionType)
 		{
 			this.FunctionType = functionType;
 		}
 
-		// Token: 0x0603E7BC RID: 255932 RVA: 0x00F1A22B File Offset: 0x00F1842B
+		// Token: 0x06033480 RID: 210048 RVA: 0x00E60FEF File Offset: 0x00E5F1EF
 		protected override void OnStart()
 		{
 			this.Refresh();
 			this.InitRedDot();
 		}
 
-		// Token: 0x0603E7BD RID: 255933 RVA: 0x00F1A239 File Offset: 0x00F18439
+		// Token: 0x06033481 RID: 210049 RVA: 0x00E60FFD File Offset: 0x00E5F1FD
 		protected override void OnBeforeDestroy()
 		{
 			this.DestroyRedDot();
 		}
 
-		// Token: 0x0603E7BE RID: 255934 RVA: 0x00F1A244 File Offset: 0x00F18444
+		// Token: 0x06033482 RID: 210050 RVA: 0x00E61008 File Offset: 0x00E5F208
 		private void InitRedDot()
 		{
 			SpringManorGameHandleBase gameplayData = SpringManorModel.Instance.GetGameplayData(this.FunctionType);
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603E7BF RID: 255935 RVA: 0x00F1A2AE File Offset: 0x00F184AE
+		// Token: 0x06033483 RID: 210051 RVA: 0x00E61072 File Offset: 0x00E5F272
 		private void DestroyRedDot()
 		{
 			if (this.RedDotName == null)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			RedDotController.Instance.UnBindGivenUi(this.RedDotName.Value, base.GetItem(9), 0);
 		}
 
-		// Token: 0x0603E7C0 RID: 255936 RVA: 0x00F1A2DC File Offset: 0x00F184DC
+		// Token: 0x06033484 RID: 210052 RVA: 0x00E610A0 File Offset: 0x00E5F2A0
 		public void Refresh()
 		{
 			this.RefreshState();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7C1 RID: 255937 RVA: 0x00F1A45C File Offset: 0x00F1865C
+		// Token: 0x06033485 RID: 210053 RVA: 0x00E61220 File Offset: 0x00E5F420
 		private void RefreshState()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.State = ((functionUnlockRemainText == null) ? EFunctionState.LockAfterTime : EFunctionState.LockBeforeTime);
 		}
 
-		// Token: 0x0603E7C2 RID: 255938 RVA: 0x00F1A4A4 File Offset: 0x00F186A4
+		// Token: 0x06033486 RID: 210054 RVA: 0x00E61268 File Offset: 0x00E5F468
 		private void SetLockState(bool isLock)
 		{
 			UUIItem item = base.GetItem(3);
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item5.SetUIActive(isLock);
 		}
 
-		// Token: 0x0603E7C3 RID: 255939 RVA: 0x00F1A518 File Offset: 0x00F18718
+		// Token: 0x06033487 RID: 210055 RVA: 0x00E612DC File Offset: 0x00E5F4DC
 		private void OnClickFunction()
 		{
 			if (this.State != EFunctionState.Unlock)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			SpringManorModel.Instance.GetGameplayData(this.FunctionType).EnterGame();
 		}
 
-		// Token: 0x0603E7C4 RID: 255940 RVA: 0x00F1A540 File Offset: 0x00F18740
+		// Token: 0x06033488 RID: 210056 RVA: 0x00E61304 File Offset: 0x00E5F504
 		private void OnClickSkip()
 		{
 			if (this.State == EFunctionState.LockBeforeTime)
@@ -214,19 +214,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 		}
 
-		// Token: 0x0603E7C5 RID: 255941 RVA: 0x00F1A6A4 File Offset: 0x00F188A4
+		// Token: 0x06033489 RID: 210057 RVA: 0x00E61468 File Offset: 0x00E5F668
 		private bool IsConditionFinished(int conditionId)
 		{
 			return false;
 		}
 
-		// Token: 0x04020B22 RID: 133922
+		// Token: 0x0401B44F RID: 111695
 		private EFunctionState State;
 
-		// Token: 0x04020B23 RID: 133923
+		// Token: 0x0401B450 RID: 111696
 		private ERedDotName? RedDotName;
 
-		// Token: 0x04020B24 RID: 133924
+		// Token: 0x0401B451 RID: 111697
 		private readonly ESpringFunctionType FunctionType;
 	}
 }

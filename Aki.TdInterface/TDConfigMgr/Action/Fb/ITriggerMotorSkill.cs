@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026F3 RID: 9971
+	// Token: 0x020029B9 RID: 10681
 	public class ITriggerMotorSkill : IExecClientBattleActionType
 	{
-		// Token: 0x0600DEA7 RID: 56999 RVA: 0x00210742 File Offset: 0x0020E942
-		[NullableContext(1)]
+		// Token: 0x0600EC8F RID: 60559 RVA: 0x0022D0AA File Offset: 0x0022B2AA
 		public static ITriggerMotorSkill Create(ITriggerMotorSkill? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004283 RID: 17027
-		// (get) Token: 0x0600DEA8 RID: 57000 RVA: 0x00210761 File Offset: 0x0020E961
+		// Token: 0x170045CB RID: 17867
+		// (get) Token: 0x0600EC90 RID: 60560 RVA: 0x0022D0C9 File Offset: 0x0022B2C9
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004284 RID: 17028
-		// (get) Token: 0x0600DEA9 RID: 57001 RVA: 0x0021076E File Offset: 0x0020E96E
+		// Token: 0x170045CC RID: 17868
+		// (get) Token: 0x0600EC91 RID: 60561 RVA: 0x0022D0D6 File Offset: 0x0022B2D6
 		public virtual int MotorSkillId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B97 RID: 31639
+		// Token: 0x0400823B RID: 33339
 		private ITriggerMotorSkill Instance;
 	}
 }

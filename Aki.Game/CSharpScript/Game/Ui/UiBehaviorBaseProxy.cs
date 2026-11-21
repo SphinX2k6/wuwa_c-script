@@ -5,17 +5,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004629 RID: 17961
+	// Token: 0x02003553 RID: 13651
 	public class UiBehaviorBaseProxy : ComponentAction
 	{
-		// Token: 0x0602E43B RID: 189499 RVA: 0x00AB2164 File Offset: 0x00AB0364
+		// Token: 0x06022B4E RID: 142158 RVA: 0x009DEEF5 File Offset: 0x009DD0F5
 		[NullableContext(1)]
 		public UiBehaviorBaseProxy(IUiBehavior uiBehaviorBase)
 		{
 			this.UiBehavior = uiBehaviorBase;
 		}
 
-		// Token: 0x0602E43C RID: 189500 RVA: 0x00AB2174 File Offset: 0x00AB0374
+		// Token: 0x06022B4F RID: 142159 RVA: 0x009DEF04 File Offset: 0x009DD104
 		protected override UniTask<bool> OnCreateAsyncImplement()
 		{
 			UiBehaviorBaseProxy.<OnCreateAsyncImplement>d__2 <OnCreateAsyncImplement>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Ui
 			return <OnCreateAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E43D RID: 189501 RVA: 0x00AB21B8 File Offset: 0x00AB03B8
+		// Token: 0x06022B50 RID: 142160 RVA: 0x009DEF48 File Offset: 0x009DD148
 		protected override UniTask OnStartAsyncImplement()
 		{
 			UiBehaviorBaseProxy.<OnStartAsyncImplement>d__3 <OnStartAsyncImplement>d__;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Ui
 			return <OnStartAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E43E RID: 189502 RVA: 0x00AB21FC File Offset: 0x00AB03FC
+		// Token: 0x06022B51 RID: 142161 RVA: 0x009DEF8C File Offset: 0x009DD18C
 		protected override UniTask OnShowAsyncImplement()
 		{
 			UiBehaviorBaseProxy.<OnShowAsyncImplement>d__4 <OnShowAsyncImplement>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Ui
 			return <OnShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E43F RID: 189503 RVA: 0x00AB2240 File Offset: 0x00AB0440
+		// Token: 0x06022B52 RID: 142162 RVA: 0x009DEFD0 File Offset: 0x009DD1D0
 		protected override UniTask OnHideAsyncImplement()
 		{
 			UiBehaviorBaseProxy.<OnHideAsyncImplement>d__5 <OnHideAsyncImplement>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Ui
 			return <OnHideAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E440 RID: 189504 RVA: 0x00AB2284 File Offset: 0x00AB0484
+		// Token: 0x06022B53 RID: 142163 RVA: 0x009DF014 File Offset: 0x009DD214
 		protected override UniTask OnDestroyAsyncImplement()
 		{
 			UiBehaviorBaseProxy.<OnDestroyAsyncImplement>d__6 <OnDestroyAsyncImplement>d__;
@@ -70,18 +70,18 @@ namespace CSharpScript.Game.Ui
 			return <OnDestroyAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E441 RID: 189505 RVA: 0x00AB22C7 File Offset: 0x00AB04C7
+		// Token: 0x06022B54 RID: 142164 RVA: 0x009DF057 File Offset: 0x009DD257
 		protected override void OnDestroyImplementCompatible()
 		{
 			if (this.UiBehavior == null)
 			{
 				return;
 			}
-			this.UiBehavior.OnBeforeDestroy();
+			this.UiBehavior.OnDestroy();
 			this.UiBehavior = null;
 		}
 
-		// Token: 0x04018D52 RID: 101714
+		// Token: 0x0401339F RID: 78751
 		[Nullable(1)]
 		private IUiBehavior UiBehavior;
 	}

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E60 RID: 3680
+	// Token: 0x02000F73 RID: 3955
 	[EnumExtensions]
 	public enum EDungeonConditionType
 	{
-		// Token: 0x0400302A RID: 12330
+		// Token: 0x0400332A RID: 13098
 		DungeonSubType,
-		// Token: 0x0400302B RID: 12331
+		// Token: 0x0400332B RID: 13099
 		DungeonId
 	}
 }

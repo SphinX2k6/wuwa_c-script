@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020072C0 RID: 29376
+	// Token: 0x02007A95 RID: 31381
 	public class ITalkItemAutoPlayConfigT
 	{
-		// Token: 0x1700DA24 RID: 55844
-		// (get) Token: 0x060342F2 RID: 213746 RVA: 0x00704989 File Offset: 0x00702B89
-		// (set) Token: 0x060342F3 RID: 213747 RVA: 0x00704991 File Offset: 0x00702B91
+		// Token: 0x1700E61D RID: 58909
+		// (get) Token: 0x060375F6 RID: 226806 RVA: 0x00765D25 File Offset: 0x00763F25
+		// (set) Token: 0x060375F7 RID: 226807 RVA: 0x00765D2D File Offset: 0x00763F2D
 		public ITalkItemDisableAutoSelectOptionGroupT DisableAutoSelectOptionGroup { get; set; }
 
-		// Token: 0x060342F4 RID: 213748 RVA: 0x0070499A File Offset: 0x00702B9A
+		// Token: 0x060375F8 RID: 226808 RVA: 0x00765D36 File Offset: 0x00763F36
 		public ITalkItemAutoPlayConfigT()
 		{
 			this.DisableAutoSelectOptionGroup = null;

@@ -4,25 +4,25 @@ using CSharpScript.Game.Module.UiComponent.UiHomeButton;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02002C5A RID: 11354
+// Token: 0x020021B3 RID: 8627
 [NullableContext(1)]
 [Nullable(0)]
 public class UiBehaviourHomeBtn : IUiBehavior
 {
-	// Token: 0x06017B3B RID: 97083 RVA: 0x006069F4 File Offset: 0x00604BF4
+	// Token: 0x060153AF RID: 86959 RVA: 0x0062C4B8 File Offset: 0x0062A6B8
 	public void SetViewInfo(UiViewBase baseView)
 	{
 		this.CurrentView = baseView;
 	}
 
-	// Token: 0x06017B3C RID: 97084 RVA: 0x006069FD File Offset: 0x00604BFD
+	// Token: 0x060153B0 RID: 86960 RVA: 0x0062C4C1 File Offset: 0x0062A6C1
 	public UniTask OnUiCreateAsync()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x06017B3D RID: 97085 RVA: 0x00606A04 File Offset: 0x00604C04
-	public void OnAfterUiStart()
+	// Token: 0x060153B1 RID: 86961 RVA: 0x0062C4C8 File Offset: 0x0062A6C8
+	public void OnUiStart()
 	{
 		if (this.CurrentView == null)
 		{
@@ -31,18 +31,18 @@ public class UiBehaviourHomeBtn : IUiBehavior
 		HomeBtnController.Instance.CreateHomeBtnFromView(this.CurrentView);
 	}
 
-	// Token: 0x06017B3E RID: 97086 RVA: 0x00606A1F File Offset: 0x00604C1F
-	public void OnAfterUiShow()
+	// Token: 0x060153B2 RID: 86962 RVA: 0x0062C4E3 File Offset: 0x0062A6E3
+	public void OnUiShow()
 	{
 	}
 
-	// Token: 0x06017B3F RID: 97087 RVA: 0x00606A21 File Offset: 0x00604C21
-	public void OnBeforeUiHide()
+	// Token: 0x060153B3 RID: 86963 RVA: 0x0062C4E5 File Offset: 0x0062A6E5
+	public void OnUiHide()
 	{
 	}
 
-	// Token: 0x06017B40 RID: 97088 RVA: 0x00606A23 File Offset: 0x00604C23
-	public void OnBeforeDestroy()
+	// Token: 0x060153B4 RID: 86964 RVA: 0x0062C4E7 File Offset: 0x0062A6E7
+	public void OnDestroy()
 	{
 		if (this.CurrentView == null)
 		{
@@ -51,7 +51,7 @@ public class UiBehaviourHomeBtn : IUiBehavior
 		HomeBtnController.Instance.RemoveExtraCallback(this.CurrentView.ViewInfo.Name);
 	}
 
-	// Token: 0x06017B41 RID: 97089 RVA: 0x00606A48 File Offset: 0x00604C48
+	// Token: 0x060153B5 RID: 86965 RVA: 0x0062C50C File Offset: 0x0062A70C
 	public void AddExtraAsyncCallback(Func<UniTask> callback)
 	{
 		if (this.CurrentView == null)
@@ -61,7 +61,7 @@ public class UiBehaviourHomeBtn : IUiBehavior
 		HomeBtnController.Instance.AddExtraAsyncCallback(this.CurrentView.ViewInfo.Name, callback);
 	}
 
-	// Token: 0x06017B42 RID: 97090 RVA: 0x00606A6E File Offset: 0x00604C6E
+	// Token: 0x060153B6 RID: 86966 RVA: 0x0062C532 File Offset: 0x0062A732
 	public void AddExtraCallback(Action callback)
 	{
 		if (this.CurrentView == null)
@@ -71,7 +71,7 @@ public class UiBehaviourHomeBtn : IUiBehavior
 		HomeBtnController.Instance.AddExtraCallback(this.CurrentView.ViewInfo.Name, callback);
 	}
 
-	// Token: 0x0400B095 RID: 45205
+	// Token: 0x0400B401 RID: 46081
 	[Nullable(2)]
 	private UiViewBase CurrentView;
 }

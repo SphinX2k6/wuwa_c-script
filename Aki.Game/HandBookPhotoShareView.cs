@@ -6,10 +6,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E0C RID: 7692
+// Token: 0x020012CE RID: 4814
 public class HandBookPhotoShareView : UiPanelBase
 {
-	// Token: 0x0600E9F5 RID: 59893 RVA: 0x00375BC0 File Offset: 0x00373DC0
+	// Token: 0x0600BE14 RID: 48660 RVA: 0x003818C8 File Offset: 0x0037FAC8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,25 +23,25 @@ public class HandBookPhotoShareView : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E9F6 RID: 59894 RVA: 0x00375C5C File Offset: 0x00373E5C
+	// Token: 0x0600BE15 RID: 48661 RVA: 0x00381964 File Offset: 0x0037FB64
 	protected override void OnBeforeShowImplement()
 	{
 		EventSystem.Instance.Add(EEventName.OnPhotoSaveViewPersonalInfoShowRefresh, new Action(this.OnPersonalInfoShowRefresh));
 	}
 
-	// Token: 0x0600E9F7 RID: 59895 RVA: 0x00375C7A File Offset: 0x00373E7A
+	// Token: 0x0600BE16 RID: 48662 RVA: 0x00381982 File Offset: 0x0037FB82
 	protected override void OnAfterHideImplement()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPhotoSaveViewPersonalInfoShowRefresh, new Action(this.OnPersonalInfoShowRefresh));
 	}
 
-	// Token: 0x0600E9F8 RID: 59896 RVA: 0x00375C98 File Offset: 0x00373E98
+	// Token: 0x0600BE17 RID: 48663 RVA: 0x003819A0 File Offset: 0x0037FBA0
 	private void OnPersonalInfoShowRefresh()
 	{
 		this.UpdatePersonalInfoShowView();
 	}
 
-	// Token: 0x0600E9F9 RID: 59897 RVA: 0x00375CA0 File Offset: 0x00373EA0
+	// Token: 0x0600BE18 RID: 48664 RVA: 0x003819A8 File Offset: 0x0037FBA8
 	private void UpdatePersonalInfoShowView()
 	{
 		bool global = LocalStorage.GetGlobal<bool>(ELocalStorageGlobalKey.PhotoAndShareShowPlayerName, true);
@@ -49,7 +49,7 @@ public class HandBookPhotoShareView : UiPanelBase
 		base.GetItem(4).SetUIActive(global);
 	}
 
-	// Token: 0x0600E9FA RID: 59898 RVA: 0x00375CD0 File Offset: 0x00373ED0
+	// Token: 0x0600BE19 RID: 48665 RVA: 0x003819D8 File Offset: 0x0037FBD8
 	protected override void OnStart()
 	{
 		this.HandBookPhotoData = (this.OpenParam as HandBookPhotoData);
@@ -74,24 +74,24 @@ public class HandBookPhotoShareView : UiPanelBase
 		this.UpdatePersonalInfoShowView();
 	}
 
-	// Token: 0x04006C89 RID: 27785
+	// Token: 0x04006D6A RID: 28010
 	[Nullable(2)]
 	private HandBookPhotoData HandBookPhotoData;
 
-	// Token: 0x020083C8 RID: 33736
+	// Token: 0x0200754D RID: 30029
 	private enum EComponents
 	{
-		// Token: 0x0402AE86 RID: 175750
+		// Token: 0x040261A9 RID: 156073
 		Texture,
-		// Token: 0x0402AE87 RID: 175751
+		// Token: 0x040261AA RID: 156074
 		TitleItem,
-		// Token: 0x0402AE88 RID: 175752
+		// Token: 0x040261AB RID: 156075
 		TypeText,
-		// Token: 0x0402AE89 RID: 175753
+		// Token: 0x040261AC RID: 156076
 		NameText,
-		// Token: 0x0402AE8A RID: 175754
+		// Token: 0x040261AD RID: 156077
 		DateItem,
-		// Token: 0x0402AE8B RID: 175755
+		// Token: 0x040261AE RID: 156078
 		DateArtText
 	}
 }

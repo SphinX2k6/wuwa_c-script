@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D96 RID: 23958
+	// Token: 0x02004D78 RID: 19832
 	public class MoraleBuffBattleView : BattleVisibleChildView
 	{
-		// Token: 0x0603CCCC RID: 249036 RVA: 0x00E995A9 File Offset: 0x00E977A9
+		// Token: 0x06031C29 RID: 203817 RVA: 0x00DE9E61 File Offset: 0x00DE8061
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -21,14 +21,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CCCD RID: 249037 RVA: 0x00E995D2 File Offset: 0x00E977D2
+		// Token: 0x06031C2A RID: 203818 RVA: 0x00DE9E8A File Offset: 0x00DE808A
 		public override void Reset()
 		{
 			base.Reset();
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0603CCCE RID: 249038 RVA: 0x00E995E0 File Offset: 0x00E977E0
+		// Token: 0x06031C2B RID: 203819 RVA: 0x00DE9E98 File Offset: 0x00DE8098
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -49,19 +49,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CCCF RID: 249039 RVA: 0x00E99686 File Offset: 0x00E97886
+		// Token: 0x06031C2C RID: 203820 RVA: 0x00DE9F3E File Offset: 0x00DE813E
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.BattleUiToggleMoraleBuffInfo, new Action(this.OnToggleMoraleBuffInfoView));
 		}
 
-		// Token: 0x0603CCD0 RID: 249040 RVA: 0x00E996A4 File Offset: 0x00E978A4
+		// Token: 0x06031C2D RID: 203821 RVA: 0x00DE9F5C File Offset: 0x00DE815C
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiToggleMoraleBuffInfo, new Action(this.OnToggleMoraleBuffInfoView));
 		}
 
-		// Token: 0x0603CCD1 RID: 249041 RVA: 0x00E996C2 File Offset: 0x00E978C2
+		// Token: 0x06031C2E RID: 203822 RVA: 0x00DE9F7A File Offset: 0x00DE817A
 		public void StartShow()
 		{
 			this.Panel.UpdateInfo(MoraleModel.Instance.GetInTheBattleBuffInfo());
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.MoraleBuff, true);
 		}
 
-		// Token: 0x0603CCD2 RID: 249042 RVA: 0x00E996F8 File Offset: 0x00E978F8
+		// Token: 0x06031C2F RID: 203823 RVA: 0x00DE9FB0 File Offset: 0x00DE81B0
 		public void EndShow()
 		{
 			this.Panel.EndShow();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.MoraleBuff, false);
 		}
 
-		// Token: 0x0603CCD3 RID: 249043 RVA: 0x00E99745 File Offset: 0x00E97945
+		// Token: 0x06031C30 RID: 203824 RVA: 0x00DE9FFD File Offset: 0x00DE81FD
 		protected override void OnAfterDestroy()
 		{
 			BattleUiEnvironmentKeyData environmentKeyData = BattleUiModel.Instance.EnvironmentKeyData;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.MoraleBuff, false);
 		}
 
-		// Token: 0x0603CCD4 RID: 249044 RVA: 0x00E99760 File Offset: 0x00E97960
+		// Token: 0x06031C31 RID: 203825 RVA: 0x00DEA018 File Offset: 0x00DE8218
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			if (toggleState == EToggleState.ETT_Checked)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Panel.EndShow();
 		}
 
-		// Token: 0x0603CCD5 RID: 249045 RVA: 0x00E9979C File Offset: 0x00E9799C
+		// Token: 0x06031C32 RID: 203826 RVA: 0x00DEA054 File Offset: 0x00DE8254
 		private void OnToggleMoraleBuffInfoView()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -130,23 +130,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FAC2 RID: 129730
+		// Token: 0x0401A57A RID: 107898
 		[Nullable(2)]
 		private BattleUiHoverTipsC Panel;
 
-		// Token: 0x0200C055 RID: 49237
+		// Token: 0x0200AA5B RID: 43611
 		private enum EVisibleReason
 		{
-			// Token: 0x0403A0A4 RID: 237732
+			// Token: 0x04034A67 RID: 215655
 			Default = 1
 		}
 
-		// Token: 0x0200C056 RID: 49238
+		// Token: 0x0200AA5C RID: 43612
 		private enum EChildComponent
 		{
-			// Token: 0x0403A0A6 RID: 237734
+			// Token: 0x04034A69 RID: 215657
 			Toggle,
-			// Token: 0x0403A0A7 RID: 237735
+			// Token: 0x04034A6A RID: 215658
 			PanelNode
 		}
 	}

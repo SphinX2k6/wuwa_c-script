@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004056 RID: 16470
+	// Token: 0x02004497 RID: 17559
 	public class IQuestStatisticsTypeT
 	{
-		// Token: 0x170073F8 RID: 29688
-		// (get) Token: 0x06017E06 RID: 97798 RVA: 0x003721BF File Offset: 0x003703BF
-		// (set) Token: 0x06017E07 RID: 97799 RVA: 0x003721C7 File Offset: 0x003703C7
+		// Token: 0x170079FA RID: 31226
+		// (get) Token: 0x0601949F RID: 103583 RVA: 0x0039BFB3 File Offset: 0x0039A1B3
+		// (set) Token: 0x060194A0 RID: 103584 RVA: 0x0039BFBB File Offset: 0x0039A1BB
 		public EStatisticsEventType Type { get; set; }
 
-		// Token: 0x170073F9 RID: 29689
-		// (get) Token: 0x06017E08 RID: 97800 RVA: 0x003721D0 File Offset: 0x003703D0
-		// (set) Token: 0x06017E09 RID: 97801 RVA: 0x003721D8 File Offset: 0x003703D8
+		// Token: 0x170079FB RID: 31227
+		// (get) Token: 0x060194A1 RID: 103585 RVA: 0x0039BFC4 File Offset: 0x0039A1C4
+		// (set) Token: 0x060194A2 RID: 103586 RVA: 0x0039BFCC File Offset: 0x0039A1CC
 		public TVarRefUnion Var { get; set; }
 
-		// Token: 0x06017E0A RID: 97802 RVA: 0x003721E1 File Offset: 0x003703E1
+		// Token: 0x060194A3 RID: 103587 RVA: 0x0039BFD5 File Offset: 0x0039A1D5
 		public IQuestStatisticsTypeT()
 		{
 			this.Type = EStatisticsEventType.Collect;

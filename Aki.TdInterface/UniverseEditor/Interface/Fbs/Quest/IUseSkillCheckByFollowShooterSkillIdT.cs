@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200424B RID: 16971
+	// Token: 0x020046A7 RID: 18087
 	public class IUseSkillCheckByFollowShooterSkillIdT
 	{
-		// Token: 0x1700787B RID: 30843
-		// (get) Token: 0x060191A1 RID: 102817 RVA: 0x0039BFA4 File Offset: 0x0039A1A4
-		// (set) Token: 0x060191A2 RID: 102818 RVA: 0x0039BFAC File Offset: 0x0039A1AC
+		// Token: 0x17007EAC RID: 32428
+		// (get) Token: 0x0601A90D RID: 108813 RVA: 0x003C767C File Offset: 0x003C587C
+		// (set) Token: 0x0601A90E RID: 108814 RVA: 0x003C7684 File Offset: 0x003C5884
 		public EUseSkillCheckType Type { get; set; }
 
-		// Token: 0x1700787C RID: 30844
-		// (get) Token: 0x060191A3 RID: 102819 RVA: 0x0039BFB5 File Offset: 0x0039A1B5
-		// (set) Token: 0x060191A4 RID: 102820 RVA: 0x0039BFBD File Offset: 0x0039A1BD
+		// Token: 0x17007EAD RID: 32429
+		// (get) Token: 0x0601A90F RID: 108815 RVA: 0x003C768D File Offset: 0x003C588D
+		// (set) Token: 0x0601A910 RID: 108816 RVA: 0x003C7695 File Offset: 0x003C5895
 		public int SkillId { get; set; }
 
-		// Token: 0x060191A5 RID: 102821 RVA: 0x0039BFC6 File Offset: 0x0039A1C6
+		// Token: 0x0601A911 RID: 108817 RVA: 0x003C769E File Offset: 0x003C589E
 		public IUseSkillCheckByFollowShooterSkillIdT()
 		{
 			this.Type = EUseSkillCheckType.CheckSkillGenre;

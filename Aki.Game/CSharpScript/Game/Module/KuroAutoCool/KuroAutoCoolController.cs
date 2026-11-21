@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Core.Extension;
@@ -11,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.KuroAutoCool
 {
-	// Token: 0x020057A3 RID: 22435
+	// Token: 0x0200477A RID: 18298
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class KuroAutoCoolController : ControllerBase
 	{
-		// Token: 0x0603901B RID: 233499 RVA: 0x00D8C6E8 File Offset: 0x00D8A8E8
+		// Token: 0x0602DF2B RID: 188203 RVA: 0x00CDB464 File Offset: 0x00CD9664
 		public void SetMaxFrameRate(int fps)
 		{
 			UObject world = GlobalData.World;
@@ -27,19 +26,19 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
 		}
 
-		// Token: 0x0603901C RID: 233500 RVA: 0x00D8C725 File Offset: 0x00D8A925
+		// Token: 0x0602DF2C RID: 188204 RVA: 0x00CDB4A1 File Offset: 0x00CD96A1
 		public int GetMaxFrameRate()
 		{
 			return (int)UKismetSystemLibrary.GetConsoleVariableFloatValue("t.MaxFPS");
 		}
 
-		// Token: 0x0603901D RID: 233501 RVA: 0x00D8C732 File Offset: 0x00D8A932
+		// Token: 0x0602DF2D RID: 188205 RVA: 0x00CDB4AE File Offset: 0x00CD96AE
 		public int? GetCurrentValue(int handle)
 		{
 			return GameSettingsManager.Instance.GetCurrentValue((EFunction)handle, true, true);
 		}
 
-		// Token: 0x0603901E RID: 233502 RVA: 0x00D8C744 File Offset: 0x00D8A944
+		// Token: 0x0602DF2E RID: 188206 RVA: 0x00CDB4C0 File Offset: 0x00CD96C0
 		public void ApplyNiagaraQuality(int value)
 		{
 			bool flag = GameSettingsDeviceRender.Instance.IsIosAndAndroidHighDevice();
@@ -55,7 +54,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			UKismetSystemLibrary.ExecuteConsoleCommand(world2, defaultInterpolatedStringHandler.ToStringAndClear(), null);
 		}
 
-		// Token: 0x0603901F RID: 233503 RVA: 0x00D8C7CC File Offset: 0x00D8A9CC
+		// Token: 0x0602DF2F RID: 188207 RVA: 0x00CDB548 File Offset: 0x00CD9748
 		public void ApplyMobileResolution(int value)
 		{
 			float num = (float)GameSettingsDeviceRender.Instance.GetMobileResolutionByIndex(value);
@@ -71,7 +70,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
 		}
 
-		// Token: 0x06039020 RID: 233504 RVA: 0x00D8C854 File Offset: 0x00D8AA54
+		// Token: 0x0602DF30 RID: 188208 RVA: 0x00CDB5D0 File Offset: 0x00CD97D0
 		public unsafe void ReduceImageQualityAndFrameRate(int currentFps)
 		{
 			int? currentValue = this.GetCurrentValue(67);
@@ -192,7 +191,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 7));
 		}
 
-		// Token: 0x06039021 RID: 233505 RVA: 0x00D8CC40 File Offset: 0x00D8AE40
+		// Token: 0x0602DF31 RID: 188209 RVA: 0x00CDB9BC File Offset: 0x00CD9BBC
 		public unsafe void RestoreImageQualityAndFrameRate(int currentFps)
 		{
 			int? currentValue = this.GetCurrentValue(67);
@@ -301,7 +300,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			instance3.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 7));
 		}
 
-		// Token: 0x06039022 RID: 233506 RVA: 0x00D8CF70 File Offset: 0x00D8B170
+		// Token: 0x0602DF32 RID: 188210 RVA: 0x00CDBCEC File Offset: 0x00CD9EEC
 		private unsafe void OnGetTemperatureDataFromMAGT(bool bResult, float currentTemperature, float tempBudget)
 		{
 			Log instance = Log.Instance;
@@ -325,7 +324,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			}
 		}
 
-		// Token: 0x06039023 RID: 233507 RVA: 0x00D8D020 File Offset: 0x00D8B220
+		// Token: 0x0602DF33 RID: 188211 RVA: 0x00CDBD9C File Offset: 0x00CD9F9C
 		private void OnGetTemperatureDataFromOthers()
 		{
 			int cpuTemperature = UKuroRenderingRuntimeBPPluginBPLibrary.GetCpuTemperature();
@@ -348,7 +347,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			}
 		}
 
-		// Token: 0x06039024 RID: 233508 RVA: 0x00D8D090 File Offset: 0x00D8B290
+		// Token: 0x0602DF34 RID: 188212 RVA: 0x00CDBE0C File Offset: 0x00CDA00C
 		private unsafe void OnAutoAdjustImageQualityPcPlatform(float delta)
 		{
 			if (delta <= 0f)
@@ -387,7 +386,12 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 				{
 					num4 += num5;
 				}
-				float num6 = (this.fpsHistory.Count > 0) ? (this.fpsHistory.Sum() / (float)this.fpsHistory.Count) : 0f;
+				float num6 = 0f;
+				foreach (float num7 in this.fpsHistory)
+				{
+					num6 += num7;
+				}
+				float num8 = (this.fpsHistory.Count > 0) ? (num6 / (float)this.fpsHistory.Count) : 0f;
 				this.lastJankCheckTime = num3;
 				this.jankCountHistory.Clear();
 				this.fpsHistory.Clear();
@@ -419,7 +423,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 						}
 					}
 				}
-				float num7 = Math.Min(val, (float)this.GetMaxFrameRate()) * 0.9f;
+				float num9 = Math.Min(val, (float)this.GetMaxFrameRate()) * 0.9f;
 				Log instance2 = Log.Instance;
 				ELogModule module2 = ELogModule.Render;
 				ELogAuthor author2 = ELogAuthor.LQX;
@@ -427,19 +431,19 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 				<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray4<ValueTuple<string, object>>);
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("JankCount", num4);
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("CurrentFrameTime", delta);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("FpsThreshold", num7);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("AvgFPS", num6);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("FpsThreshold", num9);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("AvgFPS", num8);
 				instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 4));
-				if (!this.IsAutoCoolState && (this.consecutiveJankWindows >= 2 || num6 < num7))
+				if (!this.IsAutoCoolState && (this.consecutiveJankWindows >= 2 || num8 < num9))
 				{
 					Log.Instance.Info(ELogModule.Render, ELogAuthor.LQX, "触发降画质", default(ReadOnlySpan<ValueTuple<string, object>>));
 					this.ReduceImageQualityAndFrameRate((int)num);
 				}
-				else if (this.IsAutoCoolState && (num4 >= 1 || num6 < num7))
+				else if (this.IsAutoCoolState && (num4 >= 1 || num8 < num9))
 				{
 					Log.Instance.Info(ELogModule.Render, ELogAuthor.LQX, "维持降画质状态", default(ReadOnlySpan<ValueTuple<string, object>>));
 				}
-				else if (this.IsAutoCoolState && this.consecutiveNoJankWindows >= 3 && num6 >= num7)
+				else if (this.IsAutoCoolState && this.consecutiveNoJankWindows >= 3 && num8 >= num9)
 				{
 					Log.Instance.Info(ELogModule.Render, ELogAuthor.LQX, "恢复升画质", default(ReadOnlySpan<ValueTuple<string, object>>));
 					this.RestoreImageQualityAndFrameRate((int)num);
@@ -448,7 +452,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			}
 		}
 
-		// Token: 0x06039025 RID: 233509 RVA: 0x00D8D478 File Offset: 0x00D8B678
+		// Token: 0x0602DF35 RID: 188213 RVA: 0x00CDC234 File Offset: 0x00CDA434
 		protected override bool OnInit()
 		{
 			this.TemperatureDelegate = DelegateUtils.ToManualReleaseDelegate<FGetCurrentTemperatureDataDelegate>(new Action<bool, float, float>(this.OnGetTemperatureDataFromMAGT));
@@ -456,7 +460,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			return true;
 		}
 
-		// Token: 0x06039026 RID: 233510 RVA: 0x00D8D499 File Offset: 0x00D8B699
+		// Token: 0x0602DF36 RID: 188214 RVA: 0x00CDC255 File Offset: 0x00CDA455
 		protected override bool OnClear()
 		{
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<bool, float, float>(this.OnGetTemperatureDataFromMAGT));
@@ -464,7 +468,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			return true;
 		}
 
-		// Token: 0x06039027 RID: 233511 RVA: 0x00D8D4B4 File Offset: 0x00D8B6B4
+		// Token: 0x0602DF37 RID: 188215 RVA: 0x00CDC270 File Offset: 0x00CDA470
 		protected override void OnTick(float delta)
 		{
 			if (UKuroRenderingRuntimeBPPluginBPLibrary.GetCVarFloat("r.Kuro.AutoCoolEnable") > 0f && UKuroRenderingRuntimeBPPluginBPLibrary.GetCVarFloat("r.Kuro.AutoCoolUIEnable") > 0f)
@@ -493,8 +497,8 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			}
 		}
 
-		// Token: 0x170088D2 RID: 35026
-		// (get) Token: 0x06039028 RID: 233512 RVA: 0x00D8D54B File Offset: 0x00D8B74B
+		// Token: 0x17005C9A RID: 23706
+		// (get) Token: 0x0602DF38 RID: 188216 RVA: 0x00CDC307 File Offset: 0x00CDA507
 		public static KuroAutoCoolController Instance
 		{
 			get
@@ -503,7 +507,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			}
 		}
 
-		// Token: 0x06039029 RID: 233513 RVA: 0x00D8D552 File Offset: 0x00D8B752
+		// Token: 0x0602DF39 RID: 188217 RVA: 0x00CDC30E File Offset: 0x00CDA50E
 		public static KuroAutoCoolController GetOrCreateInstance()
 		{
 			if (KuroAutoCoolController._Instance == null)
@@ -513,7 +517,7 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			return KuroAutoCoolController._Instance;
 		}
 
-		// Token: 0x0603902A RID: 233514 RVA: 0x00D8D566 File Offset: 0x00D8B766
+		// Token: 0x0602DF3A RID: 188218 RVA: 0x00CDC322 File Offset: 0x00CDA522
 		public static bool CreateInstance()
 		{
 			if (KuroAutoCoolController._Instance != null)
@@ -524,85 +528,85 @@ namespace CSharpScript.Game.Module.KuroAutoCool
 			return true;
 		}
 
-		// Token: 0x0603902B RID: 233515 RVA: 0x00D8D57C File Offset: 0x00D8B77C
+		// Token: 0x0602DF3B RID: 188219 RVA: 0x00CDC338 File Offset: 0x00CDA538
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603902C RID: 233516 RVA: 0x00D8D57E File Offset: 0x00D8B77E
+		// Token: 0x0602DF3C RID: 188220 RVA: 0x00CDC33A File Offset: 0x00CDA53A
 		public static void ResetStaticDefaultValue()
 		{
 			KuroAutoCoolController._Instance = null;
 		}
 
-		// Token: 0x0603902D RID: 233517 RVA: 0x00D8D586 File Offset: 0x00D8B786
+		// Token: 0x0602DF3D RID: 188221 RVA: 0x00CDC342 File Offset: 0x00CDA542
 		static KuroAutoCoolController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(KuroAutoCoolController.CreateStaticDefaultValue), new Action(KuroAutoCoolController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DDD4 RID: 122324
+		// Token: 0x0401886A RID: 100458
 		private const int CHECK_TIME = 10000;
 
-		// Token: 0x0401DDD5 RID: 122325
+		// Token: 0x0401886B RID: 100459
 		private const bool DebugLogEnabled = true;
 
-		// Token: 0x0401DDD6 RID: 122326
+		// Token: 0x0401886C RID: 100460
 		private const int CpuTemperatureThreshold = 65;
 
-		// Token: 0x0401DDD7 RID: 122327
+		// Token: 0x0401886D RID: 100461
 		private const int FpsThreshold = 50;
 
-		// Token: 0x0401DDD8 RID: 122328
+		// Token: 0x0401886E RID: 100462
 		private int CheckCount;
 
-		// Token: 0x0401DDD9 RID: 122329
+		// Token: 0x0401886F RID: 100463
 		private bool IsAutoCoolState;
 
-		// Token: 0x0401DDDA RID: 122330
+		// Token: 0x04018870 RID: 100464
 		private const int ResolutionThreshold = 1;
 
-		// Token: 0x0401DDDB RID: 122331
+		// Token: 0x04018871 RID: 100465
 		private const int NiagaraThreshold = 1;
 
-		// Token: 0x0401DDDC RID: 122332
+		// Token: 0x04018872 RID: 100466
 		private const int ImageDetailThreshold = 1;
 
-		// Token: 0x0401DDDD RID: 122333
+		// Token: 0x04018873 RID: 100467
 		private const int VolumeLightThreshold = 0;
 
-		// Token: 0x0401DDDE RID: 122334
+		// Token: 0x04018874 RID: 100468
 		private const int NpcDensityThreshold = 1;
 
-		// Token: 0x0401DDDF RID: 122335
+		// Token: 0x04018875 RID: 100469
 		private const int ShadowThreshold = 1;
 
-		// Token: 0x0401DDE0 RID: 122336
+		// Token: 0x04018876 RID: 100470
 		[Nullable(2)]
 		public FGetCurrentTemperatureDataDelegate TemperatureDelegate;
 
-		// Token: 0x0401DDE1 RID: 122337
+		// Token: 0x04018877 RID: 100471
 		private List<float> frameTimes = new List<float>();
 
-		// Token: 0x0401DDE2 RID: 122338
+		// Token: 0x04018878 RID: 100472
 		private List<int> jankCountHistory = new List<int>();
 
-		// Token: 0x0401DDE3 RID: 122339
+		// Token: 0x04018879 RID: 100473
 		private List<float> fpsHistory = new List<float>();
 
-		// Token: 0x0401DDE4 RID: 122340
+		// Token: 0x0401887A RID: 100474
 		private long lastJankCheckTime;
 
-		// Token: 0x0401DDE5 RID: 122341
+		// Token: 0x0401887B RID: 100475
 		private int consecutiveJankWindows;
 
-		// Token: 0x0401DDE6 RID: 122342
+		// Token: 0x0401887C RID: 100476
 		private int consecutiveNoJankWindows;
 
-		// Token: 0x0401DDE7 RID: 122343
+		// Token: 0x0401887D RID: 100477
 		private const int jankCheckInterval = 5000;
 
-		// Token: 0x0401DDE8 RID: 122344
+		// Token: 0x0401887E RID: 100478
 		[Nullable(2)]
 		private static KuroAutoCoolController _Instance;
 	}

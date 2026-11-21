@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CDD RID: 7389
+	// Token: 0x02001EEC RID: 7916
 	public class IPhoneBoardTypeBase_SetValue
 	{
-		// Token: 0x04005FD8 RID: 24536
+		// Token: 0x0400654B RID: 25931
 		public EPhoneBoardType Type;
 	}
 }

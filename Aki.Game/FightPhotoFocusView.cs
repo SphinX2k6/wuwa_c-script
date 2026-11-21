@@ -5,16 +5,16 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200127A RID: 4730
+// Token: 0x0200072E RID: 1838
 public class FightPhotoFocusView : UiViewBase
 {
-	// Token: 0x06008108 RID: 33032 RVA: 0x001B579B File Offset: 0x001B399B
+	// Token: 0x0600549F RID: 21663 RVA: 0x001BE46B File Offset: 0x001BC66B
 	[NullableContext(1)]
 	public FightPhotoFocusView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008109 RID: 33033 RVA: 0x001B57A4 File Offset: 0x001B39A4
+	// Token: 0x060054A0 RID: 21664 RVA: 0x001BE474 File Offset: 0x001BC674
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,19 +23,19 @@ public class FightPhotoFocusView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600810A RID: 33034 RVA: 0x001B57C7 File Offset: 0x001B39C7
+	// Token: 0x060054A1 RID: 21665 RVA: 0x001BE497 File Offset: 0x001BC697
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnNeedShowFightPhotoFocus, new Action<bool>(this.OnNeedShowFightPhotoFocus));
 	}
 
-	// Token: 0x0600810B RID: 33035 RVA: 0x001B57E5 File Offset: 0x001B39E5
+	// Token: 0x060054A2 RID: 21666 RVA: 0x001BE4B5 File Offset: 0x001BC6B5
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnNeedShowFightPhotoFocus, new Action<bool>(this.OnNeedShowFightPhotoFocus));
 	}
 
-	// Token: 0x0600810C RID: 33036 RVA: 0x001B5803 File Offset: 0x001B3A03
+	// Token: 0x060054A3 RID: 21667 RVA: 0x001BE4D3 File Offset: 0x001BC6D3
 	protected override void OnBeforeShow()
 	{
 		UUIItem item = base.GetItem(0);
@@ -46,7 +46,7 @@ public class FightPhotoFocusView : UiViewBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600810D RID: 33037 RVA: 0x001B5817 File Offset: 0x001B3A17
+	// Token: 0x060054A4 RID: 21668 RVA: 0x001BE4E7 File Offset: 0x001BC6E7
 	private void OnNeedShowFightPhotoFocus(bool needShow)
 	{
 		UUIItem item = base.GetItem(0);
@@ -57,10 +57,10 @@ public class FightPhotoFocusView : UiViewBase
 		item.SetUIActive(needShow);
 	}
 
-	// Token: 0x0200788F RID: 30863
+	// Token: 0x02006A1A RID: 27162
 	private enum EComponents
 	{
-		// Token: 0x04027B80 RID: 162688
+		// Token: 0x04022EB1 RID: 143025
 		ItemFocusFrame
 	}
 }

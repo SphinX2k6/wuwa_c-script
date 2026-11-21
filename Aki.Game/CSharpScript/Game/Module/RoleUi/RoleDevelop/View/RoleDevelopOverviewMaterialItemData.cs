@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D39 RID: 19769
+	// Token: 0x02003CF8 RID: 15608
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopOverviewMaterialItemData : IRoleDevelopOverviewMaterialItemData
 	{
-		// Token: 0x17007E4A RID: 32330
-		// (get) Token: 0x06033139 RID: 209209 RVA: 0x00BE6869 File Offset: 0x00BE4A69
-		// (set) Token: 0x0603313A RID: 209210 RVA: 0x00BE6871 File Offset: 0x00BE4A71
+		// Token: 0x170051FA RID: 20986
+		// (get) Token: 0x06027F34 RID: 163636 RVA: 0x00B2CAA5 File Offset: 0x00B2ACA5
+		// (set) Token: 0x06027F35 RID: 163637 RVA: 0x00B2CAAD File Offset: 0x00B2ACAD
 		public RoleDevelopItemGroup GroupItem { get; set; }
 
-		// Token: 0x17007E4B RID: 32331
-		// (get) Token: 0x0603313B RID: 209211 RVA: 0x00BE687A File Offset: 0x00BE4A7A
-		// (set) Token: 0x0603313C RID: 209212 RVA: 0x00BE6882 File Offset: 0x00BE4A82
+		// Token: 0x170051FB RID: 20987
+		// (get) Token: 0x06027F36 RID: 163638 RVA: 0x00B2CAB6 File Offset: 0x00B2ACB6
+		// (set) Token: 0x06027F37 RID: 163639 RVA: 0x00B2CABE File Offset: 0x00B2ACBE
 		public Action<RoleDevelopItemGroup> JumpCallback { get; set; }
 	}
 }

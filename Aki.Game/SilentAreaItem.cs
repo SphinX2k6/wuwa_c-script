@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020016BB RID: 5819
+// Token: 0x02000B73 RID: 2931
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,13 +15,13 @@ using UnrealEngine;
 })]
 public class SilentAreaItem : GridProxyAbstract<ISilentAreaDetectionDynamicData>
 {
-	// Token: 0x0600A612 RID: 42514 RVA: 0x0025206B File Offset: 0x0025026B
+	// Token: 0x060079F2 RID: 31218 RVA: 0x0025C47B File Offset: 0x0025A67B
 	public void BindCallback(Action<int, UUIExtendToggle> onSelectedCallback)
 	{
 		this.OnSelectedCallback = onSelectedCallback;
 	}
 
-	// Token: 0x0600A613 RID: 42515 RVA: 0x00252074 File Offset: 0x00250274
+	// Token: 0x060079F3 RID: 31219 RVA: 0x0025C484 File Offset: 0x0025A684
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -37,7 +37,7 @@ public class SilentAreaItem : GridProxyAbstract<ISilentAreaDetectionDynamicData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A614 RID: 42516 RVA: 0x00252100 File Offset: 0x00250300
+	// Token: 0x060079F4 RID: 31220 RVA: 0x0025C510 File Offset: 0x0025A710
 	protected override void OnStart()
 	{
 		this.ExtendToggle = base.GetExtendToggle(0);
@@ -62,7 +62,7 @@ public class SilentAreaItem : GridProxyAbstract<ISilentAreaDetectionDynamicData>
 		});
 	}
 
-	// Token: 0x0600A615 RID: 42517 RVA: 0x0025217E File Offset: 0x0025037E
+	// Token: 0x060079F5 RID: 31221 RVA: 0x0025C58E File Offset: 0x0025A78E
 	protected override void OnBeforeDestroy()
 	{
 		this.ExtendToggle.OnStateChange.Clear();
@@ -70,7 +70,7 @@ public class SilentAreaItem : GridProxyAbstract<ISilentAreaDetectionDynamicData>
 		this.ExtendToggle.OnPostAudioStateEvent.Unbind();
 	}
 
-	// Token: 0x0600A616 RID: 42518 RVA: 0x002521B0 File Offset: 0x002503B0
+	// Token: 0x060079F6 RID: 31222 RVA: 0x0025C5C0 File Offset: 0x0025A7C0
 	public override void Refresh(ISilentAreaDetectionDynamicData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data.SilentAreaDetectionData;
@@ -95,19 +95,19 @@ public class SilentAreaItem : GridProxyAbstract<ISilentAreaDetectionDynamicData>
 		}
 	}
 
-	// Token: 0x0600A617 RID: 42519 RVA: 0x002522AE File Offset: 0x002504AE
+	// Token: 0x060079F7 RID: 31223 RVA: 0x0025C6BE File Offset: 0x0025A8BE
 	public override void OnSelected(bool fireEvent)
 	{
 		this.Selected(true, true);
 	}
 
-	// Token: 0x0600A618 RID: 42520 RVA: 0x002522B8 File Offset: 0x002504B8
+	// Token: 0x060079F8 RID: 31224 RVA: 0x0025C6C8 File Offset: 0x0025A8C8
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.Selected(false, true);
 	}
 
-	// Token: 0x0600A619 RID: 42521 RVA: 0x002522C4 File Offset: 0x002504C4
+	// Token: 0x060079F9 RID: 31225 RVA: 0x0025C6D4 File Offset: 0x0025A8D4
 	private void OnCallback()
 	{
 		if (this.OnSelectedCallback != null && this.Data != null)
@@ -116,7 +116,7 @@ public class SilentAreaItem : GridProxyAbstract<ISilentAreaDetectionDynamicData>
 		}
 	}
 
-	// Token: 0x0600A61A RID: 42522 RVA: 0x00252305 File Offset: 0x00250505
+	// Token: 0x060079FA RID: 31226 RVA: 0x0025C715 File Offset: 0x0025A915
 	private void Selected(bool bSelected, bool fire = true)
 	{
 		if (bSelected)
@@ -127,15 +127,15 @@ public class SilentAreaItem : GridProxyAbstract<ISilentAreaDetectionDynamicData>
 		this.ExtendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04004AFD RID: 19197
+	// Token: 0x04004BA4 RID: 19364
 	[Nullable(2)]
 	private SilentAreaDetectionRecord Data;
 
-	// Token: 0x04004AFE RID: 19198
+	// Token: 0x04004BA5 RID: 19365
 	[Nullable(2)]
 	private UUIExtendToggle ExtendToggle;
 
-	// Token: 0x04004AFF RID: 19199
+	// Token: 0x04004BA6 RID: 19366
 	[Nullable(new byte[]
 	{
 		2,
@@ -143,15 +143,15 @@ public class SilentAreaItem : GridProxyAbstract<ISilentAreaDetectionDynamicData>
 	})]
 	private Action<int, UUIExtendToggle> OnSelectedCallback;
 
-	// Token: 0x02007C8F RID: 31887
+	// Token: 0x02006E14 RID: 28180
 	[NullableContext(0)]
 	private enum EDetectItemNodeDefine
 	{
-		// Token: 0x04028DE0 RID: 167392
+		// Token: 0x04024109 RID: 147721
 		MonsterToggle,
-		// Token: 0x04028DE1 RID: 167393
+		// Token: 0x0402410A RID: 147722
 		NameText,
-		// Token: 0x04028DE2 RID: 167394
+		// Token: 0x0402410B RID: 147723
 		NormalIcon
 	}
 }

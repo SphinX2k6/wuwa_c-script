@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Condition
 {
-	// Token: 0x02006F75 RID: 28533
+	// Token: 0x020060F6 RID: 24822
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowCubeRangeCondition : LevelFlowConditionBase
 	{
-		// Token: 0x06045694 RID: 284308 RVA: 0x011347B8 File Offset: 0x011329B8
+		// Token: 0x0603B842 RID: 243778 RVA: 0x010DE5BC File Offset: 0x010DC7BC
 		public LevelFlowCubeRangeCondition Init(Vector center, Vector extent, Rotator rotation)
 		{
 			if (Global.BaseCharacter == null)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelFlow.Condition
 			return this;
 		}
 
-		// Token: 0x06045695 RID: 284309 RVA: 0x01134878 File Offset: 0x01132A78
+		// Token: 0x0603B843 RID: 243779 RVA: 0x010DE67C File Offset: 0x010DC87C
 		protected override void OnTick(float delta)
 		{
 			if (this.TargetActorComponent == null || !this.TargetActorComponent.Valid)
@@ -78,13 +78,13 @@ namespace CSharpScript.Game.LevelFlow.Condition
 			}
 		}
 
-		// Token: 0x06045696 RID: 284310 RVA: 0x011349B0 File Offset: 0x01132BB0
+		// Token: 0x0603B844 RID: 243780 RVA: 0x010DE7B4 File Offset: 0x010DC9B4
 		private bool CheckInside(Vector position)
 		{
 			return Math.Abs(position.X) <= this.Extent.X && Math.Abs(position.Y) <= this.Extent.Y && Math.Abs(position.Z) <= this.Extent.Z;
 		}
 
-		// Token: 0x06045697 RID: 284311 RVA: 0x01134A0C File Offset: 0x01132C0C
+		// Token: 0x0603B845 RID: 243781 RVA: 0x010DE810 File Offset: 0x010DCA10
 		private void WorldPositionToLocal(Vector worldPos, Vector localPos)
 		{
 			Vector inV = worldPos.Subtraction(this.Center, localPos);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.LevelFlow.Condition
 			this.TempQuat.RotateVector(inV, localPos);
 		}
 
-		// Token: 0x06045698 RID: 284312 RVA: 0x01134A58 File Offset: 0x01132C58
+		// Token: 0x0603B846 RID: 243782 RVA: 0x010DE85C File Offset: 0x010DCA5C
 		private bool CheckSegmentInCube(Vector segmentStart, Vector segmentEnd)
 		{
 			segmentEnd.Subtraction(segmentStart, this.TempVector1);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.LevelFlow.Condition
 			return LevelFlowCubeRangeCondition.<CheckSegmentInCube>g__checkAxisInCube|12_0(segmentStart.X, this.TempVector1.X, -this.Extent.X, this.Extent.X, ref CS$<>8__locals1) && LevelFlowCubeRangeCondition.<CheckSegmentInCube>g__checkAxisInCube|12_0(segmentStart.Y, this.TempVector1.Y, -this.Extent.Y, this.Extent.Y, ref CS$<>8__locals1) && LevelFlowCubeRangeCondition.<CheckSegmentInCube>g__checkAxisInCube|12_0(segmentStart.Z, this.TempVector1.Z, -this.Extent.Z, this.Extent.Z, ref CS$<>8__locals1);
 		}
 
-		// Token: 0x0604569A RID: 284314 RVA: 0x01134BD0 File Offset: 0x01132DD0
+		// Token: 0x0603B848 RID: 243784 RVA: 0x010DE9D4 File Offset: 0x010DCBD4
 		[CompilerGenerated]
 		internal static bool <CheckSegmentInCube>g__checkAxisInCube|12_0(double original, double delta, double minValue, double maxValue, ref LevelFlowCubeRangeCondition.<>c__DisplayClass12_0 A_4)
 		{
@@ -134,29 +134,29 @@ namespace CSharpScript.Game.LevelFlow.Condition
 			return true;
 		}
 
-		// Token: 0x04024386 RID: 148358
+		// Token: 0x0401F63B RID: 128571
 		private Vector Center = Vector.ZeroVectorProxy;
 
-		// Token: 0x04024387 RID: 148359
+		// Token: 0x0401F63C RID: 128572
 		private Vector Extent = Vector.ZeroVectorProxy;
 
-		// Token: 0x04024388 RID: 148360
+		// Token: 0x0401F63D RID: 128573
 		private Rotator Rotation = Rotator.Create();
 
-		// Token: 0x04024389 RID: 148361
+		// Token: 0x0401F63E RID: 128574
 		[Nullable(2)]
 		private BaseActorComponent TargetActorComponent;
 
-		// Token: 0x0402438A RID: 148362
+		// Token: 0x0401F63F RID: 128575
 		private readonly Vector PrePosition = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0402438B RID: 148363
+		// Token: 0x0401F640 RID: 128576
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x0402438C RID: 148364
+		// Token: 0x0401F641 RID: 128577
 		private readonly Vector TempVector1 = Vector.Create();
 
-		// Token: 0x0402438D RID: 148365
+		// Token: 0x0401F642 RID: 128578
 		private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 	}
 }

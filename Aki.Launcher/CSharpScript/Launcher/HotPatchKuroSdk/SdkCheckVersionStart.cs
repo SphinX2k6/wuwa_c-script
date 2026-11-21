@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.HotPatchKuroSdk
 {
-	// Token: 0x020001EB RID: 491
+	// Token: 0x020001F0 RID: 496
 	public class SdkCheckVersionStart : SdkReportData
 	{
-		// Token: 0x06000CE9 RID: 3305 RVA: 0x0004E699 File Offset: 0x0004C899
+		// Token: 0x06000D2A RID: 3370 RVA: 0x00051185 File Offset: 0x0004F385
 		public SdkCheckVersionStart([Nullable(new byte[]
 		{
 			2,
@@ -17,7 +17,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 		{
 		}
 
-		// Token: 0x06000CEA RID: 3306 RVA: 0x0004E6A2 File Offset: 0x0004C8A2
+		// Token: 0x06000D2B RID: 3371 RVA: 0x0005118E File Offset: 0x0004F38E
 		[NullableContext(1)]
 		public override string GetEventName()
 		{

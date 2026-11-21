@@ -1,35 +1,35 @@
 ﻿using System;
 
-// Token: 0x02002020 RID: 8224
+// Token: 0x020014F3 RID: 5363
 public class SpecialItemLogicBase
 {
-	// Token: 0x060101EE RID: 66030 RVA: 0x003ECE9D File Offset: 0x003EB09D
+	// Token: 0x0600D656 RID: 54870 RVA: 0x003F9495 File Offset: 0x003F7695
 	public SpecialItemLogicBase(int configId)
 	{
 		this.ConfigId = configId;
 	}
 
-	// Token: 0x060101EF RID: 66031 RVA: 0x003ECEAC File Offset: 0x003EB0AC
+	// Token: 0x0600D657 RID: 54871 RVA: 0x003F94A4 File Offset: 0x003F76A4
 	public virtual void Init()
 	{
 	}
 
-	// Token: 0x060101F0 RID: 66032 RVA: 0x003ECEAE File Offset: 0x003EB0AE
+	// Token: 0x0600D658 RID: 54872 RVA: 0x003F94A6 File Offset: 0x003F76A6
 	public virtual void Destroy()
 	{
 	}
 
-	// Token: 0x060101F1 RID: 66033 RVA: 0x003ECEB0 File Offset: 0x003EB0B0
+	// Token: 0x0600D659 RID: 54873 RVA: 0x003F94A8 File Offset: 0x003F76A8
 	public virtual bool CheckUseCondition()
 	{
 		return true;
 	}
 
-	// Token: 0x060101F2 RID: 66034 RVA: 0x003ECEB3 File Offset: 0x003EB0B3
+	// Token: 0x0600D65A RID: 54874 RVA: 0x003F94AB File Offset: 0x003F76AB
 	public virtual void OnUse()
 	{
 	}
 
-	// Token: 0x0400774A RID: 30538
+	// Token: 0x04007833 RID: 30771
 	protected int ConfigId;
 }

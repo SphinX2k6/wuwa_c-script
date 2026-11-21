@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200287E RID: 10366
+// Token: 0x02001DF9 RID: 7673
 [NullableContext(2)]
 [Nullable(0)]
 public class CostContentItemContext
 {
-	// Token: 0x0601554E RID: 87374 RVA: 0x00562B23 File Offset: 0x00560D23
+	// Token: 0x06012F4C RID: 77644 RVA: 0x0058D87F File Offset: 0x0058BA7F
 	[NullableContext(1)]
 	public CostContentItemContext(RoleBreakPreviewViewModel vm, CostContentItem item)
 	{
@@ -14,14 +14,14 @@ public class CostContentItemContext
 		this.CachedPanel = item;
 	}
 
-	// Token: 0x0601554F RID: 87375 RVA: 0x00562B47 File Offset: 0x00560D47
+	// Token: 0x06012F4D RID: 77645 RVA: 0x0058D8A3 File Offset: 0x0058BAA3
 	public void Dispose()
 	{
 	}
 
-	// Token: 0x17001C7C RID: 7292
-	// (get) Token: 0x06015550 RID: 87376 RVA: 0x00562B49 File Offset: 0x00560D49
-	// (set) Token: 0x06015551 RID: 87377 RVA: 0x00562B51 File Offset: 0x00560D51
+	// Token: 0x17001CD4 RID: 7380
+	// (get) Token: 0x06012F4E RID: 77646 RVA: 0x0058D8A5 File Offset: 0x0058BAA5
+	// (set) Token: 0x06012F4F RID: 77647 RVA: 0x0058D8AD File Offset: 0x0058BAAD
 	public int CostNumber
 	{
 		get
@@ -35,9 +35,9 @@ public class CostContentItemContext
 		}
 	}
 
-	// Token: 0x17001C7D RID: 7293
-	// (get) Token: 0x06015552 RID: 87378 RVA: 0x00562B6C File Offset: 0x00560D6C
-	// (set) Token: 0x06015553 RID: 87379 RVA: 0x00562B74 File Offset: 0x00560D74
+	// Token: 0x17001CD5 RID: 7381
+	// (get) Token: 0x06012F50 RID: 77648 RVA: 0x0058D8C8 File Offset: 0x0058BAC8
+	// (set) Token: 0x06012F51 RID: 77649 RVA: 0x0058D8D0 File Offset: 0x0058BAD0
 	public EItemId MoneyIcon
 	{
 		get
@@ -51,9 +51,9 @@ public class CostContentItemContext
 		}
 	}
 
-	// Token: 0x17001C7E RID: 7294
-	// (get) Token: 0x06015554 RID: 87380 RVA: 0x00562B89 File Offset: 0x00560D89
-	// (set) Token: 0x06015555 RID: 87381 RVA: 0x00562B94 File Offset: 0x00560D94
+	// Token: 0x17001CD6 RID: 7382
+	// (get) Token: 0x06012F52 RID: 77650 RVA: 0x0058D8E5 File Offset: 0x0058BAE5
+	// (set) Token: 0x06012F53 RID: 77651 RVA: 0x0058D8F0 File Offset: 0x0058BAF0
 	public int ChosenLevel
 	{
 		get
@@ -75,18 +75,18 @@ public class CostContentItemContext
 		}
 	}
 
-	// Token: 0x04009F61 RID: 40801
+	// Token: 0x0400A34A RID: 41802
 	private readonly RoleBreakPreviewViewModel Vm;
 
-	// Token: 0x04009F62 RID: 40802
+	// Token: 0x0400A34B RID: 41803
 	private readonly CostContentItem CachedPanel;
 
-	// Token: 0x04009F63 RID: 40803
+	// Token: 0x0400A34C RID: 41804
 	private int CostNumberCore;
 
-	// Token: 0x04009F64 RID: 40804
+	// Token: 0x0400A34D RID: 41805
 	private EItemId MoneyIconCore = EItemId.Gold;
 
-	// Token: 0x04009F65 RID: 40805
+	// Token: 0x0400A34E RID: 41806
 	private int ChosenLevelCore = -1;
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B90 RID: 2960
+	// Token: 0x02000C72 RID: 3186
 	public struct CommonTouchUiEditGroup : IFlatbufferObject
 	{
-		// Token: 0x170008DC RID: 2268
-		// (get) Token: 0x060057AE RID: 22446 RVA: 0x001FB444 File Offset: 0x001F9644
+		// Token: 0x17000922 RID: 2338
+		// (get) Token: 0x06005D87 RID: 23943 RVA: 0x0021B23C File Offset: 0x0021943C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060057AF RID: 22447 RVA: 0x001FB451 File Offset: 0x001F9651
+		// Token: 0x06005D88 RID: 23944 RVA: 0x0021B249 File Offset: 0x00219449
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060057B0 RID: 22448 RVA: 0x001FB458 File Offset: 0x001F9658
+		// Token: 0x06005D89 RID: 23945 RVA: 0x0021B250 File Offset: 0x00219450
 		public static CommonTouchUiEditGroup GetRootAsCommonTouchUiEditGroup(ByteBuffer _bb)
 		{
 			return CommonTouchUiEditGroup.GetRootAsCommonTouchUiEditGroup(_bb, default(CommonTouchUiEditGroup));
 		}
 
-		// Token: 0x060057B1 RID: 22449 RVA: 0x001FB474 File Offset: 0x001F9674
+		// Token: 0x06005D8A RID: 23946 RVA: 0x0021B26C File Offset: 0x0021946C
 		public static CommonTouchUiEditGroup GetRootAsCommonTouchUiEditGroup(ByteBuffer _bb, CommonTouchUiEditGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060057B2 RID: 22450 RVA: 0x001FB491 File Offset: 0x001F9691
+		// Token: 0x06005D8B RID: 23947 RVA: 0x0021B289 File Offset: 0x00219489
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060057B3 RID: 22451 RVA: 0x001FB4A0 File Offset: 0x001F96A0
+		// Token: 0x06005D8C RID: 23948 RVA: 0x0021B298 File Offset: 0x00219498
 		public CommonTouchUiEditGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170008DD RID: 2269
-		// (get) Token: 0x060057B4 RID: 22452 RVA: 0x001FB4B0 File Offset: 0x001F96B0
+		// Token: 0x17000923 RID: 2339
+		// (get) Token: 0x06005D8D RID: 23949 RVA: 0x0021B2A8 File Offset: 0x002194A8
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170008DE RID: 2270
-		// (get) Token: 0x060057B5 RID: 22453 RVA: 0x001FB4EC File Offset: 0x001F96EC
+		// Token: 0x17000924 RID: 2340
+		// (get) Token: 0x06005D8E RID: 23950 RVA: 0x0021B2E4 File Offset: 0x002194E4
 		public string BgTexturePath
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060057B6 RID: 22454 RVA: 0x001FB523 File Offset: 0x001F9723
+		// Token: 0x06005D8F RID: 23951 RVA: 0x0021B31B File Offset: 0x0021951B
 		public Span<byte> GetBgTexturePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060057B7 RID: 22455 RVA: 0x001FB532 File Offset: 0x001F9732
+		// Token: 0x06005D90 RID: 23952 RVA: 0x0021B32A File Offset: 0x0021952A
 		public byte[] GetBgTexturePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004B9F RID: 19359
+		// Token: 0x04005181 RID: 20865
 		private Table __p;
 	}
 }

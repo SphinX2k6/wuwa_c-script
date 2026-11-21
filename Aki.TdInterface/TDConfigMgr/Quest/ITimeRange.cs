@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011A0 RID: 4512
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012DA RID: 4826
 	public class ITimeRange
 	{
-		// Token: 0x0600666A RID: 26218 RVA: 0x000F56A8 File Offset: 0x000F38A8
+		// Token: 0x06006CA1 RID: 27809 RVA: 0x00102E74 File Offset: 0x00101074
 		private ITimeRange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600666B RID: 26219 RVA: 0x000F56E0 File Offset: 0x000F38E0
+		// Token: 0x06006CA2 RID: 27810 RVA: 0x00102EAC File Offset: 0x001010AC
 		public static ITimeRange Create([Nullable(2)] ITimeRange instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600666C RID: 26220 RVA: 0x000F56F3 File Offset: 0x000F38F3
+		// Token: 0x06006CA3 RID: 27811 RVA: 0x00102EBF File Offset: 0x001010BF
 		public static ITimeRange CreateFromSetValue([Nullable(2)] ITimeRange_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600666D RID: 26221 RVA: 0x000F5706 File Offset: 0x000F3906
+		// Token: 0x06006CA4 RID: 27812 RVA: 0x00102ED2 File Offset: 0x001010D2
 		public ITimeRange_SetValue ToSetValue()
 		{
 			return new ITimeRange_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700214A RID: 8522
-		// (get) Token: 0x0600666E RID: 26222 RVA: 0x000F5728 File Offset: 0x000F3928
-		// (set) Token: 0x0600666F RID: 26223 RVA: 0x000F5789 File Offset: 0x000F3989
+		// Token: 0x17002309 RID: 8969
+		// (get) Token: 0x06006CA5 RID: 27813 RVA: 0x00102EF4 File Offset: 0x001010F4
+		// (set) Token: 0x06006CA6 RID: 27814 RVA: 0x00102F55 File Offset: 0x00101155
 		public virtual IDateTime StartTime
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700214B RID: 8523
-		// (get) Token: 0x06006670 RID: 26224 RVA: 0x000F57A0 File Offset: 0x000F39A0
-		// (set) Token: 0x06006671 RID: 26225 RVA: 0x000F5801 File Offset: 0x000F3A01
+		// Token: 0x1700230A RID: 8970
+		// (get) Token: 0x06006CA7 RID: 27815 RVA: 0x00102F6C File Offset: 0x0010116C
+		// (set) Token: 0x06006CA8 RID: 27816 RVA: 0x00102FCD File Offset: 0x001011CD
 		public virtual IDateTime EndTime
 		{
 			get
@@ -120,24 +118,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D71 RID: 15729
+		// Token: 0x040040D9 RID: 16601
 		[Nullable(2)]
 		protected ITimeRange FbInstance;
 
-		// Token: 0x04003D72 RID: 15730
+		// Token: 0x040040DA RID: 16602
 		[Nullable(2)]
 		protected ITimeRange_SetValue PocoInterface;
 
-		// Token: 0x04003D73 RID: 15731
+		// Token: 0x040040DB RID: 16603
 		private IDateTime _StartTimeCache;
 
-		// Token: 0x04003D74 RID: 15732
+		// Token: 0x040040DC RID: 16604
 		private bool _StartTimeInited;
 
-		// Token: 0x04003D75 RID: 15733
+		// Token: 0x040040DD RID: 16605
 		private IDateTime _EndTimeCache;
 
-		// Token: 0x04003D76 RID: 15734
+		// Token: 0x040040DE RID: 16606
 		private bool _EndTimeInited;
 	}
 }

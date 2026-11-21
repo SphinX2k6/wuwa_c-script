@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D38 RID: 19768
+	// Token: 0x02003CF7 RID: 15607
 	[NullableContext(1)]
 	public interface IRoleDevelopOverviewMaterialItemData
 	{
-		// Token: 0x17007E48 RID: 32328
-		// (get) Token: 0x06033135 RID: 209205
-		// (set) Token: 0x06033136 RID: 209206
+		// Token: 0x170051F8 RID: 20984
+		// (get) Token: 0x06027F30 RID: 163632
+		// (set) Token: 0x06027F31 RID: 163633
 		RoleDevelopItemGroup GroupItem { get; set; }
 
-		// Token: 0x17007E49 RID: 32329
-		// (get) Token: 0x06033137 RID: 209207
-		// (set) Token: 0x06033138 RID: 209208
+		// Token: 0x170051F9 RID: 20985
+		// (get) Token: 0x06027F32 RID: 163634
+		// (set) Token: 0x06027F33 RID: 163635
 		Action<RoleDevelopItemGroup> JumpCallback { get; set; }
 	}
 }

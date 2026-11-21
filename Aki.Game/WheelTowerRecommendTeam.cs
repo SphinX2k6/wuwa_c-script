@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200159E RID: 5534
+// Token: 0x02000A56 RID: 2646
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -17,9 +17,9 @@ using UnrealEngine;
 })]
 public class WheelTowerRecommendTeam : GridProxyAbstract<NewTowerRecommendTeam>
 {
-	// Token: 0x17000D79 RID: 3449
-	// (get) Token: 0x06009D89 RID: 40329 RVA: 0x00222E0A File Offset: 0x0022100A
-	// (set) Token: 0x06009D8A RID: 40330 RVA: 0x00222E12 File Offset: 0x00221012
+	// Token: 0x17000D9A RID: 3482
+	// (get) Token: 0x06007167 RID: 29031 RVA: 0x0022CBBA File Offset: 0x0022ADBA
+	// (set) Token: 0x06007168 RID: 29032 RVA: 0x0022CBC2 File Offset: 0x0022ADC2
 	[Nullable(new byte[]
 	{
 		2,
@@ -35,7 +35,7 @@ public class WheelTowerRecommendTeam : GridProxyAbstract<NewTowerRecommendTeam>
 		1
 	})] set; }
 
-	// Token: 0x06009D8B RID: 40331 RVA: 0x00222E1C File Offset: 0x0022101C
+	// Token: 0x06007169 RID: 29033 RVA: 0x0022CBCC File Offset: 0x0022ADCC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -77,7 +77,7 @@ public class WheelTowerRecommendTeam : GridProxyAbstract<NewTowerRecommendTeam>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009D8C RID: 40332 RVA: 0x00222F68 File Offset: 0x00221168
+	// Token: 0x0600716A RID: 29034 RVA: 0x0022CD18 File Offset: 0x0022AF18
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerRecommendTeam.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -88,7 +88,7 @@ public class WheelTowerRecommendTeam : GridProxyAbstract<NewTowerRecommendTeam>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009D8D RID: 40333 RVA: 0x00222FAC File Offset: 0x002211AC
+	// Token: 0x0600716B RID: 29035 RVA: 0x0022CD5C File Offset: 0x0022AF5C
 	[NullableContext(1)]
 	public override void Refresh(NewTowerRecommendTeam data, bool isSelected, int gridIndex)
 	{
@@ -146,10 +146,10 @@ public class WheelTowerRecommendTeam : GridProxyAbstract<NewTowerRecommendTeam>
 		interactionGroup.SetInteractable(interactable);
 	}
 
-	// Token: 0x04004573 RID: 17779
+	// Token: 0x04004619 RID: 17945
 	private NewTowerRecommendTeam Data;
 
-	// Token: 0x04004574 RID: 17780
+	// Token: 0x0400461A RID: 17946
 	[Nullable(new byte[]
 	{
 		2,
@@ -158,6 +158,6 @@ public class WheelTowerRecommendTeam : GridProxyAbstract<NewTowerRecommendTeam>
 	})]
 	private GenericLayout<WheelTowerRecommendRoleGridItem, RoleDataWithBranch> RoleLayout;
 
-	// Token: 0x04004575 RID: 17781
+	// Token: 0x0400461B RID: 17947
 	private WheelTowerBuffGridItem BuffItem;
 }

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CAD RID: 19629
+	// Token: 0x02003C5E RID: 15454
 	public enum ERoleListType
 	{
-		// Token: 0x0401AFF7 RID: 110583
+		// Token: 0x04015958 RID: 88408
 		OwnList,
-		// Token: 0x0401AFF8 RID: 110584
+		// Token: 0x04015959 RID: 88409
 		NewList
 	}
 }

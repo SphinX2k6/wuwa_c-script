@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200225F RID: 8799
+	// Token: 0x020024CC RID: 9420
 	public class TriggerSystemRandomPlot_SetValue
 	{
-		// Token: 0x0400730F RID: 29455
+		// Token: 0x0400795C RID: 31068
 		public int Id;
 	}
 }

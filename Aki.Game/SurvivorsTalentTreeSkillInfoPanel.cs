@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B50 RID: 11088
+// Token: 0x020020CC RID: 8396
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsTalentTreeSkillInfoPanel : UiPanelBase
 {
-	// Token: 0x06017003 RID: 94211 RVA: 0x005D6FA8 File Offset: 0x005D51A8
+	// Token: 0x06014A34 RID: 84532 RVA: 0x00603B14 File Offset: 0x00601D14
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class SurvivorsTalentTreeSkillInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06017004 RID: 94212 RVA: 0x005D7128 File Offset: 0x005D5328
+	// Token: 0x06014A35 RID: 84533 RVA: 0x00603C94 File Offset: 0x00601E94
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsTalentTreeSkillInfoPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,13 +48,13 @@ public class SurvivorsTalentTreeSkillInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017005 RID: 94213 RVA: 0x005D716B File Offset: 0x005D536B
+	// Token: 0x06014A36 RID: 84534 RVA: 0x00603CD7 File Offset: 0x00601ED7
 	private SurvivorsTalentTreeMediumItemGrid InitGridItem()
 	{
 		return new SurvivorsTalentTreeMediumItemGrid();
 	}
 
-	// Token: 0x06017006 RID: 94214 RVA: 0x005D7174 File Offset: 0x005D5374
+	// Token: 0x06014A37 RID: 84535 RVA: 0x00603CE0 File Offset: 0x00601EE0
 	public UniTask RefreshAsync(SurvivorsTalentNode talentNode)
 	{
 		SurvivorsTalentTreeSkillInfoPanel.<RefreshAsync>d__8 <RefreshAsync>d__;
@@ -66,7 +66,7 @@ public class SurvivorsTalentTreeSkillInfoPanel : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017007 RID: 94215 RVA: 0x005D71C0 File Offset: 0x005D53C0
+	// Token: 0x06014A38 RID: 84536 RVA: 0x00603D2C File Offset: 0x00601F2C
 	private void OnClickConfirmBtn(int _)
 	{
 		if (!this.CostItem.IsEnough)
@@ -90,17 +90,17 @@ public class SurvivorsTalentTreeSkillInfoPanel : UiPanelBase
 		});
 	}
 
-	// Token: 0x0400ABB1 RID: 43953
+	// Token: 0x0400AFB7 RID: 44983
 	private SurvivorsTalentNode TalentNode;
 
-	// Token: 0x0400ABB2 RID: 43954
+	// Token: 0x0400AFB8 RID: 44984
 	[Nullable(2)]
 	private ButtonItem ConfirmBtnItem;
 
-	// Token: 0x0400ABB3 RID: 43955
+	// Token: 0x0400AFB9 RID: 44985
 	private CommonCostItem CostItem;
 
-	// Token: 0x0400ABB4 RID: 43956
+	// Token: 0x0400AFBA RID: 44986
 	[Nullable(new byte[]
 	{
 		2,
@@ -108,7 +108,7 @@ public class SurvivorsTalentTreeSkillInfoPanel : UiPanelBase
 	})]
 	private GenericLayout<SurvivorsTalentTreeMediumItemGrid, int> ItemLayout;
 
-	// Token: 0x0400ABB5 RID: 43957
+	// Token: 0x0400AFBB RID: 44987
 	[Nullable(2)]
 	private FunctionalPanelConditionLock LockTipsItem;
 }

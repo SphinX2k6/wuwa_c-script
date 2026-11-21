@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D62 RID: 7522
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F73 RID: 8051
 	public class IPromptStyleBattle2 : IPromptStyleBase
 	{
-		// Token: 0x0600A153 RID: 41299 RVA: 0x0016F908 File Offset: 0x0016DB08
+		// Token: 0x0600AB3F RID: 43839 RVA: 0x00183D2C File Offset: 0x00181F2C
 		private IPromptStyleBattle2_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A154 RID: 41300 RVA: 0x0016F940 File Offset: 0x0016DB40
+		// Token: 0x0600AB40 RID: 43840 RVA: 0x00183D64 File Offset: 0x00181F64
 		public static IPromptStyleBattle2 Create([Nullable(2)] IPromptStyleBattle2 instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A155 RID: 41301 RVA: 0x0016F953 File Offset: 0x0016DB53
+		// Token: 0x0600AB41 RID: 43841 RVA: 0x00183D77 File Offset: 0x00181F77
 		public static IPromptStyleBattle2 CreateFromSetValue([Nullable(2)] IPromptStyleBattle2_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A156 RID: 41302 RVA: 0x0016F966 File Offset: 0x0016DB66
+		// Token: 0x0600AB42 RID: 43842 RVA: 0x00183D8A File Offset: 0x00181F8A
 		public new IPromptStyleBattle2_SetValue ToSetValue()
 		{
 			return new IPromptStyleBattle2_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031ED RID: 12781
-		// (get) Token: 0x0600A157 RID: 41303 RVA: 0x0016F979 File Offset: 0x0016DB79
-		// (set) Token: 0x0600A158 RID: 41304 RVA: 0x0016F9A4 File Offset: 0x0016DBA4
+		// Token: 0x17003481 RID: 13441
+		// (get) Token: 0x0600AB43 RID: 43843 RVA: 0x00183D9D File Offset: 0x00181F9D
+		// (set) Token: 0x0600AB44 RID: 43844 RVA: 0x00183DC8 File Offset: 0x00181FC8
 		public override EPromptStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006118 RID: 24856
+		// Token: 0x04006694 RID: 26260
 		[Nullable(2)]
 		protected new IPromptStyleBattle2 FbInstance;
 
-		// Token: 0x04006119 RID: 24857
+		// Token: 0x04006695 RID: 26261
 		[Nullable(2)]
 		protected new IPromptStyleBattle2_SetValue PocoInterface;
 	}

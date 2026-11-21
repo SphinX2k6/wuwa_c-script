@@ -6,13 +6,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006955 RID: 26965
+	// Token: 0x02005AB0 RID: 23216
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventLockInputState : Singleton
 	{
-		// Token: 0x17009806 RID: 38918
-		// (get) Token: 0x060432ED RID: 275181 RVA: 0x01061C77 File Offset: 0x0105FE77
+		// Token: 0x17006CE6 RID: 27878
+		// (get) Token: 0x06039324 RID: 234276 RVA: 0x01005ED7 File Offset: 0x010040D7
 		public bool RealLockInput
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060432EE RID: 275182 RVA: 0x01061C7F File Offset: 0x0105FE7F
+		// Token: 0x06039325 RID: 234277 RVA: 0x01005EDF File Offset: 0x010040DF
 		public void Lock(List<string> tagNames)
 		{
 			bool flag = !this.InnerLockInput;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060432EF RID: 275183 RVA: 0x01061CAB File Offset: 0x0105FEAB
+		// Token: 0x06039326 RID: 234278 RVA: 0x01005F0B File Offset: 0x0100410B
 		public void Unlock()
 		{
 			bool innerLockInput = this.InnerLockInput;
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060432F0 RID: 275184 RVA: 0x01061CDF File Offset: 0x0105FEDF
+		// Token: 0x06039327 RID: 234279 RVA: 0x01005F3F File Offset: 0x0100413F
 		public bool IsLockInput()
 		{
 			return !this.GmViewOpening && this.InnerLockInput;
 		}
 
-		// Token: 0x17009807 RID: 38919
-		// (get) Token: 0x060432F1 RID: 275185 RVA: 0x01061CF1 File Offset: 0x0105FEF1
+		// Token: 0x17006CE7 RID: 27879
+		// (get) Token: 0x06039328 RID: 234280 RVA: 0x01005F51 File Offset: 0x01004151
 		public bool IsInputTagHasUiInputRoot
 		{
 			get
@@ -62,8 +62,8 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x17009808 RID: 38920
-		// (get) Token: 0x060432F2 RID: 275186 RVA: 0x01061D1A File Offset: 0x0105FF1A
+		// Token: 0x17006CE8 RID: 27880
+		// (get) Token: 0x06039329 RID: 234281 RVA: 0x01005F7A File Offset: 0x0100417A
 		public static LevelEventLockInputState Instance
 		{
 			get
@@ -77,12 +77,12 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060432F3 RID: 275187 RVA: 0x01061D3D File Offset: 0x0105FF3D
+		// Token: 0x0603932A RID: 234282 RVA: 0x01005F9D File Offset: 0x0100419D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060432F4 RID: 275188 RVA: 0x01061D3F File Offset: 0x0105FF3F
+		// Token: 0x0603932B RID: 234283 RVA: 0x01005F9F File Offset: 0x0100419F
 		public static void ResetStaticDefaultValue()
 		{
 			LevelEventLockInputState instance = LevelEventLockInputState._instance;
@@ -93,28 +93,28 @@ namespace CSharpScript.Game.LevelGamePlay
 			LevelEventLockInputState._instance = null;
 		}
 
-		// Token: 0x060432F5 RID: 275189 RVA: 0x01061D58 File Offset: 0x0105FF58
+		// Token: 0x0603932C RID: 234284 RVA: 0x01005FB8 File Offset: 0x010041B8
 		static LevelEventLockInputState()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelEventLockInputState.CreateStaticDefaultValue), new Action(LevelEventLockInputState.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022FBC RID: 143292
+		// Token: 0x0401E1A6 RID: 123302
 		private bool InnerLockInput;
 
-		// Token: 0x04022FBD RID: 143293
+		// Token: 0x0401E1A7 RID: 123303
 		public bool GmViewOpening;
 
-		// Token: 0x04022FBE RID: 143294
+		// Token: 0x0401E1A8 RID: 123304
 		public List<string> InputTagNames = new List<string>();
 
-		// Token: 0x04022FBF RID: 143295
+		// Token: 0x0401E1A9 RID: 123305
 		public List<EUiViewName> InputLimitView = new List<EUiViewName>();
 
-		// Token: 0x04022FC0 RID: 143296
+		// Token: 0x0401E1AA RID: 123306
 		public bool InputLimitEsc;
 
-		// Token: 0x04022FC1 RID: 143297
+		// Token: 0x0401E1AB RID: 123307
 		[Nullable(2)]
 		private static LevelEventLockInputState _instance;
 	}

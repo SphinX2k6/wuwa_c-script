@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FBC RID: 16316
+	// Token: 0x020043FD RID: 17405
 	public struct IProgressBarLeftType : IFlatbufferObject
 	{
-		// Token: 0x170071F3 RID: 29171
-		// (get) Token: 0x06017548 RID: 95560 RVA: 0x0035CE90 File Offset: 0x0035B090
+		// Token: 0x170077F1 RID: 30705
+		// (get) Token: 0x06018BD7 RID: 101335 RVA: 0x00386AA8 File Offset: 0x00384CA8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017549 RID: 95561 RVA: 0x0035CE9D File Offset: 0x0035B09D
+		// Token: 0x06018BD8 RID: 101336 RVA: 0x00386AB5 File Offset: 0x00384CB5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601754A RID: 95562 RVA: 0x0035CEA4 File Offset: 0x0035B0A4
+		// Token: 0x06018BD9 RID: 101337 RVA: 0x00386ABC File Offset: 0x00384CBC
 		public static IProgressBarLeftType GetRootAsIProgressBarLeftType(ByteBuffer _bb)
 		{
 			return IProgressBarLeftType.GetRootAsIProgressBarLeftType(_bb, default(IProgressBarLeftType));
 		}
 
-		// Token: 0x0601754B RID: 95563 RVA: 0x0035CEC0 File Offset: 0x0035B0C0
+		// Token: 0x06018BDA RID: 101338 RVA: 0x00386AD8 File Offset: 0x00384CD8
 		public static IProgressBarLeftType GetRootAsIProgressBarLeftType(ByteBuffer _bb, IProgressBarLeftType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601754C RID: 95564 RVA: 0x0035CEDD File Offset: 0x0035B0DD
+		// Token: 0x06018BDB RID: 101339 RVA: 0x00386AF5 File Offset: 0x00384CF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601754D RID: 95565 RVA: 0x0035CEEC File Offset: 0x0035B0EC
+		// Token: 0x06018BDC RID: 101340 RVA: 0x00386B04 File Offset: 0x00384D04
 		public IProgressBarLeftType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170071F4 RID: 29172
-		// (get) Token: 0x0601754E RID: 95566 RVA: 0x0035CEFC File Offset: 0x0035B0FC
+		// Token: 0x170077F2 RID: 30706
+		// (get) Token: 0x06018BDD RID: 101341 RVA: 0x00386B14 File Offset: 0x00384D14
 		public EProgressBarLeftType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601754F RID: 95567 RVA: 0x0035CF38 File Offset: 0x0035B138
+		// Token: 0x06018BDE RID: 101342 RVA: 0x00386B50 File Offset: 0x00384D50
 		public static Offset<IProgressBarLeftType> CreateIProgressBarLeftType(FlatBufferBuilder builder, EProgressBarLeftType Type = EProgressBarLeftType.UseCount)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IProgressBarLeftType.EndIProgressBarLeftType(builder);
 		}
 
-		// Token: 0x06017550 RID: 95568 RVA: 0x0035CF4E File Offset: 0x0035B14E
+		// Token: 0x06018BDF RID: 101343 RVA: 0x00386B66 File Offset: 0x00384D66
 		public static void StartIProgressBarLeftType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06017551 RID: 95569 RVA: 0x0035CF57 File Offset: 0x0035B157
+		// Token: 0x06018BE0 RID: 101344 RVA: 0x00386B6F File Offset: 0x00384D6F
 		public static void AddType(FlatBufferBuilder builder, EProgressBarLeftType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017552 RID: 95570 RVA: 0x0035CF62 File Offset: 0x0035B162
+		// Token: 0x06018BE1 RID: 101345 RVA: 0x00386B7A File Offset: 0x00384D7A
 		public static Offset<IProgressBarLeftType> EndIProgressBarLeftType(FlatBufferBuilder builder)
 		{
 			return new Offset<IProgressBarLeftType>(builder.EndTable());
 		}
 
-		// Token: 0x06017553 RID: 95571 RVA: 0x0035CF70 File Offset: 0x0035B170
+		// Token: 0x06018BE2 RID: 101346 RVA: 0x00386B88 File Offset: 0x00384D88
 		public IProgressBarLeftTypeT UnPack()
 		{
 			IProgressBarLeftTypeT progressBarLeftTypeT = new IProgressBarLeftTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return progressBarLeftTypeT;
 		}
 
-		// Token: 0x06017554 RID: 95572 RVA: 0x0035CF8B File Offset: 0x0035B18B
+		// Token: 0x06018BE3 RID: 101347 RVA: 0x00386BA3 File Offset: 0x00384DA3
 		public void UnPackTo(IProgressBarLeftTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06017555 RID: 95573 RVA: 0x0035CF9C File Offset: 0x0035B19C
+		// Token: 0x06018BE4 RID: 101348 RVA: 0x00386BB4 File Offset: 0x00384DB4
 		public static Offset<IProgressBarLeftType> Pack(FlatBufferBuilder builder, IProgressBarLeftTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IProgressBarLeftType.CreateIProgressBarLeftType(builder, _o.Type);
 		}
 
-		// Token: 0x0400BA29 RID: 47657
+		// Token: 0x0400C40E RID: 50190
 		private Table __p;
 	}
 }

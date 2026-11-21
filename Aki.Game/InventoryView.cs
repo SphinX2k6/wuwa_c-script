@@ -22,30 +22,30 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FCC RID: 8140
+// Token: 0x0200149F RID: 5279
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(false)]
+[GeneratePropertyAccessMethod(false, true, null)]
 public class InventoryView : UiViewBase
 {
-	// Token: 0x0600FEA8 RID: 65192 RVA: 0x003DDA15 File Offset: 0x003DBC15
+	// Token: 0x0600D310 RID: 54032 RVA: 0x003E9FF1 File Offset: 0x003E81F1
 	private bool IsRealPlayerInventory()
 	{
 		return !RecallQuestModel.Instance.IsInRecallInstance();
 	}
 
-	// Token: 0x0600FEA9 RID: 65193 RVA: 0x003DDA26 File Offset: 0x003DBC26
+	// Token: 0x0600D311 RID: 54033 RVA: 0x003EA002 File Offset: 0x003E8202
 	private bool ShouldHandlePlayerInventoryServerNotices()
 	{
 		return this.IsRealPlayerInventory();
 	}
 
-	// Token: 0x0600FEAA RID: 65194 RVA: 0x003DDA30 File Offset: 0x003DBC30
+	// Token: 0x0600D312 RID: 54034 RVA: 0x003EA00C File Offset: 0x003E820C
 	public InventoryView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FEAB RID: 65195 RVA: 0x003DDA94 File Offset: 0x003DBC94
+	// Token: 0x0600D313 RID: 54035 RVA: 0x003EA070 File Offset: 0x003E8270
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 24;
@@ -122,7 +122,7 @@ public class InventoryView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FEAC RID: 65196 RVA: 0x003DDEFC File Offset: 0x003DC0FC
+	// Token: 0x0600D314 RID: 54036 RVA: 0x003EA4D8 File Offset: 0x003E86D8
 	private void InitButtonRelationMap()
 	{
 		this.TipsButtonIndexMap = new Dictionary<ItemViewDefine.ETipsButtonType, int>();
@@ -177,7 +177,7 @@ public class InventoryView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600FEAD RID: 65197 RVA: 0x003DE0C8 File Offset: 0x003DC2C8
+	// Token: 0x0600D315 RID: 54037 RVA: 0x003EA6A4 File Offset: 0x003E88A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		InventoryView.<OnBeforeStartAsync>d__34 <OnBeforeStartAsync>d__;
@@ -188,7 +188,7 @@ public class InventoryView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FEAE RID: 65198 RVA: 0x003DE10B File Offset: 0x003DC30B
+	// Token: 0x0600D316 RID: 54038 RVA: 0x003EA6E7 File Offset: 0x003E88E7
 	private void RefreshCurrencyShow()
 	{
 		if (this.CommonCurrencyItem1 == null || this.CommonCurrencyItem2 == null)
@@ -202,20 +202,20 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEAF RID: 65199 RVA: 0x003DE14A File Offset: 0x003DC34A
+	// Token: 0x0600D317 RID: 54039 RVA: 0x003EA726 File Offset: 0x003E8926
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Emit(EEventName.OnVisionRefineSubNeedAck);
 	}
 
-	// Token: 0x0600FEB0 RID: 65200 RVA: 0x003DE15C File Offset: 0x003DC35C
+	// Token: 0x0600D318 RID: 54040 RVA: 0x003EA738 File Offset: 0x003E8938
 	protected override void OnAfterPlayStartSequence()
 	{
 		int selectedIndex = this.TabComponent.GetSelectedIndex();
 		this.TabComponent.ScrollToToggleByIndex(selectedIndex);
 	}
 
-	// Token: 0x0600FEB1 RID: 65201 RVA: 0x003DE184 File Offset: 0x003DC384
+	// Token: 0x0600D319 RID: 54041 RVA: 0x003EA760 File Offset: 0x003E8960
 	protected override void OnBeforeShow()
 	{
 		int selectedTypeIndex = InventoryModel.Instance.GetSelectedTypeIndex();
@@ -223,14 +223,14 @@ public class InventoryView : UiViewBase
 		this.SelectedItemTypeHandle(selectedTypeIndex);
 	}
 
-	// Token: 0x0600FEB2 RID: 65202 RVA: 0x003DE1B0 File Offset: 0x003DC3B0
+	// Token: 0x0600D31A RID: 54042 RVA: 0x003EA78C File Offset: 0x003E898C
 	protected override void OnAfterShow()
 	{
 		this.RefreshAllItemList();
 		this.RequestInvalidItemInfo();
 	}
 
-	// Token: 0x0600FEB3 RID: 65203 RVA: 0x003DE1C0 File Offset: 0x003DC3C0
+	// Token: 0x0600D31B RID: 54043 RVA: 0x003EA79C File Offset: 0x003E899C
 	protected override void OnBeforeDestroy()
 	{
 		foreach (AccessPathButton accessPathButton in this.AccessPathButtonList)
@@ -264,7 +264,7 @@ public class InventoryView : UiViewBase
 		instance.SaveRedDotAttributeItemUniqueIdList();
 	}
 
-	// Token: 0x0600FEB4 RID: 65204 RVA: 0x003DE2CC File Offset: 0x003DC4CC
+	// Token: 0x0600D31C RID: 54044 RVA: 0x003EA8A8 File Offset: 0x003E8AA8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<WeaponItem>, bool, bool>(EEventName.OnAddWeaponItemList, new Action<IReadOnlyList<WeaponItem>, bool, bool>(this.OnAddWeaponItemList));
@@ -287,7 +287,7 @@ public class InventoryView : UiViewBase
 		EventSystem.Instance.Add(EEventName.RoleDevelopNeedItemsChanged, new Action(this.OnRoleDevelopInventoryRefresh));
 	}
 
-	// Token: 0x0600FEB5 RID: 65205 RVA: 0x003DE4CC File Offset: 0x003DC6CC
+	// Token: 0x0600D31D RID: 54045 RVA: 0x003EAAA8 File Offset: 0x003E8CA8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAddWeaponItemList, new Action<IReadOnlyList<WeaponItem>, bool, bool>(this.OnAddWeaponItemList));
@@ -310,7 +310,7 @@ public class InventoryView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.RoleDevelopNeedItemsChanged, new Action(this.OnRoleDevelopInventoryRefresh));
 	}
 
-	// Token: 0x0600FEB6 RID: 65206 RVA: 0x003DE6CC File Offset: 0x003DC8CC
+	// Token: 0x0600D31E RID: 54046 RVA: 0x003EACA8 File Offset: 0x003E8EA8
 	private void TryActivateRefreshItemCdTimer()
 	{
 		this.CurrentCdItemMap.Clear();
@@ -328,7 +328,7 @@ public class InventoryView : UiViewBase
 		this.RefreshTimeDilation();
 	}
 
-	// Token: 0x0600FEB7 RID: 65207 RVA: 0x003DE750 File Offset: 0x003DC950
+	// Token: 0x0600D31F RID: 54047 RVA: 0x003EAD2C File Offset: 0x003E8F2C
 	private void RemoveItemCdTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.RefreshCdTimerId))
@@ -338,13 +338,13 @@ public class InventoryView : UiViewBase
 		this.RefreshCdTimerId = null;
 	}
 
-	// Token: 0x0600FEB8 RID: 65208 RVA: 0x003DE77C File Offset: 0x003DC97C
+	// Token: 0x0600D320 RID: 54048 RVA: 0x003EAD58 File Offset: 0x003E8F58
 	private void OnRefreshCdDisplay(float delta)
 	{
 		this.RefreshItemCdTime();
 	}
 
-	// Token: 0x0600FEB9 RID: 65209 RVA: 0x003DE784 File Offset: 0x003DC984
+	// Token: 0x0600D321 RID: 54049 RVA: 0x003EAD60 File Offset: 0x003E8F60
 	private void RefreshItemCdTime()
 	{
 		List<int> list = new List<int>();
@@ -377,7 +377,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEBA RID: 65210 RVA: 0x003DE8B8 File Offset: 0x003DCAB8
+	// Token: 0x0600D322 RID: 54050 RVA: 0x003EAE94 File Offset: 0x003E9094
 	private void RequestInvalidItemInfo()
 	{
 		if (!this.ShouldHandlePlayerInventoryServerNotices())
@@ -387,7 +387,7 @@ public class InventoryView : UiViewBase
 		InventoryController.Instance.InvalidItemCheckRequest();
 	}
 
-	// Token: 0x0600FEBB RID: 65211 RVA: 0x003DE8CD File Offset: 0x003DCACD
+	// Token: 0x0600D323 RID: 54051 RVA: 0x003EAEA9 File Offset: 0x003E90A9
 	private void OnNotifyInvalidItem(Dictionary<int, int> itemMap)
 	{
 		if (!this.ShouldHandlePlayerInventoryServerNotices())
@@ -402,7 +402,7 @@ public class InventoryView : UiViewBase
 		this.InvalidItemTempList.Add(itemMap);
 	}
 
-	// Token: 0x0600FEBC RID: 65212 RVA: 0x003DE8F4 File Offset: 0x003DCAF4
+	// Token: 0x0600D324 RID: 54052 RVA: 0x003EAED0 File Offset: 0x003E90D0
 	private void CheckInvalidItem()
 	{
 		if (this.InvalidItemTempList.Count > 0)
@@ -414,7 +414,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEBD RID: 65213 RVA: 0x003DE944 File Offset: 0x003DCB44
+	// Token: 0x0600D325 RID: 54053 RVA: 0x003EAF20 File Offset: 0x003E9120
 	private void ShowInvalidItemConfirmBox(Dictionary<int, int> itemMap)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ItemInvalidTips);
@@ -429,7 +429,7 @@ public class InventoryView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600FEBE RID: 65214 RVA: 0x003DE990 File Offset: 0x003DCB90
+	// Token: 0x0600D326 RID: 54054 RVA: 0x003EAF6C File Offset: 0x003E916C
 	private void OnNotifyExpireConvertItem(IReadOnlyList<TItem> beforeItemList, IReadOnlyList<TItem> afterItemList)
 	{
 		if (!this.ShouldHandlePlayerInventoryServerNotices())
@@ -450,7 +450,7 @@ public class InventoryView : UiViewBase
 		this.CheckExpireConvertItem();
 	}
 
-	// Token: 0x0600FEBF RID: 65215 RVA: 0x003DEA00 File Offset: 0x003DCC00
+	// Token: 0x0600D327 RID: 54055 RVA: 0x003EAFDC File Offset: 0x003E91DC
 	private void CheckExpireConvertItem()
 	{
 		if (this.CacheExpireShowDataList.Count > 0)
@@ -461,13 +461,13 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEC0 RID: 65216 RVA: 0x003DEA53 File Offset: 0x003DCC53
+	// Token: 0x0600D328 RID: 54056 RVA: 0x003EB02F File Offset: 0x003E922F
 	private void ShowExpireConvertItemConfirmBox(ItemExpiredAutoConvertTipsViewDefine data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ItemExpiredAutoConvertTipsView, data, null);
 	}
 
-	// Token: 0x0600FEC1 RID: 65217 RVA: 0x003DEA66 File Offset: 0x003DCC66
+	// Token: 0x0600D329 RID: 54057 RVA: 0x003EB042 File Offset: 0x003E9242
 	private void OnClickedDestroyExitButton()
 	{
 		if (this.ViewMode == ItemViewDefine.EItemOperationMode.Destruction)
@@ -476,7 +476,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEC2 RID: 65218 RVA: 0x003DEA78 File Offset: 0x003DCC78
+	// Token: 0x0600D32A RID: 54058 RVA: 0x003EB054 File Offset: 0x003E9254
 	private void OnClickedDestroyEnterButton()
 	{
 		if (this.ViewMode == ItemViewDefine.EItemOperationMode.Normal)
@@ -485,7 +485,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEC3 RID: 65219 RVA: 0x003DEA8C File Offset: 0x003DCC8C
+	// Token: 0x0600D32B RID: 54059 RVA: 0x003EB068 File Offset: 0x003E9268
 	private void OnClickedUseItemButton(int _)
 	{
 		InventoryModel instance = InventoryModel.Instance;
@@ -525,7 +525,7 @@ public class InventoryView : UiViewBase
 		InventoryController.Instance.TryUseItem(selectedItemData.GetConfigId(), 1);
 	}
 
-	// Token: 0x0600FEC4 RID: 65220 RVA: 0x003DEB3C File Offset: 0x003DCD3C
+	// Token: 0x0600D32C RID: 54060 RVA: 0x003EB118 File Offset: 0x003E9318
 	private void OnClickedSpecialItemFuncUseButton(int _)
 	{
 		InventoryModel instance = InventoryModel.Instance;
@@ -556,7 +556,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEC5 RID: 65221 RVA: 0x003DEBBC File Offset: 0x003DCDBC
+	// Token: 0x0600D32D RID: 54061 RVA: 0x003EB198 File Offset: 0x003E9398
 	private void OnClickedWeaponCultivateButton(int _)
 	{
 		global::ItemViewData selectedItemData = InventoryModel.Instance.GetSelectedItemData();
@@ -570,7 +570,7 @@ public class InventoryView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600FEC6 RID: 65222 RVA: 0x003DEBF4 File Offset: 0x003DCDF4
+	// Token: 0x0600D32E RID: 54062 RVA: 0x003EB1D0 File Offset: 0x003E93D0
 	private void OnClickedVisionCultivateButton(int _)
 	{
 		global::ItemViewData selectedItemData = InventoryModel.Instance.GetSelectedItemData();
@@ -584,19 +584,19 @@ public class InventoryView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600FEC7 RID: 65223 RVA: 0x003DEC2A File Offset: 0x003DCE2A
+	// Token: 0x0600D32F RID: 54063 RVA: 0x003EB206 File Offset: 0x003E9406
 	private void OnClickFragmentMemoryButton(int _)
 	{
 		FragmentMemoryController.Instance.OpenFragmentMemoryView();
 	}
 
-	// Token: 0x0600FEC8 RID: 65224 RVA: 0x003DEC36 File Offset: 0x003DCE36
+	// Token: 0x0600D330 RID: 54064 RVA: 0x003EB212 File Offset: 0x003E9412
 	private void OnClickedPhantomPlan()
 	{
 		InventoryController.Instance.OpenManageConfigNewView();
 	}
 
-	// Token: 0x0600FEC9 RID: 65225 RVA: 0x003DEC42 File Offset: 0x003DCE42
+	// Token: 0x0600D331 RID: 54065 RVA: 0x003EB21E File Offset: 0x003E941E
 	private void OnClickedCloseButton()
 	{
 		UiManager.Instance.CloseView(EUiViewName.InventoryView, null);
@@ -606,7 +606,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FECA RID: 65226 RVA: 0x003DEC78 File Offset: 0x003DCE78
+	// Token: 0x0600D332 RID: 54066 RVA: 0x003EB254 File Offset: 0x003E9454
 	private void OnClickedQuestReviewButton(int _)
 	{
 		SpecialItemConfig instance = SpecialItemConfig.Instance;
@@ -628,7 +628,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FECB RID: 65227 RVA: 0x003DECE8 File Offset: 0x003DCEE8
+	// Token: 0x0600D333 RID: 54067 RVA: 0x003EB2C4 File Offset: 0x003E94C4
 	private void OnClickedChineseZitherButton(int _)
 	{
 		int restrictConditionGroupId = InventoryConfig.Instance.GetItemConfig(80700051).Value.RestrictConditionGroupId;
@@ -647,49 +647,49 @@ public class InventoryView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x0600FECC RID: 65228 RVA: 0x003DED69 File Offset: 0x003DCF69
+	// Token: 0x0600D334 RID: 54068 RVA: 0x003EB345 File Offset: 0x003E9545
 	private void OnAddWeaponItemList(IReadOnlyList<WeaponItem> weaponItem, bool bAddFromRole, bool bShowNewTips)
 	{
 		this.RefreshInventoryView();
 	}
 
-	// Token: 0x0600FECD RID: 65229 RVA: 0x003DED71 File Offset: 0x003DCF71
+	// Token: 0x0600D335 RID: 54069 RVA: 0x003EB34D File Offset: 0x003E954D
 	private void OnAddPhantomItemList(IReadOnlyList<Aki.Protocol.PhantomItem> weaponItem, bool isCatch)
 	{
 		this.RefreshInventoryView();
 	}
 
-	// Token: 0x0600FECE RID: 65230 RVA: 0x003DED79 File Offset: 0x003DCF79
+	// Token: 0x0600D336 RID: 54070 RVA: 0x003EB355 File Offset: 0x003E9555
 	private void OnCommonItemCountAnyChange(int configId, int count)
 	{
 		this.RefreshInventoryView();
 	}
 
-	// Token: 0x0600FECF RID: 65231 RVA: 0x003DED81 File Offset: 0x003DCF81
+	// Token: 0x0600D337 RID: 54071 RVA: 0x003EB35D File Offset: 0x003E955D
 	private void OnRoleDevelopInventoryRefresh()
 	{
 		this.RefreshInventoryView();
 	}
 
-	// Token: 0x0600FED0 RID: 65232 RVA: 0x003DED89 File Offset: 0x003DCF89
+	// Token: 0x0600D338 RID: 54072 RVA: 0x003EB365 File Offset: 0x003E9565
 	private void OnRemoveWeaponItem(IReadOnlyList<int> uniqueIdList)
 	{
 		this.RefreshInventoryView();
 	}
 
-	// Token: 0x0600FED1 RID: 65233 RVA: 0x003DED91 File Offset: 0x003DCF91
+	// Token: 0x0600D339 RID: 54073 RVA: 0x003EB36D File Offset: 0x003E956D
 	private void OnRemovePhantomItem(IReadOnlyList<int> uniqueIdList)
 	{
 		this.RefreshInventoryView();
 	}
 
-	// Token: 0x0600FED2 RID: 65234 RVA: 0x003DED99 File Offset: 0x003DCF99
+	// Token: 0x0600D33A RID: 54074 RVA: 0x003EB375 File Offset: 0x003E9575
 	private void OnPhantomItemUpdate()
 	{
 		this.RefreshInventoryView();
 	}
 
-	// Token: 0x0600FED3 RID: 65235 RVA: 0x003DEDA4 File Offset: 0x003DCFA4
+	// Token: 0x0600D33B RID: 54075 RVA: 0x003EB380 File Offset: 0x003E9580
 	private void OnUseBuffItem(int itemConfigId, long endCdTimeStamp, int useCount)
 	{
 		this.TryActivateRefreshItemCdTimer();
@@ -700,7 +700,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FED4 RID: 65236 RVA: 0x003DEDE8 File Offset: 0x003DCFE8
+	// Token: 0x0600D33C RID: 54076 RVA: 0x003EB3C4 File Offset: 0x003E95C4
 	private void OnEquipBuffItemUpdate(int itemConfigId, bool equipped)
 	{
 		if (this.SelectedItemViewData == null)
@@ -714,19 +714,19 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FED5 RID: 65237 RVA: 0x003DEE19 File Offset: 0x003DD019
+	// Token: 0x0600D33D RID: 54077 RVA: 0x003EB3F5 File Offset: 0x003E95F5
 	private void OnItemUse(int configId, int useCount)
 	{
 	}
 
-	// Token: 0x0600FED6 RID: 65238 RVA: 0x003DEE1B File Offset: 0x003DD01B
+	// Token: 0x0600D33E RID: 54078 RVA: 0x003EB3F7 File Offset: 0x003E95F7
 	private void RefreshInventoryView()
 	{
 		this.SetViewMode(this.ViewMode);
 		this.RefreshAllItemList();
 	}
 
-	// Token: 0x0600FED7 RID: 65239 RVA: 0x003DEE30 File Offset: 0x003DD030
+	// Token: 0x0600D33F RID: 54079 RVA: 0x003EB40C File Offset: 0x003E960C
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName != EUiViewName.UseBuffItemView)
@@ -742,13 +742,13 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FED8 RID: 65240 RVA: 0x003DEE96 File Offset: 0x003DD096
+	// Token: 0x0600D340 RID: 54080 RVA: 0x003EB472 File Offset: 0x003E9672
 	private void OnChangedTimeScale()
 	{
 		this.RefreshTimeDilation();
 	}
 
-	// Token: 0x0600FED9 RID: 65241 RVA: 0x003DEEA0 File Offset: 0x003DD0A0
+	// Token: 0x0600D341 RID: 54081 RVA: 0x003EB47C File Offset: 0x003E967C
 	private void RefreshTimeDilation()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.RefreshCdTimerId))
@@ -762,7 +762,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEDA RID: 65242 RVA: 0x003DEEE8 File Offset: 0x003DD0E8
+	// Token: 0x0600D342 RID: 54082 RVA: 0x003EB4C4 File Offset: 0x003E96C4
 	private void OnItemFuncValueChange(int uniqueId)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(uniqueId);
@@ -784,7 +784,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEDB RID: 65243 RVA: 0x003DEF5C File Offset: 0x003DD15C
+	// Token: 0x0600D343 RID: 54083 RVA: 0x003EB538 File Offset: 0x003E9738
 	private void OnItemFuncValueBatchChange(IReadOnlyList<int> uniqueIdList)
 	{
 		InventoryModel instance = InventoryModel.Instance;
@@ -806,7 +806,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEDC RID: 65244 RVA: 0x003DEFE8 File Offset: 0x003DD1E8
+	// Token: 0x0600D344 RID: 54084 RVA: 0x003EB5C4 File Offset: 0x003E97C4
 	private void RefreshNormalItemFunction(ItemDataBase itemData)
 	{
 		int configId = itemData.GetConfigId();
@@ -831,7 +831,7 @@ public class InventoryView : UiViewBase
 		this.SetTipsButtonRedDotVisibleByType(ItemViewDefine.ETipsButtonType.Use, false);
 	}
 
-	// Token: 0x0600FEDD RID: 65245 RVA: 0x003DF064 File Offset: 0x003DD264
+	// Token: 0x0600D345 RID: 54085 RVA: 0x003EB640 File Offset: 0x003E9840
 	private void RefreshBuffEquipItemFunction(ItemDataBase itemData)
 	{
 		bool flag = itemData.IsBuffEquippedItem();
@@ -843,7 +843,7 @@ public class InventoryView : UiViewBase
 		this.SetTipsButtonTextByType(ItemViewDefine.ETipsButtonType.EquipBuffItem, text, null);
 	}
 
-	// Token: 0x0600FEDE RID: 65246 RVA: 0x003DF0B4 File Offset: 0x003DD2B4
+	// Token: 0x0600D346 RID: 54086 RVA: 0x003EB690 File Offset: 0x003E9890
 	private List<ItemViewDefine.ETipsButtonType> GetTipsButtonListByCurrentItemData(ItemDataBase dataBase)
 	{
 		List<ItemViewDefine.ETipsButtonType> list = new List<ItemViewDefine.ETipsButtonType>();
@@ -904,7 +904,7 @@ public class InventoryView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0600FEDF RID: 65247 RVA: 0x003DF1DC File Offset: 0x003DD3DC
+	// Token: 0x0600D347 RID: 54087 RVA: 0x003EB7B8 File Offset: 0x003E99B8
 	private void RefreshSpecialItemText()
 	{
 		if (this.SelectedItemViewData == null)
@@ -930,13 +930,13 @@ public class InventoryView : UiViewBase
 		this.SetTipsButtonTextByType(ItemViewDefine.ETipsButtonType.RouletteEquip, text, null);
 	}
 
-	// Token: 0x0600FEE0 RID: 65248 RVA: 0x003DF247 File Offset: 0x003DD447
+	// Token: 0x0600D348 RID: 54088 RVA: 0x003EB823 File Offset: 0x003E9A23
 	private void InitializeFilterSortComponent()
 	{
 		this.FilterSortEntrance = new FilterSortEntrance<global::ItemViewData>(base.GetItem(12), new TUpdateDataListFunction<global::ItemViewData>(this.OnFilterSortRefresh));
 	}
 
-	// Token: 0x0600FEE1 RID: 65249 RVA: 0x003DF268 File Offset: 0x003DD468
+	// Token: 0x0600D349 RID: 54089 RVA: 0x003EB844 File Offset: 0x003E9A44
 	private void ClearFilterSortComponentData(ItemViewDefine.EItemOperationMode viewMode)
 	{
 		foreach (ItemMainType itemMainType in this.ItemTypeList)
@@ -951,7 +951,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEE2 RID: 65250 RVA: 0x003DF2FC File Offset: 0x003DD4FC
+	// Token: 0x0600D34A RID: 54090 RVA: 0x003EB8D8 File Offset: 0x003E9AD8
 	private void RefreshFilterSortPerformance(InventoryDefine.EItemMainTypeId itemMainType)
 	{
 		ItemMainType? itemMainTypeConfig = InventoryConfig.Instance.GetItemMainTypeConfig((int)itemMainType);
@@ -982,7 +982,7 @@ public class InventoryView : UiViewBase
 		this.RefreshCapacity(itemMainType, list);
 	}
 
-	// Token: 0x0600FEE3 RID: 65251 RVA: 0x003DF3B0 File Offset: 0x003DD5B0
+	// Token: 0x0600D34B RID: 54091 RVA: 0x003EB98C File Offset: 0x003E9B8C
 	private void RefreshPhantomManageButton(InventoryDefine.EItemMainTypeId itemMainType)
 	{
 		base.SetButtonUiActive(21, itemMainType == InventoryDefine.EItemMainTypeId.Phantom && this.ViewMode == ItemViewDefine.EItemOperationMode.Normal);
@@ -991,21 +991,21 @@ public class InventoryView : UiViewBase
 		base.SetButtonUiActive(23, flag && itemMainType == InventoryDefine.EItemMainTypeId.Phantom && this.ViewMode == ItemViewDefine.EItemOperationMode.Normal);
 	}
 
-	// Token: 0x0600FEE4 RID: 65252 RVA: 0x003DF41C File Offset: 0x003DD61C
+	// Token: 0x0600D34C RID: 54092 RVA: 0x003EB9F8 File Offset: 0x003E9BF8
 	private void RefreshFilterSort(int useWayId, List<global::ItemViewData> itemDataList)
 	{
 		EFilterSortConfigId saveConfigId = (this.ViewMode == ItemViewDefine.EItemOperationMode.Normal) ? EFilterSortConfigId.InventoryView : EFilterSortConfigId.InventoryDestroy;
 		this.FilterSortEntrance.UpdateDataWithConfig((EFilterSortGroupId)useWayId, saveConfigId, itemDataList);
 	}
 
-	// Token: 0x0600FEE5 RID: 65253 RVA: 0x003DF444 File Offset: 0x003DD644
+	// Token: 0x0600D34D RID: 54093 RVA: 0x003EBA20 File Offset: 0x003E9C20
 	private bool ShouldApplyDevelopDeficitPinSort()
 	{
 		RoleDevelopModel instance = RoleDevelopModel.Instance;
 		return instance != null && instance.DevTargetRoleId != 0 && InventoryModel.Instance.IsResourceOrMaterialTab();
 	}
 
-	// Token: 0x0600FEE6 RID: 65254 RVA: 0x003DF470 File Offset: 0x003DD670
+	// Token: 0x0600D34E RID: 54094 RVA: 0x003EBA4C File Offset: 0x003E9C4C
 	private List<global::ItemViewData> ApplyDevelopDeficitPinSort(List<global::ItemViewData> itemViewDataList)
 	{
 		if (!this.ShouldApplyDevelopDeficitPinSort())
@@ -1030,7 +1030,7 @@ public class InventoryView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0600FEE7 RID: 65255 RVA: 0x003DF500 File Offset: 0x003DD700
+	// Token: 0x0600D34F RID: 54095 RVA: 0x003EBADC File Offset: 0x003E9CDC
 	[NullableContext(2)]
 	private global::ItemViewData GetCurrentTabMarkViewData()
 	{
@@ -1058,7 +1058,7 @@ public class InventoryView : UiViewBase
 		return this.ItemViewDataList[0];
 	}
 
-	// Token: 0x0600FEE8 RID: 65256 RVA: 0x003DF5BC File Offset: 0x003DD7BC
+	// Token: 0x0600D350 RID: 54096 RVA: 0x003EBB98 File Offset: 0x003E9D98
 	private void OnFilterSortRefresh(List<global::ItemViewData> list, bool isOutSideChange, EFilterSortType operationType)
 	{
 		this.IsReloadData = true;
@@ -1110,7 +1110,7 @@ public class InventoryView : UiViewBase
 		this.IsReSelectType = false;
 	}
 
-	// Token: 0x0600FEE9 RID: 65257 RVA: 0x003DF70C File Offset: 0x003DD90C
+	// Token: 0x0600D351 RID: 54097 RVA: 0x003EBCE8 File Offset: 0x003E9EE8
 	private void RefreshItemScrollView(List<global::ItemViewData> itemViewDataList)
 	{
 		if (this.ItemScrollView == null)
@@ -1128,7 +1128,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEEA RID: 65258 RVA: 0x003DF770 File Offset: 0x003DD970
+	// Token: 0x0600D352 RID: 54098 RVA: 0x003EBD4C File Offset: 0x003E9F4C
 	private void InitializeItemScrollView()
 	{
 		UUIItem item = base.GetItem(7);
@@ -1138,7 +1138,7 @@ public class InventoryView : UiViewBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600FEEB RID: 65259 RVA: 0x003DF7C0 File Offset: 0x003DD9C0
+	// Token: 0x0600D353 RID: 54099 RVA: 0x003EBD9C File Offset: 0x003E9F9C
 	private void InitializePayShopCurrencyItem()
 	{
 		this.CommonCurrencyItem1.RefreshTemp(2, null);
@@ -1149,7 +1149,7 @@ public class InventoryView : UiViewBase
 		this.CommonCurrencyItem2.RefreshAddButtonActive();
 	}
 
-	// Token: 0x0600FEEC RID: 65260 RVA: 0x003DF813 File Offset: 0x003DDA13
+	// Token: 0x0600D354 RID: 54100 RVA: 0x003EBDEF File Offset: 0x003E9FEF
 	private InventoryMediumItemGrid OnGridProxyCreate()
 	{
 		InventoryMediumItemGrid inventoryMediumItemGrid = new InventoryMediumItemGrid();
@@ -1157,7 +1157,7 @@ public class InventoryView : UiViewBase
 		return inventoryMediumItemGrid;
 	}
 
-	// Token: 0x0600FEED RID: 65261 RVA: 0x003DF82C File Offset: 0x003DDA2C
+	// Token: 0x0600D355 RID: 54101 RVA: 0x003EBE08 File Offset: 0x003EA008
 	private void InitItemTypeList()
 	{
 		this.ItemTypeList = InventoryModel.Instance.GetOpenIdMainTypeConfig();
@@ -1168,7 +1168,7 @@ public class InventoryView : UiViewBase
 		this.ItemTypeList.Sort((ItemMainType aTypeConfig, ItemMainType bTypeConfig) => aTypeConfig.SequenceId - bTypeConfig.SequenceId);
 	}
 
-	// Token: 0x0600FEEE RID: 65262 RVA: 0x003DF884 File Offset: 0x003DDA84
+	// Token: 0x0600D356 RID: 54102 RVA: 0x003EBE60 File Offset: 0x003EA060
 	private UniTask CreateAllItemMainTypeButton(int index)
 	{
 		InventoryView.<CreateAllItemMainTypeButton>d__99 <CreateAllItemMainTypeButton>d__;
@@ -1180,7 +1180,7 @@ public class InventoryView : UiViewBase
 		return <CreateAllItemMainTypeButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FEEF RID: 65263 RVA: 0x003DF8D0 File Offset: 0x003DDAD0
+	// Token: 0x0600D357 RID: 54103 RVA: 0x003EBEAC File Offset: 0x003EA0AC
 	private List<CommonTabItemData> GetTabItemData(List<ItemMainType> tabData)
 	{
 		int count = tabData.Count;
@@ -1196,7 +1196,7 @@ public class InventoryView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0600FEF0 RID: 65264 RVA: 0x003DF92C File Offset: 0x003DDB2C
+	// Token: 0x0600D358 RID: 54104 RVA: 0x003EBF08 File Offset: 0x003EA108
 	private ERedDotName? GetRedDotNameByItemId(int id)
 	{
 		ERedDotName? result = null;
@@ -1233,14 +1233,14 @@ public class InventoryView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x0600FEF1 RID: 65265 RVA: 0x003DF9CF File Offset: 0x003DDBCF
+	// Token: 0x0600D359 RID: 54105 RVA: 0x003EBFAB File Offset: 0x003EA1AB
 	[NullableContext(2)]
 	private CommonTabItem ProxyCreateTabItem(UUIItem uiItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x0600FEF2 RID: 65266 RVA: 0x003DF9D8 File Offset: 0x003DDBD8
+	// Token: 0x0600D35A RID: 54106 RVA: 0x003EBFB4 File Offset: 0x003EA1B4
 	private void OnTypeButtonClicked(int index)
 	{
 		InventoryModel instance = InventoryModel.Instance;
@@ -1257,21 +1257,21 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEF3 RID: 65267 RVA: 0x003DFA24 File Offset: 0x003DDC24
+	// Token: 0x0600D35B RID: 54107 RVA: 0x003EC000 File Offset: 0x003EA200
 	private CommonTabData GetCommonData(int index)
 	{
 		ItemMainType itemMainType = this.ItemTypeList[index];
 		return new CommonTabData(itemMainType.Icon, new CommonTabTitleData(itemMainType.Name, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x0600FEF4 RID: 65268 RVA: 0x003DFA5C File Offset: 0x003DDC5C
+	// Token: 0x0600D35C RID: 54108 RVA: 0x003EC038 File Offset: 0x003EA238
 	private void SelectedCurrentIndex()
 	{
 		int selectedTypeIndex = InventoryModel.Instance.GetSelectedTypeIndex();
 		this.SelectedItemTypeHandle(selectedTypeIndex);
 	}
 
-	// Token: 0x0600FEF5 RID: 65269 RVA: 0x003DFA7C File Offset: 0x003DDC7C
+	// Token: 0x0600D35D RID: 54109 RVA: 0x003EC058 File Offset: 0x003EA258
 	private void SelectedItemTypeHandle(int index)
 	{
 		this.IsReSelectType = true;
@@ -1282,7 +1282,7 @@ public class InventoryView : UiViewBase
 		this.RefreshMaxCapacityNoticeAnimation();
 	}
 
-	// Token: 0x0600FEF6 RID: 65270 RVA: 0x003DFAC0 File Offset: 0x003DDCC0
+	// Token: 0x0600D35E RID: 54110 RVA: 0x003EC09C File Offset: 0x003EA29C
 	private List<global::ItemViewData> GenerateItemViewData(InventoryDefine.EItemMainTypeId itemMainType)
 	{
 		this.ClearAllItemViewData();
@@ -1315,14 +1315,14 @@ public class InventoryView : UiViewBase
 		return this.ItemViewDataList;
 	}
 
-	// Token: 0x0600FEF7 RID: 65271 RVA: 0x003DFBB4 File Offset: 0x003DDDB4
+	// Token: 0x0600D35F RID: 54111 RVA: 0x003EC190 File Offset: 0x003EA390
 	private void ClearAllItemViewData()
 	{
 		this.ItemViewDataList.Clear();
 		this.ItemViewDataMap.Clear();
 	}
 
-	// Token: 0x0600FEF8 RID: 65272 RVA: 0x003DFBCC File Offset: 0x003DDDCC
+	// Token: 0x0600D360 RID: 54112 RVA: 0x003EC1A8 File Offset: 0x003EA3A8
 	private void RefreshAllItemList()
 	{
 		if (this.ItemTypeList == null)
@@ -1381,7 +1381,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEF9 RID: 65273 RVA: 0x003DFD98 File Offset: 0x003DDF98
+	// Token: 0x0600D361 RID: 54113 RVA: 0x003EC374 File Offset: 0x003EA574
 	private void RefreshMaxCapacityNoticeAnimation()
 	{
 		int selectedTypeIndex = InventoryModel.Instance.GetSelectedTypeIndex();
@@ -1397,7 +1397,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEFA RID: 65274 RVA: 0x003DFE40 File Offset: 0x003DE040
+	// Token: 0x0600D362 RID: 54114 RVA: 0x003EC41C File Offset: 0x003EA61C
 	private void PlayMaxCapacityNoticeSequence(bool isOn)
 	{
 		if (isOn)
@@ -1408,7 +1408,7 @@ public class InventoryView : UiViewBase
 		this.UiViewSequence.StopSequenceByKey("Notice", false, true);
 	}
 
-	// Token: 0x0600FEFB RID: 65275 RVA: 0x003DFE80 File Offset: 0x003DE080
+	// Token: 0x0600D363 RID: 54115 RVA: 0x003EC45C File Offset: 0x003EA65C
 	private global::ItemViewData NewItemViewData(InventoryDefine.IItemViewDataInfo itemViewInfo)
 	{
 		global::ItemViewData itemViewData = new global::ItemViewData(itemViewInfo);
@@ -1433,7 +1433,7 @@ public class InventoryView : UiViewBase
 		return itemViewData;
 	}
 
-	// Token: 0x0600FEFC RID: 65276 RVA: 0x003DFF44 File Offset: 0x003DE144
+	// Token: 0x0600D364 RID: 54116 RVA: 0x003EC520 File Offset: 0x003EA720
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1449,7 +1449,7 @@ public class InventoryView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x0600FEFD RID: 65277 RVA: 0x003DFF64 File Offset: 0x003DE164
+	// Token: 0x0600D365 RID: 54117 RVA: 0x003EC540 File Offset: 0x003EA740
 	private void NewCommonItemViewData(int configId, int count, int stackCount, int qualityId, bool isLock, bool isDeprecate, bool isNewItem, bool hasRedDot, CommonItemData commonItemData)
 	{
 		if (stackCount <= 0)
@@ -1474,7 +1474,7 @@ public class InventoryView : UiViewBase
 		this.NewItemViewData(itemViewDataInfo);
 	}
 
-	// Token: 0x0600FEFE RID: 65278 RVA: 0x003DFFF4 File Offset: 0x003DE1F4
+	// Token: 0x0600D366 RID: 54118 RVA: 0x003EC5D0 File Offset: 0x003EA7D0
 	[NullableContext(2)]
 	private void SelectedItem(global::ItemViewData selectedItemViewData)
 	{
@@ -1514,7 +1514,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FEFF RID: 65279 RVA: 0x003E00A8 File Offset: 0x003DE2A8
+	// Token: 0x0600D367 RID: 54119 RVA: 0x003EC684 File Offset: 0x003EA884
 	private void RefreshCapacity(InventoryDefine.EItemMainTypeId itemMainTypeId, List<global::ItemViewData> allItemDataList)
 	{
 		InventoryConfig instance = InventoryConfig.Instance;
@@ -1556,7 +1556,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF00 RID: 65280 RVA: 0x003E01CC File Offset: 0x003DE3CC
+	// Token: 0x0600D368 RID: 54120 RVA: 0x003EC7A8 File Offset: 0x003EA9A8
 	private void RefreshNoneItemVisible(bool bVisible)
 	{
 		UUIItem item = base.GetItem(4);
@@ -1570,7 +1570,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF01 RID: 65281 RVA: 0x003E0220 File Offset: 0x003DE420
+	// Token: 0x0600D369 RID: 54121 RVA: 0x003EC7FC File Offset: 0x003EA9FC
 	private void OnItemButtonClicked(global::ItemViewData itemViewData)
 	{
 		if (this.SelectedItemViewData == itemViewData)
@@ -1587,7 +1587,7 @@ public class InventoryView : UiViewBase
 		this.SelectedItem(itemViewData);
 	}
 
-	// Token: 0x0600FF02 RID: 65282 RVA: 0x003E0288 File Offset: 0x003DE488
+	// Token: 0x0600D36A RID: 54122 RVA: 0x003EC864 File Offset: 0x003EAA64
 	private void SaveCurrentMarkPosition()
 	{
 		int selectedTypeIndex = InventoryModel.Instance.GetSelectedTypeIndex();
@@ -1598,7 +1598,7 @@ public class InventoryView : UiViewBase
 		tabMarkUniqueIds[num] = ((selectedItemViewData != null) ? selectedItemViewData.GetUniqueId() : 0);
 	}
 
-	// Token: 0x0600FF03 RID: 65283 RVA: 0x003E02D0 File Offset: 0x003DE4D0
+	// Token: 0x0600D36B RID: 54123 RVA: 0x003EC8AC File Offset: 0x003EAAAC
 	private void RefreshSelectedItemView(global::ItemViewData itemViewData)
 	{
 		if (this.SelectedItemViewData != null)
@@ -1618,7 +1618,7 @@ public class InventoryView : UiViewBase
 		this.RefreshItemTipsFunction(itemViewData);
 	}
 
-	// Token: 0x0600FF04 RID: 65284 RVA: 0x003E0354 File Offset: 0x003DE554
+	// Token: 0x0600D36C RID: 54124 RVA: 0x003EC930 File Offset: 0x003EAB30
 	private void RemoveItemViewNewFlag(global::ItemViewData removeItemViewData)
 	{
 		removeItemViewData.RemoveNewItem();
@@ -1640,7 +1640,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF05 RID: 65285 RVA: 0x003E03C8 File Offset: 0x003DE5C8
+	// Token: 0x0600D36D RID: 54125 RVA: 0x003EC9A4 File Offset: 0x003EABA4
 	private void RemoveItemViewRedDot(global::ItemViewData removeItemViewData)
 	{
 		removeItemViewData.RemoveRedDotItem();
@@ -1662,7 +1662,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF06 RID: 65286 RVA: 0x003E043C File Offset: 0x003DE63C
+	// Token: 0x0600D36E RID: 54126 RVA: 0x003ECA18 File Offset: 0x003EAC18
 	private void RefreshSameConfigIdItemView(global::ItemViewData checkItemViewData)
 	{
 		if (checkItemViewData.GetUniqueId() > 0)
@@ -1684,7 +1684,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF07 RID: 65287 RVA: 0x003E04BC File Offset: 0x003DE6BC
+	// Token: 0x0600D36F RID: 54127 RVA: 0x003ECA98 File Offset: 0x003EAC98
 	public void RefreshItemTipsFunction(global::ItemViewData itemViewData)
 	{
 		InventoryDefine.EItemType itemType = this.SelectedItemViewData.GetItemType();
@@ -1711,7 +1711,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF08 RID: 65288 RVA: 0x003E0544 File Offset: 0x003DE744
+	// Token: 0x0600D370 RID: 54128 RVA: 0x003ECB20 File Offset: 0x003EAD20
 	public void RefreshItemDescription(global::ItemViewData itemViewData)
 	{
 		ItemDataBase itemDataBase = itemViewData.GetItemDataBase();
@@ -1750,25 +1750,25 @@ public class InventoryView : UiViewBase
 		this.LevelSequencePlayer.StopCurrentSequence(false, false);
 	}
 
-	// Token: 0x0600FF09 RID: 65289 RVA: 0x003E065F File Offset: 0x003DE85F
+	// Token: 0x0600D371 RID: 54129 RVA: 0x003ECC3B File Offset: 0x003EAE3B
 	private void OnSpecialItemUpdate(int? itemId)
 	{
 		this.RefreshSpecialItemText();
 	}
 
-	// Token: 0x0600FF0A RID: 65290 RVA: 0x003E0667 File Offset: 0x003DE867
+	// Token: 0x0600D372 RID: 54130 RVA: 0x003ECC43 File Offset: 0x003EAE43
 	private void ForbiddenJumpFunction()
 	{
 		GenericPromptController.Instance.ShowPromptByCode("ItemDestroyNotJump", Array.Empty<object>());
 	}
 
-	// Token: 0x0600FF0B RID: 65291 RVA: 0x003E067D File Offset: 0x003DE87D
+	// Token: 0x0600D373 RID: 54131 RVA: 0x003ECC59 File Offset: 0x003EAE59
 	private void HideDescription()
 	{
 		this.ItemTipsComponent.SetVisible(false);
 	}
 
-	// Token: 0x0600FF0C RID: 65292 RVA: 0x003E068C File Offset: 0x003DE88C
+	// Token: 0x0600D374 RID: 54132 RVA: 0x003ECC68 File Offset: 0x003EAE68
 	private void SetTipsButtonEnableByType(ItemViewDefine.ETipsButtonType type, bool bEnable)
 	{
 		int num;
@@ -1778,7 +1778,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF0D RID: 65293 RVA: 0x003E06BC File Offset: 0x003DE8BC
+	// Token: 0x0600D375 RID: 54133 RVA: 0x003ECC98 File Offset: 0x003EAE98
 	private void SetTipsButtonTextByType(ItemViewDefine.ETipsButtonType type, string text, [Nullable(new byte[]
 	{
 		2,
@@ -1793,7 +1793,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF0E RID: 65294 RVA: 0x003E06F8 File Offset: 0x003DE8F8
+	// Token: 0x0600D376 RID: 54134 RVA: 0x003ECCD4 File Offset: 0x003EAED4
 	private void SetTipsButtonRedDotVisibleByType(ItemViewDefine.ETipsButtonType type, bool bVisible)
 	{
 		int index;
@@ -1803,7 +1803,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF0F RID: 65295 RVA: 0x003E0724 File Offset: 0x003DE924
+	// Token: 0x0600D377 RID: 54135 RVA: 0x003ECD00 File Offset: 0x003EAF00
 	private void RefreshButtonByTypeList(List<ItemViewDefine.ETipsButtonType> typeList)
 	{
 		int num = 0;
@@ -1825,13 +1825,13 @@ public class InventoryView : UiViewBase
 		this.ItemTipsComponent.RefreshButton(list);
 	}
 
-	// Token: 0x0600FF10 RID: 65296 RVA: 0x003E07DC File Offset: 0x003DE9DC
+	// Token: 0x0600D378 RID: 54136 RVA: 0x003ECDB8 File Offset: 0x003EAFB8
 	private bool IsDestroyModeSelectMax()
 	{
 		return this.SelectItemSet.Count == 100;
 	}
 
-	// Token: 0x0600FF11 RID: 65297 RVA: 0x003E07F0 File Offset: 0x003DE9F0
+	// Token: 0x0600D379 RID: 54137 RVA: 0x003ECDCC File Offset: 0x003EAFCC
 	protected void SetViewMode(ItemViewDefine.EItemOperationMode viewMode)
 	{
 		ItemViewDefine.EItemOperationMode viewMode2 = this.ViewMode;
@@ -1889,7 +1889,7 @@ public class InventoryView : UiViewBase
 		this.UiViewSequence.PlaySequence(sequenceName, true, null);
 	}
 
-	// Token: 0x0600FF12 RID: 65298 RVA: 0x003E09F4 File Offset: 0x003DEBF4
+	// Token: 0x0600D37A RID: 54138 RVA: 0x003ECFD0 File Offset: 0x003EB1D0
 	protected void SetDestroyViewMode(ItemViewDefine.EDestroyViewMode destroyViewMode)
 	{
 		this.DestroyViewMode = destroyViewMode;
@@ -1938,7 +1938,7 @@ public class InventoryView : UiViewBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600FF13 RID: 65299 RVA: 0x003E0B78 File Offset: 0x003DED78
+	// Token: 0x0600D37B RID: 54139 RVA: 0x003ED154 File Offset: 0x003EB354
 	private void RefreshDestroyModeViewByItem(global::ItemViewData itemViewData, bool isReloadData)
 	{
 		if (!itemViewData.IsItemCanDestroy())
@@ -1966,7 +1966,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF14 RID: 65300 RVA: 0x003E0BD0 File Offset: 0x003DEDD0
+	// Token: 0x0600D37C RID: 54140 RVA: 0x003ED1AC File Offset: 0x003EB3AC
 	[NullableContext(2)]
 	private void TrySetItemDestroyModeSelectOn(bool isSelectedOn, global::ItemViewData itemViewData)
 	{
@@ -2015,7 +2015,7 @@ public class InventoryView : UiViewBase
 		this.RefreshSelectOnPerformance(isSelectedOn, itemViewData);
 	}
 
-	// Token: 0x0600FF15 RID: 65301 RVA: 0x003E0CD0 File Offset: 0x003DEED0
+	// Token: 0x0600D37D RID: 54141 RVA: 0x003ED2AC File Offset: 0x003EB4AC
 	[return: Nullable(2)]
 	private PhantomItemData GetStackPhantomItemData(global::ItemViewData itemViewData)
 	{
@@ -2031,7 +2031,7 @@ public class InventoryView : UiViewBase
 		return phantomItemData;
 	}
 
-	// Token: 0x0600FF16 RID: 65302 RVA: 0x003E0D08 File Offset: 0x003DEF08
+	// Token: 0x0600D37E RID: 54142 RVA: 0x003ED2E4 File Offset: 0x003EB4E4
 	private int GetDestroyStackCount(global::ItemViewData itemViewData)
 	{
 		PhantomItemData stackPhantomItemData = this.GetStackPhantomItemData(itemViewData);
@@ -2042,7 +2042,7 @@ public class InventoryView : UiViewBase
 		return stackPhantomItemData.GetStackCount();
 	}
 
-	// Token: 0x0600FF17 RID: 65303 RVA: 0x003E0D28 File Offset: 0x003DEF28
+	// Token: 0x0600D37F RID: 54143 RVA: 0x003ED304 File Offset: 0x003EB504
 	private bool TryOpenStackDestroyCountPopup(global::ItemViewData itemViewData)
 	{
 		PhantomItemData stackPhantomItemData = this.GetStackPhantomItemData(itemViewData);
@@ -2078,7 +2078,7 @@ public class InventoryView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x0600FF18 RID: 65304 RVA: 0x003E0E1C File Offset: 0x003DF01C
+	// Token: 0x0600D380 RID: 54144 RVA: 0x003ED3F8 File Offset: 0x003EB5F8
 	private void SetItemDestroyModeSelectCount(global::ItemViewData itemViewData, int count)
 	{
 		int num = this.ItemViewDataList.IndexOf(itemViewData);
@@ -2109,7 +2109,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF19 RID: 65305 RVA: 0x003E0EE4 File Offset: 0x003DF0E4
+	// Token: 0x0600D381 RID: 54145 RVA: 0x003ED4C0 File Offset: 0x003EB6C0
 	private void RefreshSelectOnPerformance(bool isSelectedOn, global::ItemViewData itemViewData)
 	{
 		this.RefreshTotalSelectOnNum();
@@ -2134,7 +2134,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF1A RID: 65306 RVA: 0x003E0F2C File Offset: 0x003DF12C
+	// Token: 0x0600D382 RID: 54146 RVA: 0x003ED508 File Offset: 0x003EB708
 	protected void SetDestroyAllSelectedState(bool? isShow = null, bool? isOn = null)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(18);
@@ -2148,7 +2148,7 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FF1B RID: 65307 RVA: 0x003E0F88 File Offset: 0x003DF188
+	// Token: 0x0600D383 RID: 54147 RVA: 0x003ED564 File Offset: 0x003EB764
 	private void RefreshTotalSelectOnNum()
 	{
 		int count = this.SelectItemSet.Count;
@@ -2160,7 +2160,7 @@ public class InventoryView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600FF1C RID: 65308 RVA: 0x003E0FDC File Offset: 0x003DF1DC
+	// Token: 0x0600D384 RID: 54148 RVA: 0x003ED5B8 File Offset: 0x003EB7B8
 	private void RefreshDestroyEnterButton()
 	{
 		ULGUIBehaviour button = base.GetButton(13);
@@ -2169,7 +2169,7 @@ public class InventoryView : UiViewBase
 		button.RootUIComp.Get().SetUIActive(!flag && flag2 && this.IsRealPlayerInventory());
 	}
 
-	// Token: 0x0600FF1D RID: 65309 RVA: 0x003E1030 File Offset: 0x003DF230
+	// Token: 0x0600D385 RID: 54149 RVA: 0x003ED60C File Offset: 0x003EB80C
 	protected void OnClickedDestroyExecuteButton()
 	{
 		InventoryView.<>c__DisplayClass148_0 CS$<>8__locals1 = new InventoryView.<>c__DisplayClass148_0();
@@ -2236,13 +2236,13 @@ public class InventoryView : UiViewBase
 		CS$<>8__locals1.<OnClickedDestroyExecuteButton>g__openConfirmDestroyConfirm|1();
 	}
 
-	// Token: 0x0600FF1E RID: 65310 RVA: 0x003E1252 File Offset: 0x003DF452
+	// Token: 0x0600D386 RID: 54150 RVA: 0x003ED82E File Offset: 0x003EBA2E
 	private void OnClickedNotShowConfirm(bool toggleState)
 	{
 		InventoryModel.Instance.IsConfirmDestruction = toggleState;
 	}
 
-	// Token: 0x0600FF1F RID: 65311 RVA: 0x003E125F File Offset: 0x003DF45F
+	// Token: 0x0600D387 RID: 54151 RVA: 0x003ED83B File Offset: 0x003EBA3B
 	private void OnClickedAllSelect(EToggleState toggleState)
 	{
 		if (this.ViewMode != ItemViewDefine.EItemOperationMode.Destruction)
@@ -2252,7 +2252,7 @@ public class InventoryView : UiViewBase
 		this.<OnClickedAllSelect>g__selectAll|150_0(toggleState == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x0600FF20 RID: 65312 RVA: 0x003E1278 File Offset: 0x003DF478
+	// Token: 0x0600D388 RID: 54152 RVA: 0x003ED854 File Offset: 0x003EBA54
 	private void OnClickedManage()
 	{
 		global::ItemViewData selectedItemViewData = this.SelectedItemViewData;
@@ -2265,26 +2265,26 @@ public class InventoryView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.PhantomManageView, num, null);
 	}
 
-	// Token: 0x0600FF21 RID: 65313 RVA: 0x003E12CA File Offset: 0x003DF4CA
+	// Token: 0x0600D389 RID: 54153 RVA: 0x003ED8A6 File Offset: 0x003EBAA6
 	private void OnClickedRecovery()
 	{
 		CalabashController.Instance.JumpToCalabashRootView(EUiTabViewName.VisionRecoveryTabView, null);
 	}
 
-	// Token: 0x0600FF22 RID: 65314 RVA: 0x003E12DC File Offset: 0x003DF4DC
+	// Token: 0x0600D38A RID: 54154 RVA: 0x003ED8B8 File Offset: 0x003EBAB8
 	protected int SortViewDataSelectOn(global::ItemViewData dataA, global::ItemViewData dataB)
 	{
 		int num = (dataA.GetSelectOn() > false) ? 1 : 0;
 		return ((dataB.GetSelectOn() > false) ? 1 : 0) - num;
 	}
 
-	// Token: 0x0600FF23 RID: 65315 RVA: 0x003E12FE File Offset: 0x003DF4FE
+	// Token: 0x0600D38B RID: 54155 RVA: 0x003ED8DA File Offset: 0x003EBADA
 	protected int SortViewDataConfigId(global::ItemViewData dataA, global::ItemViewData dataB)
 	{
 		return dataA.GetConfigId() - dataB.GetConfigId();
 	}
 
-	// Token: 0x0600FF24 RID: 65316 RVA: 0x003E1310 File Offset: 0x003DF510
+	// Token: 0x0600D38C RID: 54156 RVA: 0x003ED8EC File Offset: 0x003EBAEC
 	[NullableContext(2)]
 	private void RefreshNumberSelect(global::ItemViewData itemViewData)
 	{
@@ -2301,13 +2301,13 @@ public class InventoryView : UiViewBase
 		this.NumberSelect.Init(data);
 	}
 
-	// Token: 0x0600FF25 RID: 65317 RVA: 0x003E1363 File Offset: 0x003DF563
+	// Token: 0x0600D38D RID: 54157 RVA: 0x003ED93F File Offset: 0x003EBB3F
 	private TableTextArgNew GetExchangeTableText(int selectValue)
 	{
 		return new TableTextArgNew(TextConfig.Instance.GetTextContentIdById("ItemRecycleCount"), new <>z__ReadOnlySingleElementList<object>(selectValue));
 	}
 
-	// Token: 0x0600FF26 RID: 65318 RVA: 0x003E1384 File Offset: 0x003DF584
+	// Token: 0x0600D38E RID: 54158 RVA: 0x003ED960 File Offset: 0x003EBB60
 	private void ValueChangeFunction(int selectValue)
 	{
 		if (this.SelectedItemViewData == null)
@@ -2323,7 +2323,7 @@ public class InventoryView : UiViewBase
 		this.ItemScrollView.RefreshGridProxy(num);
 	}
 
-	// Token: 0x0600FF27 RID: 65319 RVA: 0x003E13CC File Offset: 0x003DF5CC
+	// Token: 0x0600D38F RID: 54159 RVA: 0x003ED9A8 File Offset: 0x003EBBA8
 	private unsafe void SelectTypeIndexByOpenParam()
 	{
 		if (this.OpenParam == null)
@@ -2364,7 +2364,7 @@ public class InventoryView : UiViewBase
 		instance2.Warn(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0600FF28 RID: 65320 RVA: 0x003E14F4 File Offset: 0x003DF6F4
+	// Token: 0x0600D390 RID: 54160 RVA: 0x003EDAD0 File Offset: 0x003EBCD0
 	private void SelectGridIndexByOpenParam(List<global::ItemViewData> itemViewDataList)
 	{
 		if (this.OpenParam == null)
@@ -2394,7 +2394,7 @@ public class InventoryView : UiViewBase
 		this.OpenParam = null;
 	}
 
-	// Token: 0x0600FF29 RID: 65321 RVA: 0x003E15AC File Offset: 0x003DF7AC
+	// Token: 0x0600D391 RID: 54161 RVA: 0x003EDB88 File Offset: 0x003EBD88
 	private void SaveCurrentMarkPositionByGridIndex(int gridIndex, int uniqueId)
 	{
 		int selectedTypeIndex = InventoryModel.Instance.GetSelectedTypeIndex();
@@ -2402,7 +2402,7 @@ public class InventoryView : UiViewBase
 		this.TabMarkUniqueIds[selectedTypeIndex] = uniqueId;
 	}
 
-	// Token: 0x0600FF2A RID: 65322 RVA: 0x003E15D8 File Offset: 0x003DF7D8
+	// Token: 0x0600D392 RID: 54162 RVA: 0x003EDBB4 File Offset: 0x003EBDB4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -2426,7 +2426,7 @@ public class InventoryView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600FF2B RID: 65323 RVA: 0x003E1618 File Offset: 0x003DF818
+	// Token: 0x0600D393 RID: 54163 RVA: 0x003EDBF4 File Offset: 0x003EBDF4
 	[NullableContext(0)]
 	public virtual bool TryGetMember(string key, out object value)
 	{
@@ -2735,7 +2735,7 @@ public class InventoryView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600FF2C RID: 65324 RVA: 0x003E1BE4 File Offset: 0x003DFDE4
+	// Token: 0x0600D394 RID: 54164 RVA: 0x003EE1C0 File Offset: 0x003EC3C0
 	[NullableContext(0)]
 	public virtual void SetMember(string key, object value)
 	{
@@ -3018,7 +3018,7 @@ public class InventoryView : UiViewBase
 		throw new KeyNotFoundException("设置InventoryView成员属性失败" + key + ")");
 	}
 
-	// Token: 0x0600FF30 RID: 65328 RVA: 0x003E2180 File Offset: 0x003E0380
+	// Token: 0x0600D398 RID: 54168 RVA: 0x003EE75C File Offset: 0x003EC95C
 	[CompilerGenerated]
 	private void <OnClickedAllSelect>g__selectAll|150_0(bool selectOn)
 	{
@@ -3054,17 +3054,17 @@ public class InventoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x040075EE RID: 30190
+	// Token: 0x040076D7 RID: 30423
 	[Nullable(2)]
 	private global::ItemViewData SelectedItemViewData;
 
-	// Token: 0x040075EF RID: 30191
+	// Token: 0x040076D8 RID: 30424
 	private int SelectedItemIndex;
 
-	// Token: 0x040075F0 RID: 30192
+	// Token: 0x040076D9 RID: 30425
 	private readonly List<AccessPathButton> AccessPathButtonList = new List<AccessPathButton>();
 
-	// Token: 0x040075F1 RID: 30193
+	// Token: 0x040076DA RID: 30426
 	[Nullable(new byte[]
 	{
 		2,
@@ -3073,7 +3073,7 @@ public class InventoryView : UiViewBase
 	})]
 	private LoopScrollView<InventoryMediumItemGrid, global::ItemViewData> ItemScrollView;
 
-	// Token: 0x040075F2 RID: 30194
+	// Token: 0x040076DB RID: 30427
 	[Nullable(new byte[]
 	{
 		2,
@@ -3081,28 +3081,28 @@ public class InventoryView : UiViewBase
 	})]
 	private FilterSortEntrance<global::ItemViewData> FilterSortEntrance;
 
-	// Token: 0x040075F3 RID: 30195
+	// Token: 0x040076DC RID: 30428
 	[Nullable(2)]
 	private TimerHandle RefreshCdTimerId;
 
-	// Token: 0x040075F4 RID: 30196
+	// Token: 0x040076DD RID: 30429
 	private readonly Dictionary<int, BuffItemData> CurrentCdItemMap = new Dictionary<int, BuffItemData>();
 
-	// Token: 0x040075F5 RID: 30197
+	// Token: 0x040076DE RID: 30430
 	[Nullable(2)]
 	private CommonCurrencyItem CommonCurrencyItem1;
 
-	// Token: 0x040075F6 RID: 30198
+	// Token: 0x040076DF RID: 30431
 	[Nullable(2)]
 	private CommonCurrencyItem CommonCurrencyItem2;
 
-	// Token: 0x040075F7 RID: 30199
+	// Token: 0x040076E0 RID: 30432
 	private List<global::ItemViewData> ItemViewDataList = new List<global::ItemViewData>();
 
-	// Token: 0x040075F8 RID: 30200
+	// Token: 0x040076E1 RID: 30433
 	private readonly Dictionary<int, HashSet<global::ItemViewData>> ItemViewDataMap = new Dictionary<int, HashSet<global::ItemViewData>>();
 
-	// Token: 0x040075F9 RID: 30201
+	// Token: 0x040076E2 RID: 30434
 	[Nullable(new byte[]
 	{
 		2,
@@ -3110,19 +3110,19 @@ public class InventoryView : UiViewBase
 	})]
 	private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-	// Token: 0x040075FA RID: 30202
+	// Token: 0x040076E3 RID: 30435
 	[Nullable(2)]
 	private List<ItemMainType> ItemTypeList;
 
-	// Token: 0x040075FB RID: 30203
+	// Token: 0x040076E4 RID: 30436
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040075FC RID: 30204
+	// Token: 0x040076E5 RID: 30437
 	[Nullable(2)]
 	private ItemTipsWithButtonComponent ItemTipsComponent;
 
-	// Token: 0x040075FD RID: 30205
+	// Token: 0x040076E6 RID: 30438
 	[Nullable(new byte[]
 	{
 		2,
@@ -3130,52 +3130,52 @@ public class InventoryView : UiViewBase
 	})]
 	protected Dictionary<ItemViewDefine.ETipsButtonType, IButtonInfo> TipsButtonRelationMap;
 
-	// Token: 0x040075FE RID: 30206
+	// Token: 0x040076E7 RID: 30439
 	[Nullable(2)]
 	protected Dictionary<ItemViewDefine.ETipsButtonType, int> TipsButtonIndexMap;
 
-	// Token: 0x040075FF RID: 30207
+	// Token: 0x040076E8 RID: 30440
 	[Nullable(2)]
 	private int[] TabMarkPositions;
 
-	// Token: 0x04007600 RID: 30208
+	// Token: 0x040076E9 RID: 30441
 	[Nullable(2)]
 	private int[] TabMarkUniqueIds;
 
-	// Token: 0x04007601 RID: 30209
+	// Token: 0x040076EA RID: 30442
 	private ItemViewDefine.EItemOperationMode ViewMode;
 
-	// Token: 0x04007602 RID: 30210
+	// Token: 0x040076EB RID: 30443
 	[Nullable(2)]
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x04007603 RID: 30211
+	// Token: 0x040076EC RID: 30444
 	private bool IsReloadData;
 
-	// Token: 0x04007604 RID: 30212
+	// Token: 0x040076ED RID: 30445
 	private bool IsReSelectType;
 
-	// Token: 0x04007605 RID: 30213
+	// Token: 0x040076EE RID: 30446
 	private bool IsMaxCapacityViewShow;
 
-	// Token: 0x04007606 RID: 30214
+	// Token: 0x040076EF RID: 30447
 	private bool IsMaxCapacityFlag;
 
-	// Token: 0x04007607 RID: 30215
+	// Token: 0x040076F0 RID: 30448
 	protected List<Dictionary<int, int>> InvalidItemTempList = new List<Dictionary<int, int>>();
 
-	// Token: 0x04007608 RID: 30216
+	// Token: 0x040076F1 RID: 30449
 	protected bool IsInvalidItemViewShow;
 
-	// Token: 0x04007609 RID: 30217
+	// Token: 0x040076F2 RID: 30450
 	private readonly List<ItemExpiredAutoConvertTipsViewDefine> CacheExpireShowDataList = new List<ItemExpiredAutoConvertTipsViewDefine>();
 
-	// Token: 0x0400760A RID: 30218
+	// Token: 0x040076F3 RID: 30451
 	protected bool IsExpireConvertItemViewShow;
 
-	// Token: 0x0400760B RID: 30219
+	// Token: 0x040076F4 RID: 30452
 	private ItemViewDefine.EDestroyViewMode DestroyViewMode;
 
-	// Token: 0x0400760C RID: 30220
+	// Token: 0x040076F5 RID: 30453
 	private readonly HashSet<global::ItemViewData> SelectItemSet = new HashSet<global::ItemViewData>();
 }

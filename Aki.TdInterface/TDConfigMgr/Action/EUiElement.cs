@@ -4,12 +4,12 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016EB RID: 5867
+	// Token: 0x02001867 RID: 6247
 	[JsonConverter(typeof(EUiElementJsonConverter))]
 	[EnumExtensions]
 	public enum EUiElement
 	{
-		// Token: 0x04004F64 RID: 20324
+		// Token: 0x04005391 RID: 21393
 		Guide
 	}
 }

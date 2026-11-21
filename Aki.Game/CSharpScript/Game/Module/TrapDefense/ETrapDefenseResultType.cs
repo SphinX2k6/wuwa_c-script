@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A56 RID: 19030
+	// Token: 0x020039FE RID: 14846
 	public enum ETrapDefenseResultType
 	{
-		// Token: 0x0401A64C RID: 108108
+		// Token: 0x04014F9E RID: 85918
 		Star,
-		// Token: 0x0401A64D RID: 108109
+		// Token: 0x04014F9F RID: 85919
 		Coin
 	}
 }

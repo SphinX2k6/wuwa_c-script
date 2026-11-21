@@ -6,18 +6,18 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059E8 RID: 23016
+	// Token: 0x020049C1 RID: 18881
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WaitSceneReferenceEntityPlaySequenceNode : TickBehaviorNode
 	{
-		// Token: 0x0603A533 RID: 238899 RVA: 0x00DDF5B0 File Offset: 0x00DDD7B0
+		// Token: 0x0602F45A RID: 193626 RVA: 0x00D2EE1C File Offset: 0x00D2D01C
 		public WaitSceneReferenceEntityPlaySequenceNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x17008BA0 RID: 35744
-		// (get) Token: 0x0603A534 RID: 238900 RVA: 0x00DDF5CF File Offset: 0x00DDD7CF
+		// Token: 0x17005F6D RID: 24429
+		// (get) Token: 0x0602F45B RID: 193627 RVA: 0x00D2EE3B File Offset: 0x00D2D03B
 		protected override List<int> CorrelativeEntities
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A535 RID: 238901 RVA: 0x00DDF5D8 File Offset: 0x00DDD7D8
+		// Token: 0x0602F45C RID: 193628 RVA: 0x00D2EE44 File Offset: 0x00D2D044
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			IChildQuestBtNode childQuestBtNode = nodeConfig as IChildQuestBtNode;
@@ -50,14 +50,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A536 RID: 238902 RVA: 0x00DDF642 File Offset: 0x00DDD842
+		// Token: 0x0602F45D RID: 193629 RVA: 0x00D2EEAE File Offset: 0x00D2D0AE
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 			base.OnStart(reason);
 			this.SubmitSuccess = false;
 		}
 
-		// Token: 0x0603A537 RID: 238903 RVA: 0x00DDF654 File Offset: 0x00DDD854
+		// Token: 0x0602F45E RID: 193630 RVA: 0x00D2EEC0 File Offset: 0x00D2D0C0
 		protected unsafe override void OnTick(float delta)
 		{
 			if (this.SubmitSuccess)
@@ -101,23 +101,23 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.SubmitNode(null);
 		}
 
-		// Token: 0x0603A538 RID: 238904 RVA: 0x00DDF776 File Offset: 0x00DDD976
+		// Token: 0x0602F45F RID: 193631 RVA: 0x00D2EFE2 File Offset: 0x00D2D1E2
 		protected override void OnAfterSubmit(bool submitSuccess)
 		{
 			base.OnAfterSubmit(submitSuccess);
 			this.SubmitSuccess = submitSuccess;
 		}
 
-		// Token: 0x0401E686 RID: 124550
+		// Token: 0x04019125 RID: 102693
 		private int PbDataId;
 
-		// Token: 0x0401E687 RID: 124551
+		// Token: 0x04019126 RID: 102694
 		private string Mark = "";
 
-		// Token: 0x0401E688 RID: 124552
+		// Token: 0x04019127 RID: 102695
 		private bool SubmitSuccess;
 
-		// Token: 0x0401E689 RID: 124553
+		// Token: 0x04019128 RID: 102696
 		private readonly List<int> InnerCorrelativeEntities = new List<int>();
 	}
 }

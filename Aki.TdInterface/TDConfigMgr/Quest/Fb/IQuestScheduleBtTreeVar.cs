@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001325 RID: 4901
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001475 RID: 5237
 	public class IQuestScheduleBtTreeVar : IQuestScheduleType
 	{
-		// Token: 0x06007070 RID: 28784 RVA: 0x0010F847 File Offset: 0x0010DA47
+		// Token: 0x06007710 RID: 30480 RVA: 0x0011DDB3 File Offset: 0x0011BFB3
 		public static IQuestScheduleBtTreeVar Create(IQuestScheduleBtTreeVar? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023F9 RID: 9209
-		// (get) Token: 0x06007071 RID: 28785 RVA: 0x0010F866 File Offset: 0x0010DA66
+		// Token: 0x170025C8 RID: 9672
+		// (get) Token: 0x06007711 RID: 30481 RVA: 0x0011DDD2 File Offset: 0x0011BFD2
 		public override EQuestScheduleType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023FA RID: 9210
-		// (get) Token: 0x06007072 RID: 28786 RVA: 0x0010F873 File Offset: 0x0010DA73
+		// Token: 0x170025C9 RID: 9673
+		// (get) Token: 0x06007712 RID: 30482 RVA: 0x0011DDDF File Offset: 0x0011BFDF
 		public virtual VarRef Var
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023FB RID: 9211
-		// (get) Token: 0x06007073 RID: 28787 RVA: 0x0010F8A2 File Offset: 0x0010DAA2
+		// Token: 0x170025CA RID: 9674
+		// (get) Token: 0x06007713 RID: 30483 RVA: 0x0011DE0E File Offset: 0x0011C00E
 		[Nullable(2)]
 		public virtual IWordArtConfig ShowAsWordArt
 		{
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040D9 RID: 16601
+		// Token: 0x04004455 RID: 17493
 		private IQuestScheduleBtTreeVar Instance;
 
-		// Token: 0x040040DA RID: 16602
+		// Token: 0x04004456 RID: 17494
 		private VarRef _VarCache;
 
-		// Token: 0x040040DB RID: 16603
+		// Token: 0x04004457 RID: 17495
 		private bool _VarInited;
 
-		// Token: 0x040040DC RID: 16604
+		// Token: 0x04004458 RID: 17496
 		[Nullable(2)]
 		private IWordArtConfig _ShowAsWordArtCache;
 
-		// Token: 0x040040DD RID: 16605
+		// Token: 0x04004459 RID: 17497
 		private bool _ShowAsWordArtInited;
 	}
 }

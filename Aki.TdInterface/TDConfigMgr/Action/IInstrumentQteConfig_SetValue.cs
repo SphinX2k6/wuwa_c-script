@@ -1,27 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B40 RID: 6976
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CEF RID: 7407
 	public class IInstrumentQteConfig_SetValue
 	{
-		// Token: 0x04005B5F RID: 23391
+		// Token: 0x04005FFD RID: 24573
 		public int Id;
 
-		// Token: 0x04005B60 RID: 23392
+		// Token: 0x04005FFE RID: 24574
 		public EInstrumentType InstrumentType;
 
-		// Token: 0x04005B61 RID: 23393
+		// Token: 0x04005FFF RID: 24575
 		public string Description;
 
-		// Token: 0x04005B62 RID: 23394
+		// Token: 0x04006000 RID: 24576
 		public List<List<int>> QteSequence;
 
-		// Token: 0x04005B63 RID: 23395
+		// Token: 0x04006001 RID: 24577
 		public string PreludeAsset;
 	}
 }

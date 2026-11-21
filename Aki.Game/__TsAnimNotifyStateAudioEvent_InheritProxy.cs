@@ -3,27 +3,27 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020036FC RID: 14076
+// Token: 0x02002C71 RID: 11377
 public class __TsAnimNotifyStateAudioEvent_InheritProxy : TsAnimNotifyStateAudioEvent
 {
-	// Token: 0x0601E4A8 RID: 124072 RVA: 0x00888AF0 File Offset: 0x00886CF0
+	// Token: 0x0601C191 RID: 115089 RVA: 0x008AEC7C File Offset: 0x008ACE7C
 	[NullableContext(1)]
 	public __TsAnimNotifyStateAudioEvent_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateAudioEvent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E4A9 RID: 124073 RVA: 0x00888B23 File Offset: 0x00886D23
+	// Token: 0x0601C192 RID: 115090 RVA: 0x008AECAF File Offset: 0x008ACEAF
 	protected __TsAnimNotifyStateAudioEvent_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E4AA RID: 124074 RVA: 0x00888B2C File Offset: 0x00886D2C
+	// Token: 0x0601C193 RID: 115091 RVA: 0x008AECB8 File Offset: 0x008ACEB8
 	protected unsafe override void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), base.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x0601E4AB RID: 124075 RVA: 0x00888B40 File Offset: 0x00886D40
+	// Token: 0x0601C194 RID: 115092 RVA: 0x008AECCC File Offset: 0x008ACECC
 	protected unsafe override void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -31,7 +31,7 @@ public class __TsAnimNotifyStateAudioEvent_InheritProxy : TsAnimNotifyStateAudio
 		__Params->__Result = base.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x0601E4AC RID: 124076 RVA: 0x00888B7C File Offset: 0x00886D7C
+	// Token: 0x0601C195 RID: 115093 RVA: 0x008AED08 File Offset: 0x008ACF08
 	protected unsafe override void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);

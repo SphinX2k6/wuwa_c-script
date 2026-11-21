@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069E2 RID: 27106
+	// Token: 0x02007092 RID: 28818
 	public class ILeisureInteractT
 	{
-		// Token: 0x1700C91F RID: 51487
-		// (get) Token: 0x0602F661 RID: 194145 RVA: 0x00674F1D File Offset: 0x0067311D
-		// (set) Token: 0x0602F662 RID: 194146 RVA: 0x00674F25 File Offset: 0x00673125
+		// Token: 0x1700D31F RID: 54047
+		// (get) Token: 0x06032021 RID: 204833 RVA: 0x006C5275 File Offset: 0x006C3475
+		// (set) Token: 0x06032022 RID: 204834 RVA: 0x006C527D File Offset: 0x006C347D
 		public TLeisureInteractOptionUnion Option { get; set; }
 
-		// Token: 0x1700C920 RID: 51488
-		// (get) Token: 0x0602F663 RID: 194147 RVA: 0x00674F2E File Offset: 0x0067312E
-		// (set) Token: 0x0602F664 RID: 194148 RVA: 0x00674F36 File Offset: 0x00673136
+		// Token: 0x1700D320 RID: 54048
+		// (get) Token: 0x06032023 RID: 204835 RVA: 0x006C5286 File Offset: 0x006C3486
+		// (set) Token: 0x06032024 RID: 204836 RVA: 0x006C528E File Offset: 0x006C348E
 		public int SceneEntity { get; set; }
 
-		// Token: 0x1700C921 RID: 51489
-		// (get) Token: 0x0602F665 RID: 194149 RVA: 0x00674F3F File Offset: 0x0067313F
-		// (set) Token: 0x0602F666 RID: 194150 RVA: 0x00674F47 File Offset: 0x00673147
+		// Token: 0x1700D321 RID: 54049
+		// (get) Token: 0x06032025 RID: 204837 RVA: 0x006C5297 File Offset: 0x006C3497
+		// (set) Token: 0x06032026 RID: 204838 RVA: 0x006C529F File Offset: 0x006C349F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602F667 RID: 194151 RVA: 0x00674F50 File Offset: 0x00673150
+		// Token: 0x06032027 RID: 204839 RVA: 0x006C52A8 File Offset: 0x006C34A8
 		public ILeisureInteractT()
 		{
 			this.Option = null;

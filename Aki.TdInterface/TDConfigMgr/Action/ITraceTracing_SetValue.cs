@@ -4,31 +4,30 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FD7 RID: 8151
+	// Token: 0x0200221E RID: 8734
 	public class ITraceTracing_SetValue
 	{
-		// Token: 0x04006C32 RID: 27698
+		// Token: 0x04007234 RID: 29236
 		public ESimpleGameplayType Type;
 
-		// Token: 0x04006C33 RID: 27699
+		// Token: 0x04007235 RID: 29237
 		public ETraceTracingImageType ImageResourceType;
 
-		// Token: 0x04006C34 RID: 27700
-		[Nullable(1)]
+		// Token: 0x04007236 RID: 29238
 		public ITraceTracingGridBoard BoardConfig;
 
-		// Token: 0x04006C35 RID: 27701
+		// Token: 0x04007237 RID: 29239
 		public int StepLimit;
 
-		// Token: 0x04006C36 RID: 27702
+		// Token: 0x04007238 RID: 29240
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ITraceTracingMaxStepRewardRuleItem> MaxStepRewardRule;
 
-		// Token: 0x04006C37 RID: 27703
+		// Token: 0x04007239 RID: 29241
 		public bool? RemainUiAfterCompletion;
 	}
 }

@@ -6,78 +6,51 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002AA2 RID: 10914
+	// Token: 0x0200087D RID: 2173
 	[UnrealObjectPath("/Script/XeSSBlueprint.XeSSBlueprintLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UXeSSBlueprintLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602838B RID: 164747 RVA: 0x003D2D57 File Offset: 0x003D0F57
+		// Token: 0x0600BD56 RID: 48470 RVA: 0x0012E1E2 File Offset: 0x0012C3E2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UXeSSBlueprintLibrary._ClassPtr;
 		}
 
-		// Token: 0x0602838C RID: 164748 RVA: 0x003D2D64 File Offset: 0x003D0F64
+		// Token: 0x0600BD57 RID: 48471 RVA: 0x0012E1F0 File Offset: 0x0012C3F0
 		public UXeSSBlueprintLibrary() : this(BuiltinUtils.AllocNativeUObject(UXeSSBlueprintLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602838D RID: 164749 RVA: 0x003D2D8C File Offset: 0x003D0F8C
+		// Token: 0x0600BD58 RID: 48472 RVA: 0x0012E218 File Offset: 0x0012C418
 		[NullableContext(1)]
 		public UXeSSBlueprintLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UXeSSBlueprintLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0602838E RID: 164750
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		public static extern void SetXeSSQualityMode(EXeSSQualityMode QualityMode);
-
-		// Token: 0x0602838F RID: 164751
+		// Token: 0x0600BD59 RID: 48473
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsXeSSSupported();
 
-		// Token: 0x06028390 RID: 164752
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		public static extern bool GetXeSSQualityModeInformation(EXeSSQualityMode QualityMode, ref float ScreenPercentage);
-
-		// Token: 0x06028391 RID: 164753
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		public static extern EXeSSQualityMode GetXeSSQualityMode();
-
-		// Token: 0x06028392 RID: 164754 RVA: 0x003D2DBF File Offset: 0x003D0FBF
-		[NullableContext(1)]
-		public static TArray<EXeSSQualityMode> GetSupportedXeSSQualityModes()
-		{
-			return new TArray<EXeSSQualityMode>(UXeSSBlueprintLibrary.__GetSupportedXeSSQualityModes_Internal(), null);
-		}
-
-		// Token: 0x06028393 RID: 164755
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		public static extern EXeSSQualityMode GetDefaultXeSSQualityMode(FIntPoint ScreenResolution);
-
-		// Token: 0x06028394 RID: 164756
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetSupportedXeSSQualityModes_Internal();
-
-		// Token: 0x06028395 RID: 164757 RVA: 0x003D2DCC File Offset: 0x003D0FCC
+		// Token: 0x0600BD5A RID: 48474 RVA: 0x0012E24B File Offset: 0x0012C44B
 		static UXeSSBlueprintLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/XeSSBlueprint.XeSSBlueprintLibrary");
 		}
 
-		// Token: 0x06028396 RID: 164758 RVA: 0x003D2DDA File Offset: 0x003D0FDA
+		// Token: 0x0600BD5B RID: 48475 RVA: 0x0012E259 File Offset: 0x0012C459
 		protected UXeSSBlueprintLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040160EF RID: 90351
+		// Token: 0x0400557E RID: 21886
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/XeSSBlueprint.XeSSBlueprintLibrary";
 
-		// Token: 0x040160F0 RID: 90352
+		// Token: 0x0400557F RID: 21887
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040160F1 RID: 90353
+		// Token: 0x04005580 RID: 21888
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

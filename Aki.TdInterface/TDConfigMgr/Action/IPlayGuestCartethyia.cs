@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D10 RID: 7440
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F21 RID: 7969
 	public class IPlayGuestCartethyia : IPlayGuestUiAnimationType
 	{
-		// Token: 0x06009FA1 RID: 40865 RVA: 0x0016C884 File Offset: 0x0016AA84
+		// Token: 0x0600A98D RID: 43405 RVA: 0x00180CA8 File Offset: 0x0017EEA8
 		private IPlayGuestCartethyia_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009FA2 RID: 40866 RVA: 0x0016C8BC File Offset: 0x0016AABC
+		// Token: 0x0600A98E RID: 43406 RVA: 0x00180CE0 File Offset: 0x0017EEE0
 		public static IPlayGuestCartethyia Create([Nullable(2)] IPlayGuestCartethyia instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FA3 RID: 40867 RVA: 0x0016C8CF File Offset: 0x0016AACF
+		// Token: 0x0600A98F RID: 43407 RVA: 0x00180CF3 File Offset: 0x0017EEF3
 		public static IPlayGuestCartethyia CreateFromSetValue([Nullable(2)] IPlayGuestCartethyia_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FA4 RID: 40868 RVA: 0x0016C8E2 File Offset: 0x0016AAE2
+		// Token: 0x0600A990 RID: 43408 RVA: 0x00180D06 File Offset: 0x0017EF06
 		public new IPlayGuestCartethyia_SetValue ToSetValue()
 		{
 			return new IPlayGuestCartethyia_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700318F RID: 12687
-		// (get) Token: 0x06009FA5 RID: 40869 RVA: 0x0016C8F5 File Offset: 0x0016AAF5
-		// (set) Token: 0x06009FA6 RID: 40870 RVA: 0x0016C920 File Offset: 0x0016AB20
+		// Token: 0x17003423 RID: 13347
+		// (get) Token: 0x0600A991 RID: 43409 RVA: 0x00180D19 File Offset: 0x0017EF19
+		// (set) Token: 0x0600A992 RID: 43410 RVA: 0x00180D44 File Offset: 0x0017EF44
 		public override EGuestUiAnimationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006050 RID: 24656
+		// Token: 0x040065CC RID: 26060
 		[Nullable(2)]
 		protected new IPlayGuestCartethyia FbInstance;
 
-		// Token: 0x04006051 RID: 24657
+		// Token: 0x040065CD RID: 26061
 		[Nullable(2)]
 		protected new IPlayGuestCartethyia_SetValue PocoInterface;
 	}

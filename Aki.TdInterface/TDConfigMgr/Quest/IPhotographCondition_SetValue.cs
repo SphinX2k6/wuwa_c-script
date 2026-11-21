@@ -4,26 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001040 RID: 4160
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200116E RID: 4462
 	public class IPhotographCondition_SetValue
 	{
-		// Token: 0x04003824 RID: 14372
+		// Token: 0x04003B6C RID: 15212
 		public string TidTip;
 
-		// Token: 0x04003825 RID: 14373
+		// Token: 0x04003B6D RID: 15213
 		public IPhotographTarget Target;
 
-		// Token: 0x04003826 RID: 14374
+		// Token: 0x04003B6E RID: 15214
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IPhotographSubTarget> SubTargets;
 
-		// Token: 0x04003827 RID: 14375
+		// Token: 0x04003B6F RID: 15215
 		[Nullable(2)]
 		public string EdTidTip;
 	}

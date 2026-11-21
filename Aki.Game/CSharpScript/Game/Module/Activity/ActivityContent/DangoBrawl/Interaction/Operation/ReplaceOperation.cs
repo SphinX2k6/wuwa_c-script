@@ -9,13 +9,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Operation
 {
-	// Token: 0x02006874 RID: 26740
+	// Token: 0x020057C4 RID: 22468
 	[NullableContext(2)]
 	[Nullable(0)]
 	public sealed class ReplaceOperation : IInteractionOperation
 	{
-		// Token: 0x1700979A RID: 38810
-		// (get) Token: 0x06042C42 RID: 273474 RVA: 0x0103FE32 File Offset: 0x0103E032
+		// Token: 0x17006ADB RID: 27355
+		// (get) Token: 0x06037799 RID: 227225 RVA: 0x00F81312 File Offset: 0x00F7F512
 		public EDangoBrawlOptionType Type
 		{
 			get
@@ -24,8 +24,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x1700979B RID: 38811
-		// (get) Token: 0x06042C43 RID: 273475 RVA: 0x0103FE35 File Offset: 0x0103E035
+		// Token: 0x17006ADC RID: 27356
+		// (get) Token: 0x0603779A RID: 227226 RVA: 0x00F81315 File Offset: 0x00F7F515
 		private static DangoBrawlTouchController Touch
 		{
 			get
@@ -34,8 +34,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x1700979C RID: 38812
-		// (get) Token: 0x06042C44 RID: 273476 RVA: 0x0103FE41 File Offset: 0x0103E041
+		// Token: 0x17006ADD RID: 27357
+		// (get) Token: 0x0603779B RID: 227227 RVA: 0x00F81321 File Offset: 0x00F7F521
 		private static DragContext Context
 		{
 			get
@@ -49,8 +49,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x1700979D RID: 38813
-		// (get) Token: 0x06042C45 RID: 273477 RVA: 0x0103FE58 File Offset: 0x0103E058
+		// Token: 0x17006ADE RID: 27358
+		// (get) Token: 0x0603779C RID: 227228 RVA: 0x00F81338 File Offset: 0x00F7F538
 		private static InteractionStateMachine Fsm
 		{
 			get
@@ -64,8 +64,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x1700979E RID: 38814
-		// (get) Token: 0x06042C46 RID: 273478 RVA: 0x0103FE6F File Offset: 0x0103E06F
+		// Token: 0x17006ADF RID: 27359
+		// (get) Token: 0x0603779D RID: 227229 RVA: 0x00F8134F File Offset: 0x00F7F54F
 		private static DangoBrawlRollbackController Rollback
 		{
 			get
@@ -74,14 +74,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042C47 RID: 273479 RVA: 0x0103FE7B File Offset: 0x0103E07B
+		// Token: 0x0603779E RID: 227230 RVA: 0x00F8135B File Offset: 0x00F7F55B
 		[NullableContext(0)]
 		public UniTask<bool> Execute(in OperationContext ctx)
 		{
 			return ReplaceOperation.ExecuteAsync();
 		}
 
-		// Token: 0x06042C48 RID: 273480 RVA: 0x0103FE84 File Offset: 0x0103E084
+		// Token: 0x0603779F RID: 227231 RVA: 0x00F81364 File Offset: 0x00F7F564
 		public bool CanExecute(in OperationContext ctx)
 		{
 			bool context = ReplaceOperation.Context != null;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return DangoBrawlPlaceUtil.EvaluatePrimaryMode(dangoBrawlBackpackData, payLoad.Visual, value.LeftTopPos, value.Rotate) != EDangoBrawlPlaceMode.Cannot;
 		}
 
-		// Token: 0x06042C49 RID: 273481 RVA: 0x0103FF20 File Offset: 0x0103E120
+		// Token: 0x060377A0 RID: 227232 RVA: 0x00F81400 File Offset: 0x00F7F600
 		[NullableContext(0)]
 		private static UniTask<bool> ExecuteAsync()
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <ExecuteAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042C4A RID: 273482 RVA: 0x0103FF5C File Offset: 0x0103E15C
+		// Token: 0x060377A1 RID: 227233 RVA: 0x00F8143C File Offset: 0x00F7F63C
 		[NullableContext(1)]
 		private static bool IsBagTarget(InteractionPayload entry)
 		{
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return lastTarget != null && lastTarget.Kind == EDragTargetKind.Bag && lastTarget.Bag != null;
 		}
 
-		// Token: 0x06042C4B RID: 273483 RVA: 0x0103FF8C File Offset: 0x0103E18C
+		// Token: 0x060377A2 RID: 227234 RVA: 0x00F8146C File Offset: 0x00F7F66C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private static ReplacePlan TryBuildPlan(InteractionPayload entry, DangoBrawlBackpackData bag, DangoBrawlBenchData bench, bool interactive)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			};
 		}
 
-		// Token: 0x06042C4C RID: 273484 RVA: 0x0104011C File Offset: 0x0103E31C
+		// Token: 0x060377A3 RID: 227235 RVA: 0x00F815FC File Offset: 0x00F7F7FC
 		[NullableContext(1)]
 		[return: Nullable(0)]
 		private static UniTask<bool> ReplaceLayered(InteractionStateMachine fsm, InteractionPayload entry, DangoBrawlBackpackData bag, ReplacePlan plan)
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <ReplaceLayered>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042C4D RID: 273485 RVA: 0x01040178 File Offset: 0x0103E378
+		// Token: 0x060377A4 RID: 227236 RVA: 0x00F81658 File Offset: 0x00F7F858
 		[NullableContext(1)]
 		[return: Nullable(0)]
 		private static UniTask<bool> ExecuteReplacement(DangoBrawlTouchController touch, InteractionStateMachine fsm, InteractionPayload entry, DangoBrawlBackpackData bag, ReplacePlan plan)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <ExecuteReplacement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042C4E RID: 273486 RVA: 0x010401DC File Offset: 0x0103E3DC
+		// Token: 0x060377A5 RID: 227237 RVA: 0x00F816BC File Offset: 0x00F7F8BC
 		[NullableContext(1)]
 		private static DangoBrawlBagOpInfo[] BuildReplacedToBenchOps(List<DangoBrawlBackpackItemData> items)
 		{
@@ -222,13 +222,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return list.ToArray();
 		}
 
-		// Token: 0x06042C50 RID: 273488 RVA: 0x01040260 File Offset: 0x0103E460
+		// Token: 0x060377A7 RID: 227239 RVA: 0x00F81740 File Offset: 0x00F7F940
 		bool IInteractionOperation.CanExecute(in OperationContext ctx)
 		{
 			return this.CanExecute(ctx);
 		}
 
-		// Token: 0x06042C51 RID: 273489 RVA: 0x01040269 File Offset: 0x0103E469
+		// Token: 0x060377A8 RID: 227240 RVA: 0x00F81749 File Offset: 0x00F7F949
 		[return: Nullable(0)]
 		UniTask<bool> IInteractionOperation.Execute(in OperationContext ctx)
 		{

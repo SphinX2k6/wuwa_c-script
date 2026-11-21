@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A50 RID: 10832
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D3D RID: 11581
 	public class IReignsSetUiEffect : ActionParams
 	{
-		// Token: 0x0600EE62 RID: 61026 RVA: 0x0022B466 File Offset: 0x00229666
+		// Token: 0x0600FCFA RID: 64762 RVA: 0x00248E1A File Offset: 0x0024701A
 		public static IReignsSetUiEffect Create(IReignsSetUiEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B84 RID: 19332
-		// (get) Token: 0x0600EE63 RID: 61027 RVA: 0x0022B485 File Offset: 0x00229685
+		// Token: 0x17004F2E RID: 20270
+		// (get) Token: 0x0600FCFB RID: 64763 RVA: 0x00248E39 File Offset: 0x00247039
 		public virtual string Effect
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B85 RID: 19333
-		// (get) Token: 0x0600EE64 RID: 61028 RVA: 0x0022B492 File Offset: 0x00229692
+		// Token: 0x17004F2F RID: 20271
+		// (get) Token: 0x0600FCFC RID: 64764 RVA: 0x00248E46 File Offset: 0x00247046
 		public virtual bool IsVisible
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400832C RID: 33580
+		// Token: 0x04008A1F RID: 35359
 		private IReignsSetUiEffect Instance;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020027C8 RID: 10184
+// Token: 0x02001D43 RID: 7491
 public enum ERoleViewState
 {
-	// Token: 0x04009D65 RID: 40293
+	// Token: 0x0400A14E RID: 41294
 	External,
-	// Token: 0x04009D66 RID: 40294
+	// Token: 0x0400A14F RID: 41295
 	Internal
 }

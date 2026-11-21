@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200164F RID: 5711
+	// Token: 0x020002EC RID: 748
 	[UnrealObjectPath("/Script/KuroAnim.IKTarget")]
 	[UnrealStructLayout(48, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 48)]
 	public class FIKTarget : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060148EC RID: 84204 RVA: 0x001E3D04 File Offset: 0x001E1F04
+		// Token: 0x06004FC6 RID: 20422 RVA: 0x0006FA6F File Offset: 0x0006DC6F
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FIKTarget._ScriptStructPtr != 0) ? FIKTarget._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroAnim.IKTarget", ref FIKTarget._ScriptStructPtr);
 		}
 
-		// Token: 0x170050F0 RID: 20720
-		// (get) Token: 0x060148ED RID: 84205 RVA: 0x001E3D28 File Offset: 0x001E1F28
-		// (set) Token: 0x060148EE RID: 84206 RVA: 0x001E3D3C File Offset: 0x001E1F3C
+		// Token: 0x17000F6E RID: 3950
+		// (get) Token: 0x06004FC7 RID: 20423 RVA: 0x0006FA93 File Offset: 0x0006DC93
+		// (set) Token: 0x06004FC8 RID: 20424 RVA: 0x0006FAA7 File Offset: 0x0006DCA7
 		public unsafe FVector Location
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170050F1 RID: 20721
-		// (get) Token: 0x060148EF RID: 84207 RVA: 0x001E3D51 File Offset: 0x001E1F51
-		// (set) Token: 0x060148F0 RID: 84208 RVA: 0x001E3D65 File Offset: 0x001E1F65
+		// Token: 0x17000F6F RID: 3951
+		// (get) Token: 0x06004FC9 RID: 20425 RVA: 0x0006FABC File Offset: 0x0006DCBC
+		// (set) Token: 0x06004FCA RID: 20426 RVA: 0x0006FAD0 File Offset: 0x0006DCD0
 		public unsafe FQuat Rotation
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170050F2 RID: 20722
-		// (get) Token: 0x060148F1 RID: 84209 RVA: 0x001E3D7A File Offset: 0x001E1F7A
-		// (set) Token: 0x060148F2 RID: 84210 RVA: 0x001E3D8A File Offset: 0x001E1F8A
+		// Token: 0x17000F70 RID: 3952
+		// (get) Token: 0x06004FCB RID: 20427 RVA: 0x0006FAE5 File Offset: 0x0006DCE5
+		// (set) Token: 0x06004FCC RID: 20428 RVA: 0x0006FAF5 File Offset: 0x0006DCF5
 		public unsafe float Alpha
 		{
 			get
@@ -61,64 +61,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060148F3 RID: 84211 RVA: 0x001E3D9B File Offset: 0x001E1F9B
+		// Token: 0x06004FCD RID: 20429 RVA: 0x0006FB06 File Offset: 0x0006DD06
 		public FIKTarget()
 		{
 		}
 
-		// Token: 0x060148F4 RID: 84212 RVA: 0x001E3DA3 File Offset: 0x001E1FA3
-		public FIKTarget(FVector Location, FQuat Rotation, float Alpha)
-		{
-			this.Location = Location;
-			this.Rotation = Rotation;
-			this.Alpha = Alpha;
-		}
-
-		// Token: 0x060148F5 RID: 84213 RVA: 0x001E3DC0 File Offset: 0x001E1FC0
+		// Token: 0x06004FCE RID: 20430 RVA: 0x0006FB0E File Offset: 0x0006DD0E
 		protected override IntPtr GetUStructPtr()
 		{
 			return FIKTarget.StaticStruct();
 		}
 
-		// Token: 0x060148F6 RID: 84214 RVA: 0x001E3DCC File Offset: 0x001E1FCC
+		// Token: 0x06004FCF RID: 20431 RVA: 0x0006FB1A File Offset: 0x0006DD1A
 		[NullableContext(2)]
 		public FIKTarget(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060148F7 RID: 84215 RVA: 0x001E3DD6 File Offset: 0x001E1FD6
+		// Token: 0x06004FD0 RID: 20432 RVA: 0x0006FB24 File Offset: 0x0006DD24
 		public FIKTarget(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060148F8 RID: 84216 RVA: 0x001E3DE1 File Offset: 0x001E1FE1
+		// Token: 0x06004FD1 RID: 20433 RVA: 0x0006FB2F File Offset: 0x0006DD2F
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FIKTarget(Pointer, false, true);
 		}
 
-		// Token: 0x060148F9 RID: 84217 RVA: 0x001E3DEB File Offset: 0x001E1FEB
+		// Token: 0x06004FD2 RID: 20434 RVA: 0x0006FB39 File Offset: 0x0006DD39
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FIKTarget(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400B399 RID: 45977
+		// Token: 0x04002074 RID: 8308
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroAnim.IKTarget";
 
-		// Token: 0x0400B39A RID: 45978
+		// Token: 0x04002075 RID: 8309
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400B39B RID: 45979
+		// Token: 0x04002076 RID: 8310
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400B39C RID: 45980
+		// Token: 0x04002077 RID: 8311
 		internal static int __PropertyOffset_Rotation;
 
-		// Token: 0x0400B39D RID: 45981
+		// Token: 0x04002078 RID: 8312
 		internal static int __PropertyOffset_Alpha;
 	}
 }

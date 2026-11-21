@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E3F RID: 24127
+	// Token: 0x02004E24 RID: 20004
 	public class TopPanelWavePlateTip : BattleVisibleChildView
 	{
-		// Token: 0x0603D59A RID: 251290 RVA: 0x00ECA374 File Offset: 0x00EC8574
+		// Token: 0x0603252A RID: 206122 RVA: 0x00E1B8E0 File Offset: 0x00E19AE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,14 +25,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D59B RID: 251291 RVA: 0x00ECA3DD File Offset: 0x00EC85DD
+		// Token: 0x0603252B RID: 206123 RVA: 0x00E1B949 File Offset: 0x00E19B49
 		protected override void OnBeforeCreate()
 		{
 			this.UiLevelSequence = new UiBehaviorLevelSequence(this);
 			base.AddUiBehavior(this.UiLevelSequence);
 		}
 
-		// Token: 0x0603D59C RID: 251292 RVA: 0x00ECA3F7 File Offset: 0x00EC85F7
+		// Token: 0x0603252C RID: 206124 RVA: 0x00E1B963 File Offset: 0x00E19B63
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetVisible(0, true);
 		}
 
-		// Token: 0x0603D59D RID: 251293 RVA: 0x00ECA410 File Offset: 0x00EC8610
+		// Token: 0x0603252D RID: 206125 RVA: 0x00E1B97C File Offset: 0x00E19B7C
 		protected override void OnShowBattleChildView()
 		{
 			if (this.IsRefresh)
@@ -81,26 +81,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, (float)value, null, null, true, 1f);
 		}
 
-		// Token: 0x0603D59E RID: 251294 RVA: 0x00ECA570 File Offset: 0x00EC8770
+		// Token: 0x0603252E RID: 206126 RVA: 0x00E1BADC File Offset: 0x00E19CDC
 		protected override void OnHideBattleChildView()
 		{
 			Log.Instance.Info(ELogModule.PowerModule, ELogAuthor.BB, "TopPanelWavePlateTip-OnHide", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.IsRefresh = false;
 		}
 
-		// Token: 0x04020004 RID: 131076
+		// Token: 0x0401AACB RID: 109259
 		[Nullable(2)]
 		private UiBehaviorLevelSequence UiLevelSequence;
 
-		// Token: 0x04020005 RID: 131077
+		// Token: 0x0401AACC RID: 109260
 		private bool IsRefresh;
 
-		// Token: 0x0200C1BF RID: 49599
+		// Token: 0x0200ABCE RID: 43982
 		private enum EComponent
 		{
-			// Token: 0x0403A8C8 RID: 239816
+			// Token: 0x040352BA RID: 217786
 			WavePlateCrystalCount,
-			// Token: 0x0403A8C9 RID: 239817
+			// Token: 0x040352BB RID: 217787
 			WavePlateCount
 		}
 	}

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020010D1 RID: 4305
+// Token: 0x02000585 RID: 1413
 public class AdvanceNoticeNewActivityTabView : AdvanceNoticeTabViewBase
 {
-	// Token: 0x06007021 RID: 28705 RVA: 0x0016D1C0 File Offset: 0x0016B3C0
+	// Token: 0x060043B7 RID: 17335 RVA: 0x00175B7C File Offset: 0x00173D7C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class AdvanceNoticeNewActivityTabView : AdvanceNoticeTabViewBase
 		};
 	}
 
-	// Token: 0x06007022 RID: 28706 RVA: 0x0016D248 File Offset: 0x0016B448
+	// Token: 0x060043B8 RID: 17336 RVA: 0x00175C04 File Offset: 0x00173E04
 	protected override void RefreshView()
 	{
 		int currentSubTabId = this.ViewModel.CurrentSubTabId;
@@ -31,22 +31,22 @@ public class AdvanceNoticeNewActivityTabView : AdvanceNoticeTabViewBase
 		base.GetScrollViewWithScrollbar(4).SetScrollProgress(0f);
 	}
 
-	// Token: 0x02007696 RID: 30358
+	// Token: 0x0200682A RID: 26666
 	private class EComponentDefine
 	{
-		// Token: 0x0402721A RID: 160282
+		// Token: 0x04022563 RID: 140643
 		public const int BgTexture = 0;
 
-		// Token: 0x0402721B RID: 160283
+		// Token: 0x04022564 RID: 140644
 		public const int SubTitleText = 1;
 
-		// Token: 0x0402721C RID: 160284
+		// Token: 0x04022565 RID: 140645
 		public const int TitleText = 2;
 
-		// Token: 0x0402721D RID: 160285
+		// Token: 0x04022566 RID: 140646
 		public const int DescText = 3;
 
-		// Token: 0x0402721E RID: 160286
+		// Token: 0x04022567 RID: 140647
 		public const int DescScrollView = 4;
 	}
 }

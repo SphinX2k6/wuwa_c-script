@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001924 RID: 6436
+	// Token: 0x02000412 RID: 1042
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.MediaActorAsset")]
 	[UnrealStructLayout(112, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 112)]
 	public class UMediaActorAsset : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017DED RID: 97773 RVA: 0x0022F9F1 File Offset: 0x0022DBF1
+		// Token: 0x06006563 RID: 25955 RVA: 0x00090FF1 File Offset: 0x0008F1F1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMediaActorAsset._ClassPtr;
 		}
 
-		// Token: 0x06017DEE RID: 97774 RVA: 0x0022FA00 File Offset: 0x0022DC00
+		// Token: 0x06006564 RID: 25956 RVA: 0x00091000 File Offset: 0x0008F200
 		public UMediaActorAsset() : this(BuiltinUtils.AllocNativeUObject(UMediaActorAsset.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017DEF RID: 97775 RVA: 0x0022FA28 File Offset: 0x0022DC28
+		// Token: 0x06006565 RID: 25957 RVA: 0x00091028 File Offset: 0x0008F228
 		public UMediaActorAsset(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMediaActorAsset.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005FD5 RID: 24533
-		// (get) Token: 0x06017DF0 RID: 97776 RVA: 0x0022FA5C File Offset: 0x0022DC5C
-		// (set) Token: 0x06017DF1 RID: 97777 RVA: 0x0022FA95 File Offset: 0x0022DC95
+		// Token: 0x17001437 RID: 5175
+		// (get) Token: 0x06006566 RID: 25958 RVA: 0x0009105C File Offset: 0x0008F25C
+		// (set) Token: 0x06006567 RID: 25959 RVA: 0x00091095 File Offset: 0x0008F295
 		public TArray<UMediaPlayer> MediaPlayerArray
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FD6 RID: 24534
-		// (get) Token: 0x06017DF2 RID: 97778 RVA: 0x0022FAA4 File Offset: 0x0022DCA4
-		// (set) Token: 0x06017DF3 RID: 97779 RVA: 0x0022FADD File Offset: 0x0022DCDD
+		// Token: 0x17001438 RID: 5176
+		// (get) Token: 0x06006568 RID: 25960 RVA: 0x000910A4 File Offset: 0x0008F2A4
+		// (set) Token: 0x06006569 RID: 25961 RVA: 0x000910DD File Offset: 0x0008F2DD
 		public TArray<UMediaTexture> MediaTextureArray
 		{
 			get
@@ -71,30 +71,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017DF4 RID: 97780 RVA: 0x0022FAEB File Offset: 0x0022DCEB
+		// Token: 0x0600656A RID: 25962 RVA: 0x000910EB File Offset: 0x0008F2EB
 		static UMediaActorAsset()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.MediaActorAsset");
 		}
 
-		// Token: 0x06017DF5 RID: 97781 RVA: 0x0022FAF9 File Offset: 0x0022DCF9
+		// Token: 0x0600656B RID: 25963 RVA: 0x000910F9 File Offset: 0x0008F2F9
 		protected UMediaActorAsset(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CEDD RID: 52957
+		// Token: 0x04002AA2 RID: 10914
 		public new const string __ObjectPath = "/Script/KuroGameplay.MediaActorAsset";
 
-		// Token: 0x0400CEDE RID: 52958
+		// Token: 0x04002AA3 RID: 10915
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CEDF RID: 52959
+		// Token: 0x04002AA4 RID: 10916
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CEE0 RID: 52960
+		// Token: 0x04002AA5 RID: 10917
 		internal static int __PropertyOffset_MediaPlayerArray;
 
-		// Token: 0x0400CEE1 RID: 52961
+		// Token: 0x04002AA6 RID: 10918
 		[Nullable(new byte[]
 		{
 			2,
@@ -102,10 +102,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UMediaPlayer> _MediaPlayerArray;
 
-		// Token: 0x0400CEE2 RID: 52962
+		// Token: 0x04002AA7 RID: 10919
 		internal static int __PropertyOffset_MediaTextureArray;
 
-		// Token: 0x0400CEE3 RID: 52963
+		// Token: 0x04002AA8 RID: 10920
 		[Nullable(new byte[]
 		{
 			2,

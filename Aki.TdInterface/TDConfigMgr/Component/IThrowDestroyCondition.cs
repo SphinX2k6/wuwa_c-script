@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000766 RID: 1894
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000807 RID: 2055
 	public class IThrowDestroyCondition : ITeleControlDestroyCondition
 	{
-		// Token: 0x060028ED RID: 10477 RVA: 0x0006C37C File Offset: 0x0006A57C
+		// Token: 0x06002C11 RID: 11281 RVA: 0x00073524 File Offset: 0x00071724
 		private IThrowDestroyCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060028EE RID: 10478 RVA: 0x0006C3B4 File Offset: 0x0006A5B4
+		// Token: 0x06002C12 RID: 11282 RVA: 0x0007355C File Offset: 0x0007175C
 		public static IThrowDestroyCondition Create([Nullable(2)] IThrowDestroyCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028EF RID: 10479 RVA: 0x0006C3C7 File Offset: 0x0006A5C7
+		// Token: 0x06002C13 RID: 11283 RVA: 0x0007356F File Offset: 0x0007176F
 		public static IThrowDestroyCondition CreateFromSetValue([Nullable(2)] IThrowDestroyCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028F0 RID: 10480 RVA: 0x0006C3DA File Offset: 0x0006A5DA
+		// Token: 0x06002C14 RID: 11284 RVA: 0x00073582 File Offset: 0x00071782
 		public new IThrowDestroyCondition_SetValue ToSetValue()
 		{
 			return new IThrowDestroyCondition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000ABE RID: 2750
-		// (get) Token: 0x060028F1 RID: 10481 RVA: 0x0006C3F9 File Offset: 0x0006A5F9
-		// (set) Token: 0x060028F2 RID: 10482 RVA: 0x0006C424 File Offset: 0x0006A624
+		// Token: 0x17000B7E RID: 2942
+		// (get) Token: 0x06002C15 RID: 11285 RVA: 0x000735A1 File Offset: 0x000717A1
+		// (set) Token: 0x06002C16 RID: 11286 RVA: 0x000735CC File Offset: 0x000717CC
 		public override ETeleControlDestroyCondition Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000ABF RID: 2751
-		// (get) Token: 0x060028F3 RID: 10483 RVA: 0x0006C432 File Offset: 0x0006A632
-		// (set) Token: 0x060028F4 RID: 10484 RVA: 0x0006C461 File Offset: 0x0006A661
+		// Token: 0x17000B7F RID: 2943
+		// (get) Token: 0x06002C17 RID: 11287 RVA: 0x000735DA File Offset: 0x000717DA
+		// (set) Token: 0x06002C18 RID: 11288 RVA: 0x00073609 File Offset: 0x00071809
 		public virtual float DelayTime
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B81 RID: 7041
+		// Token: 0x04001D86 RID: 7558
 		[Nullable(2)]
 		protected new IThrowDestroyCondition FbInstance;
 
-		// Token: 0x04001B82 RID: 7042
+		// Token: 0x04001D87 RID: 7559
 		[Nullable(2)]
 		protected new IThrowDestroyCondition_SetValue PocoInterface;
 	}

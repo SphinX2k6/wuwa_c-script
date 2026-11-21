@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A11 RID: 2577
+	// Token: 0x02000AD6 RID: 2774
 	public class ESpawnConfigTypeJsonConverter : JsonConverter<ESpawnConfigType>
 	{
-		// Token: 0x060038FF RID: 14591 RVA: 0x000934F0 File Offset: 0x000916F0
+		// Token: 0x06003CD7 RID: 15575 RVA: 0x0009BDE0 File Offset: 0x00099FE0
 		public override ESpawnConfigType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ESpawnConfigTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003900 RID: 14592 RVA: 0x00093514 File Offset: 0x00091714
+		// Token: 0x06003CD8 RID: 15576 RVA: 0x0009BE04 File Offset: 0x0009A004
 		public override void Write(Utf8JsonWriter writer, ESpawnConfigType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

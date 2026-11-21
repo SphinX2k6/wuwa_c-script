@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000414 RID: 1044
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200046D RID: 1133
 	public class IHitBulletTypeFixedBulletId : IHitBulletType
 	{
-		// Token: 0x0600150F RID: 5391 RVA: 0x00042748 File Offset: 0x00040948
+		// Token: 0x060016A9 RID: 5801 RVA: 0x00046490 File Offset: 0x00044690
 		private IHitBulletTypeFixedBulletId_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001510 RID: 5392 RVA: 0x00042780 File Offset: 0x00040980
+		// Token: 0x060016AA RID: 5802 RVA: 0x000464C8 File Offset: 0x000446C8
 		public static IHitBulletTypeFixedBulletId Create([Nullable(2)] IHitBulletTypeFixedBulletId instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001511 RID: 5393 RVA: 0x00042793 File Offset: 0x00040993
+		// Token: 0x060016AB RID: 5803 RVA: 0x000464DB File Offset: 0x000446DB
 		public static IHitBulletTypeFixedBulletId CreateFromSetValue([Nullable(2)] IHitBulletTypeFixedBulletId_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001512 RID: 5394 RVA: 0x000427A6 File Offset: 0x000409A6
+		// Token: 0x060016AC RID: 5804 RVA: 0x000464EE File Offset: 0x000446EE
 		public new IHitBulletTypeFixedBulletId_SetValue ToSetValue()
 		{
 			return new IHitBulletTypeFixedBulletId_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005C7 RID: 1479
-		// (get) Token: 0x06001513 RID: 5395 RVA: 0x000427D1 File Offset: 0x000409D1
-		// (set) Token: 0x06001514 RID: 5396 RVA: 0x000427FC File Offset: 0x000409FC
+		// Token: 0x1700062E RID: 1582
+		// (get) Token: 0x060016AD RID: 5805 RVA: 0x00046519 File Offset: 0x00044719
+		// (set) Token: 0x060016AE RID: 5806 RVA: 0x00046544 File Offset: 0x00044744
 		public override EHitBulletType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005C8 RID: 1480
-		// (get) Token: 0x06001515 RID: 5397 RVA: 0x0004280A File Offset: 0x00040A0A
-		// (set) Token: 0x06001516 RID: 5398 RVA: 0x00042831 File Offset: 0x00040A31
+		// Token: 0x1700062F RID: 1583
+		// (get) Token: 0x060016AF RID: 5807 RVA: 0x00046552 File Offset: 0x00044752
+		// (set) Token: 0x060016B0 RID: 5808 RVA: 0x00046579 File Offset: 0x00044779
 		public virtual List<long> BulletId
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005C9 RID: 1481
-		// (get) Token: 0x06001517 RID: 5399 RVA: 0x00042840 File Offset: 0x00040A40
-		// (set) Token: 0x06001518 RID: 5400 RVA: 0x0004287A File Offset: 0x00040A7A
+		// Token: 0x17000630 RID: 1584
+		// (get) Token: 0x060016B1 RID: 5809 RVA: 0x00046588 File Offset: 0x00044788
+		// (set) Token: 0x060016B2 RID: 5810 RVA: 0x000465C2 File Offset: 0x000447C2
 		public virtual bool? PlayerAttack
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001062 RID: 4194
+		// Token: 0x04001184 RID: 4484
 		[Nullable(2)]
 		protected new IHitBulletTypeFixedBulletId FbInstance;
 
-		// Token: 0x04001063 RID: 4195
+		// Token: 0x04001185 RID: 4485
 		[Nullable(2)]
 		protected new IHitBulletTypeFixedBulletId_SetValue PocoInterface;
 	}

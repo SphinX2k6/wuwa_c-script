@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005102 RID: 20738
+	// Token: 0x02005667 RID: 22119
 	public struct IDynamicTeleportComponent : IFlatbufferObject
 	{
-		// Token: 0x17009717 RID: 38679
-		// (get) Token: 0x06021686 RID: 136838 RVA: 0x004A3A30 File Offset: 0x004A1C30
+		// Token: 0x17009F04 RID: 40708
+		// (get) Token: 0x060235DA RID: 144858 RVA: 0x004DD9BC File Offset: 0x004DBBBC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021687 RID: 136839 RVA: 0x004A3A3D File Offset: 0x004A1C3D
+		// Token: 0x060235DB RID: 144859 RVA: 0x004DD9C9 File Offset: 0x004DBBC9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021688 RID: 136840 RVA: 0x004A3A44 File Offset: 0x004A1C44
+		// Token: 0x060235DC RID: 144860 RVA: 0x004DD9D0 File Offset: 0x004DBBD0
 		public static IDynamicTeleportComponent GetRootAsIDynamicTeleportComponent(ByteBuffer _bb)
 		{
 			return IDynamicTeleportComponent.GetRootAsIDynamicTeleportComponent(_bb, default(IDynamicTeleportComponent));
 		}
 
-		// Token: 0x06021689 RID: 136841 RVA: 0x004A3A60 File Offset: 0x004A1C60
+		// Token: 0x060235DD RID: 144861 RVA: 0x004DD9EC File Offset: 0x004DBBEC
 		public static IDynamicTeleportComponent GetRootAsIDynamicTeleportComponent(ByteBuffer _bb, IDynamicTeleportComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602168A RID: 136842 RVA: 0x004A3A7D File Offset: 0x004A1C7D
+		// Token: 0x060235DE RID: 144862 RVA: 0x004DDA09 File Offset: 0x004DBC09
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602168B RID: 136843 RVA: 0x004A3A8C File Offset: 0x004A1C8C
+		// Token: 0x060235DF RID: 144863 RVA: 0x004DDA18 File Offset: 0x004DBC18
 		public IDynamicTeleportComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009718 RID: 38680
-		// (get) Token: 0x0602168C RID: 136844 RVA: 0x004A3A9C File Offset: 0x004A1C9C
+		// Token: 0x17009F05 RID: 40709
+		// (get) Token: 0x060235E0 RID: 144864 RVA: 0x004DDA28 File Offset: 0x004DBC28
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009719 RID: 38681
-		// (get) Token: 0x0602168D RID: 136845 RVA: 0x004A3ADC File Offset: 0x004A1CDC
+		// Token: 0x17009F06 RID: 40710
+		// (get) Token: 0x060235E1 RID: 144865 RVA: 0x004DDA68 File Offset: 0x004DBC68
 		public IPosA? Offset
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700971A RID: 38682
-		// (get) Token: 0x0602168E RID: 136846 RVA: 0x004A3B3C File Offset: 0x004A1D3C
+		// Token: 0x17009F07 RID: 40711
+		// (get) Token: 0x060235E2 RID: 144866 RVA: 0x004DDAC8 File Offset: 0x004DBCC8
 		public int PhantomSkillId
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700971B RID: 38683
-		// (get) Token: 0x0602168F RID: 136847 RVA: 0x004A3B78 File Offset: 0x004A1D78
+		// Token: 0x17009F08 RID: 40712
+		// (get) Token: 0x060235E3 RID: 144867 RVA: 0x004DDB04 File Offset: 0x004DBD04
 		public byte NullMask
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021690 RID: 136848 RVA: 0x004A3BB5 File Offset: 0x004A1DB5
+		// Token: 0x060235E4 RID: 144868 RVA: 0x004DDB41 File Offset: 0x004DBD41
 		public static Offset<IDynamicTeleportComponent> CreateIDynamicTeleportComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IPosA> OffsetOffset = default(Offset<IPosA>), int PhantomSkillId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -115,43 +115,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicTeleportComponent.EndIDynamicTeleportComponent(builder);
 		}
 
-		// Token: 0x06021691 RID: 136849 RVA: 0x004A3BE1 File Offset: 0x004A1DE1
+		// Token: 0x060235E5 RID: 144869 RVA: 0x004DDB6D File Offset: 0x004DBD6D
 		public static void StartIDynamicTeleportComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06021692 RID: 136850 RVA: 0x004A3BEA File Offset: 0x004A1DEA
+		// Token: 0x060235E6 RID: 144870 RVA: 0x004DDB76 File Offset: 0x004DBD76
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06021693 RID: 136851 RVA: 0x004A3BF5 File Offset: 0x004A1DF5
+		// Token: 0x060235E7 RID: 144871 RVA: 0x004DDB81 File Offset: 0x004DBD81
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IPosA> offsetOffset)
 		{
 			builder.AddOffset(1, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x06021694 RID: 136852 RVA: 0x004A3C05 File Offset: 0x004A1E05
+		// Token: 0x060235E8 RID: 144872 RVA: 0x004DDB91 File Offset: 0x004DBD91
 		public static void AddPhantomSkillId(FlatBufferBuilder builder, int phantomSkillId)
 		{
 			builder.AddInt(2, phantomSkillId, 0);
 		}
 
-		// Token: 0x06021695 RID: 136853 RVA: 0x004A3C10 File Offset: 0x004A1E10
+		// Token: 0x060235E9 RID: 144873 RVA: 0x004DDB9C File Offset: 0x004DBD9C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06021696 RID: 136854 RVA: 0x004A3C1B File Offset: 0x004A1E1B
+		// Token: 0x060235EA RID: 144874 RVA: 0x004DDBA7 File Offset: 0x004DBDA7
 		public static Offset<IDynamicTeleportComponent> EndIDynamicTeleportComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IDynamicTeleportComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06021697 RID: 136855 RVA: 0x004A3C28 File Offset: 0x004A1E28
+		// Token: 0x060235EB RID: 144875 RVA: 0x004DDBB4 File Offset: 0x004DBDB4
 		public IDynamicTeleportComponentT UnPack()
 		{
 			IDynamicTeleportComponentT dynamicTeleportComponentT = new IDynamicTeleportComponentT();
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dynamicTeleportComponentT;
 		}
 
-		// Token: 0x06021698 RID: 136856 RVA: 0x004A3C44 File Offset: 0x004A1E44
+		// Token: 0x060235EC RID: 144876 RVA: 0x004DDBD0 File Offset: 0x004DBDD0
 		public void UnPackTo(IDynamicTeleportComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -168,7 +168,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021699 RID: 136857 RVA: 0x004A3CA4 File Offset: 0x004A1EA4
+		// Token: 0x060235ED RID: 144877 RVA: 0x004DDC30 File Offset: 0x004DBE30
 		public static Offset<IDynamicTeleportComponent> Pack(FlatBufferBuilder builder, IDynamicTeleportComponentT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicTeleportComponent.CreateIDynamicTeleportComponent(builder, _o.Disabled, offsetOffset, _o.PhantomSkillId, _o.NullMask);
 		}
 
-		// Token: 0x0400E16C RID: 57708
+		// Token: 0x0400ED69 RID: 60777
 		private Table __p;
 	}
 }

@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020028F9 RID: 10489
+// Token: 0x02001E74 RID: 7796
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationAttrListScrollData : AttrListScrollData
 {
-	// Token: 0x06015A74 RID: 88692 RVA: 0x005777FF File Offset: 0x005759FF
+	// Token: 0x06013478 RID: 78968 RVA: 0x005A26CB File Offset: 0x005A08CB
 	public FormationAttrListScrollData(int id, double baseValue, double addValue, int priority, bool isRatio, CommonComponentDefine.EAttributeType attributeType) : base(id, baseValue, addValue, priority, isRatio, attributeType)
 	{
 	}
 
-	// Token: 0x06015A75 RID: 88693 RVA: 0x00577810 File Offset: 0x00575A10
+	// Token: 0x06013479 RID: 78969 RVA: 0x005A26DC File Offset: 0x005A08DC
 	private FormationProperty? GetFormationPropertyConfig()
 	{
 		FormationProperty? config = ConfigFormationPropertyById.GetConfig(this.Id, true);
@@ -23,7 +23,7 @@ public class FormationAttrListScrollData : AttrListScrollData
 		return new FormationProperty?(config.Value);
 	}
 
-	// Token: 0x06015A76 RID: 88694 RVA: 0x0057784C File Offset: 0x00575A4C
+	// Token: 0x0601347A RID: 78970 RVA: 0x005A2718 File Offset: 0x005A0918
 	public override string GetName()
 	{
 		FormationProperty? formationPropertyConfig = this.GetFormationPropertyConfig();
@@ -34,7 +34,7 @@ public class FormationAttrListScrollData : AttrListScrollData
 		return formationPropertyConfig.Value.Name;
 	}
 
-	// Token: 0x06015A77 RID: 88695 RVA: 0x00577880 File Offset: 0x00575A80
+	// Token: 0x0601347B RID: 78971 RVA: 0x005A274C File Offset: 0x005A094C
 	public override string GetIcon()
 	{
 		FormationProperty? formationPropertyConfig = this.GetFormationPropertyConfig();
@@ -45,7 +45,7 @@ public class FormationAttrListScrollData : AttrListScrollData
 		return formationPropertyConfig.Value.Icon;
 	}
 
-	// Token: 0x06015A78 RID: 88696 RVA: 0x005778B4 File Offset: 0x00575AB4
+	// Token: 0x0601347C RID: 78972 RVA: 0x005A2780 File Offset: 0x005A0980
 	public override string GetDesc()
 	{
 		FormationProperty? formationPropertyConfig = this.GetFormationPropertyConfig();

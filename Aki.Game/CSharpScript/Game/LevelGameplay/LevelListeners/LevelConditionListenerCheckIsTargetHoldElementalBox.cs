@@ -4,10 +4,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AE1 RID: 27361
+	// Token: 0x02005C59 RID: 23641
 	public class LevelConditionListenerCheckIsTargetHoldElementalBox : LevelListenerBase
 	{
-		// Token: 0x06043F84 RID: 278404 RVA: 0x010AC139 File Offset: 0x010AA339
+		// Token: 0x0603A0D6 RID: 237782 RVA: 0x010559B1 File Offset: 0x01053BB1
 		private void OnCoreChanged()
 		{
 			TListenerCallbackFunc callback = this.Callback;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			callback(null, Array.Empty<object>());
 		}
 
-		// Token: 0x06043F85 RID: 278405 RVA: 0x010AC151 File Offset: 0x010AA351
+		// Token: 0x0603A0D7 RID: 237783 RVA: 0x010559C9 File Offset: 0x01053BC9
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F86 RID: 278406 RVA: 0x010AC18C File Offset: 0x010AA38C
+		// Token: 0x0603A0D8 RID: 237784 RVA: 0x01055A04 File Offset: 0x01053C04
 		protected override void OnUnListen()
 		{
 			if (EventSystem.Instance.Has(EEventName.OnElementalFoundationCoreChanged, new Action(this.OnCoreChanged)))

@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.Personal;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001953 RID: 6483
+// Token: 0x02000E10 RID: 3600
 public class PlayerTitleItem : UiPanelBase
 {
-	// Token: 0x0600BD4B RID: 48459 RVA: 0x002ACDB8 File Offset: 0x002AAFB8
+	// Token: 0x0600914E RID: 37198 RVA: 0x002B7BFC File Offset: 0x002B5DFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -62,7 +62,7 @@ public class PlayerTitleItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600BD4C RID: 48460 RVA: 0x002AD058 File Offset: 0x002AB258
+	// Token: 0x0600914F RID: 37199 RVA: 0x002B7E9C File Offset: 0x002B609C
 	public void Refresh(int? playerTitleId, int? playerTitleStarLevel, int? sex)
 	{
 		if (playerTitleId == null || playerTitleId.Value == 0)
@@ -113,7 +113,7 @@ public class PlayerTitleItem : UiPanelBase
 		this.RefreshDecorate();
 	}
 
-	// Token: 0x0600BD4D RID: 48461 RVA: 0x002AD1BC File Offset: 0x002AB3BC
+	// Token: 0x06009150 RID: 37200 RVA: 0x002B8000 File Offset: 0x002B6200
 	public void RefreshCommonTitle(bool isFemale)
 	{
 		if (!string.IsNullOrEmpty((this.PlayerTitleConfig != null) ? this.PlayerTitleConfig.GetValueOrDefault().TitleIcon : null))
@@ -148,7 +148,7 @@ public class PlayerTitleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BD4E RID: 48462 RVA: 0x002AD2B4 File Offset: 0x002AB4B4
+	// Token: 0x06009151 RID: 37201 RVA: 0x002B80F8 File Offset: 0x002B62F8
 	public void RefreshStarTitle(int? playerTitleStarLevel)
 	{
 		UUIItem item = base.GetItem(1);
@@ -169,7 +169,7 @@ public class PlayerTitleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BD4F RID: 48463 RVA: 0x002AD384 File Offset: 0x002AB584
+	// Token: 0x06009152 RID: 37202 RVA: 0x002B81C8 File Offset: 0x002B63C8
 	public void RefreshDecorate()
 	{
 		string decorateLeftNiagara = this.PlayerTitleConfig.Value.DecorateLeftNiagara;
@@ -205,7 +205,7 @@ public class PlayerTitleItem : UiPanelBase
 		uiNiagara3.SetUIActive(false);
 	}
 
-	// Token: 0x0600BD50 RID: 48464 RVA: 0x002AD454 File Offset: 0x002AB654
+	// Token: 0x06009153 RID: 37203 RVA: 0x002B8298 File Offset: 0x002B6498
 	[NullableContext(1)]
 	private void SetIconAndColor(string iconPath, UUITexture iconItem)
 	{
@@ -217,13 +217,13 @@ public class PlayerTitleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BD51 RID: 48465 RVA: 0x002AD4A0 File Offset: 0x002AB6A0
+	// Token: 0x06009154 RID: 37204 RVA: 0x002B82E4 File Offset: 0x002B64E4
 	public void SetIsPreview(bool isPreview)
 	{
 		this.IsPreview = isPreview;
 	}
 
-	// Token: 0x0600BD52 RID: 48466 RVA: 0x002AD4AC File Offset: 0x002AB6AC
+	// Token: 0x06009155 RID: 37205 RVA: 0x002B82F0 File Offset: 0x002B64F0
 	private void OnBtnClick(EToggleState state)
 	{
 		if (!this.IsPreview)
@@ -251,7 +251,7 @@ public class PlayerTitleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BD53 RID: 48467 RVA: 0x002AD54E File Offset: 0x002AB74E
+	// Token: 0x06009156 RID: 37206 RVA: 0x002B8392 File Offset: 0x002B6592
 	private void SetToggleState()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(12);
@@ -262,76 +262,76 @@ public class PlayerTitleItem : UiPanelBase
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04005565 RID: 21861
+	// Token: 0x04005612 RID: 22034
 	private PlayerTitle? PlayerTitleConfig;
 
-	// Token: 0x04005566 RID: 21862
+	// Token: 0x04005613 RID: 22035
 	private bool IsPreview;
 
-	// Token: 0x04005567 RID: 21863
+	// Token: 0x04005614 RID: 22036
 	private int PlayerTitleStarLevel;
 
-	// Token: 0x04005568 RID: 21864
+	// Token: 0x04005615 RID: 22037
 	[Nullable(1)]
 	public Action CallBack = delegate()
 	{
 	};
 
-	// Token: 0x04005569 RID: 21865
+	// Token: 0x04005616 RID: 22038
 	public bool CanShowTip = true;
 
-	// Token: 0x02007EAF RID: 32431
+	// Token: 0x0200703E RID: 28734
 	private class EPlayerTitleDefine
 	{
-		// Token: 0x040296A8 RID: 169640
+		// Token: 0x040249E5 RID: 149989
 		public const int TextureBg = 0;
 
-		// Token: 0x040296A9 RID: 169641
+		// Token: 0x040249E6 RID: 149990
 		public const int PanelStarTitle = 1;
 
-		// Token: 0x040296AA RID: 169642
+		// Token: 0x040249E7 RID: 149991
 		public const int TextureStarBg = 2;
 
-		// Token: 0x040296AB RID: 169643
+		// Token: 0x040249E8 RID: 149992
 		public const int TextureStarSmallIcon = 3;
 
-		// Token: 0x040296AC RID: 169644
+		// Token: 0x040249E9 RID: 149993
 		public const int TxtStarParam = 4;
 
-		// Token: 0x040296AD RID: 169645
+		// Token: 0x040249EA RID: 149994
 		public const int TextureStarIcon = 6;
 
-		// Token: 0x040296AE RID: 169646
+		// Token: 0x040249EB RID: 149995
 		public const int PanelComTitle = 7;
 
-		// Token: 0x040296AF RID: 169647
+		// Token: 0x040249EC RID: 149996
 		public const int TextureComIcon = 8;
 
-		// Token: 0x040296B0 RID: 169648
+		// Token: 0x040249ED RID: 149997
 		public const int TxtName = 9;
 
-		// Token: 0x040296B1 RID: 169649
+		// Token: 0x040249EE RID: 149998
 		public const int TextureSelected = 10;
 
-		// Token: 0x040296B2 RID: 169650
+		// Token: 0x040249EF RID: 149999
 		public const int PanelInfoTip = 11;
 
-		// Token: 0x040296B3 RID: 169651
+		// Token: 0x040249F0 RID: 150000
 		public const int ToggleRoot = 12;
 
-		// Token: 0x040296B4 RID: 169652
+		// Token: 0x040249F1 RID: 150001
 		public const int NiagaraDecorateLeft = 13;
 
-		// Token: 0x040296B5 RID: 169653
+		// Token: 0x040249F2 RID: 150002
 		public const int NiagaraDecorateRight = 14;
 
-		// Token: 0x040296B6 RID: 169654
+		// Token: 0x040249F3 RID: 150003
 		public const int NiagaraBg = 15;
 
-		// Token: 0x040296B7 RID: 169655
+		// Token: 0x040249F4 RID: 150004
 		public const int ItemRoleHeadPanel = 16;
 
-		// Token: 0x040296B8 RID: 169656
+		// Token: 0x040249F5 RID: 150005
 		public const int TextureRoleHead = 17;
 	}
 }

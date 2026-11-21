@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FD0 RID: 8144
+	// Token: 0x02000647 RID: 1607
 	public sealed class FCheckTextInputDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601EE51 RID: 126545 RVA: 0x002DE9BC File Offset: 0x002DCBBC
+		// Token: 0x06008D51 RID: 36177 RVA: 0x000D4A38 File Offset: 0x000D2C38
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FCheckTextInputDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601EE52 RID: 126546 RVA: 0x002DE9C8 File Offset: 0x002DCBC8
+		// Token: 0x06008D52 RID: 36178 RVA: 0x000D4A44 File Offset: 0x000D2C44
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FCheckTextInputDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FCheckTextInputDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601EE53 RID: 126547 RVA: 0x002DE9EB File Offset: 0x002DCBEB
+		// Token: 0x06008D53 RID: 36179 RVA: 0x000D4A67 File Offset: 0x000D2C67
 		public FCheckTextInputDelegate()
 		{
 		}
 
-		// Token: 0x0601EE54 RID: 126548 RVA: 0x002DE9F3 File Offset: 0x002DCBF3
+		// Token: 0x06008D54 RID: 36180 RVA: 0x000D4A6F File Offset: 0x000D2C6F
 		[NullableContext(2)]
 		public FCheckTextInputDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601EE55 RID: 126549 RVA: 0x002DE9FD File Offset: 0x002DCBFD
+		// Token: 0x06008D55 RID: 36181 RVA: 0x000D4A79 File Offset: 0x000D2C79
 		public FCheckTextInputDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601EE56 RID: 126550 RVA: 0x002DEA08 File Offset: 0x002DCC08
+		// Token: 0x06008D56 RID: 36182 RVA: 0x000D4A84 File Offset: 0x000D2C84
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<string, bool>) ?? ((Func<string, bool>)Delegate.CreateDelegate(typeof(Func<string, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601EE57 RID: 126551 RVA: 0x002DEA3A File Offset: 0x002DCC3A
+		// Token: 0x06008D57 RID: 36183 RVA: 0x000D4AB6 File Offset: 0x000D2CB6
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Func<string, bool> Callback)
 		{
 			if (FCheckTextInputDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FCheckTextInputDelegate.RegisterId);
 		}
 
-		// Token: 0x0601EE58 RID: 126552 RVA: 0x002DEA74 File Offset: 0x002DCC74
+		// Token: 0x06008D58 RID: 36184 RVA: 0x000D4AF0 File Offset: 0x000D2CF0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool Execute(string InString)
 		{
 			FCheckTextInputDelegate.__FCheckTextInputDelegate_DelegateParams* ptr = stackalloc FCheckTextInputDelegate.__FCheckTextInputDelegate_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FCheckTextInputDelegate.__FCheckTextInputDelegate_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x0601EE59 RID: 126553 RVA: 0x002DEAD0 File Offset: 0x002DCCD0
+		// Token: 0x06008D59 RID: 36185 RVA: 0x000D4B4C File Offset: 0x000D2D4C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<string, bool> func = target as Func<string, bool>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			((FCheckTextInputDelegate.__FCheckTextInputDelegate_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x04010B04 RID: 68356
+		// Token: 0x04003D80 RID: 15744
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010B05 RID: 68357
+		// Token: 0x04003D81 RID: 15745
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.CheckTextInputDelegate__DelegateSignature";
 
-		// Token: 0x04010B06 RID: 68358
+		// Token: 0x04003D82 RID: 15746
 		private static int RegisterId;
 
-		// Token: 0x02003425 RID: 13349
+		// Token: 0x02000E68 RID: 3688
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FCheckTextInputDelegate_DelegateParams
+		private ref struct __FCheckTextInputDelegate_DelegateParams
 		{
-			// Token: 0x04017400 RID: 95232
+			// Token: 0x0400620F RID: 25103
 			[FieldOffset(0)]
 			public FString InString;
 
-			// Token: 0x04017401 RID: 95233
+			// Token: 0x04006210 RID: 25104
 			[FieldOffset(16)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003426 RID: 13350
+		// Token: 0x02000E69 RID: 3689
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017402 RID: 95234
+			// Token: 0x04006211 RID: 25105
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

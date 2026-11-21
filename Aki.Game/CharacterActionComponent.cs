@@ -20,25 +20,15 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003006 RID: 12294
+// Token: 0x0200255C RID: 9564
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterActionComponent : EntityComponent, IComponentDependency
+public class CharacterActionComponent : EntityComponent
 {
-	// Token: 0x170023C6 RID: 9158
-	// (get) Token: 0x0601A09A RID: 106650 RVA: 0x006D1761 File Offset: 0x006CF961
-	[Nullable(new byte[]
+	// Token: 0x1700248E RID: 9358
+	// (get) Token: 0x060179DC RID: 96732 RVA: 0x006F98FA File Offset: 0x006F7AFA
+	public override Type[] Dependencies
 	{
-		2,
-		1
-	})]
-	public static Type[] Dependencies
-	{
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
 		get
 		{
 			return new Type[]
@@ -50,8 +40,8 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x170023C7 RID: 9159
-	// (get) Token: 0x0601A09B RID: 106651 RVA: 0x006D1790 File Offset: 0x006CF990
+	// Token: 0x1700248F RID: 9359
+	// (get) Token: 0x060179DD RID: 96733 RVA: 0x006F9929 File Offset: 0x006F7B29
 	public bool IsSitDown
 	{
 		get
@@ -60,8 +50,8 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x170023C8 RID: 9160
-	// (get) Token: 0x0601A09C RID: 106652 RVA: 0x006D1798 File Offset: 0x006CF998
+	// Token: 0x17002490 RID: 9360
+	// (get) Token: 0x060179DE RID: 96734 RVA: 0x006F9931 File Offset: 0x006F7B31
 	public bool IsSummonSitDownLocked
 	{
 		get
@@ -70,7 +60,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A09D RID: 106653 RVA: 0x006D17A0 File Offset: 0x006CF9A0
+	// Token: 0x060179DF RID: 96735 RVA: 0x006F993C File Offset: 0x006F7B3C
 	public void ApplySummonSitDownLock(string reason)
 	{
 		if (this.SummonSitDownLockedInternal)
@@ -86,7 +76,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601A09E RID: 106654 RVA: 0x006D17E4 File Offset: 0x006CF9E4
+	// Token: 0x060179E0 RID: 96736 RVA: 0x006F9980 File Offset: 0x006F7B80
 	public void ReleaseSummonSitDownLock(string reason)
 	{
 		if (!this.SummonSitDownLockedInternal)
@@ -102,7 +92,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601A09F RID: 106655 RVA: 0x006D1828 File Offset: 0x006CFA28
+	// Token: 0x060179E1 RID: 96737 RVA: 0x006F99C4 File Offset: 0x006F7BC4
 	public unsafe void SetIsSitDown(bool isSitDown, string reason)
 	{
 		if (this.IsSitDownInternal != isSitDown)
@@ -146,9 +136,9 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x170023C9 RID: 9161
-	// (get) Token: 0x0601A0A0 RID: 106656 RVA: 0x006D1968 File Offset: 0x006CFB68
-	// (set) Token: 0x0601A0A1 RID: 106657 RVA: 0x006D1970 File Offset: 0x006CFB70
+	// Token: 0x17002491 RID: 9361
+	// (get) Token: 0x060179E2 RID: 96738 RVA: 0x006F9B04 File Offset: 0x006F7D04
+	// (set) Token: 0x060179E3 RID: 96739 RVA: 0x006F9B0C File Offset: 0x006F7D0C
 	[Nullable(2)]
 	public Entity Chair
 	{
@@ -187,13 +177,13 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0A2 RID: 106658 RVA: 0x006D1A57 File Offset: 0x006CFC57
+	// Token: 0x060179E4 RID: 96740 RVA: 0x006F9BF3 File Offset: 0x006F7DF3
 	private void OnRemoveChair(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		this.Chair = null;
 	}
 
-	// Token: 0x0601A0A3 RID: 106659 RVA: 0x006D1A60 File Offset: 0x006CFC60
+	// Token: 0x060179E5 RID: 96741 RVA: 0x006F9BFC File Offset: 0x006F7DFC
 	private void OnSitDownEndChanged(int tagId, bool tagExist)
 	{
 		if (!tagExist)
@@ -202,7 +192,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0A4 RID: 106660 RVA: 0x006D1A6C File Offset: 0x006CFC6C
+	// Token: 0x060179E6 RID: 96742 RVA: 0x006F9C08 File Offset: 0x006F7E08
 	private void OnDisableTagChanged(int tagId, bool tagExist)
 	{
 		if (tagExist && this.IsSitDown)
@@ -214,7 +204,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0A5 RID: 106661 RVA: 0x006D1AB0 File Offset: 0x006CFCB0
+	// Token: 0x060179E7 RID: 96743 RVA: 0x006F9C4C File Offset: 0x006F7E4C
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -241,7 +231,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A0A6 RID: 106662 RVA: 0x006D1BA4 File Offset: 0x006CFDA4
+	// Token: 0x060179E8 RID: 96744 RVA: 0x006F9D40 File Offset: 0x006F7F40
 	protected override void OnActivate()
 	{
 		if (!this.ActorComp.IsAutonomousProxy || this.IsInit)
@@ -262,7 +252,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		this.IsInit = true;
 	}
 
-	// Token: 0x0601A0A7 RID: 106663 RVA: 0x006D1C8D File Offset: 0x006CFE8D
+	// Token: 0x060179E9 RID: 96745 RVA: 0x006F9E29 File Offset: 0x006F8029
 	private void TeleportStart(bool b)
 	{
 		if (this.IsSitDown)
@@ -271,7 +261,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0A8 RID: 106664 RVA: 0x006D1CA2 File Offset: 0x006CFEA2
+	// Token: 0x060179EA RID: 96746 RVA: 0x006F9E3E File Offset: 0x006F803E
 	private void PlotNetworkStart(PlotInfo plotInfo)
 	{
 		if (this.IsSitDown && plotInfo.PlotLevel != EPlotLevel.LevelD && plotInfo.PlotLevel != EPlotLevel.LevelE && !plotInfo.KeepMainRolePose)
@@ -280,7 +270,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0A9 RID: 106665 RVA: 0x006D1CD4 File Offset: 0x006CFED4
+	// Token: 0x060179EB RID: 96747 RVA: 0x006F9E70 File Offset: 0x006F8070
 	protected override bool OnEnd()
 	{
 		if (!this.IsInit)
@@ -305,7 +295,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A0AA RID: 106666 RVA: 0x006D1DAC File Offset: 0x006CFFAC
+	// Token: 0x060179EC RID: 96748 RVA: 0x006F9F48 File Offset: 0x006F8148
 	protected override void OnTick(float delta)
 	{
 		if (!this.ActorComp.IsAutonomousProxy)
@@ -368,7 +358,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0AB RID: 106667 RVA: 0x006D1FFC File Offset: 0x006D01FC
+	// Token: 0x060179ED RID: 96749 RVA: 0x006FA198 File Offset: 0x006F8398
 	private void IgnoreActorsCollision(SceneItemActorComponent actorComp, bool bCollision)
 	{
 		CreatureDataComponent component = actorComp.Entity.GetComponent<CreatureDataComponent>();
@@ -407,7 +397,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0AC RID: 106668 RVA: 0x006D20EC File Offset: 0x006D02EC
+	// Token: 0x060179EE RID: 96750 RVA: 0x006FA288 File Offset: 0x006F8488
 	public void ResetCollision()
 	{
 		this.MarkForResetCollision = false;
@@ -424,13 +414,13 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		this.Chair = null;
 	}
 
-	// Token: 0x0601A0AD RID: 106669 RVA: 0x006D2146 File Offset: 0x006D0346
+	// Token: 0x060179EF RID: 96751 RVA: 0x006FA2E2 File Offset: 0x006F84E2
 	public bool GetSitDownState()
 	{
 		return this.IsSitDown;
 	}
 
-	// Token: 0x0601A0AE RID: 106670 RVA: 0x006D2150 File Offset: 0x006D0350
+	// Token: 0x060179F0 RID: 96752 RVA: 0x006FA2EC File Offset: 0x006F84EC
 	private bool IsSummonedChairSitBlocked(Entity sceneItem)
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -443,7 +433,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return (playerFollowerChairHandler != null && playerFollowerChairHandler.IsSummonedChairManualSitBlocked(sceneItem)) || (playerFollowerChairHandler != null && playerFollowerChairHandler.IsChairSpaceOccupied(sceneItem));
 	}
 
-	// Token: 0x0601A0AF RID: 106671 RVA: 0x006D21A4 File Offset: 0x006D03A4
+	// Token: 0x060179F1 RID: 96753 RVA: 0x006FA340 File Offset: 0x006F8540
 	public bool IsSummonedChairLeaveBlocked()
 	{
 		if (this.Chair == null)
@@ -460,7 +450,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return playerFollowerChairHandler != null && playerFollowerChairHandler.IsSummonedChairSitDownNotSettled(this.Chair);
 	}
 
-	// Token: 0x0601A0B0 RID: 106672 RVA: 0x006D21F8 File Offset: 0x006D03F8
+	// Token: 0x060179F2 RID: 96754 RVA: 0x006FA394 File Offset: 0x006F8594
 	private unsafe bool CanEnterSitDownAction(Entity sceneItem)
 	{
 		if (this.TagComp.HasAnyTag(new int[]
@@ -515,7 +505,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A0B1 RID: 106673 RVA: 0x006D23B8 File Offset: 0x006D05B8
+	// Token: 0x060179F3 RID: 96755 RVA: 0x006FA554 File Offset: 0x006F8754
 	public bool EnterSitDownAction(Entity sceneItem, int type, bool limitStandUpFromOneSide = false)
 	{
 		if (!this.CanEnterSitDownAction(sceneItem))
@@ -540,13 +530,13 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A0B2 RID: 106674 RVA: 0x006D2463 File Offset: 0x006D0663
+	// Token: 0x060179F4 RID: 96756 RVA: 0x006FA5FF File Offset: 0x006F87FF
 	private void RegisterSitSpecialAnimMachineState()
 	{
 		this.RequestSitDownAction(null, null);
 	}
 
-	// Token: 0x0601A0B3 RID: 106675 RVA: 0x006D2470 File Offset: 0x006D0670
+	// Token: 0x060179F5 RID: 96757 RVA: 0x006FA60C File Offset: 0x006F880C
 	[NullableContext(2)]
 	private void RequestSitDownAction(List<int> states, List<int> specialStates)
 	{
@@ -577,7 +567,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		LevelGamePlayController.Instance.RequestChairSit(creatureDataId, this.IsSitDown, animationStateChangedRequest);
 	}
 
-	// Token: 0x0601A0B4 RID: 106676 RVA: 0x006D2518 File Offset: 0x006D0718
+	// Token: 0x060179F6 RID: 96758 RVA: 0x006FA6B4 File Offset: 0x006F88B4
 	public void OnResponseSit(bool isSitDown, int errorCode)
 	{
 		if (errorCode != 0)
@@ -586,7 +576,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0B5 RID: 106677 RVA: 0x006D252C File Offset: 0x006D072C
+	// Token: 0x060179F7 RID: 96759 RVA: 0x006FA6C8 File Offset: 0x006F88C8
 	public void DoSitDownAction()
 	{
 		if (this.Chair == null)
@@ -607,7 +597,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		this.IgnoreCollision();
 	}
 
-	// Token: 0x0601A0B6 RID: 106678 RVA: 0x006D2630 File Offset: 0x006D0830
+	// Token: 0x060179F8 RID: 96760 RVA: 0x006FA7CC File Offset: 0x006F89CC
 	private void IgnoreCollision()
 	{
 		SceneItemActorComponent component = this.Chair.GetComponent<SceneItemActorComponent>();
@@ -618,7 +608,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		this.ActorComp.Actor.CapsuleComponent.SetCollisionResponseToChannel(ECollisionChannel.ECC_Pawn, ECollisionResponse.ECR_Ignore);
 	}
 
-	// Token: 0x0601A0B7 RID: 106679 RVA: 0x006D2674 File Offset: 0x006D0874
+	// Token: 0x060179F9 RID: 96761 RVA: 0x006FA810 File Offset: 0x006F8A10
 	public void PreLeaveSitDownAction(string reason = "")
 	{
 		this.SetIsSitDown(false, reason);
@@ -641,7 +631,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		onLeaveSitDown();
 	}
 
-	// Token: 0x0601A0B8 RID: 106680 RVA: 0x006D26C8 File Offset: 0x006D08C8
+	// Token: 0x060179FA RID: 96762 RVA: 0x006FA864 File Offset: 0x006F8A64
 	private void CalculateLeaveSitDownIndex()
 	{
 		if (this.Chair == null || this.Chair.IsEnd)
@@ -685,7 +675,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0B9 RID: 106681 RVA: 0x006D27F1 File Offset: 0x006D09F1
+	// Token: 0x060179FB RID: 96763 RVA: 0x006FA98D File Offset: 0x006F8B8D
 	public void LeaveSitDownAction()
 	{
 		this.IsStandingUp = false;
@@ -701,7 +691,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		this.CalculateChairDir();
 	}
 
-	// Token: 0x0601A0BA RID: 106682 RVA: 0x006D2820 File Offset: 0x006D0A20
+	// Token: 0x060179FC RID: 96764 RVA: 0x006FA9BC File Offset: 0x006F8BBC
 	public void CalculateChairDir()
 	{
 		if (this.Chair == null || this.ActorComp == null)
@@ -717,7 +707,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		this.StandUpActorForward.Normalize(9.99999993922529E-09);
 	}
 
-	// Token: 0x0601A0BB RID: 106683 RVA: 0x006D28D0 File Offset: 0x006D0AD0
+	// Token: 0x060179FD RID: 96765 RVA: 0x006FAA6C File Offset: 0x006F8C6C
 	public EChairInteractDirection IsChairCanInteract(Entity sceneItem)
 	{
 		SceneItemActorComponent component = sceneItem.GetComponent<SceneItemActorComponent>();
@@ -749,19 +739,19 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return EChairInteractDirection.Backward;
 	}
 
-	// Token: 0x0601A0BC RID: 106684 RVA: 0x006D29BD File Offset: 0x006D0BBD
+	// Token: 0x060179FE RID: 96766 RVA: 0x006FAB59 File Offset: 0x006F8D59
 	public void StartCatapult(Entity entity, ICatapult config)
 	{
 		this.StartCatapultInternal(entity, new OneOf<ICatapult, ISuperCatapult>?(config));
 	}
 
-	// Token: 0x0601A0BD RID: 106685 RVA: 0x006D29D1 File Offset: 0x006D0BD1
+	// Token: 0x060179FF RID: 96767 RVA: 0x006FAB6D File Offset: 0x006F8D6D
 	public void StartCatapult(Entity entity, ISuperCatapult config)
 	{
 		this.StartCatapultInternal(entity, new OneOf<ICatapult, ISuperCatapult>?(config));
 	}
 
-	// Token: 0x0601A0BE RID: 106686 RVA: 0x006D29E8 File Offset: 0x006D0BE8
+	// Token: 0x06017A00 RID: 96768 RVA: 0x006FAB84 File Offset: 0x006F8D84
 	private void StartCatapultInternal(Entity entity, [Nullable(new byte[]
 	{
 		0,
@@ -850,12 +840,12 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		});
 	}
 
-	// Token: 0x0601A0BF RID: 106687 RVA: 0x006D2B64 File Offset: 0x006D0D64
+	// Token: 0x06017A01 RID: 96769 RVA: 0x006FAD00 File Offset: 0x006F8F00
 	public void EndCatapult()
 	{
 	}
 
-	// Token: 0x0601A0C0 RID: 106688 RVA: 0x006D2B68 File Offset: 0x006D0D68
+	// Token: 0x06017A02 RID: 96770 RVA: 0x006FAD04 File Offset: 0x006F8F04
 	[return: Nullable(0)]
 	public UniTask<bool> StartCatapultToTargetByTime(global::Vector targetLocation, global::Vector locationOffset, float time1, int skillId = 0)
 	{
@@ -871,7 +861,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return <StartCatapultToTargetByTime>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601A0C1 RID: 106689 RVA: 0x006D2BCC File Offset: 0x006D0DCC
+	// Token: 0x06017A03 RID: 96771 RVA: 0x006FAD68 File Offset: 0x006F8F68
 	public UniTask StartBounce(IBounce config)
 	{
 		CharacterActionComponent.<StartBounce>d__97 <StartBounce>d__;
@@ -883,7 +873,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return <StartBounce>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601A0C2 RID: 106690 RVA: 0x006D2C18 File Offset: 0x006D0E18
+	// Token: 0x06017A04 RID: 96772 RVA: 0x006FADB4 File Offset: 0x006F8FB4
 	public void StartBounceFromAns(float time, float height, string curvePath)
 	{
 		CharacterCatapultComponent component = base.Entity.GetComponent<CharacterCatapultComponent>();
@@ -903,7 +893,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		this.IsUseCatapultUpAnim = false;
 	}
 
-	// Token: 0x0601A0C3 RID: 106691 RVA: 0x006D2CC0 File Offset: 0x006D0EC0
+	// Token: 0x06017A05 RID: 96773 RVA: 0x006FAE5C File Offset: 0x006F905C
 	[return: Nullable(0)]
 	public UniTask<bool> StartBounceWithHorizontalOffset(float height, global::Vector offset, float time, string curve)
 	{
@@ -919,7 +909,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return <StartBounceWithHorizontalOffset>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601A0C4 RID: 106692 RVA: 0x006D2D24 File Offset: 0x006D0F24
+	// Token: 0x06017A06 RID: 96774 RVA: 0x006FAEC0 File Offset: 0x006F90C0
 	public void EndBounce()
 	{
 		if (this.SkillComp == null)
@@ -945,13 +935,13 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		});
 	}
 
-	// Token: 0x0601A0C5 RID: 106693 RVA: 0x006D2D98 File Offset: 0x006D0F98
+	// Token: 0x06017A07 RID: 96775 RVA: 0x006FAF34 File Offset: 0x006F9134
 	public global::Vector GetInteractionTargetLocation()
 	{
 		return this.InteractionTargetLocation;
 	}
 
-	// Token: 0x0601A0C6 RID: 106694 RVA: 0x006D2DA0 File Offset: 0x006D0FA0
+	// Token: 0x06017A08 RID: 96776 RVA: 0x006FAF3C File Offset: 0x006F913C
 	private void OnSuperJumpStateChanged(int tagId, bool tagExist)
 	{
 		if (!tagExist)
@@ -960,8 +950,8 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x170023CA RID: 9162
-	// (get) Token: 0x0601A0C7 RID: 106695 RVA: 0x006D2DB8 File Offset: 0x006D0FB8
+	// Token: 0x17002492 RID: 9362
+	// (get) Token: 0x06017A09 RID: 96777 RVA: 0x006FAF54 File Offset: 0x006F9154
 	public UTraceLineElement ExecutionTrace
 	{
 		get
@@ -979,7 +969,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A0C8 RID: 106696 RVA: 0x006D2E28 File Offset: 0x006D1028
+	// Token: 0x06017A0A RID: 96778 RVA: 0x006FAFC4 File Offset: 0x006F91C4
 	public void PlayCustomCommonSkill(int inSkillId)
 	{
 		CharacterSkillComponent skillComp = this.SkillComp;
@@ -993,7 +983,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		});
 	}
 
-	// Token: 0x0601A0C9 RID: 106697 RVA: 0x006D2E5F File Offset: 0x006D105F
+	// Token: 0x06017A0B RID: 96779 RVA: 0x006FAFFB File Offset: 0x006F91FB
 	private float GetAnimChangeAngle()
 	{
 		if (this.AnimChangeAngle == null)
@@ -1003,7 +993,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		return this.AnimChangeAngle.Value;
 	}
 
-	// Token: 0x0601A0CA RID: 106698 RVA: 0x006D2E8C File Offset: 0x006D108C
+	// Token: 0x06017A0C RID: 96780 RVA: 0x006FB028 File Offset: 0x006F9228
 	public void PlayFaithJumpSkill()
 	{
 		CharacterSkillComponent skillComp = this.SkillComp;
@@ -1037,7 +1027,7 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601A0CB RID: 106699 RVA: 0x006D2F6C File Offset: 0x006D116C
+	// Token: 0x06017A0D RID: 96781 RVA: 0x006FB108 File Offset: 0x006F9308
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1045,393 +1035,349 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 			return false;
 		}
 		CharacterActionComponent characterActionComponent = (CharacterActionComponent)componentTemplate;
-		if (base.CanResetComponentProperty("StateComp"))
+		if (characterActionComponent.StateComp == null)
 		{
-			if (characterActionComponent.StateComp == null)
-			{
-				this.StateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.StateComp), "StateComp"))
-			{
-				return false;
-			}
+			this.StateComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (characterActionComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (characterActionComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (characterActionComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SkillComp"))
-		{
-			if (characterActionComponent.SkillComp == null)
-			{
-				this.SkillComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSkillComponent>(this.SkillComp), "SkillComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OriginCapsuleHalfHeight"))
-		{
-			this.OriginCapsuleHalfHeight = characterActionComponent.OriginCapsuleHalfHeight;
-		}
-		if (base.CanResetComponentProperty("OriginCapsuleRadius"))
-		{
-			this.OriginCapsuleRadius = characterActionComponent.OriginCapsuleRadius;
-		}
-		if (base.CanResetComponentProperty("IsSitDownInternal"))
-		{
-			this.IsSitDownInternal = characterActionComponent.IsSitDownInternal;
-		}
-		if (base.CanResetComponentProperty("SummonSitDownLockedInternal"))
-		{
-			this.SummonSitDownLockedInternal = characterActionComponent.SummonSitDownLockedInternal;
-		}
-		if (base.CanResetComponentProperty("IsStandingUp"))
-		{
-			this.IsStandingUp = characterActionComponent.IsStandingUp;
-		}
-		if (base.CanResetComponentProperty("ChairInternal"))
-		{
-			if (characterActionComponent.ChairInternal == null)
-			{
-				this.ChairInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.ChairInternal), "ChairInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ChairNeedSetMorph"))
-		{
-			this.ChairNeedSetMorph = characterActionComponent.ChairNeedSetMorph;
-		}
-		if (base.CanResetComponentProperty("SitDownTypeIndex"))
-		{
-			this.SitDownTypeIndex = characterActionComponent.SitDownTypeIndex;
-		}
-		if (base.CanResetComponentProperty("EnterSitDownIndex"))
-		{
-			this.EnterSitDownIndex = characterActionComponent.EnterSitDownIndex;
-		}
-		if (base.CanResetComponentProperty("LeaveSitDownIndex"))
-		{
-			this.LeaveSitDownIndex = characterActionComponent.LeaveSitDownIndex;
-		}
-		if (base.CanResetComponentProperty("IsUseCatapultUpAnim"))
-		{
-			this.IsUseCatapultUpAnim = characterActionComponent.IsUseCatapultUpAnim;
-		}
-		if (base.CanResetComponentProperty("AnimChangeAngle"))
-		{
-			this.AnimChangeAngle = characterActionComponent.AnimChangeAngle;
-		}
-		if (base.CanResetComponentProperty("ExecutionVisibleTrace"))
-		{
-			if (characterActionComponent.ExecutionVisibleTrace == null)
-			{
-				this.ExecutionVisibleTrace = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.ExecutionVisibleTrace), "ExecutionVisibleTrace"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TempVector") && characterActionComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector), "TempVector"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector2") && characterActionComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector2), "TempVector2"))
+		if (characterActionComponent.TagComp == null)
+		{
+			this.TagComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempRotator") && characterActionComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TempRotator), "TempRotator"))
+		if (characterActionComponent.ActorComp == null)
+		{
+			this.ActorComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("OnSitDownEndChangedTask"))
+		if (characterActionComponent.MoveComp == null)
 		{
-			if (characterActionComponent.OnSitDownEndChangedTask == null)
-			{
-				this.OnSitDownEndChangedTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnSitDownEndChangedTask), "OnSitDownEndChangedTask"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("OnSuperJumpTask"))
-		{
-			if (characterActionComponent.OnSuperJumpTask == null)
-			{
-				this.OnSuperJumpTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnSuperJumpTask), "OnSuperJumpTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagListeners") && characterActionComponent.TagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.TagListeners), "TagListeners"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MarkForResetCollision"))
+		if (characterActionComponent.SkillComp == null)
 		{
-			this.MarkForResetCollision = characterActionComponent.MarkForResetCollision;
+			this.SkillComp = null;
 		}
-		if (base.CanResetComponentProperty("MainChairDir"))
-		{
-			if (characterActionComponent.MainChairDir == null)
-			{
-				this.MainChairDir = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector2D>(this.MainChairDir), "MainChairDir"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StandUpActorForward"))
-		{
-			if (characterActionComponent.StandUpActorForward == null)
-			{
-				this.StandUpActorForward = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector2D>(this.StandUpActorForward), "StandUpActorForward"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsInit"))
-		{
-			this.IsInit = characterActionComponent.IsInit;
-		}
-		if (base.CanResetComponentProperty("Giant"))
-		{
-			if (characterActionComponent.Giant == null)
-			{
-				this.Giant = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.Giant), "Giant"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsRotatingBeforeManipulate"))
-		{
-			this.IsRotatingBeforeManipulate = characterActionComponent.IsRotatingBeforeManipulate;
-		}
-		if (base.CanResetComponentProperty("InteractionTargetLocation") && characterActionComponent.InteractionTargetLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.InteractionTargetLocation), "InteractionTargetLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComp), "SkillComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("OnLeaveSitDown"))
+		this.OriginCapsuleHalfHeight = characterActionComponent.OriginCapsuleHalfHeight;
+		this.OriginCapsuleRadius = characterActionComponent.OriginCapsuleRadius;
+		this.IsSitDownInternal = characterActionComponent.IsSitDownInternal;
+		this.SummonSitDownLockedInternal = characterActionComponent.SummonSitDownLockedInternal;
+		this.IsStandingUp = characterActionComponent.IsStandingUp;
+		if (characterActionComponent.ChairInternal == null)
 		{
-			if (characterActionComponent.OnLeaveSitDown == null)
-			{
-				this.OnLeaveSitDown = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.OnLeaveSitDown), "OnLeaveSitDown"))
-			{
-				return false;
-			}
+			this.ChairInternal = null;
 		}
-		if (base.CanResetComponentProperty("LimitStandUpFromOneSide"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChairInternal), "ChairInternal"))
 		{
-			this.LimitStandUpFromOneSide = characterActionComponent.LimitStandUpFromOneSide;
+			return false;
 		}
+		this.ChairNeedSetMorph = characterActionComponent.ChairNeedSetMorph;
+		this.SitDownTypeIndex = characterActionComponent.SitDownTypeIndex;
+		this.EnterSitDownIndex = characterActionComponent.EnterSitDownIndex;
+		this.LeaveSitDownIndex = characterActionComponent.LeaveSitDownIndex;
+		this.IsUseCatapultUpAnim = characterActionComponent.IsUseCatapultUpAnim;
+		this.AnimChangeAngle = characterActionComponent.AnimChangeAngle;
+		if (characterActionComponent.ExecutionVisibleTrace == null)
+		{
+			this.ExecutionVisibleTrace = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExecutionVisibleTrace), "ExecutionVisibleTrace"))
+		{
+			return false;
+		}
+		if (characterActionComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
+		{
+			return false;
+		}
+		if (characterActionComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
+		{
+			return false;
+		}
+		if (characterActionComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator"))
+		{
+			return false;
+		}
+		if (characterActionComponent.OnSitDownEndChangedTask == null)
+		{
+			this.OnSitDownEndChangedTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnSitDownEndChangedTask), "OnSitDownEndChangedTask"))
+		{
+			return false;
+		}
+		if (characterActionComponent.OnSuperJumpTask == null)
+		{
+			this.OnSuperJumpTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnSuperJumpTask), "OnSuperJumpTask"))
+		{
+			return false;
+		}
+		if (characterActionComponent.TagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagListeners), "TagListeners"))
+		{
+			return false;
+		}
+		this.MarkForResetCollision = characterActionComponent.MarkForResetCollision;
+		if (characterActionComponent.MainChairDir == null)
+		{
+			this.MainChairDir = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainChairDir), "MainChairDir"))
+		{
+			return false;
+		}
+		if (characterActionComponent.StandUpActorForward == null)
+		{
+			this.StandUpActorForward = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StandUpActorForward), "StandUpActorForward"))
+		{
+			return false;
+		}
+		this.IsInit = characterActionComponent.IsInit;
+		if (characterActionComponent.Giant == null)
+		{
+			this.Giant = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Giant), "Giant"))
+		{
+			return false;
+		}
+		this.IsRotatingBeforeManipulate = characterActionComponent.IsRotatingBeforeManipulate;
+		if (characterActionComponent.InteractionTargetLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractionTargetLocation), "InteractionTargetLocation"))
+		{
+			return false;
+		}
+		if (characterActionComponent.OnLeaveSitDown == null)
+		{
+			this.OnLeaveSitDown = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnLeaveSitDown), "OnLeaveSitDown"))
+		{
+			return false;
+		}
+		this.LimitStandUpFromOneSide = characterActionComponent.LimitStandUpFromOneSide;
 		return true;
 	}
 
-	// Token: 0x0400C524 RID: 50468
+	// Token: 0x17002493 RID: 9363
+	// (get) Token: 0x06017A0E RID: 96782 RVA: 0x006FB4B5 File Offset: 0x006F96B5
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002494 RID: 9364
+	// (get) Token: 0x06017A0F RID: 96783 RVA: 0x006FB4B8 File Offset: 0x006F96B8
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002495 RID: 9365
+	// (get) Token: 0x06017A10 RID: 96784 RVA: 0x006FB4BB File Offset: 0x006F96BB
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002496 RID: 9366
+	// (get) Token: 0x06017A11 RID: 96785 RVA: 0x006FB4BE File Offset: 0x006F96BE
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C8F1 RID: 51441
 	private const int FOURTY_FIVE = 45;
 
-	// Token: 0x0400C525 RID: 50469
+	// Token: 0x0400C8F2 RID: 51442
 	private const float ZERO_EIGHT = 0.8f;
 
-	// Token: 0x0400C526 RID: 50470
+	// Token: 0x0400C8F3 RID: 51443
 	private const int FIVETY = 50;
 
-	// Token: 0x0400C527 RID: 50471
+	// Token: 0x0400C8F4 RID: 51444
 	private const int ONE_HUNDRED_FOURTY = 140;
 
-	// Token: 0x0400C528 RID: 50472
+	// Token: 0x0400C8F5 RID: 51445
 	private const int COLLISION_RADIUS_IN = 15;
 
-	// Token: 0x0400C529 RID: 50473
+	// Token: 0x0400C8F6 RID: 51446
 	private const int COLLISION_RADIUS_OUT = 50;
 
-	// Token: 0x0400C52A RID: 50474
+	// Token: 0x0400C8F7 RID: 51447
 	private const int COLLISION_RESET_ANGLE = 91;
 
-	// Token: 0x0400C52B RID: 50475
+	// Token: 0x0400C8F8 RID: 51448
 	private const float DEFAULT_CATAPULT_TIME = 0.6f;
 
-	// Token: 0x0400C52C RID: 50476
+	// Token: 0x0400C8F9 RID: 51449
 	private const int DEFAULT_CATAPULT_GRAVITY = 1960;
 
-	// Token: 0x0400C52D RID: 50477
+	// Token: 0x0400C8FA RID: 51450
 	private const int CATAPULT_SKILL_ID = 400102;
 
-	// Token: 0x0400C52E RID: 50478
+	// Token: 0x0400C8FB RID: 51451
 	private const int SUPER_CATAPULT_SKILL_ID = 400107;
 
-	// Token: 0x0400C52F RID: 50479
+	// Token: 0x0400C8FC RID: 51452
 	private const int BOUNCE_SKILL_ID = 400104;
 
-	// Token: 0x0400C530 RID: 50480
+	// Token: 0x0400C8FD RID: 51453
 	private const int FAITH_JUMP_SKILL_MALE = 1501103;
 
-	// Token: 0x0400C531 RID: 50481
+	// Token: 0x0400C8FE RID: 51454
 	private const int FAITH_JUMP_SKILL_FEMALE = 1502103;
 
-	// Token: 0x0400C532 RID: 50482
+	// Token: 0x0400C8FF RID: 51455
 	public const int LEAVE_VEHICLE_BOUNCE_SKILL_ID = 100035;
 
-	// Token: 0x0400C533 RID: 50483
+	// Token: 0x0400C900 RID: 51456
 	private const int MAX_ANIM_STATE_CHANGE_COUNT = 600;
 
-	// Token: 0x0400C534 RID: 50484
+	// Token: 0x0400C901 RID: 51457
 	private const int PI_DEG_DOUBLE = 360;
 
-	// Token: 0x0400C535 RID: 50485
+	// Token: 0x0400C902 RID: 51458
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent StateComp;
 
-	// Token: 0x0400C536 RID: 50486
+	// Token: 0x0400C903 RID: 51459
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400C537 RID: 50487
+	// Token: 0x0400C904 RID: 51460
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C538 RID: 50488
+	// Token: 0x0400C905 RID: 51461
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400C539 RID: 50489
+	// Token: 0x0400C906 RID: 51462
 	[Nullable(2)]
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x0400C53A RID: 50490
+	// Token: 0x0400C907 RID: 51463
 	public float OriginCapsuleHalfHeight;
 
-	// Token: 0x0400C53B RID: 50491
+	// Token: 0x0400C908 RID: 51464
 	public float OriginCapsuleRadius;
 
-	// Token: 0x0400C53C RID: 50492
+	// Token: 0x0400C909 RID: 51465
 	public bool IsSitDownInternal;
 
-	// Token: 0x0400C53D RID: 50493
+	// Token: 0x0400C90A RID: 51466
 	private bool SummonSitDownLockedInternal;
 
-	// Token: 0x0400C53E RID: 50494
+	// Token: 0x0400C90B RID: 51467
 	public bool IsStandingUp;
 
-	// Token: 0x0400C53F RID: 50495
+	// Token: 0x0400C90C RID: 51468
 	[Nullable(2)]
 	private Entity ChairInternal;
 
-	// Token: 0x0400C540 RID: 50496
+	// Token: 0x0400C90D RID: 51469
 	private bool ChairNeedSetMorph;
 
-	// Token: 0x0400C541 RID: 50497
+	// Token: 0x0400C90E RID: 51470
 	public int SitDownTypeIndex;
 
-	// Token: 0x0400C542 RID: 50498
+	// Token: 0x0400C90F RID: 51471
 	public int EnterSitDownIndex;
 
-	// Token: 0x0400C543 RID: 50499
+	// Token: 0x0400C910 RID: 51472
 	public int LeaveSitDownIndex;
 
-	// Token: 0x0400C544 RID: 50500
+	// Token: 0x0400C911 RID: 51473
 	public bool IsUseCatapultUpAnim;
 
-	// Token: 0x0400C545 RID: 50501
+	// Token: 0x0400C912 RID: 51474
 	private float? AnimChangeAngle;
 
-	// Token: 0x0400C546 RID: 50502
+	// Token: 0x0400C913 RID: 51475
 	[Nullable(2)]
 	private UTraceLineElement ExecutionVisibleTrace;
 
-	// Token: 0x0400C547 RID: 50503
+	// Token: 0x0400C914 RID: 51476
 	private readonly global::Vector TempVector = global::Vector.Create();
 
-	// Token: 0x0400C548 RID: 50504
+	// Token: 0x0400C915 RID: 51477
 	private readonly global::Vector TempVector2 = global::Vector.Create();
 
-	// Token: 0x0400C549 RID: 50505
+	// Token: 0x0400C916 RID: 51478
 	private readonly global::Rotator TempRotator = global::Rotator.Create();
 
-	// Token: 0x0400C54A RID: 50506
+	// Token: 0x0400C917 RID: 51479
 	[Nullable(2)]
 	private ITagTask OnSitDownEndChangedTask;
 
-	// Token: 0x0400C54B RID: 50507
+	// Token: 0x0400C918 RID: 51480
 	[Nullable(2)]
 	private ITagTask OnSuperJumpTask;
 
-	// Token: 0x0400C54C RID: 50508
+	// Token: 0x0400C919 RID: 51481
 	private readonly List<ITagTask> TagListeners = new List<ITagTask>();
 
-	// Token: 0x0400C54D RID: 50509
+	// Token: 0x0400C91A RID: 51482
 	private bool MarkForResetCollision;
 
-	// Token: 0x0400C54E RID: 50510
+	// Token: 0x0400C91B RID: 51483
 	[Nullable(2)]
 	private Vector2D MainChairDir;
 
-	// Token: 0x0400C54F RID: 50511
+	// Token: 0x0400C91C RID: 51484
 	[Nullable(2)]
 	private Vector2D StandUpActorForward;
 
-	// Token: 0x0400C550 RID: 50512
+	// Token: 0x0400C91D RID: 51485
 	private bool IsInit;
 
-	// Token: 0x0400C551 RID: 50513
+	// Token: 0x0400C91E RID: 51486
 	[Nullable(2)]
 	public AActor Giant;
 
-	// Token: 0x0400C552 RID: 50514
+	// Token: 0x0400C91F RID: 51487
 	private bool IsRotatingBeforeManipulate;
 
-	// Token: 0x0400C553 RID: 50515
+	// Token: 0x0400C920 RID: 51488
 	private readonly global::Vector InteractionTargetLocation = global::Vector.Create();
 
-	// Token: 0x0400C554 RID: 50516
+	// Token: 0x0400C921 RID: 51489
 	[Nullable(2)]
 	public Action OnLeaveSitDown;
 
-	// Token: 0x0400C555 RID: 50517
+	// Token: 0x0400C922 RID: 51490
 	[StaticVariableRuleIgnore]
 	private static readonly int[] DisableTags = new int[]
 	{
@@ -1441,18 +1387,18 @@ public class CharacterActionComponent : EntityComponent, IComponentDependency
 		GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.技能中.全身动作"]
 	};
 
-	// Token: 0x0400C556 RID: 50518
+	// Token: 0x0400C923 RID: 51491
 	private bool LimitStandUpFromOneSide;
 
-	// Token: 0x0400C557 RID: 50519
+	// Token: 0x0400C924 RID: 51492
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400C558 RID: 50520
+	// Token: 0x0400C925 RID: 51493
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector2 = global::Vector.Create();
 
-	// Token: 0x0400C559 RID: 50521
+	// Token: 0x0400C926 RID: 51494
 	[StaticVariableRuleIgnore]
 	private static readonly CatapultToTargetResult CatapultResult = new CatapultToTargetResult();
 }

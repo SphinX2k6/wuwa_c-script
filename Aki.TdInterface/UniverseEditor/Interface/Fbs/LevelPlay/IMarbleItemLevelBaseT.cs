@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004525 RID: 17701
+	// Token: 0x0200498D RID: 18829
 	public class IMarbleItemLevelBaseT
 	{
-		// Token: 0x17007D88 RID: 32136
-		// (get) Token: 0x0601A9CF RID: 109007 RVA: 0x003CC91B File Offset: 0x003CAB1B
-		// (set) Token: 0x0601A9D0 RID: 109008 RVA: 0x003CC923 File Offset: 0x003CAB23
+		// Token: 0x170083C9 RID: 33737
+		// (get) Token: 0x0601C1A4 RID: 115108 RVA: 0x003F8BB7 File Offset: 0x003F6DB7
+		// (set) Token: 0x0601C1A5 RID: 115109 RVA: 0x003F8BBF File Offset: 0x003F6DBF
 		public int Id { get; set; }
 
-		// Token: 0x17007D89 RID: 32137
-		// (get) Token: 0x0601A9D1 RID: 109009 RVA: 0x003CC92C File Offset: 0x003CAB2C
-		// (set) Token: 0x0601A9D2 RID: 109010 RVA: 0x003CC934 File Offset: 0x003CAB34
+		// Token: 0x170083CA RID: 33738
+		// (get) Token: 0x0601C1A6 RID: 115110 RVA: 0x003F8BC8 File Offset: 0x003F6DC8
+		// (set) Token: 0x0601C1A7 RID: 115111 RVA: 0x003F8BD0 File Offset: 0x003F6DD0
 		public ETwoDimensionLevelType Type { get; set; }
 
-		// Token: 0x17007D8A RID: 32138
-		// (get) Token: 0x0601A9D3 RID: 109011 RVA: 0x003CC93D File Offset: 0x003CAB3D
-		// (set) Token: 0x0601A9D4 RID: 109012 RVA: 0x003CC945 File Offset: 0x003CAB45
+		// Token: 0x170083CB RID: 33739
+		// (get) Token: 0x0601C1A8 RID: 115112 RVA: 0x003F8BD9 File Offset: 0x003F6DD9
+		// (set) Token: 0x0601C1A9 RID: 115113 RVA: 0x003F8BE1 File Offset: 0x003F6DE1
 		public ITwoDimensionTransformT Transform { get; set; }
 
-		// Token: 0x17007D8B RID: 32139
-		// (get) Token: 0x0601A9D5 RID: 109013 RVA: 0x003CC94E File Offset: 0x003CAB4E
-		// (set) Token: 0x0601A9D6 RID: 109014 RVA: 0x003CC956 File Offset: 0x003CAB56
+		// Token: 0x170083CC RID: 33740
+		// (get) Token: 0x0601C1AA RID: 115114 RVA: 0x003F8BEA File Offset: 0x003F6DEA
+		// (set) Token: 0x0601C1AB RID: 115115 RVA: 0x003F8BF2 File Offset: 0x003F6DF2
 		public EMarbleItemType SubType { get; set; }
 
-		// Token: 0x0601A9D7 RID: 109015 RVA: 0x003CC95F File Offset: 0x003CAB5F
+		// Token: 0x0601C1AC RID: 115116 RVA: 0x003F8BFB File Offset: 0x003F6DFB
 		public IMarbleItemLevelBaseT()
 		{
 			this.Id = 0;

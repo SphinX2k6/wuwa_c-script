@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BC4 RID: 7108
+// Token: 0x02001083 RID: 4227
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoExtension : ISlotExtension
 {
-	// Token: 0x0600D3FB RID: 54267 RVA: 0x0030C6CC File Offset: 0x0030A8CC
+	// Token: 0x0600A80D RID: 43021 RVA: 0x00317840 File Offset: 0x00315A40
 	public UniTask OnAttach(ISlotMountPoint mount, int position)
 	{
 		DangoExtension.<OnAttach>d__6 <OnAttach>d__;
@@ -24,7 +24,7 @@ public class DangoExtension : ISlotExtension
 		return <OnAttach>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D3FC RID: 54268 RVA: 0x0030C71F File Offset: 0x0030A91F
+	// Token: 0x0600A80E RID: 43022 RVA: 0x00317893 File Offset: 0x00315A93
 	public void OnDetach()
 	{
 		if (this.DangoComponent == null)
@@ -37,7 +37,7 @@ public class DangoExtension : ISlotExtension
 		this.Mount = null;
 	}
 
-	// Token: 0x0600D3FD RID: 54269 RVA: 0x0030C75C File Offset: 0x0030A95C
+	// Token: 0x0600A80F RID: 43023 RVA: 0x003178D0 File Offset: 0x00315AD0
 	public void OnRefresh(IRoleSlotDisplayData data)
 	{
 		if (this.DangoComponent == null || this.Mount == null)
@@ -64,7 +64,7 @@ public class DangoExtension : ISlotExtension
 		}
 	}
 
-	// Token: 0x0600D3FE RID: 54270 RVA: 0x0030C80F File Offset: 0x0030AA0F
+	// Token: 0x0600A810 RID: 43024 RVA: 0x00317983 File Offset: 0x00315B83
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -83,7 +83,7 @@ public class DangoExtension : ISlotExtension
 		return this.DangoComponent.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x0600D3FF RID: 54271 RVA: 0x0030C83C File Offset: 0x0030AA3C
+	// Token: 0x0600A811 RID: 43025 RVA: 0x003179B0 File Offset: 0x00315BB0
 	private void OnSelectDango(IReadOnlyDictionary<int, int[]> data)
 	{
 		if (this.Mount == null || this.DangoComponent == null)
@@ -117,24 +117,24 @@ public class DangoExtension : ISlotExtension
 		}
 	}
 
-	// Token: 0x040060EC RID: 24812
+	// Token: 0x040061BB RID: 25019
 	[Nullable(2)]
 	private ISlotMountPoint Mount;
 
-	// Token: 0x040060ED RID: 24813
+	// Token: 0x040061BC RID: 25020
 	private int Position;
 
-	// Token: 0x040060EE RID: 24814
+	// Token: 0x040061BD RID: 25021
 	[Nullable(2)]
 	private DangoExtensionPanel DangoComponent;
 
-	// Token: 0x040060EF RID: 24815
+	// Token: 0x040061BE RID: 25022
 	[Nullable(2)]
 	private DangoLikeItem LikeItem;
 
-	// Token: 0x040060F0 RID: 24816
+	// Token: 0x040061BF RID: 25023
 	private int CurrentConfigId;
 
-	// Token: 0x040060F1 RID: 24817
+	// Token: 0x040061C0 RID: 25024
 	private int? CurrentSlotPlayerId;
 }

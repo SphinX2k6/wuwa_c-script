@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AA1 RID: 2721
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000B6B RID: 2923
 	public class IHeadStateViewConfig
 	{
-		// Token: 0x06003EAB RID: 16043 RVA: 0x000A05D2 File Offset: 0x0009E7D2
-		[NullableContext(1)]
+		// Token: 0x060042D5 RID: 17109 RVA: 0x000A9BC6 File Offset: 0x000A7DC6
 		public static IHeadStateViewConfig Create(IHeadStateViewConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F26 RID: 3878
-		// (get) Token: 0x06003EAC RID: 16044 RVA: 0x000A05F1 File Offset: 0x0009E7F1
+		// Token: 0x17000FFA RID: 4090
+		// (get) Token: 0x060042D6 RID: 17110 RVA: 0x000A9BE5 File Offset: 0x000A7DE5
 		public virtual EHeadStateViewType HeadStateViewType
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F27 RID: 3879
-		// (get) Token: 0x06003EAD RID: 16045 RVA: 0x000A05FE File Offset: 0x0009E7FE
+		// Token: 0x17000FFB RID: 4091
+		// (get) Token: 0x060042D7 RID: 17111 RVA: 0x000A9BF2 File Offset: 0x000A7DF2
 		public virtual int ZOffset
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F28 RID: 3880
-		// (get) Token: 0x06003EAE RID: 16046 RVA: 0x000A060B File Offset: 0x0009E80B
+		// Token: 0x17000FFC RID: 4092
+		// (get) Token: 0x060042D8 RID: 17112 RVA: 0x000A9BFF File Offset: 0x000A7DFF
 		public virtual int ForwardOffset
 		{
 			get
@@ -54,17 +51,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F29 RID: 3881
-		// (get) Token: 0x06003EAF RID: 16047 RVA: 0x000A0618 File Offset: 0x0009E818
+		// Token: 0x17000FFD RID: 4093
+		// (get) Token: 0x060042D9 RID: 17113 RVA: 0x000A9C0C File Offset: 0x000A7E0C
+		[Nullable(2)]
 		public virtual string HeadStateSocketName
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.HeadStateSocketName;
 			}
 		}
 
-		// Token: 0x040022D2 RID: 8914
+		// Token: 0x040024EE RID: 9454
 		private IHeadStateViewConfig Instance;
 	}
 }

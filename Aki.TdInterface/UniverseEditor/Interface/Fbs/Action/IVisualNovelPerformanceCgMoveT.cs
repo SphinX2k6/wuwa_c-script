@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075A2 RID: 30114
+	// Token: 0x02007D9B RID: 32155
 	public class IVisualNovelPerformanceCgMoveT
 	{
-		// Token: 0x1700E465 RID: 58469
-		// (get) Token: 0x06036CC2 RID: 224450 RVA: 0x007704B6 File Offset: 0x0076E6B6
-		// (set) Token: 0x06036CC3 RID: 224451 RVA: 0x007704BE File Offset: 0x0076E6BE
+		// Token: 0x1700F092 RID: 61586
+		// (get) Token: 0x0603A0F0 RID: 237808 RVA: 0x007D3A36 File Offset: 0x007D1C36
+		// (set) Token: 0x0603A0F1 RID: 237809 RVA: 0x007D3A3E File Offset: 0x007D1C3E
 		public EVisualNovelPerformanceType Type { get; set; }
 
-		// Token: 0x1700E466 RID: 58470
-		// (get) Token: 0x06036CC4 RID: 224452 RVA: 0x007704C7 File Offset: 0x0076E6C7
-		// (set) Token: 0x06036CC5 RID: 224453 RVA: 0x007704CF File Offset: 0x0076E6CF
+		// Token: 0x1700F093 RID: 61587
+		// (get) Token: 0x0603A0F2 RID: 237810 RVA: 0x007D3A47 File Offset: 0x007D1C47
+		// (set) Token: 0x0603A0F3 RID: 237811 RVA: 0x007D3A4F File Offset: 0x007D1C4F
 		public float StartTime { get; set; }
 
-		// Token: 0x1700E467 RID: 58471
-		// (get) Token: 0x06036CC6 RID: 224454 RVA: 0x007704D8 File Offset: 0x0076E6D8
-		// (set) Token: 0x06036CC7 RID: 224455 RVA: 0x007704E0 File Offset: 0x0076E6E0
+		// Token: 0x1700F094 RID: 61588
+		// (get) Token: 0x0603A0F4 RID: 237812 RVA: 0x007D3A58 File Offset: 0x007D1C58
+		// (set) Token: 0x0603A0F5 RID: 237813 RVA: 0x007D3A60 File Offset: 0x007D1C60
 		public IVisualNovelPortraitTransformT StartTransform { get; set; }
 
-		// Token: 0x1700E468 RID: 58472
-		// (get) Token: 0x06036CC8 RID: 224456 RVA: 0x007704E9 File Offset: 0x0076E6E9
-		// (set) Token: 0x06036CC9 RID: 224457 RVA: 0x007704F1 File Offset: 0x0076E6F1
+		// Token: 0x1700F095 RID: 61589
+		// (get) Token: 0x0603A0F6 RID: 237814 RVA: 0x007D3A69 File Offset: 0x007D1C69
+		// (set) Token: 0x0603A0F7 RID: 237815 RVA: 0x007D3A71 File Offset: 0x007D1C71
 		public IVisualNovelPortraitTransformT TargetTransform { get; set; }
 
-		// Token: 0x1700E469 RID: 58473
-		// (get) Token: 0x06036CCA RID: 224458 RVA: 0x007704FA File Offset: 0x0076E6FA
-		// (set) Token: 0x06036CCB RID: 224459 RVA: 0x00770502 File Offset: 0x0076E702
+		// Token: 0x1700F096 RID: 61590
+		// (get) Token: 0x0603A0F8 RID: 237816 RVA: 0x007D3A7A File Offset: 0x007D1C7A
+		// (set) Token: 0x0603A0F9 RID: 237817 RVA: 0x007D3A82 File Offset: 0x007D1C82
 		public TEaseCurveTypeUnion EaseCurve { get; set; }
 
-		// Token: 0x1700E46A RID: 58474
-		// (get) Token: 0x06036CCC RID: 224460 RVA: 0x0077050B File Offset: 0x0076E70B
-		// (set) Token: 0x06036CCD RID: 224461 RVA: 0x00770513 File Offset: 0x0076E713
+		// Token: 0x1700F097 RID: 61591
+		// (get) Token: 0x0603A0FA RID: 237818 RVA: 0x007D3A8B File Offset: 0x007D1C8B
+		// (set) Token: 0x0603A0FB RID: 237819 RVA: 0x007D3A93 File Offset: 0x007D1C93
 		public float Duration { get; set; }
 
-		// Token: 0x1700E46B RID: 58475
-		// (get) Token: 0x06036CCE RID: 224462 RVA: 0x0077051C File Offset: 0x0076E71C
-		// (set) Token: 0x06036CCF RID: 224463 RVA: 0x00770524 File Offset: 0x0076E724
+		// Token: 0x1700F098 RID: 61592
+		// (get) Token: 0x0603A0FC RID: 237820 RVA: 0x007D3A9C File Offset: 0x007D1C9C
+		// (set) Token: 0x0603A0FD RID: 237821 RVA: 0x007D3AA4 File Offset: 0x007D1CA4
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036CD0 RID: 224464 RVA: 0x00770530 File Offset: 0x0076E730
+		// Token: 0x0603A0FE RID: 237822 RVA: 0x007D3AB0 File Offset: 0x007D1CB0
 		public IVisualNovelPerformanceCgMoveT()
 		{
 			this.Type = EVisualNovelPerformanceType.Enter;

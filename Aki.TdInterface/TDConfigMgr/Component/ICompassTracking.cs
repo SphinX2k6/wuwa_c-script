@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000257 RID: 599
+	// Token: 0x0200029A RID: 666
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICompassTracking : INearbyTracking
 	{
-		// Token: 0x06000AD8 RID: 2776 RVA: 0x0002C590 File Offset: 0x0002A790
-		[NullableContext(1)]
+		// Token: 0x06000BF2 RID: 3058 RVA: 0x0002F280 File Offset: 0x0002D480
+		[NullableContext(0)]
 		private ICompassTracking_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000AD9 RID: 2777 RVA: 0x0002C5C8 File Offset: 0x0002A7C8
-		[NullableContext(1)]
+		// Token: 0x06000BF3 RID: 3059 RVA: 0x0002F2B8 File Offset: 0x0002D4B8
+		[NullableContext(0)]
 		public static ICompassTracking Create([Nullable(2)] ICompassTracking instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000ADA RID: 2778 RVA: 0x0002C5DB File Offset: 0x0002A7DB
-		[NullableContext(1)]
+		// Token: 0x06000BF4 RID: 3060 RVA: 0x0002F2CB File Offset: 0x0002D4CB
+		[NullableContext(0)]
 		public static ICompassTracking CreateFromSetValue([Nullable(2)] ICompassTracking_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000ADB RID: 2779 RVA: 0x0002C5F0 File Offset: 0x0002A7F0
-		[NullableContext(1)]
+		// Token: 0x06000BF5 RID: 3061 RVA: 0x0002F2E0 File Offset: 0x0002D4E0
+		[NullableContext(0)]
 		public new ICompassTracking_SetValue ToSetValue()
 		{
 			return new ICompassTracking_SetValue
@@ -69,9 +69,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000347 RID: 839
-		// (get) Token: 0x06000ADC RID: 2780 RVA: 0x0002C63E File Offset: 0x0002A83E
-		// (set) Token: 0x06000ADD RID: 2781 RVA: 0x0002C669 File Offset: 0x0002A869
+		// Token: 0x1700038F RID: 911
+		// (get) Token: 0x06000BF6 RID: 3062 RVA: 0x0002F32E File Offset: 0x0002D52E
+		// (set) Token: 0x06000BF7 RID: 3063 RVA: 0x0002F359 File Offset: 0x0002D559
 		public override ENearbyTrackingType Type
 		{
 			get
@@ -92,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000348 RID: 840
-		// (get) Token: 0x06000ADE RID: 2782 RVA: 0x0002C677 File Offset: 0x0002A877
-		// (set) Token: 0x06000ADF RID: 2783 RVA: 0x0002C6A2 File Offset: 0x0002A8A2
+		// Token: 0x17000390 RID: 912
+		// (get) Token: 0x06000BF8 RID: 3064 RVA: 0x0002F367 File Offset: 0x0002D567
+		// (set) Token: 0x06000BF9 RID: 3065 RVA: 0x0002F392 File Offset: 0x0002D592
 		public virtual int ShowRange
 		{
 			get
@@ -115,9 +115,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000349 RID: 841
-		// (get) Token: 0x06000AE0 RID: 2784 RVA: 0x0002C6B0 File Offset: 0x0002A8B0
-		// (set) Token: 0x06000AE1 RID: 2785 RVA: 0x0002C6DB File Offset: 0x0002A8DB
+		// Token: 0x17000391 RID: 913
+		// (get) Token: 0x06000BFA RID: 3066 RVA: 0x0002F3A0 File Offset: 0x0002D5A0
+		// (set) Token: 0x06000BFB RID: 3067 RVA: 0x0002F3CB File Offset: 0x0002D5CB
 		public virtual int HideRange
 		{
 			get
@@ -138,9 +138,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700034A RID: 842
-		// (get) Token: 0x06000AE2 RID: 2786 RVA: 0x0002C6EC File Offset: 0x0002A8EC
-		// (set) Token: 0x06000AE3 RID: 2787 RVA: 0x0002C74D File Offset: 0x0002A94D
+		// Token: 0x17000392 RID: 914
+		// (get) Token: 0x06000BFC RID: 3068 RVA: 0x0002F3DC File Offset: 0x0002D5DC
+		// (set) Token: 0x06000BFD RID: 3069 RVA: 0x0002F43D File Offset: 0x0002D63D
 		public virtual IIconNearByTrackingConfig IconTrackingConfig
 		{
 			get
@@ -168,9 +168,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700034B RID: 843
-		// (get) Token: 0x06000AE4 RID: 2788 RVA: 0x0002C762 File Offset: 0x0002A962
-		// (set) Token: 0x06000AE5 RID: 2789 RVA: 0x0002C789 File Offset: 0x0002A989
+		// Token: 0x17000393 RID: 915
+		// (get) Token: 0x06000BFE RID: 3070 RVA: 0x0002F452 File Offset: 0x0002D652
+		// (set) Token: 0x06000BFF RID: 3071 RVA: 0x0002F479 File Offset: 0x0002D679
 		public virtual List<EVehicleType> VehicleTypes
 		{
 			get
@@ -192,17 +192,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000AA7 RID: 2727
+		// Token: 0x04000B88 RID: 2952
 		protected new ICompassTracking FbInstance;
 
-		// Token: 0x04000AA8 RID: 2728
+		// Token: 0x04000B89 RID: 2953
 		protected new ICompassTracking_SetValue PocoInterface;
 
-		// Token: 0x04000AA9 RID: 2729
-		[Nullable(1)]
+		// Token: 0x04000B8A RID: 2954
+		[Nullable(0)]
 		private IIconNearByTrackingConfig _IconTrackingConfigCache;
 
-		// Token: 0x04000AAA RID: 2730
+		// Token: 0x04000B8B RID: 2955
 		private bool _IconTrackingConfigInited;
 	}
 }

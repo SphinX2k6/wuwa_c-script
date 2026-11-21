@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002540 RID: 9536
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027E7 RID: 10215
 	public class IFlowCameraShake
 	{
-		// Token: 0x0600D49E RID: 54430 RVA: 0x001F7CFA File Offset: 0x001F5EFA
+		// Token: 0x0600E1FE RID: 57854 RVA: 0x0021375A File Offset: 0x0021195A
 		public static IFlowCameraShake Create(IFlowCameraShake? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BE0 RID: 15328
-		// (get) Token: 0x0600D49F RID: 54431 RVA: 0x001F7D19 File Offset: 0x001F5F19
+		// Token: 0x17003EDE RID: 16094
+		// (get) Token: 0x0600E1FF RID: 57855 RVA: 0x00213779 File Offset: 0x00211979
 		public virtual string CameraShakeBp
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400748C RID: 29836
+		// Token: 0x04007AE1 RID: 31457
 		private IFlowCameraShake Instance;
 	}
 }

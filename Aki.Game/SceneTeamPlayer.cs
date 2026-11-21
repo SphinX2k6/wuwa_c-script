@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Plot;
 
-// Token: 0x0200294B RID: 10571
+// Token: 0x02001EC6 RID: 7878
 [NullableContext(1)]
 [Nullable(0)]
 public class SceneTeamPlayer
 {
-	// Token: 0x06015D8E RID: 89486 RVA: 0x00583337 File Offset: 0x00581537
+	// Token: 0x06013792 RID: 79762 RVA: 0x005AE337 File Offset: 0x005AC537
 	public static SceneTeamPlayer Create(int playerId)
 	{
 		return new SceneTeamPlayer
@@ -18,7 +18,7 @@ public class SceneTeamPlayer
 		};
 	}
 
-	// Token: 0x06015D8F RID: 89487 RVA: 0x00583348 File Offset: 0x00581548
+	// Token: 0x06013793 RID: 79763 RVA: 0x005AE348 File Offset: 0x005AC548
 	public void Clear()
 	{
 		this.CurrentGroupType = null;
@@ -29,13 +29,13 @@ public class SceneTeamPlayer
 		this.GroupMap.Clear();
 	}
 
-	// Token: 0x06015D90 RID: 89488 RVA: 0x005833B4 File Offset: 0x005815B4
+	// Token: 0x06013794 RID: 79764 RVA: 0x005AE3B4 File Offset: 0x005AC5B4
 	public ETeamGroupType? GetCurrentGroupType()
 	{
 		return this.CurrentGroupType;
 	}
 
-	// Token: 0x06015D91 RID: 89489 RVA: 0x005833BC File Offset: 0x005815BC
+	// Token: 0x06013795 RID: 79765 RVA: 0x005AE3BC File Offset: 0x005AC5BC
 	[NullableContext(2)]
 	public SceneTeamGroup GetCurrentGroup()
 	{
@@ -50,7 +50,7 @@ public class SceneTeamPlayer
 		return this.GroupMap[this.CurrentGroupType.Value];
 	}
 
-	// Token: 0x06015D92 RID: 89490 RVA: 0x00583408 File Offset: 0x00581608
+	// Token: 0x06013796 RID: 79766 RVA: 0x005AE408 File Offset: 0x005AC608
 	[NullableContext(2)]
 	public SceneTeamGroup GetGroup(ETeamGroupType groupType)
 	{
@@ -61,7 +61,7 @@ public class SceneTeamPlayer
 		return this.GroupMap[groupType];
 	}
 
-	// Token: 0x06015D93 RID: 89491 RVA: 0x00583428 File Offset: 0x00581628
+	// Token: 0x06013797 RID: 79767 RVA: 0x005AE428 File Offset: 0x005AC628
 	public List<SceneTeamGroup> GetGroupList()
 	{
 		List<SceneTeamGroup> list = new List<SceneTeamGroup>();
@@ -72,13 +72,13 @@ public class SceneTeamPlayer
 		return list;
 	}
 
-	// Token: 0x06015D94 RID: 89492 RVA: 0x00583488 File Offset: 0x00581688
+	// Token: 0x06013798 RID: 79768 RVA: 0x005AE488 File Offset: 0x005AC688
 	public void SwitchGroup(ETeamGroupType groupType)
 	{
 		this.CurrentGroupType = new ETeamGroupType?(groupType);
 	}
 
-	// Token: 0x06015D95 RID: 89493 RVA: 0x00583498 File Offset: 0x00581698
+	// Token: 0x06013799 RID: 79769 RVA: 0x005AE498 File Offset: 0x005AC698
 	public void UpdateGroup(ETeamGroupType groupType, IList<SceneTeamRole> groupRoleList, int currentRoleId, ETeamLivingState livingState, bool isFixedLocation)
 	{
 		SceneTeamGroup sceneTeamGroup = this.GroupMap.ContainsKey(groupType) ? this.GroupMap[groupType] : null;
@@ -90,7 +90,7 @@ public class SceneTeamPlayer
 		sceneTeamGroup.Update(groupRoleList, currentRoleId, livingState, isFixedLocation);
 	}
 
-	// Token: 0x06015D96 RID: 89494 RVA: 0x005834EC File Offset: 0x005816EC
+	// Token: 0x0601379A RID: 79770 RVA: 0x005AE4EC File Offset: 0x005AC6EC
 	public void RefreshEntityEnable()
 	{
 		HashSet<long> hashSet = new HashSet<long>();
@@ -196,7 +196,7 @@ public class SceneTeamPlayer
 		}
 	}
 
-	// Token: 0x06015D97 RID: 89495 RVA: 0x00583844 File Offset: 0x00581A44
+	// Token: 0x0601379B RID: 79771 RVA: 0x005AE844 File Offset: 0x005ACA44
 	public bool IsRoleOnStageWithoutControl(long creatureDataId)
 	{
 		foreach (SceneTeamGroup sceneTeamGroup in this.GroupMap.Values)
@@ -210,7 +210,7 @@ public class SceneTeamPlayer
 		return false;
 	}
 
-	// Token: 0x06015D98 RID: 89496 RVA: 0x005838B8 File Offset: 0x00581AB8
+	// Token: 0x0601379C RID: 79772 RVA: 0x005AE8B8 File Offset: 0x005ACAB8
 	private void SetEntityEnable(Entity entity, bool enable)
 	{
 		if (enable)
@@ -228,12 +228,12 @@ public class SceneTeamPlayer
 		component.SetTeamTag(ETeamState.UnderStage);
 	}
 
-	// Token: 0x0400A286 RID: 41606
+	// Token: 0x0400A670 RID: 42608
 	private int PlayerId;
 
-	// Token: 0x0400A287 RID: 41607
+	// Token: 0x0400A671 RID: 42609
 	private ETeamGroupType? CurrentGroupType;
 
-	// Token: 0x0400A288 RID: 41608
+	// Token: 0x0400A672 RID: 42610
 	private readonly Dictionary<ETeamGroupType, SceneTeamGroup> GroupMap = new Dictionary<ETeamGroupType, SceneTeamGroup>();
 }

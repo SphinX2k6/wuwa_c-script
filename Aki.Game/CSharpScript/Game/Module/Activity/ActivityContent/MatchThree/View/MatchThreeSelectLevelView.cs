@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x020064A6 RID: 25766
+	// Token: 0x02005424 RID: 21540
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MatchThreeSelectLevelView : UiTickViewBase
 	{
-		// Token: 0x06040B31 RID: 265009 RVA: 0x00FA9FA3 File Offset: 0x00FA81A3
+		// Token: 0x060357F5 RID: 219125 RVA: 0x00EF0FEB File Offset: 0x00EEF1EB
 		[NullableContext(1)]
 		public MatchThreeSelectLevelView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06040B32 RID: 265010 RVA: 0x00FA9FC0 File Offset: 0x00FA81C0
+		// Token: 0x060357F6 RID: 219126 RVA: 0x00EF1008 File Offset: 0x00EEF208
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040B33 RID: 265011 RVA: 0x00FAA06C File Offset: 0x00FA826C
+		// Token: 0x060357F7 RID: 219127 RVA: 0x00EF10B4 File Offset: 0x00EEF2B4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MatchThreeSelectLevelView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040B34 RID: 265012 RVA: 0x00FAA0B0 File Offset: 0x00FA82B0
+		// Token: 0x060357F8 RID: 219128 RVA: 0x00EF10F8 File Offset: 0x00EEF2F8
 		protected override void OnBeforeShow()
 		{
 			int selectedIndex = this.RefreshLevelList();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ScheduleSelectedLevelOffset(selectedIndex);
 		}
 
-		// Token: 0x06040B35 RID: 265013 RVA: 0x00FAA0D1 File Offset: 0x00FA82D1
+		// Token: 0x060357F9 RID: 219129 RVA: 0x00EF1119 File Offset: 0x00EEF319
 		protected override void OnBeforeHide()
 		{
 			this.IsWaitingSelectedLevelStartAnimationFinish = false;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			levelScrollView.OnLateUpdate.Unbind();
 		}
 
-		// Token: 0x06040B36 RID: 265014 RVA: 0x00FAA104 File Offset: 0x00FA8304
+		// Token: 0x060357FA RID: 219130 RVA: 0x00EF114C File Offset: 0x00EEF34C
 		protected override void OnTick(float _)
 		{
 			if (!this.IsWaitingSelectedLevelStartAnimationFinish)
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.FocusSelectedLevel(this.PendingFocusIndex);
 		}
 
-		// Token: 0x06040B37 RID: 265015 RVA: 0x00FAA180 File Offset: 0x00FA8380
+		// Token: 0x060357FB RID: 219131 RVA: 0x00EF11C8 File Offset: 0x00EEF3C8
 		private void SetSelectedLevelOffset(int selectedIndex)
 		{
 			if (this.LevelScrollView == null || this.LevelMultiTemplateComponent == null || selectedIndex < 0)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			uuiitem.SetAnchorOffsetX(num);
 		}
 
-		// Token: 0x06040B38 RID: 265016 RVA: 0x00FAA270 File Offset: 0x00FA8470
+		// Token: 0x060357FC RID: 219132 RVA: 0x00EF12B8 File Offset: 0x00EEF4B8
 		private void FocusSelectedLevel(int selectedIndex)
 		{
 			if (!Info.Instance.IsInGamepad() || this.LevelMultiTemplateComponent == null)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			UiNavigationNewController.Instance.SetNavigationFocusForView(navigationItem, true, true, true);
 		}
 
-		// Token: 0x06040B39 RID: 265017 RVA: 0x00FAA2D0 File Offset: 0x00FA84D0
+		// Token: 0x060357FD RID: 219133 RVA: 0x00EF1318 File Offset: 0x00EEF518
 		private void SetAllLevelNavigationActive(bool active)
 		{
 			if (this.LevelMultiTemplateComponent == null)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040B3A RID: 265018 RVA: 0x00FAA32C File Offset: 0x00FA852C
+		// Token: 0x060357FE RID: 219134 RVA: 0x00EF1374 File Offset: 0x00EEF574
 		private bool IsAnyLevelStartAnimationPlaying()
 		{
 			if (this.LevelMultiTemplateComponent == null)
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return false;
 		}
 
-		// Token: 0x06040B3B RID: 265019 RVA: 0x00FAA37C File Offset: 0x00FA857C
+		// Token: 0x060357FF RID: 219135 RVA: 0x00EF13C4 File Offset: 0x00EEF5C4
 		private void PlayGridAnim()
 		{
 			if (this.LevelMultiTemplateComponent == null)
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.GridAnimController.Play("Start", this.LevelMultiTemplateComponent.GetDisplayGridNum(), false);
 		}
 
-		// Token: 0x06040B3C RID: 265020 RVA: 0x00FAA3E0 File Offset: 0x00FA85E0
+		// Token: 0x06035800 RID: 219136 RVA: 0x00EF1428 File Offset: 0x00EEF628
 		private void ScheduleSelectedLevelOffset(int selectedIndex)
 		{
 			this.PendingLayoutFrameCount = 0;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.LevelScrollView.OnLateUpdate.Bind(new Action<float>(this.OnLevelScrollLateUpdate));
 		}
 
-		// Token: 0x06040B3D RID: 265021 RVA: 0x00FAA448 File Offset: 0x00FA8648
+		// Token: 0x06035801 RID: 219137 RVA: 0x00EF1490 File Offset: 0x00EEF690
 		private void OnLevelScrollLateUpdate(float _)
 		{
 			if (this.PendingLayoutFrameCount > 0)
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.SetSelectedLevelOffset(this.PendingFocusIndex);
 		}
 
-		// Token: 0x06040B3E RID: 265022 RVA: 0x00FAA498 File Offset: 0x00FA8698
+		// Token: 0x06035802 RID: 219138 RVA: 0x00EF14E0 File Offset: 0x00EEF6E0
 		private int RefreshLevelList()
 		{
 			if (this.LevelMultiTemplateComponent == null)
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return result;
 		}
 
-		// Token: 0x06040B3F RID: 265023 RVA: 0x00FAA540 File Offset: 0x00FA8740
+		// Token: 0x06035803 RID: 219139 RVA: 0x00EF1588 File Offset: 0x00EEF788
 		[NullableContext(1)]
 		private int ResolveCurrentSelectIndex(IReadOnlyList<MatchThreeChapterSelectData> levelData)
 		{
@@ -315,20 +315,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return num2;
 		}
 
-		// Token: 0x06040B40 RID: 265024 RVA: 0x00FAA5DD File Offset: 0x00FA87DD
+		// Token: 0x06035804 RID: 219140 RVA: 0x00EF1625 File Offset: 0x00EEF825
 		[NullableContext(1)]
 		private void OnLevelSelected(MatchThreeChapterSelectData chapterData)
 		{
 			this.CurrentSelectChapter = chapterData;
 		}
 
-		// Token: 0x06040B41 RID: 265025 RVA: 0x00FAA5E6 File Offset: 0x00FA87E6
+		// Token: 0x06035805 RID: 219141 RVA: 0x00EF162E File Offset: 0x00EEF82E
 		private void OnClickedCloseButton()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06040B42 RID: 265026 RVA: 0x00FAA5F0 File Offset: 0x00FA87F0
+		// Token: 0x06035806 RID: 219142 RVA: 0x00EF1638 File Offset: 0x00EEF838
 		private void OnClickHelpBtn()
 		{
 			ActivityMatchThreeData matchThreeData = ActivityMatchThreeController.Instance.GetMatchThreeData();
@@ -339,31 +339,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			HelpController.Instance.OpenHelpById(matchThreeData.LocalConfig.Value.HelpId);
 		}
 
-		// Token: 0x04021AB9 RID: 137913
+		// Token: 0x0401C3EA RID: 115690
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021ABA RID: 137914
+		// Token: 0x0401C3EB RID: 115691
 		private UUIScrollViewWithScrollbarComponent LevelScrollView;
 
-		// Token: 0x04021ABB RID: 137915
+		// Token: 0x0401C3EC RID: 115692
 		private MultiTemplateComponent LevelMultiTemplateComponent;
 
-		// Token: 0x04021ABC RID: 137916
+		// Token: 0x0401C3ED RID: 115693
 		private UUIInturnAnimController GridAnimController;
 
-		// Token: 0x04021ABD RID: 137917
+		// Token: 0x0401C3EE RID: 115694
 		private MatchThreeChapterSelectData CurrentSelectChapter;
 
-		// Token: 0x04021ABE RID: 137918
+		// Token: 0x0401C3EF RID: 115695
 		private int PendingFocusIndex = -1;
 
-		// Token: 0x04021ABF RID: 137919
+		// Token: 0x0401C3F0 RID: 115696
 		private int PendingLayoutFrameCount;
 
-		// Token: 0x04021AC0 RID: 137920
+		// Token: 0x0401C3F1 RID: 115697
 		private bool IsWaitingSelectedLevelStartAnimationFinish;
 
-		// Token: 0x04021AC1 RID: 137921
+		// Token: 0x0401C3F2 RID: 115698
 		[Nullable(1)]
 		private readonly List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 	}

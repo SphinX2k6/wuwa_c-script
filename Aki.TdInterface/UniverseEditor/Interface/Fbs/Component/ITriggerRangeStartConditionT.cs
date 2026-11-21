@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AEE RID: 23278
+	// Token: 0x020060FB RID: 24827
 	public class ITriggerRangeStartConditionT
 	{
-		// Token: 0x1700AF98 RID: 44952
-		// (get) Token: 0x06027BC4 RID: 162756 RVA: 0x005774EC File Offset: 0x005756EC
-		// (set) Token: 0x06027BC5 RID: 162757 RVA: 0x005774F4 File Offset: 0x005756F4
+		// Token: 0x1700B8D4 RID: 47316
+		// (get) Token: 0x0602A150 RID: 172368 RVA: 0x005BE9B0 File Offset: 0x005BCBB0
+		// (set) Token: 0x0602A151 RID: 172369 RVA: 0x005BE9B8 File Offset: 0x005BCBB8
 		public ESpawnMonsterStartCondition Type { get; set; }
 
-		// Token: 0x1700AF99 RID: 44953
-		// (get) Token: 0x06027BC6 RID: 162758 RVA: 0x005774FD File Offset: 0x005756FD
-		// (set) Token: 0x06027BC7 RID: 162759 RVA: 0x00577505 File Offset: 0x00575705
+		// Token: 0x1700B8D5 RID: 47317
+		// (get) Token: 0x0602A152 RID: 172370 RVA: 0x005BE9C1 File Offset: 0x005BCBC1
+		// (set) Token: 0x0602A153 RID: 172371 RVA: 0x005BE9C9 File Offset: 0x005BCBC9
 		public int Range { get; set; }
 
-		// Token: 0x06027BC8 RID: 162760 RVA: 0x0057750E File Offset: 0x0057570E
+		// Token: 0x0602A154 RID: 172372 RVA: 0x005BE9D2 File Offset: 0x005BCBD2
 		public ITriggerRangeStartConditionT()
 		{
 			this.Type = ESpawnMonsterStartCondition.Immediate;

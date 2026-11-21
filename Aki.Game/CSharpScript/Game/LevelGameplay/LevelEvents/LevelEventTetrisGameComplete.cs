@@ -5,15 +5,15 @@ using CSharpScript.Game.Module.SlidingBlocks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BA3 RID: 27555
+	// Token: 0x02005D1B RID: 23835
 	public class LevelEventTetrisGameComplete : LevelEventBase
 	{
-		// Token: 0x060442FB RID: 279291 RVA: 0x010CE315 File Offset: 0x010CC515
+		// Token: 0x0603A451 RID: 238673 RVA: 0x010781A1 File Offset: 0x010763A1
 		public LevelEventTetrisGameComplete(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442FC RID: 279292 RVA: 0x010CE320 File Offset: 0x010CC520
+		// Token: 0x0603A452 RID: 238674 RVA: 0x010781AC File Offset: 0x010763AC
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

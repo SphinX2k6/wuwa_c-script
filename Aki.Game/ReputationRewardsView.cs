@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -9,16 +8,16 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F8C RID: 8076
+// Token: 0x0200144E RID: 5198
 public class ReputationRewardsView : UiViewBase
 {
-	// Token: 0x0600FAA2 RID: 64162 RVA: 0x003CBC72 File Offset: 0x003C9E72
+	// Token: 0x0600CEC1 RID: 52929 RVA: 0x003D77AA File Offset: 0x003D59AA
 	[NullableContext(1)]
 	public ReputationRewardsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FAA3 RID: 64163 RVA: 0x003CBC7C File Offset: 0x003C9E7C
+	// Token: 0x0600CEC2 RID: 52930 RVA: 0x003D77B4 File Offset: 0x003D59B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -30,20 +29,20 @@ public class ReputationRewardsView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FAA4 RID: 64164 RVA: 0x003CBCC4 File Offset: 0x003C9EC4
+	// Token: 0x0600CEC3 RID: 52931 RVA: 0x003D77FC File Offset: 0x003D59FC
 	protected override void OnBeforeCreate()
 	{
 		int id = (int)this.OpenParam;
 		this.Influence = InfluenceReputationModel.Instance.GetInfluenceInstance(id);
 	}
 
-	// Token: 0x0600FAA5 RID: 64165 RVA: 0x003CBCEE File Offset: 0x003C9EEE
+	// Token: 0x0600CEC4 RID: 52932 RVA: 0x003D7826 File Offset: 0x003D5A26
 	protected override void OnStart()
 	{
 		this.ScrollView = new GenericScrollView<InfluenceRewardItem>(base.GetScrollViewWithScrollbar(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<InfluenceRewardItem>(this.InitItem), null);
 	}
 
-	// Token: 0x0600FAA6 RID: 64166 RVA: 0x003CBD10 File Offset: 0x003C9F10
+	// Token: 0x0600CEC5 RID: 52933 RVA: 0x003D7848 File Offset: 0x003D5A48
 	[NullableContext(1)]
 	private ILayoutItem<InfluenceRewardItem> InitItem(object data, UUIItem uiItem, int index)
 	{
@@ -57,20 +56,20 @@ public class ReputationRewardsView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600FAA7 RID: 64167 RVA: 0x003CBD5C File Offset: 0x003C9F5C
+	// Token: 0x0600CEC6 RID: 52934 RVA: 0x003D7894 File Offset: 0x003D5A94
 	protected override void OnAfterShow()
 	{
-		this.ScrollView.RefreshByData<IntPair>(this.Influence.GetReward().ToList<IntPair>(), null);
+		this.ScrollView.RefreshByData<IntPair>(this.Influence.GetReward(), null);
 	}
 
-	// Token: 0x0600FAA8 RID: 64168 RVA: 0x003CBD8D File Offset: 0x003C9F8D
+	// Token: 0x0600CEC7 RID: 52935 RVA: 0x003D78C0 File Offset: 0x003D5AC0
 	protected override void OnBeforeDestroy()
 	{
 		this.ScrollView.ClearChildren();
 		this.ScrollView = null;
 	}
 
-	// Token: 0x040074B4 RID: 29876
+	// Token: 0x04007595 RID: 30101
 	[Nullable(new byte[]
 	{
 		2,
@@ -78,14 +77,14 @@ public class ReputationRewardsView : UiViewBase
 	})]
 	private GenericScrollView<InfluenceRewardItem> ScrollView;
 
-	// Token: 0x040074B5 RID: 29877
+	// Token: 0x04007596 RID: 30102
 	[Nullable(2)]
 	private InfluenceInstance Influence;
 
-	// Token: 0x02008576 RID: 34166
+	// Token: 0x020076FB RID: 30459
 	private enum EReputationRewardsView
 	{
-		// Token: 0x0402B750 RID: 178000
+		// Token: 0x04026A73 RID: 158323
 		ScrollView
 	}
 }

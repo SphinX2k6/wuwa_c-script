@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E33 RID: 24115
+	// Token: 0x02006470 RID: 25712
 	public struct IPhotoTargetCaptureUiCustomPoints : IFlatbufferObject
 	{
-		// Token: 0x1700B459 RID: 46169
-		// (get) Token: 0x0602947E RID: 169086 RVA: 0x005A9368 File Offset: 0x005A7568
+		// Token: 0x1700BDBF RID: 48575
+		// (get) Token: 0x0602BB08 RID: 178952 RVA: 0x005F2098 File Offset: 0x005F0298
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x0602947F RID: 169087 RVA: 0x005A9375 File Offset: 0x005A7575
+		// Token: 0x0602BB09 RID: 178953 RVA: 0x005F20A5 File Offset: 0x005F02A5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029480 RID: 169088 RVA: 0x005A937C File Offset: 0x005A757C
+		// Token: 0x0602BB0A RID: 178954 RVA: 0x005F20AC File Offset: 0x005F02AC
 		public static IPhotoTargetCaptureUiCustomPoints GetRootAsIPhotoTargetCaptureUiCustomPoints(ByteBuffer _bb)
 		{
 			return IPhotoTargetCaptureUiCustomPoints.GetRootAsIPhotoTargetCaptureUiCustomPoints(_bb, default(IPhotoTargetCaptureUiCustomPoints));
 		}
 
-		// Token: 0x06029481 RID: 169089 RVA: 0x005A9398 File Offset: 0x005A7598
+		// Token: 0x0602BB0B RID: 178955 RVA: 0x005F20C8 File Offset: 0x005F02C8
 		public static IPhotoTargetCaptureUiCustomPoints GetRootAsIPhotoTargetCaptureUiCustomPoints(ByteBuffer _bb, IPhotoTargetCaptureUiCustomPoints obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029482 RID: 169090 RVA: 0x005A93B5 File Offset: 0x005A75B5
+		// Token: 0x0602BB0C RID: 178956 RVA: 0x005F20E5 File Offset: 0x005F02E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029483 RID: 169091 RVA: 0x005A93C4 File Offset: 0x005A75C4
+		// Token: 0x0602BB0D RID: 178957 RVA: 0x005F20F4 File Offset: 0x005F02F4
 		public IPhotoTargetCaptureUiCustomPoints __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B45A RID: 46170
-		// (get) Token: 0x06029484 RID: 169092 RVA: 0x005A93D4 File Offset: 0x005A75D4
+		// Token: 0x1700BDC0 RID: 48576
+		// (get) Token: 0x0602BB0E RID: 178958 RVA: 0x005F2104 File Offset: 0x005F0304
 		public EPhotoTargetCaptureUiType Type
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029485 RID: 169093 RVA: 0x005A9410 File Offset: 0x005A7610
+		// Token: 0x0602BB0F RID: 178959 RVA: 0x005F2140 File Offset: 0x005F0340
 		public IVectorInfo? Points(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return new IVectorInfo?(default(IVectorInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B45B RID: 46171
-		// (get) Token: 0x06029486 RID: 169094 RVA: 0x005A9470 File Offset: 0x005A7670
+		// Token: 0x1700BDC1 RID: 48577
+		// (get) Token: 0x0602BB10 RID: 178960 RVA: 0x005F21A0 File Offset: 0x005F03A0
 		public int PointsLength
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029487 RID: 169095 RVA: 0x005A949B File Offset: 0x005A769B
+		// Token: 0x0602BB11 RID: 178961 RVA: 0x005F21CB File Offset: 0x005F03CB
 		public static Offset<IPhotoTargetCaptureUiCustomPoints> CreateIPhotoTargetCaptureUiCustomPoints(FlatBufferBuilder builder, EPhotoTargetCaptureUiType Type = EPhotoTargetCaptureUiType.RequiredPointsCenter, VectorOffset PointsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -99,25 +99,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IPhotoTargetCaptureUiCustomPoints.EndIPhotoTargetCaptureUiCustomPoints(builder);
 		}
 
-		// Token: 0x06029488 RID: 169096 RVA: 0x005A94B8 File Offset: 0x005A76B8
+		// Token: 0x0602BB12 RID: 178962 RVA: 0x005F21E8 File Offset: 0x005F03E8
 		public static void StartIPhotoTargetCaptureUiCustomPoints(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06029489 RID: 169097 RVA: 0x005A94C1 File Offset: 0x005A76C1
+		// Token: 0x0602BB13 RID: 178963 RVA: 0x005F21F1 File Offset: 0x005F03F1
 		public static void AddType(FlatBufferBuilder builder, EPhotoTargetCaptureUiType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602948A RID: 169098 RVA: 0x005A94CC File Offset: 0x005A76CC
+		// Token: 0x0602BB14 RID: 178964 RVA: 0x005F21FC File Offset: 0x005F03FC
 		public static void AddPoints(FlatBufferBuilder builder, VectorOffset pointsOffset)
 		{
 			builder.AddOffset(1, pointsOffset.Value, 0);
 		}
 
-		// Token: 0x0602948B RID: 169099 RVA: 0x005A94DC File Offset: 0x005A76DC
+		// Token: 0x0602BB15 RID: 178965 RVA: 0x005F220C File Offset: 0x005F040C
 		public static VectorOffset CreatePointsVector(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602948C RID: 169100 RVA: 0x005A951C File Offset: 0x005A771C
+		// Token: 0x0602BB16 RID: 178966 RVA: 0x005F224C File Offset: 0x005F044C
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602948D RID: 169101 RVA: 0x005A9536 File Offset: 0x005A7736
+		// Token: 0x0602BB17 RID: 178967 RVA: 0x005F2266 File Offset: 0x005F0466
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IVectorInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602948E RID: 169102 RVA: 0x005A9554 File Offset: 0x005A7754
+		// Token: 0x0602BB18 RID: 178968 RVA: 0x005F2284 File Offset: 0x005F0484
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -152,19 +152,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602948F RID: 169103 RVA: 0x005A956D File Offset: 0x005A776D
+		// Token: 0x0602BB19 RID: 178969 RVA: 0x005F229D File Offset: 0x005F049D
 		public static void StartPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06029490 RID: 169104 RVA: 0x005A9578 File Offset: 0x005A7778
+		// Token: 0x0602BB1A RID: 178970 RVA: 0x005F22A8 File Offset: 0x005F04A8
 		public static Offset<IPhotoTargetCaptureUiCustomPoints> EndIPhotoTargetCaptureUiCustomPoints(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhotoTargetCaptureUiCustomPoints>(builder.EndTable());
 		}
 
-		// Token: 0x06029491 RID: 169105 RVA: 0x005A9588 File Offset: 0x005A7788
+		// Token: 0x0602BB1B RID: 178971 RVA: 0x005F22B8 File Offset: 0x005F04B8
 		public IPhotoTargetCaptureUiCustomPointsT UnPack()
 		{
 			IPhotoTargetCaptureUiCustomPointsT photoTargetCaptureUiCustomPointsT = new IPhotoTargetCaptureUiCustomPointsT();
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return photoTargetCaptureUiCustomPointsT;
 		}
 
-		// Token: 0x06029492 RID: 169106 RVA: 0x005A95A4 File Offset: 0x005A77A4
+		// Token: 0x0602BB1C RID: 178972 RVA: 0x005F22D4 File Offset: 0x005F04D4
 		public void UnPackTo(IPhotoTargetCaptureUiCustomPointsT _o)
 		{
 			_o.Type = this.Type;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029493 RID: 169107 RVA: 0x005A9610 File Offset: 0x005A7810
+		// Token: 0x0602BB1D RID: 178973 RVA: 0x005F2340 File Offset: 0x005F0540
 		public static Offset<IPhotoTargetCaptureUiCustomPoints> Pack(FlatBufferBuilder builder, IPhotoTargetCaptureUiCustomPointsT _o)
 		{
 			if (_o == null)
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IPhotoTargetCaptureUiCustomPoints.CreateIPhotoTargetCaptureUiCustomPoints(builder, _o.Type, pointsOffset);
 		}
 
-		// Token: 0x0400F836 RID: 63542
+		// Token: 0x04010591 RID: 66961
 		private Table __p;
 	}
 }

@@ -5,25 +5,24 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200057B RID: 1403
+	// Token: 0x020005E4 RID: 1508
 	public class INpcStandbyShowFinitely_SetValue
 	{
-		// Token: 0x0400146D RID: 5229
+		// Token: 0x040015DB RID: 5595
 		public ENpcStandbyShowMode Type;
 
-		// Token: 0x0400146E RID: 5230
+		// Token: 0x040015DC RID: 5596
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<INpcLookAtConfig> LookAtConfigs;
 
-		// Token: 0x0400146F RID: 5231
+		// Token: 0x040015DD RID: 5597
 		public ENpcStandbyShowFinitelyPlayMode PlayMode;
 
-		// Token: 0x04001470 RID: 5232
-		[Nullable(1)]
+		// Token: 0x040015DE RID: 5598
 		public List<INpcStandbyShowFinitelyInfo> Montages;
 	}
 }

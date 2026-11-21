@@ -6,13 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BEC RID: 3052
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000CBB RID: 3259
 	public class IConditionBubbleData
 	{
-		// Token: 0x06004613 RID: 17939 RVA: 0x000B1252 File Offset: 0x000AF452
-		[NullableContext(1)]
+		// Token: 0x06004A71 RID: 19057 RVA: 0x000BB3CE File Offset: 0x000B95CE
 		public static IConditionBubbleData Create(IConditionBubbleData? instance)
 		{
 			if (instance == null)
@@ -25,10 +22,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013F8 RID: 5112
-		// (get) Token: 0x06004614 RID: 17940 RVA: 0x000B1271 File Offset: 0x000AF471
+		// Token: 0x170014F6 RID: 5366
+		// (get) Token: 0x06004A72 RID: 19058 RVA: 0x000BB3ED File Offset: 0x000B95ED
+		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._ConditionInited)
@@ -41,12 +40,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013F9 RID: 5113
-		// (get) Token: 0x06004615 RID: 17941 RVA: 0x000B12A5 File Offset: 0x000AF4A5
-		[Nullable(1)]
+		// Token: 0x170014F7 RID: 5367
+		// (get) Token: 0x06004A73 RID: 19059 RVA: 0x000BB421 File Offset: 0x000B9621
 		public virtual IBubbleData Flow
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._FlowInited)
@@ -59,19 +56,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027E9 RID: 10217
+		// Token: 0x04002A34 RID: 10804
 		private IConditionBubbleData Instance;
 
-		// Token: 0x040027EA RID: 10218
+		// Token: 0x04002A35 RID: 10805
+		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040027EB RID: 10219
+		// Token: 0x04002A36 RID: 10806
 		private bool _ConditionInited;
 
-		// Token: 0x040027EC RID: 10220
+		// Token: 0x04002A37 RID: 10807
+		[Nullable(2)]
 		private IBubbleData _FlowCache;
 
-		// Token: 0x040027ED RID: 10221
+		// Token: 0x04002A38 RID: 10808
 		private bool _FlowInited;
 	}
 }

@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001112 RID: 4370
+// Token: 0x020005C6 RID: 1478
 public class AvignonUnlockTipView : UiViewBase
 {
-	// Token: 0x0600724D RID: 29261 RVA: 0x0017622F File Offset: 0x0017442F
+	// Token: 0x060045E3 RID: 17891 RVA: 0x0017EBEB File Offset: 0x0017CDEB
 	[NullableContext(1)]
 	public AvignonUnlockTipView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600724E RID: 29262 RVA: 0x00176238 File Offset: 0x00174438
+	// Token: 0x060045E4 RID: 17892 RVA: 0x0017EBF4 File Offset: 0x0017CDF4
 	protected override void OnAfterShow()
 	{
 		base.CloseMe(null);

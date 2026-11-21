@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000146 RID: 326
+	// Token: 0x02000159 RID: 345
 	[EnumExtensions]
 	public enum EStateRepPerfType
 	{
-		// Token: 0x04000652 RID: 1618
+		// Token: 0x04000697 RID: 1687
 		SkillId,
-		// Token: 0x04000653 RID: 1619
+		// Token: 0x04000698 RID: 1688
 		MontagePath,
-		// Token: 0x04000654 RID: 1620
+		// Token: 0x04000699 RID: 1689
 		Effects
 	}
 }

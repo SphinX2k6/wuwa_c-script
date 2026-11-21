@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A3E RID: 6718
+	// Token: 0x0200049E RID: 1182
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FAllowedNotificationsDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018DDF RID: 101855 RVA: 0x0024BD0E File Offset: 0x00249F0E
+		// Token: 0x06006E24 RID: 28196 RVA: 0x000A21A6 File Offset: 0x000A03A6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FAllowedNotificationsDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018DE0 RID: 101856 RVA: 0x0024BD1A File Offset: 0x00249F1A
+		// Token: 0x06006E25 RID: 28197 RVA: 0x000A21B2 File Offset: 0x000A03B2
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FAllowedNotificationsDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FAllowedNotificationsDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06018DE1 RID: 101857 RVA: 0x0024BD3D File Offset: 0x00249F3D
+		// Token: 0x06006E26 RID: 28198 RVA: 0x000A21D5 File Offset: 0x000A03D5
 		public FAllowedNotificationsDelegate()
 		{
 		}
 
-		// Token: 0x06018DE2 RID: 101858 RVA: 0x0024BD45 File Offset: 0x00249F45
+		// Token: 0x06006E27 RID: 28199 RVA: 0x000A21DD File Offset: 0x000A03DD
 		[NullableContext(2)]
 		public FAllowedNotificationsDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018DE3 RID: 101859 RVA: 0x0024BD4F File Offset: 0x00249F4F
+		// Token: 0x06006E28 RID: 28200 RVA: 0x000A21E7 File Offset: 0x000A03E7
 		public FAllowedNotificationsDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018DE4 RID: 101860 RVA: 0x0024BD5A File Offset: 0x00249F5A
+		// Token: 0x06006E29 RID: 28201 RVA: 0x000A21F2 File Offset: 0x000A03F2
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018DE5 RID: 101861 RVA: 0x0024BD8C File Offset: 0x00249F8C
+		// Token: 0x06006E2A RID: 28202 RVA: 0x000A2224 File Offset: 0x000A0424
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool> Callback)
 		{
 			if (FAllowedNotificationsDelegate.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FAllowedNotificationsDelegate.RegisterId);
 		}
 
-		// Token: 0x06018DE6 RID: 101862 RVA: 0x0024BDC6 File Offset: 0x00249FC6
+		// Token: 0x06006E2B RID: 28203 RVA: 0x000A225E File Offset: 0x000A045E
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06018DE7 RID: 101863 RVA: 0x0024BDD0 File Offset: 0x00249FD0
+		// Token: 0x06006E2C RID: 28204 RVA: 0x000A2268 File Offset: 0x000A0468
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool result)
 		{
 			FAllowedNotificationsDelegate.__FAllowedNotificationsDelegate_DelegateParams* ptr = stackalloc FAllowedNotificationsDelegate.__FAllowedNotificationsDelegate_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FAllowedNotificationsDelegate.__FAllowedNotificationsDelegate_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06018DE8 RID: 101864 RVA: 0x0024BE0C File Offset: 0x0024A00C
+		// Token: 0x06006E2D RID: 28205 RVA: 0x000A22A4 File Offset: 0x000A04A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FAllowedNotificationsDelegate.__FAllowedNotificationsDelegate_DelegateParams*)__Parameters)->result);
 		}
 
-		// Token: 0x0400D6ED RID: 55021
+		// Token: 0x04002F2D RID: 12077
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D6EE RID: 55022
+		// Token: 0x04002F2E RID: 12078
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroPushSdk.AllowedNotificationsDelegate__DelegateSignature";
 
-		// Token: 0x0400D6EF RID: 55023
+		// Token: 0x04002F2F RID: 12079
 		private static int RegisterId;
 
-		// Token: 0x02003100 RID: 12544
+		// Token: 0x02000BD5 RID: 3029
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FAllowedNotificationsDelegate_DelegateParams
+		private ref struct __FAllowedNotificationsDelegate_DelegateParams
 		{
-			// Token: 0x04016E86 RID: 93830
+			// Token: 0x04005D80 RID: 23936
 			[FieldOffset(0)]
 			public bool result;
 		}
 
-		// Token: 0x02003101 RID: 12545
+		// Token: 0x02000BD6 RID: 3030
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016E87 RID: 93831
+			// Token: 0x04005D81 RID: 23937
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

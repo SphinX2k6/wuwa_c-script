@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200121D RID: 4637
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001359 RID: 4953
 	public class TCsvTetrisBoardData
 	{
-		// Token: 0x06006920 RID: 26912 RVA: 0x000FA974 File Offset: 0x000F8B74
+		// Token: 0x06006F61 RID: 28513 RVA: 0x00108280 File Offset: 0x00106480
 		public static TCsvTetrisBoardData Create([Nullable(2)] TCsvTetrisBoardData instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021EB RID: 8683
-		// (get) Token: 0x06006921 RID: 26913 RVA: 0x000FA987 File Offset: 0x000F8B87
+		// Token: 0x170023AC RID: 9132
+		// (get) Token: 0x06006F62 RID: 28514 RVA: 0x00108293 File Offset: 0x00106493
 		public virtual int Id
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021EC RID: 8684
-		// (get) Token: 0x06006922 RID: 26914 RVA: 0x000FA994 File Offset: 0x000F8B94
+		// Token: 0x170023AD RID: 9133
+		// (get) Token: 0x06006F63 RID: 28515 RVA: 0x001082A0 File Offset: 0x001064A0
 		public virtual ITetrisBoard Data
 		{
 			get
@@ -51,13 +49,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003EDE RID: 16094
+		// Token: 0x0400424C RID: 16972
 		private TCsvTetrisBoardData FbInstance;
 
-		// Token: 0x04003EDF RID: 16095
+		// Token: 0x0400424D RID: 16973
 		private ITetrisBoard _DataCache;
 
-		// Token: 0x04003EE0 RID: 16096
+		// Token: 0x0400424E RID: 16974
 		private bool _DataInited;
 	}
 }

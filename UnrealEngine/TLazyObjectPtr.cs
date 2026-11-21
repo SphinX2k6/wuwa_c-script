@@ -7,7 +7,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000090 RID: 144
+	// Token: 0x02000075 RID: 117
 	[NullableContext(2)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -16,46 +16,46 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Sequential, Pack = 4)]
 	public struct TLazyObjectPtr<[Nullable(0)] T> : IEqualityOperators<TLazyObjectPtr<T>, TLazyObjectPtr<T>, bool>, IEquatable<TLazyObjectPtr<T>> where T : UnrealUObject, IUnrealUObject
 	{
-		// Token: 0x06000FD9 RID: 4057 RVA: 0x0001818C File Offset: 0x0001638C
+		// Token: 0x06000B6C RID: 2924 RVA: 0x00012EB0 File Offset: 0x000110B0
 		public TLazyObjectPtr()
 		{
 			this.LazyObjectPtr = default(FLazyObjectPtr);
 		}
 
-		// Token: 0x06000FDA RID: 4058 RVA: 0x0001819A File Offset: 0x0001639A
+		// Token: 0x06000B6D RID: 2925 RVA: 0x00012EBE File Offset: 0x000110BE
 		public TLazyObjectPtr(T obj)
 		{
 			this.LazyObjectPtr = new FLazyObjectPtr(obj);
 		}
 
-		// Token: 0x06000FDB RID: 4059 RVA: 0x000181AD File Offset: 0x000163AD
+		// Token: 0x06000B6E RID: 2926 RVA: 0x00012ED1 File Offset: 0x000110D1
 		public TLazyObjectPtr(in FLazyObjectPtr lazyObjectPtr)
 		{
 			this.LazyObjectPtr = lazyObjectPtr;
 		}
 
-		// Token: 0x06000FDC RID: 4060 RVA: 0x000181BB File Offset: 0x000163BB
+		// Token: 0x06000B6F RID: 2927 RVA: 0x00012EDF File Offset: 0x000110DF
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public FUniqueObjectGuid GetUniqueID()
 		{
 			return this.LazyObjectPtr.GetUniqueID();
 		}
 
-		// Token: 0x06000FDD RID: 4061 RVA: 0x000181C8 File Offset: 0x000163C8
+		// Token: 0x06000B70 RID: 2928 RVA: 0x00012EEC File Offset: 0x000110EC
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public T Get()
 		{
 			return (T)((object)this.LazyObjectPtr.Get());
 		}
 
-		// Token: 0x06000FDE RID: 4062 RVA: 0x000181DA File Offset: 0x000163DA
+		// Token: 0x06000B71 RID: 2929 RVA: 0x00012EFE File Offset: 0x000110FE
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public bool IsValid()
 		{
 			return this.Get() != null;
 		}
 
-		// Token: 0x06000FDF RID: 4063 RVA: 0x000181EA File Offset: 0x000163EA
+		// Token: 0x06000B72 RID: 2930 RVA: 0x00012F0E File Offset: 0x0001110E
 		public static bool operator ==([Nullable(new byte[]
 		{
 			0,
@@ -69,7 +69,7 @@ namespace UnrealEngine
 			return left.LazyObjectPtr == right.LazyObjectPtr;
 		}
 
-		// Token: 0x06000FE0 RID: 4064 RVA: 0x000181FD File Offset: 0x000163FD
+		// Token: 0x06000B73 RID: 2931 RVA: 0x00012F21 File Offset: 0x00011121
 		public static bool operator !=([Nullable(new byte[]
 		{
 			0,
@@ -83,7 +83,7 @@ namespace UnrealEngine
 			return left.LazyObjectPtr != right.LazyObjectPtr;
 		}
 
-		// Token: 0x06000FE1 RID: 4065 RVA: 0x00018210 File Offset: 0x00016410
+		// Token: 0x06000B74 RID: 2932 RVA: 0x00012F34 File Offset: 0x00011134
 		public bool Equals([Nullable(new byte[]
 		{
 			0,
@@ -93,7 +93,7 @@ namespace UnrealEngine
 			return this.LazyObjectPtr.Equals(other.LazyObjectPtr);
 		}
 
-		// Token: 0x06000FE2 RID: 4066 RVA: 0x00018224 File Offset: 0x00016424
+		// Token: 0x06000B75 RID: 2933 RVA: 0x00012F48 File Offset: 0x00011148
 		public override bool Equals(object obj)
 		{
 			if (obj is TLazyObjectPtr<T>)
@@ -104,13 +104,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000FE3 RID: 4067 RVA: 0x00018249 File Offset: 0x00016449
+		// Token: 0x06000B76 RID: 2934 RVA: 0x00012F6D File Offset: 0x0001116D
 		public override int GetHashCode()
 		{
 			return this.LazyObjectPtr.GetHashCode();
 		}
 
-		// Token: 0x06000FE4 RID: 4068 RVA: 0x0001825C File Offset: 0x0001645C
+		// Token: 0x06000B77 RID: 2935 RVA: 0x00012F80 File Offset: 0x00011180
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -121,7 +121,7 @@ namespace UnrealEngine
 			return new TLazyObjectPtr<T>(obj);
 		}
 
-		// Token: 0x06000FE5 RID: 4069 RVA: 0x00018269 File Offset: 0x00016469
+		// Token: 0x06000B78 RID: 2936 RVA: 0x00012F8D File Offset: 0x0001118D
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -132,7 +132,7 @@ namespace UnrealEngine
 			return new TLazyObjectPtr<T>(ref lazyObjectPtr);
 		}
 
-		// Token: 0x06000FE6 RID: 4070 RVA: 0x00018271 File Offset: 0x00016471
+		// Token: 0x06000B79 RID: 2937 RVA: 0x00012F95 File Offset: 0x00011195
 		public static implicit operator FLazyObjectPtr([Nullable(new byte[]
 		{
 			0,
@@ -142,7 +142,7 @@ namespace UnrealEngine
 			return lazyObjectPtr.LazyObjectPtr;
 		}
 
-		// Token: 0x040001F8 RID: 504
+		// Token: 0x040001B1 RID: 433
 		private FLazyObjectPtr LazyObjectPtr;
 	}
 }

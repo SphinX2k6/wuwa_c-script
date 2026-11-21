@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005701 RID: 22273
+	// Token: 0x020046D8 RID: 18136
 	[NullableContext(1)]
 	public interface IKurotatoAttrPreviewDelta
 	{
-		// Token: 0x1700882E RID: 34862
-		// (get) Token: 0x06038A47 RID: 232007
-		// (set) Token: 0x06038A48 RID: 232008
+		// Token: 0x17005BF6 RID: 23542
+		// (get) Token: 0x0602D957 RID: 186711
+		// (set) Token: 0x0602D958 RID: 186712
 		int PropertyId { get; set; }
 
-		// Token: 0x1700882F RID: 34863
-		// (get) Token: 0x06038A49 RID: 232009
-		// (set) Token: 0x06038A4A RID: 232010
+		// Token: 0x17005BF7 RID: 23543
+		// (get) Token: 0x0602D959 RID: 186713
+		// (set) Token: 0x0602D95A RID: 186714
 		string ValueStr { get; set; }
 
-		// Token: 0x17008830 RID: 34864
-		// (get) Token: 0x06038A4B RID: 232011
-		// (set) Token: 0x06038A4C RID: 232012
+		// Token: 0x17005BF8 RID: 23544
+		// (get) Token: 0x0602D95B RID: 186715
+		// (set) Token: 0x0602D95C RID: 186716
 		int? LockValue { get; set; }
 	}
 }

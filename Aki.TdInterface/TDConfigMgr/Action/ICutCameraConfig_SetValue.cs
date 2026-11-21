@@ -3,19 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200195D RID: 6493
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001AE8 RID: 6888
 	public class ICutCameraConfig_SetValue
 	{
-		// Token: 0x040056D6 RID: 22230
-		[Nullable(1)]
+		// Token: 0x04005B2A RID: 23338
 		public ICameraParams CameraParams;
 
-		// Token: 0x040056D7 RID: 22231
+		// Token: 0x04005B2B RID: 23339
+		[Nullable(2)]
 		public PlayFlow CutFlow;
 
-		// Token: 0x040056D8 RID: 22232
+		// Token: 0x04005B2C RID: 23340
+		[Nullable(2)]
 		public ICutCameraTimeParams CutTimeParams;
 	}
 }

@@ -4,126 +4,129 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EB8 RID: 7864
+	// Token: 0x020020F1 RID: 8433
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IStateInfo_SetValue
 	{
-		// Token: 0x0400643D RID: 25661
-		[Nullable(1)]
+		// Token: 0x04006A2B RID: 27179
+		[Nullable(0)]
 		public string ObjType;
 
-		// Token: 0x0400643E RID: 25662
+		// Token: 0x04006A2C RID: 27180
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> Children;
 
-		// Token: 0x0400643F RID: 25663
+		// Token: 0x04006A2D RID: 27181
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> Reference;
 
-		// Token: 0x04006440 RID: 25664
+		// Token: 0x04006A2E RID: 27182
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> WeakReference;
 
-		// Token: 0x04006441 RID: 25665
+		// Token: 0x04006A2F RID: 27183
 		public string EdPlannedBranch;
 
-		// Token: 0x04006442 RID: 25666
+		// Token: 0x04006A30 RID: 27184
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> EdTextRef;
 
-		// Token: 0x04006443 RID: 25667
+		// Token: 0x04006A31 RID: 27185
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> _children;
 
-		// Token: 0x04006444 RID: 25668
+		// Token: 0x04006A32 RID: 27186
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> _reference;
 
-		// Token: 0x04006445 RID: 25669
+		// Token: 0x04006A33 RID: 27187
 		public int Id;
 
-		// Token: 0x04006446 RID: 25670
-		[Nullable(1)]
+		// Token: 0x04006A34 RID: 27188
+		[Nullable(0)]
 		public string Name;
 
-		// Token: 0x04006447 RID: 25671
+		// Token: 0x04006A35 RID: 27189
 		public bool? _folded;
 
-		// Token: 0x04006448 RID: 25672
-		[Nullable(1)]
+		// Token: 0x04006A36 RID: 27190
+		[Nullable(0)]
 		public List<ActionInfo> Actions;
 
-		// Token: 0x04006449 RID: 25673
+		// Token: 0x04006A37 RID: 27191
 		public bool? KeepBgm;
 
-		// Token: 0x0400644A RID: 25674
+		// Token: 0x04006A38 RID: 27192
 		public bool? OnlyPlayOnce;
 
-		// Token: 0x0400644B RID: 25675
+		// Token: 0x04006A39 RID: 27193
 		public bool? KeepInVehicle;
 
-		// Token: 0x0400644C RID: 25676
+		// Token: 0x04006A3A RID: 27194
 		public bool? AllowMultiReference;
 
-		// Token: 0x0400644D RID: 25677
+		// Token: 0x04006A3B RID: 27195
 		public bool? IgnoreInPlotHandBook;
 
-		// Token: 0x0400644E RID: 25678
+		// Token: 0x04006A3C RID: 27196
 		public bool? DontInterruptMatch;
 
-		// Token: 0x0400644F RID: 25679
+		// Token: 0x04006A3D RID: 27197
 		public bool? IsPreloadFlow;
 
-		// Token: 0x04006450 RID: 25680
+		// Token: 0x04006A3E RID: 27198
 		public bool? IsClientFlow;
 
-		// Token: 0x04006451 RID: 25681
+		// Token: 0x04006A3F RID: 27199
 		public bool? _showImport;
 
-		// Token: 0x04006452 RID: 25682
+		// Token: 0x04006A40 RID: 27200
 		public PosA PlotPos;
 
-		// Token: 0x04006453 RID: 25683
+		// Token: 0x04006A41 RID: 27201
 		public IStateProgramSpecialProcessChangeTeamOptimization ProgramSpecialProcess;
 
-		// Token: 0x04006454 RID: 25684
+		// Token: 0x04006A42 RID: 27202
+		public bool? UseConditionalText;
+
+		// Token: 0x04006A43 RID: 27203
 		public List<int> _SelectedIndexes;
 
-		// Token: 0x04006455 RID: 25685
+		// Token: 0x04006A44 RID: 27204
 		public string EdPlotNode;
 
-		// Token: 0x04006456 RID: 25686
+		// Token: 0x04006A45 RID: 27205
 		public bool? EdPlotHandleJump;
 
-		// Token: 0x04006457 RID: 25687
+		// Token: 0x04006A46 RID: 27206
 		public string EdPlotFileId;
 
-		// Token: 0x04006458 RID: 25688
+		// Token: 0x04006A47 RID: 27207
 		public int? EdNextPlotKeyId;
 	}
 }

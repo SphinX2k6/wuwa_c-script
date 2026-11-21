@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A00 RID: 27136
+	// Token: 0x020070B0 RID: 28848
 	public class ILiftMoveTypeT
 	{
-		// Token: 0x1700C959 RID: 51545
-		// (get) Token: 0x0602F7C5 RID: 194501 RVA: 0x00677896 File Offset: 0x00675A96
-		// (set) Token: 0x0602F7C6 RID: 194502 RVA: 0x0067789E File Offset: 0x00675A9E
+		// Token: 0x1700D359 RID: 54105
+		// (get) Token: 0x06032185 RID: 205189 RVA: 0x006C7BEE File Offset: 0x006C5DEE
+		// (set) Token: 0x06032186 RID: 205190 RVA: 0x006C7BF6 File Offset: 0x006C5DF6
 		public ELiftMoveType Type { get; set; }
 
-		// Token: 0x0602F7C7 RID: 194503 RVA: 0x006778A7 File Offset: 0x00675AA7
+		// Token: 0x06032187 RID: 205191 RVA: 0x006C7BFF File Offset: 0x006C5DFF
 		public ILiftMoveTypeT()
 		{
 			this.Type = ELiftMoveType.Default;

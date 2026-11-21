@@ -9,13 +9,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FDD RID: 20445
+	// Token: 0x02003FA7 RID: 16295
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class PlotCaptionImageController : ControllerBase
 	{
-		// Token: 0x0603451B RID: 214299 RVA: 0x00C49D64 File Offset: 0x00C47F64
+		// Token: 0x060293A4 RID: 168868 RVA: 0x00B93DAC File Offset: 0x00B91FAC
 		public UniTask OpenAsync(string uiPrefabId, float duration, [Nullable(2)] IUiAnimConfig uiAnimConfig)
 		{
 			PlotCaptionImageController.<OpenAsync>d__2 <OpenAsync>d__;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Plot
 			return <OpenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603451C RID: 214300 RVA: 0x00C49DC0 File Offset: 0x00C47FC0
+		// Token: 0x060293A5 RID: 168869 RVA: 0x00B93E08 File Offset: 0x00B92008
 		[NullableContext(2)]
 		private UniTask WaitCloseAsync(float duration, IUiAnimConfig uiAnimConfig)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Plot
 			return <WaitCloseAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603451D RID: 214301 RVA: 0x00C49E14 File Offset: 0x00C48014
+		// Token: 0x060293A6 RID: 168870 RVA: 0x00B93E5C File Offset: 0x00B9205C
 		private UniTask WaitDurationAsync(float duration)
 		{
 			PlotCaptionImageController.<WaitDurationAsync>d__4 <WaitDurationAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Plot
 			return <WaitDurationAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603451E RID: 214302 RVA: 0x00C49E57 File Offset: 0x00C48057
+		// Token: 0x060293A7 RID: 168871 RVA: 0x00B93E9F File Offset: 0x00B9209F
 		private void DestroyPanel()
 		{
 			if (this.CurrentPanel != null)
@@ -66,15 +66,15 @@ namespace CSharpScript.Game.Module.Plot
 			this.IsInPlotCaption = false;
 		}
 
-		// Token: 0x0603451F RID: 214303 RVA: 0x00C49E90 File Offset: 0x00C48090
+		// Token: 0x060293A8 RID: 168872 RVA: 0x00B93ED8 File Offset: 0x00B920D8
 		protected override bool OnClear()
 		{
 			this.DestroyPanel();
 			return true;
 		}
 
-		// Token: 0x17007FC1 RID: 32705
-		// (get) Token: 0x06034520 RID: 214304 RVA: 0x00C49E99 File Offset: 0x00C48099
+		// Token: 0x17005375 RID: 21365
+		// (get) Token: 0x060293A9 RID: 168873 RVA: 0x00B93EE1 File Offset: 0x00B920E1
 		public static PlotCaptionImageController Instance
 		{
 			get
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034521 RID: 214305 RVA: 0x00C49EA0 File Offset: 0x00C480A0
+		// Token: 0x060293AA RID: 168874 RVA: 0x00B93EE8 File Offset: 0x00B920E8
 		public static PlotCaptionImageController GetOrCreateInstance()
 		{
 			if (PlotCaptionImageController._Instance == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Plot
 			return PlotCaptionImageController._Instance;
 		}
 
-		// Token: 0x06034522 RID: 214306 RVA: 0x00C49EB4 File Offset: 0x00C480B4
+		// Token: 0x060293AB RID: 168875 RVA: 0x00B93EFC File Offset: 0x00B920FC
 		public static bool CreateInstance()
 		{
 			if (PlotCaptionImageController._Instance != null)
@@ -104,31 +104,31 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x06034523 RID: 214307 RVA: 0x00C49ECA File Offset: 0x00C480CA
+		// Token: 0x060293AC RID: 168876 RVA: 0x00B93F12 File Offset: 0x00B92112
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034524 RID: 214308 RVA: 0x00C49ECC File Offset: 0x00C480CC
+		// Token: 0x060293AD RID: 168877 RVA: 0x00B93F14 File Offset: 0x00B92114
 		public static void ResetStaticDefaultValue()
 		{
 			PlotCaptionImageController._Instance = null;
 		}
 
-		// Token: 0x06034525 RID: 214309 RVA: 0x00C49ED4 File Offset: 0x00C480D4
+		// Token: 0x060293AE RID: 168878 RVA: 0x00B93F1C File Offset: 0x00B9211C
 		static PlotCaptionImageController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlotCaptionImageController.CreateStaticDefaultValue), new Action(PlotCaptionImageController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BD2A RID: 113962
+		// Token: 0x04016705 RID: 91909
 		[Nullable(2)]
 		private PlotCaptionImagePanel CurrentPanel;
 
-		// Token: 0x0401BD2B RID: 113963
+		// Token: 0x04016706 RID: 91910
 		public bool IsInPlotCaption;
 
-		// Token: 0x0401BD2C RID: 113964
+		// Token: 0x04016707 RID: 91911
 		[Nullable(2)]
 		private static PlotCaptionImageController _Instance;
 	}

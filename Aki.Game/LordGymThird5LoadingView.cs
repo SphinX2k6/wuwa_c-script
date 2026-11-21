@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020021B4 RID: 8628
+// Token: 0x02001698 RID: 5784
 public class LordGymThird5LoadingView : LoadingViewBase
 {
-	// Token: 0x06010C9F RID: 68767 RVA: 0x00413EC8 File Offset: 0x004120C8
+	// Token: 0x0600E130 RID: 57648 RVA: 0x004207A8 File Offset: 0x0041E9A8
 	[NullableContext(1)]
 	public LordGymThird5LoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010CA0 RID: 68768 RVA: 0x00413ED1 File Offset: 0x004120D1
+	// Token: 0x0600E131 RID: 57649 RVA: 0x004207B1 File Offset: 0x0041E9B1
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,25 +23,25 @@ public class LordGymThird5LoadingView : LoadingViewBase
 		};
 	}
 
-	// Token: 0x06010CA1 RID: 68769 RVA: 0x00413F0A File Offset: 0x0041210A
+	// Token: 0x0600E132 RID: 57650 RVA: 0x004207EA File Offset: 0x0041E9EA
 	protected override void OnStart()
 	{
 		base.OnStart();
 	}
 
-	// Token: 0x06010CA2 RID: 68770 RVA: 0x00413F12 File Offset: 0x00412112
+	// Token: 0x0600E133 RID: 57651 RVA: 0x004207F2 File Offset: 0x0041E9F2
 	protected override void UpdateProgressRate(float rate)
 	{
 	}
 
-	// Token: 0x06010CA3 RID: 68771 RVA: 0x00413F14 File Offset: 0x00412114
+	// Token: 0x0600E134 RID: 57652 RVA: 0x004207F4 File Offset: 0x0041E9F4
 	protected override void UpdateProgressValue(float value)
 	{
 		this.SetTextProgressValue(0, value, "");
 		this.ChangeSize(value);
 	}
 
-	// Token: 0x06010CA4 RID: 68772 RVA: 0x00413F2C File Offset: 0x0041212C
+	// Token: 0x0600E135 RID: 57653 RVA: 0x0042080C File Offset: 0x0041EA0C
 	[NullableContext(1)]
 	protected override void SetTextProgressValue(int textKey, float value, string suffix = "")
 	{
@@ -49,7 +49,7 @@ public class LordGymThird5LoadingView : LoadingViewBase
 		base.GetText(textKey).SetText(num.ToString() + "%", true);
 	}
 
-	// Token: 0x06010CA5 RID: 68773 RVA: 0x00413F60 File Offset: 0x00412160
+	// Token: 0x0600E136 RID: 57654 RVA: 0x00420840 File Offset: 0x0041EA40
 	private void ChangeSize(float value)
 	{
 		UUIItem item = base.GetItem(3);
@@ -59,19 +59,19 @@ public class LordGymThird5LoadingView : LoadingViewBase
 		item.SetUIItemScale(new FVector(num3, num3, num3));
 	}
 
-	// Token: 0x06010CA6 RID: 68774 RVA: 0x00413F9B File Offset: 0x0041219B
+	// Token: 0x0600E137 RID: 57655 RVA: 0x0042087B File Offset: 0x0041EA7B
 	protected override void OnLevelSequencePlayerBandStateChange(bool state)
 	{
 		base.PlaySequence("Start", null, false);
 	}
 
-	// Token: 0x020086F3 RID: 34547
+	// Token: 0x0200787E RID: 30846
 	private class EComponent
 	{
-		// Token: 0x0402BE6D RID: 179821
+		// Token: 0x0402718E RID: 160142
 		public const int ProgressText = 0;
 
-		// Token: 0x0402BE6E RID: 179822
+		// Token: 0x0402718F RID: 160143
 		public const int SizeChangeItem = 3;
 	}
 }

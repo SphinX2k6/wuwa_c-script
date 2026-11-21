@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050A9 RID: 20649
+	// Token: 0x02004079 RID: 16505
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FlowActionBase
 	{
-		// Token: 0x06034E9D RID: 216733 RVA: 0x00C885C0 File Offset: 0x00C867C0
+		// Token: 0x06029D96 RID: 171414 RVA: 0x00BD5840 File Offset: 0x00BD3A40
 		[NullableContext(1)]
 		public virtual void Execute(ActionInfo actionInfo, FlowContext context, bool isAutoFinish)
 		{
@@ -30,29 +30,29 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x06034E9E RID: 216734 RVA: 0x00C885F1 File Offset: 0x00C867F1
+		// Token: 0x06029D97 RID: 171415 RVA: 0x00BD5871 File Offset: 0x00BD3A71
 		protected virtual void OnExecute()
 		{
 		}
 
-		// Token: 0x06034E9F RID: 216735 RVA: 0x00C885F3 File Offset: 0x00C867F3
+		// Token: 0x06029D98 RID: 171416 RVA: 0x00BD5873 File Offset: 0x00BD3A73
 		protected virtual void OnBackgroundExecute()
 		{
 			this.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034EA0 RID: 216736 RVA: 0x00C885FD File Offset: 0x00C867FD
+		// Token: 0x06029D99 RID: 171417 RVA: 0x00BD587D File Offset: 0x00BD3A7D
 		public void InterruptExecute()
 		{
 			this.OnInterruptExecute();
 		}
 
-		// Token: 0x06034EA1 RID: 216737 RVA: 0x00C88605 File Offset: 0x00C86805
+		// Token: 0x06029D9A RID: 171418 RVA: 0x00BD5885 File Offset: 0x00BD3A85
 		protected virtual void OnInterruptExecute()
 		{
 		}
 
-		// Token: 0x06034EA2 RID: 216738 RVA: 0x00C88608 File Offset: 0x00C86808
+		// Token: 0x06029D9B RID: 171419 RVA: 0x00BD5888 File Offset: 0x00BD3A88
 		protected void RecordAction(ActionRecord actionRecord = null)
 		{
 			if (this.Context == null)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.Context.RollbackRecord.Add(actionRecord);
 		}
 
-		// Token: 0x06034EA3 RID: 216739 RVA: 0x00C88654 File Offset: 0x00C86854
+		// Token: 0x06029D9C RID: 171420 RVA: 0x00BD58D4 File Offset: 0x00BD3AD4
 		[NullableContext(1)]
 		public unsafe void Rollback(ActionRecord actionRecord, FlowContext context)
 		{
@@ -86,13 +86,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.OnRollback(actionRecord, context);
 		}
 
-		// Token: 0x06034EA4 RID: 216740 RVA: 0x00C886D7 File Offset: 0x00C868D7
+		// Token: 0x06029D9D RID: 171421 RVA: 0x00BD5957 File Offset: 0x00BD3B57
 		[NullableContext(1)]
 		protected virtual void OnRollback(ActionRecord actionInfo, FlowContext context)
 		{
 		}
 
-		// Token: 0x06034EA5 RID: 216741 RVA: 0x00C886DC File Offset: 0x00C868DC
+		// Token: 0x06029D9E RID: 171422 RVA: 0x00BD595C File Offset: 0x00BD3B5C
 		protected void FinishExecute(bool isSuccess, bool isContinue = true)
 		{
 			if (this.ActionInfo == null || this.Runner == null)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x06034EA6 RID: 216742 RVA: 0x00C8872B File Offset: 0x00C8692B
+		// Token: 0x06029D9F RID: 171423 RVA: 0x00BD59AB File Offset: 0x00BD3BAB
 		public void Recycle()
 		{
 			FlowAction owner = this.Owner;
@@ -121,22 +121,22 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			owner.RecycleAction(this);
 		}
 
-		// Token: 0x0401C300 RID: 115456
+		// Token: 0x04016D31 RID: 93489
 		public EAction Type;
 
-		// Token: 0x0401C301 RID: 115457
+		// Token: 0x04016D32 RID: 93490
 		protected ActionInfo ActionInfo;
 
-		// Token: 0x0401C302 RID: 115458
+		// Token: 0x04016D33 RID: 93491
 		public Action<bool, bool> Callback;
 
-		// Token: 0x0401C303 RID: 115459
+		// Token: 0x04016D34 RID: 93492
 		public FlowActionRunner Runner;
 
-		// Token: 0x0401C304 RID: 115460
+		// Token: 0x04016D35 RID: 93493
 		public FlowAction Owner;
 
-		// Token: 0x0401C305 RID: 115461
+		// Token: 0x04016D36 RID: 93494
 		public FlowContext Context;
 	}
 }

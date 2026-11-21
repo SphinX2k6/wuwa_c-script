@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Launcher.Define;
 using CSharpScript.Launcher.DiffPatch.Update;
 using CSharpScript.Launcher.HotPatchKuroSdk;
-using CSharpScript.Launcher.LogUpload;
 using CSharpScript.Launcher.Notice;
 using CSharpScript.Launcher.Server;
 using CSharpScript.Launcher.Update;
@@ -19,12 +17,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000DF RID: 223
+	// Token: 0x020000E2 RID: 226
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotFixManager : IStaticVariableResetter
 	{
-		// Token: 0x06000717 RID: 1815 RVA: 0x0003A0DC File Offset: 0x000382DC
+		// Token: 0x06000733 RID: 1843 RVA: 0x0003BC0C File Offset: 0x00039E0C
 		static HotFixManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HotFixManager.CreateStaticDefaultValue), new Action(HotFixManager.ResetStaticDefaultValue));
@@ -46,7 +44,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			};
 		}
 
-		// Token: 0x06000718 RID: 1816 RVA: 0x0003A22A File Offset: 0x0003842A
+		// Token: 0x06000734 RID: 1844 RVA: 0x0003BD5A File Offset: 0x00039F5A
 		public static void CreateStaticDefaultValue()
 		{
 			HotFixManager.DownLoadType = EVideoResSizeType.StartMaxNeed;
@@ -55,7 +53,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			HotFixManager.ApplyTierChangeHandler = null;
 		}
 
-		// Token: 0x06000719 RID: 1817 RVA: 0x0003A244 File Offset: 0x00038444
+		// Token: 0x06000735 RID: 1845 RVA: 0x0003BD74 File Offset: 0x00039F74
 		public static void ResetStaticDefaultValue()
 		{
 			HotFixManager.DownLoadViewChosePromise = null;
@@ -80,50 +78,60 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			HotFixManager.MobilePreDownloadApplyTierChangeHandler = null;
 		}
 
-		// Token: 0x0600071A RID: 1818 RVA: 0x0003A2CE File Offset: 0x000384CE
+		// Token: 0x06000736 RID: 1846 RVA: 0x0003BDFE File Offset: 0x00039FFE
 		public void SetNetworkType(ENetworkType networkType)
 		{
 			this.NetworkType = new ENetworkType?(networkType);
 		}
 
-		// Token: 0x0600071B RID: 1819 RVA: 0x0003A2DC File Offset: 0x000384DC
+		// Token: 0x06000737 RID: 1847 RVA: 0x0003BE0C File Offset: 0x0003A00C
 		public ENetworkType? GetNetworkType()
 		{
 			return this.NetworkType;
 		}
 
-		// Token: 0x0600071C RID: 1820 RVA: 0x0003A2E4 File Offset: 0x000384E4
+		// Token: 0x06000738 RID: 1848 RVA: 0x0003BE14 File Offset: 0x0003A014
 		public static IReadOnlyList<ETier> GetSupportedResourceQualityTiers()
 		{
 			return LauncherDeviceTierLib.GetDeviceSupportTiers();
 		}
 
-		// Token: 0x0600071D RID: 1821 RVA: 0x0003A2EB File Offset: 0x000384EB
+		// Token: 0x06000739 RID: 1849 RVA: 0x0003BE1C File Offset: 0x0003A01C
 		public static bool IsResourceQualityTierSupported(ETier tier)
 		{
-			return HotFixManager.GetSupportedResourceQualityTiers().Contains(tier);
+			using (IEnumerator<ETier> enumerator = HotFixManager.GetSupportedResourceQualityTiers().GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current == tier)
+					{
+						return true;
+					}
+				}
+			}
+			return false;
 		}
 
-		// Token: 0x0600071E RID: 1822 RVA: 0x0003A2F8 File Offset: 0x000384F8
+		// Token: 0x0600073A RID: 1850 RVA: 0x0003BE6C File Offset: 0x0003A06C
 		public static ETier GetRecommendTier()
 		{
 			return LauncherDeviceTierLib.GetRecommendedTier();
 		}
 
-		// Token: 0x0600071F RID: 1823 RVA: 0x0003A2FF File Offset: 0x000384FF
+		// Token: 0x0600073B RID: 1851 RVA: 0x0003BE73 File Offset: 0x0003A073
 		public static bool IsMobileHighEndDevice()
 		{
 			return LauncherDeviceTierLib.GetDeviceSupportTiers().Count > 1;
 		}
 
-		// Token: 0x06000720 RID: 1824 RVA: 0x0003A30E File Offset: 0x0003850E
+		// Token: 0x0600073C RID: 1852 RVA: 0x0003BE82 File Offset: 0x0003A082
 		public static bool IsTierEnabled()
 		{
 			return RemoteInfo.Instance.IsResourceQualityTierEnabled();
 		}
 
-		// Token: 0x170000D8 RID: 216
-		// (get) Token: 0x06000721 RID: 1825 RVA: 0x0003A31A File Offset: 0x0003851A
+		// Token: 0x170000DA RID: 218
+		// (get) Token: 0x0600073D RID: 1853 RVA: 0x0003BE8E File Offset: 0x0003A08E
 		public static ETier LocalResourceQualityTier
 		{
 			get
@@ -132,13 +140,13 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x06000722 RID: 1826 RVA: 0x0003A326 File Offset: 0x00038526
+		// Token: 0x0600073E RID: 1854 RVA: 0x0003BE9A File Offset: 0x0003A09A
 		public static ETier GetLocalResourceQualityTier()
 		{
 			return LauncherDeviceTierLib.GetActiveTier();
 		}
 
-		// Token: 0x06000723 RID: 1827 RVA: 0x0003A330 File Offset: 0x00038530
+		// Token: 0x0600073F RID: 1855 RVA: 0x0003BEA4 File Offset: 0x0003A0A4
 		public static ETier? GetTargetResourceQualityTier()
 		{
 			int? deviceSaved = LauncherStorageLib.Instance.GetDeviceSaved<int?>(ELauncherStorageDeviceKey.TargetResourceQualityTier, null);
@@ -149,13 +157,13 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return null;
 		}
 
-		// Token: 0x06000724 RID: 1828 RVA: 0x0003A372 File Offset: 0x00038572
+		// Token: 0x06000740 RID: 1856 RVA: 0x0003BEE6 File Offset: 0x0003A0E6
 		public static void SetTargetResourceQualityTier(ETier tier)
 		{
 			LauncherStorageLib.Instance.SetDeviceSaved<int>(ELauncherStorageDeviceKey.TargetResourceQualityTier, (int)tier);
 		}
 
-		// Token: 0x06000725 RID: 1829 RVA: 0x0003A384 File Offset: 0x00038584
+		// Token: 0x06000741 RID: 1857 RVA: 0x0003BEF8 File Offset: 0x0003A0F8
 		[NullableContext(2)]
 		public static string GetResourceQualityTierLabelOf(ETier? tier)
 		{
@@ -174,14 +182,14 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return null;
 		}
 
-		// Token: 0x06000726 RID: 1830 RVA: 0x0003A3CE File Offset: 0x000385CE
+		// Token: 0x06000742 RID: 1858 RVA: 0x0003BF42 File Offset: 0x0003A142
 		[NullableContext(2)]
 		public static string GetLocalResourceQualityTierLabel()
 		{
 			return HotFixManager.GetResourceQualityTierLabelOf(new ETier?(HotFixManager.LocalResourceQualityTier));
 		}
 
-		// Token: 0x06000727 RID: 1831 RVA: 0x0003A3DF File Offset: 0x000385DF
+		// Token: 0x06000743 RID: 1859 RVA: 0x0003BF53 File Offset: 0x0003A153
 		public static EResourceQualityTierTextId GetResourceQualityTierTextId(ETier tier)
 		{
 			switch (tier)
@@ -194,19 +202,19 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return EResourceQualityTierTextId.Smooth;
 		}
 
-		// Token: 0x06000728 RID: 1832 RVA: 0x0003A3FC File Offset: 0x000385FC
+		// Token: 0x06000744 RID: 1860 RVA: 0x0003BF70 File Offset: 0x0003A170
 		public static string GetResourceQualityTierName(ETier tier)
 		{
 			return LauncherConfigLib.Instance.GetHotPatchText(HotFixManager.GetResourceQualityTierTextId(tier).ToEnumString()) ?? "";
 		}
 
-		// Token: 0x06000729 RID: 1833 RVA: 0x0003A41C File Offset: 0x0003861C
+		// Token: 0x06000745 RID: 1861 RVA: 0x0003BF90 File Offset: 0x0003A190
 		public static long GetResourceQualityTierInstalledSize(ETier tier)
 		{
 			return ResourceDiffUpdaterManager.Instance.GetTierPacksSavedSize(tier);
 		}
 
-		// Token: 0x0600072A RID: 1834 RVA: 0x0003A42C File Offset: 0x0003862C
+		// Token: 0x06000746 RID: 1862 RVA: 0x0003BFA0 File Offset: 0x0003A1A0
 		public static string ByteToGbNumber(long byteValue)
 		{
 			double num = (double)byteValue;
@@ -217,7 +225,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return (num / 1073741824.0).ToString("0.##");
 		}
 
-		// Token: 0x0600072B RID: 1835 RVA: 0x0003A468 File Offset: 0x00038668
+		// Token: 0x06000747 RID: 1863 RVA: 0x0003BFDC File Offset: 0x0003A1DC
 		public UniTask Init(UObject worldContextObject)
 		{
 			HotFixManager.<Init>d__37 <Init>d__;
@@ -229,7 +237,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600072C RID: 1836 RVA: 0x0003A4B4 File Offset: 0x000386B4
+		// Token: 0x06000748 RID: 1864 RVA: 0x0003C028 File Offset: 0x0003A228
 		public static UniTask SdkLogin(Action callBack, bool isFormView = false)
 		{
 			HotFixManager.<SdkLogin>d__41 <SdkLogin>d__;
@@ -241,8 +249,8 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <SdkLogin>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x170000D9 RID: 217
-		// (get) Token: 0x0600072D RID: 1837 RVA: 0x0003A4FF File Offset: 0x000386FF
+		// Token: 0x170000DB RID: 219
+		// (get) Token: 0x06000749 RID: 1865 RVA: 0x0003C073 File Offset: 0x0003A273
 		[Nullable(2)]
 		public static FLoginStruct LoginData
 		{
@@ -253,7 +261,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x0600072E RID: 1838 RVA: 0x0003A508 File Offset: 0x00038708
+		// Token: 0x0600074A RID: 1866 RVA: 0x0003C07C File Offset: 0x0003A27C
 		public static void RefreshLoginStateOnLogin(FLoginStruct data)
 		{
 			if (HotFixManager.SdkLoginPromiseResolve == null)
@@ -300,7 +308,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x0600072F RID: 1839 RVA: 0x0003A5E4 File Offset: 0x000387E4
+		// Token: 0x0600074B RID: 1867 RVA: 0x0003C158 File Offset: 0x0003A358
 		public static void SaveHotFixSdkLoginState(bool isLogin)
 		{
 			if (UKuroVariableFunctionLibrary.HasBoolValue("hot_fix_login"))
@@ -310,7 +318,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			UKuroVariableFunctionLibrary.SetBoolValue("hot_fix_login", isLogin);
 		}
 
-		// Token: 0x06000730 RID: 1840 RVA: 0x0003A60C File Offset: 0x0003880C
+		// Token: 0x0600074C RID: 1868 RVA: 0x0003C180 File Offset: 0x0003A380
 		public static bool GetHotFixSdkLoginState()
 		{
 			if (!UKuroVariableFunctionLibrary.HasBoolValue("hot_fix_login"))
@@ -321,7 +329,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return UKuroVariableFunctionLibrary.GetBoolValue("hot_fix_login", ref flag) && flag;
 		}
 
-		// Token: 0x06000731 RID: 1841 RVA: 0x0003A63C File Offset: 0x0003883C
+		// Token: 0x0600074D RID: 1869 RVA: 0x0003C1B0 File Offset: 0x0003A3B0
 		private static void RequestSuggestServerData()
 		{
 			if (HotFixManager.HandleLoginData == null)
@@ -343,7 +351,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			});
 		}
 
-		// Token: 0x06000732 RID: 1842 RVA: 0x0003A6C8 File Offset: 0x000388C8
+		// Token: 0x0600074E RID: 1870 RVA: 0x0003C23C File Offset: 0x0003A43C
 		private static UniTask GetLoginSubPackageDownLoadHttp()
 		{
 			HotFixManager.<GetLoginSubPackageDownLoadHttp>d__54 <GetLoginSubPackageDownLoadHttp>d__;
@@ -353,7 +361,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <GetLoginSubPackageDownLoadHttp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000733 RID: 1843 RVA: 0x0003A704 File Offset: 0x00038904
+		// Token: 0x0600074F RID: 1871 RVA: 0x0003C278 File Offset: 0x0003A478
 		private static void ContinueLauncherSdkLogin(bool isSuccess)
 		{
 			if (isSuccess)
@@ -385,7 +393,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}).Forget();
 		}
 
-		// Token: 0x06000734 RID: 1844 RVA: 0x0003A799 File Offset: 0x00038999
+		// Token: 0x06000750 RID: 1872 RVA: 0x0003C30D File Offset: 0x0003A50D
 		public void RefreshViewLoginStateBeforeLogin()
 		{
 			this.SdkLoginFinish = false;
@@ -400,14 +408,14 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			});
 		}
 
-		// Token: 0x06000735 RID: 1845 RVA: 0x0003A7BC File Offset: 0x000389BC
+		// Token: 0x06000751 RID: 1873 RVA: 0x0003C330 File Offset: 0x0003A530
 		public void RefreshViewLoginStateOnLoginSuccess()
 		{
 			this.SdkLoginFinish = true;
 			this.HotFixView.RefreshLoginStateOnLoginSuccess();
 		}
 
-		// Token: 0x06000736 RID: 1846 RVA: 0x0003A7D0 File Offset: 0x000389D0
+		// Token: 0x06000752 RID: 1874 RVA: 0x0003C344 File Offset: 0x0003A544
 		public unsafe static string BuildSubPackageHttp(string uId, string userName, string token)
 		{
 			string serverPort = HotFixManager.GetServerPort();
@@ -439,7 +447,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000737 RID: 1847 RVA: 0x0003A91C File Offset: 0x00038B1C
+		// Token: 0x06000753 RID: 1875 RVA: 0x0003C490 File Offset: 0x0003A690
 		public static string GetServerPort()
 		{
 			string result = "5500";
@@ -461,7 +469,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return (num2 + 1).ToString();
 		}
 
-		// Token: 0x06000738 RID: 1848 RVA: 0x0003A990 File Offset: 0x00038B90
+		// Token: 0x06000754 RID: 1876 RVA: 0x0003C504 File Offset: 0x0003A704
 		public UniTask CloseHotFix()
 		{
 			HotFixManager.<CloseHotFix>d__61 <CloseHotFix>d__;
@@ -472,14 +480,14 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <CloseHotFix>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000739 RID: 1849 RVA: 0x0003A9D3 File Offset: 0x00038BD3
+		// Token: 0x06000755 RID: 1877 RVA: 0x0003C547 File Offset: 0x0003A747
 		public void Destroy()
 		{
 			this.HotFixView.Destroy();
 			this.HotFixView = null;
 		}
 
-		// Token: 0x0600073A RID: 1850 RVA: 0x0003A9E8 File Offset: 0x00038BE8
+		// Token: 0x06000756 RID: 1878 RVA: 0x0003C55C File Offset: 0x0003A75C
 		public UniTask ShowInfo(bool bWithProgress, [Nullable(2)] string textId, params string[] args)
 		{
 			HotFixManager.<ShowInfo>d__63 <ShowInfo>d__;
@@ -493,7 +501,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <ShowInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600073B RID: 1851 RVA: 0x0003AA44 File Offset: 0x00038C44
+		// Token: 0x06000757 RID: 1879 RVA: 0x0003C5B8 File Offset: 0x0003A7B8
 		public UniTask ShowEmptyInfo()
 		{
 			HotFixManager.<ShowEmptyInfo>d__64 <ShowEmptyInfo>d__;
@@ -504,7 +512,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <ShowEmptyInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600073C RID: 1852 RVA: 0x0003AA88 File Offset: 0x00038C88
+		// Token: 0x06000758 RID: 1880 RVA: 0x0003C5FC File Offset: 0x0003A7FC
 		public UniTask UpdateProgress(bool bNeedWait, float rate, string textId, params string[] args)
 		{
 			HotFixManager.<UpdateProgress>d__65 <UpdateProgress>d__;
@@ -519,7 +527,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <UpdateProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600073D RID: 1853 RVA: 0x0003AAEC File Offset: 0x00038CEC
+		// Token: 0x06000759 RID: 1881 RVA: 0x0003C660 File Offset: 0x0003A860
 		public UniTask UpdatePatchDownProgress(bool bNeedWait, float rate, string fileName, string speedText, string sizeCurrent, string sizeTotal)
 		{
 			HotFixManager.<UpdatePatchDownProgress>d__66 <UpdatePatchDownProgress>d__;
@@ -536,7 +544,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <UpdatePatchDownProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600073E RID: 1854 RVA: 0x0003AB64 File Offset: 0x00038D64
+		// Token: 0x0600075A RID: 1882 RVA: 0x0003C6D8 File Offset: 0x0003A8D8
 		public unsafe void ShowToolView()
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -548,19 +556,19 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			this.HotFixView.SetToolWindowActive(true);
 		}
 
-		// Token: 0x0600073F RID: 1855 RVA: 0x0003ABD6 File Offset: 0x00038DD6
+		// Token: 0x0600075B RID: 1883 RVA: 0x0003C74A File Offset: 0x0003A94A
 		public void SetDownLoadActive(bool value)
 		{
 			this.HotFixView.SetDownLoadActive(value);
 		}
 
-		// Token: 0x06000740 RID: 1856 RVA: 0x0003ABE4 File Offset: 0x00038DE4
+		// Token: 0x0600075C RID: 1884 RVA: 0x0003C758 File Offset: 0x0003A958
 		public void SetFreeSpaceTipsPopActive(bool value)
 		{
 			this.HotFixView.SetFreeSpaceTipsPopActive(value);
 		}
 
-		// Token: 0x06000741 RID: 1857 RVA: 0x0003ABF4 File Offset: 0x00038DF4
+		// Token: 0x0600075D RID: 1885 RVA: 0x0003C768 File Offset: 0x0003A968
 		[return: Nullable(0)]
 		public UniTask<bool> ShowDialog(bool bSelect, string titleId, string contentId, [Nullable(2)] string leftId, [Nullable(2)] string rightId, [Nullable(2)] string middleId, params string[] contentArgs)
 		{
@@ -579,13 +587,25 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return <ShowDialog>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000742 RID: 1858 RVA: 0x0003AC73 File Offset: 0x00038E73
+		// Token: 0x0600075E RID: 1886 RVA: 0x0003C7E8 File Offset: 0x0003A9E8
+		private UniTask WaitForLogUploadProgressClosed(string pendingDialogContentId)
+		{
+			HotFixManager.<WaitForLogUploadProgressClosed>d__71 <WaitForLogUploadProgressClosed>d__;
+			<WaitForLogUploadProgressClosed>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<WaitForLogUploadProgressClosed>d__.<>4__this = this;
+			<WaitForLogUploadProgressClosed>d__.pendingDialogContentId = pendingDialogContentId;
+			<WaitForLogUploadProgressClosed>d__.<>1__state = -1;
+			<WaitForLogUploadProgressClosed>d__.<>t__builder.Start<HotFixManager.<WaitForLogUploadProgressClosed>d__71>(ref <WaitForLogUploadProgressClosed>d__);
+			return <WaitForLogUploadProgressClosed>d__.<>t__builder.Task;
+		}
+
+		// Token: 0x0600075F RID: 1887 RVA: 0x0003C833 File Offset: 0x0003AA33
 		private static bool IsErrorDialog(string contentId)
 		{
 			return HotFixManager.ErrorDialogIds.Contains(contentId);
 		}
 
-		// Token: 0x06000743 RID: 1859 RVA: 0x0003AC80 File Offset: 0x00038E80
+		// Token: 0x06000760 RID: 1888 RVA: 0x0003C840 File Offset: 0x0003AA40
 		private void ResetDialogState()
 		{
 			this.HasDialogBeenShowed = false;
@@ -594,73 +614,75 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			this.HotFixView.SetRepairButtonEnable(false);
 		}
 
-		// Token: 0x06000744 RID: 1860 RVA: 0x0003ACA8 File Offset: 0x00038EA8
+		// Token: 0x06000761 RID: 1889 RVA: 0x0003C868 File Offset: 0x0003AA68
 		private void UploadErrorLog()
 		{
-			LauncherLogUpload.Instance.SendLog(null, new SendLogReason
+			LauncherLogUploadView logUploadProgressView = this.HotFixView.GetLogUploadProgressView();
+			if (logUploadProgressView != null)
 			{
-				Reason = ELauncherLogUploadReason.ErrorPopup
-			});
+				logUploadProgressView.AutoStartUpload = true;
+				this.HotFixView.SetLogUploadProgressActive(true);
+			}
 		}
 
-		// Token: 0x06000745 RID: 1861 RVA: 0x0003ACC1 File Offset: 0x00038EC1
+		// Token: 0x06000762 RID: 1890 RVA: 0x0003C897 File Offset: 0x0003AA97
 		[NullableContext(2)]
 		public void ShowNoticeWindow(string logMsg = null)
 		{
 			LauncherNoticeUtils.Instance.OpenNotice(logMsg);
 		}
 
-		// Token: 0x06000746 RID: 1862 RVA: 0x0003ACCE File Offset: 0x00038ECE
+		// Token: 0x06000763 RID: 1891 RVA: 0x0003C8A4 File Offset: 0x0003AAA4
 		public static void ShowNoticeWindowByUser()
 		{
 			LauncherNoticeUtils.Instance.OpenNoticeByUser();
 		}
 
-		// Token: 0x06000747 RID: 1863 RVA: 0x0003ACDC File Offset: 0x00038EDC
+		// Token: 0x06000764 RID: 1892 RVA: 0x0003C8B0 File Offset: 0x0003AAB0
 		public UniTask WaitFrame(int num = 1)
 		{
-			HotFixManager.<WaitFrame>d__76 <WaitFrame>d__;
+			HotFixManager.<WaitFrame>d__77 <WaitFrame>d__;
 			<WaitFrame>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<WaitFrame>d__.num = num;
 			<WaitFrame>d__.<>1__state = -1;
-			<WaitFrame>d__.<>t__builder.Start<HotFixManager.<WaitFrame>d__76>(ref <WaitFrame>d__);
+			<WaitFrame>d__.<>t__builder.Start<HotFixManager.<WaitFrame>d__77>(ref <WaitFrame>d__);
 			return <WaitFrame>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000748 RID: 1864 RVA: 0x0003AD1F File Offset: 0x00038F1F
+		// Token: 0x06000765 RID: 1893 RVA: 0x0003C8F3 File Offset: 0x0003AAF3
 		private void ShowContainerItemAndCloseConfirmationItem()
 		{
 			this.HotFixView.SetContainerItemActive(true);
 			this.HotFixView.SetConfirmationItemActive(false);
 		}
 
-		// Token: 0x06000749 RID: 1865 RVA: 0x0003AD3C File Offset: 0x00038F3C
+		// Token: 0x06000766 RID: 1894 RVA: 0x0003C910 File Offset: 0x0003AB10
 		[NullableContext(0)]
 		private UniTask<bool> InitConfirmItemLeftRight(bool canCloseOff)
 		{
-			HotFixManager.<InitConfirmItemLeftRight>d__78 <InitConfirmItemLeftRight>d__;
+			HotFixManager.<InitConfirmItemLeftRight>d__79 <InitConfirmItemLeftRight>d__;
 			<InitConfirmItemLeftRight>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<InitConfirmItemLeftRight>d__.<>4__this = this;
 			<InitConfirmItemLeftRight>d__.canCloseOff = canCloseOff;
 			<InitConfirmItemLeftRight>d__.<>1__state = -1;
-			<InitConfirmItemLeftRight>d__.<>t__builder.Start<HotFixManager.<InitConfirmItemLeftRight>d__78>(ref <InitConfirmItemLeftRight>d__);
+			<InitConfirmItemLeftRight>d__.<>t__builder.Start<HotFixManager.<InitConfirmItemLeftRight>d__79>(ref <InitConfirmItemLeftRight>d__);
 			return <InitConfirmItemLeftRight>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600074A RID: 1866 RVA: 0x0003AD88 File Offset: 0x00038F88
+		// Token: 0x06000767 RID: 1895 RVA: 0x0003C95C File Offset: 0x0003AB5C
 		[NullableContext(0)]
 		private UniTask<bool> InitConfirmItemMiddle(bool canCloseOff)
 		{
-			HotFixManager.<InitConfirmItemMiddle>d__79 <InitConfirmItemMiddle>d__;
+			HotFixManager.<InitConfirmItemMiddle>d__80 <InitConfirmItemMiddle>d__;
 			<InitConfirmItemMiddle>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<InitConfirmItemMiddle>d__.<>4__this = this;
 			<InitConfirmItemMiddle>d__.canCloseOff = canCloseOff;
 			<InitConfirmItemMiddle>d__.<>1__state = -1;
-			<InitConfirmItemMiddle>d__.<>t__builder.Start<HotFixManager.<InitConfirmItemMiddle>d__79>(ref <InitConfirmItemMiddle>d__);
+			<InitConfirmItemMiddle>d__.<>t__builder.Start<HotFixManager.<InitConfirmItemMiddle>d__80>(ref <InitConfirmItemMiddle>d__);
 			return <InitConfirmItemMiddle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600074B RID: 1867 RVA: 0x0003ADD3 File Offset: 0x00038FD3
+		// Token: 0x06000768 RID: 1896 RVA: 0x0003C9A7 File Offset: 0x0003ABA7
 		private void CloseConfirmation()
 		{
 			if (this.HotFixView.GetUploadLogToggleOn() && !this.HasUploadErrorLogOnClose)
@@ -671,19 +693,19 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			this.HotFixView.SetConfirmationItemActive(false);
 		}
 
-		// Token: 0x0600074C RID: 1868 RVA: 0x0003AE04 File Offset: 0x00039004
+		// Token: 0x06000769 RID: 1897 RVA: 0x0003C9D8 File Offset: 0x0003ABD8
 		[NullableContext(0)]
 		public UniTask<bool> ShowPrivacyProtocolView()
 		{
-			HotFixManager.<ShowPrivacyProtocolView>d__81 <ShowPrivacyProtocolView>d__;
+			HotFixManager.<ShowPrivacyProtocolView>d__82 <ShowPrivacyProtocolView>d__;
 			<ShowPrivacyProtocolView>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<ShowPrivacyProtocolView>d__.<>4__this = this;
 			<ShowPrivacyProtocolView>d__.<>1__state = -1;
-			<ShowPrivacyProtocolView>d__.<>t__builder.Start<HotFixManager.<ShowPrivacyProtocolView>d__81>(ref <ShowPrivacyProtocolView>d__);
+			<ShowPrivacyProtocolView>d__.<>t__builder.Start<HotFixManager.<ShowPrivacyProtocolView>d__82>(ref <ShowPrivacyProtocolView>d__);
 			return <ShowPrivacyProtocolView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600074D RID: 1869 RVA: 0x0003AE48 File Offset: 0x00039048
+		// Token: 0x0600076A RID: 1898 RVA: 0x0003CA1C File Offset: 0x0003AC1C
 		public static void SetLocalText(UUIText uiText, [Nullable(2)] string textTableId, params string[] args)
 		{
 			string hotPatchText = LauncherConfigLib.Instance.GetHotPatchText(textTableId);
@@ -709,7 +731,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			uiText.SetText(text, true);
 		}
 
-		// Token: 0x0600074E RID: 1870 RVA: 0x0003AED0 File Offset: 0x000390D0
+		// Token: 0x0600076B RID: 1899 RVA: 0x0003CAA4 File Offset: 0x0003ACA4
 		public void TryShowNoticeBtn()
 		{
 			bool noticeBtnActive = LauncherNoticeUtils.Instance.CheckGrayBoxHit();
@@ -721,7 +743,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			hotFixView.SetNoticeBtnActive(noticeBtnActive);
 		}
 
-		// Token: 0x0600074F RID: 1871 RVA: 0x0003AEFC File Offset: 0x000390FC
+		// Token: 0x0600076C RID: 1900 RVA: 0x0003CAD0 File Offset: 0x0003ACD0
 		public static string ByteConverter(long byte_)
 		{
 			if (byte_ < 0L)
@@ -735,7 +757,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return num3.ToString("0.##") + " " + str;
 		}
 
-		// Token: 0x06000750 RID: 1872 RVA: 0x0003AF68 File Offset: 0x00039168
+		// Token: 0x0600076D RID: 1901 RVA: 0x0003CB3C File Offset: 0x0003AD3C
 		public static List<int> GetCanCleanSceneIdList()
 		{
 			List<int> list = new List<int>();
@@ -743,19 +765,21 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			{
 				return list;
 			}
-			HashSet<int> blockIds = ResourceDiffUpdaterManager.Instance.BlockModule.GetCoreBlockIds(ResourceDiffUpdaterManager.Instance.Context);
-			Func<int, bool> <>9__0;
+			HashSet<int> coreBlockIds = ResourceDiffUpdaterManager.Instance.BlockModule.GetCoreBlockIds(ResourceDiffUpdaterManager.Instance.Context);
 			foreach (DownLoadSubPackageRow downLoadSubPackageRow in PackSelectionTables.DownLoadSubPackageTableInstance.GetAll())
 			{
 				if (downLoadSubPackageRow.Type == 2)
 				{
-					IEnumerable<int> area = downLoadSubPackageRow.Area;
-					Func<int, bool> predicate;
-					if ((predicate = <>9__0) == null)
+					bool flag = false;
+					foreach (int item in downLoadSubPackageRow.Area)
 					{
-						predicate = (<>9__0 = ((int item) => blockIds.Contains(item)));
+						if (coreBlockIds.Contains(item))
+						{
+							flag = true;
+							break;
+						}
 					}
-					if (!area.Any(predicate))
+					if (!flag)
 					{
 						list.Add(downLoadSubPackageRow.Id);
 					}
@@ -764,14 +788,14 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return list;
 		}
 
-		// Token: 0x06000751 RID: 1873 RVA: 0x0003B038 File Offset: 0x00039238
+		// Token: 0x0600076E RID: 1902 RVA: 0x0003CC24 File Offset: 0x0003AE24
 		public static long GetCanCleanVideoSpace()
 		{
 			HashSet<int> unusedVideos = ResourceDiffUpdaterManager.Instance.VideoModule.GetUnusedVideos(ResourceDiffUpdaterManager.Instance.Context.FinishedQuests);
 			return ResourceDiffUpdaterManager.Instance.VideoModule.GetLocalSizeByVideoIds(unusedVideos);
 		}
 
-		// Token: 0x06000752 RID: 1874 RVA: 0x0003B074 File Offset: 0x00039274
+		// Token: 0x0600076F RID: 1903 RVA: 0x0003CC60 File Offset: 0x0003AE60
 		public static long GetSubPackageSpace(int packId)
 		{
 			DownLoadSubPackageRow byId = PackSelectionTables.DownLoadSubPackageTableInstance.GetById(packId);
@@ -785,10 +809,10 @@ namespace CSharpScript.Launcher.Ui.HotFix
 					hashSet.Add(blockPackName);
 				}
 			}
-			return ResourceDiffUpdaterManager.Instance.BlockModule.GetLocalSize(hashSet.ToList<string>());
+			return ResourceDiffUpdaterManager.Instance.BlockModule.GetLocalSize(new List<string>(hashSet));
 		}
 
-		// Token: 0x06000753 RID: 1875 RVA: 0x0003B114 File Offset: 0x00039314
+		// Token: 0x06000770 RID: 1904 RVA: 0x0003CD00 File Offset: 0x0003AF00
 		public static long GetAllCanClearSpace()
 		{
 			List<int> canCleanSceneIdList = HotFixManager.GetCanCleanSceneIdList();
@@ -803,7 +827,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return num;
 		}
 
-		// Token: 0x06000754 RID: 1876 RVA: 0x0003B180 File Offset: 0x00039380
+		// Token: 0x06000771 RID: 1905 RVA: 0x0003CD6C File Offset: 0x0003AF6C
 		public static long GetAllCanClearVoiceSpace()
 		{
 			long num = 0L;
@@ -829,7 +853,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return num;
 		}
 
-		// Token: 0x06000755 RID: 1877 RVA: 0x0003B240 File Offset: 0x00039440
+		// Token: 0x06000772 RID: 1906 RVA: 0x0003CE2C File Offset: 0x0003B02C
 		public static void ClearSubPackage(List<int> sceneIdList, bool clearVideo)
 		{
 			long num = clearVideo ? HotFixManager.GetCanCleanVideoSpace() : 0L;
@@ -855,7 +879,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 					}
 				}
 			}
-			ResourceDiffUpdaterManager.Instance.BlockModule.Delete(hashSet.ToList<string>());
+			ResourceDiffUpdaterManager.Instance.BlockModule.Delete(new List<string>(hashSet));
 			if (clearVideo)
 			{
 				HashSet<int> unusedVideos = ResourceDiffUpdaterManager.Instance.VideoModule.GetUnusedVideos(ResourceDiffUpdaterManager.Instance.Context.FinishedQuests);
@@ -876,44 +900,44 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			new MobileResCleanUpFinishStateLog(((loginData2 != null) ? loginData2.Uid : null) ?? "", ResourceDiffUpdaterManager.Instance.TraceId.ToString(), null).Report();
 		}
 
-		// Token: 0x04000449 RID: 1097
+		// Token: 0x04000478 RID: 1144
 		private static readonly HashSet<string> ErrorDialogIds;
 
-		// Token: 0x0400044A RID: 1098
+		// Token: 0x04000479 RID: 1145
 		private const long GB_BYTES = 1073741824L;
 
-		// Token: 0x0400044B RID: 1099
+		// Token: 0x0400047A RID: 1146
 		private const long MB_BYTES = 1048576L;
 
-		// Token: 0x0400044C RID: 1100
+		// Token: 0x0400047B RID: 1147
 		private const int LOGINURL_TIMEOUT = 3;
 
-		// Token: 0x0400044D RID: 1101
+		// Token: 0x0400047C RID: 1148
 		private const int LOGIN_BUTTON_SHOW_TIME = 30;
 
-		// Token: 0x0400044E RID: 1102
+		// Token: 0x0400047D RID: 1149
 		private const int LOGIN_SUCCESS = 1;
 
-		// Token: 0x0400044F RID: 1103
+		// Token: 0x0400047E RID: 1150
 		private const string HOTFIX_LOGIN = "hot_fix_login";
 
-		// Token: 0x04000450 RID: 1104
+		// Token: 0x0400047F RID: 1151
 		[Nullable(2)]
 		private HotFixUiView HotFixView;
 
-		// Token: 0x04000451 RID: 1105
+		// Token: 0x04000480 RID: 1152
 		private ENetworkType? NetworkType;
 
-		// Token: 0x04000452 RID: 1106
+		// Token: 0x04000481 RID: 1153
 		private bool HasDialogBeenShowed;
 
-		// Token: 0x04000453 RID: 1107
+		// Token: 0x04000482 RID: 1154
 		private bool HasUploadErrorLogOnClose;
 
-		// Token: 0x04000454 RID: 1108
+		// Token: 0x04000483 RID: 1155
 		public static bool HandleAutoClear = false;
 
-		// Token: 0x04000455 RID: 1109
+		// Token: 0x04000484 RID: 1156
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyList<ETier> mobileResourceQualityTiers = new ETier[]
 		{
@@ -921,83 +945,83 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			ETier.HD
 		};
 
-		// Token: 0x04000456 RID: 1110
+		// Token: 0x04000485 RID: 1157
 		public static ETier SelectResourceQualityTier;
 
-		// Token: 0x04000457 RID: 1111
+		// Token: 0x04000486 RID: 1158
 		[Nullable(2)]
 		public static Action<ETier, ETier> ApplyTierChangeHandler = null;
 
-		// Token: 0x04000458 RID: 1112
+		// Token: 0x04000487 RID: 1159
 		[Nullable(2)]
 		public static Action<ETier, ETier> MobilePreDownloadApplyTierChangeHandler = null;
 
-		// Token: 0x04000459 RID: 1113
+		// Token: 0x04000488 RID: 1160
 		[Nullable(2)]
 		private static HotFixManager SdkLoginHotFixManagerHandle = null;
 
-		// Token: 0x0400045A RID: 1114
+		// Token: 0x04000489 RID: 1161
 		[Nullable(2)]
 		private static Action SdkLoginPromiseResolve = null;
 
-		// Token: 0x0400045B RID: 1115
+		// Token: 0x0400048A RID: 1162
 		[Nullable(2)]
 		private static Action OnSdkLoginSuccessCallBack = null;
 
-		// Token: 0x0400045C RID: 1116
+		// Token: 0x0400048B RID: 1163
 		public static string LaunchSdkLoginServerIp = "";
 
-		// Token: 0x0400045D RID: 1117
+		// Token: 0x0400048C RID: 1164
 		[Nullable(2)]
 		public static SubPackageHttpData LaunchSubPackageHttpData = null;
 
-		// Token: 0x0400045E RID: 1118
+		// Token: 0x0400048D RID: 1165
 		[Nullable(2)]
 		private static FLoginStruct HandleLoginData = null;
 
-		// Token: 0x0400045F RID: 1119
+		// Token: 0x0400048E RID: 1166
 		private static int GetLoginSubPackageDownLoadHttpTimes = 0;
 
-		// Token: 0x04000460 RID: 1120
+		// Token: 0x0400048F RID: 1167
 		[Nullable(2)]
 		private static ILoginServersData SuggestSeverData = null;
 
-		// Token: 0x04000461 RID: 1121
+		// Token: 0x04000490 RID: 1168
 		private static int LoginUrlPollingIndex = 0;
 
-		// Token: 0x04000462 RID: 1122
+		// Token: 0x04000491 RID: 1169
 		private bool SdkLoginFinish;
 
-		// Token: 0x04000463 RID: 1123
+		// Token: 0x04000492 RID: 1170
 		[Nullable(2)]
 		public static UniTaskCompletionSource DownLoadViewChosePromise = null;
 
-		// Token: 0x04000464 RID: 1124
+		// Token: 0x04000493 RID: 1171
 		[Nullable(2)]
 		public static Action DownLoadViewChoseDoneCallBack = null;
 
-		// Token: 0x04000465 RID: 1125
+		// Token: 0x04000494 RID: 1172
 		[Nullable(2)]
 		public static UniTaskCompletionSource FreeSpaceCheckPromise = null;
 
-		// Token: 0x04000466 RID: 1126
+		// Token: 0x04000495 RID: 1173
 		[Nullable(2)]
 		public static Action FreeSpaceCheckDoneCallBack = null;
 
-		// Token: 0x04000467 RID: 1127
+		// Token: 0x04000496 RID: 1174
 		public static EVideoResSizeType DownLoadType;
 
-		// Token: 0x04000468 RID: 1128
+		// Token: 0x04000497 RID: 1175
 		public static EResUpdateType ResDownLoadType;
 
-		// Token: 0x04000469 RID: 1129
+		// Token: 0x04000498 RID: 1176
 		public static long NeedDownLoadByte = 0L;
 
-		// Token: 0x02000368 RID: 872
+		// Token: 0x02000373 RID: 883
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04001187 RID: 4487
+			// Token: 0x040011E9 RID: 4585
 			[Nullable(new byte[]
 			{
 				0,

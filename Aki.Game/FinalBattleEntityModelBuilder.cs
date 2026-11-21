@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02000E70 RID: 3696
+// Token: 0x02000325 RID: 805
 public class FinalBattleEntityModelBuilder
 {
-	// Token: 0x060059FE RID: 23038 RVA: 0x00106162 File Offset: 0x00104362
+	// Token: 0x06002D95 RID: 11669 RVA: 0x0010DE12 File Offset: 0x0010C012
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static IFinalBattleCombatInfo Get(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
@@ -14,7 +14,7 @@ public class FinalBattleEntityModelBuilder
 		return FinalBattleEntityModel.BuildModel(entityData, componentDataMap);
 	}
 
-	// Token: 0x060059FF RID: 23039 RVA: 0x0010616B File Offset: 0x0010436B
+	// Token: 0x06002D96 RID: 11670 RVA: 0x0010DE1B File Offset: 0x0010C01B
 	public static void Clear()
 	{
 		FinalBattleEntityModel.Clear();

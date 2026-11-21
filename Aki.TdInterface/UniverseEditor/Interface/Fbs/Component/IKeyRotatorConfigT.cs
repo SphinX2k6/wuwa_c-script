@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054B6 RID: 21686
+	// Token: 0x02005A3C RID: 23100
 	public class IKeyRotatorConfigT
 	{
-		// Token: 0x17009FC4 RID: 40900
-		// (get) Token: 0x06023B96 RID: 146326 RVA: 0x004F0853 File Offset: 0x004EEA53
-		// (set) Token: 0x06023B97 RID: 146327 RVA: 0x004F085B File Offset: 0x004EEA5B
+		// Token: 0x1700A7FE RID: 43006
+		// (get) Token: 0x06025C4E RID: 154702 RVA: 0x0052D8C7 File Offset: 0x0052BAC7
+		// (set) Token: 0x06025C4F RID: 154703 RVA: 0x0052D8CF File Offset: 0x0052BACF
 		public ERotationType Type { get; set; }
 
-		// Token: 0x17009FC5 RID: 40901
-		// (get) Token: 0x06023B98 RID: 146328 RVA: 0x004F0864 File Offset: 0x004EEA64
-		// (set) Token: 0x06023B99 RID: 146329 RVA: 0x004F086C File Offset: 0x004EEA6C
+		// Token: 0x1700A7FF RID: 43007
+		// (get) Token: 0x06025C50 RID: 154704 RVA: 0x0052D8D8 File Offset: 0x0052BAD8
+		// (set) Token: 0x06025C51 RID: 154705 RVA: 0x0052D8E0 File Offset: 0x0052BAE0
 		public float Time { get; set; }
 
-		// Token: 0x17009FC6 RID: 40902
-		// (get) Token: 0x06023B9A RID: 146330 RVA: 0x004F0875 File Offset: 0x004EEA75
-		// (set) Token: 0x06023B9B RID: 146331 RVA: 0x004F087D File Offset: 0x004EEA7D
+		// Token: 0x1700A800 RID: 43008
+		// (get) Token: 0x06025C52 RID: 154706 RVA: 0x0052D8E9 File Offset: 0x0052BAE9
+		// (set) Token: 0x06025C53 RID: 154707 RVA: 0x0052D8F1 File Offset: 0x0052BAF1
 		public float Cd { get; set; }
 
-		// Token: 0x17009FC7 RID: 40903
-		// (get) Token: 0x06023B9C RID: 146332 RVA: 0x004F0886 File Offset: 0x004EEA86
-		// (set) Token: 0x06023B9D RID: 146333 RVA: 0x004F088E File Offset: 0x004EEA8E
+		// Token: 0x1700A801 RID: 43009
+		// (get) Token: 0x06025C54 RID: 154708 RVA: 0x0052D8FA File Offset: 0x0052BAFA
+		// (set) Token: 0x06025C55 RID: 154709 RVA: 0x0052D902 File Offset: 0x0052BB02
 		public string Curve { get; set; }
 
-		// Token: 0x17009FC8 RID: 40904
-		// (get) Token: 0x06023B9E RID: 146334 RVA: 0x004F0897 File Offset: 0x004EEA97
-		// (set) Token: 0x06023B9F RID: 146335 RVA: 0x004F089F File Offset: 0x004EEA9F
+		// Token: 0x1700A802 RID: 43010
+		// (get) Token: 0x06025C56 RID: 154710 RVA: 0x0052D90B File Offset: 0x0052BB0B
+		// (set) Token: 0x06025C57 RID: 154711 RVA: 0x0052D913 File Offset: 0x0052BB13
 		public IVectorInfoT KeyRotator { get; set; }
 
-		// Token: 0x17009FC9 RID: 40905
-		// (get) Token: 0x06023BA0 RID: 146336 RVA: 0x004F08A8 File Offset: 0x004EEAA8
-		// (set) Token: 0x06023BA1 RID: 146337 RVA: 0x004F08B0 File Offset: 0x004EEAB0
+		// Token: 0x1700A803 RID: 43011
+		// (get) Token: 0x06025C58 RID: 154712 RVA: 0x0052D91C File Offset: 0x0052BB1C
+		// (set) Token: 0x06025C59 RID: 154713 RVA: 0x0052D924 File Offset: 0x0052BB24
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023BA2 RID: 146338 RVA: 0x004F08B9 File Offset: 0x004EEAB9
+		// Token: 0x06025C5A RID: 154714 RVA: 0x0052D92D File Offset: 0x0052BB2D
 		public IKeyRotatorConfigT()
 		{
 			this.Type = ERotationType.Relative;

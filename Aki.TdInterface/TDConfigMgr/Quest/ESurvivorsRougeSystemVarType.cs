@@ -3,27 +3,27 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E9C RID: 3740
+	// Token: 0x02000FB0 RID: 4016
 	[EnumExtensions]
 	public enum ESurvivorsRougeSystemVarType
 	{
-		// Token: 0x040031B9 RID: 12729
+		// Token: 0x040034C1 RID: 13505
 		Gold,
-		// Token: 0x040031BA RID: 12730
+		// Token: 0x040034C2 RID: 13506
 		Batch,
-		// Token: 0x040031BB RID: 12731
+		// Token: 0x040034C3 RID: 13507
 		MaxBatch,
-		// Token: 0x040031BC RID: 12732
+		// Token: 0x040034C4 RID: 13508
 		EndlessBatchLimit,
-		// Token: 0x040031BD RID: 12733
+		// Token: 0x040034C5 RID: 13509
 		TreasureBoxCount,
-		// Token: 0x040031BE RID: 12734
+		// Token: 0x040034C6 RID: 13510
 		ConsecutiveKillCount,
-		// Token: 0x040031BF RID: 12735
+		// Token: 0x040034C7 RID: 13511
 		GoldGainEfficiency,
-		// Token: 0x040031C0 RID: 12736
+		// Token: 0x040034C8 RID: 13512
 		LoopCountOfBatch,
-		// Token: 0x040031C1 RID: 12737
+		// Token: 0x040034C9 RID: 13513
 		CurLoopOfCurBatch
 	}
 }

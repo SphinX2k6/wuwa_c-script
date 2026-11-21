@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA6 RID: 19110
+	// Token: 0x02003A4E RID: 14926
 	public class TrapDefenseShareTips : UiPanelBase
 	{
-		// Token: 0x06031855 RID: 202837 RVA: 0x00B7B234 File Offset: 0x00B79434
+		// Token: 0x060265E5 RID: 157157 RVA: 0x00ABF1E8 File Offset: 0x00ABD3E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031856 RID: 202838 RVA: 0x00B7B2C0 File Offset: 0x00B794C0
+		// Token: 0x060265E6 RID: 157158 RVA: 0x00ABF274 File Offset: 0x00ABD474
 		protected override void OnStart()
 		{
 			ShareReward? config = ConfigShareRewardById.GetConfig(8, true);
@@ -59,16 +59,16 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.SetTextureByPath(iconSmall, base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x0200ABFB RID: 44027
+		// Token: 0x0200961B RID: 38427
 		private class EShare
 		{
-			// Token: 0x04034425 RID: 214053
+			// Token: 0x0402EDD6 RID: 191958
 			public const int TxtTips = 0;
 
-			// Token: 0x04034426 RID: 214054
+			// Token: 0x0402EDD7 RID: 191959
 			public const int TxtCost = 1;
 
-			// Token: 0x04034427 RID: 214055
+			// Token: 0x0402EDD8 RID: 191960
 			public const int TexCost = 2;
 		}
 	}

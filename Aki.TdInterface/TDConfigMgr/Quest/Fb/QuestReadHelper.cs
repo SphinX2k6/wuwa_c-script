@@ -23,1734 +23,1810 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012C2 RID: 4802
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001408 RID: 5128
 	public static class QuestReadHelper
 	{
-		// Token: 0x06006C10 RID: 27664 RVA: 0x00104076 File Offset: 0x00102276
+		// Token: 0x0600727E RID: 29310 RVA: 0x0011203E File Offset: 0x0011023E
 		private static IActionBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IActionBtNode(IActionBtNode? o)
 		{
 			return IActionBtNode.Create(IActionBtNode.Create(o));
 		}
 
-		// Token: 0x06006C11 RID: 27665 RVA: 0x00104083 File Offset: 0x00102283
+		// Token: 0x0600727F RID: 29311 RVA: 0x0011204B File Offset: 0x0011024B
 		private static IActionWithResultBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IActionWithResultBtNode(IActionWithResultBtNode? o)
 		{
 			return IActionWithResultBtNode.Create(IActionWithResultBtNode.Create(o));
 		}
 
-		// Token: 0x06006C12 RID: 27666 RVA: 0x00104090 File Offset: 0x00102290
+		// Token: 0x06007280 RID: 29312 RVA: 0x00112058 File Offset: 0x00110258
 		private static IAlwaysFalseBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IAlwaysFalseBtNode(IAlwaysFalseBtNode? o)
 		{
 			return IAlwaysFalseBtNode.Create(IAlwaysFalseBtNode.Create(o));
 		}
 
-		// Token: 0x06006C13 RID: 27667 RVA: 0x0010409D File Offset: 0x0010229D
+		// Token: 0x06007281 RID: 29313 RVA: 0x00112065 File Offset: 0x00110265
 		private static IAlwaysTrueBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IAlwaysTrueBtNode(IAlwaysTrueBtNode? o)
 		{
 			return IAlwaysTrueBtNode.Create(IAlwaysTrueBtNode.Create(o));
 		}
 
-		// Token: 0x06006C14 RID: 27668 RVA: 0x001040AA File Offset: 0x001022AA
+		// Token: 0x06007282 RID: 29314 RVA: 0x00112072 File Offset: 0x00110272
 		private static IChildQuestBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IChildQuestBtNode(IChildQuestBtNode? o)
 		{
 			return IChildQuestBtNode.Create(IChildQuestBtNode.Create(o));
 		}
 
-		// Token: 0x06006C15 RID: 27669 RVA: 0x001040B7 File Offset: 0x001022B7
+		// Token: 0x06007283 RID: 29315 RVA: 0x0011207F File Offset: 0x0011027F
 		private static IConditionBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IConditionBtNode(IConditionBtNode? o)
 		{
 			return IConditionBtNode.Create(IConditionBtNode.Create(o));
 		}
 
-		// Token: 0x06006C16 RID: 27670 RVA: 0x001040C4 File Offset: 0x001022C4
+		// Token: 0x06007284 RID: 29316 RVA: 0x0011208C File Offset: 0x0011028C
 		private static IConditionSelectorBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IConditionSelectorBtNode(IConditionSelectorBtNode? o)
 		{
 			return IConditionSelectorBtNode.Create(IConditionSelectorBtNode.Create(o));
 		}
 
-		// Token: 0x06006C17 RID: 27671 RVA: 0x001040D1 File Offset: 0x001022D1
+		// Token: 0x06007285 RID: 29317 RVA: 0x00112099 File Offset: 0x00110299
 		private static IParallelSelectBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IParallelSelectBtNode(IParallelSelectBtNode? o)
 		{
 			return IParallelSelectBtNode.Create(IParallelSelectBtNode.Create(o));
 		}
 
-		// Token: 0x06006C18 RID: 27672 RVA: 0x001040DE File Offset: 0x001022DE
+		// Token: 0x06007286 RID: 29318 RVA: 0x001120A6 File Offset: 0x001102A6
 		private static IQuestFailedBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestFailedBtNode(IQuestFailedBtNode? o)
 		{
 			return IQuestFailedBtNode.Create(IQuestFailedBtNode.Create(o));
 		}
 
-		// Token: 0x06006C19 RID: 27673 RVA: 0x001040EB File Offset: 0x001022EB
+		// Token: 0x06007287 RID: 29319 RVA: 0x001120B3 File Offset: 0x001102B3
 		private static IQuestSucceedBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestSucceedBtNode(IQuestSucceedBtNode? o)
 		{
 			return IQuestSucceedBtNode.Create(IQuestSucceedBtNode.Create(o));
 		}
 
-		// Token: 0x06006C1A RID: 27674 RVA: 0x001040F8 File Offset: 0x001022F8
+		// Token: 0x06007288 RID: 29320 RVA: 0x001120C0 File Offset: 0x001102C0
 		private static IRepeaterBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRepeaterBtNode(IRepeaterBtNode? o)
 		{
 			return IRepeaterBtNode.Create(IRepeaterBtNode.Create(o));
 		}
 
-		// Token: 0x06006C1B RID: 27675 RVA: 0x00104105 File Offset: 0x00102305
+		// Token: 0x06007289 RID: 29321 RVA: 0x001120CD File Offset: 0x001102CD
 		private static ISelectBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISelectBtNode(ISelectBtNode? o)
 		{
 			return ISelectBtNode.Create(ISelectBtNode.Create(o));
 		}
 
-		// Token: 0x06006C1C RID: 27676 RVA: 0x00104112 File Offset: 0x00102312
+		// Token: 0x0600728A RID: 29322 RVA: 0x001120DA File Offset: 0x001102DA
 		private static ISequenceBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISequenceBtNode(ISequenceBtNode? o)
 		{
 			return ISequenceBtNode.Create(ISequenceBtNode.Create(o));
 		}
 
-		// Token: 0x06006C1D RID: 27677 RVA: 0x0010411F File Offset: 0x0010231F
+		// Token: 0x0600728B RID: 29323 RVA: 0x001120E7 File Offset: 0x001102E7
 		private static IStartBtNode Make_Aki_UniverseEditor_Interface_Fbs_Quest_IStartBtNode(IStartBtNode? o)
 		{
 			return IStartBtNode.Create(IStartBtNode.Create(o));
 		}
 
-		// Token: 0x06006C1E RID: 27678 RVA: 0x0010412C File Offset: 0x0010232C
+		// Token: 0x0600728C RID: 29324 RVA: 0x001120F4 File Offset: 0x001102F4
 		private static IBossRushBuffInfoView Make_Aki_UniverseEditor_Interface_Fbs_Quest_IBossRushBuffInfoView(IBossRushBuffInfoView? o)
 		{
 			return IBossRushBuffInfoView.Create(IBossRushBuffInfoView.Create(o));
 		}
 
-		// Token: 0x06006C1F RID: 27679 RVA: 0x00104139 File Offset: 0x00102339
+		// Token: 0x0600728D RID: 29325 RVA: 0x00112101 File Offset: 0x00110301
 		private static IDangoAbyssInformationView Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDangoAbyssInformationView(IDangoAbyssInformationView? o)
 		{
 			return IDangoAbyssInformationView.Create(IDangoAbyssInformationView.Create(o));
 		}
 
-		// Token: 0x06006C20 RID: 27680 RVA: 0x00104146 File Offset: 0x00102346
+		// Token: 0x0600728E RID: 29326 RVA: 0x0011210E File Offset: 0x0011030E
 		private static ILevelPlayInformationView Make_Aki_UniverseEditor_Interface_Fbs_Quest_ILevelPlayInformationView(ILevelPlayInformationView? o)
 		{
 			return ILevelPlayInformationView.Create(ILevelPlayInformationView.Create(o));
 		}
 
-		// Token: 0x06006C21 RID: 27681 RVA: 0x00104153 File Offset: 0x00102353
+		// Token: 0x0600728F RID: 29327 RVA: 0x0011211B File Offset: 0x0011031B
 		private static Aki.TDConfigMgr.AutoGenerated.IVar.ConstVarRef Make_Aki_UniverseEditor_Interface_Fbs_Var_IConstVarRef(IConstVarRef? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IVar.ConstVarRef.Create(Aki.TDConfigMgr.AutoGenerated.IVar.Fb.ConstVarRef.Create(o));
 		}
 
-		// Token: 0x06006C22 RID: 27682 RVA: 0x00104160 File Offset: 0x00102360
+		// Token: 0x06007290 RID: 29328 RVA: 0x00112128 File Offset: 0x00110328
 		private static Aki.TDConfigMgr.AutoGenerated.IVar.GlobalVarRef Make_Aki_UniverseEditor_Interface_Fbs_Var_IGlobalVarRef(IGlobalVarRef? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IVar.GlobalVarRef.Create(Aki.TDConfigMgr.AutoGenerated.IVar.Fb.GlobalVarRef.Create(o));
 		}
 
-		// Token: 0x06006C23 RID: 27683 RVA: 0x0010416D File Offset: 0x0010236D
+		// Token: 0x06007291 RID: 29329 RVA: 0x00112135 File Offset: 0x00110335
 		private static Aki.TDConfigMgr.AutoGenerated.IVar.IOtherVarRef Make_Aki_UniverseEditor_Interface_Fbs_Var_IOtherVarRef(Aki.UniverseEditor.Interface.Fbs.Var.IOtherVarRef? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IVar.IOtherVarRef.Create(Aki.TDConfigMgr.AutoGenerated.IVar.Fb.IOtherVarRef.Create(o));
 		}
 
-		// Token: 0x06006C24 RID: 27684 RVA: 0x0010417A File Offset: 0x0010237A
+		// Token: 0x06007292 RID: 29330 RVA: 0x00112142 File Offset: 0x00110342
 		private static Aki.TDConfigMgr.AutoGenerated.IVar.SelfVarRef Make_Aki_UniverseEditor_Interface_Fbs_Var_ISelfVarRef(ISelfVarRef? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IVar.SelfVarRef.Create(Aki.TDConfigMgr.AutoGenerated.IVar.Fb.SelfVarRef.Create(o));
 		}
 
-		// Token: 0x06006C25 RID: 27685 RVA: 0x00104187 File Offset: 0x00102387
+		// Token: 0x06007293 RID: 29331 RVA: 0x0011214F File Offset: 0x0011034F
 		private static Aki.TDConfigMgr.AutoGenerated.IVar.ISystemVarRef Make_Aki_UniverseEditor_Interface_Fbs_Var_ISystemVarRef(Aki.UniverseEditor.Interface.Fbs.Var.ISystemVarRef? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IVar.ISystemVarRef.Create(Aki.TDConfigMgr.AutoGenerated.IVar.Fb.ISystemVarRef.Create(o));
 		}
 
-		// Token: 0x06006C26 RID: 27686 RVA: 0x00104194 File Offset: 0x00102394
+		// Token: 0x06007294 RID: 29332 RVA: 0x0011215C File Offset: 0x0011035C
+		private static IDarkTideChonglouTrialBossEvent Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideChonglouTrialBossEvent(IDarkTideChonglouTrialBossEvent? o)
+		{
+			return IDarkTideChonglouTrialBossEvent.Create(IDarkTideChonglouTrialBossEvent.Create(o));
+		}
+
+		// Token: 0x06007295 RID: 29333 RVA: 0x00112169 File Offset: 0x00110369
+		private static IDarkTideHaiweixiaArenaBossEvent Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideHaiweixiaArenaBossEvent(IDarkTideHaiweixiaArenaBossEvent? o)
+		{
+			return IDarkTideHaiweixiaArenaBossEvent.Create(IDarkTideHaiweixiaArenaBossEvent.Create(o));
+		}
+
+		// Token: 0x06007296 RID: 29334 RVA: 0x00112176 File Offset: 0x00110376
+		private static IDarkTideHecatePollutionBossEvent Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideHecatePollutionBossEvent(IDarkTideHecatePollutionBossEvent? o)
+		{
+			return IDarkTideHecatePollutionBossEvent.Create(IDarkTideHecatePollutionBossEvent.Create(o));
+		}
+
+		// Token: 0x06007297 RID: 29335 RVA: 0x00112183 File Offset: 0x00110383
+		private static IDarkTideMechaAssemblyBossEvent Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideMechaAssemblyBossEvent(IDarkTideMechaAssemblyBossEvent? o)
+		{
+			return IDarkTideMechaAssemblyBossEvent.Create(IDarkTideMechaAssemblyBossEvent.Create(o));
+		}
+
+		// Token: 0x06007298 RID: 29336 RVA: 0x00112190 File Offset: 0x00110390
+		private static IDarkTideWyvernPositionBossEvent Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideWyvernPositionBossEvent(IDarkTideWyvernPositionBossEvent? o)
+		{
+			return IDarkTideWyvernPositionBossEvent.Create(IDarkTideWyvernPositionBossEvent.Create(o));
+		}
+
+		// Token: 0x06007299 RID: 29337 RVA: 0x0011219D File Offset: 0x0011039D
+		private static IDarkTideXinjilemuChaseBossEvent Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideXinjilemuChaseBossEvent(IDarkTideXinjilemuChaseBossEvent? o)
+		{
+			return IDarkTideXinjilemuChaseBossEvent.Create(IDarkTideXinjilemuChaseBossEvent.Create(o));
+		}
+
+		// Token: 0x0600729A RID: 29338 RVA: 0x001121AA File Offset: 0x001103AA
 		private static IEavesdropGamePlayConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IEavesdropGamePlayConfig(IEavesdropGamePlayConfig? o)
 		{
 			return IEavesdropGamePlayConfig.Create(IEavesdropGamePlayConfig.Create(o));
 		}
 
-		// Token: 0x06006C27 RID: 27687 RVA: 0x001041A1 File Offset: 0x001023A1
+		// Token: 0x0600729B RID: 29339 RVA: 0x001121B7 File Offset: 0x001103B7
 		private static IFirstPersonTurretGamePlayConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFirstPersonTurretGamePlayConfig(IFirstPersonTurretGamePlayConfig? o)
 		{
 			return IFirstPersonTurretGamePlayConfig.Create(IFirstPersonTurretGamePlayConfig.Create(o));
 		}
 
-		// Token: 0x06006C28 RID: 27688 RVA: 0x001041AE File Offset: 0x001023AE
+		// Token: 0x0600729C RID: 29340 RVA: 0x001121C4 File Offset: 0x001103C4
 		private static IFreezeOnSightGamePlayConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFreezeOnSightGamePlayConfig(IFreezeOnSightGamePlayConfig? o)
 		{
 			return IFreezeOnSightGamePlayConfig.Create(IFreezeOnSightGamePlayConfig.Create(o));
 		}
 
-		// Token: 0x06006C29 RID: 27689 RVA: 0x001041BB File Offset: 0x001023BB
+		// Token: 0x0600729D RID: 29341 RVA: 0x001121D1 File Offset: 0x001103D1
 		private static IStalkingGamePlayConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IStalkingGamePlayConfig(IStalkingGamePlayConfig? o)
 		{
 			return IStalkingGamePlayConfig.Create(IStalkingGamePlayConfig.Create(o));
 		}
 
-		// Token: 0x06006C2A RID: 27690 RVA: 0x001041C8 File Offset: 0x001023C8
+		// Token: 0x0600729E RID: 29342 RVA: 0x001121DE File Offset: 0x001103DE
+		private static IDarkTideSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideSystemConfig(IDarkTideSystemConfig? o)
+		{
+			return IDarkTideSystemConfig.Create(IDarkTideSystemConfig.Create(o));
+		}
+
+		// Token: 0x0600729F RID: 29343 RVA: 0x001121EB File Offset: 0x001103EB
 		private static IFlagChallengeSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFlagChallengeSystemConfig(IFlagChallengeSystemConfig? o)
 		{
 			return IFlagChallengeSystemConfig.Create(IFlagChallengeSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C2B RID: 27691 RVA: 0x001041D5 File Offset: 0x001023D5
+		// Token: 0x060072A0 RID: 29344 RVA: 0x001121F8 File Offset: 0x001103F8
 		private static IFlipperSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFlipperSystemConfig(IFlipperSystemConfig? o)
 		{
 			return IFlipperSystemConfig.Create(IFlipperSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C2C RID: 27692 RVA: 0x001041E2 File Offset: 0x001023E2
+		// Token: 0x060072A1 RID: 29345 RVA: 0x00112205 File Offset: 0x00110405
 		private static IGameDifficultySystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IGameDifficultySystemConfig(IGameDifficultySystemConfig? o)
 		{
 			return IGameDifficultySystemConfig.Create(IGameDifficultySystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C2D RID: 27693 RVA: 0x001041EF File Offset: 0x001023EF
+		// Token: 0x060072A2 RID: 29346 RVA: 0x00112212 File Offset: 0x00110412
 		private static IGradingSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IGradingSystemConfig(IGradingSystemConfig? o)
 		{
 			return IGradingSystemConfig.Create(IGradingSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C2E RID: 27694 RVA: 0x001041FC File Offset: 0x001023FC
+		// Token: 0x060072A3 RID: 29347 RVA: 0x0011221F File Offset: 0x0011041F
 		private static IKuroSimpleCombatKillMonsterSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKuroSimpleCombatKillMonsterSystemConfig(IKuroSimpleCombatKillMonsterSystemConfig? o)
 		{
 			return IKuroSimpleCombatKillMonsterSystemConfig.Create(IKuroSimpleCombatKillMonsterSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C2F RID: 27695 RVA: 0x00104209 File Offset: 0x00102409
+		// Token: 0x060072A4 RID: 29348 RVA: 0x0011222C File Offset: 0x0011042C
 		private static IKurotatoSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKurotatoSystemConfig(IKurotatoSystemConfig? o)
 		{
 			return IKurotatoSystemConfig.Create(IKurotatoSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C30 RID: 27696 RVA: 0x00104216 File Offset: 0x00102416
+		// Token: 0x060072A5 RID: 29349 RVA: 0x00112239 File Offset: 0x00110439
 		private static ILinkSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_ILinkSystemConfig(ILinkSystemConfig? o)
 		{
 			return ILinkSystemConfig.Create(ILinkSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C31 RID: 27697 RVA: 0x00104223 File Offset: 0x00102423
+		// Token: 0x060072A6 RID: 29350 RVA: 0x00112246 File Offset: 0x00110446
 		private static IMotorFightSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IMotorFightSystemConfig(IMotorFightSystemConfig? o)
 		{
 			return IMotorFightSystemConfig.Create(IMotorFightSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C32 RID: 27698 RVA: 0x00104230 File Offset: 0x00102430
+		// Token: 0x060072A7 RID: 29351 RVA: 0x00112253 File Offset: 0x00110453
 		private static IMotorRacingSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IMotorRacingSystemConfig(IMotorRacingSystemConfig? o)
 		{
 			return IMotorRacingSystemConfig.Create(IMotorRacingSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C33 RID: 27699 RVA: 0x0010423D File Offset: 0x0010243D
+		// Token: 0x060072A8 RID: 29352 RVA: 0x00112260 File Offset: 0x00110460
 		private static INightmareSettlementSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_INightmareSettlementSystemConfig(INightmareSettlementSystemConfig? o)
 		{
 			return INightmareSettlementSystemConfig.Create(INightmareSettlementSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C34 RID: 27700 RVA: 0x0010424A File Offset: 0x0010244A
+		// Token: 0x060072A9 RID: 29353 RVA: 0x0011226D File Offset: 0x0011046D
 		private static IRogueTowerTrialSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRogueTowerTrialSystemConfig(IRogueTowerTrialSystemConfig? o)
 		{
 			return IRogueTowerTrialSystemConfig.Create(IRogueTowerTrialSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C35 RID: 27701 RVA: 0x00104257 File Offset: 0x00102457
+		// Token: 0x060072AA RID: 29354 RVA: 0x0011227A File Offset: 0x0011047A
 		private static IRoleTowerSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTowerSystemConfig(IRoleTowerSystemConfig? o)
 		{
 			return IRoleTowerSystemConfig.Create(IRoleTowerSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C36 RID: 27702 RVA: 0x00104264 File Offset: 0x00102464
+		// Token: 0x060072AB RID: 29355 RVA: 0x00112287 File Offset: 0x00110487
 		private static ISurvivorsRougeSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISurvivorsRougeSystemConfig(ISurvivorsRougeSystemConfig? o)
 		{
 			return ISurvivorsRougeSystemConfig.Create(ISurvivorsRougeSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C37 RID: 27703 RVA: 0x00104271 File Offset: 0x00102471
+		// Token: 0x060072AC RID: 29356 RVA: 0x00112294 File Offset: 0x00110494
 		private static ITrapDefenseSystemConfig Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrapDefenseSystemConfig(ITrapDefenseSystemConfig? o)
 		{
 			return ITrapDefenseSystemConfig.Create(ITrapDefenseSystemConfig.Create(o));
 		}
 
-		// Token: 0x06006C38 RID: 27704 RVA: 0x0010427E File Offset: 0x0010247E
+		// Token: 0x060072AD RID: 29357 RVA: 0x001122A1 File Offset: 0x001104A1
 		private static IFastReturnEntityPos Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFastReturnEntityPos(IFastReturnEntityPos? o)
 		{
 			return IFastReturnEntityPos.Create(IFastReturnEntityPos.Create(o));
 		}
 
-		// Token: 0x06006C39 RID: 27705 RVA: 0x0010428B File Offset: 0x0010248B
+		// Token: 0x060072AE RID: 29358 RVA: 0x001122AE File Offset: 0x001104AE
 		private static IFastReturnGravityEntityPos Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFastReturnGravityEntityPos(IFastReturnGravityEntityPos? o)
 		{
 			return IFastReturnGravityEntityPos.Create(IFastReturnGravityEntityPos.Create(o));
 		}
 
-		// Token: 0x06006C3A RID: 27706 RVA: 0x00104298 File Offset: 0x00102498
+		// Token: 0x060072AF RID: 29359 RVA: 0x001122BB File Offset: 0x001104BB
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionInDigitalScreen Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionInDigitalScreen(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionInDigitalScreen? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionInDigitalScreen.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionInDigitalScreen.Create(o));
 		}
 
-		// Token: 0x06006C3B RID: 27707 RVA: 0x001042A5 File Offset: 0x001024A5
+		// Token: 0x060072B0 RID: 29360 RVA: 0x001122C8 File Offset: 0x001104C8
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionInSeamlessType Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionInSeamlessType(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionInSeamlessType? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionInSeamlessType.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionInSeamlessType.Create(o));
 		}
 
-		// Token: 0x06006C3C RID: 27708 RVA: 0x001042B2 File Offset: 0x001024B2
+		// Token: 0x060072B1 RID: 29361 RVA: 0x001122D5 File Offset: 0x001104D5
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionWithCenterText Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionWithCenterText(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionWithCenterText? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionWithCenterText.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionWithCenterText.Create(o));
 		}
 
-		// Token: 0x06006C3D RID: 27709 RVA: 0x001042BF File Offset: 0x001024BF
+		// Token: 0x060072B2 RID: 29362 RVA: 0x001122E2 File Offset: 0x001104E2
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionWithCharacterDisplay Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionWithCharacterDisplay(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionWithCharacterDisplay? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionWithCharacterDisplay.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionWithCharacterDisplay.Create(o));
 		}
 
-		// Token: 0x06006C3E RID: 27710 RVA: 0x001042CC File Offset: 0x001024CC
+		// Token: 0x060072B3 RID: 29363 RVA: 0x001122EF File Offset: 0x001104EF
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionWithCustomLoading Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionWithCustomLoading(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionWithCustomLoading? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionWithCustomLoading.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionWithCustomLoading.Create(o));
 		}
 
-		// Token: 0x06006C3F RID: 27711 RVA: 0x001042D9 File Offset: 0x001024D9
+		// Token: 0x060072B4 RID: 29364 RVA: 0x001122FC File Offset: 0x001104FC
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionWithCustomScreen Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionWithCustomScreen(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionWithCustomScreen? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionWithCustomScreen.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionWithCustomScreen.Create(o));
 		}
 
-		// Token: 0x06006C40 RID: 27712 RVA: 0x001042E6 File Offset: 0x001024E6
+		// Token: 0x060072B5 RID: 29365 RVA: 0x00112309 File Offset: 0x00110509
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionWithEffect Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionWithEffect(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionWithEffect? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionWithEffect.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionWithEffect.Create(o));
 		}
 
-		// Token: 0x06006C41 RID: 27713 RVA: 0x001042F3 File Offset: 0x001024F3
+		// Token: 0x060072B6 RID: 29366 RVA: 0x00112316 File Offset: 0x00110516
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionWithFadeInScreen Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionWithFadeInScreen(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionWithFadeInScreen? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionWithFadeInScreen.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionWithFadeInScreen.Create(o));
 		}
 
-		// Token: 0x06006C42 RID: 27714 RVA: 0x00104300 File Offset: 0x00102500
+		// Token: 0x060072B7 RID: 29367 RVA: 0x00112323 File Offset: 0x00110523
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionWithMp4 Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionWithMp4(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionWithMp4? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionWithMp4.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionWithMp4.Create(o));
 		}
 
-		// Token: 0x06006C43 RID: 27715 RVA: 0x0010430D File Offset: 0x0010250D
+		// Token: 0x060072B8 RID: 29368 RVA: 0x00112330 File Offset: 0x00110530
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionWithPlayFlow Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionWithPlayFlow(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionWithPlayFlow? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionWithPlayFlow.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionWithPlayFlow.Create(o));
 		}
 
-		// Token: 0x06006C44 RID: 27716 RVA: 0x0010431A File Offset: 0x0010251A
+		// Token: 0x060072B9 RID: 29369 RVA: 0x0011233D File Offset: 0x0011053D
 		private static Aki.TDConfigMgr.Action.ITeleportTransitionWithSpecialCustomLoading Make_Aki_UniverseEditor_Interface_Fbs_Action_ITeleportTransitionWithSpecialCustomLoading(Aki.UniverseEditor.Interface.Fbs.Action.ITeleportTransitionWithSpecialCustomLoading? o)
 		{
 			return Aki.TDConfigMgr.Action.ITeleportTransitionWithSpecialCustomLoading.Create(Aki.TDConfigMgr.Action.Fb.ITeleportTransitionWithSpecialCustomLoading.Create(o));
 		}
 
-		// Token: 0x06006C45 RID: 27717 RVA: 0x00104327 File Offset: 0x00102527
+		// Token: 0x060072BA RID: 29370 RVA: 0x0011234A File Offset: 0x0011054A
 		private static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionByEntityGravity Make_Aki_UniverseEditor_Interface_Fbs_Common_IGravityDirectionByEntityGravity(Aki.UniverseEditor.Interface.Fbs.Common.IGravityDirectionByEntityGravity? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionByEntityGravity.Create(Aki.TDConfigMgr.AutoGenerated.ICommon.Fb.IGravityDirectionByEntityGravity.Create(o));
 		}
 
-		// Token: 0x06006C46 RID: 27718 RVA: 0x00104334 File Offset: 0x00102534
+		// Token: 0x060072BB RID: 29371 RVA: 0x00112357 File Offset: 0x00110557
 		private static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionSelfRotation Make_Aki_UniverseEditor_Interface_Fbs_Common_IGravityDirectionSelfRotation(Aki.UniverseEditor.Interface.Fbs.Common.IGravityDirectionSelfRotation? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionSelfRotation.Create(Aki.TDConfigMgr.AutoGenerated.ICommon.Fb.IGravityDirectionSelfRotation.Create(o));
 		}
 
-		// Token: 0x06006C47 RID: 27719 RVA: 0x00104341 File Offset: 0x00102541
+		// Token: 0x060072BC RID: 29372 RVA: 0x00112364 File Offset: 0x00110564
 		private static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionVectorInfo Make_Aki_UniverseEditor_Interface_Fbs_Common_IGravityDirectionVectorInfo(Aki.UniverseEditor.Interface.Fbs.Common.IGravityDirectionVectorInfo? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionVectorInfo.Create(Aki.TDConfigMgr.AutoGenerated.ICommon.Fb.IGravityDirectionVectorInfo.Create(o));
 		}
 
-		// Token: 0x06006C48 RID: 27720 RVA: 0x0010434E File Offset: 0x0010254E
+		// Token: 0x060072BD RID: 29373 RVA: 0x00112371 File Offset: 0x00110571
 		private static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionWorldAxis Make_Aki_UniverseEditor_Interface_Fbs_Common_IGravityDirectionWorldAxis(Aki.UniverseEditor.Interface.Fbs.Common.IGravityDirectionWorldAxis? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionWorldAxis.Create(Aki.TDConfigMgr.AutoGenerated.ICommon.Fb.IGravityDirectionWorldAxis.Create(o));
 		}
 
-		// Token: 0x06006C49 RID: 27721 RVA: 0x0010435B File Offset: 0x0010255B
+		// Token: 0x060072BE RID: 29374 RVA: 0x0011237E File Offset: 0x0011057E
 		private static ITrackRuleFindFirstNotMatchState Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrackRuleFindFirstNotMatchState(ITrackRuleFindFirstNotMatchState? o)
 		{
 			return ITrackRuleFindFirstNotMatchState.Create(ITrackRuleFindFirstNotMatchState.Create(o));
 		}
 
-		// Token: 0x06006C4A RID: 27722 RVA: 0x00104368 File Offset: 0x00102568
+		// Token: 0x060072BF RID: 29375 RVA: 0x0011238B File Offset: 0x0011058B
 		private static ITrackRuleFindLastMatchState Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrackRuleFindLastMatchState(ITrackRuleFindLastMatchState? o)
 		{
 			return ITrackRuleFindLastMatchState.Create(ITrackRuleFindLastMatchState.Create(o));
 		}
 
-		// Token: 0x06006C4B RID: 27723 RVA: 0x00104375 File Offset: 0x00102575
+		// Token: 0x060072C0 RID: 29376 RVA: 0x00112398 File Offset: 0x00110598
 		private static ITrackCaptureVisions Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrackCaptureVisions(ITrackCaptureVisions? o)
 		{
 			return ITrackCaptureVisions.Create(ITrackCaptureVisions.Create(o));
 		}
 
-		// Token: 0x06006C4C RID: 27724 RVA: 0x00104382 File Offset: 0x00102582
+		// Token: 0x060072C1 RID: 29377 RVA: 0x001123A5 File Offset: 0x001105A5
 		private static ITrackEntities Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrackEntities(ITrackEntities? o)
 		{
 			return ITrackEntities.Create(ITrackEntities.Create(o));
 		}
 
-		// Token: 0x06006C4D RID: 27725 RVA: 0x0010438F File Offset: 0x0010258F
+		// Token: 0x060072C2 RID: 29378 RVA: 0x001123B2 File Offset: 0x001105B2
 		private static ITrackEntityGroup Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrackEntityGroup(ITrackEntityGroup? o)
 		{
 			return ITrackEntityGroup.Create(ITrackEntityGroup.Create(o));
 		}
 
-		// Token: 0x06006C4E RID: 27726 RVA: 0x0010439C File Offset: 0x0010259C
+		// Token: 0x060072C3 RID: 29379 RVA: 0x001123BF File Offset: 0x001105BF
 		private static ITrackLevelPlay Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrackLevelPlay(ITrackLevelPlay? o)
 		{
 			return ITrackLevelPlay.Create(ITrackLevelPlay.Create(o));
 		}
 
-		// Token: 0x06006C4F RID: 27727 RVA: 0x001043A9 File Offset: 0x001025A9
+		// Token: 0x060072C4 RID: 29380 RVA: 0x001123CC File Offset: 0x001105CC
 		private static ITrackLocations Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrackLocations(ITrackLocations? o)
 		{
 			return ITrackLocations.Create(ITrackLocations.Create(o));
 		}
 
-		// Token: 0x06006C50 RID: 27728 RVA: 0x001043B6 File Offset: 0x001025B6
+		// Token: 0x060072C5 RID: 29381 RVA: 0x001123D9 File Offset: 0x001105D9
 		private static IRoleTowerChallengeTitleCurrentFloor Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTowerChallengeTitleCurrentFloor(IRoleTowerChallengeTitleCurrentFloor? o)
 		{
 			return IRoleTowerChallengeTitleCurrentFloor.Create(IRoleTowerChallengeTitleCurrentFloor.Create(o));
 		}
 
-		// Token: 0x06006C51 RID: 27729 RVA: 0x001043C3 File Offset: 0x001025C3
+		// Token: 0x060072C6 RID: 29382 RVA: 0x001123E6 File Offset: 0x001105E6
 		private static IRoleTowerChallengeTitleKillProgress Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTowerChallengeTitleKillProgress(IRoleTowerChallengeTitleKillProgress? o)
 		{
 			return IRoleTowerChallengeTitleKillProgress.Create(IRoleTowerChallengeTitleKillProgress.Create(o));
 		}
 
-		// Token: 0x06006C52 RID: 27730 RVA: 0x001043D0 File Offset: 0x001025D0
+		// Token: 0x060072C7 RID: 29383 RVA: 0x001123F3 File Offset: 0x001105F3
 		private static IRoleTowerChallengeTitlePhantomExp Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTowerChallengeTitlePhantomExp(IRoleTowerChallengeTitlePhantomExp? o)
 		{
 			return IRoleTowerChallengeTitlePhantomExp.Create(IRoleTowerChallengeTitlePhantomExp.Create(o));
 		}
 
-		// Token: 0x06006C53 RID: 27731 RVA: 0x001043DD File Offset: 0x001025DD
+		// Token: 0x060072C8 RID: 29384 RVA: 0x00112400 File Offset: 0x00110600
 		private static IUseCount Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseCount(IUseCount? o)
 		{
 			return IUseCount.Create(IUseCount.Create(o));
 		}
 
-		// Token: 0x06006C54 RID: 27732 RVA: 0x001043EA File Offset: 0x001025EA
+		// Token: 0x060072C9 RID: 29385 RVA: 0x0011240D File Offset: 0x0011060D
 		private static IUseVar Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseVar(IUseVar? o)
 		{
 			return IUseVar.Create(IUseVar.Create(o));
 		}
 
-		// Token: 0x06006C55 RID: 27733 RVA: 0x001043F7 File Offset: 0x001025F7
+		// Token: 0x060072CA RID: 29386 RVA: 0x0011241A File Offset: 0x0011061A
 		private static IQuestScheduleBtTreeVar Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleBtTreeVar(IQuestScheduleBtTreeVar? o)
 		{
 			return IQuestScheduleBtTreeVar.Create(IQuestScheduleBtTreeVar.Create(o));
 		}
 
-		// Token: 0x06006C56 RID: 27734 RVA: 0x00104404 File Offset: 0x00102604
+		// Token: 0x060072CB RID: 29387 RVA: 0x00112427 File Offset: 0x00110627
 		private static IQuestScheduleChildQuestCompleted Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleChildQuestCompleted(IQuestScheduleChildQuestCompleted? o)
 		{
 			return IQuestScheduleChildQuestCompleted.Create(IQuestScheduleChildQuestCompleted.Create(o));
 		}
 
-		// Token: 0x06006C57 RID: 27735 RVA: 0x00104411 File Offset: 0x00102611
+		// Token: 0x060072CC RID: 29388 RVA: 0x00112434 File Offset: 0x00110634
 		private static IQuestScheduleChildQuestCompletedCount Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleChildQuestCompletedCount(IQuestScheduleChildQuestCompletedCount? o)
 		{
 			return IQuestScheduleChildQuestCompletedCount.Create(IQuestScheduleChildQuestCompletedCount.Create(o));
 		}
 
-		// Token: 0x06006C58 RID: 27736 RVA: 0x0010441E File Offset: 0x0010261E
+		// Token: 0x060072CD RID: 29389 RVA: 0x00112441 File Offset: 0x00110641
 		private static IQuestScheduleDistanceValue Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleDistanceValue(IQuestScheduleDistanceValue? o)
 		{
 			return IQuestScheduleDistanceValue.Create(IQuestScheduleDistanceValue.Create(o));
 		}
 
-		// Token: 0x06006C59 RID: 27737 RVA: 0x0010442B File Offset: 0x0010262B
+		// Token: 0x060072CE RID: 29390 RVA: 0x0011244E File Offset: 0x0011064E
 		private static IQuestScheduleEntityHP Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleEntityHP(IQuestScheduleEntityHP? o)
 		{
 			return IQuestScheduleEntityHP.Create(IQuestScheduleEntityHP.Create(o));
 		}
 
-		// Token: 0x06006C5A RID: 27738 RVA: 0x00104438 File Offset: 0x00102638
+		// Token: 0x060072CF RID: 29391 RVA: 0x0011245B File Offset: 0x0011065B
 		private static IQuestScheduleMeetCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleMeetCondition(IQuestScheduleMeetCondition? o)
 		{
 			return IQuestScheduleMeetCondition.Create(IQuestScheduleMeetCondition.Create(o));
 		}
 
-		// Token: 0x06006C5B RID: 27739 RVA: 0x00104445 File Offset: 0x00102645
+		// Token: 0x060072D0 RID: 29392 RVA: 0x00112468 File Offset: 0x00110668
 		private static IQuestScheduleMultiBtTreeVar Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleMultiBtTreeVar(IQuestScheduleMultiBtTreeVar? o)
 		{
 			return IQuestScheduleMultiBtTreeVar.Create(IQuestScheduleMultiBtTreeVar.Create(o));
 		}
 
-		// Token: 0x06006C5C RID: 27740 RVA: 0x00104452 File Offset: 0x00102652
+		// Token: 0x060072D1 RID: 29393 RVA: 0x00112475 File Offset: 0x00110675
 		private static IQuestScheduleNone Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleNone(IQuestScheduleNone? o)
 		{
 			return IQuestScheduleNone.Create(IQuestScheduleNone.Create(o));
 		}
 
-		// Token: 0x06006C5D RID: 27741 RVA: 0x0010445F File Offset: 0x0010265F
+		// Token: 0x060072D2 RID: 29394 RVA: 0x00112482 File Offset: 0x00110682
 		private static IQuestScheduleProgressValue Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleProgressValue(IQuestScheduleProgressValue? o)
 		{
 			return IQuestScheduleProgressValue.Create(IQuestScheduleProgressValue.Create(o));
 		}
 
-		// Token: 0x06006C5E RID: 27742 RVA: 0x0010446C File Offset: 0x0010266C
+		// Token: 0x060072D3 RID: 29395 RVA: 0x0011248F File Offset: 0x0011068F
 		private static IQuestScheduleRoleTowerChallengeTitle Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleRoleTowerChallengeTitle(IQuestScheduleRoleTowerChallengeTitle? o)
 		{
 			return IQuestScheduleRoleTowerChallengeTitle.Create(IQuestScheduleRoleTowerChallengeTitle.Create(o));
 		}
 
-		// Token: 0x06006C5F RID: 27743 RVA: 0x00104479 File Offset: 0x00102679
+		// Token: 0x060072D4 RID: 29396 RVA: 0x0011249C File Offset: 0x0011069C
 		private static IQuestScheduleScore Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleScore(IQuestScheduleScore? o)
 		{
 			return IQuestScheduleScore.Create(IQuestScheduleScore.Create(o));
 		}
 
-		// Token: 0x06006C60 RID: 27744 RVA: 0x00104486 File Offset: 0x00102686
+		// Token: 0x060072D5 RID: 29397 RVA: 0x001124A9 File Offset: 0x001106A9
 		private static IQuestScheduleTimeLeft Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleTimeLeft(IQuestScheduleTimeLeft? o)
 		{
 			return IQuestScheduleTimeLeft.Create(IQuestScheduleTimeLeft.Create(o));
 		}
 
-		// Token: 0x06006C61 RID: 27745 RVA: 0x00104493 File Offset: 0x00102693
+		// Token: 0x060072D6 RID: 29398 RVA: 0x001124B6 File Offset: 0x001106B6
 		private static IQuestScheduleTowerChallengeTitle Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestScheduleTowerChallengeTitle(IQuestScheduleTowerChallengeTitle? o)
 		{
 			return IQuestScheduleTowerChallengeTitle.Create(IQuestScheduleTowerChallengeTitle.Create(o));
 		}
 
-		// Token: 0x06006C62 RID: 27746 RVA: 0x001044A0 File Offset: 0x001026A0
+		// Token: 0x060072D7 RID: 29399 RVA: 0x001124C3 File Offset: 0x001106C3
 		private static Aki.TDConfigMgr.AutoGenerated.ICondition.IOnlinePlayerConditionTargetHost Make_Aki_UniverseEditor_Interface_Fbs_Condition_IOnlinePlayerConditionTargetHost(Aki.UniverseEditor.Interface.Fbs.Condition.IOnlinePlayerConditionTargetHost? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.ICondition.IOnlinePlayerConditionTargetHost.Create(Aki.TDConfigMgr.AutoGenerated.ICondition.Fb.IOnlinePlayerConditionTargetHost.Create(o));
 		}
 
-		// Token: 0x06006C63 RID: 27747 RVA: 0x001044AD File Offset: 0x001026AD
+		// Token: 0x060072D8 RID: 29400 RVA: 0x001124D0 File Offset: 0x001106D0
 		private static Aki.TDConfigMgr.AutoGenerated.ICondition.IOnlinePlayerConditionTargetParticipator Make_Aki_UniverseEditor_Interface_Fbs_Condition_IOnlinePlayerConditionTargetParticipator(Aki.UniverseEditor.Interface.Fbs.Condition.IOnlinePlayerConditionTargetParticipator? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.ICondition.IOnlinePlayerConditionTargetParticipator.Create(Aki.TDConfigMgr.AutoGenerated.ICondition.Fb.IOnlinePlayerConditionTargetParticipator.Create(o));
 		}
 
-		// Token: 0x06006C64 RID: 27748 RVA: 0x001044BA File Offset: 0x001026BA
+		// Token: 0x060072D9 RID: 29401 RVA: 0x001124DD File Offset: 0x001106DD
 		private static IUseSkillCheckByFollowShooterSkillId Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseSkillCheckByFollowShooterSkillId(IUseSkillCheckByFollowShooterSkillId? o)
 		{
 			return IUseSkillCheckByFollowShooterSkillId.Create(IUseSkillCheckByFollowShooterSkillId.Create(o));
 		}
 
-		// Token: 0x06006C65 RID: 27749 RVA: 0x001044C7 File Offset: 0x001026C7
+		// Token: 0x060072DA RID: 29402 RVA: 0x001124EA File Offset: 0x001106EA
 		private static IUseSkillCheckBySkillGenre Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseSkillCheckBySkillGenre(IUseSkillCheckBySkillGenre? o)
 		{
 			return IUseSkillCheckBySkillGenre.Create(IUseSkillCheckBySkillGenre.Create(o));
 		}
 
-		// Token: 0x06006C66 RID: 27750 RVA: 0x001044D4 File Offset: 0x001026D4
+		// Token: 0x060072DB RID: 29403 RVA: 0x001124F7 File Offset: 0x001106F7
 		private static IUseSkillCheckBySkillId Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseSkillCheckBySkillId(IUseSkillCheckBySkillId? o)
 		{
 			return IUseSkillCheckBySkillId.Create(IUseSkillCheckBySkillId.Create(o));
 		}
 
-		// Token: 0x06006C67 RID: 27751 RVA: 0x001044E1 File Offset: 0x001026E1
+		// Token: 0x060072DC RID: 29404 RVA: 0x00112504 File Offset: 0x00110704
 		private static IUseSkillCheckByVisionShowId Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseSkillCheckByVisionShowId(IUseSkillCheckByVisionShowId? o)
 		{
 			return IUseSkillCheckByVisionShowId.Create(IUseSkillCheckByVisionShowId.Create(o));
 		}
 
-		// Token: 0x06006C68 RID: 27752 RVA: 0x001044EE File Offset: 0x001026EE
+		// Token: 0x060072DD RID: 29405 RVA: 0x00112511 File Offset: 0x00110711
 		private static IUseSkillCheckByVisionSummonId Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseSkillCheckByVisionSummonId(IUseSkillCheckByVisionSummonId? o)
 		{
 			return IUseSkillCheckByVisionSummonId.Create(IUseSkillCheckByVisionSummonId.Create(o));
 		}
 
-		// Token: 0x06006C69 RID: 27753 RVA: 0x001044FB File Offset: 0x001026FB
+		// Token: 0x060072DE RID: 29406 RVA: 0x0011251E File Offset: 0x0011071E
 		private static IQuestPlayerBeDamage Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestPlayerBeDamage(IQuestPlayerBeDamage? o)
 		{
 			return IQuestPlayerBeDamage.Create(IQuestPlayerBeDamage.Create(o));
 		}
 
-		// Token: 0x06006C6A RID: 27754 RVA: 0x00104508 File Offset: 0x00102708
+		// Token: 0x060072DF RID: 29407 RVA: 0x0011252B File Offset: 0x0011072B
 		private static IQuestPlayerHitCount Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestPlayerHitCount(IQuestPlayerHitCount? o)
 		{
 			return IQuestPlayerHitCount.Create(IQuestPlayerHitCount.Create(o));
 		}
 
-		// Token: 0x06006C6B RID: 27755 RVA: 0x00104515 File Offset: 0x00102715
+		// Token: 0x060072E0 RID: 29408 RVA: 0x00112538 File Offset: 0x00110738
 		private static IMechaTrackScoreMechanismState Make_Aki_UniverseEditor_Interface_Fbs_Quest_IMechaTrackScoreMechanismState(IMechaTrackScoreMechanismState? o)
 		{
 			return IMechaTrackScoreMechanismState.Create(IMechaTrackScoreMechanismState.Create(o));
 		}
 
-		// Token: 0x06006C6C RID: 27756 RVA: 0x00104522 File Offset: 0x00102722
+		// Token: 0x060072E1 RID: 29409 RVA: 0x00112545 File Offset: 0x00110745
 		private static IMechaTrackScoreStuntAction Make_Aki_UniverseEditor_Interface_Fbs_Quest_IMechaTrackScoreStuntAction(IMechaTrackScoreStuntAction? o)
 		{
 			return IMechaTrackScoreStuntAction.Create(IMechaTrackScoreStuntAction.Create(o));
 		}
 
-		// Token: 0x06006C6D RID: 27757 RVA: 0x0010452F File Offset: 0x0010272F
+		// Token: 0x060072E2 RID: 29410 RVA: 0x00112552 File Offset: 0x00110752
 		private static IMechaTrackScoreTagDetection Make_Aki_UniverseEditor_Interface_Fbs_Quest_IMechaTrackScoreTagDetection(IMechaTrackScoreTagDetection? o)
 		{
 			return IMechaTrackScoreTagDetection.Create(IMechaTrackScoreTagDetection.Create(o));
 		}
 
-		// Token: 0x06006C6E RID: 27758 RVA: 0x0010453C File Offset: 0x0010273C
+		// Token: 0x060072E3 RID: 29411 RVA: 0x0011255F File Offset: 0x0011075F
 		private static IQuestMechaTrackScore Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestMechaTrackScore(IQuestMechaTrackScore? o)
 		{
 			return IQuestMechaTrackScore.Create(IQuestMechaTrackScore.Create(o));
 		}
 
-		// Token: 0x06006C6F RID: 27759 RVA: 0x00104549 File Offset: 0x00102749
+		// Token: 0x060072E4 RID: 29412 RVA: 0x0011256C File Offset: 0x0011076C
 		private static IQuestMonsterHealthScore Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestMonsterHealthScore(IQuestMonsterHealthScore? o)
 		{
 			return IQuestMonsterHealthScore.Create(IQuestMonsterHealthScore.Create(o));
 		}
 
-		// Token: 0x06006C70 RID: 27760 RVA: 0x00104556 File Offset: 0x00102756
+		// Token: 0x060072E5 RID: 29413 RVA: 0x00112579 File Offset: 0x00110779
 		private static IQuestMonsterPoint Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestMonsterPoint(IQuestMonsterPoint? o)
 		{
 			return IQuestMonsterPoint.Create(IQuestMonsterPoint.Create(o));
 		}
 
-		// Token: 0x06006C71 RID: 27761 RVA: 0x00104563 File Offset: 0x00102763
+		// Token: 0x060072E6 RID: 29414 RVA: 0x00112586 File Offset: 0x00110786
 		private static IQuestMonsterRemainingHealth Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestMonsterRemainingHealth(IQuestMonsterRemainingHealth? o)
 		{
 			return IQuestMonsterRemainingHealth.Create(IQuestMonsterRemainingHealth.Create(o));
 		}
 
-		// Token: 0x06006C72 RID: 27762 RVA: 0x00104570 File Offset: 0x00102770
+		// Token: 0x060072E7 RID: 29415 RVA: 0x00112593 File Offset: 0x00110793
 		private static IQuestPlayerHitStatistics Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestPlayerHitStatistics(IQuestPlayerHitStatistics? o)
 		{
 			return IQuestPlayerHitStatistics.Create(IQuestPlayerHitStatistics.Create(o));
 		}
 
-		// Token: 0x06006C73 RID: 27763 RVA: 0x0010457D File Offset: 0x0010277D
+		// Token: 0x060072E8 RID: 29416 RVA: 0x001125A0 File Offset: 0x001107A0
 		private static IQuestStaticTimer Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestStaticTimer(IQuestStaticTimer? o)
 		{
 			return IQuestStaticTimer.Create(IQuestStaticTimer.Create(o));
 		}
 
-		// Token: 0x06006C74 RID: 27764 RVA: 0x0010458A File Offset: 0x0010278A
+		// Token: 0x060072E9 RID: 29417 RVA: 0x001125AD File Offset: 0x001107AD
 		private static IQuestStatisticsCollect Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestStatisticsCollect(IQuestStatisticsCollect? o)
 		{
 			return IQuestStatisticsCollect.Create(IQuestStatisticsCollect.Create(o));
 		}
 
-		// Token: 0x06006C75 RID: 27765 RVA: 0x00104597 File Offset: 0x00102797
+		// Token: 0x060072EA RID: 29418 RVA: 0x001125BA File Offset: 0x001107BA
 		private static IQuestStatisticsPlayerTriggerMotion Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestStatisticsPlayerTriggerMotion(IQuestStatisticsPlayerTriggerMotion? o)
 		{
 			return IQuestStatisticsPlayerTriggerMotion.Create(IQuestStatisticsPlayerTriggerMotion.Create(o));
 		}
 
-		// Token: 0x06006C76 RID: 27766 RVA: 0x001045A4 File Offset: 0x001027A4
+		// Token: 0x060072EB RID: 29419 RVA: 0x001125C7 File Offset: 0x001107C7
 		private static IQuestStatisticsUseSkill Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestStatisticsUseSkill(IQuestStatisticsUseSkill? o)
 		{
 			return IQuestStatisticsUseSkill.Create(IQuestStatisticsUseSkill.Create(o));
 		}
 
-		// Token: 0x06006C77 RID: 27767 RVA: 0x001045B1 File Offset: 0x001027B1
+		// Token: 0x060072EC RID: 29420 RVA: 0x001125D4 File Offset: 0x001107D4
 		private static IQuestStatisticsUseSkillNew Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestStatisticsUseSkillNew(IQuestStatisticsUseSkillNew? o)
 		{
 			return IQuestStatisticsUseSkillNew.Create(IQuestStatisticsUseSkillNew.Create(o));
 		}
 
-		// Token: 0x06006C78 RID: 27768 RVA: 0x001045BE File Offset: 0x001027BE
+		// Token: 0x060072ED RID: 29421 RVA: 0x001125E1 File Offset: 0x001107E1
 		private static Aki.TDConfigMgr.Action.IBrokenRock Make_Aki_UniverseEditor_Interface_Fbs_Action_IBrokenRock(Aki.UniverseEditor.Interface.Fbs.Action.IBrokenRock? o)
 		{
 			return Aki.TDConfigMgr.Action.IBrokenRock.Create(Aki.TDConfigMgr.Action.Fb.IBrokenRock.Create(o));
 		}
 
-		// Token: 0x06006C79 RID: 27769 RVA: 0x001045CB File Offset: 0x001027CB
+		// Token: 0x060072EE RID: 29422 RVA: 0x001125EE File Offset: 0x001107EE
 		private static Aki.TDConfigMgr.Action.ICipherGameplay Make_Aki_UniverseEditor_Interface_Fbs_Action_ICipherGameplay(Aki.UniverseEditor.Interface.Fbs.Action.ICipherGameplay? o)
 		{
 			return Aki.TDConfigMgr.Action.ICipherGameplay.Create(Aki.TDConfigMgr.Action.Fb.ICipherGameplay.Create(o));
 		}
 
-		// Token: 0x06006C7A RID: 27770 RVA: 0x001045D8 File Offset: 0x001027D8
+		// Token: 0x060072EF RID: 29423 RVA: 0x001125FB File Offset: 0x001107FB
 		private static Aki.TDConfigMgr.Action.IDaemonHack Make_Aki_UniverseEditor_Interface_Fbs_Action_IDaemonHack(Aki.UniverseEditor.Interface.Fbs.Action.IDaemonHack? o)
 		{
 			return Aki.TDConfigMgr.Action.IDaemonHack.Create(Aki.TDConfigMgr.Action.Fb.IDaemonHack.Create(o));
 		}
 
-		// Token: 0x06006C7B RID: 27771 RVA: 0x001045E5 File Offset: 0x001027E5
+		// Token: 0x060072F0 RID: 29424 RVA: 0x00112608 File Offset: 0x00110808
 		private static Aki.TDConfigMgr.Action.IDaolingAuthentication Make_Aki_UniverseEditor_Interface_Fbs_Action_IDaolingAuthentication(Aki.UniverseEditor.Interface.Fbs.Action.IDaolingAuthentication? o)
 		{
 			return Aki.TDConfigMgr.Action.IDaolingAuthentication.Create(Aki.TDConfigMgr.Action.Fb.IDaolingAuthentication.Create(o));
 		}
 
-		// Token: 0x06006C7C RID: 27772 RVA: 0x001045F2 File Offset: 0x001027F2
+		// Token: 0x060072F1 RID: 29425 RVA: 0x00112615 File Offset: 0x00110815
 		private static Aki.TDConfigMgr.Action.IDartGameplay Make_Aki_UniverseEditor_Interface_Fbs_Action_IDartGameplay(Aki.UniverseEditor.Interface.Fbs.Action.IDartGameplay? o)
 		{
 			return Aki.TDConfigMgr.Action.IDartGameplay.Create(Aki.TDConfigMgr.Action.Fb.IDartGameplay.Create(o));
 		}
 
-		// Token: 0x06006C7D RID: 27773 RVA: 0x001045FF File Offset: 0x001027FF
+		// Token: 0x060072F2 RID: 29426 RVA: 0x00112622 File Offset: 0x00110822
 		private static Aki.TDConfigMgr.Action.IDollGrab Make_Aki_UniverseEditor_Interface_Fbs_Action_IDollGrab(Aki.UniverseEditor.Interface.Fbs.Action.IDollGrab? o)
 		{
 			return Aki.TDConfigMgr.Action.IDollGrab.Create(Aki.TDConfigMgr.Action.Fb.IDollGrab.Create(o));
 		}
 
-		// Token: 0x06006C7E RID: 27774 RVA: 0x0010460C File Offset: 0x0010280C
+		// Token: 0x060072F3 RID: 29427 RVA: 0x0011262F File Offset: 0x0011082F
 		private static Aki.TDConfigMgr.Action.IDollGrabShowcase Make_Aki_UniverseEditor_Interface_Fbs_Action_IDollGrabShowcase(Aki.UniverseEditor.Interface.Fbs.Action.IDollGrabShowcase? o)
 		{
 			return Aki.TDConfigMgr.Action.IDollGrabShowcase.Create(Aki.TDConfigMgr.Action.Fb.IDollGrabShowcase.Create(o));
 		}
 
-		// Token: 0x06006C7F RID: 27775 RVA: 0x00104619 File Offset: 0x00102819
+		// Token: 0x060072F4 RID: 29428 RVA: 0x0011263C File Offset: 0x0011083C
 		private static Aki.TDConfigMgr.Action.IDragActor Make_Aki_UniverseEditor_Interface_Fbs_Action_IDragActor(Aki.UniverseEditor.Interface.Fbs.Action.IDragActor? o)
 		{
 			return Aki.TDConfigMgr.Action.IDragActor.Create(Aki.TDConfigMgr.Action.Fb.IDragActor.Create(o));
 		}
 
-		// Token: 0x06006C80 RID: 27776 RVA: 0x00104626 File Offset: 0x00102826
+		// Token: 0x060072F5 RID: 29429 RVA: 0x00112649 File Offset: 0x00110849
 		private static Aki.TDConfigMgr.Action.IFindSunSpirit Make_Aki_UniverseEditor_Interface_Fbs_Action_IFindSunSpirit(Aki.UniverseEditor.Interface.Fbs.Action.IFindSunSpirit? o)
 		{
 			return Aki.TDConfigMgr.Action.IFindSunSpirit.Create(Aki.TDConfigMgr.Action.Fb.IFindSunSpirit.Create(o));
 		}
 
-		// Token: 0x06006C81 RID: 27777 RVA: 0x00104633 File Offset: 0x00102833
+		// Token: 0x060072F6 RID: 29430 RVA: 0x00112656 File Offset: 0x00110856
 		private static Aki.TDConfigMgr.Action.IFishingRoulette Make_Aki_UniverseEditor_Interface_Fbs_Action_IFishingRoulette(Aki.UniverseEditor.Interface.Fbs.Action.IFishingRoulette? o)
 		{
 			return Aki.TDConfigMgr.Action.IFishingRoulette.Create(Aki.TDConfigMgr.Action.Fb.IFishingRoulette.Create(o));
 		}
 
-		// Token: 0x06006C82 RID: 27778 RVA: 0x00104640 File Offset: 0x00102840
+		// Token: 0x060072F7 RID: 29431 RVA: 0x00112663 File Offset: 0x00110863
 		private static Aki.TDConfigMgr.Action.IFlowerSeaEscape Make_Aki_UniverseEditor_Interface_Fbs_Action_IFlowerSeaEscape(Aki.UniverseEditor.Interface.Fbs.Action.IFlowerSeaEscape? o)
 		{
 			return Aki.TDConfigMgr.Action.IFlowerSeaEscape.Create(Aki.TDConfigMgr.Action.Fb.IFlowerSeaEscape.Create(o));
 		}
 
-		// Token: 0x06006C83 RID: 27779 RVA: 0x0010464D File Offset: 0x0010284D
+		// Token: 0x060072F8 RID: 29432 RVA: 0x00112670 File Offset: 0x00110870
+		private static Aki.TDConfigMgr.Action.IFrequencyDetect Make_Aki_UniverseEditor_Interface_Fbs_Action_IFrequencyDetect(Aki.UniverseEditor.Interface.Fbs.Action.IFrequencyDetect? o)
+		{
+			return Aki.TDConfigMgr.Action.IFrequencyDetect.Create(Aki.TDConfigMgr.Action.Fb.IFrequencyDetect.Create(o));
+		}
+
+		// Token: 0x060072F9 RID: 29433 RVA: 0x0011267D File Offset: 0x0011087D
+		private static Aki.TDConfigMgr.Action.IFrequencyPaint Make_Aki_UniverseEditor_Interface_Fbs_Action_IFrequencyPaint(Aki.UniverseEditor.Interface.Fbs.Action.IFrequencyPaint? o)
+		{
+			return Aki.TDConfigMgr.Action.IFrequencyPaint.Create(Aki.TDConfigMgr.Action.Fb.IFrequencyPaint.Create(o));
+		}
+
+		// Token: 0x060072FA RID: 29434 RVA: 0x0011268A File Offset: 0x0011088A
 		private static Aki.TDConfigMgr.Action.IInstrumentQteGameplay Make_Aki_UniverseEditor_Interface_Fbs_Action_IInstrumentQteGameplay(Aki.UniverseEditor.Interface.Fbs.Action.IInstrumentQteGameplay? o)
 		{
 			return Aki.TDConfigMgr.Action.IInstrumentQteGameplay.Create(Aki.TDConfigMgr.Action.Fb.IInstrumentQteGameplay.Create(o));
 		}
 
-		// Token: 0x06006C84 RID: 27780 RVA: 0x0010465A File Offset: 0x0010285A
+		// Token: 0x060072FB RID: 29435 RVA: 0x00112697 File Offset: 0x00110897
 		private static Aki.TDConfigMgr.Action.IItemInspection Make_Aki_UniverseEditor_Interface_Fbs_Action_IItemInspection(Aki.UniverseEditor.Interface.Fbs.Action.IItemInspection? o)
 		{
 			return Aki.TDConfigMgr.Action.IItemInspection.Create(Aki.TDConfigMgr.Action.Fb.IItemInspection.Create(o));
 		}
 
-		// Token: 0x06006C85 RID: 27781 RVA: 0x00104667 File Offset: 0x00102867
+		// Token: 0x060072FC RID: 29436 RVA: 0x001126A4 File Offset: 0x001108A4
 		private static Aki.TDConfigMgr.Action.ILifePoint Make_Aki_UniverseEditor_Interface_Fbs_Action_ILifePoint(Aki.UniverseEditor.Interface.Fbs.Action.ILifePoint? o)
 		{
 			return Aki.TDConfigMgr.Action.ILifePoint.Create(Aki.TDConfigMgr.Action.Fb.ILifePoint.Create(o));
 		}
 
-		// Token: 0x06006C86 RID: 27782 RVA: 0x00104674 File Offset: 0x00102874
+		// Token: 0x060072FD RID: 29437 RVA: 0x001126B1 File Offset: 0x001108B1
 		private static Aki.TDConfigMgr.Action.IMorseCode Make_Aki_UniverseEditor_Interface_Fbs_Action_IMorseCode(Aki.UniverseEditor.Interface.Fbs.Action.IMorseCode? o)
 		{
 			return Aki.TDConfigMgr.Action.IMorseCode.Create(Aki.TDConfigMgr.Action.Fb.IMorseCode.Create(o));
 		}
 
-		// Token: 0x06006C87 RID: 27783 RVA: 0x00104681 File Offset: 0x00102881
+		// Token: 0x060072FE RID: 29438 RVA: 0x001126BE File Offset: 0x001108BE
 		private static Aki.TDConfigMgr.Action.IPlayPianoGameplay Make_Aki_UniverseEditor_Interface_Fbs_Action_IPlayPianoGameplay(Aki.UniverseEditor.Interface.Fbs.Action.IPlayPianoGameplay? o)
 		{
 			return Aki.TDConfigMgr.Action.IPlayPianoGameplay.Create(Aki.TDConfigMgr.Action.Fb.IPlayPianoGameplay.Create(o));
 		}
 
-		// Token: 0x06006C88 RID: 27784 RVA: 0x0010468E File Offset: 0x0010288E
+		// Token: 0x060072FF RID: 29439 RVA: 0x001126CB File Offset: 0x001108CB
 		private static Aki.TDConfigMgr.Action.IProjectionMachine Make_Aki_UniverseEditor_Interface_Fbs_Action_IProjectionMachine(Aki.UniverseEditor.Interface.Fbs.Action.IProjectionMachine? o)
 		{
 			return Aki.TDConfigMgr.Action.IProjectionMachine.Create(Aki.TDConfigMgr.Action.Fb.IProjectionMachine.Create(o));
 		}
 
-		// Token: 0x06006C89 RID: 27785 RVA: 0x0010469B File Offset: 0x0010289B
+		// Token: 0x06007300 RID: 29440 RVA: 0x001126D8 File Offset: 0x001108D8
 		private static Aki.TDConfigMgr.Action.IProjectorPuzzle Make_Aki_UniverseEditor_Interface_Fbs_Action_IProjectorPuzzle(Aki.UniverseEditor.Interface.Fbs.Action.IProjectorPuzzle? o)
 		{
 			return Aki.TDConfigMgr.Action.IProjectorPuzzle.Create(Aki.TDConfigMgr.Action.Fb.IProjectorPuzzle.Create(o));
 		}
 
-		// Token: 0x06006C8A RID: 27786 RVA: 0x001046A8 File Offset: 0x001028A8
+		// Token: 0x06007301 RID: 29441 RVA: 0x001126E5 File Offset: 0x001108E5
 		private static Aki.TDConfigMgr.Action.IQteHourglass Make_Aki_UniverseEditor_Interface_Fbs_Action_IQteHourglass(Aki.UniverseEditor.Interface.Fbs.Action.IQteHourglass? o)
 		{
 			return Aki.TDConfigMgr.Action.IQteHourglass.Create(Aki.TDConfigMgr.Action.Fb.IQteHourglass.Create(o));
 		}
 
-		// Token: 0x06006C8B RID: 27787 RVA: 0x001046B5 File Offset: 0x001028B5
+		// Token: 0x06007302 RID: 29442 RVA: 0x001126F2 File Offset: 0x001108F2
 		private static Aki.TDConfigMgr.Action.IReigns Make_Aki_UniverseEditor_Interface_Fbs_Action_IReigns(Aki.UniverseEditor.Interface.Fbs.Action.IReigns? o)
 		{
 			return Aki.TDConfigMgr.Action.IReigns.Create(Aki.TDConfigMgr.Action.Fb.IReigns.Create(o));
 		}
 
-		// Token: 0x06006C8C RID: 27788 RVA: 0x001046C2 File Offset: 0x001028C2
+		// Token: 0x06007303 RID: 29443 RVA: 0x001126FF File Offset: 0x001108FF
 		private static Aki.TDConfigMgr.Action.IRenjuChess Make_Aki_UniverseEditor_Interface_Fbs_Action_IRenjuChess(Aki.UniverseEditor.Interface.Fbs.Action.IRenjuChess? o)
 		{
 			return Aki.TDConfigMgr.Action.IRenjuChess.Create(Aki.TDConfigMgr.Action.Fb.IRenjuChess.Create(o));
 		}
 
-		// Token: 0x06006C8D RID: 27789 RVA: 0x001046CF File Offset: 0x001028CF
+		// Token: 0x06007304 RID: 29444 RVA: 0x0011270C File Offset: 0x0011090C
 		private static Aki.TDConfigMgr.Action.IRideFlyingCar Make_Aki_UniverseEditor_Interface_Fbs_Action_IRideFlyingCar(Aki.UniverseEditor.Interface.Fbs.Action.IRideFlyingCar? o)
 		{
 			return Aki.TDConfigMgr.Action.IRideFlyingCar.Create(Aki.TDConfigMgr.Action.Fb.IRideFlyingCar.Create(o));
 		}
 
-		// Token: 0x06006C8E RID: 27790 RVA: 0x001046DC File Offset: 0x001028DC
+		// Token: 0x06007305 RID: 29445 RVA: 0x00112719 File Offset: 0x00110919
 		private static Aki.TDConfigMgr.Action.ISceneInspection Make_Aki_UniverseEditor_Interface_Fbs_Action_ISceneInspection(Aki.UniverseEditor.Interface.Fbs.Action.ISceneInspection? o)
 		{
 			return Aki.TDConfigMgr.Action.ISceneInspection.Create(Aki.TDConfigMgr.Action.Fb.ISceneInspection.Create(o));
 		}
 
-		// Token: 0x06006C8F RID: 27791 RVA: 0x001046E9 File Offset: 0x001028E9
+		// Token: 0x06007306 RID: 29446 RVA: 0x00112726 File Offset: 0x00110926
 		private static Aki.TDConfigMgr.Action.ISheriffReasoning Make_Aki_UniverseEditor_Interface_Fbs_Action_ISheriffReasoning(Aki.UniverseEditor.Interface.Fbs.Action.ISheriffReasoning? o)
 		{
 			return Aki.TDConfigMgr.Action.ISheriffReasoning.Create(Aki.TDConfigMgr.Action.Fb.ISheriffReasoning.Create(o));
 		}
 
-		// Token: 0x06006C90 RID: 27792 RVA: 0x001046F6 File Offset: 0x001028F6
+		// Token: 0x06007307 RID: 29447 RVA: 0x00112733 File Offset: 0x00110933
 		private static Aki.TDConfigMgr.Action.ISignalBreakGameplay Make_Aki_UniverseEditor_Interface_Fbs_Action_ISignalBreakGameplay(Aki.UniverseEditor.Interface.Fbs.Action.ISignalBreakGameplay? o)
 		{
 			return Aki.TDConfigMgr.Action.ISignalBreakGameplay.Create(Aki.TDConfigMgr.Action.Fb.ISignalBreakGameplay.Create(o));
 		}
 
-		// Token: 0x06006C91 RID: 27793 RVA: 0x00104703 File Offset: 0x00102903
+		// Token: 0x06007308 RID: 29448 RVA: 0x00112740 File Offset: 0x00110940
 		private static Aki.TDConfigMgr.Action.ISignalDevice Make_Aki_UniverseEditor_Interface_Fbs_Action_ISignalDevice(Aki.UniverseEditor.Interface.Fbs.Action.ISignalDevice? o)
 		{
 			return Aki.TDConfigMgr.Action.ISignalDevice.Create(Aki.TDConfigMgr.Action.Fb.ISignalDevice.Create(o));
 		}
 
-		// Token: 0x06006C92 RID: 27794 RVA: 0x00104710 File Offset: 0x00102910
+		// Token: 0x06007309 RID: 29449 RVA: 0x0011274D File Offset: 0x0011094D
 		private static Aki.TDConfigMgr.Action.ISignalDevice2 Make_Aki_UniverseEditor_Interface_Fbs_Action_ISignalDevice2(Aki.UniverseEditor.Interface.Fbs.Action.ISignalDevice2? o)
 		{
 			return Aki.TDConfigMgr.Action.ISignalDevice2.Create(Aki.TDConfigMgr.Action.Fb.ISignalDevice2.Create(o));
 		}
 
-		// Token: 0x06006C93 RID: 27795 RVA: 0x0010471D File Offset: 0x0010291D
+		// Token: 0x0600730A RID: 29450 RVA: 0x0011275A File Offset: 0x0011095A
 		private static Aki.TDConfigMgr.Action.ISundialPuzzleGameplay Make_Aki_UniverseEditor_Interface_Fbs_Action_ISundialPuzzleGameplay(Aki.UniverseEditor.Interface.Fbs.Action.ISundialPuzzleGameplay? o)
 		{
 			return Aki.TDConfigMgr.Action.ISundialPuzzleGameplay.Create(Aki.TDConfigMgr.Action.Fb.ISundialPuzzleGameplay.Create(o));
 		}
 
-		// Token: 0x06006C94 RID: 27796 RVA: 0x0010472A File Offset: 0x0010292A
+		// Token: 0x0600730B RID: 29451 RVA: 0x00112767 File Offset: 0x00110967
 		private static Aki.TDConfigMgr.Action.ITraceTracing Make_Aki_UniverseEditor_Interface_Fbs_Action_ITraceTracing(Aki.UniverseEditor.Interface.Fbs.Action.ITraceTracing? o)
 		{
 			return Aki.TDConfigMgr.Action.ITraceTracing.Create(Aki.TDConfigMgr.Action.Fb.ITraceTracing.Create(o));
 		}
 
-		// Token: 0x06006C95 RID: 27797 RVA: 0x00104737 File Offset: 0x00102937
+		// Token: 0x0600730C RID: 29452 RVA: 0x00112774 File Offset: 0x00110974
 		private static Aki.TDConfigMgr.Action.ITuningStand Make_Aki_UniverseEditor_Interface_Fbs_Action_ITuningStand(Aki.UniverseEditor.Interface.Fbs.Action.ITuningStand? o)
 		{
 			return Aki.TDConfigMgr.Action.ITuningStand.Create(Aki.TDConfigMgr.Action.Fb.ITuningStand.Create(o));
 		}
 
-		// Token: 0x06006C96 RID: 27798 RVA: 0x00104744 File Offset: 0x00102944
+		// Token: 0x0600730D RID: 29453 RVA: 0x00112781 File Offset: 0x00110981
+		private static Aki.TDConfigMgr.Action.ITurntableConnectorUiGameplay Make_Aki_UniverseEditor_Interface_Fbs_Action_ITurntableConnectorUiGameplay(Aki.UniverseEditor.Interface.Fbs.Action.ITurntableConnectorUiGameplay? o)
+		{
+			return Aki.TDConfigMgr.Action.ITurntableConnectorUiGameplay.Create(Aki.TDConfigMgr.Action.Fb.ITurntableConnectorUiGameplay.Create(o));
+		}
+
+		// Token: 0x0600730E RID: 29454 RVA: 0x0011278E File Offset: 0x0011098E
 		private static Aki.TDConfigMgr.Action.IWriteLetter Make_Aki_UniverseEditor_Interface_Fbs_Action_IWriteLetter(Aki.UniverseEditor.Interface.Fbs.Action.IWriteLetter? o)
 		{
 			return Aki.TDConfigMgr.Action.IWriteLetter.Create(Aki.TDConfigMgr.Action.Fb.IWriteLetter.Create(o));
 		}
 
-		// Token: 0x06006C97 RID: 27799 RVA: 0x00104751 File Offset: 0x00102951
+		// Token: 0x0600730F RID: 29455 RVA: 0x0011279B File Offset: 0x0011099B
 		private static Aki.TDConfigMgr.Action.IWuWaGoGame Make_Aki_UniverseEditor_Interface_Fbs_Action_IWuWaGoGame(Aki.UniverseEditor.Interface.Fbs.Action.IWuWaGoGame? o)
 		{
 			return Aki.TDConfigMgr.Action.IWuWaGoGame.Create(Aki.TDConfigMgr.Action.Fb.IWuWaGoGame.Create(o));
 		}
 
-		// Token: 0x06006C98 RID: 27800 RVA: 0x0010475E File Offset: 0x0010295E
+		// Token: 0x06007310 RID: 29456 RVA: 0x001127A8 File Offset: 0x001109A8
+		private static Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchAssistCharacterRole Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchAssistCharacterRole(Aki.UniverseEditor.Interface.Fbs.Match.IMatchAssistCharacterRole? o)
+		{
+			return Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchAssistCharacterRole.Create(Aki.TDConfigMgr.AutoGenerated.IMatch.Fb.IMatchAssistCharacterRole.Create(o));
+		}
+
+		// Token: 0x06007311 RID: 29457 RVA: 0x001127B5 File Offset: 0x001109B5
 		private static Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchPhantomRole Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchPhantomRole(Aki.UniverseEditor.Interface.Fbs.Match.IMatchPhantomRole? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchPhantomRole.Create(Aki.TDConfigMgr.AutoGenerated.IMatch.Fb.IMatchPhantomRole.Create(o));
 		}
 
-		// Token: 0x06006C99 RID: 27801 RVA: 0x0010476B File Offset: 0x0010296B
+		// Token: 0x06007312 RID: 29458 RVA: 0x001127C2 File Offset: 0x001109C2
 		private static Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchPlayerRole Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchPlayerRole(Aki.UniverseEditor.Interface.Fbs.Match.IMatchPlayerRole? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchPlayerRole.Create(Aki.TDConfigMgr.AutoGenerated.IMatch.Fb.IMatchPlayerRole.Create(o));
 		}
 
-		// Token: 0x06006C9A RID: 27802 RVA: 0x00104778 File Offset: 0x00102978
+		// Token: 0x06007313 RID: 29459 RVA: 0x001127CF File Offset: 0x001109CF
 		private static IItemIdVariable Make_Aki_UniverseEditor_Interface_Fbs_Quest_IItemIdVariable(IItemIdVariable? o)
 		{
 			return IItemIdVariable.Create(IItemIdVariable.Create(o));
 		}
 
-		// Token: 0x06006C9B RID: 27803 RVA: 0x00104785 File Offset: 0x00102985
+		// Token: 0x06007314 RID: 29460 RVA: 0x001127DC File Offset: 0x001109DC
 		private static IItemTypeVariable Make_Aki_UniverseEditor_Interface_Fbs_Quest_IItemTypeVariable(IItemTypeVariable? o)
 		{
 			return IItemTypeVariable.Create(IItemTypeVariable.Create(o));
 		}
 
-		// Token: 0x06006C9C RID: 27804 RVA: 0x00104792 File Offset: 0x00102992
+		// Token: 0x06007315 RID: 29461 RVA: 0x001127E9 File Offset: 0x001109E9
 		private static IDungeonIdCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDungeonIdCondition(IDungeonIdCondition? o)
 		{
 			return IDungeonIdCondition.Create(IDungeonIdCondition.Create(o));
 		}
 
-		// Token: 0x06006C9D RID: 27805 RVA: 0x0010479F File Offset: 0x0010299F
+		// Token: 0x06007316 RID: 29462 RVA: 0x001127F6 File Offset: 0x001109F6
 		private static IDungeonSubTypeCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDungeonSubTypeCondition(IDungeonSubTypeCondition? o)
 		{
 			return IDungeonSubTypeCondition.Create(IDungeonSubTypeCondition.Create(o));
 		}
 
-		// Token: 0x06006C9E RID: 27806 RVA: 0x001047AC File Offset: 0x001029AC
+		// Token: 0x06007317 RID: 29463 RVA: 0x00112803 File Offset: 0x00110A03
 		private static IEnterDungeonIdCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IEnterDungeonIdCondition(IEnterDungeonIdCondition? o)
 		{
 			return IEnterDungeonIdCondition.Create(IEnterDungeonIdCondition.Create(o));
 		}
 
-		// Token: 0x06006C9F RID: 27807 RVA: 0x001047B9 File Offset: 0x001029B9
+		// Token: 0x06007318 RID: 29464 RVA: 0x00112810 File Offset: 0x00110A10
 		private static IEnterDungeonSubTypeCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IEnterDungeonSubTypeCondition(IEnterDungeonSubTypeCondition? o)
 		{
 			return IEnterDungeonSubTypeCondition.Create(IEnterDungeonSubTypeCondition.Create(o));
 		}
 
-		// Token: 0x06006CA0 RID: 27808 RVA: 0x001047C6 File Offset: 0x001029C6
+		// Token: 0x06007319 RID: 29465 RVA: 0x0011281D File Offset: 0x00110A1D
 		private static ICheckMonsterBattleAttribute Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckMonsterBattleAttribute(ICheckMonsterBattleAttribute? o)
 		{
 			return ICheckMonsterBattleAttribute.Create(ICheckMonsterBattleAttribute.Create(o));
 		}
 
-		// Token: 0x06006CA1 RID: 27809 RVA: 0x001047D3 File Offset: 0x001029D3
+		// Token: 0x0600731A RID: 29466 RVA: 0x0011282A File Offset: 0x00110A2A
 		private static ICheckPlayerBattleAttribute Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckPlayerBattleAttribute(ICheckPlayerBattleAttribute? o)
 		{
 			return ICheckPlayerBattleAttribute.Create(ICheckPlayerBattleAttribute.Create(o));
 		}
 
-		// Token: 0x06006CA2 RID: 27810 RVA: 0x001047E0 File Offset: 0x001029E0
+		// Token: 0x0600731B RID: 29467 RVA: 0x00112837 File Offset: 0x00110A37
 		private static Aki.TDConfigMgr.AutoGenerated.ICondition.IBattleTagCondition Make_Aki_UniverseEditor_Interface_Fbs_Condition_IBattleTagCondition(Aki.UniverseEditor.Interface.Fbs.Condition.IBattleTagCondition? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.ICondition.IBattleTagCondition.Create(Aki.TDConfigMgr.AutoGenerated.ICondition.Fb.IBattleTagCondition.Create(o));
 		}
 
-		// Token: 0x06006CA3 RID: 27811 RVA: 0x001047ED File Offset: 0x001029ED
+		// Token: 0x0600731C RID: 29468 RVA: 0x00112844 File Offset: 0x00110A44
 		private static Aki.TDConfigMgr.AutoGenerated.ICondition.ICounterAttackCondition Make_Aki_UniverseEditor_Interface_Fbs_Condition_ICounterAttackCondition(Aki.UniverseEditor.Interface.Fbs.Condition.ICounterAttackCondition? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.ICondition.ICounterAttackCondition.Create(Aki.TDConfigMgr.AutoGenerated.ICondition.Fb.ICounterAttackCondition.Create(o));
 		}
 
-		// Token: 0x06006CA4 RID: 27812 RVA: 0x001047FA File Offset: 0x001029FA
+		// Token: 0x0600731D RID: 29469 RVA: 0x00112851 File Offset: 0x00110A51
 		private static Aki.TDConfigMgr.AutoGenerated.ICondition.IPerfectDodgeCondition Make_Aki_UniverseEditor_Interface_Fbs_Condition_IPerfectDodgeCondition(Aki.UniverseEditor.Interface.Fbs.Condition.IPerfectDodgeCondition? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.ICondition.IPerfectDodgeCondition.Create(Aki.TDConfigMgr.AutoGenerated.ICondition.Fb.IPerfectDodgeCondition.Create(o));
 		}
 
-		// Token: 0x06006CA5 RID: 27813 RVA: 0x00104807 File Offset: 0x00102A07
+		// Token: 0x0600731E RID: 29470 RVA: 0x0011285E File Offset: 0x00110A5E
 		private static ICiacconaAvgBoard Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICiacconaAvgBoard(ICiacconaAvgBoard? o)
 		{
 			return ICiacconaAvgBoard.Create(ICiacconaAvgBoard.Create(o));
 		}
 
-		// Token: 0x06006CA6 RID: 27814 RVA: 0x00104814 File Offset: 0x00102A14
+		// Token: 0x0600731F RID: 29471 RVA: 0x0011286B File Offset: 0x00110A6B
 		private static IInformationView Make_Aki_UniverseEditor_Interface_Fbs_Quest_IInformationView(IInformationView? o)
 		{
 			return IInformationView.Create(IInformationView.Create(o));
 		}
 
-		// Token: 0x06006CA7 RID: 27815 RVA: 0x00104821 File Offset: 0x00102A21
+		// Token: 0x06007320 RID: 29472 RVA: 0x00112878 File Offset: 0x00110A78
 		private static IItemObtain Make_Aki_UniverseEditor_Interface_Fbs_Quest_IItemObtain(IItemObtain? o)
 		{
 			return IItemObtain.Create(IItemObtain.Create(o));
 		}
 
-		// Token: 0x06006CA8 RID: 27816 RVA: 0x0010482E File Offset: 0x00102A2E
+		// Token: 0x06007321 RID: 29473 RVA: 0x00112885 File Offset: 0x00110A85
 		private static IMowBuffDistribute Make_Aki_UniverseEditor_Interface_Fbs_Quest_IMowBuffDistribute(IMowBuffDistribute? o)
 		{
 			return IMowBuffDistribute.Create(IMowBuffDistribute.Create(o));
 		}
 
-		// Token: 0x06006CA9 RID: 27817 RVA: 0x0010483B File Offset: 0x00102A3B
+		// Token: 0x06007322 RID: 29474 RVA: 0x00112892 File Offset: 0x00110A92
 		private static IPermanentRogueUi Make_Aki_UniverseEditor_Interface_Fbs_Quest_IPermanentRogueUi(IPermanentRogueUi? o)
 		{
 			return IPermanentRogueUi.Create(IPermanentRogueUi.Create(o));
 		}
 
-		// Token: 0x06006CAA RID: 27818 RVA: 0x00104848 File Offset: 0x00102A48
+		// Token: 0x06007323 RID: 29475 RVA: 0x0011289F File Offset: 0x00110A9F
 		private static IRogueAbilitySelect Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRogueAbilitySelect(IRogueAbilitySelect? o)
 		{
 			return IRogueAbilitySelect.Create(IRogueAbilitySelect.Create(o));
 		}
 
-		// Token: 0x06006CAB RID: 27819 RVA: 0x00104855 File Offset: 0x00102A55
+		// Token: 0x06007324 RID: 29476 RVA: 0x001128AC File Offset: 0x00110AAC
 		private static IRogueRandomEvent Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRogueRandomEvent(IRogueRandomEvent? o)
 		{
 			return IRogueRandomEvent.Create(IRogueRandomEvent.Create(o));
 		}
 
-		// Token: 0x06006CAC RID: 27820 RVA: 0x00104862 File Offset: 0x00102A62
+		// Token: 0x06007325 RID: 29477 RVA: 0x001128B9 File Offset: 0x00110AB9
 		private static IRoleSkinTrialActivities Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleSkinTrialActivities(IRoleSkinTrialActivities? o)
 		{
 			return IRoleSkinTrialActivities.Create(IRoleSkinTrialActivities.Create(o));
 		}
 
-		// Token: 0x06006CAD RID: 27821 RVA: 0x0010486F File Offset: 0x00102A6F
+		// Token: 0x06007326 RID: 29478 RVA: 0x001128C6 File Offset: 0x00110AC6
 		private static IRoleTrialActivities Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTrialActivities(IRoleTrialActivities? o)
 		{
 			return IRoleTrialActivities.Create(IRoleTrialActivities.Create(o));
 		}
 
-		// Token: 0x06006CAE RID: 27822 RVA: 0x0010487C File Offset: 0x00102A7C
+		// Token: 0x06007327 RID: 29479 RVA: 0x001128D3 File Offset: 0x00110AD3
 		private static IShowUiAll Make_Aki_UniverseEditor_Interface_Fbs_Quest_IShowUiAll(IShowUiAll? o)
 		{
 			return IShowUiAll.Create(IShowUiAll.Create(o));
 		}
 
-		// Token: 0x06006CAF RID: 27823 RVA: 0x00104889 File Offset: 0x00102A89
+		// Token: 0x06007328 RID: 29480 RVA: 0x001128E0 File Offset: 0x00110AE0
 		private static IShowUiCook Make_Aki_UniverseEditor_Interface_Fbs_Quest_IShowUiCook(IShowUiCook? o)
 		{
 			return IShowUiCook.Create(IShowUiCook.Create(o));
 		}
 
-		// Token: 0x06006CB0 RID: 27824 RVA: 0x00104896 File Offset: 0x00102A96
+		// Token: 0x06007329 RID: 29481 RVA: 0x001128ED File Offset: 0x00110AED
 		private static IShowUiForging Make_Aki_UniverseEditor_Interface_Fbs_Quest_IShowUiForging(IShowUiForging? o)
 		{
 			return IShowUiForging.Create(IShowUiForging.Create(o));
 		}
 
-		// Token: 0x06006CB1 RID: 27825 RVA: 0x001048A3 File Offset: 0x00102AA3
+		// Token: 0x0600732A RID: 29482 RVA: 0x001128FA File Offset: 0x00110AFA
 		private static IShowUiSynthetic Make_Aki_UniverseEditor_Interface_Fbs_Quest_IShowUiSynthetic(IShowUiSynthetic? o)
 		{
 			return IShowUiSynthetic.Create(IShowUiSynthetic.Create(o));
 		}
 
-		// Token: 0x06006CB2 RID: 27826 RVA: 0x001048B0 File Offset: 0x00102AB0
+		// Token: 0x0600732B RID: 29483 RVA: 0x00112907 File Offset: 0x00110B07
 		private static Aki.TDConfigMgr.AutoGenerated.IShape.IBoxRange Make_Aki_UniverseEditor_Interface_Fbs_Shape_IBoxRange(Aki.UniverseEditor.Interface.Fbs.Shape.IBoxRange? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IShape.IBoxRange.Create(Aki.TDConfigMgr.AutoGenerated.IShape.Fb.IBoxRange.Create(o));
 		}
 
-		// Token: 0x06006CB3 RID: 27827 RVA: 0x001048BD File Offset: 0x00102ABD
+		// Token: 0x0600732C RID: 29484 RVA: 0x00112914 File Offset: 0x00110B14
 		private static Aki.TDConfigMgr.AutoGenerated.IShape.ICircleRange Make_Aki_UniverseEditor_Interface_Fbs_Shape_ICircleRange(Aki.UniverseEditor.Interface.Fbs.Shape.ICircleRange? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IShape.ICircleRange.Create(Aki.TDConfigMgr.AutoGenerated.IShape.Fb.ICircleRange.Create(o));
 		}
 
-		// Token: 0x06006CB4 RID: 27828 RVA: 0x001048CA File Offset: 0x00102ACA
+		// Token: 0x0600732D RID: 29485 RVA: 0x00112921 File Offset: 0x00110B21
 		private static Aki.TDConfigMgr.AutoGenerated.IShape.ICylinder Make_Aki_UniverseEditor_Interface_Fbs_Shape_ICylinder(Aki.UniverseEditor.Interface.Fbs.Shape.ICylinder? o)
 		{
 			return Aki.TDConfigMgr.AutoGenerated.IShape.ICylinder.Create(Aki.TDConfigMgr.AutoGenerated.IShape.Fb.ICylinder.Create(o));
 		}
 
-		// Token: 0x06006CB5 RID: 27829 RVA: 0x001048D7 File Offset: 0x00102AD7
+		// Token: 0x0600732E RID: 29486 RVA: 0x0011292E File Offset: 0x00110B2E
+		private static ITakePhoto2CloseCameraAfterFinishActions Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhoto2CloseCameraAfterFinishActions(ITakePhoto2CloseCameraAfterFinishActions? o)
+		{
+			return ITakePhoto2CloseCameraAfterFinishActions.Create(ITakePhoto2CloseCameraAfterFinishActions.Create(o));
+		}
+
+		// Token: 0x0600732F RID: 29487 RVA: 0x0011293B File Offset: 0x00110B3B
+		private static ITakePhoto2KeepCameraOpen Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhoto2KeepCameraOpen(ITakePhoto2KeepCameraOpen? o)
+		{
+			return ITakePhoto2KeepCameraOpen.Create(ITakePhoto2KeepCameraOpen.Create(o));
+		}
+
+		// Token: 0x06007330 RID: 29488 RVA: 0x00112948 File Offset: 0x00110B48
 		private static ITakePhoto2EntityTarget Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhoto2EntityTarget(ITakePhoto2EntityTarget? o)
 		{
 			return ITakePhoto2EntityTarget.Create(ITakePhoto2EntityTarget.Create(o));
 		}
 
-		// Token: 0x06006CB6 RID: 27830 RVA: 0x001048E4 File Offset: 0x00102AE4
+		// Token: 0x06007331 RID: 29489 RVA: 0x00112955 File Offset: 0x00110B55
 		private static ITakePhoto2PhotoTargetEntityTarget Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhoto2PhotoTargetEntityTarget(ITakePhoto2PhotoTargetEntityTarget? o)
 		{
 			return ITakePhoto2PhotoTargetEntityTarget.Create(ITakePhoto2PhotoTargetEntityTarget.Create(o));
 		}
 
-		// Token: 0x06006CB7 RID: 27831 RVA: 0x001048F1 File Offset: 0x00102AF1
+		// Token: 0x06007332 RID: 29490 RVA: 0x00112962 File Offset: 0x00110B62
 		private static ITakePhoto2TaggedActorTarget Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhoto2TaggedActorTarget(ITakePhoto2TaggedActorTarget? o)
 		{
 			return ITakePhoto2TaggedActorTarget.Create(ITakePhoto2TaggedActorTarget.Create(o));
 		}
 
-		// Token: 0x06006CB8 RID: 27832 RVA: 0x001048FE File Offset: 0x00102AFE
+		// Token: 0x06007333 RID: 29491 RVA: 0x0011296F File Offset: 0x00110B6F
 		private static ITakePhoto2TargetEntityType Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhoto2TargetEntityType(ITakePhoto2TargetEntityType? o)
 		{
 			return ITakePhoto2TargetEntityType.Create(ITakePhoto2TargetEntityType.Create(o));
 		}
 
-		// Token: 0x06006CB9 RID: 27833 RVA: 0x0010490B File Offset: 0x00102B0B
+		// Token: 0x06007334 RID: 29492 RVA: 0x0011297C File Offset: 0x00110B7C
 		private static IVisionSystemQuestDoIdentify Make_Aki_UniverseEditor_Interface_Fbs_Quest_IVisionSystemQuestDoIdentify(IVisionSystemQuestDoIdentify? o)
 		{
 			return IVisionSystemQuestDoIdentify.Create(IVisionSystemQuestDoIdentify.Create(o));
 		}
 
-		// Token: 0x06006CBA RID: 27834 RVA: 0x00104918 File Offset: 0x00102B18
+		// Token: 0x06007335 RID: 29493 RVA: 0x00112989 File Offset: 0x00110B89
 		private static IVisionSystemQuestSetActivated Make_Aki_UniverseEditor_Interface_Fbs_Quest_IVisionSystemQuestSetActivated(IVisionSystemQuestSetActivated? o)
 		{
 			return IVisionSystemQuestSetActivated.Create(IVisionSystemQuestSetActivated.Create(o));
 		}
 
-		// Token: 0x06006CBB RID: 27835 RVA: 0x00104925 File Offset: 0x00102B25
+		// Token: 0x06007336 RID: 29494 RVA: 0x00112996 File Offset: 0x00110B96
 		private static IVisionSystemQuestTargetLevel Make_Aki_UniverseEditor_Interface_Fbs_Quest_IVisionSystemQuestTargetLevel(IVisionSystemQuestTargetLevel? o)
 		{
 			return IVisionSystemQuestTargetLevel.Create(IVisionSystemQuestTargetLevel.Create(o));
 		}
 
-		// Token: 0x06006CBC RID: 27836 RVA: 0x00104932 File Offset: 0x00102B32
+		// Token: 0x06007337 RID: 29495 RVA: 0x001129A3 File Offset: 0x00110BA3
 		private static IAssignLoadingBackground Make_Aki_UniverseEditor_Interface_Fbs_Quest_IAssignLoadingBackground(IAssignLoadingBackground? o)
 		{
 			return IAssignLoadingBackground.Create(IAssignLoadingBackground.Create(o));
 		}
 
-		// Token: 0x06006CBD RID: 27837 RVA: 0x0010493F File Offset: 0x00102B3F
+		// Token: 0x06007338 RID: 29496 RVA: 0x001129B0 File Offset: 0x00110BB0
 		private static IDisableHLOD Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDisableHLOD(IDisableHLOD? o)
 		{
 			return IDisableHLOD.Create(IDisableHLOD.Create(o));
 		}
 
-		// Token: 0x06006CBE RID: 27838 RVA: 0x0010494C File Offset: 0x00102B4C
+		// Token: 0x06007339 RID: 29497 RVA: 0x001129BD File Offset: 0x00110BBD
 		private static ITrapDefenseConditionStepLoadAndRestoreMap Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrapDefenseConditionStepLoadAndRestoreMap(ITrapDefenseConditionStepLoadAndRestoreMap? o)
 		{
 			return ITrapDefenseConditionStepLoadAndRestoreMap.Create(ITrapDefenseConditionStepLoadAndRestoreMap.Create(o));
 		}
 
-		// Token: 0x06006CBF RID: 27839 RVA: 0x00104959 File Offset: 0x00102B59
+		// Token: 0x0600733A RID: 29498 RVA: 0x001129CA File Offset: 0x00110BCA
 		private static ITrapDefenseConditionStepMapChange Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrapDefenseConditionStepMapChange(ITrapDefenseConditionStepMapChange? o)
 		{
 			return ITrapDefenseConditionStepMapChange.Create(ITrapDefenseConditionStepMapChange.Create(o));
 		}
 
-		// Token: 0x06006CC0 RID: 27840 RVA: 0x00104966 File Offset: 0x00102B66
+		// Token: 0x0600733B RID: 29499 RVA: 0x001129D7 File Offset: 0x00110BD7
 		private static ITrapDefenseConditionStepPreview Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrapDefenseConditionStepPreview(ITrapDefenseConditionStepPreview? o)
 		{
 			return ITrapDefenseConditionStepPreview.Create(ITrapDefenseConditionStepPreview.Create(o));
 		}
 
-		// Token: 0x06006CC1 RID: 27841 RVA: 0x00104973 File Offset: 0x00102B73
+		// Token: 0x0600733C RID: 29500 RVA: 0x001129E4 File Offset: 0x00110BE4
 		private static ITrapDefenseConditionStepReward Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrapDefenseConditionStepReward(ITrapDefenseConditionStepReward? o)
 		{
 			return ITrapDefenseConditionStepReward.Create(ITrapDefenseConditionStepReward.Create(o));
 		}
 
-		// Token: 0x06006CC2 RID: 27842 RVA: 0x00104980 File Offset: 0x00102B80
+		// Token: 0x0600733D RID: 29501 RVA: 0x001129F1 File Offset: 0x00110BF1
 		private static ITrapDefenseConditionStepSpawnMonster Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrapDefenseConditionStepSpawnMonster(ITrapDefenseConditionStepSpawnMonster? o)
 		{
 			return ITrapDefenseConditionStepSpawnMonster.Create(ITrapDefenseConditionStepSpawnMonster.Create(o));
 		}
 
-		// Token: 0x06006CC3 RID: 27843 RVA: 0x0010498D File Offset: 0x00102B8D
+		// Token: 0x0600733E RID: 29502 RVA: 0x001129FE File Offset: 0x00110BFE
 		private static ICheckTrapDefenseBdBuffQualityUp Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckTrapDefenseBdBuffQualityUp(ICheckTrapDefenseBdBuffQualityUp? o)
 		{
 			return ICheckTrapDefenseBdBuffQualityUp.Create(ICheckTrapDefenseBdBuffQualityUp.Create(o));
 		}
 
-		// Token: 0x06006CC4 RID: 27844 RVA: 0x0010499A File Offset: 0x00102B9A
+		// Token: 0x0600733F RID: 29503 RVA: 0x00112A0B File Offset: 0x00110C0B
 		private static ICheckTrapDefenseEventMonsterKilled Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckTrapDefenseEventMonsterKilled(ICheckTrapDefenseEventMonsterKilled? o)
 		{
 			return ICheckTrapDefenseEventMonsterKilled.Create(ICheckTrapDefenseEventMonsterKilled.Create(o));
 		}
 
-		// Token: 0x06006CC5 RID: 27845 RVA: 0x001049A7 File Offset: 0x00102BA7
+		// Token: 0x06007340 RID: 29504 RVA: 0x00112A18 File Offset: 0x00110C18
 		private static ISurvivorsRougeConditionStepBattle Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISurvivorsRougeConditionStepBattle(ISurvivorsRougeConditionStepBattle? o)
 		{
 			return ISurvivorsRougeConditionStepBattle.Create(ISurvivorsRougeConditionStepBattle.Create(o));
 		}
 
-		// Token: 0x06006CC6 RID: 27846 RVA: 0x001049B4 File Offset: 0x00102BB4
+		// Token: 0x06007341 RID: 29505 RVA: 0x00112A25 File Offset: 0x00110C25
 		private static ISurvivorsRougeConditionStepChestReward Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISurvivorsRougeConditionStepChestReward(ISurvivorsRougeConditionStepChestReward? o)
 		{
 			return ISurvivorsRougeConditionStepChestReward.Create(ISurvivorsRougeConditionStepChestReward.Create(o));
 		}
 
-		// Token: 0x06006CC7 RID: 27847 RVA: 0x001049C1 File Offset: 0x00102BC1
+		// Token: 0x06007342 RID: 29506 RVA: 0x00112A32 File Offset: 0x00110C32
 		private static ISurvivorsRougeConditionStepChooseItem Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISurvivorsRougeConditionStepChooseItem(ISurvivorsRougeConditionStepChooseItem? o)
 		{
 			return ISurvivorsRougeConditionStepChooseItem.Create(ISurvivorsRougeConditionStepChooseItem.Create(o));
 		}
 
-		// Token: 0x06006CC8 RID: 27848 RVA: 0x001049CE File Offset: 0x00102BCE
+		// Token: 0x06007343 RID: 29507 RVA: 0x00112A3F File Offset: 0x00110C3F
 		private static ISurvivorsRougeConditionStepChooseWeapon Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISurvivorsRougeConditionStepChooseWeapon(ISurvivorsRougeConditionStepChooseWeapon? o)
 		{
 			return ISurvivorsRougeConditionStepChooseWeapon.Create(ISurvivorsRougeConditionStepChooseWeapon.Create(o));
 		}
 
-		// Token: 0x06006CC9 RID: 27849 RVA: 0x001049DB File Offset: 0x00102BDB
+		// Token: 0x06007344 RID: 29508 RVA: 0x00112A4C File Offset: 0x00110C4C
 		private static ISurvivorsRougeConditionStepEnd Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISurvivorsRougeConditionStepEnd(ISurvivorsRougeConditionStepEnd? o)
 		{
 			return ISurvivorsRougeConditionStepEnd.Create(ISurvivorsRougeConditionStepEnd.Create(o));
 		}
 
-		// Token: 0x06006CCA RID: 27850 RVA: 0x001049E8 File Offset: 0x00102BE8
+		// Token: 0x06007345 RID: 29509 RVA: 0x00112A59 File Offset: 0x00110C59
 		private static ISurvivorsRougeConditionStepPrepare Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISurvivorsRougeConditionStepPrepare(ISurvivorsRougeConditionStepPrepare? o)
 		{
 			return ISurvivorsRougeConditionStepPrepare.Create(ISurvivorsRougeConditionStepPrepare.Create(o));
 		}
 
-		// Token: 0x06006CCB RID: 27851 RVA: 0x001049F5 File Offset: 0x00102BF5
+		// Token: 0x06007346 RID: 29510 RVA: 0x00112A66 File Offset: 0x00110C66
 		private static ISurvivorsRougeConditionStepShopping Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISurvivorsRougeConditionStepShopping(ISurvivorsRougeConditionStepShopping? o)
 		{
 			return ISurvivorsRougeConditionStepShopping.Create(ISurvivorsRougeConditionStepShopping.Create(o));
 		}
 
-		// Token: 0x06006CCC RID: 27852 RVA: 0x00104A02 File Offset: 0x00102C02
+		// Token: 0x06007347 RID: 29511 RVA: 0x00112A73 File Offset: 0x00110C73
 		private static IKurotatoConditionStepBattle Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKurotatoConditionStepBattle(IKurotatoConditionStepBattle? o)
 		{
 			return IKurotatoConditionStepBattle.Create(IKurotatoConditionStepBattle.Create(o));
 		}
 
-		// Token: 0x06006CCD RID: 27853 RVA: 0x00104A0F File Offset: 0x00102C0F
+		// Token: 0x06007348 RID: 29512 RVA: 0x00112A80 File Offset: 0x00110C80
 		private static IKurotatoConditionStepChestReward Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKurotatoConditionStepChestReward(IKurotatoConditionStepChestReward? o)
 		{
 			return IKurotatoConditionStepChestReward.Create(IKurotatoConditionStepChestReward.Create(o));
 		}
 
-		// Token: 0x06006CCE RID: 27854 RVA: 0x00104A1C File Offset: 0x00102C1C
+		// Token: 0x06007349 RID: 29513 RVA: 0x00112A8D File Offset: 0x00110C8D
 		private static IKurotatoConditionStepEnd Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKurotatoConditionStepEnd(IKurotatoConditionStepEnd? o)
 		{
 			return IKurotatoConditionStepEnd.Create(IKurotatoConditionStepEnd.Create(o));
 		}
 
-		// Token: 0x06006CCF RID: 27855 RVA: 0x00104A29 File Offset: 0x00102C29
+		// Token: 0x0600734A RID: 29514 RVA: 0x00112A9A File Offset: 0x00110C9A
 		private static IKurotatoConditionStepPrepare Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKurotatoConditionStepPrepare(IKurotatoConditionStepPrepare? o)
 		{
 			return IKurotatoConditionStepPrepare.Create(IKurotatoConditionStepPrepare.Create(o));
 		}
 
-		// Token: 0x06006CD0 RID: 27856 RVA: 0x00104A36 File Offset: 0x00102C36
+		// Token: 0x0600734B RID: 29515 RVA: 0x00112AA7 File Offset: 0x00110CA7
 		private static IKurotatoConditionStepSaveRole Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKurotatoConditionStepSaveRole(IKurotatoConditionStepSaveRole? o)
 		{
 			return IKurotatoConditionStepSaveRole.Create(IKurotatoConditionStepSaveRole.Create(o));
 		}
 
-		// Token: 0x06006CD1 RID: 27857 RVA: 0x00104A43 File Offset: 0x00102C43
+		// Token: 0x0600734C RID: 29516 RVA: 0x00112AB4 File Offset: 0x00110CB4
 		private static IKurotatoConditionStepShopping Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKurotatoConditionStepShopping(IKurotatoConditionStepShopping? o)
 		{
 			return IKurotatoConditionStepShopping.Create(IKurotatoConditionStepShopping.Create(o));
 		}
 
-		// Token: 0x06006CD2 RID: 27858 RVA: 0x00104A50 File Offset: 0x00102C50
+		// Token: 0x0600734D RID: 29517 RVA: 0x00112AC1 File Offset: 0x00110CC1
 		private static IKurotatoConditionStepUpdateBatch Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKurotatoConditionStepUpdateBatch(IKurotatoConditionStepUpdateBatch? o)
 		{
 			return IKurotatoConditionStepUpdateBatch.Create(IKurotatoConditionStepUpdateBatch.Create(o));
 		}
 
-		// Token: 0x06006CD3 RID: 27859 RVA: 0x00104A5D File Offset: 0x00102C5D
+		// Token: 0x0600734E RID: 29518 RVA: 0x00112ACE File Offset: 0x00110CCE
 		private static IKurotatoConditionStepUpgradeReward Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKurotatoConditionStepUpgradeReward(IKurotatoConditionStepUpgradeReward? o)
 		{
 			return IKurotatoConditionStepUpgradeReward.Create(IKurotatoConditionStepUpgradeReward.Create(o));
 		}
 
-		// Token: 0x06006CD4 RID: 27860 RVA: 0x00104A6A File Offset: 0x00102C6A
+		// Token: 0x0600734F RID: 29519 RVA: 0x00112ADB File Offset: 0x00110CDB
 		private static IRoleTowerConditionStepBattle Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTowerConditionStepBattle(IRoleTowerConditionStepBattle? o)
 		{
 			return IRoleTowerConditionStepBattle.Create(IRoleTowerConditionStepBattle.Create(o));
 		}
 
-		// Token: 0x06006CD5 RID: 27861 RVA: 0x00104A77 File Offset: 0x00102C77
+		// Token: 0x06007350 RID: 29520 RVA: 0x00112AE8 File Offset: 0x00110CE8
 		private static IRoleTowerConditionStepLoadSubLevel Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTowerConditionStepLoadSubLevel(IRoleTowerConditionStepLoadSubLevel? o)
 		{
 			return IRoleTowerConditionStepLoadSubLevel.Create(IRoleTowerConditionStepLoadSubLevel.Create(o));
 		}
 
-		// Token: 0x06006CD6 RID: 27862 RVA: 0x00104A84 File Offset: 0x00102C84
+		// Token: 0x06007351 RID: 29521 RVA: 0x00112AF5 File Offset: 0x00110CF5
 		private static IRoleTowerConditionStepPrepare Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTowerConditionStepPrepare(IRoleTowerConditionStepPrepare? o)
 		{
 			return IRoleTowerConditionStepPrepare.Create(IRoleTowerConditionStepPrepare.Create(o));
 		}
 
-		// Token: 0x06006CD7 RID: 27863 RVA: 0x00104A91 File Offset: 0x00102C91
+		// Token: 0x06007352 RID: 29522 RVA: 0x00112B02 File Offset: 0x00110D02
 		private static IRoleTowerConditionStepSettle Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTowerConditionStepSettle(IRoleTowerConditionStepSettle? o)
 		{
 			return IRoleTowerConditionStepSettle.Create(IRoleTowerConditionStepSettle.Create(o));
 		}
 
-		// Token: 0x06006CD8 RID: 27864 RVA: 0x00104A9E File Offset: 0x00102C9E
+		// Token: 0x06007353 RID: 29523 RVA: 0x00112B0F File Offset: 0x00110D0F
 		private static IRoleTowerConditionStepTeamUpgrade Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRoleTowerConditionStepTeamUpgrade(IRoleTowerConditionStepTeamUpgrade? o)
 		{
 			return IRoleTowerConditionStepTeamUpgrade.Create(IRoleTowerConditionStepTeamUpgrade.Create(o));
 		}
 
-		// Token: 0x06006CD9 RID: 27865 RVA: 0x00104AAB File Offset: 0x00102CAB
+		// Token: 0x06007354 RID: 29524 RVA: 0x00112B1C File Offset: 0x00110D1C
 		private static IPhotographTargetPlayer Make_Aki_UniverseEditor_Interface_Fbs_Quest_IPhotographTargetPlayer(IPhotographTargetPlayer? o)
 		{
 			return IPhotographTargetPlayer.Create(IPhotographTargetPlayer.Create(o));
 		}
 
-		// Token: 0x06006CDA RID: 27866 RVA: 0x00104AB8 File Offset: 0x00102CB8
+		// Token: 0x06007355 RID: 29525 RVA: 0x00112B29 File Offset: 0x00110D29
 		private static IPhotographTargetRolesOnScene Make_Aki_UniverseEditor_Interface_Fbs_Quest_IPhotographTargetRolesOnScene(IPhotographTargetRolesOnScene? o)
 		{
 			return IPhotographTargetRolesOnScene.Create(IPhotographTargetRolesOnScene.Create(o));
 		}
 
-		// Token: 0x06006CDB RID: 27867 RVA: 0x00104AC5 File Offset: 0x00102CC5
+		// Token: 0x06007356 RID: 29526 RVA: 0x00112B36 File Offset: 0x00110D36
 		private static IPhotographSubTargetAnyRole Make_Aki_UniverseEditor_Interface_Fbs_Quest_IPhotographSubTargetAnyRole(IPhotographSubTargetAnyRole? o)
 		{
 			return IPhotographSubTargetAnyRole.Create(IPhotographSubTargetAnyRole.Create(o));
 		}
 
-		// Token: 0x06006CDC RID: 27868 RVA: 0x00104AD2 File Offset: 0x00102CD2
+		// Token: 0x06007357 RID: 29527 RVA: 0x00112B43 File Offset: 0x00110D43
 		private static IPhotographSubTargetSpecificRole Make_Aki_UniverseEditor_Interface_Fbs_Quest_IPhotographSubTargetSpecificRole(IPhotographSubTargetSpecificRole? o)
 		{
 			return IPhotographSubTargetSpecificRole.Create(IPhotographSubTargetSpecificRole.Create(o));
 		}
 
-		// Token: 0x06006CDD RID: 27869 RVA: 0x00104ADF File Offset: 0x00102CDF
+		// Token: 0x06007358 RID: 29528 RVA: 0x00112B50 File Offset: 0x00110D50
 		private static IRollBlockLaunchMethodInteract Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRollBlockLaunchMethodInteract(IRollBlockLaunchMethodInteract? o)
 		{
 			return IRollBlockLaunchMethodInteract.Create(IRollBlockLaunchMethodInteract.Create(o));
 		}
 
-		// Token: 0x06006CDE RID: 27870 RVA: 0x00104AEC File Offset: 0x00102CEC
+		// Token: 0x06007359 RID: 29529 RVA: 0x00112B5D File Offset: 0x00110D5D
 		private static IRollBlockLaunchMethodRange Make_Aki_UniverseEditor_Interface_Fbs_Quest_IRollBlockLaunchMethodRange(IRollBlockLaunchMethodRange? o)
 		{
 			return IRollBlockLaunchMethodRange.Create(IRollBlockLaunchMethodRange.Create(o));
 		}
 
-		// Token: 0x06006CDF RID: 27871 RVA: 0x00104AF9 File Offset: 0x00102CF9
+		// Token: 0x0600735A RID: 29530 RVA: 0x00112B6A File Offset: 0x00110D6A
 		private static IUseWeatherSwitchConditionAnyWeather Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseWeatherSwitchConditionAnyWeather(IUseWeatherSwitchConditionAnyWeather? o)
 		{
 			return IUseWeatherSwitchConditionAnyWeather.Create(IUseWeatherSwitchConditionAnyWeather.Create(o));
 		}
 
-		// Token: 0x06006CE0 RID: 27872 RVA: 0x00104B06 File Offset: 0x00102D06
+		// Token: 0x0600735B RID: 29531 RVA: 0x00112B77 File Offset: 0x00110D77
 		private static IUseWeatherSwitchConditionSpecifiedWeather Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseWeatherSwitchConditionSpecifiedWeather(IUseWeatherSwitchConditionSpecifiedWeather? o)
 		{
 			return IUseWeatherSwitchConditionSpecifiedWeather.Create(IUseWeatherSwitchConditionSpecifiedWeather.Create(o));
 		}
 
-		// Token: 0x06006CE1 RID: 27873 RVA: 0x00104B13 File Offset: 0x00102D13
+		// Token: 0x0600735C RID: 29532 RVA: 0x00112B84 File Offset: 0x00110D84
 		private static ICheckSpringFestivalGuessJokerCompleted Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckSpringFestivalGuessJokerCompleted(ICheckSpringFestivalGuessJokerCompleted? o)
 		{
 			return ICheckSpringFestivalGuessJokerCompleted.Create(ICheckSpringFestivalGuessJokerCompleted.Create(o));
 		}
 
-		// Token: 0x06006CE2 RID: 27874 RVA: 0x00104B20 File Offset: 0x00102D20
+		// Token: 0x0600735D RID: 29533 RVA: 0x00112B91 File Offset: 0x00110D91
 		private static ICheckSpringFestivalMixDrinksCompleted Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckSpringFestivalMixDrinksCompleted(ICheckSpringFestivalMixDrinksCompleted? o)
 		{
 			return ICheckSpringFestivalMixDrinksCompleted.Create(ICheckSpringFestivalMixDrinksCompleted.Create(o));
 		}
 
-		// Token: 0x06006CE3 RID: 27875 RVA: 0x00104B2D File Offset: 0x00102D2D
+		// Token: 0x0600735E RID: 29534 RVA: 0x00112B9E File Offset: 0x00110D9E
 		private static ICommonEventEntityStateChange Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICommonEventEntityStateChange(ICommonEventEntityStateChange? o)
 		{
 			return ICommonEventEntityStateChange.Create(ICommonEventEntityStateChange.Create(o));
 		}
 
-		// Token: 0x06006CE4 RID: 27876 RVA: 0x00104B3A File Offset: 0x00102D3A
+		// Token: 0x0600735F RID: 29535 RVA: 0x00112BAB File Offset: 0x00110DAB
 		private static ICommonEventVarValueChange Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICommonEventVarValueChange(ICommonEventVarValueChange? o)
 		{
 			return ICommonEventVarValueChange.Create(ICommonEventVarValueChange.Create(o));
 		}
 
-		// Token: 0x06006CE5 RID: 27877 RVA: 0x00104B47 File Offset: 0x00102D47
+		// Token: 0x06007360 RID: 29536 RVA: 0x00112BB8 File Offset: 0x00110DB8
 		private static IAtomicProcess Make_Aki_UniverseEditor_Interface_Fbs_Quest_IAtomicProcess(IAtomicProcess? o)
 		{
 			return IAtomicProcess.Create(IAtomicProcess.Create(o));
 		}
 
-		// Token: 0x06006CE6 RID: 27878 RVA: 0x00104B54 File Offset: 0x00102D54
+		// Token: 0x06007361 RID: 29537 RVA: 0x00112BC5 File Offset: 0x00110DC5
 		private static IAwakeAndLoadEntityCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IAwakeAndLoadEntityCondition(IAwakeAndLoadEntityCondition? o)
 		{
 			return IAwakeAndLoadEntityCondition.Create(IAwakeAndLoadEntityCondition.Create(o));
 		}
 
-		// Token: 0x06006CE7 RID: 27879 RVA: 0x00104B61 File Offset: 0x00102D61
+		// Token: 0x06007362 RID: 29538 RVA: 0x00112BD2 File Offset: 0x00110DD2
 		private static ICheckActivityStateCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckActivityStateCondition(ICheckActivityStateCondition? o)
 		{
 			return ICheckActivityStateCondition.Create(ICheckActivityStateCondition.Create(o));
 		}
 
-		// Token: 0x06006CE8 RID: 27880 RVA: 0x00104B6E File Offset: 0x00102D6E
+		// Token: 0x06007363 RID: 29539 RVA: 0x00112BDF File Offset: 0x00110DDF
 		private static ICheckClientConditionGroupQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckClientConditionGroupQuestCondition(ICheckClientConditionGroupQuestCondition? o)
 		{
 			return ICheckClientConditionGroupQuestCondition.Create(ICheckClientConditionGroupQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006CE9 RID: 27881 RVA: 0x00104B7B File Offset: 0x00102D7B
+		// Token: 0x06007364 RID: 29540 RVA: 0x00112BEC File Offset: 0x00110DEC
 		private static ICheckConditionGroupQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckConditionGroupQuestCondition(ICheckConditionGroupQuestCondition? o)
 		{
 			return ICheckConditionGroupQuestCondition.Create(ICheckConditionGroupQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006CEA RID: 27882 RVA: 0x00104B88 File Offset: 0x00102D88
+		// Token: 0x06007365 RID: 29541 RVA: 0x00112BF9 File Offset: 0x00110DF9
 		private static ICheckEntityStateQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckEntityStateQuestCondition(ICheckEntityStateQuestCondition? o)
 		{
 			return ICheckEntityStateQuestCondition.Create(ICheckEntityStateQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006CEB RID: 27883 RVA: 0x00104B95 File Offset: 0x00102D95
+		// Token: 0x06007366 RID: 29542 RVA: 0x00112C06 File Offset: 0x00110E06
 		private static ICheckLevelPlayQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckLevelPlayQuestCondition(ICheckLevelPlayQuestCondition? o)
 		{
 			return ICheckLevelPlayQuestCondition.Create(ICheckLevelPlayQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006CEC RID: 27884 RVA: 0x00104BA2 File Offset: 0x00102DA2
+		// Token: 0x06007367 RID: 29543 RVA: 0x00112C13 File Offset: 0x00110E13
 		private static ICheckPlayerInputCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckPlayerInputCondition(ICheckPlayerInputCondition? o)
 		{
 			return ICheckPlayerInputCondition.Create(ICheckPlayerInputCondition.Create(o));
 		}
 
-		// Token: 0x06006CED RID: 27885 RVA: 0x00104BAF File Offset: 0x00102DAF
+		// Token: 0x06007368 RID: 29544 RVA: 0x00112C20 File Offset: 0x00110E20
 		private static ICheckSpringFestivalGameplayCompleted Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckSpringFestivalGameplayCompleted(ICheckSpringFestivalGameplayCompleted? o)
 		{
 			return ICheckSpringFestivalGameplayCompleted.Create(ICheckSpringFestivalGameplayCompleted.Create(o));
 		}
 
-		// Token: 0x06006CEE RID: 27886 RVA: 0x00104BBC File Offset: 0x00102DBC
+		// Token: 0x06007369 RID: 29545 RVA: 0x00112C2D File Offset: 0x00110E2D
 		private static ICheckTargetBattleAttributeCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckTargetBattleAttributeCondition(ICheckTargetBattleAttributeCondition? o)
 		{
 			return ICheckTargetBattleAttributeCondition.Create(ICheckTargetBattleAttributeCondition.Create(o));
 		}
 
-		// Token: 0x06006CEF RID: 27887 RVA: 0x00104BC9 File Offset: 0x00102DC9
+		// Token: 0x0600736A RID: 29546 RVA: 0x00112C3A File Offset: 0x00110E3A
 		private static ICheckTrapDefenseEventCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckTrapDefenseEventCondition(ICheckTrapDefenseEventCondition? o)
 		{
 			return ICheckTrapDefenseEventCondition.Create(ICheckTrapDefenseEventCondition.Create(o));
 		}
 
-		// Token: 0x06006CF0 RID: 27888 RVA: 0x00104BD6 File Offset: 0x00102DD6
+		// Token: 0x0600736B RID: 29547 RVA: 0x00112C47 File Offset: 0x00110E47
 		private static ICheckUiGameQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckUiGameQuestCondition(ICheckUiGameQuestCondition? o)
 		{
 			return ICheckUiGameQuestCondition.Create(ICheckUiGameQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006CF1 RID: 27889 RVA: 0x00104BE3 File Offset: 0x00102DE3
+		// Token: 0x0600736C RID: 29548 RVA: 0x00112C54 File Offset: 0x00110E54
 		private static ICompareActorVar Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICompareActorVar(ICompareActorVar? o)
 		{
 			return ICompareActorVar.Create(ICompareActorVar.Create(o));
 		}
 
-		// Token: 0x06006CF2 RID: 27890 RVA: 0x00104BF0 File Offset: 0x00102DF0
+		// Token: 0x0600736D RID: 29549 RVA: 0x00112C61 File Offset: 0x00110E61
 		private static ICompareVarConditionInChildQuest Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICompareVarConditionInChildQuest(ICompareVarConditionInChildQuest? o)
 		{
 			return ICompareVarConditionInChildQuest.Create(ICompareVarConditionInChildQuest.Create(o));
 		}
 
-		// Token: 0x06006CF3 RID: 27891 RVA: 0x00104BFD File Offset: 0x00102DFD
+		// Token: 0x0600736E RID: 29550 RVA: 0x00112C6E File Offset: 0x00110E6E
 		private static ICrossSceneSyncKillMonster Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICrossSceneSyncKillMonster(ICrossSceneSyncKillMonster? o)
 		{
 			return ICrossSceneSyncKillMonster.Create(ICrossSceneSyncKillMonster.Create(o));
 		}
 
-		// Token: 0x06006CF4 RID: 27892 RVA: 0x00104C0A File Offset: 0x00102E0A
+		// Token: 0x0600736F RID: 29551 RVA: 0x00112C7B File Offset: 0x00110E7B
 		private static IDetectCombatState2Condition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDetectCombatState2Condition(IDetectCombatState2Condition? o)
 		{
 			return IDetectCombatState2Condition.Create(IDetectCombatState2Condition.Create(o));
 		}
 
-		// Token: 0x06006CF5 RID: 27893 RVA: 0x00104C17 File Offset: 0x00102E17
+		// Token: 0x06007370 RID: 29552 RVA: 0x00112C88 File Offset: 0x00110E88
 		private static IDetectCombatStateCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDetectCombatStateCondition(IDetectCombatStateCondition? o)
 		{
 			return IDetectCombatStateCondition.Create(IDetectCombatStateCondition.Create(o));
 		}
 
-		// Token: 0x06006CF6 RID: 27894 RVA: 0x00104C24 File Offset: 0x00102E24
+		// Token: 0x06007371 RID: 29553 RVA: 0x00112C95 File Offset: 0x00110E95
 		private static IDoInteractQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDoInteractQuestCondition(IDoInteractQuestCondition? o)
 		{
 			return IDoInteractQuestCondition.Create(IDoInteractQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006CF7 RID: 27895 RVA: 0x00104C31 File Offset: 0x00102E31
+		// Token: 0x06007372 RID: 29554 RVA: 0x00112CA2 File Offset: 0x00110EA2
 		private static IEnterDungeonCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IEnterDungeonCondition(IEnterDungeonCondition? o)
 		{
 			return IEnterDungeonCondition.Create(IEnterDungeonCondition.Create(o));
 		}
 
-		// Token: 0x06006CF8 RID: 27896 RVA: 0x00104C3E File Offset: 0x00102E3E
+		// Token: 0x06007373 RID: 29555 RVA: 0x00112CAF File Offset: 0x00110EAF
 		private static IFinishArcadeGameplay Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishArcadeGameplay(IFinishArcadeGameplay? o)
 		{
 			return IFinishArcadeGameplay.Create(IFinishArcadeGameplay.Create(o));
 		}
 
-		// Token: 0x06006CF9 RID: 27897 RVA: 0x00104C4B File Offset: 0x00102E4B
+		// Token: 0x06007374 RID: 29556 RVA: 0x00112CBC File Offset: 0x00110EBC
 		private static IFinishBvbChallenge Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishBvbChallenge(IFinishBvbChallenge? o)
 		{
 			return IFinishBvbChallenge.Create(IFinishBvbChallenge.Create(o));
 		}
 
-		// Token: 0x06006CFA RID: 27898 RVA: 0x00104C58 File Offset: 0x00102E58
+		// Token: 0x06007375 RID: 29557 RVA: 0x00112CC9 File Offset: 0x00110EC9
 		private static IFinishDungeonQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishDungeonQuestCondition(IFinishDungeonQuestCondition? o)
 		{
 			return IFinishDungeonQuestCondition.Create(IFinishDungeonQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006CFB RID: 27899 RVA: 0x00104C65 File Offset: 0x00102E65
+		// Token: 0x06007376 RID: 29558 RVA: 0x00112CD6 File Offset: 0x00110ED6
 		private static IFinishFlipperCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishFlipperCondition(IFinishFlipperCondition? o)
 		{
 			return IFinishFlipperCondition.Create(IFinishFlipperCondition.Create(o));
 		}
 
-		// Token: 0x06006CFC RID: 27900 RVA: 0x00104C72 File Offset: 0x00102E72
+		// Token: 0x06007377 RID: 29559 RVA: 0x00112CE3 File Offset: 0x00110EE3
 		private static IFinishJellyfishReturnCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishJellyfishReturnCondition(IFinishJellyfishReturnCondition? o)
 		{
 			return IFinishJellyfishReturnCondition.Create(IFinishJellyfishReturnCondition.Create(o));
 		}
 
-		// Token: 0x06006CFD RID: 27901 RVA: 0x00104C7F File Offset: 0x00102E7F
+		// Token: 0x06007378 RID: 29560 RVA: 0x00112CF0 File Offset: 0x00110EF0
 		private static IFinishKuroSimpleCombatKillMonster Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishKuroSimpleCombatKillMonster(IFinishKuroSimpleCombatKillMonster? o)
 		{
 			return IFinishKuroSimpleCombatKillMonster.Create(IFinishKuroSimpleCombatKillMonster.Create(o));
 		}
 
-		// Token: 0x06006CFE RID: 27902 RVA: 0x00104C8C File Offset: 0x00102E8C
+		// Token: 0x06007379 RID: 29561 RVA: 0x00112CFD File Offset: 0x00110EFD
 		private static IFinishKurotatoCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishKurotatoCondition(IFinishKurotatoCondition? o)
 		{
 			return IFinishKurotatoCondition.Create(IFinishKurotatoCondition.Create(o));
 		}
 
-		// Token: 0x06006CFF RID: 27903 RVA: 0x00104C99 File Offset: 0x00102E99
+		// Token: 0x0600737A RID: 29562 RVA: 0x00112D0A File Offset: 0x00110F0A
 		private static IFinishRhythmSpaceshipCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishRhythmSpaceshipCondition(IFinishRhythmSpaceshipCondition? o)
 		{
 			return IFinishRhythmSpaceshipCondition.Create(IFinishRhythmSpaceshipCondition.Create(o));
 		}
 
-		// Token: 0x06006D00 RID: 27904 RVA: 0x00104CA6 File Offset: 0x00102EA6
+		// Token: 0x0600737B RID: 29563 RVA: 0x00112D17 File Offset: 0x00110F17
 		private static IFinishRoleTowerCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishRoleTowerCondition(IFinishRoleTowerCondition? o)
 		{
 			return IFinishRoleTowerCondition.Create(IFinishRoleTowerCondition.Create(o));
 		}
 
-		// Token: 0x06006D01 RID: 27905 RVA: 0x00104CB3 File Offset: 0x00102EB3
+		// Token: 0x0600737C RID: 29564 RVA: 0x00112D24 File Offset: 0x00110F24
 		private static IFinishRollBlock Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishRollBlock(IFinishRollBlock? o)
 		{
 			return IFinishRollBlock.Create(IFinishRollBlock.Create(o));
 		}
 
-		// Token: 0x06006D02 RID: 27906 RVA: 0x00104CC0 File Offset: 0x00102EC0
+		// Token: 0x0600737D RID: 29565 RVA: 0x00112D31 File Offset: 0x00110F31
 		private static IFinishSurvivorsRougeCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishSurvivorsRougeCondition(IFinishSurvivorsRougeCondition? o)
 		{
 			return IFinishSurvivorsRougeCondition.Create(IFinishSurvivorsRougeCondition.Create(o));
 		}
 
-		// Token: 0x06006D03 RID: 27907 RVA: 0x00104CCD File Offset: 0x00102ECD
+		// Token: 0x0600737E RID: 29566 RVA: 0x00112D3E File Offset: 0x00110F3E
 		private static IFinishTetris Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishTetris(IFinishTetris? o)
 		{
 			return IFinishTetris.Create(IFinishTetris.Create(o));
 		}
 
-		// Token: 0x06006D04 RID: 27908 RVA: 0x00104CDA File Offset: 0x00102EDA
+		// Token: 0x0600737F RID: 29567 RVA: 0x00112D4B File Offset: 0x00110F4B
 		private static IFinishTrapDefenseCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFinishTrapDefenseCondition(IFinishTrapDefenseCondition? o)
 		{
 			return IFinishTrapDefenseCondition.Create(IFinishTrapDefenseCondition.Create(o));
 		}
 
-		// Token: 0x06006D05 RID: 27909 RVA: 0x00104CE7 File Offset: 0x00102EE7
+		// Token: 0x06007380 RID: 29568 RVA: 0x00112D58 File Offset: 0x00110F58
 		private static IGetItemQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IGetItemQuestCondition(IGetItemQuestCondition? o)
 		{
 			return IGetItemQuestCondition.Create(IGetItemQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D06 RID: 27910 RVA: 0x00104CF4 File Offset: 0x00102EF4
+		// Token: 0x06007381 RID: 29569 RVA: 0x00112D65 File Offset: 0x00110F65
 		private static IGetSkillQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IGetSkillQuestCondition(IGetSkillQuestCondition? o)
 		{
 			return IGetSkillQuestCondition.Create(IGetSkillQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D07 RID: 27911 RVA: 0x00104D01 File Offset: 0x00102F01
+		// Token: 0x06007382 RID: 29570 RVA: 0x00112D72 File Offset: 0x00110F72
 		private static IGuideCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IGuideCondition(IGuideCondition? o)
 		{
 			return IGuideCondition.Create(IGuideCondition.Create(o));
 		}
 
-		// Token: 0x06006D08 RID: 27912 RVA: 0x00104D0E File Offset: 0x00102F0E
+		// Token: 0x06007383 RID: 29571 RVA: 0x00112D7F File Offset: 0x00110F7F
 		private static IHandInItemsCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IHandInItemsCondition(IHandInItemsCondition? o)
 		{
 			return IHandInItemsCondition.Create(IHandInItemsCondition.Create(o));
 		}
 
-		// Token: 0x06006D09 RID: 27913 RVA: 0x00104D1B File Offset: 0x00102F1B
+		// Token: 0x06007384 RID: 29572 RVA: 0x00112D8C File Offset: 0x00110F8C
 		private static IInformationViewCheckCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IInformationViewCheckCondition(IInformationViewCheckCondition? o)
 		{
 			return IInformationViewCheckCondition.Create(IInformationViewCheckCondition.Create(o));
 		}
 
-		// Token: 0x06006D0A RID: 27914 RVA: 0x00104D28 File Offset: 0x00102F28
+		// Token: 0x06007385 RID: 29573 RVA: 0x00112D99 File Offset: 0x00110F99
 		private static IKillChildQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IKillChildQuestCondition(IKillChildQuestCondition? o)
 		{
 			return IKillChildQuestCondition.Create(IKillChildQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D0B RID: 27915 RVA: 0x00104D35 File Offset: 0x00102F35
+		// Token: 0x06007386 RID: 29574 RVA: 0x00112DA6 File Offset: 0x00110FA6
 		private static ILeaveDungeonCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ILeaveDungeonCondition(ILeaveDungeonCondition? o)
 		{
 			return ILeaveDungeonCondition.Create(ILeaveDungeonCondition.Create(o));
 		}
 
-		// Token: 0x06006D0C RID: 27916 RVA: 0x00104D42 File Offset: 0x00102F42
+		// Token: 0x06007387 RID: 29575 RVA: 0x00112DB3 File Offset: 0x00110FB3
 		private static IListenToEvent Make_Aki_UniverseEditor_Interface_Fbs_Quest_IListenToEvent(IListenToEvent? o)
 		{
 			return IListenToEvent.Create(IListenToEvent.Create(o));
 		}
 
-		// Token: 0x06006D0D RID: 27917 RVA: 0x00104D4F File Offset: 0x00102F4F
+		// Token: 0x06007388 RID: 29576 RVA: 0x00112DC0 File Offset: 0x00110FC0
 		private static IMonsterCreatorQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IMonsterCreatorQuestCondition(IMonsterCreatorQuestCondition? o)
 		{
 			return IMonsterCreatorQuestCondition.Create(IMonsterCreatorQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D0E RID: 27918 RVA: 0x00104D5C File Offset: 0x00102F5C
+		// Token: 0x06007389 RID: 29577 RVA: 0x00112DCD File Offset: 0x00110FCD
 		private static INewHandInItemsCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_INewHandInItemsCondition(INewHandInItemsCondition? o)
 		{
 			return INewHandInItemsCondition.Create(INewHandInItemsCondition.Create(o));
 		}
 
-		// Token: 0x06006D0F RID: 27919 RVA: 0x00104D69 File Offset: 0x00102F69
+		// Token: 0x0600738A RID: 29578 RVA: 0x00112DDA File Offset: 0x00110FDA
 		private static IParallaxAlignQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IParallaxAlignQuestCondition(IParallaxAlignQuestCondition? o)
 		{
 			return IParallaxAlignQuestCondition.Create(IParallaxAlignQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D10 RID: 27920 RVA: 0x00104D76 File Offset: 0x00102F76
+		// Token: 0x0600738B RID: 29579 RVA: 0x00112DE7 File Offset: 0x00110FE7
 		private static IParkourQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IParkourQuestCondition(IParkourQuestCondition? o)
 		{
 			return IParkourQuestCondition.Create(IParkourQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D11 RID: 27921 RVA: 0x00104D83 File Offset: 0x00102F83
+		// Token: 0x0600738C RID: 29580 RVA: 0x00112DF4 File Offset: 0x00110FF4
 		private static IPlaybackShowTimelineQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IPlaybackShowTimelineQuestCondition(IPlaybackShowTimelineQuestCondition? o)
 		{
 			return IPlaybackShowTimelineQuestCondition.Create(IPlaybackShowTimelineQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D12 RID: 27922 RVA: 0x00104D90 File Offset: 0x00102F90
+		// Token: 0x0600738D RID: 29581 RVA: 0x00112E01 File Offset: 0x00111001
 		private static IPlayFlowQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IPlayFlowQuestCondition(IPlayFlowQuestCondition? o)
 		{
 			return IPlayFlowQuestCondition.Create(IPlayFlowQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D13 RID: 27923 RVA: 0x00104D9D File Offset: 0x00102F9D
+		// Token: 0x0600738E RID: 29582 RVA: 0x00112E0E File Offset: 0x0011100E
 		private static IProgramSpecialProcess Make_Aki_UniverseEditor_Interface_Fbs_Quest_IProgramSpecialProcess(IProgramSpecialProcess? o)
 		{
 			return IProgramSpecialProcess.Create(IProgramSpecialProcess.Create(o));
 		}
 
-		// Token: 0x06006D14 RID: 27924 RVA: 0x00104DAA File Offset: 0x00102FAA
+		// Token: 0x0600738F RID: 29583 RVA: 0x00112E1B File Offset: 0x0011101B
 		private static IReachAreaQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IReachAreaQuestCondition(IReachAreaQuestCondition? o)
 		{
 			return IReachAreaQuestCondition.Create(IReachAreaQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D15 RID: 27925 RVA: 0x00104DB7 File Offset: 0x00102FB7
+		// Token: 0x06007390 RID: 29584 RVA: 0x00112E28 File Offset: 0x00111028
 		private static IReadMailCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IReadMailCondition(IReadMailCondition? o)
 		{
 			return IReadMailCondition.Create(IReadMailCondition.Create(o));
 		}
 
-		// Token: 0x06006D16 RID: 27926 RVA: 0x00104DC4 File Offset: 0x00102FC4
+		// Token: 0x06007391 RID: 29585 RVA: 0x00112E35 File Offset: 0x00111035
 		private static IReadPhoneMessageQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IReadPhoneMessageQuestCondition(IReadPhoneMessageQuestCondition? o)
 		{
 			return IReadPhoneMessageQuestCondition.Create(IReadPhoneMessageQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D17 RID: 27927 RVA: 0x00104DD1 File Offset: 0x00102FD1
+		// Token: 0x06007392 RID: 29586 RVA: 0x00112E42 File Offset: 0x00111042
 		private static IReceiveTelecomChildQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IReceiveTelecomChildQuestCondition(IReceiveTelecomChildQuestCondition? o)
 		{
 			return IReceiveTelecomChildQuestCondition.Create(IReceiveTelecomChildQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D18 RID: 27928 RVA: 0x00104DDE File Offset: 0x00102FDE
+		// Token: 0x06007393 RID: 29587 RVA: 0x00112E4F File Offset: 0x0011104F
 		private static IScheduleTimeCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IScheduleTimeCondition(IScheduleTimeCondition? o)
 		{
 			return IScheduleTimeCondition.Create(IScheduleTimeCondition.Create(o));
 		}
 
-		// Token: 0x06006D19 RID: 27929 RVA: 0x00104DEB File Offset: 0x00102FEB
+		// Token: 0x06007394 RID: 29588 RVA: 0x00112E5C File Offset: 0x0011105C
 		private static IShowUiCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IShowUiCondition(IShowUiCondition? o)
 		{
 			return IShowUiCondition.Create(IShowUiCondition.Create(o));
 		}
 
-		// Token: 0x06006D1A RID: 27930 RVA: 0x00104DF8 File Offset: 0x00102FF8
+		// Token: 0x06007395 RID: 29589 RVA: 0x00112E69 File Offset: 0x00111069
 		private static ITakePhoto2Condition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhoto2Condition(ITakePhoto2Condition? o)
 		{
 			return ITakePhoto2Condition.Create(ITakePhoto2Condition.Create(o));
 		}
 
-		// Token: 0x06006D1B RID: 27931 RVA: 0x00104E05 File Offset: 0x00103005
+		// Token: 0x06007396 RID: 29590 RVA: 0x00112E76 File Offset: 0x00111076
 		private static ITakePhotoCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhotoCondition(ITakePhotoCondition? o)
 		{
 			return ITakePhotoCondition.Create(ITakePhotoCondition.Create(o));
 		}
 
-		// Token: 0x06006D1C RID: 27932 RVA: 0x00104E12 File Offset: 0x00103012
+		// Token: 0x06007397 RID: 29591 RVA: 0x00112E83 File Offset: 0x00111083
 		private static ITimerQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITimerQuestCondition(ITimerQuestCondition? o)
 		{
 			return ITimerQuestCondition.Create(ITimerQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D1D RID: 27933 RVA: 0x00104E1F File Offset: 0x0010301F
+		// Token: 0x06007398 RID: 29592 RVA: 0x00112E90 File Offset: 0x00111090
 		private static ITimeScaledPhotograph Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITimeScaledPhotograph(ITimeScaledPhotograph? o)
 		{
 			return ITimeScaledPhotograph.Create(ITimeScaledPhotograph.Create(o));
 		}
 
-		// Token: 0x06006D1E RID: 27934 RVA: 0x00104E2C File Offset: 0x0010302C
+		// Token: 0x06007399 RID: 29593 RVA: 0x00112E9D File Offset: 0x0011109D
 		private static IUseItemCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseItemCondition(IUseItemCondition? o)
 		{
 			return IUseItemCondition.Create(IUseItemCondition.Create(o));
 		}
 
-		// Token: 0x06006D1F RID: 27935 RVA: 0x00104E39 File Offset: 0x00103039
+		// Token: 0x0600739A RID: 29594 RVA: 0x00112EAA File Offset: 0x001110AA
 		private static IUseSkillQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseSkillQuestCondition(IUseSkillQuestCondition? o)
 		{
 			return IUseSkillQuestCondition.Create(IUseSkillQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D20 RID: 27936 RVA: 0x00104E46 File Offset: 0x00103046
+		// Token: 0x0600739B RID: 29595 RVA: 0x00112EB7 File Offset: 0x001110B7
 		private static IUseWeatherSwitchCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseWeatherSwitchCondition(IUseWeatherSwitchCondition? o)
 		{
 			return IUseWeatherSwitchCondition.Create(IUseWeatherSwitchCondition.Create(o));
 		}
 
-		// Token: 0x06006D21 RID: 27937 RVA: 0x00104E53 File Offset: 0x00103053
+		// Token: 0x0600739C RID: 29596 RVA: 0x00112EC4 File Offset: 0x001110C4
 		private static IVisionSystemQuestCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IVisionSystemQuestCondition(IVisionSystemQuestCondition? o)
 		{
 			return IVisionSystemQuestCondition.Create(IVisionSystemQuestCondition.Create(o));
 		}
 
-		// Token: 0x06006D22 RID: 27938 RVA: 0x00104E60 File Offset: 0x00103060
+		// Token: 0x0600739D RID: 29597 RVA: 0x00112ED1 File Offset: 0x001110D1
 		private static Aki.TDConfigMgr.Quest.WaitBattleCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IWaitBattleCondition(Aki.UniverseEditor.Interface.Fbs.Quest.IWaitBattleCondition? o)
 		{
 			return Aki.TDConfigMgr.Quest.WaitBattleCondition.Create(Aki.TDConfigMgr.Quest.Fb.WaitBattleCondition.Create(o));
 		}
 
-		// Token: 0x06006D23 RID: 27939 RVA: 0x00104E6D File Offset: 0x0010306D
+		// Token: 0x0600739E RID: 29598 RVA: 0x00112EDE File Offset: 0x001110DE
 		private static IWaitTimeCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IWaitTimeCondition(IWaitTimeCondition? o)
 		{
 			return IWaitTimeCondition.Create(IWaitTimeCondition.Create(o));
 		}
 
-		// Token: 0x06006D24 RID: 27940 RVA: 0x00104E7A File Offset: 0x0010307A
+		// Token: 0x0600739F RID: 29599 RVA: 0x00112EEB File Offset: 0x001110EB
 		private static Aki.TDConfigMgr.Quest.WaitUntilLevelSequenceReachMark Make_Aki_UniverseEditor_Interface_Fbs_Quest_IWaitUntilLevelSequenceReachMark(Aki.UniverseEditor.Interface.Fbs.Quest.IWaitUntilLevelSequenceReachMark? o)
 		{
 			return Aki.TDConfigMgr.Quest.WaitUntilLevelSequenceReachMark.Create(Aki.TDConfigMgr.Quest.Fb.WaitUntilLevelSequenceReachMark.Create(o));
 		}
 
-		// Token: 0x06006D25 RID: 27941 RVA: 0x00104E87 File Offset: 0x00103087
+		// Token: 0x060073A0 RID: 29600 RVA: 0x00112EF8 File Offset: 0x001110F8
 		private static IWalkingPatternCondition Make_Aki_UniverseEditor_Interface_Fbs_Quest_IWalkingPatternCondition(IWalkingPatternCondition? o)
 		{
 			return IWalkingPatternCondition.Create(IWalkingPatternCondition.Create(o));
 		}
 
-		// Token: 0x06006D26 RID: 27942 RVA: 0x00104E94 File Offset: 0x00103094
+		// Token: 0x060073A1 RID: 29601 RVA: 0x00112F05 File Offset: 0x00111105
 		private static ISaveNew Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISaveNew(ISaveNew? o)
 		{
 			return ISaveNew.Create(ISaveNew.Create(o));
 		}
 
-		// Token: 0x06006D27 RID: 27943 RVA: 0x00104EA1 File Offset: 0x001030A1
+		// Token: 0x060073A2 RID: 29602 RVA: 0x00112F12 File Offset: 0x00111112
 		private static ISavePoint Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISavePoint(ISavePoint? o)
 		{
 			return ISavePoint.Create(ISavePoint.Create(o));
 		}
 
-		// Token: 0x06006D28 RID: 27944 RVA: 0x00104EAE File Offset: 0x001030AE
+		// Token: 0x060073A3 RID: 29603 RVA: 0x00112F1F File Offset: 0x0011111F
 		private static IWarningPreformActivateStateRecordEntity Make_Aki_UniverseEditor_Interface_Fbs_Quest_IWarningPreformActivateStateRecordEntity(IWarningPreformActivateStateRecordEntity? o)
 		{
 			return IWarningPreformActivateStateRecordEntity.Create(IWarningPreformActivateStateRecordEntity.Create(o));
 		}
 
-		// Token: 0x06006D29 RID: 27945 RVA: 0x00104EBB File Offset: 0x001030BB
+		// Token: 0x060073A4 RID: 29604 RVA: 0x00112F2C File Offset: 0x0011112C
 		private static IWarningPreformFadeInScreen Make_Aki_UniverseEditor_Interface_Fbs_Quest_IWarningPreformFadeInScreen(IWarningPreformFadeInScreen? o)
 		{
 			return IWarningPreformFadeInScreen.Create(IWarningPreformFadeInScreen.Create(o));
 		}
 
-		// Token: 0x06006D2A RID: 27946 RVA: 0x00104EC8 File Offset: 0x001030C8
+		// Token: 0x060073A5 RID: 29605 RVA: 0x00112F39 File Offset: 0x00111139
 		private static ITetrisPlayModeEndless Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITetrisPlayModeEndless(ITetrisPlayModeEndless? o)
 		{
 			return ITetrisPlayModeEndless.Create(ITetrisPlayModeEndless.Create(o));
 		}
 
-		// Token: 0x06006D2B RID: 27947 RVA: 0x00104ED5 File Offset: 0x001030D5
+		// Token: 0x060073A6 RID: 29606 RVA: 0x00112F46 File Offset: 0x00111146
 		private static ITetrisPlayModeMainLine Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITetrisPlayModeMainLine(ITetrisPlayModeMainLine? o)
 		{
 			return ITetrisPlayModeMainLine.Create(ITetrisPlayModeMainLine.Create(o));
 		}
 
-		// Token: 0x06006D2C RID: 27948 RVA: 0x00104EE2 File Offset: 0x001030E2
+		// Token: 0x060073A7 RID: 29607 RVA: 0x00112F53 File Offset: 0x00111153
 		private static ITetrisPlayModeNormal Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITetrisPlayModeNormal(ITetrisPlayModeNormal? o)
 		{
 			return ITetrisPlayModeNormal.Create(ITetrisPlayModeNormal.Create(o));
 		}
 
-		// Token: 0x06006D2D RID: 27949 RVA: 0x00104EEF File Offset: 0x001030EF
+		// Token: 0x060073A8 RID: 29608 RVA: 0x00112F60 File Offset: 0x00111160
 		private static IArcadeGameplayDropCatch Make_Aki_UniverseEditor_Interface_Fbs_Quest_IArcadeGameplayDropCatch(IArcadeGameplayDropCatch? o)
 		{
 			return IArcadeGameplayDropCatch.Create(IArcadeGameplayDropCatch.Create(o));
 		}
 
-		// Token: 0x06006D2E RID: 27950 RVA: 0x00104EFC File Offset: 0x001030FC
+		// Token: 0x060073A9 RID: 29609 RVA: 0x00112F6D File Offset: 0x0011116D
 		private static IArcadeGameplayTetrisBoardGame Make_Aki_UniverseEditor_Interface_Fbs_Quest_IArcadeGameplayTetrisBoardGame(IArcadeGameplayTetrisBoardGame? o)
 		{
 			return IArcadeGameplayTetrisBoardGame.Create(IArcadeGameplayTetrisBoardGame.Create(o));
 		}
 
-		// Token: 0x06006D2F RID: 27951 RVA: 0x00104F0C File Offset: 0x0010310C
+		// Token: 0x060073AA RID: 29610 RVA: 0x00112F7C File Offset: 0x0011117C
 		public static IBtNode ReadIStartBtNode_Child(IStartBtNode inst)
 		{
 			switch (inst.ChildType)
@@ -1788,7 +1864,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D30 RID: 27952 RVA: 0x00105020 File Offset: 0x00103220
+		// Token: 0x060073AB RID: 29611 RVA: 0x00113090 File Offset: 0x00111290
 		public static IBtNode ReadIAlwaysTrueBtNode_Child(IAlwaysTrueBtNode inst)
 		{
 			switch (inst.ChildType)
@@ -1826,7 +1902,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D31 RID: 27953 RVA: 0x00105134 File Offset: 0x00103334
+		// Token: 0x060073AC RID: 29612 RVA: 0x001131A4 File Offset: 0x001113A4
 		public static IBtNode ReadIAlwaysFalseBtNode_Child(IAlwaysFalseBtNode inst)
 		{
 			switch (inst.ChildType)
@@ -1864,7 +1940,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D32 RID: 27954 RVA: 0x00105248 File Offset: 0x00103448
+		// Token: 0x060073AD RID: 29613 RVA: 0x001132B8 File Offset: 0x001114B8
 		public static IBtNode ReadIRepeaterBtNode_Child(IRepeaterBtNode inst)
 		{
 			switch (inst.ChildType)
@@ -1902,7 +1978,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D33 RID: 27955 RVA: 0x0010535C File Offset: 0x0010355C
+		// Token: 0x060073AE RID: 29614 RVA: 0x001133CC File Offset: 0x001115CC
 		public static IInformationViewType ReadIInformationViewConfig_InformationView(Aki.UniverseEditor.Interface.Fbs.Quest.IInformationViewConfig inst)
 		{
 			switch (inst.InformationViewType)
@@ -1918,7 +1994,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D34 RID: 27956 RVA: 0x001053B0 File Offset: 0x001035B0
+		// Token: 0x060073AF RID: 29615 RVA: 0x00113420 File Offset: 0x00111620
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIGradingSystemVar_VarRef(IGradingSystemVar inst)
 		{
 			switch (inst.VarRefType)
@@ -1938,7 +2014,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D35 RID: 27957 RVA: 0x00105428 File Offset: 0x00103628
+		// Token: 0x060073B0 RID: 29616 RVA: 0x00113498 File Offset: 0x00111698
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadITrapDefenseSystemVar_VarRef(ITrapDefenseSystemVar inst)
 		{
 			switch (inst.VarRefType)
@@ -1958,7 +2034,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D36 RID: 27958 RVA: 0x001054A0 File Offset: 0x001036A0
+		// Token: 0x060073B1 RID: 29617 RVA: 0x00113510 File Offset: 0x00111710
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadISurvivorsRougeSystemVar_VarRef(ISurvivorsRougeSystemVar inst)
 		{
 			switch (inst.VarRefType)
@@ -1978,7 +2054,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D37 RID: 27959 RVA: 0x00105518 File Offset: 0x00103718
+		// Token: 0x060073B2 RID: 29618 RVA: 0x00113588 File Offset: 0x00111788
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIKurotatoSystemVar_VarRef(IKurotatoSystemVar inst)
 		{
 			switch (inst.VarRefType)
@@ -1998,7 +2074,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D38 RID: 27960 RVA: 0x00105590 File Offset: 0x00103790
+		// Token: 0x060073B3 RID: 29619 RVA: 0x00113600 File Offset: 0x00111800
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIRoleTowerSystemVar_VarRef(IRoleTowerSystemVar inst)
 		{
 			switch (inst.VarRefType)
@@ -2018,7 +2094,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D39 RID: 27961 RVA: 0x00105608 File Offset: 0x00103808
+		// Token: 0x060073B4 RID: 29620 RVA: 0x00113678 File Offset: 0x00111878
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIMotorFightSystemVar_VarRef(IMotorFightSystemVar inst)
 		{
 			switch (inst.VarRefType)
@@ -2038,7 +2114,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D3A RID: 27962 RVA: 0x00105680 File Offset: 0x00103880
+		// Token: 0x060073B5 RID: 29621 RVA: 0x001136F0 File Offset: 0x001118F0
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFlagChallengeSystemVar_VarRef(IFlagChallengeSystemVar inst)
 		{
 			switch (inst.VarRefType)
@@ -2058,7 +2134,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D3B RID: 27963 RVA: 0x001056F8 File Offset: 0x001038F8
+		// Token: 0x060073B6 RID: 29622 RVA: 0x00113768 File Offset: 0x00111968
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFlipperSystemVar_VarRef(IFlipperSystemVar inst)
 		{
 			switch (inst.VarRefType)
@@ -2078,7 +2154,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D3C RID: 27964 RVA: 0x00105770 File Offset: 0x00103970
+		// Token: 0x060073B7 RID: 29623 RVA: 0x001137E0 File Offset: 0x001119E0
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIRogueTowerTrialSystemVar_VarRef(IRogueTowerTrialSystemVar inst)
 		{
 			switch (inst.VarRefType)
@@ -2098,7 +2174,29 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D3D RID: 27965 RVA: 0x001057E8 File Offset: 0x001039E8
+		// Token: 0x060073B8 RID: 29624 RVA: 0x00113858 File Offset: 0x00111A58
+		public static IDarkTideBossEvent ReadIDarkTideBossEventModule_EventType(IDarkTideBossEventModule inst)
+		{
+			switch (inst.EventTypeType)
+			{
+			case TDarkTideBossEvent.IDarkTideChonglouTrialBossEvent:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideChonglouTrialBossEvent(inst.EventType<IDarkTideChonglouTrialBossEvent>());
+			case TDarkTideBossEvent.IDarkTideHaiweixiaArenaBossEvent:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideHaiweixiaArenaBossEvent(inst.EventType<IDarkTideHaiweixiaArenaBossEvent>());
+			case TDarkTideBossEvent.IDarkTideHecatePollutionBossEvent:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideHecatePollutionBossEvent(inst.EventType<IDarkTideHecatePollutionBossEvent>());
+			case TDarkTideBossEvent.IDarkTideMechaAssemblyBossEvent:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideMechaAssemblyBossEvent(inst.EventType<IDarkTideMechaAssemblyBossEvent>());
+			case TDarkTideBossEvent.IDarkTideWyvernPositionBossEvent:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideWyvernPositionBossEvent(inst.EventType<IDarkTideWyvernPositionBossEvent>());
+			case TDarkTideBossEvent.IDarkTideXinjilemuChaseBossEvent:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideXinjilemuChaseBossEvent(inst.EventType<IDarkTideXinjilemuChaseBossEvent>());
+			default:
+				return null;
+			}
+		}
+
+		// Token: 0x060073B9 RID: 29625 RVA: 0x001138E0 File Offset: 0x00111AE0
 		public static ISpecialGamePlayConfig ReadILogicBtNode_SpecialGamePlayConfig(ILogicBtNode inst)
 		{
 			switch (inst.SpecialGamePlayConfigType)
@@ -2116,11 +2214,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D3E RID: 27966 RVA: 0x0010584C File Offset: 0x00103A4C
+		// Token: 0x060073BA RID: 29626 RVA: 0x00113944 File Offset: 0x00111B44
 		public static IEnableSystemConfig ReadILogicBtNode_EnableSystem(ILogicBtNode inst)
 		{
 			switch (inst.EnableSystemType)
 			{
+			case TEnableSystemConfig.IDarkTideSystemConfig:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideSystemConfig(inst.EnableSystem<IDarkTideSystemConfig>());
 			case TEnableSystemConfig.IFlagChallengeSystemConfig:
 				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFlagChallengeSystemConfig(inst.EnableSystem<IFlagChallengeSystemConfig>());
 			case TEnableSystemConfig.IFlipperSystemConfig:
@@ -2154,7 +2254,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D3F RID: 27967 RVA: 0x00105960 File Offset: 0x00103B60
+		// Token: 0x060073BB RID: 29627 RVA: 0x00113A68 File Offset: 0x00111C68
 		public static IFastReturnPosBase ReadIFastReturnMapPos_DefaultPos(IFastReturnMapPos inst)
 		{
 			TFastReturnPos defaultPosType = inst.DefaultPosType;
@@ -2169,7 +2269,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFastReturnGravityEntityPos(inst.DefaultPos<IFastReturnGravityEntityPos>());
 		}
 
-		// Token: 0x06006D40 RID: 27968 RVA: 0x0010599C File Offset: 0x00103B9C
+		// Token: 0x060073BC RID: 29628 RVA: 0x00113AA4 File Offset: 0x00111CA4
 		public static IFastReturnPosBase ReadIConditionReturnPos_Pos(IConditionReturnPos inst)
 		{
 			TFastReturnPos posType = inst.PosType;
@@ -2184,7 +2284,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFastReturnGravityEntityPos(inst.Pos<IFastReturnGravityEntityPos>());
 		}
 
-		// Token: 0x06006D41 RID: 27969 RVA: 0x001059D8 File Offset: 0x00103BD8
+		// Token: 0x060073BD RID: 29629 RVA: 0x00113AE0 File Offset: 0x00111CE0
 		public static Aki.TDConfigMgr.Action.ITeleportTransitionType ReadIFastReturnEntityPos_TransitionOption(IFastReturnEntityPos inst)
 		{
 			switch (inst.TransitionOptionType)
@@ -2216,7 +2316,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D42 RID: 27970 RVA: 0x00105AB8 File Offset: 0x00103CB8
+		// Token: 0x060073BE RID: 29630 RVA: 0x00113BC0 File Offset: 0x00111DC0
 		public static Aki.TDConfigMgr.Action.ITeleportTransitionType ReadIFastReturnGravityEntityPos_TransitionOption(IFastReturnGravityEntityPos inst)
 		{
 			switch (inst.TransitionOptionType)
@@ -2248,7 +2348,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D43 RID: 27971 RVA: 0x00105B98 File Offset: 0x00103D98
+		// Token: 0x060073BF RID: 29631 RVA: 0x00113CA0 File Offset: 0x00111EA0
 		public static ISpecialGamePlayConfig ReadISequenceBtNode_SpecialGamePlayConfig(ISequenceBtNode inst)
 		{
 			switch (inst.SpecialGamePlayConfigType)
@@ -2266,11 +2366,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D44 RID: 27972 RVA: 0x00105BFC File Offset: 0x00103DFC
+		// Token: 0x060073C0 RID: 29632 RVA: 0x00113D04 File Offset: 0x00111F04
 		public static IEnableSystemConfig ReadISequenceBtNode_EnableSystem(ISequenceBtNode inst)
 		{
 			switch (inst.EnableSystemType)
 			{
+			case TEnableSystemConfig.IDarkTideSystemConfig:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideSystemConfig(inst.EnableSystem<IDarkTideSystemConfig>());
 			case TEnableSystemConfig.IFlagChallengeSystemConfig:
 				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFlagChallengeSystemConfig(inst.EnableSystem<IFlagChallengeSystemConfig>());
 			case TEnableSystemConfig.IFlipperSystemConfig:
@@ -2304,7 +2406,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D45 RID: 27973 RVA: 0x00105D10 File Offset: 0x00103F10
+		// Token: 0x060073C1 RID: 29633 RVA: 0x00113E28 File Offset: 0x00112028
 		public static List<IBtNode> ReadISequenceBtNode_Children(ISequenceBtNode inst)
 		{
 			int childrenLength = inst.ChildrenLength;
@@ -2363,7 +2465,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D46 RID: 27974 RVA: 0x00105ED4 File Offset: 0x001040D4
+		// Token: 0x060073C2 RID: 29634 RVA: 0x00113FEC File Offset: 0x001121EC
 		public static ISpecialGamePlayConfig ReadISelectBtNode_SpecialGamePlayConfig(ISelectBtNode inst)
 		{
 			switch (inst.SpecialGamePlayConfigType)
@@ -2381,11 +2483,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D47 RID: 27975 RVA: 0x00105F38 File Offset: 0x00104138
+		// Token: 0x060073C3 RID: 29635 RVA: 0x00114050 File Offset: 0x00112250
 		public static IEnableSystemConfig ReadISelectBtNode_EnableSystem(ISelectBtNode inst)
 		{
 			switch (inst.EnableSystemType)
 			{
+			case TEnableSystemConfig.IDarkTideSystemConfig:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideSystemConfig(inst.EnableSystem<IDarkTideSystemConfig>());
 			case TEnableSystemConfig.IFlagChallengeSystemConfig:
 				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFlagChallengeSystemConfig(inst.EnableSystem<IFlagChallengeSystemConfig>());
 			case TEnableSystemConfig.IFlipperSystemConfig:
@@ -2419,7 +2523,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D48 RID: 27976 RVA: 0x0010604C File Offset: 0x0010424C
+		// Token: 0x060073C4 RID: 29636 RVA: 0x00114174 File Offset: 0x00112374
 		public static List<IBtNode> ReadISelectBtNode_Children(ISelectBtNode inst)
 		{
 			int childrenLength = inst.ChildrenLength;
@@ -2478,7 +2582,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D49 RID: 27977 RVA: 0x00106210 File Offset: 0x00104410
+		// Token: 0x060073C5 RID: 29637 RVA: 0x00114338 File Offset: 0x00112538
 		public static ISpecialGamePlayConfig ReadIParallelSelectBtNode_SpecialGamePlayConfig(IParallelSelectBtNode inst)
 		{
 			switch (inst.SpecialGamePlayConfigType)
@@ -2496,11 +2600,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D4A RID: 27978 RVA: 0x00106274 File Offset: 0x00104474
+		// Token: 0x060073C6 RID: 29638 RVA: 0x0011439C File Offset: 0x0011259C
 		public static IEnableSystemConfig ReadIParallelSelectBtNode_EnableSystem(IParallelSelectBtNode inst)
 		{
 			switch (inst.EnableSystemType)
 			{
+			case TEnableSystemConfig.IDarkTideSystemConfig:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideSystemConfig(inst.EnableSystem<IDarkTideSystemConfig>());
 			case TEnableSystemConfig.IFlagChallengeSystemConfig:
 				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFlagChallengeSystemConfig(inst.EnableSystem<IFlagChallengeSystemConfig>());
 			case TEnableSystemConfig.IFlipperSystemConfig:
@@ -2534,7 +2640,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D4B RID: 27979 RVA: 0x00106388 File Offset: 0x00104588
+		// Token: 0x060073C7 RID: 29639 RVA: 0x001144C0 File Offset: 0x001126C0
 		public static List<IBtNode> ReadIParallelSelectBtNode_Children(IParallelSelectBtNode inst)
 		{
 			int childrenLength = inst.ChildrenLength;
@@ -2593,7 +2699,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D4C RID: 27980 RVA: 0x0010654C File Offset: 0x0010474C
+		// Token: 0x060073C8 RID: 29640 RVA: 0x00114684 File Offset: 0x00112884
 		public static IBtNode ReadIConditionSelectorBtNodeSlot_Node(IConditionSelectorBtNodeSlot inst)
 		{
 			switch (inst.NodeType)
@@ -2631,7 +2737,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D4D RID: 27981 RVA: 0x00106660 File Offset: 0x00104860
+		// Token: 0x060073C9 RID: 29641 RVA: 0x00114798 File Offset: 0x00112998
 		public static ISpecialGamePlayConfig ReadIConditionSelectorBtNode_SpecialGamePlayConfig(IConditionSelectorBtNode inst)
 		{
 			switch (inst.SpecialGamePlayConfigType)
@@ -2649,11 +2755,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D4E RID: 27982 RVA: 0x001066C4 File Offset: 0x001048C4
+		// Token: 0x060073CA RID: 29642 RVA: 0x001147FC File Offset: 0x001129FC
 		public static IEnableSystemConfig ReadIConditionSelectorBtNode_EnableSystem(IConditionSelectorBtNode inst)
 		{
 			switch (inst.EnableSystemType)
 			{
+			case TEnableSystemConfig.IDarkTideSystemConfig:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDarkTideSystemConfig(inst.EnableSystem<IDarkTideSystemConfig>());
 			case TEnableSystemConfig.IFlagChallengeSystemConfig:
 				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IFlagChallengeSystemConfig(inst.EnableSystem<IFlagChallengeSystemConfig>());
 			case TEnableSystemConfig.IFlipperSystemConfig:
@@ -2687,7 +2795,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D4F RID: 27983 RVA: 0x001067D8 File Offset: 0x001049D8
+		// Token: 0x060073CB RID: 29643 RVA: 0x00114920 File Offset: 0x00112B20
 		public static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionType ReadITrackType_GravityDirection(ITrackType inst)
 		{
 			switch (inst.GravityDirectionType)
@@ -2705,7 +2813,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D50 RID: 27984 RVA: 0x0010683C File Offset: 0x00104A3C
+		// Token: 0x060073CC RID: 29644 RVA: 0x00114984 File Offset: 0x00112B84
 		public static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionType ReadITrackLocations_GravityDirection(ITrackLocations inst)
 		{
 			switch (inst.GravityDirectionType)
@@ -2723,7 +2831,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D51 RID: 27985 RVA: 0x001068A0 File Offset: 0x00104AA0
+		// Token: 0x060073CD RID: 29645 RVA: 0x001149E8 File Offset: 0x00112BE8
 		public static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionType ReadITrackEntities_GravityDirection(ITrackEntities inst)
 		{
 			switch (inst.GravityDirectionType)
@@ -2741,7 +2849,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D52 RID: 27986 RVA: 0x00106904 File Offset: 0x00104B04
+		// Token: 0x060073CE RID: 29646 RVA: 0x00114A4C File Offset: 0x00112C4C
 		public static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionType ReadITrackCaptureVisions_GravityDirection(ITrackCaptureVisions inst)
 		{
 			switch (inst.GravityDirectionType)
@@ -2759,7 +2867,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D53 RID: 27987 RVA: 0x00106968 File Offset: 0x00104B68
+		// Token: 0x060073CF RID: 29647 RVA: 0x00114AB0 File Offset: 0x00112CB0
 		public static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionType ReadITrackEntityGroup_GravityDirection(ITrackEntityGroup inst)
 		{
 			switch (inst.GravityDirectionType)
@@ -2777,7 +2885,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D54 RID: 27988 RVA: 0x001069CC File Offset: 0x00104BCC
+		// Token: 0x060073D0 RID: 29648 RVA: 0x00114B14 File Offset: 0x00112D14
 		public static ITrackRuleTypeBase ReadITrackEntityGroup_TrackRuleType(ITrackEntityGroup inst)
 		{
 			TTrackRuleType trackRuleTypeType = inst.TrackRuleTypeType;
@@ -2792,7 +2900,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITrackRuleFindLastMatchState(inst.TrackRuleType<ITrackRuleFindLastMatchState>());
 		}
 
-		// Token: 0x06006D55 RID: 27989 RVA: 0x00106A08 File Offset: 0x00104C08
+		// Token: 0x060073D1 RID: 29649 RVA: 0x00114B50 File Offset: 0x00112D50
 		public static Aki.TDConfigMgr.AutoGenerated.ICommon.IGravityDirectionType ReadITrackLevelPlay_GravityDirection(ITrackLevelPlay inst)
 		{
 			switch (inst.GravityDirectionType)
@@ -2810,7 +2918,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D56 RID: 27990 RVA: 0x00106A6C File Offset: 0x00104C6C
+		// Token: 0x060073D2 RID: 29650 RVA: 0x00114BB4 File Offset: 0x00112DB4
 		public static ITrackType ReadITrackTarget_TrackType(ITrackTarget inst)
 		{
 			switch (inst.TrackTypeType)
@@ -2830,7 +2938,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D57 RID: 27991 RVA: 0x00106AE4 File Offset: 0x00104CE4
+		// Token: 0x060073D3 RID: 29651 RVA: 0x00114C2C File Offset: 0x00112E2C
 		public static List<Aki.TDConfigMgr.AutoGenerated.IVar.VarRef> ReadIQuestScheduleChildQuestCompleted_Vars(IQuestScheduleChildQuestCompleted inst)
 		{
 			int varsLength = inst.VarsLength;
@@ -2862,7 +2970,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D58 RID: 27992 RVA: 0x00106BAC File Offset: 0x00104DAC
+		// Token: 0x060073D4 RID: 29652 RVA: 0x00114CF4 File Offset: 0x00112EF4
 		public static IRoleTowerChallengeTitleTypeBase ReadIQuestScheduleRoleTowerChallengeTitle_TitleType(IQuestScheduleRoleTowerChallengeTitle inst)
 		{
 			switch (inst.TitleTypeType)
@@ -2878,7 +2986,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D59 RID: 27993 RVA: 0x00106C00 File Offset: 0x00104E00
+		// Token: 0x060073D5 RID: 29653 RVA: 0x00114D48 File Offset: 0x00112F48
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestScheduleBtTreeVar_Var(IQuestScheduleBtTreeVar inst)
 		{
 			switch (inst.VarType)
@@ -2898,7 +3006,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D5A RID: 27994 RVA: 0x00106C78 File Offset: 0x00104E78
+		// Token: 0x060073D6 RID: 29654 RVA: 0x00114DC0 File Offset: 0x00112FC0
 		public static List<Aki.TDConfigMgr.AutoGenerated.IVar.VarRef> ReadIQuestScheduleMultiBtTreeVar_Vars(IQuestScheduleMultiBtTreeVar inst)
 		{
 			int varsLength = inst.VarsLength;
@@ -2930,7 +3038,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D5B RID: 27995 RVA: 0x00106D40 File Offset: 0x00104F40
+		// Token: 0x060073D7 RID: 29655 RVA: 0x00114E88 File Offset: 0x00113088
 		public static List<Aki.TDConfigMgr.AutoGenerated.IVar.VarRef> ReadIQuestScheduleMeetCondition_Vars(IQuestScheduleMeetCondition inst)
 		{
 			int varsLength = inst.VarsLength;
@@ -2962,7 +3070,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D5C RID: 27996 RVA: 0x00106E08 File Offset: 0x00105008
+		// Token: 0x060073D8 RID: 29656 RVA: 0x00114F50 File Offset: 0x00113150
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIUseVar_Var(IUseVar inst)
 		{
 			switch (inst.VarType)
@@ -2982,7 +3090,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D5D RID: 27997 RVA: 0x00106E80 File Offset: 0x00105080
+		// Token: 0x060073D9 RID: 29657 RVA: 0x00114FC8 File Offset: 0x001131C8
 		public static IProgressBarLeftType ReadIProgressCalculate_VarLeft(IProgressCalculate inst)
 		{
 			TProgressBarLeftType varLeftType = inst.VarLeftType;
@@ -2997,7 +3105,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseVar(inst.VarLeft<IUseVar>());
 		}
 
-		// Token: 0x06006D5E RID: 27998 RVA: 0x00106EBC File Offset: 0x001050BC
+		// Token: 0x060073DA RID: 29658 RVA: 0x00115004 File Offset: 0x00113204
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIProgressCalculate_VarRight(IProgressCalculate inst)
 		{
 			switch (inst.VarRightType)
@@ -3017,7 +3125,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D5F RID: 27999 RVA: 0x00106F34 File Offset: 0x00105134
+		// Token: 0x060073DB RID: 29659 RVA: 0x0011507C File Offset: 0x0011327C
 		public static IQuestScheduleType ReadIConditionText_QuestScheduleType(IConditionText inst)
 		{
 			switch (inst.QuestScheduleTypeType)
@@ -3053,7 +3161,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D60 RID: 28000 RVA: 0x00107034 File Offset: 0x00105234
+		// Token: 0x060073DC RID: 29660 RVA: 0x0011517C File Offset: 0x0011337C
 		public static IQuestScheduleType ReadIQuestScheduleMainTitle_QuestScheduleType(IQuestScheduleMainTitle inst)
 		{
 			switch (inst.QuestScheduleTypeType)
@@ -3089,7 +3197,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D61 RID: 28001 RVA: 0x00107134 File Offset: 0x00105334
+		// Token: 0x060073DD RID: 29661 RVA: 0x0011527C File Offset: 0x0011347C
 		public static IQuestScheduleType ReadIQuestScheduleSubTitle_QuestScheduleType(IQuestScheduleSubTitle inst)
 		{
 			switch (inst.QuestScheduleTypeType)
@@ -3125,7 +3233,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D62 RID: 28002 RVA: 0x00107234 File Offset: 0x00105434
+		// Token: 0x060073DE RID: 29662 RVA: 0x0011537C File Offset: 0x0011357C
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestStatisticsType_Var(IQuestStatisticsType inst)
 		{
 			switch (inst.VarType)
@@ -3145,7 +3253,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D63 RID: 28003 RVA: 0x001072AC File Offset: 0x001054AC
+		// Token: 0x060073DF RID: 29663 RVA: 0x001153F4 File Offset: 0x001135F4
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestStatisticsCollect_Var(IQuestStatisticsCollect inst)
 		{
 			switch (inst.VarType)
@@ -3165,7 +3273,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D64 RID: 28004 RVA: 0x00107324 File Offset: 0x00105524
+		// Token: 0x060073E0 RID: 29664 RVA: 0x0011546C File Offset: 0x0011366C
 		public static Aki.TDConfigMgr.AutoGenerated.ICondition.IOnlinePlayerConditionTarget ReadIQuestStatisticsCollect_OnlinePlayerConditionTargetOption(IQuestStatisticsCollect inst)
 		{
 			TOnlinePlayerConditionTarget onlinePlayerConditionTargetOptionType = inst.OnlinePlayerConditionTargetOptionType;
@@ -3180,7 +3288,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Condition_IOnlinePlayerConditionTargetParticipator(inst.OnlinePlayerConditionTargetOption<Aki.UniverseEditor.Interface.Fbs.Condition.IOnlinePlayerConditionTargetParticipator>());
 		}
 
-		// Token: 0x06006D65 RID: 28005 RVA: 0x00107360 File Offset: 0x00105560
+		// Token: 0x060073E1 RID: 29665 RVA: 0x001154A8 File Offset: 0x001136A8
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestStatisticsUseSkill_Var(IQuestStatisticsUseSkill inst)
 		{
 			switch (inst.VarType)
@@ -3200,7 +3308,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D66 RID: 28006 RVA: 0x001073D8 File Offset: 0x001055D8
+		// Token: 0x060073E2 RID: 29666 RVA: 0x00115520 File Offset: 0x00113720
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestStatisticsUseSkillNew_Var(IQuestStatisticsUseSkillNew inst)
 		{
 			switch (inst.VarType)
@@ -3220,7 +3328,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D67 RID: 28007 RVA: 0x00107450 File Offset: 0x00105650
+		// Token: 0x060073E3 RID: 29667 RVA: 0x00115598 File Offset: 0x00113798
 		public static IUseSkillCheckBase ReadIQuestStatisticsUseSkillNew_SkillCheck(IQuestStatisticsUseSkillNew inst)
 		{
 			switch (inst.SkillCheckType)
@@ -3240,7 +3348,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D68 RID: 28008 RVA: 0x001074C8 File Offset: 0x001056C8
+		// Token: 0x060073E4 RID: 29668 RVA: 0x00115610 File Offset: 0x00113810
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestStatisticsPlayerTriggerMotion_Var(IQuestStatisticsPlayerTriggerMotion inst)
 		{
 			switch (inst.VarType)
@@ -3260,7 +3368,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D69 RID: 28009 RVA: 0x00107540 File Offset: 0x00105740
+		// Token: 0x060073E5 RID: 29669 RVA: 0x00115688 File Offset: 0x00113888
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestStaticTimer_Var(IQuestStaticTimer inst)
 		{
 			switch (inst.VarType)
@@ -3280,7 +3388,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D6A RID: 28010 RVA: 0x001075B8 File Offset: 0x001057B8
+		// Token: 0x060073E6 RID: 29670 RVA: 0x00115700 File Offset: 0x00113900
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestMonsterPoint_Var(IQuestMonsterPoint inst)
 		{
 			switch (inst.VarType)
@@ -3300,7 +3408,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D6B RID: 28011 RVA: 0x00107630 File Offset: 0x00105830
+		// Token: 0x060073E7 RID: 29671 RVA: 0x00115778 File Offset: 0x00113978
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestMonsterRemainingHealth_Var(IQuestMonsterRemainingHealth inst)
 		{
 			switch (inst.VarType)
@@ -3320,7 +3428,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D6C RID: 28012 RVA: 0x001076A8 File Offset: 0x001058A8
+		// Token: 0x060073E8 RID: 29672 RVA: 0x001157F0 File Offset: 0x001139F0
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestMonsterHealthScore_Var(IQuestMonsterHealthScore inst)
 		{
 			switch (inst.VarType)
@@ -3340,7 +3448,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D6D RID: 28013 RVA: 0x00107720 File Offset: 0x00105920
+		// Token: 0x060073E9 RID: 29673 RVA: 0x00115868 File Offset: 0x00113A68
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestPlayerHitStatistics_Var(IQuestPlayerHitStatistics inst)
 		{
 			switch (inst.VarType)
@@ -3360,7 +3468,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D6E RID: 28014 RVA: 0x00107798 File Offset: 0x00105998
+		// Token: 0x060073EA RID: 29674 RVA: 0x001158E0 File Offset: 0x00113AE0
 		public static IQuestPlayerHitStatisticsType ReadIQuestPlayerHitStatistics_Config(IQuestPlayerHitStatistics inst)
 		{
 			TQuestPlayerHitStatistics configType = inst.ConfigType;
@@ -3375,7 +3483,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IQuestPlayerHitCount(inst.Config<IQuestPlayerHitCount>());
 		}
 
-		// Token: 0x06006D6F RID: 28015 RVA: 0x001077D4 File Offset: 0x001059D4
+		// Token: 0x060073EB RID: 29675 RVA: 0x0011591C File Offset: 0x00113B1C
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIQuestMechaTrackScore_Var(IQuestMechaTrackScore inst)
 		{
 			switch (inst.VarType)
@@ -3395,7 +3503,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D70 RID: 28016 RVA: 0x0010784C File Offset: 0x00105A4C
+		// Token: 0x060073EC RID: 29676 RVA: 0x00115994 File Offset: 0x00113B94
 		public static List<IMechaTrackScoreDetectionType> ReadIQuestMechaTrackScore_DetectionTypes(IQuestMechaTrackScore inst)
 		{
 			int detectionTypesLength = inst.DetectionTypesLength;
@@ -3421,7 +3529,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D71 RID: 28017 RVA: 0x001078DC File Offset: 0x00105ADC
+		// Token: 0x060073ED RID: 29677 RVA: 0x00115A24 File Offset: 0x00113C24
 		public static List<IQuestStatisticsType> ReadIQuestStatistics_StatisticsConfig(IQuestStatistics inst)
 		{
 			int statisticsConfigLength = inst.StatisticsConfigLength;
@@ -3468,7 +3576,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D72 RID: 28018 RVA: 0x00107A30 File Offset: 0x00105C30
+		// Token: 0x060073EE RID: 29678 RVA: 0x00115B78 File Offset: 0x00113D78
 		public static List<Aki.TDConfigMgr.Action.IUiGame> ReadICheckUiGameQuestCondition_GameplayConfigs(ICheckUiGameQuestCondition inst)
 		{
 			int gameplayConfigsLength = inst.GameplayConfigsLength;
@@ -3509,6 +3617,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 					break;
 				case TUiGame.IFlowerSeaEscape:
 					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Action_IFlowerSeaEscape(inst.GameplayConfigs<Aki.UniverseEditor.Interface.Fbs.Action.IFlowerSeaEscape>(i)));
+					break;
+				case TUiGame.IFrequencyDetect:
+					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Action_IFrequencyDetect(inst.GameplayConfigs<Aki.UniverseEditor.Interface.Fbs.Action.IFrequencyDetect>(i)));
+					break;
+				case TUiGame.IFrequencyPaint:
+					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Action_IFrequencyPaint(inst.GameplayConfigs<Aki.UniverseEditor.Interface.Fbs.Action.IFrequencyPaint>(i)));
 					break;
 				case TUiGame.IInstrumentQteGameplay:
 					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Action_IInstrumentQteGameplay(inst.GameplayConfigs<Aki.UniverseEditor.Interface.Fbs.Action.IInstrumentQteGameplay>(i)));
@@ -3567,6 +3681,9 @@ namespace Aki.TDConfigMgr.Quest.Fb
 				case TUiGame.ITuningStand:
 					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Action_ITuningStand(inst.GameplayConfigs<Aki.UniverseEditor.Interface.Fbs.Action.ITuningStand>(i)));
 					break;
+				case TUiGame.ITurntableConnectorUiGameplay:
+					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Action_ITurntableConnectorUiGameplay(inst.GameplayConfigs<Aki.UniverseEditor.Interface.Fbs.Action.ITurntableConnectorUiGameplay>(i)));
+					break;
 				case TUiGame.IWriteLetter:
 					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Action_IWriteLetter(inst.GameplayConfigs<Aki.UniverseEditor.Interface.Fbs.Action.IWriteLetter>(i)));
 					break;
@@ -3581,7 +3698,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D73 RID: 28019 RVA: 0x00107DEC File Offset: 0x00105FEC
+		// Token: 0x060073EF RID: 29679 RVA: 0x00115F88 File Offset: 0x00114188
 		public static IUseSkillCheckBase ReadIUseSkillQuestCondition_Check(IUseSkillQuestCondition inst)
 		{
 			switch (inst.CheckType)
@@ -3601,34 +3718,33 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D74 RID: 28020 RVA: 0x00107E64 File Offset: 0x00106064
+		// Token: 0x060073F0 RID: 29680 RVA: 0x00116000 File Offset: 0x00114200
 		public static List<Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchRoleType> ReadIReachAreaQuestCondition_MatchRoleOption(IReachAreaQuestCondition inst)
 		{
 			int matchRoleOptionLength = inst.MatchRoleOptionLength;
 			List<Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchRoleType> list = new List<Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchRoleType>(matchRoleOptionLength);
 			for (int i = 0; i < matchRoleOptionLength; i++)
 			{
-				TMatchRoleOption tmatchRoleOption = inst.MatchRoleOptionType(i);
-				if (tmatchRoleOption != TMatchRoleOption.IMatchPhantomRole)
+				switch (inst.MatchRoleOptionType(i))
 				{
-					if (tmatchRoleOption != TMatchRoleOption.IMatchPlayerRole)
-					{
-						list.Add(null);
-					}
-					else
-					{
-						list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchPlayerRole(inst.MatchRoleOption<Aki.UniverseEditor.Interface.Fbs.Match.IMatchPlayerRole>(i)));
-					}
-				}
-				else
-				{
+				case TMatchRoleOption.IMatchAssistCharacterRole:
+					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchAssistCharacterRole(inst.MatchRoleOption<Aki.UniverseEditor.Interface.Fbs.Match.IMatchAssistCharacterRole>(i)));
+					break;
+				case TMatchRoleOption.IMatchPhantomRole:
 					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchPhantomRole(inst.MatchRoleOption<Aki.UniverseEditor.Interface.Fbs.Match.IMatchPhantomRole>(i)));
+					break;
+				case TMatchRoleOption.IMatchPlayerRole:
+					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchPlayerRole(inst.MatchRoleOption<Aki.UniverseEditor.Interface.Fbs.Match.IMatchPlayerRole>(i)));
+					break;
+				default:
+					list.Add(null);
+					break;
 				}
 			}
 			return list;
 		}
 
-		// Token: 0x06006D75 RID: 28021 RVA: 0x00107ED4 File Offset: 0x001060D4
+		// Token: 0x060073F1 RID: 29681 RVA: 0x00116090 File Offset: 0x00114290
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIEntityDeadPosition_Var(IEntityDeadPosition inst)
 		{
 			switch (inst.VarType)
@@ -3648,7 +3764,27 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D76 RID: 28022 RVA: 0x00107F4C File Offset: 0x0010614C
+		// Token: 0x060073F2 RID: 29682 RVA: 0x00116108 File Offset: 0x00114308
+		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadISpecificMonsterDeadPosition_Var(ISpecificMonsterDeadPosition inst)
+		{
+			switch (inst.VarType)
+			{
+			case TVarRef.IConstVarRef:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Var_IConstVarRef(inst.Var<IConstVarRef>());
+			case TVarRef.IGlobalVarRef:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Var_IGlobalVarRef(inst.Var<IGlobalVarRef>());
+			case TVarRef.IOtherVarRef:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Var_IOtherVarRef(inst.Var<Aki.UniverseEditor.Interface.Fbs.Var.IOtherVarRef>());
+			case TVarRef.ISelfVarRef:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Var_ISelfVarRef(inst.Var<ISelfVarRef>());
+			case TVarRef.ISystemVarRef:
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Var_ISystemVarRef(inst.Var<Aki.UniverseEditor.Interface.Fbs.Var.ISystemVarRef>());
+			default:
+				return null;
+			}
+		}
+
+		// Token: 0x060073F3 RID: 29683 RVA: 0x00116180 File Offset: 0x00114380
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIKillChildQuestCondition_PrefabVar(IKillChildQuestCondition inst)
 		{
 			switch (inst.PrefabVarType)
@@ -3668,7 +3804,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D77 RID: 28023 RVA: 0x00107FC4 File Offset: 0x001061C4
+		// Token: 0x060073F4 RID: 29684 RVA: 0x001161F8 File Offset: 0x001143F8
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIItemVariableBase_Var(IItemVariableBase inst)
 		{
 			switch (inst.VarType)
@@ -3688,7 +3824,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D78 RID: 28024 RVA: 0x0010803C File Offset: 0x0010623C
+		// Token: 0x060073F5 RID: 29685 RVA: 0x00116270 File Offset: 0x00114470
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIItemIdVariable_Var(IItemIdVariable inst)
 		{
 			switch (inst.VarType)
@@ -3708,7 +3844,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D79 RID: 28025 RVA: 0x001080B4 File Offset: 0x001062B4
+		// Token: 0x060073F6 RID: 29686 RVA: 0x001162E8 File Offset: 0x001144E8
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIItemTypeVariable_Var(IItemTypeVariable inst)
 		{
 			switch (inst.VarType)
@@ -3728,7 +3864,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D7A RID: 28026 RVA: 0x0010812C File Offset: 0x0010632C
+		// Token: 0x060073F7 RID: 29687 RVA: 0x00116360 File Offset: 0x00114560
 		public static List<IItemVariableBase> ReadIHandInItemsCondition_ItemVars(IHandInItemsCondition inst)
 		{
 			int itemVarsLength = inst.ItemVarsLength;
@@ -3755,7 +3891,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D7B RID: 28027 RVA: 0x0010819C File Offset: 0x0010639C
+		// Token: 0x060073F8 RID: 29688 RVA: 0x001163D0 File Offset: 0x001145D0
 		public static IDungeonCondition ReadIFinishDungeonQuestCondition_Condition(IFinishDungeonQuestCondition inst)
 		{
 			TDungeonConditionType conditionType = inst.ConditionType;
@@ -3770,7 +3906,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IDungeonSubTypeCondition(inst.Condition<IDungeonSubTypeCondition>());
 		}
 
-		// Token: 0x06006D7C RID: 28028 RVA: 0x001081D8 File Offset: 0x001063D8
+		// Token: 0x060073F9 RID: 29689 RVA: 0x0011640C File Offset: 0x0011460C
 		public static IEnterDungeon ReadIEnterDungeonCondition_EnterType(IEnterDungeonCondition inst)
 		{
 			TEnterDungeon enterTypeType = inst.EnterTypeType;
@@ -3785,7 +3921,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IEnterDungeonSubTypeCondition(inst.EnterType<IEnterDungeonSubTypeCondition>());
 		}
 
-		// Token: 0x06006D7D RID: 28029 RVA: 0x00108214 File Offset: 0x00106414
+		// Token: 0x060073FA RID: 29690 RVA: 0x00116448 File Offset: 0x00114648
 		public static List<ITargetBattleAttribute> ReadICheckTargetBattleAttributeCondition_Option(ICheckTargetBattleAttributeCondition inst)
 		{
 			int optionLength = inst.OptionLength;
@@ -3812,7 +3948,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D7E RID: 28030 RVA: 0x00108284 File Offset: 0x00106484
+		// Token: 0x060073FB RID: 29691 RVA: 0x001164B8 File Offset: 0x001146B8
 		public static List<Aki.TDConfigMgr.AutoGenerated.ICondition.IBattleCondition> ReadWaitBattleCondition_Option(Aki.UniverseEditor.Interface.Fbs.Quest.IWaitBattleCondition inst)
 		{
 			int optionLength = inst.OptionLength;
@@ -3838,7 +3974,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D7F RID: 28031 RVA: 0x00108314 File Offset: 0x00106514
+		// Token: 0x060073FC RID: 29692 RVA: 0x00116548 File Offset: 0x00114748
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadICompareVarInChildQuest_Var1(ICompareVarInChildQuest inst)
 		{
 			switch (inst.Var1Type)
@@ -3858,7 +3994,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D80 RID: 28032 RVA: 0x0010838C File Offset: 0x0010658C
+		// Token: 0x060073FD RID: 29693 RVA: 0x001165C0 File Offset: 0x001147C0
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadICompareVarInChildQuest_Var2(ICompareVarInChildQuest inst)
 		{
 			switch (inst.Var2Type)
@@ -3878,7 +4014,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D81 RID: 28033 RVA: 0x00108404 File Offset: 0x00106604
+		// Token: 0x060073FE RID: 29694 RVA: 0x00116638 File Offset: 0x00114838
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadICompareActorVarInChildQuest_Var2(ICompareActorVarInChildQuest inst)
 		{
 			switch (inst.Var2Type)
@@ -3898,7 +4034,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D82 RID: 28034 RVA: 0x0010847C File Offset: 0x0010667C
+		// Token: 0x060073FF RID: 29695 RVA: 0x001166B0 File Offset: 0x001148B0
 		public static IShowUi ReadIShowUiCondition_UiType(IShowUiCondition inst)
 		{
 			switch (inst.UiTypeType)
@@ -3934,7 +4070,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D83 RID: 28035 RVA: 0x0010857C File Offset: 0x0010677C
+		// Token: 0x06007400 RID: 29696 RVA: 0x001167B0 File Offset: 0x001149B0
 		public static Aki.TDConfigMgr.AutoGenerated.IShape.IRange ReadITakePhoto2TargetPosByRangeCondition_Range(ITakePhoto2TargetPosByRangeCondition inst)
 		{
 			switch (inst.RangeType)
@@ -3950,7 +4086,22 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D84 RID: 28036 RVA: 0x001085D0 File Offset: 0x001067D0
+		// Token: 0x06007401 RID: 29697 RVA: 0x00116804 File Offset: 0x00114A04
+		public static ITakePhoto2SuccessCameraBehaviorBase ReadITakePhoto2BeforeYourEyesMode_SuccessCameraBehavior(ITakePhoto2BeforeYourEyesMode inst)
+		{
+			TTakePhoto2SuccessCameraBehavior successCameraBehaviorType = inst.SuccessCameraBehaviorType;
+			if (successCameraBehaviorType == TTakePhoto2SuccessCameraBehavior.ITakePhoto2CloseCameraAfterFinishActions)
+			{
+				return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhoto2CloseCameraAfterFinishActions(inst.SuccessCameraBehavior<ITakePhoto2CloseCameraAfterFinishActions>());
+			}
+			if (successCameraBehaviorType != TTakePhoto2SuccessCameraBehavior.ITakePhoto2KeepCameraOpen)
+			{
+				return null;
+			}
+			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_ITakePhoto2KeepCameraOpen(inst.SuccessCameraBehavior<ITakePhoto2KeepCameraOpen>());
+		}
+
+		// Token: 0x06007402 RID: 29698 RVA: 0x00116840 File Offset: 0x00114A40
 		public static List<ITakePhoto2Target> ReadITakePhoto2Condition_PhotoTargets(ITakePhoto2Condition inst)
 		{
 			int photoTargetsLength = inst.PhotoTargetsLength;
@@ -3979,7 +4130,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D85 RID: 28037 RVA: 0x00108680 File Offset: 0x00106880
+		// Token: 0x06007403 RID: 29699 RVA: 0x001168F0 File Offset: 0x00114AF0
 		public static IVisionSystemQuestBase ReadIVisionSystemQuestCondition_Quest(IVisionSystemQuestCondition inst)
 		{
 			switch (inst.QuestType)
@@ -3995,7 +4146,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D86 RID: 28038 RVA: 0x001086D4 File Offset: 0x001068D4
+		// Token: 0x06007404 RID: 29700 RVA: 0x00116944 File Offset: 0x00114B44
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIWalkingPatternCondition_ScoreVar(IWalkingPatternCondition inst)
 		{
 			switch (inst.ScoreVarType)
@@ -4015,7 +4166,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D87 RID: 28039 RVA: 0x0010874C File Offset: 0x0010694C
+		// Token: 0x06007405 RID: 29701 RVA: 0x001169BC File Offset: 0x00114BBC
 		public static List<IOperation> ReadILowMemorySceneSwitch_Operations(ILowMemorySceneSwitch inst)
 		{
 			int operationsLength = inst.OperationsLength;
@@ -4042,7 +4193,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D88 RID: 28040 RVA: 0x001087BC File Offset: 0x001069BC
+		// Token: 0x06007406 RID: 29702 RVA: 0x00116A2C File Offset: 0x00114C2C
 		public static ITrapDefenseConditionStepBase ReadIFinishTrapDefenseCondition_Step(IFinishTrapDefenseCondition inst)
 		{
 			switch (inst.StepType)
@@ -4062,7 +4213,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D89 RID: 28041 RVA: 0x00108834 File Offset: 0x00106A34
+		// Token: 0x06007407 RID: 29703 RVA: 0x00116AA4 File Offset: 0x00114CA4
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFinishTrapDefenseCondition_Batch(IFinishTrapDefenseCondition inst)
 		{
 			switch (inst.BatchType)
@@ -4082,7 +4233,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D8A RID: 28042 RVA: 0x001088AC File Offset: 0x00106AAC
+		// Token: 0x06007408 RID: 29704 RVA: 0x00116B1C File Offset: 0x00114D1C
 		public static ICheckTrapDefenseEventBase ReadICheckTrapDefenseEventCondition_Config(ICheckTrapDefenseEventCondition inst)
 		{
 			TCheckTrapDefenseEvent configType = inst.ConfigType;
@@ -4097,7 +4248,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckTrapDefenseEventMonsterKilled(inst.Config<ICheckTrapDefenseEventMonsterKilled>());
 		}
 
-		// Token: 0x06006D8B RID: 28043 RVA: 0x001088E8 File Offset: 0x00106AE8
+		// Token: 0x06007409 RID: 29705 RVA: 0x00116B58 File Offset: 0x00114D58
 		public static ISurvivorsRougeConditionStepBase ReadIFinishSurvivorsRougeCondition_Step(IFinishSurvivorsRougeCondition inst)
 		{
 			switch (inst.StepType)
@@ -4121,7 +4272,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D8C RID: 28044 RVA: 0x00108980 File Offset: 0x00106B80
+		// Token: 0x0600740A RID: 29706 RVA: 0x00116BF0 File Offset: 0x00114DF0
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFinishSurvivorsRougeCondition_Batch(IFinishSurvivorsRougeCondition inst)
 		{
 			switch (inst.BatchType)
@@ -4141,7 +4292,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D8D RID: 28045 RVA: 0x001089F8 File Offset: 0x00106BF8
+		// Token: 0x0600740B RID: 29707 RVA: 0x00116C68 File Offset: 0x00114E68
 		public static IKurotatoConditionStepBase ReadIFinishKurotatoCondition_Step(IFinishKurotatoCondition inst)
 		{
 			switch (inst.StepType)
@@ -4167,7 +4318,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D8E RID: 28046 RVA: 0x00108AA0 File Offset: 0x00106CA0
+		// Token: 0x0600740C RID: 29708 RVA: 0x00116D10 File Offset: 0x00114F10
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFinishKurotatoCondition_Batch(IFinishKurotatoCondition inst)
 		{
 			switch (inst.BatchType)
@@ -4187,7 +4338,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D8F RID: 28047 RVA: 0x00108B18 File Offset: 0x00106D18
+		// Token: 0x0600740D RID: 29709 RVA: 0x00116D88 File Offset: 0x00114F88
 		public static IRoleTowerConditionStepBase ReadIFinishRoleTowerCondition_Step(IFinishRoleTowerCondition inst)
 		{
 			switch (inst.StepType)
@@ -4207,7 +4358,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D90 RID: 28048 RVA: 0x00108B90 File Offset: 0x00106D90
+		// Token: 0x0600740E RID: 29710 RVA: 0x00116E00 File Offset: 0x00115000
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFinishRoleTowerCondition_Batch(IFinishRoleTowerCondition inst)
 		{
 			switch (inst.BatchType)
@@ -4227,7 +4378,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D91 RID: 28049 RVA: 0x00108C08 File Offset: 0x00106E08
+		// Token: 0x0600740F RID: 29711 RVA: 0x00116E78 File Offset: 0x00115078
 		public static IPhotographTarget ReadIPhotographCondition_Target(IPhotographCondition inst)
 		{
 			TPhotographTarget targetType = inst.TargetType;
@@ -4242,7 +4393,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IPhotographTargetRolesOnScene(inst.Target<IPhotographTargetRolesOnScene>());
 		}
 
-		// Token: 0x06006D92 RID: 28050 RVA: 0x00108C44 File Offset: 0x00106E44
+		// Token: 0x06007410 RID: 29712 RVA: 0x00116EB4 File Offset: 0x001150B4
 		public static List<IPhotographSubTarget> ReadIPhotographCondition_SubTargets(IPhotographCondition inst)
 		{
 			int subTargetsLength = inst.SubTargetsLength;
@@ -4269,7 +4420,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D93 RID: 28051 RVA: 0x00108CB4 File Offset: 0x00106EB4
+		// Token: 0x06007411 RID: 29713 RVA: 0x00116F24 File Offset: 0x00115124
 		public static List<IRollBlockStartupMethodBase> ReadIFinishRollBlock_LaunchMethod(IFinishRollBlock inst)
 		{
 			int launchMethodLength = inst.LaunchMethodLength;
@@ -4296,7 +4447,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return list;
 		}
 
-		// Token: 0x06006D94 RID: 28052 RVA: 0x00108D24 File Offset: 0x00106F24
+		// Token: 0x06007412 RID: 29714 RVA: 0x00116F94 File Offset: 0x00115194
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFinishRollBlock_CurrentDifficultyVarRef(IFinishRollBlock inst)
 		{
 			switch (inst.CurrentDifficultyVarRefType)
@@ -4316,7 +4467,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D95 RID: 28053 RVA: 0x00108D9C File Offset: 0x00106F9C
+		// Token: 0x06007413 RID: 29715 RVA: 0x0011700C File Offset: 0x0011520C
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFinishRollBlock_AllDifficultyCountVarRef(IFinishRollBlock inst)
 		{
 			switch (inst.AllDifficultyCountVarRefType)
@@ -4336,7 +4487,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D96 RID: 28054 RVA: 0x00108E14 File Offset: 0x00107014
+		// Token: 0x06007414 RID: 29716 RVA: 0x00117084 File Offset: 0x00115284
 		public static IUseWeatherSwitchConditionBase ReadIUseWeatherSwitchCondition_CheckType(IUseWeatherSwitchCondition inst)
 		{
 			TUseWeatherSwitchCondition checkTypeType = inst.CheckTypeType;
@@ -4351,7 +4502,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IUseWeatherSwitchConditionSpecifiedWeather(inst.CheckType<IUseWeatherSwitchConditionSpecifiedWeather>());
 		}
 
-		// Token: 0x06006D97 RID: 28055 RVA: 0x00108E50 File Offset: 0x00107050
+		// Token: 0x06007415 RID: 29717 RVA: 0x001170C0 File Offset: 0x001152C0
 		public static ICheckSpringFestivalGameplayType ReadICheckSpringFestivalGameplayCompleted_GameplayType(ICheckSpringFestivalGameplayCompleted inst)
 		{
 			TCheckSpringFestivalGameplayType gameplayTypeType = inst.GameplayTypeType;
@@ -4366,7 +4517,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICheckSpringFestivalMixDrinksCompleted(inst.GameplayType<ICheckSpringFestivalMixDrinksCompleted>());
 		}
 
-		// Token: 0x06006D98 RID: 28056 RVA: 0x00108E8C File Offset: 0x0010708C
+		// Token: 0x06007416 RID: 29718 RVA: 0x001170FC File Offset: 0x001152FC
 		public static Aki.TDConfigMgr.Action.ITeleportTransitionType ReadITrackReturnDungeon_TransitionOption(ITrackReturnDungeon inst)
 		{
 			switch (inst.TransitionOptionType)
@@ -4398,7 +4549,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D99 RID: 28057 RVA: 0x00108F6C File Offset: 0x0010716C
+		// Token: 0x06007417 RID: 29719 RVA: 0x001171DC File Offset: 0x001153DC
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadICommonEventVarValueChange_Var(ICommonEventVarValueChange inst)
 		{
 			switch (inst.VarType)
@@ -4418,7 +4569,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D9A RID: 28058 RVA: 0x00108FE4 File Offset: 0x001071E4
+		// Token: 0x06007418 RID: 29720 RVA: 0x00117254 File Offset: 0x00115454
 		public static IEventTypeConfig ReadIListenToEvent_EventType(IListenToEvent inst)
 		{
 			TCommonEventType eventTypeType = inst.EventTypeType;
@@ -4433,7 +4584,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_ICommonEventVarValueChange(inst.EventType<ICommonEventVarValueChange>());
 		}
 
-		// Token: 0x06006D9B RID: 28059 RVA: 0x00109020 File Offset: 0x00107220
+		// Token: 0x06007419 RID: 29721 RVA: 0x00117290 File Offset: 0x00115490
 		public static IQuestCondition ReadIChildQuestBtNode_Condition(IChildQuestBtNode inst)
 		{
 			switch (inst.ConditionType)
@@ -4573,7 +4724,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D9C RID: 28060 RVA: 0x00109494 File Offset: 0x00107694
+		// Token: 0x0600741A RID: 29722 RVA: 0x00117704 File Offset: 0x00115904
 		public static ISaveConfigType ReadIChildQuestBtNode_SaveConfig(IChildQuestBtNode inst)
 		{
 			TSaveConfig saveConfigType = inst.SaveConfigType;
@@ -4588,34 +4739,33 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_ISavePoint(inst.SaveConfig<ISavePoint>());
 		}
 
-		// Token: 0x06006D9D RID: 28061 RVA: 0x001094D0 File Offset: 0x001076D0
+		// Token: 0x0600741B RID: 29723 RVA: 0x00117740 File Offset: 0x00115940
 		public static List<Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchRoleType> ReadIParkourQuestCondition_MatchRoleOption(IParkourQuestCondition inst)
 		{
 			int matchRoleOptionLength = inst.MatchRoleOptionLength;
 			List<Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchRoleType> list = new List<Aki.TDConfigMgr.AutoGenerated.IMatch.IMatchRoleType>(matchRoleOptionLength);
 			for (int i = 0; i < matchRoleOptionLength; i++)
 			{
-				TMatchRoleOption tmatchRoleOption = inst.MatchRoleOptionType(i);
-				if (tmatchRoleOption != TMatchRoleOption.IMatchPhantomRole)
+				switch (inst.MatchRoleOptionType(i))
 				{
-					if (tmatchRoleOption != TMatchRoleOption.IMatchPlayerRole)
-					{
-						list.Add(null);
-					}
-					else
-					{
-						list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchPlayerRole(inst.MatchRoleOption<Aki.UniverseEditor.Interface.Fbs.Match.IMatchPlayerRole>(i)));
-					}
-				}
-				else
-				{
+				case TMatchRoleOption.IMatchAssistCharacterRole:
+					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchAssistCharacterRole(inst.MatchRoleOption<Aki.UniverseEditor.Interface.Fbs.Match.IMatchAssistCharacterRole>(i)));
+					break;
+				case TMatchRoleOption.IMatchPhantomRole:
 					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchPhantomRole(inst.MatchRoleOption<Aki.UniverseEditor.Interface.Fbs.Match.IMatchPhantomRole>(i)));
+					break;
+				case TMatchRoleOption.IMatchPlayerRole:
+					list.Add(QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Match_IMatchPlayerRole(inst.MatchRoleOption<Aki.UniverseEditor.Interface.Fbs.Match.IMatchPlayerRole>(i)));
+					break;
+				default:
+					list.Add(null);
+					break;
 				}
 			}
 			return list;
 		}
 
-		// Token: 0x06006D9E RID: 28062 RVA: 0x00109540 File Offset: 0x00107740
+		// Token: 0x0600741C RID: 29724 RVA: 0x001177D0 File Offset: 0x001159D0
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadITimerConfig_VarForTime(ITimerConfig inst)
 		{
 			switch (inst.VarForTimeType)
@@ -4635,7 +4785,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006D9F RID: 28063 RVA: 0x001095B8 File Offset: 0x001077B8
+		// Token: 0x0600741D RID: 29725 RVA: 0x00117848 File Offset: 0x00115A48
 		public static IWarningPreformType ReadIWarningPreform_Type(IWarningPreform inst)
 		{
 			TWarningPreformConfig typeType = inst.TypeType;
@@ -4650,7 +4800,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IWarningPreformFadeInScreen(inst.Type<IWarningPreformFadeInScreen>());
 		}
 
-		// Token: 0x06006DA0 RID: 28064 RVA: 0x001095F4 File Offset: 0x001077F4
+		// Token: 0x0600741E RID: 29726 RVA: 0x00117884 File Offset: 0x00115A84
 		public static Aki.TDConfigMgr.Action.ITeleportTransitionType ReadIFailedTeleport_TransitionOption(IFailedTeleport inst)
 		{
 			switch (inst.TransitionOptionType)
@@ -4682,7 +4832,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006DA1 RID: 28065 RVA: 0x001096D4 File Offset: 0x001078D4
+		// Token: 0x0600741F RID: 29727 RVA: 0x00117964 File Offset: 0x00115B64
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadITimerQuestCondition_VarForTime(ITimerQuestCondition inst)
 		{
 			switch (inst.VarForTimeType)
@@ -4702,7 +4852,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006DA2 RID: 28066 RVA: 0x0010974C File Offset: 0x0010794C
+		// Token: 0x06007420 RID: 29728 RVA: 0x001179DC File Offset: 0x00115BDC
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIMonsterCreatorQuestCondition_PrefabVar(IMonsterCreatorQuestCondition inst)
 		{
 			switch (inst.PrefabVarType)
@@ -4722,7 +4872,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006DA3 RID: 28067 RVA: 0x001097C4 File Offset: 0x001079C4
+		// Token: 0x06007421 RID: 29729 RVA: 0x00117A54 File Offset: 0x00115C54
 		public static ITetrisPlayModeBase ReadIFinishTetris_PlayMode(IFinishTetris inst)
 		{
 			switch (inst.PlayModeType)
@@ -4738,7 +4888,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006DA4 RID: 28068 RVA: 0x00109818 File Offset: 0x00107A18
+		// Token: 0x06007422 RID: 29730 RVA: 0x00117AA8 File Offset: 0x00115CA8
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFinishTetris_IsSuccessVar(IFinishTetris inst)
 		{
 			switch (inst.IsSuccessVarType)
@@ -4758,7 +4908,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006DA5 RID: 28069 RVA: 0x00109890 File Offset: 0x00107A90
+		// Token: 0x06007423 RID: 29731 RVA: 0x00117B20 File Offset: 0x00115D20
 		public static Aki.TDConfigMgr.AutoGenerated.IVar.VarRef ReadIFinishTetris_IsInitializedVar(IFinishTetris inst)
 		{
 			switch (inst.IsInitializedVarType)
@@ -4778,7 +4928,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x06006DA6 RID: 28070 RVA: 0x00109908 File Offset: 0x00107B08
+		// Token: 0x06007424 RID: 29732 RVA: 0x00117B98 File Offset: 0x00115D98
 		public static IArcadeGameplayBase ReadIFinishArcadeGameplay_ArcadeGameplay(IFinishArcadeGameplay inst)
 		{
 			TArcadeGameplay arcadeGameplayType = inst.ArcadeGameplayType;
@@ -4793,7 +4943,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			return QuestReadHelper.Make_Aki_UniverseEditor_Interface_Fbs_Quest_IArcadeGameplayTetrisBoardGame(inst.ArcadeGameplay<IArcadeGameplayTetrisBoardGame>());
 		}
 
-		// Token: 0x06006DA7 RID: 28071 RVA: 0x00109944 File Offset: 0x00107B44
+		// Token: 0x06007425 RID: 29733 RVA: 0x00117BD4 File Offset: 0x00115DD4
 		[NullableContext(2)]
 		public static ITetrisBoard ReadTCsvTetrisBoardData_Data(TCsvTetrisBoardData inst)
 		{

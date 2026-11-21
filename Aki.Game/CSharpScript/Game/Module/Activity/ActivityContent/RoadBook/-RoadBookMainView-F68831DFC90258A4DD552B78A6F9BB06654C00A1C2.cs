@@ -2,50 +2,50 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061D3 RID: 25043
+	// Token: 0x02005151 RID: 20817
 	internal enum <RoadBookMainView>F68831DFC90258A4DD552B78A6F9BB06654C00A1C2F9A9111279D0BC3F6F2A4F0__ERoadBookMainComponents
 	{
-		// Token: 0x04020F73 RID: 135027
+		// Token: 0x0401B8A2 RID: 112802
 		CaptionItem,
-		// Token: 0x04020F74 RID: 135028
+		// Token: 0x0401B8A3 RID: 112803
 		TexFill,
-		// Token: 0x04020F75 RID: 135029
+		// Token: 0x0401B8A4 RID: 112804
 		TxtLevel,
-		// Token: 0x04020F76 RID: 135030
+		// Token: 0x0401B8A5 RID: 112805
 		TxtLevelLight,
-		// Token: 0x04020F77 RID: 135031
+		// Token: 0x0401B8A6 RID: 112806
 		TxtProgress,
-		// Token: 0x04020F78 RID: 135032
+		// Token: 0x0401B8A7 RID: 112807
 		BtnLevelRight,
-		// Token: 0x04020F79 RID: 135033
+		// Token: 0x0401B8A8 RID: 112808
 		BtnLevelLeft,
-		// Token: 0x04020F7A RID: 135034
+		// Token: 0x0401B8A9 RID: 112809
 		ItemBtn1,
-		// Token: 0x04020F7B RID: 135035
+		// Token: 0x0401B8AA RID: 112810
 		ItemBtn2,
-		// Token: 0x04020F7C RID: 135036
+		// Token: 0x0401B8AB RID: 112811
 		ItemBtn3,
-		// Token: 0x04020F7D RID: 135037
+		// Token: 0x0401B8AC RID: 112812
 		ScrollViewItem,
-		// Token: 0x04020F7E RID: 135038
+		// Token: 0x0401B8AD RID: 112813
 		BtnLevelUp,
-		// Token: 0x04020F7F RID: 135039
+		// Token: 0x0401B8AE RID: 112814
 		TxtRewardNum,
-		// Token: 0x04020F80 RID: 135040
+		// Token: 0x0401B8AF RID: 112815
 		TexFill1,
-		// Token: 0x04020F81 RID: 135041
+		// Token: 0x0401B8B0 RID: 112816
 		TexFill2,
-		// Token: 0x04020F82 RID: 135042
+		// Token: 0x0401B8B1 RID: 112817
 		PanelFinishMask,
-		// Token: 0x04020F83 RID: 135043
+		// Token: 0x0401B8B2 RID: 112818
 		PanelFinal,
-		// Token: 0x04020F84 RID: 135044
+		// Token: 0x0401B8B3 RID: 112819
 		PanelBottom,
-		// Token: 0x04020F85 RID: 135045
+		// Token: 0x0401B8B4 RID: 112820
 		PanelFinalText,
-		// Token: 0x04020F86 RID: 135046
+		// Token: 0x0401B8B5 RID: 112821
 		BottomRewardItem,
-		// Token: 0x04020F87 RID: 135047
+		// Token: 0x0401B8B6 RID: 112822
 		BottomFinishItem
 	}
 }

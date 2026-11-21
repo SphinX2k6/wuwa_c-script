@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000138 RID: 312
+	// Token: 0x02000147 RID: 327
 	public class ConfigCalabashMeshById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000751 RID: 1873 RVA: 0x00083034 File Offset: 0x00081234
+		// Token: 0x060007AB RID: 1963 RVA: 0x00088998 File Offset: 0x00086B98
 		static ConfigCalabashMeshById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCalabashMeshById.CreateStaticDefaultValue), new Action(ConfigCalabashMeshById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000752 RID: 1874 RVA: 0x00083054 File Offset: 0x00081254
+		// Token: 0x060007AC RID: 1964 RVA: 0x000889B8 File Offset: 0x00086BB8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCalabashMeshById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000753 RID: 1875 RVA: 0x000830D3 File Offset: 0x000812D3
+		// Token: 0x060007AD RID: 1965 RVA: 0x00088A37 File Offset: 0x00086C37
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCalabashMeshById.LogPair = null;
 			ConfigCalabashMeshById.HandleId = 0;
 		}
 
-		// Token: 0x06000754 RID: 1876 RVA: 0x000830E1 File Offset: 0x000812E1
+		// Token: 0x060007AE RID: 1966 RVA: 0x00088A45 File Offset: 0x00086C45
 		public static void Init()
 		{
 			ConfigCalabashMeshById.HandleId = ConfigCommon.InitDataStatement(ConfigCalabashMeshById.HandleId, "db_calabash.db", "select BinData from `CalabashMesh` where Id=?");
 		}
 
-		// Token: 0x06000755 RID: 1877 RVA: 0x000830FC File Offset: 0x000812FC
+		// Token: 0x060007AF RID: 1967 RVA: 0x00088A60 File Offset: 0x00086C60
 		public static CalabashMesh? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCalabashMeshById.HandleId, ConfigCalabashMeshById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CalabashMesh?(rootAsCalabashMesh);
 		}
 
-		// Token: 0x0400086C RID: 2156
+		// Token: 0x040008D5 RID: 2261
 		private const string DB = "db_calabash.db";
 
-		// Token: 0x0400086D RID: 2157
+		// Token: 0x040008D6 RID: 2262
 		private const string FILE = "h.葫芦.xlsx";
 
-		// Token: 0x0400086E RID: 2158
+		// Token: 0x040008D7 RID: 2263
 		private const string TABLE = "CalabashMesh";
 
-		// Token: 0x0400086F RID: 2159
+		// Token: 0x040008D8 RID: 2264
 		private const string COMMAND = "select BinData from `CalabashMesh` where Id=?";
 
-		// Token: 0x04000870 RID: 2160
+		// Token: 0x040008D9 RID: 2265
 		private const string KEY_PREFIX = "CalabashMeshById";
 
-		// Token: 0x04000871 RID: 2161
+		// Token: 0x040008DA RID: 2266
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000872 RID: 2162
+		// Token: 0x040008DB RID: 2267
 		private static int HandleId;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,13 +7,13 @@ using CSharpScript.Game.Module.Dango.DangoLogic;
 using CSharpScript.Game.Module.RacingBets;
 using CSharpScript.Game.Module.RacingBets.Data;
 
-// Token: 0x020026DE RID: 9950
+// Token: 0x02001BC9 RID: 7113
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsLegMatchData
 {
-	// Token: 0x17001A7A RID: 6778
-	// (get) Token: 0x0601466D RID: 83565 RVA: 0x00529144 File Offset: 0x00527344
+	// Token: 0x17001AB2 RID: 6834
+	// (get) Token: 0x06011B4F RID: 72527 RVA: 0x00537E7C File Offset: 0x0053607C
 	public int Id
 	{
 		get
@@ -23,8 +22,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A7B RID: 6779
-	// (get) Token: 0x0601466E RID: 83566 RVA: 0x0052914C File Offset: 0x0052734C
+	// Token: 0x17001AB3 RID: 6835
+	// (get) Token: 0x06011B50 RID: 72528 RVA: 0x00537E84 File Offset: 0x00536084
 	public string Name
 	{
 		get
@@ -33,8 +32,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A7C RID: 6780
-	// (get) Token: 0x0601466F RID: 83567 RVA: 0x00529159 File Offset: 0x00527359
+	// Token: 0x17001AB4 RID: 6836
+	// (get) Token: 0x06011B51 RID: 72529 RVA: 0x00537E91 File Offset: 0x00536091
 	public string ShortName
 	{
 		get
@@ -43,8 +42,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A7D RID: 6781
-	// (get) Token: 0x06014670 RID: 83568 RVA: 0x00529166 File Offset: 0x00527366
+	// Token: 0x17001AB5 RID: 6837
+	// (get) Token: 0x06011B52 RID: 72530 RVA: 0x00537E9E File Offset: 0x0053609E
 	public string SimpleName
 	{
 		get
@@ -53,8 +52,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A7E RID: 6782
-	// (get) Token: 0x06014671 RID: 83569 RVA: 0x00529173 File Offset: 0x00527373
+	// Token: 0x17001AB6 RID: 6838
+	// (get) Token: 0x06011B53 RID: 72531 RVA: 0x00537EAB File Offset: 0x005360AB
 	public int Type
 	{
 		get
@@ -63,8 +62,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A7F RID: 6783
-	// (get) Token: 0x06014672 RID: 83570 RVA: 0x00529180 File Offset: 0x00527380
+	// Token: 0x17001AB7 RID: 6839
+	// (get) Token: 0x06011B54 RID: 72532 RVA: 0x00537EB8 File Offset: 0x005360B8
 	public ERacingBetsGroupMatchType GroupMatchType
 	{
 		get
@@ -73,8 +72,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A80 RID: 6784
-	// (get) Token: 0x06014673 RID: 83571 RVA: 0x0052918D File Offset: 0x0052738D
+	// Token: 0x17001AB8 RID: 6840
+	// (get) Token: 0x06011B55 RID: 72533 RVA: 0x00537EC5 File Offset: 0x005360C5
 	public RacingBetsGroupMatchData ParentGroupMatchData
 	{
 		get
@@ -83,8 +82,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A81 RID: 6785
-	// (get) Token: 0x06014674 RID: 83572 RVA: 0x00529195 File Offset: 0x00527395
+	// Token: 0x17001AB9 RID: 6841
+	// (get) Token: 0x06011B56 RID: 72534 RVA: 0x00537ECD File Offset: 0x005360CD
 	public double BetsStartTime
 	{
 		get
@@ -93,8 +92,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A82 RID: 6786
-	// (get) Token: 0x06014675 RID: 83573 RVA: 0x0052919D File Offset: 0x0052739D
+	// Token: 0x17001ABA RID: 6842
+	// (get) Token: 0x06011B57 RID: 72535 RVA: 0x00537ED5 File Offset: 0x005360D5
 	public double BetsEndTime
 	{
 		get
@@ -103,8 +102,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A83 RID: 6787
-	// (get) Token: 0x06014676 RID: 83574 RVA: 0x005291A5 File Offset: 0x005273A5
+	// Token: 0x17001ABB RID: 6843
+	// (get) Token: 0x06011B58 RID: 72536 RVA: 0x00537EDD File Offset: 0x005360DD
 	public double MatchStartTime
 	{
 		get
@@ -113,8 +112,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A84 RID: 6788
-	// (get) Token: 0x06014677 RID: 83575 RVA: 0x005291AD File Offset: 0x005273AD
+	// Token: 0x17001ABC RID: 6844
+	// (get) Token: 0x06011B59 RID: 72537 RVA: 0x00537EE5 File Offset: 0x005360E5
 	public double MatchEndTime
 	{
 		get
@@ -123,8 +122,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A85 RID: 6789
-	// (get) Token: 0x06014678 RID: 83576 RVA: 0x005291B5 File Offset: 0x005273B5
+	// Token: 0x17001ABD RID: 6845
+	// (get) Token: 0x06011B5A RID: 72538 RVA: 0x00537EED File Offset: 0x005360ED
 	public bool HasBetting
 	{
 		get
@@ -133,8 +132,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A86 RID: 6790
-	// (get) Token: 0x06014679 RID: 83577 RVA: 0x005291BD File Offset: 0x005273BD
+	// Token: 0x17001ABE RID: 6846
+	// (get) Token: 0x06011B5B RID: 72539 RVA: 0x00537EF5 File Offset: 0x005360F5
 	public int BetDangoId
 	{
 		get
@@ -143,8 +142,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A87 RID: 6791
-	// (get) Token: 0x0601467A RID: 83578 RVA: 0x005291C5 File Offset: 0x005273C5
+	// Token: 0x17001ABF RID: 6847
+	// (get) Token: 0x06011B5C RID: 72540 RVA: 0x00537EFD File Offset: 0x005360FD
 	public string MatchBtnBgPath
 	{
 		get
@@ -153,7 +152,7 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x0601467B RID: 83579 RVA: 0x005291D4 File Offset: 0x005273D4
+	// Token: 0x06011B5D RID: 72541 RVA: 0x00537F0C File Offset: 0x0053610C
 	public int GetBetDangoRank()
 	{
 		if (this.DangoRank.Count < 0)
@@ -172,8 +171,8 @@ public class RacingBetsLegMatchData
 		return result;
 	}
 
-	// Token: 0x17001A88 RID: 6792
-	// (get) Token: 0x0601467C RID: 83580 RVA: 0x00529224 File Offset: 0x00527424
+	// Token: 0x17001AC0 RID: 6848
+	// (get) Token: 0x06011B5E RID: 72542 RVA: 0x00537F5C File Offset: 0x0053615C
 	public int BetGearId
 	{
 		get
@@ -182,8 +181,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A89 RID: 6793
-	// (get) Token: 0x0601467D RID: 83581 RVA: 0x0052922C File Offset: 0x0052742C
+	// Token: 0x17001AC1 RID: 6849
+	// (get) Token: 0x06011B5F RID: 72543 RVA: 0x00537F64 File Offset: 0x00536164
 	public int BetGearCash
 	{
 		get
@@ -192,8 +191,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A8A RID: 6794
-	// (get) Token: 0x0601467E RID: 83582 RVA: 0x00529234 File Offset: 0x00527434
+	// Token: 0x17001AC2 RID: 6850
+	// (get) Token: 0x06011B60 RID: 72544 RVA: 0x00537F6C File Offset: 0x0053616C
 	public double NextOddsRateRefreshTime
 	{
 		get
@@ -202,8 +201,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A8B RID: 6795
-	// (get) Token: 0x0601467F RID: 83583 RVA: 0x0052923C File Offset: 0x0052743C
+	// Token: 0x17001AC3 RID: 6851
+	// (get) Token: 0x06011B61 RID: 72545 RVA: 0x00537F74 File Offset: 0x00536174
 	public bool IsFinalOddsRefresh
 	{
 		get
@@ -212,8 +211,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A8C RID: 6796
-	// (get) Token: 0x06014680 RID: 83584 RVA: 0x00529244 File Offset: 0x00527444
+	// Token: 0x17001AC4 RID: 6852
+	// (get) Token: 0x06011B62 RID: 72546 RVA: 0x00537F7C File Offset: 0x0053617C
 	public int Odds
 	{
 		get
@@ -222,8 +221,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A8D RID: 6797
-	// (get) Token: 0x06014681 RID: 83585 RVA: 0x0052924C File Offset: 0x0052744C
+	// Token: 0x17001AC5 RID: 6853
+	// (get) Token: 0x06011B63 RID: 72547 RVA: 0x00537F84 File Offset: 0x00536184
 	public string OddsVersion
 	{
 		get
@@ -232,8 +231,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A8E RID: 6798
-	// (get) Token: 0x06014682 RID: 83586 RVA: 0x00529254 File Offset: 0x00527454
+	// Token: 0x17001AC6 RID: 6854
+	// (get) Token: 0x06011B64 RID: 72548 RVA: 0x00537F8C File Offset: 0x0053618C
 	public int LeaveCancelNum
 	{
 		get
@@ -242,8 +241,8 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x17001A8F RID: 6799
-	// (get) Token: 0x06014683 RID: 83587 RVA: 0x0052925C File Offset: 0x0052745C
+	// Token: 0x17001AC7 RID: 6855
+	// (get) Token: 0x06011B65 RID: 72549 RVA: 0x00537F94 File Offset: 0x00536194
 	public int OddsReward
 	{
 		get
@@ -252,7 +251,7 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x06014684 RID: 83588 RVA: 0x00529264 File Offset: 0x00527464
+	// Token: 0x06011B66 RID: 72550 RVA: 0x00537F9C File Offset: 0x0053619C
 	public unsafe void Init(RacingBetsLegMatchesInfo legMatchInfo, RacingBetsGroupMatchData matchData)
 	{
 		this.IdInternal = legMatchInfo.Id;
@@ -280,7 +279,7 @@ public class RacingBetsLegMatchData
 		this.Refresh(legMatchInfo);
 	}
 
-	// Token: 0x06014685 RID: 83589 RVA: 0x00529468 File Offset: 0x00527668
+	// Token: 0x06011B67 RID: 72551 RVA: 0x005381A0 File Offset: 0x005363A0
 	public unsafe void RefreshBetInfo(RacingBetsGearInfo info)
 	{
 		Log instance = Log.Instance;
@@ -307,7 +306,7 @@ public class RacingBetsLegMatchData
 		this.OddsRewardInternal = info.OddsReward;
 	}
 
-	// Token: 0x06014686 RID: 83590 RVA: 0x00529609 File Offset: 0x00527809
+	// Token: 0x06011B68 RID: 72552 RVA: 0x00538341 File Offset: 0x00536541
 	public void RefreshLegMatchResultNotify(RacingBetLegMatchResultNotify data)
 	{
 		this.BetDangoIdInternal = data.BetDangoId;
@@ -315,7 +314,7 @@ public class RacingBetsLegMatchData
 		this.OddsRewardInternal = data.Reward;
 	}
 
-	// Token: 0x06014687 RID: 83591 RVA: 0x00529630 File Offset: 0x00527830
+	// Token: 0x06011B69 RID: 72553 RVA: 0x00538368 File Offset: 0x00536568
 	public void Refresh(RacingBetsLegMatchesInfo legMatchInfo)
 	{
 		this.DangoRank = new List<int>(legMatchInfo.DangoRank);
@@ -327,7 +326,7 @@ public class RacingBetsLegMatchData
 		this.RefreshDangoActorInfo(new List<RacingBetsDangoInfo>(legMatchInfo.DangoInfo));
 	}
 
-	// Token: 0x06014688 RID: 83592 RVA: 0x005296A0 File Offset: 0x005278A0
+	// Token: 0x06011B6A RID: 72554 RVA: 0x005383D8 File Offset: 0x005365D8
 	public void RefreshDangoOdds(RacingBetsUpdateOddsResponse info)
 	{
 		long num = MathUtils.Instance.LongToBigInt(info.NextOddsTime);
@@ -338,7 +337,7 @@ public class RacingBetsLegMatchData
 		this.RefreshDangoActorInfo(new List<RacingBetsDangoInfo>(info.DangoInfo));
 	}
 
-	// Token: 0x06014689 RID: 83593 RVA: 0x005296FC File Offset: 0x005278FC
+	// Token: 0x06011B6B RID: 72555 RVA: 0x00538434 File Offset: 0x00536634
 	private void RefreshDangoActorInfo(List<RacingBetsDangoInfo> dangoInfo)
 	{
 		if (this.DangoActorDataList.Count <= 0 && this.AbuDangoData == null)
@@ -408,13 +407,13 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x0601468A RID: 83594 RVA: 0x00529978 File Offset: 0x00527B78
+	// Token: 0x06011B6C RID: 72556 RVA: 0x005386B0 File Offset: 0x005368B0
 	public void RefreshLegMatchResult(MatchResult matchResult)
 	{
 		this.DangoRank = new List<int>(matchResult.DangoRank);
 	}
 
-	// Token: 0x0601468B RID: 83595 RVA: 0x0052998C File Offset: 0x00527B8C
+	// Token: 0x06011B6D RID: 72557 RVA: 0x005386C4 File Offset: 0x005368C4
 	public ERacingBetsLegMatchState GetLegMatchState()
 	{
 		double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -452,7 +451,7 @@ public class RacingBetsLegMatchData
 		}
 	}
 
-	// Token: 0x0601468C RID: 83596 RVA: 0x005299FC File Offset: 0x00527BFC
+	// Token: 0x06011B6E RID: 72558 RVA: 0x00538734 File Offset: 0x00536934
 	public double GetLegRemindTime()
 	{
 		RacingBetsSeasonData racingBetsSeasonData = RacingBetsModel.Instance.GetRacingBetsSeasonData();
@@ -485,31 +484,28 @@ public class RacingBetsLegMatchData
 		return 0.0;
 	}
 
-	// Token: 0x0601468D RID: 83597 RVA: 0x00529AE4 File Offset: 0x00527CE4
+	// Token: 0x06011B6F RID: 72559 RVA: 0x0053881C File Offset: 0x00536A1C
 	public bool IsLegMatchFinished()
 	{
 		ERacingBetsLegMatchState legMatchState = this.GetLegMatchState();
 		return legMatchState == ERacingBetsLegMatchState.EndOfMatch || legMatchState == ERacingBetsLegMatchState.End;
 	}
 
-	// Token: 0x0601468E RID: 83598 RVA: 0x00529B02 File Offset: 0x00527D02
+	// Token: 0x06011B70 RID: 72560 RVA: 0x0053883A File Offset: 0x00536A3A
 	private string GetResultShowGroupName(int groupMatchId)
 	{
 		RacingBetsGroupMatchData racingBetsGroupMatchData = RacingBetsModel.Instance.GetRacingBetsGroupMatchData(groupMatchId);
 		return ((racingBetsGroupMatchData != null) ? racingBetsGroupMatchData.ShortName : null) ?? "";
 	}
 
-	// Token: 0x0601468F RID: 83599 RVA: 0x00529B24 File Offset: 0x00527D24
+	// Token: 0x06011B71 RID: 72561 RVA: 0x0053885C File Offset: 0x00536A5C
 	private bool IsLastLegMatchInGroup()
 	{
 		List<RacingBetsLegMatchData> legMatchList = this.ParentMatchData.GetLegMatchList();
-		RacingBetsLegMatchData racingBetsLegMatchData = legMatchList.ElementAtOrDefault(legMatchList.Count - 1);
-		int? num = (racingBetsLegMatchData != null) ? new int?(racingBetsLegMatchData.Id) : null;
-		int idInternal = this.IdInternal;
-		return num.GetValueOrDefault() == idInternal & num != null;
+		return legMatchList.Count > 0 && legMatchList[legMatchList.Count - 1].Id == this.IdInternal;
 	}
 
-	// Token: 0x06014690 RID: 83600 RVA: 0x00529B80 File Offset: 0x00527D80
+	// Token: 0x06011B72 RID: 72562 RVA: 0x0053889C File Offset: 0x00536A9C
 	public List<IRacingBetsLegMatchResultData> GetLegMatchResultList()
 	{
 		List<int> promoteDangoList = this.ParentMatchData.GetPromoteDangoList();
@@ -540,7 +536,7 @@ public class RacingBetsLegMatchData
 		return list;
 	}
 
-	// Token: 0x06014691 RID: 83601 RVA: 0x00529C98 File Offset: 0x00527E98
+	// Token: 0x06011B73 RID: 72563 RVA: 0x005389B4 File Offset: 0x00536BB4
 	public int GetChampionDangoId()
 	{
 		if (this.DangoRank.Count <= 0)
@@ -556,7 +552,7 @@ public class RacingBetsLegMatchData
 		return this.DangoRank[0];
 	}
 
-	// Token: 0x06014692 RID: 83602 RVA: 0x00529CF8 File Offset: 0x00527EF8
+	// Token: 0x06011B74 RID: 72564 RVA: 0x00538A14 File Offset: 0x00536C14
 	[NullableContext(2)]
 	public unsafe IRacingBetsDangoActorData GetDangoActorData(int dangoId)
 	{
@@ -578,19 +574,19 @@ public class RacingBetsLegMatchData
 		return null;
 	}
 
-	// Token: 0x06014693 RID: 83603 RVA: 0x00529DBC File Offset: 0x00527FBC
+	// Token: 0x06011B75 RID: 72565 RVA: 0x00538AD8 File Offset: 0x00536CD8
 	public List<IRacingBetsDangoActorData> GetAllDangoActorDataList()
 	{
 		return this.AllDangoActorDataList;
 	}
 
-	// Token: 0x06014694 RID: 83604 RVA: 0x00529DC4 File Offset: 0x00527FC4
+	// Token: 0x06011B76 RID: 72566 RVA: 0x00538AE0 File Offset: 0x00536CE0
 	public int GetOddsRewardCount()
 	{
 		return (int)Math.Ceiling((double)(this.BetGearCash * this.Odds) / 100.0);
 	}
 
-	// Token: 0x06014695 RID: 83605 RVA: 0x00529DE4 File Offset: 0x00527FE4
+	// Token: 0x06011B77 RID: 72567 RVA: 0x00538B00 File Offset: 0x00536D00
 	public ERacingBetsMainViewShowType GetRacingBetsMainViewActorShowType(ERacingBetsLegMatchState matchState)
 	{
 		if (RacingBetsModel.Instance.IsFinalLegMatch(this.IdInternal) && (matchState == ERacingBetsLegMatchState.EndOfMatch || matchState == ERacingBetsLegMatchState.End))
@@ -604,7 +600,7 @@ public class RacingBetsLegMatchData
 		return ERacingBetsMainViewShowType.SixDango;
 	}
 
-	// Token: 0x06014696 RID: 83606 RVA: 0x00529E09 File Offset: 0x00528009
+	// Token: 0x06011B78 RID: 72568 RVA: 0x00538B25 File Offset: 0x00536D25
 	public string GetMainViewCameraHandleName(ERacingBetsMainViewShowType showType)
 	{
 		if (showType == ERacingBetsMainViewShowType.OneDango)
@@ -614,7 +610,7 @@ public class RacingBetsLegMatchData
 		return "Camera_DangoPreview_6Player";
 	}
 
-	// Token: 0x06014697 RID: 83607 RVA: 0x00529E1C File Offset: 0x0052801C
+	// Token: 0x06011B79 RID: 72569 RVA: 0x00538B38 File Offset: 0x00536D38
 	[NullableContext(2)]
 	public IRacingBetsDangoActorData GetChampionDangoActorData()
 	{
@@ -639,7 +635,7 @@ public class RacingBetsLegMatchData
 		};
 	}
 
-	// Token: 0x06014698 RID: 83608 RVA: 0x00529EB4 File Offset: 0x005280B4
+	// Token: 0x06011B7A RID: 72570 RVA: 0x00538BD0 File Offset: 0x00536DD0
 	[return: TupleElementNames(new string[]
 	{
 		"Text",
@@ -688,7 +684,7 @@ public class RacingBetsLegMatchData
 		return new ValueTuple<string, int>(item, num);
 	}
 
-	// Token: 0x06014699 RID: 83609 RVA: 0x0052A064 File Offset: 0x00528264
+	// Token: 0x06011B7B RID: 72571 RVA: 0x00538D80 File Offset: 0x00536F80
 	public string GetRandomRuleText()
 	{
 		RacingBetsSeasonData racingBetsSeasonData = RacingBetsModel.Instance.GetRacingBetsSeasonData();
@@ -720,73 +716,73 @@ public class RacingBetsLegMatchData
 		return list[index].RuleText;
 	}
 
-	// Token: 0x04009947 RID: 39239
+	// Token: 0x04009A9F RID: 39583
 	private int IdInternal;
 
-	// Token: 0x04009948 RID: 39240
+	// Token: 0x04009AA0 RID: 39584
 	private bool HasBettingInternal;
 
-	// Token: 0x04009949 RID: 39241
+	// Token: 0x04009AA1 RID: 39585
 	private int BetDangoIdInternal;
 
-	// Token: 0x0400994A RID: 39242
+	// Token: 0x04009AA2 RID: 39586
 	private int BetGearIdInternal;
 
-	// Token: 0x0400994B RID: 39243
+	// Token: 0x04009AA3 RID: 39587
 	private int BetGearCashInternal;
 
-	// Token: 0x0400994C RID: 39244
+	// Token: 0x04009AA4 RID: 39588
 	private double NextOddsRateRefreshTimeInternal;
 
-	// Token: 0x0400994D RID: 39245
+	// Token: 0x04009AA5 RID: 39589
 	private bool IsFinalOddsRefreshInternal;
 
-	// Token: 0x0400994E RID: 39246
+	// Token: 0x04009AA6 RID: 39590
 	private int OddsInternal;
 
-	// Token: 0x0400994F RID: 39247
+	// Token: 0x04009AA7 RID: 39591
 	private string OddsVersionInternal = "";
 
-	// Token: 0x04009950 RID: 39248
+	// Token: 0x04009AA8 RID: 39592
 	private int LeaveCancelNumInternal;
 
-	// Token: 0x04009951 RID: 39249
+	// Token: 0x04009AA9 RID: 39593
 	private int OddsRewardInternal;
 
-	// Token: 0x04009952 RID: 39250
+	// Token: 0x04009AAA RID: 39594
 	private double MatchWholeStartTimeInternal;
 
-	// Token: 0x04009953 RID: 39251
+	// Token: 0x04009AAB RID: 39595
 	private double MatchWholeEndTimeInternal;
 
-	// Token: 0x04009954 RID: 39252
+	// Token: 0x04009AAC RID: 39596
 	private double BetsStartTimeInternal;
 
-	// Token: 0x04009955 RID: 39253
+	// Token: 0x04009AAD RID: 39597
 	private double BetsEndTimeInternal;
 
-	// Token: 0x04009956 RID: 39254
+	// Token: 0x04009AAE RID: 39598
 	private double MatchStartTimeInternal;
 
-	// Token: 0x04009957 RID: 39255
+	// Token: 0x04009AAF RID: 39599
 	private double MatchEndTimeInternal;
 
-	// Token: 0x04009958 RID: 39256
+	// Token: 0x04009AB0 RID: 39600
 	private RacingBetsLegMatches LegMatchConfig;
 
-	// Token: 0x04009959 RID: 39257
+	// Token: 0x04009AB1 RID: 39601
 	private List<int> DangoRank = new List<int>();
 
-	// Token: 0x0400995A RID: 39258
+	// Token: 0x04009AB2 RID: 39602
 	private RacingBetsGroupMatchData ParentMatchData;
 
-	// Token: 0x0400995B RID: 39259
+	// Token: 0x04009AB3 RID: 39603
 	private readonly List<IRacingBetsDangoActorData> DangoActorDataList = new List<IRacingBetsDangoActorData>();
 
-	// Token: 0x0400995C RID: 39260
+	// Token: 0x04009AB4 RID: 39604
 	private readonly List<IRacingBetsDangoActorData> AllDangoActorDataList = new List<IRacingBetsDangoActorData>();
 
-	// Token: 0x0400995D RID: 39261
+	// Token: 0x04009AB5 RID: 39605
 	[Nullable(2)]
 	private IRacingBetsDangoActorData AbuDangoData;
 }

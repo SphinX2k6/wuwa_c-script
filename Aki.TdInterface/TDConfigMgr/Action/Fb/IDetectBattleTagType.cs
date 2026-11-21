@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002705 RID: 9989
+	// Token: 0x020029CC RID: 10700
 	public class IDetectBattleTagType
 	{
-		// Token: 0x0600DEF1 RID: 57073 RVA: 0x00210DCE File Offset: 0x0020EFCE
-		[NullableContext(1)]
+		// Token: 0x0600ECDD RID: 60637 RVA: 0x0022D777 File Offset: 0x0022B977
 		public static IDetectBattleTagType Create(IDetectBattleTagType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042A9 RID: 17065
-		// (get) Token: 0x0600DEF2 RID: 57074 RVA: 0x00210DED File Offset: 0x0020EFED
+		// Token: 0x170045F3 RID: 17907
+		// (get) Token: 0x0600ECDE RID: 60638 RVA: 0x0022D796 File Offset: 0x0022B996
 		public virtual EDetectBattleTagType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BBB RID: 31675
+		// Token: 0x04008260 RID: 33376
 		private IDetectBattleTagType Instance;
 	}
 }

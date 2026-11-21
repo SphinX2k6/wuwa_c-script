@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005ECB RID: 24267
+	// Token: 0x02004EB0 RID: 20144
 	[NullableContext(1)]
 	public interface ILevelPlayNightMareConfigData
 	{
-		// Token: 0x17008EDA RID: 36570
-		// (get) Token: 0x0603DB33 RID: 252723
-		// (set) Token: 0x0603DB34 RID: 252724
+		// Token: 0x170062AC RID: 25260
+		// (get) Token: 0x06032AC3 RID: 207555
+		// (set) Token: 0x06032AC4 RID: 207556
 		int LevelPlayId { get; set; }
 
-		// Token: 0x17008EDB RID: 36571
-		// (get) Token: 0x0603DB35 RID: 252725
-		// (set) Token: 0x0603DB36 RID: 252726
+		// Token: 0x170062AD RID: 25261
+		// (get) Token: 0x06032AC5 RID: 207557
+		// (set) Token: 0x06032AC6 RID: 207558
 		string[] Vars { get; set; }
 
-		// Token: 0x17008EDC RID: 36572
-		// (get) Token: 0x0603DB37 RID: 252727
-		// (set) Token: 0x0603DB38 RID: 252728
+		// Token: 0x170062AE RID: 25262
+		// (get) Token: 0x06032AC7 RID: 207559
+		// (set) Token: 0x06032AC8 RID: 207560
 		int[] DefaultValues { get; set; }
 	}
 }

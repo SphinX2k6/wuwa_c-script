@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000F2 RID: 242
+	// Token: 0x02000101 RID: 257
 	public class ConfigBirthDayTextByDateAndType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060005AD RID: 1453 RVA: 0x00079C88 File Offset: 0x00077E88
+		// Token: 0x06000607 RID: 1543 RVA: 0x0007F5EC File Offset: 0x0007D7EC
 		static ConfigBirthDayTextByDateAndType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBirthDayTextByDateAndType.CreateStaticDefaultValue), new Action(ConfigBirthDayTextByDateAndType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060005AE RID: 1454 RVA: 0x00079CA8 File Offset: 0x00077EA8
+		// Token: 0x06000608 RID: 1544 RVA: 0x0007F60C File Offset: 0x0007D80C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBirthDayTextByDateAndType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060005AF RID: 1455 RVA: 0x00079D27 File Offset: 0x00077F27
+		// Token: 0x06000609 RID: 1545 RVA: 0x0007F68B File Offset: 0x0007D88B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBirthDayTextByDateAndType.LogPair = null;
 			ConfigBirthDayTextByDateAndType.HandleId = 0;
 		}
 
-		// Token: 0x060005B0 RID: 1456 RVA: 0x00079D35 File Offset: 0x00077F35
+		// Token: 0x0600060A RID: 1546 RVA: 0x0007F699 File Offset: 0x0007D899
 		public static void Init()
 		{
 			ConfigBirthDayTextByDateAndType.HandleId = ConfigCommon.InitDataStatement(ConfigBirthDayTextByDateAndType.HandleId, "db_birthday.db", "select BinData from `BirthDayText` where Date=? And DateType=?");
 		}
 
-		// Token: 0x060005B1 RID: 1457 RVA: 0x00079D50 File Offset: 0x00077F50
+		// Token: 0x0600060B RID: 1547 RVA: 0x0007F6B4 File Offset: 0x0007D8B4
 		public static BirthDayText? GetConfig(int p0Date, int p1DateType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBirthDayTextByDateAndType.HandleId, ConfigBirthDayTextByDateAndType.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new BirthDayText?(rootAsBirthDayText);
 		}
 
-		// Token: 0x04000682 RID: 1666
+		// Token: 0x040006EB RID: 1771
 		private const string DB = "db_birthday.db";
 
-		// Token: 0x04000683 RID: 1667
+		// Token: 0x040006EC RID: 1772
 		private const string FILE = "s.生日.xlsx";
 
-		// Token: 0x04000684 RID: 1668
+		// Token: 0x040006ED RID: 1773
 		private const string TABLE = "BirthDayText";
 
-		// Token: 0x04000685 RID: 1669
+		// Token: 0x040006EE RID: 1774
 		private const string COMMAND = "select BinData from `BirthDayText` where Date=? And DateType=?";
 
-		// Token: 0x04000686 RID: 1670
+		// Token: 0x040006EF RID: 1775
 		private const string KEY_PREFIX = "BirthDayTextByDateAndType";
 
-		// Token: 0x04000687 RID: 1671
+		// Token: 0x040006F0 RID: 1776
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000688 RID: 1672
+		// Token: 0x040006F1 RID: 1777
 		private static int HandleId;
 	}
 }

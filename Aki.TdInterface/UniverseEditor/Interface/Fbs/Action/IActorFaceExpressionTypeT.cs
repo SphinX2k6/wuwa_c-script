@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060A5 RID: 24741
+	// Token: 0x02006707 RID: 26375
 	public class IActorFaceExpressionTypeT
 	{
-		// Token: 0x1700B652 RID: 46674
-		// (get) Token: 0x0602A3C2 RID: 172994 RVA: 0x005D288E File Offset: 0x005D0A8E
-		// (set) Token: 0x0602A3C3 RID: 172995 RVA: 0x005D2896 File Offset: 0x005D0A96
+		// Token: 0x1700BFBD RID: 49085
+		// (get) Token: 0x0602CAA3 RID: 182947 RVA: 0x0061C836 File Offset: 0x0061AA36
+		// (set) Token: 0x0602CAA4 RID: 182948 RVA: 0x0061C83E File Offset: 0x0061AA3E
 		public EActorFaceExpressionType Type { get; set; }
 
-		// Token: 0x0602A3C4 RID: 172996 RVA: 0x005D289F File Offset: 0x005D0A9F
+		// Token: 0x0602CAA5 RID: 182949 RVA: 0x0061C847 File Offset: 0x0061AA47
 		public IActorFaceExpressionTypeT()
 		{
 			this.Type = EActorFaceExpressionType.Play;

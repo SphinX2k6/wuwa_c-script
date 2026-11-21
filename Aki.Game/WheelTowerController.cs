@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,23 +12,23 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001657 RID: 5719
+// Token: 0x02000B0F RID: 2831
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class WheelTowerController : ActivityControllerBase
 {
-	// Token: 0x17000D8D RID: 3469
-	// (get) Token: 0x0600A0A6 RID: 41126 RVA: 0x0023635A File Offset: 0x0023455A
-	// (set) Token: 0x0600A0A7 RID: 41127 RVA: 0x00236362 File Offset: 0x00234562
+	// Token: 0x17000DAE RID: 3502
+	// (get) Token: 0x06007484 RID: 29828 RVA: 0x00240206 File Offset: 0x0023E406
+	// (set) Token: 0x06007485 RID: 29829 RVA: 0x0024020E File Offset: 0x0023E40E
 	public bool IsShowOldView { get; set; }
 
-	// Token: 0x0600A0A8 RID: 41128 RVA: 0x0023636B File Offset: 0x0023456B
+	// Token: 0x06007486 RID: 29830 RVA: 0x00240217 File Offset: 0x0023E417
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x0600A0A9 RID: 41129 RVA: 0x0023636D File Offset: 0x0023456D
+	// Token: 0x06007487 RID: 29831 RVA: 0x00240219 File Offset: 0x0023E419
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		if (!this.IsShowOldView)
@@ -39,7 +38,7 @@ public class WheelTowerController : ActivityControllerBase
 		return "UiItem_WheelTowerActivity";
 	}
 
-	// Token: 0x0600A0AA RID: 41130 RVA: 0x00236382 File Offset: 0x00234582
+	// Token: 0x06007488 RID: 29832 RVA: 0x0024022E File Offset: 0x0023E42E
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		if (!this.IsShowOldView)
@@ -49,19 +48,19 @@ public class WheelTowerController : ActivityControllerBase
 		return new WheelTowerSubView();
 	}
 
-	// Token: 0x0600A0AB RID: 41131 RVA: 0x00236397 File Offset: 0x00234597
+	// Token: 0x06007489 RID: 29833 RVA: 0x00240243 File Offset: 0x0023E443
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new WheelTowerData();
 	}
 
-	// Token: 0x0600A0AC RID: 41132 RVA: 0x0023639E File Offset: 0x0023459E
+	// Token: 0x0600748A RID: 29834 RVA: 0x0024024A File Offset: 0x0023E44A
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x0600A0AD RID: 41133 RVA: 0x002363A4 File Offset: 0x002345A4
+	// Token: 0x0600748B RID: 29835 RVA: 0x00240250 File Offset: 0x0023E450
 	[NullableContext(0)]
 	protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 	{
@@ -73,21 +72,21 @@ public class WheelTowerController : ActivityControllerBase
 		return <OnOpenSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0AE RID: 41134 RVA: 0x002363E7 File Offset: 0x002345E7
+	// Token: 0x0600748C RID: 29836 RVA: 0x00240293 File Offset: 0x0023E493
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Add(EEventName.WheelTowerCycleChange, new Action(this.OnWheelTowerCycleChange));
 	}
 
-	// Token: 0x0600A0AF RID: 41135 RVA: 0x00236421 File Offset: 0x00234621
+	// Token: 0x0600748D RID: 29837 RVA: 0x002402CD File Offset: 0x0023E4CD
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Remove(EEventName.WheelTowerCycleChange, new Action(this.OnWheelTowerCycleChange));
 	}
 
-	// Token: 0x0600A0B0 RID: 41136 RVA: 0x0023645C File Offset: 0x0023465C
+	// Token: 0x0600748E RID: 29838 RVA: 0x00240308 File Offset: 0x0023E508
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.NewTowerResultNotify, new Action<IMessage, Net.CallbackStatus>(this.OnNewTowerResultNotify));
@@ -98,7 +97,7 @@ public class WheelTowerController : ActivityControllerBase
 		Net.Instance.Register(ENotifyMessageId.NewTowerSeasonTaskDataUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnNewTowerSeasonTaskDataUpdateNotify));
 	}
 
-	// Token: 0x0600A0B1 RID: 41137 RVA: 0x00236514 File Offset: 0x00234714
+	// Token: 0x0600748F RID: 29839 RVA: 0x002403C0 File Offset: 0x0023E5C0
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.NewTowerResultNotify);
@@ -109,7 +108,7 @@ public class WheelTowerController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.NewTowerSeasonTaskDataUpdateNotify);
 	}
 
-	// Token: 0x0600A0B2 RID: 41138 RVA: 0x00236584 File Offset: 0x00234784
+	// Token: 0x06007490 RID: 29840 RVA: 0x00240430 File Offset: 0x0023E630
 	private void OnWheelTowerCycleChange()
 	{
 		if (WheelTowerModel.Instance.CheckInInstanceDungeon())
@@ -133,7 +132,7 @@ public class WheelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600A0B3 RID: 41139 RVA: 0x00236614 File Offset: 0x00234814
+	// Token: 0x06007491 RID: 29841 RVA: 0x002404C0 File Offset: 0x0023E6C0
 	public void ShowWheelTowerCycleChangeConfirmBox(Action confirmCallback)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ActivityEnd);
@@ -142,7 +141,7 @@ public class WheelTowerController : ActivityControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600A0B4 RID: 41140 RVA: 0x0023664F File Offset: 0x0023484F
+	// Token: 0x06007492 RID: 29842 RVA: 0x002404FB File Offset: 0x0023E6FB
 	private void OnWorldDone()
 	{
 		if (WheelTowerModel.Instance.CheckInInstanceDungeon())
@@ -151,7 +150,7 @@ public class WheelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600A0B5 RID: 41141 RVA: 0x00236664 File Offset: 0x00234864
+	// Token: 0x06007493 RID: 29843 RVA: 0x00240510 File Offset: 0x0023E710
 	public void SetBanTimeStop(bool ban)
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -168,7 +167,7 @@ public class WheelTowerController : ActivityControllerBase
 		UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("WheelTower");
 	}
 
-	// Token: 0x0600A0B6 RID: 41142 RVA: 0x002366AC File Offset: 0x002348AC
+	// Token: 0x06007494 RID: 29844 RVA: 0x00240558 File Offset: 0x0023E758
 	[NullableContext(2)]
 	private void OnNewTowerSeasonTaskDataUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -176,15 +175,15 @@ public class WheelTowerController : ActivityControllerBase
 		WheelTowerData activityData = WheelTowerModel.Instance.ActivityData;
 		if (activityData != null)
 		{
-			activityData.UpdateSeasonTaskList(newTowerSeasonTaskDataUpdateNotify.SeasonTasks.ToList<ActivityTask>());
+			activityData.UpdateSeasonTaskList(newTowerSeasonTaskDataUpdateNotify.SeasonTasks);
 		}
 		if (activityData != null)
 		{
-			activityData.UpdateSeasonTaskList(newTowerSeasonTaskDataUpdateNotify.Adds.ToList<ActivityTask>());
+			activityData.UpdateSeasonTaskList(newTowerSeasonTaskDataUpdateNotify.Adds);
 		}
 		if (activityData != null)
 		{
-			activityData.RemoveSeasonTaskList(newTowerSeasonTaskDataUpdateNotify.Removes.ToList<int>());
+			activityData.RemoveSeasonTaskList(newTowerSeasonTaskDataUpdateNotify.Removes);
 		}
 		if (activityData != null)
 		{
@@ -192,7 +191,7 @@ public class WheelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600A0B7 RID: 41143 RVA: 0x00236720 File Offset: 0x00234920
+	// Token: 0x06007495 RID: 29845 RVA: 0x002405C0 File Offset: 0x0023E7C0
 	[NullableContext(2)]
 	private void OnNewTowerRoundUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -210,7 +209,7 @@ public class WheelTowerController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerRoundTipsView, newTowerRoundUpdateNotify.Round, null);
 	}
 
-	// Token: 0x0600A0B8 RID: 41144 RVA: 0x0023677C File Offset: 0x0023497C
+	// Token: 0x06007496 RID: 29846 RVA: 0x0024061C File Offset: 0x0023E81C
 	[NullableContext(2)]
 	private void OnNewTowerTaskDataUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -220,10 +219,10 @@ public class WheelTowerController : ActivityControllerBase
 		{
 			return;
 		}
-		activityData.OnTaskUpdateNotify(newTowerTaskDataUpdateNotify.ActivityTasks.ToList<ActivityTask>());
+		activityData.OnTaskUpdateNotify(newTowerTaskDataUpdateNotify.ActivityTasks);
 	}
 
-	// Token: 0x0600A0B9 RID: 41145 RVA: 0x002367B0 File Offset: 0x002349B0
+	// Token: 0x06007497 RID: 29847 RVA: 0x0024064C File Offset: 0x0023E84C
 	[NullableContext(2)]
 	private void OnNewTowerUpdateRecordNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -239,7 +238,7 @@ public class WheelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600A0BA RID: 41146 RVA: 0x002367E8 File Offset: 0x002349E8
+	// Token: 0x06007498 RID: 29848 RVA: 0x00240684 File Offset: 0x0023E884
 	[NullableContext(2)]
 	private void OnNewTowerLevelUnlockNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -261,7 +260,7 @@ public class WheelTowerController : ActivityControllerBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("WheelTower_EndlessModeUnlockTips", Array.Empty<object>());
 	}
 
-	// Token: 0x0600A0BB RID: 41147 RVA: 0x00236864 File Offset: 0x00234A64
+	// Token: 0x06007499 RID: 29849 RVA: 0x00240700 File Offset: 0x0023E900
 	[NullableContext(2)]
 	private void OnNewTowerResultNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -468,7 +467,7 @@ public class WheelTowerController : ActivityControllerBase
 		this.RequestMedalInfo().Forget();
 	}
 
-	// Token: 0x0600A0BC RID: 41148 RVA: 0x00236FB8 File Offset: 0x002351B8
+	// Token: 0x0600749A RID: 29850 RVA: 0x00240E54 File Offset: 0x0023F054
 	[NullableContext(2)]
 	public void TryOpenOverridePopupView(Action confirmCallback = null)
 	{
@@ -500,7 +499,7 @@ public class WheelTowerController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerCoverRecordPopupView, recordPopupData, null);
 	}
 
-	// Token: 0x0600A0BD RID: 41149 RVA: 0x00237018 File Offset: 0x00235218
+	// Token: 0x0600749B RID: 29851 RVA: 0x00240EB4 File Offset: 0x0023F0B4
 	public UniTask TryOverrideLevelRecord(Action finishCallback)
 	{
 		WheelTowerController.<TryOverrideLevelRecord>d__27 <TryOverrideLevelRecord>d__;
@@ -511,17 +510,17 @@ public class WheelTowerController : ActivityControllerBase
 		return <TryOverrideLevelRecord>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0BE RID: 41150 RVA: 0x0023705C File Offset: 0x0023525C
+	// Token: 0x0600749C RID: 29852 RVA: 0x00240EF8 File Offset: 0x0023F0F8
 	public void RequestSelectedRoundChallenge()
 	{
 		NewTowerClimbingLevelRecord currentLevelRecord = WheelTowerModel.Instance.GetCurrentLevelRecord(null);
 		this.RequestChallenge(currentLevelRecord.LevelId, WheelTowerModel.Instance.SelectedRound, new List<int>
 		{
 			WheelTowerModel.Instance.SelectedBuff
-		}, WheelTowerModel.Instance.SelectedRoleList.ToList<int>());
+		}, new List<int>(WheelTowerModel.Instance.SelectedRoleList));
 	}
 
-	// Token: 0x0600A0BF RID: 41151 RVA: 0x002370B8 File Offset: 0x002352B8
+	// Token: 0x0600749D RID: 29853 RVA: 0x00240F54 File Offset: 0x0023F154
 	public void RequestChallenge(int levelId, int round, IList<int> buffIdList, IList<int> roleIdList)
 	{
 		NewTowerCycleStartParam newTowerCycleStartParam = new NewTowerCycleStartParam
@@ -557,13 +556,13 @@ public class WheelTowerController : ActivityControllerBase
 		NewTowerLevel? levelConfigById = WheelTowerConfig.Instance.GetLevelConfigById(levelId);
 		if (levelConfigById != null)
 		{
-			InstanceDungeonController.Instance.PrewarTeamFightRequest(levelConfigById.Value.InstId, roleIdList.ToList<int>(), 0, 0, null, null);
+			InstanceDungeonController.Instance.PrewarTeamFightRequest(levelConfigById.Value.InstId, new List<int>(roleIdList), 0, 0, null, null);
 		}
 		WheelTowerModel.Instance.BlockEndlessUnlockTips = true;
 		WheelTowerModel.Instance.DeleteRecordPopupData();
 	}
 
-	// Token: 0x0600A0C0 RID: 41152 RVA: 0x00237220 File Offset: 0x00235420
+	// Token: 0x0600749E RID: 29854 RVA: 0x002410BC File Offset: 0x0023F2BC
 	public UniTask RequestRoleEnergyUpdate()
 	{
 		WheelTowerController.<RequestRoleEnergyUpdate>d__30 <RequestRoleEnergyUpdate>d__;
@@ -573,7 +572,7 @@ public class WheelTowerController : ActivityControllerBase
 		return <RequestRoleEnergyUpdate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0C1 RID: 41153 RVA: 0x0023725C File Offset: 0x0023545C
+	// Token: 0x0600749F RID: 29855 RVA: 0x002410F8 File Offset: 0x0023F2F8
 	public UniTask RequestTaskReceive(bool isEndless)
 	{
 		WheelTowerController.<RequestTaskReceive>d__31 <RequestTaskReceive>d__;
@@ -584,7 +583,7 @@ public class WheelTowerController : ActivityControllerBase
 		return <RequestTaskReceive>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0C2 RID: 41154 RVA: 0x002372A0 File Offset: 0x002354A0
+	// Token: 0x060074A0 RID: 29856 RVA: 0x0024113C File Offset: 0x0023F33C
 	public UniTask RequestSeasonTaskReceive()
 	{
 		WheelTowerController.<RequestSeasonTaskReceive>d__32 <RequestSeasonTaskReceive>d__;
@@ -594,7 +593,7 @@ public class WheelTowerController : ActivityControllerBase
 		return <RequestSeasonTaskReceive>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0C3 RID: 41155 RVA: 0x002372DC File Offset: 0x002354DC
+	// Token: 0x060074A1 RID: 29857 RVA: 0x00241178 File Offset: 0x0023F378
 	public UniTask RequestSeasonTaskProgress()
 	{
 		WheelTowerController.<RequestSeasonTaskProgress>d__33 <RequestSeasonTaskProgress>d__;
@@ -604,7 +603,7 @@ public class WheelTowerController : ActivityControllerBase
 		return <RequestSeasonTaskProgress>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0C4 RID: 41156 RVA: 0x00237318 File Offset: 0x00235518
+	// Token: 0x060074A2 RID: 29858 RVA: 0x002411B4 File Offset: 0x0023F3B4
 	public UniTask RequestMedalInfo()
 	{
 		WheelTowerController.<RequestMedalInfo>d__34 <RequestMedalInfo>d__;
@@ -614,7 +613,7 @@ public class WheelTowerController : ActivityControllerBase
 		return <RequestMedalInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0C5 RID: 41157 RVA: 0x00237354 File Offset: 0x00235554
+	// Token: 0x060074A3 RID: 29859 RVA: 0x002411F0 File Offset: 0x0023F3F0
 	public UniTask RequestSeasonScoreReceive()
 	{
 		WheelTowerController.<RequestSeasonScoreReceive>d__35 <RequestSeasonScoreReceive>d__;
@@ -624,7 +623,7 @@ public class WheelTowerController : ActivityControllerBase
 		return <RequestSeasonScoreReceive>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0C6 RID: 41158 RVA: 0x00237390 File Offset: 0x00235590
+	// Token: 0x060074A4 RID: 29860 RVA: 0x0024122C File Offset: 0x0023F42C
 	public UniTask RequestResetLevelRecord(int levelId)
 	{
 		WheelTowerController.<RequestResetLevelRecord>d__36 <RequestResetLevelRecord>d__;
@@ -635,7 +634,7 @@ public class WheelTowerController : ActivityControllerBase
 		return <RequestResetLevelRecord>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0C7 RID: 41159 RVA: 0x002373D4 File Offset: 0x002355D4
+	// Token: 0x060074A5 RID: 29861 RVA: 0x00241270 File Offset: 0x0023F470
 	public UniTask RequestRecommendInfo()
 	{
 		WheelTowerController.<RequestRecommendInfo>d__37 <RequestRecommendInfo>d__;
@@ -645,7 +644,7 @@ public class WheelTowerController : ActivityControllerBase
 		return <RequestRecommendInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0C8 RID: 41160 RVA: 0x00237410 File Offset: 0x00235610
+	// Token: 0x060074A6 RID: 29862 RVA: 0x002412AC File Offset: 0x0023F4AC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -660,7 +659,7 @@ public class WheelTowerController : ActivityControllerBase
 		return <RequestLastCycleReviewInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A0C9 RID: 41161 RVA: 0x0023744C File Offset: 0x0023564C
+	// Token: 0x060074A7 RID: 29863 RVA: 0x002412E8 File Offset: 0x0023F4E8
 	public void RequestEndChallenge(Action callback)
 	{
 		Net.Instance.Call(ERequestMessageId.NewTowerCycleStartRequest, new NewTowerCycleStartRequest(), delegate(IMessage msg, Net.CallbackStatus _)
@@ -679,7 +678,7 @@ public class WheelTowerController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600A0CA RID: 41162 RVA: 0x00237488 File Offset: 0x00235688
+	// Token: 0x060074A8 RID: 29864 RVA: 0x00241324 File Offset: 0x0023F524
 	public void OpenSeasonMedalView(int seasonId = 0, bool autoShare = false)
 	{
 		bool hideAllSeasonBtn = UiManager.Instance.GetViewByName(EUiViewName.WheelTowerSeasonMedalView) != null;
@@ -703,8 +702,8 @@ public class WheelTowerController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerSeasonMedalView, param, null);
 	}
 
-	// Token: 0x17000D8E RID: 3470
-	// (get) Token: 0x0600A0CB RID: 41163 RVA: 0x002374F1 File Offset: 0x002356F1
+	// Token: 0x17000DAF RID: 3503
+	// (get) Token: 0x060074A9 RID: 29865 RVA: 0x0024138D File Offset: 0x0023F58D
 	public static WheelTowerController Instance
 	{
 		get
@@ -713,7 +712,7 @@ public class WheelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600A0CC RID: 41164 RVA: 0x002374F8 File Offset: 0x002356F8
+	// Token: 0x060074AA RID: 29866 RVA: 0x00241394 File Offset: 0x0023F594
 	public static WheelTowerController GetOrCreateInstance()
 	{
 		if (WheelTowerController._Instance == null)
@@ -723,7 +722,7 @@ public class WheelTowerController : ActivityControllerBase
 		return WheelTowerController._Instance;
 	}
 
-	// Token: 0x0600A0CD RID: 41165 RVA: 0x0023750C File Offset: 0x0023570C
+	// Token: 0x060074AB RID: 29867 RVA: 0x002413A8 File Offset: 0x0023F5A8
 	public static bool CreateInstance()
 	{
 		if (WheelTowerController._Instance != null)
@@ -734,27 +733,27 @@ public class WheelTowerController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A0CE RID: 41166 RVA: 0x00237522 File Offset: 0x00235722
+	// Token: 0x060074AC RID: 29868 RVA: 0x002413BE File Offset: 0x0023F5BE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A0CF RID: 41167 RVA: 0x00237524 File Offset: 0x00235724
+	// Token: 0x060074AD RID: 29869 RVA: 0x002413C0 File Offset: 0x0023F5C0
 	public static void ResetStaticDefaultValue()
 	{
 		WheelTowerController._Instance = null;
 	}
 
-	// Token: 0x0600A0D0 RID: 41168 RVA: 0x0023752C File Offset: 0x0023572C
+	// Token: 0x060074AE RID: 29870 RVA: 0x002413C8 File Offset: 0x0023F5C8
 	static WheelTowerController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WheelTowerController.CreateStaticDefaultValue), new Action(WheelTowerController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004940 RID: 18752
+	// Token: 0x040049E6 RID: 18918
 	private const string TAG_WAIT = "WheelTower";
 
-	// Token: 0x04004941 RID: 18753
+	// Token: 0x040049E7 RID: 18919
 	[StaticVariableRuleIgnore]
 	private static readonly EUiViewName[] WheelTowerViewNameList = new EUiViewName[]
 	{
@@ -780,7 +779,7 @@ public class WheelTowerController : ActivityControllerBase
 		EUiViewName.WheelTowerSeasonReviewView
 	};
 
-	// Token: 0x04004943 RID: 18755
+	// Token: 0x040049E9 RID: 18921
 	[Nullable(2)]
 	private static WheelTowerController _Instance;
 }

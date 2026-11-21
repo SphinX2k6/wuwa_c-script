@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005246 RID: 21062
+	// Token: 0x020057AE RID: 22446
 	public struct IFightMusicsSwitchType : IFlatbufferObject
 	{
-		// Token: 0x17009A52 RID: 39506
-		// (get) Token: 0x06022431 RID: 140337 RVA: 0x004C0898 File Offset: 0x004BEA98
+		// Token: 0x1700A24E RID: 41550
+		// (get) Token: 0x060243C7 RID: 148423 RVA: 0x004FB35C File Offset: 0x004F955C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022432 RID: 140338 RVA: 0x004C08A5 File Offset: 0x004BEAA5
+		// Token: 0x060243C8 RID: 148424 RVA: 0x004FB369 File Offset: 0x004F9569
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022433 RID: 140339 RVA: 0x004C08AC File Offset: 0x004BEAAC
+		// Token: 0x060243C9 RID: 148425 RVA: 0x004FB370 File Offset: 0x004F9570
 		public static IFightMusicsSwitchType GetRootAsIFightMusicsSwitchType(ByteBuffer _bb)
 		{
 			return IFightMusicsSwitchType.GetRootAsIFightMusicsSwitchType(_bb, default(IFightMusicsSwitchType));
 		}
 
-		// Token: 0x06022434 RID: 140340 RVA: 0x004C08C8 File Offset: 0x004BEAC8
+		// Token: 0x060243CA RID: 148426 RVA: 0x004FB38C File Offset: 0x004F958C
 		public static IFightMusicsSwitchType GetRootAsIFightMusicsSwitchType(ByteBuffer _bb, IFightMusicsSwitchType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022435 RID: 140341 RVA: 0x004C08E5 File Offset: 0x004BEAE5
+		// Token: 0x060243CB RID: 148427 RVA: 0x004FB3A9 File Offset: 0x004F95A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022436 RID: 140342 RVA: 0x004C08F4 File Offset: 0x004BEAF4
+		// Token: 0x060243CC RID: 148428 RVA: 0x004FB3B8 File Offset: 0x004F95B8
 		public IFightMusicsSwitchType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009A53 RID: 39507
-		// (get) Token: 0x06022437 RID: 140343 RVA: 0x004C0904 File Offset: 0x004BEB04
+		// Token: 0x1700A24F RID: 41551
+		// (get) Token: 0x060243CD RID: 148429 RVA: 0x004FB3C8 File Offset: 0x004F95C8
 		public EFightMusicsSwitchType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022438 RID: 140344 RVA: 0x004C0940 File Offset: 0x004BEB40
+		// Token: 0x060243CE RID: 148430 RVA: 0x004FB404 File Offset: 0x004F9604
 		public static Offset<IFightMusicsSwitchType> CreateIFightMusicsSwitchType(FlatBufferBuilder builder, EFightMusicsSwitchType Type = EFightMusicsSwitchType.SwitchByTag)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFightMusicsSwitchType.EndIFightMusicsSwitchType(builder);
 		}
 
-		// Token: 0x06022439 RID: 140345 RVA: 0x004C0956 File Offset: 0x004BEB56
+		// Token: 0x060243CF RID: 148431 RVA: 0x004FB41A File Offset: 0x004F961A
 		public static void StartIFightMusicsSwitchType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602243A RID: 140346 RVA: 0x004C095F File Offset: 0x004BEB5F
+		// Token: 0x060243D0 RID: 148432 RVA: 0x004FB423 File Offset: 0x004F9623
 		public static void AddType(FlatBufferBuilder builder, EFightMusicsSwitchType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602243B RID: 140347 RVA: 0x004C096A File Offset: 0x004BEB6A
+		// Token: 0x060243D1 RID: 148433 RVA: 0x004FB42E File Offset: 0x004F962E
 		public static Offset<IFightMusicsSwitchType> EndIFightMusicsSwitchType(FlatBufferBuilder builder)
 		{
 			return new Offset<IFightMusicsSwitchType>(builder.EndTable());
 		}
 
-		// Token: 0x0602243C RID: 140348 RVA: 0x004C0978 File Offset: 0x004BEB78
+		// Token: 0x060243D2 RID: 148434 RVA: 0x004FB43C File Offset: 0x004F963C
 		public IFightMusicsSwitchTypeT UnPack()
 		{
 			IFightMusicsSwitchTypeT fightMusicsSwitchTypeT = new IFightMusicsSwitchTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fightMusicsSwitchTypeT;
 		}
 
-		// Token: 0x0602243D RID: 140349 RVA: 0x004C0993 File Offset: 0x004BEB93
+		// Token: 0x060243D3 RID: 148435 RVA: 0x004FB457 File Offset: 0x004F9657
 		public void UnPackTo(IFightMusicsSwitchTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602243E RID: 140350 RVA: 0x004C09A4 File Offset: 0x004BEBA4
+		// Token: 0x060243D4 RID: 148436 RVA: 0x004FB468 File Offset: 0x004F9668
 		public static Offset<IFightMusicsSwitchType> Pack(FlatBufferBuilder builder, IFightMusicsSwitchTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFightMusicsSwitchType.CreateIFightMusicsSwitchType(builder, _o.Type);
 		}
 
-		// Token: 0x0400E392 RID: 58258
+		// Token: 0x0400EF98 RID: 61336
 		private Table __p;
 	}
 }

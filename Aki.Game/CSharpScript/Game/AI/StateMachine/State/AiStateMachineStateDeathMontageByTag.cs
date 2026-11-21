@@ -5,17 +5,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.State
 {
-	// Token: 0x0200732C RID: 29484
+	// Token: 0x020064AF RID: 25775
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineStateDeathMontageByTag : AiStateMachineState
 	{
-		// Token: 0x060485CB RID: 296395 RVA: 0x0129D1B7 File Offset: 0x0129B3B7
+		// Token: 0x0603EA18 RID: 256536 RVA: 0x0123FC37 File Offset: 0x0123DE37
 		public AiStateMachineStateDeathMontageByTag(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.State state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x060485CC RID: 296396 RVA: 0x0129D1E4 File Offset: 0x0129B3E4
+		// Token: 0x0603EA19 RID: 256537 RVA: 0x0123FC64 File Offset: 0x0123DE64
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.State state)
 		{
 			this.MontageTagIds = (state.BindDeathMontageByTag.MontageTagIds ?? Array.Empty<int>());
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			return true;
 		}
 
-		// Token: 0x060485CD RID: 296397 RVA: 0x0129D240 File Offset: 0x0129B440
+		// Token: 0x0603EA1A RID: 256538 RVA: 0x0123FCC0 File Offset: 0x0123DEC0
 		[NullableContext(2)]
 		public unsafe override void OnActivate(AiStateMachineBase lastState = null, long? contextId = null)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485CE RID: 296398 RVA: 0x0129D358 File Offset: 0x0129B558
+		// Token: 0x0603EA1B RID: 256539 RVA: 0x0123FDD8 File Offset: 0x0123DFD8
 		[NullableContext(2)]
 		public override void OnDeactivate(AiStateMachineBase nextState = null, long? contextId = null)
 		{
@@ -72,19 +72,19 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485CF RID: 296399 RVA: 0x0129D3A7 File Offset: 0x0129B5A7
+		// Token: 0x0603EA1C RID: 256540 RVA: 0x0123FE27 File Offset: 0x0123E027
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026431 RID: 156721
+		// Token: 0x0402171E RID: 136990
 		public int[] MontageTagIds = Array.Empty<int>();
 
-		// Token: 0x04026432 RID: 156722
+		// Token: 0x0402171F RID: 136991
 		public string[] MontageTagNames = Array.Empty<string>();
 
-		// Token: 0x04026433 RID: 156723
+		// Token: 0x04021720 RID: 136992
 		public string[] TagMontageNames = Array.Empty<string>();
 	}
 }

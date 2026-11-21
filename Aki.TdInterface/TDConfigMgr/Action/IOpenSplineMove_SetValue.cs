@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CB1 RID: 7345
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EB8 RID: 7864
 	public class IOpenSplineMove_SetValue
 	{
-		// Token: 0x04005F6D RID: 24429
+		// Token: 0x040064C9 RID: 25801
 		public ESplineMoveConfigType Type;
 
-		// Token: 0x04005F6E RID: 24430
+		// Token: 0x040064CA RID: 25802
 		public ITargetEntityType Target;
 
-		// Token: 0x04005F6F RID: 24431
+		// Token: 0x040064CB RID: 25803
 		public int SplineEntityId;
 
-		// Token: 0x04005F70 RID: 24432
+		// Token: 0x040064CC RID: 25804
 		public ISplineMovePattern Pattern;
 	}
 }

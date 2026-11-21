@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BE8 RID: 11240
+// Token: 0x02002163 RID: 8547
 public class TowerDetailInformationBuffSubItem : UiPanelBase
 {
-	// Token: 0x0601758F RID: 95631 RVA: 0x005F0441 File Offset: 0x005EE641
+	// Token: 0x06014FC0 RID: 85952 RVA: 0x0061CFA1 File Offset: 0x0061B1A1
 	[NullableContext(1)]
 	public TowerDetailInformationBuffSubItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06017590 RID: 95632 RVA: 0x005F0458 File Offset: 0x005EE658
+	// Token: 0x06014FC1 RID: 85953 RVA: 0x0061CFB8 File Offset: 0x0061B1B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,7 +31,7 @@ public class TowerDetailInformationBuffSubItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017591 RID: 95633 RVA: 0x005F04E2 File Offset: 0x005EE6E2
+	// Token: 0x06014FC2 RID: 85954 RVA: 0x0061D042 File Offset: 0x0061B242
 	[NullableContext(1)]
 	public void Update(TowerDetailBuff data)
 	{
@@ -39,7 +39,7 @@ public class TowerDetailInformationBuffSubItem : UiPanelBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06017592 RID: 95634 RVA: 0x005F04F4 File Offset: 0x005EE6F4
+	// Token: 0x06014FC3 RID: 85955 RVA: 0x0061D054 File Offset: 0x0061B254
 	private void RefreshView()
 	{
 		string desc = this.Data.Desc;
@@ -59,18 +59,18 @@ public class TowerDetailInformationBuffSubItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400AEC3 RID: 44739
+	// Token: 0x0400B2C8 RID: 45768
 	[Nullable(2)]
 	private TowerDetailBuff Data;
 
-	// Token: 0x020091A5 RID: 37285
+	// Token: 0x020083E8 RID: 33768
 	private enum EChildType
 	{
-		// Token: 0x0402F204 RID: 193028
+		// Token: 0x0402A905 RID: 174341
 		Icon,
-		// Token: 0x0402F205 RID: 193029
+		// Token: 0x0402A906 RID: 174342
 		BuffName,
-		// Token: 0x0402F206 RID: 193030
+		// Token: 0x0402A907 RID: 174343
 		Desc
 	}
 }

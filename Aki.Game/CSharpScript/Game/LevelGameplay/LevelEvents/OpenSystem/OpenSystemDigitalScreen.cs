@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006BD7 RID: 27607
+	// Token: 0x02005D50 RID: 23888
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemDigitalScreen : OpenSystemBase
 	{
-		// Token: 0x0604439A RID: 279450 RVA: 0x010D0CE3 File Offset: 0x010CEEE3
+		// Token: 0x0603A4F2 RID: 238834 RVA: 0x0107AC37 File Offset: 0x01078E37
 		public OpenSystemDigitalScreen(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x0604439B RID: 279451 RVA: 0x010D0CEC File Offset: 0x010CEEEC
+		// Token: 0x0603A4F3 RID: 238835 RVA: 0x0107AC40 File Offset: 0x01078E40
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604439C RID: 279452 RVA: 0x010D0D38 File Offset: 0x010CEF38
+		// Token: 0x0603A4F4 RID: 238836 RVA: 0x0107AC8C File Offset: 0x01078E8C
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

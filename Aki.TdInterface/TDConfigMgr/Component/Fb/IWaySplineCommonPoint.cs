@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C59 RID: 3161
+	// Token: 0x02000D32 RID: 3378
 	public class IWaySplineCommonPoint : IWaySplinePointType
 	{
-		// Token: 0x0600486B RID: 18539 RVA: 0x000B6015 File Offset: 0x000B4215
-		[NullableContext(1)]
+		// Token: 0x06004CF0 RID: 19696 RVA: 0x000C0609 File Offset: 0x000BE809
 		public static IWaySplineCommonPoint Create(IWaySplineCommonPoint? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001576 RID: 5494
-		// (get) Token: 0x0600486C RID: 18540 RVA: 0x000B6034 File Offset: 0x000B4234
+		// Token: 0x17001687 RID: 5767
+		// (get) Token: 0x06004CF1 RID: 19697 RVA: 0x000C0628 File Offset: 0x000BE828
 		public override EWaySplinePointType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002944 RID: 10564
+		// Token: 0x04002BA5 RID: 11173
 		private IWaySplineCommonPoint Instance;
 	}
 }

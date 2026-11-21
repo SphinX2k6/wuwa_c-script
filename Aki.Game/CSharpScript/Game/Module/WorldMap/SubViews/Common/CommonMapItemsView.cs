@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 {
-	// Token: 0x0200482E RID: 18478
+	// Token: 0x0200375F RID: 14175
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonMapItemsView : UiPanelBase
 	{
-		// Token: 0x060305D7 RID: 198103 RVA: 0x00B3A7EC File Offset: 0x00B389EC
+		// Token: 0x06024DA7 RID: 150951 RVA: 0x00A6A8B8 File Offset: 0x00A68AB8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060305D8 RID: 198104 RVA: 0x00B3A918 File Offset: 0x00B38B18
+		// Token: 0x06024DA8 RID: 150952 RVA: 0x00A6A9E4 File Offset: 0x00A68BE4
 		protected override void OnStart()
 		{
 			this.InitZoomButton();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			this.SetScaleSliderActive(false);
 		}
 
-		// Token: 0x060305D9 RID: 198105 RVA: 0x00B3A938 File Offset: 0x00B38B38
+		// Token: 0x06024DA9 RID: 150953 RVA: 0x00A6AA04 File Offset: 0x00A68C04
 		private void InitZoomButton()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -75,27 +75,27 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			}
 		}
 
-		// Token: 0x060305DA RID: 198106 RVA: 0x00B3A98F File Offset: 0x00B38B8F
+		// Token: 0x06024DAA RID: 150954 RVA: 0x00A6AA5B File Offset: 0x00A68C5B
 		private void OnZoomOut()
 		{
 			AudioSystem.Instance.PostEvent("play_ui_com_slider_tick");
 			EventSystem.Instance.Emit<float, EMapScaleSetType>(EEventName.WorldMapZoomBtnInput, -0.1f, EMapScaleSetType.ZoomButton);
 		}
 
-		// Token: 0x060305DB RID: 198107 RVA: 0x00B3A9B7 File Offset: 0x00B38BB7
+		// Token: 0x06024DAB RID: 150955 RVA: 0x00A6AA83 File Offset: 0x00A68C83
 		private void OnZoomIn()
 		{
 			AudioSystem.Instance.PostEvent("play_ui_com_slider_tick");
 			EventSystem.Instance.Emit<float, EMapScaleSetType>(EEventName.WorldMapZoomBtnInput, 0.1f, EMapScaleSetType.ZoomButton);
 		}
 
-		// Token: 0x060305DC RID: 198108 RVA: 0x00B3A9DF File Offset: 0x00B38BDF
+		// Token: 0x06024DAC RID: 150956 RVA: 0x00A6AAAB File Offset: 0x00A68CAB
 		public UUISliderComponent GetScaleSlider()
 		{
 			return base.GetSlider(2);
 		}
 
-		// Token: 0x060305DD RID: 198109 RVA: 0x00B3A9E8 File Offset: 0x00B38BE8
+		// Token: 0x06024DAD RID: 150957 RVA: 0x00A6AAB4 File Offset: 0x00A68CB4
 		public void SetMapChangeButtonActive(bool active)
 		{
 			UUIButtonComponent button = base.GetButton(3);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			uuiitem.SetUIActive(active);
 		}
 
-		// Token: 0x060305DE RID: 198110 RVA: 0x00B3AA1C File Offset: 0x00B38C1C
+		// Token: 0x06024DAE RID: 150958 RVA: 0x00A6AAE8 File Offset: 0x00A68CE8
 		public void SetSwitchButtonActive(bool active)
 		{
 			UUIButtonComponent button = base.GetButton(4);
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			uuiitem.SetUIActive(active);
 		}
 
-		// Token: 0x060305DF RID: 198111 RVA: 0x00B3AA50 File Offset: 0x00B38C50
+		// Token: 0x06024DAF RID: 150959 RVA: 0x00A6AB1C File Offset: 0x00A68D1C
 		public void SetScaleSliderActive(bool active)
 		{
 			UUISliderComponent slider = base.GetSlider(2);
@@ -161,21 +161,21 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			uuiitem3.SetUIActive(active);
 		}
 
-		// Token: 0x060305E0 RID: 198112 RVA: 0x00B3AACD File Offset: 0x00B38CCD
+		// Token: 0x06024DB0 RID: 150960 RVA: 0x00A6AB99 File Offset: 0x00A68D99
 		[NullableContext(1)]
 		public void SetBtnMapChangeFunction(Action callback)
 		{
 			this.BtnMapChangeFunction = callback;
 		}
 
-		// Token: 0x060305E1 RID: 198113 RVA: 0x00B3AAD6 File Offset: 0x00B38CD6
+		// Token: 0x06024DB1 RID: 150961 RVA: 0x00A6ABA2 File Offset: 0x00A68DA2
 		[NullableContext(1)]
 		public void SetBtnSwitchFunction(Action callback)
 		{
 			this.BtnSwitchFunction = callback;
 		}
 
-		// Token: 0x060305E2 RID: 198114 RVA: 0x00B3AADF File Offset: 0x00B38CDF
+		// Token: 0x06024DB2 RID: 150962 RVA: 0x00A6ABAB File Offset: 0x00A68DAB
 		private void OnBtnMapChange()
 		{
 			Action btnMapChangeFunction = this.BtnMapChangeFunction;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			btnMapChangeFunction();
 		}
 
-		// Token: 0x060305E3 RID: 198115 RVA: 0x00B3AAF1 File Offset: 0x00B38CF1
+		// Token: 0x06024DB3 RID: 150963 RVA: 0x00A6ABBD File Offset: 0x00A68DBD
 		private void OnBtnSwitch()
 		{
 			Action btnSwitchFunction = this.BtnSwitchFunction;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			btnSwitchFunction();
 		}
 
-		// Token: 0x060305E4 RID: 198116 RVA: 0x00B3AB04 File Offset: 0x00B38D04
+		// Token: 0x06024DB4 RID: 150964 RVA: 0x00A6ABD0 File Offset: 0x00A68DD0
 		[NullableContext(1)]
 		public UniTask CreateThenShow(UUIItem parent)
 		{
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			return <CreateThenShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060305E5 RID: 198117 RVA: 0x00B3AB4F File Offset: 0x00B38D4F
+		// Token: 0x06024DB5 RID: 150965 RVA: 0x00A6AC1B File Offset: 0x00A68E1B
 		protected override void OnBeforeDestroyImplement()
 		{
 			LongPressButton zoomInButton = this.ZoomInButton;
@@ -226,35 +226,35 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			zoomOutButton.OnDestroy();
 		}
 
-		// Token: 0x0401A02F RID: 106543
+		// Token: 0x040146E3 RID: 83683
 		private LongPressButton ZoomInButton;
 
-		// Token: 0x0401A030 RID: 106544
+		// Token: 0x040146E4 RID: 83684
 		private LongPressButton ZoomOutButton;
 
-		// Token: 0x0401A031 RID: 106545
+		// Token: 0x040146E5 RID: 83685
 		private Action BtnMapChangeFunction;
 
-		// Token: 0x0401A032 RID: 106546
+		// Token: 0x040146E6 RID: 83686
 		private Action BtnSwitchFunction;
 
-		// Token: 0x0200AB07 RID: 43783
+		// Token: 0x020094B6 RID: 38070
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x04033FB7 RID: 212919
+			// Token: 0x0402E737 RID: 190263
 			public const int ZoomIn = 0;
 
-			// Token: 0x04033FB8 RID: 212920
+			// Token: 0x0402E738 RID: 190264
 			public const int ZoomOut = 1;
 
-			// Token: 0x04033FB9 RID: 212921
+			// Token: 0x0402E739 RID: 190265
 			public const int VerticalSlider = 2;
 
-			// Token: 0x04033FBA RID: 212922
+			// Token: 0x0402E73A RID: 190266
 			public const int BtnMapChange = 3;
 
-			// Token: 0x04033FBB RID: 212923
+			// Token: 0x0402E73B RID: 190267
 			public const int BtnSwitch = 4;
 		}
 	}

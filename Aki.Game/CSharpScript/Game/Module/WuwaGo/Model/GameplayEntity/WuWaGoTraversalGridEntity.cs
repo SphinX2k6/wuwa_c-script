@@ -5,17 +5,17 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 {
-	// Token: 0x02004753 RID: 18259
+	// Token: 0x02003684 RID: 13956
 	public class WuWaGoTraversalGridEntity : WuWaGoGameplayEntityBase
 	{
-		// Token: 0x0602FB79 RID: 195449 RVA: 0x00B0DDB3 File Offset: 0x00B0BFB3
+		// Token: 0x06024343 RID: 148291 RVA: 0x00A3DDA7 File Offset: 0x00A3BFA7
 		[NullableContext(1)]
 		public WuWaGoTraversalGridEntity(EWuWaGoEntityType entityType, int pbDataId, Vector coordinate, Rotator rotator) : base(entityType, pbDataId, coordinate, rotator)
 		{
 		}
 
-		// Token: 0x17007742 RID: 30530
-		// (get) Token: 0x0602FB7A RID: 195450 RVA: 0x00B0DDC0 File Offset: 0x00B0BFC0
+		// Token: 0x170049FE RID: 18942
+		// (get) Token: 0x06024344 RID: 148292 RVA: 0x00A3DDB4 File Offset: 0x00A3BFB4
 		[Nullable(new byte[]
 		{
 			2,
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FB7B RID: 195451 RVA: 0x00B0DDC8 File Offset: 0x00B0BFC8
+		// Token: 0x06024345 RID: 148293 RVA: 0x00A3DDBC File Offset: 0x00A3BFBC
 		public void SetHintSteps([Nullable(new byte[]
 		{
 			2,
@@ -44,26 +44,26 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			this.HintStepsInner = steps;
 		}
 
-		// Token: 0x0602FB7C RID: 195452 RVA: 0x00B0DDD4 File Offset: 0x00B0BFD4
+		// Token: 0x06024346 RID: 148294 RVA: 0x00A3DDC8 File Offset: 0x00A3BFC8
 		public override void Unlock()
 		{
 			EGameplayEntityState state = (this.EntityType == EWuWaGoEntityType.StartGrid) ? EGameplayEntityState.Activated : EGameplayEntityState.Normal;
 			this.SetState(state);
 		}
 
-		// Token: 0x0602FB7D RID: 195453 RVA: 0x00B0DDF8 File Offset: 0x00B0BFF8
+		// Token: 0x06024347 RID: 148295 RVA: 0x00A3DDEC File Offset: 0x00A3BFEC
 		public override void RestoreInitialStateForGameOver()
 		{
 			this.SetState(EGameplayEntityState.Locked);
 		}
 
-		// Token: 0x0602FB7E RID: 195454 RVA: 0x00B0DE02 File Offset: 0x00B0C002
+		// Token: 0x06024348 RID: 148296 RVA: 0x00A3DDF6 File Offset: 0x00A3BFF6
 		protected override void OnStateChanged(EGameplayEntityState newState)
 		{
 			base.SwitchSceneItemStateByGameplayEntityState(newState, true, false);
 		}
 
-		// Token: 0x04019C10 RID: 105488
+		// Token: 0x040142C0 RID: 82624
 		[Nullable(new byte[]
 		{
 			2,

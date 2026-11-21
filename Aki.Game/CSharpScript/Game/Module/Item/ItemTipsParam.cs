@@ -4,20 +4,23 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x02005827 RID: 22567
+	// Token: 0x020047FE RID: 18430
 	public class ItemTipsParam : UiPopViewData
 	{
-		// Token: 0x0401DFC4 RID: 122820
+		// Token: 0x04018A5B RID: 100955
 		public int ItemId;
 
-		// Token: 0x0401DFC5 RID: 122821
+		// Token: 0x04018A5C RID: 100956
 		public int ItemUid;
 
-		// Token: 0x0401DFC6 RID: 122822
+		// Token: 0x04018A5D RID: 100957
 		[Nullable(2)]
 		public object ExtraParam;
 
-		// Token: 0x0401DFC7 RID: 122823
+		// Token: 0x04018A5E RID: 100958
 		public bool CanSkip = true;
+
+		// Token: 0x04018A5F RID: 100959
+		public bool HideNum;
 	}
 }

@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008DA RID: 2266
+	// Token: 0x0200097F RID: 2431
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VehicleComponent : IComponentBase
 	{
-		// Token: 0x06003345 RID: 13125 RVA: 0x00083684 File Offset: 0x00081884
-		[NullableContext(1)]
+		// Token: 0x0600368D RID: 13965 RVA: 0x0008ACC0 File Offset: 0x00088EC0
+		[NullableContext(0)]
 		private VehicleComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003346 RID: 13126 RVA: 0x000836BC File Offset: 0x000818BC
-		[NullableContext(1)]
+		// Token: 0x0600368E RID: 13966 RVA: 0x0008ACF8 File Offset: 0x00088EF8
+		[NullableContext(0)]
 		public static VehicleComponent Create([Nullable(2)] VehicleComponent instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003347 RID: 13127 RVA: 0x000836CF File Offset: 0x000818CF
-		[NullableContext(1)]
+		// Token: 0x0600368F RID: 13967 RVA: 0x0008AD0B File Offset: 0x00088F0B
+		[NullableContext(0)]
 		public static VehicleComponent CreateFromSetValue([Nullable(2)] VehicleComponent_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003348 RID: 13128 RVA: 0x000836E4 File Offset: 0x000818E4
-		[NullableContext(1)]
+		// Token: 0x06003690 RID: 13968 RVA: 0x0008AD20 File Offset: 0x00088F20
+		[NullableContext(0)]
 		public new VehicleComponent_SetValue ToSetValue()
 		{
 			return new VehicleComponent_SetValue
@@ -76,9 +76,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000DC3 RID: 3523
-		// (get) Token: 0x06003349 RID: 13129 RVA: 0x00083788 File Offset: 0x00081988
-		// (set) Token: 0x0600334A RID: 13130 RVA: 0x000837C2 File Offset: 0x000819C2
+		// Token: 0x17000E8F RID: 3727
+		// (get) Token: 0x06003691 RID: 13969 RVA: 0x0008ADC4 File Offset: 0x00088FC4
+		// (set) Token: 0x06003692 RID: 13970 RVA: 0x0008ADFE File Offset: 0x00088FFE
 		public override bool? Disabled
 		{
 			get
@@ -100,9 +100,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DC4 RID: 3524
-		// (get) Token: 0x0600334B RID: 13131 RVA: 0x000837D0 File Offset: 0x000819D0
-		// (set) Token: 0x0600334C RID: 13132 RVA: 0x000837FA File Offset: 0x000819FA
+		// Token: 0x17000E90 RID: 3728
+		// (get) Token: 0x06003693 RID: 13971 RVA: 0x0008AE0C File Offset: 0x0008900C
+		// (set) Token: 0x06003694 RID: 13972 RVA: 0x0008AE36 File Offset: 0x00089036
 		public override bool? EdIsLocked
 		{
 			get
@@ -119,13 +119,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DC5 RID: 3525
-		// (get) Token: 0x0600334D RID: 13133 RVA: 0x00083808 File Offset: 0x00081A08
-		// (set) Token: 0x0600334E RID: 13134 RVA: 0x00083833 File Offset: 0x00081A33
-		[Nullable(1)]
+		// Token: 0x17000E91 RID: 3729
+		// (get) Token: 0x06003695 RID: 13973 RVA: 0x0008AE44 File Offset: 0x00089044
+		// (set) Token: 0x06003696 RID: 13974 RVA: 0x0008AE6F File Offset: 0x0008906F
+		[Nullable(0)]
 		public virtual string Config
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -138,16 +138,16 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this.PocoInterface.Config;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().Config = value;
 			}
 		}
 
-		// Token: 0x17000DC6 RID: 3526
-		// (get) Token: 0x0600334F RID: 13135 RVA: 0x00083844 File Offset: 0x00081A44
-		// (set) Token: 0x06003350 RID: 13136 RVA: 0x000838A5 File Offset: 0x00081AA5
+		// Token: 0x17000E92 RID: 3730
+		// (get) Token: 0x06003697 RID: 13975 RVA: 0x0008AE80 File Offset: 0x00089080
+		// (set) Token: 0x06003698 RID: 13976 RVA: 0x0008AEE1 File Offset: 0x000890E1
 		public virtual IVehicleTypedMotorConfig VehicleTypedConfig
 		{
 			get
@@ -175,9 +175,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DC7 RID: 3527
-		// (get) Token: 0x06003351 RID: 13137 RVA: 0x000838BA File Offset: 0x00081ABA
-		// (set) Token: 0x06003352 RID: 13138 RVA: 0x000838E1 File Offset: 0x00081AE1
+		// Token: 0x17000E93 RID: 3731
+		// (get) Token: 0x06003699 RID: 13977 RVA: 0x0008AEF6 File Offset: 0x000890F6
+		// (set) Token: 0x0600369A RID: 13978 RVA: 0x0008AF1D File Offset: 0x0008911D
 		public virtual List<int> VehicleBornTag
 		{
 			get
@@ -199,9 +199,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DC8 RID: 3528
-		// (get) Token: 0x06003353 RID: 13139 RVA: 0x000838EF File Offset: 0x00081AEF
-		// (set) Token: 0x06003354 RID: 13140 RVA: 0x00083916 File Offset: 0x00081B16
+		// Token: 0x17000E94 RID: 3732
+		// (get) Token: 0x0600369B RID: 13979 RVA: 0x0008AF2B File Offset: 0x0008912B
+		// (set) Token: 0x0600369C RID: 13980 RVA: 0x0008AF52 File Offset: 0x00089152
 		public virtual List<int> VehicleRiddenTag
 		{
 			get
@@ -223,9 +223,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DC9 RID: 3529
-		// (get) Token: 0x06003355 RID: 13141 RVA: 0x00083924 File Offset: 0x00081B24
-		// (set) Token: 0x06003356 RID: 13142 RVA: 0x0008394B File Offset: 0x00081B4B
+		// Token: 0x17000E95 RID: 3733
+		// (get) Token: 0x0600369D RID: 13981 RVA: 0x0008AF60 File Offset: 0x00089160
+		// (set) Token: 0x0600369E RID: 13982 RVA: 0x0008AF87 File Offset: 0x00089187
 		public virtual List<int> RoleRiddingTag
 		{
 			get
@@ -247,9 +247,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DCA RID: 3530
-		// (get) Token: 0x06003357 RID: 13143 RVA: 0x0008395C File Offset: 0x00081B5C
-		// (set) Token: 0x06003358 RID: 13144 RVA: 0x000839BD File Offset: 0x00081BBD
+		// Token: 0x17000E96 RID: 3734
+		// (get) Token: 0x0600369F RID: 13983 RVA: 0x0008AF98 File Offset: 0x00089198
+		// (set) Token: 0x060036A0 RID: 13984 RVA: 0x0008AFF9 File Offset: 0x000891F9
 		public virtual IPassengerTeleportConfig TeleportPlayersWhenDestroyed
 		{
 			get
@@ -277,20 +277,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DCB RID: 3531
-		// (get) Token: 0x06003359 RID: 13145 RVA: 0x000839D2 File Offset: 0x00081BD2
-		// (set) Token: 0x0600335A RID: 13146 RVA: 0x000839F9 File Offset: 0x00081BF9
+		// Token: 0x17000E97 RID: 3735
+		// (get) Token: 0x060036A1 RID: 13985 RVA: 0x0008B00E File Offset: 0x0008920E
+		// (set) Token: 0x060036A2 RID: 13986 RVA: 0x0008B035 File Offset: 0x00089235
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IVehicleFeature> VehicleFeatures
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -308,7 +308,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -316,9 +316,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DCC RID: 3532
-		// (get) Token: 0x0600335B RID: 13147 RVA: 0x00083A07 File Offset: 0x00081C07
-		// (set) Token: 0x0600335C RID: 13148 RVA: 0x00083A32 File Offset: 0x00081C32
+		// Token: 0x17000E98 RID: 3736
+		// (get) Token: 0x060036A3 RID: 13987 RVA: 0x0008B043 File Offset: 0x00089243
+		// (set) Token: 0x060036A4 RID: 13988 RVA: 0x0008B06E File Offset: 0x0008926E
 		public virtual EVehicleSeatCount SeatCount
 		{
 			get
@@ -339,9 +339,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DCD RID: 3533
-		// (get) Token: 0x0600335D RID: 13149 RVA: 0x00083A40 File Offset: 0x00081C40
-		// (set) Token: 0x0600335E RID: 13150 RVA: 0x00083A6B File Offset: 0x00081C6B
+		// Token: 0x17000E99 RID: 3737
+		// (get) Token: 0x060036A5 RID: 13989 RVA: 0x0008B07C File Offset: 0x0008927C
+		// (set) Token: 0x060036A6 RID: 13990 RVA: 0x0008B0A7 File Offset: 0x000892A7
 		public virtual EVehicleSeat DriverSeat
 		{
 			get
@@ -362,20 +362,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DCE RID: 3534
-		// (get) Token: 0x0600335F RID: 13151 RVA: 0x00083A7C File Offset: 0x00081C7C
-		// (set) Token: 0x06003360 RID: 13152 RVA: 0x00083B0F File Offset: 0x00081D0F
+		// Token: 0x17000E9A RID: 3738
+		// (get) Token: 0x060036A7 RID: 13991 RVA: 0x0008B0B8 File Offset: 0x000892B8
+		// (set) Token: 0x060036A8 RID: 13992 RVA: 0x0008B14B File Offset: 0x0008934B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IVehiclePassengerConfig> DefaultPassengers
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -406,7 +406,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -415,35 +415,35 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040021A0 RID: 8608
+		// Token: 0x040023B7 RID: 9143
 		protected new VehicleComponent FbInstance;
 
-		// Token: 0x040021A1 RID: 8609
+		// Token: 0x040023B8 RID: 9144
 		protected new VehicleComponent_SetValue PocoInterface;
 
-		// Token: 0x040021A2 RID: 8610
-		[Nullable(1)]
+		// Token: 0x040023B9 RID: 9145
+		[Nullable(0)]
 		private IVehicleTypedMotorConfig _VehicleTypedConfigCache;
 
-		// Token: 0x040021A3 RID: 8611
+		// Token: 0x040023BA RID: 9146
 		private bool _VehicleTypedConfigInited;
 
-		// Token: 0x040021A4 RID: 8612
-		[Nullable(1)]
+		// Token: 0x040023BB RID: 9147
+		[Nullable(0)]
 		private IPassengerTeleportConfig _TeleportPlayersWhenDestroyedCache;
 
-		// Token: 0x040021A5 RID: 8613
+		// Token: 0x040023BC RID: 9148
 		private bool _TeleportPlayersWhenDestroyedInited;
 
-		// Token: 0x040021A6 RID: 8614
+		// Token: 0x040023BD RID: 9149
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IVehiclePassengerConfig> _DefaultPassengersCache;
 
-		// Token: 0x040021A7 RID: 8615
+		// Token: 0x040023BE RID: 9150
 		private bool _DefaultPassengersInited;
 	}
 }

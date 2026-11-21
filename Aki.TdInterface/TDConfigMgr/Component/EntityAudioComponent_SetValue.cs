@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000F6 RID: 246
+	// Token: 0x020000FF RID: 255
 	public class EntityAudioComponent_SetValue
 	{
-		// Token: 0x04000529 RID: 1321
+		// Token: 0x04000553 RID: 1363
 		public bool? Disabled;
 
-		// Token: 0x0400052A RID: 1322
+		// Token: 0x04000554 RID: 1364
 		public bool? EdIsLocked;
 
-		// Token: 0x0400052B RID: 1323
-		[Nullable(1)]
+		// Token: 0x04000555 RID: 1365
 		public IAkEventTypeConfig AkEventType;
 
-		// Token: 0x0400052C RID: 1324
+		// Token: 0x04000556 RID: 1366
 		public EAudioRangeType AudioRangeType;
 	}
 }

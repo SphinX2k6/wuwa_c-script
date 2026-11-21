@@ -4,22 +4,22 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x020069A5 RID: 27045
+	// Token: 0x02005B01 RID: 23297
 	public class CombinationContext : GeneralContext
 	{
-		// Token: 0x0604345C RID: 275548 RVA: 0x010661C0 File Offset: 0x010643C0
+		// Token: 0x06039494 RID: 234644 RVA: 0x0100A428 File Offset: 0x01008628
 		public CombinationContext()
 		{
 			this.Type = new EGeneralContextType?(EGeneralContextType.Combination);
 		}
 
-		// Token: 0x0604345D RID: 275549 RVA: 0x010661D5 File Offset: 0x010643D5
+		// Token: 0x06039495 RID: 234645 RVA: 0x0100A43D File Offset: 0x0100863D
 		public override void Reset()
 		{
 			this.Contexts = null;
 		}
 
-		// Token: 0x0604345E RID: 275550 RVA: 0x010661E0 File Offset: 0x010643E0
+		// Token: 0x06039496 RID: 234646 RVA: 0x0100A448 File Offset: 0x01008648
 		[NullableContext(1)]
 		public static CombinationContext Create(params GeneralContext[] contexts)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return combinationContext;
 		}
 
-		// Token: 0x0604345F RID: 275551 RVA: 0x01066288 File Offset: 0x01064488
+		// Token: 0x06039497 RID: 234647 RVA: 0x0100A4F0 File Offset: 0x010086F0
 		[return: Nullable(2)]
 		public T GetContextByType<T>(EGeneralContextType type) where T : GeneralContext
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return default(T);
 		}
 
-		// Token: 0x040230BA RID: 143546
+		// Token: 0x0401E2A4 RID: 123556
 		[Nullable(new byte[]
 		{
 			2,

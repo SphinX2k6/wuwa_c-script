@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027CE RID: 10190
+	// Token: 0x02002AA1 RID: 10913
 	public class ILimitPlayerMoveNew : ILimitPlayerOption
 	{
-		// Token: 0x0600E28B RID: 57995 RVA: 0x0021738A File Offset: 0x0021558A
-		[NullableContext(1)]
+		// Token: 0x0600F0AD RID: 61613 RVA: 0x0023415E File Offset: 0x0023235E
 		public static ILimitPlayerMoveNew Create(ILimitPlayerMoveNew? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044B1 RID: 17585
-		// (get) Token: 0x0600E28C RID: 57996 RVA: 0x002173A9 File Offset: 0x002155A9
+		// Token: 0x17004819 RID: 18457
+		// (get) Token: 0x0600F0AE RID: 61614 RVA: 0x0023417D File Offset: 0x0023237D
 		public override ELimitPlayOperation Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044B2 RID: 17586
-		// (get) Token: 0x0600E28D RID: 57997 RVA: 0x002173B6 File Offset: 0x002155B6
+		// Token: 0x1700481A RID: 18458
+		// (get) Token: 0x0600F0AF RID: 61615 RVA: 0x0023418A File Offset: 0x0023238A
 		public virtual bool Forward
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044B3 RID: 17587
-		// (get) Token: 0x0600E28E RID: 57998 RVA: 0x002173C3 File Offset: 0x002155C3
+		// Token: 0x1700481B RID: 18459
+		// (get) Token: 0x0600F0B0 RID: 61616 RVA: 0x00234197 File Offset: 0x00232397
 		public virtual bool Back
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044B4 RID: 17588
-		// (get) Token: 0x0600E28F RID: 57999 RVA: 0x002173D0 File Offset: 0x002155D0
+		// Token: 0x1700481C RID: 18460
+		// (get) Token: 0x0600F0B1 RID: 61617 RVA: 0x002341A4 File Offset: 0x002323A4
 		public virtual bool Left
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044B5 RID: 17589
-		// (get) Token: 0x0600E290 RID: 58000 RVA: 0x002173DD File Offset: 0x002155DD
+		// Token: 0x1700481D RID: 18461
+		// (get) Token: 0x0600F0B2 RID: 61618 RVA: 0x002341B1 File Offset: 0x002323B1
 		public virtual bool Right
 		{
 			get
@@ -71,7 +69,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DA0 RID: 32160
+		// Token: 0x04008457 RID: 33879
 		private ILimitPlayerMoveNew Instance;
 	}
 }

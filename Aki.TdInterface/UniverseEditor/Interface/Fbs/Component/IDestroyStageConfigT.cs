@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005085 RID: 20613
+	// Token: 0x020055EA RID: 21994
 	public class IDestroyStageConfigT
 	{
-		// Token: 0x17009593 RID: 38291
-		// (get) Token: 0x060210EB RID: 135403 RVA: 0x00497887 File Offset: 0x00495A87
-		// (set) Token: 0x060210EC RID: 135404 RVA: 0x0049788F File Offset: 0x00495A8F
+		// Token: 0x17009D80 RID: 40320
+		// (get) Token: 0x0602303F RID: 143423 RVA: 0x004D17CB File Offset: 0x004CF9CB
+		// (set) Token: 0x06023040 RID: 143424 RVA: 0x004D17D3 File Offset: 0x004CF9D3
 		public float PerformDuration { get; set; }
 
-		// Token: 0x17009594 RID: 38292
-		// (get) Token: 0x060210ED RID: 135405 RVA: 0x00497898 File Offset: 0x00495A98
-		// (set) Token: 0x060210EE RID: 135406 RVA: 0x004978A0 File Offset: 0x00495AA0
+		// Token: 0x17009D81 RID: 40321
+		// (get) Token: 0x06023041 RID: 143425 RVA: 0x004D17DC File Offset: 0x004CF9DC
+		// (set) Token: 0x06023042 RID: 143426 RVA: 0x004D17E4 File Offset: 0x004CF9E4
 		public long BulletId { get; set; }
 
-		// Token: 0x17009595 RID: 38293
-		// (get) Token: 0x060210EF RID: 135407 RVA: 0x004978A9 File Offset: 0x00495AA9
-		// (set) Token: 0x060210F0 RID: 135408 RVA: 0x004978B1 File Offset: 0x00495AB1
+		// Token: 0x17009D82 RID: 40322
+		// (get) Token: 0x06023043 RID: 143427 RVA: 0x004D17ED File Offset: 0x004CF9ED
+		// (set) Token: 0x06023044 RID: 143428 RVA: 0x004D17F5 File Offset: 0x004CF9F5
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x17009596 RID: 38294
-		// (get) Token: 0x060210F1 RID: 135409 RVA: 0x004978BA File Offset: 0x00495ABA
-		// (set) Token: 0x060210F2 RID: 135410 RVA: 0x004978C2 File Offset: 0x00495AC2
+		// Token: 0x17009D83 RID: 40323
+		// (get) Token: 0x06023045 RID: 143429 RVA: 0x004D17FE File Offset: 0x004CF9FE
+		// (set) Token: 0x06023046 RID: 143430 RVA: 0x004D1806 File Offset: 0x004CFA06
 		public byte NullMask { get; set; }
 
-		// Token: 0x060210F3 RID: 135411 RVA: 0x004978CB File Offset: 0x00495ACB
+		// Token: 0x06023047 RID: 143431 RVA: 0x004D180F File Offset: 0x004CFA0F
 		public IDestroyStageConfigT()
 		{
 			this.PerformDuration = 0f;

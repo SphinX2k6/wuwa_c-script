@@ -3,17 +3,17 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005969 RID: 22889
+	// Token: 0x02004942 RID: 18754
 	public class GiantSystemQuestOpenParam : IGiantSystemQuestOpenParam
 	{
-		// Token: 0x17008B30 RID: 35632
-		// (get) Token: 0x0603A128 RID: 237864 RVA: 0x00DCD862 File Offset: 0x00DCBA62
-		// (set) Token: 0x0603A129 RID: 237865 RVA: 0x00DCD86A File Offset: 0x00DCBA6A
+		// Token: 0x17005EFD RID: 24317
+		// (get) Token: 0x0602F04C RID: 192588 RVA: 0x00D1CACA File Offset: 0x00D1ACCA
+		// (set) Token: 0x0602F04D RID: 192589 RVA: 0x00D1CAD2 File Offset: 0x00D1ACD2
 		public GiantEcoNetType EcoType { get; set; }
 
-		// Token: 0x17008B31 RID: 35633
-		// (get) Token: 0x0603A12A RID: 237866 RVA: 0x00DCD873 File Offset: 0x00DCBA73
-		// (set) Token: 0x0603A12B RID: 237867 RVA: 0x00DCD87B File Offset: 0x00DCBA7B
+		// Token: 0x17005EFE RID: 24318
+		// (get) Token: 0x0602F04E RID: 192590 RVA: 0x00D1CADB File Offset: 0x00D1ACDB
+		// (set) Token: 0x0602F04F RID: 192591 RVA: 0x00D1CAE3 File Offset: 0x00D1ACE3
 		public bool? GuideOnly { get; set; }
 	}
 }

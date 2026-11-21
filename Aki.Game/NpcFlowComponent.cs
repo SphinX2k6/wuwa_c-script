@@ -5,12 +5,12 @@ using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.Module.Interaction;
 using UnrealEngine;
 
-// Token: 0x020031D4 RID: 12756
+// Token: 0x02002743 RID: 10051
 [NullableContext(2)]
 [Nullable(0)]
 public class NpcFlowComponent : CharacterFlowComponent
 {
-	// Token: 0x0601B828 RID: 112680 RVA: 0x0078B2CC File Offset: 0x007894CC
+	// Token: 0x0601937F RID: 103295 RVA: 0x007B30DD File Offset: 0x007B12DD
 	protected override bool OnStart()
 	{
 		this.SensoryComp = base.Entity.GetComponent<PawnSensoryInfoComponent>();
@@ -18,7 +18,7 @@ public class NpcFlowComponent : CharacterFlowComponent
 		return true;
 	}
 
-	// Token: 0x0601B829 RID: 112681 RVA: 0x0078B2E8 File Offset: 0x007894E8
+	// Token: 0x06019380 RID: 103296 RVA: 0x007B30F8 File Offset: 0x007B12F8
 	protected override void InitFlowLogic(BubbleComponent flowData)
 	{
 		if (flowData == null)
@@ -37,7 +37,7 @@ public class NpcFlowComponent : CharacterFlowComponent
 		this.IsInit = true;
 	}
 
-	// Token: 0x0601B82A RID: 112682 RVA: 0x0078B386 File Offset: 0x00789586
+	// Token: 0x06019381 RID: 103297 RVA: 0x007B3196 File Offset: 0x007B1396
 	protected override bool InitFlowLogicRange(float? enterRange, float? leaveRange, IBubbleRangeCylinderConfig config)
 	{
 		if (!base.InitFlowLogicRange(enterRange, leaveRange, config))
@@ -52,7 +52,7 @@ public class NpcFlowComponent : CharacterFlowComponent
 		return true;
 	}
 
-	// Token: 0x0601B82B RID: 112683 RVA: 0x0078B3B4 File Offset: 0x007895B4
+	// Token: 0x06019382 RID: 103298 RVA: 0x007B31C4 File Offset: 0x007B13C4
 	protected override bool CheckCondition()
 	{
 		if (!base.CheckCondition())
@@ -78,7 +78,7 @@ public class NpcFlowComponent : CharacterFlowComponent
 		return true;
 	}
 
-	// Token: 0x0601B82C RID: 112684 RVA: 0x0078B420 File Offset: 0x00789620
+	// Token: 0x06019383 RID: 103299 RVA: 0x007B3230 File Offset: 0x007B1430
 	public bool TryPlayMontage(string montagePath)
 	{
 		this.ActionId = -1;
@@ -103,7 +103,7 @@ public class NpcFlowComponent : CharacterFlowComponent
 		return false;
 	}
 
-	// Token: 0x0601B82D RID: 112685 RVA: 0x0078B49C File Offset: 0x0078969C
+	// Token: 0x06019384 RID: 103300 RVA: 0x007B32AC File Offset: 0x007B14AC
 	private void StopMontage()
 	{
 		if (this.ActorComp == null || this.ActorComp.SkeletalMesh == null)
@@ -125,7 +125,7 @@ public class NpcFlowComponent : CharacterFlowComponent
 		component.StopPerformMontage(EPerformMode.Ecology, param, null, null);
 	}
 
-	// Token: 0x0601B82E RID: 112686 RVA: 0x0078B51B File Offset: 0x0078971B
+	// Token: 0x06019385 RID: 103301 RVA: 0x007B332B File Offset: 0x007B152B
 	public override void RemoveFlowActions()
 	{
 		NpcFlowLogic npcFlowLogic = this.FlowLogic as NpcFlowLogic;
@@ -140,7 +140,7 @@ public class NpcFlowComponent : CharacterFlowComponent
 		this.StopMontage();
 	}
 
-	// Token: 0x0601B82F RID: 112687 RVA: 0x0078B548 File Offset: 0x00789748
+	// Token: 0x06019386 RID: 103302 RVA: 0x007B3358 File Offset: 0x007B1558
 	public int? GetTimberId()
 	{
 		BubbleComponent flowData = this.FlowData;
@@ -151,7 +151,7 @@ public class NpcFlowComponent : CharacterFlowComponent
 		return flowData.TimberId;
 	}
 
-	// Token: 0x0601B830 RID: 112688 RVA: 0x0078B570 File Offset: 0x00789770
+	// Token: 0x06019387 RID: 103303 RVA: 0x007B3380 File Offset: 0x007B1580
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -160,37 +160,68 @@ public class NpcFlowComponent : CharacterFlowComponent
 			return false;
 		}
 		NpcFlowComponent npcFlowComponent = (NpcFlowComponent)componentTemplate;
-		if (base.CanResetComponentProperty("SensoryComp"))
+		if (npcFlowComponent.SensoryComp == null)
 		{
-			if (npcFlowComponent.SensoryComp == null)
-			{
-				this.SensoryComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnSensoryInfoComponent>(this.SensoryComp), "SensoryComp"))
-			{
-				return false;
-			}
+			this.SensoryComp = null;
 		}
-		if (base.CanResetComponentProperty("MontageId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SensoryComp), "SensoryComp"))
 		{
-			this.MontageId = npcFlowComponent.MontageId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ActionId"))
-		{
-			this.ActionId = npcFlowComponent.ActionId;
-		}
+		this.MontageId = npcFlowComponent.MontageId;
+		this.ActionId = npcFlowComponent.ActionId;
 		return true;
 	}
 
-	// Token: 0x0400D7FB RID: 55291
+	// Token: 0x1700282A RID: 10282
+	// (get) Token: 0x06019388 RID: 103304 RVA: 0x007B33E3 File Offset: 0x007B15E3
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700282B RID: 10283
+	// (get) Token: 0x06019389 RID: 103305 RVA: 0x007B33E6 File Offset: 0x007B15E6
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700282C RID: 10284
+	// (get) Token: 0x0601938A RID: 103306 RVA: 0x007B33E9 File Offset: 0x007B15E9
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700282D RID: 10285
+	// (get) Token: 0x0601938B RID: 103307 RVA: 0x007B33EC File Offset: 0x007B15EC
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DC82 RID: 56450
 	private const float STOP_MONTAGE_BLEND_OUT_TIME = 0.3f;
 
-	// Token: 0x0400D7FC RID: 55292
+	// Token: 0x0400DC83 RID: 56451
 	private PawnSensoryInfoComponent SensoryComp;
 
-	// Token: 0x0400D7FD RID: 55293
+	// Token: 0x0400DC84 RID: 56452
 	private int MontageId = -1;
 
-	// Token: 0x0400D7FE RID: 55294
+	// Token: 0x0400DC85 RID: 56453
 	private int ActionId = -1;
 }

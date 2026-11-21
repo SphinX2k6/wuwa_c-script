@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001273 RID: 4723
+	// Token: 0x020012E2 RID: 4834
 	[NetMessage(EMessageId.SpringFestivalAreaUnlockNotify)]
 	public sealed class SpringFestivalAreaUnlockNotify : IMessage<SpringFestivalAreaUnlockNotify>, IMessage, IEquatable<SpringFestivalAreaUnlockNotify>, IDeepCloneable<SpringFestivalAreaUnlockNotify>, IBufferMessage
 	{
-		// Token: 0x06019296 RID: 103062 RVA: 0x003A954A File Offset: 0x003A774A
+		// Token: 0x06019CCC RID: 105676 RVA: 0x003C3C9A File Offset: 0x003C1E9A
 		[NullableContext(1)]
 		public static SpringFestivalAreaUnlockNotify Create()
 		{
 			return new SpringFestivalAreaUnlockNotify();
 		}
 
-		// Token: 0x170054E6 RID: 21734
-		// (get) Token: 0x06019297 RID: 103063 RVA: 0x003A9551 File Offset: 0x003A7751
+		// Token: 0x17005767 RID: 22375
+		// (get) Token: 0x06019CCD RID: 105677 RVA: 0x003C3CA1 File Offset: 0x003C1EA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054E7 RID: 21735
-		// (get) Token: 0x06019298 RID: 103064 RVA: 0x003A9554 File Offset: 0x003A7754
+		// Token: 0x17005768 RID: 22376
+		// (get) Token: 0x06019CCE RID: 105678 RVA: 0x003C3CA4 File Offset: 0x003C1EA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019299 RID: 103065 RVA: 0x003A955B File Offset: 0x003A775B
+		// Token: 0x06019CCF RID: 105679 RVA: 0x003C3CAB File Offset: 0x003C1EAB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringFestivalAreaUnlockNotify()
 		{
 		}
 
-		// Token: 0x0601929A RID: 103066 RVA: 0x003A9570 File Offset: 0x003A7770
+		// Token: 0x06019CD0 RID: 105680 RVA: 0x003C3CC0 File Offset: 0x003C1EC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringFestivalAreaUnlockNotify(SpringFestivalAreaUnlockNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601929B RID: 103067 RVA: 0x003A95BD File Offset: 0x003A77BD
+		// Token: 0x06019CD1 RID: 105681 RVA: 0x003C3D0D File Offset: 0x003C1F0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringFestivalAreaUnlockNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new SpringFestivalAreaUnlockNotify(this);
 		}
 
-		// Token: 0x170054E8 RID: 21736
-		// (get) Token: 0x0601929C RID: 103068 RVA: 0x003A95C5 File Offset: 0x003A77C5
-		// (set) Token: 0x0601929D RID: 103069 RVA: 0x003A95CD File Offset: 0x003A77CD
+		// Token: 0x17005769 RID: 22377
+		// (get) Token: 0x06019CD2 RID: 105682 RVA: 0x003C3D15 File Offset: 0x003C1F15
+		// (set) Token: 0x06019CD3 RID: 105683 RVA: 0x003C3D1D File Offset: 0x003C1F1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054E9 RID: 21737
-		// (get) Token: 0x0601929E RID: 103070 RVA: 0x003A95D6 File Offset: 0x003A77D6
+		// Token: 0x1700576A RID: 22378
+		// (get) Token: 0x06019CD4 RID: 105684 RVA: 0x003C3D26 File Offset: 0x003C1F26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AreaInfo> AreaInfos
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054EA RID: 21738
-		// (get) Token: 0x0601929F RID: 103071 RVA: 0x003A95DE File Offset: 0x003A77DE
-		// (set) Token: 0x060192A0 RID: 103072 RVA: 0x003A95E6 File Offset: 0x003A77E6
+		// Token: 0x1700576B RID: 22379
+		// (get) Token: 0x06019CD5 RID: 105685 RVA: 0x003C3D2E File Offset: 0x003C1F2E
+		// (set) Token: 0x06019CD6 RID: 105686 RVA: 0x003C3D36 File Offset: 0x003C1F36
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsFullLoad
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060192A1 RID: 103073 RVA: 0x003A95EF File Offset: 0x003A77EF
+		// Token: 0x06019CD7 RID: 105687 RVA: 0x003C3D3F File Offset: 0x003C1F3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SpringFestivalAreaUnlockNotify);
 		}
 
-		// Token: 0x060192A2 RID: 103074 RVA: 0x003A9600 File Offset: 0x003A7800
+		// Token: 0x06019CD8 RID: 105688 RVA: 0x003C3D50 File Offset: 0x003C1F50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SpringFestivalAreaUnlockNotify other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && this.areaInfos_.Equals(other.areaInfos_) && this.IsFullLoad == other.IsFullLoad && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060192A3 RID: 103075 RVA: 0x003A9660 File Offset: 0x003A7860
+		// Token: 0x06019CD9 RID: 105689 RVA: 0x003C3DB0 File Offset: 0x003C1FB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060192A4 RID: 103076 RVA: 0x003A96C6 File Offset: 0x003A78C6
+		// Token: 0x06019CDA RID: 105690 RVA: 0x003C3E16 File Offset: 0x003C2016
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060192A5 RID: 103077 RVA: 0x003A96D3 File Offset: 0x003A78D3
+		// Token: 0x06019CDB RID: 105691 RVA: 0x003C3E23 File Offset: 0x003C2023
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,29 +169,29 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060192A6 RID: 103078 RVA: 0x003A96DC File Offset: 0x003A78DC
+		// Token: 0x06019CDC RID: 105692 RVA: 0x003C3E2C File Offset: 0x003C202C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.ActivityId != 0)
-			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.ActivityId);
-			}
 			if (this.IsFullLoad)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(40);
 				output.WriteBool(this.IsFullLoad);
 			}
 			this.areaInfos_.WriteTo(ref output, SpringFestivalAreaUnlockNotify._repeated_areaInfos_codec);
+			if (this.ActivityId != 0)
+			{
+				output.WriteRawTag(72);
+				output.WriteInt32(this.ActivityId);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x060192A7 RID: 103079 RVA: 0x003A9748 File Offset: 0x003A7948
+		// Token: 0x06019CDD RID: 105693 RVA: 0x003C3E98 File Offset: 0x003C2098
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060192A8 RID: 103080 RVA: 0x003A97A8 File Offset: 0x003A79A8
+		// Token: 0x06019CDE RID: 105694 RVA: 0x003C3EF8 File Offset: 0x003C20F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SpringFestivalAreaUnlockNotify other)
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060192A9 RID: 103081 RVA: 0x003A9809 File Offset: 0x003A7A09
+		// Token: 0x06019CDF RID: 105695 RVA: 0x003C3F59 File Offset: 0x003C2159
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -242,7 +242,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060192AA RID: 103082 RVA: 0x003A9814 File Offset: 0x003A7A14
+		// Token: 0x06019CE0 RID: 105696 RVA: 0x003C3F64 File Offset: 0x003C2164
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -254,53 +254,53 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 8U)
+				if (num != 40U)
 				{
-					if (num != 88U)
+					if (num != 66U)
 					{
-						if (num != 114U)
+						if (num != 72U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.areaInfos_.AddEntriesFrom(ref input, SpringFestivalAreaUnlockNotify._repeated_areaInfos_codec);
+							this.ActivityId = input.ReadInt32();
 						}
 					}
 					else
 					{
-						this.IsFullLoad = input.ReadBool();
+						this.areaInfos_.AddEntriesFrom(ref input, SpringFestivalAreaUnlockNotify._repeated_areaInfos_codec);
 					}
 				}
 				else
 				{
-					this.ActivityId = input.ReadInt32();
+					this.IsFullLoad = input.ReadBool();
 				}
 			}
 		}
 
-		// Token: 0x0400942E RID: 37934
+		// Token: 0x04009858 RID: 39000
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400942F RID: 37935
-		public const int ActivityIdFieldNumber = 1;
+		// Token: 0x04009859 RID: 39001
+		public const int ActivityIdFieldNumber = 9;
 
-		// Token: 0x04009430 RID: 37936
+		// Token: 0x0400985A RID: 39002
 		private int activityId_;
 
-		// Token: 0x04009431 RID: 37937
-		public const int AreaInfosFieldNumber = 14;
+		// Token: 0x0400985B RID: 39003
+		public const int AreaInfosFieldNumber = 8;
 
-		// Token: 0x04009432 RID: 37938
-		private static readonly FieldCodec<AreaInfo> _repeated_areaInfos_codec = FieldCodec.ForMessage<AreaInfo>(114U, AreaInfo.Parser);
+		// Token: 0x0400985C RID: 39004
+		private static readonly FieldCodec<AreaInfo> _repeated_areaInfos_codec = FieldCodec.ForMessage<AreaInfo>(66U, AreaInfo.Parser);
 
-		// Token: 0x04009433 RID: 37939
+		// Token: 0x0400985D RID: 39005
 		private readonly RepeatedField<AreaInfo> areaInfos_ = new RepeatedField<AreaInfo>();
 
-		// Token: 0x04009434 RID: 37940
-		public const int IsFullLoadFieldNumber = 11;
+		// Token: 0x0400985E RID: 39006
+		public const int IsFullLoadFieldNumber = 5;
 
-		// Token: 0x04009435 RID: 37941
+		// Token: 0x0400985F RID: 39007
 		private bool isFullLoad_;
 	}
 }

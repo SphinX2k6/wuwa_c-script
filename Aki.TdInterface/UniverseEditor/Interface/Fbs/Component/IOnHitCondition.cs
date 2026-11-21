@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200569B RID: 22171
+	// Token: 0x02005C3F RID: 23615
 	public struct IOnHitCondition : IFlatbufferObject
 	{
-		// Token: 0x1700A4E2 RID: 42210
-		// (get) Token: 0x06025004 RID: 151556 RVA: 0x0051C3D7 File Offset: 0x0051A5D7
+		// Token: 0x1700AD76 RID: 44406
+		// (get) Token: 0x06027259 RID: 160345 RVA: 0x0055D320 File Offset: 0x0055B520
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025005 RID: 151557 RVA: 0x0051C3E4 File Offset: 0x0051A5E4
+		// Token: 0x0602725A RID: 160346 RVA: 0x0055D32D File Offset: 0x0055B52D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025006 RID: 151558 RVA: 0x0051C3EC File Offset: 0x0051A5EC
+		// Token: 0x0602725B RID: 160347 RVA: 0x0055D334 File Offset: 0x0055B534
 		public static IOnHitCondition GetRootAsIOnHitCondition(ByteBuffer _bb)
 		{
 			return IOnHitCondition.GetRootAsIOnHitCondition(_bb, default(IOnHitCondition));
 		}
 
-		// Token: 0x06025007 RID: 151559 RVA: 0x0051C408 File Offset: 0x0051A608
+		// Token: 0x0602725C RID: 160348 RVA: 0x0055D350 File Offset: 0x0055B550
 		public static IOnHitCondition GetRootAsIOnHitCondition(ByteBuffer _bb, IOnHitCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025008 RID: 151560 RVA: 0x0051C425 File Offset: 0x0051A625
+		// Token: 0x0602725D RID: 160349 RVA: 0x0055D36D File Offset: 0x0055B56D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025009 RID: 151561 RVA: 0x0051C434 File Offset: 0x0051A634
+		// Token: 0x0602725E RID: 160350 RVA: 0x0055D37C File Offset: 0x0055B57C
 		public IOnHitCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A4E3 RID: 42211
-		// (get) Token: 0x0602500A RID: 151562 RVA: 0x0051C444 File Offset: 0x0051A644
+		// Token: 0x1700AD77 RID: 44407
+		// (get) Token: 0x0602725F RID: 160351 RVA: 0x0055D38C File Offset: 0x0055B58C
 		public EBulletCreateCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A4E4 RID: 42212
-		// (get) Token: 0x0602500B RID: 151563 RVA: 0x0051C480 File Offset: 0x0051A680
+		// Token: 0x1700AD78 RID: 44408
+		// (get) Token: 0x06027260 RID: 160352 RVA: 0x0055D3C8 File Offset: 0x0055B5C8
 		public long BulletId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602500C RID: 151564 RVA: 0x0051C4BD File Offset: 0x0051A6BD
+		// Token: 0x06027261 RID: 160353 RVA: 0x0055D405 File Offset: 0x0055B605
 		public static Offset<IOnHitCondition> CreateIOnHitCondition(FlatBufferBuilder builder, EBulletCreateCondition Type = EBulletCreateCondition.OnHit, long BulletId = 0L)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IOnHitCondition.EndIOnHitCondition(builder);
 		}
 
-		// Token: 0x0602500D RID: 151565 RVA: 0x0051C4DA File Offset: 0x0051A6DA
+		// Token: 0x06027262 RID: 160354 RVA: 0x0055D422 File Offset: 0x0055B622
 		public static void StartIOnHitCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602500E RID: 151566 RVA: 0x0051C4E3 File Offset: 0x0051A6E3
+		// Token: 0x06027263 RID: 160355 RVA: 0x0055D42B File Offset: 0x0055B62B
 		public static void AddType(FlatBufferBuilder builder, EBulletCreateCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602500F RID: 151567 RVA: 0x0051C4EE File Offset: 0x0051A6EE
+		// Token: 0x06027264 RID: 160356 RVA: 0x0055D436 File Offset: 0x0055B636
 		public static void AddBulletId(FlatBufferBuilder builder, long bulletId)
 		{
 			builder.AddLong(1, bulletId, 0L);
 		}
 
-		// Token: 0x06025010 RID: 151568 RVA: 0x0051C4FA File Offset: 0x0051A6FA
+		// Token: 0x06027265 RID: 160357 RVA: 0x0055D442 File Offset: 0x0055B642
 		public static Offset<IOnHitCondition> EndIOnHitCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IOnHitCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06025011 RID: 151569 RVA: 0x0051C508 File Offset: 0x0051A708
+		// Token: 0x06027266 RID: 160358 RVA: 0x0055D450 File Offset: 0x0055B650
 		public IOnHitConditionT UnPack()
 		{
 			IOnHitConditionT onHitConditionT = new IOnHitConditionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return onHitConditionT;
 		}
 
-		// Token: 0x06025012 RID: 151570 RVA: 0x0051C523 File Offset: 0x0051A723
+		// Token: 0x06027267 RID: 160359 RVA: 0x0055D46B File Offset: 0x0055B66B
 		public void UnPackTo(IOnHitConditionT _o)
 		{
 			_o.Type = this.Type;
 			_o.BulletId = this.BulletId;
 		}
 
-		// Token: 0x06025013 RID: 151571 RVA: 0x0051C540 File Offset: 0x0051A740
+		// Token: 0x06027268 RID: 160360 RVA: 0x0055D488 File Offset: 0x0055B688
 		public static Offset<IOnHitCondition> Pack(FlatBufferBuilder builder, IOnHitConditionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IOnHitCondition.CreateIOnHitCondition(builder, _o.Type, _o.BulletId);
 		}
 
-		// Token: 0x0400EABF RID: 60095
+		// Token: 0x0400F72B RID: 63275
 		private Table __p;
 	}
 }

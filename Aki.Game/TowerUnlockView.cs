@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002C0B RID: 11275
+// Token: 0x02002186 RID: 8582
 public class TowerUnlockView : UiViewBase
 {
-	// Token: 0x06017698 RID: 95896 RVA: 0x005F61A3 File Offset: 0x005F43A3
+	// Token: 0x060150C9 RID: 86217 RVA: 0x00622CC7 File Offset: 0x00620EC7
 	[NullableContext(1)]
 	public TowerUnlockView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06017699 RID: 95897 RVA: 0x005F61AC File Offset: 0x005F43AC
+	// Token: 0x060150CA RID: 86218 RVA: 0x00622CD0 File Offset: 0x00620ED0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -35,7 +35,7 @@ public class TowerUnlockView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601769A RID: 95898 RVA: 0x005F6252 File Offset: 0x005F4452
+	// Token: 0x060150CB RID: 86219 RVA: 0x00622D76 File Offset: 0x00620F76
 	private void OnClickedCloseButton()
 	{
 		if (!this.CanClick)
@@ -45,7 +45,7 @@ public class TowerUnlockView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601769B RID: 95899 RVA: 0x005F6264 File Offset: 0x005F4464
+	// Token: 0x060150CC RID: 86220 RVA: 0x00622D88 File Offset: 0x00620F88
 	protected override void OnStart()
 	{
 		int num = (int)this.OpenParam;
@@ -63,21 +63,21 @@ public class TowerUnlockView : UiViewBase
 		text.SetText(newTowerDifficultTitle, true);
 	}
 
-	// Token: 0x0601769C RID: 95900 RVA: 0x005F62BC File Offset: 0x005F44BC
+	// Token: 0x060150CD RID: 86221 RVA: 0x00622DE0 File Offset: 0x00620FE0
 	protected override void OnAfterPlayStartSequence()
 	{
 		this.CanClick = true;
 	}
 
-	// Token: 0x0400AF14 RID: 44820
+	// Token: 0x0400B319 RID: 45849
 	private bool CanClick;
 
-	// Token: 0x020091D6 RID: 37334
+	// Token: 0x02008419 RID: 33817
 	private enum EChildType
 	{
-		// Token: 0x0402F2EB RID: 193259
+		// Token: 0x0402A9EC RID: 174572
 		BtnMask,
-		// Token: 0x0402F2EC RID: 193260
+		// Token: 0x0402A9ED RID: 174573
 		TxtTitle
 	}
 }

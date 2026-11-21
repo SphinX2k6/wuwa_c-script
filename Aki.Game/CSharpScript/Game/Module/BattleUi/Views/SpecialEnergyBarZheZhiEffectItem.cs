@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E18 RID: 24088
+	// Token: 0x02004DFD RID: 19965
 	public class SpecialEnergyBarZheZhiEffectItem : UiPanelBase
 	{
-		// Token: 0x0603D419 RID: 250905 RVA: 0x00EC31A8 File Offset: 0x00EC13A8
+		// Token: 0x060323A8 RID: 205736 RVA: 0x00E14708 File Offset: 0x00E12908
 		[NullableContext(1)]
 		public UniTask InitAsync(UUIItem parentItem)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D41A RID: 250906 RVA: 0x00EC31F4 File Offset: 0x00EC13F4
+		// Token: 0x060323A9 RID: 205737 RVA: 0x00E14754 File Offset: 0x00E12954
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D41B RID: 250907 RVA: 0x00EC3302 File Offset: 0x00EC1502
+		// Token: 0x060323AA RID: 205738 RVA: 0x00E14862 File Offset: 0x00E12A62
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -59,14 +59,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitTweenAnim(6);
 		}
 
-		// Token: 0x0603D41C RID: 250908 RVA: 0x00EC3332 File Offset: 0x00EC1532
+		// Token: 0x060323AB RID: 205739 RVA: 0x00E14892 File Offset: 0x00E12A92
 		[NullableContext(1)]
 		public void SetNiagaraParam(string varName, float value)
 		{
 			base.GetUiNiagara(2).SetNiagaraVarFloat(varName, value);
 		}
 
-		// Token: 0x0603D41D RID: 250909 RVA: 0x00EC3344 File Offset: 0x00EC1544
+		// Token: 0x060323AC RID: 205740 RVA: 0x00E148A4 File Offset: 0x00E12AA4
 		public void SetVisible(bool value)
 		{
 			if (this.Visible == value)
@@ -86,13 +86,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTweenAnim(6);
 		}
 
-		// Token: 0x0603D41E RID: 250910 RVA: 0x00EC339C File Offset: 0x00EC159C
+		// Token: 0x060323AD RID: 205741 RVA: 0x00E148FC File Offset: 0x00E12AFC
 		protected override void OnBeforeHide()
 		{
 			this.TweenAnimMap = null;
 		}
 
-		// Token: 0x0603D41F RID: 250911 RVA: 0x00EC33A8 File Offset: 0x00EC15A8
+		// Token: 0x060323AE RID: 205742 RVA: 0x00E14908 File Offset: 0x00E12B08
 		private void InitTweenAnim(int componentType)
 		{
 			TArray<UActorComponent> tarray = base.GetItem(componentType).GetOwner().K2_GetComponentsByClass(ULGUIPlayTweenComponent.StaticClass());
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimMap[componentType] = array;
 		}
 
-		// Token: 0x0603D420 RID: 250912 RVA: 0x00EC341C File Offset: 0x00EC161C
+		// Token: 0x060323AF RID: 205743 RVA: 0x00E1497C File Offset: 0x00E12B7C
 		private void PlayTweenAnim(int componentType)
 		{
 			ULGUIPlayTweenComponent[] array;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D421 RID: 250913 RVA: 0x00EC345C File Offset: 0x00EC165C
+		// Token: 0x060323B0 RID: 205744 RVA: 0x00E149BC File Offset: 0x00E12BBC
 		private void StopTweenAnim(int componentType)
 		{
 			ULGUIPlayTweenComponent[] array;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FF1C RID: 130844
+		// Token: 0x0401A9E3 RID: 109027
 		[Nullable(new byte[]
 		{
 			2,
@@ -146,25 +146,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private Dictionary<int, ULGUIPlayTweenComponent[]> TweenAnimMap;
 
-		// Token: 0x0401FF1D RID: 130845
+		// Token: 0x0401A9E4 RID: 109028
 		private bool Visible;
 
-		// Token: 0x0200C18A RID: 49546
+		// Token: 0x0200AB99 RID: 43929
 		private enum EChildType
 		{
-			// Token: 0x0403A7BC RID: 239548
+			// Token: 0x040351AE RID: 217518
 			EnergyItem,
-			// Token: 0x0403A7BD RID: 239549
+			// Token: 0x040351AF RID: 217519
 			IconItem,
-			// Token: 0x0403A7BE RID: 239550
+			// Token: 0x040351B0 RID: 217520
 			EnergyEffect,
-			// Token: 0x0403A7BF RID: 239551
+			// Token: 0x040351B1 RID: 217521
 			StartEffect,
-			// Token: 0x0403A7C0 RID: 239552
+			// Token: 0x040351B2 RID: 217522
 			CloseEffect,
-			// Token: 0x0403A7C1 RID: 239553
+			// Token: 0x040351B3 RID: 217523
 			AnimStart,
-			// Token: 0x0403A7C2 RID: 239554
+			// Token: 0x040351B4 RID: 217524
 			AnimClose
 		}
 	}

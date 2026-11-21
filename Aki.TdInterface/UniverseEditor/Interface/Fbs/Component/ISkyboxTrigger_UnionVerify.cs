@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005928 RID: 22824
+	// Token: 0x02005F35 RID: 24373
 	public static class ISkyboxTrigger_UnionVerify
 	{
-		// Token: 0x0602697B RID: 158075 RVA: 0x00550A68 File Offset: 0x0054EC68
+		// Token: 0x06028EE5 RID: 167653 RVA: 0x005976D4 File Offset: 0x005958D4
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

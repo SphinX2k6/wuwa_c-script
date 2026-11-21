@@ -2,18 +2,18 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200157E RID: 5502
+	// Token: 0x020016DC RID: 5852
 	public enum EActorTurnToMode
 	{
-		// Token: 0x0400490E RID: 18702
+		// Token: 0x04004CBD RID: 19645
 		Talker,
-		// Token: 0x0400490F RID: 18703
+		// Token: 0x04004CBE RID: 19646
 		Empty,
-		// Token: 0x04004910 RID: 18704
+		// Token: 0x04004CBF RID: 19647
 		Entity,
-		// Token: 0x04004911 RID: 18705
+		// Token: 0x04004CC0 RID: 19648
 		Position,
-		// Token: 0x04004912 RID: 18706
+		// Token: 0x04004CC1 RID: 19649
 		Player
 	}
 }

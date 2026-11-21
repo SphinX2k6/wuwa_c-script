@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200204F RID: 8271
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002298 RID: 8856
 	public class IVillageInfrVillageLevel : IVillageInfrBuildOption
 	{
-		// Token: 0x0600B5BC RID: 46524 RVA: 0x001A5CA4 File Offset: 0x001A3EA4
+		// Token: 0x0600C0E2 RID: 49378 RVA: 0x001BC410 File Offset: 0x001BA610
 		private IVillageInfrVillageLevel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B5BD RID: 46525 RVA: 0x001A5CDC File Offset: 0x001A3EDC
+		// Token: 0x0600C0E3 RID: 49379 RVA: 0x001BC448 File Offset: 0x001BA648
 		public static IVillageInfrVillageLevel Create([Nullable(2)] IVillageInfrVillageLevel instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5BE RID: 46526 RVA: 0x001A5CEF File Offset: 0x001A3EEF
+		// Token: 0x0600C0E4 RID: 49380 RVA: 0x001BC45B File Offset: 0x001BA65B
 		public static IVillageInfrVillageLevel CreateFromSetValue([Nullable(2)] IVillageInfrVillageLevel_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5BF RID: 46527 RVA: 0x001A5D02 File Offset: 0x001A3F02
+		// Token: 0x0600C0E5 RID: 49381 RVA: 0x001BC46E File Offset: 0x001BA66E
 		public new IVillageInfrVillageLevel_SetValue ToSetValue()
 		{
 			return new IVillageInfrVillageLevel_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037C0 RID: 14272
-		// (get) Token: 0x0600B5C0 RID: 46528 RVA: 0x001A5D21 File Offset: 0x001A3F21
-		// (set) Token: 0x0600B5C1 RID: 46529 RVA: 0x001A5D4C File Offset: 0x001A3F4C
+		// Token: 0x17003A9D RID: 15005
+		// (get) Token: 0x0600C0E6 RID: 49382 RVA: 0x001BC48D File Offset: 0x001BA68D
+		// (set) Token: 0x0600C0E7 RID: 49383 RVA: 0x001BC4B8 File Offset: 0x001BA6B8
 		public override EVillageInfrBuildType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037C1 RID: 14273
-		// (get) Token: 0x0600B5C2 RID: 46530 RVA: 0x001A5D5A File Offset: 0x001A3F5A
-		// (set) Token: 0x0600B5C3 RID: 46531 RVA: 0x001A5D85 File Offset: 0x001A3F85
+		// Token: 0x17003A9E RID: 15006
+		// (get) Token: 0x0600C0E8 RID: 49384 RVA: 0x001BC4C6 File Offset: 0x001BA6C6
+		// (set) Token: 0x0600C0E9 RID: 49385 RVA: 0x001BC4F1 File Offset: 0x001BA6F1
 		public virtual int Level
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D4B RID: 27979
+		// Token: 0x04007354 RID: 29524
 		[Nullable(2)]
 		protected new IVillageInfrVillageLevel FbInstance;
 
-		// Token: 0x04006D4C RID: 27980
+		// Token: 0x04007355 RID: 29525
 		[Nullable(2)]
 		protected new IVillageInfrVillageLevel_SetValue PocoInterface;
 	}

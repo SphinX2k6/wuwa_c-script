@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018EE RID: 6382
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A79 RID: 6777
 	public class ICloseTraceSpline : ToggleScanSplineEffect
 	{
-		// Token: 0x060088CF RID: 35023 RVA: 0x00143594 File Offset: 0x00141794
+		// Token: 0x06008FFD RID: 36861 RVA: 0x00152E94 File Offset: 0x00151094
 		private ICloseTraceSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060088D0 RID: 35024 RVA: 0x001435CC File Offset: 0x001417CC
+		// Token: 0x06008FFE RID: 36862 RVA: 0x00152ECC File Offset: 0x001510CC
 		public static ICloseTraceSpline Create([Nullable(2)] ICloseTraceSpline instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060088D1 RID: 35025 RVA: 0x001435DF File Offset: 0x001417DF
+		// Token: 0x06008FFF RID: 36863 RVA: 0x00152EDF File Offset: 0x001510DF
 		public static ICloseTraceSpline CreateFromSetValue([Nullable(2)] ICloseTraceSpline_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060088D2 RID: 35026 RVA: 0x001435F2 File Offset: 0x001417F2
+		// Token: 0x06009000 RID: 36864 RVA: 0x00152EF2 File Offset: 0x001510F2
 		public new ICloseTraceSpline_SetValue ToSetValue()
 		{
 			return new ICloseTraceSpline_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C57 RID: 11351
-		// (get) Token: 0x060088D3 RID: 35027 RVA: 0x00143611 File Offset: 0x00141811
-		// (set) Token: 0x060088D4 RID: 35028 RVA: 0x0014363C File Offset: 0x0014183C
+		// Token: 0x17002E55 RID: 11861
+		// (get) Token: 0x06009001 RID: 36865 RVA: 0x00152F11 File Offset: 0x00151111
+		// (set) Token: 0x06009002 RID: 36866 RVA: 0x00152F3C File Offset: 0x0015113C
 		public override ETraceSplineOptionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C58 RID: 11352
-		// (get) Token: 0x060088D5 RID: 35029 RVA: 0x0014364A File Offset: 0x0014184A
-		// (set) Token: 0x060088D6 RID: 35030 RVA: 0x00143675 File Offset: 0x00141875
+		// Token: 0x17002E56 RID: 11862
+		// (get) Token: 0x06009003 RID: 36867 RVA: 0x00152F4A File Offset: 0x0015114A
+		// (set) Token: 0x06009004 RID: 36868 RVA: 0x00152F75 File Offset: 0x00151175
 		public virtual int SplineEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040055D4 RID: 21972
+		// Token: 0x04005A24 RID: 23076
 		[Nullable(2)]
 		protected new ICloseTraceSpline FbInstance;
 
-		// Token: 0x040055D5 RID: 21973
+		// Token: 0x04005A25 RID: 23077
 		[Nullable(2)]
 		protected new ICloseTraceSpline_SetValue PocoInterface;
 	}

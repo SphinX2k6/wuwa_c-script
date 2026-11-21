@@ -5,7 +5,7 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000C0 RID: 192
+	// Token: 0x020000C3 RID: 195
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,25 +14,25 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 	})]
 	public class RoleVoiceLanguageTable : TableReader<RoleVoiceLanguageTableRow>
 	{
-		// Token: 0x06000649 RID: 1609 RVA: 0x0003715E File Offset: 0x0003535E
+		// Token: 0x06000664 RID: 1636 RVA: 0x00038C5E File Offset: 0x00036E5E
 		protected override string GetTableName()
 		{
 			return "RoleVoiceLanguage";
 		}
 
-		// Token: 0x0600064A RID: 1610 RVA: 0x00037165 File Offset: 0x00035365
+		// Token: 0x06000665 RID: 1637 RVA: 0x00038C65 File Offset: 0x00036E65
 		protected override string GetDbFile()
 		{
 			return "db_menu.db";
 		}
 
-		// Token: 0x0600064B RID: 1611 RVA: 0x0003716C File Offset: 0x0003536C
+		// Token: 0x06000666 RID: 1638 RVA: 0x00038C6C File Offset: 0x00036E6C
 		protected override string GetIdString()
 		{
 			return "LanguageId";
 		}
 
-		// Token: 0x0600064C RID: 1612 RVA: 0x00037174 File Offset: 0x00035374
+		// Token: 0x06000667 RID: 1639 RVA: 0x00038C74 File Offset: 0x00036E74
 		public override RoleVoiceLanguageTableRow Parse(ByteBuffer byteBuffer)
 		{
 			RoleVoiceLanguageTableRow roleVoiceLanguageTableRow = new RoleVoiceLanguageTableRow();

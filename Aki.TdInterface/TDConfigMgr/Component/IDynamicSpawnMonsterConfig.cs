@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002ED RID: 749
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000334 RID: 820
 	public class IDynamicSpawnMonsterConfig
 	{
-		// Token: 0x06000E69 RID: 3689 RVA: 0x00034418 File Offset: 0x00032618
+		// Token: 0x06000F99 RID: 3993 RVA: 0x0003734C File Offset: 0x0003554C
 		private IDynamicSpawnMonsterConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000E6A RID: 3690 RVA: 0x00034450 File Offset: 0x00032650
+		// Token: 0x06000F9A RID: 3994 RVA: 0x00037384 File Offset: 0x00035584
 		public static IDynamicSpawnMonsterConfig Create([Nullable(2)] IDynamicSpawnMonsterConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E6B RID: 3691 RVA: 0x00034463 File Offset: 0x00032663
+		// Token: 0x06000F9B RID: 3995 RVA: 0x00037397 File Offset: 0x00035597
 		public static IDynamicSpawnMonsterConfig CreateFromSetValue([Nullable(2)] IDynamicSpawnMonsterConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E6C RID: 3692 RVA: 0x00034478 File Offset: 0x00032678
+		// Token: 0x06000F9C RID: 3996 RVA: 0x000373AC File Offset: 0x000355AC
 		public IDynamicSpawnMonsterConfig_SetValue ToSetValue()
 		{
 			return new IDynamicSpawnMonsterConfig_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700042E RID: 1070
-		// (get) Token: 0x06000E6D RID: 3693 RVA: 0x000344DE File Offset: 0x000326DE
-		// (set) Token: 0x06000E6E RID: 3694 RVA: 0x00034509 File Offset: 0x00032709
+		// Token: 0x1700047B RID: 1147
+		// (get) Token: 0x06000F9D RID: 3997 RVA: 0x00037412 File Offset: 0x00035612
+		// (set) Token: 0x06000F9E RID: 3998 RVA: 0x0003743D File Offset: 0x0003563D
 		public virtual int Id
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700042F RID: 1071
-		// (get) Token: 0x06000E6F RID: 3695 RVA: 0x00034517 File Offset: 0x00032717
-		// (set) Token: 0x06000E70 RID: 3696 RVA: 0x00034546 File Offset: 0x00032746
+		// Token: 0x1700047C RID: 1148
+		// (get) Token: 0x06000F9F RID: 3999 RVA: 0x0003744B File Offset: 0x0003564B
+		// (set) Token: 0x06000FA0 RID: 4000 RVA: 0x0003747A File Offset: 0x0003567A
 		public virtual float DelayTime
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000430 RID: 1072
-		// (get) Token: 0x06000E71 RID: 3697 RVA: 0x00034554 File Offset: 0x00032754
-		// (set) Token: 0x06000E72 RID: 3698 RVA: 0x0003457B File Offset: 0x0003277B
+		// Token: 0x1700047D RID: 1149
+		// (get) Token: 0x06000FA1 RID: 4001 RVA: 0x00037488 File Offset: 0x00035688
+		// (set) Token: 0x06000FA2 RID: 4002 RVA: 0x000374AF File Offset: 0x000356AF
 		public virtual ISpawnMonsterCompleteCondition CompleteCondition
 		{
 			get
@@ -135,9 +133,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000431 RID: 1073
-		// (get) Token: 0x06000E73 RID: 3699 RVA: 0x0003458C File Offset: 0x0003278C
-		// (set) Token: 0x06000E74 RID: 3700 RVA: 0x000345ED File Offset: 0x000327ED
+		// Token: 0x1700047E RID: 1150
+		// (get) Token: 0x06000FA3 RID: 4003 RVA: 0x000374C0 File Offset: 0x000356C0
+		// (set) Token: 0x06000FA4 RID: 4004 RVA: 0x00037521 File Offset: 0x00035721
 		public virtual ISpawnMonsterPreDependOnPreceding PreCondition
 		{
 			get
@@ -165,9 +163,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000432 RID: 1074
-		// (get) Token: 0x06000E75 RID: 3701 RVA: 0x00034604 File Offset: 0x00032804
-		// (set) Token: 0x06000E76 RID: 3702 RVA: 0x0003463E File Offset: 0x0003283E
+		// Token: 0x1700047F RID: 1151
+		// (get) Token: 0x06000FA5 RID: 4005 RVA: 0x00037538 File Offset: 0x00035738
+		// (set) Token: 0x06000FA6 RID: 4006 RVA: 0x00037572 File Offset: 0x00035772
 		public virtual float? Interval
 		{
 			get
@@ -189,9 +187,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000433 RID: 1075
-		// (get) Token: 0x06000E77 RID: 3703 RVA: 0x0003464C File Offset: 0x0003284C
-		// (set) Token: 0x06000E78 RID: 3704 RVA: 0x000346AD File Offset: 0x000328AD
+		// Token: 0x17000480 RID: 1152
+		// (get) Token: 0x06000FA7 RID: 4007 RVA: 0x00037580 File Offset: 0x00035780
+		// (set) Token: 0x06000FA8 RID: 4008 RVA: 0x000375E1 File Offset: 0x000357E1
 		public virtual IRandomPoolChoose MonsterChooseType
 		{
 			get
@@ -219,9 +217,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000434 RID: 1076
-		// (get) Token: 0x06000E79 RID: 3705 RVA: 0x000346C4 File Offset: 0x000328C4
-		// (set) Token: 0x06000E7A RID: 3706 RVA: 0x00034725 File Offset: 0x00032925
+		// Token: 0x17000481 RID: 1153
+		// (get) Token: 0x06000FA9 RID: 4009 RVA: 0x000375F8 File Offset: 0x000357F8
+		// (set) Token: 0x06000FAA RID: 4010 RVA: 0x00037659 File Offset: 0x00035859
 		public virtual ISpawnMonsterPoint PointChooseType
 		{
 			get
@@ -249,30 +247,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000CC1 RID: 3265
+		// Token: 0x04000DAB RID: 3499
 		[Nullable(2)]
 		protected IDynamicSpawnMonsterConfig FbInstance;
 
-		// Token: 0x04000CC2 RID: 3266
+		// Token: 0x04000DAC RID: 3500
 		[Nullable(2)]
 		protected IDynamicSpawnMonsterConfig_SetValue PocoInterface;
 
-		// Token: 0x04000CC3 RID: 3267
+		// Token: 0x04000DAD RID: 3501
 		private ISpawnMonsterPreDependOnPreceding _PreConditionCache;
 
-		// Token: 0x04000CC4 RID: 3268
+		// Token: 0x04000DAE RID: 3502
 		private bool _PreConditionInited;
 
-		// Token: 0x04000CC5 RID: 3269
+		// Token: 0x04000DAF RID: 3503
 		private IRandomPoolChoose _MonsterChooseTypeCache;
 
-		// Token: 0x04000CC6 RID: 3270
+		// Token: 0x04000DB0 RID: 3504
 		private bool _MonsterChooseTypeInited;
 
-		// Token: 0x04000CC7 RID: 3271
+		// Token: 0x04000DB1 RID: 3505
 		private ISpawnMonsterPoint _PointChooseTypeCache;
 
-		// Token: 0x04000CC8 RID: 3272
+		// Token: 0x04000DB2 RID: 3506
 		private bool _PointChooseTypeInited;
 	}
 }

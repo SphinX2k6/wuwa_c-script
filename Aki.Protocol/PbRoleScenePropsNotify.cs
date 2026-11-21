@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C10 RID: 3088
+	// Token: 0x02000C00 RID: 3072
 	[NetMessage(EMessageId.PbRoleScenePropsNotify)]
 	public sealed class PbRoleScenePropsNotify : IMessage<PbRoleScenePropsNotify>, IMessage, IEquatable<PbRoleScenePropsNotify>, IDeepCloneable<PbRoleScenePropsNotify>, IBufferMessage
 	{
-		// Token: 0x06010C37 RID: 68663 RVA: 0x00274740 File Offset: 0x00272940
+		// Token: 0x06010B37 RID: 68407 RVA: 0x002729D4 File Offset: 0x00270BD4
 		[NullableContext(1)]
 		public static PbRoleScenePropsNotify Create()
 		{
 			return new PbRoleScenePropsNotify();
 		}
 
-		// Token: 0x17003751 RID: 14161
-		// (get) Token: 0x06010C38 RID: 68664 RVA: 0x00274747 File Offset: 0x00272947
+		// Token: 0x1700371A RID: 14106
+		// (get) Token: 0x06010B38 RID: 68408 RVA: 0x002729DB File Offset: 0x00270BDB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003752 RID: 14162
-		// (get) Token: 0x06010C39 RID: 68665 RVA: 0x0027474A File Offset: 0x0027294A
+		// Token: 0x1700371B RID: 14107
+		// (get) Token: 0x06010B39 RID: 68409 RVA: 0x002729DE File Offset: 0x00270BDE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010C3A RID: 68666 RVA: 0x00274751 File Offset: 0x00272951
+		// Token: 0x06010B3A RID: 68410 RVA: 0x002729E5 File Offset: 0x00270BE5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbRoleScenePropsNotify()
 		{
 		}
 
-		// Token: 0x06010C3B RID: 68667 RVA: 0x00274770 File Offset: 0x00272970
+		// Token: 0x06010B3B RID: 68411 RVA: 0x00272A04 File Offset: 0x00270C04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbRoleScenePropsNotify(PbRoleScenePropsNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06010C3C RID: 68668 RVA: 0x002747C2 File Offset: 0x002729C2
+		// Token: 0x06010B3C RID: 68412 RVA: 0x00272A56 File Offset: 0x00270C56
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbRoleScenePropsNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new PbRoleScenePropsNotify(this);
 		}
 
-		// Token: 0x17003753 RID: 14163
-		// (get) Token: 0x06010C3D RID: 68669 RVA: 0x002747CA File Offset: 0x002729CA
-		// (set) Token: 0x06010C3E RID: 68670 RVA: 0x002747D2 File Offset: 0x002729D2
+		// Token: 0x1700371C RID: 14108
+		// (get) Token: 0x06010B3D RID: 68413 RVA: 0x00272A5E File Offset: 0x00270C5E
+		// (set) Token: 0x06010B3E RID: 68414 RVA: 0x00272A66 File Offset: 0x00270C66
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleId
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003754 RID: 14164
-		// (get) Token: 0x06010C3F RID: 68671 RVA: 0x002747DB File Offset: 0x002729DB
+		// Token: 0x1700371D RID: 14109
+		// (get) Token: 0x06010B3F RID: 68415 RVA: 0x00272A6F File Offset: 0x00270C6F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ArrayIntInt> BaseProp
@@ -98,8 +98,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003755 RID: 14165
-		// (get) Token: 0x06010C40 RID: 68672 RVA: 0x002747E3 File Offset: 0x002729E3
+		// Token: 0x1700371E RID: 14110
+		// (get) Token: 0x06010B40 RID: 68416 RVA: 0x00272A77 File Offset: 0x00270C77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ArrayIntInt> AddProp
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010C41 RID: 68673 RVA: 0x002747EB File Offset: 0x002729EB
+		// Token: 0x06010B41 RID: 68417 RVA: 0x00272A7F File Offset: 0x00270C7F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PbRoleScenePropsNotify);
 		}
 
-		// Token: 0x06010C42 RID: 68674 RVA: 0x002747FC File Offset: 0x002729FC
+		// Token: 0x06010B42 RID: 68418 RVA: 0x00272A90 File Offset: 0x00270C90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PbRoleScenePropsNotify other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoleId == other.RoleId && this.baseProp_.Equals(other.baseProp_) && this.addProp_.Equals(other.addProp_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06010C43 RID: 68675 RVA: 0x00274860 File Offset: 0x00272A60
+		// Token: 0x06010B43 RID: 68419 RVA: 0x00272AF4 File Offset: 0x00270CF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010C44 RID: 68676 RVA: 0x002748BB File Offset: 0x00272ABB
+		// Token: 0x06010B44 RID: 68420 RVA: 0x00272B4F File Offset: 0x00270D4F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06010C45 RID: 68677 RVA: 0x002748C8 File Offset: 0x00272AC8
+		// Token: 0x06010B45 RID: 68421 RVA: 0x00272B5C File Offset: 0x00270D5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -161,16 +161,16 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06010C46 RID: 68678 RVA: 0x002748D4 File Offset: 0x00272AD4
+		// Token: 0x06010B46 RID: 68422 RVA: 0x00272B68 File Offset: 0x00270D68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.addProp_.WriteTo(ref output, PbRoleScenePropsNotify._repeated_addProp_codec);
 			this.baseProp_.WriteTo(ref output, PbRoleScenePropsNotify._repeated_baseProp_codec);
+			this.addProp_.WriteTo(ref output, PbRoleScenePropsNotify._repeated_addProp_codec);
 			if (this.RoleId != 0)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.RoleId);
 			}
 			if (this._unknownFields != null)
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010C47 RID: 68679 RVA: 0x00274934 File Offset: 0x00272B34
+		// Token: 0x06010B47 RID: 68423 RVA: 0x00272BC8 File Offset: 0x00270DC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010C48 RID: 68680 RVA: 0x00274998 File Offset: 0x00272B98
+		// Token: 0x06010B48 RID: 68424 RVA: 0x00272C2C File Offset: 0x00270E2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PbRoleScenePropsNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06010C49 RID: 68681 RVA: 0x002749F6 File Offset: 0x00272BF6
+		// Token: 0x06010B49 RID: 68425 RVA: 0x00272C8A File Offset: 0x00270E8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06010C4A RID: 68682 RVA: 0x00274A00 File Offset: 0x00272C00
+		// Token: 0x06010B4A RID: 68426 RVA: 0x00272C94 File Offset: 0x00270E94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,11 +236,11 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 10U)
+				if (num != 18U)
 				{
-					if (num != 90U)
+					if (num != 34U)
 					{
-						if (num != 120U)
+						if (num != 56U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
@@ -251,41 +251,41 @@ namespace Aki.Protocol
 					}
 					else
 					{
-						this.baseProp_.AddEntriesFrom(ref input, PbRoleScenePropsNotify._repeated_baseProp_codec);
+						this.addProp_.AddEntriesFrom(ref input, PbRoleScenePropsNotify._repeated_addProp_codec);
 					}
 				}
 				else
 				{
-					this.addProp_.AddEntriesFrom(ref input, PbRoleScenePropsNotify._repeated_addProp_codec);
+					this.baseProp_.AddEntriesFrom(ref input, PbRoleScenePropsNotify._repeated_baseProp_codec);
 				}
 			}
 		}
 
-		// Token: 0x04006A7B RID: 27259
+		// Token: 0x04006A8F RID: 27279
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006A7C RID: 27260
-		public const int RoleIdFieldNumber = 15;
+		// Token: 0x04006A90 RID: 27280
+		public const int RoleIdFieldNumber = 7;
 
-		// Token: 0x04006A7D RID: 27261
+		// Token: 0x04006A91 RID: 27281
 		private int roleId_;
 
-		// Token: 0x04006A7E RID: 27262
-		public const int BasePropFieldNumber = 11;
+		// Token: 0x04006A92 RID: 27282
+		public const int BasePropFieldNumber = 2;
 
-		// Token: 0x04006A7F RID: 27263
-		private static readonly FieldCodec<ArrayIntInt> _repeated_baseProp_codec = FieldCodec.ForMessage<ArrayIntInt>(90U, ArrayIntInt.Parser);
+		// Token: 0x04006A93 RID: 27283
+		private static readonly FieldCodec<ArrayIntInt> _repeated_baseProp_codec = FieldCodec.ForMessage<ArrayIntInt>(18U, ArrayIntInt.Parser);
 
-		// Token: 0x04006A80 RID: 27264
+		// Token: 0x04006A94 RID: 27284
 		private readonly RepeatedField<ArrayIntInt> baseProp_ = new RepeatedField<ArrayIntInt>();
 
-		// Token: 0x04006A81 RID: 27265
-		public const int AddPropFieldNumber = 1;
+		// Token: 0x04006A95 RID: 27285
+		public const int AddPropFieldNumber = 4;
 
-		// Token: 0x04006A82 RID: 27266
-		private static readonly FieldCodec<ArrayIntInt> _repeated_addProp_codec = FieldCodec.ForMessage<ArrayIntInt>(10U, ArrayIntInt.Parser);
+		// Token: 0x04006A96 RID: 27286
+		private static readonly FieldCodec<ArrayIntInt> _repeated_addProp_codec = FieldCodec.ForMessage<ArrayIntInt>(34U, ArrayIntInt.Parser);
 
-		// Token: 0x04006A83 RID: 27267
+		// Token: 0x04006A97 RID: 27287
 		private readonly RepeatedField<ArrayIntInt> addProp_ = new RepeatedField<ArrayIntInt>();
 	}
 }

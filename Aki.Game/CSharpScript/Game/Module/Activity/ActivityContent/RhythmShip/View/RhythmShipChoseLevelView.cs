@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006218 RID: 25112
+	// Token: 0x02005196 RID: 20886
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RhythmShipChoseLevelView : UiTickViewBase
 	{
-		// Token: 0x0603F57A RID: 259450 RVA: 0x00F4E852 File Offset: 0x00F4CA52
+		// Token: 0x0603423B RID: 213563 RVA: 0x00E957AA File Offset: 0x00E939AA
 		[NullableContext(1)]
 		public RhythmShipChoseLevelView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F57B RID: 259451 RVA: 0x00F4E88C File Offset: 0x00F4CA8C
+		// Token: 0x0603423C RID: 213564 RVA: 0x00E957E4 File Offset: 0x00E939E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F57C RID: 259452 RVA: 0x00F4ED48 File Offset: 0x00F4CF48
+		// Token: 0x0603423D RID: 213565 RVA: 0x00E95CA0 File Offset: 0x00E93EA0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipChoseLevelView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -96,21 +96,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F57D RID: 259453 RVA: 0x00F4ED8B File Offset: 0x00F4CF8B
+		// Token: 0x0603423E RID: 213566 RVA: 0x00E95CE3 File Offset: 0x00E93EE3
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnRhythmShipJumpLevel, new Action<int, int, int>(this.OnRhythmShipJumpLevel));
 			EventSystem.Instance.Add(EEventName.OnRhythmShipRedDotRefresh, new Action<List<int>, List<int>, List<int>>(this.OnRhythmShipRedDotRefresh));
 		}
 
-		// Token: 0x0603F57E RID: 259454 RVA: 0x00F4EDC5 File Offset: 0x00F4CFC5
+		// Token: 0x0603423F RID: 213567 RVA: 0x00E95D1D File Offset: 0x00E93F1D
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRhythmShipJumpLevel, new Action<int, int, int>(this.OnRhythmShipJumpLevel));
 			EventSystem.Instance.Remove(EEventName.OnRhythmShipRedDotRefresh, new Action<List<int>, List<int>, List<int>>(this.OnRhythmShipRedDotRefresh));
 		}
 
-		// Token: 0x0603F57F RID: 259455 RVA: 0x00F4EE00 File Offset: 0x00F4D000
+		// Token: 0x06034240 RID: 213568 RVA: 0x00E95D58 File Offset: 0x00E93F58
 		protected override void OnStart()
 		{
 			this.PlayMainViewMusic();
@@ -136,13 +136,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshLinkageRedDot();
 		}
 
-		// Token: 0x0603F580 RID: 259456 RVA: 0x00F4EEDA File Offset: 0x00F4D0DA
+		// Token: 0x06034241 RID: 213569 RVA: 0x00E95E32 File Offset: 0x00E94032
 		protected override void OnBeforeDestroy()
 		{
 			this.StopLastMusic();
 		}
 
-		// Token: 0x0603F581 RID: 259457 RVA: 0x00F4EEE4 File Offset: 0x00F4D0E4
+		// Token: 0x06034242 RID: 213570 RVA: 0x00E95E3C File Offset: 0x00E9403C
 		protected override void OnBeforeShow()
 		{
 			base.GetText(12).SetText(RhythmShipModel.Instance.GetTaskProgressString(0), true);
@@ -155,19 +155,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F582 RID: 259458 RVA: 0x00F4EFA4 File Offset: 0x00F4D1A4
+		// Token: 0x06034243 RID: 213571 RVA: 0x00E95EFC File Offset: 0x00E940FC
 		private void PlayMainViewMusic()
 		{
 			RhythmShipController.Instance.PlayLoopAudioEvent("play_ui_jiezoufeichuan_interface");
 		}
 
-		// Token: 0x0603F583 RID: 259459 RVA: 0x00F4EFB5 File Offset: 0x00F4D1B5
+		// Token: 0x06034244 RID: 213572 RVA: 0x00E95F0D File Offset: 0x00E9410D
 		private void StopLastMusic()
 		{
 			RhythmShipController.Instance.StopLoopAudioEvent();
 		}
 
-		// Token: 0x0603F584 RID: 259460 RVA: 0x00F4EFC4 File Offset: 0x00F4D1C4
+		// Token: 0x06034245 RID: 213573 RVA: 0x00E95F1C File Offset: 0x00E9411C
 		protected override void OnAfterPlayStartSequence()
 		{
 			IRhythmShipChoseLevelViewData rhythmShipChoseLevelViewData = this.OpenParam as IRhythmShipChoseLevelViewData;
@@ -177,14 +177,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F585 RID: 259461 RVA: 0x00F4F024 File Offset: 0x00F4D224
+		// Token: 0x06034246 RID: 213574 RVA: 0x00E95F7C File Offset: 0x00E9417C
 		protected override void OnBeforeHide()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RhythmShipTask, base.GetItem(31), 0);
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RhythmShipTimeLimitTask, base.GetItem(30), 0);
 		}
 
-		// Token: 0x0603F586 RID: 259462 RVA: 0x00F4F056 File Offset: 0x00F4D256
+		// Token: 0x06034247 RID: 213575 RVA: 0x00E95FAE File Offset: 0x00E941AE
 		protected override void OnTick(float delta)
 		{
 			if (this.RefreshTime > 500f)
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshTime += delta;
 		}
 
-		// Token: 0x0603F587 RID: 259463 RVA: 0x00F4F084 File Offset: 0x00F4D284
+		// Token: 0x06034248 RID: 213576 RVA: 0x00E95FDC File Offset: 0x00E941DC
 		private void RefreshTimeText()
 		{
 			RhythmShipData activityData = RhythmShipModel.Instance.ActivityData;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.GetText(10).SetText(remainTimeText ?? "", true);
 		}
 
-		// Token: 0x0603F588 RID: 259464 RVA: 0x00F4F0E4 File Offset: 0x00F4D2E4
+		// Token: 0x06034249 RID: 213577 RVA: 0x00E9603C File Offset: 0x00E9423C
 		private void RefreshLevelItem()
 		{
 			List<int> rhythmShipLevelIdListByPlanet = RhythmShipConfig.Instance.GetRhythmShipLevelIdListByPlanet(this.PlanetList[this.CurrentShowPlanetIndex]);
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F589 RID: 259465 RVA: 0x00F4F1EC File Offset: 0x00F4D3EC
+		// Token: 0x0603424A RID: 213578 RVA: 0x00E96144 File Offset: 0x00E94344
 		private void RefreshNextBgView()
 		{
 			int id = this.PlanetList[this.CurrentShowPlanetIndex];
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F58A RID: 259466 RVA: 0x00F4F344 File Offset: 0x00F4D544
+		// Token: 0x0603424B RID: 213579 RVA: 0x00E9629C File Offset: 0x00E9449C
 		private void RefreshView(int? targetPlanet = null)
 		{
 			if (targetPlanet != null)
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F58B RID: 259467 RVA: 0x00F4F4E4 File Offset: 0x00F4D6E4
+		// Token: 0x0603424C RID: 213580 RVA: 0x00E9643C File Offset: 0x00E9463C
 		private void RefreshBgItem()
 		{
 			int id = this.PlanetList[this.CurrentShowPlanetIndex];
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.GetUiNiagara(36).ColorParameter.Get("Color_01").Constant = FLinearColor.FromSRGBColor(fcolor);
 		}
 
-		// Token: 0x0603F58C RID: 259468 RVA: 0x00F4F658 File Offset: 0x00F4D858
+		// Token: 0x0603424D RID: 213581 RVA: 0x00E965B0 File Offset: 0x00E947B0
 		private void RefreshLeftAndRightBtnActive()
 		{
 			bool flag = this.CurrentShowPlanetIndex < this.PlanetList.Count - 1;
@@ -400,13 +400,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F58D RID: 259469 RVA: 0x00F4F719 File Offset: 0x00F4D919
+		// Token: 0x0603424E RID: 213582 RVA: 0x00E96671 File Offset: 0x00E94871
 		private void OnClickKeyBindingsBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipSetView, null, null);
 		}
 
-		// Token: 0x0603F58E RID: 259470 RVA: 0x00F4F72C File Offset: 0x00F4D92C
+		// Token: 0x0603424F RID: 213583 RVA: 0x00E96684 File Offset: 0x00E94884
 		private void OnClickLeftBtn()
 		{
 			this.CurrentShowPlanetIndex--;
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshView(null);
 		}
 
-		// Token: 0x0603F58F RID: 259471 RVA: 0x00F4F75C File Offset: 0x00F4D95C
+		// Token: 0x06034250 RID: 213584 RVA: 0x00E966B4 File Offset: 0x00E948B4
 		private void OnClickRightBtn()
 		{
 			this.CurrentShowPlanetIndex++;
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshView(null);
 		}
 
-		// Token: 0x0603F590 RID: 259472 RVA: 0x00F4F78C File Offset: 0x00F4D98C
+		// Token: 0x06034251 RID: 213585 RVA: 0x00E966E4 File Offset: 0x00E948E4
 		private void OnClickLevelDetailLeftBtn()
 		{
 			int num = this.LevelList.IndexOf(this.CurrentShowDetailLevel);
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshPanelOnLevelDetailBtnClick(levelId);
 		}
 
-		// Token: 0x0603F591 RID: 259473 RVA: 0x00F4F7C4 File Offset: 0x00F4D9C4
+		// Token: 0x06034252 RID: 213586 RVA: 0x00E9671C File Offset: 0x00E9491C
 		private void OnClickLevelDetailRightBtn()
 		{
 			int num = this.LevelList.IndexOf(this.CurrentShowDetailLevel);
@@ -438,7 +438,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshPanelOnLevelDetailBtnClick(levelId);
 		}
 
-		// Token: 0x0603F592 RID: 259474 RVA: 0x00F4F7FC File Offset: 0x00F4D9FC
+		// Token: 0x06034253 RID: 213587 RVA: 0x00E96754 File Offset: 0x00E94954
 		private void RefreshPanelOnLevelDetailBtnClick(int levelId)
 		{
 			RhythmShipLevelDetailPanel levelDetailPanel = this.LevelDetailPanel;
@@ -456,19 +456,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshLevelDetailBtn();
 		}
 
-		// Token: 0x0603F593 RID: 259475 RVA: 0x00F4F849 File Offset: 0x00F4DA49
+		// Token: 0x06034254 RID: 213588 RVA: 0x00E967A1 File Offset: 0x00E949A1
 		private void OnClickTaskBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipTaskView, null, null);
 		}
 
-		// Token: 0x0603F594 RID: 259476 RVA: 0x00F4F85C File Offset: 0x00F4DA5C
+		// Token: 0x06034255 RID: 213589 RVA: 0x00E967B4 File Offset: 0x00E949B4
 		private void OnClickLimitTaskBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipLimitTaskView, null, null);
 		}
 
-		// Token: 0x0603F595 RID: 259477 RVA: 0x00F4F870 File Offset: 0x00F4DA70
+		// Token: 0x06034256 RID: 213590 RVA: 0x00E967C8 File Offset: 0x00E949C8
 		private void OnClickLinkageBtn()
 		{
 			if (TimeUtil.Instance.GetServerTime() < this.NextCanClickTime)
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshLinkageRedDot();
 		}
 
-		// Token: 0x0603F596 RID: 259478 RVA: 0x00F4F90C File Offset: 0x00F4DB0C
+		// Token: 0x06034257 RID: 213591 RVA: 0x00E96864 File Offset: 0x00E94A64
 		private void OnClickFastTravelBtn()
 		{
 			RhythmShipQuickSelectLevelViewData param = new RhythmShipQuickSelectLevelViewData
@@ -502,13 +502,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipQuickSelectLevelView, param, null);
 		}
 
-		// Token: 0x0603F597 RID: 259479 RVA: 0x00F4F93C File Offset: 0x00F4DB3C
+		// Token: 0x06034258 RID: 213592 RVA: 0x00E96894 File Offset: 0x00E94A94
 		private void OnClickLevelItem(int levelId)
 		{
 			this.OnClickLevelItem(levelId, null);
 		}
 
-		// Token: 0x0603F598 RID: 259480 RVA: 0x00F4F95C File Offset: 0x00F4DB5C
+		// Token: 0x06034259 RID: 213593 RVA: 0x00E968B4 File Offset: 0x00E94AB4
 		private void OnClickLevelItem(int levelId, int? subLevelId)
 		{
 			if (!this.LevelPreQuestHandle(levelId))
@@ -537,7 +537,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshDetailLevel();
 		}
 
-		// Token: 0x0603F599 RID: 259481 RVA: 0x00F4FA00 File Offset: 0x00F4DC00
+		// Token: 0x0603425A RID: 213594 RVA: 0x00E96958 File Offset: 0x00E94B58
 		private bool LevelPreQuestHandle(int levelId)
 		{
 			if (RhythmShipModel.Instance.GetLevelPreQuestFinish(levelId))
@@ -555,7 +555,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return false;
 		}
 
-		// Token: 0x0603F59A RID: 259482 RVA: 0x00F4FA68 File Offset: 0x00F4DC68
+		// Token: 0x0603425B RID: 213595 RVA: 0x00E969C0 File Offset: 0x00E94BC0
 		private void OnRhythmShipJumpLevel(int showType, int planetId, int levelId)
 		{
 			this.CurrentShowType = (ERhythmShipPlanetType)showType;
@@ -570,7 +570,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.HandleOpenQuickSelectLevelView = true;
 		}
 
-		// Token: 0x0603F59B RID: 259483 RVA: 0x00F4FAD0 File Offset: 0x00F4DCD0
+		// Token: 0x0603425C RID: 213596 RVA: 0x00E96A28 File Offset: 0x00E94C28
 		private void OnClickDetailPanelMask()
 		{
 			RhythmShipLevelDetailPanel levelDetailPanel = this.LevelDetailPanel;
@@ -590,7 +590,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.GetItem(25).SetUIActive(false);
 		}
 
-		// Token: 0x0603F59C RID: 259484 RVA: 0x00F4FB5C File Offset: 0x00F4DD5C
+		// Token: 0x0603425D RID: 213597 RVA: 0x00E96AB4 File Offset: 0x00E94CB4
 		private void RefreshDetailLevel()
 		{
 			RhythmShipChoseLevelItem rhythmShipChoseLevelDetailItem = this.RhythmShipChoseLevelDetailItem;
@@ -610,7 +610,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshLevelDetailBtn();
 		}
 
-		// Token: 0x0603F59D RID: 259485 RVA: 0x00F4FBE8 File Offset: 0x00F4DDE8
+		// Token: 0x0603425E RID: 213598 RVA: 0x00E96B40 File Offset: 0x00E94D40
 		private void RefreshLinkageRedDot()
 		{
 			if (this.CurrentShowType == ERhythmShipPlanetType.Normal)
@@ -634,13 +634,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F59E RID: 259486 RVA: 0x00F4FC90 File Offset: 0x00F4DE90
+		// Token: 0x0603425F RID: 213599 RVA: 0x00E96BE8 File Offset: 0x00E94DE8
 		private void OnRhythmShipRedDotRefresh(List<int> planet, List<int> subLevel, List<int> role)
 		{
 			this.RefreshLinkageRedDot();
 		}
 
-		// Token: 0x0603F59F RID: 259487 RVA: 0x00F4FC98 File Offset: 0x00F4DE98
+		// Token: 0x06034260 RID: 213600 RVA: 0x00E96BF0 File Offset: 0x00E94DF0
 		[NullableContext(1)]
 		private void SequenceEvent(string seqName, string eventName)
 		{
@@ -663,7 +663,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F5A0 RID: 259488 RVA: 0x00F4FD09 File Offset: 0x00F4DF09
+		// Token: 0x06034261 RID: 213601 RVA: 0x00E96C61 File Offset: 0x00E94E61
 		[NullableContext(1)]
 		private void SwitchSequenceEnd(string seqName)
 		{
@@ -673,7 +673,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F5A1 RID: 259489 RVA: 0x00F4FD1E File Offset: 0x00F4DF1E
+		// Token: 0x06034262 RID: 213602 RVA: 0x00E96C76 File Offset: 0x00E94E76
 		[NullableContext(1)]
 		private void BgMaskLevelSequencePlayerEnd(string seqName)
 		{
@@ -683,7 +683,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F5A2 RID: 259490 RVA: 0x00F4FD3C File Offset: 0x00F4DF3C
+		// Token: 0x06034263 RID: 213603 RVA: 0x00E96C94 File Offset: 0x00E94E94
 		private void OnClickCloseBtn()
 		{
 			if (this.HandleOpenQuickSelectLevelView)
@@ -711,7 +711,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon().Forget<bool>();
 		}
 
-		// Token: 0x0603F5A3 RID: 259491 RVA: 0x00F4FDA8 File Offset: 0x00F4DFA8
+		// Token: 0x06034264 RID: 213604 RVA: 0x00E96D00 File Offset: 0x00E94F00
 		private void RefreshLevelDetailBtn()
 		{
 			if (this.CurrentShowDetailLevel == 0)
@@ -749,61 +749,61 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x040210E7 RID: 135399
+		// Token: 0x0401BA16 RID: 113174
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040210E8 RID: 135400
+		// Token: 0x0401BA17 RID: 113175
 		private ERhythmShipPlanetType CurrentShowType = ERhythmShipPlanetType.Normal;
 
-		// Token: 0x040210E9 RID: 135401
+		// Token: 0x0401BA18 RID: 113176
 		[Nullable(1)]
 		private List<int> PlanetList = new List<int>();
 
-		// Token: 0x040210EA RID: 135402
+		// Token: 0x0401BA19 RID: 113177
 		[Nullable(1)]
 		private List<int> LevelList = new List<int>();
 
-		// Token: 0x040210EB RID: 135403
+		// Token: 0x0401BA1A RID: 113178
 		private int CurrentShowPlanetIndex;
 
-		// Token: 0x040210EC RID: 135404
+		// Token: 0x0401BA1B RID: 113179
 		private int CurrentShowDetailLevel;
 
-		// Token: 0x040210ED RID: 135405
+		// Token: 0x0401BA1C RID: 113180
 		private LevelSequencePlayer StartLevelSequencePlayer;
 
-		// Token: 0x040210EE RID: 135406
+		// Token: 0x0401BA1D RID: 113181
 		private LevelSequencePlayer SwitchLevelSequencePlayer;
 
-		// Token: 0x040210EF RID: 135407
+		// Token: 0x0401BA1E RID: 113182
 		private LevelSequencePlayer TipsLevelSequencePlayer;
 
-		// Token: 0x040210F0 RID: 135408
+		// Token: 0x0401BA1F RID: 113183
 		private LevelSequencePlayer BgMaskLevelSequencePlayer;
 
-		// Token: 0x040210F1 RID: 135409
+		// Token: 0x0401BA20 RID: 113184
 		[Nullable(1)]
 		private readonly Dictionary<int, RhythmShipChoseLevelItem> RhythmShipChoseLevelItemMap = new Dictionary<int, RhythmShipChoseLevelItem>();
 
-		// Token: 0x040210F2 RID: 135410
+		// Token: 0x0401BA21 RID: 113185
 		private RhythmShipChoseLevelItem RhythmShipChoseLevelDetailItem;
 
-		// Token: 0x040210F3 RID: 135411
+		// Token: 0x0401BA22 RID: 113186
 		private RhythmShipLevelDetailPanel LevelDetailPanel;
 
-		// Token: 0x040210F4 RID: 135412
+		// Token: 0x0401BA23 RID: 113187
 		private RhythmShipLinkageBtnItem RhythmShipLinkageItem;
 
-		// Token: 0x040210F5 RID: 135413
+		// Token: 0x0401BA24 RID: 113188
 		private float RefreshTime;
 
-		// Token: 0x040210F6 RID: 135414
+		// Token: 0x0401BA25 RID: 113189
 		private bool DoNotPlayStartSequence = true;
 
-		// Token: 0x040210F7 RID: 135415
+		// Token: 0x0401BA26 RID: 113190
 		private double NextCanClickTime;
 
-		// Token: 0x040210F8 RID: 135416
+		// Token: 0x0401BA27 RID: 113191
 		private bool HandleOpenQuickSelectLevelView;
 	}
 }

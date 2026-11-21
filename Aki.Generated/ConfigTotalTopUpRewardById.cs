@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009E8 RID: 2536
+	// Token: 0x02000ABD RID: 2749
 	public class ConfigTotalTopUpRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003B84 RID: 15236 RVA: 0x001AA55F File Offset: 0x001A875F
+		// Token: 0x06004082 RID: 16514 RVA: 0x001C98F3 File Offset: 0x001C7AF3
 		static ConfigTotalTopUpRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTotalTopUpRewardById.CreateStaticDefaultValue), new Action(ConfigTotalTopUpRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003B85 RID: 15237 RVA: 0x001AA580 File Offset: 0x001A8780
+		// Token: 0x06004083 RID: 16515 RVA: 0x001C9914 File Offset: 0x001C7B14
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTotalTopUpRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003B86 RID: 15238 RVA: 0x001AA5FF File Offset: 0x001A87FF
+		// Token: 0x06004084 RID: 16516 RVA: 0x001C9993 File Offset: 0x001C7B93
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTotalTopUpRewardById.LogPair = null;
 			ConfigTotalTopUpRewardById.HandleId = 0;
 		}
 
-		// Token: 0x06003B87 RID: 15239 RVA: 0x001AA60D File Offset: 0x001A880D
+		// Token: 0x06004085 RID: 16517 RVA: 0x001C99A1 File Offset: 0x001C7BA1
 		public static void Init()
 		{
 			ConfigTotalTopUpRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigTotalTopUpRewardById.HandleId, "db_totaltopup.db", "select BinData from `TotalTopUpReward` where Id=?");
 		}
 
-		// Token: 0x06003B88 RID: 15240 RVA: 0x001AA628 File Offset: 0x001A8828
+		// Token: 0x06004086 RID: 16518 RVA: 0x001C99BC File Offset: 0x001C7BBC
 		public static TotalTopUpReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTotalTopUpRewardById.HandleId, ConfigTotalTopUpRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TotalTopUpReward?(rootAsTotalTopUpReward);
 		}
 
-		// Token: 0x0400453E RID: 17726
+		// Token: 0x04004B11 RID: 19217
 		private const string DB = "db_totaltopup.db";
 
-		// Token: 0x0400453F RID: 17727
+		// Token: 0x04004B12 RID: 19218
 		private const string FILE = "l.累充活动.xlsx";
 
-		// Token: 0x04004540 RID: 17728
+		// Token: 0x04004B13 RID: 19219
 		private const string TABLE = "TotalTopUpReward";
 
-		// Token: 0x04004541 RID: 17729
+		// Token: 0x04004B14 RID: 19220
 		private const string COMMAND = "select BinData from `TotalTopUpReward` where Id=?";
 
-		// Token: 0x04004542 RID: 17730
+		// Token: 0x04004B15 RID: 19221
 		private const string KEY_PREFIX = "TotalTopUpRewardById";
 
-		// Token: 0x04004543 RID: 17731
+		// Token: 0x04004B16 RID: 19222
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004544 RID: 17732
+		// Token: 0x04004B17 RID: 19223
 		private static int HandleId;
 	}
 }

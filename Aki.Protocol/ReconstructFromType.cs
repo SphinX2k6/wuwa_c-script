@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200160E RID: 5646
+	// Token: 0x02001681 RID: 5761
 	public enum ReconstructFromType
 	{
-		// Token: 0x0400BFA0 RID: 49056
+		// Token: 0x0400C49A RID: 50330
 		[OriginalName("FromTypeHandCard")]
 		FromTypeHandCard,
-		// Token: 0x0400BFA1 RID: 49057
+		// Token: 0x0400C49B RID: 50331
 		[OriginalName("FromTypeFighter")]
 		FromTypeFighter
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002A8 RID: 680
+	// Token: 0x020002BC RID: 700
 	public class ConfigExternalSourceSettingById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000FF5 RID: 4085 RVA: 0x000B3A48 File Offset: 0x000B1C48
+		// Token: 0x0600106D RID: 4205 RVA: 0x000B9D0C File Offset: 0x000B7F0C
 		static ConfigExternalSourceSettingById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExternalSourceSettingById.CreateStaticDefaultValue), new Action(ConfigExternalSourceSettingById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000FF6 RID: 4086 RVA: 0x000B3A68 File Offset: 0x000B1C68
+		// Token: 0x0600106E RID: 4206 RVA: 0x000B9D2C File Offset: 0x000B7F2C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExternalSourceSettingById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000FF7 RID: 4087 RVA: 0x000B3AE7 File Offset: 0x000B1CE7
+		// Token: 0x0600106F RID: 4207 RVA: 0x000B9DAB File Offset: 0x000B7FAB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExternalSourceSettingById.LogPair = null;
 			ConfigExternalSourceSettingById.HandleId = 0;
 		}
 
-		// Token: 0x06000FF8 RID: 4088 RVA: 0x000B3AF5 File Offset: 0x000B1CF5
+		// Token: 0x06001070 RID: 4208 RVA: 0x000B9DB9 File Offset: 0x000B7FB9
 		public static void Init()
 		{
 			ConfigExternalSourceSettingById.HandleId = ConfigCommon.InitDataStatement(ConfigExternalSourceSettingById.HandleId, "db_plot_audio.db", "select BinData from `ExternalSourceSetting` where Id=?");
 		}
 
-		// Token: 0x06000FF9 RID: 4089 RVA: 0x000B3B10 File Offset: 0x000B1D10
+		// Token: 0x06001071 RID: 4209 RVA: 0x000B9DD4 File Offset: 0x000B7FD4
 		public static ExternalSourceSetting? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExternalSourceSettingById.HandleId, ConfigExternalSourceSettingById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new ExternalSourceSetting?(rootAsExternalSourceSetting);
 		}
 
-		// Token: 0x0400127C RID: 4732
+		// Token: 0x04001308 RID: 4872
 		private const string DB = "db_plot_audio.db";
 
-		// Token: 0x0400127D RID: 4733
+		// Token: 0x04001309 RID: 4873
 		private const string FILE = "j.剧情语音.xlsx";
 
-		// Token: 0x0400127E RID: 4734
+		// Token: 0x0400130A RID: 4874
 		private const string TABLE = "ExternalSourceSetting";
 
-		// Token: 0x0400127F RID: 4735
+		// Token: 0x0400130B RID: 4875
 		private const string COMMAND = "select BinData from `ExternalSourceSetting` where Id=?";
 
-		// Token: 0x04001280 RID: 4736
+		// Token: 0x0400130C RID: 4876
 		private const string KEY_PREFIX = "ExternalSourceSettingById";
 
-		// Token: 0x04001281 RID: 4737
+		// Token: 0x0400130D RID: 4877
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001282 RID: 4738
+		// Token: 0x0400130E RID: 4878
 		private static int HandleId;
 	}
 }

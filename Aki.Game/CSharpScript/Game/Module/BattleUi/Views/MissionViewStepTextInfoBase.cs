@@ -6,12 +6,12 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D75 RID: 23925
+	// Token: 0x02004D57 RID: 19799
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class MissionViewStepTextInfoBase
 	{
-		// Token: 0x0603CBAA RID: 248746 RVA: 0x00E953C7 File Offset: 0x00E935C7
+		// Token: 0x06031B06 RID: 203526 RVA: 0x00DE5C0F File Offset: 0x00DE3E0F
 		protected MissionViewStepTextInfoBase(string innerTidTitle, [Nullable(2)] IConditionGroup showConditions = null, [Nullable(new byte[]
 		{
 			2,
@@ -20,25 +20,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		{
 		}
 
-		// Token: 0x17008E1C RID: 36380
-		// (get) Token: 0x0603CBAB RID: 248747
+		// Token: 0x170061EE RID: 25070
+		// (get) Token: 0x06031B07 RID: 203527
 		public abstract EMissionItemViewDataSource ShowSource { get; }
 
-		// Token: 0x17008E1D RID: 36381
-		// (get) Token: 0x0603CBAC RID: 248748
+		// Token: 0x170061EF RID: 25071
+		// (get) Token: 0x06031B08 RID: 203528
 		public abstract string TidTitle { get; }
 
-		// Token: 0x0401FA37 RID: 129591
+		// Token: 0x0401A4EF RID: 107759
 		public int? CurConditionTextIndex;
 
-		// Token: 0x0401FA38 RID: 129592
+		// Token: 0x0401A4F0 RID: 107760
 		protected string InnerTidTitle = innerTidTitle;
 
-		// Token: 0x0401FA39 RID: 129593
+		// Token: 0x0401A4F1 RID: 107761
 		[Nullable(2)]
 		public IConditionGroup ShowConditions = showConditions;
 
-		// Token: 0x0401FA3A RID: 129594
+		// Token: 0x0401A4F2 RID: 107762
 		[Nullable(new byte[]
 		{
 			2,

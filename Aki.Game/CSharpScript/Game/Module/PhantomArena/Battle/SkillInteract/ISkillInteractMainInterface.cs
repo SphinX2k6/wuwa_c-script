@@ -5,20 +5,20 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 {
-	// Token: 0x02005288 RID: 21128
+	// Token: 0x02004258 RID: 16984
 	[NullableContext(1)]
 	public interface ISkillInteractMainInterface
 	{
-		// Token: 0x0603605A RID: 221274
+		// Token: 0x0602AF55 RID: 175957
 		UniTask StartSkillInteract();
 
-		// Token: 0x0603605B RID: 221275
+		// Token: 0x0602AF56 RID: 175958
 		void CancelSkillInteract();
 
-		// Token: 0x0603605C RID: 221276
+		// Token: 0x0602AF57 RID: 175959
 		ISkillTriggerInfo GetData();
 
-		// Token: 0x0603605D RID: 221277
+		// Token: 0x0602AF58 RID: 175960
 		void FinishSkillInteract();
 	}
 }

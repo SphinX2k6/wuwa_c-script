@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C71 RID: 3185
+	// Token: 0x02000D50 RID: 3408
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISceneBulletGroup
 	{
-		// Token: 0x060048FE RID: 18686 RVA: 0x000B745E File Offset: 0x000B565E
-		[NullableContext(1)]
+		// Token: 0x06004D9D RID: 19869 RVA: 0x000C1C62 File Offset: 0x000BFE62
+		[NullableContext(0)]
 		public static ISceneBulletGroup Create(ISceneBulletGroup? instance)
 		{
 			if (instance == null)
@@ -24,20 +24,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015D9 RID: 5593
-		// (get) Token: 0x060048FF RID: 18687 RVA: 0x000B747D File Offset: 0x000B567D
-		[Nullable(1)]
+		// Token: 0x170016F8 RID: 5880
+		// (get) Token: 0x06004D9E RID: 19870 RVA: 0x000C1C81 File Offset: 0x000BFE81
+		[Nullable(0)]
 		public virtual string EntityState
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.EntityState;
 			}
 		}
 
-		// Token: 0x170015DA RID: 5594
-		// (get) Token: 0x06004900 RID: 18688 RVA: 0x000B748A File Offset: 0x000B568A
+		// Token: 0x170016F9 RID: 5881
+		// (get) Token: 0x06004D9F RID: 19871 RVA: 0x000C1C8E File Offset: 0x000BFE8E
 		public virtual long BulletId
 		{
 			get
@@ -46,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015DB RID: 5595
-		// (get) Token: 0x06004901 RID: 18689 RVA: 0x000B7497 File Offset: 0x000B5697
+		// Token: 0x170016FA RID: 5882
+		// (get) Token: 0x06004DA0 RID: 19872 RVA: 0x000C1C9B File Offset: 0x000BFE9B
 		public virtual VectorInfo Range
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015DC RID: 5596
-		// (get) Token: 0x06004902 RID: 18690 RVA: 0x000B74CB File Offset: 0x000B56CB
+		// Token: 0x170016FB RID: 5883
+		// (get) Token: 0x06004DA1 RID: 19873 RVA: 0x000C1CCF File Offset: 0x000BFECF
 		public virtual VectorInfo Offset
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015DD RID: 5597
-		// (get) Token: 0x06004903 RID: 18691 RVA: 0x000B74FF File Offset: 0x000B56FF
+		// Token: 0x170016FC RID: 5884
+		// (get) Token: 0x06004DA2 RID: 19874 RVA: 0x000C1D03 File Offset: 0x000BFF03
 		public virtual ITrafficBulletLogic CustomBulletLogic
 		{
 			get
@@ -94,25 +94,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029A4 RID: 10660
+		// Token: 0x04002C11 RID: 11281
 		private ISceneBulletGroup Instance;
 
-		// Token: 0x040029A5 RID: 10661
+		// Token: 0x04002C12 RID: 11282
 		private VectorInfo _RangeCache;
 
-		// Token: 0x040029A6 RID: 10662
+		// Token: 0x04002C13 RID: 11283
 		private bool _RangeInited;
 
-		// Token: 0x040029A7 RID: 10663
+		// Token: 0x04002C14 RID: 11284
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x040029A8 RID: 10664
+		// Token: 0x04002C15 RID: 11285
 		private bool _OffsetInited;
 
-		// Token: 0x040029A9 RID: 10665
+		// Token: 0x04002C16 RID: 11286
 		private ITrafficBulletLogic _CustomBulletLogicCache;
 
-		// Token: 0x040029AA RID: 10666
+		// Token: 0x04002C17 RID: 11287
 		private bool _CustomBulletLogicInited;
 	}
 }

@@ -4,17 +4,17 @@ using CSharpScript.Game.Utils.Command;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x0200713F RID: 28991
+	// Token: 0x0200636D RID: 25453
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class PlayerFollowerSwallowHandler : IPlayerFollowerHandler
 	{
-		// Token: 0x17009D3A RID: 40250
-		// (get) Token: 0x06046C70 RID: 289904 RVA: 0x011D6056 File Offset: 0x011D4256
-		// (set) Token: 0x06046C71 RID: 289905 RVA: 0x011D605E File Offset: 0x011D425E
+		// Token: 0x1700750C RID: 29964
+		// (get) Token: 0x0603DAC1 RID: 252609 RVA: 0x011DEA6B File Offset: 0x011DCC6B
+		// (set) Token: 0x0603DAC2 RID: 252610 RVA: 0x011DEA73 File Offset: 0x011DCC73
 		public CommandInvoker CommandInvoker { get; set; } = new CommandSwallowInvoker();
 
-		// Token: 0x06046C72 RID: 289906 RVA: 0x011D6067 File Offset: 0x011D4267
+		// Token: 0x0603DAC3 RID: 252611 RVA: 0x011DEA7C File Offset: 0x011DCC7C
 		public virtual IReceiver<ICommandTypeAddFollower> AddFollowerReceiver()
 		{
 			Receiver<ICommandTypeAddFollower> receiver = new Receiver<ICommandTypeAddFollower>();
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return receiver;
 		}
 
-		// Token: 0x06046C73 RID: 289907 RVA: 0x011D6093 File Offset: 0x011D4293
+		// Token: 0x0603DAC4 RID: 252612 RVA: 0x011DEAA8 File Offset: 0x011DCCA8
 		public virtual IReceiver<ICommandTypeRemoveFollower> RemoveFollowerReceiver()
 		{
 			Receiver<ICommandTypeRemoveFollower> receiver = new Receiver<ICommandTypeRemoveFollower>();
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return receiver;
 		}
 
-		// Token: 0x06046C74 RID: 289908 RVA: 0x011D60BF File Offset: 0x011D42BF
+		// Token: 0x0603DAC5 RID: 252613 RVA: 0x011DEAD4 File Offset: 0x011DCCD4
 		public virtual IReceiver<ICommandTypeFlushFollower> FlushFollowerReceiver()
 		{
 			Receiver<ICommandTypeFlushFollower> receiver = new Receiver<ICommandTypeFlushFollower>();
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return receiver;
 		}
 
-		// Token: 0x06046C75 RID: 289909 RVA: 0x011D60EB File Offset: 0x011D42EB
+		// Token: 0x0603DAC6 RID: 252614 RVA: 0x011DEB00 File Offset: 0x011DCD00
 		public virtual bool HasFollower(long creatureDataId)
 		{
 			return false;
 		}
 
-		// Token: 0x06046C76 RID: 289910 RVA: 0x011D60EE File Offset: 0x011D42EE
+		// Token: 0x0603DAC7 RID: 252615 RVA: 0x011DEB03 File Offset: 0x011DCD03
 		public virtual void OnClear()
 		{
 		}

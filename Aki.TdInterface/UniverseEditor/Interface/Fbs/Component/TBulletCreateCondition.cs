@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BF1 RID: 23537
+	// Token: 0x0200620A RID: 25098
 	public enum TBulletCreateCondition : byte
 	{
-		// Token: 0x0400F38C RID: 62348
+		// Token: 0x04010099 RID: 65689
 		NONE,
-		// Token: 0x0400F38D RID: 62349
+		// Token: 0x0401009A RID: 65690
 		IOnCollisionCondition,
-		// Token: 0x0400F38E RID: 62350
+		// Token: 0x0401009B RID: 65691
 		IOnHitCondition,
-		// Token: 0x0400F38F RID: 62351
+		// Token: 0x0401009C RID: 65692
 		IOnMatchingCondition,
-		// Token: 0x0400F390 RID: 62352
+		// Token: 0x0401009D RID: 65693
 		IOnOpenGravityCollisionCondition,
-		// Token: 0x0400F391 RID: 62353
+		// Token: 0x0401009E RID: 65694
 		IOnThrowTriggerTimeCondition
 	}
 }

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B92 RID: 7058
+// Token: 0x02001051 RID: 4177
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchHandBookItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600D224 RID: 53796 RVA: 0x00303810 File Offset: 0x00301A10
+	// Token: 0x0600A635 RID: 42549 RVA: 0x0030E8E8 File Offset: 0x0030CAE8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -32,13 +32,13 @@ public class FloroRanchHandBookItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D225 RID: 53797 RVA: 0x003038DC File Offset: 0x00301ADC
+	// Token: 0x0600A636 RID: 42550 RVA: 0x0030E9B4 File Offset: 0x0030CBB4
 	protected override void OnStart()
 	{
 		this.SmallSlotLayout = new GenericLayout<FloroRanchHandBookSmallSlotItem, FloroRanchUnlockDataBase>(base.GetGridLayout(3), new Func<FloroRanchHandBookSmallSlotItem>(this.CreateSmallSlotItem), null, true, false);
 	}
 
-	// Token: 0x0600D226 RID: 53798 RVA: 0x00303900 File Offset: 0x00301B00
+	// Token: 0x0600A637 RID: 42551 RVA: 0x0030E9D8 File Offset: 0x0030CBD8
 	public override UniTask RefreshAsync(int data, bool isSelected, int gridIndex)
 	{
 		FloroRanchHandBookItem.<RefreshAsync>d__7 <RefreshAsync>d__;
@@ -51,7 +51,7 @@ public class FloroRanchHandBookItem : GridProxyAbstract<int>
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D227 RID: 53799 RVA: 0x00303954 File Offset: 0x00301B54
+	// Token: 0x0600A638 RID: 42552 RVA: 0x0030EA2C File Offset: 0x0030CC2C
 	private void TrySelectFirstItem()
 	{
 		FloroRanchHandBookSmallSlotItem floroRanchHandBookSmallSlotItem = this.SmallSlotLayout.GetLayoutItemList()[0];
@@ -62,7 +62,7 @@ public class FloroRanchHandBookItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600D228 RID: 53800 RVA: 0x003039A4 File Offset: 0x00301BA4
+	// Token: 0x0600A639 RID: 42553 RVA: 0x0030EA7C File Offset: 0x0030CC7C
 	private FloroRanchHandBookSmallSlotItem CreateSmallSlotItem()
 	{
 		FloroRanchHandBookSmallSlotItem floroRanchHandBookSmallSlotItem = new FloroRanchHandBookSmallSlotItem();
@@ -71,38 +71,38 @@ public class FloroRanchHandBookItem : GridProxyAbstract<int>
 		return floroRanchHandBookSmallSlotItem;
 	}
 
-	// Token: 0x0400604E RID: 24654
+	// Token: 0x0400611D RID: 24861
 	private GenericLayout<FloroRanchHandBookSmallSlotItem, FloroRanchUnlockDataBase> SmallSlotLayout;
 
-	// Token: 0x0400604F RID: 24655
+	// Token: 0x0400611E RID: 24862
 	public EFloroRanchActivityDataType ActivityDataType;
 
-	// Token: 0x04006050 RID: 24656
+	// Token: 0x0400611F RID: 24863
 	public Action<FloroRanchHandBookSmallSlotItem> OnClickCallback = delegate(FloroRanchHandBookSmallSlotItem item)
 	{
 	};
 
-	// Token: 0x04006051 RID: 24657
+	// Token: 0x04006120 RID: 24864
 	[Nullable(2)]
 	public Func<bool> IsSelectedItem;
 
-	// Token: 0x02008119 RID: 33049
+	// Token: 0x020072A7 RID: 29351
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A236 RID: 172598
+		// Token: 0x0402556A RID: 152938
 		public const int TextureTitleIcon = 0;
 
-		// Token: 0x0402A237 RID: 172599
+		// Token: 0x0402556B RID: 152939
 		public const int ItemTitlePanel = 1;
 
-		// Token: 0x0402A238 RID: 172600
+		// Token: 0x0402556C RID: 152940
 		public const int TextTitle = 2;
 
-		// Token: 0x0402A239 RID: 172601
+		// Token: 0x0402556D RID: 152941
 		public const int LayoutSmallSlot = 3;
 
-		// Token: 0x0402A23A RID: 172602
+		// Token: 0x0402556E RID: 152942
 		public const int ItemSmallSlot = 4;
 	}
 }

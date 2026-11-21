@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200231F RID: 8991
+	// Token: 0x0200258E RID: 9614
 	public static class EEnterMovieModeDurationTypeExtensions
 	{
-		// Token: 0x0600C48A RID: 50314 RVA: 0x001CAFC8 File Offset: 0x001C91C8
+		// Token: 0x0600D059 RID: 53337 RVA: 0x001E2E90 File Offset: 0x001E1090
 		public static string ToEnumString(this EEnterMovieModeDurationType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C48B RID: 50315 RVA: 0x001CB000 File Offset: 0x001C9200
+		// Token: 0x0600D05A RID: 53338 RVA: 0x001E2EC8 File Offset: 0x001E10C8
 		public static EEnterMovieModeDurationType FromString(string name)
 		{
 			EEnterMovieModeDurationType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C48C RID: 50316 RVA: 0x001CB029 File Offset: 0x001C9229
+		// Token: 0x0600D05B RID: 53339 RVA: 0x001E2EF1 File Offset: 0x001E10F1
 		public static bool TryFromString(string name, out EEnterMovieModeDurationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C48D RID: 50317 RVA: 0x001CB062 File Offset: 0x001C9262
+		// Token: 0x0600D05C RID: 53340 RVA: 0x001E2F2A File Offset: 0x001E112A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C48E RID: 50318 RVA: 0x001CB07A File Offset: 0x001C927A
+		// Token: 0x0600D05D RID: 53341 RVA: 0x001E2F42 File Offset: 0x001E1142
 		public static EEnterMovieModeDurationType[] GetValues()
 		{
 			return new EEnterMovieModeDurationType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C48F RID: 50319 RVA: 0x001CB086 File Offset: 0x001C9286
+		// Token: 0x0600D05E RID: 53342 RVA: 0x001E2F4E File Offset: 0x001E114E
 		public static string[] GetNames()
 		{
 			return new string[]

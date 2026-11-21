@@ -7,18 +7,18 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 {
-	// Token: 0x020058B6 RID: 22710
+	// Token: 0x0200488E RID: 18574
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ExchangeRewardModel : ModelBase
 	{
-		// Token: 0x06039C07 RID: 236551 RVA: 0x00DB99E1 File Offset: 0x00DB7BE1
+		// Token: 0x0602EB2A RID: 191274 RVA: 0x00D088F9 File Offset: 0x00D06AF9
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06039C08 RID: 236552 RVA: 0x00DB99E4 File Offset: 0x00DB7BE4
+		// Token: 0x0602EB2B RID: 191275 RVA: 0x00D088FC File Offset: 0x00D06AFC
 		public void Phrase(ExchangeRewardInfoResponse message)
 		{
 			this.ExchangeRewardMap.Clear();
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			}
 		}
 
-		// Token: 0x06039C09 RID: 236553 RVA: 0x00DB9AD4 File Offset: 0x00DB7CD4
+		// Token: 0x0602EB2C RID: 191276 RVA: 0x00D089EC File Offset: 0x00D06BEC
 		public void OnExchangeRewardNotify(ExchangeRewardInfoNotify message)
 		{
 			ExchangeRewardData exchangeRewardData;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			exchangeRewardData.Phrase(message.ExchangeRewardId, message.Count);
 		}
 
-		// Token: 0x06039C0A RID: 236554 RVA: 0x00DB9B20 File Offset: 0x00DB7D20
+		// Token: 0x0602EB2D RID: 191277 RVA: 0x00D08A38 File Offset: 0x00D06C38
 		public void OnShareInfoNotify(ExchangeSharedInfoNotify message)
 		{
 			foreach (KeyValuePair<int, int> keyValuePair in message.SharedUpdateDict)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			}
 		}
 
-		// Token: 0x06039C0B RID: 236555 RVA: 0x00DB9BA0 File Offset: 0x00DB7DA0
+		// Token: 0x0602EB2E RID: 191278 RVA: 0x00D08AB8 File Offset: 0x00D06CB8
 		public bool GetInstanceDungeonIfCanExchange(int instanceDungeonId)
 		{
 			int rewardId = InstanceDungeonConfig.Instance.GetConfig(instanceDungeonId).Value.RewardId;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			return num2 == 0 || num.Value < num2;
 		}
 
-		// Token: 0x06039C0C RID: 236556 RVA: 0x00DB9C6C File Offset: 0x00DB7E6C
+		// Token: 0x0602EB2F RID: 191279 RVA: 0x00D08B84 File Offset: 0x00D06D84
 		public bool GetRewardIfCanExchange(int rewardId)
 		{
 			int? exchangeShareId = ExchangeRewardConfig.Instance.GetExchangeShareId(rewardId);
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			return num2 == 0 || num.Value < num2;
 		}
 
-		// Token: 0x06039C0D RID: 236557 RVA: 0x00DB9D14 File Offset: 0x00DB7F14
+		// Token: 0x0602EB30 RID: 191280 RVA: 0x00D08C2C File Offset: 0x00D06E2C
 		public int GetExchangeRewardShareCount(int shareId)
 		{
 			ExchangeShareData exchangeShareData;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			return 0;
 		}
 
-		// Token: 0x06039C0E RID: 236558 RVA: 0x00DB9D3C File Offset: 0x00DB7F3C
+		// Token: 0x0602EB31 RID: 191281 RVA: 0x00D08C54 File Offset: 0x00D06E54
 		[NullableContext(2)]
 		public List<TItem> GetExchangeNormalConsume(int instanceDungeonId)
 		{
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			return list;
 		}
 
-		// Token: 0x06039C0F RID: 236559 RVA: 0x00DB9DE4 File Offset: 0x00DB7FE4
+		// Token: 0x0602EB32 RID: 191282 RVA: 0x00D08CFC File Offset: 0x00D06EFC
 		public bool IsFinishInstance(int instanceId)
 		{
 			int? instanceFirstRewardId = InstanceDungeonConfig.Instance.GetInstanceFirstRewardId(instanceId);
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			return exchangeRewardMaxCount != 0 && num != null && num.Value >= exchangeRewardMaxCount;
 		}
 
-		// Token: 0x06039C10 RID: 236560 RVA: 0x00DB9E78 File Offset: 0x00DB8078
+		// Token: 0x0602EB33 RID: 191283 RVA: 0x00D08D90 File Offset: 0x00D06F90
 		public bool IsFinishInstanceCompatible(int instanceId)
 		{
 			InstanceDungeon? instanceDungeon;
@@ -194,8 +194,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			return num2 != null && num2.Value >= 1;
 		}
 
-		// Token: 0x17008A9D RID: 35485
-		// (get) Token: 0x06039C11 RID: 236561 RVA: 0x00DB9F35 File Offset: 0x00DB8135
+		// Token: 0x17005E69 RID: 24169
+		// (get) Token: 0x0602EB34 RID: 191284 RVA: 0x00D08E4D File Offset: 0x00D0704D
 		public static ExchangeRewardModel Instance
 		{
 			get
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			}
 		}
 
-		// Token: 0x06039C12 RID: 236562 RVA: 0x00DB9F3C File Offset: 0x00DB813C
+		// Token: 0x0602EB35 RID: 191285 RVA: 0x00D08E54 File Offset: 0x00D07054
 		public static ExchangeRewardModel GetOrCreateInstance()
 		{
 			if (ExchangeRewardModel._Instance == null)
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			return ExchangeRewardModel._Instance;
 		}
 
-		// Token: 0x06039C13 RID: 236563 RVA: 0x00DB9F50 File Offset: 0x00DB8150
+		// Token: 0x0602EB36 RID: 191286 RVA: 0x00D08E68 File Offset: 0x00D07068
 		public static bool CreateInstance()
 		{
 			if (ExchangeRewardModel._Instance != null)
@@ -225,33 +225,33 @@ namespace CSharpScript.Game.Module.InstanceDungeon.ExchangeReward
 			return true;
 		}
 
-		// Token: 0x06039C14 RID: 236564 RVA: 0x00DB9F66 File Offset: 0x00DB8166
+		// Token: 0x0602EB37 RID: 191287 RVA: 0x00D08E7E File Offset: 0x00D0707E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06039C15 RID: 236565 RVA: 0x00DB9F68 File Offset: 0x00DB8168
+		// Token: 0x0602EB38 RID: 191288 RVA: 0x00D08E80 File Offset: 0x00D07080
 		public static void ResetStaticDefaultValue()
 		{
 			ExchangeRewardModel._Instance = null;
 		}
 
-		// Token: 0x06039C16 RID: 236566 RVA: 0x00DB9F70 File Offset: 0x00DB8170
+		// Token: 0x0602EB39 RID: 191289 RVA: 0x00D08E88 File Offset: 0x00D07088
 		static ExchangeRewardModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ExchangeRewardModel.CreateStaticDefaultValue), new Action(ExchangeRewardModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E286 RID: 123526
+		// Token: 0x04018D23 RID: 101667
 		public const int POWER_DISCOUNT_HELP_ID = 26;
 
-		// Token: 0x0401E287 RID: 123527
+		// Token: 0x04018D24 RID: 101668
 		private readonly Dictionary<int, ExchangeRewardData> ExchangeRewardMap = new Dictionary<int, ExchangeRewardData>();
 
-		// Token: 0x0401E288 RID: 123528
+		// Token: 0x04018D25 RID: 101669
 		private readonly Dictionary<int, ExchangeShareData> ExchangeShareMap = new Dictionary<int, ExchangeShareData>();
 
-		// Token: 0x0401E289 RID: 123529
+		// Token: 0x04018D26 RID: 101670
 		[Nullable(2)]
 		private static ExchangeRewardModel _Instance;
 	}

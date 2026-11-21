@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009CA RID: 2506
+	// Token: 0x02000A8F RID: 2703
 	public static class EPetalGrabEventTypeExtensions
 	{
-		// Token: 0x060037BE RID: 14270 RVA: 0x00090CF8 File Offset: 0x0008EEF8
+		// Token: 0x06003B96 RID: 15254 RVA: 0x000995B8 File Offset: 0x000977B8
 		public static string ToEnumString(this EPetalGrabEventType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037BF RID: 14271 RVA: 0x00090D30 File Offset: 0x0008EF30
+		// Token: 0x06003B97 RID: 15255 RVA: 0x000995F0 File Offset: 0x000977F0
 		public static EPetalGrabEventType FromString(string name)
 		{
 			EPetalGrabEventType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037C0 RID: 14272 RVA: 0x00090D59 File Offset: 0x0008EF59
+		// Token: 0x06003B98 RID: 15256 RVA: 0x00099619 File Offset: 0x00097819
 		public static bool TryFromString(string name, out EPetalGrabEventType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060037C1 RID: 14273 RVA: 0x00090D92 File Offset: 0x0008EF92
+		// Token: 0x06003B99 RID: 15257 RVA: 0x00099652 File Offset: 0x00097852
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037C2 RID: 14274 RVA: 0x00090DAA File Offset: 0x0008EFAA
+		// Token: 0x06003B9A RID: 15258 RVA: 0x0009966A File Offset: 0x0009786A
 		public static EPetalGrabEventType[] GetValues()
 		{
 			return new EPetalGrabEventType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037C3 RID: 14275 RVA: 0x00090DB6 File Offset: 0x0008EFB6
+		// Token: 0x06003B9B RID: 15259 RVA: 0x00099676 File Offset: 0x00097876
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000BD5 RID: 3029
+	// Token: 0x0200020D RID: 525
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.FindFloorResult")]
 	[UnrealStructLayout(160, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 160)]
 	public class FFindFloorResult : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060094EE RID: 38126 RVA: 0x000D47DE File Offset: 0x000D29DE
+		// Token: 0x060021B2 RID: 8626 RVA: 0x0003160D File Offset: 0x0002F80D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FFindFloorResult._ScriptStructPtr != 0) ? FFindFloorResult._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.FindFloorResult", ref FFindFloorResult._ScriptStructPtr);
 		}
 
-		// Token: 0x170023A5 RID: 9125
-		// (get) Token: 0x060094EF RID: 38127 RVA: 0x000D4802 File Offset: 0x000D2A02
-		// (set) Token: 0x060094F0 RID: 38128 RVA: 0x000D481B File Offset: 0x000D2A1B
+		// Token: 0x170004BD RID: 1213
+		// (get) Token: 0x060021B3 RID: 8627 RVA: 0x00031631 File Offset: 0x0002F831
+		// (set) Token: 0x060021B4 RID: 8628 RVA: 0x0003164A File Offset: 0x0002F84A
 		public unsafe bool bBlockingHit
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170023A6 RID: 9126
-		// (get) Token: 0x060094F1 RID: 38129 RVA: 0x000D484B File Offset: 0x000D2A4B
-		// (set) Token: 0x060094F2 RID: 38130 RVA: 0x000D4864 File Offset: 0x000D2A64
+		// Token: 0x170004BE RID: 1214
+		// (get) Token: 0x060021B5 RID: 8629 RVA: 0x0003167A File Offset: 0x0002F87A
+		// (set) Token: 0x060021B6 RID: 8630 RVA: 0x00031693 File Offset: 0x0002F893
 		public unsafe bool bWalkableFloor
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170023A7 RID: 9127
-		// (get) Token: 0x060094F3 RID: 38131 RVA: 0x000D4894 File Offset: 0x000D2A94
-		// (set) Token: 0x060094F4 RID: 38132 RVA: 0x000D48AD File Offset: 0x000D2AAD
+		// Token: 0x170004BF RID: 1215
+		// (get) Token: 0x060021B7 RID: 8631 RVA: 0x000316C3 File Offset: 0x0002F8C3
+		// (set) Token: 0x060021B8 RID: 8632 RVA: 0x000316DC File Offset: 0x0002F8DC
 		public unsafe bool bLineTrace
 		{
 			get
@@ -64,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170023A8 RID: 9128
-		// (get) Token: 0x060094F5 RID: 38133 RVA: 0x000D48DD File Offset: 0x000D2ADD
-		// (set) Token: 0x060094F6 RID: 38134 RVA: 0x000D48ED File Offset: 0x000D2AED
+		// Token: 0x170004C0 RID: 1216
+		// (get) Token: 0x060021B9 RID: 8633 RVA: 0x0003170C File Offset: 0x0002F90C
+		// (set) Token: 0x060021BA RID: 8634 RVA: 0x0003171C File Offset: 0x0002F91C
 		public unsafe float FloorDist
 		{
 			get
@@ -79,9 +79,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170023A9 RID: 9129
-		// (get) Token: 0x060094F7 RID: 38135 RVA: 0x000D48FE File Offset: 0x000D2AFE
-		// (set) Token: 0x060094F8 RID: 38136 RVA: 0x000D490E File Offset: 0x000D2B0E
+		// Token: 0x170004C1 RID: 1217
+		// (get) Token: 0x060021BB RID: 8635 RVA: 0x0003172D File Offset: 0x0002F92D
+		// (set) Token: 0x060021BC RID: 8636 RVA: 0x0003173D File Offset: 0x0002F93D
 		public unsafe float LineDist
 		{
 			get
@@ -94,9 +94,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170023AA RID: 9130
-		// (get) Token: 0x060094F9 RID: 38137 RVA: 0x000D4920 File Offset: 0x000D2B20
-		// (set) Token: 0x060094FA RID: 38138 RVA: 0x000D4963 File Offset: 0x000D2B63
+		// Token: 0x170004C2 RID: 1218
+		// (get) Token: 0x060021BD RID: 8637 RVA: 0x00031750 File Offset: 0x0002F950
+		// (set) Token: 0x060021BE RID: 8638 RVA: 0x00031793 File Offset: 0x0002F993
 		public FHitResult HitResult
 		{
 			get
@@ -115,85 +115,74 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060094FB RID: 38139 RVA: 0x000D4984 File Offset: 0x000D2B84
+		// Token: 0x060021BF RID: 8639 RVA: 0x000317B4 File Offset: 0x0002F9B4
 		public FFindFloorResult()
 		{
 		}
 
-		// Token: 0x060094FC RID: 38140 RVA: 0x000D498C File Offset: 0x000D2B8C
-		public FFindFloorResult(bool bBlockingHit, bool bWalkableFloor, bool bLineTrace, float FloorDist, float LineDist, FHitResult HitResult)
-		{
-			this.bBlockingHit = bBlockingHit;
-			this.bWalkableFloor = bWalkableFloor;
-			this.bLineTrace = bLineTrace;
-			this.FloorDist = FloorDist;
-			this.LineDist = LineDist;
-			this.HitResult = HitResult;
-		}
-
-		// Token: 0x060094FD RID: 38141 RVA: 0x000D49C1 File Offset: 0x000D2BC1
+		// Token: 0x060021C0 RID: 8640 RVA: 0x000317BC File Offset: 0x0002F9BC
 		protected override IntPtr GetUStructPtr()
 		{
 			return FFindFloorResult.StaticStruct();
 		}
 
-		// Token: 0x060094FE RID: 38142 RVA: 0x000D49CD File Offset: 0x000D2BCD
+		// Token: 0x060021C1 RID: 8641 RVA: 0x000317C8 File Offset: 0x0002F9C8
 		[NullableContext(2)]
 		public FFindFloorResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060094FF RID: 38143 RVA: 0x000D49D7 File Offset: 0x000D2BD7
+		// Token: 0x060021C2 RID: 8642 RVA: 0x000317D2 File Offset: 0x0002F9D2
 		public FFindFloorResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06009500 RID: 38144 RVA: 0x000D49E2 File Offset: 0x000D2BE2
+		// Token: 0x060021C3 RID: 8643 RVA: 0x000317DD File Offset: 0x0002F9DD
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FFindFloorResult(Pointer, false, true);
 		}
 
-		// Token: 0x06009501 RID: 38145 RVA: 0x000D49EC File Offset: 0x000D2BEC
+		// Token: 0x060021C4 RID: 8644 RVA: 0x000317E7 File Offset: 0x0002F9E7
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FFindFloorResult(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400539B RID: 21403
+		// Token: 0x04000D27 RID: 3367
 		public const string __ObjectPath = "/Script/Engine.FindFloorResult";
 
-		// Token: 0x0400539C RID: 21404
+		// Token: 0x04000D28 RID: 3368
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400539D RID: 21405
+		// Token: 0x04000D29 RID: 3369
 		internal static int __PropertyOffset_bBlockingHit;
 
-		// Token: 0x0400539E RID: 21406
+		// Token: 0x04000D2A RID: 3370
 		internal static byte __PropertyMask_bBlockingHit;
 
-		// Token: 0x0400539F RID: 21407
+		// Token: 0x04000D2B RID: 3371
 		internal static int __PropertyOffset_bWalkableFloor;
 
-		// Token: 0x040053A0 RID: 21408
+		// Token: 0x04000D2C RID: 3372
 		internal static byte __PropertyMask_bWalkableFloor;
 
-		// Token: 0x040053A1 RID: 21409
+		// Token: 0x04000D2D RID: 3373
 		internal static int __PropertyOffset_bLineTrace;
 
-		// Token: 0x040053A2 RID: 21410
+		// Token: 0x04000D2E RID: 3374
 		internal static byte __PropertyMask_bLineTrace;
 
-		// Token: 0x040053A3 RID: 21411
+		// Token: 0x04000D2F RID: 3375
 		internal static int __PropertyOffset_FloorDist;
 
-		// Token: 0x040053A4 RID: 21412
+		// Token: 0x04000D30 RID: 3376
 		internal static int __PropertyOffset_LineDist;
 
-		// Token: 0x040053A5 RID: 21413
+		// Token: 0x04000D31 RID: 3377
 		internal static int __PropertyOffset_HitResult;
 
-		// Token: 0x040053A6 RID: 21414
+		// Token: 0x04000D32 RID: 3378
 		[Nullable(2)]
 		private FHitResult _HitResult;
 	}

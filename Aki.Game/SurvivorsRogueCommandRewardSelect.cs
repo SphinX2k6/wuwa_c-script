@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002AE7 RID: 10983
+// Token: 0x02002063 RID: 8291
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCommandRewardSelect : SurvivorsRogueCommandBaseObtain
 {
-	// Token: 0x06016DAF RID: 93615 RVA: 0x005CCF48 File Offset: 0x005CB148
+	// Token: 0x060147E0 RID: 83936 RVA: 0x005F9A98 File Offset: 0x005F7C98
 	public SurvivorsRogueCommandRewardSelect(ESurvivorsRogueCommandType type) : base(type)
 	{
 	}
 
-	// Token: 0x06016DB0 RID: 93616 RVA: 0x005CCF54 File Offset: 0x005CB154
+	// Token: 0x060147E1 RID: 83937 RVA: 0x005F9AA4 File Offset: 0x005F7CA4
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(23, 1);
@@ -22,13 +22,13 @@ public class SurvivorsRogueCommandRewardSelect : SurvivorsRogueCommandBaseObtain
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06016DB1 RID: 93617 RVA: 0x005CCFA1 File Offset: 0x005CB1A1
+	// Token: 0x060147E2 RID: 83938 RVA: 0x005F9AF1 File Offset: 0x005F7CF1
 	private SurvivorsOption GetSurvivorsOption()
 	{
 		return this.Data.TokenSelectView.SurvivorsOption;
 	}
 
-	// Token: 0x06016DB2 RID: 93618 RVA: 0x005CCFB4 File Offset: 0x005CB1B4
+	// Token: 0x060147E3 RID: 83939 RVA: 0x005F9B04 File Offset: 0x005F7D04
 	[NullableContext(2)]
 	public override ISurvivorsObtainViewInfo GetViewInfo()
 	{

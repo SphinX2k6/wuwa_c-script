@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066CF RID: 26319
+	// Token: 0x02006D49 RID: 27977
 	public struct IEnterRandomMovieCamera : IFlatbufferObject
 	{
-		// Token: 0x1700C386 RID: 50054
-		// (get) Token: 0x0602DBFB RID: 187387 RVA: 0x00642066 File Offset: 0x00640266
+		// Token: 0x1700CD37 RID: 52535
+		// (get) Token: 0x06030418 RID: 197656 RVA: 0x0068F31A File Offset: 0x0068D51A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DBFC RID: 187388 RVA: 0x00642073 File Offset: 0x00640273
+		// Token: 0x06030419 RID: 197657 RVA: 0x0068F327 File Offset: 0x0068D527
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DBFD RID: 187389 RVA: 0x0064207C File Offset: 0x0064027C
+		// Token: 0x0603041A RID: 197658 RVA: 0x0068F330 File Offset: 0x0068D530
 		public static IEnterRandomMovieCamera GetRootAsIEnterRandomMovieCamera(ByteBuffer _bb)
 		{
 			return IEnterRandomMovieCamera.GetRootAsIEnterRandomMovieCamera(_bb, default(IEnterRandomMovieCamera));
 		}
 
-		// Token: 0x0602DBFE RID: 187390 RVA: 0x00642098 File Offset: 0x00640298
+		// Token: 0x0603041B RID: 197659 RVA: 0x0068F34C File Offset: 0x0068D54C
 		public static IEnterRandomMovieCamera GetRootAsIEnterRandomMovieCamera(ByteBuffer _bb, IEnterRandomMovieCamera obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DBFF RID: 187391 RVA: 0x006420B5 File Offset: 0x006402B5
+		// Token: 0x0603041C RID: 197660 RVA: 0x0068F369 File Offset: 0x0068D569
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DC00 RID: 187392 RVA: 0x006420C4 File Offset: 0x006402C4
+		// Token: 0x0603041D RID: 197661 RVA: 0x0068F378 File Offset: 0x0068D578
 		public IEnterRandomMovieCamera __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C387 RID: 50055
-		// (get) Token: 0x0602DC01 RID: 187393 RVA: 0x006420D4 File Offset: 0x006402D4
+		// Token: 0x1700CD38 RID: 52536
+		// (get) Token: 0x0603041E RID: 197662 RVA: 0x0068F388 File Offset: 0x0068D588
 		public EMovieCameraType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DC02 RID: 187394 RVA: 0x00642110 File Offset: 0x00640310
+		// Token: 0x0603041F RID: 197663 RVA: 0x0068F3C4 File Offset: 0x0068D5C4
 		public string RowNames(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700C388 RID: 50056
-		// (get) Token: 0x0602DC03 RID: 187395 RVA: 0x0064214C File Offset: 0x0064034C
+		// Token: 0x1700CD39 RID: 52537
+		// (get) Token: 0x06030420 RID: 197664 RVA: 0x0068F400 File Offset: 0x0068D600
 		public int RowNamesLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DC04 RID: 187396 RVA: 0x00642177 File Offset: 0x00640377
+		// Token: 0x06030421 RID: 197665 RVA: 0x0068F42B File Offset: 0x0068D62B
 		public static Offset<IEnterRandomMovieCamera> CreateIEnterRandomMovieCamera(FlatBufferBuilder builder, EMovieCameraType Type = EMovieCameraType.Common, VectorOffset RowNamesOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnterRandomMovieCamera.EndIEnterRandomMovieCamera(builder);
 		}
 
-		// Token: 0x0602DC05 RID: 187397 RVA: 0x00642194 File Offset: 0x00640394
+		// Token: 0x06030422 RID: 197666 RVA: 0x0068F448 File Offset: 0x0068D648
 		public static void StartIEnterRandomMovieCamera(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602DC06 RID: 187398 RVA: 0x0064219D File Offset: 0x0064039D
+		// Token: 0x06030423 RID: 197667 RVA: 0x0068F451 File Offset: 0x0068D651
 		public static void AddType(FlatBufferBuilder builder, EMovieCameraType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602DC07 RID: 187399 RVA: 0x006421A8 File Offset: 0x006403A8
+		// Token: 0x06030424 RID: 197668 RVA: 0x0068F45C File Offset: 0x0068D65C
 		public static void AddRowNames(FlatBufferBuilder builder, VectorOffset rowNamesOffset)
 		{
 			builder.AddOffset(1, rowNamesOffset.Value, 0);
 		}
 
-		// Token: 0x0602DC08 RID: 187400 RVA: 0x006421B8 File Offset: 0x006403B8
+		// Token: 0x06030425 RID: 197669 RVA: 0x0068F46C File Offset: 0x0068D66C
 		public static VectorOffset CreateRowNamesVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602DC09 RID: 187401 RVA: 0x006421F8 File Offset: 0x006403F8
+		// Token: 0x06030426 RID: 197670 RVA: 0x0068F4AC File Offset: 0x0068D6AC
 		public static VectorOffset CreateRowNamesVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602DC0A RID: 187402 RVA: 0x00642212 File Offset: 0x00640412
+		// Token: 0x06030427 RID: 197671 RVA: 0x0068F4C6 File Offset: 0x0068D6C6
 		public static VectorOffset CreateRowNamesVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602DC0B RID: 187403 RVA: 0x00642230 File Offset: 0x00640430
+		// Token: 0x06030428 RID: 197672 RVA: 0x0068F4E4 File Offset: 0x0068D6E4
 		public static VectorOffset CreateRowNamesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602DC0C RID: 187404 RVA: 0x00642249 File Offset: 0x00640449
+		// Token: 0x06030429 RID: 197673 RVA: 0x0068F4FD File Offset: 0x0068D6FD
 		public static void StartRowNamesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602DC0D RID: 187405 RVA: 0x00642254 File Offset: 0x00640454
+		// Token: 0x0603042A RID: 197674 RVA: 0x0068F508 File Offset: 0x0068D708
 		public static Offset<IEnterRandomMovieCamera> EndIEnterRandomMovieCamera(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnterRandomMovieCamera>(builder.EndTable());
 		}
 
-		// Token: 0x0602DC0E RID: 187406 RVA: 0x00642264 File Offset: 0x00640464
+		// Token: 0x0603042B RID: 197675 RVA: 0x0068F518 File Offset: 0x0068D718
 		public IEnterRandomMovieCameraT UnPack()
 		{
 			IEnterRandomMovieCameraT enterRandomMovieCameraT = new IEnterRandomMovieCameraT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return enterRandomMovieCameraT;
 		}
 
-		// Token: 0x0602DC0F RID: 187407 RVA: 0x00642280 File Offset: 0x00640480
+		// Token: 0x0603042C RID: 197676 RVA: 0x0068F534 File Offset: 0x0068D734
 		public void UnPackTo(IEnterRandomMovieCameraT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DC10 RID: 187408 RVA: 0x006422C8 File Offset: 0x006404C8
+		// Token: 0x0603042D RID: 197677 RVA: 0x0068F57C File Offset: 0x0068D77C
 		public static Offset<IEnterRandomMovieCamera> Pack(FlatBufferBuilder builder, IEnterRandomMovieCameraT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnterRandomMovieCamera.CreateIEnterRandomMovieCamera(builder, _o.Type, rowNamesOffset);
 		}
 
-		// Token: 0x04010D98 RID: 69016
+		// Token: 0x04011BBE RID: 72638
 		private Table __p;
 	}
 }

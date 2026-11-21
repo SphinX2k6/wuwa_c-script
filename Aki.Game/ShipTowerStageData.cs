@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.Reward;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002999 RID: 10649
+// Token: 0x02001F14 RID: 7956
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerStageData
 {
-	// Token: 0x060160DA RID: 90330 RVA: 0x005929DC File Offset: 0x00590BDC
+	// Token: 0x06013AE0 RID: 80608 RVA: 0x005BD9A0 File Offset: 0x005BBBA0
 	public ShipTowerStageData()
 	{
 		this.OrderIndex = 1;
@@ -30,7 +30,7 @@ public class ShipTowerStageData
 		this.TeamRecommendList = new List<ShipTowerTeamRecommendItemData>();
 	}
 
-	// Token: 0x060160DB RID: 90331 RVA: 0x00592A60 File Offset: 0x00590C60
+	// Token: 0x06013AE1 RID: 80609 RVA: 0x005BDA24 File Offset: 0x005BBC24
 	public void Init(SlashAndTowerCfg cfg)
 	{
 		this.Id = cfg.Id;
@@ -48,7 +48,7 @@ public class ShipTowerStageData
 		this.AfterInit();
 	}
 
-	// Token: 0x060160DC RID: 90332 RVA: 0x00592B24 File Offset: 0x00590D24
+	// Token: 0x06013AE2 RID: 80610 RVA: 0x005BDAE8 File Offset: 0x005BBCE8
 	private void AfterInit()
 	{
 		if (this.IsEndLess)
@@ -72,7 +72,7 @@ public class ShipTowerStageData
 		}
 	}
 
-	// Token: 0x060160DD RID: 90333 RVA: 0x00592BA0 File Offset: 0x00590DA0
+	// Token: 0x06013AE3 RID: 80611 RVA: 0x005BDB64 File Offset: 0x005BBD64
 	public bool IsUnLocked()
 	{
 		if (this.IsHaveProtoData)
@@ -93,7 +93,7 @@ public class ShipTowerStageData
 		return true;
 	}
 
-	// Token: 0x060160DE RID: 90334 RVA: 0x00592C24 File Offset: 0x00590E24
+	// Token: 0x06013AE4 RID: 80612 RVA: 0x005BDBE8 File Offset: 0x005BBDE8
 	public bool IsPassed()
 	{
 		if (this.IsHaveProtoData)
@@ -103,43 +103,43 @@ public class ShipTowerStageData
 		return this.CurrentIsPassed();
 	}
 
-	// Token: 0x060160DF RID: 90335 RVA: 0x00592C3B File Offset: 0x00590E3B
+	// Token: 0x06013AE5 RID: 80613 RVA: 0x005BDBFF File Offset: 0x005BBDFF
 	public bool CurrentIsPassed()
 	{
 		return this.CurrentScore >= this.PassScore;
 	}
 
-	// Token: 0x060160E0 RID: 90336 RVA: 0x00592C4E File Offset: 0x00590E4E
+	// Token: 0x06013AE6 RID: 80614 RVA: 0x005BDC12 File Offset: 0x005BBE12
 	public bool CanReset()
 	{
 		return this.IsTeamSetRoleFinish();
 	}
 
-	// Token: 0x060160E1 RID: 90337 RVA: 0x00592C58 File Offset: 0x00590E58
+	// Token: 0x06013AE7 RID: 80615 RVA: 0x005BDC1C File Offset: 0x005BBE1C
 	public bool IsNewRecord(int? currentScore = null)
 	{
 		return (currentScore ?? this.CurrentScore) > this.LastScore;
 	}
 
-	// Token: 0x060160E2 RID: 90338 RVA: 0x00592C87 File Offset: 0x00590E87
+	// Token: 0x06013AE8 RID: 80616 RVA: 0x005BDC4B File Offset: 0x005BBE4B
 	public bool IsNotChallenge()
 	{
 		return !this.IsTeamSetBuffFinish() || !this.IsTeamSetRoleFinish();
 	}
 
-	// Token: 0x060160E3 RID: 90339 RVA: 0x00592C9C File Offset: 0x00590E9C
+	// Token: 0x06013AE9 RID: 80617 RVA: 0x005BDC60 File Offset: 0x005BBE60
 	public void SetOrderIndex(int index)
 	{
 		this.OrderIndex = index;
 	}
 
-	// Token: 0x060160E4 RID: 90340 RVA: 0x00592CA5 File Offset: 0x00590EA5
+	// Token: 0x06013AEA RID: 80618 RVA: 0x005BDC69 File Offset: 0x005BBE69
 	public bool IsCurrent()
 	{
 		return this.IsUnLocked() && !this.IsPassed();
 	}
 
-	// Token: 0x060160E5 RID: 90341 RVA: 0x00592CBC File Offset: 0x00590EBC
+	// Token: 0x06013AEB RID: 80619 RVA: 0x005BDC80 File Offset: 0x005BBE80
 	public void OpenViewStageDesc()
 	{
 		if (!this.IsUnLocked())
@@ -155,7 +155,7 @@ public class ShipTowerStageData
 		}, null);
 	}
 
-	// Token: 0x060160E6 RID: 90342 RVA: 0x00592D0C File Offset: 0x00590F0C
+	// Token: 0x06013AEC RID: 80620 RVA: 0x005BDCD0 File Offset: 0x005BBED0
 	public void OpenViewPassBuffShow()
 	{
 		ShipTowerModel.Instance.OpenViewPassBuffShow(new ShipTowerPassBuffShowViewParams
@@ -164,7 +164,7 @@ public class ShipTowerStageData
 		});
 	}
 
-	// Token: 0x060160E7 RID: 90343 RVA: 0x00592D24 File Offset: 0x00590F24
+	// Token: 0x06013AED RID: 80621 RVA: 0x005BDCE8 File Offset: 0x005BBEE8
 	public void OpenViewTeamRecommend()
 	{
 		ShipTowerModel.Instance.OpenViewTeamRecommend(new ShipTowerTeamRecommendViewParams
@@ -173,7 +173,7 @@ public class ShipTowerStageData
 		});
 	}
 
-	// Token: 0x060160E8 RID: 90344 RVA: 0x00592D3C File Offset: 0x00590F3C
+	// Token: 0x06013AEE RID: 80622 RVA: 0x005BDD00 File Offset: 0x005BBF00
 	public void OpenViewMonsterDesc(int? instId = null)
 	{
 		ShipTowerModel.Instance.OpenViewMonsterDesc(new ShipTowerMonsterDescViewParams
@@ -183,7 +183,7 @@ public class ShipTowerStageData
 		});
 	}
 
-	// Token: 0x060160E9 RID: 90345 RVA: 0x00592D5C File Offset: 0x00590F5C
+	// Token: 0x06013AEF RID: 80623 RVA: 0x005BDD20 File Offset: 0x005BBF20
 	public List<ShipTowerScoreInfoData> GetTargetScoreInfoList()
 	{
 		List<ShipTowerScoreInfoData> list = new List<ShipTowerScoreInfoData>();
@@ -197,7 +197,7 @@ public class ShipTowerStageData
 		return list;
 	}
 
-	// Token: 0x060160EA RID: 90346 RVA: 0x00592D90 File Offset: 0x00590F90
+	// Token: 0x06013AF0 RID: 80624 RVA: 0x005BDD54 File Offset: 0x005BBF54
 	[NullableContext(2)]
 	private ShipTowerScoreInfoData GetPassTargetScoreInfo()
 	{
@@ -222,7 +222,7 @@ public class ShipTowerStageData
 		};
 	}
 
-	// Token: 0x060160EB RID: 90347 RVA: 0x00592E0C File Offset: 0x0059100C
+	// Token: 0x06013AF1 RID: 80625 RVA: 0x005BDDD0 File Offset: 0x005BBFD0
 	private ShipTowerScoreInfoData GetChallengeTargetScoreInfo()
 	{
 		string text = "GhostShipLevelPoints_Text";
@@ -248,21 +248,21 @@ public class ShipTowerStageData
 		return result;
 	}
 
-	// Token: 0x060160EC RID: 90348 RVA: 0x00592ECD File Offset: 0x005910CD
+	// Token: 0x06013AF2 RID: 80626 RVA: 0x005BDE91 File Offset: 0x005BC091
 	[NullableContext(2)]
 	public string GetStageGradeResIdByScore(int score)
 	{
 		return ShipTowerModel.Instance.GetStageGradeResIdByScore(score, this.TargetScoreList.ToArray(), this.ScoreStageList.ToArray());
 	}
 
-	// Token: 0x060160ED RID: 90349 RVA: 0x00592EF0 File Offset: 0x005910F0
+	// Token: 0x06013AF3 RID: 80627 RVA: 0x005BDEB4 File Offset: 0x005BC0B4
 	[NullableContext(2)]
 	public string GetShareStageGradeResIdByScore(int score)
 	{
 		return ShipTowerModel.Instance.GetShareStageGradeResIdByScore(score, this.TargetScoreList.ToArray(), this.ScoreStageList.ToArray());
 	}
 
-	// Token: 0x060160EE RID: 90350 RVA: 0x00592F14 File Offset: 0x00591114
+	// Token: 0x06013AF4 RID: 80628 RVA: 0x005BDED8 File Offset: 0x005BC0D8
 	public List<TItem> GetPassUnlockBuffList()
 	{
 		if (this.PassReward > 0 && this.PassRewardItems.Count == 0)
@@ -280,7 +280,7 @@ public class ShipTowerStageData
 		return this.PassRewardItems;
 	}
 
-	// Token: 0x060160EF RID: 90351 RVA: 0x00592FBC File Offset: 0x005911BC
+	// Token: 0x06013AF5 RID: 80629 RVA: 0x005BDF80 File Offset: 0x005BC180
 	public void UpdateCurSelectTeamIndex(int index)
 	{
 		if (this.CurSelectTeamIndex == index)
@@ -290,7 +290,7 @@ public class ShipTowerStageData
 		this.CurSelectTeamIndex = index;
 	}
 
-	// Token: 0x060160F0 RID: 90352 RVA: 0x00592FD0 File Offset: 0x005911D0
+	// Token: 0x06013AF6 RID: 80630 RVA: 0x005BDF94 File Offset: 0x005BC194
 	public void UpdateOtherTeamRoleToModel(int index)
 	{
 		ShipTowerModel.Instance.ClearOtherTeamRoleData();
@@ -304,7 +304,7 @@ public class ShipTowerStageData
 		}
 	}
 
-	// Token: 0x060160F1 RID: 90353 RVA: 0x0059303C File Offset: 0x0059123C
+	// Token: 0x06013AF7 RID: 80631 RVA: 0x005BE000 File Offset: 0x005BC200
 	public void UpdateAllTeamRoleToModel()
 	{
 		ShipTowerModel.Instance.ClearAllTeamRoleData();
@@ -314,7 +314,7 @@ public class ShipTowerStageData
 		}
 	}
 
-	// Token: 0x060160F2 RID: 90354 RVA: 0x00593098 File Offset: 0x00591298
+	// Token: 0x06013AF8 RID: 80632 RVA: 0x005BE05C File Offset: 0x005BC25C
 	public bool UpdateOtherTeamRoleRepeat(int index, int? roleId = null)
 	{
 		ShipTowerTeamData indexTeamData = this.TeamDataList[index];
@@ -331,7 +331,7 @@ public class ShipTowerStageData
 		return flag;
 	}
 
-	// Token: 0x060160F3 RID: 90355 RVA: 0x00593118 File Offset: 0x00591318
+	// Token: 0x06013AF9 RID: 80633 RVA: 0x005BE0DC File Offset: 0x005BC2DC
 	public void ExchangeTeamData()
 	{
 		bool flag = true;
@@ -368,7 +368,7 @@ public class ShipTowerStageData
 		}
 	}
 
-	// Token: 0x060160F4 RID: 90356 RVA: 0x005931E4 File Offset: 0x005913E4
+	// Token: 0x06013AFA RID: 80634 RVA: 0x005BE1A8 File Offset: 0x005BC3A8
 	public bool StartChallenge()
 	{
 		if (!this.IsTeamSetRoleFinishEdit())
@@ -385,7 +385,7 @@ public class ShipTowerStageData
 		return true;
 	}
 
-	// Token: 0x060160F5 RID: 90357 RVA: 0x0059323C File Offset: 0x0059143C
+	// Token: 0x06013AFB RID: 80635 RVA: 0x005BE200 File Offset: 0x005BC400
 	public bool IsTeamSetRoleFinish()
 	{
 		using (List<ShipTowerTeamData>.Enumerator enumerator = this.TeamDataList.GetEnumerator())
@@ -401,7 +401,7 @@ public class ShipTowerStageData
 		return true;
 	}
 
-	// Token: 0x060160F6 RID: 90358 RVA: 0x00593298 File Offset: 0x00591498
+	// Token: 0x06013AFC RID: 80636 RVA: 0x005BE25C File Offset: 0x005BC45C
 	public bool IsTeamSetRoleFinishEdit()
 	{
 		using (List<ShipTowerTeamData>.Enumerator enumerator = this.TeamDataList.GetEnumerator())
@@ -417,7 +417,7 @@ public class ShipTowerStageData
 		return true;
 	}
 
-	// Token: 0x060160F7 RID: 90359 RVA: 0x005932F4 File Offset: 0x005914F4
+	// Token: 0x06013AFD RID: 80637 RVA: 0x005BE2B8 File Offset: 0x005BC4B8
 	public bool IsTeamSetBuffFinish()
 	{
 		using (List<ShipTowerTeamData>.Enumerator enumerator = this.TeamDataList.GetEnumerator())
@@ -433,7 +433,7 @@ public class ShipTowerStageData
 		return true;
 	}
 
-	// Token: 0x060160F8 RID: 90360 RVA: 0x00593350 File Offset: 0x00591550
+	// Token: 0x06013AFE RID: 80638 RVA: 0x005BE314 File Offset: 0x005BC514
 	public bool IsTeamSetBuffFinishEdit()
 	{
 		using (List<ShipTowerTeamData>.Enumerator enumerator = this.TeamDataList.GetEnumerator())
@@ -449,7 +449,7 @@ public class ShipTowerStageData
 		return true;
 	}
 
-	// Token: 0x060160F9 RID: 90361 RVA: 0x005933AC File Offset: 0x005915AC
+	// Token: 0x06013AFF RID: 80639 RVA: 0x005BE370 File Offset: 0x005BC570
 	public List<int> GetAllTeamBuffIdList()
 	{
 		List<int> list = new List<int>();
@@ -462,13 +462,13 @@ public class ShipTowerStageData
 		return list;
 	}
 
-	// Token: 0x060160FA RID: 90362 RVA: 0x00593418 File Offset: 0x00591618
+	// Token: 0x06013B00 RID: 80640 RVA: 0x005BE3DC File Offset: 0x005BC5DC
 	public int GetChallengeInstId()
 	{
 		return this.InstIds[0];
 	}
 
-	// Token: 0x060160FB RID: 90363 RVA: 0x00593428 File Offset: 0x00591628
+	// Token: 0x06013B01 RID: 80641 RVA: 0x005BE3EC File Offset: 0x005BC5EC
 	private void UpdateCurrentScore()
 	{
 		int num = 0;
@@ -479,14 +479,14 @@ public class ShipTowerStageData
 		this.CurrentScore = num;
 	}
 
-	// Token: 0x060160FC RID: 90364 RVA: 0x00593488 File Offset: 0x00591688
+	// Token: 0x06013B02 RID: 80642 RVA: 0x005BE44C File Offset: 0x005BC64C
 	private void UpdateCurrentScoreAndSaveLast()
 	{
 		this.UpdateCurrentScore();
 		this.SaveLastData();
 	}
 
-	// Token: 0x060160FD RID: 90365 RVA: 0x00593498 File Offset: 0x00591698
+	// Token: 0x06013B03 RID: 80643 RVA: 0x005BE45C File Offset: 0x005BC65C
 	public void ProtoUpdateDataBase(SlashLevelPlayInfo data)
 	{
 		this.IsHaveProtoData = true;
@@ -539,7 +539,7 @@ public class ShipTowerStageData
 		shipTowerTeamData2.UpdateCurrentScore(data.SlashSecondScore);
 	}
 
-	// Token: 0x060160FE RID: 90366 RVA: 0x005936A5 File Offset: 0x005918A5
+	// Token: 0x06013B04 RID: 80644 RVA: 0x005BE669 File Offset: 0x005BC869
 	public void ProtoNotifyInitData(SlashLevelPlayInfo data)
 	{
 		this.ProtoUpdateDataBase(data);
@@ -548,7 +548,7 @@ public class ShipTowerStageData
 		EventSystem.Instance.Emit<int>(EEventName.ShipTowerStageUpdate, this.Id);
 	}
 
-	// Token: 0x060160FF RID: 90367 RVA: 0x005936D0 File Offset: 0x005918D0
+	// Token: 0x06013B05 RID: 80645 RVA: 0x005BE694 File Offset: 0x005BC894
 	public void ProtoNotifyUpdateData(SlashLevelPlayInfo data)
 	{
 		this.ProtoUpdateDataBase(data);
@@ -556,7 +556,7 @@ public class ShipTowerStageData
 		EventSystem.Instance.Emit<int>(EEventName.ShipTowerStageUpdate, this.Id);
 	}
 
-	// Token: 0x06016100 RID: 90368 RVA: 0x005936F5 File Offset: 0x005918F5
+	// Token: 0x06013B06 RID: 80646 RVA: 0x005BE6B9 File Offset: 0x005BC8B9
 	public void SaveLastData()
 	{
 		this.LastIsPass = this.IsPassed();
@@ -564,13 +564,13 @@ public class ShipTowerStageData
 		this.IsNeedSureScore = (this.LastScore > 0);
 	}
 
-	// Token: 0x06016101 RID: 90369 RVA: 0x0059371E File Offset: 0x0059191E
+	// Token: 0x06013B07 RID: 80647 RVA: 0x005BE6E2 File Offset: 0x005BC8E2
 	public bool CheckPass(int newScore = 0)
 	{
 		return newScore >= this.PassScore;
 	}
 
-	// Token: 0x06016102 RID: 90370 RVA: 0x0059372C File Offset: 0x0059192C
+	// Token: 0x06013B08 RID: 80648 RVA: 0x005BE6F0 File Offset: 0x005BC8F0
 	public void SureResultFromInstance()
 	{
 		ShipTowerModel.Instance.OpenViewMain(new ShipTowerViewParams
@@ -582,7 +582,7 @@ public class ShipTowerStageData
 		});
 	}
 
-	// Token: 0x06016103 RID: 90371 RVA: 0x0059377D File Offset: 0x0059197D
+	// Token: 0x06013B09 RID: 80649 RVA: 0x005BE741 File Offset: 0x005BC941
 	public void GotoDescFromInstance()
 	{
 		ShipTowerModel.Instance.OpenViewMain(new ShipTowerViewParams
@@ -593,7 +593,7 @@ public class ShipTowerStageData
 		});
 	}
 
-	// Token: 0x06016104 RID: 90372 RVA: 0x005937B8 File Offset: 0x005919B8
+	// Token: 0x06013B0A RID: 80650 RVA: 0x005BE77C File Offset: 0x005BC97C
 	public void GotoNextDescFromInstance(ShipTowerStageData nextStageData)
 	{
 		ShipTowerModel.Instance.OpenViewMain(new ShipTowerViewParams
@@ -605,7 +605,7 @@ public class ShipTowerStageData
 		});
 	}
 
-	// Token: 0x06016105 RID: 90373 RVA: 0x0059380C File Offset: 0x00591A0C
+	// Token: 0x06013B0B RID: 80651 RVA: 0x005BE7D0 File Offset: 0x005BC9D0
 	public UniTask SureResetStage()
 	{
 		ShipTowerStageData.<SureResetStage>d__70 <SureResetStage>d__;
@@ -616,7 +616,7 @@ public class ShipTowerStageData
 		return <SureResetStage>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016106 RID: 90374 RVA: 0x00593850 File Offset: 0x00591A50
+	// Token: 0x06013B0C RID: 80652 RVA: 0x005BE814 File Offset: 0x005BCA14
 	public void ResetStage()
 	{
 		foreach (ShipTowerTeamData shipTowerTeamData in this.TeamDataList)
@@ -627,7 +627,7 @@ public class ShipTowerStageData
 		this.UpdateCurrentScoreAndSaveLast();
 	}
 
-	// Token: 0x06016107 RID: 90375 RVA: 0x005938AC File Offset: 0x00591AAC
+	// Token: 0x06013B0D RID: 80653 RVA: 0x005BE870 File Offset: 0x005BCA70
 	public UniTask SureCoverChallenge()
 	{
 		ShipTowerStageData.<SureCoverChallenge>d__72 <SureCoverChallenge>d__;
@@ -638,7 +638,7 @@ public class ShipTowerStageData
 		return <SureCoverChallenge>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016108 RID: 90376 RVA: 0x005938F0 File Offset: 0x00591AF0
+	// Token: 0x06013B0E RID: 80654 RVA: 0x005BE8B4 File Offset: 0x005BCAB4
 	public void CoverChallenge()
 	{
 		foreach (ShipTowerTeamData shipTowerTeamData in this.TeamDataList)
@@ -649,7 +649,7 @@ public class ShipTowerStageData
 		this.UpdateCurrentScoreAndSaveLast();
 	}
 
-	// Token: 0x06016109 RID: 90377 RVA: 0x0059394C File Offset: 0x00591B4C
+	// Token: 0x06013B0F RID: 80655 RVA: 0x005BE910 File Offset: 0x005BCB10
 	public void UpdateNewChallengeScore()
 	{
 		this.NewChallengeScore = 0;
@@ -659,7 +659,7 @@ public class ShipTowerStageData
 		}
 	}
 
-	// Token: 0x0601610A RID: 90378 RVA: 0x005939B4 File Offset: 0x00591BB4
+	// Token: 0x06013B10 RID: 80656 RVA: 0x005BE978 File Offset: 0x005BCB78
 	public void UpdateToEdit()
 	{
 		foreach (ShipTowerTeamData shipTowerTeamData in this.TeamDataList)
@@ -668,7 +668,7 @@ public class ShipTowerStageData
 		}
 	}
 
-	// Token: 0x0601610B RID: 90379 RVA: 0x00593A04 File Offset: 0x00591C04
+	// Token: 0x06013B11 RID: 80657 RVA: 0x005BE9C8 File Offset: 0x005BCBC8
 	public void CopyTeamRoleToEdit(int targetId)
 	{
 		ShipTowerStageData stageDataById = ShipTowerModel.Instance.GetStageDataById(targetId);
@@ -678,7 +678,7 @@ public class ShipTowerStageData
 		}
 	}
 
-	// Token: 0x0601610C RID: 90380 RVA: 0x00593A50 File Offset: 0x00591C50
+	// Token: 0x06013B12 RID: 80658 RVA: 0x005BEA14 File Offset: 0x005BCC14
 	public void ProtoTeamEditFromResult(SlashAndTowerResultNotify result)
 	{
 		ShipTowerTeamData shipTowerTeamData = this.TeamDataList[0];
@@ -692,7 +692,7 @@ public class ShipTowerStageData
 		this.UpdateNewChallengeScore();
 	}
 
-	// Token: 0x0601610D RID: 90381 RVA: 0x00593AC0 File Offset: 0x00591CC0
+	// Token: 0x06013B13 RID: 80659 RVA: 0x005BEA84 File Offset: 0x005BCC84
 	public UniTask RequestTeamRecommendList()
 	{
 		ShipTowerStageData.<RequestTeamRecommendList>d__78 <RequestTeamRecommendList>d__;
@@ -703,7 +703,7 @@ public class ShipTowerStageData
 		return <RequestTeamRecommendList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601610E RID: 90382 RVA: 0x00593B04 File Offset: 0x00591D04
+	// Token: 0x06013B14 RID: 80660 RVA: 0x005BEAC8 File Offset: 0x005BCCC8
 	public void ProtoUpdateTeamRecommendList(SlashAndTowerRecommendResponse response)
 	{
 		this.TeamRecommendList.Clear();
@@ -760,7 +760,7 @@ public class ShipTowerStageData
 		}
 	}
 
-	// Token: 0x0601610F RID: 90383 RVA: 0x00593D2C File Offset: 0x00591F2C
+	// Token: 0x06013B15 RID: 80661 RVA: 0x005BECF0 File Offset: 0x005BCEF0
 	public bool UseTeamRecommend(ShipTowerTeamRecommendItemData data)
 	{
 		ShipTowerTeamData shipTowerTeamData = this.TeamDataList[0];
@@ -791,7 +791,7 @@ public class ShipTowerStageData
 		return true;
 	}
 
-	// Token: 0x06016110 RID: 90384 RVA: 0x00593EEC File Offset: 0x005920EC
+	// Token: 0x06013B16 RID: 80662 RVA: 0x005BEEB0 File Offset: 0x005BD0B0
 	public bool IsCanApplyTeamRecommend(ShipTowerTeamRecommendItemData data)
 	{
 		ShipTowerBuffData buffDataByBuffId = ShipTowerModel.Instance.GetBuffDataByBuffId(data.Buff1);
@@ -821,7 +821,7 @@ public class ShipTowerStageData
 		return false;
 	}
 
-	// Token: 0x06016111 RID: 90385 RVA: 0x00593FF8 File Offset: 0x005921F8
+	// Token: 0x06013B17 RID: 80663 RVA: 0x005BEFBC File Offset: 0x005BD1BC
 	public void UpdateMainRoleToEdit()
 	{
 		foreach (ShipTowerTeamData shipTowerTeamData in this.TeamDataList)
@@ -830,7 +830,7 @@ public class ShipTowerStageData
 		}
 	}
 
-	// Token: 0x06016112 RID: 90386 RVA: 0x00594048 File Offset: 0x00592248
+	// Token: 0x06013B18 RID: 80664 RVA: 0x005BF00C File Offset: 0x005BD20C
 	public bool IsOldSeasonData()
 	{
 		if (this.IsTeamSetRoleFinish() && !this.IsTeamSetBuffFinish())
@@ -851,7 +851,7 @@ public class ShipTowerStageData
 		return false;
 	}
 
-	// Token: 0x06016113 RID: 90387 RVA: 0x005940D4 File Offset: 0x005922D4
+	// Token: 0x06013B19 RID: 80665 RVA: 0x005BF098 File Offset: 0x005BD298
 	[NullableContext(2)]
 	public ShipTowerTeamData GetCurrentTeamData()
 	{
@@ -868,7 +868,7 @@ public class ShipTowerStageData
 		return this.TeamDataList[(num >= 0) ? num : 0];
 	}
 
-	// Token: 0x06016114 RID: 90388 RVA: 0x0059412F File Offset: 0x0059232F
+	// Token: 0x06013B1A RID: 80666 RVA: 0x005BF0F3 File Offset: 0x005BD2F3
 	[NullableContext(2)]
 	public ShipTowerTeamData GetCurSelectTeamData()
 	{
@@ -879,90 +879,90 @@ public class ShipTowerStageData
 		return null;
 	}
 
-	// Token: 0x06016115 RID: 90389 RVA: 0x00594157 File Offset: 0x00592357
+	// Token: 0x06013B1B RID: 80667 RVA: 0x005BF11B File Offset: 0x005BD31B
 	private void ResetQuickPass()
 	{
 		this.IsQuickPass = false;
 	}
 
-	// Token: 0x0400A472 RID: 42098
+	// Token: 0x0400A85C RID: 43100
 	public int Id;
 
-	// Token: 0x0400A473 RID: 42099
+	// Token: 0x0400A85D RID: 43101
 	public int OrderIndex;
 
-	// Token: 0x0400A474 RID: 42100
+	// Token: 0x0400A85E RID: 43102
 	public EShipTowerStageType StageType;
 
-	// Token: 0x0400A475 RID: 42101
+	// Token: 0x0400A85F RID: 43103
 	public int Season;
 
-	// Token: 0x0400A476 RID: 42102
+	// Token: 0x0400A860 RID: 43104
 	public bool IsEndLess;
 
-	// Token: 0x0400A477 RID: 42103
+	// Token: 0x0400A861 RID: 43105
 	public bool IsQuickPass;
 
-	// Token: 0x0400A478 RID: 42104
+	// Token: 0x0400A862 RID: 43106
 	public List<int> InstIds;
 
-	// Token: 0x0400A479 RID: 42105
+	// Token: 0x0400A863 RID: 43107
 	public List<int> PreLevel;
 
-	// Token: 0x0400A47A RID: 42106
+	// Token: 0x0400A864 RID: 43108
 	public string TitleKey;
 
-	// Token: 0x0400A47B RID: 42107
+	// Token: 0x0400A865 RID: 43109
 	public string DescKey;
 
-	// Token: 0x0400A47C RID: 42108
+	// Token: 0x0400A866 RID: 43110
 	public List<int> TargetScoreList;
 
-	// Token: 0x0400A47D RID: 42109
+	// Token: 0x0400A867 RID: 43111
 	public List<string> ScoreStageList;
 
-	// Token: 0x0400A47E RID: 42110
+	// Token: 0x0400A868 RID: 43112
 	public int CurrentScore;
 
-	// Token: 0x0400A47F RID: 42111
+	// Token: 0x0400A869 RID: 43113
 	public int PassScore;
 
-	// Token: 0x0400A480 RID: 42112
+	// Token: 0x0400A86A RID: 43114
 	public int PassReward;
 
-	// Token: 0x0400A481 RID: 42113
+	// Token: 0x0400A86B RID: 43115
 	private readonly List<TItem> PassRewardItems;
 
-	// Token: 0x0400A482 RID: 42114
+	// Token: 0x0400A86C RID: 43116
 	public readonly List<ShipTowerTeamData> TeamDataList;
 
-	// Token: 0x0400A483 RID: 42115
+	// Token: 0x0400A86D RID: 43117
 	public bool ProtoIsUnLocked;
 
-	// Token: 0x0400A484 RID: 42116
+	// Token: 0x0400A86E RID: 43118
 	public int NewChallengeScore;
 
-	// Token: 0x0400A485 RID: 42117
+	// Token: 0x0400A86F RID: 43119
 	public bool IsHaveProtoData;
 
-	// Token: 0x0400A486 RID: 42118
+	// Token: 0x0400A870 RID: 43120
 	public bool LastIsPass;
 
-	// Token: 0x0400A487 RID: 42119
+	// Token: 0x0400A871 RID: 43121
 	public int LastScore;
 
-	// Token: 0x0400A488 RID: 42120
+	// Token: 0x0400A872 RID: 43122
 	public bool IsNeedSureScore;
 
-	// Token: 0x0400A489 RID: 42121
+	// Token: 0x0400A873 RID: 43123
 	public int BelongToSeason;
 
-	// Token: 0x0400A48A RID: 42122
+	// Token: 0x0400A874 RID: 43124
 	public bool ProtoIsPassed;
 
-	// Token: 0x0400A48B RID: 42123
+	// Token: 0x0400A875 RID: 43125
 	public List<ShipTowerTeamRecommendItemData> TeamRecommendList;
 
-	// Token: 0x0400A48C RID: 42124
+	// Token: 0x0400A876 RID: 43126
 	public int CurSelectTeamIndex;
 }

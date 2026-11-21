@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BED RID: 7149
+	// Token: 0x02001DDC RID: 7644
 	public class IModifySelfSceneItemAttributeTag_SetValue
 	{
-		// Token: 0x04005D42 RID: 23874
+		// Token: 0x04006268 RID: 25192
 		public EChangeEntityPrefabPerformanceType Type;
 
-		// Token: 0x04005D43 RID: 23875
+		// Token: 0x04006269 RID: 25193
 		public bool IsAddTag;
 
-		// Token: 0x04005D44 RID: 23876
-		[Nullable(1)]
+		// Token: 0x0400626A RID: 25194
 		public List<int> PerformanceTag;
 	}
 }

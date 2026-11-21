@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using CSharpScript.Game.Utils;
 
-// Token: 0x02002C5E RID: 11358
+// Token: 0x020021B7 RID: 8631
 [NullableContext(1)]
 [Nullable(0)]
 public class UiRoleUtils
 {
-	// Token: 0x06017B6A RID: 97130 RVA: 0x00607608 File Offset: 0x00605808
+	// Token: 0x060153DE RID: 87006 RVA: 0x0062D0CC File Offset: 0x0062B2CC
 	public static void PlayRoleChangeEffect(TsUiSceneRoleActor roleActor)
 	{
 		if (roleActor == null)
@@ -31,7 +31,7 @@ public class UiRoleUtils
 		UiModelUtil.Instance.PlayEffectOnRoot(model, "ChangeRoleEffect");
 	}
 
-	// Token: 0x06017B6B RID: 97131 RVA: 0x00607680 File Offset: 0x00605880
+	// Token: 0x060153DF RID: 87007 RVA: 0x0062D144 File Offset: 0x0062B344
 	public static void PlayRoleLevelUpEffect(TsUiSceneRoleActor roleActor)
 	{
 		if (roleActor == null)
@@ -44,7 +44,7 @@ public class UiRoleUtils
 		UiModelUtil.Instance.PlayEffectOnRoot(model, "RoleLevelUpEffect");
 	}
 
-	// Token: 0x06017B6C RID: 97132 RVA: 0x006076D8 File Offset: 0x006058D8
+	// Token: 0x060153E0 RID: 87008 RVA: 0x0062D19C File Offset: 0x0062B39C
 	public static void PlayRoleBreachFinishEffect(TsUiSceneRoleActor roleActor)
 	{
 		if (roleActor == null)

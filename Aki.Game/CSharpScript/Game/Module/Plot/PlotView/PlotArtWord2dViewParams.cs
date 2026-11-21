@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005052 RID: 20562
+	// Token: 0x02004021 RID: 16417
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotArtWord2dViewParams
 	{
-		// Token: 0x1700802E RID: 32814
-		// (get) Token: 0x060349DF RID: 215519 RVA: 0x00C6E38F File Offset: 0x00C6C58F
-		// (set) Token: 0x060349E0 RID: 215520 RVA: 0x00C6E397 File Offset: 0x00C6C597
+		// Token: 0x170053E6 RID: 21478
+		// (get) Token: 0x060298C1 RID: 170177 RVA: 0x00BBB503 File Offset: 0x00BB9703
+		// (set) Token: 0x060298C2 RID: 170178 RVA: 0x00BBB50B File Offset: 0x00BB970B
 		public string SequenceName { get; set; }
 	}
 }

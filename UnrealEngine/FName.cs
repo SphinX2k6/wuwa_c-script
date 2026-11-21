@@ -6,14 +6,14 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200007F RID: 127
+	// Token: 0x02000064 RID: 100
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.Name)]
 	[UnrealStructLayout(12, 4, UnrealReflectionPropertyTypeCode.Name, PropertiesSize = 12)]
 	[StructLayout(LayoutKind.Sequential, Pack = 4, Size = 12)]
 	public struct FName : IEqualityOperators<FName, FName, bool>, IEquatable<FName>
 	{
-		// Token: 0x06000EAF RID: 3759 RVA: 0x000160A5 File Offset: 0x000142A5
+		// Token: 0x06000A44 RID: 2628 RVA: 0x00010E1F File Offset: 0x0000F01F
 		public FName()
 		{
 			this.ComparisonIndex = 0U;
@@ -21,7 +21,7 @@ namespace UnrealEngine
 			this.Number = 0U;
 		}
 
-		// Token: 0x06000EB0 RID: 3760 RVA: 0x000160BC File Offset: 0x000142BC
+		// Token: 0x06000A45 RID: 2629 RVA: 0x00010E38 File Offset: 0x0000F038
 		[NullableContext(2)]
 		public unsafe FName(string name)
 		{
@@ -51,7 +51,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000EB1 RID: 3761 RVA: 0x00016110 File Offset: 0x00014310
+		// Token: 0x06000A46 RID: 2630 RVA: 0x00010E8C File Offset: 0x0000F08C
 		public FName(uint ComparisonIndex, uint DisplayIndex, uint Number)
 		{
 			this.ComparisonIndex = ComparisonIndex;
@@ -59,7 +59,7 @@ namespace UnrealEngine
 			this.Number = Number;
 		}
 
-		// Token: 0x06000EB2 RID: 3762 RVA: 0x00016128 File Offset: 0x00014328
+		// Token: 0x06000A47 RID: 2631 RVA: 0x00010EA4 File Offset: 0x0000F0A4
 		public unsafe FName(ReadOnlySpan<char> name)
 		{
 			this.ComparisonIndex = 0U;
@@ -78,7 +78,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000EB3 RID: 3763 RVA: 0x00016178 File Offset: 0x00014378
+		// Token: 0x06000A48 RID: 2632 RVA: 0x00010EF4 File Offset: 0x0000F0F4
 		public unsafe FName(ReadOnlySpan<byte> name)
 		{
 			this.ComparisonIndex = 0U;
@@ -97,19 +97,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000EB4 RID: 3764
+		// Token: 0x06000A49 RID: 2633
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal unsafe static extern void FromString(FName* Name, char* Str, int Length);
 
-		// Token: 0x06000EB5 RID: 3765
+		// Token: 0x06000A4A RID: 2634
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal unsafe static extern void FromAnsiString(FName* Name, byte* Str, int Length);
 
-		// Token: 0x06000EB6 RID: 3766
+		// Token: 0x06000A4B RID: 2635
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal unsafe static extern void ToString(FName* Self, char* Buffer, int Size, out int OutSize);
 
-		// Token: 0x06000EB7 RID: 3767 RVA: 0x000161C8 File Offset: 0x000143C8
+		// Token: 0x06000A4C RID: 2636 RVA: 0x00010F44 File Offset: 0x0000F144
 		[NullableContext(1)]
 		public unsafe override readonly string ToString()
 		{
@@ -126,31 +126,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000EB8 RID: 3768 RVA: 0x00016205 File Offset: 0x00014405
+		// Token: 0x06000A4D RID: 2637 RVA: 0x00010F81 File Offset: 0x0000F181
 		public readonly bool IsNone()
 		{
 			return this.ComparisonIndex == 0U && this.Number == 0U;
 		}
 
-		// Token: 0x06000EB9 RID: 3769 RVA: 0x0001621A File Offset: 0x0001441A
+		// Token: 0x06000A4E RID: 2638 RVA: 0x00010F96 File Offset: 0x0000F196
 		public static bool operator ==(FName A, FName B)
 		{
 			return A.ComparisonIndex == B.ComparisonIndex && A.Number == B.Number;
 		}
 
-		// Token: 0x06000EBA RID: 3770 RVA: 0x0001623A File Offset: 0x0001443A
+		// Token: 0x06000A4F RID: 2639 RVA: 0x00010FB6 File Offset: 0x0000F1B6
 		public static bool operator !=(FName A, FName B)
 		{
 			return !(A == B);
 		}
 
-		// Token: 0x06000EBB RID: 3771 RVA: 0x00016246 File Offset: 0x00014446
+		// Token: 0x06000A50 RID: 2640 RVA: 0x00010FC2 File Offset: 0x0000F1C2
 		public readonly bool Equals(FName other)
 		{
 			return this.ComparisonIndex == other.ComparisonIndex && this.Number == other.Number;
 		}
 
-		// Token: 0x06000EBC RID: 3772 RVA: 0x00016268 File Offset: 0x00014468
+		// Token: 0x06000A51 RID: 2641 RVA: 0x00010FE4 File Offset: 0x0000F1E4
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -162,32 +162,32 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000EBD RID: 3773 RVA: 0x0001628D File Offset: 0x0001448D
+		// Token: 0x06000A52 RID: 2642 RVA: 0x00011009 File Offset: 0x0000F209
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<uint, uint>(this.ComparisonIndex, this.Number);
 		}
 
-		// Token: 0x06000EBE RID: 3774 RVA: 0x000162A0 File Offset: 0x000144A0
+		// Token: 0x06000A53 RID: 2643 RVA: 0x0001101C File Offset: 0x0000F21C
 		[NullableContext(2)]
 		public static implicit operator FName(string Str)
 		{
 			return new FName(Str);
 		}
 
-		// Token: 0x040001C5 RID: 453
+		// Token: 0x0400017E RID: 382
 		public static readonly FName NAME_None;
 
-		// Token: 0x040001C6 RID: 454
+		// Token: 0x0400017F RID: 383
 		public readonly uint ComparisonIndex;
 
-		// Token: 0x040001C7 RID: 455
+		// Token: 0x04000180 RID: 384
 		public readonly uint DisplayIndex;
 
-		// Token: 0x040001C8 RID: 456
+		// Token: 0x04000181 RID: 385
 		public readonly uint Number;
 
-		// Token: 0x040001C9 RID: 457
+		// Token: 0x04000182 RID: 386
 		private const int StringBufferSize = 1035;
 	}
 }

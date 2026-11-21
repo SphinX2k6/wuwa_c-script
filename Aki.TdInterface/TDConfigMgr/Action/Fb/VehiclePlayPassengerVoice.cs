@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029CD RID: 10701
+	// Token: 0x02002CBA RID: 11450
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VehiclePlayPassengerVoice : ActionParams
 	{
-		// Token: 0x0600EC87 RID: 60551 RVA: 0x002289C2 File Offset: 0x00226BC2
-		[NullableContext(1)]
+		// Token: 0x0600FB1E RID: 64286 RVA: 0x00246346 File Offset: 0x00244546
+		[NullableContext(0)]
 		public static VehiclePlayPassengerVoice Create(IVehiclePlayPassengerVoice? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AAF RID: 19119
-		// (get) Token: 0x0600EC88 RID: 60552 RVA: 0x002289E1 File Offset: 0x00226BE1
+		// Token: 0x17004E58 RID: 20056
+		// (get) Token: 0x0600FB1F RID: 64287 RVA: 0x00246365 File Offset: 0x00244565
 		public virtual EGondolaVoiceTriggeredType TriggerType
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AB0 RID: 19120
-		// (get) Token: 0x0600EC89 RID: 60553 RVA: 0x002289EE File Offset: 0x00226BEE
+		// Token: 0x17004E59 RID: 20057
+		// (get) Token: 0x0600FB20 RID: 64288 RVA: 0x00246372 File Offset: 0x00244572
 		public virtual IPlayVoicePassengersConfig TriggerPassengers
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AB1 RID: 19121
-		// (get) Token: 0x0600EC8A RID: 60554 RVA: 0x00228A24 File Offset: 0x00226C24
+		// Token: 0x17004E5A RID: 20058
+		// (get) Token: 0x0600FB21 RID: 64289 RVA: 0x002463A8 File Offset: 0x002445A8
 		public virtual List<float> TriggerParams
 		{
 			get
@@ -75,19 +75,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400823D RID: 33341
+		// Token: 0x0400892E RID: 35118
 		private IVehiclePlayPassengerVoice Instance;
 
-		// Token: 0x0400823E RID: 33342
+		// Token: 0x0400892F RID: 35119
 		private IPlayVoicePassengersConfig _TriggerPassengersCache;
 
-		// Token: 0x0400823F RID: 33343
+		// Token: 0x04008930 RID: 35120
 		private bool _TriggerPassengersInited;
 
-		// Token: 0x04008240 RID: 33344
+		// Token: 0x04008931 RID: 35121
 		private List<float> _TriggerParamsCache;
 
-		// Token: 0x04008241 RID: 33345
+		// Token: 0x04008932 RID: 35122
 		private bool _TriggerParamsInited;
 	}
 }

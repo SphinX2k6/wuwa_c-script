@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003297 RID: 12951
+// Token: 0x02002808 RID: 10248
 public interface ISquadModifier
 {
-	// Token: 0x170026BC RID: 9916
-	// (get) Token: 0x0601C09F RID: 114847
+	// Token: 0x17002996 RID: 10646
+	// (get) Token: 0x06019CCD RID: 105677
 	ESquadCalcPolicy Type { get; }
 }

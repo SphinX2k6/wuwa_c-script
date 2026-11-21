@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001214 RID: 4628
+// Token: 0x020006C8 RID: 1736
 public class DailyAdventureSmallGridItem : SmallItemGrid
 {
-	// Token: 0x06007BF4 RID: 31732 RVA: 0x001A2BE8 File Offset: 0x001A0DE8
+	// Token: 0x06004F8A RID: 20362 RVA: 0x001AB860 File Offset: 0x001A9A60
 	[NullableContext(1)]
 	public void Refresh(IItemGridData data, bool isReceivableVisible, bool isLock)
 	{
@@ -33,17 +33,17 @@ public class DailyAdventureSmallGridItem : SmallItemGrid
 		base.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x06007BF5 RID: 31733 RVA: 0x001A2C8B File Offset: 0x001A0E8B
+	// Token: 0x06004F8B RID: 20363 RVA: 0x001AB903 File Offset: 0x001A9B03
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x06007BF6 RID: 31734 RVA: 0x001A2C8E File Offset: 0x001A0E8E
+	// Token: 0x06004F8C RID: 20364 RVA: 0x001AB906 File Offset: 0x001A9B06
 	protected override void OnExtendToggleClicked()
 	{
 	}
 
-	// Token: 0x040038C7 RID: 14535
+	// Token: 0x04003960 RID: 14688
 	private int ConfigId;
 }

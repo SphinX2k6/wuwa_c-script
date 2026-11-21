@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DD5 RID: 19925
+	// Token: 0x02003D9E RID: 15774
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElementPanel : UiPanelBase
 	{
-		// Token: 0x060336D5 RID: 210645 RVA: 0x00C02810 File Offset: 0x00C00A10
+		// Token: 0x06028542 RID: 165186 RVA: 0x00B4BD68 File Offset: 0x00B49F68
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060336D6 RID: 210646 RVA: 0x00C029A4 File Offset: 0x00C00BA4
+		// Token: 0x06028543 RID: 165187 RVA: 0x00B4BEFC File Offset: 0x00B4A0FC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ElementPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060336D7 RID: 210647 RVA: 0x00C029E8 File Offset: 0x00C00BE8
+		// Token: 0x06028544 RID: 165188 RVA: 0x00B4BF40 File Offset: 0x00B4A140
 		protected override void OnStart()
 		{
 			this.ElementLayout = new GenericLayout<ElementItem, ElementInfo>(base.GetHorizontalLayout(2), new Func<ElementItem>(this.CreateElementItem), null, false, true);
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetItem(4).SetUIActive(false);
 		}
 
-		// Token: 0x060336D8 RID: 210648 RVA: 0x00C02A34 File Offset: 0x00C00C34
+		// Token: 0x06028545 RID: 165189 RVA: 0x00B4BF8C File Offset: 0x00B4A18C
 		private ElementItem CreateElementItem()
 		{
 			return new ElementItem();
 		}
 
-		// Token: 0x060336D9 RID: 210649 RVA: 0x00C02A3C File Offset: 0x00C00C3C
+		// Token: 0x06028546 RID: 165190 RVA: 0x00B4BF94 File Offset: 0x00B4A194
 		private void AreaToggle(EToggleState state)
 		{
 			if (state != EToggleState.ETT_UnChecked)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060336DA RID: 210650 RVA: 0x00C02A90 File Offset: 0x00C00C90
+		// Token: 0x06028547 RID: 165191 RVA: 0x00B4BFE8 File Offset: 0x00B4A1E8
 		private void TipToggle(EToggleState state)
 		{
 			if (state != EToggleState.ETT_UnChecked)
@@ -113,19 +113,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060336DB RID: 210651 RVA: 0x00C02AE1 File Offset: 0x00C00CE1
+		// Token: 0x06028548 RID: 165192 RVA: 0x00B4C039 File Offset: 0x00B4A239
 		private void BtnMask()
 		{
 			base.GetExtendToggle(5).SetToggleState(EToggleState.ETT_UnChecked, true, false, false);
 		}
 
-		// Token: 0x060336DC RID: 210652 RVA: 0x00C02AF4 File Offset: 0x00C00CF4
+		// Token: 0x06028549 RID: 165193 RVA: 0x00B4C04C File Offset: 0x00B4A24C
 		public void Refresh(List<ElementInfo> elementInfoList)
 		{
 			this.RefreshInternal(elementInfoList, false);
 		}
 
-		// Token: 0x060336DD RID: 210653 RVA: 0x00C02B00 File Offset: 0x00C00D00
+		// Token: 0x0602854A RID: 165194 RVA: 0x00B4C058 File Offset: 0x00B4A258
 		[NullableContext(2)]
 		public void Refresh(RogueGainEntry rogueGainEntry = null)
 		{
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshInternal(list, isPreview);
 		}
 
-		// Token: 0x060336DE RID: 210654 RVA: 0x00C02BAC File Offset: 0x00C00DAC
+		// Token: 0x0602854B RID: 165195 RVA: 0x00B4C104 File Offset: 0x00B4A304
 		private void RefreshInternal(List<ElementInfo> elementInfoArray, bool isPreview)
 		{
 			this.ElementLayout.RefreshByData(elementInfoArray, null, false);
@@ -167,35 +167,35 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.TipPanel.UpdateNum(num);
 		}
 
-		// Token: 0x0401B4D4 RID: 111828
+		// Token: 0x04015EA7 RID: 89767
 		private TipPanel TipPanel;
 
-		// Token: 0x0401B4D5 RID: 111829
+		// Token: 0x04015EA8 RID: 89768
 		private GenericLayout<ElementItem, ElementInfo> ElementLayout;
 
-		// Token: 0x0200AF4E RID: 44878
+		// Token: 0x02009983 RID: 39299
 		[NullableContext(0)]
 		private class EElementPanelCom
 		{
-			// Token: 0x040353AB RID: 218027
+			// Token: 0x0402FDE0 RID: 196064
 			public const int TipToggle = 0;
 
-			// Token: 0x040353AC RID: 218028
+			// Token: 0x0402FDE1 RID: 196065
 			public const int TotalNumText = 1;
 
-			// Token: 0x040353AD RID: 218029
+			// Token: 0x0402FDE2 RID: 196066
 			public const int ElementsLayout = 2;
 
-			// Token: 0x040353AE RID: 218030
+			// Token: 0x0402FDE3 RID: 196067
 			public const int ElementItem = 3;
 
-			// Token: 0x040353AF RID: 218031
+			// Token: 0x0402FDE4 RID: 196068
 			public const int TipItem = 4;
 
-			// Token: 0x040353B0 RID: 218032
+			// Token: 0x0402FDE5 RID: 196069
 			public const int AreaToggle = 5;
 
-			// Token: 0x040353B1 RID: 218033
+			// Token: 0x0402FDE6 RID: 196070
 			public const int BtnMask = 6;
 		}
 	}

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02001907 RID: 6407
+// Token: 0x02000DC0 RID: 3520
 public class MediumItemGridComposeTag : MediumItemGridComponent
 {
-	// Token: 0x0600BBD5 RID: 48085 RVA: 0x002A92F8 File Offset: 0x002A74F8
+	// Token: 0x06008FBF RID: 36799 RVA: 0x002B3A54 File Offset: 0x002B1C54
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -26,14 +26,14 @@ public class MediumItemGridComposeTag : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BBD6 RID: 48086 RVA: 0x002A93A3 File Offset: 0x002A75A3
+	// Token: 0x06008FC0 RID: 36800 RVA: 0x002B3AFF File Offset: 0x002B1CFF
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ComposeItem";
 	}
 
-	// Token: 0x0600BBD7 RID: 48087 RVA: 0x002A93AC File Offset: 0x002A75AC
+	// Token: 0x06008FC1 RID: 36801 RVA: 0x002B3B08 File Offset: 0x002B1D08
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -56,7 +56,7 @@ public class MediumItemGridComposeTag : MediumItemGridComponent
 		this.SetActive(mediumItemGridComposeTag.IsRefreshItem || mediumItemGridComposeTag.IsLimitTimeItem || mediumItemGridComposeTag.BuffItem > EMediumItemGridBuffType.None);
 	}
 
-	// Token: 0x0600BBD8 RID: 48088 RVA: 0x002A9424 File Offset: 0x002A7624
+	// Token: 0x06008FC2 RID: 36802 RVA: 0x002B3B80 File Offset: 0x002B1D80
 	protected void RefreshBuffIcon(EMediumItemGridBuffType buffIconType)
 	{
 		if (buffIconType == EMediumItemGridBuffType.None)
@@ -109,19 +109,19 @@ public class MediumItemGridComposeTag : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x02007E7D RID: 32381
+	// Token: 0x02007004 RID: 28676
 	private class EChildType
 	{
-		// Token: 0x0402963A RID: 169530
+		// Token: 0x04024966 RID: 149862
 		public const int RootItem = 0;
 
-		// Token: 0x0402963B RID: 169531
+		// Token: 0x04024967 RID: 149863
 		public const int LimitTimeItem = 1;
 
-		// Token: 0x0402963C RID: 169532
+		// Token: 0x04024968 RID: 149864
 		public const int RefreshItem = 2;
 
-		// Token: 0x0402963D RID: 169533
+		// Token: 0x04024969 RID: 149865
 		public const int BuffSprite = 3;
 	}
 }

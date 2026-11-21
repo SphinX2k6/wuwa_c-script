@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Gameplay.WuWaGo;
 using CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity;
@@ -10,17 +9,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Movement
 {
-	// Token: 0x0200472F RID: 18223
+	// Token: 0x02003660 RID: 13920
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoGridMutationService : IWuWaGoGridMutationService
 	{
-		// Token: 0x0602F9DA RID: 195034 RVA: 0x00B07A56 File Offset: 0x00B05C56
+		// Token: 0x060241A4 RID: 147876 RVA: 0x00A378E2 File Offset: 0x00A35AE2
 		public WuWaGoGridMutationService(WuWaGoGameData data)
 		{
 		}
 
-		// Token: 0x0602F9DB RID: 195035 RVA: 0x00B07A68 File Offset: 0x00B05C68
+		// Token: 0x060241A5 RID: 147877 RVA: 0x00A378F4 File Offset: 0x00A35AF4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -38,16 +37,19 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return <ExecuteMovableFloorBatch>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9DC RID: 195036 RVA: 0x00B07ABC File Offset: 0x00B05CBC
+		// Token: 0x060241A6 RID: 147878 RVA: 0x00A37948 File Offset: 0x00A35B48
 		private unsafe bool ValidateMovableFloorBatchRequests(IReadOnlyList<IMovableFloorMoveRequest> requests, string batchSource)
 		{
-			HashSet<string> hashSet = new HashSet<string>(from request in requests
-			select request.RelocationRequest.OldKey);
-			HashSet<string> hashSet2 = new HashSet<string>();
-			WuWaGoGameData wuWaGoGameData = this.<data>P;
+			HashSet<string> hashSet = new HashSet<string>();
 			foreach (IMovableFloorMoveRequest movableFloorMoveRequest in requests)
 			{
-				IWuWaGoGridRelocationRequest relocationRequest = movableFloorMoveRequest.RelocationRequest;
+				hashSet.Add(movableFloorMoveRequest.RelocationRequest.OldKey);
+			}
+			HashSet<string> hashSet2 = new HashSet<string>();
+			WuWaGoGameData wuWaGoGameData = this.<data>P;
+			foreach (IMovableFloorMoveRequest movableFloorMoveRequest2 in requests)
+			{
+				IWuWaGoGridRelocationRequest relocationRequest = movableFloorMoveRequest2.RelocationRequest;
 				if (!hashSet2.Add(relocationRequest.TargetKey))
 				{
 					Log instance = Log.Instance;
@@ -56,8 +58,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 					string message = "移动板批量提交失败：目标坐标重复";
 					<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("batchSource", batchSource);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("entityId", movableFloorMoveRequest.Controller.Entity.Id);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("pbDataId", movableFloorMoveRequest.Controller.Entity.EntityPbDataId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("entityId", movableFloorMoveRequest2.Controller.Entity.Id);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("pbDataId", movableFloorMoveRequest2.Controller.Entity.EntityPbDataId);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("targetKey", relocationRequest.TargetKey);
 					instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 					return false;
@@ -71,8 +73,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 					string message2 = "移动板批量提交失败：目标坐标被非本批次Grid占用";
 					<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray5<ValueTuple<string, object>>);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("batchSource", batchSource);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("entityId", movableFloorMoveRequest.Controller.Entity.Id);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("pbDataId", movableFloorMoveRequest.Controller.Entity.EntityPbDataId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("entityId", movableFloorMoveRequest2.Controller.Entity.Id);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("pbDataId", movableFloorMoveRequest2.Controller.Entity.EntityPbDataId);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("targetKey", relocationRequest.TargetKey);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 4) = new ValueTuple<string, object>("occupiedGridId", gridByKey.Id);
 					instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 5));
@@ -82,7 +84,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return true;
 		}
 
-		// Token: 0x0602F9DD RID: 195037 RVA: 0x00B07D30 File Offset: 0x00B05F30
+		// Token: 0x060241A7 RID: 147879 RVA: 0x00A37BEC File Offset: 0x00A35DEC
 		private unsafe void RollbackMovableFloorBatchRequests(IReadOnlyList<IMovableFloorMoveRequest> requests, string batchSource)
 		{
 			foreach (IMovableFloorMoveRequest movableFloorMoveRequest in requests)
@@ -99,7 +101,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0602F9DE RID: 195038 RVA: 0x00B07DDC File Offset: 0x00B05FDC
+		// Token: 0x060241A8 RID: 147880 RVA: 0x00A37C98 File Offset: 0x00A35E98
 		private IReadOnlyList<IGridMoveParticipantExecution> CollectParticipantExecutions(IReadOnlyList<IMovableFloorMoveRequest> requests)
 		{
 			Dictionary<string, IGridMoveParticipantExecution> dictionary = new Dictionary<string, IGridMoveParticipantExecution>();
@@ -117,10 +119,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 					}
 				}
 			}
-			return dictionary.Values.ToList<IGridMoveParticipantExecution>();
+			return new List<IGridMoveParticipantExecution>(dictionary.Values);
 		}
 
-		// Token: 0x0602F9DF RID: 195039 RVA: 0x00B07EA0 File Offset: 0x00B060A0
+		// Token: 0x060241A9 RID: 147881 RVA: 0x00A37D5C File Offset: 0x00A35F5C
 		private void RunBeforeGridMoveParticipants(IReadOnlyList<IGridMoveParticipantExecution> executions)
 		{
 			foreach (IGridMoveParticipantExecution gridMoveParticipantExecution in executions)
@@ -133,7 +135,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			}
 		}
 
-		// Token: 0x0602F9E0 RID: 195040 RVA: 0x00B07F00 File Offset: 0x00B06100
+		// Token: 0x060241AA RID: 147882 RVA: 0x00A37DBC File Offset: 0x00A35FBC
 		private UniTask RunAfterGridMoveParticipants(IReadOnlyList<IGridMoveParticipantExecution> executions)
 		{
 			WuWaGoGridMutationService.<RunAfterGridMoveParticipants>d__8 <RunAfterGridMoveParticipants>d__;
@@ -144,7 +146,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return <RunAfterGridMoveParticipants>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9E1 RID: 195041 RVA: 0x00B07F44 File Offset: 0x00B06144
+		// Token: 0x060241AB RID: 147883 RVA: 0x00A37E00 File Offset: 0x00A36000
 		private IReadOnlyList<int> CollectMovedRoleIds(IReadOnlyList<IGridMoveParticipantExecution> executions)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -156,10 +158,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 					hashSet.Add(movedRoleId.Value);
 				}
 			}
-			return hashSet.ToList<int>();
+			return new List<int>(hashSet);
 		}
 
-		// Token: 0x0602F9E2 RID: 195042 RVA: 0x00B07FB4 File Offset: 0x00B061B4
+		// Token: 0x060241AC RID: 147884 RVA: 0x00A37E70 File Offset: 0x00A36070
 		private IWuWaGoMovableFloorBatchResult CreateMovableFloorBatchResult(bool committed, [Nullable(2)] IReadOnlyList<int> movedRoleIds = null)
 		{
 			return new WuWaGoMovableFloorBatchResult
@@ -169,7 +171,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			};
 		}
 
-		// Token: 0x0602F9E3 RID: 195043 RVA: 0x00B07FD4 File Offset: 0x00B061D4
+		// Token: 0x060241AD RID: 147885 RVA: 0x00A37E90 File Offset: 0x00A36090
 		[NullableContext(0)]
 		private UniTask<bool> PlayRelocationPresentation([Nullable(1)] IMovableFloorMoveRequest request)
 		{
@@ -182,7 +184,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return <PlayRelocationPresentation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9E4 RID: 195044 RVA: 0x00B08020 File Offset: 0x00B06220
+		// Token: 0x060241AE RID: 147886 RVA: 0x00A37EDC File Offset: 0x00A360DC
 		private float? ResolveMoveSpeed()
 		{
 			BP_WuWaGo_C setting = WuWaGoGlobal.Setting;
@@ -222,11 +224,11 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return null;
 		}
 
-		// Token: 0x04019B5E RID: 105310
+		// Token: 0x0401420E RID: 82446
 		[CompilerGenerated]
 		private WuWaGoGameData <data>P = data;
 
-		// Token: 0x04019B5F RID: 105311
+		// Token: 0x0401420F RID: 82447
 		private static readonly int LegacyMoveDurationPerGridMs = 150;
 	}
 }

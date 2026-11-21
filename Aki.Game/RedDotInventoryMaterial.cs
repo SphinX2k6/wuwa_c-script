@@ -5,10 +5,10 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x020033B2 RID: 13234
+// Token: 0x02002924 RID: 10532
 public class RedDotInventoryMaterial : RedDotBase
 {
-	// Token: 0x0601CB73 RID: 117619 RVA: 0x00808304 File Offset: 0x00806504
+	// Token: 0x0601A86B RID: 108651 RVA: 0x0082E8C8 File Offset: 0x0082CAC8
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<IProto_NormalItem>>(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
@@ -16,7 +16,7 @@ public class RedDotInventoryMaterial : RedDotBase
 		EventSystem.Instance.Add(EEventName.OnResponseCommonItemFinished, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB74 RID: 117620 RVA: 0x00808368 File Offset: 0x00806568
+	// Token: 0x0601A86C RID: 108652 RVA: 0x0082E92C File Offset: 0x0082CB2C
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<IReadOnlyList<IProto_NormalItem>>(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
@@ -24,14 +24,14 @@ public class RedDotInventoryMaterial : RedDotBase
 		EventSystem.Instance.Remove(EEventName.OnResponseCommonItemFinished, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB75 RID: 117621 RVA: 0x008083CC File Offset: 0x008065CC
+	// Token: 0x0601A86D RID: 108653 RVA: 0x0082E990 File Offset: 0x0082CB90
 	protected override bool OnCheck(int uId = 0)
 	{
 		global::ItemMainTypeMapping itemMainTypeMapping = InventoryModel.Instance.GetItemMainTypeMapping(InventoryDefine.EItemMainTypeId.Material);
 		return itemMainTypeMapping != null && itemMainTypeMapping.HasRedDot();
 	}
 
-	// Token: 0x0601CB76 RID: 117622 RVA: 0x008083F0 File Offset: 0x008065F0
+	// Token: 0x0601A86E RID: 108654 RVA: 0x0082E9B4 File Offset: 0x0082CBB4
 	[NullableContext(1)]
 	private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> normalItemList)
 	{

@@ -6,16 +6,16 @@ using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DA0 RID: 7584
+// Token: 0x02001262 RID: 4706
 public class PunishReportView : UiViewBase
 {
-	// Token: 0x0600E638 RID: 58936 RVA: 0x00364377 File Offset: 0x00362577
+	// Token: 0x0600BA56 RID: 47702 RVA: 0x0036FFD7 File Offset: 0x0036E1D7
 	[NullableContext(1)]
 	public PunishReportView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E639 RID: 58937 RVA: 0x00364380 File Offset: 0x00362580
+	// Token: 0x0600BA57 RID: 47703 RVA: 0x0036FFE0 File Offset: 0x0036E1E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -29,7 +29,7 @@ public class PunishReportView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E63A RID: 58938 RVA: 0x003643EC File Offset: 0x003625EC
+	// Token: 0x0600BA58 RID: 47704 RVA: 0x0037004C File Offset: 0x0036E24C
 	protected override void OnStart()
 	{
 		this.UiViewSequence.AddSequenceFinishEvent(this.UiViewSequence.StartSequenceName, new Action<string>(this.OnStartSequenceEnd), false);
@@ -59,7 +59,7 @@ public class PunishReportView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E63B RID: 58939 RVA: 0x0036448F File Offset: 0x0036268F
+	// Token: 0x0600BA59 RID: 47705 RVA: 0x003700EF File Offset: 0x0036E2EF
 	[NullableContext(1)]
 	private void OnStartSequenceEnd(string _)
 	{
@@ -67,13 +67,13 @@ public class PunishReportView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0200837D RID: 33661
+	// Token: 0x02007505 RID: 29957
 	private static class EViewComponent
 	{
-		// Token: 0x0402AD99 RID: 175513
+		// Token: 0x040260BF RID: 155839
 		public const int TitleText = 0;
 
-		// Token: 0x0402AD9A RID: 175514
+		// Token: 0x040260C0 RID: 155840
 		public const int DescribeText = 1;
 	}
 }

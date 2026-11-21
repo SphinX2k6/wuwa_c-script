@@ -5,34 +5,34 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 {
-	// Token: 0x02005297 RID: 21143
+	// Token: 0x02004267 RID: 16999
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BuffEffectData : IBuffEffectData
 	{
-		// Token: 0x17008291 RID: 33425
-		// (get) Token: 0x06036136 RID: 221494 RVA: 0x00CCBFE5 File Offset: 0x00CCA1E5
-		// (set) Token: 0x06036137 RID: 221495 RVA: 0x00CCBFED File Offset: 0x00CCA1ED
+		// Token: 0x17005651 RID: 22097
+		// (get) Token: 0x0602B031 RID: 176177 RVA: 0x00C1971D File Offset: 0x00C1791D
+		// (set) Token: 0x0602B032 RID: 176178 RVA: 0x00C19725 File Offset: 0x00C17925
 		public int SourceFightId { get; set; }
 
-		// Token: 0x17008292 RID: 33426
-		// (get) Token: 0x06036138 RID: 221496 RVA: 0x00CCBFF6 File Offset: 0x00CCA1F6
-		// (set) Token: 0x06036139 RID: 221497 RVA: 0x00CCBFFE File Offset: 0x00CCA1FE
+		// Token: 0x17005652 RID: 22098
+		// (get) Token: 0x0602B033 RID: 176179 RVA: 0x00C1972E File Offset: 0x00C1792E
+		// (set) Token: 0x0602B034 RID: 176180 RVA: 0x00C19736 File Offset: 0x00C17936
 		public int SkillId { get; set; }
 
-		// Token: 0x17008293 RID: 33427
-		// (get) Token: 0x0603613A RID: 221498 RVA: 0x00CCC007 File Offset: 0x00CCA207
-		// (set) Token: 0x0603613B RID: 221499 RVA: 0x00CCC00F File Offset: 0x00CCA20F
+		// Token: 0x17005653 RID: 22099
+		// (get) Token: 0x0602B035 RID: 176181 RVA: 0x00C1973F File Offset: 0x00C1793F
+		// (set) Token: 0x0602B036 RID: 176182 RVA: 0x00C19747 File Offset: 0x00C17947
 		public List<int> SelectFightIdList { get; set; }
 
-		// Token: 0x17008294 RID: 33428
-		// (get) Token: 0x0603613C RID: 221500 RVA: 0x00CCC018 File Offset: 0x00CCA218
-		// (set) Token: 0x0603613D RID: 221501 RVA: 0x00CCC020 File Offset: 0x00CCA220
+		// Token: 0x17005654 RID: 22100
+		// (get) Token: 0x0602B037 RID: 176183 RVA: 0x00C19750 File Offset: 0x00C17950
+		// (set) Token: 0x0602B038 RID: 176184 RVA: 0x00C19758 File Offset: 0x00C17958
 		public PhantomBattleEffectResultInfo Effect { get; set; }
 
-		// Token: 0x17008295 RID: 33429
-		// (get) Token: 0x0603613E RID: 221502 RVA: 0x00CCC029 File Offset: 0x00CCA229
-		// (set) Token: 0x0603613F RID: 221503 RVA: 0x00CCC031 File Offset: 0x00CCA231
+		// Token: 0x17005655 RID: 22101
+		// (get) Token: 0x0602B039 RID: 176185 RVA: 0x00C19761 File Offset: 0x00C17961
+		// (set) Token: 0x0602B03A RID: 176186 RVA: 0x00C19769 File Offset: 0x00C17969
 		public ENotifyMessageId? NotifyId { get; set; }
 	}
 }

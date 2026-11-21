@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200497D RID: 18813
+	// Token: 0x02004E34 RID: 20020
 	public class IBattleTagConditionT
 	{
-		// Token: 0x170087DE RID: 34782
-		// (get) Token: 0x0601D536 RID: 120118 RVA: 0x00422BAA File Offset: 0x00420DAA
-		// (set) Token: 0x0601D537 RID: 120119 RVA: 0x00422BB2 File Offset: 0x00420DB2
+		// Token: 0x17008E99 RID: 36505
+		// (get) Token: 0x0601EF5B RID: 126811 RVA: 0x0045305E File Offset: 0x0045125E
+		// (set) Token: 0x0601EF5C RID: 126812 RVA: 0x00453066 File Offset: 0x00451266
 		public EBattleConditionType Type { get; set; }
 
-		// Token: 0x170087DF RID: 34783
-		// (get) Token: 0x0601D538 RID: 120120 RVA: 0x00422BBB File Offset: 0x00420DBB
-		// (set) Token: 0x0601D539 RID: 120121 RVA: 0x00422BC3 File Offset: 0x00420DC3
+		// Token: 0x17008E9A RID: 36506
+		// (get) Token: 0x0601EF5D RID: 126813 RVA: 0x0045306F File Offset: 0x0045126F
+		// (set) Token: 0x0601EF5E RID: 126814 RVA: 0x00453077 File Offset: 0x00451277
 		public int EntityId { get; set; }
 
-		// Token: 0x170087E0 RID: 34784
-		// (get) Token: 0x0601D53A RID: 120122 RVA: 0x00422BCC File Offset: 0x00420DCC
-		// (set) Token: 0x0601D53B RID: 120123 RVA: 0x00422BD4 File Offset: 0x00420DD4
+		// Token: 0x17008E9B RID: 36507
+		// (get) Token: 0x0601EF5F RID: 126815 RVA: 0x00453080 File Offset: 0x00451280
+		// (set) Token: 0x0601EF60 RID: 126816 RVA: 0x00453088 File Offset: 0x00451288
 		public int TagConfigId { get; set; }
 
-		// Token: 0x0601D53C RID: 120124 RVA: 0x00422BDD File Offset: 0x00420DDD
+		// Token: 0x0601EF61 RID: 126817 RVA: 0x00453091 File Offset: 0x00451291
 		public IBattleTagConditionT()
 		{
 			this.Type = EBattleConditionType.BattleTag;

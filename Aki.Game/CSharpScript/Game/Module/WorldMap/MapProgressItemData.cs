@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x020047A2 RID: 18338
+	// Token: 0x020036D3 RID: 14035
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapProgressItemData
 	{
-		// Token: 0x17007815 RID: 30741
-		// (get) Token: 0x0602FF53 RID: 196435 RVA: 0x00B19EA1 File Offset: 0x00B180A1
-		// (set) Token: 0x0602FF54 RID: 196436 RVA: 0x00B19EA9 File Offset: 0x00B180A9
+		// Token: 0x17004AD1 RID: 19153
+		// (get) Token: 0x0602471E RID: 149278 RVA: 0x00A49D7D File Offset: 0x00A47F7D
+		// (set) Token: 0x0602471F RID: 149279 RVA: 0x00A49D85 File Offset: 0x00A47F85
 		public string TitleTextId { get; set; } = string.Empty;
 
-		// Token: 0x17007816 RID: 30742
-		// (get) Token: 0x0602FF55 RID: 196437 RVA: 0x00B19EB2 File Offset: 0x00B180B2
-		// (set) Token: 0x0602FF56 RID: 196438 RVA: 0x00B19EBA File Offset: 0x00B180BA
+		// Token: 0x17004AD2 RID: 19154
+		// (get) Token: 0x06024720 RID: 149280 RVA: 0x00A49D8E File Offset: 0x00A47F8E
+		// (set) Token: 0x06024721 RID: 149281 RVA: 0x00A49D96 File Offset: 0x00A47F96
 		public string CountText { get; set; } = string.Empty;
 
-		// Token: 0x17007817 RID: 30743
-		// (get) Token: 0x0602FF57 RID: 196439 RVA: 0x00B19EC3 File Offset: 0x00B180C3
-		// (set) Token: 0x0602FF58 RID: 196440 RVA: 0x00B19ECB File Offset: 0x00B180CB
+		// Token: 0x17004AD3 RID: 19155
+		// (get) Token: 0x06024722 RID: 149282 RVA: 0x00A49D9F File Offset: 0x00A47F9F
+		// (set) Token: 0x06024723 RID: 149283 RVA: 0x00A49DA7 File Offset: 0x00A47FA7
 		public bool Completed { get; set; }
 
-		// Token: 0x17007818 RID: 30744
-		// (get) Token: 0x0602FF59 RID: 196441 RVA: 0x00B19ED4 File Offset: 0x00B180D4
-		// (set) Token: 0x0602FF5A RID: 196442 RVA: 0x00B19EDC File Offset: 0x00B180DC
+		// Token: 0x17004AD4 RID: 19156
+		// (get) Token: 0x06024724 RID: 149284 RVA: 0x00A49DB0 File Offset: 0x00A47FB0
+		// (set) Token: 0x06024725 RID: 149285 RVA: 0x00A49DB8 File Offset: 0x00A47FB8
 		[Nullable(2)]
 		public string IconPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

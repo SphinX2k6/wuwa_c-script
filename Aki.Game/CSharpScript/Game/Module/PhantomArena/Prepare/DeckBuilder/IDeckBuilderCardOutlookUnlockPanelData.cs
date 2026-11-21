@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005192 RID: 20882
+	// Token: 0x02004162 RID: 16738
 	public interface IDeckBuilderCardOutlookUnlockPanelData
 	{
-		// Token: 0x17008158 RID: 33112
-		// (get) Token: 0x0603567D RID: 218749
+		// Token: 0x17005518 RID: 21784
+		// (get) Token: 0x0602A578 RID: 173432
 		int CardId { get; }
 	}
 }

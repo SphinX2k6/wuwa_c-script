@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E8A RID: 20106
+	// Token: 0x02003E53 RID: 15955
 	public class RogueBattleRoleAffixDetailToggle : GridProxyAbstract<int>
 	{
-		// Token: 0x06033B6A RID: 211818 RVA: 0x00C1CF65 File Offset: 0x00C1B165
+		// Token: 0x060289D5 RID: 166357 RVA: 0x00B66481 File Offset: 0x00B64681
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B6B RID: 211819 RVA: 0x00C1CF9E File Offset: 0x00C1B19E
+		// Token: 0x060289D6 RID: 166358 RVA: 0x00B664BA File Offset: 0x00B646BA
 		private void OnClickExtendToggle(EToggleState _)
 		{
 			Action<int> onSelectCallback = this.OnSelectCallback;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onSelectCallback(base.GridIndex);
 		}
 
-		// Token: 0x06033B6C RID: 211820 RVA: 0x00C1CFB8 File Offset: 0x00C1B1B8
+		// Token: 0x060289D7 RID: 166359 RVA: 0x00B664D4 File Offset: 0x00B646D4
 		public override void Refresh(int id, bool isSelected, int gridIndex)
 		{
 			this.Id = id;
@@ -51,22 +51,22 @@ namespace CSharpScript.Game.Module.RogueBattle
 			extendToggle2.OnStateChange.Add(new Action<EToggleState>(this.OnClickExtendToggle));
 		}
 
-		// Token: 0x06033B6D RID: 211821 RVA: 0x00C1D04E File Offset: 0x00C1B24E
+		// Token: 0x060289D8 RID: 166360 RVA: 0x00B6656A File Offset: 0x00B6476A
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x06033B6E RID: 211822 RVA: 0x00C1D061 File Offset: 0x00C1B261
+		// Token: 0x060289D9 RID: 166361 RVA: 0x00B6657D File Offset: 0x00B6477D
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0401B745 RID: 112453
+		// Token: 0x04016118 RID: 90392
 		public int Id;
 
-		// Token: 0x0401B746 RID: 112454
+		// Token: 0x04016119 RID: 90393
 		[Nullable(2)]
 		public Action<int> OnSelectCallback;
 	}

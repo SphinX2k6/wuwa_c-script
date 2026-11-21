@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x02000F40 RID: 3904
+// Token: 0x020003F5 RID: 1013
 public class DrinksRequireInfo : IDrinksRequireInfo
 {
-	// Token: 0x170007A3 RID: 1955
-	// (get) Token: 0x06006394 RID: 25492 RVA: 0x00139A70 File Offset: 0x00137C70
-	// (set) Token: 0x06006395 RID: 25493 RVA: 0x00139A78 File Offset: 0x00137C78
+	// Token: 0x170007C5 RID: 1989
+	// (get) Token: 0x0600372C RID: 14124 RVA: 0x0014233C File Offset: 0x0014053C
+	// (set) Token: 0x0600372D RID: 14125 RVA: 0x00142344 File Offset: 0x00140544
 	public int RequireId { get; set; }
 
-	// Token: 0x170007A4 RID: 1956
-	// (get) Token: 0x06006396 RID: 25494 RVA: 0x00139A81 File Offset: 0x00137C81
-	// (set) Token: 0x06006397 RID: 25495 RVA: 0x00139A89 File Offset: 0x00137C89
+	// Token: 0x170007C6 RID: 1990
+	// (get) Token: 0x0600372E RID: 14126 RVA: 0x0014234D File Offset: 0x0014054D
+	// (set) Token: 0x0600372F RID: 14127 RVA: 0x00142355 File Offset: 0x00140555
 	public EDrinksRequireType Type { get; set; }
 
-	// Token: 0x170007A5 RID: 1957
-	// (get) Token: 0x06006398 RID: 25496 RVA: 0x00139A92 File Offset: 0x00137C92
-	// (set) Token: 0x06006399 RID: 25497 RVA: 0x00139A9A File Offset: 0x00137C9A
+	// Token: 0x170007C7 RID: 1991
+	// (get) Token: 0x06003730 RID: 14128 RVA: 0x0014235E File Offset: 0x0014055E
+	// (set) Token: 0x06003731 RID: 14129 RVA: 0x00142366 File Offset: 0x00140566
 	public int? FlavorRangeId { get; set; }
 
-	// Token: 0x170007A6 RID: 1958
-	// (get) Token: 0x0600639A RID: 25498 RVA: 0x00139AA3 File Offset: 0x00137CA3
-	// (set) Token: 0x0600639B RID: 25499 RVA: 0x00139AAB File Offset: 0x00137CAB
+	// Token: 0x170007C8 RID: 1992
+	// (get) Token: 0x06003732 RID: 14130 RVA: 0x0014236F File Offset: 0x0014056F
+	// (set) Token: 0x06003733 RID: 14131 RVA: 0x00142377 File Offset: 0x00140577
 	public bool Completed { get; set; }
 }

@@ -16,33 +16,28 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x020069AC RID: 27052
+	// Token: 0x02005B08 RID: 23304
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class LevelGeneralController : ControllerBase
 	{
-		// Token: 0x17009856 RID: 38998
-		// (get) Token: 0x06043476 RID: 275574 RVA: 0x01066A06 File Offset: 0x01064C06
+		// Token: 0x17006D36 RID: 27958
+		// (get) Token: 0x060394AE RID: 234670 RVA: 0x0100AC6E File Offset: 0x01008E6E
 		protected override bool IsTickEvenPausedInternal { get; } = 1;
 
-		// Token: 0x06043477 RID: 275575 RVA: 0x01066A10 File Offset: 0x01064C10
+		// Token: 0x060394AF RID: 234671 RVA: 0x0100AC76 File Offset: 0x01008E76
 		private void InitBaseInfo()
 		{
 			this.TempEventsMap = new Dictionary<int, List<EventTempData>>();
 			this.CurExecuteEventMap = new Dictionary<int, LevelEventBase>();
 			this.FinishCallbackMap = new Dictionary<int, Action<ELevelEventState>>();
 			this.FinishActionContextMap = new Dictionary<int, List<int>>();
-			this.NeedFinishReqMap = new Dictionary<int, bool>();
-			this.StartIndexMap = new Dictionary<int, int>();
 			this.LevelEventLogOpen = true;
-			if (!Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				this.LevelEventLogOpen = false;
-			}
+			this.LevelEventLogOpen = false;
 		}
 
-		// Token: 0x06043478 RID: 275576 RVA: 0x01066A7C File Offset: 0x01064C7C
+		// Token: 0x060394B0 RID: 234672 RVA: 0x0100ACB4 File Offset: 0x01008EB4
 		protected override bool OnInit()
 		{
 			LevelGeneralCommons.Init();
@@ -57,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return true;
 		}
 
-		// Token: 0x06043479 RID: 275577 RVA: 0x01066B2C File Offset: 0x01064D2C
+		// Token: 0x060394B1 RID: 234673 RVA: 0x0100AD64 File Offset: 0x01008F64
 		protected override bool OnClear()
 		{
 			LevelGeneralCommons.Clear();
@@ -71,33 +66,33 @@ namespace CSharpScript.Game.LevelGamePlay
 			return true;
 		}
 
-		// Token: 0x0604347A RID: 275578 RVA: 0x01066BD6 File Offset: 0x01064DD6
+		// Token: 0x060394B2 RID: 234674 RVA: 0x0100AE0E File Offset: 0x0100900E
 		protected void AddAttributeEvent()
 		{
 			FormationAttributeController.Instance.AddValueListener(EFormationAttributeId.FlameRaceStrength, new TValueListener(this.OnFlameRaceStrengthChanged), null);
 			FormationAttributeController.Instance.AddMaxListener(EFormationAttributeId.FlameRaceStrength, new TValueListener(this.OnFlameRaceStrengthMaxChanged), null);
 		}
 
-		// Token: 0x0604347B RID: 275579 RVA: 0x01066C0A File Offset: 0x01064E0A
+		// Token: 0x060394B3 RID: 234675 RVA: 0x0100AE42 File Offset: 0x01009042
 		protected void RemoveAttributeEvent()
 		{
 			FormationAttributeController.Instance.RemoveValueListener(EFormationAttributeId.FlameRaceStrength, new TValueListener(this.OnFlameRaceStrengthChanged));
 			FormationAttributeController.Instance.RemoveMaxListener(EFormationAttributeId.FlameRaceStrength, new TValueListener(this.OnFlameRaceStrengthMaxChanged));
 		}
 
-		// Token: 0x0604347C RID: 275580 RVA: 0x01066C3C File Offset: 0x01064E3C
+		// Token: 0x060394B4 RID: 234676 RVA: 0x0100AE74 File Offset: 0x01009074
 		private void OnFlameRaceStrengthChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 		{
 			this.RefreshFlameRaceStrengthMpc();
 		}
 
-		// Token: 0x0604347D RID: 275581 RVA: 0x01066C44 File Offset: 0x01064E44
+		// Token: 0x060394B5 RID: 234677 RVA: 0x0100AE7C File Offset: 0x0100907C
 		private void OnFlameRaceStrengthMaxChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 		{
 			this.RefreshFlameRaceStrengthMpc();
 		}
 
-		// Token: 0x0604347E RID: 275582 RVA: 0x01066C4C File Offset: 0x01064E4C
+		// Token: 0x060394B6 RID: 234678 RVA: 0x0100AE84 File Offset: 0x01009084
 		private void RefreshFlameRaceStrengthMpc()
 		{
 			UMaterialParameterCollection sceneInteractionMaterialParameterCollection = RenderDataManager.Instance.GetSceneInteractionMaterialParameterCollection();
@@ -111,7 +106,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			UKuroMaterialParameterCollectionManager.SetScalarParameterValueTimeCurve(GlobalData.GameInstance.GetWorld(), sceneInteractionMaterialParameterCollection, FNameUtil.GetDynamicFName("FlameRaceStrength").Value, value / max, scalarParameterValue, 0.1f, GlobalData.GameInstance.GetWorld(), false);
 		}
 
-		// Token: 0x0604347F RID: 275583 RVA: 0x01066CE5 File Offset: 0x01064EE5
+		// Token: 0x060394B7 RID: 234679 RVA: 0x0100AF1D File Offset: 0x0100911D
 		private void HandleAddToTickList(bool isAdd, LevelEventBase eventObj)
 		{
 			if (isAdd)
@@ -122,7 +117,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			LevelEventCenter.AddToTickList(false, eventObj);
 		}
 
-		// Token: 0x06043480 RID: 275584 RVA: 0x01066CFC File Offset: 0x01064EFC
+		// Token: 0x060394B8 RID: 234680 RVA: 0x0100AF34 File Offset: 0x01009134
 		private void OnHandleNextAction(int groupId)
 		{
 			TimerSystem.Instance.Next(delegate(float _)
@@ -131,25 +126,25 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, null, null);
 		}
 
-		// Token: 0x06043481 RID: 275585 RVA: 0x01066D2F File Offset: 0x01064F2F
+		// Token: 0x060394B9 RID: 234681 RVA: 0x0100AF67 File Offset: 0x01009167
 		private void OnHandleActionFailure(int groupId, string type, bool isError, bool showLog)
 		{
 			LevelGeneralController.Instance.HandleActionsFailure(groupId, type, isError, showLog);
 		}
 
-		// Token: 0x06043482 RID: 275586 RVA: 0x01066D40 File Offset: 0x01064F40
+		// Token: 0x060394BA RID: 234682 RVA: 0x0100AF78 File Offset: 0x01009178
 		private void OnAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			LevelConditionRegistry.Instance.RegisterEntityPawnRange(handle.Entity);
 		}
 
-		// Token: 0x06043483 RID: 275587 RVA: 0x01066D52 File Offset: 0x01064F52
+		// Token: 0x060394BB RID: 234683 RVA: 0x0100AF8A File Offset: 0x0100918A
 		private void OnSettingFrameRateChanged(int frameRate)
 		{
 			LevelGeneralBaseFrameScheduler.Instance.OnSettingFrameRateChanged((float)frameRate);
 		}
 
-		// Token: 0x06043484 RID: 275588 RVA: 0x01066D60 File Offset: 0x01064F60
+		// Token: 0x060394BC RID: 234684 RVA: 0x0100AF98 File Offset: 0x01009198
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -175,7 +170,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return list;
 		}
 
-		// Token: 0x06043485 RID: 275589 RVA: 0x01066E28 File Offset: 0x01065028
+		// Token: 0x060394BD RID: 234685 RVA: 0x0100B060 File Offset: 0x01009260
 		public void ExecuteActionsNew(IList<ActionInfo> actions, GeneralContext context, [Nullable(2)] Action<ELevelEventState> finishCallback = null)
 		{
 			int num = this.InstanceId - 1;
@@ -214,10 +209,6 @@ namespace CSharpScript.Game.LevelGamePlay
 				{
 					num3--;
 				}
-				else if (Info.Instance.IsPlayInEditor && actionInfo2.EdLocalDisabled.GetValueOrDefault())
-				{
-					num3--;
-				}
 				else
 				{
 					EventTempData eventTempData2 = EventTempData.Create();
@@ -237,7 +228,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			this.HandleNextAction(num2);
 		}
 
-		// Token: 0x06043486 RID: 275590 RVA: 0x0106706C File Offset: 0x0106526C
+		// Token: 0x060394BE RID: 234686 RVA: 0x0100B27C File Offset: 0x0100947C
 		public unsafe void ExecuteActionsByServerNotify(List<ActionInfo> actions, GeneralContext context, int playerId, int sessionId, int startIndex, int endIndex, bool needFinishReq, [Nullable(2)] Action<ELevelEventState> finishCallback = null)
 		{
 			global::Log instance = global::Log.Instance;
@@ -269,7 +260,7 @@ namespace CSharpScript.Game.LevelGamePlay
 				string item = "";
 				try
 				{
-					item = Json.Stringify<GeneralContext>(context, null);
+					item = Json.Stringify(context, null);
 				}
 				catch (Exception)
 				{
@@ -278,7 +269,7 @@ namespace CSharpScript.Game.LevelGamePlay
 				string item2 = "";
 				try
 				{
-					item2 = Json.Stringify<List<ActionInfo>>(actions, null);
+					item2 = Json.Stringify(actions, null);
 				}
 				catch (Exception)
 				{
@@ -301,18 +292,29 @@ namespace CSharpScript.Game.LevelGamePlay
 			{
 				this.FinishCallbackMap[sessionId] = finishCallback;
 			}
-			this.NeedFinishReqMap[sessionId] = needFinishReq;
-			if (needFinishReq)
+			List<int> list;
+			if (!this.FinishActionContextMap.TryGetValue(sessionId, out list))
 			{
-				this.StartIndexMap[sessionId] = startIndex;
+				this.FinishActionContextMap[sessionId] = new List<int>
+				{
+					playerId,
+					sessionId,
+					startIndex,
+					(needFinishReq > false) ? 1 : 0
+				};
 			}
-			List<EventTempData> list = null;
-			List<EventTempData> list2;
-			if (this.TempEventsMap != null && this.TempEventsMap.TryGetValue(sessionId, out list2))
+			else if (needFinishReq)
 			{
-				list = list2;
+				list[2] = startIndex;
+				list[3] = 1;
 			}
-			if (list != null)
+			List<EventTempData> list2 = null;
+			List<EventTempData> list3;
+			if (this.TempEventsMap != null && this.TempEventsMap.TryGetValue(sessionId, out list3))
+			{
+				list2 = list3;
+			}
+			if (list2 != null)
 			{
 				for (int i = startIndex; i <= endIndex; i++)
 				{
@@ -329,15 +331,15 @@ namespace CSharpScript.Game.LevelGamePlay
 					eventTempData.ActionIndex = i;
 					eventTempData.ActionId = actionInfo.ActionId.GetValueOrDefault();
 					eventTempData.SessionId = sessionId;
-					if (list.Count <= 0 || list[0].ActionIndex < eventTempData.ActionIndex)
+					if (list2.Count <= 0 || list2[0].ActionIndex < eventTempData.ActionIndex)
 					{
-						list.Insert(0, eventTempData);
+						list2.Insert(0, eventTempData);
 					}
 				}
 				return;
 			}
-			list = new List<EventTempData>();
-			this.TempEventsMap[sessionId] = list;
+			list2 = new List<EventTempData>();
+			this.TempEventsMap[sessionId] = list2;
 			for (int j = endIndex; j >= startIndex; j--)
 			{
 				ActionInfo actionInfo2 = actions[j];
@@ -353,17 +355,12 @@ namespace CSharpScript.Game.LevelGamePlay
 				eventTempData2.ActionIndex = j;
 				eventTempData2.ActionId = actionInfo2.ActionId.GetValueOrDefault();
 				eventTempData2.SessionId = sessionId;
-				list.Add(eventTempData2);
+				list2.Add(eventTempData2);
 			}
-			List<int> list3 = new List<int>();
-			list3.Add(playerId);
-			list3.Add(sessionId);
-			list3.Add(startIndex);
-			this.FinishActionContextMap[sessionId] = list3;
 			this.HandleNextAction(sessionId);
 		}
 
-		// Token: 0x06043487 RID: 275591 RVA: 0x01067524 File Offset: 0x01065724
+		// Token: 0x060394BF RID: 234687 RVA: 0x0100B740 File Offset: 0x01009940
 		public void HandleNextAction(int groupId)
 		{
 			List<EventTempData> list = null;
@@ -393,7 +390,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			this.HandleActionsFinish(groupId, "");
 		}
 
-		// Token: 0x06043488 RID: 275592 RVA: 0x010675F4 File Offset: 0x010657F4
+		// Token: 0x060394C0 RID: 234688 RVA: 0x0100B810 File Offset: 0x01009A10
 		private void HandleActionsFinish(int groupId, string errorMessage = "")
 		{
 			List<int> list = null;
@@ -427,15 +424,16 @@ namespace CSharpScript.Game.LevelGamePlay
 				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("ContextArray", item);
 				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			}
-			bool flag;
-			if (list != null && this.NeedFinishReqMap != null && this.NeedFinishReqMap.TryGetValue(groupId, out flag) && flag)
+			if (list != null)
 			{
 				this.FinishActionContextMap.Remove(groupId);
-				int playerId = list[0];
-				int sessionId = list[1];
-				int num;
-				int startIndex = (this.StartIndexMap != null && this.StartIndexMap.TryGetValue(groupId, out num)) ? num : list[2];
-				this.HandleFinishActions(playerId, sessionId, startIndex, errorMessage);
+				if (list[3] != 0)
+				{
+					int playerId = list[0];
+					int sessionId = list[1];
+					int startIndex = list[2];
+					this.HandleFinishActions(playerId, sessionId, startIndex, errorMessage);
+				}
 			}
 			Action<ELevelEventState> action = null;
 			Action<ELevelEventState> action2;
@@ -450,7 +448,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x06043489 RID: 275593 RVA: 0x01067768 File Offset: 0x01065968
+		// Token: 0x060394C1 RID: 234689 RVA: 0x0100B954 File Offset: 0x01009B54
 		public void HandleActionsFailure(int groupId, string failureMsg, bool isError, bool showLog)
 		{
 			List<EventTempData> list = null;
@@ -492,11 +490,14 @@ namespace CSharpScript.Game.LevelGamePlay
 				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("ContextArray", item);
 				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 				this.FinishActionContextMap.Remove(groupId);
-				string errorMessage = "行为:" + failureMsg + " 执行失败";
-				int playerId = list3[0];
-				int sessionId = list3[1];
-				int startIndex = list3[2];
-				this.HandleFinishActions(playerId, sessionId, startIndex, errorMessage);
+				if (list3[3] != 0)
+				{
+					string errorMessage = "行为:" + failureMsg + " 执行失败";
+					int playerId = list3[0];
+					int sessionId = list3[1];
+					int startIndex = list3[2];
+					this.HandleFinishActions(playerId, sessionId, startIndex, errorMessage);
+				}
 			}
 			Action<ELevelEventState> action = null;
 			Action<ELevelEventState> action2;
@@ -525,7 +526,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			instance2.Warn(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x0604348A RID: 275594 RVA: 0x01067934 File Offset: 0x01065B34
+		// Token: 0x060394C2 RID: 234690 RVA: 0x0100BB2C File Offset: 0x01009D2C
 		public void HandleFinishActions(int playerId, int sessionId, int startIndex, string errorMessage)
 		{
 			if (this.LevelEventLogOpen)
@@ -542,7 +543,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			});
 		}
 
-		// Token: 0x0604348B RID: 275595 RVA: 0x010679A0 File Offset: 0x01065BA0
+		// Token: 0x060394C3 RID: 234691 RVA: 0x0100BB98 File Offset: 0x01009D98
 		public void StopActionsExecute(int sessionId)
 		{
 			List<EventTempData> list = null;
@@ -567,7 +568,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x0604348C RID: 275596 RVA: 0x01067A00 File Offset: 0x01065C00
+		// Token: 0x060394C4 RID: 234692 RVA: 0x0100BBF8 File Offset: 0x01009DF8
 		public bool CheckCondition(string inConditionGroupId, [Nullable(2)] AActor inTrigger, bool inDontFoundReturn = true, params object[] eventArgs)
 		{
 			if (inConditionGroupId == "None")
@@ -613,7 +614,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return flag;
 		}
 
-		// Token: 0x0604348D RID: 275597 RVA: 0x01067B14 File Offset: 0x01065D14
+		// Token: 0x060394C5 RID: 234693 RVA: 0x0100BD0C File Offset: 0x01009F0C
 		[NullableContext(2)]
 		public bool CheckConditionNew(IConditionGroup conditionGroup, AActor inTrigger, GeneralContext context = null, EConditionCheckMode? mode = null)
 		{
@@ -645,7 +646,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return flag;
 		}
 
-		// Token: 0x0604348E RID: 275598 RVA: 0x01067BF0 File Offset: 0x01065DF0
+		// Token: 0x060394C6 RID: 234694 RVA: 0x0100BDE8 File Offset: 0x01009FE8
 		private unsafe void HandleAction(int groupId, EventTempData inEventInfo)
 		{
 			string eventType = inEventInfo.EventType;
@@ -675,7 +676,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			this.HandleActionInternal(groupId, inEventInfo);
 		}
 
-		// Token: 0x0604348F RID: 275599 RVA: 0x01067CE0 File Offset: 0x01065EE0
+		// Token: 0x060394C7 RID: 234695 RVA: 0x0100BED8 File Offset: 0x0100A0D8
 		private unsafe void HandleActionInternal(int groupId, EventTempData inEventInfo)
 		{
 			if (this.LevelEventLogOpen)
@@ -736,7 +737,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			EventTempData.Release(inEventInfo);
 		}
 
-		// Token: 0x06043490 RID: 275600 RVA: 0x01067EC8 File Offset: 0x010660C8
+		// Token: 0x060394C8 RID: 234696 RVA: 0x0100C0C0 File Offset: 0x0100A2C0
 		public unsafe bool HandleCondition(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, string inConditionGroupId, params object[] eventArgs)
 		{
 			LevelConditionBase condition = LevelConditionCenter.Instance.GetCondition(inConditionInfo.Type);
@@ -756,7 +757,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return false;
 		}
 
-		// Token: 0x06043491 RID: 275601 RVA: 0x01067F74 File Offset: 0x01066174
+		// Token: 0x060394C9 RID: 234697 RVA: 0x0100C16C File Offset: 0x0100A36C
 		[NullableContext(2)]
 		private bool HandleConditionNew([Nullable(1)] ICondition2 condition, AActor inTrigger, GeneralContext context = null, EConditionCheckMode? mode = null)
 		{
@@ -776,22 +777,22 @@ namespace CSharpScript.Game.LevelGamePlay
 			}));
 		}
 
-		// Token: 0x06043492 RID: 275602 RVA: 0x01067FE8 File Offset: 0x010661E8
+		// Token: 0x060394CA RID: 234698 RVA: 0x0100C1E0 File Offset: 0x0100A3E0
 		protected override void OnTick(float deltaTime)
 		{
 			LevelGeneralBaseFrameScheduler.Instance.UpdateActionFrameScheduler();
 			LevelEventCenter.Tick(deltaTime);
 		}
 
-		// Token: 0x06043493 RID: 275603 RVA: 0x01067FFA File Offset: 0x010661FA
+		// Token: 0x060394CB RID: 234699 RVA: 0x0100C1F2 File Offset: 0x0100A3F2
 		protected override bool OnLeaveLevel()
 		{
 			LevelGeneralBaseFrameScheduler.Instance.ClearActionFrameScheduler();
 			return true;
 		}
 
-		// Token: 0x17009857 RID: 38999
-		// (get) Token: 0x06043494 RID: 275604 RVA: 0x01068007 File Offset: 0x01066207
+		// Token: 0x17006D37 RID: 27959
+		// (get) Token: 0x060394CC RID: 234700 RVA: 0x0100C1FF File Offset: 0x0100A3FF
 		public static LevelGeneralController Instance
 		{
 			get
@@ -800,7 +801,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x06043495 RID: 275605 RVA: 0x0106800E File Offset: 0x0106620E
+		// Token: 0x060394CD RID: 234701 RVA: 0x0100C206 File Offset: 0x0100A406
 		public static LevelGeneralController GetOrCreateInstance()
 		{
 			if (LevelGeneralController._Instance == null)
@@ -810,7 +811,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return LevelGeneralController._Instance;
 		}
 
-		// Token: 0x06043496 RID: 275606 RVA: 0x01068022 File Offset: 0x01066222
+		// Token: 0x060394CE RID: 234702 RVA: 0x0100C21A File Offset: 0x0100A41A
 		public static bool CreateInstance()
 		{
 			if (LevelGeneralController._Instance != null)
@@ -821,24 +822,24 @@ namespace CSharpScript.Game.LevelGamePlay
 			return true;
 		}
 
-		// Token: 0x06043497 RID: 275607 RVA: 0x01068038 File Offset: 0x01066238
+		// Token: 0x060394CF RID: 234703 RVA: 0x0100C230 File Offset: 0x0100A430
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043498 RID: 275608 RVA: 0x0106803A File Offset: 0x0106623A
+		// Token: 0x060394D0 RID: 234704 RVA: 0x0100C232 File Offset: 0x0100A432
 		public static void ResetStaticDefaultValue()
 		{
 			LevelGeneralController._Instance = null;
 		}
 
-		// Token: 0x06043499 RID: 275609 RVA: 0x01068042 File Offset: 0x01066242
+		// Token: 0x060394D1 RID: 234705 RVA: 0x0100C23A File Offset: 0x0100A43A
 		static LevelGeneralController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelGeneralController.CreateStaticDefaultValue), new Action(LevelGeneralController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040230C3 RID: 143555
+		// Token: 0x0401E2AD RID: 123565
 		[Nullable(new byte[]
 		{
 			2,
@@ -847,7 +848,7 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		private Dictionary<int, List<EventTempData>> TempEventsMap;
 
-		// Token: 0x040230C4 RID: 143556
+		// Token: 0x0401E2AE RID: 123566
 		[Nullable(new byte[]
 		{
 			2,
@@ -855,10 +856,10 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		private Dictionary<int, LevelEventBase> CurExecuteEventMap;
 
-		// Token: 0x040230C5 RID: 143557
+		// Token: 0x0401E2AF RID: 123567
 		private int InstanceId;
 
-		// Token: 0x040230C6 RID: 143558
+		// Token: 0x0401E2B0 RID: 123568
 		[Nullable(new byte[]
 		{
 			2,
@@ -866,7 +867,7 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		private Dictionary<int, Action<ELevelEventState>> FinishCallbackMap;
 
-		// Token: 0x040230C7 RID: 143559
+		// Token: 0x0401E2B1 RID: 123569
 		[Nullable(new byte[]
 		{
 			2,
@@ -874,18 +875,10 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		private Dictionary<int, List<int>> FinishActionContextMap;
 
-		// Token: 0x040230C8 RID: 143560
-		[Nullable(2)]
-		private Dictionary<int, bool> NeedFinishReqMap;
-
-		// Token: 0x040230C9 RID: 143561
-		[Nullable(2)]
-		private Dictionary<int, int> StartIndexMap;
-
-		// Token: 0x040230CA RID: 143562
+		// Token: 0x0401E2B2 RID: 123570
 		public bool LevelEventLogOpen;
 
-		// Token: 0x040230CB RID: 143563
+		// Token: 0x0401E2B3 RID: 123571
 		[Nullable(2)]
 		private static LevelGeneralController _Instance;
 	}

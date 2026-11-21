@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x0200609E RID: 24734
+	// Token: 0x0200501C RID: 20508
 	public class Spring25EnvelopeView : UiViewBase
 	{
-		// Token: 0x0603E852 RID: 256082 RVA: 0x00F1C7FA File Offset: 0x00F1A9FA
+		// Token: 0x06033516 RID: 210198 RVA: 0x00E635BE File Offset: 0x00E617BE
 		[NullableContext(1)]
 		public Spring25EnvelopeView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603E853 RID: 256083 RVA: 0x00F1C804 File Offset: 0x00F1AA04
+		// Token: 0x06033517 RID: 210199 RVA: 0x00E635C8 File Offset: 0x00E617C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E854 RID: 256084 RVA: 0x00F1C910 File Offset: 0x00F1AB10
+		// Token: 0x06033518 RID: 210200 RVA: 0x00E636D4 File Offset: 0x00E618D4
 		protected override void OnStart()
 		{
 			Spring25EnvelopeViewData spring25EnvelopeViewData = this.OpenParam as Spring25EnvelopeViewData;
@@ -51,33 +51,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(3), spring25EnvelopeViewData.TitleTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603E855 RID: 256085 RVA: 0x00F1C961 File Offset: 0x00F1AB61
+		// Token: 0x06033519 RID: 210201 RVA: 0x00E63725 File Offset: 0x00E61925
 		private void HandleBackClick()
 		{
 			ActivitySpring25Controller.Instance.HandleResetCurrentSignId();
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603E856 RID: 256086 RVA: 0x00F1C974 File Offset: 0x00F1AB74
+		// Token: 0x0603351A RID: 210202 RVA: 0x00E63738 File Offset: 0x00E61938
 		private void HandleConfirmClick()
 		{
 			ActivitySpring25Controller.Instance.HandleResetCurrentSignId();
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200C2F5 RID: 49909
+		// Token: 0x0200ACE0 RID: 44256
 		private class EComponent
 		{
-			// Token: 0x0403ADE4 RID: 241124
+			// Token: 0x0403574C RID: 218956
 			public const int InfoText = 0;
 
-			// Token: 0x0403ADE5 RID: 241125
+			// Token: 0x0403574D RID: 218957
 			public const int BackButton = 1;
 
-			// Token: 0x0403ADE6 RID: 241126
+			// Token: 0x0403574E RID: 218958
 			public const int ConfirmButton = 2;
 
-			// Token: 0x0403ADE7 RID: 241127
+			// Token: 0x0403574F RID: 218959
 			public const int TitleText = 3;
 		}
 	}

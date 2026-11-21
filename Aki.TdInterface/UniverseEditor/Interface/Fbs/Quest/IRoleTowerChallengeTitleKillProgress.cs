@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040C1 RID: 16577
+	// Token: 0x02004502 RID: 17666
 	public struct IRoleTowerChallengeTitleKillProgress : IFlatbufferObject
 	{
-		// Token: 0x170074F7 RID: 29943
-		// (get) Token: 0x0601826E RID: 98926 RVA: 0x0037B19D File Offset: 0x0037939D
+		// Token: 0x17007AFD RID: 31485
+		// (get) Token: 0x0601990F RID: 104719 RVA: 0x003A50ED File Offset: 0x003A32ED
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601826F RID: 98927 RVA: 0x0037B1AA File Offset: 0x003793AA
+		// Token: 0x06019910 RID: 104720 RVA: 0x003A50FA File Offset: 0x003A32FA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018270 RID: 98928 RVA: 0x0037B1B4 File Offset: 0x003793B4
+		// Token: 0x06019911 RID: 104721 RVA: 0x003A5104 File Offset: 0x003A3304
 		public static IRoleTowerChallengeTitleKillProgress GetRootAsIRoleTowerChallengeTitleKillProgress(ByteBuffer _bb)
 		{
 			return IRoleTowerChallengeTitleKillProgress.GetRootAsIRoleTowerChallengeTitleKillProgress(_bb, default(IRoleTowerChallengeTitleKillProgress));
 		}
 
-		// Token: 0x06018271 RID: 98929 RVA: 0x0037B1D0 File Offset: 0x003793D0
+		// Token: 0x06019912 RID: 104722 RVA: 0x003A5120 File Offset: 0x003A3320
 		public static IRoleTowerChallengeTitleKillProgress GetRootAsIRoleTowerChallengeTitleKillProgress(ByteBuffer _bb, IRoleTowerChallengeTitleKillProgress obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018272 RID: 98930 RVA: 0x0037B1ED File Offset: 0x003793ED
+		// Token: 0x06019913 RID: 104723 RVA: 0x003A513D File Offset: 0x003A333D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018273 RID: 98931 RVA: 0x0037B1FC File Offset: 0x003793FC
+		// Token: 0x06019914 RID: 104724 RVA: 0x003A514C File Offset: 0x003A334C
 		public IRoleTowerChallengeTitleKillProgress __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170074F8 RID: 29944
-		// (get) Token: 0x06018274 RID: 98932 RVA: 0x0037B20C File Offset: 0x0037940C
+		// Token: 0x17007AFE RID: 31486
+		// (get) Token: 0x06019915 RID: 104725 RVA: 0x003A515C File Offset: 0x003A335C
 		public ERoleTowerChallengeTitleType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018275 RID: 98933 RVA: 0x0037B248 File Offset: 0x00379448
+		// Token: 0x06019916 RID: 104726 RVA: 0x003A5198 File Offset: 0x003A3398
 		public static Offset<IRoleTowerChallengeTitleKillProgress> CreateIRoleTowerChallengeTitleKillProgress(FlatBufferBuilder builder, ERoleTowerChallengeTitleType Type = ERoleTowerChallengeTitleType.KillProgress)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRoleTowerChallengeTitleKillProgress.EndIRoleTowerChallengeTitleKillProgress(builder);
 		}
 
-		// Token: 0x06018276 RID: 98934 RVA: 0x0037B25E File Offset: 0x0037945E
+		// Token: 0x06019917 RID: 104727 RVA: 0x003A51AE File Offset: 0x003A33AE
 		public static void StartIRoleTowerChallengeTitleKillProgress(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06018277 RID: 98935 RVA: 0x0037B267 File Offset: 0x00379467
+		// Token: 0x06019918 RID: 104728 RVA: 0x003A51B7 File Offset: 0x003A33B7
 		public static void AddType(FlatBufferBuilder builder, ERoleTowerChallengeTitleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06018278 RID: 98936 RVA: 0x0037B272 File Offset: 0x00379472
+		// Token: 0x06019919 RID: 104729 RVA: 0x003A51C2 File Offset: 0x003A33C2
 		public static Offset<IRoleTowerChallengeTitleKillProgress> EndIRoleTowerChallengeTitleKillProgress(FlatBufferBuilder builder)
 		{
 			return new Offset<IRoleTowerChallengeTitleKillProgress>(builder.EndTable());
 		}
 
-		// Token: 0x06018279 RID: 98937 RVA: 0x0037B280 File Offset: 0x00379480
+		// Token: 0x0601991A RID: 104730 RVA: 0x003A51D0 File Offset: 0x003A33D0
 		public IRoleTowerChallengeTitleKillProgressT UnPack()
 		{
 			IRoleTowerChallengeTitleKillProgressT roleTowerChallengeTitleKillProgressT = new IRoleTowerChallengeTitleKillProgressT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return roleTowerChallengeTitleKillProgressT;
 		}
 
-		// Token: 0x0601827A RID: 98938 RVA: 0x0037B29B File Offset: 0x0037949B
+		// Token: 0x0601991B RID: 104731 RVA: 0x003A51EB File Offset: 0x003A33EB
 		public void UnPackTo(IRoleTowerChallengeTitleKillProgressT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601827B RID: 98939 RVA: 0x0037B2AC File Offset: 0x003794AC
+		// Token: 0x0601991C RID: 104732 RVA: 0x003A51FC File Offset: 0x003A33FC
 		public static Offset<IRoleTowerChallengeTitleKillProgress> Pack(FlatBufferBuilder builder, IRoleTowerChallengeTitleKillProgressT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRoleTowerChallengeTitleKillProgress.CreateIRoleTowerChallengeTitleKillProgress(builder, _o.Type);
 		}
 
-		// Token: 0x0400BC56 RID: 48214
+		// Token: 0x0400C63F RID: 50751
 		private Table __p;
 	}
 }

@@ -3,17 +3,17 @@ using CSharpScript.Game.Module.Map.MapDefine;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 {
-	// Token: 0x020054A7 RID: 21671
+	// Token: 0x0200448A RID: 17546
 	public interface IMapMarkPreemptiveFrameTask : IPreemptiveFrameTask
 	{
-		// Token: 0x170084AE RID: 33966
-		// (get) Token: 0x060375E9 RID: 226793
-		// (set) Token: 0x060375EA RID: 226794
+		// Token: 0x1700587A RID: 22650
+		// (get) Token: 0x0602C53F RID: 181567
+		// (set) Token: 0x0602C540 RID: 181568
 		EMarkType MarkType { get; set; }
 
-		// Token: 0x170084AF RID: 33967
-		// (get) Token: 0x060375EB RID: 226795
-		// (set) Token: 0x060375EC RID: 226796
+		// Token: 0x1700587B RID: 22651
+		// (get) Token: 0x0602C541 RID: 181569
+		// (set) Token: 0x0602C542 RID: 181570
 		int MarkId { get; set; }
 	}
 }

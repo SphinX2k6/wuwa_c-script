@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CB2 RID: 27826
+	// Token: 0x02005E2C RID: 24108
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckIsCharacterHoldingHands : LevelConditionBase
 	{
-		// Token: 0x060445F6 RID: 280054 RVA: 0x010DC5A8 File Offset: 0x010DA7A8
+		// Token: 0x0603A750 RID: 239440 RVA: 0x01086554 File Offset: 0x01084754
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			ICheckIsCharacterHoldingHands checkIsCharacterHoldingHands = inConditionInfo as ICheckIsCharacterHoldingHands;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return characterHoldingHandsComponent != null && checkIsCharacterHoldingHands.IsHoldingHands == characterHoldingHandsComponent.GetRoleState() > EHoldingHandsRoleState.None;
 		}
 
-		// Token: 0x060445F7 RID: 280055 RVA: 0x010DC5FC File Offset: 0x010DA7FC
+		// Token: 0x0603A751 RID: 239441 RVA: 0x010865A8 File Offset: 0x010847A8
 		[return: Nullable(2)]
 		private EntityHandle GetEntityHandle(ICheckHoldingHandsCharacterType target)
 		{

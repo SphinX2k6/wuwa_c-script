@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012E4 RID: 4836
+// Token: 0x02000798 RID: 1944
 [NullableContext(1)]
 [Nullable(0)]
 public class MapTravelMainView : UiViewBase
 {
-	// Token: 0x06008559 RID: 34137 RVA: 0x001C5B7C File Offset: 0x001C3D7C
+	// Token: 0x060058F4 RID: 22772 RVA: 0x001CE9D8 File Offset: 0x001CCBD8
 	public MapTravelMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600855A RID: 34138 RVA: 0x001C5C00 File Offset: 0x001C3E00
+	// Token: 0x060058F5 RID: 22773 RVA: 0x001CEA5C File Offset: 0x001CCC5C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 28;
@@ -98,7 +97,7 @@ public class MapTravelMainView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600855B RID: 34139 RVA: 0x001C6038 File Offset: 0x001C4238
+	// Token: 0x060058F6 RID: 22774 RVA: 0x001CEE94 File Offset: 0x001CD094
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MapTravelMainView.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -109,7 +108,7 @@ public class MapTravelMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600855C RID: 34140 RVA: 0x001C607C File Offset: 0x001C427C
+	// Token: 0x060058F7 RID: 22775 RVA: 0x001CEED8 File Offset: 0x001CD0D8
 	private UniTask CreateSubViewButton()
 	{
 		MapTravelMainView.<CreateSubViewButton>d__26 <CreateSubViewButton>d__;
@@ -120,7 +119,7 @@ public class MapTravelMainView : UiViewBase
 		return <CreateSubViewButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600855D RID: 34141 RVA: 0x001C60C0 File Offset: 0x001C42C0
+	// Token: 0x060058F8 RID: 22776 RVA: 0x001CEF1C File Offset: 0x001CD11C
 	protected override void OnStart()
 	{
 		this.LevelUpButton.SetRedDotVisible(true);
@@ -138,40 +137,40 @@ public class MapTravelMainView : UiViewBase
 		this.BgLocation = new FVector?(new FVector(item.K2_GetComponentLocation().X, fvector.Y, item.K2_GetComponentLocation().Z));
 	}
 
-	// Token: 0x0600855E RID: 34142 RVA: 0x001C61C1 File Offset: 0x001C43C1
+	// Token: 0x060058F9 RID: 22777 RVA: 0x001CF01D File Offset: 0x001CD21D
 	protected override void OnBeforeShow()
 	{
 		this.RefreshMainView();
 	}
 
-	// Token: 0x0600855F RID: 34143 RVA: 0x001C61C9 File Offset: 0x001C43C9
+	// Token: 0x060058FA RID: 22778 RVA: 0x001CF025 File Offset: 0x001CD225
 	protected override void OnBeforeDestroy()
 	{
 		this.BgLocation = null;
 	}
 
-	// Token: 0x06008560 RID: 34144 RVA: 0x001C61D7 File Offset: 0x001C43D7
+	// Token: 0x060058FB RID: 22779 RVA: 0x001CF033 File Offset: 0x001CD233
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRewardViewClose));
 	}
 
-	// Token: 0x06008561 RID: 34145 RVA: 0x001C620E File Offset: 0x001C440E
+	// Token: 0x060058FC RID: 22780 RVA: 0x001CF06A File Offset: 0x001CD26A
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRewardViewClose));
 	}
 
-	// Token: 0x06008562 RID: 34146 RVA: 0x001C6245 File Offset: 0x001C4445
+	// Token: 0x060058FD RID: 22781 RVA: 0x001CF0A1 File Offset: 0x001CD2A1
 	private void RefreshMainView()
 	{
 		this.RefreshExpComponent(this.SelectedLevel);
 		this.RefreshSubViewButton();
 	}
 
-	// Token: 0x06008563 RID: 34147 RVA: 0x001C6259 File Offset: 0x001C4459
+	// Token: 0x060058FE RID: 22782 RVA: 0x001CF0B5 File Offset: 0x001CD2B5
 	private void CloseButtonClicked()
 	{
 		if (this.SelectedViewType == EMapTravelSubType.Main)
@@ -182,7 +181,7 @@ public class MapTravelMainView : UiViewBase
 		this.CloseSubView();
 	}
 
-	// Token: 0x06008564 RID: 34148 RVA: 0x001C6272 File Offset: 0x001C4472
+	// Token: 0x060058FF RID: 22783 RVA: 0x001CF0CE File Offset: 0x001CD2CE
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "LevelChange")
@@ -191,7 +190,7 @@ public class MapTravelMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008565 RID: 34149 RVA: 0x001C6290 File Offset: 0x001C4490
+	// Token: 0x06005900 RID: 22784 RVA: 0x001CF0EC File Offset: 0x001CD2EC
 	private void RefreshExpComponent(int level)
 	{
 		bool flag = level < this.ActivityBaseData.TravelLevel;
@@ -241,7 +240,7 @@ public class MapTravelMainView : UiViewBase
 		base.GetButton(5).RootUIComp.Get().SetUIActive(level < this.ActivityBaseData.MaxTravelLevel);
 	}
 
-	// Token: 0x06008566 RID: 34150 RVA: 0x001C64AC File Offset: 0x001C46AC
+	// Token: 0x06005901 RID: 22785 RVA: 0x001CF308 File Offset: 0x001CD508
 	private void SetLevelProgress(int current, int target)
 	{
 		this.SetBarProgress((float)current / (float)target);
@@ -253,7 +252,7 @@ public class MapTravelMainView : UiViewBase
 		base.GetText(3).SetUIActive(true);
 	}
 
-	// Token: 0x06008567 RID: 34151 RVA: 0x001C6504 File Offset: 0x001C4704
+	// Token: 0x06005902 RID: 22786 RVA: 0x001CF360 File Offset: 0x001CD560
 	private void SetBarProgress(float percent)
 	{
 		float num = MathUtils.Instance.Clamp(percent, 0f, 1f);
@@ -265,7 +264,7 @@ public class MapTravelMainView : UiViewBase
 		base.GetItem(24).SetUIRelativeRotation(this.EffectRotator);
 	}
 
-	// Token: 0x06008568 RID: 34152 RVA: 0x001C658C File Offset: 0x001C478C
+	// Token: 0x06005903 RID: 22787 RVA: 0x001CF3E8 File Offset: 0x001CD5E8
 	private void SetPerformanceFinishedLevel(int level)
 	{
 		IMapTravelLevelData mapTravelLevelData = this.ActivityBaseData.TravelLevelData[level];
@@ -278,7 +277,7 @@ public class MapTravelMainView : UiViewBase
 		this.PanelActivate.SetTextByTextId("MapTravelReward_Get", Array.Empty<string>());
 	}
 
-	// Token: 0x06008569 RID: 34153 RVA: 0x001C65F8 File Offset: 0x001C47F8
+	// Token: 0x06005904 RID: 22788 RVA: 0x001CF454 File Offset: 0x001CD654
 	private void SetPerformanceCurrentLevel(int level)
 	{
 		bool flag = this.ActivityBaseData.MaxTravelLevel == level;
@@ -309,7 +308,7 @@ public class MapTravelMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600856A RID: 34154 RVA: 0x001C66F8 File Offset: 0x001C48F8
+	// Token: 0x06005905 RID: 22789 RVA: 0x001CF554 File Offset: 0x001CD754
 	private void SetPerformanceUnFinishedLevel(int level)
 	{
 		IMapTravelLevelData mapTravelLevelData = this.ActivityBaseData.TravelLevelData[level];
@@ -331,21 +330,21 @@ public class MapTravelMainView : UiViewBase
 		this.LevelUpButton.SetUiActive(false);
 	}
 
-	// Token: 0x0600856B RID: 34155 RVA: 0x001C6798 File Offset: 0x001C4998
+	// Token: 0x06005906 RID: 22790 RVA: 0x001CF5F4 File Offset: 0x001CD7F4
 	private void OnClickedPreLevelButton()
 	{
 		this.SelectedLevel--;
 		this.UiViewSequence.PlaySequence("SwitchLeft", true, null);
 	}
 
-	// Token: 0x0600856C RID: 34156 RVA: 0x001C67D0 File Offset: 0x001C49D0
+	// Token: 0x06005907 RID: 22791 RVA: 0x001CF62C File Offset: 0x001CD82C
 	private void OnClickedNextLevelButton()
 	{
 		this.SelectedLevel++;
 		this.UiViewSequence.PlaySequence("SwitchRight", true, null);
 	}
 
-	// Token: 0x0600856D RID: 34157 RVA: 0x001C6805 File Offset: 0x001C4A05
+	// Token: 0x06005908 RID: 22792 RVA: 0x001CF661 File Offset: 0x001CD861
 	private void OnClickedLevelUpButton()
 	{
 		ActivityMapTravelController.Instance.RequestMapTravelLevelUp(delegate(bool success)
@@ -354,7 +353,7 @@ public class MapTravelMainView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600856E RID: 34158 RVA: 0x001C6820 File Offset: 0x001C4A20
+	// Token: 0x06005909 RID: 22793 RVA: 0x001CF67C File Offset: 0x001CD87C
 	private void LevelUp()
 	{
 		if (this.NeedLevelUp)
@@ -366,7 +365,7 @@ public class MapTravelMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600856F RID: 34159 RVA: 0x001C6870 File Offset: 0x001C4A70
+	// Token: 0x0600590A RID: 22794 RVA: 0x001CF6CC File Offset: 0x001CD8CC
 	private void OnRewardViewClose(EUiViewName viewName, int ViewId)
 	{
 		if (this.SelectedViewType != EMapTravelSubType.Main)
@@ -390,7 +389,7 @@ public class MapTravelMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008570 RID: 34160 RVA: 0x001C68C0 File Offset: 0x001C4AC0
+	// Token: 0x0600590B RID: 22795 RVA: 0x001CF71C File Offset: 0x001CD91C
 	private void OpenSoarStrengthView()
 	{
 		int value = ConfigCommonParamById.GetIntConfig("FlyStrengthItemId").Value;
@@ -432,7 +431,7 @@ public class MapTravelMainView : UiViewBase
 		ActivityMapTravelController.Instance.OpenSoarStrengthView(num3);
 	}
 
-	// Token: 0x06008571 RID: 34161 RVA: 0x001C69DC File Offset: 0x001C4BDC
+	// Token: 0x0600590C RID: 22796 RVA: 0x001CF838 File Offset: 0x001CDA38
 	private void RefreshSubViewButton()
 	{
 		MapTravelConfig activityConfig = this.ActivityBaseData.GetActivityConfig();
@@ -461,13 +460,13 @@ public class MapTravelMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008572 RID: 34162 RVA: 0x001C6B00 File Offset: 0x001C4D00
+	// Token: 0x0600590D RID: 22797 RVA: 0x001CF95C File Offset: 0x001CDB5C
 	protected void OnOpenSubView(EMapTravelSubType type)
 	{
 		this.StartSubView(type);
 	}
 
-	// Token: 0x06008573 RID: 34163 RVA: 0x001C6B0C File Offset: 0x001C4D0C
+	// Token: 0x0600590E RID: 22798 RVA: 0x001CF968 File Offset: 0x001CDB68
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -484,7 +483,7 @@ public class MapTravelMainView : UiViewBase
 		return <GetSubViewProxy>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008574 RID: 34164 RVA: 0x001C6B58 File Offset: 0x001C4D58
+	// Token: 0x0600590F RID: 22799 RVA: 0x001CF9B4 File Offset: 0x001CDBB4
 	private UniTask StartSubView(EMapTravelSubType type)
 	{
 		MapTravelMainView.<StartSubView>d__50 <StartSubView>d__;
@@ -496,7 +495,7 @@ public class MapTravelMainView : UiViewBase
 		return <StartSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008575 RID: 34165 RVA: 0x001C6BA4 File Offset: 0x001C4DA4
+	// Token: 0x06005910 RID: 22800 RVA: 0x001CFA00 File Offset: 0x001CDC00
 	private UniTask CloseSubView()
 	{
 		MapTravelMainView.<CloseSubView>d__51 <CloseSubView>d__;
@@ -507,16 +506,20 @@ public class MapTravelMainView : UiViewBase
 		return <CloseSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008576 RID: 34166 RVA: 0x001C6BE8 File Offset: 0x001C4DE8
+	// Token: 0x06005911 RID: 22801 RVA: 0x001CFA44 File Offset: 0x001CDC44
 	private void PlayTween(EMapTravelSubType type, bool isOpen)
 	{
-		List<ULGUIPlayTweenComponent> list = (from component in (isOpen ? base.GetItem(20) : base.GetItem(21)).GetOwner().K2_GetComponentsByClass(ULGUIPlayTweenComponent.StaticClass())
-		select component as ULGUIPlayTweenComponent).ToList<ULGUIPlayTweenComponent>();
-		int[] array = isOpen ? this.openTweenGroupDefine : this.closeTweenGroupDefine;
-		for (int i = 0; i < list.Count; i++)
+		TArray<UActorComponent> tarray = (isOpen ? base.GetItem(20) : base.GetItem(21)).GetOwner().K2_GetComponentsByClass(ULGUIPlayTweenComponent.StaticClass());
+		List<ULGUIPlayTweenComponent> list = new List<ULGUIPlayTweenComponent>(tarray.Num());
+		for (int i = 0; i < tarray.Num(); i++)
 		{
-			ULGUIPlayTweenComponent ulguiplayTweenComponent = list[i];
-			int num = array[i];
+			list.Add(tarray.Get(i) as ULGUIPlayTweenComponent);
+		}
+		int[] array = isOpen ? this.openTweenGroupDefine : this.closeTweenGroupDefine;
+		for (int j = 0; j < list.Count; j++)
+		{
+			ULGUIPlayTweenComponent ulguiplayTweenComponent = list[j];
+			int num = array[j];
 			if (num != 0)
 			{
 				if (num == 1)
@@ -545,7 +548,7 @@ public class MapTravelMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008577 RID: 34167 RVA: 0x001C6D30 File Offset: 0x001C4F30
+	// Token: 0x06005912 RID: 22802 RVA: 0x001CFB9D File Offset: 0x001CDD9D
 	private void SetTweenLocation(ULGUIPlayTween_Vector3 tween, FVector location, bool isFrom)
 	{
 		if (isFrom)
@@ -556,10 +559,10 @@ public class MapTravelMainView : UiViewBase
 		tween.to = location;
 	}
 
-	// Token: 0x04003BCE RID: 15310
+	// Token: 0x04003C66 RID: 15462
 	private const float SPINE_PLAY_TIME_SCALE = 1.5f;
 
-	// Token: 0x04003BCF RID: 15311
+	// Token: 0x04003C67 RID: 15463
 	private readonly int[] openTweenGroupDefine = new int[]
 	{
 		0,
@@ -568,7 +571,7 @@ public class MapTravelMainView : UiViewBase
 		1
 	};
 
-	// Token: 0x04003BD0 RID: 15312
+	// Token: 0x04003C68 RID: 15464
 	private readonly int[] closeTweenGroupDefine = new int[]
 	{
 		1,
@@ -577,18 +580,18 @@ public class MapTravelMainView : UiViewBase
 		-1
 	};
 
-	// Token: 0x04003BD1 RID: 15313
+	// Token: 0x04003C69 RID: 15465
 	private const int SPINE_LAYER_WIDTH = 2520;
 
-	// Token: 0x04003BD2 RID: 15314
+	// Token: 0x04003C6A RID: 15466
 	[Nullable(2)]
 	private PopupCaptionItem CaptionComponent;
 
-	// Token: 0x04003BD3 RID: 15315
+	// Token: 0x04003C6B RID: 15467
 	[Nullable(2)]
 	private LevelSequencePlayer CaptionSequencePlayer;
 
-	// Token: 0x04003BD4 RID: 15316
+	// Token: 0x04003C6C RID: 15468
 	[Nullable(new byte[]
 	{
 		2,
@@ -597,151 +600,151 @@ public class MapTravelMainView : UiViewBase
 	})]
 	private GenericLayout<ActivitySmallItemGrid, IItemGridData> LevelRewardLayout;
 
-	// Token: 0x04003BD5 RID: 15317
+	// Token: 0x04003C6D RID: 15469
 	[Nullable(2)]
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x04003BD6 RID: 15318
+	// Token: 0x04003C6E RID: 15470
 	[Nullable(2)]
 	private FunctionalPanelConditionActivate PanelActivate;
 
-	// Token: 0x04003BD7 RID: 15319
+	// Token: 0x04003C6F RID: 15471
 	[Nullable(2)]
 	private ActivityButtonItem LevelUpButton;
 
-	// Token: 0x04003BD8 RID: 15320
+	// Token: 0x04003C70 RID: 15472
 	private readonly Dictionary<EMapTravelSubType, MapTravelSubViewButton> SubViewButtonMap = new Dictionary<EMapTravelSubType, MapTravelSubViewButton>();
 
-	// Token: 0x04003BD9 RID: 15321
+	// Token: 0x04003C71 RID: 15473
 	protected readonly Dictionary<EMapTravelSubType, IMapTravelViewProxy> SubViewProxyMap = new Dictionary<EMapTravelSubType, IMapTravelViewProxy>();
 
-	// Token: 0x04003BDA RID: 15322
+	// Token: 0x04003C72 RID: 15474
 	protected ActivityMapTravelData ActivityBaseData;
 
-	// Token: 0x04003BDB RID: 15323
+	// Token: 0x04003C73 RID: 15475
 	private EMapTravelSubType SelectedViewType;
 
-	// Token: 0x04003BDC RID: 15324
+	// Token: 0x04003C74 RID: 15476
 	private int SelectedLevel = -1;
 
-	// Token: 0x04003BDD RID: 15325
+	// Token: 0x04003C75 RID: 15477
 	private bool NeedLevelUp;
 
-	// Token: 0x04003BDE RID: 15326
+	// Token: 0x04003C76 RID: 15478
 	private int CurrentRewardSoarStrengthCount;
 
-	// Token: 0x04003BDF RID: 15327
+	// Token: 0x04003C77 RID: 15479
 	private FRotator EffectRotator = new FRotator(0f, 0f, 0f);
 
-	// Token: 0x04003BE0 RID: 15328
+	// Token: 0x04003C78 RID: 15480
 	protected float BgOffset;
 
-	// Token: 0x04003BE1 RID: 15329
+	// Token: 0x04003C79 RID: 15481
 	protected float BgScale = 1f;
 
-	// Token: 0x04003BE2 RID: 15330
+	// Token: 0x04003C7A RID: 15482
 	protected FVector? BgLocation;
 
-	// Token: 0x020078F9 RID: 30969
+	// Token: 0x02006A83 RID: 27267
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04027DA0 RID: 163232
+		// Token: 0x040230CE RID: 143566
 		public const int CaptionItem = 0;
 
-		// Token: 0x04027DA1 RID: 163233
+		// Token: 0x040230CF RID: 143567
 		public const int TxtLevel = 1;
 
-		// Token: 0x04027DA2 RID: 163234
+		// Token: 0x040230D0 RID: 143568
 		public const int TexExpProgress = 2;
 
-		// Token: 0x04027DA3 RID: 163235
+		// Token: 0x040230D1 RID: 143569
 		public const int TxtExpProgress = 3;
 
-		// Token: 0x04027DA4 RID: 163236
+		// Token: 0x040230D2 RID: 143570
 		public const int BtnLevelLeft = 4;
 
-		// Token: 0x04027DA5 RID: 163237
+		// Token: 0x040230D3 RID: 143571
 		public const int BtnLevelRight = 5;
 
-		// Token: 0x04027DA6 RID: 163238
+		// Token: 0x040230D4 RID: 143572
 		public const int LevelRewardItem = 6;
 
-		// Token: 0x04027DA7 RID: 163239
+		// Token: 0x040230D5 RID: 143573
 		public const int LevelRewardLayout = 7;
 
-		// Token: 0x04027DA8 RID: 163240
+		// Token: 0x040230D6 RID: 143574
 		public const int LevelRewardGrid = 8;
 
-		// Token: 0x04027DA9 RID: 163241
+		// Token: 0x040230D7 RID: 143575
 		public const int LevelTipsItem = 9;
 
-		// Token: 0x04027DAA RID: 163242
+		// Token: 0x040230D8 RID: 143576
 		public const int TxtLevelTips = 10;
 
-		// Token: 0x04027DAB RID: 163243
+		// Token: 0x040230D9 RID: 143577
 		public const int BtnLevelUp = 11;
 
-		// Token: 0x04027DAC RID: 163244
+		// Token: 0x040230DA RID: 143578
 		public const int PanelActive = 12;
 
-		// Token: 0x04027DAD RID: 163245
+		// Token: 0x040230DB RID: 143579
 		public const int PanelLock = 13;
 
-		// Token: 0x04027DAE RID: 163246
+		// Token: 0x040230DC RID: 143580
 		public const int SubView1 = 14;
 
-		// Token: 0x04027DAF RID: 163247
+		// Token: 0x040230DD RID: 143581
 		public const int SubView2 = 15;
 
-		// Token: 0x04027DB0 RID: 163248
+		// Token: 0x040230DE RID: 143582
 		public const int SubView3 = 16;
 
-		// Token: 0x04027DB1 RID: 163249
+		// Token: 0x040230DF RID: 143583
 		public const int SubView4 = 17;
 
-		// Token: 0x04027DB2 RID: 163250
+		// Token: 0x040230E0 RID: 143584
 		public const int SubViewContent = 18;
 
-		// Token: 0x04027DB3 RID: 163251
+		// Token: 0x040230E1 RID: 143585
 		public const int TexIcon = 19;
 
-		// Token: 0x04027DB4 RID: 163252
+		// Token: 0x040230E2 RID: 143586
 		public const int AniOpen = 20;
 
-		// Token: 0x04027DB5 RID: 163253
+		// Token: 0x040230E3 RID: 143587
 		public const int AniClose = 21;
 
-		// Token: 0x04027DB6 RID: 163254
+		// Token: 0x040230E4 RID: 143588
 		public const int SpineBook = 22;
 
-		// Token: 0x04027DB7 RID: 163255
+		// Token: 0x040230E5 RID: 143589
 		public const int BarEffectRight = 23;
 
-		// Token: 0x04027DB8 RID: 163256
+		// Token: 0x040230E6 RID: 143590
 		public const int BarEffectLeft = 24;
 
-		// Token: 0x04027DB9 RID: 163257
+		// Token: 0x040230E7 RID: 143591
 		public const int AnchorLeft = 25;
 
-		// Token: 0x04027DBA RID: 163258
+		// Token: 0x040230E8 RID: 143592
 		public const int BgItem = 26;
 
-		// Token: 0x04027DBB RID: 163259
+		// Token: 0x040230E9 RID: 143593
 		public const int SpineItem = 27;
 	}
 
-	// Token: 0x020078FA RID: 30970
+	// Token: 0x02006A84 RID: 27268
 	[NullableContext(0)]
 	private class ETweenType
 	{
-		// Token: 0x04027DBC RID: 163260
+		// Token: 0x040230EA RID: 143594
 		public const int None = -1;
 
-		// Token: 0x04027DBD RID: 163261
+		// Token: 0x040230EB RID: 143595
 		public const int SpineScale = 0;
 
-		// Token: 0x04027DBE RID: 163262
+		// Token: 0x040230EC RID: 143596
 		public const int SpineLocation = 1;
 	}
 }

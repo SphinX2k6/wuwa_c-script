@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Module.PhoneMessage;
 
-// Token: 0x0200250C RID: 9484
+// Token: 0x020019F3 RID: 6643
 [NullableContext(1)]
 [Nullable(0)]
 public class PhoneMsgChatData
 {
-	// Token: 0x170018D1 RID: 6353
-	// (get) Token: 0x06013138 RID: 78136 RVA: 0x004BA773 File Offset: 0x004B8973
+	// Token: 0x1700190B RID: 6411
+	// (get) Token: 0x060105F7 RID: 67063 RVA: 0x004C84C3 File Offset: 0x004C66C3
 	public bool IsVoicePlayed
 	{
 		get
@@ -18,13 +18,13 @@ public class PhoneMsgChatData
 		}
 	}
 
-	// Token: 0x06013139 RID: 78137 RVA: 0x004BA799 File Offset: 0x004B8999
+	// Token: 0x060105F8 RID: 67064 RVA: 0x004C84E9 File Offset: 0x004C66E9
 	public PhoneMsgChatData(EPhoneMsgContentType chatContentType)
 	{
 		this.ChatContentType = chatContentType;
 	}
 
-	// Token: 0x0601313A RID: 78138 RVA: 0x004BA7D0 File Offset: 0x004B89D0
+	// Token: 0x060105F9 RID: 67065 RVA: 0x004C8520 File Offset: 0x004C6720
 	public void SetScrollWaitTime(int time)
 	{
 		if (time > 0)
@@ -51,76 +51,79 @@ public class PhoneMsgChatData
 		this.ScrollWaitTime = 1000;
 	}
 
-	// Token: 0x04008FB5 RID: 36789
+	// Token: 0x04009101 RID: 37121
 	public EPhoneMsgContentType ChatContentType = EPhoneMsgContentType.Tips;
 
-	// Token: 0x04008FB6 RID: 36790
+	// Token: 0x04009102 RID: 37122
 	public EChatMsgType ContentType;
 
-	// Token: 0x04008FB7 RID: 36791
+	// Token: 0x04009103 RID: 37123
 	public int SpeakerIcon;
 
-	// Token: 0x04008FB8 RID: 36792
+	// Token: 0x04009104 RID: 37124
 	public string SpeakerHeadIconPath = "";
 
-	// Token: 0x04008FB9 RID: 36793
+	// Token: 0x04009105 RID: 37125
 	public string SpeakerName = "";
 
-	// Token: 0x04008FBA RID: 36794
+	// Token: 0x04009106 RID: 37126
 	public int ChatDialogId;
 
-	// Token: 0x04008FBB RID: 36795
+	// Token: 0x04009107 RID: 37127
 	[Nullable(2)]
 	public ITalkItem TalkItem;
 
-	// Token: 0x04008FBC RID: 36796
+	// Token: 0x04009108 RID: 37128
 	public string ContentStr = "";
 
-	// Token: 0x04008FBD RID: 36797
+	// Token: 0x04009109 RID: 37129
 	public int ContentNum;
 
-	// Token: 0x04008FBE RID: 36798
+	// Token: 0x0400910A RID: 37130
 	public bool IsSendError;
 
-	// Token: 0x04008FBF RID: 36799
+	// Token: 0x0400910B RID: 37131
 	public bool IsFinish;
 
-	// Token: 0x04008FC0 RID: 36800
+	// Token: 0x0400910C RID: 37132
 	public int QuestId;
 
-	// Token: 0x04008FC1 RID: 36801
+	// Token: 0x0400910D RID: 37133
 	public int BirthdayCardItemId;
 
-	// Token: 0x04008FC2 RID: 36802
+	// Token: 0x0400910E RID: 37134
 	public int DropId;
 
-	// Token: 0x04008FC3 RID: 36803
+	// Token: 0x0400910F RID: 37135
+	public int ActivityId;
+
+	// Token: 0x04009110 RID: 37136
 	public bool IsGroupChat;
 
-	// Token: 0x04008FC4 RID: 36804
+	// Token: 0x04009111 RID: 37137
 	public int VoiceEventHash;
 
-	// Token: 0x04008FC5 RID: 36805
+	// Token: 0x04009112 RID: 37138
 	public float VoiceDuration;
 
-	// Token: 0x04008FC6 RID: 36806
+	// Token: 0x04009113 RID: 37139
 	public EPhoneMessageVoicePushCondition? PushCondition;
 
-	// Token: 0x04008FC7 RID: 36807
+	// Token: 0x04009114 RID: 37140
 	public bool IsAutoPlay;
 
-	// Token: 0x04008FC8 RID: 36808
+	// Token: 0x04009115 RID: 37141
 	public int ScrollWaitTime;
 
-	// Token: 0x04008FC9 RID: 36809
+	// Token: 0x04009116 RID: 37142
 	public EPhoneMsgScrollWaitTimeType ScrollWaitTimeType;
 
-	// Token: 0x04008FCA RID: 36810
+	// Token: 0x04009117 RID: 37143
 	public int ShortMessageId;
 
-	// Token: 0x04008FCB RID: 36811
+	// Token: 0x04009118 RID: 37144
 	public int ChatPartnerId;
 
-	// Token: 0x04008FCC RID: 36812
+	// Token: 0x04009119 RID: 37145
 	public long UnLockTime;
 }

@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DCE RID: 15822
+	// Token: 0x02004209 RID: 16905
 	public class IDetectCombatState2ConditionT
 	{
-		// Token: 0x17006D3C RID: 27964
-		// (get) Token: 0x06016165 RID: 90469 RVA: 0x00331768 File Offset: 0x0032F968
-		// (set) Token: 0x06016166 RID: 90470 RVA: 0x00331770 File Offset: 0x0032F970
+		// Token: 0x1700731C RID: 29468
+		// (get) Token: 0x06017784 RID: 96132 RVA: 0x0035A16C File Offset: 0x0035836C
+		// (set) Token: 0x06017785 RID: 96133 RVA: 0x0035A174 File Offset: 0x00358374
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006D3D RID: 27965
-		// (get) Token: 0x06016167 RID: 90471 RVA: 0x00331779 File Offset: 0x0032F979
-		// (set) Token: 0x06016168 RID: 90472 RVA: 0x00331781 File Offset: 0x0032F981
+		// Token: 0x1700731D RID: 29469
+		// (get) Token: 0x06017786 RID: 96134 RVA: 0x0035A17D File Offset: 0x0035837D
+		// (set) Token: 0x06017787 RID: 96135 RVA: 0x0035A185 File Offset: 0x00358385
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006D3E RID: 27966
-		// (get) Token: 0x06016169 RID: 90473 RVA: 0x0033178A File Offset: 0x0032F98A
-		// (set) Token: 0x0601616A RID: 90474 RVA: 0x00331792 File Offset: 0x0032F992
+		// Token: 0x1700731E RID: 29470
+		// (get) Token: 0x06017788 RID: 96136 RVA: 0x0035A18E File Offset: 0x0035838E
+		// (set) Token: 0x06017789 RID: 96137 RVA: 0x0035A196 File Offset: 0x00358396
 		public EConditionCount Count { get; set; }
 
-		// Token: 0x17006D3F RID: 27967
-		// (get) Token: 0x0601616B RID: 90475 RVA: 0x0033179B File Offset: 0x0032F99B
-		// (set) Token: 0x0601616C RID: 90476 RVA: 0x003317A3 File Offset: 0x0032F9A3
+		// Token: 0x1700731F RID: 29471
+		// (get) Token: 0x0601778A RID: 96138 RVA: 0x0035A19F File Offset: 0x0035839F
+		// (set) Token: 0x0601778B RID: 96139 RVA: 0x0035A1A7 File Offset: 0x003583A7
 		public List<ICombatState2ConditionT> Conditions { get; set; }
 
-		// Token: 0x0601616D RID: 90477 RVA: 0x003317AC File Offset: 0x0032F9AC
+		// Token: 0x0601778C RID: 96140 RVA: 0x0035A1B0 File Offset: 0x003583B0
 		public IDetectCombatState2ConditionT()
 		{
 			this.Type = EChildQuest.DoInteract;

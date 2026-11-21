@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200134C RID: 4940
+	// Token: 0x0200149C RID: 5276
 	public class IQuestPlayerHitStatisticsType
 	{
-		// Token: 0x06007133 RID: 28979 RVA: 0x00110F5B File Offset: 0x0010F15B
-		[NullableContext(1)]
+		// Token: 0x060077D3 RID: 30675 RVA: 0x0011F4C7 File Offset: 0x0011D6C7
 		public static IQuestPlayerHitStatisticsType Create(IQuestPlayerHitStatisticsType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700246E RID: 9326
-		// (get) Token: 0x06007134 RID: 28980 RVA: 0x00110F7A File Offset: 0x0010F17A
+		// Token: 0x1700263D RID: 9789
+		// (get) Token: 0x060077D4 RID: 30676 RVA: 0x0011F4E6 File Offset: 0x0011D6E6
 		public virtual EPlayerHitStatisticsType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400415E RID: 16734
+		// Token: 0x040044DA RID: 17626
 		private IQuestPlayerHitStatisticsType Instance;
 	}
 }

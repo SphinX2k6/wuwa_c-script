@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200661B RID: 26139
+	// Token: 0x02005599 RID: 21913
 	public class FishingQuestItemChildItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06041875 RID: 268405 RVA: 0x00FE1B6C File Offset: 0x00FDFD6C
+		// Token: 0x0603653A RID: 222522 RVA: 0x00F28BE0 File Offset: 0x00F26DE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041876 RID: 268406 RVA: 0x00FE1E0C File Offset: 0x00FE000C
+		// Token: 0x0603653B RID: 222523 RVA: 0x00F28E80 File Offset: 0x00F27080
 		protected override void OnStart()
 		{
 			this.OnAddEventListener();
@@ -74,25 +74,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06041877 RID: 268407 RVA: 0x00FE1E68 File Offset: 0x00FE0068
+		// Token: 0x0603653C RID: 222524 RVA: 0x00F28EDC File Offset: 0x00F270DC
 		protected override void OnBeforeDestroy()
 		{
 			this.OnRemoveEventListener();
 		}
 
-		// Token: 0x06041878 RID: 268408 RVA: 0x00FE1E70 File Offset: 0x00FE0070
+		// Token: 0x0603653D RID: 222525 RVA: 0x00F28EE4 File Offset: 0x00F270E4
 		protected void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<bool, int?>(EEventName.FishingRefreshQuestView, new Action<bool, int?>(this.FishingRefreshQuestView));
 		}
 
-		// Token: 0x06041879 RID: 268409 RVA: 0x00FE1E8E File Offset: 0x00FE008E
+		// Token: 0x0603653E RID: 222526 RVA: 0x00F28F02 File Offset: 0x00F27102
 		protected void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<bool, int?>(EEventName.FishingRefreshQuestView, new Action<bool, int?>(this.FishingRefreshQuestView));
 		}
 
-		// Token: 0x0604187A RID: 268410 RVA: 0x00FE1EAC File Offset: 0x00FE00AC
+		// Token: 0x0603653F RID: 222527 RVA: 0x00F28F20 File Offset: 0x00F27120
 		private void FishingRefreshQuestView(bool keepSelect, int? i = null)
 		{
 			if (keepSelect)
@@ -101,14 +101,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604187B RID: 268411 RVA: 0x00FE1EB7 File Offset: 0x00FE00B7
+		// Token: 0x06036540 RID: 222528 RVA: 0x00F28F2B File Offset: 0x00F2712B
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.EntrustId = data;
 			this.RefreshItem();
 		}
 
-		// Token: 0x0604187C RID: 268412 RVA: 0x00FE1EC8 File Offset: 0x00FE00C8
+		// Token: 0x06036541 RID: 222529 RVA: 0x00F28F3C File Offset: 0x00F2713C
 		public void RefreshItem()
 		{
 			if (this.EntrustId == -1)
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshStateAbout();
 		}
 
-		// Token: 0x0604187D RID: 268413 RVA: 0x00FE20AC File Offset: 0x00FE02AC
+		// Token: 0x06036542 RID: 222530 RVA: 0x00F29120 File Offset: 0x00F27320
 		private void RefreshStateAbout()
 		{
 			if (this.EntrustId == -1)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(9).SetUIActive(!entrustsLockState);
 		}
 
-		// Token: 0x0604187E RID: 268414 RVA: 0x00FE21D8 File Offset: 0x00FE03D8
+		// Token: 0x06036543 RID: 222531 RVA: 0x00F2924C File Offset: 0x00F2744C
 		public void RefreshStateText()
 		{
 			EFishingEntrustState efishingEntrustState;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(6).SetUIActive(efishingEntrustState == EFishingEntrustState.Deliverable);
 		}
 
-		// Token: 0x0604187F RID: 268415 RVA: 0x00FE228C File Offset: 0x00FE048C
+		// Token: 0x06036544 RID: 222532 RVA: 0x00F29300 File Offset: 0x00F27500
 		private void ShowNullItem()
 		{
 			base.GetText(15).SetUIActive(true);
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041880 RID: 268416 RVA: 0x00FE2374 File Offset: 0x00FE0574
+		// Token: 0x06036545 RID: 222533 RVA: 0x00F293E8 File Offset: 0x00F275E8
 		private void RefreshStarCount(int count)
 		{
 			foreach (UUIItem uuiitem in this.StarList)
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041881 RID: 268417 RVA: 0x00FE2424 File Offset: 0x00FE0624
+		// Token: 0x06036546 RID: 222534 RVA: 0x00F29498 File Offset: 0x00F27698
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			Action<int, UUIExtendToggle, Action> onClickTaskCallBack = this.OnClickTaskCallBack;
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(3).SetColor(FColor.FromHex(FishingDefine.fishingSelectStateColorText[(int)efishingEntrustState]));
 		}
 
-		// Token: 0x06041882 RID: 268418 RVA: 0x00FE2498 File Offset: 0x00FE0698
+		// Token: 0x06036547 RID: 222535 RVA: 0x00F2950C File Offset: 0x00F2770C
 		public void SelectToggle()
 		{
 			base.GetExtendToggle(4).SetToggleStateForce(EToggleState.ETT_Checked, false, true, false);
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(3).SetColor(FColor.FromHex(FishingDefine.fishingSelectStateColorText[(int)efishingEntrustState]));
 		}
 
-		// Token: 0x06041883 RID: 268419 RVA: 0x00FE251C File Offset: 0x00FE071C
+		// Token: 0x06036548 RID: 222536 RVA: 0x00F29590 File Offset: 0x00F27790
 		private void OnUnSelect()
 		{
 			EFishingEntrustState efishingEntrustState;
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(3).SetColor(FColor.FromHex(FishingDefine.fishingStateColorText[(int)efishingEntrustState]));
 		}
 
-		// Token: 0x06041884 RID: 268420 RVA: 0x00FE2564 File Offset: 0x00FE0764
+		// Token: 0x06036549 RID: 222537 RVA: 0x00F295D8 File Offset: 0x00F277D8
 		private void RefreshTime(bool isShow)
 		{
 			if (!isShow)
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(14), "FishingEntrustRefreshRemainTime", new <>z__ReadOnlySingleElementList<object>(num));
 		}
 
-		// Token: 0x04022186 RID: 139654
+		// Token: 0x0401CAB7 RID: 117431
 		[Nullable(new byte[]
 		{
 			2,
@@ -346,65 +346,65 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		public Action<int, UUIExtendToggle, Action> OnClickTaskCallBack;
 
-		// Token: 0x04022187 RID: 139655
+		// Token: 0x0401CAB8 RID: 117432
 		private int EntrustId;
 
-		// Token: 0x04022188 RID: 139656
+		// Token: 0x0401CAB9 RID: 117433
 		[Nullable(1)]
 		private readonly List<UUIItem> StarList = new List<UUIItem>();
 
-		// Token: 0x0200C830 RID: 51248
+		// Token: 0x0200B212 RID: 45586
 		private class EComponentDefine
 		{
-			// Token: 0x0403C75B RID: 247643
+			// Token: 0x040370A0 RID: 225440
 			public const int TraceItem = 0;
 
-			// Token: 0x0403C75C RID: 247644
+			// Token: 0x040370A1 RID: 225441
 			public const int LockItem = 1;
 
-			// Token: 0x0403C75D RID: 247645
+			// Token: 0x040370A2 RID: 225442
 			public const int NameText = 2;
 
-			// Token: 0x0403C75E RID: 247646
+			// Token: 0x040370A3 RID: 225443
 			public const int StateText = 3;
 
-			// Token: 0x0403C75F RID: 247647
+			// Token: 0x040370A4 RID: 225444
 			public const int Toggle = 4;
 
-			// Token: 0x0403C760 RID: 247648
+			// Token: 0x040370A5 RID: 225445
 			public const int QualityColorItem = 5;
 
-			// Token: 0x0403C761 RID: 247649
+			// Token: 0x040370A6 RID: 225446
 			public const int RedDotItem = 6;
 
-			// Token: 0x0403C762 RID: 247650
+			// Token: 0x040370A7 RID: 225447
 			public const int CircleSprite = 7;
 
-			// Token: 0x0403C763 RID: 247651
+			// Token: 0x040370A8 RID: 225448
 			public const int StarPanelItem = 8;
 
-			// Token: 0x0403C764 RID: 247652
+			// Token: 0x040370A9 RID: 225449
 			public const int TargetText = 9;
 
-			// Token: 0x0403C765 RID: 247653
+			// Token: 0x040370AA RID: 225450
 			public const int IconItem = 10;
 
-			// Token: 0x0403C766 RID: 247654
+			// Token: 0x040370AB RID: 225451
 			public const int IconSprite = 11;
 
-			// Token: 0x0403C767 RID: 247655
+			// Token: 0x040370AC RID: 225452
 			public const int TagItem = 12;
 
-			// Token: 0x0403C768 RID: 247656
+			// Token: 0x040370AD RID: 225453
 			public const int StarItem = 13;
 
-			// Token: 0x0403C769 RID: 247657
+			// Token: 0x040370AE RID: 225454
 			public const int RefreshTimeText = 14;
 
-			// Token: 0x0403C76A RID: 247658
+			// Token: 0x040370AF RID: 225455
 			public const int LockText = 15;
 
-			// Token: 0x0403C76B RID: 247659
+			// Token: 0x040370B0 RID: 225456
 			public const int NightItem = 16;
 		}
 	}

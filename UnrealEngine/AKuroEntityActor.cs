@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EB7 RID: 7863
+	// Token: 0x020005D5 RID: 1493
 	[UnrealObjectPath("/Script/KuroUtility.KuroEntityActor")]
 	[UnrealStructLayout(1048, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1048)]
 	public class AKuroEntityActor : AKuroActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DD80 RID: 122240 RVA: 0x002C2605 File Offset: 0x002C0805
+		// Token: 0x0600844D RID: 33869 RVA: 0x000C46A1 File Offset: 0x000C28A1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroEntityActor._ClassPtr;
 		}
 
-		// Token: 0x0601DD81 RID: 122241 RVA: 0x002C2614 File Offset: 0x002C0814
+		// Token: 0x0600844E RID: 33870 RVA: 0x000C46B0 File Offset: 0x000C28B0
 		public AKuroEntityActor() : this(BuiltinUtils.AllocNativeUObject(AKuroEntityActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DD82 RID: 122242 RVA: 0x002C263C File Offset: 0x002C083C
+		// Token: 0x0600844F RID: 33871 RVA: 0x000C46D8 File Offset: 0x000C28D8
 		[NullableContext(1)]
 		public AKuroEntityActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroEntityActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700779F RID: 30623
-		// (get) Token: 0x0601DD83 RID: 122243 RVA: 0x002C266F File Offset: 0x002C086F
-		// (set) Token: 0x0601DD84 RID: 122244 RVA: 0x002C267F File Offset: 0x002C087F
+		// Token: 0x1700195E RID: 6494
+		// (get) Token: 0x06008450 RID: 33872 RVA: 0x000C470B File Offset: 0x000C290B
+		// (set) Token: 0x06008451 RID: 33873 RVA: 0x000C471B File Offset: 0x000C291B
 		public unsafe int EntityId
 		{
 			get
@@ -43,28 +43,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DD85 RID: 122245 RVA: 0x002C2690 File Offset: 0x002C0890
+		// Token: 0x06008452 RID: 33874 RVA: 0x000C472C File Offset: 0x000C292C
 		static AKuroEntityActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroUtility.KuroEntityActor");
 		}
 
-		// Token: 0x0601DD86 RID: 122246 RVA: 0x002C269E File Offset: 0x002C089E
+		// Token: 0x06008453 RID: 33875 RVA: 0x000C473A File Offset: 0x000C293A
 		protected AKuroEntityActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040102BB RID: 66235
+		// Token: 0x040039D1 RID: 14801
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroUtility.KuroEntityActor";
 
-		// Token: 0x040102BC RID: 66236
+		// Token: 0x040039D2 RID: 14802
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040102BD RID: 66237
+		// Token: 0x040039D3 RID: 14803
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040102BE RID: 66238
+		// Token: 0x040039D4 RID: 14804
 		internal static int __PropertyOffset_EntityId;
 	}
 }

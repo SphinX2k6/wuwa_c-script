@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004293 RID: 17043
+	// Token: 0x020046EF RID: 18159
 	public class IWarningPreformFadeInScreenT
 	{
-		// Token: 0x17007907 RID: 30983
-		// (get) Token: 0x06019411 RID: 103441 RVA: 0x003A0B16 File Offset: 0x0039ED16
-		// (set) Token: 0x06019412 RID: 103442 RVA: 0x003A0B1E File Offset: 0x0039ED1E
+		// Token: 0x17007F38 RID: 32568
+		// (get) Token: 0x0601AB7D RID: 109437 RVA: 0x003CC1EE File Offset: 0x003CA3EE
+		// (set) Token: 0x0601AB7E RID: 109438 RVA: 0x003CC1F6 File Offset: 0x003CA3F6
 		public EWarningPreformType Type { get; set; }
 
-		// Token: 0x06019413 RID: 103443 RVA: 0x003A0B27 File Offset: 0x0039ED27
+		// Token: 0x0601AB7F RID: 109439 RVA: 0x003CC1FF File Offset: 0x003CA3FF
 		public IWarningPreformFadeInScreenT()
 		{
 			this.Type = EWarningPreformType.FadeInScreen;

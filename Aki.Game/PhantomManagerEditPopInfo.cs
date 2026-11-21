@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200241E RID: 9246
+// Token: 0x02001903 RID: 6403
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManagerEditPopInfo : IPhantomManagerEditPopInfo
 {
-	// Token: 0x17001802 RID: 6146
-	// (get) Token: 0x0601281B RID: 75803 RVA: 0x0048F524 File Offset: 0x0048D724
-	// (set) Token: 0x0601281C RID: 75804 RVA: 0x0048F52C File Offset: 0x0048D72C
+	// Token: 0x1700183C RID: 6204
+	// (get) Token: 0x0600FCD1 RID: 64721 RVA: 0x0049CB40 File Offset: 0x0049AD40
+	// (set) Token: 0x0600FCD2 RID: 64722 RVA: 0x0049CB48 File Offset: 0x0049AD48
 	public int FetterId { get; set; }
 
-	// Token: 0x17001803 RID: 6147
-	// (get) Token: 0x0601281D RID: 75805 RVA: 0x0048F535 File Offset: 0x0048D735
-	// (set) Token: 0x0601281E RID: 75806 RVA: 0x0048F53D File Offset: 0x0048D73D
+	// Token: 0x1700183D RID: 6205
+	// (get) Token: 0x0600FCD3 RID: 64723 RVA: 0x0049CB51 File Offset: 0x0049AD51
+	// (set) Token: 0x0600FCD4 RID: 64724 RVA: 0x0049CB59 File Offset: 0x0049AD59
 	public int Count { get; set; }
 
-	// Token: 0x17001804 RID: 6148
-	// (get) Token: 0x0601281F RID: 75807 RVA: 0x0048F546 File Offset: 0x0048D746
-	// (set) Token: 0x06012820 RID: 75808 RVA: 0x0048F54E File Offset: 0x0048D74E
+	// Token: 0x1700183E RID: 6206
+	// (get) Token: 0x0600FCD5 RID: 64725 RVA: 0x0049CB62 File Offset: 0x0049AD62
+	// (set) Token: 0x0600FCD6 RID: 64726 RVA: 0x0049CB6A File Offset: 0x0049AD6A
 	public List<IPhantomManagerConfigNewSettingInfo> DataList { get; set; } = new List<IPhantomManagerConfigNewSettingInfo>();
 
-	// Token: 0x17001805 RID: 6149
-	// (get) Token: 0x06012821 RID: 75809 RVA: 0x0048F557 File Offset: 0x0048D757
-	// (set) Token: 0x06012822 RID: 75810 RVA: 0x0048F55F File Offset: 0x0048D75F
+	// Token: 0x1700183F RID: 6207
+	// (get) Token: 0x0600FCD7 RID: 64727 RVA: 0x0049CB73 File Offset: 0x0049AD73
+	// (set) Token: 0x0600FCD8 RID: 64728 RVA: 0x0049CB7B File Offset: 0x0049AD7B
 	[Nullable(2)]
 	public Action CloseCb { [NullableContext(2)] get; [NullableContext(2)] set; }
 }

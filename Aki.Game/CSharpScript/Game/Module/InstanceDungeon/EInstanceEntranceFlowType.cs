@@ -2,50 +2,50 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200586B RID: 22635
+	// Token: 0x02004843 RID: 18499
 	public enum EInstanceEntranceFlowType
 	{
-		// Token: 0x0401E181 RID: 123265
+		// Token: 0x04018C1E RID: 101406
 		Normal = 1,
-		// Token: 0x0401E182 RID: 123266
+		// Token: 0x04018C1F RID: 101407
 		SkipEditFormation,
-		// Token: 0x0401E183 RID: 123267
+		// Token: 0x04018C20 RID: 101408
 		SingleTimeTower,
-		// Token: 0x0401E184 RID: 123268
+		// Token: 0x04018C21 RID: 101409
 		CycleTower,
-		// Token: 0x0401E185 RID: 123269
+		// Token: 0x04018C22 RID: 101410
 		NewTower,
-		// Token: 0x0401E186 RID: 123270
+		// Token: 0x04018C23 RID: 101411
 		Roguelike,
-		// Token: 0x0401E187 RID: 123271
+		// Token: 0x04018C24 RID: 101412
 		BossRush,
-		// Token: 0x0401E188 RID: 123272
+		// Token: 0x04018C25 RID: 101413
 		TowerDefense,
-		// Token: 0x0401E189 RID: 123273
+		// Token: 0x04018C26 RID: 101414
 		Attached,
-		// Token: 0x0401E18A RID: 123274
+		// Token: 0x04018C27 RID: 101415
 		FarmGold,
-		// Token: 0x0401E18B RID: 123275
+		// Token: 0x04018C28 RID: 101416
 		ShipTower,
-		// Token: 0x0401E18C RID: 123276
+		// Token: 0x04018C29 RID: 101417
 		MowingRisk,
-		// Token: 0x0401E18D RID: 123277
+		// Token: 0x04018C2A RID: 101418
 		Abyss,
-		// Token: 0x0401E18E RID: 123278
+		// Token: 0x04018C2B RID: 101419
 		RogueRes,
-		// Token: 0x0401E18F RID: 123279
+		// Token: 0x04018C2C RID: 101420
 		TrapDefense,
-		// Token: 0x0401E190 RID: 123280
+		// Token: 0x04018C2D RID: 101421
 		LordGym,
-		// Token: 0x0401E191 RID: 123281
+		// Token: 0x04018C2E RID: 101422
 		WheelTower,
-		// Token: 0x0401E192 RID: 123282
+		// Token: 0x04018C2F RID: 101423
 		AdamSmasher,
-		// Token: 0x0401E193 RID: 123283
+		// Token: 0x04018C30 RID: 101424
 		LordGymThird5,
-		// Token: 0x0401E194 RID: 123284
+		// Token: 0x04018C31 RID: 101425
 		LordGymFirst,
-		// Token: 0x0401E195 RID: 123285
+		// Token: 0x04018C32 RID: 101426
 		LordGymSecond
 	}
 }

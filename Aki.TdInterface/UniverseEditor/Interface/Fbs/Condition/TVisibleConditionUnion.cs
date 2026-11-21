@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D61 RID: 19809
+	// Token: 0x0200525D RID: 21085
 	public class TVisibleConditionUnion
 	{
-		// Token: 0x17008F5B RID: 36699
-		// (get) Token: 0x0601F6CE RID: 128718 RVA: 0x00460BDA File Offset: 0x0045EDDA
-		// (set) Token: 0x0601F6CF RID: 128719 RVA: 0x00460BE2 File Offset: 0x0045EDE2
+		// Token: 0x17009694 RID: 38548
+		// (get) Token: 0x06021317 RID: 135959 RVA: 0x00494BAE File Offset: 0x00492DAE
+		// (set) Token: 0x06021318 RID: 135960 RVA: 0x00494BB6 File Offset: 0x00492DB6
 		public TVisibleCondition Type { get; set; }
 
-		// Token: 0x17008F5C RID: 36700
-		// (get) Token: 0x0601F6D0 RID: 128720 RVA: 0x00460BEB File Offset: 0x0045EDEB
-		// (set) Token: 0x0601F6D1 RID: 128721 RVA: 0x00460BF3 File Offset: 0x0045EDF3
+		// Token: 0x17009695 RID: 38549
+		// (get) Token: 0x06021319 RID: 135961 RVA: 0x00494BBF File Offset: 0x00492DBF
+		// (set) Token: 0x0602131A RID: 135962 RVA: 0x00494BC7 File Offset: 0x00492DC7
 		public object Value { get; set; }
 
-		// Token: 0x0601F6D2 RID: 128722 RVA: 0x00460BFC File Offset: 0x0045EDFC
+		// Token: 0x0602131B RID: 135963 RVA: 0x00494BD0 File Offset: 0x00492DD0
 		public TVisibleConditionUnion()
 		{
 			this.Type = TVisibleCondition.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F6D3 RID: 128723 RVA: 0x00460C12 File Offset: 0x0045EE12
+		// Token: 0x0602131C RID: 135964 RVA: 0x00494BE6 File Offset: 0x00492DE6
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F6D4 RID: 128724 RVA: 0x00460C24 File Offset: 0x0045EE24
+		// Token: 0x0602131D RID: 135965 RVA: 0x00494BF8 File Offset: 0x00492DF8
 		public IClockT AsIClock()
 		{
 			return this.As<IClockT>();
 		}
 
-		// Token: 0x0601F6D5 RID: 128725 RVA: 0x00460C2C File Offset: 0x0045EE2C
+		// Token: 0x0602131E RID: 135966 RVA: 0x00494C00 File Offset: 0x00492E00
 		public static TVisibleConditionUnion FromIClock(IClockT _iclock)
 		{
 			return new TVisibleConditionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6D6 RID: 128726 RVA: 0x00460C41 File Offset: 0x0045EE41
+		// Token: 0x0602131F RID: 135967 RVA: 0x00494C15 File Offset: 0x00492E15
 		public ICompareVarT AsICompareVar()
 		{
 			return this.As<ICompareVarT>();
 		}
 
-		// Token: 0x0601F6D7 RID: 128727 RVA: 0x00460C49 File Offset: 0x0045EE49
+		// Token: 0x06021320 RID: 135968 RVA: 0x00494C1D File Offset: 0x00492E1D
 		public static TVisibleConditionUnion FromICompareVar(ICompareVarT _icomparevar)
 		{
 			return new TVisibleConditionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6D8 RID: 128728 RVA: 0x00460C5E File Offset: 0x0045EE5E
+		// Token: 0x06021321 RID: 135969 RVA: 0x00494C32 File Offset: 0x00492E32
 		public IPreChildQuestT AsIPreChildQuest()
 		{
 			return this.As<IPreChildQuestT>();
 		}
 
-		// Token: 0x0601F6D9 RID: 128729 RVA: 0x00460C66 File Offset: 0x0045EE66
+		// Token: 0x06021322 RID: 135970 RVA: 0x00494C3A File Offset: 0x00492E3A
 		public static TVisibleConditionUnion FromIPreChildQuest(IPreChildQuestT _iprechildquest)
 		{
 			return new TVisibleConditionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6DA RID: 128730 RVA: 0x00460C7B File Offset: 0x0045EE7B
+		// Token: 0x06021323 RID: 135971 RVA: 0x00494C4F File Offset: 0x00492E4F
 		public IPreQuestT AsIPreQuest()
 		{
 			return this.As<IPreQuestT>();
 		}
 
-		// Token: 0x0601F6DB RID: 128731 RVA: 0x00460C83 File Offset: 0x0045EE83
+		// Token: 0x06021324 RID: 135972 RVA: 0x00494C57 File Offset: 0x00492E57
 		public static TVisibleConditionUnion FromIPreQuest(IPreQuestT _iprequest)
 		{
 			return new TVisibleConditionUnion
@@ -93,13 +93,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6DC RID: 128732 RVA: 0x00460C98 File Offset: 0x0045EE98
+		// Token: 0x06021325 RID: 135973 RVA: 0x00494C6C File Offset: 0x00492E6C
+		public ISeasonAndWeatherT AsISeasonAndWeather()
+		{
+			return this.As<ISeasonAndWeatherT>();
+		}
+
+		// Token: 0x06021326 RID: 135974 RVA: 0x00494C74 File Offset: 0x00492E74
+		public static TVisibleConditionUnion FromISeasonAndWeather(ISeasonAndWeatherT _iseasonandweather)
+		{
+			return new TVisibleConditionUnion
+			{
+				Type = TVisibleCondition.ISeasonAndWeather,
+				Value = _iseasonandweather
+			};
+		}
+
+		// Token: 0x06021327 RID: 135975 RVA: 0x00494C89 File Offset: 0x00492E89
 		public ITargetEntityInvisibleT AsITargetEntityInvisible()
 		{
 			return this.As<ITargetEntityInvisibleT>();
 		}
 
-		// Token: 0x0601F6DD RID: 128733 RVA: 0x00460CA0 File Offset: 0x0045EEA0
+		// Token: 0x06021328 RID: 135976 RVA: 0x00494C91 File Offset: 0x00492E91
 		public static TVisibleConditionUnion FromITargetEntityInvisible(ITargetEntityInvisibleT _itargetentityinvisible)
 		{
 			return new TVisibleConditionUnion
@@ -109,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6DE RID: 128734 RVA: 0x00460CB5 File Offset: 0x0045EEB5
+		// Token: 0x06021329 RID: 135977 RVA: 0x00494CA6 File Offset: 0x00492EA6
 		public ITimePeriodT AsITimePeriod()
 		{
 			return this.As<ITimePeriodT>();
 		}
 
-		// Token: 0x0601F6DF RID: 128735 RVA: 0x00460CBD File Offset: 0x0045EEBD
+		// Token: 0x0602132A RID: 135978 RVA: 0x00494CAE File Offset: 0x00492EAE
 		public static TVisibleConditionUnion FromITimePeriod(ITimePeriodT _itimeperiod)
 		{
 			return new TVisibleConditionUnion
@@ -125,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6E0 RID: 128736 RVA: 0x00460CD2 File Offset: 0x0045EED2
+		// Token: 0x0602132B RID: 135979 RVA: 0x00494CC3 File Offset: 0x00492EC3
 		public IWeatherT AsIWeather()
 		{
 			return this.As<IWeatherT>();
 		}
 
-		// Token: 0x0601F6E1 RID: 128737 RVA: 0x00460CDA File Offset: 0x0045EEDA
+		// Token: 0x0602132C RID: 135980 RVA: 0x00494CCB File Offset: 0x00492ECB
 		public static TVisibleConditionUnion FromIWeather(IWeatherT _iweather)
 		{
 			return new TVisibleConditionUnion
@@ -141,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6E2 RID: 128738 RVA: 0x00460CF0 File Offset: 0x0045EEF0
+		// Token: 0x0602132D RID: 135981 RVA: 0x00494CE0 File Offset: 0x00492EE0
 		public static int Pack(FlatBufferBuilder builder, TVisibleConditionUnion _o)
 		{
 			switch (_o.Type)
@@ -154,6 +170,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 				return IPreChildQuest.Pack(builder, _o.AsIPreChildQuest()).Value;
 			case TVisibleCondition.IPreQuest:
 				return IPreQuest.Pack(builder, _o.AsIPreQuest()).Value;
+			case TVisibleCondition.ISeasonAndWeather:
+				return ISeasonAndWeather.Pack(builder, _o.AsISeasonAndWeather()).Value;
 			case TVisibleCondition.ITargetEntityInvisible:
 				return ITargetEntityInvisible.Pack(builder, _o.AsITargetEntityInvisible()).Value;
 			case TVisibleCondition.ITimePeriod:

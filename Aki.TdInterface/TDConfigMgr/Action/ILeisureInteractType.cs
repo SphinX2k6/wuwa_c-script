@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B72 RID: 7026
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D1F RID: 7455
 	public class ILeisureInteractType
 	{
-		// Token: 0x06009675 RID: 38517 RVA: 0x0015B86C File Offset: 0x00159A6C
+		// Token: 0x06009E57 RID: 40535 RVA: 0x0016C418 File Offset: 0x0016A618
 		private ILeisureInteractType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009676 RID: 38518 RVA: 0x0015B8A4 File Offset: 0x00159AA4
+		// Token: 0x06009E58 RID: 40536 RVA: 0x0016C450 File Offset: 0x0016A650
 		public static ILeisureInteractType Create([Nullable(2)] ILeisureInteractType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009677 RID: 38519 RVA: 0x0015B8B7 File Offset: 0x00159AB7
+		// Token: 0x06009E59 RID: 40537 RVA: 0x0016C463 File Offset: 0x0016A663
 		public static ILeisureInteractType CreateFromSetValue([Nullable(2)] ILeisureInteractType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009678 RID: 38520 RVA: 0x0015B8CA File Offset: 0x00159ACA
+		// Token: 0x06009E5A RID: 40538 RVA: 0x0016C476 File Offset: 0x0016A676
 		public ILeisureInteractType_SetValue ToSetValue()
 		{
 			return new ILeisureInteractType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F66 RID: 12134
-		// (get) Token: 0x06009679 RID: 38521 RVA: 0x0015B8DD File Offset: 0x00159ADD
-		// (set) Token: 0x0600967A RID: 38522 RVA: 0x0015B908 File Offset: 0x00159B08
+		// Token: 0x1700318B RID: 12683
+		// (get) Token: 0x06009E5B RID: 40539 RVA: 0x0016C489 File Offset: 0x0016A689
+		// (set) Token: 0x06009E5C RID: 40540 RVA: 0x0016C4B4 File Offset: 0x0016A6B4
 		public virtual ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BFD RID: 23549
+		// Token: 0x04006096 RID: 24726
 		[Nullable(2)]
 		protected ILeisureInteractType FbInstance;
 
-		// Token: 0x04005BFE RID: 23550
+		// Token: 0x04006097 RID: 24727
 		[Nullable(2)]
 		protected ILeisureInteractType_SetValue PocoInterface;
 	}

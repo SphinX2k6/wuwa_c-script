@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -10,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012A2 RID: 4770
+// Token: 0x02000756 RID: 1878
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewLongShan : ActivitySubViewBase
 {
-	// Token: 0x060082CD RID: 33485 RVA: 0x001BC924 File Offset: 0x001BAB24
+	// Token: 0x06005664 RID: 22116 RVA: 0x001C56B4 File Offset: 0x001C38B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -50,13 +49,13 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060082CE RID: 33486 RVA: 0x001BCAB2 File Offset: 0x001BACB2
+	// Token: 0x06005665 RID: 22117 RVA: 0x001C5842 File Offset: 0x001C3A42
 	protected override void OnSetData()
 	{
 		this.ActivityData = (ActivityLongShanData)this.ActivityBaseData;
 	}
 
-	// Token: 0x060082CF RID: 33487 RVA: 0x001BCAC8 File Offset: 0x001BACC8
+	// Token: 0x06005666 RID: 22118 RVA: 0x001C5858 File Offset: 0x001C3A58
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewLongShan.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -67,25 +66,25 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060082D0 RID: 33488 RVA: 0x001BCB0B File Offset: 0x001BAD0B
+	// Token: 0x06005667 RID: 22119 RVA: 0x001C589B File Offset: 0x001C3A9B
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.LongShanUpdate, new Action(this.OnDataUpdate));
 	}
 
-	// Token: 0x060082D1 RID: 33489 RVA: 0x001BCB29 File Offset: 0x001BAD29
+	// Token: 0x06005668 RID: 22120 RVA: 0x001C58B9 File Offset: 0x001C3AB9
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.LongShanUpdate, new Action(this.OnDataUpdate));
 	}
 
-	// Token: 0x060082D2 RID: 33490 RVA: 0x001BCB47 File Offset: 0x001BAD47
+	// Token: 0x06005669 RID: 22121 RVA: 0x001C58D7 File Offset: 0x001C3AD7
 	protected override void OnStart()
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x060082D3 RID: 33491 RVA: 0x001BCB4F File Offset: 0x001BAD4F
+	// Token: 0x0600566A RID: 22122 RVA: 0x001C58DF File Offset: 0x001C3ADF
 	protected override void OnBeforeShow()
 	{
 		ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -101,7 +100,7 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x060082D4 RID: 33492 RVA: 0x001BCB90 File Offset: 0x001BAD90
+	// Token: 0x0600566B RID: 22123 RVA: 0x001C5920 File Offset: 0x001C3B20
 	protected override UniTask OnBeforeHideSelfAsync()
 	{
 		ActivitySubViewLongShan.<OnBeforeHideSelfAsync>d__12 <OnBeforeHideSelfAsync>d__;
@@ -112,7 +111,7 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		return <OnBeforeHideSelfAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060082D5 RID: 33493 RVA: 0x001BCBD3 File Offset: 0x001BADD3
+	// Token: 0x0600566C RID: 22124 RVA: 0x001C5963 File Offset: 0x001C3B63
 	private void OnClickDetail(ActivityBaseData _)
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -121,13 +120,13 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x060082D6 RID: 33494 RVA: 0x001BCC04 File Offset: 0x001BAE04
+	// Token: 0x0600566D RID: 22125 RVA: 0x001C5994 File Offset: 0x001C3B94
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x060082D7 RID: 33495 RVA: 0x001BCC0C File Offset: 0x001BAE0C
+	// Token: 0x0600566E RID: 22126 RVA: 0x001C599C File Offset: 0x001C3B9C
 	protected override void OnRefreshView()
 	{
 		this.RefreshTimerText();
@@ -144,7 +143,7 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060082D8 RID: 33496 RVA: 0x001BCC60 File Offset: 0x001BAE60
+	// Token: 0x0600566F RID: 22127 RVA: 0x001C59F0 File Offset: 0x001C3BF0
 	private void OnDataUpdate()
 	{
 		if (this.StageItems != null)
@@ -154,17 +153,17 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 				longShanStageItem.RefreshState();
 			}
 		}
-		base.GetButton(3).RootUIComp.Get().SetUIActive(this.ActivityData.StageIds.Any((int x) => this.ActivityData.GetStageInfoById(x) == null));
+		base.GetButton(3).RootUIComp.Get().SetUIActive(Array.Exists<int>(this.ActivityData.StageIds, (int x) => this.ActivityData.GetStageInfoById(x) == null));
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x060082D9 RID: 33497 RVA: 0x001BCCF4 File Offset: 0x001BAEF4
+	// Token: 0x06005670 RID: 22128 RVA: 0x001C5A84 File Offset: 0x001C3C84
 	public override void OnCommonViewStateChange(bool show)
 	{
 		this.PlaySubViewSequence(show ? "SwitchOut" : "SwitchIn", true);
 	}
 
-	// Token: 0x060082DA RID: 33498 RVA: 0x001BCD0C File Offset: 0x001BAF0C
+	// Token: 0x06005671 RID: 22129 RVA: 0x001C5A9C File Offset: 0x001C3C9C
 	[NullableContext(1)]
 	protected override void OnSequenceStart(string sequenceName)
 	{
@@ -188,7 +187,7 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060082DB RID: 33499 RVA: 0x001BCD8C File Offset: 0x001BAF8C
+	// Token: 0x06005672 RID: 22130 RVA: 0x001C5B1C File Offset: 0x001C3D1C
 	private void SetInternalItemInteractive(bool value)
 	{
 		UUIButtonComponent button = base.GetButton(3);
@@ -205,7 +204,7 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060082DC RID: 33500 RVA: 0x001BCDF8 File Offset: 0x001BAFF8
+	// Token: 0x06005673 RID: 22131 RVA: 0x001C5B88 File Offset: 0x001C3D88
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -218,7 +217,7 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060082DD RID: 33501 RVA: 0x001BCE38 File Offset: 0x001BB038
+	// Token: 0x06005674 RID: 22132 RVA: 0x001C5BC8 File Offset: 0x001C3DC8
 	private void OnClickMainQuest()
 	{
 		if (this.ActivityData == null || this.ActivityData.StageIds == null)
@@ -242,7 +241,7 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060082DE RID: 33502 RVA: 0x001BCEF4 File Offset: 0x001BB0F4
+	// Token: 0x06005675 RID: 22133 RVA: 0x001C5C84 File Offset: 0x001C3E84
 	private void OnClickStageDetail(int stageId)
 	{
 		if (this.ActivityData.GetStageInfoById(stageId) != null)
@@ -258,7 +257,7 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		ActivityLongShanController.Instance.ShowUnlockTip(stageId);
 	}
 
-	// Token: 0x060082DF RID: 33503 RVA: 0x001BCF4C File Offset: 0x001BB14C
+	// Token: 0x06005676 RID: 22134 RVA: 0x001C5CDC File Offset: 0x001C3EDC
 	private void RefreshRedDot()
 	{
 		bool functionRedDotVisible = this.ActivityData.CheckAnyStageRed();
@@ -270,13 +269,13 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 		commonInfoPanel.SetFunctionRedDotVisible(functionRedDotVisible);
 	}
 
-	// Token: 0x04003AFC RID: 15100
+	// Token: 0x04003B94 RID: 15252
 	protected ActivityLongShanData ActivityData;
 
-	// Token: 0x04003AFD RID: 15101
+	// Token: 0x04003B95 RID: 15253
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x04003AFE RID: 15102
+	// Token: 0x04003B96 RID: 15254
 	[Nullable(new byte[]
 	{
 		2,
@@ -284,38 +283,38 @@ public class ActivitySubViewLongShan : ActivitySubViewBase
 	})]
 	protected List<LongShanStageItem> StageItems;
 
-	// Token: 0x04003AFF RID: 15103
+	// Token: 0x04003B97 RID: 15255
 	private bool TransitionAnimFlag;
 
-	// Token: 0x020078BA RID: 30906
+	// Token: 0x02006A44 RID: 27204
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027C5E RID: 162910
+		// Token: 0x04022F8C RID: 143244
 		public const int ScreenPanel = 0;
 
-		// Token: 0x04027C5F RID: 162911
+		// Token: 0x04022F8D RID: 143245
 		public const int TxtTime = 1;
 
-		// Token: 0x04027C60 RID: 162912
+		// Token: 0x04022F8E RID: 143246
 		public const int CommonActionInfo = 2;
 
-		// Token: 0x04027C61 RID: 162913
+		// Token: 0x04022F8F RID: 143247
 		public const int BtnMainQuest = 3;
 
-		// Token: 0x04027C62 RID: 162914
+		// Token: 0x04022F90 RID: 143248
 		public const int TaskBtnItemA = 4;
 
-		// Token: 0x04027C63 RID: 162915
+		// Token: 0x04022F91 RID: 143249
 		public const int TaskBtnItemB = 5;
 
-		// Token: 0x04027C64 RID: 162916
+		// Token: 0x04022F92 RID: 143250
 		public const int TaskBtnItemC = 6;
 
-		// Token: 0x04027C65 RID: 162917
+		// Token: 0x04022F93 RID: 143251
 		public const int TaskBtnItemD = 7;
 
-		// Token: 0x04027C66 RID: 162918
+		// Token: 0x04022F94 RID: 143252
 		public const int InfoItem = 8;
 	}
 }

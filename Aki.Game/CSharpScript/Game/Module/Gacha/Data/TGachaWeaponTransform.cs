@@ -6,38 +6,38 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Gacha.Data
 {
-	// Token: 0x02005A17 RID: 23063
+	// Token: 0x020049F3 RID: 18931
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TGachaWeaponTransform
 	{
-		// Token: 0x0603A7BC RID: 239548 RVA: 0x00DEADF3 File Offset: 0x00DE8FF3
+		// Token: 0x0602F705 RID: 194309 RVA: 0x00D3B38B File Offset: 0x00D3958B
 		[NullableContext(2)]
 		private TGachaWeaponTransform(object value)
 		{
 			this._value = value;
 		}
 
-		// Token: 0x0603A7BD RID: 239549 RVA: 0x00DEAE02 File Offset: 0x00DE9002
+		// Token: 0x0602F706 RID: 194310 RVA: 0x00D3B39A File Offset: 0x00D3959A
 		public static implicit operator TGachaWeaponTransform(GachaWeaponTransform? value)
 		{
 			return new TGachaWeaponTransform(value);
 		}
 
-		// Token: 0x0603A7BE RID: 239550 RVA: 0x00DEAE0F File Offset: 0x00DE900F
+		// Token: 0x0602F707 RID: 194311 RVA: 0x00D3B3A7 File Offset: 0x00D395A7
 		public static implicit operator TGachaWeaponTransform(SGachaWeaponTransform? value)
 		{
 			return new TGachaWeaponTransform(value);
 		}
 
-		// Token: 0x0603A7BF RID: 239551 RVA: 0x00DEAE1C File Offset: 0x00DE901C
+		// Token: 0x0602F708 RID: 194312 RVA: 0x00D3B3B4 File Offset: 0x00D395B4
 		[NullableContext(2)]
 		public bool Is<T>()
 		{
 			return this._value is T;
 		}
 
-		// Token: 0x0603A7C0 RID: 239552 RVA: 0x00DEAE2C File Offset: 0x00DE902C
+		// Token: 0x0602F709 RID: 194313 RVA: 0x00D3B3C4 File Offset: 0x00D395C4
 		[NullableContext(0)]
 		public T? As<T>() where T : struct
 		{
@@ -50,15 +50,15 @@ namespace CSharpScript.Game.Module.Gacha.Data
 			return null;
 		}
 
-		// Token: 0x0603A7C1 RID: 239553 RVA: 0x00DEAE61 File Offset: 0x00DE9061
+		// Token: 0x0602F70A RID: 194314 RVA: 0x00D3B3F9 File Offset: 0x00D395F9
 		[return: Nullable(2)]
 		public T AsClass<T>() where T : class
 		{
 			return this._value as T;
 		}
 
-		// Token: 0x17008BC6 RID: 35782
-		// (get) Token: 0x0603A7C2 RID: 239554 RVA: 0x00DEAE74 File Offset: 0x00DE9074
+		// Token: 0x17005F94 RID: 24468
+		// (get) Token: 0x0602F70B RID: 194315 RVA: 0x00D3B40C File Offset: 0x00D3960C
 		public bool ShowScabbard
 		{
 			get
@@ -78,8 +78,8 @@ namespace CSharpScript.Game.Module.Gacha.Data
 			}
 		}
 
-		// Token: 0x17008BC7 RID: 35783
-		// (get) Token: 0x0603A7C3 RID: 239555 RVA: 0x00DEAEC0 File Offset: 0x00DE90C0
+		// Token: 0x17005F95 RID: 24469
+		// (get) Token: 0x0602F70C RID: 194316 RVA: 0x00D3B458 File Offset: 0x00D39658
 		public float Size
 		{
 			get
@@ -99,8 +99,8 @@ namespace CSharpScript.Game.Module.Gacha.Data
 			}
 		}
 
-		// Token: 0x17008BC8 RID: 35784
-		// (get) Token: 0x0603A7C4 RID: 239556 RVA: 0x00DEAF10 File Offset: 0x00DE9110
+		// Token: 0x17005F96 RID: 24470
+		// (get) Token: 0x0602F70D RID: 194317 RVA: 0x00D3B4A8 File Offset: 0x00D396A8
 		public float RotateTime
 		{
 			get
@@ -120,8 +120,8 @@ namespace CSharpScript.Game.Module.Gacha.Data
 			}
 		}
 
-		// Token: 0x17008BC9 RID: 35785
-		// (get) Token: 0x0603A7C5 RID: 239557 RVA: 0x00DEAF60 File Offset: 0x00DE9160
+		// Token: 0x17005F97 RID: 24471
+		// (get) Token: 0x0602F70E RID: 194318 RVA: 0x00D3B4F8 File Offset: 0x00D396F8
 		public global::Vector Rotation
 		{
 			get
@@ -150,8 +150,8 @@ namespace CSharpScript.Game.Module.Gacha.Data
 			}
 		}
 
-		// Token: 0x17008BCA RID: 35786
-		// (get) Token: 0x0603A7C6 RID: 239558 RVA: 0x00DEB014 File Offset: 0x00DE9214
+		// Token: 0x17005F98 RID: 24472
+		// (get) Token: 0x0602F70F RID: 194319 RVA: 0x00D3B5AC File Offset: 0x00D397AC
 		public global::Vector Location
 		{
 			get
@@ -180,8 +180,8 @@ namespace CSharpScript.Game.Module.Gacha.Data
 			}
 		}
 
-		// Token: 0x17008BCB RID: 35787
-		// (get) Token: 0x0603A7C7 RID: 239559 RVA: 0x00DEB0C8 File Offset: 0x00DE92C8
+		// Token: 0x17005F99 RID: 24473
+		// (get) Token: 0x0602F710 RID: 194320 RVA: 0x00D3B660 File Offset: 0x00D39860
 		public global::Vector AxisRotate
 		{
 			get
@@ -210,8 +210,8 @@ namespace CSharpScript.Game.Module.Gacha.Data
 			}
 		}
 
-		// Token: 0x17008BCC RID: 35788
-		// (get) Token: 0x0603A7C8 RID: 239560 RVA: 0x00DEB17C File Offset: 0x00DE937C
+		// Token: 0x17005F9A RID: 24474
+		// (get) Token: 0x0602F711 RID: 194321 RVA: 0x00D3B714 File Offset: 0x00D39914
 		public global::Vector ScabbardOffset
 		{
 			get
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Gacha.Data
 			}
 		}
 
-		// Token: 0x0401E795 RID: 124821
+		// Token: 0x0401923C RID: 102972
 		[Nullable(2)]
 		private readonly object _value;
 	}

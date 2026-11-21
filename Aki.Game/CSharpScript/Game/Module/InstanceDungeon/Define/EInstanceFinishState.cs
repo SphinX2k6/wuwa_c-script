@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058BC RID: 22716
+	// Token: 0x02004894 RID: 18580
 	public enum EInstanceFinishState
 	{
-		// Token: 0x0401E2A2 RID: 123554
+		// Token: 0x04018D3F RID: 101695
 		UnFinish,
-		// Token: 0x0401E2A3 RID: 123555
+		// Token: 0x04018D40 RID: 101696
 		Success,
-		// Token: 0x0401E2A4 RID: 123556
+		// Token: 0x04018D41 RID: 101697
 		Fail
 	}
 }

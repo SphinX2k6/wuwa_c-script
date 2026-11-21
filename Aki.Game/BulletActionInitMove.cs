@@ -2,24 +2,23 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Core.Fight;
-using CSharpScript.Core.Common;
 using CSharpScript.Game;
 using CSharpScript.Game.Effect;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002D92 RID: 11666
+// Token: 0x020022EC RID: 8940
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActionInitMove : BulletActionBase
 {
-	// Token: 0x06018813 RID: 100371 RVA: 0x0063E219 File Offset: 0x0063C419
+	// Token: 0x060160B5 RID: 90293 RVA: 0x00663EFD File Offset: 0x006620FD
 	public BulletActionInitMove(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x1700211C RID: 8476
-	// (get) Token: 0x06018814 RID: 100372 RVA: 0x0063E222 File Offset: 0x0063C422
+	// Token: 0x17002177 RID: 8567
+	// (get) Token: 0x060160B6 RID: 90294 RVA: 0x00663F06 File Offset: 0x00662106
 	[Nullable(2)]
 	private USkeletalMeshComponent AttackerMeshComp
 	{
@@ -35,9 +34,9 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x1700211D RID: 8477
-	// (get) Token: 0x06018815 RID: 100373 RVA: 0x0063E25B File Offset: 0x0063C45B
-	// (set) Token: 0x06018816 RID: 100374 RVA: 0x0063E27C File Offset: 0x0063C47C
+	// Token: 0x17002178 RID: 8568
+	// (get) Token: 0x060160B7 RID: 90295 RVA: 0x00663F3F File Offset: 0x0066213F
+	// (set) Token: 0x060160B8 RID: 90296 RVA: 0x00663F60 File Offset: 0x00662160
 	[Nullable(2)]
 	private BaseActorComponent AttackerActorComp
 	{
@@ -63,7 +62,7 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018817 RID: 100375 RVA: 0x0063E29D File Offset: 0x0063C49D
+	// Token: 0x060160B9 RID: 90297 RVA: 0x00663F81 File Offset: 0x00662181
 	public override void Clear()
 	{
 		base.Clear();
@@ -72,10 +71,11 @@ public class BulletActionInitMove : BulletActionBase
 		this.AttackerMeshCompInternal = null;
 		this.AttackerActorCompInternal = null;
 		this.BaseLocationOutLimit = false;
+		this.BeginSpeedRotatorPending = false;
 	}
 
-	// Token: 0x06018818 RID: 100376 RVA: 0x0063E2C8 File Offset: 0x0063C4C8
-	protected override void OnExecute()
+	// Token: 0x060160BA RID: 90298 RVA: 0x00663FB4 File Offset: 0x006621B4
+	protected unsafe override void OnExecute()
 	{
 		BulletInitParams bulletInitParams = this.BulletInfo.BulletInitParams;
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -83,6 +83,23 @@ public class BulletActionInitMove : BulletActionBase
 		BulletDataMove move = bulletDataMain.Move;
 		BulletDataObstacle obstacle = bulletDataMain.Obstacle;
 		BulletMoveInfo moveInfo = this.BulletInfo.MoveInfo;
+		if (move.TrackTarget == EBulletTarget.外部传入坐标 && bulletInitParams.InitTargetLocation == null)
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Bullet;
+			ELogAuthor author = ELogAuthor.HCW;
+			string message = "子弹追踪目标为外部传入坐标, 但是没有传入目标坐标";
+			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Id", this.BulletInfo.BulletEntityId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("BulletRowName", this.BulletInfo.BulletRowName);
+			ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2);
+			string item = "Attacker";
+			BaseActorComponent attackerActorComp = this.BulletInfo.AttackerActorComp;
+			ptr = new ValueTuple<string, object>(item, (attackerActorComp != null) ? attackerActorComp.Owner : null);
+			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+			BulletController.Instance.DestroyBullet(this.BulletInfo.BulletEntityId, false, EBulletDestroyReason.Normal, false);
+			return;
+		}
 		moveInfo.BulletSpeedRatio = 1f;
 		BaseSkillComponent attackerSkillComp = this.BulletInfo.AttackerSkillComp;
 		BaseActorComponent targetActorComp = this.BulletInfo.TargetActorComp;
@@ -145,7 +162,7 @@ public class BulletActionInitMove : BulletActionBase
 		this.BulletInfo.ApplyCacheLocationAndRotation();
 	}
 
-	// Token: 0x06018819 RID: 100377 RVA: 0x0063E4F0 File Offset: 0x0063C6F0
+	// Token: 0x060160BB RID: 90299 RVA: 0x006642AC File Offset: 0x006624AC
 	[return: Nullable(2)]
 	private USkeletalMeshComponent FindSkeletalMeshComponent(BaseActorComponent characterActor, string nameComponent)
 	{
@@ -166,7 +183,7 @@ public class BulletActionInitMove : BulletActionBase
 		return characterActor.SkeletalMesh;
 	}
 
-	// Token: 0x0601881A RID: 100378 RVA: 0x0063E570 File Offset: 0x0063C770
+	// Token: 0x060160BC RID: 90300 RVA: 0x0066432C File Offset: 0x0066252C
 	private void OnStartAttachToBone(BaseActorComponent target)
 	{
 		BulletDataMove move = this.Data.Move;
@@ -201,7 +218,7 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x0601881B RID: 100379 RVA: 0x0063E6C8 File Offset: 0x0063C8C8
+	// Token: 0x060160BD RID: 90301 RVA: 0x00664484 File Offset: 0x00662684
 	private void OnStartBaseLocation()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -277,14 +294,14 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x0601881C RID: 100380 RVA: 0x0063E80F File Offset: 0x0063CA0F
+	// Token: 0x060160BE RID: 90302 RVA: 0x006645CB File Offset: 0x006627CB
 	private void OnStartBaseLocationOwner(BaseActorComponent attackerActorComp)
 	{
 		this.OnStartStandardLocation(null);
 		this.OnStartAttachToBone(attackerActorComp);
 	}
 
-	// Token: 0x0601881D RID: 100381 RVA: 0x0063E820 File Offset: 0x0063CA20
+	// Token: 0x060160BF RID: 90303 RVA: 0x006645DC File Offset: 0x006627DC
 	[NullableContext(2)]
 	private void OnStartBaseLocationSkillTarget(BaseActorComponent actorComp, bool baseOnTargetActor)
 	{
@@ -297,7 +314,7 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x0601881E RID: 100382 RVA: 0x0063E860 File Offset: 0x0063CA60
+	// Token: 0x060160C0 RID: 90304 RVA: 0x0066461C File Offset: 0x0066281C
 	[NullableContext(2)]
 	private void OnStartBaseLocationByEntity(EntityHandle baseTransformEntity, bool baseOnTarget = false)
 	{
@@ -332,7 +349,7 @@ public class BulletActionInitMove : BulletActionBase
 		this.OnStartStandardLocation(tempTransform);
 	}
 
-	// Token: 0x0601881F RID: 100383 RVA: 0x0063E8DC File Offset: 0x0063CADC
+	// Token: 0x060160C1 RID: 90305 RVA: 0x00664698 File Offset: 0x00662898
 	private void OnStartBaseLocationParent(BulletInfo bulletInfo)
 	{
 		if (this.Data.Move.FollowType == EBulletFollowType.跟随父子弹特效骨骼)
@@ -380,7 +397,7 @@ public class BulletActionInitMove : BulletActionBase
 		BulletPool.RecycleVector(vector);
 	}
 
-	// Token: 0x06018820 RID: 100384 RVA: 0x0063EA4C File Offset: 0x0063CC4C
+	// Token: 0x060160C2 RID: 90306 RVA: 0x00664808 File Offset: 0x00662A08
 	private unsafe void OnAttachParentEffectSkeleton(BulletInfo bulletInfo)
 	{
 		BulletEntity bulletEntityById = BulletModel.Instance.GetBulletEntityById(bulletInfo.ParentEntityId);
@@ -418,7 +435,7 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018821 RID: 100385 RVA: 0x0063EB7C File Offset: 0x0063CD7C
+	// Token: 0x060160C3 RID: 90307 RVA: 0x00664938 File Offset: 0x00662B38
 	private void OnStartBaseLocationCurrentRole()
 	{
 		CharacterActorComponent currentRole = BulletUtil.GetCurrentRole(this.BulletInfo);
@@ -431,7 +448,7 @@ public class BulletActionInitMove : BulletActionBase
 		this.OnStartAttachToBone(currentRole);
 	}
 
-	// Token: 0x06018822 RID: 100386 RVA: 0x0063EBC0 File Offset: 0x0063CDC0
+	// Token: 0x060160C4 RID: 90308 RVA: 0x0066497C File Offset: 0x00662B7C
 	private void OnStartStandardLocationBaseOnTarget(Transform standardTransform)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -465,7 +482,7 @@ public class BulletActionInitMove : BulletActionBase
 		BulletPool.RecycleVector(vector2);
 	}
 
-	// Token: 0x06018823 RID: 100387 RVA: 0x0063ECA8 File Offset: 0x0063CEA8
+	// Token: 0x060160C5 RID: 90309 RVA: 0x00664A64 File Offset: 0x00662C64
 	[NullableContext(2)]
 	private void OnStartStandardLocation(Transform standardTransform)
 	{
@@ -532,7 +549,7 @@ public class BulletActionInitMove : BulletActionBase
 		BulletPool.RecycleVector(vector3);
 	}
 
-	// Token: 0x06018824 RID: 100388 RVA: 0x0063EE8C File Offset: 0x0063D08C
+	// Token: 0x060160C6 RID: 90310 RVA: 0x00664C48 File Offset: 0x00662E48
 	private void InitPositionTarget([Nullable(2)] BaseActorComponent target, Transform outTransform, bool baseOnTarget = false, bool baseOnTargetActor = false)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -583,7 +600,7 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018825 RID: 100389 RVA: 0x0063EFD0 File Offset: 0x0063D1D0
+	// Token: 0x060160C7 RID: 90311 RVA: 0x00664D8C File Offset: 0x00662F8C
 	private void ClampDistance(Vector standardLocation, bool hasValidTarget)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -637,7 +654,7 @@ public class BulletActionInitMove : BulletActionBase
 		BulletPool.RecycleVector(vector);
 	}
 
-	// Token: 0x06018826 RID: 100390 RVA: 0x0063F120 File Offset: 0x0063D320
+	// Token: 0x060160C8 RID: 90312 RVA: 0x00664EDC File Offset: 0x006630DC
 	private void BulletAimedToward(Rotator outRotator)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -744,9 +761,10 @@ public class BulletActionInitMove : BulletActionBase
 		BulletPool.RecycleVector(vector4);
 	}
 
-	// Token: 0x06018827 RID: 100391 RVA: 0x0063F4CC File Offset: 0x0063D6CC
+	// Token: 0x060160C9 RID: 90313 RVA: 0x00665288 File Offset: 0x00663488
 	private void OnStartSpeedRotator()
 	{
+		this.BeginSpeedRotatorPending = false;
 		BulletDataAimed aimed = this.Data.Aimed;
 		BulletDataMove move = this.Data.Move;
 		if (aimed.AimedCtrlDir || move.FollowType == EBulletFollowType.跟随骨骼位置旋转 || move.Trajectory == EMoveTrajectory.角度限制抛物线子弹 || move.Trajectory == EMoveTrajectory.时间限制抛物线子弹)
@@ -776,9 +794,22 @@ public class BulletActionInitMove : BulletActionBase
 		}
 		if (@base.StickGround && !@base.IgnoreGradient)
 		{
+			this.BeginSpeedRotatorPending = true;
 			BulletPool.RecycleRotator(rotator);
 			return;
 		}
+		BulletPool.RecycleRotator(rotator);
+		this.ApplyBeginSpeedRotator();
+	}
+
+	// Token: 0x060160CA RID: 90314 RVA: 0x006653B4 File Offset: 0x006635B4
+	private void ApplyBeginSpeedRotator()
+	{
+		this.BeginSpeedRotatorPending = false;
+		BulletInfo bulletInfo = this.BulletInfo;
+		BulletMoveInfo moveInfo = bulletInfo.MoveInfo;
+		BulletDataBase @base = this.Data.Base;
+		BulletDataMove move = this.Data.Move;
 		if (!@base.Rotator.IsNearlyZero())
 		{
 			bulletInfo.IsCollisionRelativeRotationModify = true;
@@ -789,7 +820,6 @@ public class BulletActionInitMove : BulletActionBase
 		}
 		BulletUtil.ClampBeginRotator(bulletInfo);
 		bulletInfo.SetActorRotation(moveInfo.BeginSpeedRotator);
-		BulletPool.RecycleRotator(rotator);
 		if (BulletConstant.Instance.OpenMoveLog)
 		{
 			bool gasDebug = false;
@@ -802,7 +832,14 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018828 RID: 100392 RVA: 0x0063F668 File Offset: 0x0063D868
+	// Token: 0x060160CB RID: 90315 RVA: 0x0066546C File Offset: 0x0066366C
+	private bool IsStickGroundAngleOverLimit(Vector groundNormal, Vector up)
+	{
+		float stickGroundAngleLimit = this.Data.Base.StickGroundAngleLimit;
+		return stickGroundAngleLimit > 0f && stickGroundAngleLimit < 180f && groundNormal.DotProduct(up) < Math.Cos((double)(stickGroundAngleLimit * 0.017453292f));
+	}
+
+	// Token: 0x060160CC RID: 90316 RVA: 0x006654B4 File Offset: 0x006636B4
 	private void RandomBeginSpeedRotator(Rotator beginRotator, Vector randomConfig)
 	{
 		if (randomConfig.X > 0.0)
@@ -846,7 +883,7 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018829 RID: 100393 RVA: 0x0063F7E6 File Offset: 0x0063D9E6
+	// Token: 0x060160CD RID: 90317 RVA: 0x00665632 File Offset: 0x00663832
 	private float GetRandom(float inValue)
 	{
 		if (inValue == 0f)
@@ -856,7 +893,7 @@ public class BulletActionInitMove : BulletActionBase
 		return (float)(new Random().NextDouble() * (double)inValue);
 	}
 
-	// Token: 0x0601882A RID: 100394 RVA: 0x0063F804 File Offset: 0x0063DA04
+	// Token: 0x060160CE RID: 90318 RVA: 0x00665650 File Offset: 0x00663850
 	private void GetBeginSpeedRotator(Rotator outRotator)
 	{
 		FVectorDouble? fvectorDouble = null;
@@ -1049,7 +1086,7 @@ public class BulletActionInitMove : BulletActionBase
 		outRotator.FromUeRotator(Rotator.ZeroRotatorProxy);
 	}
 
-	// Token: 0x0601882B RID: 100395 RVA: 0x0063FD44 File Offset: 0x0063DF44
+	// Token: 0x060160CF RID: 90319 RVA: 0x00665B90 File Offset: 0x00663D90
 	private unsafe void OnStartAround()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -1168,7 +1205,7 @@ public class BulletActionInitMove : BulletActionBase
 		BulletPool.RecycleVector(vector5);
 	}
 
-	// Token: 0x0601882C RID: 100396 RVA: 0x00640158 File Offset: 0x0063E358
+	// Token: 0x060160D0 RID: 90320 RVA: 0x00665FA4 File Offset: 0x006641A4
 	private void RoundBulletInitTarget(BaseActorComponent target)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -1185,7 +1222,7 @@ public class BulletActionInitMove : BulletActionBase
 		roundCenterLastLocation.FromUeVector(fvectorDouble);
 	}
 
-	// Token: 0x0601882D RID: 100397 RVA: 0x006401D8 File Offset: 0x0063E3D8
+	// Token: 0x060160D1 RID: 90321 RVA: 0x00666024 File Offset: 0x00664224
 	private void OnStartParabola()
 	{
 		BulletDataMove move = this.Data.Move;
@@ -1392,7 +1429,7 @@ public class BulletActionInitMove : BulletActionBase
 		BulletPool.RecycleVector(vector4);
 	}
 
-	// Token: 0x0601882E RID: 100398 RVA: 0x00640A10 File Offset: 0x0063EC10
+	// Token: 0x060160D2 RID: 90322 RVA: 0x0066685C File Offset: 0x00664A5C
 	private void OnStartParabolaStandard()
 	{
 		BulletDataMove move = this.Data.Move;
@@ -1587,7 +1624,7 @@ public class BulletActionInitMove : BulletActionBase
 		BulletPool.RecycleVector(vector4);
 	}
 
-	// Token: 0x0601882F RID: 100399 RVA: 0x006411BC File Offset: 0x0063F3BC
+	// Token: 0x060160D3 RID: 90323 RVA: 0x00667008 File Offset: 0x00665208
 	private unsafe void OnStartMovingPlatform()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -1659,7 +1696,7 @@ public class BulletActionInitMove : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018830 RID: 100400 RVA: 0x00641434 File Offset: 0x0063F634
+	// Token: 0x060160D4 RID: 90324 RVA: 0x00667280 File Offset: 0x00665480
 	private void OnStartStickGround()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -1670,20 +1707,10 @@ public class BulletActionInitMove : BulletActionBase
 		}
 		Vector vector = BulletPool.CreateVector(false);
 		Vector vector2 = BulletPool.CreateVector(false);
+		bool flag = !@base.IgnoreGradient;
 		if (BulletMoveInfo.StickGroundLineTrace == null)
 		{
 			BulletMoveInfo.StickGroundLineTrace = BulletTraceElementPool.NewTraceElementByTraceChannel<UTraceLineElement>(KuroTraceTypeQuery.IkGround, false);
-		}
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			bool flag = BulletModel.Instance.ShowBulletTrace(this.BulletInfo.Attacker.Id);
-			EDrawDebugTrace drawDebugTrace = flag ? EDrawDebugTrace.ForDuration : EDrawDebugTrace.None;
-			BulletMoveInfo.StickGroundLineTrace.SetDrawDebugTrace(drawDebugTrace);
-			if (flag)
-			{
-				TraceElementCommon.Instance.SetTraceColor(BulletMoveInfo.StickGroundLineTrace, ColorUtils.LinearGreen);
-				TraceElementCommon.Instance.SetTraceHitColor(BulletMoveInfo.StickGroundLineTrace, ColorUtils.LinearRed);
-			}
 		}
 		UTraceLineElement stickGroundLineTrace = BulletMoveInfo.StickGroundLineTrace;
 		EntityHandle baseTransformEntity = bulletInfo.BaseTransformEntity;
@@ -1753,7 +1780,7 @@ public class BulletActionInitMove : BulletActionBase
 				}
 				TraceElementCommon.Instance.GetHitLocation(hitResult, index, vector);
 				bulletInfo.SetActorLocation(vector);
-				if (!@base.IgnoreGradient)
+				if (flag)
 				{
 					TraceElementCommon.Instance.GetImpactNormal(hitResult, index, vector);
 				}
@@ -1790,7 +1817,7 @@ public class BulletActionInitMove : BulletActionBase
 					{
 						TraceElementCommon.Instance.GetHitLocation(hitResult2, num3, vector);
 						bulletInfo.SetActorLocation(vector);
-						if (!@base.IgnoreGradient)
+						if (flag)
 						{
 							TraceElementCommon.Instance.GetImpactNormal(hitResult2, num3, vector);
 						}
@@ -1802,7 +1829,11 @@ public class BulletActionInitMove : BulletActionBase
 		BulletPool.RecycleVector(vector7);
 		if (flag4)
 		{
-			if (@base.IgnoreGradient)
+			if (flag && this.IsStickGroundAngleOverLimit(vector, vector4))
+			{
+				flag = false;
+			}
+			if (!flag)
 			{
 				vector.FromUeVector(vector4);
 			}
@@ -1823,7 +1854,7 @@ public class BulletActionInitMove : BulletActionBase
 			bulletInfo.SetActorLocation(vector);
 			vector.FromUeVector(vector4);
 		}
-		if (!@base.IgnoreGradient)
+		if (flag)
 		{
 			Rotator rotator = BulletPool.CreateRotator(false);
 			MathUtils.Instance.LookRotationUpFirst(Vector.ForwardVectorProxy, vector, rotator);
@@ -1835,11 +1866,15 @@ public class BulletActionInitMove : BulletActionBase
 			}
 			BulletPool.RecycleRotator(rotator);
 		}
+		else if (this.BeginSpeedRotatorPending)
+		{
+			this.ApplyBeginSpeedRotator();
+		}
 		BulletPool.RecycleVector(vector5);
 		BulletPool.RecycleVector(vector);
 	}
 
-	// Token: 0x06018831 RID: 100401 RVA: 0x006418F0 File Offset: 0x0063FAF0
+	// Token: 0x060160D5 RID: 90325 RVA: 0x006676F4 File Offset: 0x006658F4
 	private void OnStartStickGroundStandard()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -1850,20 +1885,10 @@ public class BulletActionInitMove : BulletActionBase
 		}
 		Vector vector = BulletPool.CreateVector(false);
 		Vector vector2 = BulletPool.CreateVector(false);
+		bool flag = !@base.IgnoreGradient;
 		if (BulletMoveInfo.StickGroundLineTrace == null)
 		{
 			BulletMoveInfo.StickGroundLineTrace = BulletTraceElementPool.NewTraceElementByTraceChannel<UTraceLineElement>(KuroTraceTypeQuery.IkGround, false);
-		}
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			bool flag = BulletModel.Instance.ShowBulletTrace(this.BulletInfo.Attacker.Id);
-			EDrawDebugTrace drawDebugTrace = flag ? EDrawDebugTrace.ForDuration : EDrawDebugTrace.None;
-			BulletMoveInfo.StickGroundLineTrace.SetDrawDebugTrace(drawDebugTrace);
-			if (flag)
-			{
-				TraceElementCommon.Instance.SetTraceColor(BulletMoveInfo.StickGroundLineTrace, ColorUtils.LinearGreen);
-				TraceElementCommon.Instance.SetTraceHitColor(BulletMoveInfo.StickGroundLineTrace, ColorUtils.LinearRed);
-			}
 		}
 		UTraceLineElement stickGroundLineTrace = BulletMoveInfo.StickGroundLineTrace;
 		EntityHandle baseTransformEntity = bulletInfo.BaseTransformEntity;
@@ -1921,7 +1946,7 @@ public class BulletActionInitMove : BulletActionBase
 				}
 				TraceElementCommon.Instance.GetHitLocation(hitResult, index, vector);
 				bulletInfo.SetActorLocation(vector);
-				if (!@base.IgnoreGradient)
+				if (flag)
 				{
 					TraceElementCommon.Instance.GetImpactNormal(hitResult, index, vector);
 				}
@@ -1957,7 +1982,7 @@ public class BulletActionInitMove : BulletActionBase
 					{
 						TraceElementCommon.Instance.GetHitLocation(hitResult2, num3, vector);
 						bulletInfo.SetActorLocation(vector);
-						if (!@base.IgnoreGradient)
+						if (flag)
 						{
 							TraceElementCommon.Instance.GetImpactNormal(hitResult2, num3, vector);
 						}
@@ -1967,7 +1992,11 @@ public class BulletActionInitMove : BulletActionBase
 		}
 		if (flag3)
 		{
-			if (@base.IgnoreGradient)
+			if (flag && this.IsStickGroundAngleOverLimit(vector, Vector.UpVectorProxy))
+			{
+				flag = false;
+			}
+			if (!flag)
 			{
 				vector.FromUeVector(Vector.UpVectorProxy);
 			}
@@ -1988,7 +2017,7 @@ public class BulletActionInitMove : BulletActionBase
 			vector.FromUeVector(Vector.UpVectorProxy);
 		}
 		Rotator rotator = BulletPool.CreateRotator(false);
-		if (!@base.IgnoreGradient)
+		if (flag)
 		{
 			MathUtils.Instance.LookRotationUpFirst(Vector.ForwardVectorProxy, vector, rotator);
 			bulletInfo.SetActorRotation(rotator);
@@ -1998,52 +2027,59 @@ public class BulletActionInitMove : BulletActionBase
 				bulletInfo.AddBulletLocalRotator(rotator.ToUeRotator());
 			}
 		}
+		else if (this.BeginSpeedRotatorPending)
+		{
+			this.ApplyBeginSpeedRotator();
+		}
 		BulletPool.RecycleVector(vector);
 		BulletPool.RecycleVector(vector2);
 		BulletPool.RecycleRotator(rotator);
 	}
 
-	// Token: 0x0400B5C5 RID: 46533
+	// Token: 0x0400B93A RID: 47418
 	private const float DEFAULT_GRAVITY = -1000f;
 
-	// Token: 0x0400B5C6 RID: 46534
+	// Token: 0x0400B93B RID: 47419
 	private const float DEFAULT_UP_DISTANCE = 500f;
 
-	// Token: 0x0400B5C7 RID: 46535
+	// Token: 0x0400B93C RID: 47420
 	private const string PROFILE_AIMED_TOWARD = "BulletMoveAimedToward";
 
-	// Token: 0x0400B5C8 RID: 46536
+	// Token: 0x0400B93D RID: 47421
 	private const string PROFILE_STICK_GROUND = "BulletMoveStickGround";
 
-	// Token: 0x0400B5C9 RID: 46537
+	// Token: 0x0400B93E RID: 47422
 	private const string PROFILE_STICK_WATER = "BulletMoveStickWater";
 
-	// Token: 0x0400B5CA RID: 46538
+	// Token: 0x0400B93F RID: 47423
 	private const float MAX_CLAMPED_DIST = 15000f;
 
-	// Token: 0x0400B5CB RID: 46539
+	// Token: 0x0400B940 RID: 47424
 	[StaticVariableRuleIgnore]
 	private static readonly Stat BulletInitMoveBase = Stat.Create("BulletInitMoveBase", "", "");
 
-	// Token: 0x0400B5CC RID: 46540
+	// Token: 0x0400B941 RID: 47425
 	[StaticVariableRuleIgnore]
 	private static readonly Stat BulletInitMoveSpecial = Stat.Create("BulletInitMoveSpecial", "", "");
 
-	// Token: 0x0400B5CD RID: 46541
+	// Token: 0x0400B942 RID: 47426
 	[Nullable(2)]
 	private BulletDataMain Data;
 
-	// Token: 0x0400B5CE RID: 46542
+	// Token: 0x0400B943 RID: 47427
 	private bool AttackerMeshCompInit;
 
-	// Token: 0x0400B5CF RID: 46543
+	// Token: 0x0400B944 RID: 47428
 	[Nullable(2)]
 	private USkeletalMeshComponent AttackerMeshCompInternal;
 
-	// Token: 0x0400B5D0 RID: 46544
+	// Token: 0x0400B945 RID: 47429
 	[Nullable(2)]
 	private BaseActorComponent AttackerActorCompInternal;
 
-	// Token: 0x0400B5D1 RID: 46545
+	// Token: 0x0400B946 RID: 47430
 	private bool BaseLocationOutLimit;
+
+	// Token: 0x0400B947 RID: 47431
+	private bool BeginSpeedRotatorPending;
 }

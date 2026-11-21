@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002F70 RID: 12144
+// Token: 0x020024C4 RID: 9412
 public enum EBuffStackSourceType
 {
-	// Token: 0x0400C2D7 RID: 49879
+	// Token: 0x0400C680 RID: 50816
 	Attacker,
-	// Token: 0x0400C2D8 RID: 49880
+	// Token: 0x0400C681 RID: 50817
 	Target
 }

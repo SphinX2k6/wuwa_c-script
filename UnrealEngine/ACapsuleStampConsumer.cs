@@ -6,39 +6,39 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A54 RID: 6740
+	// Token: 0x020004A3 RID: 1187
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.CapsuleStampConsumer")]
 	[UnrealStructLayout(1592, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1592)]
 	public class ACapsuleStampConsumer : AKuroBPEditorTickActor, IUnrealUObject, IUnrealObject, IKuroRenderingStampConsumer, IUnrealNativeInterface, IUnrealInterface
 	{
-		// Token: 0x06018E85 RID: 102021 RVA: 0x0024D25C File Offset: 0x0024B45C
+		// Token: 0x06006E68 RID: 28264 RVA: 0x000A2F55 File Offset: 0x000A1155
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ACapsuleStampConsumer._ClassPtr;
 		}
 
-		// Token: 0x06018E86 RID: 102022 RVA: 0x0024D268 File Offset: 0x0024B468
+		// Token: 0x06006E69 RID: 28265 RVA: 0x000A2F61 File Offset: 0x000A1161
 		int IKuroRenderingStampConsumer.InterfaceOffset()
 		{
 			return ACapsuleStampConsumer.__InterfaceOffset_IKuroRenderingStampConsumer;
 		}
 
-		// Token: 0x06018E87 RID: 102023 RVA: 0x0024D270 File Offset: 0x0024B470
+		// Token: 0x06006E6A RID: 28266 RVA: 0x000A2F68 File Offset: 0x000A1168
 		public ACapsuleStampConsumer() : this(BuiltinUtils.AllocNativeUObject(ACapsuleStampConsumer.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018E88 RID: 102024 RVA: 0x0024D298 File Offset: 0x0024B498
+		// Token: 0x06006E6B RID: 28267 RVA: 0x000A2F90 File Offset: 0x000A1190
 		[NullableContext(1)]
 		public ACapsuleStampConsumer(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ACapsuleStampConsumer.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700629B RID: 25243
-		// (get) Token: 0x06018E89 RID: 102025 RVA: 0x0024D2CB File Offset: 0x0024B4CB
-		// (set) Token: 0x06018E8A RID: 102026 RVA: 0x0024D2DF File Offset: 0x0024B4DF
+		// Token: 0x1700158B RID: 5515
+		// (get) Token: 0x06006E6C RID: 28268 RVA: 0x000A2FC3 File Offset: 0x000A11C3
+		// (set) Token: 0x06006E6D RID: 28269 RVA: 0x000A2FD7 File Offset: 0x000A11D7
 		public unsafe FVectorDouble RTWorldCenter
 		{
 			get
@@ -51,9 +51,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700629C RID: 25244
-		// (get) Token: 0x06018E8B RID: 102027 RVA: 0x0024D2F4 File Offset: 0x0024B4F4
-		// (set) Token: 0x06018E8C RID: 102028 RVA: 0x0024D304 File Offset: 0x0024B504
+		// Token: 0x1700158C RID: 5516
+		// (get) Token: 0x06006E6E RID: 28270 RVA: 0x000A2FEC File Offset: 0x000A11EC
+		// (set) Token: 0x06006E6F RID: 28271 RVA: 0x000A2FFC File Offset: 0x000A11FC
 		public unsafe float RTWorldRadius
 		{
 			get
@@ -66,9 +66,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700629D RID: 25245
-		// (get) Token: 0x06018E8D RID: 102029 RVA: 0x0024D315 File Offset: 0x0024B515
-		// (set) Token: 0x06018E8E RID: 102030 RVA: 0x0024D329 File Offset: 0x0024B529
+		// Token: 0x1700158D RID: 5517
+		// (get) Token: 0x06006E70 RID: 28272 RVA: 0x000A300D File Offset: 0x000A120D
+		// (set) Token: 0x06006E71 RID: 28273 RVA: 0x000A3021 File Offset: 0x000A1221
 		public unsafe UTextureRenderTarget2D RenderTarget
 		{
 			get
@@ -81,33 +81,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700629E RID: 25246
-		// (get) Token: 0x06018E8F RID: 102031 RVA: 0x0024D340 File Offset: 0x0024B540
-		// (set) Token: 0x06018E90 RID: 102032 RVA: 0x0024D379 File Offset: 0x0024B579
-		[Nullable(1)]
-		public TArray<FCapsuleStampWorld2D> Capsules
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FCapsuleStampWorld2D> result;
-				if ((result = this._Capsules) == null)
-				{
-					result = (this._Capsules = new TArray<FCapsuleStampWorld2D>(base.NativePtr + (IntPtr)ACapsuleStampConsumer.__PropertyOffset_Capsules, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.Capsules.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x1700629F RID: 25247
-		// (get) Token: 0x06018E91 RID: 102033 RVA: 0x0024D387 File Offset: 0x0024B587
-		// (set) Token: 0x06018E92 RID: 102034 RVA: 0x0024D397 File Offset: 0x0024B597
+		// Token: 0x1700158E RID: 5518
+		// (get) Token: 0x06006E72 RID: 28274 RVA: 0x000A3036 File Offset: 0x000A1236
+		// (set) Token: 0x06006E73 RID: 28275 RVA: 0x000A3046 File Offset: 0x000A1246
 		public unsafe bool bOnlyDrawWhenDirty
 		{
 			get
@@ -120,9 +96,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170062A0 RID: 25248
-		// (get) Token: 0x06018E93 RID: 102035 RVA: 0x0024D3A8 File Offset: 0x0024B5A8
-		// (set) Token: 0x06018E94 RID: 102036 RVA: 0x0024D3B8 File Offset: 0x0024B5B8
+		// Token: 0x1700158F RID: 5519
+		// (get) Token: 0x06006E74 RID: 28276 RVA: 0x000A3057 File Offset: 0x000A1257
+		// (set) Token: 0x06006E75 RID: 28277 RVA: 0x000A3067 File Offset: 0x000A1267
 		public unsafe bool bEnableSmoothing
 		{
 			get
@@ -135,9 +111,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170062A1 RID: 25249
-		// (get) Token: 0x06018E95 RID: 102037 RVA: 0x0024D3C9 File Offset: 0x0024B5C9
-		// (set) Token: 0x06018E96 RID: 102038 RVA: 0x0024D3D9 File Offset: 0x0024B5D9
+		// Token: 0x17001590 RID: 5520
+		// (get) Token: 0x06006E76 RID: 28278 RVA: 0x000A3078 File Offset: 0x000A1278
+		// (set) Token: 0x06006E77 RID: 28279 RVA: 0x000A3088 File Offset: 0x000A1288
 		public unsafe float SmoothingSpeed
 		{
 			get
@@ -150,9 +126,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170062A2 RID: 25250
-		// (get) Token: 0x06018E97 RID: 102039 RVA: 0x0024D3EA File Offset: 0x0024B5EA
-		// (set) Token: 0x06018E98 RID: 102040 RVA: 0x0024D3FA File Offset: 0x0024B5FA
+		// Token: 0x17001591 RID: 5521
+		// (get) Token: 0x06006E78 RID: 28280 RVA: 0x000A3099 File Offset: 0x000A1299
+		// (set) Token: 0x06006E79 RID: 28281 RVA: 0x000A30A9 File Offset: 0x000A12A9
 		public unsafe bool bValueOnlySmoothing
 		{
 			get
@@ -165,9 +141,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170062A3 RID: 25251
-		// (get) Token: 0x06018E99 RID: 102041 RVA: 0x0024D40B File Offset: 0x0024B60B
-		// (set) Token: 0x06018E9A RID: 102042 RVA: 0x0024D41B File Offset: 0x0024B61B
+		// Token: 0x17001592 RID: 5522
+		// (get) Token: 0x06006E7A RID: 28282 RVA: 0x000A30BA File Offset: 0x000A12BA
+		// (set) Token: 0x06006E7B RID: 28283 RVA: 0x000A30CA File Offset: 0x000A12CA
 		public unsafe bool bSpreadWhenUseEndValues
 		{
 			get
@@ -180,9 +156,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170062A4 RID: 25252
-		// (get) Token: 0x06018E9B RID: 102043 RVA: 0x0024D42C File Offset: 0x0024B62C
-		// (set) Token: 0x06018E9C RID: 102044 RVA: 0x0024D43C File Offset: 0x0024B63C
+		// Token: 0x17001593 RID: 5523
+		// (get) Token: 0x06006E7C RID: 28284 RVA: 0x000A30DB File Offset: 0x000A12DB
+		// (set) Token: 0x06006E7D RID: 28285 RVA: 0x000A30EB File Offset: 0x000A12EB
 		public unsafe float SpreadSpeed
 		{
 			get
@@ -195,9 +171,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170062A5 RID: 25253
-		// (get) Token: 0x06018E9D RID: 102045 RVA: 0x0024D44D File Offset: 0x0024B64D
-		// (set) Token: 0x06018E9E RID: 102046 RVA: 0x0024D461 File Offset: 0x0024B661
+		// Token: 0x17001594 RID: 5524
+		// (get) Token: 0x06006E7E RID: 28286 RVA: 0x000A30FC File Offset: 0x000A12FC
+		// (set) Token: 0x06006E7F RID: 28287 RVA: 0x000A3110 File Offset: 0x000A1310
 		public unsafe USceneComponent Root
 		{
 			get
@@ -210,153 +186,128 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06018E9F RID: 102047 RVA: 0x0024D476 File Offset: 0x0024B676
+		// Token: 0x06006E80 RID: 28288 RVA: 0x000A3125 File Offset: 0x000A1325
 		public void SnapToTargetAndDrawOnce(bool bFlush = false)
 		{
 			ACapsuleStampConsumer.__SnapToTargetAndDrawOnce_Internal(base.NativePtr, bFlush);
 		}
 
-		// Token: 0x06018EA0 RID: 102048 RVA: 0x0024D484 File Offset: 0x0024B684
+		// Token: 0x06006E81 RID: 28289 RVA: 0x000A3133 File Offset: 0x000A1333
 		public void SetTargetPoints(in TArray<FVectorDouble> Points, float RadiusWorld, float Value = 1f, float SoftEdgeWidthWorld = 0f)
 		{
 			ACapsuleStampConsumer.__SetTargetPoints_Internal(base.NativePtr, (Points ?? new TArray<FVectorDouble>()).NativePtr, RadiusWorld, Value, SoftEdgeWidthWorld);
 		}
 
-		// Token: 0x06018EA1 RID: 102049 RVA: 0x0024D4A5 File Offset: 0x0024B6A5
+		// Token: 0x06006E82 RID: 28290 RVA: 0x000A3154 File Offset: 0x000A1354
 		public void SetTargetPoint(FVectorDouble Point, float RadiusWorld, float Value = 1f, float SoftEdgeWidthWorld = 0f)
 		{
 			ACapsuleStampConsumer.__SetTargetPoint_Internal(base.NativePtr, Point, RadiusWorld, Value, SoftEdgeWidthWorld);
 		}
 
-		// Token: 0x06018EA2 RID: 102050 RVA: 0x0024D4B7 File Offset: 0x0024B6B7
-		public void SetTargetCapsules([Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FCapsuleStampWorld2D> InTargetCapsules, bool bSnapImmediately = false)
-		{
-			ACapsuleStampConsumer.__SetTargetCapsules_Internal(base.NativePtr, (InTargetCapsules ?? new TArray<FCapsuleStampWorld2D>()).NativePtr, bSnapImmediately);
-		}
-
-		// Token: 0x06018EA3 RID: 102051 RVA: 0x0024D4D5 File Offset: 0x0024B6D5
+		// Token: 0x06006E83 RID: 28291 RVA: 0x000A3166 File Offset: 0x000A1366
 		public void PushCapsules()
 		{
 			ACapsuleStampConsumer.__PushCapsules_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018EA4 RID: 102052 RVA: 0x0024D4E2 File Offset: 0x0024B6E2
+		// Token: 0x06006E84 RID: 28292 RVA: 0x000A3173 File Offset: 0x000A1373
 		public void MarkCapsulesDirty()
 		{
 			ACapsuleStampConsumer.__MarkCapsulesDirty_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018EA5 RID: 102053 RVA: 0x0024D4EF File Offset: 0x0024B6EF
+		// Token: 0x06006E85 RID: 28293 RVA: 0x000A3180 File Offset: 0x000A1380
 		public void DrawOnce()
 		{
 			ACapsuleStampConsumer.__DrawOnce_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018EA6 RID: 102054 RVA: 0x0024D4FC File Offset: 0x0024B6FC
+		// Token: 0x06006E86 RID: 28294 RVA: 0x000A318D File Offset: 0x000A138D
 		public void ClearRT()
 		{
 			ACapsuleStampConsumer.__ClearRT_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018EA7 RID: 102055
+		// Token: 0x06006E87 RID: 28295
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SnapToTargetAndDrawOnce_Internal(IntPtr @this, bool bFlush);
 
-		// Token: 0x06018EA8 RID: 102056
+		// Token: 0x06006E88 RID: 28296
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTargetPoints_Internal(IntPtr @this, IntPtr Points, float RadiusWorld, float Value, float SoftEdgeWidthWorld);
 
-		// Token: 0x06018EA9 RID: 102057
+		// Token: 0x06006E89 RID: 28297
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTargetPoint_Internal(IntPtr @this, FVectorDouble Point, float RadiusWorld, float Value, float SoftEdgeWidthWorld);
 
-		// Token: 0x06018EAA RID: 102058
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetTargetCapsules_Internal(IntPtr @this, IntPtr InTargetCapsules, bool bSnapImmediately);
-
-		// Token: 0x06018EAB RID: 102059
+		// Token: 0x06006E8A RID: 28298
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PushCapsules_Internal(IntPtr @this);
 
-		// Token: 0x06018EAC RID: 102060
+		// Token: 0x06006E8B RID: 28299
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MarkCapsulesDirty_Internal(IntPtr @this);
 
-		// Token: 0x06018EAD RID: 102061
+		// Token: 0x06006E8C RID: 28300
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DrawOnce_Internal(IntPtr @this);
 
-		// Token: 0x06018EAE RID: 102062
+		// Token: 0x06006E8D RID: 28301
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearRT_Internal(IntPtr @this);
 
-		// Token: 0x06018EAF RID: 102063 RVA: 0x0024D509 File Offset: 0x0024B709
+		// Token: 0x06006E8E RID: 28302 RVA: 0x000A319A File Offset: 0x000A139A
 		static ACapsuleStampConsumer()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.CapsuleStampConsumer");
 		}
 
-		// Token: 0x06018EB0 RID: 102064 RVA: 0x0024D517 File Offset: 0x0024B717
+		// Token: 0x06006E8F RID: 28303 RVA: 0x000A31A8 File Offset: 0x000A13A8
 		protected ACapsuleStampConsumer(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D7A3 RID: 55203
+		// Token: 0x04002F69 RID: 12137
 		internal static int __InterfaceOffset_IKuroRenderingStampConsumer;
 
-		// Token: 0x0400D7A4 RID: 55204
+		// Token: 0x04002F6A RID: 12138
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.CapsuleStampConsumer";
 
-		// Token: 0x0400D7A5 RID: 55205
+		// Token: 0x04002F6B RID: 12139
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D7A6 RID: 55206
+		// Token: 0x04002F6C RID: 12140
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D7A7 RID: 55207
+		// Token: 0x04002F6D RID: 12141
 		internal static int __PropertyOffset_RTWorldCenter;
 
-		// Token: 0x0400D7A8 RID: 55208
+		// Token: 0x04002F6E RID: 12142
 		internal static int __PropertyOffset_RTWorldRadius;
 
-		// Token: 0x0400D7A9 RID: 55209
+		// Token: 0x04002F6F RID: 12143
 		internal static int __PropertyOffset_RenderTarget;
 
-		// Token: 0x0400D7AA RID: 55210
-		internal static int __PropertyOffset_Capsules;
-
-		// Token: 0x0400D7AB RID: 55211
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FCapsuleStampWorld2D> _Capsules;
-
-		// Token: 0x0400D7AC RID: 55212
+		// Token: 0x04002F70 RID: 12144
 		internal static int __PropertyOffset_bOnlyDrawWhenDirty;
 
-		// Token: 0x0400D7AD RID: 55213
+		// Token: 0x04002F71 RID: 12145
 		internal static int __PropertyOffset_bEnableSmoothing;
 
-		// Token: 0x0400D7AE RID: 55214
+		// Token: 0x04002F72 RID: 12146
 		internal static int __PropertyOffset_SmoothingSpeed;
 
-		// Token: 0x0400D7AF RID: 55215
+		// Token: 0x04002F73 RID: 12147
 		internal static int __PropertyOffset_bValueOnlySmoothing;
 
-		// Token: 0x0400D7B0 RID: 55216
+		// Token: 0x04002F74 RID: 12148
 		internal static int __PropertyOffset_bSpreadWhenUseEndValues;
 
-		// Token: 0x0400D7B1 RID: 55217
+		// Token: 0x04002F75 RID: 12149
 		internal static int __PropertyOffset_SpreadSpeed;
 
-		// Token: 0x0400D7B2 RID: 55218
+		// Token: 0x04002F76 RID: 12150
 		internal static int __PropertyOffset_Root;
 	}
 }

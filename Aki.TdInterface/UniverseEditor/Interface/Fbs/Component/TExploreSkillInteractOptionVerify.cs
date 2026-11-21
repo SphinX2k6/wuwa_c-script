@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C1A RID: 23578
+	// Token: 0x02006239 RID: 25145
 	public static class TExploreSkillInteractOptionVerify
 	{
-		// Token: 0x06028714 RID: 165652 RVA: 0x00590D2C File Offset: 0x0058EF2C
+		// Token: 0x0602AD06 RID: 175366 RVA: 0x005D8CA8 File Offset: 0x005D6EA8
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -22,36 +22,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				result = IExploreSkillEavesdropVerify.Verify(verifier, tablePos);
 				break;
 			case 4:
-				result = IExploreSkillLonelyDollPollutantVerify.Verify(verifier, tablePos);
+				result = IExploreSkillGraffitiPuzzleVerify.Verify(verifier, tablePos);
 				break;
 			case 5:
-				result = IExploreSkillMechascoutDragVerify.Verify(verifier, tablePos);
+				result = IExploreSkillLonelyDollPollutantVerify.Verify(verifier, tablePos);
 				break;
 			case 6:
-				result = IExploreSkillPullGiantVerify.Verify(verifier, tablePos);
+				result = IExploreSkillMechascoutDragVerify.Verify(verifier, tablePos);
 				break;
 			case 7:
-				result = IExploreSkillPullStatueVerify.Verify(verifier, tablePos);
+				result = IExploreSkillPullGiantVerify.Verify(verifier, tablePos);
 				break;
 			case 8:
-				result = IExploreSkillQuantumDiffusionVerify.Verify(verifier, tablePos);
+				result = IExploreSkillPullStatueVerify.Verify(verifier, tablePos);
 				break;
 			case 9:
-				result = IExploreSkillRagDollCrushingRockVerify.Verify(verifier, tablePos);
+				result = IExploreSkillQuantumDiffusionVerify.Verify(verifier, tablePos);
 				break;
 			case 10:
-				result = IExploreSkillRagDollDestroySolidRockVerify.Verify(verifier, tablePos);
+				result = IExploreSkillRagDollCrushingRockVerify.Verify(verifier, tablePos);
 				break;
 			case 11:
-				result = IExploreSkillStatueInteractPointVerify.Verify(verifier, tablePos);
+				result = IExploreSkillRagDollDestroySolidRockVerify.Verify(verifier, tablePos);
 				break;
 			case 12:
-				result = IFollowShooterInteractPointVerify.Verify(verifier, tablePos);
+				result = IExploreSkillStatueInteractPointVerify.Verify(verifier, tablePos);
 				break;
 			case 13:
-				result = IFoxJumpInteractPointVerify.Verify(verifier, tablePos);
+				result = IFollowShooterInteractPointVerify.Verify(verifier, tablePos);
 				break;
 			case 14:
+				result = IFoxJumpInteractPointVerify.Verify(verifier, tablePos);
+				break;
+			case 15:
 				result = IMonsterSummonInteractPointVerify.Verify(verifier, tablePos);
 				break;
 			default:

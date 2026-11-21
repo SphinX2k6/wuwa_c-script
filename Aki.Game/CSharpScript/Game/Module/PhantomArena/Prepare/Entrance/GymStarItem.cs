@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005170 RID: 20848
+	// Token: 0x02004140 RID: 16704
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 	})]
 	public class GymStarItem : GridProxyAbstract<GymChallengeData>
 	{
-		// Token: 0x060354D2 RID: 218322 RVA: 0x00C9F2B4 File Offset: 0x00C9D4B4
+		// Token: 0x0602A3CE RID: 173006 RVA: 0x00BEC800 File Offset: 0x00BEAA00
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x060354D3 RID: 218323 RVA: 0x00C9F2ED File Offset: 0x00C9D4ED
+		// Token: 0x0602A3CF RID: 173007 RVA: 0x00BEC839 File Offset: 0x00BEAA39
 		[NullableContext(1)]
 		public override void Refresh(GymChallengeData data, bool isSelected, int gridIndex)
 		{
@@ -32,23 +32,23 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.GetSprite(1).SetUIActive(data.State == EChallengeState.Finish);
 		}
 
-		// Token: 0x060354D4 RID: 218324 RVA: 0x00C9F311 File Offset: 0x00C9D511
+		// Token: 0x0602A3D0 RID: 173008 RVA: 0x00BEC85D File Offset: 0x00BEAA5D
 		public override void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x060354D5 RID: 218325 RVA: 0x00C9F313 File Offset: 0x00C9D513
+		// Token: 0x0602A3D1 RID: 173009 RVA: 0x00BEC85F File Offset: 0x00BEAA5F
 		public override void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0200B2D4 RID: 45780
+		// Token: 0x02009D0E RID: 40206
 		private class EComponent
 		{
-			// Token: 0x040362ED RID: 221933
+			// Token: 0x04030D44 RID: 200004
 			public const int SpriteBg = 0;
 
-			// Token: 0x040362EE RID: 221934
+			// Token: 0x04030D45 RID: 200005
 			public const int SpriteIcon = 1;
 		}
 	}

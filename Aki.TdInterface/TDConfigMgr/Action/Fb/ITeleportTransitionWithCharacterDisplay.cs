@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026A5 RID: 9893
+	// Token: 0x02002968 RID: 10600
 	public class ITeleportTransitionWithCharacterDisplay : ITeleportTransitionType
 	{
-		// Token: 0x0600DD6E RID: 56686 RVA: 0x0020E506 File Offset: 0x0020C706
-		[NullableContext(1)]
+		// Token: 0x0600EB45 RID: 60229 RVA: 0x0022ACA6 File Offset: 0x00228EA6
 		public static ITeleportTransitionWithCharacterDisplay Create(ITeleportTransitionWithCharacterDisplay? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041E6 RID: 16870
-		// (get) Token: 0x0600DD6F RID: 56687 RVA: 0x0020E525 File Offset: 0x0020C725
+		// Token: 0x17004523 RID: 17699
+		// (get) Token: 0x0600EB46 RID: 60230 RVA: 0x0022ACC5 File Offset: 0x00228EC5
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041E7 RID: 16871
-		// (get) Token: 0x0600DD70 RID: 56688 RVA: 0x0020E532 File Offset: 0x0020C732
+		// Token: 0x17004524 RID: 17700
+		// (get) Token: 0x0600EB47 RID: 60231 RVA: 0x0022ACD2 File Offset: 0x00228ED2
 		public virtual int StyleId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AFB RID: 31483
+		// Token: 0x04008198 RID: 33176
 		private ITeleportTransitionWithCharacterDisplay Instance;
 	}
 }

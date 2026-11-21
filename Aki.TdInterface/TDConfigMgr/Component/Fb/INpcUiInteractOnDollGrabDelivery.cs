@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BC8 RID: 3016
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C96 RID: 3222
 	public class INpcUiInteractOnDollGrabDelivery : INpcUiInteractType
 	{
-		// Token: 0x0600455B RID: 17755 RVA: 0x000AFAEE File Offset: 0x000ADCEE
+		// Token: 0x060049B4 RID: 18868 RVA: 0x000B9BB2 File Offset: 0x000B7DB2
 		public static INpcUiInteractOnDollGrabDelivery Create(INpcUiInteractOnDollGrabDelivery? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001388 RID: 5000
-		// (get) Token: 0x0600455C RID: 17756 RVA: 0x000AFB0D File Offset: 0x000ADD0D
+		// Token: 0x17001483 RID: 5251
+		// (get) Token: 0x060049B5 RID: 18869 RVA: 0x000B9BD1 File Offset: 0x000B7DD1
 		public override ENpcUiInteractType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001389 RID: 5001
-		// (get) Token: 0x0600455D RID: 17757 RVA: 0x000AFB1A File Offset: 0x000ADD1A
+		// Token: 0x17001484 RID: 5252
+		// (get) Token: 0x060049B6 RID: 18870 RVA: 0x000B9BDE File Offset: 0x000B7DDE
 		public virtual IOnDollGrabDeliveryPerform OnFirstAchievementPerform
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700138A RID: 5002
-		// (get) Token: 0x0600455E RID: 17758 RVA: 0x000AFB4E File Offset: 0x000ADD4E
+		// Token: 0x17001485 RID: 5253
+		// (get) Token: 0x060049B7 RID: 18871 RVA: 0x000B9C12 File Offset: 0x000B7E12
 		public virtual IOnDollGrabDeliveryPerform OnSubsequentAchievementPerform
 		{
 			get
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700138B RID: 5003
-		// (get) Token: 0x0600455F RID: 17759 RVA: 0x000AFB82 File Offset: 0x000ADD82
+		// Token: 0x17001486 RID: 5254
+		// (get) Token: 0x060049B8 RID: 18872 RVA: 0x000B9C46 File Offset: 0x000B7E46
 		public virtual IOnDollGrabDeliveryPerform OnNeverAchievementPerform
 		{
 			get
@@ -80,8 +78,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700138C RID: 5004
-		// (get) Token: 0x06004560 RID: 17760 RVA: 0x000AFBB6 File Offset: 0x000ADDB6
+		// Token: 0x17001487 RID: 5255
+		// (get) Token: 0x060049B9 RID: 18873 RVA: 0x000B9C7A File Offset: 0x000B7E7A
 		public virtual IOnDollGrabDeliveryPerform OnAlreadyAchievementPerform
 		{
 			get
@@ -96,35 +94,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400276B RID: 10091
+		// Token: 0x040029B3 RID: 10675
 		private INpcUiInteractOnDollGrabDelivery Instance;
 
-		// Token: 0x0400276C RID: 10092
+		// Token: 0x040029B4 RID: 10676
 		[Nullable(2)]
 		private IOnDollGrabDeliveryPerform _OnFirstAchievementPerformCache;
 
-		// Token: 0x0400276D RID: 10093
+		// Token: 0x040029B5 RID: 10677
 		private bool _OnFirstAchievementPerformInited;
 
-		// Token: 0x0400276E RID: 10094
+		// Token: 0x040029B6 RID: 10678
 		[Nullable(2)]
 		private IOnDollGrabDeliveryPerform _OnSubsequentAchievementPerformCache;
 
-		// Token: 0x0400276F RID: 10095
+		// Token: 0x040029B7 RID: 10679
 		private bool _OnSubsequentAchievementPerformInited;
 
-		// Token: 0x04002770 RID: 10096
+		// Token: 0x040029B8 RID: 10680
 		[Nullable(2)]
 		private IOnDollGrabDeliveryPerform _OnNeverAchievementPerformCache;
 
-		// Token: 0x04002771 RID: 10097
+		// Token: 0x040029B9 RID: 10681
 		private bool _OnNeverAchievementPerformInited;
 
-		// Token: 0x04002772 RID: 10098
+		// Token: 0x040029BA RID: 10682
 		[Nullable(2)]
 		private IOnDollGrabDeliveryPerform _OnAlreadyAchievementPerformCache;
 
-		// Token: 0x04002773 RID: 10099
+		// Token: 0x040029BB RID: 10683
 		private bool _OnAlreadyAchievementPerformInited;
 	}
 }

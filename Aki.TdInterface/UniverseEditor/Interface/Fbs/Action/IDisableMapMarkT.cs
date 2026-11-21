@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065E6 RID: 26086
+	// Token: 0x02006C51 RID: 27729
 	public class IDisableMapMarkT
 	{
-		// Token: 0x1700C1AE RID: 49582
-		// (get) Token: 0x0602D424 RID: 185380 RVA: 0x00633D3C File Offset: 0x00631F3C
-		// (set) Token: 0x0602D425 RID: 185381 RVA: 0x00633D44 File Offset: 0x00631F44
+		// Token: 0x1700CB44 RID: 52036
+		// (get) Token: 0x0602FBC9 RID: 195529 RVA: 0x006803A0 File Offset: 0x0067E5A0
+		// (set) Token: 0x0602FBCA RID: 195530 RVA: 0x006803A8 File Offset: 0x0067E5A8
 		public EMapMarkState Type { get; set; }
 
-		// Token: 0x1700C1AF RID: 49583
-		// (get) Token: 0x0602D426 RID: 185382 RVA: 0x00633D4D File Offset: 0x00631F4D
-		// (set) Token: 0x0602D427 RID: 185383 RVA: 0x00633D55 File Offset: 0x00631F55
+		// Token: 0x1700CB45 RID: 52037
+		// (get) Token: 0x0602FBCB RID: 195531 RVA: 0x006803B1 File Offset: 0x0067E5B1
+		// (set) Token: 0x0602FBCC RID: 195532 RVA: 0x006803B9 File Offset: 0x0067E5B9
 		public int MarkId { get; set; }
 
-		// Token: 0x0602D428 RID: 185384 RVA: 0x00633D5E File Offset: 0x00631F5E
+		// Token: 0x0602FBCD RID: 195533 RVA: 0x006803C2 File Offset: 0x0067E5C2
 		public IDisableMapMarkT()
 		{
 			this.Type = EMapMarkState.Show;

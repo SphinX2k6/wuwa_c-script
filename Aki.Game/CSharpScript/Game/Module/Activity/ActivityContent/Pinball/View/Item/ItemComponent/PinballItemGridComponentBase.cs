@@ -4,24 +4,24 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.ItemComponent
 {
-	// Token: 0x02006354 RID: 25428
+	// Token: 0x020052D2 RID: 21202
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballItemGridComponentBase : UiPanelBase
 	{
-		// Token: 0x0603FFE2 RID: 262114 RVA: 0x00F7B4A0 File Offset: 0x00F796A0
+		// Token: 0x06034CA3 RID: 216227 RVA: 0x00EC2400 File Offset: 0x00EC0600
 		public void Refresh(params object[] args)
 		{
 			this.OnRefresh(args);
 		}
 
-		// Token: 0x0603FFE3 RID: 262115 RVA: 0x00F7B4A9 File Offset: 0x00F796A9
+		// Token: 0x06034CA4 RID: 216228 RVA: 0x00EC2409 File Offset: 0x00EC0609
 		public string GetResourceId()
 		{
 			return this.OnGetResourceId() ?? "";
 		}
 
-		// Token: 0x0603FFE4 RID: 262116 RVA: 0x00F7B4BC File Offset: 0x00F796BC
+		// Token: 0x06034CA5 RID: 216229 RVA: 0x00EC241C File Offset: 0x00EC061C
 		protected virtual void OnRefresh(params object[] args)
 		{
 			Log instance = Log.Instance;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0603FFE5 RID: 262117 RVA: 0x00F7B500 File Offset: 0x00F79700
+		// Token: 0x06034CA6 RID: 216230 RVA: 0x00EC2460 File Offset: 0x00EC0660
 		[NullableContext(2)]
 		protected virtual string OnGetResourceId()
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			return null;
 		}
 
-		// Token: 0x0603FFE6 RID: 262118 RVA: 0x00F7B542 File Offset: 0x00F79742
+		// Token: 0x06034CA7 RID: 216231 RVA: 0x00EC24A2 File Offset: 0x00EC06A2
 		public override void SetActive(bool visibility)
 		{
 			base.SetUiActive(visibility);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			onComponentVisibleChanged(this, visibility);
 		}
 
-		// Token: 0x040215D2 RID: 136658
+		// Token: 0x0401BF01 RID: 114433
 		[Nullable(new byte[]
 		{
 			2,

@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001619 RID: 5657
+// Token: 0x02000AD1 RID: 2769
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerLoadingView : LoadingViewBase
 {
-	// Token: 0x06009F24 RID: 40740 RVA: 0x0022D7D3 File Offset: 0x0022B9D3
+	// Token: 0x06007302 RID: 29442 RVA: 0x00237603 File Offset: 0x00235803
 	[NullableContext(1)]
 	public WheelTowerLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009F25 RID: 40741 RVA: 0x0022D7DC File Offset: 0x0022B9DC
+	// Token: 0x06007303 RID: 29443 RVA: 0x0023760C File Offset: 0x0023580C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -43,7 +43,7 @@ public class WheelTowerLoadingView : LoadingViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009F26 RID: 40742 RVA: 0x0022D8EC File Offset: 0x0022BAEC
+	// Token: 0x06007304 RID: 29444 RVA: 0x0023771C File Offset: 0x0023591C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerLoadingView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -54,35 +54,35 @@ public class WheelTowerLoadingView : LoadingViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F27 RID: 40743 RVA: 0x0022D92F File Offset: 0x0022BB2F
+	// Token: 0x06007305 RID: 29445 RVA: 0x0023775F File Offset: 0x0023595F
 	[NullableContext(1)]
 	private WheelTowerLoadingTeamRoleItem InitTeamItem()
 	{
 		return new WheelTowerLoadingTeamRoleItem();
 	}
 
-	// Token: 0x06009F28 RID: 40744 RVA: 0x0022D936 File Offset: 0x0022BB36
+	// Token: 0x06007306 RID: 29446 RVA: 0x00237766 File Offset: 0x00235966
 	protected override void UpdateProgressRate(float rate)
 	{
 		base.GetSprite(5).SetFillAmount(rate);
 	}
 
-	// Token: 0x06009F29 RID: 40745 RVA: 0x0022D945 File Offset: 0x0022BB45
+	// Token: 0x06007307 RID: 29447 RVA: 0x00237775 File Offset: 0x00235975
 	protected override void UpdateProgressValue(float value)
 	{
 		this.SetTextProgressValue(6, value, "");
 	}
 
-	// Token: 0x0400479A RID: 18330
+	// Token: 0x04004840 RID: 18496
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400479B RID: 18331
+	// Token: 0x04004841 RID: 18497
 	private WheelTowerModeTitleItem ModeTitleItem;
 
-	// Token: 0x0400479C RID: 18332
+	// Token: 0x04004842 RID: 18498
 	private WheelTowerLoadingBuffInfoPanel BuffInfoPanel;
 
-	// Token: 0x0400479D RID: 18333
+	// Token: 0x04004843 RID: 18499
 	[Nullable(new byte[]
 	{
 		2,

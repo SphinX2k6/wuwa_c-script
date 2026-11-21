@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,16 +11,15 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
-using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02002189 RID: 8585
+// Token: 0x0200166D RID: 5741
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class LordGymController : ControllerBase
 {
-	// Token: 0x06010AF2 RID: 68338 RVA: 0x0040D23B File Offset: 0x0040B43B
+	// Token: 0x0600DF83 RID: 57219 RVA: 0x00419B17 File Offset: 0x00417D17
 	protected override bool OnInit()
 	{
 		this.OnRegisterNetEvent();
@@ -29,7 +27,7 @@ public class LordGymController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06010AF3 RID: 68339 RVA: 0x0040D24A File Offset: 0x0040B44A
+	// Token: 0x0600DF84 RID: 57220 RVA: 0x00419B26 File Offset: 0x00417D26
 	protected override bool OnClear()
 	{
 		this.OnUnRegisterNetEvent();
@@ -37,7 +35,7 @@ public class LordGymController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06010AF4 RID: 68340 RVA: 0x0040D25C File Offset: 0x0040B45C
+	// Token: 0x0600DF85 RID: 57221 RVA: 0x00419B38 File Offset: 0x00417D38
 	protected void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.LordGymUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.OnLordGymUnlockNotify));
@@ -45,7 +43,7 @@ public class LordGymController : ControllerBase
 		Net.Instance.Register(ENotifyMessageId.LordGymGroupInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnLordGymGroupInfoUpdateNotify));
 	}
 
-	// Token: 0x06010AF5 RID: 68341 RVA: 0x0040D2BD File Offset: 0x0040B4BD
+	// Token: 0x0600DF86 RID: 57222 RVA: 0x00419B99 File Offset: 0x00417D99
 	protected void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.LordGymUnlockNotify);
@@ -53,28 +51,28 @@ public class LordGymController : ControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.LordGymGroupInfoUpdateNotify);
 	}
 
-	// Token: 0x06010AF6 RID: 68342 RVA: 0x0040D2EF File Offset: 0x0040B4EF
+	// Token: 0x0600DF87 RID: 57223 RVA: 0x00419BCB File Offset: 0x00417DCB
 	protected void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.WorldDone));
 		EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 	}
 
-	// Token: 0x06010AF7 RID: 68343 RVA: 0x0040D329 File Offset: 0x0040B529
+	// Token: 0x0600DF88 RID: 57224 RVA: 0x00419C05 File Offset: 0x00417E05
 	protected void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.WorldDone));
 		EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 	}
 
-	// Token: 0x06010AF8 RID: 68344 RVA: 0x0040D363 File Offset: 0x0040B563
+	// Token: 0x0600DF89 RID: 57225 RVA: 0x00419C3F File Offset: 0x00417E3F
 	private void WorldDone()
 	{
 		LordGymModel.Instance.InitNewLordGymEntranceIdRecord();
 		this.LordGymInfoRequest(0).Forget<bool>();
 	}
 
-	// Token: 0x06010AF9 RID: 68345 RVA: 0x0040D37B File Offset: 0x0040B57B
+	// Token: 0x0600DF8A RID: 57226 RVA: 0x00419C57 File Offset: 0x00417E57
 	private void OnWorldDoneAndCloseLoading()
 	{
 		if (!this.IsInLordGymDungeon())
@@ -84,7 +82,7 @@ public class LordGymController : ControllerBase
 		this.EnterLordGymDungeon().Forget<bool>();
 	}
 
-	// Token: 0x06010AFA RID: 68346 RVA: 0x0040D394 File Offset: 0x0040B594
+	// Token: 0x0600DF8B RID: 57227 RVA: 0x00419C70 File Offset: 0x00417E70
 	[NullableContext(0)]
 	public UniTask<bool> LordGymInfoRequest(int timeoutMs = 0)
 	{
@@ -96,7 +94,7 @@ public class LordGymController : ControllerBase
 		return <LordGymInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010AFB RID: 68347 RVA: 0x0040D3D8 File Offset: 0x0040B5D8
+	// Token: 0x0600DF8C RID: 57228 RVA: 0x00419CB4 File Offset: 0x00417EB4
 	[NullableContext(0)]
 	public UniTask<bool> LordGymBeginRequest(int lordId)
 	{
@@ -109,7 +107,7 @@ public class LordGymController : ControllerBase
 		return <LordGymBeginRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010AFC RID: 68348 RVA: 0x0040D424 File Offset: 0x0040B624
+	// Token: 0x0600DF8D RID: 57229 RVA: 0x00419D00 File Offset: 0x00417F00
 	[NullableContext(2)]
 	private void OnLordGymUnlockNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -121,7 +119,7 @@ public class LordGymController : ControllerBase
 		LordGymModel.Instance.FirstUnLockLordGym = new List<int>(lordGymUnlockNotify.UnlockLoadGymIds);
 	}
 
-	// Token: 0x06010AFD RID: 68349 RVA: 0x0040D454 File Offset: 0x0040B654
+	// Token: 0x0600DF8E RID: 57230 RVA: 0x00419D30 File Offset: 0x00417F30
 	[NullableContext(2)]
 	private void OnLordGymGroupInfoUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -130,12 +128,10 @@ public class LordGymController : ControllerBase
 		{
 			return;
 		}
-		LordGymModel instance = LordGymModel.Instance;
-		RepeatedField<LordGymGroupInfo> lordGymGroupInfos = lordGymGroupInfoUpdateNotify.LordGymGroupInfos;
-		instance.UpdateLordGymGroupInfos((lordGymGroupInfos != null) ? lordGymGroupInfos.ToList<LordGymGroupInfo>() : null);
+		LordGymModel.Instance.UpdateLordGymGroupInfos((lordGymGroupInfoUpdateNotify.LordGymGroupInfos == null) ? null : new List<LordGymGroupInfo>(lordGymGroupInfoUpdateNotify.LordGymGroupInfos));
 	}
 
-	// Token: 0x06010AFE RID: 68350 RVA: 0x0040D488 File Offset: 0x0040B688
+	// Token: 0x0600DF8F RID: 57231 RVA: 0x00419D68 File Offset: 0x00417F68
 	[NullableContext(0)]
 	public UniTask<bool> OpenLordGymEntrance(int lordEntranceId, int entranceEntityId = 0)
 	{
@@ -149,7 +145,7 @@ public class LordGymController : ControllerBase
 		return <OpenLordGymEntrance>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010AFF RID: 68351 RVA: 0x0040D4DC File Offset: 0x0040B6DC
+	// Token: 0x0600DF90 RID: 57232 RVA: 0x00419DBC File Offset: 0x00417FBC
 	[NullableContext(0)]
 	public UniTask<bool> OpenLordGymLordEntranceSelectView(int lordEntranceSetId, int entranceEntityId = 0, bool isPlaySpecialSequence = false)
 	{
@@ -163,14 +159,14 @@ public class LordGymController : ControllerBase
 		return <OpenLordGymLordEntranceSelectView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B00 RID: 68352 RVA: 0x0040D52F File Offset: 0x0040B72F
+	// Token: 0x0600DF91 RID: 57233 RVA: 0x00419E0F File Offset: 0x0041800F
 	public void OpenGymUnlockTipView(int lordGymId)
 	{
 		UiManager.Instance.OpenView(EUiViewName.LordGymUnlockTipView, lordGymId, null);
 		LordGymModel.Instance.FirstUnLockLordGym = new List<int>();
 	}
 
-	// Token: 0x06010B01 RID: 68353 RVA: 0x0040D558 File Offset: 0x0040B758
+	// Token: 0x0600DF92 RID: 57234 RVA: 0x00419E38 File Offset: 0x00418038
 	public UniTask ReadLordGym(int lordGymId)
 	{
 		LordGymController.<ReadLordGym>d__17 <ReadLordGym>d__;
@@ -181,7 +177,7 @@ public class LordGymController : ControllerBase
 		return <ReadLordGym>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B02 RID: 68354 RVA: 0x0040D59B File Offset: 0x0040B79B
+	// Token: 0x0600DF93 RID: 57235 RVA: 0x00419E7B File Offset: 0x0041807B
 	public int GetLordGymGuideEntranceId(ELordGymVersion version)
 	{
 		switch (version)
@@ -199,7 +195,7 @@ public class LordGymController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010B03 RID: 68355 RVA: 0x0040D5D0 File Offset: 0x0040B7D0
+	// Token: 0x0600DF94 RID: 57236 RVA: 0x00419EB0 File Offset: 0x004180B0
 	[NullableContext(0)]
 	public UniTask<bool> OpenLordGymViaGuide(ELordGymVersion version, int entranceId)
 	{
@@ -213,7 +209,7 @@ public class LordGymController : ControllerBase
 		return <OpenLordGymViaGuide>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B04 RID: 68356 RVA: 0x0040D624 File Offset: 0x0040B824
+	// Token: 0x0600DF95 RID: 57237 RVA: 0x00419F04 File Offset: 0x00418104
 	[NullableContext(0)]
 	public UniTask<bool> EnterLordGymDungeon()
 	{
@@ -225,7 +221,7 @@ public class LordGymController : ControllerBase
 		return <EnterLordGymDungeon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B05 RID: 68357 RVA: 0x0040D668 File Offset: 0x0040B868
+	// Token: 0x0600DF96 RID: 57238 RVA: 0x00419F48 File Offset: 0x00418148
 	private List<IRewardExploreConfirmButton> BuildGuideReturnButtons(int? nextId, int returnEntranceId)
 	{
 		RewardExploreConfirmButtonData item = new RewardExploreConfirmButtonData
@@ -250,7 +246,7 @@ public class LordGymController : ControllerBase
 				OnClickedCallback = delegate(int _)
 				{
 					LordGymModel.Instance.EntryChallengeId = nextId.Value;
-					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon().Forget<bool>();
+					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false).Forget<bool>();
 				}
 			};
 			return new List<IRewardExploreConfirmButton>
@@ -265,7 +261,7 @@ public class LordGymController : ControllerBase
 		};
 	}
 
-	// Token: 0x06010B06 RID: 68358 RVA: 0x0040D74C File Offset: 0x0040B94C
+	// Token: 0x0600DF97 RID: 57239 RVA: 0x0041A02C File Offset: 0x0041822C
 	[NullableContext(2)]
 	private void OnLordGymLevelPlayResultNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -292,7 +288,7 @@ public class LordGymController : ControllerBase
 		this.HandlePlayResultSuccess(lordGymLevelPlayResultNotify, loadGymId, isCurrentChallengeFromGuide);
 	}
 
-	// Token: 0x06010B07 RID: 68359 RVA: 0x0040D7C8 File Offset: 0x0040B9C8
+	// Token: 0x0600DF98 RID: 57240 RVA: 0x0041A0A8 File Offset: 0x004182A8
 	private void HandlePlayResultFail(LordGymLevelPlayResultNotify data, bool isFromGuide, bool isDeadInChallenge)
 	{
 		int failLoadGymId = data.FailLoadGymId;
@@ -333,31 +329,31 @@ public class LordGymController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010B08 RID: 68360 RVA: 0x0040D860 File Offset: 0x0040BA60
+	// Token: 0x0600DF99 RID: 57241 RVA: 0x0041A140 File Offset: 0x00418340
 	private void HandleFirstGuideFail(LordGymChallengeFailViewParam param, bool isDeadInChallenge)
 	{
 		UiManager.Instance.OpenView(EUiViewName.LordGymChallengeFailView, param, null);
 	}
 
-	// Token: 0x06010B09 RID: 68361 RVA: 0x0040D873 File Offset: 0x0040BA73
+	// Token: 0x0600DF9A RID: 57242 RVA: 0x0041A153 File Offset: 0x00418353
 	private void HandleSecondGuideFail(LordGymChallengeFailViewParam param, bool isDeadInChallenge)
 	{
 		UiManager.Instance.OpenView(EUiViewName.LordGymChallengeFailView, param, null);
 	}
 
-	// Token: 0x06010B0A RID: 68362 RVA: 0x0040D886 File Offset: 0x0040BA86
+	// Token: 0x0600DF9B RID: 57243 RVA: 0x0041A166 File Offset: 0x00418366
 	private void HandleThirdFail(LordGymChallengeFailViewParam param, bool isDeadInChallenge)
 	{
 		this.OpenChallengeFailViewWithReviveDelay(param, isDeadInChallenge);
 	}
 
-	// Token: 0x06010B0B RID: 68363 RVA: 0x0040D890 File Offset: 0x0040BA90
+	// Token: 0x0600DF9C RID: 57244 RVA: 0x0041A170 File Offset: 0x00418370
 	private void HandleThird5Fail(LordGymChallengeFailViewParam param, bool isDeadInChallenge)
 	{
 		this.OpenChallengeFailViewWithReviveDelay(param, isDeadInChallenge);
 	}
 
-	// Token: 0x06010B0C RID: 68364 RVA: 0x0040D89C File Offset: 0x0040BA9C
+	// Token: 0x0600DF9D RID: 57245 RVA: 0x0041A17C File Offset: 0x0041837C
 	private void OpenChallengeFailViewWithReviveDelay(LordGymChallengeFailViewParam param, bool isDeadInChallenge)
 	{
 		Action open = delegate()
@@ -376,7 +372,7 @@ public class LordGymController : ControllerBase
 		open();
 	}
 
-	// Token: 0x06010B0D RID: 68365 RVA: 0x0040D908 File Offset: 0x0040BB08
+	// Token: 0x0600DF9E RID: 57246 RVA: 0x0041A1E8 File Offset: 0x004183E8
 	private void HandlePlayResultSuccess(LordGymLevelPlayResultNotify data, int gymId, bool isFromGuide)
 	{
 		LordGym? lordGymConfig = LordGymConfig.Instance.GetLordGymConfig(gymId);
@@ -418,7 +414,7 @@ public class LordGymController : ControllerBase
 		});
 	}
 
-	// Token: 0x06010B0E RID: 68366 RVA: 0x0040DAC8 File Offset: 0x0040BCC8
+	// Token: 0x0600DF9F RID: 57247 RVA: 0x0041A3A8 File Offset: 0x004185A8
 	private List<IRewardExploreConfirmButton> BuildSuccessButtonList(ELordGymVersion version, bool isFromGuide, int? nextId)
 	{
 		switch (version)
@@ -444,13 +440,13 @@ public class LordGymController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010B0F RID: 68367 RVA: 0x0040DB2A File Offset: 0x0040BD2A
+	// Token: 0x0600DFA0 RID: 57248 RVA: 0x0041A40A File Offset: 0x0041860A
 	private List<IRewardExploreConfirmButton> BuildFirstGuideSuccessButtons(int? nextId)
 	{
 		return this.BuildGuideReturnButtons(nextId, 3927);
 	}
 
-	// Token: 0x06010B10 RID: 68368 RVA: 0x0040DB38 File Offset: 0x0040BD38
+	// Token: 0x0600DFA1 RID: 57249 RVA: 0x0041A418 File Offset: 0x00418618
 	private List<IRewardExploreConfirmButton> BuildFirstWorldSuccessButtons()
 	{
 		return new List<IRewardExploreConfirmButton>
@@ -465,13 +461,13 @@ public class LordGymController : ControllerBase
 		};
 	}
 
-	// Token: 0x06010B11 RID: 68369 RVA: 0x0040DB6A File Offset: 0x0040BD6A
+	// Token: 0x0600DFA2 RID: 57250 RVA: 0x0041A44A File Offset: 0x0041864A
 	private List<IRewardExploreConfirmButton> BuildSecondGuideSuccessButtons(int? nextId)
 	{
 		return this.BuildGuideReturnButtons(nextId, 3926);
 	}
 
-	// Token: 0x06010B12 RID: 68370 RVA: 0x0040DB78 File Offset: 0x0040BD78
+	// Token: 0x0600DFA3 RID: 57251 RVA: 0x0041A458 File Offset: 0x00418658
 	private List<IRewardExploreConfirmButton> BuildSecondWorldSuccessButtons(int? nextId)
 	{
 		RewardExploreConfirmButtonData item = new RewardExploreConfirmButtonData
@@ -526,19 +522,19 @@ public class LordGymController : ControllerBase
 		};
 	}
 
-	// Token: 0x06010B13 RID: 68371 RVA: 0x0040DC9A File Offset: 0x0040BE9A
+	// Token: 0x0600DFA4 RID: 57252 RVA: 0x0041A57A File Offset: 0x0041877A
 	private List<IRewardExploreConfirmButton> BuildThirdSuccessButtons(int? nextId)
 	{
 		return this.BuildThirdLikeSuccessButtons(nextId, 3924, "ChanllengeBackToCockpit");
 	}
 
-	// Token: 0x06010B14 RID: 68372 RVA: 0x0040DCAD File Offset: 0x0040BEAD
+	// Token: 0x0600DFA5 RID: 57253 RVA: 0x0041A58D File Offset: 0x0041878D
 	private List<IRewardExploreConfirmButton> BuildThird5SuccessButtons(int? nextId)
 	{
 		return this.BuildThirdLikeSuccessButtons(nextId, 3925, "Text_GymReturnToLordGym3.5_Text");
 	}
 
-	// Token: 0x06010B15 RID: 68373 RVA: 0x0040DCC0 File Offset: 0x0040BEC0
+	// Token: 0x0600DFA6 RID: 57254 RVA: 0x0041A5A0 File Offset: 0x004187A0
 	private List<IRewardExploreConfirmButton> BuildThirdLikeSuccessButtons(int? nextId, int entranceId, string returnTextId)
 	{
 		RewardExploreConfirmButtonData item = new RewardExploreConfirmButtonData
@@ -563,7 +559,7 @@ public class LordGymController : ControllerBase
 				OnClickedCallback = delegate(int _)
 				{
 					LordGymModel.Instance.EntryChallengeId = nextId.Value;
-					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon().Forget<bool>();
+					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false).Forget<bool>();
 				}
 			};
 			return new List<IRewardExploreConfirmButton>
@@ -589,7 +585,7 @@ public class LordGymController : ControllerBase
 		};
 	}
 
-	// Token: 0x06010B16 RID: 68374 RVA: 0x0040DDF0 File Offset: 0x0040BFF0
+	// Token: 0x0600DFA7 RID: 57255 RVA: 0x0041A6D0 File Offset: 0x004188D0
 	public bool IsInEntranceEntity()
 	{
 		int entranceEntityId = LordGymModel.Instance.EntranceEntityId;
@@ -617,7 +613,7 @@ public class LordGymController : ControllerBase
 		return flag2.GetValueOrDefault();
 	}
 
-	// Token: 0x06010B17 RID: 68375 RVA: 0x0040DE64 File Offset: 0x0040C064
+	// Token: 0x0600DFA8 RID: 57256 RVA: 0x0041A744 File Offset: 0x00418944
 	public void CreateLordModelByEntranceId()
 	{
 		SkeletalObserverHandle lordSkeletalHandle = UiSceneManager.Instance.GetLordSkeletalHandle();
@@ -628,7 +624,7 @@ public class LordGymController : ControllerBase
 		UiModelUtil.Instance.SetTransformByTag(lordSkeletalHandle.Model, "MonsterCase");
 	}
 
-	// Token: 0x06010B18 RID: 68376 RVA: 0x0040DE98 File Offset: 0x0040C098
+	// Token: 0x0600DFA9 RID: 57257 RVA: 0x0041A778 File Offset: 0x00418978
 	public UniTask LoadLordModelByEntranceId(int entranceId, bool autoPlayMaterialAnimation = true, bool playBossAudio = false)
 	{
 		LordGymController.<LoadLordModelByEntranceId>d__40 <LoadLordModelByEntranceId>d__;
@@ -642,7 +638,7 @@ public class LordGymController : ControllerBase
 		return <LoadLordModelByEntranceId>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B19 RID: 68377 RVA: 0x0040DEF4 File Offset: 0x0040C0F4
+	// Token: 0x0600DFAA RID: 57258 RVA: 0x0041A7D4 File Offset: 0x004189D4
 	[NullableContext(2)]
 	public void PlayLordModelMaterialAnimationByEntranceId(int entranceId, UiModelBase model = null, UiModelLoadComponent loadComponent = null, bool playBossAudio = true, bool isStart = false)
 	{
@@ -710,7 +706,7 @@ public class LordGymController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010B1A RID: 68378 RVA: 0x0040E068 File Offset: 0x0040C268
+	// Token: 0x0600DFAB RID: 57259 RVA: 0x0041A948 File Offset: 0x00418B48
 	public UniTask LoadLordModelByEntranceIdThird5(int entranceId, bool autoPlayMaterialAnimation = true, bool playBossAudio = false)
 	{
 		LordGymController.<LoadLordModelByEntranceIdThird5>d__42 <LoadLordModelByEntranceIdThird5>d__;
@@ -724,7 +720,7 @@ public class LordGymController : ControllerBase
 		return <LoadLordModelByEntranceIdThird5>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B1B RID: 68379 RVA: 0x0040E0C4 File Offset: 0x0040C2C4
+	// Token: 0x0600DFAC RID: 57260 RVA: 0x0041A9A4 File Offset: 0x00418BA4
 	[NullableContext(2)]
 	public void PlayLordModelMaterialAnimationByEntranceIdThird5(int entranceId, UiModelBase model = null, UiModelLoadComponent loadComponent = null, bool playBossAudio = true, bool isStart = false)
 	{
@@ -792,14 +788,14 @@ public class LordGymController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010B1C RID: 68380 RVA: 0x0040E238 File Offset: 0x0040C438
+	// Token: 0x0600DFAD RID: 57261 RVA: 0x0041AB18 File Offset: 0x00418D18
 	public bool IsInLordGymDungeon()
 	{
 		InstanceDungeon? instanceDungeon = GameModeModel.Instance.InstanceDungeon;
 		return instanceDungeon != null && instanceDungeon.Value.InstSubType == 48;
 	}
 
-	// Token: 0x06010B1D RID: 68381 RVA: 0x0040E270 File Offset: 0x0040C470
+	// Token: 0x0600DFAE RID: 57262 RVA: 0x0041AB50 File Offset: 0x00418D50
 	public bool IsInLordGymThird5Dungeon()
 	{
 		InstanceDungeon? instanceDungeon = GameModeModel.Instance.InstanceDungeon;
@@ -824,7 +820,7 @@ public class LordGymController : ControllerBase
 		return lordGymEntranceSet != null && lordGymEntranceSet.GetValueOrDefault().Id == 200104;
 	}
 
-	// Token: 0x06010B1E RID: 68382 RVA: 0x0040E338 File Offset: 0x0040C538
+	// Token: 0x0600DFAF RID: 57263 RVA: 0x0041AC18 File Offset: 0x00418E18
 	public void ClearChallengeFailViewDelay()
 	{
 		if (this.ChallengeFailViewDelayHandle != null)
@@ -834,8 +830,8 @@ public class LordGymController : ControllerBase
 		}
 	}
 
-	// Token: 0x17001528 RID: 5416
-	// (get) Token: 0x06010B1F RID: 68383 RVA: 0x0040E35A File Offset: 0x0040C55A
+	// Token: 0x1700155F RID: 5471
+	// (get) Token: 0x0600DFB0 RID: 57264 RVA: 0x0041AC3A File Offset: 0x00418E3A
 	public static LordGymController Instance
 	{
 		get
@@ -844,7 +840,7 @@ public class LordGymController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010B20 RID: 68384 RVA: 0x0040E361 File Offset: 0x0040C561
+	// Token: 0x0600DFB1 RID: 57265 RVA: 0x0041AC41 File Offset: 0x00418E41
 	public static LordGymController GetOrCreateInstance()
 	{
 		if (LordGymController._Instance == null)
@@ -854,7 +850,7 @@ public class LordGymController : ControllerBase
 		return LordGymController._Instance;
 	}
 
-	// Token: 0x06010B21 RID: 68385 RVA: 0x0040E375 File Offset: 0x0040C575
+	// Token: 0x0600DFB2 RID: 57266 RVA: 0x0041AC55 File Offset: 0x00418E55
 	public static bool CreateInstance()
 	{
 		if (LordGymController._Instance != null)
@@ -865,31 +861,31 @@ public class LordGymController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06010B22 RID: 68386 RVA: 0x0040E38B File Offset: 0x0040C58B
+	// Token: 0x0600DFB3 RID: 57267 RVA: 0x0041AC6B File Offset: 0x00418E6B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010B23 RID: 68387 RVA: 0x0040E38D File Offset: 0x0040C58D
+	// Token: 0x0600DFB4 RID: 57268 RVA: 0x0041AC6D File Offset: 0x00418E6D
 	public static void ResetStaticDefaultValue()
 	{
 		LordGymController._Instance = null;
 	}
 
-	// Token: 0x06010B24 RID: 68388 RVA: 0x0040E395 File Offset: 0x0040C595
+	// Token: 0x0600DFB5 RID: 57269 RVA: 0x0041AC75 File Offset: 0x00418E75
 	static LordGymController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LordGymController.CreateStaticDefaultValue), new Action(LordGymController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007EFF RID: 32511
+	// Token: 0x04008046 RID: 32838
 	private const float TIME_TO_REVIVE = 3000f;
 
-	// Token: 0x04007F00 RID: 32512
+	// Token: 0x04008047 RID: 32839
 	[Nullable(2)]
 	private TimerHandle ChallengeFailViewDelayHandle;
 
-	// Token: 0x04007F01 RID: 32513
+	// Token: 0x04008048 RID: 32840
 	[Nullable(2)]
 	private static LordGymController _Instance;
 }

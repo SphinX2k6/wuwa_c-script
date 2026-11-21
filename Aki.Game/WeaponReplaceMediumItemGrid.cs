@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02002D00 RID: 11520
+// Token: 0x0200225A RID: 8794
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using CSharpScript.Game.Module.RoleUi;
 })]
 public class WeaponReplaceMediumItemGrid : LoopScrollMediumItemGrid<SelectablePropData>
 {
-	// Token: 0x06018365 RID: 99173 RVA: 0x00629832 File Offset: 0x00627A32
+	// Token: 0x06015C06 RID: 89094 RVA: 0x0064F808 File Offset: 0x0064DA08
 	public override void OnSelected(bool fireEvent)
 	{
 		if (fireEvent)
@@ -23,13 +23,13 @@ public class WeaponReplaceMediumItemGrid : LoopScrollMediumItemGrid<SelectablePr
 		}
 	}
 
-	// Token: 0x06018366 RID: 99174 RVA: 0x0062983F File Offset: 0x00627A3F
+	// Token: 0x06015C07 RID: 89095 RVA: 0x0064F815 File Offset: 0x0064DA15
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x06018367 RID: 99175 RVA: 0x0062984C File Offset: 0x00627A4C
+	// Token: 0x06015C08 RID: 89096 RVA: 0x0064F820 File Offset: 0x0064DA20
 	protected override void OnRefresh(SelectablePropData data, bool isSelected, int gridIndex)
 	{
 		int incId = data.IncId;
@@ -58,7 +58,7 @@ public class WeaponReplaceMediumItemGrid : LoopScrollMediumItemGrid<SelectablePr
 		this.SetSelected(isSelected, true);
 	}
 
-	// Token: 0x06018368 RID: 99176 RVA: 0x0062993C File Offset: 0x00627B3C
+	// Token: 0x06015C09 RID: 89097 RVA: 0x0064F910 File Offset: 0x0064DB10
 	[return: Nullable(2)]
 	private MediumWarningPanelInfo GetWarningPanelInfo(SelectablePropData data)
 	{
@@ -88,9 +88,9 @@ public class WeaponReplaceMediumItemGrid : LoopScrollMediumItemGrid<SelectablePr
 		return null;
 	}
 
-	// Token: 0x0400B3FD RID: 46077
+	// Token: 0x0400B772 RID: 46962
 	public ERoleViewSource Source;
 
-	// Token: 0x0400B3FE RID: 46078
+	// Token: 0x0400B773 RID: 46963
 	public int RoleId;
 }

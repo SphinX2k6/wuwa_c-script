@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BD2 RID: 3026
+	// Token: 0x02000CA0 RID: 3232
 	public class INpcSpecialMarkIgnoreCameraHideNpc : INpcSpecialMarkBase
 	{
-		// Token: 0x06004584 RID: 17796 RVA: 0x000AFFE9 File Offset: 0x000AE1E9
-		[NullableContext(1)]
+		// Token: 0x060049DD RID: 18909 RVA: 0x000BA0AD File Offset: 0x000B82AD
 		public static INpcSpecialMarkIgnoreCameraHideNpc Create(INpcSpecialMarkIgnoreCameraHideNpc? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700139D RID: 5021
-		// (get) Token: 0x06004585 RID: 17797 RVA: 0x000B0008 File Offset: 0x000AE208
+		// Token: 0x17001498 RID: 5272
+		// (get) Token: 0x060049DE RID: 18910 RVA: 0x000BA0CC File Offset: 0x000B82CC
 		public override ESpecialNpcMarkType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400278B RID: 10123
+		// Token: 0x040029D3 RID: 10707
 		private INpcSpecialMarkIgnoreCameraHideNpc Instance;
 	}
 }

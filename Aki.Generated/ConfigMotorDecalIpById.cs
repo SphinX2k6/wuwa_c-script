@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000579 RID: 1401
+	// Token: 0x0200058F RID: 1423
 	public class ConfigMotorDecalIpById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060020E3 RID: 8419 RVA: 0x0011355B File Offset: 0x0011175B
+		// Token: 0x06002167 RID: 8551 RVA: 0x00119CAF File Offset: 0x00117EAF
 		static ConfigMotorDecalIpById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorDecalIpById.CreateStaticDefaultValue), new Action(ConfigMotorDecalIpById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060020E4 RID: 8420 RVA: 0x0011357C File Offset: 0x0011177C
+		// Token: 0x06002168 RID: 8552 RVA: 0x00119CD0 File Offset: 0x00117ED0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorDecalIpById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060020E5 RID: 8421 RVA: 0x001135FB File Offset: 0x001117FB
+		// Token: 0x06002169 RID: 8553 RVA: 0x00119D4F File Offset: 0x00117F4F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorDecalIpById.LogPair = null;
 			ConfigMotorDecalIpById.HandleId = 0;
 		}
 
-		// Token: 0x060020E6 RID: 8422 RVA: 0x00113609 File Offset: 0x00111809
+		// Token: 0x0600216A RID: 8554 RVA: 0x00119D5D File Offset: 0x00117F5D
 		public static void Init()
 		{
 			ConfigMotorDecalIpById.HandleId = ConfigCommon.InitDataStatement(ConfigMotorDecalIpById.HandleId, "db_motorstickerip.db", "select BinData from `MotorDecalIp` where Id=?");
 		}
 
-		// Token: 0x060020E7 RID: 8423 RVA: 0x00113624 File Offset: 0x00111824
+		// Token: 0x0600216B RID: 8555 RVA: 0x00119D78 File Offset: 0x00117F78
 		public static MotorDecalIp? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMotorDecalIpById.HandleId, ConfigMotorDecalIpById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MotorDecalIp?(rootAsMotorDecalIp);
 		}
 
-		// Token: 0x04002633 RID: 9779
+		// Token: 0x040026CD RID: 9933
 		private const string DB = "db_motorstickerip.db";
 
-		// Token: 0x04002634 RID: 9780
+		// Token: 0x040026CE RID: 9934
 		private const string FILE = "m.摩托车贴纸活动.xlsx";
 
-		// Token: 0x04002635 RID: 9781
+		// Token: 0x040026CF RID: 9935
 		private const string TABLE = "MotorDecalIp";
 
-		// Token: 0x04002636 RID: 9782
+		// Token: 0x040026D0 RID: 9936
 		private const string COMMAND = "select BinData from `MotorDecalIp` where Id=?";
 
-		// Token: 0x04002637 RID: 9783
+		// Token: 0x040026D1 RID: 9937
 		private const string KEY_PREFIX = "MotorDecalIpById";
 
-		// Token: 0x04002638 RID: 9784
+		// Token: 0x040026D2 RID: 9938
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002639 RID: 9785
+		// Token: 0x040026D3 RID: 9939
 		private static int HandleId;
 	}
 }

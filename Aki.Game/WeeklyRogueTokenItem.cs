@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Roguelike;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002D48 RID: 11592
+// Token: 0x020022A2 RID: 8866
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class WeeklyRogueTokenItem : GridProxyAbstract<RogueWeeklyEntry>
 {
-	// Token: 0x060185BB RID: 99771 RVA: 0x00633988 File Offset: 0x00631B88
+	// Token: 0x06015E5D RID: 89693 RVA: 0x00659998 File Offset: 0x00657B98
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,26 +41,26 @@ public class WeeklyRogueTokenItem : GridProxyAbstract<RogueWeeklyEntry>
 		};
 	}
 
-	// Token: 0x060185BC RID: 99772 RVA: 0x00633ACE File Offset: 0x00631CCE
+	// Token: 0x06015E5E RID: 89694 RVA: 0x00659ADE File Offset: 0x00657CDE
 	protected override void OnStart()
 	{
 		this.TagLayout = new GenericLayout<WeeklyRogueTagItem, int>(base.GetHorizontalLayout(9), new Func<WeeklyRogueTagItem>(this.OnCreateTagItem), null, false, true);
 		base.GetItem(11).SetUIActive(false);
 	}
 
-	// Token: 0x060185BD RID: 99773 RVA: 0x00633B00 File Offset: 0x00631D00
+	// Token: 0x06015E5F RID: 89695 RVA: 0x00659B10 File Offset: 0x00657D10
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.WeeklyRogueDescModeChange, new Action(this.OnDescModeChange));
 	}
 
-	// Token: 0x060185BE RID: 99774 RVA: 0x00633B1E File Offset: 0x00631D1E
+	// Token: 0x06015E60 RID: 89696 RVA: 0x00659B2E File Offset: 0x00657D2E
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.WeeklyRogueDescModeChange, new Action(this.OnDescModeChange));
 	}
 
-	// Token: 0x060185BF RID: 99775 RVA: 0x00633B3C File Offset: 0x00631D3C
+	// Token: 0x06015E61 RID: 89697 RVA: 0x00659B4C File Offset: 0x00657D4C
 	public override void Refresh(RogueWeeklyEntry data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -68,7 +68,7 @@ public class WeeklyRogueTokenItem : GridProxyAbstract<RogueWeeklyEntry>
 		base.GetItem(11).SetUIActive(data.IsRecommend);
 	}
 
-	// Token: 0x060185C0 RID: 99776 RVA: 0x00633B64 File Offset: 0x00631D64
+	// Token: 0x06015E62 RID: 89698 RVA: 0x00659B74 File Offset: 0x00657D74
 	private void OnClick(EToggleState toggleState)
 	{
 		int? obj = (base.GetExtendToggle(4).GetToggleState() == EToggleState.ETT_Checked) ? new int?(base.GridIndex) : null;
@@ -80,21 +80,21 @@ public class WeeklyRogueTokenItem : GridProxyAbstract<RogueWeeklyEntry>
 		onSelectedChange(obj);
 	}
 
-	// Token: 0x060185C1 RID: 99777 RVA: 0x00633BA8 File Offset: 0x00631DA8
+	// Token: 0x06015E63 RID: 89699 RVA: 0x00659BB8 File Offset: 0x00657DB8
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		WeeklyRogueModel.Instance.SelectEntry = this.Data;
 	}
 
-	// Token: 0x060185C2 RID: 99778 RVA: 0x00633BCB File Offset: 0x00631DCB
+	// Token: 0x06015E64 RID: 89700 RVA: 0x00659BDB File Offset: 0x00657DDB
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		WeeklyRogueModel.Instance.SelectEntry = null;
 	}
 
-	// Token: 0x060185C3 RID: 99779 RVA: 0x00633BEC File Offset: 0x00631DEC
+	// Token: 0x06015E65 RID: 89701 RVA: 0x00659BFC File Offset: 0x00657DFC
 	private void OnDescModeChange()
 	{
 		if (this.ConfigId == 0)
@@ -120,7 +120,7 @@ public class WeeklyRogueTokenItem : GridProxyAbstract<RogueWeeklyEntry>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), rogueWeeklyBuffPool.Value.BuffDesc, rogueWeeklyBuffPool.Value.BuffDescParam());
 	}
 
-	// Token: 0x060185C4 RID: 99780 RVA: 0x00633CB4 File Offset: 0x00631EB4
+	// Token: 0x06015E66 RID: 89702 RVA: 0x00659CC4 File Offset: 0x00657EC4
 	public void UpdateByConfigId(int configId)
 	{
 		this.ConfigId = configId;
@@ -157,19 +157,19 @@ public class WeeklyRogueTokenItem : GridProxyAbstract<RogueWeeklyEntry>
 		this.TagLayout.RefreshByData(WeeklyRogueModel.Instance.GetRogueWeeklyBuffTagIdList(configId), null, false);
 	}
 
-	// Token: 0x060185C5 RID: 99781 RVA: 0x00633E88 File Offset: 0x00632088
+	// Token: 0x06015E67 RID: 89703 RVA: 0x00659E98 File Offset: 0x00658098
 	public void SetInteractive(bool bActive)
 	{
 		base.GetExtendToggle(4).SetSelfInteractive(bActive);
 	}
 
-	// Token: 0x060185C6 RID: 99782 RVA: 0x00633E97 File Offset: 0x00632097
+	// Token: 0x06015E68 RID: 89704 RVA: 0x00659EA7 File Offset: 0x006580A7
 	private WeeklyRogueTagItem OnCreateTagItem()
 	{
 		return new WeeklyRogueTagItem();
 	}
 
-	// Token: 0x0400B4CB RID: 46283
+	// Token: 0x0400B840 RID: 47168
 	[Nullable(new byte[]
 	{
 		2,
@@ -177,44 +177,44 @@ public class WeeklyRogueTokenItem : GridProxyAbstract<RogueWeeklyEntry>
 	})]
 	private GenericLayout<WeeklyRogueTagItem, int> TagLayout;
 
-	// Token: 0x0400B4CC RID: 46284
+	// Token: 0x0400B841 RID: 47169
 	[Nullable(2)]
 	private RogueWeeklyEntry Data;
 
-	// Token: 0x0400B4CD RID: 46285
+	// Token: 0x0400B842 RID: 47170
 	private int ConfigId;
 
-	// Token: 0x0400B4CE RID: 46286
+	// Token: 0x0400B843 RID: 47171
 	[Nullable(2)]
 	public Action<int?> OnSelectedChange;
 
-	// Token: 0x020092D9 RID: 37593
+	// Token: 0x02008500 RID: 34048
 	[NullableContext(0)]
 	private enum EWeeklyRogueTokenItem
 	{
-		// Token: 0x0402F76B RID: 194411
+		// Token: 0x0402ADF3 RID: 175603
 		QualityBgTexture,
-		// Token: 0x0402F76C RID: 194412
+		// Token: 0x0402ADF4 RID: 175604
 		IconTexture,
-		// Token: 0x0402F76D RID: 194413
+		// Token: 0x0402ADF5 RID: 175605
 		NameText,
-		// Token: 0x0402F76E RID: 194414
+		// Token: 0x0402ADF6 RID: 175606
 		DescText,
-		// Token: 0x0402F76F RID: 194415
+		// Token: 0x0402ADF7 RID: 175607
 		SelfToggle,
-		// Token: 0x0402F770 RID: 194416
+		// Token: 0x0402ADF8 RID: 175608
 		NewItem,
-		// Token: 0x0402F771 RID: 194417
+		// Token: 0x0402ADF9 RID: 175609
 		QualityLineSprite,
-		// Token: 0x0402F772 RID: 194418
+		// Token: 0x0402ADFA RID: 175610
 		GoldItem,
-		// Token: 0x0402F773 RID: 194419
+		// Token: 0x0402ADFB RID: 175611
 		YellowItem,
-		// Token: 0x0402F774 RID: 194420
+		// Token: 0x0402ADFC RID: 175612
 		TagLayout,
-		// Token: 0x0402F775 RID: 194421
+		// Token: 0x0402ADFD RID: 175613
 		TagItem,
-		// Token: 0x0402F776 RID: 194422
+		// Token: 0x0402ADFE RID: 175614
 		ItemRecommend
 	}
 }

@@ -4,39 +4,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057C2 RID: 22466
+	// Token: 0x02004799 RID: 18329
 	[NullableContext(1)]
 	public interface IBattlePassExtraRewardInfo : IRewardInfo
 	{
-		// Token: 0x17008988 RID: 35208
-		// (get) Token: 0x06039215 RID: 234005
-		// (set) Token: 0x06039216 RID: 234006
+		// Token: 0x17005D50 RID: 23888
+		// (get) Token: 0x0602E125 RID: 188709
+		// (set) Token: 0x0602E126 RID: 188710
 		List<RewardItemData> CommonItems { get; set; }
 
-		// Token: 0x17008989 RID: 35209
-		// (get) Token: 0x06039217 RID: 234007
-		// (set) Token: 0x06039218 RID: 234008
+		// Token: 0x17005D51 RID: 23889
+		// (get) Token: 0x0602E127 RID: 188711
+		// (set) Token: 0x0602E128 RID: 188712
 		List<RewardItemData> ExtraItems { get; set; }
 
-		// Token: 0x1700898A RID: 35210
-		// (get) Token: 0x06039219 RID: 234009
-		// (set) Token: 0x0603921A RID: 234010
+		// Token: 0x17005D52 RID: 23890
+		// (get) Token: 0x0602E129 RID: 188713
+		// (set) Token: 0x0602E12A RID: 188714
 		[Nullable(2)]
 		string TipsTextId { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700898B RID: 35211
-		// (get) Token: 0x0603921B RID: 234011
-		// (set) Token: 0x0603921C RID: 234012
+		// Token: 0x17005D53 RID: 23891
+		// (get) Token: 0x0602E12B RID: 188715
+		// (set) Token: 0x0602E12C RID: 188716
 		Action LeftAction { get; set; }
 
-		// Token: 0x1700898C RID: 35212
-		// (get) Token: 0x0603921D RID: 234013
-		// (set) Token: 0x0603921E RID: 234014
+		// Token: 0x17005D54 RID: 23892
+		// (get) Token: 0x0602E12D RID: 188717
+		// (set) Token: 0x0602E12E RID: 188718
 		Action RightAction { get; set; }
 
-		// Token: 0x1700898D RID: 35213
-		// (get) Token: 0x0603921F RID: 234015
-		// (set) Token: 0x06039220 RID: 234016
+		// Token: 0x17005D55 RID: 23893
+		// (get) Token: 0x0602E12F RID: 188719
+		// (set) Token: 0x0602E130 RID: 188720
 		[Nullable(2)]
 		Action<bool> FinishCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

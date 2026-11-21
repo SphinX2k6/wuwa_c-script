@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002954 RID: 10580
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C39 RID: 11321
 	public class IDisableModulePlayerOperation : SetPlayerOperationRestriction
 	{
-		// Token: 0x0600EA9E RID: 60062 RVA: 0x00225B82 File Offset: 0x00223D82
+		// Token: 0x0600F913 RID: 63763 RVA: 0x0024320B File Offset: 0x0024140B
 		public static IDisableModulePlayerOperation Create(IDisableModulePlayerOperation? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049B8 RID: 18872
-		// (get) Token: 0x0600EA9F RID: 60063 RVA: 0x00225BA1 File Offset: 0x00223DA1
+		// Token: 0x17004D4F RID: 19791
+		// (get) Token: 0x0600F914 RID: 63764 RVA: 0x0024322A File Offset: 0x0024142A
 		public override EPlayerOperationType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049B9 RID: 18873
-		// (get) Token: 0x0600EAA0 RID: 60064 RVA: 0x00225BAE File Offset: 0x00223DAE
+		// Token: 0x17004D50 RID: 19792
+		// (get) Token: 0x0600F915 RID: 63765 RVA: 0x00243237 File Offset: 0x00241437
 		public virtual IMoveOperationType MoveOption
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049BA RID: 18874
-		// (get) Token: 0x0600EAA1 RID: 60065 RVA: 0x00225BDD File Offset: 0x00223DDD
+		// Token: 0x17004D51 RID: 19793
+		// (get) Token: 0x0600F916 RID: 63766 RVA: 0x00243266 File Offset: 0x00241466
 		public virtual ISkillOperationType SkillOption
 		{
 			get
@@ -64,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049BB RID: 18875
-		// (get) Token: 0x0600EAA2 RID: 60066 RVA: 0x00225C0C File Offset: 0x00223E0C
+		// Token: 0x17004D52 RID: 19794
+		// (get) Token: 0x0600F917 RID: 63767 RVA: 0x00243295 File Offset: 0x00241495
 		public virtual ICameraOperationType CameraOption
 		{
 			get
@@ -80,8 +77,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049BC RID: 18876
-		// (get) Token: 0x0600EAA3 RID: 60067 RVA: 0x00225C3B File Offset: 0x00223E3B
+		// Token: 0x17004D53 RID: 19795
+		// (get) Token: 0x0600F918 RID: 63768 RVA: 0x002432C4 File Offset: 0x002414C4
 		public virtual IUiOperationType UiOption
 		{
 			get
@@ -96,8 +93,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049BD RID: 18877
-		// (get) Token: 0x0600EAA4 RID: 60068 RVA: 0x00225C6A File Offset: 0x00223E6A
+		// Token: 0x17004D54 RID: 19796
+		// (get) Token: 0x0600F919 RID: 63769 RVA: 0x002432F3 File Offset: 0x002414F3
 		public virtual ISceneInteractionOperationType SceneInteractionOption
 		{
 			get
@@ -112,37 +109,59 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008146 RID: 33094
+		// Token: 0x17004D55 RID: 19797
+		// (get) Token: 0x0600F91A RID: 63770 RVA: 0x00243322 File Offset: 0x00241522
+		public virtual IPlayerAiControlBase PlayerAiOption
+		{
+			get
+			{
+				if (this._PlayerAiOptionInited)
+				{
+					return this._PlayerAiOptionCache;
+				}
+				this._PlayerAiOptionInited = true;
+				this._PlayerAiOptionCache = ActionReadHelper.ReadIDisableModulePlayerOperation_PlayerAiOption(this.Instance);
+				return this._PlayerAiOptionCache;
+			}
+		}
+
+		// Token: 0x04008825 RID: 34853
 		private IDisableModulePlayerOperation Instance;
 
-		// Token: 0x04008147 RID: 33095
+		// Token: 0x04008826 RID: 34854
 		private IMoveOperationType _MoveOptionCache;
 
-		// Token: 0x04008148 RID: 33096
+		// Token: 0x04008827 RID: 34855
 		private bool _MoveOptionInited;
 
-		// Token: 0x04008149 RID: 33097
+		// Token: 0x04008828 RID: 34856
 		private ISkillOperationType _SkillOptionCache;
 
-		// Token: 0x0400814A RID: 33098
+		// Token: 0x04008829 RID: 34857
 		private bool _SkillOptionInited;
 
-		// Token: 0x0400814B RID: 33099
+		// Token: 0x0400882A RID: 34858
 		private ICameraOperationType _CameraOptionCache;
 
-		// Token: 0x0400814C RID: 33100
+		// Token: 0x0400882B RID: 34859
 		private bool _CameraOptionInited;
 
-		// Token: 0x0400814D RID: 33101
+		// Token: 0x0400882C RID: 34860
 		private IUiOperationType _UiOptionCache;
 
-		// Token: 0x0400814E RID: 33102
+		// Token: 0x0400882D RID: 34861
 		private bool _UiOptionInited;
 
-		// Token: 0x0400814F RID: 33103
+		// Token: 0x0400882E RID: 34862
 		private ISceneInteractionOperationType _SceneInteractionOptionCache;
 
-		// Token: 0x04008150 RID: 33104
+		// Token: 0x0400882F RID: 34863
 		private bool _SceneInteractionOptionInited;
+
+		// Token: 0x04008830 RID: 34864
+		private IPlayerAiControlBase _PlayerAiOptionCache;
+
+		// Token: 0x04008831 RID: 34865
+		private bool _PlayerAiOptionInited;
 	}
 }

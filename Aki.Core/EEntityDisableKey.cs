@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x02000081 RID: 129
+// Token: 0x02000083 RID: 131
 public enum EEntityDisableKey
 {
-	// Token: 0x040003AD RID: 941
+	// Token: 0x040003BB RID: 955
 	Teleport,
-	// Token: 0x040003AE RID: 942
+	// Token: 0x040003BC RID: 956
 	GoDown,
-	// Token: 0x040003AF RID: 943
+	// Token: 0x040003BD RID: 957
 	SetEntityEnable,
-	// Token: 0x040003B0 RID: 944
+	// Token: 0x040003BE RID: 958
 	FishingPoint,
-	// Token: 0x040003B1 RID: 945
+	// Token: 0x040003BF RID: 959
 	FishingEffect,
-	// Token: 0x040003B2 RID: 946
+	// Token: 0x040003C0 RID: 960
 	GameplayMode,
-	// Token: 0x040003B3 RID: 947
+	// Token: 0x040003C1 RID: 961
 	CurveControlComponent,
-	// Token: 0x040003B4 RID: 948
+	// Token: 0x040003C2 RID: 962
 	PlotSequence,
-	// Token: 0x040003B5 RID: 949
+	// Token: 0x040003C3 RID: 963
 	ResetPlayer,
-	// Token: 0x040003B6 RID: 950
+	// Token: 0x040003C4 RID: 964
 	QuickHack,
-	// Token: 0x040003B7 RID: 951
+	// Token: 0x040003C5 RID: 965
 	RoverlikeDeath
 }

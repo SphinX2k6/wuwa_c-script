@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BBC RID: 3004
+	// Token: 0x02000C8A RID: 3210
 	public class INpcUiInteractType
 	{
-		// Token: 0x060044E0 RID: 17632 RVA: 0x000AEBE6 File Offset: 0x000ACDE6
-		[NullableContext(1)]
+		// Token: 0x06004939 RID: 18745 RVA: 0x000B8CAA File Offset: 0x000B6EAA
 		public static INpcUiInteractType Create(INpcUiInteractType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001325 RID: 4901
-		// (get) Token: 0x060044E1 RID: 17633 RVA: 0x000AEC05 File Offset: 0x000ACE05
+		// Token: 0x17001420 RID: 5152
+		// (get) Token: 0x0600493A RID: 18746 RVA: 0x000B8CC9 File Offset: 0x000B6EC9
 		public virtual ENpcUiInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026F5 RID: 9973
+		// Token: 0x0400293D RID: 10557
 		private INpcUiInteractType Instance;
 	}
 }

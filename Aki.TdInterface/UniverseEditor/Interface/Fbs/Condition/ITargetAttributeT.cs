@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CE0 RID: 19680
+	// Token: 0x020051DC RID: 20956
 	public class ITargetAttributeT
 	{
-		// Token: 0x17008EDC RID: 36572
-		// (get) Token: 0x0601F3D2 RID: 127954 RVA: 0x0045C35E File Offset: 0x0045A55E
-		// (set) Token: 0x0601F3D3 RID: 127955 RVA: 0x0045C366 File Offset: 0x0045A566
+		// Token: 0x17009615 RID: 38421
+		// (get) Token: 0x06021017 RID: 135191 RVA: 0x004902AE File Offset: 0x0048E4AE
+		// (set) Token: 0x06021018 RID: 135192 RVA: 0x004902B6 File Offset: 0x0048E4B6
 		public ETargetType Type { get; set; }
 
-		// Token: 0x0601F3D4 RID: 127956 RVA: 0x0045C36F File Offset: 0x0045A56F
+		// Token: 0x06021019 RID: 135193 RVA: 0x004902BF File Offset: 0x0048E4BF
 		public ITargetAttributeT()
 		{
 			this.Type = ETargetType.Player;

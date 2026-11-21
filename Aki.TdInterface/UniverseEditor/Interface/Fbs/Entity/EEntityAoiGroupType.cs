@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x02004772 RID: 18290
+	// Token: 0x02004BDA RID: 19418
 	public enum EEntityAoiGroupType : byte
 	{
-		// Token: 0x0400CBB7 RID: 52151
+		// Token: 0x0400D5ED RID: 54765
 		Normal,
-		// Token: 0x0400CBB8 RID: 52152
+		// Token: 0x0400D5EE RID: 54766
 		Portal
 	}
 }

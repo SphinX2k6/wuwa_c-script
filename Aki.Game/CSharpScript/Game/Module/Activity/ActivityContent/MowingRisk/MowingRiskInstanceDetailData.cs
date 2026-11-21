@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063C2 RID: 25538
+	// Token: 0x02005340 RID: 21312
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingRiskInstanceDetailData : IMowingRiskInstanceDetailData
 	{
-		// Token: 0x170093C9 RID: 37833
-		// (get) Token: 0x060403F2 RID: 263154 RVA: 0x00F8B829 File Offset: 0x00F89A29
-		// (set) Token: 0x060403F3 RID: 263155 RVA: 0x00F8B831 File Offset: 0x00F89A31
+		// Token: 0x1700672B RID: 26411
+		// (get) Token: 0x060350B3 RID: 217267 RVA: 0x00ED27C1 File Offset: 0x00ED09C1
+		// (set) Token: 0x060350B4 RID: 217268 RVA: 0x00ED27C9 File Offset: 0x00ED09C9
 		public string TitleTextId { get; set; }
 
-		// Token: 0x170093CA RID: 37834
-		// (get) Token: 0x060403F4 RID: 263156 RVA: 0x00F8B83A File Offset: 0x00F89A3A
-		// (set) Token: 0x060403F5 RID: 263157 RVA: 0x00F8B842 File Offset: 0x00F89A42
+		// Token: 0x1700672C RID: 26412
+		// (get) Token: 0x060350B5 RID: 217269 RVA: 0x00ED27D2 File Offset: 0x00ED09D2
+		// (set) Token: 0x060350B6 RID: 217270 RVA: 0x00ED27DA File Offset: 0x00ED09DA
 		public string ContentTextId { get; set; }
 
-		// Token: 0x170093CB RID: 37835
-		// (get) Token: 0x060403F6 RID: 263158 RVA: 0x00F8B84B File Offset: 0x00F89A4B
-		// (set) Token: 0x060403F7 RID: 263159 RVA: 0x00F8B853 File Offset: 0x00F89A53
+		// Token: 0x1700672D RID: 26413
+		// (get) Token: 0x060350B7 RID: 217271 RVA: 0x00ED27E3 File Offset: 0x00ED09E3
+		// (set) Token: 0x060350B8 RID: 217272 RVA: 0x00ED27EB File Offset: 0x00ED09EB
 		public IMowingRiskInstanceDetailAttributeItemData[] AttributeList { get; set; }
 
-		// Token: 0x170093CC RID: 37836
-		// (get) Token: 0x060403F8 RID: 263160 RVA: 0x00F8B85C File Offset: 0x00F89A5C
-		// (set) Token: 0x060403F9 RID: 263161 RVA: 0x00F8B864 File Offset: 0x00F89A64
+		// Token: 0x1700672E RID: 26414
+		// (get) Token: 0x060350B9 RID: 217273 RVA: 0x00ED27F4 File Offset: 0x00ED09F4
+		// (set) Token: 0x060350BA RID: 217274 RVA: 0x00ED27FC File Offset: 0x00ED09FC
 		public IMowingRiskInstanceDetailLockItemData LockData { get; set; }
 	}
 }

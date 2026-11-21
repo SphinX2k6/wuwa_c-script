@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F4C RID: 12108
+// Token: 0x0200249F RID: 9375
 [NullableContext(1)]
 [Nullable(0)]
 public class ExtraEffectModifyBuffMaxStack : BuffEffect
 {
-	// Token: 0x06019C64 RID: 105572 RVA: 0x006B8523 File Offset: 0x006B6723
+	// Token: 0x0601756F RID: 95599 RVA: 0x006DE83F File Offset: 0x006DCA3F
 	public ExtraEffectModifyBuffMaxStack(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C65 RID: 105573 RVA: 0x006B8548 File Offset: 0x006B6748
+	// Token: 0x06017570 RID: 95600 RVA: 0x006DE864 File Offset: 0x006DCA64
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -34,7 +34,7 @@ public class ExtraEffectModifyBuffMaxStack : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C66 RID: 105574 RVA: 0x006B85C4 File Offset: 0x006B67C4
+	// Token: 0x06017571 RID: 95601 RVA: 0x006DE8E0 File Offset: 0x006DCAE0
 	public override void OnCreated()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -47,14 +47,14 @@ public class ExtraEffectModifyBuffMaxStack : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C67 RID: 105575 RVA: 0x006B860B File Offset: 0x006B680B
+	// Token: 0x06017572 RID: 95602 RVA: 0x006DE927 File Offset: 0x006DCB27
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C68 RID: 105576 RVA: 0x006B8610 File Offset: 0x006B6810
+	// Token: 0x06017573 RID: 95603 RVA: 0x006DE92C File Offset: 0x006DCB2C
 	public override void OnRemoved(bool bPremature)
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -67,15 +67,15 @@ public class ExtraEffectModifyBuffMaxStack : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C69 RID: 105577 RVA: 0x006B8656 File Offset: 0x006B6856
+	// Token: 0x06017574 RID: 95604 RVA: 0x006DE972 File Offset: 0x006DCB72
 	public override string GetDebugEffectString()
 	{
 		return "修改buff" + string.Join<long>(",", this.InvolvedBuffIds) + " 修改层数" + string.Join<int>(",", this.StackValues);
 	}
 
-	// Token: 0x0400C248 RID: 49736
+	// Token: 0x0400C5EA RID: 50666
 	protected long[] InvolvedBuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C249 RID: 49737
+	// Token: 0x0400C5EB RID: 50667
 	protected int[] StackValues = Array.Empty<int>();
 }

@@ -7,20 +7,19 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000750 RID: 1872
+	// Token: 0x02000136 RID: 310
 	[UnrealObjectPath("/Script/CoreUObject.Object")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public abstract class UObject : UnrealUObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06006305 RID: 25349 RVA: 0x0008E1E1 File Offset: 0x0008C3E1
+		// Token: 0x06001261 RID: 4705 RVA: 0x0001D161 File Offset: 0x0001B361
 		public static UClassStackOnlyPtr StaticClass()
 		{
 			return UObject._ClassPtr;
 		}
 
-		// Token: 0x06006306 RID: 25350 RVA: 0x0008E1F0 File Offset: 0x0008C3F0
+		// Token: 0x06001262 RID: 4706 RVA: 0x0001D170 File Offset: 0x0001B370
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void ExecuteUbergraph(int EntryPoint)
 		{
 			UObject.__ExecuteUbergraph_FunctionParams* ptr = stackalloc UObject.__ExecuteUbergraph_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UObject.__ExecuteUbergraph_FunctionParams) & -16L;
@@ -29,41 +28,41 @@ namespace UnrealEngine
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, UObject.__ExecuteUbergraph_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06006307 RID: 25351 RVA: 0x0008E236 File Offset: 0x0008C436
+		// Token: 0x06001263 RID: 4707 RVA: 0x0001D1B6 File Offset: 0x0001B3B6
 		static UObject()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/CoreUObject.Object");
 		}
 
-		// Token: 0x06006308 RID: 25352 RVA: 0x0008E244 File Offset: 0x0008C444
+		// Token: 0x06001264 RID: 4708 RVA: 0x0001D1C4 File Offset: 0x0001B3C4
 		protected UObject() : this(BuiltinUtils.AllocNativeUObject(UObject.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06006309 RID: 25353 RVA: 0x0008E26C File Offset: 0x0008C46C
+		// Token: 0x06001265 RID: 4709 RVA: 0x0001D1EC File Offset: 0x0001B3EC
 		protected UObject(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04002F67 RID: 12135
+		// Token: 0x0400059D RID: 1437
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/CoreUObject.Object";
 
-		// Token: 0x04002F68 RID: 12136
+		// Token: 0x0400059E RID: 1438
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04002F69 RID: 12137
+		// Token: 0x0400059F RID: 1439
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04002F6A RID: 12138
+		// Token: 0x040005A0 RID: 1440
 		private static IntPtr __ExecuteUbergraph_NativeFunctionPtr;
 
-		// Token: 0x02002C49 RID: 11337
+		// Token: 0x0200092F RID: 2351
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __ExecuteUbergraph_FunctionParams
 		{
-			// Token: 0x04016552 RID: 91474
+			// Token: 0x0400583C RID: 22588
 			[FieldOffset(0)]
 			public int EntryPoint;
 		}

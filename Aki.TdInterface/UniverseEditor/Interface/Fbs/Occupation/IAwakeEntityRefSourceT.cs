@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x02004393 RID: 17299
+	// Token: 0x020047F5 RID: 18421
 	public class IAwakeEntityRefSourceT
 	{
-		// Token: 0x17007A49 RID: 31305
-		// (get) Token: 0x06019BDB RID: 105435 RVA: 0x003AF924 File Offset: 0x003ADB24
-		// (set) Token: 0x06019BDC RID: 105436 RVA: 0x003AF92C File Offset: 0x003ADB2C
+		// Token: 0x1700807E RID: 32894
+		// (get) Token: 0x0601B369 RID: 111465 RVA: 0x003DB34C File Offset: 0x003D954C
+		// (set) Token: 0x0601B36A RID: 111466 RVA: 0x003DB354 File Offset: 0x003D9554
 		public ERefSourceType Type { get; set; }
 
-		// Token: 0x17007A4A RID: 31306
-		// (get) Token: 0x06019BDD RID: 105437 RVA: 0x003AF935 File Offset: 0x003ADB35
-		// (set) Token: 0x06019BDE RID: 105438 RVA: 0x003AF93D File Offset: 0x003ADB3D
+		// Token: 0x1700807F RID: 32895
+		// (get) Token: 0x0601B36B RID: 111467 RVA: 0x003DB35D File Offset: 0x003D955D
+		// (set) Token: 0x0601B36C RID: 111468 RVA: 0x003DB365 File Offset: 0x003D9565
 		public int EntityId { get; set; }
 
-		// Token: 0x06019BDF RID: 105439 RVA: 0x003AF946 File Offset: 0x003ADB46
+		// Token: 0x0601B36D RID: 111469 RVA: 0x003DB36E File Offset: 0x003D956E
 		public IAwakeEntityRefSourceT()
 		{
 			this.Type = ERefSourceType.AwakeEntity;

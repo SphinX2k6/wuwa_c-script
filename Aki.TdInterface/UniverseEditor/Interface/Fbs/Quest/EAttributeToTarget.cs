@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C8E RID: 15502
+	// Token: 0x020040A0 RID: 16544
 	public enum EAttributeToTarget : byte
 	{
-		// Token: 0x0400B302 RID: 45826
+		// Token: 0x0400BC99 RID: 48281
 		Health
 	}
 }

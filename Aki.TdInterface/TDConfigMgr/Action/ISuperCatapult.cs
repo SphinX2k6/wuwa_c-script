@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EF5 RID: 7925
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200212E RID: 8494
 	public class ISuperCatapult : ILeisureInteractType
 	{
-		// Token: 0x0600A97C RID: 43388 RVA: 0x0017E1B8 File Offset: 0x0017C3B8
+		// Token: 0x0600B44E RID: 46158 RVA: 0x001941B0 File Offset: 0x001923B0
 		private ISuperCatapult_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A97D RID: 43389 RVA: 0x0017E1F0 File Offset: 0x0017C3F0
+		// Token: 0x0600B44F RID: 46159 RVA: 0x001941E8 File Offset: 0x001923E8
 		public static ISuperCatapult Create([Nullable(2)] ISuperCatapult instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A97E RID: 43390 RVA: 0x0017E203 File Offset: 0x0017C403
+		// Token: 0x0600B450 RID: 46160 RVA: 0x001941FB File Offset: 0x001923FB
 		public static ISuperCatapult CreateFromSetValue([Nullable(2)] ISuperCatapult_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A97F RID: 43391 RVA: 0x0017E216 File Offset: 0x0017C416
+		// Token: 0x0600B451 RID: 46161 RVA: 0x0019420E File Offset: 0x0019240E
 		public new ISuperCatapult_SetValue ToSetValue()
 		{
 			return new ISuperCatapult_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033A6 RID: 13222
-		// (get) Token: 0x0600A980 RID: 43392 RVA: 0x0017E235 File Offset: 0x0017C435
-		// (set) Token: 0x0600A981 RID: 43393 RVA: 0x0017E260 File Offset: 0x0017C460
+		// Token: 0x17003671 RID: 13937
+		// (get) Token: 0x0600B452 RID: 46162 RVA: 0x0019422D File Offset: 0x0019242D
+		// (set) Token: 0x0600B453 RID: 46163 RVA: 0x00194258 File Offset: 0x00192458
 		public override ELeisureInteract Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033A7 RID: 13223
-		// (get) Token: 0x0600A982 RID: 43394 RVA: 0x0017E270 File Offset: 0x0017C470
-		// (set) Token: 0x0600A983 RID: 43395 RVA: 0x0017E2D1 File Offset: 0x0017C4D1
+		// Token: 0x17003672 RID: 13938
+		// (get) Token: 0x0600B454 RID: 46164 RVA: 0x00194268 File Offset: 0x00192468
+		// (set) Token: 0x0600B455 RID: 46165 RVA: 0x001942C9 File Offset: 0x001924C9
 		public virtual ICatapultParam Param
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064D1 RID: 25809
+		// Token: 0x04006AC0 RID: 27328
 		[Nullable(2)]
 		protected new ISuperCatapult FbInstance;
 
-		// Token: 0x040064D2 RID: 25810
+		// Token: 0x04006AC1 RID: 27329
 		[Nullable(2)]
 		protected new ISuperCatapult_SetValue PocoInterface;
 
-		// Token: 0x040064D3 RID: 25811
+		// Token: 0x04006AC2 RID: 27330
 		private ICatapultParam _ParamCache;
 
-		// Token: 0x040064D4 RID: 25812
+		// Token: 0x04006AC3 RID: 27331
 		private bool _ParamInited;
 	}
 }

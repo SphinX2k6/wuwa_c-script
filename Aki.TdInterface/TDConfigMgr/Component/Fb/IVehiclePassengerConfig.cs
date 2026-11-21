@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D4D RID: 3405
+	// Token: 0x02000E47 RID: 3655
 	public class IVehiclePassengerConfig
 	{
-		// Token: 0x06004D9B RID: 19867 RVA: 0x000C0EEF File Offset: 0x000BF0EF
-		[NullableContext(1)]
+		// Token: 0x060052B7 RID: 21175 RVA: 0x000CC633 File Offset: 0x000CA833
 		public static IVehiclePassengerConfig Create(IVehiclePassengerConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018BE RID: 6334
-		// (get) Token: 0x06004D9C RID: 19868 RVA: 0x000C0F0E File Offset: 0x000BF10E
+		// Token: 0x17001A24 RID: 6692
+		// (get) Token: 0x060052B8 RID: 21176 RVA: 0x000CC652 File Offset: 0x000CA852
 		public virtual int PassengerNpc
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018BF RID: 6335
-		// (get) Token: 0x06004D9D RID: 19869 RVA: 0x000C0F1B File Offset: 0x000BF11B
+		// Token: 0x17001A25 RID: 6693
+		// (get) Token: 0x060052B9 RID: 21177 RVA: 0x000CC65F File Offset: 0x000CA85F
 		public virtual int Seat
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C7A RID: 11386
+		// Token: 0x04002F3A RID: 12090
 		private IVehiclePassengerConfig Instance;
 	}
 }

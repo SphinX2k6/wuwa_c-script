@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B86 RID: 7046
+// Token: 0x02001045 RID: 4165
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class PointItem : GridProxyAbstract<IProgressItem>
 {
-	// Token: 0x0600D1C5 RID: 53701 RVA: 0x00301E0C File Offset: 0x0030000C
+	// Token: 0x0600A5D6 RID: 42454 RVA: 0x0030CEE4 File Offset: 0x0030B0E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,7 +26,7 @@ public class PointItem : GridProxyAbstract<IProgressItem>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D1C6 RID: 53702 RVA: 0x00301E54 File Offset: 0x00300054
+	// Token: 0x0600A5D7 RID: 42455 RVA: 0x0030CF2C File Offset: 0x0030B12C
 	public override void Refresh(IProgressItem data, bool isSelected, int gridIndex)
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -41,7 +41,7 @@ public class PointItem : GridProxyAbstract<IProgressItem>
 		this.LastIsPassed = data.IsPassed;
 	}
 
-	// Token: 0x0600D1C7 RID: 53703 RVA: 0x00301E94 File Offset: 0x00300094
+	// Token: 0x0600A5D8 RID: 42456 RVA: 0x0030CF6C File Offset: 0x0030B16C
 	public void ShowPassAnim()
 	{
 		if (this.LevelSequencePlayer == null)
@@ -51,17 +51,17 @@ public class PointItem : GridProxyAbstract<IProgressItem>
 		this.LevelSequencePlayer.PlayLevelSequenceByName("DayGone", false, null, false);
 	}
 
-	// Token: 0x04006038 RID: 24632
+	// Token: 0x04006107 RID: 24839
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006039 RID: 24633
+	// Token: 0x04006108 RID: 24840
 	private bool LastIsPassed;
 
-	// Token: 0x0200810A RID: 33034
+	// Token: 0x02007298 RID: 29336
 	[NullableContext(0)]
 	private class EPointItemComponentDefine
 	{
-		// Token: 0x0402A1E8 RID: 172520
+		// Token: 0x0402551C RID: 152860
 		public const int ShowSprite = 0;
 	}
 }

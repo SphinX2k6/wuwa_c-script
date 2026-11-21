@@ -1,10 +1,10 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02000EF7 RID: 3831
+// Token: 0x020003AC RID: 940
 public static class UiPopFrameViewRegisterCenter
 {
-	// Token: 0x06006031 RID: 24625 RVA: 0x00121404 File Offset: 0x0011F604
+	// Token: 0x060033C9 RID: 13257 RVA: 0x00129408 File Offset: 0x00127608
 	public static void Init()
 	{
 		UiPopFrameViewStorage.Instance.RegisterUiBehaviourPop(1, new UiPopFrameViewInfo("UiView_PopupB", () => new PopupTypeBigItem()));

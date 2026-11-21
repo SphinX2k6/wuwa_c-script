@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200171D RID: 5917
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200189A RID: 6298
 	[JsonConverter(typeof(FadeOutScreenConverter))]
 	public class FadeOutScreen : ActionParams
 	{
-		// Token: 0x06007D5B RID: 32091 RVA: 0x0012CD34 File Offset: 0x0012AF34
+		// Token: 0x06008439 RID: 33849 RVA: 0x0013BDE0 File Offset: 0x00139FE0
 		private FadeOutScreen_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D5C RID: 32092 RVA: 0x0012CD6C File Offset: 0x0012AF6C
+		// Token: 0x0600843A RID: 33850 RVA: 0x0013BE18 File Offset: 0x0013A018
 		public static FadeOutScreen Create([Nullable(2)] FadeOutScreen instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D5D RID: 32093 RVA: 0x0012CD7F File Offset: 0x0012AF7F
+		// Token: 0x0600843B RID: 33851 RVA: 0x0013BE2B File Offset: 0x0013A02B
 		public static FadeOutScreen CreateFromSetValue([Nullable(2)] FadeOutScreen_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D5E RID: 32094 RVA: 0x0012CD92 File Offset: 0x0012AF92
+		// Token: 0x0600843C RID: 33852 RVA: 0x0013BE3E File Offset: 0x0013A03E
 		public FadeOutScreen_SetValue ToSetValue()
 		{
 			return new FadeOutScreen_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002952 RID: 10578
-		// (get) Token: 0x06007D5F RID: 32095 RVA: 0x0012CDB4 File Offset: 0x0012AFB4
-		// (set) Token: 0x06007D60 RID: 32096 RVA: 0x0012CE15 File Offset: 0x0012B015
+		// Token: 0x17002B3D RID: 11069
+		// (get) Token: 0x0600843D RID: 33853 RVA: 0x0013BE60 File Offset: 0x0013A060
+		// (set) Token: 0x0600843E RID: 33854 RVA: 0x0013BEC1 File Offset: 0x0013A0C1
 		[Nullable(2)]
 		public virtual IEaseData Ease
 		{
@@ -95,9 +93,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002953 RID: 10579
-		// (get) Token: 0x06007D61 RID: 32097 RVA: 0x0012CE2C File Offset: 0x0012B02C
-		// (set) Token: 0x06007D62 RID: 32098 RVA: 0x0012CE66 File Offset: 0x0012B066
+		// Token: 0x17002B3E RID: 11070
+		// (get) Token: 0x0600843F RID: 33855 RVA: 0x0013BED8 File Offset: 0x0013A0D8
+		// (set) Token: 0x06008440 RID: 33856 RVA: 0x0013BF12 File Offset: 0x0013A112
 		public virtual bool? OnlyLowMemoryDeviceExecute
 		{
 			get
@@ -119,18 +117,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005004 RID: 20484
+		// Token: 0x04005433 RID: 21555
 		[Nullable(2)]
 		protected new FadeOutScreen FbInstance;
 
-		// Token: 0x04005005 RID: 20485
+		// Token: 0x04005434 RID: 21556
 		[Nullable(2)]
 		protected FadeOutScreen_SetValue PocoInterface;
 
-		// Token: 0x04005006 RID: 20486
+		// Token: 0x04005435 RID: 21557
 		private IEaseData _EaseCache;
 
-		// Token: 0x04005007 RID: 20487
+		// Token: 0x04005436 RID: 21558
 		private bool _EaseInited;
 	}
 }

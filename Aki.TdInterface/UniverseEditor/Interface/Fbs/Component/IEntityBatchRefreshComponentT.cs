@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200515A RID: 20826
+	// Token: 0x020056BF RID: 22207
 	public class IEntityBatchRefreshComponentT
 	{
-		// Token: 0x170097EE RID: 38894
-		// (get) Token: 0x06021A04 RID: 137732 RVA: 0x004AACA2 File Offset: 0x004A8EA2
-		// (set) Token: 0x06021A05 RID: 137733 RVA: 0x004AACAA File Offset: 0x004A8EAA
+		// Token: 0x17009FDB RID: 40923
+		// (get) Token: 0x06023958 RID: 145752 RVA: 0x004E4C2E File Offset: 0x004E2E2E
+		// (set) Token: 0x06023959 RID: 145753 RVA: 0x004E4C36 File Offset: 0x004E2E36
 		public bool Disabled { get; set; }
 
-		// Token: 0x170097EF RID: 38895
-		// (get) Token: 0x06021A06 RID: 137734 RVA: 0x004AACB3 File Offset: 0x004A8EB3
-		// (set) Token: 0x06021A07 RID: 137735 RVA: 0x004AACBB File Offset: 0x004A8EBB
+		// Token: 0x17009FDC RID: 40924
+		// (get) Token: 0x0602395A RID: 145754 RVA: 0x004E4C3F File Offset: 0x004E2E3F
+		// (set) Token: 0x0602395B RID: 145755 RVA: 0x004E4C47 File Offset: 0x004E2E47
 		public IConditionGroupT StartCondition { get; set; }
 
-		// Token: 0x170097F0 RID: 38896
-		// (get) Token: 0x06021A08 RID: 137736 RVA: 0x004AACC4 File Offset: 0x004A8EC4
-		// (set) Token: 0x06021A09 RID: 137737 RVA: 0x004AACCC File Offset: 0x004A8ECC
+		// Token: 0x17009FDD RID: 40925
+		// (get) Token: 0x0602395C RID: 145756 RVA: 0x004E4C50 File Offset: 0x004E2E50
+		// (set) Token: 0x0602395D RID: 145757 RVA: 0x004E4C58 File Offset: 0x004E2E58
 		public IConditionGroupT EndCondition { get; set; }
 
-		// Token: 0x170097F1 RID: 38897
-		// (get) Token: 0x06021A0A RID: 137738 RVA: 0x004AACD5 File Offset: 0x004A8ED5
-		// (set) Token: 0x06021A0B RID: 137739 RVA: 0x004AACDD File Offset: 0x004A8EDD
+		// Token: 0x17009FDE RID: 40926
+		// (get) Token: 0x0602395E RID: 145758 RVA: 0x004E4C61 File Offset: 0x004E2E61
+		// (set) Token: 0x0602395F RID: 145759 RVA: 0x004E4C69 File Offset: 0x004E2E69
 		public TEntityBatchRefreshUnion EntityBatchRefresh { get; set; }
 
-		// Token: 0x170097F2 RID: 38898
-		// (get) Token: 0x06021A0C RID: 137740 RVA: 0x004AACE6 File Offset: 0x004A8EE6
-		// (set) Token: 0x06021A0D RID: 137741 RVA: 0x004AACEE File Offset: 0x004A8EEE
+		// Token: 0x17009FDF RID: 40927
+		// (get) Token: 0x06023960 RID: 145760 RVA: 0x004E4C72 File Offset: 0x004E2E72
+		// (set) Token: 0x06023961 RID: 145761 RVA: 0x004E4C7A File Offset: 0x004E2E7A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021A0E RID: 137742 RVA: 0x004AACF7 File Offset: 0x004A8EF7
+		// Token: 0x06023962 RID: 145762 RVA: 0x004E4C83 File Offset: 0x004E2E83
 		public IEntityBatchRefreshComponentT()
 		{
 			this.Disabled = false;

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200712E RID: 28974
+	// Token: 0x020078FA RID: 30970
 	public class ISkillBtnEffectBase_UnionUnion
 	{
-		// Token: 0x1700D759 RID: 55129
-		// (get) Token: 0x060335E7 RID: 210407 RVA: 0x006EC855 File Offset: 0x006EAA55
-		// (set) Token: 0x060335E8 RID: 210408 RVA: 0x006EC85D File Offset: 0x006EAA5D
+		// Token: 0x1700E33C RID: 58172
+		// (get) Token: 0x06036889 RID: 223369 RVA: 0x0074CE61 File Offset: 0x0074B061
+		// (set) Token: 0x0603688A RID: 223370 RVA: 0x0074CE69 File Offset: 0x0074B069
 		public ISkillBtnEffectBase_Union Type { get; set; }
 
-		// Token: 0x1700D75A RID: 55130
-		// (get) Token: 0x060335E9 RID: 210409 RVA: 0x006EC866 File Offset: 0x006EAA66
-		// (set) Token: 0x060335EA RID: 210410 RVA: 0x006EC86E File Offset: 0x006EAA6E
+		// Token: 0x1700E33D RID: 58173
+		// (get) Token: 0x0603688B RID: 223371 RVA: 0x0074CE72 File Offset: 0x0074B072
+		// (set) Token: 0x0603688C RID: 223372 RVA: 0x0074CE7A File Offset: 0x0074B07A
 		public object Value { get; set; }
 
-		// Token: 0x060335EB RID: 210411 RVA: 0x006EC877 File Offset: 0x006EAA77
+		// Token: 0x0603688D RID: 223373 RVA: 0x0074CE83 File Offset: 0x0074B083
 		public ISkillBtnEffectBase_UnionUnion()
 		{
 			this.Type = ISkillBtnEffectBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060335EC RID: 210412 RVA: 0x006EC88D File Offset: 0x006EAA8D
+		// Token: 0x0603688E RID: 223374 RVA: 0x0074CE99 File Offset: 0x0074B099
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060335ED RID: 210413 RVA: 0x006EC89F File Offset: 0x006EAA9F
+		// Token: 0x0603688F RID: 223375 RVA: 0x0074CEAB File Offset: 0x0074B0AB
 		public ISkillBtnEffectBaseT AsISkillBtnEffectBase()
 		{
 			return this.As<ISkillBtnEffectBaseT>();
 		}
 
-		// Token: 0x060335EE RID: 210414 RVA: 0x006EC8A7 File Offset: 0x006EAAA7
+		// Token: 0x06036890 RID: 223376 RVA: 0x0074CEB3 File Offset: 0x0074B0B3
 		public static ISkillBtnEffectBase_UnionUnion FromISkillBtnEffectBase(ISkillBtnEffectBaseT _iskillbtneffectbase)
 		{
 			return new ISkillBtnEffectBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060335EF RID: 210415 RVA: 0x006EC8BC File Offset: 0x006EAABC
+		// Token: 0x06036891 RID: 223377 RVA: 0x0074CEC8 File Offset: 0x0074B0C8
 		public IMusicBattleBtnEffectT AsIMusicBattleBtnEffect()
 		{
 			return this.As<IMusicBattleBtnEffectT>();
 		}
 
-		// Token: 0x060335F0 RID: 210416 RVA: 0x006EC8C4 File Offset: 0x006EAAC4
+		// Token: 0x06036892 RID: 223378 RVA: 0x0074CED0 File Offset: 0x0074B0D0
 		public static ISkillBtnEffectBase_UnionUnion FromIMusicBattleBtnEffect(IMusicBattleBtnEffectT _imusicbattlebtneffect)
 		{
 			return new ISkillBtnEffectBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060335F1 RID: 210417 RVA: 0x006EC8DC File Offset: 0x006EAADC
+		// Token: 0x06036893 RID: 223379 RVA: 0x0074CEE8 File Offset: 0x0074B0E8
 		public static int Pack(FlatBufferBuilder builder, ISkillBtnEffectBase_UnionUnion _o)
 		{
 			ISkillBtnEffectBase_Union type = _o.Type;

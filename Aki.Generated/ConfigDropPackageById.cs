@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200023F RID: 575
+	// Token: 0x02000251 RID: 593
 	public class ConfigDropPackageById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000D7E RID: 3454 RVA: 0x000A5CEC File Offset: 0x000A3EEC
+		// Token: 0x06000DEA RID: 3562 RVA: 0x000ABC24 File Offset: 0x000A9E24
 		static ConfigDropPackageById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDropPackageById.CreateStaticDefaultValue), new Action(ConfigDropPackageById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000D7F RID: 3455 RVA: 0x000A5D0C File Offset: 0x000A3F0C
+		// Token: 0x06000DEB RID: 3563 RVA: 0x000ABC44 File Offset: 0x000A9E44
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDropPackageById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000D80 RID: 3456 RVA: 0x000A5D8B File Offset: 0x000A3F8B
+		// Token: 0x06000DEC RID: 3564 RVA: 0x000ABCC3 File Offset: 0x000A9EC3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDropPackageById.LogPair = null;
 			ConfigDropPackageById.HandleId = 0;
 		}
 
-		// Token: 0x06000D81 RID: 3457 RVA: 0x000A5D99 File Offset: 0x000A3F99
+		// Token: 0x06000DED RID: 3565 RVA: 0x000ABCD1 File Offset: 0x000A9ED1
 		public static void Init()
 		{
 			ConfigDropPackageById.HandleId = ConfigCommon.InitDataStatement(ConfigDropPackageById.HandleId, "db_drop.db", "select BinData from `DropPackage` where Id=?");
 		}
 
-		// Token: 0x06000D82 RID: 3458 RVA: 0x000A5DB4 File Offset: 0x000A3FB4
+		// Token: 0x06000DEE RID: 3566 RVA: 0x000ABCEC File Offset: 0x000A9EEC
 		public static DropPackage? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDropPackageById.HandleId, ConfigDropPackageById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DropPackage?(rootAsDropPackage);
 		}
 
-		// Token: 0x04000F9D RID: 3997
+		// Token: 0x0400101B RID: 4123
 		private const string DB = "db_drop.db";
 
-		// Token: 0x04000F9E RID: 3998
+		// Token: 0x0400101C RID: 4124
 		private const string FILE = "d.掉落.xlsx";
 
-		// Token: 0x04000F9F RID: 3999
+		// Token: 0x0400101D RID: 4125
 		private const string TABLE = "DropPackage";
 
-		// Token: 0x04000FA0 RID: 4000
+		// Token: 0x0400101E RID: 4126
 		private const string COMMAND = "select BinData from `DropPackage` where Id=?";
 
-		// Token: 0x04000FA1 RID: 4001
+		// Token: 0x0400101F RID: 4127
 		private const string KEY_PREFIX = "DropPackageById";
 
-		// Token: 0x04000FA2 RID: 4002
+		// Token: 0x04001020 RID: 4128
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000FA3 RID: 4003
+		// Token: 0x04001021 RID: 4129
 		private static int HandleId;
 	}
 }

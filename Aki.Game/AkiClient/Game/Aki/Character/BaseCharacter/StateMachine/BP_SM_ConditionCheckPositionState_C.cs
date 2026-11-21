@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x02004380 RID: 17280
+	// Token: 0x020033A1 RID: 13217
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionCheckPositionState.BP_SM_ConditionCheckPositionState_C")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 57)]
 	public class BP_SM_ConditionCheckPositionState_C : UASMConditionBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CC54 RID: 183380 RVA: 0x00A282A5 File Offset: 0x00A264A5
+		// Token: 0x06021872 RID: 137330 RVA: 0x009630F9 File Offset: 0x009612F9
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_ConditionCheckPositionState_C._ClassPtr == IntPtr.Zero)
@@ -22,48 +22,48 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_ConditionCheckPositionState_C._ClassPtr;
 		}
 
-		// Token: 0x0602CC55 RID: 183381 RVA: 0x00A282CC File Offset: 0x00A264CC
+		// Token: 0x06021873 RID: 137331 RVA: 0x00963120 File Offset: 0x00961320
 		public BP_SM_ConditionCheckPositionState_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionCheckPositionState_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CC56 RID: 183382 RVA: 0x00A282F4 File Offset: 0x00A264F4
+		// Token: 0x06021874 RID: 137332 RVA: 0x00963148 File Offset: 0x00961348
 		[NullableContext(1)]
 		public BP_SM_ConditionCheckPositionState_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionCheckPositionState_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070C2 RID: 28866
-		// (get) Token: 0x0602CC57 RID: 183383 RVA: 0x00A28327 File Offset: 0x00A26527
-		// (set) Token: 0x0602CC58 RID: 183384 RVA: 0x00A2833B File Offset: 0x00A2653B
+		// Token: 0x170044C4 RID: 17604
+		// (get) Token: 0x06021875 RID: 137333 RVA: 0x0096317B File Offset: 0x0096137B
+		// (set) Token: 0x06021876 RID: 137334 RVA: 0x0096318F File Offset: 0x0096138F
 		public unsafe TEnumAsByte<ECharParentMoveState> 位置状态
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionCheckPositionState_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionCheckPositionState_C.__PropertyOffset_位置状态);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionCheckPositionState_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionCheckPositionState_C.__PropertyOffset_位置状态) = value;
 			}
 		}
 
-		// Token: 0x0602CC59 RID: 183385 RVA: 0x00A28350 File Offset: 0x00A26550
+		// Token: 0x06021877 RID: 137335 RVA: 0x009631A4 File Offset: 0x009613A4
 		protected BP_SM_ConditionCheckPositionState_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040179D5 RID: 96725
+		// Token: 0x04012556 RID: 75094
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionCheckPositionState.BP_SM_ConditionCheckPositionState_C";
 
-		// Token: 0x040179D6 RID: 96726
+		// Token: 0x04012557 RID: 75095
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040179D7 RID: 96727
+		// Token: 0x04012558 RID: 75096
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040179D8 RID: 96728
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012559 RID: 75097
+		internal static int __PropertyOffset_位置状态;
 	}
 }

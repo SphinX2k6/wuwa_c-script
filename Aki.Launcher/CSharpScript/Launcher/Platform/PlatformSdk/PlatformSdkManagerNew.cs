@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000132 RID: 306
+	// Token: 0x02000136 RID: 310
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlatformSdkManagerNew : Singleton
 	{
-		// Token: 0x060009C5 RID: 2501 RVA: 0x00043CC8 File Offset: 0x00041EC8
+		// Token: 0x060009F9 RID: 2553 RVA: 0x000460DC File Offset: 0x000442DC
 		public bool Initialize(UObject worldContext)
 		{
 			if (!this.IsSdkOn)
@@ -24,7 +24,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return this.PlatformSdk.Initialize(worldContext);
 		}
 
-		// Token: 0x060009C6 RID: 2502 RVA: 0x00043D22 File Offset: 0x00041F22
+		// Token: 0x060009FA RID: 2554 RVA: 0x00046136 File Offset: 0x00044336
 		public void UnInitialize()
 		{
 			PlatformSdkNew platformSdk = this.PlatformSdk;
@@ -35,7 +35,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			platformSdk.UnInitialize();
 		}
 
-		// Token: 0x060009C7 RID: 2503 RVA: 0x00043D38 File Offset: 0x00041F38
+		// Token: 0x060009FB RID: 2555 RVA: 0x0004614C File Offset: 0x0004434C
 		private void SwitchPlatformSdk()
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -48,14 +48,14 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x060009C8 RID: 2504 RVA: 0x00043D8E File Offset: 0x00041F8E
+		// Token: 0x060009FC RID: 2556 RVA: 0x000461A2 File Offset: 0x000443A2
 		public PlatformSdkNew GetPlatformSdk()
 		{
 			return this.PlatformSdk;
 		}
 
-		// Token: 0x170000FD RID: 253
-		// (get) Token: 0x060009C9 RID: 2505 RVA: 0x00043D96 File Offset: 0x00041F96
+		// Token: 0x17000103 RID: 259
+		// (get) Token: 0x060009FD RID: 2557 RVA: 0x000461AA File Offset: 0x000443AA
 		public bool IsSdkOn
 		{
 			get
@@ -64,8 +64,8 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x170000FE RID: 254
-		// (get) Token: 0x060009CA RID: 2506 RVA: 0x00043DC0 File Offset: 0x00041FC0
+		// Token: 0x17000104 RID: 260
+		// (get) Token: 0x060009FE RID: 2558 RVA: 0x000461D4 File Offset: 0x000443D4
 		public bool IfNeedPlatformSdkConfig
 		{
 			get
@@ -74,8 +74,8 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x170000FF RID: 255
-		// (get) Token: 0x060009CB RID: 2507 RVA: 0x00043DEA File Offset: 0x00041FEA
+		// Token: 0x17000105 RID: 261
+		// (get) Token: 0x060009FF RID: 2559 RVA: 0x000461FE File Offset: 0x000443FE
 		public static PlatformSdkManagerNew Instance
 		{
 			get
@@ -89,12 +89,12 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x060009CC RID: 2508 RVA: 0x00043E0D File Offset: 0x0004200D
+		// Token: 0x06000A00 RID: 2560 RVA: 0x00046221 File Offset: 0x00044421
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060009CD RID: 2509 RVA: 0x00043E0F File Offset: 0x0004200F
+		// Token: 0x06000A01 RID: 2561 RVA: 0x00046223 File Offset: 0x00044423
 		public static void ResetStaticDefaultValue()
 		{
 			PlatformSdkManagerNew instance = PlatformSdkManagerNew._instance;
@@ -105,16 +105,16 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			PlatformSdkManagerNew._instance = null;
 		}
 
-		// Token: 0x060009CE RID: 2510 RVA: 0x00043E28 File Offset: 0x00042028
+		// Token: 0x06000A02 RID: 2562 RVA: 0x0004623C File Offset: 0x0004443C
 		static PlatformSdkManagerNew()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlatformSdkManagerNew.CreateStaticDefaultValue), new Action(PlatformSdkManagerNew.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040005BB RID: 1467
+		// Token: 0x040005F6 RID: 1526
 		private PlatformSdkNew PlatformSdk = new PlatformSdkNew();
 
-		// Token: 0x040005BC RID: 1468
+		// Token: 0x040005F7 RID: 1527
 		[Nullable(2)]
 		private static PlatformSdkManagerNew _instance;
 	}

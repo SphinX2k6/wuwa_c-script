@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016E7 RID: 5863
+	// Token: 0x02001863 RID: 6243
 	[EnumExtensions]
 	public enum ETrapDefenseTipType
 	{
-		// Token: 0x04004F4C RID: 20300
+		// Token: 0x04005379 RID: 21369
 		OpenNewAreaTip
 	}
 }

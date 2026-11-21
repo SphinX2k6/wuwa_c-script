@@ -1,16 +1,16 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x02001E82 RID: 7810
+// Token: 0x02001344 RID: 4932
 public class HonamiStoryTechNodeData
 {
-	// Token: 0x0600EE06 RID: 60934 RVA: 0x0038C2E2 File Offset: 0x0038A4E2
+	// Token: 0x0600C225 RID: 49701 RVA: 0x00397ED2 File Offset: 0x003960D2
 	public HonamiStoryTechNodeData(HonamiStoryTalent config)
 	{
 		this.Config = config;
 	}
 
-	// Token: 0x0600EE07 RID: 60935 RVA: 0x0038C2F1 File Offset: 0x0038A4F1
+	// Token: 0x0600C226 RID: 49702 RVA: 0x00397EE1 File Offset: 0x003960E1
 	public void SetNodeStatus(int status)
 	{
 		if (status == 1)
@@ -24,8 +24,8 @@ public class HonamiStoryTechNodeData
 		}
 	}
 
-	// Token: 0x170012CA RID: 4810
-	// (get) Token: 0x0600EE08 RID: 60936 RVA: 0x0038C30A File Offset: 0x0038A50A
+	// Token: 0x170012F4 RID: 4852
+	// (get) Token: 0x0600C227 RID: 49703 RVA: 0x00397EFA File Offset: 0x003960FA
 	public ENodeStatus GetNodeStatus
 	{
 		get
@@ -34,8 +34,8 @@ public class HonamiStoryTechNodeData
 		}
 	}
 
-	// Token: 0x170012CB RID: 4811
-	// (get) Token: 0x0600EE09 RID: 60937 RVA: 0x0038C314 File Offset: 0x0038A514
+	// Token: 0x170012F5 RID: 4853
+	// (get) Token: 0x0600C228 RID: 49704 RVA: 0x00397F04 File Offset: 0x00396104
 	public bool PreNodeIsActive
 	{
 		get
@@ -52,8 +52,8 @@ public class HonamiStoryTechNodeData
 		}
 	}
 
-	// Token: 0x170012CC RID: 4812
-	// (get) Token: 0x0600EE0A RID: 60938 RVA: 0x0038C35A File Offset: 0x0038A55A
+	// Token: 0x170012F6 RID: 4854
+	// (get) Token: 0x0600C229 RID: 49705 RVA: 0x00397F4A File Offset: 0x0039614A
 	public int Id
 	{
 		get
@@ -62,8 +62,8 @@ public class HonamiStoryTechNodeData
 		}
 	}
 
-	// Token: 0x170012CD RID: 4813
-	// (get) Token: 0x0600EE0B RID: 60939 RVA: 0x0038C367 File Offset: 0x0038A567
+	// Token: 0x170012F7 RID: 4855
+	// (get) Token: 0x0600C22A RID: 49706 RVA: 0x00397F57 File Offset: 0x00396157
 	public HonamiStoryTalent GetConfig
 	{
 		get
@@ -72,9 +72,9 @@ public class HonamiStoryTechNodeData
 		}
 	}
 
-	// Token: 0x04006E73 RID: 28275
+	// Token: 0x04006F54 RID: 28500
 	private HonamiStoryTalent Config;
 
-	// Token: 0x04006E74 RID: 28276
+	// Token: 0x04006F55 RID: 28501
 	private ENodeStatus NodeStatus;
 }

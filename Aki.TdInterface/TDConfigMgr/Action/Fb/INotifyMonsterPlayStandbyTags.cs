@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026E2 RID: 9954
+	// Token: 0x020029A6 RID: 10662
 	public class INotifyMonsterPlayStandbyTags : ISendBattleStateType
 	{
-		// Token: 0x0600DE63 RID: 56931 RVA: 0x0020FEB2 File Offset: 0x0020E0B2
-		[NullableContext(1)]
+		// Token: 0x0600EC3F RID: 60479 RVA: 0x0022C6F2 File Offset: 0x0022A8F2
 		public static INotifyMonsterPlayStandbyTags Create(INotifyMonsterPlayStandbyTags? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004261 RID: 16993
-		// (get) Token: 0x0600DE64 RID: 56932 RVA: 0x0020FED1 File Offset: 0x0020E0D1
+		// Token: 0x170045A1 RID: 17825
+		// (get) Token: 0x0600EC40 RID: 60480 RVA: 0x0022C711 File Offset: 0x0022A911
 		public override ESetBattleStateType Type
 		{
 			get
@@ -32,19 +31,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004262 RID: 16994
-		// (get) Token: 0x0600DE65 RID: 56933 RVA: 0x0020FEE0 File Offset: 0x0020E0E0
+		// Token: 0x170045A2 RID: 17826
+		// (get) Token: 0x0600EC41 RID: 60481 RVA: 0x0022C720 File Offset: 0x0022A920
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMonsterStandByConfig> StandbyConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -67,18 +66,18 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B70 RID: 31600
+		// Token: 0x04008210 RID: 33296
 		private INotifyMonsterPlayStandbyTags Instance;
 
-		// Token: 0x04007B71 RID: 31601
+		// Token: 0x04008211 RID: 33297
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMonsterStandByConfig> _StandbyConfigsCache;
 
-		// Token: 0x04007B72 RID: 31602
+		// Token: 0x04008212 RID: 33298
 		private bool _StandbyConfigsInited;
 	}
 }

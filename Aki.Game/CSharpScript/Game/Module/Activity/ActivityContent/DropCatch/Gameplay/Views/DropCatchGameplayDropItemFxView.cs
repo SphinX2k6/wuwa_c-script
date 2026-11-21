@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x020066F4 RID: 26356
+	// Token: 0x02005644 RID: 22084
 	public class DropCatchGameplayDropItemFxView : DropCatchGameplayPoolPanelBase
 	{
-		// Token: 0x06041DB8 RID: 269752 RVA: 0x00FF8888 File Offset: 0x00FF6A88
+		// Token: 0x06036904 RID: 223492 RVA: 0x00F39C7C File Offset: 0x00F37E7C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041DB9 RID: 269753 RVA: 0x00FF88F8 File Offset: 0x00FF6AF8
+		// Token: 0x06036905 RID: 223493 RVA: 0x00F39CEC File Offset: 0x00F37EEC
 		protected override void OnBeforeShow()
 		{
 			this.ClearTimer();
@@ -96,14 +96,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}, (float)this.RECYCLE_TIME, null, null, true, 1f);
 		}
 
-		// Token: 0x06041DBA RID: 269754 RVA: 0x00FF8A0B File Offset: 0x00FF6C0B
+		// Token: 0x06036906 RID: 223494 RVA: 0x00F39DFF File Offset: 0x00F37FFF
 		[NullableContext(1)]
 		protected void InitPos(Vector2D pos)
 		{
 			base.GetRootItem().SetAnchorOffset(pos.ToUeVector2D(false));
 		}
 
-		// Token: 0x06041DBB RID: 269755 RVA: 0x00FF8A1F File Offset: 0x00FF6C1F
+		// Token: 0x06036907 RID: 223495 RVA: 0x00F39E13 File Offset: 0x00F38013
 		private void ClearTimer()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.TimerHandle))
@@ -113,16 +113,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.TimerHandle = null;
 		}
 
-		// Token: 0x06041DBC RID: 269756 RVA: 0x00FF8A4B File Offset: 0x00FF6C4B
+		// Token: 0x06036908 RID: 223496 RVA: 0x00F39E3F File Offset: 0x00F3803F
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearTimer();
 		}
 
-		// Token: 0x040224D9 RID: 140505
+		// Token: 0x0401CD32 RID: 118066
 		private readonly int RECYCLE_TIME = 2000;
 
-		// Token: 0x040224DA RID: 140506
+		// Token: 0x0401CD33 RID: 118067
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 	}

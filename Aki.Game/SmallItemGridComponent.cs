@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200196B RID: 6507
+// Token: 0x02000E28 RID: 3624
 public class SmallItemGridComponent : ItemGridComponent
 {
 }

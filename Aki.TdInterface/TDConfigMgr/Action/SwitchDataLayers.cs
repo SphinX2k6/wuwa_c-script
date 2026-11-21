@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002228 RID: 8744
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002493 RID: 9363
 	public class SwitchDataLayers : ActionParams
 	{
-		// Token: 0x0600BFEA RID: 49130 RVA: 0x001B911C File Offset: 0x001B731C
+		// Token: 0x0600CBA8 RID: 52136 RVA: 0x001D07E8 File Offset: 0x001CE9E8
 		private SwitchDataLayers_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BFEB RID: 49131 RVA: 0x001B9154 File Offset: 0x001B7354
+		// Token: 0x0600CBA9 RID: 52137 RVA: 0x001D0820 File Offset: 0x001CEA20
 		public static SwitchDataLayers Create([Nullable(2)] SwitchDataLayers instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFEC RID: 49132 RVA: 0x001B9167 File Offset: 0x001B7367
+		// Token: 0x0600CBAA RID: 52138 RVA: 0x001D0833 File Offset: 0x001CEA33
 		public static SwitchDataLayers CreateFromSetValue([Nullable(2)] SwitchDataLayers_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFED RID: 49133 RVA: 0x001B917C File Offset: 0x001B737C
+		// Token: 0x0600CBAB RID: 52139 RVA: 0x001D0848 File Offset: 0x001CEA48
 		public SwitchDataLayers_SetValue ToSetValue()
 		{
 			return new SwitchDataLayers_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A1E RID: 14878
-		// (get) Token: 0x0600BFEE RID: 49134 RVA: 0x001B91CA File Offset: 0x001B73CA
-		// (set) Token: 0x0600BFEF RID: 49135 RVA: 0x001B91F1 File Offset: 0x001B73F1
+		// Token: 0x17003D14 RID: 15636
+		// (get) Token: 0x0600CBAC RID: 52140 RVA: 0x001D0896 File Offset: 0x001CEA96
+		// (set) Token: 0x0600CBAD RID: 52141 RVA: 0x001D08BD File Offset: 0x001CEABD
 		public virtual List<int> LoadDataLayers
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A1F RID: 14879
-		// (get) Token: 0x0600BFF0 RID: 49136 RVA: 0x001B91FF File Offset: 0x001B73FF
-		// (set) Token: 0x0600BFF1 RID: 49137 RVA: 0x001B9226 File Offset: 0x001B7426
+		// Token: 0x17003D15 RID: 15637
+		// (get) Token: 0x0600CBAE RID: 52142 RVA: 0x001D08CB File Offset: 0x001CEACB
+		// (set) Token: 0x0600CBAF RID: 52143 RVA: 0x001D08F2 File Offset: 0x001CEAF2
 		public virtual List<int> UnloadDataLayers
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A20 RID: 14880
-		// (get) Token: 0x0600BFF2 RID: 49138 RVA: 0x001B9234 File Offset: 0x001B7434
-		// (set) Token: 0x0600BFF3 RID: 49139 RVA: 0x001B9295 File Offset: 0x001B7495
+		// Token: 0x17003D16 RID: 15638
+		// (get) Token: 0x0600CBB0 RID: 52144 RVA: 0x001D0900 File Offset: 0x001CEB00
+		// (set) Token: 0x0600CBB1 RID: 52145 RVA: 0x001D0961 File Offset: 0x001CEB61
 		[Nullable(2)]
 		public virtual ISwitchDataLayersTransitionWithSequence TransitionOption
 		{
@@ -145,9 +143,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A21 RID: 14881
-		// (get) Token: 0x0600BFF4 RID: 49140 RVA: 0x001B92AA File Offset: 0x001B74AA
-		// (set) Token: 0x0600BFF5 RID: 49141 RVA: 0x001B92D1 File Offset: 0x001B74D1
+		// Token: 0x17003D17 RID: 15639
+		// (get) Token: 0x0600CBB2 RID: 52146 RVA: 0x001D0976 File Offset: 0x001CEB76
+		// (set) Token: 0x0600CBB3 RID: 52147 RVA: 0x001D099D File Offset: 0x001CEB9D
 		[Nullable(2)]
 		public virtual string MaterialDataForLoadedLayers
 		{
@@ -172,9 +170,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A22 RID: 14882
-		// (get) Token: 0x0600BFF6 RID: 49142 RVA: 0x001B92DF File Offset: 0x001B74DF
-		// (set) Token: 0x0600BFF7 RID: 49143 RVA: 0x001B9306 File Offset: 0x001B7506
+		// Token: 0x17003D18 RID: 15640
+		// (get) Token: 0x0600CBB4 RID: 52148 RVA: 0x001D09AB File Offset: 0x001CEBAB
+		// (set) Token: 0x0600CBB5 RID: 52149 RVA: 0x001D09D2 File Offset: 0x001CEBD2
 		[Nullable(2)]
 		public virtual string MaterialDataForUnloadLayers
 		{
@@ -199,18 +197,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400726E RID: 29294
+		// Token: 0x040078B8 RID: 30904
 		[Nullable(2)]
 		protected new SwitchDataLayers FbInstance;
 
-		// Token: 0x0400726F RID: 29295
+		// Token: 0x040078B9 RID: 30905
 		[Nullable(2)]
 		protected SwitchDataLayers_SetValue PocoInterface;
 
-		// Token: 0x04007270 RID: 29296
+		// Token: 0x040078BA RID: 30906
 		private ISwitchDataLayersTransitionWithSequence _TransitionOptionCache;
 
-		// Token: 0x04007271 RID: 29297
+		// Token: 0x040078BB RID: 30907
 		private bool _TransitionOptionInited;
 	}
 }

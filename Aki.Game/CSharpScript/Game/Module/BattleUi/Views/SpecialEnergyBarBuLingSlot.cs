@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DD0 RID: 24016
+	// Token: 0x02004DB4 RID: 19892
 	public class SpecialEnergyBarBuLingSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D08D RID: 249997 RVA: 0x00EADC10 File Offset: 0x00EABE10
+		// Token: 0x06032004 RID: 204804 RVA: 0x00DFEB04 File Offset: 0x00DFCD04
 		protected override void OnStart()
 		{
 			this.OverrideColor = false;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnStart();
 		}
 
-		// Token: 0x0603D08E RID: 249998 RVA: 0x00EADC88 File Offset: 0x00EABE88
+		// Token: 0x06032005 RID: 204805 RVA: 0x00DFEB7C File Offset: 0x00DFCD7C
 		[NullableContext(1)]
 		private void SetColor(int index, string effectColorStr, string pointColorStr)
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SlotItemList[index].SetFullEffectColor(flinearColor, false);
 		}
 
-		// Token: 0x0603D08F RID: 249999 RVA: 0x00EADCE5 File Offset: 0x00EABEE5
+		// Token: 0x06032006 RID: 204806 RVA: 0x00DFEBD9 File Offset: 0x00DFCDD9
 		public void SetState(bool leftState, bool rightState)
 		{
 			this.LeftState = leftState;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D090 RID: 250000 RVA: 0x00EADCFC File Offset: 0x00EABEFC
+		// Token: 0x06032007 RID: 204807 RVA: 0x00DFEBF0 File Offset: 0x00DFCDF0
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			bool enable = this.LeftState && this.RightState;
@@ -54,10 +54,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(enable, isStart);
 		}
 
-		// Token: 0x0401FCC8 RID: 130248
+		// Token: 0x0401A785 RID: 108421
 		private bool LeftState;
 
-		// Token: 0x0401FCC9 RID: 130249
+		// Token: 0x0401A786 RID: 108422
 		private bool RightState;
 	}
 }

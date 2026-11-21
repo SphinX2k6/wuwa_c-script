@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068B3 RID: 26803
+	// Token: 0x02005803 RID: 22531
 	[NullableContext(1)]
 	public interface IAdamSmasherStageItemData
 	{
-		// Token: 0x170097C8 RID: 38856
-		// (get) Token: 0x06042E50 RID: 274000
+		// Token: 0x17006B08 RID: 27400
+		// (get) Token: 0x060379A8 RID: 227752
 		int StageId { get; }
 
-		// Token: 0x170097C9 RID: 38857
-		// (get) Token: 0x06042E51 RID: 274001
+		// Token: 0x17006B09 RID: 27401
+		// (get) Token: 0x060379A9 RID: 227753
 		string IndexText { get; }
 
-		// Token: 0x170097CA RID: 38858
-		// (get) Token: 0x06042E52 RID: 274002
+		// Token: 0x17006B0A RID: 27402
+		// (get) Token: 0x060379AA RID: 227754
 		string Name { get; }
 
-		// Token: 0x170097CB RID: 38859
-		// (get) Token: 0x06042E53 RID: 274003
+		// Token: 0x17006B0B RID: 27403
+		// (get) Token: 0x060379AB RID: 227755
 		bool IsUnlocked { get; }
 
-		// Token: 0x170097CC RID: 38860
-		// (get) Token: 0x06042E54 RID: 274004
+		// Token: 0x17006B0C RID: 27404
+		// (get) Token: 0x060379AC RID: 227756
 		bool IsHard { get; }
 	}
 }

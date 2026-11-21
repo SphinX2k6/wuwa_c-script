@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BA1 RID: 2977
+	// Token: 0x02000C6F RID: 3183
 	public class ITargetGearGroupFailureCondition
 	{
-		// Token: 0x0600445E RID: 17502 RVA: 0x000ADB51 File Offset: 0x000ABD51
-		[NullableContext(1)]
+		// Token: 0x060048B7 RID: 18615 RVA: 0x000B7C15 File Offset: 0x000B5E15
 		public static ITargetGearGroupFailureCondition Create(ITargetGearGroupFailureCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012D9 RID: 4825
-		// (get) Token: 0x0600445F RID: 17503 RVA: 0x000ADB70 File Offset: 0x000ABD70
+		// Token: 0x170013D4 RID: 5076
+		// (get) Token: 0x060048B8 RID: 18616 RVA: 0x000B7C34 File Offset: 0x000B5E34
 		public virtual ETargetGearGroupFailureCondition Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400269A RID: 9882
+		// Token: 0x040028E2 RID: 10466
 		private ITargetGearGroupFailureCondition Instance;
 	}
 }

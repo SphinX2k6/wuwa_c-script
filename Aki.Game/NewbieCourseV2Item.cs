@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200139C RID: 5020
+// Token: 0x02000850 RID: 2128
 [NullableContext(1)]
 [Nullable(0)]
 public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 {
-	// Token: 0x06008CCD RID: 36045 RVA: 0x001E3300 File Offset: 0x001E1500
+	// Token: 0x06006066 RID: 24678 RVA: 0x001EC0B0 File Offset: 0x001EA2B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -49,7 +47,7 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008CCE RID: 36046 RVA: 0x001E346C File Offset: 0x001E166C
+	// Token: 0x06006067 RID: 24679 RVA: 0x001EC21C File Offset: 0x001EA41C
 	protected override void OnStart()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(5);
@@ -63,7 +61,7 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		this.RewardLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(layout, new Func<CommonItemSmallItemGrid>(this.InitRewardItem), item.GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x06008CCF RID: 36047 RVA: 0x001E34D8 File Offset: 0x001E16D8
+	// Token: 0x06006068 RID: 24680 RVA: 0x001EC288 File Offset: 0x001EA488
 	protected override void OnBeforeDestroy()
 	{
 		this.CancelDigitMaterialLoad();
@@ -74,35 +72,34 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		}
 	}
 
-	// Token: 0x06008CD0 RID: 36048 RVA: 0x001E3548 File Offset: 0x001E1748
+	// Token: 0x06006069 RID: 24681 RVA: 0x001EC2F8 File Offset: 0x001EA4F8
 	public void SetActivityData(ActivityNewbieCourseV2Data activityData)
 	{
 		this.ActivityData = activityData;
 	}
 
-	// Token: 0x06008CD1 RID: 36049 RVA: 0x001E3551 File Offset: 0x001E1751
+	// Token: 0x0600606A RID: 24682 RVA: 0x001EC301 File Offset: 0x001EA501
 	public override void Refresh(NewbieCourseV2 config, bool isSelected, int gridIndex)
 	{
 		this.Config = new NewbieCourseV2?(config);
-		this.RefreshLevelDisplay(NewbieCourseV2Item.ReadTargetLevel(config));
+		this.RefreshLevelDisplay(config.TargetLevel);
 		this.RefreshCurrentState();
 	}
 
-	// Token: 0x06008CD2 RID: 36050 RVA: 0x001E3571 File Offset: 0x001E1771
+	// Token: 0x0600606B RID: 24683 RVA: 0x001EC322 File Offset: 0x001EA522
 	public override object GetKey(NewbieCourseV2 data, int displayIndex)
 	{
-		return NewbieCourseV2Item.ReadId(data);
+		return data.Id;
 	}
 
-	// Token: 0x06008CD3 RID: 36051 RVA: 0x001E3580 File Offset: 0x001E1780
+	// Token: 0x0600606C RID: 24684 RVA: 0x001EC330 File Offset: 0x001EA530
 	public void RefreshCurrentState()
 	{
 		if (this.Config == null || this.ActivityData == null)
 		{
 			return;
 		}
-		NewbieCourseV2 value = this.Config.Value;
-		this.CurrentState = this.ActivityData.GetRewardState(NewbieCourseV2Item.ReadTargetLevel(value));
+		this.CurrentState = this.ActivityData.GetRewardState(this.Config.Value.TargetLevel);
 		this.RefreshLevelPrefix();
 		this.RefreshRewardBackground();
 		UUIItem item = base.GetItem(1);
@@ -114,54 +111,49 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		this.RefreshRewardList();
 	}
 
-	// Token: 0x06008CD4 RID: 36052 RVA: 0x001E35F9 File Offset: 0x001E17F9
+	// Token: 0x0600606D RID: 24685 RVA: 0x001EC3AA File Offset: 0x001EA5AA
 	private CommonItemSmallItemGrid InitRewardItem()
 	{
 		CommonItemSmallItemGrid commonItemSmallItemGrid = new CommonItemSmallItemGrid();
 		commonItemSmallItemGrid.SetAllowClickBack(true);
-		commonItemSmallItemGrid.ShowReceivedCallBack = delegate(TItem _)
-		{
-			if (this.ActivityData == null || this.Config == null)
-			{
-				return false;
-			}
-			NewbieCourseV2 value = this.Config.Value;
-			return this.ActivityData.GetRewardState(NewbieCourseV2Item.ReadTargetLevel(value)) == ENewbieCourseV2ItemState.HasReceived;
-		};
+		commonItemSmallItemGrid.ShowReceivedCallBack = ((TItem _) => this.ActivityData != null && this.Config != null && this.ActivityData.GetRewardState(this.Config.Value.TargetLevel) == ENewbieCourseV2ItemState.HasReceived);
 		return commonItemSmallItemGrid;
 	}
 
-	// Token: 0x06008CD5 RID: 36053 RVA: 0x001E361C File Offset: 0x001E181C
+	// Token: 0x0600606E RID: 24686 RVA: 0x001EC3CC File Offset: 0x001EA5CC
 	private void RefreshRewardList()
 	{
 		if (this.Config == null || this.RewardLayout == null)
 		{
 			return;
 		}
-		NewbieCourseV2 value = this.Config.Value;
-		ItemData[] rewardList = ActivityNewbieCourseV2Config.Instance.GetRewardList(NewbieCourseV2Item.ReadRewardId(value));
-		TItem[] rewardItems = (from reward in rewardList
-		select new TItem
+		ItemData[] rewardList = ActivityNewbieCourseV2Config.Instance.GetRewardList(this.Config.Value.Reward);
+		TItem[] rewardItems = new TItem[rewardList.Length];
+		for (int i = 0; i < rewardList.Length; i++)
 		{
-			ItemData = new InventoryDefine.GetItemData(reward.ItemId, 0),
-			Count = reward.Count
-		}).ToArray<TItem>();
+			ItemData itemData = rewardList[i];
+			rewardItems[i] = new TItem
+			{
+				ItemData = new InventoryDefine.GetItemData(itemData.ItemId, 0),
+				Count = itemData.Count
+			};
+		}
 		bool showReceivable = this.CurrentState == ENewbieCourseV2ItemState.CanReceive;
 		bool isClaimedDim = this.CurrentState == ENewbieCourseV2ItemState.HasReceived;
 		this.RewardLayout.RefreshByData(rewardItems, delegate
 		{
-			for (int i = 0; i < rewardItems.Length; i++)
+			for (int j = 0; j < rewardItems.Length; j++)
 			{
-				CommonItemSmallItemGrid layoutItemByIndex = this.RewardLayout.GetLayoutItemByIndex(i);
+				CommonItemSmallItemGrid layoutItemByIndex = this.RewardLayout.GetLayoutItemByIndex(j);
 				if (layoutItemByIndex != null)
 				{
-					this.ApplySmallGridRewardOverlay(layoutItemByIndex, rewardItems[i].ItemData.ItemId, showReceivable, isClaimedDim);
+					this.ApplySmallGridRewardOverlay(layoutItemByIndex, rewardItems[j].ItemData.ItemId, showReceivable, isClaimedDim);
 				}
 			}
 		}, false);
 	}
 
-	// Token: 0x06008CD6 RID: 36054 RVA: 0x001E36D8 File Offset: 0x001E18D8
+	// Token: 0x0600606F RID: 24687 RVA: 0x001EC4B0 File Offset: 0x001EA6B0
 	private void ApplySmallGridRewardOverlay(CommonItemSmallItemGrid item, int itemConfigId, bool showReceivable, bool isClaimedDim)
 	{
 		int itemDataTypeByConfigId = (int)InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(itemConfigId));
@@ -178,7 +170,7 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		item.SetIsDisable(new bool?(isClaimedDim));
 	}
 
-	// Token: 0x06008CD7 RID: 36055 RVA: 0x001E3738 File Offset: 0x001E1938
+	// Token: 0x06006070 RID: 24688 RVA: 0x001EC510 File Offset: 0x001EA710
 	private void RefreshLevelDisplay(int targetLevel)
 	{
 		UUITexture texture = base.GetTexture(3);
@@ -206,7 +198,7 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		}
 	}
 
-	// Token: 0x06008CD8 RID: 36056 RVA: 0x001E37F0 File Offset: 0x001E19F0
+	// Token: 0x06006071 RID: 24689 RVA: 0x001EC5C8 File Offset: 0x001EA7C8
 	private string GetDigitTexturePath(char digit, bool isLeftDigit)
 	{
 		UiResourceConfig instance = UiResourceConfig.Instance;
@@ -216,7 +208,7 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		return instance.GetResourcePath(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x06008CD9 RID: 36057 RVA: 0x001E3838 File Offset: 0x001E1A38
+	// Token: 0x06006072 RID: 24690 RVA: 0x001EC610 File Offset: 0x001EA810
 	private void RefreshLevelPrefix()
 	{
 		UUISprite sprite = base.GetSprite(2);
@@ -237,13 +229,13 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		}
 	}
 
-	// Token: 0x06008CDA RID: 36058 RVA: 0x001E38A7 File Offset: 0x001E1AA7
+	// Token: 0x06006073 RID: 24691 RVA: 0x001EC67F File Offset: 0x001EA87F
 	private void RefreshRewardBackground()
 	{
 		this.RefreshRewardBackgroundTransition();
 	}
 
-	// Token: 0x06008CDB RID: 36059 RVA: 0x001E38B0 File Offset: 0x001E1AB0
+	// Token: 0x06006074 RID: 24692 RVA: 0x001EC688 File Offset: 0x001EA888
 	private UniTask RefreshRewardBackgroundTransition()
 	{
 		NewbieCourseV2Item.<RefreshRewardBackgroundTransition>d__21 <RefreshRewardBackgroundTransition>d__;
@@ -254,7 +246,7 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		return <RefreshRewardBackgroundTransition>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008CDC RID: 36060 RVA: 0x001E38F4 File Offset: 0x001E1AF4
+	// Token: 0x06006075 RID: 24693 RVA: 0x001EC6CC File Offset: 0x001EA8CC
 	private void RefreshDigitMaterial()
 	{
 		UUITexture texture = base.GetTexture(3);
@@ -271,7 +263,7 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		this.LoadDigitMaterial(materialId2, texture2, false);
 	}
 
-	// Token: 0x06008CDD RID: 36061 RVA: 0x001E3974 File Offset: 0x001E1B74
+	// Token: 0x06006076 RID: 24694 RVA: 0x001EC74C File Offset: 0x001EA94C
 	private void LoadDigitMaterial(string materialId, UUITexture texture, bool isLeft)
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath(materialId);
@@ -302,7 +294,7 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		}, ResourceSystem.EResourceLoadPriority.Ui, this.MemoryTag);
 	}
 
-	// Token: 0x06008CDE RID: 36062 RVA: 0x001E3A30 File Offset: 0x001E1C30
+	// Token: 0x06006077 RID: 24695 RVA: 0x001EC808 File Offset: 0x001EAA08
 	private void CancelDigitMaterialLoad()
 	{
 		if (this.LeftMaterialHandleId != -1)
@@ -317,7 +309,7 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		}
 	}
 
-	// Token: 0x06008CDF RID: 36063 RVA: 0x001E3A80 File Offset: 0x001E1C80
+	// Token: 0x06006078 RID: 24696 RVA: 0x001EC858 File Offset: 0x001EAA58
 	private void OnClickReward()
 	{
 		if (this.Config == null || this.ActivityData == null)
@@ -336,74 +328,17 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 		activityNewbieCourseV2Controller.RequestAllClaimableRewards(new int?(this.ActivityData.Id));
 	}
 
-	// Token: 0x06008CE0 RID: 36064 RVA: 0x001E3ADC File Offset: 0x001E1CDC
-	private static int ReadId(NewbieCourseV2 config)
-	{
-		Type type = config.GetType();
-		PropertyInfo property = type.GetProperty("Id");
-		object obj = (property != null) ? property.GetValue(config) : null;
-		if (obj is int)
-		{
-			return (int)obj;
-		}
-		MethodInfo methodInfo = type.GetMethod("Id", Type.EmptyTypes) ?? type.GetMethod("id", Type.EmptyTypes);
-		obj = ((methodInfo != null) ? methodInfo.Invoke(config, null) : null);
-		if (obj is int)
-		{
-			return (int)obj;
-		}
-		return 0;
-	}
-
-	// Token: 0x06008CE1 RID: 36065 RVA: 0x001E3B70 File Offset: 0x001E1D70
-	private static int ReadTargetLevel(NewbieCourseV2 config)
-	{
-		Type type = config.GetType();
-		PropertyInfo property = type.GetProperty("TargetLevel");
-		object obj = (property != null) ? property.GetValue(config) : null;
-		if (obj is int)
-		{
-			return (int)obj;
-		}
-		MethodInfo methodInfo = type.GetMethod("TargetLevel", Type.EmptyTypes) ?? type.GetMethod("targetlevel", Type.EmptyTypes);
-		obj = ((methodInfo != null) ? methodInfo.Invoke(config, null) : null);
-		if (obj is int)
-		{
-			return (int)obj;
-		}
-		return 0;
-	}
-
-	// Token: 0x06008CE2 RID: 36066 RVA: 0x001E3C04 File Offset: 0x001E1E04
-	private static int ReadRewardId(NewbieCourseV2 config)
-	{
-		Type type = config.GetType();
-		PropertyInfo property = type.GetProperty("Reward");
-		object obj = (property != null) ? property.GetValue(config) : null;
-		if (obj is int)
-		{
-			return (int)obj;
-		}
-		MethodInfo methodInfo = type.GetMethod("Reward", Type.EmptyTypes) ?? type.GetMethod("reward", Type.EmptyTypes);
-		obj = ((methodInfo != null) ? methodInfo.Invoke(config, null) : null);
-		if (obj is int)
-		{
-			return (int)obj;
-		}
-		return 0;
-	}
-
-	// Token: 0x04003E77 RID: 15991
+	// Token: 0x04003F0F RID: 16143
 	private NewbieCourseV2? Config;
 
-	// Token: 0x04003E78 RID: 15992
+	// Token: 0x04003F10 RID: 16144
 	[Nullable(2)]
 	private ActivityNewbieCourseV2Data ActivityData;
 
-	// Token: 0x04003E79 RID: 15993
+	// Token: 0x04003F11 RID: 16145
 	private ENewbieCourseV2ItemState CurrentState;
 
-	// Token: 0x04003E7A RID: 15994
+	// Token: 0x04003F12 RID: 16146
 	[Nullable(new byte[]
 	{
 		2,
@@ -411,38 +346,38 @@ public class NewbieCourseV2Item : GridProxyAbstract<NewbieCourseV2>
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x04003E7B RID: 15995
+	// Token: 0x04003F13 RID: 16147
 	private int LeftMaterialHandleId = -1;
 
-	// Token: 0x04003E7C RID: 15996
+	// Token: 0x04003F14 RID: 16148
 	private int RightMaterialHandleId = -1;
 
-	// Token: 0x02007A0A RID: 31242
+	// Token: 0x02006B92 RID: 27538
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x040282B0 RID: 164528
+		// Token: 0x040235D3 RID: 144851
 		public const int StripButton = 0;
 
-		// Token: 0x040282B1 RID: 164529
+		// Token: 0x040235D4 RID: 144852
 		public const int RedPointPanel = 1;
 
-		// Token: 0x040282B2 RID: 164530
+		// Token: 0x040235D5 RID: 144853
 		public const int LevelSprite = 2;
 
-		// Token: 0x040282B3 RID: 164531
+		// Token: 0x040235D6 RID: 144854
 		public const int NumberLeft = 3;
 
-		// Token: 0x040282B4 RID: 164532
+		// Token: 0x040235D7 RID: 144855
 		public const int NumberRight = 4;
 
-		// Token: 0x040282B5 RID: 164533
+		// Token: 0x040235D8 RID: 144856
 		public const int RewardListLayout = 5;
 
-		// Token: 0x040282B6 RID: 164534
+		// Token: 0x040235D9 RID: 144857
 		public const int RewardItemTemplate = 6;
 
-		// Token: 0x040282B7 RID: 164535
+		// Token: 0x040235DA RID: 144858
 		public const int BackgroundTexture = 7;
 	}
 }

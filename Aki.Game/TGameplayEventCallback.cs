@@ -1,6 +1,6 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02002E5A RID: 11866
-// (Invoke) Token: 0x060194D9 RID: 103641
+// Token: 0x020023AC RID: 9132
+// (Invoke) Token: 0x06016D93 RID: 93587
 public delegate void TGameplayEventCallback(int tagId, FGameplayEventData payload);

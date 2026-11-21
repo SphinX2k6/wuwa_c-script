@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049C5 RID: 18885
+	// Token: 0x02004E82 RID: 20098
 	public class ICheckDataLayerConditionT
 	{
-		// Token: 0x1700888B RID: 34955
-		// (get) Token: 0x0601D7C4 RID: 120772 RVA: 0x0042724E File Offset: 0x0042544E
-		// (set) Token: 0x0601D7C5 RID: 120773 RVA: 0x00427256 File Offset: 0x00425456
+		// Token: 0x17008F54 RID: 36692
+		// (get) Token: 0x0601F21D RID: 127517 RVA: 0x00457C2A File Offset: 0x00455E2A
+		// (set) Token: 0x0601F21E RID: 127518 RVA: 0x00457C32 File Offset: 0x00455E32
 		public int DataLayerId { get; set; }
 
-		// Token: 0x1700888C RID: 34956
-		// (get) Token: 0x0601D7C6 RID: 120774 RVA: 0x0042725F File Offset: 0x0042545F
-		// (set) Token: 0x0601D7C7 RID: 120775 RVA: 0x00427267 File Offset: 0x00425467
+		// Token: 0x17008F55 RID: 36693
+		// (get) Token: 0x0601F21F RID: 127519 RVA: 0x00457C3B File Offset: 0x00455E3B
+		// (set) Token: 0x0601F220 RID: 127520 RVA: 0x00457C43 File Offset: 0x00455E43
 		public bool IsLoad { get; set; }
 
-		// Token: 0x1700888D RID: 34957
-		// (get) Token: 0x0601D7C8 RID: 120776 RVA: 0x00427270 File Offset: 0x00425470
-		// (set) Token: 0x0601D7C9 RID: 120777 RVA: 0x00427278 File Offset: 0x00425478
+		// Token: 0x17008F56 RID: 36694
+		// (get) Token: 0x0601F221 RID: 127521 RVA: 0x00457C4C File Offset: 0x00455E4C
+		// (set) Token: 0x0601F222 RID: 127522 RVA: 0x00457C54 File Offset: 0x00455E54
 		public ECondition Type { get; set; }
 
-		// Token: 0x0601D7CA RID: 120778 RVA: 0x00427281 File Offset: 0x00425481
+		// Token: 0x0601F223 RID: 127523 RVA: 0x00457C5D File Offset: 0x00455E5D
 		public ICheckDataLayerConditionT()
 		{
 			this.DataLayerId = 0;

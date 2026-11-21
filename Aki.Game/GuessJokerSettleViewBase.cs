@@ -4,21 +4,22 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200106A RID: 4202
+// Token: 0x0200051E RID: 1310
 [NullableContext(1)]
 [Nullable(0)]
-public abstract class GuessJokerSettleViewBase : UiViewBase, IUiCameraBehavior
+public abstract class GuessJokerSettleViewBase : UiViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x06006C4D RID: 27725 RVA: 0x0015DD37 File Offset: 0x0015BF37
+	// Token: 0x06003FE2 RID: 16354 RVA: 0x0016666F File Offset: 0x0016486F
 	protected GuessJokerSettleViewBase(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006C4E RID: 27726 RVA: 0x0015DD40 File Offset: 0x0015BF40
+	// Token: 0x06003FE3 RID: 16355 RVA: 0x00166678 File Offset: 0x00164878
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +41,7 @@ public abstract class GuessJokerSettleViewBase : UiViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x06006C4F RID: 27727 RVA: 0x0015DE5C File Offset: 0x0015C05C
+	// Token: 0x06003FE4 RID: 16356 RVA: 0x00166794 File Offset: 0x00164994
 	protected override void OnStart()
 	{
 		bool uiactive = true;
@@ -58,7 +59,7 @@ public abstract class GuessJokerSettleViewBase : UiViewBase, IUiCameraBehavior
 		button.RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06006C50 RID: 27728 RVA: 0x0015DEC0 File Offset: 0x0015C0C0
+	// Token: 0x06003FE5 RID: 16357 RVA: 0x001667F8 File Offset: 0x001649F8
 	protected override void OnBeforeShow()
 	{
 		this.PauseTimeDilation();
@@ -84,7 +85,7 @@ public abstract class GuessJokerSettleViewBase : UiViewBase, IUiCameraBehavior
 		base.GetText(7).SetText(playerNameByType, true);
 	}
 
-	// Token: 0x06006C51 RID: 27729 RVA: 0x0015DF99 File Offset: 0x0015C199
+	// Token: 0x06003FE6 RID: 16358 RVA: 0x001668D1 File Offset: 0x00164AD1
 	protected override void OnAfterShow()
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -100,7 +101,7 @@ public abstract class GuessJokerSettleViewBase : UiViewBase, IUiCameraBehavior
 		instance2.SetNpcPokerState(this.GetNpcPokerState());
 	}
 
-	// Token: 0x06006C52 RID: 27730 RVA: 0x0015DFC7 File Offset: 0x0015C1C7
+	// Token: 0x06003FE7 RID: 16359 RVA: 0x001668FF File Offset: 0x00164AFF
 	protected override void OnBeforeHide()
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -116,20 +117,20 @@ public abstract class GuessJokerSettleViewBase : UiViewBase, IUiCameraBehavior
 		this.ResumeTimeDilation();
 	}
 
-	// Token: 0x06006C53 RID: 27731 RVA: 0x0015DFF1 File Offset: 0x0015C1F1
+	// Token: 0x06003FE8 RID: 16360 RVA: 0x00166929 File Offset: 0x00164B29
 	protected void PauseTimeDilation()
 	{
 		UiTimeDilation.Instance.AddWaitSetTimeDilationTag("GuessJokerSettleViewBase");
 	}
 
-	// Token: 0x06006C54 RID: 27732 RVA: 0x0015E002 File Offset: 0x0015C202
+	// Token: 0x06003FE9 RID: 16361 RVA: 0x0016693A File Offset: 0x00164B3A
 	protected void ResumeTimeDilation()
 	{
 		UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("GuessJokerSettleViewBase");
 	}
 
-	// Token: 0x06006C55 RID: 27733 RVA: 0x0015E014 File Offset: 0x0015C214
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x06003FEA RID: 16362 RVA: 0x0016694C File Offset: 0x00164B4C
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
 		int roleId = GuessJokerGamePlayModel.Instance.GetRoleId();
 		GuessJokerAiConfig? jokerAiConfigByRoleId = GuessJokerConfig.Instance.GetJokerAiConfigByRoleId(roleId);
@@ -141,22 +142,21 @@ public abstract class GuessJokerSettleViewBase : UiViewBase, IUiCameraBehavior
 		if (cameraNameByCameraId != null)
 		{
 			this.CameraName = cameraNameByCameraId;
-			UiCameraAnimationController.Instance.PushCameraHandle((EUiViewName)cameraNameByCameraId, new int?(viewId), isBlend);
+			UiCameraController.Instance.PushCameraHandleByOpenView((EUiViewName)cameraNameByCameraId, viewId, operationType);
 		}
 	}
 
-	// Token: 0x06006C56 RID: 27734 RVA: 0x0015E078 File Offset: 0x0015C278
-	[NullableContext(2)]
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x06003FEB RID: 16363 RVA: 0x001669AB File Offset: 0x00164BAB
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
 		if (this.CameraName != null)
 		{
-			UiCameraAnimationController.Instance.PopCameraHandle((EUiViewName)this.CameraName, stackTopInfo, closeViewId, popOrDelete);
+			UiCameraController.Instance.PopCameraHandleByCloseView((EUiViewName)this.CameraName, nextViewName, closeViewId, operationType);
 			this.CameraName = null;
 		}
 	}
 
-	// Token: 0x06006C57 RID: 27735 RVA: 0x0015E0A4 File Offset: 0x0015C2A4
+	// Token: 0x06003FEC RID: 16364 RVA: 0x001669D8 File Offset: 0x00164BD8
 	private void OnClickRematchButton()
 	{
 		int levelId = GuessJokerGamePlayModel.Instance.GetLevelId();
@@ -166,7 +166,7 @@ public abstract class GuessJokerSettleViewBase : UiViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x06006C58 RID: 27736 RVA: 0x0015E0D4 File Offset: 0x0015C2D4
+	// Token: 0x06003FED RID: 16365 RVA: 0x00166A08 File Offset: 0x00164C08
 	private void OnClickConfirmButton()
 	{
 		int levelId = GuessJokerGamePlayModel.Instance.GetLevelId();
@@ -189,26 +189,26 @@ public abstract class GuessJokerSettleViewBase : UiViewBase, IUiCameraBehavior
 		}).Forget();
 	}
 
-	// Token: 0x06006C59 RID: 27737
+	// Token: 0x06003FEE RID: 16366
 	protected abstract string GetWinnerName();
 
-	// Token: 0x06006C5A RID: 27738
+	// Token: 0x06003FEF RID: 16367
 	protected abstract EPokerStateType GetNpcPokerState();
 
-	// Token: 0x06006C5B RID: 27739
+	// Token: 0x06003FF0 RID: 16368
 	protected abstract string GetEmojiTexturePath();
 
-	// Token: 0x06006C5C RID: 27740
+	// Token: 0x06003FF1 RID: 16369
 	protected abstract EUiViewName GetViewName();
 
-	// Token: 0x06006C5D RID: 27741
+	// Token: 0x06003FF2 RID: 16370
 	protected abstract string GetDescText();
 
-	// Token: 0x0400322C RID: 12844
+	// Token: 0x040032C5 RID: 12997
 	[Nullable(2)]
 	protected string CameraName;
 
-	// Token: 0x0400322D RID: 12845
+	// Token: 0x040032C6 RID: 12998
 	[Nullable(2)]
 	private GuessJokerDialogLogic DialogLogic;
 }

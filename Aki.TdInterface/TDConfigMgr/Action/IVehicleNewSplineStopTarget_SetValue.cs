@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002044 RID: 8260
+	// Token: 0x0200228D RID: 8845
 	public class IVehicleNewSplineStopTarget_SetValue
 	{
-		// Token: 0x04006D36 RID: 27958
+		// Token: 0x0400733F RID: 29503
 		public ENewSplineMoveTargetType Type;
 
-		// Token: 0x04006D37 RID: 27959
-		[Nullable(1)]
+		// Token: 0x04007340 RID: 29504
 		public ITargetVehicle TargetVehicle;
 	}
 }

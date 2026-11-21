@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045EC RID: 17900
+	// Token: 0x02003515 RID: 13589
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemMaterialManager : Singleton
 	{
-		// Token: 0x0602E29F RID: 189087 RVA: 0x00AAB8C8 File Offset: 0x00AA9AC8
+		// Token: 0x06022994 RID: 141716 RVA: 0x009D8064 File Offset: 0x009D6264
 		public void Initialize()
 		{
 			this.GlobalController = null;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Render
 			this.IsInit = true;
 		}
 
-		// Token: 0x0602E2A0 RID: 189088 RVA: 0x00AAB908 File Offset: 0x00AA9B08
+		// Token: 0x06022995 RID: 141717 RVA: 0x009D80A4 File Offset: 0x009D62A4
 		public void Tick(float delta)
 		{
 			RenderStats.Init();
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E2A1 RID: 189089 RVA: 0x00AABB3C File Offset: 0x00AA9D3C
+		// Token: 0x06022996 RID: 141718 RVA: 0x009D82D8 File Offset: 0x009D64D8
 		[NullableContext(2)]
 		public int AddMaterialData(AActor actor, ItemMaterialControllerActorData materialData)
 		{
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Render
 			return -1;
 		}
 
-		// Token: 0x0602E2A2 RID: 189090 RVA: 0x00AABC64 File Offset: 0x00AA9E64
+		// Token: 0x06022997 RID: 141719 RVA: 0x009D8400 File Offset: 0x009D6600
 		public bool DisableActorData(int handle)
 		{
 			if (this.AllActorControllerInfoMap == null)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Render
 			return false;
 		}
 
-		// Token: 0x0602E2A3 RID: 189091 RVA: 0x00AABC9C File Offset: 0x00AA9E9C
+		// Token: 0x06022998 RID: 141720 RVA: 0x009D8438 File Offset: 0x009D6638
 		public bool DisableAllActorData()
 		{
 			if (this.AllActorControllerInfoMap == null)
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E2A4 RID: 189092 RVA: 0x00AABD78 File Offset: 0x00AA9F78
+		// Token: 0x06022999 RID: 141721 RVA: 0x009D8514 File Offset: 0x009D6714
 		public int AddSimpleMaterialController([Nullable(2)] AActor actor, Dictionary<FName, float> scalarParameterValue, Dictionary<FName, FLinearColor> vectorParameterValue)
 		{
 			if (actor == null || !actor.IsValid())
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Render
 			return num3;
 		}
 
-		// Token: 0x0602E2A5 RID: 189093 RVA: 0x00AABE74 File Offset: 0x00AAA074
+		// Token: 0x0602299A RID: 141722 RVA: 0x009D8610 File Offset: 0x009D6810
 		public bool DisableSimpleMaterialController(int handle)
 		{
 			if (this.AllMaterialSimpleControllers == null)
@@ -258,8 +258,8 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x170075AE RID: 30126
-		// (get) Token: 0x0602E2A6 RID: 189094 RVA: 0x00AABE8E File Offset: 0x00AAA08E
+		// Token: 0x17004866 RID: 18534
+		// (get) Token: 0x0602299B RID: 141723 RVA: 0x009D862A File Offset: 0x009D682A
 		public static ItemMaterialManager Instance
 		{
 			get
@@ -273,12 +273,12 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E2A7 RID: 189095 RVA: 0x00AABEB1 File Offset: 0x00AAA0B1
+		// Token: 0x0602299C RID: 141724 RVA: 0x009D864D File Offset: 0x009D684D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E2A8 RID: 189096 RVA: 0x00AABEB3 File Offset: 0x00AAA0B3
+		// Token: 0x0602299D RID: 141725 RVA: 0x009D864F File Offset: 0x009D684F
 		public static void ResetStaticDefaultValue()
 		{
 			ItemMaterialManager instance = ItemMaterialManager._instance;
@@ -289,51 +289,51 @@ namespace CSharpScript.Game.Render
 			ItemMaterialManager._instance = null;
 		}
 
-		// Token: 0x0602E2A9 RID: 189097 RVA: 0x00AABECC File Offset: 0x00AAA0CC
+		// Token: 0x0602299E RID: 141726 RVA: 0x009D8668 File Offset: 0x009D6868
 		static ItemMaterialManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ItemMaterialManager.CreateStaticDefaultValue), new Action(ItemMaterialManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018C57 RID: 101463
+		// Token: 0x04013296 RID: 78486
 		[Nullable(2)]
 		protected ItemMaterialGlobalController GlobalController;
 
-		// Token: 0x04018C58 RID: 101464
+		// Token: 0x04013297 RID: 78487
 		protected List<ItemMaterialActorController> ActorControllers = new List<ItemMaterialActorController>();
 
-		// Token: 0x04018C59 RID: 101465
+		// Token: 0x04013298 RID: 78488
 		public Dictionary<int, ItemMaterialGlobalController> AllGlobalControllerInfoMap = new Dictionary<int, ItemMaterialGlobalController>();
 
-		// Token: 0x04018C5A RID: 101466
+		// Token: 0x04013299 RID: 78489
 		public Dictionary<int, ItemMaterialActorController> AllActorControllerInfoMap = new Dictionary<int, ItemMaterialActorController>();
 
-		// Token: 0x04018C5B RID: 101467
+		// Token: 0x0401329A RID: 78490
 		public Dictionary<int, ItemMaterialSimpleController> AllMaterialSimpleControllers = new Dictionary<int, ItemMaterialSimpleController>();
 
-		// Token: 0x04018C5C RID: 101468
+		// Token: 0x0401329B RID: 78491
 		public int IndexCountGlobal = -1;
 
-		// Token: 0x04018C5D RID: 101469
+		// Token: 0x0401329C RID: 78492
 		public int IndexCount = -1;
 
-		// Token: 0x04018C5E RID: 101470
+		// Token: 0x0401329D RID: 78493
 		public int IndexCountSimple = -1;
 
-		// Token: 0x04018C5F RID: 101471
+		// Token: 0x0401329E RID: 78494
 		public readonly int RefErrorCount = 5;
 
-		// Token: 0x04018C60 RID: 101472
+		// Token: 0x0401329F RID: 78495
 		[Nullable(2)]
 		public ItemMaterialDataMap DataMap;
 
-		// Token: 0x04018C61 RID: 101473
+		// Token: 0x040132A0 RID: 78496
 		public bool IsInit;
 
-		// Token: 0x04018C62 RID: 101474
+		// Token: 0x040132A1 RID: 78497
 		public List<int> WaitList = new List<int>();
 
-		// Token: 0x04018C63 RID: 101475
+		// Token: 0x040132A2 RID: 78498
 		[Nullable(2)]
 		private static ItemMaterialManager _instance;
 	}

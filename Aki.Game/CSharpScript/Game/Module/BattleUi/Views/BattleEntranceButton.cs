@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CD2 RID: 23762
+	// Token: 0x02004CB4 RID: 19636
 	public class BattleEntranceButton : BattleVisibleChildView
 	{
-		// Token: 0x0603C20D RID: 246285 RVA: 0x00E6473C File Offset: 0x00E6293C
+		// Token: 0x06031163 RID: 201059 RVA: 0x00DB4D18 File Offset: 0x00DB2F18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603C20E RID: 246286 RVA: 0x00E647E4 File Offset: 0x00E629E4
+		// Token: 0x06031164 RID: 201060 RVA: 0x00DB4DC0 File Offset: 0x00DB2FC0
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C20F RID: 246287 RVA: 0x00E648A0 File Offset: 0x00E62AA0
+		// Token: 0x06031165 RID: 201061 RVA: 0x00DB4E7C File Offset: 0x00DB307C
 		public override void Reset()
 		{
 			if (this.RedDotName != null)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C210 RID: 246288 RVA: 0x00E648E0 File Offset: 0x00E62AE0
+		// Token: 0x06031166 RID: 201062 RVA: 0x00DB4EBC File Offset: 0x00DB30BC
 		public void SetFunctionOpen(EFunctionType functionType, bool isOpen)
 		{
 			EFunctionType? functionType2 = this.FunctionType;
@@ -86,14 +86,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetOtherHide(getCurrentOtherHideCall != null && getCurrentOtherHideCall());
 		}
 
-		// Token: 0x0603C211 RID: 246289 RVA: 0x00E64929 File Offset: 0x00E62B29
+		// Token: 0x06031167 RID: 201063 RVA: 0x00DB4F05 File Offset: 0x00DB3105
 		[NullableContext(1)]
 		public void SetGetOtherHideCallCall(Func<bool> callBack)
 		{
 			this.GetCurrentOtherHideCall = callBack;
 		}
 
-		// Token: 0x0603C212 RID: 246290 RVA: 0x00E64932 File Offset: 0x00E62B32
+		// Token: 0x06031168 RID: 201064 RVA: 0x00DB4F0E File Offset: 0x00DB310E
 		public virtual void SetGamepadHide(bool isGamepad)
 		{
 			if (!this.HideInGamepad.GetValueOrDefault())
@@ -103,26 +103,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetVisible(2, !isGamepad);
 		}
 
-		// Token: 0x0603C213 RID: 246291 RVA: 0x00E6494D File Offset: 0x00E62B4D
+		// Token: 0x06031169 RID: 201065 RVA: 0x00DB4F29 File Offset: 0x00DB3129
 		public void SetOtherHide(bool isHide)
 		{
 			base.SetVisible(4, !isHide);
 		}
 
-		// Token: 0x0603C214 RID: 246292 RVA: 0x00E6495A File Offset: 0x00E62B5A
+		// Token: 0x0603116A RID: 201066 RVA: 0x00DB4F36 File Offset: 0x00DB3136
 		public void SetGmHide(bool isHide)
 		{
 			base.SetVisible(3, !isHide);
 		}
 
-		// Token: 0x0603C215 RID: 246293 RVA: 0x00E64967 File Offset: 0x00E62B67
+		// Token: 0x0603116B RID: 201067 RVA: 0x00DB4F43 File Offset: 0x00DB3143
 		[NullableContext(1)]
 		public void BindOnClicked(Action onClicked)
 		{
 			this.OnClicked = onClicked;
 		}
 
-		// Token: 0x0603C216 RID: 246294 RVA: 0x00E64970 File Offset: 0x00E62B70
+		// Token: 0x0603116C RID: 201068 RVA: 0x00DB4F4C File Offset: 0x00DB314C
 		protected void OnClickedOnlineButton()
 		{
 			Action onClicked = this.OnClicked;
@@ -133,47 +133,47 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onClicked();
 		}
 
-		// Token: 0x0401F58F RID: 128399
+		// Token: 0x0401A048 RID: 106568
 		[Nullable(2)]
 		private Action OnClicked;
 
-		// Token: 0x0401F590 RID: 128400
+		// Token: 0x0401A049 RID: 106569
 		private ERedDotName? RedDotName;
 
-		// Token: 0x0401F591 RID: 128401
+		// Token: 0x0401A04A RID: 106570
 		protected EFunctionType? FunctionType;
 
-		// Token: 0x0401F592 RID: 128402
+		// Token: 0x0401A04B RID: 106571
 		protected bool? HideInGamepad;
 
-		// Token: 0x0401F593 RID: 128403
+		// Token: 0x0401A04C RID: 106572
 		protected bool? HideByRoleConfig;
 
-		// Token: 0x0401F594 RID: 128404
+		// Token: 0x0401A04D RID: 106573
 		[Nullable(2)]
 		private Func<bool> GetCurrentOtherHideCall;
 
-		// Token: 0x0200BF21 RID: 48929
+		// Token: 0x0200A927 RID: 43303
 		private enum EChildType
 		{
-			// Token: 0x04039A71 RID: 236145
+			// Token: 0x04034433 RID: 214067
 			Button,
-			// Token: 0x04039A72 RID: 236146
+			// Token: 0x04034434 RID: 214068
 			RedDotItem
 		}
 
-		// Token: 0x0200BF22 RID: 48930
+		// Token: 0x0200A928 RID: 43304
 		private enum EVisibleReason
 		{
-			// Token: 0x04039A74 RID: 236148
+			// Token: 0x04034436 RID: 214070
 			Default,
-			// Token: 0x04039A75 RID: 236149
+			// Token: 0x04034437 RID: 214071
 			FunctionOpen,
-			// Token: 0x04039A76 RID: 236150
+			// Token: 0x04034438 RID: 214072
 			Gamepad,
-			// Token: 0x04039A77 RID: 236151
+			// Token: 0x04034439 RID: 214073
 			Gm,
-			// Token: 0x04039A78 RID: 236152
+			// Token: 0x0403443A RID: 214074
 			Other
 		}
 	}

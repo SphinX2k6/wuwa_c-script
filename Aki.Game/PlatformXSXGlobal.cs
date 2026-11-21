@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000E6A RID: 3690
+// Token: 0x0200031F RID: 799
 [NullableContext(1)]
 [Nullable(0)]
 public class PlatformXSXGlobal : PlatformSdkBase
 {
-	// Token: 0x0600596C RID: 22892 RVA: 0x001045D4 File Offset: 0x001027D4
+	// Token: 0x06002D03 RID: 11523 RVA: 0x0010C294 File Offset: 0x0010A494
 	protected override void OnInit()
 	{
 		this.CurrentDid = UKuroSDKManager.GetBasicInfo().DeviceId;
@@ -25,7 +25,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		FCrashSightProxy.SetCustomData("SdkChannelId", this.GetChannelId());
 	}
 
-	// Token: 0x0600596D RID: 22893 RVA: 0x00104608 File Offset: 0x00102808
+	// Token: 0x06002D04 RID: 11524 RVA: 0x0010C2C8 File Offset: 0x0010A4C8
 	protected override void BindSpecialEvent()
 	{
 		UKuroSDKManager.Get().AnnounceInitDelegate.Clear();
@@ -52,7 +52,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		this.CacheBlockList();
 	}
 
-	// Token: 0x0600596E RID: 22894 RVA: 0x00104754 File Offset: 0x00102954
+	// Token: 0x06002D05 RID: 11525 RVA: 0x0010C414 File Offset: 0x0010A614
 	public void AnnounceRedPointCallBack(string result)
 	{
 		XSXSdkRedPointContentSt xsxsdkRedPointContentSt = Json.Parse<XSXSdkRedPointContentSt>(Json.Parse<XSXSdkRedPointSt>(result, null).data, null);
@@ -60,13 +60,13 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkPostWebViewRedPointRefresh);
 	}
 
-	// Token: 0x0600596F RID: 22895 RVA: 0x00104794 File Offset: 0x00102994
+	// Token: 0x06002D06 RID: 11526 RVA: 0x0010C454 File Offset: 0x0010A654
 	public void OnLoginCallBack(string result)
 	{
 		this.QueryExternalAchievement();
 	}
 
-	// Token: 0x06005970 RID: 22896 RVA: 0x0010479C File Offset: 0x0010299C
+	// Token: 0x06002D07 RID: 11527 RVA: 0x0010C45C File Offset: 0x0010A65C
 	public void CustomerServiceResultCallBack(string result)
 	{
 		XSXSdkCustomerServiceSt xsxsdkCustomerServiceSt = Json.Parse<XSXSdkCustomerServiceSt>(result, null);
@@ -78,7 +78,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkCustomerRedPointRefresh);
 	}
 
-	// Token: 0x06005971 RID: 22897 RVA: 0x001047E0 File Offset: 0x001029E0
+	// Token: 0x06002D08 RID: 11528 RVA: 0x0010C4A0 File Offset: 0x0010A6A0
 	public override void OpenWebView(string title, string url, bool isLandscape, bool transparent, bool webAccelerated, string identifier)
 	{
 		bool titlebar = false;
@@ -109,7 +109,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroSDKManager.OpenWebView(title, url, isLandscape, transparent, webAccelerated, identifier, text);
 	}
 
-	// Token: 0x06005972 RID: 22898 RVA: 0x0010488C File Offset: 0x00102A8C
+	// Token: 0x06002D09 RID: 11529 RVA: 0x0010C54C File Offset: 0x0010A74C
 	[return: Nullable(2)]
 	public override string GetSdkOpenUrlWndInfo(string title, string url)
 	{
@@ -131,17 +131,17 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return text;
 	}
 
-	// Token: 0x06005973 RID: 22899 RVA: 0x001048FC File Offset: 0x00102AFC
+	// Token: 0x06002D0A RID: 11530 RVA: 0x0010C5BC File Offset: 0x0010A7BC
 	public override void SdkExit()
 	{
 		KuroApplication.ExitWithReason(false, "SdkExit");
 	}
 
-	// Token: 0x06005974 RID: 22900 RVA: 0x0010490C File Offset: 0x00102B0C
+	// Token: 0x06002D0B RID: 11531 RVA: 0x0010C5CC File Offset: 0x0010A7CC
 	public override void InitializePostWebView()
 	{
 		string currentSelectServerId = this.GetCurrentSelectServerId();
-		string text = Json.Stringify<InitializePostWebViewParam>(new InitializePostWebViewParam
+		string text = Json.Stringify(new InitializePostWebViewParam
 		{
 			language = LanguageSystem.Instance.PackageLanguage,
 			cdn = new string[]
@@ -160,7 +160,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroSDKManager.KuroSDKEvent(ukuroSDKEventType, text);
 	}
 
-	// Token: 0x06005975 RID: 22901 RVA: 0x001049AC File Offset: 0x00102BAC
+	// Token: 0x06002D0C RID: 11532 RVA: 0x0010C66C File Offset: 0x0010A86C
 	public override void SdkPay(ISDKPayment paymentInfo)
 	{
 		if (KuroSdkController.Instance.CanUseSdk())
@@ -172,7 +172,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x06005976 RID: 22902 RVA: 0x001049DE File Offset: 0x00102BDE
+	// Token: 0x06002D0D RID: 11533 RVA: 0x0010C69E File Offset: 0x0010A89E
 	private string GetPaymentInfo(ISDKPayment payment, ISDKPayRole roleInfo)
 	{
 		return JsonSerializer.Serialize<PayInfoXSXGlobal>(new PayInfoXSXGlobal
@@ -181,7 +181,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}, KuroSdkJsonOptions.Unescaped);
 	}
 
-	// Token: 0x06005977 RID: 22903 RVA: 0x00104A00 File Offset: 0x00102C00
+	// Token: 0x06002D0E RID: 11534 RVA: 0x0010C6C0 File Offset: 0x0010A8C0
 	public override void OpenCustomerService(EKuroSdkOpenCustomerServerType fromType)
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -194,7 +194,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}, KuroSdkJsonOptions.Unescaped));
 	}
 
-	// Token: 0x06005978 RID: 22904 RVA: 0x00104A54 File Offset: 0x00102C54
+	// Token: 0x06002D0F RID: 11535 RVA: 0x0010C714 File Offset: 0x0010A914
 	public override void SdkCreateRole()
 	{
 		Log.Instance.Info(ELogModule.KuroSdk, ELogAuthor.YZY, "上报创建新角色", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -206,7 +206,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x06005979 RID: 22905 RVA: 0x00104A9C File Offset: 0x00102C9C
+	// Token: 0x06002D10 RID: 11536 RVA: 0x0010C75C File Offset: 0x0010A95C
 	public override void SdkSelectRole()
 	{
 		Log.Instance.Info(ELogModule.KuroSdk, ELogAuthor.YZY, "上报选择角色", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -218,7 +218,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x0600597A RID: 22906 RVA: 0x00104AE4 File Offset: 0x00102CE4
+	// Token: 0x06002D11 RID: 11537 RVA: 0x0010C7A4 File Offset: 0x0010A9A4
 	public override void SdkLevelUpRole()
 	{
 		Log.Instance.Info(ELogModule.KuroSdk, ELogAuthor.YZY, "上报角色升级", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -230,7 +230,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x0600597B RID: 22907 RVA: 0x00104B2C File Offset: 0x00102D2C
+	// Token: 0x06002D12 RID: 11538 RVA: 0x0010C7EC File Offset: 0x0010A9EC
 	private string GetCreateRoleInfo()
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -254,7 +254,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return JsonSerializer.Serialize<RoleInfoWindows>(roleInfoWindows, options);
 	}
 
-	// Token: 0x0600597C RID: 22908 RVA: 0x00104C1C File Offset: 0x00102E1C
+	// Token: 0x06002D13 RID: 11539 RVA: 0x0010C8DC File Offset: 0x0010AADC
 	private string GetRoleInfo()
 	{
 		FunctionModel instance = FunctionModel.Instance;
@@ -280,13 +280,13 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return JsonSerializer.Serialize<RoleInfoWindows>(roleInfoWindows, options);
 	}
 
-	// Token: 0x0600597D RID: 22909 RVA: 0x00104D1C File Offset: 0x00102F1C
+	// Token: 0x06002D14 RID: 11540 RVA: 0x0010C9DC File Offset: 0x0010ABDC
 	public override void OpenUserCenter()
 	{
 		UKuroSDKManager.BindAccount();
 	}
 
-	// Token: 0x0600597E RID: 22910 RVA: 0x00104D24 File Offset: 0x00102F24
+	// Token: 0x06002D15 RID: 11541 RVA: 0x0010C9E4 File Offset: 0x0010ABE4
 	public override void QueryProduct(string[] productList, string channelId)
 	{
 		string text = "";
@@ -299,14 +299,14 @@ public class PlatformXSXGlobal : PlatformSdkBase
 				text += ",";
 			}
 		}
-		UKuroSDKManager.QueryProductInfo(Json.Stringify<QueryProductInfoParamWindows>(new QueryProductInfoParamWindows
+		UKuroSDKManager.QueryProductInfo(Json.Stringify(new QueryProductInfoParamWindows
 		{
 			goodsIds = text,
 			payChannel = channelId
 		}, null) ?? "");
 	}
 
-	// Token: 0x0600597F RID: 22911 RVA: 0x00104D8C File Offset: 0x00102F8C
+	// Token: 0x06002D16 RID: 11542 RVA: 0x0010CA4C File Offset: 0x0010AC4C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -334,7 +334,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06005980 RID: 22912 RVA: 0x00104E40 File Offset: 0x00103040
+	// Token: 0x06002D17 RID: 11543 RVA: 0x0010CB00 File Offset: 0x0010AD00
 	public override void SetFont()
 	{
 		SetFontParamWindows setFontParamWindows = new SetFontParamWindows();
@@ -365,37 +365,37 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroSDKManager.SetFont(text2);
 	}
 
-	// Token: 0x06005981 RID: 22913 RVA: 0x00104EF2 File Offset: 0x001030F2
+	// Token: 0x06002D18 RID: 11544 RVA: 0x0010CBB2 File Offset: 0x0010ADB2
 	public override string GetChannelId()
 	{
 		return UKuroSDKManager.GetSdkParams("channel_id");
 	}
 
-	// Token: 0x06005982 RID: 22914 RVA: 0x00104EFE File Offset: 0x001030FE
+	// Token: 0x06002D19 RID: 11545 RVA: 0x0010CBBE File Offset: 0x0010ADBE
 	public override string GetChannelName()
 	{
 		return UKuroSDKManager.GetSdkParams("channel_name");
 	}
 
-	// Token: 0x06005983 RID: 22915 RVA: 0x00104F0A File Offset: 0x0010310A
+	// Token: 0x06002D1A RID: 11546 RVA: 0x0010CBCA File Offset: 0x0010ADCA
 	public override string GetGameId()
 	{
 		return UKuroSDKManager.GetSdkParams("project_id");
 	}
 
-	// Token: 0x06005984 RID: 22916 RVA: 0x00104F16 File Offset: 0x00103116
+	// Token: 0x06002D1B RID: 11547 RVA: 0x0010CBD6 File Offset: 0x0010ADD6
 	public override string GetDid()
 	{
 		return UKuroSDKManager.GetSdkParams("did");
 	}
 
-	// Token: 0x06005985 RID: 22917 RVA: 0x00104F22 File Offset: 0x00103122
+	// Token: 0x06002D1C RID: 11548 RVA: 0x0010CBE2 File Offset: 0x0010ADE2
 	public override string GetAccessToken()
 	{
 		return UKuroSDKManager.GetSdkParams("token");
 	}
 
-	// Token: 0x06005986 RID: 22918 RVA: 0x00104F30 File Offset: 0x00103130
+	// Token: 0x06002D1D RID: 11549 RVA: 0x0010CBF0 File Offset: 0x0010ADF0
 	public override void SdkOpenUrlWnd(string title, string url, bool isLandscape, bool transparent, bool webAccelerated = true)
 	{
 		if (this.LastOpenTime != 0.0 && Time.Instance.Now - this.LastOpenTime <= 5000.0)
@@ -407,13 +407,13 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		this.OpenWebView(title, url, isLandscape, transparent, webAccelerated, "");
 	}
 
-	// Token: 0x06005987 RID: 22919 RVA: 0x00104FA1 File Offset: 0x001031A1
+	// Token: 0x06002D1E RID: 11550 RVA: 0x0010CC61 File Offset: 0x0010AE61
 	public override bool GetProtocolState()
 	{
 		return true;
 	}
 
-	// Token: 0x06005988 RID: 22920 RVA: 0x00104FA4 File Offset: 0x001031A4
+	// Token: 0x06002D1F RID: 11551 RVA: 0x0010CC64 File Offset: 0x0010AE64
 	protected override void OnPaymentCallBack(FPaymentStruct payment, string strResult, Action<bool, string> paymentFunction)
 	{
 		XSXPaymentSt xsxpaymentSt = Json.Parse<XSXPaymentSt>(strResult, null);
@@ -426,7 +426,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		paymentFunction(arg, strResult);
 	}
 
-	// Token: 0x06005989 RID: 22921 RVA: 0x00104FF4 File Offset: 0x001031F4
+	// Token: 0x06002D20 RID: 11552 RVA: 0x0010CCB4 File Offset: 0x0010AEB4
 	private long GetCurrentUserHandle()
 	{
 		if (this.CurrentUserHandle != 0L)
@@ -439,25 +439,25 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return num;
 	}
 
-	// Token: 0x0600598A RID: 22922 RVA: 0x00105024 File Offset: 0x00103224
+	// Token: 0x06002D21 RID: 11553 RVA: 0x0010CCE4 File Offset: 0x0010AEE4
 	public override string GetThirdUserId()
 	{
 		return UKuroStaticXSXLibrary.GetXboxUserId(this.GetCurrentUserHandle()).UserId.ToString();
 	}
 
-	// Token: 0x0600598B RID: 22923 RVA: 0x00105049 File Offset: 0x00103249
+	// Token: 0x06002D22 RID: 11554 RVA: 0x0010CD09 File Offset: 0x0010AF09
 	public override string GetOnlineId()
 	{
 		return UKuroStaticXSXLibrary.GetXboxGamertagForDisplay(this.GetCurrentUserHandle(), EXboxGamertagComponent.Classic).Gamertag;
 	}
 
-	// Token: 0x0600598C RID: 22924 RVA: 0x0010505C File Offset: 0x0010325C
+	// Token: 0x06002D23 RID: 11555 RVA: 0x0010CD1C File Offset: 0x0010AF1C
 	public override void OpenProfileCard(string xuid)
 	{
 		UKuroStaticXSXLibrary.ShowXboxPlayerProfileCard(this.GetCurrentUserHandle(), long.Parse(xuid));
 	}
 
-	// Token: 0x0600598D RID: 22925 RVA: 0x00105070 File Offset: 0x00103270
+	// Token: 0x06002D24 RID: 11556 RVA: 0x0010CD30 File Offset: 0x0010AF30
 	private void CacheBlockList()
 	{
 		Action<FXboxAvoidListResult> callback = null;
@@ -481,7 +481,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroStaticXSXLibrary.GetXboxAvoidListAsync(this.GetCurrentUserHandle(), callback2);
 	}
 
-	// Token: 0x0600598E RID: 22926 RVA: 0x001050B9 File Offset: 0x001032B9
+	// Token: 0x06002D25 RID: 11557 RVA: 0x0010CD79 File Offset: 0x0010AF79
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -493,49 +493,49 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return UniTask.FromResult<Dictionary<string, bool>>(this.BlockMap);
 	}
 
-	// Token: 0x0600598F RID: 22927 RVA: 0x001050C6 File Offset: 0x001032C6
+	// Token: 0x06002D26 RID: 11558 RVA: 0x0010CD86 File Offset: 0x0010AF86
 	public override bool NeedCheckPlayOnly()
 	{
 		return true;
 	}
 
-	// Token: 0x06005990 RID: 22928 RVA: 0x001050C9 File Offset: 0x001032C9
+	// Token: 0x06002D27 RID: 11559 RVA: 0x0010CD89 File Offset: 0x0010AF89
 	public override bool GetSdkFriendOnlyState()
 	{
 		return LauncherStorageLib.Instance.GetGlobal<bool>(ELauncherStorageGlobalKey.PlayStationFriendOnly, false);
 	}
 
-	// Token: 0x06005991 RID: 22929 RVA: 0x001050D7 File Offset: 0x001032D7
+	// Token: 0x06002D28 RID: 11560 RVA: 0x0010CD97 File Offset: 0x0010AF97
 	public override void SaveSdkFriendOnlyState(bool state)
 	{
 		LauncherStorageLib.Instance.SetGlobal<bool>(ELauncherStorageGlobalKey.PlayStationFriendOnly, state);
 	}
 
-	// Token: 0x06005992 RID: 22930 RVA: 0x001050E6 File Offset: 0x001032E6
+	// Token: 0x06002D29 RID: 11561 RVA: 0x0010CDA6 File Offset: 0x0010AFA6
 	public override bool SupportSwitchFriendShowType()
 	{
 		return true;
 	}
 
-	// Token: 0x06005993 RID: 22931 RVA: 0x001050E9 File Offset: 0x001032E9
+	// Token: 0x06002D2A RID: 11562 RVA: 0x0010CDA9 File Offset: 0x0010AFA9
 	public override bool NeedShowThirdPartyId()
 	{
 		return true;
 	}
 
-	// Token: 0x06005994 RID: 22932 RVA: 0x001050EC File Offset: 0x001032EC
+	// Token: 0x06002D2B RID: 11563 RVA: 0x0010CDAC File Offset: 0x0010AFAC
 	public override string CreatePlayerSession(string id)
 	{
 		return id;
 	}
 
-	// Token: 0x06005995 RID: 22933 RVA: 0x001050EF File Offset: 0x001032EF
+	// Token: 0x06002D2C RID: 11564 RVA: 0x0010CDAF File Offset: 0x0010AFAF
 	public override string GetSessionId(string playerSession)
 	{
 		return playerSession;
 	}
 
-	// Token: 0x06005996 RID: 22934 RVA: 0x001050F4 File Offset: 0x001032F4
+	// Token: 0x06002D2D RID: 11565 RVA: 0x0010CDB4 File Offset: 0x0010AFB4
 	public unsafe override void SetMultiPlayerActivity(int currentPlayerCount, int maxPlayerCount, string playerSession, EXboxMultiplayerActivityJoinRestriction restriction)
 	{
 		string connectionString = "";
@@ -571,7 +571,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 	}
 
-	// Token: 0x06005997 RID: 22935 RVA: 0x001051FC File Offset: 0x001033FC
+	// Token: 0x06002D2E RID: 11566 RVA: 0x0010CEBC File Offset: 0x0010B0BC
 	public void GetMultiPlayerActivityInfo()
 	{
 		long currentUserHandle = this.GetCurrentUserHandle();
@@ -617,7 +617,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		instance5.Info(module5, author5, message5, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple5));
 	}
 
-	// Token: 0x06005998 RID: 22936 RVA: 0x00105320 File Offset: 0x00103520
+	// Token: 0x06002D2F RID: 11567 RVA: 0x0010CFE0 File Offset: 0x0010B1E0
 	public override void LeaveMultiPlayerActivity()
 	{
 		Log.Instance.Info(ELogModule.KuroSdk, ELogAuthor.YZY, "LeaveMultiPlayerActivity", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -631,7 +631,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroStaticXSXLibrary.DeleteXboxMultiplayerActivityAsync(this.GetCurrentUserHandle(), callback);
 	}
 
-	// Token: 0x06005999 RID: 22937 RVA: 0x00105388 File Offset: 0x00103588
+	// Token: 0x06002D30 RID: 11568 RVA: 0x0010D048 File Offset: 0x0010B248
 	private void OnDeleteMultiPlayerActivityAsyncComplete(bool bSuccess)
 	{
 		Log instance = Log.Instance;
@@ -642,7 +642,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600599A RID: 22938 RVA: 0x001053C4 File Offset: 0x001035C4
+	// Token: 0x06002D31 RID: 11569 RVA: 0x0010D084 File Offset: 0x0010B284
 	public override bool CheckPrivilege(ESdkPrivilege privilege)
 	{
 		bool flag;
@@ -681,7 +681,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return true;
 	}
 
-	// Token: 0x0600599B RID: 22939 RVA: 0x0010543C File Offset: 0x0010363C
+	// Token: 0x06002D32 RID: 11570 RVA: 0x0010D0FC File Offset: 0x0010B2FC
 	public override bool ResolvePrivilege(ESdkPrivilege privilege)
 	{
 		if (privilege == ESdkPrivilege.Invalid)
@@ -718,7 +718,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return flag2;
 	}
 
-	// Token: 0x0600599C RID: 22940 RVA: 0x001054A4 File Offset: 0x001036A4
+	// Token: 0x06002D33 RID: 11571 RVA: 0x0010D164 File Offset: 0x0010B364
 	public override void JoinSessionBindFunction(Action<string, string> callback)
 	{
 		this.JoinSessionCallback = callback;
@@ -731,13 +731,13 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x0600599D RID: 22941 RVA: 0x001054EC File Offset: 0x001036EC
+	// Token: 0x06002D34 RID: 11572 RVA: 0x0010D1AC File Offset: 0x0010B3AC
 	public override bool SupportSwitchFriendSearchByThirdPartyId()
 	{
 		return true;
 	}
 
-	// Token: 0x0600599E RID: 22942 RVA: 0x001054F0 File Offset: 0x001036F0
+	// Token: 0x06002D35 RID: 11573 RVA: 0x0010D1B0 File Offset: 0x0010B3B0
 	public override void OnClear()
 	{
 		if (this.XboxGameInviteDelegate != null)
@@ -759,7 +759,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x0600599F RID: 22943 RVA: 0x00105568 File Offset: 0x00103768
+	// Token: 0x06002D36 RID: 11574 RVA: 0x0010D228 File Offset: 0x0010B428
 	private void OnXboxGameInvite(FXboxInviteInfo info)
 	{
 		Log instance = Log.Instance;
@@ -783,7 +783,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x060059A0 RID: 22944 RVA: 0x001055F4 File Offset: 0x001037F4
+	// Token: 0x06002D37 RID: 11575 RVA: 0x0010D2B4 File Offset: 0x0010B4B4
 	public new void QueryExternalAchievement()
 	{
 		long currentUserHandle = this.GetCurrentUserHandle();
@@ -791,7 +791,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroStaticXSXLibrary.GetXboxAchievementsAsync(currentUserHandle, long.Parse(thirdUserId), EXboxAchievementType.All, false, EXboxAchievementOrderBy.DefaultOrder, 0, 0);
 	}
 
-	// Token: 0x060059A1 RID: 22945 RVA: 0x00105620 File Offset: 0x00103820
+	// Token: 0x06002D38 RID: 11576 RVA: 0x0010D2E0 File Offset: 0x0010B4E0
 	private void OnQueryExternalAchievement(bool bSuccess, [Nullable(new byte[]
 	{
 		2,
@@ -812,7 +812,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x060059A2 RID: 22946 RVA: 0x0010568C File Offset: 0x0010388C
+	// Token: 0x06002D39 RID: 11577 RVA: 0x0010D34C File Offset: 0x0010B54C
 	public override void UnlockSdkTrophy(string id)
 	{
 		if (!this.AchievementMap.ContainsKey(id))
@@ -828,7 +828,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroStaticXSXLibrary.UpdateXboxAchievementAsync(currentUserHandle, long.Parse(thirdUserId), id, 100);
 	}
 
-	// Token: 0x060059A3 RID: 22947 RVA: 0x001056DC File Offset: 0x001038DC
+	// Token: 0x06002D3A RID: 11578 RVA: 0x0010D39C File Offset: 0x0010B59C
 	public override void UpdateRecentPlayer(string[] ids)
 	{
 		long userHandle = this.GetCurrentUserHandle();
@@ -863,13 +863,13 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroStaticXSXLibrary.UpdateXboxMultiplayerActivityRecentPlayersAsync(userHandle, tarray, callback);
 	}
 
-	// Token: 0x060059A4 RID: 22948 RVA: 0x00105788 File Offset: 0x00103988
+	// Token: 0x06002D3B RID: 11579 RVA: 0x0010D448 File Offset: 0x0010B648
 	public override bool CheckIfSingleServerAfterSelect()
 	{
-		return Info.Instance.IsBuildShipping;
+		return true;
 	}
 
-	// Token: 0x060059A5 RID: 22949 RVA: 0x0010579C File Offset: 0x0010399C
+	// Token: 0x06002D3C RID: 11580 RVA: 0x0010D44C File Offset: 0x0010B64C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -885,7 +885,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return <GetOnlyRegionInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060059A6 RID: 22950 RVA: 0x001057E0 File Offset: 0x001039E0
+	// Token: 0x06002D3D RID: 11581 RVA: 0x0010D490 File Offset: 0x0010B690
 	[return: Nullable(0)]
 	public override UniTask<bool> SaveSingleServerRegion(int loginType, string region, string userId, string userName, string token)
 	{
@@ -901,7 +901,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return <SaveSingleServerRegion>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060059A7 RID: 22951 RVA: 0x00105848 File Offset: 0x00103A48
+	// Token: 0x06002D3E RID: 11582 RVA: 0x0010D4F8 File Offset: 0x0010B6F8
 	private void OnCheckPermission(FXboxPermissionCheckResult result)
 	{
 		ESdkPermission esdkPermission = this.ConvertPermissionToESdkPermission(result.Permission);
@@ -926,7 +926,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x060059A8 RID: 22952 RVA: 0x00105920 File Offset: 0x00103B20
+	// Token: 0x06002D3F RID: 11583 RVA: 0x0010D5D0 File Offset: 0x0010B7D0
 	public override void CheckPermission(string xuid, ESdkPermission permission, Action<bool> callback)
 	{
 		if (xuid == "")
@@ -963,7 +963,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroStaticXSXLibrary.CheckXboxPermissionAsync(this.GetCurrentUserHandle(), long.Parse(xuid), permission2, this.CheckPermissionDelegate);
 	}
 
-	// Token: 0x060059A9 RID: 22953 RVA: 0x00105A18 File Offset: 0x00103C18
+	// Token: 0x06002D40 RID: 11584 RVA: 0x0010D6C8 File Offset: 0x0010B8C8
 	private EXboxPermission ConvertPermission(ESdkPermission permission)
 	{
 		if (permission == ESdkPermission.CommunicateUsingText)
@@ -981,7 +981,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return EXboxPermission.CommunicateUsingText;
 	}
 
-	// Token: 0x060059AA RID: 22954 RVA: 0x00105A2C File Offset: 0x00103C2C
+	// Token: 0x06002D41 RID: 11585 RVA: 0x0010D6DC File Offset: 0x0010B8DC
 	private ESdkPermission ConvertPermissionToESdkPermission(EXboxPermission permission)
 	{
 		if (permission == EXboxPermission.CommunicateUsingText)
@@ -999,7 +999,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return ESdkPermission.CommunicateUsingText;
 	}
 
-	// Token: 0x060059AB RID: 22955 RVA: 0x00105A40 File Offset: 0x00103C40
+	// Token: 0x06002D42 RID: 11586 RVA: 0x0010D6F0 File Offset: 0x0010B8F0
 	private void InitXboxToken()
 	{
 		this.QueryXboxToken(delegate(string token)
@@ -1008,7 +1008,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		});
 	}
 
-	// Token: 0x060059AC RID: 22956 RVA: 0x00105A54 File Offset: 0x00103C54
+	// Token: 0x06002D43 RID: 11587 RVA: 0x0010D704 File Offset: 0x0010B904
 	private void QueryXboxToken(Action<string> finishTokenCallBack)
 	{
 		long currentUserHandle = this.GetCurrentUserHandle();
@@ -1028,13 +1028,13 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		UKuroStaticXSXLibrary.GetXboxTokenAndSignatureAsync(currentUserHandle, url, callback);
 	}
 
-	// Token: 0x060059AD RID: 22957 RVA: 0x00105AAD File Offset: 0x00103CAD
+	// Token: 0x06002D44 RID: 11588 RVA: 0x0010D75D File Offset: 0x0010B95D
 	public override string GetExternalToken()
 	{
 		return this.XboxToken;
 	}
 
-	// Token: 0x060059AE RID: 22958 RVA: 0x00105AB8 File Offset: 0x00103CB8
+	// Token: 0x06002D45 RID: 11589 RVA: 0x0010D768 File Offset: 0x0010B968
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1049,45 +1049,45 @@ public class PlatformXSXGlobal : PlatformSdkBase
 		return <GetExternalCollectionId>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040028F9 RID: 10489
+	// Token: 0x04002994 RID: 10644
 	private const int WEBVIEWCD = 5000;
 
-	// Token: 0x040028FA RID: 10490
+	// Token: 0x04002995 RID: 10645
 	private long CurrentUserHandle;
 
-	// Token: 0x040028FB RID: 10491
+	// Token: 0x04002996 RID: 10646
 	[Nullable(2)]
 	private FOnXboxAchievementsReceived QueryExternalAchievementDelegate;
 
-	// Token: 0x040028FC RID: 10492
+	// Token: 0x04002997 RID: 10647
 	[Nullable(2)]
 	private FOnXboxInviteReceivedDynamic XboxGameInviteDelegate;
 
-	// Token: 0x040028FD RID: 10493
+	// Token: 0x04002998 RID: 10648
 	[Nullable(2)]
 	private FOnXboxPermissionCheckResult CheckPermissionDelegate;
 
-	// Token: 0x040028FE RID: 10494
+	// Token: 0x04002999 RID: 10649
 	private readonly Dictionary<int, bool> PrivilegeCacheMap = new Dictionary<int, bool>();
 
-	// Token: 0x040028FF RID: 10495
+	// Token: 0x0400299A RID: 10650
 	private readonly Dictionary<string, bool> BlockMap = new Dictionary<string, bool>();
 
-	// Token: 0x04002900 RID: 10496
+	// Token: 0x0400299B RID: 10651
 	private string XboxToken = "";
 
-	// Token: 0x04002901 RID: 10497
+	// Token: 0x0400299C RID: 10652
 	private readonly Dictionary<string, List<XboxPermissionCheckResultSt>> UserPermissionMap = new Dictionary<string, List<XboxPermissionCheckResultSt>>();
 
-	// Token: 0x04002902 RID: 10498
+	// Token: 0x0400299D RID: 10653
 	private readonly Dictionary<string, Action<bool>> PermissionCallBackMap = new Dictionary<string, Action<bool>>();
 
-	// Token: 0x04002903 RID: 10499
+	// Token: 0x0400299E RID: 10654
 	public readonly Action<string> OnAnnounceInitCallBack = delegate(string result)
 	{
 	};
 
-	// Token: 0x04002904 RID: 10500
+	// Token: 0x0400299F RID: 10655
 	[Nullable(new byte[]
 	{
 		2,
@@ -1096,7 +1096,7 @@ public class PlatformXSXGlobal : PlatformSdkBase
 	})]
 	private Action<string, string> JoinSessionCallback;
 
-	// Token: 0x04002905 RID: 10501
+	// Token: 0x040029A0 RID: 10656
 	[Nullable(2)]
 	private XboxPendingJoinSessionInfo PendingJoinSessionInfo;
 }

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class FinalizationRegistry<TValue, [Nullable(2)] TParam> where TValue : class
 {
-	// Token: 0x06000216 RID: 534 RVA: 0x0000C910 File Offset: 0x0000AB10
+	// Token: 0x06000217 RID: 535 RVA: 0x0000C5F4 File Offset: 0x0000A7F4
 	[NullableContext(2)]
 	public bool Register([Nullable(1)] TValue target, TParam param, string reason, Action<TParam, string> callback)
 	{
@@ -20,7 +20,7 @@ public class FinalizationRegistry<TValue, [Nullable(2)] TParam> where TValue : c
 		return true;
 	}
 
-	// Token: 0x06000217 RID: 535 RVA: 0x0000C94C File Offset: 0x0000AB4C
+	// Token: 0x06000218 RID: 536 RVA: 0x0000C630 File Offset: 0x0000A830
 	public bool Unregister(TValue target)
 	{
 		Finalizer<TParam> finalizer;
@@ -32,13 +32,13 @@ public class FinalizationRegistry<TValue, [Nullable(2)] TParam> where TValue : c
 		return this._Registry.Remove(target);
 	}
 
-	// Token: 0x06000218 RID: 536 RVA: 0x0000C97D File Offset: 0x0000AB7D
+	// Token: 0x06000219 RID: 537 RVA: 0x0000C661 File Offset: 0x0000A861
 	public void TrimExcess()
 	{
 		this._Registry.TrimExcess();
 	}
 
-	// Token: 0x040001BF RID: 447
+	// Token: 0x040001C1 RID: 449
 	[Nullable(new byte[]
 	{
 		1,

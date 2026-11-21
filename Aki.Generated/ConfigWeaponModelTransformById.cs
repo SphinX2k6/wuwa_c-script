@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A84 RID: 2692
+	// Token: 0x02000B59 RID: 2905
 	public class ConfigWeaponModelTransformById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003F2C RID: 16172 RVA: 0x001BF629 File Offset: 0x001BD829
+		// Token: 0x0600442A RID: 17450 RVA: 0x001DE9BD File Offset: 0x001DCBBD
 		static ConfigWeaponModelTransformById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeaponModelTransformById.CreateStaticDefaultValue), new Action(ConfigWeaponModelTransformById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003F2D RID: 16173 RVA: 0x001BF648 File Offset: 0x001BD848
+		// Token: 0x0600442B RID: 17451 RVA: 0x001DE9DC File Offset: 0x001DCBDC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeaponModelTransformById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003F2E RID: 16174 RVA: 0x001BF6C7 File Offset: 0x001BD8C7
+		// Token: 0x0600442C RID: 17452 RVA: 0x001DEA5B File Offset: 0x001DCC5B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeaponModelTransformById.LogPair = null;
 			ConfigWeaponModelTransformById.HandleId = 0;
 		}
 
-		// Token: 0x06003F2F RID: 16175 RVA: 0x001BF6D5 File Offset: 0x001BD8D5
+		// Token: 0x0600442D RID: 17453 RVA: 0x001DEA69 File Offset: 0x001DCC69
 		public static void Init()
 		{
 			ConfigWeaponModelTransformById.HandleId = ConfigCommon.InitDataStatement(ConfigWeaponModelTransformById.HandleId, "db_weapon.db", "select BinData from `WeaponModelTransform` where Id = ?");
 		}
 
-		// Token: 0x06003F30 RID: 16176 RVA: 0x001BF6F0 File Offset: 0x001BD8F0
+		// Token: 0x0600442E RID: 17454 RVA: 0x001DEA84 File Offset: 0x001DCC84
 		public static WeaponModelTransform? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWeaponModelTransformById.HandleId, ConfigWeaponModelTransformById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new WeaponModelTransform?(rootAsWeaponModelTransform);
 		}
 
-		// Token: 0x04004982 RID: 18818
+		// Token: 0x04004F55 RID: 20309
 		private const string DB = "db_weapon.db";
 
-		// Token: 0x04004983 RID: 18819
+		// Token: 0x04004F56 RID: 20310
 		private const string FILE = "w.武器基础配置.xlsx";
 
-		// Token: 0x04004984 RID: 18820
+		// Token: 0x04004F57 RID: 20311
 		private const string TABLE = "WeaponModelTransform";
 
-		// Token: 0x04004985 RID: 18821
+		// Token: 0x04004F58 RID: 20312
 		private const string COMMAND = "select BinData from `WeaponModelTransform` where Id = ?";
 
-		// Token: 0x04004986 RID: 18822
+		// Token: 0x04004F59 RID: 20313
 		private const string KEY_PREFIX = "WeaponModelTransformById";
 
-		// Token: 0x04004987 RID: 18823
+		// Token: 0x04004F5A RID: 20314
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004988 RID: 18824
+		// Token: 0x04004F5B RID: 20315
 		private static int HandleId;
 	}
 }

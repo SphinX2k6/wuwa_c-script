@@ -4,27 +4,27 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Kurotato.Data
 {
-	// Token: 0x02005796 RID: 22422
+	// Token: 0x0200476D RID: 18285
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoEnemyBasePropertyData
 	{
-		// Token: 0x1700887B RID: 34939
-		// (get) Token: 0x06038F7C RID: 233340 RVA: 0x00D8B11F File Offset: 0x00D8931F
-		// (set) Token: 0x06038F7D RID: 233341 RVA: 0x00D8B127 File Offset: 0x00D89327
+		// Token: 0x17005C43 RID: 23619
+		// (get) Token: 0x0602DE8C RID: 188044 RVA: 0x00CD9E9B File Offset: 0x00CD809B
+		// (set) Token: 0x0602DE8D RID: 188045 RVA: 0x00CD9EA3 File Offset: 0x00CD80A3
 		public string IconPath { get; set; } = "";
 
-		// Token: 0x1700887C RID: 34940
-		// (get) Token: 0x06038F7E RID: 233342 RVA: 0x00D8B130 File Offset: 0x00D89330
-		// (set) Token: 0x06038F7F RID: 233343 RVA: 0x00D8B138 File Offset: 0x00D89338
+		// Token: 0x17005C44 RID: 23620
+		// (get) Token: 0x0602DE8E RID: 188046 RVA: 0x00CD9EAC File Offset: 0x00CD80AC
+		// (set) Token: 0x0602DE8F RID: 188047 RVA: 0x00CD9EB4 File Offset: 0x00CD80B4
 		public string Name { get; set; } = "";
 
-		// Token: 0x1700887D RID: 34941
-		// (get) Token: 0x06038F80 RID: 233344 RVA: 0x00D8B141 File Offset: 0x00D89341
-		// (set) Token: 0x06038F81 RID: 233345 RVA: 0x00D8B149 File Offset: 0x00D89349
+		// Token: 0x17005C45 RID: 23621
+		// (get) Token: 0x0602DE90 RID: 188048 RVA: 0x00CD9EBD File Offset: 0x00CD80BD
+		// (set) Token: 0x0602DE91 RID: 188049 RVA: 0x00CD9EC5 File Offset: 0x00CD80C5
 		public int Value { get; set; }
 
-		// Token: 0x06038F82 RID: 233346 RVA: 0x00D8B154 File Offset: 0x00D89354
+		// Token: 0x0602DE92 RID: 188050 RVA: 0x00CD9ED0 File Offset: 0x00CD80D0
 		public KurotatoEnemyBasePropertyData(EKurotatoEnemyAttrType attrType, int value)
 		{
 			KurotatoMonsterAttribute? monsterAttribute = KurotatoConfig.Instance.GetMonsterAttribute((int)attrType);

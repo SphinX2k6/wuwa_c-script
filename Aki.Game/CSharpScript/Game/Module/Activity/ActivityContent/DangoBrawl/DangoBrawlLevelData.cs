@@ -5,24 +5,24 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067CF RID: 26575
+	// Token: 0x0200571F RID: 22303
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlLevelData
 	{
-		// Token: 0x060422D7 RID: 271063 RVA: 0x0100C764 File Offset: 0x0100A964
+		// Token: 0x06036E2D RID: 224813 RVA: 0x00F4DB30 File Offset: 0x00F4BD30
 		public DangoBrawlLevelData(int configId)
 		{
 			this.ConfigId = configId;
 		}
 
-		// Token: 0x060422D8 RID: 271064 RVA: 0x0100C773 File Offset: 0x0100A973
+		// Token: 0x06036E2E RID: 224814 RVA: 0x00F4DB3F File Offset: 0x00F4BD3F
 		private DangoBrawlChallenge? GetConfig()
 		{
 			return DangoBrawlConfig.Instance.GetChallengeConfigById(this.ConfigId);
 		}
 
-		// Token: 0x060422D9 RID: 271065 RVA: 0x0100C788 File Offset: 0x0100A988
+		// Token: 0x06036E2F RID: 224815 RVA: 0x00F4DB54 File Offset: 0x00F4BD54
 		public void UpdateData(DangoBrawlChallengeInfo data)
 		{
 			EDangoBrawlLevelState stateInternal;
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RetryCountInternal = data.RetryCount;
 		}
 
-		// Token: 0x170096CB RID: 38603
-		// (get) Token: 0x060422DA RID: 271066 RVA: 0x0100C7D1 File Offset: 0x0100A9D1
+		// Token: 0x17006A0C RID: 27148
+		// (get) Token: 0x06036E30 RID: 224816 RVA: 0x00F4DB9D File Offset: 0x00F4BD9D
 		public bool IsPassed
 		{
 			get
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096CC RID: 38604
-		// (get) Token: 0x060422DB RID: 271067 RVA: 0x0100C7DC File Offset: 0x0100A9DC
+		// Token: 0x17006A0D RID: 27149
+		// (get) Token: 0x06036E31 RID: 224817 RVA: 0x00F4DBA8 File Offset: 0x00F4BDA8
 		public bool IsLocked
 		{
 			get
@@ -65,8 +65,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096CD RID: 38605
-		// (get) Token: 0x060422DC RID: 271068 RVA: 0x0100C7E7 File Offset: 0x0100A9E7
+		// Token: 0x17006A0E RID: 27150
+		// (get) Token: 0x06036E32 RID: 224818 RVA: 0x00F4DBB3 File Offset: 0x00F4BDB3
 		public int RetryCount
 		{
 			get
@@ -75,18 +75,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096CE RID: 38606
-		// (get) Token: 0x060422DD RID: 271069 RVA: 0x0100C7EF File Offset: 0x0100A9EF
-		// (set) Token: 0x060422DE RID: 271070 RVA: 0x0100C7F7 File Offset: 0x0100A9F7
+		// Token: 0x17006A0F RID: 27151
+		// (get) Token: 0x06036E33 RID: 224819 RVA: 0x00F4DBBB File Offset: 0x00F4BDBB
+		// (set) Token: 0x06036E34 RID: 224820 RVA: 0x00F4DBC3 File Offset: 0x00F4BDC3
 		public bool IsNew { get; set; }
 
-		// Token: 0x170096CF RID: 38607
-		// (get) Token: 0x060422DF RID: 271071 RVA: 0x0100C800 File Offset: 0x0100AA00
-		// (set) Token: 0x060422E0 RID: 271072 RVA: 0x0100C808 File Offset: 0x0100AA08
+		// Token: 0x17006A10 RID: 27152
+		// (get) Token: 0x06036E35 RID: 224821 RVA: 0x00F4DBCC File Offset: 0x00F4BDCC
+		// (set) Token: 0x06036E36 RID: 224822 RVA: 0x00F4DBD4 File Offset: 0x00F4BDD4
 		public bool IsLast { get; set; }
 
-		// Token: 0x170096D0 RID: 38608
-		// (get) Token: 0x060422E1 RID: 271073 RVA: 0x0100C811 File Offset: 0x0100AA11
+		// Token: 0x17006A11 RID: 27153
+		// (get) Token: 0x06036E37 RID: 224823 RVA: 0x00F4DBDD File Offset: 0x00F4BDDD
 		public int Id
 		{
 			get
@@ -95,8 +95,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096D1 RID: 38609
-		// (get) Token: 0x060422E2 RID: 271074 RVA: 0x0100C819 File Offset: 0x0100AA19
+		// Token: 0x17006A12 RID: 27154
+		// (get) Token: 0x06036E38 RID: 224824 RVA: 0x00F4DBE5 File Offset: 0x00F4BDE5
 		public bool IsNormalMode
 		{
 			get
@@ -105,8 +105,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096D2 RID: 38610
-		// (get) Token: 0x060422E3 RID: 271075 RVA: 0x0100C824 File Offset: 0x0100AA24
+		// Token: 0x17006A13 RID: 27155
+		// (get) Token: 0x06036E39 RID: 224825 RVA: 0x00F4DBF0 File Offset: 0x00F4BDF0
 		public EDangoBrawlLevelMode Mode
 		{
 			get
@@ -120,8 +120,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096D3 RID: 38611
-		// (get) Token: 0x060422E4 RID: 271076 RVA: 0x0100C854 File Offset: 0x0100AA54
+		// Token: 0x17006A14 RID: 27156
+		// (get) Token: 0x06036E3A RID: 224826 RVA: 0x00F4DC20 File Offset: 0x00F4BE20
 		public EDangoBrawlLevelBgStyle BgStyle
 		{
 			get
@@ -135,8 +135,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096D4 RID: 38612
-		// (get) Token: 0x060422E5 RID: 271077 RVA: 0x0100C884 File Offset: 0x0100AA84
+		// Token: 0x17006A15 RID: 27157
+		// (get) Token: 0x06036E3B RID: 224827 RVA: 0x00F4DC50 File Offset: 0x00F4BE50
 		public int MaxRetryCount
 		{
 			get
@@ -150,8 +150,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096D5 RID: 38613
-		// (get) Token: 0x060422E6 RID: 271078 RVA: 0x0100C8B4 File Offset: 0x0100AAB4
+		// Token: 0x17006A16 RID: 27158
+		// (get) Token: 0x06036E3C RID: 224828 RVA: 0x00F4DC80 File Offset: 0x00F4BE80
 		public int WinCount
 		{
 			get
@@ -165,8 +165,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096D6 RID: 38614
-		// (get) Token: 0x060422E7 RID: 271079 RVA: 0x0100C8E4 File Offset: 0x0100AAE4
+		// Token: 0x17006A17 RID: 27159
+		// (get) Token: 0x06036E3D RID: 224829 RVA: 0x00F4DCB0 File Offset: 0x00F4BEB0
 		public int AdditionRound
 		{
 			get
@@ -180,8 +180,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096D7 RID: 38615
-		// (get) Token: 0x060422E8 RID: 271080 RVA: 0x0100C914 File Offset: 0x0100AB14
+		// Token: 0x17006A18 RID: 27160
+		// (get) Token: 0x06036E3E RID: 224830 RVA: 0x00F4DCE0 File Offset: 0x00F4BEE0
 		public string SimpleName
 		{
 			get
@@ -191,8 +191,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096D8 RID: 38616
-		// (get) Token: 0x060422E9 RID: 271081 RVA: 0x0100C94C File Offset: 0x0100AB4C
+		// Token: 0x17006A19 RID: 27161
+		// (get) Token: 0x06036E3F RID: 224831 RVA: 0x00F4DD18 File Offset: 0x00F4BF18
 		public string Name
 		{
 			get
@@ -202,8 +202,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096D9 RID: 38617
-		// (get) Token: 0x060422EA RID: 271082 RVA: 0x0100C984 File Offset: 0x0100AB84
+		// Token: 0x17006A1A RID: 27162
+		// (get) Token: 0x06036E40 RID: 224832 RVA: 0x00F4DD50 File Offset: 0x00F4BF50
 		public string Icon
 		{
 			get
@@ -213,8 +213,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096DA RID: 38618
-		// (get) Token: 0x060422EB RID: 271083 RVA: 0x0100C9BC File Offset: 0x0100ABBC
+		// Token: 0x17006A1B RID: 27163
+		// (get) Token: 0x06036E41 RID: 224833 RVA: 0x00F4DD88 File Offset: 0x00F4BF88
 		public string SelIcon
 		{
 			get
@@ -224,8 +224,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096DB RID: 38619
-		// (get) Token: 0x060422EC RID: 271084 RVA: 0x0100C9F4 File Offset: 0x0100ABF4
+		// Token: 0x17006A1C RID: 27164
+		// (get) Token: 0x06036E42 RID: 224834 RVA: 0x00F4DDC0 File Offset: 0x00F4BFC0
 		public string Desc
 		{
 			get
@@ -235,8 +235,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096DC RID: 38620
-		// (get) Token: 0x060422ED RID: 271085 RVA: 0x0100CA2C File Offset: 0x0100AC2C
+		// Token: 0x17006A1D RID: 27165
+		// (get) Token: 0x06036E43 RID: 224835 RVA: 0x00F4DDF8 File Offset: 0x00F4BFF8
 		public string BgNumIcon
 		{
 			get
@@ -246,8 +246,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096DD RID: 38621
-		// (get) Token: 0x060422EE RID: 271086 RVA: 0x0100CA64 File Offset: 0x0100AC64
+		// Token: 0x17006A1E RID: 27166
+		// (get) Token: 0x06036E44 RID: 224836 RVA: 0x00F4DE30 File Offset: 0x00F4C030
 		public string EnvironmentDesc
 		{
 			get
@@ -257,8 +257,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096DE RID: 38622
-		// (get) Token: 0x060422EF RID: 271087 RVA: 0x0100CA9C File Offset: 0x0100AC9C
+		// Token: 0x17006A1F RID: 27167
+		// (get) Token: 0x06036E45 RID: 224837 RVA: 0x00F4DE68 File Offset: 0x00F4C068
 		public string PassConditionDesc
 		{
 			get
@@ -268,8 +268,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096DF RID: 38623
-		// (get) Token: 0x060422F0 RID: 271088 RVA: 0x0100CAD4 File Offset: 0x0100ACD4
+		// Token: 0x17006A20 RID: 27168
+		// (get) Token: 0x06036E46 RID: 224838 RVA: 0x00F4DEA0 File Offset: 0x00F4C0A0
 		public string UnlockConditionDesc
 		{
 			get
@@ -279,8 +279,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E0 RID: 38624
-		// (get) Token: 0x060422F1 RID: 271089 RVA: 0x0100CB0C File Offset: 0x0100AD0C
+		// Token: 0x17006A21 RID: 27169
+		// (get) Token: 0x06036E47 RID: 224839 RVA: 0x00F4DED8 File Offset: 0x00F4C0D8
 		public int FirstClearDropId
 		{
 			get
@@ -294,8 +294,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E1 RID: 38625
-		// (get) Token: 0x060422F2 RID: 271090 RVA: 0x0100CB3C File Offset: 0x0100AD3C
+		// Token: 0x17006A22 RID: 27170
+		// (get) Token: 0x06036E48 RID: 224840 RVA: 0x00F4DF08 File Offset: 0x00F4C108
 		public int FirstUnlockRoleId
 		{
 			get
@@ -309,8 +309,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E2 RID: 38626
-		// (get) Token: 0x060422F3 RID: 271091 RVA: 0x0100CB6C File Offset: 0x0100AD6C
+		// Token: 0x17006A23 RID: 27171
+		// (get) Token: 0x06036E49 RID: 224841 RVA: 0x00F4DF38 File Offset: 0x00F4C138
 		public int[] UnlockRoleIdList
 		{
 			get
@@ -320,8 +320,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E3 RID: 38627
-		// (get) Token: 0x060422F4 RID: 271092 RVA: 0x0100CBA4 File Offset: 0x0100ADA4
+		// Token: 0x17006A24 RID: 27172
+		// (get) Token: 0x06036E4A RID: 224842 RVA: 0x00F4DF70 File Offset: 0x00F4C170
 		public int DefaultRoleId
 		{
 			get
@@ -335,8 +335,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E4 RID: 38628
-		// (get) Token: 0x060422F5 RID: 271093 RVA: 0x0100CBD4 File Offset: 0x0100ADD4
+		// Token: 0x17006A25 RID: 27173
+		// (get) Token: 0x06036E4B RID: 224843 RVA: 0x00F4DFA0 File Offset: 0x00F4C1A0
 		public string AdventureLeftIcon
 		{
 			get
@@ -346,8 +346,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E5 RID: 38629
-		// (get) Token: 0x060422F6 RID: 271094 RVA: 0x0100CC0C File Offset: 0x0100AE0C
+		// Token: 0x17006A26 RID: 27174
+		// (get) Token: 0x06036E4C RID: 224844 RVA: 0x00F4DFD8 File Offset: 0x00F4C1D8
 		public string AdventureRightIcon
 		{
 			get
@@ -357,8 +357,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E6 RID: 38630
-		// (get) Token: 0x060422F7 RID: 271095 RVA: 0x0100CC44 File Offset: 0x0100AE44
+		// Token: 0x17006A27 RID: 27175
+		// (get) Token: 0x06036E4D RID: 224845 RVA: 0x00F4E010 File Offset: 0x00F4C210
 		public string FirstSpineAtlasPath
 		{
 			get
@@ -372,8 +372,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E7 RID: 38631
-		// (get) Token: 0x060422F8 RID: 271096 RVA: 0x0100CC94 File Offset: 0x0100AE94
+		// Token: 0x17006A28 RID: 27176
+		// (get) Token: 0x06036E4E RID: 224846 RVA: 0x00F4E060 File Offset: 0x00F4C260
 		public string FirstSpineSkeletonDataPath
 		{
 			get
@@ -387,8 +387,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E8 RID: 38632
-		// (get) Token: 0x060422F9 RID: 271097 RVA: 0x0100CCE4 File Offset: 0x0100AEE4
+		// Token: 0x17006A29 RID: 27177
+		// (get) Token: 0x06036E4F RID: 224847 RVA: 0x00F4E0B0 File Offset: 0x00F4C2B0
 		public string SecondSpineAtlasPath
 		{
 			get
@@ -402,8 +402,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096E9 RID: 38633
-		// (get) Token: 0x060422FA RID: 271098 RVA: 0x0100CD34 File Offset: 0x0100AF34
+		// Token: 0x17006A2A RID: 27178
+		// (get) Token: 0x06036E50 RID: 224848 RVA: 0x00F4E100 File Offset: 0x00F4C300
 		public string SecondSpineSkeletonDataPath
 		{
 			get
@@ -417,8 +417,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096EA RID: 38634
-		// (get) Token: 0x060422FB RID: 271099 RVA: 0x0100CD84 File Offset: 0x0100AF84
+		// Token: 0x17006A2B RID: 27179
+		// (get) Token: 0x06036E51 RID: 224849 RVA: 0x00F4E150 File Offset: 0x00F4C350
 		public string FirstSpineAnim
 		{
 			get
@@ -428,8 +428,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096EB RID: 38635
-		// (get) Token: 0x060422FC RID: 271100 RVA: 0x0100CDC0 File Offset: 0x0100AFC0
+		// Token: 0x17006A2C RID: 27180
+		// (get) Token: 0x06036E52 RID: 224850 RVA: 0x00F4E18C File Offset: 0x00F4C38C
 		public string FirstSpineLoopAnim
 		{
 			get
@@ -439,8 +439,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096EC RID: 38636
-		// (get) Token: 0x060422FD RID: 271101 RVA: 0x0100CDFC File Offset: 0x0100AFFC
+		// Token: 0x17006A2D RID: 27181
+		// (get) Token: 0x06036E53 RID: 224851 RVA: 0x00F4E1C8 File Offset: 0x00F4C3C8
 		public string SecondSpineAnim
 		{
 			get
@@ -450,8 +450,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096ED RID: 38637
-		// (get) Token: 0x060422FE RID: 271102 RVA: 0x0100CE38 File Offset: 0x0100B038
+		// Token: 0x17006A2E RID: 27182
+		// (get) Token: 0x06036E54 RID: 224852 RVA: 0x00F4E204 File Offset: 0x00F4C404
 		public string SecondSpineLoopAnim
 		{
 			get
@@ -461,13 +461,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x040228C9 RID: 141513
+		// Token: 0x0401D126 RID: 119078
 		private readonly int ConfigId;
 
-		// Token: 0x040228CA RID: 141514
+		// Token: 0x0401D127 RID: 119079
 		private EDangoBrawlLevelState StateInternal;
 
-		// Token: 0x040228CB RID: 141515
+		// Token: 0x0401D128 RID: 119080
 		private int RetryCountInternal;
 	}
 }

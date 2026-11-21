@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B33 RID: 19251
+	// Token: 0x02003ADB RID: 15067
 	[NullableContext(1)]
 	public interface ITowerDefensePhantomOtherData
 	{
-		// Token: 0x17007B79 RID: 31609
-		// (get) Token: 0x06031DAF RID: 204207
-		// (set) Token: 0x06031DB0 RID: 204208
+		// Token: 0x17004F26 RID: 20262
+		// (get) Token: 0x06026B3F RID: 158527
+		// (set) Token: 0x06026B40 RID: 158528
 		string NameTextId { get; set; }
 
-		// Token: 0x17007B7A RID: 31610
-		// (get) Token: 0x06031DB1 RID: 204209
-		// (set) Token: 0x06031DB2 RID: 204210
+		// Token: 0x17004F27 RID: 20263
+		// (get) Token: 0x06026B41 RID: 158529
+		// (set) Token: 0x06026B42 RID: 158530
 		string TypeTextId { get; set; }
 
-		// Token: 0x17007B7B RID: 31611
-		// (get) Token: 0x06031DB3 RID: 204211
-		// (set) Token: 0x06031DB4 RID: 204212
+		// Token: 0x17004F28 RID: 20264
+		// (get) Token: 0x06026B43 RID: 158531
+		// (set) Token: 0x06026B44 RID: 158532
 		string TypeIconPath { get; set; }
 
-		// Token: 0x17007B7C RID: 31612
-		// (get) Token: 0x06031DB5 RID: 204213
-		// (set) Token: 0x06031DB6 RID: 204214
+		// Token: 0x17004F29 RID: 20265
+		// (get) Token: 0x06026B45 RID: 158533
+		// (set) Token: 0x06026B46 RID: 158534
 		bool IsLocked { get; set; }
 	}
 }

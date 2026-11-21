@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006639 RID: 26169
+	// Token: 0x02006CAA RID: 27818
 	public struct IElementalBoxTargetRelativePos : IFlatbufferObject
 	{
-		// Token: 0x1700C266 RID: 49766
-		// (get) Token: 0x0602D717 RID: 186135 RVA: 0x006398A5 File Offset: 0x00637AA5
+		// Token: 0x1700CC04 RID: 52228
+		// (get) Token: 0x0602FEE8 RID: 196328 RVA: 0x0068640D File Offset: 0x0068460D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D718 RID: 186136 RVA: 0x006398B2 File Offset: 0x00637AB2
+		// Token: 0x0602FEE9 RID: 196329 RVA: 0x0068641A File Offset: 0x0068461A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D719 RID: 186137 RVA: 0x006398BC File Offset: 0x00637ABC
+		// Token: 0x0602FEEA RID: 196330 RVA: 0x00686424 File Offset: 0x00684624
 		public static IElementalBoxTargetRelativePos GetRootAsIElementalBoxTargetRelativePos(ByteBuffer _bb)
 		{
 			return IElementalBoxTargetRelativePos.GetRootAsIElementalBoxTargetRelativePos(_bb, default(IElementalBoxTargetRelativePos));
 		}
 
-		// Token: 0x0602D71A RID: 186138 RVA: 0x006398D8 File Offset: 0x00637AD8
+		// Token: 0x0602FEEB RID: 196331 RVA: 0x00686440 File Offset: 0x00684640
 		public static IElementalBoxTargetRelativePos GetRootAsIElementalBoxTargetRelativePos(ByteBuffer _bb, IElementalBoxTargetRelativePos obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D71B RID: 186139 RVA: 0x006398F5 File Offset: 0x00637AF5
+		// Token: 0x0602FEEC RID: 196332 RVA: 0x0068645D File Offset: 0x0068465D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D71C RID: 186140 RVA: 0x00639904 File Offset: 0x00637B04
+		// Token: 0x0602FEED RID: 196333 RVA: 0x0068646C File Offset: 0x0068466C
 		public IElementalBoxTargetRelativePos __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C267 RID: 49767
-		// (get) Token: 0x0602D71D RID: 186141 RVA: 0x00639914 File Offset: 0x00637B14
+		// Token: 0x1700CC05 RID: 52229
+		// (get) Token: 0x0602FEEE RID: 196334 RVA: 0x0068647C File Offset: 0x0068467C
 		public EElementalBoxTargetPosType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C268 RID: 49768
-		// (get) Token: 0x0602D71E RID: 186142 RVA: 0x00639950 File Offset: 0x00637B50
+		// Token: 0x1700CC06 RID: 52230
+		// (get) Token: 0x0602FEEF RID: 196335 RVA: 0x006864B8 File Offset: 0x006846B8
 		public IVectorInfo? RelativePos
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D71F RID: 186143 RVA: 0x006399AD File Offset: 0x00637BAD
+		// Token: 0x0602FEF0 RID: 196336 RVA: 0x00686515 File Offset: 0x00684715
 		public static Offset<IElementalBoxTargetRelativePos> CreateIElementalBoxTargetRelativePos(FlatBufferBuilder builder, EElementalBoxTargetPosType Type = EElementalBoxTargetPosType.PrefabElementalBoxTargetPos, Offset<IVectorInfo> RelativePosOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IElementalBoxTargetRelativePos.EndIElementalBoxTargetRelativePos(builder);
 		}
 
-		// Token: 0x0602D720 RID: 186144 RVA: 0x006399CA File Offset: 0x00637BCA
+		// Token: 0x0602FEF1 RID: 196337 RVA: 0x00686532 File Offset: 0x00684732
 		public static void StartIElementalBoxTargetRelativePos(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602D721 RID: 186145 RVA: 0x006399D3 File Offset: 0x00637BD3
+		// Token: 0x0602FEF2 RID: 196338 RVA: 0x0068653B File Offset: 0x0068473B
 		public static void AddType(FlatBufferBuilder builder, EElementalBoxTargetPosType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D722 RID: 186146 RVA: 0x006399DE File Offset: 0x00637BDE
+		// Token: 0x0602FEF3 RID: 196339 RVA: 0x00686546 File Offset: 0x00684746
 		public static void AddRelativePos(FlatBufferBuilder builder, Offset<IVectorInfo> relativePosOffset)
 		{
 			builder.AddOffset(1, relativePosOffset.Value, 0);
 		}
 
-		// Token: 0x0602D723 RID: 186147 RVA: 0x006399EE File Offset: 0x00637BEE
+		// Token: 0x0602FEF4 RID: 196340 RVA: 0x00686556 File Offset: 0x00684756
 		public static Offset<IElementalBoxTargetRelativePos> EndIElementalBoxTargetRelativePos(FlatBufferBuilder builder)
 		{
 			return new Offset<IElementalBoxTargetRelativePos>(builder.EndTable());
 		}
 
-		// Token: 0x0602D724 RID: 186148 RVA: 0x006399FC File Offset: 0x00637BFC
+		// Token: 0x0602FEF5 RID: 196341 RVA: 0x00686564 File Offset: 0x00684764
 		public IElementalBoxTargetRelativePosT UnPack()
 		{
 			IElementalBoxTargetRelativePosT elementalBoxTargetRelativePosT = new IElementalBoxTargetRelativePosT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return elementalBoxTargetRelativePosT;
 		}
 
-		// Token: 0x0602D725 RID: 186149 RVA: 0x00639A18 File Offset: 0x00637C18
+		// Token: 0x0602FEF6 RID: 196342 RVA: 0x00686580 File Offset: 0x00684780
 		public void UnPackTo(IElementalBoxTargetRelativePosT _o)
 		{
 			_o.Type = this.Type;
 			_o.RelativePos = ((this.RelativePos != null) ? this.RelativePos.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602D726 RID: 186150 RVA: 0x00639A60 File Offset: 0x00637C60
+		// Token: 0x0602FEF7 RID: 196343 RVA: 0x006865C8 File Offset: 0x006847C8
 		public static Offset<IElementalBoxTargetRelativePos> Pack(FlatBufferBuilder builder, IElementalBoxTargetRelativePosT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IElementalBoxTargetRelativePos.CreateIElementalBoxTargetRelativePos(builder, _o.Type, relativePosOffset);
 		}
 
-		// Token: 0x04010CCF RID: 68815
+		// Token: 0x04011AEA RID: 72426
 		private Table __p;
 	}
 }

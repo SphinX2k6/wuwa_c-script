@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 {
-	// Token: 0x02004116 RID: 16662
+	// Token: 0x020032AB RID: 12971
 	[UnrealObjectPath("/Game/Aki/Character/Role/Common/ABP_Gameplay/ABP_BaseRole_Gameplay_Motor.ABP_BaseRole_Gameplay_Motor_C")]
-	[UnrealStructLayout(8096, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 8089)]
+	[UnrealStructLayout(8112, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 8105)]
 	public class ABP_BaseRole_Gameplay_Motor_C : UKuroAnimInstance, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602AE40 RID: 175680 RVA: 0x009EEC5D File Offset: 0x009ECE5D
+		// Token: 0x060209E7 RID: 133607 RVA: 0x0094B118 File Offset: 0x00949318
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (ABP_BaseRole_Gameplay_Motor_C._ClassPtr == IntPtr.Zero)
@@ -23,35 +23,35 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			return ABP_BaseRole_Gameplay_Motor_C._ClassPtr;
 		}
 
-		// Token: 0x0602AE41 RID: 175681 RVA: 0x009EEC84 File Offset: 0x009ECE84
+		// Token: 0x060209E8 RID: 133608 RVA: 0x0094B13C File Offset: 0x0094933C
 		public ABP_BaseRole_Gameplay_Motor_C() : this(BuiltinUtils.AllocNativeUObject(ABP_BaseRole_Gameplay_Motor_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602AE42 RID: 175682 RVA: 0x009EECAC File Offset: 0x009ECEAC
+		// Token: 0x060209E9 RID: 133609 RVA: 0x0094B164 File Offset: 0x00949364
 		[NullableContext(1)]
 		public ABP_BaseRole_Gameplay_Motor_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ABP_BaseRole_Gameplay_Motor_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700698F RID: 27023
-		// (get) Token: 0x0602AE43 RID: 175683 RVA: 0x009EECDF File Offset: 0x009ECEDF
-		// (set) Token: 0x0602AE44 RID: 175684 RVA: 0x009EECEF File Offset: 0x009ECEEF
+		// Token: 0x17004013 RID: 16403
+		// (get) Token: 0x060209EA RID: 133610 RVA: 0x0094B197 File Offset: 0x00949397
+		// (set) Token: 0x060209EB RID: 133611 RVA: 0x0094B1A7 File Offset: 0x009493A7
 		public unsafe int VehicleEntityId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_VehicleEntityId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_VehicleEntityId) = value;
 			}
 		}
 
-		// Token: 0x17006990 RID: 27024
-		// (get) Token: 0x0602AE45 RID: 175685 RVA: 0x009EED00 File Offset: 0x009ECF00
-		// (set) Token: 0x0602AE46 RID: 175686 RVA: 0x009EED39 File Offset: 0x009ECF39
+		// Token: 0x17004014 RID: 16404
+		// (get) Token: 0x060209EC RID: 133612 RVA: 0x0094B1B8 File Offset: 0x009493B8
+		// (set) Token: 0x060209ED RID: 133613 RVA: 0x0094B1F1 File Offset: 0x009493F1
 		[Nullable(1)]
 		public TArray<float> 撞击混合
 		{
@@ -62,7 +62,7 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 				TArray<float> result;
 				if ((result = this._撞击混合) == null)
 				{
-					result = (this._撞击混合 = new TArray<float>(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_13, this));
+					result = (this._撞击混合 = new TArray<float>(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_撞击混合, this));
 				}
 				return result;
 			}
@@ -73,94 +73,74 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			}
 		}
 
-		// Token: 0x17006991 RID: 27025
-		// (get) Token: 0x0602AE47 RID: 175687 RVA: 0x009EED47 File Offset: 0x009ECF47
-		// (set) Token: 0x0602AE48 RID: 175688 RVA: 0x009EED57 File Offset: 0x009ECF57
+		// Token: 0x17004015 RID: 16405
+		// (get) Token: 0x060209EE RID: 133614 RVA: 0x0094B1FF File Offset: 0x009493FF
+		// (set) Token: 0x060209EF RID: 133615 RVA: 0x0094B20F File Offset: 0x0094940F
 		public unsafe float 撞击倒计时
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_撞击倒计时);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_撞击倒计时) = value;
 			}
 		}
 
-		// Token: 0x17006992 RID: 27026
-		// (get) Token: 0x0602AE49 RID: 175689 RVA: 0x009EED68 File Offset: 0x009ECF68
-		// (set) Token: 0x0602AE4A RID: 175690 RVA: 0x009EED7C File Offset: 0x009ECF7C
+		// Token: 0x17004016 RID: 16406
+		// (get) Token: 0x060209F0 RID: 133616 RVA: 0x0094B220 File Offset: 0x00949420
+		// (set) Token: 0x060209F1 RID: 133617 RVA: 0x0094B234 File Offset: 0x00949434
 		[Nullable(2)]
 		public unsafe AActor Vehicle
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_15);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_Vehicle);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_15, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_Vehicle, value);
 			}
 		}
 
-		// Token: 0x17006993 RID: 27027
-		// (get) Token: 0x0602AE4B RID: 175691 RVA: 0x009EED91 File Offset: 0x009ECF91
-		// (set) Token: 0x0602AE4C RID: 175692 RVA: 0x009EEDA5 File Offset: 0x009ECFA5
+		// Token: 0x17004017 RID: 16407
+		// (get) Token: 0x060209F2 RID: 133618 RVA: 0x0094B249 File Offset: 0x00949449
+		// (set) Token: 0x060209F3 RID: 133619 RVA: 0x0094B25D File Offset: 0x0094945D
 		[Nullable(2)]
 		public unsafe TsBaseCharacter 角色蓝图
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<TsBaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_16);
+				return BuiltinUtils.ObjectPropertyGetter<TsBaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_角色蓝图);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_16, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_角色蓝图, value);
 			}
 		}
 
-		// Token: 0x17006994 RID: 27028
-		// (get) Token: 0x0602AE4D RID: 175693 RVA: 0x009EEDBA File Offset: 0x009ECFBA
-		// (set) Token: 0x0602AE4E RID: 175694 RVA: 0x009EEDCA File Offset: 0x009ECFCA
+		// Token: 0x17004018 RID: 16408
+		// (get) Token: 0x060209F4 RID: 133620 RVA: 0x0094B272 File Offset: 0x00949472
+		// (set) Token: 0x060209F5 RID: 133621 RVA: 0x0094B282 File Offset: 0x00949482
 		public unsafe bool 禁用碰撞
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_17) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_禁用碰撞) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_17) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Motor_C.__PropertyOffset_禁用碰撞) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602AE4F RID: 175695 RVA: 0x009EEDDC File Offset: 0x009ECFDC
-		[NullableContext(2)]
+		// Token: 0x060209F6 RID: 133622 RVA: 0x0094B294 File Offset: 0x00949494
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void AnimGraph(ref FPoseLink AnimGraph)
-		{
-			ABP_BaseRole_Gameplay_Motor_C.__AnimGraph_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Motor_C.__AnimGraph_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Motor_C.__AnimGraph_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRole_Gameplay_Motor_C.__AnimGraph_NativeFunctionPtr, (void*)ptr, 1);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->AnimGraph, AnimGraph.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Motor_C.__AnimGraph_NativeFunctionPtr, (void*)ptr);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), AnimGraph.NativePtr, &ptr->AnimGraph, 1, false);
-			}
-		}
-
-		// Token: 0x0602AE50 RID: 175696 RVA: 0x009EEE64 File Offset: 0x009ED064
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 去掉HitNormal的Down(FVector HitNormal, ref FVector Result)
 		{
 			ABP_BaseRole_Gameplay_Motor_C.__去掉HitNormal的Down_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Motor_C.__去掉HitNormal的Down_FunctionParams[(UIntPtr)99] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Motor_C.__去掉HitNormal的Down_FunctionParams) & -16L;
@@ -171,9 +151,8 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			Result = ptr->Result;
 		}
 
-		// Token: 0x0602AE51 RID: 175697 RVA: 0x009EEEC4 File Offset: 0x009ED0C4
+		// Token: 0x060209F7 RID: 133623 RVA: 0x0094B2F4 File Offset: 0x009494F4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 计算碰撞反馈(float DeltaTime)
 		{
 			ABP_BaseRole_Gameplay_Motor_C.__计算碰撞反馈_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Motor_C.__计算碰撞反馈_FunctionParams[(UIntPtr)511] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Motor_C.__计算碰撞反馈_FunctionParams) & -16L;
@@ -182,9 +161,8 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Motor_C.__计算碰撞反馈_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE52 RID: 175698 RVA: 0x009EEF10 File Offset: 0x009ED110
+		// Token: 0x060209F8 RID: 133624 RVA: 0x0094B340 File Offset: 0x00949540
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetVehicle(int entityId)
 		{
 			ABP_BaseRole_Gameplay_Motor_C.__SetVehicle_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Motor_C.__SetVehicle_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Motor_C.__SetVehicle_FunctionParams) & -16L;
@@ -193,9 +171,8 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Motor_C.__SetVehicle_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE53 RID: 175699 RVA: 0x009EEF58 File Offset: 0x009ED158
+		// Token: 0x060209F9 RID: 133625 RVA: 0x0094B388 File Offset: 0x00949588
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void BlueprintUpdateAnimation(float DeltaTimeX)
 		{
 			ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
@@ -204,138 +181,122 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE54 RID: 175700 RVA: 0x009EEFA0 File Offset: 0x009ED1A0
+		// Token: 0x060209FA RID: 133626 RVA: 0x0094B3D0 File Offset: 0x009495D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void BlueprintUpdateAnimation_Implementation(float DeltaTimeX)
 		{
 			ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaTimeX = DeltaTimeX;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Motor_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE55 RID: 175701 RVA: 0x009EEFE7 File Offset: 0x009ED1E7
+		// Token: 0x060209FB RID: 133627 RVA: 0x0094B416 File Offset: 0x00949616
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void BlueprintInitializeAnimation()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Motor_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602AE56 RID: 175702 RVA: 0x009EEFFB File Offset: 0x009ED1FB
+		// Token: 0x060209FC RID: 133628 RVA: 0x0094B42A File Offset: 0x0094962A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void BlueprintInitializeAnimation_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Motor_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Motor_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602AE57 RID: 175703 RVA: 0x009EF010 File Offset: 0x009ED210
+		// Token: 0x060209FD RID: 133629 RVA: 0x0094B43E File Offset: 0x0094963E
 		protected ABP_BaseRole_Gameplay_Motor_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040163AE RID: 91054
+		// Token: 0x04011A3D RID: 72253
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/Role/Common/ABP_Gameplay/ABP_BaseRole_Gameplay_Motor.ABP_BaseRole_Gameplay_Motor_C";
 
-		// Token: 0x040163AF RID: 91055
+		// Token: 0x04011A3E RID: 72254
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040163B0 RID: 91056
+		// Token: 0x04011A3F RID: 72255
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040163B1 RID: 91057
-		internal static int __PropertyOffset_12;
+		// Token: 0x04011A40 RID: 72256
+		internal static int __PropertyOffset_VehicleEntityId;
 
-		// Token: 0x040163B2 RID: 91058
-		internal static int __PropertyOffset_13;
+		// Token: 0x04011A41 RID: 72257
+		internal static int __PropertyOffset_撞击混合;
 
-		// Token: 0x040163B3 RID: 91059
+		// Token: 0x04011A42 RID: 72258
 		[Nullable(2)]
 		private TArray<float> _撞击混合;
 
-		// Token: 0x040163B4 RID: 91060
-		internal static int __PropertyOffset_14;
+		// Token: 0x04011A43 RID: 72259
+		internal static int __PropertyOffset_撞击倒计时;
 
-		// Token: 0x040163B5 RID: 91061
-		internal static int __PropertyOffset_15;
+		// Token: 0x04011A44 RID: 72260
+		internal static int __PropertyOffset_Vehicle;
 
-		// Token: 0x040163B6 RID: 91062
-		internal static int __PropertyOffset_16;
+		// Token: 0x04011A45 RID: 72261
+		internal static int __PropertyOffset_角色蓝图;
 
-		// Token: 0x040163B7 RID: 91063
-		internal static int __PropertyOffset_17;
+		// Token: 0x04011A46 RID: 72262
+		internal static int __PropertyOffset_禁用碰撞;
 
-		// Token: 0x040163B8 RID: 91064
-		private static IntPtr __AnimGraph_NativeFunctionPtr;
-
-		// Token: 0x040163B9 RID: 91065
+		// Token: 0x04011A47 RID: 72263
 		private static IntPtr __去掉HitNormal的Down_NativeFunctionPtr;
 
-		// Token: 0x040163BA RID: 91066
+		// Token: 0x04011A48 RID: 72264
 		private static IntPtr __计算碰撞反馈_NativeFunctionPtr;
 
-		// Token: 0x040163BB RID: 91067
+		// Token: 0x04011A49 RID: 72265
 		private static IntPtr __SetVehicle_NativeFunctionPtr;
 
-		// Token: 0x040163BC RID: 91068
+		// Token: 0x04011A4A RID: 72266
 		private static IntPtr __BlueprintUpdateAnimation_NativeFunctionPtr;
 
-		// Token: 0x040163BD RID: 91069
+		// Token: 0x04011A4B RID: 72267
 		private static IntPtr __BlueprintInitializeAnimation_NativeFunctionPtr;
 
-		// Token: 0x0200A420 RID: 42016
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __AnimGraph_FunctionParams
-		{
-			// Token: 0x04032259 RID: 205401
-			[FieldOffset(0)]
-			public byte AnimGraph;
-		}
-
-		// Token: 0x0200A421 RID: 42017
+		// Token: 0x02008F96 RID: 36758
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 84)]
 		protected ref struct __去掉HitNormal的Down_FunctionParams
 		{
-			// Token: 0x0403225A RID: 205402
+			// Token: 0x0402CD35 RID: 183605
 			[FieldOffset(0)]
 			public FVector HitNormal;
 
-			// Token: 0x0403225B RID: 205403
+			// Token: 0x0402CD36 RID: 183606
 			[FieldOffset(12)]
 			public FVector Result;
 		}
 
-		// Token: 0x0200A422 RID: 42018
+		// Token: 0x02008F97 RID: 36759
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 496)]
 		protected ref struct __计算碰撞反馈_FunctionParams
 		{
-			// Token: 0x0403225C RID: 205404
+			// Token: 0x0402CD37 RID: 183607
 			[FieldOffset(0)]
 			public float DeltaTime;
 		}
 
-		// Token: 0x0200A423 RID: 42019
+		// Token: 0x02008F98 RID: 36760
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __SetVehicle_FunctionParams
 		{
-			// Token: 0x0403225D RID: 205405
+			// Token: 0x0402CD38 RID: 183608
 			[FieldOffset(0)]
 			public int entityId;
 		}
 
-		// Token: 0x0200A424 RID: 42020
+		// Token: 0x02008F99 RID: 36761
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __BlueprintUpdateAnimation_FunctionParams
 		{
-			// Token: 0x0403225E RID: 205406
+			// Token: 0x0402CD39 RID: 183609
 			[FieldOffset(0)]
 			public float DeltaTimeX;
 		}

@@ -5,7 +5,6 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using Aki.TDConfigMgr.Component;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Effect;
 using CSharpScript.Game.Module.Inventory;
@@ -14,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007179 RID: 29049
+	// Token: 0x0200622D RID: 25133
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemExhibitComponent : EntityComponent
 	{
-		// Token: 0x06046F18 RID: 290584 RVA: 0x011EDBB8 File Offset: 0x011EBDB8
+		// Token: 0x0603C798 RID: 247704 RVA: 0x01148CAC File Offset: 0x01146EAC
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -32,7 +31,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F19 RID: 290585 RVA: 0x011EDC02 File Offset: 0x011EBE02
+		// Token: 0x0603C799 RID: 247705 RVA: 0x01148CF6 File Offset: 0x01146EF6
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -41,13 +40,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F1A RID: 290586 RVA: 0x011EDC38 File Offset: 0x011EBE38
+		// Token: 0x0603C79A RID: 247706 RVA: 0x01148D2C File Offset: 0x01146F2C
 		protected override void OnActivate()
 		{
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.OnSceneInteractionShowCompleted, new Action(this.OnSceneInteractionShowCompleted));
 		}
 
-		// Token: 0x06046F1B RID: 290587 RVA: 0x011EDC5C File Offset: 0x011EBE5C
+		// Token: 0x0603C79B RID: 247707 RVA: 0x01148D50 File Offset: 0x01146F50
 		private void InitSkeletalMeshComponent()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -91,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.RefreshSkeletalMeshComponent(this.CreatureDataComp.ExhibitionItemId, true);
 		}
 
-		// Token: 0x06046F1C RID: 290588 RVA: 0x011EDDEC File Offset: 0x011EBFEC
+		// Token: 0x0603C79C RID: 247708 RVA: 0x01148EE0 File Offset: 0x011470E0
 		protected override void OnTick(float delta)
 		{
 			if (this.ExhibitActor == null)
@@ -107,13 +106,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ExhibitActor.K2_AddActorLocalRotation(this.Rotator.ToUeRotator(), false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x06046F1D RID: 290589 RVA: 0x011EDE4A File Offset: 0x011EC04A
+		// Token: 0x0603C79D RID: 247709 RVA: 0x01148F3E File Offset: 0x0114713E
 		protected void OnDeactivate()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnSceneInteractionShowCompleted, new Action(this.OnSceneInteractionShowCompleted));
 		}
 
-		// Token: 0x06046F1E RID: 290590 RVA: 0x011EDE6E File Offset: 0x011EC06E
+		// Token: 0x0603C79E RID: 247710 RVA: 0x01148F62 File Offset: 0x01147162
 		protected override bool OnEnd()
 		{
 			this.CancelPreLoad();
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F1F RID: 290591 RVA: 0x011EDEA8 File Offset: 0x011EC0A8
+		// Token: 0x0603C79F RID: 247711 RVA: 0x01148F9C File Offset: 0x0114719C
 		private void ReleaseEffect()
 		{
 			if (!EffectSystem.Instance.IsValid(this.EffectHandleId))
@@ -144,7 +143,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.EffectHandleId = 0;
 		}
 
-		// Token: 0x06046F20 RID: 290592 RVA: 0x011EDF20 File Offset: 0x011EC120
+		// Token: 0x0603C7A0 RID: 247712 RVA: 0x01149014 File Offset: 0x01147214
 		public void RefreshSkeletalMeshComponent(int id, bool forceRefresh = false)
 		{
 			if (this.ExhibitData == null)
@@ -173,7 +172,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F21 RID: 290593 RVA: 0x011EDFAC File Offset: 0x011EC1AC
+		// Token: 0x0603C7A1 RID: 247713 RVA: 0x011490A0 File Offset: 0x011472A0
 		public void HideSkeletalMeshComponent()
 		{
 			if (this.ExhibitData.ExhibitConfig.Type == EExhibitItemType.Phantom)
@@ -194,20 +193,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F22 RID: 290594 RVA: 0x011EE044 File Offset: 0x011EC244
+		// Token: 0x0603C7A2 RID: 247714 RVA: 0x01149138 File Offset: 0x01147338
 		private CharRenderingComponent CreateUiModelCharRenderingComponent()
 		{
 			CharRenderingComponent charRenderingComponent = this.ExhibitActor.AddComponentByClass(CharRenderingComponent.StaticClass(), false, MathUtils.Instance.DefaultTransform, false, default(FName)) as CharRenderingComponent;
 			charRenderingComponent.Init(ECharacterRenderingType.Npc);
 			charRenderingComponent.SetComponentTickEnabled(true);
-			if (Info.Instance.IsPlayInEditor)
-			{
-				ULGUIBPLibrary.AddInstanceComponent(this.ExhibitActor, charRenderingComponent);
-			}
 			return charRenderingComponent;
 		}
 
-		// Token: 0x06046F23 RID: 290595 RVA: 0x011EE0A8 File Offset: 0x011EC2A8
+		// Token: 0x0603C7A3 RID: 247715 RVA: 0x01149184 File Offset: 0x01147384
 		private unsafe void LoadWeaponSkeletalMesh(int id)
 		{
 			this.CanSelfRotate = false;
@@ -302,7 +297,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			});
 		}
 
-		// Token: 0x06046F24 RID: 290596 RVA: 0x011EE304 File Offset: 0x011EC504
+		// Token: 0x0603C7A4 RID: 247716 RVA: 0x011493E0 File Offset: 0x011475E0
 		private void LoadWeaponAnimList(List<string> standAnimList, Action<List<UAnimationAsset>> callback)
 		{
 			List<UAnimationAsset> animList = new List<UAnimationAsset>();
@@ -331,7 +326,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F25 RID: 290597 RVA: 0x011EE39C File Offset: 0x011EC59C
+		// Token: 0x0603C7A5 RID: 247717 RVA: 0x01149478 File Offset: 0x01147678
 		private void WeaponLoadComplete(int itemId, List<UAnimationAsset> animList)
 		{
 			if (this.SkeletonComponentList.Count == 0)
@@ -366,7 +361,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.DeltaSecondRotate = ((config.Value.RotateTime != 0) ? (360f / (float)config.Value.RotateTime) : 0f);
 		}
 
-		// Token: 0x06046F26 RID: 290598 RVA: 0x011EE4E0 File Offset: 0x011EC6E0
+		// Token: 0x0603C7A6 RID: 247718 RVA: 0x011495BC File Offset: 0x011477BC
 		private unsafe void LoadPhantomSkeletalMesh(int id)
 		{
 			if (this.ExhibitData == null)
@@ -397,7 +392,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			});
 		}
 
-		// Token: 0x06046F27 RID: 290599 RVA: 0x011EE554 File Offset: 0x011EC754
+		// Token: 0x0603C7A7 RID: 247719 RVA: 0x01149630 File Offset: 0x01147830
 		private void PhantomLoadComplete(UAnimationAsset animAsset)
 		{
 			if (this.SkeletonComponentList.Count == 0)
@@ -412,7 +407,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			uskeletalMeshComponent.PlayAnimation(animAsset, true);
 		}
 
-		// Token: 0x06046F28 RID: 290600 RVA: 0x011EE5B4 File Offset: 0x011EC7B4
+		// Token: 0x0603C7A8 RID: 247720 RVA: 0x01149690 File Offset: 0x01147890
 		private void LoadModelByModelId(List<int> modelIdList, Action finishCallBack)
 		{
 			List<string> meshPathList = new List<string>();
@@ -474,7 +469,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			});
 		}
 
-		// Token: 0x06046F29 RID: 290601 RVA: 0x011EE698 File Offset: 0x011EC898
+		// Token: 0x0603C7A9 RID: 247721 RVA: 0x01149774 File Offset: 0x01147974
 		private void CreateSkeletalMeshComponentList(AActor actor, List<USkeletalMesh> meshList)
 		{
 			foreach (USkeletalMesh newMesh in meshList)
@@ -486,15 +481,11 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				uskeletalMeshComponent.SetHiddenInGame(false, false);
 				uskeletalMeshComponent.SetComponentTickEnabled(true);
 				this.AttachToCharRenderingComponent(uskeletalMeshComponent);
-				if (Info.Instance.IsPlayInEditor)
-				{
-					ULGUIBPLibrary.AddInstanceComponent(actor, uskeletalMeshComponent);
-				}
 				this.SkeletonComponentList.Add(uskeletalMeshComponent);
 			}
 		}
 
-		// Token: 0x06046F2A RID: 290602 RVA: 0x011EE758 File Offset: 0x011EC958
+		// Token: 0x0603C7AA RID: 247722 RVA: 0x01149820 File Offset: 0x01147A20
 		private void AttachToCharRenderingComponent(USkeletalMeshComponent skeletalComponent)
 		{
 			if (this.ExhibitData.ExhibitConfig.Type == EExhibitItemType.Weapon)
@@ -508,21 +499,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F2B RID: 290603 RVA: 0x011EE7B0 File Offset: 0x011EC9B0
+		// Token: 0x0603C7AB RID: 247723 RVA: 0x01149878 File Offset: 0x01147A78
 		private void DestroyMeshComponent(List<USkeletalMeshComponent> meshCompList, AActor actor)
 		{
 			foreach (USkeletalMeshComponent uskeletalMeshComponent in meshCompList)
 			{
 				uskeletalMeshComponent.K2_DestroyComponent(actor);
-				if (Info.Instance.IsPlayInEditor)
-				{
-					ULGUIBPLibrary.RemoveInstanceComponent(actor, uskeletalMeshComponent);
-				}
 			}
 			meshCompList.Clear();
 		}
 
-		// Token: 0x06046F2C RID: 290604 RVA: 0x011EE818 File Offset: 0x011ECA18
+		// Token: 0x0603C7AC RID: 247724 RVA: 0x011498CC File Offset: 0x01147ACC
 		private void CancelPreLoad()
 		{
 			if (this.AnimHandleId != UiModelResourcesManager.Instance.InvalidValue)
@@ -543,7 +530,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CancelPreMeshStreaming();
 		}
 
-		// Token: 0x06046F2D RID: 290605 RVA: 0x011EE8C4 File Offset: 0x011ECAC4
+		// Token: 0x0603C7AD RID: 247725 RVA: 0x01149978 File Offset: 0x01147B78
 		private void StopAnimation()
 		{
 			foreach (USkeletalMeshComponent uskeletalMeshComponent in this.SkeletonComponentList)
@@ -552,7 +539,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F2E RID: 290606 RVA: 0x011EE914 File Offset: 0x011ECB14
+		// Token: 0x0603C7AE RID: 247726 RVA: 0x011499C8 File Offset: 0x01147BC8
 		private void CancelPreMeshStreaming()
 		{
 			if (this.MeshStreamTaskId != -1)
@@ -562,7 +549,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F2F RID: 290607 RVA: 0x011EE938 File Offset: 0x011ECB38
+		// Token: 0x0603C7AF RID: 247727 RVA: 0x011499EC File Offset: 0x01147BEC
 		private void LoadAnimByAnimPath(string standAnim, Action<UAnimationAsset> finishCallBack)
 		{
 			this.AnimHandleId = ResourceSystem.Instance.LoadAsync<UAnimationAsset>(standAnim, delegate([Nullable(2)] UAnimationAsset animAsset, string path)
@@ -581,7 +568,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, ResourceSystem.EResourceLoadPriority.Default, "Ui.PhantomUi");
 		}
 
-		// Token: 0x06046F30 RID: 290608 RVA: 0x011EE984 File Offset: 0x011ECB84
+		// Token: 0x0603C7B0 RID: 247728 RVA: 0x01149A38 File Offset: 0x01147C38
 		private void LoadSecondAnimByAnimPath(string secondAnim, Action<UAnimationAsset> finishCallBack)
 		{
 			this.SecondAnimHandleId = ResourceSystem.Instance.LoadAsync<UAnimationAsset>(secondAnim, delegate([Nullable(2)] UAnimationAsset animAsset, string path)
@@ -600,7 +587,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, ResourceSystem.EResourceLoadPriority.Default, "Ui.PhantomUi");
 		}
 
-		// Token: 0x06046F31 RID: 290609 RVA: 0x011EE9D0 File Offset: 0x011ECBD0
+		// Token: 0x0603C7B1 RID: 247729 RVA: 0x01149A84 File Offset: 0x01147C84
 		private List<Transform> GetWeaponExhibitTransform(ExhibitWeaponTransform transformConfig, bool hasSubMesh)
 		{
 			List<Transform> list = new List<Transform>();
@@ -619,7 +606,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return list;
 		}
 
-		// Token: 0x06046F32 RID: 290610 RVA: 0x011EEB80 File Offset: 0x011ECD80
+		// Token: 0x0603C7B2 RID: 247730 RVA: 0x01149C34 File Offset: 0x01147E34
 		private Transform GetPhantomSkeletalMeshTransform(int itemId)
 		{
 			ExhibitPhantom? config = ConfigExhibitPhantomById.GetConfig(InventoryConfig.Instance.GetPhantomItemConfig(itemId).Value.MonsterId, true);
@@ -632,7 +619,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return Transform.Create(rotator.Quaternion(null), inT, inS);
 		}
 
-		// Token: 0x06046F33 RID: 290611 RVA: 0x011EEC2C File Offset: 0x011ECE2C
+		// Token: 0x0603C7B3 RID: 247731 RVA: 0x01149CE0 File Offset: 0x01147EE0
 		public void SetExhibitShowEffect(bool isActive)
 		{
 			if (!isActive)
@@ -660,13 +647,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			instance2.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06046F34 RID: 290612 RVA: 0x011EECD8 File Offset: 0x011ECED8
+		// Token: 0x0603C7B4 RID: 247732 RVA: 0x01149D8C File Offset: 0x01147F8C
 		private void OnSceneInteractionShowCompleted()
 		{
 			this.InitSkeletalMeshComponent();
 		}
 
-		// Token: 0x06046F35 RID: 290613 RVA: 0x011EECE0 File Offset: 0x011ECEE0
+		// Token: 0x0603C7B5 RID: 247733 RVA: 0x01149D94 File Offset: 0x01147F94
 		[NullableContext(2)]
 		public IExhibitItemType GetExhibitConfig()
 		{
@@ -677,13 +664,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.ExhibitData.ExhibitConfig;
 		}
 
-		// Token: 0x06046F36 RID: 290614 RVA: 0x011EECF7 File Offset: 0x011ECEF7
+		// Token: 0x0603C7B6 RID: 247734 RVA: 0x01149DAB File Offset: 0x01147FAB
 		public int GetItemId()
 		{
 			return this.CreatureDataComp.ExhibitionItemId;
 		}
 
-		// Token: 0x06046F37 RID: 290615 RVA: 0x011EED04 File Offset: 0x011ECF04
+		// Token: 0x0603C7B7 RID: 247735 RVA: 0x01149DB8 File Offset: 0x01147FB8
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -691,177 +678,172 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemExhibitComponent sceneItemExhibitComponent = (SceneItemExhibitComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemExhibitComponent.ActorComp == null)
 			{
-				if (sceneItemExhibitComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (sceneItemExhibitComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateComponent"))
-			{
-				if (sceneItemExhibitComponent.StateComponent == null)
-				{
-					this.StateComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComponent), "StateComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ExhibitData"))
-			{
-				if (sceneItemExhibitComponent.ExhibitData == null)
-				{
-					this.ExhibitData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ExhibitComponent>(this.ExhibitData), "ExhibitData"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ExhibitActor"))
-			{
-				if (sceneItemExhibitComponent.ExhibitActor == null)
-				{
-					this.ExhibitActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.ExhibitActor), "ExhibitActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LoadHandleId"))
-			{
-				this.LoadHandleId = sceneItemExhibitComponent.LoadHandleId;
-			}
-			if (base.CanResetComponentProperty("MeshStreamTaskId"))
-			{
-				this.MeshStreamTaskId = sceneItemExhibitComponent.MeshStreamTaskId;
-			}
-			if (base.CanResetComponentProperty("AnimHandleId"))
-			{
-				this.AnimHandleId = sceneItemExhibitComponent.AnimHandleId;
-			}
-			if (base.CanResetComponentProperty("SecondAnimHandleId"))
-			{
-				this.SecondAnimHandleId = sceneItemExhibitComponent.SecondAnimHandleId;
-			}
-			if (base.CanResetComponentProperty("CharRenderingComponent"))
-			{
-				this.CharRenderingComponent = sceneItemExhibitComponent.CharRenderingComponent;
-			}
-			if (base.CanResetComponentProperty("SkeletonComponentList"))
-			{
-				if (sceneItemExhibitComponent.SkeletonComponentList == null)
-				{
-					this.SkeletonComponentList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<USkeletalMeshComponent>>(this.SkeletonComponentList), "SkeletonComponentList"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CanSelfRotate"))
-			{
-				this.CanSelfRotate = sceneItemExhibitComponent.CanSelfRotate;
-			}
-			if (base.CanResetComponentProperty("DeltaSecondRotate"))
-			{
-				this.DeltaSecondRotate = sceneItemExhibitComponent.DeltaSecondRotate;
-			}
-			if (base.CanResetComponentProperty("Rotator") && sceneItemExhibitComponent.Rotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.Rotator), "Rotator"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EffectPath"))
+			if (sceneItemExhibitComponent.CreatureDataComp == null)
 			{
-				this.EffectPath = sceneItemExhibitComponent.EffectPath;
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("EffectTransform") && sceneItemExhibitComponent.EffectTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.EffectTransform), "EffectTransform"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EffectHandleId"))
+			if (sceneItemExhibitComponent.StateComponent == null)
 			{
-				this.EffectHandleId = sceneItemExhibitComponent.EffectHandleId;
+				this.StateComponent = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComponent), "StateComponent"))
+			{
+				return false;
+			}
+			if (sceneItemExhibitComponent.ExhibitData == null)
+			{
+				this.ExhibitData = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExhibitData), "ExhibitData"))
+			{
+				return false;
+			}
+			if (sceneItemExhibitComponent.ExhibitActor == null)
+			{
+				this.ExhibitActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExhibitActor), "ExhibitActor"))
+			{
+				return false;
+			}
+			this.LoadHandleId = sceneItemExhibitComponent.LoadHandleId;
+			this.MeshStreamTaskId = sceneItemExhibitComponent.MeshStreamTaskId;
+			this.AnimHandleId = sceneItemExhibitComponent.AnimHandleId;
+			this.SecondAnimHandleId = sceneItemExhibitComponent.SecondAnimHandleId;
+			this.CharRenderingComponent = sceneItemExhibitComponent.CharRenderingComponent;
+			if (sceneItemExhibitComponent.SkeletonComponentList == null)
+			{
+				this.SkeletonComponentList = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkeletonComponentList), "SkeletonComponentList"))
+			{
+				return false;
+			}
+			this.CanSelfRotate = sceneItemExhibitComponent.CanSelfRotate;
+			this.DeltaSecondRotate = sceneItemExhibitComponent.DeltaSecondRotate;
+			if (sceneItemExhibitComponent.Rotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.Rotator), "Rotator"))
+			{
+				return false;
+			}
+			this.EffectPath = sceneItemExhibitComponent.EffectPath;
+			if (sceneItemExhibitComponent.EffectTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EffectTransform), "EffectTransform"))
+			{
+				return false;
+			}
+			this.EffectHandleId = sceneItemExhibitComponent.EffectHandleId;
 			return true;
 		}
 
-		// Token: 0x04025431 RID: 152625
+		// Token: 0x17007240 RID: 29248
+		// (get) Token: 0x0603C7B8 RID: 247736 RVA: 0x01149F8A File Offset: 0x0114818A
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007241 RID: 29249
+		// (get) Token: 0x0603C7B9 RID: 247737 RVA: 0x01149F8D File Offset: 0x0114818D
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007242 RID: 29250
+		// (get) Token: 0x0603C7BA RID: 247738 RVA: 0x01149F90 File Offset: 0x01148190
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007243 RID: 29251
+		// (get) Token: 0x0603C7BB RID: 247739 RVA: 0x01149F93 File Offset: 0x01148193
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020098 RID: 131224
 		private const string EXHIBIT_ACTOR_REFERENCE_KEY = "Model";
 
-		// Token: 0x04025432 RID: 152626
+		// Token: 0x04020099 RID: 131225
 		[Nullable(2)]
 		protected SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025433 RID: 152627
+		// Token: 0x0402009A RID: 131226
 		[Nullable(2)]
 		protected CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025434 RID: 152628
+		// Token: 0x0402009B RID: 131227
 		[Nullable(2)]
 		protected SceneItemStateComponent StateComponent;
 
-		// Token: 0x04025435 RID: 152629
+		// Token: 0x0402009C RID: 131228
 		[Nullable(2)]
 		protected ExhibitComponent ExhibitData;
 
-		// Token: 0x04025436 RID: 152630
+		// Token: 0x0402009D RID: 131229
 		[Nullable(2)]
 		private AActor ExhibitActor;
 
-		// Token: 0x04025437 RID: 152631
+		// Token: 0x0402009E RID: 131230
 		private int LoadHandleId = UiModelResourcesManager.Instance.InvalidValue;
 
-		// Token: 0x04025438 RID: 152632
+		// Token: 0x0402009F RID: 131231
 		private int MeshStreamTaskId = -1;
 
-		// Token: 0x04025439 RID: 152633
+		// Token: 0x040200A0 RID: 131232
 		private int AnimHandleId = UiModelResourcesManager.Instance.InvalidValue;
 
-		// Token: 0x0402543A RID: 152634
+		// Token: 0x040200A1 RID: 131233
 		private int SecondAnimHandleId = UiModelResourcesManager.Instance.InvalidValue;
 
-		// Token: 0x0402543B RID: 152635
+		// Token: 0x040200A2 RID: 131234
 		[Nullable(2)]
 		public CharRenderingComponent CharRenderingComponent;
 
-		// Token: 0x0402543C RID: 152636
+		// Token: 0x040200A3 RID: 131235
 		protected List<USkeletalMeshComponent> SkeletonComponentList = new List<USkeletalMeshComponent>();
 
-		// Token: 0x0402543D RID: 152637
+		// Token: 0x040200A4 RID: 131236
 		private bool CanSelfRotate;
 
-		// Token: 0x0402543E RID: 152638
+		// Token: 0x040200A5 RID: 131237
 		private float DeltaSecondRotate;
 
-		// Token: 0x0402543F RID: 152639
+		// Token: 0x040200A6 RID: 131238
 		private readonly Rotator Rotator = Rotator.Create();
 
-		// Token: 0x04025440 RID: 152640
+		// Token: 0x040200A7 RID: 131239
 		private string EffectPath = "";
 
-		// Token: 0x04025441 RID: 152641
+		// Token: 0x040200A8 RID: 131240
 		private readonly Transform EffectTransform = Transform.Create();
 
-		// Token: 0x04025442 RID: 152642
+		// Token: 0x040200A9 RID: 131241
 		private int EffectHandleId;
 	}
 }

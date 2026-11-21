@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CC0 RID: 7360
+// Token: 0x02001182 RID: 4482
 [NullableContext(1)]
 [Nullable(0)]
 public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 {
-	// Token: 0x0600DEA5 RID: 56997 RVA: 0x00341820 File Offset: 0x0033FA20
+	// Token: 0x0600B2C2 RID: 45762 RVA: 0x0034D248 File Offset: 0x0034B448
 	public KurotatoTreasureBoxTrackedMarker(int entityId)
 	{
 		this.TrackedEntityId = entityId;
@@ -29,7 +29,7 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		this.LimitB = Math.Min(712.5f, (((uiRootItem != null) ? uiRootItem.GetHeight() : 0f) - 495f) / 2f);
 	}
 
-	// Token: 0x0600DEA6 RID: 56998 RVA: 0x003418FE File Offset: 0x0033FAFE
+	// Token: 0x0600B2C3 RID: 45763 RVA: 0x0034D326 File Offset: 0x0034B526
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DEA7 RID: 56999 RVA: 0x00341921 File Offset: 0x0033FB21
+	// Token: 0x0600B2C4 RID: 45764 RVA: 0x0034D349 File Offset: 0x0034B549
 	protected override void OnStart()
 	{
 		this.DirectionArrow = base.GetItem(0);
@@ -52,7 +52,7 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600DEA8 RID: 57000 RVA: 0x0034195C File Offset: 0x0033FB5C
+	// Token: 0x0600B2C5 RID: 45765 RVA: 0x0034D384 File Offset: 0x0034B584
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
@@ -74,19 +74,19 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		animSequencePlayer2.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x0600DEA9 RID: 57001 RVA: 0x003419C9 File Offset: 0x0033FBC9
+	// Token: 0x0600B2C6 RID: 45766 RVA: 0x0034D3F1 File Offset: 0x0034B5F1
 	protected override void OnBeforeShow()
 	{
 		this.TickEnabled = true;
 	}
 
-	// Token: 0x0600DEAA RID: 57002 RVA: 0x003419D2 File Offset: 0x0033FBD2
+	// Token: 0x0600B2C7 RID: 45767 RVA: 0x0034D3FA File Offset: 0x0034B5FA
 	protected override void OnBeforeHide()
 	{
 		this.TickEnabled = false;
 	}
 
-	// Token: 0x0600DEAB RID: 57003 RVA: 0x003419DC File Offset: 0x0033FBDC
+	// Token: 0x0600B2C8 RID: 45768 RVA: 0x0034D404 File Offset: 0x0034B604
 	public UniTask CreateByPoolResourceIdAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null)
 	{
 		KurotatoTreasureBoxTrackedMarker.<CreateByPoolResourceIdAsync>d__29 <CreateByPoolResourceIdAsync>d__;
@@ -99,7 +99,7 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		return <CreateByPoolResourceIdAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DEAC RID: 57004 RVA: 0x00341A30 File Offset: 0x0033FC30
+	// Token: 0x0600B2C9 RID: 45769 RVA: 0x0034D458 File Offset: 0x0034B658
 	private UniTask CreatePoolActorAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null)
 	{
 		KurotatoTreasureBoxTrackedMarker.<CreatePoolActorAsync>d__30 <CreatePoolActorAsync>d__;
@@ -112,13 +112,13 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		return <CreatePoolActorAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DEAD RID: 57005 RVA: 0x00341A83 File Offset: 0x0033FC83
+	// Token: 0x0600B2CA RID: 45770 RVA: 0x0034D4AB File Offset: 0x0034B6AB
 	public void Recycle()
 	{
 		UiActorPool.Instance.RecycleAsync(this.MarkerActor, this.ResourceId);
 	}
 
-	// Token: 0x0600DEAE RID: 57006 RVA: 0x00341A9C File Offset: 0x0033FC9C
+	// Token: 0x0600B2CB RID: 45771 RVA: 0x0034D4C4 File Offset: 0x0034B6C4
 	public void DelayRecycle()
 	{
 		LevelSequencePlayer animSequencePlayer = this.AnimSequencePlayer;
@@ -142,7 +142,7 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		animSequencePlayer3.PlayOrReplaySequenceByName("Close", false, null);
 	}
 
-	// Token: 0x0600DEAF RID: 57007 RVA: 0x00341B10 File Offset: 0x0033FD10
+	// Token: 0x0600B2CC RID: 45772 RVA: 0x0034D538 File Offset: 0x0034B738
 	public void OnTick(float deltaTime)
 	{
 		if (!this.TickEnabled || this.HasHidden)
@@ -169,7 +169,7 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		this.UpdateTargetPosition(this.TrackedEntity.KscEntity.D_K2_GetActorLocation());
 	}
 
-	// Token: 0x0600DEB0 RID: 57008 RVA: 0x00341B9C File Offset: 0x0033FD9C
+	// Token: 0x0600B2CD RID: 45773 RVA: 0x0034D5C4 File Offset: 0x0034B7C4
 	public void UpdateTargetPosition(FVectorDouble targetPosition)
 	{
 		TsCharacterController characterController = Global.CharacterController;
@@ -205,7 +205,7 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DEB1 RID: 57009 RVA: 0x00341D38 File Offset: 0x0033FF38
+	// Token: 0x0600B2CE RID: 45774 RVA: 0x0034D760 File Offset: 0x0034B960
 	protected bool ClampToEllipse(Vector2D vector, bool inFront)
 	{
 		double x = vector.X;
@@ -221,82 +221,82 @@ public class KurotatoTreasureBoxTrackedMarker : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x0400663C RID: 26172
+	// Token: 0x0400671B RID: 26395
 	private const float MAX_A = 1176f;
 
-	// Token: 0x0400663D RID: 26173
+	// Token: 0x0400671C RID: 26396
 	private const float MARGIN_A = 1008f;
 
-	// Token: 0x0400663E RID: 26174
+	// Token: 0x0400671D RID: 26397
 	private const float MAX_B = 712.5f;
 
-	// Token: 0x0400663F RID: 26175
+	// Token: 0x0400671E RID: 26398
 	private const float MARGIN_B = 495f;
 
-	// Token: 0x04006640 RID: 26176
+	// Token: 0x0400671F RID: 26399
 	private const float RAD_2_DEG = 57.295776f;
 
-	// Token: 0x04006641 RID: 26177
+	// Token: 0x04006720 RID: 26400
 	private const float AUTO_HIDE_DELAY_MS = 3000f;
 
-	// Token: 0x04006642 RID: 26178
+	// Token: 0x04006721 RID: 26401
 	[Nullable(2)]
 	protected UUIItem DirectionArrow;
 
-	// Token: 0x04006643 RID: 26179
+	// Token: 0x04006722 RID: 26402
 	[Nullable(2)]
 	protected UiPoolActor MarkerActor;
 
-	// Token: 0x04006644 RID: 26180
+	// Token: 0x04006723 RID: 26403
 	[Nullable(2)]
 	protected string ResourceId;
 
-	// Token: 0x04006645 RID: 26181
+	// Token: 0x04006724 RID: 26404
 	[Nullable(2)]
 	protected LevelSequencePlayer AnimSequencePlayer;
 
-	// Token: 0x04006646 RID: 26182
+	// Token: 0x04006725 RID: 26405
 	protected FVector2D ScreenPositionRef;
 
-	// Token: 0x04006647 RID: 26183
+	// Token: 0x04006726 RID: 26406
 	protected int TrackedEntityId;
 
-	// Token: 0x04006648 RID: 26184
+	// Token: 0x04006727 RID: 26407
 	[Nullable(2)]
 	protected KscEntityHandle TrackedEntity;
 
-	// Token: 0x04006649 RID: 26185
+	// Token: 0x04006728 RID: 26408
 	protected Vector2D ScreenPosition;
 
-	// Token: 0x0400664A RID: 26186
+	// Token: 0x04006729 RID: 26409
 	protected Vector2D LastScreenPosition;
 
-	// Token: 0x0400664B RID: 26187
+	// Token: 0x0400672A RID: 26410
 	protected readonly Vector2D PointTransport = new Vector2D(1.0, -1.0);
 
-	// Token: 0x0400664C RID: 26188
+	// Token: 0x0400672B RID: 26411
 	protected Rotator TempRotator;
 
-	// Token: 0x0400664D RID: 26189
+	// Token: 0x0400672C RID: 26412
 	protected float LimitA;
 
-	// Token: 0x0400664E RID: 26190
+	// Token: 0x0400672D RID: 26413
 	protected float LimitB;
 
-	// Token: 0x0400664F RID: 26191
+	// Token: 0x0400672E RID: 26414
 	protected bool TickEnabled;
 
-	// Token: 0x04006650 RID: 26192
+	// Token: 0x0400672F RID: 26415
 	protected float ElapsedMs;
 
-	// Token: 0x04006651 RID: 26193
+	// Token: 0x04006730 RID: 26416
 	protected bool HasHidden;
 
-	// Token: 0x020082AF RID: 33455
+	// Token: 0x02007438 RID: 29752
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AA21 RID: 174625
+		// Token: 0x04025D49 RID: 154953
 		public const int DirectionArrow = 0;
 	}
 }

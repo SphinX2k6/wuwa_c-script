@@ -1,38 +1,38 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020026FA RID: 9978
+// Token: 0x02001BE5 RID: 7141
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsRankData : IRacingBetsRankData
 {
-	// Token: 0x17001AC0 RID: 6848
-	// (get) Token: 0x0601475A RID: 83802 RVA: 0x0052BB14 File Offset: 0x00529D14
-	// (set) Token: 0x0601475B RID: 83803 RVA: 0x0052BB1C File Offset: 0x00529D1C
+	// Token: 0x17001AF8 RID: 6904
+	// (get) Token: 0x06011C3C RID: 72764 RVA: 0x0053A830 File Offset: 0x00538A30
+	// (set) Token: 0x06011C3D RID: 72765 RVA: 0x0053A838 File Offset: 0x00538A38
 	public int PlayerId { get; set; }
 
-	// Token: 0x17001AC1 RID: 6849
-	// (get) Token: 0x0601475C RID: 83804 RVA: 0x0052BB25 File Offset: 0x00529D25
-	// (set) Token: 0x0601475D RID: 83805 RVA: 0x0052BB2D File Offset: 0x00529D2D
+	// Token: 0x17001AF9 RID: 6905
+	// (get) Token: 0x06011C3E RID: 72766 RVA: 0x0053A841 File Offset: 0x00538A41
+	// (set) Token: 0x06011C3F RID: 72767 RVA: 0x0053A849 File Offset: 0x00538A49
 	public int PlayerHeadPhoto { get; set; }
 
-	// Token: 0x17001AC2 RID: 6850
-	// (get) Token: 0x0601475E RID: 83806 RVA: 0x0052BB36 File Offset: 0x00529D36
-	// (set) Token: 0x0601475F RID: 83807 RVA: 0x0052BB3E File Offset: 0x00529D3E
+	// Token: 0x17001AFA RID: 6906
+	// (get) Token: 0x06011C40 RID: 72768 RVA: 0x0053A852 File Offset: 0x00538A52
+	// (set) Token: 0x06011C41 RID: 72769 RVA: 0x0053A85A File Offset: 0x00538A5A
 	public int RankNum { get; set; }
 
-	// Token: 0x17001AC3 RID: 6851
-	// (get) Token: 0x06014760 RID: 83808 RVA: 0x0052BB47 File Offset: 0x00529D47
-	// (set) Token: 0x06014761 RID: 83809 RVA: 0x0052BB4F File Offset: 0x00529D4F
+	// Token: 0x17001AFB RID: 6907
+	// (get) Token: 0x06011C42 RID: 72770 RVA: 0x0053A863 File Offset: 0x00538A63
+	// (set) Token: 0x06011C43 RID: 72771 RVA: 0x0053A86B File Offset: 0x00538A6B
 	public string Name { get; set; }
 
-	// Token: 0x17001AC4 RID: 6852
-	// (get) Token: 0x06014762 RID: 83810 RVA: 0x0052BB58 File Offset: 0x00529D58
-	// (set) Token: 0x06014763 RID: 83811 RVA: 0x0052BB60 File Offset: 0x00529D60
+	// Token: 0x17001AFC RID: 6908
+	// (get) Token: 0x06011C44 RID: 72772 RVA: 0x0053A874 File Offset: 0x00538A74
+	// (set) Token: 0x06011C45 RID: 72773 RVA: 0x0053A87C File Offset: 0x00538A7C
 	public int HitNum { get; set; }
 
-	// Token: 0x17001AC5 RID: 6853
-	// (get) Token: 0x06014764 RID: 83812 RVA: 0x0052BB69 File Offset: 0x00529D69
-	// (set) Token: 0x06014765 RID: 83813 RVA: 0x0052BB71 File Offset: 0x00529D71
+	// Token: 0x17001AFD RID: 6909
+	// (get) Token: 0x06011C46 RID: 72774 RVA: 0x0053A885 File Offset: 0x00538A85
+	// (set) Token: 0x06011C47 RID: 72775 RVA: 0x0053A88D File Offset: 0x00538A8D
 	public int CashNum { get; set; }
 }

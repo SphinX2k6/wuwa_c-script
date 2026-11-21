@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200165B RID: 5723
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017CB RID: 6091
 	public class EnterNpcVehicle : ActionParams
 	{
-		// Token: 0x06007CC9 RID: 31945 RVA: 0x0012BD08 File Offset: 0x00129F08
+		// Token: 0x060083A7 RID: 33703 RVA: 0x0013ADB4 File Offset: 0x00138FB4
 		private EnterNpcVehicle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007CCA RID: 31946 RVA: 0x0012BD40 File Offset: 0x00129F40
+		// Token: 0x060083A8 RID: 33704 RVA: 0x0013ADEC File Offset: 0x00138FEC
 		public static EnterNpcVehicle Create([Nullable(2)] EnterNpcVehicle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CCB RID: 31947 RVA: 0x0012BD53 File Offset: 0x00129F53
+		// Token: 0x060083A9 RID: 33705 RVA: 0x0013ADFF File Offset: 0x00138FFF
 		public static EnterNpcVehicle CreateFromSetValue([Nullable(2)] EnterNpcVehicle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CCC RID: 31948 RVA: 0x0012BD66 File Offset: 0x00129F66
+		// Token: 0x060083AA RID: 33706 RVA: 0x0013AE12 File Offset: 0x00139012
 		public EnterNpcVehicle_SetValue ToSetValue()
 		{
 			return new EnterNpcVehicle_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002936 RID: 10550
-		// (get) Token: 0x06007CCD RID: 31949 RVA: 0x0012BD85 File Offset: 0x00129F85
-		// (set) Token: 0x06007CCE RID: 31950 RVA: 0x0012BDB0 File Offset: 0x00129FB0
+		// Token: 0x17002B21 RID: 11041
+		// (get) Token: 0x060083AB RID: 33707 RVA: 0x0013AE31 File Offset: 0x00139031
+		// (set) Token: 0x060083AC RID: 33708 RVA: 0x0013AE5C File Offset: 0x0013905C
 		public virtual int Target
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002937 RID: 10551
-		// (get) Token: 0x06007CCF RID: 31951 RVA: 0x0012BDBE File Offset: 0x00129FBE
-		// (set) Token: 0x06007CD0 RID: 31952 RVA: 0x0012BDE9 File Offset: 0x00129FE9
+		// Token: 0x17002B22 RID: 11042
+		// (get) Token: 0x060083AD RID: 33709 RVA: 0x0013AE6A File Offset: 0x0013906A
+		// (set) Token: 0x060083AE RID: 33710 RVA: 0x0013AE95 File Offset: 0x00139095
 		public virtual int Seat
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004CAF RID: 19631
+		// Token: 0x040050AA RID: 20650
 		[Nullable(2)]
 		protected new EnterNpcVehicle FbInstance;
 
-		// Token: 0x04004CB0 RID: 19632
+		// Token: 0x040050AB RID: 20651
 		[Nullable(2)]
 		protected EnterNpcVehicle_SetValue PocoInterface;
 	}

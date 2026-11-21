@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028AB RID: 10411
+	// Token: 0x0200083D RID: 2109
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SpinePlugin.SpineAtlasAsset")]
 	[UnrealStructLayout(112, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 112)]
 	public class USpineAtlasAsset : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602699C RID: 158108 RVA: 0x003AE7ED File Offset: 0x003AC9ED
+		// Token: 0x0600B7C2 RID: 47042 RVA: 0x001269B1 File Offset: 0x00124BB1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USpineAtlasAsset._ClassPtr;
 		}
 
-		// Token: 0x0602699D RID: 158109 RVA: 0x003AE7FC File Offset: 0x003AC9FC
+		// Token: 0x0600B7C3 RID: 47043 RVA: 0x001269C0 File Offset: 0x00124BC0
 		public USpineAtlasAsset() : this(BuiltinUtils.AllocNativeUObject(USpineAtlasAsset.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602699E RID: 158110 RVA: 0x003AE824 File Offset: 0x003ACA24
+		// Token: 0x0600B7C4 RID: 47044 RVA: 0x001269E8 File Offset: 0x00124BE8
 		public USpineAtlasAsset(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USpineAtlasAsset.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170094CC RID: 38092
-		// (get) Token: 0x0602699F RID: 158111 RVA: 0x003AE858 File Offset: 0x003ACA58
-		// (set) Token: 0x060269A0 RID: 158112 RVA: 0x003AE891 File Offset: 0x003ACA91
+		// Token: 0x17002249 RID: 8777
+		// (get) Token: 0x0600B7C5 RID: 47045 RVA: 0x00126A1C File Offset: 0x00124C1C
+		// (set) Token: 0x0600B7C6 RID: 47046 RVA: 0x00126A55 File Offset: 0x00124C55
 		public TArray<UTexture2D> atlasPages
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094CD RID: 38093
-		// (get) Token: 0x060269A1 RID: 158113 RVA: 0x003AE89F File Offset: 0x003ACA9F
-		// (set) Token: 0x060269A2 RID: 158114 RVA: 0x003AE8B3 File Offset: 0x003ACAB3
+		// Token: 0x1700224A RID: 8778
+		// (get) Token: 0x0600B7C7 RID: 47047 RVA: 0x00126A63 File Offset: 0x00124C63
+		// (set) Token: 0x0600B7C8 RID: 47048 RVA: 0x00126A77 File Offset: 0x00124C77
 		public unsafe string rawData
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094CE RID: 38094
-		// (get) Token: 0x060269A3 RID: 158115 RVA: 0x003AE8C8 File Offset: 0x003ACAC8
-		// (set) Token: 0x060269A4 RID: 158116 RVA: 0x003AE8DC File Offset: 0x003ACADC
+		// Token: 0x1700224B RID: 8779
+		// (get) Token: 0x0600B7C9 RID: 47049 RVA: 0x00126A8C File Offset: 0x00124C8C
+		// (set) Token: 0x0600B7CA RID: 47050 RVA: 0x00126AA0 File Offset: 0x00124CA0
 		public unsafe FName atlasFileName
 		{
 			get
@@ -80,30 +80,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060269A5 RID: 158117 RVA: 0x003AE8F1 File Offset: 0x003ACAF1
+		// Token: 0x0600B7CB RID: 47051 RVA: 0x00126AB5 File Offset: 0x00124CB5
 		static USpineAtlasAsset()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SpinePlugin.SpineAtlasAsset");
 		}
 
-		// Token: 0x060269A6 RID: 158118 RVA: 0x003AE8FF File Offset: 0x003ACAFF
+		// Token: 0x0600B7CC RID: 47052 RVA: 0x00126AC3 File Offset: 0x00124CC3
 		protected USpineAtlasAsset(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015338 RID: 86840
+		// Token: 0x0400537D RID: 21373
 		public new const string __ObjectPath = "/Script/SpinePlugin.SpineAtlasAsset";
 
-		// Token: 0x04015339 RID: 86841
+		// Token: 0x0400537E RID: 21374
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401533A RID: 86842
+		// Token: 0x0400537F RID: 21375
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401533B RID: 86843
+		// Token: 0x04005380 RID: 21376
 		internal static int __PropertyOffset_atlasPages;
 
-		// Token: 0x0401533C RID: 86844
+		// Token: 0x04005381 RID: 21377
 		[Nullable(new byte[]
 		{
 			2,
@@ -111,10 +111,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UTexture2D> _atlasPages;
 
-		// Token: 0x0401533D RID: 86845
+		// Token: 0x04005382 RID: 21378
 		internal static int __PropertyOffset_rawData;
 
-		// Token: 0x0401533E RID: 86846
+		// Token: 0x04005383 RID: 21379
 		internal static int __PropertyOffset_atlasFileName;
 	}
 }

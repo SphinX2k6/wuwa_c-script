@@ -9,23 +9,23 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B71 RID: 27505
+	// Token: 0x02005CE9 RID: 23785
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSetBattleState : LevelEventBase
 	{
-		// Token: 0x0604422F RID: 279087 RVA: 0x010C8010 File Offset: 0x010C6210
+		// Token: 0x0603A381 RID: 238465 RVA: 0x01071C84 File Offset: 0x0106FE84
 		public LevelEventSetBattleState(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044230 RID: 279088 RVA: 0x010C8024 File Offset: 0x010C6224
+		// Token: 0x0603A382 RID: 238466 RVA: 0x01071C98 File Offset: 0x0106FE98
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044231 RID: 279089 RVA: 0x010C8030 File Offset: 0x010C6230
+		// Token: 0x0603A383 RID: 238467 RVA: 0x01071CA4 File Offset: 0x0106FEA4
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			SetBattleState setBattleState = inParams as SetBattleState;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044232 RID: 279090 RVA: 0x010C81DC File Offset: 0x010C63DC
+		// Token: 0x0603A384 RID: 238468 RVA: 0x01071E50 File Offset: 0x01070050
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			ESetBattleStateType type = this.StateOption.Type;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.NotifyGatherToEntity(this.NotifyData);
 		}
 
-		// Token: 0x06044233 RID: 279091 RVA: 0x010C8210 File Offset: 0x010C6410
+		// Token: 0x0603A385 RID: 238469 RVA: 0x01071E84 File Offset: 0x01070084
 		private void SetBattleTag()
 		{
 			ISetBattleTag setBattleTag = this.StateOption as ISetBattleTag;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044234 RID: 279092 RVA: 0x010C8444 File Offset: 0x010C6644
+		// Token: 0x0603A386 RID: 238470 RVA: 0x010720B8 File Offset: 0x010702B8
 		private unsafe void AddTag(int pbDataId, EntityHandle handle, string tagName)
 		{
 			global::Log instance = global::Log.Instance;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044235 RID: 279093 RVA: 0x010C8554 File Offset: 0x010C6754
+		// Token: 0x0603A387 RID: 238471 RVA: 0x010721C8 File Offset: 0x010703C8
 		private unsafe void RemoveTag(int pbDataId, EntityHandle handle, string tagName)
 		{
 			global::Log instance = global::Log.Instance;
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044236 RID: 279094 RVA: 0x010C8664 File Offset: 0x010C6864
+		// Token: 0x0603A388 RID: 238472 RVA: 0x010722D8 File Offset: 0x010704D8
 		private void NotifyMonsterPerception(INotifyMonsterPerception stateOption)
 		{
 			List<AiController> list = new List<AiController>();
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044237 RID: 279095 RVA: 0x010C88C8 File Offset: 0x010C6AC8
+		// Token: 0x0603A389 RID: 238473 RVA: 0x0107253C File Offset: 0x0107073C
 		private void NotifyGatherToEntity(NotifyData data)
 		{
 			using (List<AiController>.Enumerator enumerator = data.Entities.GetEnumerator())
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}, (float)intConfig.Value, data.Entities.Count, 1f, null, null, true);
 		}
 
-		// Token: 0x06044238 RID: 279096 RVA: 0x010C8A2C File Offset: 0x010C6C2C
+		// Token: 0x0603A38A RID: 238474 RVA: 0x010726A0 File Offset: 0x010708A0
 		private unsafe void NotifyMonsterStandByTags(INotifyMonsterPlayStandbyTags config, GeneralContext context)
 		{
 			EntityContext entityContext = context as EntityContext;
@@ -470,7 +470,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044239 RID: 279097 RVA: 0x010C8C44 File Offset: 0x010C6E44
+		// Token: 0x0603A38B RID: 238475 RVA: 0x010728B8 File Offset: 0x01070AB8
 		protected override void OnReset()
 		{
 			foreach (TimerHandle handle in this.DelayTaskIds)
@@ -489,24 +489,24 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.FinishTaskNum = 0;
 		}
 
-		// Token: 0x0402394C RID: 145740
+		// Token: 0x0401EBEE RID: 125934
 		private readonly List<TimerHandle> DelayTaskIds = new List<TimerHandle>();
 
-		// Token: 0x0402394D RID: 145741
+		// Token: 0x0401EBEF RID: 125935
 		private int TotalTaskNum;
 
-		// Token: 0x0402394E RID: 145742
+		// Token: 0x0401EBF0 RID: 125936
 		private int FinishTaskNum;
 
-		// Token: 0x0402394F RID: 145743
+		// Token: 0x0401EBF1 RID: 125937
 		[Nullable(2)]
 		private ISendBattleStateType StateOption;
 
-		// Token: 0x04023950 RID: 145744
+		// Token: 0x0401EBF2 RID: 125938
 		[Nullable(2)]
 		private NotifyData NotifyData;
 
-		// Token: 0x04023951 RID: 145745
+		// Token: 0x0401EBF3 RID: 125939
 		[Nullable(2)]
 		private TimerHandle TimerId;
 	}

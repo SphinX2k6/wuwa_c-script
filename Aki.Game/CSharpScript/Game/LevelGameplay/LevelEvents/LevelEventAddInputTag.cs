@@ -9,17 +9,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AF0 RID: 27376
+	// Token: 0x02005C68 RID: 23656
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventAddInputTag : LevelEventBase
 	{
-		// Token: 0x06043FDA RID: 278490 RVA: 0x010AE23B File Offset: 0x010AC43B
+		// Token: 0x0603A12C RID: 237868 RVA: 0x01057AB7 File Offset: 0x01055CB7
 		public LevelEventAddInputTag(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06043FDB RID: 278491 RVA: 0x010AE250 File Offset: 0x010AC450
+		// Token: 0x0603A12D RID: 237869 RVA: 0x01057ACC File Offset: 0x01055CCC
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			});
 		}
 
-		// Token: 0x06043FDC RID: 278492 RVA: 0x010AE418 File Offset: 0x010AC618
+		// Token: 0x0603A12E RID: 237870 RVA: 0x01057C94 File Offset: 0x01055E94
 		protected override void OnUpdateGuarantee()
 		{
 			GuaranteeActionInfo p = new GuaranteeActionInfo
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Emit<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.AddGuaranteeAction, this.Type, this.BaseContext, p, null);
 		}
 
-		// Token: 0x0402388A RID: 145546
+		// Token: 0x0401EB2C RID: 125740
 		private readonly string Reason = "Input Limited Action";
 	}
 }

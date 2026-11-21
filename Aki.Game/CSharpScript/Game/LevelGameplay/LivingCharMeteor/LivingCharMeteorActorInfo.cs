@@ -4,25 +4,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 {
-	// Token: 0x02006AC6 RID: 27334
+	// Token: 0x02005C3E RID: 23614
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	internal class LivingCharMeteorActorInfo
 	{
-		// Token: 0x17009975 RID: 39285
-		// (get) Token: 0x06043EB0 RID: 278192 RVA: 0x010A6D2E File Offset: 0x010A4F2E
-		// (set) Token: 0x06043EB1 RID: 278193 RVA: 0x010A6D36 File Offset: 0x010A4F36
+		// Token: 0x17006E78 RID: 28280
+		// (get) Token: 0x06039FF9 RID: 237561 RVA: 0x010503DE File Offset: 0x0104E5DE
+		// (set) Token: 0x06039FFA RID: 237562 RVA: 0x010503E6 File Offset: 0x0104E5E6
 		[RequiredMember]
 		public AActor Actor { get; set; }
 
-		// Token: 0x17009976 RID: 39286
-		// (get) Token: 0x06043EB2 RID: 278194 RVA: 0x010A6D3F File Offset: 0x010A4F3F
-		// (set) Token: 0x06043EB3 RID: 278195 RVA: 0x010A6D47 File Offset: 0x010A4F47
+		// Token: 0x17006E79 RID: 28281
+		// (get) Token: 0x06039FFB RID: 237563 RVA: 0x010503EF File Offset: 0x0104E5EF
+		// (set) Token: 0x06039FFC RID: 237564 RVA: 0x010503F7 File Offset: 0x0104E5F7
 		[RequiredMember]
 		public FVectorDouble Location { get; set; }
 
-		// Token: 0x06043EB4 RID: 278196 RVA: 0x010A6D50 File Offset: 0x010A4F50
+		// Token: 0x06039FFD RID: 237565 RVA: 0x01050400 File Offset: 0x0104E600
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public LivingCharMeteorActorInfo()

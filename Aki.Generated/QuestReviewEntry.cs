@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F72 RID: 3954
+	// Token: 0x02001059 RID: 4185
 	public struct QuestReviewEntry : IFlatbufferObject
 	{
-		// Token: 0x17002BC1 RID: 11201
-		// (get) Token: 0x0600B5BF RID: 46527 RVA: 0x002D016C File Offset: 0x002CE36C
+		// Token: 0x17002C39 RID: 11321
+		// (get) Token: 0x0600BBFC RID: 48124 RVA: 0x002ECD48 File Offset: 0x002EAF48
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B5C0 RID: 46528 RVA: 0x002D0179 File Offset: 0x002CE379
+		// Token: 0x0600BBFD RID: 48125 RVA: 0x002ECD55 File Offset: 0x002EAF55
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B5C1 RID: 46529 RVA: 0x002D0180 File Offset: 0x002CE380
+		// Token: 0x0600BBFE RID: 48126 RVA: 0x002ECD5C File Offset: 0x002EAF5C
 		public static QuestReviewEntry GetRootAsQuestReviewEntry(ByteBuffer _bb)
 		{
 			return QuestReviewEntry.GetRootAsQuestReviewEntry(_bb, default(QuestReviewEntry));
 		}
 
-		// Token: 0x0600B5C2 RID: 46530 RVA: 0x002D019C File Offset: 0x002CE39C
+		// Token: 0x0600BBFF RID: 48127 RVA: 0x002ECD78 File Offset: 0x002EAF78
 		public static QuestReviewEntry GetRootAsQuestReviewEntry(ByteBuffer _bb, QuestReviewEntry obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B5C3 RID: 46531 RVA: 0x002D01B9 File Offset: 0x002CE3B9
+		// Token: 0x0600BC00 RID: 48128 RVA: 0x002ECD95 File Offset: 0x002EAF95
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B5C4 RID: 46532 RVA: 0x002D01C8 File Offset: 0x002CE3C8
+		// Token: 0x0600BC01 RID: 48129 RVA: 0x002ECDA4 File Offset: 0x002EAFA4
 		public QuestReviewEntry __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002BC2 RID: 11202
-		// (get) Token: 0x0600B5C5 RID: 46533 RVA: 0x002D01D8 File Offset: 0x002CE3D8
+		// Token: 0x17002C3A RID: 11322
+		// (get) Token: 0x0600BC02 RID: 48130 RVA: 0x002ECDB4 File Offset: 0x002EAFB4
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B5C6 RID: 46534 RVA: 0x002D0214 File Offset: 0x002CE414
+		// Token: 0x0600BC03 RID: 48131 RVA: 0x002ECDF0 File Offset: 0x002EAFF0
 		public int QuestTabs(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002BC3 RID: 11203
-		// (get) Token: 0x0600B5C7 RID: 46535 RVA: 0x002D0254 File Offset: 0x002CE454
+		// Token: 0x17002C3B RID: 11323
+		// (get) Token: 0x0600BC04 RID: 48132 RVA: 0x002ECE30 File Offset: 0x002EB030
 		public int QuestTabsLength
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B5C8 RID: 46536 RVA: 0x002D027F File Offset: 0x002CE47F
+		// Token: 0x0600BC05 RID: 48133 RVA: 0x002ECE5B File Offset: 0x002EB05B
 		public Span<int> GetQuestTabsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600B5C9 RID: 46537 RVA: 0x002D028E File Offset: 0x002CE48E
+		// Token: 0x0600BC06 RID: 48134 RVA: 0x002ECE6A File Offset: 0x002EB06A
 		public int[] GetQuestTabsArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002BC4 RID: 11204
-		// (get) Token: 0x0600B5CA RID: 46538 RVA: 0x002D02A8 File Offset: 0x002CE4A8
+		// Token: 0x17002C3C RID: 11324
+		// (get) Token: 0x0600BC07 RID: 48135 RVA: 0x002ECE84 File Offset: 0x002EB084
 		public int TargetTab
 		{
 			get
@@ -117,7 +117,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B5CB RID: 46539 RVA: 0x002D02E4 File Offset: 0x002CE4E4
+		// Token: 0x0600BC08 RID: 48136 RVA: 0x002ECEC0 File Offset: 0x002EB0C0
 		public int RelatedQuest(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -128,8 +128,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002BC5 RID: 11205
-		// (get) Token: 0x0600B5CC RID: 46540 RVA: 0x002D0324 File Offset: 0x002CE524
+		// Token: 0x17002C3D RID: 11325
+		// (get) Token: 0x0600BC09 RID: 48137 RVA: 0x002ECF00 File Offset: 0x002EB100
 		public int RelatedQuestLength
 		{
 			get
@@ -143,20 +143,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B5CD RID: 46541 RVA: 0x002D0350 File Offset: 0x002CE550
+		// Token: 0x0600BC0A RID: 48138 RVA: 0x002ECF2C File Offset: 0x002EB12C
 		public Span<int> GetRelatedQuestBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600B5CE RID: 46542 RVA: 0x002D0360 File Offset: 0x002CE560
+		// Token: 0x0600BC0B RID: 48139 RVA: 0x002ECF3C File Offset: 0x002EB13C
 		public int[] GetRelatedQuestArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002BC6 RID: 11206
-		// (get) Token: 0x0600B5CF RID: 46543 RVA: 0x002D0378 File Offset: 0x002CE578
+		// Token: 0x17002C3E RID: 11326
+		// (get) Token: 0x0600BC0C RID: 48140 RVA: 0x002ECF54 File Offset: 0x002EB154
 		public int TimerDuration
 		{
 			get
@@ -170,43 +170,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B5D0 RID: 46544 RVA: 0x002D03B8 File Offset: 0x002CE5B8
+		// Token: 0x0600BC0D RID: 48141 RVA: 0x002ECF91 File Offset: 0x002EB191
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用QuestTabsIter()或GetQuestTabsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] QuestTabs()
+		public int[] QuestTabs()
 		{
-			QuestReviewEntry questReviewEntry = this;
-			return questReviewEntry.GetQuestTabsArray() ?? Array.Empty<int>();
+			return this.GetQuestTabsArray();
 		}
 
-		// Token: 0x0600B5D1 RID: 46545 RVA: 0x002D03DC File Offset: 0x002CE5DC
+		// Token: 0x0600BC0E RID: 48142 RVA: 0x002ECF99 File Offset: 0x002EB199
 		[NullableContext(1)]
-		public readonly IEnumerable<int> QuestTabsIter()
+		public IEnumerable<int> QuestTabsIter()
 		{
 			QuestReviewEntry.<QuestTabsIter>d__25 <QuestTabsIter>d__ = new QuestReviewEntry.<QuestTabsIter>d__25(-2);
 			<QuestTabsIter>d__.<>3__<>4__this = this;
 			return <QuestTabsIter>d__;
 		}
 
-		// Token: 0x0600B5D2 RID: 46546 RVA: 0x002D03F4 File Offset: 0x002CE5F4
+		// Token: 0x0600BC0F RID: 48143 RVA: 0x002ECFAE File Offset: 0x002EB1AE
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RelatedQuestIter()或GetRelatedQuestBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RelatedQuest()
+		public int[] RelatedQuest()
 		{
-			QuestReviewEntry questReviewEntry = this;
-			return questReviewEntry.GetRelatedQuestArray() ?? Array.Empty<int>();
+			return this.GetRelatedQuestArray();
 		}
 
-		// Token: 0x0600B5D3 RID: 46547 RVA: 0x002D0418 File Offset: 0x002CE618
+		// Token: 0x0600BC10 RID: 48144 RVA: 0x002ECFB6 File Offset: 0x002EB1B6
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RelatedQuestIter()
+		public IEnumerable<int> RelatedQuestIter()
 		{
 			QuestReviewEntry.<RelatedQuestIter>d__27 <RelatedQuestIter>d__ = new QuestReviewEntry.<RelatedQuestIter>d__27(-2);
 			<RelatedQuestIter>d__.<>3__<>4__this = this;
 			return <RelatedQuestIter>d__;
 		}
 
-		// Token: 0x04005040 RID: 20544
+		// Token: 0x04005627 RID: 22055
 		private Table __p;
 	}
 }

@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 {
-	// Token: 0x020059BD RID: 22973
+	// Token: 0x02004996 RID: 18838
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PunishReportSettlementView : UiViewBase
 	{
-		// Token: 0x0603A3CD RID: 238541 RVA: 0x00DD73D1 File Offset: 0x00DD55D1
+		// Token: 0x0602F2F4 RID: 193268 RVA: 0x00D268A9 File Offset: 0x00D24AA9
 		public PunishReportSettlementView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A3CE RID: 238542 RVA: 0x00DD73F0 File Offset: 0x00DD55F0
+		// Token: 0x0602F2F5 RID: 193269 RVA: 0x00D268C8 File Offset: 0x00D24AC8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A3CF RID: 238543 RVA: 0x00DD745C File Offset: 0x00DD565C
+		// Token: 0x0602F2F6 RID: 193270 RVA: 0x00D26934 File Offset: 0x00D24B34
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PunishReportSettlementView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A3D0 RID: 238544 RVA: 0x00DD74A0 File Offset: 0x00DD56A0
+		// Token: 0x0602F2F7 RID: 193271 RVA: 0x00D26978 File Offset: 0x00D24B78
 		private UniTask InitSuccessItem()
 		{
 			PunishReportSettlementView.<InitSuccessItem>d__8 <InitSuccessItem>d__;
@@ -56,14 +56,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			return <InitSuccessItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A3D1 RID: 238545 RVA: 0x00DD74E3 File Offset: 0x00DD56E3
+		// Token: 0x0602F2F8 RID: 193272 RVA: 0x00D269BB File Offset: 0x00D24BBB
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnRootSequenceClose), false);
 		}
 
-		// Token: 0x0603A3D2 RID: 238546 RVA: 0x00DD750E File Offset: 0x00DD570E
+		// Token: 0x0602F2F9 RID: 193273 RVA: 0x00D269E6 File Offset: 0x00D24BE6
 		protected override void OnAfterShow()
 		{
 			this.GameSuccessItem.ShowTip().Forget();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			}, 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603A3D3 RID: 238547 RVA: 0x00DD7544 File Offset: 0x00DD5744
+		// Token: 0x0602F2FA RID: 193274 RVA: 0x00D26A1C File Offset: 0x00D24C1C
 		private void PlayConditionAnim()
 		{
 			foreach (PunishReportSettlementConditionItem punishReportSettlementConditionItem in this.ConditionItems)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			}
 		}
 
-		// Token: 0x0603A3D4 RID: 238548 RVA: 0x00DD75AC File Offset: 0x00DD57AC
+		// Token: 0x0602F2FB RID: 193275 RVA: 0x00D26A84 File Offset: 0x00D24C84
 		private void OnSequenceClose()
 		{
 			this.AnimFinishCount++;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			}
 		}
 
-		// Token: 0x0603A3D5 RID: 238549 RVA: 0x00DD75FE File Offset: 0x00DD57FE
+		// Token: 0x0602F2FC RID: 193276 RVA: 0x00D26AD6 File Offset: 0x00D24CD6
 		private void OnRootSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Start01")
@@ -114,26 +114,26 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			}
 		}
 
-		// Token: 0x0401E606 RID: 124422
+		// Token: 0x040190A5 RID: 102565
 		private readonly PunishReportSettlementSuccessItem GameSuccessItem = new PunishReportSettlementSuccessItem();
 
-		// Token: 0x0401E607 RID: 124423
+		// Token: 0x040190A6 RID: 102566
 		private readonly List<PunishReportSettlementConditionItem> ConditionItems = new List<PunishReportSettlementConditionItem>();
 
-		// Token: 0x0401E608 RID: 124424
+		// Token: 0x040190A7 RID: 102567
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401E609 RID: 124425
+		// Token: 0x040190A8 RID: 102568
 		private int AnimFinishCount;
 
-		// Token: 0x0200BC23 RID: 48163
+		// Token: 0x0200A62E RID: 42542
 		[NullableContext(0)]
 		private enum EViewComponent
 		{
-			// Token: 0x04038C75 RID: 232565
+			// Token: 0x04033644 RID: 210500
 			ConditionItemRoot,
-			// Token: 0x04038C76 RID: 232566
+			// Token: 0x04033645 RID: 210501
 			ConditionItem
 		}
 	}

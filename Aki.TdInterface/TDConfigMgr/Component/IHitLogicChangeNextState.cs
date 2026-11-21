@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000428 RID: 1064
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000481 RID: 1153
 	public class IHitLogicChangeNextState : IHitLogicType
 	{
-		// Token: 0x06001573 RID: 5491 RVA: 0x00043340 File Offset: 0x00041540
+		// Token: 0x0600170D RID: 5901 RVA: 0x00047088 File Offset: 0x00045288
 		private IHitLogicChangeNextState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001574 RID: 5492 RVA: 0x00043378 File Offset: 0x00041578
+		// Token: 0x0600170E RID: 5902 RVA: 0x000470C0 File Offset: 0x000452C0
 		public static IHitLogicChangeNextState Create([Nullable(2)] IHitLogicChangeNextState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001575 RID: 5493 RVA: 0x0004338B File Offset: 0x0004158B
+		// Token: 0x0600170F RID: 5903 RVA: 0x000470D3 File Offset: 0x000452D3
 		public static IHitLogicChangeNextState CreateFromSetValue([Nullable(2)] IHitLogicChangeNextState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001576 RID: 5494 RVA: 0x0004339E File Offset: 0x0004159E
+		// Token: 0x06001710 RID: 5904 RVA: 0x000470E6 File Offset: 0x000452E6
 		public new IHitLogicChangeNextState_SetValue ToSetValue()
 		{
 			return new IHitLogicChangeNextState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005DB RID: 1499
-		// (get) Token: 0x06001577 RID: 5495 RVA: 0x000433B1 File Offset: 0x000415B1
-		// (set) Token: 0x06001578 RID: 5496 RVA: 0x000433DC File Offset: 0x000415DC
+		// Token: 0x17000642 RID: 1602
+		// (get) Token: 0x06001711 RID: 5905 RVA: 0x000470F9 File Offset: 0x000452F9
+		// (set) Token: 0x06001712 RID: 5906 RVA: 0x00047124 File Offset: 0x00045324
 		public override EHitLogicType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001094 RID: 4244
+		// Token: 0x040011B6 RID: 4534
 		[Nullable(2)]
 		protected new IHitLogicChangeNextState FbInstance;
 
-		// Token: 0x04001095 RID: 4245
+		// Token: 0x040011B7 RID: 4535
 		[Nullable(2)]
 		protected new IHitLogicChangeNextState_SetValue PocoInterface;
 	}

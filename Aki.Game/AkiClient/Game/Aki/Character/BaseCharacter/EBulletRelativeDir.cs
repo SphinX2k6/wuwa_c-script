@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004299 RID: 17049
+	// Token: 0x020032F5 RID: 13045
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EBulletRelativeDir.EBulletRelativeDir")]
 	public enum EBulletRelativeDir : byte
 	{
-		// Token: 0x040172C7 RID: 94919
+		// Token: 0x04011FC9 RID: 73673
 		发射者,
-		// Token: 0x040172C8 RID: 94920
+		// Token: 0x04011FCA RID: 73674
 		子弹中心,
-		// Token: 0x040172C9 RID: 94921
+		// Token: 0x04011FCB RID: 73675
 		子弹方向,
-		// Token: 0x040172CA RID: 94922
+		// Token: 0x04011FCC RID: 73676
 		无影响,
-		// Token: 0x040172CB RID: 94923
+		// Token: 0x04011FCD RID: 73677
 		子弹中心相对位置,
-		// Token: 0x040172CC RID: 94924
+		// Token: 0x04011FCE RID: 73678
 		EBulletRelativeDir_MAX
 	}
 }

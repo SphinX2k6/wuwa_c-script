@@ -6,30 +6,30 @@ using AkiClient.Game.Aki.Character.Vision;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020031AC RID: 12716
+// Token: 0x0200271B RID: 10011
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayAbilityVisionShow : GameplayAbilityVisionBase
 {
-	// Token: 0x0601B683 RID: 112259 RVA: 0x0077E839 File Offset: 0x0077CA39
+	// Token: 0x060191B6 RID: 102838 RVA: 0x007A6B65 File Offset: 0x007A4D65
 	[NullableContext(1)]
 	public GameplayAbilityVisionShow(CharacterVisionComponent visionComponent) : base(visionComponent)
 	{
 	}
 
-	// Token: 0x0601B684 RID: 112260 RVA: 0x0077E842 File Offset: 0x0077CA42
+	// Token: 0x060191B7 RID: 102839 RVA: 0x007A6B6E File Offset: 0x007A4D6E
 	protected override void OnCreate()
 	{
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.BulletDestroy, new Action<BulletInfo>(this.OnBulletDestroy));
 	}
 
-	// Token: 0x0601B685 RID: 112261 RVA: 0x0077E866 File Offset: 0x0077CA66
+	// Token: 0x060191B8 RID: 102840 RVA: 0x007A6B92 File Offset: 0x007A4D92
 	protected override void OnDestroy()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.BulletDestroy, new Action<BulletInfo>(this.OnBulletDestroy));
 	}
 
-	// Token: 0x0601B686 RID: 112262 RVA: 0x0077E88A File Offset: 0x0077CA8A
+	// Token: 0x060191B9 RID: 102841 RVA: 0x007A6BB6 File Offset: 0x007A4DB6
 	protected override bool OnActivateAbility()
 	{
 		if (!this.PreSummon())
@@ -45,7 +45,7 @@ public class GameplayAbilityVisionShow : GameplayAbilityVisionBase
 		return true;
 	}
 
-	// Token: 0x0601B687 RID: 112263 RVA: 0x0077E8BC File Offset: 0x0077CABC
+	// Token: 0x060191BA RID: 102842 RVA: 0x007A6BE8 File Offset: 0x007A4DE8
 	private bool PreSummon()
 	{
 		this.VisionEntity = PhantomUtil.GetSummonedEntity(this.VisionComponent.Entity, ESummonType.ConcomitantVision, 1);
@@ -58,7 +58,7 @@ public class GameplayAbilityVisionShow : GameplayAbilityVisionBase
 		return true;
 	}
 
-	// Token: 0x0601B688 RID: 112264 RVA: 0x0077E924 File Offset: 0x0077CB24
+	// Token: 0x060191BB RID: 102843 RVA: 0x007A6C50 File Offset: 0x007A4E50
 	[NullableContext(1)]
 	private void OnBulletDestroy(BulletInfo bulletInfo)
 	{
@@ -68,7 +68,7 @@ public class GameplayAbilityVisionShow : GameplayAbilityVisionBase
 		}
 	}
 
-	// Token: 0x0601B689 RID: 112265 RVA: 0x0077E988 File Offset: 0x0077CB88
+	// Token: 0x060191BC RID: 102844 RVA: 0x007A6CB4 File Offset: 0x007A4EB4
 	private void Summon(FVectorDouble location)
 	{
 		float num = 1f;
@@ -87,7 +87,7 @@ public class GameplayAbilityVisionShow : GameplayAbilityVisionBase
 		});
 	}
 
-	// Token: 0x0601B68A RID: 112266 RVA: 0x0077EA58 File Offset: 0x0077CC58
+	// Token: 0x060191BD RID: 102845 RVA: 0x007A6D84 File Offset: 0x007A4F84
 	private void SetCollision(bool enable)
 	{
 		CollisionUtils.Instance.SetCollisionResponseToPawn(this.VisionActorComponent.Actor.CapsuleComponent, EPawnChannel.PawnPlayer, enable ? ECollisionResponse.ECR_Block : ECollisionResponse.ECR_Ignore);
@@ -95,12 +95,12 @@ public class GameplayAbilityVisionShow : GameplayAbilityVisionBase
 		base.ActorComponent.Actor.CapsuleComponent.IgnoreActorWhenMoving(this.VisionActorComponent.Actor, !enable);
 	}
 
-	// Token: 0x0400D6BA RID: 54970
+	// Token: 0x0400DB41 RID: 56129
 	private EntityHandle VisionEntity;
 
-	// Token: 0x0400D6BB RID: 54971
+	// Token: 0x0400DB42 RID: 56130
 	private CharacterActorComponent VisionActorComponent;
 
-	// Token: 0x0400D6BC RID: 54972
+	// Token: 0x0400DB43 RID: 56131
 	private CharacterSkillComponent VisionSkillComponent;
 }

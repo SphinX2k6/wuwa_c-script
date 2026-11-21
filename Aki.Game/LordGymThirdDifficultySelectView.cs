@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020021B7 RID: 8631
+// Token: 0x0200169B RID: 5787
 public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 {
-	// Token: 0x06010CC4 RID: 68804 RVA: 0x004147FA File Offset: 0x004129FA
+	// Token: 0x0600E155 RID: 57685 RVA: 0x004210DA File Offset: 0x0041F2DA
 	[NullableContext(1)]
 	public LordGymThirdDifficultySelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010CC5 RID: 68805 RVA: 0x00414803 File Offset: 0x00412A03
+	// Token: 0x0600E156 RID: 57686 RVA: 0x004210E3 File Offset: 0x0041F2E3
 	[NullableContext(1)]
 	protected override LordGymDifficultyItem CreateItem()
 	{
@@ -29,7 +29,7 @@ public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 		};
 	}
 
-	// Token: 0x06010CC6 RID: 68806 RVA: 0x00414830 File Offset: 0x00412A30
+	// Token: 0x0600E157 RID: 57687 RVA: 0x00421110 File Offset: 0x0041F310
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -51,7 +51,7 @@ public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 		this.UiViewSequence.StartSequenceName = "Start01";
 	}
 
-	// Token: 0x06010CC7 RID: 68807 RVA: 0x004148E0 File Offset: 0x00412AE0
+	// Token: 0x0600E158 RID: 57688 RVA: 0x004211C0 File Offset: 0x0041F3C0
 	protected override void OnStartChallenge()
 	{
 		double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -76,7 +76,7 @@ public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 		InstanceDungeonEntranceController.Instance.ContinueEntranceFlow();
 	}
 
-	// Token: 0x06010CC8 RID: 68808 RVA: 0x00414988 File Offset: 0x00412B88
+	// Token: 0x0600E159 RID: 57689 RVA: 0x00421268 File Offset: 0x0041F468
 	public override void RefreshDetail()
 	{
 		base.RefreshDetail();
@@ -94,7 +94,7 @@ public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 		levelSequencePlayer2.PlayLevelSequenceByName("Switch", false, null, false);
 	}
 
-	// Token: 0x06010CC9 RID: 68809 RVA: 0x004149EC File Offset: 0x00412BEC
+	// Token: 0x0600E15A RID: 57690 RVA: 0x004212CC File Offset: 0x0041F4CC
 	protected override UniTask OnHandlePostLoadSceneAsync(bool isSceneLoad)
 	{
 		LordGymThirdDifficultySelectView.<OnHandlePostLoadSceneAsync>d__11 <OnHandlePostLoadSceneAsync>d__;
@@ -105,7 +105,7 @@ public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 		return <OnHandlePostLoadSceneAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010CCA RID: 68810 RVA: 0x00414A30 File Offset: 0x00412C30
+	// Token: 0x0600E15B RID: 57691 RVA: 0x00421310 File Offset: 0x0041F510
 	protected override UniTask OnHandlePreReleaseSceneAsync(bool isSceneRelease)
 	{
 		LordGymThirdDifficultySelectView.<OnHandlePreReleaseSceneAsync>d__12 <OnHandlePreReleaseSceneAsync>d__;
@@ -116,7 +116,7 @@ public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 		return <OnHandlePreReleaseSceneAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010CCB RID: 68811 RVA: 0x00414A73 File Offset: 0x00412C73
+	// Token: 0x0600E15C RID: 57692 RVA: 0x00421353 File Offset: 0x0041F553
 	protected override void OnHandleLoadScene()
 	{
 		UiSceneManager.Instance.InitLordSkeletalHandle();
@@ -124,7 +124,7 @@ public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 		LordGymController.Instance.LoadLordModelByEntranceId(this.LordEntranceId, true, true);
 	}
 
-	// Token: 0x06010CCC RID: 68812 RVA: 0x00414A9C File Offset: 0x00412C9C
+	// Token: 0x0600E15D RID: 57693 RVA: 0x0042137C File Offset: 0x0041F57C
 	private void AddHomeBtnExitDungeonCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -142,7 +142,7 @@ public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 		});
 	}
 
-	// Token: 0x06010CCD RID: 68813 RVA: 0x00414AD0 File Offset: 0x00412CD0
+	// Token: 0x0600E15E RID: 57694 RVA: 0x004213B0 File Offset: 0x0041F5B0
 	private void OnClickClose()
 	{
 		LordGymLordEntranceSelectViewParam param = new LordGymLordEntranceSelectViewParam
@@ -166,27 +166,27 @@ public class LordGymThirdDifficultySelectView : LordGymDifficultySelectView
 		});
 	}
 
-	// Token: 0x04007FA8 RID: 32680
+	// Token: 0x040080EF RID: 33007
 	private const int CLICK_CHALLENGE_BUTTON_CD = 500;
 
-	// Token: 0x04007FA9 RID: 32681
+	// Token: 0x040080F0 RID: 33008
 	[Nullable(2)]
 	protected InstanceDungeonEntranceFlowLordGym Flow;
 
-	// Token: 0x04007FAA RID: 32682
+	// Token: 0x040080F1 RID: 33009
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04007FAB RID: 32683
+	// Token: 0x040080F2 RID: 33010
 	private double NextCanClickButtonTime;
 
-	// Token: 0x04007FAC RID: 32684
+	// Token: 0x040080F3 RID: 33011
 	protected int LastHideLandscapeValue;
 
-	// Token: 0x020086FE RID: 34558
+	// Token: 0x02007889 RID: 30857
 	private class EComponent
 	{
-		// Token: 0x0402BE95 RID: 179861
+		// Token: 0x040271B6 RID: 160182
 		public const int BackBtn = 14;
 	}
 }

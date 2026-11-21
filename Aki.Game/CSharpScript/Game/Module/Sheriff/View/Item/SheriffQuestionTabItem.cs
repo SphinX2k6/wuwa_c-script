@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C70 RID: 19568
+	// Token: 0x02003C21 RID: 15393
 	public class SheriffQuestionTabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06032940 RID: 207168 RVA: 0x00BCA0B8 File Offset: 0x00BC82B8
+		// Token: 0x060276F3 RID: 161523 RVA: 0x00B0ED1C File Offset: 0x00B0CF1C
 		[NullableContext(1)]
 		public SheriffQuestionTabItem(SheriffMainProxy proxy)
 		{
 			this.Proxy = proxy;
 		}
 
-		// Token: 0x06032941 RID: 207169 RVA: 0x00BCA0C8 File Offset: 0x00BC82C8
+		// Token: 0x060276F4 RID: 161524 RVA: 0x00B0ED2C File Offset: 0x00B0CF2C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032942 RID: 207170 RVA: 0x00BCA173 File Offset: 0x00BC8373
+		// Token: 0x060276F5 RID: 161525 RVA: 0x00B0EDD7 File Offset: 0x00B0CFD7
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChanged));
 		}
 
-		// Token: 0x06032943 RID: 207171 RVA: 0x00BCA192 File Offset: 0x00BC8392
+		// Token: 0x060276F6 RID: 161526 RVA: 0x00B0EDF6 File Offset: 0x00B0CFF6
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			extendToggle.OnStateChange.Remove(new Action<EToggleState>(this.OnToggleStateChanged));
 		}
 
-		// Token: 0x06032944 RID: 207172 RVA: 0x00BCA1B8 File Offset: 0x00BC83B8
+		// Token: 0x060276F7 RID: 161527 RVA: 0x00B0EE1C File Offset: 0x00B0D01C
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			int curQuestionIndex = this.Proxy.GetCurQuestionIndex();
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x06032945 RID: 207173 RVA: 0x00BCA249 File Offset: 0x00BC8449
+		// Token: 0x060276F8 RID: 161528 RVA: 0x00B0EEAD File Offset: 0x00B0D0AD
 		public void SetSelected(bool isSelected, bool fireEvent = false)
 		{
 			base.GetExtendToggle(0).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x06032946 RID: 207174 RVA: 0x00BCA262 File Offset: 0x00BC8462
+		// Token: 0x060276F9 RID: 161529 RVA: 0x00B0EEC6 File Offset: 0x00B0D0C6
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			Action<int> onToggleStateChangedCallback = this.OnToggleStateChangedCallback;
@@ -87,34 +87,34 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			onToggleStateChangedCallback(base.GridIndex);
 		}
 
-		// Token: 0x0401AE9E RID: 110238
+		// Token: 0x040157FB RID: 88059
 		protected int CurId;
 
-		// Token: 0x0401AE9F RID: 110239
+		// Token: 0x040157FC RID: 88060
 		[Nullable(1)]
 		protected SheriffMainProxy Proxy;
 
-		// Token: 0x0401AEA0 RID: 110240
+		// Token: 0x040157FD RID: 88061
 		[Nullable(2)]
 		public Action<int> OnToggleStateChangedCallback;
 
-		// Token: 0x0401AEA1 RID: 110241
+		// Token: 0x040157FE RID: 88062
 		[Nullable(2)]
 		public Func<int, bool> CheckSelectCallback;
 
-		// Token: 0x0200AE23 RID: 44579
+		// Token: 0x02009841 RID: 38977
 		private static class EQuestionTab
 		{
-			// Token: 0x04034E30 RID: 216624
+			// Token: 0x0402F7D5 RID: 194517
 			public const int TogClueTab = 0;
 
-			// Token: 0x04034E31 RID: 216625
+			// Token: 0x0402F7D6 RID: 194518
 			public const int TxtName = 1;
 
-			// Token: 0x04034E32 RID: 216626
+			// Token: 0x0402F7D7 RID: 194519
 			public const int PanelDone = 2;
 
-			// Token: 0x04034E33 RID: 216627
+			// Token: 0x0402F7D8 RID: 194520
 			public const int PanelLock = 3;
 		}
 	}

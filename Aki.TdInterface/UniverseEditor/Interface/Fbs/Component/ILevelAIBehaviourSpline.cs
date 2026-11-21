@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054C4 RID: 21700
+	// Token: 0x02005A4A RID: 23114
 	public struct ILevelAIBehaviourSpline : IFlatbufferObject
 	{
-		// Token: 0x17009FE3 RID: 40931
-		// (get) Token: 0x06023C18 RID: 146456 RVA: 0x004F18D4 File Offset: 0x004EFAD4
+		// Token: 0x1700A81D RID: 43037
+		// (get) Token: 0x06025CD0 RID: 154832 RVA: 0x0052E948 File Offset: 0x0052CB48
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023C19 RID: 146457 RVA: 0x004F18E1 File Offset: 0x004EFAE1
+		// Token: 0x06025CD1 RID: 154833 RVA: 0x0052E955 File Offset: 0x0052CB55
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023C1A RID: 146458 RVA: 0x004F18E8 File Offset: 0x004EFAE8
+		// Token: 0x06025CD2 RID: 154834 RVA: 0x0052E95C File Offset: 0x0052CB5C
 		public static ILevelAIBehaviourSpline GetRootAsILevelAIBehaviourSpline(ByteBuffer _bb)
 		{
 			return ILevelAIBehaviourSpline.GetRootAsILevelAIBehaviourSpline(_bb, default(ILevelAIBehaviourSpline));
 		}
 
-		// Token: 0x06023C1B RID: 146459 RVA: 0x004F1904 File Offset: 0x004EFB04
+		// Token: 0x06025CD3 RID: 154835 RVA: 0x0052E978 File Offset: 0x0052CB78
 		public static ILevelAIBehaviourSpline GetRootAsILevelAIBehaviourSpline(ByteBuffer _bb, ILevelAIBehaviourSpline obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023C1C RID: 146460 RVA: 0x004F1921 File Offset: 0x004EFB21
+		// Token: 0x06025CD4 RID: 154836 RVA: 0x0052E995 File Offset: 0x0052CB95
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023C1D RID: 146461 RVA: 0x004F1930 File Offset: 0x004EFB30
+		// Token: 0x06025CD5 RID: 154837 RVA: 0x0052E9A4 File Offset: 0x0052CBA4
 		public ILevelAIBehaviourSpline __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009FE4 RID: 40932
-		// (get) Token: 0x06023C1E RID: 146462 RVA: 0x004F1940 File Offset: 0x004EFB40
+		// Token: 0x1700A81E RID: 43038
+		// (get) Token: 0x06025CD6 RID: 154838 RVA: 0x0052E9B4 File Offset: 0x0052CBB4
 		public ELevelAIBehaviourType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009FE5 RID: 40933
-		// (get) Token: 0x06023C1F RID: 146463 RVA: 0x004F197C File Offset: 0x004EFB7C
+		// Token: 0x1700A81F RID: 43039
+		// (get) Token: 0x06025CD7 RID: 154839 RVA: 0x0052E9F0 File Offset: 0x0052CBF0
 		public int SplineEntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009FE6 RID: 40934
-		// (get) Token: 0x06023C20 RID: 146464 RVA: 0x004F19B8 File Offset: 0x004EFBB8
+		// Token: 0x1700A820 RID: 43040
+		// (get) Token: 0x06025CD8 RID: 154840 RVA: 0x0052EA2C File Offset: 0x0052CC2C
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023C21 RID: 146465 RVA: 0x004F19F4 File Offset: 0x004EFBF4
+		// Token: 0x06025CD9 RID: 154841 RVA: 0x0052EA68 File Offset: 0x0052CC68
 		public static Offset<ILevelAIBehaviourSpline> CreateILevelAIBehaviourSpline(FlatBufferBuilder builder, ELevelAIBehaviourType Type = ELevelAIBehaviourType.Spline, int SplineEntityId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelAIBehaviourSpline.EndILevelAIBehaviourSpline(builder);
 		}
 
-		// Token: 0x06023C22 RID: 146466 RVA: 0x004F1A18 File Offset: 0x004EFC18
+		// Token: 0x06025CDA RID: 154842 RVA: 0x0052EA8C File Offset: 0x0052CC8C
 		public static void StartILevelAIBehaviourSpline(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06023C23 RID: 146467 RVA: 0x004F1A21 File Offset: 0x004EFC21
+		// Token: 0x06025CDB RID: 154843 RVA: 0x0052EA95 File Offset: 0x0052CC95
 		public static void AddType(FlatBufferBuilder builder, ELevelAIBehaviourType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06023C24 RID: 146468 RVA: 0x004F1A2C File Offset: 0x004EFC2C
+		// Token: 0x06025CDC RID: 154844 RVA: 0x0052EAA0 File Offset: 0x0052CCA0
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(1, splineEntityId, 0);
 		}
 
-		// Token: 0x06023C25 RID: 146469 RVA: 0x004F1A37 File Offset: 0x004EFC37
+		// Token: 0x06025CDD RID: 154845 RVA: 0x0052EAAB File Offset: 0x0052CCAB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06023C26 RID: 146470 RVA: 0x004F1A42 File Offset: 0x004EFC42
+		// Token: 0x06025CDE RID: 154846 RVA: 0x0052EAB6 File Offset: 0x0052CCB6
 		public static Offset<ILevelAIBehaviourSpline> EndILevelAIBehaviourSpline(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelAIBehaviourSpline>(builder.EndTable());
 		}
 
-		// Token: 0x06023C27 RID: 146471 RVA: 0x004F1A50 File Offset: 0x004EFC50
+		// Token: 0x06025CDF RID: 154847 RVA: 0x0052EAC4 File Offset: 0x0052CCC4
 		public ILevelAIBehaviourSplineT UnPack()
 		{
 			ILevelAIBehaviourSplineT levelAIBehaviourSplineT = new ILevelAIBehaviourSplineT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return levelAIBehaviourSplineT;
 		}
 
-		// Token: 0x06023C28 RID: 146472 RVA: 0x004F1A6B File Offset: 0x004EFC6B
+		// Token: 0x06025CE0 RID: 154848 RVA: 0x0052EADF File Offset: 0x0052CCDF
 		public void UnPackTo(ILevelAIBehaviourSplineT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023C29 RID: 146473 RVA: 0x004F1A94 File Offset: 0x004EFC94
+		// Token: 0x06025CE1 RID: 154849 RVA: 0x0052EB08 File Offset: 0x0052CD08
 		public static Offset<ILevelAIBehaviourSpline> Pack(FlatBufferBuilder builder, ILevelAIBehaviourSplineT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelAIBehaviourSpline.CreateILevelAIBehaviourSpline(builder, _o.Type, _o.SplineEntityId, _o.NullMask);
 		}
 
-		// Token: 0x0400E77E RID: 59262
+		// Token: 0x0400F3AF RID: 62383
 		private Table __p;
 	}
 }

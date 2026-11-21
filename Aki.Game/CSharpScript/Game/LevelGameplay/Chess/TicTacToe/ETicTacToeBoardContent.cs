@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 {
-	// Token: 0x02006F3A RID: 28474
+	// Token: 0x020060BB RID: 24763
 	public enum ETicTacToeBoardContent
 	{
-		// Token: 0x04024201 RID: 147969
+		// Token: 0x0401F4B6 RID: 128182
 		None,
-		// Token: 0x04024202 RID: 147970
+		// Token: 0x0401F4B7 RID: 128183
 		White,
-		// Token: 0x04024203 RID: 147971
+		// Token: 0x0401F4B8 RID: 128184
 		Black
 	}
 }

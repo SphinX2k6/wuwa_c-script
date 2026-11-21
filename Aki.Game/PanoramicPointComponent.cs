@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200230E RID: 8974
+// Token: 0x020017F2 RID: 6130
 [NullableContext(2)]
 [Nullable(0)]
 public class PanoramicPointComponent : EntityComponent
 {
-	// Token: 0x06011B9F RID: 72607 RVA: 0x0045C07C File Offset: 0x0045A27C
+	// Token: 0x0600F03A RID: 61498 RVA: 0x00468E8C File Offset: 0x0046708C
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -91,7 +91,7 @@ public class PanoramicPointComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x06011BA0 RID: 72608 RVA: 0x0045C33F File Offset: 0x0045A53F
+	// Token: 0x0600F03B RID: 61499 RVA: 0x0046914F File Offset: 0x0046734F
 	private void TickFunc(float delta)
 	{
 		if (this.PointView == null || !this.IsViewShow || !this.NeedTickCheck)
@@ -102,7 +102,7 @@ public class PanoramicPointComponent : EntityComponent
 		this.PointView.Update();
 	}
 
-	// Token: 0x06011BA1 RID: 72609 RVA: 0x0045C36B File Offset: 0x0045A56B
+	// Token: 0x0600F03C RID: 61500 RVA: 0x0046917B File Offset: 0x0046737B
 	protected override bool OnEnd()
 	{
 		this.RemoveEventListeners();
@@ -114,13 +114,13 @@ public class PanoramicPointComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x06011BA2 RID: 72610 RVA: 0x0045C39D File Offset: 0x0045A59D
+	// Token: 0x0600F03D RID: 61501 RVA: 0x004691AD File Offset: 0x004673AD
 	private void AddEventListeners()
 	{
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange));
 	}
 
-	// Token: 0x06011BA3 RID: 72611 RVA: 0x0045C3C4 File Offset: 0x0045A5C4
+	// Token: 0x0600F03E RID: 61502 RVA: 0x004691D4 File Offset: 0x004673D4
 	private void RemoveEventListeners()
 	{
 		if (EventSystem.Instance.HasWithTarget(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange)))
@@ -129,7 +129,7 @@ public class PanoramicPointComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x06011BA4 RID: 72612 RVA: 0x0045C416 File Offset: 0x0045A616
+	// Token: 0x0600F03F RID: 61503 RVA: 0x00469226 File Offset: 0x00467426
 	protected void DestroyShowSpotEvent()
 	{
 		if (this.ShowSpotEvent != null)
@@ -139,7 +139,7 @@ public class PanoramicPointComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x06011BA5 RID: 72613 RVA: 0x0045C438 File Offset: 0x0045A638
+	// Token: 0x0600F040 RID: 61504 RVA: 0x00469248 File Offset: 0x00467448
 	protected void OnSceneItemStateChange(int stateId, bool isReady)
 	{
 		if (stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.销毁"])
@@ -153,7 +153,7 @@ public class PanoramicPointComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x06011BA6 RID: 72614 RVA: 0x0045C488 File Offset: 0x0045A688
+	// Token: 0x0600F041 RID: 61505 RVA: 0x00469298 File Offset: 0x00467498
 	[NullableContext(0)]
 	private UniTask<bool> CreateSpotIcon()
 	{
@@ -165,7 +165,7 @@ public class PanoramicPointComponent : EntityComponent
 		return <CreateSpotIcon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011BA7 RID: 72615 RVA: 0x0045C4CC File Offset: 0x0045A6CC
+	// Token: 0x0600F042 RID: 61506 RVA: 0x004692DC File Offset: 0x004674DC
 	private void Destroy()
 	{
 		this.IsDestroy = true;
@@ -193,7 +193,7 @@ public class PanoramicPointComponent : EntityComponent
 		this.NeedTickCheck = false;
 	}
 
-	// Token: 0x06011BA8 RID: 72616 RVA: 0x0045C52F File Offset: 0x0045A72F
+	// Token: 0x0600F043 RID: 61507 RVA: 0x0046933F File Offset: 0x0046753F
 	private void TryCreateSpot()
 	{
 		if (this.CreatedPromise != null)
@@ -204,7 +204,7 @@ public class PanoramicPointComponent : EntityComponent
 		this.CreateSpot();
 	}
 
-	// Token: 0x06011BA9 RID: 72617 RVA: 0x0045C54C File Offset: 0x0045A74C
+	// Token: 0x0600F044 RID: 61508 RVA: 0x0046935C File Offset: 0x0046755C
 	private UniTask CreateSpot()
 	{
 		PanoramicPointComponent.<CreateSpot>d__34 <CreateSpot>d__;
@@ -215,7 +215,7 @@ public class PanoramicPointComponent : EntityComponent
 		return <CreateSpot>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011BAA RID: 72618 RVA: 0x0045C590 File Offset: 0x0045A790
+	// Token: 0x0600F045 RID: 61509 RVA: 0x004693A0 File Offset: 0x004675A0
 	[NullableContext(0)]
 	private UniTask<bool> AddSpotIconAsync()
 	{
@@ -227,7 +227,7 @@ public class PanoramicPointComponent : EntityComponent
 		return <AddSpotIconAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011BAB RID: 72619 RVA: 0x0045C5D4 File Offset: 0x0045A7D4
+	// Token: 0x0600F046 RID: 61510 RVA: 0x004693E4 File Offset: 0x004675E4
 	private void TryDestroySpot()
 	{
 		if (this.CreatedPromise == null)
@@ -242,7 +242,7 @@ public class PanoramicPointComponent : EntityComponent
 		this.Destroy();
 	}
 
-	// Token: 0x06011BAC RID: 72620 RVA: 0x0045C610 File Offset: 0x0045A810
+	// Token: 0x0600F047 RID: 61511 RVA: 0x00469420 File Offset: 0x00467620
 	public void ChangeSpotHidden(bool value)
 	{
 		if (this.PointView == null || this.PointView.GetActive() == !value)
@@ -254,7 +254,7 @@ public class PanoramicPointComponent : EntityComponent
 		this.PointView.ChangePointType(EPanoramicType.Default);
 	}
 
-	// Token: 0x06011BAD RID: 72621 RVA: 0x0045C65C File Offset: 0x0045A85C
+	// Token: 0x0600F048 RID: 61512 RVA: 0x0046946C File Offset: 0x0046766C
 	public void ChangeSpotType(EPanoramicType type)
 	{
 		if (this.PointView == null)
@@ -264,7 +264,7 @@ public class PanoramicPointComponent : EntityComponent
 		this.PointView.ChangePointType(type);
 	}
 
-	// Token: 0x06011BAE RID: 72622 RVA: 0x0045C674 File Offset: 0x0045A874
+	// Token: 0x0600F049 RID: 61513 RVA: 0x00469484 File Offset: 0x00467684
 	private void InitLineTraceInfo()
 	{
 		UTraceLineElement utraceLineElement = new UTraceLineElement();
@@ -276,7 +276,7 @@ public class PanoramicPointComponent : EntityComponent
 		this.LineTrace = utraceLineElement;
 	}
 
-	// Token: 0x06011BAF RID: 72623 RVA: 0x0045C6BC File Offset: 0x0045A8BC
+	// Token: 0x0600F04A RID: 61514 RVA: 0x004694CC File Offset: 0x004676CC
 	private void InteractSpotLineTrace()
 	{
 		if (this.LineTrace == null)
@@ -354,13 +354,13 @@ public class PanoramicPointComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x06011BB0 RID: 72624 RVA: 0x0045C919 File Offset: 0x0045AB19
+	// Token: 0x0600F04B RID: 61515 RVA: 0x00469729 File Offset: 0x00467929
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06011BB1 RID: 72625 RVA: 0x0045C924 File Offset: 0x0045AB24
+	// Token: 0x0600F04C RID: 61516 RVA: 0x00469734 File Offset: 0x00467934
 	public bool CheckInCircle()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -394,7 +394,7 @@ public class PanoramicPointComponent : EntityComponent
 		return Vector.Dist2D(vector, vector2) >= (double)this.SafeRange;
 	}
 
-	// Token: 0x06011BB2 RID: 72626 RVA: 0x0045C9C8 File Offset: 0x0045ABC8
+	// Token: 0x0600F04D RID: 61517 RVA: 0x004697D8 File Offset: 0x004679D8
 	public bool CheckInAngle()
 	{
 		CameraModelInstance mainModel = CameraController.Instance.MainModel;
@@ -420,7 +420,7 @@ public class PanoramicPointComponent : EntityComponent
 		return num <= this.AngleRange;
 	}
 
-	// Token: 0x06011BB3 RID: 72627 RVA: 0x0045CA88 File Offset: 0x0045AC88
+	// Token: 0x0600F04E RID: 61518 RVA: 0x00469898 File Offset: 0x00467A98
 	public void UpdateCondition()
 	{
 		this.InCircle = this.CheckInCircle();
@@ -433,19 +433,19 @@ public class PanoramicPointComponent : EntityComponent
 		this.Angle = 180f;
 	}
 
-	// Token: 0x06011BB4 RID: 72628 RVA: 0x0045CAC4 File Offset: 0x0045ACC4
+	// Token: 0x0600F04F RID: 61519 RVA: 0x004698D4 File Offset: 0x00467AD4
 	public bool CheckCondition()
 	{
 		return this.InCircle && this.InAngle && this.NeedTickCheck && this.PointView != null && this.IsViewShow && !this.IsBlockedByLineTrace;
 	}
 
-	// Token: 0x06011BB5 RID: 72629 RVA: 0x0045CAF9 File Offset: 0x0045ACF9
+	// Token: 0x0600F050 RID: 61520 RVA: 0x00469909 File Offset: 0x00467B09
 	public void ChangeNeedTickCheck(bool value)
 	{
 		this.NeedTickCheck = value;
 	}
 
-	// Token: 0x06011BB6 RID: 72630 RVA: 0x0045CB02 File Offset: 0x0045AD02
+	// Token: 0x0600F051 RID: 61521 RVA: 0x00469912 File Offset: 0x00467B12
 	public void DestroyPointComponent()
 	{
 		this.RemoveEventListeners();
@@ -457,7 +457,7 @@ public class PanoramicPointComponent : EntityComponent
 		this.DestroyShowSpotEvent();
 	}
 
-	// Token: 0x06011BB7 RID: 72631 RVA: 0x0045CB3C File Offset: 0x0045AD3C
+	// Token: 0x0600F052 RID: 61522 RVA: 0x0046994C File Offset: 0x00467B4C
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -466,252 +466,200 @@ public class PanoramicPointComponent : EntityComponent
 			return false;
 		}
 		PanoramicPointComponent panoramicPointComponent = (PanoramicPointComponent)componentTemplate;
-		if (base.CanResetComponentProperty("LineTrace"))
+		if (panoramicPointComponent.LineTrace == null)
 		{
-			if (panoramicPointComponent.LineTrace == null)
-			{
-				this.LineTrace = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.LineTrace), "LineTrace"))
-			{
-				return false;
-			}
+			this.LineTrace = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LineTrace), "LineTrace"))
 		{
-			if (panoramicPointComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PerceptionComp"))
+		if (panoramicPointComponent.ActorComp == null)
 		{
-			if (panoramicPointComponent.PerceptionComp == null)
-			{
-				this.PerceptionComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnPerceptionComponent>(this.PerceptionComp), "PerceptionComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("ShowSpotEvent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (panoramicPointComponent.ShowSpotEvent == null)
-			{
-				this.ShowSpotEvent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerPerceptionEvent>(this.ShowSpotEvent), "ShowSpotEvent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TickId"))
+		if (panoramicPointComponent.PerceptionComp == null)
 		{
-			this.TickId = panoramicPointComponent.TickId;
+			this.PerceptionComp = null;
 		}
-		if (base.CanResetComponentProperty("IsDestroy"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerceptionComp), "PerceptionComp"))
 		{
-			this.IsDestroy = panoramicPointComponent.IsDestroy;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsViewShow"))
+		if (panoramicPointComponent.ShowSpotEvent == null)
 		{
-			this.IsViewShow = panoramicPointComponent.IsViewShow;
+			this.ShowSpotEvent = null;
 		}
-		if (base.CanResetComponentProperty("CreatedPromise"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShowSpotEvent), "ShowSpotEvent"))
 		{
-			if (panoramicPointComponent.CreatedPromise == null)
-			{
-				this.CreatedPromise = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise>(this.CreatedPromise), "CreatedPromise"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("UiPoolActor"))
+		this.TickId = panoramicPointComponent.TickId;
+		this.IsDestroy = panoramicPointComponent.IsDestroy;
+		this.IsViewShow = panoramicPointComponent.IsViewShow;
+		if (panoramicPointComponent.CreatedPromise == null)
 		{
-			if (panoramicPointComponent.UiPoolActor == null)
-			{
-				this.UiPoolActor = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UiPoolActor>(this.UiPoolActor), "UiPoolActor"))
-			{
-				return false;
-			}
+			this.CreatedPromise = null;
 		}
-		if (base.CanResetComponentProperty("Offset"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatedPromise), "CreatedPromise"))
 		{
-			if (panoramicPointComponent.Offset == null)
-			{
-				this.Offset = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.Offset), "Offset"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("Path"))
+		if (panoramicPointComponent.UiPoolActor == null)
 		{
-			this.Path = panoramicPointComponent.Path;
+			this.UiPoolActor = null;
 		}
-		if (base.CanResetComponentProperty("CustomPromise"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UiPoolActor), "UiPoolActor"))
 		{
-			if (panoramicPointComponent.CustomPromise == null)
-			{
-				this.CustomPromise = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise>(this.CustomPromise), "CustomPromise"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PointView"))
+		if (panoramicPointComponent.Offset == null)
 		{
-			if (panoramicPointComponent.PointView == null)
-			{
-				this.PointView = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PanoramicPointView>(this.PointView), "PointView"))
-			{
-				return false;
-			}
+			this.Offset = null;
 		}
-		if (base.CanResetComponentProperty("ReCreateSpotView"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Offset), "Offset"))
 		{
-			if (panoramicPointComponent.ReCreateSpotView == null)
-			{
-				this.ReCreateSpotView = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.ReCreateSpotView), "ReCreateSpotView"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("Id"))
+		this.Path = panoramicPointComponent.Path;
+		if (panoramicPointComponent.CustomPromise == null)
 		{
-			this.Id = panoramicPointComponent.Id;
+			this.CustomPromise = null;
 		}
-		if (base.CanResetComponentProperty("Angle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CustomPromise), "CustomPromise"))
 		{
-			this.Angle = panoramicPointComponent.Angle;
+			return false;
 		}
-		if (base.CanResetComponentProperty("AngleRange"))
+		if (panoramicPointComponent.PointView == null)
 		{
-			this.AngleRange = panoramicPointComponent.AngleRange;
+			this.PointView = null;
 		}
-		if (base.CanResetComponentProperty("Range"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PointView), "PointView"))
 		{
-			this.Range = panoramicPointComponent.Range;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SafeRange"))
+		if (panoramicPointComponent.ReCreateSpotView == null)
 		{
-			this.SafeRange = panoramicPointComponent.SafeRange;
+			this.ReCreateSpotView = null;
 		}
-		if (base.CanResetComponentProperty("TargetPos"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReCreateSpotView), "ReCreateSpotView"))
 		{
-			if (panoramicPointComponent.TargetPos == null)
-			{
-				this.TargetPos = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TargetPos), "TargetPos"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("NeedTickCheck"))
+		this.Id = panoramicPointComponent.Id;
+		this.Angle = panoramicPointComponent.Angle;
+		this.AngleRange = panoramicPointComponent.AngleRange;
+		this.Range = panoramicPointComponent.Range;
+		this.SafeRange = panoramicPointComponent.SafeRange;
+		if (panoramicPointComponent.TargetPos == null)
 		{
-			this.NeedTickCheck = panoramicPointComponent.NeedTickCheck;
+			this.TargetPos = null;
 		}
-		if (base.CanResetComponentProperty("InAngle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetPos), "TargetPos"))
 		{
-			this.InAngle = panoramicPointComponent.InAngle;
+			return false;
 		}
-		if (base.CanResetComponentProperty("InCircle"))
-		{
-			this.InCircle = panoramicPointComponent.InCircle;
-		}
-		if (base.CanResetComponentProperty("IsBlockedByLineTrace"))
-		{
-			this.IsBlockedByLineTrace = panoramicPointComponent.IsBlockedByLineTrace;
-		}
+		this.NeedTickCheck = panoramicPointComponent.NeedTickCheck;
+		this.InAngle = panoramicPointComponent.InAngle;
+		this.InCircle = panoramicPointComponent.InCircle;
+		this.IsBlockedByLineTrace = panoramicPointComponent.IsBlockedByLineTrace;
 		return true;
 	}
 
-	// Token: 0x04008673 RID: 34419
+	// Token: 0x170016E6 RID: 5862
+	// (get) Token: 0x0600F053 RID: 61523 RVA: 0x00469BE1 File Offset: 0x00467DE1
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170016E7 RID: 5863
+	// (get) Token: 0x0600F054 RID: 61524 RVA: 0x00469BE4 File Offset: 0x00467DE4
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x040087B3 RID: 34739
 	private UTraceLineElement LineTrace;
 
-	// Token: 0x04008674 RID: 34420
+	// Token: 0x040087B4 RID: 34740
 	private BaseActorComponent ActorComp;
 
-	// Token: 0x04008675 RID: 34421
+	// Token: 0x040087B5 RID: 34741
 	private PawnPerceptionComponent PerceptionComp;
 
-	// Token: 0x04008676 RID: 34422
+	// Token: 0x040087B6 RID: 34742
 	private PlayerPerceptionEvent ShowSpotEvent;
 
-	// Token: 0x04008677 RID: 34423
+	// Token: 0x040087B7 RID: 34743
 	private int TickId;
 
-	// Token: 0x04008678 RID: 34424
+	// Token: 0x040087B8 RID: 34744
 	private bool IsDestroy;
 
-	// Token: 0x04008679 RID: 34425
+	// Token: 0x040087B9 RID: 34745
 	private bool IsViewShow;
 
-	// Token: 0x0400867A RID: 34426
+	// Token: 0x040087BA RID: 34746
 	private CustomPromise CreatedPromise;
 
-	// Token: 0x0400867B RID: 34427
+	// Token: 0x040087BB RID: 34747
 	private UiPoolActor UiPoolActor;
 
-	// Token: 0x0400867C RID: 34428
+	// Token: 0x040087BC RID: 34748
 	private Vector Offset;
 
-	// Token: 0x0400867D RID: 34429
+	// Token: 0x040087BD RID: 34749
 	private string Path;
 
-	// Token: 0x0400867E RID: 34430
+	// Token: 0x040087BE RID: 34750
 	private CustomPromise CustomPromise;
 
-	// Token: 0x0400867F RID: 34431
+	// Token: 0x040087BF RID: 34751
 	protected PanoramicPointView PointView;
 
-	// Token: 0x04008680 RID: 34432
+	// Token: 0x040087C0 RID: 34752
 	private Action ReCreateSpotView;
 
-	// Token: 0x04008681 RID: 34433
+	// Token: 0x040087C1 RID: 34753
 	private int Id = -1;
 
-	// Token: 0x04008682 RID: 34434
+	// Token: 0x040087C2 RID: 34754
 	public float Angle = 180f;
 
-	// Token: 0x04008683 RID: 34435
+	// Token: 0x040087C3 RID: 34755
 	public float AngleRange = 180f;
 
-	// Token: 0x04008684 RID: 34436
+	// Token: 0x040087C4 RID: 34756
 	public float Range = 100f;
 
-	// Token: 0x04008685 RID: 34437
+	// Token: 0x040087C5 RID: 34757
 	public float SafeRange = 100f;
 
-	// Token: 0x04008686 RID: 34438
+	// Token: 0x040087C6 RID: 34758
 	[Nullable(1)]
 	public Vector TargetPos = Vector.Create();
 
-	// Token: 0x04008687 RID: 34439
+	// Token: 0x040087C7 RID: 34759
 	private bool NeedTickCheck;
 
-	// Token: 0x04008688 RID: 34440
+	// Token: 0x040087C8 RID: 34760
 	private bool InAngle;
 
-	// Token: 0x04008689 RID: 34441
+	// Token: 0x040087C9 RID: 34761
 	private bool InCircle;
 
-	// Token: 0x0400868A RID: 34442
+	// Token: 0x040087CA RID: 34762
 	private bool IsBlockedByLineTrace;
 }

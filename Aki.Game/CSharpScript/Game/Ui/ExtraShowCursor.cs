@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046AE RID: 18094
+	// Token: 0x020035DF RID: 13791
 	public class ExtraShowCursor : IExtraShowCursor
 	{
-		// Token: 0x0602EA79 RID: 191097 RVA: 0x00ACC222 File Offset: 0x00ACA422
+		// Token: 0x060231C5 RID: 143813 RVA: 0x009FAAF6 File Offset: 0x009F8CF6
 		public bool IsShowCursor()
 		{
 			return false;

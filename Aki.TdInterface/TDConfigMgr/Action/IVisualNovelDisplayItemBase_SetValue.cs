@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200206C RID: 8300
+	// Token: 0x020022B5 RID: 8885
 	public class IVisualNovelDisplayItemBase_SetValue
 	{
-		// Token: 0x04006D8C RID: 28044
+		// Token: 0x04007398 RID: 29592
 		public EVisualNovelDisplayItemType Type;
 	}
 }

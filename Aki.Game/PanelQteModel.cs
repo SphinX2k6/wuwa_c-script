@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Fight.UI;
 using UnrealEngine;
 
-// Token: 0x02002300 RID: 8960
+// Token: 0x020017E4 RID: 6116
 [NullableContext(2)]
 [Nullable(0)]
 [Model(0)]
 public class PanelQteModel : ModelBase
 {
-	// Token: 0x06011AC9 RID: 72393 RVA: 0x00457D66 File Offset: 0x00455F66
+	// Token: 0x0600EF61 RID: 61281 RVA: 0x00464A46 File Offset: 0x00462C46
 	protected override bool OnInit()
 	{
 		this.IsInQte = new bool?(false);
@@ -19,14 +19,14 @@ public class PanelQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011ACA RID: 72394 RVA: 0x00457D97 File Offset: 0x00455F97
+	// Token: 0x0600EF62 RID: 61282 RVA: 0x00464A77 File Offset: 0x00462C77
 	protected override bool OnLeaveLevel()
 	{
 		this.CommonDt = null;
 		return true;
 	}
 
-	// Token: 0x06011ACB RID: 72395 RVA: 0x00457DA1 File Offset: 0x00455FA1
+	// Token: 0x0600EF63 RID: 61283 RVA: 0x00464A81 File Offset: 0x00462C81
 	protected override bool OnClear()
 	{
 		this.IsInQte = null;
@@ -36,7 +36,7 @@ public class PanelQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011ACC RID: 72396 RVA: 0x00457DD0 File Offset: 0x00455FD0
+	// Token: 0x0600EF64 RID: 61284 RVA: 0x00464AB0 File Offset: 0x00462CB0
 	[NullableContext(1)]
 	public int StartQte(PanelQteContext context)
 	{
@@ -62,7 +62,7 @@ public class PanelQteModel : ModelBase
 		return this.HandleId.Value;
 	}
 
-	// Token: 0x06011ACD RID: 72397 RVA: 0x00457EC0 File Offset: 0x004560C0
+	// Token: 0x0600EF65 RID: 61285 RVA: 0x00464BA0 File Offset: 0x00462DA0
 	public bool StopQte(int handleId)
 	{
 		if (this.IsInQte.GetValueOrDefault())
@@ -78,7 +78,7 @@ public class PanelQteModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06011ACE RID: 72398 RVA: 0x00457F11 File Offset: 0x00456111
+	// Token: 0x0600EF66 RID: 61286 RVA: 0x00464BF1 File Offset: 0x00462DF1
 	public void ForceStopQte()
 	{
 		if (this.HandleId != null)
@@ -87,25 +87,25 @@ public class PanelQteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011ACF RID: 72399 RVA: 0x00457F32 File Offset: 0x00456132
+	// Token: 0x0600EF67 RID: 61287 RVA: 0x00464C12 File Offset: 0x00462E12
 	public PanelQteContext GetContext()
 	{
 		return this.Context;
 	}
 
-	// Token: 0x06011AD0 RID: 72400 RVA: 0x00457F3A File Offset: 0x0045613A
+	// Token: 0x0600EF68 RID: 61288 RVA: 0x00464C1A File Offset: 0x00462E1A
 	public Number GetWorldTimeDilation()
 	{
 		return this.TimeDilation.GetWorldTimeDilation();
 	}
 
-	// Token: 0x06011AD1 RID: 72401 RVA: 0x00457F47 File Offset: 0x00456147
+	// Token: 0x0600EF69 RID: 61289 RVA: 0x00464C27 File Offset: 0x00462E27
 	public Number GetLeftTime()
 	{
 		return this.LeftTime;
 	}
 
-	// Token: 0x06011AD2 RID: 72402 RVA: 0x00457F50 File Offset: 0x00456150
+	// Token: 0x0600EF6A RID: 61290 RVA: 0x00464C30 File Offset: 0x00462E30
 	public Number GetLeftTimeNoScale()
 	{
 		if (this.LeftTime <= 0)
@@ -124,7 +124,7 @@ public class PanelQteModel : ModelBase
 		return this.LeftTime / worldTimeDilation;
 	}
 
-	// Token: 0x06011AD3 RID: 72403 RVA: 0x00457FB8 File Offset: 0x004561B8
+	// Token: 0x0600EF6B RID: 61291 RVA: 0x00464C98 File Offset: 0x00462E98
 	public void ResetLeftTime(int handleId)
 	{
 		int? handleId2 = this.HandleId;
@@ -147,7 +147,7 @@ public class PanelQteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011AD4 RID: 72404 RVA: 0x00458044 File Offset: 0x00456244
+	// Token: 0x0600EF6C RID: 61292 RVA: 0x00464D24 File Offset: 0x00462F24
 	public void UpdateTime(float delta)
 	{
 		if (this.LeftTime <= 0)
@@ -172,7 +172,7 @@ public class PanelQteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011AD5 RID: 72405 RVA: 0x004580FC File Offset: 0x004562FC
+	// Token: 0x0600EF6D RID: 61293 RVA: 0x00464DDC File Offset: 0x00462FDC
 	public SPanelQte GetPanelQteConfig(int qteId)
 	{
 		if (this.CommonDt == null)
@@ -192,7 +192,7 @@ public class PanelQteModel : ModelBase
 		return dataTableRow;
 	}
 
-	// Token: 0x06011AD6 RID: 72406 RVA: 0x00458170 File Offset: 0x00456370
+	// Token: 0x0600EF6E RID: 61294 RVA: 0x00464E50 File Offset: 0x00463050
 	public bool SetQteResult(int handleId, bool success)
 	{
 		int? handleId2 = this.HandleId;
@@ -204,21 +204,21 @@ public class PanelQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011AD7 RID: 72407 RVA: 0x004581A9 File Offset: 0x004563A9
+	// Token: 0x0600EF6F RID: 61295 RVA: 0x00464E89 File Offset: 0x00463089
 	public void HandleResult()
 	{
 		this.ResultHandler.Handle(this.Context);
 	}
 
-	// Token: 0x06011AD8 RID: 72408 RVA: 0x004581BC File Offset: 0x004563BC
+	// Token: 0x0600EF70 RID: 61296 RVA: 0x00464E9C File Offset: 0x0046309C
 	public bool IsQteSuccess()
 	{
 		PanelQteContext context = this.Context;
 		return context != null && context.Success;
 	}
 
-	// Token: 0x170016AA RID: 5802
-	// (get) Token: 0x06011AD9 RID: 72409 RVA: 0x004581CF File Offset: 0x004563CF
+	// Token: 0x170016E1 RID: 5857
+	// (get) Token: 0x0600EF71 RID: 61297 RVA: 0x00464EAF File Offset: 0x004630AF
 	[Nullable(1)]
 	public static PanelQteModel Instance
 	{
@@ -229,7 +229,7 @@ public class PanelQteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011ADA RID: 72410 RVA: 0x004581D6 File Offset: 0x004563D6
+	// Token: 0x0600EF72 RID: 61298 RVA: 0x00464EB6 File Offset: 0x004630B6
 	[NullableContext(1)]
 	public static PanelQteModel GetOrCreateInstance()
 	{
@@ -240,7 +240,7 @@ public class PanelQteModel : ModelBase
 		return PanelQteModel._Instance;
 	}
 
-	// Token: 0x06011ADB RID: 72411 RVA: 0x004581EA File Offset: 0x004563EA
+	// Token: 0x0600EF73 RID: 61299 RVA: 0x00464ECA File Offset: 0x004630CA
 	public static bool CreateInstance()
 	{
 		if (PanelQteModel._Instance != null)
@@ -251,60 +251,60 @@ public class PanelQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011ADC RID: 72412 RVA: 0x00458200 File Offset: 0x00456400
+	// Token: 0x0600EF74 RID: 61300 RVA: 0x00464EE0 File Offset: 0x004630E0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011ADD RID: 72413 RVA: 0x00458202 File Offset: 0x00456402
+	// Token: 0x0600EF75 RID: 61301 RVA: 0x00464EE2 File Offset: 0x004630E2
 	public static void ResetStaticDefaultValue()
 	{
 		PanelQteModel._Instance = null;
 	}
 
-	// Token: 0x06011ADE RID: 72414 RVA: 0x0045820A File Offset: 0x0045640A
+	// Token: 0x0600EF76 RID: 61302 RVA: 0x00464EEA File Offset: 0x004630EA
 	static PanelQteModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PanelQteModel.CreateStaticDefaultValue), new Action(PanelQteModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008617 RID: 34327
+	// Token: 0x04008755 RID: 34645
 	[Nullable(1)]
 	private readonly PanelQteTimeDilation TimeDilation = new PanelQteTimeDilation();
 
-	// Token: 0x04008618 RID: 34328
+	// Token: 0x04008756 RID: 34646
 	public bool? IsInQte;
 
-	// Token: 0x04008619 RID: 34329
+	// Token: 0x04008757 RID: 34647
 	private int? HandleId;
 
-	// Token: 0x0400861A RID: 34330
+	// Token: 0x04008758 RID: 34648
 	private Number LeftTime = 0;
 
-	// Token: 0x0400861B RID: 34331
+	// Token: 0x04008759 RID: 34649
 	private Number EndWorldTime = 0;
 
-	// Token: 0x0400861C RID: 34332
+	// Token: 0x0400875A RID: 34650
 	private UDataTable CommonDt;
 
-	// Token: 0x0400861D RID: 34333
+	// Token: 0x0400875B RID: 34651
 	private PanelQteContext Context;
 
-	// Token: 0x0400861E RID: 34334
+	// Token: 0x0400875C RID: 34652
 	private PanelQteResultHandler ResultHandler;
 
-	// Token: 0x0400861F RID: 34335
+	// Token: 0x0400875D RID: 34653
 	public bool IsHideAllBattleUi;
 
-	// Token: 0x04008620 RID: 34336
+	// Token: 0x0400875E RID: 34654
 	public int[] HideBattleUiChildren;
 
-	// Token: 0x04008621 RID: 34337
+	// Token: 0x0400875F RID: 34655
 	public bool DisableFightInput;
 
-	// Token: 0x04008622 RID: 34338
+	// Token: 0x04008760 RID: 34656
 	public EntityHandle CurRoleEntity;
 
-	// Token: 0x04008623 RID: 34339
+	// Token: 0x04008761 RID: 34657
 	private static PanelQteModel _Instance;
 }

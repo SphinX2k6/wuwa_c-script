@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 {
-	// Token: 0x02006858 RID: 26712
+	// Token: 0x020057A8 RID: 22440
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlItemViewRegistry
 	{
-		// Token: 0x06042AF7 RID: 273143 RVA: 0x01038C85 File Offset: 0x01036E85
+		// Token: 0x0603764C RID: 226892 RVA: 0x00F7A1D1 File Offset: 0x00F783D1
 		public void Start()
 		{
 		}
 
-		// Token: 0x06042AF8 RID: 273144 RVA: 0x01038C88 File Offset: 0x01036E88
+		// Token: 0x0603764D RID: 226893 RVA: 0x00F7A1D4 File Offset: 0x00F783D4
 		public void Stop()
 		{
 			this.Views.Clear();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.BackpackView = null;
 		}
 
-		// Token: 0x06042AF9 RID: 273145 RVA: 0x01038D1C File Offset: 0x01036F1C
+		// Token: 0x0603764E RID: 226894 RVA: 0x00F7A268 File Offset: 0x00F78468
 		public void Register(int uid, IDangoBrawlDraggableView view)
 		{
 			if (uid <= 0)
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.Views[uid] = view;
 		}
 
-		// Token: 0x06042AFA RID: 273146 RVA: 0x01038D30 File Offset: 0x01036F30
+		// Token: 0x0603764F RID: 226895 RVA: 0x00F7A27C File Offset: 0x00F7847C
 		public void Unregister(int uid)
 		{
 			this.Views.Remove(uid);
 		}
 
-		// Token: 0x06042AFB RID: 273147 RVA: 0x01038D40 File Offset: 0x01036F40
+		// Token: 0x06037650 RID: 226896 RVA: 0x00F7A28C File Offset: 0x00F7848C
 		[NullableContext(2)]
 		public IDangoBrawlDraggableView GetView(int uid)
 		{
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return result;
 		}
 
-		// Token: 0x06042AFC RID: 273148 RVA: 0x01038D60 File Offset: 0x01036F60
+		// Token: 0x06037651 RID: 226897 RVA: 0x00F7A2AC File Offset: 0x00F784AC
 		[NullableContext(2)]
 		public DangoBrawlItemBase GetItemData(int uid)
 		{
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return dangoBrawlDraggableView.MyItemData;
 		}
 
-		// Token: 0x06042AFD RID: 273149 RVA: 0x01038D85 File Offset: 0x01036F85
+		// Token: 0x06037652 RID: 226898 RVA: 0x00F7A2D1 File Offset: 0x00F784D1
 		public void RegisterBackpackView(DangoBrawlBackpackView view)
 		{
 			this.BackpackView = view;
 		}
 
-		// Token: 0x06042AFE RID: 273150 RVA: 0x01038D8E File Offset: 0x01036F8E
+		// Token: 0x06037653 RID: 226899 RVA: 0x00F7A2DA File Offset: 0x00F784DA
 		public void UnregisterBackpackView(DangoBrawlBackpackView view)
 		{
 			if (this.BackpackView == view)
@@ -85,26 +85,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x06042AFF RID: 273151 RVA: 0x01038DA0 File Offset: 0x01036FA0
+		// Token: 0x06037654 RID: 226900 RVA: 0x00F7A2EC File Offset: 0x00F784EC
 		[NullableContext(2)]
 		public DangoBrawlBackpackView GetBackpackView()
 		{
 			return this.BackpackView;
 		}
 
-		// Token: 0x06042B00 RID: 273152 RVA: 0x01038DA8 File Offset: 0x01036FA8
+		// Token: 0x06037655 RID: 226901 RVA: 0x00F7A2F4 File Offset: 0x00F784F4
 		public void RegisterItemZone(EDragTargetKind kind, IDangoBrawlItemZone zone)
 		{
 			this.ItemZones[kind] = zone;
 		}
 
-		// Token: 0x06042B01 RID: 273153 RVA: 0x01038DB7 File Offset: 0x01036FB7
+		// Token: 0x06037656 RID: 226902 RVA: 0x00F7A303 File Offset: 0x00F78503
 		public void UnregisterItemZone(EDragTargetKind kind)
 		{
 			this.ItemZones.Remove(kind);
 		}
 
-		// Token: 0x06042B02 RID: 273154 RVA: 0x01038DC8 File Offset: 0x01036FC8
+		// Token: 0x06037657 RID: 226903 RVA: 0x00F7A314 File Offset: 0x00F78514
 		[NullableContext(2)]
 		public IDangoBrawlItemZone GetItemZone(EDragTargetKind kind)
 		{
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return result;
 		}
 
-		// Token: 0x06042B03 RID: 273155 RVA: 0x01038DE8 File Offset: 0x01036FE8
+		// Token: 0x06037658 RID: 226904 RVA: 0x00F7A334 File Offset: 0x00F78534
 		public void RegisterLineOwner(int uid, ICombineLineOwner owner)
 		{
 			if (uid <= 0)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.LineOwners[uid] = owner;
 		}
 
-		// Token: 0x06042B04 RID: 273156 RVA: 0x01038DFC File Offset: 0x01036FFC
+		// Token: 0x06037659 RID: 226905 RVA: 0x00F7A348 File Offset: 0x00F78548
 		public void UnregisterLineOwner(int uid, ICombineLineOwner owner)
 		{
 			ICombineLineOwner combineLineOwner;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x06042B05 RID: 273157 RVA: 0x01038E2C File Offset: 0x0103702C
+		// Token: 0x0603765A RID: 226906 RVA: 0x00F7A378 File Offset: 0x00F78578
 		[NullableContext(2)]
 		public ICombineLineOwner GetLineOwner(int uid)
 		{
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return result;
 		}
 
-		// Token: 0x06042B06 RID: 273158 RVA: 0x01038E4C File Offset: 0x0103704C
+		// Token: 0x0603765B RID: 226907 RVA: 0x00F7A398 File Offset: 0x00F78598
 		public void RegisterPendingProxy(int slotUid, IDragVisual proxy)
 		{
 			if (slotUid <= 0)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.PendingProxies[slotUid] = proxy;
 		}
 
-		// Token: 0x06042B07 RID: 273159 RVA: 0x01038E84 File Offset: 0x01037084
+		// Token: 0x0603765C RID: 226908 RVA: 0x00F7A3D0 File Offset: 0x00F785D0
 		[NullableContext(2)]
 		public IDragVisual ConsumePendingProxy(int slotUid)
 		{
@@ -176,19 +176,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return result;
 		}
 
-		// Token: 0x06042B08 RID: 273160 RVA: 0x01038EB1 File Offset: 0x010370B1
+		// Token: 0x0603765D RID: 226909 RVA: 0x00F7A3FD File Offset: 0x00F785FD
 		public bool HasPendingProxy(int slotUid)
 		{
 			return this.PendingProxies.ContainsKey(slotUid);
 		}
 
-		// Token: 0x06042B09 RID: 273161 RVA: 0x01038EBF File Offset: 0x010370BF
+		// Token: 0x0603765E RID: 226910 RVA: 0x00F7A40B File Offset: 0x00F7860B
 		public void SetProxyTemplate(EDangoBrawlTemplateType type, UUIItem template)
 		{
 			this.ProxyTemplates[type] = template;
 		}
 
-		// Token: 0x06042B0A RID: 273162 RVA: 0x01038ED0 File Offset: 0x010370D0
+		// Token: 0x0603765F RID: 226911 RVA: 0x00F7A41C File Offset: 0x00F7861C
 		[NullableContext(2)]
 		public UUIItem GetProxyTemplate(EDangoBrawlTemplateType type)
 		{
@@ -200,22 +200,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return result;
 		}
 
-		// Token: 0x04022B8A RID: 142218
+		// Token: 0x0401D3E7 RID: 119783
 		private readonly Dictionary<int, IDangoBrawlDraggableView> Views = new Dictionary<int, IDangoBrawlDraggableView>();
 
-		// Token: 0x04022B8B RID: 142219
+		// Token: 0x0401D3E8 RID: 119784
 		private readonly Dictionary<int, ICombineLineOwner> LineOwners = new Dictionary<int, ICombineLineOwner>();
 
-		// Token: 0x04022B8C RID: 142220
+		// Token: 0x0401D3E9 RID: 119785
 		private readonly Dictionary<int, IDragVisual> PendingProxies = new Dictionary<int, IDragVisual>();
 
-		// Token: 0x04022B8D RID: 142221
+		// Token: 0x0401D3EA RID: 119786
 		private readonly Dictionary<EDragTargetKind, IDangoBrawlItemZone> ItemZones = new Dictionary<EDragTargetKind, IDangoBrawlItemZone>();
 
-		// Token: 0x04022B8E RID: 142222
+		// Token: 0x0401D3EB RID: 119787
 		private readonly Dictionary<EDangoBrawlTemplateType, UUIItem> ProxyTemplates = new Dictionary<EDangoBrawlTemplateType, UUIItem>();
 
-		// Token: 0x04022B8F RID: 142223
+		// Token: 0x0401D3EC RID: 119788
 		[Nullable(2)]
 		private DangoBrawlBackpackView BackpackView;
 	}

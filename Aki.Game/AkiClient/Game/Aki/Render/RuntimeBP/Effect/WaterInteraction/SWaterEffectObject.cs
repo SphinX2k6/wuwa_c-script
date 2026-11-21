@@ -6,195 +6,183 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 {
-	// Token: 0x02003DBC RID: 15804
+	// Token: 0x02003106 RID: 12550
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Effect/WaterInteraction/SWaterEffectObject.SWaterEffectObject")]
 	[UnrealStructLayout(176, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 172)]
 	public class SWaterEffectObject : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06027490 RID: 160912 RVA: 0x0098D411 File Offset: 0x0098B611
+		// Token: 0x0601EB74 RID: 125812 RVA: 0x0091B3A6 File Offset: 0x009195A6
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SWaterEffectObject._ScriptStructPtr != 0) ? SWaterEffectObject._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Effect/WaterInteraction/SWaterEffectObject.SWaterEffectObject", ref SWaterEffectObject._ScriptStructPtr);
 		}
 
-		// Token: 0x17005738 RID: 22328
-		// (get) Token: 0x06027491 RID: 160913 RVA: 0x0098D435 File Offset: 0x0098B635
-		// (set) Token: 0x06027492 RID: 160914 RVA: 0x0098D445 File Offset: 0x0098B645
+		// Token: 0x1700352D RID: 13613
+		// (get) Token: 0x0601EB75 RID: 125813 RVA: 0x0091B3CA File Offset: 0x009195CA
+		// (set) Token: 0x0601EB76 RID: 125814 RVA: 0x0091B3DA File Offset: 0x009195DA
 		public unsafe float Radius
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_Radius);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_Radius) = value;
 			}
 		}
 
-		// Token: 0x17005739 RID: 22329
-		// (get) Token: 0x06027493 RID: 160915 RVA: 0x0098D456 File Offset: 0x0098B656
-		// (set) Token: 0x06027494 RID: 160916 RVA: 0x0098D46A File Offset: 0x0098B66A
+		// Token: 0x1700352E RID: 13614
+		// (get) Token: 0x0601EB77 RID: 125815 RVA: 0x0091B3EB File Offset: 0x009195EB
+		// (set) Token: 0x0601EB78 RID: 125816 RVA: 0x0091B3FF File Offset: 0x009195FF
 		public unsafe FTransform Transform
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_Transform);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_Transform) = value;
 			}
 		}
 
-		// Token: 0x1700573A RID: 22330
-		// (get) Token: 0x06027495 RID: 160917 RVA: 0x0098D47F File Offset: 0x0098B67F
-		// (set) Token: 0x06027496 RID: 160918 RVA: 0x0098D49E File Offset: 0x0098B69E
+		// Token: 0x1700352F RID: 13615
+		// (get) Token: 0x0601EB79 RID: 125817 RVA: 0x0091B414 File Offset: 0x00919614
+		// (set) Token: 0x0601EB7A RID: 125818 RVA: 0x0091B433 File Offset: 0x00919633
 		public TSoftObjectPtr<UEffectModelBase> Effect
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_2, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_Effect, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_2, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_Effect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700573B RID: 22331
-		// (get) Token: 0x06027497 RID: 160919 RVA: 0x0098D4C3 File Offset: 0x0098B6C3
-		// (set) Token: 0x06027498 RID: 160920 RVA: 0x0098D4D3 File Offset: 0x0098B6D3
+		// Token: 0x17003530 RID: 13616
+		// (get) Token: 0x0601EB7B RID: 125819 RVA: 0x0091B458 File Offset: 0x00919658
+		// (set) Token: 0x0601EB7C RID: 125820 RVA: 0x0091B468 File Offset: 0x00919668
 		public unsafe bool TriggerOnce
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_TriggerOnce) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_TriggerOnce) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700573C RID: 22332
-		// (get) Token: 0x06027499 RID: 160921 RVA: 0x0098D4E4 File Offset: 0x0098B6E4
-		// (set) Token: 0x0602749A RID: 160922 RVA: 0x0098D4F4 File Offset: 0x0098B6F4
+		// Token: 0x17003531 RID: 13617
+		// (get) Token: 0x0601EB7D RID: 125821 RVA: 0x0091B479 File Offset: 0x00919679
+		// (set) Token: 0x0601EB7E RID: 125822 RVA: 0x0091B489 File Offset: 0x00919689
 		public unsafe bool EnableSurfaceEffect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_EnableSurfaceEffect) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_EnableSurfaceEffect) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700573D RID: 22333
-		// (get) Token: 0x0602749B RID: 160923 RVA: 0x0098D505 File Offset: 0x0098B705
-		// (set) Token: 0x0602749C RID: 160924 RVA: 0x0098D524 File Offset: 0x0098B724
+		// Token: 0x17003532 RID: 13618
+		// (get) Token: 0x0601EB7F RID: 125823 RVA: 0x0091B49A File Offset: 0x0091969A
+		// (set) Token: 0x0601EB80 RID: 125824 RVA: 0x0091B4B9 File Offset: 0x009196B9
 		public TSoftObjectPtr<UEffectModelBase> WaterSurfaceEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_5, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_WaterSurfaceEffect, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_5, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_WaterSurfaceEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700573E RID: 22334
-		// (get) Token: 0x0602749D RID: 160925 RVA: 0x0098D549 File Offset: 0x0098B749
-		// (set) Token: 0x0602749E RID: 160926 RVA: 0x0098D559 File Offset: 0x0098B759
+		// Token: 0x17003533 RID: 13619
+		// (get) Token: 0x0601EB81 RID: 125825 RVA: 0x0091B4DE File Offset: 0x009196DE
+		// (set) Token: 0x0601EB82 RID: 125826 RVA: 0x0091B4EE File Offset: 0x009196EE
 		public unsafe float TimeAfterSurfaceEffectStop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_TimeAfterSurfaceEffectStop);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SWaterEffectObject.__PropertyOffset_TimeAfterSurfaceEffectStop) = value;
 			}
 		}
 
-		// Token: 0x0602749F RID: 160927 RVA: 0x0098D56A File Offset: 0x0098B76A
+		// Token: 0x0601EB83 RID: 125827 RVA: 0x0091B4FF File Offset: 0x009196FF
 		public SWaterEffectObject()
 		{
 		}
 
-		// Token: 0x060274A0 RID: 160928 RVA: 0x0098D572 File Offset: 0x0098B772
-		public SWaterEffectObject(float Radius, FTransform Transform, TSoftObjectPtr<UEffectModelBase> Effect, bool TriggerOnce, bool EnableSurfaceEffect, TSoftObjectPtr<UEffectModelBase> WaterSurfaceEffect, float TimeAfterSurfaceEffectStop)
-		{
-			this.Radius = Radius;
-			this.Transform = Transform;
-			this.Effect = Effect;
-			this.TriggerOnce = TriggerOnce;
-			this.EnableSurfaceEffect = EnableSurfaceEffect;
-			this.WaterSurfaceEffect = WaterSurfaceEffect;
-			this.TimeAfterSurfaceEffectStop = TimeAfterSurfaceEffectStop;
-		}
-
-		// Token: 0x060274A1 RID: 160929 RVA: 0x0098D5AF File Offset: 0x0098B7AF
+		// Token: 0x0601EB84 RID: 125828 RVA: 0x0091B507 File Offset: 0x00919707
 		protected override IntPtr GetUStructPtr()
 		{
 			return SWaterEffectObject.StaticStruct();
 		}
 
-		// Token: 0x060274A2 RID: 160930 RVA: 0x0098D5BB File Offset: 0x0098B7BB
+		// Token: 0x0601EB85 RID: 125829 RVA: 0x0091B513 File Offset: 0x00919713
 		[NullableContext(2)]
 		public SWaterEffectObject(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060274A3 RID: 160931 RVA: 0x0098D5C5 File Offset: 0x0098B7C5
+		// Token: 0x0601EB86 RID: 125830 RVA: 0x0091B51D File Offset: 0x0091971D
 		public SWaterEffectObject(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060274A4 RID: 160932 RVA: 0x0098D5D0 File Offset: 0x0098B7D0
+		// Token: 0x0601EB87 RID: 125831 RVA: 0x0091B528 File Offset: 0x00919728
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SWaterEffectObject(Pointer, false, true);
 		}
 
-		// Token: 0x060274A5 RID: 160933 RVA: 0x0098D5DA File Offset: 0x0098B7DA
+		// Token: 0x0601EB88 RID: 125832 RVA: 0x0091B532 File Offset: 0x00919732
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SWaterEffectObject(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04013D2A RID: 81194
+		// Token: 0x040104D5 RID: 66773
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Effect/WaterInteraction/SWaterEffectObject.SWaterEffectObject";
 
-		// Token: 0x04013D2B RID: 81195
+		// Token: 0x040104D6 RID: 66774
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04013D2C RID: 81196
-		internal static int __PropertyOffset_0;
+		// Token: 0x040104D7 RID: 66775
+		internal static int __PropertyOffset_Radius;
 
-		// Token: 0x04013D2D RID: 81197
-		internal static int __PropertyOffset_1;
+		// Token: 0x040104D8 RID: 66776
+		internal static int __PropertyOffset_Transform;
 
-		// Token: 0x04013D2E RID: 81198
-		internal static int __PropertyOffset_2;
+		// Token: 0x040104D9 RID: 66777
+		internal static int __PropertyOffset_Effect;
 
-		// Token: 0x04013D2F RID: 81199
-		internal static int __PropertyOffset_3;
+		// Token: 0x040104DA RID: 66778
+		internal static int __PropertyOffset_TriggerOnce;
 
-		// Token: 0x04013D30 RID: 81200
-		internal static int __PropertyOffset_4;
+		// Token: 0x040104DB RID: 66779
+		internal static int __PropertyOffset_EnableSurfaceEffect;
 
-		// Token: 0x04013D31 RID: 81201
-		internal static int __PropertyOffset_5;
+		// Token: 0x040104DC RID: 66780
+		internal static int __PropertyOffset_WaterSurfaceEffect;
 
-		// Token: 0x04013D32 RID: 81202
-		internal static int __PropertyOffset_6;
+		// Token: 0x040104DD RID: 66781
+		internal static int __PropertyOffset_TimeAfterSurfaceEffectStop;
 	}
 }

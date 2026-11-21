@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DE4 RID: 3556
+	// Token: 0x02000EE0 RID: 3808
 	public class IProceduralMaterialType
 	{
-		// Token: 0x0600509E RID: 20638 RVA: 0x000C70D3 File Offset: 0x000C52D3
-		[NullableContext(1)]
+		// Token: 0x060055C5 RID: 21957 RVA: 0x000D299B File Offset: 0x000D0B9B
 		public static IProceduralMaterialType Create(IProceduralMaterialType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A93 RID: 6803
-		// (get) Token: 0x0600509F RID: 20639 RVA: 0x000C70F2 File Offset: 0x000C52F2
+		// Token: 0x17001C00 RID: 7168
+		// (get) Token: 0x060055C6 RID: 21958 RVA: 0x000D29BA File Offset: 0x000D0BBA
 		public virtual EProceduralMaterialType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E4B RID: 11851
+		// Token: 0x04003113 RID: 12563
 		private IProceduralMaterialType Instance;
 	}
 }

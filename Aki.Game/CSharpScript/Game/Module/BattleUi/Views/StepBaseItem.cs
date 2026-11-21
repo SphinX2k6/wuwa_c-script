@@ -19,18 +19,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D8C RID: 23948
+	// Token: 0x02004D6E RID: 19822
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class StepBaseItem : UiPanelBase
 	{
-		// Token: 0x0603CC72 RID: 248946 RVA: 0x00E97819 File Offset: 0x00E95A19
+		// Token: 0x06031BCE RID: 203726 RVA: 0x00DE8061 File Offset: 0x00DE6261
 		public StepBaseItem(EMissionItemView viewId, int stepId)
 		{
 		}
 
-		// Token: 0x17008E62 RID: 36450
-		// (get) Token: 0x0603CC73 RID: 248947 RVA: 0x00E97848 File Offset: 0x00E95A48
+		// Token: 0x17006234 RID: 25140
+		// (get) Token: 0x06031BCF RID: 203727 RVA: 0x00DE8090 File Offset: 0x00DE6290
 		public virtual bool IsDescribeTextVisible
 		{
 			get
@@ -44,8 +44,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E63 RID: 36451
-		// (get) Token: 0x0603CC74 RID: 248948 RVA: 0x00E9787A File Offset: 0x00E95A7A
+		// Token: 0x17006235 RID: 25141
+		// (get) Token: 0x06031BD0 RID: 203728 RVA: 0x00DE80C2 File Offset: 0x00DE62C2
 		public bool IsDistanceTextVisible
 		{
 			get
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC75 RID: 248949 RVA: 0x00E97884 File Offset: 0x00E95A84
+		// Token: 0x06031BD1 RID: 203729 RVA: 0x00DE80CC File Offset: 0x00DE62CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CC76 RID: 248950 RVA: 0x00E978F0 File Offset: 0x00E95AF0
+		// Token: 0x06031BD2 RID: 203730 RVA: 0x00DE8138 File Offset: 0x00DE6338
 		protected override UniTask OnBeforeStartAsync()
 		{
 			StepBaseItem.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC77 RID: 248951 RVA: 0x00E97934 File Offset: 0x00E95B34
+		// Token: 0x06031BD3 RID: 203731 RVA: 0x00DE817C File Offset: 0x00DE637C
 		protected override void OnAfterHide()
 		{
 			foreach (StepControllerBase stepControllerBase in this.StepControllers.Values)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC78 RID: 248952 RVA: 0x00E9798C File Offset: 0x00E95B8C
+		// Token: 0x06031BD4 RID: 203732 RVA: 0x00DE81D4 File Offset: 0x00DE63D4
 		protected override void OnBeforeDestroy()
 		{
 			UUIText describeTextComp = this.DescribeTextComp;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DistanceTextComp = null;
 		}
 
-		// Token: 0x0603CC79 RID: 248953 RVA: 0x00E979C0 File Offset: 0x00E95BC0
+		// Token: 0x06031BD5 RID: 203733 RVA: 0x00DE8208 File Offset: 0x00DE6408
 		public virtual void OnTick(float delta)
 		{
 			if (!base.IsShowOrShowing)
@@ -115,13 +115,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC7A RID: 248954 RVA: 0x00E97A20 File Offset: 0x00E95C20
+		// Token: 0x06031BD6 RID: 203734 RVA: 0x00DE8268 File Offset: 0x00DE6468
 		public virtual bool CheckVisible()
 		{
 			return this.Config != null && this.ShowData != null && LevelGeneralController.Instance.CheckConditionNew(this.Config.ShowConditions, null, this.TreeContext, null);
 		}
 
-		// Token: 0x0603CC7B RID: 248955 RVA: 0x00E97A64 File Offset: 0x00E95C64
+		// Token: 0x06031BD7 RID: 203735 RVA: 0x00DE82AC File Offset: 0x00DE64AC
 		public UniTask Refresh(IMissionItemViewShowData showData, MissionViewStepTextInfoBase config)
 		{
 			StepBaseItem.<Refresh>d__23 <Refresh>d__;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC7C RID: 248956 RVA: 0x00E97AB8 File Offset: 0x00E95CB8
+		// Token: 0x06031BD8 RID: 203736 RVA: 0x00DE8300 File Offset: 0x00DE6500
 		private int? GetConditionIndexByTextInfo(MissionViewStepTextInfoBase config)
 		{
 			if (config == null)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603CC7D RID: 248957 RVA: 0x00E97B70 File Offset: 0x00E95D70
+		// Token: 0x06031BD9 RID: 203737 RVA: 0x00DE83B8 File Offset: 0x00DE65B8
 		public void UpdateByConfig()
 		{
 			if (this.Config == null)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnStepConditionIndexChange(conditionIndexByTextInfo).Forget();
 		}
 
-		// Token: 0x0603CC7E RID: 248958 RVA: 0x00E97C1C File Offset: 0x00E95E1C
+		// Token: 0x06031BDA RID: 203738 RVA: 0x00DE8464 File Offset: 0x00DE6664
 		public UniTask OnStepConditionIndexChange(int? curConditionTextIndex)
 		{
 			StepBaseItem.<OnStepConditionIndexChange>d__26 <OnStepConditionIndexChange>d__;
@@ -199,14 +199,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnStepConditionIndexChange>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC7F RID: 248959 RVA: 0x00E97C67 File Offset: 0x00E95E67
+		// Token: 0x06031BDB RID: 203739 RVA: 0x00DE84AF File Offset: 0x00DE66AF
 		protected virtual void UpdateStepInfo()
 		{
 			this.DescribeTextVisible = this.UpdateDescribeText();
 			this.DistanceTextVisible = this.UpdateDistanceText();
 		}
 
-		// Token: 0x0603CC80 RID: 248960 RVA: 0x00E97C84 File Offset: 0x00E95E84
+		// Token: 0x06031BDC RID: 203740 RVA: 0x00DE84CC File Offset: 0x00DE66CC
 		protected void UpdateStepInfoAndSetActiveComp()
 		{
 			if (!this.CheckVisible())
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DistanceTextComp.SetUIActive(this.DistanceTextVisible);
 		}
 
-		// Token: 0x0603CC81 RID: 248961 RVA: 0x00E97CD4 File Offset: 0x00E95ED4
+		// Token: 0x06031BDD RID: 203741 RVA: 0x00DE851C File Offset: 0x00DE671C
 		private bool UpdateDescribeText()
 		{
 			StepControllerBase stepControllerBase;
@@ -243,13 +243,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CC82 RID: 248962 RVA: 0x00E97D3C File Offset: 0x00E95F3C
+		// Token: 0x06031BDE RID: 203742 RVA: 0x00DE8584 File Offset: 0x00DE6784
 		private void OnUpdateDescribeText()
 		{
 			this.UpdateDescribeText();
 		}
 
-		// Token: 0x0603CC83 RID: 248963 RVA: 0x00E97D48 File Offset: 0x00E95F48
+		// Token: 0x06031BDF RID: 203743 RVA: 0x00DE8590 File Offset: 0x00DE6790
 		public bool UpdateDistanceText()
 		{
 			if (this.ShowData != null && this.Config != null && this.ShowData.DataSource == EMissionItemViewDataSource.BehaviorTree)
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603CC84 RID: 248964 RVA: 0x00E980E0 File Offset: 0x00E962E0
+		// Token: 0x06031BE0 RID: 203744 RVA: 0x00DE8928 File Offset: 0x00DE6B28
 		[NullableContext(1)]
 		protected void CopyStepInfo(StepBaseItem customStepItem)
 		{
@@ -388,21 +388,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DistanceTextComp.SetUIActive(this.DistanceTextVisible);
 		}
 
-		// Token: 0x0603CC85 RID: 248965 RVA: 0x00E98165 File Offset: 0x00E96365
+		// Token: 0x06031BE1 RID: 203745 RVA: 0x00DE89AD File Offset: 0x00DE6BAD
 		[NullableContext(1)]
 		public string GetDescribeComponentText()
 		{
 			return this.DescribeTextComp.GetText();
 		}
 
-		// Token: 0x0603CC86 RID: 248966 RVA: 0x00E98172 File Offset: 0x00E96372
+		// Token: 0x06031BE2 RID: 203746 RVA: 0x00DE89BA File Offset: 0x00DE6BBA
 		[NullableContext(1)]
 		public string GetDistanceComponentText()
 		{
 			return this.DistanceTextComp.GetText();
 		}
 
-		// Token: 0x0603CC87 RID: 248967 RVA: 0x00E98180 File Offset: 0x00E96380
+		// Token: 0x06031BE3 RID: 203747 RVA: 0x00DE89C8 File Offset: 0x00DE6BC8
 		protected virtual UniTask OnConfigRefresh(IMissionItemViewShowData showData, MissionViewStepTextInfoBase config)
 		{
 			StepBaseItem.<OnConfigRefresh>d__35 <OnConfigRefresh>d__;
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnConfigRefresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC88 RID: 248968 RVA: 0x00E981D4 File Offset: 0x00E963D4
+		// Token: 0x06031BE4 RID: 203748 RVA: 0x00DE8A1C File Offset: 0x00DE6C1C
 		public virtual UniTask OnReset()
 		{
 			StepBaseItem.<OnReset>d__36 <OnReset>d__;
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnReset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC89 RID: 248969 RVA: 0x00E98217 File Offset: 0x00E96417
+		// Token: 0x06031BE5 RID: 203749 RVA: 0x00DE8A5F File Offset: 0x00DE6C5F
 		[NullableContext(1)]
 		private void SetCrossMapTrackText(UUIText textComp, [Nullable(2)] string textStringId, string areaText)
 		{
@@ -438,47 +438,47 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			LguiUtil.Instance.SetLocalTextNew(textComp, textStringId, new <>z__ReadOnlySingleElementList<object>(areaText));
 		}
 
-		// Token: 0x0401FA93 RID: 129683
+		// Token: 0x0401A54B RID: 107851
 		[Nullable(1)]
 		protected readonly Dictionary<EStepControllerType, StepControllerBase> StepControllers = new Dictionary<EStepControllerType, StepControllerBase>();
 
-		// Token: 0x0401FA94 RID: 129684
+		// Token: 0x0401A54C RID: 107852
 		protected UUIText DescribeTextComp;
 
-		// Token: 0x0401FA95 RID: 129685
+		// Token: 0x0401A54D RID: 107853
 		protected UUIText DistanceTextComp;
 
-		// Token: 0x0401FA96 RID: 129686
+		// Token: 0x0401A54E RID: 107854
 		protected EStepReferenceSource? StepReferenceSource = new EStepReferenceSource?(EStepReferenceSource.MissionPanel);
 
-		// Token: 0x0401FA97 RID: 129687
+		// Token: 0x0401A54F RID: 107855
 		protected IMissionItemViewShowData ShowData;
 
-		// Token: 0x0401FA98 RID: 129688
+		// Token: 0x0401A550 RID: 107856
 		protected MissionViewStepTextInfoBase Config;
 
-		// Token: 0x0401FA99 RID: 129689
+		// Token: 0x0401A551 RID: 107857
 		protected bool DescribeTextVisible;
 
-		// Token: 0x0401FA9A RID: 129690
+		// Token: 0x0401A552 RID: 107858
 		protected bool DistanceTextVisible;
 
-		// Token: 0x0401FA9B RID: 129691
+		// Token: 0x0401A553 RID: 107859
 		private GeneralLogicTreeContext TreeContext;
 
-		// Token: 0x0401FA9C RID: 129692
+		// Token: 0x0401A554 RID: 107860
 		public readonly EMissionItemView ViewId = viewId;
 
-		// Token: 0x0401FA9D RID: 129693
+		// Token: 0x0401A555 RID: 107861
 		public readonly int StepId = stepId;
 
-		// Token: 0x0200C03D RID: 49213
+		// Token: 0x0200AA43 RID: 43587
 		[NullableContext(0)]
 		private enum EChildComponent
 		{
-			// Token: 0x0403A03D RID: 237629
+			// Token: 0x04034A00 RID: 215552
 			StepDescribeText,
-			// Token: 0x0403A03E RID: 237630
+			// Token: 0x04034A01 RID: 215553
 			StepDistanceText
 		}
 	}

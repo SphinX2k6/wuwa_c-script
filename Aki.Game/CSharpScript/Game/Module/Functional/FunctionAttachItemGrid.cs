@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Functional
 {
-	// Token: 0x02005A19 RID: 23065
+	// Token: 0x020049F5 RID: 18933
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,12 +19,12 @@ namespace CSharpScript.Game.Module.Functional
 	})]
 	public class FunctionAttachItemGrid : AutoAttachItem<int[]>
 	{
-		// Token: 0x0603A80A RID: 239626 RVA: 0x00DEC07E File Offset: 0x00DEA27E
+		// Token: 0x0602F753 RID: 194387 RVA: 0x00D3C60E File Offset: 0x00D3A80E
 		public FunctionAttachItemGrid(AActor uiItem = null) : base(uiItem)
 		{
 		}
 
-		// Token: 0x0603A80B RID: 239627 RVA: 0x00DEC088 File Offset: 0x00DEA288
+		// Token: 0x0602F754 RID: 194388 RVA: 0x00D3C618 File Offset: 0x00D3A818
 		protected override void OnRefreshItem(int[] data)
 		{
 			if (data == null)
@@ -44,23 +44,23 @@ namespace CSharpScript.Game.Module.Functional
 			this.NeedAnim = false;
 		}
 
-		// Token: 0x0603A80C RID: 239628 RVA: 0x00DEC0D2 File Offset: 0x00DEA2D2
+		// Token: 0x0602F755 RID: 194389 RVA: 0x00D3C662 File Offset: 0x00D3A862
 		public override void OnSelect()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.FunctionGridSelected, base.GetCurrentShowItemIndex());
 		}
 
-		// Token: 0x0603A80D RID: 239629 RVA: 0x00DEC0EA File Offset: 0x00DEA2EA
+		// Token: 0x0602F756 RID: 194390 RVA: 0x00D3C67A File Offset: 0x00D3A87A
 		protected override void OnUnSelect()
 		{
 		}
 
-		// Token: 0x0603A80E RID: 239630 RVA: 0x00DEC0EC File Offset: 0x00DEA2EC
+		// Token: 0x0602F757 RID: 194391 RVA: 0x00D3C67C File Offset: 0x00D3A87C
 		protected override void OnMoveItem()
 		{
 		}
 
-		// Token: 0x0603A80F RID: 239631 RVA: 0x00DEC0F0 File Offset: 0x00DEA2F0
+		// Token: 0x0602F758 RID: 194392 RVA: 0x00D3C680 File Offset: 0x00D3A880
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.Functional
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A810 RID: 239632 RVA: 0x00DEC159 File Offset: 0x00DEA359
+		// Token: 0x0602F759 RID: 194393 RVA: 0x00D3C6E9 File Offset: 0x00D3A8E9
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayoutNew<FunctionItem>(base.GetLayoutBase(0), (object functionId, UUIItem uiItem, int index) => this.InitSubItem((int?)functionId, uiItem, index), base.GetItem(1));
 		}
 
-		// Token: 0x0603A811 RID: 239633 RVA: 0x00DEC180 File Offset: 0x00DEA380
+		// Token: 0x0602F75A RID: 194394 RVA: 0x00D3C710 File Offset: 0x00D3A910
 		[NullableContext(1)]
 		private ILayoutItem<FunctionItem> InitSubItem(int? functionId, UUIItem uiItem, int index)
 		{
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.Module.Functional
 			};
 		}
 
-		// Token: 0x0603A812 RID: 239634 RVA: 0x00DEC1B9 File Offset: 0x00DEA3B9
+		// Token: 0x0602F75B RID: 194395 RVA: 0x00D3C749 File Offset: 0x00D3A949
 		public void SetNeedAnim(bool value)
 		{
 			this.NeedAnim = value;
 		}
 
-		// Token: 0x0603A813 RID: 239635 RVA: 0x00DEC1C4 File Offset: 0x00DEA3C4
+		// Token: 0x0602F75C RID: 194396 RVA: 0x00D3C754 File Offset: 0x00D3A954
 		protected override void OnBeforeDestroy()
 		{
 			this.Layout.ClearGridController();
@@ -109,27 +109,27 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A814 RID: 239636 RVA: 0x00DEC228 File Offset: 0x00DEA428
+		// Token: 0x0602F75D RID: 194397 RVA: 0x00D3C7B8 File Offset: 0x00D3A9B8
 		public FunctionItem GetFunctionItem(int functionId)
 		{
 			return this.Layout.GetLayoutItemByKey(functionId);
 		}
 
-		// Token: 0x0401E79A RID: 124826
+		// Token: 0x04019241 RID: 102977
 		[Nullable(1)]
 		protected GenericLayoutNew<FunctionItem> Layout;
 
-		// Token: 0x0401E79B RID: 124827
+		// Token: 0x04019242 RID: 102978
 		private bool NeedAnim;
 
-		// Token: 0x0200BC8E RID: 48270
+		// Token: 0x0200A697 RID: 42647
 		[NullableContext(0)]
 		private class ECompDefine
 		{
-			// Token: 0x04038E31 RID: 233009
+			// Token: 0x040337FC RID: 210940
 			public const int LayoutItem = 0;
 
-			// Token: 0x04038E32 RID: 233010
+			// Token: 0x040337FD RID: 210941
 			public const int GridItem = 1;
 		}
 	}

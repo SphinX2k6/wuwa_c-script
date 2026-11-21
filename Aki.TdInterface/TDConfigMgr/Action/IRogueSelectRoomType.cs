@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DCA RID: 7626
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FE1 RID: 8161
 	public class IRogueSelectRoomType
 	{
-		// Token: 0x0600A353 RID: 41811 RVA: 0x00172EFC File Offset: 0x001710FC
+		// Token: 0x0600AD5D RID: 44381 RVA: 0x00187624 File Offset: 0x00185824
 		private IRogueSelectRoomType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A354 RID: 41812 RVA: 0x00172F34 File Offset: 0x00171134
+		// Token: 0x0600AD5E RID: 44382 RVA: 0x0018765C File Offset: 0x0018585C
 		public static IRogueSelectRoomType Create([Nullable(2)] IRogueSelectRoomType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A355 RID: 41813 RVA: 0x00172F47 File Offset: 0x00171147
+		// Token: 0x0600AD5F RID: 44383 RVA: 0x0018766F File Offset: 0x0018586F
 		public static IRogueSelectRoomType CreateFromSetValue([Nullable(2)] IRogueSelectRoomType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A356 RID: 41814 RVA: 0x00172F5A File Offset: 0x0017115A
+		// Token: 0x0600AD60 RID: 44384 RVA: 0x00187682 File Offset: 0x00185882
 		public IRogueSelectRoomType_SetValue ToSetValue()
 		{
 			return new IRogueSelectRoomType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003251 RID: 12881
-		// (get) Token: 0x0600A357 RID: 41815 RVA: 0x00172F6D File Offset: 0x0017116D
-		// (set) Token: 0x0600A358 RID: 41816 RVA: 0x00172F98 File Offset: 0x00171198
+		// Token: 0x170034EB RID: 13547
+		// (get) Token: 0x0600AD61 RID: 44385 RVA: 0x00187695 File Offset: 0x00185895
+		// (set) Token: 0x0600AD62 RID: 44386 RVA: 0x001876C0 File Offset: 0x001858C0
 		public virtual ERogueSelectRoomType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061F2 RID: 25074
+		// Token: 0x0400677A RID: 26490
 		[Nullable(2)]
 		protected IRogueSelectRoomType FbInstance;
 
-		// Token: 0x040061F3 RID: 25075
+		// Token: 0x0400677B RID: 26491
 		[Nullable(2)]
 		protected IRogueSelectRoomType_SetValue PocoInterface;
 	}

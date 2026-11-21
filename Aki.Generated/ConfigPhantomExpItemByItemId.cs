@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000691 RID: 1681
+	// Token: 0x020006A9 RID: 1705
 	public class ConfigPhantomExpItemByItemId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002776 RID: 10102 RVA: 0x00138D03 File Offset: 0x00136F03
+		// Token: 0x06002806 RID: 10246 RVA: 0x0013F77F File Offset: 0x0013D97F
 		static ConfigPhantomExpItemByItemId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomExpItemByItemId.CreateStaticDefaultValue), new Action(ConfigPhantomExpItemByItemId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002777 RID: 10103 RVA: 0x00138D24 File Offset: 0x00136F24
+		// Token: 0x06002807 RID: 10247 RVA: 0x0013F7A0 File Offset: 0x0013D9A0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomExpItemByItemId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002778 RID: 10104 RVA: 0x00138DA3 File Offset: 0x00136FA3
+		// Token: 0x06002808 RID: 10248 RVA: 0x0013F81F File Offset: 0x0013DA1F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomExpItemByItemId.LogPair = null;
 			ConfigPhantomExpItemByItemId.HandleId = 0;
 		}
 
-		// Token: 0x06002779 RID: 10105 RVA: 0x00138DB1 File Offset: 0x00136FB1
+		// Token: 0x06002809 RID: 10249 RVA: 0x0013F82D File Offset: 0x0013DA2D
 		public static void Init()
 		{
 			ConfigPhantomExpItemByItemId.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomExpItemByItemId.HandleId, "db_phantom.db", "select BinData from `PhantomExpItem` where ItemId=?");
 		}
 
-		// Token: 0x0600277A RID: 10106 RVA: 0x00138DCC File Offset: 0x00136FCC
+		// Token: 0x0600280A RID: 10250 RVA: 0x0013F848 File Offset: 0x0013DA48
 		public static PhantomExpItem? GetConfig(int p0ItemId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomExpItemByItemId.HandleId, ConfigPhantomExpItemByItemId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomExpItem?(rootAsPhantomExpItem);
 		}
 
-		// Token: 0x04002DDD RID: 11741
+		// Token: 0x04002E85 RID: 11909
 		private const string DB = "db_phantom.db";
 
-		// Token: 0x04002DDE RID: 11742
+		// Token: 0x04002E86 RID: 11910
 		private const string FILE = "h.幻象.xlsx";
 
-		// Token: 0x04002DDF RID: 11743
+		// Token: 0x04002E87 RID: 11911
 		private const string TABLE = "PhantomExpItem";
 
-		// Token: 0x04002DE0 RID: 11744
+		// Token: 0x04002E88 RID: 11912
 		private const string COMMAND = "select BinData from `PhantomExpItem` where ItemId=?";
 
-		// Token: 0x04002DE1 RID: 11745
+		// Token: 0x04002E89 RID: 11913
 		private const string KEY_PREFIX = "PhantomExpItemByItemId";
 
-		// Token: 0x04002DE2 RID: 11746
+		// Token: 0x04002E8A RID: 11914
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002DE3 RID: 11747
+		// Token: 0x04002E8B RID: 11915
 		private static int HandleId;
 	}
 }

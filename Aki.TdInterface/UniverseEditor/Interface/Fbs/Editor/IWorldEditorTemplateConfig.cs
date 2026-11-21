@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048C8 RID: 18632
+	// Token: 0x02004D2D RID: 19757
 	public struct IWorldEditorTemplateConfig : IFlatbufferObject
 	{
-		// Token: 0x17008740 RID: 34624
-		// (get) Token: 0x0601D210 RID: 119312 RVA: 0x0041CE5D File Offset: 0x0041B05D
+		// Token: 0x17008D88 RID: 36232
+		// (get) Token: 0x0601E9FD RID: 125437 RVA: 0x004495F9 File Offset: 0x004477F9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D211 RID: 119313 RVA: 0x0041CE6A File Offset: 0x0041B06A
+		// Token: 0x0601E9FE RID: 125438 RVA: 0x00449606 File Offset: 0x00447806
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D212 RID: 119314 RVA: 0x0041CE74 File Offset: 0x0041B074
+		// Token: 0x0601E9FF RID: 125439 RVA: 0x00449610 File Offset: 0x00447810
 		public static IWorldEditorTemplateConfig GetRootAsIWorldEditorTemplateConfig(ByteBuffer _bb)
 		{
 			return IWorldEditorTemplateConfig.GetRootAsIWorldEditorTemplateConfig(_bb, default(IWorldEditorTemplateConfig));
 		}
 
-		// Token: 0x0601D213 RID: 119315 RVA: 0x0041CE90 File Offset: 0x0041B090
+		// Token: 0x0601EA00 RID: 125440 RVA: 0x0044962C File Offset: 0x0044782C
 		public static IWorldEditorTemplateConfig GetRootAsIWorldEditorTemplateConfig(ByteBuffer _bb, IWorldEditorTemplateConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D214 RID: 119316 RVA: 0x0041CEAD File Offset: 0x0041B0AD
+		// Token: 0x0601EA01 RID: 125441 RVA: 0x00449649 File Offset: 0x00447849
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D215 RID: 119317 RVA: 0x0041CEBC File Offset: 0x0041B0BC
+		// Token: 0x0601EA02 RID: 125442 RVA: 0x00449658 File Offset: 0x00447858
 		public IWorldEditorTemplateConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008741 RID: 34625
-		// (get) Token: 0x0601D216 RID: 119318 RVA: 0x0041CECC File Offset: 0x0041B0CC
+		// Token: 0x17008D89 RID: 36233
+		// (get) Token: 0x0601EA03 RID: 125443 RVA: 0x00449668 File Offset: 0x00447868
 		public string Icon
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D217 RID: 119319 RVA: 0x0041CF03 File Offset: 0x0041B103
+		// Token: 0x0601EA04 RID: 125444 RVA: 0x0044969F File Offset: 0x0044789F
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0601D218 RID: 119320 RVA: 0x0041CF12 File Offset: 0x0041B112
+		// Token: 0x0601EA05 RID: 125445 RVA: 0x004496AE File Offset: 0x004478AE
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x17008742 RID: 34626
-		// (get) Token: 0x0601D219 RID: 119321 RVA: 0x0041CF20 File Offset: 0x0041B120
+		// Token: 0x17008D8A RID: 36234
+		// (get) Token: 0x0601EA06 RID: 125446 RVA: 0x004496BC File Offset: 0x004478BC
 		public EZoomType ZoomType
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008743 RID: 34627
-		// (get) Token: 0x0601D21A RID: 119322 RVA: 0x0041CF5C File Offset: 0x0041B15C
+		// Token: 0x17008D8B RID: 36235
+		// (get) Token: 0x0601EA07 RID: 125447 RVA: 0x004496F8 File Offset: 0x004478F8
 		public string MainType
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D21B RID: 119323 RVA: 0x0041CF93 File Offset: 0x0041B193
+		// Token: 0x0601EA08 RID: 125448 RVA: 0x0044972F File Offset: 0x0044792F
 		public Span<byte> GetMainTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0601D21C RID: 119324 RVA: 0x0041CFA2 File Offset: 0x0041B1A2
+		// Token: 0x0601EA09 RID: 125449 RVA: 0x0044973E File Offset: 0x0044793E
 		public byte[] GetMainTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x17008744 RID: 34628
-		// (get) Token: 0x0601D21D RID: 119325 RVA: 0x0041CFB0 File Offset: 0x0041B1B0
+		// Token: 0x17008D8C RID: 36236
+		// (get) Token: 0x0601EA0A RID: 125450 RVA: 0x0044974C File Offset: 0x0044794C
 		public string SubType
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D21E RID: 119326 RVA: 0x0041CFE8 File Offset: 0x0041B1E8
+		// Token: 0x0601EA0B RID: 125451 RVA: 0x00449784 File Offset: 0x00447984
 		public Span<byte> GetSubTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0601D21F RID: 119327 RVA: 0x0041CFF8 File Offset: 0x0041B1F8
+		// Token: 0x0601EA0C RID: 125452 RVA: 0x00449794 File Offset: 0x00447994
 		public byte[] GetSubTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x17008745 RID: 34629
-		// (get) Token: 0x0601D220 RID: 119328 RVA: 0x0041D008 File Offset: 0x0041B208
+		// Token: 0x17008D8D RID: 36237
+		// (get) Token: 0x0601EA0D RID: 125453 RVA: 0x004497A4 File Offset: 0x004479A4
 		public string Tags
 		{
 			get
@@ -158,19 +158,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D221 RID: 119329 RVA: 0x0041D040 File Offset: 0x0041B240
+		// Token: 0x0601EA0E RID: 125454 RVA: 0x004497DC File Offset: 0x004479DC
 		public Span<byte> GetTagsBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0601D222 RID: 119330 RVA: 0x0041D050 File Offset: 0x0041B250
+		// Token: 0x0601EA0F RID: 125455 RVA: 0x004497EC File Offset: 0x004479EC
 		public byte[] GetTagsArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x0601D223 RID: 119331 RVA: 0x0041D05F File Offset: 0x0041B25F
+		// Token: 0x0601EA10 RID: 125456 RVA: 0x004497FB File Offset: 0x004479FB
 		public static Offset<IWorldEditorTemplateConfig> CreateIWorldEditorTemplateConfig(FlatBufferBuilder builder, StringOffset IconOffset = default(StringOffset), EZoomType ZoomType = EZoomType.Default, StringOffset MainTypeOffset = default(StringOffset), StringOffset SubTypeOffset = default(StringOffset), StringOffset TagsOffset = default(StringOffset))
 		{
 			builder.StartTable(5);
@@ -182,49 +182,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IWorldEditorTemplateConfig.EndIWorldEditorTemplateConfig(builder);
 		}
 
-		// Token: 0x0601D224 RID: 119332 RVA: 0x0041D093 File Offset: 0x0041B293
+		// Token: 0x0601EA11 RID: 125457 RVA: 0x0044982F File Offset: 0x00447A2F
 		public static void StartIWorldEditorTemplateConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601D225 RID: 119333 RVA: 0x0041D09C File Offset: 0x0041B29C
+		// Token: 0x0601EA12 RID: 125458 RVA: 0x00449838 File Offset: 0x00447A38
 		public static void AddIcon(FlatBufferBuilder builder, StringOffset iconOffset)
 		{
 			builder.AddOffset(0, iconOffset.Value, 0);
 		}
 
-		// Token: 0x0601D226 RID: 119334 RVA: 0x0041D0AC File Offset: 0x0041B2AC
+		// Token: 0x0601EA13 RID: 125459 RVA: 0x00449848 File Offset: 0x00447A48
 		public static void AddZoomType(FlatBufferBuilder builder, EZoomType zoomType)
 		{
 			builder.AddByte(1, (byte)zoomType, 0);
 		}
 
-		// Token: 0x0601D227 RID: 119335 RVA: 0x0041D0B7 File Offset: 0x0041B2B7
+		// Token: 0x0601EA14 RID: 125460 RVA: 0x00449853 File Offset: 0x00447A53
 		public static void AddMainType(FlatBufferBuilder builder, StringOffset mainTypeOffset)
 		{
 			builder.AddOffset(2, mainTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601D228 RID: 119336 RVA: 0x0041D0C7 File Offset: 0x0041B2C7
+		// Token: 0x0601EA15 RID: 125461 RVA: 0x00449863 File Offset: 0x00447A63
 		public static void AddSubType(FlatBufferBuilder builder, StringOffset subTypeOffset)
 		{
 			builder.AddOffset(3, subTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601D229 RID: 119337 RVA: 0x0041D0D7 File Offset: 0x0041B2D7
+		// Token: 0x0601EA16 RID: 125462 RVA: 0x00449873 File Offset: 0x00447A73
 		public static void AddTags(FlatBufferBuilder builder, StringOffset tagsOffset)
 		{
 			builder.AddOffset(4, tagsOffset.Value, 0);
 		}
 
-		// Token: 0x0601D22A RID: 119338 RVA: 0x0041D0E7 File Offset: 0x0041B2E7
+		// Token: 0x0601EA17 RID: 125463 RVA: 0x00449883 File Offset: 0x00447A83
 		public static Offset<IWorldEditorTemplateConfig> EndIWorldEditorTemplateConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IWorldEditorTemplateConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601D22B RID: 119339 RVA: 0x0041D0F4 File Offset: 0x0041B2F4
+		// Token: 0x0601EA18 RID: 125464 RVA: 0x00449890 File Offset: 0x00447A90
 		public IWorldEditorTemplateConfigT UnPack()
 		{
 			IWorldEditorTemplateConfigT worldEditorTemplateConfigT = new IWorldEditorTemplateConfigT();
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return worldEditorTemplateConfigT;
 		}
 
-		// Token: 0x0601D22C RID: 119340 RVA: 0x0041D10F File Offset: 0x0041B30F
+		// Token: 0x0601EA19 RID: 125465 RVA: 0x004498AB File Offset: 0x00447AAB
 		public void UnPackTo(IWorldEditorTemplateConfigT _o)
 		{
 			_o.Icon = this.Icon;
@@ -242,7 +242,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.Tags = this.Tags;
 		}
 
-		// Token: 0x0601D22D RID: 119341 RVA: 0x0041D150 File Offset: 0x0041B350
+		// Token: 0x0601EA1A RID: 125466 RVA: 0x004498EC File Offset: 0x00447AEC
 		public static Offset<IWorldEditorTemplateConfig> Pack(FlatBufferBuilder builder, IWorldEditorTemplateConfigT _o)
 		{
 			if (_o == null)
@@ -256,7 +256,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IWorldEditorTemplateConfig.CreateIWorldEditorTemplateConfig(builder, iconOffset, _o.ZoomType, mainTypeOffset, subTypeOffset, tagsOffset);
 		}
 
-		// Token: 0x0400CECF RID: 52943
+		// Token: 0x0400D908 RID: 55560
 		private Table __p;
 	}
 }

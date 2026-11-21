@@ -11,8 +11,8 @@ namespace Aki.TDConfigMgr.Component
 	[Nullable(0)]
 	public class AiComponent : IComponentBase
 	{
-		// Token: 0x0600006E RID: 110 RVA: 0x000148E8 File Offset: 0x00012AE8
-		[NullableContext(1)]
+		// Token: 0x0600006E RID: 110 RVA: 0x00015194 File Offset: 0x00013394
+		[NullableContext(0)]
 		private AiComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600006F RID: 111 RVA: 0x00014920 File Offset: 0x00012B20
-		[NullableContext(1)]
+		// Token: 0x0600006F RID: 111 RVA: 0x000151CC File Offset: 0x000133CC
+		[NullableContext(0)]
 		public static AiComponent Create([Nullable(2)] AiComponent instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000070 RID: 112 RVA: 0x00014933 File Offset: 0x00012B33
-		[NullableContext(1)]
+		// Token: 0x06000070 RID: 112 RVA: 0x000151DF File Offset: 0x000133DF
+		[NullableContext(0)]
 		public static AiComponent CreateFromSetValue([Nullable(2)] AiComponent_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000071 RID: 113 RVA: 0x00014948 File Offset: 0x00012B48
-		[NullableContext(1)]
+		// Token: 0x06000071 RID: 113 RVA: 0x000151F4 File Offset: 0x000133F4
+		[NullableContext(0)]
 		public new AiComponent_SetValue ToSetValue()
 		{
 			return new AiComponent_SetValue
@@ -76,8 +76,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000022 RID: 34
-		// (get) Token: 0x06000072 RID: 114 RVA: 0x000149E0 File Offset: 0x00012BE0
-		// (set) Token: 0x06000073 RID: 115 RVA: 0x00014A1A File Offset: 0x00012C1A
+		// (get) Token: 0x06000072 RID: 114 RVA: 0x0001528C File Offset: 0x0001348C
+		// (set) Token: 0x06000073 RID: 115 RVA: 0x000152C6 File Offset: 0x000134C6
 		public override bool? Disabled
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000023 RID: 35
-		// (get) Token: 0x06000074 RID: 116 RVA: 0x00014A28 File Offset: 0x00012C28
-		// (set) Token: 0x06000075 RID: 117 RVA: 0x00014A52 File Offset: 0x00012C52
+		// (get) Token: 0x06000074 RID: 116 RVA: 0x000152D4 File Offset: 0x000134D4
+		// (set) Token: 0x06000075 RID: 117 RVA: 0x000152FE File Offset: 0x000134FE
 		public override bool? EdIsLocked
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000024 RID: 36
-		// (get) Token: 0x06000076 RID: 118 RVA: 0x00014A60 File Offset: 0x00012C60
-		// (set) Token: 0x06000077 RID: 119 RVA: 0x00014A8B File Offset: 0x00012C8B
+		// (get) Token: 0x06000076 RID: 118 RVA: 0x0001530C File Offset: 0x0001350C
+		// (set) Token: 0x06000077 RID: 119 RVA: 0x00015337 File Offset: 0x00013537
 		public virtual int AiId
 		{
 			get
@@ -142,8 +142,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000025 RID: 37
-		// (get) Token: 0x06000078 RID: 120 RVA: 0x00014A9C File Offset: 0x00012C9C
-		// (set) Token: 0x06000079 RID: 121 RVA: 0x00014AFD File Offset: 0x00012CFD
+		// (get) Token: 0x06000078 RID: 120 RVA: 0x00015348 File Offset: 0x00013548
+		// (set) Token: 0x06000079 RID: 121 RVA: 0x000153A9 File Offset: 0x000135A9
 		public virtual IPatrol Patrol
 		{
 			get
@@ -172,8 +172,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000026 RID: 38
-		// (get) Token: 0x0600007A RID: 122 RVA: 0x00014B12 File Offset: 0x00012D12
-		// (set) Token: 0x0600007B RID: 123 RVA: 0x00014B39 File Offset: 0x00012D39
+		// (get) Token: 0x0600007A RID: 122 RVA: 0x000153BE File Offset: 0x000135BE
+		// (set) Token: 0x0600007B RID: 123 RVA: 0x000153E5 File Offset: 0x000135E5
 		public virtual IInitState InitState
 		{
 			get
@@ -196,8 +196,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000027 RID: 39
-		// (get) Token: 0x0600007C RID: 124 RVA: 0x00014B48 File Offset: 0x00012D48
-		// (set) Token: 0x0600007D RID: 125 RVA: 0x00014B82 File Offset: 0x00012D82
+		// (get) Token: 0x0600007C RID: 124 RVA: 0x000153F4 File Offset: 0x000135F4
+		// (set) Token: 0x0600007D RID: 125 RVA: 0x0001542E File Offset: 0x0001362E
 		public virtual int? CenterPoint
 		{
 			get
@@ -220,19 +220,19 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000028 RID: 40
-		// (get) Token: 0x0600007E RID: 126 RVA: 0x00014B90 File Offset: 0x00012D90
-		// (set) Token: 0x0600007F RID: 127 RVA: 0x00014BB7 File Offset: 0x00012DB7
+		// (get) Token: 0x0600007E RID: 126 RVA: 0x0001543C File Offset: 0x0001363C
+		// (set) Token: 0x0600007F RID: 127 RVA: 0x00015463 File Offset: 0x00013663
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IBlackBoard> InitBlackBoard
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -250,7 +250,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -259,8 +259,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000029 RID: 41
-		// (get) Token: 0x06000080 RID: 128 RVA: 0x00014BC5 File Offset: 0x00012DC5
-		// (set) Token: 0x06000081 RID: 129 RVA: 0x00014BEC File Offset: 0x00012DEC
+		// (get) Token: 0x06000080 RID: 128 RVA: 0x00015471 File Offset: 0x00013671
+		// (set) Token: 0x06000081 RID: 129 RVA: 0x00015498 File Offset: 0x00013698
 		public virtual string WeaponId
 		{
 			get
@@ -283,8 +283,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x1700002A RID: 42
-		// (get) Token: 0x06000082 RID: 130 RVA: 0x00014BFC File Offset: 0x00012DFC
-		// (set) Token: 0x06000083 RID: 131 RVA: 0x00014C36 File Offset: 0x00012E36
+		// (get) Token: 0x06000082 RID: 130 RVA: 0x000154A8 File Offset: 0x000136A8
+		// (set) Token: 0x06000083 RID: 131 RVA: 0x000154E2 File Offset: 0x000136E2
 		public virtual int? AiTeamLevelId
 		{
 			get
@@ -307,19 +307,19 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x1700002B RID: 43
-		// (get) Token: 0x06000084 RID: 132 RVA: 0x00014C44 File Offset: 0x00012E44
-		// (set) Token: 0x06000085 RID: 133 RVA: 0x00014CD7 File Offset: 0x00012ED7
+		// (get) Token: 0x06000084 RID: 132 RVA: 0x000154F0 File Offset: 0x000136F0
+		// (set) Token: 0x06000085 RID: 133 RVA: 0x00015583 File Offset: 0x00013783
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IStateRepPerfItem> StateRepPerfList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -350,7 +350,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -360,8 +360,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x1700002C RID: 44
-		// (get) Token: 0x06000086 RID: 134 RVA: 0x00014CEC File Offset: 0x00012EEC
-		// (set) Token: 0x06000087 RID: 135 RVA: 0x00014D4D File Offset: 0x00012F4D
+		// (get) Token: 0x06000086 RID: 134 RVA: 0x00015598 File Offset: 0x00013798
+		// (set) Token: 0x06000087 RID: 135 RVA: 0x000155F9 File Offset: 0x000137F9
 		public virtual IAiAlertSystemConfig AlertSystemConfig
 		{
 			get
@@ -389,35 +389,35 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400004B RID: 75
+		// Token: 0x0400004C RID: 76
 		protected new AiComponent FbInstance;
 
-		// Token: 0x0400004C RID: 76
+		// Token: 0x0400004D RID: 77
 		protected new AiComponent_SetValue PocoInterface;
 
-		// Token: 0x0400004D RID: 77
-		[Nullable(1)]
+		// Token: 0x0400004E RID: 78
+		[Nullable(0)]
 		private IPatrol _PatrolCache;
 
-		// Token: 0x0400004E RID: 78
+		// Token: 0x0400004F RID: 79
 		private bool _PatrolInited;
 
-		// Token: 0x0400004F RID: 79
+		// Token: 0x04000050 RID: 80
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IStateRepPerfItem> _StateRepPerfListCache;
 
-		// Token: 0x04000050 RID: 80
+		// Token: 0x04000051 RID: 81
 		private bool _StateRepPerfListInited;
 
-		// Token: 0x04000051 RID: 81
-		[Nullable(1)]
+		// Token: 0x04000052 RID: 82
+		[Nullable(0)]
 		private IAiAlertSystemConfig _AlertSystemConfigCache;
 
-		// Token: 0x04000052 RID: 82
+		// Token: 0x04000053 RID: 83
 		private bool _AlertSystemConfigInited;
 	}
 }

@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EDD RID: 24285
+	// Token: 0x02004EC4 RID: 20164
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 	})]
 	public class PeriodicityChallengeItem : GridProxyAbstract<IPeriodicityChallengeItem>
 	{
-		// Token: 0x0603DBAF RID: 252847 RVA: 0x00EEA24C File Offset: 0x00EE844C
+		// Token: 0x06032B4A RID: 207690 RVA: 0x00E3BF00 File Offset: 0x00E3A100
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DBB0 RID: 252848 RVA: 0x00EEA2F8 File Offset: 0x00EE84F8
+		// Token: 0x06032B4B RID: 207691 RVA: 0x00E3BFAC File Offset: 0x00E3A1AC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PeriodicityChallengeItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DBB1 RID: 252849 RVA: 0x00EEA33C File Offset: 0x00EE853C
+		// Token: 0x06032B4C RID: 207692 RVA: 0x00E3BFF0 File Offset: 0x00E3A1F0
 		[NullableContext(1)]
 		public override void Refresh(IPeriodicityChallengeItem data, bool isSelected, int gridIndex)
 		{
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			periodicityChallengeDetectionItem2.RefreshItem(data.Data);
 		}
 
-		// Token: 0x040203DF RID: 132063
+		// Token: 0x0401AEB1 RID: 110257
 		private PeriodicityChallengeTitleItem PeriodicityChallengeTitleItem;
 
-		// Token: 0x040203E0 RID: 132064
+		// Token: 0x0401AEB2 RID: 110258
 		private PeriodicityChallengeDetectionItem PeriodicityChallengeDetectionItem;
 
-		// Token: 0x040203E1 RID: 132065
+		// Token: 0x0401AEB3 RID: 110259
 		private PeriodicityChallengeItemTopTips TipsTopItem;
 	}
 }

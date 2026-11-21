@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BBA RID: 7098
+// Token: 0x02001079 RID: 4217
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationLimitChain : IStaticVariableResetter
 {
-	// Token: 0x0600D39E RID: 54174 RVA: 0x0030A887 File Offset: 0x00308A87
+	// Token: 0x0600A7B0 RID: 42928 RVA: 0x0031597B File Offset: 0x00313B7B
 	static FormationLimitChain()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FormationLimitChain.CreateStaticDefaultValue), new Action(FormationLimitChain.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600D39F RID: 54175 RVA: 0x0030A8A6 File Offset: 0x00308AA6
+	// Token: 0x0600A7B1 RID: 42929 RVA: 0x0031599A File Offset: 0x00313B9A
 	public FormationLimitChain(IReadOnlyList<ILimitStrategy> strategies)
 	{
 		this.Strategies = strategies;
 	}
 
-	// Token: 0x0600D3A0 RID: 54176 RVA: 0x0030A8C0 File Offset: 0x00308AC0
+	// Token: 0x0600A7B2 RID: 42930 RVA: 0x003159B4 File Offset: 0x00313BB4
 	public IValidationResult<ELimitReason> Check(ILimitContext ctx)
 	{
 		foreach (ILimitStrategy limitStrategy in this.Strategies)
@@ -33,7 +33,7 @@ public class FormationLimitChain : IStaticVariableResetter
 		return FormationLimitResult.Ok();
 	}
 
-	// Token: 0x0600D3A1 RID: 54177 RVA: 0x0030A920 File Offset: 0x00308B20
+	// Token: 0x0600A7B3 RID: 42931 RVA: 0x00315A14 File Offset: 0x00313C14
 	public static void CreateStaticDefaultValue()
 	{
 		FormationLimitChain.StandardLimitChain = new FormationLimitChain(new ILimitStrategy[]
@@ -45,15 +45,15 @@ public class FormationLimitChain : IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0600D3A2 RID: 54178 RVA: 0x0030A952 File Offset: 0x00308B52
+	// Token: 0x0600A7B4 RID: 42932 RVA: 0x00315A46 File Offset: 0x00313C46
 	public static void ResetStaticDefaultValue()
 	{
 		FormationLimitChain.StandardLimitChain = null;
 	}
 
-	// Token: 0x040060C8 RID: 24776
+	// Token: 0x04006197 RID: 24983
 	private readonly IReadOnlyList<ILimitStrategy> Strategies = new List<ILimitStrategy>();
 
-	// Token: 0x040060C9 RID: 24777
+	// Token: 0x04006198 RID: 24984
 	public static FormationLimitChain StandardLimitChain;
 }

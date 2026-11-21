@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B1E RID: 11038
+// Token: 0x0200209A RID: 8346
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class SurvivorsRewardTaskItem : GridProxyAbstract<ActivityTaskData>
 {
-	// Token: 0x06016ED9 RID: 93913 RVA: 0x005D19EC File Offset: 0x005CFBEC
+	// Token: 0x0601490A RID: 84234 RVA: 0x005FE568 File Offset: 0x005FC768
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,19 +38,19 @@ public class SurvivorsRewardTaskItem : GridProxyAbstract<ActivityTaskData>
 		};
 	}
 
-	// Token: 0x06016EDA RID: 93914 RVA: 0x005D1B05 File Offset: 0x005CFD05
+	// Token: 0x0601490B RID: 84235 RVA: 0x005FE681 File Offset: 0x005FC881
 	protected override void OnStart()
 	{
 		this.RewardScroll = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(2), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, true);
 	}
 
-	// Token: 0x06016EDB RID: 93915 RVA: 0x005D1B28 File Offset: 0x005CFD28
+	// Token: 0x0601490C RID: 84236 RVA: 0x005FE6A4 File Offset: 0x005FC8A4
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06016EDC RID: 93916 RVA: 0x005D1B30 File Offset: 0x005CFD30
+	// Token: 0x0601490D RID: 84237 RVA: 0x005FE6AC File Offset: 0x005FC8AC
 	public override void Refresh(ActivityTaskData taskData, bool isSelected, int gridIndex)
 	{
 		this.TaskData = taskData;
@@ -81,13 +81,13 @@ public class SurvivorsRewardTaskItem : GridProxyAbstract<ActivityTaskData>
 		}));
 	}
 
-	// Token: 0x06016EDD RID: 93917 RVA: 0x005D1CA1 File Offset: 0x005CFEA1
+	// Token: 0x0601490E RID: 84238 RVA: 0x005FE81D File Offset: 0x005FCA1D
 	private void OnGetBtnClickInternal()
 	{
 		this.OnGetBtnClick();
 	}
 
-	// Token: 0x06016EDE RID: 93918 RVA: 0x005D1CB0 File Offset: 0x005CFEB0
+	// Token: 0x0601490F RID: 84239 RVA: 0x005FE82C File Offset: 0x005FCA2C
 	private void OnJumpBtnClick()
 	{
 		if (this.TaskData == null)
@@ -102,22 +102,22 @@ public class SurvivorsRewardTaskItem : GridProxyAbstract<ActivityTaskData>
 		SkipTaskManager.RunByConfigId(survivorsTask.Value.JumpId, null);
 	}
 
-	// Token: 0x06016EDF RID: 93919 RVA: 0x005D1CFB File Offset: 0x005CFEFB
+	// Token: 0x06014910 RID: 84240 RVA: 0x005FE877 File Offset: 0x005FCA77
 	public override object GetKey(ActivityTaskData data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x0400AA96 RID: 43670
+	// Token: 0x0400AE9C RID: 44700
 	[Nullable(2)]
 	private ActivityTaskData TaskData;
 
-	// Token: 0x0400AA97 RID: 43671
+	// Token: 0x0400AE9D RID: 44701
 	public Action OnGetBtnClick = delegate()
 	{
 	};
 
-	// Token: 0x0400AA98 RID: 43672
+	// Token: 0x0400AE9E RID: 44702
 	[Nullable(new byte[]
 	{
 		2,

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BE6 RID: 23526
+	// Token: 0x020061FF RID: 25087
 	public class TAkEventTypeUnion
 	{
-		// Token: 0x1700B1C3 RID: 45507
-		// (get) Token: 0x06028511 RID: 165137 RVA: 0x0058A142 File Offset: 0x00588342
-		// (set) Token: 0x06028512 RID: 165138 RVA: 0x0058A14A File Offset: 0x0058834A
+		// Token: 0x1700BB0D RID: 47885
+		// (get) Token: 0x0602AAE1 RID: 174817 RVA: 0x005D1CCE File Offset: 0x005CFECE
+		// (set) Token: 0x0602AAE2 RID: 174818 RVA: 0x005D1CD6 File Offset: 0x005CFED6
 		public TAkEventType Type { get; set; }
 
-		// Token: 0x1700B1C4 RID: 45508
-		// (get) Token: 0x06028513 RID: 165139 RVA: 0x0058A153 File Offset: 0x00588353
-		// (set) Token: 0x06028514 RID: 165140 RVA: 0x0058A15B File Offset: 0x0058835B
+		// Token: 0x1700BB0E RID: 47886
+		// (get) Token: 0x0602AAE3 RID: 174819 RVA: 0x005D1CDF File Offset: 0x005CFEDF
+		// (set) Token: 0x0602AAE4 RID: 174820 RVA: 0x005D1CE7 File Offset: 0x005CFEE7
 		public object Value { get; set; }
 
-		// Token: 0x06028515 RID: 165141 RVA: 0x0058A164 File Offset: 0x00588364
+		// Token: 0x0602AAE5 RID: 174821 RVA: 0x005D1CF0 File Offset: 0x005CFEF0
 		public TAkEventTypeUnion()
 		{
 			this.Type = TAkEventType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028516 RID: 165142 RVA: 0x0058A17A File Offset: 0x0058837A
+		// Token: 0x0602AAE6 RID: 174822 RVA: 0x005D1D06 File Offset: 0x005CFF06
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028517 RID: 165143 RVA: 0x0058A18C File Offset: 0x0058838C
+		// Token: 0x0602AAE7 RID: 174823 RVA: 0x005D1D18 File Offset: 0x005CFF18
 		public IBoxAkEventT AsIBoxAkEvent()
 		{
 			return this.As<IBoxAkEventT>();
 		}
 
-		// Token: 0x06028518 RID: 165144 RVA: 0x0058A194 File Offset: 0x00588394
+		// Token: 0x0602AAE8 RID: 174824 RVA: 0x005D1D20 File Offset: 0x005CFF20
 		public static TAkEventTypeUnion FromIBoxAkEvent(IBoxAkEventT _iboxakevent)
 		{
 			return new TAkEventTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028519 RID: 165145 RVA: 0x0058A1A9 File Offset: 0x005883A9
+		// Token: 0x0602AAE9 RID: 174825 RVA: 0x005D1D35 File Offset: 0x005CFF35
 		public IDefaultAkEventT AsIDefaultAkEvent()
 		{
 			return this.As<IDefaultAkEventT>();
 		}
 
-		// Token: 0x0602851A RID: 165146 RVA: 0x0058A1B1 File Offset: 0x005883B1
+		// Token: 0x0602AAEA RID: 174826 RVA: 0x005D1D3D File Offset: 0x005CFF3D
 		public static TAkEventTypeUnion FromIDefaultAkEvent(IDefaultAkEventT _idefaultakevent)
 		{
 			return new TAkEventTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602851B RID: 165147 RVA: 0x0058A1C6 File Offset: 0x005883C6
+		// Token: 0x0602AAEB RID: 174827 RVA: 0x005D1D52 File Offset: 0x005CFF52
 		public IPointAkEventT AsIPointAkEvent()
 		{
 			return this.As<IPointAkEventT>();
 		}
 
-		// Token: 0x0602851C RID: 165148 RVA: 0x0058A1CE File Offset: 0x005883CE
+		// Token: 0x0602AAEC RID: 174828 RVA: 0x005D1D5A File Offset: 0x005CFF5A
 		public static TAkEventTypeUnion FromIPointAkEvent(IPointAkEventT _ipointakevent)
 		{
 			return new TAkEventTypeUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602851D RID: 165149 RVA: 0x0058A1E4 File Offset: 0x005883E4
+		// Token: 0x0602AAED RID: 174829 RVA: 0x005D1D70 File Offset: 0x005CFF70
 		public static int Pack(FlatBufferBuilder builder, TAkEventTypeUnion _o)
 		{
 			switch (_o.Type)

@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028C3 RID: 10435
+// Token: 0x02001E3E RID: 7742
 public class RoleSkillTreeInfoView : UiViewBase
 {
-	// Token: 0x06015889 RID: 88201 RVA: 0x00570523 File Offset: 0x0056E723
+	// Token: 0x06013289 RID: 78473 RVA: 0x0059B3E7 File Offset: 0x005995E7
 	[NullableContext(1)]
 	public RoleSkillTreeInfoView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601588A RID: 88202 RVA: 0x0057052C File Offset: 0x0056E72C
+	// Token: 0x0601328A RID: 78474 RVA: 0x0059B3F0 File Offset: 0x005995F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -30,7 +30,7 @@ public class RoleSkillTreeInfoView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601588B RID: 88203 RVA: 0x00570574 File Offset: 0x0056E774
+	// Token: 0x0601328B RID: 78475 RVA: 0x0059B438 File Offset: 0x00599638
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleSkillTreeInfoView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class RoleSkillTreeInfoView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601588C RID: 88204 RVA: 0x005705B8 File Offset: 0x0056E7B8
+	// Token: 0x0601328C RID: 78476 RVA: 0x0059B47C File Offset: 0x0059967C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
@@ -50,7 +50,7 @@ public class RoleSkillTreeInfoView : UiViewBase
 		EventSystem.Instance.Add<int>(EEventName.SkillTreeNodeLevelUp, new Action<int>(this.OnSkillTreeNodeLevelUp));
 	}
 
-	// Token: 0x0601588D RID: 88205 RVA: 0x00570638 File Offset: 0x0056E838
+	// Token: 0x0601328D RID: 78477 RVA: 0x0059B4FC File Offset: 0x005996FC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
@@ -59,13 +59,13 @@ public class RoleSkillTreeInfoView : UiViewBase
 		EventSystem.Instance.Remove<int>(EEventName.SkillTreeNodeLevelUp, new Action<int>(this.OnSkillTreeNodeLevelUp));
 	}
 
-	// Token: 0x0601588E RID: 88206 RVA: 0x005706B5 File Offset: 0x0056E8B5
+	// Token: 0x0601328E RID: 78478 RVA: 0x0059B579 File Offset: 0x00599779
 	protected override void OnBeforeShow()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x0601588F RID: 88207 RVA: 0x005706C0 File Offset: 0x0056E8C0
+	// Token: 0x0601328F RID: 78479 RVA: 0x0059B584 File Offset: 0x00599784
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		RoleSkillTreeInfoView.<OnPlayingStartSequenceAsync>d__8 <OnPlayingStartSequenceAsync>d__;
@@ -76,7 +76,7 @@ public class RoleSkillTreeInfoView : UiViewBase
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015890 RID: 88208 RVA: 0x00570704 File Offset: 0x0056E904
+	// Token: 0x06013290 RID: 78480 RVA: 0x0059B5C8 File Offset: 0x005997C8
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		RoleSkillTreeInfoView.<OnPlayingCloseSequenceAsync>d__9 <OnPlayingCloseSequenceAsync>d__;
@@ -87,7 +87,7 @@ public class RoleSkillTreeInfoView : UiViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015891 RID: 88209 RVA: 0x00570748 File Offset: 0x0056E948
+	// Token: 0x06013291 RID: 78481 RVA: 0x0059B60C File Offset: 0x0059980C
 	public void Refresh()
 	{
 		IRoleSkillTreeInfoItemData data = this.OpenParam as IRoleSkillTreeInfoItemData;
@@ -104,7 +104,7 @@ public class RoleSkillTreeInfoView : UiViewBase
 		roleSkillTreeInfoItem2.ShowLeftPanelByTabType(this.RoleSkillTreeInfoItem.GetCurSkillTabShowType());
 	}
 
-	// Token: 0x06015892 RID: 88210 RVA: 0x0057078E File Offset: 0x0056E98E
+	// Token: 0x06013292 RID: 78482 RVA: 0x0059B652 File Offset: 0x00599852
 	private void OnCommonItemCountAnyChange(int i, int i1)
 	{
 		RoleSkillTreeInfoItem roleSkillTreeInfoItem = this.RoleSkillTreeInfoItem;
@@ -115,13 +115,13 @@ public class RoleSkillTreeInfoView : UiViewBase
 		roleSkillTreeInfoItem.OnCommonItemCountAnyChange();
 	}
 
-	// Token: 0x06015893 RID: 88211 RVA: 0x005707A0 File Offset: 0x0056E9A0
+	// Token: 0x06013293 RID: 78483 RVA: 0x0059B664 File Offset: 0x00599864
 	private void OnRoleInternalViewQuit()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06015894 RID: 88212 RVA: 0x005707A9 File Offset: 0x0056E9A9
+	// Token: 0x06013294 RID: 78484 RVA: 0x0059B66D File Offset: 0x0059986D
 	private void OnRoleSkillBranchChanged(int i)
 	{
 		RoleSkillTreeInfoItem roleSkillTreeInfoItem = this.RoleSkillTreeInfoItem;
@@ -132,7 +132,7 @@ public class RoleSkillTreeInfoView : UiViewBase
 		roleSkillTreeInfoItem.OnRoleSkillBranchChanged();
 	}
 
-	// Token: 0x06015895 RID: 88213 RVA: 0x005707BB File Offset: 0x0056E9BB
+	// Token: 0x06013295 RID: 78485 RVA: 0x0059B67F File Offset: 0x0059987F
 	private void OnSkillTreeNodeLevelUp(int i)
 	{
 		RoleSkillTreeInfoItem roleSkillTreeInfoItem = this.RoleSkillTreeInfoItem;
@@ -143,14 +143,14 @@ public class RoleSkillTreeInfoView : UiViewBase
 		roleSkillTreeInfoItem.OnSkillTreeNodeLevelUp();
 	}
 
-	// Token: 0x0400A076 RID: 41078
+	// Token: 0x0400A45F RID: 42079
 	[Nullable(2)]
 	private RoleSkillTreeInfoItem RoleSkillTreeInfoItem;
 
-	// Token: 0x02008ECE RID: 36558
+	// Token: 0x02008116 RID: 33046
 	private enum EComponent
 	{
-		// Token: 0x0402E50F RID: 189711
+		// Token: 0x04029C0A RID: 171018
 		RoleSkillTreeInfoItem
 	}
 }

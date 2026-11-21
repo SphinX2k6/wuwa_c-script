@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -16,17 +15,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005971 RID: 22897
+	// Token: 0x0200494A RID: 18762
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantSystemCollectView : UiViewBase
 	{
-		// Token: 0x0603A18B RID: 237963 RVA: 0x00DCE6B8 File Offset: 0x00DCC8B8
+		// Token: 0x0602F0B1 RID: 192689 RVA: 0x00D1D940 File Offset: 0x00D1BB40
 		public GiantSystemCollectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A18C RID: 237964 RVA: 0x00DCE6D0 File Offset: 0x00DCC8D0
+		// Token: 0x0602F0B2 RID: 192690 RVA: 0x00D1D958 File Offset: 0x00D1BB58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 33;
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A18D RID: 237965 RVA: 0x00DCEBFC File Offset: 0x00DCCDFC
+		// Token: 0x0602F0B3 RID: 192691 RVA: 0x00D1DE84 File Offset: 0x00D1C084
 		protected override void OnBeforeCreate()
 		{
 			IGiantSystemCollectOpenParam giantSystemCollectOpenParam = this.OpenParam as IGiantSystemCollectOpenParam;
@@ -123,7 +122,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.IncId = giantSystemCollectOpenParam.IncId;
 		}
 
-		// Token: 0x0603A18E RID: 237966 RVA: 0x00DCEC30 File Offset: 0x00DCCE30
+		// Token: 0x0602F0B4 RID: 192692 RVA: 0x00D1DEB8 File Offset: 0x00D1C0B8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GiantSystemCollectView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -134,7 +133,7 @@ namespace CSharpScript.Game.Module.Giant
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A18F RID: 237967 RVA: 0x00DCEC74 File Offset: 0x00DCCE74
+		// Token: 0x0602F0B5 RID: 192693 RVA: 0x00D1DEFC File Offset: 0x00D1C0FC
 		protected override void OnStart()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(24);
@@ -182,7 +181,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.Refresh();
 		}
 
-		// Token: 0x0603A190 RID: 237968 RVA: 0x00DCED84 File Offset: 0x00DCCF84
+		// Token: 0x0602F0B6 RID: 192694 RVA: 0x00D1E00C File Offset: 0x00D1C20C
 		protected override void OnBeforeDestroy()
 		{
 			GiantBarTween barTween = this.BarTween;
@@ -194,7 +193,7 @@ namespace CSharpScript.Game.Module.Giant
 			GeneralLogicTreeController.Instance.OpenSystemBoardResultRequest(this.LastTopQuality, this.IncId);
 		}
 
-		// Token: 0x0603A191 RID: 237969 RVA: 0x00DCEDB4 File Offset: 0x00DCCFB4
+		// Token: 0x0602F0B7 RID: 192695 RVA: 0x00D1E03C File Offset: 0x00D1C23C
 		private void Refresh()
 		{
 			IGiantEcoDisplayConfig config = GiantDefine.EcoDisplayConfigs[this.EcoType];
@@ -210,7 +209,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshSubmitBtnState();
 		}
 
-		// Token: 0x0603A192 RID: 237970 RVA: 0x00DCEE28 File Offset: 0x00DCD028
+		// Token: 0x0602F0B8 RID: 192696 RVA: 0x00D1E0B0 File Offset: 0x00D1C2B0
 		private void RefreshStateVisibility(GiantEcoNetStatus status)
 		{
 			bool flag = status == GiantEcoNetStatus.Lock;
@@ -265,7 +264,7 @@ namespace CSharpScript.Game.Module.Giant
 			item4.SetUIActive(!flag2);
 		}
 
-		// Token: 0x0603A193 RID: 237971 RVA: 0x00DCEF0C File Offset: 0x00DCD10C
+		// Token: 0x0602F0B9 RID: 192697 RVA: 0x00D1E194 File Offset: 0x00D1C394
 		private void RefreshIcon(IGiantEcoDisplayConfig config, GiantEcoNetStatus status)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(config.IconSpriteNormal);
@@ -274,7 +273,7 @@ namespace CSharpScript.Game.Module.Giant
 			base.TrySetSpriteByPath(resourcePath2, base.GetSprite(1), false, null, null);
 		}
 
-		// Token: 0x0603A194 RID: 237972 RVA: 0x00DCEF70 File Offset: 0x00DCD170
+		// Token: 0x0602F0BA RID: 192698 RVA: 0x00D1E1F8 File Offset: 0x00D1C3F8
 		private void RefreshTextAndColor(IGiantEcoDisplayConfig config, GiantEcoNetStatus status)
 		{
 			FColor color = FColor.FromHex(config.OutlineColorHex);
@@ -288,7 +287,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshFeatureActivation();
 		}
 
-		// Token: 0x0603A195 RID: 237973 RVA: 0x00DCEFBC File Offset: 0x00DCD1BC
+		// Token: 0x0602F0BB RID: 192699 RVA: 0x00D1E244 File Offset: 0x00D1C444
 		private void RefreshLevelDesc()
 		{
 			GiantLevelUnlock? levelUnlock = GiantConfig.GetLevelUnlock(this.EcoType, this.DisplayLevel);
@@ -334,7 +333,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshTitles();
 		}
 
-		// Token: 0x0603A196 RID: 237974 RVA: 0x00DCF128 File Offset: 0x00DCD328
+		// Token: 0x0602F0BC RID: 192700 RVA: 0x00D1E3B0 File Offset: 0x00D1C5B0
 		private void RefreshTitles()
 		{
 			bool flag = this.DisplayLevel >= this.GetMaxLevel();
@@ -353,7 +352,7 @@ namespace CSharpScript.Game.Module.Giant
 			text2.SetText(newText, true);
 		}
 
-		// Token: 0x0603A197 RID: 237975 RVA: 0x00DCF1A0 File Offset: 0x00DCD3A0
+		// Token: 0x0602F0BD RID: 192701 RVA: 0x00D1E428 File Offset: 0x00D1C628
 		private void RefreshFeatureActivation()
 		{
 			int displayLevelFromStage = this.GetDisplayLevelFromStage();
@@ -392,7 +391,7 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A198 RID: 237976 RVA: 0x00DCF25D File Offset: 0x00DCD45D
+		// Token: 0x0602F0BE RID: 192702 RVA: 0x00D1E4E5 File Offset: 0x00D1C6E5
 		private void SetTextOutline(int name, FColor color)
 		{
 			UUIText text = base.GetText(name);
@@ -403,7 +402,7 @@ namespace CSharpScript.Game.Module.Giant
 			text.SetFontOutlineColor(color);
 		}
 
-		// Token: 0x0603A199 RID: 237977 RVA: 0x00DCF274 File Offset: 0x00DCD474
+		// Token: 0x0602F0BF RID: 192703 RVA: 0x00D1E4FC File Offset: 0x00D1C6FC
 		private void RefreshItemList(GiantEcoNetStatus status)
 		{
 			bool flag = status == GiantEcoNetStatus.MaxStableValue;
@@ -438,27 +437,31 @@ namespace CSharpScript.Game.Module.Giant
 			itemLayout.RefreshByData(Array.Empty<GiantCollectItemData>(), null, false);
 		}
 
-		// Token: 0x0603A19A RID: 237978 RVA: 0x00DCF2E8 File Offset: 0x00DCD4E8
+		// Token: 0x0602F0C0 RID: 192704 RVA: 0x00D1E570 File Offset: 0x00D1C770
 		private void RefreshItemGrids()
 		{
-			bool isComplete = GiantModel.Instance.GetEcoStatus(this.EcoType) == GiantEcoNetStatus.MaxStableValue;
-			List<GiantCollectItemData> data = (from itemId in GiantConfig.GetEcoItemIds(this.EcoType)
-			select new GiantCollectItemData
+			bool value = GiantModel.Instance.GetEcoStatus(this.EcoType) == GiantEcoNetStatus.MaxStableValue;
+			int[] ecoItemIds = GiantConfig.GetEcoItemIds(this.EcoType);
+			List<GiantCollectItemData> list = new List<GiantCollectItemData>();
+			foreach (int itemId in ecoItemIds)
 			{
-				ItemId = itemId,
-				IsLocked = this.IsItemLocked(itemId),
-				IsDelivered = new bool?(isComplete),
-				OnClick = new Action<int>(this.OnClickItem)
-			}).ToList<GiantCollectItemData>();
+				list.Add(new GiantCollectItemData
+				{
+					ItemId = itemId,
+					IsLocked = this.IsItemLocked(itemId),
+					IsDelivered = new bool?(value),
+					OnClick = new Action<int>(this.OnClickItem)
+				});
+			}
 			GenericLayout<GiantCollectItemGrid, GiantCollectItemData> itemLayout = this.ItemLayout;
 			if (itemLayout == null)
 			{
 				return;
 			}
-			itemLayout.RefreshByData(data, null, false);
+			itemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603A19B RID: 237979 RVA: 0x00DCF350 File Offset: 0x00DCD550
+		// Token: 0x0602F0C1 RID: 192705 RVA: 0x00D1E608 File Offset: 0x00D1C808
 		private void RefreshRewardList()
 		{
 			if (this.RewardLayout == null)
@@ -492,7 +495,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RewardLayout.RefreshByData(dropPackagePreviewItemListByIdList2, null, false);
 		}
 
-		// Token: 0x0603A19C RID: 237980 RVA: 0x00DCF454 File Offset: 0x00DCD654
+		// Token: 0x0602F0C2 RID: 192706 RVA: 0x00D1E70C File Offset: 0x00D1C90C
 		private int GetMaxLevel()
 		{
 			int num = GiantConfig.GetEcoGoals(this.EcoType).Length;
@@ -503,13 +506,13 @@ namespace CSharpScript.Game.Module.Giant
 			return num + 1;
 		}
 
-		// Token: 0x0603A19D RID: 237981 RVA: 0x00DCF478 File Offset: 0x00DCD678
+		// Token: 0x0602F0C3 RID: 192707 RVA: 0x00D1E730 File Offset: 0x00D1C930
 		private int GetDisplayLevelFromStage()
 		{
 			return this.GetDisplayLevelByValue((int)GiantModel.Instance.GetStableValue(this.EcoType));
 		}
 
-		// Token: 0x0603A19E RID: 237982 RVA: 0x00DCF494 File Offset: 0x00DCD694
+		// Token: 0x0602F0C4 RID: 192708 RVA: 0x00D1E74C File Offset: 0x00D1C94C
 		private IGiantLevelSpan GetLevelSpan(int displayLevel)
 		{
 			int[] ecoGoals = GiantConfig.GetEcoGoals(this.EcoType);
@@ -533,7 +536,7 @@ namespace CSharpScript.Game.Module.Giant
 			};
 		}
 
-		// Token: 0x0603A19F RID: 237983 RVA: 0x00DCF550 File Offset: 0x00DCD750
+		// Token: 0x0602F0C5 RID: 192709 RVA: 0x00D1E808 File Offset: 0x00D1CA08
 		private void ApplyBarFill(double currentInLevel, double addedValue, double span, bool animatePreview)
 		{
 			UUISprite sprite = base.GetSprite(7);
@@ -571,7 +574,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.SetPreviewFill(target, animatePreview);
 		}
 
-		// Token: 0x0603A1A0 RID: 237984 RVA: 0x00DCF63C File Offset: 0x00DCD83C
+		// Token: 0x0602F0C6 RID: 192710 RVA: 0x00D1E8F4 File Offset: 0x00D1CAF4
 		private void SetPreviewFill(double target, bool animate)
 		{
 			UUISprite sprite = base.GetSprite(6);
@@ -592,7 +595,7 @@ namespace CSharpScript.Game.Module.Giant
 			sprite.SetFillAmount((float)target);
 		}
 
-		// Token: 0x0603A1A1 RID: 237985 RVA: 0x00DCF68C File Offset: 0x00DCD88C
+		// Token: 0x0602F0C7 RID: 192711 RVA: 0x00D1E944 File Offset: 0x00D1CB44
 		private void RefreshValueAddText(int addedValue)
 		{
 			UUIText text = base.GetText(9);
@@ -614,7 +617,7 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A1A2 RID: 237986 RVA: 0x00DCF6D8 File Offset: 0x00DCD8D8
+		// Token: 0x0602F0C8 RID: 192712 RVA: 0x00D1E990 File Offset: 0x00D1CB90
 		private void RefreshProgress()
 		{
 			int displayLevelFromStage = this.GetDisplayLevelFromStage();
@@ -652,7 +655,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.ApplyBarFill(num, 0.0, levelSpan.Span, false);
 		}
 
-		// Token: 0x0603A1A3 RID: 237987 RVA: 0x00DCF7E4 File Offset: 0x00DCD9E4
+		// Token: 0x0602F0C9 RID: 192713 RVA: 0x00D1EA9C File Offset: 0x00D1CC9C
 		private void RefreshBrowseProgress()
 		{
 			int displayLevel = this.DisplayLevel;
@@ -690,25 +693,25 @@ namespace CSharpScript.Game.Module.Giant
 			this.ApplyBarFill(num, 0.0, levelSpan.Span, false);
 		}
 
-		// Token: 0x0603A1A4 RID: 237988 RVA: 0x00DCF8EE File Offset: 0x00DCDAEE
+		// Token: 0x0602F0CA RID: 192714 RVA: 0x00D1EBA6 File Offset: 0x00D1CDA6
 		private bool IsEcoWholeLocked()
 		{
 			return GiantModel.Instance.GetEcoStatus(this.EcoType) == GiantEcoNetStatus.Lock;
 		}
 
-		// Token: 0x0603A1A5 RID: 237989 RVA: 0x00DCF903 File Offset: 0x00DCDB03
+		// Token: 0x0602F0CB RID: 192715 RVA: 0x00D1EBBB File Offset: 0x00D1CDBB
 		private bool IsItemLocked(int itemId)
 		{
 			return this.IsEcoWholeLocked() || GiantModel.Instance.GetItemLocked(itemId);
 		}
 
-		// Token: 0x0603A1A6 RID: 237990 RVA: 0x00DCF91A File Offset: 0x00DCDB1A
+		// Token: 0x0602F0CC RID: 192716 RVA: 0x00D1EBD2 File Offset: 0x00D1CDD2
 		private void OnClickLockHelp()
 		{
 			GiantController.Instance.OpenUnlockConditionView(this.EcoType);
 		}
 
-		// Token: 0x0603A1A7 RID: 237991 RVA: 0x00DCF92C File Offset: 0x00DCDB2C
+		// Token: 0x0602F0CD RID: 192717 RVA: 0x00D1EBE4 File Offset: 0x00D1CDE4
 		private void OnClickItem(int itemId)
 		{
 			if (this.IsEcoWholeLocked())
@@ -721,10 +724,10 @@ namespace CSharpScript.Game.Module.Giant
 				ScrollingTipsController.Instance.ShowTipsByText(GiantConfig.ResolveLocalTextOrKey(GiantConfig.GetTipsKeyHighQualityLock()));
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(itemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(itemId, true, null, false);
 		}
 
-		// Token: 0x0603A1A8 RID: 237992 RVA: 0x00DCF984 File Offset: 0x00DCDB84
+		// Token: 0x0602F0CE RID: 192718 RVA: 0x00D1EC3C File Offset: 0x00D1CE3C
 		private IReadOnlyDictionary<int, int> CollectAllDeliverable()
 		{
 			Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -764,13 +767,13 @@ namespace CSharpScript.Game.Module.Giant
 			return dictionary;
 		}
 
-		// Token: 0x0603A1A9 RID: 237993 RVA: 0x00DCFA5C File Offset: 0x00DCDC5C
+		// Token: 0x0602F0CF RID: 192719 RVA: 0x00D1ED14 File Offset: 0x00D1CF14
 		private bool HasAnyDeliverable()
 		{
 			return this.CollectAllDeliverable().Count > 0;
 		}
 
-		// Token: 0x0603A1AA RID: 237994 RVA: 0x00DCFA6C File Offset: 0x00DCDC6C
+		// Token: 0x0602F0D0 RID: 192720 RVA: 0x00D1ED24 File Offset: 0x00D1CF24
 		private void RefreshSubmitBtnState()
 		{
 			UUIButtonComponent button = base.GetButton(27);
@@ -781,25 +784,25 @@ namespace CSharpScript.Game.Module.Giant
 			button.SetSelfInteractive(this.HasAnyDeliverable());
 		}
 
-		// Token: 0x0603A1AB RID: 237995 RVA: 0x00DCFA86 File Offset: 0x00DCDC86
+		// Token: 0x0602F0D1 RID: 192721 RVA: 0x00D1ED3E File Offset: 0x00D1CF3E
 		private int GetDisplayLevelByValue(int value)
 		{
 			return GiantConfig.GetEcoLevelByValue(this.EcoType, value);
 		}
 
-		// Token: 0x0603A1AC RID: 237996 RVA: 0x00DCFA94 File Offset: 0x00DCDC94
+		// Token: 0x0602F0D2 RID: 192722 RVA: 0x00D1ED4C File Offset: 0x00D1CF4C
 		private void OnClickBtnPre()
 		{
 			this.SwitchLevel(-1);
 		}
 
-		// Token: 0x0603A1AD RID: 237997 RVA: 0x00DCFA9D File Offset: 0x00DCDC9D
+		// Token: 0x0602F0D3 RID: 192723 RVA: 0x00D1ED55 File Offset: 0x00D1CF55
 		private void OnClickBtnNext()
 		{
 			this.SwitchLevel(1);
 		}
 
-		// Token: 0x0603A1AE RID: 237998 RVA: 0x00DCFAA8 File Offset: 0x00DCDCA8
+		// Token: 0x0602F0D4 RID: 192724 RVA: 0x00D1ED60 File Offset: 0x00D1CF60
 		private void SwitchLevel(int delta)
 		{
 			int num = this.DisplayLevel + delta;
@@ -816,13 +819,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshRewardList();
 		}
 
-		// Token: 0x0603A1AF RID: 237999 RVA: 0x00DCFB06 File Offset: 0x00DCDD06
+		// Token: 0x0602F0D5 RID: 192725 RVA: 0x00D1EDBE File Offset: 0x00D1CFBE
 		private int GetBrowseCap()
 		{
 			return this.GetMaxLevel();
 		}
 
-		// Token: 0x0603A1B0 RID: 238000 RVA: 0x00DCFB10 File Offset: 0x00DCDD10
+		// Token: 0x0602F0D6 RID: 192726 RVA: 0x00D1EDC8 File Offset: 0x00D1CFC8
 		private void RefreshLevelBrowse()
 		{
 			int browseCap = this.GetBrowseCap();
@@ -848,7 +851,7 @@ namespace CSharpScript.Game.Module.Giant
 			uuiitem2.SetUIActive(this.DisplayLevel < browseCap);
 		}
 
-		// Token: 0x0603A1B1 RID: 238001 RVA: 0x00DCFB80 File Offset: 0x00DCDD80
+		// Token: 0x0602F0D7 RID: 192727 RVA: 0x00D1EE38 File Offset: 0x00D1D038
 		private void OnClickBtnGoto()
 		{
 			GiantSystemQuestOpenParam param = new GiantSystemQuestOpenParam
@@ -859,7 +862,7 @@ namespace CSharpScript.Game.Module.Giant
 			UiManager.Instance.OpenView(EUiViewName.GiantSystemQuestView, param, null);
 		}
 
-		// Token: 0x0603A1B2 RID: 238002 RVA: 0x00DCFBBC File Offset: 0x00DCDDBC
+		// Token: 0x0602F0D8 RID: 192728 RVA: 0x00D1EE74 File Offset: 0x00D1D074
 		private void OnClickBtnSubmit()
 		{
 			if (this.IsEcoWholeLocked())
@@ -876,7 +879,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.SubmitSelected(readOnlyDictionary);
 		}
 
-		// Token: 0x0603A1B3 RID: 238003 RVA: 0x00DCFC14 File Offset: 0x00DCDE14
+		// Token: 0x0602F0D9 RID: 192729 RVA: 0x00D1EECC File Offset: 0x00D1D0CC
 		private void SubmitSelected(IReadOnlyDictionary<int, int> itemInfos)
 		{
 			if (GiantModel.Instance.GetEcoStatus(this.EcoType) == GiantEcoNetStatus.MaxLevel)
@@ -887,21 +890,21 @@ namespace CSharpScript.Game.Module.Giant
 			GiantController.Instance.SendGiantDeliveryItemRequest(this.EcoType, itemInfos, new Action<GiantDeliveryItemResponse>(this.OnDeliveryResponse));
 		}
 
-		// Token: 0x0603A1B4 RID: 238004 RVA: 0x00DCFC74 File Offset: 0x00DCDE74
+		// Token: 0x0602F0DA RID: 192730 RVA: 0x00D1EF2C File Offset: 0x00D1D12C
 		[NullableContext(2)]
 		private void OnDeliveryResponse(GiantDeliveryItemResponse response)
 		{
 			this.OnDeliveryResponse((response == null) ? null : new Aki.Protocol.ErrorCode?(response.ErrorCode), (response != null) ? response.TopQuality : 0);
 		}
 
-		// Token: 0x0603A1B5 RID: 238005 RVA: 0x00DCFCAC File Offset: 0x00DCDEAC
+		// Token: 0x0602F0DB RID: 192731 RVA: 0x00D1EF64 File Offset: 0x00D1D164
 		[NullableContext(2)]
 		private void OnDeliveryResponse(GiantMaxLevelDeliveryItemResponse response)
 		{
 			this.OnDeliveryResponse((response == null) ? null : new Aki.Protocol.ErrorCode?(response.ErrorCode), (response != null) ? response.TopQuality : 0);
 		}
 
-		// Token: 0x0603A1B6 RID: 238006 RVA: 0x00DCFCE4 File Offset: 0x00DCDEE4
+		// Token: 0x0602F0DC RID: 192732 RVA: 0x00D1EF9C File Offset: 0x00D1D19C
 		private void OnDeliveryResponse(Aki.Protocol.ErrorCode? errorCode, int topQuality)
 		{
 			if (this.BarTween == null)
@@ -922,19 +925,19 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0401E4D8 RID: 124120
+		// Token: 0x04018F76 RID: 102262
 		private GiantEcoNetType EcoType;
 
-		// Token: 0x0401E4D9 RID: 124121
+		// Token: 0x04018F77 RID: 102263
 		private int IncId;
 
-		// Token: 0x0401E4DA RID: 124122
+		// Token: 0x04018F78 RID: 102264
 		private int LastTopQuality = -1;
 
-		// Token: 0x0401E4DB RID: 124123
+		// Token: 0x04018F79 RID: 102265
 		private int DisplayLevel = 1;
 
-		// Token: 0x0401E4DC RID: 124124
+		// Token: 0x04018F7A RID: 102266
 		[Nullable(new byte[]
 		{
 			2,
@@ -943,7 +946,7 @@ namespace CSharpScript.Game.Module.Giant
 		})]
 		private GenericLayout<GiantCollectItemGrid, GiantCollectItemData> ItemLayout;
 
-		// Token: 0x0401E4DD RID: 124125
+		// Token: 0x04018F7B RID: 102267
 		[Nullable(new byte[]
 		{
 			2,
@@ -951,15 +954,15 @@ namespace CSharpScript.Game.Module.Giant
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x0401E4DE RID: 124126
+		// Token: 0x04018F7C RID: 102268
 		[Nullable(2)]
 		private PopupCaptionItem Caption;
 
-		// Token: 0x0401E4DF RID: 124127
+		// Token: 0x04018F7D RID: 102269
 		[Nullable(2)]
 		private GiantLockTipItem LockTip;
 
-		// Token: 0x0401E4E0 RID: 124128
+		// Token: 0x04018F7E RID: 102270
 		[Nullable(2)]
 		private GiantBarTween BarTween;
 	}

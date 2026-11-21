@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044C5 RID: 17605
+	// Token: 0x0200492D RID: 18733
 	public class IFindSunSpiritGridNormalFloorT
 	{
-		// Token: 0x17007C40 RID: 31808
-		// (get) Token: 0x0601A4F0 RID: 107760 RVA: 0x003C1B96 File Offset: 0x003BFD96
-		// (set) Token: 0x0601A4F1 RID: 107761 RVA: 0x003C1B9E File Offset: 0x003BFD9E
+		// Token: 0x1700827F RID: 33407
+		// (get) Token: 0x0601BCC1 RID: 113857 RVA: 0x003EDDA2 File Offset: 0x003EBFA2
+		// (set) Token: 0x0601BCC2 RID: 113858 RVA: 0x003EDDAA File Offset: 0x003EBFAA
 		public EFindSunSpiritGridType Type { get; set; }
 
-		// Token: 0x17007C41 RID: 31809
-		// (get) Token: 0x0601A4F2 RID: 107762 RVA: 0x003C1BA7 File Offset: 0x003BFDA7
-		// (set) Token: 0x0601A4F3 RID: 107763 RVA: 0x003C1BAF File Offset: 0x003BFDAF
+		// Token: 0x17008280 RID: 33408
+		// (get) Token: 0x0601BCC3 RID: 113859 RVA: 0x003EDDB3 File Offset: 0x003EBFB3
+		// (set) Token: 0x0601BCC4 RID: 113860 RVA: 0x003EDDBB File Offset: 0x003EBFBB
 		public bool SpreadDevice { get; set; }
 
-		// Token: 0x17007C42 RID: 31810
-		// (get) Token: 0x0601A4F4 RID: 107764 RVA: 0x003C1BB8 File Offset: 0x003BFDB8
-		// (set) Token: 0x0601A4F5 RID: 107765 RVA: 0x003C1BC0 File Offset: 0x003BFDC0
+		// Token: 0x17008281 RID: 33409
+		// (get) Token: 0x0601BCC5 RID: 113861 RVA: 0x003EDDC4 File Offset: 0x003EBFC4
+		// (set) Token: 0x0601BCC6 RID: 113862 RVA: 0x003EDDCC File Offset: 0x003EBFCC
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A4F6 RID: 107766 RVA: 0x003C1BC9 File Offset: 0x003BFDC9
+		// Token: 0x0601BCC7 RID: 113863 RVA: 0x003EDDD5 File Offset: 0x003EBFD5
 		public IFindSunSpiritGridNormalFloorT()
 		{
 			this.Type = EFindSunSpiritGridType.Empty;

@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200032A RID: 810
+	// Token: 0x02000371 RID: 881
 	public class IEntityMatchDynamic_SetValue
 	{
-		// Token: 0x04000D82 RID: 3458
+		// Token: 0x04000E6D RID: 3693
 		public EEntityMatchType Type;
 
-		// Token: 0x04000D83 RID: 3459
-		[Nullable(1)]
+		// Token: 0x04000E6E RID: 3694
 		public List<IDynamicEntityMatch> MatchEntity;
 	}
 }

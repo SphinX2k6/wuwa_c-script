@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000184 RID: 388
+	// Token: 0x02000196 RID: 406
 	public class ConfigCommonBtDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000919 RID: 2329 RVA: 0x0008CE28 File Offset: 0x0008B028
+		// Token: 0x06000985 RID: 2437 RVA: 0x00092D60 File Offset: 0x00090F60
 		static ConfigCommonBtDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCommonBtDataById.CreateStaticDefaultValue), new Action(ConfigCommonBtDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600091A RID: 2330 RVA: 0x0008CE48 File Offset: 0x0008B048
+		// Token: 0x06000986 RID: 2438 RVA: 0x00092D80 File Offset: 0x00090F80
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCommonBtDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600091B RID: 2331 RVA: 0x0008CEC7 File Offset: 0x0008B0C7
+		// Token: 0x06000987 RID: 2439 RVA: 0x00092DFF File Offset: 0x00090FFF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCommonBtDataById.LogPair = null;
 			ConfigCommonBtDataById.HandleId = 0;
 		}
 
-		// Token: 0x0600091C RID: 2332 RVA: 0x0008CED5 File Offset: 0x0008B0D5
+		// Token: 0x06000988 RID: 2440 RVA: 0x00092E0D File Offset: 0x0009100D
 		public static void Init()
 		{
 			ConfigCommonBtDataById.HandleId = ConfigCommon.InitDataStatement(ConfigCommonBtDataById.HandleId, "db_commonbtdata.db", "select BinData from `CommonBtData` where Id=?");
 		}
 
-		// Token: 0x0600091D RID: 2333 RVA: 0x0008CEF0 File Offset: 0x0008B0F0
+		// Token: 0x06000989 RID: 2441 RVA: 0x00092E28 File Offset: 0x00091028
 		public static CommonBtData? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCommonBtDataById.HandleId, ConfigCommonBtDataById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CommonBtData?(rootAsCommonBtData);
 		}
 
-		// Token: 0x04000A80 RID: 2688
+		// Token: 0x04000AFE RID: 2814
 		private const string DB = "db_commonbtdata.db";
 
-		// Token: 0x04000A81 RID: 2689
+		// Token: 0x04000AFF RID: 2815
 		private const string FILE = "UniverseEditor/CommonBt/行为树_*";
 
-		// Token: 0x04000A82 RID: 2690
+		// Token: 0x04000B00 RID: 2816
 		private const string TABLE = "CommonBtData";
 
-		// Token: 0x04000A83 RID: 2691
+		// Token: 0x04000B01 RID: 2817
 		private const string COMMAND = "select BinData from `CommonBtData` where Id=?";
 
-		// Token: 0x04000A84 RID: 2692
+		// Token: 0x04000B02 RID: 2818
 		private const string KEY_PREFIX = "CommonBtDataById";
 
-		// Token: 0x04000A85 RID: 2693
+		// Token: 0x04000B03 RID: 2819
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000A86 RID: 2694
+		// Token: 0x04000B04 RID: 2820
 		private static int HandleId;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D07 RID: 23815
+	// Token: 0x0200633B RID: 25403
 	public enum EProcessedValueType : byte
 	{
-		// Token: 0x0400F68A RID: 63114
+		// Token: 0x040103D9 RID: 66521
 		Constant,
-		// Token: 0x0400F68B RID: 63115
+		// Token: 0x040103DA RID: 66522
 		Constraint
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064E7 RID: 25831
+	// Token: 0x02006B52 RID: 27474
 	public class ICreatePrefabConfigT
 	{
-		// Token: 0x1700C02D RID: 49197
-		// (get) Token: 0x0602CCFD RID: 183549 RVA: 0x0062869A File Offset: 0x0062689A
-		// (set) Token: 0x0602CCFE RID: 183550 RVA: 0x006286A2 File Offset: 0x006268A2
+		// Token: 0x1700C9BA RID: 51642
+		// (get) Token: 0x0602F481 RID: 193665 RVA: 0x006747C2 File Offset: 0x006729C2
+		// (set) Token: 0x0602F482 RID: 193666 RVA: 0x006747CA File Offset: 0x006729CA
 		public ECreatePrefabType Type { get; set; }
 
-		// Token: 0x0602CCFF RID: 183551 RVA: 0x006286AB File Offset: 0x006268AB
+		// Token: 0x0602F483 RID: 193667 RVA: 0x006747D3 File Offset: 0x006729D3
 		public ICreatePrefabConfigT()
 		{
 			this.Type = ECreatePrefabType.PrefabId;

@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200626A RID: 25194
+	// Token: 0x020068DB RID: 26843
 	public class IBvbUseItemCardSkillT
 	{
-		// Token: 0x1700BBBD RID: 48061
-		// (get) Token: 0x0602B792 RID: 178066 RVA: 0x005FC285 File Offset: 0x005FA485
-		// (set) Token: 0x0602B793 RID: 178067 RVA: 0x005FC28D File Offset: 0x005FA48D
+		// Token: 0x1700C545 RID: 50501
+		// (get) Token: 0x0602DEF3 RID: 188147 RVA: 0x0064708D File Offset: 0x0064528D
+		// (set) Token: 0x0602DEF4 RID: 188148 RVA: 0x00647095 File Offset: 0x00645295
 		public EBvbPlayerOperationType Type { get; set; }
 
-		// Token: 0x1700BBBE RID: 48062
-		// (get) Token: 0x0602B794 RID: 178068 RVA: 0x005FC296 File Offset: 0x005FA496
-		// (set) Token: 0x0602B795 RID: 178069 RVA: 0x005FC29E File Offset: 0x005FA49E
+		// Token: 0x1700C546 RID: 50502
+		// (get) Token: 0x0602DEF5 RID: 188149 RVA: 0x0064709E File Offset: 0x0064529E
+		// (set) Token: 0x0602DEF6 RID: 188150 RVA: 0x006470A6 File Offset: 0x006452A6
 		public List<int> BoardPosIndexList { get; set; }
 
-		// Token: 0x1700BBBF RID: 48063
-		// (get) Token: 0x0602B796 RID: 178070 RVA: 0x005FC2A7 File Offset: 0x005FA4A7
-		// (set) Token: 0x0602B797 RID: 178071 RVA: 0x005FC2AF File Offset: 0x005FA4AF
+		// Token: 0x1700C547 RID: 50503
+		// (get) Token: 0x0602DEF7 RID: 188151 RVA: 0x006470AF File Offset: 0x006452AF
+		// (set) Token: 0x0602DEF8 RID: 188152 RVA: 0x006470B7 File Offset: 0x006452B7
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602B798 RID: 178072 RVA: 0x005FC2B8 File Offset: 0x005FA4B8
+		// Token: 0x0602DEF9 RID: 188153 RVA: 0x006470C0 File Offset: 0x006452C0
 		public IBvbUseItemCardSkillT()
 		{
 			this.Type = EBvbPlayerOperationType.BvbDeploy;

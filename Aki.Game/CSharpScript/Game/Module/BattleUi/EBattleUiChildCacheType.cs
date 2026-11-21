@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C97 RID: 23703
+	// Token: 0x02004C79 RID: 19577
 	public enum EBattleUiChildCacheType
 	{
-		// Token: 0x0401F36D RID: 127853
+		// Token: 0x04019E26 RID: 106022
 		Motorcycle
 	}
 }

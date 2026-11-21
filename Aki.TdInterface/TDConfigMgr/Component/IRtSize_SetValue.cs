@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000693 RID: 1683
+	// Token: 0x02000734 RID: 1844
 	public class IRtSize_SetValue
 	{
-		// Token: 0x040018CC RID: 6348
+		// Token: 0x04001AC9 RID: 6857
 		public int Length;
 
-		// Token: 0x040018CD RID: 6349
+		// Token: 0x04001ACA RID: 6858
 		public int Width;
 	}
 }

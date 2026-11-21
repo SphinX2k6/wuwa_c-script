@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006780 RID: 26496
+	// Token: 0x020056D0 RID: 22224
 	public enum EDangoBrawlItemQuality
 	{
-		// Token: 0x040227CF RID: 141263
+		// Token: 0x0401D02C RID: 118828
 		White = 1,
-		// Token: 0x040227D0 RID: 141264
+		// Token: 0x0401D02D RID: 118829
 		Green,
-		// Token: 0x040227D1 RID: 141265
+		// Token: 0x0401D02E RID: 118830
 		Blue,
-		// Token: 0x040227D2 RID: 141266
+		// Token: 0x0401D02F RID: 118831
 		Purple,
-		// Token: 0x040227D3 RID: 141267
+		// Token: 0x0401D030 RID: 118832
 		Orange,
-		// Token: 0x040227D4 RID: 141268
+		// Token: 0x0401D031 RID: 118833
 		Red
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002AB9 RID: 10937
+// Token: 0x02002035 RID: 8245
 public enum ESurvivorsTalentNodeStatus
 {
-	// Token: 0x0400A922 RID: 43298
+	// Token: 0x0400AD28 RID: 44328
 	Lock = -1,
-	// Token: 0x0400A923 RID: 43299
+	// Token: 0x0400AD29 RID: 44329
 	CanUpgrade,
-	// Token: 0x0400A924 RID: 43300
+	// Token: 0x0400AD2A RID: 44330
 	Upgraded
 }

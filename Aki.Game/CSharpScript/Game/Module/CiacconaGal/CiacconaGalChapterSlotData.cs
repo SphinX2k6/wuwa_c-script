@@ -4,19 +4,19 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BCE RID: 23502
+	// Token: 0x02004BAE RID: 19374
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalChapterSlotData
 	{
-		// Token: 0x0603B69E RID: 243358 RVA: 0x00E2B540 File Offset: 0x00E29740
+		// Token: 0x060305EA RID: 198122 RVA: 0x00D7B834 File Offset: 0x00D79A34
 		public CiacconaGalChapterSlotData(CiacconaChapterSlot config)
 		{
 			this.Config = config;
 		}
 
-		// Token: 0x17008D20 RID: 36128
-		// (get) Token: 0x0603B69F RID: 243359 RVA: 0x00E2B550 File Offset: 0x00E29750
+		// Token: 0x170060F2 RID: 24818
+		// (get) Token: 0x060305EB RID: 198123 RVA: 0x00D7B844 File Offset: 0x00D79A44
 		public int Id
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D21 RID: 36129
-		// (get) Token: 0x0603B6A0 RID: 243360 RVA: 0x00E2B56C File Offset: 0x00E2976C
+		// Token: 0x170060F3 RID: 24819
+		// (get) Token: 0x060305EC RID: 198124 RVA: 0x00D7B860 File Offset: 0x00D79A60
 		public int ChapterId
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D22 RID: 36130
-		// (get) Token: 0x0603B6A1 RID: 243361 RVA: 0x00E2B588 File Offset: 0x00E29788
+		// Token: 0x170060F4 RID: 24820
+		// (get) Token: 0x060305ED RID: 198125 RVA: 0x00D7B87C File Offset: 0x00D79A7C
 		public string SlotImagePath
 		{
 			get
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D23 RID: 36131
-		// (get) Token: 0x0603B6A2 RID: 243362 RVA: 0x00E2B5A4 File Offset: 0x00E297A4
+		// Token: 0x170060F5 RID: 24821
+		// (get) Token: 0x060305EE RID: 198126 RVA: 0x00D7B898 File Offset: 0x00D79A98
 		public string SlotLockImagePath
 		{
 			get
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D24 RID: 36132
-		// (get) Token: 0x0603B6A3 RID: 243363 RVA: 0x00E2B5C0 File Offset: 0x00E297C0
+		// Token: 0x170060F6 RID: 24822
+		// (get) Token: 0x060305EF RID: 198127 RVA: 0x00D7B8B4 File Offset: 0x00D79AB4
 		public string RomanNumberIconPath
 		{
 			get
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0401EF6C RID: 126828
+		// Token: 0x04019A1D RID: 104989
 		private readonly CiacconaChapterSlot Config;
 	}
 }

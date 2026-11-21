@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D52 RID: 15698
+	// Token: 0x02004169 RID: 16745
 	public struct ICheckMonsterBattleAttribute : IFlatbufferObject
 	{
-		// Token: 0x17006BBD RID: 27581
-		// (get) Token: 0x06015B61 RID: 88929 RVA: 0x00321DFD File Offset: 0x0031FFFD
+		// Token: 0x17007177 RID: 29047
+		// (get) Token: 0x06017099 RID: 94361 RVA: 0x00349075 File Offset: 0x00347275
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015B62 RID: 88930 RVA: 0x00321E0A File Offset: 0x0032000A
+		// Token: 0x0601709A RID: 94362 RVA: 0x00349082 File Offset: 0x00347282
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015B63 RID: 88931 RVA: 0x00321E14 File Offset: 0x00320014
+		// Token: 0x0601709B RID: 94363 RVA: 0x0034908C File Offset: 0x0034728C
 		public static ICheckMonsterBattleAttribute GetRootAsICheckMonsterBattleAttribute(ByteBuffer _bb)
 		{
 			return ICheckMonsterBattleAttribute.GetRootAsICheckMonsterBattleAttribute(_bb, default(ICheckMonsterBattleAttribute));
 		}
 
-		// Token: 0x06015B64 RID: 88932 RVA: 0x00321E30 File Offset: 0x00320030
+		// Token: 0x0601709C RID: 94364 RVA: 0x003490A8 File Offset: 0x003472A8
 		public static ICheckMonsterBattleAttribute GetRootAsICheckMonsterBattleAttribute(ByteBuffer _bb, ICheckMonsterBattleAttribute obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015B65 RID: 88933 RVA: 0x00321E4D File Offset: 0x0032004D
+		// Token: 0x0601709D RID: 94365 RVA: 0x003490C5 File Offset: 0x003472C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015B66 RID: 88934 RVA: 0x00321E5C File Offset: 0x0032005C
+		// Token: 0x0601709E RID: 94366 RVA: 0x003490D4 File Offset: 0x003472D4
 		public ICheckMonsterBattleAttribute __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006BBE RID: 27582
-		// (get) Token: 0x06015B67 RID: 88935 RVA: 0x00321E6C File Offset: 0x0032006C
+		// Token: 0x17007178 RID: 29048
+		// (get) Token: 0x0601709F RID: 94367 RVA: 0x003490E4 File Offset: 0x003472E4
 		public ETargetBattleAttribute Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006BBF RID: 27583
-		// (get) Token: 0x06015B68 RID: 88936 RVA: 0x00321EA8 File Offset: 0x003200A8
+		// Token: 0x17007179 RID: 29049
+		// (get) Token: 0x060170A0 RID: 94368 RVA: 0x00349120 File Offset: 0x00347320
 		public IHealthAttributeToTarget? Option
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015B69 RID: 88937 RVA: 0x00321F08 File Offset: 0x00320108
+		// Token: 0x060170A1 RID: 94369 RVA: 0x00349180 File Offset: 0x00347380
 		public int EntityIds(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17006BC0 RID: 27584
-		// (get) Token: 0x06015B6A RID: 88938 RVA: 0x00321F48 File Offset: 0x00320148
+		// Token: 0x1700717A RID: 29050
+		// (get) Token: 0x060170A2 RID: 94370 RVA: 0x003491C0 File Offset: 0x003473C0
 		public int EntityIdsLength
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015B6B RID: 88939 RVA: 0x00321F73 File Offset: 0x00320173
+		// Token: 0x060170A3 RID: 94371 RVA: 0x003491EB File Offset: 0x003473EB
 		public Span<int> GetEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06015B6C RID: 88940 RVA: 0x00321F82 File Offset: 0x00320182
+		// Token: 0x060170A4 RID: 94372 RVA: 0x003491FA File Offset: 0x003473FA
 		public int[] GetEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(8);
 		}
 
-		// Token: 0x06015B6D RID: 88941 RVA: 0x00321F90 File Offset: 0x00320190
+		// Token: 0x060170A5 RID: 94373 RVA: 0x00349208 File Offset: 0x00347408
 		public static Offset<ICheckMonsterBattleAttribute> CreateICheckMonsterBattleAttribute(FlatBufferBuilder builder, ETargetBattleAttribute Type = ETargetBattleAttribute.Player, Offset<IHealthAttributeToTarget> OptionOffset = default(Offset<IHealthAttributeToTarget>), VectorOffset EntityIdsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -126,31 +126,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckMonsterBattleAttribute.EndICheckMonsterBattleAttribute(builder);
 		}
 
-		// Token: 0x06015B6E RID: 88942 RVA: 0x00321FB4 File Offset: 0x003201B4
+		// Token: 0x060170A6 RID: 94374 RVA: 0x0034922C File Offset: 0x0034742C
 		public static void StartICheckMonsterBattleAttribute(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06015B6F RID: 88943 RVA: 0x00321FBD File Offset: 0x003201BD
+		// Token: 0x060170A7 RID: 94375 RVA: 0x00349235 File Offset: 0x00347435
 		public static void AddType(FlatBufferBuilder builder, ETargetBattleAttribute type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015B70 RID: 88944 RVA: 0x00321FC8 File Offset: 0x003201C8
+		// Token: 0x060170A8 RID: 94376 RVA: 0x00349240 File Offset: 0x00347440
 		public static void AddOption(FlatBufferBuilder builder, Offset<IHealthAttributeToTarget> optionOffset)
 		{
 			builder.AddOffset(1, optionOffset.Value, 0);
 		}
 
-		// Token: 0x06015B71 RID: 88945 RVA: 0x00321FD8 File Offset: 0x003201D8
+		// Token: 0x060170A9 RID: 94377 RVA: 0x00349250 File Offset: 0x00347450
 		public static void AddEntityIds(FlatBufferBuilder builder, VectorOffset entityIdsOffset)
 		{
 			builder.AddOffset(2, entityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06015B72 RID: 88946 RVA: 0x00321FE8 File Offset: 0x003201E8
+		// Token: 0x060170AA RID: 94378 RVA: 0x00349260 File Offset: 0x00347460
 		public static VectorOffset CreateEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015B73 RID: 88947 RVA: 0x0032201F File Offset: 0x0032021F
+		// Token: 0x060170AB RID: 94379 RVA: 0x00349297 File Offset: 0x00347497
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015B74 RID: 88948 RVA: 0x00322039 File Offset: 0x00320239
+		// Token: 0x060170AC RID: 94380 RVA: 0x003492B1 File Offset: 0x003474B1
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015B75 RID: 88949 RVA: 0x00322057 File Offset: 0x00320257
+		// Token: 0x060170AD RID: 94381 RVA: 0x003492CF File Offset: 0x003474CF
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -185,19 +185,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015B76 RID: 88950 RVA: 0x00322070 File Offset: 0x00320270
+		// Token: 0x060170AE RID: 94382 RVA: 0x003492E8 File Offset: 0x003474E8
 		public static void StartEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06015B77 RID: 88951 RVA: 0x0032207B File Offset: 0x0032027B
+		// Token: 0x060170AF RID: 94383 RVA: 0x003492F3 File Offset: 0x003474F3
 		public static Offset<ICheckMonsterBattleAttribute> EndICheckMonsterBattleAttribute(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckMonsterBattleAttribute>(builder.EndTable());
 		}
 
-		// Token: 0x06015B78 RID: 88952 RVA: 0x00322088 File Offset: 0x00320288
+		// Token: 0x060170B0 RID: 94384 RVA: 0x00349300 File Offset: 0x00347500
 		public ICheckMonsterBattleAttributeT UnPack()
 		{
 			ICheckMonsterBattleAttributeT checkMonsterBattleAttributeT = new ICheckMonsterBattleAttributeT();
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return checkMonsterBattleAttributeT;
 		}
 
-		// Token: 0x06015B79 RID: 88953 RVA: 0x003220A4 File Offset: 0x003202A4
+		// Token: 0x060170B1 RID: 94385 RVA: 0x0034931C File Offset: 0x0034751C
 		public void UnPackTo(ICheckMonsterBattleAttributeT _o)
 		{
 			_o.Type = this.Type;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015B7A RID: 88954 RVA: 0x0032211C File Offset: 0x0032031C
+		// Token: 0x060170B2 RID: 94386 RVA: 0x00349394 File Offset: 0x00347594
 		public static Offset<ICheckMonsterBattleAttribute> Pack(FlatBufferBuilder builder, ICheckMonsterBattleAttributeT _o)
 		{
 			if (_o == null)
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckMonsterBattleAttribute.CreateICheckMonsterBattleAttribute(builder, _o.Type, optionOffset, entityIdsOffset);
 		}
 
-		// Token: 0x0400B62F RID: 46639
+		// Token: 0x0400BFDC RID: 49116
 		private Table __p;
 	}
 }

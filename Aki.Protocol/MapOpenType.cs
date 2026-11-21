@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015F9 RID: 5625
+	// Token: 0x0200166C RID: 5740
 	public enum MapOpenType
 	{
-		// Token: 0x0400BF29 RID: 48937
+		// Token: 0x0400C423 RID: 50211
 		[OriginalName("HotKey")]
 		HotKey,
-		// Token: 0x0400BF2A RID: 48938
+		// Token: 0x0400C424 RID: 50212
 		[OriginalName("Mouse")]
 		Mouse,
-		// Token: 0x0400BF2B RID: 48939
+		// Token: 0x0400C425 RID: 50213
 		[OriginalName("Other")]
 		Other
 	}

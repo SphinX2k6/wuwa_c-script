@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EDC RID: 7900
+	// Token: 0x02002115 RID: 8469
 	public class ISubScreenModeConfig_SetValue
 	{
-		// Token: 0x040064A2 RID: 25762
+		// Token: 0x04006A91 RID: 27281
 		public ESubScreenOperationType Type;
 	}
 }

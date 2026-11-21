@@ -2,84 +2,84 @@
 
 namespace CSharpScript.Game.Module.Map.Mark
 {
-	// Token: 0x020054BD RID: 21693
+	// Token: 0x0200449F RID: 17567
 	public enum EMarkItemViewType
 	{
-		// Token: 0x0401D312 RID: 119570
+		// Token: 0x04017DA9 RID: 97705
 		ActivityMarkItemView,
-		// Token: 0x0401D313 RID: 119571
+		// Token: 0x04017DAA RID: 97706
 		AreaMarkItemView,
-		// Token: 0x0401D314 RID: 119572
+		// Token: 0x04017DAB RID: 97707
 		CaveHoleMarkItemView,
-		// Token: 0x0401D315 RID: 119573
+		// Token: 0x04017DAC RID: 97708
 		ConfigMarkItemView,
-		// Token: 0x0401D316 RID: 119574
+		// Token: 0x04017DAD RID: 97709
 		CustomMarkItemView,
-		// Token: 0x0401D317 RID: 119575
+		// Token: 0x04017DAE RID: 97710
 		DynamicConfigMarkItemView,
-		// Token: 0x0401D318 RID: 119576
+		// Token: 0x04017DAF RID: 97711
 		DynamicEntityMarkItemView,
-		// Token: 0x0401D319 RID: 119577
+		// Token: 0x04017DB0 RID: 97712
 		EnrichmentAreaItemView,
-		// Token: 0x0401D31A RID: 119578
+		// Token: 0x04017DB1 RID: 97713
 		EnrichmentCollectProductItemView,
-		// Token: 0x0401D31B RID: 119579
+		// Token: 0x04017DB2 RID: 97714
 		EntityMarkItemView,
-		// Token: 0x0401D31C RID: 119580
+		// Token: 0x04017DB3 RID: 97715
 		FishingPointMarkItemView,
-		// Token: 0x0401D31D RID: 119581
+		// Token: 0x04017DB4 RID: 97716
 		FishingShipMarkItemView,
-		// Token: 0x0401D31E RID: 119582
+		// Token: 0x04017DB5 RID: 97717
 		FixedSceneGamePlayMarkItemView,
-		// Token: 0x0401D31F RID: 119583
+		// Token: 0x04017DB6 RID: 97718
 		LandscapeMarkItemView,
-		// Token: 0x0401D320 RID: 119584
+		// Token: 0x04017DB7 RID: 97719
 		LevelPlayReportMarkItemView,
-		// Token: 0x0401D321 RID: 119585
+		// Token: 0x04017DB8 RID: 97720
 		MapLandscapeView,
-		// Token: 0x0401D322 RID: 119586
+		// Token: 0x04017DB9 RID: 97721
 		MarkItemView,
-		// Token: 0x0401D323 RID: 119587
+		// Token: 0x04017DBA RID: 97722
 		MingSuNpcMarkItemView,
-		// Token: 0x0401D324 RID: 119588
+		// Token: 0x04017DBB RID: 97723
 		PlayerMarkItemView,
-		// Token: 0x0401D325 RID: 119589
+		// Token: 0x04017DBC RID: 97724
 		PunishReportMarkItemView,
-		// Token: 0x0401D326 RID: 119590
+		// Token: 0x04017DBD RID: 97725
 		SceneGameplayMarkItemView,
-		// Token: 0x0401D327 RID: 119591
+		// Token: 0x04017DBE RID: 97726
 		ServerMarkItemView,
-		// Token: 0x0401D328 RID: 119592
+		// Token: 0x04017DBF RID: 97727
 		SoundBoxMarkItemView,
-		// Token: 0x0401D329 RID: 119593
+		// Token: 0x04017DC0 RID: 97728
 		TaskMarkItemView,
-		// Token: 0x0401D32A RID: 119594
+		// Token: 0x04017DC1 RID: 97729
 		TeleportMarkItemView,
-		// Token: 0x0401D32B RID: 119595
+		// Token: 0x04017DC2 RID: 97730
 		TemporaryTeleportMarkItemView,
-		// Token: 0x0401D32C RID: 119596
+		// Token: 0x04017DC3 RID: 97731
 		TreasureBoxDetectorMarkItemView,
-		// Token: 0x0401D32D RID: 119597
+		// Token: 0x04017DC4 RID: 97732
 		TreasureBoxMarkItemView,
-		// Token: 0x0401D32E RID: 119598
+		// Token: 0x04017DC5 RID: 97733
 		GreatSwordChallengeMarkItemView,
-		// Token: 0x0401D32F RID: 119599
+		// Token: 0x04017DC6 RID: 97734
 		HonamiScanMarkItemView,
-		// Token: 0x0401D330 RID: 119600
+		// Token: 0x04017DC7 RID: 97735
 		HonamiScanItemMarkItemView,
-		// Token: 0x0401D331 RID: 119601
+		// Token: 0x04017DC8 RID: 97736
 		PhantomArenaNpcMarkItemView,
-		// Token: 0x0401D332 RID: 119602
+		// Token: 0x04017DC9 RID: 97737
 		FloatLightForestMarkItemView,
-		// Token: 0x0401D333 RID: 119603
+		// Token: 0x04017DCA RID: 97738
 		SheriffAnomalyMarkItemView,
-		// Token: 0x0401D334 RID: 119604
+		// Token: 0x04017DCB RID: 97739
 		SheriffQuestMarkItemView,
-		// Token: 0x0401D335 RID: 119605
+		// Token: 0x04017DCC RID: 97740
 		DollGrabMachineMarkItemView,
-		// Token: 0x0401D336 RID: 119606
+		// Token: 0x04017DCD RID: 97741
 		VillageInfrTreeMarkItemView,
-		// Token: 0x0401D337 RID: 119607
+		// Token: 0x04017DCE RID: 97742
 		InfrRoadMarkItemView
 	}
 }

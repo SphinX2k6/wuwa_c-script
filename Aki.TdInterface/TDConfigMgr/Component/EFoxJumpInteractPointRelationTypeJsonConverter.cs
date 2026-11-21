@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200094F RID: 2383
+	// Token: 0x02000A00 RID: 2560
 	public class EFoxJumpInteractPointRelationTypeJsonConverter : JsonConverter<EFoxJumpInteractPointRelationType>
 	{
-		// Token: 0x06003596 RID: 13718 RVA: 0x0008BD00 File Offset: 0x00089F00
+		// Token: 0x06003914 RID: 14612 RVA: 0x00093ACC File Offset: 0x00091CCC
 		public override EFoxJumpInteractPointRelationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EFoxJumpInteractPointRelationTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003597 RID: 13719 RVA: 0x0008BD24 File Offset: 0x00089F24
+		// Token: 0x06003915 RID: 14613 RVA: 0x00093AF0 File Offset: 0x00091CF0
 		public override void Write(Utf8JsonWriter writer, EFoxJumpInteractPointRelationType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

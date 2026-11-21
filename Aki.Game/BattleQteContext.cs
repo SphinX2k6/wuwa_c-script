@@ -1,28 +1,28 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Data.Qte;
 using UnrealEngine;
 
-// Token: 0x020025FE RID: 9726
+// Token: 0x02001AE9 RID: 6889
 [NullableContext(2)]
 [Nullable(0)]
 public class BattleQteContext
 {
-	// Token: 0x06013CBE RID: 81086 RVA: 0x004F6F6D File Offset: 0x004F516D
+	// Token: 0x060111A0 RID: 70048 RVA: 0x00505D01 File Offset: 0x00503F01
 	public void QteSuccess()
 	{
 		this.HandleAction(true);
 	}
 
-	// Token: 0x06013CBF RID: 81087 RVA: 0x004F6F76 File Offset: 0x004F5176
+	// Token: 0x060111A1 RID: 70049 RVA: 0x00505D0A File Offset: 0x00503F0A
 	public void QteFail()
 	{
 		this.HandleAction(false);
 	}
 
-	// Token: 0x06013CC0 RID: 81088 RVA: 0x004F6F80 File Offset: 0x004F5180
+	// Token: 0x060111A2 RID: 70050 RVA: 0x00505D14 File Offset: 0x00503F14
 	private void HandleAction(bool isSuccess)
 	{
 		SBattleQte battleQteConfig = BattleQteModel.Instance.GetBattleQteConfig(this.BattleQteId);
@@ -42,7 +42,7 @@ public class BattleQteContext
 		BattleQteContext.HandleActionTest(actions, inEntity, this.MessageId, tips);
 	}
 
-	// Token: 0x06013CC1 RID: 81089 RVA: 0x004F7020 File Offset: 0x004F5220
+	// Token: 0x060111A3 RID: 70051 RVA: 0x00505DB4 File Offset: 0x00503FB4
 	public static void HandleActionTest([Nullable(1)] TArray<SBattleQteAction> actions, Entity inEntity = null, long? messageId = null, string tips = null)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -70,7 +70,7 @@ public class BattleQteContext
 		}
 	}
 
-	// Token: 0x06013CC2 RID: 81090 RVA: 0x004F708C File Offset: 0x004F528C
+	// Token: 0x060111A4 RID: 70052 RVA: 0x00505E20 File Offset: 0x00504020
 	[NullableContext(1)]
 	private static void HandleActionInternal(Entity entity, SBattleQteAction action, long? messageId = null, [Nullable(2)] string tips = null)
 	{
@@ -166,9 +166,24 @@ public class BattleQteContext
 				if (action.ChangeMainSkillPriority != -1)
 				{
 					Skill currentSkill = component2.CurrentSkill;
-					if (currentSkill != null && !currentSkill.SkillGenres.Contains(ESkillGenre.大招3))
+					if (currentSkill != null)
 					{
-						component2.SetSkillPriority(currentSkill.SkillId, action.ChangeMainSkillPriority);
+						bool flag2 = false;
+						using (IEnumerator<ESkillGenre> enumerator = currentSkill.SkillGenres.GetEnumerator())
+						{
+							while (enumerator.MoveNext())
+							{
+								if (enumerator.Current == ESkillGenre.大招3)
+								{
+									flag2 = true;
+									break;
+								}
+							}
+						}
+						if (!flag2)
+						{
+							component2.SetSkillPriority(currentSkill.SkillId, action.ChangeMainSkillPriority);
+						}
 					}
 				}
 				component2.BeginSkill(useSkillId, new SkillParam
@@ -197,30 +212,30 @@ public class BattleQteContext
 		}
 	}
 
-	// Token: 0x04009526 RID: 38182
+	// Token: 0x0400967D RID: 38525
 	private const int TARGET_QTE_SOURCER = 0;
 
-	// Token: 0x04009527 RID: 38183
+	// Token: 0x0400967E RID: 38526
 	private const int TARGET_PLAYER_SELF = 1;
 
-	// Token: 0x04009528 RID: 38184
+	// Token: 0x0400967F RID: 38527
 	public int BattleQteHandleId = -1;
 
-	// Token: 0x04009529 RID: 38185
+	// Token: 0x04009680 RID: 38528
 	public int BattleQteId;
 
-	// Token: 0x0400952A RID: 38186
+	// Token: 0x04009681 RID: 38529
 	public int CommonQteHandleId = -1;
 
-	// Token: 0x0400952B RID: 38187
+	// Token: 0x04009682 RID: 38530
 	public int CommonQteId;
 
-	// Token: 0x0400952C RID: 38188
+	// Token: 0x04009683 RID: 38531
 	public EBattleQteSource? BattleQteSource;
 
-	// Token: 0x0400952D RID: 38189
+	// Token: 0x04009684 RID: 38532
 	public long? MessageId;
 
-	// Token: 0x0400952E RID: 38190
+	// Token: 0x04009685 RID: 38533
 	public EntityHandle EntityHandle;
 }

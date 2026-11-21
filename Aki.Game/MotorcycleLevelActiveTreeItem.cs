@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002235 RID: 8757
+// Token: 0x02001719 RID: 5913
 public class MotorcycleLevelActiveTreeItem : UiPanelBase
 {
-	// Token: 0x06011167 RID: 69991 RVA: 0x0042A79C File Offset: 0x0042899C
+	// Token: 0x0600E5FD RID: 58877 RVA: 0x00437340 File Offset: 0x00435540
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class MotorcycleLevelActiveTreeItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06011168 RID: 69992 RVA: 0x0042A81C File Offset: 0x00428A1C
+	// Token: 0x0600E5FE RID: 58878 RVA: 0x004373C0 File Offset: 0x004355C0
 	public void Refresh()
 	{
 		int curTreeType = MotorcycleDevelopModel.Instance.GetCurTreeType();
@@ -31,23 +31,23 @@ public class MotorcycleLevelActiveTreeItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), motorTechTreeConfig.Value.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x06011169 RID: 69993 RVA: 0x0042A88C File Offset: 0x00428A8C
+	// Token: 0x0600E5FF RID: 58879 RVA: 0x00437430 File Offset: 0x00435630
 	private void OnBtnShowDetailClick()
 	{
 		int curTreeType = MotorcycleDevelopModel.Instance.GetCurTreeType();
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleTechTreeDetailView, curTreeType, null);
 	}
 
-	// Token: 0x02008769 RID: 34665
+	// Token: 0x020078F2 RID: 30962
 	private class EMotorLevelActiveTreeItemComponent
 	{
-		// Token: 0x0402C036 RID: 180278
+		// Token: 0x0402734E RID: 160590
 		public const int TexIcon = 0;
 
-		// Token: 0x0402C037 RID: 180279
+		// Token: 0x0402734F RID: 160591
 		public const int TxtName = 1;
 
-		// Token: 0x0402C038 RID: 180280
+		// Token: 0x04027350 RID: 160592
 		public const int BtnShowDetail = 2;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200172B RID: 5931
+	// Token: 0x020018A8 RID: 6312
 	public class FixGetItem_SetValue
 	{
-		// Token: 0x04005021 RID: 20513
-		[Nullable(1)]
+		// Token: 0x04005450 RID: 21584
 		public List<IItemData> Items;
 	}
 }

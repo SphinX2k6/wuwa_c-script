@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002467 RID: 9319
+	// Token: 0x02002708 RID: 9992
 	public static class ETeleportTransitionTypeExtensions
 	{
-		// Token: 0x0600CA4E RID: 51790 RVA: 0x001DC494 File Offset: 0x001DA694
+		// Token: 0x0600D6FE RID: 55038 RVA: 0x001F6548 File Offset: 0x001F4748
 		public static string ToEnumString(this ETeleportTransitionType value)
 		{
 			string result;
@@ -51,7 +51,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA4F RID: 51791 RVA: 0x001DC53C File Offset: 0x001DA73C
+		// Token: 0x0600D6FF RID: 55039 RVA: 0x001F65F0 File Offset: 0x001F47F0
 		public static ETeleportTransitionType FromString(string name)
 		{
 			ETeleportTransitionType result;
@@ -62,7 +62,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA50 RID: 51792 RVA: 0x001DC568 File Offset: 0x001DA768
+		// Token: 0x0600D700 RID: 55040 RVA: 0x001F661C File Offset: 0x001F481C
 		public static bool TryFromString(string name, out ETeleportTransitionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -194,7 +194,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600CA51 RID: 51793 RVA: 0x001DC740 File Offset: 0x001DA940
+		// Token: 0x0600D701 RID: 55041 RVA: 0x001F67F4 File Offset: 0x001F49F4
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -213,7 +213,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA52 RID: 51794 RVA: 0x001DC7AE File Offset: 0x001DA9AE
+		// Token: 0x0600D702 RID: 55042 RVA: 0x001F6862 File Offset: 0x001F4A62
 		public static ETeleportTransitionType[] GetValues()
 		{
 			return new ETeleportTransitionType[]
@@ -232,7 +232,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA53 RID: 51795 RVA: 0x001DC7C4 File Offset: 0x001DA9C4
+		// Token: 0x0600D703 RID: 55043 RVA: 0x001F6878 File Offset: 0x001F4A78
 		public static string[] GetNames()
 		{
 			return new string[]

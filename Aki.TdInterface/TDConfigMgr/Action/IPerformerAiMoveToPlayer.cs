@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CD2 RID: 7378
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001ED9 RID: 7897
 	public class IPerformerAiMoveToPlayer : IPerformerAiMoveConfig
 	{
-		// Token: 0x06009E69 RID: 40553 RVA: 0x0016A4C8 File Offset: 0x001686C8
+		// Token: 0x0600A817 RID: 43031 RVA: 0x0017E128 File Offset: 0x0017C328
 		private IPerformerAiMoveToPlayer_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E6A RID: 40554 RVA: 0x0016A500 File Offset: 0x00168700
+		// Token: 0x0600A818 RID: 43032 RVA: 0x0017E160 File Offset: 0x0017C360
 		public static IPerformerAiMoveToPlayer Create([Nullable(2)] IPerformerAiMoveToPlayer instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E6B RID: 40555 RVA: 0x0016A513 File Offset: 0x00168713
+		// Token: 0x0600A819 RID: 43033 RVA: 0x0017E173 File Offset: 0x0017C373
 		public static IPerformerAiMoveToPlayer CreateFromSetValue([Nullable(2)] IPerformerAiMoveToPlayer_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E6C RID: 40556 RVA: 0x0016A526 File Offset: 0x00168726
+		// Token: 0x0600A81A RID: 43034 RVA: 0x0017E186 File Offset: 0x0017C386
 		public new IPerformerAiMoveToPlayer_SetValue ToSetValue()
 		{
 			return new IPerformerAiMoveToPlayer_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003150 RID: 12624
-		// (get) Token: 0x06009E6D RID: 40557 RVA: 0x0016A539 File Offset: 0x00168739
-		// (set) Token: 0x06009E6E RID: 40558 RVA: 0x0016A564 File Offset: 0x00168764
+		// Token: 0x170033D4 RID: 13268
+		// (get) Token: 0x0600A81B RID: 43035 RVA: 0x0017E199 File Offset: 0x0017C399
+		// (set) Token: 0x0600A81C RID: 43036 RVA: 0x0017E1C4 File Offset: 0x0017C3C4
 		public override EPerformerAiMoveToType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FBB RID: 24507
+		// Token: 0x04006517 RID: 25879
 		[Nullable(2)]
 		protected new IPerformerAiMoveToPlayer FbInstance;
 
-		// Token: 0x04005FBC RID: 24508
+		// Token: 0x04006518 RID: 25880
 		[Nullable(2)]
 		protected new IPerformerAiMoveToPlayer_SetValue PocoInterface;
 	}

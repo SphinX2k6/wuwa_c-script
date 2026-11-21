@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02003070 RID: 12400
+// Token: 0x020025C7 RID: 9671
 public class CameraDrivenAutoFlightData
 {
-	// Token: 0x0400CA8E RID: 51854
+	// Token: 0x0400CE68 RID: 52840
 	public float AutoFlightEnableTime;
 
-	// Token: 0x0400CA8F RID: 51855
+	// Token: 0x0400CE69 RID: 52841
 	public float AutoFlightStartAngleTolerance;
 
-	// Token: 0x0400CA90 RID: 51856
+	// Token: 0x0400CE6A RID: 52842
 	public float AutoFlightFinishAngleTolerance;
 
-	// Token: 0x0400CA91 RID: 51857
+	// Token: 0x0400CE6B RID: 52843
 	public float AutoFlightInputAngleMin;
 
-	// Token: 0x0400CA92 RID: 51858
+	// Token: 0x0400CE6C RID: 52844
 	public float AutoFlightInputAngleMax;
 
-	// Token: 0x0400CA93 RID: 51859
+	// Token: 0x0400CE6D RID: 52845
 	public float AutoFlightInputMin;
 
-	// Token: 0x0400CA94 RID: 51860
+	// Token: 0x0400CE6E RID: 52846
 	public float AutoFlightInputMax;
 }

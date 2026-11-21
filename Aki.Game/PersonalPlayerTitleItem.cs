@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023DC RID: 9180
+// Token: 0x020018C1 RID: 6337
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class PersonalPlayerTitleItem : GridProxyAbstract<PersonalPlayerTitleData>
 {
-	// Token: 0x060125A2 RID: 75170 RVA: 0x00485BBC File Offset: 0x00483DBC
+	// Token: 0x0600FA54 RID: 64084 RVA: 0x004930C8 File Offset: 0x004912C8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class PersonalPlayerTitleItem : GridProxyAbstract<PersonalPlayerTitleData
 		};
 	}
 
-	// Token: 0x060125A3 RID: 75171 RVA: 0x00485C94 File Offset: 0x00483E94
+	// Token: 0x0600FA55 RID: 64085 RVA: 0x004931A0 File Offset: 0x004913A0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PersonalPlayerTitleItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ public class PersonalPlayerTitleItem : GridProxyAbstract<PersonalPlayerTitleData
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060125A4 RID: 75172 RVA: 0x00485CD8 File Offset: 0x00483ED8
+	// Token: 0x0600FA56 RID: 64086 RVA: 0x004931E4 File Offset: 0x004913E4
 	public override void Refresh(PersonalPlayerTitleData data, bool isSelected, int gridIndex)
 	{
 		if (data == null)
@@ -67,13 +67,13 @@ public class PersonalPlayerTitleItem : GridProxyAbstract<PersonalPlayerTitleData
 		}
 	}
 
-	// Token: 0x060125A5 RID: 75173 RVA: 0x00485D41 File Offset: 0x00483F41
+	// Token: 0x0600FA57 RID: 64087 RVA: 0x0049324D File Offset: 0x0049144D
 	private void RefreshRedDot(PersonalPlayerTitleData data)
 	{
 		base.GetItem(0).SetUIActive(data.GetIsShowRedDot());
 	}
 
-	// Token: 0x060125A6 RID: 75174 RVA: 0x00485D55 File Offset: 0x00483F55
+	// Token: 0x0600FA58 RID: 64088 RVA: 0x00493261 File Offset: 0x00491461
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.OnToggleCallBack != null)
@@ -82,20 +82,20 @@ public class PersonalPlayerTitleItem : GridProxyAbstract<PersonalPlayerTitleData
 		}
 	}
 
-	// Token: 0x060125A7 RID: 75175 RVA: 0x00485D76 File Offset: 0x00483F76
+	// Token: 0x0600FA59 RID: 64089 RVA: 0x00493282 File Offset: 0x00491482
 	public void SetToggleCallBack(Action<int, PersonalPlayerTitleData> callBack)
 	{
 		this.OnToggleCallBack = callBack;
 	}
 
-	// Token: 0x060125A8 RID: 75176 RVA: 0x00485D80 File Offset: 0x00483F80
+	// Token: 0x0600FA5A RID: 64090 RVA: 0x0049328C File Offset: 0x0049148C
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(1).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x060125A9 RID: 75177 RVA: 0x00485DA8 File Offset: 0x00483FA8
+	// Token: 0x0600FA5B RID: 64091 RVA: 0x004932B4 File Offset: 0x004914B4
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
@@ -109,13 +109,13 @@ public class PersonalPlayerTitleItem : GridProxyAbstract<PersonalPlayerTitleData
 		}
 	}
 
-	// Token: 0x060125AA RID: 75178 RVA: 0x00485E13 File Offset: 0x00484013
+	// Token: 0x0600FA5C RID: 64092 RVA: 0x0049331F File Offset: 0x0049151F
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x060125AB RID: 75179 RVA: 0x00485E1C File Offset: 0x0048401C
+	// Token: 0x0600FA5D RID: 64093 RVA: 0x00493328 File Offset: 0x00491528
 	public void RefreshState(PersonalPlayerTitleData personalTitle)
 	{
 		UUIItem item = base.GetItem(3);
@@ -147,15 +147,15 @@ public class PersonalPlayerTitleItem : GridProxyAbstract<PersonalPlayerTitleData
 		}
 	}
 
-	// Token: 0x04008AD7 RID: 35543
+	// Token: 0x04008C1E RID: 35870
 	[Nullable(2)]
 	private PersonalPlayerTitleData PersonalPlayerTitleData;
 
-	// Token: 0x04008AD8 RID: 35544
+	// Token: 0x04008C1F RID: 35871
 	[Nullable(2)]
 	private PlayerTitleItem PlayerTitleItem;
 
-	// Token: 0x04008AD9 RID: 35545
+	// Token: 0x04008C20 RID: 35872
 	[Nullable(new byte[]
 	{
 		2,

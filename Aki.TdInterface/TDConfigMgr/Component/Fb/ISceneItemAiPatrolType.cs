@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D74 RID: 3444
+	// Token: 0x02000E70 RID: 3696
 	public class ISceneItemAiPatrolType
 	{
-		// Token: 0x06004E61 RID: 20065 RVA: 0x000C282B File Offset: 0x000C0A2B
-		[NullableContext(1)]
+		// Token: 0x06005386 RID: 21382 RVA: 0x000CE07B File Offset: 0x000CC27B
 		public static ISceneItemAiPatrolType Create(ISceneItemAiPatrolType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001936 RID: 6454
-		// (get) Token: 0x06004E62 RID: 20066 RVA: 0x000C284A File Offset: 0x000C0A4A
+		// Token: 0x17001AA1 RID: 6817
+		// (get) Token: 0x06005387 RID: 21383 RVA: 0x000CE09A File Offset: 0x000CC29A
 		public virtual ESceneItemAiPatrolType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CFD RID: 11517
+		// Token: 0x04002FC3 RID: 12227
 		private ISceneItemAiPatrolType Instance;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007C3 RID: 1987
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000866 RID: 2150
 	public class IVehicleTypedMotorConfig : IVehicleTypedConfig
 	{
-		// Token: 0x06002B17 RID: 11031 RVA: 0x000708F8 File Offset: 0x0006EAF8
+		// Token: 0x06002E47 RID: 11847 RVA: 0x00077C5C File Offset: 0x00075E5C
 		private IVehicleTypedMotorConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002B18 RID: 11032 RVA: 0x00070930 File Offset: 0x0006EB30
+		// Token: 0x06002E48 RID: 11848 RVA: 0x00077C94 File Offset: 0x00075E94
 		public static IVehicleTypedMotorConfig Create([Nullable(2)] IVehicleTypedMotorConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B19 RID: 11033 RVA: 0x00070943 File Offset: 0x0006EB43
+		// Token: 0x06002E49 RID: 11849 RVA: 0x00077CA7 File Offset: 0x00075EA7
 		public static IVehicleTypedMotorConfig CreateFromSetValue([Nullable(2)] IVehicleTypedMotorConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B1A RID: 11034 RVA: 0x00070956 File Offset: 0x0006EB56
+		// Token: 0x06002E4A RID: 11850 RVA: 0x00077CBA File Offset: 0x00075EBA
 		public new IVehicleTypedMotorConfig_SetValue ToSetValue()
 		{
 			return new IVehicleTypedMotorConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B4A RID: 2890
-		// (get) Token: 0x06002B1B RID: 11035 RVA: 0x00070975 File Offset: 0x0006EB75
-		// (set) Token: 0x06002B1C RID: 11036 RVA: 0x000709A0 File Offset: 0x0006EBA0
+		// Token: 0x17000C0D RID: 3085
+		// (get) Token: 0x06002E4B RID: 11851 RVA: 0x00077CD9 File Offset: 0x00075ED9
+		// (set) Token: 0x06002E4C RID: 11852 RVA: 0x00077D04 File Offset: 0x00075F04
 		public override EVehicleType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B4B RID: 2891
-		// (get) Token: 0x06002B1D RID: 11037 RVA: 0x000709B0 File Offset: 0x0006EBB0
-		// (set) Token: 0x06002B1E RID: 11038 RVA: 0x000709EA File Offset: 0x0006EBEA
+		// Token: 0x17000C0E RID: 3086
+		// (get) Token: 0x06002E4D RID: 11853 RVA: 0x00077D14 File Offset: 0x00075F14
+		// (set) Token: 0x06002E4E RID: 11854 RVA: 0x00077D4E File Offset: 0x00075F4E
 		public virtual int? TrialAttributeId
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001CA4 RID: 7332
+		// Token: 0x04001EB0 RID: 7856
 		[Nullable(2)]
 		protected new IVehicleTypedMotorConfig FbInstance;
 
-		// Token: 0x04001CA5 RID: 7333
+		// Token: 0x04001EB1 RID: 7857
 		[Nullable(2)]
 		protected new IVehicleTypedMotorConfig_SetValue PocoInterface;
 	}

@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F1E RID: 3870
+	// Token: 0x02001003 RID: 4099
 	public struct PhysicsAssetConfig : IFlatbufferObject
 	{
-		// Token: 0x170028B7 RID: 10423
-		// (get) Token: 0x0600ADA2 RID: 44450 RVA: 0x002BEA7A File Offset: 0x002BCC7A
+		// Token: 0x1700291D RID: 10525
+		// (get) Token: 0x0600B3C3 RID: 46019 RVA: 0x002DB656 File Offset: 0x002D9856
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADA3 RID: 44451 RVA: 0x002BEA87 File Offset: 0x002BCC87
+		// Token: 0x0600B3C4 RID: 46020 RVA: 0x002DB663 File Offset: 0x002D9863
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600ADA4 RID: 44452 RVA: 0x002BEA90 File Offset: 0x002BCC90
+		// Token: 0x0600B3C5 RID: 46021 RVA: 0x002DB66C File Offset: 0x002D986C
 		public static PhysicsAssetConfig GetRootAsPhysicsAssetConfig(ByteBuffer _bb)
 		{
 			return PhysicsAssetConfig.GetRootAsPhysicsAssetConfig(_bb, default(PhysicsAssetConfig));
 		}
 
-		// Token: 0x0600ADA5 RID: 44453 RVA: 0x002BEAAC File Offset: 0x002BCCAC
+		// Token: 0x0600B3C6 RID: 46022 RVA: 0x002DB688 File Offset: 0x002D9888
 		public static PhysicsAssetConfig GetRootAsPhysicsAssetConfig(ByteBuffer _bb, PhysicsAssetConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600ADA6 RID: 44454 RVA: 0x002BEAC9 File Offset: 0x002BCCC9
+		// Token: 0x0600B3C7 RID: 46023 RVA: 0x002DB6A5 File Offset: 0x002D98A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600ADA7 RID: 44455 RVA: 0x002BEAD8 File Offset: 0x002BCCD8
+		// Token: 0x0600B3C8 RID: 46024 RVA: 0x002DB6B4 File Offset: 0x002D98B4
 		public PhysicsAssetConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170028B8 RID: 10424
-		// (get) Token: 0x0600ADA8 RID: 44456 RVA: 0x002BEAE8 File Offset: 0x002BCCE8
+		// Token: 0x1700291E RID: 10526
+		// (get) Token: 0x0600B3C9 RID: 46025 RVA: 0x002DB6C4 File Offset: 0x002D98C4
 		public string Id
 		{
 			get
@@ -65,20 +65,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADA9 RID: 44457 RVA: 0x002BEB1F File Offset: 0x002BCD1F
+		// Token: 0x0600B3CA RID: 46026 RVA: 0x002DB6FB File Offset: 0x002D98FB
 		public Span<byte> GetIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0600ADAA RID: 44458 RVA: 0x002BEB2E File Offset: 0x002BCD2E
+		// Token: 0x0600B3CB RID: 46027 RVA: 0x002DB70A File Offset: 0x002D990A
 		public byte[] GetIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170028B9 RID: 10425
-		// (get) Token: 0x0600ADAB RID: 44459 RVA: 0x002BEB48 File Offset: 0x002BCD48
+		// Token: 0x1700291F RID: 10527
+		// (get) Token: 0x0600B3CC RID: 46028 RVA: 0x002DB724 File Offset: 0x002D9924
 		public string PhysicsAssetPath
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADAC RID: 44460 RVA: 0x002BEB7F File Offset: 0x002BCD7F
+		// Token: 0x0600B3CD RID: 46029 RVA: 0x002DB75B File Offset: 0x002D995B
 		public Span<byte> GetPhysicsAssetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600ADAD RID: 44461 RVA: 0x002BEB8E File Offset: 0x002BCD8E
+		// Token: 0x0600B3CE RID: 46030 RVA: 0x002DB76A File Offset: 0x002D996A
 		public byte[] GetPhysicsAssetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600ADAE RID: 44462 RVA: 0x002BEBA8 File Offset: 0x002BCDA8
+		// Token: 0x0600B3CF RID: 46031 RVA: 0x002DB784 File Offset: 0x002D9984
 		public string BoneNames(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -115,8 +115,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170028BA RID: 10426
-		// (get) Token: 0x0600ADAF RID: 44463 RVA: 0x002BEBE4 File Offset: 0x002BCDE4
+		// Token: 0x17002920 RID: 10528
+		// (get) Token: 0x0600B3D0 RID: 46032 RVA: 0x002DB7C0 File Offset: 0x002D99C0
 		public int BoneNamesLength
 		{
 			get
@@ -130,24 +130,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600ADB0 RID: 44464 RVA: 0x002BEC0F File Offset: 0x002BCE0F
+		// Token: 0x0600B3D1 RID: 46033 RVA: 0x002DB7EB File Offset: 0x002D99EB
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BoneNamesIter()或GetBoneNamesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] BoneNames()
+		public string[] BoneNames()
 		{
 			return this.BoneNamesIter().ToArray<string>();
 		}
 
-		// Token: 0x0600ADB1 RID: 44465 RVA: 0x002BEC1C File Offset: 0x002BCE1C
+		// Token: 0x0600B3D2 RID: 46034 RVA: 0x002DB7F8 File Offset: 0x002D99F8
 		[NullableContext(1)]
-		public readonly IEnumerable<string> BoneNamesIter()
+		public IEnumerable<string> BoneNamesIter()
 		{
 			PhysicsAssetConfig.<BoneNamesIter>d__20 <BoneNamesIter>d__ = new PhysicsAssetConfig.<BoneNamesIter>d__20(-2);
 			<BoneNamesIter>d__.<>3__<>4__this = this;
 			return <BoneNamesIter>d__;
 		}
 
-		// Token: 0x04004FE7 RID: 20455
+		// Token: 0x040055CC RID: 21964
 		private Table __p;
 	}
 }

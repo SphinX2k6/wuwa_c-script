@@ -2,39 +2,39 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002E6C RID: 11884
+// Token: 0x020023BE RID: 9150
 [NullableContext(2)]
 [Nullable(0)]
 public class SnapshotPayload
 {
-	// Token: 0x170022D6 RID: 8918
-	// (get) Token: 0x0601964A RID: 104010 RVA: 0x0068CBF1 File Offset: 0x0068ADF1
-	// (set) Token: 0x0601964B RID: 104011 RVA: 0x0068CBF9 File Offset: 0x0068ADF9
+	// Token: 0x17002355 RID: 9045
+	// (get) Token: 0x06016F11 RID: 93969 RVA: 0x006B2FE5 File Offset: 0x006B11E5
+	// (set) Token: 0x06016F12 RID: 93970 RVA: 0x006B2FED File Offset: 0x006B11ED
 	public BaseDamageComponent Target { get; set; }
 
-	// Token: 0x170022D7 RID: 8919
-	// (get) Token: 0x0601964C RID: 104012 RVA: 0x0068CC02 File Offset: 0x0068AE02
-	// (set) Token: 0x0601964D RID: 104013 RVA: 0x0068CC0A File Offset: 0x0068AE0A
+	// Token: 0x17002356 RID: 9046
+	// (get) Token: 0x06016F13 RID: 93971 RVA: 0x006B2FF6 File Offset: 0x006B11F6
+	// (set) Token: 0x06016F14 RID: 93972 RVA: 0x006B2FFE File Offset: 0x006B11FE
 	public BaseDamageComponent Attacker { get; set; }
 
-	// Token: 0x170022D8 RID: 8920
-	// (get) Token: 0x0601964E RID: 104014 RVA: 0x0068CC13 File Offset: 0x0068AE13
-	// (set) Token: 0x0601964F RID: 104015 RVA: 0x0068CC1B File Offset: 0x0068AE1B
+	// Token: 0x17002357 RID: 9047
+	// (get) Token: 0x06016F15 RID: 93973 RVA: 0x006B3007 File Offset: 0x006B1207
+	// (set) Token: 0x06016F16 RID: 93974 RVA: 0x006B300F File Offset: 0x006B120F
 	public AttributeSnapshot TargetSnapshot { get; set; }
 
-	// Token: 0x170022D9 RID: 8921
-	// (get) Token: 0x06019650 RID: 104016 RVA: 0x0068CC24 File Offset: 0x0068AE24
-	// (set) Token: 0x06019651 RID: 104017 RVA: 0x0068CC2C File Offset: 0x0068AE2C
+	// Token: 0x17002358 RID: 9048
+	// (get) Token: 0x06016F17 RID: 93975 RVA: 0x006B3018 File Offset: 0x006B1218
+	// (set) Token: 0x06016F18 RID: 93976 RVA: 0x006B3020 File Offset: 0x006B1220
 	public AttributeSnapshot AttackerSnapshot { get; set; }
 
-	// Token: 0x170022DA RID: 8922
-	// (get) Token: 0x06019652 RID: 104018 RVA: 0x0068CC35 File Offset: 0x0068AE35
-	// (set) Token: 0x06019653 RID: 104019 RVA: 0x0068CC3D File Offset: 0x0068AE3D
+	// Token: 0x17002359 RID: 9049
+	// (get) Token: 0x06016F19 RID: 93977 RVA: 0x006B3029 File Offset: 0x006B1229
+	// (set) Token: 0x06016F1A RID: 93978 RVA: 0x006B3031 File Offset: 0x006B1231
 	public bool HasDamageTransfer { get; set; }
 
-	// Token: 0x170022DB RID: 8923
-	// (get) Token: 0x06019654 RID: 104020 RVA: 0x0068CC46 File Offset: 0x0068AE46
-	// (set) Token: 0x06019655 RID: 104021 RVA: 0x0068CC4E File Offset: 0x0068AE4E
+	// Token: 0x1700235A RID: 9050
+	// (get) Token: 0x06016F1B RID: 93979 RVA: 0x006B303A File Offset: 0x006B123A
+	// (set) Token: 0x06016F1C RID: 93980 RVA: 0x006B3042 File Offset: 0x006B1242
 	[Nullable(new byte[]
 	{
 		2,

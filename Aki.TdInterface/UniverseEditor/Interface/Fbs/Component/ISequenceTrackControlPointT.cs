@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005901 RID: 22785
+	// Token: 0x02005F0E RID: 24334
 	public class ISequenceTrackControlPointT
 	{
-		// Token: 0x1700AAC9 RID: 43721
-		// (get) Token: 0x0602681A RID: 157722 RVA: 0x0054E351 File Offset: 0x0054C551
-		// (set) Token: 0x0602681B RID: 157723 RVA: 0x0054E359 File Offset: 0x0054C559
+		// Token: 0x1700B3FD RID: 46077
+		// (get) Token: 0x06028D84 RID: 167300 RVA: 0x00594FBD File Offset: 0x005931BD
+		// (set) Token: 0x06028D85 RID: 167301 RVA: 0x00594FC5 File Offset: 0x005931C5
 		public string Mark { get; set; }
 
-		// Token: 0x0602681C RID: 157724 RVA: 0x0054E362 File Offset: 0x0054C562
+		// Token: 0x06028D86 RID: 167302 RVA: 0x00594FCE File Offset: 0x005931CE
 		public ISequenceTrackControlPointT()
 		{
 			this.Mark = null;

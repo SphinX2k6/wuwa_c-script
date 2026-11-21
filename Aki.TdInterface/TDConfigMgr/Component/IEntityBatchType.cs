@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000311 RID: 785
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000358 RID: 856
 	public class IEntityBatchType
 	{
-		// Token: 0x06000F39 RID: 3897 RVA: 0x00035DD8 File Offset: 0x00033FD8
+		// Token: 0x06001069 RID: 4201 RVA: 0x00038D0C File Offset: 0x00036F0C
 		private IEntityBatchType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000F3A RID: 3898 RVA: 0x00035E10 File Offset: 0x00034010
+		// Token: 0x0600106A RID: 4202 RVA: 0x00038D44 File Offset: 0x00036F44
 		public static IEntityBatchType Create([Nullable(2)] IEntityBatchType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F3B RID: 3899 RVA: 0x00035E23 File Offset: 0x00034023
+		// Token: 0x0600106B RID: 4203 RVA: 0x00038D57 File Offset: 0x00036F57
 		public static IEntityBatchType CreateFromSetValue([Nullable(2)] IEntityBatchType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F3C RID: 3900 RVA: 0x00035E36 File Offset: 0x00034036
+		// Token: 0x0600106C RID: 4204 RVA: 0x00038D6A File Offset: 0x00036F6A
 		public IEntityBatchType_SetValue ToSetValue()
 		{
 			return new IEntityBatchType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000460 RID: 1120
-		// (get) Token: 0x06000F3D RID: 3901 RVA: 0x00035E49 File Offset: 0x00034049
-		// (set) Token: 0x06000F3E RID: 3902 RVA: 0x00035E74 File Offset: 0x00034074
+		// Token: 0x170004AD RID: 1197
+		// (get) Token: 0x0600106D RID: 4205 RVA: 0x00038D7D File Offset: 0x00036F7D
+		// (set) Token: 0x0600106E RID: 4206 RVA: 0x00038DA8 File Offset: 0x00036FA8
 		public virtual EEntityBatchType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D2B RID: 3371
+		// Token: 0x04000E15 RID: 3605
 		[Nullable(2)]
 		protected IEntityBatchType FbInstance;
 
-		// Token: 0x04000D2C RID: 3372
+		// Token: 0x04000E16 RID: 3606
 		[Nullable(2)]
 		protected IEntityBatchType_SetValue PocoInterface;
 	}

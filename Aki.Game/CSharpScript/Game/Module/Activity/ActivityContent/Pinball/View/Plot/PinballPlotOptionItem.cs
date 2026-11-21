@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 {
-	// Token: 0x02006321 RID: 25377
+	// Token: 0x0200529F RID: 21151
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 	})]
 	public class PinballPlotOptionItem : GridProxyAbstract<IPinballPlotOptionItemData>
 	{
-		// Token: 0x0603FD6A RID: 261482 RVA: 0x00F71ACC File Offset: 0x00F6FCCC
+		// Token: 0x06034A2B RID: 215595 RVA: 0x00EB8A28 File Offset: 0x00EB6C28
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FD6B RID: 261483 RVA: 0x00F71B94 File Offset: 0x00F6FD94
+		// Token: 0x06034A2C RID: 215596 RVA: 0x00EB8AF0 File Offset: 0x00EB6CF0
 		[NullableContext(1)]
 		public override void Refresh(IPinballPlotOptionItemData data, bool isSelected, int gridIndex)
 		{
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textStringId, args);
 		}
 
-		// Token: 0x0603FD6C RID: 261484 RVA: 0x00F71BFF File Offset: 0x00F6FDFF
+		// Token: 0x06034A2D RID: 215597 RVA: 0x00EB8B5B File Offset: 0x00EB6D5B
 		private void OnOptionButtonClick()
 		{
 			if (this.Data == null)
@@ -61,18 +61,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.Data.OptionDelegate(this.Data.OptionIndex);
 		}
 
-		// Token: 0x040214F9 RID: 136441
+		// Token: 0x0401BE28 RID: 114216
 		[Nullable(2)]
 		private IPinballPlotOptionItemData Data;
 
-		// Token: 0x0200C51A RID: 50458
+		// Token: 0x0200AF01 RID: 44801
 		private enum EComponent
 		{
-			// Token: 0x0403B7BE RID: 243646
+			// Token: 0x04036120 RID: 221472
 			OptionButton,
-			// Token: 0x0403B7BF RID: 243647
+			// Token: 0x04036121 RID: 221473
 			OptionTitleText,
-			// Token: 0x0403B7C0 RID: 243648
+			// Token: 0x04036122 RID: 221474
 			OptionDescText
 		}
 	}

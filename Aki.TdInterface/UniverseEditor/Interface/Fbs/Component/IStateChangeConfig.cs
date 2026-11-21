@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059A1 RID: 22945
+	// Token: 0x02005FAE RID: 24494
 	public struct IStateChangeConfig : IFlatbufferObject
 	{
-		// Token: 0x1700AC35 RID: 44085
-		// (get) Token: 0x06026DE0 RID: 159200 RVA: 0x005595EF File Offset: 0x005577EF
+		// Token: 0x1700B569 RID: 46441
+		// (get) Token: 0x0602934A RID: 168778 RVA: 0x005A025B File Offset: 0x0059E45B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026DE1 RID: 159201 RVA: 0x005595FC File Offset: 0x005577FC
+		// Token: 0x0602934B RID: 168779 RVA: 0x005A0268 File Offset: 0x0059E468
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026DE2 RID: 159202 RVA: 0x00559604 File Offset: 0x00557804
+		// Token: 0x0602934C RID: 168780 RVA: 0x005A0270 File Offset: 0x0059E470
 		public static IStateChangeConfig GetRootAsIStateChangeConfig(ByteBuffer _bb)
 		{
 			return IStateChangeConfig.GetRootAsIStateChangeConfig(_bb, default(IStateChangeConfig));
 		}
 
-		// Token: 0x06026DE3 RID: 159203 RVA: 0x00559620 File Offset: 0x00557820
+		// Token: 0x0602934D RID: 168781 RVA: 0x005A028C File Offset: 0x0059E48C
 		public static IStateChangeConfig GetRootAsIStateChangeConfig(ByteBuffer _bb, IStateChangeConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026DE4 RID: 159204 RVA: 0x0055963D File Offset: 0x0055783D
+		// Token: 0x0602934E RID: 168782 RVA: 0x005A02A9 File Offset: 0x0059E4A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026DE5 RID: 159205 RVA: 0x0055964C File Offset: 0x0055784C
+		// Token: 0x0602934F RID: 168783 RVA: 0x005A02B8 File Offset: 0x0059E4B8
 		public IStateChangeConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AC36 RID: 44086
-		// (get) Token: 0x06026DE6 RID: 159206 RVA: 0x0055965C File Offset: 0x0055785C
+		// Token: 0x1700B56A RID: 46442
+		// (get) Token: 0x06029350 RID: 168784 RVA: 0x005A02C8 File Offset: 0x0059E4C8
 		public string RefreshState
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026DE7 RID: 159207 RVA: 0x00559693 File Offset: 0x00557893
+		// Token: 0x06029351 RID: 168785 RVA: 0x005A02FF File Offset: 0x0059E4FF
 		public Span<byte> GetRefreshStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06026DE8 RID: 159208 RVA: 0x005596A2 File Offset: 0x005578A2
+		// Token: 0x06029352 RID: 168786 RVA: 0x005A030E File Offset: 0x0059E50E
 		public byte[] GetRefreshStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700AC37 RID: 44087
-		// (get) Token: 0x06026DE9 RID: 159209 RVA: 0x005596B0 File Offset: 0x005578B0
+		// Token: 0x1700B56B RID: 46443
+		// (get) Token: 0x06029353 RID: 168787 RVA: 0x005A031C File Offset: 0x0059E51C
 		public string SubDestroyState
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026DEA RID: 159210 RVA: 0x005596E7 File Offset: 0x005578E7
+		// Token: 0x06029354 RID: 168788 RVA: 0x005A0353 File Offset: 0x0059E553
 		public Span<byte> GetSubDestroyStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06026DEB RID: 159211 RVA: 0x005596F6 File Offset: 0x005578F6
+		// Token: 0x06029355 RID: 168789 RVA: 0x005A0362 File Offset: 0x0059E562
 		public byte[] GetSubDestroyStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06026DEC RID: 159212 RVA: 0x00559704 File Offset: 0x00557904
+		// Token: 0x06029356 RID: 168790 RVA: 0x005A0370 File Offset: 0x0059E570
 		public static Offset<IStateChangeConfig> CreateIStateChangeConfig(FlatBufferBuilder builder, StringOffset RefreshStateOffset = default(StringOffset), StringOffset SubDestroyStateOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IStateChangeConfig.EndIStateChangeConfig(builder);
 		}
 
-		// Token: 0x06026DED RID: 159213 RVA: 0x00559721 File Offset: 0x00557921
+		// Token: 0x06029357 RID: 168791 RVA: 0x005A038D File Offset: 0x0059E58D
 		public static void StartIStateChangeConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06026DEE RID: 159214 RVA: 0x0055972A File Offset: 0x0055792A
+		// Token: 0x06029358 RID: 168792 RVA: 0x005A0396 File Offset: 0x0059E596
 		public static void AddRefreshState(FlatBufferBuilder builder, StringOffset refreshStateOffset)
 		{
 			builder.AddOffset(0, refreshStateOffset.Value, 0);
 		}
 
-		// Token: 0x06026DEF RID: 159215 RVA: 0x0055973A File Offset: 0x0055793A
+		// Token: 0x06029359 RID: 168793 RVA: 0x005A03A6 File Offset: 0x0059E5A6
 		public static void AddSubDestroyState(FlatBufferBuilder builder, StringOffset subDestroyStateOffset)
 		{
 			builder.AddOffset(1, subDestroyStateOffset.Value, 0);
 		}
 
-		// Token: 0x06026DF0 RID: 159216 RVA: 0x0055974A File Offset: 0x0055794A
+		// Token: 0x0602935A RID: 168794 RVA: 0x005A03B6 File Offset: 0x0059E5B6
 		public static Offset<IStateChangeConfig> EndIStateChangeConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IStateChangeConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06026DF1 RID: 159217 RVA: 0x00559758 File Offset: 0x00557958
+		// Token: 0x0602935B RID: 168795 RVA: 0x005A03C4 File Offset: 0x0059E5C4
 		public IStateChangeConfigT UnPack()
 		{
 			IStateChangeConfigT stateChangeConfigT = new IStateChangeConfigT();
@@ -142,14 +142,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return stateChangeConfigT;
 		}
 
-		// Token: 0x06026DF2 RID: 159218 RVA: 0x00559773 File Offset: 0x00557973
+		// Token: 0x0602935C RID: 168796 RVA: 0x005A03DF File Offset: 0x0059E5DF
 		public void UnPackTo(IStateChangeConfigT _o)
 		{
 			_o.RefreshState = this.RefreshState;
 			_o.SubDestroyState = this.SubDestroyState;
 		}
 
-		// Token: 0x06026DF3 RID: 159219 RVA: 0x00559790 File Offset: 0x00557990
+		// Token: 0x0602935D RID: 168797 RVA: 0x005A03FC File Offset: 0x0059E5FC
 		public static Offset<IStateChangeConfig> Pack(FlatBufferBuilder builder, IStateChangeConfigT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IStateChangeConfig.CreateIStateChangeConfig(builder, refreshStateOffset, subDestroyStateOffset);
 		}
 
-		// Token: 0x0400EFAF RID: 61359
+		// Token: 0x0400FCA4 RID: 64676
 		private Table __p;
 	}
 }

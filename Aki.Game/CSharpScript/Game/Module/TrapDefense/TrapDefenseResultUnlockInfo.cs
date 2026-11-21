@@ -2,37 +2,37 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A5E RID: 19038
+	// Token: 0x02003A06 RID: 14854
 	public class TrapDefenseResultUnlockInfo : ITrapDefenseResultUnlockInfo
 	{
-		// Token: 0x17007A82 RID: 31362
-		// (get) Token: 0x06031603 RID: 202243 RVA: 0x00B72509 File Offset: 0x00B70709
-		// (set) Token: 0x06031604 RID: 202244 RVA: 0x00B72511 File Offset: 0x00B70711
+		// Token: 0x17004E2F RID: 20015
+		// (get) Token: 0x06026393 RID: 156563 RVA: 0x00AB648D File Offset: 0x00AB468D
+		// (set) Token: 0x06026394 RID: 156564 RVA: 0x00AB6495 File Offset: 0x00AB4695
 		public ETrapDefenseResultUnlockType Type { get; set; }
 
-		// Token: 0x17007A83 RID: 31363
-		// (get) Token: 0x06031605 RID: 202245 RVA: 0x00B7251A File Offset: 0x00B7071A
-		// (set) Token: 0x06031606 RID: 202246 RVA: 0x00B72522 File Offset: 0x00B70722
+		// Token: 0x17004E30 RID: 20016
+		// (get) Token: 0x06026395 RID: 156565 RVA: 0x00AB649E File Offset: 0x00AB469E
+		// (set) Token: 0x06026396 RID: 156566 RVA: 0x00AB64A6 File Offset: 0x00AB46A6
 		public int Id { get; set; }
 
-		// Token: 0x17007A84 RID: 31364
-		// (get) Token: 0x06031607 RID: 202247 RVA: 0x00B7252B File Offset: 0x00B7072B
-		// (set) Token: 0x06031608 RID: 202248 RVA: 0x00B72533 File Offset: 0x00B70733
+		// Token: 0x17004E31 RID: 20017
+		// (get) Token: 0x06026397 RID: 156567 RVA: 0x00AB64AF File Offset: 0x00AB46AF
+		// (set) Token: 0x06026398 RID: 156568 RVA: 0x00AB64B7 File Offset: 0x00AB46B7
 		public bool? NeedUnlockBar { get; set; }
 
-		// Token: 0x17007A85 RID: 31365
-		// (get) Token: 0x06031609 RID: 202249 RVA: 0x00B7253C File Offset: 0x00B7073C
-		// (set) Token: 0x0603160A RID: 202250 RVA: 0x00B72544 File Offset: 0x00B70744
+		// Token: 0x17004E32 RID: 20018
+		// (get) Token: 0x06026399 RID: 156569 RVA: 0x00AB64C0 File Offset: 0x00AB46C0
+		// (set) Token: 0x0602639A RID: 156570 RVA: 0x00AB64C8 File Offset: 0x00AB46C8
 		public bool? IsFinish { get; set; }
 
-		// Token: 0x17007A86 RID: 31366
-		// (get) Token: 0x0603160B RID: 202251 RVA: 0x00B7254D File Offset: 0x00B7074D
-		// (set) Token: 0x0603160C RID: 202252 RVA: 0x00B72555 File Offset: 0x00B70755
+		// Token: 0x17004E33 RID: 20019
+		// (get) Token: 0x0602639B RID: 156571 RVA: 0x00AB64D1 File Offset: 0x00AB46D1
+		// (set) Token: 0x0602639C RID: 156572 RVA: 0x00AB64D9 File Offset: 0x00AB46D9
 		public bool? IsNewUnlock { get; set; }
 
-		// Token: 0x17007A87 RID: 31367
-		// (get) Token: 0x0603160D RID: 202253 RVA: 0x00B7255E File Offset: 0x00B7075E
-		// (set) Token: 0x0603160E RID: 202254 RVA: 0x00B72566 File Offset: 0x00B70766
+		// Token: 0x17004E34 RID: 20020
+		// (get) Token: 0x0602639D RID: 156573 RVA: 0x00AB64E2 File Offset: 0x00AB46E2
+		// (set) Token: 0x0602639E RID: 156574 RVA: 0x00AB64EA File Offset: 0x00AB46EA
 		public bool? ForShare { get; set; }
 	}
 }

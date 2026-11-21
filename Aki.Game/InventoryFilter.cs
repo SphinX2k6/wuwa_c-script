@@ -5,18 +5,18 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using FilterDefine;
 
-// Token: 0x0200183C RID: 6204
+// Token: 0x02000CF5 RID: 3317
 [NullableContext(1)]
 [Nullable(0)]
 public class InventoryFilter : CommonFilter
 {
-	// Token: 0x0600B5E7 RID: 46567 RVA: 0x0029219D File Offset: 0x0029039D
+	// Token: 0x060089D2 RID: 35282 RVA: 0x0029C8BD File Offset: 0x0029AABD
 	private object GetItemQualityId(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((global::ItemViewData)data).GetQuality();
 	}
 
-	// Token: 0x0600B5E8 RID: 46568 RVA: 0x002921B0 File Offset: 0x002903B0
+	// Token: 0x060089D3 RID: 35283 RVA: 0x0029C8D0 File Offset: 0x0029AAD0
 	private object GetWeaponTypeId(object data, Dictionary<int, string> currentSelectMap)
 	{
 		global::ItemViewData itemViewData = (global::ItemViewData)data;
@@ -34,7 +34,7 @@ public class InventoryFilter : CommonFilter
 		return weaponItemData.GetConfig().As<WeaponConf>().Value.WeaponType;
 	}
 
-	// Token: 0x0600B5E9 RID: 46569 RVA: 0x0029221C File Offset: 0x0029041C
+	// Token: 0x060089D4 RID: 35284 RVA: 0x0029C93C File Offset: 0x0029AB3C
 	private object GetPhantomItemId(object data, Dictionary<int, string> currentSelectMap)
 	{
 		global::ItemViewData itemViewData = (global::ItemViewData)data;
@@ -52,7 +52,7 @@ public class InventoryFilter : CommonFilter
 		return phantomBattleData.GetMonsterId(false);
 	}
 
-	// Token: 0x0600B5EA RID: 46570 RVA: 0x00292270 File Offset: 0x00290470
+	// Token: 0x060089D5 RID: 35285 RVA: 0x0029C990 File Offset: 0x0029AB90
 	private bool GetSelectOnState(object data)
 	{
 		global::ItemViewData itemViewData = (global::ItemViewData)data;
@@ -61,7 +61,7 @@ public class InventoryFilter : CommonFilter
 		return selectOn && flag;
 	}
 
-	// Token: 0x0600B5EB RID: 46571 RVA: 0x00292298 File Offset: 0x00290498
+	// Token: 0x060089D6 RID: 35286 RVA: 0x0029C9B8 File Offset: 0x0029ABB8
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.ItemQuality, new TFilterConfig(this.GetItemQualityId));
@@ -121,7 +121,7 @@ public class InventoryFilter : CommonFilter
 		filterMap6.Add(key6, value6);
 	}
 
-	// Token: 0x0600B5EC RID: 46572 RVA: 0x00292442 File Offset: 0x00290642
+	// Token: 0x060089D7 RID: 35287 RVA: 0x0029CB62 File Offset: 0x0029AD62
 	public override TDefaultFilter[] DefaultFilterList()
 	{
 		return new TDefaultFilter[]
@@ -130,31 +130,31 @@ public class InventoryFilter : CommonFilter
 		};
 	}
 
-	// Token: 0x02007E15 RID: 32277
+	// Token: 0x02006F9B RID: 28571
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402944B RID: 169035
+		// Token: 0x04024776 RID: 149366
 		[Nullable(0)]
 		public static TFilterConfig <0>__GetPhantomRarity;
 
-		// Token: 0x0402944C RID: 169036
+		// Token: 0x04024777 RID: 149367
 		[Nullable(0)]
 		public static TFilterConfig <1>__GetPhantomCost;
 
-		// Token: 0x0402944D RID: 169037
+		// Token: 0x04024778 RID: 149368
 		[Nullable(0)]
 		public static TFilterConfig <2>__GetPhantomQuality;
 
-		// Token: 0x0402944E RID: 169038
+		// Token: 0x04024779 RID: 149369
 		[Nullable(0)]
 		public static TFilterConfig <3>__GetVisionDestroyFetterGroup;
 
-		// Token: 0x0402944F RID: 169039
+		// Token: 0x0402477A RID: 149370
 		[Nullable(0)]
 		public static TFilterConfig <4>__GetVisionDestroyAttribute;
 
-		// Token: 0x04029450 RID: 169040
+		// Token: 0x0402477B RID: 149371
 		[Nullable(0)]
 		public static TFilterConfig <5>__GetPhantomDeprecate;
 	}

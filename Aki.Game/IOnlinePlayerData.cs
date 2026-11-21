@@ -3,54 +3,54 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020022DB RID: 8923
+// Token: 0x020017BF RID: 6079
 [NullableContext(1)]
 public interface IOnlinePlayerData : IPlayerData
 {
-	// Token: 0x17001655 RID: 5717
-	// (get) Token: 0x060118A1 RID: 71841
+	// Token: 0x1700168C RID: 5772
+	// (get) Token: 0x0600ED38 RID: 60728
 	int HeadId { get; }
 
-	// Token: 0x17001656 RID: 5718
-	// (get) Token: 0x060118A2 RID: 71842
+	// Token: 0x1700168D RID: 5773
+	// (get) Token: 0x0600ED39 RID: 60729
 	int Level { get; }
 
-	// Token: 0x17001657 RID: 5719
-	// (get) Token: 0x060118A3 RID: 71843
+	// Token: 0x1700168E RID: 5774
+	// (get) Token: 0x0600ED3A RID: 60730
 	string Name { get; }
 
-	// Token: 0x17001658 RID: 5720
-	// (get) Token: 0x060118A4 RID: 71844
+	// Token: 0x1700168F RID: 5775
+	// (get) Token: 0x0600ED3B RID: 60731
 	int PlayerTitleId { get; }
 
-	// Token: 0x17001659 RID: 5721
-	// (get) Token: 0x060118A5 RID: 71845
+	// Token: 0x17001690 RID: 5776
+	// (get) Token: 0x0600ED3C RID: 60732
 	int PlayerTitleStarLevel { get; }
 
-	// Token: 0x1700165A RID: 5722
-	// (get) Token: 0x060118A6 RID: 71846
+	// Token: 0x17001691 RID: 5777
+	// (get) Token: 0x0600ED3D RID: 60733
 	int Sex { get; }
 
-	// Token: 0x1700165B RID: 5723
-	// (get) Token: 0x060118A7 RID: 71847
+	// Token: 0x17001692 RID: 5778
+	// (get) Token: 0x0600ED3E RID: 60734
 	PlayerDetails PlayerDetails { get; }
 
-	// Token: 0x1700165C RID: 5724
-	// (get) Token: 0x060118A8 RID: 71848
+	// Token: 0x17001693 RID: 5779
+	// (get) Token: 0x0600ED3F RID: 60735
 	int CurUsingCardId { get; }
 
-	// Token: 0x1700165D RID: 5725
-	// (get) Token: 0x060118A9 RID: 71849
+	// Token: 0x17001694 RID: 5780
+	// (get) Token: 0x0600ED40 RID: 60736
 	List<PersonalCardData> CardUnlockList { get; }
 
-	// Token: 0x060118AA RID: 71850
+	// Token: 0x0600ED41 RID: 60737
 	bool GetIfCanShowInHallList([Nullable(new byte[]
 	{
 		2,
 		1
 	})] Dictionary<string, bool> blockMap = null);
 
-	// Token: 0x1700165E RID: 5726
-	// (get) Token: 0x060118AB RID: 71851
+	// Token: 0x17001695 RID: 5781
+	// (get) Token: 0x0600ED42 RID: 60738
 	string ThirdPartyUserId { get; }
 }

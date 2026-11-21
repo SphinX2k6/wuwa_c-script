@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020014A2 RID: 5282
+// Token: 0x02000956 RID: 2390
 [NullableContext(1)]
 [Nullable(0)]
 public class RegressTransitionStateMachine
 {
-	// Token: 0x060095AA RID: 38314 RVA: 0x00204847 File Offset: 0x00202A47
+	// Token: 0x0600693F RID: 26943 RVA: 0x0020D7AF File Offset: 0x0020B9AF
 	public void Start()
 	{
 		this.SetState(EActivityRecallTransitionStatus.Init);
 	}
 
-	// Token: 0x060095AB RID: 38315 RVA: 0x00204850 File Offset: 0x00202A50
+	// Token: 0x06006940 RID: 26944 RVA: 0x0020D7B8 File Offset: 0x0020B9B8
 	public void ShutDown()
 	{
 		Dictionary<EActivityRecallTransitionStatus, IRegressTransitionState> stateMap = this.StateMap;
@@ -26,7 +26,7 @@ public class RegressTransitionStateMachine
 		this.CurrentState = null;
 	}
 
-	// Token: 0x060095AC RID: 38316 RVA: 0x00204874 File Offset: 0x00202A74
+	// Token: 0x06006941 RID: 26945 RVA: 0x0020D7DC File Offset: 0x0020B9DC
 	public unsafe void PlayNextState()
 	{
 		if (this.CurrentState == null)
@@ -44,7 +44,7 @@ public class RegressTransitionStateMachine
 		this.CurrentState.End();
 	}
 
-	// Token: 0x060095AD RID: 38317 RVA: 0x002048FC File Offset: 0x00202AFC
+	// Token: 0x06006942 RID: 26946 RVA: 0x0020D864 File Offset: 0x0020BA64
 	public unsafe void SetState(EActivityRecallTransitionStatus status)
 	{
 		if (status == EActivityRecallTransitionStatus.Finish)
@@ -73,13 +73,13 @@ public class RegressTransitionStateMachine
 		}
 	}
 
-	// Token: 0x060095AE RID: 38318 RVA: 0x002049AF File Offset: 0x00202BAF
+	// Token: 0x06006943 RID: 26947 RVA: 0x0020D917 File Offset: 0x0020BB17
 	private void OnEndCallBack(IRegressTransitionState state)
 	{
 		this.NextState(state);
 	}
 
-	// Token: 0x060095AF RID: 38319 RVA: 0x002049B8 File Offset: 0x00202BB8
+	// Token: 0x06006944 RID: 26948 RVA: 0x0020D920 File Offset: 0x0020BB20
 	private unsafe void NextState(IRegressTransitionState state)
 	{
 		if (this.CurrentState != null && state != this.CurrentState)
@@ -98,7 +98,7 @@ public class RegressTransitionStateMachine
 		this.SetState(nextStatus);
 	}
 
-	// Token: 0x060095B0 RID: 38320 RVA: 0x00204A48 File Offset: 0x00202C48
+	// Token: 0x06006945 RID: 26949 RVA: 0x0020D9B0 File Offset: 0x0020BBB0
 	[NullableContext(2)]
 	private unsafe IRegressTransitionState GetState(EActivityRecallTransitionStatus status)
 	{
@@ -141,7 +141,7 @@ public class RegressTransitionStateMachine
 		return regressTransitionState;
 	}
 
-	// Token: 0x04004225 RID: 16933
+	// Token: 0x040042BD RID: 17085
 	[Nullable(new byte[]
 	{
 		2,
@@ -149,10 +149,10 @@ public class RegressTransitionStateMachine
 	})]
 	private Dictionary<EActivityRecallTransitionStatus, IRegressTransitionState> StateMap;
 
-	// Token: 0x04004226 RID: 16934
+	// Token: 0x040042BE RID: 17086
 	private EActivityRecallTransitionStatus? Status;
 
-	// Token: 0x04004227 RID: 16935
+	// Token: 0x040042BF RID: 17087
 	[Nullable(2)]
 	private IRegressTransitionState CurrentState;
 }

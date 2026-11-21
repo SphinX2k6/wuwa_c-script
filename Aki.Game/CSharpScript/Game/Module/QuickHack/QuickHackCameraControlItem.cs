@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F8A RID: 20362
+	// Token: 0x02003F53 RID: 16211
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuickHackCameraControlItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603422C RID: 213548 RVA: 0x00C3C3F0 File Offset: 0x00C3A5F0
+		// Token: 0x0602909A RID: 168090 RVA: 0x00B85B9C File Offset: 0x00B83D9C
 		protected override void OnStart()
 		{
 			UActorComponent componentByClass = this.RootActor.GetComponentByClass(UUIExtendToggle.StaticClass());
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.Toggle.OnPointDownCallBack.Bind(new Action<EToggleState>(this.OnCameraItemPointDown));
 		}
 
-		// Token: 0x0603422D RID: 213549 RVA: 0x00C3C44B File Offset: 0x00C3A64B
+		// Token: 0x0602909B RID: 168091 RVA: 0x00B85BF7 File Offset: 0x00B83DF7
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle toggle = this.Toggle;
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.OnCameraItemClick = null;
 		}
 
-		// Token: 0x0603422E RID: 213550 RVA: 0x00C3C47F File Offset: 0x00C3A67F
+		// Token: 0x0602909C RID: 168092 RVA: 0x00B85C2B File Offset: 0x00B83E2B
 		[NullableContext(1)]
 		public void RegisterOnCameraItemClick(Action<int> onCameraItemClick)
 		{
 			this.OnCameraItemClick = onCameraItemClick;
 		}
 
-		// Token: 0x0603422F RID: 213551 RVA: 0x00C3C488 File Offset: 0x00C3A688
+		// Token: 0x0602909D RID: 168093 RVA: 0x00B85C34 File Offset: 0x00B83E34
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.PbDataId = data;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034230 RID: 213552 RVA: 0x00C3C4BB File Offset: 0x00C3A6BB
+		// Token: 0x0602909E RID: 168094 RVA: 0x00B85C67 File Offset: 0x00B83E67
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle toggle = this.Toggle;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034231 RID: 213553 RVA: 0x00C3C4E1 File Offset: 0x00C3A6E1
+		// Token: 0x0602909F RID: 168095 RVA: 0x00B85C8D File Offset: 0x00B83E8D
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle toggle = this.Toggle;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034232 RID: 213554 RVA: 0x00C3C507 File Offset: 0x00C3A707
+		// Token: 0x060290A0 RID: 168096 RVA: 0x00B85CB3 File Offset: 0x00B83EB3
 		private void OnCameraItemPointDown(EToggleState state)
 		{
 			Action<int> onCameraItemClick = this.OnCameraItemClick;
@@ -84,13 +84,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			onCameraItemClick(this.PbDataId);
 		}
 
-		// Token: 0x0401BB86 RID: 113542
+		// Token: 0x0401655B RID: 91483
 		private int PbDataId;
 
-		// Token: 0x0401BB87 RID: 113543
+		// Token: 0x0401655C RID: 91484
 		private UUIExtendToggle Toggle;
 
-		// Token: 0x0401BB88 RID: 113544
+		// Token: 0x0401655D RID: 91485
 		private Action<int> OnCameraItemClick;
 	}
 }

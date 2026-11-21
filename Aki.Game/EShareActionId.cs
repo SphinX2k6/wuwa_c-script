@@ -1,38 +1,38 @@
 ﻿using System;
 
-// Token: 0x02001783 RID: 6019
+// Token: 0x02000C3C RID: 3132
 public enum EShareActionId
 {
-	// Token: 0x04004F76 RID: 20342
+	// Token: 0x04005020 RID: 20512
 	Photo = 1,
-	// Token: 0x04004F77 RID: 20343
+	// Token: 0x04005021 RID: 20513
 	Land,
-	// Token: 0x04004F78 RID: 20344
+	// Token: 0x04005022 RID: 20514
 	Character,
-	// Token: 0x04004F79 RID: 20345
+	// Token: 0x04005023 RID: 20515
 	Weapon,
-	// Token: 0x04004F7A RID: 20346
+	// Token: 0x04005024 RID: 20516
 	TenGacha,
-	// Token: 0x04004F7B RID: 20347
+	// Token: 0x04005025 RID: 20517
 	BabelTower,
-	// Token: 0x04004F7C RID: 20348
+	// Token: 0x04005026 RID: 20518
 	Birthday,
-	// Token: 0x04004F7D RID: 20349
+	// Token: 0x04005027 RID: 20519
 	TrapDefense,
-	// Token: 0x04004F7E RID: 20350
+	// Token: 0x04005028 RID: 20520
 	Kurotato,
-	// Token: 0x04004F7F RID: 20351
+	// Token: 0x04005029 RID: 20521
 	WheelTowerSeasonMedal,
-	// Token: 0x04004F80 RID: 20352
+	// Token: 0x0400502A RID: 20522
 	WheelTowerTotalScore,
-	// Token: 0x04004F81 RID: 20353
+	// Token: 0x0400502B RID: 20523
 	WheelTowerRoundScore,
-	// Token: 0x04004F82 RID: 20354
+	// Token: 0x0400502C RID: 20524
 	TowerVariation = 14,
-	// Token: 0x04004F83 RID: 20355
+	// Token: 0x0400502D RID: 20525
 	HandBookPhoto,
-	// Token: 0x04004F84 RID: 20356
+	// Token: 0x0400502E RID: 20526
 	ChallengeRecord = 13,
-	// Token: 0x04004F85 RID: 20357
+	// Token: 0x0400502F RID: 20527
 	SkinObtain = 16
 }

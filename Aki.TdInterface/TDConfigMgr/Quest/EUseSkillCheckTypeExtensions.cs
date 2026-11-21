@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012B4 RID: 4788
+	// Token: 0x020013FA RID: 5114
 	public static class EUseSkillCheckTypeExtensions
 	{
-		// Token: 0x06006BD1 RID: 27601 RVA: 0x00103830 File Offset: 0x00101A30
+		// Token: 0x0600723F RID: 29247 RVA: 0x001117F8 File Offset: 0x0010F9F8
 		public static string ToEnumString(this EUseSkillCheckType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BD2 RID: 27602 RVA: 0x00103890 File Offset: 0x00101A90
+		// Token: 0x06007240 RID: 29248 RVA: 0x00111858 File Offset: 0x0010FA58
 		public static EUseSkillCheckType FromString(string name)
 		{
 			EUseSkillCheckType result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BD3 RID: 27603 RVA: 0x001038BC File Offset: 0x00101ABC
+		// Token: 0x06007241 RID: 29249 RVA: 0x00111884 File Offset: 0x0010FA84
 		public static bool TryFromString(string name, out EUseSkillCheckType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006BD4 RID: 27604 RVA: 0x00103936 File Offset: 0x00101B36
+		// Token: 0x06007242 RID: 29250 RVA: 0x001118FE File Offset: 0x0010FAFE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BD5 RID: 27605 RVA: 0x00103966 File Offset: 0x00101B66
+		// Token: 0x06007243 RID: 29251 RVA: 0x0011192E File Offset: 0x0010FB2E
 		public static EUseSkillCheckType[] GetValues()
 		{
 			return new EUseSkillCheckType[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BD6 RID: 27606 RVA: 0x00103979 File Offset: 0x00101B79
+		// Token: 0x06007244 RID: 29252 RVA: 0x00111941 File Offset: 0x0010FB41
 		public static string[] GetNames()
 		{
 			return new string[]

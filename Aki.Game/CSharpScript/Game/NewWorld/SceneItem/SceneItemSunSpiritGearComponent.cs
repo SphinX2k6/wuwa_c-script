@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007193 RID: 29075
+	// Token: 0x02006247 RID: 25159
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemSunSpiritGearComponent : EntityComponent
 	{
-		// Token: 0x0604721C RID: 291356 RVA: 0x0120FA4C File Offset: 0x0120DC4C
+		// Token: 0x0603CAEB RID: 248555 RVA: 0x01169518 File Offset: 0x01167718
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			SunSpiritGearComponent sunSpiritGearComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemSunSpiritGearComponent>() as SunSpiritGearComponent;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604721D RID: 291357 RVA: 0x0120FB74 File Offset: 0x0120DD74
+		// Token: 0x0603CAEC RID: 248556 RVA: 0x01169640 File Offset: 0x01167840
 		protected override bool OnInit()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604721E RID: 291358 RVA: 0x0120FBAC File Offset: 0x0120DDAC
+		// Token: 0x0603CAED RID: 248557 RVA: 0x01169678 File Offset: 0x01167878
 		protected override void OnActivate()
 		{
 			if (!EventSystem.Instance.HasWithTarget(base.Entity, EEventName.OnSceneInteractionShowCompleted, new Action(this.OnSceneInteractionShow)))
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604721F RID: 291359 RVA: 0x0120FC5F File Offset: 0x0120DE5F
+		// Token: 0x0603CAEE RID: 248558 RVA: 0x0116972B File Offset: 0x0116792B
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047220 RID: 291360 RVA: 0x0120FC79 File Offset: 0x0120DE79
+		// Token: 0x0603CAEF RID: 248559 RVA: 0x01169745 File Offset: 0x01167945
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x06047221 RID: 291361 RVA: 0x0120FC7C File Offset: 0x0120DE7C
+		// Token: 0x0603CAF0 RID: 248560 RVA: 0x01169748 File Offset: 0x01167948
 		private void OnSceneInteractionShow()
 		{
 			CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -134,14 +134,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.PerformOnSunSpiritChanged(true);
 		}
 
-		// Token: 0x06047222 RID: 291362 RVA: 0x0120FD20 File Offset: 0x0120DF20
+		// Token: 0x0603CAF1 RID: 248561 RVA: 0x011697EC File Offset: 0x011679EC
 		private void OnSceneInteractionHide()
 		{
 			this.ClearProxyRouter("SceneItemSunSpiritGearComponent.OnSceneInteractionHide");
 			this.TargetScale.DeepCopy(global::Vector.OneVectorProxy);
 		}
 
-		// Token: 0x06047223 RID: 291363 RVA: 0x0120FD3D File Offset: 0x0120DF3D
+		// Token: 0x0603CAF2 RID: 248562 RVA: 0x01169809 File Offset: 0x01167A09
 		private void ManualTickHandler(float delta)
 		{
 			CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -157,14 +157,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdateGearScaleUp(delta);
 		}
 
-		// Token: 0x06047224 RID: 291364 RVA: 0x0120FD73 File Offset: 0x0120DF73
+		// Token: 0x0603CAF3 RID: 248563 RVA: 0x0116983F File Offset: 0x01167A3F
 		private void StartManualTickUpdateScale()
 		{
 			this.StopManualTickUpdateScale();
 			this.ManualTickTimerHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.ManualTickHandler), 25f, 1f, null, null, true);
 		}
 
-		// Token: 0x06047225 RID: 291365 RVA: 0x0120FDA4 File Offset: 0x0120DFA4
+		// Token: 0x0603CAF4 RID: 248564 RVA: 0x01169870 File Offset: 0x01167A70
 		private void StopManualTickUpdateScale()
 		{
 			TimerHandle manualTickTimerHandle = this.ManualTickTimerHandle;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ManualTickTimerHandle = null;
 		}
 
-		// Token: 0x06047226 RID: 291366 RVA: 0x0120FDD0 File Offset: 0x0120DFD0
+		// Token: 0x0603CAF5 RID: 248565 RVA: 0x0116989C File Offset: 0x01167A9C
 		private unsafe void TryBindSunSpirit(int sunSpiritId, int socketIndex)
 		{
 			ESunSpiritGearPerformType? sunSpiritPerformType = this.GetSunSpiritPerformType();
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			proxyRouter.AddRoute(proxyActor, crowdAiBoidId);
 		}
 
-		// Token: 0x06047227 RID: 291367 RVA: 0x01210100 File Offset: 0x0120E300
+		// Token: 0x0603CAF6 RID: 248566 RVA: 0x01169BCC File Offset: 0x01167DCC
 		private unsafe void TryUnBindSunSpirit(int sunSpiritId, int socketIndex)
 		{
 			ESunSpiritGearPerformType? sunSpiritPerformType = this.GetSunSpiritPerformType();
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			instance3.Warn(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 		}
 
-		// Token: 0x06047228 RID: 291368 RVA: 0x0121030C File Offset: 0x0120E50C
+		// Token: 0x0603CAF7 RID: 248567 RVA: 0x01169DD8 File Offset: 0x01167FD8
 		private AKuroCrowdAiBoidInstanceSequenceProxyRouter GetProxyRouter(bool createIfNotExist = true)
 		{
 			AKuroCrowdAiBoidInstanceSequenceProxyRouter proxyRouterCache = this.ProxyRouterCache;
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.ProxyRouterCache;
 		}
 
-		// Token: 0x06047229 RID: 291369 RVA: 0x012103DC File Offset: 0x0120E5DC
+		// Token: 0x0603CAF8 RID: 248568 RVA: 0x01169EA8 File Offset: 0x011680A8
 		[NullableContext(1)]
 		private void ClearProxyRouter(string reason)
 		{
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604722A RID: 291370 RVA: 0x01210458 File Offset: 0x0120E658
+		// Token: 0x0603CAF9 RID: 248569 RVA: 0x01169F24 File Offset: 0x01168124
 		private AKuroCrowdAiBoidInstanceSequenceProxy GetProxyActor(int socketId)
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return referenceActor as AKuroCrowdAiBoidInstanceSequenceProxy;
 		}
 
-		// Token: 0x0604722B RID: 291371 RVA: 0x012104D0 File Offset: 0x0120E6D0
+		// Token: 0x0603CAFA RID: 248570 RVA: 0x01169F9C File Offset: 0x0116819C
 		private bool GetIsElevator()
 		{
 			CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return entityData != null && TdUtils.GetComponent<LiftComponent>(entityData.ComponentsData, EConfigComponent.LiftComponent) != null;
 		}
 
-		// Token: 0x0604722C RID: 291372 RVA: 0x01210505 File Offset: 0x0120E705
+		// Token: 0x0603CAFB RID: 248571 RVA: 0x01169FD1 File Offset: 0x011681D1
 		private void ProxyActorTickOutsideHandler(float deltaSeconds)
 		{
 			AKuroCrowdAiBoidInstanceSequenceProxyRouter proxyRouterCache = this.ProxyRouterCache;
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ProxyRouterCache.KuroTickActorOutside(deltaSeconds);
 		}
 
-		// Token: 0x0604722D RID: 291373 RVA: 0x0121052C File Offset: 0x0120E72C
+		// Token: 0x0603CAFC RID: 248572 RVA: 0x01169FF8 File Offset: 0x011681F8
 		public ESunSpiritGearPerformType? GetSunSpiritPerformType()
 		{
 			ISunSpiritGearPerformConfig performConfig = this.PerformConfig;
@@ -431,7 +431,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return new ESunSpiritGearPerformType?(performConfig.Type);
 		}
 
-		// Token: 0x0604722E RID: 291374 RVA: 0x01210558 File Offset: 0x0120E758
+		// Token: 0x0603CAFD RID: 248573 RVA: 0x0116A024 File Offset: 0x01168224
 		public bool GetSunSpiritSocketLocAndRot(int index, global::Vector outLoc, Quat outRot)
 		{
 			if (this.CreatureDataComp == null || this.ActorComp == null)
@@ -486,7 +486,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604722F RID: 291375 RVA: 0x01210634 File Offset: 0x0120E834
+		// Token: 0x0603CAFE RID: 248574 RVA: 0x0116A100 File Offset: 0x01168300
 		[NullableContext(1)]
 		public bool GetSunSpiritSocketTransform(int index, global::Transform outTransform)
 		{
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047230 RID: 291376 RVA: 0x01210704 File Offset: 0x0120E904
+		// Token: 0x0603CAFF RID: 248575 RVA: 0x0116A1D0 File Offset: 0x011683D0
 		public int GetNumOfSunSpiritOccupiedByMe()
 		{
 			Dictionary<int, int> sunSpiritToSocketIndex = this.SunSpiritToSocketIndex;
@@ -540,7 +540,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return sunSpiritToSocketIndex.Count;
 		}
 
-		// Token: 0x06047231 RID: 291377 RVA: 0x01210718 File Offset: 0x0120E918
+		// Token: 0x0603CB00 RID: 248576 RVA: 0x0116A1E4 File Offset: 0x011683E4
 		[NullableContext(1)]
 		public unsafe void OnSunSpiritTakeUp(SunSpiritData sunSpiritData, int index)
 		{
@@ -571,7 +571,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.PerformOnSunSpiritChanged(false);
 		}
 
-		// Token: 0x06047232 RID: 291378 RVA: 0x01210844 File Offset: 0x0120EA44
+		// Token: 0x0603CB01 RID: 248577 RVA: 0x0116A310 File Offset: 0x01168510
 		[NullableContext(1)]
 		public unsafe void OnSunSpiritRelease(SunSpiritData sunSpiritData, int index)
 		{
@@ -606,7 +606,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047233 RID: 291379 RVA: 0x01210978 File Offset: 0x0120EB78
+		// Token: 0x0603CB02 RID: 248578 RVA: 0x0116A444 File Offset: 0x01168644
 		private void PerformOnSunSpiritChanged(bool bInit)
 		{
 			CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -626,7 +626,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047234 RID: 291380 RVA: 0x012109EC File Offset: 0x0120EBEC
+		// Token: 0x0603CB03 RID: 248579 RVA: 0x0116A4B8 File Offset: 0x011686B8
 		[NullableContext(1)]
 		private void CalcGearScale(global::Vector resultScale)
 		{
@@ -656,7 +656,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			resultScale.AdditionEqual((double)num);
 		}
 
-		// Token: 0x06047235 RID: 291381 RVA: 0x01210B44 File Offset: 0x0120ED44
+		// Token: 0x0603CB04 RID: 248580 RVA: 0x0116A610 File Offset: 0x01168810
 		private unsafe void PerformGearScaleUp(bool bInit)
 		{
 			ISunSpiritGearPerformConfig performConfig = this.PerformConfig;
@@ -752,7 +752,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047236 RID: 291382 RVA: 0x01210E10 File Offset: 0x0120F010
+		// Token: 0x0603CB05 RID: 248581 RVA: 0x0116A8DC File Offset: 0x01168ADC
 		private void UpdateGearScaleUp(float delta)
 		{
 			CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -786,7 +786,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			aactor.D_SetActorScale3D(this.CurrentScale.ToUeVector(false));
 		}
 
-		// Token: 0x06047237 RID: 291383 RVA: 0x01210F2C File Offset: 0x0120F12C
+		// Token: 0x0603CB06 RID: 248582 RVA: 0x0116A9F8 File Offset: 0x01168BF8
 		[NullableContext(1)]
 		public string GetDebugString()
 		{
@@ -822,7 +822,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return text;
 		}
 
-		// Token: 0x06047238 RID: 291384 RVA: 0x01211080 File Offset: 0x0120F280
+		// Token: 0x0603CB07 RID: 248583 RVA: 0x0116AB4C File Offset: 0x01168D4C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -831,164 +831,177 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemSunSpiritGearComponent sceneItemSunSpiritGearComponent = (SceneItemSunSpiritGearComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (sceneItemSunSpiritGearComponent.CreatureDataComp == null)
 			{
-				if (sceneItemSunSpiritGearComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemSunSpiritGearComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemSunSpiritGearComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ElevatorComp"))
-			{
-				if (sceneItemSunSpiritGearComponent.ElevatorComp == null)
-				{
-					this.ElevatorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GamePlayElevatorComponent>(this.ElevatorComp), "ElevatorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PerformConfig"))
-			{
-				if (sceneItemSunSpiritGearComponent.PerformConfig == null)
-				{
-					this.PerformConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ISunSpiritGearPerformConfig>(this.PerformConfig), "PerformConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SunSpiritToSocketIndex"))
-			{
-				if (sceneItemSunSpiritGearComponent.SunSpiritToSocketIndex == null)
-				{
-					this.SunSpiritToSocketIndex = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, int>>(this.SunSpiritToSocketIndex), "SunSpiritToSocketIndex"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TargetScale") && sceneItemSunSpiritGearComponent.TargetScale != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TargetScale), "TargetScale"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentScale") && sceneItemSunSpiritGearComponent.CurrentScale != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CurrentScale), "CurrentScale"))
+			if (sceneItemSunSpiritGearComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ScalingUpEffectTransformCache") && sceneItemSunSpiritGearComponent.ScalingUpEffectTransformCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.ScalingUpEffectTransformCache), "ScalingUpEffectTransformCache"))
+			if (sceneItemSunSpiritGearComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ScalingUpOldScaleCache") && sceneItemSunSpiritGearComponent.ScalingUpOldScaleCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ScalingUpOldScaleCache), "ScalingUpOldScaleCache"))
+			if (sceneItemSunSpiritGearComponent.ElevatorComp == null)
+			{
+				this.ElevatorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ElevatorComp), "ElevatorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ManualTickTimerHandle"))
+			if (sceneItemSunSpiritGearComponent.PerformConfig == null)
 			{
-				if (sceneItemSunSpiritGearComponent.ManualTickTimerHandle == null)
-				{
-					this.ManualTickTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.ManualTickTimerHandle), "ManualTickTimerHandle"))
-				{
-					return false;
-				}
+				this.PerformConfig = null;
 			}
-			if (base.CanResetComponentProperty("ProxyRouterCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformConfig), "PerformConfig"))
 			{
-				if (sceneItemSunSpiritGearComponent.ProxyRouterCache == null)
-				{
-					this.ProxyRouterCache = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AKuroCrowdAiBoidInstanceSequenceProxyRouter>(this.ProxyRouterCache), "ProxyRouterCache"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastNumOfSunSpiritOccupiedByMe"))
+			if (sceneItemSunSpiritGearComponent.SunSpiritToSocketIndex == null)
 			{
-				this.LastNumOfSunSpiritOccupiedByMe = sceneItemSunSpiritGearComponent.LastNumOfSunSpiritOccupiedByMe;
+				this.SunSpiritToSocketIndex = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SunSpiritToSocketIndex), "SunSpiritToSocketIndex"))
+			{
+				return false;
+			}
+			if (sceneItemSunSpiritGearComponent.TargetScale != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetScale), "TargetScale"))
+			{
+				return false;
+			}
+			if (sceneItemSunSpiritGearComponent.CurrentScale != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentScale), "CurrentScale"))
+			{
+				return false;
+			}
+			if (sceneItemSunSpiritGearComponent.ScalingUpEffectTransformCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ScalingUpEffectTransformCache), "ScalingUpEffectTransformCache"))
+			{
+				return false;
+			}
+			if (sceneItemSunSpiritGearComponent.ScalingUpOldScaleCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ScalingUpOldScaleCache), "ScalingUpOldScaleCache"))
+			{
+				return false;
+			}
+			if (sceneItemSunSpiritGearComponent.ManualTickTimerHandle == null)
+			{
+				this.ManualTickTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ManualTickTimerHandle), "ManualTickTimerHandle"))
+			{
+				return false;
+			}
+			if (sceneItemSunSpiritGearComponent.ProxyRouterCache == null)
+			{
+				this.ProxyRouterCache = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ProxyRouterCache), "ProxyRouterCache"))
+			{
+				return false;
+			}
+			this.LastNumOfSunSpiritOccupiedByMe = sceneItemSunSpiritGearComponent.LastNumOfSunSpiritOccupiedByMe;
 			return true;
 		}
 
-		// Token: 0x0402565D RID: 153181
+		// Token: 0x170072CA RID: 29386
+		// (get) Token: 0x0603CB08 RID: 248584 RVA: 0x0116AD58 File Offset: 0x01168F58
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072CB RID: 29387
+		// (get) Token: 0x0603CB09 RID: 248585 RVA: 0x0116AD5B File Offset: 0x01168F5B
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072CC RID: 29388
+		// (get) Token: 0x0603CB0A RID: 248586 RVA: 0x0116AD5E File Offset: 0x01168F5E
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072CD RID: 29389
+		// (get) Token: 0x0603CB0B RID: 248587 RVA: 0x0116AD61 File Offset: 0x01168F61
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040202C4 RID: 131780
 		private const float MANUAL_TICK_INTERVAL = 25f;
 
-		// Token: 0x0402565E RID: 153182
+		// Token: 0x040202C5 RID: 131781
 		private const float SCALE_SPEED = 0.05f;
 
-		// Token: 0x0402565F RID: 153183
+		// Token: 0x040202C6 RID: 131782
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025660 RID: 153184
+		// Token: 0x040202C7 RID: 131783
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025661 RID: 153185
+		// Token: 0x040202C8 RID: 131784
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04025662 RID: 153186
+		// Token: 0x040202C9 RID: 131785
 		private GamePlayElevatorComponent ElevatorComp;
 
-		// Token: 0x04025663 RID: 153187
+		// Token: 0x040202CA RID: 131786
 		private ISunSpiritGearPerformConfig PerformConfig;
 
-		// Token: 0x04025664 RID: 153188
+		// Token: 0x040202CB RID: 131787
 		private Dictionary<int, int> SunSpiritToSocketIndex;
 
-		// Token: 0x04025665 RID: 153189
+		// Token: 0x040202CC RID: 131788
 		[Nullable(1)]
 		private readonly global::Vector TargetScale = global::Vector.Create(global::Vector.OneVectorProxy);
 
-		// Token: 0x04025666 RID: 153190
+		// Token: 0x040202CD RID: 131789
 		[Nullable(1)]
 		private readonly global::Vector CurrentScale = global::Vector.Create(global::Vector.OneVectorProxy);
 
-		// Token: 0x04025667 RID: 153191
+		// Token: 0x040202CE RID: 131790
 		[Nullable(1)]
 		private readonly global::Transform ScalingUpEffectTransformCache = global::Transform.Create();
 
-		// Token: 0x04025668 RID: 153192
+		// Token: 0x040202CF RID: 131791
 		[Nullable(1)]
 		private readonly global::Vector ScalingUpOldScaleCache = global::Vector.Create();
 
-		// Token: 0x04025669 RID: 153193
+		// Token: 0x040202D0 RID: 131792
 		private TimerHandle ManualTickTimerHandle;
 
-		// Token: 0x0402566A RID: 153194
+		// Token: 0x040202D1 RID: 131793
 		private AKuroCrowdAiBoidInstanceSequenceProxyRouter ProxyRouterCache;
 
-		// Token: 0x0402566B RID: 153195
+		// Token: 0x040202D2 RID: 131794
 		private int LastNumOfSunSpiritOccupiedByMe;
 	}
 }

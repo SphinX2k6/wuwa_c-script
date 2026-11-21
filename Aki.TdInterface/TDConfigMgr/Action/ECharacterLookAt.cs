@@ -2,18 +2,18 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015A8 RID: 5544
+	// Token: 0x02001707 RID: 5895
 	public enum ECharacterLookAt
 	{
-		// Token: 0x040049D0 RID: 18896
+		// Token: 0x04004D82 RID: 19842
 		Empty,
-		// Token: 0x040049D1 RID: 18897
+		// Token: 0x04004D83 RID: 19843
 		Entity,
-		// Token: 0x040049D2 RID: 18898
+		// Token: 0x04004D84 RID: 19844
 		Position,
-		// Token: 0x040049D3 RID: 18899
+		// Token: 0x04004D85 RID: 19845
 		Player,
-		// Token: 0x040049D4 RID: 18900
+		// Token: 0x04004D86 RID: 19846
 		Unlock
 	}
 }

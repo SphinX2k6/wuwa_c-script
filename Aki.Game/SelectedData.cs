@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02001950 RID: 6480
+// Token: 0x02000E0D RID: 3597
 public class SelectedData : ISelectedData
 {
-	// Token: 0x17000FC8 RID: 4040
-	// (get) Token: 0x0600BD33 RID: 48435 RVA: 0x002ACABA File Offset: 0x002AACBA
-	// (set) Token: 0x0600BD34 RID: 48436 RVA: 0x002ACAC2 File Offset: 0x002AACC2
+	// Token: 0x17000FEC RID: 4076
+	// (get) Token: 0x06009136 RID: 37174 RVA: 0x002B78FE File Offset: 0x002B5AFE
+	// (set) Token: 0x06009137 RID: 37175 RVA: 0x002B7906 File Offset: 0x002B5B06
 	public int ItemId { get; set; }
 
-	// Token: 0x17000FC9 RID: 4041
-	// (get) Token: 0x0600BD35 RID: 48437 RVA: 0x002ACACB File Offset: 0x002AACCB
-	// (set) Token: 0x0600BD36 RID: 48438 RVA: 0x002ACAD3 File Offset: 0x002AACD3
+	// Token: 0x17000FED RID: 4077
+	// (get) Token: 0x06009138 RID: 37176 RVA: 0x002B790F File Offset: 0x002B5B0F
+	// (set) Token: 0x06009139 RID: 37177 RVA: 0x002B7917 File Offset: 0x002B5B17
 	public int IncId { get; set; }
 
-	// Token: 0x17000FCA RID: 4042
-	// (get) Token: 0x0600BD37 RID: 48439 RVA: 0x002ACADC File Offset: 0x002AACDC
-	// (set) Token: 0x0600BD38 RID: 48440 RVA: 0x002ACAE4 File Offset: 0x002AACE4
+	// Token: 0x17000FEE RID: 4078
+	// (get) Token: 0x0600913A RID: 37178 RVA: 0x002B7920 File Offset: 0x002B5B20
+	// (set) Token: 0x0600913B RID: 37179 RVA: 0x002B7928 File Offset: 0x002B5B28
 	public int Count { get; set; }
 
-	// Token: 0x17000FCB RID: 4043
-	// (get) Token: 0x0600BD39 RID: 48441 RVA: 0x002ACAED File Offset: 0x002AACED
-	// (set) Token: 0x0600BD3A RID: 48442 RVA: 0x002ACAF5 File Offset: 0x002AACF5
+	// Token: 0x17000FEF RID: 4079
+	// (get) Token: 0x0600913C RID: 37180 RVA: 0x002B7931 File Offset: 0x002B5B31
+	// (set) Token: 0x0600913D RID: 37181 RVA: 0x002B7939 File Offset: 0x002B5B39
 	public int SelectedCount { get; set; }
 
-	// Token: 0x17000FCC RID: 4044
-	// (get) Token: 0x0600BD3B RID: 48443 RVA: 0x002ACAFE File Offset: 0x002AACFE
-	// (set) Token: 0x0600BD3C RID: 48444 RVA: 0x002ACB06 File Offset: 0x002AAD06
+	// Token: 0x17000FF0 RID: 4080
+	// (get) Token: 0x0600913E RID: 37182 RVA: 0x002B7942 File Offset: 0x002B5B42
+	// (set) Token: 0x0600913F RID: 37183 RVA: 0x002B794A File Offset: 0x002B5B4A
 	public bool? OnlyTextFlag { get; set; }
 }

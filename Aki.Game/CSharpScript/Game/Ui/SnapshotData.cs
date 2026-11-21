@@ -4,32 +4,32 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200463A RID: 17978
+	// Token: 0x0200356B RID: 13675
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SnapshotData
 	{
-		// Token: 0x04018D9C RID: 101788
+		// Token: 0x040133F5 RID: 78837
 		public int? InTimeFlowViewId;
 
-		// Token: 0x04018D9D RID: 101789
+		// Token: 0x040133F6 RID: 78838
 		[Nullable(2)]
 		public UiViewInfoForTimeDilation CacheTimeDilationData;
 
-		// Token: 0x04018D9E RID: 101790
+		// Token: 0x040133F7 RID: 78839
 		[Nullable(2)]
 		public UiViewInfoForTimeDilation TimeDilationData;
 
-		// Token: 0x04018D9F RID: 101791
+		// Token: 0x040133F8 RID: 78840
 		public HashSet<string> CacheTimeDilationTagSet = new HashSet<string>();
 
-		// Token: 0x04018DA0 RID: 101792
+		// Token: 0x040133F9 RID: 78841
 		public HashSet<string> WaitSetTimeDilationTagSet = new HashSet<string>();
 
-		// Token: 0x04018DA1 RID: 101793
+		// Token: 0x040133FA RID: 78842
 		public List<int> ViewIdList = new List<int>();
 
-		// Token: 0x04018DA2 RID: 101794
+		// Token: 0x040133FB RID: 78843
 		public Dictionary<int, UiViewInfoForTimeDilation> TimeDilationMap = new Dictionary<int, UiViewInfoForTimeDilation>();
 	}
 }

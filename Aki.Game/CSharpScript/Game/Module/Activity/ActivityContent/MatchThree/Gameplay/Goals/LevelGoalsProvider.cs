@@ -5,10 +5,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Goals
 {
-	// Token: 0x02006525 RID: 25893
+	// Token: 0x020054A3 RID: 21667
 	public static class LevelGoalsProvider
 	{
-		// Token: 0x06040EE3 RID: 265955 RVA: 0x00FBBD70 File Offset: 0x00FB9F70
+		// Token: 0x06035BA7 RID: 220071 RVA: 0x00F02DA0 File Offset: 0x00F00FA0
 		[NullableContext(1)]
 		public unsafe static IReadOnlyList<LevelGoal> GetLevelGoals(int level)
 		{

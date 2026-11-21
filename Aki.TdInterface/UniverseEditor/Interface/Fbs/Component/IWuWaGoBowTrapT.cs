@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B9C RID: 23452
+	// Token: 0x020061B2 RID: 25010
 	public class IWuWaGoBowTrapT
 	{
-		// Token: 0x1700B13A RID: 45370
-		// (get) Token: 0x0602826D RID: 164461 RVA: 0x005849BA File Offset: 0x00582BBA
-		// (set) Token: 0x0602826E RID: 164462 RVA: 0x005849C2 File Offset: 0x00582BC2
+		// Token: 0x1700BA82 RID: 47746
+		// (get) Token: 0x0602A831 RID: 174129 RVA: 0x005CC44A File Offset: 0x005CA64A
+		// (set) Token: 0x0602A832 RID: 174130 RVA: 0x005CC452 File Offset: 0x005CA652
 		public EWuWaGoEntityType Type { get; set; }
 
-		// Token: 0x0602826F RID: 164463 RVA: 0x005849CB File Offset: 0x00582BCB
+		// Token: 0x0602A833 RID: 174131 RVA: 0x005CC45B File Offset: 0x005CA65B
 		public IWuWaGoBowTrapT()
 		{
 			this.Type = EWuWaGoEntityType.LevelCenter;

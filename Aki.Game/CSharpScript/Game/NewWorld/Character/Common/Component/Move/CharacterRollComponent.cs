@@ -5,14 +5,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070FB RID: 28923
+	// Token: 0x020063AB RID: 25515
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class CharacterRollComponent : EntityComponent, IComponentDependency
+	public class CharacterRollComponent : EntityComponent
 	{
-		// Token: 0x17009D08 RID: 40200
-		// (get) Token: 0x060469DB RID: 289243 RVA: 0x011C42BC File Offset: 0x011C24BC
-		public static Type[] Dependencies
+		// Token: 0x17007591 RID: 30097
+		// (get) Token: 0x0603DDD4 RID: 253396 RVA: 0x011F3470 File Offset: 0x011F1670
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -23,19 +23,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469DC RID: 289244 RVA: 0x011C42D4 File Offset: 0x011C24D4
+		// Token: 0x0603DDD5 RID: 253397 RVA: 0x011F3488 File Offset: 0x011F1688
 		private void OnMoveRoll(float deltaSeconds)
 		{
 			UKuroMovementBPLibrary.KuroRoll(deltaSeconds, this.MoveComp.CharacterMovement, this.TargetSpeed, this.Friction, this.AccelOnGround, ref this.RefFloorNormal, this.Gravity, this.StepUpHeight, this.MaxSpeed);
 		}
 
-		// Token: 0x060469DD RID: 289245 RVA: 0x011C431D File Offset: 0x011C251D
+		// Token: 0x0603DDD6 RID: 253398 RVA: 0x011F34D1 File Offset: 0x011F16D1
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x060469DE RID: 289246 RVA: 0x011C4320 File Offset: 0x011C2520
+		// Token: 0x0603DDD7 RID: 253399 RVA: 0x011F34D4 File Offset: 0x011F16D4
 		protected override bool OnStart()
 		{
 			this.MoveComp = base.Entity.GetComponent<CharacterMoveComponent>();
@@ -43,14 +43,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060469DF RID: 289247 RVA: 0x011C4353 File Offset: 0x011C2553
+		// Token: 0x0603DDD8 RID: 253400 RVA: 0x011F350A File Offset: 0x011F170A
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget<float>(base.Entity, EEventName.CustomMoveRoll, new Action<float>(this.OnMoveRoll));
 			return true;
 		}
 
-		// Token: 0x060469E0 RID: 289248 RVA: 0x011C4378 File Offset: 0x011C2578
+		// Token: 0x0603DDD9 RID: 253401 RVA: 0x011F3530 File Offset: 0x011F1730
 		public void EnterRoll(float targetSpeed, float friction, float accelOnGround, float gravity, float stepUpHeight, float maxSpeed)
 		{
 			this.TargetSpeed = targetSpeed;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			});
 		}
 
-		// Token: 0x060469E1 RID: 289249 RVA: 0x011C43F0 File Offset: 0x011C25F0
+		// Token: 0x0603DDDA RID: 253402 RVA: 0x011F35A8 File Offset: 0x011F17A8
 		public void LeaveRoll()
 		{
 			CharacterMoveComponent moveComp = this.MoveComp;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			});
 		}
 
-		// Token: 0x060469E2 RID: 289250 RVA: 0x011C4428 File Offset: 0x011C2628
+		// Token: 0x0603DDDB RID: 253403 RVA: 0x011F35E0 File Offset: 0x011F17E0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -105,71 +105,77 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 				return false;
 			}
 			CharacterRollComponent characterRollComponent = (CharacterRollComponent)componentTemplate;
-			if (base.CanResetComponentProperty("MoveComp"))
+			if (characterRollComponent.MoveComp == null)
 			{
-				if (characterRollComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("RefFloorNormal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				this.RefFloorNormal = characterRollComponent.RefFloorNormal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetSpeed"))
-			{
-				this.TargetSpeed = characterRollComponent.TargetSpeed;
-			}
-			if (base.CanResetComponentProperty("Friction"))
-			{
-				this.Friction = characterRollComponent.Friction;
-			}
-			if (base.CanResetComponentProperty("AccelOnGround"))
-			{
-				this.AccelOnGround = characterRollComponent.AccelOnGround;
-			}
-			if (base.CanResetComponentProperty("Gravity"))
-			{
-				this.Gravity = characterRollComponent.Gravity;
-			}
-			if (base.CanResetComponentProperty("StepUpHeight"))
-			{
-				this.StepUpHeight = characterRollComponent.StepUpHeight;
-			}
-			if (base.CanResetComponentProperty("MaxSpeed"))
-			{
-				this.MaxSpeed = characterRollComponent.MaxSpeed;
-			}
+			this.RefFloorNormal = characterRollComponent.RefFloorNormal;
+			this.TargetSpeed = characterRollComponent.TargetSpeed;
+			this.Friction = characterRollComponent.Friction;
+			this.AccelOnGround = characterRollComponent.AccelOnGround;
+			this.Gravity = characterRollComponent.Gravity;
+			this.StepUpHeight = characterRollComponent.StepUpHeight;
+			this.MaxSpeed = characterRollComponent.MaxSpeed;
 			return true;
 		}
 
-		// Token: 0x040250D8 RID: 151768
+		// Token: 0x17007592 RID: 30098
+		// (get) Token: 0x0603DDDC RID: 253404 RVA: 0x011F367F File Offset: 0x011F187F
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007593 RID: 30099
+		// (get) Token: 0x0603DDDD RID: 253405 RVA: 0x011F3682 File Offset: 0x011F1882
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007594 RID: 30100
+		// (get) Token: 0x0603DDDE RID: 253406 RVA: 0x011F3685 File Offset: 0x011F1885
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020D6D RID: 134509
 		[Nullable(2)]
 		private CharacterMoveComponent MoveComp;
 
-		// Token: 0x040250D9 RID: 151769
+		// Token: 0x04020D6E RID: 134510
 		private FVector RefFloorNormal = new FVector();
 
-		// Token: 0x040250DA RID: 151770
+		// Token: 0x04020D6F RID: 134511
 		private float TargetSpeed = 1200f;
 
-		// Token: 0x040250DB RID: 151771
+		// Token: 0x04020D70 RID: 134512
 		private float Friction = 0.1f;
 
-		// Token: 0x040250DC RID: 151772
+		// Token: 0x04020D71 RID: 134513
 		private float AccelOnGround = 1000f;
 
-		// Token: 0x040250DD RID: 151773
+		// Token: 0x04020D72 RID: 134514
 		private float Gravity = 1960f;
 
-		// Token: 0x040250DE RID: 151774
+		// Token: 0x04020D73 RID: 134515
 		private float StepUpHeight = 100f;
 
-		// Token: 0x040250DF RID: 151775
+		// Token: 0x04020D74 RID: 134516
 		private float MaxSpeed = 4000f;
 	}
 }

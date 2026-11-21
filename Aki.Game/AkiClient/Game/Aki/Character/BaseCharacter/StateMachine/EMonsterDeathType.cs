@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x02004398 RID: 17304
+	// Token: 0x020033B8 RID: 13240
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/EMonsterDeathType.EMonsterDeathType")]
 	public enum EMonsterDeathType : byte
 	{
-		// Token: 0x04017A5A RID: 96858
+		// Token: 0x040125D5 RID: 75221
 		地面死亡,
-		// Token: 0x04017A5B RID: 96859
+		// Token: 0x040125D6 RID: 75222
 		水中死亡,
-		// Token: 0x04017A5C RID: 96860
+		// Token: 0x040125D7 RID: 75223
 		空中死亡,
-		// Token: 0x04017A5D RID: 96861
+		// Token: 0x040125D8 RID: 75224
 		EMonsterDeathType_MAX
 	}
 }

@@ -15,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.StaticScene
 {
-	// Token: 0x02006A0F RID: 27151
+	// Token: 0x02005B6C RID: 23404
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SimpleLevelSequenceActor
 	{
-		// Token: 0x060438A1 RID: 276641 RVA: 0x01084468 File Offset: 0x01082668
+		// Token: 0x060398ED RID: 235757 RVA: 0x01028A8C File Offset: 0x01026C8C
 		[NullableContext(1)]
 		public SimpleLevelSequenceActor(ULevelSequence levelSequence)
 		{
@@ -42,55 +42,55 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.GenerateDirector();
 		}
 
-		// Token: 0x060438A2 RID: 276642 RVA: 0x010845EB File Offset: 0x010827EB
+		// Token: 0x060398EE RID: 235758 RVA: 0x01028C0F File Offset: 0x01026E0F
 		public void AddOnPauseCallback(Action callback)
 		{
 			this.OnPauseCallback = callback;
 		}
 
-		// Token: 0x060438A3 RID: 276643 RVA: 0x010845F4 File Offset: 0x010827F4
+		// Token: 0x060398EF RID: 235759 RVA: 0x01028C18 File Offset: 0x01026E18
 		public void ClearOnPausedCallback()
 		{
 			this.OnPauseCallback = null;
 		}
 
-		// Token: 0x060438A4 RID: 276644 RVA: 0x010845FD File Offset: 0x010827FD
+		// Token: 0x060398F0 RID: 235760 RVA: 0x01028C21 File Offset: 0x01026E21
 		public void AddOnStopCallback(Action<bool> callback)
 		{
 			this.OnStopCallback = callback;
 		}
 
-		// Token: 0x060438A5 RID: 276645 RVA: 0x01084606 File Offset: 0x01082806
+		// Token: 0x060398F1 RID: 235761 RVA: 0x01028C2A File Offset: 0x01026E2A
 		public void ClearOnStopCallback()
 		{
 			this.OnStopCallback = null;
 		}
 
-		// Token: 0x060438A6 RID: 276646 RVA: 0x0108460F File Offset: 0x0108280F
+		// Token: 0x060398F2 RID: 235762 RVA: 0x01028C33 File Offset: 0x01026E33
 		public void AddOnFinishedCallback(Action callback)
 		{
 			this.OnFinishedCallback = callback;
 		}
 
-		// Token: 0x060438A7 RID: 276647 RVA: 0x01084618 File Offset: 0x01082818
+		// Token: 0x060398F3 RID: 235763 RVA: 0x01028C3C File Offset: 0x01026E3C
 		public void ClearOnFinishedCallback()
 		{
 			this.OnFinishedCallback = null;
 		}
 
-		// Token: 0x060438A8 RID: 276648 RVA: 0x01084621 File Offset: 0x01082821
+		// Token: 0x060398F4 RID: 235764 RVA: 0x01028C45 File Offset: 0x01026E45
 		public void UpdateSettings(bool? inSettings)
 		{
 			this.IsKeepUi = inSettings.GetValueOrDefault();
 		}
 
-		// Token: 0x060438A9 RID: 276649 RVA: 0x01084630 File Offset: 0x01082830
+		// Token: 0x060398F5 RID: 235765 RVA: 0x01028C54 File Offset: 0x01026E54
 		public void SetCanPlayInLoading(bool canPlay)
 		{
 			this.CanPlayInLoading = canPlay;
 		}
 
-		// Token: 0x060438AA RID: 276650 RVA: 0x01084639 File Offset: 0x01082839
+		// Token: 0x060398F6 RID: 235766 RVA: 0x01028C5D File Offset: 0x01026E5D
 		public UMovieSceneSequencePlayer GetPlayer()
 		{
 			ALevelSequenceActor director = this.Director;
@@ -101,20 +101,20 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return director.SequencePlayer;
 		}
 
-		// Token: 0x060438AB RID: 276651 RVA: 0x0108464C File Offset: 0x0108284C
+		// Token: 0x060398F7 RID: 235767 RVA: 0x01028C70 File Offset: 0x01026E70
 		public ALevelSequenceActor GetSequenceActor()
 		{
 			return this.Director;
 		}
 
-		// Token: 0x060438AC RID: 276652 RVA: 0x01084654 File Offset: 0x01082854
+		// Token: 0x060398F8 RID: 235768 RVA: 0x01028C78 File Offset: 0x01026E78
 		public bool IsDirectorValid()
 		{
 			ALevelSequenceActor director = this.Director;
 			return director != null && director.IsValid();
 		}
 
-		// Token: 0x060438AD RID: 276653 RVA: 0x01084667 File Offset: 0x01082867
+		// Token: 0x060398F9 RID: 235769 RVA: 0x01028C8B File Offset: 0x01026E8B
 		public void SetTransformOriginActor(AActor actor)
 		{
 			if (this.Director == null)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438AE RID: 276654 RVA: 0x01084692 File Offset: 0x01082892
+		// Token: 0x060398FA RID: 235770 RVA: 0x01028CB6 File Offset: 0x01026EB6
 		public bool IsPlaying()
 		{
 			if (this.IsPause)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return player != null && player.IsPlaying();
 		}
 
-		// Token: 0x060438AF RID: 276655 RVA: 0x010846BC File Offset: 0x010828BC
+		// Token: 0x060398FB RID: 235771 RVA: 0x01028CE0 File Offset: 0x01026EE0
 		public bool ForceSwitchSceneCamera(bool isEnter)
 		{
 			ALevelSequenceActor director = this.Director;
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return true;
 		}
 
-		// Token: 0x060438B0 RID: 276656 RVA: 0x0108476C File Offset: 0x0108296C
+		// Token: 0x060398FC RID: 235772 RVA: 0x01028D90 File Offset: 0x01026F90
 		public void SetOriginTransform()
 		{
 			if (this.Director == null)
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438B1 RID: 276657 RVA: 0x01084810 File Offset: 0x01082A10
+		// Token: 0x060398FD RID: 235773 RVA: 0x01028E34 File Offset: 0x01027034
 		[NullableContext(1)]
 		public void PlaySequence(DefaultLevelSequencePlayParam playParam)
 		{
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.CheckIsLoadingClosed();
 		}
 
-		// Token: 0x060438B2 RID: 276658 RVA: 0x010848F0 File Offset: 0x01082AF0
+		// Token: 0x060398FE RID: 235774 RVA: 0x01028F14 File Offset: 0x01027114
 		[NullableContext(1)]
 		public void PlayToMarkOld(string mark, float inTime, float outTime, bool jumpToEnd)
 		{
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.CheckIsLoadingClosed();
 		}
 
-		// Token: 0x060438B3 RID: 276659 RVA: 0x01084928 File Offset: 0x01082B28
+		// Token: 0x060398FF RID: 235775 RVA: 0x01028F4C File Offset: 0x0102714C
 		[NullableContext(1)]
 		public void PlayToMark(string mark, [Nullable(2)] RefCompDefine.TransitStruct tempInTransit, [Nullable(2)] RefCompDefine.TransitStruct tempOutTransit, RefCompDefine.PlayRateStruct playRateTransition, bool jumpToEnd)
 		{
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.CheckIsLoadingClosed();
 		}
 
-		// Token: 0x060438B4 RID: 276660 RVA: 0x01084AD0 File Offset: 0x01082CD0
+		// Token: 0x06039900 RID: 235776 RVA: 0x010290F4 File Offset: 0x010272F4
 		[NullableContext(1)]
 		public void PlayLoopBetweenMarks(ILoopRange loopRange, bool bReverse, [Nullable(2)] RefCompDefine.TransitStruct tempInTransit, [Nullable(2)] RefCompDefine.TransitStruct tempOutTransit, RefCompDefine.PlayRateStruct playRateTransition, bool jumpToEnd)
 		{
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.CheckIsLoadingClosed();
 		}
 
-		// Token: 0x060438B5 RID: 276661 RVA: 0x01084C9C File Offset: 0x01082E9C
+		// Token: 0x06039901 RID: 235777 RVA: 0x010292C0 File Offset: 0x010274C0
 		public void PlayLoop(bool bReverse, int numLoops, RefCompDefine.TransitStruct tempInTransit, RefCompDefine.TransitStruct tempOutTransit, [Nullable(1)] RefCompDefine.PlayRateStruct playRateTransition)
 		{
 			this.Mark = "";
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.CheckIsLoadingClosed();
 		}
 
-		// Token: 0x060438B6 RID: 276662 RVA: 0x01084E4C File Offset: 0x0108304C
+		// Token: 0x06039902 RID: 235778 RVA: 0x01029470 File Offset: 0x01027670
 		private void CheckIsLoadingClosed()
 		{
 			if (!this.CanPlayInLoading && !GameModeModel.Instance.WorldDoneAndLoadingClosed)
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438B7 RID: 276663 RVA: 0x01084EB0 File Offset: 0x010830B0
+		// Token: 0x06039903 RID: 235779 RVA: 0x010294D4 File Offset: 0x010276D4
 		private void DoPlay()
 		{
 			SequenceCameraPlayerComponent component = CameraController.Instance.MainModel.SequenceCamera.GetComponent<SequenceCameraPlayerComponent>();
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438B8 RID: 276664 RVA: 0x01085098 File Offset: 0x01083298
+		// Token: 0x06039904 RID: 235780 RVA: 0x010296BC File Offset: 0x010278BC
 		public void PlayLevelSequence()
 		{
 			switch (this.ItsWay)
@@ -551,7 +551,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438B9 RID: 276665 RVA: 0x01085100 File Offset: 0x01083300
+		// Token: 0x06039905 RID: 235781 RVA: 0x01029724 File Offset: 0x01027924
 		private void PlayDefaultLevelSequence()
 		{
 			ALevelSequenceActor director = this.Director;
@@ -597,7 +597,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438BA RID: 276666 RVA: 0x0108527C File Offset: 0x0108347C
+		// Token: 0x06039906 RID: 235782 RVA: 0x010298A0 File Offset: 0x01027AA0
 		[NullableContext(1)]
 		private unsafe void PlayLevelsequenceToMark(string mark, bool jumpToEnd)
 		{
@@ -620,7 +620,12 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			if (jumpToEnd)
 			{
 				sequencePlayer.Play();
-				sequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams(new FFrameTime(), 0f, mark, EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Jump));
+				sequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams
+				{
+					MarkedFrame = mark,
+					PositionType = EMovieScenePositionType.MarkedFrame,
+					UpdateMethod = EUpdatePositionMethod.Jump
+				});
 				RefCompDefine.PlayRateStruct playRateTransition = this.PlayRateTransition;
 				this.CurPlayRate = ((playRateTransition != null) ? playRateTransition.PlayRateAbs : null).GetValueOrDefault(1f);
 				ULevelSequencePlayer sequencePlayer2 = this.Director.SequencePlayer;
@@ -637,7 +642,12 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 				{
 					if (itsWay == EWayType.GotoEndAndTransport)
 					{
-						sequencePlayer.PlayTo_Circle(new FMovieSceneSequencePlaybackParams(new FFrameTime(), 0f, mark, EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play), true, true);
+						sequencePlayer.PlayTo_Circle(new FMovieSceneSequencePlaybackParams
+						{
+							MarkedFrame = mark,
+							PositionType = EMovieScenePositionType.MarkedFrame,
+							UpdateMethod = EUpdatePositionMethod.Play
+						}, true, true);
 						RefCompDefine.PlayRateStruct playRateTransition2 = this.PlayRateTransition;
 						this.CurPlayRate = ((playRateTransition2 != null) ? playRateTransition2.PlayRateAbs : null).GetValueOrDefault(1f);
 						RefCompDefine.PlayRateStruct playRateTransition3 = this.PlayRateTransition;
@@ -659,7 +669,12 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 				}
 				else
 				{
-					sequencePlayer.PlayTo(new FMovieSceneSequencePlaybackParams(new FFrameTime(), 0f, mark, EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play));
+					sequencePlayer.PlayTo(new FMovieSceneSequencePlaybackParams
+					{
+						MarkedFrame = mark,
+						PositionType = EMovieScenePositionType.MarkedFrame,
+						UpdateMethod = EUpdatePositionMethod.Play
+					});
 					RefCompDefine.PlayRateStruct playRateTransition4 = this.PlayRateTransition;
 					this.CurPlayRate = ((playRateTransition4 != null) ? playRateTransition4.PlayRateAbs : null).GetValueOrDefault(1f);
 					RefCompDefine.PlayRateStruct playRateTransition5 = this.PlayRateTransition;
@@ -689,7 +704,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060438BB RID: 276667 RVA: 0x010855CC File Offset: 0x010837CC
+		// Token: 0x06039907 RID: 235783 RVA: 0x01029C0C File Offset: 0x01027E0C
 		private unsafe void PlayLevelsequenceLooping(bool bReverse, int numLoops)
 		{
 			ALevelSequenceActor director = this.Director;
@@ -747,7 +762,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x060438BC RID: 276668 RVA: 0x010857B0 File Offset: 0x010839B0
+		// Token: 0x06039908 RID: 235784 RVA: 0x01029DF0 File Offset: 0x01027FF0
 		private void PlayLevelsequenceLoopingBetweenMark(bool jumpToEnd)
 		{
 			ALevelSequenceActor director = this.Director;
@@ -826,15 +841,30 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			bool flag3 = flag2;
 			if (!this.JumpToEnd && !flag3)
 			{
-				player.PlayTo_Loop(new FMovieSceneSequencePlaybackParams(new FFrameTime(), 0f, this.Mark, EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play), this.LoopStartMark);
+				player.PlayTo_Loop(new FMovieSceneSequencePlaybackParams
+				{
+					MarkedFrame = this.Mark,
+					PositionType = EMovieScenePositionType.MarkedFrame,
+					UpdateMethod = EUpdatePositionMethod.Play
+				}, this.LoopStartMark);
 				return;
 			}
 			this.AddOnPauseCallback(delegate
 			{
 				this.ClearOnPausedCallback();
-				player.PlayTo_Loop(new FMovieSceneSequencePlaybackParams(new FFrameTime(), 0f, this.Mark, EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play), this.LoopStartMark);
+				player.PlayTo_Loop(new FMovieSceneSequencePlaybackParams
+				{
+					MarkedFrame = this.Mark,
+					PositionType = EMovieScenePositionType.MarkedFrame,
+					UpdateMethod = EUpdatePositionMethod.Play
+				}, this.LoopStartMark);
 			});
-			FMovieSceneSequencePlaybackParams fmovieSceneSequencePlaybackParams = new FMovieSceneSequencePlaybackParams(new FFrameTime(), 0f, this.LoopStartMark, EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Jump);
+			FMovieSceneSequencePlaybackParams fmovieSceneSequencePlaybackParams = new FMovieSceneSequencePlaybackParams
+			{
+				MarkedFrame = this.LoopStartMark,
+				PositionType = EMovieScenePositionType.MarkedFrame,
+				UpdateMethod = EUpdatePositionMethod.Jump
+			};
 			if (this.JumpToEnd)
 			{
 				player.Play();
@@ -845,7 +875,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			player.PlayTo(fmovieSceneSequencePlaybackParams);
 		}
 
-		// Token: 0x060438BD RID: 276669 RVA: 0x01085A94 File Offset: 0x01083C94
+		// Token: 0x06039909 RID: 235785 RVA: 0x0102A0E4 File Offset: 0x010282E4
 		private void GenerateDirector()
 		{
 			FMovieSceneSequencePlaybackSettings fmovieSceneSequencePlaybackSettings = new FMovieSceneSequencePlaybackSettings();
@@ -865,7 +895,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			sequencePlayer.OnFinished.Add(new Action(this.OnSequenceFinish));
 		}
 
-		// Token: 0x060438BE RID: 276670 RVA: 0x01085B6C File Offset: 0x01083D6C
+		// Token: 0x0603990A RID: 235786 RVA: 0x0102A1BC File Offset: 0x010283BC
 		private void GenerateSphereTrace()
 		{
 			UTraceSphereElement cameraSphereTrace = this.CameraSphereTrace;
@@ -882,7 +912,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.CameraSphereTrace.SetTraceTypeQuery(KuroTraceTypeQuery.Camera);
 		}
 
-		// Token: 0x060438BF RID: 276671 RVA: 0x01085BF0 File Offset: 0x01083DF0
+		// Token: 0x0603990B RID: 235787 RVA: 0x0102A240 File Offset: 0x01028440
 		private void OnSequenceStop()
 		{
 			global::Log instance = global::Log.Instance;
@@ -912,7 +942,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.OnPlayEnd();
 		}
 
-		// Token: 0x060438C0 RID: 276672 RVA: 0x01085CB0 File Offset: 0x01083EB0
+		// Token: 0x0603990C RID: 235788 RVA: 0x0102A300 File Offset: 0x01028500
 		private void OnSequencePause()
 		{
 			global::Log instance = global::Log.Instance;
@@ -941,7 +971,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.OnPlayEnd();
 		}
 
-		// Token: 0x060438C1 RID: 276673 RVA: 0x01085D5C File Offset: 0x01083F5C
+		// Token: 0x0603990D RID: 235789 RVA: 0x0102A3AC File Offset: 0x010285AC
 		private void OnSequenceFinish()
 		{
 			Action onFinishedCallback = this.OnFinishedCallback;
@@ -964,7 +994,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.OnPlayEnd();
 		}
 
-		// Token: 0x060438C2 RID: 276674 RVA: 0x01085DD1 File Offset: 0x01083FD1
+		// Token: 0x0603990E RID: 235790 RVA: 0x0102A421 File Offset: 0x01028621
 		private void OnPlayEnd()
 		{
 			Global.CharacterCameraManager.FadeAmount = 0f;
@@ -982,7 +1012,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438C3 RID: 276675 RVA: 0x01085E10 File Offset: 0x01084010
+		// Token: 0x0603990F RID: 235791 RVA: 0x0102A460 File Offset: 0x01028660
 		[NullableContext(1)]
 		private unsafe bool CheckMarkValid(string mark)
 		{
@@ -1014,7 +1044,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return true;
 		}
 
-		// Token: 0x060438C4 RID: 276676 RVA: 0x01085EC4 File Offset: 0x010840C4
+		// Token: 0x06039910 RID: 235792 RVA: 0x0102A514 File Offset: 0x01028714
 		private void EnterSceneCamera(Action enterCameraCb = null)
 		{
 			ALevelSequenceActor director = this.Director;
@@ -1153,7 +1183,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438C5 RID: 276677 RVA: 0x010861C0 File Offset: 0x010843C0
+		// Token: 0x06039911 RID: 235793 RVA: 0x0102A810 File Offset: 0x01028A10
 		private void ExitSceneCamera()
 		{
 			this.Director.ResetBindings();
@@ -1191,7 +1221,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438C6 RID: 276678 RVA: 0x010862E0 File Offset: 0x010844E0
+		// Token: 0x06039912 RID: 235794 RVA: 0x0102A930 File Offset: 0x01028B30
 		private void OnExit()
 		{
 			this.SceneCamera = null;
@@ -1219,7 +1249,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			CameraController.Instance.MainModel.SceneCamera.DisplayComponent.SetUiActive(true);
 		}
 
-		// Token: 0x060438C7 RID: 276679 RVA: 0x010863BC File Offset: 0x010845BC
+		// Token: 0x06039913 RID: 235795 RVA: 0x0102AA0C File Offset: 0x01028C0C
 		private void GenerateBlackScreen(ETransitionMask? mask, float durationTime, float fadeInTime, float fadeOutTime, Action camCb = null, Action seqCb = null)
 		{
 			CameraController.Instance.MainModel.FightCamera.LogicComponent.CameraInputController.Lock(this);
@@ -1271,7 +1301,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			instance.OpenLoading<ELoadingPerform>(reason, perform, context, callback, array);
 		}
 
-		// Token: 0x060438C8 RID: 276680 RVA: 0x01086464 File Offset: 0x01084664
+		// Token: 0x06039914 RID: 235796 RVA: 0x0102AAB4 File Offset: 0x01028CB4
 		[NullableContext(1)]
 		public void SetSequenceData(ULevelSequence inSeq)
 		{
@@ -1283,7 +1313,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.Director.SetSequence(inSeq);
 		}
 
-		// Token: 0x060438C9 RID: 276681 RVA: 0x01086484 File Offset: 0x01084684
+		// Token: 0x06039915 RID: 235797 RVA: 0x0102AAD4 File Offset: 0x01028CD4
 		public void Clear()
 		{
 			if (EventSystem.Instance.Has(EEventName.WorldDoneAndCloseLoading, new Action(this.DoPlay)))
@@ -1340,7 +1370,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.ClearOnPausedCallback();
 		}
 
-		// Token: 0x060438CA RID: 276682 RVA: 0x0108664C File Offset: 0x0108484C
+		// Token: 0x06039916 RID: 235798 RVA: 0x0102AC9C File Offset: 0x01028E9C
 		[NullableContext(1)]
 		public void PlayToMarkByCheckWay(string mark, [Nullable(2)] RefCompDefine.TransitStruct tempInTransit, [Nullable(2)] RefCompDefine.TransitStruct tempOutTransit, RefCompDefine.PlayRateStruct playRateTransition, bool jumpToEnd)
 		{
@@ -1401,7 +1431,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.CheckIsLoadingClosed();
 		}
 
-		// Token: 0x060438CB RID: 276683 RVA: 0x010867F0 File Offset: 0x010849F0
+		// Token: 0x06039917 RID: 235799 RVA: 0x0102AE40 File Offset: 0x01029040
 		[NullableContext(1)]
 		public double? GetMarkValue(string mark)
 		{
@@ -1416,7 +1446,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return null;
 		}
 
-		// Token: 0x060438CC RID: 276684 RVA: 0x01086864 File Offset: 0x01084A64
+		// Token: 0x06039918 RID: 235800 RVA: 0x0102AEB4 File Offset: 0x010290B4
 		public void CheckLatestWay()
 		{
 			if (this.LevelSequence.GetMovieScene() == null)
@@ -1436,14 +1466,14 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.ItsWay = EWayType.Normal;
 		}
 
-		// Token: 0x060438CD RID: 276685 RVA: 0x01086914 File Offset: 0x01084B14
+		// Token: 0x06039919 RID: 235801 RVA: 0x0102AF64 File Offset: 0x01029164
 		private double ChangeToFrame(long num)
 		{
 			UMovieScene movieScene = this.LevelSequence.GetMovieScene();
 			return (double)(num * (long)movieScene.DisplayRate.Numerator / (long)movieScene.TickResolution.Numerator);
 		}
 
-		// Token: 0x060438CE RID: 276686 RVA: 0x01086949 File Offset: 0x01084B49
+		// Token: 0x0603991A RID: 235802 RVA: 0x0102AF99 File Offset: 0x01029199
 		public void SetTimeDilation(float customTimeDilation)
 		{
 			if (this.CustomTimeDilation != customTimeDilation)
@@ -1453,7 +1483,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438CF RID: 276687 RVA: 0x01086964 File Offset: 0x01084B64
+		// Token: 0x0603991B RID: 235803 RVA: 0x0102AFB4 File Offset: 0x010291B4
 		private void UpdateTimeDilation()
 		{
 			if (this.LastPlayRateEaseHandleId != 0)
@@ -1464,7 +1494,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.Director.SequencePlayer.SetPlayRate(this.CustomTimeDilation * this.CurPlayRate);
 		}
 
-		// Token: 0x060438D0 RID: 276688 RVA: 0x010869B0 File Offset: 0x01084BB0
+		// Token: 0x0603991C RID: 235804 RVA: 0x0102B000 File Offset: 0x01029200
 		public int GetCurrentFrame()
 		{
 			if (this.Director == null)
@@ -1474,13 +1504,13 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return this.Director.SequencePlayer.GetCurrentTime().Time.FrameNumber.Value;
 		}
 
-		// Token: 0x060438D1 RID: 276689 RVA: 0x010869DB File Offset: 0x01084BDB
+		// Token: 0x0603991D RID: 235805 RVA: 0x0102B02B File Offset: 0x0102922B
 		public bool IsReversePlay()
 		{
 			return this.ReversedLoop;
 		}
 
-		// Token: 0x060438D2 RID: 276690 RVA: 0x010869E3 File Offset: 0x01084BE3
+		// Token: 0x0603991E RID: 235806 RVA: 0x0102B033 File Offset: 0x01029233
 		public void StopSequence()
 		{
 			if (this.Director == null)
@@ -1490,7 +1520,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.Director.SequencePlayer.Stop();
 		}
 
-		// Token: 0x060438D3 RID: 276691 RVA: 0x010869FE File Offset: 0x01084BFE
+		// Token: 0x0603991F RID: 235807 RVA: 0x0102B04E File Offset: 0x0102924E
 		public void Pause()
 		{
 			if (this.Director == null)
@@ -1505,7 +1535,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.Director.SequencePlayer.Pause();
 		}
 
-		// Token: 0x060438D4 RID: 276692 RVA: 0x01086A29 File Offset: 0x01084C29
+		// Token: 0x06039920 RID: 235808 RVA: 0x0102B079 File Offset: 0x01029279
 		public void Resume()
 		{
 			if (this.Director == null)
@@ -1520,7 +1550,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.Director.SequencePlayer.Play();
 		}
 
-		// Token: 0x060438D5 RID: 276693 RVA: 0x01086A54 File Offset: 0x01084C54
+		// Token: 0x06039921 RID: 235809 RVA: 0x0102B0A4 File Offset: 0x010292A4
 		private void DefaultLevelSequenceAfterTick(float delta)
 		{
 			ALevelSequenceActor director = this.Director;
@@ -1673,7 +1703,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438D6 RID: 276694 RVA: 0x01087228 File Offset: 0x01085428
+		// Token: 0x06039922 RID: 235810 RVA: 0x0102B878 File Offset: 0x01029A78
 		private bool ProcessCollistion()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -1710,173 +1740,173 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return false;
 		}
 
-		// Token: 0x04023430 RID: 144432
+		// Token: 0x0401E622 RID: 124450
 		private ULevelSequence LevelSequence;
 
-		// Token: 0x04023431 RID: 144433
+		// Token: 0x0401E623 RID: 124451
 		private ALevelSequenceActor Director;
 
-		// Token: 0x04023432 RID: 144434
+		// Token: 0x0401E624 RID: 124452
 		private AActor TransformOriginActor;
 
-		// Token: 0x04023433 RID: 144435
+		// Token: 0x0401E625 RID: 124453
 		private UDefaultLevelSequenceInstanceData CameraSequenceData;
 
-		// Token: 0x04023434 RID: 144436
+		// Token: 0x0401E626 RID: 124454
 		private TsBaseCharacter Character;
 
-		// Token: 0x04023435 RID: 144437
+		// Token: 0x0401E627 RID: 124455
 		[Nullable(1)]
 		private readonly TArray<AActor> BindingActors = new TArray<AActor>();
 
-		// Token: 0x04023436 RID: 144438
+		// Token: 0x0401E628 RID: 124456
 		private float FadeInInTime;
 
-		// Token: 0x04023437 RID: 144439
+		// Token: 0x0401E629 RID: 124457
 		private float FadeInOutTime;
 
-		// Token: 0x04023438 RID: 144440
+		// Token: 0x0401E62A RID: 124458
 		private float FadeOutInTime;
 
-		// Token: 0x04023439 RID: 144441
+		// Token: 0x0401E62B RID: 124459
 		private float FadeOutOutTime;
 
-		// Token: 0x0402343A RID: 144442
+		// Token: 0x0401E62C RID: 124460
 		private float DurationInTime;
 
-		// Token: 0x0402343B RID: 144443
+		// Token: 0x0401E62D RID: 124461
 		private float DurationOutTime;
 
-		// Token: 0x0402343C RID: 144444
+		// Token: 0x0401E62E RID: 124462
 		private ELevelSequenceTransition TransitInType;
 
-		// Token: 0x0402343D RID: 144445
+		// Token: 0x0401E62F RID: 124463
 		private ELevelSequenceTransition TransitOutType;
 
-		// Token: 0x0402343E RID: 144446
+		// Token: 0x0401E630 RID: 124464
 		private bool TransitInValid;
 
-		// Token: 0x0402343F RID: 144447
+		// Token: 0x0401E631 RID: 124465
 		private bool TransitOutValid;
 
-		// Token: 0x04023440 RID: 144448
+		// Token: 0x0401E632 RID: 124466
 		private readonly bool HasCameraTrack;
 
-		// Token: 0x04023441 RID: 144449
+		// Token: 0x0401E633 RID: 124467
 		private bool JumpToEnd;
 
-		// Token: 0x04023442 RID: 144450
+		// Token: 0x0401E634 RID: 124468
 		[Nullable(1)]
 		private string Mark = "";
 
-		// Token: 0x04023443 RID: 144451
+		// Token: 0x0401E635 RID: 124469
 		[Nullable(1)]
 		private string LoopStartMark = "";
 
-		// Token: 0x04023444 RID: 144452
+		// Token: 0x0401E636 RID: 124470
 		private bool ReversedLoop;
 
-		// Token: 0x04023445 RID: 144453
+		// Token: 0x0401E637 RID: 124471
 		private int NumLoops = -1;
 
-		// Token: 0x04023446 RID: 144454
+		// Token: 0x0401E638 RID: 124472
 		private float CurPlayRate = 1f;
 
-		// Token: 0x04023447 RID: 144455
+		// Token: 0x0401E639 RID: 124473
 		private RefCompDefine.PlayRateStruct PlayRateTransition;
 
-		// Token: 0x04023448 RID: 144456
+		// Token: 0x0401E63A RID: 124474
 		private int LastPlayRateEaseHandleId;
 
-		// Token: 0x04023449 RID: 144457
+		// Token: 0x0401E63B RID: 124475
 		private bool CameraBindFinished;
 
-		// Token: 0x0402344A RID: 144458
+		// Token: 0x0401E63C RID: 124476
 		private bool IsKeepUi;
 
-		// Token: 0x0402344B RID: 144459
+		// Token: 0x0401E63D RID: 124477
 		private bool CanPlayInLoading;
 
-		// Token: 0x0402344C RID: 144460
+		// Token: 0x0401E63E RID: 124478
 		private bool IsPause;
 
-		// Token: 0x0402344D RID: 144461
+		// Token: 0x0401E63F RID: 124479
 		private bool ForceTickOneFrameEventPause;
 
-		// Token: 0x0402344E RID: 144462
+		// Token: 0x0401E640 RID: 124480
 		private EWayType ItsWay = EWayType.Normal;
 
-		// Token: 0x0402344F RID: 144463
+		// Token: 0x0401E641 RID: 124481
 		private SceneSubCamera SceneCamera;
 
-		// Token: 0x04023450 RID: 144464
+		// Token: 0x0401E642 RID: 124482
 		private bool IsForcedSceneCamera;
 
-		// Token: 0x04023451 RID: 144465
+		// Token: 0x0401E643 RID: 124483
 		private ETransitionMask? InMask = new ETransitionMask?(ETransitionMask.BlackMask);
 
-		// Token: 0x04023452 RID: 144466
+		// Token: 0x0401E644 RID: 124484
 		private ETransitionMask? OutMask = new ETransitionMask?(ETransitionMask.BlackMask);
 
-		// Token: 0x04023453 RID: 144467
+		// Token: 0x0401E645 RID: 124485
 		private bool LockBySimpleLevelSequence;
 
-		// Token: 0x04023454 RID: 144468
+		// Token: 0x0401E646 RID: 124486
 		private float CustomTimeDilation = 1f;
 
-		// Token: 0x04023455 RID: 144469
+		// Token: 0x0401E647 RID: 124487
 		private bool UiSequence;
 
-		// Token: 0x04023456 RID: 144470
+		// Token: 0x0401E648 RID: 124488
 		private DefaultLevelSequencePlayParam DefaultPlayParam;
 
-		// Token: 0x04023457 RID: 144471
+		// Token: 0x0401E649 RID: 124489
 		private int DefaultPlayAfterTickId = -1;
 
-		// Token: 0x04023458 RID: 144472
+		// Token: 0x0401E64A RID: 124490
 		private bool IsSequenceStopWithFinish;
 
-		// Token: 0x04023459 RID: 144473
+		// Token: 0x0401E64B RID: 124491
 		private UTraceSphereElement CameraSphereTrace;
 
-		// Token: 0x0402345A RID: 144474
+		// Token: 0x0401E64C RID: 124492
 		[Nullable(1)]
 		private readonly Rotator CameraActorRotator = Rotator.Create();
 
-		// Token: 0x0402345B RID: 144475
+		// Token: 0x0401E64D RID: 124493
 		[Nullable(1)]
 		private readonly Rotator TempRotator = Rotator.Create();
 
-		// Token: 0x0402345C RID: 144476
+		// Token: 0x0401E64E RID: 124494
 		[Nullable(1)]
 		private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0402345D RID: 144477
+		// Token: 0x0401E64F RID: 124495
 		[Nullable(1)]
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x0402345E RID: 144478
+		// Token: 0x0401E650 RID: 124496
 		[Nullable(1)]
 		private readonly Vector TempVector2 = Vector.Create();
 
-		// Token: 0x0402345F RID: 144479
+		// Token: 0x0401E651 RID: 124497
 		[Nullable(1)]
 		private readonly Vector TempVector3 = Vector.Create();
 
-		// Token: 0x04023460 RID: 144480
+		// Token: 0x0401E652 RID: 124498
 		[Nullable(1)]
 		private readonly Vector TempVector4 = Vector.Create();
 
-		// Token: 0x04023461 RID: 144481
+		// Token: 0x0401E653 RID: 124499
 		private FTransformDouble TempTransform;
 
-		// Token: 0x04023462 RID: 144482
+		// Token: 0x0401E654 RID: 124500
 		private Action OnPauseCallback;
 
-		// Token: 0x04023463 RID: 144483
+		// Token: 0x0401E655 RID: 124501
 		private Action<bool> OnStopCallback;
 
-		// Token: 0x04023464 RID: 144484
+		// Token: 0x0401E656 RID: 124502
 		private Action OnFinishedCallback;
 	}
 }

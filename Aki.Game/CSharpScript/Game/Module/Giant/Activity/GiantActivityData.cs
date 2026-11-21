@@ -4,10 +4,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Giant.Activity
 {
-	// Token: 0x0200598E RID: 22926
+	// Token: 0x02004967 RID: 18791
 	public class GiantActivityData : ActivityBaseData
 	{
-		// Token: 0x0603A2D3 RID: 238291 RVA: 0x00DD3F2C File Offset: 0x00DD212C
+		// Token: 0x0602F1F9 RID: 193017 RVA: 0x00D233BC File Offset: 0x00D215BC
 		[NullableContext(1)]
 		protected override void PhraseEx(ActivityData data)
 		{
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			instance.SetTotalStableValue((double)giantActivityInfo.TotalStableValue);
 		}
 
-		// Token: 0x0603A2D4 RID: 238292 RVA: 0x00DD3F80 File Offset: 0x00DD2180
+		// Token: 0x0602F1FA RID: 193018 RVA: 0x00D23410 File Offset: 0x00D21610
 		public override bool GetExDataRedPointShowState()
 		{
 			if (!base.GetPreGuideQuestFinishState())
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			return GiantConfig.HasClaimableNode() || GiantConfig.HasUnreadActivatedNode();
 		}
 
-		// Token: 0x0603A2D5 RID: 238293 RVA: 0x00DD3FE1 File Offset: 0x00DD21E1
+		// Token: 0x0602F1FB RID: 193019 RVA: 0x00D23471 File Offset: 0x00D21671
 		protected override bool GetExDataFinishShowState()
 		{
 			return GiantConfig.IsActivityAllFinished();

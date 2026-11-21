@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000EBC RID: 3772
+	// Token: 0x02000243 RID: 579
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.MorphTargetPreviewItem")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FMorphTargetPreviewItem : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600CC08 RID: 52232 RVA: 0x00129662 File Offset: 0x00127862
+		// Token: 0x060031CC RID: 12748 RVA: 0x00046E95 File Offset: 0x00045095
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMorphTargetPreviewItem._ScriptStructPtr != 0) ? FMorphTargetPreviewItem._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.MorphTargetPreviewItem", ref FMorphTargetPreviewItem._ScriptStructPtr);
 		}
 
-		// Token: 0x17003001 RID: 12289
-		// (get) Token: 0x0600CC09 RID: 52233 RVA: 0x00129686 File Offset: 0x00127886
-		// (set) Token: 0x0600CC0A RID: 52234 RVA: 0x0012969A File Offset: 0x0012789A
+		// Token: 0x170006E6 RID: 1766
+		// (get) Token: 0x060031CD RID: 12749 RVA: 0x00046EB9 File Offset: 0x000450B9
+		// (set) Token: 0x060031CE RID: 12750 RVA: 0x00046ECD File Offset: 0x000450CD
 		public unsafe string MorphName
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003002 RID: 12290
-		// (get) Token: 0x0600CC0B RID: 52235 RVA: 0x001296AF File Offset: 0x001278AF
-		// (set) Token: 0x0600CC0C RID: 52236 RVA: 0x001296BF File Offset: 0x001278BF
+		// Token: 0x170006E7 RID: 1767
+		// (get) Token: 0x060031CF RID: 12751 RVA: 0x00046EE2 File Offset: 0x000450E2
+		// (set) Token: 0x060031D0 RID: 12752 RVA: 0x00046EF2 File Offset: 0x000450F2
 		public unsafe float PreviewValue
 		{
 			get
@@ -48,57 +48,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600CC0D RID: 52237 RVA: 0x001296D0 File Offset: 0x001278D0
+		// Token: 0x060031D1 RID: 12753 RVA: 0x00046F03 File Offset: 0x00045103
 		public FMorphTargetPreviewItem()
 		{
 		}
 
-		// Token: 0x0600CC0E RID: 52238 RVA: 0x001296D8 File Offset: 0x001278D8
-		public FMorphTargetPreviewItem(string MorphName, float PreviewValue)
-		{
-			this.MorphName = MorphName;
-			this.PreviewValue = PreviewValue;
-		}
-
-		// Token: 0x0600CC0F RID: 52239 RVA: 0x001296EE File Offset: 0x001278EE
+		// Token: 0x060031D2 RID: 12754 RVA: 0x00046F0B File Offset: 0x0004510B
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMorphTargetPreviewItem.StaticStruct();
 		}
 
-		// Token: 0x0600CC10 RID: 52240 RVA: 0x001296FA File Offset: 0x001278FA
+		// Token: 0x060031D3 RID: 12755 RVA: 0x00046F17 File Offset: 0x00045117
 		[NullableContext(2)]
 		public FMorphTargetPreviewItem(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600CC11 RID: 52241 RVA: 0x00129704 File Offset: 0x00127904
+		// Token: 0x060031D4 RID: 12756 RVA: 0x00046F21 File Offset: 0x00045121
 		public FMorphTargetPreviewItem(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600CC12 RID: 52242 RVA: 0x0012970F File Offset: 0x0012790F
+		// Token: 0x060031D5 RID: 12757 RVA: 0x00046F2C File Offset: 0x0004512C
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMorphTargetPreviewItem(Pointer, false, true);
 		}
 
-		// Token: 0x0600CC13 RID: 52243 RVA: 0x00129719 File Offset: 0x00127919
+		// Token: 0x060031D6 RID: 12758 RVA: 0x00046F36 File Offset: 0x00045136
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMorphTargetPreviewItem(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04006DF2 RID: 28146
+		// Token: 0x0400112C RID: 4396
 		public const string __ObjectPath = "/Script/Engine.MorphTargetPreviewItem";
 
-		// Token: 0x04006DF3 RID: 28147
+		// Token: 0x0400112D RID: 4397
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04006DF4 RID: 28148
+		// Token: 0x0400112E RID: 4398
 		internal static int __PropertyOffset_MorphName;
 
-		// Token: 0x04006DF5 RID: 28149
+		// Token: 0x0400112F RID: 4399
 		internal static int __PropertyOffset_PreviewValue;
 	}
 }

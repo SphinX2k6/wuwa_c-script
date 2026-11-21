@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x0200663B RID: 26171
+	// Token: 0x020055B9 RID: 21945
 	public enum EFeiXueQuestState
 	{
-		// Token: 0x04022210 RID: 139792
+		// Token: 0x0401CB41 RID: 117569
 		Lock,
-		// Token: 0x04022211 RID: 139793
+		// Token: 0x0401CB42 RID: 117570
 		IsDoing,
-		// Token: 0x04022212 RID: 139794
+		// Token: 0x0401CB43 RID: 117571
 		Finish
 	}
 }

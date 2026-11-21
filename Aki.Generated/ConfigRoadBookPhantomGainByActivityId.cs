@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000815 RID: 2069
+	// Token: 0x02000831 RID: 2097
 	public class ConfigRoadBookPhantomGainByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003090 RID: 12432 RVA: 0x0016BC8C File Offset: 0x00169E8C
+		// Token: 0x06003138 RID: 12600 RVA: 0x00172F74 File Offset: 0x00171174
 		static ConfigRoadBookPhantomGainByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoadBookPhantomGainByActivityId.CreateStaticDefaultValue), new Action(ConfigRoadBookPhantomGainByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003091 RID: 12433 RVA: 0x0016BCAC File Offset: 0x00169EAC
+		// Token: 0x06003139 RID: 12601 RVA: 0x00172F94 File Offset: 0x00171194
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoadBookPhantomGainByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003092 RID: 12434 RVA: 0x0016BD2B File Offset: 0x00169F2B
+		// Token: 0x0600313A RID: 12602 RVA: 0x00173013 File Offset: 0x00171213
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoadBookPhantomGainByActivityId.LogPair = null;
 			ConfigRoadBookPhantomGainByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06003093 RID: 12435 RVA: 0x0016BD39 File Offset: 0x00169F39
+		// Token: 0x0600313B RID: 12603 RVA: 0x00173021 File Offset: 0x00171221
 		public static void Init()
 		{
 			ConfigRoadBookPhantomGainByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigRoadBookPhantomGainByActivityId.HandleId, "db_roadbook.db", "select BinData from `RoadBookPhantomGain` where ActivityId=?");
 		}
 
-		// Token: 0x06003094 RID: 12436 RVA: 0x0016BD54 File Offset: 0x00169F54
+		// Token: 0x0600313C RID: 12604 RVA: 0x0017303C File Offset: 0x0017123C
 		[NullableContext(2)]
 		public static IReadOnlyList<RoadBookPhantomGain> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003879 RID: 14457
+		// Token: 0x0400393D RID: 14653
 		private const string DB = "db_roadbook.db";
 
-		// Token: 0x0400387A RID: 14458
+		// Token: 0x0400393E RID: 14654
 		private const string FILE = "q.千岛路书3.0.xlsx";
 
-		// Token: 0x0400387B RID: 14459
+		// Token: 0x0400393F RID: 14655
 		private const string TABLE = "RoadBookPhantomGain";
 
-		// Token: 0x0400387C RID: 14460
+		// Token: 0x04003940 RID: 14656
 		private const string COMMAND = "select BinData from `RoadBookPhantomGain` where ActivityId=?";
 
-		// Token: 0x0400387D RID: 14461
+		// Token: 0x04003941 RID: 14657
 		private const string KEY_PREFIX = "RoadBookPhantomGainByActivityId";
 
-		// Token: 0x0400387E RID: 14462
+		// Token: 0x04003942 RID: 14658
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400387F RID: 14463
+		// Token: 0x04003943 RID: 14659
 		private static int HandleId;
 	}
 }

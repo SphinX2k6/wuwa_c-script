@@ -4,15 +4,15 @@ using CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect;
 
 namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 {
-	// Token: 0x02005762 RID: 22370
+	// Token: 0x02004739 RID: 18233
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class KurotatoHandBookTabViewData
 	{
-		// Token: 0x0401DCF8 RID: 122104
+		// Token: 0x0401878E RID: 100238
 		public Action OnCloseView;
 
-		// Token: 0x0401DCF9 RID: 122105
+		// Token: 0x0401878F RID: 100239
 		public KurotatoLevelSelectViewData LevelSelectViewData;
 	}
 }

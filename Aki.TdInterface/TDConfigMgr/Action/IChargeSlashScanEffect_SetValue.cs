@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200188D RID: 6285
+	// Token: 0x02001A18 RID: 6680
 	public class IChargeSlashScanEffect_SetValue
 	{
-		// Token: 0x04005506 RID: 21766
+		// Token: 0x04005953 RID: 22867
 		public ESpecificScanType Type;
 
-		// Token: 0x04005507 RID: 21767
+		// Token: 0x04005954 RID: 22868
 		public int TriggerPosEntityId;
 	}
 }

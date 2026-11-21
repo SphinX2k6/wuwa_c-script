@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200042C RID: 1068
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000485 RID: 1157
 	public class IHitLogicType
 	{
-		// Token: 0x06001587 RID: 5511 RVA: 0x00043620 File Offset: 0x00041820
+		// Token: 0x06001721 RID: 5921 RVA: 0x00047368 File Offset: 0x00045568
 		private IHitLogicType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001588 RID: 5512 RVA: 0x00043658 File Offset: 0x00041858
+		// Token: 0x06001722 RID: 5922 RVA: 0x000473A0 File Offset: 0x000455A0
 		public static IHitLogicType Create([Nullable(2)] IHitLogicType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001589 RID: 5513 RVA: 0x0004366B File Offset: 0x0004186B
+		// Token: 0x06001723 RID: 5923 RVA: 0x000473B3 File Offset: 0x000455B3
 		public static IHitLogicType CreateFromSetValue([Nullable(2)] IHitLogicType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600158A RID: 5514 RVA: 0x0004367E File Offset: 0x0004187E
+		// Token: 0x06001724 RID: 5924 RVA: 0x000473C6 File Offset: 0x000455C6
 		public IHitLogicType_SetValue ToSetValue()
 		{
 			return new IHitLogicType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005DF RID: 1503
-		// (get) Token: 0x0600158B RID: 5515 RVA: 0x00043691 File Offset: 0x00041891
-		// (set) Token: 0x0600158C RID: 5516 RVA: 0x000436BC File Offset: 0x000418BC
+		// Token: 0x17000646 RID: 1606
+		// (get) Token: 0x06001725 RID: 5925 RVA: 0x000473D9 File Offset: 0x000455D9
+		// (set) Token: 0x06001726 RID: 5926 RVA: 0x00047404 File Offset: 0x00045604
 		public virtual EHitLogicType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040010A0 RID: 4256
+		// Token: 0x040011C2 RID: 4546
 		[Nullable(2)]
 		protected IHitLogicType FbInstance;
 
-		// Token: 0x040010A1 RID: 4257
+		// Token: 0x040011C3 RID: 4547
 		[Nullable(2)]
 		protected IHitLogicType_SetValue PocoInterface;
 	}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -8,10 +7,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BFA RID: 11258
+// Token: 0x02002175 RID: 8565
 public class TowerGuidePanel : UiPanelBase
 {
-	// Token: 0x06017627 RID: 95783 RVA: 0x005F33CC File Offset: 0x005F15CC
+	// Token: 0x06015058 RID: 86104 RVA: 0x0061FF08 File Offset: 0x0061E108
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -31,7 +30,7 @@ public class TowerGuidePanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017628 RID: 95784 RVA: 0x005F3498 File Offset: 0x005F1698
+	// Token: 0x06015059 RID: 86105 RVA: 0x0061FFD4 File Offset: 0x0061E1D4
 	protected override void OnStart()
 	{
 		this.BuffShowLayout = new GenericScrollViewNew<TowerBuffShowItem, long>(base.GetScrollViewWithScrollbar(4), new Func<TowerBuffShowItem>(this.InitBuffItem), null, false, null);
@@ -40,7 +39,7 @@ public class TowerGuidePanel : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "TowerGuideDes", Array.Empty<object>());
 	}
 
-	// Token: 0x06017629 RID: 95785 RVA: 0x005F350C File Offset: 0x005F170C
+	// Token: 0x0601505A RID: 86106 RVA: 0x00620048 File Offset: 0x0061E248
 	protected override void OnBeforeShow()
 	{
 		int currentTowerId = TowerModel.Instance.CurrentTowerId;
@@ -53,17 +52,17 @@ public class TowerGuidePanel : UiPanelBase
 		{
 			return;
 		}
-		this.BuffShowLayout.RefreshByData(towerInfo.Value.ShowBuffs().ToList<long>(), null, false);
+		this.BuffShowLayout.RefreshByData(towerInfo.Value.ShowBuffs(), null, false);
 	}
 
-	// Token: 0x0601762A RID: 95786 RVA: 0x005F355F File Offset: 0x005F175F
+	// Token: 0x0601505B RID: 86107 RVA: 0x00620096 File Offset: 0x0061E296
 	[NullableContext(1)]
 	private TowerBuffShowItem InitBuffItem()
 	{
 		return new TowerBuffShowItem();
 	}
 
-	// Token: 0x0400AEF7 RID: 44791
+	// Token: 0x0400B2FC RID: 45820
 	[Nullable(new byte[]
 	{
 		2,
@@ -71,18 +70,18 @@ public class TowerGuidePanel : UiPanelBase
 	})]
 	private GenericScrollViewNew<TowerBuffShowItem, long> BuffShowLayout;
 
-	// Token: 0x020091BE RID: 37310
+	// Token: 0x02008401 RID: 33793
 	private enum EChildType
 	{
-		// Token: 0x0402F26E RID: 193134
+		// Token: 0x0402A96F RID: 174447
 		ItemOffset,
-		// Token: 0x0402F26F RID: 193135
+		// Token: 0x0402A970 RID: 174448
 		TxtSubTitle,
-		// Token: 0x0402F270 RID: 193136
+		// Token: 0x0402A971 RID: 174449
 		TxtTutorials,
-		// Token: 0x0402F271 RID: 193137
+		// Token: 0x0402A972 RID: 174450
 		TexPicture,
-		// Token: 0x0402F272 RID: 193138
+		// Token: 0x0402A973 RID: 174451
 		ScrollBuff
 	}
 }

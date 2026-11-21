@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D45 RID: 27973
+	// Token: 0x020074C0 RID: 29888
 	public class IPlayVoicePassengersConfigT
 	{
-		// Token: 0x1700D09D RID: 53405
-		// (get) Token: 0x0603163D RID: 202301 RVA: 0x006B2BB1 File Offset: 0x006B0DB1
-		// (set) Token: 0x0603163E RID: 202302 RVA: 0x006B2BB9 File Offset: 0x006B0DB9
+		// Token: 0x1700DBE5 RID: 56293
+		// (get) Token: 0x06034639 RID: 214585 RVA: 0x0070E299 File Offset: 0x0070C499
+		// (set) Token: 0x0603463A RID: 214586 RVA: 0x0070E2A1 File Offset: 0x0070C4A1
 		public List<int> Passengers { get; set; }
 
-		// Token: 0x1700D09E RID: 53406
-		// (get) Token: 0x0603163F RID: 202303 RVA: 0x006B2BC2 File Offset: 0x006B0DC2
-		// (set) Token: 0x06031640 RID: 202304 RVA: 0x006B2BCA File Offset: 0x006B0DCA
+		// Token: 0x1700DBE6 RID: 56294
+		// (get) Token: 0x0603463B RID: 214587 RVA: 0x0070E2AA File Offset: 0x0070C4AA
+		// (set) Token: 0x0603463C RID: 214588 RVA: 0x0070E2B2 File Offset: 0x0070C4B2
 		public bool MatchNone { get; set; }
 
-		// Token: 0x1700D09F RID: 53407
-		// (get) Token: 0x06031641 RID: 202305 RVA: 0x006B2BD3 File Offset: 0x006B0DD3
-		// (set) Token: 0x06031642 RID: 202306 RVA: 0x006B2BDB File Offset: 0x006B0DDB
+		// Token: 0x1700DBE7 RID: 56295
+		// (get) Token: 0x0603463D RID: 214589 RVA: 0x0070E2BB File Offset: 0x0070C4BB
+		// (set) Token: 0x0603463E RID: 214590 RVA: 0x0070E2C3 File Offset: 0x0070C4C3
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031643 RID: 202307 RVA: 0x006B2BE4 File Offset: 0x006B0DE4
+		// Token: 0x0603463F RID: 214591 RVA: 0x0070E2CC File Offset: 0x0070C4CC
 		public IPlayVoicePassengersConfigT()
 		{
 			this.Passengers = null;

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DB2 RID: 19890
+	// Token: 0x02003D7B RID: 15739
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikeAchieveSpecialItem : GridProxyAbstract<IRoguelikeAchieveTokenItemData>
 	{
-		// Token: 0x060335A5 RID: 210341 RVA: 0x00BFD458 File Offset: 0x00BFB658
+		// Token: 0x06028412 RID: 164882 RVA: 0x00B46988 File Offset: 0x00B44B88
 		[NullableContext(1)]
 		public override void Refresh(IRoguelikeAchieveTokenItemData data, bool isSelected, int gridIndex)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetTexture(1).SetUIActive(true);
 		}
 
-		// Token: 0x060335A6 RID: 210342 RVA: 0x00BFD554 File Offset: 0x00BFB754
+		// Token: 0x06028413 RID: 164883 RVA: 0x00B46A84 File Offset: 0x00B44C84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -52,20 +52,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060335A7 RID: 210343 RVA: 0x00BFD5BD File Offset: 0x00BFB7BD
+		// Token: 0x06028414 RID: 164884 RVA: 0x00B46AED File Offset: 0x00B44CED
 		protected override void OnStart()
 		{
 			base.GetTexture(0).SetUIActive(true);
 			base.GetTexture(1).SetUIActive(false);
 		}
 
-		// Token: 0x0200AF29 RID: 44841
+		// Token: 0x0200995E RID: 39262
 		private class EComponents
 		{
-			// Token: 0x04035310 RID: 217872
+			// Token: 0x0402FD45 RID: 195909
 			public const int TexBg = 0;
 
-			// Token: 0x04035311 RID: 217873
+			// Token: 0x0402FD46 RID: 195910
 			public const int TexIcon = 1;
 		}
 	}

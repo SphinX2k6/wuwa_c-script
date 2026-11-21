@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005E6 RID: 1510
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000677 RID: 1655
 	public class IPatrolCycleOncely : ICycleModeType
 	{
-		// Token: 0x06001FFE RID: 8190 RVA: 0x000594FC File Offset: 0x000576FC
+		// Token: 0x060022CA RID: 8906 RVA: 0x0005FB88 File Offset: 0x0005DD88
 		private IPatrolCycleOncely_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001FFF RID: 8191 RVA: 0x00059534 File Offset: 0x00057734
+		// Token: 0x060022CB RID: 8907 RVA: 0x0005FBC0 File Offset: 0x0005DDC0
 		public static IPatrolCycleOncely Create([Nullable(2)] IPatrolCycleOncely instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002000 RID: 8192 RVA: 0x00059547 File Offset: 0x00057747
+		// Token: 0x060022CC RID: 8908 RVA: 0x0005FBD3 File Offset: 0x0005DDD3
 		public static IPatrolCycleOncely CreateFromSetValue([Nullable(2)] IPatrolCycleOncely_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002001 RID: 8193 RVA: 0x0005955A File Offset: 0x0005775A
+		// Token: 0x060022CD RID: 8909 RVA: 0x0005FBE6 File Offset: 0x0005DDE6
 		public new IPatrolCycleOncely_SetValue ToSetValue()
 		{
 			return new IPatrolCycleOncely_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000885 RID: 2181
-		// (get) Token: 0x06002002 RID: 8194 RVA: 0x0005956D File Offset: 0x0005776D
-		// (set) Token: 0x06002003 RID: 8195 RVA: 0x00059598 File Offset: 0x00057798
+		// Token: 0x17000931 RID: 2353
+		// (get) Token: 0x060022CE RID: 8910 RVA: 0x0005FBF9 File Offset: 0x0005DDF9
+		// (set) Token: 0x060022CF RID: 8911 RVA: 0x0005FC24 File Offset: 0x0005DE24
 		public override EPatrolCycleMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400167D RID: 5757
+		// Token: 0x04001854 RID: 6228
 		[Nullable(2)]
 		protected new IPatrolCycleOncely FbInstance;
 
-		// Token: 0x0400167E RID: 5758
+		// Token: 0x04001855 RID: 6229
 		[Nullable(2)]
 		protected new IPatrolCycleOncely_SetValue PocoInterface;
 	}

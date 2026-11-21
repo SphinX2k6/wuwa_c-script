@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005171 RID: 20849
+	// Token: 0x020056D6 RID: 22230
 	public struct IEntityCategoryWeight : IFlatbufferObject
 	{
-		// Token: 0x17009846 RID: 38982
-		// (get) Token: 0x06021B14 RID: 138004 RVA: 0x004ACD60 File Offset: 0x004AAF60
+		// Token: 0x1700A035 RID: 41013
+		// (get) Token: 0x06023A6C RID: 146028 RVA: 0x004E6D7F File Offset: 0x004E4F7F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021B15 RID: 138005 RVA: 0x004ACD6D File Offset: 0x004AAF6D
+		// Token: 0x06023A6D RID: 146029 RVA: 0x004E6D8C File Offset: 0x004E4F8C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021B16 RID: 138006 RVA: 0x004ACD74 File Offset: 0x004AAF74
+		// Token: 0x06023A6E RID: 146030 RVA: 0x004E6D94 File Offset: 0x004E4F94
 		public static IEntityCategoryWeight GetRootAsIEntityCategoryWeight(ByteBuffer _bb)
 		{
 			return IEntityCategoryWeight.GetRootAsIEntityCategoryWeight(_bb, default(IEntityCategoryWeight));
 		}
 
-		// Token: 0x06021B17 RID: 138007 RVA: 0x004ACD90 File Offset: 0x004AAF90
+		// Token: 0x06023A6F RID: 146031 RVA: 0x004E6DB0 File Offset: 0x004E4FB0
 		public static IEntityCategoryWeight GetRootAsIEntityCategoryWeight(ByteBuffer _bb, IEntityCategoryWeight obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021B18 RID: 138008 RVA: 0x004ACDAD File Offset: 0x004AAFAD
+		// Token: 0x06023A70 RID: 146032 RVA: 0x004E6DCD File Offset: 0x004E4FCD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021B19 RID: 138009 RVA: 0x004ACDBC File Offset: 0x004AAFBC
+		// Token: 0x06023A71 RID: 146033 RVA: 0x004E6DDC File Offset: 0x004E4FDC
 		public IEntityCategoryWeight __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009847 RID: 38983
-		// (get) Token: 0x06021B1A RID: 138010 RVA: 0x004ACDCC File Offset: 0x004AAFCC
+		// Token: 0x1700A036 RID: 41014
+		// (get) Token: 0x06023A72 RID: 146034 RVA: 0x004E6DEC File Offset: 0x004E4FEC
 		public IStaticEntitiyMatch? EntitiyMatch
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009848 RID: 38984
-		// (get) Token: 0x06021B1B RID: 138011 RVA: 0x004ACE2C File Offset: 0x004AB02C
+		// Token: 0x1700A037 RID: 41015
+		// (get) Token: 0x06023A73 RID: 146035 RVA: 0x004E6E4C File Offset: 0x004E504C
 		public int Weight
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021B1C RID: 138012 RVA: 0x004ACE68 File Offset: 0x004AB068
+		// Token: 0x06023A74 RID: 146036 RVA: 0x004E6E88 File Offset: 0x004E5088
 		public static Offset<IEntityCategoryWeight> CreateIEntityCategoryWeight(FlatBufferBuilder builder, Offset<IStaticEntitiyMatch> EntitiyMatchOffset = default(Offset<IStaticEntitiyMatch>), int Weight = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityCategoryWeight.EndIEntityCategoryWeight(builder);
 		}
 
-		// Token: 0x06021B1D RID: 138013 RVA: 0x004ACE85 File Offset: 0x004AB085
+		// Token: 0x06023A75 RID: 146037 RVA: 0x004E6EA5 File Offset: 0x004E50A5
 		public static void StartIEntityCategoryWeight(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06021B1E RID: 138014 RVA: 0x004ACE8E File Offset: 0x004AB08E
+		// Token: 0x06023A76 RID: 146038 RVA: 0x004E6EAE File Offset: 0x004E50AE
 		public static void AddEntitiyMatch(FlatBufferBuilder builder, Offset<IStaticEntitiyMatch> entitiyMatchOffset)
 		{
 			builder.AddOffset(0, entitiyMatchOffset.Value, 0);
 		}
 
-		// Token: 0x06021B1F RID: 138015 RVA: 0x004ACE9E File Offset: 0x004AB09E
+		// Token: 0x06023A77 RID: 146039 RVA: 0x004E6EBE File Offset: 0x004E50BE
 		public static void AddWeight(FlatBufferBuilder builder, int weight)
 		{
 			builder.AddInt(1, weight, 0);
 		}
 
-		// Token: 0x06021B20 RID: 138016 RVA: 0x004ACEA9 File Offset: 0x004AB0A9
+		// Token: 0x06023A78 RID: 146040 RVA: 0x004E6EC9 File Offset: 0x004E50C9
 		public static Offset<IEntityCategoryWeight> EndIEntityCategoryWeight(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityCategoryWeight>(builder.EndTable());
 		}
 
-		// Token: 0x06021B21 RID: 138017 RVA: 0x004ACEB8 File Offset: 0x004AB0B8
+		// Token: 0x06023A79 RID: 146041 RVA: 0x004E6ED8 File Offset: 0x004E50D8
 		public IEntityCategoryWeightT UnPack()
 		{
 			IEntityCategoryWeightT entityCategoryWeightT = new IEntityCategoryWeightT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return entityCategoryWeightT;
 		}
 
-		// Token: 0x06021B22 RID: 138018 RVA: 0x004ACED4 File Offset: 0x004AB0D4
+		// Token: 0x06023A7A RID: 146042 RVA: 0x004E6EF4 File Offset: 0x004E50F4
 		public void UnPackTo(IEntityCategoryWeightT _o)
 		{
 			_o.EntitiyMatch = ((this.EntitiyMatch != null) ? this.EntitiyMatch.Value.UnPack() : null);
 			_o.Weight = this.Weight;
 		}
 
-		// Token: 0x06021B23 RID: 138019 RVA: 0x004ACF1C File Offset: 0x004AB11C
+		// Token: 0x06023A7B RID: 146043 RVA: 0x004E6F3C File Offset: 0x004E513C
 		public static Offset<IEntityCategoryWeight> Pack(FlatBufferBuilder builder, IEntityCategoryWeightT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityCategoryWeight.CreateIEntityCategoryWeight(builder, entitiyMatchOffset, _o.Weight);
 		}
 
-		// Token: 0x0400E237 RID: 57911
+		// Token: 0x0400EE35 RID: 60981
 		private Table __p;
 	}
 }

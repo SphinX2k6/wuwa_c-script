@@ -6,13 +6,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DB4 RID: 7604
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FCB RID: 8139
 	[JsonConverter(typeof(IResetPresentationFailureConverter))]
 	public class IResetPresentationFailure : IPresentationType
 	{
-		// Token: 0x0600A2E5 RID: 41701 RVA: 0x0017235C File Offset: 0x0017055C
+		// Token: 0x0600ACEF RID: 44271 RVA: 0x00186A84 File Offset: 0x00184C84
 		private IResetPresentationFailure_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A2E6 RID: 41702 RVA: 0x00172394 File Offset: 0x00170594
+		// Token: 0x0600ACF0 RID: 44272 RVA: 0x00186ABC File Offset: 0x00184CBC
 		public static IResetPresentationFailure Create([Nullable(2)] IResetPresentationFailure instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2E7 RID: 41703 RVA: 0x001723A7 File Offset: 0x001705A7
+		// Token: 0x0600ACF1 RID: 44273 RVA: 0x00186ACF File Offset: 0x00184CCF
 		public static IResetPresentationFailure CreateFromSetValue([Nullable(2)] IResetPresentationFailure_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2E8 RID: 41704 RVA: 0x001723BA File Offset: 0x001705BA
+		// Token: 0x0600ACF2 RID: 44274 RVA: 0x00186AE2 File Offset: 0x00184CE2
 		public new IResetPresentationFailure_SetValue ToSetValue()
 		{
 			return new IResetPresentationFailure_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700323B RID: 12859
-		// (get) Token: 0x0600A2E9 RID: 41705 RVA: 0x001723E5 File Offset: 0x001705E5
-		// (set) Token: 0x0600A2EA RID: 41706 RVA: 0x00172410 File Offset: 0x00170610
+		// Token: 0x170034D5 RID: 13525
+		// (get) Token: 0x0600ACF3 RID: 44275 RVA: 0x00186B0D File Offset: 0x00184D0D
+		// (set) Token: 0x0600ACF4 RID: 44276 RVA: 0x00186B38 File Offset: 0x00184D38
 		public override EResetPresentationType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700323C RID: 12860
-		// (get) Token: 0x0600A2EB RID: 41707 RVA: 0x0017241E File Offset: 0x0017061E
-		// (set) Token: 0x0600A2EC RID: 41708 RVA: 0x0017244D File Offset: 0x0017064D
+		// Token: 0x170034D6 RID: 13526
+		// (get) Token: 0x0600ACF5 RID: 44277 RVA: 0x00186B46 File Offset: 0x00184D46
+		// (set) Token: 0x0600ACF6 RID: 44278 RVA: 0x00186B75 File Offset: 0x00184D75
 		public virtual float Duration
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700323D RID: 12861
-		// (get) Token: 0x0600A2ED RID: 41709 RVA: 0x0017245B File Offset: 0x0017065B
-		// (set) Token: 0x0600A2EE RID: 41710 RVA: 0x00172482 File Offset: 0x00170682
+		// Token: 0x170034D7 RID: 13527
+		// (get) Token: 0x0600ACF7 RID: 44279 RVA: 0x00186B83 File Offset: 0x00184D83
+		// (set) Token: 0x0600ACF8 RID: 44280 RVA: 0x00186BAA File Offset: 0x00184DAA
 		public virtual List<int> GamePlayCues
 		{
 			get
@@ -134,11 +132,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061C4 RID: 25028
+		// Token: 0x0400674C RID: 26444
 		[Nullable(2)]
 		protected new IResetPresentationFailure FbInstance;
 
-		// Token: 0x040061C5 RID: 25029
+		// Token: 0x0400674D RID: 26445
 		[Nullable(2)]
 		protected new IResetPresentationFailure_SetValue PocoInterface;
 	}

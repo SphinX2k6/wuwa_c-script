@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C8A RID: 27786
+	// Token: 0x02005E04 RID: 24068
 	public class LevelConditionCheckFanIsNotRotating : LevelConditionBase
 	{
-		// Token: 0x060445A6 RID: 279974 RVA: 0x010DADB0 File Offset: 0x010D8FB0
+		// Token: 0x0603A700 RID: 239360 RVA: 0x01084D5C File Offset: 0x01082F5C
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C1A RID: 11290
+// Token: 0x02002195 RID: 8597
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefenseBdBuffSelectView : UiViewBase
 {
-	// Token: 0x0601780A RID: 96266 RVA: 0x005F9F75 File Offset: 0x005F8175
+	// Token: 0x0601523C RID: 86588 RVA: 0x00626999 File Offset: 0x00624B99
 	public TrapDefenseBdBuffSelectView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0601780B RID: 96267 RVA: 0x005F9F9C File Offset: 0x005F819C
+	// Token: 0x0601523D RID: 86589 RVA: 0x006269C0 File Offset: 0x00624BC0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -54,7 +54,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601780C RID: 96268 RVA: 0x005FA12C File Offset: 0x005F832C
+	// Token: 0x0601523E RID: 86590 RVA: 0x00626B50 File Offset: 0x00624D50
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TrapDefenseBdBuffSelectView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601780D RID: 96269 RVA: 0x005FA170 File Offset: 0x005F8370
+	// Token: 0x0601523F RID: 86591 RVA: 0x00626B94 File Offset: 0x00624D94
 	public UniTask InitGoldCostItem()
 	{
 		TrapDefenseBdBuffSelectView.<InitGoldCostItem>d__15 <InitGoldCostItem>d__;
@@ -76,7 +76,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		return <InitGoldCostItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601780E RID: 96270 RVA: 0x005FA1B4 File Offset: 0x005F83B4
+	// Token: 0x06015240 RID: 86592 RVA: 0x00626BD8 File Offset: 0x00624DD8
 	public UniTask CreateBdBuffPanel(int key)
 	{
 		TrapDefenseBdBuffSelectView.<CreateBdBuffPanel>d__16 <CreateBdBuffPanel>d__;
@@ -88,7 +88,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		return <CreateBdBuffPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601780F RID: 96271 RVA: 0x005FA200 File Offset: 0x005F8400
+	// Token: 0x06015241 RID: 86593 RVA: 0x00626C24 File Offset: 0x00624E24
 	protected override void OnStart()
 	{
 		this.BtnItem.SetActive(true);
@@ -98,47 +98,47 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		this.UpdateCostNum();
 	}
 
-	// Token: 0x06017810 RID: 96272 RVA: 0x005FA24E File Offset: 0x005F844E
+	// Token: 0x06015242 RID: 86594 RVA: 0x00626C72 File Offset: 0x00624E72
 	public void UpdateCostNum()
 	{
 		this.RefreshBuffCostNum = this.ViewModel.RefreshBuffCostNum;
 		this.BtnAndCostItem.UpdateCostNum(this.RefreshBuffCostNum);
 	}
 
-	// Token: 0x06017811 RID: 96273 RVA: 0x005FA272 File Offset: 0x005F8472
+	// Token: 0x06015243 RID: 86595 RVA: 0x00626C96 File Offset: 0x00624E96
 	protected override void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x06017812 RID: 96274 RVA: 0x005FA274 File Offset: 0x005F8474
+	// Token: 0x06015244 RID: 86596 RVA: 0x00626C98 File Offset: 0x00624E98
 	protected override void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x06017813 RID: 96275 RVA: 0x005FA276 File Offset: 0x005F8476
+	// Token: 0x06015245 RID: 86597 RVA: 0x00626C9A File Offset: 0x00624E9A
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData();
 	}
 
-	// Token: 0x06017814 RID: 96276 RVA: 0x005FA27E File Offset: 0x005F847E
+	// Token: 0x06015246 RID: 86598 RVA: 0x00626CA2 File Offset: 0x00624EA2
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x06017815 RID: 96277 RVA: 0x005FA280 File Offset: 0x005F8480
+	// Token: 0x06015247 RID: 86599 RVA: 0x00626CA4 File Offset: 0x00624EA4
 	protected override void OnAfterDestroy()
 	{
 		this.ViewModel.OnViewClose();
 	}
 
-	// Token: 0x06017816 RID: 96278 RVA: 0x005FA290 File Offset: 0x005F8490
+	// Token: 0x06015248 RID: 86600 RVA: 0x00626CB4 File Offset: 0x00624EB4
 	private void OnClickBtnBdSum()
 	{
 		this.ViewModel.Model.OpenViewBdSum(new bool?(true), new ETrapDefenseBdTabType?(ETrapDefenseBdTabType.BdProgress), null);
 	}
 
-	// Token: 0x06017817 RID: 96279 RVA: 0x005FA2C4 File Offset: 0x005F84C4
+	// Token: 0x06015249 RID: 86601 RVA: 0x00626CE8 File Offset: 0x00624EE8
 	public void UpdateData()
 	{
 		this.LayoutBd.RefreshByData(this.ViewModel.GetShowBdDataList(), null, true);
@@ -160,7 +160,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		this.UpdateSureBtnEnable();
 	}
 
-	// Token: 0x06017818 RID: 96280 RVA: 0x005FA370 File Offset: 0x005F8570
+	// Token: 0x0601524A RID: 86602 RVA: 0x00626D94 File Offset: 0x00624F94
 	public void UpdateCost()
 	{
 		this.RefreshBuffMaxTimes = this.ViewModel.MaxRefreshCount;
@@ -176,13 +176,13 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		this.BtnAndCostItem.SetActive(this.RefreshBuffMaxTimes > 0);
 	}
 
-	// Token: 0x06017819 RID: 96281 RVA: 0x005FA41A File Offset: 0x005F861A
+	// Token: 0x0601524B RID: 86603 RVA: 0x00626E3E File Offset: 0x0062503E
 	public void CheckBdActiveNewQuality()
 	{
 		this.BtnTagTips.SetActive(false);
 	}
 
-	// Token: 0x0601781A RID: 96282 RVA: 0x005FA428 File Offset: 0x005F8628
+	// Token: 0x0601524C RID: 86604 RVA: 0x00626E4C File Offset: 0x0062504C
 	public void UpdateSureBtnEnable()
 	{
 		bool enableClick = this.ViewModel.CurSelectBdBuffData != null || this.ViewModel.BdBuffDataList.Count <= 0;
@@ -194,7 +194,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		btnItem.SetEnableClick(enableClick);
 	}
 
-	// Token: 0x0601781B RID: 96283 RVA: 0x005FA46D File Offset: 0x005F866D
+	// Token: 0x0601524D RID: 86605 RVA: 0x00626E91 File Offset: 0x00625091
 	private TrapDefenseBdBuffSelectBdItem CreateItemBd()
 	{
 		return new TrapDefenseBdBuffSelectBdItem
@@ -203,19 +203,19 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601781C RID: 96284 RVA: 0x005FA486 File Offset: 0x005F8686
+	// Token: 0x0601524E RID: 86606 RVA: 0x00626EAA File Offset: 0x006250AA
 	private void OnClickBdItem(TrapDefenseBdData data)
 	{
 		this.ViewModel.Model.OpenViewBdSum(new bool?(true), new ETrapDefenseBdTabType?(ETrapDefenseBdTabType.BdProgress), new int?(data.Id));
 	}
 
-	// Token: 0x0601781D RID: 96285 RVA: 0x005FA4AF File Offset: 0x005F86AF
+	// Token: 0x0601524F RID: 86607 RVA: 0x00626ED3 File Offset: 0x006250D3
 	private bool OnCanSelectBdBuff()
 	{
 		return true;
 	}
 
-	// Token: 0x0601781E RID: 96286 RVA: 0x005FA4B2 File Offset: 0x005F86B2
+	// Token: 0x06015250 RID: 86608 RVA: 0x00626ED6 File Offset: 0x006250D6
 	private void OnSelectBdBuff(TrapDefenseBdBuffData data)
 	{
 		this.ViewModel.SetSelectBuff(data);
@@ -226,7 +226,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		this.LayoutBd.RefreshWithoutDataSync();
 	}
 
-	// Token: 0x0601781F RID: 96287 RVA: 0x005FA4E4 File Offset: 0x005F86E4
+	// Token: 0x06015251 RID: 86609 RVA: 0x00626F08 File Offset: 0x00625108
 	public void UpdateBuffPanelSelectState()
 	{
 		TrapDefenseBdBuffData curSelectBdBuffData = this.ViewModel.CurSelectBdBuffData;
@@ -236,7 +236,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017820 RID: 96288 RVA: 0x005FA54C File Offset: 0x005F874C
+	// Token: 0x06015252 RID: 86610 RVA: 0x00626F70 File Offset: 0x00625170
 	private void OnBtnClose()
 	{
 		if (this.ViewModel.BdBuffDataList.Count <= 0)
@@ -245,14 +245,14 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017821 RID: 96289 RVA: 0x005FA568 File Offset: 0x005F8768
+	// Token: 0x06015253 RID: 86611 RVA: 0x00626F8C File Offset: 0x0062518C
 	private void OnBtnHelp()
 	{
 		int helpIdBdBuffSelect = TrapDefenseConfig.Instance.GetHelpIdBdBuffSelect();
 		HelpController.Instance.OpenHelpById(helpIdBdBuffSelect);
 	}
 
-	// Token: 0x06017822 RID: 96290 RVA: 0x005FA58B File Offset: 0x005F878B
+	// Token: 0x06015254 RID: 86612 RVA: 0x00626FAF File Offset: 0x006251AF
 	private void OnClickBtnSure(int _)
 	{
 		if (this.ViewModel.BdBuffDataList.Count <= 0)
@@ -263,7 +263,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		this.SureBuffSelect().Forget();
 	}
 
-	// Token: 0x06017823 RID: 96291 RVA: 0x005FA5B4 File Offset: 0x005F87B4
+	// Token: 0x06015255 RID: 86613 RVA: 0x00626FD8 File Offset: 0x006251D8
 	public UniTask SureBuffSelect()
 	{
 		TrapDefenseBdBuffSelectView.<SureBuffSelect>d__37 <SureBuffSelect>d__;
@@ -274,7 +274,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		return <SureBuffSelect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017824 RID: 96292 RVA: 0x005FA5F8 File Offset: 0x005F87F8
+	// Token: 0x06015256 RID: 86614 RVA: 0x0062701C File Offset: 0x0062521C
 	public UniTask CheckPlayUpStageEffect()
 	{
 		TrapDefenseBdBuffSelectView.<CheckPlayUpStageEffect>d__38 <CheckPlayUpStageEffect>d__;
@@ -285,7 +285,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		return <CheckPlayUpStageEffect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017825 RID: 96293 RVA: 0x005FA63B File Offset: 0x005F883B
+	// Token: 0x06015257 RID: 86615 RVA: 0x0062705F File Offset: 0x0062525F
 	private void OnClickRefreshBuff(int _)
 	{
 		this.ViewModel.RequestUpdateBdBuffList().ContinueWith(delegate(bool ok)
@@ -299,7 +299,7 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		});
 	}
 
-	// Token: 0x06017826 RID: 96294 RVA: 0x005FA65C File Offset: 0x005F885C
+	// Token: 0x06015258 RID: 86616 RVA: 0x00627080 File Offset: 0x00625280
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -340,68 +340,68 @@ public class TrapDefenseBdBuffSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0400AF77 RID: 44919
+	// Token: 0x0400B37C RID: 45948
 	public PopupCaptionItem PopupCaption;
 
-	// Token: 0x0400AF78 RID: 44920
+	// Token: 0x0400B37D RID: 45949
 	public GenericLayout<TrapDefenseBdBuffSelectBdItem, TrapDefenseBdData> LayoutBd;
 
-	// Token: 0x0400AF79 RID: 44921
+	// Token: 0x0400B37E RID: 45950
 	public List<TrapDefenseBdSumBuffDescPanel> BdBuffPanelList = new List<TrapDefenseBdSumBuffDescPanel>();
 
-	// Token: 0x0400AF7A RID: 44922
+	// Token: 0x0400B37F RID: 45951
 	public ButtonAndCostItem BtnAndCostItem;
 
-	// Token: 0x0400AF7B RID: 44923
+	// Token: 0x0400B380 RID: 45952
 	public ButtonItem BtnItem;
 
-	// Token: 0x0400AF7C RID: 44924
+	// Token: 0x0400B381 RID: 45953
 	public TrapDefenseBtnTagTips BtnTagTips;
 
-	// Token: 0x0400AF7D RID: 44925
+	// Token: 0x0400B382 RID: 45954
 	public TrapDefenseBdBuffSelectViewModel ViewModel = TrapDefenseModel.Instance.ViewModeBdBuffSelect;
 
-	// Token: 0x0400AF7E RID: 44926
+	// Token: 0x0400B383 RID: 45955
 	public int RefreshBuffCostId;
 
-	// Token: 0x0400AF7F RID: 44927
+	// Token: 0x0400B384 RID: 45956
 	public int RefreshBuffCostNum;
 
-	// Token: 0x0400AF80 RID: 44928
+	// Token: 0x0400B385 RID: 45957
 	public int RefreshBuffMaxTimes;
 
-	// Token: 0x0400AF81 RID: 44929
+	// Token: 0x0400B386 RID: 45958
 	public TrapDefenseGoldCostItem GoldCostItem;
 
-	// Token: 0x020091FB RID: 37371
+	// Token: 0x0200843E RID: 33854
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402F389 RID: 193417
+		// Token: 0x0402AA8A RID: 174730
 		public const int ItemCaption = 0;
 
-		// Token: 0x0402F38A RID: 193418
+		// Token: 0x0402AA8B RID: 174731
 		public const int LayoutBd = 1;
 
-		// Token: 0x0402F38B RID: 193419
+		// Token: 0x0402AA8C RID: 174732
 		public const int BtnBdSum = 2;
 
-		// Token: 0x0402F38C RID: 193420
+		// Token: 0x0402AA8D RID: 174733
 		public const int ItemBdBuff1 = 3;
 
-		// Token: 0x0402F38D RID: 193421
+		// Token: 0x0402AA8E RID: 174734
 		public const int ItemBdBuff2 = 4;
 
-		// Token: 0x0402F38E RID: 193422
+		// Token: 0x0402AA8F RID: 174735
 		public const int ItemBdBuff3 = 5;
 
-		// Token: 0x0402F38F RID: 193423
+		// Token: 0x0402AA90 RID: 174736
 		public const int ItemBtnRefresh = 6;
 
-		// Token: 0x0402F390 RID: 193424
+		// Token: 0x0402AA91 RID: 174737
 		public const int ItemBtnSure = 7;
 
-		// Token: 0x0402F391 RID: 193425
+		// Token: 0x0402AA92 RID: 174738
 		public const int ItemTagTip = 8;
 	}
 }

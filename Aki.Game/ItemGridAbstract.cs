@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018BC RID: 6332
+// Token: 0x02000D75 RID: 3445
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 {
-	// Token: 0x0600B9A5 RID: 47525 RVA: 0x002A1AF8 File Offset: 0x0029FCF8
+	// Token: 0x06008D8E RID: 36238 RVA: 0x002AC250 File Offset: 0x002AA450
 	public ItemGridAbstract(AActor commonItemActor = null, ItemGridAbstract source = null, EUiViewName? belongView = null)
 	{
 		this.SourceItem = source;
@@ -21,7 +21,7 @@ public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 		}
 	}
 
-	// Token: 0x0600B9A6 RID: 47526 RVA: 0x002A1B18 File Offset: 0x0029FD18
+	// Token: 0x06008D8F RID: 36239 RVA: 0x002AC270 File Offset: 0x002AA470
 	protected ItemConfig GetItemConfig()
 	{
 		if (this.SourceItem != null)
@@ -31,7 +31,7 @@ public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 		return this.ItemConfig;
 	}
 
-	// Token: 0x0600B9A7 RID: 47527 RVA: 0x002A1B34 File Offset: 0x0029FD34
+	// Token: 0x06008D90 RID: 36240 RVA: 0x002AC28C File Offset: 0x002AA48C
 	public int GetItemId()
 	{
 		if (this.SourceItem != null)
@@ -41,7 +41,7 @@ public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 		return this.ItemId;
 	}
 
-	// Token: 0x0600B9A8 RID: 47528 RVA: 0x002A1B50 File Offset: 0x0029FD50
+	// Token: 0x06008D91 RID: 36241 RVA: 0x002AC2A8 File Offset: 0x002AA4A8
 	protected EUiViewName GetBelongView()
 	{
 		if (this.SourceItem != null)
@@ -51,7 +51,7 @@ public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 		return this.BelongViewName.Value;
 	}
 
-	// Token: 0x0600B9A9 RID: 47529 RVA: 0x002A1B74 File Offset: 0x0029FD74
+	// Token: 0x06008D92 RID: 36242 RVA: 0x002AC2CC File Offset: 0x002AA4CC
 	public override void Refresh(TItem data, bool isSelected, int gridIndex)
 	{
 		InventoryDefine.IGetItemData itemData = data.ItemData;
@@ -60,7 +60,7 @@ public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 		this.UniqueId = itemData.IncId;
 	}
 
-	// Token: 0x0600B9AA RID: 47530 RVA: 0x002A1BAC File Offset: 0x0029FDAC
+	// Token: 0x06008D93 RID: 36243 RVA: 0x002AC304 File Offset: 0x002AA504
 	public void RefreshByItemId(int itemId)
 	{
 		this.ItemId = itemId;
@@ -72,7 +72,7 @@ public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 		}
 	}
 
-	// Token: 0x0600B9AB RID: 47531 RVA: 0x002A1BE5 File Offset: 0x0029FDE5
+	// Token: 0x06008D94 RID: 36244 RVA: 0x002AC33D File Offset: 0x002AA53D
 	public void ShowDefaultDownText()
 	{
 		if (this.InstanceOfBehaviourPop(this))
@@ -81,7 +81,7 @@ public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 		}
 	}
 
-	// Token: 0x0600B9AC RID: 47532 RVA: 0x002A1C04 File Offset: 0x0029FE04
+	// Token: 0x06008D95 RID: 36245 RVA: 0x002AC35C File Offset: 0x002AA55C
 	[NullableContext(1)]
 	public string GetDefaultDownText()
 	{
@@ -112,7 +112,7 @@ public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 		return this.ItemCount.ToString();
 	}
 
-	// Token: 0x0600B9AD RID: 47533 RVA: 0x002A1CCC File Offset: 0x0029FECC
+	// Token: 0x06008D96 RID: 36246 RVA: 0x002AC424 File Offset: 0x002AA624
 	[NullableContext(1)]
 	private bool InstanceOfBehaviourPop(object obj)
 	{
@@ -120,27 +120,27 @@ public abstract class ItemGridAbstract : GridProxyAbstract<TItem>
 		return itemGrid != null && itemGrid.IsItemGrid;
 	}
 
-	// Token: 0x0600B9AE RID: 47534 RVA: 0x002A1CEB File Offset: 0x0029FEEB
+	// Token: 0x06008D97 RID: 36247 RVA: 0x002AC443 File Offset: 0x002AA643
 	public void SetBelongViewName(EUiViewName? viewName)
 	{
 		this.BelongViewName = viewName;
 	}
 
-	// Token: 0x04005430 RID: 21552
+	// Token: 0x040054DB RID: 21723
 	private ItemConfig ItemConfig;
 
-	// Token: 0x04005431 RID: 21553
+	// Token: 0x040054DC RID: 21724
 	private int ItemId;
 
-	// Token: 0x04005432 RID: 21554
+	// Token: 0x040054DD RID: 21725
 	private int ItemCount;
 
-	// Token: 0x04005433 RID: 21555
+	// Token: 0x040054DE RID: 21726
 	private int UniqueId;
 
-	// Token: 0x04005434 RID: 21556
+	// Token: 0x040054DF RID: 21727
 	private EUiViewName? BelongViewName;
 
-	// Token: 0x04005435 RID: 21557
+	// Token: 0x040054E0 RID: 21728
 	private readonly ItemGridAbstract SourceItem;
 }

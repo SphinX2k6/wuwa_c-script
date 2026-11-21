@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068BF RID: 26815
+	// Token: 0x0200580F RID: 22543
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CyberPunkTrialRoleView : UiViewBase
 	{
-		// Token: 0x06042EB1 RID: 274097 RVA: 0x0104B56C File Offset: 0x0104976C
+		// Token: 0x06037A09 RID: 227849 RVA: 0x00F8CB94 File Offset: 0x00F8AD94
 		[NullableContext(1)]
 		public CyberPunkTrialRoleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042EB2 RID: 274098 RVA: 0x0104B578 File Offset: 0x01049778
+		// Token: 0x06037A0A RID: 227850 RVA: 0x00F8CBA0 File Offset: 0x00F8ADA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042EB3 RID: 274099 RVA: 0x0104B668 File Offset: 0x01049868
+		// Token: 0x06037A0B RID: 227851 RVA: 0x00F8CC90 File Offset: 0x00F8AE90
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CyberPunkTrialRoleView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042EB4 RID: 274100 RVA: 0x0104B6AC File Offset: 0x010498AC
+		// Token: 0x06037A0C RID: 227852 RVA: 0x00F8CCD4 File Offset: 0x00F8AED4
 		protected override void OnStart()
 		{
 			this.CaptionItem.SetCloseCallBack(new Action(this.OnClickClose));
@@ -67,27 +67,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.PlaySpineIdle();
 		}
 
-		// Token: 0x06042EB5 RID: 274101 RVA: 0x0104B705 File Offset: 0x01049905
+		// Token: 0x06037A0D RID: 227853 RVA: 0x00F8CD2D File Offset: 0x00F8AF2D
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnTrialStateChange));
 		}
 
-		// Token: 0x06042EB6 RID: 274102 RVA: 0x0104B73F File Offset: 0x0104993F
+		// Token: 0x06037A0E RID: 227854 RVA: 0x00F8CD67 File Offset: 0x00F8AF67
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnTrialStateChange));
 		}
 
-		// Token: 0x06042EB7 RID: 274103 RVA: 0x0104B779 File Offset: 0x01049979
+		// Token: 0x06037A0F RID: 227855 RVA: 0x00F8CDA1 File Offset: 0x00F8AFA1
 		protected override void OnBeforeDestroy()
 		{
 			this.SetTrialRoleState(ERoleTrialFlowState.ActivityOff);
 		}
 
-		// Token: 0x06042EB8 RID: 274104 RVA: 0x0104B784 File Offset: 0x01049984
+		// Token: 0x06037A10 RID: 227856 RVA: 0x00F8CDAC File Offset: 0x00F8AFAC
 		private void SetTrialRoleState(ERoleTrialFlowState state)
 		{
 			CyberPunkConfig instance = CyberPunkConfig.Instance;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042EB9 RID: 274105 RVA: 0x0104B810 File Offset: 0x01049A10
+		// Token: 0x06037A11 RID: 227857 RVA: 0x00F8CE38 File Offset: 0x00F8B038
 		private void InitData()
 		{
 			List<ActivityBaseData> currentActivitiesByType = ActivityModel.Instance.GetCurrentActivitiesByType(ActivityType.EdgeRunnerActivity);
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042EBA RID: 274106 RVA: 0x0104B8FA File Offset: 0x01049AFA
+		// Token: 0x06037A12 RID: 227858 RVA: 0x00F8CF22 File Offset: 0x00F8B122
 		private void RefreshView()
 		{
 			this.SetTrialRoleState(ERoleTrialFlowState.ActivityOn);
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			rolePanel2.RefreshPanel();
 		}
 
-		// Token: 0x06042EBB RID: 274107 RVA: 0x0104B92C File Offset: 0x01049B2C
+		// Token: 0x06037A13 RID: 227859 RVA: 0x00F8CF54 File Offset: 0x00F8B154
 		private void RefreshRemainTime()
 		{
 			if (this.ActivityData == null)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042EBC RID: 274108 RVA: 0x0104B980 File Offset: 0x01049B80
+		// Token: 0x06037A14 RID: 227860 RVA: 0x00F8CFA8 File Offset: 0x00F8B1A8
 		private void PlaySpineIdle()
 		{
 			USpineSkeletonAnimationComponent spine = base.GetSpine(4);
@@ -197,19 +197,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042EBD RID: 274109 RVA: 0x0104B9CF File Offset: 0x01049BCF
+		// Token: 0x06037A15 RID: 227861 RVA: 0x00F8CFF7 File Offset: 0x00F8B1F7
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06042EBE RID: 274110 RVA: 0x0104B9D8 File Offset: 0x01049BD8
+		// Token: 0x06037A16 RID: 227862 RVA: 0x00F8D000 File Offset: 0x00F8B200
 		private void OnClickHelp()
 		{
 			HelpController.Instance.OpenHelpById(0);
 		}
 
-		// Token: 0x06042EBF RID: 274111 RVA: 0x0104B9E5 File Offset: 0x01049BE5
+		// Token: 0x06037A17 RID: 227863 RVA: 0x00F8D00D File Offset: 0x00F8B20D
 		[NullableContext(1)]
 		private void OnActivityClose(IReadOnlySet<int> closeActivities)
 		{
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042EC0 RID: 274112 RVA: 0x0104BA00 File Offset: 0x01049C00
+		// Token: 0x06037A18 RID: 227864 RVA: 0x00F8D028 File Offset: 0x00F8B228
 		private void OnTrialStateChange(int activityId)
 		{
 			if (activityId != this.ActivityId)
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			rolePanel2.RefreshPanel();
 		}
 
-		// Token: 0x06042EC1 RID: 274113 RVA: 0x0104BA30 File Offset: 0x01049C30
+		// Token: 0x06037A19 RID: 227865 RVA: 0x00F8D058 File Offset: 0x00F8B258
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -275,41 +275,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x04022D04 RID: 142596
+		// Token: 0x0401D560 RID: 120160
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022D05 RID: 142597
+		// Token: 0x0401D561 RID: 120161
 		private CyberPunkTrialRolePanel RolePanel1;
 
-		// Token: 0x04022D06 RID: 142598
+		// Token: 0x0401D562 RID: 120162
 		private CyberPunkTrialRolePanel RolePanel2;
 
-		// Token: 0x04022D07 RID: 142599
+		// Token: 0x0401D563 RID: 120163
 		private CyberPunkData ActivityData;
 
-		// Token: 0x04022D08 RID: 142600
+		// Token: 0x0401D564 RID: 120164
 		private int ActivityId;
 
-		// Token: 0x0200CA96 RID: 51862
+		// Token: 0x0200B45E RID: 46174
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403D3B9 RID: 250809
+			// Token: 0x04037C93 RID: 228499
 			public const int Caption = 0;
 
-			// Token: 0x0403D3BA RID: 250810
+			// Token: 0x04037C94 RID: 228500
 			public const int PnlRole1 = 1;
 
-			// Token: 0x0403D3BB RID: 250811
+			// Token: 0x04037C95 RID: 228501
 			public const int PnlRole2 = 2;
 
-			// Token: 0x0403D3BC RID: 250812
+			// Token: 0x04037C96 RID: 228502
 			public const int RemainTimeText = 3;
 
-			// Token: 0x0403D3BD RID: 250813
+			// Token: 0x04037C97 RID: 228503
 			public const int Spine1 = 4;
 
-			// Token: 0x0403D3BE RID: 250814
+			// Token: 0x04037C98 RID: 228504
 			public const int Spine2 = 5;
 		}
 	}

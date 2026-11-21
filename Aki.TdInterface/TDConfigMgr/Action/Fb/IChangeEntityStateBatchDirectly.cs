@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002670 RID: 9840
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200292F RID: 10543
 	public class IChangeEntityStateBatchDirectly : ChangeEntityState
 	{
-		// Token: 0x0600DC8D RID: 56461 RVA: 0x0020CE8A File Offset: 0x0020B08A
+		// Token: 0x0600EA59 RID: 59993 RVA: 0x0022959A File Offset: 0x0022779A
 		public static IChangeEntityStateBatchDirectly Create(IChangeEntityStateBatchDirectly? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700416F RID: 16751
-		// (get) Token: 0x0600DC8E RID: 56462 RVA: 0x0020CEA9 File Offset: 0x0020B0A9
+		// Token: 0x170044A9 RID: 17577
+		// (get) Token: 0x0600EA5A RID: 59994 RVA: 0x002295B9 File Offset: 0x002277B9
 		public override EChangeEntityState Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004170 RID: 16752
-		// (get) Token: 0x0600DC8F RID: 56463 RVA: 0x0020CEB6 File Offset: 0x0020B0B6
+		// Token: 0x170044AA RID: 17578
+		// (get) Token: 0x0600EA5B RID: 59995 RVA: 0x002295C6 File Offset: 0x002277C6
 		public override int EntityId
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004171 RID: 16753
-		// (get) Token: 0x0600DC90 RID: 56464 RVA: 0x0020CEC4 File Offset: 0x0020B0C4
+		// Token: 0x170044AB RID: 17579
+		// (get) Token: 0x0600EA5C RID: 59996 RVA: 0x002295D4 File Offset: 0x002277D4
 		public virtual List<int> EntityIds
 		{
 			get
@@ -64,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004172 RID: 16754
-		// (get) Token: 0x0600DC91 RID: 56465 RVA: 0x0020CF28 File Offset: 0x0020B128
+		// Token: 0x170044AC RID: 17580
+		// (get) Token: 0x0600EA5D RID: 59997 RVA: 0x00229638 File Offset: 0x00227838
 		public virtual string State
 		{
 			get
@@ -74,8 +71,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004173 RID: 16755
-		// (get) Token: 0x0600DC92 RID: 56466 RVA: 0x0020CF38 File Offset: 0x0020B138
+		// Token: 0x170044AD RID: 17581
+		// (get) Token: 0x0600EA5E RID: 59998 RVA: 0x00229648 File Offset: 0x00227848
 		public virtual bool? DelayChange
 		{
 			get
@@ -88,13 +85,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A98 RID: 31384
+		// Token: 0x0400812F RID: 33071
 		private IChangeEntityStateBatchDirectly Instance;
 
-		// Token: 0x04007A99 RID: 31385
+		// Token: 0x04008130 RID: 33072
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007A9A RID: 31386
+		// Token: 0x04008131 RID: 33073
 		private bool _EntityIdsInited;
 	}
 }

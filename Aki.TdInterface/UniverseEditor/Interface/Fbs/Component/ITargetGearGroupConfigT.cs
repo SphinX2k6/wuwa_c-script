@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A2C RID: 23084
+	// Token: 0x02006039 RID: 24633
 	public class ITargetGearGroupConfigT
 	{
-		// Token: 0x1700ADA3 RID: 44451
-		// (get) Token: 0x060273E0 RID: 160736 RVA: 0x00566808 File Offset: 0x00564A08
-		// (set) Token: 0x060273E1 RID: 160737 RVA: 0x00566810 File Offset: 0x00564A10
+		// Token: 0x1700B6DB RID: 46811
+		// (get) Token: 0x06029958 RID: 170328 RVA: 0x005AD7CC File Offset: 0x005AB9CC
+		// (set) Token: 0x06029959 RID: 170329 RVA: 0x005AD7D4 File Offset: 0x005AB9D4
 		public List<int> Entitys { get; set; }
 
-		// Token: 0x1700ADA4 RID: 44452
-		// (get) Token: 0x060273E2 RID: 160738 RVA: 0x00566819 File Offset: 0x00564A19
-		// (set) Token: 0x060273E3 RID: 160739 RVA: 0x00566821 File Offset: 0x00564A21
+		// Token: 0x1700B6DC RID: 46812
+		// (get) Token: 0x0602995A RID: 170330 RVA: 0x005AD7DD File Offset: 0x005AB9DD
+		// (set) Token: 0x0602995B RID: 170331 RVA: 0x005AD7E5 File Offset: 0x005AB9E5
 		public TTargetGearGroupSuccessConditionUnion SuccessCondition { get; set; }
 
-		// Token: 0x1700ADA5 RID: 44453
-		// (get) Token: 0x060273E4 RID: 160740 RVA: 0x0056682A File Offset: 0x00564A2A
-		// (set) Token: 0x060273E5 RID: 160741 RVA: 0x00566832 File Offset: 0x00564A32
+		// Token: 0x1700B6DD RID: 46813
+		// (get) Token: 0x0602995C RID: 170332 RVA: 0x005AD7EE File Offset: 0x005AB9EE
+		// (set) Token: 0x0602995D RID: 170333 RVA: 0x005AD7F6 File Offset: 0x005AB9F6
 		public List<TTargetGearGroupFailureConditionUnion> FailureConditions { get; set; }
 
-		// Token: 0x1700ADA6 RID: 44454
-		// (get) Token: 0x060273E6 RID: 160742 RVA: 0x0056683B File Offset: 0x00564A3B
-		// (set) Token: 0x060273E7 RID: 160743 RVA: 0x00566843 File Offset: 0x00564A43
+		// Token: 0x1700B6DE RID: 46814
+		// (get) Token: 0x0602995E RID: 170334 RVA: 0x005AD7FF File Offset: 0x005AB9FF
+		// (set) Token: 0x0602995F RID: 170335 RVA: 0x005AD807 File Offset: 0x005ABA07
 		public List<ICheckGearHitT> CheckGears { get; set; }
 
-		// Token: 0x1700ADA7 RID: 44455
-		// (get) Token: 0x060273E8 RID: 160744 RVA: 0x0056684C File Offset: 0x00564A4C
-		// (set) Token: 0x060273E9 RID: 160745 RVA: 0x00566854 File Offset: 0x00564A54
+		// Token: 0x1700B6DF RID: 46815
+		// (get) Token: 0x06029960 RID: 170336 RVA: 0x005AD810 File Offset: 0x005ABA10
+		// (set) Token: 0x06029961 RID: 170337 RVA: 0x005AD818 File Offset: 0x005ABA18
 		public TGroupFinishConfigUnion FinishConfig { get; set; }
 
-		// Token: 0x1700ADA8 RID: 44456
-		// (get) Token: 0x060273EA RID: 160746 RVA: 0x0056685D File Offset: 0x00564A5D
-		// (set) Token: 0x060273EB RID: 160747 RVA: 0x00566865 File Offset: 0x00564A65
+		// Token: 0x1700B6E0 RID: 46816
+		// (get) Token: 0x06029962 RID: 170338 RVA: 0x005AD821 File Offset: 0x005ABA21
+		// (set) Token: 0x06029963 RID: 170339 RVA: 0x005AD829 File Offset: 0x005ABA29
 		public byte NullMask { get; set; }
 
-		// Token: 0x060273EC RID: 160748 RVA: 0x0056686E File Offset: 0x00564A6E
+		// Token: 0x06029964 RID: 170340 RVA: 0x005AD832 File Offset: 0x005ABA32
 		public ITargetGearGroupConfigT()
 		{
 			this.Entitys = null;

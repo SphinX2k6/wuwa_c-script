@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.PathLine.FogLine
 {
-	// Token: 0x02003EEA RID: 16106
+	// Token: 0x020031AC RID: 12716
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/PathLine/FogLine/S_FogToAreaIDs.S_FogToAreaIDs")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 18)]
 	public class S_FogToAreaIDs : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028C83 RID: 167043 RVA: 0x009B47E6 File Offset: 0x009B29E6
+		// Token: 0x0601F660 RID: 128608 RVA: 0x0092CEE2 File Offset: 0x0092B0E2
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (S_FogToAreaIDs._ScriptStructPtr != 0) ? S_FogToAreaIDs._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/PathLine/FogLine/S_FogToAreaIDs.S_FogToAreaIDs", ref S_FogToAreaIDs._ScriptStructPtr);
 		}
 
-		// Token: 0x17005F95 RID: 24469
-		// (get) Token: 0x06028C84 RID: 167044 RVA: 0x009B480C File Offset: 0x009B2A0C
-		// (set) Token: 0x06028C85 RID: 167045 RVA: 0x009B484F File Offset: 0x009B2A4F
+		// Token: 0x1700390C RID: 14604
+		// (get) Token: 0x0601F661 RID: 128609 RVA: 0x0092CF08 File Offset: 0x0092B108
+		// (set) Token: 0x0601F662 RID: 128610 RVA: 0x0092CF4B File Offset: 0x0092B14B
 		public TArray<int> AreaFogIDs
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.Data.PathLine.FogLine
 				TArray<int> result;
 				if ((result = this._AreaFogIDs) == null)
 				{
-					result = (this._AreaFogIDs = new TArray<int>(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._AreaFogIDs = new TArray<int>(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_AreaFogIDs, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,95 +40,87 @@ namespace AkiClient.Game.Aki.Data.PathLine.FogLine
 			}
 		}
 
-		// Token: 0x17005F96 RID: 24470
-		// (get) Token: 0x06028C86 RID: 167046 RVA: 0x009B485D File Offset: 0x009B2A5D
-		// (set) Token: 0x06028C87 RID: 167047 RVA: 0x009B486D File Offset: 0x009B2A6D
+		// Token: 0x1700390D RID: 14605
+		// (get) Token: 0x0601F663 RID: 128611 RVA: 0x0092CF59 File Offset: 0x0092B159
+		// (set) Token: 0x0601F664 RID: 128612 RVA: 0x0092CF69 File Offset: 0x0092B169
 		public unsafe bool IsFogP1
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_IsFogP1) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_IsFogP1) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005F97 RID: 24471
-		// (get) Token: 0x06028C88 RID: 167048 RVA: 0x009B487E File Offset: 0x009B2A7E
-		// (set) Token: 0x06028C89 RID: 167049 RVA: 0x009B488E File Offset: 0x009B2A8E
+		// Token: 0x1700390E RID: 14606
+		// (get) Token: 0x0601F665 RID: 128613 RVA: 0x0092CF7A File Offset: 0x0092B17A
+		// (set) Token: 0x0601F666 RID: 128614 RVA: 0x0092CF8A File Offset: 0x0092B18A
 		public unsafe bool IsFogP2
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_IsFogP2) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)S_FogToAreaIDs.__PropertyOffset_IsFogP2) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06028C8A RID: 167050 RVA: 0x009B489F File Offset: 0x009B2A9F
+		// Token: 0x0601F667 RID: 128615 RVA: 0x0092CF9B File Offset: 0x0092B19B
 		public S_FogToAreaIDs()
 		{
 		}
 
-		// Token: 0x06028C8B RID: 167051 RVA: 0x009B48A7 File Offset: 0x009B2AA7
-		public S_FogToAreaIDs(TArray<int> AreaFogIDs, bool IsFogP1, bool IsFogP2)
-		{
-			this.AreaFogIDs = AreaFogIDs;
-			this.IsFogP1 = IsFogP1;
-			this.IsFogP2 = IsFogP2;
-		}
-
-		// Token: 0x06028C8C RID: 167052 RVA: 0x009B48C4 File Offset: 0x009B2AC4
+		// Token: 0x0601F668 RID: 128616 RVA: 0x0092CFA3 File Offset: 0x0092B1A3
 		protected override IntPtr GetUStructPtr()
 		{
 			return S_FogToAreaIDs.StaticStruct();
 		}
 
-		// Token: 0x06028C8D RID: 167053 RVA: 0x009B48D0 File Offset: 0x009B2AD0
+		// Token: 0x0601F669 RID: 128617 RVA: 0x0092CFAF File Offset: 0x0092B1AF
 		[NullableContext(2)]
 		public S_FogToAreaIDs(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028C8E RID: 167054 RVA: 0x009B48DA File Offset: 0x009B2ADA
+		// Token: 0x0601F66A RID: 128618 RVA: 0x0092CFB9 File Offset: 0x0092B1B9
 		public S_FogToAreaIDs(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028C8F RID: 167055 RVA: 0x009B48E5 File Offset: 0x009B2AE5
+		// Token: 0x0601F66B RID: 128619 RVA: 0x0092CFC4 File Offset: 0x0092B1C4
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new S_FogToAreaIDs(Pointer, false, true);
 		}
 
-		// Token: 0x06028C90 RID: 167056 RVA: 0x009B48EF File Offset: 0x009B2AEF
+		// Token: 0x0601F66C RID: 128620 RVA: 0x0092CFCE File Offset: 0x0092B1CE
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new S_FogToAreaIDs(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014D8B RID: 85387
+		// Token: 0x04010D4C RID: 68940
 		public const string __ObjectPath = "/Game/Aki/Data/PathLine/FogLine/S_FogToAreaIDs.S_FogToAreaIDs";
 
-		// Token: 0x04014D8C RID: 85388
+		// Token: 0x04010D4D RID: 68941
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014D8D RID: 85389
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010D4E RID: 68942
+		internal static int __PropertyOffset_AreaFogIDs;
 
-		// Token: 0x04014D8E RID: 85390
+		// Token: 0x04010D4F RID: 68943
 		[Nullable(2)]
 		private TArray<int> _AreaFogIDs;
 
-		// Token: 0x04014D8F RID: 85391
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010D50 RID: 68944
+		internal static int __PropertyOffset_IsFogP1;
 
-		// Token: 0x04014D90 RID: 85392
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010D51 RID: 68945
+		internal static int __PropertyOffset_IsFogP2;
 	}
 }

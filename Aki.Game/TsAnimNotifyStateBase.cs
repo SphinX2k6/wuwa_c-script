@@ -15,8 +15,8 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateBase.TsAnimNotifyStateBase_C")]
 public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000299 RID: 665
-	// (get) Token: 0x06001030 RID: 4144 RVA: 0x0005CDF0 File Offset: 0x0005AFF0
+	// Token: 0x1700029C RID: 668
+	// (get) Token: 0x06001036 RID: 4150 RVA: 0x0005E020 File Offset: 0x0005C220
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<SSkillBehaviorCondition> ANS执行的前提条件
@@ -34,7 +34,7 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x06001031 RID: 4145 RVA: 0x0005CE29 File Offset: 0x0005B029
+	// Token: 0x06001037 RID: 4151 RVA: 0x0005E059 File Offset: 0x0005C259
 	protected bool SetConditionFail(USkeletalMeshComponent meshComp)
 	{
 		if (this.ConditionFail == null)
@@ -48,7 +48,7 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		return false;
 	}
 
-	// Token: 0x06001032 RID: 4146 RVA: 0x0005CE4F File Offset: 0x0005B04F
+	// Token: 0x06001038 RID: 4152 RVA: 0x0005E07F File Offset: 0x0005C27F
 	protected bool GetConditionResult(USkeletalMeshComponent meshComp)
 	{
 		if (meshComp == null)
@@ -59,7 +59,7 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		return conditionFail == null || !conditionFail.Contains(meshComp);
 	}
 
-	// Token: 0x06001033 RID: 4147 RVA: 0x0005CE6E File Offset: 0x0005B06E
+	// Token: 0x06001039 RID: 4153 RVA: 0x0005E09E File Offset: 0x0005C29E
 	protected void ClearConditionResult(USkeletalMeshComponent meshComp)
 	{
 		if (meshComp != null)
@@ -73,7 +73,7 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x06001034 RID: 4148 RVA: 0x0005CE88 File Offset: 0x0005B088
+	// Token: 0x0600103A RID: 4154 RVA: 0x0005E0B8 File Offset: 0x0005C2B8
 	protected IBeginSkillBehaviorConditionParam CreateBeginConditionParam(USkeletalMeshComponent meshComp)
 	{
 		TsBaseCharacter tsBaseCharacter = ((meshComp != null) ? meshComp.GetOwner() : null) as TsBaseCharacter;
@@ -97,7 +97,7 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		};
 	}
 
-	// Token: 0x06001035 RID: 4149 RVA: 0x0005CEF4 File Offset: 0x0005B0F4
+	// Token: 0x0600103B RID: 4155 RVA: 0x0005E124 File Offset: 0x0005C324
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_NotifyBeginConditionCheck(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -113,14 +113,14 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		return SkillBehaviorCondition.SatisfyGroup(this.ANS执行的前提条件, string.Empty, beginSkillBehaviorConditionParam) || this.SetConditionFail(meshComp);
 	}
 
-	// Token: 0x06001036 RID: 4150 RVA: 0x0005CF47 File Offset: 0x0005B147
+	// Token: 0x0600103C RID: 4156 RVA: 0x0005E177 File Offset: 0x0005C377
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_NotifyTickConditionCheck(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
 		return this.GetConditionResult(meshComp);
 	}
 
-	// Token: 0x06001037 RID: 4151 RVA: 0x0005CF50 File Offset: 0x0005B150
+	// Token: 0x0600103D RID: 4157 RVA: 0x0005E180 File Offset: 0x0005C380
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_NotifyEndConditionCheck(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -129,7 +129,7 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		return conditionResult;
 	}
 
-	// Token: 0x06001038 RID: 4152 RVA: 0x0005CF60 File Offset: 0x0005B160
+	// Token: 0x0600103E RID: 4158 RVA: 0x0005E190 File Offset: 0x0005C390
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateBase._ClassPtr == IntPtr.Zero)
@@ -139,23 +139,23 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		return TsAnimNotifyStateBase._ClassPtr;
 	}
 
-	// Token: 0x06001039 RID: 4153 RVA: 0x0005CF84 File Offset: 0x0005B184
+	// Token: 0x0600103F RID: 4159 RVA: 0x0005E1B4 File Offset: 0x0005C3B4
 	public TsAnimNotifyStateBase() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600103A RID: 4154 RVA: 0x0005CFAC File Offset: 0x0005B1AC
+	// Token: 0x06001040 RID: 4160 RVA: 0x0005E1DC File Offset: 0x0005C3DC
 	[NullableContext(1)]
 	public TsAnimNotifyStateBase(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateBase.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600103B RID: 4155 RVA: 0x0005CFDF File Offset: 0x0005B1DF
+	// Token: 0x06001041 RID: 4161 RVA: 0x0005E20F File Offset: 0x0005C40F
 	protected TsAnimNotifyStateBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600103C RID: 4156 RVA: 0x0005CFE8 File Offset: 0x0005B1E8
+	// Token: 0x06001042 RID: 4162 RVA: 0x0005E218 File Offset: 0x0005C418
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyBeginConditionCheck_Implementation(UKuroAnimNotifyState.__K2_NotifyBeginConditionCheck_FunctionParams* __Params)
 	{
@@ -164,7 +164,7 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		__Params->__Result = this.K2_NotifyBeginConditionCheck(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x0600103D RID: 4157 RVA: 0x0005D024 File Offset: 0x0005B224
+	// Token: 0x06001043 RID: 4163 RVA: 0x0005E254 File Offset: 0x0005C454
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyTickConditionCheck_Implementation(UKuroAnimNotifyState.__K2_NotifyTickConditionCheck_FunctionParams* __Params)
 	{
@@ -173,7 +173,7 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		__Params->__Result = this.K2_NotifyTickConditionCheck(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->FrameDeltaTime);
 	}
 
-	// Token: 0x0600103E RID: 4158 RVA: 0x0005D060 File Offset: 0x0005B260
+	// Token: 0x06001044 RID: 4164 RVA: 0x0005E290 File Offset: 0x0005C490
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyEndConditionCheck_Implementation(UKuroAnimNotifyState.__K2_NotifyEndConditionCheck_FunctionParams* __Params)
 	{
@@ -182,7 +182,7 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 		__Params->__Result = this.K2_NotifyEndConditionCheck(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04000C85 RID: 3205
+	// Token: 0x04000C8D RID: 3213
 	[Nullable(new byte[]
 	{
 		2,
@@ -190,20 +190,20 @@ public abstract class TsAnimNotifyStateBase : UKuroAnimNotifyState, IUnrealUObje
 	})]
 	private HashSet<USkeletalMeshComponent> ConditionFail;
 
-	// Token: 0x04000C86 RID: 3206
+	// Token: 0x04000C8E RID: 3214
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateBase.TsAnimNotifyStateBase_C";
 
-	// Token: 0x04000C87 RID: 3207
+	// Token: 0x04000C8F RID: 3215
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000C88 RID: 3208
+	// Token: 0x04000C90 RID: 3216
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000C89 RID: 3209
+	// Token: 0x04000C91 RID: 3217
 	private static int __PropertyOffset_ANS执行的前提条件;
 
-	// Token: 0x04000C8A RID: 3210
+	// Token: 0x04000C92 RID: 3218
 	[Nullable(new byte[]
 	{
 		2,

@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 {
-	// Token: 0x0200633E RID: 25406
+	// Token: 0x020052BC RID: 21180
 	public class PinballLevelInfoScoreItem : UiPanelBase
 	{
-		// Token: 0x0603FEF2 RID: 261874 RVA: 0x00F78548 File Offset: 0x00F76748
+		// Token: 0x06034BB3 RID: 215987 RVA: 0x00EBF4A4 File Offset: 0x00EBD6A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FEF3 RID: 261875 RVA: 0x00F78694 File Offset: 0x00F76894
+		// Token: 0x06034BB4 RID: 215988 RVA: 0x00EBF5F0 File Offset: 0x00EBD7F0
 		[NullableContext(1)]
 		public void Refresh(IPinballLevelScoreData data)
 		{
@@ -61,35 +61,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			base.GetText(3).SetText(data.ConfigScore.ToString(), true);
 		}
 
-		// Token: 0x0603FEF4 RID: 261876 RVA: 0x00F7877F File Offset: 0x00F7697F
+		// Token: 0x06034BB5 RID: 215989 RVA: 0x00EBF6DB File Offset: 0x00EBD8DB
 		private void OnClickIcon()
 		{
 			if (this.RewardItemId == 0)
 			{
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(this.RewardItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.RewardItemId, true, null, false);
 		}
 
-		// Token: 0x0402158E RID: 136590
+		// Token: 0x0401BEBD RID: 114365
 		private int RewardItemId;
 
-		// Token: 0x0200C555 RID: 50517
+		// Token: 0x0200AF3C RID: 44860
 		private enum EComponent
 		{
-			// Token: 0x0403B8F4 RID: 243956
+			// Token: 0x04036256 RID: 221782
 			DoneItem,
-			// Token: 0x0403B8F5 RID: 243957
+			// Token: 0x04036257 RID: 221783
 			TxtScoreRewardNum,
-			// Token: 0x0403B8F6 RID: 243958
+			// Token: 0x04036258 RID: 221784
 			TxtScore,
-			// Token: 0x0403B8F7 RID: 243959
+			// Token: 0x04036259 RID: 221785
 			TxtLightScore,
-			// Token: 0x0403B8F8 RID: 243960
+			// Token: 0x0403625A RID: 221786
 			BtnIcon,
-			// Token: 0x0403B8F9 RID: 243961
+			// Token: 0x0403625B RID: 221787
 			SprIconDone,
-			// Token: 0x0403B8FA RID: 243962
+			// Token: 0x0403625C RID: 221788
 			TexItemIcon
 		}
 	}

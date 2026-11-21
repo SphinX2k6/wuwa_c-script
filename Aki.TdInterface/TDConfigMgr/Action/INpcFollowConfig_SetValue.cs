@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C69 RID: 7273
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E62 RID: 7778
 	public class INpcFollowConfig_SetValue
 	{
-		// Token: 0x04005EAA RID: 24234
+		// Token: 0x040063E4 RID: 25572
 		public IPerformerRangeBoundaryActionTrigger PerformerWhenEnter;
 
-		// Token: 0x04005EAB RID: 24235
+		// Token: 0x040063E5 RID: 25573
 		public IPerformerRangeBoundaryActionTrigger PerformerWhenExit;
 	}
 }

@@ -4,28 +4,28 @@ using CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare
 {
-	// Token: 0x02005142 RID: 20802
+	// Token: 0x02004112 RID: 16658
 	[NullableContext(2)]
 	public interface IPhantomArenaMainViewOpenParam
 	{
-		// Token: 0x170080A2 RID: 32930
-		// (get) Token: 0x06035249 RID: 217673
-		// (set) Token: 0x0603524A RID: 217674
+		// Token: 0x17005462 RID: 21602
+		// (get) Token: 0x0602A145 RID: 172357
+		// (set) Token: 0x0602A146 RID: 172358
 		int ChallengeId { get; set; }
 
-		// Token: 0x170080A3 RID: 32931
-		// (get) Token: 0x0603524B RID: 217675
-		// (set) Token: 0x0603524C RID: 217676
+		// Token: 0x17005463 RID: 21603
+		// (get) Token: 0x0602A147 RID: 172359
+		// (set) Token: 0x0602A148 RID: 172360
 		EPhantomArenaChildViewName OpenView { get; set; }
 
-		// Token: 0x170080A4 RID: 32932
-		// (get) Token: 0x0603524D RID: 217677
-		// (set) Token: 0x0603524E RID: 217678
+		// Token: 0x17005464 RID: 21604
+		// (get) Token: 0x0602A149 RID: 172361
+		// (set) Token: 0x0602A14A RID: 172362
 		int ActivityId { get; set; }
 
-		// Token: 0x170080A5 RID: 32933
-		// (get) Token: 0x0603524F RID: 217679
-		// (set) Token: 0x06035250 RID: 217680
+		// Token: 0x17005465 RID: 21605
+		// (get) Token: 0x0602A14B RID: 172363
+		// (set) Token: 0x0602A14C RID: 172364
 		DeckInfo RecommendDeck { get; set; }
 	}
 }

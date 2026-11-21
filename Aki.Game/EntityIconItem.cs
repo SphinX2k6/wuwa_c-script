@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020025CF RID: 9679
+// Token: 0x02001ABA RID: 6842
 [NullableContext(2)]
 [Nullable(0)]
 public class EntityIconItem : UiPanelBase
 {
-	// Token: 0x06013A23 RID: 80419 RVA: 0x004E8F96 File Offset: 0x004E7196
+	// Token: 0x06010F03 RID: 69379 RVA: 0x004F7B96 File Offset: 0x004F5D96
 	public EntityIconItem(UUIItem item)
 	{
 		this.Item = item;
 		this.UiSequencePlayer = new LevelSequencePlayer(item);
 	}
 
-	// Token: 0x06013A24 RID: 80420 RVA: 0x004E8FB1 File Offset: 0x004E71B1
+	// Token: 0x06010F04 RID: 69380 RVA: 0x004F7BB1 File Offset: 0x004F5DB1
 	public UUIItem GetItsItem()
 	{
 		return this.Item;
 	}
 
-	// Token: 0x06013A25 RID: 80421 RVA: 0x004E8FB9 File Offset: 0x004E71B9
+	// Token: 0x06010F05 RID: 69381 RVA: 0x004F7BB9 File Offset: 0x004F5DB9
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class EntityIconItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013A26 RID: 80422 RVA: 0x004E8FF2 File Offset: 0x004E71F2
+	// Token: 0x06010F06 RID: 69382 RVA: 0x004F7BF2 File Offset: 0x004F5DF2
 	public void InitSpr()
 	{
 		UUIItem item = base.GetItem(0);
@@ -48,7 +48,7 @@ public class EntityIconItem : UiPanelBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x06013A27 RID: 80423 RVA: 0x004E901C File Offset: 0x004E721C
+	// Token: 0x06010F07 RID: 69383 RVA: 0x004F7C1C File Offset: 0x004F5E1C
 	public void UpdateNowIcon(ESprColor toColor)
 	{
 		switch (toColor)
@@ -105,22 +105,22 @@ public class EntityIconItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04009409 RID: 37897
+	// Token: 0x0400955F RID: 38239
 	protected LevelSequencePlayer UiSequencePlayer;
 
-	// Token: 0x0400940A RID: 37898
+	// Token: 0x04009560 RID: 38240
 	protected UUIItem Item;
 
-	// Token: 0x0400940B RID: 37899
+	// Token: 0x04009561 RID: 38241
 	protected ESprColor ItsColor;
 
-	// Token: 0x02008BDE RID: 35806
+	// Token: 0x02007D66 RID: 32102
 	[NullableContext(0)]
 	private enum EItemIconType
 	{
-		// Token: 0x0402D678 RID: 185976
+		// Token: 0x0402898D RID: 166285
 		SprGreen,
-		// Token: 0x0402D679 RID: 185977
+		// Token: 0x0402898E RID: 166286
 		SprYellow
 	}
 }

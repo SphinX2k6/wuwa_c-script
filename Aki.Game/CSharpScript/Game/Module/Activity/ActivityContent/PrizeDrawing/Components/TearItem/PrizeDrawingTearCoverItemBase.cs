@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components.TearItem
 {
-	// Token: 0x020062AC RID: 25260
+	// Token: 0x0200522A RID: 21034
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PrizeDrawingTearCoverItemBase : UiPanelBase
 	{
-		// Token: 0x0603F898 RID: 260248 RVA: 0x00F5D730 File Offset: 0x00F5B930
+		// Token: 0x06034559 RID: 214361 RVA: 0x00EA468C File Offset: 0x00EA288C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F899 RID: 260249 RVA: 0x00F5D79C File Offset: 0x00F5B99C
+		// Token: 0x0603455A RID: 214362 RVA: 0x00EA46F8 File Offset: 0x00EA28F8
 		[NullableContext(1)]
 		public void AttachTearItemToContent(PrizeDrawingTearItemBase tearItem)
 		{
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			tearItem.GetRootItem().K2_AttachTo(base.GetItem(0), default(FName), EAttachLocation.KeepRelativeOffset, true);
 		}
 
-		// Token: 0x0603F89A RID: 260250 RVA: 0x00F5D7E2 File Offset: 0x00F5B9E2
+		// Token: 0x0603455B RID: 214363 RVA: 0x00EA473E File Offset: 0x00EA293E
 		public PrizeDrawingTearItemBase GetTearItem()
 		{
 			return this.TearItem;
 		}
 
-		// Token: 0x04021399 RID: 136089
+		// Token: 0x0401BCC8 RID: 113864
 		protected PrizeDrawingTearItemBase TearItem;
 	}
 }

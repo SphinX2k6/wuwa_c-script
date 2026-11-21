@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001389 RID: 5001
+	// Token: 0x020014DA RID: 5338
 	public class IEnterDungeonIdCondition : IEnterDungeon
 	{
-		// Token: 0x0600726B RID: 29291 RVA: 0x00113350 File Offset: 0x00111550
-		[NullableContext(1)]
+		// Token: 0x06007911 RID: 30993 RVA: 0x001219D4 File Offset: 0x0011FBD4
 		public static IEnterDungeonIdCondition Create(IEnterDungeonIdCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700252C RID: 9516
-		// (get) Token: 0x0600726C RID: 29292 RVA: 0x0011336F File Offset: 0x0011156F
+		// Token: 0x170026FF RID: 9983
+		// (get) Token: 0x06007912 RID: 30994 RVA: 0x001219F3 File Offset: 0x0011FBF3
 		public override EDungeonConditionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700252D RID: 9517
-		// (get) Token: 0x0600726D RID: 29293 RVA: 0x0011337C File Offset: 0x0011157C
+		// Token: 0x17002700 RID: 9984
+		// (get) Token: 0x06007913 RID: 30995 RVA: 0x00121A00 File Offset: 0x0011FC00
 		public virtual int DungeonId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004221 RID: 16929
+		// Token: 0x040045A2 RID: 17826
 		private IEnterDungeonIdCondition Instance;
 	}
 }

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027B4 RID: 10164
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A87 RID: 10887
 	public class RemoveTrialCharacter : ActionParams
 	{
-		// Token: 0x0600E228 RID: 57896 RVA: 0x002169C9 File Offset: 0x00214BC9
+		// Token: 0x0600F04A RID: 61514 RVA: 0x0023379D File Offset: 0x0023199D
 		public static RemoveTrialCharacter Create(IRemoveTrialCharacter? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004482 RID: 17538
-		// (get) Token: 0x0600E229 RID: 57897 RVA: 0x002169E8 File Offset: 0x00214BE8
+		// Token: 0x170047EA RID: 18410
+		// (get) Token: 0x0600F04B RID: 61515 RVA: 0x002337BC File Offset: 0x002319BC
 		public virtual int CharacterId
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004483 RID: 17539
-		// (get) Token: 0x0600E22A RID: 57898 RVA: 0x002169F8 File Offset: 0x00214BF8
+		// Token: 0x170047EB RID: 18411
+		// (get) Token: 0x0600F04C RID: 61516 RVA: 0x002337CC File Offset: 0x002319CC
 		public virtual List<int> CharacterGroup
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004484 RID: 17540
-		// (get) Token: 0x0600E22B RID: 57899 RVA: 0x00216A5C File Offset: 0x00214C5C
+		// Token: 0x170047EC RID: 18412
+		// (get) Token: 0x0600F04D RID: 61517 RVA: 0x00233830 File Offset: 0x00231A30
 		public virtual bool? IsRemoveTips
 		{
 			get
@@ -68,8 +65,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004485 RID: 17541
-		// (get) Token: 0x0600E22C RID: 57900 RVA: 0x00216A94 File Offset: 0x00214C94
+		// Token: 0x170047ED RID: 18413
+		// (get) Token: 0x0600F04E RID: 61518 RVA: 0x00233868 File Offset: 0x00231A68
 		public virtual bool? EnableSeamlessTeamSwitch
 		{
 			get
@@ -82,8 +79,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004486 RID: 17542
-		// (get) Token: 0x0600E22D RID: 57901 RVA: 0x00216ACC File Offset: 0x00214CCC
+		// Token: 0x170047EE RID: 18414
+		// (get) Token: 0x0600F04F RID: 61519 RVA: 0x002338A0 File Offset: 0x00231AA0
 		public virtual bool? OnlyLowMemoryDeviceExecute
 		{
 			get
@@ -96,13 +93,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D70 RID: 32112
+		// Token: 0x04008427 RID: 33831
 		private IRemoveTrialCharacter Instance;
 
-		// Token: 0x04007D71 RID: 32113
+		// Token: 0x04008428 RID: 33832
 		private List<int> _CharacterGroupCache;
 
-		// Token: 0x04007D72 RID: 32114
+		// Token: 0x04008429 RID: 33833
 		private bool _CharacterGroupInited;
 	}
 }

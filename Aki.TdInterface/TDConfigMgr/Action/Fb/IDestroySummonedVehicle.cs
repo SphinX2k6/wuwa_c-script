@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A33 RID: 10803
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D20 RID: 11552
 	public class IDestroySummonedVehicle : IDestroySummonedEntitiesType
 	{
-		// Token: 0x0600EDFC RID: 60924 RVA: 0x0022AC2B File Offset: 0x00228E2B
+		// Token: 0x0600FC94 RID: 64660 RVA: 0x002485DF File Offset: 0x002467DF
 		public static IDestroySummonedVehicle Create(IDestroySummonedVehicle? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B58 RID: 19288
-		// (get) Token: 0x0600EDFD RID: 60925 RVA: 0x0022AC4A File Offset: 0x00228E4A
+		// Token: 0x17004F02 RID: 20226
+		// (get) Token: 0x0600FC95 RID: 64661 RVA: 0x002485FE File Offset: 0x002467FE
 		public override ESummonEntityType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B59 RID: 19289
-		// (get) Token: 0x0600EDFE RID: 60926 RVA: 0x0022AC57 File Offset: 0x00228E57
+		// Token: 0x17004F03 RID: 20227
+		// (get) Token: 0x0600FC96 RID: 64662 RVA: 0x0024860B File Offset: 0x0024680B
 		public override string TemplateId
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082F9 RID: 33529
+		// Token: 0x040089EC RID: 35308
 		private IDestroySummonedVehicle Instance;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001019 RID: 4121
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001145 RID: 4421
 	public class IMonsterPointEntityConfig
 	{
-		// Token: 0x06005BF6 RID: 23542 RVA: 0x000DEF5C File Offset: 0x000DD15C
+		// Token: 0x060061D8 RID: 25048 RVA: 0x000EBC54 File Offset: 0x000E9E54
 		private IMonsterPointEntityConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005BF7 RID: 23543 RVA: 0x000DEF94 File Offset: 0x000DD194
+		// Token: 0x060061D9 RID: 25049 RVA: 0x000EBC8C File Offset: 0x000E9E8C
 		public static IMonsterPointEntityConfig Create([Nullable(2)] IMonsterPointEntityConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BF8 RID: 23544 RVA: 0x000DEFA7 File Offset: 0x000DD1A7
+		// Token: 0x060061DA RID: 25050 RVA: 0x000EBC9F File Offset: 0x000E9E9F
 		public static IMonsterPointEntityConfig CreateFromSetValue([Nullable(2)] IMonsterPointEntityConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BF9 RID: 23545 RVA: 0x000DEFBA File Offset: 0x000DD1BA
+		// Token: 0x060061DB RID: 25051 RVA: 0x000EBCB2 File Offset: 0x000E9EB2
 		public IMonsterPointEntityConfig_SetValue ToSetValue()
 		{
 			return new IMonsterPointEntityConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E57 RID: 7767
-		// (get) Token: 0x06005BFA RID: 23546 RVA: 0x000DEFD9 File Offset: 0x000DD1D9
-		// (set) Token: 0x06005BFB RID: 23547 RVA: 0x000DF004 File Offset: 0x000DD204
+		// Token: 0x17002001 RID: 8193
+		// (get) Token: 0x060061DC RID: 25052 RVA: 0x000EBCD1 File Offset: 0x000E9ED1
+		// (set) Token: 0x060061DD RID: 25053 RVA: 0x000EBCFC File Offset: 0x000E9EFC
 		public virtual int EntityId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E58 RID: 7768
-		// (get) Token: 0x06005BFC RID: 23548 RVA: 0x000DF012 File Offset: 0x000DD212
-		// (set) Token: 0x06005BFD RID: 23549 RVA: 0x000DF03D File Offset: 0x000DD23D
+		// Token: 0x17002002 RID: 8194
+		// (get) Token: 0x060061DE RID: 25054 RVA: 0x000EBD0A File Offset: 0x000E9F0A
+		// (set) Token: 0x060061DF RID: 25055 RVA: 0x000EBD35 File Offset: 0x000E9F35
 		public virtual int Point
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400375C RID: 14172
+		// Token: 0x04003A97 RID: 14999
 		[Nullable(2)]
 		protected IMonsterPointEntityConfig FbInstance;
 
-		// Token: 0x0400375D RID: 14173
+		// Token: 0x04003A98 RID: 15000
 		[Nullable(2)]
 		protected IMonsterPointEntityConfig_SetValue PocoInterface;
 	}

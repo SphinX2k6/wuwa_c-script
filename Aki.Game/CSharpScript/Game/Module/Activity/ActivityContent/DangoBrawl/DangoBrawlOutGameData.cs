@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,25 +7,25 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067D1 RID: 26577
+	// Token: 0x02005721 RID: 22305
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlOutGameData
 	{
-		// Token: 0x06042307 RID: 271111 RVA: 0x0100CF0C File Offset: 0x0100B10C
+		// Token: 0x06036E5D RID: 224861 RVA: 0x00F4E2D8 File Offset: 0x00F4C4D8
 		public void PhraseEx(int activityId, DangoBrawlActivityInfo activityInfo)
 		{
 			this.ActivityId = activityId;
-			this.UpdateTaskDataList(activityInfo.ConditionTasks.ToArray<ConditionTask>());
-			this.UpdateRoleDataList(activityInfo.UnlockedRoleIds.ToArray<int>(), false);
-			this.UpdateItemDataList(activityInfo.UnlockedItemIds.ToArray<int>(), false);
-			this.UpdateLevelDataList(activityInfo.ChallengeInfos.ToArray<DangoBrawlChallengeInfo>());
+			this.UpdateTaskDataList(activityInfo.ConditionTasks);
+			this.UpdateRoleDataList(activityInfo.UnlockedRoleIds, false);
+			this.UpdateItemDataList(activityInfo.UnlockedItemIds, false);
+			this.UpdateLevelDataList(activityInfo.ChallengeInfos);
 			this.UpdateShopCoinCost(activityInfo.LimitCoinCost);
 			this.UpdateSaveData(activityInfo.SaveMatchBrief);
-			this.InitScoreRewardReceivedData(activityInfo.RewardScoreIds.ToArray<int>());
+			this.InitScoreRewardReceivedData(activityInfo.RewardScoreIds);
 		}
 
-		// Token: 0x06042308 RID: 271112 RVA: 0x0100CF94 File Offset: 0x0100B194
+		// Token: 0x06036E5E RID: 224862 RVA: 0x00F4E348 File Offset: 0x00F4C548
 		public int GetRecommendQuestId()
 		{
 			if (DangoBrawlConfig.Instance.GetActivityConfigById(this.ActivityId) == null)
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return dangoBrawlActivity.GetValueOrDefault().RecommendQuestId;
 		}
 
-		// Token: 0x06042309 RID: 271113 RVA: 0x0100CFCC File Offset: 0x0100B1CC
+		// Token: 0x06036E5F RID: 224863 RVA: 0x00F4E380 File Offset: 0x00F4C580
 		public int GetRecommendQuestNodeId()
 		{
 			if (DangoBrawlConfig.Instance.GetActivityConfigById(this.ActivityId) == null)
@@ -48,14 +47,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return dangoBrawlActivity.GetValueOrDefault().RecommendQuestNodeId;
 		}
 
-		// Token: 0x0604230A RID: 271114 RVA: 0x0100D004 File Offset: 0x0100B204
+		// Token: 0x06036E60 RID: 224864 RVA: 0x00F4E3B8 File Offset: 0x00F4C5B8
 		public string GetRecommendQuestTipsTextId()
 		{
 			DangoBrawlActivity? dangoBrawlActivity;
 			return ((DangoBrawlConfig.Instance.GetActivityConfigById(this.ActivityId) != null) ? dangoBrawlActivity.GetValueOrDefault().RecommendQuestLabel : null) ?? "";
 		}
 
-		// Token: 0x0604230B RID: 271115 RVA: 0x0100D048 File Offset: 0x0100B248
+		// Token: 0x06036E61 RID: 224865 RVA: 0x00F4E3FC File Offset: 0x00F4C5FC
 		public bool IsRecommendQuestFinished()
 		{
 			int recommendQuestId = this.GetRecommendQuestId();
@@ -68,8 +67,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return behaviorNodeBase != null && behaviorNodeBase.IsSuccess;
 		}
 
-		// Token: 0x0604230C RID: 271116 RVA: 0x0100D098 File Offset: 0x0100B298
-		public void UpdateTaskDataList(ConditionTask[] taskList)
+		// Token: 0x06036E62 RID: 224866 RVA: 0x00F4E44C File Offset: 0x00F4C64C
+		public void UpdateTaskDataList(IReadOnlyList<ConditionTask> taskList)
 		{
 			foreach (ConditionTask taskInfo in taskList)
 			{
@@ -77,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604230D RID: 271117 RVA: 0x0100D0C0 File Offset: 0x0100B2C0
+		// Token: 0x06036E63 RID: 224867 RVA: 0x00F4E494 File Offset: 0x00F4C694
 		public void UpdateTaskData(ConditionTask taskInfo)
 		{
 			DangoBrawlTaskData dangoBrawlTaskData;
@@ -89,46 +88,58 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			dangoBrawlTaskData.UpdateData(taskInfo);
 		}
 
-		// Token: 0x0604230E RID: 271118 RVA: 0x0100D107 File Offset: 0x0100B307
+		// Token: 0x06036E64 RID: 224868 RVA: 0x00F4E4DB File Offset: 0x00F4C6DB
 		[NullableContext(2)]
 		public DangoBrawlTaskData GetTaskData(int id)
 		{
 			return this.TaskDataMap.GetValueOrDefault(id);
 		}
 
-		// Token: 0x0604230F RID: 271119 RVA: 0x0100D118 File Offset: 0x0100B318
+		// Token: 0x06036E65 RID: 224869 RVA: 0x00F4E4EC File Offset: 0x00F4C6EC
 		public List<DangoBrawlTaskData> GetTaskDataList(int? tabId = null)
 		{
-			return (from taskData in this.TaskDataMap.Values
-			where tabId == null || taskData.TabId == tabId.Value
-			orderby taskData.Status, taskData.Id
-			select taskData).ToList<DangoBrawlTaskData>();
+			return NoLinq.WhereSortToList<DangoBrawlTaskData>(this.TaskDataMap.Values, (DangoBrawlTaskData task) => tabId == null || task.TabId == tabId.Value, delegate(DangoBrawlTaskData left, DangoBrawlTaskData right)
+			{
+				int num = left.Status.CompareTo(right.Status);
+				if (num == 0)
+				{
+					return left.Id.CompareTo(right.Id);
+				}
+				return num;
+			});
 		}
 
-		// Token: 0x06042310 RID: 271120 RVA: 0x0100D19B File Offset: 0x0100B39B
+		// Token: 0x06036E66 RID: 224870 RVA: 0x00F4E544 File Offset: 0x00F4C744
 		public int GetTaskTotalNum(int? tabId = null)
 		{
 			if (tabId == null)
 			{
 				return this.TaskDataMap.Count;
 			}
-			return this.GetTaskDataList(tabId).Count;
+			return NoLinq.Count<DangoBrawlTaskData>(this.TaskDataMap.Values, (DangoBrawlTaskData task) => task.TabId == tabId.Value);
 		}
 
-		// Token: 0x06042311 RID: 271121 RVA: 0x0100D1BE File Offset: 0x0100B3BE
+		// Token: 0x06036E67 RID: 224871 RVA: 0x00F4E594 File Offset: 0x00F4C794
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetTaskProgress(int? tabId = null)
 		{
-			return new ValueTuple<int, int>(this.GetTaskDataList(tabId).Count((DangoBrawlTaskData taskData) => taskData.Status == EActivityTaskState.FinishedAndClaimed), this.GetTaskTotalNum(tabId));
+			return NoLinq.CountWhere<DangoBrawlTaskData>(this.TaskDataMap.Values, (DangoBrawlTaskData task) => tabId == null || task.TabId == tabId.Value, (DangoBrawlTaskData task) => task.Status == EActivityTaskState.FinishedAndClaimed);
 		}
 
-		// Token: 0x06042312 RID: 271122 RVA: 0x0100D1F8 File Offset: 0x0100B3F8
+		// Token: 0x06036E68 RID: 224872 RVA: 0x00F4E5EC File Offset: 0x00F4C7EC
 		public bool IsTaskHasRedDot(int? tabId = null)
 		{
-			return this.TaskDataMap.Values.Any((DangoBrawlTaskData taskData) => (tabId == null || taskData.TabId == tabId.Value) && taskData.Status == EActivityTaskState.FinishedAndUnclaimed);
+			foreach (DangoBrawlTaskData dangoBrawlTaskData in this.TaskDataMap.Values)
+			{
+				if ((tabId == null || dangoBrawlTaskData.TabId == tabId.Value) && dangoBrawlTaskData.Status == EActivityTaskState.FinishedAndUnclaimed)
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
-		// Token: 0x06042313 RID: 271123 RVA: 0x0100D230 File Offset: 0x0100B430
+		// Token: 0x06036E69 RID: 224873 RVA: 0x00F4E664 File Offset: 0x00F4C864
 		public void SetTaskRewardReceived(List<int> idList)
 		{
 			foreach (int key in idList)
@@ -142,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 		}
 
-		// Token: 0x06042314 RID: 271124 RVA: 0x0100D2A4 File Offset: 0x0100B4A4
+		// Token: 0x06036E6A RID: 224874 RVA: 0x00F4E6D8 File Offset: 0x00F4C8D8
 		public int GetCurrentMilestone()
 		{
 			if (this.MilestoneItemId == 0)
@@ -153,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return InventoryModel.Instance.GetItemCountByConfigId(this.MilestoneItemId, 0);
 		}
 
-		// Token: 0x06042315 RID: 271125 RVA: 0x0100D2FC File Offset: 0x0100B4FC
+		// Token: 0x06036E6B RID: 224875 RVA: 0x00F4E730 File Offset: 0x00F4C930
 		private void InitScoreRewardReceivedData(IList<int> scoreTaskList)
 		{
 			this.ScoreRewardReceivedIdSet.Clear();
@@ -167,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042316 RID: 271126 RVA: 0x0100D35C File Offset: 0x0100B55C
+		// Token: 0x06036E6C RID: 224876 RVA: 0x00F4E790 File Offset: 0x00F4C990
 		public void SetScoreRewardReceived(List<int> idList)
 		{
 			foreach (int item in idList)
@@ -177,20 +188,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 		}
 
-		// Token: 0x06042317 RID: 271127 RVA: 0x0100D3C8 File Offset: 0x0100B5C8
+		// Token: 0x06036E6D RID: 224877 RVA: 0x00F4E7FC File Offset: 0x00F4C9FC
 		public bool IsScoreRewardCanReceived(int id)
 		{
 			DangoBrawlScoreReward? scoreRewardConfigById = DangoBrawlConfig.Instance.GetScoreRewardConfigById(id);
 			return scoreRewardConfigById != null && this.GetCurrentMilestone() >= scoreRewardConfigById.Value.Score && !this.IsScoreRewardReceived(id);
 		}
 
-		// Token: 0x06042318 RID: 271128 RVA: 0x0100D40F File Offset: 0x0100B60F
+		// Token: 0x06036E6E RID: 224878 RVA: 0x00F4E843 File Offset: 0x00F4CA43
 		public bool IsScoreRewardReceived(int id)
 		{
 			return this.ScoreRewardReceivedIdSet.Contains(id);
 		}
 
-		// Token: 0x06042319 RID: 271129 RVA: 0x0100D420 File Offset: 0x0100B620
+		// Token: 0x06036E6F RID: 224879 RVA: 0x00F4E854 File Offset: 0x00F4CA54
 		public int GetLastNotTakenScoreRewardIndex()
 		{
 			IReadOnlyList<DangoBrawlScoreReward> allDangoBrawlScoreAwardConfig = DangoBrawlConfig.Instance.GetAllDangoBrawlScoreAwardConfig();
@@ -204,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return 0;
 		}
 
-		// Token: 0x0604231A RID: 271130 RVA: 0x0100D468 File Offset: 0x0100B668
+		// Token: 0x06036E70 RID: 224880 RVA: 0x00F4E89C File Offset: 0x00F4CA9C
 		public List<int> GetCanClaimedScoreRewardList()
 		{
 			List<int> list = new List<int>();
@@ -218,7 +229,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list;
 		}
 
-		// Token: 0x0604231B RID: 271131 RVA: 0x0100D4D8 File Offset: 0x0100B6D8
+		// Token: 0x06036E71 RID: 224881 RVA: 0x00F4E90C File Offset: 0x00F4CB0C
 		public bool IsScoreRewardHasRedDot()
 		{
 			foreach (DangoBrawlScoreReward dangoBrawlScoreReward in DangoBrawlConfig.Instance.GetAllDangoBrawlScoreAwardConfig())
@@ -231,7 +242,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return false;
 		}
 
-		// Token: 0x0604231C RID: 271132 RVA: 0x0100D538 File Offset: 0x0100B738
+		// Token: 0x06036E72 RID: 224882 RVA: 0x00F4E96C File Offset: 0x00F4CB6C
 		public bool IsAllLimitRewardClaimed()
 		{
 			if (this.TaskDataMap.Count == 0)
@@ -258,8 +269,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x0604231D RID: 271133 RVA: 0x0100D5F4 File Offset: 0x0100B7F4
-		public List<int> UpdateRoleDataList(int[] unlockRoleIdList, bool isNotify = false)
+		// Token: 0x06036E73 RID: 224883 RVA: 0x00F4EA28 File Offset: 0x00F4CC28
+		public List<int> UpdateRoleDataList(IReadOnlyList<int> unlockRoleIdList, bool isNotify = false)
 		{
 			List<int> list = new List<int>();
 			foreach (int item in unlockRoleIdList)
@@ -277,7 +288,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list;
 		}
 
-		// Token: 0x0604231E RID: 271134 RVA: 0x0100D64C File Offset: 0x0100B84C
+		// Token: 0x06036E74 RID: 224884 RVA: 0x00F4EAA0 File Offset: 0x00F4CCA0
 		public int GetOppositePlayerRoleId(int roleId)
 		{
 			DangoBrawlRole? roleConfigById = DangoBrawlConfig.Instance.GetRoleConfigById(roleId);
@@ -301,7 +312,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return 0;
 		}
 
-		// Token: 0x0604231F RID: 271135 RVA: 0x0100D718 File Offset: 0x0100B918
+		// Token: 0x06036E75 RID: 224885 RVA: 0x00F4EB6C File Offset: 0x00F4CD6C
 		public int? DequeueUnlockNotifyRole()
 		{
 			if (this.UnlockNotifyRoleList.Count == 0)
@@ -313,20 +324,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return new int?(value);
 		}
 
-		// Token: 0x06042320 RID: 271136 RVA: 0x0100D759 File Offset: 0x0100B959
+		// Token: 0x06036E76 RID: 224886 RVA: 0x00F4EBAD File Offset: 0x00F4CDAD
 		public bool IsRoleUnlocked(int roleId)
 		{
 			return this.UnlockRoleIdList.Contains(roleId);
 		}
 
-		// Token: 0x06042321 RID: 271137 RVA: 0x0100D767 File Offset: 0x0100B967
+		// Token: 0x06036E77 RID: 224887 RVA: 0x00F4EBBB File Offset: 0x00F4CDBB
 		public IReadOnlyList<int> GetUnlockedRoleIds()
 		{
 			return this.UnlockRoleIdList;
 		}
 
-		// Token: 0x06042322 RID: 271138 RVA: 0x0100D770 File Offset: 0x0100B970
-		public List<int> UpdateItemDataList(int[] unlockItemIdList, bool isNotify = false)
+		// Token: 0x06036E78 RID: 224888 RVA: 0x00F4EBC4 File Offset: 0x00F4CDC4
+		public List<int> UpdateItemDataList(IReadOnlyList<int> unlockItemIdList, bool isNotify = false)
 		{
 			List<int> list = new List<int>();
 			foreach (int item in unlockItemIdList)
@@ -340,20 +351,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list;
 		}
 
-		// Token: 0x06042323 RID: 271139 RVA: 0x0100D7B9 File Offset: 0x0100B9B9
+		// Token: 0x06036E79 RID: 224889 RVA: 0x00F4EC30 File Offset: 0x00F4CE30
 		public bool IsItemUnlocked(int itemId)
 		{
 			return this.UnlockItemIdList.Contains(itemId);
 		}
 
-		// Token: 0x06042324 RID: 271140 RVA: 0x0100D7C7 File Offset: 0x0100B9C7
+		// Token: 0x06036E7A RID: 224890 RVA: 0x00F4EC3E File Offset: 0x00F4CE3E
 		public IReadOnlyList<int> GetUnlockedItemIds()
 		{
 			return this.UnlockItemIdList;
 		}
 
-		// Token: 0x06042325 RID: 271141 RVA: 0x0100D7D0 File Offset: 0x0100B9D0
-		public List<int> UpdateLevelDataList(DangoBrawlChallengeInfo[] levelList)
+		// Token: 0x06036E7B RID: 224891 RVA: 0x00F4EC48 File Offset: 0x00F4CE48
+		public List<int> UpdateLevelDataList(IReadOnlyList<DangoBrawlChallengeInfo> levelList)
 		{
 			List<int> list = new List<int>();
 			foreach (DangoBrawlChallengeInfo dangoBrawlChallengeInfo in levelList)
@@ -374,28 +385,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list;
 		}
 
-		// Token: 0x06042326 RID: 271142 RVA: 0x0100D85C File Offset: 0x0100BA5C
+		// Token: 0x06036E7C RID: 224892 RVA: 0x00F4ECEC File Offset: 0x00F4CEEC
 		public List<DangoBrawlLevelData> GetLevelDataList(bool isNormalMode)
 		{
-			return (from levelData in this.LevelDataMap.Values
-			where levelData.IsNormalMode == isNormalMode
-			select levelData).ToList<DangoBrawlLevelData>();
+			List<DangoBrawlLevelData> list = new List<DangoBrawlLevelData>();
+			foreach (DangoBrawlLevelData dangoBrawlLevelData in this.LevelDataMap.Values)
+			{
+				if (dangoBrawlLevelData.IsNormalMode == isNormalMode)
+				{
+					list.Add(dangoBrawlLevelData);
+				}
+			}
+			return list;
 		}
 
-		// Token: 0x06042327 RID: 271143 RVA: 0x0100D897 File Offset: 0x0100BA97
+		// Token: 0x06036E7D RID: 224893 RVA: 0x00F4ED54 File Offset: 0x00F4CF54
 		public List<DangoBrawlLevelData> GetAllLevelDataList()
 		{
-			return this.LevelDataMap.Values.ToList<DangoBrawlLevelData>();
+			return new List<DangoBrawlLevelData>(this.LevelDataMap.Values);
 		}
 
-		// Token: 0x06042328 RID: 271144 RVA: 0x0100D8A9 File Offset: 0x0100BAA9
+		// Token: 0x06036E7E RID: 224894 RVA: 0x00F4ED66 File Offset: 0x00F4CF66
 		[NullableContext(2)]
 		public DangoBrawlLevelData GetLevelData(int levelId)
 		{
 			return this.LevelDataMap.GetValueOrDefault(levelId);
 		}
 
-		// Token: 0x06042329 RID: 271145 RVA: 0x0100D8B8 File Offset: 0x0100BAB8
+		// Token: 0x06036E7F RID: 224895 RVA: 0x00F4ED74 File Offset: 0x00F4CF74
 		[return: TupleElementNames(new string[]
 		{
 			"LevelModeStr",
@@ -416,71 +433,70 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return new ValueTuple<string, int>(item, item2);
 		}
 
-		// Token: 0x0604232A RID: 271146 RVA: 0x0100D934 File Offset: 0x0100BB34
+		// Token: 0x06036E80 RID: 224896 RVA: 0x00F4EDF0 File Offset: 0x00F4CFF0
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetLevelProgress(bool isNormalMode)
 		{
-			List<DangoBrawlLevelData> levelDataList = this.GetLevelDataList(isNormalMode);
-			return new ValueTuple<int, int>(levelDataList.Count((DangoBrawlLevelData levelData) => levelData.IsPassed), levelDataList.Count);
+			return NoLinq.CountWhere<DangoBrawlLevelData>(this.LevelDataMap.Values, (DangoBrawlLevelData level) => level.IsNormalMode == isNormalMode, (DangoBrawlLevelData level) => level.IsPassed);
 		}
 
-		// Token: 0x0604232B RID: 271147 RVA: 0x0100D979 File Offset: 0x0100BB79
+		// Token: 0x06036E81 RID: 224897 RVA: 0x00F4EE45 File Offset: 0x00F4D045
 		public bool IsAllNormalLevelPassed()
 		{
-			return this.GetLevelDataList(true).All((DangoBrawlLevelData levelData) => levelData.IsPassed);
+			return NoLinq.All<DangoBrawlLevelData>(this.LevelDataMap.Values, (DangoBrawlLevelData level) => !level.IsNormalMode || level.IsPassed);
 		}
 
-		// Token: 0x0604232C RID: 271148 RVA: 0x0100D9A6 File Offset: 0x0100BBA6
+		// Token: 0x06036E82 RID: 224898 RVA: 0x00F4EE76 File Offset: 0x00F4D076
 		[NullableContext(2)]
 		public void UpdateSaveData(DangoBrawlSaveMatchBrief saveMatch)
 		{
 			this.SaveData = ((saveMatch == null) ? null : new DangoBrawlSaveData(saveMatch.ChallengeId, saveMatch.RoundNum, saveMatch.RoleId));
 		}
 
-		// Token: 0x0604232D RID: 271149 RVA: 0x0100D9CB File Offset: 0x0100BBCB
+		// Token: 0x06036E83 RID: 224899 RVA: 0x00F4EE9B File Offset: 0x00F4D09B
 		public void ClearSaveData()
 		{
 			this.SaveData = null;
 		}
 
-		// Token: 0x0604232E RID: 271150 RVA: 0x0100D9D4 File Offset: 0x0100BBD4
+		// Token: 0x06036E84 RID: 224900 RVA: 0x00F4EEA4 File Offset: 0x00F4D0A4
 		public void SetIsEnterSave(bool isEnterSave)
 		{
 			this.IsEnterSave = isEnterSave;
 		}
 
-		// Token: 0x0604232F RID: 271151 RVA: 0x0100D9DD File Offset: 0x0100BBDD
+		// Token: 0x06036E85 RID: 224901 RVA: 0x00F4EEAD File Offset: 0x00F4D0AD
 		public bool GetIsEnterSave()
 		{
 			return this.IsEnterSave;
 		}
 
-		// Token: 0x06042330 RID: 271152 RVA: 0x0100D9E5 File Offset: 0x0100BBE5
+		// Token: 0x06036E86 RID: 224902 RVA: 0x00F4EEB5 File Offset: 0x00F4D0B5
 		[NullableContext(2)]
 		public DangoBrawlSaveData GetSaveData()
 		{
 			return this.SaveData;
 		}
 
-		// Token: 0x06042331 RID: 271153 RVA: 0x0100D9ED File Offset: 0x0100BBED
+		// Token: 0x06036E87 RID: 224903 RVA: 0x00F4EEBD File Offset: 0x00F4D0BD
 		public bool HasSaveData()
 		{
 			return this.SaveData != null && this.SaveData.LevelId > 0;
 		}
 
-		// Token: 0x06042332 RID: 271154 RVA: 0x0100DA07 File Offset: 0x0100BC07
+		// Token: 0x06036E88 RID: 224904 RVA: 0x00F4EED7 File Offset: 0x00F4D0D7
 		public int GetShopCoinCost()
 		{
 			return this.ShopCoinCost;
 		}
 
-		// Token: 0x06042333 RID: 271155 RVA: 0x0100DA0F File Offset: 0x0100BC0F
+		// Token: 0x06036E89 RID: 224905 RVA: 0x00F4EEDF File Offset: 0x00F4D0DF
 		public void UpdateShopCoinCost(int coinCost)
 		{
 			this.ShopCoinCost = coinCost;
 		}
 
-		// Token: 0x06042334 RID: 271156 RVA: 0x0100DA18 File Offset: 0x0100BC18
+		// Token: 0x06036E8A RID: 224906 RVA: 0x00F4EEE8 File Offset: 0x00F4D0E8
 		public bool IsAllShopGoodsSoldOut()
 		{
 			DangoBrawlActivity? activityConfigById = DangoBrawlConfig.Instance.GetActivityConfigById(this.ActivityId);
@@ -492,38 +508,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return limitCoinMax > 0 && this.ShopCoinCost >= limitCoinMax;
 		}
 
-		// Token: 0x040228D2 RID: 141522
+		// Token: 0x0401D12F RID: 119087
 		private int ActivityId;
 
-		// Token: 0x040228D3 RID: 141523
+		// Token: 0x0401D130 RID: 119088
 		private readonly List<int> UnlockRoleIdList = new List<int>();
 
-		// Token: 0x040228D4 RID: 141524
+		// Token: 0x0401D131 RID: 119089
 		private readonly List<int> UnlockItemIdList = new List<int>();
 
-		// Token: 0x040228D5 RID: 141525
+		// Token: 0x0401D132 RID: 119090
 		private readonly Dictionary<int, DangoBrawlLevelData> LevelDataMap = new Dictionary<int, DangoBrawlLevelData>();
 
-		// Token: 0x040228D6 RID: 141526
+		// Token: 0x0401D133 RID: 119091
 		private bool IsEnterSave;
 
-		// Token: 0x040228D7 RID: 141527
+		// Token: 0x0401D134 RID: 119092
 		[Nullable(2)]
 		private DangoBrawlSaveData SaveData;
 
-		// Token: 0x040228D8 RID: 141528
+		// Token: 0x0401D135 RID: 119093
 		private readonly List<int> UnlockNotifyRoleList = new List<int>();
 
-		// Token: 0x040228D9 RID: 141529
+		// Token: 0x0401D136 RID: 119094
 		private readonly Dictionary<int, DangoBrawlTaskData> TaskDataMap = new Dictionary<int, DangoBrawlTaskData>();
 
-		// Token: 0x040228DA RID: 141530
+		// Token: 0x0401D137 RID: 119095
 		private int MilestoneItemId;
 
-		// Token: 0x040228DB RID: 141531
+		// Token: 0x0401D138 RID: 119096
 		private readonly HashSet<int> ScoreRewardReceivedIdSet = new HashSet<int>();
 
-		// Token: 0x040228DC RID: 141532
+		// Token: 0x0401D139 RID: 119097
 		private int ShopCoinCost;
 	}
 }

@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060CC RID: 24780
+	// Token: 0x0200504A RID: 20554
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SolarSpeedResultView : UiViewBase
 	{
-		// Token: 0x0603EA63 RID: 256611 RVA: 0x00F2172F File Offset: 0x00F1F92F
+		// Token: 0x06033727 RID: 210727 RVA: 0x00E684FF File Offset: 0x00E666FF
 		public SolarSpeedResultView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EA64 RID: 256612 RVA: 0x00F21738 File Offset: 0x00F1F938
+		// Token: 0x06033728 RID: 210728 RVA: 0x00E68508 File Offset: 0x00E66708
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.Data = (this.OpenParam as ISolarSpeedResultViewData);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EA65 RID: 256613 RVA: 0x00F21818 File Offset: 0x00F1FA18
+		// Token: 0x06033729 RID: 210729 RVA: 0x00E685E8 File Offset: 0x00E667E8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SolarSpeedResultView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -53,34 +53,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EA66 RID: 256614 RVA: 0x00F2185B File Offset: 0x00F1FA5B
+		// Token: 0x0603372A RID: 210730 RVA: 0x00E6862B File Offset: 0x00E6682B
 		protected override void OnStart()
 		{
 			this.RoleLayout.SetActive(false);
 			this.RefreshTitle();
 		}
 
-		// Token: 0x0603EA67 RID: 256615 RVA: 0x00F2186F File Offset: 0x00F1FA6F
+		// Token: 0x0603372B RID: 210731 RVA: 0x00E6863F File Offset: 0x00E6683F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.HandleOnActivitySequenceEmitEvent));
 			EventSystem.Instance.Add<int>(EEventName.ApplicationSent, new Action<int>(this.HandleApplicationSent));
 		}
 
-		// Token: 0x0603EA68 RID: 256616 RVA: 0x00F218A9 File Offset: 0x00F1FAA9
+		// Token: 0x0603372C RID: 210732 RVA: 0x00E68679 File Offset: 0x00E66879
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.HandleOnActivitySequenceEmitEvent));
 			EventSystem.Instance.Remove(EEventName.ApplicationSent, new Action<int>(this.HandleApplicationSent));
 		}
 
-		// Token: 0x0603EA69 RID: 256617 RVA: 0x00F218E3 File Offset: 0x00F1FAE3
+		// Token: 0x0603372D RID: 210733 RVA: 0x00E686B3 File Offset: 0x00E668B3
 		private SolarSpeedRolePanelBase BuildSolarSpeedRolePanel()
 		{
 			return this.Data.PanelType();
 		}
 
-		// Token: 0x0603EA6A RID: 256618 RVA: 0x00F218F5 File Offset: 0x00F1FAF5
+		// Token: 0x0603372E RID: 210734 RVA: 0x00E686C5 File Offset: 0x00E668C5
 		private void HandleOnClickConfirm(int _)
 		{
 			Action confirmClick = this.Data.ConfirmClick;
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603EA6B RID: 256619 RVA: 0x00F2191F File Offset: 0x00F1FB1F
+		// Token: 0x0603372F RID: 210735 RVA: 0x00E686EF File Offset: 0x00E668EF
 		private void HandleOnActivitySequenceEmitEvent(string passData)
 		{
 			this.HandleOnActivitySequenceEmitEventInternalAsync();
 		}
 
-		// Token: 0x0603EA6C RID: 256620 RVA: 0x00F21928 File Offset: 0x00F1FB28
+		// Token: 0x06033730 RID: 210736 RVA: 0x00E686F8 File Offset: 0x00E668F8
 		private void HandleApplicationSent(int playerId)
 		{
 			foreach (SolarSpeedRolePanelBase solarSpeedRolePanelBase in this.RoleLayout.GetLayoutItemList())
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603EA6D RID: 256621 RVA: 0x00F21980 File Offset: 0x00F1FB80
+		// Token: 0x06033731 RID: 210737 RVA: 0x00E68750 File Offset: 0x00E66950
 		private UniTask HandleOnActivitySequenceEmitEventInternalAsync()
 		{
 			SolarSpeedResultView.<HandleOnActivitySequenceEmitEventInternalAsync>d__15 <HandleOnActivitySequenceEmitEventInternalAsync>d__;
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <HandleOnActivitySequenceEmitEventInternalAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EA6E RID: 256622 RVA: 0x00F219C3 File Offset: 0x00F1FBC3
+		// Token: 0x06033732 RID: 210738 RVA: 0x00E68793 File Offset: 0x00E66993
 		private void RefreshTitle()
 		{
 			if (!StringUtils.IsEmpty(this.Data.TitleId))
@@ -131,35 +131,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x04020C0E RID: 134158
+		// Token: 0x0401B53B RID: 111931
 		private GenericLayout<SolarSpeedRolePanelBase, ISolarSpeedRolePanelData> RoleLayout;
 
-		// Token: 0x04020C0F RID: 134159
+		// Token: 0x0401B53C RID: 111932
 		private ButtonItem ConfirmItem;
 
-		// Token: 0x04020C10 RID: 134160
+		// Token: 0x0401B53D RID: 111933
 		private UUIInturnAnimController RolePlayer;
 
-		// Token: 0x04020C11 RID: 134161
+		// Token: 0x0401B53E RID: 111934
 		private ISolarSpeedResultViewData Data;
 
-		// Token: 0x0200C31A RID: 49946
+		// Token: 0x0200AD05 RID: 44293
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403AE96 RID: 241302
+			// Token: 0x040357FE RID: 219134
 			public const int RoleLayout = 0;
 
-			// Token: 0x0403AE97 RID: 241303
+			// Token: 0x040357FF RID: 219135
 			public const int RoleItem = 1;
 
-			// Token: 0x0403AE98 RID: 241304
+			// Token: 0x04035800 RID: 219136
 			public const int ConfirmItem = 2;
 
-			// Token: 0x0403AE99 RID: 241305
+			// Token: 0x04035801 RID: 219137
 			public const int ContentRoot = 3;
 
-			// Token: 0x0403AE9A RID: 241306
+			// Token: 0x04035802 RID: 219138
 			public const int TitleText = 4;
 		}
 	}

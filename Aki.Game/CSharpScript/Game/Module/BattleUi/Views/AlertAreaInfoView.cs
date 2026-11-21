@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CAB RID: 23723
+	// Token: 0x02004C8D RID: 19597
 	public class AlertAreaInfoView : BattleVisibleChildView
 	{
-		// Token: 0x0603BEDA RID: 245466 RVA: 0x00E51F82 File Offset: 0x00E50182
+		// Token: 0x06030E2D RID: 200237 RVA: 0x00DA262A File Offset: 0x00DA082A
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -21,14 +21,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603BEDB RID: 245467 RVA: 0x00E51FA0 File Offset: 0x00E501A0
+		// Token: 0x06030E2E RID: 200238 RVA: 0x00DA2648 File Offset: 0x00DA0848
 		public override void Reset()
 		{
 			base.Reset();
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0603BEDC RID: 245468 RVA: 0x00E51FB0 File Offset: 0x00E501B0
+		// Token: 0x06030E2F RID: 200239 RVA: 0x00DA2658 File Offset: 0x00DA0858
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -54,19 +54,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BEDD RID: 245469 RVA: 0x00E520DF File Offset: 0x00E502DF
+		// Token: 0x06030E30 RID: 200240 RVA: 0x00DA2787 File Offset: 0x00DA0987
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<int, float>(EEventName.OnUpdateAreaAlertValue, new Action<int, float>(this.OnUpdateAreaAlertValue));
 		}
 
-		// Token: 0x0603BEDE RID: 245470 RVA: 0x00E520FD File Offset: 0x00E502FD
+		// Token: 0x06030E31 RID: 200241 RVA: 0x00DA27A5 File Offset: 0x00DA09A5
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnUpdateAreaAlertValue, new Action<int, float>(this.OnUpdateAreaAlertValue));
 		}
 
-		// Token: 0x0603BEDF RID: 245471 RVA: 0x00E5211C File Offset: 0x00E5031C
+		// Token: 0x06030E32 RID: 200242 RVA: 0x00DA27C4 File Offset: 0x00DA09C4
 		public void Tick(float delta)
 		{
 			AlertAreaUpdateMachine updateMachine = this.UpdateMachine;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BEE0 RID: 245472 RVA: 0x00E5215C File Offset: 0x00E5035C
+		// Token: 0x06030E33 RID: 200243 RVA: 0x00DA2804 File Offset: 0x00DA0A04
 		public void OnMachineDataChange()
 		{
 			if (this.UpdateMachine == null)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetBarProgressBufferByPercent(barCurPercent);
 		}
 
-		// Token: 0x0603BEE1 RID: 245473 RVA: 0x00E521B8 File Offset: 0x00E503B8
+		// Token: 0x06030E34 RID: 200244 RVA: 0x00DA2860 File Offset: 0x00DA0A60
 		private void OnUpdateAreaAlertValue(int areaId, float value)
 		{
 			if (this.AreaId != areaId)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowTxtProgressTip(true, deltaPercent);
 		}
 
-		// Token: 0x0603BEE2 RID: 245474 RVA: 0x00E52228 File Offset: 0x00E50428
+		// Token: 0x06030E35 RID: 200245 RVA: 0x00DA28D0 File Offset: 0x00DA0AD0
 		public void StartShow(int areaId)
 		{
 			this.AreaId = areaId;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HideTxtProgressTip();
 		}
 
-		// Token: 0x0603BEE3 RID: 245475 RVA: 0x00E522A4 File Offset: 0x00E504A4
+		// Token: 0x06030E36 RID: 200246 RVA: 0x00DA294C File Offset: 0x00DA0B4C
 		public void EndShow(int? areaId = null)
 		{
 			if (areaId != null)
@@ -150,28 +150,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateMachine = null;
 		}
 
-		// Token: 0x0603BEE4 RID: 245476 RVA: 0x00E52300 File Offset: 0x00E50500
+		// Token: 0x06030E37 RID: 200247 RVA: 0x00DA29A8 File Offset: 0x00DA0BA8
 		private void SetBarProgressByPercent(float percent)
 		{
 			float num = MathUtils.Instance.RangeClamp(percent, 0f, 100f, 42f, 83f);
 			base.GetSprite(1).SetFillAmount(num * 0.01f);
 		}
 
-		// Token: 0x0603BEE5 RID: 245477 RVA: 0x00E52340 File Offset: 0x00E50540
+		// Token: 0x06030E38 RID: 200248 RVA: 0x00DA29E8 File Offset: 0x00DA0BE8
 		private void SetBarProgressBufferByPercent(float percent)
 		{
 			float num = MathUtils.Instance.RangeClamp(percent, 0f, 100f, 42f, 83f);
 			base.GetSprite(0).SetFillAmount(num * 0.01f);
 		}
 
-		// Token: 0x0603BEE6 RID: 245478 RVA: 0x00E52380 File Offset: 0x00E50580
+		// Token: 0x06030E39 RID: 200249 RVA: 0x00DA2A28 File Offset: 0x00DA0C28
 		private void SetTxtProgressByPercent(float percent)
 		{
 			int num = (int)MathCommon.Clamp(Math.Round((double)percent), 0.0, 100.0);
 			base.GetText(2).SetText(num.ToString(), true);
 		}
 
-		// Token: 0x0603BEE7 RID: 245479 RVA: 0x00E523C4 File Offset: 0x00E505C4
+		// Token: 0x06030E3A RID: 200250 RVA: 0x00DA2A6C File Offset: 0x00DA0C6C
 		private void UpdateWarningAnimByPercent(float oldPercent, float newPercent)
 		{
 			if (newPercent >= 100f)
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BEE8 RID: 245480 RVA: 0x00E524C8 File Offset: 0x00E506C8
+		// Token: 0x06030E3B RID: 200251 RVA: 0x00DA2B70 File Offset: 0x00DA0D70
 		private void ShowTxtProgressTip(bool updateText, float deltaPercent = 0f)
 		{
 			if (updateText)
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenPlayer.PlayTweenAnim(7);
 		}
 
-		// Token: 0x0603BEE9 RID: 245481 RVA: 0x00E52567 File Offset: 0x00E50767
+		// Token: 0x06030E3C RID: 200252 RVA: 0x00DA2C0F File Offset: 0x00DA0E0F
 		private void HideTxtProgressTip()
 		{
 			BattleUiTweenAnimPlayer tweenPlayer = this.TweenPlayer;
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetText(3).SetUIActive(false);
 		}
 
-		// Token: 0x0603BEEA RID: 245482 RVA: 0x00E52588 File Offset: 0x00E50788
+		// Token: 0x06030E3D RID: 200253 RVA: 0x00DA2C30 File Offset: 0x00DA0E30
 		private void InitTweenAnim()
 		{
 			this.TweenPlayer = new BattleUiTweenAnimPlayer();
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenPlayer.InitTweenAnim(7, base.GetItem(7), false);
 		}
 
-		// Token: 0x0603BEEB RID: 245483 RVA: 0x00E525F0 File Offset: 0x00E507F0
+		// Token: 0x06030E3E RID: 200254 RVA: 0x00DA2C98 File Offset: 0x00DA0E98
 		private void ClearTweenAnim()
 		{
 			BattleUiTweenAnimPlayer tweenPlayer = this.TweenPlayer;
@@ -338,54 +338,54 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenPlayer = null;
 		}
 
-		// Token: 0x0401F460 RID: 128096
+		// Token: 0x04019F19 RID: 106265
 		private const float PERCENT_TO_PROGRESS = 0.01f;
 
-		// Token: 0x0401F461 RID: 128097
+		// Token: 0x04019F1A RID: 106266
 		private const float UI_BAR_MIN_PERCENT = 42f;
 
-		// Token: 0x0401F462 RID: 128098
+		// Token: 0x04019F1B RID: 106267
 		private const float UI_BAR_MAX_PERCENT = 83f;
 
-		// Token: 0x0401F463 RID: 128099
+		// Token: 0x04019F1C RID: 106268
 		private int AreaId;
 
-		// Token: 0x0401F464 RID: 128100
+		// Token: 0x04019F1D RID: 106269
 		private float AlertValue;
 
-		// Token: 0x0401F465 RID: 128101
+		// Token: 0x04019F1E RID: 106270
 		[Nullable(2)]
 		private AlertAreaUpdateMachine UpdateMachine;
 
-		// Token: 0x0401F466 RID: 128102
+		// Token: 0x04019F1F RID: 106271
 		[Nullable(2)]
 		private BattleUiTweenAnimPlayer TweenPlayer;
 
-		// Token: 0x0200BE84 RID: 48772
+		// Token: 0x0200A88A RID: 43146
 		private enum EVisibleReason
 		{
-			// Token: 0x04039746 RID: 235334
+			// Token: 0x04034107 RID: 213255
 			Default = 1
 		}
 
-		// Token: 0x0200BE85 RID: 48773
+		// Token: 0x0200A88B RID: 43147
 		private enum EChildComponent
 		{
-			// Token: 0x04039748 RID: 235336
+			// Token: 0x04034109 RID: 213257
 			BarProgressBuffer,
-			// Token: 0x04039749 RID: 235337
+			// Token: 0x0403410A RID: 213258
 			BarProgress,
-			// Token: 0x0403974A RID: 235338
+			// Token: 0x0403410B RID: 213259
 			TxtProgress,
-			// Token: 0x0403974B RID: 235339
+			// Token: 0x0403410C RID: 213260
 			TxtProgressTip,
-			// Token: 0x0403974C RID: 235340
+			// Token: 0x0403410D RID: 213261
 			AniDefault,
-			// Token: 0x0403974D RID: 235341
+			// Token: 0x0403410E RID: 213262
 			AniWarningA,
-			// Token: 0x0403974E RID: 235342
+			// Token: 0x0403410F RID: 213263
 			AniWarningB,
-			// Token: 0x0403974F RID: 235343
+			// Token: 0x04034110 RID: 213264
 			AniTxtTip
 		}
 	}

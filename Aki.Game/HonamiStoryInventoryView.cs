@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EBA RID: 7866
+// Token: 0x0200137C RID: 4988
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryInventoryView : UiViewBase
 {
-	// Token: 0x0600F209 RID: 61961 RVA: 0x003A45D4 File Offset: 0x003A27D4
+	// Token: 0x0600C628 RID: 50728 RVA: 0x003B00D4 File Offset: 0x003AE2D4
 	public HonamiStoryInventoryView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F20A RID: 61962 RVA: 0x003A45E0 File Offset: 0x003A27E0
+	// Token: 0x0600C629 RID: 50729 RVA: 0x003B00E0 File Offset: 0x003AE2E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -32,7 +32,7 @@ public class HonamiStoryInventoryView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F20B RID: 61963 RVA: 0x003A464C File Offset: 0x003A284C
+	// Token: 0x0600C62A RID: 50730 RVA: 0x003B014C File Offset: 0x003AE34C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryInventoryView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ public class HonamiStoryInventoryView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F20C RID: 61964 RVA: 0x003A468F File Offset: 0x003A288F
+	// Token: 0x0600C62B RID: 50731 RVA: 0x003B018F File Offset: 0x003AE38F
 	protected override void OnBeforeShow()
 	{
 		TabComponentWithCaptionItem<CalabashTabItem> captionItem = this.CaptionItem;
@@ -54,7 +54,7 @@ public class HonamiStoryInventoryView : UiViewBase
 		captionItem.SelectToggleByIndex(0, true);
 	}
 
-	// Token: 0x0600F20D RID: 61965 RVA: 0x003A46A4 File Offset: 0x003A28A4
+	// Token: 0x0600C62C RID: 50732 RVA: 0x003B01A4 File Offset: 0x003AE3A4
 	private UniTask InitCaption()
 	{
 		HonamiStoryInventoryView.<InitCaption>d__8 <InitCaption>d__;
@@ -65,13 +65,13 @@ public class HonamiStoryInventoryView : UiViewBase
 		return <InitCaption>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F20E RID: 61966 RVA: 0x003A46E7 File Offset: 0x003A28E7
+	// Token: 0x0600C62D RID: 50733 RVA: 0x003B01E7 File Offset: 0x003AE3E7
 	private CalabashTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? _)
 	{
 		return new CalabashTabItem();
 	}
 
-	// Token: 0x0600F20F RID: 61967 RVA: 0x003A46F0 File Offset: 0x003A28F0
+	// Token: 0x0600C62E RID: 50734 RVA: 0x003B01F0 File Offset: 0x003AE3F0
 	private void ToggleCallBack(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
@@ -80,13 +80,13 @@ public class HonamiStoryInventoryView : UiViewBase
 		this.TabViewComponent.ToggleCallBack(uiDynamicTab, (EUiTabViewName)childViewName, tabItemByIndex, null, null);
 	}
 
-	// Token: 0x0600F210 RID: 61968 RVA: 0x003A4741 File Offset: 0x003A2941
+	// Token: 0x0600C62F RID: 50735 RVA: 0x003B0241 File Offset: 0x003AE441
 	private bool CheckTabViewCloseToRoot()
 	{
 		return false;
 	}
 
-	// Token: 0x0600F211 RID: 61969 RVA: 0x003A4744 File Offset: 0x003A2944
+	// Token: 0x0600C630 RID: 50736 RVA: 0x003B0244 File Offset: 0x003AE444
 	private void OnClickBtnClose()
 	{
 		if (this.CheckTabViewCloseToRoot())
@@ -96,29 +96,29 @@ public class HonamiStoryInventoryView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600F212 RID: 61970 RVA: 0x003A4758 File Offset: 0x003A2958
+	// Token: 0x0600C631 RID: 50737 RVA: 0x003B0258 File Offset: 0x003AE458
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = CalabashModel.Instance.GetViewTabList()[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x04006FD7 RID: 28631
+	// Token: 0x040070B8 RID: 28856
 	private List<UiDynamicTab> TabDataList;
 
-	// Token: 0x04006FD8 RID: 28632
+	// Token: 0x040070B9 RID: 28857
 	private TabComponentWithCaptionItem<CalabashTabItem> CaptionItem;
 
-	// Token: 0x04006FD9 RID: 28633
+	// Token: 0x040070BA RID: 28858
 	private TabViewComponent<object> TabViewComponent;
 
-	// Token: 0x020084A1 RID: 33953
+	// Token: 0x02007626 RID: 30246
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B2C0 RID: 176832
+		// Token: 0x040265E4 RID: 157156
 		CaptionItem,
-		// Token: 0x0402B2C1 RID: 176833
+		// Token: 0x040265E5 RID: 157157
 		Content
 	}
 }

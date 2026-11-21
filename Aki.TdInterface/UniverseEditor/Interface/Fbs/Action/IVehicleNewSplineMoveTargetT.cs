@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007524 RID: 29988
+	// Token: 0x02007D1A RID: 32026
 	public class IVehicleNewSplineMoveTargetT
 	{
-		// Token: 0x1700E391 RID: 58257
-		// (get) Token: 0x060368E2 RID: 223458 RVA: 0x0076993B File Offset: 0x00767B3B
-		// (set) Token: 0x060368E3 RID: 223459 RVA: 0x00769943 File Offset: 0x00767B43
+		// Token: 0x1700EFBB RID: 61371
+		// (get) Token: 0x06039CF8 RID: 236792 RVA: 0x007CCBE3 File Offset: 0x007CADE3
+		// (set) Token: 0x06039CF9 RID: 236793 RVA: 0x007CCBEB File Offset: 0x007CADEB
 		public ENewSplineMoveTargetType Type { get; set; }
 
-		// Token: 0x1700E392 RID: 58258
-		// (get) Token: 0x060368E4 RID: 223460 RVA: 0x0076994C File Offset: 0x00767B4C
-		// (set) Token: 0x060368E5 RID: 223461 RVA: 0x00769954 File Offset: 0x00767B54
+		// Token: 0x1700EFBC RID: 61372
+		// (get) Token: 0x06039CFA RID: 236794 RVA: 0x007CCBF4 File Offset: 0x007CADF4
+		// (set) Token: 0x06039CFB RID: 236795 RVA: 0x007CCBFC File Offset: 0x007CADFC
 		public TTargetVehicleUnion TargetVehicle { get; set; }
 
-		// Token: 0x1700E393 RID: 58259
-		// (get) Token: 0x060368E6 RID: 223462 RVA: 0x0076995D File Offset: 0x00767B5D
-		// (set) Token: 0x060368E7 RID: 223463 RVA: 0x00769965 File Offset: 0x00767B65
+		// Token: 0x1700EFBD RID: 61373
+		// (get) Token: 0x06039CFC RID: 236796 RVA: 0x007CCC05 File Offset: 0x007CAE05
+		// (set) Token: 0x06039CFD RID: 236797 RVA: 0x007CCC0D File Offset: 0x007CAE0D
 		public bool IsLookDir { get; set; }
 
-		// Token: 0x1700E394 RID: 58260
-		// (get) Token: 0x060368E8 RID: 223464 RVA: 0x0076996E File Offset: 0x00767B6E
-		// (set) Token: 0x060368E9 RID: 223465 RVA: 0x00769976 File Offset: 0x00767B76
+		// Token: 0x1700EFBE RID: 61374
+		// (get) Token: 0x06039CFE RID: 236798 RVA: 0x007CCC16 File Offset: 0x007CAE16
+		// (set) Token: 0x06039CFF RID: 236799 RVA: 0x007CCC1E File Offset: 0x007CAE1E
 		public byte NullMask { get; set; }
 
-		// Token: 0x060368EA RID: 223466 RVA: 0x0076997F File Offset: 0x00767B7F
+		// Token: 0x06039D00 RID: 236800 RVA: 0x007CCC27 File Offset: 0x007CAE27
 		public IVehicleNewSplineMoveTargetT()
 		{
 			this.Type = ENewSplineMoveTargetType.Player;

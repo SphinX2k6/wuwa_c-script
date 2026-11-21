@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001BBE RID: 7102
+// Token: 0x0200107D RID: 4221
 public class BattleTeamContextValidator : IFormationValidator
 {
-	// Token: 0x0600D3AD RID: 54189 RVA: 0x0030A9DC File Offset: 0x00308BDC
+	// Token: 0x0600A7BF RID: 42943 RVA: 0x00315AD0 File Offset: 0x00313CD0
 	public bool CanJoinTeam(int roleId, int formationId)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
 		return (!RoleUtils.IsSpecialTrialRole(roleId) || instance.CanUseSpecialTrialRole) && !instance.IsInBattleTeam(roleId, false) && instance.Context.CanAddRoleToEditTeam(roleId);
 	}
 
-	// Token: 0x0600D3AE RID: 54190 RVA: 0x0030AA1C File Offset: 0x00308C1C
+	// Token: 0x0600A7C0 RID: 42944 RVA: 0x00315B10 File Offset: 0x00313D10
 	public bool IsNeedRevive(int roleId, int formationId)
 	{
 		if (TowerModel.Instance.IsOpenFloorFormation())
@@ -39,16 +38,21 @@ public class BattleTeamContextValidator : IFormationValidator
 		return !((roleDataById != null) ? new bool?(roleDataById.IsTrialRole()) : null).GetValueOrDefault() && !flag && FormationModel.Instance.IsRoleDead(roleId);
 	}
 
-	// Token: 0x0600D3AF RID: 54191 RVA: 0x0030AAB0 File Offset: 0x00308CB0
+	// Token: 0x0600A7C1 RID: 42945 RVA: 0x00315BA4 File Offset: 0x00313DA4
 	[NullableContext(1)]
 	public bool CanSelectRole(int roleId, IReadOnlyList<int> selectedRoleIds)
 	{
-		if (RoleUtils.HasMultiTrialRole(roleId, selectedRoleIds.ToArray<int>(), null))
+		int[] array = new int[selectedRoleIds.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = selectedRoleIds[i];
+		}
+		if (RoleUtils.HasMultiTrialRole(roleId, array, null))
 		{
 			ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamMultiTrialRole", Array.Empty<object>());
 			return false;
 		}
-		if (RoleUtils.HasSameRole(roleId, selectedRoleIds.ToArray<int>(), null))
+		if (RoleUtils.HasSameRole(roleId, array, null))
 		{
 			ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamSameRole", Array.Empty<object>());
 			return false;
@@ -56,9 +60,9 @@ public class BattleTeamContextValidator : IFormationValidator
 		return true;
 	}
 
-	// Token: 0x0600D3B0 RID: 54192 RVA: 0x0030AB18 File Offset: 0x00308D18
+	// Token: 0x0600A7C2 RID: 42946 RVA: 0x00315C28 File Offset: 0x00313E28
 	[NullableContext(1)]
-	public bool CanQuickSelectConfirm(IReadOnlyList<int> selectedRoleIds)
+	public bool CanQuickSelectConfirm(IReadOnlyList<int> selectedRoleIds, int formationId)
 	{
 		FormationModel instance = FormationModel.Instance;
 		if (selectedRoleIds.Count <= 0)
@@ -83,7 +87,7 @@ public class BattleTeamContextValidator : IFormationValidator
 		return true;
 	}
 
-	// Token: 0x0600D3B1 RID: 54193 RVA: 0x0030ABA8 File Offset: 0x00308DA8
+	// Token: 0x0600A7C3 RID: 42947 RVA: 0x00315CB8 File Offset: 0x00313EB8
 	public bool ConfirmCheck(int roleId, int formationId, int editPosition)
 	{
 		if (this.IsNeedRevive(roleId, formationId))
@@ -141,7 +145,7 @@ public class BattleTeamContextValidator : IFormationValidator
 		return true;
 	}
 
-	// Token: 0x0600D3B2 RID: 54194 RVA: 0x0030ACF4 File Offset: 0x00308EF4
+	// Token: 0x0600A7C4 RID: 42948 RVA: 0x00315E04 File Offset: 0x00314004
 	public bool IsConfirmButtonEnable(int roleId, int formationId, int editPosition)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -164,7 +168,7 @@ public class BattleTeamContextValidator : IFormationValidator
 		}
 	}
 
-	// Token: 0x0600D3B3 RID: 54195 RVA: 0x0030AD58 File Offset: 0x00308F58
+	// Token: 0x0600A7C5 RID: 42949 RVA: 0x00315E68 File Offset: 0x00314068
 	[NullableContext(2)]
 	public string GetConfirmButtonTextId(int roleId, int formationId, int editPosition)
 	{
@@ -199,7 +203,7 @@ public class BattleTeamContextValidator : IFormationValidator
 		}
 	}
 
-	// Token: 0x0600D3B4 RID: 54196 RVA: 0x0030ADE4 File Offset: 0x00308FE4
+	// Token: 0x0600A7C6 RID: 42950 RVA: 0x00315EF4 File Offset: 0x003140F4
 	public EEditResultType GetEditResultType(int roleConfigId)
 	{
 		if (roleConfigId == 0)

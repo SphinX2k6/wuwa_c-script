@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014D4 RID: 5332
+	// Token: 0x0200162D RID: 5677
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChangeFlowTemplate : ActionParams
 	{
-		// Token: 0x06007960 RID: 31072 RVA: 0x00122870 File Offset: 0x00120A70
-		[NullableContext(1)]
+		// Token: 0x0600802D RID: 32813 RVA: 0x001314BC File Offset: 0x0012F6BC
+		[NullableContext(0)]
 		private ChangeFlowTemplate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007961 RID: 31073 RVA: 0x001228A8 File Offset: 0x00120AA8
-		[NullableContext(1)]
+		// Token: 0x0600802E RID: 32814 RVA: 0x001314F4 File Offset: 0x0012F6F4
+		[NullableContext(0)]
 		public static ChangeFlowTemplate Create([Nullable(2)] ChangeFlowTemplate instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007962 RID: 31074 RVA: 0x001228BB File Offset: 0x00120ABB
-		[NullableContext(1)]
+		// Token: 0x0600802F RID: 32815 RVA: 0x00131507 File Offset: 0x0012F707
+		[NullableContext(0)]
 		public static ChangeFlowTemplate CreateFromSetValue([Nullable(2)] ChangeFlowTemplate_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007963 RID: 31075 RVA: 0x001228CE File Offset: 0x00120ACE
-		[NullableContext(1)]
+		// Token: 0x06008030 RID: 32816 RVA: 0x0013151A File Offset: 0x0012F71A
+		[NullableContext(0)]
 		public ChangeFlowTemplate_SetValue ToSetValue()
 		{
 			return new ChangeFlowTemplate_SetValue
@@ -67,13 +67,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028A8 RID: 10408
-		// (get) Token: 0x06007964 RID: 31076 RVA: 0x00122908 File Offset: 0x00120B08
-		// (set) Token: 0x06007965 RID: 31077 RVA: 0x00122969 File Offset: 0x00120B69
-		[Nullable(1)]
+		// Token: 0x17002A92 RID: 10898
+		// (get) Token: 0x06008031 RID: 32817 RVA: 0x00131554 File Offset: 0x0012F754
+		// (set) Token: 0x06008032 RID: 32818 RVA: 0x001315B5 File Offset: 0x0012F7B5
+		[Nullable(0)]
 		public virtual IFlowTemplateMode TemplateMode
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._TemplateModeInited)
@@ -92,7 +92,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._TemplateModeCache;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().TemplateMode = value;
@@ -100,9 +100,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028A9 RID: 10409
-		// (get) Token: 0x06007966 RID: 31078 RVA: 0x00122980 File Offset: 0x00120B80
-		// (set) Token: 0x06007967 RID: 31079 RVA: 0x001229E1 File Offset: 0x00120BE1
+		// Token: 0x17002A93 RID: 10899
+		// (get) Token: 0x06008033 RID: 32819 RVA: 0x001315CC File Offset: 0x0012F7CC
+		// (set) Token: 0x06008034 RID: 32820 RVA: 0x0013162D File Offset: 0x0012F82D
 		public virtual PosA TargetPos
 		{
 			get
@@ -130,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028AA RID: 10410
-		// (get) Token: 0x06007968 RID: 31080 RVA: 0x001229F6 File Offset: 0x00120BF6
-		// (set) Token: 0x06007969 RID: 31081 RVA: 0x00122A1D File Offset: 0x00120C1D
+		// Token: 0x17002A94 RID: 10900
+		// (get) Token: 0x06008035 RID: 32821 RVA: 0x00131642 File Offset: 0x0012F842
+		// (set) Token: 0x06008036 RID: 32822 RVA: 0x00131669 File Offset: 0x0012F869
 		public virtual List<int> ActorIdArray
 		{
 			get
@@ -154,9 +154,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028AB RID: 10411
-		// (get) Token: 0x0600796A RID: 31082 RVA: 0x00122A2B File Offset: 0x00120C2B
-		// (set) Token: 0x0600796B RID: 31083 RVA: 0x00122A52 File Offset: 0x00120C52
+		// Token: 0x17002A95 RID: 10901
+		// (get) Token: 0x06008037 RID: 32823 RVA: 0x00131677 File Offset: 0x0012F877
+		// (set) Token: 0x06008038 RID: 32824 RVA: 0x0013169E File Offset: 0x0012F89E
 		public virtual List<int> TalkerIds
 		{
 			get
@@ -178,24 +178,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400466F RID: 18031
+		// Token: 0x04004A0A RID: 18954
 		protected new ChangeFlowTemplate FbInstance;
 
-		// Token: 0x04004670 RID: 18032
+		// Token: 0x04004A0B RID: 18955
 		protected ChangeFlowTemplate_SetValue PocoInterface;
 
-		// Token: 0x04004671 RID: 18033
-		[Nullable(1)]
+		// Token: 0x04004A0C RID: 18956
+		[Nullable(0)]
 		private IFlowTemplateMode _TemplateModeCache;
 
-		// Token: 0x04004672 RID: 18034
+		// Token: 0x04004A0D RID: 18957
 		private bool _TemplateModeInited;
 
-		// Token: 0x04004673 RID: 18035
-		[Nullable(1)]
+		// Token: 0x04004A0E RID: 18958
+		[Nullable(0)]
 		private PosA _TargetPosCache;
 
-		// Token: 0x04004674 RID: 18036
+		// Token: 0x04004A0F RID: 18959
 		private bool _TargetPosInited;
 	}
 }

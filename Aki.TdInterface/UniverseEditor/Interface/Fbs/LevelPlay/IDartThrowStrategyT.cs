@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200449B RID: 17563
+	// Token: 0x02004903 RID: 18691
 	public class IDartThrowStrategyT
 	{
-		// Token: 0x17007BED RID: 31725
-		// (get) Token: 0x0601A37A RID: 107386 RVA: 0x003BF100 File Offset: 0x003BD300
-		// (set) Token: 0x0601A37B RID: 107387 RVA: 0x003BF108 File Offset: 0x003BD308
+		// Token: 0x1700822C RID: 33324
+		// (get) Token: 0x0601BB4B RID: 113483 RVA: 0x003EB30C File Offset: 0x003E950C
+		// (set) Token: 0x0601BB4C RID: 113484 RVA: 0x003EB314 File Offset: 0x003E9514
 		public List<TDartboardZoneUnion> FinalRoundZones { get; set; }
 
-		// Token: 0x17007BEE RID: 31726
-		// (get) Token: 0x0601A37C RID: 107388 RVA: 0x003BF111 File Offset: 0x003BD311
-		// (set) Token: 0x0601A37D RID: 107389 RVA: 0x003BF119 File Offset: 0x003BD319
+		// Token: 0x1700822D RID: 33325
+		// (get) Token: 0x0601BB4D RID: 113485 RVA: 0x003EB31D File Offset: 0x003E951D
+		// (set) Token: 0x0601BB4E RID: 113486 RVA: 0x003EB325 File Offset: 0x003E9525
 		public List<TDartboardZoneUnion> CatchUpZones { get; set; }
 
-		// Token: 0x17007BEF RID: 31727
-		// (get) Token: 0x0601A37E RID: 107390 RVA: 0x003BF122 File Offset: 0x003BD322
-		// (set) Token: 0x0601A37F RID: 107391 RVA: 0x003BF12A File Offset: 0x003BD32A
+		// Token: 0x1700822E RID: 33326
+		// (get) Token: 0x0601BB4F RID: 113487 RVA: 0x003EB32E File Offset: 0x003E952E
+		// (set) Token: 0x0601BB50 RID: 113488 RVA: 0x003EB336 File Offset: 0x003E9536
 		public List<TDartboardZoneUnion> NormalZones { get; set; }
 
-		// Token: 0x17007BF0 RID: 31728
-		// (get) Token: 0x0601A380 RID: 107392 RVA: 0x003BF133 File Offset: 0x003BD333
-		// (set) Token: 0x0601A381 RID: 107393 RVA: 0x003BF13B File Offset: 0x003BD33B
+		// Token: 0x1700822F RID: 33327
+		// (get) Token: 0x0601BB51 RID: 113489 RVA: 0x003EB33F File Offset: 0x003E953F
+		// (set) Token: 0x0601BB52 RID: 113490 RVA: 0x003EB347 File Offset: 0x003E9547
 		public IDartStrategyErrorT Error { get; set; }
 
-		// Token: 0x0601A382 RID: 107394 RVA: 0x003BF144 File Offset: 0x003BD344
+		// Token: 0x0601BB53 RID: 113491 RVA: 0x003EB350 File Offset: 0x003E9550
 		public IDartThrowStrategyT()
 		{
 			this.FinalRoundZones = null;

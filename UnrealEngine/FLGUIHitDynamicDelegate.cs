@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200207E RID: 8318
+	// Token: 0x0200069D RID: 1693
 	public sealed class FLGUIHitDynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F621 RID: 128545 RVA: 0x002E9B98 File Offset: 0x002E7D98
+		// Token: 0x060091EB RID: 37355 RVA: 0x000DB8C5 File Offset: 0x000D9AC5
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIHitDynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F622 RID: 128546 RVA: 0x002E9BA4 File Offset: 0x002E7DA4
+		// Token: 0x060091EC RID: 37356 RVA: 0x000DB8D1 File Offset: 0x000D9AD1
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIHitDynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FLGUIHitDynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F623 RID: 128547 RVA: 0x002E9BC7 File Offset: 0x002E7DC7
+		// Token: 0x060091ED RID: 37357 RVA: 0x000DB8F4 File Offset: 0x000D9AF4
 		public FLGUIHitDynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601F624 RID: 128548 RVA: 0x002E9BCF File Offset: 0x002E7DCF
+		// Token: 0x060091EE RID: 37358 RVA: 0x000DB8FC File Offset: 0x000D9AFC
 		[NullableContext(2)]
 		public FLGUIHitDynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F625 RID: 128549 RVA: 0x002E9BD9 File Offset: 0x002E7DD9
+		// Token: 0x060091EF RID: 37359 RVA: 0x000DB906 File Offset: 0x000D9B06
 		public FLGUIHitDynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F626 RID: 128550 RVA: 0x002E9BE4 File Offset: 0x002E7DE4
+		// Token: 0x060091F0 RID: 37360 RVA: 0x000DB911 File Offset: 0x000D9B11
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<bool, FHitResult, USceneComponent>) ?? ((Action<bool, FHitResult, USceneComponent>)Delegate.CreateDelegate(typeof(Action<bool, FHitResult, USceneComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F627 RID: 128551 RVA: 0x002E9C16 File Offset: 0x002E7E16
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060091F1 RID: 37361 RVA: 0x000DB943 File Offset: 0x000D9B43
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -69,10 +68,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIHitDynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F628 RID: 128552 RVA: 0x002E9C50 File Offset: 0x002E7E50
+		// Token: 0x060091F2 RID: 37362 RVA: 0x000DB980 File Offset: 0x000D9B80
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool isHit, in FHitResult hitResult, USceneComponent hitComponent)
 		{
 			FLGUIHitDynamicDelegate.__FLGUIHitDynamicDelegate_DelegateParams* ptr = stackalloc FLGUIHitDynamicDelegate.__FLGUIHitDynamicDelegate_DelegateParams[(UIntPtr)175] + 15L / (long)sizeof(FLGUIHitDynamicDelegate.__FLGUIHitDynamicDelegate_DelegateParams) & -16L;
@@ -86,10 +84,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F629 RID: 128553 RVA: 0x002E9CCC File Offset: 0x002E7ECC
+		// Token: 0x060091F3 RID: 37363 RVA: 0x000DB9FC File Offset: 0x000D9BFC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, FHitResult, USceneComponent> action = target as Action<bool, FHitResult, USceneComponent>;
@@ -102,39 +99,39 @@ namespace UnrealEngine
 			action(((FLGUIHitDynamicDelegate.__FLGUIHitDynamicDelegate_DelegateParams*)__Parameters)->isHit, arg, orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x04010F42 RID: 69442
+		// Token: 0x04003F98 RID: 16280
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010F43 RID: 69443
+		// Token: 0x04003F99 RID: 16281
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIHitDynamicDelegate__DelegateSignature";
 
-		// Token: 0x04010F44 RID: 69444
+		// Token: 0x04003F9A RID: 16282
 		private static int RegisterId;
 
-		// Token: 0x02003481 RID: 13441
+		// Token: 0x02000EC4 RID: 3780
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 160)]
-		protected ref struct __FLGUIHitDynamicDelegate_DelegateParams
+		private ref struct __FLGUIHitDynamicDelegate_DelegateParams
 		{
-			// Token: 0x0401746D RID: 95341
+			// Token: 0x0400627C RID: 25212
 			[FieldOffset(0)]
 			public bool isHit;
 
-			// Token: 0x0401746E RID: 95342
+			// Token: 0x0400627D RID: 25213
 			[FieldOffset(4)]
 			public byte hitResult;
 
-			// Token: 0x0401746F RID: 95343
+			// Token: 0x0400627E RID: 25214
 			[FieldOffset(152)]
 			public IntPtr hitComponent;
 		}
 
-		// Token: 0x02003482 RID: 13442
+		// Token: 0x02000EC5 RID: 3781
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017470 RID: 95344
+			// Token: 0x0400627F RID: 25215
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

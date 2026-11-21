@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x0200293C RID: 10556
+// Token: 0x02001EB7 RID: 7863
 [NullableContext(1)]
 [Nullable(0)]
 public class RouletteMainViewProxy : RouletteMainViewProxyBase
 {
-	// Token: 0x06015CA0 RID: 89248 RVA: 0x0057F724 File Offset: 0x0057D924
+	// Token: 0x060136A5 RID: 79525 RVA: 0x005AA75C File Offset: 0x005A895C
 	protected override RouletteComponentMain OnGetRouletteComponent()
 	{
 		if (this.RouletteType == ERouletteType.Explore)
@@ -31,7 +31,7 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		return this.RouletteComponentFunction;
 	}
 
-	// Token: 0x06015CA1 RID: 89249 RVA: 0x0057F7BC File Offset: 0x0057D9BC
+	// Token: 0x060136A6 RID: 79526 RVA: 0x005AA7F4 File Offset: 0x005A89F4
 	protected override bool OnCanOpenView()
 	{
 		if (Info.Instance.IsInGamepad())
@@ -46,7 +46,7 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		return rouletteActionOpenConfig != ERouletteType.Function || RouletteModel.Instance.IsFunctionRouletteOpen();
 	}
 
-	// Token: 0x06015CA2 RID: 89250 RVA: 0x0057F820 File Offset: 0x0057DA20
+	// Token: 0x060136A7 RID: 79527 RVA: 0x005AA858 File Offset: 0x005A8A58
 	protected override ERouletteType OnGetRouletteType()
 	{
 		ERouletteType rouletteActionOpenConfig = RouletteModel.Instance.GetRouletteActionOpenConfig(this.ActionType);
@@ -63,7 +63,7 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		return rouletteActionOpenConfig;
 	}
 
-	// Token: 0x06015CA3 RID: 89251 RVA: 0x0057F868 File Offset: 0x0057DA68
+	// Token: 0x060136A8 RID: 79528 RVA: 0x005AA8A0 File Offset: 0x005A8AA0
 	protected override bool OnGetCanSwitchType()
 	{
 		bool flag = RouletteModel.Instance.IsExploreRouletteOpen(false);
@@ -71,7 +71,7 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		return Info.Instance.IsInGamepad() && flag && flag2;
 	}
 
-	// Token: 0x06015CA4 RID: 89252 RVA: 0x0057F89C File Offset: 0x0057DA9C
+	// Token: 0x060136A9 RID: 79529 RVA: 0x005AA8D4 File Offset: 0x005A8AD4
 	protected override bool OnGetPanelSwitchOpen()
 	{
 		bool flag = RouletteModel.Instance.IsFunctionRouletteOpen();
@@ -79,14 +79,14 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		return Info.Instance.IsInGamepad() && flag2 && flag;
 	}
 
-	// Token: 0x06015CA5 RID: 89253 RVA: 0x0057F8D4 File Offset: 0x0057DAD4
+	// Token: 0x060136AA RID: 79530 RVA: 0x005AA90C File Offset: 0x005A8B0C
 	protected override void OnRouletteTypeSwitch()
 	{
 		this.RouletteType = ((this.RouletteType == ERouletteType.Explore) ? ERouletteType.Function : ERouletteType.Explore);
 		RouletteModel.Instance.SaveRouletteActionOpenConfig(this.ActionType, this.RouletteType);
 	}
 
-	// Token: 0x06015CA6 RID: 89254 RVA: 0x0057F910 File Offset: 0x0057DB10
+	// Token: 0x060136AB RID: 79531 RVA: 0x005AA948 File Offset: 0x005A8B48
 	public override EToggleState? GetToggle1State()
 	{
 		bool flag = this.RouletteType == ERouletteType.Explore;
@@ -97,13 +97,13 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		return new EToggleState?(EToggleState.ETT_UnDetermined);
 	}
 
-	// Token: 0x06015CA7 RID: 89255 RVA: 0x0057F947 File Offset: 0x0057DB47
+	// Token: 0x060136AC RID: 79532 RVA: 0x005AA97F File Offset: 0x005A8B7F
 	public override EToggleState? GetToggle2State()
 	{
 		return new EToggleState?((this.RouletteType == ERouletteType.Function) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x06015CA8 RID: 89256 RVA: 0x0057F960 File Offset: 0x0057DB60
+	// Token: 0x060136AD RID: 79533 RVA: 0x005AA998 File Offset: 0x005A8B98
 	protected override bool OnGetCanOpenAssembly(ERouletteType rouletteType)
 	{
 		bool result = true;
@@ -120,7 +120,7 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		return result;
 	}
 
-	// Token: 0x06015CA9 RID: 89257 RVA: 0x0057F9B8 File Offset: 0x0057DBB8
+	// Token: 0x060136AE RID: 79534 RVA: 0x005AA9F0 File Offset: 0x005A8BF0
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -137,7 +137,7 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		return new List<ValueTuple<List<int>, ERouletteComponentNode, ERouletteGridType>>();
 	}
 
-	// Token: 0x06015CAA RID: 89258 RVA: 0x0057F9E8 File Offset: 0x0057DBE8
+	// Token: 0x060136AF RID: 79535 RVA: 0x005AAA20 File Offset: 0x005A8C20
 	protected override int OnGetRouletteGridId(int index, ERouletteGridType gridType)
 	{
 		RouletteListDataBase rouletteListDataBase;
@@ -148,14 +148,14 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		return 0;
 	}
 
-	// Token: 0x06015CAB RID: 89259 RVA: 0x0057FA24 File Offset: 0x0057DC24
+	// Token: 0x060136B0 RID: 79536 RVA: 0x005AAA5C File Offset: 0x005A8C5C
 	protected override string OnGetActionName()
 	{
 		string actionName = RouletteModel.Instance.GetRouletteActionName[this.ActionType];
 		return RouletteModel.Instance.GetRouletteMainAction(actionName);
 	}
 
-	// Token: 0x06015CAC RID: 89260 RVA: 0x0057FA54 File Offset: 0x0057DC54
+	// Token: 0x060136B1 RID: 79537 RVA: 0x005AAA8C File Offset: 0x005A8C8C
 	protected override void OnDestroy()
 	{
 		if (this.RouletteComponentExplore != null)
@@ -170,11 +170,11 @@ public class RouletteMainViewProxy : RouletteMainViewProxyBase
 		}
 	}
 
-	// Token: 0x0400A248 RID: 41544
+	// Token: 0x0400A633 RID: 42547
 	[Nullable(2)]
 	private RouletteComponentMainExplore RouletteComponentExplore;
 
-	// Token: 0x0400A249 RID: 41545
+	// Token: 0x0400A634 RID: 42548
 	[Nullable(2)]
 	private RouletteComponentMainFunction RouletteComponentFunction;
 }

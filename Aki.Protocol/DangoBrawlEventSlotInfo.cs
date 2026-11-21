@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000346 RID: 838
+	// Token: 0x0200034E RID: 846
 	public sealed class DangoBrawlEventSlotInfo : IMessage<DangoBrawlEventSlotInfo>, IMessage, IEquatable<DangoBrawlEventSlotInfo>, IDeepCloneable<DangoBrawlEventSlotInfo>, IBufferMessage
 	{
-		// Token: 0x060053D9 RID: 21465 RVA: 0x000CC550 File Offset: 0x000CA750
+		// Token: 0x060054C6 RID: 21702 RVA: 0x000CEBDC File Offset: 0x000CCDDC
 		[NullableContext(1)]
 		public static DangoBrawlEventSlotInfo Create()
 		{
 			return new DangoBrawlEventSlotInfo();
 		}
 
-		// Token: 0x17000F3C RID: 3900
-		// (get) Token: 0x060053DA RID: 21466 RVA: 0x000CC557 File Offset: 0x000CA757
+		// Token: 0x17000F6D RID: 3949
+		// (get) Token: 0x060054C7 RID: 21703 RVA: 0x000CEBE3 File Offset: 0x000CCDE3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<DangoBrawlEventSlotInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F3D RID: 3901
-		// (get) Token: 0x060053DB RID: 21467 RVA: 0x000CC55E File Offset: 0x000CA75E
+		// Token: 0x17000F6E RID: 3950
+		// (get) Token: 0x060054C8 RID: 21704 RVA: 0x000CEBEA File Offset: 0x000CCDEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F3E RID: 3902
-		// (get) Token: 0x060053DC RID: 21468 RVA: 0x000CC561 File Offset: 0x000CA761
+		// Token: 0x17000F6F RID: 3951
+		// (get) Token: 0x060054C9 RID: 21705 RVA: 0x000CEBED File Offset: 0x000CCDED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060053DD RID: 21469 RVA: 0x000CC568 File Offset: 0x000CA768
+		// Token: 0x060054CA RID: 21706 RVA: 0x000CEBF4 File Offset: 0x000CCDF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlEventSlotInfo()
 		{
 		}
 
-		// Token: 0x060053DE RID: 21470 RVA: 0x000CC570 File Offset: 0x000CA770
+		// Token: 0x060054CB RID: 21707 RVA: 0x000CEBFC File Offset: 0x000CCDFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlEventSlotInfo(DangoBrawlEventSlotInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060053DF RID: 21471 RVA: 0x000CC5A1 File Offset: 0x000CA7A1
+		// Token: 0x060054CC RID: 21708 RVA: 0x000CEC2D File Offset: 0x000CCE2D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlEventSlotInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new DangoBrawlEventSlotInfo(this);
 		}
 
-		// Token: 0x17000F3F RID: 3903
-		// (get) Token: 0x060053E0 RID: 21472 RVA: 0x000CC5A9 File Offset: 0x000CA7A9
-		// (set) Token: 0x060053E1 RID: 21473 RVA: 0x000CC5B1 File Offset: 0x000CA7B1
+		// Token: 0x17000F70 RID: 3952
+		// (get) Token: 0x060054CD RID: 21709 RVA: 0x000CEC35 File Offset: 0x000CCE35
+		// (set) Token: 0x060054CE RID: 21710 RVA: 0x000CEC3D File Offset: 0x000CCE3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int EventConfigId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F40 RID: 3904
-		// (get) Token: 0x060053E2 RID: 21474 RVA: 0x000CC5BA File Offset: 0x000CA7BA
-		// (set) Token: 0x060053E3 RID: 21475 RVA: 0x000CC5C2 File Offset: 0x000CA7C2
+		// Token: 0x17000F71 RID: 3953
+		// (get) Token: 0x060054CF RID: 21711 RVA: 0x000CEC46 File Offset: 0x000CCE46
+		// (set) Token: 0x060054D0 RID: 21712 RVA: 0x000CEC4E File Offset: 0x000CCE4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RefreshedCount
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060053E4 RID: 21476 RVA: 0x000CC5CB File Offset: 0x000CA7CB
+		// Token: 0x060054D1 RID: 21713 RVA: 0x000CEC57 File Offset: 0x000CCE57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoBrawlEventSlotInfo);
 		}
 
-		// Token: 0x060053E5 RID: 21477 RVA: 0x000CC5D9 File Offset: 0x000CA7D9
+		// Token: 0x060054D2 RID: 21714 RVA: 0x000CEC65 File Offset: 0x000CCE65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoBrawlEventSlotInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.EventConfigId == other.EventConfigId && this.RefreshedCount == other.RefreshedCount && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060053E6 RID: 21478 RVA: 0x000CC618 File Offset: 0x000CA818
+		// Token: 0x060054D3 RID: 21715 RVA: 0x000CECA4 File Offset: 0x000CCEA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060053E7 RID: 21479 RVA: 0x000CC670 File Offset: 0x000CA870
+		// Token: 0x060054D4 RID: 21716 RVA: 0x000CECFC File Offset: 0x000CCEFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060053E8 RID: 21480 RVA: 0x000CC67D File Offset: 0x000CA87D
+		// Token: 0x060054D5 RID: 21717 RVA: 0x000CED09 File Offset: 0x000CCF09
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060053E9 RID: 21481 RVA: 0x000CC688 File Offset: 0x000CA888
+		// Token: 0x060054D6 RID: 21718 RVA: 0x000CED14 File Offset: 0x000CCF14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060053EA RID: 21482 RVA: 0x000CC6E0 File Offset: 0x000CA8E0
+		// Token: 0x060054D7 RID: 21719 RVA: 0x000CED6C File Offset: 0x000CCF6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060053EB RID: 21483 RVA: 0x000CC738 File Offset: 0x000CA938
+		// Token: 0x060054D8 RID: 21720 RVA: 0x000CEDC4 File Offset: 0x000CCFC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoBrawlEventSlotInfo other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060053EC RID: 21484 RVA: 0x000CC788 File Offset: 0x000CA988
+		// Token: 0x060054D9 RID: 21721 RVA: 0x000CEE14 File Offset: 0x000CD014
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060053ED RID: 21485 RVA: 0x000CC794 File Offset: 0x000CA994
+		// Token: 0x060054DA RID: 21722 RVA: 0x000CEE20 File Offset: 0x000CD020
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003398 RID: 13208
+		// Token: 0x04003434 RID: 13364
 		private static readonly MessageParser<DangoBrawlEventSlotInfo> _parser = new MessageParser<DangoBrawlEventSlotInfo>(() => new DangoBrawlEventSlotInfo());
 
-		// Token: 0x04003399 RID: 13209
+		// Token: 0x04003435 RID: 13365
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400339A RID: 13210
+		// Token: 0x04003436 RID: 13366
 		public const int EventConfigIdFieldNumber = 1;
 
-		// Token: 0x0400339B RID: 13211
+		// Token: 0x04003437 RID: 13367
 		private int eventConfigId_;
 
-		// Token: 0x0400339C RID: 13212
+		// Token: 0x04003438 RID: 13368
 		public const int RefreshedCountFieldNumber = 2;
 
-		// Token: 0x0400339D RID: 13213
+		// Token: 0x04003439 RID: 13369
 		private int refreshedCount_;
 	}
 }

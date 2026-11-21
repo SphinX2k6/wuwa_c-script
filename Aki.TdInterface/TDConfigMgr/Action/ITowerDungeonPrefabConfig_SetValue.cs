@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FD5 RID: 8149
+	// Token: 0x0200221C RID: 8732
 	public class ITowerDungeonPrefabConfig_SetValue
 	{
-		// Token: 0x04006C2A RID: 27690
+		// Token: 0x0400722C RID: 29228
 		public ECreatePrefabType Type;
 
-		// Token: 0x04006C2B RID: 27691
+		// Token: 0x0400722D RID: 29229
 		public int Index;
 	}
 }

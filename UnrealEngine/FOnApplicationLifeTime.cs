@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EE1 RID: 7905
+	// Token: 0x020005F1 RID: 1521
 	public sealed class FOnApplicationLifeTime : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E0EF RID: 123119 RVA: 0x002C9C5B File Offset: 0x002C7E5B
+		// Token: 0x06008755 RID: 34645 RVA: 0x000CB043 File Offset: 0x000C9243
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnApplicationLifeTime.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E0F0 RID: 123120 RVA: 0x002C9C67 File Offset: 0x002C7E67
+		// Token: 0x06008756 RID: 34646 RVA: 0x000CB04F File Offset: 0x000C924F
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnApplicationLifeTime._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnApplicationLifeTime._FunctionPtr;
 		}
 
-		// Token: 0x0601E0F1 RID: 123121 RVA: 0x002C9C8A File Offset: 0x002C7E8A
+		// Token: 0x06008757 RID: 34647 RVA: 0x000CB072 File Offset: 0x000C9272
 		public FOnApplicationLifeTime()
 		{
 		}
 
-		// Token: 0x0601E0F2 RID: 123122 RVA: 0x002C9C92 File Offset: 0x002C7E92
+		// Token: 0x06008758 RID: 34648 RVA: 0x000CB07A File Offset: 0x000C927A
 		[NullableContext(2)]
 		public FOnApplicationLifeTime(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E0F3 RID: 123123 RVA: 0x002C9C9C File Offset: 0x002C7E9C
+		// Token: 0x06008759 RID: 34649 RVA: 0x000CB084 File Offset: 0x000C9284
 		public FOnApplicationLifeTime(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E0F4 RID: 123124 RVA: 0x002C9CA7 File Offset: 0x002C7EA7
+		// Token: 0x0600875A RID: 34650 RVA: 0x000CB08F File Offset: 0x000C928F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E0F5 RID: 123125 RVA: 0x002C9CD9 File Offset: 0x002C7ED9
+		// Token: 0x0600875B RID: 34651 RVA: 0x000CB0C1 File Offset: 0x000C92C1
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int> Callback)
 		{
 			if (FOnApplicationLifeTime.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnApplicationLifeTime.RegisterId);
 		}
 
-		// Token: 0x0601E0F6 RID: 123126 RVA: 0x002C9D14 File Offset: 0x002C7F14
+		// Token: 0x0600875C RID: 34652 RVA: 0x000CB0FC File Offset: 0x000C92FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int Type)
 		{
 			FOnApplicationLifeTime.__FOnApplicationLifeTime_DelegateParams* ptr = stackalloc FOnApplicationLifeTime.__FOnApplicationLifeTime_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FOnApplicationLifeTime.__FOnApplicationLifeTime_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E0F7 RID: 123127 RVA: 0x002C9D54 File Offset: 0x002C7F54
+		// Token: 0x0600875D RID: 34653 RVA: 0x000CB13C File Offset: 0x000C933C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FOnApplicationLifeTime.__FOnApplicationLifeTime_DelegateParams*)__Parameters)->Type);
 		}
 
-		// Token: 0x040103FD RID: 66557
+		// Token: 0x04003ADE RID: 15070
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040103FE RID: 66558
+		// Token: 0x04003ADF RID: 15071
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnApplicationLifeTime__DelegateSignature";
 
-		// Token: 0x040103FF RID: 66559
+		// Token: 0x04003AE0 RID: 15072
 		private static int RegisterId;
 
-		// Token: 0x020033AA RID: 13226
+		// Token: 0x02000DFD RID: 3581
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FOnApplicationLifeTime_DelegateParams
+		private ref struct __FOnApplicationLifeTime_DelegateParams
 		{
-			// Token: 0x0401735F RID: 95071
+			// Token: 0x04006191 RID: 24977
 			[FieldOffset(0)]
 			public int Type;
 		}
 
-		// Token: 0x020033AB RID: 13227
+		// Token: 0x02000DFE RID: 3582
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017360 RID: 95072
+			// Token: 0x04006192 RID: 24978
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

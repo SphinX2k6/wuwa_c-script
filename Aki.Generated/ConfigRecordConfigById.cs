@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007C1 RID: 1985
+	// Token: 0x020007DD RID: 2013
 	public class ConfigRecordConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E98 RID: 11928 RVA: 0x00160BFB File Offset: 0x0015EDFB
+		// Token: 0x06002F40 RID: 12096 RVA: 0x00167EE3 File Offset: 0x001660E3
 		static ConfigRecordConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRecordConfigById.CreateStaticDefaultValue), new Action(ConfigRecordConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E99 RID: 11929 RVA: 0x00160C1C File Offset: 0x0015EE1C
+		// Token: 0x06002F41 RID: 12097 RVA: 0x00167F04 File Offset: 0x00166104
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRecordConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E9A RID: 11930 RVA: 0x00160C9B File Offset: 0x0015EE9B
+		// Token: 0x06002F42 RID: 12098 RVA: 0x00167F83 File Offset: 0x00166183
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRecordConfigById.LogPair = null;
 			ConfigRecordConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06002E9B RID: 11931 RVA: 0x00160CA9 File Offset: 0x0015EEA9
+		// Token: 0x06002F43 RID: 12099 RVA: 0x00167F91 File Offset: 0x00166191
 		public static void Init()
 		{
 			ConfigRecordConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigRecordConfigById.HandleId, "db_adventurerecord.db", "select BinData from `RecordConfig` where Id=?");
 		}
 
-		// Token: 0x06002E9C RID: 11932 RVA: 0x00160CC4 File Offset: 0x0015EEC4
+		// Token: 0x06002F44 RID: 12100 RVA: 0x00167FAC File Offset: 0x001661AC
 		public static RecordConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRecordConfigById.HandleId, ConfigRecordConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RecordConfig?(rootAsRecordConfig);
 		}
 
-		// Token: 0x0400362D RID: 13869
+		// Token: 0x040036F1 RID: 14065
 		private const string DB = "db_adventurerecord.db";
 
-		// Token: 0x0400362E RID: 13870
+		// Token: 0x040036F2 RID: 14066
 		private const string FILE = "j.记录.xlsx";
 
-		// Token: 0x0400362F RID: 13871
+		// Token: 0x040036F3 RID: 14067
 		private const string TABLE = "RecordConfig";
 
-		// Token: 0x04003630 RID: 13872
+		// Token: 0x040036F4 RID: 14068
 		private const string COMMAND = "select BinData from `RecordConfig` where Id=?";
 
-		// Token: 0x04003631 RID: 13873
+		// Token: 0x040036F5 RID: 14069
 		private const string KEY_PREFIX = "RecordConfigById";
 
-		// Token: 0x04003632 RID: 13874
+		// Token: 0x040036F6 RID: 14070
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003633 RID: 13875
+		// Token: 0x040036F7 RID: 14071
 		private static int HandleId;
 	}
 }

@@ -1,19 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002D9A RID: 11674
+// Token: 0x020022F4 RID: 8948
 public class BulletActionUpdateAttackerFrozen : BulletActionBase
 {
-	// Token: 0x06018856 RID: 100438 RVA: 0x00643328 File Offset: 0x00641528
+	// Token: 0x060160FA RID: 90362 RVA: 0x006690E4 File Offset: 0x006672E4
 	public BulletActionUpdateAttackerFrozen(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x06018857 RID: 100439 RVA: 0x00643334 File Offset: 0x00641534
+	// Token: 0x060160FB RID: 90363 RVA: 0x006690F0 File Offset: 0x006672F0
 	protected override void OnTick(float delta)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
 		Entity attacker = bulletInfo.Attacker;
-		if (((attacker != null) ? attacker.GetComponent<BaseFrozenComponent>() : null).IsFrozen())
+		BaseFrozenComponent baseFrozenComponent = (attacker != null) ? attacker.GetComponent<BaseFrozenComponent>() : null;
+		if (baseFrozenComponent != null && baseFrozenComponent.IsFrozen())
 		{
 			BulletController.Instance.DestroyBullet(bulletInfo.BulletEntityId, false, EBulletDestroyReason.Normal, false);
 		}

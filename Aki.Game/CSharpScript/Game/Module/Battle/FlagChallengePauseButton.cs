@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C3A RID: 23610
+	// Token: 0x02004C1A RID: 19482
 	public class FlagChallengePauseButton : UiPanelBase
 	{
-		// Token: 0x0603BA74 RID: 244340 RVA: 0x00E3C3FC File Offset: 0x00E3A5FC
+		// Token: 0x060309BF RID: 199103 RVA: 0x00D8C76C File Offset: 0x00D8A96C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603BA75 RID: 244341 RVA: 0x00E3C4A2 File Offset: 0x00E3A6A2
+		// Token: 0x060309C0 RID: 199104 RVA: 0x00D8C812 File Offset: 0x00D8AA12
 		private void OnClicked()
 		{
 			Action clickCb = this.ClickCb;
@@ -42,16 +42,16 @@ namespace CSharpScript.Game.Module.Battle
 			clickCb();
 		}
 
-		// Token: 0x0401F0E1 RID: 127201
+		// Token: 0x04019B92 RID: 105362
 		[Nullable(2)]
 		public Action ClickCb;
 
-		// Token: 0x0200BE30 RID: 48688
+		// Token: 0x0200A838 RID: 43064
 		private enum EPauseButtonType
 		{
-			// Token: 0x040395A4 RID: 234916
+			// Token: 0x04033F67 RID: 212839
 			Panel,
-			// Token: 0x040395A5 RID: 234917
+			// Token: 0x04033F68 RID: 212840
 			Button
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D52 RID: 7506
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F63 RID: 8035
 	public class IPreprocessOperationConfig
 	{
-		// Token: 0x0600A105 RID: 41221 RVA: 0x0016F0D8 File Offset: 0x0016D2D8
+		// Token: 0x0600AAF1 RID: 43761 RVA: 0x001834FC File Offset: 0x001816FC
 		private IPreprocessOperationConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A106 RID: 41222 RVA: 0x0016F110 File Offset: 0x0016D310
+		// Token: 0x0600AAF2 RID: 43762 RVA: 0x00183534 File Offset: 0x00181734
 		public static IPreprocessOperationConfig Create([Nullable(2)] IPreprocessOperationConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A107 RID: 41223 RVA: 0x0016F123 File Offset: 0x0016D323
+		// Token: 0x0600AAF3 RID: 43763 RVA: 0x00183547 File Offset: 0x00181747
 		public static IPreprocessOperationConfig CreateFromSetValue([Nullable(2)] IPreprocessOperationConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A108 RID: 41224 RVA: 0x0016F136 File Offset: 0x0016D336
+		// Token: 0x0600AAF4 RID: 43764 RVA: 0x0018355A File Offset: 0x0018175A
 		public IPreprocessOperationConfig_SetValue ToSetValue()
 		{
 			return new IPreprocessOperationConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031DE RID: 12766
-		// (get) Token: 0x0600A109 RID: 41225 RVA: 0x0016F149 File Offset: 0x0016D349
-		// (set) Token: 0x0600A10A RID: 41226 RVA: 0x0016F174 File Offset: 0x0016D374
+		// Token: 0x17003472 RID: 13426
+		// (get) Token: 0x0600AAF5 RID: 43765 RVA: 0x0018356D File Offset: 0x0018176D
+		// (set) Token: 0x0600AAF6 RID: 43766 RVA: 0x00183598 File Offset: 0x00181798
 		public virtual EPreprocessOperation Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060F7 RID: 24823
+		// Token: 0x04006673 RID: 26227
 		[Nullable(2)]
 		protected IPreprocessOperationConfig FbInstance;
 
-		// Token: 0x040060F8 RID: 24824
+		// Token: 0x04006674 RID: 26228
 		[Nullable(2)]
 		protected IPreprocessOperationConfig_SetValue PocoInterface;
 	}

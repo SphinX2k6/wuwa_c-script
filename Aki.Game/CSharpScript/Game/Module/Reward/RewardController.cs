@@ -10,13 +10,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Reward
 {
-	// Token: 0x02004F09 RID: 20233
+	// Token: 0x02003ED2 RID: 16082
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class RewardController : UiControllerBase
 	{
-		// Token: 0x06033E24 RID: 212516 RVA: 0x00C27F74 File Offset: 0x00C26174
+		// Token: 0x06028C8F RID: 167055 RVA: 0x00B71564 File Offset: 0x00B6F764
 		protected override bool OnInit()
 		{
 			this.Model = RewardModel.Instance;
@@ -24,26 +24,26 @@ namespace CSharpScript.Game.Module.Reward
 			return true;
 		}
 
-		// Token: 0x06033E25 RID: 212517 RVA: 0x00C27FA8 File Offset: 0x00C261A8
+		// Token: 0x06028C90 RID: 167056 RVA: 0x00B71598 File Offset: 0x00B6F798
 		protected override bool OnClear()
 		{
 			Log.Instance.Info(ELogModule.Reward, ELogAuthor.ZJC, "初始化", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return true;
 		}
 
-		// Token: 0x06033E26 RID: 212518 RVA: 0x00C27FD1 File Offset: 0x00C261D1
+		// Token: 0x06028C91 RID: 167057 RVA: 0x00B715C1 File Offset: 0x00B6F7C1
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.DropInBagNotify, new Action<IMessage, Net.CallbackStatus>(this.DropInBagNotify));
 		}
 
-		// Token: 0x06033E27 RID: 212519 RVA: 0x00C27FEF File Offset: 0x00C261EF
+		// Token: 0x06028C92 RID: 167058 RVA: 0x00B715DF File Offset: 0x00B6F7DF
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.DropInBagNotify);
 		}
 
-		// Token: 0x06033E28 RID: 212520 RVA: 0x00C28004 File Offset: 0x00C26204
+		// Token: 0x06028C93 RID: 167059 RVA: 0x00B715F4 File Offset: 0x00B6F7F4
 		[NullableContext(2)]
 		private void DropInBagNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -51,12 +51,12 @@ namespace CSharpScript.Game.Module.Reward
 			this.HandleDropInBagInfo(dropInBagNotify.DropItemInfos, dropInBagNotify.DropId);
 		}
 
-		// Token: 0x06033E29 RID: 212521 RVA: 0x00C2802A File Offset: 0x00C2622A
+		// Token: 0x06028C94 RID: 167060 RVA: 0x00B7161A File Offset: 0x00B6F81A
 		public void HandleDropInBagInfo(IList<DropBagItemInfo> dropPackageInfos, int dropId)
 		{
 		}
 
-		// Token: 0x06033E2A RID: 212522 RVA: 0x00C2802C File Offset: 0x00C2622C
+		// Token: 0x06028C95 RID: 167061 RVA: 0x00B7161C File Offset: 0x00B6F81C
 		[NullableContext(2)]
 		public bool PickUpFightDrop(long creatureDataId, int pbDataId, Action<bool> responseCallback = null)
 		{
@@ -118,8 +118,8 @@ namespace CSharpScript.Game.Module.Reward
 			return true;
 		}
 
-		// Token: 0x17007F34 RID: 32564
-		// (get) Token: 0x06033E2B RID: 212523 RVA: 0x00C280B2 File Offset: 0x00C262B2
+		// Token: 0x170052E4 RID: 21220
+		// (get) Token: 0x06028C96 RID: 167062 RVA: 0x00B716A2 File Offset: 0x00B6F8A2
 		public static RewardController Instance
 		{
 			get
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Reward
 			}
 		}
 
-		// Token: 0x06033E2C RID: 212524 RVA: 0x00C280B9 File Offset: 0x00C262B9
+		// Token: 0x06028C97 RID: 167063 RVA: 0x00B716A9 File Offset: 0x00B6F8A9
 		public static RewardController GetOrCreateInstance()
 		{
 			if (RewardController._Instance == null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Reward
 			return RewardController._Instance;
 		}
 
-		// Token: 0x06033E2D RID: 212525 RVA: 0x00C280CD File Offset: 0x00C262CD
+		// Token: 0x06028C98 RID: 167064 RVA: 0x00B716BD File Offset: 0x00B6F8BD
 		public static bool CreateInstance()
 		{
 			if (RewardController._Instance != null)
@@ -149,31 +149,31 @@ namespace CSharpScript.Game.Module.Reward
 			return true;
 		}
 
-		// Token: 0x06033E2E RID: 212526 RVA: 0x00C280E3 File Offset: 0x00C262E3
+		// Token: 0x06028C99 RID: 167065 RVA: 0x00B716D3 File Offset: 0x00B6F8D3
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06033E2F RID: 212527 RVA: 0x00C280E5 File Offset: 0x00C262E5
+		// Token: 0x06028C9A RID: 167066 RVA: 0x00B716D5 File Offset: 0x00B6F8D5
 		public static void ResetStaticDefaultValue()
 		{
 			RewardController._Instance = null;
 		}
 
-		// Token: 0x06033E30 RID: 212528 RVA: 0x00C280ED File Offset: 0x00C262ED
+		// Token: 0x06028C9B RID: 167067 RVA: 0x00B716DD File Offset: 0x00B6F8DD
 		static RewardController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RewardController.CreateStaticDefaultValue), new Action(RewardController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B940 RID: 112960
+		// Token: 0x04016313 RID: 90899
 		[Nullable(2)]
 		protected RewardModel Model = RewardModel.Instance;
 
-		// Token: 0x0401B941 RID: 112961
+		// Token: 0x04016314 RID: 90900
 		private readonly HashSet<long> WaitResponseDropSet = new HashSet<long>();
 
-		// Token: 0x0401B942 RID: 112962
+		// Token: 0x04016315 RID: 90901
 		[Nullable(2)]
 		private static RewardController _Instance;
 	}

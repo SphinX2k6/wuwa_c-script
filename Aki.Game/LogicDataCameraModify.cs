@@ -8,16 +8,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DF4 RID: 11764
+// Token: 0x0200234F RID: 9039
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataCameraModify.LogicDataCameraModify_C")]
 public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170021D0 RID: 8656
-	// (get) Token: 0x06018B49 RID: 101193 RVA: 0x00657FC8 File Offset: 0x006561C8
-	// (set) Token: 0x06018B4A RID: 101194 RVA: 0x00657FD8 File Offset: 0x006561D8
+	// Token: 0x17002234 RID: 8756
+	// (get) Token: 0x060163FE RID: 91134 RVA: 0x0067E04C File Offset: 0x0067C24C
+	// (set) Token: 0x060163FF RID: 91135 RVA: 0x0067E05C File Offset: 0x0067C25C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EBulletCameraModifyPlayer Player
 	{
@@ -31,9 +31,9 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021D1 RID: 8657
-	// (get) Token: 0x06018B4B RID: 101195 RVA: 0x00657FE9 File Offset: 0x006561E9
-	// (set) Token: 0x06018B4C RID: 101196 RVA: 0x00657FFD File Offset: 0x006561FD
+	// Token: 0x17002235 RID: 8757
+	// (get) Token: 0x06016400 RID: 91136 RVA: 0x0067E06D File Offset: 0x0067C26D
+	// (set) Token: 0x06016401 RID: 91137 RVA: 0x0067E081 File Offset: 0x0067C281
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag Tag
 	{
@@ -47,9 +47,9 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021D2 RID: 8658
-	// (get) Token: 0x06018B4D RID: 101197 RVA: 0x00658012 File Offset: 0x00656212
-	// (set) Token: 0x06018B4E RID: 101198 RVA: 0x00658022 File Offset: 0x00656222
+	// Token: 0x17002236 RID: 8758
+	// (get) Token: 0x06016402 RID: 91138 RVA: 0x0067E096 File Offset: 0x0067C296
+	// (set) Token: 0x06016403 RID: 91139 RVA: 0x0067E0A6 File Offset: 0x0067C2A6
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Duration
 	{
@@ -63,9 +63,9 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021D3 RID: 8659
-	// (get) Token: 0x06018B4F RID: 101199 RVA: 0x00658033 File Offset: 0x00656233
-	// (set) Token: 0x06018B50 RID: 101200 RVA: 0x00658043 File Offset: 0x00656243
+	// Token: 0x17002237 RID: 8759
+	// (get) Token: 0x06016404 RID: 91140 RVA: 0x0067E0B7 File Offset: 0x0067C2B7
+	// (set) Token: 0x06016405 RID: 91141 RVA: 0x0067E0C7 File Offset: 0x0067C2C7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float BlendIn
 	{
@@ -79,9 +79,9 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021D4 RID: 8660
-	// (get) Token: 0x06018B51 RID: 101201 RVA: 0x00658054 File Offset: 0x00656254
-	// (set) Token: 0x06018B52 RID: 101202 RVA: 0x00658064 File Offset: 0x00656264
+	// Token: 0x17002238 RID: 8760
+	// (get) Token: 0x06016406 RID: 91142 RVA: 0x0067E0D8 File Offset: 0x0067C2D8
+	// (set) Token: 0x06016407 RID: 91143 RVA: 0x0067E0E8 File Offset: 0x0067C2E8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float BlendOut
 	{
@@ -95,9 +95,9 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021D5 RID: 8661
-	// (get) Token: 0x06018B53 RID: 101203 RVA: 0x00658075 File Offset: 0x00656275
-	// (set) Token: 0x06018B54 RID: 101204 RVA: 0x00658085 File Offset: 0x00656285
+	// Token: 0x17002239 RID: 8761
+	// (get) Token: 0x06016408 RID: 91144 RVA: 0x0067E0F9 File Offset: 0x0067C2F9
+	// (set) Token: 0x06016409 RID: 91145 RVA: 0x0067E109 File Offset: 0x0067C309
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float BlendOutInterrupt
 	{
@@ -111,9 +111,9 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021D6 RID: 8662
-	// (get) Token: 0x06018B55 RID: 101205 RVA: 0x00658098 File Offset: 0x00656298
-	// (set) Token: 0x06018B56 RID: 101206 RVA: 0x006580D1 File Offset: 0x006562D1
+	// Token: 0x1700223A RID: 8762
+	// (get) Token: 0x0601640A RID: 91146 RVA: 0x0067E11C File Offset: 0x0067C31C
+	// (set) Token: 0x0601640B RID: 91147 RVA: 0x0067E155 File Offset: 0x0067C355
 	[UProperty(EPropertyFlags.CPF_None)]
 	public SCameraModifier_Settings ModifierSettings
 	{
@@ -133,9 +133,9 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021D7 RID: 8663
-	// (get) Token: 0x06018B57 RID: 101207 RVA: 0x006580F9 File Offset: 0x006562F9
-	// (set) Token: 0x06018B58 RID: 101208 RVA: 0x00658109 File Offset: 0x00656309
+	// Token: 0x1700223B RID: 8763
+	// (get) Token: 0x0601640C RID: 91148 RVA: 0x0067E17D File Offset: 0x0067C37D
+	// (set) Token: 0x0601640D RID: 91149 RVA: 0x0067E18D File Offset: 0x0067C38D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECameraAnsEffectiveClientType ClientType
 	{
@@ -149,9 +149,9 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021D8 RID: 8664
-	// (get) Token: 0x06018B59 RID: 101209 RVA: 0x0065811A File Offset: 0x0065631A
-	// (set) Token: 0x06018B5A RID: 101210 RVA: 0x0065812E File Offset: 0x0065632E
+	// Token: 0x1700223C RID: 8764
+	// (get) Token: 0x0601640E RID: 91150 RVA: 0x0067E19E File Offset: 0x0067C39E
+	// (set) Token: 0x0601640F RID: 91151 RVA: 0x0067E1B2 File Offset: 0x0067C3B2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string CameraAttachSocket
 	{
@@ -165,9 +165,9 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021D9 RID: 8665
-	// (get) Token: 0x06018B5B RID: 101211 RVA: 0x00658144 File Offset: 0x00656344
-	// (set) Token: 0x06018B5C RID: 101212 RVA: 0x0065817D File Offset: 0x0065637D
+	// Token: 0x1700223D RID: 8765
+	// (get) Token: 0x06016410 RID: 91152 RVA: 0x0067E1C8 File Offset: 0x0067C3C8
+	// (set) Token: 0x06016411 RID: 91153 RVA: 0x0067E201 File Offset: 0x0067C401
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<SCameraModifier_Condition> Conditions
 	{
@@ -187,7 +187,7 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x06018B5D RID: 101213 RVA: 0x0065818B File Offset: 0x0065638B
+	// Token: 0x06016412 RID: 91154 RVA: 0x0067E20F File Offset: 0x0067C40F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataCameraModify._ClassPtr == IntPtr.Zero)
@@ -197,65 +197,65 @@ public class LogicDataCameraModify : LogicDataBase, IUnrealUObject, IUnrealObjec
 		return LogicDataCameraModify._ClassPtr;
 	}
 
-	// Token: 0x06018B5E RID: 101214 RVA: 0x006581B0 File Offset: 0x006563B0
+	// Token: 0x06016413 RID: 91155 RVA: 0x0067E234 File Offset: 0x0067C434
 	public LogicDataCameraModify() : this(BuiltinUtils.AllocNativeUObject(LogicDataCameraModify.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018B5F RID: 101215 RVA: 0x006581D8 File Offset: 0x006563D8
+	// Token: 0x06016414 RID: 91156 RVA: 0x0067E25C File Offset: 0x0067C45C
 	public LogicDataCameraModify(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataCameraModify.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018B60 RID: 101216 RVA: 0x0065820B File Offset: 0x0065640B
+	// Token: 0x06016415 RID: 91157 RVA: 0x0067E28F File Offset: 0x0067C48F
 	protected LogicDataCameraModify(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B841 RID: 47169
+	// Token: 0x0400BBC7 RID: 48071
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataCameraModify.LogicDataCameraModify_C";
 
-	// Token: 0x0400B842 RID: 47170
+	// Token: 0x0400BBC8 RID: 48072
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B843 RID: 47171
+	// Token: 0x0400BBC9 RID: 48073
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B844 RID: 47172
+	// Token: 0x0400BBCA RID: 48074
 	private static int __PropertyOffset_Player;
 
-	// Token: 0x0400B845 RID: 47173
+	// Token: 0x0400BBCB RID: 48075
 	private static int __PropertyOffset_Tag;
 
-	// Token: 0x0400B846 RID: 47174
+	// Token: 0x0400BBCC RID: 48076
 	private static int __PropertyOffset_Duration;
 
-	// Token: 0x0400B847 RID: 47175
+	// Token: 0x0400BBCD RID: 48077
 	private static int __PropertyOffset_BlendIn;
 
-	// Token: 0x0400B848 RID: 47176
+	// Token: 0x0400BBCE RID: 48078
 	private static int __PropertyOffset_BlendOut;
 
-	// Token: 0x0400B849 RID: 47177
+	// Token: 0x0400BBCF RID: 48079
 	private static int __PropertyOffset_BlendOutInterrupt;
 
-	// Token: 0x0400B84A RID: 47178
+	// Token: 0x0400BBD0 RID: 48080
 	private static int __PropertyOffset_ModifierSettings;
 
-	// Token: 0x0400B84B RID: 47179
+	// Token: 0x0400BBD1 RID: 48081
 	[Nullable(2)]
 	private SCameraModifier_Settings _ModifierSettings;
 
-	// Token: 0x0400B84C RID: 47180
+	// Token: 0x0400BBD2 RID: 48082
 	private static int __PropertyOffset_ClientType;
 
-	// Token: 0x0400B84D RID: 47181
+	// Token: 0x0400BBD3 RID: 48083
 	private static int __PropertyOffset_CameraAttachSocket;
 
-	// Token: 0x0400B84E RID: 47182
+	// Token: 0x0400BBD4 RID: 48084
 	private static int __PropertyOffset_Conditions;
 
-	// Token: 0x0400B84F RID: 47183
+	// Token: 0x0400BBD5 RID: 48085
 	[Nullable(new byte[]
 	{
 		2,

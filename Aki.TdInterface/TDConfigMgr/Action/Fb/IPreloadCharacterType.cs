@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029DE RID: 10718
+	// Token: 0x02002CCB RID: 11467
 	public class IPreloadCharacterType
 	{
-		// Token: 0x0600ECC7 RID: 60615 RVA: 0x00228FFE File Offset: 0x002271FE
-		[NullableContext(1)]
+		// Token: 0x0600FB5E RID: 64350 RVA: 0x00246982 File Offset: 0x00244B82
 		public static IPreloadCharacterType Create(IPreloadCharacterType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004ACD RID: 19149
-		// (get) Token: 0x0600ECC8 RID: 60616 RVA: 0x0022901D File Offset: 0x0022721D
+		// Token: 0x17004E76 RID: 20086
+		// (get) Token: 0x0600FB5F RID: 64351 RVA: 0x002469A1 File Offset: 0x00244BA1
 		public virtual EPreloadObjectType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008266 RID: 33382
+		// Token: 0x04008957 RID: 35159
 		private IPreloadCharacterType Instance;
 	}
 }

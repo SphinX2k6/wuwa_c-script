@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200024D RID: 589
+// Token: 0x02000251 RID: 593
 [NullableContext(1)]
 [Nullable(0)]
 public class TextConfig : ConfigBase
 {
-	// Token: 0x060023D8 RID: 9176 RVA: 0x000DB0DC File Offset: 0x000D92DC
+	// Token: 0x06002490 RID: 9360 RVA: 0x000E1624 File Offset: 0x000DF824
 	[return: Nullable(2)]
 	public string GetTextById(string id)
 	{
@@ -19,7 +19,7 @@ public class TextConfig : ConfigBase
 		return this.GetMultiTextByKey(textContentIdById);
 	}
 
-	// Token: 0x060023D9 RID: 9177 RVA: 0x000DB104 File Offset: 0x000D9304
+	// Token: 0x06002491 RID: 9361 RVA: 0x000E164C File Offset: 0x000DF84C
 	[return: Nullable(2)]
 	public string GetTextContentIdById(string id)
 	{
@@ -37,7 +37,7 @@ public class TextConfig : ConfigBase
 		return text;
 	}
 
-	// Token: 0x060023DA RID: 9178 RVA: 0x000DB160 File Offset: 0x000D9360
+	// Token: 0x06002492 RID: 9362 RVA: 0x000E16A8 File Offset: 0x000DF8A8
 	[return: Nullable(2)]
 	public string GetGenderTextById(string id, bool isMale)
 	{
@@ -59,21 +59,21 @@ public class TextConfig : ConfigBase
 		return config.Value.MaleText;
 	}
 
-	// Token: 0x060023DB RID: 9179 RVA: 0x000DB1C9 File Offset: 0x000D93C9
+	// Token: 0x06002493 RID: 9363 RVA: 0x000E1711 File Offset: 0x000DF911
 	[NullableContext(2)]
 	public string GetMultiTextByKey([Nullable(1)] string key, string def)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(key, null) ?? def;
 	}
 
-	// Token: 0x060023DC RID: 9180 RVA: 0x000DB1D7 File Offset: 0x000D93D7
+	// Token: 0x06002494 RID: 9364 RVA: 0x000E171F File Offset: 0x000DF91F
 	[return: Nullable(2)]
 	public string GetMultiTextByKey(string key)
 	{
 		return this.GetMultiTextByKey(key, string.Empty);
 	}
 
-	// Token: 0x060023DD RID: 9181 RVA: 0x000DB1E8 File Offset: 0x000D93E8
+	// Token: 0x06002495 RID: 9365 RVA: 0x000E1730 File Offset: 0x000DF930
 	public string GetMultiText(string key, params string[] args)
 	{
 		string multiTextByKey = this.GetMultiTextByKey(key);
@@ -84,8 +84,8 @@ public class TextConfig : ConfigBase
 		return StringUtils.Format(multiTextByKey, args);
 	}
 
-	// Token: 0x1700058F RID: 1423
-	// (get) Token: 0x060023DE RID: 9182 RVA: 0x000DB212 File Offset: 0x000D9412
+	// Token: 0x170005B6 RID: 1462
+	// (get) Token: 0x06002496 RID: 9366 RVA: 0x000E175A File Offset: 0x000DF95A
 	public static TextConfig Instance
 	{
 		get
@@ -94,7 +94,7 @@ public class TextConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060023DF RID: 9183 RVA: 0x000DB219 File Offset: 0x000D9419
+	// Token: 0x06002497 RID: 9367 RVA: 0x000E1761 File Offset: 0x000DF961
 	public static TextConfig GetOrCreateInstance()
 	{
 		if (TextConfig._Instance == null)
@@ -104,7 +104,7 @@ public class TextConfig : ConfigBase
 		return TextConfig._Instance;
 	}
 
-	// Token: 0x060023E0 RID: 9184 RVA: 0x000DB22D File Offset: 0x000D942D
+	// Token: 0x06002498 RID: 9368 RVA: 0x000E1775 File Offset: 0x000DF975
 	public static bool CreateInstance()
 	{
 		if (TextConfig._Instance != null)
@@ -115,24 +115,24 @@ public class TextConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060023E1 RID: 9185 RVA: 0x000DB243 File Offset: 0x000D9443
+	// Token: 0x06002499 RID: 9369 RVA: 0x000E178B File Offset: 0x000DF98B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060023E2 RID: 9186 RVA: 0x000DB245 File Offset: 0x000D9445
+	// Token: 0x0600249A RID: 9370 RVA: 0x000E178D File Offset: 0x000DF98D
 	public static void ResetStaticDefaultValue()
 	{
 		TextConfig._Instance = null;
 	}
 
-	// Token: 0x060023E3 RID: 9187 RVA: 0x000DB24D File Offset: 0x000D944D
+	// Token: 0x0600249B RID: 9371 RVA: 0x000E1795 File Offset: 0x000DF995
 	static TextConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TextConfig.CreateStaticDefaultValue), new Action(TextConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400182E RID: 6190
+	// Token: 0x04001872 RID: 6258
 	[Nullable(2)]
 	private static TextConfig _Instance;
 }

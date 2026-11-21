@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
@@ -11,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024E4 RID: 9444
+// Token: 0x020019CB RID: 6603
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionNewRecommendLeftPanelView : UiPanelBase
 {
-	// Token: 0x06012FD3 RID: 77779 RVA: 0x004B3ACC File Offset: 0x004B1CCC
+	// Token: 0x06010492 RID: 66706 RVA: 0x004C168C File Offset: 0x004BF88C
 	public VisionNewRecommendLeftPanelView(VisionNewRecommendProxy proxy)
 	{
 		this.Proxy = proxy;
 	}
 
-	// Token: 0x06012FD4 RID: 77780 RVA: 0x004B3ADC File Offset: 0x004B1CDC
+	// Token: 0x06010493 RID: 66707 RVA: 0x004C169C File Offset: 0x004BF89C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +37,7 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012FD5 RID: 77781 RVA: 0x004B3BA4 File Offset: 0x004B1DA4
+	// Token: 0x06010494 RID: 66708 RVA: 0x004C1764 File Offset: 0x004BF964
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionNewRecommendLeftPanelView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,14 +48,14 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012FD6 RID: 77782 RVA: 0x004B3BE7 File Offset: 0x004B1DE7
+	// Token: 0x06010495 RID: 66709 RVA: 0x004C17A7 File Offset: 0x004BF9A7
 	protected override void OnStart()
 	{
 		this.RefreshRoleInfo();
 		this.SelectDefaultFetterItem();
 	}
 
-	// Token: 0x06012FD7 RID: 77783 RVA: 0x004B3BF8 File Offset: 0x004B1DF8
+	// Token: 0x06010496 RID: 66710 RVA: 0x004C17B8 File Offset: 0x004BF9B8
 	private UniTask InitAllLayouts()
 	{
 		VisionNewRecommendLeftPanelView.<InitAllLayouts>d__8 <InitAllLayouts>d__;
@@ -67,7 +66,7 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		return <InitAllLayouts>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012FD8 RID: 77784 RVA: 0x004B3C3B File Offset: 0x004B1E3B
+	// Token: 0x06010497 RID: 66711 RVA: 0x004C17FB File Offset: 0x004BF9FB
 	private VisionNewRecommendBranchFetterItem InitSystemRecommendItem()
 	{
 		VisionNewRecommendBranchFetterItem visionNewRecommendBranchFetterItem = new VisionNewRecommendBranchFetterItem();
@@ -76,7 +75,7 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		return visionNewRecommendBranchFetterItem;
 	}
 
-	// Token: 0x06012FD9 RID: 77785 RVA: 0x004B3C65 File Offset: 0x004B1E65
+	// Token: 0x06010498 RID: 66712 RVA: 0x004C1825 File Offset: 0x004BFA25
 	private VisionNewRecommendBranchFetterItem InitUsageRecommendItem()
 	{
 		VisionNewRecommendBranchFetterItem visionNewRecommendBranchFetterItem = new VisionNewRecommendBranchFetterItem();
@@ -85,7 +84,7 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		return visionNewRecommendBranchFetterItem;
 	}
 
-	// Token: 0x06012FDA RID: 77786 RVA: 0x004B3C90 File Offset: 0x004B1E90
+	// Token: 0x06010499 RID: 66713 RVA: 0x004C1850 File Offset: 0x004BFA50
 	private void OnSystemRecommendItemSelected(int index)
 	{
 		GenericLayout<VisionNewRecommendBranchFetterItem, VisionFetterRecommendInfo> systemRecommendLayout = this.SystemRecommendLayout;
@@ -124,7 +123,7 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		mainViewSequence.PlayOrReplaySequenceByName("Switch", false, null);
 	}
 
-	// Token: 0x06012FDB RID: 77787 RVA: 0x004B3D6C File Offset: 0x004B1F6C
+	// Token: 0x0601049A RID: 66714 RVA: 0x004C192C File Offset: 0x004BFB2C
 	private void OnUsageRecommendItemSelected(int index)
 	{
 		GenericLayout<VisionNewRecommendBranchFetterItem, VisionFetterRecommendInfo> usageRecommendLayout = this.UsageRecommendLayout;
@@ -163,7 +162,7 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		mainViewSequence.PlayOrReplaySequenceByName("Switch", false, null);
 	}
 
-	// Token: 0x06012FDC RID: 77788 RVA: 0x004B3E48 File Offset: 0x004B2048
+	// Token: 0x0601049B RID: 66715 RVA: 0x004C1A08 File Offset: 0x004BFC08
 	public void SelectDefaultFetterItem()
 	{
 		if (this.Proxy.IsFromRoleDev)
@@ -219,14 +218,14 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012FDD RID: 77789 RVA: 0x004B3F2E File Offset: 0x004B212E
+	// Token: 0x0601049C RID: 66716 RVA: 0x004C1AEE File Offset: 0x004BFCEE
 	public void RefreshRoleInfo()
 	{
 		this.RefreshRoleIcon();
 		this.RefreshRoleName();
 	}
 
-	// Token: 0x06012FDE RID: 77790 RVA: 0x004B3F3C File Offset: 0x004B213C
+	// Token: 0x0601049D RID: 66717 RVA: 0x004C1AFC File Offset: 0x004BFCFC
 	private RoleSkin? GetRoleSkinConfig()
 	{
 		RoleSkinModel instance = RoleSkinModel.Instance;
@@ -243,31 +242,25 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		return SkinConfig.Instance.GetRoleSkinConfig(roleConfig.Value.SkinId);
 	}
 
-	// Token: 0x06012FDF RID: 77791 RVA: 0x004B3FB8 File Offset: 0x004B21B8
+	// Token: 0x0601049E RID: 66718 RVA: 0x004C1B78 File Offset: 0x004BFD78
 	private void RefreshRoleIcon()
 	{
 		RoleSkin? roleSkinConfig = this.GetRoleSkinConfig();
-		if (roleSkinConfig == null)
+		if (roleSkinConfig != null)
 		{
-			return;
-		}
-		string tag = "RoleIcon1";
-		string roleSkinConfigParam = ComponentConfig.Instance.GetRoleSkinConfigParam(tag);
-		if (roleSkinConfigParam != null && roleSkinConfigParam != "")
-		{
-			PropertyInfo property = roleSkinConfig.Value.GetType().GetProperty(roleSkinConfigParam);
-			if (property != null)
+			RoleSkin valueOrDefault = roleSkinConfig.GetValueOrDefault();
+			string tag = "RoleIcon1";
+			string roleSkinConfigParam = ComponentConfig.Instance.GetRoleSkinConfigParam(tag);
+			string path;
+			if (roleSkinConfigParam != null && roleSkinConfigParam != "" && valueOrDefault.TryGetMember(roleSkinConfigParam, out path))
 			{
-				string text = property.GetValue(roleSkinConfig.Value) as string;
-				if (text != null)
-				{
-					base.SetTextureByPath(text, base.GetTexture(0), null, null);
-				}
+				base.SetTextureByPath(path, base.GetTexture(0), null, null);
 			}
+			return;
 		}
 	}
 
-	// Token: 0x06012FE0 RID: 77792 RVA: 0x004B4050 File Offset: 0x004B2250
+	// Token: 0x0601049F RID: 66719 RVA: 0x004C1BE8 File Offset: 0x004BFDE8
 	private void RefreshRoleName()
 	{
 		RoleSkin? roleSkinConfig = this.GetRoleSkinConfig();
@@ -283,10 +276,10 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 		text.SetText(RoleConfig.Instance.GetRoleName(roleSkinConfig.Value.Name), true);
 	}
 
-	// Token: 0x04008EE9 RID: 36585
+	// Token: 0x04009033 RID: 36915
 	private readonly VisionNewRecommendProxy Proxy;
 
-	// Token: 0x04008EEA RID: 36586
+	// Token: 0x04009034 RID: 36916
 	[Nullable(new byte[]
 	{
 		2,
@@ -295,7 +288,7 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 	})]
 	private GenericLayout<VisionNewRecommendBranchFetterItem, VisionFetterRecommendInfo> SystemRecommendLayout;
 
-	// Token: 0x04008EEB RID: 36587
+	// Token: 0x04009035 RID: 36917
 	[Nullable(new byte[]
 	{
 		2,
@@ -304,25 +297,25 @@ public class VisionNewRecommendLeftPanelView : UiPanelBase
 	})]
 	private GenericLayout<VisionNewRecommendBranchFetterItem, VisionFetterRecommendInfo> UsageRecommendLayout;
 
-	// Token: 0x02008A73 RID: 35443
+	// Token: 0x02007BFB RID: 31739
 	[NullableContext(0)]
 	private enum EComp
 	{
-		// Token: 0x0402CF51 RID: 184145
+		// Token: 0x0402826A RID: 164458
 		RoleIcon,
-		// Token: 0x0402CF52 RID: 184146
+		// Token: 0x0402826B RID: 164459
 		RoleName,
-		// Token: 0x0402CF53 RID: 184147
+		// Token: 0x0402826C RID: 164460
 		UsageRecommendLayout,
-		// Token: 0x0402CF54 RID: 184148
+		// Token: 0x0402826D RID: 164461
 		UsageRecommendItem,
-		// Token: 0x0402CF55 RID: 184149
+		// Token: 0x0402826E RID: 164462
 		SystemRecommendLayout,
-		// Token: 0x0402CF56 RID: 184150
+		// Token: 0x0402826F RID: 164463
 		SystemRecommendItem,
-		// Token: 0x0402CF57 RID: 184151
+		// Token: 0x04028270 RID: 164464
 		PnlUsageRecommend,
-		// Token: 0x0402CF58 RID: 184152
+		// Token: 0x04028271 RID: 164465
 		PnlSystemRecommend
 	}
 }

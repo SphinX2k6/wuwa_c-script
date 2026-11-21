@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -9,51 +8,51 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001A9D RID: 6813
+// Token: 0x02000F5C RID: 3932
 [NullableContext(2)]
 [Nullable(0)]
 public class ExploreProgressController : UiControllerBase
 {
-	// Token: 0x0600C9C0 RID: 51648 RVA: 0x002E1377 File Offset: 0x002DF577
+	// Token: 0x06009DD1 RID: 40401 RVA: 0x002EC4CB File Offset: 0x002EA6CB
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ExploreProgressRewardIdsNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleExploreProgressRewardIdsNotify));
 	}
 
-	// Token: 0x0600C9C1 RID: 51649 RVA: 0x002E1395 File Offset: 0x002DF595
+	// Token: 0x06009DD2 RID: 40402 RVA: 0x002EC4E9 File Offset: 0x002EA6E9
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ExploreProgressRewardIdsNotify);
 	}
 
-	// Token: 0x0600C9C2 RID: 51650 RVA: 0x002E13A7 File Offset: 0x002DF5A7
+	// Token: 0x06009DD3 RID: 40403 RVA: 0x002EC4FB File Offset: 0x002EA6FB
 	protected override void OnAddEvents()
 	{
 		base.OnAddEvents();
 		EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x0600C9C3 RID: 51651 RVA: 0x002E13CB File Offset: 0x002DF5CB
+	// Token: 0x06009DD4 RID: 40404 RVA: 0x002EC51F File Offset: 0x002EA71F
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDone));
 		base.OnRemoveEvents();
 	}
 
-	// Token: 0x0600C9C4 RID: 51652 RVA: 0x002E13F0 File Offset: 0x002DF5F0
+	// Token: 0x06009DD5 RID: 40405 RVA: 0x002EC544 File Offset: 0x002EA744
 	private void HandleExploreProgressRewardIdsNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ExploreProgressRewardIdsNotify exploreProgressRewardIdsNotify = (ExploreProgressRewardIdsNotify)msg;
-		ExploreProgressModel.Instance.UpdateAreaStageRewardDataList(exploreProgressRewardIdsNotify.RewardIds.ToArray<int>());
+		ExploreProgressModel.Instance.UpdateAreaStageRewardDataList(exploreProgressRewardIdsNotify.RewardIds);
 	}
 
-	// Token: 0x0600C9C5 RID: 51653 RVA: 0x002E1419 File Offset: 0x002DF619
+	// Token: 0x06009DD6 RID: 40406 RVA: 0x002EC568 File Offset: 0x002EA768
 	private void OnWorldDone()
 	{
 		this.AllExploreProgressAsyncRequest(0);
 	}
 
-	// Token: 0x0600C9C6 RID: 51654 RVA: 0x002E1424 File Offset: 0x002DF624
+	// Token: 0x06009DD7 RID: 40407 RVA: 0x002EC574 File Offset: 0x002EA774
 	[NullableContext(0)]
 	public UniTask<bool> AllExploreProgressAsyncRequest(int timeoutMs = 0)
 	{
@@ -66,7 +65,7 @@ public class ExploreProgressController : UiControllerBase
 		return <AllExploreProgressAsyncRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C9C7 RID: 51655 RVA: 0x002E1470 File Offset: 0x002DF670
+	// Token: 0x06009DD8 RID: 40408 RVA: 0x002EC5C0 File Offset: 0x002EA7C0
 	private void ExploreProgressResponseHandle(ExploreProgressResponse response)
 	{
 		ExploreProgressModel instance = ExploreProgressModel.Instance;
@@ -77,7 +76,7 @@ public class ExploreProgressController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnExploreProgressResponse);
 	}
 
-	// Token: 0x0600C9C8 RID: 51656 RVA: 0x002E14D4 File Offset: 0x002DF6D4
+	// Token: 0x06009DD9 RID: 40409 RVA: 0x002EC624 File Offset: 0x002EA824
 	[NullableContext(1)]
 	public UniTask ReceiveAreaStageRewardAsyncRequest(int[] rewardIds)
 	{
@@ -90,7 +89,7 @@ public class ExploreProgressController : UiControllerBase
 		return <ReceiveAreaStageRewardAsyncRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C9C9 RID: 51657 RVA: 0x002E1520 File Offset: 0x002DF720
+	// Token: 0x06009DDA RID: 40410 RVA: 0x002EC670 File Offset: 0x002EA870
 	private void ReceiveAreaStageRewardResponseHandle(ExploreProgressRewardResponse response)
 	{
 		if (((response != null) ? response.RewardIds : null) != null && response.RewardIds.Count > 0)
@@ -100,7 +99,7 @@ public class ExploreProgressController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C9CA RID: 51658 RVA: 0x002E1570 File Offset: 0x002DF770
+	// Token: 0x06009DDB RID: 40411 RVA: 0x002EC6C0 File Offset: 0x002EA8C0
 	public UniTask QueryOnlinePlayersAreaAsyncRequest()
 	{
 		ExploreProgressController.<QueryOnlinePlayersAreaAsyncRequest>d__10 <QueryOnlinePlayersAreaAsyncRequest>d__;
@@ -111,7 +110,7 @@ public class ExploreProgressController : UiControllerBase
 		return <QueryOnlinePlayersAreaAsyncRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C9CB RID: 51659 RVA: 0x002E15B3 File Offset: 0x002DF7B3
+	// Token: 0x06009DDC RID: 40412 RVA: 0x002EC703 File Offset: 0x002EA903
 	private void QueryOnlinePlayersAreaResponseHandle(QueryOnlinePlayersAreaResponse response)
 	{
 		if (response.ErrorCode != ErrorCode.Success)
@@ -119,10 +118,10 @@ public class ExploreProgressController : UiControllerBase
 			ErrorCodeConfig.Instance.GetTextByErrorId(response.ErrorCode);
 			return;
 		}
-		ExploreProgressModel.Instance.UpdateOnlinePlayersArea(response.AreaDict.ToDictionary<int, int>());
+		ExploreProgressModel.Instance.UpdateOnlinePlayersArea(new Dictionary<int, int>(response.AreaDict));
 	}
 
-	// Token: 0x0600C9CC RID: 51660 RVA: 0x002E15E4 File Offset: 0x002DF7E4
+	// Token: 0x06009DDD RID: 40413 RVA: 0x002EC734 File Offset: 0x002EA934
 	public UniTask ExploreEntityTraceRequest(int exploratoryDegree, int areaId)
 	{
 		ExploreProgressController.<ExploreEntityTraceRequest>d__12 <ExploreEntityTraceRequest>d__;
@@ -134,8 +133,8 @@ public class ExploreProgressController : UiControllerBase
 		return <ExploreEntityTraceRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17001083 RID: 4227
-	// (get) Token: 0x0600C9CD RID: 51661 RVA: 0x002E162F File Offset: 0x002DF82F
+	// Token: 0x170010A8 RID: 4264
+	// (get) Token: 0x06009DDE RID: 40414 RVA: 0x002EC77F File Offset: 0x002EA97F
 	[Nullable(1)]
 	public static ExploreProgressController Instance
 	{
@@ -146,7 +145,7 @@ public class ExploreProgressController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C9CE RID: 51662 RVA: 0x002E1636 File Offset: 0x002DF836
+	// Token: 0x06009DDF RID: 40415 RVA: 0x002EC786 File Offset: 0x002EA986
 	[NullableContext(1)]
 	public static ExploreProgressController GetOrCreateInstance()
 	{
@@ -157,7 +156,7 @@ public class ExploreProgressController : UiControllerBase
 		return ExploreProgressController._Instance;
 	}
 
-	// Token: 0x0600C9CF RID: 51663 RVA: 0x002E164A File Offset: 0x002DF84A
+	// Token: 0x06009DE0 RID: 40416 RVA: 0x002EC79A File Offset: 0x002EA99A
 	public static bool CreateInstance()
 	{
 		if (ExploreProgressController._Instance != null)
@@ -168,23 +167,23 @@ public class ExploreProgressController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C9D0 RID: 51664 RVA: 0x002E1660 File Offset: 0x002DF860
+	// Token: 0x06009DE1 RID: 40417 RVA: 0x002EC7B0 File Offset: 0x002EA9B0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C9D1 RID: 51665 RVA: 0x002E1662 File Offset: 0x002DF862
+	// Token: 0x06009DE2 RID: 40418 RVA: 0x002EC7B2 File Offset: 0x002EA9B2
 	public static void ResetStaticDefaultValue()
 	{
 		ExploreProgressController._Instance = null;
 	}
 
-	// Token: 0x0600C9D2 RID: 51666 RVA: 0x002E166A File Offset: 0x002DF86A
+	// Token: 0x06009DE3 RID: 40419 RVA: 0x002EC7BA File Offset: 0x002EA9BA
 	static ExploreProgressController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ExploreProgressController.CreateStaticDefaultValue), new Action(ExploreProgressController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005CE7 RID: 23783
+	// Token: 0x04005DB6 RID: 23990
 	private static ExploreProgressController _Instance;
 }

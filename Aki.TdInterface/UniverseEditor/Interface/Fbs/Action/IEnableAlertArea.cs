@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006642 RID: 26178
+	// Token: 0x02006CB3 RID: 27827
 	public struct IEnableAlertArea : IFlatbufferObject
 	{
-		// Token: 0x1700C27F RID: 49791
-		// (get) Token: 0x0602D77B RID: 186235 RVA: 0x0063A4DF File Offset: 0x006386DF
+		// Token: 0x1700CC1D RID: 52253
+		// (get) Token: 0x0602FF4C RID: 196428 RVA: 0x00687047 File Offset: 0x00685247
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D77C RID: 186236 RVA: 0x0063A4EC File Offset: 0x006386EC
+		// Token: 0x0602FF4D RID: 196429 RVA: 0x00687054 File Offset: 0x00685254
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D77D RID: 186237 RVA: 0x0063A4F4 File Offset: 0x006386F4
+		// Token: 0x0602FF4E RID: 196430 RVA: 0x0068705C File Offset: 0x0068525C
 		public static IEnableAlertArea GetRootAsIEnableAlertArea(ByteBuffer _bb)
 		{
 			return IEnableAlertArea.GetRootAsIEnableAlertArea(_bb, default(IEnableAlertArea));
 		}
 
-		// Token: 0x0602D77E RID: 186238 RVA: 0x0063A510 File Offset: 0x00638710
+		// Token: 0x0602FF4F RID: 196431 RVA: 0x00687078 File Offset: 0x00685278
 		public static IEnableAlertArea GetRootAsIEnableAlertArea(ByteBuffer _bb, IEnableAlertArea obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D77F RID: 186239 RVA: 0x0063A52D File Offset: 0x0063872D
+		// Token: 0x0602FF50 RID: 196432 RVA: 0x00687095 File Offset: 0x00685295
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D780 RID: 186240 RVA: 0x0063A53C File Offset: 0x0063873C
+		// Token: 0x0602FF51 RID: 196433 RVA: 0x006870A4 File Offset: 0x006852A4
 		public IEnableAlertArea __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C280 RID: 49792
-		// (get) Token: 0x0602D781 RID: 186241 RVA: 0x0063A54C File Offset: 0x0063874C
+		// Token: 0x1700CC1E RID: 52254
+		// (get) Token: 0x0602FF52 RID: 196434 RVA: 0x006870B4 File Offset: 0x006852B4
 		public EAlertSystemOption Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C281 RID: 49793
-		// (get) Token: 0x0602D782 RID: 186242 RVA: 0x0063A588 File Offset: 0x00638788
+		// Token: 0x1700CC1F RID: 52255
+		// (get) Token: 0x0602FF53 RID: 196435 RVA: 0x006870F0 File Offset: 0x006852F0
 		public int AreaId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C282 RID: 49794
-		// (get) Token: 0x0602D783 RID: 186243 RVA: 0x0063A5C4 File Offset: 0x006387C4
+		// Token: 0x1700CC20 RID: 52256
+		// (get) Token: 0x0602FF54 RID: 196436 RVA: 0x0068712C File Offset: 0x0068532C
 		public bool IsEnable
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C283 RID: 49795
-		// (get) Token: 0x0602D784 RID: 186244 RVA: 0x0063A604 File Offset: 0x00638804
+		// Token: 0x1700CC21 RID: 52257
+		// (get) Token: 0x0602FF55 RID: 196437 RVA: 0x0068716C File Offset: 0x0068536C
 		public TDisableAlertCondition AutoDisableConditionType
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D785 RID: 186245 RVA: 0x0063A644 File Offset: 0x00638844
+		// Token: 0x0602FF56 RID: 196438 RVA: 0x006871AC File Offset: 0x006853AC
 		public TTable? AutoDisableCondition<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -114,19 +114,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602D786 RID: 186246 RVA: 0x0063A68C File Offset: 0x0063888C
+		// Token: 0x0602FF57 RID: 196439 RVA: 0x006871F4 File Offset: 0x006853F4
 		public IDisableAlertAreaDungeonCondition AutoDisableConditionAsIDisableAlertAreaDungeonCondition()
 		{
 			return this.AutoDisableCondition<IDisableAlertAreaDungeonCondition>().Value;
 		}
 
-		// Token: 0x0602D787 RID: 186247 RVA: 0x0063A6A8 File Offset: 0x006388A8
+		// Token: 0x0602FF58 RID: 196440 RVA: 0x00687210 File Offset: 0x00685410
 		public IDisableAlertAreaQuestCondition AutoDisableConditionAsIDisableAlertAreaQuestCondition()
 		{
 			return this.AutoDisableCondition<IDisableAlertAreaQuestCondition>().Value;
 		}
 
-		// Token: 0x0602D788 RID: 186248 RVA: 0x0063A6C3 File Offset: 0x006388C3
+		// Token: 0x0602FF59 RID: 196441 RVA: 0x0068722B File Offset: 0x0068542B
 		public static Offset<IEnableAlertArea> CreateIEnableAlertArea(FlatBufferBuilder builder, EAlertSystemOption Type = EAlertSystemOption.EnableAlertArea, int AreaId = 0, bool IsEnable = false, TDisableAlertCondition AutoDisableCondition_type = TDisableAlertCondition.NONE, int AutoDisableConditionOffset = 0)
 		{
 			builder.StartTable(5);
@@ -138,49 +138,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableAlertArea.EndIEnableAlertArea(builder);
 		}
 
-		// Token: 0x0602D789 RID: 186249 RVA: 0x0063A6F7 File Offset: 0x006388F7
+		// Token: 0x0602FF5A RID: 196442 RVA: 0x0068725F File Offset: 0x0068545F
 		public static void StartIEnableAlertArea(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602D78A RID: 186250 RVA: 0x0063A700 File Offset: 0x00638900
+		// Token: 0x0602FF5B RID: 196443 RVA: 0x00687268 File Offset: 0x00685468
 		public static void AddType(FlatBufferBuilder builder, EAlertSystemOption type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D78B RID: 186251 RVA: 0x0063A70B File Offset: 0x0063890B
+		// Token: 0x0602FF5C RID: 196444 RVA: 0x00687273 File Offset: 0x00685473
 		public static void AddAreaId(FlatBufferBuilder builder, int areaId)
 		{
 			builder.AddInt(1, areaId, 0);
 		}
 
-		// Token: 0x0602D78C RID: 186252 RVA: 0x0063A716 File Offset: 0x00638916
+		// Token: 0x0602FF5D RID: 196445 RVA: 0x0068727E File Offset: 0x0068547E
 		public static void AddIsEnable(FlatBufferBuilder builder, bool isEnable)
 		{
 			builder.AddBool(2, isEnable, false);
 		}
 
-		// Token: 0x0602D78D RID: 186253 RVA: 0x0063A721 File Offset: 0x00638921
+		// Token: 0x0602FF5E RID: 196446 RVA: 0x00687289 File Offset: 0x00685489
 		public static void AddAutoDisableConditionType(FlatBufferBuilder builder, TDisableAlertCondition autoDisableConditionType)
 		{
 			builder.AddByte(3, (byte)autoDisableConditionType, 0);
 		}
 
-		// Token: 0x0602D78E RID: 186254 RVA: 0x0063A72C File Offset: 0x0063892C
+		// Token: 0x0602FF5F RID: 196447 RVA: 0x00687294 File Offset: 0x00685494
 		public static void AddAutoDisableCondition(FlatBufferBuilder builder, int autoDisableConditionOffset)
 		{
 			builder.AddOffset(4, autoDisableConditionOffset, 0);
 		}
 
-		// Token: 0x0602D78F RID: 186255 RVA: 0x0063A737 File Offset: 0x00638937
+		// Token: 0x0602FF60 RID: 196448 RVA: 0x0068729F File Offset: 0x0068549F
 		public static Offset<IEnableAlertArea> EndIEnableAlertArea(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnableAlertArea>(builder.EndTable());
 		}
 
-		// Token: 0x0602D790 RID: 186256 RVA: 0x0063A744 File Offset: 0x00638944
+		// Token: 0x0602FF61 RID: 196449 RVA: 0x006872AC File Offset: 0x006854AC
 		public IEnableAlertAreaT UnPack()
 		{
 			IEnableAlertAreaT enableAlertAreaT = new IEnableAlertAreaT();
@@ -188,7 +188,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return enableAlertAreaT;
 		}
 
-		// Token: 0x0602D791 RID: 186257 RVA: 0x0063A760 File Offset: 0x00638960
+		// Token: 0x0602FF62 RID: 196450 RVA: 0x006872C8 File Offset: 0x006854C8
 		public void UnPackTo(IEnableAlertAreaT _o)
 		{
 			_o.Type = this.Type;
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.AutoDisableCondition.Value = ((this.AutoDisableCondition<IDisableAlertAreaQuestCondition>() != null) ? this.AutoDisableCondition<IDisableAlertAreaQuestCondition>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602D792 RID: 186258 RVA: 0x0063A828 File Offset: 0x00638A28
+		// Token: 0x0602FF63 RID: 196451 RVA: 0x00687390 File Offset: 0x00685590
 		public static Offset<IEnableAlertArea> Pack(FlatBufferBuilder builder, IEnableAlertAreaT _o)
 		{
 			if (_o == null)
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableAlertArea.CreateIEnableAlertArea(builder, _o.Type, _o.AreaId, _o.IsEnable, autoDisableCondition_type, autoDisableConditionOffset);
 		}
 
-		// Token: 0x04010CDD RID: 68829
+		// Token: 0x04011AF8 RID: 72440
 		private Table __p;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B97 RID: 27543
+	// Token: 0x020072DD RID: 29405
 	public struct INewMoveWithSpline : IFlatbufferObject
 	{
-		// Token: 0x1700CCB6 RID: 52406
-		// (get) Token: 0x060305EF RID: 198127 RVA: 0x006920AB File Offset: 0x006902AB
+		// Token: 0x1700D79B RID: 55195
+		// (get) Token: 0x06033447 RID: 209991 RVA: 0x006EA6CB File Offset: 0x006E88CB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060305F0 RID: 198128 RVA: 0x006920B8 File Offset: 0x006902B8
+		// Token: 0x06033448 RID: 209992 RVA: 0x006EA6D8 File Offset: 0x006E88D8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060305F1 RID: 198129 RVA: 0x006920C0 File Offset: 0x006902C0
+		// Token: 0x06033449 RID: 209993 RVA: 0x006EA6E0 File Offset: 0x006E88E0
 		public static INewMoveWithSpline GetRootAsINewMoveWithSpline(ByteBuffer _bb)
 		{
 			return INewMoveWithSpline.GetRootAsINewMoveWithSpline(_bb, default(INewMoveWithSpline));
 		}
 
-		// Token: 0x060305F2 RID: 198130 RVA: 0x006920DC File Offset: 0x006902DC
+		// Token: 0x0603344A RID: 209994 RVA: 0x006EA6FC File Offset: 0x006E88FC
 		public static INewMoveWithSpline GetRootAsINewMoveWithSpline(ByteBuffer _bb, INewMoveWithSpline obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060305F3 RID: 198131 RVA: 0x006920F9 File Offset: 0x006902F9
+		// Token: 0x0603344B RID: 209995 RVA: 0x006EA719 File Offset: 0x006E8919
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060305F4 RID: 198132 RVA: 0x00692108 File Offset: 0x00690308
+		// Token: 0x0603344C RID: 209996 RVA: 0x006EA728 File Offset: 0x006E8928
 		public INewMoveWithSpline __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CCB7 RID: 52407
-		// (get) Token: 0x060305F5 RID: 198133 RVA: 0x00692118 File Offset: 0x00690318
+		// Token: 0x1700D79C RID: 55196
+		// (get) Token: 0x0603344D RID: 209997 RVA: 0x006EA738 File Offset: 0x006E8938
 		public TNewSplineMoveTarget MoveTargetType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060305F6 RID: 198134 RVA: 0x00692154 File Offset: 0x00690354
+		// Token: 0x0603344E RID: 209998 RVA: 0x006EA774 File Offset: 0x006E8974
 		public TTable? MoveTarget<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,48 +73,48 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060305F7 RID: 198135 RVA: 0x00692198 File Offset: 0x00690398
+		// Token: 0x0603344F RID: 209999 RVA: 0x006EA7B8 File Offset: 0x006E89B8
 		public INpcNewSplineMoveTarget MoveTargetAsINpcNewSplineMoveTarget()
 		{
 			return this.MoveTarget<INpcNewSplineMoveTarget>().Value;
 		}
 
-		// Token: 0x060305F8 RID: 198136 RVA: 0x006921B4 File Offset: 0x006903B4
+		// Token: 0x06033450 RID: 210000 RVA: 0x006EA7D4 File Offset: 0x006E89D4
 		public IPlayerNewSplineMoveTarget MoveTargetAsIPlayerNewSplineMoveTarget()
 		{
 			return this.MoveTarget<IPlayerNewSplineMoveTarget>().Value;
 		}
 
-		// Token: 0x060305F9 RID: 198137 RVA: 0x006921D0 File Offset: 0x006903D0
+		// Token: 0x06033451 RID: 210001 RVA: 0x006EA7F0 File Offset: 0x006E89F0
 		public ISceneItemNewSplineMoveTarget MoveTargetAsISceneItemNewSplineMoveTarget()
 		{
 			return this.MoveTarget<ISceneItemNewSplineMoveTarget>().Value;
 		}
 
-		// Token: 0x060305FA RID: 198138 RVA: 0x006921EC File Offset: 0x006903EC
+		// Token: 0x06033452 RID: 210002 RVA: 0x006EA80C File Offset: 0x006E8A0C
 		public IVehicleNewSplineMoveTarget MoveTargetAsIVehicleNewSplineMoveTarget()
 		{
 			return this.MoveTarget<IVehicleNewSplineMoveTarget>().Value;
 		}
 
-		// Token: 0x1700CCB8 RID: 52408
-		// (get) Token: 0x060305FB RID: 198139 RVA: 0x00692208 File Offset: 0x00690408
-		public int SplineEntityId
+		// Token: 0x1700D79D RID: 55197
+		// (get) Token: 0x06033453 RID: 210003 RVA: 0x006EA828 File Offset: 0x006E8A28
+		public IFrontAxleTrackingSplineMove? Move
 		{
 			get
 			{
 				int num = this.__p.__offset(8);
 				if (num == 0)
 				{
-					return 0;
+					return null;
 				}
-				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+				return new IFrontAxleTrackingSplineMove?(default(IFrontAxleTrackingSplineMove).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x1700CCB9 RID: 52409
-		// (get) Token: 0x060305FC RID: 198140 RVA: 0x00692244 File Offset: 0x00690444
-		public int StartPointIndex
+		// Token: 0x1700D79E RID: 55198
+		// (get) Token: 0x06033454 RID: 210004 RVA: 0x006EA888 File Offset: 0x006E8A88
+		public int SplineEntityId
 		{
 			get
 			{
@@ -127,9 +127,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CCBA RID: 52410
-		// (get) Token: 0x060305FD RID: 198141 RVA: 0x00692284 File Offset: 0x00690484
-		public int EndPointIndex
+		// Token: 0x1700D79F RID: 55199
+		// (get) Token: 0x06033455 RID: 210005 RVA: 0x006EA8C8 File Offset: 0x006E8AC8
+		public int StartPointIndex
 		{
 			get
 			{
@@ -142,20 +142,24 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CCBB RID: 52411
-		// (get) Token: 0x060305FE RID: 198142 RVA: 0x006922C4 File Offset: 0x006904C4
-		public bool IsStartFromCurrentPos
+		// Token: 0x1700D7A0 RID: 55200
+		// (get) Token: 0x06033456 RID: 210006 RVA: 0x006EA908 File Offset: 0x006E8B08
+		public int EndPointIndex
 		{
 			get
 			{
 				int num = this.__p.__offset(14);
-				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x1700CCBC RID: 52412
-		// (get) Token: 0x060305FF RID: 198143 RVA: 0x00692304 File Offset: 0x00690504
-		public bool IsFollowStrictly
+		// Token: 0x1700D7A1 RID: 55201
+		// (get) Token: 0x06033457 RID: 210007 RVA: 0x006EA948 File Offset: 0x006E8B48
+		public bool IsStartFromCurrentPos
 		{
 			get
 			{
@@ -164,13 +168,24 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CCBD RID: 52413
-		// (get) Token: 0x06030600 RID: 198144 RVA: 0x00692344 File Offset: 0x00690544
-		public byte NullMask
+		// Token: 0x1700D7A2 RID: 55202
+		// (get) Token: 0x06033458 RID: 210008 RVA: 0x006EA988 File Offset: 0x006E8B88
+		public bool IsFollowStrictly
 		{
 			get
 			{
 				int num = this.__p.__offset(18);
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+			}
+		}
+
+		// Token: 0x1700D7A3 RID: 55203
+		// (get) Token: 0x06033459 RID: 210009 RVA: 0x006EA9C8 File Offset: 0x006E8BC8
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(20);
 				if (num == 0)
 				{
 					return 0;
@@ -179,13 +194,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030601 RID: 198145 RVA: 0x00692384 File Offset: 0x00690584
-		public static Offset<INewMoveWithSpline> CreateINewMoveWithSpline(FlatBufferBuilder builder, TNewSplineMoveTarget MoveTarget_type = TNewSplineMoveTarget.NONE, int MoveTargetOffset = 0, int SplineEntityId = 0, int StartPointIndex = 0, int EndPointIndex = 0, bool IsStartFromCurrentPos = false, bool IsFollowStrictly = false, byte NullMask = 0)
+		// Token: 0x0603345A RID: 210010 RVA: 0x006EAA08 File Offset: 0x006E8C08
+		public static Offset<INewMoveWithSpline> CreateINewMoveWithSpline(FlatBufferBuilder builder, TNewSplineMoveTarget MoveTarget_type = TNewSplineMoveTarget.NONE, int MoveTargetOffset = 0, Offset<IFrontAxleTrackingSplineMove> MoveOffset = default(Offset<IFrontAxleTrackingSplineMove>), int SplineEntityId = 0, int StartPointIndex = 0, int EndPointIndex = 0, bool IsStartFromCurrentPos = false, bool IsFollowStrictly = false, byte NullMask = 0)
 		{
-			builder.StartTable(8);
+			builder.StartTable(9);
 			INewMoveWithSpline.AddEndPointIndex(builder, EndPointIndex);
 			INewMoveWithSpline.AddStartPointIndex(builder, StartPointIndex);
 			INewMoveWithSpline.AddSplineEntityId(builder, SplineEntityId);
+			INewMoveWithSpline.AddMove(builder, MoveOffset);
 			INewMoveWithSpline.AddMoveTarget(builder, MoveTargetOffset);
 			INewMoveWithSpline.AddNullMask(builder, NullMask);
 			INewMoveWithSpline.AddIsFollowStrictly(builder, IsFollowStrictly);
@@ -194,67 +210,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INewMoveWithSpline.EndINewMoveWithSpline(builder);
 		}
 
-		// Token: 0x06030602 RID: 198146 RVA: 0x006923DB File Offset: 0x006905DB
+		// Token: 0x0603345B RID: 210011 RVA: 0x006EAA68 File Offset: 0x006E8C68
 		public static void StartINewMoveWithSpline(FlatBufferBuilder builder)
 		{
-			builder.StartTable(8);
+			builder.StartTable(9);
 		}
 
-		// Token: 0x06030603 RID: 198147 RVA: 0x006923E4 File Offset: 0x006905E4
+		// Token: 0x0603345C RID: 210012 RVA: 0x006EAA72 File Offset: 0x006E8C72
 		public static void AddMoveTargetType(FlatBufferBuilder builder, TNewSplineMoveTarget moveTargetType)
 		{
 			builder.AddByte(0, (byte)moveTargetType, 0);
 		}
 
-		// Token: 0x06030604 RID: 198148 RVA: 0x006923EF File Offset: 0x006905EF
+		// Token: 0x0603345D RID: 210013 RVA: 0x006EAA7D File Offset: 0x006E8C7D
 		public static void AddMoveTarget(FlatBufferBuilder builder, int moveTargetOffset)
 		{
 			builder.AddOffset(1, moveTargetOffset, 0);
 		}
 
-		// Token: 0x06030605 RID: 198149 RVA: 0x006923FA File Offset: 0x006905FA
+		// Token: 0x0603345E RID: 210014 RVA: 0x006EAA88 File Offset: 0x006E8C88
+		public static void AddMove(FlatBufferBuilder builder, Offset<IFrontAxleTrackingSplineMove> moveOffset)
+		{
+			builder.AddOffset(2, moveOffset.Value, 0);
+		}
+
+		// Token: 0x0603345F RID: 210015 RVA: 0x006EAA98 File Offset: 0x006E8C98
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
-			builder.AddInt(2, splineEntityId, 0);
+			builder.AddInt(3, splineEntityId, 0);
 		}
 
-		// Token: 0x06030606 RID: 198150 RVA: 0x00692405 File Offset: 0x00690605
+		// Token: 0x06033460 RID: 210016 RVA: 0x006EAAA3 File Offset: 0x006E8CA3
 		public static void AddStartPointIndex(FlatBufferBuilder builder, int startPointIndex)
 		{
-			builder.AddInt(3, startPointIndex, 0);
+			builder.AddInt(4, startPointIndex, 0);
 		}
 
-		// Token: 0x06030607 RID: 198151 RVA: 0x00692410 File Offset: 0x00690610
+		// Token: 0x06033461 RID: 210017 RVA: 0x006EAAAE File Offset: 0x006E8CAE
 		public static void AddEndPointIndex(FlatBufferBuilder builder, int endPointIndex)
 		{
-			builder.AddInt(4, endPointIndex, 0);
+			builder.AddInt(5, endPointIndex, 0);
 		}
 
-		// Token: 0x06030608 RID: 198152 RVA: 0x0069241B File Offset: 0x0069061B
+		// Token: 0x06033462 RID: 210018 RVA: 0x006EAAB9 File Offset: 0x006E8CB9
 		public static void AddIsStartFromCurrentPos(FlatBufferBuilder builder, bool isStartFromCurrentPos)
 		{
-			builder.AddBool(5, isStartFromCurrentPos, false);
+			builder.AddBool(6, isStartFromCurrentPos, false);
 		}
 
-		// Token: 0x06030609 RID: 198153 RVA: 0x00692426 File Offset: 0x00690626
+		// Token: 0x06033463 RID: 210019 RVA: 0x006EAAC4 File Offset: 0x006E8CC4
 		public static void AddIsFollowStrictly(FlatBufferBuilder builder, bool isFollowStrictly)
 		{
-			builder.AddBool(6, isFollowStrictly, false);
+			builder.AddBool(7, isFollowStrictly, false);
 		}
 
-		// Token: 0x0603060A RID: 198154 RVA: 0x00692431 File Offset: 0x00690631
+		// Token: 0x06033464 RID: 210020 RVA: 0x006EAACF File Offset: 0x006E8CCF
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
-			builder.AddByte(7, nullMask, 0);
+			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x0603060B RID: 198155 RVA: 0x0069243C File Offset: 0x0069063C
+		// Token: 0x06033465 RID: 210021 RVA: 0x006EAADA File Offset: 0x006E8CDA
 		public static Offset<INewMoveWithSpline> EndINewMoveWithSpline(FlatBufferBuilder builder)
 		{
 			return new Offset<INewMoveWithSpline>(builder.EndTable());
 		}
 
-		// Token: 0x0603060C RID: 198156 RVA: 0x0069244C File Offset: 0x0069064C
+		// Token: 0x06033466 RID: 210022 RVA: 0x006EAAE8 File Offset: 0x006E8CE8
 		public INewMoveWithSplineT UnPack()
 		{
 			INewMoveWithSplineT newMoveWithSplineT = new INewMoveWithSplineT();
@@ -262,7 +284,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return newMoveWithSplineT;
 		}
 
-		// Token: 0x0603060D RID: 198157 RVA: 0x00692468 File Offset: 0x00690668
+		// Token: 0x06033467 RID: 210023 RVA: 0x006EAB04 File Offset: 0x006E8D04
 		public void UnPackTo(INewMoveWithSplineT _o)
 		{
 			_o.MoveTarget = new TNewSplineMoveTargetUnion();
@@ -282,6 +304,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				_o.MoveTarget.Value = ((this.MoveTarget<IVehicleNewSplineMoveTarget>() != null) ? this.MoveTarget<IVehicleNewSplineMoveTarget>().Value.UnPack() : null);
 				break;
 			}
+			_o.Move = ((this.Move != null) ? this.Move.Value.UnPack() : null);
 			_o.SplineEntityId = this.SplineEntityId;
 			_o.StartPointIndex = this.StartPointIndex;
 			_o.EndPointIndex = this.EndPointIndex;
@@ -290,7 +313,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603060E RID: 198158 RVA: 0x006925E0 File Offset: 0x006907E0
+		// Token: 0x06033468 RID: 210024 RVA: 0x006EACAC File Offset: 0x006E8EAC
 		public static Offset<INewMoveWithSpline> Pack(FlatBufferBuilder builder, INewMoveWithSplineT _o)
 		{
 			if (_o == null)
@@ -299,10 +322,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 			TNewSplineMoveTarget moveTarget_type = (_o.MoveTarget == null) ? TNewSplineMoveTarget.NONE : _o.MoveTarget.Type;
 			int moveTargetOffset = (_o.MoveTarget == null) ? 0 : TNewSplineMoveTargetUnion.Pack(builder, _o.MoveTarget);
-			return INewMoveWithSpline.CreateINewMoveWithSpline(builder, moveTarget_type, moveTargetOffset, _o.SplineEntityId, _o.StartPointIndex, _o.EndPointIndex, _o.IsStartFromCurrentPos, _o.IsFollowStrictly, _o.NullMask);
+			Offset<IFrontAxleTrackingSplineMove> moveOffset = (_o.Move == null) ? default(Offset<IFrontAxleTrackingSplineMove>) : IFrontAxleTrackingSplineMove.Pack(builder, _o.Move);
+			return INewMoveWithSpline.CreateINewMoveWithSpline(builder, moveTarget_type, moveTargetOffset, moveOffset, _o.SplineEntityId, _o.StartPointIndex, _o.EndPointIndex, _o.IsStartFromCurrentPos, _o.IsFollowStrictly, _o.NullMask);
 		}
 
-		// Token: 0x04011458 RID: 70744
+		// Token: 0x04012381 RID: 74625
 		private Table __p;
 	}
 }

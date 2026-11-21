@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012FA RID: 4858
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200144A RID: 5194
 	public class ITrackAreaText
 	{
-		// Token: 0x06006ECC RID: 28364 RVA: 0x0010B9B2 File Offset: 0x00109BB2
+		// Token: 0x0600756C RID: 30060 RVA: 0x00119F1E File Offset: 0x0011811E
 		public static ITrackAreaText Create(ITrackAreaText? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022AB RID: 8875
-		// (get) Token: 0x06006ECD RID: 28365 RVA: 0x0010B9D1 File Offset: 0x00109BD1
+		// Token: 0x1700247A RID: 9338
+		// (get) Token: 0x0600756D RID: 30061 RVA: 0x00119F3D File Offset: 0x0011813D
 		public virtual bool Show
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022AC RID: 8876
-		// (get) Token: 0x06006ECE RID: 28366 RVA: 0x0010B9DE File Offset: 0x00109BDE
+		// Token: 0x1700247B RID: 9339
+		// (get) Token: 0x0600756E RID: 30062 RVA: 0x00119F4A File Offset: 0x0011814A
 		public virtual string Tid
 		{
 			get
@@ -42,17 +40,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022AD RID: 8877
-		// (get) Token: 0x06006ECF RID: 28367 RVA: 0x0010B9EB File Offset: 0x00109BEB
+		// Token: 0x1700247C RID: 9340
+		// (get) Token: 0x0600756F RID: 30063 RVA: 0x00119F57 File Offset: 0x00118157
+		[Nullable(2)]
 		public virtual string EdTid
 		{
+			[NullableContext(2)]
 			get
 			{
 				return null;
 			}
 		}
 
-		// Token: 0x04003F86 RID: 16262
+		// Token: 0x04004302 RID: 17154
 		private ITrackAreaText Instance;
 	}
 }

@@ -12,13 +12,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 {
-	// Token: 0x02007238 RID: 29240
+	// Token: 0x020062ED RID: 25325
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class ChargeSlashGameplayController : ControllerBase
 	{
-		// Token: 0x06047A86 RID: 293510 RVA: 0x01256240 File Offset: 0x01254440
+		// Token: 0x0603D3E8 RID: 250856 RVA: 0x011AEEE0 File Offset: 0x011AD0E0
 		public void StartChargeSlash(GrapplingHookPointComponent targetHook)
 		{
 			global::Log.Instance.Info(ELogModule.ChargeSlash, ELogAuthor.CH, "[ChargeSlashGameplayController] StartChargeSlash", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047A87 RID: 293511 RVA: 0x012564B8 File Offset: 0x012546B8
+		// Token: 0x0603D3E9 RID: 250857 RVA: 0x011AF158 File Offset: 0x011AD358
 		public void StopChargeSlash(GrapplingHookPointComponent targetHook)
 		{
 			global::Log.Instance.Info(ELogModule.ChargeSlash, ELogAuthor.CH, "[ChargeSlashGameplayController] StopChargeSlash", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -148,13 +148,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047A88 RID: 293512 RVA: 0x01256688 File Offset: 0x01254888
+		// Token: 0x0603D3EA RID: 250858 RVA: 0x011AF328 File Offset: 0x011AD528
 		private void SceneItemStartPerformance(SceneItemCurveControlComponent curveControlComp, float delayTime)
 		{
 			curveControlComp.StartPerformance(delayTime);
 		}
 
-		// Token: 0x06047A89 RID: 293513 RVA: 0x01256694 File Offset: 0x01254894
+		// Token: 0x0603D3EB RID: 250859 RVA: 0x011AF334 File Offset: 0x011AD534
 		private void ClearTimerHandles()
 		{
 			foreach (TimerHandle handle in this.TimerHandlesMap.Values)
@@ -164,21 +164,21 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.TimerHandlesMap.Clear();
 		}
 
-		// Token: 0x06047A8A RID: 293514 RVA: 0x012566FC File Offset: 0x012548FC
+		// Token: 0x0603D3EC RID: 250860 RVA: 0x011AF39C File Offset: 0x011AD59C
 		protected override bool OnLeaveLevel()
 		{
 			this.ClearTimerHandles();
 			return true;
 		}
 
-		// Token: 0x06047A8B RID: 293515 RVA: 0x01256705 File Offset: 0x01254905
+		// Token: 0x0603D3ED RID: 250861 RVA: 0x011AF3A5 File Offset: 0x011AD5A5
 		protected override bool OnClear()
 		{
 			this.ClearTimerHandles();
 			return true;
 		}
 
-		// Token: 0x06047A8C RID: 293516 RVA: 0x01256710 File Offset: 0x01254910
+		// Token: 0x0603D3EE RID: 250862 RVA: 0x011AF3B0 File Offset: 0x011AD5B0
 		protected override void OnTick(float delta)
 		{
 			if (this.ChargeSlashScanEffectMap.Count == 0)
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047A8D RID: 293517 RVA: 0x012567CC File Offset: 0x012549CC
+		// Token: 0x0603D3EF RID: 250863 RVA: 0x011AF46C File Offset: 0x011AD66C
 		public int StartChargeSlashScanEffect(FTransformDouble transform)
 		{
 			global::Log.Instance.Info(ELogModule.ChargeSlash, ELogAuthor.CH, "[ChargeSlashGameplayController] StartChargeSlashScanEffect", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return this.Uid;
 		}
 
-		// Token: 0x06047A8E RID: 293518 RVA: 0x01256844 File Offset: 0x01254A44
+		// Token: 0x0603D3F0 RID: 250864 RVA: 0x011AF4E4 File Offset: 0x011AD6E4
 		public void StopChargeSlashScanEffect(int id)
 		{
 			SpecificScanEffectData specificScanEffectData;
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			instance2.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06047A8F RID: 293519 RVA: 0x012568D0 File Offset: 0x01254AD0
+		// Token: 0x0603D3F1 RID: 250865 RVA: 0x011AF570 File Offset: 0x011AD770
 		public void StopAllChargeSlashScanEffect()
 		{
 			foreach (SpecificScanEffectData specificScanEffectData in this.ChargeSlashScanEffectMap.Values)
@@ -257,8 +257,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.ChargeSlashScanEffectMap.Clear();
 		}
 
-		// Token: 0x17009E3F RID: 40511
-		// (get) Token: 0x06047A90 RID: 293520 RVA: 0x0125695C File Offset: 0x01254B5C
+		// Token: 0x170073F6 RID: 29686
+		// (get) Token: 0x0603D3F2 RID: 250866 RVA: 0x011AF5FC File Offset: 0x011AD7FC
 		public static ChargeSlashGameplayController Instance
 		{
 			get
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047A91 RID: 293521 RVA: 0x01256963 File Offset: 0x01254B63
+		// Token: 0x0603D3F3 RID: 250867 RVA: 0x011AF603 File Offset: 0x011AD803
 		public static ChargeSlashGameplayController GetOrCreateInstance()
 		{
 			if (ChargeSlashGameplayController._Instance == null)
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return ChargeSlashGameplayController._Instance;
 		}
 
-		// Token: 0x06047A92 RID: 293522 RVA: 0x01256977 File Offset: 0x01254B77
+		// Token: 0x0603D3F4 RID: 250868 RVA: 0x011AF617 File Offset: 0x011AD817
 		public static bool CreateInstance()
 		{
 			if (ChargeSlashGameplayController._Instance != null)
@@ -288,39 +288,39 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047A93 RID: 293523 RVA: 0x0125698D File Offset: 0x01254B8D
+		// Token: 0x0603D3F5 RID: 250869 RVA: 0x011AF62D File Offset: 0x011AD82D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047A94 RID: 293524 RVA: 0x0125698F File Offset: 0x01254B8F
+		// Token: 0x0603D3F6 RID: 250870 RVA: 0x011AF62F File Offset: 0x011AD82F
 		public static void ResetStaticDefaultValue()
 		{
 			ChargeSlashGameplayController._Instance = null;
 		}
 
-		// Token: 0x06047A95 RID: 293525 RVA: 0x01256997 File Offset: 0x01254B97
+		// Token: 0x0603D3F7 RID: 250871 RVA: 0x011AF637 File Offset: 0x011AD837
 		static ChargeSlashGameplayController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ChargeSlashGameplayController.CreateStaticDefaultValue), new Action(ChargeSlashGameplayController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025B4A RID: 154442
+		// Token: 0x040207B9 RID: 133049
 		private const float SMALLEST_RANDOM_TIME = 0.02f;
 
-		// Token: 0x04025B4B RID: 154443
+		// Token: 0x040207BA RID: 133050
 		private const string SCAN_EFFECT_CLASS_PATH = "/Game/Aki/Effect/BluePrint/BP_FX_Common/BP_DistortionWave.BP_DistortionWave_C";
 
-		// Token: 0x04025B4C RID: 154444
+		// Token: 0x040207BB RID: 133051
 		private readonly Dictionary<int, TimerHandle> TimerHandlesMap = new Dictionary<int, TimerHandle>();
 
-		// Token: 0x04025B4D RID: 154445
+		// Token: 0x040207BC RID: 133052
 		private int Uid = -1;
 
-		// Token: 0x04025B4E RID: 154446
+		// Token: 0x040207BD RID: 133053
 		private readonly Dictionary<int, SpecificScanEffectData> ChargeSlashScanEffectMap = new Dictionary<int, SpecificScanEffectData>();
 
-		// Token: 0x04025B4F RID: 154447
+		// Token: 0x040207BE RID: 133054
 		[Nullable(2)]
 		private static ChargeSlashGameplayController _Instance;
 	}

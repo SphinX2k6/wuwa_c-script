@@ -3,31 +3,31 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000F2 RID: 242
+	// Token: 0x020000FB RID: 251
 	[EnumExtensions]
 	public enum ENpcUiInteractType
 	{
-		// Token: 0x04000514 RID: 1300
+		// Token: 0x0400053E RID: 1342
 		HandInItem,
-		// Token: 0x04000515 RID: 1301
+		// Token: 0x0400053F RID: 1343
 		Shop,
-		// Token: 0x04000516 RID: 1302
+		// Token: 0x04000540 RID: 1344
 		AntiqueShop,
-		// Token: 0x04000517 RID: 1303
+		// Token: 0x04000541 RID: 1345
 		ChengXiaoShanShop,
-		// Token: 0x04000518 RID: 1304
+		// Token: 0x04000542 RID: 1346
 		Gramophone,
-		// Token: 0x04000519 RID: 1305
+		// Token: 0x04000543 RID: 1347
 		SoundBox3,
-		// Token: 0x0400051A RID: 1306
+		// Token: 0x04000544 RID: 1348
 		SunSpirit,
-		// Token: 0x0400051B RID: 1307
+		// Token: 0x04000545 RID: 1349
 		ShopNew,
-		// Token: 0x0400051C RID: 1308
+		// Token: 0x04000546 RID: 1350
 		VillageInfr,
-		// Token: 0x0400051D RID: 1309
+		// Token: 0x04000547 RID: 1351
 		SoundBox35,
-		// Token: 0x0400051E RID: 1310
+		// Token: 0x04000548 RID: 1352
 		DollGrabDelivery
 	}
 }

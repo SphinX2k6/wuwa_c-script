@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D02 RID: 7426
+// Token: 0x020011C4 RID: 4548
 public class PinballBattleRoleSkillMaxTips : PinballBattleTipsBase
 {
-	// Token: 0x0600E0AE RID: 57518 RVA: 0x0034B0FB File Offset: 0x003492FB
+	// Token: 0x0600B4CB RID: 46283 RVA: 0x00356B2B File Offset: 0x00354D2B
 	[NullableContext(1)]
 	public PinballBattleRoleSkillMaxTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E0AF RID: 57519 RVA: 0x0034B104 File Offset: 0x00349304
+	// Token: 0x0600B4CC RID: 46284 RVA: 0x00356B34 File Offset: 0x00354D34
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,7 +33,7 @@ public class PinballBattleRoleSkillMaxTips : PinballBattleTipsBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E0B0 RID: 57520 RVA: 0x0034B190 File Offset: 0x00349390
+	// Token: 0x0600B4CD RID: 46285 RVA: 0x00356BC0 File Offset: 0x00354DC0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PinballBattleRoleSkillMaxTips.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class PinballBattleRoleSkillMaxTips : PinballBattleTipsBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040067BA RID: 26554
+	// Token: 0x04006899 RID: 26777
 	[Nullable(new byte[]
 	{
 		2,

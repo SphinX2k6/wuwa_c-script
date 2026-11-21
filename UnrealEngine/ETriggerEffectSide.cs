@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200292A RID: 10538
+	// Token: 0x02000851 RID: 2129
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/TriggerEffect.ETriggerEffectSide")]
 	public enum ETriggerEffectSide : byte
 	{
-		// Token: 0x040156CA RID: 87754
+		// Token: 0x0400543A RID: 21562
 		Left,
-		// Token: 0x040156CB RID: 87755
+		// Token: 0x0400543B RID: 21563
 		Right,
-		// Token: 0x040156CC RID: 87756
+		// Token: 0x0400543C RID: 21564
 		Both,
-		// Token: 0x040156CD RID: 87757
+		// Token: 0x0400543D RID: 21565
 		TriggerEffectSide_Count,
-		// Token: 0x040156CE RID: 87758
+		// Token: 0x0400543E RID: 21566
 		ETriggerEffectSide_MAX
 	}
 }

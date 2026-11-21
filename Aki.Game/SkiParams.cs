@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Level.Ski;
 using UnrealEngine;
 
-// Token: 0x020030F6 RID: 12534
+// Token: 0x0200264E RID: 9806
 [NullableContext(1)]
 [Nullable(0)]
 public class SkiParams
 {
-	// Token: 0x0601AE08 RID: 110088 RVA: 0x00744460 File Offset: 0x00742660
+	// Token: 0x0601882D RID: 100397 RVA: 0x00769D58 File Offset: 0x00767F58
 	public SkiParams(BP_SkiConfig_C asset)
 	{
 		this.InitSpeed = asset.初始速度;
@@ -32,45 +32,45 @@ public class SkiParams
 		}
 	}
 
-	// Token: 0x0400CFE8 RID: 53224
+	// Token: 0x0400D3D9 RID: 54233
 	public float InitSpeed = 700f;
 
-	// Token: 0x0400CFE9 RID: 53225
+	// Token: 0x0400D3DA RID: 54234
 	public float BaseAccForSpeedUp = 300f;
 
-	// Token: 0x0400CFEA RID: 53226
+	// Token: 0x0400D3DB RID: 54235
 	public float BaseAccForSpeedDown = 300f;
 
-	// Token: 0x0400CFEB RID: 53227
+	// Token: 0x0400D3DC RID: 54236
 	public float BaseTargetSpeed = 1000f;
 
-	// Token: 0x0400CFEC RID: 53228
+	// Token: 0x0400D3DD RID: 54237
 	public float SlopExtraTargetSpeed = 200f;
 
-	// Token: 0x0400CFED RID: 53229
+	// Token: 0x0400D3DE RID: 54238
 	public float SlopExtraAccel = 150f;
 
-	// Token: 0x0400CFEE RID: 53230
+	// Token: 0x0400D3DF RID: 54239
 	public float TurnSpeed = 50f;
 
-	// Token: 0x0400CFEF RID: 53231
+	// Token: 0x0400D3E0 RID: 54240
 	public float IgnoreStepHeight = 20f;
 
-	// Token: 0x0400CFF0 RID: 53232
+	// Token: 0x0400D3E1 RID: 54241
 	public float JumpMaxHorizontalSpeed = 3500f;
 
-	// Token: 0x0400CFF1 RID: 53233
+	// Token: 0x0400D3E2 RID: 54242
 	public float JumpTurnRate = 0.4f;
 
-	// Token: 0x0400CFF2 RID: 53234
+	// Token: 0x0400D3E3 RID: 54243
 	public float JumpHeightRate = 1f;
 
-	// Token: 0x0400CFF3 RID: 53235
+	// Token: 0x0400D3E4 RID: 54244
 	public float JumpTimeScale = 1f;
 
-	// Token: 0x0400CFF4 RID: 53236
+	// Token: 0x0400D3E5 RID: 54245
 	public List<int> TagList = new List<int>();
 
-	// Token: 0x0400CFF5 RID: 53237
+	// Token: 0x0400D3E6 RID: 54246
 	private const int DEFAULT_SKI_MAX_SPEED = 3500;
 }

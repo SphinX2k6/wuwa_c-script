@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000D7 RID: 215
+	// Token: 0x020000DF RID: 223
 	[EnumExtensions]
 	public enum ELevelSequenceSectionType
 	{
-		// Token: 0x040004B1 RID: 1201
+		// Token: 0x040004D5 RID: 1237
 		Mark,
-		// Token: 0x040004B2 RID: 1202
+		// Token: 0x040004D6 RID: 1238
 		EventMark
 	}
 }

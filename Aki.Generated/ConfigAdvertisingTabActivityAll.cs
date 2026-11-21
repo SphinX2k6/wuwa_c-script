@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000064 RID: 100
+	// Token: 0x0200006C RID: 108
 	public class ConfigAdvertisingTabActivityAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000258 RID: 600 RVA: 0x00066F1C File Offset: 0x0006511C
+		// Token: 0x06000288 RID: 648 RVA: 0x0006B7D0 File Offset: 0x000699D0
 		static ConfigAdvertisingTabActivityAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAdvertisingTabActivityAll.CreateStaticDefaultValue), new Action(ConfigAdvertisingTabActivityAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000259 RID: 601 RVA: 0x00066F3C File Offset: 0x0006513C
+		// Token: 0x06000289 RID: 649 RVA: 0x0006B7F0 File Offset: 0x000699F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAdvertisingTabActivityAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600025A RID: 602 RVA: 0x00066FBB File Offset: 0x000651BB
+		// Token: 0x0600028A RID: 650 RVA: 0x0006B86F File Offset: 0x00069A6F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAdvertisingTabActivityAll.LogPair = null;
 			ConfigAdvertisingTabActivityAll.HandleId = 0;
 		}
 
-		// Token: 0x0600025B RID: 603 RVA: 0x00066FC9 File Offset: 0x000651C9
+		// Token: 0x0600028B RID: 651 RVA: 0x0006B87D File Offset: 0x00069A7D
 		public static void Init()
 		{
 			ConfigAdvertisingTabActivityAll.HandleId = ConfigCommon.InitDataStatement(ConfigAdvertisingTabActivityAll.HandleId, "db_advertisingpage.db", "select BinData from `AdvertisingTabActivity`");
 		}
 
-		// Token: 0x0600025C RID: 604 RVA: 0x00066FE4 File Offset: 0x000651E4
+		// Token: 0x0600028C RID: 652 RVA: 0x0006B898 File Offset: 0x00069A98
 		[NullableContext(2)]
 		public static IReadOnlyList<AdvertisingTabActivity> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040002A0 RID: 672
+		// Token: 0x040002D8 RID: 728
 		private const string DB = "db_advertisingpage.db";
 
-		// Token: 0x040002A1 RID: 673
+		// Token: 0x040002D9 RID: 729
 		private const string FILE = "x.下一版本核心内容展示.xlsx";
 
-		// Token: 0x040002A2 RID: 674
+		// Token: 0x040002DA RID: 730
 		private const string TABLE = "AdvertisingTabActivity";
 
-		// Token: 0x040002A3 RID: 675
+		// Token: 0x040002DB RID: 731
 		private const string COMMAND = "select BinData from `AdvertisingTabActivity`";
 
-		// Token: 0x040002A4 RID: 676
+		// Token: 0x040002DC RID: 732
 		private const string KEY_PREFIX = "AdvertisingTabActivityAll";
 
-		// Token: 0x040002A5 RID: 677
+		// Token: 0x040002DD RID: 733
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040002A6 RID: 678
+		// Token: 0x040002DE RID: 734
 		private static int HandleId;
 	}
 }

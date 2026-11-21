@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x02003863 RID: 14435
+// Token: 0x02002DDC RID: 11740
 public class __TsAnimNotifySetTransformWithModelBuffer_SubClassMissingExportProxy : __TsAnimNotifySetTransformWithModelBuffer_InheritProxy
 {
-	// Token: 0x0601E959 RID: 125273 RVA: 0x00893020 File Offset: 0x00891220
+	// Token: 0x0601C652 RID: 116306 RVA: 0x008B941C File Offset: 0x008B761C
 	[NullableContext(1)]
 	protected __TsAnimNotifySetTransformWithModelBuffer_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifySetTransformWithModelBuffer.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E95A RID: 125274 RVA: 0x00893053 File Offset: 0x00891253
+	// Token: 0x0601C653 RID: 116307 RVA: 0x008B944F File Offset: 0x008B764F
 	protected __TsAnimNotifySetTransformWithModelBuffer_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

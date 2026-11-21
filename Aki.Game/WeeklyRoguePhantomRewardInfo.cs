@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002D35 RID: 11573
+// Token: 0x0200228F RID: 8847
 public struct WeeklyRoguePhantomRewardInfo
 {
-	// Token: 0x0400B4A3 RID: 46243
+	// Token: 0x0400B818 RID: 47128
 	public bool IsActive;
 
-	// Token: 0x0400B4A4 RID: 46244
+	// Token: 0x0400B819 RID: 47129
 	public int AreaAwardId;
 
-	// Token: 0x0400B4A5 RID: 46245
+	// Token: 0x0400B81A RID: 47130
 	public int SortId;
 }

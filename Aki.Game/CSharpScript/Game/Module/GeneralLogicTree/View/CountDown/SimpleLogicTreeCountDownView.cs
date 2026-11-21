@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.View.CountDown
 {
-	// Token: 0x020059C0 RID: 22976
+	// Token: 0x02004999 RID: 18841
 	public class SimpleLogicTreeCountDownView : UiViewBase
 	{
-		// Token: 0x0603A3DF RID: 238559 RVA: 0x00DD787C File Offset: 0x00DD5A7C
+		// Token: 0x0602F306 RID: 193286 RVA: 0x00D26D54 File Offset: 0x00D24F54
 		[NullableContext(1)]
 		public SimpleLogicTreeCountDownView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A3E0 RID: 238560 RVA: 0x00DD7888 File Offset: 0x00DD5A88
+		// Token: 0x0602F307 RID: 193287 RVA: 0x00D26D60 File Offset: 0x00D24F60
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.CountDown
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A3E1 RID: 238561 RVA: 0x00DD78F4 File Offset: 0x00DD5AF4
+		// Token: 0x0602F308 RID: 193288 RVA: 0x00D26DCC File Offset: 0x00D24FCC
 		protected override void OnStart()
 		{
 			SimpleLogicTreeCountDownViewParam simpleLogicTreeCountDownViewParam = this.OpenParam as SimpleLogicTreeCountDownViewParam;
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.CountDown
 			EventSystem.Instance.Add<double, double>(EEventName.OnGamePlayCdChanged, new Action<double, double>(this.OnCountDownChanged));
 		}
 
-		// Token: 0x0603A3E2 RID: 238562 RVA: 0x00DD7945 File Offset: 0x00DD5B45
+		// Token: 0x0602F309 RID: 193289 RVA: 0x00D26E1D File Offset: 0x00D2501D
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnGamePlayCdChanged, new Action<double, double>(this.OnCountDownChanged));
 		}
 
-		// Token: 0x0603A3E3 RID: 238563 RVA: 0x00DD7964 File Offset: 0x00DD5B64
+		// Token: 0x0602F30A RID: 193290 RVA: 0x00D26E3C File Offset: 0x00D2503C
 		private void HandleCountDownEnd()
 		{
 			GeneralLogicTreeModel.Instance.CountDownViewClosing = true;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.CountDown
 			});
 		}
 
-		// Token: 0x0603A3E4 RID: 238564 RVA: 0x00DD79B0 File Offset: 0x00DD5BB0
+		// Token: 0x0602F30B RID: 193291 RVA: 0x00D26E88 File Offset: 0x00D25088
 		private void OnCountDownChanged(double remainTime, double timerEndTime)
 		{
 			UUIText text = base.GetText(0);
@@ -81,13 +81,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.CountDown
 			}
 		}
 
-		// Token: 0x0200BC27 RID: 48167
+		// Token: 0x0200A632 RID: 42546
 		public static class ESimpleLogicTreeCountDownView
 		{
-			// Token: 0x04038C89 RID: 232585
+			// Token: 0x04033658 RID: 210520
 			public const int TxtCountDown = 0;
 
-			// Token: 0x04038C8A RID: 232586
+			// Token: 0x04033659 RID: 210521
 			public const int TxtTitle = 1;
 		}
 	}

@@ -5,15 +5,15 @@ using CSharpScript.Game.Module.HonamiStory;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004978 RID: 18808
+	// Token: 0x020038F0 RID: 14576
 	public class HonamiStoryQuickEquipOnComponent : HonamiStoryComponentBase
 	{
-		// Token: 0x06031077 RID: 200823 RVA: 0x00B61C30 File Offset: 0x00B5FE30
+		// Token: 0x06025BA7 RID: 154535 RVA: 0x00A9CB10 File Offset: 0x00A9AD10
 		public HonamiStoryQuickEquipOnComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031078 RID: 200824 RVA: 0x00B61C39 File Offset: 0x00B5FE39
+		// Token: 0x06025BA8 RID: 154536 RVA: 0x00A9CB19 File Offset: 0x00A9AD19
 		protected override void OnPress(HotKeyMap config)
 		{
 			if (base.Logic == null)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.Logic.QuickEquipOn();
 		}
 
-		// Token: 0x06031079 RID: 200825 RVA: 0x00B61C74 File Offset: 0x00B5FE74
+		// Token: 0x06025BA9 RID: 154537 RVA: 0x00A9CB54 File Offset: 0x00A9AD54
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

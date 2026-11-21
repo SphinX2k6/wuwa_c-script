@@ -5,35 +5,35 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001121 RID: 4385
+	// Token: 0x0200124F RID: 4687
 	public class ISaveConfig_SetValue
 	{
-		// Token: 0x04003B5A RID: 15194
+		// Token: 0x04003EA8 RID: 16040
 		public bool? IsTemp;
 
-		// Token: 0x04003B5B RID: 15195
+		// Token: 0x04003EA9 RID: 16041
 		public bool? EnableRollbackWhileSwitchOnlineMode;
 
-		// Token: 0x04003B5C RID: 15196
+		// Token: 0x04003EAA RID: 16042
 		public bool? DisableRollbackWhileReconnect;
 
-		// Token: 0x04003B5D RID: 15197
+		// Token: 0x04003EAB RID: 16043
 		[Nullable(2)]
 		public IPosRollbackConfig PosRollbackCfg;
 
-		// Token: 0x04003B5E RID: 15198
+		// Token: 0x04003EAC RID: 16044
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> EnterActions;
 
-		// Token: 0x04003B5F RID: 15199
+		// Token: 0x04003EAD RID: 16045
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IInitConditionActions> InitConditionActions;
 	}

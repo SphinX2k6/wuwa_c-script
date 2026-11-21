@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200494C RID: 18764
+	// Token: 0x02004E03 RID: 19971
 	public enum EQuestPreConditionDungeonType : byte
 	{
-		// Token: 0x0400D104 RID: 53508
+		// Token: 0x0400DBCB RID: 56267
 		DungeonId
 	}
 }

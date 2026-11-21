@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AA6 RID: 6822
+	// Token: 0x02001C3F RID: 7231
 	public class IFlyingFeatherScanEffect_SetValue
 	{
-		// Token: 0x04005A1A RID: 23066
+		// Token: 0x04005E8A RID: 24202
 		public ESpecificScanType Type;
 
-		// Token: 0x04005A1B RID: 23067
+		// Token: 0x04005E8B RID: 24203
 		public int TriggerPosEntityId;
 	}
 }

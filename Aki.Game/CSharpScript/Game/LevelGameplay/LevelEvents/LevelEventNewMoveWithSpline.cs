@@ -6,17 +6,17 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B43 RID: 27459
+	// Token: 0x02005CBB RID: 23739
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventNewMoveWithSpline : LevelEventBase
 	{
-		// Token: 0x06044171 RID: 278897 RVA: 0x010BF886 File Offset: 0x010BDA86
+		// Token: 0x0603A2C3 RID: 238275 RVA: 0x01069302 File Offset: 0x01067502
 		public LevelEventNewMoveWithSpline(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044172 RID: 278898 RVA: 0x010BF890 File Offset: 0x010BDA90
+		// Token: 0x0603A2C4 RID: 238276 RVA: 0x0106930C File Offset: 0x0106750C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			NewMoveWithSpline @params = inParams as NewMoveWithSpline;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044173 RID: 278899 RVA: 0x010BF8C8 File Offset: 0x010BDAC8
+		// Token: 0x0603A2C5 RID: 238277 RVA: 0x01069344 File Offset: 0x01067544
 		private unsafe void TryClientSceneItemSplineMove(NewMoveWithSpline @params)
 		{
 			if (@params.MoveTarget.Type != ENewSplineMoveTargetType.SceneItem)

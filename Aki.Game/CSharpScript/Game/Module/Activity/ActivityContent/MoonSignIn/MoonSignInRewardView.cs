@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 {
-	// Token: 0x02006469 RID: 25705
+	// Token: 0x020053E7 RID: 21479
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoonSignInRewardView : UiViewBase
 	{
-		// Token: 0x0604098D RID: 264589 RVA: 0x00FA2F30 File Offset: 0x00FA1130
+		// Token: 0x0603564E RID: 218702 RVA: 0x00EE9EAC File Offset: 0x00EE80AC
 		public MoonSignInRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0604098E RID: 264590 RVA: 0x00FA2F3C File Offset: 0x00FA113C
+		// Token: 0x0603564F RID: 218703 RVA: 0x00EE9EB8 File Offset: 0x00EE80B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604098F RID: 264591 RVA: 0x00FA3178 File Offset: 0x00FA1378
+		// Token: 0x06035650 RID: 218704 RVA: 0x00EEA0F4 File Offset: 0x00EE82F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoonSignInRewardView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040990 RID: 264592 RVA: 0x00FA31BB File Offset: 0x00FA13BB
+		// Token: 0x06035651 RID: 218705 RVA: 0x00EEA137 File Offset: 0x00EE8337
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.MoonSignRewardRefresh, new Action(this.MoonSignRewardRefresh));
 		}
 
-		// Token: 0x06040991 RID: 264593 RVA: 0x00FA31D9 File Offset: 0x00FA13D9
+		// Token: 0x06035652 RID: 218706 RVA: 0x00EEA155 File Offset: 0x00EE8355
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.MoonSignRewardRefresh, new Action(this.MoonSignRewardRefresh));
 		}
 
-		// Token: 0x06040992 RID: 264594 RVA: 0x00FA31F8 File Offset: 0x00FA13F8
+		// Token: 0x06035653 RID: 218707 RVA: 0x00EEA174 File Offset: 0x00EE8374
 		protected override void OnStart()
 		{
 			this.NormalRewardGenericScrollView = new GenericScrollViewNew<NormalRewardItem, int>(base.GetScrollViewWithScrollbar(1), new Func<NormalRewardItem>(this.InitGridItem), null, false, null);
@@ -105,13 +105,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			});
 		}
 
-		// Token: 0x06040993 RID: 264595 RVA: 0x00FA327A File Offset: 0x00FA147A
+		// Token: 0x06035654 RID: 218708 RVA: 0x00EEA1F6 File Offset: 0x00EE83F6
 		protected override void OnBeforeShow()
 		{
 			this.MoonSignRewardRefresh();
 		}
 
-		// Token: 0x06040994 RID: 264596 RVA: 0x00FA3284 File Offset: 0x00FA1484
+		// Token: 0x06035655 RID: 218709 RVA: 0x00EEA200 File Offset: 0x00EE8400
 		private void RefreshGrandRewardScrollView()
 		{
 			MoonSignInData data = MoonSignInController.Instance.GetData();
@@ -139,19 +139,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.GrandRewardGenericScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06040995 RID: 264597 RVA: 0x00FA334C File Offset: 0x00FA154C
+		// Token: 0x06035656 RID: 218710 RVA: 0x00EEA2C8 File Offset: 0x00EE84C8
 		private NormalRewardItem InitGridItem()
 		{
 			return new NormalRewardItem();
 		}
 
-		// Token: 0x06040996 RID: 264598 RVA: 0x00FA3353 File Offset: 0x00FA1553
+		// Token: 0x06035657 RID: 218711 RVA: 0x00EEA2CF File Offset: 0x00EE84CF
 		private RewardItem InitGrandRewardGridItem()
 		{
 			return new RewardItem();
 		}
 
-		// Token: 0x06040997 RID: 264599 RVA: 0x00FA335C File Offset: 0x00FA155C
+		// Token: 0x06035658 RID: 218712 RVA: 0x00EEA2D8 File Offset: 0x00EE84D8
 		private void MoonSignRewardRefresh()
 		{
 			GenericScrollViewNew<NormalRewardItem, int> normalRewardGenericScrollView = this.NormalRewardGenericScrollView;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.RefreshDesText();
 		}
 
-		// Token: 0x06040998 RID: 264600 RVA: 0x00FA33B0 File Offset: 0x00FA15B0
+		// Token: 0x06035659 RID: 218713 RVA: 0x00EEA32C File Offset: 0x00EE852C
 		private void RefreshDesText()
 		{
 			MoonSignInData data = MoonSignInController.Instance.GetData();
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			}));
 		}
 
-		// Token: 0x06040999 RID: 264601 RVA: 0x00FA3444 File Offset: 0x00FA1644
+		// Token: 0x0603565A RID: 218714 RVA: 0x00EEA3C0 File Offset: 0x00EE85C0
 		private void RefreshBtnState()
 		{
 			MoonSignInData data = MoonSignInController.Instance.GetData();
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			base.GetButton(9).RootUIComp.Get().SetUIActive(!moonGrandReward && canGetMoonGrandReward);
 		}
 
-		// Token: 0x0604099A RID: 264602 RVA: 0x00FA34B4 File Offset: 0x00FA16B4
+		// Token: 0x0603565B RID: 218715 RVA: 0x00EEA430 File Offset: 0x00EE8630
 		private void OnClickRewardBtn()
 		{
 			MoonSignInData data = MoonSignInController.Instance.GetData();
@@ -217,59 +217,59 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			}
 		}
 
-		// Token: 0x04021958 RID: 137560
+		// Token: 0x0401C287 RID: 115335
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021959 RID: 137561
+		// Token: 0x0401C288 RID: 115336
 		private GenericScrollViewNew<NormalRewardItem, int> NormalRewardGenericScrollView;
 
-		// Token: 0x0402195A RID: 137562
+		// Token: 0x0401C289 RID: 115337
 		private GenericScrollViewNew<RewardItem, IRewardItemData> GrandRewardGenericScrollView;
 
-		// Token: 0x0200C695 RID: 50837
+		// Token: 0x0200B07B RID: 45179
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403BF3B RID: 245563
+			// Token: 0x04036896 RID: 223382
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403BF3C RID: 245564
+			// Token: 0x04036897 RID: 223383
 			public const int RewardScrollView = 1;
 
-			// Token: 0x0403BF3D RID: 245565
+			// Token: 0x04036898 RID: 223384
 			public const int RewardContentItem = 2;
 
-			// Token: 0x0403BF3E RID: 245566
+			// Token: 0x04036899 RID: 223385
 			public const int RewardItem = 3;
 
-			// Token: 0x0403BF3F RID: 245567
+			// Token: 0x0403689A RID: 223386
 			public const int MoonGrandRewardTitleText = 4;
 
-			// Token: 0x0403BF40 RID: 245568
+			// Token: 0x0403689B RID: 223387
 			public const int MoonGrandRewardDesText = 5;
 
-			// Token: 0x0403BF41 RID: 245569
+			// Token: 0x0403689C RID: 223388
 			public const int MoonGrandRewardScrollView = 6;
 
-			// Token: 0x0403BF42 RID: 245570
+			// Token: 0x0403689D RID: 223389
 			public const int MoonGrandRewardContentItem = 7;
 
-			// Token: 0x0403BF43 RID: 245571
+			// Token: 0x0403689E RID: 223390
 			public const int MoonGrandRewardItem = 8;
 
-			// Token: 0x0403BF44 RID: 245572
+			// Token: 0x0403689F RID: 223391
 			public const int RewardBtn = 9;
 
-			// Token: 0x0403BF45 RID: 245573
+			// Token: 0x040368A0 RID: 223392
 			public const int UnFinishItem = 10;
 
-			// Token: 0x0403BF46 RID: 245574
+			// Token: 0x040368A1 RID: 223393
 			public const int ObtainedItem = 11;
 
-			// Token: 0x0403BF47 RID: 245575
+			// Token: 0x040368A2 RID: 223394
 			public const int LeftButton = 12;
 
-			// Token: 0x0403BF48 RID: 245576
+			// Token: 0x040368A3 RID: 223395
 			public const int RightButton = 13;
 		}
 	}

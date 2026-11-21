@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004071 RID: 16497
+	// Token: 0x020044B2 RID: 17586
 	public class IReadPhoneMessageQuestConditionT
 	{
-		// Token: 0x17007468 RID: 29800
-		// (get) Token: 0x06017FAF RID: 98223 RVA: 0x00375FC1 File Offset: 0x003741C1
-		// (set) Token: 0x06017FB0 RID: 98224 RVA: 0x00375FC9 File Offset: 0x003741C9
+		// Token: 0x17007A6A RID: 31338
+		// (get) Token: 0x06019648 RID: 104008 RVA: 0x0039FDF9 File Offset: 0x0039DFF9
+		// (set) Token: 0x06019649 RID: 104009 RVA: 0x0039FE01 File Offset: 0x0039E001
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17007469 RID: 29801
-		// (get) Token: 0x06017FB1 RID: 98225 RVA: 0x00375FD2 File Offset: 0x003741D2
-		// (set) Token: 0x06017FB2 RID: 98226 RVA: 0x00375FDA File Offset: 0x003741DA
+		// Token: 0x17007A6B RID: 31339
+		// (get) Token: 0x0601964A RID: 104010 RVA: 0x0039FE0A File Offset: 0x0039E00A
+		// (set) Token: 0x0601964B RID: 104011 RVA: 0x0039FE12 File Offset: 0x0039E012
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x1700746A RID: 29802
-		// (get) Token: 0x06017FB3 RID: 98227 RVA: 0x00375FE3 File Offset: 0x003741E3
-		// (set) Token: 0x06017FB4 RID: 98228 RVA: 0x00375FEB File Offset: 0x003741EB
+		// Token: 0x17007A6C RID: 31340
+		// (get) Token: 0x0601964C RID: 104012 RVA: 0x0039FE1B File Offset: 0x0039E01B
+		// (set) Token: 0x0601964D RID: 104013 RVA: 0x0039FE23 File Offset: 0x0039E023
 		public int PhoneMessageId { get; set; }
 
-		// Token: 0x1700746B RID: 29803
-		// (get) Token: 0x06017FB5 RID: 98229 RVA: 0x00375FF4 File Offset: 0x003741F4
-		// (set) Token: 0x06017FB6 RID: 98230 RVA: 0x00375FFC File Offset: 0x003741FC
+		// Token: 0x17007A6D RID: 31341
+		// (get) Token: 0x0601964E RID: 104014 RVA: 0x0039FE2C File Offset: 0x0039E02C
+		// (set) Token: 0x0601964F RID: 104015 RVA: 0x0039FE34 File Offset: 0x0039E034
 		public ICompleteMessageQuestConditionT ProgressType { get; set; }
 
-		// Token: 0x1700746C RID: 29804
-		// (get) Token: 0x06017FB7 RID: 98231 RVA: 0x00376005 File Offset: 0x00374205
-		// (set) Token: 0x06017FB8 RID: 98232 RVA: 0x0037600D File Offset: 0x0037420D
+		// Token: 0x17007A6E RID: 31342
+		// (get) Token: 0x06019650 RID: 104016 RVA: 0x0039FE3D File Offset: 0x0039E03D
+		// (set) Token: 0x06019651 RID: 104017 RVA: 0x0039FE45 File Offset: 0x0039E045
 		public byte NullMask { get; set; }
 
-		// Token: 0x06017FB9 RID: 98233 RVA: 0x00376016 File Offset: 0x00374216
+		// Token: 0x06019652 RID: 104018 RVA: 0x0039FE4E File Offset: 0x0039E04E
 		public IReadPhoneMessageQuestConditionT()
 		{
 			this.Type = EChildQuest.DoInteract;

@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000D6 RID: 214
+	// Token: 0x020000DE RID: 222
 	[EnumExtensions]
 	public enum ELevelPrefabBpType
 	{
-		// Token: 0x040004AD RID: 1197
+		// Token: 0x040004D1 RID: 1233
 		Item,
-		// Token: 0x040004AE RID: 1198
+		// Token: 0x040004D2 RID: 1234
 		InteractedBox,
-		// Token: 0x040004AF RID: 1199
+		// Token: 0x040004D3 RID: 1235
 		PhysicsItem
 	}
 }

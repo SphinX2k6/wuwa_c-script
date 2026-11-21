@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005563 RID: 21859
+	// Token: 0x02004535 RID: 17717
 	public class FishingPointMarkCreateInfo : DynamicMarkCreateInfo
 	{
-		// Token: 0x170085E8 RID: 34280
-		// (get) Token: 0x06037BC9 RID: 228297 RVA: 0x00D38DE6 File Offset: 0x00D36FE6
+		// Token: 0x17005988 RID: 22920
+		// (get) Token: 0x0602CA99 RID: 182937 RVA: 0x00C868BA File Offset: 0x00C84ABA
 		public EFishPointDetectSourceType FishPointDetectSourceType
 		{
 			get
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Map.MapDefine
 			}
 		}
 
-		// Token: 0x06037BCA RID: 228298 RVA: 0x00D38DF8 File Offset: 0x00D36FF8
+		// Token: 0x0602CA9A RID: 182938 RVA: 0x00C868CC File Offset: 0x00C84ACC
 		[NullableContext(1)]
 		public FishingPointMarkCreateInfo(FishingPointMarkCreateParam param) : base(param)
 		{

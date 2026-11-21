@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026C3 RID: 9923
+	// Token: 0x02002987 RID: 10631
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEnableSubLevelTransitionWithSceneCapture : IEnableSubLevelTransitionType
 	{
-		// Token: 0x0600DDED RID: 56813 RVA: 0x0020F19D File Offset: 0x0020D39D
-		[NullableContext(1)]
+		// Token: 0x0600EBC9 RID: 60361 RVA: 0x0022B9DD File Offset: 0x00229BDD
+		[NullableContext(0)]
 		public static IEnableSubLevelTransitionWithSceneCapture Create(IEnableSubLevelTransitionWithSceneCapture? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004229 RID: 16937
-		// (get) Token: 0x0600DDEE RID: 56814 RVA: 0x0020F1BC File Offset: 0x0020D3BC
+		// Token: 0x17004569 RID: 17769
+		// (get) Token: 0x0600EBCA RID: 60362 RVA: 0x0022B9FC File Offset: 0x00229BFC
 		public override EEnableSubLevelTransitionType Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700422A RID: 16938
-		// (get) Token: 0x0600DDEF RID: 56815 RVA: 0x0020F1C9 File Offset: 0x0020D3C9
+		// Token: 0x1700456A RID: 17770
+		// (get) Token: 0x0600EBCB RID: 60363 RVA: 0x0022BA09 File Offset: 0x00229C09
 		public virtual string SceneCaptureEffect
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700422B RID: 16939
-		// (get) Token: 0x0600DDF0 RID: 56816 RVA: 0x0020F1D6 File Offset: 0x0020D3D6
+		// Token: 0x1700456B RID: 17771
+		// (get) Token: 0x0600EBCC RID: 60364 RVA: 0x0022BA16 File Offset: 0x00229C16
 		public virtual string ScreenEffect
 		{
 			get
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700422C RID: 16940
-		// (get) Token: 0x0600DDF1 RID: 56817 RVA: 0x0020F1E3 File Offset: 0x0020D3E3
+		// Token: 0x1700456C RID: 17772
+		// (get) Token: 0x0600EBCD RID: 60365 RVA: 0x0022BA23 File Offset: 0x00229C23
 		public virtual string ScreenEffectLoop
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700422D RID: 16941
-		// (get) Token: 0x0600DDF2 RID: 56818 RVA: 0x0020F1F0 File Offset: 0x0020D3F0
+		// Token: 0x1700456D RID: 17773
+		// (get) Token: 0x0600EBCE RID: 60366 RVA: 0x0022BA30 File Offset: 0x00229C30
 		public virtual float? DelayTime
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700422E RID: 16942
-		// (get) Token: 0x0600DDF3 RID: 56819 RVA: 0x0020F228 File Offset: 0x0020D428
+		// Token: 0x1700456E RID: 17774
+		// (get) Token: 0x0600EBCF RID: 60367 RVA: 0x0022BA68 File Offset: 0x00229C68
 		public virtual bool? IsAllowInput
 		{
 			get
@@ -91,7 +91,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B39 RID: 31545
+		// Token: 0x040081D9 RID: 33241
 		private IEnableSubLevelTransitionWithSceneCapture Instance;
 	}
 }

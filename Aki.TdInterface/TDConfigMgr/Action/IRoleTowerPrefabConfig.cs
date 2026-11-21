@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DCE RID: 7630
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FE5 RID: 8165
 	public class IRoleTowerPrefabConfig : ICreatePrefabConfig
 	{
-		// Token: 0x0600A365 RID: 41829 RVA: 0x001730B8 File Offset: 0x001712B8
+		// Token: 0x0600AD6F RID: 44399 RVA: 0x001877E0 File Offset: 0x001859E0
 		private IRoleTowerPrefabConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A366 RID: 41830 RVA: 0x001730F0 File Offset: 0x001712F0
+		// Token: 0x0600AD70 RID: 44400 RVA: 0x00187818 File Offset: 0x00185A18
 		public static IRoleTowerPrefabConfig Create([Nullable(2)] IRoleTowerPrefabConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A367 RID: 41831 RVA: 0x00173103 File Offset: 0x00171303
+		// Token: 0x0600AD71 RID: 44401 RVA: 0x0018782B File Offset: 0x00185A2B
 		public static IRoleTowerPrefabConfig CreateFromSetValue([Nullable(2)] IRoleTowerPrefabConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A368 RID: 41832 RVA: 0x00173116 File Offset: 0x00171316
+		// Token: 0x0600AD72 RID: 44402 RVA: 0x0018783E File Offset: 0x00185A3E
 		public new IRoleTowerPrefabConfig_SetValue ToSetValue()
 		{
 			return new IRoleTowerPrefabConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003254 RID: 12884
-		// (get) Token: 0x0600A369 RID: 41833 RVA: 0x00173129 File Offset: 0x00171329
-		// (set) Token: 0x0600A36A RID: 41834 RVA: 0x00173154 File Offset: 0x00171354
+		// Token: 0x170034EE RID: 13550
+		// (get) Token: 0x0600AD73 RID: 44403 RVA: 0x00187851 File Offset: 0x00185A51
+		// (set) Token: 0x0600AD74 RID: 44404 RVA: 0x0018787C File Offset: 0x00185A7C
 		public override ECreatePrefabType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061F9 RID: 25081
+		// Token: 0x04006781 RID: 26497
 		[Nullable(2)]
 		protected new IRoleTowerPrefabConfig FbInstance;
 
-		// Token: 0x040061FA RID: 25082
+		// Token: 0x04006782 RID: 26498
 		[Nullable(2)]
 		protected new IRoleTowerPrefabConfig_SetValue PocoInterface;
 	}

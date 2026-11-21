@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005176 RID: 20854
+	// Token: 0x02004146 RID: 16710
 	public class PhantomArenaMapDropDownItem : DropDownItemBase<int>
 	{
-		// Token: 0x06035543 RID: 218435 RVA: 0x00CA1C11 File Offset: 0x00C9FE11
+		// Token: 0x0602A43F RID: 173119 RVA: 0x00BEF18D File Offset: 0x00BED38D
 		[NullableContext(1)]
 		public PhantomArenaMapDropDownItem(UUIItem uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x06035544 RID: 218436 RVA: 0x00CA1C1C File Offset: 0x00C9FE1C
+		// Token: 0x0602A440 RID: 173120 RVA: 0x00BEF198 File Offset: 0x00BED398
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,14 +26,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035545 RID: 218437 RVA: 0x00CA1C76 File Offset: 0x00C9FE76
+		// Token: 0x0602A441 RID: 173121 RVA: 0x00BEF1F2 File Offset: 0x00BED3F2
 		[NullableContext(2)]
 		protected override UUIExtendToggle GetDropDownToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x06035546 RID: 218438 RVA: 0x00CA1C80 File Offset: 0x00C9FE80
+		// Token: 0x0602A442 RID: 173122 RVA: 0x00BEF1FC File Offset: 0x00BED3FC
 		protected override void OnShowDropDownItemBase(int mapId)
 		{
 			PhantomArenaConfig instance = PhantomArenaConfig.Instance;
@@ -66,16 +66,16 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0200B2E6 RID: 45798
+		// Token: 0x02009D20 RID: 40224
 		private class EPhantomArenaMapDropDownItemComp
 		{
-			// Token: 0x0403635A RID: 222042
+			// Token: 0x04030DB1 RID: 200113
 			public const int Toggle = 0;
 
-			// Token: 0x0403635B RID: 222043
+			// Token: 0x04030DB2 RID: 200114
 			public const int Content = 1;
 
-			// Token: 0x0403635C RID: 222044
+			// Token: 0x04030DB3 RID: 200115
 			public const int RedDot = 2;
 		}
 	}

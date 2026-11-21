@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F88 RID: 24456
+	// Token: 0x020065CF RID: 26063
 	public enum EInfrastructureItemDeliveryType : byte
 	{
-		// Token: 0x0400FDD0 RID: 64976
+		// Token: 0x04010B5A RID: 68442
 		Observatory,
-		// Token: 0x0400FDD1 RID: 64977
+		// Token: 0x04010B5B RID: 68443
 		RoadBuild
 	}
 }

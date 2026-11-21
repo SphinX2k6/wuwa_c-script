@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200624E RID: 25166
+	// Token: 0x020051CC RID: 20940
 	internal class KeyItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603F651 RID: 259665 RVA: 0x00F53650 File Offset: 0x00F51850
+		// Token: 0x06034312 RID: 213778 RVA: 0x00E9A5AC File Offset: 0x00E987AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F652 RID: 259666 RVA: 0x00F5368C File Offset: 0x00F5188C
+		// Token: 0x06034313 RID: 213779 RVA: 0x00E9A5E8 File Offset: 0x00E987E8
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			RhythmShipAction? rhythmShipActionById = RhythmShipConfig.Instance.GetRhythmShipActionById(data);

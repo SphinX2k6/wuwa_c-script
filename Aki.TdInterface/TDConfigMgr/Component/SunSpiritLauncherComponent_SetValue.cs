@@ -2,22 +2,22 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008B0 RID: 2224
+	// Token: 0x02000953 RID: 2387
 	public class SunSpiritLauncherComponent_SetValue
 	{
-		// Token: 0x040020AE RID: 8366
+		// Token: 0x040022C0 RID: 8896
 		public bool? Disabled;
 
-		// Token: 0x040020AF RID: 8367
+		// Token: 0x040022C1 RID: 8897
 		public bool? EdIsLocked;
 
-		// Token: 0x040020B0 RID: 8368
+		// Token: 0x040022C2 RID: 8898
 		public int AreaId;
 
-		// Token: 0x040020B1 RID: 8369
+		// Token: 0x040022C3 RID: 8899
 		public int NeedsCount;
 
-		// Token: 0x040020B2 RID: 8370
+		// Token: 0x040022C4 RID: 8900
 		public int SunSpiritGearId;
 	}
 }

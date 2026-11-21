@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053B0 RID: 21424
+	// Token: 0x02004393 RID: 17299
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleFlagMonsterInfoPanel : UiPanelBase
 	{
-		// Token: 0x06036BF3 RID: 224243 RVA: 0x00CF5124 File Offset: 0x00CF3324
+		// Token: 0x0602BB39 RID: 179001 RVA: 0x00C441CC File Offset: 0x00C423CC
 		public UniTask Init(UUIItem item)
 		{
 			MoraleFlagMonsterInfoPanel.<Init>d__6 <Init>d__;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036BF4 RID: 224244 RVA: 0x00CF5170 File Offset: 0x00CF3370
+		// Token: 0x0602BB3A RID: 179002 RVA: 0x00C44218 File Offset: 0x00C42418
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036BF5 RID: 224245 RVA: 0x00CF52AC File Offset: 0x00CF34AC
+		// Token: 0x0602BB3B RID: 179003 RVA: 0x00C44354 File Offset: 0x00C42554
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleFlagMonsterInfoPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036BF6 RID: 224246 RVA: 0x00CF52F0 File Offset: 0x00CF34F0
+		// Token: 0x0602BB3C RID: 179004 RVA: 0x00C44398 File Offset: 0x00C42598
 		public void OnBtnTrack()
 		{
 			int markId = this.FlagData.Config.MarkId;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Morale
 			});
 		}
 
-		// Token: 0x06036BF7 RID: 224247 RVA: 0x00CF5368 File Offset: 0x00CF3568
+		// Token: 0x0602BB3D RID: 179005 RVA: 0x00C44410 File Offset: 0x00C42610
 		public void OnBtnTeleport()
 		{
 			WorldMapController.Instance.TryTeleport(this.FlagData.Config.MarkId, delegate
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Morale
 			});
 		}
 
-		// Token: 0x06036BF8 RID: 224248 RVA: 0x00CF53A4 File Offset: 0x00CF35A4
+		// Token: 0x0602BB3E RID: 179006 RVA: 0x00C4444C File Offset: 0x00C4264C
 		public void UpdateData(MoraleAreaFlagData flagData)
 		{
 			this.FlagData = flagData;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateTrackOrTeleport();
 		}
 
-		// Token: 0x06036BF9 RID: 224249 RVA: 0x00CF54D0 File Offset: 0x00CF36D0
+		// Token: 0x0602BB3F RID: 179007 RVA: 0x00C44578 File Offset: 0x00C42778
 		public void UpdateLvDiffBg()
 		{
 			int maxMonsterLv = this.FlagData.Config.MaxMonsterLv;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036BFA RID: 224250 RVA: 0x00CF553C File Offset: 0x00CF373C
+		// Token: 0x0602BB40 RID: 179008 RVA: 0x00C445E4 File Offset: 0x00C427E4
 		public void SetLvDiffBg(string resId)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(resId);
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Morale
 			base.SetTextureByPath(resourcePath, texture, null, null);
 		}
 
-		// Token: 0x06036BFB RID: 224251 RVA: 0x00CF5570 File Offset: 0x00CF3770
+		// Token: 0x0602BB41 RID: 179009 RVA: 0x00C44618 File Offset: 0x00C42818
 		public void UpdateRewardList()
 		{
 			List<TItem> rewardItemList = this.GetRewardItemList();
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.RewardListComponent.RefreshItemLayout(rewardItemList, null);
 		}
 
-		// Token: 0x06036BFC RID: 224252 RVA: 0x00CF55DC File Offset: 0x00CF37DC
+		// Token: 0x0602BB42 RID: 179010 RVA: 0x00C44684 File Offset: 0x00C42884
 		public List<TItem> GetRewardItemList()
 		{
 			int boxRewardId = this.FlagData.Config.BoxRewardId;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Morale
 			return RewardConfig.Instance.GetDropPackagePreviewItemList(boxRewardId);
 		}
 
-		// Token: 0x06036BFD RID: 224253 RVA: 0x00CF560F File Offset: 0x00CF380F
+		// Token: 0x0602BB43 RID: 179011 RVA: 0x00C446B7 File Offset: 0x00C428B7
 		private CommonItemSmallItemGrid InitCommonGridItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -191,13 +191,13 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036BFE RID: 224254 RVA: 0x00CF5628 File Offset: 0x00CF3828
+		// Token: 0x0602BB44 RID: 179012 RVA: 0x00C446D0 File Offset: 0x00C428D0
 		private bool ShowReceivedCallBack(TItem data)
 		{
 			return this.FlagData.IsGetBox;
 		}
 
-		// Token: 0x06036BFF RID: 224255 RVA: 0x00CF5638 File Offset: 0x00CF3838
+		// Token: 0x0602BB45 RID: 179013 RVA: 0x00C446E0 File Offset: 0x00C428E0
 		public void PlayEnter()
 		{
 			LevelSequencePlayer sequence = this.Sequence;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Morale
 			sequence.PlaySequencePurely("Start", false, false, null, null, false);
 		}
 
-		// Token: 0x06036C00 RID: 224256 RVA: 0x00CF5668 File Offset: 0x00CF3868
+		// Token: 0x0602BB46 RID: 179014 RVA: 0x00C44710 File Offset: 0x00C42910
 		public void UpdateTrackOrTeleport()
 		{
 			bool flag = MoraleModel.Instance.IsMoraleGameOver();
@@ -226,70 +226,70 @@ namespace CSharpScript.Game.Module.Morale
 			this.BtnTrackOrTeleportComponent.SetShowText(flag2 ? "Text_TeleportFastMove_Text" : "Morale_title_6");
 		}
 
-		// Token: 0x06036C01 RID: 224257 RVA: 0x00CF56E8 File Offset: 0x00CF38E8
+		// Token: 0x0602BB47 RID: 179015 RVA: 0x00C44790 File Offset: 0x00C42990
 		public bool FlagMarkIsCanTeleport()
 		{
 			int markId = this.FlagData.Config.MarkId;
 			return MapModel.Instance.MapMarkIsCanTeleport(markId);
 		}
 
-		// Token: 0x0401CE6C RID: 118380
+		// Token: 0x04017904 RID: 96516
 		public MoraleAreaFlagData FlagData;
 
-		// Token: 0x0401CE6D RID: 118381
+		// Token: 0x04017905 RID: 96517
 		public ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x0401CE6E RID: 118382
+		// Token: 0x04017906 RID: 96518
 		public ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x0401CE6F RID: 118383
+		// Token: 0x04017907 RID: 96519
 		public ButtonItem BtnTrackOrTeleportComponent;
 
-		// Token: 0x0401CE70 RID: 118384
+		// Token: 0x04017908 RID: 96520
 		[Nullable(2)]
 		public LevelSequencePlayer Sequence;
 
-		// Token: 0x0200B647 RID: 46663
+		// Token: 0x0200A07F RID: 41087
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x0403738B RID: 226187
+			// Token: 0x04031DE0 RID: 204256
 			public const int TextureDifficulty = 0;
 
-			// Token: 0x0403738C RID: 226188
+			// Token: 0x04031DE1 RID: 204257
 			public const int ArtTxtLv = 1;
 
-			// Token: 0x0403738D RID: 226189
+			// Token: 0x04031DE2 RID: 204258
 			public const int SpriteFinish = 2;
 
-			// Token: 0x0403738E RID: 226190
+			// Token: 0x04031DE3 RID: 204259
 			public const int ItemTipsHighDifficulty = 3;
 
-			// Token: 0x0403738F RID: 226191
+			// Token: 0x04031DE4 RID: 204260
 			public const int ItemDescPanel = 4;
 
-			// Token: 0x04037390 RID: 226192
+			// Token: 0x04031DE5 RID: 204261
 			public const int ItemRewardPanel = 5;
 
-			// Token: 0x04037391 RID: 226193
+			// Token: 0x04031DE6 RID: 204262
 			public const int ItemTipsRoot = 6;
 
-			// Token: 0x04037392 RID: 226194
+			// Token: 0x04031DE7 RID: 204263
 			public const int ItemTipsWarning = 7;
 
-			// Token: 0x04037393 RID: 226195
+			// Token: 0x04031DE8 RID: 204264
 			public const int ItemTipsCanReceived = 8;
 
-			// Token: 0x04037394 RID: 226196
+			// Token: 0x04031DE9 RID: 204265
 			public const int ItemButtonComponent = 9;
 
-			// Token: 0x04037395 RID: 226197
+			// Token: 0x04031DEA RID: 204266
 			public const int TextTipsWarning = 10;
 
-			// Token: 0x04037396 RID: 226198
+			// Token: 0x04031DEB RID: 204267
 			public const int TextTipsCanReceived = 11;
 
-			// Token: 0x04037397 RID: 226199
+			// Token: 0x04031DEC RID: 204268
 			public const int TextureIcon = 12;
 		}
 	}

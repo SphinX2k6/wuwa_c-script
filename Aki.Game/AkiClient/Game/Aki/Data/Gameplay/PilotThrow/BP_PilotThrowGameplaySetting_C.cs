@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.PilotThrow
 {
-	// Token: 0x02003F37 RID: 16183
+	// Token: 0x020031E2 RID: 12770
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Gameplay/PilotThrow/BP_PilotThrowGameplaySetting.BP_PilotThrowGameplaySetting_C")]
 	[UnrealStructLayout(288, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 288)]
 	public class BP_PilotThrowGameplaySetting_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602929E RID: 168606 RVA: 0x009BD521 File Offset: 0x009BB721
+		// Token: 0x0601FBA7 RID: 129959 RVA: 0x00934510 File Offset: 0x00932710
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_PilotThrowGameplaySetting_C._ClassPtr == IntPtr.Zero)
@@ -24,376 +24,376 @@ namespace AkiClient.Game.Aki.Data.Gameplay.PilotThrow
 			return BP_PilotThrowGameplaySetting_C._ClassPtr;
 		}
 
-		// Token: 0x0602929F RID: 168607 RVA: 0x009BD548 File Offset: 0x009BB748
+		// Token: 0x0601FBA8 RID: 129960 RVA: 0x00934534 File Offset: 0x00932734
 		public BP_PilotThrowGameplaySetting_C() : this(BuiltinUtils.AllocNativeUObject(BP_PilotThrowGameplaySetting_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060292A0 RID: 168608 RVA: 0x009BD570 File Offset: 0x009BB770
+		// Token: 0x0601FBA9 RID: 129961 RVA: 0x0093455C File Offset: 0x0093275C
 		public BP_PilotThrowGameplaySetting_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_PilotThrowGameplaySetting_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170061DA RID: 25050
-		// (get) Token: 0x060292A1 RID: 168609 RVA: 0x009BD5A3 File Offset: 0x009BB7A3
-		// (set) Token: 0x060292A2 RID: 168610 RVA: 0x009BD5B3 File Offset: 0x009BB7B3
+		// Token: 0x17003B26 RID: 15142
+		// (get) Token: 0x0601FBAA RID: 129962 RVA: 0x0093458F File Offset: 0x0093278F
+		// (set) Token: 0x0601FBAB RID: 129963 RVA: 0x0093459F File Offset: 0x0093279F
 		public unsafe bool DebugMode
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_0) != 0;
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_DebugMode) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_0) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_DebugMode) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170061DB RID: 25051
-		// (get) Token: 0x060292A3 RID: 168611 RVA: 0x009BD5C4 File Offset: 0x009BB7C4
-		// (set) Token: 0x060292A4 RID: 168612 RVA: 0x009BD5D4 File Offset: 0x009BB7D4
+		// Token: 0x17003B27 RID: 15143
+		// (get) Token: 0x0601FBAC RID: 129964 RVA: 0x009345B0 File Offset: 0x009327B0
+		// (set) Token: 0x0601FBAD RID: 129965 RVA: 0x009345C0 File Offset: 0x009327C0
 		public unsafe float 初速度仰角
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_初速度仰角);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_初速度仰角) = value;
 			}
 		}
 
-		// Token: 0x170061DC RID: 25052
-		// (get) Token: 0x060292A5 RID: 168613 RVA: 0x009BD5E5 File Offset: 0x009BB7E5
-		// (set) Token: 0x060292A6 RID: 168614 RVA: 0x009BD5F5 File Offset: 0x009BB7F5
+		// Token: 0x17003B28 RID: 15144
+		// (get) Token: 0x0601FBAE RID: 129966 RVA: 0x009345D1 File Offset: 0x009327D1
+		// (set) Token: 0x0601FBAF RID: 129967 RVA: 0x009345E1 File Offset: 0x009327E1
 		public unsafe float 初速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_初速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_初速度) = value;
 			}
 		}
 
-		// Token: 0x170061DD RID: 25053
-		// (get) Token: 0x060292A7 RID: 168615 RVA: 0x009BD606 File Offset: 0x009BB806
-		// (set) Token: 0x060292A8 RID: 168616 RVA: 0x009BD616 File Offset: 0x009BB816
+		// Token: 0x17003B29 RID: 15145
+		// (get) Token: 0x0601FBB0 RID: 129968 RVA: 0x009345F2 File Offset: 0x009327F2
+		// (set) Token: 0x0601FBB1 RID: 129969 RVA: 0x00934602 File Offset: 0x00932802
 		public unsafe float 射线检测半径
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_射线检测半径);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_射线检测半径) = value;
 			}
 		}
 
-		// Token: 0x170061DE RID: 25054
-		// (get) Token: 0x060292A9 RID: 168617 RVA: 0x009BD627 File Offset: 0x009BB827
-		// (set) Token: 0x060292AA RID: 168618 RVA: 0x009BD637 File Offset: 0x009BB837
+		// Token: 0x17003B2A RID: 15146
+		// (get) Token: 0x0601FBB2 RID: 129970 RVA: 0x00934613 File Offset: 0x00932813
+		// (set) Token: 0x0601FBB3 RID: 129971 RVA: 0x00934623 File Offset: 0x00932823
 		public unsafe float 重力加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_重力加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_重力加速度) = value;
 			}
 		}
 
-		// Token: 0x170061DF RID: 25055
-		// (get) Token: 0x060292AB RID: 168619 RVA: 0x009BD648 File Offset: 0x009BB848
-		// (set) Token: 0x060292AC RID: 168620 RVA: 0x009BD65D File Offset: 0x009BB85D
+		// Token: 0x17003B2B RID: 15147
+		// (get) Token: 0x0601FBB4 RID: 129972 RVA: 0x00934634 File Offset: 0x00932834
+		// (set) Token: 0x0601FBB5 RID: 129973 RVA: 0x00934649 File Offset: 0x00932849
 		public TSoftObjectPtr<EffectModelGroup> 样条特效
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_5, this);
+				return new TSoftObjectPtr<EffectModelGroup>(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_样条特效, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_5, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_样条特效, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x170061E0 RID: 25056
-		// (get) Token: 0x060292AD RID: 168621 RVA: 0x009BD682 File Offset: 0x009BB882
-		// (set) Token: 0x060292AE RID: 168622 RVA: 0x009BD697 File Offset: 0x009BB897
+		// Token: 0x17003B2C RID: 15148
+		// (get) Token: 0x0601FBB6 RID: 129974 RVA: 0x0093466E File Offset: 0x0093286E
+		// (set) Token: 0x0601FBB7 RID: 129975 RVA: 0x00934683 File Offset: 0x00932883
 		public TSoftObjectPtr<UEffectModelGroup> 终点特效
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_6, this);
+				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_终点特效, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_6, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_终点特效, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x170061E1 RID: 25057
-		// (get) Token: 0x060292AF RID: 168623 RVA: 0x009BD6BC File Offset: 0x009BB8BC
-		// (set) Token: 0x060292B0 RID: 168624 RVA: 0x009BD6D0 File Offset: 0x009BB8D0
+		// Token: 0x17003B2D RID: 15149
+		// (get) Token: 0x0601FBB8 RID: 129976 RVA: 0x009346A8 File Offset: 0x009328A8
+		// (set) Token: 0x0601FBB9 RID: 129977 RVA: 0x009346BC File Offset: 0x009328BC
 		public unsafe FVector2D 触屏移动系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_触屏移动系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_触屏移动系数) = value;
 			}
 		}
 
-		// Token: 0x170061E2 RID: 25058
-		// (get) Token: 0x060292B1 RID: 168625 RVA: 0x009BD6E5 File Offset: 0x009BB8E5
-		// (set) Token: 0x060292B2 RID: 168626 RVA: 0x009BD6F9 File Offset: 0x009BB8F9
+		// Token: 0x17003B2E RID: 15150
+		// (get) Token: 0x0601FBBA RID: 129978 RVA: 0x009346D1 File Offset: 0x009328D1
+		// (set) Token: 0x0601FBBB RID: 129979 RVA: 0x009346E5 File Offset: 0x009328E5
 		public unsafe FVector2D PC移动系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_PC移动系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_PC移动系数) = value;
 			}
 		}
 
-		// Token: 0x170061E3 RID: 25059
-		// (get) Token: 0x060292B3 RID: 168627 RVA: 0x009BD70E File Offset: 0x009BB90E
-		// (set) Token: 0x060292B4 RID: 168628 RVA: 0x009BD722 File Offset: 0x009BB922
+		// Token: 0x17003B2F RID: 15151
+		// (get) Token: 0x0601FBBC RID: 129980 RVA: 0x009346FA File Offset: 0x009328FA
+		// (set) Token: 0x0601FBBD RID: 129981 RVA: 0x0093470E File Offset: 0x0093290E
 		public unsafe FVector2D 手柄移动系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_手柄移动系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_手柄移动系数) = value;
 			}
 		}
 
-		// Token: 0x170061E4 RID: 25060
-		// (get) Token: 0x060292B5 RID: 168629 RVA: 0x009BD737 File Offset: 0x009BB937
-		// (set) Token: 0x060292B6 RID: 168630 RVA: 0x009BD747 File Offset: 0x009BB947
+		// Token: 0x17003B30 RID: 15152
+		// (get) Token: 0x0601FBBE RID: 129982 RVA: 0x00934723 File Offset: 0x00932923
+		// (set) Token: 0x0601FBBF RID: 129983 RVA: 0x00934733 File Offset: 0x00932933
 		public unsafe int 目标点高亮距离
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_目标点高亮距离);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_目标点高亮距离) = value;
 			}
 		}
 
-		// Token: 0x170061E5 RID: 25061
-		// (get) Token: 0x060292B7 RID: 168631 RVA: 0x009BD758 File Offset: 0x009BB958
-		// (set) Token: 0x060292B8 RID: 168632 RVA: 0x009BD768 File Offset: 0x009BB968
+		// Token: 0x17003B31 RID: 15153
+		// (get) Token: 0x0601FBC0 RID: 129984 RVA: 0x00934744 File Offset: 0x00932944
+		// (set) Token: 0x0601FBC1 RID: 129985 RVA: 0x00934754 File Offset: 0x00932954
 		public unsafe int 边缘超出角度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_边缘超出角度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_边缘超出角度) = value;
 			}
 		}
 
-		// Token: 0x170061E6 RID: 25062
-		// (get) Token: 0x060292B9 RID: 168633 RVA: 0x009BD779 File Offset: 0x009BB979
-		// (set) Token: 0x060292BA RID: 168634 RVA: 0x009BD789 File Offset: 0x009BB989
+		// Token: 0x17003B32 RID: 15154
+		// (get) Token: 0x0601FBC2 RID: 129986 RVA: 0x00934765 File Offset: 0x00932965
+		// (set) Token: 0x0601FBC3 RID: 129987 RVA: 0x00934775 File Offset: 0x00932975
 		public unsafe float Ui缩放_废弃_
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_Ui缩放_废弃_);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_Ui缩放_废弃_) = value;
 			}
 		}
 
-		// Token: 0x170061E7 RID: 25063
-		// (get) Token: 0x060292BB RID: 168635 RVA: 0x009BD79A File Offset: 0x009BB99A
-		// (set) Token: 0x060292BC RID: 168636 RVA: 0x009BD7AA File Offset: 0x009BB9AA
+		// Token: 0x17003B33 RID: 15155
+		// (get) Token: 0x0601FBC4 RID: 129988 RVA: 0x00934786 File Offset: 0x00932986
+		// (set) Token: 0x0601FBC5 RID: 129989 RVA: 0x00934796 File Offset: 0x00932996
 		public unsafe float 铁驭旋转偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_铁驭旋转偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_铁驭旋转偏移) = value;
 			}
 		}
 
-		// Token: 0x170061E8 RID: 25064
-		// (get) Token: 0x060292BD RID: 168637 RVA: 0x009BD7BB File Offset: 0x009BB9BB
-		// (set) Token: 0x060292BE RID: 168638 RVA: 0x009BD7CF File Offset: 0x009BB9CF
+		// Token: 0x17003B34 RID: 15156
+		// (get) Token: 0x0601FBC6 RID: 129990 RVA: 0x009347A7 File Offset: 0x009329A7
+		// (set) Token: 0x0601FBC7 RID: 129991 RVA: 0x009347BB File Offset: 0x009329BB
 		[Nullable(2)]
 		public unsafe UKuroForceFeedbackEffect 手柄震动配置
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroForceFeedbackEffect>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PilotThrowGameplaySetting_C.__PropertyOffset_14);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroForceFeedbackEffect>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PilotThrowGameplaySetting_C.__PropertyOffset_手柄震动配置);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PilotThrowGameplaySetting_C.__PropertyOffset_14, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PilotThrowGameplaySetting_C.__PropertyOffset_手柄震动配置, value);
 			}
 		}
 
-		// Token: 0x170061E9 RID: 25065
-		// (get) Token: 0x060292BF RID: 168639 RVA: 0x009BD7E4 File Offset: 0x009BB9E4
-		// (set) Token: 0x060292C0 RID: 168640 RVA: 0x009BD7F8 File Offset: 0x009BB9F8
+		// Token: 0x17003B35 RID: 15157
+		// (get) Token: 0x0601FBC8 RID: 129992 RVA: 0x009347D0 File Offset: 0x009329D0
+		// (set) Token: 0x0601FBC9 RID: 129993 RVA: 0x009347E4 File Offset: 0x009329E4
 		public unsafe FVectorDouble 抛物线起点偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_抛物线起点偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_抛物线起点偏移) = value;
 			}
 		}
 
-		// Token: 0x170061EA RID: 25066
-		// (get) Token: 0x060292C1 RID: 168641 RVA: 0x009BD80D File Offset: 0x009BBA0D
-		// (set) Token: 0x060292C2 RID: 168642 RVA: 0x009BD81D File Offset: 0x009BBA1D
+		// Token: 0x17003B36 RID: 15158
+		// (get) Token: 0x0601FBCA RID: 129994 RVA: 0x009347F9 File Offset: 0x009329F9
+		// (set) Token: 0x0601FBCB RID: 129995 RVA: 0x00934809 File Offset: 0x00932A09
 		public unsafe float 启动镜头插值
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_启动镜头插值);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_启动镜头插值) = value;
 			}
 		}
 
-		// Token: 0x170061EB RID: 25067
-		// (get) Token: 0x060292C3 RID: 168643 RVA: 0x009BD82E File Offset: 0x009BBA2E
-		// (set) Token: 0x060292C4 RID: 168644 RVA: 0x009BD83E File Offset: 0x009BBA3E
+		// Token: 0x17003B37 RID: 15159
+		// (get) Token: 0x0601FBCC RID: 129996 RVA: 0x0093481A File Offset: 0x00932A1A
+		// (set) Token: 0x0601FBCD RID: 129997 RVA: 0x0093482A File Offset: 0x00932A2A
 		public unsafe float 自动投掷转状态延迟
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_自动投掷转状态延迟);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_PilotThrowGameplaySetting_C.__PropertyOffset_自动投掷转状态延迟) = value;
 			}
 		}
 
-		// Token: 0x170061EC RID: 25068
-		// (get) Token: 0x060292C5 RID: 168645 RVA: 0x009BD84F File Offset: 0x009BBA4F
-		// (set) Token: 0x060292C6 RID: 168646 RVA: 0x009BD863 File Offset: 0x009BBA63
+		// Token: 0x17003B38 RID: 15160
+		// (get) Token: 0x0601FBCE RID: 129998 RVA: 0x0093483B File Offset: 0x00932A3B
+		// (set) Token: 0x0601FBCF RID: 129999 RVA: 0x0093484F File Offset: 0x00932A4F
 		[Nullable(2)]
 		public unsafe UCurveFloat 缩放曲线
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PilotThrowGameplaySetting_C.__PropertyOffset_18);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PilotThrowGameplaySetting_C.__PropertyOffset_缩放曲线);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PilotThrowGameplaySetting_C.__PropertyOffset_18, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PilotThrowGameplaySetting_C.__PropertyOffset_缩放曲线, value);
 			}
 		}
 
-		// Token: 0x060292C7 RID: 168647 RVA: 0x009BD878 File Offset: 0x009BBA78
+		// Token: 0x0601FBD0 RID: 130000 RVA: 0x00934864 File Offset: 0x00932A64
 		protected BP_PilotThrowGameplaySetting_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401513C RID: 86332
+		// Token: 0x04011065 RID: 69733
 		public new const string __ObjectPath = "/Game/Aki/Data/Gameplay/PilotThrow/BP_PilotThrowGameplaySetting.BP_PilotThrowGameplaySetting_C";
 
-		// Token: 0x0401513D RID: 86333
+		// Token: 0x04011066 RID: 69734
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401513E RID: 86334
+		// Token: 0x04011067 RID: 69735
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401513F RID: 86335
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011068 RID: 69736
+		internal static int __PropertyOffset_DebugMode;
 
-		// Token: 0x04015140 RID: 86336
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011069 RID: 69737
+		internal static int __PropertyOffset_初速度仰角;
 
-		// Token: 0x04015141 RID: 86337
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401106A RID: 69738
+		internal static int __PropertyOffset_初速度;
 
-		// Token: 0x04015142 RID: 86338
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401106B RID: 69739
+		internal static int __PropertyOffset_射线检测半径;
 
-		// Token: 0x04015143 RID: 86339
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401106C RID: 69740
+		internal static int __PropertyOffset_重力加速度;
 
-		// Token: 0x04015144 RID: 86340
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401106D RID: 69741
+		internal static int __PropertyOffset_样条特效;
 
-		// Token: 0x04015145 RID: 86341
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401106E RID: 69742
+		internal static int __PropertyOffset_终点特效;
 
-		// Token: 0x04015146 RID: 86342
-		internal static int __PropertyOffset_7;
+		// Token: 0x0401106F RID: 69743
+		internal static int __PropertyOffset_触屏移动系数;
 
-		// Token: 0x04015147 RID: 86343
-		internal static int __PropertyOffset_8;
+		// Token: 0x04011070 RID: 69744
+		internal static int __PropertyOffset_PC移动系数;
 
-		// Token: 0x04015148 RID: 86344
-		internal static int __PropertyOffset_9;
+		// Token: 0x04011071 RID: 69745
+		internal static int __PropertyOffset_手柄移动系数;
 
-		// Token: 0x04015149 RID: 86345
-		internal static int __PropertyOffset_10;
+		// Token: 0x04011072 RID: 69746
+		internal static int __PropertyOffset_目标点高亮距离;
 
-		// Token: 0x0401514A RID: 86346
-		internal static int __PropertyOffset_11;
+		// Token: 0x04011073 RID: 69747
+		internal static int __PropertyOffset_边缘超出角度;
 
-		// Token: 0x0401514B RID: 86347
-		internal static int __PropertyOffset_12;
+		// Token: 0x04011074 RID: 69748
+		internal static int __PropertyOffset_Ui缩放_废弃_;
 
-		// Token: 0x0401514C RID: 86348
-		internal static int __PropertyOffset_13;
+		// Token: 0x04011075 RID: 69749
+		internal static int __PropertyOffset_铁驭旋转偏移;
 
-		// Token: 0x0401514D RID: 86349
-		internal static int __PropertyOffset_14;
+		// Token: 0x04011076 RID: 69750
+		internal static int __PropertyOffset_手柄震动配置;
 
-		// Token: 0x0401514E RID: 86350
-		internal static int __PropertyOffset_15;
+		// Token: 0x04011077 RID: 69751
+		internal static int __PropertyOffset_抛物线起点偏移;
 
-		// Token: 0x0401514F RID: 86351
-		internal static int __PropertyOffset_16;
+		// Token: 0x04011078 RID: 69752
+		internal static int __PropertyOffset_启动镜头插值;
 
-		// Token: 0x04015150 RID: 86352
-		internal static int __PropertyOffset_17;
+		// Token: 0x04011079 RID: 69753
+		internal static int __PropertyOffset_自动投掷转状态延迟;
 
-		// Token: 0x04015151 RID: 86353
-		internal static int __PropertyOffset_18;
+		// Token: 0x0401107A RID: 69754
+		internal static int __PropertyOffset_缩放曲线;
 	}
 }

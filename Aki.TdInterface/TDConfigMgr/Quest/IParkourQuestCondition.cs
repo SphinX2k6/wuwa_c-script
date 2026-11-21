@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001039 RID: 4153
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001167 RID: 4455
 	public class IParkourQuestCondition : IQuestCondition
 	{
-		// Token: 0x06005D08 RID: 23816 RVA: 0x000E179C File Offset: 0x000DF99C
+		// Token: 0x060062FA RID: 25338 RVA: 0x000EE770 File Offset: 0x000EC970
 		private IParkourQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D09 RID: 23817 RVA: 0x000E17D4 File Offset: 0x000DF9D4
+		// Token: 0x060062FB RID: 25339 RVA: 0x000EE7A8 File Offset: 0x000EC9A8
 		public static IParkourQuestCondition Create([Nullable(2)] IParkourQuestCondition instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D0A RID: 23818 RVA: 0x000E17E7 File Offset: 0x000DF9E7
+		// Token: 0x060062FC RID: 25340 RVA: 0x000EE7BB File Offset: 0x000EC9BB
 		public static IParkourQuestCondition CreateFromSetValue([Nullable(2)] IParkourQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D0B RID: 23819 RVA: 0x000E17FC File Offset: 0x000DF9FC
+		// Token: 0x060062FD RID: 25341 RVA: 0x000EE7D0 File Offset: 0x000EC9D0
 		public new IParkourQuestCondition_SetValue ToSetValue()
 		{
 			return new IParkourQuestCondition_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EB0 RID: 7856
-		// (get) Token: 0x06005D0C RID: 23820 RVA: 0x000E184A File Offset: 0x000DFA4A
-		// (set) Token: 0x06005D0D RID: 23821 RVA: 0x000E1875 File Offset: 0x000DFA75
+		// Token: 0x1700205F RID: 8287
+		// (get) Token: 0x060062FE RID: 25342 RVA: 0x000EE81E File Offset: 0x000ECA1E
+		// (set) Token: 0x060062FF RID: 25343 RVA: 0x000EE849 File Offset: 0x000ECA49
 		public override EChildQuest Type
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EB1 RID: 7857
-		// (get) Token: 0x06005D0E RID: 23822 RVA: 0x000E1884 File Offset: 0x000DFA84
-		// (set) Token: 0x06005D0F RID: 23823 RVA: 0x000E18E5 File Offset: 0x000DFAE5
+		// Token: 0x17002060 RID: 8288
+		// (get) Token: 0x06006300 RID: 25344 RVA: 0x000EE858 File Offset: 0x000ECA58
+		// (set) Token: 0x06006301 RID: 25345 RVA: 0x000EE8B9 File Offset: 0x000ECAB9
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -122,9 +120,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EB2 RID: 7858
-		// (get) Token: 0x06005D10 RID: 23824 RVA: 0x000E18FA File Offset: 0x000DFAFA
-		// (set) Token: 0x06005D11 RID: 23825 RVA: 0x000E1925 File Offset: 0x000DFB25
+		// Token: 0x17002061 RID: 8289
+		// (get) Token: 0x06006302 RID: 25346 RVA: 0x000EE8CE File Offset: 0x000ECACE
+		// (set) Token: 0x06006303 RID: 25347 RVA: 0x000EE8F9 File Offset: 0x000ECAF9
 		public virtual string Config
 		{
 			get
@@ -145,9 +143,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EB3 RID: 7859
-		// (get) Token: 0x06005D12 RID: 23826 RVA: 0x000E1934 File Offset: 0x000DFB34
-		// (set) Token: 0x06005D13 RID: 23827 RVA: 0x000E196E File Offset: 0x000DFB6E
+		// Token: 0x17002062 RID: 8290
+		// (get) Token: 0x06006304 RID: 25348 RVA: 0x000EE908 File Offset: 0x000ECB08
+		// (set) Token: 0x06006305 RID: 25349 RVA: 0x000EE942 File Offset: 0x000ECB42
 		public virtual int? SplineEntityId
 		{
 			get
@@ -169,20 +167,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EB4 RID: 7860
-		// (get) Token: 0x06005D14 RID: 23828 RVA: 0x000E197C File Offset: 0x000DFB7C
-		// (set) Token: 0x06005D15 RID: 23829 RVA: 0x000E19A3 File Offset: 0x000DFBA3
+		// Token: 0x17002063 RID: 8291
+		// (get) Token: 0x06006306 RID: 25350 RVA: 0x000EE950 File Offset: 0x000ECB50
+		// (set) Token: 0x06006307 RID: 25351 RVA: 0x000EE977 File Offset: 0x000ECB77
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchRoleType> MatchRoleOption
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -200,7 +198,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -208,18 +206,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003811 RID: 14353
+		// Token: 0x04003B59 RID: 15193
 		[Nullable(2)]
 		protected new IParkourQuestCondition FbInstance;
 
-		// Token: 0x04003812 RID: 14354
+		// Token: 0x04003B5A RID: 15194
 		[Nullable(2)]
 		protected new IParkourQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x04003813 RID: 14355
+		// Token: 0x04003B5B RID: 15195
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003814 RID: 14356
+		// Token: 0x04003B5C RID: 15196
 		private bool _PreConditionsInited;
 	}
 }

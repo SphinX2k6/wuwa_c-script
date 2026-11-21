@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002FCF RID: 12239
+// Token: 0x02002523 RID: 9507
 public class GameplayCueReference : GameplayCueBase
 {
-	// Token: 0x06019F23 RID: 106275 RVA: 0x006C9C48 File Offset: 0x006C7E48
+	// Token: 0x06017835 RID: 96309 RVA: 0x006F053C File Offset: 0x006EE73C
 	protected override void OnInit()
 	{
 		int parametersLength = this.CueConfig.ParametersLength;
@@ -22,7 +22,7 @@ public class GameplayCueReference : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019F24 RID: 106276 RVA: 0x006C9CB8 File Offset: 0x006C7EB8
+	// Token: 0x06017836 RID: 96310 RVA: 0x006F05AC File Offset: 0x006EE7AC
 	protected override void OnCreate()
 	{
 		if (this.ReferenceCueConfigIds.Count > 0)
@@ -46,7 +46,7 @@ public class GameplayCueReference : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019F25 RID: 106277 RVA: 0x006C9D60 File Offset: 0x006C7F60
+	// Token: 0x06017837 RID: 96311 RVA: 0x006F0654 File Offset: 0x006EE854
 	protected override void OnDestroy()
 	{
 		BaseGameplayCueComponent baseGameplayCueComponent;
@@ -62,7 +62,7 @@ public class GameplayCueReference : GameplayCueBase
 		this.OtherEntityCueComp = null;
 	}
 
-	// Token: 0x06019F26 RID: 106278 RVA: 0x006C9DF8 File Offset: 0x006C7FF8
+	// Token: 0x06017838 RID: 96312 RVA: 0x006F06EC File Offset: 0x006EE8EC
 	[NullableContext(2)]
 	private BaseGameplayCueComponent GetGameplayCueComponent()
 	{
@@ -88,18 +88,18 @@ public class GameplayCueReference : GameplayCueBase
 		return vehicleEntity.GetComponent<BaseGameplayCueComponent>();
 	}
 
-	// Token: 0x0400C463 RID: 50275
+	// Token: 0x0400C80C RID: 51212
 	private GameplayCueReference.EOtherEntityType OtherEntityType = GameplayCueReference.EOtherEntityType.None;
 
-	// Token: 0x0400C464 RID: 50276
+	// Token: 0x0400C80D RID: 51213
 	[Nullable(1)]
 	private readonly List<long> ReferenceCueConfigIds = new List<long>();
 
-	// Token: 0x0400C465 RID: 50277
+	// Token: 0x0400C80E RID: 51214
 	[Nullable(1)]
 	private readonly List<int> ReferenceCueHandles = new List<int>();
 
-	// Token: 0x0400C466 RID: 50278
+	// Token: 0x0400C80F RID: 51215
 	[Nullable(new byte[]
 	{
 		2,
@@ -107,12 +107,12 @@ public class GameplayCueReference : GameplayCueBase
 	})]
 	private WeakReference<BaseGameplayCueComponent> OtherEntityCueComp;
 
-	// Token: 0x02009618 RID: 38424
+	// Token: 0x02008839 RID: 34873
 	private enum EOtherEntityType
 	{
-		// Token: 0x0403029C RID: 197276
+		// Token: 0x0402B929 RID: 178473
 		None = -1,
-		// Token: 0x0403029D RID: 197277
+		// Token: 0x0402B92A RID: 178474
 		Vehicle
 	}
 }

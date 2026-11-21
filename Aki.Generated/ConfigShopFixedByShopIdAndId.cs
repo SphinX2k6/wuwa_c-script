@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000925 RID: 2341
+	// Token: 0x02000970 RID: 2416
 	public class ConfigShopFixedByShopIdAndId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060036F1 RID: 14065 RVA: 0x0018FFCB File Offset: 0x0018E1CB
+		// Token: 0x060038B3 RID: 14515 RVA: 0x0019D1EB File Offset: 0x0019B3EB
 		static ConfigShopFixedByShopIdAndId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigShopFixedByShopIdAndId.CreateStaticDefaultValue), new Action(ConfigShopFixedByShopIdAndId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060036F2 RID: 14066 RVA: 0x0018FFEC File Offset: 0x0018E1EC
+		// Token: 0x060038B4 RID: 14516 RVA: 0x0019D20C File Offset: 0x0019B40C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigShopFixedByShopIdAndId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060036F3 RID: 14067 RVA: 0x0019006B File Offset: 0x0018E26B
+		// Token: 0x060038B5 RID: 14517 RVA: 0x0019D28B File Offset: 0x0019B48B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigShopFixedByShopIdAndId.LogPair = null;
 			ConfigShopFixedByShopIdAndId.HandleId = 0;
 		}
 
-		// Token: 0x060036F4 RID: 14068 RVA: 0x00190079 File Offset: 0x0018E279
+		// Token: 0x060038B6 RID: 14518 RVA: 0x0019D299 File Offset: 0x0019B499
 		public static void Init()
 		{
 			ConfigShopFixedByShopIdAndId.HandleId = ConfigCommon.InitDataStatement(ConfigShopFixedByShopIdAndId.HandleId, "db_shop.db", "select BinData from `ShopFixed` where ShopId =? AND Id = ?");
 		}
 
-		// Token: 0x060036F5 RID: 14069 RVA: 0x00190094 File Offset: 0x0018E294
+		// Token: 0x060038B7 RID: 14519 RVA: 0x0019D2B4 File Offset: 0x0019B4B4
 		public static ShopFixed? GetConfig(int p0ShopId, int p1Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigShopFixedByShopIdAndId.HandleId, ConfigShopFixedByShopIdAndId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new ShopFixed?(rootAsShopFixed);
 		}
 
-		// Token: 0x04003FE9 RID: 16361
+		// Token: 0x040041F6 RID: 16886
 		private const string DB = "db_shop.db";
 
-		// Token: 0x04003FEA RID: 16362
+		// Token: 0x040041F7 RID: 16887
 		private const string FILE = "s.商城.xlsx";
 
-		// Token: 0x04003FEB RID: 16363
+		// Token: 0x040041F8 RID: 16888
 		private const string TABLE = "ShopFixed";
 
-		// Token: 0x04003FEC RID: 16364
+		// Token: 0x040041F9 RID: 16889
 		private const string COMMAND = "select BinData from `ShopFixed` where ShopId =? AND Id = ?";
 
-		// Token: 0x04003FED RID: 16365
+		// Token: 0x040041FA RID: 16890
 		private const string KEY_PREFIX = "ShopFixedByShopIdAndId";
 
-		// Token: 0x04003FEE RID: 16366
+		// Token: 0x040041FB RID: 16891
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003FEF RID: 16367
+		// Token: 0x040041FC RID: 16892
 		private static int HandleId;
 	}
 }

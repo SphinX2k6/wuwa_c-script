@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FAA RID: 24490
+	// Token: 0x020065FB RID: 26107
 	public enum EMotorEnterSlideMode : byte
 	{
-		// Token: 0x0400FEB3 RID: 65203
+		// Token: 0x04010C65 RID: 68709
 		Jump,
-		// Token: 0x0400FEB4 RID: 65204
+		// Token: 0x04010C66 RID: 68710
 		Direct
 	}
 }

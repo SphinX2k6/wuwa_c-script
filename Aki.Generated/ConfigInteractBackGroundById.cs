@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200044F RID: 1103
+	// Token: 0x02000465 RID: 1125
 	public class ConfigInteractBackGroundById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060019E4 RID: 6628 RVA: 0x000EBD41 File Offset: 0x000E9F41
+		// Token: 0x06001A68 RID: 6760 RVA: 0x000F2495 File Offset: 0x000F0695
 		static ConfigInteractBackGroundById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInteractBackGroundById.CreateStaticDefaultValue), new Action(ConfigInteractBackGroundById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060019E5 RID: 6629 RVA: 0x000EBD60 File Offset: 0x000E9F60
+		// Token: 0x06001A69 RID: 6761 RVA: 0x000F24B4 File Offset: 0x000F06B4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInteractBackGroundById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060019E6 RID: 6630 RVA: 0x000EBDDF File Offset: 0x000E9FDF
+		// Token: 0x06001A6A RID: 6762 RVA: 0x000F2533 File Offset: 0x000F0733
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInteractBackGroundById.LogPair = null;
 			ConfigInteractBackGroundById.HandleId = 0;
 		}
 
-		// Token: 0x060019E7 RID: 6631 RVA: 0x000EBDED File Offset: 0x000E9FED
+		// Token: 0x06001A6B RID: 6763 RVA: 0x000F2541 File Offset: 0x000F0741
 		public static void Init()
 		{
 			ConfigInteractBackGroundById.HandleId = ConfigCommon.InitDataStatement(ConfigInteractBackGroundById.HandleId, "db_commonbackground.db", "select BinData from `InteractBackGround` where Id=?");
 		}
 
-		// Token: 0x060019E8 RID: 6632 RVA: 0x000EBE08 File Offset: 0x000EA008
+		// Token: 0x06001A6C RID: 6764 RVA: 0x000F255C File Offset: 0x000F075C
 		public static InteractBackGround? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInteractBackGroundById.HandleId, ConfigInteractBackGroundById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InteractBackGround?(rootAsInteractBackGround);
 		}
 
-		// Token: 0x04001E0D RID: 7693
+		// Token: 0x04001EA7 RID: 7847
 		private const string DB = "db_commonbackground.db";
 
-		// Token: 0x04001E0E RID: 7694
+		// Token: 0x04001EA8 RID: 7848
 		private const string FILE = "t.通用背景.xlsx";
 
-		// Token: 0x04001E0F RID: 7695
+		// Token: 0x04001EA9 RID: 7849
 		private const string TABLE = "InteractBackGround";
 
-		// Token: 0x04001E10 RID: 7696
+		// Token: 0x04001EAA RID: 7850
 		private const string COMMAND = "select BinData from `InteractBackGround` where Id=?";
 
-		// Token: 0x04001E11 RID: 7697
+		// Token: 0x04001EAB RID: 7851
 		private const string KEY_PREFIX = "InteractBackGroundById";
 
-		// Token: 0x04001E12 RID: 7698
+		// Token: 0x04001EAC RID: 7852
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001E13 RID: 7699
+		// Token: 0x04001EAD RID: 7853
 		private static int HandleId;
 	}
 }

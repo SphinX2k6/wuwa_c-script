@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F2A RID: 7978
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002163 RID: 8547
 	public class ITalkEffectType
 	{
-		// Token: 0x0600AA9A RID: 43674 RVA: 0x0018014C File Offset: 0x0017E34C
+		// Token: 0x0600B56C RID: 46444 RVA: 0x00196144 File Offset: 0x00194344
 		private ITalkEffectType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AA9B RID: 43675 RVA: 0x00180184 File Offset: 0x0017E384
+		// Token: 0x0600B56D RID: 46445 RVA: 0x0019617C File Offset: 0x0019437C
 		public static ITalkEffectType Create([Nullable(2)] ITalkEffectType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA9C RID: 43676 RVA: 0x00180197 File Offset: 0x0017E397
+		// Token: 0x0600B56E RID: 46446 RVA: 0x0019618F File Offset: 0x0019438F
 		public static ITalkEffectType CreateFromSetValue([Nullable(2)] ITalkEffectType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA9D RID: 43677 RVA: 0x001801AA File Offset: 0x0017E3AA
+		// Token: 0x0600B56F RID: 46447 RVA: 0x001961A2 File Offset: 0x001943A2
 		public ITalkEffectType_SetValue ToSetValue()
 		{
 			return new ITalkEffectType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033E6 RID: 13286
-		// (get) Token: 0x0600AA9E RID: 43678 RVA: 0x001801BD File Offset: 0x0017E3BD
-		// (set) Token: 0x0600AA9F RID: 43679 RVA: 0x001801E8 File Offset: 0x0017E3E8
+		// Token: 0x170036B1 RID: 14001
+		// (get) Token: 0x0600B570 RID: 46448 RVA: 0x001961B5 File Offset: 0x001943B5
+		// (set) Token: 0x0600B571 RID: 46449 RVA: 0x001961E0 File Offset: 0x001943E0
 		public virtual ETalkEffectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006550 RID: 25936
+		// Token: 0x04006B3F RID: 27455
 		[Nullable(2)]
 		protected ITalkEffectType FbInstance;
 
-		// Token: 0x04006551 RID: 25937
+		// Token: 0x04006B40 RID: 27456
 		[Nullable(2)]
 		protected ITalkEffectType_SetValue PocoInterface;
 	}

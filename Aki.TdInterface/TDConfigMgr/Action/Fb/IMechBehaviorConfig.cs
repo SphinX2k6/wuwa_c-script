@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002811 RID: 10257
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AE4 RID: 10980
 	public class IMechBehaviorConfig
 	{
-		// Token: 0x0600E38A RID: 58250 RVA: 0x002187BE File Offset: 0x002169BE
+		// Token: 0x0600F1AF RID: 61871 RVA: 0x00235622 File Offset: 0x00233822
 		public static IMechBehaviorConfig Create(IMechBehaviorConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700452A RID: 17706
-		// (get) Token: 0x0600E38B RID: 58251 RVA: 0x002187DD File Offset: 0x002169DD
+		// Token: 0x17004895 RID: 18581
+		// (get) Token: 0x0600F1B0 RID: 61872 RVA: 0x00235641 File Offset: 0x00233841
 		public virtual IMechStuntConfigType StuntConfig
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700452B RID: 17707
-		// (get) Token: 0x0600E38C RID: 58252 RVA: 0x0021880C File Offset: 0x00216A0C
+		// Token: 0x17004896 RID: 18582
+		// (get) Token: 0x0600F1B1 RID: 61873 RVA: 0x00235670 File Offset: 0x00233870
 		[Nullable(2)]
 		public virtual VectorInfo TargetPos
 		{
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700452C RID: 17708
-		// (get) Token: 0x0600E38D RID: 58253 RVA: 0x00218840 File Offset: 0x00216A40
+		// Token: 0x17004897 RID: 18583
+		// (get) Token: 0x0600F1B2 RID: 61874 RVA: 0x002356A4 File Offset: 0x002338A4
 		public virtual bool? CanInterrupt
 		{
 			get
@@ -71,20 +69,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DF7 RID: 32247
+		// Token: 0x040084B4 RID: 33972
 		private IMechBehaviorConfig Instance;
 
-		// Token: 0x04007DF8 RID: 32248
+		// Token: 0x040084B5 RID: 33973
 		private IMechStuntConfigType _StuntConfigCache;
 
-		// Token: 0x04007DF9 RID: 32249
+		// Token: 0x040084B6 RID: 33974
 		private bool _StuntConfigInited;
 
-		// Token: 0x04007DFA RID: 32250
+		// Token: 0x040084B7 RID: 33975
 		[Nullable(2)]
 		private VectorInfo _TargetPosCache;
 
-		// Token: 0x04007DFB RID: 32251
+		// Token: 0x040084B8 RID: 33976
 		private bool _TargetPosInited;
 	}
 }

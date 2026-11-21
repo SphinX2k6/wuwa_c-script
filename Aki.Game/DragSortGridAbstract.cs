@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022BF RID: 8895
+// Token: 0x020017A3 RID: 6051
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -13,10 +13,10 @@ using UnrealEngine;
 })]
 public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 {
-	// Token: 0x0601174D RID: 71501
+	// Token: 0x0600EBE5 RID: 60389
 	protected abstract UUIDraggableComponent GetDraggableComp();
 
-	// Token: 0x0601174E RID: 71502 RVA: 0x004472F0 File Offset: 0x004454F0
+	// Token: 0x0600EBE6 RID: 60390 RVA: 0x00453F48 File Offset: 0x00452148
 	protected override void OnStart()
 	{
 		UUIDraggableComponent draggableComp = this.GetDraggableComp();
@@ -32,7 +32,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 		this.OnStartImplement();
 	}
 
-	// Token: 0x0601174F RID: 71503 RVA: 0x0044739A File Offset: 0x0044559A
+	// Token: 0x0600EBE7 RID: 60391 RVA: 0x00453FF2 File Offset: 0x004521F2
 	private void OnDragBegin(ULGUIPointerEventData data)
 	{
 		Action<DragSortGridAbstract<TData>> onDragBeginCallback = this.OnDragBeginCallback;
@@ -43,7 +43,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 		onDragBeginCallback(this);
 	}
 
-	// Token: 0x06011750 RID: 71504 RVA: 0x004473AD File Offset: 0x004455AD
+	// Token: 0x0600EBE8 RID: 60392 RVA: 0x00454005 File Offset: 0x00452205
 	private void OnDragEnd(ULGUIPointerEventData data)
 	{
 		Action<DragSortGridAbstract<TData>> onDragEndCallback = this.OnDragEndCallback;
@@ -54,7 +54,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 		onDragEndCallback(this);
 	}
 
-	// Token: 0x06011751 RID: 71505 RVA: 0x004473C0 File Offset: 0x004455C0
+	// Token: 0x0600EBE9 RID: 60393 RVA: 0x00454018 File Offset: 0x00452218
 	private void OnDrag(ULGUIPointerEventData eventData)
 	{
 		Action<DragSortGridAbstract<TData>> onDragCallback = this.OnDragCallback;
@@ -65,7 +65,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 		onDragCallback(this);
 	}
 
-	// Token: 0x06011752 RID: 71506 RVA: 0x004473D3 File Offset: 0x004455D3
+	// Token: 0x0600EBEA RID: 60394 RVA: 0x0045402B File Offset: 0x0045222B
 	private void OnPointerDown(ULGUIPointerEventData data)
 	{
 		Action<DragSortGridAbstract<TData>> onPointerDownCallback = this.OnPointerDownCallback;
@@ -76,7 +76,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 		onPointerDownCallback(this);
 	}
 
-	// Token: 0x06011753 RID: 71507 RVA: 0x004473E6 File Offset: 0x004455E6
+	// Token: 0x0600EBEB RID: 60395 RVA: 0x0045403E File Offset: 0x0045223E
 	private void OnPointerUp(ULGUIPointerEventData data)
 	{
 		Action<DragSortGridAbstract<TData>> onPointerUpCallback = this.OnPointerUpCallback;
@@ -87,7 +87,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 		onPointerUpCallback(this);
 	}
 
-	// Token: 0x06011754 RID: 71508 RVA: 0x004473F9 File Offset: 0x004455F9
+	// Token: 0x0600EBEC RID: 60396 RVA: 0x00454051 File Offset: 0x00452251
 	private void OnPointerCancel(ULGUIPointerEventData data)
 	{
 		Action<DragSortGridAbstract<TData>> onPointerUpCallback = this.OnPointerUpCallback;
@@ -98,7 +98,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 		onPointerUpCallback(this);
 	}
 
-	// Token: 0x06011755 RID: 71509 RVA: 0x0044740C File Offset: 0x0044560C
+	// Token: 0x0600EBED RID: 60397 RVA: 0x00454064 File Offset: 0x00452264
 	public void RefreshDragPosition()
 	{
 		FVector? pointerEventDataPosition = LguiEventSystemManager.Instance.GetPointerEventDataPosition(0);
@@ -120,7 +120,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 		rootItem.SetLGUISpaceAbsolutePosition(fvector);
 	}
 
-	// Token: 0x04008494 RID: 33940
+	// Token: 0x040085D2 RID: 34258
 	[Nullable(new byte[]
 	{
 		2,
@@ -129,7 +129,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 	})]
 	public Action<DragSortGridAbstract<TData>> OnDragCallback;
 
-	// Token: 0x04008495 RID: 33941
+	// Token: 0x040085D3 RID: 34259
 	[Nullable(new byte[]
 	{
 		2,
@@ -138,7 +138,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 	})]
 	public Action<DragSortGridAbstract<TData>> OnDragBeginCallback;
 
-	// Token: 0x04008496 RID: 33942
+	// Token: 0x040085D4 RID: 34260
 	[Nullable(new byte[]
 	{
 		2,
@@ -147,7 +147,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 	})]
 	public Action<DragSortGridAbstract<TData>> OnDragEndCallback;
 
-	// Token: 0x04008497 RID: 33943
+	// Token: 0x040085D5 RID: 34261
 	[Nullable(new byte[]
 	{
 		2,
@@ -156,7 +156,7 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 	})]
 	public Action<DragSortGridAbstract<TData>> OnPointerDownCallback;
 
-	// Token: 0x04008498 RID: 33944
+	// Token: 0x040085D6 RID: 34262
 	[Nullable(new byte[]
 	{
 		2,
@@ -165,6 +165,6 @@ public abstract class DragSortGridAbstract<TData> : GridProxyAbstract<TData>
 	})]
 	public Action<DragSortGridAbstract<TData>> OnPointerUpCallback;
 
-	// Token: 0x04008499 RID: 33945
+	// Token: 0x040085D7 RID: 34263
 	public DragSortGridData DragData;
 }

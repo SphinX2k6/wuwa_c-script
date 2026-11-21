@@ -8,30 +8,30 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020034EE RID: 13550
+// Token: 0x02002A62 RID: 10850
 [UClass("/Game/Aki/TypeScript/Game/World/Debug/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/World/Debug/TsEntityDebugInfoManager.TsEntityDebugInfoManager_C")]
 public class TsEntityDebugInfoManager : UObject, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601DB45 RID: 121669 RVA: 0x00853762 File Offset: 0x00851962
+	// Token: 0x0601B853 RID: 112723 RVA: 0x0087BABA File Offset: 0x00879CBA
 	static TsEntityDebugInfoManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsEntityDebugInfoManager.CreateStaticDefaultValue), new Action(TsEntityDebugInfoManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601DB46 RID: 121670 RVA: 0x00853781 File Offset: 0x00851981
+	// Token: 0x0601B854 RID: 112724 RVA: 0x0087BAD9 File Offset: 0x00879CD9
 	public static void CreateStaticDefaultValue()
 	{
 		TsEntityDebugInfoManager.Instance = null;
 	}
 
-	// Token: 0x0601DB47 RID: 121671 RVA: 0x00853789 File Offset: 0x00851989
+	// Token: 0x0601B855 RID: 112725 RVA: 0x0087BAE1 File Offset: 0x00879CE1
 	public static void ResetStaticDefaultValue()
 	{
 		TsEntityDebugInfoManager.Instance = null;
 	}
 
-	// Token: 0x0601DB48 RID: 121672 RVA: 0x00853791 File Offset: 0x00851991
+	// Token: 0x0601B856 RID: 112726 RVA: 0x0087BAE9 File Offset: 0x00879CE9
 	[NullableContext(1)]
 	public static TsEntityDebugInfoManager GetInstance()
 	{
@@ -43,309 +43,270 @@ public class TsEntityDebugInfoManager : UObject, IStaticVariableResetter, IUnrea
 		return TsEntityDebugInfoManager.Instance;
 	}
 
-	// Token: 0x0601DB49 RID: 121673 RVA: 0x008537C0 File Offset: 0x008519C0
+	// Token: 0x0601B857 RID: 112727 RVA: 0x0087BB18 File Offset: 0x00879D18
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual TArray<string> GetDebugEntityNameList()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetDebugEntityNameList"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__GetDebugEntityNameList_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetDebugEntityNameList"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__GetDebugEntityNameList_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetDebugEntityNameList_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetDebugEntityNameList_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		TArray<string> result = new TArray<string>(&ptr2->__Result, true, true);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__GetDebugEntityNameList_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__GetDebugEntityNameList_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetDebugEntityNameList_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		TArray<string> result = new TArray<string>(&ptr->__Result, true, true);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x0601DB4A RID: 121674 RVA: 0x0085383D File Offset: 0x00851A3D
+	// Token: 0x0601B858 RID: 112728 RVA: 0x0087BBAA File Offset: 0x00879DAA
 	[NullableContext(1)]
 	protected TArray<string> GetDebugEntityNameList_Implementation()
 	{
 		return EntityDebugUtils.Instance.GetDebugEntityNameList();
 	}
 
-	// Token: 0x0601DB4B RID: 121675 RVA: 0x0085384C File Offset: 0x00851A4C
+	// Token: 0x0601B859 RID: 112729 RVA: 0x0087BBB8 File Offset: 0x00879DB8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual int GetSelectedEntityId(string label)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetSelectedEntityId"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__GetSelectedEntityId_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetSelectedEntityId"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__GetSelectedEntityId_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetSelectedEntityId_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->label), label);
+			return this.GetSelectedEntityId_Implementation(label);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		int _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__GetSelectedEntityId_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__GetSelectedEntityId_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetSelectedEntityId_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->label), label);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		int _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601DB4C RID: 121676 RVA: 0x008538CE File Offset: 0x00851ACE
+	// Token: 0x0601B85A RID: 112730 RVA: 0x0087BC50 File Offset: 0x00879E50
 	[NullableContext(1)]
 	protected int GetSelectedEntityId_Implementation(string label)
 	{
 		return EntityDebugUtils.Instance.GetSelectedEntityId(label);
 	}
 
-	// Token: 0x0601DB4D RID: 121677 RVA: 0x008538DC File Offset: 0x00851ADC
+	// Token: 0x0601B85B RID: 112731 RVA: 0x0087BC60 File Offset: 0x00879E60
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float GetEntityTimeScale(int entityId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetEntityTimeScale"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__GetEntityTimeScale_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetEntityTimeScale"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__GetEntityTimeScale_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetEntityTimeScale_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
+			return this.GetEntityTimeScale_Implementation(entityId);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__GetEntityTimeScale_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__GetEntityTimeScale_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetEntityTimeScale_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601DB4E RID: 121678 RVA: 0x00853958 File Offset: 0x00851B58
+	// Token: 0x0601B85C RID: 112732 RVA: 0x0087BCF2 File Offset: 0x00879EF2
 	protected float GetEntityTimeScale_Implementation(int entityId)
 	{
 		return EntityDebugUtils.Instance.GetEntityTimeScale(entityId);
 	}
 
-	// Token: 0x0601DB4F RID: 121679 RVA: 0x00853968 File Offset: 0x00851B68
+	// Token: 0x0601B85D RID: 112733 RVA: 0x0087BD00 File Offset: 0x00879F00
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetEntityTimeScale(int entityId, float timeScale)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetEntityTimeScale"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__SetEntityTimeScale_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetEntityTimeScale"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__SetEntityTimeScale_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__SetEntityTimeScale_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
-			ptr2->timeScale = timeScale;
+			this.SetEntityTimeScale_Implementation(entityId, timeScale);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__SetEntityTimeScale_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__SetEntityTimeScale_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__SetEntityTimeScale_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		ptr->timeScale = timeScale;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601DB50 RID: 121680 RVA: 0x008539E5 File Offset: 0x00851BE5
+	// Token: 0x0601B85E RID: 112734 RVA: 0x0087BD94 File Offset: 0x00879F94
 	protected void SetEntityTimeScale_Implementation(int entityId, float timeScale)
 	{
 		EntityDebugUtils.Instance.SetEntityTimeScale(entityId, timeScale);
 	}
 
-	// Token: 0x0601DB51 RID: 121681 RVA: 0x008539F4 File Offset: 0x00851BF4
+	// Token: 0x0601B85F RID: 112735 RVA: 0x0087BDA4 File Offset: 0x00879FA4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual int GetEntityPbDataId(int entityId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetEntityPbDataId"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__GetEntityPbDataId_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetEntityPbDataId"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__GetEntityPbDataId_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetEntityPbDataId_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
+			return this.GetEntityPbDataId_Implementation(entityId);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		int _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__GetEntityPbDataId_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__GetEntityPbDataId_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetEntityPbDataId_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		int _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601DB52 RID: 121682 RVA: 0x00853A70 File Offset: 0x00851C70
+	// Token: 0x0601B860 RID: 112736 RVA: 0x0087BE36 File Offset: 0x0087A036
 	protected int GetEntityPbDataId_Implementation(int entityId)
 	{
 		return EntityDebugUtils.Instance.GetEntityPbDataId(entityId);
 	}
 
-	// Token: 0x0601DB53 RID: 121683 RVA: 0x00853A80 File Offset: 0x00851C80
+	// Token: 0x0601B861 RID: 112737 RVA: 0x0087BE44 File Offset: 0x0087A044
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual string GetInteractionDebugInfos(int entityId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetInteractionDebugInfos"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__GetInteractionDebugInfos_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetInteractionDebugInfos"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__GetInteractionDebugInfos_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetInteractionDebugInfos_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
+			return this.GetInteractionDebugInfos_Implementation(entityId);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__GetInteractionDebugInfos_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__GetInteractionDebugInfos_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetInteractionDebugInfos_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x0601DB54 RID: 121684 RVA: 0x00853B02 File Offset: 0x00851D02
+	// Token: 0x0601B862 RID: 112738 RVA: 0x0087BEDC File Offset: 0x0087A0DC
 	[NullableContext(1)]
 	protected string GetInteractionDebugInfos_Implementation(int entityId)
 	{
 		return EntityDebugUtils.Instance.GetInteractionDebugInfos(entityId);
 	}
 
-	// Token: 0x0601DB55 RID: 121685 RVA: 0x00853B10 File Offset: 0x00851D10
+	// Token: 0x0601B863 RID: 112739 RVA: 0x0087BEEC File Offset: 0x0087A0EC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual string GetEntityCommonTagDebugString(int entityId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetEntityCommonTagDebugString"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__GetEntityCommonTagDebugString_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetEntityCommonTagDebugString"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__GetEntityCommonTagDebugString_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetEntityCommonTagDebugString_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
+			return this.GetEntityCommonTagDebugString_Implementation(entityId);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__GetEntityCommonTagDebugString_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__GetEntityCommonTagDebugString_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetEntityCommonTagDebugString_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x0601DB56 RID: 121686 RVA: 0x00853B92 File Offset: 0x00851D92
+	// Token: 0x0601B864 RID: 112740 RVA: 0x0087BF84 File Offset: 0x0087A184
 	[NullableContext(1)]
 	protected string GetEntityCommonTagDebugString_Implementation(int entityId)
 	{
 		return EntityDebugUtils.Instance.GetEntityCommonTagDebugString(entityId);
 	}
 
-	// Token: 0x0601DB57 RID: 121687 RVA: 0x00853BA0 File Offset: 0x00851DA0
+	// Token: 0x0601B865 RID: 112741 RVA: 0x0087BF94 File Offset: 0x0087A194
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual AActor GetDebugEntityActor(int entityId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetDebugEntityActor"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__GetDebugEntityActor_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetDebugEntityActor"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__GetDebugEntityActor_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetDebugEntityActor_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
+			return this.GetDebugEntityActor_Implementation(entityId);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(ptr2->__Result);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__GetDebugEntityActor_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__GetDebugEntityActor_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetDebugEntityActor_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(ptr->__Result);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return orCreateUObjectByNativePointer;
 	}
 
-	// Token: 0x0601DB58 RID: 121688 RVA: 0x00853C21 File Offset: 0x00851E21
+	// Token: 0x0601B866 RID: 112742 RVA: 0x0087C02B File Offset: 0x0087A22B
 	[NullableContext(2)]
 	protected AActor GetDebugEntityActor_Implementation(int entityId)
 	{
 		return EntityDebugUtils.Instance.GetDebugEntityActor(entityId);
 	}
 
-	// Token: 0x0601DB59 RID: 121689 RVA: 0x00853C30 File Offset: 0x00851E30
+	// Token: 0x0601B867 RID: 112743 RVA: 0x0087C038 File Offset: 0x0087A238
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual string GetDebugBaseInfo(int entityId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetDebugBaseInfo"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__GetDebugBaseInfo_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetDebugBaseInfo"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__GetDebugBaseInfo_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetDebugBaseInfo_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
+			return this.GetDebugBaseInfo_Implementation(entityId);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__GetDebugBaseInfo_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__GetDebugBaseInfo_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetDebugBaseInfo_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x0601DB5A RID: 121690 RVA: 0x00853CB2 File Offset: 0x00851EB2
+	// Token: 0x0601B868 RID: 112744 RVA: 0x0087C0D0 File Offset: 0x0087A2D0
 	[NullableContext(1)]
 	protected string GetDebugBaseInfo_Implementation(int entityId)
 	{
 		return EntityDebugUtils.Instance.GetDebugBaseInfo(entityId);
 	}
 
-	// Token: 0x0601DB5B RID: 121691 RVA: 0x00853CC0 File Offset: 0x00851EC0
+	// Token: 0x0601B869 RID: 112745 RVA: 0x0087C0E0 File Offset: 0x0087A2E0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual string GetDebugEntityName(int entityId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetDebugEntityName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsEntityDebugInfoManager.__GetDebugEntityName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsEntityDebugInfoManager) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetDebugEntityName"), TsEntityDebugInfoManager.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsEntityDebugInfoManager.__GetDebugEntityName_FunctionParams*)ptr + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetDebugEntityName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->entityId = entityId;
+			return this.GetDebugEntityName_Implementation(entityId);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsEntityDebugInfoManager.__GetDebugEntityName_FunctionParams* ptr = stackalloc TsEntityDebugInfoManager.__GetDebugEntityName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsEntityDebugInfoManager.__GetDebugEntityName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->entityId = entityId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x0601DB5C RID: 121692 RVA: 0x00853D42 File Offset: 0x00851F42
+	// Token: 0x0601B86A RID: 112746 RVA: 0x0087C178 File Offset: 0x0087A378
 	[NullableContext(2)]
 	protected string GetDebugEntityName_Implementation(int entityId)
 	{
 		return EntityDebugUtils.Instance.GetDebugEntityName(entityId);
 	}
 
-	// Token: 0x0601DB5D RID: 121693 RVA: 0x00853D4F File Offset: 0x00851F4F
+	// Token: 0x0601B86B RID: 112747 RVA: 0x0087C185 File Offset: 0x0087A385
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsEntityDebugInfoManager._ClassPtr == IntPtr.Zero)
@@ -355,23 +316,23 @@ public class TsEntityDebugInfoManager : UObject, IStaticVariableResetter, IUnrea
 		return TsEntityDebugInfoManager._ClassPtr;
 	}
 
-	// Token: 0x0601DB5E RID: 121694 RVA: 0x00853D74 File Offset: 0x00851F74
+	// Token: 0x0601B86C RID: 112748 RVA: 0x0087C1AC File Offset: 0x0087A3AC
 	public TsEntityDebugInfoManager() : this(BuiltinUtils.AllocNativeUObject(TsEntityDebugInfoManager.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601DB5F RID: 121695 RVA: 0x00853D9C File Offset: 0x00851F9C
+	// Token: 0x0601B86D RID: 112749 RVA: 0x0087C1D4 File Offset: 0x0087A3D4
 	[NullableContext(1)]
 	public TsEntityDebugInfoManager(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsEntityDebugInfoManager.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601DB60 RID: 121696 RVA: 0x00853DCF File Offset: 0x00851FCF
+	// Token: 0x0601B86E RID: 112750 RVA: 0x0087C207 File Offset: 0x0087A407
 	protected TsEntityDebugInfoManager(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601DB61 RID: 121697 RVA: 0x00853DD8 File Offset: 0x00851FD8
+	// Token: 0x0601B86F RID: 112751 RVA: 0x0087C210 File Offset: 0x0087A410
 	protected unsafe virtual void __CPPCALL_GetDebugEntityNameList_Implementation(TsEntityDebugInfoManager.__GetDebugEntityNameList_FunctionParams* __Params)
 	{
 		TArray<string> debugEntityNameList_Implementation = this.GetDebugEntityNameList_Implementation();
@@ -382,44 +343,44 @@ public class TsEntityDebugInfoManager : UObject, IStaticVariableResetter, IUnrea
 		debugEntityNameList_Implementation.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601DB62 RID: 121698 RVA: 0x00853E08 File Offset: 0x00852008
+	// Token: 0x0601B870 RID: 112752 RVA: 0x0087C240 File Offset: 0x0087A440
 	protected unsafe virtual void __CPPCALL_GetSelectedEntityId_Implementation(TsEntityDebugInfoManager.__GetSelectedEntityId_FunctionParams* __Params)
 	{
 		string label = FString.ToString((void*)(&__Params->label));
 		__Params->__Result = this.GetSelectedEntityId_Implementation(label);
 	}
 
-	// Token: 0x0601DB63 RID: 121699 RVA: 0x00853E2F File Offset: 0x0085202F
+	// Token: 0x0601B871 RID: 112753 RVA: 0x0087C267 File Offset: 0x0087A467
 	protected unsafe virtual void __CPPCALL_GetEntityTimeScale_Implementation(TsEntityDebugInfoManager.__GetEntityTimeScale_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetEntityTimeScale_Implementation(__Params->entityId);
 	}
 
-	// Token: 0x0601DB64 RID: 121700 RVA: 0x00853E43 File Offset: 0x00852043
+	// Token: 0x0601B872 RID: 112754 RVA: 0x0087C27B File Offset: 0x0087A47B
 	protected unsafe virtual void __CPPCALL_SetEntityTimeScale_Implementation(TsEntityDebugInfoManager.__SetEntityTimeScale_FunctionParams* __Params)
 	{
 		this.SetEntityTimeScale_Implementation(__Params->entityId, __Params->timeScale);
 	}
 
-	// Token: 0x0601DB65 RID: 121701 RVA: 0x00853E57 File Offset: 0x00852057
+	// Token: 0x0601B873 RID: 112755 RVA: 0x0087C28F File Offset: 0x0087A48F
 	protected unsafe virtual void __CPPCALL_GetEntityPbDataId_Implementation(TsEntityDebugInfoManager.__GetEntityPbDataId_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetEntityPbDataId_Implementation(__Params->entityId);
 	}
 
-	// Token: 0x0601DB66 RID: 121702 RVA: 0x00853E6B File Offset: 0x0085206B
+	// Token: 0x0601B874 RID: 112756 RVA: 0x0087C2A3 File Offset: 0x0087A4A3
 	protected unsafe virtual void __CPPCALL_GetInteractionDebugInfos_Implementation(TsEntityDebugInfoManager.__GetInteractionDebugInfos_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetInteractionDebugInfos_Implementation(__Params->entityId));
 	}
 
-	// Token: 0x0601DB67 RID: 121703 RVA: 0x00853E85 File Offset: 0x00852085
+	// Token: 0x0601B875 RID: 112757 RVA: 0x0087C2BD File Offset: 0x0087A4BD
 	protected unsafe virtual void __CPPCALL_GetEntityCommonTagDebugString_Implementation(TsEntityDebugInfoManager.__GetEntityCommonTagDebugString_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetEntityCommonTagDebugString_Implementation(__Params->entityId));
 	}
 
-	// Token: 0x0601DB68 RID: 121704 RVA: 0x00853E9F File Offset: 0x0085209F
+	// Token: 0x0601B876 RID: 112758 RVA: 0x0087C2D7 File Offset: 0x0087A4D7
 	protected unsafe virtual void __CPPCALL_GetDebugEntityActor_Implementation(TsEntityDebugInfoManager.__GetDebugEntityActor_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -427,164 +388,164 @@ public class TsEntityDebugInfoManager : UObject, IStaticVariableResetter, IUnrea
 		ptr = ((debugEntityActor_Implementation != null) ? debugEntityActor_Implementation.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601DB69 RID: 121705 RVA: 0x00853EC2 File Offset: 0x008520C2
+	// Token: 0x0601B877 RID: 112759 RVA: 0x0087C2FA File Offset: 0x0087A4FA
 	protected unsafe virtual void __CPPCALL_GetDebugBaseInfo_Implementation(TsEntityDebugInfoManager.__GetDebugBaseInfo_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetDebugBaseInfo_Implementation(__Params->entityId));
 	}
 
-	// Token: 0x0601DB6A RID: 121706 RVA: 0x00853EDC File Offset: 0x008520DC
+	// Token: 0x0601B878 RID: 112760 RVA: 0x0087C314 File Offset: 0x0087A514
 	protected unsafe virtual void __CPPCALL_GetDebugEntityName_Implementation(TsEntityDebugInfoManager.__GetDebugEntityName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetDebugEntityName_Implementation(__Params->entityId));
 	}
 
-	// Token: 0x0400E92A RID: 59690
+	// Token: 0x0400EDE1 RID: 60897
 	[Nullable(2)]
 	private static TsEntityDebugInfoManager Instance;
 
-	// Token: 0x0400E92B RID: 59691
+	// Token: 0x0400EDE2 RID: 60898
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/World/Debug/TsEntityDebugInfoManager.TsEntityDebugInfoManager_C";
 
-	// Token: 0x0400E92C RID: 59692
+	// Token: 0x0400EDE3 RID: 60899
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E92D RID: 59693
+	// Token: 0x0400EDE4 RID: 60900
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x020099A7 RID: 39335
+	// Token: 0x02008BC1 RID: 35777
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetDebugEntityNameList_FunctionParams
 	{
-		// Token: 0x04030DD4 RID: 200148
+		// Token: 0x0402C457 RID: 181335
 		[FieldOffset(0)]
 		public byte __Result;
 	}
 
-	// Token: 0x020099A8 RID: 39336
+	// Token: 0x02008BC2 RID: 35778
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetSelectedEntityId_FunctionParams
 	{
-		// Token: 0x04030DD5 RID: 200149
+		// Token: 0x0402C458 RID: 181336
 		[FieldOffset(0)]
 		public FString label;
 
-		// Token: 0x04030DD6 RID: 200150
+		// Token: 0x0402C459 RID: 181337
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x020099A9 RID: 39337
+	// Token: 0x02008BC3 RID: 35779
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __GetEntityTimeScale_FunctionParams
 	{
-		// Token: 0x04030DD7 RID: 200151
+		// Token: 0x0402C45A RID: 181338
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030DD8 RID: 200152
+		// Token: 0x0402C45B RID: 181339
 		[FieldOffset(4)]
 		public float __Result;
 	}
 
-	// Token: 0x020099AA RID: 39338
+	// Token: 0x02008BC4 RID: 35780
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetEntityTimeScale_FunctionParams
 	{
-		// Token: 0x04030DD9 RID: 200153
+		// Token: 0x0402C45C RID: 181340
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030DDA RID: 200154
+		// Token: 0x0402C45D RID: 181341
 		[FieldOffset(4)]
 		public float timeScale;
 	}
 
-	// Token: 0x020099AB RID: 39339
+	// Token: 0x02008BC5 RID: 35781
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __GetEntityPbDataId_FunctionParams
 	{
-		// Token: 0x04030DDB RID: 200155
+		// Token: 0x0402C45E RID: 181342
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030DDC RID: 200156
+		// Token: 0x0402C45F RID: 181343
 		[FieldOffset(4)]
 		public int __Result;
 	}
 
-	// Token: 0x020099AC RID: 39340
+	// Token: 0x02008BC6 RID: 35782
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetInteractionDebugInfos_FunctionParams
 	{
-		// Token: 0x04030DDD RID: 200157
+		// Token: 0x0402C460 RID: 181344
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030DDE RID: 200158
+		// Token: 0x0402C461 RID: 181345
 		[FieldOffset(8)]
 		public FString __Result;
 	}
 
-	// Token: 0x020099AD RID: 39341
+	// Token: 0x02008BC7 RID: 35783
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetEntityCommonTagDebugString_FunctionParams
 	{
-		// Token: 0x04030DDF RID: 200159
+		// Token: 0x0402C462 RID: 181346
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030DE0 RID: 200160
+		// Token: 0x0402C463 RID: 181347
 		[FieldOffset(8)]
 		public FString __Result;
 	}
 
-	// Token: 0x020099AE RID: 39342
+	// Token: 0x02008BC8 RID: 35784
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetDebugEntityActor_FunctionParams
 	{
-		// Token: 0x04030DE1 RID: 200161
+		// Token: 0x0402C464 RID: 181348
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030DE2 RID: 200162
+		// Token: 0x0402C465 RID: 181349
 		[FieldOffset(8)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020099AF RID: 39343
+	// Token: 0x02008BC9 RID: 35785
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetDebugBaseInfo_FunctionParams
 	{
-		// Token: 0x04030DE3 RID: 200163
+		// Token: 0x0402C466 RID: 181350
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030DE4 RID: 200164
+		// Token: 0x0402C467 RID: 181351
 		[FieldOffset(8)]
 		public FString __Result;
 	}
 
-	// Token: 0x020099B0 RID: 39344
+	// Token: 0x02008BCA RID: 35786
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetDebugEntityName_FunctionParams
 	{
-		// Token: 0x04030DE5 RID: 200165
+		// Token: 0x0402C468 RID: 181352
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030DE6 RID: 200166
+		// Token: 0x0402C469 RID: 181353
 		[FieldOffset(8)]
 		public FString __Result;
 	}

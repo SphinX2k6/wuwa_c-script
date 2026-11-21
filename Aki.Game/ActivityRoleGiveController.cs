@@ -4,44 +4,44 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 
-// Token: 0x020014BE RID: 5310
+// Token: 0x02000972 RID: 2418
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityRoleGiveController : ActivityControllerBase
 {
-	// Token: 0x06009686 RID: 38534 RVA: 0x002082F8 File Offset: 0x002064F8
+	// Token: 0x06006A1B RID: 27163 RVA: 0x00211264 File Offset: 0x0020F464
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 		throw new NotImplementedException();
 	}
 
-	// Token: 0x06009687 RID: 38535 RVA: 0x002082FF File Offset: 0x002064FF
+	// Token: 0x06006A1C RID: 27164 RVA: 0x0021126B File Offset: 0x0020F46B
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityRoleXiangliyao";
 	}
 
-	// Token: 0x06009688 RID: 38536 RVA: 0x00208306 File Offset: 0x00206506
+	// Token: 0x06006A1D RID: 27165 RVA: 0x00211272 File Offset: 0x0020F472
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewRoleGive();
 	}
 
-	// Token: 0x06009689 RID: 38537 RVA: 0x0020830D File Offset: 0x0020650D
+	// Token: 0x06006A1E RID: 27166 RVA: 0x00211279 File Offset: 0x0020F479
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.CurrentActivityId = data.Id;
 		return new ActivityRoleGiveData();
 	}
 
-	// Token: 0x0600968A RID: 38538 RVA: 0x00208320 File Offset: 0x00206520
+	// Token: 0x06006A1F RID: 27167 RVA: 0x0021128C File Offset: 0x0020F48C
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x0600968B RID: 38539 RVA: 0x00208324 File Offset: 0x00206524
+	// Token: 0x06006A20 RID: 27168 RVA: 0x00211290 File Offset: 0x0020F490
 	public void TrackMoonActivityRewardRequest()
 	{
 		TraceMoonPhaseRewardRequest traceMoonPhaseRewardRequest = TraceMoonPhaseRewardRequest.Create();
@@ -57,7 +57,7 @@ public class ActivityRoleGiveController : ActivityControllerBase
 			TraceMoonPhaseRewardResponse traceMoonPhaseRewardResponse = (TraceMoonPhaseRewardResponse)msg;
 			if (traceMoonPhaseRewardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(traceMoonPhaseRewardResponse.ErrorCode, 18742, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(traceMoonPhaseRewardResponse.ErrorCode, 17223, null, true, true);
 				return;
 			}
 			ActivityRoleGiveData currentActivityData = this.GetCurrentActivityData();
@@ -76,7 +76,7 @@ public class ActivityRoleGiveController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600968C RID: 38540 RVA: 0x00208394 File Offset: 0x00206594
+	// Token: 0x06006A21 RID: 27169 RVA: 0x00211300 File Offset: 0x0020F500
 	[NullableContext(2)]
 	public ActivityRoleGiveData GetCurrentActivityData()
 	{
@@ -88,8 +88,8 @@ public class ActivityRoleGiveController : ActivityControllerBase
 		return activityRoleGiveData;
 	}
 
-	// Token: 0x17000D08 RID: 3336
-	// (get) Token: 0x0600968D RID: 38541 RVA: 0x002083BD File Offset: 0x002065BD
+	// Token: 0x17000D28 RID: 3368
+	// (get) Token: 0x06006A22 RID: 27170 RVA: 0x00211329 File Offset: 0x0020F529
 	public static ActivityRoleGiveController Instance
 	{
 		get
@@ -98,7 +98,7 @@ public class ActivityRoleGiveController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600968E RID: 38542 RVA: 0x002083C4 File Offset: 0x002065C4
+	// Token: 0x06006A23 RID: 27171 RVA: 0x00211330 File Offset: 0x0020F530
 	public static ActivityRoleGiveController GetOrCreateInstance()
 	{
 		if (ActivityRoleGiveController._Instance == null)
@@ -108,7 +108,7 @@ public class ActivityRoleGiveController : ActivityControllerBase
 		return ActivityRoleGiveController._Instance;
 	}
 
-	// Token: 0x0600968F RID: 38543 RVA: 0x002083D8 File Offset: 0x002065D8
+	// Token: 0x06006A24 RID: 27172 RVA: 0x00211344 File Offset: 0x0020F544
 	public static bool CreateInstance()
 	{
 		if (ActivityRoleGiveController._Instance != null)
@@ -119,27 +119,27 @@ public class ActivityRoleGiveController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06009690 RID: 38544 RVA: 0x002083EE File Offset: 0x002065EE
+	// Token: 0x06006A25 RID: 27173 RVA: 0x0021135A File Offset: 0x0020F55A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009691 RID: 38545 RVA: 0x002083F0 File Offset: 0x002065F0
+	// Token: 0x06006A26 RID: 27174 RVA: 0x0021135C File Offset: 0x0020F55C
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRoleGiveController._Instance = null;
 	}
 
-	// Token: 0x06009692 RID: 38546 RVA: 0x002083F8 File Offset: 0x002065F8
+	// Token: 0x06006A27 RID: 27175 RVA: 0x00211364 File Offset: 0x0020F564
 	static ActivityRoleGiveController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRoleGiveController.CreateStaticDefaultValue), new Action(ActivityRoleGiveController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400426D RID: 17005
+	// Token: 0x04004305 RID: 17157
 	public int CurrentActivityId;
 
-	// Token: 0x0400426E RID: 17006
+	// Token: 0x04004306 RID: 17158
 	[Nullable(2)]
 	private static ActivityRoleGiveController _Instance;
 }

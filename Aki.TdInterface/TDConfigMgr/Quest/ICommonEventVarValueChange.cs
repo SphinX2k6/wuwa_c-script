@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F16 RID: 3862
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200102C RID: 4140
 	public class ICommonEventVarValueChange : IEventTypeConfig
 	{
-		// Token: 0x06005564 RID: 21860 RVA: 0x000D14C4 File Offset: 0x000CF6C4
+		// Token: 0x06005AE0 RID: 23264 RVA: 0x000DD66C File Offset: 0x000DB86C
 		private ICommonEventVarValueChange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005565 RID: 21861 RVA: 0x000D14FC File Offset: 0x000CF6FC
+		// Token: 0x06005AE1 RID: 23265 RVA: 0x000DD6A4 File Offset: 0x000DB8A4
 		public static ICommonEventVarValueChange Create([Nullable(2)] ICommonEventVarValueChange instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005566 RID: 21862 RVA: 0x000D150F File Offset: 0x000CF70F
+		// Token: 0x06005AE2 RID: 23266 RVA: 0x000DD6B7 File Offset: 0x000DB8B7
 		public static ICommonEventVarValueChange CreateFromSetValue([Nullable(2)] ICommonEventVarValueChange_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005567 RID: 21863 RVA: 0x000D1522 File Offset: 0x000CF722
+		// Token: 0x06005AE3 RID: 23267 RVA: 0x000DD6CA File Offset: 0x000DB8CA
 		public new ICommonEventVarValueChange_SetValue ToSetValue()
 		{
 			return new ICommonEventVarValueChange_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C92 RID: 7314
-		// (get) Token: 0x06005568 RID: 21864 RVA: 0x000D1541 File Offset: 0x000CF741
-		// (set) Token: 0x06005569 RID: 21865 RVA: 0x000D156C File Offset: 0x000CF76C
+		// Token: 0x17001E2A RID: 7722
+		// (get) Token: 0x06005AE4 RID: 23268 RVA: 0x000DD6E9 File Offset: 0x000DB8E9
+		// (set) Token: 0x06005AE5 RID: 23269 RVA: 0x000DD714 File Offset: 0x000DB914
 		public override ECommonEventType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C93 RID: 7315
-		// (get) Token: 0x0600556A RID: 21866 RVA: 0x000D157A File Offset: 0x000CF77A
-		// (set) Token: 0x0600556B RID: 21867 RVA: 0x000D15A1 File Offset: 0x000CF7A1
+		// Token: 0x17001E2B RID: 7723
+		// (get) Token: 0x06005AE6 RID: 23270 RVA: 0x000DD722 File Offset: 0x000DB922
+		// (set) Token: 0x06005AE7 RID: 23271 RVA: 0x000DD749 File Offset: 0x000DB949
 		public virtual VarRef Var
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040033AB RID: 13227
+		// Token: 0x040036B8 RID: 14008
 		[Nullable(2)]
 		protected new ICommonEventVarValueChange FbInstance;
 
-		// Token: 0x040033AC RID: 13228
+		// Token: 0x040036B9 RID: 14009
 		[Nullable(2)]
 		protected new ICommonEventVarValueChange_SetValue PocoInterface;
 	}

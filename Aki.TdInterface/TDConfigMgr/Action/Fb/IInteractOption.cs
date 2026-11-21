@@ -7,13 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200261A RID: 9754
+	// Token: 0x020028DA RID: 10458
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IInteractOption
 	{
-		// Token: 0x0600DAF4 RID: 56052 RVA: 0x00209CB3 File Offset: 0x00207EB3
-		[NullableContext(1)]
+		// Token: 0x0600E8C1 RID: 59585 RVA: 0x00226407 File Offset: 0x00224607
+		[NullableContext(0)]
 		public static IInteractOption Create(IInteractOption? instance)
 		{
 			if (instance == null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004082 RID: 16514
-		// (get) Token: 0x0600DAF5 RID: 56053 RVA: 0x00209CD2 File Offset: 0x00207ED2
+		// Token: 0x170043BB RID: 17339
+		// (get) Token: 0x0600E8C2 RID: 59586 RVA: 0x00226426 File Offset: 0x00224626
 		public virtual string Guid
 		{
 			get
@@ -36,12 +36,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004083 RID: 16515
-		// (get) Token: 0x0600DAF6 RID: 56054 RVA: 0x00209CDF File Offset: 0x00207EDF
-		[Nullable(1)]
+		// Token: 0x170043BC RID: 17340
+		// (get) Token: 0x0600E8C3 RID: 59587 RVA: 0x00226433 File Offset: 0x00224633
+		[Nullable(0)]
 		public virtual IInteractType Type
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._TypeInited)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004084 RID: 16516
-		// (get) Token: 0x0600DAF7 RID: 56055 RVA: 0x00209D10 File Offset: 0x00207F10
+		// Token: 0x170043BD RID: 17341
+		// (get) Token: 0x0600E8C4 RID: 59588 RVA: 0x00226464 File Offset: 0x00224664
 		public virtual EInteractIcon? Icon
 		{
 			get
@@ -68,8 +68,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004085 RID: 16517
-		// (get) Token: 0x0600DAF8 RID: 56056 RVA: 0x00209D46 File Offset: 0x00207F46
+		// Token: 0x170043BE RID: 17342
+		// (get) Token: 0x0600E8C5 RID: 59589 RVA: 0x0022649A File Offset: 0x0022469A
 		public virtual string TidContent
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004086 RID: 16518
-		// (get) Token: 0x0600DAF9 RID: 56057 RVA: 0x00209D53 File Offset: 0x00207F53
+		// Token: 0x170043BF RID: 17343
+		// (get) Token: 0x0600E8C6 RID: 59590 RVA: 0x002264A7 File Offset: 0x002246A7
 		public virtual VectorInfo InteractPointOffset
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004087 RID: 16519
-		// (get) Token: 0x0600DAFA RID: 56058 RVA: 0x00209D87 File Offset: 0x00207F87
+		// Token: 0x170043C0 RID: 17344
+		// (get) Token: 0x0600E8C7 RID: 59591 RVA: 0x002264DB File Offset: 0x002246DB
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004088 RID: 16520
-		// (get) Token: 0x0600DAFB RID: 56059 RVA: 0x00209DBB File Offset: 0x00207FBB
+		// Token: 0x170043C1 RID: 17345
+		// (get) Token: 0x0600E8C8 RID: 59592 RVA: 0x0022650F File Offset: 0x0022470F
 		public virtual IInteractOptionConfirmBox ConfirmBox
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004089 RID: 16521
-		// (get) Token: 0x0600DAFC RID: 56060 RVA: 0x00209DF0 File Offset: 0x00207FF0
+		// Token: 0x170043C2 RID: 17346
+		// (get) Token: 0x0600E8C9 RID: 59593 RVA: 0x00226544 File Offset: 0x00224744
 		public virtual EInteractUniqueness? UniquenessTest
 		{
 			get
@@ -140,8 +140,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700408A RID: 16522
-		// (get) Token: 0x0600DAFD RID: 56061 RVA: 0x00209E28 File Offset: 0x00208028
+		// Token: 0x170043C3 RID: 17347
+		// (get) Token: 0x0600E8CA RID: 59594 RVA: 0x0022657C File Offset: 0x0022477C
 		public virtual EDoInteract? DoIntactType
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700408B RID: 16523
-		// (get) Token: 0x0600DAFE RID: 56062 RVA: 0x00209E60 File Offset: 0x00208060
+		// Token: 0x170043C4 RID: 17348
+		// (get) Token: 0x0600E8CB RID: 59595 RVA: 0x002265B4 File Offset: 0x002247B4
 		public virtual float? Range
 		{
 			get
@@ -168,8 +168,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700408C RID: 16524
-		// (get) Token: 0x0600DAFF RID: 56063 RVA: 0x00209E96 File Offset: 0x00208096
+		// Token: 0x170043C5 RID: 17349
+		// (get) Token: 0x0600E8CC RID: 59596 RVA: 0x002265EA File Offset: 0x002247EA
 		public virtual IDurationInteract Duration
 		{
 			get
@@ -184,8 +184,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700408D RID: 16525
-		// (get) Token: 0x0600DB00 RID: 56064 RVA: 0x00209ECA File Offset: 0x002080CA
+		// Token: 0x170043C6 RID: 17350
+		// (get) Token: 0x0600E8CD RID: 59597 RVA: 0x0022661E File Offset: 0x0022481E
 		public virtual IOptionLockTip OptionLockTip
 		{
 			get
@@ -200,8 +200,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700408E RID: 16526
-		// (get) Token: 0x0600DB01 RID: 56065 RVA: 0x00209F00 File Offset: 0x00208100
+		// Token: 0x170043C7 RID: 17351
+		// (get) Token: 0x0600E8CE RID: 59598 RVA: 0x00226654 File Offset: 0x00224854
 		public virtual List<EOptionLockType> OptionLockTypeList
 		{
 			get
@@ -225,8 +225,33 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700408F RID: 16527
-		// (get) Token: 0x0600DB02 RID: 56066 RVA: 0x00209F76 File Offset: 0x00208176
+		// Token: 0x170043C8 RID: 17352
+		// (get) Token: 0x0600E8CF RID: 59599 RVA: 0x002266CC File Offset: 0x002248CC
+		public virtual List<EOptionUnlockType> OptionUnlockTypeList
+		{
+			get
+			{
+				if (this._OptionUnlockTypeListInited)
+				{
+					return this._OptionUnlockTypeListCache;
+				}
+				this._OptionUnlockTypeListInited = true;
+				if ((this.Instance.NullMask & 32) == 0)
+				{
+					return null;
+				}
+				int optionUnlockTypeListLength = this.Instance.OptionUnlockTypeListLength;
+				this._OptionUnlockTypeListCache = new List<EOptionUnlockType>(optionUnlockTypeListLength);
+				for (int i = 0; i < optionUnlockTypeListLength; i++)
+				{
+					this._OptionUnlockTypeListCache.Add((EOptionUnlockType)this.Instance.OptionUnlockTypeList(i));
+				}
+				return this._OptionUnlockTypeListCache;
+			}
+		}
+
+		// Token: 0x170043C9 RID: 17353
+		// (get) Token: 0x0600E8D0 RID: 59600 RVA: 0x00226742 File Offset: 0x00224942
 		public virtual ILongPressInteractConfig LongPressInteractConfig
 		{
 			get
@@ -241,13 +266,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004090 RID: 16528
-		// (get) Token: 0x0600DB03 RID: 56067 RVA: 0x00209FAC File Offset: 0x002081AC
+		// Token: 0x170043CA RID: 17354
+		// (get) Token: 0x0600E8D1 RID: 59601 RVA: 0x00226778 File Offset: 0x00224978
 		public virtual bool? KeepInRecall
 		{
 			get
 			{
-				if ((this.Instance.NullMask & 32) == 0)
+				if ((this.Instance.NullMask & 64) == 0)
 				{
 					return null;
 				}
@@ -255,8 +280,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004091 RID: 16529
-		// (get) Token: 0x0600DB04 RID: 56068 RVA: 0x00209FE3 File Offset: 0x002081E3
+		// Token: 0x170043CB RID: 17355
+		// (get) Token: 0x0600E8D2 RID: 59602 RVA: 0x002267AF File Offset: 0x002249AF
 		public virtual string EdTidContent
 		{
 			get
@@ -265,56 +290,62 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079A0 RID: 31136
+		// Token: 0x0400803A RID: 32826
 		private IInteractOption Instance;
 
-		// Token: 0x040079A1 RID: 31137
-		[Nullable(1)]
+		// Token: 0x0400803B RID: 32827
+		[Nullable(0)]
 		private IInteractType _TypeCache;
 
-		// Token: 0x040079A2 RID: 31138
+		// Token: 0x0400803C RID: 32828
 		private bool _TypeInited;
 
-		// Token: 0x040079A3 RID: 31139
+		// Token: 0x0400803D RID: 32829
 		private VectorInfo _InteractPointOffsetCache;
 
-		// Token: 0x040079A4 RID: 31140
+		// Token: 0x0400803E RID: 32830
 		private bool _InteractPointOffsetInited;
 
-		// Token: 0x040079A5 RID: 31141
+		// Token: 0x0400803F RID: 32831
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040079A6 RID: 31142
+		// Token: 0x04008040 RID: 32832
 		private bool _ConditionInited;
 
-		// Token: 0x040079A7 RID: 31143
+		// Token: 0x04008041 RID: 32833
 		private IInteractOptionConfirmBox _ConfirmBoxCache;
 
-		// Token: 0x040079A8 RID: 31144
+		// Token: 0x04008042 RID: 32834
 		private bool _ConfirmBoxInited;
 
-		// Token: 0x040079A9 RID: 31145
+		// Token: 0x04008043 RID: 32835
 		private IDurationInteract _DurationCache;
 
-		// Token: 0x040079AA RID: 31146
+		// Token: 0x04008044 RID: 32836
 		private bool _DurationInited;
 
-		// Token: 0x040079AB RID: 31147
+		// Token: 0x04008045 RID: 32837
 		private IOptionLockTip _OptionLockTipCache;
 
-		// Token: 0x040079AC RID: 31148
+		// Token: 0x04008046 RID: 32838
 		private bool _OptionLockTipInited;
 
-		// Token: 0x040079AD RID: 31149
+		// Token: 0x04008047 RID: 32839
 		private List<EOptionLockType> _OptionLockTypeListCache;
 
-		// Token: 0x040079AE RID: 31150
+		// Token: 0x04008048 RID: 32840
 		private bool _OptionLockTypeListInited;
 
-		// Token: 0x040079AF RID: 31151
+		// Token: 0x04008049 RID: 32841
+		private List<EOptionUnlockType> _OptionUnlockTypeListCache;
+
+		// Token: 0x0400804A RID: 32842
+		private bool _OptionUnlockTypeListInited;
+
+		// Token: 0x0400804B RID: 32843
 		private ILongPressInteractConfig _LongPressInteractConfigCache;
 
-		// Token: 0x040079B0 RID: 31152
+		// Token: 0x0400804C RID: 32844
 		private bool _LongPressInteractConfigInited;
 	}
 }

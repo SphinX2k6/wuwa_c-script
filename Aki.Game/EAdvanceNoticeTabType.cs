@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020010C7 RID: 4295
+// Token: 0x0200057B RID: 1403
 public enum EAdvanceNoticeTabType
 {
-	// Token: 0x040033F5 RID: 13301
+	// Token: 0x0400348E RID: 13454
 	NewRole = 1,
-	// Token: 0x040033F6 RID: 13302
+	// Token: 0x0400348F RID: 13455
 	NewJourney,
-	// Token: 0x040033F7 RID: 13303
+	// Token: 0x04003490 RID: 13456
 	NewArea,
-	// Token: 0x040033F8 RID: 13304
+	// Token: 0x04003491 RID: 13457
 	NewSkin,
-	// Token: 0x040033F9 RID: 13305
+	// Token: 0x04003492 RID: 13458
 	NewEnemy,
-	// Token: 0x040033FA RID: 13306
+	// Token: 0x04003493 RID: 13459
 	NewActivity,
-	// Token: 0x040033FB RID: 13307
+	// Token: 0x04003494 RID: 13460
 	NewSystemOptimize
 }

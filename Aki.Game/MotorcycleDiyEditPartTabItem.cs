@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200229C RID: 8860
+// Token: 0x02001780 RID: 6016
 public class MotorcycleDiyEditPartTabItem : MotorcycleDiyPartTabItem
 {
-	// Token: 0x060114F9 RID: 70905 RVA: 0x00439C69 File Offset: 0x00437E69
+	// Token: 0x0600E991 RID: 59793 RVA: 0x00446861 File Offset: 0x00444A61
 	[NullableContext(1)]
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{

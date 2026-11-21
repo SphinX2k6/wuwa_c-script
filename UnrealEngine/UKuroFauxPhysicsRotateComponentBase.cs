@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001845 RID: 6213
+	// Token: 0x02000389 RID: 905
 	[UnrealObjectPath("/Script/KuroFauxPhysics.KuroFauxPhysicsRotateComponentBase")]
 	[UnrealStructLayout(752, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 752)]
 	public abstract class UKuroFauxPhysicsRotateComponentBase : UKuroFauxPhysicsComponentBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016E79 RID: 93817 RVA: 0x00216CDA File Offset: 0x00214EDA
+		// Token: 0x06005AC3 RID: 23235 RVA: 0x0008033B File Offset: 0x0007E53B
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroFauxPhysicsRotateComponentBase._ClassPtr;
 		}
 
-		// Token: 0x17005C61 RID: 23649
-		// (get) Token: 0x06016E7A RID: 93818 RVA: 0x00216CE6 File Offset: 0x00214EE6
-		// (set) Token: 0x06016E7B RID: 93819 RVA: 0x00216CF6 File Offset: 0x00214EF6
+		// Token: 0x170011F4 RID: 4596
+		// (get) Token: 0x06005AC4 RID: 23236 RVA: 0x00080347 File Offset: 0x0007E547
+		// (set) Token: 0x06005AC5 RID: 23237 RVA: 0x00080357 File Offset: 0x0007E557
 		public unsafe float Friction
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C62 RID: 23650
-		// (get) Token: 0x06016E7C RID: 93820 RVA: 0x00216D07 File Offset: 0x00214F07
-		// (set) Token: 0x06016E7D RID: 93821 RVA: 0x00216D17 File Offset: 0x00214F17
+		// Token: 0x170011F5 RID: 4597
+		// (get) Token: 0x06005AC6 RID: 23238 RVA: 0x00080368 File Offset: 0x0007E568
+		// (set) Token: 0x06005AC7 RID: 23239 RVA: 0x00080378 File Offset: 0x0007E578
 		public unsafe float TorqueBounds
 		{
 			get
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C63 RID: 23651
-		// (get) Token: 0x06016E7E RID: 93822 RVA: 0x00216D28 File Offset: 0x00214F28
-		// (set) Token: 0x06016E7F RID: 93823 RVA: 0x00216D38 File Offset: 0x00214F38
+		// Token: 0x170011F6 RID: 4598
+		// (get) Token: 0x06005AC8 RID: 23240 RVA: 0x00080389 File Offset: 0x0007E589
+		// (set) Token: 0x06005AC9 RID: 23241 RVA: 0x00080399 File Offset: 0x0007E599
 		public unsafe float ForceScalar
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C64 RID: 23652
-		// (get) Token: 0x06016E80 RID: 93824 RVA: 0x00216D49 File Offset: 0x00214F49
-		// (set) Token: 0x06016E81 RID: 93825 RVA: 0x00216D59 File Offset: 0x00214F59
+		// Token: 0x170011F7 RID: 4599
+		// (get) Token: 0x06005ACA RID: 23242 RVA: 0x000803AA File Offset: 0x0007E5AA
+		// (set) Token: 0x06005ACB RID: 23243 RVA: 0x000803BA File Offset: 0x0007E5BA
 		public unsafe float SpringStrength
 		{
 			get
@@ -77,42 +77,42 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016E82 RID: 93826 RVA: 0x00216D6A File Offset: 0x00214F6A
+		// Token: 0x06005ACC RID: 23244 RVA: 0x000803CB File Offset: 0x0007E5CB
 		static UKuroFauxPhysicsRotateComponentBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroFauxPhysics.KuroFauxPhysicsRotateComponentBase");
 		}
 
-		// Token: 0x06016E83 RID: 93827 RVA: 0x00216D78 File Offset: 0x00214F78
+		// Token: 0x06005ACD RID: 23245 RVA: 0x000803DC File Offset: 0x0007E5DC
 		protected UKuroFauxPhysicsRotateComponentBase() : this(BuiltinUtils.AllocNativeUObject(UKuroFauxPhysicsRotateComponentBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016E84 RID: 93828 RVA: 0x00216DA0 File Offset: 0x00214FA0
+		// Token: 0x06005ACE RID: 23246 RVA: 0x00080404 File Offset: 0x0007E604
 		protected UKuroFauxPhysicsRotateComponentBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C726 RID: 50982
+		// Token: 0x040025B7 RID: 9655
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroFauxPhysics.KuroFauxPhysicsRotateComponentBase";
 
-		// Token: 0x0400C727 RID: 50983
+		// Token: 0x040025B8 RID: 9656
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C728 RID: 50984
+		// Token: 0x040025B9 RID: 9657
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C729 RID: 50985
+		// Token: 0x040025BA RID: 9658
 		internal static int __PropertyOffset_Friction;
 
-		// Token: 0x0400C72A RID: 50986
+		// Token: 0x040025BB RID: 9659
 		internal static int __PropertyOffset_TorqueBounds;
 
-		// Token: 0x0400C72B RID: 50987
+		// Token: 0x040025BC RID: 9660
 		internal static int __PropertyOffset_ForceScalar;
 
-		// Token: 0x0400C72C RID: 50988
+		// Token: 0x040025BD RID: 9661
 		internal static int __PropertyOffset_SpringStrength;
 	}
 }

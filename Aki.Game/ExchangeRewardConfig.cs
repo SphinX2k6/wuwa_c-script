@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001801 RID: 6145
+// Token: 0x02000CBA RID: 3258
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ExchangeRewardConfig : ConfigBase
 {
-	// Token: 0x0600B423 RID: 46115 RVA: 0x0028B120 File Offset: 0x00289320
+	// Token: 0x0600880E RID: 34830 RVA: 0x00295840 File Offset: 0x00293A40
 	public ExchangeReward? GetExchangeRewardConfig(int? id)
 	{
 		if (id == null || id.Value == 0)
@@ -20,7 +20,7 @@ public class ExchangeRewardConfig : ConfigBase
 		return ConfigExchangeRewardById.GetConfig(id.Value, true);
 	}
 
-	// Token: 0x0600B424 RID: 46116 RVA: 0x0028B158 File Offset: 0x00289358
+	// Token: 0x0600880F RID: 34831 RVA: 0x00295878 File Offset: 0x00293A78
 	public ExchangeShared? GetExchangeShareConfig(int? id)
 	{
 		if (id == null || id.Value == 0)
@@ -30,7 +30,7 @@ public class ExchangeRewardConfig : ConfigBase
 		return ConfigExchangeSharedById.GetConfig(id.Value, true);
 	}
 
-	// Token: 0x0600B425 RID: 46117 RVA: 0x0028B190 File Offset: 0x00289390
+	// Token: 0x06008810 RID: 34832 RVA: 0x002958B0 File Offset: 0x00293AB0
 	public List<TItem> GetExchangeRewardPreviewRewardList(int exchangeId, int? worldLevel = null)
 	{
 		if (exchangeId == 0)
@@ -120,7 +120,7 @@ public class ExchangeRewardConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x0600B426 RID: 46118 RVA: 0x0028B3D4 File Offset: 0x002895D4
+	// Token: 0x06008811 RID: 34833 RVA: 0x00295AF4 File Offset: 0x00293CF4
 	public int GetExchangeRewardMaxCount(int id)
 	{
 		if (this.GetExchangeRewardConfig(new int?(id)) == null)
@@ -131,7 +131,7 @@ public class ExchangeRewardConfig : ConfigBase
 		return exchangeReward.GetValueOrDefault().MaxCount;
 	}
 
-	// Token: 0x0600B427 RID: 46119 RVA: 0x0028B408 File Offset: 0x00289608
+	// Token: 0x06008812 RID: 34834 RVA: 0x00295B28 File Offset: 0x00293D28
 	public int GetShareMaxCount(int id)
 	{
 		if (this.GetExchangeShareConfig(new int?(id)) == null)
@@ -142,14 +142,14 @@ public class ExchangeRewardConfig : ConfigBase
 		return exchangeShared.GetValueOrDefault().MaxCount;
 	}
 
-	// Token: 0x0600B428 RID: 46120 RVA: 0x0028B43C File Offset: 0x0028963C
+	// Token: 0x06008813 RID: 34835 RVA: 0x00295B5C File Offset: 0x00293D5C
 	public Dictionary<int, int> GetShareCost(int id)
 	{
 		ExchangeShared? exchangeShared;
 		return ((this.GetExchangeShareConfig(new int?(id)) != null) ? exchangeShared.GetValueOrDefault().Cost() : null) ?? new Dictionary<int, int>();
 	}
 
-	// Token: 0x0600B429 RID: 46121 RVA: 0x0028B47C File Offset: 0x0028967C
+	// Token: 0x06008814 RID: 34836 RVA: 0x00295B9C File Offset: 0x00293D9C
 	[NullableContext(2)]
 	public Dictionary<int, int> GetExchangeCost(int id)
 	{
@@ -161,7 +161,7 @@ public class ExchangeRewardConfig : ConfigBase
 		return exchangeRewardConfig.Value.Cost();
 	}
 
-	// Token: 0x0600B42A RID: 46122 RVA: 0x0028B4B0 File Offset: 0x002896B0
+	// Token: 0x06008815 RID: 34837 RVA: 0x00295BD0 File Offset: 0x00293DD0
 	public int? GetExchangeShareId(int id)
 	{
 		ExchangeReward? exchangeRewardConfig = this.GetExchangeRewardConfig(new int?(id));
@@ -172,8 +172,8 @@ public class ExchangeRewardConfig : ConfigBase
 		return new int?(exchangeRewardConfig.Value.SharedId);
 	}
 
-	// Token: 0x17000F21 RID: 3873
-	// (get) Token: 0x0600B42B RID: 46123 RVA: 0x0028B4F1 File Offset: 0x002896F1
+	// Token: 0x17000F44 RID: 3908
+	// (get) Token: 0x06008816 RID: 34838 RVA: 0x00295C11 File Offset: 0x00293E11
 	public static ExchangeRewardConfig Instance
 	{
 		get
@@ -182,7 +182,7 @@ public class ExchangeRewardConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600B42C RID: 46124 RVA: 0x0028B4F8 File Offset: 0x002896F8
+	// Token: 0x06008817 RID: 34839 RVA: 0x00295C18 File Offset: 0x00293E18
 	public static ExchangeRewardConfig GetOrCreateInstance()
 	{
 		if (ExchangeRewardConfig._Instance == null)
@@ -192,7 +192,7 @@ public class ExchangeRewardConfig : ConfigBase
 		return ExchangeRewardConfig._Instance;
 	}
 
-	// Token: 0x0600B42D RID: 46125 RVA: 0x0028B50C File Offset: 0x0028970C
+	// Token: 0x06008818 RID: 34840 RVA: 0x00295C2C File Offset: 0x00293E2C
 	public static bool CreateInstance()
 	{
 		if (ExchangeRewardConfig._Instance != null)
@@ -203,24 +203,24 @@ public class ExchangeRewardConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600B42E RID: 46126 RVA: 0x0028B522 File Offset: 0x00289722
+	// Token: 0x06008819 RID: 34841 RVA: 0x00295C42 File Offset: 0x00293E42
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B42F RID: 46127 RVA: 0x0028B524 File Offset: 0x00289724
+	// Token: 0x0600881A RID: 34842 RVA: 0x00295C44 File Offset: 0x00293E44
 	public static void ResetStaticDefaultValue()
 	{
 		ExchangeRewardConfig._Instance = null;
 	}
 
-	// Token: 0x0600B430 RID: 46128 RVA: 0x0028B52C File Offset: 0x0028972C
+	// Token: 0x0600881B RID: 34843 RVA: 0x00295C4C File Offset: 0x00293E4C
 	static ExchangeRewardConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ExchangeRewardConfig.CreateStaticDefaultValue), new Action(ExchangeRewardConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005168 RID: 20840
+	// Token: 0x04005213 RID: 21011
 	[Nullable(2)]
 	private static ExchangeRewardConfig _Instance;
 }

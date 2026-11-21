@@ -9,27 +9,27 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Mech
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064F2 RID: 25842
+	// Token: 0x02005470 RID: 21616
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CascadeResolver
 	{
-		// Token: 0x170094E9 RID: 38121
-		// (get) Token: 0x06040DCB RID: 265675 RVA: 0x00FB6A3A File Offset: 0x00FB4C3A
-		// (set) Token: 0x06040DCC RID: 265676 RVA: 0x00FB6A42 File Offset: 0x00FB4C42
+		// Token: 0x1700684B RID: 26699
+		// (get) Token: 0x06035A8F RID: 219791 RVA: 0x00EFDA6A File Offset: 0x00EFBC6A
+		// (set) Token: 0x06035A90 RID: 219792 RVA: 0x00EFDA72 File Offset: 0x00EFBC72
 		private int LastSegmentScore { get; set; }
 
-		// Token: 0x170094EA RID: 38122
-		// (get) Token: 0x06040DCD RID: 265677 RVA: 0x00FB6A4B File Offset: 0x00FB4C4B
-		// (set) Token: 0x06040DCE RID: 265678 RVA: 0x00FB6A53 File Offset: 0x00FB4C53
+		// Token: 0x1700684C RID: 26700
+		// (get) Token: 0x06035A91 RID: 219793 RVA: 0x00EFDA7B File Offset: 0x00EFBC7B
+		// (set) Token: 0x06035A92 RID: 219794 RVA: 0x00EFDA83 File Offset: 0x00EFBC83
 		private int LastSegmentCharge { get; set; }
 
-		// Token: 0x170094EB RID: 38123
-		// (get) Token: 0x06040DCF RID: 265679 RVA: 0x00FB6A5C File Offset: 0x00FB4C5C
-		// (set) Token: 0x06040DD0 RID: 265680 RVA: 0x00FB6A64 File Offset: 0x00FB4C64
+		// Token: 0x1700684D RID: 26701
+		// (get) Token: 0x06035A93 RID: 219795 RVA: 0x00EFDA8C File Offset: 0x00EFBC8C
+		// (set) Token: 0x06035A94 RID: 219796 RVA: 0x00EFDA94 File Offset: 0x00EFBC94
 		private int LastSegmentTrailCharge { get; set; }
 
-		// Token: 0x06040DD1 RID: 265681 RVA: 0x00FB6A70 File Offset: 0x00FB4C70
+		// Token: 0x06035A95 RID: 219797 RVA: 0x00EFDAA0 File Offset: 0x00EFBCA0
 		public CascadeResolver(Board board, SequenceDetector detector, BoardFillStrategy fillStrategy, EnergyPool energy, GameRandom rng, MatchThreeStatsKeeper stats)
 		{
 			int[] array = new int[4];
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			};
 		}
 
-		// Token: 0x06040DD2 RID: 265682 RVA: 0x00FB6C78 File Offset: 0x00FB4E78
+		// Token: 0x06035A96 RID: 219798 RVA: 0x00EFDCA8 File Offset: 0x00EFBEA8
 		private void BeginSegment(SolvedData solved, GridPosition? preferredChainSource = null, GridPosition? alternateChainSource = null, bool suppressChainDetonationTrails = false)
 		{
 			this.ClearQueue.Clear();
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.LastSegmentTrailCharge = 0;
 		}
 
-		// Token: 0x06040DD3 RID: 265683 RVA: 0x00FB6E5F File Offset: 0x00FB505F
+		// Token: 0x06035A97 RID: 219799 RVA: 0x00EFDE8F File Offset: 0x00EFC08F
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return list;
 		}
 
-		// Token: 0x06040DD4 RID: 265684 RVA: 0x00FB6E98 File Offset: 0x00FB5098
+		// Token: 0x06035A98 RID: 219800 RVA: 0x00EFDEC8 File Offset: 0x00EFC0C8
 		private void EnqueueSequences(SolvedData solved)
 		{
 			foreach (ItemSequence itemSequence in solved.Sequences)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040DD5 RID: 265685 RVA: 0x00FB6F90 File Offset: 0x00FB5190
+		// Token: 0x06035A99 RID: 219801 RVA: 0x00EFDFC0 File Offset: 0x00EFC1C0
 		[NullableContext(2)]
 		private void CountGeneratedSpecial(EPieceType type, int[] extra)
 		{
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040DD6 RID: 265686 RVA: 0x00FB6FE8 File Offset: 0x00FB51E8
+		// Token: 0x06035A9A RID: 219802 RVA: 0x00EFE018 File Offset: 0x00EFC218
 		[NullableContext(2)]
 		private EliminateRule ResolveRule(in ItemSequence seq)
 		{
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return null;
 		}
 
-		// Token: 0x06040DD7 RID: 265687 RVA: 0x00FB7098 File Offset: 0x00FB5298
+		// Token: 0x06035A9B RID: 219803 RVA: 0x00EFE0C8 File Offset: 0x00EFC2C8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return list;
 		}
 
-		// Token: 0x06040DD8 RID: 265688 RVA: 0x00FB70F0 File Offset: 0x00FB52F0
+		// Token: 0x06035A9C RID: 219804 RVA: 0x00EFE120 File Offset: 0x00EFC320
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return list;
 		}
 
-		// Token: 0x06040DD9 RID: 265689 RVA: 0x00FB71DD File Offset: 0x00FB53DD
+		// Token: 0x06035A9D RID: 219805 RVA: 0x00EFE20D File Offset: 0x00EFC40D
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return null;
 		}
 
-		// Token: 0x06040DDA RID: 265690 RVA: 0x00FB71E0 File Offset: 0x00FB53E0
+		// Token: 0x06035A9E RID: 219806 RVA: 0x00EFE210 File Offset: 0x00EFC410
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return result;
 		}
 
-		// Token: 0x06040DDB RID: 265691 RVA: 0x00FB7294 File Offset: 0x00FB5494
+		// Token: 0x06035A9F RID: 219807 RVA: 0x00EFE2C4 File Offset: 0x00EFC4C4
 		public List<IJob> ResolveSkill(SolvedData solved, ISkill skill, bool isUltimate)
 		{
 			this.BeginSegment(solved, null, null, false);
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return result;
 		}
 
-		// Token: 0x06040DDC RID: 265692 RVA: 0x00FB733C File Offset: 0x00FB553C
+		// Token: 0x06035AA0 RID: 219808 RVA: 0x00EFE36C File Offset: 0x00EFC56C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.DrainAndPack(solved);
 		}
 
-		// Token: 0x06040DDD RID: 265693 RVA: 0x00FB7418 File Offset: 0x00FB5618
+		// Token: 0x06035AA1 RID: 219809 RVA: 0x00EFE448 File Offset: 0x00EFC648
 		[return: TupleElementNames(new string[]
 		{
 			"Self",
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return null;
 		}
 
-		// Token: 0x06040DDE RID: 265694 RVA: 0x00FB74FC File Offset: 0x00FB56FC
+		// Token: 0x06035AA2 RID: 219810 RVA: 0x00EFE52C File Offset: 0x00EFC72C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -432,7 +432,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.ResolveSwapEffect(solved, item, swapEffectPosition, item2, otherPosition, preferredChainSource, alternateChainSource);
 		}
 
-		// Token: 0x06040DDF RID: 265695 RVA: 0x00FB75C8 File Offset: 0x00FB57C8
+		// Token: 0x06035AA3 RID: 219811 RVA: 0x00EFE5F8 File Offset: 0x00EFC7F8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -447,7 +447,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.DrainAndPack(solved);
 		}
 
-		// Token: 0x06040DE0 RID: 265696 RVA: 0x00FB761C File Offset: 0x00FB581C
+		// Token: 0x06035AA4 RID: 219812 RVA: 0x00EFE64C File Offset: 0x00EFC84C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.DrainAndPack(solved);
 		}
 
-		// Token: 0x06040DE1 RID: 265697 RVA: 0x00FB766C File Offset: 0x00FB586C
+		// Token: 0x06035AA5 RID: 219813 RVA: 0x00EFE69C File Offset: 0x00EFC89C
 		private void DispatchSwapEffect(Piece swapEffectPiece, GridPosition swapEffectPosition, Piece otherPiece, GridPosition otherPosition)
 		{
 			IReadOnlyList<IPieceComponent> components = swapEffectPiece.Components;
@@ -475,7 +475,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040DE2 RID: 265698 RVA: 0x00FB76BC File Offset: 0x00FB58BC
+		// Token: 0x06035AA6 RID: 219814 RVA: 0x00EFE6EC File Offset: 0x00EFC8EC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return result2;
 		}
 
-		// Token: 0x06040DE3 RID: 265699 RVA: 0x00FB79E0 File Offset: 0x00FB5BE0
+		// Token: 0x06035AA7 RID: 219815 RVA: 0x00EFEA10 File Offset: 0x00EFCC10
 		private List<IJob> PackSegment()
 		{
 			SegmentJobs segmentJobs = this.SegmentBuffers[this.SegmentBufferIndex];
@@ -581,7 +581,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return segmentJobs.Jobs;
 		}
 
-		// Token: 0x06040DE4 RID: 265700 RVA: 0x00FB7B04 File Offset: 0x00FB5D04
+		// Token: 0x06035AA8 RID: 219816 RVA: 0x00EFEB34 File Offset: 0x00EFCD34
 		private void ClearCell(SolvedData solved, GridPosition pos, bool suppressClearEffect, int delayMs = 0, EPieceClearReason reason = EPieceClearReason.Matched, EPieceType? source = null, GridPosition? trailOrigin = null, GridPosition? landAnchor = null, EDirectedTrailType directedTrail = EDirectedTrailType.None, bool opensDirectedTrails = false, GridPosition? detonationSource = null)
 		{
 			int num = pos.Row * 8 + pos.Col;
@@ -722,7 +722,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Board.ClearPiece(pos.Row, pos.Col);
 		}
 
-		// Token: 0x06040DE5 RID: 265701 RVA: 0x00FB7F4B File Offset: 0x00FB614B
+		// Token: 0x06035AA9 RID: 219817 RVA: 0x00EFEF7B File Offset: 0x00EFD17B
 		private ERecycleTrailType GetRecycleTrailType(EPieceType pieceType)
 		{
 			if (pieceType == EPieceType.Charger)
@@ -736,7 +736,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return ERecycleTrailType.None;
 		}
 
-		// Token: 0x06040DE6 RID: 265702 RVA: 0x00FB7F5C File Offset: 0x00FB615C
+		// Token: 0x06035AAA RID: 219818 RVA: 0x00EFEF8C File Offset: 0x00EFD18C
 		private void RejudgeSplashed(int cellIdx, EPieceClearReason reason, int delayMs, GridPosition? detonationSource)
 		{
 			if (!MatchThreeGameplayDefine.IsSplashed(reason))
@@ -767,14 +767,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.PieceClears[num] = pieceClearEvent;
 		}
 
-		// Token: 0x06040DE7 RID: 265703 RVA: 0x00FB8001 File Offset: 0x00FB6201
+		// Token: 0x06035AAB RID: 219819 RVA: 0x00EFF031 File Offset: 0x00EFD231
 		private bool WouldCreateDetonationCycle(GridPosition target, GridPosition source)
 		{
 			Array.Clear(this.DetonationDependencyVisited, 0, this.DetonationDependencyVisited.Length);
 			return this.DependsOnPosition(source, target);
 		}
 
-		// Token: 0x06040DE8 RID: 265704 RVA: 0x00FB8020 File Offset: 0x00FB6220
+		// Token: 0x06035AAC RID: 219820 RVA: 0x00EFF050 File Offset: 0x00EFD250
 		private bool DependsOnPosition(GridPosition current, GridPosition target)
 		{
 			if (CascadeResolver.IsSamePosition(new GridPosition?(current), target))
@@ -807,19 +807,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return false;
 		}
 
-		// Token: 0x06040DE9 RID: 265705 RVA: 0x00FB8116 File Offset: 0x00FB6316
+		// Token: 0x06035AAD RID: 219821 RVA: 0x00EFF146 File Offset: 0x00EFD346
 		private bool DependencyReachesTarget(GridPosition? dependency, GridPosition target)
 		{
 			return dependency != null && this.DependsOnPosition(dependency.Value, target);
 		}
 
-		// Token: 0x06040DEA RID: 265706 RVA: 0x00FB8131 File Offset: 0x00FB6331
+		// Token: 0x06035AAE RID: 219822 RVA: 0x00EFF161 File Offset: 0x00EFD361
 		private static bool IsSamePosition(GridPosition? position, GridPosition target)
 		{
 			return position != null && position.Value.Row == target.Row && position.Value.Col == target.Col;
 		}
 
-		// Token: 0x06040DEB RID: 265707 RVA: 0x00FB8168 File Offset: 0x00FB6368
+		// Token: 0x06035AAF RID: 219823 RVA: 0x00EFF198 File Offset: 0x00EFD398
 		private static bool TakeDamage(Piece piece, out int lives)
 		{
 			lives = 0;
@@ -834,7 +834,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return lives <= 0;
 		}
 
-		// Token: 0x06040DEC RID: 265708 RVA: 0x00FB81A8 File Offset: 0x00FB63A8
+		// Token: 0x06035AB0 RID: 219824 RVA: 0x00EFF1D8 File Offset: 0x00EFD3D8
 		private void DispatchAdjacent(GridPosition pos, int delayMs, GridPosition? landAnchor)
 		{
 			for (int i = 0; i < 4; i++)
@@ -866,7 +866,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040DED RID: 265709 RVA: 0x00FB8274 File Offset: 0x00FB6474
+		// Token: 0x06035AB1 RID: 219825 RVA: 0x00EFF2A4 File Offset: 0x00EFD4A4
 		private void CollectDirectChainHit(GridPosition pos, int delayMs, EPieceClearReason reason, GridPosition? trailOrigin, GridPosition? landAnchor, EDirectedTrailType directedTrail, GridPosition? detonationSource)
 		{
 			int num = pos.Row * 8 + pos.Col;
@@ -878,7 +878,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.DirectChainHits.Add(new CascadeResolver.ChainDirectHitData(pos, delayMs, reason, trailOrigin, landAnchor, directedTrail, detonationSource));
 		}
 
-		// Token: 0x06040DEE RID: 265710 RVA: 0x00FB82C0 File Offset: 0x00FB64C0
+		// Token: 0x06035AB2 RID: 219826 RVA: 0x00EFF2F0 File Offset: 0x00EFD4F0
 		private void TickChainGroup(SolvedData solved)
 		{
 			this.SharedChainBomb = null;
@@ -889,7 +889,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.TickChainPieces(solved, source, hasTrailTargets);
 		}
 
-		// Token: 0x06040DEF RID: 265711 RVA: 0x00FB8310 File Offset: 0x00FB6510
+		// Token: 0x06035AB3 RID: 219827 RVA: 0x00EFF340 File Offset: 0x00EFD540
 		private int PrepareChainGroupEffects()
 		{
 			int num = 0;
@@ -915,7 +915,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return num;
 		}
 
-		// Token: 0x06040DF0 RID: 265712 RVA: 0x00FB838C File Offset: 0x00FB658C
+		// Token: 0x06035AB4 RID: 219828 RVA: 0x00EFF3BC File Offset: 0x00EFD5BC
 		private int TickChainPieces(SolvedData solved, GridPosition source, bool hasTrailTargets)
 		{
 			int num = this.ReduceChainDurabilityAt(source);
@@ -961,7 +961,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return num;
 		}
 
-		// Token: 0x06040DF1 RID: 265713 RVA: 0x00FB84D8 File Offset: 0x00FB66D8
+		// Token: 0x06035AB5 RID: 219829 RVA: 0x00EFF508 File Offset: 0x00EFD708
 		private int ReduceChainDurabilityAt(GridPosition pos)
 		{
 			Piece piece = this.Board.GetPiece(pos.Row, pos.Col);
@@ -979,7 +979,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return (ptr.Val1 <= 0) ? 1 : 0;
 		}
 
-		// Token: 0x06040DF2 RID: 265714 RVA: 0x00FB8538 File Offset: 0x00FB6738
+		// Token: 0x06035AB6 RID: 219830 RVA: 0x00EFF568 File Offset: 0x00EFD768
 		private void DispatchChainPieceAt(SolvedData solved, GridPosition pos, GridPosition source, bool hasTrailTargets)
 		{
 			Piece piece = this.Board.GetPiece(pos.Row, pos.Col);
@@ -995,7 +995,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.DispatchChainPiece(solved, pos, piece, chainComponent, source, hasTrailTargets);
 		}
 
-		// Token: 0x06040DF3 RID: 265715 RVA: 0x00FB8588 File Offset: 0x00FB6788
+		// Token: 0x06035AB7 RID: 219831 RVA: 0x00EFF5B8 File Offset: 0x00EFD7B8
 		private void DispatchChainPiece(SolvedData solved, GridPosition pos, Piece piece, ChainComponent chain, GridPosition source, bool hasTrailTargets)
 		{
 			CascadeResolver.ChainDirectHitData? chainDirectHitData = this.FindDirectChainHit(pos);
@@ -1044,7 +1044,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.CurrentRequestIsChainFollowUp = currentRequestIsChainFollowUp2;
 		}
 
-		// Token: 0x06040DF4 RID: 265716 RVA: 0x00FB874C File Offset: 0x00FB694C
+		// Token: 0x06035AB8 RID: 219832 RVA: 0x00EFF77C File Offset: 0x00EFD97C
 		private GridPosition SelectChainDetonationSource()
 		{
 			if (this.PreferredChainSource != null && this.IsDirectChainHit(this.PreferredChainSource.Value))
@@ -1058,13 +1058,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.DirectChainHits[this.Rng.Next(this.DirectChainHits.Count)].Pos;
 		}
 
-		// Token: 0x06040DF5 RID: 265717 RVA: 0x00FB87D7 File Offset: 0x00FB69D7
+		// Token: 0x06035AB9 RID: 219833 RVA: 0x00EFF807 File Offset: 0x00EFDA07
 		private bool IsDirectChainHit(GridPosition pos)
 		{
 			return this.DirectChainHitCells[pos.Row * 8 + pos.Col];
 		}
 
-		// Token: 0x06040DF6 RID: 265718 RVA: 0x00FB87F0 File Offset: 0x00FB69F0
+		// Token: 0x06035ABA RID: 219834 RVA: 0x00EFF820 File Offset: 0x00EFDA20
 		private CascadeResolver.ChainDirectHitData? FindDirectChainHit(GridPosition pos)
 		{
 			for (int i = 0; i < this.DirectChainHits.Count; i++)
@@ -1078,7 +1078,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return null;
 		}
 
-		// Token: 0x06040DF7 RID: 265719 RVA: 0x00FB8858 File Offset: 0x00FB6A58
+		// Token: 0x06035ABB RID: 219835 RVA: 0x00EFF888 File Offset: 0x00EFDA88
 		private void DispatchChainEffects(GridPosition pos, Piece piece, int delayMs, GridPosition? landAnchor)
 		{
 			int currentClearDelayMs = this.CurrentClearDelayMs;
@@ -1099,7 +1099,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.CurrentLandAnchor = currentLandAnchor;
 		}
 
-		// Token: 0x06040DF8 RID: 265720 RVA: 0x00FB88E8 File Offset: 0x00FB6AE8
+		// Token: 0x06035ABC RID: 219836 RVA: 0x00EFF918 File Offset: 0x00EFDB18
 		[return: Nullable(2)]
 		private static T FindComponent<T>(Piece piece) where T : class, IPieceComponent
 		{
@@ -1114,7 +1114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return default(T);
 		}
 
-		// Token: 0x06040DF9 RID: 265721 RVA: 0x00FB8958 File Offset: 0x00FB6B58
+		// Token: 0x06035ABD RID: 219837 RVA: 0x00EFF988 File Offset: 0x00EFDB88
 		private static int ChainDurability(Piece piece)
 		{
 			ChainComponent chainComponent = CascadeResolver.FindComponent<ChainComponent>(piece);
@@ -1125,7 +1125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return 0;
 		}
 
-		// Token: 0x06040DFA RID: 265722 RVA: 0x00FB8980 File Offset: 0x00FB6B80
+		// Token: 0x06035ABE RID: 219838 RVA: 0x00EFF9B0 File Offset: 0x00EFDBB0
 		private static bool HasComponent<[Nullable(0)] T>(Piece piece) where T : IPieceComponent
 		{
 			using (List<IPieceComponent>.Enumerator enumerator = piece.Components.GetEnumerator())
@@ -1141,13 +1141,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return false;
 		}
 
-		// Token: 0x06040DFB RID: 265723 RVA: 0x00FB89DC File Offset: 0x00FB6BDC
+		// Token: 0x06035ABF RID: 219839 RVA: 0x00EFFA0C File Offset: 0x00EFDC0C
 		private static bool HasBuff(Piece piece)
 		{
 			return CascadeResolver.HasComponent<BombComponent>(piece) || CascadeResolver.HasComponent<CrossClearComponent>(piece) || piece.Has(EPieceCaps.Chain);
 		}
 
-		// Token: 0x06040DFC RID: 265724 RVA: 0x00FB89FC File Offset: 0x00FB6BFC
+		// Token: 0x06035AC0 RID: 219840 RVA: 0x00EFFA2C File Offset: 0x00EFDC2C
 		private void EnqueueClearRequest(CascadeResolver.ClearRequest request)
 		{
 			int num = request.Pos.Row * 8 + request.Pos.Col;
@@ -1199,7 +1199,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040DFD RID: 265725 RVA: 0x00FB8BCC File Offset: 0x00FB6DCC
+		// Token: 0x06035AC1 RID: 219841 RVA: 0x00EFFBFC File Offset: 0x00EFDDFC
 		private void EnqueueRejudgeRequest(CascadeResolver.ClearRequest request, int cellIndex)
 		{
 			if (!MatchThreeGameplayDefine.IsSplashed(request.Reason) || this.RequestedRejudgeCells[cellIndex])
@@ -1215,7 +1215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			clearQueue.Enqueue(new CascadeResolver.ClearRequest(pos, delayMs, reason, null, null, null, EDirectedTrailType.None, false, false, detonationSource, true));
 		}
 
-		// Token: 0x06040DFE RID: 265726 RVA: 0x00FB8C44 File Offset: 0x00FB6E44
+		// Token: 0x06035AC2 RID: 219842 RVA: 0x00EFFC74 File Offset: 0x00EFDE74
 		private unsafe void SpawnSpecials(SolvedData solved)
 		{
 			int i = 0;
@@ -1284,7 +1284,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SpawnSlotSeqs.Clear();
 		}
 
-		// Token: 0x06040DFF RID: 265727 RVA: 0x00FB8EE8 File Offset: 0x00FB70E8
+		// Token: 0x06035AC3 RID: 219843 RVA: 0x00EFFF18 File Offset: 0x00EFE118
 		private bool TryFindEmptyCellInSeq(in ItemSequence seq, GridPosition exclude, out GridPosition found)
 		{
 			for (int i = 0; i < seq.HLen; i++)
@@ -1311,113 +1311,113 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return false;
 		}
 
-		// Token: 0x04021CC2 RID: 138434
+		// Token: 0x0401C5F3 RID: 116211
 		private readonly Board Board;
 
-		// Token: 0x04021CC3 RID: 138435
+		// Token: 0x0401C5F4 RID: 116212
 		private readonly SequenceDetector Detector;
 
-		// Token: 0x04021CC4 RID: 138436
+		// Token: 0x0401C5F5 RID: 116213
 		private readonly BoardFillStrategy FillStrategy;
 
-		// Token: 0x04021CC5 RID: 138437
+		// Token: 0x0401C5F6 RID: 116214
 		private readonly EnergyPool Energy;
 
-		// Token: 0x04021CC6 RID: 138438
+		// Token: 0x0401C5F7 RID: 116215
 		private readonly GameRandom Rng;
 
-		// Token: 0x04021CC7 RID: 138439
+		// Token: 0x0401C5F8 RID: 116216
 		private readonly HashSet<int> DirtyCols = new HashSet<int>();
 
-		// Token: 0x04021CC8 RID: 138440
+		// Token: 0x0401C5F9 RID: 116217
 		private readonly List<PieceClearEvent> PieceClears = new List<PieceClearEvent>();
 
-		// Token: 0x04021CC9 RID: 138441
+		// Token: 0x0401C5FA RID: 116218
 		private readonly List<PieceHitEvent> PieceHits = new List<PieceHitEvent>();
 
-		// Token: 0x04021CCA RID: 138442
+		// Token: 0x0401C5FB RID: 116219
 		private readonly List<PieceTransformEvent> PieceTransforms = new List<PieceTransformEvent>();
 
-		// Token: 0x04021CCB RID: 138443
+		// Token: 0x0401C5FC RID: 116220
 		private readonly List<PieceAttachEvent> PieceAttaches = new List<PieceAttachEvent>();
 
-		// Token: 0x04021CCC RID: 138444
+		// Token: 0x0401C5FD RID: 116221
 		private readonly List<PieceRecolorEvent> PieceRecolors = new List<PieceRecolorEvent>();
 
-		// Token: 0x04021CCD RID: 138445
+		// Token: 0x0401C5FE RID: 116222
 		private readonly List<PieceMoveEvent> PieceMoves = new List<PieceMoveEvent>();
 
-		// Token: 0x04021CCE RID: 138446
+		// Token: 0x0401C5FF RID: 116223
 		private readonly List<MechanicTipEvent> MechanicTips = new List<MechanicTipEvent>();
 
-		// Token: 0x04021CCF RID: 138447
+		// Token: 0x0401C600 RID: 116224
 		private readonly List<SkillTipEvent> SkillTips = new List<SkillTipEvent>();
 
-		// Token: 0x04021CD0 RID: 138448
+		// Token: 0x0401C601 RID: 116225
 		private readonly List<ScorePopEvent> ScorePops = new List<ScorePopEvent>();
 
-		// Token: 0x04021CD1 RID: 138449
+		// Token: 0x0401C602 RID: 116226
 		private int EnergyTrailCharged;
 
-		// Token: 0x04021CD2 RID: 138450
+		// Token: 0x0401C603 RID: 116227
 		private readonly List<SkillTrailEvent> SkillTrails = new List<SkillTrailEvent>();
 
-		// Token: 0x04021CD3 RID: 138451
+		// Token: 0x0401C604 RID: 116228
 		private readonly List<MechanicTrailEvent> MechanicTrails = new List<MechanicTrailEvent>();
 
-		// Token: 0x04021CD4 RID: 138452
+		// Token: 0x0401C605 RID: 116229
 		private readonly List<RecycleTrailSettleEvent> RecycleTrailSettles = new List<RecycleTrailSettleEvent>();
 
-		// Token: 0x04021CD5 RID: 138453
+		// Token: 0x0401C606 RID: 116230
 		public readonly List<int> LandedCols = new List<int>();
 
-		// Token: 0x04021CD6 RID: 138454
+		// Token: 0x0401C607 RID: 116231
 		private readonly SegmentJobs[] SegmentBuffers = new SegmentJobs[]
 		{
 			new SegmentJobs(),
 			new SegmentJobs()
 		};
 
-		// Token: 0x04021CD7 RID: 138455
+		// Token: 0x0401C608 RID: 116232
 		private int SegmentBufferIndex;
 
-		// Token: 0x04021CD8 RID: 138456
+		// Token: 0x0401C609 RID: 116233
 		private readonly Queue<CascadeResolver.ClearRequest> ClearQueue = new Queue<CascadeResolver.ClearRequest>(56);
 
-		// Token: 0x04021CD9 RID: 138457
+		// Token: 0x0401C60A RID: 116234
 		private readonly bool[] RequestedClearCells;
 
-		// Token: 0x04021CDA RID: 138458
+		// Token: 0x0401C60B RID: 116235
 		private readonly bool[] RequestedRejudgeCells;
 
-		// Token: 0x04021CDB RID: 138459
+		// Token: 0x0401C60C RID: 116236
 		private readonly bool[] RequestedDirectChainHitCells;
 
-		// Token: 0x04021CDC RID: 138460
+		// Token: 0x0401C60D RID: 116237
 		private readonly int[] PendingHealthClearCounts;
 
-		// Token: 0x04021CDD RID: 138461
+		// Token: 0x0401C60E RID: 116238
 		private readonly bool[] ClearedCells;
 
-		// Token: 0x04021CDE RID: 138462
+		// Token: 0x0401C60F RID: 116239
 		private readonly bool[] ClaimedCenters;
 
-		// Token: 0x04021CDF RID: 138463
+		// Token: 0x0401C610 RID: 116240
 		private readonly bool[] HitCells;
 
-		// Token: 0x04021CE0 RID: 138464
+		// Token: 0x0401C611 RID: 116241
 		private readonly bool[] DirectChainHitCells;
 
-		// Token: 0x04021CE1 RID: 138465
+		// Token: 0x0401C612 RID: 116242
 		private readonly List<CascadeResolver.ChainDirectHitData> DirectChainHits = new List<CascadeResolver.ChainDirectHitData>();
 
-		// Token: 0x04021CE2 RID: 138466
+		// Token: 0x0401C613 RID: 116243
 		private readonly bool[] DetonationDependencyVisited;
 
-		// Token: 0x04021CE3 RID: 138467
+		// Token: 0x0401C614 RID: 116244
 		private readonly int[] ClearEventIdx;
 
-		// Token: 0x04021CE4 RID: 138468
+		// Token: 0x0401C615 RID: 116245
 		[Nullable(new byte[]
 		{
 			1,
@@ -1425,79 +1425,79 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 		})]
 		private readonly EliminateRule[] SeqCellRule;
 
-		// Token: 0x04021CE5 RID: 138469
+		// Token: 0x0401C616 RID: 116246
 		[Nullable(2)]
 		private EliminateRule CurrentRule;
 
-		// Token: 0x04021CE6 RID: 138470
+		// Token: 0x0401C617 RID: 116247
 		private readonly CascadeResolver.CascadeResolverContext Context;
 
-		// Token: 0x04021CE7 RID: 138471
+		// Token: 0x0401C618 RID: 116248
 		private readonly CascadeResolver.MechanicContext MechanicCtx;
 
-		// Token: 0x04021CE8 RID: 138472
+		// Token: 0x0401C619 RID: 116249
 		[Nullable(2)]
 		private SolvedData CurrentSolved;
 
-		// Token: 0x04021CE9 RID: 138473
+		// Token: 0x0401C61A RID: 116250
 		private readonly Action<int, int> EnqueueCell;
 
-		// Token: 0x04021CEA RID: 138474
+		// Token: 0x0401C61B RID: 116251
 		private readonly int[] Dr;
 
-		// Token: 0x04021CEB RID: 138475
+		// Token: 0x0401C61C RID: 116252
 		private readonly int[] Dc;
 
-		// Token: 0x04021CEC RID: 138476
+		// Token: 0x0401C61D RID: 116253
 		private readonly Dictionary<EPieceType, IReadOnlyList<EliminateRule>> RulesByType;
 
-		// Token: 0x04021CF0 RID: 138480
+		// Token: 0x0401C621 RID: 116257
 		private EPieceType? CurrentDetonator;
 
-		// Token: 0x04021CF1 RID: 138481
+		// Token: 0x0401C622 RID: 116258
 		private bool CurrentRequestIsChainFollowUp;
 
-		// Token: 0x04021CF2 RID: 138482
+		// Token: 0x0401C623 RID: 116259
 		[Nullable(2)]
 		private EliminateRule CurrentClearRule;
 
-		// Token: 0x04021CF3 RID: 138483
+		// Token: 0x0401C624 RID: 116260
 		private int CurrentClearDelayMs;
 
-		// Token: 0x04021CF4 RID: 138484
+		// Token: 0x0401C625 RID: 116261
 		private GridPosition? CurrentLandAnchor;
 
-		// Token: 0x04021CF5 RID: 138485
+		// Token: 0x0401C626 RID: 116262
 		[Nullable(2)]
 		private BombComponent SharedChainBomb;
 
-		// Token: 0x04021CF6 RID: 138486
+		// Token: 0x0401C627 RID: 116263
 		[Nullable(2)]
 		private CrossClearComponent SharedChainCross;
 
-		// Token: 0x04021CF7 RID: 138487
+		// Token: 0x0401C628 RID: 116264
 		private bool ChainTicked;
 
-		// Token: 0x04021CF8 RID: 138488
+		// Token: 0x0401C629 RID: 116265
 		private GridPosition? PreferredChainSource;
 
-		// Token: 0x04021CF9 RID: 138489
+		// Token: 0x0401C62A RID: 116266
 		private GridPosition? AlternateChainSource;
 
-		// Token: 0x04021CFA RID: 138490
+		// Token: 0x0401C62B RID: 116267
 		private bool SuppressChainDetonationTrails;
 
-		// Token: 0x04021CFB RID: 138491
+		// Token: 0x0401C62C RID: 116268
 		private readonly List<ItemSequence> SpawnSlotSeqs;
 
-		// Token: 0x04021CFC RID: 138492
+		// Token: 0x0401C62D RID: 116269
 		private readonly MatchThreeStatsKeeper Stats;
 
-		// Token: 0x0200C72B RID: 50987
+		// Token: 0x0200B111 RID: 45329
 		[NullableContext(0)]
 		private readonly struct ChainDirectHitData
 		{
-			// Token: 0x06050EA8 RID: 331432 RVA: 0x015DEC19 File Offset: 0x015DCE19
+			// Token: 0x06047388 RID: 291720 RVA: 0x01596975 File Offset: 0x01594B75
 			public ChainDirectHitData(GridPosition pos, int delayMs, EPieceClearReason reason, GridPosition? trailOrigin, GridPosition? landAnchor, EDirectedTrailType directedTrail, GridPosition? detonationSource)
 			{
 				this.Pos = pos;
@@ -1509,33 +1509,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.DetonationSource = detonationSource;
 			}
 
-			// Token: 0x0403C2B9 RID: 246457
+			// Token: 0x04036C14 RID: 224276
 			public readonly GridPosition Pos;
 
-			// Token: 0x0403C2BA RID: 246458
+			// Token: 0x04036C15 RID: 224277
 			public readonly int DelayMs;
 
-			// Token: 0x0403C2BB RID: 246459
+			// Token: 0x04036C16 RID: 224278
 			public readonly EPieceClearReason Reason;
 
-			// Token: 0x0403C2BC RID: 246460
+			// Token: 0x04036C17 RID: 224279
 			public readonly GridPosition? TrailOrigin;
 
-			// Token: 0x0403C2BD RID: 246461
+			// Token: 0x04036C18 RID: 224280
 			public readonly GridPosition? LandAnchor;
 
-			// Token: 0x0403C2BE RID: 246462
+			// Token: 0x04036C19 RID: 224281
 			public readonly EDirectedTrailType DirectedTrail;
 
-			// Token: 0x0403C2BF RID: 246463
+			// Token: 0x04036C1A RID: 224282
 			public readonly GridPosition? DetonationSource;
 		}
 
-		// Token: 0x0200C72C RID: 50988
+		// Token: 0x0200B112 RID: 45330
 		[NullableContext(0)]
 		private readonly struct ClearRequest
 		{
-			// Token: 0x06050EA9 RID: 331433 RVA: 0x015DEC50 File Offset: 0x015DCE50
+			// Token: 0x06047389 RID: 291721 RVA: 0x015969AC File Offset: 0x01594BAC
 			public ClearRequest(GridPosition pos, int delayMs, EPieceClearReason reason, EPieceType? source = null, GridPosition? trailOrigin = null, GridPosition? landAnchor = null, EDirectedTrailType directedTrail = EDirectedTrailType.None, bool opensDirectedTrails = false, bool isChainFollowUp = false, GridPosition? detonationSource = null, bool isRejudgeOnly = false)
 			{
 				this.Pos = pos;
@@ -1551,51 +1551,51 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.IsRejudgeOnly = isRejudgeOnly;
 			}
 
-			// Token: 0x0403C2C0 RID: 246464
+			// Token: 0x04036C1B RID: 224283
 			public readonly GridPosition Pos;
 
-			// Token: 0x0403C2C1 RID: 246465
+			// Token: 0x04036C1C RID: 224284
 			public readonly int DelayMs;
 
-			// Token: 0x0403C2C2 RID: 246466
+			// Token: 0x04036C1D RID: 224285
 			public readonly EPieceClearReason Reason;
 
-			// Token: 0x0403C2C3 RID: 246467
+			// Token: 0x04036C1E RID: 224286
 			public readonly EPieceType? Source;
 
-			// Token: 0x0403C2C4 RID: 246468
+			// Token: 0x04036C1F RID: 224287
 			public readonly GridPosition? TrailOrigin;
 
-			// Token: 0x0403C2C5 RID: 246469
+			// Token: 0x04036C20 RID: 224288
 			public readonly GridPosition? LandAnchor;
 
-			// Token: 0x0403C2C6 RID: 246470
+			// Token: 0x04036C21 RID: 224289
 			public readonly EDirectedTrailType DirectedTrail;
 
-			// Token: 0x0403C2C7 RID: 246471
+			// Token: 0x04036C22 RID: 224290
 			public readonly bool OpensDirectedTrails;
 
-			// Token: 0x0403C2C8 RID: 246472
+			// Token: 0x04036C23 RID: 224291
 			public readonly bool IsChainFollowUp;
 
-			// Token: 0x0403C2C9 RID: 246473
+			// Token: 0x04036C24 RID: 224292
 			public readonly GridPosition? DetonationSource;
 
-			// Token: 0x0403C2CA RID: 246474
+			// Token: 0x04036C25 RID: 224293
 			public readonly bool IsRejudgeOnly;
 		}
 
-		// Token: 0x0200C72D RID: 50989
+		// Token: 0x0200B113 RID: 45331
 		[Nullable(0)]
 		private sealed class CascadeResolverContext : IDispatchContext
 		{
-			// Token: 0x06050EAA RID: 331434 RVA: 0x015DECB2 File Offset: 0x015DCEB2
+			// Token: 0x0604738A RID: 291722 RVA: 0x01596A0E File Offset: 0x01594C0E
 			public CascadeResolverContext(CascadeResolver owner)
 			{
 			}
 
-			// Token: 0x1700A28C RID: 41612
-			// (get) Token: 0x06050EAB RID: 331435 RVA: 0x015DECC1 File Offset: 0x015DCEC1
+			// Token: 0x17007A29 RID: 31273
+			// (get) Token: 0x0604738B RID: 291723 RVA: 0x01596A1D File Offset: 0x01594C1D
 			public Board Board
 			{
 				get
@@ -1604,7 +1604,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050EAC RID: 331436 RVA: 0x015DECD0 File Offset: 0x015DCED0
+			// Token: 0x0604738C RID: 291724 RVA: 0x01596A2C File Offset: 0x01594C2C
 			public void RequestClear(GridPosition pos, int delayMs = 0, EPieceClearReason reason = EPieceClearReason.Matched, GridPosition? detonationSource = null)
 			{
 				if (!this.Board.InBounds(pos.Row, pos.Col))
@@ -1625,7 +1625,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				owner.EnqueueClearRequest(new CascadeResolver.ClearRequest(pos, delayMs2, reason, currentDetonator, null, currentLandAnchor, EDirectedTrailType.None, false, currentRequestIsChainFollowUp, detonationSource2, false));
 			}
 
-			// Token: 0x06050EAD RID: 331437 RVA: 0x015DED88 File Offset: 0x015DCF88
+			// Token: 0x0604738D RID: 291725 RVA: 0x01596AE4 File Offset: 0x01594CE4
 			public void MarkCrossClearPresentation(GridPosition pos)
 			{
 				int num = pos.Row * 8 + pos.Col;
@@ -1662,7 +1662,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			}
 
-			// Token: 0x06050EAE RID: 331438 RVA: 0x015DEED8 File Offset: 0x015DD0D8
+			// Token: 0x0604738E RID: 291726 RVA: 0x01596C34 File Offset: 0x01594E34
 			public void MarkDetonationPresentation(GridPosition pos)
 			{
 				int num = pos.Row * 8 + pos.Col;
@@ -1699,7 +1699,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			}
 
-			// Token: 0x06050EAF RID: 331439 RVA: 0x015DF028 File Offset: 0x015DD228
+			// Token: 0x0604738F RID: 291727 RVA: 0x01596D84 File Offset: 0x01594F84
 			public void RequestUltimateStrike(GridPosition origin, GridPosition target, EPieceClearReason reason)
 			{
 				if (!this.Board.InBounds(target.Row, target.Col))
@@ -1714,7 +1714,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				owner.EnqueueClearRequest(new CascadeResolver.ClearRequest(target, delayMs, reason, currentDetonator, trailOrigin, null, EDirectedTrailType.Ultimate, false, currentRequestIsChainFollowUp, null, false));
 			}
 
-			// Token: 0x06050EB0 RID: 331440 RVA: 0x015DF098 File Offset: 0x015DD298
+			// Token: 0x06047390 RID: 291728 RVA: 0x01596DF4 File Offset: 0x01594FF4
 			public void RemovePiece(GridPosition pos)
 			{
 				if (!this.Board.InBounds(pos.Row, pos.Col))
@@ -1724,8 +1724,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.Owner.ClearCell(this.Owner.CurrentSolved, pos, true, 0, EPieceClearReason.ClearSelf, null, null, null, EDirectedTrailType.None, false, null);
 			}
 
-			// Token: 0x1700A28D RID: 41613
-			// (get) Token: 0x06050EB1 RID: 331441 RVA: 0x015DF0FF File Offset: 0x015DD2FF
+			// Token: 0x17007A2A RID: 31274
+			// (get) Token: 0x06047391 RID: 291729 RVA: 0x01596E5B File Offset: 0x0159505B
 			[Nullable(2)]
 			public EliminateRule CurrentClearRule
 			{
@@ -1736,19 +1736,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050EB2 RID: 331442 RVA: 0x015DF10C File Offset: 0x015DD30C
+			// Token: 0x06047392 RID: 291730 RVA: 0x01596E68 File Offset: 0x01595068
 			public void AddScore(int amount)
 			{
 				this.Owner.LastSegmentScore += amount;
 			}
 
-			// Token: 0x06050EB3 RID: 331443 RVA: 0x015DF121 File Offset: 0x015DD321
+			// Token: 0x06047393 RID: 291731 RVA: 0x01596E7D File Offset: 0x0159507D
 			public void AddCharge(int amount)
 			{
 				this.Owner.LastSegmentCharge += amount;
 			}
 
-			// Token: 0x06050EB4 RID: 331444 RVA: 0x015DF136 File Offset: 0x015DD336
+			// Token: 0x06047394 RID: 291732 RVA: 0x01596E92 File Offset: 0x01595092
 			public void AddTurns(int amount)
 			{
 				if (amount <= 0)
@@ -1760,33 +1760,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				currentSolved.SegmentTurnGain += amount;
 			}
 
-			// Token: 0x06050EB5 RID: 331445 RVA: 0x015DF163 File Offset: 0x015DD363
+			// Token: 0x06047395 RID: 291733 RVA: 0x01596EBF File Offset: 0x015950BF
 			public void EmitEnergyTrail(int energy)
 			{
 				this.Owner.EnergyTrailCharged += energy;
 				this.Owner.LastSegmentTrailCharge += energy;
 			}
 
-			// Token: 0x06050EB6 RID: 331446 RVA: 0x015DF18B File Offset: 0x015DD38B
+			// Token: 0x06047396 RID: 291734 RVA: 0x01596EE7 File Offset: 0x015950E7
 			public int NextRandom(int maxExclusive)
 			{
 				return this.Owner.Rng.Next(maxExclusive);
 			}
 
-			// Token: 0x0403C2CB RID: 246475
+			// Token: 0x04036C26 RID: 224294
 			private readonly CascadeResolver Owner = owner;
 		}
 
-		// Token: 0x0200C72E RID: 50990
+		// Token: 0x0200B114 RID: 45332
 		[Nullable(0)]
 		private sealed class MechanicContext : IMechanicContext, ISkillContext
 		{
-			// Token: 0x06050EB7 RID: 331447 RVA: 0x015DF1A0 File Offset: 0x015DD3A0
+			// Token: 0x06047397 RID: 291735 RVA: 0x01596EFC File Offset: 0x015950FC
 			public MechanicContext(CascadeResolver owner)
 			{
 			}
 
-			// Token: 0x06050EB8 RID: 331448 RVA: 0x015DF222 File Offset: 0x015DD422
+			// Token: 0x06047398 RID: 291736 RVA: 0x01596F7E File Offset: 0x0159517E
 			public IReadOnlyList<GridPosition> PickGenerateCells(int count, IReadOnlyList<CellZone> zones)
 			{
 				this.PickResult.Clear();
@@ -1800,7 +1800,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return this.PickResult;
 			}
 
-			// Token: 0x06050EB9 RID: 331449 RVA: 0x015DF260 File Offset: 0x015DD460
+			// Token: 0x06047399 RID: 291737 RVA: 0x01596FBC File Offset: 0x015951BC
 			private void PickGenerateCellsByBuff(int count, IReadOnlyList<CellZone> zones, bool buffed)
 			{
 				int num = 0;
@@ -1829,7 +1829,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050EBA RID: 331450 RVA: 0x015DF35C File Offset: 0x015DD55C
+			// Token: 0x0604739A RID: 291738 RVA: 0x015970B8 File Offset: 0x015952B8
 			private static bool CoveredByEarlierZone(IReadOnlyList<CellZone> zones, int zoneIndex, int row, int col)
 			{
 				for (int i = 0; i < zoneIndex; i++)
@@ -1842,7 +1842,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return false;
 			}
 
-			// Token: 0x06050EBB RID: 331451 RVA: 0x015DF38C File Offset: 0x015DD58C
+			// Token: 0x0604739B RID: 291739 RVA: 0x015970E8 File Offset: 0x015952E8
 			private void TakeRandom(List<GridPosition> candidates, int count)
 			{
 				while (this.PickResult.Count < count && candidates.Count > 0)
@@ -1854,7 +1854,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050EBC RID: 331452 RVA: 0x015DF3FE File Offset: 0x015DD5FE
+			// Token: 0x0604739C RID: 291740 RVA: 0x0159715A File Offset: 0x0159535A
 			public int GetRecycleClearCount(EPieceType type)
 			{
 				if (this.Owner.CurrentSolved == null)
@@ -1872,7 +1872,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return 0;
 			}
 
-			// Token: 0x06050EBD RID: 331453 RVA: 0x015DF43C File Offset: 0x015DD63C
+			// Token: 0x0604739D RID: 291741 RVA: 0x01597198 File Offset: 0x01595398
 			[NullableContext(2)]
 			public void TransformPiece(int envId, GridPosition pos, EPieceType type, int[] extra = null)
 			{
@@ -1885,7 +1885,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.Owner.PieceTransforms.Add(new PieceTransformEvent(pos, type, piece));
 			}
 
-			// Token: 0x06050EBE RID: 331454 RVA: 0x015DF49D File Offset: 0x015DD69D
+			// Token: 0x0604739E RID: 291742 RVA: 0x015971F9 File Offset: 0x015953F9
 			[NullableContext(2)]
 			public void ShowTip(string textId, int remainingRounds, int generateCount)
 			{
@@ -1896,13 +1896,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.Owner.MechanicTips.Add(new MechanicTipEvent(textId, remainingRounds, generateCount));
 			}
 
-			// Token: 0x06050EBF RID: 331455 RVA: 0x015DF4C0 File Offset: 0x015DD6C0
+			// Token: 0x0604739F RID: 291743 RVA: 0x0159721C File Offset: 0x0159541C
 			public int NextRandom(int maxExclusive)
 			{
 				return this.Owner.Rng.Next(maxExclusive);
 			}
 
-			// Token: 0x06050EC0 RID: 331456 RVA: 0x015DF4D4 File Offset: 0x015DD6D4
+			// Token: 0x060473A0 RID: 291744 RVA: 0x01597230 File Offset: 0x01595430
 			public void ApplyAllureSmallRecolor(int skillId)
 			{
 				for (int i = 5; i >= 3; i--)
@@ -1915,13 +1915,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.ApplyAllureRandomFallback(skillId);
 			}
 
-			// Token: 0x06050EC1 RID: 331457 RVA: 0x015DF4FF File Offset: 0x015DD6FF
+			// Token: 0x060473A1 RID: 291745 RVA: 0x0159725B File Offset: 0x0159545B
 			private bool TryApplyAllureWindowByLength(int skillId, int length)
 			{
 				return this.TryApplyAllureWindowInArea(skillId, length, true) || this.TryApplyAllureWindowInArea(skillId, length, false);
 			}
 
-			// Token: 0x06050EC2 RID: 331458 RVA: 0x015DF518 File Offset: 0x015DD718
+			// Token: 0x060473A2 RID: 291746 RVA: 0x01597274 File Offset: 0x01595474
 			private bool TryApplyAllureWindowInArea(int skillId, int length, bool centerArea)
 			{
 				int rowStart = (centerArea > false) ? 1 : 0;
@@ -1932,7 +1932,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return this.TryApplyAllureWindowInDirection(skillId, length, rowStart, rowEnd, colStart, colEnd, flag, centerArea) || this.TryApplyAllureWindowInDirection(skillId, length, rowStart, rowEnd, colStart, colEnd, !flag, centerArea);
 			}
 
-			// Token: 0x06050EC3 RID: 331459 RVA: 0x015DF57C File Offset: 0x015DD77C
+			// Token: 0x060473A3 RID: 291747 RVA: 0x015972D8 File Offset: 0x015954D8
 			private bool TryApplyAllureWindowInDirection(int skillId, int length, int rowStart, int rowEnd, int colStart, int colEnd, bool horizontal, bool centerArea)
 			{
 				this.AllureWindowCandidates.Clear();
@@ -1946,7 +1946,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return true;
 			}
 
-			// Token: 0x06050EC4 RID: 331460 RVA: 0x015DF5E4 File Offset: 0x015DD7E4
+			// Token: 0x060473A4 RID: 291748 RVA: 0x01597340 File Offset: 0x01595540
 			private void CollectAllureWindowCandidates(int length, int rowStart, int rowEnd, int colStart, int colEnd, bool horizontal)
 			{
 				if (horizontal)
@@ -1979,7 +1979,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050EC5 RID: 331461 RVA: 0x015DF674 File Offset: 0x015DD874
+			// Token: 0x060473A5 RID: 291749 RVA: 0x015973D0 File Offset: 0x015955D0
 			private bool IsAllureWindowValid(int row, int col, int length, bool horizontal)
 			{
 				for (int i = 0; i < length; i++)
@@ -1995,7 +1995,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return true;
 			}
 
-			// Token: 0x06050EC6 RID: 331462 RVA: 0x015DF6D0 File Offset: 0x015DD8D0
+			// Token: 0x060473A6 RID: 291750 RVA: 0x0159742C File Offset: 0x0159562C
 			private int ApplyAllureWindow(CascadeResolver.MechanicContext.AllureWindowCandidate candidate, ESkillRecolorPresentation presentation)
 			{
 				this.PickResult.Clear();
@@ -2008,7 +2008,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return this.ApplyAllurePositions(this.PickResult, presentation);
 			}
 
-			// Token: 0x06050EC7 RID: 331463 RVA: 0x015DF74C File Offset: 0x015DD94C
+			// Token: 0x060473A7 RID: 291751 RVA: 0x015974A8 File Offset: 0x015956A8
 			private void ApplyAllureRandomFallback(int skillId)
 			{
 				this.AllureRandomCells.Clear();
@@ -2031,7 +2031,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050EC8 RID: 331464 RVA: 0x015DF7EC File Offset: 0x015DD9EC
+			// Token: 0x060473A8 RID: 291752 RVA: 0x01597548 File Offset: 0x01595748
 			private int ApplyAllurePositions(IReadOnlyList<GridPosition> positions, ESkillRecolorPresentation presentation)
 			{
 				this.AllureColors.Clear();
@@ -2062,7 +2062,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return num;
 			}
 
-			// Token: 0x06050EC9 RID: 331465 RVA: 0x015DF8E4 File Offset: 0x015DDAE4
+			// Token: 0x060473A9 RID: 291753 RVA: 0x01597640 File Offset: 0x01595840
 			private void AddAllureColor(EPieceType type)
 			{
 				for (int i = 0; i < this.AllureColors.Count; i++)
@@ -2075,7 +2075,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.AllureColors.Add(type);
 			}
 
-			// Token: 0x06050ECA RID: 331466 RVA: 0x015DF924 File Offset: 0x015DDB24
+			// Token: 0x060473AA RID: 291754 RVA: 0x01597680 File Offset: 0x01595880
 			public void ApplyAllureUltimateRecolor(int skillId, IReadOnlyList<int> sourceRanks, int targetRank)
 			{
 				EPieceType[] array = new EPieceType[]
@@ -2120,7 +2120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.RecolorAllureSourceColors(sourceRanks2, array, targetType);
 			}
 
-			// Token: 0x06050ECB RID: 331467 RVA: 0x015DF9D4 File Offset: 0x015DDBD4
+			// Token: 0x060473AB RID: 291755 RVA: 0x01597730 File Offset: 0x01595930
 			private unsafe bool ValidateAllureUltimateRanks(int skillId, IReadOnlyList<int> sourceRanks, int targetRank, int colorCount)
 			{
 				if (sourceRanks.Count == 0)
@@ -2167,7 +2167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return true;
 			}
 
-			// Token: 0x06050ECC RID: 331468 RVA: 0x015DFB78 File Offset: 0x015DDD78
+			// Token: 0x060473AC RID: 291756 RVA: 0x015978D4 File Offset: 0x01595AD4
 			private void ShuffleAllureColors(EPieceType[] colors)
 			{
 				for (int i = 0; i < colors.Length - 1; i++)
@@ -2179,7 +2179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050ECD RID: 331469 RVA: 0x015DFBBC File Offset: 0x015DDDBC
+			// Token: 0x060473AD RID: 291757 RVA: 0x01597918 File Offset: 0x01595B18
 			private void CountAllureColors(EPieceType[] colors, int[] counts)
 			{
 				for (int i = 0; i < 7; i++)
@@ -2199,7 +2199,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050ECE RID: 331470 RVA: 0x015DFC14 File Offset: 0x015DDE14
+			// Token: 0x060473AE RID: 291758 RVA: 0x01597970 File Offset: 0x01595B70
 			private static int IndexOfAllureColor(EPieceType[] colors, EPieceType type)
 			{
 				for (int i = 0; i < colors.Length; i++)
@@ -2212,7 +2212,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return -1;
 			}
 
-			// Token: 0x06050ECF RID: 331471 RVA: 0x015DFC38 File Offset: 0x015DDE38
+			// Token: 0x060473AF RID: 291759 RVA: 0x01597994 File Offset: 0x01595B94
 			private static void SortAllureColorsByCount(EPieceType[] colors, int[] counts)
 			{
 				for (int i = 0; i < colors.Length - 1; i++)
@@ -2237,7 +2237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050ED0 RID: 331472 RVA: 0x015DFC98 File Offset: 0x015DDE98
+			// Token: 0x060473B0 RID: 291760 RVA: 0x015979F4 File Offset: 0x01595BF4
 			private static int CountNonZeroColors(int[] counts)
 			{
 				int num = 0;
@@ -2251,7 +2251,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return num;
 			}
 
-			// Token: 0x06050ED1 RID: 331473 RVA: 0x015DFCC0 File Offset: 0x015DDEC0
+			// Token: 0x060473B1 RID: 291761 RVA: 0x01597A1C File Offset: 0x01595C1C
 			private int RecolorAllureSourceColors(IReadOnlyList<int> sourceRanks, EPieceType[] colors, EPieceType targetType)
 			{
 				int num = 0;
@@ -2269,7 +2269,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return num;
 			}
 
-			// Token: 0x06050ED2 RID: 331474 RVA: 0x015DFD24 File Offset: 0x015DDF24
+			// Token: 0x060473B2 RID: 291762 RVA: 0x01597A80 File Offset: 0x01595C80
 			private bool IsAllureSourceType(EPieceType pieceType, IReadOnlyList<int> sourceRanks, EPieceType[] colors)
 			{
 				for (int i = 0; i < sourceRanks.Count; i++)
@@ -2282,7 +2282,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return false;
 			}
 
-			// Token: 0x06050ED3 RID: 331475 RVA: 0x015DFD54 File Offset: 0x015DDF54
+			// Token: 0x060473B3 RID: 291763 RVA: 0x01597AB0 File Offset: 0x01595CB0
 			private unsafe bool AddRecolorEvent(GridPosition pos, EPieceType targetType, ESkillRecolorPresentation presentation)
 			{
 				Piece piece = this.Owner.Board.GetPiece(pos.Row, pos.Col);
@@ -2318,7 +2318,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return true;
 			}
 
-			// Token: 0x06050ED4 RID: 331476 RVA: 0x015DFEB8 File Offset: 0x015DE0B8
+			// Token: 0x060473B4 RID: 291764 RVA: 0x01597C14 File Offset: 0x01595E14
 			public void AttachChain(GridPosition pos, int[] chainExtra, bool withBomb, bool withTrail)
 			{
 				if (withBomb)
@@ -2338,7 +2338,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.Owner.PieceAttaches.Add(new PieceAttachEvent(pos, piece));
 			}
 
-			// Token: 0x06050ED5 RID: 331477 RVA: 0x015DFF44 File Offset: 0x015DE144
+			// Token: 0x060473B5 RID: 291765 RVA: 0x01597CA0 File Offset: 0x01595EA0
 			public IReadOnlyList<GridPosition> PickChainCells(int count, out bool anyEffectCarrier)
 			{
 				this.PickResult.Clear();
@@ -2399,7 +2399,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return this.PickResult;
 			}
 
-			// Token: 0x06050ED6 RID: 331478 RVA: 0x015E00EC File Offset: 0x015DE2EC
+			// Token: 0x060473B6 RID: 291766 RVA: 0x01597E48 File Offset: 0x01596048
 			private bool TryTakeEffectTypePair(int count, out int pairDistance)
 			{
 				pairDistance = 3;
@@ -2444,7 +2444,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return false;
 			}
 
-			// Token: 0x06050ED7 RID: 331479 RVA: 0x015E025C File Offset: 0x015DE45C
+			// Token: 0x060473B7 RID: 291767 RVA: 0x01597FB8 File Offset: 0x015961B8
 			private void TakeEffectSpread(int count, int distance)
 			{
 				bool flag = this.TakeOneEffectSpread(count, distance);
@@ -2454,7 +2454,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050ED8 RID: 331480 RVA: 0x015E0280 File Offset: 0x015DE480
+			// Token: 0x060473B8 RID: 291768 RVA: 0x01597FDC File Offset: 0x015961DC
 			private void TakeNormalSpread(int count, int distance)
 			{
 				bool flag = this.TakeOneSpread(this.Candidates, count, distance);
@@ -2464,7 +2464,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x06050ED9 RID: 331481 RVA: 0x015E02B0 File Offset: 0x015DE4B0
+			// Token: 0x060473B9 RID: 291769 RVA: 0x0159800C File Offset: 0x0159620C
 			private bool TakeOneEffectSpread(int count, int distance)
 			{
 				if (this.PickResult.Count >= count)
@@ -2479,7 +2479,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return this.TakeOneEffectCandidate(this.CrossCandidates, false, count, distance) || this.TakeOneEffectCandidate(this.BombCandidates, true, count, distance);
 			}
 
-			// Token: 0x06050EDA RID: 331482 RVA: 0x015E034C File Offset: 0x015DE54C
+			// Token: 0x060473BA RID: 291770 RVA: 0x015980A8 File Offset: 0x015962A8
 			private bool TakeOneEffectCandidate(List<GridPosition> candidates, bool isBomb, int count, int distance)
 			{
 				if (!this.TakeOneSpread(candidates, count, distance))
@@ -2498,7 +2498,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return true;
 			}
 
-			// Token: 0x06050EDB RID: 331483 RVA: 0x015E0388 File Offset: 0x015DE588
+			// Token: 0x060473BB RID: 291771 RVA: 0x015980E4 File Offset: 0x015962E4
 			private bool TakeOneSpread(List<GridPosition> candidates, int count, int distance)
 			{
 				if (this.PickResult.Count >= count)
@@ -2517,13 +2517,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return false;
 			}
 
-			// Token: 0x06050EDC RID: 331484 RVA: 0x015E03E2 File Offset: 0x015DE5E2
+			// Token: 0x060473BC RID: 291772 RVA: 0x0159813E File Offset: 0x0159633E
 			private bool FarEnough(GridPosition pos, int distance)
 			{
 				return CascadeResolver.MechanicContext.FarFromAll(this.PickResult, pos, distance) && CascadeResolver.MechanicContext.FarFromAll(this.ExistingBlocks, pos, distance);
 			}
 
-			// Token: 0x06050EDD RID: 331485 RVA: 0x015E0404 File Offset: 0x015DE604
+			// Token: 0x060473BD RID: 291773 RVA: 0x01598160 File Offset: 0x01596360
 			private static bool FarFromAll(List<GridPosition> cells, GridPosition pos, int distance)
 			{
 				for (int i = 0; i < cells.Count; i++)
@@ -2536,7 +2536,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				return true;
 			}
 
-			// Token: 0x06050EDE RID: 331486 RVA: 0x015E045C File Offset: 0x015DE65C
+			// Token: 0x060473BE RID: 291774 RVA: 0x015981B8 File Offset: 0x015963B8
 			private void Shuffle(List<GridPosition> candidates)
 			{
 				for (int i = candidates.Count - 1; i > 0; i--)
@@ -2551,68 +2551,68 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				}
 			}
 
-			// Token: 0x0403C2CC RID: 246476
+			// Token: 0x04036C27 RID: 224295
 			private readonly CascadeResolver Owner = owner;
 
-			// Token: 0x0403C2CD RID: 246477
+			// Token: 0x04036C28 RID: 224296
 			private readonly List<GridPosition> Candidates = new List<GridPosition>();
 
-			// Token: 0x0403C2CE RID: 246478
+			// Token: 0x04036C29 RID: 224297
 			private readonly List<GridPosition> PickResult = new List<GridPosition>();
 
-			// Token: 0x0403C2CF RID: 246479
+			// Token: 0x04036C2A RID: 224298
 			private readonly List<GridPosition> BombCandidates = new List<GridPosition>();
 
-			// Token: 0x0403C2D0 RID: 246480
+			// Token: 0x04036C2B RID: 224299
 			private readonly List<GridPosition> CrossCandidates = new List<GridPosition>();
 
-			// Token: 0x0403C2D1 RID: 246481
+			// Token: 0x04036C2C RID: 224300
 			private readonly List<GridPosition> ExistingBlocks = new List<GridPosition>();
 
-			// Token: 0x0403C2D2 RID: 246482
+			// Token: 0x04036C2D RID: 224301
 			private bool PickedEffectCarrier;
 
-			// Token: 0x0403C2D3 RID: 246483
+			// Token: 0x04036C2E RID: 224302
 			private int PickedBombCount;
 
-			// Token: 0x0403C2D4 RID: 246484
+			// Token: 0x04036C2F RID: 224303
 			private int PickedCrossCount;
 
-			// Token: 0x0403C2D5 RID: 246485
+			// Token: 0x04036C30 RID: 224304
 			private readonly List<CascadeResolver.MechanicContext.AllureWindowCandidate> AllureWindowCandidates = new List<CascadeResolver.MechanicContext.AllureWindowCandidate>();
 
-			// Token: 0x0403C2D6 RID: 246486
+			// Token: 0x04036C31 RID: 224305
 			private readonly List<GridPosition> AllureRandomCells = new List<GridPosition>();
 
-			// Token: 0x0403C2D7 RID: 246487
+			// Token: 0x04036C32 RID: 224306
 			private readonly List<EPieceType> AllureColors = new List<EPieceType>();
 
-			// Token: 0x0403C2D8 RID: 246488
+			// Token: 0x04036C33 RID: 224307
 			private const int AllureCenterRowStart = 1;
 
-			// Token: 0x0403C2D9 RID: 246489
+			// Token: 0x04036C34 RID: 224308
 			private const int AllureCenterRowEnd = 5;
 
-			// Token: 0x0403C2DA RID: 246490
+			// Token: 0x04036C35 RID: 224309
 			private const int AllureCenterColStart = 1;
 
-			// Token: 0x0403C2DB RID: 246491
+			// Token: 0x04036C36 RID: 224310
 			private const int AllureCenterColEnd = 6;
 
-			// Token: 0x0403C2DC RID: 246492
+			// Token: 0x04036C37 RID: 224311
 			private const int AllureFallbackCount = 3;
 
-			// Token: 0x0403C2DD RID: 246493
+			// Token: 0x04036C38 RID: 224312
 			private readonly int[] BombExtra = new int[]
 			{
 				3
 			};
 
-			// Token: 0x0200D1A5 RID: 53669
+			// Token: 0x0200BD83 RID: 48515
 			[NullableContext(0)]
 			private readonly struct AllureWindowCandidate
 			{
-				// Token: 0x06052580 RID: 337280 RVA: 0x0166893E File Offset: 0x01666B3E
+				// Token: 0x06048E1F RID: 298527 RVA: 0x0163DF02 File Offset: 0x0163C102
 				public AllureWindowCandidate(int row, int col, int length, bool horizontal)
 				{
 					this.Row = row;
@@ -2621,16 +2621,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 					this.Horizontal = horizontal;
 				}
 
-				// Token: 0x0403EE88 RID: 257672
+				// Token: 0x0403A2D0 RID: 238288
 				public readonly int Row;
 
-				// Token: 0x0403EE89 RID: 257673
+				// Token: 0x0403A2D1 RID: 238289
 				public readonly int Col;
 
-				// Token: 0x0403EE8A RID: 257674
+				// Token: 0x0403A2D2 RID: 238290
 				public readonly int Length;
 
-				// Token: 0x0403EE8B RID: 257675
+				// Token: 0x0403A2D3 RID: 238291
 				public readonly bool Horizontal;
 			}
 		}

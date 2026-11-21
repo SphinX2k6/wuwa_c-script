@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B12 RID: 15122
+	// Token: 0x02003F14 RID: 16148
 	public class IVarQuestStateValidateConfigT
 	{
-		// Token: 0x170067C2 RID: 26562
-		// (get) Token: 0x06014A47 RID: 84551 RVA: 0x00301396 File Offset: 0x002FF596
-		// (set) Token: 0x06014A48 RID: 84552 RVA: 0x0030139E File Offset: 0x002FF59E
+		// Token: 0x17006D5D RID: 27997
+		// (get) Token: 0x06015EF1 RID: 89841 RVA: 0x00327626 File Offset: 0x00325826
+		// (set) Token: 0x06015EF2 RID: 89842 RVA: 0x0032762E File Offset: 0x0032582E
 		public EVar Type { get; set; }
 
-		// Token: 0x06014A49 RID: 84553 RVA: 0x003013A7 File Offset: 0x002FF5A7
+		// Token: 0x06015EF3 RID: 89843 RVA: 0x00327637 File Offset: 0x00325837
 		public IVarQuestStateValidateConfigT()
 		{
 			this.Type = EVar.Boolean;

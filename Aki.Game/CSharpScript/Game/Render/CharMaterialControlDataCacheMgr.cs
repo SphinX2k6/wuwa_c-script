@@ -6,26 +6,26 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045B8 RID: 17848
+	// Token: 0x020034E0 RID: 13536
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharMaterialControlDataCacheMgr : Singleton
 	{
-		// Token: 0x0602E053 RID: 188499 RVA: 0x00A9A1D8 File Offset: 0x00A983D8
+		// Token: 0x0602273D RID: 141117 RVA: 0x009C63F8 File Offset: 0x009C45F8
 		public CharMaterialControlDataCacheMgr()
 		{
 			this.TickTime = (GlobalData.IsPlayInEditor ? this.TickTimeIntervalEditor : this.TickTimeInterval);
 			this.TickStat = Stat.Create("CharMaterialControlDataCacheMgr.Tick", "", "");
 		}
 
-		// Token: 0x0602E054 RID: 188500 RVA: 0x00A9A262 File Offset: 0x00A98462
+		// Token: 0x0602273E RID: 141118 RVA: 0x009C6482 File Offset: 0x009C4682
 		protected override bool OnInit()
 		{
 			TickSystem.Instance.Add(new Action<float>(this.Tick), "CharMaterialControlDataCacheMgr.Tick", ETickingGroup.TG_EndPhysics, false, 0, false);
 			return true;
 		}
 
-		// Token: 0x0602E055 RID: 188501 RVA: 0x00A9A288 File Offset: 0x00A98488
+		// Token: 0x0602273F RID: 141119 RVA: 0x009C64A8 File Offset: 0x009C46A8
 		[NullableContext(2)]
 		public CharMaterialControlDataCache GetOrCreateDataCache(PD_CharacterControllerData_C data)
 		{
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Render
 			return charMaterialControlDataCache;
 		}
 
-		// Token: 0x0602E056 RID: 188502 RVA: 0x00A9A2F0 File Offset: 0x00A984F0
+		// Token: 0x06022740 RID: 141120 RVA: 0x009C6510 File Offset: 0x009C4710
 		public void RecycleDataCache(string dataName)
 		{
 			CharMaterialControlDataCache charMaterialControlDataCache;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E057 RID: 188503 RVA: 0x00A9A38C File Offset: 0x00A9858C
+		// Token: 0x06022741 RID: 141121 RVA: 0x009C65AC File Offset: 0x009C47AC
 		private void Tick(float deltaTime)
 		{
 			this.TickTime -= deltaTime;
@@ -106,8 +106,8 @@ namespace CSharpScript.Game.Render
 			this.TickTime = num;
 		}
 
-		// Token: 0x17007598 RID: 30104
-		// (get) Token: 0x0602E058 RID: 188504 RVA: 0x00A9A4DC File Offset: 0x00A986DC
+		// Token: 0x1700484F RID: 18511
+		// (get) Token: 0x06022742 RID: 141122 RVA: 0x009C66FC File Offset: 0x009C48FC
 		public static CharMaterialControlDataCacheMgr Instance
 		{
 			get
@@ -121,12 +121,12 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E059 RID: 188505 RVA: 0x00A9A4FF File Offset: 0x00A986FF
+		// Token: 0x06022743 RID: 141123 RVA: 0x009C671F File Offset: 0x009C491F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E05A RID: 188506 RVA: 0x00A9A501 File Offset: 0x00A98701
+		// Token: 0x06022744 RID: 141124 RVA: 0x009C6721 File Offset: 0x009C4921
 		public static void ResetStaticDefaultValue()
 		{
 			CharMaterialControlDataCacheMgr instance = CharMaterialControlDataCacheMgr._instance;
@@ -137,41 +137,41 @@ namespace CSharpScript.Game.Render
 			CharMaterialControlDataCacheMgr._instance = null;
 		}
 
-		// Token: 0x0602E05B RID: 188507 RVA: 0x00A9A51A File Offset: 0x00A9871A
+		// Token: 0x06022745 RID: 141125 RVA: 0x009C673A File Offset: 0x009C493A
 		static CharMaterialControlDataCacheMgr()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CharMaterialControlDataCacheMgr.CreateStaticDefaultValue), new Action(CharMaterialControlDataCacheMgr.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018989 RID: 100745
+		// Token: 0x04012FC4 RID: 77764
 		protected readonly Dictionary<string, CharMaterialControlDataCache> DataCacheMap = new Dictionary<string, CharMaterialControlDataCache>();
 
-		// Token: 0x0401898A RID: 100746
+		// Token: 0x04012FC5 RID: 77765
 		protected readonly Dictionary<string, float> DataCacheGcCountDownTime = new Dictionary<string, float>();
 
-		// Token: 0x0401898B RID: 100747
+		// Token: 0x04012FC6 RID: 77766
 		protected readonly List<string> WaitingRemoveDataCacheNames = new List<string>();
 
-		// Token: 0x0401898C RID: 100748
+		// Token: 0x04012FC7 RID: 77767
 		[Nullable(2)]
 		private readonly Stat TickStat;
 
-		// Token: 0x0401898D RID: 100749
+		// Token: 0x04012FC8 RID: 77768
 		private float TickTime;
 
-		// Token: 0x0401898E RID: 100750
+		// Token: 0x04012FC9 RID: 77769
 		private readonly float GcTimeInterval = 60000f;
 
-		// Token: 0x0401898F RID: 100751
+		// Token: 0x04012FCA RID: 77770
 		private readonly float GcTimeIntervalEditor;
 
-		// Token: 0x04018990 RID: 100752
+		// Token: 0x04012FCB RID: 77771
 		private readonly float TickTimeInterval = 10000f;
 
-		// Token: 0x04018991 RID: 100753
+		// Token: 0x04012FCC RID: 77772
 		private readonly float TickTimeIntervalEditor = 10f;
 
-		// Token: 0x04018992 RID: 100754
+		// Token: 0x04012FCD RID: 77773
 		[Nullable(2)]
 		private static CharMaterialControlDataCacheMgr _instance;
 	}

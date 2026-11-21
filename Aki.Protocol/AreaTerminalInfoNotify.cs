@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200010E RID: 270
+	// Token: 0x02000110 RID: 272
 	[NetMessage(EMessageId.AreaTerminalInfoNotify)]
 	public sealed class AreaTerminalInfoNotify : IMessage<AreaTerminalInfoNotify>, IMessage, IEquatable<AreaTerminalInfoNotify>, IDeepCloneable<AreaTerminalInfoNotify>, IBufferMessage
 	{
-		// Token: 0x06002565 RID: 9573 RVA: 0x00063D29 File Offset: 0x00061F29
+		// Token: 0x060025C4 RID: 9668 RVA: 0x00064D4D File Offset: 0x00062F4D
 		[NullableContext(1)]
 		public static AreaTerminalInfoNotify Create()
 		{
 			return new AreaTerminalInfoNotify();
 		}
 
-		// Token: 0x17000528 RID: 1320
-		// (get) Token: 0x06002566 RID: 9574 RVA: 0x00063D30 File Offset: 0x00061F30
+		// Token: 0x17000536 RID: 1334
+		// (get) Token: 0x060025C5 RID: 9669 RVA: 0x00064D54 File Offset: 0x00062F54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000529 RID: 1321
-		// (get) Token: 0x06002567 RID: 9575 RVA: 0x00063D33 File Offset: 0x00061F33
+		// Token: 0x17000537 RID: 1335
+		// (get) Token: 0x060025C6 RID: 9670 RVA: 0x00064D57 File Offset: 0x00062F57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002568 RID: 9576 RVA: 0x00063D3A File Offset: 0x00061F3A
+		// Token: 0x060025C7 RID: 9671 RVA: 0x00064D5E File Offset: 0x00062F5E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AreaTerminalInfoNotify()
 		{
 		}
 
-		// Token: 0x06002569 RID: 9577 RVA: 0x00063D64 File Offset: 0x00061F64
+		// Token: 0x060025C8 RID: 9672 RVA: 0x00064D88 File Offset: 0x00062F88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AreaTerminalInfoNotify(AreaTerminalInfoNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600256A RID: 9578 RVA: 0x00063DBB File Offset: 0x00061FBB
+		// Token: 0x060025C9 RID: 9673 RVA: 0x00064DDF File Offset: 0x00062FDF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AreaTerminalInfoNotify Clone()
@@ -69,8 +69,8 @@ namespace Aki.Protocol
 			return new AreaTerminalInfoNotify(this);
 		}
 
-		// Token: 0x1700052A RID: 1322
-		// (get) Token: 0x0600256B RID: 9579 RVA: 0x00063DC3 File Offset: 0x00061FC3
+		// Token: 0x17000538 RID: 1336
+		// (get) Token: 0x060025CA RID: 9674 RVA: 0x00064DE7 File Offset: 0x00062FE7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> PinIds
@@ -81,8 +81,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700052B RID: 1323
-		// (get) Token: 0x0600256C RID: 9580 RVA: 0x00063DCB File Offset: 0x00061FCB
+		// Token: 0x17000539 RID: 1337
+		// (get) Token: 0x060025CB RID: 9675 RVA: 0x00064DEF File Offset: 0x00062FEF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AreaTerminalFuncConditionInfo> AreaTerminalFuncConditionInfos
@@ -93,8 +93,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700052C RID: 1324
-		// (get) Token: 0x0600256D RID: 9581 RVA: 0x00063DD3 File Offset: 0x00061FD3
+		// Token: 0x1700053A RID: 1338
+		// (get) Token: 0x060025CC RID: 9676 RVA: 0x00064DF7 File Offset: 0x00062FF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> AreaMapGroup
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600256E RID: 9582 RVA: 0x00063DDB File Offset: 0x00061FDB
+		// Token: 0x060025CD RID: 9677 RVA: 0x00064DFF File Offset: 0x00062FFF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AreaTerminalInfoNotify);
 		}
 
-		// Token: 0x0600256F RID: 9583 RVA: 0x00063DEC File Offset: 0x00061FEC
+		// Token: 0x060025CE RID: 9678 RVA: 0x00064E10 File Offset: 0x00063010
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AreaTerminalInfoNotify other)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.pinIds_.Equals(other.pinIds_) && this.areaTerminalFuncConditionInfos_.Equals(other.areaTerminalFuncConditionInfos_) && this.areaMapGroup_.Equals(other.areaMapGroup_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002570 RID: 9584 RVA: 0x00063E54 File Offset: 0x00062054
+		// Token: 0x060025CF RID: 9679 RVA: 0x00064E78 File Offset: 0x00063078
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002571 RID: 9585 RVA: 0x00063EA4 File Offset: 0x000620A4
+		// Token: 0x060025D0 RID: 9680 RVA: 0x00064EC8 File Offset: 0x000630C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002572 RID: 9586 RVA: 0x00063EB1 File Offset: 0x000620B1
+		// Token: 0x060025D1 RID: 9681 RVA: 0x00064ED5 File Offset: 0x000630D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -153,21 +153,21 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002573 RID: 9587 RVA: 0x00063EBC File Offset: 0x000620BC
+		// Token: 0x060025D2 RID: 9682 RVA: 0x00064EE0 File Offset: 0x000630E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			this.areaTerminalFuncConditionInfos_.WriteTo(ref output, AreaTerminalInfoNotify._repeated_areaTerminalFuncConditionInfos_codec);
-			this.areaMapGroup_.WriteTo(ref output, AreaTerminalInfoNotify._repeated_areaMapGroup_codec);
 			this.pinIds_.WriteTo(ref output, AreaTerminalInfoNotify._repeated_pinIds_codec);
+			this.areaMapGroup_.WriteTo(ref output, AreaTerminalInfoNotify._repeated_areaMapGroup_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06002574 RID: 9588 RVA: 0x00063F10 File Offset: 0x00062110
+		// Token: 0x060025D3 RID: 9683 RVA: 0x00064F34 File Offset: 0x00063134
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -183,7 +183,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002575 RID: 9589 RVA: 0x00063F70 File Offset: 0x00062170
+		// Token: 0x060025D4 RID: 9684 RVA: 0x00064F94 File Offset: 0x00063194
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AreaTerminalInfoNotify other)
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002576 RID: 9590 RVA: 0x00063FCB File Offset: 0x000621CB
+		// Token: 0x060025D5 RID: 9685 RVA: 0x00064FEF File Offset: 0x000631EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -206,7 +206,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002577 RID: 9591 RVA: 0x00063FD4 File Offset: 0x000621D4
+		// Token: 0x060025D6 RID: 9686 RVA: 0x00064FF8 File Offset: 0x000631F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -218,65 +218,65 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 40U)
+				if (num <= 88U)
 				{
-					if (num == 26U)
+					if (num == 58U)
 					{
 						this.areaTerminalFuncConditionInfos_.AddEntriesFrom(ref input, AreaTerminalInfoNotify._repeated_areaTerminalFuncConditionInfos_codec);
 						continue;
 					}
-					if (num == 40U)
+					if (num == 88U)
 					{
 						goto IL_50;
 					}
 				}
 				else
 				{
-					if (num == 42U)
+					if (num == 90U)
 					{
 						goto IL_50;
 					}
-					if (num == 64U || num == 66U)
+					if (num == 120U || num == 122U)
 					{
-						this.pinIds_.AddEntriesFrom(ref input, AreaTerminalInfoNotify._repeated_pinIds_codec);
+						this.areaMapGroup_.AddEntriesFrom(ref input, AreaTerminalInfoNotify._repeated_areaMapGroup_codec);
 						continue;
 					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				continue;
 				IL_50:
-				this.areaMapGroup_.AddEntriesFrom(ref input, AreaTerminalInfoNotify._repeated_areaMapGroup_codec);
+				this.pinIds_.AddEntriesFrom(ref input, AreaTerminalInfoNotify._repeated_pinIds_codec);
 			}
 		}
 
-		// Token: 0x040025C6 RID: 9670
+		// Token: 0x04002631 RID: 9777
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040025C7 RID: 9671
-		public const int PinIdsFieldNumber = 8;
+		// Token: 0x04002632 RID: 9778
+		public const int PinIdsFieldNumber = 11;
 
-		// Token: 0x040025C8 RID: 9672
-		private static readonly FieldCodec<int> _repeated_pinIds_codec = FieldCodec.ForInt32(66U);
+		// Token: 0x04002633 RID: 9779
+		private static readonly FieldCodec<int> _repeated_pinIds_codec = FieldCodec.ForInt32(90U);
 
-		// Token: 0x040025C9 RID: 9673
+		// Token: 0x04002634 RID: 9780
 		private readonly RepeatedField<int> pinIds_ = new RepeatedField<int>();
 
-		// Token: 0x040025CA RID: 9674
-		public const int AreaTerminalFuncConditionInfosFieldNumber = 3;
+		// Token: 0x04002635 RID: 9781
+		public const int AreaTerminalFuncConditionInfosFieldNumber = 7;
 
-		// Token: 0x040025CB RID: 9675
-		private static readonly FieldCodec<AreaTerminalFuncConditionInfo> _repeated_areaTerminalFuncConditionInfos_codec = FieldCodec.ForMessage<AreaTerminalFuncConditionInfo>(26U, AreaTerminalFuncConditionInfo.Parser);
+		// Token: 0x04002636 RID: 9782
+		private static readonly FieldCodec<AreaTerminalFuncConditionInfo> _repeated_areaTerminalFuncConditionInfos_codec = FieldCodec.ForMessage<AreaTerminalFuncConditionInfo>(58U, AreaTerminalFuncConditionInfo.Parser);
 
-		// Token: 0x040025CC RID: 9676
+		// Token: 0x04002637 RID: 9783
 		private readonly RepeatedField<AreaTerminalFuncConditionInfo> areaTerminalFuncConditionInfos_ = new RepeatedField<AreaTerminalFuncConditionInfo>();
 
-		// Token: 0x040025CD RID: 9677
-		public const int AreaMapGroupFieldNumber = 5;
+		// Token: 0x04002638 RID: 9784
+		public const int AreaMapGroupFieldNumber = 15;
 
-		// Token: 0x040025CE RID: 9678
-		private static readonly FieldCodec<int> _repeated_areaMapGroup_codec = FieldCodec.ForInt32(42U);
+		// Token: 0x04002639 RID: 9785
+		private static readonly FieldCodec<int> _repeated_areaMapGroup_codec = FieldCodec.ForInt32(122U);
 
-		// Token: 0x040025CF RID: 9679
+		// Token: 0x0400263A RID: 9786
 		private readonly RepeatedField<int> areaMapGroup_ = new RepeatedField<int>();
 	}
 }

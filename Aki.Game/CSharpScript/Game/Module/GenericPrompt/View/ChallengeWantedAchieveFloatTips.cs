@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x0200599E RID: 22942
+	// Token: 0x02004977 RID: 18807
 	public class ChallengeWantedAchieveFloatTips : GenericPromptFloatTipsBase
 	{
-		// Token: 0x0603A35B RID: 238427 RVA: 0x00DD54F4 File Offset: 0x00DD36F4
+		// Token: 0x0602F281 RID: 193153 RVA: 0x00D24984 File Offset: 0x00D22B84
 		[NullableContext(1)]
 		public ChallengeWantedAchieveFloatTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A35C RID: 238428 RVA: 0x00DD5500 File Offset: 0x00DD3700
+		// Token: 0x0602F282 RID: 193154 RVA: 0x00D24990 File Offset: 0x00D22B90
 		protected override void SetMainText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0603A35D RID: 238429 RVA: 0x00DD5604 File Offset: 0x00DD3804
+		// Token: 0x0602F283 RID: 193155 RVA: 0x00D24A94 File Offset: 0x00D22C94
 		protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,

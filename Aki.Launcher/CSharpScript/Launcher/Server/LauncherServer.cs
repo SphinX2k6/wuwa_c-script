@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Server
 {
-	// Token: 0x0200010F RID: 271
+	// Token: 0x02000113 RID: 275
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherServer : Singleton
 	{
-		// Token: 0x0600089F RID: 2207 RVA: 0x0003FC84 File Offset: 0x0003DE84
+		// Token: 0x060008D3 RID: 2259 RVA: 0x00042024 File Offset: 0x00040224
 		public void PingAllRegion()
 		{
 			if (!HotPatchKuroSdk.Instance.CanUseSdk() || !HotPatchKuroSdk.Instance.GetIfGlobalSdk())
@@ -43,7 +43,7 @@ namespace CSharpScript.Launcher.Server
 			}
 		}
 
-		// Token: 0x060008A0 RID: 2208 RVA: 0x0003FD64 File Offset: 0x0003DF64
+		// Token: 0x060008D4 RID: 2260 RVA: 0x00042104 File Offset: 0x00040304
 		private unsafe void IcmpCallBack(string ipAddress, float time, int responseState)
 		{
 			List<ILoginServersData> list = new List<ILoginServersData>(this.RegionPingMap.Keys);
@@ -76,7 +76,7 @@ namespace CSharpScript.Launcher.Server
 			instance2.Debug(message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 		}
 
-		// Token: 0x060008A1 RID: 2209 RVA: 0x0003FEC4 File Offset: 0x0003E0C4
+		// Token: 0x060008D5 RID: 2261 RVA: 0x00042264 File Offset: 0x00040464
 		public List<ILoginServersData> GetLoginServersByClientRegion()
 		{
 			if (this.LoginServerData != null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Launcher.Server
 			return this.LoginServerData;
 		}
 
-		// Token: 0x060008A2 RID: 2210 RVA: 0x00040048 File Offset: 0x0003E248
+		// Token: 0x060008D6 RID: 2262 RVA: 0x000423E8 File Offset: 0x000405E8
 		public void RequestLoginPlayerInfo(ELoginGetPlayerInfoEnum loginType, string userId, string userName, string token, [Nullable(new byte[]
 		{
 			1,
@@ -162,10 +162,10 @@ namespace CSharpScript.Launcher.Server
 			string message = "GetLoginPlayerInfo";
 			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("url", garurl);
 			instance.Info(message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-			this.RequestGARInfo(loginType, garurl, callBack, currentTryCount).Forget();
+			this.RequestGARInfo(loginType, userId, userName, token, currentArea, garurl, callBack, currentTryCount).Forget();
 		}
 
-		// Token: 0x060008A3 RID: 2211 RVA: 0x000400E4 File Offset: 0x0003E2E4
+		// Token: 0x060008D7 RID: 2263 RVA: 0x00042488 File Offset: 0x00040688
 		public string GetCurrentArea()
 		{
 			string[] array = UKuroStaticLibrary.GetCultureRegion().Split('-', StringSplitOptions.None);
@@ -181,8 +181,8 @@ namespace CSharpScript.Launcher.Server
 			return "US";
 		}
 
-		// Token: 0x060008A4 RID: 2212 RVA: 0x00040124 File Offset: 0x0003E324
-		private UniTask RequestGARInfo(ELoginGetPlayerInfoEnum loginType, string url, [Nullable(new byte[]
+		// Token: 0x060008D8 RID: 2264 RVA: 0x000424C8 File Offset: 0x000406C8
+		private UniTask RequestGARInfo(ELoginGetPlayerInfoEnum loginType, string userId, string userName, string token, string area, string url, [Nullable(new byte[]
 		{
 			1,
 			2
@@ -192,6 +192,10 @@ namespace CSharpScript.Launcher.Server
 			<RequestGARInfo>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<RequestGARInfo>d__.<>4__this = this;
 			<RequestGARInfo>d__.loginType = loginType;
+			<RequestGARInfo>d__.userId = userId;
+			<RequestGARInfo>d__.userName = userName;
+			<RequestGARInfo>d__.token = token;
+			<RequestGARInfo>d__.area = area;
 			<RequestGARInfo>d__.url = url;
 			<RequestGARInfo>d__.callBack = callBack;
 			<RequestGARInfo>d__.currentTryCount = currentTryCount;
@@ -200,7 +204,7 @@ namespace CSharpScript.Launcher.Server
 			return <RequestGARInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060008A5 RID: 2213 RVA: 0x00040188 File Offset: 0x0003E388
+		// Token: 0x060008D9 RID: 2265 RVA: 0x00042550 File Offset: 0x00040750
 		[return: Nullable(2)]
 		private string GetGARUrl(int loginType, string userId, string userName, string token, string area)
 		{
@@ -224,7 +228,7 @@ namespace CSharpScript.Launcher.Server
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x060008A6 RID: 2214 RVA: 0x00040224 File Offset: 0x0003E424
+		// Token: 0x060008DA RID: 2266 RVA: 0x000425EC File Offset: 0x000407EC
 		public void RequestSuggestServerData(string userId, string userName, string token, Action<ILoginServersData> callBack)
 		{
 			if (!HotPatchKuroSdk.Instance.GetIfGlobalSdk())
@@ -248,7 +252,7 @@ namespace CSharpScript.Launcher.Server
 			}, 0);
 		}
 
-		// Token: 0x060008A7 RID: 2215 RVA: 0x000402A4 File Offset: 0x0003E4A4
+		// Token: 0x060008DB RID: 2267 RVA: 0x0004266C File Offset: 0x0004086C
 		[NullableContext(2)]
 		private ILoginServersData GetSuggestServerData([Nullable(1)] string sdkUid, LoginPlayerInfo playerLoginData)
 		{
@@ -327,7 +331,7 @@ namespace CSharpScript.Launcher.Server
 			return this.FindRegionData(this.GetPingMiniRegion("America"));
 		}
 
-		// Token: 0x060008A8 RID: 2216 RVA: 0x00040528 File Offset: 0x0003E728
+		// Token: 0x060008DC RID: 2268 RVA: 0x000428F0 File Offset: 0x00040AF0
 		[return: Nullable(2)]
 		private unsafe string LastTimeLoginRegion(string sdkUid)
 		{
@@ -345,7 +349,7 @@ namespace CSharpScript.Launcher.Server
 			return null;
 		}
 
-		// Token: 0x060008A9 RID: 2217 RVA: 0x000405B0 File Offset: 0x0003E7B0
+		// Token: 0x060008DD RID: 2269 RVA: 0x00042978 File Offset: 0x00040B78
 		public void SaveLoginRegion(string sdkUid, string region)
 		{
 			Dictionary<string, string> global = LauncherStorageLib.Instance.GetGlobal<Dictionary<string, string>>(ELauncherStorageGlobalKey.SdkLastTimeLoginRegion, null);
@@ -361,7 +365,7 @@ namespace CSharpScript.Launcher.Server
 			LauncherStorageLib.Instance.SetGlobal<Dictionary<string, string>>(ELauncherStorageGlobalKey.SdkLastTimeLoginRegion, dictionary);
 		}
 
-		// Token: 0x060008AA RID: 2218 RVA: 0x00040638 File Offset: 0x0003E838
+		// Token: 0x060008DE RID: 2270 RVA: 0x00042A00 File Offset: 0x00040C00
 		[return: Nullable(2)]
 		private ILoginServersData FindRegionData(string region)
 		{
@@ -377,7 +381,7 @@ namespace CSharpScript.Launcher.Server
 			return null;
 		}
 
-		// Token: 0x060008AB RID: 2219 RVA: 0x00040688 File Offset: 0x0003E888
+		// Token: 0x060008DF RID: 2271 RVA: 0x00042A50 File Offset: 0x00040C50
 		private bool CheckIfAllServerPingHigh()
 		{
 			List<ILoginServersData> list = new List<ILoginServersData>(this.RegionPingMap.Keys);
@@ -393,7 +397,7 @@ namespace CSharpScript.Launcher.Server
 			return true;
 		}
 
-		// Token: 0x060008AC RID: 2220 RVA: 0x000406D8 File Offset: 0x0003E8D8
+		// Token: 0x060008E0 RID: 2272 RVA: 0x00042AA0 File Offset: 0x00040CA0
 		private string GetPingMiniRegion(string defaultServerRegion)
 		{
 			List<ILoginServersData> list = new List<ILoginServersData>(this.RegionPingMap.Keys);
@@ -424,8 +428,8 @@ namespace CSharpScript.Launcher.Server
 			return text;
 		}
 
-		// Token: 0x170000ED RID: 237
-		// (get) Token: 0x060008AD RID: 2221 RVA: 0x000407EC File Offset: 0x0003E9EC
+		// Token: 0x170000F3 RID: 243
+		// (get) Token: 0x060008E1 RID: 2273 RVA: 0x00042BB4 File Offset: 0x00040DB4
 		public static LauncherServer Instance
 		{
 			get
@@ -439,12 +443,12 @@ namespace CSharpScript.Launcher.Server
 			}
 		}
 
-		// Token: 0x060008AE RID: 2222 RVA: 0x0004080F File Offset: 0x0003EA0F
+		// Token: 0x060008E2 RID: 2274 RVA: 0x00042BD7 File Offset: 0x00040DD7
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060008AF RID: 2223 RVA: 0x00040811 File Offset: 0x0003EA11
+		// Token: 0x060008E3 RID: 2275 RVA: 0x00042BD9 File Offset: 0x00040DD9
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherServer instance = LauncherServer._instance;
@@ -455,19 +459,19 @@ namespace CSharpScript.Launcher.Server
 			LauncherServer._instance = null;
 		}
 
-		// Token: 0x060008B0 RID: 2224 RVA: 0x0004082A File Offset: 0x0003EA2A
+		// Token: 0x060008E4 RID: 2276 RVA: 0x00042BF2 File Offset: 0x00040DF2
 		static LauncherServer()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherServer.CreateStaticDefaultValue), new Action(LauncherServer.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040004FD RID: 1277
+		// Token: 0x04000538 RID: 1336
 		private readonly Dictionary<int, LoginPlayerInfo> CacheLauncherServerGarMap = new Dictionary<int, LoginPlayerInfo>();
 
-		// Token: 0x040004FE RID: 1278
+		// Token: 0x04000539 RID: 1337
 		private readonly Dictionary<ILoginServersData, int> RegionPingMap = new Dictionary<ILoginServersData, int>();
 
-		// Token: 0x040004FF RID: 1279
+		// Token: 0x0400053A RID: 1338
 		[Nullable(new byte[]
 		{
 			2,
@@ -475,10 +479,10 @@ namespace CSharpScript.Launcher.Server
 		})]
 		private List<ILoginServersData> LoginServerData;
 
-		// Token: 0x04000500 RID: 1280
+		// Token: 0x0400053B RID: 1339
 		private int CurrentPingCount;
 
-		// Token: 0x04000501 RID: 1281
+		// Token: 0x0400053C RID: 1340
 		[Nullable(new byte[]
 		{
 			2,
@@ -486,10 +490,10 @@ namespace CSharpScript.Launcher.Server
 		})]
 		private Action<string, float, int> IcmpPingCallBack;
 
-		// Token: 0x04000502 RID: 1282
+		// Token: 0x0400053D RID: 1341
 		public Dictionary<string, ILoginServersData> CacheSuggestLoginServerData = new Dictionary<string, ILoginServersData>();
 
-		// Token: 0x04000503 RID: 1283
+		// Token: 0x0400053E RID: 1342
 		[Nullable(2)]
 		private static LauncherServer _instance;
 	}

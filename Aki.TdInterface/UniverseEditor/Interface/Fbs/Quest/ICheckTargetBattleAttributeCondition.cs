@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D73 RID: 15731
+	// Token: 0x0200418A RID: 16778
 	public struct ICheckTargetBattleAttributeCondition : IFlatbufferObject
 	{
-		// Token: 0x17006BF4 RID: 27636
-		// (get) Token: 0x06015C59 RID: 89177 RVA: 0x00323948 File Offset: 0x00321B48
+		// Token: 0x170071AE RID: 29102
+		// (get) Token: 0x06017191 RID: 94609 RVA: 0x0034ABC0 File Offset: 0x00348DC0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015C5A RID: 89178 RVA: 0x00323955 File Offset: 0x00321B55
+		// Token: 0x06017192 RID: 94610 RVA: 0x0034ABCD File Offset: 0x00348DCD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015C5B RID: 89179 RVA: 0x0032395C File Offset: 0x00321B5C
+		// Token: 0x06017193 RID: 94611 RVA: 0x0034ABD4 File Offset: 0x00348DD4
 		public static ICheckTargetBattleAttributeCondition GetRootAsICheckTargetBattleAttributeCondition(ByteBuffer _bb)
 		{
 			return ICheckTargetBattleAttributeCondition.GetRootAsICheckTargetBattleAttributeCondition(_bb, default(ICheckTargetBattleAttributeCondition));
 		}
 
-		// Token: 0x06015C5C RID: 89180 RVA: 0x00323978 File Offset: 0x00321B78
+		// Token: 0x06017194 RID: 94612 RVA: 0x0034ABF0 File Offset: 0x00348DF0
 		public static ICheckTargetBattleAttributeCondition GetRootAsICheckTargetBattleAttributeCondition(ByteBuffer _bb, ICheckTargetBattleAttributeCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015C5D RID: 89181 RVA: 0x00323995 File Offset: 0x00321B95
+		// Token: 0x06017195 RID: 94613 RVA: 0x0034AC0D File Offset: 0x00348E0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015C5E RID: 89182 RVA: 0x003239A4 File Offset: 0x00321BA4
+		// Token: 0x06017196 RID: 94614 RVA: 0x0034AC1C File Offset: 0x00348E1C
 		public ICheckTargetBattleAttributeCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006BF5 RID: 27637
-		// (get) Token: 0x06015C5F RID: 89183 RVA: 0x003239B4 File Offset: 0x00321BB4
+		// Token: 0x170071AF RID: 29103
+		// (get) Token: 0x06017197 RID: 94615 RVA: 0x0034AC2C File Offset: 0x00348E2C
 		public EChildQuest Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006BF6 RID: 27638
-		// (get) Token: 0x06015C60 RID: 89184 RVA: 0x003239F0 File Offset: 0x00321BF0
+		// Token: 0x170071B0 RID: 29104
+		// (get) Token: 0x06017198 RID: 94616 RVA: 0x0034AC68 File Offset: 0x00348E68
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006BF7 RID: 27639
-		// (get) Token: 0x06015C61 RID: 89185 RVA: 0x00323A50 File Offset: 0x00321C50
+		// Token: 0x170071B1 RID: 29105
+		// (get) Token: 0x06017199 RID: 94617 RVA: 0x0034ACC8 File Offset: 0x00348EC8
 		public EConditionCount Count
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015C62 RID: 89186 RVA: 0x00323A8C File Offset: 0x00321C8C
+		// Token: 0x0601719A RID: 94618 RVA: 0x0034AD04 File Offset: 0x00348F04
 		public TTargetBattleAttribute OptionType(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return (TTargetBattleAttribute)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17006BF8 RID: 27640
-		// (get) Token: 0x06015C63 RID: 89187 RVA: 0x00323ACC File Offset: 0x00321CCC
+		// Token: 0x170071B2 RID: 29106
+		// (get) Token: 0x0601719B RID: 94619 RVA: 0x0034AD44 File Offset: 0x00348F44
 		public int OptionTypeLength
 		{
 			get
@@ -120,13 +120,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015C64 RID: 89188 RVA: 0x00323AF8 File Offset: 0x00321CF8
+		// Token: 0x0601719C RID: 94620 RVA: 0x0034AD70 File Offset: 0x00348F70
 		public Span<TTargetBattleAttribute> GetOptionTypeBytes()
 		{
 			return this.__p.__vector_as_span<TTargetBattleAttribute>(10, 1);
 		}
 
-		// Token: 0x06015C65 RID: 89189 RVA: 0x00323B08 File Offset: 0x00321D08
+		// Token: 0x0601719D RID: 94621 RVA: 0x0034AD80 File Offset: 0x00348F80
 		public TTargetBattleAttribute[] GetOptionTypeArray()
 		{
 			int num = this.__p.__offset(10);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return array;
 		}
 
-		// Token: 0x06015C66 RID: 89190 RVA: 0x00323B74 File Offset: 0x00321D74
+		// Token: 0x0601719E RID: 94622 RVA: 0x0034ADEC File Offset: 0x00348FEC
 		public TTable? Option<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -155,8 +155,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17006BF9 RID: 27641
-		// (get) Token: 0x06015C67 RID: 89191 RVA: 0x00323BBC File Offset: 0x00321DBC
+		// Token: 0x170071B3 RID: 29107
+		// (get) Token: 0x0601719F RID: 94623 RVA: 0x0034AE34 File Offset: 0x00349034
 		public int OptionLength
 		{
 			get
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015C68 RID: 89192 RVA: 0x00323BE8 File Offset: 0x00321DE8
+		// Token: 0x060171A0 RID: 94624 RVA: 0x0034AE60 File Offset: 0x00349060
 		public static Offset<ICheckTargetBattleAttributeCondition> CreateICheckTargetBattleAttributeCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), EConditionCount Count = EConditionCount.All, VectorOffset Option_typeOffset = default(VectorOffset), VectorOffset OptionOffset = default(VectorOffset))
 		{
 			builder.StartTable(5);
@@ -182,37 +182,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckTargetBattleAttributeCondition.EndICheckTargetBattleAttributeCondition(builder);
 		}
 
-		// Token: 0x06015C69 RID: 89193 RVA: 0x00323C1C File Offset: 0x00321E1C
+		// Token: 0x060171A1 RID: 94625 RVA: 0x0034AE94 File Offset: 0x00349094
 		public static void StartICheckTargetBattleAttributeCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06015C6A RID: 89194 RVA: 0x00323C25 File Offset: 0x00321E25
+		// Token: 0x060171A2 RID: 94626 RVA: 0x0034AE9D File Offset: 0x0034909D
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015C6B RID: 89195 RVA: 0x00323C30 File Offset: 0x00321E30
+		// Token: 0x060171A3 RID: 94627 RVA: 0x0034AEA8 File Offset: 0x003490A8
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06015C6C RID: 89196 RVA: 0x00323C40 File Offset: 0x00321E40
+		// Token: 0x060171A4 RID: 94628 RVA: 0x0034AEB8 File Offset: 0x003490B8
 		public static void AddCount(FlatBufferBuilder builder, EConditionCount count)
 		{
 			builder.AddByte(2, (byte)count, 0);
 		}
 
-		// Token: 0x06015C6D RID: 89197 RVA: 0x00323C4B File Offset: 0x00321E4B
+		// Token: 0x060171A5 RID: 94629 RVA: 0x0034AEC3 File Offset: 0x003490C3
 		public static void AddOptionType(FlatBufferBuilder builder, VectorOffset optionTypeOffset)
 		{
 			builder.AddOffset(3, optionTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06015C6E RID: 89198 RVA: 0x00323C5C File Offset: 0x00321E5C
+		// Token: 0x060171A6 RID: 94630 RVA: 0x0034AED4 File Offset: 0x003490D4
 		public static VectorOffset CreateOptionTypeVector(FlatBufferBuilder builder, TTargetBattleAttribute[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -223,7 +223,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015C6F RID: 89199 RVA: 0x00323C93 File Offset: 0x00321E93
+		// Token: 0x060171A7 RID: 94631 RVA: 0x0034AF0B File Offset: 0x0034910B
 		public static VectorOffset CreateOptionTypeVectorBlock(FlatBufferBuilder builder, TTargetBattleAttribute[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -231,7 +231,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015C70 RID: 89200 RVA: 0x00323CAD File Offset: 0x00321EAD
+		// Token: 0x060171A8 RID: 94632 RVA: 0x0034AF25 File Offset: 0x00349125
 		public static VectorOffset CreateOptionTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TTargetBattleAttribute> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -239,7 +239,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015C71 RID: 89201 RVA: 0x00323CCB File Offset: 0x00321ECB
+		// Token: 0x060171A9 RID: 94633 RVA: 0x0034AF43 File Offset: 0x00349143
 		public static VectorOffset CreateOptionTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -247,19 +247,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015C72 RID: 89202 RVA: 0x00323CE4 File Offset: 0x00321EE4
+		// Token: 0x060171AA RID: 94634 RVA: 0x0034AF5C File Offset: 0x0034915C
 		public static void StartOptionTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x06015C73 RID: 89203 RVA: 0x00323CEF File Offset: 0x00321EEF
+		// Token: 0x060171AB RID: 94635 RVA: 0x0034AF67 File Offset: 0x00349167
 		public static void AddOption(FlatBufferBuilder builder, VectorOffset optionOffset)
 		{
 			builder.AddOffset(4, optionOffset.Value, 0);
 		}
 
-		// Token: 0x06015C74 RID: 89204 RVA: 0x00323D00 File Offset: 0x00321F00
+		// Token: 0x060171AC RID: 94636 RVA: 0x0034AF78 File Offset: 0x00349178
 		public static VectorOffset CreateOptionVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -270,7 +270,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015C75 RID: 89205 RVA: 0x00323D37 File Offset: 0x00321F37
+		// Token: 0x060171AD RID: 94637 RVA: 0x0034AFAF File Offset: 0x003491AF
 		public static VectorOffset CreateOptionVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -278,7 +278,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015C76 RID: 89206 RVA: 0x00323D51 File Offset: 0x00321F51
+		// Token: 0x060171AE RID: 94638 RVA: 0x0034AFC9 File Offset: 0x003491C9
 		public static VectorOffset CreateOptionVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -286,7 +286,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015C77 RID: 89207 RVA: 0x00323D6F File Offset: 0x00321F6F
+		// Token: 0x060171AF RID: 94639 RVA: 0x0034AFE7 File Offset: 0x003491E7
 		public static VectorOffset CreateOptionVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -294,19 +294,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015C78 RID: 89208 RVA: 0x00323D88 File Offset: 0x00321F88
+		// Token: 0x060171B0 RID: 94640 RVA: 0x0034B000 File Offset: 0x00349200
 		public static void StartOptionVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06015C79 RID: 89209 RVA: 0x00323D93 File Offset: 0x00321F93
+		// Token: 0x060171B1 RID: 94641 RVA: 0x0034B00B File Offset: 0x0034920B
 		public static Offset<ICheckTargetBattleAttributeCondition> EndICheckTargetBattleAttributeCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckTargetBattleAttributeCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06015C7A RID: 89210 RVA: 0x00323DA0 File Offset: 0x00321FA0
+		// Token: 0x060171B2 RID: 94642 RVA: 0x0034B018 File Offset: 0x00349218
 		public ICheckTargetBattleAttributeConditionT UnPack()
 		{
 			ICheckTargetBattleAttributeConditionT checkTargetBattleAttributeConditionT = new ICheckTargetBattleAttributeConditionT();
@@ -314,7 +314,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return checkTargetBattleAttributeConditionT;
 		}
 
-		// Token: 0x06015C7B RID: 89211 RVA: 0x00323DBC File Offset: 0x00321FBC
+		// Token: 0x060171B3 RID: 94643 RVA: 0x0034B034 File Offset: 0x00349234
 		public void UnPackTo(ICheckTargetBattleAttributeConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -341,7 +341,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015C7C RID: 89212 RVA: 0x00323ED0 File Offset: 0x003220D0
+		// Token: 0x060171B4 RID: 94644 RVA: 0x0034B148 File Offset: 0x00349348
 		public static Offset<ICheckTargetBattleAttributeCondition> Pack(FlatBufferBuilder builder, ICheckTargetBattleAttributeConditionT _o)
 		{
 			if (_o == null)
@@ -372,7 +372,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckTargetBattleAttributeCondition.CreateICheckTargetBattleAttributeCondition(builder, _o.Type, preConditionsOffset, _o.Count, option_typeOffset, optionOffset);
 		}
 
-		// Token: 0x0400B65A RID: 46682
+		// Token: 0x0400C007 RID: 49159
 		private Table __p;
 	}
 }

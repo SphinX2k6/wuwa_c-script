@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B78 RID: 19320
+	// Token: 0x0200505F RID: 20575
 	public class IChildQuestConditionT
 	{
-		// Token: 0x17008C37 RID: 35895
-		// (get) Token: 0x0601E72B RID: 124715 RVA: 0x004437DC File Offset: 0x004419DC
-		// (set) Token: 0x0601E72C RID: 124716 RVA: 0x004437E4 File Offset: 0x004419E4
+		// Token: 0x17009347 RID: 37703
+		// (get) Token: 0x060202B9 RID: 131769 RVA: 0x00476028 File Offset: 0x00474228
+		// (set) Token: 0x060202BA RID: 131770 RVA: 0x00476030 File Offset: 0x00474230
 		public int QuestId { get; set; }
 
-		// Token: 0x17008C38 RID: 35896
-		// (get) Token: 0x0601E72D RID: 124717 RVA: 0x004437ED File Offset: 0x004419ED
-		// (set) Token: 0x0601E72E RID: 124718 RVA: 0x004437F5 File Offset: 0x004419F5
+		// Token: 0x17009348 RID: 37704
+		// (get) Token: 0x060202BB RID: 131771 RVA: 0x00476039 File Offset: 0x00474239
+		// (set) Token: 0x060202BC RID: 131772 RVA: 0x00476041 File Offset: 0x00474241
 		public int ChildQuestId { get; set; }
 
-		// Token: 0x0601E72F RID: 124719 RVA: 0x004437FE File Offset: 0x004419FE
+		// Token: 0x060202BD RID: 131773 RVA: 0x0047604A File Offset: 0x0047424A
 		public IChildQuestConditionT()
 		{
 			this.QuestId = 0;

@@ -5,25 +5,25 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A2A RID: 23082
+	// Token: 0x02004A06 RID: 18950
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class FlagChallengeConfig : ConfigBase
 	{
-		// Token: 0x0603A910 RID: 239888 RVA: 0x00DF0487 File Offset: 0x00DEE687
+		// Token: 0x0602F859 RID: 194649 RVA: 0x00D40A0B File Offset: 0x00D3EC0B
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0603A911 RID: 239889 RVA: 0x00DF048A File Offset: 0x00DEE68A
+		// Token: 0x0602F85A RID: 194650 RVA: 0x00D40A0E File Offset: 0x00D3EC0E
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x0603A912 RID: 239890 RVA: 0x00DF0490 File Offset: 0x00DEE690
+		// Token: 0x0602F85B RID: 194651 RVA: 0x00D40A14 File Offset: 0x00D3EC14
 		public FlagChallengeActivity? GetActivityConfig(int id)
 		{
 			FlagChallengeActivity? config = ConfigFlagChallengeActivityByActivityId.GetConfig(id, true);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return config;
 		}
 
-		// Token: 0x0603A913 RID: 239891 RVA: 0x00DF04E0 File Offset: 0x00DEE6E0
+		// Token: 0x0602F85C RID: 194652 RVA: 0x00D40A64 File Offset: 0x00D3EC64
 		public FlagChallengeTask? GetTaskConfig(int id)
 		{
 			FlagChallengeTask? config = ConfigFlagChallengeTaskById.GetConfig(id, true);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return config;
 		}
 
-		// Token: 0x0603A914 RID: 239892 RVA: 0x00DF0530 File Offset: 0x00DEE730
+		// Token: 0x0602F85D RID: 194653 RVA: 0x00D40AB4 File Offset: 0x00D3ECB4
 		public FlagChallengeLevel? GetLevelConfig(int id)
 		{
 			FlagChallengeLevel? config = ConfigFlagChallengeLevelById.GetConfig(id, true);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return config;
 		}
 
-		// Token: 0x0603A915 RID: 239893 RVA: 0x00DF0580 File Offset: 0x00DEE780
+		// Token: 0x0602F85E RID: 194654 RVA: 0x00D40B04 File Offset: 0x00D3ED04
 		public FlagStronghold? GetStrongholdConfig(int id)
 		{
 			FlagStronghold? config = ConfigFlagStrongholdById.GetConfig(id, true);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return config;
 		}
 
-		// Token: 0x0603A916 RID: 239894 RVA: 0x00DF05D0 File Offset: 0x00DEE7D0
+		// Token: 0x0602F85F RID: 194655 RVA: 0x00D40B54 File Offset: 0x00D3ED54
 		public FlagChallengeRoleBuff? GetRoleBuffConfig(int id)
 		{
 			FlagChallengeRoleBuff? config = ConfigFlagChallengeRoleBuffById.GetConfig(id, true);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return config;
 		}
 
-		// Token: 0x0603A917 RID: 239895 RVA: 0x00DF0620 File Offset: 0x00DEE820
+		// Token: 0x0602F860 RID: 194656 RVA: 0x00D40BA4 File Offset: 0x00D3EDA4
 		[NullableContext(2)]
 		public IReadOnlyList<FlagChallengeRoleBuff> GetRoleBuffConfigListByActivityId(int activityId)
 		{
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return configList;
 		}
 
-		// Token: 0x0603A918 RID: 239896 RVA: 0x00DF0668 File Offset: 0x00DEE868
+		// Token: 0x0602F861 RID: 194657 RVA: 0x00D40BEC File Offset: 0x00D3EDEC
 		public FlagChallengeRoleLevel? GetRoleLevelConfig(int id)
 		{
 			FlagChallengeRoleLevel? config = ConfigFlagChallengeRoleLevelById.GetConfig(id, true);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return config;
 		}
 
-		// Token: 0x0603A919 RID: 239897 RVA: 0x00DF06B8 File Offset: 0x00DEE8B8
+		// Token: 0x0602F862 RID: 194658 RVA: 0x00D40C3C File Offset: 0x00D3EE3C
 		public unsafe FlagChallengeRoleLevel? GetRoleLevelConfigByActivityIdAndLevel(int activityId, int level)
 		{
 			FlagChallengeRoleLevel? config = ConfigFlagChallengeRoleLevelByActivityIdAndLevel.GetConfig(activityId, level, true);
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return config;
 		}
 
-		// Token: 0x0603A91A RID: 239898 RVA: 0x00DF0738 File Offset: 0x00DEE938
+		// Token: 0x0602F863 RID: 194659 RVA: 0x00D40CBC File Offset: 0x00D3EEBC
 		[NullableContext(2)]
 		public IReadOnlyList<FlagChallengeRoleLevel> GetRoleLevelConfigListByActivityId(int activityId)
 		{
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return configList;
 		}
 
-		// Token: 0x0603A91B RID: 239899 RVA: 0x00DF0780 File Offset: 0x00DEE980
+		// Token: 0x0602F864 RID: 194660 RVA: 0x00D40D04 File Offset: 0x00D3EF04
 		[NullableContext(2)]
 		public IReadOnlyList<FlagChallengeLevelDiffShow> GetLevelDiffShowConfigList()
 		{
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return configList;
 		}
 
-		// Token: 0x0603A91C RID: 239900 RVA: 0x00DF07B8 File Offset: 0x00DEE9B8
+		// Token: 0x0602F865 RID: 194661 RVA: 0x00D40D3C File Offset: 0x00D3EF3C
 		public FlagChallengeArea? GetAreaConfig(int id)
 		{
 			FlagChallengeArea? config = ConfigFlagChallengeAreaById.GetConfig(id, true);
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return config;
 		}
 
-		// Token: 0x0603A91D RID: 239901 RVA: 0x00DF0808 File Offset: 0x00DEEA08
+		// Token: 0x0602F866 RID: 194662 RVA: 0x00D40D8C File Offset: 0x00D3EF8C
 		[NullableContext(2)]
 		public IReadOnlyList<FlagChallengeArea> GetAreaConfigList()
 		{
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return configList;
 		}
 
-		// Token: 0x0603A91E RID: 239902 RVA: 0x00DF0840 File Offset: 0x00DEEA40
+		// Token: 0x0602F867 RID: 194663 RVA: 0x00D40DC4 File Offset: 0x00D3EFC4
 		[NullableContext(2)]
 		public IReadOnlyList<FlagChallengeArea> GetAreaConfigListByLevelId(int levelId)
 		{
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return configList;
 		}
 
-		// Token: 0x0603A91F RID: 239903 RVA: 0x00DF0878 File Offset: 0x00DEEA78
+		// Token: 0x0602F868 RID: 194664 RVA: 0x00D40DFC File Offset: 0x00D3EFFC
 		public FlagChallengeMonLevel? GetMonsterLevelConfigById(int id)
 		{
 			FlagChallengeMonLevel? config = ConfigFlagChallengeMonLevelById.GetConfig(id, true);
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return config;
 		}
 
-		// Token: 0x0603A920 RID: 239904 RVA: 0x00DF08C8 File Offset: 0x00DEEAC8
+		// Token: 0x0602F869 RID: 194665 RVA: 0x00D40E4C File Offset: 0x00D3F04C
 		[NullableContext(2)]
 		public IReadOnlyList<FlagChallengeRoleGrowth> GetRoleGrowthConfigListByActivityId(int activityId)
 		{
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return configList;
 		}
 
-		// Token: 0x0603A921 RID: 239905 RVA: 0x00DF0910 File Offset: 0x00DEEB10
+		// Token: 0x0602F86A RID: 194666 RVA: 0x00D40E94 File Offset: 0x00D3F094
 		public int GetRewardHelpId()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("FlagChallengeRewardHelpId");
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return intConfig.Value;
 		}
 
-		// Token: 0x0603A922 RID: 239906 RVA: 0x00DF093C File Offset: 0x00DEEB3C
+		// Token: 0x0602F86B RID: 194667 RVA: 0x00D40EC0 File Offset: 0x00D3F0C0
 		public int GetFormationHelpId()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("FlagChallengeFormationHelpId");
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return intConfig.Value;
 		}
 
-		// Token: 0x0603A923 RID: 239907 RVA: 0x00DF0968 File Offset: 0x00DEEB68
+		// Token: 0x0602F86C RID: 194668 RVA: 0x00D40EEC File Offset: 0x00D3F0EC
 		public int GetBuffHelpId()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("FlagChallengeBuffHelpId");
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return intConfig.Value;
 		}
 
-		// Token: 0x0603A924 RID: 239908 RVA: 0x00DF0994 File Offset: 0x00DEEB94
+		// Token: 0x0602F86D RID: 194669 RVA: 0x00D40F18 File Offset: 0x00D3F118
 		public int GetRoleLevelHelpId()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("FlagChallengeRoleLevelHelpId");
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return intConfig.Value;
 		}
 
-		// Token: 0x0603A925 RID: 239909 RVA: 0x00DF09C0 File Offset: 0x00DEEBC0
+		// Token: 0x0602F86E RID: 194670 RVA: 0x00D40F44 File Offset: 0x00D3F144
 		public int GetMainViewHelpId()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("FlagChallengeMainViewHelpId");
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return intConfig.Value;
 		}
 
-		// Token: 0x0603A926 RID: 239910 RVA: 0x00DF09EC File Offset: 0x00DEEBEC
+		// Token: 0x0602F86F RID: 194671 RVA: 0x00D40F70 File Offset: 0x00D3F170
 		public int GetAreaDetailViewHelpId()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("FlagChallengeAreaDetailViewHelpId");
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return intConfig.Value;
 		}
 
-		// Token: 0x0603A927 RID: 239911 RVA: 0x00DF0A18 File Offset: 0x00DEEC18
+		// Token: 0x0602F870 RID: 194672 RVA: 0x00D40F9C File Offset: 0x00D3F19C
 		public IReadOnlyList<int> GetAllAttrAddIdList()
 		{
 			IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("FlagChallengeRoleAttrAddIdList");
@@ -334,19 +334,19 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return intArrayConfig;
 		}
 
-		// Token: 0x0603A928 RID: 239912 RVA: 0x00DF0A5C File Offset: 0x00DEEC5C
+		// Token: 0x0602F871 RID: 194673 RVA: 0x00D40FE0 File Offset: 0x00D3F1E0
 		public int GetTempExpItemInterval()
 		{
 			return ConfigCommonParamById.GetIntConfig("FlagChallengeTempExpUnitInterval").GetValueOrDefault(20);
 		}
 
-		// Token: 0x0603A929 RID: 239913 RVA: 0x00DF0A80 File Offset: 0x00DEEC80
+		// Token: 0x0602F872 RID: 194674 RVA: 0x00D41004 File Offset: 0x00D3F204
 		public int GetTempExpCrossLevel()
 		{
 			return ConfigCommonParamById.GetIntConfig("FlagChallengeTempExpCrossLevel").GetValueOrDefault(3);
 		}
 
-		// Token: 0x0603A92A RID: 239914 RVA: 0x00DF0AA0 File Offset: 0x00DEECA0
+		// Token: 0x0602F873 RID: 194675 RVA: 0x00D41024 File Offset: 0x00D3F224
 		public string GetMainViewLevelButtonIcon()
 		{
 			string stringConfig = ConfigCommonParamById.GetStringConfig("FlagChallengeLevelButtonIcon");
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return stringConfig;
 		}
 
-		// Token: 0x0603A92B RID: 239915 RVA: 0x00DF0AE4 File Offset: 0x00DEECE4
+		// Token: 0x0602F874 RID: 194676 RVA: 0x00D41068 File Offset: 0x00D3F268
 		public string GetMainViewBuffButtonIcon()
 		{
 			string stringConfig = ConfigCommonParamById.GetStringConfig("FlagChallengeBuffButtonIcon");
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return stringConfig;
 		}
 
-		// Token: 0x0603A92C RID: 239916 RVA: 0x00DF0B28 File Offset: 0x00DEED28
+		// Token: 0x0602F875 RID: 194677 RVA: 0x00D410AC File Offset: 0x00D3F2AC
 		public string GetMainViewPauseButtonIcon()
 		{
 			string stringConfig = ConfigCommonParamById.GetStringConfig("FlagChallengePauseButtonIcon");
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return stringConfig;
 		}
 
-		// Token: 0x0603A92D RID: 239917 RVA: 0x00DF0B6C File Offset: 0x00DEED6C
+		// Token: 0x0602F876 RID: 194678 RVA: 0x00D410F0 File Offset: 0x00D3F2F0
 		public string GetMainViewVideoPath()
 		{
 			string stringConfig = ConfigCommonParamById.GetStringConfig("FlagChallengeMainViewVideoPath");
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return stringConfig;
 		}
 
-		// Token: 0x0603A92E RID: 239918 RVA: 0x00DF0BB0 File Offset: 0x00DEEDB0
+		// Token: 0x0602F877 RID: 194679 RVA: 0x00D41134 File Offset: 0x00D3F334
 		public string GetViewVideoPathByStyle(EFlagChallengeUiStyleType style)
 		{
 			string text;
@@ -411,14 +411,14 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return text;
 		}
 
-		// Token: 0x0603A92F RID: 239919 RVA: 0x00DF0C0C File Offset: 0x00DEEE0C
+		// Token: 0x0602F878 RID: 194680 RVA: 0x00D41190 File Offset: 0x00D3F390
 		public int GetBuffShowTime()
 		{
 			return ConfigCommonParamById.GetIntConfig("FlagChallengeBuffShowTime").GetValueOrDefault(1);
 		}
 
-		// Token: 0x17008BDA RID: 35802
-		// (get) Token: 0x0603A930 RID: 239920 RVA: 0x00DF0C2C File Offset: 0x00DEEE2C
+		// Token: 0x17005FA8 RID: 24488
+		// (get) Token: 0x0602F879 RID: 194681 RVA: 0x00D411B0 File Offset: 0x00D3F3B0
 		public static FlagChallengeConfig Instance
 		{
 			get
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A931 RID: 239921 RVA: 0x00DF0C33 File Offset: 0x00DEEE33
+		// Token: 0x0602F87A RID: 194682 RVA: 0x00D411B7 File Offset: 0x00D3F3B7
 		public static FlagChallengeConfig GetOrCreateInstance()
 		{
 			if (FlagChallengeConfig._Instance == null)
@@ -437,7 +437,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return FlagChallengeConfig._Instance;
 		}
 
-		// Token: 0x0603A932 RID: 239922 RVA: 0x00DF0C47 File Offset: 0x00DEEE47
+		// Token: 0x0602F87B RID: 194683 RVA: 0x00D411CB File Offset: 0x00D3F3CB
 		public static bool CreateInstance()
 		{
 			if (FlagChallengeConfig._Instance != null)
@@ -448,24 +448,24 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return true;
 		}
 
-		// Token: 0x0603A933 RID: 239923 RVA: 0x00DF0C5D File Offset: 0x00DEEE5D
+		// Token: 0x0602F87C RID: 194684 RVA: 0x00D411E1 File Offset: 0x00D3F3E1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603A934 RID: 239924 RVA: 0x00DF0C5F File Offset: 0x00DEEE5F
+		// Token: 0x0602F87D RID: 194685 RVA: 0x00D411E3 File Offset: 0x00D3F3E3
 		public static void ResetStaticDefaultValue()
 		{
 			FlagChallengeConfig._Instance = null;
 		}
 
-		// Token: 0x0603A935 RID: 239925 RVA: 0x00DF0C67 File Offset: 0x00DEEE67
+		// Token: 0x0602F87E RID: 194686 RVA: 0x00D411EB File Offset: 0x00D3F3EB
 		static FlagChallengeConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlagChallengeConfig.CreateStaticDefaultValue), new Action(FlagChallengeConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E7E3 RID: 124899
+		// Token: 0x0401928A RID: 103050
 		[Nullable(2)]
 		private static FlagChallengeConfig _Instance;
 	}

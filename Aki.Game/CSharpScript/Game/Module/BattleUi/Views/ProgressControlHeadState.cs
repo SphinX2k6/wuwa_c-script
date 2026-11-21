@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D4E RID: 23886
+	// Token: 0x02004D30 RID: 19760
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ProgressControlHeadState : HeadStateViewBase
 	{
-		// Token: 0x0603CA51 RID: 248401 RVA: 0x00E8DF3C File Offset: 0x00E8C13C
+		// Token: 0x060319AA RID: 203178 RVA: 0x00DDE6F0 File Offset: 0x00DDC8F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -27,13 +27,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CA52 RID: 248402 RVA: 0x00E8DFA5 File Offset: 0x00E8C1A5
+		// Token: 0x060319AB RID: 203179 RVA: 0x00DDE759 File Offset: 0x00DDC959
 		protected override string GetResourceId()
 		{
 			return "UiItem_BarInteractive";
 		}
 
-		// Token: 0x0603CA53 RID: 248403 RVA: 0x00E8DFAC File Offset: 0x00E8C1AC
+		// Token: 0x060319AC RID: 203180 RVA: 0x00DDE760 File Offset: 0x00DDC960
 		protected override void ActiveBattleHeadState(HeadStateData headStateData)
 		{
 			base.ActiveBattleHeadState(headStateData);
@@ -52,14 +52,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA54 RID: 248404 RVA: 0x00E8E026 File Offset: 0x00E8C226
+		// Token: 0x060319AD RID: 203181 RVA: 0x00DDE7DA File Offset: 0x00DDC9DA
 		protected override void BindCallback()
 		{
 			base.BindCallback();
 			this.HeadStateData.BindOnProgressControlDataChange(new Action<SceneItemProgressControlComponent.TProgressData>(this.OnProgressControlDataChange));
 		}
 
-		// Token: 0x0603CA55 RID: 248405 RVA: 0x00E8E048 File Offset: 0x00E8C248
+		// Token: 0x060319AE RID: 203182 RVA: 0x00DDE7FC File Offset: 0x00DDC9FC
 		public void OnProgressControlDataChange(SceneItemProgressControlComponent.TProgressData progressData)
 		{
 			EProgressBarControlType progressCtrlType = progressData.ProgressCtrlType;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA56 RID: 248406 RVA: 0x00E8E074 File Offset: 0x00E8C274
+		// Token: 0x060319AF RID: 203183 RVA: 0x00DDE828 File Offset: 0x00DDCA28
 		private void SetProgress(float progress)
 		{
 			float width = MathUtils.Instance.Clamp(progress, 0f, 1f) * this.BarFullWidth;
@@ -78,16 +78,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetText(1).SetText(num.ToString() + "%", true);
 		}
 
-		// Token: 0x0401F965 RID: 129381
+		// Token: 0x0401A41E RID: 107550
 		private float BarFullWidth;
 
-		// Token: 0x0200BFF1 RID: 49137
+		// Token: 0x0200A9F7 RID: 43511
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039ED1 RID: 237265
+			// Token: 0x04034893 RID: 215187
 			BarProgress,
-			// Token: 0x04039ED2 RID: 237266
+			// Token: 0x04034894 RID: 215188
 			TxtProgress
 		}
 	}

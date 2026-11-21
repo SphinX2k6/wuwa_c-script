@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001B2 RID: 434
+	// Token: 0x020001C4 RID: 452
 	public class ConfigCustomMarkAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A2F RID: 2607 RVA: 0x0009327C File Offset: 0x0009147C
+		// Token: 0x06000A9B RID: 2715 RVA: 0x000991B4 File Offset: 0x000973B4
 		static ConfigCustomMarkAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCustomMarkAll.CreateStaticDefaultValue), new Action(ConfigCustomMarkAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A30 RID: 2608 RVA: 0x0009329C File Offset: 0x0009149C
+		// Token: 0x06000A9C RID: 2716 RVA: 0x000991D4 File Offset: 0x000973D4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCustomMarkAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A31 RID: 2609 RVA: 0x0009331B File Offset: 0x0009151B
+		// Token: 0x06000A9D RID: 2717 RVA: 0x00099253 File Offset: 0x00097453
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCustomMarkAll.LogPair = null;
 			ConfigCustomMarkAll.HandleId = 0;
 		}
 
-		// Token: 0x06000A32 RID: 2610 RVA: 0x00093329 File Offset: 0x00091529
+		// Token: 0x06000A9E RID: 2718 RVA: 0x00099261 File Offset: 0x00097461
 		public static void Init()
 		{
 			ConfigCustomMarkAll.HandleId = ConfigCommon.InitDataStatement(ConfigCustomMarkAll.HandleId, "db_map_mark.db", "select BinData from `CustomMark`");
 		}
 
-		// Token: 0x06000A33 RID: 2611 RVA: 0x00093344 File Offset: 0x00091544
+		// Token: 0x06000A9F RID: 2719 RVA: 0x0009927C File Offset: 0x0009747C
 		[NullableContext(2)]
 		public static IReadOnlyList<CustomMark> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000BC2 RID: 3010
+		// Token: 0x04000C40 RID: 3136
 		private const string DB = "db_map_mark.db";
 
-		// Token: 0x04000BC3 RID: 3011
+		// Token: 0x04000C41 RID: 3137
 		private const string FILE = "d.地图标记.xlsx";
 
-		// Token: 0x04000BC4 RID: 3012
+		// Token: 0x04000C42 RID: 3138
 		private const string TABLE = "CustomMark";
 
-		// Token: 0x04000BC5 RID: 3013
+		// Token: 0x04000C43 RID: 3139
 		private const string COMMAND = "select BinData from `CustomMark`";
 
-		// Token: 0x04000BC6 RID: 3014
+		// Token: 0x04000C44 RID: 3140
 		private const string KEY_PREFIX = "CustomMarkAll";
 
-		// Token: 0x04000BC7 RID: 3015
+		// Token: 0x04000C45 RID: 3141
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000BC8 RID: 3016
+		// Token: 0x04000C46 RID: 3142
 		private static int HandleId;
 	}
 }

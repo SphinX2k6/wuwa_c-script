@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020023FC RID: 9212
+// Token: 0x020018E1 RID: 6369
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManagerConfigCostGroupData
 {
-	// Token: 0x060126D5 RID: 75477 RVA: 0x0048BB04 File Offset: 0x00489D04
+	// Token: 0x0600FB87 RID: 64391 RVA: 0x00499000 File Offset: 0x00497200
 	public PhantomManagerConfigCostGroupData(int fetterId, int cost)
 	{
 		this.FetterId = fetterId;
 		this.Cost = cost;
 	}
 
-	// Token: 0x060126D6 RID: 75478 RVA: 0x0048BB30 File Offset: 0x00489D30
-	public void UpdateMainProp(List<PhBaPlanAttr> attrList)
+	// Token: 0x0600FB88 RID: 64392 RVA: 0x0049902C File Offset: 0x0049722C
+	public void UpdateMainProp(IEnumerable<PhBaPlanAttr> attrList)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (PhBaPlanAttr phBaPlanAttr in attrList)
@@ -26,7 +25,7 @@ public class PhantomManagerConfigCostGroupData
 			hashSet.Add(phBaPlanAttr.AttrId);
 			this.MainPropMap[phBaPlanAttr.AttrId] = (EPhantomManagerConfigState)phBaPlanAttr.Deal;
 		}
-		foreach (int num in this.MainPropMap.Keys.ToList<int>())
+		foreach (int num in this.MainPropMap.Keys)
 		{
 			if (!hashSet.Contains(num))
 			{
@@ -35,8 +34,8 @@ public class PhantomManagerConfigCostGroupData
 		}
 	}
 
-	// Token: 0x060126D7 RID: 75479 RVA: 0x0048BC00 File Offset: 0x00489E00
-	public void CacheShareProp(List<PhBaPlanAttr> attrList)
+	// Token: 0x0600FB89 RID: 64393 RVA: 0x004990F0 File Offset: 0x004972F0
+	public void CacheShareProp(IEnumerable<PhBaPlanAttr> attrList)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (PhBaPlanAttr phBaPlanAttr in attrList)
@@ -53,7 +52,7 @@ public class PhantomManagerConfigCostGroupData
 		}
 	}
 
-	// Token: 0x060126D8 RID: 75480 RVA: 0x0048BCCC File Offset: 0x00489ECC
+	// Token: 0x0600FB8A RID: 64394 RVA: 0x004991B4 File Offset: 0x004973B4
 	public void SetPropState(int mainProp, EPhantomManagerConfigState state, bool isCache)
 	{
 		if (isCache)
@@ -64,7 +63,7 @@ public class PhantomManagerConfigCostGroupData
 		this.MainPropMap[mainProp] = state;
 	}
 
-	// Token: 0x060126D9 RID: 75481 RVA: 0x0048BCEC File Offset: 0x00489EEC
+	// Token: 0x0600FB8B RID: 64395 RVA: 0x004991D4 File Offset: 0x004973D4
 	public void DoCacheDataUpdate(bool apply)
 	{
 		if (apply)
@@ -77,7 +76,7 @@ public class PhantomManagerConfigCostGroupData
 		this.CachePropMap.Clear();
 	}
 
-	// Token: 0x060126DA RID: 75482 RVA: 0x0048BD60 File Offset: 0x00489F60
+	// Token: 0x0600FB8C RID: 64396 RVA: 0x00499248 File Offset: 0x00497448
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -112,7 +111,7 @@ public class PhantomManagerConfigCostGroupData
 		return new ValueTuple<bool, List<PhBaPlanAttr>>(item, list);
 	}
 
-	// Token: 0x060126DB RID: 75483 RVA: 0x0048BEC0 File Offset: 0x0048A0C0
+	// Token: 0x0600FB8D RID: 64397 RVA: 0x004993A8 File Offset: 0x004975A8
 	public void ResetConfig()
 	{
 		this.CachePropMap.Clear();
@@ -125,7 +124,7 @@ public class PhantomManagerConfigCostGroupData
 		}
 	}
 
-	// Token: 0x060126DC RID: 75484 RVA: 0x0048BF34 File Offset: 0x0048A134
+	// Token: 0x0600FB8E RID: 64398 RVA: 0x0049941C File Offset: 0x0049761C
 	public EPhantomManagerConfigState GetPropCurrentState(int id)
 	{
 		EPhantomManagerConfigState result;
@@ -136,7 +135,7 @@ public class PhantomManagerConfigCostGroupData
 		return result;
 	}
 
-	// Token: 0x060126DD RID: 75485 RVA: 0x0048BF60 File Offset: 0x0048A160
+	// Token: 0x0600FB8F RID: 64399 RVA: 0x00499448 File Offset: 0x00497648
 	public bool GetRecommendDirty(PhantomManagePlanV2 config)
 	{
 		foreach (int id in config.DiscardGroupIter())
@@ -155,14 +154,14 @@ public class PhantomManagerConfigCostGroupData
 		}
 		foreach (KeyValuePair<int, EPhantomManagerConfigState> keyValuePair in this.MainPropMap)
 		{
-			if (!config.GetDiscardGroupBytes().Contains(keyValuePair.Key) && !config.GetLockGroupArray().Contains(keyValuePair.Key) && keyValuePair.Value != EPhantomManagerConfigState.Default)
+			if (!config.GetDiscardGroupBytes().Contains(keyValuePair.Key) && !NoLinq.Contains<int>(config.GetLockGroupBytes(), keyValuePair.Key) && keyValuePair.Value != EPhantomManagerConfigState.Default)
 			{
 				return true;
 			}
 		}
 		foreach (KeyValuePair<int, EPhantomManagerConfigState> keyValuePair2 in this.CachePropMap)
 		{
-			if (!config.GetDiscardGroupBytes().Contains(keyValuePair2.Key) && !config.GetLockGroupArray().Contains(keyValuePair2.Key) && keyValuePair2.Value != EPhantomManagerConfigState.Default)
+			if (!config.GetDiscardGroupBytes().Contains(keyValuePair2.Key) && !NoLinq.Contains<int>(config.GetLockGroupBytes(), keyValuePair2.Key) && keyValuePair2.Value != EPhantomManagerConfigState.Default)
 			{
 				return true;
 			}
@@ -170,13 +169,13 @@ public class PhantomManagerConfigCostGroupData
 		return false;
 	}
 
-	// Token: 0x060126DE RID: 75486 RVA: 0x0048C0F0 File Offset: 0x0048A2F0
+	// Token: 0x0600FB90 RID: 64400 RVA: 0x004995D8 File Offset: 0x004977D8
 	public bool CacheRecommend(PhantomManagePlanV2 config)
 	{
 		this.CachePropMap.Clear();
 		foreach (KeyValuePair<int, EPhantomManagerConfigState> keyValuePair in this.MainPropMap)
 		{
-			if (!config.GetDiscardGroupBytes().Contains(keyValuePair.Key) && !config.GetLockGroupArray().Contains(keyValuePair.Key) && keyValuePair.Value != EPhantomManagerConfigState.Default)
+			if (!config.GetDiscardGroupBytes().Contains(keyValuePair.Key) && !NoLinq.Contains<int>(config.GetLockGroupBytes(), keyValuePair.Key) && keyValuePair.Value != EPhantomManagerConfigState.Default)
 			{
 				this.CachePropMap[keyValuePair.Key] = EPhantomManagerConfigState.Default;
 			}
@@ -198,7 +197,7 @@ public class PhantomManagerConfigCostGroupData
 		return this.CachePropMap.Count > 0;
 	}
 
-	// Token: 0x060126DF RID: 75487 RVA: 0x0048C260 File Offset: 0x0048A460
+	// Token: 0x0600FB91 RID: 64401 RVA: 0x00499748 File Offset: 0x00497948
 	public List<PhantomDiscardPlanPlanLogData> GetLogReport()
 	{
 		PhantomDiscardPlanPlanLogData phantomDiscardPlanPlanLogData = new PhantomDiscardPlanPlanLogData();
@@ -230,15 +229,15 @@ public class PhantomManagerConfigCostGroupData
 		return list;
 	}
 
-	// Token: 0x04008B57 RID: 35671
+	// Token: 0x04008C9E RID: 35998
 	public Dictionary<int, EPhantomManagerConfigState> MainPropMap = new Dictionary<int, EPhantomManagerConfigState>();
 
-	// Token: 0x04008B58 RID: 35672
+	// Token: 0x04008C9F RID: 35999
 	public Dictionary<int, EPhantomManagerConfigState> CachePropMap = new Dictionary<int, EPhantomManagerConfigState>();
 
-	// Token: 0x04008B59 RID: 35673
+	// Token: 0x04008CA0 RID: 36000
 	public int FetterId;
 
-	// Token: 0x04008B5A RID: 35674
+	// Token: 0x04008CA1 RID: 36001
 	public int Cost;
 }

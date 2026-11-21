@@ -5,14 +5,14 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019B0 RID: 6576
+	// Token: 0x02001B39 RID: 6969
 	[NullableContext(2)]
 	[Nullable(0)]
 	[JsonConverter(typeof(IDisableModulePlayerOperationConverter))]
 	public class IDisableModulePlayerOperation : SetPlayerOperationRestriction
 	{
-		// Token: 0x06008CC7 RID: 36039 RVA: 0x0014A2B4 File Offset: 0x001484B4
-		[NullableContext(1)]
+		// Token: 0x060093F7 RID: 37879 RVA: 0x00159C04 File Offset: 0x00157E04
+		[NullableContext(0)]
 		private IDisableModulePlayerOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008CC8 RID: 36040 RVA: 0x0014A2EC File Offset: 0x001484EC
-		[NullableContext(1)]
+		// Token: 0x060093F8 RID: 37880 RVA: 0x00159C3C File Offset: 0x00157E3C
+		[NullableContext(0)]
 		public static IDisableModulePlayerOperation Create([Nullable(2)] IDisableModulePlayerOperation instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008CC9 RID: 36041 RVA: 0x0014A2FF File Offset: 0x001484FF
-		[NullableContext(1)]
+		// Token: 0x060093F9 RID: 37881 RVA: 0x00159C4F File Offset: 0x00157E4F
+		[NullableContext(0)]
 		public static IDisableModulePlayerOperation CreateFromSetValue([Nullable(2)] IDisableModulePlayerOperation_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008CCA RID: 36042 RVA: 0x0014A314 File Offset: 0x00148514
-		[NullableContext(1)]
+		// Token: 0x060093FA RID: 37882 RVA: 0x00159C64 File Offset: 0x00157E64
+		[NullableContext(0)]
 		public new IDisableModulePlayerOperation_SetValue ToSetValue()
 		{
 			return new IDisableModulePlayerOperation_SetValue
@@ -66,13 +66,14 @@ namespace Aki.TDConfigMgr.Action
 				SkillOption = this.SkillOption,
 				CameraOption = this.CameraOption,
 				UiOption = this.UiOption,
-				SceneInteractionOption = this.SceneInteractionOption
+				SceneInteractionOption = this.SceneInteractionOption,
+				PlayerAiOption = this.PlayerAiOption
 			};
 		}
 
-		// Token: 0x17002D30 RID: 11568
-		// (get) Token: 0x06008CCB RID: 36043 RVA: 0x0014A36E File Offset: 0x0014856E
-		// (set) Token: 0x06008CCC RID: 36044 RVA: 0x0014A399 File Offset: 0x00148599
+		// Token: 0x17002F32 RID: 12082
+		// (get) Token: 0x060093FB RID: 37883 RVA: 0x00159CCA File Offset: 0x00157ECA
+		// (set) Token: 0x060093FC RID: 37884 RVA: 0x00159CF5 File Offset: 0x00157EF5
 		public override EPlayerOperationType Type
 		{
 			get
@@ -93,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D31 RID: 11569
-		// (get) Token: 0x06008CCD RID: 36045 RVA: 0x0014A3A7 File Offset: 0x001485A7
-		// (set) Token: 0x06008CCE RID: 36046 RVA: 0x0014A3CE File Offset: 0x001485CE
+		// Token: 0x17002F33 RID: 12083
+		// (get) Token: 0x060093FD RID: 37885 RVA: 0x00159D03 File Offset: 0x00157F03
+		// (set) Token: 0x060093FE RID: 37886 RVA: 0x00159D2A File Offset: 0x00157F2A
 		public virtual IMoveOperationType MoveOption
 		{
 			get
@@ -117,9 +118,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D32 RID: 11570
-		// (get) Token: 0x06008CCF RID: 36047 RVA: 0x0014A3DC File Offset: 0x001485DC
-		// (set) Token: 0x06008CD0 RID: 36048 RVA: 0x0014A403 File Offset: 0x00148603
+		// Token: 0x17002F34 RID: 12084
+		// (get) Token: 0x060093FF RID: 37887 RVA: 0x00159D38 File Offset: 0x00157F38
+		// (set) Token: 0x06009400 RID: 37888 RVA: 0x00159D5F File Offset: 0x00157F5F
 		public virtual ISkillOperationType SkillOption
 		{
 			get
@@ -141,9 +142,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D33 RID: 11571
-		// (get) Token: 0x06008CD1 RID: 36049 RVA: 0x0014A411 File Offset: 0x00148611
-		// (set) Token: 0x06008CD2 RID: 36050 RVA: 0x0014A438 File Offset: 0x00148638
+		// Token: 0x17002F35 RID: 12085
+		// (get) Token: 0x06009401 RID: 37889 RVA: 0x00159D6D File Offset: 0x00157F6D
+		// (set) Token: 0x06009402 RID: 37890 RVA: 0x00159D94 File Offset: 0x00157F94
 		public virtual ICameraOperationType CameraOption
 		{
 			get
@@ -165,9 +166,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D34 RID: 11572
-		// (get) Token: 0x06008CD3 RID: 36051 RVA: 0x0014A446 File Offset: 0x00148646
-		// (set) Token: 0x06008CD4 RID: 36052 RVA: 0x0014A46D File Offset: 0x0014866D
+		// Token: 0x17002F36 RID: 12086
+		// (get) Token: 0x06009403 RID: 37891 RVA: 0x00159DA2 File Offset: 0x00157FA2
+		// (set) Token: 0x06009404 RID: 37892 RVA: 0x00159DC9 File Offset: 0x00157FC9
 		public virtual IUiOperationType UiOption
 		{
 			get
@@ -189,9 +190,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D35 RID: 11573
-		// (get) Token: 0x06008CD5 RID: 36053 RVA: 0x0014A47B File Offset: 0x0014867B
-		// (set) Token: 0x06008CD6 RID: 36054 RVA: 0x0014A4A2 File Offset: 0x001486A2
+		// Token: 0x17002F37 RID: 12087
+		// (get) Token: 0x06009405 RID: 37893 RVA: 0x00159DD7 File Offset: 0x00157FD7
+		// (set) Token: 0x06009406 RID: 37894 RVA: 0x00159DFE File Offset: 0x00157FFE
 		public virtual ISceneInteractionOperationType SceneInteractionOption
 		{
 			get
@@ -213,10 +214,34 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005791 RID: 22417
+		// Token: 0x17002F38 RID: 12088
+		// (get) Token: 0x06009407 RID: 37895 RVA: 0x00159E0C File Offset: 0x0015800C
+		// (set) Token: 0x06009408 RID: 37896 RVA: 0x00159E33 File Offset: 0x00158033
+		public virtual IPlayerAiControlBase PlayerAiOption
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.PlayerAiOption;
+				}
+				IDisableModulePlayerOperation_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.PlayerAiOption;
+			}
+			set
+			{
+				this.GetOrCreatePoco().PlayerAiOption = value;
+			}
+		}
+
+		// Token: 0x04005BDF RID: 23519
 		protected new IDisableModulePlayerOperation FbInstance;
 
-		// Token: 0x04005792 RID: 22418
+		// Token: 0x04005BE0 RID: 23520
 		protected new IDisableModulePlayerOperation_SetValue PocoInterface;
 	}
 }

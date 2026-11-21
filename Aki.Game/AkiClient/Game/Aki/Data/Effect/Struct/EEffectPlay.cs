@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.Effect.Struct
 {
-	// Token: 0x02003F98 RID: 16280
+	// Token: 0x02003228 RID: 12840
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/Effect/Struct/EEffectPlay.EEffectPlay")]
 	public enum EEffectPlay : byte
 	{
-		// Token: 0x0401555F RID: 87391
+		// Token: 0x040113B1 RID: 70577
 		Default,
-		// Token: 0x04015560 RID: 87392
+		// Token: 0x040113B2 RID: 70578
 		Play,
-		// Token: 0x04015561 RID: 87393
+		// Token: 0x040113B3 RID: 70579
 		DoNotPlay,
-		// Token: 0x04015562 RID: 87394
+		// Token: 0x040113B4 RID: 70580
 		EEffectPlay_MAX
 	}
 }

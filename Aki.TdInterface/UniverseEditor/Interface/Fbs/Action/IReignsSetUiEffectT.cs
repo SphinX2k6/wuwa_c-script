@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E32 RID: 28210
+	// Token: 0x020075B0 RID: 30128
 	public class IReignsSetUiEffectT
 	{
-		// Token: 0x1700D239 RID: 53817
-		// (get) Token: 0x06031D84 RID: 204164 RVA: 0x006BF19F File Offset: 0x006BD39F
-		// (set) Token: 0x06031D85 RID: 204165 RVA: 0x006BF1A7 File Offset: 0x006BD3A7
+		// Token: 0x1700DD88 RID: 56712
+		// (get) Token: 0x06034D9A RID: 216474 RVA: 0x0071AB27 File Offset: 0x00718D27
+		// (set) Token: 0x06034D9B RID: 216475 RVA: 0x0071AB2F File Offset: 0x00718D2F
 		public string Effect { get; set; }
 
-		// Token: 0x1700D23A RID: 53818
-		// (get) Token: 0x06031D86 RID: 204166 RVA: 0x006BF1B0 File Offset: 0x006BD3B0
-		// (set) Token: 0x06031D87 RID: 204167 RVA: 0x006BF1B8 File Offset: 0x006BD3B8
+		// Token: 0x1700DD89 RID: 56713
+		// (get) Token: 0x06034D9C RID: 216476 RVA: 0x0071AB38 File Offset: 0x00718D38
+		// (set) Token: 0x06034D9D RID: 216477 RVA: 0x0071AB40 File Offset: 0x00718D40
 		public bool IsVisible { get; set; }
 
-		// Token: 0x06031D88 RID: 204168 RVA: 0x006BF1C1 File Offset: 0x006BD3C1
+		// Token: 0x06034D9E RID: 216478 RVA: 0x0071AB49 File Offset: 0x00718D49
 		public IReignsSetUiEffectT()
 		{
 			this.Effect = null;

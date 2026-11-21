@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D34 RID: 15668
+	// Token: 0x0200414B RID: 16715
 	public enum IBindingProgressType_Union : byte
 	{
-		// Token: 0x0400B5F2 RID: 46578
+		// Token: 0x0400BF9F RID: 49055
 		NONE,
-		// Token: 0x0400B5F3 RID: 46579
+		// Token: 0x0400BFA0 RID: 49056
 		IBindingProgressType,
-		// Token: 0x0400B5F4 RID: 46580
+		// Token: 0x0400BFA1 RID: 49057
 		IPlayerHavingItemCount
 	}
 }

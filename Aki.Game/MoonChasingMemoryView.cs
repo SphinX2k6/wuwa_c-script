@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001346 RID: 4934
+// Token: 0x020007FA RID: 2042
 [NullableContext(1)]
 [Nullable(0)]
 public class MoonChasingMemoryView : UiViewBase
 {
-	// Token: 0x0600895C RID: 35164 RVA: 0x001D54FE File Offset: 0x001D36FE
+	// Token: 0x06005CF7 RID: 23799 RVA: 0x001DE36A File Offset: 0x001DC56A
 	public MoonChasingMemoryView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600895D RID: 35165 RVA: 0x001D5514 File Offset: 0x001D3714
+	// Token: 0x06005CF8 RID: 23800 RVA: 0x001DE380 File Offset: 0x001DC580
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class MoonChasingMemoryView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600895E RID: 35166 RVA: 0x001D5570 File Offset: 0x001D3770
+	// Token: 0x06005CF9 RID: 23801 RVA: 0x001DE3DC File Offset: 0x001DC5DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MoonChasingMemoryView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ public class MoonChasingMemoryView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600895F RID: 35167 RVA: 0x001D55B3 File Offset: 0x001D37B3
+	// Token: 0x06005CFA RID: 23802 RVA: 0x001DE41F File Offset: 0x001DC61F
 	protected override void OnStart()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -50,20 +50,20 @@ public class MoonChasingMemoryView : UiViewBase
 		});
 	}
 
-	// Token: 0x06008960 RID: 35168 RVA: 0x001D55E0 File Offset: 0x001D37E0
+	// Token: 0x06005CFB RID: 23803 RVA: 0x001DE44C File Offset: 0x001DC64C
 	protected override void OnBeforeShow()
 	{
 		bool redDotVisible = MoonChasingModel.Instance.CheckMemoryRedDotState();
 		this.DetailBtn.SetRedDotVisible(redDotVisible);
 	}
 
-	// Token: 0x06008961 RID: 35169 RVA: 0x001D5604 File Offset: 0x001D3804
+	// Token: 0x06005CFC RID: 23804 RVA: 0x001DE470 File Offset: 0x001DC670
 	protected override void OnBeforeDestroy()
 	{
 		this.MoveComponent.Destroy();
 	}
 
-	// Token: 0x06008962 RID: 35170 RVA: 0x001D5611 File Offset: 0x001D3811
+	// Token: 0x06005CFD RID: 23805 RVA: 0x001DE47D File Offset: 0x001DC67D
 	private void InitBtn()
 	{
 		this.DetailBtn = new ButtonItem(base.GetItem(1));
@@ -73,7 +73,7 @@ public class MoonChasingMemoryView : UiViewBase
 		});
 	}
 
-	// Token: 0x06008963 RID: 35171 RVA: 0x001D563C File Offset: 0x001D383C
+	// Token: 0x06005CFE RID: 23806 RVA: 0x001DE4A8 File Offset: 0x001DC6A8
 	private void InitMoveComponent()
 	{
 		this.MoveComponent = new BuildingMapMoveComponent(base.GetDraggable(2), false, false, false);
@@ -82,7 +82,7 @@ public class MoonChasingMemoryView : UiViewBase
 		this.MoveComponent.SetScale((double)valueOrDefault, ESetScaleSource.Other, null);
 	}
 
-	// Token: 0x06008964 RID: 35172 RVA: 0x001D569C File Offset: 0x001D389C
+	// Token: 0x06005CFF RID: 23807 RVA: 0x001DE508 File Offset: 0x001DC708
 	private UniTask InitMapTile()
 	{
 		MoonChasingMemoryView.<InitMapTile>d__14 <InitMapTile>d__;
@@ -93,41 +93,41 @@ public class MoonChasingMemoryView : UiViewBase
 		return <InitMapTile>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008965 RID: 35173 RVA: 0x001D56DF File Offset: 0x001D38DF
+	// Token: 0x06005D00 RID: 23808 RVA: 0x001DE54B File Offset: 0x001DC74B
 	private void OnButtonJump()
 	{
 		UiManager.Instance.OpenView(EUiViewName.MoonChasingMemoryDetailView, this.MemoryItemData, null);
 		MoonChasingModel.Instance.RemoveMemoryRedDot();
 	}
 
-	// Token: 0x04003D44 RID: 15684
+	// Token: 0x04003DDC RID: 15836
 	[Nullable(2)]
 	private BuildingMapTileModule MapTile;
 
-	// Token: 0x04003D45 RID: 15685
+	// Token: 0x04003DDD RID: 15837
 	private BuildingMapMoveComponent MoveComponent;
 
-	// Token: 0x04003D46 RID: 15686
+	// Token: 0x04003DDE RID: 15838
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003D47 RID: 15687
+	// Token: 0x04003DDF RID: 15839
 	private ButtonItem DetailBtn;
 
-	// Token: 0x04003D48 RID: 15688
+	// Token: 0x04003DE0 RID: 15840
 	private List<IMemoryItemData> MemoryItemData = new List<IMemoryItemData>();
 
-	// Token: 0x020079A8 RID: 31144
+	// Token: 0x02006B32 RID: 27442
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x040280F3 RID: 164083
+		// Token: 0x04023420 RID: 144416
 		public const int Caption = 0;
 
-		// Token: 0x040280F4 RID: 164084
+		// Token: 0x04023421 RID: 144417
 		public const int Button = 1;
 
-		// Token: 0x040280F5 RID: 164085
+		// Token: 0x04023422 RID: 144418
 		public const int MapItem = 2;
 	}
 }

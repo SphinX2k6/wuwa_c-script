@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003A6 RID: 934
+	// Token: 0x020003BC RID: 956
 	public class ConfigGmOrderListById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060015EB RID: 5611 RVA: 0x000D5683 File Offset: 0x000D3883
+		// Token: 0x0600166F RID: 5743 RVA: 0x000DBDD7 File Offset: 0x000D9FD7
 		static ConfigGmOrderListById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGmOrderListById.CreateStaticDefaultValue), new Action(ConfigGmOrderListById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060015EC RID: 5612 RVA: 0x000D56A4 File Offset: 0x000D38A4
+		// Token: 0x06001670 RID: 5744 RVA: 0x000DBDF8 File Offset: 0x000D9FF8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGmOrderListById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060015ED RID: 5613 RVA: 0x000D5723 File Offset: 0x000D3923
+		// Token: 0x06001671 RID: 5745 RVA: 0x000DBE77 File Offset: 0x000DA077
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGmOrderListById.LogPair = null;
 			ConfigGmOrderListById.HandleId = 0;
 		}
 
-		// Token: 0x060015EE RID: 5614 RVA: 0x000D5731 File Offset: 0x000D3931
+		// Token: 0x06001672 RID: 5746 RVA: 0x000DBE85 File Offset: 0x000DA085
 		public static void Init()
 		{
 			ConfigGmOrderListById.HandleId = ConfigCommon.InitDataStatement(ConfigGmOrderListById.HandleId, "db_gm.db", "select BinData from `GmOrderList` where Id=?");
 		}
 
-		// Token: 0x060015EF RID: 5615 RVA: 0x000D574C File Offset: 0x000D394C
+		// Token: 0x06001673 RID: 5747 RVA: 0x000DBEA0 File Offset: 0x000DA0A0
 		public static GmOrderList? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGmOrderListById.HandleId, ConfigGmOrderListById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GmOrderList?(rootAsGmOrderList);
 		}
 
-		// Token: 0x0400196E RID: 6510
+		// Token: 0x04001A08 RID: 6664
 		private const string DB = "db_gm.db";
 
-		// Token: 0x0400196F RID: 6511
+		// Token: 0x04001A09 RID: 6665
 		private const string FILE = "g.GM.xlsx";
 
-		// Token: 0x04001970 RID: 6512
+		// Token: 0x04001A0A RID: 6666
 		private const string TABLE = "GmOrderList";
 
-		// Token: 0x04001971 RID: 6513
+		// Token: 0x04001A0B RID: 6667
 		private const string COMMAND = "select BinData from `GmOrderList` where Id=?";
 
-		// Token: 0x04001972 RID: 6514
+		// Token: 0x04001A0C RID: 6668
 		private const string KEY_PREFIX = "GmOrderListById";
 
-		// Token: 0x04001973 RID: 6515
+		// Token: 0x04001A0D RID: 6669
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001974 RID: 6516
+		// Token: 0x04001A0E RID: 6670
 		private static int HandleId;
 	}
 }

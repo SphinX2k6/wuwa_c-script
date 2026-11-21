@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F3D RID: 3901
+// Token: 0x020003F2 RID: 1010
 public class DrinksResultInfo
 {
-	// Token: 0x04002D24 RID: 11556
+	// Token: 0x04002DBD RID: 11709
 	public int RequireId;
 
-	// Token: 0x04002D25 RID: 11557
+	// Token: 0x04002DBE RID: 11710
 	[Nullable(1)]
 	public List<int> DrinkBase = new List<int>();
 
-	// Token: 0x04002D26 RID: 11558
+	// Token: 0x04002DBF RID: 11711
 	public int Ornament;
 
-	// Token: 0x04002D27 RID: 11559
+	// Token: 0x04002DC0 RID: 11712
 	[Nullable(2)]
 	public IReadOnlyList<int> Batching;
 }

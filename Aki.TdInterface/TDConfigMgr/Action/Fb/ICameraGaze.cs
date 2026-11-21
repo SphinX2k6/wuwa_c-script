@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027D9 RID: 10201
+	// Token: 0x02002AAC RID: 10924
 	public class ICameraGaze
 	{
-		// Token: 0x0600E2BC RID: 58044 RVA: 0x0021778E File Offset: 0x0021598E
-		[NullableContext(1)]
+		// Token: 0x0600F0E0 RID: 61664 RVA: 0x002345C2 File Offset: 0x002327C2
 		public static ICameraGaze Create(ICameraGaze? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044CC RID: 17612
-		// (get) Token: 0x0600E2BD RID: 58045 RVA: 0x002177AD File Offset: 0x002159AD
+		// Token: 0x17004836 RID: 18486
+		// (get) Token: 0x0600F0E1 RID: 61665 RVA: 0x002345E1 File Offset: 0x002327E1
 		public virtual float FadeInTime
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044CD RID: 17613
-		// (get) Token: 0x0600E2BE RID: 58046 RVA: 0x002177BA File Offset: 0x002159BA
+		// Token: 0x17004837 RID: 18487
+		// (get) Token: 0x0600F0E2 RID: 61666 RVA: 0x002345EE File Offset: 0x002327EE
 		public virtual float StayTime
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044CE RID: 17614
-		// (get) Token: 0x0600E2BF RID: 58047 RVA: 0x002177C8 File Offset: 0x002159C8
+		// Token: 0x17004838 RID: 18488
+		// (get) Token: 0x0600F0E3 RID: 61667 RVA: 0x002345FC File Offset: 0x002327FC
 		public virtual float? FadeOutTime
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044CF RID: 17615
-		// (get) Token: 0x0600E2C0 RID: 58048 RVA: 0x00217800 File Offset: 0x00215A00
+		// Token: 0x17004839 RID: 18489
+		// (get) Token: 0x0600F0E4 RID: 61668 RVA: 0x00234634 File Offset: 0x00232834
 		public virtual bool? LockCamera
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044D0 RID: 17616
-		// (get) Token: 0x0600E2C1 RID: 58049 RVA: 0x00217836 File Offset: 0x00215A36
+		// Token: 0x1700483A RID: 18490
+		// (get) Token: 0x0600F0E5 RID: 61669 RVA: 0x0023466A File Offset: 0x0023286A
 		public virtual int LockPriority
 		{
 			get
@@ -79,8 +77,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044D1 RID: 17617
-		// (get) Token: 0x0600E2C2 RID: 58050 RVA: 0x00217844 File Offset: 0x00215A44
+		// Token: 0x1700483B RID: 18491
+		// (get) Token: 0x0600F0E6 RID: 61670 RVA: 0x00234678 File Offset: 0x00232878
 		public virtual bool? GazeInHook
 		{
 			get
@@ -93,7 +91,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DAD RID: 32173
+		// Token: 0x04008468 RID: 33896
 		private ICameraGaze Instance;
 	}
 }

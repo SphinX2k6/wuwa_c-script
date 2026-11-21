@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BE8 RID: 27624
+	// Token: 0x0200734C RID: 29516
 	public struct INpcSwingGetUp : IFlatbufferObject
 	{
-		// Token: 0x1700CD52 RID: 52562
-		// (get) Token: 0x0603089A RID: 198810 RVA: 0x00696D64 File Offset: 0x00694F64
+		// Token: 0x1700D85E RID: 55390
+		// (get) Token: 0x060337B6 RID: 210870 RVA: 0x006F0664 File Offset: 0x006EE864
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603089B RID: 198811 RVA: 0x00696D71 File Offset: 0x00694F71
+		// Token: 0x060337B7 RID: 210871 RVA: 0x006F0671 File Offset: 0x006EE871
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603089C RID: 198812 RVA: 0x00696D78 File Offset: 0x00694F78
+		// Token: 0x060337B8 RID: 210872 RVA: 0x006F0678 File Offset: 0x006EE878
 		public static INpcSwingGetUp GetRootAsINpcSwingGetUp(ByteBuffer _bb)
 		{
 			return INpcSwingGetUp.GetRootAsINpcSwingGetUp(_bb, default(INpcSwingGetUp));
 		}
 
-		// Token: 0x0603089D RID: 198813 RVA: 0x00696D94 File Offset: 0x00694F94
+		// Token: 0x060337B9 RID: 210873 RVA: 0x006F0694 File Offset: 0x006EE894
 		public static INpcSwingGetUp GetRootAsINpcSwingGetUp(ByteBuffer _bb, INpcSwingGetUp obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603089E RID: 198814 RVA: 0x00696DB1 File Offset: 0x00694FB1
+		// Token: 0x060337BA RID: 210874 RVA: 0x006F06B1 File Offset: 0x006EE8B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603089F RID: 198815 RVA: 0x00696DC0 File Offset: 0x00694FC0
+		// Token: 0x060337BB RID: 210875 RVA: 0x006F06C0 File Offset: 0x006EE8C0
 		public INpcSwingGetUp __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CD53 RID: 52563
-		// (get) Token: 0x060308A0 RID: 198816 RVA: 0x00696DD0 File Offset: 0x00694FD0
+		// Token: 0x1700D85F RID: 55391
+		// (get) Token: 0x060337BC RID: 210876 RVA: 0x006F06D0 File Offset: 0x006EE8D0
 		public ENpcLeisureInteract Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD54 RID: 52564
-		// (get) Token: 0x060308A1 RID: 198817 RVA: 0x00696E0C File Offset: 0x0069500C
+		// Token: 0x1700D860 RID: 55392
+		// (get) Token: 0x060337BD RID: 210877 RVA: 0x006F070C File Offset: 0x006EE90C
 		public bool KeepState
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD55 RID: 52565
-		// (get) Token: 0x060308A2 RID: 198818 RVA: 0x00696E4C File Offset: 0x0069504C
+		// Token: 0x1700D861 RID: 55393
+		// (get) Token: 0x060337BE RID: 210878 RVA: 0x006F074C File Offset: 0x006EE94C
 		public int TargetNpcId
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD56 RID: 52566
-		// (get) Token: 0x060308A3 RID: 198819 RVA: 0x00696E88 File Offset: 0x00695088
+		// Token: 0x1700D862 RID: 55394
+		// (get) Token: 0x060337BF RID: 210879 RVA: 0x006F0788 File Offset: 0x006EE988
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060308A4 RID: 198820 RVA: 0x00696EC5 File Offset: 0x006950C5
+		// Token: 0x060337C0 RID: 210880 RVA: 0x006F07C5 File Offset: 0x006EE9C5
 		public static Offset<INpcSwingGetUp> CreateINpcSwingGetUp(FlatBufferBuilder builder, ENpcLeisureInteract Type = ENpcLeisureInteract.SitDown, bool KeepState = false, int TargetNpcId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INpcSwingGetUp.EndINpcSwingGetUp(builder);
 		}
 
-		// Token: 0x060308A5 RID: 198821 RVA: 0x00696EF1 File Offset: 0x006950F1
+		// Token: 0x060337C1 RID: 210881 RVA: 0x006F07F1 File Offset: 0x006EE9F1
 		public static void StartINpcSwingGetUp(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060308A6 RID: 198822 RVA: 0x00696EFA File Offset: 0x006950FA
+		// Token: 0x060337C2 RID: 210882 RVA: 0x006F07FA File Offset: 0x006EE9FA
 		public static void AddType(FlatBufferBuilder builder, ENpcLeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060308A7 RID: 198823 RVA: 0x00696F05 File Offset: 0x00695105
+		// Token: 0x060337C3 RID: 210883 RVA: 0x006F0805 File Offset: 0x006EEA05
 		public static void AddKeepState(FlatBufferBuilder builder, bool keepState)
 		{
 			builder.AddBool(1, keepState, false);
 		}
 
-		// Token: 0x060308A8 RID: 198824 RVA: 0x00696F10 File Offset: 0x00695110
+		// Token: 0x060337C4 RID: 210884 RVA: 0x006F0810 File Offset: 0x006EEA10
 		public static void AddTargetNpcId(FlatBufferBuilder builder, int targetNpcId)
 		{
 			builder.AddInt(2, targetNpcId, 0);
 		}
 
-		// Token: 0x060308A9 RID: 198825 RVA: 0x00696F1B File Offset: 0x0069511B
+		// Token: 0x060337C5 RID: 210885 RVA: 0x006F081B File Offset: 0x006EEA1B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x060308AA RID: 198826 RVA: 0x00696F26 File Offset: 0x00695126
+		// Token: 0x060337C6 RID: 210886 RVA: 0x006F0826 File Offset: 0x006EEA26
 		public static Offset<INpcSwingGetUp> EndINpcSwingGetUp(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcSwingGetUp>(builder.EndTable());
 		}
 
-		// Token: 0x060308AB RID: 198827 RVA: 0x00696F34 File Offset: 0x00695134
+		// Token: 0x060337C7 RID: 210887 RVA: 0x006F0834 File Offset: 0x006EEA34
 		public INpcSwingGetUpT UnPack()
 		{
 			INpcSwingGetUpT npcSwingGetUpT = new INpcSwingGetUpT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return npcSwingGetUpT;
 		}
 
-		// Token: 0x060308AC RID: 198828 RVA: 0x00696F4F File Offset: 0x0069514F
+		// Token: 0x060337C8 RID: 210888 RVA: 0x006F084F File Offset: 0x006EEA4F
 		public void UnPackTo(INpcSwingGetUpT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060308AD RID: 198829 RVA: 0x00696F84 File Offset: 0x00695184
+		// Token: 0x060337C9 RID: 210889 RVA: 0x006F0884 File Offset: 0x006EEA84
 		public static Offset<INpcSwingGetUp> Pack(FlatBufferBuilder builder, INpcSwingGetUpT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INpcSwingGetUp.CreateINpcSwingGetUp(builder, _o.Type, _o.KeepState, _o.TargetNpcId, _o.NullMask);
 		}
 
-		// Token: 0x040114D5 RID: 70869
+		// Token: 0x04012424 RID: 74788
 		private Table __p;
 	}
 }

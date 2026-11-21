@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007175 RID: 29045
+	// Token: 0x02007944 RID: 31044
 	public enum ISpecialCustomLoadingOption_Union : byte
 	{
-		// Token: 0x04011C19 RID: 72729
+		// Token: 0x04012C0F RID: 76815
 		NONE,
-		// Token: 0x04011C1A RID: 72730
+		// Token: 0x04012C10 RID: 76816
 		ISpecialCustomLoadingOption,
-		// Token: 0x04011C1B RID: 72731
+		// Token: 0x04012C11 RID: 76817
 		IHonamiStoryCustomLoading
 	}
 }

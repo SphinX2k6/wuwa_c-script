@@ -7,15 +7,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007216 RID: 29206
+	// Token: 0x020062CB RID: 25291
 	[NullableContext(2)]
 	[Nullable(0)]
-	public class SceneItemAttachTargetComponent : EntityComponent, IComponentDependency
+	public class SceneItemAttachTargetComponent : EntityComponent
 	{
-		// Token: 0x17009E25 RID: 40485
-		// (get) Token: 0x060477F9 RID: 292857 RVA: 0x01238E72 File Offset: 0x01237072
+		// Token: 0x1700739D RID: 29597
+		// (get) Token: 0x0603D11C RID: 250140 RVA: 0x01192649 File Offset: 0x01190849
 		[Nullable(1)]
-		public static Type[] Dependencies
+		public override Type[] Dependencies
 		{
 			[NullableContext(1)]
 			get
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060477FA RID: 292858 RVA: 0x01238E94 File Offset: 0x01237094
+		// Token: 0x0603D11D RID: 250141 RVA: 0x0119266C File Offset: 0x0119086C
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			CreateEntityData createEntityData = (args != null) ? args.GetP1<CreateEntityData>() : null;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060477FB RID: 292859 RVA: 0x012391C4 File Offset: 0x012373C4
+		// Token: 0x0603D11E RID: 250142 RVA: 0x0119299C File Offset: 0x01190B9C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060477FC RID: 292860 RVA: 0x01239310 File Offset: 0x01237510
+		// Token: 0x0603D11F RID: 250143 RVA: 0x01192AE8 File Offset: 0x01190CE8
 		protected override void OnActivate()
 		{
 			if (this.IsOnMoveWithSplineEndAttachTiming())
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.HandleAttachByRule();
 		}
 
-		// Token: 0x060477FD RID: 292861 RVA: 0x01239327 File Offset: 0x01237527
+		// Token: 0x0603D120 RID: 250144 RVA: 0x01192AFF File Offset: 0x01190CFF
 		protected override bool OnEnd()
 		{
 			if (this.IsSpecialRuleSwordRailAttached)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060477FE RID: 292862 RVA: 0x01239354 File Offset: 0x01237554
+		// Token: 0x0603D121 RID: 250145 RVA: 0x01192B2C File Offset: 0x01190D2C
 		private bool IsOnMoveWithSplineEndAttachTiming()
 		{
 			AttachTargetComponent config = this.Config;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return ((attachTiming != null) ? new EAttachTimingType?(attachTiming.Type) : null).GetValueOrDefault() == EAttachTimingType.OnMoveWithSplineEnd;
 		}
 
-		// Token: 0x060477FF RID: 292863 RVA: 0x01239398 File Offset: 0x01237598
+		// Token: 0x0603D122 RID: 250146 RVA: 0x01192B70 File Offset: 0x01190D70
 		private bool IsSpecialRuleSwordRailAttachRule()
 		{
 			AttachTargetComponent config = this.Config;
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047800 RID: 292864 RVA: 0x012393E2 File Offset: 0x012375E2
+		// Token: 0x0603D123 RID: 250147 RVA: 0x01192BBA File Offset: 0x01190DBA
 		private IOnMoveWithSplineEndAttachTiming GetOnMoveWithSplineEndAttachTiming()
 		{
 			if (!this.IsOnMoveWithSplineEndAttachTiming())
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return ((config != null) ? config.AttachTiming : null) as IOnMoveWithSplineEndAttachTiming;
 		}
 
-		// Token: 0x06047801 RID: 292865 RVA: 0x01239408 File Offset: 0x01237608
+		// Token: 0x0603D124 RID: 250148 RVA: 0x01192BE0 File Offset: 0x01190DE0
 		private unsafe void RegisterSplineMoveEndEvents()
 		{
 			IOnMoveWithSplineEndAttachTiming onMoveWithSplineEndAttachTiming = this.GetOnMoveWithSplineEndAttachTiming();
@@ -276,14 +276,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047802 RID: 292866 RVA: 0x012395C0 File Offset: 0x012377C0
+		// Token: 0x0603D125 RID: 250149 RVA: 0x01192D98 File Offset: 0x01190F98
 		[NullableContext(1)]
 		private void OnSceneItemSplineMoveStarted(Entity _)
 		{
 			this.UpdateLastSplineMoveTaskId();
 		}
 
-		// Token: 0x06047803 RID: 292867 RVA: 0x012395C8 File Offset: 0x012377C8
+		// Token: 0x0603D126 RID: 250150 RVA: 0x01192DA0 File Offset: 0x01190FA0
 		[NullableContext(1)]
 		private void OnSceneItemSplineMoveBroken(Entity _)
 		{
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.IsSplineMoveBroken = true;
 		}
 
-		// Token: 0x06047804 RID: 292868 RVA: 0x012395D8 File Offset: 0x012377D8
+		// Token: 0x0603D127 RID: 250151 RVA: 0x01192DB0 File Offset: 0x01190FB0
 		[NullableContext(1)]
 		private void OnSceneItemSplineMoveStopped(Entity _)
 		{
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.HandleAttachByRule();
 		}
 
-		// Token: 0x06047805 RID: 292869 RVA: 0x0123966C File Offset: 0x0123786C
+		// Token: 0x0603D128 RID: 250152 RVA: 0x01192E44 File Offset: 0x01191044
 		private void UpdateLastSplineMoveTaskId()
 		{
 			SceneItemMoveComponent moveComp = this.MoveComp;
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047806 RID: 292870 RVA: 0x012396A0 File Offset: 0x012378A0
+		// Token: 0x0603D129 RID: 250153 RVA: 0x01192E78 File Offset: 0x01191078
 		private void AttachBySpecialRuleSwordRail()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.IsSpecialRuleSwordRailAttached = AttachToActorController.Instance.AttachToActor(aactor, aactor3, EDetachType.DestroyExternal, "SceneItemAttachTargetComponent.AttachBySpecialRuleSwordRail", null, EAttachmentRule.KeepWorld, EAttachmentRule.KeepWorld, EAttachmentRule.KeepWorld, false, true, false, true, false);
 		}
 
-		// Token: 0x06047807 RID: 292871 RVA: 0x012397D1 File Offset: 0x012379D1
+		// Token: 0x0603D12A RID: 250154 RVA: 0x01192FA9 File Offset: 0x011911A9
 		private void HandleAttachByRule()
 		{
 			if (this.IsSpecialRuleSwordRailAttachRule())
@@ -391,7 +391,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.HandleTargetAttach();
 		}
 
-		// Token: 0x06047808 RID: 292872 RVA: 0x012397E8 File Offset: 0x012379E8
+		// Token: 0x0603D12B RID: 250155 RVA: 0x01192FC0 File Offset: 0x011911C0
 		private void DetachBySpecialRuleSwordRail()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -406,7 +406,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047809 RID: 292873 RVA: 0x01239838 File Offset: 0x01237A38
+		// Token: 0x0603D12C RID: 250156 RVA: 0x01193010 File Offset: 0x01191210
 		private void HandleTargetAttach()
 		{
 			AttachTargetComponent config = this.Config;
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604780A RID: 292874 RVA: 0x012398D8 File Offset: 0x01237AD8
+		// Token: 0x0603D12D RID: 250157 RVA: 0x011930B0 File Offset: 0x011912B0
 		private void HandleTargetDetach()
 		{
 			AttachTargetComponent config = this.Config;
@@ -464,7 +464,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604780B RID: 292875 RVA: 0x01239940 File Offset: 0x01237B40
+		// Token: 0x0603D12E RID: 250158 RVA: 0x01193118 File Offset: 0x01191318
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -473,133 +473,127 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemAttachTargetComponent sceneItemAttachTargetComponent = (SceneItemAttachTargetComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemAttachTargetComponent.Config == null)
 			{
-				if (sceneItemAttachTargetComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AttachTargetComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemAttachTargetComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetPbDataId"))
+			if (sceneItemAttachTargetComponent.CreatureDataComp == null)
 			{
-				this.TargetPbDataId = sceneItemAttachTargetComponent.TargetPbDataId;
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("TargetAttachPoint"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				this.TargetAttachPoint = sceneItemAttachTargetComponent.TargetAttachPoint;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetActorRef"))
+			this.TargetPbDataId = sceneItemAttachTargetComponent.TargetPbDataId;
+			this.TargetAttachPoint = sceneItemAttachTargetComponent.TargetAttachPoint;
+			this.TargetActorRef = sceneItemAttachTargetComponent.TargetActorRef;
+			if (sceneItemAttachTargetComponent.AttachParam == null)
 			{
-				this.TargetActorRef = sceneItemAttachTargetComponent.TargetActorRef;
+				this.AttachParam = null;
 			}
-			if (base.CanResetComponentProperty("AttachParam"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttachParam), "AttachParam"))
 			{
-				if (sceneItemAttachTargetComponent.AttachParam == null)
-				{
-					this.AttachParam = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemDynamicAttachTargetComponent.AttachParam>(this.AttachParam), "AttachParam"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DynamicAttachComp"))
+			if (sceneItemAttachTargetComponent.DynamicAttachComp == null)
 			{
-				if (sceneItemAttachTargetComponent.DynamicAttachComp == null)
-				{
-					this.DynamicAttachComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemDynamicAttachTargetComponent>(this.DynamicAttachComp), "DynamicAttachComp"))
-				{
-					return false;
-				}
+				this.DynamicAttachComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DynamicAttachComp), "DynamicAttachComp"))
 			{
-				if (sceneItemAttachTargetComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			if (sceneItemAttachTargetComponent.ActorComp == null)
 			{
-				if (sceneItemAttachTargetComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("IsSplineMoveBroken"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.IsSplineMoveBroken = sceneItemAttachTargetComponent.IsSplineMoveBroken;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsSpecialRuleSwordRailAttached"))
+			if (sceneItemAttachTargetComponent.MoveComp == null)
 			{
-				this.IsSpecialRuleSwordRailAttached = sceneItemAttachTargetComponent.IsSpecialRuleSwordRailAttached;
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("LastSplineMoveTaskId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				this.LastSplineMoveTaskId = sceneItemAttachTargetComponent.LastSplineMoveTaskId;
+				return false;
 			}
+			this.IsSplineMoveBroken = sceneItemAttachTargetComponent.IsSplineMoveBroken;
+			this.IsSpecialRuleSwordRailAttached = sceneItemAttachTargetComponent.IsSpecialRuleSwordRailAttached;
+			this.LastSplineMoveTaskId = sceneItemAttachTargetComponent.LastSplineMoveTaskId;
 			return true;
 		}
 
-		// Token: 0x040259E0 RID: 154080
+		// Token: 0x1700739E RID: 29598
+		// (get) Token: 0x0603D12F RID: 250159 RVA: 0x01193282 File Offset: 0x01191482
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700739F RID: 29599
+		// (get) Token: 0x0603D130 RID: 250160 RVA: 0x01193285 File Offset: 0x01191485
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073A0 RID: 29600
+		// (get) Token: 0x0603D131 RID: 250161 RVA: 0x01193288 File Offset: 0x01191488
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402064F RID: 132687
 		private AttachTargetComponent Config;
 
-		// Token: 0x040259E1 RID: 154081
+		// Token: 0x04020650 RID: 132688
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040259E2 RID: 154082
+		// Token: 0x04020651 RID: 132689
 		private int? TargetPbDataId;
 
-		// Token: 0x040259E3 RID: 154083
+		// Token: 0x04020652 RID: 132690
 		private string TargetAttachPoint;
 
-		// Token: 0x040259E4 RID: 154084
+		// Token: 0x04020653 RID: 132691
 		private string TargetActorRef;
 
-		// Token: 0x040259E5 RID: 154085
+		// Token: 0x04020654 RID: 132692
 		private SceneItemDynamicAttachTargetComponent.AttachParam AttachParam;
 
-		// Token: 0x040259E6 RID: 154086
+		// Token: 0x04020655 RID: 132693
 		private SceneItemDynamicAttachTargetComponent DynamicAttachComp;
 
-		// Token: 0x040259E7 RID: 154087
+		// Token: 0x04020656 RID: 132694
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040259E8 RID: 154088
+		// Token: 0x04020657 RID: 132695
 		private SceneItemMoveComponent MoveComp;
 
-		// Token: 0x040259E9 RID: 154089
+		// Token: 0x04020658 RID: 132696
 		private bool IsSplineMoveBroken;
 
-		// Token: 0x040259EA RID: 154090
+		// Token: 0x04020659 RID: 132697
 		private bool IsSpecialRuleSwordRailAttached;
 
-		// Token: 0x040259EB RID: 154091
+		// Token: 0x0402065A RID: 132698
 		private int? LastSplineMoveTaskId;
 	}
 }

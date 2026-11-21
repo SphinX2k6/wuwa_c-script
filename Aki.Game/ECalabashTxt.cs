@@ -1,30 +1,30 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001733 RID: 5939
+// Token: 0x02000BEC RID: 3052
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct ECalabashTxt : IEquatable<ECalabashTxt>
 {
-	// Token: 0x0600ABA8 RID: 43944 RVA: 0x00267E25 File Offset: 0x00266025
+	// Token: 0x06007F8F RID: 32655 RVA: 0x00272227 File Offset: 0x00270427
 	private ECalabashTxt(string value)
 	{
 		this._Value = value;
 	}
 
-	// Token: 0x0600ABA9 RID: 43945 RVA: 0x00267E2E File Offset: 0x0026602E
+	// Token: 0x06007F90 RID: 32656 RVA: 0x00272230 File Offset: 0x00270430
 	public override string ToString()
 	{
 		return this._Value;
 	}
 
-	// Token: 0x0600ABAA RID: 43946 RVA: 0x00267E36 File Offset: 0x00266036
+	// Token: 0x06007F91 RID: 32657 RVA: 0x00272238 File Offset: 0x00270438
 	public bool Equals(ECalabashTxt other)
 	{
 		return this._Value == other._Value;
 	}
 
-	// Token: 0x0600ABAB RID: 43947 RVA: 0x00267E4C File Offset: 0x0026604C
+	// Token: 0x06007F92 RID: 32658 RVA: 0x0027224C File Offset: 0x0027044C
 	public override bool Equals(object obj)
 	{
 		if (obj is ECalabashTxt)
@@ -35,7 +35,7 @@ public readonly struct ECalabashTxt : IEquatable<ECalabashTxt>
 		return false;
 	}
 
-	// Token: 0x0600ABAC RID: 43948 RVA: 0x00267E71 File Offset: 0x00266071
+	// Token: 0x06007F93 RID: 32659 RVA: 0x00272271 File Offset: 0x00270471
 	public override int GetHashCode()
 	{
 		string value = this._Value;
@@ -46,27 +46,27 @@ public readonly struct ECalabashTxt : IEquatable<ECalabashTxt>
 		return value.GetHashCode();
 	}
 
-	// Token: 0x0600ABAD RID: 43949 RVA: 0x00267E84 File Offset: 0x00266084
+	// Token: 0x06007F94 RID: 32660 RVA: 0x00272284 File Offset: 0x00270484
 	public static bool operator ==(ECalabashTxt left, ECalabashTxt right)
 	{
 		return left.Equals(right);
 	}
 
-	// Token: 0x0600ABAE RID: 43950 RVA: 0x00267E8E File Offset: 0x0026608E
+	// Token: 0x06007F95 RID: 32661 RVA: 0x0027228E File Offset: 0x0027048E
 	public static bool operator !=(ECalabashTxt left, ECalabashTxt right)
 	{
 		return !left.Equals(right);
 	}
 
-	// Token: 0x04004DC0 RID: 19904
+	// Token: 0x04004E69 RID: 20073
 	private readonly string _Value;
 
-	// Token: 0x04004DC1 RID: 19905
+	// Token: 0x04004E6A RID: 20074
 	public static readonly ECalabashTxt UpAbsorptionTargetAdvanced = new ECalabashTxt("UpAbsorptionTarget_Advanced");
 
-	// Token: 0x04004DC2 RID: 19906
+	// Token: 0x04004E6B RID: 20075
 	public static readonly ECalabashTxt UpAbsorptionTargetJunior = new ECalabashTxt("UpAbsorptionTarget_Junior");
 
-	// Token: 0x04004DC3 RID: 19907
+	// Token: 0x04004E6C RID: 20076
 	public static readonly ECalabashTxt UpAbsorptionTargetNameJunior = new ECalabashTxt("UpAbsorptionTargetName_Junior");
 }

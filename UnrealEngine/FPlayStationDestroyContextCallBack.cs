@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EFC RID: 7932
+	// Token: 0x02000609 RID: 1545
 	public sealed class FPlayStationDestroyContextCallBack : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E1F0 RID: 123376 RVA: 0x002CC358 File Offset: 0x002CA558
+		// Token: 0x06008830 RID: 34864 RVA: 0x000CD2E0 File Offset: 0x000CB4E0
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FPlayStationDestroyContextCallBack.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E1F1 RID: 123377 RVA: 0x002CC364 File Offset: 0x002CA564
+		// Token: 0x06008831 RID: 34865 RVA: 0x000CD2EC File Offset: 0x000CB4EC
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FPlayStationDestroyContextCallBack._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FPlayStationDestroyContextCallBack._FunctionPtr;
 		}
 
-		// Token: 0x0601E1F2 RID: 123378 RVA: 0x002CC387 File Offset: 0x002CA587
+		// Token: 0x06008832 RID: 34866 RVA: 0x000CD30F File Offset: 0x000CB50F
 		public FPlayStationDestroyContextCallBack()
 		{
 		}
 
-		// Token: 0x0601E1F3 RID: 123379 RVA: 0x002CC38F File Offset: 0x002CA58F
+		// Token: 0x06008833 RID: 34867 RVA: 0x000CD317 File Offset: 0x000CB517
 		[NullableContext(2)]
 		public FPlayStationDestroyContextCallBack(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E1F4 RID: 123380 RVA: 0x002CC399 File Offset: 0x002CA599
+		// Token: 0x06008834 RID: 34868 RVA: 0x000CD321 File Offset: 0x000CB521
 		public FPlayStationDestroyContextCallBack(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E1F5 RID: 123381 RVA: 0x002CC3A4 File Offset: 0x002CA5A4
+		// Token: 0x06008835 RID: 34869 RVA: 0x000CD32C File Offset: 0x000CB52C
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E1F6 RID: 123382 RVA: 0x002CC3D6 File Offset: 0x002CA5D6
+		// Token: 0x06008836 RID: 34870 RVA: 0x000CD35E File Offset: 0x000CB55E
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int> Callback)
 		{
 			if (FPlayStationDestroyContextCallBack.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FPlayStationDestroyContextCallBack.RegisterId);
 		}
 
-		// Token: 0x0601E1F7 RID: 123383 RVA: 0x002CC410 File Offset: 0x002CA610
+		// Token: 0x06008837 RID: 34871 RVA: 0x000CD398 File Offset: 0x000CB598
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int ret)
 		{
 			FPlayStationDestroyContextCallBack.__FPlayStationDestroyContextCallBack_DelegateParams* ptr = stackalloc FPlayStationDestroyContextCallBack.__FPlayStationDestroyContextCallBack_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FPlayStationDestroyContextCallBack.__FPlayStationDestroyContextCallBack_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E1F8 RID: 123384 RVA: 0x002CC450 File Offset: 0x002CA650
+		// Token: 0x06008838 RID: 34872 RVA: 0x000CD3D8 File Offset: 0x000CB5D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FPlayStationDestroyContextCallBack.__FPlayStationDestroyContextCallBack_DelegateParams*)__Parameters)->ret);
 		}
 
-		// Token: 0x04010454 RID: 66644
+		// Token: 0x04003B26 RID: 15142
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010455 RID: 66645
+		// Token: 0x04003B27 RID: 15143
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.PlayStationDestroyContextCallBack__DelegateSignature";
 
-		// Token: 0x04010456 RID: 66646
+		// Token: 0x04003B28 RID: 15144
 		private static int RegisterId;
 
-		// Token: 0x020033E3 RID: 13283
+		// Token: 0x02000E32 RID: 3634
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FPlayStationDestroyContextCallBack_DelegateParams
+		private ref struct __FPlayStationDestroyContextCallBack_DelegateParams
 		{
-			// Token: 0x0401739C RID: 95132
+			// Token: 0x040061CB RID: 25035
 			[FieldOffset(0)]
 			public int ret;
 		}
 
-		// Token: 0x020033E4 RID: 13284
+		// Token: 0x02000E33 RID: 3635
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401739D RID: 95133
+			// Token: 0x040061CC RID: 25036
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

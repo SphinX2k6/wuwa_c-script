@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A68 RID: 23144
+	// Token: 0x02006075 RID: 24693
 	public class IThrowMotionT
 	{
-		// Token: 0x1700AE2B RID: 44587
-		// (get) Token: 0x06027631 RID: 161329 RVA: 0x0056B8BA File Offset: 0x00569ABA
-		// (set) Token: 0x06027632 RID: 161330 RVA: 0x0056B8C2 File Offset: 0x00569AC2
+		// Token: 0x1700B763 RID: 46947
+		// (get) Token: 0x06029BA9 RID: 170921 RVA: 0x005B28C6 File Offset: 0x005B0AC6
+		// (set) Token: 0x06029BAA RID: 170922 RVA: 0x005B28CE File Offset: 0x005B0ACE
 		public EThrowMotion Type { get; set; }
 
-		// Token: 0x06027633 RID: 161331 RVA: 0x0056B8CB File Offset: 0x00569ACB
+		// Token: 0x06029BAB RID: 170923 RVA: 0x005B28D7 File Offset: 0x005B0AD7
 		public IThrowMotionT()
 		{
 			this.Type = EThrowMotion.Projectile;

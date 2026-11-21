@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019E8 RID: 6632
+// Token: 0x02000EA7 RID: 3751
 [NullableContext(1)]
 [Nullable(0)]
 public class CreateCharacterView : UiViewBase
 {
-	// Token: 0x0600C1EF RID: 49647 RVA: 0x002BC5A2 File Offset: 0x002BA7A2
+	// Token: 0x060095FC RID: 38396 RVA: 0x002C757A File Offset: 0x002C577A
 	public CreateCharacterView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C1F0 RID: 49648 RVA: 0x002BC5C4 File Offset: 0x002BA7C4
+	// Token: 0x060095FD RID: 38397 RVA: 0x002C759C File Offset: 0x002C579C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,19 +39,19 @@ public class CreateCharacterView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600C1F1 RID: 49649 RVA: 0x002BC685 File Offset: 0x002BA885
+	// Token: 0x060095FE RID: 38398 RVA: 0x002C765D File Offset: 0x002C585D
 	private void SelectedMale()
 	{
 		this.HandleGenderSwitch(LoginDefine.ELoginSex.Boy);
 	}
 
-	// Token: 0x0600C1F2 RID: 49650 RVA: 0x002BC68E File Offset: 0x002BA88E
+	// Token: 0x060095FF RID: 38399 RVA: 0x002C7666 File Offset: 0x002C5866
 	private void SelectedFemale()
 	{
 		this.HandleGenderSwitch(LoginDefine.ELoginSex.Girl);
 	}
 
-	// Token: 0x0600C1F3 RID: 49651 RVA: 0x002BC698 File Offset: 0x002BA898
+	// Token: 0x06009600 RID: 38400 RVA: 0x002C7670 File Offset: 0x002C5870
 	private void HandleGenderSwitch(LoginDefine.ELoginSex loginSex)
 	{
 		LoginDefine.ELoginSex? selectedSex = this.SelectedSex;
@@ -75,7 +75,7 @@ public class CreateCharacterView : UiViewBase
 		this.GenderButtonList[(int)loginSex].SetRoleChooseRenderingMaterial();
 	}
 
-	// Token: 0x0600C1F4 RID: 49652 RVA: 0x002BC775 File Offset: 0x002BA975
+	// Token: 0x06009601 RID: 38401 RVA: 0x002C774D File Offset: 0x002C594D
 	private string GetSwitchSequence()
 	{
 		if (this.SelectedSex.GetValueOrDefault() == LoginDefine.ELoginSex.Boy)
@@ -85,7 +85,7 @@ public class CreateCharacterView : UiViewBase
 		return "LevelSequence_SwitchFemale";
 	}
 
-	// Token: 0x0600C1F5 RID: 49653 RVA: 0x002BC790 File Offset: 0x002BA990
+	// Token: 0x06009602 RID: 38402 RVA: 0x002C7768 File Offset: 0x002C5968
 	private string GetSelectSequence()
 	{
 		if (this.SelectedSex.GetValueOrDefault() == LoginDefine.ELoginSex.Boy)
@@ -95,7 +95,7 @@ public class CreateCharacterView : UiViewBase
 		return "LevelSequence_SelectFemale";
 	}
 
-	// Token: 0x0600C1F6 RID: 49654 RVA: 0x002BC7AC File Offset: 0x002BA9AC
+	// Token: 0x06009603 RID: 38403 RVA: 0x002C7784 File Offset: 0x002C5984
 	private void HandleSequenceCallback()
 	{
 		this.InSelectedState = true;
@@ -111,7 +111,7 @@ public class CreateCharacterView : UiViewBase
 		uuiitem.SetUIActive(!(selectedSex.GetValueOrDefault() == eloginSex & selectedSex != null));
 	}
 
-	// Token: 0x0600C1F7 RID: 49655 RVA: 0x002BC834 File Offset: 0x002BAA34
+	// Token: 0x06009604 RID: 38404 RVA: 0x002C780C File Offset: 0x002C5A0C
 	protected override void OnStart()
 	{
 		this.UiViewSequence.AddSequenceFinishEvent("hide", delegate(string _)
@@ -126,37 +126,37 @@ public class CreateCharacterView : UiViewBase
 		base.GetItem(4).SetUIActive(true);
 	}
 
-	// Token: 0x0600C1F8 RID: 49656 RVA: 0x002BC89B File Offset: 0x002BAA9B
+	// Token: 0x06009605 RID: 38405 RVA: 0x002C7873 File Offset: 0x002C5A73
 	protected override void OnAfterDestroy()
 	{
 		LoginModel.Instance.FinishLoginPromise();
 	}
 
-	// Token: 0x0600C1F9 RID: 49657 RVA: 0x002BC8A7 File Offset: 0x002BAAA7
+	// Token: 0x06009606 RID: 38406 RVA: 0x002C787F File Offset: 0x002C5A7F
 	private void HideTextInput()
 	{
 		this.TextInputModule.SetActive(false);
 	}
 
-	// Token: 0x0600C1FA RID: 49658 RVA: 0x002BC8B5 File Offset: 0x002BAAB5
+	// Token: 0x06009607 RID: 38407 RVA: 0x002C788D File Offset: 0x002C5A8D
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.CreateRoleShowInputName, new Action(this.ShowInputName));
 	}
 
-	// Token: 0x0600C1FB RID: 49659 RVA: 0x002BC8D3 File Offset: 0x002BAAD3
+	// Token: 0x06009608 RID: 38408 RVA: 0x002C78AB File Offset: 0x002C5AAB
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.CreateRoleShowInputName, new Action(this.ShowInputName));
 	}
 
-	// Token: 0x0600C1FC RID: 49660 RVA: 0x002BC8F1 File Offset: 0x002BAAF1
+	// Token: 0x06009609 RID: 38409 RVA: 0x002C78C9 File Offset: 0x002C5AC9
 	private void ShowInputName()
 	{
 		this.ShowNameView();
 	}
 
-	// Token: 0x0600C1FD RID: 49661 RVA: 0x002BC8FC File Offset: 0x002BAAFC
+	// Token: 0x0600960A RID: 38410 RVA: 0x002C78D4 File Offset: 0x002C5AD4
 	private void InitTextInputModule()
 	{
 		TextInputData inputData = new TextInputData
@@ -169,7 +169,7 @@ public class CreateCharacterView : UiViewBase
 		this.TextInputModule = new TextInputComponent(base.GetItem(0), inputData);
 	}
 
-	// Token: 0x0600C1FE RID: 49662 RVA: 0x002BC958 File Offset: 0x002BAB58
+	// Token: 0x0600960B RID: 38411 RVA: 0x002C7930 File Offset: 0x002C5B30
 	private void InitGenderButton()
 	{
 		CreateCharacterView.GenderButton genderButton = new CreateCharacterView.GenderButton(base.GetButton(2), this.InitialRoles[0]);
@@ -180,7 +180,7 @@ public class CreateCharacterView : UiViewBase
 		this.GenderButtonList.Add(genderButton2);
 	}
 
-	// Token: 0x0600C1FF RID: 49663 RVA: 0x002BC9BC File Offset: 0x002BABBC
+	// Token: 0x0600960C RID: 38412 RVA: 0x002C7994 File Offset: 0x002C5B94
 	protected override void OnBeforeDestroy()
 	{
 		for (int i = 0; i < this.GenderButtonList.Count; i++)
@@ -192,14 +192,14 @@ public class CreateCharacterView : UiViewBase
 		this.TextInputModule.Destroy(null);
 	}
 
-	// Token: 0x0600C200 RID: 49664 RVA: 0x002BCA02 File Offset: 0x002BAC02
+	// Token: 0x0600960D RID: 38413 RVA: 0x002C79DA File Offset: 0x002C5BDA
 	private void ShowNameView()
 	{
 		base.PlaySequence("show", null, false);
 		this.TextInputModule.SetActive(true);
 	}
 
-	// Token: 0x0600C201 RID: 49665 RVA: 0x002BCA1D File Offset: 0x002BAC1D
+	// Token: 0x0600960E RID: 38414 RVA: 0x002C79F5 File Offset: 0x002C5BF5
 	private void HideNameView(bool isPlaySequence = true)
 	{
 		if (isPlaySequence)
@@ -210,7 +210,7 @@ public class CreateCharacterView : UiViewBase
 		this.TextInputModule.SetActive(false);
 	}
 
-	// Token: 0x0600C202 RID: 49666 RVA: 0x002BCA3C File Offset: 0x002BAC3C
+	// Token: 0x0600960F RID: 38415 RVA: 0x002C7A14 File Offset: 0x002C5C14
 	[NullableContext(0)]
 	private UniTask<ErrorCode> ConfirmFunc([Nullable(1)] string inputText)
 	{
@@ -223,7 +223,7 @@ public class CreateCharacterView : UiViewBase
 		return <ConfirmFunc>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C203 RID: 49667 RVA: 0x002BCA88 File Offset: 0x002BAC88
+	// Token: 0x06009610 RID: 38416 RVA: 0x002C7A60 File Offset: 0x002C5C60
 	private void CreateCharacterResult(bool result)
 	{
 		if (result)
@@ -253,7 +253,7 @@ public class CreateCharacterView : UiViewBase
 		base.GetItem(3).SetUIActive(true);
 	}
 
-	// Token: 0x0600C204 RID: 49668 RVA: 0x002BCB15 File Offset: 0x002BAD15
+	// Token: 0x06009611 RID: 38417 RVA: 0x002C7AED File Offset: 0x002C5CED
 	private string GetResultSequenceName()
 	{
 		if (this.SelectedSex.GetValueOrDefault() == LoginDefine.ELoginSex.Boy)
@@ -263,54 +263,54 @@ public class CreateCharacterView : UiViewBase
 		return "LevelSequence_FemaleTurnHead";
 	}
 
-	// Token: 0x04005954 RID: 22868
+	// Token: 0x04005A23 RID: 23075
 	private LoginDefine.ELoginSex? SelectedSex;
 
-	// Token: 0x04005955 RID: 22869
+	// Token: 0x04005A24 RID: 23076
 	private bool InSelectedState;
 
-	// Token: 0x04005956 RID: 22870
+	// Token: 0x04005A25 RID: 23077
 	private IReadOnlyList<int> InitialRoles = Array.Empty<int>();
 
-	// Token: 0x04005957 RID: 22871
+	// Token: 0x04005A26 RID: 23078
 	private readonly List<CreateCharacterView.GenderButton> GenderButtonList = new List<CreateCharacterView.GenderButton>();
 
-	// Token: 0x04005958 RID: 22872
+	// Token: 0x04005A27 RID: 23079
 	[Nullable(2)]
 	private TextInputComponent TextInputModule;
 
-	// Token: 0x02007F17 RID: 32535
+	// Token: 0x020070A6 RID: 28838
 	[NullableContext(0)]
 	private class ECreateCharacterCom
 	{
-		// Token: 0x04029844 RID: 170052
+		// Token: 0x04024B81 RID: 150401
 		public const int TextInputModule = 0;
 
-		// Token: 0x04029845 RID: 170053
+		// Token: 0x04024B82 RID: 150402
 		public const int MaleButton = 1;
 
-		// Token: 0x04029846 RID: 170054
+		// Token: 0x04024B83 RID: 150403
 		public const int FemaleButton = 2;
 
-		// Token: 0x04029847 RID: 170055
+		// Token: 0x04024B84 RID: 150404
 		public const int GenderPanel = 3;
 
-		// Token: 0x04029848 RID: 170056
+		// Token: 0x04024B85 RID: 150405
 		public const int TitleItem = 4;
 	}
 
-	// Token: 0x02007F18 RID: 32536
+	// Token: 0x020070A7 RID: 28839
 	[Nullable(0)]
 	private class GenderButton
 	{
-		// Token: 0x06049CA3 RID: 302243 RVA: 0x0131E212 File Offset: 0x0131C412
+		// Token: 0x060400C1 RID: 262337 RVA: 0x012C16EE File Offset: 0x012BF8EE
 		public GenderButton(UUIButtonComponent uiButton, int roleId)
 		{
 			this.Button = uiButton;
 			this.RoleId = roleId;
 		}
 
-		// Token: 0x06049CA4 RID: 302244 RVA: 0x0131E228 File Offset: 0x0131C428
+		// Token: 0x060400C2 RID: 262338 RVA: 0x012C1704 File Offset: 0x012BF904
 		public void BindFunction()
 		{
 			if (Info.Instance.IsInTouch())
@@ -321,7 +321,7 @@ public class CreateCharacterView : UiViewBase
 			this.Button.OnPointExitCallBack.Bind(new Action(this.RemoveRoleRenderingMaterial));
 		}
 
-		// Token: 0x06049CA5 RID: 302245 RVA: 0x0131E27C File Offset: 0x0131C47C
+		// Token: 0x060400C3 RID: 262339 RVA: 0x012C1758 File Offset: 0x012BF958
 		private void SetRoleSelectRenderingMaterial()
 		{
 			this.RemoveRoleRenderingMaterial();
@@ -329,7 +329,7 @@ public class CreateCharacterView : UiViewBase
 			this.HuluSelectMaterialId = new int?(UiLoginSceneManager.Instance.SetHuluRenderingMaterial(this.RoleId, "CreateCharacterMaterialController"));
 		}
 
-		// Token: 0x06049CA6 RID: 302246 RVA: 0x0131E2D0 File Offset: 0x0131C4D0
+		// Token: 0x060400C4 RID: 262340 RVA: 0x012C17AC File Offset: 0x012BF9AC
 		public void RemoveRoleRenderingMaterial()
 		{
 			if (this.RoleSelectMaterialId != null)
@@ -344,7 +344,7 @@ public class CreateCharacterView : UiViewBase
 			}
 		}
 
-		// Token: 0x06049CA7 RID: 302247 RVA: 0x0131E348 File Offset: 0x0131C548
+		// Token: 0x060400C5 RID: 262341 RVA: 0x012C1824 File Offset: 0x012BFA24
 		public void SetRoleChooseRenderingMaterial()
 		{
 			this.RemoveRoleChooseRenderingMaterial();
@@ -352,7 +352,7 @@ public class CreateCharacterView : UiViewBase
 			this.HuluChooseMaterialId = new int?(UiLoginSceneManager.Instance.SetHuluRenderingMaterial(this.RoleId, "ChooseCharacterMaterialController"));
 		}
 
-		// Token: 0x06049CA8 RID: 302248 RVA: 0x0131E39C File Offset: 0x0131C59C
+		// Token: 0x060400C6 RID: 262342 RVA: 0x012C1878 File Offset: 0x012BFA78
 		public void RemoveRoleChooseRenderingMaterial()
 		{
 			if (this.RoleChooseMaterialId != null)
@@ -367,29 +367,29 @@ public class CreateCharacterView : UiViewBase
 			}
 		}
 
-		// Token: 0x06049CA9 RID: 302249 RVA: 0x0131E411 File Offset: 0x0131C611
+		// Token: 0x060400C7 RID: 262343 RVA: 0x012C18ED File Offset: 0x012BFAED
 		public void UnbindFunction()
 		{
 			this.Button.OnPointEnterCallBack.Unbind();
 			this.Button.OnPointExitCallBack.Unbind();
 		}
 
-		// Token: 0x04029849 RID: 170057
+		// Token: 0x04024B86 RID: 150406
 		private int? RoleSelectMaterialId;
 
-		// Token: 0x0402984A RID: 170058
+		// Token: 0x04024B87 RID: 150407
 		private int? HuluSelectMaterialId;
 
-		// Token: 0x0402984B RID: 170059
+		// Token: 0x04024B88 RID: 150408
 		private int? RoleChooseMaterialId;
 
-		// Token: 0x0402984C RID: 170060
+		// Token: 0x04024B89 RID: 150409
 		private int? HuluChooseMaterialId;
 
-		// Token: 0x0402984D RID: 170061
+		// Token: 0x04024B8A RID: 150410
 		private readonly UUIButtonComponent Button;
 
-		// Token: 0x0402984E RID: 170062
+		// Token: 0x04024B8B RID: 150411
 		private readonly int RoleId;
 	}
 }

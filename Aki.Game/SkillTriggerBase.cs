@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200315D RID: 12637
+// Token: 0x020026CA RID: 9930
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Component/Skill/SkillTrigger/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Component/Skill/SkillTrigger/SkillTriggerBase.SkillTriggerBase_C")]
 public class SkillTriggerBase : UKuroBpDataAsset, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170025B0 RID: 9648
-	// (get) Token: 0x0601B310 RID: 111376 RVA: 0x007685CC File Offset: 0x007667CC
-	// (set) Token: 0x0601B311 RID: 111377 RVA: 0x00768605 File Offset: 0x00766805
+	// Token: 0x170027A1 RID: 10145
+	// (get) Token: 0x06018E15 RID: 101909 RVA: 0x0078FF98 File Offset: 0x0078E198
+	// (set) Token: 0x06018E16 RID: 101910 RVA: 0x0078FFD1 File Offset: 0x0078E1D1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<SSkillBehaviorCondition> TriggerConditionGroup
 	{
@@ -36,9 +36,9 @@ public class SkillTriggerBase : UKuroBpDataAsset, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170025B1 RID: 9649
-	// (get) Token: 0x0601B312 RID: 111378 RVA: 0x00768613 File Offset: 0x00766813
-	// (set) Token: 0x0601B313 RID: 111379 RVA: 0x00768627 File Offset: 0x00766827
+	// Token: 0x170027A2 RID: 10146
+	// (get) Token: 0x06018E17 RID: 101911 RVA: 0x0078FFDF File Offset: 0x0078E1DF
+	// (set) Token: 0x06018E18 RID: 101912 RVA: 0x0078FFF3 File Offset: 0x0078E1F3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TriggerConditionFormula
 	{
@@ -52,7 +52,7 @@ public class SkillTriggerBase : UKuroBpDataAsset, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x0601B314 RID: 111380 RVA: 0x0076863C File Offset: 0x0076683C
+	// Token: 0x06018E19 RID: 101913 RVA: 0x00790008 File Offset: 0x0078E208
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (SkillTriggerBase._ClassPtr == IntPtr.Zero)
@@ -62,34 +62,34 @@ public class SkillTriggerBase : UKuroBpDataAsset, IUnrealUObject, IUnrealObject
 		return SkillTriggerBase._ClassPtr;
 	}
 
-	// Token: 0x0601B315 RID: 111381 RVA: 0x00768660 File Offset: 0x00766860
+	// Token: 0x06018E1A RID: 101914 RVA: 0x0079002C File Offset: 0x0078E22C
 	public SkillTriggerBase() : this(BuiltinUtils.AllocNativeUObject(SkillTriggerBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601B316 RID: 111382 RVA: 0x00768688 File Offset: 0x00766888
+	// Token: 0x06018E1B RID: 101915 RVA: 0x00790054 File Offset: 0x0078E254
 	public SkillTriggerBase(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(SkillTriggerBase.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601B317 RID: 111383 RVA: 0x007686BB File Offset: 0x007668BB
+	// Token: 0x06018E1C RID: 101916 RVA: 0x00790087 File Offset: 0x0078E287
 	protected SkillTriggerBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400D3A4 RID: 54180
+	// Token: 0x0400D807 RID: 55303
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Component/Skill/SkillTrigger/SkillTriggerBase.SkillTriggerBase_C";
 
-	// Token: 0x0400D3A5 RID: 54181
+	// Token: 0x0400D808 RID: 55304
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400D3A6 RID: 54182
+	// Token: 0x0400D809 RID: 55305
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400D3A7 RID: 54183
+	// Token: 0x0400D80A RID: 55306
 	private static int __PropertyOffset_TriggerConditionGroup;
 
-	// Token: 0x0400D3A8 RID: 54184
+	// Token: 0x0400D80B RID: 55307
 	[Nullable(new byte[]
 	{
 		2,
@@ -97,6 +97,6 @@ public class SkillTriggerBase : UKuroBpDataAsset, IUnrealUObject, IUnrealObject
 	})]
 	private TArray<SSkillBehaviorCondition> _TriggerConditionGroup;
 
-	// Token: 0x0400D3A9 RID: 54185
+	// Token: 0x0400D80C RID: 55308
 	private static int __PropertyOffset_TriggerConditionFormula;
 }

@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020017E5 RID: 6117
+	// Token: 0x02000356 RID: 854
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroCrowdAi.EKuroCrowdAiBoidAnimState")]
 	public enum EKuroCrowdAiBoidAnimState : byte
 	{
-		// Token: 0x0400C441 RID: 50241
+		// Token: 0x040023EC RID: 9196
 		Idle,
-		// Token: 0x0400C442 RID: 50242
+		// Token: 0x040023ED RID: 9197
 		Walking,
-		// Token: 0x0400C443 RID: 50243
+		// Token: 0x040023EE RID: 9198
 		Born,
-		// Token: 0x0400C444 RID: 50244
+		// Token: 0x040023EF RID: 9199
 		Destroy,
-		// Token: 0x0400C445 RID: 50245
+		// Token: 0x040023F0 RID: 9200
 		Perform,
-		// Token: 0x0400C446 RID: 50246
+		// Token: 0x040023F1 RID: 9201
 		EKuroCrowdAiBoidAnimState_MAX
 	}
 }

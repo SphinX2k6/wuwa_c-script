@@ -6,16 +6,16 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class DoublyLinkedNode<T>
 {
-	// Token: 0x06000207 RID: 519 RVA: 0x0000C4BD File Offset: 0x0000A6BD
+	// Token: 0x06000208 RID: 520 RVA: 0x0000C1A1 File Offset: 0x0000A3A1
 	public DoublyLinkedNode(T element)
 	{
 		this.Element = element;
 	}
 
-	// Token: 0x040001B6 RID: 438
+	// Token: 0x040001B8 RID: 440
 	public T Element;
 
-	// Token: 0x040001B7 RID: 439
+	// Token: 0x040001B9 RID: 441
 	[Nullable(new byte[]
 	{
 		2,
@@ -23,7 +23,7 @@ public class DoublyLinkedNode<T>
 	})]
 	public DoublyLinkedNode<T> Pre;
 
-	// Token: 0x040001B8 RID: 440
+	// Token: 0x040001BA RID: 442
 	[Nullable(new byte[]
 	{
 		2,

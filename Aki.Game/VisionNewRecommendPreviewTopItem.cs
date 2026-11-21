@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024D8 RID: 9432
+// Token: 0x020019BF RID: 6591
 public class VisionNewRecommendPreviewTopItem : UiPanelBase
 {
-	// Token: 0x06012F6E RID: 77678 RVA: 0x004B1FA8 File Offset: 0x004B01A8
+	// Token: 0x0601042D RID: 66605 RVA: 0x004BFBA8 File Offset: 0x004BDDA8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,20 +19,20 @@ public class VisionNewRecommendPreviewTopItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012F6F RID: 77679 RVA: 0x004B2002 File Offset: 0x004B0202
+	// Token: 0x0601042E RID: 66606 RVA: 0x004BFC02 File Offset: 0x004BDE02
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<VisionAssembleSuitItem, VisionAssembleSuitItemData>(base.GetHorizontalLayout(1), new Func<VisionAssembleSuitItem>(this.InitItem), null, false, true);
 	}
 
-	// Token: 0x06012F70 RID: 77680 RVA: 0x004B2025 File Offset: 0x004B0225
+	// Token: 0x0601042F RID: 66607 RVA: 0x004BFC25 File Offset: 0x004BDE25
 	[NullableContext(1)]
 	private VisionAssembleSuitItem InitItem()
 	{
 		return new VisionAssembleSuitItem();
 	}
 
-	// Token: 0x06012F71 RID: 77681 RVA: 0x004B202C File Offset: 0x004B022C
+	// Token: 0x06010430 RID: 66608 RVA: 0x004BFC2C File Offset: 0x004BDE2C
 	[NullableContext(1)]
 	public void Refresh(VisionNewRecommendPreviewTopData data)
 	{
@@ -51,7 +51,7 @@ public class VisionNewRecommendPreviewTopItem : UiPanelBase
 		layout.RefreshByData(data.SuitList, null, false);
 	}
 
-	// Token: 0x04008ECC RID: 36556
+	// Token: 0x04009016 RID: 36886
 	[Nullable(new byte[]
 	{
 		2,
@@ -60,14 +60,14 @@ public class VisionNewRecommendPreviewTopItem : UiPanelBase
 	})]
 	private GenericLayout<VisionAssembleSuitItem, VisionAssembleSuitItemData> Layout;
 
-	// Token: 0x02008A68 RID: 35432
+	// Token: 0x02007BF1 RID: 31729
 	private enum ETopComponent
 	{
-		// Token: 0x0402CF18 RID: 184088
+		// Token: 0x04028236 RID: 164406
 		CostText,
-		// Token: 0x0402CF19 RID: 184089
+		// Token: 0x04028237 RID: 164407
 		SuitHorizonScroller,
-		// Token: 0x0402CF1A RID: 184090
+		// Token: 0x04028238 RID: 164408
 		SuitItem
 	}
 }

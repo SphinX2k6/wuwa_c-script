@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BDA RID: 23514
+	// Token: 0x02004BBA RID: 19386
 	public class CiacconaGalReChoosePlainTextItem : UiPanelBase
 	{
-		// Token: 0x0603B71C RID: 243484 RVA: 0x00E2CCDC File Offset: 0x00E2AEDC
+		// Token: 0x06030667 RID: 198247 RVA: 0x00D7CFE4 File Offset: 0x00D7B1E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B71D RID: 243485 RVA: 0x00E2CD24 File Offset: 0x00E2AF24
+		// Token: 0x06030668 RID: 198248 RVA: 0x00D7D02C File Offset: 0x00D7B22C
 		[NullableContext(1)]
 		public void Refresh(string text)
 		{
@@ -33,10 +33,10 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), text, Array.Empty<object>());
 		}
 
-		// Token: 0x0200BDBA RID: 48570
+		// Token: 0x0200A7C3 RID: 42947
 		public class EPlainTextComponentDefine
 		{
-			// Token: 0x0403936F RID: 234351
+			// Token: 0x04033D34 RID: 212276
 			public const int Text = 0;
 		}
 	}

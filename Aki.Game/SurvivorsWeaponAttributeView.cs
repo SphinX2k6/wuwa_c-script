@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B0B RID: 11019
+// Token: 0x02002087 RID: 8327
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsWeaponAttributeView : UiViewBase
 {
-	// Token: 0x06016E81 RID: 93825 RVA: 0x005D000C File Offset: 0x005CE20C
+	// Token: 0x060148B2 RID: 84146 RVA: 0x005FCB8C File Offset: 0x005FAD8C
 	public SurvivorsWeaponAttributeView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06016E82 RID: 93826 RVA: 0x005D0018 File Offset: 0x005CE218
+	// Token: 0x060148B3 RID: 84147 RVA: 0x005FCB98 File Offset: 0x005FAD98
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class SurvivorsWeaponAttributeView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016E83 RID: 93827 RVA: 0x005D0074 File Offset: 0x005CE274
+	// Token: 0x060148B4 RID: 84148 RVA: 0x005FCBF4 File Offset: 0x005FADF4
 	protected override void OnStart()
 	{
 		SurvivorsWeaponGainData survivorsWeaponGainData = this.OpenParam as SurvivorsWeaponGainData;
@@ -44,17 +44,17 @@ public class SurvivorsWeaponAttributeView : UiViewBase
 		this.WeaponAttributeItemLayout.RefreshByData(survivorsWeaponGainData.GetWeaponSpecialAttributeList(), null, false);
 	}
 
-	// Token: 0x06016E84 RID: 93828 RVA: 0x005D00FA File Offset: 0x005CE2FA
+	// Token: 0x060148B5 RID: 84149 RVA: 0x005FCC7A File Offset: 0x005FAE7A
 	private SurvivorsWeaponAttributeItem CreateAttributeItem()
 	{
 		return new SurvivorsWeaponAttributeItem();
 	}
 
-	// Token: 0x0400AA34 RID: 43572
+	// Token: 0x0400AE3A RID: 44602
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400AA35 RID: 43573
+	// Token: 0x0400AE3B RID: 44603
 	[Nullable(new byte[]
 	{
 		2,

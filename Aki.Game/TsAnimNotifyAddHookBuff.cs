@@ -8,12 +8,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200018F RID: 399
+// Token: 0x02000193 RID: 403
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyAddHookBuff.TsAnimNotifyAddHookBuff_C")]
 public class TsAnimNotifyAddHookBuff : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06001974 RID: 6516 RVA: 0x00086884 File Offset: 0x00084A84
+	// Token: 0x06001A11 RID: 6673 RVA: 0x0008CC20 File Offset: 0x0008AE20
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
@@ -60,7 +60,7 @@ public class TsAnimNotifyAddHookBuff : TsAnimNotifyBase, IUnrealUObject, IUnreal
 		return true;
 	}
 
-	// Token: 0x06001975 RID: 6517 RVA: 0x000869D1 File Offset: 0x00084BD1
+	// Token: 0x06001A12 RID: 6674 RVA: 0x0008CD6D File Offset: 0x0008AF6D
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override string GetNotifyName()
@@ -68,7 +68,7 @@ public class TsAnimNotifyAddHookBuff : TsAnimNotifyBase, IUnrealUObject, IUnreal
 		return "添加BUFF";
 	}
 
-	// Token: 0x06001976 RID: 6518 RVA: 0x000869D8 File Offset: 0x00084BD8
+	// Token: 0x06001A13 RID: 6675 RVA: 0x0008CD74 File Offset: 0x0008AF74
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyAddHookBuff._ClassPtr == IntPtr.Zero)
@@ -78,23 +78,23 @@ public class TsAnimNotifyAddHookBuff : TsAnimNotifyBase, IUnrealUObject, IUnreal
 		return TsAnimNotifyAddHookBuff._ClassPtr;
 	}
 
-	// Token: 0x06001977 RID: 6519 RVA: 0x000869FC File Offset: 0x00084BFC
+	// Token: 0x06001A14 RID: 6676 RVA: 0x0008CD98 File Offset: 0x0008AF98
 	public TsAnimNotifyAddHookBuff() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyAddHookBuff.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001978 RID: 6520 RVA: 0x00086A24 File Offset: 0x00084C24
+	// Token: 0x06001A15 RID: 6677 RVA: 0x0008CDC0 File Offset: 0x0008AFC0
 	[NullableContext(1)]
 	public TsAnimNotifyAddHookBuff(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyAddHookBuff.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001979 RID: 6521 RVA: 0x00086A57 File Offset: 0x00084C57
+	// Token: 0x06001A16 RID: 6678 RVA: 0x0008CDF3 File Offset: 0x0008AFF3
 	protected TsAnimNotifyAddHookBuff(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600197A RID: 6522 RVA: 0x00086A60 File Offset: 0x00084C60
+	// Token: 0x06001A17 RID: 6679 RVA: 0x0008CDFC File Offset: 0x0008AFFC
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -102,19 +102,19 @@ public class TsAnimNotifyAddHookBuff : TsAnimNotifyBase, IUnrealUObject, IUnreal
 		__Params->__Result = this.K2_Notify(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0600197B RID: 6523 RVA: 0x00086A93 File Offset: 0x00084C93
+	// Token: 0x06001A18 RID: 6680 RVA: 0x0008CE2F File Offset: 0x0008B02F
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName());
 	}
 
-	// Token: 0x040010C0 RID: 4288
+	// Token: 0x04001103 RID: 4355
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyAddHookBuff.TsAnimNotifyAddHookBuff_C";
 
-	// Token: 0x040010C1 RID: 4289
+	// Token: 0x04001104 RID: 4356
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040010C2 RID: 4290
+	// Token: 0x04001105 RID: 4357
 	private static IntPtr _ClassDefaultObjectPtr;
 }

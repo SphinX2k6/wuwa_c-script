@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200091D RID: 2333
+	// Token: 0x0200090C RID: 2316
 	public sealed class LiftMoveTypePb : IMessage<LiftMoveTypePb>, IMessage, IEquatable<LiftMoveTypePb>, IDeepCloneable<LiftMoveTypePb>, IBufferMessage
 	{
-		// Token: 0x0600CDCE RID: 52686 RVA: 0x001E4F92 File Offset: 0x001E3192
+		// Token: 0x0600CCB2 RID: 52402 RVA: 0x001E2CC2 File Offset: 0x001E0EC2
 		[NullableContext(1)]
 		public static LiftMoveTypePb Create()
 		{
 			return new LiftMoveTypePb();
 		}
 
-		// Token: 0x1700298E RID: 10638
-		// (get) Token: 0x0600CDCF RID: 52687 RVA: 0x001E4F99 File Offset: 0x001E3199
+		// Token: 0x1700294F RID: 10575
+		// (get) Token: 0x0600CCB3 RID: 52403 RVA: 0x001E2CC9 File Offset: 0x001E0EC9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700298F RID: 10639
-		// (get) Token: 0x0600CDD0 RID: 52688 RVA: 0x001E4F9C File Offset: 0x001E319C
+		// Token: 0x17002950 RID: 10576
+		// (get) Token: 0x0600CCB4 RID: 52404 RVA: 0x001E2CCC File Offset: 0x001E0ECC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CDD1 RID: 52689 RVA: 0x001E4FA3 File Offset: 0x001E31A3
+		// Token: 0x0600CCB5 RID: 52405 RVA: 0x001E2CD3 File Offset: 0x001E0ED3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LiftMoveTypePb()
 		{
 		}
 
-		// Token: 0x0600CDD2 RID: 52690 RVA: 0x001E4FAC File Offset: 0x001E31AC
+		// Token: 0x0600CCB6 RID: 52406 RVA: 0x001E2CDC File Offset: 0x001E0EDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LiftMoveTypePb(LiftMoveTypePb other) : this()
@@ -69,7 +69,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600CDD3 RID: 52691 RVA: 0x001E5030 File Offset: 0x001E3230
+		// Token: 0x0600CCB7 RID: 52407 RVA: 0x001E2D60 File Offset: 0x001E0F60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LiftMoveTypePb Clone()
@@ -77,9 +77,9 @@ namespace Aki.Protocol
 			return new LiftMoveTypePb(this);
 		}
 
-		// Token: 0x17002990 RID: 10640
-		// (get) Token: 0x0600CDD4 RID: 52692 RVA: 0x001E5038 File Offset: 0x001E3238
-		// (set) Token: 0x0600CDD5 RID: 52693 RVA: 0x001E5040 File Offset: 0x001E3240
+		// Token: 0x17002951 RID: 10577
+		// (get) Token: 0x0600CCB8 RID: 52408 RVA: 0x001E2D68 File Offset: 0x001E0F68
+		// (set) Token: 0x0600CCB9 RID: 52409 RVA: 0x001E2D70 File Offset: 0x001E0F70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LiftMoveType Type
@@ -94,9 +94,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002991 RID: 10641
-		// (get) Token: 0x0600CDD6 RID: 52694 RVA: 0x001E5049 File Offset: 0x001E3249
-		// (set) Token: 0x0600CDD7 RID: 52695 RVA: 0x001E5061 File Offset: 0x001E3261
+		// Token: 0x17002952 RID: 10578
+		// (get) Token: 0x0600CCBA RID: 52410 RVA: 0x001E2D79 File Offset: 0x001E0F79
+		// (set) Token: 0x0600CCBB RID: 52411 RVA: 0x001E2D91 File Offset: 0x001E0F91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LiftMoveTypeDefaultPb MoveDefault
@@ -116,9 +116,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002992 RID: 10642
-		// (get) Token: 0x0600CDD8 RID: 52696 RVA: 0x001E5077 File Offset: 0x001E3277
-		// (set) Token: 0x0600CDD9 RID: 52697 RVA: 0x001E508F File Offset: 0x001E328F
+		// Token: 0x17002953 RID: 10579
+		// (get) Token: 0x0600CCBC RID: 52412 RVA: 0x001E2DA7 File Offset: 0x001E0FA7
+		// (set) Token: 0x0600CCBD RID: 52413 RVA: 0x001E2DBF File Offset: 0x001E0FBF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LiftMoveTypeTeleportPb MoveTeleport
@@ -138,9 +138,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002993 RID: 10643
-		// (get) Token: 0x0600CDDA RID: 52698 RVA: 0x001E50A5 File Offset: 0x001E32A5
-		// (set) Token: 0x0600CDDB RID: 52699 RVA: 0x001E50BD File Offset: 0x001E32BD
+		// Token: 0x17002954 RID: 10580
+		// (get) Token: 0x0600CCBE RID: 52414 RVA: 0x001E2DD5 File Offset: 0x001E0FD5
+		// (set) Token: 0x0600CCBF RID: 52415 RVA: 0x001E2DED File Offset: 0x001E0FED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LiftMoveTypeCustomSpeedPb CustomSpeed
@@ -160,8 +160,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002994 RID: 10644
-		// (get) Token: 0x0600CDDC RID: 52700 RVA: 0x001E50D3 File Offset: 0x001E32D3
+		// Token: 0x17002955 RID: 10581
+		// (get) Token: 0x0600CCC0 RID: 52416 RVA: 0x001E2E03 File Offset: 0x001E1003
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LiftMoveTypePb.OptionOneofCase OptionCase
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CDDD RID: 52701 RVA: 0x001E50DB File Offset: 0x001E32DB
+		// Token: 0x0600CCC1 RID: 52417 RVA: 0x001E2E0B File Offset: 0x001E100B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearOption()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this.option_ = null;
 		}
 
-		// Token: 0x0600CDDE RID: 52702 RVA: 0x001E50EB File Offset: 0x001E32EB
+		// Token: 0x0600CCC2 RID: 52418 RVA: 0x001E2E1B File Offset: 0x001E101B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return this.Equals(other as LiftMoveTypePb);
 		}
 
-		// Token: 0x0600CDDF RID: 52703 RVA: 0x001E50FC File Offset: 0x001E32FC
+		// Token: 0x0600CCC3 RID: 52419 RVA: 0x001E2E2C File Offset: 0x001E102C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(LiftMoveTypePb other)
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Type == other.Type && object.Equals(this.MoveDefault, other.MoveDefault) && object.Equals(this.MoveTeleport, other.MoveTeleport) && object.Equals(this.CustomSpeed, other.CustomSpeed) && this.OptionCase == other.OptionCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600CDE0 RID: 52704 RVA: 0x001E5184 File Offset: 0x001E3384
+		// Token: 0x0600CCC4 RID: 52420 RVA: 0x001E2EB4 File Offset: 0x001E10B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600CDE1 RID: 52705 RVA: 0x001E5217 File Offset: 0x001E3417
+		// Token: 0x0600CCC5 RID: 52421 RVA: 0x001E2F47 File Offset: 0x001E1147
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600CDE2 RID: 52706 RVA: 0x001E5224 File Offset: 0x001E3424
+		// Token: 0x0600CCC6 RID: 52422 RVA: 0x001E2F54 File Offset: 0x001E1154
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -243,7 +243,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600CDE3 RID: 52707 RVA: 0x001E5230 File Offset: 0x001E3430
+		// Token: 0x0600CCC7 RID: 52423 RVA: 0x001E2F60 File Offset: 0x001E1160
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -274,7 +274,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CDE4 RID: 52708 RVA: 0x001E52C4 File Offset: 0x001E34C4
+		// Token: 0x0600CCC8 RID: 52424 RVA: 0x001E2FF4 File Offset: 0x001E11F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -303,7 +303,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600CDE5 RID: 52709 RVA: 0x001E5350 File Offset: 0x001E3550
+		// Token: 0x0600CCC9 RID: 52425 RVA: 0x001E3080 File Offset: 0x001E1280
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(LiftMoveTypePb other)
@@ -343,7 +343,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600CDE6 RID: 52710 RVA: 0x001E5419 File Offset: 0x001E3619
+		// Token: 0x0600CCCA RID: 52426 RVA: 0x001E3149 File Offset: 0x001E1349
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -351,7 +351,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600CDE7 RID: 52711 RVA: 0x001E5424 File Offset: 0x001E3624
+		// Token: 0x0600CCCB RID: 52427 RVA: 0x001E3154 File Offset: 0x001E1354
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -411,40 +411,40 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005708 RID: 22280
+		// Token: 0x0400570F RID: 22287
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005709 RID: 22281
+		// Token: 0x04005710 RID: 22288
 		public const int TypeFieldNumber = 1;
 
-		// Token: 0x0400570A RID: 22282
+		// Token: 0x04005711 RID: 22289
 		private LiftMoveType type_;
 
-		// Token: 0x0400570B RID: 22283
+		// Token: 0x04005712 RID: 22290
 		public const int MoveDefaultFieldNumber = 2;
 
-		// Token: 0x0400570C RID: 22284
+		// Token: 0x04005713 RID: 22291
 		public const int MoveTeleportFieldNumber = 3;
 
-		// Token: 0x0400570D RID: 22285
+		// Token: 0x04005714 RID: 22292
 		public const int CustomSpeedFieldNumber = 4;
 
-		// Token: 0x0400570E RID: 22286
+		// Token: 0x04005715 RID: 22293
 		private object option_;
 
-		// Token: 0x0400570F RID: 22287
+		// Token: 0x04005716 RID: 22294
 		private LiftMoveTypePb.OptionOneofCase optionCase_;
 
-		// Token: 0x0200181D RID: 6173
+		// Token: 0x02001895 RID: 6293
 		public enum OptionOneofCase
 		{
-			// Token: 0x0400C7DE RID: 51166
+			// Token: 0x0400CD09 RID: 52489
 			None,
-			// Token: 0x0400C7DF RID: 51167
+			// Token: 0x0400CD0A RID: 52490
 			MoveDefault = 2,
-			// Token: 0x0400C7E0 RID: 51168
+			// Token: 0x0400CD0B RID: 52491
 			MoveTeleport,
-			// Token: 0x0400C7E1 RID: 51169
+			// Token: 0x0400CD0C RID: 52492
 			CustomSpeed
 		}
 	}

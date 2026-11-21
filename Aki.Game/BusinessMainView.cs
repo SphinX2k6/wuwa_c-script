@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012FF RID: 4863
+// Token: 0x020007B3 RID: 1971
 [NullableContext(1)]
 [Nullable(0)]
 public class BusinessMainView : UiViewBase
 {
-	// Token: 0x060086A5 RID: 34469 RVA: 0x001CBB51 File Offset: 0x001C9D51
+	// Token: 0x06005A40 RID: 23104 RVA: 0x001D49BD File Offset: 0x001D2BBD
 	public BusinessMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060086A6 RID: 34470 RVA: 0x001CBB70 File Offset: 0x001C9D70
+	// Token: 0x06005A41 RID: 23105 RVA: 0x001D49DC File Offset: 0x001D2BDC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class BusinessMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x060086A7 RID: 34471 RVA: 0x001CBC94 File Offset: 0x001C9E94
+	// Token: 0x06005A42 RID: 23106 RVA: 0x001D4B00 File Offset: 0x001D2D00
 	private UniTask InitPopularity()
 	{
 		BusinessMainView.<InitPopularity>d__12 <InitPopularity>d__;
@@ -48,7 +48,7 @@ public class BusinessMainView : UiViewBase
 		return <InitPopularity>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086A8 RID: 34472 RVA: 0x001CBCD8 File Offset: 0x001C9ED8
+	// Token: 0x06005A43 RID: 23107 RVA: 0x001D4B44 File Offset: 0x001D2D44
 	private UniTask InitCaptionItem()
 	{
 		BusinessMainView.<InitCaptionItem>d__13 <InitCaptionItem>d__;
@@ -59,7 +59,7 @@ public class BusinessMainView : UiViewBase
 		return <InitCaptionItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086A9 RID: 34473 RVA: 0x001CBD1C File Offset: 0x001C9F1C
+	// Token: 0x06005A44 RID: 23108 RVA: 0x001D4B88 File Offset: 0x001D2D88
 	private UniTask InitNonDetailsModule(UUIItem item)
 	{
 		BusinessMainView.<InitNonDetailsModule>d__14 <InitNonDetailsModule>d__;
@@ -71,7 +71,7 @@ public class BusinessMainView : UiViewBase
 		return <InitNonDetailsModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086AA RID: 34474 RVA: 0x001CBD68 File Offset: 0x001C9F68
+	// Token: 0x06005A45 RID: 23109 RVA: 0x001D4BD4 File Offset: 0x001D2DD4
 	private UniTask InitSkipItem()
 	{
 		BusinessMainView.<InitSkipItem>d__15 <InitSkipItem>d__;
@@ -82,7 +82,7 @@ public class BusinessMainView : UiViewBase
 		return <InitSkipItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086AB RID: 34475 RVA: 0x001CBDAC File Offset: 0x001C9FAC
+	// Token: 0x06005A46 RID: 23110 RVA: 0x001D4C18 File Offset: 0x001D2E18
 	private UniTask InitDelegationDetailsModule()
 	{
 		BusinessMainView.<InitDelegationDetailsModule>d__16 <InitDelegationDetailsModule>d__;
@@ -93,7 +93,7 @@ public class BusinessMainView : UiViewBase
 		return <InitDelegationDetailsModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086AC RID: 34476 RVA: 0x001CBDF0 File Offset: 0x001C9FF0
+	// Token: 0x06005A47 RID: 23111 RVA: 0x001D4C5C File Offset: 0x001D2E5C
 	private void InitBtnItem()
 	{
 		this.BuildBtn = new ButtonItem(base.GetItem(0));
@@ -108,7 +108,7 @@ public class BusinessMainView : UiViewBase
 		});
 	}
 
-	// Token: 0x060086AD RID: 34477 RVA: 0x001CBE50 File Offset: 0x001CA050
+	// Token: 0x06005A48 RID: 23112 RVA: 0x001D4CBC File Offset: 0x001D2EBC
 	private UniTask InitNonDetailsList()
 	{
 		BusinessMainView.<InitNonDetailsList>d__18 <InitNonDetailsList>d__;
@@ -119,7 +119,7 @@ public class BusinessMainView : UiViewBase
 		return <InitNonDetailsList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086AE RID: 34478 RVA: 0x001CBE94 File Offset: 0x001CA094
+	// Token: 0x06005A49 RID: 23113 RVA: 0x001D4D00 File Offset: 0x001D2F00
 	private void RefreshNonDetailsList()
 	{
 		List<DelegationData> delegationDataList = MoonChasingBusinessModel.Instance.GetDelegationDataList();
@@ -137,7 +137,7 @@ public class BusinessMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060086AF RID: 34479 RVA: 0x001CBEF0 File Offset: 0x001CA0F0
+	// Token: 0x06005A4A RID: 23114 RVA: 0x001D4D5C File Offset: 0x001D2F5C
 	private void RefreshNonDetailsListConsume()
 	{
 		List<DelegationData> delegationDataList = MoonChasingBusinessModel.Instance.GetDelegationDataList();
@@ -151,7 +151,7 @@ public class BusinessMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060086B0 RID: 34480 RVA: 0x001CBF3C File Offset: 0x001CA13C
+	// Token: 0x06005A4B RID: 23115 RVA: 0x001D4DA8 File Offset: 0x001D2FA8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessMainView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -162,7 +162,7 @@ public class BusinessMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086B1 RID: 34481 RVA: 0x001CBF80 File Offset: 0x001CA180
+	// Token: 0x06005A4C RID: 23116 RVA: 0x001D4DEC File Offset: 0x001D2FEC
 	protected override UniTask OnBeforeShowAsyncImplementImplement()
 	{
 		BusinessMainView.<OnBeforeShowAsyncImplementImplement>d__22 <OnBeforeShowAsyncImplementImplement>d__;
@@ -173,7 +173,7 @@ public class BusinessMainView : UiViewBase
 		return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086B2 RID: 34482 RVA: 0x001CBFC3 File Offset: 0x001CA1C3
+	// Token: 0x06005A4D RID: 23117 RVA: 0x001D4E2F File Offset: 0x001D302F
 	protected override void OnBeforeShow()
 	{
 		this.Vc.Show();
@@ -181,7 +181,7 @@ public class BusinessMainView : UiViewBase
 		ActivityMoonChasingController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x060086B3 RID: 34483 RVA: 0x001CBFE0 File Offset: 0x001CA1E0
+	// Token: 0x06005A4E RID: 23118 RVA: 0x001D4E4C File Offset: 0x001D304C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OpenTipsTravelView, new Action(this.BackToMainView));
@@ -192,7 +192,7 @@ public class BusinessMainView : UiViewBase
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.CloseView));
 	}
 
-	// Token: 0x060086B4 RID: 34484 RVA: 0x001CC094 File Offset: 0x001CA294
+	// Token: 0x06005A4F RID: 23119 RVA: 0x001D4F00 File Offset: 0x001D3100
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OpenTipsTravelView, new Action(this.BackToMainView));
@@ -203,13 +203,13 @@ public class BusinessMainView : UiViewBase
 		EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.CloseView));
 	}
 
-	// Token: 0x060086B5 RID: 34485 RVA: 0x001CC146 File Offset: 0x001CA346
+	// Token: 0x06005A50 RID: 23120 RVA: 0x001D4FB2 File Offset: 0x001D31B2
 	protected override void OnBeforeDestroy()
 	{
 		MoonChasingBusinessModel.Instance.SetIsInDelegate(false);
 	}
 
-	// Token: 0x060086B6 RID: 34486 RVA: 0x001CC154 File Offset: 0x001CA354
+	// Token: 0x06005A51 RID: 23121 RVA: 0x001D4FC0 File Offset: 0x001D31C0
 	private void ConditionUnlockRole()
 	{
 		UUIItem item = base.GetItem(11);
@@ -234,7 +234,7 @@ public class BusinessMainView : UiViewBase
 		uiViewSequence.PlaySequence("Refresh", false, null);
 	}
 
-	// Token: 0x060086B7 RID: 34487 RVA: 0x001CC1B4 File Offset: 0x001CA3B4
+	// Token: 0x06005A52 RID: 23122 RVA: 0x001D5020 File Offset: 0x001D3220
 	private void CloseView(EUiViewName viewName, int _)
 	{
 		if (viewName == EUiViewName.MoonChasingUnlockRoleView)
@@ -253,7 +253,7 @@ public class BusinessMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060086B8 RID: 34488 RVA: 0x001CC1FD File Offset: 0x001CA3FD
+	// Token: 0x06005A53 RID: 23123 RVA: 0x001D5069 File Offset: 0x001D3269
 	private void BackToMainView()
 	{
 		UUIItem item = base.GetItem(11);
@@ -264,7 +264,7 @@ public class BusinessMainView : UiViewBase
 		this.Vc.BackToState(EBusinessSkipDefine.MainView);
 	}
 
-	// Token: 0x060086B9 RID: 34489 RVA: 0x001CC21F File Offset: 0x001CA41F
+	// Token: 0x06005A54 RID: 23124 RVA: 0x001D508B File Offset: 0x001D328B
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -288,13 +288,13 @@ public class BusinessMainView : UiViewBase
 		return details.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x060086BA RID: 34490 RVA: 0x001CC251 File Offset: 0x001CA451
+	// Token: 0x06005A55 RID: 23125 RVA: 0x001D50BD File Offset: 0x001D32BD
 	private void UnlockMoonChasingData()
 	{
 		this.RefreshSkipItem();
 	}
 
-	// Token: 0x060086BB RID: 34491 RVA: 0x001CC259 File Offset: 0x001CA459
+	// Token: 0x06005A56 RID: 23126 RVA: 0x001D50C5 File Offset: 0x001D32C5
 	private void RefreshDelegate(bool isReplace)
 	{
 		if (isReplace)
@@ -309,14 +309,14 @@ public class BusinessMainView : UiViewBase
 		this.Popularity.RefreshPopularity();
 	}
 
-	// Token: 0x060086BC RID: 34492 RVA: 0x001CC27E File Offset: 0x001CA47E
+	// Token: 0x06005A57 RID: 23127 RVA: 0x001D50EA File Offset: 0x001D32EA
 	private void RefreshDelegateConsume()
 	{
 		this.RefreshNonDetailsListConsume();
 		this.Popularity.RefreshPopularity();
 	}
 
-	// Token: 0x060086BD RID: 34493 RVA: 0x001CC294 File Offset: 0x001CA494
+	// Token: 0x06005A58 RID: 23128 RVA: 0x001D5100 File Offset: 0x001D3300
 	private UniTask ShowDelegation(int delegateId)
 	{
 		BusinessMainView.<ShowDelegation>d__34 <ShowDelegation>d__;
@@ -328,7 +328,7 @@ public class BusinessMainView : UiViewBase
 		return <ShowDelegation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086BE RID: 34494 RVA: 0x001CC2E0 File Offset: 0x001CA4E0
+	// Token: 0x06005A59 RID: 23129 RVA: 0x001D514C File Offset: 0x001D334C
 	private void RefreshSkipItem()
 	{
 		MoonChasingModel instance = MoonChasingModel.Instance;
@@ -342,7 +342,7 @@ public class BusinessMainView : UiViewBase
 		this.SkipItem.Refresh();
 	}
 
-	// Token: 0x060086BF RID: 34495 RVA: 0x001CC334 File Offset: 0x001CA534
+	// Token: 0x06005A5A RID: 23130 RVA: 0x001D51A0 File Offset: 0x001D33A0
 	public void SkipToMainView()
 	{
 		this.RefreshNonDetailsList();
@@ -363,7 +363,7 @@ public class BusinessMainView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x060086C0 RID: 34496 RVA: 0x001CC39C File Offset: 0x001CA59C
+	// Token: 0x06005A5B RID: 23131 RVA: 0x001D5208 File Offset: 0x001D3408
 	public void SkipToDelegationDetails(params object[] params_)
 	{
 		int delegateId = (int)params_[0];
@@ -380,7 +380,7 @@ public class BusinessMainView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x060086C1 RID: 34497 RVA: 0x001CC400 File Offset: 0x001CA600
+	// Token: 0x06005A5C RID: 23132 RVA: 0x001D526C File Offset: 0x001D346C
 	public UniTask BeforeShowAsync(bool inMainView)
 	{
 		BusinessMainView.<BeforeShowAsync>d__38 <BeforeShowAsync>d__;
@@ -392,20 +392,20 @@ public class BusinessMainView : UiViewBase
 		return <BeforeShowAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086C2 RID: 34498 RVA: 0x001CC44B File Offset: 0x001CA64B
+	// Token: 0x06005A5D RID: 23133 RVA: 0x001D52B7 File Offset: 0x001D34B7
 	public void Refresh()
 	{
 		this.RefreshSkipItem();
 	}
 
-	// Token: 0x060086C3 RID: 34499 RVA: 0x001CC453 File Offset: 0x001CA653
+	// Token: 0x06005A5E RID: 23134 RVA: 0x001D52BF File Offset: 0x001D34BF
 	public void RefreshRedDot()
 	{
 		this.BuildBtn.BindRedDot(ERedDotName.MoonChasingBuilding, 0);
 		this.HelperBtn.BindRedDot(ERedDotName.MoonChasingRole, 0);
 	}
 
-	// Token: 0x060086C4 RID: 34500 RVA: 0x001CC477 File Offset: 0x001CA677
+	// Token: 0x06005A5F RID: 23135 RVA: 0x001D52E3 File Offset: 0x001D34E3
 	public void SwitchShowViewSequence(bool inMainView)
 	{
 		if (inMainView)
@@ -416,73 +416,73 @@ public class BusinessMainView : UiViewBase
 		this.UiViewSequence.ShowSequenceName = "ShowView01";
 	}
 
-	// Token: 0x04003C35 RID: 15413
+	// Token: 0x04003CCD RID: 15565
 	[Nullable(2)]
 	protected DelegationDetailsModule Details;
 
-	// Token: 0x04003C36 RID: 15414
+	// Token: 0x04003CCE RID: 15566
 	[Nullable(2)]
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003C37 RID: 15415
+	// Token: 0x04003CCF RID: 15567
 	private PopularityModule Popularity;
 
-	// Token: 0x04003C38 RID: 15416
+	// Token: 0x04003CD0 RID: 15568
 	protected List<DelegationNonDetailsModule> NonDetailsList = new List<DelegationNonDetailsModule>();
 
-	// Token: 0x04003C39 RID: 15417
+	// Token: 0x04003CD1 RID: 15569
 	protected BusinessSkipItem SkipItem;
 
-	// Token: 0x04003C3A RID: 15418
+	// Token: 0x04003CD2 RID: 15570
 	private ButtonItem BuildBtn;
 
-	// Token: 0x04003C3B RID: 15419
+	// Token: 0x04003CD3 RID: 15571
 	private ButtonItem HelperBtn;
 
-	// Token: 0x04003C3C RID: 15420
+	// Token: 0x04003CD4 RID: 15572
 	private bool IsRefreshFromServer;
 
-	// Token: 0x04003C3D RID: 15421
+	// Token: 0x04003CD5 RID: 15573
 	private readonly BusinessViewController Vc = new BusinessViewController();
 
-	// Token: 0x0200792D RID: 31021
+	// Token: 0x02006AB7 RID: 27319
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027EC1 RID: 163521
+		// Token: 0x040231EE RID: 143854
 		public const int BuildBtn = 0;
 
-		// Token: 0x04027EC2 RID: 163522
+		// Token: 0x040231EF RID: 143855
 		public const int HelperBtn = 1;
 
-		// Token: 0x04027EC3 RID: 163523
+		// Token: 0x040231F0 RID: 143856
 		public const int CaptionItem = 2;
 
-		// Token: 0x04027EC4 RID: 163524
+		// Token: 0x040231F1 RID: 143857
 		public const int GridOne = 3;
 
-		// Token: 0x04027EC5 RID: 163525
+		// Token: 0x040231F2 RID: 143858
 		public const int GridTwo = 4;
 
-		// Token: 0x04027EC6 RID: 163526
+		// Token: 0x040231F3 RID: 143859
 		public const int GridThird = 5;
 
-		// Token: 0x04027EC7 RID: 163527
+		// Token: 0x040231F4 RID: 143860
 		public const int GridFour = 6;
 
-		// Token: 0x04027EC8 RID: 163528
+		// Token: 0x040231F5 RID: 143861
 		public const int MainItem = 7;
 
-		// Token: 0x04027EC9 RID: 163529
+		// Token: 0x040231F6 RID: 143862
 		public const int ContentItem = 8;
 
-		// Token: 0x04027ECA RID: 163530
+		// Token: 0x040231F7 RID: 143863
 		public const int PopularityItem = 9;
 
-		// Token: 0x04027ECB RID: 163531
+		// Token: 0x040231F8 RID: 143864
 		public const int SkipItem = 10;
 
-		// Token: 0x04027ECC RID: 163532
+		// Token: 0x040231F9 RID: 143865
 		public const int MaskItem = 11;
 	}
 }

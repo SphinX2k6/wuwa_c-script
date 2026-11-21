@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000626 RID: 1574
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006C3 RID: 1731
 	public class IProceduralMaterialType
 	{
-		// Token: 0x06002194 RID: 8596 RVA: 0x0005CD54 File Offset: 0x0005AF54
+		// Token: 0x0600249A RID: 9370 RVA: 0x00063A68 File Offset: 0x00061C68
 		private IProceduralMaterialType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002195 RID: 8597 RVA: 0x0005CD8C File Offset: 0x0005AF8C
+		// Token: 0x0600249B RID: 9371 RVA: 0x00063AA0 File Offset: 0x00061CA0
 		public static IProceduralMaterialType Create([Nullable(2)] IProceduralMaterialType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002196 RID: 8598 RVA: 0x0005CD9F File Offset: 0x0005AF9F
+		// Token: 0x0600249C RID: 9372 RVA: 0x00063AB3 File Offset: 0x00061CB3
 		public static IProceduralMaterialType CreateFromSetValue([Nullable(2)] IProceduralMaterialType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002197 RID: 8599 RVA: 0x0005CDB2 File Offset: 0x0005AFB2
+		// Token: 0x0600249D RID: 9373 RVA: 0x00063AC6 File Offset: 0x00061CC6
 		public IProceduralMaterialType_SetValue ToSetValue()
 		{
 			return new IProceduralMaterialType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008F0 RID: 2288
-		// (get) Token: 0x06002198 RID: 8600 RVA: 0x0005CDC5 File Offset: 0x0005AFC5
-		// (set) Token: 0x06002199 RID: 8601 RVA: 0x0005CDF0 File Offset: 0x0005AFF0
+		// Token: 0x170009A7 RID: 2471
+		// (get) Token: 0x0600249E RID: 9374 RVA: 0x00063AD9 File Offset: 0x00061CD9
+		// (set) Token: 0x0600249F RID: 9375 RVA: 0x00063B04 File Offset: 0x00061D04
 		public virtual EProceduralMaterialType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001770 RID: 6000
+		// Token: 0x04001962 RID: 6498
 		[Nullable(2)]
 		protected IProceduralMaterialType FbInstance;
 
-		// Token: 0x04001771 RID: 6001
+		// Token: 0x04001963 RID: 6499
 		[Nullable(2)]
 		protected IProceduralMaterialType_SetValue PocoInterface;
 	}

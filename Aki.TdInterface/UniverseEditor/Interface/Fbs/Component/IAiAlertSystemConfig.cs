@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E74 RID: 20084
+	// Token: 0x02005385 RID: 21381
 	public struct IAiAlertSystemConfig : IFlatbufferObject
 	{
-		// Token: 0x17008FD1 RID: 36817
-		// (get) Token: 0x0601F8DA RID: 129242 RVA: 0x00464EAD File Offset: 0x004630AD
+		// Token: 0x1700970A RID: 38666
+		// (get) Token: 0x06021525 RID: 136485 RVA: 0x00498EC5 File Offset: 0x004970C5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F8DB RID: 129243 RVA: 0x00464EBA File Offset: 0x004630BA
+		// Token: 0x06021526 RID: 136486 RVA: 0x00498ED2 File Offset: 0x004970D2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F8DC RID: 129244 RVA: 0x00464EC4 File Offset: 0x004630C4
+		// Token: 0x06021527 RID: 136487 RVA: 0x00498EDC File Offset: 0x004970DC
 		public static IAiAlertSystemConfig GetRootAsIAiAlertSystemConfig(ByteBuffer _bb)
 		{
 			return IAiAlertSystemConfig.GetRootAsIAiAlertSystemConfig(_bb, default(IAiAlertSystemConfig));
 		}
 
-		// Token: 0x0601F8DD RID: 129245 RVA: 0x00464EE0 File Offset: 0x004630E0
+		// Token: 0x06021528 RID: 136488 RVA: 0x00498EF8 File Offset: 0x004970F8
 		public static IAiAlertSystemConfig GetRootAsIAiAlertSystemConfig(ByteBuffer _bb, IAiAlertSystemConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F8DE RID: 129246 RVA: 0x00464EFD File Offset: 0x004630FD
+		// Token: 0x06021529 RID: 136489 RVA: 0x00498F15 File Offset: 0x00497115
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F8DF RID: 129247 RVA: 0x00464F0C File Offset: 0x0046310C
+		// Token: 0x0602152A RID: 136490 RVA: 0x00498F24 File Offset: 0x00497124
 		public IAiAlertSystemConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008FD2 RID: 36818
-		// (get) Token: 0x0601F8E0 RID: 129248 RVA: 0x00464F1C File Offset: 0x0046311C
+		// Token: 0x1700970B RID: 38667
+		// (get) Token: 0x0602152B RID: 136491 RVA: 0x00498F34 File Offset: 0x00497134
 		public int AreaId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17008FD3 RID: 36819
-		// (get) Token: 0x0601F8E1 RID: 129249 RVA: 0x00464F58 File Offset: 0x00463158
+		// Token: 0x1700970C RID: 38668
+		// (get) Token: 0x0602152C RID: 136492 RVA: 0x00498F70 File Offset: 0x00497170
 		public float PlayerHatredDeltaValue
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17008FD4 RID: 36820
-		// (get) Token: 0x0601F8E2 RID: 129250 RVA: 0x00464F98 File Offset: 0x00463198
+		// Token: 0x1700970D RID: 38669
+		// (get) Token: 0x0602152D RID: 136493 RVA: 0x00498FB0 File Offset: 0x004971B0
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F8E3 RID: 129251 RVA: 0x00464FD4 File Offset: 0x004631D4
+		// Token: 0x0602152E RID: 136494 RVA: 0x00498FEC File Offset: 0x004971EC
 		public static Offset<IAiAlertSystemConfig> CreateIAiAlertSystemConfig(FlatBufferBuilder builder, int AreaId = 0, float PlayerHatredDeltaValue = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAiAlertSystemConfig.EndIAiAlertSystemConfig(builder);
 		}
 
-		// Token: 0x0601F8E4 RID: 129252 RVA: 0x00464FF8 File Offset: 0x004631F8
+		// Token: 0x0602152F RID: 136495 RVA: 0x00499010 File Offset: 0x00497210
 		public static void StartIAiAlertSystemConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601F8E5 RID: 129253 RVA: 0x00465001 File Offset: 0x00463201
+		// Token: 0x06021530 RID: 136496 RVA: 0x00499019 File Offset: 0x00497219
 		public static void AddAreaId(FlatBufferBuilder builder, int areaId)
 		{
 			builder.AddInt(0, areaId, 0);
 		}
 
-		// Token: 0x0601F8E6 RID: 129254 RVA: 0x0046500C File Offset: 0x0046320C
+		// Token: 0x06021531 RID: 136497 RVA: 0x00499024 File Offset: 0x00497224
 		public static void AddPlayerHatredDeltaValue(FlatBufferBuilder builder, float playerHatredDeltaValue)
 		{
 			builder.AddFloat(1, playerHatredDeltaValue, 0.0);
 		}
 
-		// Token: 0x0601F8E7 RID: 129255 RVA: 0x0046501F File Offset: 0x0046321F
+		// Token: 0x06021532 RID: 136498 RVA: 0x00499037 File Offset: 0x00497237
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0601F8E8 RID: 129256 RVA: 0x0046502A File Offset: 0x0046322A
+		// Token: 0x06021533 RID: 136499 RVA: 0x00499042 File Offset: 0x00497242
 		public static Offset<IAiAlertSystemConfig> EndIAiAlertSystemConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IAiAlertSystemConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601F8E9 RID: 129257 RVA: 0x00465038 File Offset: 0x00463238
+		// Token: 0x06021534 RID: 136500 RVA: 0x00499050 File Offset: 0x00497250
 		public IAiAlertSystemConfigT UnPack()
 		{
 			IAiAlertSystemConfigT aiAlertSystemConfigT = new IAiAlertSystemConfigT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return aiAlertSystemConfigT;
 		}
 
-		// Token: 0x0601F8EA RID: 129258 RVA: 0x00465053 File Offset: 0x00463253
+		// Token: 0x06021535 RID: 136501 RVA: 0x0049906B File Offset: 0x0049726B
 		public void UnPackTo(IAiAlertSystemConfigT _o)
 		{
 			_o.AreaId = this.AreaId;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601F8EB RID: 129259 RVA: 0x0046507C File Offset: 0x0046327C
+		// Token: 0x06021536 RID: 136502 RVA: 0x00499094 File Offset: 0x00497294
 		public static Offset<IAiAlertSystemConfig> Pack(FlatBufferBuilder builder, IAiAlertSystemConfigT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAiAlertSystemConfig.CreateIAiAlertSystemConfig(builder, _o.AreaId, _o.PlayerHatredDeltaValue, _o.NullMask);
 		}
 
-		// Token: 0x0400DC24 RID: 56356
+		// Token: 0x0400E79E RID: 59294
 		private Table __p;
 	}
 }

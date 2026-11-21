@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 {
-	// Token: 0x020047FC RID: 18428
+	// Token: 0x0200372D RID: 14125
 	public class RewardPreviewListItem : UiPanelBase, IGridProxy<TLevelDropReward>
 	{
-		// Token: 0x170078CB RID: 30923
-		// (get) Token: 0x0603041A RID: 197658 RVA: 0x00B312FF File Offset: 0x00B2F4FF
-		// (set) Token: 0x0603041B RID: 197659 RVA: 0x00B31307 File Offset: 0x00B2F507
+		// Token: 0x17004B88 RID: 19336
+		// (get) Token: 0x06024BEA RID: 150506 RVA: 0x00A6129F File Offset: 0x00A5F49F
+		// (set) Token: 0x06024BEB RID: 150507 RVA: 0x00A612A7 File Offset: 0x00A5F4A7
 		[Nullable(new byte[]
 		{
 			2,
@@ -32,17 +31,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 			1
 		})] set; }
 
-		// Token: 0x170078CC RID: 30924
-		// (get) Token: 0x0603041C RID: 197660 RVA: 0x00B31310 File Offset: 0x00B2F510
-		// (set) Token: 0x0603041D RID: 197661 RVA: 0x00B31318 File Offset: 0x00B2F518
+		// Token: 0x17004B89 RID: 19337
+		// (get) Token: 0x06024BEC RID: 150508 RVA: 0x00A612B0 File Offset: 0x00A5F4B0
+		// (set) Token: 0x06024BED RID: 150509 RVA: 0x00A612B8 File Offset: 0x00A5F4B8
 		public int GridIndex { get; set; }
 
-		// Token: 0x170078CD RID: 30925
-		// (get) Token: 0x0603041E RID: 197662 RVA: 0x00B31321 File Offset: 0x00B2F521
-		// (set) Token: 0x0603041F RID: 197663 RVA: 0x00B31329 File Offset: 0x00B2F529
+		// Token: 0x17004B8A RID: 19338
+		// (get) Token: 0x06024BEE RID: 150510 RVA: 0x00A612C1 File Offset: 0x00A5F4C1
+		// (set) Token: 0x06024BEF RID: 150511 RVA: 0x00A612C9 File Offset: 0x00A5F4C9
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x06030420 RID: 197664 RVA: 0x00B31334 File Offset: 0x00B2F534
+		// Token: 0x06024BF0 RID: 150512 RVA: 0x00A612D4 File Offset: 0x00A5F4D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -61,13 +60,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x06030421 RID: 197665 RVA: 0x00B313EA File Offset: 0x00B2F5EA
+		// Token: 0x06024BF1 RID: 150513 RVA: 0x00A6138A File Offset: 0x00A5F58A
 		protected override void OnStart()
 		{
 			this.ItemsLayout = new GenericLayout<RewardItem, TPreviewItem>(base.GetGridLayout(2), new Func<RewardItem>(this.CreateRewardItemFunc), null, false, true);
 		}
 
-		// Token: 0x06030422 RID: 197666 RVA: 0x00B31410 File Offset: 0x00B2F610
+		// Token: 0x06024BF2 RID: 150514 RVA: 0x00A613B0 File Offset: 0x00A5F5B0
 		public void Refresh(TLevelDropReward data, bool isSelected, int gridIndex)
 		{
 			this.DropRewardData = new TLevelDropReward?(data);
@@ -90,7 +89,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 				DicIntInt? dicIntInt = config.Value.DropPreview(i);
 				ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(dicIntInt.Value.Key);
 				int valueOrDefault = calabashConfigByLevel.Value.GetQualityDropWeight(itemConfigData.QualityId).GetValueOrDefault();
-				if (itemConfigData == null || !itemConfigData.ShowTypes.Contains(41) || valueOrDefault > 0)
+				if (itemConfigData == null || Array.IndexOf<int>(itemConfigData.ShowTypes, 41) < 0 || valueOrDefault > 0)
 				{
 					list.Add(new TPreviewItem
 					{
@@ -108,39 +107,39 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 			itemsLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06030423 RID: 197667 RVA: 0x00B315B2 File Offset: 0x00B2F7B2
+		// Token: 0x06024BF3 RID: 150515 RVA: 0x00A61553 File Offset: 0x00A5F753
 		public void Clear()
 		{
 		}
 
-		// Token: 0x06030424 RID: 197668 RVA: 0x00B315B4 File Offset: 0x00B2F7B4
+		// Token: 0x06024BF4 RID: 150516 RVA: 0x00A61555 File Offset: 0x00A5F755
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06030425 RID: 197669 RVA: 0x00B315B6 File Offset: 0x00B2F7B6
+		// Token: 0x06024BF5 RID: 150517 RVA: 0x00A61557 File Offset: 0x00A5F757
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06030426 RID: 197670 RVA: 0x00B315B8 File Offset: 0x00B2F7B8
+		// Token: 0x06024BF6 RID: 150518 RVA: 0x00A61559 File Offset: 0x00A5F759
 		[NullableContext(1)]
 		public object GetKey(TLevelDropReward data, int gridIndex)
 		{
 			return this.GridIndex;
 		}
 
-		// Token: 0x06030427 RID: 197671 RVA: 0x00B315C5 File Offset: 0x00B2F7C5
+		// Token: 0x06024BF7 RID: 150519 RVA: 0x00A61566 File Offset: 0x00A5F766
 		[NullableContext(1)]
 		private RewardItem CreateRewardItemFunc()
 		{
 			return new RewardItem();
 		}
 
-		// Token: 0x04019FA1 RID: 106401
+		// Token: 0x04014655 RID: 83541
 		private TLevelDropReward? DropRewardData;
 
-		// Token: 0x04019FA2 RID: 106402
+		// Token: 0x04014656 RID: 83542
 		[Nullable(new byte[]
 		{
 			2,
@@ -148,19 +147,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 		})]
 		private GenericLayout<RewardItem, TPreviewItem> ItemsLayout;
 
-		// Token: 0x0200AAC1 RID: 43713
+		// Token: 0x02009472 RID: 38002
 		public static class EComponents
 		{
-			// Token: 0x04033EFF RID: 212735
+			// Token: 0x0402E682 RID: 190082
 			public const int TxtRewardTitle = 0;
 
-			// Token: 0x04033F00 RID: 212736
+			// Token: 0x0402E683 RID: 190083
 			public const int PnlCurrent = 1;
 
-			// Token: 0x04033F01 RID: 212737
+			// Token: 0x0402E684 RID: 190084
 			public const int PnlGridLayout = 2;
 
-			// Token: 0x04033F02 RID: 212738
+			// Token: 0x0402E685 RID: 190085
 			public const int ItemGrid = 3;
 		}
 	}

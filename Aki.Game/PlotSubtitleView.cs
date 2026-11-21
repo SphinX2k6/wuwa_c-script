@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -24,18 +23,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002977 RID: 10615
+// Token: 0x02001EF2 RID: 7922
 [NullableContext(2)]
 [Nullable(0)]
 public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 {
-	// Token: 0x06015F3E RID: 89918 RVA: 0x00588DAC File Offset: 0x00586FAC
+	// Token: 0x06013944 RID: 80196 RVA: 0x005B3DD4 File Offset: 0x005B1FD4
 	[NullableContext(1)]
 	public PlotSubtitleView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015F3F RID: 89919 RVA: 0x00588E5C File Offset: 0x0058705C
+	// Token: 0x06013945 RID: 80197 RVA: 0x005B3E84 File Offset: 0x005B2084
 	private void ShowBlackBg(bool isShow, bool useAnim = true)
 	{
 		if (isShow == this.IsBlackBgShow)
@@ -65,8 +64,8 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x17001D88 RID: 7560
-	// (get) Token: 0x06015F40 RID: 89920 RVA: 0x00588EDF File Offset: 0x005870DF
+	// Token: 0x17001DE1 RID: 7649
+	// (get) Token: 0x06013946 RID: 80198 RVA: 0x005B3F07 File Offset: 0x005B2107
 	[Nullable(new byte[]
 	{
 		2,
@@ -91,8 +90,8 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x17001D89 RID: 7561
-	// (get) Token: 0x06015F41 RID: 89921 RVA: 0x00588EFE File Offset: 0x005870FE
+	// Token: 0x17001DE2 RID: 7650
+	// (get) Token: 0x06013947 RID: 80199 RVA: 0x005B3F26 File Offset: 0x005B2126
 	public ITalkItem CurrentSubtitle
 	{
 		get
@@ -106,7 +105,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F42 RID: 89922 RVA: 0x00588F14 File Offset: 0x00587114
+	// Token: 0x06013948 RID: 80200 RVA: 0x005B3F3C File Offset: 0x005B213C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 54;
@@ -237,7 +236,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06015F43 RID: 89923 RVA: 0x00589708 File Offset: 0x00587908
+	// Token: 0x06013949 RID: 80201 RVA: 0x005B4730 File Offset: 0x005B2930
 	protected override void OnStart()
 	{
 		base.GetButton(2).RootUIComp.Get().SetUIActive(false);
@@ -375,7 +374,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.SpineQueue = new Queue<SpineQueueInfo>(4);
 	}
 
-	// Token: 0x06015F44 RID: 89924 RVA: 0x00589C54 File Offset: 0x00587E54
+	// Token: 0x0601394A RID: 80202 RVA: 0x005B4C7C File Offset: 0x005B2E7C
 	[NullableContext(1)]
 	private void OptionsLayoutHide(string _)
 	{
@@ -393,7 +392,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.AutoSelectTimeBar.GetRootComponent().SetUIActive(false);
 	}
 
-	// Token: 0x06015F45 RID: 89925 RVA: 0x00589CAC File Offset: 0x00587EAC
+	// Token: 0x0601394B RID: 80203 RVA: 0x005B4CD4 File Offset: 0x005B2ED4
 	protected void ResetSubtitle()
 	{
 		UUIScrollViewComponent scrollView = base.GetScrollView(27);
@@ -419,7 +418,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		base.GetText(12).SetUIActive(false);
 	}
 
-	// Token: 0x06015F46 RID: 89926 RVA: 0x00589D7E File Offset: 0x00587F7E
+	// Token: 0x0601394C RID: 80204 RVA: 0x005B4DA6 File Offset: 0x005B2FA6
 	protected override void OnAfterShow()
 	{
 		EventSystem.Instance.Emit<EUiViewName, bool>(EEventName.PlotViewChange, this.ViewInfo.Name, true);
@@ -431,7 +430,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		skipComp.EnableSkipButton(FlowController.Instance.IsSkipEnabled());
 	}
 
-	// Token: 0x06015F47 RID: 89927 RVA: 0x00589DB8 File Offset: 0x00587FB8
+	// Token: 0x0601394D RID: 80205 RVA: 0x005B4DE0 File Offset: 0x005B2FE0
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		PlotSubtitleView.<OnPlayingStartSequenceAsync>d__85 <OnPlayingStartSequenceAsync>d__;
@@ -442,7 +441,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015F48 RID: 89928 RVA: 0x00589DFC File Offset: 0x00587FFC
+	// Token: 0x0601394E RID: 80206 RVA: 0x005B4E24 File Offset: 0x005B3024
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Emit<EUiViewName, bool>(EEventName.PlotViewChange, this.ViewInfo.Name, false);
@@ -457,7 +456,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.ClearPendingImmersiveSleep();
 	}
 
-	// Token: 0x06015F49 RID: 89929 RVA: 0x00589E60 File Offset: 0x00588060
+	// Token: 0x0601394F RID: 80207 RVA: 0x005B4E88 File Offset: 0x005B3088
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		PlotSubtitleView.<OnPlayingCloseSequenceAsync>d__87 <OnPlayingCloseSequenceAsync>d__;
@@ -468,7 +467,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015F4A RID: 89930 RVA: 0x00589EA4 File Offset: 0x005880A4
+	// Token: 0x06013950 RID: 80208 RVA: 0x005B4ECC File Offset: 0x005B30CC
 	protected override void OnBeforeDestroy()
 	{
 		PlotModel.Instance.OptionEnable = true;
@@ -532,7 +531,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.SonUi = null;
 	}
 
-	// Token: 0x06015F4B RID: 89931 RVA: 0x0058A025 File Offset: 0x00588225
+	// Token: 0x06013951 RID: 80209 RVA: 0x005B504D File Offset: 0x005B324D
 	[NullableContext(1)]
 	private PlotOptionItem InitOptionItem()
 	{
@@ -541,7 +540,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return plotOptionItem;
 	}
 
-	// Token: 0x06015F4C RID: 89932 RVA: 0x0058A03F File Offset: 0x0058823F
+	// Token: 0x06013952 RID: 80210 RVA: 0x005B5067 File Offset: 0x005B3267
 	[NullableContext(1)]
 	private void OnPlotOptionItemHover(PlotOptionItem plotOptionItem)
 	{
@@ -555,7 +554,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.AutoSelectOptionComponent.OnSelectedOptionChanged();
 	}
 
-	// Token: 0x06015F4D RID: 89933 RVA: 0x0058A06C File Offset: 0x0058826C
+	// Token: 0x06013953 RID: 80211 RVA: 0x005B5094 File Offset: 0x005B3294
 	private void SkipSubtitleTipItemActive(bool value)
 	{
 		PlotModel.Instance.CanClick = value;
@@ -573,7 +572,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		EventSystem.Instance.Emit<bool>(EEventName.NavigationRefreshPlotNextPage, value);
 	}
 
-	// Token: 0x06015F4E RID: 89934 RVA: 0x0058A0D0 File Offset: 0x005882D0
+	// Token: 0x06013954 RID: 80212 RVA: 0x005B50F8 File Offset: 0x005B32F8
 	private void ShowWaitingPoint(bool enable)
 	{
 		bool uiactive = enable && !PlotModel.Instance.IsNewSubtitleStyleActive();
@@ -584,20 +583,20 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F4F RID: 89935 RVA: 0x0058A122 File Offset: 0x00588322
+	// Token: 0x06013955 RID: 80213 RVA: 0x005B514A File Offset: 0x005B334A
 	[NullableContext(1)]
 	private void OnMovieModeAspectOffsetChanged(IMovieModeAspectOffset _)
 	{
 		this.UpdatePlotTextOffset();
 	}
 
-	// Token: 0x06015F50 RID: 89936 RVA: 0x0058A12A File Offset: 0x0058832A
+	// Token: 0x06013956 RID: 80214 RVA: 0x005B5152 File Offset: 0x005B3352
 	private void OnMovieModeAspectOffsetChanged(bool _, IMovieModeAspectOffset __)
 	{
 		this.UpdatePlotTextOffset();
 	}
 
-	// Token: 0x06015F51 RID: 89937 RVA: 0x0058A134 File Offset: 0x00588334
+	// Token: 0x06013957 RID: 80215 RVA: 0x005B515C File Offset: 0x005B335C
 	private void UpdatePlotTextOffset()
 	{
 		UUIItem item = base.GetItem(3);
@@ -609,7 +608,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		item.SetAnchorOffsetY(this.PlotTextInitialAnchorY + (flag ? -28f : 0f));
 	}
 
-	// Token: 0x06015F52 RID: 89938 RVA: 0x0058A194 File Offset: 0x00588394
+	// Token: 0x06013958 RID: 80216 RVA: 0x005B51BC File Offset: 0x005B33BC
 	private void UpdateByPlotConfig()
 	{
 		PlotConfig plotConfig = PlotModel.Instance.PlotConfig;
@@ -632,7 +631,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.UpdatePlotTextOffset();
 	}
 
-	// Token: 0x06015F53 RID: 89939 RVA: 0x0058A28C File Offset: 0x0058848C
+	// Token: 0x06013959 RID: 80217 RVA: 0x005B52B4 File Offset: 0x005B34B4
 	private void UpdateAutoPlayButton()
 	{
 		PlotConfig plotConfig = PlotModel.Instance.PlotConfig;
@@ -654,7 +653,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.UpdateAutoSelectText();
 	}
 
-	// Token: 0x06015F54 RID: 89940 RVA: 0x0058A300 File Offset: 0x00588500
+	// Token: 0x0601395A RID: 80218 RVA: 0x005B5328 File Offset: 0x005B3528
 	private void UpdateAutoSelectText()
 	{
 		UUIText text = base.GetText(50);
@@ -673,7 +672,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		text.SetText(ConfigMultiTextLang.GetLocalTextNew(autoSelectTextKey, null) ?? autoSelectTextKey, true);
 	}
 
-	// Token: 0x06015F55 RID: 89941 RVA: 0x0058A376 File Offset: 0x00588576
+	// Token: 0x0601395B RID: 80219 RVA: 0x005B539E File Offset: 0x005B359E
 	[NullableContext(1)]
 	private string GetAutoSelectTextKey(EAutoPlayState autoPlayState)
 	{
@@ -690,7 +689,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F56 RID: 89942 RVA: 0x0058A3A4 File Offset: 0x005885A4
+	// Token: 0x0601395C RID: 80220 RVA: 0x005B53CC File Offset: 0x005B35CC
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.PlotConfigChanged, new Action(this.OnPlotConfigChanged));
@@ -726,7 +725,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}, null, ETermExplanationGroup.Default, 0, ETermExplanationViewStyle.Default);
 	}
 
-	// Token: 0x06015F57 RID: 89943 RVA: 0x0058A6B8 File Offset: 0x005888B8
+	// Token: 0x0601395D RID: 80221 RVA: 0x005B56E0 File Offset: 0x005B38E0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PlotConfigChanged, new Action(this.OnPlotConfigChanged));
@@ -759,7 +758,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(5));
 	}
 
-	// Token: 0x06015F58 RID: 89944 RVA: 0x0058A99C File Offset: 0x00588B9C
+	// Token: 0x0601395E RID: 80222 RVA: 0x005B59C4 File Offset: 0x005B3BC4
 	private void OnSizeChanged()
 	{
 		if (base.IsDestroyOrDestroying)
@@ -790,7 +789,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}, null, null);
 	}
 
-	// Token: 0x06015F59 RID: 89945 RVA: 0x0058AA00 File Offset: 0x00588C00
+	// Token: 0x0601395F RID: 80223 RVA: 0x005B5A28 File Offset: 0x005B3C28
 	private void ClearSizeChangedTimer()
 	{
 		TimerHandle sizeChangedTimerId = this.SizeChangedTimerId;
@@ -807,7 +806,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F5A RID: 89946 RVA: 0x0058AA4C File Offset: 0x00588C4C
+	// Token: 0x06013960 RID: 80224 RVA: 0x005B5A74 File Offset: 0x005B3C74
 	private void OnEnableInteractPlot(bool enable, bool? includeSubtitleButton, string reason)
 	{
 		bool valueOrDefault = includeSubtitleButton.GetValueOrDefault(true);
@@ -823,7 +822,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.ApplyInteractPlotState();
 	}
 
-	// Token: 0x06015F5B RID: 89947 RVA: 0x0058AA98 File Offset: 0x00588C98
+	// Token: 0x06013961 RID: 80225 RVA: 0x005B5AC0 File Offset: 0x005B3CC0
 	[NullableContext(1)]
 	private void OnEnableSkipPlotByReason(bool enable, string reason)
 	{
@@ -839,14 +838,14 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.ApplySkipButtonState();
 	}
 
-	// Token: 0x06015F5C RID: 89948 RVA: 0x0058AADB File Offset: 0x00588CDB
+	// Token: 0x06013962 RID: 80226 RVA: 0x005B5B03 File Offset: 0x005B3D03
 	private void ApplySkipButtonState()
 	{
 		this.SkipComp.EnableSkipButton(this.DisableInteractSources.Count == 0 && this.DisableSkipSources.Count == 0);
 		this.RestorePlotButtonsVisibility();
 	}
 
-	// Token: 0x06015F5D RID: 89949 RVA: 0x0058AB0C File Offset: 0x00588D0C
+	// Token: 0x06013963 RID: 80227 RVA: 0x005B5B34 File Offset: 0x005B3D34
 	private void ApplyInteractPlotState()
 	{
 		bool flag = this.DisableInteractSources.Count > 0;
@@ -874,7 +873,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.RestorePlotButtonsVisibility();
 	}
 
-	// Token: 0x06015F5E RID: 89950 RVA: 0x0058AC58 File Offset: 0x00588E58
+	// Token: 0x06013964 RID: 80228 RVA: 0x005B5C80 File Offset: 0x005B3E80
 	private void OnSequenceStart(float viewBlendDuration)
 	{
 		float num = viewBlendDuration * 1000f;
@@ -891,19 +890,19 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F5F RID: 89951 RVA: 0x0058ACFC File Offset: 0x00588EFC
+	// Token: 0x06013965 RID: 80229 RVA: 0x005B5D24 File Offset: 0x005B3F24
 	private void OnTermExplanationViewOpen(ETermExplanationViewType _)
 	{
 		this.MuteAutoPlay(true);
 	}
 
-	// Token: 0x06015F60 RID: 89952 RVA: 0x0058AD05 File Offset: 0x00588F05
+	// Token: 0x06013966 RID: 80230 RVA: 0x005B5D2D File Offset: 0x005B3F2D
 	private void OnTermExplanationViewClose()
 	{
 		this.MuteAutoPlay(false);
 	}
 
-	// Token: 0x06015F61 RID: 89953 RVA: 0x0058AD10 File Offset: 0x00588F10
+	// Token: 0x06013967 RID: 80231 RVA: 0x005B5D38 File Offset: 0x005B3F38
 	private void OnImmersiveInputStateChange(EInputControllerMainType inputMainType, bool isWake)
 	{
 		if (!InputManager.Instance.IsImmersiveMouseModeEnabled())
@@ -930,7 +929,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.ApplyImmersiveInputWakeState(isWake);
 	}
 
-	// Token: 0x06015F62 RID: 89954 RVA: 0x0058AD6C File Offset: 0x00588F6C
+	// Token: 0x06013968 RID: 80232 RVA: 0x005B5D94 File Offset: 0x005B3F94
 	private void ApplyImmersiveInputWakeState(bool isWake)
 	{
 		this.ImmersiveInputWakeState = isWake;
@@ -946,7 +945,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.AutoSelectOptionComponent.OnImmersiveInputStateChange();
 	}
 
-	// Token: 0x06015F63 RID: 89955 RVA: 0x0058ADCC File Offset: 0x00588FCC
+	// Token: 0x06013969 RID: 80233 RVA: 0x005B5DF4 File Offset: 0x005B3FF4
 	private void OnInputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
 	{
 		this.UpdateAutoSelectText();
@@ -961,7 +960,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F64 RID: 89956 RVA: 0x0058AE12 File Offset: 0x00589012
+	// Token: 0x0601396A RID: 80234 RVA: 0x005B5E3A File Offset: 0x005B403A
 	private static float GetPnlLayout02OffsetY(EInputControllerMainType type)
 	{
 		if (type == EInputControllerMainType.Gamepad)
@@ -975,13 +974,13 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return -80f;
 	}
 
-	// Token: 0x06015F65 RID: 89957 RVA: 0x0058AE2D File Offset: 0x0058902D
+	// Token: 0x0601396B RID: 80235 RVA: 0x005B5E55 File Offset: 0x005B4055
 	private void OnEnableSkipPlotRestoreTween(bool _)
 	{
 		this.RestorePlotButtonsVisibility();
 	}
 
-	// Token: 0x06015F66 RID: 89958 RVA: 0x0058AE35 File Offset: 0x00589035
+	// Token: 0x0601396C RID: 80236 RVA: 0x005B5E5D File Offset: 0x005B405D
 	private void ClearPendingImmersiveSleep()
 	{
 		this.PendingImmersiveSleep = false;
@@ -992,7 +991,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.PendingImmersiveSleepTimerId = null;
 	}
 
-	// Token: 0x06015F67 RID: 89959 RVA: 0x0058AE70 File Offset: 0x00589070
+	// Token: 0x0601396D RID: 80237 RVA: 0x005B5E98 File Offset: 0x005B4098
 	private void TrySchedulePendingImmersiveSleep()
 	{
 		if (!this.PendingImmersiveSleep)
@@ -1015,7 +1014,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}, 3000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06015F68 RID: 89960 RVA: 0x0058AEF4 File Offset: 0x005890F4
+	// Token: 0x0601396E RID: 80238 RVA: 0x005B5F1C File Offset: 0x005B411C
 	private void InitTweenAnim(int componentType)
 	{
 		List<ULGUIPlayTweenComponent> list = new List<ULGUIPlayTweenComponent>();
@@ -1032,7 +1031,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.TweenAnimMap[componentType] = list;
 	}
 
-	// Token: 0x06015F69 RID: 89961 RVA: 0x0058AF68 File Offset: 0x00589168
+	// Token: 0x0601396F RID: 80239 RVA: 0x005B5F90 File Offset: 0x005B4190
 	private void PlayTweenAnim(int componentType)
 	{
 		List<ULGUIPlayTweenComponent> list;
@@ -1045,7 +1044,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F6A RID: 89962 RVA: 0x0058AFC4 File Offset: 0x005891C4
+	// Token: 0x06013970 RID: 80240 RVA: 0x005B5FEC File Offset: 0x005B41EC
 	public void StopTweenAnim(int componentType)
 	{
 		List<ULGUIPlayTweenComponent> list;
@@ -1058,7 +1057,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F6B RID: 89963 RVA: 0x0058B020 File Offset: 0x00589220
+	// Token: 0x06013971 RID: 80241 RVA: 0x005B6048 File Offset: 0x005B4248
 	private void UpdatePlotButtonsVisibility(bool visible)
 	{
 		bool canPause = PlotModel.Instance.PlotConfig.CanPause;
@@ -1110,7 +1109,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F6C RID: 89964 RVA: 0x0058B144 File Offset: 0x00589344
+	// Token: 0x06013972 RID: 80242 RVA: 0x005B616C File Offset: 0x005B436C
 	private void RestorePlotButtonsVisibility()
 	{
 		if (!this.ImmersiveInputWakeState)
@@ -1156,7 +1155,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F6D RID: 89965 RVA: 0x0058B250 File Offset: 0x00589450
+	// Token: 0x06013973 RID: 80243 RVA: 0x005B6278 File Offset: 0x005B4478
 	private void MuteAutoPlay(bool isMute)
 	{
 		if (isMute)
@@ -1178,7 +1177,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F6E RID: 89966 RVA: 0x0058B300 File Offset: 0x00589500
+	// Token: 0x06013974 RID: 80244 RVA: 0x005B6328 File Offset: 0x005B4528
 	[NullableContext(1)]
 	private void OnShowTalkStart(ShowTalk inShowTalk)
 	{
@@ -1191,13 +1190,13 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		skipComp.AddSummary(inShowTalk.TalkOutline);
 	}
 
-	// Token: 0x06015F6F RID: 89967 RVA: 0x0058B320 File Offset: 0x00589520
+	// Token: 0x06013975 RID: 80245 RVA: 0x005B6348 File Offset: 0x005B4548
 	private void OnPlotConfigChanged()
 	{
 		this.UpdateByPlotConfig();
 	}
 
-	// Token: 0x06015F70 RID: 89968 RVA: 0x0058B328 File Offset: 0x00589528
+	// Token: 0x06013976 RID: 80246 RVA: 0x005B6350 File Offset: 0x005B4550
 	private void OnSkip()
 	{
 		this.MuteAutoPlay(false);
@@ -1205,13 +1204,13 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		FlowController.Instance.BackgroundFlow("UI点击跳过(PlotSubtitleView)", true, false, true);
 	}
 
-	// Token: 0x06015F71 RID: 89969 RVA: 0x0058B349 File Offset: 0x00589549
+	// Token: 0x06013977 RID: 80247 RVA: 0x005B6371 File Offset: 0x005B4571
 	private void ShowDoingText(bool bShow)
 	{
 		base.GetItem(24).SetUIActive(bShow);
 	}
 
-	// Token: 0x06015F72 RID: 89970 RVA: 0x0058B35C File Offset: 0x0058955C
+	// Token: 0x06013978 RID: 80248 RVA: 0x005B6384 File Offset: 0x005B4584
 	protected void OnBtnSubtitleSkipClick()
 	{
 		if (this.SubtitleLevel.GetValueOrDefault() != EPlotLevel.LevelB)
@@ -1254,7 +1253,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		AudioSystem.Instance.PostEvent("play_ui_ia_spl_plot_next");
 	}
 
-	// Token: 0x06015F73 RID: 89971 RVA: 0x0058B43C File Offset: 0x0058963C
+	// Token: 0x06013979 RID: 80249 RVA: 0x005B6464 File Offset: 0x005B4664
 	private void TryShowAllText()
 	{
 		TimerHandle scrollStartTimer = this.ScrollStartTimer;
@@ -1279,7 +1278,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F74 RID: 89972 RVA: 0x0058B4D9 File Offset: 0x005896D9
+	// Token: 0x0601397A RID: 80250 RVA: 0x005B6501 File Offset: 0x005B4701
 	private void TryJumpToNextSubtitleOrPlot()
 	{
 		if (this.SubtitleInfo.HasOption)
@@ -1293,7 +1292,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		SequenceController.Instance.FinishSubtitle(this.CurrentSubtitle.Id);
 	}
 
-	// Token: 0x06015F75 RID: 89973 RVA: 0x0058B514 File Offset: 0x00589714
+	// Token: 0x0601397B RID: 80251 RVA: 0x005B653C File Offset: 0x005B473C
 	protected void OnBtnAutoClick()
 	{
 		bool flag = false;
@@ -1325,21 +1324,21 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F76 RID: 89974 RVA: 0x0058B5D1 File Offset: 0x005897D1
+	// Token: 0x0601397C RID: 80252 RVA: 0x005B65F9 File Offset: 0x005B47F9
 	private void OnSkipPop()
 	{
 		this.MuteAutoPlay(true);
 		this.HideUiExceptPhoto();
 	}
 
-	// Token: 0x06015F77 RID: 89975 RVA: 0x0058B5E0 File Offset: 0x005897E0
+	// Token: 0x0601397D RID: 80253 RVA: 0x005B6608 File Offset: 0x005B4808
 	private void OnSkipCancel()
 	{
 		this.MuteAutoPlay(false);
 		this.ShowUiExceptPhoto();
 	}
 
-	// Token: 0x06015F78 RID: 89976 RVA: 0x0058B5EF File Offset: 0x005897EF
+	// Token: 0x0601397E RID: 80254 RVA: 0x005B6617 File Offset: 0x005B4817
 	private void OnBtnHideClick()
 	{
 		this.HideUiExceptPhoto();
@@ -1347,7 +1346,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.MuteAutoPlay(true);
 	}
 
-	// Token: 0x06015F79 RID: 89977 RVA: 0x0058B605 File Offset: 0x00589805
+	// Token: 0x0601397F RID: 80255 RVA: 0x005B662D File Offset: 0x005B482D
 	private void OnBtnReviewClick()
 	{
 		if (FlowController.Instance.OpenPlotReviewView())
@@ -1357,7 +1356,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F7A RID: 89978 RVA: 0x0058B620 File Offset: 0x00589820
+	// Token: 0x06013980 RID: 80256 RVA: 0x005B6648 File Offset: 0x005B4848
 	private void OnOpenView(EUiViewName viewName, int _)
 	{
 		if (viewName == EUiViewName.PlotReviewView)
@@ -1366,7 +1365,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F7B RID: 89979 RVA: 0x0058B63F File Offset: 0x0058983F
+	// Token: 0x06013981 RID: 80257 RVA: 0x005B6667 File Offset: 0x005B4867
 	private void OnCloseView(EUiViewName viewName, int _)
 	{
 		if (viewName == EUiViewName.PlotReviewView)
@@ -1379,7 +1378,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F7C RID: 89980 RVA: 0x0058B678 File Offset: 0x00589878
+	// Token: 0x06013982 RID: 80258 RVA: 0x005B66A0 File Offset: 0x005B48A0
 	private void HideUiExceptPhoto()
 	{
 		UUIItem item = base.GetItem(29);
@@ -1395,7 +1394,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x06015F7D RID: 89981 RVA: 0x0058B6A1 File Offset: 0x005898A1
+	// Token: 0x06013983 RID: 80259 RVA: 0x005B66C9 File Offset: 0x005B48C9
 	private void ShowUiExceptPhoto()
 	{
 		UUIItem item = base.GetItem(29);
@@ -1411,7 +1410,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		item2.SetUIActive(true);
 	}
 
-	// Token: 0x06015F7E RID: 89982 RVA: 0x0058B6CC File Offset: 0x005898CC
+	// Token: 0x06013984 RID: 80260 RVA: 0x005B66F4 File Offset: 0x005B48F4
 	private void PlaySubtitle()
 	{
 		SubtitleInfo subtitleInfo = this.SubtitleInfo;
@@ -1447,7 +1446,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.HandleSkipWaiting();
 	}
 
-	// Token: 0x06015F7F RID: 89983 RVA: 0x0058B785 File Offset: 0x00589985
+	// Token: 0x06013985 RID: 80261 RVA: 0x005B67AD File Offset: 0x005B49AD
 	private void HideSubtitle()
 	{
 		this.ResetSubtitle();
@@ -1458,7 +1457,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.SubtitleInfo.Clear();
 	}
 
-	// Token: 0x06015F80 RID: 89984 RVA: 0x0058B7B4 File Offset: 0x005899B4
+	// Token: 0x06013986 RID: 80262 RVA: 0x005B67DC File Offset: 0x005B49DC
 	private void ShowOption()
 	{
 		SubtitleInfo subtitleInfo = this.SubtitleInfo;
@@ -1482,7 +1481,11 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		{
 			PlotController.Instance.ShowSystemOption(this.CurrentSubtitle, delegate(int index, List<ActionInfo> _)
 			{
-				SequenceController.Instance.SelectOption(index, this.CurrentSubtitle.Id);
+				ITalkItem currentSubtitle = this.CurrentSubtitle;
+				if (currentSubtitle != null)
+				{
+					SequenceController.Instance.SelectOption(index, currentSubtitle.Id);
+				}
 			});
 			this.SubtitleInfo.ShowOption = true;
 			this.HandleSkipWaiting();
@@ -1492,7 +1495,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.SubtitleInfo.ShowOption = true;
 		this.SetOptionsShow(true);
 		this.CurOption = this.FilterOption(this.CurrentSubtitle.Options);
-		this.OptionLayout.RefreshByData(this.CurOption.Cast<object>().ToList<object>(), delegate
+		this.OptionLayout.RefreshByData(new List<object>(this.CurOption), delegate
 		{
 			this.HandleOptionState();
 			this.AutoSelectOptionComponent.OnOptionsShow();
@@ -1500,7 +1503,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.HandleSkipWaiting();
 	}
 
-	// Token: 0x06015F81 RID: 89985 RVA: 0x0058B8CC File Offset: 0x00589ACC
+	// Token: 0x06013987 RID: 80263 RVA: 0x005B68F0 File Offset: 0x005B4AF0
 	[NullableContext(1)]
 	private List<PlotOption> FilterOption(List<ITalkOption> options)
 	{
@@ -1523,25 +1526,25 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return list;
 	}
 
-	// Token: 0x06015F82 RID: 89986 RVA: 0x0058B946 File Offset: 0x00589B46
+	// Token: 0x06013988 RID: 80264 RVA: 0x005B696A File Offset: 0x005B4B6A
 	private void OnOptionSelected()
 	{
 		this.AutoSelectOptionComponent.OnOptionSelected();
 	}
 
-	// Token: 0x06015F83 RID: 89987 RVA: 0x0058B953 File Offset: 0x00589B53
+	// Token: 0x06013989 RID: 80265 RVA: 0x005B6977 File Offset: 0x005B4B77
 	private void SelectOptionByIndex(int optionIndex)
 	{
 		SequenceController.Instance.SelectOption(optionIndex, this.CurrentSubtitle.Id);
 	}
 
-	// Token: 0x06015F84 RID: 89988 RVA: 0x0058B96B File Offset: 0x00589B6B
+	// Token: 0x0601398A RID: 80266 RVA: 0x005B698F File Offset: 0x005B4B8F
 	private void HideOption()
 	{
 		this.ClearOptions();
 	}
 
-	// Token: 0x06015F85 RID: 89989 RVA: 0x0058B974 File Offset: 0x00589B74
+	// Token: 0x0601398B RID: 80267 RVA: 0x005B6998 File Offset: 0x005B4B98
 	private void HandleOptionState()
 	{
 		PlotOptionItem selectedPlotOptionItem = this.SelectedPlotOptionItem;
@@ -1558,7 +1561,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F86 RID: 89990 RVA: 0x0058B9E8 File Offset: 0x00589BE8
+	// Token: 0x0601398C RID: 80268 RVA: 0x005B6A0C File Offset: 0x005B4C0C
 	[NullableContext(1)]
 	private PlotOptionItem[] GetDisplayOptionItems()
 	{
@@ -1575,13 +1578,13 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return list.ToArray();
 	}
 
-	// Token: 0x06015F87 RID: 89991 RVA: 0x0058BA30 File Offset: 0x00589C30
+	// Token: 0x0601398D RID: 80269 RVA: 0x005B6A54 File Offset: 0x005B4C54
 	private void HideAll(bool isHidden)
 	{
 		this.RootItem.SetUIActive(!isHidden);
 	}
 
-	// Token: 0x06015F88 RID: 89992 RVA: 0x0058BA44 File Offset: 0x00589C44
+	// Token: 0x0601398E RID: 80270 RVA: 0x005B6A68 File Offset: 0x005B4C68
 	private void ClearPlotSubtitle()
 	{
 		this.CheckAndCloseTransitionView();
@@ -1603,7 +1606,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.RemoveAutoPlayDelay();
 	}
 
-	// Token: 0x06015F89 RID: 89993 RVA: 0x0058BAA8 File Offset: 0x00589CA8
+	// Token: 0x0601398F RID: 80271 RVA: 0x005B6ACC File Offset: 0x005B4CCC
 	private void HandleSubtitleAudio(string audioId, float audioDelay, float audioTransitionDuration)
 	{
 		if (StringUtils.IsEmpty(audioId))
@@ -1620,7 +1623,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.CheckAndPlayAudio();
 	}
 
-	// Token: 0x06015F8A RID: 89994 RVA: 0x0058BB04 File Offset: 0x00589D04
+	// Token: 0x06013990 RID: 80272 RVA: 0x005B6B28 File Offset: 0x005B4D28
 	private void HandleSkipWaiting()
 	{
 		this.StopWaitingSkipTimer();
@@ -1653,7 +1656,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}, (float)num, null, null, true, 1f);
 	}
 
-	// Token: 0x06015F8B RID: 89995 RVA: 0x0058BBC3 File Offset: 0x00589DC3
+	// Token: 0x06013991 RID: 80273 RVA: 0x005B6BE7 File Offset: 0x005B4DE7
 	private void StopWaitingSkipTimer()
 	{
 		if (this.WaitingSkipTimerId != null)
@@ -1666,7 +1669,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F8C RID: 89996 RVA: 0x0058BBF8 File Offset: 0x00589DF8
+	// Token: 0x06013992 RID: 80274 RVA: 0x005B6C1C File Offset: 0x005B4E1C
 	private void CheckAndPlayAudio()
 	{
 		if (this.AudioConfig == null)
@@ -1689,7 +1692,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}, (float)num, null, null, true, 1f);
 	}
 
-	// Token: 0x06015F8D RID: 89997 RVA: 0x0058BC60 File Offset: 0x00589E60
+	// Token: 0x06013993 RID: 80275 RVA: 0x005B6C84 File Offset: 0x005B4E84
 	private void PlayAudioNow()
 	{
 		ExternalSourceSetting? config = ConfigExternalSourceSettingById.GetConfig(this.AudioConfig.Value.ExternalSourceSetting, true);
@@ -1699,7 +1702,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		AudioController.Instance.PostEventByExternalSourcesByUi(config.Value.SubtitleEvent, externalSourcesMediaName, config.Value.SubtitleSrc, this.NormalPlayEventResult, null, new int?(8), this.AudioDelegate.AudioDelegate);
 	}
 
-	// Token: 0x06015F8E RID: 89998 RVA: 0x0058BD2A File Offset: 0x00589F2A
+	// Token: 0x06013994 RID: 80276 RVA: 0x005B6D4E File Offset: 0x005B4F4E
 	private void CallBackDuration(float duration)
 	{
 		this.Duration += duration;
@@ -1709,7 +1712,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}, this.Duration, null, null, true, 1f);
 	}
 
-	// Token: 0x06015F8F RID: 89999 RVA: 0x0058BD64 File Offset: 0x00589F64
+	// Token: 0x06013995 RID: 80277 RVA: 0x005B6D88 File Offset: 0x005B4F88
 	private void OnAudioEnd()
 	{
 		this.AudioPlayTimer = null;
@@ -1733,7 +1736,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F90 RID: 90000 RVA: 0x0058BE1B File Offset: 0x0058A01B
+	// Token: 0x06013996 RID: 80278 RVA: 0x005B6E3F File Offset: 0x005B503F
 	private void OnAutoPlayDelayEnd()
 	{
 		this.DelayAutoPlayTimer = null;
@@ -1743,7 +1746,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F91 RID: 90001 RVA: 0x0058BE38 File Offset: 0x0058A038
+	// Token: 0x06013997 RID: 80279 RVA: 0x005B6E5C File Offset: 0x005B505C
 	private void StopCurSubtitleAudio()
 	{
 		if (this.AudioConfig == null)
@@ -1760,13 +1763,13 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.AudioStartTime = 0.0;
 		this.Duration = 0f;
 		this.AudioDelegate.Disable();
-		AudioController.Instance.StopEvent(this.NormalPlayEventResult, true, new int?(500));
+		AudioController.Instance.StopEvent(this.NormalPlayEventResult, true, new int?(100));
 		this.RemoveAudioDelayTimer();
 		this.AudioConfig = null;
 		this.RemoveAutoPlayDelay();
 	}
 
-	// Token: 0x06015F92 RID: 90002 RVA: 0x0058BED0 File Offset: 0x0058A0D0
+	// Token: 0x06013998 RID: 80280 RVA: 0x005B6EF0 File Offset: 0x005B50F0
 	private float GetCurrentAudioRemainingTime()
 	{
 		if (this.AudioConfig == null)
@@ -1796,7 +1799,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return 0f;
 	}
 
-	// Token: 0x06015F93 RID: 90003 RVA: 0x0058BFA2 File Offset: 0x0058A1A2
+	// Token: 0x06013999 RID: 80281 RVA: 0x005B6FC2 File Offset: 0x005B51C2
 	private void RemoveAudioDelayTimer()
 	{
 		if (this.AudioDelayTimerId != null)
@@ -1809,7 +1812,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F94 RID: 90004 RVA: 0x0058BFD6 File Offset: 0x0058A1D6
+	// Token: 0x0601399A RID: 80282 RVA: 0x005B6FF6 File Offset: 0x005B51F6
 	private void RemoveAutoPlayDelay()
 	{
 		if (this.DelayAutoPlayTimer != null)
@@ -1822,7 +1825,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015F95 RID: 90005 RVA: 0x0058C00C File Offset: 0x0058A20C
+	// Token: 0x0601399B RID: 80283 RVA: 0x005B702C File Offset: 0x005B522C
 	private void HandleNormalSubtitle()
 	{
 		ITalkItem currentConfig = this.SubtitleInfo.CurrentConfig;
@@ -1973,7 +1976,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.UpdatePlotTextOffset();
 	}
 
-	// Token: 0x06015F96 RID: 90006 RVA: 0x0058C3E4 File Offset: 0x0058A5E4
+	// Token: 0x0601399C RID: 80284 RVA: 0x005B7404 File Offset: 0x005B5604
 	private void HandlePlotContentScroll()
 	{
 		this.ScrollStartTimer = null;
@@ -2013,7 +2016,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}, num3, null, null, true, 1f);
 	}
 
-	// Token: 0x06015F97 RID: 90007 RVA: 0x0058C4F9 File Offset: 0x0058A6F9
+	// Token: 0x0601399D RID: 80285 RVA: 0x005B7519 File Offset: 0x005B5719
 	private float GetTextAnimSpeed()
 	{
 		if (this.Level.GetValueOrDefault() == EPlotLevel.LevelC)
@@ -2023,7 +2026,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return PlotModel.Instance.PlotGlobalConfig.TextAnimSpeedLevelD;
 	}
 
-	// Token: 0x06015F98 RID: 90008 RVA: 0x0058C528 File Offset: 0x0058A728
+	// Token: 0x0601399E RID: 80286 RVA: 0x005B7548 File Offset: 0x005B5748
 	private void StartAutoScrollAnim()
 	{
 		this.CurrentAnimTime = 0f;
@@ -2044,7 +2047,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}, (float)intervalTime, 1f, null, null, true);
 	}
 
-	// Token: 0x06015F99 RID: 90009 RVA: 0x0058C580 File Offset: 0x0058A780
+	// Token: 0x0601399F RID: 80287 RVA: 0x005B75A0 File Offset: 0x005B57A0
 	private void RemoveTextAnimTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.TextScrollAnimTimer))
@@ -2059,7 +2062,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.DelayTextScrollAnimTimer = null;
 	}
 
-	// Token: 0x06015F9A RID: 90010 RVA: 0x0058C5E4 File Offset: 0x0058A7E4
+	// Token: 0x060139A0 RID: 80288 RVA: 0x005B7604 File Offset: 0x005B5804
 	[NullableContext(1)]
 	private unsafe void UpdateSeqSubtitle(PlotSubtitleConfig inPlotSubtitleInfo)
 	{
@@ -2089,7 +2092,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.SetBackgroundImage(backgroundConfig, new Action(this.ShowSeqSubtitleInternal)).Forget();
 	}
 
-	// Token: 0x06015F9B RID: 90011 RVA: 0x0058C6BE File Offset: 0x0058A8BE
+	// Token: 0x060139A1 RID: 80289 RVA: 0x005B76DE File Offset: 0x005B58DE
 	private void ShowSeqSubtitleInternal()
 	{
 		this.SetSubtitleKey();
@@ -2099,7 +2102,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.PlaySubtitle();
 	}
 
-	// Token: 0x06015F9C RID: 90012 RVA: 0x0058C6E0 File Offset: 0x0058A8E0
+	// Token: 0x060139A2 RID: 80290 RVA: 0x005B7700 File Offset: 0x005B5900
 	private void HandleAkEvent(bool isStart)
 	{
 		if (isStart)
@@ -2112,7 +2115,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.LastEndEvent = null;
 	}
 
-	// Token: 0x06015F9D RID: 90013 RVA: 0x0058C730 File Offset: 0x0058A930
+	// Token: 0x060139A3 RID: 80291 RVA: 0x005B7750 File Offset: 0x005B5950
 	private void HideSeqSubtitleInternal()
 	{
 		if (this.SubtitleLevel.GetValueOrDefault() == EPlotLevel.LevelB && this.NeedSwitchTalker())
@@ -2124,7 +2127,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.HideOption();
 	}
 
-	// Token: 0x06015F9E RID: 90014 RVA: 0x0058C764 File Offset: 0x0058A964
+	// Token: 0x060139A4 RID: 80292 RVA: 0x005B7784 File Offset: 0x005B5984
 	private bool NeedSwitchTalker()
 	{
 		ITalkItem nextTalkItem = FlowController.Instance.FlowSequence.GetNextTalkItem();
@@ -2138,7 +2141,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return !(num.GetValueOrDefault() == num2.GetValueOrDefault() & num != null == (num2 != null));
 	}
 
-	// Token: 0x06015F9F RID: 90015 RVA: 0x0058C7F0 File Offset: 0x0058A9F0
+	// Token: 0x060139A5 RID: 80293 RVA: 0x005B7810 File Offset: 0x005B5A10
 	private void ShowTransitionView()
 	{
 		string text = null;
@@ -2191,7 +2194,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		instance2.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x06015FA0 RID: 90016 RVA: 0x0058C8F8 File Offset: 0x0058AAF8
+	// Token: 0x060139A6 RID: 80294 RVA: 0x005B7918 File Offset: 0x005B5B18
 	private bool CheckAndCloseTransitionView()
 	{
 		if (this.SubtitleInfo.HasSubtitle() && this.SubtitleInfo.CurrentConfig.Type.GetValueOrDefault() == ETalkItemType.CenterText)
@@ -2203,7 +2206,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return false;
 	}
 
-	// Token: 0x06015FA1 RID: 90017 RVA: 0x0058C952 File Offset: 0x0058AB52
+	// Token: 0x060139A7 RID: 80295 RVA: 0x005B7972 File Offset: 0x005B5B72
 	private void CloseTransitionView()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.PlotTransitionViewPop))
@@ -2212,7 +2215,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FA2 RID: 90018 RVA: 0x0058C975 File Offset: 0x0058AB75
+	// Token: 0x060139A8 RID: 80296 RVA: 0x005B7995 File Offset: 0x005B5B95
 	private void HandleSelectedPlotOption(int inOptionIndex)
 	{
 		bool skip = this.SubtitleInfo.Skip;
@@ -2229,7 +2232,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FA3 RID: 90019 RVA: 0x0058C9AC File Offset: 0x0058ABAC
+	// Token: 0x060139A9 RID: 80297 RVA: 0x005B79CC File Offset: 0x005B5BCC
 	[NullableContext(1)]
 	private void OnInputAnyKey(bool bPress, FKey key)
 	{
@@ -2251,7 +2254,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.MuteAutoPlay(false);
 	}
 
-	// Token: 0x06015FA4 RID: 90020 RVA: 0x0058C9FC File Offset: 0x0058ABFC
+	// Token: 0x060139AA RID: 80298 RVA: 0x005B7A1C File Offset: 0x005B5C1C
 	[NullableContext(1)]
 	private void OnTouchPlotVisible(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 	{
@@ -2272,7 +2275,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.ShowUiExceptPhoto();
 	}
 
-	// Token: 0x06015FA5 RID: 90021 RVA: 0x0058CA4C File Offset: 0x0058AC4C
+	// Token: 0x060139AB RID: 80299 RVA: 0x005B7A6C File Offset: 0x005B5C6C
 	private void HandleSeqSubtitleEnd(int id, bool isSkip)
 	{
 		this.SubtitleInfo.StartFinish = true;
@@ -2326,7 +2329,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FA6 RID: 90022 RVA: 0x0058CBAA File Offset: 0x0058ADAA
+	// Token: 0x060139AC RID: 80300 RVA: 0x005B7BCA File Offset: 0x005B5DCA
 	private void HandleSubSequenceStop()
 	{
 		if (this.SubtitleInfo.HasSubtitle())
@@ -2338,7 +2341,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FA7 RID: 90023 RVA: 0x0058CBD4 File Offset: 0x0058ADD4
+	// Token: 0x060139AD RID: 80301 RVA: 0x005B7BF4 File Offset: 0x005B5DF4
 	[NullableContext(1)]
 	private void HandleIndependentSeqAudio(bool isShow, string audioKey, float audioTransitionDuration)
 	{
@@ -2361,20 +2364,20 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		AudioController.Instance.PostEventByExternalSourcesByUi(config2.Value.SubtitleEvent, externalSourcesMediaName, config2.Value.SubtitleSrc, this.IndependentPlayEventResult, null, new int?(0), null);
 	}
 
-	// Token: 0x06015FA8 RID: 90024 RVA: 0x0058CC88 File Offset: 0x0058AE88
+	// Token: 0x060139AE RID: 80302 RVA: 0x005B7CA8 File Offset: 0x005B5EA8
 	private void StopIndependentAudio()
 	{
 		AudioController.Instance.StopEvent(this.IndependentPlayEventResult, true, null);
 	}
 
-	// Token: 0x06015FA9 RID: 90025 RVA: 0x0058CCAF File Offset: 0x0058AEAF
+	// Token: 0x060139AF RID: 80303 RVA: 0x005B7CCF File Offset: 0x005B5ECF
 	private void JumpSequence()
 	{
 		this.SubtitleInfo.Skip = true;
 		SequenceController.Instance.JumpToNextSubtitleOrChildSeq();
 	}
 
-	// Token: 0x06015FAA RID: 90026 RVA: 0x0058CCC7 File Offset: 0x0058AEC7
+	// Token: 0x060139B0 RID: 80304 RVA: 0x005B7CE7 File Offset: 0x005B5EE7
 	[NullableContext(1)]
 	private void PauseSequence(string reason = "Subtitle")
 	{
@@ -2382,7 +2385,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		SequenceController.Instance.PauseSequence(reason);
 	}
 
-	// Token: 0x06015FAB RID: 90027 RVA: 0x0058CCDC File Offset: 0x0058AEDC
+	// Token: 0x060139B1 RID: 80305 RVA: 0x005B7CFC File Offset: 0x005B5EFC
 	[NullableContext(1)]
 	private void ResumeSequence(string reason = "Subtitle")
 	{
@@ -2391,7 +2394,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.HideSeqSubtitleInternal();
 	}
 
-	// Token: 0x06015FAC RID: 90028 RVA: 0x0058CD0C File Offset: 0x0058AF0C
+	// Token: 0x060139B2 RID: 80306 RVA: 0x005B7D2C File Offset: 0x005B5F2C
 	private void PlayAkEvent(IPostAkEventType config)
 	{
 		if (config == null)
@@ -2454,13 +2457,13 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FAD RID: 90029 RVA: 0x0058CE68 File Offset: 0x0058B068
+	// Token: 0x060139B3 RID: 80307 RVA: 0x005B7E88 File Offset: 0x005B6088
 	private void SetSubtitleKey()
 	{
 		this.SubtitleKey = this.SubtitleInfo.CurrentConfig.TidTalk;
 	}
 
-	// Token: 0x06015FAE RID: 90030 RVA: 0x0058CE80 File Offset: 0x0058B080
+	// Token: 0x060139B4 RID: 80308 RVA: 0x005B7EA0 File Offset: 0x005B60A0
 	private void SetOptions()
 	{
 		this.OptionKeys.Clear();
@@ -2475,14 +2478,14 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FAF RID: 90031 RVA: 0x0058CF50 File Offset: 0x0058B150
+	// Token: 0x060139B5 RID: 80309 RVA: 0x005B7F70 File Offset: 0x005B6170
 	private void SetAudioKeys()
 	{
 		ITalkItem currentConfig = this.SubtitleInfo.CurrentConfig;
 		this.AudioKey = ((currentConfig != null && currentConfig.PlayVoice.GetValueOrDefault()) ? this.SubtitleInfo.CurrentConfig.TidTalk : null);
 	}
 
-	// Token: 0x06015FB0 RID: 90032 RVA: 0x0058CF98 File Offset: 0x0058B198
+	// Token: 0x060139B6 RID: 80310 RVA: 0x005B7FB8 File Offset: 0x005B61B8
 	private void ClearOptions()
 	{
 		this.CurOption.Clear();
@@ -2500,7 +2503,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.AutoSelectOptionComponent.Clear();
 	}
 
-	// Token: 0x06015FB1 RID: 90033 RVA: 0x0058CFF0 File Offset: 0x0058B1F0
+	// Token: 0x060139B7 RID: 80311 RVA: 0x005B8010 File Offset: 0x005B6210
 	public void SetOptionsShow(bool value)
 	{
 		if (value == this.IsOptionShow)
@@ -2535,7 +2538,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.BlockOptionTimer = null;
 	}
 
-	// Token: 0x06015FB2 RID: 90034 RVA: 0x0058D0CE File Offset: 0x0058B2CE
+	// Token: 0x060139B8 RID: 80312 RVA: 0x005B80EE File Offset: 0x005B62EE
 	public string ParseSubtitle(string inText)
 	{
 		if (string.IsNullOrEmpty(inText))
@@ -2545,7 +2548,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return PlotModel.Instance.PlotTextReplacer.Replace(inText, false);
 	}
 
-	// Token: 0x06015FB3 RID: 90035 RVA: 0x0058D0F0 File Offset: 0x0058B2F0
+	// Token: 0x060139B9 RID: 80313 RVA: 0x005B8110 File Offset: 0x005B6310
 	private bool IsCurSubtitleAutoPlay()
 	{
 		if (this.SubtitleInfo.HasSubtitle() && this.SubtitleInfo.CurrentConfig.Type.GetValueOrDefault() == ETalkItemType.CenterText)
@@ -2557,7 +2560,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return (subtitleLevel.GetValueOrDefault() == eplotLevel & subtitleLevel != null) || PlotModel.Instance.PlotConfig.AutoPlayState > EAutoPlayState.Manual;
 	}
 
-	// Token: 0x06015FB4 RID: 90036 RVA: 0x0058D158 File Offset: 0x0058B358
+	// Token: 0x060139BA RID: 80314 RVA: 0x005B8178 File Offset: 0x005B6378
 	public void AddScreenEffectPlotRoot()
 	{
 		BP_ScreenEffectSystem_C instance = ScreenEffectSystem.GetInstance();
@@ -2576,7 +2579,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FB5 RID: 90037 RVA: 0x0058D1BC File Offset: 0x0058B3BC
+	// Token: 0x060139BB RID: 80315 RVA: 0x005B81DC File Offset: 0x005B63DC
 	public void RemoveScreenEffectPlotRoot()
 	{
 		AUIContainerActor screenEffectPlotRoot = this.ScreenEffectPlotRoot;
@@ -2587,14 +2590,14 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.ScreenEffectPlotRoot = null;
 	}
 
-	// Token: 0x06015FB6 RID: 90038 RVA: 0x0058D1E7 File Offset: 0x0058B3E7
+	// Token: 0x060139BC RID: 80316 RVA: 0x005B8207 File Offset: 0x005B6407
 	[NullableContext(1)]
 	public PlotOptionItem[] GetOptionList()
 	{
 		return this.OptionLayout.GetLayoutItemList().ToArray();
 	}
 
-	// Token: 0x06015FB7 RID: 90039 RVA: 0x0058D1FC File Offset: 0x0058B3FC
+	// Token: 0x060139BD RID: 80317 RVA: 0x005B821C File Offset: 0x005B641C
 	protected override void OnTick(float delta)
 	{
 		if (this.TickPhotoFade)
@@ -2607,46 +2610,19 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 			this.BgWidgetMiddle.SetAlpha(this.EventObject.Icon遮罩透明度);
 		}
 		this.AutoSelectOptionComponent.OnTick(delta, this.MuteTimeLimitedOption);
-		if (!Info.Instance.IsBuildShipping)
-		{
-			this.TickDebugInfo();
-		}
 	}
 
-	// Token: 0x06015FB8 RID: 90040 RVA: 0x0058D270 File Offset: 0x0058B470
+	// Token: 0x060139BE RID: 80318 RVA: 0x005B827E File Offset: 0x005B647E
 	public void SimulateClickSubtitle()
 	{
-		if (Info.Instance.IsBuildShipping)
-		{
-			return;
-		}
-		this.OnBtnSubtitleSkipClick();
 	}
 
-	// Token: 0x06015FB9 RID: 90041 RVA: 0x0058D288 File Offset: 0x0058B488
+	// Token: 0x060139BF RID: 80319 RVA: 0x005B8280 File Offset: 0x005B6480
 	public void SimulateClickOption()
 	{
-		if (Info.Instance.IsBuildShipping)
-		{
-			return;
-		}
-		if (!this.SubtitleInfo.ShowOption)
-		{
-			return;
-		}
-		int recommendedOption = FlowController.Instance.GetRecommendedOption(null);
-		PlotOptionItem[] optionList = this.GetOptionList();
-		if (recommendedOption < optionList.Length)
-		{
-			PlotOptionItem plotOptionItem = optionList[recommendedOption];
-			if (plotOptionItem != null)
-			{
-				plotOptionItem.OptionClick(new bool?(true));
-			}
-		}
 	}
 
-	// Token: 0x06015FBA RID: 90042 RVA: 0x0058D2DC File Offset: 0x0058B4DC
+	// Token: 0x060139C0 RID: 80320 RVA: 0x005B8290 File Offset: 0x005B6490
 	private UniTask SetBackgroundImage(ITalkBackground backgroundConfig, Action callback = null)
 	{
 		PlotSubtitleView.<SetBackgroundImage>d__205 <SetBackgroundImage>d__;
@@ -2659,7 +2635,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <SetBackgroundImage>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FBB RID: 90043 RVA: 0x0058D330 File Offset: 0x0058B530
+	// Token: 0x060139C1 RID: 80321 RVA: 0x005B82E4 File Offset: 0x005B64E4
 	private UniTask OnPlotViewBgFadePhoto(bool isFadeIn, bool isFull, string path = null, Action callback = null)
 	{
 		PlotSubtitleView.<OnPlotViewBgFadePhoto>d__206 <OnPlotViewBgFadePhoto>d__;
@@ -2674,19 +2650,19 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <OnPlotViewBgFadePhoto>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FBC RID: 90044 RVA: 0x0058D394 File Offset: 0x0058B594
+	// Token: 0x060139C2 RID: 80322 RVA: 0x005B8348 File Offset: 0x005B6548
 	private void AddTickPhoto()
 	{
 		this.TickPhotoFade = true;
 	}
 
-	// Token: 0x06015FBD RID: 90045 RVA: 0x0058D39D File Offset: 0x0058B59D
+	// Token: 0x060139C3 RID: 80323 RVA: 0x005B8351 File Offset: 0x005B6551
 	private void RemoveTickPhoto()
 	{
 		this.TickPhotoFade = false;
 	}
 
-	// Token: 0x06015FBE RID: 90046 RVA: 0x0058D3A8 File Offset: 0x0058B5A8
+	// Token: 0x060139C4 RID: 80324 RVA: 0x005B835C File Offset: 0x005B655C
 	private float GetCurrentPercentPhoto()
 	{
 		float rangePct = MathUtils.Instance.GetRangePct(0f, 200f, this.FadeTimePhoto);
@@ -2705,7 +2681,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return rangePct;
 	}
 
-	// Token: 0x06015FBF RID: 90047 RVA: 0x0058D41C File Offset: 0x0058B61C
+	// Token: 0x060139C5 RID: 80325 RVA: 0x005B83D0 File Offset: 0x005B65D0
 	private float GetCurrentPercentPhotoMiddle()
 	{
 		float rangePct = MathUtils.Instance.GetRangePct(0f, 200f, this.FadeTimePhoto);
@@ -2717,7 +2693,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return rangePct;
 	}
 
-	// Token: 0x06015FC0 RID: 90048 RVA: 0x0058D474 File Offset: 0x0058B674
+	// Token: 0x060139C6 RID: 80326 RVA: 0x005B8428 File Offset: 0x005B6628
 	private void OnFadeTickPhoto(float deltaTime)
 	{
 		if (this.FadeTimePhoto < 0f)
@@ -2767,7 +2743,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FC1 RID: 90049 RVA: 0x0058D558 File Offset: 0x0058B758
+	// Token: 0x060139C7 RID: 80327 RVA: 0x005B850C File Offset: 0x005B670C
 	private void OnCloseEventPhoto()
 	{
 		if (this.IsFullPhoto.GetValueOrDefault())
@@ -2840,7 +2816,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		plotViewPhotoCallback(null);
 	}
 
-	// Token: 0x06015FC2 RID: 90050 RVA: 0x0058D76C File Offset: 0x0058B96C
+	// Token: 0x060139C8 RID: 80328 RVA: 0x005B8720 File Offset: 0x005B6920
 	public UniTask FadeInBgPhoto(string path = null, Action callback = null)
 	{
 		PlotSubtitleView.<FadeInBgPhoto>d__213 <FadeInBgPhoto>d__;
@@ -2853,7 +2829,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <FadeInBgPhoto>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FC3 RID: 90051 RVA: 0x0058D7C0 File Offset: 0x0058B9C0
+	// Token: 0x060139C9 RID: 80329 RVA: 0x005B8774 File Offset: 0x005B6974
 	public UniTask FadeOutBgPhoto(Action callback = null)
 	{
 		PlotSubtitleView.<FadeOutBgPhoto>d__214 <FadeOutBgPhoto>d__;
@@ -2865,7 +2841,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <FadeOutBgPhoto>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FC4 RID: 90052 RVA: 0x0058D80C File Offset: 0x0058BA0C
+	// Token: 0x060139CA RID: 80330 RVA: 0x005B87C0 File Offset: 0x005B69C0
 	public UniTask FadeInBgPhotoMiddle(string path = null, Action callback = null)
 	{
 		PlotSubtitleView.<FadeInBgPhotoMiddle>d__215 <FadeInBgPhotoMiddle>d__;
@@ -2878,7 +2854,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <FadeInBgPhotoMiddle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FC5 RID: 90053 RVA: 0x0058D860 File Offset: 0x0058BA60
+	// Token: 0x060139CB RID: 80331 RVA: 0x005B8814 File Offset: 0x005B6A14
 	public UniTask FadeOutBgPhotoMiddle(Action callback = null)
 	{
 		PlotSubtitleView.<FadeOutBgPhotoMiddle>d__216 <FadeOutBgPhotoMiddle>d__;
@@ -2890,7 +2866,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <FadeOutBgPhotoMiddle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FC6 RID: 90054 RVA: 0x0058D8AC File Offset: 0x0058BAAC
+	// Token: 0x060139CC RID: 80332 RVA: 0x005B8860 File Offset: 0x005B6A60
 	public UniTask RemovePhotoAtOnce()
 	{
 		PlotSubtitleView.<RemovePhotoAtOnce>d__217 <RemovePhotoAtOnce>d__;
@@ -2901,7 +2877,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <RemovePhotoAtOnce>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FC7 RID: 90055 RVA: 0x0058D8EF File Offset: 0x0058BAEF
+	// Token: 0x060139CD RID: 80333 RVA: 0x005B88A3 File Offset: 0x005B6AA3
 	[NullableContext(1)]
 	private UUIItem GetSonUiParentForBackgroundUi(bool useFullscreenAdaptAnchor = false)
 	{
@@ -2912,7 +2888,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return this.FullscreenAdaptAnchor;
 	}
 
-	// Token: 0x06015FC8 RID: 90056 RVA: 0x0058D904 File Offset: 0x0058BB04
+	// Token: 0x060139CE RID: 80334 RVA: 0x005B88B8 File Offset: 0x005B6AB8
 	[NullableContext(1)]
 	public UniTask PreloadOpenBackgroundUi(TArray<string> uiNameArray, bool useFullscreenAdaptAnchor = false)
 	{
@@ -2926,7 +2902,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <PreloadOpenBackgroundUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FC9 RID: 90057 RVA: 0x0058D958 File Offset: 0x0058BB58
+	// Token: 0x060139CF RID: 80335 RVA: 0x005B890C File Offset: 0x005B6B0C
 	[NullableContext(1)]
 	public UniTask PrePreloadOpenBackgroundUi(List<string> uiNameArray, bool useFullscreenAdaptAnchor = false)
 	{
@@ -2940,7 +2916,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <PrePreloadOpenBackgroundUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FCA RID: 90058 RVA: 0x0058D9AC File Offset: 0x0058BBAC
+	// Token: 0x060139D0 RID: 80336 RVA: 0x005B8960 File Offset: 0x005B6B60
 	[NullableContext(1)]
 	public UniTask OpenBackgroundUi(string uiName, string spineName, bool needLoop = true, bool useFullscreenAdaptAnchor = false)
 	{
@@ -2956,7 +2932,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <OpenBackgroundUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FCB RID: 90059 RVA: 0x0058DA10 File Offset: 0x0058BC10
+	// Token: 0x060139D1 RID: 80337 RVA: 0x005B89C4 File Offset: 0x005B6BC4
 	[NullableContext(1)]
 	public UniTask OpenBackgroundUiForSeekSpine(string uiName, TArray<SpineThingsInfo> spineArray, bool useFullscreenAdaptAnchor = false)
 	{
@@ -2971,7 +2947,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <OpenBackgroundUiForSeekSpine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FCC RID: 90060 RVA: 0x0058DA6C File Offset: 0x0058BC6C
+	// Token: 0x060139D2 RID: 80338 RVA: 0x005B8A20 File Offset: 0x005B6C20
 	[NullableContext(1)]
 	public UniTask PlayUiLevelSeq(string seqName)
 	{
@@ -2984,7 +2960,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <PlayUiLevelSeq>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FCD RID: 90061 RVA: 0x0058DAB8 File Offset: 0x0058BCB8
+	// Token: 0x060139D3 RID: 80339 RVA: 0x005B8A6C File Offset: 0x005B6C6C
 	public UniTask CloseBackgroundUiThis()
 	{
 		PlotSubtitleView.<CloseBackgroundUiThis>d__224 <CloseBackgroundUiThis>d__;
@@ -2995,7 +2971,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <CloseBackgroundUiThis>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FCE RID: 90062 RVA: 0x0058DAFC File Offset: 0x0058BCFC
+	// Token: 0x060139D4 RID: 80340 RVA: 0x005B8AB0 File Offset: 0x005B6CB0
 	[NullableContext(1)]
 	public UniTask CloseWhichBackgroundUi(PlotChildView sonUi)
 	{
@@ -3008,7 +2984,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return <CloseWhichBackgroundUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015FCF RID: 90063 RVA: 0x0058DB48 File Offset: 0x0058BD48
+	// Token: 0x060139D5 RID: 80341 RVA: 0x005B8AFC File Offset: 0x005B6CFC
 	public void CloseSpineAnimation(string str, float blendOutTime = 0f)
 	{
 		if (string.IsNullOrEmpty(str))
@@ -3023,7 +2999,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.SonUiInclude.CloseSpineAnimation(str, blendOutTime);
 	}
 
-	// Token: 0x06015FD0 RID: 90064 RVA: 0x0058DB90 File Offset: 0x0058BD90
+	// Token: 0x060139D6 RID: 80342 RVA: 0x005B8B44 File Offset: 0x005B6D44
 	public bool PlaySonUiSpine(string spineName, bool needLoop = true, bool freeze = false, float duration = 0f)
 	{
 		if (string.IsNullOrEmpty(spineName))
@@ -3049,7 +3025,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return this.SonUiInclude.PlaySpineAnimation(spineName, needLoop, freeze, duration);
 	}
 
-	// Token: 0x06015FD1 RID: 90065 RVA: 0x0058DC38 File Offset: 0x0058BE38
+	// Token: 0x060139D7 RID: 80343 RVA: 0x005B8BEC File Offset: 0x005B6DEC
 	[NullableContext(1)]
 	public void PlaySonUiSpineInArray(TArray<SpineThingsInfo> spineArray)
 	{
@@ -3081,7 +3057,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FD2 RID: 90066 RVA: 0x0058DD1F File Offset: 0x0058BF1F
+	// Token: 0x060139D8 RID: 80344 RVA: 0x005B8CD3 File Offset: 0x005B6ED3
 	public void UpdateSpineForQte(float percentage)
 	{
 		if (this.SonUiInclude == null)
@@ -3091,7 +3067,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.SonUiInclude.UpdateFrozenSpine(percentage);
 	}
 
-	// Token: 0x06015FD3 RID: 90067 RVA: 0x0058DD36 File Offset: 0x0058BF36
+	// Token: 0x060139D9 RID: 80345 RVA: 0x005B8CEA File Offset: 0x005B6EEA
 	[NullableContext(1)]
 	public void UpdateSpineForQteByName(string spineName, float percentage)
 	{
@@ -3102,7 +3078,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		this.SonUiInclude.UpdateFrozenSpineByName(spineName, percentage);
 	}
 
-	// Token: 0x06015FD4 RID: 90068 RVA: 0x0058DD50 File Offset: 0x0058BF50
+	// Token: 0x060139DA RID: 80346 RVA: 0x005B8D04 File Offset: 0x005B6F04
 	public void ManualUpdateNiagara([Nullable(new byte[]
 	{
 		2,
@@ -3125,7 +3101,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		sonUiInclude.ManualUpdateNiagara(niagaraParamNames, value);
 	}
 
-	// Token: 0x06015FD5 RID: 90069 RVA: 0x0058DDA0 File Offset: 0x0058BFA0
+	// Token: 0x060139DB RID: 80347 RVA: 0x005B8D54 File Offset: 0x005B6F54
 	[NullableContext(1)]
 	public void RestoreFreezeSpine(string spineName, bool isLoop = false)
 	{
@@ -3141,7 +3117,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		sonUiInclude.RestoreFreezeSpine(spineName, isLoop);
 	}
 
-	// Token: 0x06015FD6 RID: 90070 RVA: 0x0058DDE4 File Offset: 0x0058BFE4
+	// Token: 0x060139DC RID: 80348 RVA: 0x005B8D98 File Offset: 0x005B6F98
 	public bool RegisterCallback([Nullable(new byte[]
 	{
 		2,
@@ -3157,7 +3133,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return true;
 	}
 
-	// Token: 0x06015FD7 RID: 90071 RVA: 0x0058DE24 File Offset: 0x0058C024
+	// Token: 0x060139DD RID: 80349 RVA: 0x005B8DD8 File Offset: 0x005B6FD8
 	private void DoSpineQueue()
 	{
 		if (this.SpineQueue == null || this.SonUiInclude == null)
@@ -3166,8 +3142,8 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 		while (this.SpineQueue.Size > 0)
 		{
-			SpineQueueInfo spineQueueInfo = this.SpineQueue.First<SpineQueueInfo>();
-			if (spineQueueInfo == null)
+			SpineQueueInfo front = this.SpineQueue.Front;
+			if (front == null)
 			{
 				global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.JYS, "Ui预览图:Queue播放但Spine队列异常", default(ReadOnlySpan<ValueTuple<string, object>>));
 				return;
@@ -3176,14 +3152,14 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 			ELogModule module = ELogModule.Plot;
 			ELogAuthor author = ELogAuthor.JYS;
 			string message = "Ui预览图:Queue播放";
-			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("name", spineQueueInfo);
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("name", front);
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-			this.SonUiInclude.PlaySpineAnimation(spineQueueInfo.Name, spineQueueInfo.NeedLoop.Value, spineQueueInfo.Freeze, spineQueueInfo.MixDuration);
+			this.SonUiInclude.PlaySpineAnimation(front.Name, front.NeedLoop.Value, front.Freeze, front.MixDuration);
 			this.SpineQueue.Pop();
 		}
 	}
 
-	// Token: 0x06015FD8 RID: 90072 RVA: 0x0058DEE0 File Offset: 0x0058C0E0
+	// Token: 0x060139DE RID: 80350 RVA: 0x005B8E94 File Offset: 0x005B7094
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	private unsafe PlotChildView FindSonViewInMap(string str)
@@ -3208,7 +3184,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		return null;
 	}
 
-	// Token: 0x06015FD9 RID: 90073 RVA: 0x0058DF60 File Offset: 0x0058C160
+	// Token: 0x060139DF RID: 80351 RVA: 0x005B8F14 File Offset: 0x005B7114
 	[NullableContext(1)]
 	private unsafe void DeleteSonViewInMap(PlotChildView childView)
 	{
@@ -3239,7 +3215,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FDA RID: 90074 RVA: 0x0058E044 File Offset: 0x0058C244
+	// Token: 0x060139E0 RID: 80352 RVA: 0x005B8FF8 File Offset: 0x005B71F8
 	[NullableContext(1)]
 	public void SetIconBySequence(bool bShow, UTexture2D texture, BP_KuroMasterSeqEvent_C obj)
 	{
@@ -3285,7 +3261,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		}
 	}
 
-	// Token: 0x06015FDB RID: 90075 RVA: 0x0058E0E4 File Offset: 0x0058C2E4
+	// Token: 0x060139E1 RID: 80353 RVA: 0x005B9098 File Offset: 0x005B7298
 	private void TickDebugInfo()
 	{
 		bool shouldShowDebugInfoOnView = PlotModel.Instance.ShouldShowDebugInfoOnView;
@@ -3303,71 +3279,71 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 		text.SetText(currentSequenceDebugInfo, true);
 	}
 
-	// Token: 0x0400A348 RID: 41800
+	// Token: 0x0400A732 RID: 42802
 	private string SubtitleKey = "";
 
-	// Token: 0x0400A349 RID: 41801
+	// Token: 0x0400A733 RID: 42803
 	[Nullable(1)]
 	public readonly List<string> OptionKeys = new List<string>();
 
-	// Token: 0x0400A34A RID: 41802
+	// Token: 0x0400A734 RID: 42804
 	[Nullable(1)]
 	public readonly List<int> OsList = new List<int>();
 
-	// Token: 0x0400A34B RID: 41803
+	// Token: 0x0400A735 RID: 42805
 	private string AudioKey = "";
 
-	// Token: 0x0400A34C RID: 41804
+	// Token: 0x0400A736 RID: 42806
 	private SubtitleInfo SubtitleInfo;
 
-	// Token: 0x0400A34D RID: 41805
+	// Token: 0x0400A737 RID: 42807
 	private ULGUIPlayTweenComponent SubtitleAnimation;
 
-	// Token: 0x0400A34E RID: 41806
+	// Token: 0x0400A738 RID: 42808
 	private UUIEffectTextAnimation SubtitleAnimDataComp;
 
-	// Token: 0x0400A34F RID: 41807
+	// Token: 0x0400A739 RID: 42809
 	private bool IsCurSubtitlePaused;
 
-	// Token: 0x0400A350 RID: 41808
+	// Token: 0x0400A73A RID: 42810
 	[Nullable(1)]
 	private readonly PlayResult NormalPlayEventResult = new PlayResult();
 
-	// Token: 0x0400A351 RID: 41809
+	// Token: 0x0400A73B RID: 42811
 	[Nullable(1)]
 	private readonly PlayResult IndependentPlayEventResult = new PlayResult();
 
-	// Token: 0x0400A352 RID: 41810
+	// Token: 0x0400A73C RID: 42812
 	private double AudioStartTime;
 
-	// Token: 0x0400A353 RID: 41811
+	// Token: 0x0400A73D RID: 42813
 	private float Duration;
 
-	// Token: 0x0400A354 RID: 41812
+	// Token: 0x0400A73E RID: 42814
 	private TimerHandle AudioDelayTimerId;
 
-	// Token: 0x0400A355 RID: 41813
+	// Token: 0x0400A73F RID: 42815
 	private PlotAudio? AudioConfig;
 
-	// Token: 0x0400A356 RID: 41814
+	// Token: 0x0400A740 RID: 42816
 	private UUIItem SkipSubtitleTipItem;
 
-	// Token: 0x0400A357 RID: 41815
+	// Token: 0x0400A741 RID: 42817
 	private UUIItem SkipSubtitleTipItemNew;
 
-	// Token: 0x0400A358 RID: 41816
+	// Token: 0x0400A742 RID: 42818
 	private float PlotTextInitialAnchorY;
 
-	// Token: 0x0400A359 RID: 41817
+	// Token: 0x0400A743 RID: 42819
 	private TimerHandle WaitingSkipTimerId;
 
-	// Token: 0x0400A35A RID: 41818
+	// Token: 0x0400A744 RID: 42820
 	public int HoverIndex;
 
-	// Token: 0x0400A35B RID: 41819
+	// Token: 0x0400A745 RID: 42821
 	private AUIContainerActor ScreenEffectPlotRoot;
 
-	// Token: 0x0400A35C RID: 41820
+	// Token: 0x0400A746 RID: 42822
 	[Nullable(new byte[]
 	{
 		2,
@@ -3376,40 +3352,40 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 	})]
 	private GenericLayout<PlotOptionItem, object> OptionLayout;
 
-	// Token: 0x0400A35D RID: 41821
+	// Token: 0x0400A747 RID: 42823
 	private bool IsOptionShow;
 
-	// Token: 0x0400A35E RID: 41822
+	// Token: 0x0400A748 RID: 42824
 	private PlotSkipComponent SkipComp;
 
-	// Token: 0x0400A35F RID: 41823
+	// Token: 0x0400A749 RID: 42825
 	private PlotReviewComponent ReviewComp;
 
-	// Token: 0x0400A360 RID: 41824
+	// Token: 0x0400A74A RID: 42826
 	private bool IsVisible = true;
 
-	// Token: 0x0400A361 RID: 41825
+	// Token: 0x0400A74B RID: 42827
 	private bool ImmersiveInputWakeState = true;
 
-	// Token: 0x0400A362 RID: 41826
+	// Token: 0x0400A74C RID: 42828
 	private bool? MainButtonsTweenShown;
 
-	// Token: 0x0400A363 RID: 41827
+	// Token: 0x0400A74D RID: 42829
 	private bool? SkipTweenShown;
 
-	// Token: 0x0400A364 RID: 41828
+	// Token: 0x0400A74E RID: 42830
 	private bool? ReviewTweenShown;
 
-	// Token: 0x0400A365 RID: 41829
+	// Token: 0x0400A74F RID: 42831
 	private bool PendingImmersiveSleep;
 
-	// Token: 0x0400A366 RID: 41830
+	// Token: 0x0400A750 RID: 42832
 	private TimerHandle PendingImmersiveSleepTimerId;
 
-	// Token: 0x0400A367 RID: 41831
+	// Token: 0x0400A751 RID: 42833
 	private TimerHandle SizeChangedTimerId;
 
-	// Token: 0x0400A368 RID: 41832
+	// Token: 0x0400A752 RID: 42834
 	[Nullable(new byte[]
 	{
 		2,
@@ -3418,88 +3394,88 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 	})]
 	private Dictionary<int, List<ULGUIPlayTweenComponent>> TweenAnimMap;
 
-	// Token: 0x0400A369 RID: 41833
+	// Token: 0x0400A753 RID: 42835
 	private PlotOptionItem SelectedPlotOptionItem;
 
-	// Token: 0x0400A36A RID: 41834
+	// Token: 0x0400A754 RID: 42836
 	private EPlotLevel? Level;
 
-	// Token: 0x0400A36B RID: 41835
+	// Token: 0x0400A755 RID: 42837
 	private EPlotLevel? SubtitleLevel;
 
-	// Token: 0x0400A36C RID: 41836
+	// Token: 0x0400A756 RID: 42838
 	[Nullable(1)]
 	public List<PlotOption> CurOption = new List<PlotOption>();
 
-	// Token: 0x0400A36D RID: 41837
+	// Token: 0x0400A757 RID: 42839
 	private float FadeTimePhoto;
 
-	// Token: 0x0400A36E RID: 41838
+	// Token: 0x0400A758 RID: 42840
 	private bool IsFadeInPhoto;
 
-	// Token: 0x0400A36F RID: 41839
+	// Token: 0x0400A759 RID: 42841
 	private bool TickPhotoFade;
 
-	// Token: 0x0400A370 RID: 41840
+	// Token: 0x0400A75A RID: 42842
 	private bool IsAlreadyHavePhoto;
 
-	// Token: 0x0400A371 RID: 41841
+	// Token: 0x0400A75B RID: 42843
 	private bool? IsFullPhoto;
 
-	// Token: 0x0400A372 RID: 41842
+	// Token: 0x0400A75C RID: 42844
 	private bool IsBlackBgShow;
 
-	// Token: 0x0400A373 RID: 41843
+	// Token: 0x0400A75D RID: 42845
 	private bool CanShowAutoButtonByPlotConfig = true;
 
-	// Token: 0x0400A374 RID: 41844
+	// Token: 0x0400A75E RID: 42846
 	private bool CanShowHideButtonByPlotConfig = true;
 
-	// Token: 0x0400A375 RID: 41845
+	// Token: 0x0400A75F RID: 42847
 	private bool CanShowReviewButtonByPlotConfig = true;
 
-	// Token: 0x0400A376 RID: 41846
+	// Token: 0x0400A760 RID: 42848
 	[Nullable(1)]
 	private readonly Dictionary<string, bool> DisableInteractSources = new Dictionary<string, bool>();
 
-	// Token: 0x0400A377 RID: 41847
+	// Token: 0x0400A761 RID: 42849
 	[Nullable(1)]
 	private readonly HashSet<string> DisableSkipSources = new HashSet<string>();
 
-	// Token: 0x0400A378 RID: 41848
+	// Token: 0x0400A762 RID: 42850
 	private UUITexture BgWidget;
 
-	// Token: 0x0400A379 RID: 41849
+	// Token: 0x0400A763 RID: 42851
 	private UUITexture BgWidgetFront;
 
-	// Token: 0x0400A37A RID: 41850
+	// Token: 0x0400A764 RID: 42852
 	private UUITexture WidgetMiddle;
 
-	// Token: 0x0400A37B RID: 41851
+	// Token: 0x0400A765 RID: 42853
 	private UUISprite BgWidgetMiddle;
 
-	// Token: 0x0400A37C RID: 41852
+	// Token: 0x0400A766 RID: 42854
 	private CustomPromise<bool> PlotFadeShowPromise;
 
-	// Token: 0x0400A37D RID: 41853
+	// Token: 0x0400A767 RID: 42855
 	private CustomPromise<bool> PlotFadeHidePromise;
 
-	// Token: 0x0400A37E RID: 41854
+	// Token: 0x0400A768 RID: 42856
 	private Action<ITalkItem> PlotViewPhotoCallback;
 
-	// Token: 0x0400A37F RID: 41855
+	// Token: 0x0400A769 RID: 42857
 	private ETalkBackgroundType? NowBackgroundConfig;
 
-	// Token: 0x0400A380 RID: 41856
+	// Token: 0x0400A76A RID: 42858
 	private UUIItem SonUi;
 
-	// Token: 0x0400A381 RID: 41857
+	// Token: 0x0400A76B RID: 42859
 	private UUIItem FullscreenAdaptAnchor;
 
-	// Token: 0x0400A382 RID: 41858
+	// Token: 0x0400A76C RID: 42860
 	public PlotChildView SonUiInclude;
 
-	// Token: 0x0400A383 RID: 41859
+	// Token: 0x0400A76D RID: 42861
 	[Nullable(new byte[]
 	{
 		2,
@@ -3508,10 +3484,10 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 	})]
 	private Dictionary<string, PlotChildView> SonUiIncludeMap;
 
-	// Token: 0x0400A384 RID: 41860
+	// Token: 0x0400A76E RID: 42862
 	private TimerHandle BlockOptionTimer;
 
-	// Token: 0x0400A385 RID: 41861
+	// Token: 0x0400A76F RID: 42863
 	[Nullable(new byte[]
 	{
 		2,
@@ -3519,7 +3495,7 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 	})]
 	private Queue<SpineQueueInfo> SpineQueue;
 
-	// Token: 0x0400A386 RID: 41862
+	// Token: 0x0400A770 RID: 42864
 	[Nullable(new byte[]
 	{
 		2,
@@ -3527,170 +3503,170 @@ public class PlotSubtitleView : UiTickViewBase, ISimulatePlot
 	})]
 	private Queue<PlotChildView> SonUiQueue;
 
-	// Token: 0x0400A387 RID: 41863
+	// Token: 0x0400A771 RID: 42865
 	private UUISliderComponent OptionLimitBar;
 
-	// Token: 0x0400A388 RID: 41864
+	// Token: 0x0400A772 RID: 42866
 	private UUISliderComponent AutoSelectTimeBar;
 
-	// Token: 0x0400A389 RID: 41865
+	// Token: 0x0400A773 RID: 42867
 	[Nullable(1)]
 	private readonly PlotAutoSelectOptionComponent AutoSelectOptionComponent = new PlotAutoSelectOptionComponent();
 
-	// Token: 0x0400A38A RID: 41866
+	// Token: 0x0400A774 RID: 42868
 	[Nullable(1)]
 	private readonly PlotAudioDelegate AudioDelegate = new PlotAudioDelegate();
 
-	// Token: 0x0400A38B RID: 41867
+	// Token: 0x0400A775 RID: 42869
 	private TimerHandle AudioPlayTimer;
 
-	// Token: 0x0400A38C RID: 41868
+	// Token: 0x0400A776 RID: 42870
 	private TimerHandle DelayAutoPlayTimer;
 
-	// Token: 0x0400A38D RID: 41869
+	// Token: 0x0400A777 RID: 42871
 	private float TextScrollViewPrefabHeight;
 
-	// Token: 0x0400A38E RID: 41870
+	// Token: 0x0400A778 RID: 42872
 	private TimerHandle ScrollStartTimer;
 
-	// Token: 0x0400A38F RID: 41871
+	// Token: 0x0400A779 RID: 42873
 	public bool HasChildViewPreloaded;
 
-	// Token: 0x0400A390 RID: 41872
+	// Token: 0x0400A77A RID: 42874
 	private bool MuteTimeLimitedOption;
 
-	// Token: 0x0400A391 RID: 41873
+	// Token: 0x0400A77B RID: 42875
 	private float ScrollTotalTime;
 
-	// Token: 0x0400A392 RID: 41874
+	// Token: 0x0400A77C RID: 42876
 	private float CurrentAnimTime;
 
-	// Token: 0x0400A393 RID: 41875
+	// Token: 0x0400A77D RID: 42877
 	private TimerHandle TextScrollAnimTimer;
 
-	// Token: 0x0400A394 RID: 41876
+	// Token: 0x0400A77E RID: 42878
 	private TimerHandle DelayTextScrollAnimTimer;
 
-	// Token: 0x0400A395 RID: 41877
+	// Token: 0x0400A77F RID: 42879
 	private IPostAkEventType LastEndEvent;
 
-	// Token: 0x0400A396 RID: 41878
+	// Token: 0x0400A780 RID: 42880
 	private bool TickIconAlpha;
 
-	// Token: 0x0400A397 RID: 41879
+	// Token: 0x0400A781 RID: 42881
 	private BP_KuroMasterSeqEvent_C EventObject;
 
-	// Token: 0x02008F70 RID: 36720
+	// Token: 0x020081B9 RID: 33209
 	[NullableContext(0)]
 	private enum EPlotChildCom
 	{
-		// Token: 0x0402E74D RID: 190285
+		// Token: 0x04029E4C RID: 171596
 		BtnAuto,
-		// Token: 0x0402E74E RID: 190286
+		// Token: 0x04029E4D RID: 171597
 		BtnNextPage,
-		// Token: 0x0402E74F RID: 190287
+		// Token: 0x04029E4E RID: 171598
 		BtnSkip,
-		// Token: 0x0402E750 RID: 190288
+		// Token: 0x04029E4F RID: 171599
 		PlotText,
-		// Token: 0x0402E751 RID: 190289
+		// Token: 0x04029E50 RID: 171600
 		NPCName,
-		// Token: 0x0402E752 RID: 190290
+		// Token: 0x04029E51 RID: 171601
 		TxtList,
-		// Token: 0x0402E753 RID: 190291
+		// Token: 0x04029E52 RID: 171602
 		OptionItem,
-		// Token: 0x0402E754 RID: 190292
+		// Token: 0x04029E53 RID: 171603
 		OptionLayout,
-		// Token: 0x0402E755 RID: 190293
+		// Token: 0x04029E54 RID: 171604
 		TextList,
-		// Token: 0x0402E756 RID: 190294
+		// Token: 0x04029E55 RID: 171605
 		PlotBg,
-		// Token: 0x0402E757 RID: 190295
+		// Token: 0x04029E56 RID: 171606
 		PlotTextUHD,
-		// Token: 0x0402E758 RID: 190296
+		// Token: 0x04029E57 RID: 171607
 		PanelLine,
-		// Token: 0x0402E759 RID: 190297
+		// Token: 0x04029E58 RID: 171608
 		TxtFloat,
-		// Token: 0x0402E75A RID: 190298
+		// Token: 0x04029E59 RID: 171609
 		ScreenEffect,
-		// Token: 0x0402E75B RID: 190299
+		// Token: 0x04029E5A RID: 171610
 		AutoPlayManualItem,
-		// Token: 0x0402E75C RID: 190300
+		// Token: 0x04029E5B RID: 171611
 		AutuPlaySemiAutoItem,
-		// Token: 0x0402E75D RID: 190301
+		// Token: 0x04029E5C RID: 171612
 		AutuPlayAutoItem,
-		// Token: 0x0402E75E RID: 190302
+		// Token: 0x04029E5D RID: 171613
 		NPCTitle,
-		// Token: 0x0402E75F RID: 190303
+		// Token: 0x04029E5E RID: 171614
 		BtnHide,
-		// Token: 0x0402E760 RID: 190304
+		// Token: 0x04029E5F RID: 171615
 		NextIcon,
-		// Token: 0x0402E761 RID: 190305
+		// Token: 0x04029E60 RID: 171616
 		WaitingPoint,
-		// Token: 0x0402E762 RID: 190306
+		// Token: 0x04029E61 RID: 171617
 		BlackScreenBg,
-		// Token: 0x0402E763 RID: 190307
+		// Token: 0x04029E62 RID: 171618
 		PhotoScreenBg,
-		// Token: 0x0402E764 RID: 190308
+		// Token: 0x04029E63 RID: 171619
 		PhotoScreenBgFront,
-		// Token: 0x0402E765 RID: 190309
+		// Token: 0x04029E64 RID: 171620
 		DoingText,
-		// Token: 0x0402E766 RID: 190310
+		// Token: 0x04029E65 RID: 171621
 		PhotoScreenMiddle,
-		// Token: 0x0402E767 RID: 190311
+		// Token: 0x04029E66 RID: 171622
 		PhotoScreenBgMiddle,
-		// Token: 0x0402E768 RID: 190312
+		// Token: 0x04029E67 RID: 171623
 		TextScrollView,
-		// Token: 0x0402E769 RID: 190313
+		// Token: 0x04029E68 RID: 171624
 		OptionAdjustItem,
-		// Token: 0x0402E76A RID: 190314
+		// Token: 0x04029E69 RID: 171625
 		PnlBg,
-		// Token: 0x0402E76B RID: 190315
+		// Token: 0x04029E6A RID: 171626
 		PnlInfo,
-		// Token: 0x0402E76C RID: 190316
+		// Token: 0x04029E6B RID: 171627
 		SonUi,
-		// Token: 0x0402E76D RID: 190317
+		// Token: 0x04029E6C RID: 171628
 		BlockOption,
-		// Token: 0x0402E76E RID: 190318
+		// Token: 0x04029E6D RID: 171629
 		BtnReview,
-		// Token: 0x0402E76F RID: 190319
+		// Token: 0x04029E6E RID: 171630
 		OptionLimitBar,
-		// Token: 0x0402E770 RID: 190320
+		// Token: 0x04029E6F RID: 171631
 		VideoLayout,
-		// Token: 0x0402E771 RID: 190321
+		// Token: 0x04029E70 RID: 171632
 		AniSkipIn,
-		// Token: 0x0402E772 RID: 190322
+		// Token: 0x04029E71 RID: 171633
 		AniSkipOut,
-		// Token: 0x0402E773 RID: 190323
+		// Token: 0x04029E72 RID: 171634
 		AniReviewIn,
-		// Token: 0x0402E774 RID: 190324
+		// Token: 0x04029E73 RID: 171635
 		AniReviewOut,
-		// Token: 0x0402E775 RID: 190325
+		// Token: 0x04029E74 RID: 171636
 		AniAutoHideIn,
-		// Token: 0x0402E776 RID: 190326
+		// Token: 0x04029E75 RID: 171637
 		AniAutoHideOut,
-		// Token: 0x0402E777 RID: 190327
+		// Token: 0x04029E76 RID: 171638
 		TextDebugInfo,
-		// Token: 0x0402E778 RID: 190328
+		// Token: 0x04029E77 RID: 171639
 		FullscreenAdaptAnchor,
-		// Token: 0x0402E779 RID: 190329
+		// Token: 0x04029E78 RID: 171640
 		ImportantList,
-		// Token: 0x0402E77A RID: 190330
+		// Token: 0x04029E79 RID: 171641
 		PnlLayout02,
-		// Token: 0x0402E77B RID: 190331
+		// Token: 0x04029E7A RID: 171642
 		TextScrollViewCopy,
-		// Token: 0x0402E77C RID: 190332
+		// Token: 0x04029E7B RID: 171643
 		ImportantOptionTipsIcon,
-		// Token: 0x0402E77D RID: 190333
+		// Token: 0x04029E7C RID: 171644
 		ImportantOptionTipsText,
-		// Token: 0x0402E77E RID: 190334
+		// Token: 0x04029E7D RID: 171645
 		AutoSelectTimeBar,
-		// Token: 0x0402E77F RID: 190335
+		// Token: 0x04029E7E RID: 171646
 		AutoSelectText,
-		// Token: 0x0402E780 RID: 190336
+		// Token: 0x04029E7F RID: 171647
 		AniAutoTextIn,
-		// Token: 0x0402E781 RID: 190337
+		// Token: 0x04029E80 RID: 171648
 		AniAutoTextOut,
-		// Token: 0x0402E782 RID: 190338
+		// Token: 0x04029E81 RID: 171649
 		NextIconNew
 	}
 }

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001C77 RID: 7287
+// Token: 0x02001136 RID: 4406
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaDefine
 {
-	// Token: 0x0600DBE0 RID: 56288 RVA: 0x00332C2C File Offset: 0x00330E2C
+	// Token: 0x0600AFF6 RID: 45046 RVA: 0x0033E08C File Offset: 0x0033C28C
 	// Note: this type is marked as 'beforefieldinit'.
 	static GachaDefine()
 	{
@@ -17,137 +17,137 @@ public class GachaDefine
 		GachaDefine.textKeyMap = dictionary;
 	}
 
-	// Token: 0x040064CA RID: 25802
+	// Token: 0x0400659C RID: 26012
 	public const string GACHA_ROLE_CAMERA = "1035";
 
-	// Token: 0x040064CB RID: 25803
+	// Token: 0x0400659D RID: 26013
 	public const string GACHA_ROLE_CAMERA_TARGET = "-1035";
 
-	// Token: 0x040064CC RID: 25804
+	// Token: 0x0400659E RID: 26014
 	public const string GACHA_RECORD_CAMERA = "1040";
 
-	// Token: 0x040064CD RID: 25805
+	// Token: 0x0400659F RID: 26015
 	public const string GACHA_WEAPON_CAMERA = "1041_New";
 
-	// Token: 0x040064CE RID: 25806
+	// Token: 0x040065A0 RID: 26016
 	public const string GACHA_WEAPON_CAMERA_TARGET = "-1041";
 
-	// Token: 0x040064CF RID: 25807
+	// Token: 0x040065A1 RID: 26017
 	public const string CACHA_RESUOT_CAMERA = "1043";
 
-	// Token: 0x040064D0 RID: 25808
+	// Token: 0x040065A2 RID: 26018
 	public const string GACHA_BLEND_CAMERA = "10007";
 
-	// Token: 0x040064D1 RID: 25809
+	// Token: 0x040065A3 RID: 26019
 	public const string GACHA_ROLE_CASE = "RoleCase";
 
-	// Token: 0x040064D2 RID: 25810
+	// Token: 0x040065A4 RID: 26020
 	public const string GACHA_WEAPON_CASE = "WeaponCase";
 
-	// Token: 0x040064D3 RID: 25811
+	// Token: 0x040065A5 RID: 26021
 	public const string GACHA_3D_SCENE_PATH = "/Game/Aki/Map/Level/Function/ChouKa/Art/Instance_ChouKa_01";
 
-	// Token: 0x040064D4 RID: 25812
+	// Token: 0x040065A6 RID: 26022
 	public const int ROLE_FUNCTION_ITEM = 5;
 
-	// Token: 0x040064D5 RID: 25813
+	// Token: 0x040065A7 RID: 26023
 	public const int GACHA_ONE = 1;
 
-	// Token: 0x040064D6 RID: 25814
+	// Token: 0x040065A8 RID: 26024
 	public const int GACHA_TEN = 10;
 
-	// Token: 0x040064D7 RID: 25815
+	// Token: 0x040065A9 RID: 26025
 	public const string TOTAL_REST_COUNT = "GachaTotalRestCount";
 
-	// Token: 0x040064D8 RID: 25816
+	// Token: 0x040065AA RID: 26026
 	public const string POOL_TODAY_REST_COUNT = "GachaPoolTodayRestCount";
 
-	// Token: 0x040064D9 RID: 25817
+	// Token: 0x040065AB RID: 26027
 	public const string POOL_TOTAL_REST_COUNT = "GachaPoolTotalRestCount";
 
-	// Token: 0x040064DA RID: 25818
+	// Token: 0x040065AC RID: 26028
 	public const string POOL_RESIDENT = "PoolResident";
 
-	// Token: 0x040064DB RID: 25819
+	// Token: 0x040065AD RID: 26029
 	public const string POOL_TIME_LIMIT = "PoolTimeLimit";
 
-	// Token: 0x040064DC RID: 25820
+	// Token: 0x040065AE RID: 26030
 	public const string GACHA_TEXT = "GachaText";
 
-	// Token: 0x040064DD RID: 25821
+	// Token: 0x040065AF RID: 26031
 	public const string GACHA_RECORD = "GachaRecord";
 
-	// Token: 0x040064DE RID: 25822
+	// Token: 0x040065B0 RID: 26032
 	public const string GACHA_TYPE = "GachaType";
 
-	// Token: 0x040064DF RID: 25823
+	// Token: 0x040065B1 RID: 26033
 	public const string GACHA_RECORD_LIMIT = "GachaRecordLimit";
 
-	// Token: 0x040064E0 RID: 25824
+	// Token: 0x040065B2 RID: 26034
 	public const string GACHA_NO_RECORD = "GachaNoRecord";
 
-	// Token: 0x040064E1 RID: 25825
+	// Token: 0x040065B3 RID: 26035
 	public static readonly IReadOnlyDictionary<GachaDefine.EAwardType, string> textKeyMap;
 
-	// Token: 0x02008236 RID: 33334
+	// Token: 0x020073BF RID: 29631
 	[NullableContext(0)]
 	public enum EAwardType
 	{
-		// Token: 0x0402A7B7 RID: 174007
+		// Token: 0x04025ADD RID: 154333
 		Role,
-		// Token: 0x0402A7B8 RID: 174008
+		// Token: 0x04025ADE RID: 154334
 		Weapon
 	}
 
-	// Token: 0x02008237 RID: 33335
+	// Token: 0x020073C0 RID: 29632
 	[NullableContext(0)]
 	public enum EGachaViewType
 	{
-		// Token: 0x0402A7BA RID: 174010
+		// Token: 0x04025AE0 RID: 154336
 		None,
-		// Token: 0x0402A7BB RID: 174011
+		// Token: 0x04025AE1 RID: 154337
 		NewPlayer,
-		// Token: 0x0402A7BC RID: 174012
+		// Token: 0x04025AE2 RID: 154338
 		RoleUp,
-		// Token: 0x0402A7BD RID: 174013
+		// Token: 0x04025AE3 RID: 154339
 		WeaponUp,
-		// Token: 0x0402A7BE RID: 174014
+		// Token: 0x04025AE4 RID: 154340
 		RoleCommon,
-		// Token: 0x0402A7BF RID: 174015
+		// Token: 0x04025AE5 RID: 154341
 		WeaponCommon,
-		// Token: 0x0402A7C0 RID: 174016
+		// Token: 0x04025AE6 RID: 154342
 		NewPlayerCustom,
-		// Token: 0x0402A7C1 RID: 174017
+		// Token: 0x04025AE7 RID: 154343
 		AnniversaryRole,
-		// Token: 0x0402A7C2 RID: 174018
+		// Token: 0x04025AE8 RID: 154344
 		AnniversaryWeapon,
-		// Token: 0x0402A7C3 RID: 174019
+		// Token: 0x04025AE9 RID: 154345
 		CarnivalRole,
-		// Token: 0x0402A7C4 RID: 174020
+		// Token: 0x04025AEA RID: 154346
 		CarnivalWeapon,
-		// Token: 0x0402A7C5 RID: 174021
+		// Token: 0x04025AEB RID: 154347
 		CyberRole,
-		// Token: 0x0402A7C6 RID: 174022
+		// Token: 0x04025AEC RID: 154348
 		CyberWeapon,
-		// Token: 0x0402A7C7 RID: 174023
+		// Token: 0x04025AED RID: 154349
 		OldCarnivalRole,
-		// Token: 0x0402A7C8 RID: 174024
+		// Token: 0x04025AEE RID: 154350
 		OldCarnivalWeapon
 	}
 
-	// Token: 0x02008238 RID: 33336
+	// Token: 0x020073C1 RID: 29633
 	[NullableContext(0)]
 	public enum EItemQuality
 	{
-		// Token: 0x0402A7CA RID: 174026
+		// Token: 0x04025AF0 RID: 154352
 		White = 1,
-		// Token: 0x0402A7CB RID: 174027
+		// Token: 0x04025AF1 RID: 154353
 		Green,
-		// Token: 0x0402A7CC RID: 174028
+		// Token: 0x04025AF2 RID: 154354
 		Blue,
-		// Token: 0x0402A7CD RID: 174029
+		// Token: 0x04025AF3 RID: 154355
 		Purple,
-		// Token: 0x0402A7CE RID: 174030
+		// Token: 0x04025AF4 RID: 154356
 		Gold
 	}
 }

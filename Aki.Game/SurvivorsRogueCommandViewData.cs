@@ -1,19 +1,19 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002B83 RID: 11139
+// Token: 0x020020FF RID: 8447
 public class SurvivorsRogueCommandViewData : IViewOpenParamMultipleView
 {
-	// Token: 0x17001ED3 RID: 7891
-	// (get) Token: 0x06017174 RID: 94580 RVA: 0x005DC820 File Offset: 0x005DAA20
+	// Token: 0x17001F2B RID: 7979
+	// (get) Token: 0x06014BA5 RID: 84901 RVA: 0x00609400 File Offset: 0x00607600
 	public int CommandIncId { get; }
 
-	// Token: 0x17001ED4 RID: 7892
-	// (get) Token: 0x06017175 RID: 94581 RVA: 0x005DC828 File Offset: 0x005DAA28
-	// (set) Token: 0x06017176 RID: 94582 RVA: 0x005DC830 File Offset: 0x005DAA30
+	// Token: 0x17001F2C RID: 7980
+	// (get) Token: 0x06014BA6 RID: 84902 RVA: 0x00609408 File Offset: 0x00607608
+	// (set) Token: 0x06014BA7 RID: 84903 RVA: 0x00609410 File Offset: 0x00607610
 	public bool IsMultipleView { get; set; }
 
-	// Token: 0x06017177 RID: 94583 RVA: 0x005DC839 File Offset: 0x005DAA39
+	// Token: 0x06014BA8 RID: 84904 RVA: 0x00609419 File Offset: 0x00607619
 	public SurvivorsRogueCommandViewData(int commandIncId, bool isMultipleView = false)
 	{
 		this.CommandIncId = commandIncId;

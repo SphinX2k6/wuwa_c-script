@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000769 RID: 1897
+	// Token: 0x02000783 RID: 1923
 	public class ConfigPunishReportById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C87 RID: 11399 RVA: 0x00154E85 File Offset: 0x00153085
+		// Token: 0x06002D23 RID: 11555 RVA: 0x0015BD91 File Offset: 0x00159F91
 		static ConfigPunishReportById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPunishReportById.CreateStaticDefaultValue), new Action(ConfigPunishReportById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C88 RID: 11400 RVA: 0x00154EA4 File Offset: 0x001530A4
+		// Token: 0x06002D24 RID: 11556 RVA: 0x0015BDB0 File Offset: 0x00159FB0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPunishReportById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C89 RID: 11401 RVA: 0x00154F23 File Offset: 0x00153123
+		// Token: 0x06002D25 RID: 11557 RVA: 0x0015BE2F File Offset: 0x0015A02F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPunishReportById.LogPair = null;
 			ConfigPunishReportById.HandleId = 0;
 		}
 
-		// Token: 0x06002C8A RID: 11402 RVA: 0x00154F31 File Offset: 0x00153131
+		// Token: 0x06002D26 RID: 11558 RVA: 0x0015BE3D File Offset: 0x0015A03D
 		public static void Init()
 		{
 			ConfigPunishReportById.HandleId = ConfigCommon.InitDataStatement(ConfigPunishReportById.HandleId, "db_punishreport.db", "select BinData from `PunishReport` where Id=?");
 		}
 
-		// Token: 0x06002C8B RID: 11403 RVA: 0x00154F4C File Offset: 0x0015314C
+		// Token: 0x06002D27 RID: 11559 RVA: 0x0015BE58 File Offset: 0x0015A058
 		public static PunishReport? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPunishReportById.HandleId, ConfigPunishReportById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PunishReport?(rootAsPunishReport);
 		}
 
-		// Token: 0x040033C5 RID: 13253
+		// Token: 0x0400347B RID: 13435
 		private const string DB = "db_punishreport.db";
 
-		// Token: 0x040033C6 RID: 13254
+		// Token: 0x0400347C RID: 13436
 		private const string FILE = "t.讨伐报告.xlsx";
 
-		// Token: 0x040033C7 RID: 13255
+		// Token: 0x0400347D RID: 13437
 		private const string TABLE = "PunishReport";
 
-		// Token: 0x040033C8 RID: 13256
+		// Token: 0x0400347E RID: 13438
 		private const string COMMAND = "select BinData from `PunishReport` where Id=?";
 
-		// Token: 0x040033C9 RID: 13257
+		// Token: 0x0400347F RID: 13439
 		private const string KEY_PREFIX = "PunishReportById";
 
-		// Token: 0x040033CA RID: 13258
+		// Token: 0x04003480 RID: 13440
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040033CB RID: 13259
+		// Token: 0x04003481 RID: 13441
 		private static int HandleId;
 	}
 }

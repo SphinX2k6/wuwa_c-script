@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013CC RID: 5068
+	// Token: 0x0200143F RID: 5183
 	[NetMessage(EMessageId.TowerSeasonUpdateRequest)]
 	public sealed class TowerSeasonUpdateRequest : IMessage<TowerSeasonUpdateRequest>, IMessage, IEquatable<TowerSeasonUpdateRequest>, IDeepCloneable<TowerSeasonUpdateRequest>, IBufferMessage
 	{
-		// Token: 0x0601AE19 RID: 110105 RVA: 0x003E59BE File Offset: 0x003E3BBE
+		// Token: 0x0601B8A4 RID: 112804 RVA: 0x00400C82 File Offset: 0x003FEE82
 		[NullableContext(1)]
 		public static TowerSeasonUpdateRequest Create()
 		{
 			return new TowerSeasonUpdateRequest();
 		}
 
-		// Token: 0x17005AA9 RID: 23209
-		// (get) Token: 0x0601AE1A RID: 110106 RVA: 0x003E59C5 File Offset: 0x003E3BC5
+		// Token: 0x17005D3E RID: 23870
+		// (get) Token: 0x0601B8A5 RID: 112805 RVA: 0x00400C89 File Offset: 0x003FEE89
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005AAA RID: 23210
-		// (get) Token: 0x0601AE1B RID: 110107 RVA: 0x003E59C8 File Offset: 0x003E3BC8
+		// Token: 0x17005D3F RID: 23871
+		// (get) Token: 0x0601B8A6 RID: 112806 RVA: 0x00400C8C File Offset: 0x003FEE8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AE1C RID: 110108 RVA: 0x003E59CF File Offset: 0x003E3BCF
+		// Token: 0x0601B8A7 RID: 112807 RVA: 0x00400C93 File Offset: 0x003FEE93
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerSeasonUpdateRequest()
 		{
 		}
 
-		// Token: 0x0601AE1D RID: 110109 RVA: 0x003E59D7 File Offset: 0x003E3BD7
+		// Token: 0x0601B8A8 RID: 112808 RVA: 0x00400C9B File Offset: 0x003FEE9B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerSeasonUpdateRequest(TowerSeasonUpdateRequest other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601AE1E RID: 110110 RVA: 0x003E59F0 File Offset: 0x003E3BF0
+		// Token: 0x0601B8A9 RID: 112809 RVA: 0x00400CB4 File Offset: 0x003FEEB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerSeasonUpdateRequest Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new TowerSeasonUpdateRequest(this);
 		}
 
-		// Token: 0x0601AE1F RID: 110111 RVA: 0x003E59F8 File Offset: 0x003E3BF8
+		// Token: 0x0601B8AA RID: 112810 RVA: 0x00400CBC File Offset: 0x003FEEBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TowerSeasonUpdateRequest);
 		}
 
-		// Token: 0x0601AE20 RID: 110112 RVA: 0x003E5A06 File Offset: 0x003E3C06
+		// Token: 0x0601B8AB RID: 112811 RVA: 0x00400CCA File Offset: 0x003FEECA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TowerSeasonUpdateRequest other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x0601AE21 RID: 110113 RVA: 0x003E5A24 File Offset: 0x003E3C24
+		// Token: 0x0601B8AC RID: 112812 RVA: 0x00400CE8 File Offset: 0x003FEEE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601AE22 RID: 110114 RVA: 0x003E5A4A File Offset: 0x003E3C4A
+		// Token: 0x0601B8AD RID: 112813 RVA: 0x00400D0E File Offset: 0x003FEF0E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601AE23 RID: 110115 RVA: 0x003E5A57 File Offset: 0x003E3C57
+		// Token: 0x0601B8AE RID: 112814 RVA: 0x00400D1B File Offset: 0x003FEF1B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601AE24 RID: 110116 RVA: 0x003E5A60 File Offset: 0x003E3C60
+		// Token: 0x0601B8AF RID: 112815 RVA: 0x00400D24 File Offset: 0x003FEF24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AE25 RID: 110117 RVA: 0x003E5A78 File Offset: 0x003E3C78
+		// Token: 0x0601B8B0 RID: 112816 RVA: 0x00400D3C File Offset: 0x003FEF3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601AE26 RID: 110118 RVA: 0x003E5A9E File Offset: 0x003E3C9E
+		// Token: 0x0601B8B1 RID: 112817 RVA: 0x00400D62 File Offset: 0x003FEF62
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TowerSeasonUpdateRequest other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601AE27 RID: 110119 RVA: 0x003E5ABB File Offset: 0x003E3CBB
+		// Token: 0x0601B8B2 RID: 112818 RVA: 0x00400D7F File Offset: 0x003FEF7F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601AE28 RID: 110120 RVA: 0x003E5AC4 File Offset: 0x003E3CC4
+		// Token: 0x0601B8B3 RID: 112819 RVA: 0x00400D88 File Offset: 0x003FEF88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009BF2 RID: 39922
+		// Token: 0x0400A039 RID: 41017
 		private UnknownFieldSet _unknownFields;
 	}
 }

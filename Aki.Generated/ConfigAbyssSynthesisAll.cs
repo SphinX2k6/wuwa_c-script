@@ -9,13 +9,13 @@ namespace Aki.Config
 	// Token: 0x02000030 RID: 48
 	public class ConfigAbyssSynthesisAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000120 RID: 288 RVA: 0x0006024C File Offset: 0x0005E44C
+		// Token: 0x06000120 RID: 288 RVA: 0x00063AEC File Offset: 0x00061CEC
 		static ConfigAbyssSynthesisAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAbyssSynthesisAll.CreateStaticDefaultValue), new Action(ConfigAbyssSynthesisAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000121 RID: 289 RVA: 0x0006026C File Offset: 0x0005E46C
+		// Token: 0x06000121 RID: 289 RVA: 0x00063B0C File Offset: 0x00061D0C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAbyssSynthesisAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000122 RID: 290 RVA: 0x000602EB File Offset: 0x0005E4EB
+		// Token: 0x06000122 RID: 290 RVA: 0x00063B8B File Offset: 0x00061D8B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAbyssSynthesisAll.LogPair = null;
 			ConfigAbyssSynthesisAll.HandleId = 0;
 		}
 
-		// Token: 0x06000123 RID: 291 RVA: 0x000602F9 File Offset: 0x0005E4F9
+		// Token: 0x06000123 RID: 291 RVA: 0x00063B99 File Offset: 0x00061D99
 		public static void Init()
 		{
 			ConfigAbyssSynthesisAll.HandleId = ConfigCommon.InitDataStatement(ConfigAbyssSynthesisAll.HandleId, "db_dangoabysssuit.db", "select BinData from `AbyssSynthesis`");
 		}
 
-		// Token: 0x06000124 RID: 292 RVA: 0x00060314 File Offset: 0x0005E514
+		// Token: 0x06000124 RID: 292 RVA: 0x00063BB4 File Offset: 0x00061DB4
 		[NullableContext(2)]
 		public static IReadOnlyList<AbyssSynthesis> GetConfigList(bool useCache = true)
 		{

@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003292 RID: 12946
+// Token: 0x02002803 RID: 10243
 [NullableContext(1)]
 [Nullable(0)]
 public class PlayerGameplayCueComponent : BaseGameplayCueComponent
 {
-	// Token: 0x0601C085 RID: 114821 RVA: 0x007CB370 File Offset: 0x007C9570
+	// Token: 0x06019CA5 RID: 105637 RVA: 0x007F256C File Offset: 0x007F076C
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -16,7 +16,7 @@ public class PlayerGameplayCueComponent : BaseGameplayCueComponent
 		return true;
 	}
 
-	// Token: 0x0601C086 RID: 114822 RVA: 0x007CB39C File Offset: 0x007C959C
+	// Token: 0x06019CA6 RID: 105638 RVA: 0x007F2598 File Offset: 0x007F0798
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -24,7 +24,7 @@ public class PlayerGameplayCueComponent : BaseGameplayCueComponent
 		return true;
 	}
 
-	// Token: 0x0601C087 RID: 114823 RVA: 0x007CB3C2 File Offset: 0x007C95C2
+	// Token: 0x06019CA7 RID: 105639 RVA: 0x007F25BE File Offset: 0x007F07BE
 	protected override bool OnEnd()
 	{
 		base.OnEnd();
@@ -32,7 +32,33 @@ public class PlayerGameplayCueComponent : BaseGameplayCueComponent
 		return true;
 	}
 
-	// Token: 0x0601C088 RID: 114824 RVA: 0x007CB3E8 File Offset: 0x007C95E8
+	// Token: 0x06019CA8 RID: 105640 RVA: 0x007F25E4 File Offset: 0x007F07E4
+	protected override void OnTick(float delta)
+	{
+		float delta2 = delta * (float)TimeUtil.Instance.Millisecond;
+		foreach (GameplayCueBase gameplayCueBase in base.GetAllCurrentCueRef())
+		{
+			if (gameplayCueBase.IsActorValid())
+			{
+				gameplayCueBase.Tick(delta2);
+			}
+		}
+	}
+
+	// Token: 0x06019CA9 RID: 105641 RVA: 0x007F2648 File Offset: 0x007F0848
+	protected override void OnAfterTick(float delta)
+	{
+		float delta2 = delta * (float)TimeUtil.Instance.Millisecond;
+		foreach (GameplayCueBase gameplayCueBase in base.GetAllCurrentCueRef())
+		{
+			if (gameplayCueBase.IsActorValid())
+			{
+				gameplayCueBase.AfterTick(delta2);
+			}
+		}
+	}
+
+	// Token: 0x06019CAA RID: 105642 RVA: 0x007F26AC File Offset: 0x007F08AC
 	[NullableContext(2)]
 	protected override EntityHandle GetEntityHandle()
 	{
@@ -59,7 +85,7 @@ public class PlayerGameplayCueComponent : BaseGameplayCueComponent
 		return CreatureModel.Instance.GetEntity(num2.GetValueOrDefault());
 	}
 
-	// Token: 0x0601C089 RID: 114825 RVA: 0x007CB458 File Offset: 0x007C9658
+	// Token: 0x06019CAB RID: 105643 RVA: 0x007F271C File Offset: 0x007F091C
 	private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		foreach (GameplayCueBase gameplayCueBase in base.GetAllCurrentCueRef())
@@ -71,7 +97,7 @@ public class PlayerGameplayCueComponent : BaseGameplayCueComponent
 		}
 	}
 
-	// Token: 0x0601C08A RID: 114826 RVA: 0x007CB4B0 File Offset: 0x007C96B0
+	// Token: 0x06019CAC RID: 105644 RVA: 0x007F2774 File Offset: 0x007F0974
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -79,13 +105,50 @@ public class PlayerGameplayCueComponent : BaseGameplayCueComponent
 			return false;
 		}
 		PlayerGameplayCueComponent playerGameplayCueComponent = (PlayerGameplayCueComponent)componentTemplate;
-		if (base.CanResetComponentProperty("PlayerId"))
-		{
-			this.PlayerId = playerGameplayCueComponent.PlayerId;
-		}
+		this.PlayerId = playerGameplayCueComponent.PlayerId;
 		return true;
 	}
 
-	// Token: 0x0400DD93 RID: 56723
+	// Token: 0x1700298A RID: 10634
+	// (get) Token: 0x06019CAD RID: 105645 RVA: 0x007F27A0 File Offset: 0x007F09A0
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700298B RID: 10635
+	// (get) Token: 0x06019CAE RID: 105646 RVA: 0x007F27A3 File Offset: 0x007F09A3
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700298C RID: 10636
+	// (get) Token: 0x06019CAF RID: 105647 RVA: 0x007F27A6 File Offset: 0x007F09A6
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700298D RID: 10637
+	// (get) Token: 0x06019CB0 RID: 105648 RVA: 0x007F27A9 File Offset: 0x007F09A9
+	public override bool NeedAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E23A RID: 57914
 	protected int PlayerId;
 }

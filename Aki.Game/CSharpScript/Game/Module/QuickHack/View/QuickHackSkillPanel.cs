@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack.View
 {
-	// Token: 0x02004F93 RID: 20371
+	// Token: 0x02003F5C RID: 16220
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackSkillPanel
 	{
-		// Token: 0x060342B0 RID: 213680 RVA: 0x00C3F6A4 File Offset: 0x00C3D8A4
+		// Token: 0x0602911E RID: 168222 RVA: 0x00B88E50 File Offset: 0x00B87050
 		public UniTask InitSkillItemsAsync(List<UUIItem> items)
 		{
 			QuickHackSkillPanel.<InitSkillItemsAsync>d__3 <InitSkillItemsAsync>d__;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			return <InitSkillItemsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060342B1 RID: 213681 RVA: 0x00C3F6EF File Offset: 0x00C3D8EF
+		// Token: 0x0602911F RID: 168223 RVA: 0x00B88E9B File Offset: 0x00B8709B
 		[NullableContext(2)]
 		public QuickHackSkillItem GetItem(int index)
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			return this.SkillItemList[index];
 		}
 
-		// Token: 0x060342B2 RID: 213682 RVA: 0x00C3F710 File Offset: 0x00C3D910
+		// Token: 0x06029120 RID: 168224 RVA: 0x00B88EBC File Offset: 0x00B870BC
 		public void RefreshByData(List<QuickHackSkillInstance> dataList)
 		{
 			int count = this.SkillItemList.Count;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x060342B3 RID: 213683 RVA: 0x00C3F778 File Offset: 0x00C3D978
+		// Token: 0x06029121 RID: 168225 RVA: 0x00B88F24 File Offset: 0x00B87124
 		public void Select(int index)
 		{
 			if (index == this.CurrentIndex)
@@ -78,14 +78,14 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			quickHackSkillItem.OnSelected();
 		}
 
-		// Token: 0x0401BBB5 RID: 113589
+		// Token: 0x0401658A RID: 91530
 		private readonly List<QuickHackSkillItem> SkillItemList = new List<QuickHackSkillItem>();
 
-		// Token: 0x0401BBB6 RID: 113590
+		// Token: 0x0401658B RID: 91531
 		[Nullable(2)]
 		private QuickHackSkillItem CurrentItem;
 
-		// Token: 0x0401BBB7 RID: 113591
+		// Token: 0x0401658C RID: 91532
 		private int CurrentIndex = -1;
 	}
 }

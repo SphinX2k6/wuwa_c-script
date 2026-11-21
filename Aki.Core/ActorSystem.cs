@@ -107,20 +107,6 @@ public class ActorSystem : Singleton
 			this.Cache[tweakObjectPtr] = entry;
 			this.HitCount *= this.DecayRate;
 			this.MissCount = this.MissCount * this.DecayRate + 1f;
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				ActorSystemDebugger.Instance.RecordGetPut(new GetPutRecord
-				{
-					ClassName = tweakObjectPtr.GetName(),
-					GetOrPut = "Get",
-					Hit = false,
-					TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
-					ThisTypeTotal = 0,
-					HitRate = this.HitRate,
-					CurrentTotal = this.Size,
-					PendingKillNum = this.Pending.Count
-				});
-			}
 			return result;
 		}
 		Dictionary<AActor, int> values = entry.Values;
@@ -232,20 +218,6 @@ public class ActorSystem : Singleton
 			this.Queue.Update(entry);
 			this.HitCount = this.HitCount * this.DecayRate + 1f;
 			this.MissCount *= this.DecayRate;
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				ActorSystemDebugger.Instance.RecordGetPut(new GetPutRecord
-				{
-					ClassName = tweakObjectPtr.GetName(),
-					GetOrPut = "Get",
-					Hit = true,
-					TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
-					ThisTypeTotal = entry.Values.Count,
-					HitRate = this.HitRate,
-					CurrentTotal = this.Size,
-					PendingKillNum = this.Pending.Count
-				});
-			}
 			return aactor as T;
 		}
 		double milliseconds2 = KuroTime.GetMilliseconds64();
@@ -254,24 +226,10 @@ public class ActorSystem : Singleton
 		this.Queue.Update(entry);
 		this.HitCount *= this.DecayRate;
 		this.MissCount = this.MissCount * this.DecayRate + 1f;
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			ActorSystemDebugger.Instance.RecordGetPut(new GetPutRecord
-			{
-				ClassName = tweakObjectPtr.GetName(),
-				GetOrPut = "Get",
-				Hit = false,
-				TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
-				ThisTypeTotal = entry.Values.Count,
-				HitRate = this.HitRate,
-				CurrentTotal = this.Size,
-				PendingKillNum = this.Pending.Count
-			});
-		}
 		return result2;
 	}
 
-	// Token: 0x06000017 RID: 23 RVA: 0x00002B04 File Offset: 0x00000D04
+	// Token: 0x06000017 RID: 23 RVA: 0x00002970 File Offset: 0x00000B70
 	[NullableContext(2)]
 	public unsafe bool Put([Nullable(1)] string reason, AActor actor, TClearFunction clearFunc = null)
 	{
@@ -299,16 +257,30 @@ public class ActorSystem : Singleton
 		}
 		UClassStackOnlyPtr @class = actor.GetClass();
 		TWeakObjectPtr<UClass> tweakObjectPtr = @class.ToWeakClass();
-		if (actor.GetWorld() == null || !actor.GetWorld().IsValid())
+		int key;
+		if (this.ActorReason.TryGetValue(actor, out key))
 		{
 			Log instance2 = Log.Instance;
 			ELogModule module2 = ELogModule.ActorSystem;
-			ELogAuthor author2 = ELogAuthor.LCC;
-			string message2 = "World无效或者World发生改变";
-			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("ueClass", @class.GetName());
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("Reason", reason);
-			instance2.Warn(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
+			ELogAuthor author2 = ELogAuthor.LW;
+			string message2 = "Actor被重复入池！";
+			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray3<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("ueClass", @class.GetName());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("OldReason", this.Reason.GetValueOrDefault(key));
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("Reason", reason);
+			instance2.Warn(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
+			return false;
+		}
+		if (actor.GetWorld() == null || !actor.GetWorld().IsValid())
+		{
+			Log instance3 = Log.Instance;
+			ELogModule module3 = ELogModule.ActorSystem;
+			ELogAuthor author3 = ELogAuthor.LCC;
+			string message3 = "World无效或者World发生改变";
+			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("ueClass", @class.GetName());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("Reason", reason);
+			instance3.Warn(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
 			UKuroActorManager.DestroyActor(actor);
 			return false;
 		}
@@ -321,32 +293,18 @@ public class ActorSystem : Singleton
 		}
 		actor.OnDestroyed.Add(new Action<AActor>(this.SubReference));
 		actor.OnEndPlay.Add(new Action<AActor, TEnumAsByte<EEndPlayReason>>(this.OnEndPlay));
-		int num;
-		if (this.ActorReason.TryGetValue(actor, out num))
-		{
-			Log instance3 = Log.Instance;
-			ELogModule module3 = ELogModule.ActorSystem;
-			ELogAuthor author3 = ELogAuthor.LW;
-			string message3 = "Actor被重复入池！";
-			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray3<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("ueClass", @class.GetName());
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("OldReason", num);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 2) = new ValueTuple<string, object>("Reason", reason);
-			instance3.Warn(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 3));
-			return false;
-		}
-		int num2 = this.ReasonId + 1;
-		this.ReasonId = num2;
-		int num3 = num2;
-		this.Reason[num3] = reason;
-		this.ActorReason[actor] = num3;
+		int num = this.ReasonId + 1;
+		this.ReasonId = num;
+		int num2 = num;
+		this.Reason[num2] = reason;
+		this.ActorReason[actor] = num2;
 		Entry entry;
 		if (this.Cache.TryGetValue(tweakObjectPtr, out entry))
 		{
-			int key;
-			if (entry.Values.TryGetValue(actor, out key))
+			int key2;
+			if (entry.Values.TryGetValue(actor, out key2))
 			{
-				string valueOrDefault = this.Reason.GetValueOrDefault(key);
+				string valueOrDefault = this.Reason.GetValueOrDefault(key2);
 				Log instance4 = Log.Instance;
 				ELogModule module4 = ELogModule.ActorSystem;
 				ELogAuthor author4 = ELogAuthor.LW;
@@ -358,31 +316,17 @@ public class ActorSystem : Singleton
 				instance4.Warn(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 3));
 				return false;
 			}
-			entry.Values[actor] = num3;
+			entry.Values[actor] = num2;
 			entry.Touch(null);
 			this.Queue.Update(entry);
 		}
 		else
 		{
 			entry = new Entry(tweakObjectPtr, this.Budget.GetValueOrDefault(tweakObjectPtr, 0));
-			entry.Values[actor] = num3;
+			entry.Values[actor] = num2;
 			entry.Touch(null);
 			this.Queue.Push(entry);
 			this.Cache[tweakObjectPtr] = entry;
-		}
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			ActorSystemDebugger.Instance.RecordGetPut(new GetPutRecord
-			{
-				ClassName = tweakObjectPtr.GetName(),
-				GetOrPut = "Put",
-				Hit = false,
-				HitRate = this.HitRate,
-				TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
-				ThisTypeTotal = ((entry != null) ? entry.Values.Count : 0),
-				CurrentTotal = this.Size,
-				PendingKillNum = this.Pending.Count
-			});
 		}
 		this.SizeInternal++;
 		while (this.SizeInternal > this.CapacityInternal || this.Queue.Size > this.CapacityInternal)
@@ -392,7 +336,7 @@ public class ActorSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x06000018 RID: 24 RVA: 0x00002F3C File Offset: 0x0000113C
+	// Token: 0x06000018 RID: 24 RVA: 0x00002D1E File Offset: 0x00000F1E
 	public void Clear()
 	{
 		this.SizeInternal = 0;
@@ -403,7 +347,7 @@ public class ActorSystem : Singleton
 		this.MissCount = 0f;
 	}
 
-	// Token: 0x06000019 RID: 25 RVA: 0x00002F7C File Offset: 0x0000117C
+	// Token: 0x06000019 RID: 25 RVA: 0x00002D60 File Offset: 0x00000F60
 	public bool SetBudget(UClassStackOnlyPtr ueClassPtr, int budget)
 	{
 		if (!this.CheckClass(ueClassPtr))
@@ -432,7 +376,7 @@ public class ActorSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x0600001A RID: 26 RVA: 0x0000301C File Offset: 0x0000121C
+	// Token: 0x0600001A RID: 26 RVA: 0x00002E00 File Offset: 0x00001000
 	private bool CheckClass(UClassStackOnlyPtr ueClass)
 	{
 		if (!ueClass.IsValid())
@@ -443,7 +387,7 @@ public class ActorSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x0600001B RID: 27 RVA: 0x00003054 File Offset: 0x00001254
+	// Token: 0x0600001B RID: 27 RVA: 0x00002E38 File Offset: 0x00001038
 	private bool Evict()
 	{
 		Entry top = this.Queue.Top;
@@ -492,25 +436,10 @@ public class ActorSystem : Singleton
 				this.ActorReason.Remove(aactor);
 			}
 		}
-		if (!Info.Instance.IsBuildShipping)
-		{
-			string className = (aactor != null && aactor.IsValid()) ? aactor.GetClass().GetName() : "InvalidClass";
-			ActorSystemDebugger.Instance.RecordGetPut(new GetPutRecord
-			{
-				ClassName = className,
-				GetOrPut = "Evict",
-				Hit = false,
-				TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
-				ThisTypeTotal = 0,
-				HitRate = this.HitRate,
-				CurrentTotal = this.Size,
-				PendingKillNum = this.Pending.Count
-			});
-		}
 		return true;
 	}
 
-	// Token: 0x0600001C RID: 28 RVA: 0x00003258 File Offset: 0x00001458
+	// Token: 0x0600001C RID: 28 RVA: 0x00002F9C File Offset: 0x0000119C
 	private unsafe void Tick(float delta)
 	{
 		while (this.Pending.Count > 0)
@@ -524,49 +453,31 @@ public class ActorSystem : Singleton
 			{
 				this.ActorReason.Remove(actor);
 			}
-			if (actor == null || !actor.IsValid())
-			{
-				Log instance = Log.Instance;
-				ELogModule module = ELogModule.ActorSystem;
-				ELogAuthor author = ELogAuthor.LCC;
-				string message = "Tick删除对象时对象非法";
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("className", pendingActor.Klass);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Reason", valueOrDefault);
-				instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-			}
-			else
+			if (actor != null && actor.IsValid())
 			{
 				this.CreateStat(this.DestroyStatMap, actor.GetClass().ToWeakClass(), "ActorSystem.Destroy.");
 				UKuroActorManager.DestroyActor(actor);
-				if (!Info.Instance.IsBuildShipping)
-				{
-					ActorSystemDebugger.Instance.RecordGetPut(new GetPutRecord
-					{
-						ClassName = pendingActor.Klass,
-						GetOrPut = "Destroy",
-						Hit = false,
-						TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
-						ThisTypeTotal = 0,
-						HitRate = this.HitRate,
-						CurrentTotal = this.Size,
-						PendingKillNum = this.Pending.Count
-					});
-					return;
-				}
-				break;
+				return;
 			}
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.ActorSystem;
+			ELogAuthor author = ELogAuthor.LCC;
+			string message = "Tick删除对象时对象非法";
+			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("className", pendingActor.Klass);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Reason", valueOrDefault);
+			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 	}
 
-	// Token: 0x0600001D RID: 29 RVA: 0x000033F5 File Offset: 0x000015F5
+	// Token: 0x0600001D RID: 29 RVA: 0x000030B6 File Offset: 0x000012B6
 	[NullableContext(2)]
 	public AActor Spawn(UClassStackOnlyPtr ueClassPtr, FTransformDouble transform, AActor owner)
 	{
 		return this.Spawn<AActor>(ueClassPtr, transform, owner);
 	}
 
-	// Token: 0x0600001E RID: 30 RVA: 0x00003400 File Offset: 0x00001600
+	// Token: 0x0600001E RID: 30 RVA: 0x000030C4 File Offset: 0x000012C4
 	[NullableContext(2)]
 	public T Spawn<[Nullable(0)] T>(UClassStackOnlyPtr ueClassPtr, FTransformDouble transform, AActor owner) where T : AActor
 	{
@@ -575,25 +486,10 @@ public class ActorSystem : Singleton
 			return default(T);
 		}
 		this.CreateStat(this.SpawnStatMap, ueClassPtr.ToWeakClass(), "ActorSystem.Spawn.");
-		AActor aactor = UKuroActorManager.D_SpawnActor(Info.Instance.World, ueClassPtr, transform, ESpawnActorCollisionHandlingMethod.AlwaysSpawn, owner, null, false);
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			ActorSystemDebugger.Instance.RecordGetPut(new GetPutRecord
-			{
-				ClassName = ueClassPtr.GetName(),
-				GetOrPut = "Spawn",
-				Hit = false,
-				TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
-				ThisTypeTotal = 0,
-				HitRate = this.HitRate,
-				CurrentTotal = this.Size,
-				PendingKillNum = this.Pending.Count
-			});
-		}
-		return aactor as T;
+		return UKuroActorManager.D_SpawnActor(Info.Instance.World, ueClassPtr, transform, ESpawnActorCollisionHandlingMethod.AlwaysSpawn, owner, null, false) as T;
 	}
 
-	// Token: 0x0600001F RID: 31 RVA: 0x000034DC File Offset: 0x000016DC
+	// Token: 0x0600001F RID: 31 RVA: 0x00003124 File Offset: 0x00001324
 	private T SpawnAsPoolActor<[Nullable(0)] T>(UClassStackOnlyPtr ueClassPtr, [Nullable(new byte[]
 	{
 		0,
@@ -606,7 +502,7 @@ public class ActorSystem : Singleton
 		return aactor as T;
 	}
 
-	// Token: 0x06000020 RID: 32 RVA: 0x0000352C File Offset: 0x0000172C
+	// Token: 0x06000020 RID: 32 RVA: 0x00003174 File Offset: 0x00001374
 	[return: Nullable(2)]
 	private Stat CreateStat([Nullable(new byte[]
 	{
@@ -620,20 +516,10 @@ public class ActorSystem : Singleton
 		1
 	})] TWeakObjectPtr<UClass> ueClass, string prefix)
 	{
-		if (!Stat.Enable)
-		{
-			return null;
-		}
-		Stat stat;
-		if (!map.TryGetValue(ueClass, out stat))
-		{
-			stat = Stat.CreateNoFlameGraph(prefix + ueClass.GetName(), "", "");
-			map[ueClass] = stat;
-		}
-		return stat;
+		return null;
 	}
 
-	// Token: 0x06000021 RID: 33 RVA: 0x00003574 File Offset: 0x00001774
+	// Token: 0x06000021 RID: 33 RVA: 0x00003184 File Offset: 0x00001384
 	[NullableContext(2)]
 	private void AddReference(AActor actor)
 	{
@@ -656,7 +542,7 @@ public class ActorSystem : Singleton
 		this.References[key] = num;
 	}
 
-	// Token: 0x06000022 RID: 34 RVA: 0x000035F4 File Offset: 0x000017F4
+	// Token: 0x06000022 RID: 34 RVA: 0x00003204 File Offset: 0x00001404
 	[NullableContext(0)]
 	private unsafe void OnEndPlay([Nullable(2)] AActor actor, TEnumAsByte<EEndPlayReason> inReason)
 	{
@@ -684,7 +570,7 @@ public class ActorSystem : Singleton
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06000023 RID: 35 RVA: 0x000036C0 File Offset: 0x000018C0
+	// Token: 0x06000023 RID: 35 RVA: 0x000032D0 File Offset: 0x000014D0
 	[NullableContext(2)]
 	private void SubReference(AActor actor)
 	{
@@ -711,7 +597,7 @@ public class ActorSystem : Singleton
 		this.References[tweakObjectPtr] = num2;
 	}
 
-	// Token: 0x06000024 RID: 36 RVA: 0x0000375C File Offset: 0x0000195C
+	// Token: 0x06000024 RID: 36 RVA: 0x0000336C File Offset: 0x0000156C
 	private void TryReleaseClass(UClassStackOnlyPtr ueClassPtr, [Nullable(new byte[]
 	{
 		0,
@@ -732,7 +618,7 @@ public class ActorSystem : Singleton
 	}
 
 	// Token: 0x17000004 RID: 4
-	// (get) Token: 0x06000025 RID: 37 RVA: 0x000037A6 File Offset: 0x000019A6
+	// (get) Token: 0x06000025 RID: 37 RVA: 0x000033B6 File Offset: 0x000015B6
 	public static ActorSystem Instance
 	{
 		get
@@ -746,12 +632,12 @@ public class ActorSystem : Singleton
 		}
 	}
 
-	// Token: 0x06000026 RID: 38 RVA: 0x000037C9 File Offset: 0x000019C9
+	// Token: 0x06000026 RID: 38 RVA: 0x000033D9 File Offset: 0x000015D9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000027 RID: 39 RVA: 0x000037CB File Offset: 0x000019CB
+	// Token: 0x06000027 RID: 39 RVA: 0x000033DB File Offset: 0x000015DB
 	public static void ResetStaticDefaultValue()
 	{
 		ActorSystem instance = ActorSystem._instance;
@@ -762,13 +648,13 @@ public class ActorSystem : Singleton
 		ActorSystem._instance = null;
 	}
 
-	// Token: 0x06000028 RID: 40 RVA: 0x000037E4 File Offset: 0x000019E4
+	// Token: 0x06000028 RID: 40 RVA: 0x000033F4 File Offset: 0x000015F4
 	static ActorSystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActorSystem.CreateStaticDefaultValue), new Action(ActorSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000029 RID: 41 RVA: 0x00003804 File Offset: 0x00001A04
+	// Token: 0x06000029 RID: 41 RVA: 0x00003414 File Offset: 0x00001614
 	public ActorSystem()
 	{
 		Comparison<Entry> compare;
@@ -948,11 +834,11 @@ public class ActorSystem : Singleton
 	[Nullable(2)]
 	private static ActorSystem _instance;
 
-	// Token: 0x02000178 RID: 376
+	// Token: 0x0200017C RID: 380
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0400074E RID: 1870
+		// Token: 0x04000759 RID: 1881
 		[Nullable(new byte[]
 		{
 			0,

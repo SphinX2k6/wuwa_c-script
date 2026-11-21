@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020000D2 RID: 210
+// Token: 0x020000D4 RID: 212
 public enum EState
 {
-	// Token: 0x0400054A RID: 1354
+	// Token: 0x04000559 RID: 1369
 	Normal,
-	// Token: 0x0400054B RID: 1355
+	// Token: 0x0400055A RID: 1370
 	Pause,
-	// Token: 0x0400054C RID: 1356
+	// Token: 0x0400055B RID: 1371
 	Trash
 }

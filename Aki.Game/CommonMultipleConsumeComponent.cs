@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200180D RID: 6157
+// Token: 0x02000CC6 RID: 3270
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonMultipleConsumeComponent : UiPanelBase
 {
-	// Token: 0x0600B483 RID: 46211 RVA: 0x0028BC84 File Offset: 0x00289E84
+	// Token: 0x0600886E RID: 34926 RVA: 0x002963A4 File Offset: 0x002945A4
 	public CommonMultipleConsumeComponent(UUIItem uiItem, CommonMultipleConsumeFunction consumeFunction, bool needConditionFilter = true, EUiViewName? belongView = null)
 	{
 		this.ConsumeFunction = consumeFunction;
@@ -27,7 +27,7 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B484 RID: 46212 RVA: 0x0028BCEC File Offset: 0x00289EEC
+	// Token: 0x0600886F RID: 34927 RVA: 0x0029640C File Offset: 0x0029460C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -76,7 +76,7 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B485 RID: 46213 RVA: 0x0028BF6A File Offset: 0x0028A16A
+	// Token: 0x06008870 RID: 34928 RVA: 0x0029668A File Offset: 0x0029488A
 	private void AutoClick()
 	{
 		if (this.ConsumeFunction.AutoFunction != null)
@@ -85,13 +85,13 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B486 RID: 46214 RVA: 0x0028BF8F File Offset: 0x0028A18F
+	// Token: 0x06008871 RID: 34929 RVA: 0x002966AF File Offset: 0x002948AF
 	private void ConditionClick()
 	{
 		this.CommonConditionFilterComponent.UpdateComponent(this.QualityId);
 	}
 
-	// Token: 0x0600B487 RID: 46215 RVA: 0x0028BFA4 File Offset: 0x0028A1A4
+	// Token: 0x06008872 RID: 34930 RVA: 0x002966C4 File Offset: 0x002948C4
 	protected override void OnStart()
 	{
 		this.StrengthItem = new ButtonItem(base.GetItem(7));
@@ -117,7 +117,7 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		this.MaxCount = WeaponConfig.Instance.GetMaterialItemMaxCount();
 	}
 
-	// Token: 0x0600B488 RID: 46216 RVA: 0x0028C086 File Offset: 0x0028A286
+	// Token: 0x06008873 RID: 34931 RVA: 0x002967A6 File Offset: 0x002949A6
 	private void ConditionFunction(int qualityId, string text)
 	{
 		this.QualityId = qualityId;
@@ -128,14 +128,14 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B489 RID: 46217 RVA: 0x0028C0B1 File Offset: 0x0028A2B1
+	// Token: 0x06008874 RID: 34932 RVA: 0x002967D1 File Offset: 0x002949D1
 	public void RefreshConditionFilter(int qualityId, string text)
 	{
 		this.QualityId = qualityId;
 		base.GetText(10).ShowTextNew(text);
 	}
 
-	// Token: 0x0600B48A RID: 46218 RVA: 0x0028C0C8 File Offset: 0x0028A2C8
+	// Token: 0x06008875 RID: 34933 RVA: 0x002967E8 File Offset: 0x002949E8
 	private ConsumeItem InitItem()
 	{
 		ConsumeItem consumeItem = new ConsumeItem(null, this.BelongView);
@@ -151,13 +151,13 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		return consumeItem;
 	}
 
-	// Token: 0x0600B48B RID: 46219 RVA: 0x0028C0E8 File Offset: 0x0028A2E8
+	// Token: 0x06008876 RID: 34934 RVA: 0x00296808 File Offset: 0x00294A08
 	private TCommonMultipleConsumeData UpdateItem(int gridIndex)
 	{
 		return this.ConsumeList[gridIndex];
 	}
 
-	// Token: 0x0600B48C RID: 46220 RVA: 0x0028C0F6 File Offset: 0x0028A2F6
+	// Token: 0x06008877 RID: 34935 RVA: 0x00296816 File Offset: 0x00294A16
 	protected override void OnBeforeDestroy()
 	{
 		if (this.StrengthItem != null)
@@ -172,7 +172,7 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B48D RID: 46221 RVA: 0x0028C130 File Offset: 0x0028A330
+	// Token: 0x06008878 RID: 34936 RVA: 0x00296850 File Offset: 0x00294A50
 	public void UpdateComponent(int moneyId, int costCount, List<TCommonMultipleConsumeData> consumeList)
 	{
 		this.SetMaxState(false);
@@ -189,7 +189,7 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		this.EnoughMoney = UiComponentUtil.SetMoneyState(text, text2, costCount, playerMoney);
 	}
 
-	// Token: 0x0600B48E RID: 46222 RVA: 0x0028C1D4 File Offset: 0x0028A3D4
+	// Token: 0x06008879 RID: 34937 RVA: 0x002968F4 File Offset: 0x00294AF4
 	public void SetMaxState(bool inMax)
 	{
 		base.GetItem(12).SetUIActive(!inMax);
@@ -206,74 +206,74 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		this.SetStrengthItemText(this.ButtonText);
 	}
 
-	// Token: 0x0600B48F RID: 46223 RVA: 0x0028C230 File Offset: 0x0028A430
+	// Token: 0x0600887A RID: 34938 RVA: 0x00296950 File Offset: 0x00294B50
 	public void SetStrengthItemText(string text)
 	{
 		this.StrengthItem.SetLocalText(text, Array.Empty<object>());
 	}
 
-	// Token: 0x0600B490 RID: 46224 RVA: 0x0028C243 File Offset: 0x0028A443
+	// Token: 0x0600887B RID: 34939 RVA: 0x00296963 File Offset: 0x00294B63
 	public void SetStrengthTextCode(string text)
 	{
 		this.ButtonText = text;
 	}
 
-	// Token: 0x0600B491 RID: 46225 RVA: 0x0028C24C File Offset: 0x0028A44C
+	// Token: 0x0600887C RID: 34940 RVA: 0x0029696C File Offset: 0x00294B6C
 	public void SetStrengthItemEnable(bool state)
 	{
 		this.StrengthItem.SetEnableClick(state);
 	}
 
-	// Token: 0x0600B492 RID: 46226 RVA: 0x0028C25A File Offset: 0x0028A45A
+	// Token: 0x0600887D RID: 34941 RVA: 0x0029697A File Offset: 0x00294B7A
 	public int GetConsumeListSize()
 	{
 		return this.ConsumeList.Count;
 	}
 
-	// Token: 0x0600B493 RID: 46227 RVA: 0x0028C267 File Offset: 0x0028A467
+	// Token: 0x0600887E RID: 34942 RVA: 0x00296987 File Offset: 0x00294B87
 	public bool GetEnoughMoney()
 	{
 		return this.EnoughMoney;
 	}
 
-	// Token: 0x0600B494 RID: 46228 RVA: 0x0028C26F File Offset: 0x0028A46F
+	// Token: 0x0600887F RID: 34943 RVA: 0x0029698F File Offset: 0x00294B8F
 	public void SetIsNeedShowMaterial(bool isNeed)
 	{
 		this.IsNeedShowMaterial = isNeed;
 	}
 
-	// Token: 0x0600B495 RID: 46229 RVA: 0x0028C278 File Offset: 0x0028A478
+	// Token: 0x06008880 RID: 34944 RVA: 0x00296998 File Offset: 0x00294B98
 	public void ShowMaterialItem(bool show)
 	{
 		base.GetItem(13).SetUIActive(show);
 	}
 
-	// Token: 0x0600B496 RID: 46230 RVA: 0x0028C288 File Offset: 0x0028A488
+	// Token: 0x06008881 RID: 34945 RVA: 0x002969A8 File Offset: 0x00294BA8
 	public void ShowConditionViewItem(bool show)
 	{
 		base.GetItem(11).SetUIActive(show);
 	}
 
-	// Token: 0x0600B497 RID: 46231 RVA: 0x0028C298 File Offset: 0x0028A498
+	// Token: 0x06008882 RID: 34946 RVA: 0x002969B8 File Offset: 0x00294BB8
 	public void SetIsNeedShowTitleLayout(bool isNeed)
 	{
 		base.GetItem(14).SetUIActive(isNeed);
 	}
 
-	// Token: 0x0600B498 RID: 46232 RVA: 0x0028C2A8 File Offset: 0x0028A4A8
+	// Token: 0x06008883 RID: 34947 RVA: 0x002969C8 File Offset: 0x00294BC8
 	public void SetMaxCount(int count)
 	{
 		this.MaxCount = count;
 	}
 
-	// Token: 0x0600B499 RID: 46233 RVA: 0x0028C2B4 File Offset: 0x0028A4B4
+	// Token: 0x06008884 RID: 34948 RVA: 0x002969D4 File Offset: 0x00294BD4
 	public void SetConsumeTexture(int itemId)
 	{
 		base.SetItemIcon(base.GetTexture(0), itemId, null, null);
 		base.SetItemIcon(base.GetTexture(2), itemId, null, null);
 	}
 
-	// Token: 0x0600B49A RID: 46234 RVA: 0x0028C2F1 File Offset: 0x0028A4F1
+	// Token: 0x06008885 RID: 34949 RVA: 0x00296A11 File Offset: 0x00294C11
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -284,17 +284,17 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 		return this.LoopScrollView;
 	}
 
-	// Token: 0x0600B49B RID: 46235 RVA: 0x0028C2F9 File Offset: 0x0028A4F9
+	// Token: 0x06008886 RID: 34950 RVA: 0x00296A19 File Offset: 0x00294C19
 	public void SetConditionFilterFunction(global::TCommonConditionFilterFunction filterFunc)
 	{
 		this.ConditionFilterFunction = filterFunc;
 	}
 
-	// Token: 0x04005172 RID: 20850
+	// Token: 0x0400521D RID: 21021
 	[Nullable(2)]
 	protected ButtonItem StrengthItem;
 
-	// Token: 0x04005173 RID: 20851
+	// Token: 0x0400521E RID: 21022
 	[Nullable(new byte[]
 	{
 		2,
@@ -302,88 +302,88 @@ public class CommonMultipleConsumeComponent : UiPanelBase
 	})]
 	protected LoopScrollView<ConsumeItem, TCommonMultipleConsumeData> LoopScrollView;
 
-	// Token: 0x04005174 RID: 20852
+	// Token: 0x0400521F RID: 21023
 	protected List<TCommonMultipleConsumeData> ConsumeList;
 
-	// Token: 0x04005175 RID: 20853
+	// Token: 0x04005220 RID: 21024
 	[Nullable(2)]
 	protected CommonConditionFilterComponent CommonConditionFilterComponent;
 
-	// Token: 0x04005176 RID: 20854
+	// Token: 0x04005221 RID: 21025
 	protected int MaxCount;
 
-	// Token: 0x04005177 RID: 20855
+	// Token: 0x04005222 RID: 21026
 	protected bool EnoughMoney;
 
-	// Token: 0x04005178 RID: 20856
+	// Token: 0x04005223 RID: 21027
 	protected int QualityId;
 
-	// Token: 0x04005179 RID: 20857
+	// Token: 0x04005224 RID: 21028
 	private bool IsNeedShowMaterial;
 
-	// Token: 0x0400517A RID: 20858
+	// Token: 0x04005225 RID: 21029
 	private string ButtonText;
 
-	// Token: 0x0400517B RID: 20859
+	// Token: 0x04005226 RID: 21030
 	[Nullable(2)]
 	private global::TCommonConditionFilterFunction ConditionFilterFunction;
 
-	// Token: 0x0400517C RID: 20860
+	// Token: 0x04005227 RID: 21031
 	protected CommonMultipleConsumeFunction ConsumeFunction;
 
-	// Token: 0x0400517D RID: 20861
+	// Token: 0x04005228 RID: 21032
 	public bool NeedConditionFilter;
 
-	// Token: 0x0400517E RID: 20862
+	// Token: 0x04005229 RID: 21033
 	public EUiViewName? BelongView;
 
-	// Token: 0x02007DFE RID: 32254
+	// Token: 0x02006F84 RID: 28548
 	[NullableContext(0)]
 	private class ECommonMultipleConsumeComponent
 	{
-		// Token: 0x040293AA RID: 168874
+		// Token: 0x040246D5 RID: 149205
 		public const int ConsumeTexture = 0;
 
-		// Token: 0x040293AB RID: 168875
+		// Token: 0x040246D6 RID: 149206
 		public const int ConsumeText = 1;
 
-		// Token: 0x040293AC RID: 168876
+		// Token: 0x040246D7 RID: 149207
 		public const int OwnTexture = 2;
 
-		// Token: 0x040293AD RID: 168877
+		// Token: 0x040246D8 RID: 149208
 		public const int OwnText = 3;
 
-		// Token: 0x040293AE RID: 168878
+		// Token: 0x040246D9 RID: 149209
 		public const int LoopScrollView = 4;
 
-		// Token: 0x040293AF RID: 168879
+		// Token: 0x040246DA RID: 149210
 		public const int AutoButton = 5;
 
-		// Token: 0x040293B0 RID: 168880
+		// Token: 0x040246DB RID: 149211
 		public const int AddMaterialText = 6;
 
-		// Token: 0x040293B1 RID: 168881
+		// Token: 0x040246DC RID: 149212
 		public const int StrengthItem = 7;
 
-		// Token: 0x040293B2 RID: 168882
+		// Token: 0x040246DD RID: 149213
 		public const int MaterialItem = 8;
 
-		// Token: 0x040293B3 RID: 168883
+		// Token: 0x040246DE RID: 149214
 		public const int ConditionButton = 9;
 
-		// Token: 0x040293B4 RID: 168884
+		// Token: 0x040246DF RID: 149215
 		public const int ConditionText = 10;
 
-		// Token: 0x040293B5 RID: 168885
+		// Token: 0x040246E0 RID: 149216
 		public const int ConditionViewItem = 11;
 
-		// Token: 0x040293B6 RID: 168886
+		// Token: 0x040246E1 RID: 149217
 		public const int CostRootItem = 12;
 
-		// Token: 0x040293B7 RID: 168887
+		// Token: 0x040246E2 RID: 149218
 		public const int MaterialRootItem = 13;
 
-		// Token: 0x040293B8 RID: 168888
+		// Token: 0x040246E3 RID: 149219
 		public const int TitleLayoutItem = 14;
 	}
 }

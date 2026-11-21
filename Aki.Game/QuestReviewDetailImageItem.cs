@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200267B RID: 9851
+// Token: 0x02001B66 RID: 7014
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewDetailImageItem : UiPanelBase
 {
-	// Token: 0x060142FC RID: 82684 RVA: 0x005189D3 File Offset: 0x00516BD3
+	// Token: 0x060117DE RID: 71646 RVA: 0x0052770B File Offset: 0x0052590B
 	public QuestReviewDetailImageItem(QuestReviewNodeData node)
 	{
 		this.Node = node;
 	}
 
-	// Token: 0x060142FD RID: 82685 RVA: 0x005189E4 File Offset: 0x00516BE4
+	// Token: 0x060117DF RID: 71647 RVA: 0x0052771C File Offset: 0x0052591C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -32,7 +32,7 @@ public class QuestReviewDetailImageItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060142FE RID: 82686 RVA: 0x00518A50 File Offset: 0x00516C50
+	// Token: 0x060117E0 RID: 71648 RVA: 0x00527788 File Offset: 0x00525988
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestReviewDetailImageItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ public class QuestReviewDetailImageItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060142FF RID: 82687 RVA: 0x00518A94 File Offset: 0x00516C94
+	// Token: 0x060117E1 RID: 71649 RVA: 0x005277CC File Offset: 0x005259CC
 	public UniTask RefreshAsync(QuestReviewNodeData node)
 	{
 		QuestReviewDetailImageItem.<RefreshAsync>d__4 <RefreshAsync>d__;
@@ -55,17 +55,17 @@ public class QuestReviewDetailImageItem : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040097FA RID: 38906
+	// Token: 0x04009952 RID: 39250
 	private readonly QuestReviewNodeData Node;
 
-	// Token: 0x02008CC0 RID: 36032
+	// Token: 0x02007E49 RID: 32329
 	[NullableContext(0)]
 	private class EImageItemComponentDefine
 	{
-		// Token: 0x0402DADF RID: 187103
+		// Token: 0x04028DF6 RID: 167414
 		public const int BtnSelf = 0;
 
-		// Token: 0x0402DAE0 RID: 187104
+		// Token: 0x04028DF7 RID: 167415
 		public const int TextureBg = 1;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x02004519 RID: 17689
+	// Token: 0x0200343B RID: 13371
 	public interface IExpressionContext
 	{
-		// Token: 0x170073F4 RID: 29684
-		// (get) Token: 0x0602D83F RID: 186431
-		// (set) Token: 0x0602D840 RID: 186432
+		// Token: 0x170046AC RID: 18092
+		// (get) Token: 0x06021F0F RID: 139023
+		// (set) Token: 0x06021F10 RID: 139024
 		EContextType ContextType { get; set; }
 	}
 }

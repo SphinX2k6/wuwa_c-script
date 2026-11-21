@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020029FB RID: 10747
+// Token: 0x02001F76 RID: 8054
 [NullableContext(1)]
 [Nullable(0)]
 public class MoonTogetherConfig : ConfigBase
 {
-	// Token: 0x060164B2 RID: 91314 RVA: 0x005A4566 File Offset: 0x005A2766
+	// Token: 0x06013EB9 RID: 81593 RVA: 0x005CF53E File Offset: 0x005CD73E
 	[NullableContext(2)]
 	public IReadOnlyList<MotorRoleCategory> GetRoleAreaList()
 	{
 		return ConfigMotorRoleCategoryAll.GetConfigList(true);
 	}
 
-	// Token: 0x060164B3 RID: 91315 RVA: 0x005A456E File Offset: 0x005A276E
+	// Token: 0x06013EBA RID: 81594 RVA: 0x005CF546 File Offset: 0x005CD746
 	public MotorRoleCategory? GetRoleAreaById(int areaId)
 	{
 		return ConfigMotorRoleCategoryById.GetConfig(areaId, true);
 	}
 
-	// Token: 0x060164B4 RID: 91316 RVA: 0x005A4577 File Offset: 0x005A2777
+	// Token: 0x06013EBB RID: 81595 RVA: 0x005CF54F File Offset: 0x005CD74F
 	public VehicleRidingRoles? GetVehicleRidingRolesById(int roleId)
 	{
 		return ConfigVehicleRidingRolesById.GetConfig(roleId, true);
 	}
 
-	// Token: 0x17001DC4 RID: 7620
-	// (get) Token: 0x060164B5 RID: 91317 RVA: 0x005A4580 File Offset: 0x005A2780
+	// Token: 0x17001E1D RID: 7709
+	// (get) Token: 0x06013EBC RID: 81596 RVA: 0x005CF558 File Offset: 0x005CD758
 	public static MoonTogetherConfig Instance
 	{
 		get
@@ -37,7 +37,7 @@ public class MoonTogetherConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060164B6 RID: 91318 RVA: 0x005A4587 File Offset: 0x005A2787
+	// Token: 0x06013EBD RID: 81597 RVA: 0x005CF55F File Offset: 0x005CD75F
 	public static MoonTogetherConfig GetOrCreateInstance()
 	{
 		if (MoonTogetherConfig._Instance == null)
@@ -47,7 +47,7 @@ public class MoonTogetherConfig : ConfigBase
 		return MoonTogetherConfig._Instance;
 	}
 
-	// Token: 0x060164B7 RID: 91319 RVA: 0x005A459B File Offset: 0x005A279B
+	// Token: 0x06013EBE RID: 81598 RVA: 0x005CF573 File Offset: 0x005CD773
 	public static bool CreateInstance()
 	{
 		if (MoonTogetherConfig._Instance != null)
@@ -58,24 +58,24 @@ public class MoonTogetherConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060164B8 RID: 91320 RVA: 0x005A45B1 File Offset: 0x005A27B1
+	// Token: 0x06013EBF RID: 81599 RVA: 0x005CF589 File Offset: 0x005CD789
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060164B9 RID: 91321 RVA: 0x005A45B3 File Offset: 0x005A27B3
+	// Token: 0x06013EC0 RID: 81600 RVA: 0x005CF58B File Offset: 0x005CD78B
 	public static void ResetStaticDefaultValue()
 	{
 		MoonTogetherConfig._Instance = null;
 	}
 
-	// Token: 0x060164BA RID: 91322 RVA: 0x005A45BB File Offset: 0x005A27BB
+	// Token: 0x06013EC1 RID: 81601 RVA: 0x005CF593 File Offset: 0x005CD793
 	static MoonTogetherConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MoonTogetherConfig.CreateStaticDefaultValue), new Action(MoonTogetherConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A5DE RID: 42462
+	// Token: 0x0400A9C8 RID: 43464
 	[Nullable(2)]
 	private static MoonTogetherConfig _Instance;
 }

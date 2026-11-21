@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200120A RID: 4618
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001346 RID: 4934
 	public class IWarningPreformActivateStateRecordEntity : IWarningPreformType
 	{
-		// Token: 0x060068D0 RID: 26832 RVA: 0x000FA11C File Offset: 0x000F831C
+		// Token: 0x06006F11 RID: 28433 RVA: 0x00107A28 File Offset: 0x00105C28
 		private IWarningPreformActivateStateRecordEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060068D1 RID: 26833 RVA: 0x000FA154 File Offset: 0x000F8354
+		// Token: 0x06006F12 RID: 28434 RVA: 0x00107A60 File Offset: 0x00105C60
 		public static IWarningPreformActivateStateRecordEntity Create([Nullable(2)] IWarningPreformActivateStateRecordEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068D2 RID: 26834 RVA: 0x000FA167 File Offset: 0x000F8367
+		// Token: 0x06006F13 RID: 28435 RVA: 0x00107A73 File Offset: 0x00105C73
 		public static IWarningPreformActivateStateRecordEntity CreateFromSetValue([Nullable(2)] IWarningPreformActivateStateRecordEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068D3 RID: 26835 RVA: 0x000FA17A File Offset: 0x000F837A
+		// Token: 0x06006F14 RID: 28436 RVA: 0x00107A86 File Offset: 0x00105C86
 		public new IWarningPreformActivateStateRecordEntity_SetValue ToSetValue()
 		{
 			return new IWarningPreformActivateStateRecordEntity_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021DE RID: 8670
-		// (get) Token: 0x060068D4 RID: 26836 RVA: 0x000FA199 File Offset: 0x000F8399
-		// (set) Token: 0x060068D5 RID: 26837 RVA: 0x000FA1C4 File Offset: 0x000F83C4
+		// Token: 0x1700239F RID: 9119
+		// (get) Token: 0x06006F15 RID: 28437 RVA: 0x00107AA5 File Offset: 0x00105CA5
+		// (set) Token: 0x06006F16 RID: 28438 RVA: 0x00107AD0 File Offset: 0x00105CD0
 		public override EWarningPreformType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021DF RID: 8671
-		// (get) Token: 0x060068D6 RID: 26838 RVA: 0x000FA1D2 File Offset: 0x000F83D2
-		// (set) Token: 0x060068D7 RID: 26839 RVA: 0x000FA1F9 File Offset: 0x000F83F9
+		// Token: 0x170023A0 RID: 9120
+		// (get) Token: 0x06006F17 RID: 28439 RVA: 0x00107ADE File Offset: 0x00105CDE
+		// (set) Token: 0x06006F18 RID: 28440 RVA: 0x00107B05 File Offset: 0x00105D05
 		public virtual List<int> TargetEntityIds
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003EB7 RID: 16055
+		// Token: 0x04004225 RID: 16933
 		[Nullable(2)]
 		protected new IWarningPreformActivateStateRecordEntity FbInstance;
 
-		// Token: 0x04003EB8 RID: 16056
+		// Token: 0x04004226 RID: 16934
 		[Nullable(2)]
 		protected new IWarningPreformActivateStateRecordEntity_SetValue PocoInterface;
 	}

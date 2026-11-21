@@ -6,55 +6,55 @@ using CSharpScript.Game.Module.WuwaGo.Movement;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x02004707 RID: 18183
+	// Token: 0x02003637 RID: 13879
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class WuWaGoGridRelocationRequest : IWuWaGoGridRelocationRequest, IWuWaGoGridRelocationContext
 	{
-		// Token: 0x170076B2 RID: 30386
-		// (get) Token: 0x0602F86B RID: 194667 RVA: 0x00B0376A File Offset: 0x00B0196A
-		// (set) Token: 0x0602F86C RID: 194668 RVA: 0x00B03772 File Offset: 0x00B01972
+		// Token: 0x1700496E RID: 18798
+		// (get) Token: 0x06024031 RID: 147505 RVA: 0x00A3343A File Offset: 0x00A3163A
+		// (set) Token: 0x06024032 RID: 147506 RVA: 0x00A33442 File Offset: 0x00A31642
 		[RequiredMember]
 		public WuWaGoGrid Grid { get; set; }
 
-		// Token: 0x170076B3 RID: 30387
-		// (get) Token: 0x0602F86D RID: 194669 RVA: 0x00B0377B File Offset: 0x00B0197B
-		// (set) Token: 0x0602F86E RID: 194670 RVA: 0x00B03783 File Offset: 0x00B01983
+		// Token: 0x1700496F RID: 18799
+		// (get) Token: 0x06024033 RID: 147507 RVA: 0x00A3344B File Offset: 0x00A3164B
+		// (set) Token: 0x06024034 RID: 147508 RVA: 0x00A33453 File Offset: 0x00A31653
 		[RequiredMember]
 		public Vector StartCoordinate { get; set; }
 
-		// Token: 0x170076B4 RID: 30388
-		// (get) Token: 0x0602F86F RID: 194671 RVA: 0x00B0378C File Offset: 0x00B0198C
-		// (set) Token: 0x0602F870 RID: 194672 RVA: 0x00B03794 File Offset: 0x00B01994
+		// Token: 0x17004970 RID: 18800
+		// (get) Token: 0x06024035 RID: 147509 RVA: 0x00A3345C File Offset: 0x00A3165C
+		// (set) Token: 0x06024036 RID: 147510 RVA: 0x00A33464 File Offset: 0x00A31664
 		[RequiredMember]
 		public Vector TargetCoordinate { get; set; }
 
-		// Token: 0x170076B5 RID: 30389
-		// (get) Token: 0x0602F871 RID: 194673 RVA: 0x00B0379D File Offset: 0x00B0199D
-		// (set) Token: 0x0602F872 RID: 194674 RVA: 0x00B037A5 File Offset: 0x00B019A5
+		// Token: 0x17004971 RID: 18801
+		// (get) Token: 0x06024037 RID: 147511 RVA: 0x00A3346D File Offset: 0x00A3166D
+		// (set) Token: 0x06024038 RID: 147512 RVA: 0x00A33475 File Offset: 0x00A31675
 		[RequiredMember]
 		public WuWaGoGridController GridController { get; set; }
 
-		// Token: 0x170076B6 RID: 30390
-		// (get) Token: 0x0602F873 RID: 194675 RVA: 0x00B037AE File Offset: 0x00B019AE
-		// (set) Token: 0x0602F874 RID: 194676 RVA: 0x00B037B6 File Offset: 0x00B019B6
+		// Token: 0x17004972 RID: 18802
+		// (get) Token: 0x06024039 RID: 147513 RVA: 0x00A3347E File Offset: 0x00A3167E
+		// (set) Token: 0x0602403A RID: 147514 RVA: 0x00A33486 File Offset: 0x00A31686
 		[RequiredMember]
 		public string OldKey { get; set; }
 
-		// Token: 0x170076B7 RID: 30391
-		// (get) Token: 0x0602F875 RID: 194677 RVA: 0x00B037BF File Offset: 0x00B019BF
-		// (set) Token: 0x0602F876 RID: 194678 RVA: 0x00B037C7 File Offset: 0x00B019C7
+		// Token: 0x17004973 RID: 18803
+		// (get) Token: 0x0602403B RID: 147515 RVA: 0x00A3348F File Offset: 0x00A3168F
+		// (set) Token: 0x0602403C RID: 147516 RVA: 0x00A33497 File Offset: 0x00A31697
 		[RequiredMember]
 		public string TargetKey { get; set; }
 
-		// Token: 0x170076B8 RID: 30392
-		// (get) Token: 0x0602F877 RID: 194679 RVA: 0x00B037D0 File Offset: 0x00B019D0
-		// (set) Token: 0x0602F878 RID: 194680 RVA: 0x00B037D8 File Offset: 0x00B019D8
+		// Token: 0x17004974 RID: 18804
+		// (get) Token: 0x0602403D RID: 147517 RVA: 0x00A334A0 File Offset: 0x00A316A0
+		// (set) Token: 0x0602403E RID: 147518 RVA: 0x00A334A8 File Offset: 0x00A316A8
 		[RequiredMember]
 		public IReadOnlyList<IWuWaGoGridMoveParticipant> Participants { get; set; }
 
-		// Token: 0x0602F879 RID: 194681 RVA: 0x00B037E1 File Offset: 0x00B019E1
+		// Token: 0x0602403F RID: 147519 RVA: 0x00A334B1 File Offset: 0x00A316B1
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public WuWaGoGridRelocationRequest()

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DD9 RID: 19929
+	// Token: 0x020052DE RID: 21214
 	public enum ENearbyTrackingTexture : byte
 	{
-		// Token: 0x0400DA5A RID: 55898
+		// Token: 0x0400E5AD RID: 58797
 		BigTeleporter,
-		// Token: 0x0400DA5B RID: 55899
+		// Token: 0x0400E5AE RID: 58798
 		SmallTeleporter,
-		// Token: 0x0400DA5C RID: 55900
+		// Token: 0x0400E5AF RID: 58799
 		TreasureBox,
-		// Token: 0x0400DA5D RID: 55901
+		// Token: 0x0400E5B0 RID: 58800
 		TeleControl,
-		// Token: 0x0400DA5E RID: 55902
+		// Token: 0x0400E5B1 RID: 58801
 		PhantomBox,
-		// Token: 0x0400DA5F RID: 55903
+		// Token: 0x0400E5B2 RID: 58802
 		DungeonKey,
-		// Token: 0x0400DA60 RID: 55904
+		// Token: 0x0400E5B3 RID: 58803
 		FishingSpectrum,
-		// Token: 0x0400DA61 RID: 55905
+		// Token: 0x0400E5B4 RID: 58804
 		Gongduola,
-		// Token: 0x0400DA62 RID: 55906
+		// Token: 0x0400E5B5 RID: 58805
 		Paver,
-		// Token: 0x0400DA63 RID: 55907
+		// Token: 0x0400E5B6 RID: 58806
 		DaemonHack,
-		// Token: 0x0400DA64 RID: 55908
+		// Token: 0x0400E5B7 RID: 58807
 		GiantGift
 	}
 }

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 {
-	// Token: 0x020062DC RID: 25308
+	// Token: 0x0200525A RID: 21082
 	public class PinballWeaponPropItemView : GridProxyAbstract<int>
 	{
-		// Token: 0x0603FADE RID: 260830 RVA: 0x00F685D8 File Offset: 0x00F667D8
+		// Token: 0x0603479F RID: 214943 RVA: 0x00EAF534 File Offset: 0x00EAD734
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FADF RID: 260831 RVA: 0x00F68684 File Offset: 0x00F66884
+		// Token: 0x060347A0 RID: 214944 RVA: 0x00EAF5E0 File Offset: 0x00EAD7E0
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			PinballWeaponAttr? pinballWeaponAttrConfigById = PinballConfig.Instance.GetPinballWeaponAttrConfigById(data);
@@ -76,38 +76,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			base.TrySetTextureByPath(pinballPropertyIndexConfigById.Value.Icon, base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x0603FAE0 RID: 260832 RVA: 0x00F687FC File Offset: 0x00F669FC
+		// Token: 0x060347A1 RID: 214945 RVA: 0x00EAF758 File Offset: 0x00EAD958
 		public override void Clear()
 		{
 		}
 
-		// Token: 0x0603FAE1 RID: 260833 RVA: 0x00F687FE File Offset: 0x00F669FE
+		// Token: 0x060347A2 RID: 214946 RVA: 0x00EAF75A File Offset: 0x00EAD95A
 		public override void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603FAE2 RID: 260834 RVA: 0x00F68800 File Offset: 0x00F66A00
+		// Token: 0x060347A3 RID: 214947 RVA: 0x00EAF75C File Offset: 0x00EAD95C
 		public override void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603FAE3 RID: 260835 RVA: 0x00F68802 File Offset: 0x00F66A02
+		// Token: 0x060347A4 RID: 214948 RVA: 0x00EAF75E File Offset: 0x00EAD95E
 		[NullableContext(1)]
 		public override object GetKey(int data, int gridIndex)
 		{
 			return gridIndex;
 		}
 
-		// Token: 0x0200C4CC RID: 50380
+		// Token: 0x0200AEB3 RID: 44723
 		private enum EPropItemComponent
 		{
-			// Token: 0x0403B627 RID: 243239
+			// Token: 0x04035F89 RID: 221065
 			PropName,
-			// Token: 0x0403B628 RID: 243240
+			// Token: 0x04035F8A RID: 221066
 			PropValue,
-			// Token: 0x0403B629 RID: 243241
+			// Token: 0x04035F8B RID: 221067
 			PropIcon,
-			// Token: 0x0403B62A RID: 243242
+			// Token: 0x04035F8C RID: 221068
 			PropBg
 		}
 	}

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004608 RID: 17928
+	// Token: 0x02004A70 RID: 19056
 	public enum TLevelPlayInfoMappingConfig : byte
 	{
-		// Token: 0x0400C70B RID: 50955
+		// Token: 0x0400D13A RID: 53562
 		NONE,
-		// Token: 0x0400C70C RID: 50956
+		// Token: 0x0400D13B RID: 53563
 		ILevelPlayInfoMappingNightmareSpawnPoint,
-		// Token: 0x0400C70D RID: 50957
+		// Token: 0x0400D13C RID: 53564
 		ILevelPlayInfoMappingPunishReport,
-		// Token: 0x0400C70E RID: 50958
+		// Token: 0x0400D13D RID: 53565
 		ILevelPlayInfoMappingSoaringChallenge
 	}
 }

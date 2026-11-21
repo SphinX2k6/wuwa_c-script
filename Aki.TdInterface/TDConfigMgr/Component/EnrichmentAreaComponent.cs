@@ -6,13 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000F3 RID: 243
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020000FC RID: 252
 	public class EnrichmentAreaComponent : IComponentBase
 	{
-		// Token: 0x060003B6 RID: 950 RVA: 0x0001C79C File Offset: 0x0001A99C
-		[NullableContext(1)]
+		// Token: 0x060003BA RID: 954 RVA: 0x0001D110 File Offset: 0x0001B310
 		private EnrichmentAreaComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060003B7 RID: 951 RVA: 0x0001C7D4 File Offset: 0x0001A9D4
-		[NullableContext(1)]
+		// Token: 0x060003BB RID: 955 RVA: 0x0001D148 File Offset: 0x0001B348
 		public static EnrichmentAreaComponent Create([Nullable(2)] EnrichmentAreaComponent instance)
 		{
 			if (instance == null)
@@ -41,8 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060003B8 RID: 952 RVA: 0x0001C7E7 File Offset: 0x0001A9E7
-		[NullableContext(1)]
+		// Token: 0x060003BC RID: 956 RVA: 0x0001D15B File Offset: 0x0001B35B
 		public static EnrichmentAreaComponent CreateFromSetValue([Nullable(2)] EnrichmentAreaComponent_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060003B9 RID: 953 RVA: 0x0001C7FC File Offset: 0x0001A9FC
-		[NullableContext(1)]
+		// Token: 0x060003BD RID: 957 RVA: 0x0001D170 File Offset: 0x0001B370
 		public new EnrichmentAreaComponent_SetValue ToSetValue()
 		{
 			return new EnrichmentAreaComponent_SetValue
@@ -70,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700013F RID: 319
-		// (get) Token: 0x060003BA RID: 954 RVA: 0x0001C858 File Offset: 0x0001AA58
-		// (set) Token: 0x060003BB RID: 955 RVA: 0x0001C892 File Offset: 0x0001AA92
+		// Token: 0x17000141 RID: 321
+		// (get) Token: 0x060003BE RID: 958 RVA: 0x0001D1CC File Offset: 0x0001B3CC
+		// (set) Token: 0x060003BF RID: 959 RVA: 0x0001D206 File Offset: 0x0001B406
 		public override bool? Disabled
 		{
 			get
@@ -94,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000140 RID: 320
-		// (get) Token: 0x060003BC RID: 956 RVA: 0x0001C8A0 File Offset: 0x0001AAA0
-		// (set) Token: 0x060003BD RID: 957 RVA: 0x0001C8CA File Offset: 0x0001AACA
+		// Token: 0x17000142 RID: 322
+		// (get) Token: 0x060003C0 RID: 960 RVA: 0x0001D214 File Offset: 0x0001B414
+		// (set) Token: 0x060003C1 RID: 961 RVA: 0x0001D23E File Offset: 0x0001B43E
 		public override bool? EdIsLocked
 		{
 			get
@@ -113,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000141 RID: 321
-		// (get) Token: 0x060003BE RID: 958 RVA: 0x0001C8D8 File Offset: 0x0001AAD8
-		// (set) Token: 0x060003BF RID: 959 RVA: 0x0001C912 File Offset: 0x0001AB12
+		// Token: 0x17000143 RID: 323
+		// (get) Token: 0x060003C2 RID: 962 RVA: 0x0001D24C File Offset: 0x0001B44C
+		// (set) Token: 0x060003C3 RID: 963 RVA: 0x0001D286 File Offset: 0x0001B486
 		public virtual EEnrichmentAreaType? EnrichmentAreaType
 		{
 			get
@@ -137,13 +131,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000142 RID: 322
-		// (get) Token: 0x060003C0 RID: 960 RVA: 0x0001C920 File Offset: 0x0001AB20
-		// (set) Token: 0x060003C1 RID: 961 RVA: 0x0001C947 File Offset: 0x0001AB47
-		[Nullable(1)]
+		// Token: 0x17000144 RID: 324
+		// (get) Token: 0x060003C4 RID: 964 RVA: 0x0001D294 File Offset: 0x0001B494
+		// (set) Token: 0x060003C5 RID: 965 RVA: 0x0001D2BB File Offset: 0x0001B4BB
 		public virtual List<int> RefEntityIds
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -157,18 +149,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.RefEntityIds;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.GetOrCreatePoco().RefEntityIds = value;
 			}
 		}
 
-		// Token: 0x17000143 RID: 323
-		// (get) Token: 0x060003C2 RID: 962 RVA: 0x0001C955 File Offset: 0x0001AB55
-		// (set) Token: 0x060003C3 RID: 963 RVA: 0x0001C97C File Offset: 0x0001AB7C
+		// Token: 0x17000145 RID: 325
+		// (get) Token: 0x060003C6 RID: 966 RVA: 0x0001D2C9 File Offset: 0x0001B4C9
+		// (set) Token: 0x060003C7 RID: 967 RVA: 0x0001D2F0 File Offset: 0x0001B4F0
+		[Nullable(2)]
 		public virtual List<int> FogIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -182,17 +175,20 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.FogIds;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().FogIds = value;
 			}
 		}
 
-		// Token: 0x17000144 RID: 324
-		// (get) Token: 0x060003C4 RID: 964 RVA: 0x0001C98A File Offset: 0x0001AB8A
-		// (set) Token: 0x060003C5 RID: 965 RVA: 0x0001C9A1 File Offset: 0x0001ABA1
+		// Token: 0x17000146 RID: 326
+		// (get) Token: 0x060003C8 RID: 968 RVA: 0x0001D2FE File Offset: 0x0001B4FE
+		// (set) Token: 0x060003C9 RID: 969 RVA: 0x0001D315 File Offset: 0x0001B515
+		[Nullable(2)]
 		public virtual IEnrichmentEntitySearchTool EdEntitySearchTool
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.PocoInterface != null)
@@ -201,16 +197,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return null;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().EdEntitySearchTool = value;
 			}
 		}
 
-		// Token: 0x0400051F RID: 1311
+		// Token: 0x04000549 RID: 1353
+		[Nullable(2)]
 		protected new EnrichmentAreaComponent FbInstance;
 
-		// Token: 0x04000520 RID: 1312
+		// Token: 0x0400054A RID: 1354
+		[Nullable(2)]
 		protected new EnrichmentAreaComponent_SetValue PocoInterface;
 	}
 }

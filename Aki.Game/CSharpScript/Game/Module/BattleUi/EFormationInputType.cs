@@ -2,14 +2,16 @@
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C8F RID: 23695
+	// Token: 0x02004C70 RID: 19568
 	public enum EFormationInputType
 	{
-		// Token: 0x0401F343 RID: 127811
+		// Token: 0x04019DF9 RID: 105977
 		Cooperate,
-		// Token: 0x0401F344 RID: 127812
+		// Token: 0x04019DFA RID: 105978
 		FishActivity,
-		// Token: 0x0401F345 RID: 127813
-		SpringManor
+		// Token: 0x04019DFB RID: 105979
+		SpringManor,
+		// Token: 0x04019DFC RID: 105980
+		RoleTower
 	}
 }

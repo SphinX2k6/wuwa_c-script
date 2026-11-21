@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B9F RID: 7071
+// Token: 0x0200105E RID: 4190
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class FloroRanchSubDungeonItem : GridProxyAbstract<FloroRanchSubDungeonData>
 {
-	// Token: 0x0600D28E RID: 53902 RVA: 0x0030607C File Offset: 0x0030427C
+	// Token: 0x0600A69F RID: 42655 RVA: 0x0031115C File Offset: 0x0030F35C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -31,7 +31,7 @@ public class FloroRanchSubDungeonItem : GridProxyAbstract<FloroRanchSubDungeonDa
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D28F RID: 53903 RVA: 0x00306128 File Offset: 0x00304328
+	// Token: 0x0600A6A0 RID: 42656 RVA: 0x00311208 File Offset: 0x0030F408
 	[NullableContext(1)]
 	public override void Refresh(FloroRanchSubDungeonData data, bool isSelected, int gridIndex)
 	{
@@ -58,19 +58,19 @@ public class FloroRanchSubDungeonItem : GridProxyAbstract<FloroRanchSubDungeonDa
 		sprite4.SetUIActive(!data.IsUnLock);
 	}
 
-	// Token: 0x0200813A RID: 33082
+	// Token: 0x020072C8 RID: 29384
 	private class EComponents
 	{
-		// Token: 0x0402A2E8 RID: 172776
+		// Token: 0x0402561C RID: 153116
 		public const int SpriteFinished = 0;
 
-		// Token: 0x0402A2E9 RID: 172777
+		// Token: 0x0402561D RID: 153117
 		public const int SpriteLock = 1;
 
-		// Token: 0x0402A2EA RID: 172778
+		// Token: 0x0402561E RID: 153118
 		public const int SpriteFinishedLine = 2;
 
-		// Token: 0x0402A2EB RID: 172779
+		// Token: 0x0402561F RID: 153119
 		public const int SpriteOriginalLine = 3;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040E5 RID: 16613
+	// Token: 0x02004526 RID: 17702
 	public struct IRoleTowerSystemVar : IFlatbufferObject
 	{
-		// Token: 0x1700751B RID: 29979
-		// (get) Token: 0x06018350 RID: 99152 RVA: 0x0037C620 File Offset: 0x0037A820
+		// Token: 0x17007B21 RID: 31521
+		// (get) Token: 0x060199F1 RID: 104945 RVA: 0x003A6570 File Offset: 0x003A4770
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018351 RID: 99153 RVA: 0x0037C62D File Offset: 0x0037A82D
+		// Token: 0x060199F2 RID: 104946 RVA: 0x003A657D File Offset: 0x003A477D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018352 RID: 99154 RVA: 0x0037C634 File Offset: 0x0037A834
+		// Token: 0x060199F3 RID: 104947 RVA: 0x003A6584 File Offset: 0x003A4784
 		public static IRoleTowerSystemVar GetRootAsIRoleTowerSystemVar(ByteBuffer _bb)
 		{
 			return IRoleTowerSystemVar.GetRootAsIRoleTowerSystemVar(_bb, default(IRoleTowerSystemVar));
 		}
 
-		// Token: 0x06018353 RID: 99155 RVA: 0x0037C650 File Offset: 0x0037A850
+		// Token: 0x060199F4 RID: 104948 RVA: 0x003A65A0 File Offset: 0x003A47A0
 		public static IRoleTowerSystemVar GetRootAsIRoleTowerSystemVar(ByteBuffer _bb, IRoleTowerSystemVar obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018354 RID: 99156 RVA: 0x0037C66D File Offset: 0x0037A86D
+		// Token: 0x060199F5 RID: 104949 RVA: 0x003A65BD File Offset: 0x003A47BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018355 RID: 99157 RVA: 0x0037C67C File Offset: 0x0037A87C
+		// Token: 0x060199F6 RID: 104950 RVA: 0x003A65CC File Offset: 0x003A47CC
 		public IRoleTowerSystemVar __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700751C RID: 29980
-		// (get) Token: 0x06018356 RID: 99158 RVA: 0x0037C68C File Offset: 0x0037A88C
+		// Token: 0x17007B22 RID: 31522
+		// (get) Token: 0x060199F7 RID: 104951 RVA: 0x003A65DC File Offset: 0x003A47DC
 		public ERoleTowerSystemVarType VarType
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700751D RID: 29981
-		// (get) Token: 0x06018357 RID: 99159 RVA: 0x0037C6C8 File Offset: 0x0037A8C8
+		// Token: 0x17007B23 RID: 31523
+		// (get) Token: 0x060199F8 RID: 104952 RVA: 0x003A6618 File Offset: 0x003A4818
 		public TVarRef VarRefType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018358 RID: 99160 RVA: 0x0037C704 File Offset: 0x0037A904
+		// Token: 0x060199F9 RID: 104953 RVA: 0x003A6654 File Offset: 0x003A4854
 		public TTable? VarRef<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,37 +89,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06018359 RID: 99161 RVA: 0x0037C748 File Offset: 0x0037A948
+		// Token: 0x060199FA RID: 104954 RVA: 0x003A6698 File Offset: 0x003A4898
 		public IConstVarRef VarRefAsIConstVarRef()
 		{
 			return this.VarRef<IConstVarRef>().Value;
 		}
 
-		// Token: 0x0601835A RID: 99162 RVA: 0x0037C764 File Offset: 0x0037A964
+		// Token: 0x060199FB RID: 104955 RVA: 0x003A66B4 File Offset: 0x003A48B4
 		public IGlobalVarRef VarRefAsIGlobalVarRef()
 		{
 			return this.VarRef<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x0601835B RID: 99163 RVA: 0x0037C780 File Offset: 0x0037A980
+		// Token: 0x060199FC RID: 104956 RVA: 0x003A66D0 File Offset: 0x003A48D0
 		public IOtherVarRef VarRefAsIOtherVarRef()
 		{
 			return this.VarRef<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x0601835C RID: 99164 RVA: 0x0037C79C File Offset: 0x0037A99C
+		// Token: 0x060199FD RID: 104957 RVA: 0x003A66EC File Offset: 0x003A48EC
 		public ISelfVarRef VarRefAsISelfVarRef()
 		{
 			return this.VarRef<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x0601835D RID: 99165 RVA: 0x0037C7B8 File Offset: 0x0037A9B8
+		// Token: 0x060199FE RID: 104958 RVA: 0x003A6708 File Offset: 0x003A4908
 		public ISystemVarRef VarRefAsISystemVarRef()
 		{
 			return this.VarRef<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x0601835E RID: 99166 RVA: 0x0037C7D3 File Offset: 0x0037A9D3
+		// Token: 0x060199FF RID: 104959 RVA: 0x003A6723 File Offset: 0x003A4923
 		public static Offset<IRoleTowerSystemVar> CreateIRoleTowerSystemVar(FlatBufferBuilder builder, ERoleTowerSystemVarType VarType = ERoleTowerSystemVarType.Batch, TVarRef VarRef_type = TVarRef.NONE, int VarRefOffset = 0)
 		{
 			builder.StartTable(3);
@@ -129,37 +129,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRoleTowerSystemVar.EndIRoleTowerSystemVar(builder);
 		}
 
-		// Token: 0x0601835F RID: 99167 RVA: 0x0037C7F7 File Offset: 0x0037A9F7
+		// Token: 0x06019A00 RID: 104960 RVA: 0x003A6747 File Offset: 0x003A4947
 		public static void StartIRoleTowerSystemVar(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06018360 RID: 99168 RVA: 0x0037C800 File Offset: 0x0037AA00
+		// Token: 0x06019A01 RID: 104961 RVA: 0x003A6750 File Offset: 0x003A4950
 		public static void AddVarType(FlatBufferBuilder builder, ERoleTowerSystemVarType varType)
 		{
 			builder.AddByte(0, (byte)varType, 0);
 		}
 
-		// Token: 0x06018361 RID: 99169 RVA: 0x0037C80B File Offset: 0x0037AA0B
+		// Token: 0x06019A02 RID: 104962 RVA: 0x003A675B File Offset: 0x003A495B
 		public static void AddVarRefType(FlatBufferBuilder builder, TVarRef varRefType)
 		{
 			builder.AddByte(1, (byte)varRefType, 0);
 		}
 
-		// Token: 0x06018362 RID: 99170 RVA: 0x0037C816 File Offset: 0x0037AA16
+		// Token: 0x06019A03 RID: 104963 RVA: 0x003A6766 File Offset: 0x003A4966
 		public static void AddVarRef(FlatBufferBuilder builder, int varRefOffset)
 		{
 			builder.AddOffset(2, varRefOffset, 0);
 		}
 
-		// Token: 0x06018363 RID: 99171 RVA: 0x0037C821 File Offset: 0x0037AA21
+		// Token: 0x06019A04 RID: 104964 RVA: 0x003A6771 File Offset: 0x003A4971
 		public static Offset<IRoleTowerSystemVar> EndIRoleTowerSystemVar(FlatBufferBuilder builder)
 		{
 			return new Offset<IRoleTowerSystemVar>(builder.EndTable());
 		}
 
-		// Token: 0x06018364 RID: 99172 RVA: 0x0037C830 File Offset: 0x0037AA30
+		// Token: 0x06019A05 RID: 104965 RVA: 0x003A6780 File Offset: 0x003A4980
 		public IRoleTowerSystemVarT UnPack()
 		{
 			IRoleTowerSystemVarT roleTowerSystemVarT = new IRoleTowerSystemVarT();
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return roleTowerSystemVarT;
 		}
 
-		// Token: 0x06018365 RID: 99173 RVA: 0x0037C84C File Offset: 0x0037AA4C
+		// Token: 0x06019A06 RID: 104966 RVA: 0x003A679C File Offset: 0x003A499C
 		public void UnPackTo(IRoleTowerSystemVarT _o)
 		{
 			_o.VarType = this.VarType;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018366 RID: 99174 RVA: 0x0037C9B8 File Offset: 0x0037ABB8
+		// Token: 0x06019A07 RID: 104967 RVA: 0x003A6908 File Offset: 0x003A4B08
 		public static Offset<IRoleTowerSystemVar> Pack(FlatBufferBuilder builder, IRoleTowerSystemVarT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRoleTowerSystemVar.CreateIRoleTowerSystemVar(builder, _o.VarType, varRef_type, varRefOffset);
 		}
 
-		// Token: 0x0400BC7D RID: 48253
+		// Token: 0x0400C666 RID: 50790
 		private Table __p;
 	}
 }

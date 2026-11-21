@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AED RID: 27373
+	// Token: 0x02005C65 RID: 23653
 	public class LevelEventAddBuffToEntity : LevelEventBase
 	{
-		// Token: 0x06043FD3 RID: 278483 RVA: 0x010AE150 File Offset: 0x010AC350
+		// Token: 0x0603A125 RID: 237861 RVA: 0x010579CC File Offset: 0x01055BCC
 		public LevelEventAddBuffToEntity(int id) : base(id)
 		{
 		}

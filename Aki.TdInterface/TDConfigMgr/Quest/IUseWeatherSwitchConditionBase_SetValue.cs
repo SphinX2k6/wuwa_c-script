@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011F7 RID: 4599
+	// Token: 0x02001333 RID: 4915
 	public class IUseWeatherSwitchConditionBase_SetValue
 	{
-		// Token: 0x04003E87 RID: 16007
+		// Token: 0x040041F5 RID: 16885
 		public EUseWeatherSwitchCheckType Type;
 	}
 }

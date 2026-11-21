@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Menu;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002569 RID: 9577
+// Token: 0x02001A54 RID: 6740
 public class PhotoFilterSeniorSliderItem : GridProxyAbstract<FilterSeniorSetting>
 {
-	// Token: 0x0601354F RID: 79183 RVA: 0x004CF6E4 File Offset: 0x004CD8E4
+	// Token: 0x06010A31 RID: 68145 RVA: 0x004DE31C File Offset: 0x004DC51C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,13 +28,13 @@ public class PhotoFilterSeniorSliderItem : GridProxyAbstract<FilterSeniorSetting
 		};
 	}
 
-	// Token: 0x06013550 RID: 79184 RVA: 0x004CF7B9 File Offset: 0x004CD9B9
+	// Token: 0x06010A32 RID: 68146 RVA: 0x004DE3F1 File Offset: 0x004DC5F1
 	protected override void OnStart()
 	{
 		base.GetSlider(1).OnValueChangeCb.Bind(new Action<float>(this.OnSliderValueChanged));
 	}
 
-	// Token: 0x06013551 RID: 79185 RVA: 0x004CF7D8 File Offset: 0x004CD9D8
+	// Token: 0x06010A33 RID: 68147 RVA: 0x004DE410 File Offset: 0x004DC610
 	public override void Refresh(FilterSeniorSetting data, bool isSelected, int gridIndex)
 	{
 		this.FilterSeniorSetting = data;
@@ -57,14 +57,14 @@ public class PhotoFilterSeniorSliderItem : GridProxyAbstract<FilterSeniorSetting
 		this.RefreshValue();
 	}
 
-	// Token: 0x06013552 RID: 79186 RVA: 0x004CF860 File Offset: 0x004CDA60
+	// Token: 0x06010A34 RID: 68148 RVA: 0x004DE498 File Offset: 0x004DC698
 	[NullableContext(1)]
 	public override object GetKey(FilterSeniorSetting data, int displayIndex)
 	{
 		return data.ParamIndex;
 	}
 
-	// Token: 0x06013553 RID: 79187 RVA: 0x004CF870 File Offset: 0x004CDA70
+	// Token: 0x06010A35 RID: 68149 RVA: 0x004DE4A8 File Offset: 0x004DC6A8
 	private void RefreshValue()
 	{
 		int filterSettingIdCache = MenuModel.Instance.FilterSettingIdCache;
@@ -96,7 +96,7 @@ public class PhotoFilterSeniorSliderItem : GridProxyAbstract<FilterSeniorSetting
 		this.RefreshResetBtn();
 	}
 
-	// Token: 0x06013554 RID: 79188 RVA: 0x004CF985 File Offset: 0x004CDB85
+	// Token: 0x06010A36 RID: 68150 RVA: 0x004DE5BD File Offset: 0x004DC7BD
 	private void RefreshResetBtn()
 	{
 		UUIButtonComponent button = base.GetButton(8);
@@ -107,7 +107,7 @@ public class PhotoFilterSeniorSliderItem : GridProxyAbstract<FilterSeniorSetting
 		button.SetSelfInteractive(FilterSettingController.Instance.IsFilterParamChanged((EFilterSettingValueIndex)this.FilterSeniorSetting.ParamIndex));
 	}
 
-	// Token: 0x06013555 RID: 79189 RVA: 0x004CF9B0 File Offset: 0x004CDBB0
+	// Token: 0x06010A37 RID: 68151 RVA: 0x004DE5E8 File Offset: 0x004DC7E8
 	private void OnSliderValueChanged(float value)
 	{
 		FilterSettingViewModel parentViewModel = this.ParentViewModel;
@@ -140,7 +140,7 @@ public class PhotoFilterSeniorSliderItem : GridProxyAbstract<FilterSeniorSetting
 		onParamValueChanged();
 	}
 
-	// Token: 0x06013556 RID: 79190 RVA: 0x004CFA8D File Offset: 0x004CDC8D
+	// Token: 0x06010A38 RID: 68152 RVA: 0x004DE6C5 File Offset: 0x004DC8C5
 	private void OnResetClick()
 	{
 		FilterSettingViewModel parentViewModel = this.ParentViewModel;
@@ -161,39 +161,39 @@ public class PhotoFilterSeniorSliderItem : GridProxyAbstract<FilterSeniorSetting
 		onParamValueChanged();
 	}
 
-	// Token: 0x040091C0 RID: 37312
+	// Token: 0x04009319 RID: 37657
 	[Nullable(2)]
 	public FilterSettingViewModel ParentViewModel;
 
-	// Token: 0x040091C1 RID: 37313
+	// Token: 0x0400931A RID: 37658
 	[Nullable(2)]
 	public Action OnParamValueChanged;
 
-	// Token: 0x040091C2 RID: 37314
+	// Token: 0x0400931B RID: 37659
 	private FilterSeniorSetting FilterSeniorSetting;
 
-	// Token: 0x02008B4C RID: 35660
+	// Token: 0x02007CD2 RID: 31954
 	private enum EComponents
 	{
-		// Token: 0x0402D3A6 RID: 185254
+		// Token: 0x040286B3 RID: 165555
 		TextValue,
-		// Token: 0x0402D3A7 RID: 185255
+		// Token: 0x040286B4 RID: 165556
 		Slider,
-		// Token: 0x0402D3A8 RID: 185256
+		// Token: 0x040286B5 RID: 165557
 		SpriteHandle,
-		// Token: 0x0402D3A9 RID: 185257
+		// Token: 0x040286B6 RID: 165558
 		SpriteNormalBg,
-		// Token: 0x0402D3AA RID: 185258
+		// Token: 0x040286B7 RID: 165559
 		SpriteTempBg,
-		// Token: 0x0402D3AB RID: 185259
+		// Token: 0x040286B8 RID: 165560
 		ItemFillArea,
-		// Token: 0x0402D3AC RID: 185260
+		// Token: 0x040286B9 RID: 165561
 		ToggleRoot,
-		// Token: 0x0402D3AD RID: 185261
+		// Token: 0x040286BA RID: 165562
 		TextName,
-		// Token: 0x0402D3AE RID: 185262
+		// Token: 0x040286BB RID: 165563
 		BtnReset,
-		// Token: 0x0402D3AF RID: 185263
+		// Token: 0x040286BC RID: 165564
 		ItemLock
 	}
 }

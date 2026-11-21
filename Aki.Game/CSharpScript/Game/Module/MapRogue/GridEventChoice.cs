@@ -10,37 +10,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055D1 RID: 21969
+	// Token: 0x020045A7 RID: 17831
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GridEventChoice : UiPanelBase, IEventStepItem
 	{
-		// Token: 0x170086FA RID: 34554
-		// (get) Token: 0x06037FD1 RID: 229329 RVA: 0x00D43012 File Offset: 0x00D41212
-		// (set) Token: 0x06037FD2 RID: 229330 RVA: 0x00D4301A File Offset: 0x00D4121A
+		// Token: 0x17005AC1 RID: 23233
+		// (get) Token: 0x0602CECF RID: 184015 RVA: 0x00C90D5A File Offset: 0x00C8EF5A
+		// (set) Token: 0x0602CED0 RID: 184016 RVA: 0x00C90D62 File Offset: 0x00C8EF62
 		public Action<int, int> ExecuteStep { get; set; }
 
-		// Token: 0x170086FB RID: 34555
-		// (get) Token: 0x06037FD3 RID: 229331 RVA: 0x00D43023 File Offset: 0x00D41223
+		// Token: 0x17005AC2 RID: 23234
+		// (get) Token: 0x0602CED1 RID: 184017 RVA: 0x00C90D6B File Offset: 0x00C8EF6B
 		public int StepId { get; }
 
-		// Token: 0x170086FC RID: 34556
-		// (get) Token: 0x06037FD4 RID: 229332 RVA: 0x00D4302B File Offset: 0x00D4122B
+		// Token: 0x17005AC3 RID: 23235
+		// (get) Token: 0x0602CED2 RID: 184018 RVA: 0x00C90D73 File Offset: 0x00C8EF73
 		public EStepType StepType { get; }
 
-		// Token: 0x170086FD RID: 34557
-		// (get) Token: 0x06037FD5 RID: 229333 RVA: 0x00D43033 File Offset: 0x00D41233
-		// (set) Token: 0x06037FD6 RID: 229334 RVA: 0x00D4303B File Offset: 0x00D4123B
+		// Token: 0x17005AC4 RID: 23236
+		// (get) Token: 0x0602CED3 RID: 184019 RVA: 0x00C90D7B File Offset: 0x00C8EF7B
+		// (set) Token: 0x0602CED4 RID: 184020 RVA: 0x00C90D83 File Offset: 0x00C8EF83
 		public Action<int, EStepType> CanInteractCallback { get; set; }
 
-		// Token: 0x06037FD7 RID: 229335 RVA: 0x00D43044 File Offset: 0x00D41244
+		// Token: 0x0602CED5 RID: 184021 RVA: 0x00C90D8C File Offset: 0x00C8EF8C
 		public GridEventChoice(int stepId, EStepType stepType = EStepType.Choose)
 		{
 			this.StepId = stepId;
 			this.StepType = stepType;
 		}
 
-		// Token: 0x06037FD8 RID: 229336 RVA: 0x00D43068 File Offset: 0x00D41268
+		// Token: 0x0602CED6 RID: 184022 RVA: 0x00C90DB0 File Offset: 0x00C8EFB0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06037FD9 RID: 229337 RVA: 0x00D43130 File Offset: 0x00D41330
+		// Token: 0x0602CED7 RID: 184023 RVA: 0x00C90E78 File Offset: 0x00C8F078
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GridEventChoice.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037FDA RID: 229338 RVA: 0x00D43173 File Offset: 0x00D41373
+		// Token: 0x0602CED8 RID: 184024 RVA: 0x00C90EBB File Offset: 0x00C8F0BB
 		protected override void OnStart()
 		{
 			this.ToggleLayout = new GenericLayout<GridEventChoiceToggle, IToggleItemData>(base.GetVerticalLayout(5), new Func<GridEventChoiceToggle>(this.OnCreateToggleItem), null, false, true);
 		}
 
-		// Token: 0x06037FDB RID: 229339 RVA: 0x00D43198 File Offset: 0x00D41398
+		// Token: 0x0602CED9 RID: 184025 RVA: 0x00C90EE0 File Offset: 0x00C8F0E0
 		[NullableContext(1)]
 		public UniTask Refresh(IList<EventOption> options)
 		{
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037FDC RID: 229340 RVA: 0x00D431E4 File Offset: 0x00D413E4
+		// Token: 0x0602CEDA RID: 184026 RVA: 0x00C90F2C File Offset: 0x00C8F12C
 		[NullableContext(1)]
 		private void SetTitle(string tagId, [Nullable(2)] string tagColor = null)
 		{
@@ -107,12 +107,12 @@ namespace CSharpScript.Game.Module.MapRogue
 			item.SetUIActive(true);
 		}
 
-		// Token: 0x06037FDD RID: 229341 RVA: 0x00D43242 File Offset: 0x00D41442
+		// Token: 0x0602CEDB RID: 184027 RVA: 0x00C90F8A File Offset: 0x00C8F18A
 		public void MaskClick()
 		{
 		}
 
-		// Token: 0x06037FDE RID: 229342 RVA: 0x00D43244 File Offset: 0x00D41444
+		// Token: 0x0602CEDC RID: 184028 RVA: 0x00C90F8C File Offset: 0x00C8F18C
 		[NullableContext(1)]
 		private GridEventChoiceToggle OnCreateToggleItem()
 		{
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06037FDF RID: 229343 RVA: 0x00D43270 File Offset: 0x00D41470
+		// Token: 0x0602CEDD RID: 184029 RVA: 0x00C90FB8 File Offset: 0x00C8F1B8
 		private void OnExtendToggleStateChanged(EToggleState state, int optionId)
 		{
 			if (state != EToggleState.ETT_UnChecked)
@@ -149,13 +149,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037FE0 RID: 229344 RVA: 0x00D432D7 File Offset: 0x00D414D7
+		// Token: 0x0602CEDE RID: 184030 RVA: 0x00C9101F File Offset: 0x00C8F21F
 		private bool OnCanExecuteChangeFunc(EToggleState state, int optionId)
 		{
 			return this.CanInteract;
 		}
 
-		// Token: 0x0401D687 RID: 120455
+		// Token: 0x04018112 RID: 98578
 		[Nullable(new byte[]
 		{
 			2,
@@ -164,14 +164,14 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		protected GenericLayout<GridEventChoiceToggle, IToggleItemData> ToggleLayout;
 
-		// Token: 0x0401D688 RID: 120456
+		// Token: 0x04018113 RID: 98579
 		[Nullable(1)]
 		protected Dictionary<int, IToggleItemData> ToggleDataMap = new Dictionary<int, IToggleItemData>();
 
-		// Token: 0x0401D689 RID: 120457
+		// Token: 0x04018114 RID: 98580
 		protected GridEventChoiceFinish FinishItemInstance;
 
-		// Token: 0x0401D68A RID: 120458
+		// Token: 0x04018115 RID: 98581
 		private bool CanInteract;
 	}
 }

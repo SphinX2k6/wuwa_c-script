@@ -5,22 +5,22 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049C1 RID: 18881
+	// Token: 0x0200393B RID: 14651
 	public class RouletteSwitchToggleComponent : HotKeyComponent
 	{
-		// Token: 0x060311CC RID: 201164 RVA: 0x00B64DC0 File Offset: 0x00B62FC0
+		// Token: 0x06025D02 RID: 154882 RVA: 0x00A9FD10 File Offset: 0x00A9DF10
 		public RouletteSwitchToggleComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311CD RID: 201165 RVA: 0x00B64DC9 File Offset: 0x00B62FC9
+		// Token: 0x06025D03 RID: 154883 RVA: 0x00A9FD19 File Offset: 0x00A9DF19
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 		}
 
-		// Token: 0x060311CE RID: 201166 RVA: 0x00B64DD4 File Offset: 0x00B62FD4
+		// Token: 0x06025D04 RID: 154884 RVA: 0x00A9FD24 File Offset: 0x00A9DF24
 		protected override void OnPress(HotKeyMap config)
 		{
 			EventSystem.Instance.Emit(EEventName.RouletteSwitchToggleComponentEmit);

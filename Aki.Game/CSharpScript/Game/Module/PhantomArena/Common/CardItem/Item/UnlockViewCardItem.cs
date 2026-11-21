@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051DC RID: 20956
+	// Token: 0x020041AC RID: 16812
 	public class UnlockViewCardItem : CommonBaseCardItem<int>
 	{
-		// Token: 0x06035A0D RID: 219661 RVA: 0x00CB4944 File Offset: 0x00CB2B44
+		// Token: 0x0602A908 RID: 174344 RVA: 0x00C01F80 File Offset: 0x00C00180
 		protected override void OnRegisterCardComponent()
 		{
 			this.ComponentsRegisterInfoByItem = new List<TCardComponentsRegisterInfoByItem>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			};
 		}
 
-		// Token: 0x06035A0E RID: 219662 RVA: 0x00CB4994 File Offset: 0x00CB2B94
+		// Token: 0x0602A909 RID: 174345 RVA: 0x00C01FD0 File Offset: 0x00C001D0
 		public override void Refresh(int cardId)
 		{
 			PhantomBattleCard phantomBattleCardConfig = PhantomArenaConfig.Instance.GetPhantomBattleCardConfig(cardId);

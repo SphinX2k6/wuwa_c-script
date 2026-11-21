@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 {
-	// Token: 0x0200638A RID: 25482
+	// Token: 0x02005308 RID: 21256
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 	})]
 	public class NewbieMainTabItem : GridProxyAbstract<NewbieMainTabItemData>
 	{
-		// Token: 0x06040144 RID: 262468 RVA: 0x00F814F8 File Offset: 0x00F7F6F8
+		// Token: 0x06034E05 RID: 216581 RVA: 0x00EC845C File Offset: 0x00EC665C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040145 RID: 262469 RVA: 0x00F81798 File Offset: 0x00F7F998
+		// Token: 0x06034E06 RID: 216582 RVA: 0x00EC86FC File Offset: 0x00EC68FC
 		public override void Refresh(NewbieMainTabItemData data, bool isSelected, int gridIndex)
 		{
 			this.TabItemData = data;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			this.RefreshProcessingCountText(data);
 		}
 
-		// Token: 0x06040146 RID: 262470 RVA: 0x00F81864 File Offset: 0x00F7FA64
+		// Token: 0x06034E07 RID: 216583 RVA: 0x00EC87C8 File Offset: 0x00EC69C8
 		private void RefreshProgressText(NewbieMainTabItemData data)
 		{
 			NewbieMainActTab tabConfig = data.TabConfig;
@@ -110,14 +110,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}));
 		}
 
-		// Token: 0x06040147 RID: 262471 RVA: 0x00F818E0 File Offset: 0x00F7FAE0
+		// Token: 0x06034E08 RID: 216584 RVA: 0x00EC8844 File Offset: 0x00EC6A44
 		private void RefreshTexture(NewbieMainTabItemData data)
 		{
 			string path = (PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Male) ? data.TabConfig.MaleTaskTexture : data.TabConfig.FemaleTaskTexture;
 			base.SetTextureByPath(path, base.GetTexture(6), null, null);
 		}
 
-		// Token: 0x06040148 RID: 262472 RVA: 0x00F8192C File Offset: 0x00F7FB2C
+		// Token: 0x06034E09 RID: 216585 RVA: 0x00EC8890 File Offset: 0x00EC6A90
 		private void RefreshBgTexture(NewbieMainTabItemData data)
 		{
 			NewbieMainTabItem.<>c__DisplayClass7_0 CS$<>8__locals1 = new NewbieMainTabItem.<>c__DisplayClass7_0();
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x06040149 RID: 262473 RVA: 0x00F819C0 File Offset: 0x00F7FBC0
+		// Token: 0x06034E0A RID: 216586 RVA: 0x00EC8924 File Offset: 0x00EC6B24
 		private UniTask RefreshBgTextureTransition(IReadOnlyList<string> resourceList)
 		{
 			NewbieMainTabItem.<RefreshBgTextureTransition>d__8 <RefreshBgTextureTransition>d__;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return <RefreshBgTextureTransition>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604014A RID: 262474 RVA: 0x00F81A0C File Offset: 0x00F7FC0C
+		// Token: 0x06034E0B RID: 216587 RVA: 0x00EC8970 File Offset: 0x00EC6B70
 		private void RefreshStateDisplay(ENewbieMainTabState state)
 		{
 			UUIItem item = base.GetItem(11);
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			item5.SetUIActive(state == ENewbieMainTabState.Lock);
 		}
 
-		// Token: 0x0604014B RID: 262475 RVA: 0x00F81A8C File Offset: 0x00F7FC8C
+		// Token: 0x06034E0C RID: 216588 RVA: 0x00EC89F0 File Offset: 0x00EC6BF0
 		private void RefreshProcessingTitleText(NewbieMainTabItemData data)
 		{
 			if (data.State != ENewbieMainTabState.InProgress)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x0604014C RID: 262476 RVA: 0x00F81AF4 File Offset: 0x00F7FCF4
+		// Token: 0x06034E0D RID: 216589 RVA: 0x00EC8A58 File Offset: 0x00EC6C58
 		private void RefreshWaitingTitleText(NewbieMainTabItemData data)
 		{
 			if (data.State != ENewbieMainTabState.Completed)
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x0604014D RID: 262477 RVA: 0x00F81B5C File Offset: 0x00F7FD5C
+		// Token: 0x06034E0E RID: 216590 RVA: 0x00EC8AC0 File Offset: 0x00EC6CC0
 		private void RefreshProcessingCountText(NewbieMainTabItemData data)
 		{
 			if (data.State != ENewbieMainTabState.InProgress)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x0604014E RID: 262478 RVA: 0x00F81BD0 File Offset: 0x00F7FDD0
+		// Token: 0x06034E0F RID: 216591 RVA: 0x00EC8B34 File Offset: 0x00EC6D34
 		private void RefreshMainProcessingText(NewbieMainTabItemData data)
 		{
 			UUIText text = base.GetText(10);
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x0604014F RID: 262479 RVA: 0x00F81C8A File Offset: 0x00F7FE8A
+		// Token: 0x06034E10 RID: 216592 RVA: 0x00EC8BEE File Offset: 0x00EC6DEE
 		private void OnClickTabInternal()
 		{
 			if (this.TabItemData != null)
@@ -280,11 +280,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x04021644 RID: 136772
+		// Token: 0x0401BF73 RID: 114547
 		[Nullable(2)]
 		private NewbieMainTabItemData TabItemData;
 
-		// Token: 0x04021645 RID: 136773
+		// Token: 0x0401BF74 RID: 114548
 		[Nullable(new byte[]
 		{
 			2,
@@ -292,59 +292,59 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 		})]
 		public Action<NewbieMainTabItemData> OnClickTab;
 
-		// Token: 0x0200C59C RID: 50588
+		// Token: 0x0200AF83 RID: 44931
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BA6F RID: 244335
+			// Token: 0x040363D1 RID: 222161
 			public const int ItemButton = 0;
 
-			// Token: 0x0403BA70 RID: 244336
+			// Token: 0x040363D2 RID: 222162
 			public const int TypeIconSprite = 1;
 
-			// Token: 0x0403BA71 RID: 244337
+			// Token: 0x040363D3 RID: 222163
 			public const int TitleText = 2;
 
-			// Token: 0x0403BA72 RID: 244338
+			// Token: 0x040363D4 RID: 222164
 			public const int TotalProgressText = 3;
 
-			// Token: 0x0403BA73 RID: 244339
+			// Token: 0x040363D5 RID: 222165
 			public const int NewTagItem = 4;
 
-			// Token: 0x0403BA74 RID: 244340
+			// Token: 0x040363D6 RID: 222166
 			public const int TagText = 5;
 
-			// Token: 0x0403BA75 RID: 244341
+			// Token: 0x040363D7 RID: 222167
 			public const int TaskTexture = 6;
 
-			// Token: 0x0403BA76 RID: 244342
+			// Token: 0x040363D8 RID: 222168
 			public const int TaskLockItem = 7;
 
-			// Token: 0x0403BA77 RID: 244343
+			// Token: 0x040363D9 RID: 222169
 			public const int ProcessingItem = 8;
 
-			// Token: 0x0403BA78 RID: 244344
+			// Token: 0x040363DA RID: 222170
 			public const int ProcessingTitleText = 9;
 
-			// Token: 0x0403BA79 RID: 244345
+			// Token: 0x040363DB RID: 222171
 			public const int ProcessingCountText = 10;
 
-			// Token: 0x0403BA7A RID: 244346
+			// Token: 0x040363DC RID: 222172
 			public const int WaitingItem = 11;
 
-			// Token: 0x0403BA7B RID: 244347
+			// Token: 0x040363DD RID: 222173
 			public const int WaitingText = 12;
 
-			// Token: 0x0403BA7C RID: 244348
+			// Token: 0x040363DE RID: 222174
 			public const int FinishedItem = 13;
 
-			// Token: 0x0403BA7D RID: 244349
+			// Token: 0x040363DF RID: 222175
 			public const int LockItem = 14;
 
-			// Token: 0x0403BA7E RID: 244350
+			// Token: 0x040363E0 RID: 222176
 			public const int BgTexture = 15;
 
-			// Token: 0x0403BA7F RID: 244351
+			// Token: 0x040363E1 RID: 222177
 			public const int BgTextureTransition = 16;
 		}
 	}

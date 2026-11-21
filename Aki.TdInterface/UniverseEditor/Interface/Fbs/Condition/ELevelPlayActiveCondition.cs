@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200493F RID: 18751
+	// Token: 0x02004DF5 RID: 19957
 	public enum ELevelPlayActiveCondition : byte
 	{
-		// Token: 0x0400D0C4 RID: 53444
+		// Token: 0x0400DB88 RID: 56200
 		Weather,
-		// Token: 0x0400D0C5 RID: 53445
+		// Token: 0x0400DB89 RID: 56201
 		TimePeriod,
-		// Token: 0x0400D0C6 RID: 53446
+		// Token: 0x0400DB8A RID: 56202
 		Clock
 	}
 }

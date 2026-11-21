@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020B6 RID: 8374
+// Token: 0x0200158D RID: 5517
 public class MonsterInfoLogData
 {
-	// Token: 0x06010869 RID: 67689 RVA: 0x0040A070 File Offset: 0x00408270
+	// Token: 0x0600DCD9 RID: 56537 RVA: 0x00416778 File Offset: 0x00414978
 	[NullableContext(1)]
 	public MonsterInfoLogData(MonsterInfoLogData data = null)
 	{
@@ -15,9 +15,9 @@ public class MonsterInfoLogData
 		}
 	}
 
-	// Token: 0x04007A3D RID: 31293
+	// Token: 0x04007B3B RID: 31547
 	public int pbdata_id;
 
-	// Token: 0x04007A3E RID: 31294
+	// Token: 0x04007B3C RID: 31548
 	public int config_type;
 }

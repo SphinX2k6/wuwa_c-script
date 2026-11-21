@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075CE RID: 30158
+	// Token: 0x02007DD3 RID: 32211
 	public struct IVisualNovelPortraitPosPreset : IFlatbufferObject
 	{
-		// Token: 0x1700E518 RID: 58648
-		// (get) Token: 0x06036EE6 RID: 224998 RVA: 0x00774AF8 File Offset: 0x00772CF8
+		// Token: 0x1700F14A RID: 61770
+		// (get) Token: 0x0603A351 RID: 238417 RVA: 0x007D86B1 File Offset: 0x007D68B1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036EE7 RID: 224999 RVA: 0x00774B05 File Offset: 0x00772D05
+		// Token: 0x0603A352 RID: 238418 RVA: 0x007D86BE File Offset: 0x007D68BE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036EE8 RID: 225000 RVA: 0x00774B0C File Offset: 0x00772D0C
+		// Token: 0x0603A353 RID: 238419 RVA: 0x007D86C8 File Offset: 0x007D68C8
 		public static IVisualNovelPortraitPosPreset GetRootAsIVisualNovelPortraitPosPreset(ByteBuffer _bb)
 		{
 			return IVisualNovelPortraitPosPreset.GetRootAsIVisualNovelPortraitPosPreset(_bb, default(IVisualNovelPortraitPosPreset));
 		}
 
-		// Token: 0x06036EE9 RID: 225001 RVA: 0x00774B28 File Offset: 0x00772D28
+		// Token: 0x0603A354 RID: 238420 RVA: 0x007D86E4 File Offset: 0x007D68E4
 		public static IVisualNovelPortraitPosPreset GetRootAsIVisualNovelPortraitPosPreset(ByteBuffer _bb, IVisualNovelPortraitPosPreset obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036EEA RID: 225002 RVA: 0x00774B45 File Offset: 0x00772D45
+		// Token: 0x0603A355 RID: 238421 RVA: 0x007D8701 File Offset: 0x007D6901
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036EEB RID: 225003 RVA: 0x00774B54 File Offset: 0x00772D54
+		// Token: 0x0603A356 RID: 238422 RVA: 0x007D8710 File Offset: 0x007D6910
 		public IVisualNovelPortraitPosPreset __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E519 RID: 58649
-		// (get) Token: 0x06036EEC RID: 225004 RVA: 0x00774B64 File Offset: 0x00772D64
+		// Token: 0x1700F14B RID: 61771
+		// (get) Token: 0x0603A357 RID: 238423 RVA: 0x007D8720 File Offset: 0x007D6920
 		public string Name
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036EED RID: 225005 RVA: 0x00774B9B File Offset: 0x00772D9B
+		// Token: 0x0603A358 RID: 238424 RVA: 0x007D8757 File Offset: 0x007D6957
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06036EEE RID: 225006 RVA: 0x00774BAA File Offset: 0x00772DAA
+		// Token: 0x0603A359 RID: 238425 RVA: 0x007D8766 File Offset: 0x007D6966
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700E51A RID: 58650
-		// (get) Token: 0x06036EEF RID: 225007 RVA: 0x00774BB8 File Offset: 0x00772DB8
+		// Token: 0x1700F14C RID: 61772
+		// (get) Token: 0x0603A35A RID: 238426 RVA: 0x007D8774 File Offset: 0x007D6974
 		public int PosX
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E51B RID: 58651
-		// (get) Token: 0x06036EF0 RID: 225008 RVA: 0x00774BF4 File Offset: 0x00772DF4
+		// Token: 0x1700F14D RID: 61773
+		// (get) Token: 0x0603A35B RID: 238427 RVA: 0x007D87B0 File Offset: 0x007D69B0
 		public int PosY
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036EF1 RID: 225009 RVA: 0x00774C30 File Offset: 0x00772E30
+		// Token: 0x0603A35C RID: 238428 RVA: 0x007D87EC File Offset: 0x007D69EC
 		public static Offset<IVisualNovelPortraitPosPreset> CreateIVisualNovelPortraitPosPreset(FlatBufferBuilder builder, StringOffset NameOffset = default(StringOffset), int PosX = 0, int PosY = 0)
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelPortraitPosPreset.EndIVisualNovelPortraitPosPreset(builder);
 		}
 
-		// Token: 0x06036EF2 RID: 225010 RVA: 0x00774C54 File Offset: 0x00772E54
+		// Token: 0x0603A35D RID: 238429 RVA: 0x007D8810 File Offset: 0x007D6A10
 		public static void StartIVisualNovelPortraitPosPreset(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06036EF3 RID: 225011 RVA: 0x00774C5D File Offset: 0x00772E5D
+		// Token: 0x0603A35E RID: 238430 RVA: 0x007D8819 File Offset: 0x007D6A19
 		public static void AddName(FlatBufferBuilder builder, StringOffset nameOffset)
 		{
 			builder.AddOffset(0, nameOffset.Value, 0);
 		}
 
-		// Token: 0x06036EF4 RID: 225012 RVA: 0x00774C6D File Offset: 0x00772E6D
+		// Token: 0x0603A35F RID: 238431 RVA: 0x007D8829 File Offset: 0x007D6A29
 		public static void AddPosX(FlatBufferBuilder builder, int posX)
 		{
 			builder.AddInt(1, posX, 0);
 		}
 
-		// Token: 0x06036EF5 RID: 225013 RVA: 0x00774C78 File Offset: 0x00772E78
+		// Token: 0x0603A360 RID: 238432 RVA: 0x007D8834 File Offset: 0x007D6A34
 		public static void AddPosY(FlatBufferBuilder builder, int posY)
 		{
 			builder.AddInt(2, posY, 0);
 		}
 
-		// Token: 0x06036EF6 RID: 225014 RVA: 0x00774C83 File Offset: 0x00772E83
+		// Token: 0x0603A361 RID: 238433 RVA: 0x007D883F File Offset: 0x007D6A3F
 		public static Offset<IVisualNovelPortraitPosPreset> EndIVisualNovelPortraitPosPreset(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelPortraitPosPreset>(builder.EndTable());
 		}
 
-		// Token: 0x06036EF7 RID: 225015 RVA: 0x00774C90 File Offset: 0x00772E90
+		// Token: 0x0603A362 RID: 238434 RVA: 0x007D884C File Offset: 0x007D6A4C
 		public IVisualNovelPortraitPosPresetT UnPack()
 		{
 			IVisualNovelPortraitPosPresetT visualNovelPortraitPosPresetT = new IVisualNovelPortraitPosPresetT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelPortraitPosPresetT;
 		}
 
-		// Token: 0x06036EF8 RID: 225016 RVA: 0x00774CAB File Offset: 0x00772EAB
+		// Token: 0x0603A363 RID: 238435 RVA: 0x007D8867 File Offset: 0x007D6A67
 		public void UnPackTo(IVisualNovelPortraitPosPresetT _o)
 		{
 			_o.Name = this.Name;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.PosY = this.PosY;
 		}
 
-		// Token: 0x06036EF9 RID: 225017 RVA: 0x00774CD4 File Offset: 0x00772ED4
+		// Token: 0x0603A364 RID: 238436 RVA: 0x007D8890 File Offset: 0x007D6A90
 		public static Offset<IVisualNovelPortraitPosPreset> Pack(FlatBufferBuilder builder, IVisualNovelPortraitPosPresetT _o)
 		{
 			if (_o == null)
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelPortraitPosPreset.CreateIVisualNovelPortraitPosPreset(builder, nameOffset, _o.PosX, _o.PosY);
 		}
 
-		// Token: 0x0401252B RID: 75051
+		// Token: 0x04013569 RID: 79209
 		private Table __p;
 	}
 }

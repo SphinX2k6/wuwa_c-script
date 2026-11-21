@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018D7 RID: 6359
+	// Token: 0x02001A68 RID: 6760
 	public class ICloseAirWall_SetValue
 	{
-		// Token: 0x040055A8 RID: 21928
+		// Token: 0x04005A02 RID: 23042
 		public EToggleAirWall Type;
 	}
 }

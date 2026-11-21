@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BEE RID: 23534
+	// Token: 0x02004BCE RID: 19406
 	public class CiacconaGalEndingDetailView : UiViewBase
 	{
-		// Token: 0x0603B7B2 RID: 243634 RVA: 0x00E2F68F File Offset: 0x00E2D88F
+		// Token: 0x060306FD RID: 198397 RVA: 0x00D7F99F File Offset: 0x00D7DB9F
 		[NullableContext(1)]
 		public CiacconaGalEndingDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B7B3 RID: 243635 RVA: 0x00E2F698 File Offset: 0x00E2D898
+		// Token: 0x060306FE RID: 198398 RVA: 0x00D7F9A8 File Offset: 0x00D7DBA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B7B4 RID: 243636 RVA: 0x00E2F764 File Offset: 0x00E2D964
+		// Token: 0x060306FF RID: 198399 RVA: 0x00D7FA74 File Offset: 0x00D7DC74
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalEndingDetailView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B7B5 RID: 243637 RVA: 0x00E2F7A8 File Offset: 0x00E2D9A8
+		// Token: 0x06030700 RID: 198400 RVA: 0x00D7FAB8 File Offset: 0x00D7DCB8
 		protected override void OnStart()
 		{
 			ICiacconaEndingViewParam ciacconaEndingViewParam = this.OpenParam as ICiacconaEndingViewParam;
@@ -68,30 +68,30 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0401EFD2 RID: 126930
+		// Token: 0x04019A83 RID: 105091
 		[Nullable(2)]
 		private PopupCaptionItem ItemCaption;
 
-		// Token: 0x0401EFD3 RID: 126931
+		// Token: 0x04019A84 RID: 105092
 		[Nullable(2)]
 		private CiacconaGalEndingData EndingData;
 
-		// Token: 0x0200BDD4 RID: 48596
+		// Token: 0x0200A7DC RID: 42972
 		private class EComponentDefine
 		{
-			// Token: 0x040393CF RID: 234447
+			// Token: 0x04033D92 RID: 212370
 			public const int ItemCaption = 0;
 
-			// Token: 0x040393D0 RID: 234448
+			// Token: 0x04033D93 RID: 212371
 			public const int TextureBg = 1;
 
-			// Token: 0x040393D1 RID: 234449
+			// Token: 0x04033D94 RID: 212372
 			public const int TextTitle = 2;
 
-			// Token: 0x040393D2 RID: 234450
+			// Token: 0x04033D95 RID: 212373
 			public const int TextLabel = 3;
 
-			// Token: 0x040393D3 RID: 234451
+			// Token: 0x04033D96 RID: 212374
 			public const int TextInfo = 4;
 		}
 	}

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A13 RID: 10771
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D00 RID: 11520
 	public class GuestOperateUiAnimation : ActionParams
 	{
-		// Token: 0x0600ED82 RID: 60802 RVA: 0x00229F1A File Offset: 0x0022811A
+		// Token: 0x0600FC19 RID: 64537 RVA: 0x0024789E File Offset: 0x00245A9E
 		public static GuestOperateUiAnimation Create(IGuestOperateUiAnimation? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B1E RID: 19230
-		// (get) Token: 0x0600ED83 RID: 60803 RVA: 0x00229F39 File Offset: 0x00228139
+		// Token: 0x17004EC7 RID: 20167
+		// (get) Token: 0x0600FC1A RID: 64538 RVA: 0x002478BD File Offset: 0x00245ABD
 		public virtual IGuestOperateUiAnimationType UiAnimationConfig
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082BB RID: 33467
+		// Token: 0x040089AC RID: 35244
 		private IGuestOperateUiAnimation Instance;
 
-		// Token: 0x040082BC RID: 33468
+		// Token: 0x040089AD RID: 35245
 		private IGuestOperateUiAnimationType _UiAnimationConfigCache;
 
-		// Token: 0x040082BD RID: 33469
+		// Token: 0x040089AE RID: 35246
 		private bool _UiAnimationConfigInited;
 	}
 }

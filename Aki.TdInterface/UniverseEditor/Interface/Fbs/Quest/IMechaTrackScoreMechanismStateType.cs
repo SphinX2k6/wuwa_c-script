@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F29 RID: 16169
+	// Token: 0x02004367 RID: 17255
 	public struct IMechaTrackScoreMechanismStateType : IFlatbufferObject
 	{
-		// Token: 0x1700706A RID: 28778
-		// (get) Token: 0x06016F5C RID: 94044 RVA: 0x00350128 File Offset: 0x0034E328
+		// Token: 0x17007659 RID: 30297
+		// (get) Token: 0x060185B4 RID: 99764 RVA: 0x00379350 File Offset: 0x00377550
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016F5D RID: 94045 RVA: 0x00350135 File Offset: 0x0034E335
+		// Token: 0x060185B5 RID: 99765 RVA: 0x0037935D File Offset: 0x0037755D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016F5E RID: 94046 RVA: 0x0035013C File Offset: 0x0034E33C
+		// Token: 0x060185B6 RID: 99766 RVA: 0x00379364 File Offset: 0x00377564
 		public static IMechaTrackScoreMechanismStateType GetRootAsIMechaTrackScoreMechanismStateType(ByteBuffer _bb)
 		{
 			return IMechaTrackScoreMechanismStateType.GetRootAsIMechaTrackScoreMechanismStateType(_bb, default(IMechaTrackScoreMechanismStateType));
 		}
 
-		// Token: 0x06016F5F RID: 94047 RVA: 0x00350158 File Offset: 0x0034E358
+		// Token: 0x060185B7 RID: 99767 RVA: 0x00379380 File Offset: 0x00377580
 		public static IMechaTrackScoreMechanismStateType GetRootAsIMechaTrackScoreMechanismStateType(ByteBuffer _bb, IMechaTrackScoreMechanismStateType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016F60 RID: 94048 RVA: 0x00350175 File Offset: 0x0034E375
+		// Token: 0x060185B8 RID: 99768 RVA: 0x0037939D File Offset: 0x0037759D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016F61 RID: 94049 RVA: 0x00350184 File Offset: 0x0034E384
+		// Token: 0x060185B9 RID: 99769 RVA: 0x003793AC File Offset: 0x003775AC
 		public IMechaTrackScoreMechanismStateType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700706B RID: 28779
-		// (get) Token: 0x06016F62 RID: 94050 RVA: 0x00350194 File Offset: 0x0034E394
+		// Token: 0x1700765A RID: 30298
+		// (get) Token: 0x060185BA RID: 99770 RVA: 0x003793BC File Offset: 0x003775BC
 		public IStaticEntitiyMatch? EntitiyMatch
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700706C RID: 28780
-		// (get) Token: 0x06016F63 RID: 94051 RVA: 0x003501F4 File Offset: 0x0034E3F4
+		// Token: 0x1700765B RID: 30299
+		// (get) Token: 0x060185BB RID: 99771 RVA: 0x0037941C File Offset: 0x0037761C
 		public string State
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016F64 RID: 94052 RVA: 0x0035022B File Offset: 0x0034E42B
+		// Token: 0x060185BC RID: 99772 RVA: 0x00379453 File Offset: 0x00377653
 		public Span<byte> GetStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06016F65 RID: 94053 RVA: 0x0035023A File Offset: 0x0034E43A
+		// Token: 0x060185BD RID: 99773 RVA: 0x00379462 File Offset: 0x00377662
 		public byte[] GetStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700706D RID: 28781
-		// (get) Token: 0x06016F66 RID: 94054 RVA: 0x00350248 File Offset: 0x0034E448
+		// Token: 0x1700765C RID: 30300
+		// (get) Token: 0x060185BE RID: 99774 RVA: 0x00379470 File Offset: 0x00377670
 		public int ScoreId
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016F67 RID: 94055 RVA: 0x00350284 File Offset: 0x0034E484
+		// Token: 0x060185BF RID: 99775 RVA: 0x003794AC File Offset: 0x003776AC
 		public static Offset<IMechaTrackScoreMechanismStateType> CreateIMechaTrackScoreMechanismStateType(FlatBufferBuilder builder, Offset<IStaticEntitiyMatch> EntitiyMatchOffset = default(Offset<IStaticEntitiyMatch>), StringOffset StateOffset = default(StringOffset), int ScoreId = 0)
 		{
 			builder.StartTable(3);
@@ -115,37 +115,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMechaTrackScoreMechanismStateType.EndIMechaTrackScoreMechanismStateType(builder);
 		}
 
-		// Token: 0x06016F68 RID: 94056 RVA: 0x003502A8 File Offset: 0x0034E4A8
+		// Token: 0x060185C0 RID: 99776 RVA: 0x003794D0 File Offset: 0x003776D0
 		public static void StartIMechaTrackScoreMechanismStateType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06016F69 RID: 94057 RVA: 0x003502B1 File Offset: 0x0034E4B1
+		// Token: 0x060185C1 RID: 99777 RVA: 0x003794D9 File Offset: 0x003776D9
 		public static void AddEntitiyMatch(FlatBufferBuilder builder, Offset<IStaticEntitiyMatch> entitiyMatchOffset)
 		{
 			builder.AddOffset(0, entitiyMatchOffset.Value, 0);
 		}
 
-		// Token: 0x06016F6A RID: 94058 RVA: 0x003502C1 File Offset: 0x0034E4C1
+		// Token: 0x060185C2 RID: 99778 RVA: 0x003794E9 File Offset: 0x003776E9
 		public static void AddState(FlatBufferBuilder builder, StringOffset stateOffset)
 		{
 			builder.AddOffset(1, stateOffset.Value, 0);
 		}
 
-		// Token: 0x06016F6B RID: 94059 RVA: 0x003502D1 File Offset: 0x0034E4D1
+		// Token: 0x060185C3 RID: 99779 RVA: 0x003794F9 File Offset: 0x003776F9
 		public static void AddScoreId(FlatBufferBuilder builder, int scoreId)
 		{
 			builder.AddInt(2, scoreId, 0);
 		}
 
-		// Token: 0x06016F6C RID: 94060 RVA: 0x003502DC File Offset: 0x0034E4DC
+		// Token: 0x060185C4 RID: 99780 RVA: 0x00379504 File Offset: 0x00377704
 		public static Offset<IMechaTrackScoreMechanismStateType> EndIMechaTrackScoreMechanismStateType(FlatBufferBuilder builder)
 		{
 			return new Offset<IMechaTrackScoreMechanismStateType>(builder.EndTable());
 		}
 
-		// Token: 0x06016F6D RID: 94061 RVA: 0x003502EC File Offset: 0x0034E4EC
+		// Token: 0x060185C5 RID: 99781 RVA: 0x00379514 File Offset: 0x00377714
 		public IMechaTrackScoreMechanismStateTypeT UnPack()
 		{
 			IMechaTrackScoreMechanismStateTypeT mechaTrackScoreMechanismStateTypeT = new IMechaTrackScoreMechanismStateTypeT();
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return mechaTrackScoreMechanismStateTypeT;
 		}
 
-		// Token: 0x06016F6E RID: 94062 RVA: 0x00350308 File Offset: 0x0034E508
+		// Token: 0x060185C6 RID: 99782 RVA: 0x00379530 File Offset: 0x00377730
 		public void UnPackTo(IMechaTrackScoreMechanismStateTypeT _o)
 		{
 			_o.EntitiyMatch = ((this.EntitiyMatch != null) ? this.EntitiyMatch.Value.UnPack() : null);
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.ScoreId = this.ScoreId;
 		}
 
-		// Token: 0x06016F6F RID: 94063 RVA: 0x0035035C File Offset: 0x0034E55C
+		// Token: 0x060185C7 RID: 99783 RVA: 0x00379584 File Offset: 0x00377784
 		public static Offset<IMechaTrackScoreMechanismStateType> Pack(FlatBufferBuilder builder, IMechaTrackScoreMechanismStateTypeT _o)
 		{
 			if (_o == null)
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMechaTrackScoreMechanismStateType.CreateIMechaTrackScoreMechanismStateType(builder, entitiyMatchOffset, stateOffset, _o.ScoreId);
 		}
 
-		// Token: 0x0400B934 RID: 47412
+		// Token: 0x0400C311 RID: 49937
 		private Table __p;
 	}
 }

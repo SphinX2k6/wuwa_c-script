@@ -8,13 +8,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 {
-	// Token: 0x020069B8 RID: 27064
+	// Token: 0x02005B14 RID: 23316
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class UnopenedAreaController : ControllerBase
 	{
-		// Token: 0x0604355D RID: 275805 RVA: 0x01073AA1 File Offset: 0x01071CA1
+		// Token: 0x06039595 RID: 234901 RVA: 0x01017EE9 File Offset: 0x010160E9
 		protected override bool OnInit()
 		{
 			this.CheckUnopenedArea = !PublicUtil.Instance.GetIsSilentLogin();
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			return true;
 		}
 
-		// Token: 0x0604355E RID: 275806 RVA: 0x01073AC5 File Offset: 0x01071CC5
+		// Token: 0x06039596 RID: 234902 RVA: 0x01017F0D File Offset: 0x0101610D
 		protected override void OnTick(float delta)
 		{
 			if (this.CheckUnopenedArea)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x0604355F RID: 275807 RVA: 0x01073AE0 File Offset: 0x01071CE0
+		// Token: 0x06039597 RID: 234903 RVA: 0x01017F28 File Offset: 0x01016128
 		protected override bool OnClear()
 		{
 			this.PullbackHandler.Clear();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			return true;
 		}
 
-		// Token: 0x06043560 RID: 275808 RVA: 0x01073B0A File Offset: 0x01071D0A
+		// Token: 0x06039598 RID: 234904 RVA: 0x01017F52 File Offset: 0x01016152
 		public void SetCheckUnopenedArea(bool value)
 		{
 			if (this.CheckUnopenedArea != value)
@@ -64,25 +64,25 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x06043561 RID: 275809 RVA: 0x01073B2C File Offset: 0x01071D2C
+		// Token: 0x06039599 RID: 234905 RVA: 0x01017F74 File Offset: 0x01016174
 		public bool OnCheckUnopenedArea(global::Vector inputP, int mapId, int dungeonId)
 		{
 			return !this.CheckUnopenedArea || this.AreaCheck.BinTest(inputP, mapId, dungeonId);
 		}
 
-		// Token: 0x06043562 RID: 275810 RVA: 0x01073B46 File Offset: 0x01071D46
+		// Token: 0x0603959A RID: 234906 RVA: 0x01017F8E File Offset: 0x0101618E
 		public void AreaCheckInit(IReadOnlyDictionary<int, bool> areaStates)
 		{
 			this.AreaCheck.AreaInit(areaStates);
 		}
 
-		// Token: 0x06043563 RID: 275811 RVA: 0x01073B54 File Offset: 0x01071D54
+		// Token: 0x0603959B RID: 234907 RVA: 0x01017F9C File Offset: 0x0101619C
 		public void AreaCheckStatesChange(SceneAreaStateNotify notify)
 		{
 			this.AreaCheck.AreaStatesChange(notify);
 		}
 
-		// Token: 0x06043564 RID: 275812 RVA: 0x01073B64 File Offset: 0x01071D64
+		// Token: 0x0603959C RID: 234908 RVA: 0x01017FAC File Offset: 0x010161AC
 		public void OnEnterUnopenedArea()
 		{
 			if (this.ActiveHandler != null)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			this.EmitEnterExitEvent(true);
 		}
 
-		// Token: 0x06043565 RID: 275813 RVA: 0x01073C03 File Offset: 0x01071E03
+		// Token: 0x0603959D RID: 234909 RVA: 0x0101804B File Offset: 0x0101624B
 		public void OnExitUnopenedArea()
 		{
 			if (this.ActiveHandler == null)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			this.Deactivate();
 		}
 
-		// Token: 0x06043566 RID: 275814 RVA: 0x01073C28 File Offset: 0x01071E28
+		// Token: 0x0603959E RID: 234910 RVA: 0x01018070 File Offset: 0x01016270
 		private void Deactivate()
 		{
 			if (EventSystem.Instance.Has<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole)))
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			this.ActiveHandler = null;
 		}
 
-		// Token: 0x06043567 RID: 275815 RVA: 0x01073C78 File Offset: 0x01071E78
+		// Token: 0x0603959F RID: 234911 RVA: 0x010180C0 File Offset: 0x010162C0
 		private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
 			IUnopenedAreaHandler activeHandler = this.ActiveHandler;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x06043568 RID: 275816 RVA: 0x01073D1C File Offset: 0x01071F1C
+		// Token: 0x060395A0 RID: 234912 RVA: 0x01018164 File Offset: 0x01016364
 		private void EmitEnterExitEvent(bool enter)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -177,14 +177,14 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x06043569 RID: 275817 RVA: 0x01073D77 File Offset: 0x01071F77
+		// Token: 0x060395A1 RID: 234913 RVA: 0x010181BF File Offset: 0x010163BF
 		public bool CheckInPullback()
 		{
 			return this.PullbackHandler.GetInPullback;
 		}
 
-		// Token: 0x1700985C RID: 39004
-		// (get) Token: 0x0604356A RID: 275818 RVA: 0x01073D84 File Offset: 0x01071F84
+		// Token: 0x17006D3C RID: 27964
+		// (get) Token: 0x060395A2 RID: 234914 RVA: 0x010181CC File Offset: 0x010163CC
 		public static UnopenedAreaController Instance
 		{
 			get
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			}
 		}
 
-		// Token: 0x0604356B RID: 275819 RVA: 0x01073D8B File Offset: 0x01071F8B
+		// Token: 0x060395A3 RID: 234915 RVA: 0x010181D3 File Offset: 0x010163D3
 		public static UnopenedAreaController GetOrCreateInstance()
 		{
 			if (UnopenedAreaController._Instance == null)
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			return UnopenedAreaController._Instance;
 		}
 
-		// Token: 0x0604356C RID: 275820 RVA: 0x01073D9F File Offset: 0x01071F9F
+		// Token: 0x060395A4 RID: 234916 RVA: 0x010181E7 File Offset: 0x010163E7
 		public static bool CreateInstance()
 		{
 			if (UnopenedAreaController._Instance != null)
@@ -214,40 +214,40 @@ namespace CSharpScript.Game.LevelGamePlay.UnopenedArea
 			return true;
 		}
 
-		// Token: 0x0604356D RID: 275821 RVA: 0x01073DB5 File Offset: 0x01071FB5
+		// Token: 0x060395A5 RID: 234917 RVA: 0x010181FD File Offset: 0x010163FD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604356E RID: 275822 RVA: 0x01073DB7 File Offset: 0x01071FB7
+		// Token: 0x060395A6 RID: 234918 RVA: 0x010181FF File Offset: 0x010163FF
 		public static void ResetStaticDefaultValue()
 		{
 			UnopenedAreaController._Instance = null;
 		}
 
-		// Token: 0x0604356F RID: 275823 RVA: 0x01073DBF File Offset: 0x01071FBF
+		// Token: 0x060395A7 RID: 234919 RVA: 0x01018207 File Offset: 0x01016407
 		static UnopenedAreaController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UnopenedAreaController.CreateStaticDefaultValue), new Action(UnopenedAreaController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023206 RID: 143878
+		// Token: 0x0401E3F5 RID: 123893
 		private bool CheckUnopenedArea;
 
-		// Token: 0x04023207 RID: 143879
+		// Token: 0x0401E3F6 RID: 123894
 		private readonly UnopenedAreaPullback PullbackHandler = new UnopenedAreaPullback();
 
-		// Token: 0x04023208 RID: 143880
+		// Token: 0x0401E3F7 RID: 123895
 		private readonly UnopenedAreaCustomEffect CustomEffectHandler = new UnopenedAreaCustomEffect();
 
-		// Token: 0x04023209 RID: 143881
+		// Token: 0x0401E3F8 RID: 123896
 		private readonly UnopenedAreaCheck AreaCheck = new UnopenedAreaCheck();
 
-		// Token: 0x0402320A RID: 143882
+		// Token: 0x0401E3F9 RID: 123897
 		[Nullable(2)]
 		private IUnopenedAreaHandler ActiveHandler;
 
-		// Token: 0x0402320B RID: 143883
+		// Token: 0x0401E3FA RID: 123898
 		[Nullable(2)]
 		private static UnopenedAreaController _Instance;
 	}

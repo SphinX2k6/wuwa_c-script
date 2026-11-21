@@ -5,19 +5,19 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game;
 using UnrealEngine;
 
-// Token: 0x02003146 RID: 12614
+// Token: 0x020026A8 RID: 9896
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResetter
 {
-	// Token: 0x0601B22C RID: 111148 RVA: 0x00761708 File Offset: 0x0075F908
+	// Token: 0x06018CCB RID: 101579 RVA: 0x00788004 File Offset: 0x00786204
 	static CharacterSkillComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterSkillComponent.CreateStaticDefaultValue), new Action(CharacterSkillComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17002591 RID: 9617
-	// (get) Token: 0x0601B22D RID: 111149 RVA: 0x0076177D File Offset: 0x0075F97D
+	// Token: 0x17002758 RID: 10072
+	// (get) Token: 0x06018CCC RID: 101580 RVA: 0x00788079 File Offset: 0x00786279
 	[Nullable(2)]
 	protected new CharacterActorComponent ActorComp
 	{
@@ -28,7 +28,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601B22E RID: 111150 RVA: 0x0076178C File Offset: 0x0075F98C
+	// Token: 0x06018CCD RID: 101581 RVA: 0x00788088 File Offset: 0x00786288
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -46,7 +46,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601B22F RID: 111151 RVA: 0x007617F1 File Offset: 0x0075F9F1
+	// Token: 0x06018CCE RID: 101582 RVA: 0x007880ED File Offset: 0x007862ED
 	protected override bool OnInit()
 	{
 		if (!base.OnInit())
@@ -59,7 +59,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601B230 RID: 111152 RVA: 0x00761834 File Offset: 0x0075FA34
+	// Token: 0x06018CCF RID: 101583 RVA: 0x00788130 File Offset: 0x00786330
 	protected override bool OnEnd()
 	{
 		if (!base.OnEnd())
@@ -76,7 +76,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601B231 RID: 111153 RVA: 0x00761884 File Offset: 0x0075FA84
+	// Token: 0x06018CD0 RID: 101584 RVA: 0x00788180 File Offset: 0x00786380
 	protected override void DoSkillBeginMoveAction(global::Skill skill, SSkillInfo info)
 	{
 		this.StateComp.ExitHitState("释放技能");
@@ -90,7 +90,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		animComp.StartForceDisableAnimOptimization(EForceDisableAnimOptimization.Skill, false);
 	}
 
-	// Token: 0x0601B232 RID: 111154 RVA: 0x007618E4 File Offset: 0x0075FAE4
+	// Token: 0x06018CD1 RID: 101585 RVA: 0x007881E0 File Offset: 0x007863E0
 	public void SetSkillTargetDirection(ESkillTargetDirection direction, ESkillTargetPriority priority = ESkillTargetPriority.摇杆方向优先)
 	{
 		BaseLockOnComponent lockOnComp = this.LockOnComp;
@@ -128,7 +128,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601B233 RID: 111155 RVA: 0x00761958 File Offset: 0x0075FB58
+	// Token: 0x06018CD2 RID: 101586 RVA: 0x00788254 File Offset: 0x00786454
 	public void SetDisableTurnToInputDir(bool disable)
 	{
 		this.IsDisableTurnToInputDir = disable;
@@ -141,7 +141,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		instance.Info(flag, entity, defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601B234 RID: 111156 RVA: 0x007619AC File Offset: 0x0075FBAC
+	// Token: 0x06018CD3 RID: 101587 RVA: 0x007882A8 File Offset: 0x007864A8
 	private void TurnToInputDir()
 	{
 		if (this.IsDisableTurnToInputDir)
@@ -166,7 +166,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		this.ActorComp.SetActorTransform(this.TmpTransform.ToUeTransform(), "释放技能.转向输入方向", false, new ESetRotationPriority?(ESetRotationPriority.Skill));
 	}
 
-	// Token: 0x0601B235 RID: 111157 RVA: 0x00761A6C File Offset: 0x0075FC6C
+	// Token: 0x06018CD4 RID: 101588 RVA: 0x00788368 File Offset: 0x00786568
 	public bool IsHasInputDir()
 	{
 		if (!base.CheckIsLoaded())
@@ -177,7 +177,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		return 0.0 < Math.Abs(inputDirectProxy.X) || 0.0 < Math.Abs(inputDirectProxy.Y);
 	}
 
-	// Token: 0x0601B236 RID: 111158 RVA: 0x00761AC0 File Offset: 0x0075FCC0
+	// Token: 0x06018CD5 RID: 101589 RVA: 0x007883BC File Offset: 0x007865BC
 	private void TurnToCameraDir()
 	{
 		Rotator tmpRotator = this.TmpRotator;
@@ -202,7 +202,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		this.ActorComp.SetActorTransform(this.TmpTransform.ToUeTransform(), "释放技能.转向摄像机方向", false, new ESetRotationPriority?(ESetRotationPriority.Skill));
 	}
 
-	// Token: 0x0601B237 RID: 111159 RVA: 0x00761B84 File Offset: 0x0075FD84
+	// Token: 0x06018CD6 RID: 101590 RVA: 0x00788480 File Offset: 0x00786680
 	private void TurnToSkillTarget()
 	{
 		if (this.SkillTarget == null)
@@ -230,13 +230,13 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		this.ActorComp.SetActorRotation(this.TmpRotator.ToUeRotator(), "释放技能.转向技能目标", false);
 	}
 
-	// Token: 0x0601B238 RID: 111160 RVA: 0x00761C27 File Offset: 0x0075FE27
+	// Token: 0x06018CD7 RID: 101591 RVA: 0x00788523 File Offset: 0x00786723
 	private Rotator GetInputRotatorOfWorld()
 	{
 		return this.ActorComp.InputRotatorProxy;
 	}
 
-	// Token: 0x0601B239 RID: 111161 RVA: 0x00761C34 File Offset: 0x0075FE34
+	// Token: 0x06018CD8 RID: 101592 RVA: 0x00788530 File Offset: 0x00786730
 	private void SetSkillMoveState(int skillId, SSkillInfo info)
 	{
 		if (info.WalkOffLedge)
@@ -300,7 +300,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		this.MoveComp.SetFallingHorizontalMaxSpeed(99999f);
 	}
 
-	// Token: 0x0601B23A RID: 111162 RVA: 0x00761DF8 File Offset: 0x0075FFF8
+	// Token: 0x06018CD9 RID: 101593 RVA: 0x007886F4 File Offset: 0x007868F4
 	protected override void DoSkillEndMoveAction(SSkillInfo info)
 	{
 		if (info.WalkOffLedge)
@@ -321,20 +321,20 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		animComp.CancelForceDisableAnimOptimization(EForceDisableAnimOptimization.Skill);
 	}
 
-	// Token: 0x0601B23B RID: 111163 RVA: 0x00761E5E File Offset: 0x0076005E
+	// Token: 0x06018CDA RID: 101594 RVA: 0x0078875A File Offset: 0x0078695A
 	protected override void OnBeforePlaySkillMontage()
 	{
 		this.StateComp.ExitHitState("播放技能蒙太奇");
 	}
 
-	// Token: 0x0601B23C RID: 111164 RVA: 0x00761E70 File Offset: 0x00760070
+	// Token: 0x06018CDB RID: 101595 RVA: 0x0078876C File Offset: 0x0078696C
 	[NullableContext(2)]
 	public override UAnimInstance GetMainAnimInstance()
 	{
 		return this.AnimComp.GetAnimInstance();
 	}
 
-	// Token: 0x0601B23D RID: 111165 RVA: 0x00761E80 File Offset: 0x00760080
+	// Token: 0x06018CDC RID: 101596 RVA: 0x0078877C File Offset: 0x0078697C
 	public void RollingGrounded()
 	{
 		this.IsMainSkillReadyEnd = false;
@@ -345,7 +345,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601B23E RID: 111166 RVA: 0x00761ED8 File Offset: 0x007600D8
+	// Token: 0x06018CDD RID: 101597 RVA: 0x007887D4 File Offset: 0x007869D4
 	private void RollingGroundedDelay(float delta)
 	{
 		if (!this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.技能中"]))
@@ -356,7 +356,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		this.RollingGroundEndTimer = null;
 	}
 
-	// Token: 0x0601B23F RID: 111167 RVA: 0x00761F30 File Offset: 0x00760130
+	// Token: 0x06018CDE RID: 101598 RVA: 0x0078882C File Offset: 0x00786A2C
 	public bool UpdateAllSkillRotator(float deltaSeconds)
 	{
 		if (!base.CheckIsLoaded() || this.MoveComp == null)
@@ -406,20 +406,20 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601B240 RID: 111168 RVA: 0x00762023 File Offset: 0x00760223
+	// Token: 0x06018CDF RID: 101599 RVA: 0x0078891F File Offset: 0x00786B1F
 	public bool CheckJumpCanInterrupt()
 	{
 		return base.DoCheckInterrupt(1, CharacterSkillComponent._jumpPriority, null, null, null);
 	}
 
-	// Token: 0x0601B241 RID: 111169 RVA: 0x00762034 File Offset: 0x00760234
+	// Token: 0x06018CE0 RID: 101600 RVA: 0x00788930 File Offset: 0x00786B30
 	public bool CheckGlideCanInterrupt()
 	{
 		return base.DoCheckInterrupt(1, CharacterSkillComponent._glidePriority, null, null, null);
 	}
 
-	// Token: 0x17002592 RID: 9618
-	// (get) Token: 0x0601B242 RID: 111170 RVA: 0x00762045 File Offset: 0x00760245
+	// Token: 0x17002759 RID: 10073
+	// (get) Token: 0x06018CE1 RID: 101601 RVA: 0x00788941 File Offset: 0x00786B41
 	public float SkillElevationAngle
 	{
 		get
@@ -428,14 +428,14 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601B243 RID: 111171 RVA: 0x0076204D File Offset: 0x0076024D
+	// Token: 0x06018CE2 RID: 101602 RVA: 0x00788949 File Offset: 0x00786B49
 	public void SetSkillElevationAngle(float angle)
 	{
 		this.SkillElevationAngleInternal = angle;
 	}
 
-	// Token: 0x17002593 RID: 9619
-	// (get) Token: 0x0601B244 RID: 111172 RVA: 0x00762056 File Offset: 0x00760256
+	// Token: 0x1700275A RID: 10074
+	// (get) Token: 0x06018CE3 RID: 101603 RVA: 0x00788952 File Offset: 0x00786B52
 	public float LastActivateSkillTime
 	{
 		get
@@ -444,13 +444,13 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601B245 RID: 111173 RVA: 0x0076205E File Offset: 0x0076025E
+	// Token: 0x06018CE4 RID: 101604 RVA: 0x0078895A File Offset: 0x00786B5A
 	public void SetLastActivateSkillTime(float time)
 	{
 		this.LastActivateSkillTimeInternal = time;
 	}
 
-	// Token: 0x0601B246 RID: 111174 RVA: 0x00762067 File Offset: 0x00760267
+	// Token: 0x06018CE5 RID: 101605 RVA: 0x00788963 File Offset: 0x00786B63
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterSkillComponent._isConfigInited = false;
@@ -458,7 +458,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		CharacterSkillComponent._glidePriority = 0;
 	}
 
-	// Token: 0x0601B247 RID: 111175 RVA: 0x0076207B File Offset: 0x0076027B
+	// Token: 0x06018CE6 RID: 101606 RVA: 0x00788977 File Offset: 0x00786B77
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterSkillComponent._isConfigInited = false;
@@ -466,7 +466,7 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 		CharacterSkillComponent._glidePriority = 0;
 	}
 
-	// Token: 0x0601B248 RID: 111176 RVA: 0x00762090 File Offset: 0x00760290
+	// Token: 0x06018CE7 RID: 101607 RVA: 0x0078898C File Offset: 0x00786B8C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -474,111 +474,170 @@ public class CharacterSkillComponent : BaseSkillComponent, IStaticVariableResett
 			return false;
 		}
 		CharacterSkillComponent characterSkillComponent = (CharacterSkillComponent)componentTemplate;
-		if (base.CanResetComponentProperty("MoveComp"))
+		if (characterSkillComponent.MoveComp == null)
 		{
-			if (characterSkillComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("StateComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (characterSkillComponent.StateComp == null)
-			{
-				this.StateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.StateComp), "StateComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		if (characterSkillComponent.StateComp == null)
 		{
-			if (characterSkillComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			this.StateComp = null;
 		}
-		if (base.CanResetComponentProperty("IsDisableTurnToInputDir"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 		{
-			this.IsDisableTurnToInputDir = characterSkillComponent.IsDisableTurnToInputDir;
+			return false;
 		}
-		if (base.CanResetComponentProperty("RollingGroundEndTimer"))
+		if (characterSkillComponent.AnimComp == null)
 		{
-			if (characterSkillComponent.RollingGroundEndTimer == null)
-			{
-				this.RollingGroundEndTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.RollingGroundEndTimer), "RollingGroundEndTimer"))
-			{
-				return false;
-			}
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("SkillElevationAngleInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			this.SkillElevationAngleInternal = characterSkillComponent.SkillElevationAngleInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("LastActivateSkillTimeInternal"))
+		this.IsDisableTurnToInputDir = characterSkillComponent.IsDisableTurnToInputDir;
+		if (characterSkillComponent.RollingGroundEndTimer == null)
 		{
-			this.LastActivateSkillTimeInternal = characterSkillComponent.LastActivateSkillTimeInternal;
+			this.RollingGroundEndTimer = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RollingGroundEndTimer), "RollingGroundEndTimer"))
+		{
+			return false;
+		}
+		this.SkillElevationAngleInternal = characterSkillComponent.SkillElevationAngleInternal;
+		this.LastActivateSkillTimeInternal = characterSkillComponent.LastActivateSkillTimeInternal;
 		return true;
 	}
 
-	// Token: 0x0400D31A RID: 54042
+	// Token: 0x1700275B RID: 10075
+	// (get) Token: 0x06018CE8 RID: 101608 RVA: 0x00788A7C File Offset: 0x00786C7C
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700275C RID: 10076
+	// (get) Token: 0x06018CE9 RID: 101609 RVA: 0x00788A7F File Offset: 0x00786C7F
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700275D RID: 10077
+	// (get) Token: 0x06018CEA RID: 101610 RVA: 0x00788A82 File Offset: 0x00786C82
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700275E RID: 10078
+	// (get) Token: 0x06018CEB RID: 101611 RVA: 0x00788A85 File Offset: 0x00786C85
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700275F RID: 10079
+	// (get) Token: 0x06018CEC RID: 101612 RVA: 0x00788A88 File Offset: 0x00786C88
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002760 RID: 10080
+	// (get) Token: 0x06018CED RID: 101613 RVA: 0x00788A8B File Offset: 0x00786C8B
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002761 RID: 10081
+	// (get) Token: 0x06018CEE RID: 101614 RVA: 0x00788A8E File Offset: 0x00786C8E
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002762 RID: 10082
+	// (get) Token: 0x06018CEF RID: 101615 RVA: 0x00788A91 File Offset: 0x00786C91
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D758 RID: 55128
 	private const int ROLLING_GROUNDED_RECOVER_TIME = 600;
 
-	// Token: 0x0400D31B RID: 54043
+	// Token: 0x0400D759 RID: 55129
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatDoSkillBegin5 = Stat.Create("DoSkillBegin5 SetAnimState", "", "");
 
-	// Token: 0x0400D31C RID: 54044
+	// Token: 0x0400D75A RID: 55130
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatDoSkillBegin6 = Stat.Create("DoSkillBegin6 Target&Rotation", "", "");
 
-	// Token: 0x0400D31D RID: 54045
+	// Token: 0x0400D75B RID: 55131
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatDoSkillBegin7 = Stat.Create("DoSkillBegin7 SetMoveState", "", "");
 
-	// Token: 0x0400D31E RID: 54046
+	// Token: 0x0400D75C RID: 55132
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400D31F RID: 54047
+	// Token: 0x0400D75D RID: 55133
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent StateComp;
 
-	// Token: 0x0400D320 RID: 54048
+	// Token: 0x0400D75E RID: 55134
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400D321 RID: 54049
+	// Token: 0x0400D75F RID: 55135
 	private static bool _isConfigInited;
 
-	// Token: 0x0400D322 RID: 54050
+	// Token: 0x0400D760 RID: 55136
 	private static int _jumpPriority;
 
-	// Token: 0x0400D323 RID: 54051
+	// Token: 0x0400D761 RID: 55137
 	private static int _glidePriority;
 
-	// Token: 0x0400D324 RID: 54052
+	// Token: 0x0400D762 RID: 55138
 	private bool IsDisableTurnToInputDir;
 
-	// Token: 0x0400D325 RID: 54053
+	// Token: 0x0400D763 RID: 55139
 	[Nullable(2)]
 	private TimerHandle RollingGroundEndTimer;
 
-	// Token: 0x0400D326 RID: 54054
+	// Token: 0x0400D764 RID: 55140
 	private float SkillElevationAngleInternal;
 
-	// Token: 0x0400D327 RID: 54055
+	// Token: 0x0400D765 RID: 55141
 	private float LastActivateSkillTimeInternal;
 }

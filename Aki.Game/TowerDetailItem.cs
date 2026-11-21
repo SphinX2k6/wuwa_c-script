@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002BEC RID: 11244
+// Token: 0x02002167 RID: 8551
 public class TowerDetailItem : GridProxyAbstract<int>
 {
-	// Token: 0x060175A7 RID: 95655 RVA: 0x005F0A1C File Offset: 0x005EEC1C
+	// Token: 0x06014FD8 RID: 85976 RVA: 0x0061D57C File Offset: 0x0061B77C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -30,7 +30,7 @@ public class TowerDetailItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060175A8 RID: 95656 RVA: 0x005F0AC4 File Offset: 0x005EECC4
+	// Token: 0x06014FD9 RID: 85977 RVA: 0x0061D624 File Offset: 0x0061B824
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.TowerId = data;
@@ -44,14 +44,14 @@ public class TowerDetailItem : GridProxyAbstract<int>
 		this.SetToggleState(EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x060175A9 RID: 95657 RVA: 0x005F0B2F File Offset: 0x005EED2F
+	// Token: 0x06014FDA RID: 85978 RVA: 0x0061D68F File Offset: 0x0061B88F
 	[NullableContext(1)]
 	public void BindOnClickToggle(Action<int> onClickToggle)
 	{
 		this.OnClickToggleHandle = onClickToggle;
 	}
 
-	// Token: 0x060175AA RID: 95658 RVA: 0x005F0B38 File Offset: 0x005EED38
+	// Token: 0x06014FDB RID: 85979 RVA: 0x0061D698 File Offset: 0x0061B898
 	public void SetToggleState(EToggleState state)
 	{
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
@@ -61,7 +61,7 @@ public class TowerDetailItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060175AB RID: 95659 RVA: 0x005F0B56 File Offset: 0x005EED56
+	// Token: 0x06014FDC RID: 85980 RVA: 0x0061D6B6 File Offset: 0x0061B8B6
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		Action<int> onClickToggleHandle = this.OnClickToggleHandle;
@@ -72,25 +72,25 @@ public class TowerDetailItem : GridProxyAbstract<int>
 		onClickToggleHandle(this.TowerId);
 	}
 
-	// Token: 0x060175AC RID: 95660 RVA: 0x005F0B6E File Offset: 0x005EED6E
+	// Token: 0x06014FDD RID: 85981 RVA: 0x0061D6CE File Offset: 0x0061B8CE
 	protected override void OnBeforeDestroy()
 	{
 		this.OnClickToggleHandle = null;
 	}
 
-	// Token: 0x0400AECA RID: 44746
+	// Token: 0x0400B2CF RID: 45775
 	[Nullable(2)]
 	private Action<int> OnClickToggleHandle;
 
-	// Token: 0x0400AECB RID: 44747
+	// Token: 0x0400B2D0 RID: 45776
 	private int TowerId = -1;
 
-	// Token: 0x020091A9 RID: 37289
+	// Token: 0x020083EC RID: 33772
 	private enum EChildType
 	{
-		// Token: 0x0402F214 RID: 193044
+		// Token: 0x0402A915 RID: 174357
 		FloorToggle,
-		// Token: 0x0402F215 RID: 193045
+		// Token: 0x0402A916 RID: 174358
 		FloorNumberText
 	}
 }

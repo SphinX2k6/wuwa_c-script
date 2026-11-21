@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024DA RID: 9434
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200277F RID: 10111
 	public class SetEntityPos : ActionParams
 	{
-		// Token: 0x0600D2A9 RID: 53929 RVA: 0x001F4018 File Offset: 0x001F2218
-		[NullableContext(1)]
+		// Token: 0x0600DFFE RID: 57342 RVA: 0x0020F874 File Offset: 0x0020DA74
 		public static SetEntityPos Create(ISetEntityPos? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AB7 RID: 15031
-		// (get) Token: 0x0600D2AA RID: 53930 RVA: 0x001F4037 File Offset: 0x001F2237
+		// Token: 0x17003DAE RID: 15790
+		// (get) Token: 0x0600DFFF RID: 57343 RVA: 0x0020F893 File Offset: 0x0020DA93
 		public virtual int EntityId
 		{
 			get
@@ -34,12 +31,10 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AB8 RID: 15032
-		// (get) Token: 0x0600D2AB RID: 53931 RVA: 0x001F4044 File Offset: 0x001F2244
-		[Nullable(1)]
+		// Token: 0x17003DAF RID: 15791
+		// (get) Token: 0x0600E000 RID: 57344 RVA: 0x0020F8A0 File Offset: 0x0020DAA0
 		public virtual PosA Pos
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._PosInited)
@@ -52,10 +47,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AB9 RID: 15033
-		// (get) Token: 0x0600D2AC RID: 53932 RVA: 0x001F4078 File Offset: 0x001F2278
+		// Token: 0x17003DB0 RID: 15792
+		// (get) Token: 0x0600E001 RID: 57345 RVA: 0x0020F8D4 File Offset: 0x0020DAD4
+		[Nullable(2)]
 		public virtual VectorInfo Rot
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._RotInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400738A RID: 29578
+		// Token: 0x040079D7 RID: 31191
 		private ISetEntityPos Instance;
 
-		// Token: 0x0400738B RID: 29579
+		// Token: 0x040079D8 RID: 31192
+		[Nullable(2)]
 		private PosA _PosCache;
 
-		// Token: 0x0400738C RID: 29580
+		// Token: 0x040079D9 RID: 31193
 		private bool _PosInited;
 
-		// Token: 0x0400738D RID: 29581
+		// Token: 0x040079DA RID: 31194
+		[Nullable(2)]
 		private VectorInfo _RotCache;
 
-		// Token: 0x0400738E RID: 29582
+		// Token: 0x040079DB RID: 31195
 		private bool _RotInited;
 	}
 }

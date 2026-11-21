@@ -5,18 +5,18 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 {
-	// Token: 0x0200709E RID: 28830
+	// Token: 0x02006303 RID: 25347
 	[NullableContext(1)]
 	public interface IPendingEcologyGroup
 	{
-		// Token: 0x17009C27 RID: 39975
-		// (get) Token: 0x060463FD RID: 287741
-		// (set) Token: 0x060463FE RID: 287742
+		// Token: 0x1700740C RID: 29708
+		// (get) Token: 0x0603D4EB RID: 251115
+		// (set) Token: 0x0603D4EC RID: 251116
 		GroupAiComponent GroupComp { get; set; }
 
-		// Token: 0x17009C28 RID: 39976
-		// (get) Token: 0x060463FF RID: 287743
-		// (set) Token: 0x06046400 RID: 287744
+		// Token: 0x1700740D RID: 29709
+		// (get) Token: 0x0603D4ED RID: 251117
+		// (set) Token: 0x0603D4EE RID: 251118
 		HashSet<int> RegisteredPbDataIds { get; set; }
 	}
 }

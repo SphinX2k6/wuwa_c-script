@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000376 RID: 886
+	// Token: 0x0200037E RID: 894
 	[NetMessage(EMessageId.DangoBrawlShopSellRequest)]
 	public sealed class DangoBrawlShopSellRequest : IMessage<DangoBrawlShopSellRequest>, IMessage, IEquatable<DangoBrawlShopSellRequest>, IDeepCloneable<DangoBrawlShopSellRequest>, IBufferMessage
 	{
-		// Token: 0x06005800 RID: 22528 RVA: 0x000D6C13 File Offset: 0x000D4E13
+		// Token: 0x060058ED RID: 22765 RVA: 0x000D929B File Offset: 0x000D749B
 		[NullableContext(1)]
 		public static DangoBrawlShopSellRequest Create()
 		{
 			return new DangoBrawlShopSellRequest();
 		}
 
-		// Token: 0x17001032 RID: 4146
-		// (get) Token: 0x06005801 RID: 22529 RVA: 0x000D6C1A File Offset: 0x000D4E1A
+		// Token: 0x17001063 RID: 4195
+		// (get) Token: 0x060058EE RID: 22766 RVA: 0x000D92A2 File Offset: 0x000D74A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001033 RID: 4147
-		// (get) Token: 0x06005802 RID: 22530 RVA: 0x000D6C1D File Offset: 0x000D4E1D
+		// Token: 0x17001064 RID: 4196
+		// (get) Token: 0x060058EF RID: 22767 RVA: 0x000D92A5 File Offset: 0x000D74A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005803 RID: 22531 RVA: 0x000D6C24 File Offset: 0x000D4E24
+		// Token: 0x060058F0 RID: 22768 RVA: 0x000D92AC File Offset: 0x000D74AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlShopSellRequest()
 		{
 		}
 
-		// Token: 0x06005804 RID: 22532 RVA: 0x000D6C38 File Offset: 0x000D4E38
+		// Token: 0x060058F1 RID: 22769 RVA: 0x000D92C0 File Offset: 0x000D74C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlShopSellRequest(DangoBrawlShopSellRequest other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005805 RID: 22533 RVA: 0x000D6C85 File Offset: 0x000D4E85
+		// Token: 0x060058F2 RID: 22770 RVA: 0x000D930D File Offset: 0x000D750D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlShopSellRequest Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new DangoBrawlShopSellRequest(this);
 		}
 
-		// Token: 0x17001034 RID: 4148
-		// (get) Token: 0x06005806 RID: 22534 RVA: 0x000D6C8D File Offset: 0x000D4E8D
-		// (set) Token: 0x06005807 RID: 22535 RVA: 0x000D6C95 File Offset: 0x000D4E95
+		// Token: 0x17001065 RID: 4197
+		// (get) Token: 0x060058F3 RID: 22771 RVA: 0x000D9315 File Offset: 0x000D7515
+		// (set) Token: 0x060058F4 RID: 22772 RVA: 0x000D931D File Offset: 0x000D751D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemUid
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001035 RID: 4149
-		// (get) Token: 0x06005808 RID: 22536 RVA: 0x000D6C9E File Offset: 0x000D4E9E
-		// (set) Token: 0x06005809 RID: 22537 RVA: 0x000D6CA6 File Offset: 0x000D4EA6
+		// Token: 0x17001066 RID: 4198
+		// (get) Token: 0x060058F5 RID: 22773 RVA: 0x000D9326 File Offset: 0x000D7526
+		// (set) Token: 0x060058F6 RID: 22774 RVA: 0x000D932E File Offset: 0x000D752E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool FromBench
@@ -103,8 +103,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001036 RID: 4150
-		// (get) Token: 0x0600580A RID: 22538 RVA: 0x000D6CAF File Offset: 0x000D4EAF
+		// Token: 0x17001067 RID: 4199
+		// (get) Token: 0x060058F7 RID: 22775 RVA: 0x000D9337 File Offset: 0x000D7537
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ToBenchUids
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600580B RID: 22539 RVA: 0x000D6CB7 File Offset: 0x000D4EB7
+		// Token: 0x060058F8 RID: 22776 RVA: 0x000D933F File Offset: 0x000D753F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoBrawlShopSellRequest);
 		}
 
-		// Token: 0x0600580C RID: 22540 RVA: 0x000D6CC8 File Offset: 0x000D4EC8
+		// Token: 0x060058F9 RID: 22777 RVA: 0x000D9350 File Offset: 0x000D7550
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoBrawlShopSellRequest other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ItemUid == other.ItemUid && this.FromBench == other.FromBench && this.toBenchUids_.Equals(other.toBenchUids_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600580D RID: 22541 RVA: 0x000D6D28 File Offset: 0x000D4F28
+		// Token: 0x060058FA RID: 22778 RVA: 0x000D93B0 File Offset: 0x000D75B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600580E RID: 22542 RVA: 0x000D6D8E File Offset: 0x000D4F8E
+		// Token: 0x060058FB RID: 22779 RVA: 0x000D9416 File Offset: 0x000D7616
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600580F RID: 22543 RVA: 0x000D6D9B File Offset: 0x000D4F9B
+		// Token: 0x060058FC RID: 22780 RVA: 0x000D9423 File Offset: 0x000D7623
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,29 +169,29 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06005810 RID: 22544 RVA: 0x000D6DA4 File Offset: 0x000D4FA4
+		// Token: 0x060058FD RID: 22781 RVA: 0x000D942C File Offset: 0x000D762C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.ItemUid != 0)
-			{
-				output.WriteRawTag(72);
-				output.WriteInt32(this.ItemUid);
-			}
 			if (this.FromBench)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(24);
 				output.WriteBool(this.FromBench);
 			}
 			this.toBenchUids_.WriteTo(ref output, DangoBrawlShopSellRequest._repeated_toBenchUids_codec);
+			if (this.ItemUid != 0)
+			{
+				output.WriteRawTag(104);
+				output.WriteInt32(this.ItemUid);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06005811 RID: 22545 RVA: 0x000D6E10 File Offset: 0x000D5010
+		// Token: 0x060058FE RID: 22782 RVA: 0x000D9498 File Offset: 0x000D7698
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005812 RID: 22546 RVA: 0x000D6E70 File Offset: 0x000D5070
+		// Token: 0x060058FF RID: 22783 RVA: 0x000D94F8 File Offset: 0x000D76F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoBrawlShopSellRequest other)
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005813 RID: 22547 RVA: 0x000D6ED1 File Offset: 0x000D50D1
+		// Token: 0x06005900 RID: 22784 RVA: 0x000D9559 File Offset: 0x000D7759
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -242,7 +242,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005814 RID: 22548 RVA: 0x000D6EDC File Offset: 0x000D50DC
+		// Token: 0x06005901 RID: 22785 RVA: 0x000D9564 File Offset: 0x000D7764
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -254,50 +254,59 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 104U)
+				if (num <= 48U)
 				{
-					if (num == 72U)
-					{
-						this.ItemUid = input.ReadInt32();
-						continue;
-					}
-					if (num == 104U)
+					if (num == 24U)
 					{
 						this.FromBench = input.ReadBool();
 						continue;
 					}
+					if (num == 48U)
+					{
+						goto IL_46;
+					}
 				}
-				else if (num == 120U || num == 122U)
+				else
 				{
-					this.toBenchUids_.AddEntriesFrom(ref input, DangoBrawlShopSellRequest._repeated_toBenchUids_codec);
-					continue;
+					if (num == 50U)
+					{
+						goto IL_46;
+					}
+					if (num == 104U)
+					{
+						this.ItemUid = input.ReadInt32();
+						continue;
+					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
+				continue;
+				IL_46:
+				this.toBenchUids_.AddEntriesFrom(ref input, DangoBrawlShopSellRequest._repeated_toBenchUids_codec);
 			}
 		}
 
-		// Token: 0x040034F7 RID: 13559
+		// Token: 0x04003593 RID: 13715
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040034F8 RID: 13560
-		public const int ItemUidFieldNumber = 9;
+		// Token: 0x04003594 RID: 13716
+		public const int ItemUidFieldNumber = 13;
 
-		// Token: 0x040034F9 RID: 13561
+		// Token: 0x04003595 RID: 13717
 		private int itemUid_;
 
-		// Token: 0x040034FA RID: 13562
-		public const int FromBenchFieldNumber = 13;
+		// Token: 0x04003596 RID: 13718
+		public const int FromBenchFieldNumber = 3;
 
-		// Token: 0x040034FB RID: 13563
+		// Token: 0x04003597 RID: 13719
 		private bool fromBench_;
 
-		// Token: 0x040034FC RID: 13564
-		public const int ToBenchUidsFieldNumber = 15;
+		// Token: 0x04003598 RID: 13720
+		public const int ToBenchUidsFieldNumber = 6;
 
-		// Token: 0x040034FD RID: 13565
-		private static readonly FieldCodec<int> _repeated_toBenchUids_codec = FieldCodec.ForInt32(122U);
+		// Token: 0x04003599 RID: 13721
+		private static readonly FieldCodec<int> _repeated_toBenchUids_codec = FieldCodec.ForInt32(50U);
 
-		// Token: 0x040034FE RID: 13566
+		// Token: 0x0400359A RID: 13722
 		private readonly RepeatedField<int> toBenchUids_ = new RepeatedField<int>();
 	}
 }

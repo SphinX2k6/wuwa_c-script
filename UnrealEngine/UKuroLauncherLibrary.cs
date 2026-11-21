@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200198B RID: 6539
+	// Token: 0x02000446 RID: 1094
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroHotPatch.KuroLauncherLibrary")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 128)]
 	public class UKuroLauncherLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018480 RID: 99456 RVA: 0x0023D286 File Offset: 0x0023B486
+		// Token: 0x06006966 RID: 26982 RVA: 0x0009A112 File Offset: 0x00098312
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroLauncherLibrary._ClassPtr;
 		}
 
-		// Token: 0x06018481 RID: 99457 RVA: 0x0023D294 File Offset: 0x0023B494
+		// Token: 0x06006967 RID: 26983 RVA: 0x0009A120 File Offset: 0x00098320
 		public UKuroLauncherLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroLauncherLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018482 RID: 99458 RVA: 0x0023D2BC File Offset: 0x0023B4BC
+		// Token: 0x06006968 RID: 26984 RVA: 0x0009A148 File Offset: 0x00098348
 		public UKuroLauncherLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroLauncherLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700610F RID: 24847
-		// (get) Token: 0x06018483 RID: 99459 RVA: 0x0023D2F0 File Offset: 0x0023B4F0
-		// (set) Token: 0x06018484 RID: 99460 RVA: 0x0023D329 File Offset: 0x0023B529
+		// Token: 0x17001509 RID: 5385
+		// (get) Token: 0x06006969 RID: 26985 RVA: 0x0009A17C File Offset: 0x0009837C
+		// (set) Token: 0x0600696A RID: 26986 RVA: 0x0009A1B5 File Offset: 0x000983B5
 		public TSet<UObject> PreloadBp
 		{
 			get
@@ -50,23 +50,23 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06018485 RID: 99461
+		// Token: 0x0600696B RID: 26987
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void WillClearPatchPaks();
 
-		// Token: 0x06018486 RID: 99462
+		// Token: 0x0600696C RID: 26988
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetRestartApp(byte RestartType);
 
-		// Token: 0x06018487 RID: 99463
+		// Token: 0x0600696D RID: 26989
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetPrecompileShaderBatchMode(int Mode);
 
-		// Token: 0x06018488 RID: 99464
+		// Token: 0x0600696E RID: 26990
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ResumeCompileShader();
 
-		// Token: 0x06018489 RID: 99465 RVA: 0x0023D338 File Offset: 0x0023B538
+		// Token: 0x0600696F RID: 26991 RVA: 0x0009A1C4 File Offset: 0x000983C4
 		public unsafe static void RestartApplication(string ScriptContent)
 		{
 			FString fstring = FString.AllocTemp(ScriptContent);
@@ -74,31 +74,31 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0601848A RID: 99466
+		// Token: 0x06006970 RID: 26992
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ResetLauncher();
 
-		// Token: 0x0601848B RID: 99467
+		// Token: 0x06006971 RID: 26993
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ReloadShaderLibrary();
 
-		// Token: 0x0601848C RID: 99468
+		// Token: 0x06006972 RID: 26994
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void PreloadRequiredBp();
 
-		// Token: 0x0601848D RID: 99469
+		// Token: 0x06006973 RID: 26995
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte NeedRestartApp();
 
-		// Token: 0x0601848E RID: 99470
+		// Token: 0x06006974 RID: 26996
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NeedHotPatch();
 
-		// Token: 0x0601848F RID: 99471
+		// Token: 0x06006975 RID: 26997
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool NeedClearPatchPaks();
 
-		// Token: 0x06018490 RID: 99472 RVA: 0x0023D35C File Offset: 0x0023B55C
+		// Token: 0x06006976 RID: 26998 RVA: 0x0009A1E8 File Offset: 0x000983E8
 		public unsafe static bool MoveFile(string DstPath, string SrcPath)
 		{
 			FString fstring = FString.AllocTemp(DstPath);
@@ -109,7 +109,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06018491 RID: 99473 RVA: 0x0023D394 File Offset: 0x0023B594
+		// Token: 0x06006977 RID: 26999 RVA: 0x0009A220 File Offset: 0x00098420
 		public unsafe static bool MakeDirectory(string DirPath)
 		{
 			FString fstring = FString.AllocTemp(DirPath);
@@ -118,35 +118,35 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06018492 RID: 99474
+		// Token: 0x06006978 RID: 27000
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void LogoutToLauncher();
 
-		// Token: 0x06018493 RID: 99475
+		// Token: 0x06006979 RID: 27001
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsStartupMountSuccess();
 
-		// Token: 0x06018494 RID: 99476
+		// Token: 0x0600697A RID: 27002
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsSeparateVideo();
 
-		// Token: 0x06018495 RID: 99477
+		// Token: 0x0600697B RID: 27003
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsLocalPackaging();
 
-		// Token: 0x06018496 RID: 99478
+		// Token: 0x0600697C RID: 27004
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsFirstIntoLauncher();
 
-		// Token: 0x06018497 RID: 99479
+		// Token: 0x0600697D RID: 27005
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsEnableOptionalPackage();
 
-		// Token: 0x06018498 RID: 99480
+		// Token: 0x0600697E RID: 27006
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int GetTotalPrecompileShaders();
 
-		// Token: 0x06018499 RID: 99481 RVA: 0x0023D3B8 File Offset: 0x0023B5B8
+		// Token: 0x0600697F RID: 27007 RVA: 0x0009A244 File Offset: 0x00098444
 		public unsafe static long GetTotalAndFreeSpace(string CheckPath, ref long FreeSize)
 		{
 			FString fstring = FString.AllocTemp(CheckPath);
@@ -159,15 +159,15 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601849A RID: 99482
+		// Token: 0x06006980 RID: 27008
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int GetRemainPrecompileShaders();
 
-		// Token: 0x0601849B RID: 99483
+		// Token: 0x06006981 RID: 27009
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte GetNetworkConnectionType();
 
-		// Token: 0x0601849C RID: 99484 RVA: 0x0023D3E2 File Offset: 0x0023B5E2
+		// Token: 0x06006982 RID: 27010 RVA: 0x0009A26E File Offset: 0x0009846E
 		public static void GetMountedPaks([Nullable(new byte[]
 		{
 			2,
@@ -177,7 +177,7 @@ namespace UnrealEngine
 			UKuroLauncherLibrary.__GetMountedPaks_Internal((OutPakFilenames ?? new TArray<string>()).NativePtr);
 		}
 
-		// Token: 0x0601849D RID: 99485 RVA: 0x0023D3FC File Offset: 0x0023B5FC
+		// Token: 0x06006983 RID: 27011 RVA: 0x0009A288 File Offset: 0x00098488
 		public unsafe static bool GetGConfigString(string Section, string Key, ref string OutStr)
 		{
 			FString fstring = FString.AllocTemp(Section);
@@ -191,7 +191,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601849E RID: 99486 RVA: 0x0023D450 File Offset: 0x0023B650
+		// Token: 0x06006984 RID: 27012 RVA: 0x0009A2DC File Offset: 0x000984DC
 		public unsafe static long GetFileSize(string FilePath)
 		{
 			FString fstring = FString.AllocTemp(FilePath);
@@ -200,7 +200,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601849F RID: 99487 RVA: 0x0023D474 File Offset: 0x0023B674
+		// Token: 0x06006985 RID: 27013 RVA: 0x0009A300 File Offset: 0x00098500
 		public unsafe static bool GetConfig(string Key, string DefaultValue, ref string OutStr)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -214,43 +214,43 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060184A0 RID: 99488 RVA: 0x0023D4C6 File Offset: 0x0023B6C6
+		// Token: 0x06006986 RID: 27014 RVA: 0x0009A352 File Offset: 0x00098552
 		public static string GetAppVersion()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroLauncherLibrary.__GetAppVersion_Internal());
 		}
 
-		// Token: 0x060184A1 RID: 99489 RVA: 0x0023D4D2 File Offset: 0x0023B6D2
+		// Token: 0x06006987 RID: 27015 RVA: 0x0009A35E File Offset: 0x0009855E
 		public static string GetAppReleaseType()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroLauncherLibrary.__GetAppReleaseType_Internal());
 		}
 
-		// Token: 0x060184A2 RID: 99490 RVA: 0x0023D4DE File Offset: 0x0023B6DE
+		// Token: 0x06006988 RID: 27016 RVA: 0x0009A36A File Offset: 0x0009856A
 		public static string GetAppParallel()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroLauncherLibrary.__GetAppParallel_Internal());
 		}
 
-		// Token: 0x060184A3 RID: 99491 RVA: 0x0023D4EA File Offset: 0x0023B6EA
+		// Token: 0x06006989 RID: 27017 RVA: 0x0009A376 File Offset: 0x00098576
 		public static string GetAppInternalUseType()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroLauncherLibrary.__GetAppInternalUseType_Internal());
 		}
 
-		// Token: 0x060184A4 RID: 99492 RVA: 0x0023D4F6 File Offset: 0x0023B6F6
+		// Token: 0x0600698A RID: 27018 RVA: 0x0009A382 File Offset: 0x00098582
 		public static string GetAppChangeList()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroLauncherLibrary.__GetAppChangeList_Internal());
 		}
 
-		// Token: 0x060184A5 RID: 99493 RVA: 0x0023D502 File Offset: 0x0023B702
+		// Token: 0x0600698B RID: 27019 RVA: 0x0009A38E File Offset: 0x0009858E
 		public static string GameSavedDir()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroLauncherLibrary.__GameSavedDir_Internal());
 		}
 
-		// Token: 0x060184A6 RID: 99494 RVA: 0x0023D510 File Offset: 0x0023B710
+		// Token: 0x0600698C RID: 27020 RVA: 0x0009A39C File Offset: 0x0009859C
 		public unsafe static bool Encrypt(string InPlain, ref string OutCipher)
 		{
 			FString fstring = FString.AllocTemp(InPlain);
@@ -262,7 +262,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060184A7 RID: 99495 RVA: 0x0023D550 File Offset: 0x0023B750
+		// Token: 0x0600698D RID: 27021 RVA: 0x0009A3DC File Offset: 0x000985DC
 		public unsafe static bool DoesDiskHaveEnoughSpace(string CheckPath, long CheckSize)
 		{
 			FString fstring = FString.AllocTemp(CheckPath);
@@ -271,7 +271,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060184A8 RID: 99496 RVA: 0x0023D578 File Offset: 0x0023B778
+		// Token: 0x0600698E RID: 27022 RVA: 0x0009A404 File Offset: 0x00098604
 		public unsafe static bool DeleteFile(string FilePath)
 		{
 			FString fstring = FString.AllocTemp(FilePath);
@@ -280,7 +280,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060184A9 RID: 99497 RVA: 0x0023D59C File Offset: 0x0023B79C
+		// Token: 0x0600698F RID: 27023 RVA: 0x0009A428 File Offset: 0x00098628
 		public unsafe static bool DeleteDirectory(string DirPath)
 		{
 			FString fstring = FString.AllocTemp(DirPath);
@@ -289,7 +289,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060184AA RID: 99498 RVA: 0x0023D5C0 File Offset: 0x0023B7C0
+		// Token: 0x06006990 RID: 27024 RVA: 0x0009A44C File Offset: 0x0009864C
 		public unsafe static bool Decrypt(string InCipher, ref string OutPlain)
 		{
 			FString fstring = FString.AllocTemp(InCipher);
@@ -301,11 +301,11 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060184AB RID: 99499
+		// Token: 0x06006991 RID: 27025
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void CreateRestartFile();
 
-		// Token: 0x060184AC RID: 99500 RVA: 0x0023D600 File Offset: 0x0023B800
+		// Token: 0x06006992 RID: 27026 RVA: 0x0009A48C File Offset: 0x0009868C
 		public unsafe static bool CopyFile(string DstPath, string SrcPath)
 		{
 			FString fstring = FString.AllocTemp(DstPath);
@@ -316,15 +316,15 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060184AD RID: 99501
+		// Token: 0x06006993 RID: 27027
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void CloseShaderLibrary();
 
-		// Token: 0x060184AE RID: 99502
+		// Token: 0x06006994 RID: 27028
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ClearPatchPaks();
 
-		// Token: 0x060184AF RID: 99503 RVA: 0x0023D638 File Offset: 0x0023B838
+		// Token: 0x06006995 RID: 27029 RVA: 0x0009A4C4 File Offset: 0x000986C4
 		public unsafe static bool CheckFileSha1(string FilePath, string CheckSha1Hash)
 		{
 			FString fstring = FString.AllocTemp(FilePath);
@@ -335,120 +335,120 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060184B0 RID: 99504
+		// Token: 0x06006996 RID: 27030
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RestartApplication_Internal(in FString ScriptContent);
 
-		// Token: 0x060184B1 RID: 99505
+		// Token: 0x06006997 RID: 27031
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __MoveFile_Internal(in FString DstPath, in FString SrcPath);
 
-		// Token: 0x060184B2 RID: 99506
+		// Token: 0x06006998 RID: 27032
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __MakeDirectory_Internal(in FString DirPath);
 
-		// Token: 0x060184B3 RID: 99507
+		// Token: 0x06006999 RID: 27033
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern long __GetTotalAndFreeSpace_Internal(in FString CheckPath, ref long FreeSize);
 
-		// Token: 0x060184B4 RID: 99508
+		// Token: 0x0600699A RID: 27034
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetMountedPaks_Internal(IntPtr OutPakFilenames);
 
-		// Token: 0x060184B5 RID: 99509
+		// Token: 0x0600699B RID: 27035
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetGConfigString_Internal(in FString Section, in FString Key, ref FString OutStr);
 
-		// Token: 0x060184B6 RID: 99510
+		// Token: 0x0600699C RID: 27036
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern long __GetFileSize_Internal(in FString FilePath);
 
-		// Token: 0x060184B7 RID: 99511
+		// Token: 0x0600699D RID: 27037
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetConfig_Internal(in FString Key, in FString DefaultValue, ref FString OutStr);
 
-		// Token: 0x060184B8 RID: 99512
+		// Token: 0x0600699E RID: 27038
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetAppVersion_Internal();
 
-		// Token: 0x060184B9 RID: 99513
+		// Token: 0x0600699F RID: 27039
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetAppReleaseType_Internal();
 
-		// Token: 0x060184BA RID: 99514
+		// Token: 0x060069A0 RID: 27040
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetAppParallel_Internal();
 
-		// Token: 0x060184BB RID: 99515
+		// Token: 0x060069A1 RID: 27041
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetAppInternalUseType_Internal();
 
-		// Token: 0x060184BC RID: 99516
+		// Token: 0x060069A2 RID: 27042
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetAppChangeList_Internal();
 
-		// Token: 0x060184BD RID: 99517
+		// Token: 0x060069A3 RID: 27043
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GameSavedDir_Internal();
 
-		// Token: 0x060184BE RID: 99518
+		// Token: 0x060069A4 RID: 27044
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Encrypt_Internal(in FString InPlain, ref FString OutCipher);
 
-		// Token: 0x060184BF RID: 99519
+		// Token: 0x060069A5 RID: 27045
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __DoesDiskHaveEnoughSpace_Internal(in FString CheckPath, long CheckSize);
 
-		// Token: 0x060184C0 RID: 99520
+		// Token: 0x060069A6 RID: 27046
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __DeleteFile_Internal(in FString FilePath);
 
-		// Token: 0x060184C1 RID: 99521
+		// Token: 0x060069A7 RID: 27047
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __DeleteDirectory_Internal(in FString DirPath);
 
-		// Token: 0x060184C2 RID: 99522
+		// Token: 0x060069A8 RID: 27048
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Decrypt_Internal(in FString InCipher, ref FString OutPlain);
 
-		// Token: 0x060184C3 RID: 99523
+		// Token: 0x060069A9 RID: 27049
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __CopyFile_Internal(in FString DstPath, in FString SrcPath);
 
-		// Token: 0x060184C4 RID: 99524
+		// Token: 0x060069AA RID: 27050
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __CheckFileSha1_Internal(in FString FilePath, in FString CheckSha1Hash);
 
-		// Token: 0x060184C5 RID: 99525 RVA: 0x0023D66E File Offset: 0x0023B86E
+		// Token: 0x060069AB RID: 27051 RVA: 0x0009A4FA File Offset: 0x000986FA
 		static UKuroLauncherLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroHotPatch.KuroLauncherLibrary");
 		}
 
-		// Token: 0x060184C6 RID: 99526 RVA: 0x0023D67C File Offset: 0x0023B87C
+		// Token: 0x060069AC RID: 27052 RVA: 0x0009A508 File Offset: 0x00098708
 		protected UKuroLauncherLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D25A RID: 53850
+		// Token: 0x04002CEB RID: 11499
 		public new const string __ObjectPath = "/Script/KuroHotPatch.KuroLauncherLibrary";
 
-		// Token: 0x0400D25B RID: 53851
+		// Token: 0x04002CEC RID: 11500
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D25C RID: 53852
+		// Token: 0x04002CED RID: 11501
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D25D RID: 53853
+		// Token: 0x04002CEE RID: 11502
 		internal static int __PropertyOffset_PreloadBp;
 
-		// Token: 0x0400D25E RID: 53854
+		// Token: 0x04002CEF RID: 11503
 		[Nullable(new byte[]
 		{
 			2,

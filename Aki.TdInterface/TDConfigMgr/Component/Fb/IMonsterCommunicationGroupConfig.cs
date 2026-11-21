@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C1F RID: 3103
+	// Token: 0x02000CF2 RID: 3314
 	public class IMonsterCommunicationGroupConfig
 	{
-		// Token: 0x06004719 RID: 18201 RVA: 0x000B312E File Offset: 0x000B132E
-		[NullableContext(1)]
+		// Token: 0x06004B86 RID: 19334 RVA: 0x000BD3A3 File Offset: 0x000BB5A3
 		public static IMonsterCommunicationGroupConfig Create(IMonsterCommunicationGroupConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001498 RID: 5272
-		// (get) Token: 0x0600471A RID: 18202 RVA: 0x000B314D File Offset: 0x000B134D
+		// Token: 0x1700159D RID: 5533
+		// (get) Token: 0x06004B87 RID: 19335 RVA: 0x000BD3C2 File Offset: 0x000BB5C2
 		public virtual int GroupId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400285C RID: 10332
+		// Token: 0x04002AAB RID: 10923
 		private IMonsterCommunicationGroupConfig Instance;
 	}
 }

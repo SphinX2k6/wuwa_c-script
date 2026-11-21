@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02000FB6 RID: 4022
+// Token: 0x0200046B RID: 1131
 public class FurnitureSingleEntityItem : FurnitureSceneItemBase
 {
-	// Token: 0x06006719 RID: 26393 RVA: 0x00146332 File Offset: 0x00144532
+	// Token: 0x06003AB1 RID: 15025 RVA: 0x0014EBF6 File Offset: 0x0014CDF6
 	public FurnitureSingleEntityItem(int furnitureConfigId) : base(furnitureConfigId)
 	{
 		this.SceneItemType = EFurnitureSceneItemType.SingleEntity;
 	}
 
-	// Token: 0x0600671A RID: 26394 RVA: 0x00146344 File Offset: 0x00144544
+	// Token: 0x06003AB2 RID: 15026 RVA: 0x0014EC08 File Offset: 0x0014CE08
 	protected override UniTask<bool> LoadAsyncImplement([Nullable(1)] Transform rootTransform)
 	{
 		FurnitureSingleEntityItem.<LoadAsyncImplement>d__2 <LoadAsyncImplement>d__;
@@ -24,7 +24,7 @@ public class FurnitureSingleEntityItem : FurnitureSceneItemBase
 		return <LoadAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600671B RID: 26395 RVA: 0x0014638F File Offset: 0x0014458F
+	// Token: 0x06003AB3 RID: 15027 RVA: 0x0014EC53 File Offset: 0x0014CE53
 	protected override void ShowImplement()
 	{
 		if (this.LevelContext == null)
@@ -34,7 +34,7 @@ public class FurnitureSingleEntityItem : FurnitureSceneItemBase
 		base.ShowLevelInstance(this.LevelContext);
 	}
 
-	// Token: 0x0600671C RID: 26396 RVA: 0x001463A6 File Offset: 0x001445A6
+	// Token: 0x06003AB4 RID: 15028 RVA: 0x0014EC6A File Offset: 0x0014CE6A
 	protected override void HideImplement()
 	{
 		if (this.LevelContext == null)
@@ -44,7 +44,7 @@ public class FurnitureSingleEntityItem : FurnitureSceneItemBase
 		base.HideLevelInstance(this.LevelContext);
 	}
 
-	// Token: 0x0600671D RID: 26397 RVA: 0x001463BD File Offset: 0x001445BD
+	// Token: 0x06003AB5 RID: 15029 RVA: 0x0014EC81 File Offset: 0x0014CE81
 	protected override void UnloadImplement()
 	{
 		if (this.LevelContext != null)
@@ -54,7 +54,7 @@ public class FurnitureSingleEntityItem : FurnitureSceneItemBase
 		}
 	}
 
-	// Token: 0x04002EB3 RID: 11955
+	// Token: 0x04002F4C RID: 12108
 	[Nullable(2)]
 	private FurnitureLevelContext LevelContext;
 }

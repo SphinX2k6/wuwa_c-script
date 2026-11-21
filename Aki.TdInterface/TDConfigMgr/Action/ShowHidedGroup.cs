@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002202 RID: 8706
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200246D RID: 9325
 	public class ShowHidedGroup : ActionParams
 	{
-		// Token: 0x0600BF31 RID: 48945 RVA: 0x001B7B44 File Offset: 0x001B5D44
+		// Token: 0x0600CAED RID: 51949 RVA: 0x001CF1D0 File Offset: 0x001CD3D0
 		private ShowHidedGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF32 RID: 48946 RVA: 0x001B7B7C File Offset: 0x001B5D7C
+		// Token: 0x0600CAEE RID: 51950 RVA: 0x001CF208 File Offset: 0x001CD408
 		public static ShowHidedGroup Create([Nullable(2)] ShowHidedGroup instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF33 RID: 48947 RVA: 0x001B7B8F File Offset: 0x001B5D8F
+		// Token: 0x0600CAEF RID: 51951 RVA: 0x001CF21B File Offset: 0x001CD41B
 		public static ShowHidedGroup CreateFromSetValue([Nullable(2)] ShowHidedGroup_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF34 RID: 48948 RVA: 0x001B7BA2 File Offset: 0x001B5DA2
+		// Token: 0x0600CAF0 RID: 51952 RVA: 0x001CF22E File Offset: 0x001CD42E
 		public ShowHidedGroup_SetValue ToSetValue()
 		{
 			return new ShowHidedGroup_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039F8 RID: 14840
-		// (get) Token: 0x0600BF35 RID: 48949 RVA: 0x001B7BC1 File Offset: 0x001B5DC1
-		// (set) Token: 0x0600BF36 RID: 48950 RVA: 0x001B7BEC File Offset: 0x001B5DEC
+		// Token: 0x17003CED RID: 15597
+		// (get) Token: 0x0600CAF1 RID: 51953 RVA: 0x001CF24D File Offset: 0x001CD44D
+		// (set) Token: 0x0600CAF2 RID: 51954 RVA: 0x001CF278 File Offset: 0x001CD478
 		public virtual string GroupKey
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039F9 RID: 14841
-		// (get) Token: 0x0600BF37 RID: 48951 RVA: 0x001B7BFA File Offset: 0x001B5DFA
-		// (set) Token: 0x0600BF38 RID: 48952 RVA: 0x001B7C25 File Offset: 0x001B5E25
+		// Token: 0x17003CEE RID: 15598
+		// (get) Token: 0x0600CAF3 RID: 51955 RVA: 0x001CF286 File Offset: 0x001CD486
+		// (set) Token: 0x0600CAF4 RID: 51956 RVA: 0x001CF2B1 File Offset: 0x001CD4B1
 		public virtual bool DelayShow
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071FA RID: 29178
+		// Token: 0x04007843 RID: 30787
 		[Nullable(2)]
 		protected new ShowHidedGroup FbInstance;
 
-		// Token: 0x040071FB RID: 29179
+		// Token: 0x04007844 RID: 30788
 		[Nullable(2)]
 		protected ShowHidedGroup_SetValue PocoInterface;
 	}

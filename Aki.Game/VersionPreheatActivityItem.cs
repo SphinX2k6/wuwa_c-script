@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001572 RID: 5490
+// Token: 0x02000A2A RID: 2602
 [NullableContext(1)]
 [Nullable(0)]
 internal class VersionPreheatActivityItem : UiPanelBase
 {
-	// Token: 0x06009D02 RID: 40194 RVA: 0x0021F848 File Offset: 0x0021DA48
+	// Token: 0x060070E0 RID: 28896 RVA: 0x002295F8 File Offset: 0x002277F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -30,7 +30,7 @@ internal class VersionPreheatActivityItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D03 RID: 40195 RVA: 0x0021F8F4 File Offset: 0x0021DAF4
+	// Token: 0x060070E1 RID: 28897 RVA: 0x002296A4 File Offset: 0x002278A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VersionPreheatActivityItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -41,21 +41,21 @@ internal class VersionPreheatActivityItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009D04 RID: 40196 RVA: 0x0021F937 File Offset: 0x0021DB37
+	// Token: 0x060070E2 RID: 28898 RVA: 0x002296E7 File Offset: 0x002278E7
 	protected override void OnStart()
 	{
 		this.Reward.SetUiActive(false);
 		this.Bottom.SetUiActive(false);
 	}
 
-	// Token: 0x06009D05 RID: 40197 RVA: 0x0021F951 File Offset: 0x0021DB51
+	// Token: 0x060070E3 RID: 28899 RVA: 0x00229701 File Offset: 0x00227901
 	public void RefreshExternal(VersionPreheatActivityInfoData data)
 	{
 		this.RefreshTitle(data.TitleData);
 		this.RefreshDescription(data.DescriptionData);
 	}
 
-	// Token: 0x06009D06 RID: 40198 RVA: 0x0021F96B File Offset: 0x0021DB6B
+	// Token: 0x060070E4 RID: 28900 RVA: 0x0022971B File Offset: 0x0022791B
 	public void RefreshSubTitleExternal(bool isShow, string text)
 	{
 		this.Title.SetTimeTextVisible(isShow);
@@ -65,7 +65,7 @@ internal class VersionPreheatActivityItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009D07 RID: 40199 RVA: 0x0021F988 File Offset: 0x0021DB88
+	// Token: 0x060070E5 RID: 28901 RVA: 0x00229738 File Offset: 0x00227938
 	private void RefreshTitle(VersionPreheatActivityTitleData data)
 	{
 		this.Title.SetTitleByTextId(data.TitleTextId, Array.Empty<string>());
@@ -74,38 +74,38 @@ internal class VersionPreheatActivityItem : UiPanelBase
 		this.Title.SetTimeTextVisible(false);
 	}
 
-	// Token: 0x06009D08 RID: 40200 RVA: 0x0021F9D9 File Offset: 0x0021DBD9
+	// Token: 0x060070E6 RID: 28902 RVA: 0x00229789 File Offset: 0x00227989
 	private void RefreshDescription(VersionPreheatActivityDescriptionData data)
 	{
 		this.Description.SetContentByTextId(data.ContentTextId, Array.Empty<string>());
 	}
 
-	// Token: 0x040044E8 RID: 17640
+	// Token: 0x0400458E RID: 17806
 	private ActivityTitleTypeA Title;
 
-	// Token: 0x040044E9 RID: 17641
+	// Token: 0x0400458F RID: 17807
 	private ActivityDescriptionTypeA Description;
 
-	// Token: 0x040044EA RID: 17642
+	// Token: 0x04004590 RID: 17808
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> Reward;
 
-	// Token: 0x040044EB RID: 17643
+	// Token: 0x04004591 RID: 17809
 	private VersionPreheatActivityBottom Bottom;
 
-	// Token: 0x02007BA1 RID: 31649
+	// Token: 0x02006D2C RID: 27948
 	[NullableContext(0)]
 	internal class EActivityComponent
 	{
-		// Token: 0x04028A39 RID: 166457
+		// Token: 0x04023D74 RID: 146804
 		public const int TitleItem = 0;
 
-		// Token: 0x04028A3A RID: 166458
+		// Token: 0x04023D75 RID: 146805
 		public const int DescriptionItem = 1;
 
-		// Token: 0x04028A3B RID: 166459
+		// Token: 0x04023D76 RID: 146806
 		public const int RewardItem = 2;
 
-		// Token: 0x04028A3C RID: 166460
+		// Token: 0x04023D77 RID: 146807
 		public const int BottomItem = 3;
 	}
 }

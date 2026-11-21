@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043BF RID: 17343
+	// Token: 0x02004821 RID: 18465
 	public struct IRefSource : IFlatbufferObject
 	{
-		// Token: 0x17007AA8 RID: 31400
-		// (get) Token: 0x06019DBE RID: 105918 RVA: 0x003B3A54 File Offset: 0x003B1C54
+		// Token: 0x170080DF RID: 32991
+		// (get) Token: 0x0601B559 RID: 111961 RVA: 0x003DF6EC File Offset: 0x003DD8EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019DBF RID: 105919 RVA: 0x003B3A61 File Offset: 0x003B1C61
+		// Token: 0x0601B55A RID: 111962 RVA: 0x003DF6F9 File Offset: 0x003DD8F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019DC0 RID: 105920 RVA: 0x003B3A68 File Offset: 0x003B1C68
+		// Token: 0x0601B55B RID: 111963 RVA: 0x003DF700 File Offset: 0x003DD900
 		public static IRefSource GetRootAsIRefSource(ByteBuffer _bb)
 		{
 			return IRefSource.GetRootAsIRefSource(_bb, default(IRefSource));
 		}
 
-		// Token: 0x06019DC1 RID: 105921 RVA: 0x003B3A84 File Offset: 0x003B1C84
+		// Token: 0x0601B55C RID: 111964 RVA: 0x003DF71C File Offset: 0x003DD91C
 		public static IRefSource GetRootAsIRefSource(ByteBuffer _bb, IRefSource obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019DC2 RID: 105922 RVA: 0x003B3AA1 File Offset: 0x003B1CA1
+		// Token: 0x0601B55D RID: 111965 RVA: 0x003DF739 File Offset: 0x003DD939
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019DC3 RID: 105923 RVA: 0x003B3AB0 File Offset: 0x003B1CB0
+		// Token: 0x0601B55E RID: 111966 RVA: 0x003DF748 File Offset: 0x003DD948
 		public IRefSource __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007AA9 RID: 31401
-		// (get) Token: 0x06019DC4 RID: 105924 RVA: 0x003B3AC0 File Offset: 0x003B1CC0
+		// Token: 0x170080E0 RID: 32992
+		// (get) Token: 0x0601B55F RID: 111967 RVA: 0x003DF758 File Offset: 0x003DD958
 		public ERefSourceType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019DC5 RID: 105925 RVA: 0x003B3AFC File Offset: 0x003B1CFC
+		// Token: 0x0601B560 RID: 111968 RVA: 0x003DF794 File Offset: 0x003DD994
 		public static Offset<IRefSource> CreateIRefSource(FlatBufferBuilder builder, ERefSourceType Type = ERefSourceType.AwakeEntity)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return IRefSource.EndIRefSource(builder);
 		}
 
-		// Token: 0x06019DC6 RID: 105926 RVA: 0x003B3B12 File Offset: 0x003B1D12
+		// Token: 0x0601B561 RID: 111969 RVA: 0x003DF7AA File Offset: 0x003DD9AA
 		public static void StartIRefSource(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06019DC7 RID: 105927 RVA: 0x003B3B1B File Offset: 0x003B1D1B
+		// Token: 0x0601B562 RID: 111970 RVA: 0x003DF7B3 File Offset: 0x003DD9B3
 		public static void AddType(FlatBufferBuilder builder, ERefSourceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019DC8 RID: 105928 RVA: 0x003B3B26 File Offset: 0x003B1D26
+		// Token: 0x0601B563 RID: 111971 RVA: 0x003DF7BE File Offset: 0x003DD9BE
 		public static Offset<IRefSource> EndIRefSource(FlatBufferBuilder builder)
 		{
 			return new Offset<IRefSource>(builder.EndTable());
 		}
 
-		// Token: 0x06019DC9 RID: 105929 RVA: 0x003B3B34 File Offset: 0x003B1D34
+		// Token: 0x0601B564 RID: 111972 RVA: 0x003DF7CC File Offset: 0x003DD9CC
 		public IRefSourceT UnPack()
 		{
 			IRefSourceT refSourceT = new IRefSourceT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return refSourceT;
 		}
 
-		// Token: 0x06019DCA RID: 105930 RVA: 0x003B3B4F File Offset: 0x003B1D4F
+		// Token: 0x0601B565 RID: 111973 RVA: 0x003DF7E7 File Offset: 0x003DD9E7
 		public void UnPackTo(IRefSourceT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06019DCB RID: 105931 RVA: 0x003B3B60 File Offset: 0x003B1D60
+		// Token: 0x0601B566 RID: 111974 RVA: 0x003DF7F8 File Offset: 0x003DD9F8
 		public static Offset<IRefSource> Pack(FlatBufferBuilder builder, IRefSourceT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return IRefSource.CreateIRefSource(builder, _o.Type);
 		}
 
-		// Token: 0x0400C208 RID: 49672
+		// Token: 0x0400CC29 RID: 52265
 		private Table __p;
 	}
 }

@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip;
 using UnrealEngine;
 
-// Token: 0x0200108B RID: 4235
+// Token: 0x0200053F RID: 1343
 public class RhythmGameUtil
 {
-	// Token: 0x06006E44 RID: 28228 RVA: 0x00167520 File Offset: 0x00165720
+	// Token: 0x060041D9 RID: 16857 RVA: 0x0016FE54 File Offset: 0x0016E054
 	[NullableContext(1)]
 	public static TArray<FKuroRhythmSkillEffectParam> GetRhythmGameSkillEffectParam(int roleId)
 	{

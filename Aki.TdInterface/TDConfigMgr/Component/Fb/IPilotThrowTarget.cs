@@ -6,13 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B03 RID: 2819
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000BCE RID: 3022
 	public class IPilotThrowTarget
 	{
-		// Token: 0x060040FF RID: 16639 RVA: 0x000A6A16 File Offset: 0x000A4C16
-		[NullableContext(1)]
+		// Token: 0x0600453A RID: 17722 RVA: 0x000B054A File Offset: 0x000AE74A
 		public static IPilotThrowTarget Create(IPilotThrowTarget? instance)
 		{
 			if (instance == null)
@@ -25,24 +22,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170010B6 RID: 4278
-		// (get) Token: 0x06004100 RID: 16640 RVA: 0x000A6A35 File Offset: 0x000A4C35
-		[Nullable(1)]
+		// Token: 0x17001199 RID: 4505
+		// (get) Token: 0x0600453B RID: 17723 RVA: 0x000B0569 File Offset: 0x000AE769
 		public virtual string TidTargetName
 		{
-			[NullableContext(1)]
 			get
 			{
 				return this.Instance.TidTargetName;
 			}
 		}
 
-		// Token: 0x170010B7 RID: 4279
-		// (get) Token: 0x06004101 RID: 16641 RVA: 0x000A6A42 File Offset: 0x000A4C42
-		[Nullable(1)]
+		// Token: 0x1700119A RID: 4506
+		// (get) Token: 0x0600453C RID: 17724 RVA: 0x000B0576 File Offset: 0x000AE776
 		public virtual VectorInfo Position
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._PositionInited)
@@ -55,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010B8 RID: 4280
-		// (get) Token: 0x06004102 RID: 16642 RVA: 0x000A6A76 File Offset: 0x000A4C76
+		// Token: 0x1700119B RID: 4507
+		// (get) Token: 0x0600453D RID: 17725 RVA: 0x000B05AA File Offset: 0x000AE7AA
 		public virtual EPilotThrowPointVisualType VisualType
 		{
 			get
@@ -65,10 +58,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010B9 RID: 4281
-		// (get) Token: 0x06004103 RID: 16643 RVA: 0x000A6A83 File Offset: 0x000A4C83
+		// Token: 0x1700119C RID: 4508
+		// (get) Token: 0x0600453E RID: 17726 RVA: 0x000B05B7 File Offset: 0x000AE7B7
+		[Nullable(2)]
 		public virtual IConditionGroup Conditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._ConditionsInited)
@@ -81,8 +76,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010BA RID: 4282
-		// (get) Token: 0x06004104 RID: 16644 RVA: 0x000A6AB8 File Offset: 0x000A4CB8
+		// Token: 0x1700119D RID: 4509
+		// (get) Token: 0x0600453F RID: 17727 RVA: 0x000B05EC File Offset: 0x000AE7EC
 		public virtual bool? IsQuest
 		{
 			get
@@ -95,8 +90,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010BB RID: 4283
-		// (get) Token: 0x06004105 RID: 16645 RVA: 0x000A6AF0 File Offset: 0x000A4CF0
+		// Token: 0x1700119E RID: 4510
+		// (get) Token: 0x06004540 RID: 17728 RVA: 0x000B0624 File Offset: 0x000AE824
 		public virtual float? UiScale
 		{
 			get
@@ -109,29 +104,33 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010BC RID: 4284
-		// (get) Token: 0x06004106 RID: 16646 RVA: 0x000A6B26 File Offset: 0x000A4D26
+		// Token: 0x1700119F RID: 4511
+		// (get) Token: 0x06004541 RID: 17729 RVA: 0x000B065A File Offset: 0x000AE85A
+		[Nullable(2)]
 		public virtual string EdTidTargetName
 		{
+			[NullableContext(2)]
 			get
 			{
 				return null;
 			}
 		}
 
-		// Token: 0x04002486 RID: 9350
+		// Token: 0x040026B9 RID: 9913
 		private IPilotThrowTarget Instance;
 
-		// Token: 0x04002487 RID: 9351
+		// Token: 0x040026BA RID: 9914
+		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002488 RID: 9352
+		// Token: 0x040026BB RID: 9915
 		private bool _PositionInited;
 
-		// Token: 0x04002489 RID: 9353
+		// Token: 0x040026BC RID: 9916
+		[Nullable(2)]
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x0400248A RID: 9354
+		// Token: 0x040026BD RID: 9917
 		private bool _ConditionsInited;
 	}
 }

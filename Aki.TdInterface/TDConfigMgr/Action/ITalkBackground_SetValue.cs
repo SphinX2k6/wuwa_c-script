@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F17 RID: 7959
+	// Token: 0x02002150 RID: 8528
 	public class ITalkBackground_SetValue
 	{
-		// Token: 0x04006520 RID: 25888
+		// Token: 0x04006B0F RID: 27407
 		public ETalkBackgroundType Type;
 	}
 }

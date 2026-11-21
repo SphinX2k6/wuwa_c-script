@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041CD RID: 16845
+	// Token: 0x02004626 RID: 17958
 	public class ITetrisSingleBlockT
 	{
-		// Token: 0x17007773 RID: 30579
-		// (get) Token: 0x06018D0C RID: 101644 RVA: 0x003921F1 File Offset: 0x003903F1
-		// (set) Token: 0x06018D0D RID: 101645 RVA: 0x003921F9 File Offset: 0x003903F9
+		// Token: 0x17007D9F RID: 32159
+		// (get) Token: 0x0601A462 RID: 107618 RVA: 0x003BD645 File Offset: 0x003BB845
+		// (set) Token: 0x0601A463 RID: 107619 RVA: 0x003BD64D File Offset: 0x003BB84D
 		public string StyleName { get; set; }
 
-		// Token: 0x06018D0E RID: 101646 RVA: 0x00392202 File Offset: 0x00390402
+		// Token: 0x0601A464 RID: 107620 RVA: 0x003BD656 File Offset: 0x003BB856
 		public ITetrisSingleBlockT()
 		{
 			this.StyleName = null;

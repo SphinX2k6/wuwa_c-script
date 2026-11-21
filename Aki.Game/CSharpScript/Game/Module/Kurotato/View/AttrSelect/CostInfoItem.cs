@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 {
-	// Token: 0x02005780 RID: 22400
+	// Token: 0x02004757 RID: 18263
 	internal class CostInfoItem : UiPanelBase
 	{
-		// Token: 0x06038E78 RID: 233080 RVA: 0x00D86114 File Offset: 0x00D84314
+		// Token: 0x0602DD88 RID: 187784 RVA: 0x00CD4DD4 File Offset: 0x00CD2FD4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038E79 RID: 233081 RVA: 0x00D861BA File Offset: 0x00D843BA
+		// Token: 0x0602DD89 RID: 187785 RVA: 0x00CD4E7A File Offset: 0x00CD307A
 		private void OnClickTitle()
 		{
 			Action onClickCb = this.OnClickCb;
@@ -42,24 +42,24 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			onClickCb();
 		}
 
-		// Token: 0x06038E7A RID: 233082 RVA: 0x00D861CC File Offset: 0x00D843CC
+		// Token: 0x0602DD8A RID: 187786 RVA: 0x00CD4E8C File Offset: 0x00CD308C
 		[NullableContext(1)]
 		public void SetOnClickCb(Action cb)
 		{
 			this.OnClickCb = cb;
 		}
 
-		// Token: 0x0401DD58 RID: 122200
+		// Token: 0x040187EE RID: 100334
 		[Nullable(2)]
 		private Action OnClickCb;
 
-		// Token: 0x0200B9A0 RID: 47520
+		// Token: 0x0200A3B8 RID: 41912
 		private class ECostItemComp
 		{
-			// Token: 0x04038209 RID: 229897
+			// Token: 0x04032BFE RID: 207870
 			public const int BtnTitle = 0;
 
-			// Token: 0x0403820A RID: 229898
+			// Token: 0x04032BFF RID: 207871
 			public const int TextNum = 1;
 		}
 	}

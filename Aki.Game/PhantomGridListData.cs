@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002464 RID: 9316
+// Token: 0x02001949 RID: 6473
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomGridListData : IPhantomGridListData
 {
-	// Token: 0x1700185A RID: 6234
-	// (get) Token: 0x06012B16 RID: 76566 RVA: 0x0049D626 File Offset: 0x0049B826
-	// (set) Token: 0x06012B17 RID: 76567 RVA: 0x0049D62E File Offset: 0x0049B82E
+	// Token: 0x17001894 RID: 6292
+	// (get) Token: 0x0600FFCE RID: 65486 RVA: 0x004AAD92 File Offset: 0x004A8F92
+	// (set) Token: 0x0600FFCF RID: 65487 RVA: 0x004AAD9A File Offset: 0x004A8F9A
 	public EGridTitleType TitleType { get; set; }
 
-	// Token: 0x1700185B RID: 6235
-	// (get) Token: 0x06012B18 RID: 76568 RVA: 0x0049D637 File Offset: 0x0049B837
-	// (set) Token: 0x06012B19 RID: 76569 RVA: 0x0049D63F File Offset: 0x0049B83F
+	// Token: 0x17001895 RID: 6293
+	// (get) Token: 0x0600FFD0 RID: 65488 RVA: 0x004AADA3 File Offset: 0x004A8FA3
+	// (set) Token: 0x0600FFD1 RID: 65489 RVA: 0x004AADAB File Offset: 0x004A8FAB
 	public List<int> MonsterIds { get; set; } = new List<int>();
 }

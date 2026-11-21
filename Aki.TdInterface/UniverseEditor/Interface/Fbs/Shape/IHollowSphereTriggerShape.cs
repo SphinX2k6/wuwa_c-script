@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C22 RID: 15394
+	// Token: 0x0200402E RID: 16430
 	public struct IHollowSphereTriggerShape : IFlatbufferObject
 	{
-		// Token: 0x170069F5 RID: 27125
-		// (get) Token: 0x060153D1 RID: 86993 RVA: 0x0031344C File Offset: 0x0031164C
+		// Token: 0x17006F9D RID: 28573
+		// (get) Token: 0x060168C7 RID: 92359 RVA: 0x00339FD4 File Offset: 0x003381D4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060153D2 RID: 86994 RVA: 0x00313459 File Offset: 0x00311659
+		// Token: 0x060168C8 RID: 92360 RVA: 0x00339FE1 File Offset: 0x003381E1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060153D3 RID: 86995 RVA: 0x00313460 File Offset: 0x00311660
+		// Token: 0x060168C9 RID: 92361 RVA: 0x00339FE8 File Offset: 0x003381E8
 		public static IHollowSphereTriggerShape GetRootAsIHollowSphereTriggerShape(ByteBuffer _bb)
 		{
 			return IHollowSphereTriggerShape.GetRootAsIHollowSphereTriggerShape(_bb, default(IHollowSphereTriggerShape));
 		}
 
-		// Token: 0x060153D4 RID: 86996 RVA: 0x0031347C File Offset: 0x0031167C
+		// Token: 0x060168CA RID: 92362 RVA: 0x0033A004 File Offset: 0x00338204
 		public static IHollowSphereTriggerShape GetRootAsIHollowSphereTriggerShape(ByteBuffer _bb, IHollowSphereTriggerShape obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060153D5 RID: 86997 RVA: 0x00313499 File Offset: 0x00311699
+		// Token: 0x060168CB RID: 92363 RVA: 0x0033A021 File Offset: 0x00338221
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060153D6 RID: 86998 RVA: 0x003134A8 File Offset: 0x003116A8
+		// Token: 0x060168CC RID: 92364 RVA: 0x0033A030 File Offset: 0x00338230
 		public IHollowSphereTriggerShape __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170069F6 RID: 27126
-		// (get) Token: 0x060153D7 RID: 86999 RVA: 0x003134B8 File Offset: 0x003116B8
+		// Token: 0x17006F9E RID: 28574
+		// (get) Token: 0x060168CD RID: 92365 RVA: 0x0033A040 File Offset: 0x00338240
 		public ETriggerShape Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069F7 RID: 27127
-		// (get) Token: 0x060153D8 RID: 87000 RVA: 0x003134F4 File Offset: 0x003116F4
+		// Token: 0x17006F9F RID: 28575
+		// (get) Token: 0x060168CE RID: 92366 RVA: 0x0033A07C File Offset: 0x0033827C
 		public IVectorInfo? Center
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069F8 RID: 27128
-		// (get) Token: 0x060153D9 RID: 87001 RVA: 0x00313554 File Offset: 0x00311754
+		// Token: 0x17006FA0 RID: 28576
+		// (get) Token: 0x060168CF RID: 92367 RVA: 0x0033A0DC File Offset: 0x003382DC
 		public int Radius
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069F9 RID: 27129
-		// (get) Token: 0x060153DA RID: 87002 RVA: 0x00313590 File Offset: 0x00311790
+		// Token: 0x17006FA1 RID: 28577
+		// (get) Token: 0x060168D0 RID: 92368 RVA: 0x0033A118 File Offset: 0x00338318
 		public int InnerRadius
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060153DB RID: 87003 RVA: 0x003135CD File Offset: 0x003117CD
+		// Token: 0x060168D1 RID: 92369 RVA: 0x0033A155 File Offset: 0x00338355
 		public static Offset<IHollowSphereTriggerShape> CreateIHollowSphereTriggerShape(FlatBufferBuilder builder, ETriggerShape Type = ETriggerShape.Box, Offset<IVectorInfo> CenterOffset = default(Offset<IVectorInfo>), int Radius = 0, int InnerRadius = 0)
 		{
 			builder.StartTable(4);
@@ -119,43 +119,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IHollowSphereTriggerShape.EndIHollowSphereTriggerShape(builder);
 		}
 
-		// Token: 0x060153DC RID: 87004 RVA: 0x003135F9 File Offset: 0x003117F9
+		// Token: 0x060168D2 RID: 92370 RVA: 0x0033A181 File Offset: 0x00338381
 		public static void StartIHollowSphereTriggerShape(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060153DD RID: 87005 RVA: 0x00313602 File Offset: 0x00311802
+		// Token: 0x060168D3 RID: 92371 RVA: 0x0033A18A File Offset: 0x0033838A
 		public static void AddType(FlatBufferBuilder builder, ETriggerShape type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060153DE RID: 87006 RVA: 0x0031360D File Offset: 0x0031180D
+		// Token: 0x060168D4 RID: 92372 RVA: 0x0033A195 File Offset: 0x00338395
 		public static void AddCenter(FlatBufferBuilder builder, Offset<IVectorInfo> centerOffset)
 		{
 			builder.AddOffset(1, centerOffset.Value, 0);
 		}
 
-		// Token: 0x060153DF RID: 87007 RVA: 0x0031361D File Offset: 0x0031181D
+		// Token: 0x060168D5 RID: 92373 RVA: 0x0033A1A5 File Offset: 0x003383A5
 		public static void AddRadius(FlatBufferBuilder builder, int radius)
 		{
 			builder.AddInt(2, radius, 0);
 		}
 
-		// Token: 0x060153E0 RID: 87008 RVA: 0x00313628 File Offset: 0x00311828
+		// Token: 0x060168D6 RID: 92374 RVA: 0x0033A1B0 File Offset: 0x003383B0
 		public static void AddInnerRadius(FlatBufferBuilder builder, int innerRadius)
 		{
 			builder.AddInt(3, innerRadius, 0);
 		}
 
-		// Token: 0x060153E1 RID: 87009 RVA: 0x00313633 File Offset: 0x00311833
+		// Token: 0x060168D7 RID: 92375 RVA: 0x0033A1BB File Offset: 0x003383BB
 		public static Offset<IHollowSphereTriggerShape> EndIHollowSphereTriggerShape(FlatBufferBuilder builder)
 		{
 			return new Offset<IHollowSphereTriggerShape>(builder.EndTable());
 		}
 
-		// Token: 0x060153E2 RID: 87010 RVA: 0x00313640 File Offset: 0x00311840
+		// Token: 0x060168D8 RID: 92376 RVA: 0x0033A1C8 File Offset: 0x003383C8
 		public IHollowSphereTriggerShapeT UnPack()
 		{
 			IHollowSphereTriggerShapeT hollowSphereTriggerShapeT = new IHollowSphereTriggerShapeT();
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return hollowSphereTriggerShapeT;
 		}
 
-		// Token: 0x060153E3 RID: 87011 RVA: 0x0031365C File Offset: 0x0031185C
+		// Token: 0x060168D9 RID: 92377 RVA: 0x0033A1E4 File Offset: 0x003383E4
 		public void UnPackTo(IHollowSphereTriggerShapeT _o)
 		{
 			_o.Type = this.Type;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.InnerRadius = this.InnerRadius;
 		}
 
-		// Token: 0x060153E4 RID: 87012 RVA: 0x003136BC File Offset: 0x003118BC
+		// Token: 0x060168DA RID: 92378 RVA: 0x0033A244 File Offset: 0x00338444
 		public static Offset<IHollowSphereTriggerShape> Pack(FlatBufferBuilder builder, IHollowSphereTriggerShapeT _o)
 		{
 			if (_o == null)
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IHollowSphereTriggerShape.CreateIHollowSphereTriggerShape(builder, _o.Type, centerOffset, _o.Radius, _o.InnerRadius);
 		}
 
-		// Token: 0x0400B214 RID: 45588
+		// Token: 0x0400BB9F RID: 48031
 		private Table __p;
 	}
 }

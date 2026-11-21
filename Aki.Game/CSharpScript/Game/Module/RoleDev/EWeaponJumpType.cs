@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CC9 RID: 19657
+	// Token: 0x02003C7A RID: 15482
 	public enum EWeaponJumpType
 	{
-		// Token: 0x0401B06F RID: 110703
+		// Token: 0x040159D0 RID: 88528
 		FiveStarLimited = 1,
-		// Token: 0x0401B070 RID: 110704
+		// Token: 0x040159D1 RID: 88529
 		FiveStarRegular,
-		// Token: 0x0401B071 RID: 110705
+		// Token: 0x040159D2 RID: 88530
 		Jump,
-		// Token: 0x0401B072 RID: 110706
+		// Token: 0x040159D3 RID: 88531
 		NotObtained
 	}
 }

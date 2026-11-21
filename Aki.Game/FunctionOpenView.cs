@@ -7,16 +7,16 @@ using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C4F RID: 7247
+// Token: 0x0200110E RID: 4366
 public class FunctionOpenView : UiViewBase
 {
-	// Token: 0x0600DA94 RID: 55956 RVA: 0x0032C420 File Offset: 0x0032A620
+	// Token: 0x0600AEAA RID: 44714 RVA: 0x00337828 File Offset: 0x00335A28
 	[NullableContext(1)]
 	public FunctionOpenView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DA95 RID: 55957 RVA: 0x0032C42C File Offset: 0x0032A62C
+	// Token: 0x0600AEAB RID: 44715 RVA: 0x00337834 File Offset: 0x00335A34
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -43,7 +43,7 @@ public class FunctionOpenView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DA96 RID: 55958 RVA: 0x0032C538 File Offset: 0x0032A738
+	// Token: 0x0600AEAC RID: 44716 RVA: 0x00337940 File Offset: 0x00335B40
 	protected override void OnStart()
 	{
 		if (PlotModel.Instance.IsInHighLevelPlot())
@@ -53,20 +53,20 @@ public class FunctionOpenView : UiViewBase
 		this.RefreshInfo(FunctionModel.Instance.PopNewOpenFunctionList().Value);
 	}
 
-	// Token: 0x0600DA97 RID: 55959 RVA: 0x0032C578 File Offset: 0x0032A778
+	// Token: 0x0600AEAD RID: 44717 RVA: 0x00337980 File Offset: 0x00335B80
 	protected override void OnAfterShow()
 	{
 		this.UiViewSequence.PlaySequence("Show", true, null);
 	}
 
-	// Token: 0x0600DA98 RID: 55960 RVA: 0x0032C5A0 File Offset: 0x0032A7A0
+	// Token: 0x0600AEAE RID: 44718 RVA: 0x003379A8 File Offset: 0x00335BA8
 	private void ShowNextFunction(FunctionCondition functionCondition)
 	{
 		this.UiViewSequence.PlaySequence("Show", true, null);
 		this.RefreshInfo(functionCondition);
 	}
 
-	// Token: 0x0600DA99 RID: 55961 RVA: 0x0032C5D0 File Offset: 0x0032A7D0
+	// Token: 0x0600AEAF RID: 44719 RVA: 0x003379D8 File Offset: 0x00335BD8
 	private void RefreshInfo(FunctionCondition functionCondition)
 	{
 		UUITexture texture = base.GetTexture(0);
@@ -75,7 +75,7 @@ public class FunctionOpenView : UiViewBase
 		base.GetText(2).ShowTextNew(functionCondition.Desc);
 	}
 
-	// Token: 0x0600DA9A RID: 55962 RVA: 0x0032C624 File Offset: 0x0032A824
+	// Token: 0x0600AEB0 RID: 44720 RVA: 0x00337A2C File Offset: 0x00335C2C
 	private void OnClickClose()
 	{
 		FunctionCondition? functionCondition = FunctionModel.Instance.PopNewOpenFunctionList();
@@ -87,30 +87,30 @@ public class FunctionOpenView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600DA9B RID: 55963 RVA: 0x0032C65A File Offset: 0x0032A85A
+	// Token: 0x0600AEB1 RID: 44721 RVA: 0x00337A62 File Offset: 0x00335C62
 	protected override void OnBeforeShow()
 	{
 		GameSettingsDeviceRender.Instance.TemporaryDisableFrameGeneration("FunctionOpenView");
 	}
 
-	// Token: 0x0600DA9C RID: 55964 RVA: 0x0032C66B File Offset: 0x0032A86B
+	// Token: 0x0600AEB2 RID: 44722 RVA: 0x00337A73 File Offset: 0x00335C73
 	protected override void OnAfterHide()
 	{
 		GameSettingsDeviceRender.Instance.CancelTemporaryDisableFrameGeneration("FunctionOpenView");
 	}
 
-	// Token: 0x02008211 RID: 33297
+	// Token: 0x0200739A RID: 29594
 	private enum EFunctionOpenViewDefine
 	{
-		// Token: 0x0402A728 RID: 173864
+		// Token: 0x04025A4F RID: 154191
 		Icon,
-		// Token: 0x0402A729 RID: 173865
+		// Token: 0x04025A50 RID: 154192
 		TitleText,
-		// Token: 0x0402A72A RID: 173866
+		// Token: 0x04025A51 RID: 154193
 		DescText,
-		// Token: 0x0402A72B RID: 173867
+		// Token: 0x04025A52 RID: 154194
 		CloseButton,
-		// Token: 0x0402A72C RID: 173868
+		// Token: 0x04025A53 RID: 154195
 		CloseText
 	}
 }

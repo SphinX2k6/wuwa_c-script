@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Capability;
 using UnrealEngine;
 
-// Token: 0x02000236 RID: 566
+// Token: 0x0200023A RID: 570
 [NullableContext(1)]
 public interface IScheduledEntry
 {
-	// Token: 0x17000535 RID: 1333
-	// (get) Token: 0x060022E7 RID: 8935
-	// (set) Token: 0x060022E8 RID: 8936
+	// Token: 0x1700055C RID: 1372
+	// (get) Token: 0x0600239F RID: 9119
+	// (set) Token: 0x060023A0 RID: 9120
 	Capability Cap { get; set; }
 
-	// Token: 0x17000536 RID: 1334
-	// (get) Token: 0x060022E9 RID: 8937
-	// (set) Token: 0x060022EA RID: 8938
+	// Token: 0x1700055D RID: 1373
+	// (get) Token: 0x060023A1 RID: 9121
+	// (set) Token: 0x060023A2 RID: 9122
 	ETickingGroup? EffectiveGroup { get; set; }
 
-	// Token: 0x17000537 RID: 1335
-	// (get) Token: 0x060022EB RID: 8939
-	// (set) Token: 0x060022EC RID: 8940
+	// Token: 0x1700055E RID: 1374
+	// (get) Token: 0x060023A3 RID: 9123
+	// (set) Token: 0x060023A4 RID: 9124
 	int EffectiveOrder { get; set; }
 }

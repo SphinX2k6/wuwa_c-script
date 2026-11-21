@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x020015E5 RID: 5605
+// Token: 0x02000A9D RID: 2717
 internal enum <WheelTowerSettlementScorePanel>FBD8C87FC0E7867F72BA7203FD58847319F374DA081C2AA1EE179F8F00E9262C3__EWheelTowerSettlementScorePanelComponent
 {
-	// Token: 0x0400469B RID: 18075
+	// Token: 0x04004741 RID: 18241
 	BgTotalScore,
-	// Token: 0x0400469C RID: 18076
+	// Token: 0x04004742 RID: 18242
 	BgRoundScore,
-	// Token: 0x0400469D RID: 18077
+	// Token: 0x04004743 RID: 18243
 	BgScoreLevel,
-	// Token: 0x0400469E RID: 18078
+	// Token: 0x04004744 RID: 18244
 	TxtTotalScore,
-	// Token: 0x0400469F RID: 18079
+	// Token: 0x04004745 RID: 18245
 	TxtRoundScore,
-	// Token: 0x040046A0 RID: 18080
+	// Token: 0x04004746 RID: 18246
 	TexScoreLevel,
-	// Token: 0x040046A1 RID: 18081
+	// Token: 0x04004747 RID: 18247
 	TextureLevelGridBg,
-	// Token: 0x040046A2 RID: 18082
+	// Token: 0x04004748 RID: 18248
 	TextureLevelCircleBg,
-	// Token: 0x040046A3 RID: 18083
+	// Token: 0x04004749 RID: 18249
 	TextureLevelCircle2Bg,
-	// Token: 0x040046A4 RID: 18084
+	// Token: 0x0400474A RID: 18250
 	TextureLevelBg,
-	// Token: 0x040046A5 RID: 18085
+	// Token: 0x0400474B RID: 18251
 	TextureLevelBgLight,
-	// Token: 0x040046A6 RID: 18086
+	// Token: 0x0400474C RID: 18252
 	TextureLevelKingBgLight
 }

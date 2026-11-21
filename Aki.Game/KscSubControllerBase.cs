@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.KuroSimpleCombat;
@@ -14,13 +13,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02000E88 RID: 3720
+// Token: 0x0200033D RID: 829
 [NullableContext(1)]
 [Nullable(0)]
 public class KscSubControllerBase
 {
-	// Token: 0x170006A7 RID: 1703
-	// (get) Token: 0x06005AD8 RID: 23256 RVA: 0x00108D74 File Offset: 0x00106F74
+	// Token: 0x170006CB RID: 1739
+	// (get) Token: 0x06002E6F RID: 11887 RVA: 0x00110A18 File Offset: 0x0010EC18
 	[Nullable(2)]
 	public KscSubModelBase Model
 	{
@@ -31,7 +30,7 @@ public class KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005AD9 RID: 23257 RVA: 0x00108D7C File Offset: 0x00106F7C
+	// Token: 0x06002E70 RID: 11888 RVA: 0x00110A20 File Offset: 0x0010EC20
 	public void Init(EKscGameplayType kscGameplayType)
 	{
 		this.CreateModel();
@@ -39,7 +38,7 @@ public class KscSubControllerBase
 		this.OnInit();
 	}
 
-	// Token: 0x06005ADA RID: 23258 RVA: 0x00108D96 File Offset: 0x00106F96
+	// Token: 0x06002E71 RID: 11889 RVA: 0x00110A3A File Offset: 0x0010EC3A
 	public void InitMap()
 	{
 		this.Model.Init();
@@ -52,7 +51,7 @@ public class KscSubControllerBase
 		this.AddEvents();
 	}
 
-	// Token: 0x06005ADB RID: 23259 RVA: 0x00108DD4 File Offset: 0x00106FD4
+	// Token: 0x06002E72 RID: 11890 RVA: 0x00110A78 File Offset: 0x0010EC78
 	[return: TupleElementNames(new string[]
 	{
 		"Name",
@@ -95,7 +94,7 @@ public class KscSubControllerBase
 		return new ValueTuple<string, CustomPromise<bool>>?(new ValueTuple<string, CustomPromise<bool>>("KSC Preload", promise));
 	}
 
-	// Token: 0x06005ADC RID: 23260 RVA: 0x00108E30 File Offset: 0x00107030
+	// Token: 0x06002E73 RID: 11891 RVA: 0x00110AD4 File Offset: 0x0010ECD4
 	public virtual UniTask PreloadAsync()
 	{
 		KscSubControllerBase.<PreloadAsync>d__11 <PreloadAsync>d__;
@@ -106,7 +105,7 @@ public class KscSubControllerBase
 		return <PreloadAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005ADD RID: 23261 RVA: 0x00108E73 File Offset: 0x00107073
+	// Token: 0x06002E74 RID: 11892 RVA: 0x00110B17 File Offset: 0x0010ED17
 	public void MapLoaded()
 	{
 		this.Model.KscInitState = EKscInitState.MapLoad;
@@ -116,7 +115,7 @@ public class KscSubControllerBase
 		this.OnMapLoaded();
 	}
 
-	// Token: 0x06005ADE RID: 23262 RVA: 0x00108E9E File Offset: 0x0010709E
+	// Token: 0x06002E75 RID: 11893 RVA: 0x00110B42 File Offset: 0x0010ED42
 	public void WorldDone()
 	{
 		this.Model.KscInitState = EKscInitState.WorldDone;
@@ -125,7 +124,7 @@ public class KscSubControllerBase
 		this.AddKscPlayerEntity();
 	}
 
-	// Token: 0x06005ADF RID: 23263 RVA: 0x00108EC0 File Offset: 0x001070C0
+	// Token: 0x06002E76 RID: 11894 RVA: 0x00110B64 File Offset: 0x0010ED64
 	public void WorldReset()
 	{
 		this.ResetPlayerTurnRate();
@@ -156,7 +155,7 @@ public class KscSubControllerBase
 		this.StopEngine();
 	}
 
-	// Token: 0x06005AE0 RID: 23264 RVA: 0x00108F46 File Offset: 0x00107146
+	// Token: 0x06002E77 RID: 11895 RVA: 0x00110BEA File Offset: 0x0010EDEA
 	public void ClearMap()
 	{
 		this.RemoveEvents();
@@ -166,7 +165,7 @@ public class KscSubControllerBase
 		this.Model.Clear();
 	}
 
-	// Token: 0x06005AE1 RID: 23265 RVA: 0x00108F6C File Offset: 0x0010716C
+	// Token: 0x06002E78 RID: 11896 RVA: 0x00110C10 File Offset: 0x0010EE10
 	public void Tick(float delta)
 	{
 		if (Time.Instance.TimeDilation != this.LastTimeDilation)
@@ -185,91 +184,91 @@ public class KscSubControllerBase
 		this.OnTick(delta);
 	}
 
-	// Token: 0x06005AE2 RID: 23266 RVA: 0x00108FD6 File Offset: 0x001071D6
+	// Token: 0x06002E79 RID: 11897 RVA: 0x00110C7A File Offset: 0x0010EE7A
 	public void Clear()
 	{
 		this.OnClear();
 	}
 
-	// Token: 0x06005AE3 RID: 23267 RVA: 0x00108FDE File Offset: 0x001071DE
+	// Token: 0x06002E7A RID: 11898 RVA: 0x00110C82 File Offset: 0x0010EE82
 	public virtual bool IsTargetMap(int instSubType)
 	{
 		return false;
 	}
 
-	// Token: 0x06005AE4 RID: 23268 RVA: 0x00108FE1 File Offset: 0x001071E1
+	// Token: 0x06002E7B RID: 11899 RVA: 0x00110C85 File Offset: 0x0010EE85
 	protected virtual void CreateModel()
 	{
 	}
 
-	// Token: 0x06005AE5 RID: 23269 RVA: 0x00108FE3 File Offset: 0x001071E3
+	// Token: 0x06002E7C RID: 11900 RVA: 0x00110C87 File Offset: 0x0010EE87
 	protected virtual void ClearModel()
 	{
 	}
 
-	// Token: 0x06005AE6 RID: 23270 RVA: 0x00108FE5 File Offset: 0x001071E5
+	// Token: 0x06002E7D RID: 11901 RVA: 0x00110C89 File Offset: 0x0010EE89
 	protected virtual void OnInit()
 	{
 	}
 
-	// Token: 0x06005AE7 RID: 23271 RVA: 0x00108FE7 File Offset: 0x001071E7
+	// Token: 0x06002E7E RID: 11902 RVA: 0x00110C8B File Offset: 0x0010EE8B
 	protected virtual void OnInitMap()
 	{
 	}
 
-	// Token: 0x06005AE8 RID: 23272 RVA: 0x00108FE9 File Offset: 0x001071E9
+	// Token: 0x06002E7F RID: 11903 RVA: 0x00110C8D File Offset: 0x0010EE8D
 	protected virtual void OnMapLoaded()
 	{
 	}
 
-	// Token: 0x06005AE9 RID: 23273 RVA: 0x00108FEB File Offset: 0x001071EB
+	// Token: 0x06002E80 RID: 11904 RVA: 0x00110C8F File Offset: 0x0010EE8F
 	protected virtual void OnWorldDone()
 	{
 	}
 
-	// Token: 0x06005AEA RID: 23274 RVA: 0x00108FED File Offset: 0x001071ED
+	// Token: 0x06002E81 RID: 11905 RVA: 0x00110C91 File Offset: 0x0010EE91
 	protected virtual void OnWorldReset()
 	{
 	}
 
-	// Token: 0x06005AEB RID: 23275 RVA: 0x00108FEF File Offset: 0x001071EF
+	// Token: 0x06002E82 RID: 11906 RVA: 0x00110C93 File Offset: 0x0010EE93
 	protected virtual void OnClearMap()
 	{
 	}
 
-	// Token: 0x06005AEC RID: 23276 RVA: 0x00108FF1 File Offset: 0x001071F1
+	// Token: 0x06002E83 RID: 11907 RVA: 0x00110C95 File Offset: 0x0010EE95
 	protected virtual void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x06005AED RID: 23277 RVA: 0x00108FF3 File Offset: 0x001071F3
+	// Token: 0x06002E84 RID: 11908 RVA: 0x00110C97 File Offset: 0x0010EE97
 	protected virtual void OnClear()
 	{
 	}
 
-	// Token: 0x06005AEE RID: 23278 RVA: 0x00108FF5 File Offset: 0x001071F5
+	// Token: 0x06002E85 RID: 11909 RVA: 0x00110C99 File Offset: 0x0010EE99
 	public virtual void OnSystemInfoNotify()
 	{
 	}
 
-	// Token: 0x06005AEF RID: 23279 RVA: 0x00108FF7 File Offset: 0x001071F7
+	// Token: 0x06002E86 RID: 11910 RVA: 0x00110C9B File Offset: 0x0010EE9B
 	protected virtual void AddEvents()
 	{
 	}
 
-	// Token: 0x06005AF0 RID: 23280 RVA: 0x00108FF9 File Offset: 0x001071F9
+	// Token: 0x06002E87 RID: 11911 RVA: 0x00110C9D File Offset: 0x0010EE9D
 	protected virtual void RemoveEvents()
 	{
 	}
 
-	// Token: 0x06005AF1 RID: 23281 RVA: 0x00108FFB File Offset: 0x001071FB
+	// Token: 0x06002E88 RID: 11912 RVA: 0x00110C9F File Offset: 0x0010EE9F
 	[NullableContext(2)]
 	protected virtual UClass GetKscWorldClass()
 	{
 		return null;
 	}
 
-	// Token: 0x06005AF2 RID: 23282 RVA: 0x00109000 File Offset: 0x00107200
+	// Token: 0x06002E89 RID: 11913 RVA: 0x00110CA4 File Offset: 0x0010EEA4
 	protected virtual void UnregisterCollisionAlgorithm()
 	{
 		if (this.GetCollisionAlgorithmConfig() != null)
@@ -278,7 +277,7 @@ public class KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005AF3 RID: 23283 RVA: 0x00109034 File Offset: 0x00107234
+	// Token: 0x06002E8A RID: 11914 RVA: 0x00110CD8 File Offset: 0x0010EED8
 	protected virtual void RegisterCollisionAlgorithm()
 	{
 		KscCollisionAlgorithmConfig? collisionAlgorithmConfig = this.GetCollisionAlgorithmConfig();
@@ -295,7 +294,7 @@ public class KscSubControllerBase
 		this.Model.KfcAlgorithm = KuroFastCollisionController.Instance.CreateAlgorithm(collisionAlgorithmConfig.Value.AlgorithmClass, collisionAlgorithmConfig.Value.TickEnabled);
 	}
 
-	// Token: 0x06005AF4 RID: 23284 RVA: 0x001090BC File Offset: 0x001072BC
+	// Token: 0x06002E8B RID: 11915 RVA: 0x00110D60 File Offset: 0x0010EF60
 	protected virtual KscCollisionAlgorithmConfig? GetCollisionAlgorithmConfig()
 	{
 		return new KscCollisionAlgorithmConfig?(new KscCollisionAlgorithmConfig
@@ -305,7 +304,7 @@ public class KscSubControllerBase
 		});
 	}
 
-	// Token: 0x06005AF5 RID: 23285 RVA: 0x001090F8 File Offset: 0x001072F8
+	// Token: 0x06002E8C RID: 11916 RVA: 0x00110D9C File Offset: 0x0010EF9C
 	protected virtual void InitBulletWorld()
 	{
 		UKSC_World kscWorld = KscEnv.Instance.KscWorld;
@@ -317,14 +316,14 @@ public class KscSubControllerBase
 		BulletModel.Instance.StartKscBullet();
 	}
 
-	// Token: 0x06005AF6 RID: 23286 RVA: 0x00109145 File Offset: 0x00107345
+	// Token: 0x06002E8D RID: 11917 RVA: 0x00110DE9 File Offset: 0x0010EFE9
 	protected virtual void ClearBulletWorld()
 	{
 		BulletModel.Instance.StopKuroBulletWorld();
 		BulletModel.Instance.StopKscBullet();
 	}
 
-	// Token: 0x06005AF7 RID: 23287 RVA: 0x0010915B File Offset: 0x0010735B
+	// Token: 0x06002E8E RID: 11918 RVA: 0x00110DFF File Offset: 0x0010EFFF
 	private void StartEngine()
 	{
 		this.RegisterCollisionAlgorithm();
@@ -332,7 +331,7 @@ public class KscSubControllerBase
 		KuroSimpleCombatController.Instance.StartKscHeadStateManager();
 	}
 
-	// Token: 0x06005AF8 RID: 23288 RVA: 0x0010917D File Offset: 0x0010737D
+	// Token: 0x06002E8F RID: 11919 RVA: 0x00110E21 File Offset: 0x0010F021
 	private void StopEngine()
 	{
 		this.UnregisterCollisionAlgorithm();
@@ -340,18 +339,18 @@ public class KscSubControllerBase
 		KscEnv.Instance.Stop();
 	}
 
-	// Token: 0x06005AF9 RID: 23289 RVA: 0x00109199 File Offset: 0x00107399
+	// Token: 0x06002E90 RID: 11920 RVA: 0x00110E3D File Offset: 0x0010F03D
 	public virtual void OnEntityRemoved(KscRemoveContext context, Dictionary<long, SimpleCombatEntityDieContext> protoContexts)
 	{
 	}
 
-	// Token: 0x06005AFA RID: 23290 RVA: 0x0010919B File Offset: 0x0010739B
+	// Token: 0x06002E91 RID: 11921 RVA: 0x00110E3F File Offset: 0x0010F03F
 	protected virtual void InitConstVar()
 	{
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "ksc.damage.defense.const 1520.0", null);
 	}
 
-	// Token: 0x06005AFB RID: 23291 RVA: 0x001091B0 File Offset: 0x001073B0
+	// Token: 0x06002E92 RID: 11922 RVA: 0x00110E54 File Offset: 0x0010F054
 	public virtual void InitPropertyConfigs()
 	{
 		if (this.Model == null)
@@ -368,7 +367,7 @@ public class KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005AFC RID: 23292 RVA: 0x00109228 File Offset: 0x00107428
+	// Token: 0x06002E93 RID: 11923 RVA: 0x00110ECC File Offset: 0x0010F0CC
 	public unsafe virtual void SetAttrs(AKSC_Entity entity, int propertyId, [Nullable(2)] Dictionary<int, int> attributeMap = null)
 	{
 		if (propertyId == 0)
@@ -398,7 +397,6 @@ public class KscSubControllerBase
 			KscLog.Warn(flag2, author2, kscWorld2, log2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 			return;
 		}
-		bool isBuildDevelopmentOrDebug = Info.Instance.IsBuildDevelopmentOrDebug;
 		if (attributeMap != null)
 		{
 			using (Dictionary<EKSC_AttrType, float>.Enumerator enumerator = attrsDefault.GetEnumerator())
@@ -432,7 +430,7 @@ public class KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005AFD RID: 23293 RVA: 0x00109404 File Offset: 0x00107604
+	// Token: 0x06002E94 RID: 11924 RVA: 0x0011109C File Offset: 0x0010F29C
 	public virtual Dictionary<EKSC_AttrType, float> GetAttrsDefault(int propertyId)
 	{
 		KSCBaseProperty config;
@@ -443,7 +441,7 @@ public class KscSubControllerBase
 		return new Dictionary<EKSC_AttrType, float>();
 	}
 
-	// Token: 0x06005AFE RID: 23294 RVA: 0x00109434 File Offset: 0x00107634
+	// Token: 0x06002E95 RID: 11925 RVA: 0x001110CC File Offset: 0x0010F2CC
 	public virtual void InitDamageConfigs()
 	{
 		UKSC_World kscWorld = KscEnv.Instance.KscWorld;
@@ -479,34 +477,34 @@ public class KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005AFF RID: 23295 RVA: 0x00109598 File Offset: 0x00107798
+	// Token: 0x06002E96 RID: 11926 RVA: 0x00111230 File Offset: 0x0010F430
 	protected virtual void InitEntityAndSkillDt()
 	{
 		KscUtil.LoadDt<FKSCEntityTableRow>(KscEnv.Instance.KscWorld, this.Model.GetEntityDtPath(), this.Model.EntityDataDt);
 		KscUtil.LoadDt<FKSCSkillTableRow>(KscEnv.Instance.KscWorld, this.Model.GetSkillDtPath(), this.Model.SkillDataDt);
 	}
 
-	// Token: 0x06005B00 RID: 23296 RVA: 0x001095EF File Offset: 0x001077EF
+	// Token: 0x06002E97 RID: 11927 RVA: 0x00111287 File Offset: 0x0010F487
 	protected void InitEntityFilter()
 	{
 		this.CreateEntityFilter();
 		CreatureController.Instance.RegisterCreateEntityFilter(this.RedirectFilter);
 	}
 
-	// Token: 0x06005B01 RID: 23297 RVA: 0x00109607 File Offset: 0x00107807
+	// Token: 0x06002E98 RID: 11928 RVA: 0x0011129F File Offset: 0x0010F49F
 	protected virtual void CreateEntityFilter()
 	{
 		this.RedirectFilter = new KscEntityRedirectFilter();
 	}
 
-	// Token: 0x06005B02 RID: 23298 RVA: 0x00109614 File Offset: 0x00107814
+	// Token: 0x06002E99 RID: 11929 RVA: 0x001112AC File Offset: 0x0010F4AC
 	protected void ResetEntityFilter()
 	{
 		this.RedirectFilter.Reset();
 		CreatureController.Instance.UnregisterCreateEntityFilter(this.RedirectFilter);
 	}
 
-	// Token: 0x06005B03 RID: 23299 RVA: 0x00109634 File Offset: 0x00107834
+	// Token: 0x06002E9A RID: 11930 RVA: 0x001112CC File Offset: 0x0010F4CC
 	protected virtual void AddKscPlayerEntity()
 	{
 		KscSubControllerBase.<>c__DisplayClass50_0 CS$<>8__locals1 = new KscSubControllerBase.<>c__DisplayClass50_0();
@@ -540,7 +538,7 @@ public class KscSubControllerBase
 		});
 	}
 
-	// Token: 0x06005B04 RID: 23300 RVA: 0x00109760 File Offset: 0x00107960
+	// Token: 0x06002E9B RID: 11931 RVA: 0x001113F8 File Offset: 0x0010F5F8
 	private void FinishPlayerEntityCreated(AKSC_Entity kscEntity, long creatureDataId)
 	{
 		this.Model.SetKscPlayerEntity(kscEntity, creatureDataId);
@@ -549,7 +547,7 @@ public class KscSubControllerBase
 		EventSystem.Instance.Emit(EEventName.OnKscPlayerCreate);
 	}
 
-	// Token: 0x06005B05 RID: 23301 RVA: 0x0010978C File Offset: 0x0010798C
+	// Token: 0x06002E9C RID: 11932 RVA: 0x00111424 File Offset: 0x0010F624
 	private unsafe bool TryAddGmPlayerEntityByConfig(EntityHandle entityHandle, IKscGmPlayerEntityParam param)
 	{
 		SimpleCombatDetailConfig? config = ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.GetConfig(param.SimpleCombatId, param.SubTypeId, true);
@@ -606,26 +604,26 @@ public class KscSubControllerBase
 		return true;
 	}
 
-	// Token: 0x06005B06 RID: 23302 RVA: 0x00109A26 File Offset: 0x00107C26
+	// Token: 0x06002E9D RID: 11933 RVA: 0x001116BE File Offset: 0x0010F8BE
 	public virtual void OnPlayerEntityCreated()
 	{
 		this.SyncPlayerTransform();
 		this.ApplyPlayerTurnRate();
 	}
 
-	// Token: 0x06005B07 RID: 23303 RVA: 0x00109A34 File Offset: 0x00107C34
+	// Token: 0x06002E9E RID: 11934 RVA: 0x001116CC File Offset: 0x0010F8CC
 	protected virtual bool AddInputLayer()
 	{
 		return false;
 	}
 
-	// Token: 0x06005B08 RID: 23304 RVA: 0x00109A37 File Offset: 0x00107C37
+	// Token: 0x06002E9F RID: 11935 RVA: 0x001116CF File Offset: 0x0010F8CF
 	protected virtual bool RemoveInputLayer()
 	{
 		return false;
 	}
 
-	// Token: 0x06005B09 RID: 23305 RVA: 0x00109A3A File Offset: 0x00107C3A
+	// Token: 0x06002EA0 RID: 11936 RVA: 0x001116D2 File Offset: 0x0010F8D2
 	protected virtual void SyncPlayerTransform()
 	{
 		KscEntityHandle possessedPlayer = this.GetPossessedPlayer();
@@ -636,7 +634,7 @@ public class KscSubControllerBase
 		possessedPlayer.SyncEntityLocation();
 	}
 
-	// Token: 0x06005B0A RID: 23306 RVA: 0x00109A4C File Offset: 0x00107C4C
+	// Token: 0x06002EA1 RID: 11937 RVA: 0x001116E4 File Offset: 0x0010F8E4
 	protected virtual void SyncPlayerTimeScale()
 	{
 		if (!this.EnableSyncEntityTimeScaleToPlayer)
@@ -668,7 +666,7 @@ public class KscSubControllerBase
 		this.LastKscEntitySyncTimeScale = timeScale;
 	}
 
-	// Token: 0x06005B0B RID: 23307 RVA: 0x00109AE4 File Offset: 0x00107CE4
+	// Token: 0x06002EA2 RID: 11938 RVA: 0x0011177C File Offset: 0x0010F97C
 	private void ApplyKscTimeScaleToTs(PawnTimeScaleComponent tsComp, float newScale)
 	{
 		if (newScale < 1f)
@@ -687,7 +685,7 @@ public class KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005B0C RID: 23308 RVA: 0x00109B5C File Offset: 0x00107D5C
+	// Token: 0x06002EA3 RID: 11939 RVA: 0x001117F4 File Offset: 0x0010F9F4
 	private void ApplyPlayerTurnRate()
 	{
 		KscSubModelBase model = this.Model;
@@ -742,7 +740,7 @@ public class KscSubControllerBase
 		baseMoveComponent2.SetTurnRate(turnRateScale);
 	}
 
-	// Token: 0x06005B0D RID: 23309 RVA: 0x00109C3F File Offset: 0x00107E3F
+	// Token: 0x06002EA4 RID: 11940 RVA: 0x001118D7 File Offset: 0x0010FAD7
 	private void ResetPlayerTurnRate()
 	{
 		SceneTeamModel instance = SceneTeamModel.Instance;
@@ -765,7 +763,7 @@ public class KscSubControllerBase
 		obj2.ResetTurnRate();
 	}
 
-	// Token: 0x06005B0E RID: 23310 RVA: 0x00109C74 File Offset: 0x00107E74
+	// Token: 0x06002EA5 RID: 11941 RVA: 0x0011190C File Offset: 0x0010FB0C
 	[NullableContext(2)]
 	private KscEntityHandle GetPossessedPlayer()
 	{
@@ -784,7 +782,7 @@ public class KscSubControllerBase
 		return result;
 	}
 
-	// Token: 0x06005B0F RID: 23311 RVA: 0x00109CC0 File Offset: 0x00107EC0
+	// Token: 0x06002EA6 RID: 11942 RVA: 0x00111958 File Offset: 0x0010FB58
 	[NullableContext(2)]
 	protected virtual EntityHandle GetPossessedPlayerEntity()
 	{
@@ -797,7 +795,7 @@ public class KscSubControllerBase
 		return null;
 	}
 
-	// Token: 0x06005B10 RID: 23312 RVA: 0x00109D1C File Offset: 0x00107F1C
+	// Token: 0x06002EA7 RID: 11943 RVA: 0x001119B4 File Offset: 0x0010FBB4
 	protected UniTask PreloadHeadStateRes()
 	{
 		KscSubControllerBase.<PreloadHeadStateRes>d__67 <PreloadHeadStateRes>d__;
@@ -808,7 +806,7 @@ public class KscSubControllerBase
 		return <PreloadHeadStateRes>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005B11 RID: 23313 RVA: 0x00109D60 File Offset: 0x00107F60
+	// Token: 0x06002EA8 RID: 11944 RVA: 0x001119F8 File Offset: 0x0010FBF8
 	protected virtual UniTask LoadHeadStateCurve()
 	{
 		KscSubControllerBase.<LoadHeadStateCurve>d__68 <LoadHeadStateCurve>d__;
@@ -819,7 +817,7 @@ public class KscSubControllerBase
 		return <LoadHeadStateCurve>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005B12 RID: 23314 RVA: 0x00109DA4 File Offset: 0x00107FA4
+	// Token: 0x06002EA9 RID: 11945 RVA: 0x00111A3C File Offset: 0x0010FC3C
 	protected virtual UniTask LoadHeadStateDynamicBatchActor()
 	{
 		KscSubControllerBase.<LoadHeadStateDynamicBatchActor>d__69 <LoadHeadStateDynamicBatchActor>d__;
@@ -830,7 +828,7 @@ public class KscSubControllerBase
 		return <LoadHeadStateDynamicBatchActor>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005B13 RID: 23315 RVA: 0x00109DE8 File Offset: 0x00107FE8
+	// Token: 0x06002EAA RID: 11946 RVA: 0x00111A80 File Offset: 0x0010FC80
 	protected virtual UniTask LoadHeadStateViewActor()
 	{
 		KscSubControllerBase.<LoadHeadStateViewActor>d__70 <LoadHeadStateViewActor>d__;
@@ -841,7 +839,7 @@ public class KscSubControllerBase
 		return <LoadHeadStateViewActor>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005B14 RID: 23316 RVA: 0x00109E2C File Offset: 0x0010802C
+	// Token: 0x06002EAB RID: 11947 RVA: 0x00111AC4 File Offset: 0x0010FCC4
 	protected void InitHeadStateManagerRes()
 	{
 		if (this.HeadStateScaleCurve != null && this.HeadStateViewActor != null && this.HeadStateDynamicBatchActor != null)
@@ -855,7 +853,7 @@ public class KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005B15 RID: 23317 RVA: 0x00109E84 File Offset: 0x00108084
+	// Token: 0x06002EAC RID: 11948 RVA: 0x00111B1C File Offset: 0x0010FD1C
 	protected void HandleHeadHpInfos(float delta)
 	{
 		if (KuroSimpleCombatController.Instance.KscHeadStateManager != null)
@@ -899,7 +897,7 @@ public class KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005B16 RID: 23318 RVA: 0x00109F8C File Offset: 0x0010818C
+	// Token: 0x06002EAD RID: 11949 RVA: 0x00111C24 File Offset: 0x0010FE24
 	protected virtual void PushPlayerHp()
 	{
 		KscSubModelBase model = this.Model;
@@ -920,7 +918,7 @@ public class KscSubControllerBase
 		this.Model.NextPlayerHpSyncTime = (float)Time.Instance.FlowTime + 1000f;
 	}
 
-	// Token: 0x06005B17 RID: 23319 RVA: 0x0010A038 File Offset: 0x00108238
+	// Token: 0x06002EAE RID: 11950 RVA: 0x00111CD0 File Offset: 0x0010FED0
 	protected virtual void OnHandlePlayerHeadHpInfo(KscHeadStateData kscPlayerHeadStateData, FKSC_HeadHpContext headInfo)
 	{
 		if (headInfo.ActionType == EKSC_HeadHpContextType.Add || headInfo.ActionType == EKSC_HeadHpContextType.Update)
@@ -932,13 +930,13 @@ public class KscSubControllerBase
 		EventSystem.Instance.Emit(EEventName.OnKscPlayerHpChanged);
 	}
 
-	// Token: 0x06005B18 RID: 23320 RVA: 0x0010A08C File Offset: 0x0010828C
+	// Token: 0x06002EAF RID: 11951 RVA: 0x00111D24 File Offset: 0x0010FF24
 	protected virtual void OnHandleHeadHpInfo(FKSC_HeadHpContext headInfo)
 	{
 		KscLog.Warn(KscLog.EModule.Common, ELogAuthor.CFT, KscEnv.Instance.KscWorld, "推送的血条数据没有处理", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06005B19 RID: 23321 RVA: 0x0010A0BC File Offset: 0x001082BC
+	// Token: 0x06002EB0 RID: 11952 RVA: 0x00111D54 File Offset: 0x0010FF54
 	protected void ClearHeadState()
 	{
 		this.HeadStateScaleCurve = null;
@@ -957,7 +955,7 @@ public class KscSubControllerBase
 		this.HeadInfos.Empty(true);
 	}
 
-	// Token: 0x06005B1A RID: 23322 RVA: 0x0010A140 File Offset: 0x00108340
+	// Token: 0x06002EB1 RID: 11953 RVA: 0x00111DD8 File Offset: 0x0010FFD8
 	public unsafe void GmAddPlayerEntity(IKscGmPlayerEntityParam param)
 	{
 		if (param.SimpleCombatId < 0 || param.SubTypeId < 0)
@@ -1010,43 +1008,43 @@ public class KscSubControllerBase
 		this.TryAddGmPlayerEntityByConfig(entityHandle, param);
 	}
 
-	// Token: 0x06005B1B RID: 23323 RVA: 0x0010A37C File Offset: 0x0010857C
+	// Token: 0x06002EB2 RID: 11954 RVA: 0x00112014 File Offset: 0x00110214
 	public virtual void GmPrintInfo()
 	{
 	}
 
-	// Token: 0x04002987 RID: 10631
+	// Token: 0x04002A22 RID: 10786
 	private float LastTimeDilation = 1f;
 
-	// Token: 0x04002988 RID: 10632
+	// Token: 0x04002A23 RID: 10787
 	[Nullable(2)]
 	protected KscSubModelBase SubModel;
 
-	// Token: 0x04002989 RID: 10633
+	// Token: 0x04002A24 RID: 10788
 	protected bool EnableSyncEntityTimeScaleToPlayer;
 
-	// Token: 0x0400298A RID: 10634
+	// Token: 0x04002A25 RID: 10789
 	private int? KscEntitySyncTimeScaleId;
 
-	// Token: 0x0400298B RID: 10635
+	// Token: 0x04002A26 RID: 10790
 	private float LastKscEntitySyncTimeScale = 1f;
 
-	// Token: 0x0400298C RID: 10636
+	// Token: 0x04002A27 RID: 10791
 	[Nullable(2)]
 	public KscEntityRedirectFilter RedirectFilter;
 
-	// Token: 0x0400298D RID: 10637
+	// Token: 0x04002A28 RID: 10792
 	protected TArray<FKSC_HeadHpContext> HeadInfos = new TArray<FKSC_HeadHpContext>();
 
-	// Token: 0x0400298E RID: 10638
+	// Token: 0x04002A29 RID: 10793
 	[Nullable(2)]
 	protected UCurveFloat HeadStateScaleCurve;
 
-	// Token: 0x0400298F RID: 10639
+	// Token: 0x04002A2A RID: 10794
 	[Nullable(2)]
 	protected AUIBaseActor HeadStateDynamicBatchActor;
 
-	// Token: 0x04002990 RID: 10640
+	// Token: 0x04002A2B RID: 10795
 	[Nullable(2)]
 	protected AUIBaseActor HeadStateViewActor;
 }

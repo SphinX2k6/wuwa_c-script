@@ -9,19 +9,19 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 using UnrealEngine;
 
-// Token: 0x0200308C RID: 12428
+// Token: 0x020025E3 RID: 9699
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVariableResetter
 {
-	// Token: 0x0601A8C8 RID: 108744 RVA: 0x0071C16C File Offset: 0x0071A36C
+	// Token: 0x060182B2 RID: 98994 RVA: 0x00742506 File Offset: 0x00740706
 	static CharacterSplineMoveComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterSplineMoveComponent.CreateStaticDefaultValue), new Action(CharacterSplineMoveComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700248A RID: 9354
-	// (get) Token: 0x0601A8C9 RID: 108745 RVA: 0x0071C19B File Offset: 0x0071A39B
+	// Token: 0x170025E8 RID: 9704
+	// (get) Token: 0x060182B3 RID: 98995 RVA: 0x00742535 File Offset: 0x00740735
 	public static BP_SplineMoveConfig_C SplineMoveConfig
 	{
 		get
@@ -34,7 +34,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		}
 	}
 
-	// Token: 0x0601A8CA RID: 108746 RVA: 0x0071C1C0 File Offset: 0x0071A3C0
+	// Token: 0x060182B4 RID: 98996 RVA: 0x00742558 File Offset: 0x00740758
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -51,14 +51,14 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		return true;
 	}
 
-	// Token: 0x0601A8CB RID: 108747 RVA: 0x0071C251 File Offset: 0x0071A451
+	// Token: 0x060182B5 RID: 98997 RVA: 0x007425E9 File Offset: 0x007407E9
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget<Entity, bool>(base.Entity, EEventName.RoleOnStateInherit, new Action<Entity, bool>(this.OnStateInherit));
 		return base.OnEnd();
 	}
 
-	// Token: 0x0601A8CC RID: 108748 RVA: 0x0071C27C File Offset: 0x0071A47C
+	// Token: 0x060182B6 RID: 98998 RVA: 0x00742614 File Offset: 0x00740814
 	protected override void PositionAdjust(float timeKey, float deltaSeconds)
 	{
 		switch (base.CurrentSplineMoveType)
@@ -78,7 +78,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		}
 	}
 
-	// Token: 0x0601A8CD RID: 108749 RVA: 0x0071C2C4 File Offset: 0x0071A4C4
+	// Token: 0x060182B7 RID: 98999 RVA: 0x0074265C File Offset: 0x0074085C
 	private void PositionAdjustRacingTrack(float timeKey, float deltaSeconds)
 	{
 		this.TargetLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
@@ -92,7 +92,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.MoveToTargetLocation(deltaSeconds);
 	}
 
-	// Token: 0x0601A8CE RID: 108750 RVA: 0x0071C328 File Offset: 0x0071A528
+	// Token: 0x060182B8 RID: 99000 RVA: 0x007426C0 File Offset: 0x007408C0
 	protected void PositionAdjustAirPassage(float timeKey, float deltaSeconds)
 	{
 		if (!this.CurrentSplineMoveParamsInternal.NeedLimitSoarTransform)
@@ -117,7 +117,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.MoveToTargetLocation(deltaSeconds);
 	}
 
-	// Token: 0x0601A8CF RID: 108751 RVA: 0x0071C3CC File Offset: 0x0071A5CC
+	// Token: 0x060182B9 RID: 99001 RVA: 0x00742764 File Offset: 0x00740964
 	protected void RotationAndVelocityAdjustAirPassage()
 	{
 		SplineMoveParams currentSplineMoveParamsInternal = this.CurrentSplineMoveParamsInternal;
@@ -205,7 +205,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		}
 	}
 
-	// Token: 0x0601A8D0 RID: 108752 RVA: 0x0071C834 File Offset: 0x0071AA34
+	// Token: 0x060182BA RID: 99002 RVA: 0x00742BCC File Offset: 0x00740DCC
 	protected void UpdateCrossSectionParamsAirPassage()
 	{
 		MathUtils.Instance.LookRotationUpFirst(this.SplineDirection, this.MoveComp.GravityUp, this.LocalQuat);
@@ -240,7 +240,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		}
 	}
 
-	// Token: 0x0601A8D1 RID: 108753 RVA: 0x0071CA08 File Offset: 0x0071AC08
+	// Token: 0x060182BB RID: 99003 RVA: 0x00742DA0 File Offset: 0x00740FA0
 	protected void LimitCircleAxisMove()
 	{
 		if (this.IsInEllipseRange(this.LocalOffset.Y, this.LocalOffset.Z, (double)this.CurShortLen, (double)this.CurLongLen))
@@ -268,7 +268,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.TargetLocation.AdditionEqual(this.TmpVector1);
 	}
 
-	// Token: 0x0601A8D2 RID: 108754 RVA: 0x0071CBA4 File Offset: 0x0071ADA4
+	// Token: 0x060182BC RID: 99004 RVA: 0x00742F3C File Offset: 0x0074113C
 	protected void DrawDebugInfo()
 	{
 		BaseActorComponent actorComp = this.ActorComp;
@@ -285,13 +285,13 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		UKismetSystemLibrary.DrawDebugArrow((actorComp3 != null) ? actorComp3.Owner : null, this.SplineLocation.ToUeVectorOld(), this.TmpVector.ToUeVectorOld(), 10f, new FLinearColor(0f, 1f, 0f, 1f), 1f, 5f);
 	}
 
-	// Token: 0x0601A8D3 RID: 108755 RVA: 0x0071CD20 File Offset: 0x0071AF20
+	// Token: 0x060182BD RID: 99005 RVA: 0x007430B8 File Offset: 0x007412B8
 	protected bool IsInEllipseRange(double x, double y, double a, double b)
 	{
 		return !MathUtils.Instance.IsNearlyZero(a, null) && !MathUtils.Instance.IsNearlyZero(b, null) && x * x / (a * a) + y * y / (b * b) <= 1.0;
 	}
 
-	// Token: 0x0601A8D4 RID: 108756 RVA: 0x0071CD7C File Offset: 0x0071AF7C
+	// Token: 0x060182BE RID: 99006 RVA: 0x00743114 File Offset: 0x00741314
 	protected override void PositionAdjustCommon(float timeKey, float deltaSeconds)
 	{
 		this.TargetLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
@@ -303,7 +303,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.MoveToTargetLocation(deltaSeconds);
 	}
 
-	// Token: 0x0601A8D5 RID: 108757 RVA: 0x0071CDD0 File Offset: 0x0071AFD0
+	// Token: 0x060182BF RID: 99007 RVA: 0x00743168 File Offset: 0x00741368
 	protected override void MoveToTargetLocation(float deltaSeconds)
 	{
 		if (global::Vector.DistSquared(this.ActorComp.ActorLocationProxy, this.TargetLocation) <= 1E-08)
@@ -319,7 +319,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.MoveComp.MoveCharacter(this.OffsetVector, deltaSeconds, "");
 	}
 
-	// Token: 0x0601A8D6 RID: 108758 RVA: 0x0071CE5C File Offset: 0x0071B05C
+	// Token: 0x060182C0 RID: 99008 RVA: 0x007431F4 File Offset: 0x007413F4
 	private void CommonVelocityAdjusted()
 	{
 		if (this.CharActorComp == null)
@@ -332,7 +332,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.CharActorComp.SetActorVelocity(this.TmpVector);
 	}
 
-	// Token: 0x0601A8D7 RID: 108759 RVA: 0x0071CEC8 File Offset: 0x0071B0C8
+	// Token: 0x060182C1 RID: 99009 RVA: 0x00743260 File Offset: 0x00741460
 	private void AdjustTargetLocationRacingTrack()
 	{
 		if (this.CurrentSplineMoveParamsInternal.Type != ESplineMovePattern.RacingTrack)
@@ -353,7 +353,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.TargetLocation.Z = z;
 	}
 
-	// Token: 0x0601A8D8 RID: 108760 RVA: 0x0071CFA4 File Offset: 0x0071B1A4
+	// Token: 0x060182C2 RID: 99010 RVA: 0x0074333C File Offset: 0x0074153C
 	private void RacingLeftRight(float deltaSeconds)
 	{
 		if (this.CharActorComp == null || this.CurrentSplineMoveParamsInternal.Type != ESplineMovePattern.RacingTrack)
@@ -399,7 +399,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.LastRightSpeed = num5;
 	}
 
-	// Token: 0x0601A8D9 RID: 108761 RVA: 0x0071D12C File Offset: 0x0071B32C
+	// Token: 0x060182C3 RID: 99011 RVA: 0x007434C4 File Offset: 0x007416C4
 	protected override void InputAdjust()
 	{
 		if (this.CharActorComp == null)
@@ -419,7 +419,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.InputAdjustWithSplineType(this.CharActorComp.InputDirectProxy);
 	}
 
-	// Token: 0x0601A8DA RID: 108762 RVA: 0x0071D17C File Offset: 0x0071B37C
+	// Token: 0x060182C4 RID: 99012 RVA: 0x00743514 File Offset: 0x00741714
 	private void InputAdjustClimbState()
 	{
 		global::Vector inputDirectProxy = this.CharActorComp.InputDirectProxy;
@@ -428,12 +428,12 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		{
 			CameraModel.Instance.MainModel.CameraRotator.Quaternion(this.TmpQuat);
 			this.TmpQuat.RotateVector(inputDirectProxy, this.TmpVector);
-			this.CharActorComp.SetInputDirect(this.TmpVector, false);
+			this.CharActorComp.SetInputDirect(this.TmpVector, false, EInputDirectSpace.World);
 			this.InputAdjustWithSplineType(inputDirectProxy);
 			this.ActorComp.ActorQuatProxy.Inverse(this.TmpQuat);
 			this.TmpQuat.RotateVector(inputDirectProxy, this.TmpVector);
 			this.TmpVector.Z = 0.0;
-			this.CharActorComp.SetInputDirect(this.TmpVector, false);
+			this.CharActorComp.SetInputDirect(this.TmpVector, false, EInputDirectSpace.Relative);
 			return;
 		}
 		this.TmpVector.Z = inputDirectProxy.X;
@@ -444,19 +444,19 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.ActorComp.ActorQuatProxy.UnRotateVector(this.TmpVector, this.TmpVector);
 		if (MathUtils.Instance.IsNearlyZero(this.TmpVector.Y, null) && MathUtils.Instance.IsNearlyZero(this.TmpVector.Z, null))
 		{
-			this.CharActorComp.SetInputDirect(this.TmpVector, false);
+			this.CharActorComp.SetInputDirect(this.TmpVector, false, EInputDirectSpace.Relative);
 			return;
 		}
 		double num = Math.Atan2(this.TmpVector.X, this.TmpVector.Z) * 57.295780181884766;
 		if (num > -30.0 && num < 150.0)
 		{
-			this.CharActorComp.SetInputDirect(global::Vector.ForwardVectorProxy, false);
+			this.CharActorComp.SetInputDirect(global::Vector.ForwardVectorProxy, false, EInputDirectSpace.Relative);
 			return;
 		}
-		this.CharActorComp.SetInputDirect(global::Vector.BackwardVectorProxy, false);
+		this.CharActorComp.SetInputDirect(global::Vector.BackwardVectorProxy, false, EInputDirectSpace.Relative);
 	}
 
-	// Token: 0x0601A8DB RID: 108763 RVA: 0x0071D394 File Offset: 0x0071B594
+	// Token: 0x060182C5 RID: 99013 RVA: 0x00743730 File Offset: 0x00741930
 	private void InputAdjustWithSplineType(global::Vector inputDirect)
 	{
 		switch (this.CurrentSplineMoveParamsInternal.Type)
@@ -475,7 +475,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		}
 	}
 
-	// Token: 0x0601A8DC RID: 108764 RVA: 0x0071D3D8 File Offset: 0x0071B5D8
+	// Token: 0x060182C6 RID: 99014 RVA: 0x00743774 File Offset: 0x00741974
 	private void InputAdjustSlideTrack(global::Vector inputDirect)
 	{
 		SplineMoveParams currentSplineMoveParamsInternal = this.CurrentSplineMoveParamsInternal;
@@ -498,7 +498,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		if (inputDirect.IsNearlyZero(9.999999747378752E-05))
 		{
 			this.SplineQuat.RotateVector(global::Vector.ForwardVectorProxy, this.TmpVector);
-			this.CharActorComp.SetInputDirect(this.TmpVector, false);
+			this.CharActorComp.SetInputDirect(this.TmpVector, false, EInputDirectSpace.World);
 			this.CharActorComp.SetInputFacing(this.TmpVector, true);
 			return;
 		}
@@ -517,11 +517,11 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		float num3 = (float)(MathUtils.Instance.Clamp(currentValue2, (double)num, (double)num2) * 0.01745329238474369);
 		this.TmpVector.Set((double)((float)Math.Cos((double)num3)), (double)((float)Math.Sin((double)num3)), 0.0);
 		this.SplineQuat.RotateVector(this.TmpVector, this.TmpVector);
-		this.CharActorComp.SetInputDirect(this.TmpVector, false);
+		this.CharActorComp.SetInputDirect(this.TmpVector, false, EInputDirectSpace.World);
 		this.CharActorComp.SetInputFacing(this.TmpVector, true);
 	}
 
-	// Token: 0x0601A8DD RID: 108765 RVA: 0x0071D660 File Offset: 0x0071B860
+	// Token: 0x060182C7 RID: 99015 RVA: 0x007439FC File Offset: 0x00741BFC
 	private void InputAdjustPathLine(global::Vector inputDirect)
 	{
 		SplineMoveParams currentSplineMoveParamsInternal = this.CurrentSplineMoveParamsInternal;
@@ -568,12 +568,12 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.TmpVector.SubtractionEqual(this.TargetLocation);
 		this.TmpVector.Z = 0.0;
 		this.TmpVector.Normalize(9.99999993922529E-09);
-		this.CharActorComp.SetInputDirect(this.TmpVector, false);
+		this.CharActorComp.SetInputDirect(this.TmpVector, false, EInputDirectSpace.World);
 		this.CharActorComp.SetInputFacing(this.TmpVector, true);
 		this.InputAdjustPathLineFacing(currentSplineMoveParamsInternal);
 	}
 
-	// Token: 0x0601A8DE RID: 108766 RVA: 0x0071D7FC File Offset: 0x0071B9FC
+	// Token: 0x060182C8 RID: 99016 RVA: 0x00743B9C File Offset: 0x00741D9C
 	private void InputAdjustPathLineFacing(SplineMoveParams @params)
 	{
 		EPathLineFacingType? adjustFacingType = @params.AdjustFacingType;
@@ -600,7 +600,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		}
 	}
 
-	// Token: 0x0601A8DF RID: 108767 RVA: 0x0071D938 File Offset: 0x0071BB38
+	// Token: 0x060182C9 RID: 99017 RVA: 0x00743CD8 File Offset: 0x00741ED8
 	private void InputAdjustRacingTrack(global::Vector inputDirect)
 	{
 		SplineMoveParams currentSplineMoveParamsInternal = this.CurrentSplineMoveParamsInternal;
@@ -608,22 +608,22 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		if (inputDirect.IsNearlyZero(9.999999747378752E-05))
 		{
 			this.LastForward = true;
-			this.CharActorComp.SetInputDirect(this.SplineDirection, false);
+			this.CharActorComp.SetInputDirect(this.SplineDirection, false, EInputDirectSpace.World);
 			return;
 		}
 		double num = this.SplineDirection.DotProduct(inputDirect);
 		if (currentSplineMoveParamsInternal.OnlyForward || num > (double)(this.LastForward ? -0.5f : 0.5f))
 		{
 			this.LastForward = true;
-			this.CharActorComp.SetInputDirect(this.SplineDirection, false);
+			this.CharActorComp.SetInputDirect(this.SplineDirection, false, EInputDirectSpace.World);
 			return;
 		}
 		this.LastForward = false;
 		this.SplineDirection.UnaryNegation(this.TmpVector);
-		this.CharActorComp.SetInputDirect(this.TmpVector, false);
+		this.CharActorComp.SetInputDirect(this.TmpVector, false, EInputDirectSpace.World);
 	}
 
-	// Token: 0x0601A8E0 RID: 108768 RVA: 0x0071DA10 File Offset: 0x0071BC10
+	// Token: 0x060182CA RID: 99018 RVA: 0x00743DB4 File Offset: 0x00741FB4
 	protected double NormalizeAngle(double angle)
 	{
 		double num = angle % 360.0;
@@ -634,14 +634,14 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		return num;
 	}
 
-	// Token: 0x0601A8E1 RID: 108769 RVA: 0x0071DA44 File Offset: 0x0071BC44
+	// Token: 0x060182CB RID: 99019 RVA: 0x00743DE8 File Offset: 0x00741FE8
 	protected bool InAngleRange(double angle, double minAngle, double maxAngle)
 	{
 		double num = this.NormalizeAngle(maxAngle - minAngle);
 		return this.NormalizeAngle(angle - minAngle) < num;
 	}
 
-	// Token: 0x0601A8E2 RID: 108770 RVA: 0x0071DA68 File Offset: 0x0071BC68
+	// Token: 0x060182CC RID: 99020 RVA: 0x00743E0C File Offset: 0x0074200C
 	protected double ClampAngle(double angle, double minAngle, double maxAngle)
 	{
 		if (this.InAngleRange(angle, minAngle, maxAngle))
@@ -657,13 +657,13 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		return MathUtils.Instance.WrapAngle(minAngle);
 	}
 
-	// Token: 0x0601A8E3 RID: 108771 RVA: 0x0071DACD File Offset: 0x0071BCCD
+	// Token: 0x060182CD RID: 99021 RVA: 0x00743E71 File Offset: 0x00742071
 	protected double LerpAngle(double angleA, double angleB, double alpha)
 	{
 		return MathUtils.Instance.WrapAngle(angleA + MathUtils.Instance.WrapAngle(angleB - angleA) * alpha);
 	}
 
-	// Token: 0x0601A8E4 RID: 108772 RVA: 0x0071DAEC File Offset: 0x0071BCEC
+	// Token: 0x060182CE RID: 99022 RVA: 0x00743E90 File Offset: 0x00742090
 	public unsafe override void StartSplineMoveInternal(SplineMoveParams config)
 	{
 		int id = config.Id;
@@ -687,13 +687,13 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601A8E5 RID: 108773 RVA: 0x0071DBDF File Offset: 0x0071BDDF
+	// Token: 0x060182CF RID: 99023 RVA: 0x00743F83 File Offset: 0x00742183
 	public override bool IsPlannerMove()
 	{
 		return base.CurrentSplineMoveType != ESplineMovePattern.AirPassage;
 	}
 
-	// Token: 0x0601A8E6 RID: 108774 RVA: 0x0071DBED File Offset: 0x0071BDED
+	// Token: 0x060182D0 RID: 99024 RVA: 0x00743F91 File Offset: 0x00742191
 	protected void ApplySplineMoveDaConfig(SplineMoveParams config)
 	{
 		if (config.Type != ESplineMovePattern.PathLine)
@@ -703,13 +703,13 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.ApplySplineMoveDaConfigInternal(true, config);
 	}
 
-	// Token: 0x0601A8E7 RID: 108775 RVA: 0x0071DC00 File Offset: 0x0071BE00
+	// Token: 0x060182D1 RID: 99025 RVA: 0x00743FA4 File Offset: 0x007421A4
 	protected void ResetSplineMoveDaConfig()
 	{
 		this.ApplySplineMoveDaConfigInternal(false, null);
 	}
 
-	// Token: 0x0601A8E8 RID: 108776 RVA: 0x0071DC0C File Offset: 0x0071BE0C
+	// Token: 0x060182D2 RID: 99026 RVA: 0x00743FB0 File Offset: 0x007421B0
 	[NullableContext(2)]
 	private void ApplySplineMoveDaConfigInternal(bool apply, SplineMoveParams config = null)
 	{
@@ -803,21 +803,21 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		}
 	}
 
-	// Token: 0x0601A8E9 RID: 108777 RVA: 0x0071DDCC File Offset: 0x0071BFCC
+	// Token: 0x060182D3 RID: 99027 RVA: 0x00744170 File Offset: 0x00742370
 	protected override void OnSplineMoveEnable(int id, SplineMoveParams config)
 	{
 		base.OnSplineMoveEnable(id, config);
 		this.ApplySplineMoveDaConfig(config);
 	}
 
-	// Token: 0x0601A8EA RID: 108778 RVA: 0x0071DDDD File Offset: 0x0071BFDD
+	// Token: 0x060182D4 RID: 99028 RVA: 0x00744181 File Offset: 0x00742381
 	protected override void OnSplineMoveDisable()
 	{
 		base.OnSplineMoveDisable();
 		this.ResetSplineMoveDaConfig();
 	}
 
-	// Token: 0x0601A8EB RID: 108779 RVA: 0x0071DDEC File Offset: 0x0071BFEC
+	// Token: 0x060182D5 RID: 99029 RVA: 0x00744190 File Offset: 0x00742390
 	protected override void OnSelectNextSplineMoveEnd()
 	{
 		if (!this.InheritThisFrame)
@@ -844,7 +844,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		base.OnSelectNextSplineMoveEnd();
 	}
 
-	// Token: 0x0601A8EC RID: 108780 RVA: 0x0071DE70 File Offset: 0x0071C070
+	// Token: 0x060182D6 RID: 99030 RVA: 0x00744214 File Offset: 0x00742414
 	private void RefreshTurnAngleLimit()
 	{
 		if (this.CurrentSplineMoveParamsInternal == null)
@@ -855,7 +855,7 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.MaxTurnAngle = this.CurrentSplineMoveParamsInternal.InputLimitAngle;
 	}
 
-	// Token: 0x0601A8ED RID: 108781 RVA: 0x0071DEA0 File Offset: 0x0071C0A0
+	// Token: 0x060182D7 RID: 99031 RVA: 0x00744244 File Offset: 0x00742444
 	private unsafe void OnStateInherit(Entity oldEntity, bool notInheritMoveAndAnim)
 	{
 		CharacterSplineMoveComponent component = oldEntity.GetComponent<CharacterSplineMoveComponent>();
@@ -896,19 +896,19 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 		this.InheritThisFrame = false;
 	}
 
-	// Token: 0x0601A8EE RID: 108782 RVA: 0x0071E050 File Offset: 0x0071C250
+	// Token: 0x060182D8 RID: 99032 RVA: 0x007443F4 File Offset: 0x007425F4
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterSplineMoveComponent.SplineMoveConfigInternal = null;
 	}
 
-	// Token: 0x0601A8EF RID: 108783 RVA: 0x0071E058 File Offset: 0x0071C258
+	// Token: 0x060182D9 RID: 99033 RVA: 0x007443FC File Offset: 0x007425FC
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterSplineMoveComponent.SplineMoveConfigInternal = null;
 	}
 
-	// Token: 0x0601A8F0 RID: 108784 RVA: 0x0071E060 File Offset: 0x0071C260
+	// Token: 0x060182DA RID: 99034 RVA: 0x00744404 File Offset: 0x00742604
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -916,205 +916,187 @@ public class CharacterSplineMoveComponent : BaseSplineMoveComponent, IStaticVari
 			return false;
 		}
 		CharacterSplineMoveComponent characterSplineMoveComponent = (CharacterSplineMoveComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CharActorComp"))
+		if (characterSplineMoveComponent.CharActorComp == null)
 		{
-			if (characterSplineMoveComponent.CharActorComp == null)
-			{
-				this.CharActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.CharActorComp), "CharActorComp"))
-			{
-				return false;
-			}
+			this.CharActorComp = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedComp"))
-		{
-			if (characterSplineMoveComponent.UnifiedComp == null)
-			{
-				this.UnifiedComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedComp), "UnifiedComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (characterSplineMoveComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimComp"))
-		{
-			if (characterSplineMoveComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AttributeComp"))
-		{
-			if (characterSplineMoveComponent.AttributeComp == null)
-			{
-				this.AttributeComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseAttributeComponent>(this.AttributeComp), "AttributeComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PathLineInputDirection") && characterSplineMoveComponent.PathLineInputDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PathLineInputDirection), "PathLineInputDirection"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharActorComp), "CharActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LastRightSpeed"))
+		if (characterSplineMoveComponent.UnifiedComp == null)
 		{
-			this.LastRightSpeed = characterSplineMoveComponent.LastRightSpeed;
+			this.UnifiedComp = null;
 		}
-		if (base.CanResetComponentProperty("LastForward"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedComp), "UnifiedComp"))
 		{
-			this.LastForward = characterSplineMoveComponent.LastForward;
+			return false;
 		}
-		if (base.CanResetComponentProperty("MinTurnAngle"))
+		if (characterSplineMoveComponent.MoveComp == null)
 		{
-			this.MinTurnAngle = characterSplineMoveComponent.MinTurnAngle;
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("MaxTurnAngle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			this.MaxTurnAngle = characterSplineMoveComponent.MaxTurnAngle;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurMaxWidth"))
+		if (characterSplineMoveComponent.AnimComp == null)
 		{
-			this.CurMaxWidth = characterSplineMoveComponent.CurMaxWidth;
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("CurMaxHeight"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			this.CurMaxHeight = characterSplineMoveComponent.CurMaxHeight;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurLongLen"))
+		if (characterSplineMoveComponent.AttributeComp == null)
 		{
-			this.CurLongLen = characterSplineMoveComponent.CurLongLen;
+			this.AttributeComp = null;
 		}
-		if (base.CanResetComponentProperty("CurShortLen"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttributeComp), "AttributeComp"))
 		{
-			this.CurShortLen = characterSplineMoveComponent.CurShortLen;
+			return false;
 		}
-		if (base.CanResetComponentProperty("LocalOffset"))
+		if (characterSplineMoveComponent.PathLineInputDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PathLineInputDirection), "PathLineInputDirection"))
 		{
-			if (characterSplineMoveComponent.LocalOffset == null)
-			{
-				this.LocalOffset = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LocalOffset), "LocalOffset"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("LocalQuat"))
+		this.LastRightSpeed = characterSplineMoveComponent.LastRightSpeed;
+		this.LastForward = characterSplineMoveComponent.LastForward;
+		this.MinTurnAngle = characterSplineMoveComponent.MinTurnAngle;
+		this.MaxTurnAngle = characterSplineMoveComponent.MaxTurnAngle;
+		this.CurMaxWidth = characterSplineMoveComponent.CurMaxWidth;
+		this.CurMaxHeight = characterSplineMoveComponent.CurMaxHeight;
+		this.CurLongLen = characterSplineMoveComponent.CurLongLen;
+		this.CurShortLen = characterSplineMoveComponent.CurShortLen;
+		if (characterSplineMoveComponent.LocalOffset == null)
 		{
-			if (characterSplineMoveComponent.LocalQuat == null)
-			{
-				this.LocalQuat = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.LocalQuat), "LocalQuat"))
-			{
-				return false;
-			}
+			this.LocalOffset = null;
 		}
-		if (base.CanResetComponentProperty("DebugMode"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LocalOffset), "LocalOffset"))
 		{
-			this.DebugMode = characterSplineMoveComponent.DebugMode;
+			return false;
 		}
+		if (characterSplineMoveComponent.LocalQuat == null)
+		{
+			this.LocalQuat = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LocalQuat), "LocalQuat"))
+		{
+			return false;
+		}
+		this.DebugMode = characterSplineMoveComponent.DebugMode;
 		return true;
 	}
 
-	// Token: 0x0400CBFE RID: 52222
+	// Token: 0x170025E9 RID: 9705
+	// (get) Token: 0x060182DB RID: 99035 RVA: 0x007445DF File Offset: 0x007427DF
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025EA RID: 9706
+	// (get) Token: 0x060182DC RID: 99036 RVA: 0x007445E2 File Offset: 0x007427E2
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025EB RID: 9707
+	// (get) Token: 0x060182DD RID: 99037 RVA: 0x007445E5 File Offset: 0x007427E5
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CFE1 RID: 53217
 	private const float COSINE_45 = 0.707f;
 
-	// Token: 0x0400CBFF RID: 52223
+	// Token: 0x0400CFE2 RID: 53218
 	private const float MAX_INPUT_COS = 0.707f;
 
-	// Token: 0x0400CC00 RID: 52224
+	// Token: 0x0400CFE3 RID: 53219
 	private const float FORWARD_BACKWARD_THRESHOLD = 0.5f;
 
-	// Token: 0x0400CC01 RID: 52225
+	// Token: 0x0400CFE4 RID: 53220
 	private const float FORECAST_DIST = 500f;
 
-	// Token: 0x0400CC02 RID: 52226
+	// Token: 0x0400CFE5 RID: 53221
 	private const float DAMPING = 0.96f;
 
-	// Token: 0x0400CC03 RID: 52227
+	// Token: 0x0400CFE6 RID: 53222
 	private const float STANDARD_FPS = 60f;
 
-	// Token: 0x0400CC04 RID: 52228
+	// Token: 0x0400CFE7 RID: 53223
 	[StaticVariableRuleIgnore]
 	public static readonly string DaPath = "/Game/Aki/Data/Fight/DA_SplineMoveConfig.DA_SplineMoveConfig";
 
-	// Token: 0x0400CC05 RID: 52229
+	// Token: 0x0400CFE8 RID: 53224
 	[Nullable(2)]
 	private static BP_SplineMoveConfig_C SplineMoveConfigInternal = null;
 
-	// Token: 0x0400CC06 RID: 52230
+	// Token: 0x0400CFE9 RID: 53225
 	[Nullable(2)]
 	private CharacterActorComponent CharActorComp;
 
-	// Token: 0x0400CC07 RID: 52231
+	// Token: 0x0400CFEA RID: 53226
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedComp;
 
-	// Token: 0x0400CC08 RID: 52232
+	// Token: 0x0400CFEB RID: 53227
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400CC09 RID: 52233
+	// Token: 0x0400CFEC RID: 53228
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400CC0A RID: 52234
+	// Token: 0x0400CFED RID: 53229
 	[Nullable(2)]
 	private BaseAttributeComponent AttributeComp;
 
-	// Token: 0x0400CC0B RID: 52235
+	// Token: 0x0400CFEE RID: 53230
 	private readonly global::Vector PathLineInputDirection = global::Vector.Create();
 
-	// Token: 0x0400CC0C RID: 52236
+	// Token: 0x0400CFEF RID: 53231
 	public float LastRightSpeed;
 
-	// Token: 0x0400CC0D RID: 52237
+	// Token: 0x0400CFF0 RID: 53232
 	protected bool LastForward = true;
 
-	// Token: 0x0400CC0E RID: 52238
+	// Token: 0x0400CFF1 RID: 53233
 	public float MinTurnAngle;
 
-	// Token: 0x0400CC0F RID: 52239
+	// Token: 0x0400CFF2 RID: 53234
 	public float MaxTurnAngle;
 
-	// Token: 0x0400CC10 RID: 52240
+	// Token: 0x0400CFF3 RID: 53235
 	public float CurMaxWidth;
 
-	// Token: 0x0400CC11 RID: 52241
+	// Token: 0x0400CFF4 RID: 53236
 	public float CurMaxHeight;
 
-	// Token: 0x0400CC12 RID: 52242
+	// Token: 0x0400CFF5 RID: 53237
 	public float CurLongLen;
 
-	// Token: 0x0400CC13 RID: 52243
+	// Token: 0x0400CFF6 RID: 53238
 	public float CurShortLen;
 
-	// Token: 0x0400CC14 RID: 52244
+	// Token: 0x0400CFF7 RID: 53239
 	public global::Vector LocalOffset = global::Vector.Create();
 
-	// Token: 0x0400CC15 RID: 52245
+	// Token: 0x0400CFF8 RID: 53240
 	public Quat LocalQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400CC16 RID: 52246
+	// Token: 0x0400CFF9 RID: 53241
 	public bool DebugMode;
 }

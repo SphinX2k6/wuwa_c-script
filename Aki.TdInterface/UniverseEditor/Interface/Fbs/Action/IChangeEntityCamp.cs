@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062E1 RID: 25313
+	// Token: 0x02006952 RID: 26962
 	public struct IChangeEntityCamp : IFlatbufferObject
 	{
-		// Token: 0x1700BCEA RID: 48362
-		// (get) Token: 0x0602BC07 RID: 179207 RVA: 0x00604F84 File Offset: 0x00603184
+		// Token: 0x1700C674 RID: 50804
+		// (get) Token: 0x0602E370 RID: 189296 RVA: 0x0064FF90 File Offset: 0x0064E190
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BC08 RID: 179208 RVA: 0x00604F91 File Offset: 0x00603191
+		// Token: 0x0602E371 RID: 189297 RVA: 0x0064FF9D File Offset: 0x0064E19D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BC09 RID: 179209 RVA: 0x00604F98 File Offset: 0x00603198
+		// Token: 0x0602E372 RID: 189298 RVA: 0x0064FFA4 File Offset: 0x0064E1A4
 		public static IChangeEntityCamp GetRootAsIChangeEntityCamp(ByteBuffer _bb)
 		{
 			return IChangeEntityCamp.GetRootAsIChangeEntityCamp(_bb, default(IChangeEntityCamp));
 		}
 
-		// Token: 0x0602BC0A RID: 179210 RVA: 0x00604FB4 File Offset: 0x006031B4
+		// Token: 0x0602E373 RID: 189299 RVA: 0x0064FFC0 File Offset: 0x0064E1C0
 		public static IChangeEntityCamp GetRootAsIChangeEntityCamp(ByteBuffer _bb, IChangeEntityCamp obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BC0B RID: 179211 RVA: 0x00604FD1 File Offset: 0x006031D1
+		// Token: 0x0602E374 RID: 189300 RVA: 0x0064FFDD File Offset: 0x0064E1DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BC0C RID: 179212 RVA: 0x00604FE0 File Offset: 0x006031E0
+		// Token: 0x0602E375 RID: 189301 RVA: 0x0064FFEC File Offset: 0x0064E1EC
 		public IChangeEntityCamp __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BCEB RID: 48363
-		// (get) Token: 0x0602BC0D RID: 179213 RVA: 0x00604FF0 File Offset: 0x006031F0
+		// Token: 0x1700C675 RID: 50805
+		// (get) Token: 0x0602E376 RID: 189302 RVA: 0x0064FFFC File Offset: 0x0064E1FC
 		public int TargetEntity
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BCEC RID: 48364
-		// (get) Token: 0x0602BC0E RID: 179214 RVA: 0x0060502C File Offset: 0x0060322C
+		// Token: 0x1700C676 RID: 50806
+		// (get) Token: 0x0602E377 RID: 189303 RVA: 0x00650038 File Offset: 0x0064E238
 		public ECamp Camp
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BC0F RID: 179215 RVA: 0x00605068 File Offset: 0x00603268
+		// Token: 0x0602E378 RID: 189304 RVA: 0x00650074 File Offset: 0x0064E274
 		public static Offset<IChangeEntityCamp> CreateIChangeEntityCamp(FlatBufferBuilder builder, int TargetEntity = 0, ECamp Camp = ECamp.Player)
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeEntityCamp.EndIChangeEntityCamp(builder);
 		}
 
-		// Token: 0x0602BC10 RID: 179216 RVA: 0x00605085 File Offset: 0x00603285
+		// Token: 0x0602E379 RID: 189305 RVA: 0x00650091 File Offset: 0x0064E291
 		public static void StartIChangeEntityCamp(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602BC11 RID: 179217 RVA: 0x0060508E File Offset: 0x0060328E
+		// Token: 0x0602E37A RID: 189306 RVA: 0x0065009A File Offset: 0x0064E29A
 		public static void AddTargetEntity(FlatBufferBuilder builder, int targetEntity)
 		{
 			builder.AddInt(0, targetEntity, 0);
 		}
 
-		// Token: 0x0602BC12 RID: 179218 RVA: 0x00605099 File Offset: 0x00603299
+		// Token: 0x0602E37B RID: 189307 RVA: 0x006500A5 File Offset: 0x0064E2A5
 		public static void AddCamp(FlatBufferBuilder builder, ECamp camp)
 		{
 			builder.AddByte(1, (byte)camp, 0);
 		}
 
-		// Token: 0x0602BC13 RID: 179219 RVA: 0x006050A4 File Offset: 0x006032A4
+		// Token: 0x0602E37C RID: 189308 RVA: 0x006500B0 File Offset: 0x0064E2B0
 		public static Offset<IChangeEntityCamp> EndIChangeEntityCamp(FlatBufferBuilder builder)
 		{
 			return new Offset<IChangeEntityCamp>(builder.EndTable());
 		}
 
-		// Token: 0x0602BC14 RID: 179220 RVA: 0x006050B4 File Offset: 0x006032B4
+		// Token: 0x0602E37D RID: 189309 RVA: 0x006500C0 File Offset: 0x0064E2C0
 		public IChangeEntityCampT UnPack()
 		{
 			IChangeEntityCampT changeEntityCampT = new IChangeEntityCampT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return changeEntityCampT;
 		}
 
-		// Token: 0x0602BC15 RID: 179221 RVA: 0x006050CF File Offset: 0x006032CF
+		// Token: 0x0602E37E RID: 189310 RVA: 0x006500DB File Offset: 0x0064E2DB
 		public void UnPackTo(IChangeEntityCampT _o)
 		{
 			_o.TargetEntity = this.TargetEntity;
 			_o.Camp = this.Camp;
 		}
 
-		// Token: 0x0602BC16 RID: 179222 RVA: 0x006050EC File Offset: 0x006032EC
+		// Token: 0x0602E37F RID: 189311 RVA: 0x006500F8 File Offset: 0x0064E2F8
 		public static Offset<IChangeEntityCamp> Pack(FlatBufferBuilder builder, IChangeEntityCampT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeEntityCamp.CreateIChangeEntityCamp(builder, _o.TargetEntity, _o.Camp);
 		}
 
-		// Token: 0x0401088B RID: 67723
+		// Token: 0x040116A1 RID: 71329
 		private Table __p;
 	}
 }

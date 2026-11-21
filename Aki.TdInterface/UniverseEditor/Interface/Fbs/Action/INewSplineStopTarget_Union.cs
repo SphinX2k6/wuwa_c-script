@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BA3 RID: 27555
+	// Token: 0x020072EF RID: 29423
 	public enum INewSplineStopTarget_Union : byte
 	{
-		// Token: 0x0401146E RID: 70766
+		// Token: 0x040123A0 RID: 74656
 		NONE,
-		// Token: 0x0401146F RID: 70767
+		// Token: 0x040123A1 RID: 74657
 		INewSplineStopTarget,
-		// Token: 0x04011470 RID: 70768
+		// Token: 0x040123A2 RID: 74658
 		INpcNewSplineStopTarget,
-		// Token: 0x04011471 RID: 70769
+		// Token: 0x040123A3 RID: 74659
 		ISceneNewItemSplineStopTarget,
-		// Token: 0x04011472 RID: 70770
+		// Token: 0x040123A4 RID: 74660
 		IPlayerNewSplineStopTarget,
-		// Token: 0x04011473 RID: 70771
+		// Token: 0x040123A5 RID: 74661
 		IVehicleNewSplineStopTarget
 	}
 }

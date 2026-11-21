@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002214 RID: 8724
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200247F RID: 9343
 	public class SpawnChild : ActionParams
 	{
-		// Token: 0x0600BF86 RID: 49030 RVA: 0x001B84A4 File Offset: 0x001B66A4
+		// Token: 0x0600CB44 RID: 52036 RVA: 0x001CFB70 File Offset: 0x001CDD70
 		private SpawnChild_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF87 RID: 49031 RVA: 0x001B84DC File Offset: 0x001B66DC
+		// Token: 0x0600CB45 RID: 52037 RVA: 0x001CFBA8 File Offset: 0x001CDDA8
 		public static SpawnChild Create([Nullable(2)] SpawnChild instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF88 RID: 49032 RVA: 0x001B84EF File Offset: 0x001B66EF
+		// Token: 0x0600CB46 RID: 52038 RVA: 0x001CFBBB File Offset: 0x001CDDBB
 		public static SpawnChild CreateFromSetValue([Nullable(2)] SpawnChild_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF89 RID: 49033 RVA: 0x001B8502 File Offset: 0x001B6702
+		// Token: 0x0600CB47 RID: 52039 RVA: 0x001CFBCE File Offset: 0x001CDDCE
 		public SpawnChild_SetValue ToSetValue()
 		{
 			return new SpawnChild_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A09 RID: 14857
-		// (get) Token: 0x0600BF8A RID: 49034 RVA: 0x001B8521 File Offset: 0x001B6721
-		// (set) Token: 0x0600BF8B RID: 49035 RVA: 0x001B854C File Offset: 0x001B674C
+		// Token: 0x17003CFF RID: 15615
+		// (get) Token: 0x0600CB48 RID: 52040 RVA: 0x001CFBED File Offset: 0x001CDDED
+		// (set) Token: 0x0600CB49 RID: 52041 RVA: 0x001CFC18 File Offset: 0x001CDE18
 		public virtual string TemplateGuid
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A0A RID: 14858
-		// (get) Token: 0x0600BF8C RID: 49036 RVA: 0x001B855C File Offset: 0x001B675C
-		// (set) Token: 0x0600BF8D RID: 49037 RVA: 0x001B85BD File Offset: 0x001B67BD
+		// Token: 0x17003D00 RID: 15616
+		// (get) Token: 0x0600CB4A RID: 52042 RVA: 0x001CFC28 File Offset: 0x001CDE28
+		// (set) Token: 0x0600CB4B RID: 52043 RVA: 0x001CFC89 File Offset: 0x001CDE89
 		public virtual ITransform Transform
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007231 RID: 29233
+		// Token: 0x0400787B RID: 30843
 		[Nullable(2)]
 		protected new SpawnChild FbInstance;
 
-		// Token: 0x04007232 RID: 29234
+		// Token: 0x0400787C RID: 30844
 		[Nullable(2)]
 		protected SpawnChild_SetValue PocoInterface;
 
-		// Token: 0x04007233 RID: 29235
+		// Token: 0x0400787D RID: 30845
 		private ITransform _TransformCache;
 
-		// Token: 0x04007234 RID: 29236
+		// Token: 0x0400787E RID: 30846
 		private bool _TransformInited;
 	}
 }

@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002102 RID: 8450
+	// Token: 0x020006D8 RID: 1752
 	public sealed class FSelfLanguageChange : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601FCB3 RID: 130227 RVA: 0x002F478C File Offset: 0x002F298C
+		// Token: 0x060094F9 RID: 38137 RVA: 0x000E0D4E File Offset: 0x000DEF4E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSelfLanguageChange.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601FCB4 RID: 130228 RVA: 0x002F4798 File Offset: 0x002F2998
+		// Token: 0x060094FA RID: 38138 RVA: 0x000E0D5A File Offset: 0x000DEF5A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSelfLanguageChange._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FSelfLanguageChange._FunctionPtr;
 		}
 
-		// Token: 0x0601FCB5 RID: 130229 RVA: 0x002F47BB File Offset: 0x002F29BB
+		// Token: 0x060094FB RID: 38139 RVA: 0x000E0D7D File Offset: 0x000DEF7D
 		public FSelfLanguageChange()
 		{
 		}
 
-		// Token: 0x0601FCB6 RID: 130230 RVA: 0x002F47C3 File Offset: 0x002F29C3
+		// Token: 0x060094FC RID: 38140 RVA: 0x000E0D85 File Offset: 0x000DEF85
 		[NullableContext(2)]
 		public FSelfLanguageChange(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FCB7 RID: 130231 RVA: 0x002F47CD File Offset: 0x002F29CD
+		// Token: 0x060094FD RID: 38141 RVA: 0x000E0D8F File Offset: 0x000DEF8F
 		public FSelfLanguageChange(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FCB8 RID: 130232 RVA: 0x002F47D8 File Offset: 0x002F29D8
+		// Token: 0x060094FE RID: 38142 RVA: 0x000E0D9A File Offset: 0x000DEF9A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601FCB9 RID: 130233 RVA: 0x002F480A File Offset: 0x002F2A0A
+		// Token: 0x060094FF RID: 38143 RVA: 0x000E0DCC File Offset: 0x000DEFCC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FSelfLanguageChange.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FSelfLanguageChange.RegisterId);
 		}
 
-		// Token: 0x0601FCBA RID: 130234 RVA: 0x002F4844 File Offset: 0x002F2A44
+		// Token: 0x06009500 RID: 38144 RVA: 0x000E0E06 File Offset: 0x000DF006
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x0601FCBB RID: 130235 RVA: 0x002F4850 File Offset: 0x002F2A50
+		// Token: 0x06009501 RID: 38145 RVA: 0x000E0E14 File Offset: 0x000DF014
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04011228 RID: 70184
+		// Token: 0x040040C6 RID: 16582
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011229 RID: 70185
+		// Token: 0x040040C7 RID: 16583
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.SelfLanguageChange__DelegateSignature";
 
-		// Token: 0x0401122A RID: 70186
+		// Token: 0x040040C8 RID: 16584
 		private static int RegisterId;
 
-		// Token: 0x020034E2 RID: 13538
+		// Token: 0x02000F0E RID: 3854
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174F6 RID: 95478
+			// Token: 0x040062DB RID: 25307
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001CD7 RID: 7383
+// Token: 0x02001199 RID: 4505
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleArrowCollectionSelectViewModel
 {
-	// Token: 0x0600DF93 RID: 57235 RVA: 0x00345D7D File Offset: 0x00343F7D
+	// Token: 0x0600B3B0 RID: 46000 RVA: 0x003517A5 File Offset: 0x0034F9A5
 	public static MotorcycleArrowCollectionSelectViewModel Create(MotorcycleArrowSubModel model)
 	{
 		return new MotorcycleArrowCollectionSelectViewModel
@@ -22,18 +22,18 @@ public class MotorcycleArrowCollectionSelectViewModel
 		};
 	}
 
-	// Token: 0x0600DF94 RID: 57236 RVA: 0x00345D8B File Offset: 0x00343F8B
+	// Token: 0x0600B3B1 RID: 46001 RVA: 0x003517B3 File Offset: 0x0034F9B3
 	private MotorcycleArrowCollectionSelectViewModel()
 	{
 	}
 
-	// Token: 0x0600DF95 RID: 57237 RVA: 0x00345DBF File Offset: 0x00343FBF
+	// Token: 0x0600B3B2 RID: 46002 RVA: 0x003517E7 File Offset: 0x0034F9E7
 	public void PushPendingData(MotorFightBossDropNotify data)
 	{
 		this.PendingData.Add(data);
 	}
 
-	// Token: 0x0600DF96 RID: 57238 RVA: 0x00345DD0 File Offset: 0x00343FD0
+	// Token: 0x0600B3B3 RID: 46003 RVA: 0x003517F8 File Offset: 0x0034F9F8
 	public bool SetCollectionList(MotorFightBossDropNotify dropData)
 	{
 		this.SubLevelIndex = dropData.SubLevelIndex;
@@ -45,7 +45,7 @@ public class MotorcycleArrowCollectionSelectViewModel
 		return true;
 	}
 
-	// Token: 0x0600DF97 RID: 57239 RVA: 0x00345E2C File Offset: 0x0034402C
+	// Token: 0x0600B3B4 RID: 46004 RVA: 0x00351854 File Offset: 0x0034FA54
 	public void UpdateDrop(RepeatedField<MotorFightCollectionDrop> drops)
 	{
 		this.CollectionList.Clear();
@@ -70,7 +70,7 @@ public class MotorcycleArrowCollectionSelectViewModel
 		}
 	}
 
-	// Token: 0x0600DF98 RID: 57240 RVA: 0x00345EC8 File Offset: 0x003440C8
+	// Token: 0x0600B3B5 RID: 46005 RVA: 0x003518F0 File Offset: 0x0034FAF0
 	public void SetSelectCollectionId(int? id)
 	{
 		MotorcycleArrowCollectionItemData selectCollectionItem = null;
@@ -88,32 +88,32 @@ public class MotorcycleArrowCollectionSelectViewModel
 		this.SetSelectCollectionItem(selectCollectionItem);
 	}
 
-	// Token: 0x0600DF99 RID: 57241 RVA: 0x00345F26 File Offset: 0x00344126
+	// Token: 0x0600B3B6 RID: 46006 RVA: 0x0035194E File Offset: 0x0034FB4E
 	[NullableContext(2)]
 	public void SetSelectCollectionItem(MotorcycleArrowCollectionItemData collectionItem)
 	{
 		this.CurSelectCollectionItem = collectionItem;
 	}
 
-	// Token: 0x0600DF9A RID: 57242 RVA: 0x00345F2F File Offset: 0x0034412F
+	// Token: 0x0600B3B7 RID: 46007 RVA: 0x00351957 File Offset: 0x0034FB57
 	public void SetMaxRefreshCount(int count)
 	{
 		this.MaxRefreshCount = count;
 	}
 
-	// Token: 0x0600DF9B RID: 57243 RVA: 0x00345F38 File Offset: 0x00344138
+	// Token: 0x0600B3B8 RID: 46008 RVA: 0x00351960 File Offset: 0x0034FB60
 	public void SetRemainRefreshCount(int count)
 	{
 		this.RemainRefreshCount = count;
 	}
 
-	// Token: 0x0600DF9C RID: 57244 RVA: 0x00345F41 File Offset: 0x00344141
+	// Token: 0x0600B3B9 RID: 46009 RVA: 0x00351969 File Offset: 0x0034FB69
 	public void OnOpenView()
 	{
 		this.ShowingViewProcess = true;
 	}
 
-	// Token: 0x0600DF9D RID: 57245 RVA: 0x00345F4C File Offset: 0x0034414C
+	// Token: 0x0600B3BA RID: 46010 RVA: 0x00351974 File Offset: 0x0034FB74
 	public void OnViewClose()
 	{
 		this.ShowingViewProcess = false;
@@ -126,14 +126,14 @@ public class MotorcycleArrowCollectionSelectViewModel
 		}
 	}
 
-	// Token: 0x0600DF9E RID: 57246 RVA: 0x00345FA0 File Offset: 0x003441A0
+	// Token: 0x0600B3BB RID: 46011 RVA: 0x003519C8 File Offset: 0x0034FBC8
 	public void ViewProcessFinish()
 	{
 		this.ShowingViewProcess = false;
 	}
 
-	// Token: 0x17001208 RID: 4616
-	// (get) Token: 0x0600DF9F RID: 57247 RVA: 0x00345FA9 File Offset: 0x003441A9
+	// Token: 0x17001232 RID: 4658
+	// (get) Token: 0x0600B3BC RID: 46012 RVA: 0x003519D1 File Offset: 0x0034FBD1
 	public MotorcycleArrowSubController Controller
 	{
 		get
@@ -142,7 +142,7 @@ public class MotorcycleArrowCollectionSelectViewModel
 		}
 	}
 
-	// Token: 0x0600DFA0 RID: 57248 RVA: 0x00345FBC File Offset: 0x003441BC
+	// Token: 0x0600B3BD RID: 46013 RVA: 0x003519E4 File Offset: 0x0034FBE4
 	[NullableContext(0)]
 	public UniTask<bool> RequestCollectionSelect()
 	{
@@ -154,7 +154,7 @@ public class MotorcycleArrowCollectionSelectViewModel
 		return <RequestCollectionSelect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFA1 RID: 57249 RVA: 0x00346000 File Offset: 0x00344200
+	// Token: 0x0600B3BE RID: 46014 RVA: 0x00351A28 File Offset: 0x0034FC28
 	[NullableContext(0)]
 	public UniTask<bool> RequestUpdateCollectionList()
 	{
@@ -166,7 +166,7 @@ public class MotorcycleArrowCollectionSelectViewModel
 		return <RequestUpdateCollectionList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFA2 RID: 57250 RVA: 0x00346044 File Offset: 0x00344244
+	// Token: 0x0600B3BF RID: 46015 RVA: 0x00351A6C File Offset: 0x0034FC6C
 	public void AddItemData(int itemId)
 	{
 		MotorFightItem? config = ConfigMotorFightItemById.GetConfig(itemId, true);
@@ -199,7 +199,7 @@ public class MotorcycleArrowCollectionSelectViewModel
 		motorcycleArrowCollectionTypeItemData.AddItemData(motorcycleArrowCollectionItemData, true);
 	}
 
-	// Token: 0x0600DFA3 RID: 57251 RVA: 0x00346120 File Offset: 0x00344320
+	// Token: 0x0600B3C0 RID: 46016 RVA: 0x00351B48 File Offset: 0x0034FD48
 	public List<int> GetSortedMotorFightItemTypeList()
 	{
 		List<MotorcycleArrowCollectionTypeItemData> list = new List<MotorcycleArrowCollectionTypeItemData>(this.TypeToItemDataMap.Values);
@@ -228,7 +228,7 @@ public class MotorcycleArrowCollectionSelectViewModel
 		return list2;
 	}
 
-	// Token: 0x0600DFA4 RID: 57252 RVA: 0x00346190 File Offset: 0x00344390
+	// Token: 0x0600B3C1 RID: 46017 RVA: 0x00351BB8 File Offset: 0x0034FDB8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -257,19 +257,19 @@ public class MotorcycleArrowCollectionSelectViewModel
 		return itemList;
 	}
 
-	// Token: 0x0600DFA5 RID: 57253 RVA: 0x003461DA File Offset: 0x003443DA
+	// Token: 0x0600B3C2 RID: 46018 RVA: 0x00351C02 File Offset: 0x0034FE02
 	public List<MotorcycleArrowCollectionItemData> GetAllMotorFightItemData()
 	{
 		return new List<MotorcycleArrowCollectionItemData>(this.ItemDataMap.Values);
 	}
 
-	// Token: 0x0600DFA6 RID: 57254 RVA: 0x003461EC File Offset: 0x003443EC
+	// Token: 0x0600B3C3 RID: 46019 RVA: 0x00351C14 File Offset: 0x0034FE14
 	public bool IsMotorFightItemEmpty()
 	{
 		return this.ItemDataMap.Count <= 0;
 	}
 
-	// Token: 0x0600DFA7 RID: 57255 RVA: 0x003461FF File Offset: 0x003443FF
+	// Token: 0x0600B3C4 RID: 46020 RVA: 0x00351C27 File Offset: 0x0034FE27
 	public void Clear()
 	{
 		this.ItemDataMap.Clear();
@@ -277,40 +277,40 @@ public class MotorcycleArrowCollectionSelectViewModel
 		this.PendingData.Clear();
 	}
 
-	// Token: 0x040066E0 RID: 26336
+	// Token: 0x040067BF RID: 26559
 	public MotorcycleArrowSubModel Model;
 
-	// Token: 0x040066E1 RID: 26337
+	// Token: 0x040067C0 RID: 26560
 	public readonly List<MotorcycleArrowCollectionItemData> CollectionList = new List<MotorcycleArrowCollectionItemData>();
 
-	// Token: 0x040066E2 RID: 26338
+	// Token: 0x040067C1 RID: 26561
 	[Nullable(2)]
 	public MotorcycleArrowCollectionItemData CurSelectCollectionItem;
 
-	// Token: 0x040066E3 RID: 26339
+	// Token: 0x040067C2 RID: 26562
 	public int SubLevelIndex;
 
-	// Token: 0x040066E4 RID: 26340
+	// Token: 0x040067C3 RID: 26563
 	public int WaveGroupIndex;
 
-	// Token: 0x040066E5 RID: 26341
+	// Token: 0x040067C4 RID: 26564
 	public int BossId;
 
-	// Token: 0x040066E6 RID: 26342
+	// Token: 0x040067C5 RID: 26565
 	public int MaxRefreshCount;
 
-	// Token: 0x040066E7 RID: 26343
+	// Token: 0x040067C6 RID: 26566
 	public int RemainRefreshCount;
 
-	// Token: 0x040066E8 RID: 26344
+	// Token: 0x040067C7 RID: 26567
 	public bool ShowingViewProcess;
 
-	// Token: 0x040066E9 RID: 26345
+	// Token: 0x040067C8 RID: 26568
 	public List<MotorFightBossDropNotify> PendingData = new List<MotorFightBossDropNotify>();
 
-	// Token: 0x040066EA RID: 26346
+	// Token: 0x040067C9 RID: 26569
 	private readonly Dictionary<int, MotorcycleArrowCollectionItemData> ItemDataMap = new Dictionary<int, MotorcycleArrowCollectionItemData>();
 
-	// Token: 0x040066EB RID: 26347
+	// Token: 0x040067CA RID: 26570
 	private readonly Dictionary<int, MotorcycleArrowCollectionTypeItemData> TypeToItemDataMap = new Dictionary<int, MotorcycleArrowCollectionTypeItemData>();
 }

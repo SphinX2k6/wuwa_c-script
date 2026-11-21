@@ -5,14 +5,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x0200702D RID: 28717
+	// Token: 0x020061AE RID: 25006
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class MotorcycleWaterComponent : EntityComponent, IComponentDependency
+	public class MotorcycleWaterComponent : EntityComponent
 	{
-		// Token: 0x17009BD3 RID: 39891
-		// (get) Token: 0x06045E8B RID: 286347 RVA: 0x01165A11 File Offset: 0x01163C11
-		public static Type[] Dependencies
+		// Token: 0x17007138 RID: 28984
+		// (get) Token: 0x0603C064 RID: 245860 RVA: 0x0110F971 File Offset: 0x0110DB71
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -24,9 +24,9 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BD4 RID: 39892
-		// (get) Token: 0x06045E8C RID: 286348 RVA: 0x01165A33 File Offset: 0x01163C33
-		// (set) Token: 0x06045E8D RID: 286349 RVA: 0x01165A3C File Offset: 0x01163C3C
+		// Token: 0x17007139 RID: 28985
+		// (get) Token: 0x0603C065 RID: 245861 RVA: 0x0110F993 File Offset: 0x0110DB93
+		// (set) Token: 0x0603C066 RID: 245862 RVA: 0x0110F99C File Offset: 0x0110DB9C
 		protected bool Immersion
 		{
 			get
@@ -63,9 +63,9 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BD5 RID: 39893
-		// (get) Token: 0x06045E8E RID: 286350 RVA: 0x01165AA7 File Offset: 0x01163CA7
-		// (set) Token: 0x06045E8F RID: 286351 RVA: 0x01165AB0 File Offset: 0x01163CB0
+		// Token: 0x1700713A RID: 28986
+		// (get) Token: 0x0603C067 RID: 245863 RVA: 0x0110FA07 File Offset: 0x0110DC07
+		// (set) Token: 0x0603C068 RID: 245864 RVA: 0x0110FA10 File Offset: 0x0110DC10
 		public bool InSwimArea
 		{
 			get
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E90 RID: 286352 RVA: 0x01165B28 File Offset: 0x01163D28
+		// Token: 0x0603C069 RID: 245865 RVA: 0x0110FA88 File Offset: 0x0110DC88
 		private void RefreshSwimAreaHeight()
 		{
 			if (this.MoveComp != null && !this.MoveComp.IsStandardGravity)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			float num = 0f;
 			UObject owner = this.ActorComp.Owner;
 			FVectorDouble actorLocation = this.ActorComp.ActorLocation;
-			this.InSwimArea = UNavigationSystemV1.D_NavigationGetWaterSurface(owner, actorLocation, this.WaterAreaDetectExtent, ref num, this.ActorComp.Owner, null, 150f);
+			this.InSwimArea = UNavigationSystemV1.D_NavigationGetWaterSurface(owner, actorLocation, MotorcycleWaterComponent.WaterAreaDetectExtent, ref num, this.ActorComp.Owner, null, 150f);
 			if (this.InSwimArea)
 			{
 				double num2 = (double)num;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.SwimAreaHeightAboveActor = 0.0;
 		}
 
-		// Token: 0x06045E91 RID: 286353 RVA: 0x01165BE8 File Offset: 0x01163DE8
+		// Token: 0x0603C06A RID: 245866 RVA: 0x0110FB48 File Offset: 0x0110DD48
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<VehicleActorComponent>();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E92 RID: 286354 RVA: 0x01165C8C File Offset: 0x01163E8C
+		// Token: 0x0603C06B RID: 245867 RVA: 0x0110FBEC File Offset: 0x0110DDEC
 		protected override bool OnEnd()
 		{
 			this.ActorComp = null;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E93 RID: 286355 RVA: 0x01165D0C File Offset: 0x01163F0C
+		// Token: 0x0603C06C RID: 245868 RVA: 0x0110FC6C File Offset: 0x0110DE6C
 		protected override void OnTick(float delta)
 		{
 			VehicleActorComponent actorComp = this.ActorComp;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				this.Immersion = false;
 				return;
 			}
-			TraceWaterResult traceWaterResult = this.TraceWaterCapability.TraceWater(this.SwimAreaHeightAboveActor, this.IMMERSION_DEPTH);
+			TraceWaterResult traceWaterResult = this.TraceWaterCapability.TraceWater(this.SwimAreaHeightAboveActor, -5.0);
 			if (!traceWaterResult.FoundWater)
 			{
 				this.Immersion = false;
@@ -194,11 +194,11 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				this.Immersion = false;
 				return;
 			}
-			if ((double)traceWaterResult.MinWaterHeight > this.LEAVE_MOTOR_DEPTH)
+			if ((double)traceWaterResult.MinWaterHeight > 85.0)
 			{
 				if (this.NextSendLeaveTime <= Time.Instance.Now)
 				{
-					this.NextSendLeaveTime = Time.Instance.Now + this.SEND_LEAVE_PERIOD;
+					this.NextSendLeaveTime = Time.Instance.Now + 1000.0;
 					BaseVehiclePerformComponent component = base.Entity.GetComponent<BaseVehiclePerformComponent>();
 					if (component != null)
 					{
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 			else
 			{
-				if ((double)traceWaterResult.MinWaterHeight > this.IMMERSION_DEPTH)
+				if ((double)traceWaterResult.MinWaterHeight > -5.0)
 				{
 					this.Immersion = true;
 					return;
@@ -220,26 +220,26 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E94 RID: 286356 RVA: 0x01165EBD File Offset: 0x011640BD
+		// Token: 0x0603C06D RID: 245869 RVA: 0x0110FE29 File Offset: 0x0110E029
 		private void OnVehicleBeenEntered(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (this.DisableHandle != null)
 			{
-				base.Enable(new int?(this.DisableHandle.Value), this.WATER_COMP_DISABLE_REASON);
+				base.Enable(new int?(this.DisableHandle.Value), "OnVehicleBeenEntered");
 			}
 			this.DisableHandle = null;
 			this.RefreshSwimAreaHeight();
 		}
 
-		// Token: 0x06045E95 RID: 286357 RVA: 0x01165EFB File Offset: 0x011640FB
+		// Token: 0x0603C06E RID: 245870 RVA: 0x0110FE66 File Offset: 0x0110E066
 		private void OnVehicleBeenLeaved(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			this.InSwimArea = false;
 			this.Immersion = false;
-			this.DisableHandle = new int?(base.Disable(this.WATER_COMP_DISABLE_REASON));
+			this.DisableHandle = new int?(base.Disable("OnVehicleBeenEntered"));
 		}
 
-		// Token: 0x06045E96 RID: 286358 RVA: 0x01165F24 File Offset: 0x01164124
+		// Token: 0x0603C06F RID: 245871 RVA: 0x0110FE8C File Offset: 0x0110E08C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -247,124 +247,128 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				return false;
 			}
 			MotorcycleWaterComponent motorcycleWaterComponent = (MotorcycleWaterComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TraceWaterCapability"))
+			if (motorcycleWaterComponent.TraceWaterCapability == null)
 			{
-				if (motorcycleWaterComponent.TraceWaterCapability == null)
-				{
-					this.TraceWaterCapability = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleTraceWaterCapability>(this.TraceWaterCapability), "TraceWaterCapability"))
-				{
-					return false;
-				}
+				this.TraceWaterCapability = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (motorcycleWaterComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MoveComp"))
-			{
-				if (motorcycleWaterComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (motorcycleWaterComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InSwimAreaInternal"))
-			{
-				this.InSwimAreaInternal = motorcycleWaterComponent.InSwimAreaInternal;
-			}
-			if (base.CanResetComponentProperty("SwimAreaHeightAboveActor"))
-			{
-				this.SwimAreaHeightAboveActor = motorcycleWaterComponent.SwimAreaHeightAboveActor;
-			}
-			if (base.CanResetComponentProperty("NextSendLeaveTime"))
-			{
-				this.NextSendLeaveTime = motorcycleWaterComponent.NextSendLeaveTime;
-			}
-			if (base.CanResetComponentProperty("LastPosition") && motorcycleWaterComponent.LastPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastPosition), "LastPosition"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceWaterCapability), "TraceWaterCapability"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DisableHandle"))
+			if (motorcycleWaterComponent.ActorComp == null)
 			{
-				this.DisableHandle = motorcycleWaterComponent.DisableHandle;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ImmersionInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.ImmersionInternal = motorcycleWaterComponent.ImmersionInternal;
+				return false;
 			}
+			if (motorcycleWaterComponent.MoveComp == null)
+			{
+				this.MoveComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
+			{
+				return false;
+			}
+			if (motorcycleWaterComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			this.InSwimAreaInternal = motorcycleWaterComponent.InSwimAreaInternal;
+			this.SwimAreaHeightAboveActor = motorcycleWaterComponent.SwimAreaHeightAboveActor;
+			this.NextSendLeaveTime = motorcycleWaterComponent.NextSendLeaveTime;
+			if (motorcycleWaterComponent.LastPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastPosition), "LastPosition"))
+			{
+				return false;
+			}
+			this.DisableHandle = motorcycleWaterComponent.DisableHandle;
+			this.ImmersionInternal = motorcycleWaterComponent.ImmersionInternal;
 			return true;
 		}
 
-		// Token: 0x040248DD RID: 149725
-		private readonly FVectorDouble WaterAreaDetectExtent = new FVectorDouble(500.0, 500.0, 5000.0);
+		// Token: 0x1700713B RID: 28987
+		// (get) Token: 0x0603C070 RID: 245872 RVA: 0x0110FFB6 File Offset: 0x0110E1B6
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
 
-		// Token: 0x040248DE RID: 149726
-		private readonly double IMMERSION_DEPTH = -5.0;
+		// Token: 0x1700713C RID: 28988
+		// (get) Token: 0x0603C071 RID: 245873 RVA: 0x0110FFB9 File Offset: 0x0110E1B9
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
 
-		// Token: 0x040248DF RID: 149727
-		private readonly double LEAVE_MOTOR_DEPTH = 85.0;
+		// Token: 0x1700713D RID: 28989
+		// (get) Token: 0x0603C072 RID: 245874 RVA: 0x0110FFBC File Offset: 0x0110E1BC
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
 
-		// Token: 0x040248E0 RID: 149728
-		private readonly double SEND_LEAVE_PERIOD = 1000.0;
+		// Token: 0x0401FB93 RID: 129939
+		[StaticVariableRuleIgnore]
+		private static readonly FVectorDouble WaterAreaDetectExtent = new FVectorDouble(500.0, 500.0, 5000.0);
 
-		// Token: 0x040248E1 RID: 149729
-		private readonly string WATER_COMP_DISABLE_REASON = "OnVehicleBeenEntered";
+		// Token: 0x0401FB94 RID: 129940
+		private const double IMMERSION_DEPTH = -5.0;
 
-		// Token: 0x040248E2 RID: 149730
+		// Token: 0x0401FB95 RID: 129941
+		private const double LEAVE_MOTOR_DEPTH = 85.0;
+
+		// Token: 0x0401FB96 RID: 129942
+		private const double SEND_LEAVE_PERIOD = 1000.0;
+
+		// Token: 0x0401FB97 RID: 129943
+		private const string WATER_COMP_DISABLE_REASON = "OnVehicleBeenEntered";
+
+		// Token: 0x0401FB98 RID: 129944
 		[Nullable(2)]
 		public MotorcycleTraceWaterCapability TraceWaterCapability;
 
-		// Token: 0x040248E3 RID: 149731
+		// Token: 0x0401FB99 RID: 129945
 		[Nullable(2)]
 		protected VehicleActorComponent ActorComp;
 
-		// Token: 0x040248E4 RID: 149732
+		// Token: 0x0401FB9A RID: 129946
 		[Nullable(2)]
 		protected VehicleMoveComponent MoveComp;
 
-		// Token: 0x040248E5 RID: 149733
+		// Token: 0x0401FB9B RID: 129947
 		[Nullable(2)]
 		protected BaseTagComponent TagComp;
 
-		// Token: 0x040248E6 RID: 149734
+		// Token: 0x0401FB9C RID: 129948
 		private bool InSwimAreaInternal;
 
-		// Token: 0x040248E7 RID: 149735
+		// Token: 0x0401FB9D RID: 129949
 		private double SwimAreaHeightAboveActor;
 
-		// Token: 0x040248E8 RID: 149736
+		// Token: 0x0401FB9E RID: 129950
 		private double NextSendLeaveTime;
 
-		// Token: 0x040248E9 RID: 149737
+		// Token: 0x0401FB9F RID: 129951
 		private readonly Vector LastPosition = Vector.Create();
 
-		// Token: 0x040248EA RID: 149738
+		// Token: 0x0401FBA0 RID: 129952
 		private int? DisableHandle;
 
-		// Token: 0x040248EB RID: 149739
+		// Token: 0x0401FBA1 RID: 129953
 		private bool ImmersionInternal;
 	}
 }

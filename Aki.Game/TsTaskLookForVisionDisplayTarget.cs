@@ -17,13 +17,13 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskLookForVisionDisplayTarget.TsTaskLookForVisionDisplayTarget_C")]
 public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x060008FA RID: 2298 RVA: 0x0002D7CF File Offset: 0x0002B9CF
+	// Token: 0x060008FE RID: 2302 RVA: 0x0002E753 File Offset: 0x0002C953
 	static TsTaskLookForVisionDisplayTarget()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsTaskLookForVisionDisplayTarget.CreateStaticDefaultValue), new Action(TsTaskLookForVisionDisplayTarget.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060008FB RID: 2299 RVA: 0x0002D7F0 File Offset: 0x0002B9F0
+	// Token: 0x060008FF RID: 2303 RVA: 0x0002E774 File Offset: 0x0002C974
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<EVisionMarkType, EVisionDisplayType> dictionary = new Dictionary<EVisionMarkType, EVisionDisplayType>();
@@ -38,15 +38,15 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		TsTaskLookForVisionDisplayTarget.VisionMark2VisionDisplayTargetMap = dictionary;
 	}
 
-	// Token: 0x060008FC RID: 2300 RVA: 0x0002D847 File Offset: 0x0002BA47
+	// Token: 0x06000900 RID: 2304 RVA: 0x0002E7CB File Offset: 0x0002C9CB
 	public static void ResetStaticDefaultValue()
 	{
 		TsTaskLookForVisionDisplayTarget.VisionMark2VisionDisplayTargetMap = null;
 	}
 
-	// Token: 0x17000189 RID: 393
-	// (get) Token: 0x060008FD RID: 2301 RVA: 0x0002D84F File Offset: 0x0002BA4F
-	// (set) Token: 0x060008FE RID: 2302 RVA: 0x0002D863 File Offset: 0x0002BA63
+	// Token: 0x1700018B RID: 395
+	// (get) Token: 0x06000901 RID: 2305 RVA: 0x0002E7D3 File Offset: 0x0002C9D3
+	// (set) Token: 0x06000902 RID: 2306 RVA: 0x0002E7E7 File Offset: 0x0002C9E7
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe string OutLocationBlackboardKey
 	{
@@ -60,9 +60,9 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		}
 	}
 
-	// Token: 0x1700018A RID: 394
-	// (get) Token: 0x060008FF RID: 2303 RVA: 0x0002D878 File Offset: 0x0002BA78
-	// (set) Token: 0x06000900 RID: 2304 RVA: 0x0002D88C File Offset: 0x0002BA8C
+	// Token: 0x1700018C RID: 396
+	// (get) Token: 0x06000903 RID: 2307 RVA: 0x0002E7FC File Offset: 0x0002C9FC
+	// (set) Token: 0x06000904 RID: 2308 RVA: 0x0002E810 File Offset: 0x0002CA10
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe string OutEntityIdBlackboardKey
 	{
@@ -76,9 +76,9 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		}
 	}
 
-	// Token: 0x1700018B RID: 395
-	// (get) Token: 0x06000901 RID: 2305 RVA: 0x0002D8A1 File Offset: 0x0002BAA1
-	// (set) Token: 0x06000902 RID: 2306 RVA: 0x0002D8B1 File Offset: 0x0002BAB1
+	// Token: 0x1700018D RID: 397
+	// (get) Token: 0x06000905 RID: 2309 RVA: 0x0002E825 File Offset: 0x0002CA25
+	// (set) Token: 0x06000906 RID: 2310 RVA: 0x0002E835 File Offset: 0x0002CA35
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe float DetectDistance
 	{
@@ -92,9 +92,9 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		}
 	}
 
-	// Token: 0x1700018C RID: 396
-	// (get) Token: 0x06000903 RID: 2307 RVA: 0x0002D8C2 File Offset: 0x0002BAC2
-	// (set) Token: 0x06000904 RID: 2308 RVA: 0x0002D8D2 File Offset: 0x0002BAD2
+	// Token: 0x1700018E RID: 398
+	// (get) Token: 0x06000907 RID: 2311 RVA: 0x0002E846 File Offset: 0x0002CA46
+	// (set) Token: 0x06000908 RID: 2312 RVA: 0x0002E856 File Offset: 0x0002CA56
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe bool NavigationOn
 	{
@@ -108,9 +108,9 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		}
 	}
 
-	// Token: 0x1700018D RID: 397
-	// (get) Token: 0x06000905 RID: 2309 RVA: 0x0002D8E3 File Offset: 0x0002BAE3
-	// (set) Token: 0x06000906 RID: 2310 RVA: 0x0002D8F3 File Offset: 0x0002BAF3
+	// Token: 0x1700018F RID: 399
+	// (get) Token: 0x06000909 RID: 2313 RVA: 0x0002E867 File Offset: 0x0002CA67
+	// (set) Token: 0x0600090A RID: 2314 RVA: 0x0002E877 File Offset: 0x0002CA77
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe EVisionMarkType InteractVisionMarkType
 	{
@@ -124,7 +124,7 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		}
 	}
 
-	// Token: 0x06000907 RID: 2311 RVA: 0x0002D904 File Offset: 0x0002BB04
+	// Token: 0x0600090B RID: 2315 RVA: 0x0002E888 File Offset: 0x0002CA88
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -140,31 +140,28 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		}
 	}
 
-	// Token: 0x06000908 RID: 2312 RVA: 0x0002D990 File Offset: 0x0002BB90
+	// Token: 0x0600090C RID: 2316 RVA: 0x0002E914 File Offset: 0x0002CB14
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskLookForVisionDisplayTarget) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskLookForVisionDisplayTarget.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000909 RID: 2313 RVA: 0x0002DA30 File Offset: 0x0002BC30
+	// Token: 0x0600090D RID: 2317 RVA: 0x0002E9CC File Offset: 0x0002CBCC
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -194,8 +191,7 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		Vector vector = Vector.Create(0.0, 0.0, 0.0);
 		foreach (EntityHandle entityHandle2 in this.TmpHandles)
 		{
-			WorldEntity entity = entityHandle2.Entity;
-			if (!(((entity != null) ? entity.GetType().GetMethod("Activate") : null) == null))
+			if (entityHandle2.Entity != null)
 			{
 				SmartObjectComponent component = entityHandle2.Entity.GetComponent<SmartObjectComponent>();
 				if (component != null && component.IsVisionDisplayType && component.VisionDisplayIsCanBeLookFor())
@@ -236,7 +232,7 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		base.FinishExecute(false);
 	}
 
-	// Token: 0x0600090A RID: 2314 RVA: 0x0002DCF0 File Offset: 0x0002BEF0
+	// Token: 0x0600090E RID: 2318 RVA: 0x0002EC64 File Offset: 0x0002CE64
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskLookForVisionDisplayTarget._ClassPtr == IntPtr.Zero)
@@ -246,22 +242,22 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		return TsTaskLookForVisionDisplayTarget._ClassPtr;
 	}
 
-	// Token: 0x0600090B RID: 2315 RVA: 0x0002DD14 File Offset: 0x0002BF14
+	// Token: 0x0600090F RID: 2319 RVA: 0x0002EC88 File Offset: 0x0002CE88
 	public TsTaskLookForVisionDisplayTarget() : this(BuiltinUtils.AllocNativeUObject(TsTaskLookForVisionDisplayTarget.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600090C RID: 2316 RVA: 0x0002DD3C File Offset: 0x0002BF3C
+	// Token: 0x06000910 RID: 2320 RVA: 0x0002ECB0 File Offset: 0x0002CEB0
 	public TsTaskLookForVisionDisplayTarget(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskLookForVisionDisplayTarget.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600090D RID: 2317 RVA: 0x0002DD6F File Offset: 0x0002BF6F
+	// Token: 0x06000911 RID: 2321 RVA: 0x0002ECE3 File Offset: 0x0002CEE3
 	protected TsTaskLookForVisionDisplayTarget(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600090E RID: 2318 RVA: 0x0002DDA8 File Offset: 0x0002BFA8
+	// Token: 0x06000912 RID: 2322 RVA: 0x0002ED1C File Offset: 0x0002CF1C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -270,51 +266,51 @@ public class TsTaskLookForVisionDisplayTarget : TsTaskAbortImmediatelyBase, ISta
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x040006E2 RID: 1762
+	// Token: 0x040006E6 RID: 1766
 	private static Dictionary<EVisionMarkType, EVisionDisplayType> VisionMark2VisionDisplayTargetMap;
 
-	// Token: 0x040006E3 RID: 1763
+	// Token: 0x040006E7 RID: 1767
 	private bool IsInitTsVariables;
 
-	// Token: 0x040006E4 RID: 1764
+	// Token: 0x040006E8 RID: 1768
 	private string TsOutLocationBlackboardKey = "";
 
-	// Token: 0x040006E5 RID: 1765
+	// Token: 0x040006E9 RID: 1769
 	private string TsOutEntityIdBlackboardKey = "";
 
-	// Token: 0x040006E6 RID: 1766
+	// Token: 0x040006EA RID: 1770
 	private float TsDetectDistance;
 
-	// Token: 0x040006E7 RID: 1767
+	// Token: 0x040006EB RID: 1771
 	private bool TsNavigationOn;
 
-	// Token: 0x040006E8 RID: 1768
+	// Token: 0x040006EC RID: 1772
 	private EVisionDisplayType? TsInteractVisionDisplayType = new EVisionDisplayType?(EVisionDisplayType.MechanicalDeer);
 
-	// Token: 0x040006E9 RID: 1769
+	// Token: 0x040006ED RID: 1773
 	private List<EntityHandle> TmpHandles = new List<EntityHandle>();
 
-	// Token: 0x040006EA RID: 1770
+	// Token: 0x040006EE RID: 1774
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskLookForVisionDisplayTarget.TsTaskLookForVisionDisplayTarget_C";
 
-	// Token: 0x040006EB RID: 1771
+	// Token: 0x040006EF RID: 1775
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040006EC RID: 1772
+	// Token: 0x040006F0 RID: 1776
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040006ED RID: 1773
+	// Token: 0x040006F1 RID: 1777
 	private static int __PropertyOffset_OutLocationBlackboardKey;
 
-	// Token: 0x040006EE RID: 1774
+	// Token: 0x040006F2 RID: 1778
 	private static int __PropertyOffset_OutEntityIdBlackboardKey;
 
-	// Token: 0x040006EF RID: 1775
+	// Token: 0x040006F3 RID: 1779
 	private static int __PropertyOffset_DetectDistance;
 
-	// Token: 0x040006F0 RID: 1776
+	// Token: 0x040006F4 RID: 1780
 	private static int __PropertyOffset_NavigationOn;
 
-	// Token: 0x040006F1 RID: 1777
+	// Token: 0x040006F5 RID: 1781
 	private static int __PropertyOffset_InteractVisionMarkType;
 }

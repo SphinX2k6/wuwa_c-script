@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FBC RID: 20412
+	// Token: 0x02005518 RID: 21784
 	public class IColorChangeStrategyOfRGBT
 	{
-		// Token: 0x170093D9 RID: 37849
-		// (get) Token: 0x060207F5 RID: 133109 RVA: 0x00485490 File Offset: 0x00483690
-		// (set) Token: 0x060207F6 RID: 133110 RVA: 0x00485498 File Offset: 0x00483698
+		// Token: 0x17009BB1 RID: 39857
+		// (get) Token: 0x060226E9 RID: 141033 RVA: 0x004BE974 File Offset: 0x004BCB74
+		// (set) Token: 0x060226EA RID: 141034 RVA: 0x004BE97C File Offset: 0x004BCB7C
 		public EColorChangeStrategyOfSplineEffect Type { get; set; }
 
-		// Token: 0x170093DA RID: 37850
-		// (get) Token: 0x060207F7 RID: 133111 RVA: 0x004854A1 File Offset: 0x004836A1
-		// (set) Token: 0x060207F8 RID: 133112 RVA: 0x004854A9 File Offset: 0x004836A9
+		// Token: 0x17009BB2 RID: 39858
+		// (get) Token: 0x060226EB RID: 141035 RVA: 0x004BE985 File Offset: 0x004BCB85
+		// (set) Token: 0x060226EC RID: 141036 RVA: 0x004BE98D File Offset: 0x004BCB8D
 		public string BlueState { get; set; }
 
-		// Token: 0x170093DB RID: 37851
-		// (get) Token: 0x060207F9 RID: 133113 RVA: 0x004854B2 File Offset: 0x004836B2
-		// (set) Token: 0x060207FA RID: 133114 RVA: 0x004854BA File Offset: 0x004836BA
+		// Token: 0x17009BB3 RID: 39859
+		// (get) Token: 0x060226ED RID: 141037 RVA: 0x004BE996 File Offset: 0x004BCB96
+		// (set) Token: 0x060226EE RID: 141038 RVA: 0x004BE99E File Offset: 0x004BCB9E
 		public string YellowState { get; set; }
 
-		// Token: 0x170093DC RID: 37852
-		// (get) Token: 0x060207FB RID: 133115 RVA: 0x004854C3 File Offset: 0x004836C3
-		// (set) Token: 0x060207FC RID: 133116 RVA: 0x004854CB File Offset: 0x004836CB
+		// Token: 0x17009BB4 RID: 39860
+		// (get) Token: 0x060226EF RID: 141039 RVA: 0x004BE9A7 File Offset: 0x004BCBA7
+		// (set) Token: 0x060226F0 RID: 141040 RVA: 0x004BE9AF File Offset: 0x004BCBAF
 		public string RedState { get; set; }
 
-		// Token: 0x060207FD RID: 133117 RVA: 0x004854D4 File Offset: 0x004836D4
+		// Token: 0x060226F1 RID: 141041 RVA: 0x004BE9B8 File Offset: 0x004BCBB8
 		public IColorChangeStrategyOfRGBT()
 		{
 			this.Type = EColorChangeStrategyOfSplineEffect.RGB;

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001953 RID: 6483
+	// Token: 0x02001ADE RID: 6878
 	public class ICustomScreenSpine_SetValue
 	{
-		// Token: 0x040056BA RID: 22202
+		// Token: 0x04005B0D RID: 23309
 		public ECustomScreenType Type;
 
-		// Token: 0x040056BB RID: 22203
+		// Token: 0x04005B0E RID: 23310
 		public int SpineId;
 	}
 }

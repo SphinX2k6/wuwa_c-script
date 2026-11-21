@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Utils;
 
-// Token: 0x02002FFE RID: 12286
+// Token: 0x02002553 RID: 9555
 [NullableContext(2)]
 [Nullable(0)]
 public class SquadAttributeChangeTrigger : Trigger
 {
-	// Token: 0x0601A07A RID: 106618 RVA: 0x006D0FDA File Offset: 0x006CF1DA
+	// Token: 0x060179AE RID: 96686 RVA: 0x006F8E76 File Offset: 0x006F7076
 	public SquadAttributeChangeTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A07B RID: 106619 RVA: 0x006D0FF4 File Offset: 0x006CF1F4
+	// Token: 0x060179AF RID: 96687 RVA: 0x006F8E90 File Offset: 0x006F7090
 	[NullableContext(1)]
 	public unsafe override void OnInitParams(string[] triggerParams)
 	{
@@ -49,7 +49,7 @@ public class SquadAttributeChangeTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A07C RID: 106620 RVA: 0x006D1144 File Offset: 0x006CF344
+	// Token: 0x060179B0 RID: 96688 RVA: 0x006F8FE0 File Offset: 0x006F71E0
 	private int ResolvePlayerId()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -75,7 +75,7 @@ public class SquadAttributeChangeTrigger : Trigger
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x0601A07D RID: 106621 RVA: 0x006D11A0 File Offset: 0x006CF3A0
+	// Token: 0x060179B1 RID: 96689 RVA: 0x006F903C File Offset: 0x006F723C
 	private SquadPropComponent GetSquadCompByPlayerId(int playerId)
 	{
 		if (playerId <= 0)
@@ -90,7 +90,7 @@ public class SquadAttributeChangeTrigger : Trigger
 		return playerEntity.GetComponent<SquadPropComponent>();
 	}
 
-	// Token: 0x0601A07E RID: 106622 RVA: 0x006D11C0 File Offset: 0x006CF3C0
+	// Token: 0x060179B2 RID: 96690 RVA: 0x006F905C File Offset: 0x006F725C
 	protected override void OnActive()
 	{
 		if (!this.HasValidConfig)
@@ -107,7 +107,7 @@ public class SquadAttributeChangeTrigger : Trigger
 		this.OnEvent(this.AttributeId, currentValue, currentValue);
 	}
 
-	// Token: 0x0601A07F RID: 106623 RVA: 0x006D122E File Offset: 0x006CF42E
+	// Token: 0x060179B3 RID: 96691 RVA: 0x006F90CA File Offset: 0x006F72CA
 	protected override void OnInactive()
 	{
 		SquadPropComponent listeningSquadComp = this.ListeningSquadComp;
@@ -118,7 +118,7 @@ public class SquadAttributeChangeTrigger : Trigger
 		this.ListeningSquadComp = null;
 	}
 
-	// Token: 0x0601A080 RID: 106624 RVA: 0x006D125C File Offset: 0x006CF45C
+	// Token: 0x060179B4 RID: 96692 RVA: 0x006F90F8 File Offset: 0x006F72F8
 	protected void OnEvent(ESquadAttributeType _attrId, float newValue, float oldValue)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -131,7 +131,7 @@ public class SquadAttributeChangeTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A081 RID: 106625 RVA: 0x006D12AC File Offset: 0x006CF4AC
+	// Token: 0x060179B5 RID: 96693 RVA: 0x006F9148 File Offset: 0x006F7348
 	[NullableContext(1)]
 	public override string GetDebugTriggerType()
 	{
@@ -151,15 +151,15 @@ public class SquadAttributeChangeTrigger : Trigger
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C4F4 RID: 50420
+	// Token: 0x0400C8BC RID: 51388
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4F5 RID: 50421
+	// Token: 0x0400C8BD RID: 51389
 	protected ESquadAttributeType AttributeId;
 
-	// Token: 0x0400C4F6 RID: 50422
+	// Token: 0x0400C8BE RID: 51390
 	protected bool HasValidConfig = true;
 
-	// Token: 0x0400C4F7 RID: 50423
+	// Token: 0x0400C8BF RID: 51391
 	private SquadPropComponent ListeningSquadComp;
 }

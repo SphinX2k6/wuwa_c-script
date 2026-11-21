@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063AF RID: 25519
+	// Token: 0x02006A20 RID: 27168
 	public enum IClientEventTarget_Union : byte
 	{
-		// Token: 0x04010983 RID: 67971
+		// Token: 0x04011796 RID: 71574
 		NONE,
-		// Token: 0x04010984 RID: 67972
+		// Token: 0x04011797 RID: 71575
 		IClientEventTarget,
-		// Token: 0x04010985 RID: 67973
+		// Token: 0x04011798 RID: 71576
 		ISelfClientEvent,
-		// Token: 0x04010986 RID: 67974
+		// Token: 0x04011799 RID: 71577
 		IClientUiEvent
 	}
 }

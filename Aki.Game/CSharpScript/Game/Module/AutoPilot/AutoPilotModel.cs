@@ -17,14 +17,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E70 RID: 24176
+	// Token: 0x02004E55 RID: 20053
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class AutoPilotModel : ModelBase
 	{
-		// Token: 0x17008E7B RID: 36475
-		// (get) Token: 0x0603D7AB RID: 251819 RVA: 0x00ED62FE File Offset: 0x00ED44FE
+		// Token: 0x1700624D RID: 25165
+		// (get) Token: 0x0603273B RID: 206651 RVA: 0x00E27876 File Offset: 0x00E25A76
 		[Nullable(2)]
 		public CharacterActorComponent ActorComp
 		{
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D7AC RID: 251820 RVA: 0x00ED6326 File Offset: 0x00ED4526
+		// Token: 0x0603273C RID: 206652 RVA: 0x00E2789E File Offset: 0x00E25A9E
 		protected override bool OnInit()
 		{
 			this.InitParameters();
@@ -58,14 +58,14 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return true;
 		}
 
-		// Token: 0x0603D7AD RID: 251821 RVA: 0x00ED6335 File Offset: 0x00ED4535
+		// Token: 0x0603273D RID: 206653 RVA: 0x00E278AD File Offset: 0x00E25AAD
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<ITrackData>(EEventName.UnTrackMark, new Action<ITrackData>(this.OnUnTrackMark));
 			EventSystem.Instance.Add<bool, bool>(EEventName.OnMovieMotorRideSharingModeChangeResponse, new Action<bool, bool>(this.OnMovieMotorRideSharingModeChangeResponse));
 		}
 
-		// Token: 0x0603D7AE RID: 251822 RVA: 0x00ED6370 File Offset: 0x00ED4570
+		// Token: 0x0603273E RID: 206654 RVA: 0x00E278E8 File Offset: 0x00E25AE8
 		private void InitParameters()
 		{
 			this.PlayerToTargetDistanceThreshold = Math.Pow((double)ConfigCommonParamById.GetIntConfig("AutoPilotPlayerToTargetDistanceThreshold").GetValueOrDefault(), 2.0);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.UpdateCirclePathData();
 		}
 
-		// Token: 0x0603D7AF RID: 251823 RVA: 0x00ED6588 File Offset: 0x00ED4788
+		// Token: 0x0603273F RID: 206655 RVA: 0x00E27B00 File Offset: 0x00E25D00
 		public unsafe void UpdateCirclePathData()
 		{
 			this.MapIdToCirclePathMap.Clear();
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D7B0 RID: 251824 RVA: 0x00ED6768 File Offset: 0x00ED4968
+		// Token: 0x06032740 RID: 206656 RVA: 0x00E27CE0 File Offset: 0x00E25EE0
 		private bool IsRoadConfigValid(int[] roadBuildIdArray)
 		{
 			foreach (int roadId in roadBuildIdArray)
@@ -177,14 +177,14 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return true;
 		}
 
-		// Token: 0x0603D7B1 RID: 251825 RVA: 0x00ED67AB File Offset: 0x00ED49AB
+		// Token: 0x06032741 RID: 206657 RVA: 0x00E27D23 File Offset: 0x00E25F23
 		public bool GetIsTracking(int markId)
 		{
 			MarkItem trackingMarkItem = this.TrackingMarkItem;
 			return trackingMarkItem != null && trackingMarkItem.MarkId == markId;
 		}
 
-		// Token: 0x0603D7B2 RID: 251826 RVA: 0x00ED67C4 File Offset: 0x00ED49C4
+		// Token: 0x06032742 RID: 206658 RVA: 0x00E27D3C File Offset: 0x00E25F3C
 		[NullableContext(2)]
 		public void SetTrackingMarkItem(MarkItem markItem)
 		{
@@ -210,14 +210,14 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D7B3 RID: 251827 RVA: 0x00ED687E File Offset: 0x00ED4A7E
+		// Token: 0x06032743 RID: 206659 RVA: 0x00E27DF6 File Offset: 0x00E25FF6
 		public void ClearData()
 		{
 			this.ClearTrackingData();
 			this.ClearCirclePathResult();
 		}
 
-		// Token: 0x0603D7B4 RID: 251828 RVA: 0x00ED688C File Offset: 0x00ED4A8C
+		// Token: 0x06032744 RID: 206660 RVA: 0x00E27E04 File Offset: 0x00E26004
 		public void ClearFindPathResult()
 		{
 			AutoPilotFindPathResult findPathResult = this.FindPathResult;
@@ -228,13 +228,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.FindPathResult = null;
 		}
 
-		// Token: 0x0603D7B5 RID: 251829 RVA: 0x00ED68A6 File Offset: 0x00ED4AA6
+		// Token: 0x06032745 RID: 206661 RVA: 0x00E27E1E File Offset: 0x00E2601E
 		public void ClearCirclePathResult()
 		{
 			this.CirclePathResult = null;
 		}
 
-		// Token: 0x0603D7B6 RID: 251830 RVA: 0x00ED68B0 File Offset: 0x00ED4AB0
+		// Token: 0x06032746 RID: 206662 RVA: 0x00E27E28 File Offset: 0x00E26028
 		public void SetTrackingData(AutoPilotDefine.IAutoPilotTrackingData trackingData)
 		{
 			this.TrackingData = trackingData;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			AutoPilotController.Instance.AddTick(new Action<float?>(this.RefreshFindPath));
 		}
 
-		// Token: 0x0603D7B7 RID: 251831 RVA: 0x00ED68FC File Offset: 0x00ED4AFC
+		// Token: 0x06032747 RID: 206663 RVA: 0x00E27E74 File Offset: 0x00E26074
 		public void ClearTrackingData()
 		{
 			AutoPilotController.Instance.ExitAutoPilot("ClearTrackingData", false);
@@ -253,27 +253,27 @@ namespace CSharpScript.Game.Module.AutoPilot
 			AutoPilotController.Instance.RemoveTick(new Action<float?>(this.RefreshFindPath));
 		}
 
-		// Token: 0x0603D7B8 RID: 251832 RVA: 0x00ED694D File Offset: 0x00ED4B4D
+		// Token: 0x06032748 RID: 206664 RVA: 0x00E27EC5 File Offset: 0x00E260C5
 		public double GetSplineDistanceThreshold()
 		{
 			return this.SplineDistanceThreshold;
 		}
 
-		// Token: 0x0603D7B9 RID: 251833 RVA: 0x00ED6955 File Offset: 0x00ED4B55
+		// Token: 0x06032749 RID: 206665 RVA: 0x00E27ECD File Offset: 0x00E260CD
 		[NullableContext(2)]
 		public AutoPilotFindPathResult GetFindPathResult()
 		{
 			return this.FindPathResult;
 		}
 
-		// Token: 0x0603D7BA RID: 251834 RVA: 0x00ED695D File Offset: 0x00ED4B5D
+		// Token: 0x0603274A RID: 206666 RVA: 0x00E27ED5 File Offset: 0x00E260D5
 		[NullableContext(2)]
 		public AutoPilotCirclePathResult GetCirclePathResult()
 		{
 			return this.CirclePathResult;
 		}
 
-		// Token: 0x0603D7BB RID: 251835 RVA: 0x00ED6968 File Offset: 0x00ED4B68
+		// Token: 0x0603274B RID: 206667 RVA: 0x00E27EE0 File Offset: 0x00E260E0
 		public void RefreshFindPath(float? _ = null)
 		{
 			if (this.ActorComp == null)
@@ -311,13 +311,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.FindPathResult.RefreshData(this.TrackingData.MapId, this.ActorComp.ActorLocationProxy, targetPos, transportFindPathResult);
 		}
 
-		// Token: 0x0603D7BC RID: 251836 RVA: 0x00ED6A65 File Offset: 0x00ED4C65
+		// Token: 0x0603274C RID: 206668 RVA: 0x00E27FDD File Offset: 0x00E261DD
 		public bool CheckPlayerToTargetDistanceValid(global::Vector targetPos)
 		{
 			return this.ActorComp != null && global::Vector.DistSquared2D(this.ActorComp.ActorLocationProxy, targetPos) > this.PlayerToTargetDistanceThreshold;
 		}
 
-		// Token: 0x0603D7BD RID: 251837 RVA: 0x00ED6A8A File Offset: 0x00ED4C8A
+		// Token: 0x0603274D RID: 206669 RVA: 0x00E28002 File Offset: 0x00E26202
 		public void RefreshCirclePath(int circleId, bool isInCircle)
 		{
 			if (this.CirclePathResult == null)
@@ -327,19 +327,19 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.CirclePathResult.RefreshPathToCircleData();
 		}
 
-		// Token: 0x0603D7BE RID: 251838 RVA: 0x00ED6AAC File Offset: 0x00ED4CAC
+		// Token: 0x0603274E RID: 206670 RVA: 0x00E28024 File Offset: 0x00E26224
 		public bool GetIsInAutoPilot()
 		{
 			return this.IsInAutoPilotInner;
 		}
 
-		// Token: 0x0603D7BF RID: 251839 RVA: 0x00ED6AB4 File Offset: 0x00ED4CB4
+		// Token: 0x0603274F RID: 206671 RVA: 0x00E2802C File Offset: 0x00E2622C
 		public AutoPilotDefine.EAutoPilotState GetAutoPilotState()
 		{
 			return this.AutoPilotState;
 		}
 
-		// Token: 0x0603D7C0 RID: 251840 RVA: 0x00ED6ABC File Offset: 0x00ED4CBC
+		// Token: 0x06032750 RID: 206672 RVA: 0x00E28034 File Offset: 0x00E26234
 		public void SetAutoPilotState(AutoPilotDefine.EAutoPilotState state)
 		{
 			this.AutoPilotState = state;
@@ -379,13 +379,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			EventSystem.Instance.Emit<bool>(EEventName.OnAutoPilotStateChange, flag);
 		}
 
-		// Token: 0x0603D7C1 RID: 251841 RVA: 0x00ED6B98 File Offset: 0x00ED4D98
+		// Token: 0x06032751 RID: 206673 RVA: 0x00E28110 File Offset: 0x00E26310
 		public bool GetIsInMovieMode()
 		{
 			return this.IsInMovieModeInner;
 		}
 
-		// Token: 0x0603D7C2 RID: 251842 RVA: 0x00ED6BA0 File Offset: 0x00ED4DA0
+		// Token: 0x06032752 RID: 206674 RVA: 0x00E28118 File Offset: 0x00E26318
 		public void SetIsInMovieMode(bool value)
 		{
 			this.IsInMovieModeInner = value;
@@ -393,63 +393,63 @@ namespace CSharpScript.Game.Module.AutoPilot
 			EventSystem.Instance.Emit<bool>(EEventName.MotorInMovieModeChange, value);
 		}
 
-		// Token: 0x0603D7C3 RID: 251843 RVA: 0x00ED6BC4 File Offset: 0x00ED4DC4
+		// Token: 0x06032753 RID: 206675 RVA: 0x00E2813C File Offset: 0x00E2633C
 		public double GetPlayerToTargetDistanceThreshold()
 		{
 			return this.PlayerToTargetDistanceThreshold;
 		}
 
-		// Token: 0x0603D7C4 RID: 251844 RVA: 0x00ED6BCC File Offset: 0x00ED4DCC
+		// Token: 0x06032754 RID: 206676 RVA: 0x00E28144 File Offset: 0x00E26344
 		public int GetEnterMovieModeTimeThreshold()
 		{
 			return this.EnterMovieModeTimeThreshold;
 		}
 
-		// Token: 0x0603D7C5 RID: 251845 RVA: 0x00ED6BD4 File Offset: 0x00ED4DD4
+		// Token: 0x06032755 RID: 206677 RVA: 0x00E2814C File Offset: 0x00E2634C
 		public double GetEnterMovieModeDistanceThreshold()
 		{
 			return this.EnterMovieModeDistanceThreshold;
 		}
 
-		// Token: 0x0603D7C6 RID: 251846 RVA: 0x00ED6BDC File Offset: 0x00ED4DDC
+		// Token: 0x06032756 RID: 206678 RVA: 0x00E28154 File Offset: 0x00E26354
 		public int GetCanSkipTimeThreshold()
 		{
 			return this.CanSkipTimeThreshold;
 		}
 
-		// Token: 0x0603D7C7 RID: 251847 RVA: 0x00ED6BE4 File Offset: 0x00ED4DE4
+		// Token: 0x06032757 RID: 206679 RVA: 0x00E2815C File Offset: 0x00E2635C
 		public double GetCanSkipDistanceThreshold()
 		{
 			return this.CanSkipDistanceThreshold;
 		}
 
-		// Token: 0x0603D7C8 RID: 251848 RVA: 0x00ED6BEC File Offset: 0x00ED4DEC
+		// Token: 0x06032758 RID: 206680 RVA: 0x00E28164 File Offset: 0x00E26364
 		public int GetSkillHighLightTime()
 		{
 			return this.SkillHighLightTime;
 		}
 
-		// Token: 0x0603D7C9 RID: 251849 RVA: 0x00ED6BF4 File Offset: 0x00ED4DF4
+		// Token: 0x06032759 RID: 206681 RVA: 0x00E2816C File Offset: 0x00E2636C
 		public double GetAutoPilotTime()
 		{
 			return this.AutoPilotTime;
 		}
 
-		// Token: 0x0603D7CA RID: 251850 RVA: 0x00ED6BFC File Offset: 0x00ED4DFC
+		// Token: 0x0603275A RID: 206682 RVA: 0x00E28174 File Offset: 0x00E26374
 		public void AddAutoPilotTime(double deltaTime)
 		{
 			this.AutoPilotTime += deltaTime;
 		}
 
-		// Token: 0x0603D7CB RID: 251851 RVA: 0x00ED6C0C File Offset: 0x00ED4E0C
+		// Token: 0x0603275B RID: 206683 RVA: 0x00E28184 File Offset: 0x00E26384
 		public void ResetAutoPilotTime()
 		{
 			this.AutoPilotTime = 0.0;
 		}
 
-		// Token: 0x17008E7C RID: 36476
-		// (get) Token: 0x0603D7CC RID: 251852 RVA: 0x00ED6C1D File Offset: 0x00ED4E1D
-		// (set) Token: 0x0603D7CD RID: 251853 RVA: 0x00ED6C25 File Offset: 0x00ED4E25
+		// Token: 0x1700624E RID: 25166
+		// (get) Token: 0x0603275C RID: 206684 RVA: 0x00E28195 File Offset: 0x00E26395
+		// (set) Token: 0x0603275D RID: 206685 RVA: 0x00E2819D File Offset: 0x00E2639D
 		public int AutoPilotAreaId
 		{
 			get
@@ -470,25 +470,25 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D7CE RID: 251854 RVA: 0x00ED6C47 File Offset: 0x00ED4E47
+		// Token: 0x0603275E RID: 206686 RVA: 0x00E281BF File Offset: 0x00E263BF
 		public bool GetIsCanShowSkipBtn()
 		{
 			return this.IsCanShowSkipBtn;
 		}
 
-		// Token: 0x0603D7CF RID: 251855 RVA: 0x00ED6C4F File Offset: 0x00ED4E4F
+		// Token: 0x0603275F RID: 206687 RVA: 0x00E281C7 File Offset: 0x00E263C7
 		public void SetIsCanShowSkipBtn(bool value)
 		{
 			this.IsCanShowSkipBtn = value;
 		}
 
-		// Token: 0x0603D7D0 RID: 251856 RVA: 0x00ED6C58 File Offset: 0x00ED4E58
+		// Token: 0x06032760 RID: 206688 RVA: 0x00E281D0 File Offset: 0x00E263D0
 		public AutoPilotDefine.IEnableAutoPilot GetEnableAutoPilot()
 		{
 			return this.EnableAutoPilot;
 		}
 
-		// Token: 0x0603D7D1 RID: 251857 RVA: 0x00ED6C60 File Offset: 0x00ED4E60
+		// Token: 0x06032761 RID: 206689 RVA: 0x00E281D8 File Offset: 0x00E263D8
 		private void OnUnTrackMark(ITrackData markItem)
 		{
 			if (this.TrackingMarkItem == null)
@@ -501,7 +501,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D7D2 RID: 251858 RVA: 0x00ED6C94 File Offset: 0x00ED4E94
+		// Token: 0x06032762 RID: 206690 RVA: 0x00E2820C File Offset: 0x00E2640C
 		public unsafe void SetEnableAutoPilot(AutoPilotDefine.EEnableAutoPilot value, AutoPilotDefine.EDisableAutoPilotReason? reason = null)
 		{
 			if (this.EnableAutoPilot.Value == value)
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D7D3 RID: 251859 RVA: 0x00ED6D94 File Offset: 0x00ED4F94
+		// Token: 0x06032763 RID: 206691 RVA: 0x00E2830C File Offset: 0x00E2650C
 		public bool CheckCommonConditions()
 		{
 			if (this.IsInAutoPilotInner)
@@ -559,7 +559,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return true;
 		}
 
-		// Token: 0x0603D7D4 RID: 251860 RVA: 0x00ED6E50 File Offset: 0x00ED5050
+		// Token: 0x06032764 RID: 206692 RVA: 0x00E283C8 File Offset: 0x00E265C8
 		public void CheckCircleAutoPilotConditions()
 		{
 			if (!this.CheckCommonConditions())
@@ -622,7 +622,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.SetEnableAutoPilot(AutoPilotDefine.EEnableAutoPilot.Disable, new AutoPilotDefine.EDisableAutoPilotReason?(AutoPilotDefine.EDisableAutoPilotReason.NoCirclePath));
 		}
 
-		// Token: 0x0603D7D5 RID: 251861 RVA: 0x00ED7040 File Offset: 0x00ED5240
+		// Token: 0x06032765 RID: 206693 RVA: 0x00E285B8 File Offset: 0x00E267B8
 		private bool CheckCircleInIntersection(int roadWayId, List<int> circleIds)
 		{
 			UKuroTransportNetworkSubsystem transportSystem = TransportNetworkController.Instance.GetTransportSystem();
@@ -665,7 +665,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return false;
 		}
 
-		// Token: 0x0603D7D6 RID: 251862 RVA: 0x00ED7188 File Offset: 0x00ED5388
+		// Token: 0x06032766 RID: 206694 RVA: 0x00E28700 File Offset: 0x00E26900
 		private bool CheckCanReachCircle(List<int> circleIds)
 		{
 			foreach (int num in circleIds)
@@ -685,7 +685,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return false;
 		}
 
-		// Token: 0x0603D7D7 RID: 251863 RVA: 0x00ED7224 File Offset: 0x00ED5424
+		// Token: 0x06032767 RID: 206695 RVA: 0x00E2879C File Offset: 0x00E2699C
 		private bool CanReachCirclePath(global::Vector actorLocation, int[] circlePath)
 		{
 			UKuroRoadway roadWay = TransportNetworkController.Instance.GetTransportSystem().GetRoadWay(circlePath[0]);
@@ -699,7 +699,9 @@ namespace CSharpScript.Game.Module.AutoPilot
 			{
 				return false;
 			}
-			MathUtils.Instance.CommonTempVector.DeepCopy(fvectorDouble);
+			global::Vector commonTempVector = MathUtils.Instance.CommonTempVector;
+			FVectorDouble? fvectorDouble2 = fvectorDouble;
+			commonTempVector.DeepCopy((fvectorDouble2 != null) ? fvectorDouble2.GetValueOrDefault() : null);
 			ITransportFindPathResult transportFindPathResult = TransportNetworkController.Instance.FindPath(actorLocation, MathUtils.Instance.CommonTempVector, true, false, this.IsDebugMode);
 			if (transportFindPathResult == null)
 			{
@@ -719,7 +721,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return false;
 		}
 
-		// Token: 0x0603D7D8 RID: 251864 RVA: 0x00ED7317 File Offset: 0x00ED5517
+		// Token: 0x06032768 RID: 206696 RVA: 0x00E288A4 File Offset: 0x00E26AA4
 		private void OnMovieMotorRideSharingModeChangeResponse(bool enable, bool success)
 		{
 			if (!enable)
@@ -744,14 +746,14 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D7D9 RID: 251865 RVA: 0x00ED733F File Offset: 0x00ED553F
+		// Token: 0x06032769 RID: 206697 RVA: 0x00E288CC File Offset: 0x00E26ACC
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove<ITrackData>(EEventName.UnTrackMark, new Action<ITrackData>(this.OnUnTrackMark));
 			EventSystem.Instance.Remove<bool, bool>(EEventName.OnMovieMotorRideSharingModeChangeResponse, new Action<bool, bool>(this.OnMovieMotorRideSharingModeChangeResponse));
 		}
 
-		// Token: 0x0603D7DA RID: 251866 RVA: 0x00ED7379 File Offset: 0x00ED5579
+		// Token: 0x0603276A RID: 206698 RVA: 0x00E28906 File Offset: 0x00E26B06
 		protected override bool OnClear()
 		{
 			this.ClearData();
@@ -763,8 +765,8 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return true;
 		}
 
-		// Token: 0x17008E7D RID: 36477
-		// (get) Token: 0x0603D7DB RID: 251867 RVA: 0x00ED73AC File Offset: 0x00ED55AC
+		// Token: 0x1700624F RID: 25167
+		// (get) Token: 0x0603276B RID: 206699 RVA: 0x00E28939 File Offset: 0x00E26B39
 		public static AutoPilotModel Instance
 		{
 			get
@@ -773,7 +775,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D7DC RID: 251868 RVA: 0x00ED73B3 File Offset: 0x00ED55B3
+		// Token: 0x0603276C RID: 206700 RVA: 0x00E28940 File Offset: 0x00E26B40
 		public static AutoPilotModel GetOrCreateInstance()
 		{
 			if (AutoPilotModel._Instance == null)
@@ -783,7 +785,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return AutoPilotModel._Instance;
 		}
 
-		// Token: 0x0603D7DD RID: 251869 RVA: 0x00ED73C7 File Offset: 0x00ED55C7
+		// Token: 0x0603276D RID: 206701 RVA: 0x00E28954 File Offset: 0x00E26B54
 		public static bool CreateInstance()
 		{
 			if (AutoPilotModel._Instance != null)
@@ -794,158 +796,158 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return true;
 		}
 
-		// Token: 0x0603D7DE RID: 251870 RVA: 0x00ED73DD File Offset: 0x00ED55DD
+		// Token: 0x0603276E RID: 206702 RVA: 0x00E2896A File Offset: 0x00E26B6A
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603D7DF RID: 251871 RVA: 0x00ED73DF File Offset: 0x00ED55DF
+		// Token: 0x0603276F RID: 206703 RVA: 0x00E2896C File Offset: 0x00E26B6C
 		public static void ResetStaticDefaultValue()
 		{
 			AutoPilotModel._Instance = null;
 		}
 
-		// Token: 0x0603D7E0 RID: 251872 RVA: 0x00ED73E7 File Offset: 0x00ED55E7
+		// Token: 0x06032770 RID: 206704 RVA: 0x00E28974 File Offset: 0x00E26B74
 		static AutoPilotModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AutoPilotModel.CreateStaticDefaultValue), new Action(AutoPilotModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402015A RID: 131418
+		// Token: 0x0401AC21 RID: 109601
 		private bool IsInAutoPilotInner;
 
-		// Token: 0x0402015B RID: 131419
+		// Token: 0x0401AC22 RID: 109602
 		private bool IsInMovieModeInner;
 
-		// Token: 0x0402015C RID: 131420
+		// Token: 0x0401AC23 RID: 109603
 		[Nullable(2)]
 		private MarkItem TrackingMarkItem;
 
-		// Token: 0x0402015D RID: 131421
+		// Token: 0x0401AC24 RID: 109604
 		[Nullable(2)]
 		private AutoPilotFindPathResult FindPathResult;
 
-		// Token: 0x0402015E RID: 131422
+		// Token: 0x0401AC25 RID: 109605
 		[Nullable(2)]
 		private AutoPilotCirclePathResult CirclePathResult;
 
-		// Token: 0x0402015F RID: 131423
+		// Token: 0x0401AC26 RID: 109606
 		private double PlayerToTargetDistanceThreshold;
 
-		// Token: 0x04020160 RID: 131424
+		// Token: 0x0401AC27 RID: 109607
 		private double SplineDistanceThreshold;
 
-		// Token: 0x04020161 RID: 131425
+		// Token: 0x0401AC28 RID: 109608
 		private int SkillHighLightTime = -1;
 
-		// Token: 0x04020162 RID: 131426
+		// Token: 0x0401AC29 RID: 109609
 		private int EnterMovieModeTimeThreshold;
 
-		// Token: 0x04020163 RID: 131427
+		// Token: 0x0401AC2A RID: 109610
 		private double EnterMovieModeDistanceThreshold;
 
-		// Token: 0x04020164 RID: 131428
+		// Token: 0x0401AC2B RID: 109611
 		private int CanSkipTimeThreshold;
 
-		// Token: 0x04020165 RID: 131429
+		// Token: 0x0401AC2C RID: 109612
 		private double CanSkipDistanceThreshold;
 
-		// Token: 0x04020166 RID: 131430
+		// Token: 0x0401AC2D RID: 109613
 		private double AutoPilotTime;
 
-		// Token: 0x04020167 RID: 131431
+		// Token: 0x0401AC2E RID: 109614
 		[Nullable(2)]
 		private AutoPilotDefine.IAutoPilotTrackingData TrackingData;
 
-		// Token: 0x04020168 RID: 131432
+		// Token: 0x0401AC2F RID: 109615
 		private bool IsCanShowSkipBtn;
 
-		// Token: 0x04020169 RID: 131433
+		// Token: 0x0401AC30 RID: 109616
 		public bool IsDebugMode;
 
-		// Token: 0x0402016A RID: 131434
+		// Token: 0x0401AC31 RID: 109617
 		public bool IsSkipConfirmBoxShow = true;
 
-		// Token: 0x0402016B RID: 131435
+		// Token: 0x0401AC32 RID: 109618
 		public readonly Dictionary<int, AutoPilotDefine.IAutoPilotCircles> MapIdToCirclePathMap = new Dictionary<int, AutoPilotDefine.IAutoPilotCircles>();
 
-		// Token: 0x0402016C RID: 131436
+		// Token: 0x0401AC33 RID: 109619
 		public int EnterCircleRoadId;
 
-		// Token: 0x0402016D RID: 131437
+		// Token: 0x0401AC34 RID: 109620
 		private readonly AutoPilotDefine.IEnableAutoPilot EnableAutoPilot = new EnableAutoPilot
 		{
 			Value = AutoPilotDefine.EEnableAutoPilot.Disable
 		};
 
-		// Token: 0x0402016E RID: 131438
+		// Token: 0x0401AC35 RID: 109621
 		public float RideShareBtnProgress;
 
-		// Token: 0x0402016F RID: 131439
+		// Token: 0x0401AC36 RID: 109622
 		public bool HideQuickTransferConfirmBox;
 
-		// Token: 0x04020170 RID: 131440
+		// Token: 0x0401AC37 RID: 109623
 		public bool IsAllowExitByMove;
 
-		// Token: 0x04020171 RID: 131441
+		// Token: 0x0401AC38 RID: 109624
 		public List<int> DebugRoadWayIds = new List<int>();
 
-		// Token: 0x04020172 RID: 131442
+		// Token: 0x0401AC39 RID: 109625
 		public int DebugCircleId;
 
-		// Token: 0x04020173 RID: 131443
+		// Token: 0x0401AC3A RID: 109626
 		public global::Vector LastActorLocation = global::Vector.Create();
 
-		// Token: 0x04020174 RID: 131444
+		// Token: 0x0401AC3B RID: 109627
 		[Nullable(2)]
 		public MotorcycleSplineMoveComponent SplineMoveComp;
 
-		// Token: 0x04020175 RID: 131445
+		// Token: 0x0401AC3C RID: 109628
 		public bool IsSummonWaitingEnterVehicle;
 
-		// Token: 0x04020176 RID: 131446
+		// Token: 0x0401AC3D RID: 109629
 		private AutoPilotDefine.EAutoPilotState AutoPilotState;
 
-		// Token: 0x04020177 RID: 131447
+		// Token: 0x0401AC3E RID: 109630
 		[Nullable(2)]
 		public Entity VehicleEntity;
 
-		// Token: 0x04020178 RID: 131448
+		// Token: 0x0401AC3F RID: 109631
 		[Nullable(2)]
 		public CustomPromise<bool> ExitMovieModeWithRideShareQuitPromise;
 
-		// Token: 0x04020179 RID: 131449
+		// Token: 0x0401AC40 RID: 109632
 		[Nullable(2)]
 		public CustomPromise<bool> EnterRideSharePromise;
 
-		// Token: 0x0402017A RID: 131450
+		// Token: 0x0401AC41 RID: 109633
 		public double HighLightSampleDist;
 
-		// Token: 0x0402017B RID: 131451
+		// Token: 0x0401AC42 RID: 109634
 		public double AutoPilotRoadWayWidthOffset;
 
-		// Token: 0x0402017C RID: 131452
+		// Token: 0x0401AC43 RID: 109635
 		public double AutoPilotExitHorizontalDistThreshold;
 
-		// Token: 0x0402017D RID: 131453
+		// Token: 0x0401AC44 RID: 109636
 		public double AutoPilotExitVerticalDistThreshold;
 
-		// Token: 0x0402017E RID: 131454
+		// Token: 0x0401AC45 RID: 109637
 		public List<string> MovieModeCameraRowNameArray = new List<string>();
 
-		// Token: 0x0402017F RID: 131455
+		// Token: 0x0401AC46 RID: 109638
 		public double AutoPilotStuckSpeedThreshold;
 
-		// Token: 0x04020180 RID: 131456
+		// Token: 0x0401AC47 RID: 109639
 		public double AutoPilotStuckTimeThreshold;
 
-		// Token: 0x04020181 RID: 131457
+		// Token: 0x0401AC48 RID: 109640
 		public double AutoPilotStuckStepDistance;
 
-		// Token: 0x04020182 RID: 131458
+		// Token: 0x0401AC49 RID: 109641
 		private int AutoPilotAreaIdInner;
 
-		// Token: 0x04020183 RID: 131459
+		// Token: 0x0401AC4A RID: 109642
 		[Nullable(2)]
 		private static AutoPilotModel _Instance;
 	}

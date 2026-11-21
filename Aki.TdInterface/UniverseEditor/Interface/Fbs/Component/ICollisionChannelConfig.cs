@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FB8 RID: 20408
+	// Token: 0x02005514 RID: 21780
 	public struct ICollisionChannelConfig : IFlatbufferObject
 	{
-		// Token: 0x170093D1 RID: 37841
-		// (get) Token: 0x060207C9 RID: 133065 RVA: 0x00484F94 File Offset: 0x00483194
+		// Token: 0x17009BA9 RID: 39849
+		// (get) Token: 0x060226BD RID: 140989 RVA: 0x004BE478 File Offset: 0x004BC678
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060207CA RID: 133066 RVA: 0x00484FA1 File Offset: 0x004831A1
+		// Token: 0x060226BE RID: 140990 RVA: 0x004BE485 File Offset: 0x004BC685
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060207CB RID: 133067 RVA: 0x00484FA8 File Offset: 0x004831A8
+		// Token: 0x060226BF RID: 140991 RVA: 0x004BE48C File Offset: 0x004BC68C
 		public static ICollisionChannelConfig GetRootAsICollisionChannelConfig(ByteBuffer _bb)
 		{
 			return ICollisionChannelConfig.GetRootAsICollisionChannelConfig(_bb, default(ICollisionChannelConfig));
 		}
 
-		// Token: 0x060207CC RID: 133068 RVA: 0x00484FC4 File Offset: 0x004831C4
+		// Token: 0x060226C0 RID: 140992 RVA: 0x004BE4A8 File Offset: 0x004BC6A8
 		public static ICollisionChannelConfig GetRootAsICollisionChannelConfig(ByteBuffer _bb, ICollisionChannelConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060207CD RID: 133069 RVA: 0x00484FE1 File Offset: 0x004831E1
+		// Token: 0x060226C1 RID: 140993 RVA: 0x004BE4C5 File Offset: 0x004BC6C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060207CE RID: 133070 RVA: 0x00484FF0 File Offset: 0x004831F0
+		// Token: 0x060226C2 RID: 140994 RVA: 0x004BE4D4 File Offset: 0x004BC6D4
 		public ICollisionChannelConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170093D2 RID: 37842
-		// (get) Token: 0x060207CF RID: 133071 RVA: 0x00485000 File Offset: 0x00483200
+		// Token: 0x17009BAA RID: 39850
+		// (get) Token: 0x060226C3 RID: 140995 RVA: 0x004BE4E4 File Offset: 0x004BC6E4
 		public IOverrideCollisionChannel? OverrideCollisionChannel
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060207D0 RID: 133072 RVA: 0x0048505D File Offset: 0x0048325D
+		// Token: 0x060226C4 RID: 140996 RVA: 0x004BE541 File Offset: 0x004BC741
 		public static Offset<ICollisionChannelConfig> CreateICollisionChannelConfig(FlatBufferBuilder builder, Offset<IOverrideCollisionChannel> OverrideCollisionChannelOffset = default(Offset<IOverrideCollisionChannel>))
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICollisionChannelConfig.EndICollisionChannelConfig(builder);
 		}
 
-		// Token: 0x060207D1 RID: 133073 RVA: 0x00485073 File Offset: 0x00483273
+		// Token: 0x060226C5 RID: 140997 RVA: 0x004BE557 File Offset: 0x004BC757
 		public static void StartICollisionChannelConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060207D2 RID: 133074 RVA: 0x0048507C File Offset: 0x0048327C
+		// Token: 0x060226C6 RID: 140998 RVA: 0x004BE560 File Offset: 0x004BC760
 		public static void AddOverrideCollisionChannel(FlatBufferBuilder builder, Offset<IOverrideCollisionChannel> overrideCollisionChannelOffset)
 		{
 			builder.AddOffset(0, overrideCollisionChannelOffset.Value, 0);
 		}
 
-		// Token: 0x060207D3 RID: 133075 RVA: 0x0048508C File Offset: 0x0048328C
+		// Token: 0x060226C7 RID: 140999 RVA: 0x004BE570 File Offset: 0x004BC770
 		public static Offset<ICollisionChannelConfig> EndICollisionChannelConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ICollisionChannelConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060207D4 RID: 133076 RVA: 0x0048509C File Offset: 0x0048329C
+		// Token: 0x060226C8 RID: 141000 RVA: 0x004BE580 File Offset: 0x004BC780
 		public ICollisionChannelConfigT UnPack()
 		{
 			ICollisionChannelConfigT collisionChannelConfigT = new ICollisionChannelConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return collisionChannelConfigT;
 		}
 
-		// Token: 0x060207D5 RID: 133077 RVA: 0x004850B8 File Offset: 0x004832B8
+		// Token: 0x060226C9 RID: 141001 RVA: 0x004BE59C File Offset: 0x004BC79C
 		public void UnPackTo(ICollisionChannelConfigT _o)
 		{
 			_o.OverrideCollisionChannel = ((this.OverrideCollisionChannel != null) ? this.OverrideCollisionChannel.Value.UnPack() : null);
 		}
 
-		// Token: 0x060207D6 RID: 133078 RVA: 0x004850F4 File Offset: 0x004832F4
+		// Token: 0x060226CA RID: 141002 RVA: 0x004BE5D8 File Offset: 0x004BC7D8
 		public static Offset<ICollisionChannelConfig> Pack(FlatBufferBuilder builder, ICollisionChannelConfigT _o)
 		{
 			if (_o == null)
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICollisionChannelConfig.CreateICollisionChannelConfig(builder, overrideCollisionChannelOffset);
 		}
 
-		// Token: 0x0400DE93 RID: 56979
+		// Token: 0x0400EA81 RID: 60033
 		private Table __p;
 	}
 }

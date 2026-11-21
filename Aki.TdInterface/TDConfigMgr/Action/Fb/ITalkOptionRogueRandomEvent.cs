@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002516 RID: 9494
+	// Token: 0x020027BC RID: 10172
 	public class ITalkOptionRogueRandomEvent : ITalkOptionParamType
 	{
-		// Token: 0x0600D3BC RID: 54204 RVA: 0x001F5E48 File Offset: 0x001F4048
-		[NullableContext(1)]
+		// Token: 0x0600E118 RID: 57624 RVA: 0x00211840 File Offset: 0x0020FA40
 		public static ITalkOptionRogueRandomEvent Create(ITalkOptionRogueRandomEvent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B52 RID: 15186
-		// (get) Token: 0x0600D3BD RID: 54205 RVA: 0x001F5E67 File Offset: 0x001F4067
+		// Token: 0x17003E4E RID: 15950
+		// (get) Token: 0x0600E119 RID: 57625 RVA: 0x0021185F File Offset: 0x0020FA5F
 		public override ETalkOptionParamType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B53 RID: 15187
-		// (get) Token: 0x0600D3BE RID: 54206 RVA: 0x001F5E74 File Offset: 0x001F4074
+		// Token: 0x17003E4F RID: 15951
+		// (get) Token: 0x0600E11A RID: 57626 RVA: 0x0021186C File Offset: 0x0020FA6C
 		public virtual int? OptionId
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007408 RID: 29704
+		// Token: 0x04007A5A RID: 31322
 		private ITalkOptionRogueRandomEvent Instance;
 	}
 }

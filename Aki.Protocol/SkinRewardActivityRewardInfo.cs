@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001243 RID: 4675
+	// Token: 0x02001280 RID: 4736
 	public sealed class SkinRewardActivityRewardInfo : IMessage<SkinRewardActivityRewardInfo>, IMessage, IEquatable<SkinRewardActivityRewardInfo>, IDeepCloneable<SkinRewardActivityRewardInfo>, IBufferMessage
 	{
-		// Token: 0x06018EA3 RID: 102051 RVA: 0x003A03E1 File Offset: 0x0039E5E1
+		// Token: 0x0601948D RID: 103565 RVA: 0x003B0341 File Offset: 0x003AE541
 		[NullableContext(1)]
 		public static SkinRewardActivityRewardInfo Create()
 		{
 			return new SkinRewardActivityRewardInfo();
 		}
 
-		// Token: 0x17005406 RID: 21510
-		// (get) Token: 0x06018EA4 RID: 102052 RVA: 0x003A03E8 File Offset: 0x0039E5E8
+		// Token: 0x17005585 RID: 21893
+		// (get) Token: 0x0601948E RID: 103566 RVA: 0x003B0348 File Offset: 0x003AE548
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<SkinRewardActivityRewardInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005407 RID: 21511
-		// (get) Token: 0x06018EA5 RID: 102053 RVA: 0x003A03EF File Offset: 0x0039E5EF
+		// Token: 0x17005586 RID: 21894
+		// (get) Token: 0x0601948F RID: 103567 RVA: 0x003B034F File Offset: 0x003AE54F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005408 RID: 21512
-		// (get) Token: 0x06018EA6 RID: 102054 RVA: 0x003A03F2 File Offset: 0x0039E5F2
+		// Token: 0x17005587 RID: 21895
+		// (get) Token: 0x06019490 RID: 103568 RVA: 0x003B0352 File Offset: 0x003AE552
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018EA7 RID: 102055 RVA: 0x003A03F9 File Offset: 0x0039E5F9
+		// Token: 0x06019491 RID: 103569 RVA: 0x003B0359 File Offset: 0x003AE559
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkinRewardActivityRewardInfo()
 		{
 		}
 
-		// Token: 0x06018EA8 RID: 102056 RVA: 0x003A0401 File Offset: 0x0039E601
+		// Token: 0x06019492 RID: 103570 RVA: 0x003B0361 File Offset: 0x003AE561
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkinRewardActivityRewardInfo(SkinRewardActivityRewardInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06018EA9 RID: 102057 RVA: 0x003A0432 File Offset: 0x0039E632
+		// Token: 0x06019493 RID: 103571 RVA: 0x003B0392 File Offset: 0x003AE592
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkinRewardActivityRewardInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new SkinRewardActivityRewardInfo(this);
 		}
 
-		// Token: 0x17005409 RID: 21513
-		// (get) Token: 0x06018EAA RID: 102058 RVA: 0x003A043A File Offset: 0x0039E63A
-		// (set) Token: 0x06018EAB RID: 102059 RVA: 0x003A0442 File Offset: 0x0039E642
+		// Token: 0x17005588 RID: 21896
+		// (get) Token: 0x06019494 RID: 103572 RVA: 0x003B039A File Offset: 0x003AE59A
+		// (set) Token: 0x06019495 RID: 103573 RVA: 0x003B03A2 File Offset: 0x003AE5A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ConfigId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700540A RID: 21514
-		// (get) Token: 0x06018EAC RID: 102060 RVA: 0x003A044B File Offset: 0x0039E64B
-		// (set) Token: 0x06018EAD RID: 102061 RVA: 0x003A0453 File Offset: 0x0039E653
+		// Token: 0x17005589 RID: 21897
+		// (get) Token: 0x06019496 RID: 103574 RVA: 0x003B03AB File Offset: 0x003AE5AB
+		// (set) Token: 0x06019497 RID: 103575 RVA: 0x003B03B3 File Offset: 0x003AE5B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkinRewardActivityRewardState State
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018EAE RID: 102062 RVA: 0x003A045C File Offset: 0x0039E65C
+		// Token: 0x06019498 RID: 103576 RVA: 0x003B03BC File Offset: 0x003AE5BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SkinRewardActivityRewardInfo);
 		}
 
-		// Token: 0x06018EAF RID: 102063 RVA: 0x003A046A File Offset: 0x0039E66A
+		// Token: 0x06019499 RID: 103577 RVA: 0x003B03CA File Offset: 0x003AE5CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SkinRewardActivityRewardInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ConfigId == other.ConfigId && this.State == other.State && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018EB0 RID: 102064 RVA: 0x003A04A8 File Offset: 0x0039E6A8
+		// Token: 0x0601949A RID: 103578 RVA: 0x003B0408 File Offset: 0x003AE608
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018EB1 RID: 102065 RVA: 0x003A0506 File Offset: 0x0039E706
+		// Token: 0x0601949B RID: 103579 RVA: 0x003B0466 File Offset: 0x003AE666
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018EB2 RID: 102066 RVA: 0x003A0513 File Offset: 0x0039E713
+		// Token: 0x0601949C RID: 103580 RVA: 0x003B0473 File Offset: 0x003AE673
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018EB3 RID: 102067 RVA: 0x003A051C File Offset: 0x0039E71C
+		// Token: 0x0601949D RID: 103581 RVA: 0x003B047C File Offset: 0x003AE67C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018EB4 RID: 102068 RVA: 0x003A0574 File Offset: 0x0039E774
+		// Token: 0x0601949E RID: 103582 RVA: 0x003B04D4 File Offset: 0x003AE6D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018EB5 RID: 102069 RVA: 0x003A05CC File Offset: 0x0039E7CC
+		// Token: 0x0601949F RID: 103583 RVA: 0x003B052C File Offset: 0x003AE72C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SkinRewardActivityRewardInfo other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06018EB6 RID: 102070 RVA: 0x003A061C File Offset: 0x0039E81C
+		// Token: 0x060194A0 RID: 103584 RVA: 0x003B057C File Offset: 0x003AE77C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06018EB7 RID: 102071 RVA: 0x003A0628 File Offset: 0x0039E828
+		// Token: 0x060194A1 RID: 103585 RVA: 0x003B0588 File Offset: 0x003AE788
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040092F0 RID: 37616
+		// Token: 0x040095A2 RID: 38306
 		private static readonly MessageParser<SkinRewardActivityRewardInfo> _parser = new MessageParser<SkinRewardActivityRewardInfo>(() => new SkinRewardActivityRewardInfo());
 
-		// Token: 0x040092F1 RID: 37617
+		// Token: 0x040095A3 RID: 38307
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040092F2 RID: 37618
+		// Token: 0x040095A4 RID: 38308
 		public const int ConfigIdFieldNumber = 1;
 
-		// Token: 0x040092F3 RID: 37619
+		// Token: 0x040095A5 RID: 38309
 		private int configId_;
 
-		// Token: 0x040092F4 RID: 37620
+		// Token: 0x040095A6 RID: 38310
 		public const int StateFieldNumber = 2;
 
-		// Token: 0x040092F5 RID: 37621
+		// Token: 0x040095A7 RID: 38311
 		private SkinRewardActivityRewardState state_;
 	}
 }

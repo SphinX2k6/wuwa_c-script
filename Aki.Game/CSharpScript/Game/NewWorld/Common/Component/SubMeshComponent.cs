@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x0200708F RID: 28815
+	// Token: 0x02006210 RID: 25104
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SubMeshComponent : EntityComponent
 	{
-		// Token: 0x06046357 RID: 287575 RVA: 0x0118DEC0 File Offset: 0x0118C0C0
+		// Token: 0x0603C599 RID: 247193 RVA: 0x01137004 File Offset: 0x01135204
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046358 RID: 287576 RVA: 0x0118DF0D File Offset: 0x0118C10D
+		// Token: 0x0603C59A RID: 247194 RVA: 0x01137051 File Offset: 0x01135251
 		protected override bool OnClear()
 		{
 			this.HideMeshMap.Clear();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046359 RID: 287577 RVA: 0x0118DF28 File Offset: 0x0118C128
+		// Token: 0x0603C59B RID: 247195 RVA: 0x0113706C File Offset: 0x0113526C
 		protected override void OnActivate()
 		{
 			if (this.ActorComp == null)
@@ -49,19 +49,19 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604635A RID: 287578 RVA: 0x0118DFA0 File Offset: 0x0118C1A0
+		// Token: 0x0603C59C RID: 247196 RVA: 0x011370E4 File Offset: 0x011352E4
 		protected override void OnAfterTick(float delta)
 		{
 			this.DealSubMeshOrder(true);
 		}
 
-		// Token: 0x0604635B RID: 287579 RVA: 0x0118DFA9 File Offset: 0x0118C1A9
+		// Token: 0x0603C59D RID: 247197 RVA: 0x011370ED File Offset: 0x011352ED
 		protected override void OnEnable()
 		{
 			this.DealSubMeshOrder(false);
 		}
 
-		// Token: 0x0604635C RID: 287580 RVA: 0x0118DFB4 File Offset: 0x0118C1B4
+		// Token: 0x0603C59E RID: 247198 RVA: 0x011370F8 File Offset: 0x011352F8
 		private void DealSubMeshOrder(bool allowEffect = true)
 		{
 			foreach (KeyValuePair<string, SubMeshComponent.SubMeshOrder> keyValuePair in this.SubMeshOrderMap)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SubMeshOrderMap.Clear();
 		}
 
-		// Token: 0x0604635D RID: 287581 RVA: 0x0118E020 File Offset: 0x0118C220
+		// Token: 0x0603C59F RID: 247199 RVA: 0x01137164 File Offset: 0x01135364
 		protected void SetSubMeshVisible(string meshName, SubMeshComponent.SubMeshOrder order, bool allowEffect = true)
 		{
 			SubMeshComponent.SubMeshItem subMeshItem;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			subMeshItem.SetVisible(order.Visible, order.DelayTime);
 		}
 
-		// Token: 0x0604635E RID: 287582 RVA: 0x0118E078 File Offset: 0x0118C278
+		// Token: 0x0603C5A0 RID: 247200 RVA: 0x011371BC File Offset: 0x011353BC
 		protected void ApplySubMeshMaterialAndEffect(SubMeshComponent.SubMeshItem subMeshItem, SubMeshComponent.SubMeshOrder order, bool allowEffect = true)
 		{
 			if (subMeshItem.CurrentPdHandle != 0)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604635F RID: 287583 RVA: 0x0118E1F3 File Offset: 0x0118C3F3
+		// Token: 0x0603C5A1 RID: 247201 RVA: 0x01137337 File Offset: 0x01135537
 		public void SetSubMeshOrder(string meshName, bool visible, [Nullable(2)] PD_CharacterControllerData_C charControllerData, [Nullable(new byte[]
 		{
 			2,
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SubMeshOrderMap[meshName] = new SubMeshComponent.SubMeshOrder(visible, charControllerData, effectDataAssetRef, delayTime);
 		}
 
-		// Token: 0x06046360 RID: 287584 RVA: 0x0118E20C File Offset: 0x0118C40C
+		// Token: 0x0603C5A2 RID: 247202 RVA: 0x01137350 File Offset: 0x01135550
 		public void SetSubMeshAttach(string componentName, FName attachName, FTransform transform)
 		{
 			SubMeshComponent.SubMeshItem subMeshItem;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046361 RID: 287585 RVA: 0x0118E234 File Offset: 0x0118C434
+		// Token: 0x0603C5A3 RID: 247203 RVA: 0x01137378 File Offset: 0x01135578
 		public void ResetSubMeshAttach(string componentName)
 		{
 			SubMeshComponent.SubMeshItem subMeshItem;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046362 RID: 287586 RVA: 0x0118E258 File Offset: 0x0118C458
+		// Token: 0x0603C5A4 RID: 247204 RVA: 0x0113739C File Offset: 0x0113559C
 		public void FreezeSubMesh(string meshName)
 		{
 			SubMeshComponent.SubMeshItem subMeshItem;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046363 RID: 287587 RVA: 0x0118E27C File Offset: 0x0118C47C
+		// Token: 0x0603C5A5 RID: 247205 RVA: 0x011373C0 File Offset: 0x011355C0
 		public void FreezeSubMeshWithEffect(string meshName, bool visible, [Nullable(2)] PD_CharacterControllerData_C charControllerData, [Nullable(new byte[]
 		{
 			2,
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046364 RID: 287588 RVA: 0x0118E2C4 File Offset: 0x0118C4C4
+		// Token: 0x0603C5A6 RID: 247206 RVA: 0x01137408 File Offset: 0x01135608
 		public void PlaySubMeshEffectOnly(string meshName, bool visible, [Nullable(2)] PD_CharacterControllerData_C charControllerData, [Nullable(new byte[]
 		{
 			2,
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			subMeshItem.SetVisible(visible, 0f);
 		}
 
-		// Token: 0x06046365 RID: 287589 RVA: 0x0118E314 File Offset: 0x0118C514
+		// Token: 0x0603C5A7 RID: 247207 RVA: 0x01137458 File Offset: 0x01135658
 		public void SnapshotSubMesh(string meshName)
 		{
 			SubMeshComponent.SubMeshItem subMeshItem;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046366 RID: 287590 RVA: 0x0118E338 File Offset: 0x0118C538
+		// Token: 0x0603C5A8 RID: 247208 RVA: 0x0113747C File Offset: 0x0113567C
 		public void UnfreezeSubMesh(string meshName)
 		{
 			SubMeshComponent.SubMeshItem subMeshItem;
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046367 RID: 287591 RVA: 0x0118E35C File Offset: 0x0118C55C
+		// Token: 0x0603C5A9 RID: 247209 RVA: 0x011374A0 File Offset: 0x011356A0
 		public void ShowSubMeshWithEffect(string meshName, bool visible, [Nullable(2)] PD_CharacterControllerData_C charControllerData, [Nullable(new byte[]
 		{
 			2,
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			subMeshItem.SetVisible(visible, 0f);
 		}
 
-		// Token: 0x06046368 RID: 287592 RVA: 0x0118E3B8 File Offset: 0x0118C5B8
+		// Token: 0x0603C5AA RID: 247210 RVA: 0x011374FC File Offset: 0x011356FC
 		public int SetHideMesh(UMeshComponent meshComp, bool visible, bool withChild, bool withChildActor, int inputKey = 0)
 		{
 			int num;
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return num2;
 		}
 
-		// Token: 0x06046369 RID: 287593 RVA: 0x0118E598 File Offset: 0x0118C798
+		// Token: 0x0603C5AB RID: 247211 RVA: 0x011376DC File Offset: 0x011358DC
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -330,69 +330,101 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			SubMeshComponent subMeshComponent = (SubMeshComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (subMeshComponent.ActorComp == null)
 			{
-				if (subMeshComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("CharActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (subMeshComponent.CharActorComp == null)
-				{
-					this.CharActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.CharActorComp), "CharActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CharRenderComp"))
+			if (subMeshComponent.CharActorComp == null)
 			{
-				if (subMeshComponent.CharRenderComp == null)
-				{
-					this.CharRenderComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharRenderingComponent>(this.CharRenderComp), "CharRenderComp"))
-				{
-					return false;
-				}
+				this.CharActorComp = null;
 			}
-			if (base.CanResetComponentProperty("SubMeshMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharActorComp), "CharActorComp"))
 			{
-				if (subMeshComponent.SubMeshMap == null)
-				{
-					this.SubMeshMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, SubMeshComponent.SubMeshItem>>(this.SubMeshMap), "SubMeshMap"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SubMeshOrderMap"))
+			if (subMeshComponent.CharRenderComp == null)
 			{
-				if (subMeshComponent.SubMeshOrderMap == null)
-				{
-					this.SubMeshOrderMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, SubMeshComponent.SubMeshOrder>>(this.SubMeshOrderMap), "SubMeshOrderMap"))
-				{
-					return false;
-				}
+				this.CharRenderComp = null;
 			}
-			if (base.CanResetComponentProperty("NextHideMeshKey"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharRenderComp), "CharRenderComp"))
 			{
-				this.NextHideMeshKey = subMeshComponent.NextHideMeshKey;
+				return false;
 			}
-			return (!base.CanResetComponentProperty("HideMeshMap") || subMeshComponent.HideMeshMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<UMeshComponent, int>>(this.HideMeshMap), "HideMeshMap")) && (!base.CanResetComponentProperty("HideMeshChildActors") || subMeshComponent.HideMeshChildActors == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<UMeshComponent, ValueTuple<bool, List<AActor>>>>(this.HideMeshChildActors), "HideMeshChildActors"));
+			if (subMeshComponent.SubMeshMap == null)
+			{
+				this.SubMeshMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SubMeshMap), "SubMeshMap"))
+			{
+				return false;
+			}
+			if (subMeshComponent.SubMeshOrderMap == null)
+			{
+				this.SubMeshOrderMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SubMeshOrderMap), "SubMeshOrderMap"))
+			{
+				return false;
+			}
+			this.NextHideMeshKey = subMeshComponent.NextHideMeshKey;
+			return (subMeshComponent.HideMeshMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.HideMeshMap), "HideMeshMap")) && (subMeshComponent.HideMeshChildActors == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.HideMeshChildActors), "HideMeshChildActors"));
 		}
 
-		// Token: 0x04024C79 RID: 150649
+		// Token: 0x170071EE RID: 29166
+		// (get) Token: 0x0603C5AC RID: 247212 RVA: 0x01137823 File Offset: 0x01135A23
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071EF RID: 29167
+		// (get) Token: 0x0603C5AD RID: 247213 RVA: 0x01137826 File Offset: 0x01135A26
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071F0 RID: 29168
+		// (get) Token: 0x0603C5AE RID: 247214 RVA: 0x01137829 File Offset: 0x01135A29
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071F1 RID: 29169
+		// (get) Token: 0x0603C5AF RID: 247215 RVA: 0x0113782C File Offset: 0x01135A2C
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071F2 RID: 29170
+		// (get) Token: 0x0603C5B0 RID: 247216 RVA: 0x0113782F File Offset: 0x01135A2F
+		public override bool NeedAfterTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FF34 RID: 130868
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<string> standardMeshNames = new HashSet<string>
 		{
@@ -403,31 +435,31 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			"WeaponCase1"
 		};
 
-		// Token: 0x04024C7A RID: 150650
+		// Token: 0x0401FF35 RID: 130869
 		[Nullable(2)]
 		protected BaseActorComponent ActorComp;
 
-		// Token: 0x04024C7B RID: 150651
+		// Token: 0x0401FF36 RID: 130870
 		[Nullable(2)]
 		protected CharacterActorComponent CharActorComp;
 
-		// Token: 0x04024C7C RID: 150652
+		// Token: 0x0401FF37 RID: 130871
 		[Nullable(2)]
 		protected CharRenderingComponent CharRenderComp;
 
-		// Token: 0x04024C7D RID: 150653
+		// Token: 0x0401FF38 RID: 130872
 		protected Dictionary<string, SubMeshComponent.SubMeshItem> SubMeshMap = new Dictionary<string, SubMeshComponent.SubMeshItem>();
 
-		// Token: 0x04024C7E RID: 150654
+		// Token: 0x0401FF39 RID: 130873
 		protected Dictionary<string, SubMeshComponent.SubMeshOrder> SubMeshOrderMap = new Dictionary<string, SubMeshComponent.SubMeshOrder>();
 
-		// Token: 0x04024C7F RID: 150655
+		// Token: 0x0401FF3A RID: 130874
 		private int NextHideMeshKey = 1;
 
-		// Token: 0x04024C80 RID: 150656
+		// Token: 0x0401FF3B RID: 130875
 		private readonly Dictionary<UMeshComponent, int> HideMeshMap = new Dictionary<UMeshComponent, int>();
 
-		// Token: 0x04024C81 RID: 150657
+		// Token: 0x0401FF3C RID: 130876
 		[Nullable(new byte[]
 		{
 			1,
@@ -438,12 +470,12 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 		})]
 		private readonly Dictionary<UMeshComponent, ValueTuple<bool, List<AActor>>> HideMeshChildActors = new Dictionary<UMeshComponent, ValueTuple<bool, List<AActor>>>();
 
-		// Token: 0x0200CE44 RID: 52804
+		// Token: 0x0200BA36 RID: 47670
 		[Nullable(0)]
 		public class SubMeshItem
 		{
-			// Token: 0x1700A2B7 RID: 41655
-			// (get) Token: 0x06051E2C RID: 335404 RVA: 0x01640B9A File Offset: 0x0163ED9A
+			// Token: 0x17007A5B RID: 31323
+			// (get) Token: 0x0604869B RID: 296603 RVA: 0x01615EF2 File Offset: 0x016140F2
 			public bool Visible
 			{
 				get
@@ -452,7 +484,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				}
 			}
 
-			// Token: 0x06051E2D RID: 335405 RVA: 0x01640BA4 File Offset: 0x0163EDA4
+			// Token: 0x0604869C RID: 296604 RVA: 0x01615EFC File Offset: 0x016140FC
 			public void SetVisible(bool v, float delay = 0f)
 			{
 				if (this.VisibleInternal == v)
@@ -473,15 +505,15 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				this.Mesh.SetVisibility(v, false);
 			}
 
-			// Token: 0x06051E2E RID: 335406 RVA: 0x01640C25 File Offset: 0x0163EE25
+			// Token: 0x0604869D RID: 296605 RVA: 0x01615F7D File Offset: 0x0161417D
 			private void DelayInvisible(float delta)
 			{
 				this.Mesh.SetVisibility(false, false);
 				this.InvisibleTimer = null;
 			}
 
-			// Token: 0x1700A2B8 RID: 41656
-			// (get) Token: 0x06051E2F RID: 335407 RVA: 0x01640C3B File Offset: 0x0163EE3B
+			// Token: 0x17007A5C RID: 31324
+			// (get) Token: 0x0604869E RID: 296606 RVA: 0x01615F93 File Offset: 0x01614193
 			public bool IsFrozen
 			{
 				get
@@ -490,7 +522,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				}
 			}
 
-			// Token: 0x06051E30 RID: 335408 RVA: 0x01640C44 File Offset: 0x0163EE44
+			// Token: 0x0604869F RID: 296607 RVA: 0x01615F9C File Offset: 0x0161419C
 			public SubMeshItem(string name, USkeletalMeshComponent mesh)
 			{
 				this.Name = name;
@@ -503,22 +535,22 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				originRelativeTransform.FromUeTransform(relativeTransform);
 			}
 
-			// Token: 0x1700A2B9 RID: 41657
-			// (get) Token: 0x06051E31 RID: 335409 RVA: 0x01640CB3 File Offset: 0x0163EEB3
+			// Token: 0x17007A5D RID: 31325
+			// (get) Token: 0x060486A0 RID: 296608 RVA: 0x0161600B File Offset: 0x0161420B
 			public string Name { get; }
 
-			// Token: 0x1700A2BA RID: 41658
-			// (get) Token: 0x06051E32 RID: 335410 RVA: 0x01640CBB File Offset: 0x0163EEBB
+			// Token: 0x17007A5E RID: 31326
+			// (get) Token: 0x060486A1 RID: 296609 RVA: 0x01616013 File Offset: 0x01614213
 			public USkeletalMeshComponent Mesh { get; }
 
-			// Token: 0x06051E33 RID: 335411 RVA: 0x01640CC3 File Offset: 0x0163EEC3
+			// Token: 0x060486A2 RID: 296610 RVA: 0x0161601B File Offset: 0x0161421B
 			public void AttachToNewSocket(FName attachName, FTransform transform)
 			{
 				this.Mesh.K2_AttachToComponent(this.OriginAttachComp, attachName, EAttachmentRule.KeepRelative, EAttachmentRule.KeepRelative, EAttachmentRule.KeepRelative, true, true);
 				this.Mesh.K2_SetRelativeTransform(transform, false, ref WorldGlobal.SweepHitResult, true);
 			}
 
-			// Token: 0x06051E34 RID: 335412 RVA: 0x01640CF4 File Offset: 0x0163EEF4
+			// Token: 0x060486A3 RID: 296611 RVA: 0x0161604C File Offset: 0x0161424C
 			public void ResetAttach()
 			{
 				this.Mesh.K2_AttachToComponent(this.OriginAttachComp, this.OriginAttachSocketName, EAttachmentRule.KeepRelative, EAttachmentRule.KeepRelative, EAttachmentRule.KeepRelative, true, true);
@@ -527,7 +559,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				mesh.K2_SetRelativeTransform(ftransform, false, ref WorldGlobal.SweepHitResult, true);
 			}
 
-			// Token: 0x06051E35 RID: 335413 RVA: 0x01640D40 File Offset: 0x0163EF40
+			// Token: 0x060486A4 RID: 296612 RVA: 0x01616098 File Offset: 0x01614298
 			public void TakeSnapshot()
 			{
 				this.SnapshotWorldTransform = new FTransform?(this.Mesh.K2_GetComponentToWorld());
@@ -538,13 +570,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				}
 			}
 
-			// Token: 0x06051E36 RID: 335414 RVA: 0x01640D7D File Offset: 0x0163EF7D
+			// Token: 0x060486A5 RID: 296613 RVA: 0x016160D5 File Offset: 0x016142D5
 			public void ClearSnapshot()
 			{
 				this.SnapshotWorldTransform = null;
 			}
 
-			// Token: 0x06051E37 RID: 335415 RVA: 0x01640D8C File Offset: 0x0163EF8C
+			// Token: 0x060486A6 RID: 296614 RVA: 0x016160E4 File Offset: 0x016142E4
 			public void FreezeToWorld(bool visible = true)
 			{
 				if (this.FrozenInternal)
@@ -571,7 +603,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				this.FrozenInternal = true;
 			}
 
-			// Token: 0x06051E38 RID: 335416 RVA: 0x01640E34 File Offset: 0x0163F034
+			// Token: 0x060486A7 RID: 296615 RVA: 0x0161618C File Offset: 0x0161438C
 			public void Unfreeze()
 			{
 				if (!this.FrozenInternal)
@@ -588,42 +620,42 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				this.FrozenInternal = false;
 			}
 
-			// Token: 0x0403E1D2 RID: 254418
+			// Token: 0x04039602 RID: 235010
 			protected bool VisibleInternal;
 
-			// Token: 0x0403E1D3 RID: 254419
+			// Token: 0x04039603 RID: 235011
 			[Nullable(2)]
 			private TimerHandle InvisibleTimer;
 
-			// Token: 0x0403E1D4 RID: 254420
+			// Token: 0x04039604 RID: 235012
 			public int CurrentPdHandle;
 
-			// Token: 0x0403E1D5 RID: 254421
+			// Token: 0x04039605 RID: 235013
 			public int CurrentEffectHandle;
 
-			// Token: 0x0403E1D6 RID: 254422
+			// Token: 0x04039606 RID: 235014
 			[Nullable(2)]
 			private readonly USceneComponent OriginAttachComp;
 
-			// Token: 0x0403E1D7 RID: 254423
+			// Token: 0x04039607 RID: 235015
 			private readonly FName OriginAttachSocketName = FNameUtil.NONE;
 
-			// Token: 0x0403E1D8 RID: 254424
+			// Token: 0x04039608 RID: 235016
 			private readonly Transform OriginRelativeTransform = Transform.Create();
 
-			// Token: 0x0403E1D9 RID: 254425
+			// Token: 0x04039609 RID: 235017
 			private bool FrozenInternal;
 
-			// Token: 0x0403E1DA RID: 254426
+			// Token: 0x0403960A RID: 235018
 			private FTransform? SnapshotWorldTransform;
 		}
 
-		// Token: 0x0200CE45 RID: 52805
+		// Token: 0x0200BA37 RID: 47671
 		[NullableContext(2)]
 		[Nullable(0)]
 		public class SubMeshOrder
 		{
-			// Token: 0x06051E39 RID: 335417 RVA: 0x01640E77 File Offset: 0x0163F077
+			// Token: 0x060486A8 RID: 296616 RVA: 0x016161CF File Offset: 0x016143CF
 			public SubMeshOrder(bool visible, PD_CharacterControllerData_C charControllerData, [Nullable(new byte[]
 			{
 				2,
@@ -636,16 +668,16 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				this.DelayTime = delayTime;
 			}
 
-			// Token: 0x1700A2BB RID: 41659
-			// (get) Token: 0x06051E3A RID: 335418 RVA: 0x01640E9C File Offset: 0x0163F09C
+			// Token: 0x17007A5F RID: 31327
+			// (get) Token: 0x060486A9 RID: 296617 RVA: 0x016161F4 File Offset: 0x016143F4
 			public bool Visible { get; }
 
-			// Token: 0x1700A2BC RID: 41660
-			// (get) Token: 0x06051E3B RID: 335419 RVA: 0x01640EA4 File Offset: 0x0163F0A4
+			// Token: 0x17007A60 RID: 31328
+			// (get) Token: 0x060486AA RID: 296618 RVA: 0x016161FC File Offset: 0x016143FC
 			public PD_CharacterControllerData_C CharControllerData { get; }
 
-			// Token: 0x1700A2BD RID: 41661
-			// (get) Token: 0x06051E3C RID: 335420 RVA: 0x01640EAC File Offset: 0x0163F0AC
+			// Token: 0x17007A61 RID: 31329
+			// (get) Token: 0x060486AB RID: 296619 RVA: 0x01616204 File Offset: 0x01614404
 			[Nullable(new byte[]
 			{
 				2,
@@ -657,8 +689,8 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				1
 			})] get; }
 
-			// Token: 0x1700A2BE RID: 41662
-			// (get) Token: 0x06051E3D RID: 335421 RVA: 0x01640EB4 File Offset: 0x0163F0B4
+			// Token: 0x17007A62 RID: 31330
+			// (get) Token: 0x060486AC RID: 296620 RVA: 0x0161620C File Offset: 0x0161440C
 			public float DelayTime { get; }
 		}
 	}

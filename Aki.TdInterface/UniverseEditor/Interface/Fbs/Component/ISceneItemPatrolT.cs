@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058CE RID: 22734
+	// Token: 0x02005EDB RID: 24283
 	public class ISceneItemPatrolT
 	{
-		// Token: 0x1700AA41 RID: 43585
-		// (get) Token: 0x060265F4 RID: 157172 RVA: 0x00549D46 File Offset: 0x00547F46
-		// (set) Token: 0x060265F5 RID: 157173 RVA: 0x00549D4E File Offset: 0x00547F4E
+		// Token: 0x1700B371 RID: 45937
+		// (get) Token: 0x06028B56 RID: 166742 RVA: 0x00590892 File Offset: 0x0058EA92
+		// (set) Token: 0x06028B57 RID: 166743 RVA: 0x0059089A File Offset: 0x0058EA9A
 		public ESceneItemAiType Type { get; set; }
 
-		// Token: 0x1700AA42 RID: 43586
-		// (get) Token: 0x060265F6 RID: 157174 RVA: 0x00549D57 File Offset: 0x00547F57
-		// (set) Token: 0x060265F7 RID: 157175 RVA: 0x00549D5F File Offset: 0x00547F5F
+		// Token: 0x1700B372 RID: 45938
+		// (get) Token: 0x06028B58 RID: 166744 RVA: 0x005908A3 File Offset: 0x0058EAA3
+		// (set) Token: 0x06028B59 RID: 166745 RVA: 0x005908AB File Offset: 0x0058EAAB
 		public IConditionGroupT EnableCondition { get; set; }
 
-		// Token: 0x1700AA43 RID: 43587
-		// (get) Token: 0x060265F8 RID: 157176 RVA: 0x00549D68 File Offset: 0x00547F68
-		// (set) Token: 0x060265F9 RID: 157177 RVA: 0x00549D70 File Offset: 0x00547F70
+		// Token: 0x1700B373 RID: 45939
+		// (get) Token: 0x06028B5A RID: 166746 RVA: 0x005908B4 File Offset: 0x0058EAB4
+		// (set) Token: 0x06028B5B RID: 166747 RVA: 0x005908BC File Offset: 0x0058EABC
 		public IConditionGroupT DisableCondition { get; set; }
 
-		// Token: 0x1700AA44 RID: 43588
-		// (get) Token: 0x060265FA RID: 157178 RVA: 0x00549D79 File Offset: 0x00547F79
-		// (set) Token: 0x060265FB RID: 157179 RVA: 0x00549D81 File Offset: 0x00547F81
+		// Token: 0x1700B374 RID: 45940
+		// (get) Token: 0x06028B5C RID: 166748 RVA: 0x005908C5 File Offset: 0x0058EAC5
+		// (set) Token: 0x06028B5D RID: 166749 RVA: 0x005908CD File Offset: 0x0058EACD
 		public bool HideWhenDisable { get; set; }
 
-		// Token: 0x1700AA45 RID: 43589
-		// (get) Token: 0x060265FC RID: 157180 RVA: 0x00549D8A File Offset: 0x00547F8A
-		// (set) Token: 0x060265FD RID: 157181 RVA: 0x00549D92 File Offset: 0x00547F92
+		// Token: 0x1700B375 RID: 45941
+		// (get) Token: 0x06028B5E RID: 166750 RVA: 0x005908D6 File Offset: 0x0058EAD6
+		// (set) Token: 0x06028B5F RID: 166751 RVA: 0x005908DE File Offset: 0x0058EADE
 		public ISceneItemAiPatrolByGameTimeT PatrolType { get; set; }
 
-		// Token: 0x060265FE RID: 157182 RVA: 0x00549D9B File Offset: 0x00547F9B
+		// Token: 0x06028B60 RID: 166752 RVA: 0x005908E7 File Offset: 0x0058EAE7
 		public ISceneItemPatrolT()
 		{
 			this.Type = ESceneItemAiType.SceneItemPatrol;

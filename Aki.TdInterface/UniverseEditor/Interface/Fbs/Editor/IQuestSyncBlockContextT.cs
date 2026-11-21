@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.SyncBlock;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200489F RID: 18591
+	// Token: 0x02004D04 RID: 19716
 	public class IQuestSyncBlockContextT
 	{
-		// Token: 0x170086D3 RID: 34515
-		// (get) Token: 0x0601D046 RID: 118854 RVA: 0x004194CF File Offset: 0x004176CF
-		// (set) Token: 0x0601D047 RID: 118855 RVA: 0x004194D7 File Offset: 0x004176D7
+		// Token: 0x17008D1B RID: 36123
+		// (get) Token: 0x0601E833 RID: 124979 RVA: 0x00445C6B File Offset: 0x00443E6B
+		// (set) Token: 0x0601E834 RID: 124980 RVA: 0x00445C73 File Offset: 0x00443E73
 		public ESyncBlockContext Type { get; set; }
 
-		// Token: 0x170086D4 RID: 34516
-		// (get) Token: 0x0601D048 RID: 118856 RVA: 0x004194E0 File Offset: 0x004176E0
-		// (set) Token: 0x0601D049 RID: 118857 RVA: 0x004194E8 File Offset: 0x004176E8
+		// Token: 0x17008D1C RID: 36124
+		// (get) Token: 0x0601E835 RID: 124981 RVA: 0x00445C7C File Offset: 0x00443E7C
+		// (set) Token: 0x0601E836 RID: 124982 RVA: 0x00445C84 File Offset: 0x00443E84
 		public List<ISyncBlockGroupT> SyncBlockGroups { get; set; }
 
-		// Token: 0x0601D04A RID: 118858 RVA: 0x004194F1 File Offset: 0x004176F1
+		// Token: 0x0601E837 RID: 124983 RVA: 0x00445C8D File Offset: 0x00443E8D
 		public IQuestSyncBlockContextT()
 		{
 			this.Type = ESyncBlockContext.Quest;

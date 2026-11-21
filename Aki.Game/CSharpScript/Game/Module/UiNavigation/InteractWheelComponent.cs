@@ -4,15 +4,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004980 RID: 18816
+	// Token: 0x020038F8 RID: 14584
 	public class InteractWheelComponent : HotKeyComponent
 	{
-		// Token: 0x060310D5 RID: 200917 RVA: 0x00B62B8B File Offset: 0x00B60D8B
+		// Token: 0x06025C05 RID: 154629 RVA: 0x00A9DA8B File Offset: 0x00A9BC8B
 		public InteractWheelComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060310D6 RID: 200918 RVA: 0x00B62B94 File Offset: 0x00B60D94
+		// Token: 0x06025C06 RID: 154630 RVA: 0x00A9DA94 File Offset: 0x00A9BC94
 		[NullableContext(1)]
 		protected override void OnInputAxis(string axisName, float value)
 		{
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x060310D7 RID: 200919 RVA: 0x00B62C4B File Offset: 0x00B60E4B
+		// Token: 0x06025C07 RID: 154631 RVA: 0x00A9DB4B File Offset: 0x00A9BD4B
 		protected override void OnRefreshMode()
 		{
 			this.CurComponent.SetNeedRefreshKeyName(false);
 			base.OnRefreshMode();
 		}
 
-		// Token: 0x060310D8 RID: 200920 RVA: 0x00B62C60 File Offset: 0x00B60E60
+		// Token: 0x06025C08 RID: 154632 RVA: 0x00A9DB60 File Offset: 0x00A9BD60
 		public bool UpdateIndex(int totalNum)
 		{
 			int indexInternal = this.IndexInternal;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.IndexInternal != indexInternal;
 		}
 
-		// Token: 0x060310D9 RID: 200921 RVA: 0x00B62C88 File Offset: 0x00B60E88
+		// Token: 0x06025C09 RID: 154633 RVA: 0x00A9DB88 File Offset: 0x00A9BD88
 		private void UpdateIndexInternal(int totalNum)
 		{
 			if (totalNum != 0)
@@ -82,22 +82,22 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A4A1 RID: 107681
+		// Token: 0x04014D14 RID: 85268
 		private const int ZOOM_THRESHOLD = 1;
 
-		// Token: 0x0401A4A2 RID: 107682
+		// Token: 0x04014D15 RID: 85269
 		private int TotalNumInternal;
 
-		// Token: 0x0401A4A3 RID: 107683
+		// Token: 0x04014D16 RID: 85270
 		private int IndexInternal;
 
-		// Token: 0x0401A4A4 RID: 107684
+		// Token: 0x04014D17 RID: 85271
 		private float ZoomValue;
 
-		// Token: 0x0401A4A5 RID: 107685
+		// Token: 0x04014D18 RID: 85272
 		protected new bool IsPress;
 
-		// Token: 0x0401A4A6 RID: 107686
+		// Token: 0x04014D19 RID: 85273
 		private readonly bool AllowLoop;
 	}
 }

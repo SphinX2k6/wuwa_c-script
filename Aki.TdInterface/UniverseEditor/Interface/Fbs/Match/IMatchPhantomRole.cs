@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043FA RID: 17402
+	// Token: 0x02004862 RID: 18530
 	public struct IMatchPhantomRole : IFlatbufferObject
 	{
-		// Token: 0x17007AC7 RID: 31431
-		// (get) Token: 0x06019E74 RID: 106100 RVA: 0x003B4CB8 File Offset: 0x003B2EB8
+		// Token: 0x17008106 RID: 33030
+		// (get) Token: 0x0601B641 RID: 112193 RVA: 0x003E0E33 File Offset: 0x003DF033
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			}
 		}
 
-		// Token: 0x06019E75 RID: 106101 RVA: 0x003B4CC5 File Offset: 0x003B2EC5
+		// Token: 0x0601B642 RID: 112194 RVA: 0x003E0E40 File Offset: 0x003DF040
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019E76 RID: 106102 RVA: 0x003B4CCC File Offset: 0x003B2ECC
+		// Token: 0x0601B643 RID: 112195 RVA: 0x003E0E48 File Offset: 0x003DF048
 		public static IMatchPhantomRole GetRootAsIMatchPhantomRole(ByteBuffer _bb)
 		{
 			return IMatchPhantomRole.GetRootAsIMatchPhantomRole(_bb, default(IMatchPhantomRole));
 		}
 
-		// Token: 0x06019E77 RID: 106103 RVA: 0x003B4CE8 File Offset: 0x003B2EE8
+		// Token: 0x0601B644 RID: 112196 RVA: 0x003E0E64 File Offset: 0x003DF064
 		public static IMatchPhantomRole GetRootAsIMatchPhantomRole(ByteBuffer _bb, IMatchPhantomRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019E78 RID: 106104 RVA: 0x003B4D05 File Offset: 0x003B2F05
+		// Token: 0x0601B645 RID: 112197 RVA: 0x003E0E81 File Offset: 0x003DF081
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019E79 RID: 106105 RVA: 0x003B4D14 File Offset: 0x003B2F14
+		// Token: 0x0601B646 RID: 112198 RVA: 0x003E0E90 File Offset: 0x003DF090
 		public IMatchPhantomRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007AC8 RID: 31432
-		// (get) Token: 0x06019E7A RID: 106106 RVA: 0x003B4D24 File Offset: 0x003B2F24
+		// Token: 0x17008107 RID: 33031
+		// (get) Token: 0x0601B647 RID: 112199 RVA: 0x003E0EA0 File Offset: 0x003DF0A0
 		public EMatchRoleType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			}
 		}
 
-		// Token: 0x17007AC9 RID: 31433
-		// (get) Token: 0x06019E7B RID: 106107 RVA: 0x003B4D60 File Offset: 0x003B2F60
+		// Token: 0x17008108 RID: 33032
+		// (get) Token: 0x0601B648 RID: 112200 RVA: 0x003E0EDC File Offset: 0x003DF0DC
 		public int Id
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			}
 		}
 
-		// Token: 0x17007ACA RID: 31434
-		// (get) Token: 0x06019E7C RID: 106108 RVA: 0x003B4D9C File Offset: 0x003B2F9C
+		// Token: 0x17008109 RID: 33033
+		// (get) Token: 0x0601B649 RID: 112201 RVA: 0x003E0F18 File Offset: 0x003DF118
 		public ECompare Compare
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			}
 		}
 
-		// Token: 0x17007ACB RID: 31435
-		// (get) Token: 0x06019E7D RID: 106109 RVA: 0x003B4DD8 File Offset: 0x003B2FD8
+		// Token: 0x1700810A RID: 33034
+		// (get) Token: 0x0601B64A RID: 112202 RVA: 0x003E0F54 File Offset: 0x003DF154
 		public byte NullMask
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			}
 		}
 
-		// Token: 0x06019E7E RID: 106110 RVA: 0x003B4E15 File Offset: 0x003B3015
+		// Token: 0x0601B64B RID: 112203 RVA: 0x003E0F91 File Offset: 0x003DF191
 		public static Offset<IMatchPhantomRole> CreateIMatchPhantomRole(FlatBufferBuilder builder, EMatchRoleType Type = EMatchRoleType.Player, int Id = 0, ECompare Compare = ECompare.Eq, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -119,43 +119,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			return IMatchPhantomRole.EndIMatchPhantomRole(builder);
 		}
 
-		// Token: 0x06019E7F RID: 106111 RVA: 0x003B4E41 File Offset: 0x003B3041
+		// Token: 0x0601B64C RID: 112204 RVA: 0x003E0FBD File Offset: 0x003DF1BD
 		public static void StartIMatchPhantomRole(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06019E80 RID: 106112 RVA: 0x003B4E4A File Offset: 0x003B304A
+		// Token: 0x0601B64D RID: 112205 RVA: 0x003E0FC6 File Offset: 0x003DF1C6
 		public static void AddType(FlatBufferBuilder builder, EMatchRoleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019E81 RID: 106113 RVA: 0x003B4E55 File Offset: 0x003B3055
+		// Token: 0x0601B64E RID: 112206 RVA: 0x003E0FD1 File Offset: 0x003DF1D1
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06019E82 RID: 106114 RVA: 0x003B4E60 File Offset: 0x003B3060
+		// Token: 0x0601B64F RID: 112207 RVA: 0x003E0FDC File Offset: 0x003DF1DC
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x06019E83 RID: 106115 RVA: 0x003B4E6B File Offset: 0x003B306B
+		// Token: 0x0601B650 RID: 112208 RVA: 0x003E0FE7 File Offset: 0x003DF1E7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06019E84 RID: 106116 RVA: 0x003B4E76 File Offset: 0x003B3076
+		// Token: 0x0601B651 RID: 112209 RVA: 0x003E0FF2 File Offset: 0x003DF1F2
 		public static Offset<IMatchPhantomRole> EndIMatchPhantomRole(FlatBufferBuilder builder)
 		{
 			return new Offset<IMatchPhantomRole>(builder.EndTable());
 		}
 
-		// Token: 0x06019E85 RID: 106117 RVA: 0x003B4E84 File Offset: 0x003B3084
+		// Token: 0x0601B652 RID: 112210 RVA: 0x003E1000 File Offset: 0x003DF200
 		public IMatchPhantomRoleT UnPack()
 		{
 			IMatchPhantomRoleT matchPhantomRoleT = new IMatchPhantomRoleT();
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			return matchPhantomRoleT;
 		}
 
-		// Token: 0x06019E86 RID: 106118 RVA: 0x003B4E9F File Offset: 0x003B309F
+		// Token: 0x0601B653 RID: 112211 RVA: 0x003E101B File Offset: 0x003DF21B
 		public void UnPackTo(IMatchPhantomRoleT _o)
 		{
 			_o.Type = this.Type;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06019E87 RID: 106119 RVA: 0x003B4ED4 File Offset: 0x003B30D4
+		// Token: 0x0601B654 RID: 112212 RVA: 0x003E1050 File Offset: 0x003DF250
 		public static Offset<IMatchPhantomRole> Pack(FlatBufferBuilder builder, IMatchPhantomRoleT _o)
 		{
 			if (_o == null)
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			return IMatchPhantomRole.CreateIMatchPhantomRole(builder, _o.Type, _o.Id, _o.Compare, _o.NullMask);
 		}
 
-		// Token: 0x0400C34C RID: 49996
+		// Token: 0x0400CD77 RID: 52599
 		private Table __p;
 	}
 }

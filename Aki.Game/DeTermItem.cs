@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001150 RID: 4432
+// Token: 0x02000604 RID: 1540
 [NullableContext(2)]
 [Nullable(0)]
 public class DeTermItem : GridProxyAbstract<int>
 {
-	// Token: 0x06007452 RID: 29778 RVA: 0x0017C3CC File Offset: 0x0017A5CC
+	// Token: 0x060047E9 RID: 18409 RVA: 0x00184F18 File Offset: 0x00183118
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -38,7 +38,7 @@ public class DeTermItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007453 RID: 29779 RVA: 0x0017C4B4 File Offset: 0x0017A6B4
+	// Token: 0x060047EA RID: 18410 RVA: 0x00185000 File Offset: 0x00183200
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DeTermItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class DeTermItem : GridProxyAbstract<int>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007454 RID: 29780 RVA: 0x0017C4F8 File Offset: 0x0017A6F8
+	// Token: 0x060047EB RID: 18411 RVA: 0x00185044 File Offset: 0x00183244
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -57,7 +57,7 @@ public class DeTermItem : GridProxyAbstract<int>
 		base.GetExtendToggle(2).OnUndeterminedClicked.Add(new Action(this.OnUndeterminedClicked));
 	}
 
-	// Token: 0x06007455 RID: 29781 RVA: 0x0017C550 File Offset: 0x0017A750
+	// Token: 0x060047EC RID: 18412 RVA: 0x0018509C File Offset: 0x0018329C
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		if (data <= 0)
@@ -71,7 +71,7 @@ public class DeTermItem : GridProxyAbstract<int>
 		base.SetTextureByPath(texture, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x06007456 RID: 29782 RVA: 0x0017C5C9 File Offset: 0x0017A7C9
+	// Token: 0x060047ED RID: 18413 RVA: 0x00185115 File Offset: 0x00183315
 	private void OnClickToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -96,13 +96,13 @@ public class DeTermItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007457 RID: 29783 RVA: 0x0017C5FF File Offset: 0x0017A7FF
+	// Token: 0x060047EE RID: 18414 RVA: 0x0018514B File Offset: 0x0018334B
 	public void SetToggleState(EToggleState state)
 	{
 		base.GetExtendToggle(2).SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x06007458 RID: 29784 RVA: 0x0017C614 File Offset: 0x0017A814
+	// Token: 0x060047EF RID: 18415 RVA: 0x00185160 File Offset: 0x00183360
 	public void UseChangeColor(bool use)
 	{
 		UUIItem sprite = base.GetSprite(1);
@@ -113,7 +113,7 @@ public class DeTermItem : GridProxyAbstract<int>
 		texture.SetChangeColor(use, fcolor);
 	}
 
-	// Token: 0x06007459 RID: 29785 RVA: 0x0017C664 File Offset: 0x0017A864
+	// Token: 0x060047F0 RID: 18416 RVA: 0x001851B0 File Offset: 0x001833B0
 	private void OnUndeterminedClicked()
 	{
 		BabelTowerItemInfoViewInfo param = new BabelTowerItemInfoViewInfo
@@ -125,7 +125,7 @@ public class DeTermItem : GridProxyAbstract<int>
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerItemInfoView, param, null);
 	}
 
-	// Token: 0x0600745A RID: 29786 RVA: 0x0017C6A4 File Offset: 0x0017A8A4
+	// Token: 0x060047F1 RID: 18417 RVA: 0x001851F0 File Offset: 0x001833F0
 	public void PlayPositionSequence()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -141,48 +141,48 @@ public class DeTermItem : GridProxyAbstract<int>
 		levelSequencePlayer2.PlayLevelSequenceByName("Once_ComBuff", false, null, false);
 	}
 
-	// Token: 0x0600745B RID: 29787 RVA: 0x0017C6E4 File Offset: 0x0017A8E4
+	// Token: 0x060047F2 RID: 18418 RVA: 0x00185230 File Offset: 0x00183430
 	public void SetDailyQuestItem(bool isActivity)
 	{
 		this.DeTermDailyQuestItem.SetUiActive(isActivity);
 	}
 
-	// Token: 0x0600745C RID: 29788 RVA: 0x0017C6F2 File Offset: 0x0017A8F2
+	// Token: 0x060047F3 RID: 18419 RVA: 0x0018523E File Offset: 0x0018343E
 	[NullableContext(1)]
 	public UUIExtendToggle GetDeTermToggle()
 	{
 		return base.GetExtendToggle(2);
 	}
 
-	// Token: 0x04003593 RID: 13715
+	// Token: 0x0400362C RID: 13868
 	public int DeTermId;
 
-	// Token: 0x04003594 RID: 13716
+	// Token: 0x0400362D RID: 13869
 	public Action<int, UUIExtendToggle> OnClickToggleCallBack;
 
-	// Token: 0x04003595 RID: 13717
+	// Token: 0x0400362E RID: 13870
 	public Func<bool> CanClickCallBack;
 
-	// Token: 0x04003596 RID: 13718
+	// Token: 0x0400362F RID: 13871
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04003597 RID: 13719
+	// Token: 0x04003630 RID: 13872
 	private DeTermDailyQuestItem DeTermDailyQuestItem;
 
-	// Token: 0x02007702 RID: 30466
+	// Token: 0x02006891 RID: 26769
 	[NullableContext(0)]
 	private class EDeTermItem
 	{
-		// Token: 0x04027429 RID: 160809
+		// Token: 0x0402276A RID: 141162
 		public const int Texture = 0;
 
-		// Token: 0x0402742A RID: 160810
+		// Token: 0x0402276B RID: 141163
 		public const int BgSprite = 1;
 
-		// Token: 0x0402742B RID: 160811
+		// Token: 0x0402276C RID: 141164
 		public const int Toggle = 2;
 
-		// Token: 0x0402742C RID: 160812
+		// Token: 0x0402276D RID: 141165
 		public const int DailyItem = 4;
 	}
 }

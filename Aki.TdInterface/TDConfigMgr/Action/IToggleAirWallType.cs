@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FC8 RID: 8136
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200220D RID: 8717
 	public class IToggleAirWallType
 	{
-		// Token: 0x0600B2F6 RID: 45814 RVA: 0x001A0D94 File Offset: 0x0019EF94
+		// Token: 0x0600BE04 RID: 48644 RVA: 0x001B7244 File Offset: 0x001B5444
 		private IToggleAirWallType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B2F7 RID: 45815 RVA: 0x001A0DCC File Offset: 0x0019EFCC
+		// Token: 0x0600BE05 RID: 48645 RVA: 0x001B727C File Offset: 0x001B547C
 		public static IToggleAirWallType Create([Nullable(2)] IToggleAirWallType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2F8 RID: 45816 RVA: 0x001A0DDF File Offset: 0x0019EFDF
+		// Token: 0x0600BE06 RID: 48646 RVA: 0x001B728F File Offset: 0x001B548F
 		public static IToggleAirWallType CreateFromSetValue([Nullable(2)] IToggleAirWallType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2F9 RID: 45817 RVA: 0x001A0DF2 File Offset: 0x0019EFF2
+		// Token: 0x0600BE07 RID: 48647 RVA: 0x001B72A2 File Offset: 0x001B54A2
 		public IToggleAirWallType_SetValue ToSetValue()
 		{
 			return new IToggleAirWallType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003727 RID: 14119
-		// (get) Token: 0x0600B2FA RID: 45818 RVA: 0x001A0E05 File Offset: 0x0019F005
-		// (set) Token: 0x0600B2FB RID: 45819 RVA: 0x001A0E30 File Offset: 0x0019F030
+		// Token: 0x170039FE RID: 14846
+		// (get) Token: 0x0600BE08 RID: 48648 RVA: 0x001B72B5 File Offset: 0x001B54B5
+		// (set) Token: 0x0600BE09 RID: 48649 RVA: 0x001B72E0 File Offset: 0x001B54E0
 		public virtual EToggleAirWall Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C06 RID: 27654
+		// Token: 0x04007205 RID: 29189
 		[Nullable(2)]
 		protected IToggleAirWallType FbInstance;
 
-		// Token: 0x04006C07 RID: 27655
+		// Token: 0x04007206 RID: 29190
 		[Nullable(2)]
 		protected IToggleAirWallType_SetValue PocoInterface;
 	}

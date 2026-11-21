@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007379 RID: 29561
+	// Token: 0x02007B60 RID: 31584
 	public enum ITeleportConfig_Union : byte
 	{
-		// Token: 0x04012188 RID: 74120
+		// Token: 0x040131A1 RID: 78241
 		NONE,
-		// Token: 0x04012189 RID: 74121
+		// Token: 0x040131A2 RID: 78242
 		ITeleportConfig,
-		// Token: 0x0401218A RID: 74122
+		// Token: 0x040131A3 RID: 78243
 		IFixedPos,
-		// Token: 0x0401218B RID: 74123
+		// Token: 0x040131A4 RID: 78244
 		INearestEntity,
-		// Token: 0x0401218C RID: 74124
+		// Token: 0x040131A5 RID: 78245
 		IGravityFlipFixedPos,
-		// Token: 0x0401218D RID: 74125
+		// Token: 0x040131A6 RID: 78246
 		ISafePos
 	}
 }

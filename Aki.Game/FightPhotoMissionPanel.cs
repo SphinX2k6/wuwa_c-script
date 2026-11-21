@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025B9 RID: 9657
+// Token: 0x02001AA4 RID: 6820
 public class FightPhotoMissionPanel : FightPhotoTabPanelBase
 {
-	// Token: 0x06013942 RID: 80194 RVA: 0x004E4EE9 File Offset: 0x004E30E9
+	// Token: 0x06010E22 RID: 69154 RVA: 0x004F3AE9 File Offset: 0x004F1CE9
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class FightPhotoMissionPanel : FightPhotoTabPanelBase
 		};
 	}
 
-	// Token: 0x06013943 RID: 80195 RVA: 0x004E4F24 File Offset: 0x004E3124
+	// Token: 0x06010E23 RID: 69155 RVA: 0x004F3B24 File Offset: 0x004F1D24
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoMissionPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -30,7 +30,7 @@ public class FightPhotoMissionPanel : FightPhotoTabPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013944 RID: 80196 RVA: 0x004E4F68 File Offset: 0x004E3168
+	// Token: 0x06010E24 RID: 69156 RVA: 0x004F3B68 File Offset: 0x004F1D68
 	public UniTask RefreshCondition()
 	{
 		FightPhotoMissionPanel.<RefreshCondition>d__4 <RefreshCondition>d__;
@@ -41,14 +41,14 @@ public class FightPhotoMissionPanel : FightPhotoTabPanelBase
 		return <RefreshCondition>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013945 RID: 80197 RVA: 0x004E4FAB File Offset: 0x004E31AB
+	// Token: 0x06010E25 RID: 69157 RVA: 0x004F3BAB File Offset: 0x004F1DAB
 	[NullableContext(1)]
 	private FightPhotoConditionItem CreateConditionItem()
 	{
 		return new FightPhotoConditionItem();
 	}
 
-	// Token: 0x040093C4 RID: 37828
+	// Token: 0x0400951A RID: 38170
 	[Nullable(new byte[]
 	{
 		2,
@@ -57,12 +57,12 @@ public class FightPhotoMissionPanel : FightPhotoTabPanelBase
 	})]
 	private GenericLayout<FightPhotoConditionItem, FightPhotoConditionData> ConditionLayout;
 
-	// Token: 0x02008BC2 RID: 35778
+	// Token: 0x02007D4A RID: 32074
 	private enum EComponents
 	{
-		// Token: 0x0402D5CA RID: 185802
+		// Token: 0x040288DF RID: 166111
 		LayoutCondition,
-		// Token: 0x0402D5CB RID: 185803
+		// Token: 0x040288E0 RID: 166112
 		ItemCondition
 	}
 }

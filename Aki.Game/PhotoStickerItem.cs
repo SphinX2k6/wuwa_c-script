@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200257C RID: 9596
+// Token: 0x02001A67 RID: 6759
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoStickerItem : UiPanelBase
 {
-	// Token: 0x0601364D RID: 79437 RVA: 0x004D3EEC File Offset: 0x004D20EC
+	// Token: 0x06010B2E RID: 68398 RVA: 0x004E28BC File Offset: 0x004E0ABC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class PhotoStickerItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601364E RID: 79438 RVA: 0x004D3FC4 File Offset: 0x004D21C4
+	// Token: 0x06010B2F RID: 68399 RVA: 0x004E2994 File Offset: 0x004E0B94
 	protected override void OnStart()
 	{
 		UUIDraggableComponent draggable = base.GetDraggable(0);
@@ -51,7 +51,7 @@ public class PhotoStickerItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601364F RID: 79439 RVA: 0x004D4040 File Offset: 0x004D2240
+	// Token: 0x06010B30 RID: 68400 RVA: 0x004E2A10 File Offset: 0x004E0C10
 	public void SetData(PhotoSticker cfg)
 	{
 		this.DragController.SetScaleRange(cfg.MinScale, cfg.MaxScale);
@@ -103,7 +103,7 @@ public class PhotoStickerItem : UiPanelBase
 		}, ResourceSystem.EResourceLoadPriority.Ui, "js_undefined");
 	}
 
-	// Token: 0x06013650 RID: 79440 RVA: 0x004D4101 File Offset: 0x004D2301
+	// Token: 0x06010B31 RID: 68401 RVA: 0x004E2AD1 File Offset: 0x004E0CD1
 	private void CancelLangTextureLoad()
 	{
 		if (this.LangTextureHandleId != -1)
@@ -113,7 +113,7 @@ public class PhotoStickerItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013651 RID: 79441 RVA: 0x004D4123 File Offset: 0x004D2323
+	// Token: 0x06010B32 RID: 68402 RVA: 0x004E2AF3 File Offset: 0x004E0CF3
 	public void SetSelected(bool selected)
 	{
 		UUIItem item = base.GetItem(2);
@@ -124,19 +124,19 @@ public class PhotoStickerItem : UiPanelBase
 		item.SetUIActive(selected);
 	}
 
-	// Token: 0x06013652 RID: 79442 RVA: 0x004D4137 File Offset: 0x004D2337
+	// Token: 0x06010B33 RID: 68403 RVA: 0x004E2B07 File Offset: 0x004E0D07
 	public void ChangeScaleByDelta(float delta)
 	{
 		this.DragController.ChangeScaleByDelta(delta);
 	}
 
-	// Token: 0x06013653 RID: 79443 RVA: 0x004D4145 File Offset: 0x004D2345
+	// Token: 0x06010B34 RID: 68404 RVA: 0x004E2B15 File Offset: 0x004E0D15
 	public void MoveByDelta(float deltaX, float deltaY)
 	{
 		this.DragController.MoveByDelta(deltaX, deltaY);
 	}
 
-	// Token: 0x06013654 RID: 79444 RVA: 0x004D4154 File Offset: 0x004D2354
+	// Token: 0x06010B35 RID: 68405 RVA: 0x004E2B24 File Offset: 0x004E0D24
 	public void SetHotKeyVisible(bool visible)
 	{
 		UUIItem item = base.GetItem(6);
@@ -147,7 +147,7 @@ public class PhotoStickerItem : UiPanelBase
 		item.SetUIActive(visible);
 	}
 
-	// Token: 0x06013655 RID: 79445 RVA: 0x004D4168 File Offset: 0x004D2368
+	// Token: 0x06010B36 RID: 68406 RVA: 0x004E2B38 File Offset: 0x004E0D38
 	public void SetEditable(bool editable)
 	{
 		this.DragController.SetEnabled(editable);
@@ -162,7 +162,7 @@ public class PhotoStickerItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013656 RID: 79446 RVA: 0x004D4193 File Offset: 0x004D2393
+	// Token: 0x06010B37 RID: 68407 RVA: 0x004E2B63 File Offset: 0x004E0D63
 	protected override void OnBeforeDestroy()
 	{
 		this.CancelLangTextureLoad();
@@ -170,55 +170,55 @@ public class PhotoStickerItem : UiPanelBase
 		this.BoundActor = null;
 	}
 
-	// Token: 0x06013657 RID: 79447 RVA: 0x004D41AD File Offset: 0x004D23AD
+	// Token: 0x06010B38 RID: 68408 RVA: 0x004E2B7D File Offset: 0x004E0D7D
 	private void OnCloseClick()
 	{
 		this.OnDeleteMe(this);
 	}
 
-	// Token: 0x06013658 RID: 79448 RVA: 0x004D41BB File Offset: 0x004D23BB
+	// Token: 0x06010B39 RID: 68409 RVA: 0x004E2B8B File Offset: 0x004E0D8B
 	public void SetBoundActor(AUIBaseActor boundActor)
 	{
 		this.BoundActor = boundActor;
 	}
 
-	// Token: 0x040091F7 RID: 37367
+	// Token: 0x0400934F RID: 37711
 	private readonly UiTransformDragController DragController = new UiTransformDragController();
 
-	// Token: 0x040091F8 RID: 37368
+	// Token: 0x04009350 RID: 37712
 	public Action<PhotoStickerItem> OnSelectMe = delegate(PhotoStickerItem _)
 	{
 	};
 
-	// Token: 0x040091F9 RID: 37369
+	// Token: 0x04009351 RID: 37713
 	public Action<PhotoStickerItem> OnDeleteMe = delegate(PhotoStickerItem _)
 	{
 	};
 
-	// Token: 0x040091FA RID: 37370
+	// Token: 0x04009352 RID: 37714
 	[Nullable(2)]
 	private AUIBaseActor BoundActor;
 
-	// Token: 0x040091FB RID: 37371
+	// Token: 0x04009353 RID: 37715
 	private int LangTextureHandleId = -1;
 
-	// Token: 0x02008B78 RID: 35704
+	// Token: 0x02007CFE RID: 31998
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D4A5 RID: 185509
+		// Token: 0x040287B2 RID: 165810
 		DraggableRoot,
-		// Token: 0x0402D4A6 RID: 185510
+		// Token: 0x040287B3 RID: 165811
 		TextureIcon,
-		// Token: 0x0402D4A7 RID: 185511
+		// Token: 0x040287B4 RID: 165812
 		ItemEditState,
-		// Token: 0x0402D4A8 RID: 185512
+		// Token: 0x040287B5 RID: 165813
 		ButtonClose,
-		// Token: 0x0402D4A9 RID: 185513
+		// Token: 0x040287B6 RID: 165814
 		ButtonSizeCtrl,
-		// Token: 0x0402D4AA RID: 185514
+		// Token: 0x040287B7 RID: 165815
 		LangTextureIcon,
-		// Token: 0x0402D4AB RID: 185515
+		// Token: 0x040287B8 RID: 165816
 		ItemHotKey
 	}
 }

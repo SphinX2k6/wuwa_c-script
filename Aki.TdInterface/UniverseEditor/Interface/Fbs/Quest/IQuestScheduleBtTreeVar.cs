@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004013 RID: 16403
+	// Token: 0x02004454 RID: 17492
 	public struct IQuestScheduleBtTreeVar : IFlatbufferObject
 	{
-		// Token: 0x17007346 RID: 29510
-		// (get) Token: 0x06017AD6 RID: 96982 RVA: 0x0036A38F File Offset: 0x0036858F
+		// Token: 0x17007948 RID: 31048
+		// (get) Token: 0x0601916F RID: 102767 RVA: 0x00394183 File Offset: 0x00392383
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017AD7 RID: 96983 RVA: 0x0036A39C File Offset: 0x0036859C
+		// Token: 0x06019170 RID: 102768 RVA: 0x00394190 File Offset: 0x00392390
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017AD8 RID: 96984 RVA: 0x0036A3A4 File Offset: 0x003685A4
+		// Token: 0x06019171 RID: 102769 RVA: 0x00394198 File Offset: 0x00392398
 		public static IQuestScheduleBtTreeVar GetRootAsIQuestScheduleBtTreeVar(ByteBuffer _bb)
 		{
 			return IQuestScheduleBtTreeVar.GetRootAsIQuestScheduleBtTreeVar(_bb, default(IQuestScheduleBtTreeVar));
 		}
 
-		// Token: 0x06017AD9 RID: 96985 RVA: 0x0036A3C0 File Offset: 0x003685C0
+		// Token: 0x06019172 RID: 102770 RVA: 0x003941B4 File Offset: 0x003923B4
 		public static IQuestScheduleBtTreeVar GetRootAsIQuestScheduleBtTreeVar(ByteBuffer _bb, IQuestScheduleBtTreeVar obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017ADA RID: 96986 RVA: 0x0036A3DD File Offset: 0x003685DD
+		// Token: 0x06019173 RID: 102771 RVA: 0x003941D1 File Offset: 0x003923D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017ADB RID: 96987 RVA: 0x0036A3EC File Offset: 0x003685EC
+		// Token: 0x06019174 RID: 102772 RVA: 0x003941E0 File Offset: 0x003923E0
 		public IQuestScheduleBtTreeVar __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007347 RID: 29511
-		// (get) Token: 0x06017ADC RID: 96988 RVA: 0x0036A3FC File Offset: 0x003685FC
+		// Token: 0x17007949 RID: 31049
+		// (get) Token: 0x06019175 RID: 102773 RVA: 0x003941F0 File Offset: 0x003923F0
 		public EQuestScheduleType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007348 RID: 29512
-		// (get) Token: 0x06017ADD RID: 96989 RVA: 0x0036A438 File Offset: 0x00368638
+		// Token: 0x1700794A RID: 31050
+		// (get) Token: 0x06019176 RID: 102774 RVA: 0x0039422C File Offset: 0x0039242C
 		public TVarRef VarType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017ADE RID: 96990 RVA: 0x0036A474 File Offset: 0x00368674
+		// Token: 0x06019177 RID: 102775 RVA: 0x00394268 File Offset: 0x00392468
 		public TTable? Var<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,38 +89,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06017ADF RID: 96991 RVA: 0x0036A4B8 File Offset: 0x003686B8
+		// Token: 0x06019178 RID: 102776 RVA: 0x003942AC File Offset: 0x003924AC
 		public IConstVarRef VarAsIConstVarRef()
 		{
 			return this.Var<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06017AE0 RID: 96992 RVA: 0x0036A4D4 File Offset: 0x003686D4
+		// Token: 0x06019179 RID: 102777 RVA: 0x003942C8 File Offset: 0x003924C8
 		public IGlobalVarRef VarAsIGlobalVarRef()
 		{
 			return this.Var<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06017AE1 RID: 96993 RVA: 0x0036A4F0 File Offset: 0x003686F0
+		// Token: 0x0601917A RID: 102778 RVA: 0x003942E4 File Offset: 0x003924E4
 		public IOtherVarRef VarAsIOtherVarRef()
 		{
 			return this.Var<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06017AE2 RID: 96994 RVA: 0x0036A50C File Offset: 0x0036870C
+		// Token: 0x0601917B RID: 102779 RVA: 0x00394300 File Offset: 0x00392500
 		public ISelfVarRef VarAsISelfVarRef()
 		{
 			return this.Var<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06017AE3 RID: 96995 RVA: 0x0036A528 File Offset: 0x00368728
+		// Token: 0x0601917C RID: 102780 RVA: 0x0039431C File Offset: 0x0039251C
 		public ISystemVarRef VarAsISystemVarRef()
 		{
 			return this.Var<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x17007349 RID: 29513
-		// (get) Token: 0x06017AE4 RID: 96996 RVA: 0x0036A544 File Offset: 0x00368744
+		// Token: 0x1700794B RID: 31051
+		// (get) Token: 0x0601917D RID: 102781 RVA: 0x00394338 File Offset: 0x00392538
 		public IWordArtConfig? ShowAsWordArt
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017AE5 RID: 96997 RVA: 0x0036A5A2 File Offset: 0x003687A2
+		// Token: 0x0601917E RID: 102782 RVA: 0x00394396 File Offset: 0x00392596
 		public static Offset<IQuestScheduleBtTreeVar> CreateIQuestScheduleBtTreeVar(FlatBufferBuilder builder, EQuestScheduleType Type = EQuestScheduleType.None, TVarRef Var_type = TVarRef.NONE, int VarOffset = 0, Offset<IWordArtConfig> ShowAsWordArtOffset = default(Offset<IWordArtConfig>))
 		{
 			builder.StartTable(4);
@@ -145,43 +145,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestScheduleBtTreeVar.EndIQuestScheduleBtTreeVar(builder);
 		}
 
-		// Token: 0x06017AE6 RID: 96998 RVA: 0x0036A5CE File Offset: 0x003687CE
+		// Token: 0x0601917F RID: 102783 RVA: 0x003943C2 File Offset: 0x003925C2
 		public static void StartIQuestScheduleBtTreeVar(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06017AE7 RID: 96999 RVA: 0x0036A5D7 File Offset: 0x003687D7
+		// Token: 0x06019180 RID: 102784 RVA: 0x003943CB File Offset: 0x003925CB
 		public static void AddType(FlatBufferBuilder builder, EQuestScheduleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017AE8 RID: 97000 RVA: 0x0036A5E2 File Offset: 0x003687E2
+		// Token: 0x06019181 RID: 102785 RVA: 0x003943D6 File Offset: 0x003925D6
 		public static void AddVarType(FlatBufferBuilder builder, TVarRef varType)
 		{
 			builder.AddByte(1, (byte)varType, 0);
 		}
 
-		// Token: 0x06017AE9 RID: 97001 RVA: 0x0036A5ED File Offset: 0x003687ED
+		// Token: 0x06019182 RID: 102786 RVA: 0x003943E1 File Offset: 0x003925E1
 		public static void AddVar(FlatBufferBuilder builder, int varOffset)
 		{
 			builder.AddOffset(2, varOffset, 0);
 		}
 
-		// Token: 0x06017AEA RID: 97002 RVA: 0x0036A5F8 File Offset: 0x003687F8
+		// Token: 0x06019183 RID: 102787 RVA: 0x003943EC File Offset: 0x003925EC
 		public static void AddShowAsWordArt(FlatBufferBuilder builder, Offset<IWordArtConfig> showAsWordArtOffset)
 		{
 			builder.AddOffset(3, showAsWordArtOffset.Value, 0);
 		}
 
-		// Token: 0x06017AEB RID: 97003 RVA: 0x0036A608 File Offset: 0x00368808
+		// Token: 0x06019184 RID: 102788 RVA: 0x003943FC File Offset: 0x003925FC
 		public static Offset<IQuestScheduleBtTreeVar> EndIQuestScheduleBtTreeVar(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestScheduleBtTreeVar>(builder.EndTable());
 		}
 
-		// Token: 0x06017AEC RID: 97004 RVA: 0x0036A618 File Offset: 0x00368818
+		// Token: 0x06019185 RID: 102789 RVA: 0x0039440C File Offset: 0x0039260C
 		public IQuestScheduleBtTreeVarT UnPack()
 		{
 			IQuestScheduleBtTreeVarT questScheduleBtTreeVarT = new IQuestScheduleBtTreeVarT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questScheduleBtTreeVarT;
 		}
 
-		// Token: 0x06017AED RID: 97005 RVA: 0x0036A634 File Offset: 0x00368834
+		// Token: 0x06019186 RID: 102790 RVA: 0x00394428 File Offset: 0x00392628
 		public void UnPackTo(IQuestScheduleBtTreeVarT _o)
 		{
 			_o.Type = this.Type;
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.ShowAsWordArt = ((this.ShowAsWordArt != null) ? this.ShowAsWordArt.Value.UnPack() : null);
 		}
 
-		// Token: 0x06017AEE RID: 97006 RVA: 0x0036A7E0 File Offset: 0x003689E0
+		// Token: 0x06019187 RID: 102791 RVA: 0x003945D4 File Offset: 0x003927D4
 		public static Offset<IQuestScheduleBtTreeVar> Pack(FlatBufferBuilder builder, IQuestScheduleBtTreeVarT _o)
 		{
 			if (_o == null)
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestScheduleBtTreeVar.CreateIQuestScheduleBtTreeVar(builder, _o.Type, var_type, varOffset, showAsWordArtOffset);
 		}
 
-		// Token: 0x0400BB30 RID: 47920
+		// Token: 0x0400C517 RID: 50455
 		private Table __p;
 	}
 }

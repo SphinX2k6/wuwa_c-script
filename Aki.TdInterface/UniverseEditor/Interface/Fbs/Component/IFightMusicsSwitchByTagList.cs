@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005243 RID: 21059
+	// Token: 0x020057AB RID: 22443
 	public struct IFightMusicsSwitchByTagList : IFlatbufferObject
 	{
-		// Token: 0x17009A4D RID: 39501
-		// (get) Token: 0x06022415 RID: 140309 RVA: 0x004C04EC File Offset: 0x004BE6EC
+		// Token: 0x1700A249 RID: 41545
+		// (get) Token: 0x060243AB RID: 148395 RVA: 0x004FAFB0 File Offset: 0x004F91B0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022416 RID: 140310 RVA: 0x004C04F9 File Offset: 0x004BE6F9
+		// Token: 0x060243AC RID: 148396 RVA: 0x004FAFBD File Offset: 0x004F91BD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022417 RID: 140311 RVA: 0x004C0500 File Offset: 0x004BE700
+		// Token: 0x060243AD RID: 148397 RVA: 0x004FAFC4 File Offset: 0x004F91C4
 		public static IFightMusicsSwitchByTagList GetRootAsIFightMusicsSwitchByTagList(ByteBuffer _bb)
 		{
 			return IFightMusicsSwitchByTagList.GetRootAsIFightMusicsSwitchByTagList(_bb, default(IFightMusicsSwitchByTagList));
 		}
 
-		// Token: 0x06022418 RID: 140312 RVA: 0x004C051C File Offset: 0x004BE71C
+		// Token: 0x060243AE RID: 148398 RVA: 0x004FAFE0 File Offset: 0x004F91E0
 		public static IFightMusicsSwitchByTagList GetRootAsIFightMusicsSwitchByTagList(ByteBuffer _bb, IFightMusicsSwitchByTagList obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022419 RID: 140313 RVA: 0x004C0539 File Offset: 0x004BE739
+		// Token: 0x060243AF RID: 148399 RVA: 0x004FAFFD File Offset: 0x004F91FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602241A RID: 140314 RVA: 0x004C0548 File Offset: 0x004BE748
+		// Token: 0x060243B0 RID: 148400 RVA: 0x004FB00C File Offset: 0x004F920C
 		public IFightMusicsSwitchByTagList __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009A4E RID: 39502
-		// (get) Token: 0x0602241B RID: 140315 RVA: 0x004C0558 File Offset: 0x004BE758
+		// Token: 0x1700A24A RID: 41546
+		// (get) Token: 0x060243B1 RID: 148401 RVA: 0x004FB01C File Offset: 0x004F921C
 		public EFightMusicsSwitchType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602241C RID: 140316 RVA: 0x004C0594 File Offset: 0x004BE794
+		// Token: 0x060243B2 RID: 148402 RVA: 0x004FB058 File Offset: 0x004F9258
 		public IFightMusicSwitchByTag? Element(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IFightMusicSwitchByTag?(default(IFightMusicSwitchByTag).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009A4F RID: 39503
-		// (get) Token: 0x0602241D RID: 140317 RVA: 0x004C05F4 File Offset: 0x004BE7F4
+		// Token: 0x1700A24B RID: 41547
+		// (get) Token: 0x060243B3 RID: 148403 RVA: 0x004FB0B8 File Offset: 0x004F92B8
 		public int ElementLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602241E RID: 140318 RVA: 0x004C061F File Offset: 0x004BE81F
+		// Token: 0x060243B4 RID: 148404 RVA: 0x004FB0E3 File Offset: 0x004F92E3
 		public static Offset<IFightMusicsSwitchByTagList> CreateIFightMusicsSwitchByTagList(FlatBufferBuilder builder, EFightMusicsSwitchType Type = EFightMusicsSwitchType.SwitchByTag, VectorOffset ElementOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFightMusicsSwitchByTagList.EndIFightMusicsSwitchByTagList(builder);
 		}
 
-		// Token: 0x0602241F RID: 140319 RVA: 0x004C063C File Offset: 0x004BE83C
+		// Token: 0x060243B5 RID: 148405 RVA: 0x004FB100 File Offset: 0x004F9300
 		public static void StartIFightMusicsSwitchByTagList(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06022420 RID: 140320 RVA: 0x004C0645 File Offset: 0x004BE845
+		// Token: 0x060243B6 RID: 148406 RVA: 0x004FB109 File Offset: 0x004F9309
 		public static void AddType(FlatBufferBuilder builder, EFightMusicsSwitchType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022421 RID: 140321 RVA: 0x004C0650 File Offset: 0x004BE850
+		// Token: 0x060243B7 RID: 148407 RVA: 0x004FB114 File Offset: 0x004F9314
 		public static void AddElement(FlatBufferBuilder builder, VectorOffset elementOffset)
 		{
 			builder.AddOffset(1, elementOffset.Value, 0);
 		}
 
-		// Token: 0x06022422 RID: 140322 RVA: 0x004C0660 File Offset: 0x004BE860
+		// Token: 0x060243B8 RID: 148408 RVA: 0x004FB124 File Offset: 0x004F9324
 		public static VectorOffset CreateElementVector(FlatBufferBuilder builder, Offset<IFightMusicSwitchByTag>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022423 RID: 140323 RVA: 0x004C06A0 File Offset: 0x004BE8A0
+		// Token: 0x060243B9 RID: 148409 RVA: 0x004FB164 File Offset: 0x004F9364
 		public static VectorOffset CreateElementVectorBlock(FlatBufferBuilder builder, Offset<IFightMusicSwitchByTag>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022424 RID: 140324 RVA: 0x004C06BA File Offset: 0x004BE8BA
+		// Token: 0x060243BA RID: 148410 RVA: 0x004FB17E File Offset: 0x004F937E
 		public static VectorOffset CreateElementVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IFightMusicSwitchByTag>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022425 RID: 140325 RVA: 0x004C06D8 File Offset: 0x004BE8D8
+		// Token: 0x060243BB RID: 148411 RVA: 0x004FB19C File Offset: 0x004F939C
 		public static VectorOffset CreateElementVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022426 RID: 140326 RVA: 0x004C06F1 File Offset: 0x004BE8F1
+		// Token: 0x060243BC RID: 148412 RVA: 0x004FB1B5 File Offset: 0x004F93B5
 		public static void StartElementVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022427 RID: 140327 RVA: 0x004C06FC File Offset: 0x004BE8FC
+		// Token: 0x060243BD RID: 148413 RVA: 0x004FB1C0 File Offset: 0x004F93C0
 		public static Offset<IFightMusicsSwitchByTagList> EndIFightMusicsSwitchByTagList(FlatBufferBuilder builder)
 		{
 			return new Offset<IFightMusicsSwitchByTagList>(builder.EndTable());
 		}
 
-		// Token: 0x06022428 RID: 140328 RVA: 0x004C070C File Offset: 0x004BE90C
+		// Token: 0x060243BE RID: 148414 RVA: 0x004FB1D0 File Offset: 0x004F93D0
 		public IFightMusicsSwitchByTagListT UnPack()
 		{
 			IFightMusicsSwitchByTagListT fightMusicsSwitchByTagListT = new IFightMusicsSwitchByTagListT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fightMusicsSwitchByTagListT;
 		}
 
-		// Token: 0x06022429 RID: 140329 RVA: 0x004C0728 File Offset: 0x004BE928
+		// Token: 0x060243BF RID: 148415 RVA: 0x004FB1EC File Offset: 0x004F93EC
 		public void UnPackTo(IFightMusicsSwitchByTagListT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602242A RID: 140330 RVA: 0x004C0794 File Offset: 0x004BE994
+		// Token: 0x060243C0 RID: 148416 RVA: 0x004FB258 File Offset: 0x004F9458
 		public static Offset<IFightMusicsSwitchByTagList> Pack(FlatBufferBuilder builder, IFightMusicsSwitchByTagListT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFightMusicsSwitchByTagList.CreateIFightMusicsSwitchByTagList(builder, _o.Type, elementOffset);
 		}
 
-		// Token: 0x0400E38F RID: 58255
+		// Token: 0x0400EF95 RID: 61333
 		private Table __p;
 	}
 }

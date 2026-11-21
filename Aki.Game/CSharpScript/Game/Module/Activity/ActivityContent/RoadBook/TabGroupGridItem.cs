@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061FA RID: 25082
+	// Token: 0x02005178 RID: 20856
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 	})]
 	public class TabGroupGridItem : GridProxyAbstract<ITabGroupData>
 	{
-		// Token: 0x0603F495 RID: 259221 RVA: 0x00F4B0EC File Offset: 0x00F492EC
+		// Token: 0x06034156 RID: 213334 RVA: 0x00E92044 File Offset: 0x00E90244
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F496 RID: 259222 RVA: 0x00F4B188 File Offset: 0x00F49388
+		// Token: 0x06034157 RID: 213335 RVA: 0x00E920E0 File Offset: 0x00E902E0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TabGroupGridItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F497 RID: 259223 RVA: 0x00F4B1CC File Offset: 0x00F493CC
+		// Token: 0x06034158 RID: 213336 RVA: 0x00E92124 File Offset: 0x00E90324
 		public override UniTask RefreshAsync(ITabGroupData data, bool isSelected, int gridIndex)
 		{
 			TabGroupGridItem.<RefreshAsync>d__5 <RefreshAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F498 RID: 259224 RVA: 0x00F4B217 File Offset: 0x00F49417
+		// Token: 0x06034159 RID: 213337 RVA: 0x00E9216F File Offset: 0x00E9036F
 		private TabGridItem OnCreateTabItem()
 		{
 			return new TabGridItem
@@ -63,13 +63,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F499 RID: 259225 RVA: 0x00F4B22A File Offset: 0x00F4942A
+		// Token: 0x0603415A RID: 213338 RVA: 0x00E92182 File Offset: 0x00E90382
 		public void SelectFirstTab()
 		{
 			this.TabLayout.SelectGridProxy(0, true);
 		}
 
-		// Token: 0x04021032 RID: 135218
+		// Token: 0x0401B961 RID: 112993
 		[Nullable(new byte[]
 		{
 			2,
@@ -78,10 +78,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 		})]
 		public Action<MotorChallengePlayData, MenuTabToggleItem> OnChildToggleCallback;
 
-		// Token: 0x04021033 RID: 135219
+		// Token: 0x0401B962 RID: 112994
 		private GenericLayout<TabGridItem, MotorChallengePlayData> TabLayout;
 
-		// Token: 0x04021034 RID: 135220
+		// Token: 0x0401B963 RID: 112995
 		[Nullable(2)]
 		private ITabGroupData Data;
 	}

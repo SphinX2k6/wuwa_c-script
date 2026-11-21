@@ -6,37 +6,37 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.PreDownload
 {
-	// Token: 0x02000114 RID: 276
+	// Token: 0x02000118 RID: 280
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PreDownloadUiEvent : IDiffUpdateUiEvent
 	{
-		// Token: 0x060008B6 RID: 2230 RVA: 0x00040890 File Offset: 0x0003EA90
+		// Token: 0x060008EA RID: 2282 RVA: 0x00042C58 File Offset: 0x00040E58
 		[NullableContext(1)]
 		public void SetView(IPreDownloadUiEvent uiView)
 		{
 			this.UiView = uiView;
 		}
 
-		// Token: 0x060008B7 RID: 2231 RVA: 0x00040899 File Offset: 0x0003EA99
+		// Token: 0x060008EB RID: 2283 RVA: 0x00042C61 File Offset: 0x00040E61
 		public void ClearView()
 		{
 			this.UiView = null;
 		}
 
-		// Token: 0x060008B8 RID: 2232 RVA: 0x000408A2 File Offset: 0x0003EAA2
+		// Token: 0x060008EC RID: 2284 RVA: 0x00042C6A File Offset: 0x00040E6A
 		public UniTask WaitFrame(int? num = null)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x060008B9 RID: 2233 RVA: 0x000408A9 File Offset: 0x0003EAA9
+		// Token: 0x060008ED RID: 2285 RVA: 0x00042C71 File Offset: 0x00040E71
 		public UniTask ShowInfo(bool bWithProgress, string textId, bool bUseTag = false)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x060008BA RID: 2234 RVA: 0x000408B0 File Offset: 0x0003EAB0
+		// Token: 0x060008EE RID: 2286 RVA: 0x00042C78 File Offset: 0x00040E78
 		[NullableContext(1)]
 		public UniTask UpdateProgress(bool bNeedWait, float rate, string textId, params string[] args)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return <UpdateProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060008BB RID: 2235 RVA: 0x00040914 File Offset: 0x0003EB14
+		// Token: 0x060008EF RID: 2287 RVA: 0x00042CDC File Offset: 0x00040EDC
 		[NullableContext(1)]
 		public UniTask UpdatePatchDownProgress(bool bNeedWait, float rate, string fileName, string speedText, string sizeCurrent, string sizeTotal)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Launcher.PreDownload
 			return <UpdatePatchDownProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060008BC RID: 2236 RVA: 0x00040984 File Offset: 0x0003EB84
+		// Token: 0x060008F0 RID: 2288 RVA: 0x00042D4C File Offset: 0x00040F4C
 		[NullableContext(1)]
 		[return: Nullable(0)]
 		public UniTask<bool> ShowDialog(bool bSelect, string titleId, string contentId, [Nullable(2)] string leftId, [Nullable(2)] string rightId, [Nullable(2)] string middleId, params string[] contentArgs)
@@ -89,35 +89,35 @@ namespace CSharpScript.Launcher.PreDownload
 			return <ShowDialog>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x170000EE RID: 238
-		// (get) Token: 0x060008BD RID: 2237 RVA: 0x00040A03 File Offset: 0x0003EC03
-		// (set) Token: 0x060008BE RID: 2238 RVA: 0x00040A0B File Offset: 0x0003EC0B
+		// Token: 0x170000F4 RID: 244
+		// (get) Token: 0x060008F1 RID: 2289 RVA: 0x00042DCB File Offset: 0x00040FCB
+		// (set) Token: 0x060008F2 RID: 2290 RVA: 0x00042DD3 File Offset: 0x00040FD3
 		public bool? ShouldShowNoticeWindow { get; set; }
 
-		// Token: 0x170000EF RID: 239
-		// (get) Token: 0x060008BF RID: 2239 RVA: 0x00040A14 File Offset: 0x0003EC14
-		// (set) Token: 0x060008C0 RID: 2240 RVA: 0x00040A1C File Offset: 0x0003EC1C
+		// Token: 0x170000F5 RID: 245
+		// (get) Token: 0x060008F3 RID: 2291 RVA: 0x00042DDC File Offset: 0x00040FDC
+		// (set) Token: 0x060008F4 RID: 2292 RVA: 0x00042DE4 File Offset: 0x00040FE4
 		public Action<long, string> TryShowNoticeWindowOnce { get; set; }
 
-		// Token: 0x060008C1 RID: 2241 RVA: 0x00040A25 File Offset: 0x0003EC25
+		// Token: 0x060008F5 RID: 2293 RVA: 0x00042DED File Offset: 0x00040FED
 		public bool IsCompatible()
 		{
 			return false;
 		}
 
-		// Token: 0x060008C2 RID: 2242 RVA: 0x00040A28 File Offset: 0x0003EC28
+		// Token: 0x060008F6 RID: 2294 RVA: 0x00042DF0 File Offset: 0x00040FF0
 		[NullableContext(0)]
 		public UniTask<bool> ShowNotEnoughSpaceConfirmation(long totalSize)
 		{
 			return UniTask.FromResult<bool>(true);
 		}
 
-		// Token: 0x060008C3 RID: 2243 RVA: 0x00040A30 File Offset: 0x0003EC30
+		// Token: 0x060008F7 RID: 2295 RVA: 0x00042DF8 File Offset: 0x00040FF8
 		public void UpdatePatchProgress(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 		{
 		}
 
-		// Token: 0x04000511 RID: 1297
+		// Token: 0x0400054C RID: 1356
 		private IPreDownloadUiEvent UiView;
 	}
 }

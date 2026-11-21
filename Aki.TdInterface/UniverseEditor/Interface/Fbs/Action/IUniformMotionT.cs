@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074B8 RID: 29880
+	// Token: 0x02007CAE RID: 31918
 	public class IUniformMotionT
 	{
-		// Token: 0x1700E2D0 RID: 58064
-		// (get) Token: 0x06036536 RID: 222518 RVA: 0x0076218C File Offset: 0x0076038C
-		// (set) Token: 0x06036537 RID: 222519 RVA: 0x00762194 File Offset: 0x00760394
+		// Token: 0x1700EEFA RID: 61178
+		// (get) Token: 0x0603994B RID: 235851 RVA: 0x007C53DC File Offset: 0x007C35DC
+		// (set) Token: 0x0603994C RID: 235852 RVA: 0x007C53E4 File Offset: 0x007C35E4
 		public EMoveMotion Type { get; set; }
 
-		// Token: 0x1700E2D1 RID: 58065
-		// (get) Token: 0x06036538 RID: 222520 RVA: 0x0076219D File Offset: 0x0076039D
-		// (set) Token: 0x06036539 RID: 222521 RVA: 0x007621A5 File Offset: 0x007603A5
+		// Token: 0x1700EEFB RID: 61179
+		// (get) Token: 0x0603994D RID: 235853 RVA: 0x007C53ED File Offset: 0x007C35ED
+		// (set) Token: 0x0603994E RID: 235854 RVA: 0x007C53F5 File Offset: 0x007C35F5
 		public float Time { get; set; }
 
-		// Token: 0x0603653A RID: 222522 RVA: 0x007621AE File Offset: 0x007603AE
+		// Token: 0x0603994F RID: 235855 RVA: 0x007C53FE File Offset: 0x007C35FE
 		public IUniformMotionT()
 		{
 			this.Type = EMoveMotion.UniformMotion;

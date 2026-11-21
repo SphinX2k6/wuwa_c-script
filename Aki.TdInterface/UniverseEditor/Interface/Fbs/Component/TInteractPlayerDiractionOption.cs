@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C48 RID: 23624
+	// Token: 0x0200626D RID: 25197
 	public enum TInteractPlayerDiractionOption : byte
 	{
-		// Token: 0x0400F466 RID: 62566
+		// Token: 0x04010190 RID: 65936
 		NONE,
-		// Token: 0x0400F467 RID: 62567
+		// Token: 0x04010191 RID: 65937
 		IInteractPlayerDiractionToLeisure,
-		// Token: 0x0400F468 RID: 62568
+		// Token: 0x04010192 RID: 65938
 		IInteractPlayerDiractionToNpc
 	}
 }

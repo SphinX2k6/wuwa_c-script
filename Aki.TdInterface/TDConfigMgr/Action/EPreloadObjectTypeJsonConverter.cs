@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023DE RID: 9182
+	// Token: 0x02002675 RID: 9845
 	public class EPreloadObjectTypeJsonConverter : JsonConverter<EPreloadObjectType>
 	{
-		// Token: 0x0600C7E7 RID: 51175 RVA: 0x001D43D0 File Offset: 0x001D25D0
+		// Token: 0x0600D46A RID: 54378 RVA: 0x001EDB7C File Offset: 0x001EBD7C
 		public override EPreloadObjectType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EPreloadObjectTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C7E8 RID: 51176 RVA: 0x001D43F4 File Offset: 0x001D25F4
+		// Token: 0x0600D46B RID: 54379 RVA: 0x001EDBA0 File Offset: 0x001EBDA0
 		public override void Write(Utf8JsonWriter writer, EPreloadObjectType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

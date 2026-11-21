@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EB5 RID: 7861
+// Token: 0x02001377 RID: 4983
 public class HonamiStoryTipsRoleItem : UiPanelBase
 {
-	// Token: 0x0600F1C4 RID: 61892 RVA: 0x003A31DC File Offset: 0x003A13DC
+	// Token: 0x0600C5E3 RID: 50659 RVA: 0x003AECDC File Offset: 0x003ACEDC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class HonamiStoryTipsRoleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F1C5 RID: 61893 RVA: 0x003A3236 File Offset: 0x003A1436
+	// Token: 0x0600C5E4 RID: 50660 RVA: 0x003AED36 File Offset: 0x003ACF36
 	protected override void OnStart()
 	{
 		UUIItem rootItem = this.RootItem;
@@ -29,20 +29,20 @@ public class HonamiStoryTipsRoleItem : UiPanelBase
 		rootItem.SetPivot(new FVector2D(0f, 0f));
 	}
 
-	// Token: 0x0600F1C6 RID: 61894 RVA: 0x003A3258 File Offset: 0x003A1458
+	// Token: 0x0600C5E5 RID: 50661 RVA: 0x003AED58 File Offset: 0x003ACF58
 	public void Refresh(int id)
 	{
 		base.SetRoleIcon(RoleConfig.Instance.GetRoleConfig(id).Value.RoleHeadIconCircle, base.GetTexture(0), id, null, null);
 	}
 
-	// Token: 0x02008491 RID: 33937
+	// Token: 0x02007616 RID: 30230
 	private enum ERole
 	{
-		// Token: 0x0402B271 RID: 176753
+		// Token: 0x04026595 RID: 157077
 		Icon,
-		// Token: 0x0402B272 RID: 176754
+		// Token: 0x04026596 RID: 157078
 		Sprite,
-		// Token: 0x0402B273 RID: 176755
+		// Token: 0x04026597 RID: 157079
 		SpriteBg
 	}
 }

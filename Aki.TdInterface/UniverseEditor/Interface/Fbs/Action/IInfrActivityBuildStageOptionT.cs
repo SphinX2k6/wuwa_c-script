@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006949 RID: 26953
+	// Token: 0x02006FFC RID: 28668
 	public class IInfrActivityBuildStageOptionT
 	{
-		// Token: 0x1700C7F6 RID: 51190
-		// (get) Token: 0x0602F106 RID: 192774 RVA: 0x0066A29A File Offset: 0x0066849A
-		// (set) Token: 0x0602F107 RID: 192775 RVA: 0x0066A2A2 File Offset: 0x006684A2
+		// Token: 0x1700D1F9 RID: 53753
+		// (get) Token: 0x06031AD6 RID: 203478 RVA: 0x006BA782 File Offset: 0x006B8982
+		// (set) Token: 0x06031AD7 RID: 203479 RVA: 0x006BA78A File Offset: 0x006B898A
 		public EInfrActivityBuildStageType Type { get; set; }
 
-		// Token: 0x0602F108 RID: 192776 RVA: 0x0066A2AB File Offset: 0x006684AB
+		// Token: 0x06031AD8 RID: 203480 RVA: 0x006BA793 File Offset: 0x006B8993
 		public IInfrActivityBuildStageOptionT()
 		{
 			this.Type = EInfrActivityBuildStageType.Infrastructure;

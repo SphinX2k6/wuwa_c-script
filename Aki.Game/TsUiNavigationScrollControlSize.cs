@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002CCF RID: 11471
+// Token: 0x02002228 RID: 8744
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Module/UiNavigation/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/UiNavigation/TsUiNavigationScrollControlSize.TsUiNavigationScrollControlSize_C")]
 public class TsUiNavigationScrollControlSize : ULGUIBehaviour, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002072 RID: 8306
-	// (get) Token: 0x060180F1 RID: 98545 RVA: 0x0061E35C File Offset: 0x0061C55C
-	// (set) Token: 0x060180F2 RID: 98546 RVA: 0x0061E370 File Offset: 0x0061C570
+	// Token: 0x170020C5 RID: 8389
+	// (get) Token: 0x0601596E RID: 88430 RVA: 0x00643F18 File Offset: 0x00642118
+	// (set) Token: 0x0601596F RID: 88431 RVA: 0x00643F2C File Offset: 0x0064212C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe AActor ScrollViewActor
 	{
@@ -29,27 +29,21 @@ public class TsUiNavigationScrollControlSize : ULGUIBehaviour, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x060180F3 RID: 98547 RVA: 0x0061E388 File Offset: 0x0061C588
+	// Token: 0x06015970 RID: 88432 RVA: 0x00643F44 File Offset: 0x00642144
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void AwakeBP()
+	public override void AwakeBP()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AwakeBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiNavigationScrollControlSize) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AwakeBP"), TsUiNavigationScrollControlSize.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.AwakeBP_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x060180F4 RID: 98548 RVA: 0x0061E3F8 File Offset: 0x0061C5F8
+	// Token: 0x06015971 RID: 88433 RVA: 0x00643FA0 File Offset: 0x006421A0
 	protected virtual void AwakeBP_Implementation()
 	{
 		AActor owner = base.GetOwner();
@@ -81,28 +75,25 @@ public class TsUiNavigationScrollControlSize : ULGUIBehaviour, IUnrealUObject, I
 		this.UseScroll = true;
 	}
 
-	// Token: 0x060180F5 RID: 98549 RVA: 0x0061E4D0 File Offset: 0x0061C6D0
+	// Token: 0x06015972 RID: 88434 RVA: 0x00644078 File Offset: 0x00642278
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void LateUpdateBP(float deltaTime)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("LateUpdateBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		ULGUIBehaviour.__LateUpdateBP_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiNavigationScrollControlSize) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("LateUpdateBP"), TsUiNavigationScrollControlSize.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((ULGUIBehaviour.__LateUpdateBP_FunctionParams*)ptr + 15L / (long)sizeof(ULGUIBehaviour.__LateUpdateBP_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaTime = deltaTime;
+			this.LateUpdateBP_Implementation(deltaTime);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		ULGUIBehaviour.__LateUpdateBP_FunctionParams* ptr = stackalloc ULGUIBehaviour.__LateUpdateBP_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(ULGUIBehaviour.__LateUpdateBP_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaTime = deltaTime;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060180F6 RID: 98550 RVA: 0x0061E548 File Offset: 0x0061C748
+	// Token: 0x06015973 RID: 88435 RVA: 0x00644104 File Offset: 0x00642304
 	protected virtual void LateUpdateBP_Implementation(float deltaTime)
 	{
 		if (this.ScrollView == null || this.SizeController == null)
@@ -138,33 +129,27 @@ public class TsUiNavigationScrollControlSize : ULGUIBehaviour, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x060180F7 RID: 98551 RVA: 0x0061E658 File Offset: 0x0061C858
+	// Token: 0x06015974 RID: 88436 RVA: 0x00644214 File Offset: 0x00642414
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void OnDisableBP()
+	public override void OnDisableBP()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnDisableBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiNavigationScrollControlSize) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnDisableBP"), TsUiNavigationScrollControlSize.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnDisableBP_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x060180F8 RID: 98552 RVA: 0x0061E6C8 File Offset: 0x0061C8C8
+	// Token: 0x06015975 RID: 88437 RVA: 0x0064426D File Offset: 0x0064246D
 	protected virtual void OnDisableBP_Implementation()
 	{
 		this.ScrollValue = 0f;
 	}
 
-	// Token: 0x060180F9 RID: 98553 RVA: 0x0061E6D5 File Offset: 0x0061C8D5
+	// Token: 0x06015976 RID: 88438 RVA: 0x0064427A File Offset: 0x0064247A
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsUiNavigationScrollControlSize._ClassPtr == IntPtr.Zero)
@@ -174,66 +159,66 @@ public class TsUiNavigationScrollControlSize : ULGUIBehaviour, IUnrealUObject, I
 		return TsUiNavigationScrollControlSize._ClassPtr;
 	}
 
-	// Token: 0x060180FA RID: 98554 RVA: 0x0061E6FC File Offset: 0x0061C8FC
+	// Token: 0x06015977 RID: 88439 RVA: 0x006442A0 File Offset: 0x006424A0
 	public TsUiNavigationScrollControlSize() : this(BuiltinUtils.AllocNativeUObject(TsUiNavigationScrollControlSize.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060180FB RID: 98555 RVA: 0x0061E724 File Offset: 0x0061C924
+	// Token: 0x06015978 RID: 88440 RVA: 0x006442C8 File Offset: 0x006424C8
 	[NullableContext(1)]
 	public TsUiNavigationScrollControlSize(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsUiNavigationScrollControlSize.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060180FC RID: 98556 RVA: 0x0061E757 File Offset: 0x0061C957
+	// Token: 0x06015979 RID: 88441 RVA: 0x006442FB File Offset: 0x006424FB
 	protected TsUiNavigationScrollControlSize(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060180FD RID: 98557 RVA: 0x0061E760 File Offset: 0x0061C960
+	// Token: 0x0601597A RID: 88442 RVA: 0x00644304 File Offset: 0x00642504
 	protected virtual void __CPPCALL_AwakeBP_Implementation()
 	{
 		this.AwakeBP_Implementation();
 	}
 
-	// Token: 0x060180FE RID: 98558 RVA: 0x0061E768 File Offset: 0x0061C968
+	// Token: 0x0601597B RID: 88443 RVA: 0x0064430C File Offset: 0x0064250C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_LateUpdateBP_Implementation(ULGUIBehaviour.__LateUpdateBP_FunctionParams* __Params)
 	{
 		this.LateUpdateBP_Implementation(__Params->DeltaTime);
 	}
 
-	// Token: 0x060180FF RID: 98559 RVA: 0x0061E776 File Offset: 0x0061C976
+	// Token: 0x0601597C RID: 88444 RVA: 0x0064431A File Offset: 0x0064251A
 	protected virtual void __CPPCALL_OnDisableBP_Implementation()
 	{
 		this.OnDisableBP_Implementation();
 	}
 
-	// Token: 0x0400B300 RID: 45824
+	// Token: 0x0400B66C RID: 46700
 	private UUIScrollViewWithScrollbarComponent ScrollView;
 
-	// Token: 0x0400B301 RID: 45825
+	// Token: 0x0400B66D RID: 46701
 	private UUISizeControlByOther SizeController;
 
-	// Token: 0x0400B302 RID: 45826
+	// Token: 0x0400B66E RID: 46702
 	private float ScrollValue;
 
-	// Token: 0x0400B303 RID: 45827
+	// Token: 0x0400B66F RID: 46703
 	private UUIItem ContentItem;
 
-	// Token: 0x0400B304 RID: 45828
+	// Token: 0x0400B670 RID: 46704
 	private bool UseScroll;
 
-	// Token: 0x0400B305 RID: 45829
+	// Token: 0x0400B671 RID: 46705
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/UiNavigation/TsUiNavigationScrollControlSize.TsUiNavigationScrollControlSize_C";
 
-	// Token: 0x0400B306 RID: 45830
+	// Token: 0x0400B672 RID: 46706
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B307 RID: 45831
+	// Token: 0x0400B673 RID: 46707
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B308 RID: 45832
+	// Token: 0x0400B674 RID: 46708
 	private static int __PropertyOffset_ScrollViewActor;
 }

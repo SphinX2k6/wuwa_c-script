@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001FB RID: 507
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000224 RID: 548
 	public class IBossStateViewStyle
 	{
-		// Token: 0x0600085E RID: 2142 RVA: 0x00026B40 File Offset: 0x00024D40
+		// Token: 0x060008DE RID: 2270 RVA: 0x00028494 File Offset: 0x00026694
 		private IBossStateViewStyle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600085F RID: 2143 RVA: 0x00026B78 File Offset: 0x00024D78
+		// Token: 0x060008DF RID: 2271 RVA: 0x000284CC File Offset: 0x000266CC
 		public static IBossStateViewStyle Create([Nullable(2)] IBossStateViewStyle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000860 RID: 2144 RVA: 0x00026B8B File Offset: 0x00024D8B
+		// Token: 0x060008E0 RID: 2272 RVA: 0x000284DF File Offset: 0x000266DF
 		public static IBossStateViewStyle CreateFromSetValue([Nullable(2)] IBossStateViewStyle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000861 RID: 2145 RVA: 0x00026B9E File Offset: 0x00024D9E
+		// Token: 0x060008E1 RID: 2273 RVA: 0x000284F2 File Offset: 0x000266F2
 		public IBossStateViewStyle_SetValue ToSetValue()
 		{
 			return new IBossStateViewStyle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000294 RID: 660
-		// (get) Token: 0x06000862 RID: 2146 RVA: 0x00026BB1 File Offset: 0x00024DB1
-		// (set) Token: 0x06000863 RID: 2147 RVA: 0x00026BDC File Offset: 0x00024DDC
+		// Token: 0x170002B6 RID: 694
+		// (get) Token: 0x060008E2 RID: 2274 RVA: 0x00028505 File Offset: 0x00026705
+		// (set) Token: 0x060008E3 RID: 2275 RVA: 0x00028530 File Offset: 0x00026730
 		public virtual EBossStateViewStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400091C RID: 2332
+		// Token: 0x040009AD RID: 2477
 		[Nullable(2)]
 		protected IBossStateViewStyle FbInstance;
 
-		// Token: 0x0400091D RID: 2333
+		// Token: 0x040009AE RID: 2478
 		[Nullable(2)]
 		protected IBossStateViewStyle_SetValue PocoInterface;
 	}

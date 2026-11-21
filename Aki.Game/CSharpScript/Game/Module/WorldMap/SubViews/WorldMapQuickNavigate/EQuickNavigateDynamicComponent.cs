@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047CE RID: 18382
+	// Token: 0x020036FF RID: 14079
 	public enum EQuickNavigateDynamicComponent
 	{
-		// Token: 0x04019F0E RID: 106254
+		// Token: 0x040145C2 RID: 83394
 		UiItemTabA,
-		// Token: 0x04019F0F RID: 106255
+		// Token: 0x040145C3 RID: 83395
 		UiItemTabB
 	}
 }

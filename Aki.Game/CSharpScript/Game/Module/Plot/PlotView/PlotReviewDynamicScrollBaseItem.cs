@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200505A RID: 20570
+	// Token: 0x0200402A RID: 16426
 	public class PlotReviewDynamicScrollBaseItem : UiPanelBase, IDynamicScrollBaseItem<PlotReviewItemData>
 	{
-		// Token: 0x06034A3C RID: 215612 RVA: 0x00C7062C File Offset: 0x00C6E82C
+		// Token: 0x0602992F RID: 170287 RVA: 0x00BBD8CC File Offset: 0x00BBBACC
 		[NullableContext(1)]
 		public UniTask Init(UUIItem actor)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034A3D RID: 215613 RVA: 0x00C70678 File Offset: 0x00C6E878
+		// Token: 0x06029930 RID: 170288 RVA: 0x00BBD918 File Offset: 0x00BBBB18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034A3E RID: 215614 RVA: 0x00C706E4 File Offset: 0x00C6E8E4
+		// Token: 0x06029931 RID: 170289 RVA: 0x00BBD984 File Offset: 0x00BBBB84
 		[NullableContext(1)]
 		public FVector2D GetItemSize(PlotReviewItemData data)
 		{
@@ -61,18 +61,18 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return new FVector2D(item.GetWidth(), item.GetHeight());
 		}
 
-		// Token: 0x06034A3F RID: 215615 RVA: 0x00C7073A File Offset: 0x00C6E93A
+		// Token: 0x06029932 RID: 170290 RVA: 0x00BBD9DA File Offset: 0x00BBBBDA
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0200B1BE RID: 45502
+		// Token: 0x02009BF8 RID: 39928
 		private static class EComponent
 		{
-			// Token: 0x04035E7A RID: 220794
+			// Token: 0x040308CF RID: 198863
 			public const int TalkItem = 0;
 
-			// Token: 0x04035E7B RID: 220795
+			// Token: 0x040308D0 RID: 198864
 			public const int OptionItem = 1;
 		}
 	}

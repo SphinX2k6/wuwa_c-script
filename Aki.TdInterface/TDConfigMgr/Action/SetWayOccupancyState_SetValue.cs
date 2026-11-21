@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021EE RID: 8686
+	// Token: 0x02002459 RID: 9305
 	public class SetWayOccupancyState_SetValue
 	{
-		// Token: 0x040071CD RID: 29133
+		// Token: 0x04007816 RID: 30742
 		public bool Occupy;
 
-		// Token: 0x040071CE RID: 29134
-		[Nullable(1)]
+		// Token: 0x04007817 RID: 30743
 		public List<int> TargetWay;
 	}
 }

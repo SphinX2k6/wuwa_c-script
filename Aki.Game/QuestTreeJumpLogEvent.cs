@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002132 RID: 8498
+// Token: 0x0200160A RID: 5642
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeJumpLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014D8 RID: 5336
-	// (get) Token: 0x060109D2 RID: 68050 RVA: 0x0040BAFE File Offset: 0x00409CFE
-	// (set) Token: 0x060109D3 RID: 68051 RVA: 0x0040BB06 File Offset: 0x00409D06
+	// Token: 0x17001506 RID: 5382
+	// (get) Token: 0x0600DE45 RID: 56901 RVA: 0x00418246 File Offset: 0x00416446
+	// (set) Token: 0x0600DE46 RID: 56902 RVA: 0x0041824E File Offset: 0x0041644E
 	public override string event_id { get; set; } = "1918";
 
-	// Token: 0x04007D3B RID: 32059
+	// Token: 0x04007E4B RID: 32331
 	public int i_chapter_id;
 
-	// Token: 0x04007D3C RID: 32060
+	// Token: 0x04007E4C RID: 32332
 	public int i_quest_id;
 
-	// Token: 0x04007D3D RID: 32061
+	// Token: 0x04007E4D RID: 32333
 	public int i_quest_status;
 
-	// Token: 0x04007D3E RID: 32062
+	// Token: 0x04007E4E RID: 32334
 	public int i_quest_type;
 
-	// Token: 0x04007D3F RID: 32063
+	// Token: 0x04007E4F RID: 32335
 	public int i_motion;
 }

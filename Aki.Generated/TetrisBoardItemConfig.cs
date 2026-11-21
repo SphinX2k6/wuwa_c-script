@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011E9 RID: 4585
+	// Token: 0x02001320 RID: 4896
 	public struct TetrisBoardItemConfig : IFlatbufferObject
 	{
-		// Token: 0x17003F4E RID: 16206
-		// (get) Token: 0x0600EBD1 RID: 60369 RVA: 0x0034B059 File Offset: 0x00349259
+		// Token: 0x170042B6 RID: 17078
+		// (get) Token: 0x0600F94A RID: 63818 RVA: 0x00375D0E File Offset: 0x00373F0E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EBD2 RID: 60370 RVA: 0x0034B066 File Offset: 0x00349266
+		// Token: 0x0600F94B RID: 63819 RVA: 0x00375D1B File Offset: 0x00373F1B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EBD3 RID: 60371 RVA: 0x0034B070 File Offset: 0x00349270
+		// Token: 0x0600F94C RID: 63820 RVA: 0x00375D24 File Offset: 0x00373F24
 		public static TetrisBoardItemConfig GetRootAsTetrisBoardItemConfig(ByteBuffer _bb)
 		{
 			return TetrisBoardItemConfig.GetRootAsTetrisBoardItemConfig(_bb, default(TetrisBoardItemConfig));
 		}
 
-		// Token: 0x0600EBD4 RID: 60372 RVA: 0x0034B08C File Offset: 0x0034928C
+		// Token: 0x0600F94D RID: 63821 RVA: 0x00375D40 File Offset: 0x00373F40
 		public static TetrisBoardItemConfig GetRootAsTetrisBoardItemConfig(ByteBuffer _bb, TetrisBoardItemConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EBD5 RID: 60373 RVA: 0x0034B0A9 File Offset: 0x003492A9
+		// Token: 0x0600F94E RID: 63822 RVA: 0x00375D5D File Offset: 0x00373F5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EBD6 RID: 60374 RVA: 0x0034B0B8 File Offset: 0x003492B8
+		// Token: 0x0600F94F RID: 63823 RVA: 0x00375D6C File Offset: 0x00373F6C
 		public TetrisBoardItemConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003F4F RID: 16207
-		// (get) Token: 0x0600EBD7 RID: 60375 RVA: 0x0034B0C8 File Offset: 0x003492C8
+		// Token: 0x170042B7 RID: 17079
+		// (get) Token: 0x0600F950 RID: 63824 RVA: 0x00375D7C File Offset: 0x00373F7C
 		public int Color
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003F50 RID: 16208
-		// (get) Token: 0x0600EBD8 RID: 60376 RVA: 0x0034B104 File Offset: 0x00349304
+		// Token: 0x170042B8 RID: 17080
+		// (get) Token: 0x0600F951 RID: 63825 RVA: 0x00375DB8 File Offset: 0x00373FB8
 		public int Gem
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003F51 RID: 16209
-		// (get) Token: 0x0600EBD9 RID: 60377 RVA: 0x0034B140 File Offset: 0x00349340
+		// Token: 0x170042B9 RID: 17081
+		// (get) Token: 0x0600F952 RID: 63826 RVA: 0x00375DF4 File Offset: 0x00373FF4
 		public int Seal
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003F52 RID: 16210
-		// (get) Token: 0x0600EBDA RID: 60378 RVA: 0x0034B17C File Offset: 0x0034937C
+		// Token: 0x170042BA RID: 17082
+		// (get) Token: 0x0600F953 RID: 63827 RVA: 0x00375E30 File Offset: 0x00374030
 		public bool Block
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005362 RID: 21346
+		// Token: 0x040059A6 RID: 22950
 		private Table __p;
 	}
 }

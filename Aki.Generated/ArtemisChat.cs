@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B0C RID: 2828
+	// Token: 0x02000BE6 RID: 3046
 	public struct ArtemisChat : IFlatbufferObject
 	{
-		// Token: 0x17000375 RID: 885
-		// (get) Token: 0x06004939 RID: 18745 RVA: 0x001D928D File Offset: 0x001D748D
+		// Token: 0x1700038C RID: 908
+		// (get) Token: 0x06004E80 RID: 20096 RVA: 0x001F8A3A File Offset: 0x001F6C3A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600493A RID: 18746 RVA: 0x001D929A File Offset: 0x001D749A
+		// Token: 0x06004E81 RID: 20097 RVA: 0x001F8A47 File Offset: 0x001F6C47
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600493B RID: 18747 RVA: 0x001D92A4 File Offset: 0x001D74A4
+		// Token: 0x06004E82 RID: 20098 RVA: 0x001F8A50 File Offset: 0x001F6C50
 		public static ArtemisChat GetRootAsArtemisChat(ByteBuffer _bb)
 		{
 			return ArtemisChat.GetRootAsArtemisChat(_bb, default(ArtemisChat));
 		}
 
-		// Token: 0x0600493C RID: 18748 RVA: 0x001D92C0 File Offset: 0x001D74C0
+		// Token: 0x06004E83 RID: 20099 RVA: 0x001F8A6C File Offset: 0x001F6C6C
 		public static ArtemisChat GetRootAsArtemisChat(ByteBuffer _bb, ArtemisChat obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600493D RID: 18749 RVA: 0x001D92DD File Offset: 0x001D74DD
+		// Token: 0x06004E84 RID: 20100 RVA: 0x001F8A89 File Offset: 0x001F6C89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600493E RID: 18750 RVA: 0x001D92EC File Offset: 0x001D74EC
+		// Token: 0x06004E85 RID: 20101 RVA: 0x001F8A98 File Offset: 0x001F6C98
 		public ArtemisChat __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000376 RID: 886
-		// (get) Token: 0x0600493F RID: 18751 RVA: 0x001D92FC File Offset: 0x001D74FC
+		// Token: 0x1700038D RID: 909
+		// (get) Token: 0x06004E86 RID: 20102 RVA: 0x001F8AA8 File Offset: 0x001F6CA8
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000377 RID: 887
-		// (get) Token: 0x06004940 RID: 18752 RVA: 0x001D9338 File Offset: 0x001D7538
+		// Token: 0x1700038E RID: 910
+		// (get) Token: 0x06004E87 RID: 20103 RVA: 0x001F8AE4 File Offset: 0x001F6CE4
 		public string LockChatContent
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004941 RID: 18753 RVA: 0x001D936F File Offset: 0x001D756F
+		// Token: 0x06004E88 RID: 20104 RVA: 0x001F8B1B File Offset: 0x001F6D1B
 		public Span<byte> GetLockChatContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06004942 RID: 18754 RVA: 0x001D937E File Offset: 0x001D757E
+		// Token: 0x06004E89 RID: 20105 RVA: 0x001F8B2A File Offset: 0x001F6D2A
 		public byte[] GetLockChatContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000378 RID: 888
-		// (get) Token: 0x06004943 RID: 18755 RVA: 0x001D9398 File Offset: 0x001D7598
+		// Token: 0x1700038F RID: 911
+		// (get) Token: 0x06004E8A RID: 20106 RVA: 0x001F8B44 File Offset: 0x001F6D44
 		public string LockChatTexture
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004944 RID: 18756 RVA: 0x001D93CF File Offset: 0x001D75CF
+		// Token: 0x06004E8B RID: 20107 RVA: 0x001F8B7B File Offset: 0x001F6D7B
 		public Span<byte> GetLockChatTextureBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06004945 RID: 18757 RVA: 0x001D93DE File Offset: 0x001D75DE
+		// Token: 0x06004E8C RID: 20108 RVA: 0x001F8B8A File Offset: 0x001F6D8A
 		public byte[] GetLockChatTextureArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000379 RID: 889
-		// (get) Token: 0x06004946 RID: 18758 RVA: 0x001D93F8 File Offset: 0x001D75F8
+		// Token: 0x17000390 RID: 912
+		// (get) Token: 0x06004E8D RID: 20109 RVA: 0x001F8BA4 File Offset: 0x001F6DA4
 		public string ChatContent
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004947 RID: 18759 RVA: 0x001D9430 File Offset: 0x001D7630
+		// Token: 0x06004E8E RID: 20110 RVA: 0x001F8BDC File Offset: 0x001F6DDC
 		public Span<byte> GetChatContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06004948 RID: 18760 RVA: 0x001D9440 File Offset: 0x001D7640
+		// Token: 0x06004E8F RID: 20111 RVA: 0x001F8BEC File Offset: 0x001F6DEC
 		public byte[] GetChatContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700037A RID: 890
-		// (get) Token: 0x06004949 RID: 18761 RVA: 0x001D9458 File Offset: 0x001D7658
+		// Token: 0x17000391 RID: 913
+		// (get) Token: 0x06004E90 RID: 20112 RVA: 0x001F8C04 File Offset: 0x001F6E04
 		public string ChatTexture
 		{
 			get
@@ -158,20 +158,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600494A RID: 18762 RVA: 0x001D9490 File Offset: 0x001D7690
+		// Token: 0x06004E91 RID: 20113 RVA: 0x001F8C3C File Offset: 0x001F6E3C
 		public Span<byte> GetChatTextureBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600494B RID: 18763 RVA: 0x001D94A0 File Offset: 0x001D76A0
+		// Token: 0x06004E92 RID: 20114 RVA: 0x001F8C4C File Offset: 0x001F6E4C
 		public byte[] GetChatTextureArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700037B RID: 891
-		// (get) Token: 0x0600494C RID: 18764 RVA: 0x001D94B8 File Offset: 0x001D76B8
+		// Token: 0x17000392 RID: 914
+		// (get) Token: 0x06004E93 RID: 20115 RVA: 0x001F8C64 File Offset: 0x001F6E64
 		public bool IsLeft
 		{
 			get
@@ -181,7 +181,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004AF1 RID: 19185
+		// Token: 0x040050CB RID: 20683
 		private Table __p;
 	}
 }

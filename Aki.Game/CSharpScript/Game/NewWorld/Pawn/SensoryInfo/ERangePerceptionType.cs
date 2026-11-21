@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 {
-	// Token: 0x0200705E RID: 28766
+	// Token: 0x020061DF RID: 25055
 	public enum ERangePerceptionType
 	{
-		// Token: 0x04024A79 RID: 150137
+		// Token: 0x0401FD2F RID: 130351
 		Static,
-		// Token: 0x04024A7A RID: 150138
+		// Token: 0x0401FD30 RID: 130352
 		Dynamic
 	}
 }

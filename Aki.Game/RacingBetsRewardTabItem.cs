@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002721 RID: 10017
+// Token: 0x02001C0C RID: 7180
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardData>
 {
-	// Token: 0x06014870 RID: 84080 RVA: 0x0052EE1C File Offset: 0x0052D01C
+	// Token: 0x06011D52 RID: 73042 RVA: 0x0053DB38 File Offset: 0x0053BD38
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardDa
 		};
 	}
 
-	// Token: 0x06014871 RID: 84081 RVA: 0x0052EE99 File Offset: 0x0052D099
+	// Token: 0x06011D53 RID: 73043 RVA: 0x0053DBB5 File Offset: 0x0053BDB5
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -39,14 +39,14 @@ public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardDa
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CanExecuteToggleChange));
 	}
 
-	// Token: 0x06014872 RID: 84082 RVA: 0x0052EEBD File Offset: 0x0052D0BD
+	// Token: 0x06011D54 RID: 73044 RVA: 0x0053DBD9 File Offset: 0x0053BDD9
 	public override void Refresh(RacingBetsGroupRewardData data, bool isSelected, int gridIndex)
 	{
 		this.GroupRewardData = data;
 		this.RefreshItem();
 	}
 
-	// Token: 0x06014873 RID: 84083 RVA: 0x0052EECC File Offset: 0x0052D0CC
+	// Token: 0x06011D55 RID: 73045 RVA: 0x0053DBE8 File Offset: 0x0053BDE8
 	public void RefreshItem()
 	{
 		if (this.GroupRewardData == null)
@@ -61,7 +61,7 @@ public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardDa
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06014874 RID: 84084 RVA: 0x0052EF04 File Offset: 0x0052D104
+	// Token: 0x06011D56 RID: 73046 RVA: 0x0053DC20 File Offset: 0x0053BE20
 	private void RefreshRedDot()
 	{
 		bool uiactive = false;
@@ -84,7 +84,7 @@ public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardDa
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06014875 RID: 84085 RVA: 0x0052EF74 File Offset: 0x0052D174
+	// Token: 0x06011D57 RID: 73047 RVA: 0x0053DC90 File Offset: 0x0053BE90
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -95,7 +95,7 @@ public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardDa
 		extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06014876 RID: 84086 RVA: 0x0052EF8B File Offset: 0x0052D18B
+	// Token: 0x06011D58 RID: 73048 RVA: 0x0053DCA7 File Offset: 0x0053BEA7
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -106,13 +106,13 @@ public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardDa
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06014877 RID: 84087 RVA: 0x0052EFA2 File Offset: 0x0052D1A2
+	// Token: 0x06011D59 RID: 73049 RVA: 0x0053DCBE File Offset: 0x0053BEBE
 	public void BindClickToggleCallBack(Action<RacingBetsGroupRewardData> toggleCallBack)
 	{
 		this.ClickToggleCallBack = toggleCallBack;
 	}
 
-	// Token: 0x06014878 RID: 84088 RVA: 0x0052EFAB File Offset: 0x0052D1AB
+	// Token: 0x06011D5A RID: 73050 RVA: 0x0053DCC7 File Offset: 0x0053BEC7
 	private void OnClickTabToggle(EToggleState toggleState)
 	{
 		Action<RacingBetsGroupRewardData> clickToggleCallBack = this.ClickToggleCallBack;
@@ -123,17 +123,17 @@ public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardDa
 		clickToggleCallBack(this.GroupRewardData);
 	}
 
-	// Token: 0x06014879 RID: 84089 RVA: 0x0052EFC3 File Offset: 0x0052D1C3
+	// Token: 0x06011D5B RID: 73051 RVA: 0x0053DCDF File Offset: 0x0053BEDF
 	private bool CanExecuteToggleChange()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
 		return extendToggle == null || extendToggle.GetToggleState() != EToggleState.ETT_Checked;
 	}
 
-	// Token: 0x04009A60 RID: 39520
+	// Token: 0x04009BB8 RID: 39864
 	private RacingBetsGroupRewardData GroupRewardData;
 
-	// Token: 0x04009A61 RID: 39521
+	// Token: 0x04009BB9 RID: 39865
 	[Nullable(new byte[]
 	{
 		2,
@@ -141,7 +141,7 @@ public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardDa
 	})]
 	protected Action<RacingBetsGroupRewardData> ClickToggleCallBack;
 
-	// Token: 0x04009A62 RID: 39522
+	// Token: 0x04009BBA RID: 39866
 	private readonly string[] TabNameKeyList = new string[]
 	{
 		"Dango_RewardPage_RewardType_1",
@@ -149,17 +149,17 @@ public class RacingBetsRewardTabItem : GridProxyAbstract<RacingBetsGroupRewardDa
 		"Dango_RewardPage_RewardType_2"
 	};
 
-	// Token: 0x02008D76 RID: 36214
+	// Token: 0x02007EFF RID: 32511
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402DE64 RID: 188004
+		// Token: 0x0402917B RID: 168315
 		public const int TabToggle = 0;
 
-		// Token: 0x0402DE65 RID: 188005
+		// Token: 0x0402917C RID: 168316
 		public const int TabName = 1;
 
-		// Token: 0x0402DE66 RID: 188006
+		// Token: 0x0402917D RID: 168317
 		public const int RedDotItem = 2;
 	}
 }

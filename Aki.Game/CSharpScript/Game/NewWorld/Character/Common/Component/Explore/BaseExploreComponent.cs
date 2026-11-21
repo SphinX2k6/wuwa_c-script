@@ -7,14 +7,14 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x02007118 RID: 28952
+	// Token: 0x02006346 RID: 25414
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BaseExploreComponent : EntityComponent
 	{
-		// Token: 0x17009D1B RID: 40219
-		// (get) Token: 0x06046ADF RID: 289503 RVA: 0x011CB394 File Offset: 0x011C9594
-		// (set) Token: 0x06046AE0 RID: 289504 RVA: 0x011CB404 File Offset: 0x011C9604
+		// Token: 0x170074E1 RID: 29921
+		// (get) Token: 0x0603D924 RID: 252196 RVA: 0x011D4198 File Offset: 0x011D2398
+		// (set) Token: 0x0603D925 RID: 252197 RVA: 0x011D4208 File Offset: 0x011D2408
 		public GrapplingHookPointComponent InteractingTarget
 		{
 			get
@@ -43,9 +43,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x17009D1C RID: 40220
-		// (get) Token: 0x06046AE1 RID: 289505 RVA: 0x011CB468 File Offset: 0x011C9668
-		// (set) Token: 0x06046AE2 RID: 289506 RVA: 0x011CB4D8 File Offset: 0x011C96D8
+		// Token: 0x170074E2 RID: 29922
+		// (get) Token: 0x0603D926 RID: 252198 RVA: 0x011D426C File Offset: 0x011D246C
+		// (set) Token: 0x0603D927 RID: 252199 RVA: 0x011D42DC File Offset: 0x011D24DC
 		public GrapplingHookPointComponent FocusTarget
 		{
 			get
@@ -68,9 +68,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x17009D1D RID: 40221
-		// (get) Token: 0x06046AE3 RID: 289507 RVA: 0x011CB4E1 File Offset: 0x011C96E1
-		// (set) Token: 0x06046AE4 RID: 289508 RVA: 0x011CB4E9 File Offset: 0x011C96E9
+		// Token: 0x170074E3 RID: 29923
+		// (get) Token: 0x0603D928 RID: 252200 RVA: 0x011D42E5 File Offset: 0x011D24E5
+		// (set) Token: 0x0603D929 RID: 252201 RVA: 0x011D42ED File Offset: 0x011D24ED
 		public bool FocusTargetLegal
 		{
 			get
@@ -83,20 +83,12 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x17009D1E RID: 40222
-		// (get) Token: 0x06046AE5 RID: 289509 RVA: 0x011CB4F2 File Offset: 0x011C96F2
-		[Nullable(new byte[]
+		// Token: 0x170074E4 RID: 29924
+		// (get) Token: 0x0603D92A RID: 252202 RVA: 0x011D42F6 File Offset: 0x011D24F6
+		[Nullable(1)]
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public new static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
+			[NullableContext(1)]
 			get
 			{
 				return new Type[]
@@ -108,7 +100,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046AE6 RID: 289510 RVA: 0x011CB524 File Offset: 0x011C9724
+		// Token: 0x0603D92B RID: 252203 RVA: 0x011D4328 File Offset: 0x011D2528
 		protected unsafe override bool OnStart()
 		{
 			this.ActorComponent = base.Entity.GetComponent<BaseActorComponent>();
@@ -130,13 +122,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046AE7 RID: 289511 RVA: 0x011CB5F5 File Offset: 0x011C97F5
+		// Token: 0x0603D92C RID: 252204 RVA: 0x011D43F9 File Offset: 0x011D25F9
 		protected virtual bool CheckDisableComponent()
 		{
 			return false;
 		}
 
-		// Token: 0x06046AE8 RID: 289512 RVA: 0x011CB5F8 File Offset: 0x011C97F8
+		// Token: 0x0603D92D RID: 252205 RVA: 0x011D43FC File Offset: 0x011D25FC
 		protected override bool OnEnd()
 		{
 			if (this.CheckDisableComponent())
@@ -152,7 +144,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046AE9 RID: 289513 RVA: 0x011CB61D File Offset: 0x011C981D
+		// Token: 0x0603D92E RID: 252206 RVA: 0x011D4421 File Offset: 0x011D2621
 		protected override void OnTick(float delta)
 		{
 			if (!this.ExploreComponentEnabled)
@@ -162,7 +154,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.OnExploreComponentTick(delta);
 		}
 
-		// Token: 0x06046AEA RID: 289514 RVA: 0x011CB630 File Offset: 0x011C9830
+		// Token: 0x0603D92F RID: 252207 RVA: 0x011D4434 File Offset: 0x011D2634
 		[NullableContext(1)]
 		protected unsafe virtual bool OnExploreComponentEnable(string reason)
 		{
@@ -185,7 +177,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046AEB RID: 289515 RVA: 0x011CB6F0 File Offset: 0x011C98F0
+		// Token: 0x0603D930 RID: 252208 RVA: 0x011D44F4 File Offset: 0x011D26F4
 		[NullableContext(1)]
 		protected unsafe virtual bool OnExploreComponentDisable(string reason)
 		{
@@ -227,23 +219,23 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046AEC RID: 289516 RVA: 0x011CB837 File Offset: 0x011C9A37
+		// Token: 0x0603D931 RID: 252209 RVA: 0x011D463B File Offset: 0x011D283B
 		protected virtual void OnExploreComponentTick(float delta)
 		{
 		}
 
-		// Token: 0x06046AED RID: 289517 RVA: 0x011CB839 File Offset: 0x011C9A39
+		// Token: 0x0603D932 RID: 252210 RVA: 0x011D463D File Offset: 0x011D283D
 		protected virtual void OnDetectedTargetChanged(GrapplingHookPointComponent prevTarget)
 		{
 		}
 
-		// Token: 0x06046AEE RID: 289518 RVA: 0x011CB83B File Offset: 0x011C9A3B
+		// Token: 0x0603D933 RID: 252211 RVA: 0x011D463F File Offset: 0x011D283F
 		[NullableContext(1)]
 		public virtual void ClearDetectedTarget(string reason)
 		{
 		}
 
-		// Token: 0x06046AEF RID: 289519 RVA: 0x011CB840 File Offset: 0x011C9A40
+		// Token: 0x0603D934 RID: 252212 RVA: 0x011D4644 File Offset: 0x011D2844
 		[NullableContext(1)]
 		public unsafe bool ForceLockTarget([Nullable(2)] GrapplingHookPointComponent target, string reason)
 		{
@@ -283,7 +275,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046AF0 RID: 289520 RVA: 0x011CB998 File Offset: 0x011C9B98
+		// Token: 0x0603D935 RID: 252213 RVA: 0x011D479C File Offset: 0x011D299C
 		[NullableContext(1)]
 		public void CancelLockTarget(string reason, bool resetFocusTarget)
 		{
@@ -300,7 +292,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046AF1 RID: 289521 RVA: 0x011CB9EC File Offset: 0x011C9BEC
+		// Token: 0x0603D936 RID: 252214 RVA: 0x011D47F0 File Offset: 0x011D29F0
 		public unsafe void SetFocusTarget(GrapplingHookPointComponent target, bool targetLegal = true)
 		{
 			GrapplingHookPointComponent focusTarget = this.FocusTarget;
@@ -319,7 +311,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.OnDetectedTargetChanged(focusTarget);
 		}
 
-		// Token: 0x06046AF2 RID: 289522 RVA: 0x011CBAF4 File Offset: 0x011C9CF4
+		// Token: 0x0603D937 RID: 252215 RVA: 0x011D48F8 File Offset: 0x011D2AF8
 		public global::Vector GetInteractingTargetLocation()
 		{
 			BaseActorComponent actorComponent = this.ActorComponent;
@@ -336,7 +328,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return interactingTarget.HookLocation;
 		}
 
-		// Token: 0x06046AF3 RID: 289523 RVA: 0x011CBB48 File Offset: 0x011C9D48
+		// Token: 0x0603D938 RID: 252216 RVA: 0x011D494C File Offset: 0x011D2B4C
 		public void InitHighlightHandle()
 		{
 			if (this.HighlightLogic != null)
@@ -359,7 +351,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.PendingHighlightSkill = null;
 		}
 
-		// Token: 0x06046AF4 RID: 289524 RVA: 0x011CBBD0 File Offset: 0x011C9DD0
+		// Token: 0x0603D939 RID: 252217 RVA: 0x011D49D4 File Offset: 0x011D2BD4
 		public unsafe void ShowHighlightExploreSkill(int exploreToolId, float duration, bool? needRevertSkill, string tagName = null, int? itemId = null, bool? needTips = null, bool? autoHideAfterUseExploreSkill = null)
 		{
 			if (this.HighlightLogic == null)
@@ -391,7 +383,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.HighlightLogic.ShowHighlightExploreSkill(exploreToolId, duration, new bool?(needRevertSkill.GetValueOrDefault()), tagName, itemId, new bool?(needTips.GetValueOrDefault()), autoHideAfterUseExploreSkill);
 		}
 
-		// Token: 0x06046AF5 RID: 289525 RVA: 0x011CBD20 File Offset: 0x011C9F20
+		// Token: 0x0603D93A RID: 252218 RVA: 0x011D4B24 File Offset: 0x011D2D24
 		public unsafe void HideHighlightExploreSkill()
 		{
 			if (this.HighlightLogic == null)
@@ -410,7 +402,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.HighlightLogic.HideHighlightExploreSkill();
 		}
 
-		// Token: 0x06046AF6 RID: 289526 RVA: 0x011CBDC8 File Offset: 0x011C9FC8
+		// Token: 0x0603D93B RID: 252219 RVA: 0x011D4BCC File Offset: 0x011D2DCC
 		public int? GetHighlightSkillId()
 		{
 			HighlightExploreSkillLogic highlightLogic = this.HighlightLogic;
@@ -421,7 +413,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return new int?(highlightLogic.GetHighlightSkillId());
 		}
 
-		// Token: 0x06046AF7 RID: 289527 RVA: 0x011CBDF4 File Offset: 0x011C9FF4
+		// Token: 0x0603D93C RID: 252220 RVA: 0x011D4BF8 File Offset: 0x011D2DF8
 		public int? GetHighlightExploreToolId()
 		{
 			HighlightExploreSkillLogic highlightLogic = this.HighlightLogic;
@@ -432,7 +424,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return new int?(highlightLogic.GetHighlightExploreToolId());
 		}
 
-		// Token: 0x06046AF8 RID: 289528 RVA: 0x011CBE20 File Offset: 0x011CA020
+		// Token: 0x0603D93D RID: 252221 RVA: 0x011D4C24 File Offset: 0x011D2E24
 		[NullableContext(1)]
 		public void HandleSkillIconLogic(bool isAdd, string reason)
 		{
@@ -450,18 +442,18 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.UpdateHookIconHighlightTag(isAdd, num2);
 		}
 
-		// Token: 0x06046AF9 RID: 289529 RVA: 0x011CBE90 File Offset: 0x011CA090
+		// Token: 0x0603D93E RID: 252222 RVA: 0x011D4C94 File Offset: 0x011D2E94
 		public virtual bool CheckAllowLevelEventHighlightSkill()
 		{
 			return true;
 		}
 
-		// Token: 0x06046AFA RID: 289530 RVA: 0x011CBE93 File Offset: 0x011CA093
+		// Token: 0x0603D93F RID: 252223 RVA: 0x011D4C97 File Offset: 0x011D2E97
 		public virtual void OnLevelEventHighlightSkillUpdate(bool enabled)
 		{
 		}
 
-		// Token: 0x06046AFB RID: 289531 RVA: 0x011CBE98 File Offset: 0x011CA098
+		// Token: 0x0603D940 RID: 252224 RVA: 0x011D4C9C File Offset: 0x011D2E9C
 		[NullableContext(1)]
 		public unsafe void UpdateHookIconTag(bool add, int? tagId, string reason)
 		{
@@ -534,7 +526,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046AFC RID: 289532 RVA: 0x011CC1C8 File Offset: 0x011CA3C8
+		// Token: 0x0603D941 RID: 252225 RVA: 0x011D4FCC File Offset: 0x011D31CC
 		public unsafe void UpdateHookIconHighlightTag(bool add, int? tagId)
 		{
 			int? currentIconHighlightTagId = this.CurrentIconHighlightTagId;
@@ -582,7 +574,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046AFD RID: 289533 RVA: 0x011CC3EC File Offset: 0x011CA5EC
+		// Token: 0x0603D942 RID: 252226 RVA: 0x011D51F0 File Offset: 0x011D33F0
 		protected void SendHookMovePush()
 		{
 			GrapplingHookPointComponent interactingTarget = this.InteractingTarget;
@@ -597,7 +589,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046AFE RID: 289534 RVA: 0x011CC438 File Offset: 0x011CA638
+		// Token: 0x0603D943 RID: 252227 RVA: 0x011D523C File Offset: 0x011D343C
 		protected unsafe void SendHookTargetRequest(GrapplingHookPointComponent target, [Nullable(1)] Action onFailure, string compositeSessionName = null)
 		{
 			GrapplingHookPointComponent target2 = target;
@@ -673,7 +665,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046AFF RID: 289535 RVA: 0x011CC548 File Offset: 0x011CA748
+		// Token: 0x0603D944 RID: 252228 RVA: 0x011D534C File Offset: 0x011D354C
 		protected unsafe void SendHookEndRequest(GrapplingHookPointComponent target, string compositeSessionName = null)
 		{
 			if (target != null && target.Valid)
@@ -711,13 +703,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B00 RID: 289536 RVA: 0x011CC695 File Offset: 0x011CA895
+		// Token: 0x0603D945 RID: 252229 RVA: 0x011D5499 File Offset: 0x011D3699
 		public void SetIsHookEndByInterruptProxy(bool isHookEndByInterrupt)
 		{
 			this.IsHookEndByInterrupt = isHookEndByInterrupt;
 		}
 
-		// Token: 0x06046B01 RID: 289537 RVA: 0x011CC6A0 File Offset: 0x011CA8A0
+		// Token: 0x0603D946 RID: 252230 RVA: 0x011D54A4 File Offset: 0x011D36A4
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -726,211 +718,181 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 				return false;
 			}
 			BaseExploreComponent baseExploreComponent = (BaseExploreComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComponent"))
+			if (baseExploreComponent.ActorComponent == null)
 			{
-				if (baseExploreComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
+				this.ActorComponent = null;
 			}
-			if (base.CanResetComponentProperty("SkillComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 			{
-				if (baseExploreComponent.SkillComponent == null)
-				{
-					this.SkillComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseSkillComponent>(this.SkillComponent), "SkillComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TagComponent"))
+			if (baseExploreComponent.SkillComponent == null)
 			{
-				if (baseExploreComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
+				this.SkillComponent = null;
 			}
-			if (base.CanResetComponentProperty("HighlightLogic"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComponent), "SkillComponent"))
 			{
-				if (baseExploreComponent.HighlightLogic == null)
-				{
-					this.HighlightLogic = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<HighlightExploreSkillLogic>(this.HighlightLogic), "HighlightLogic"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentIconTagId"))
+			if (baseExploreComponent.TagComponent == null)
 			{
-				this.CurrentIconTagId = baseExploreComponent.CurrentIconTagId;
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("CurrentIconHighlightTagId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
-				this.CurrentIconHighlightTagId = baseExploreComponent.CurrentIconHighlightTagId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LevelEventLightingSkill"))
+			if (baseExploreComponent.HighlightLogic == null)
 			{
-				this.LevelEventLightingSkill = baseExploreComponent.LevelEventLightingSkill;
+				this.HighlightLogic = null;
 			}
-			if (base.CanResetComponentProperty("InteractingTargetInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HighlightLogic), "HighlightLogic"))
 			{
-				if (baseExploreComponent.InteractingTargetInternal == null)
-				{
-					this.InteractingTargetInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GrapplingHookPointComponent>(this.InteractingTargetInternal), "InteractingTargetInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("InteractingTargetEntityId"))
+			this.CurrentIconTagId = baseExploreComponent.CurrentIconTagId;
+			this.CurrentIconHighlightTagId = baseExploreComponent.CurrentIconHighlightTagId;
+			this.LevelEventLightingSkill = baseExploreComponent.LevelEventLightingSkill;
+			if (baseExploreComponent.InteractingTargetInternal == null)
 			{
-				this.InteractingTargetEntityId = baseExploreComponent.InteractingTargetEntityId;
+				this.InteractingTargetInternal = null;
 			}
-			if (base.CanResetComponentProperty("FocusTargetInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractingTargetInternal), "InteractingTargetInternal"))
 			{
-				if (baseExploreComponent.FocusTargetInternal == null)
-				{
-					this.FocusTargetInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GrapplingHookPointComponent>(this.FocusTargetInternal), "FocusTargetInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FocusTargetLegalExceptSkill"))
+			this.InteractingTargetEntityId = baseExploreComponent.InteractingTargetEntityId;
+			if (baseExploreComponent.FocusTargetInternal == null)
 			{
-				this.FocusTargetLegalExceptSkill = baseExploreComponent.FocusTargetLegalExceptSkill;
+				this.FocusTargetInternal = null;
 			}
-			if (base.CanResetComponentProperty("FocusTargetLegalInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FocusTargetInternal), "FocusTargetInternal"))
 			{
-				this.FocusTargetLegalInternal = baseExploreComponent.FocusTargetLegalInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SimulateInteractingTarget"))
+			this.FocusTargetLegalExceptSkill = baseExploreComponent.FocusTargetLegalExceptSkill;
+			this.FocusTargetLegalInternal = baseExploreComponent.FocusTargetLegalInternal;
+			if (baseExploreComponent.SimulateInteractingTarget == null)
 			{
-				if (baseExploreComponent.SimulateInteractingTarget == null)
-				{
-					this.SimulateInteractingTarget = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GrapplingHookPointComponent>(this.SimulateInteractingTarget), "SimulateInteractingTarget"))
-				{
-					return false;
-				}
+				this.SimulateInteractingTarget = null;
 			}
-			if (base.CanResetComponentProperty("SimulateInteractingTargetLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SimulateInteractingTarget), "SimulateInteractingTarget"))
 			{
-				if (baseExploreComponent.SimulateInteractingTargetLocation == null)
-				{
-					this.SimulateInteractingTargetLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SimulateInteractingTargetLocation), "SimulateInteractingTargetLocation"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SyncEnabled"))
+			if (baseExploreComponent.SimulateInteractingTargetLocation == null)
 			{
-				this.SyncEnabled = baseExploreComponent.SyncEnabled;
+				this.SimulateInteractingTargetLocation = null;
 			}
-			if (base.CanResetComponentProperty("IsHookEndByInterrupt"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SimulateInteractingTargetLocation), "SimulateInteractingTargetLocation"))
 			{
-				this.IsHookEndByInterrupt = baseExploreComponent.IsHookEndByInterrupt;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LogKey"))
+			this.SyncEnabled = baseExploreComponent.SyncEnabled;
+			this.IsHookEndByInterrupt = baseExploreComponent.IsHookEndByInterrupt;
+			this.LogKey = baseExploreComponent.LogKey;
+			this.ExploreComponentEnabled = baseExploreComponent.ExploreComponentEnabled;
+			if (baseExploreComponent.PendingHighlightSkill == null)
 			{
-				this.LogKey = baseExploreComponent.LogKey;
+				this.PendingHighlightSkill = null;
 			}
-			if (base.CanResetComponentProperty("ExploreComponentEnabled"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingHighlightSkill), "PendingHighlightSkill"))
 			{
-				this.ExploreComponentEnabled = baseExploreComponent.ExploreComponentEnabled;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PendingHighlightSkill"))
-			{
-				if (baseExploreComponent.PendingHighlightSkill == null)
-				{
-					this.PendingHighlightSkill = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.PendingHighlightSkill), "PendingHighlightSkill"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsLockingTarget"))
-			{
-				this.IsLockingTarget = baseExploreComponent.IsLockingTarget;
-			}
+			this.IsLockingTarget = baseExploreComponent.IsLockingTarget;
 			return true;
 		}
 
-		// Token: 0x040251A3 RID: 151971
+		// Token: 0x170074E5 RID: 29925
+		// (get) Token: 0x0603D947 RID: 252231 RVA: 0x011D56CB File Offset: 0x011D38CB
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074E6 RID: 29926
+		// (get) Token: 0x0603D948 RID: 252232 RVA: 0x011D56CE File Offset: 0x011D38CE
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074E7 RID: 29927
+		// (get) Token: 0x0603D949 RID: 252233 RVA: 0x011D56D1 File Offset: 0x011D38D1
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020A83 RID: 133763
 		public BaseActorComponent ActorComponent;
 
-		// Token: 0x040251A4 RID: 151972
+		// Token: 0x04020A84 RID: 133764
 		protected BaseSkillComponent SkillComponent;
 
-		// Token: 0x040251A5 RID: 151973
+		// Token: 0x04020A85 RID: 133765
 		public BaseTagComponent TagComponent;
 
-		// Token: 0x040251A6 RID: 151974
+		// Token: 0x04020A86 RID: 133766
 		protected HighlightExploreSkillLogic HighlightLogic;
 
-		// Token: 0x040251A7 RID: 151975
+		// Token: 0x04020A87 RID: 133767
 		protected int? CurrentIconTagId;
 
-		// Token: 0x040251A8 RID: 151976
+		// Token: 0x04020A88 RID: 133768
 		protected int? CurrentIconHighlightTagId;
 
-		// Token: 0x040251A9 RID: 151977
+		// Token: 0x04020A89 RID: 133769
 		protected bool LevelEventLightingSkill;
 
-		// Token: 0x040251AA RID: 151978
+		// Token: 0x04020A8A RID: 133770
 		private GrapplingHookPointComponent InteractingTargetInternal;
 
-		// Token: 0x040251AB RID: 151979
+		// Token: 0x04020A8B RID: 133771
 		protected int? InteractingTargetEntityId;
 
-		// Token: 0x040251AC RID: 151980
+		// Token: 0x04020A8C RID: 133772
 		protected GrapplingHookPointComponent FocusTargetInternal;
 
-		// Token: 0x040251AD RID: 151981
+		// Token: 0x04020A8D RID: 133773
 		public bool FocusTargetLegalExceptSkill;
 
-		// Token: 0x040251AE RID: 151982
+		// Token: 0x04020A8E RID: 133774
 		protected bool FocusTargetLegalInternal;
 
-		// Token: 0x040251AF RID: 151983
+		// Token: 0x04020A8F RID: 133775
 		public GrapplingHookPointComponent SimulateInteractingTarget;
 
-		// Token: 0x040251B0 RID: 151984
+		// Token: 0x04020A90 RID: 133776
 		public global::Vector SimulateInteractingTargetLocation;
 
-		// Token: 0x040251B1 RID: 151985
+		// Token: 0x04020A91 RID: 133777
 		public bool SyncEnabled = true;
 
-		// Token: 0x040251B2 RID: 151986
+		// Token: 0x04020A92 RID: 133778
 		protected bool IsHookEndByInterrupt;
 
-		// Token: 0x040251B3 RID: 151987
+		// Token: 0x04020A93 RID: 133779
 		[Nullable(1)]
 		public string LogKey = "";
 
-		// Token: 0x040251B4 RID: 151988
+		// Token: 0x04020A94 RID: 133780
 		protected bool ExploreComponentEnabled;
 
-		// Token: 0x040251B5 RID: 151989
+		// Token: 0x04020A95 RID: 133781
 		protected Action PendingHighlightSkill;
 
-		// Token: 0x040251B6 RID: 151990
+		// Token: 0x04020A96 RID: 133782
 		public bool IsLockingTarget;
 	}
 }

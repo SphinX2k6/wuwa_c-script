@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200554E RID: 21838
+	// Token: 0x02005AE0 RID: 23264
 	public struct IMeshNpcModel : IFlatbufferObject
 	{
-		// Token: 0x1700A149 RID: 41289
-		// (get) Token: 0x060241A7 RID: 147879 RVA: 0x004FCE75 File Offset: 0x004FB075
+		// Token: 0x1700A9BD RID: 43453
+		// (get) Token: 0x06026342 RID: 156482 RVA: 0x0053C55D File Offset: 0x0053A75D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060241A8 RID: 147880 RVA: 0x004FCE82 File Offset: 0x004FB082
+		// Token: 0x06026343 RID: 156483 RVA: 0x0053C56A File Offset: 0x0053A76A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060241A9 RID: 147881 RVA: 0x004FCE8C File Offset: 0x004FB08C
+		// Token: 0x06026344 RID: 156484 RVA: 0x0053C574 File Offset: 0x0053A774
 		public static IMeshNpcModel GetRootAsIMeshNpcModel(ByteBuffer _bb)
 		{
 			return IMeshNpcModel.GetRootAsIMeshNpcModel(_bb, default(IMeshNpcModel));
 		}
 
-		// Token: 0x060241AA RID: 147882 RVA: 0x004FCEA8 File Offset: 0x004FB0A8
+		// Token: 0x06026345 RID: 156485 RVA: 0x0053C590 File Offset: 0x0053A790
 		public static IMeshNpcModel GetRootAsIMeshNpcModel(ByteBuffer _bb, IMeshNpcModel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060241AB RID: 147883 RVA: 0x004FCEC5 File Offset: 0x004FB0C5
+		// Token: 0x06026346 RID: 156486 RVA: 0x0053C5AD File Offset: 0x0053A7AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060241AC RID: 147884 RVA: 0x004FCED4 File Offset: 0x004FB0D4
+		// Token: 0x06026347 RID: 156487 RVA: 0x0053C5BC File Offset: 0x0053A7BC
 		public IMeshNpcModel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A14A RID: 41290
-		// (get) Token: 0x060241AD RID: 147885 RVA: 0x004FCEE4 File Offset: 0x004FB0E4
+		// Token: 0x1700A9BE RID: 43454
+		// (get) Token: 0x06026348 RID: 156488 RVA: 0x0053C5CC File Offset: 0x0053A7CC
 		public ENpcModelType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A14B RID: 41291
-		// (get) Token: 0x060241AE RID: 147886 RVA: 0x004FCF20 File Offset: 0x004FB120
+		// Token: 0x1700A9BF RID: 43455
+		// (get) Token: 0x06026349 RID: 156489 RVA: 0x0053C608 File Offset: 0x0053A808
 		public string Mesh
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060241AF RID: 147887 RVA: 0x004FCF57 File Offset: 0x004FB157
+		// Token: 0x0602634A RID: 156490 RVA: 0x0053C63F File Offset: 0x0053A83F
 		public Span<byte> GetMeshBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060241B0 RID: 147888 RVA: 0x004FCF66 File Offset: 0x004FB166
+		// Token: 0x0602634B RID: 156491 RVA: 0x0053C64E File Offset: 0x0053A84E
 		public byte[] GetMeshArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060241B1 RID: 147889 RVA: 0x004FCF74 File Offset: 0x004FB174
+		// Token: 0x0602634C RID: 156492 RVA: 0x0053C65C File Offset: 0x0053A85C
 		public static Offset<IMeshNpcModel> CreateIMeshNpcModel(FlatBufferBuilder builder, ENpcModelType Type = ENpcModelType.Mesh, StringOffset MeshOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMeshNpcModel.EndIMeshNpcModel(builder);
 		}
 
-		// Token: 0x060241B2 RID: 147890 RVA: 0x004FCF91 File Offset: 0x004FB191
+		// Token: 0x0602634D RID: 156493 RVA: 0x0053C679 File Offset: 0x0053A879
 		public static void StartIMeshNpcModel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060241B3 RID: 147891 RVA: 0x004FCF9A File Offset: 0x004FB19A
+		// Token: 0x0602634E RID: 156494 RVA: 0x0053C682 File Offset: 0x0053A882
 		public static void AddType(FlatBufferBuilder builder, ENpcModelType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060241B4 RID: 147892 RVA: 0x004FCFA5 File Offset: 0x004FB1A5
+		// Token: 0x0602634F RID: 156495 RVA: 0x0053C68D File Offset: 0x0053A88D
 		public static void AddMesh(FlatBufferBuilder builder, StringOffset meshOffset)
 		{
 			builder.AddOffset(1, meshOffset.Value, 0);
 		}
 
-		// Token: 0x060241B5 RID: 147893 RVA: 0x004FCFB5 File Offset: 0x004FB1B5
+		// Token: 0x06026350 RID: 156496 RVA: 0x0053C69D File Offset: 0x0053A89D
 		public static Offset<IMeshNpcModel> EndIMeshNpcModel(FlatBufferBuilder builder)
 		{
 			return new Offset<IMeshNpcModel>(builder.EndTable());
 		}
 
-		// Token: 0x060241B6 RID: 147894 RVA: 0x004FCFC4 File Offset: 0x004FB1C4
+		// Token: 0x06026351 RID: 156497 RVA: 0x0053C6AC File Offset: 0x0053A8AC
 		public IMeshNpcModelT UnPack()
 		{
 			IMeshNpcModelT meshNpcModelT = new IMeshNpcModelT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return meshNpcModelT;
 		}
 
-		// Token: 0x060241B7 RID: 147895 RVA: 0x004FCFDF File Offset: 0x004FB1DF
+		// Token: 0x06026352 RID: 156498 RVA: 0x0053C6C7 File Offset: 0x0053A8C7
 		public void UnPackTo(IMeshNpcModelT _o)
 		{
 			_o.Type = this.Type;
 			_o.Mesh = this.Mesh;
 		}
 
-		// Token: 0x060241B8 RID: 147896 RVA: 0x004FCFFC File Offset: 0x004FB1FC
+		// Token: 0x06026353 RID: 156499 RVA: 0x0053C6E4 File Offset: 0x0053A8E4
 		public static Offset<IMeshNpcModel> Pack(FlatBufferBuilder builder, IMeshNpcModelT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMeshNpcModel.CreateIMeshNpcModel(builder, _o.Type, meshOffset);
 		}
 
-		// Token: 0x0400E85D RID: 59485
+		// Token: 0x0400F4AE RID: 62638
 		private Table __p;
 	}
 }

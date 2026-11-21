@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000297 RID: 663
+	// Token: 0x0200029C RID: 668
 	public sealed class ClientBasicInfo : IMessage<ClientBasicInfo>, IMessage, IEquatable<ClientBasicInfo>, IDeepCloneable<ClientBasicInfo>, IBufferMessage
 	{
-		// Token: 0x0600450E RID: 17678 RVA: 0x000A9644 File Offset: 0x000A7844
+		// Token: 0x060045B5 RID: 17845 RVA: 0x000AB311 File Offset: 0x000A9511
 		[NullableContext(1)]
 		public static ClientBasicInfo Create()
 		{
 			return new ClientBasicInfo();
 		}
 
-		// Token: 0x17000BE1 RID: 3041
-		// (get) Token: 0x0600450F RID: 17679 RVA: 0x000A964B File Offset: 0x000A784B
+		// Token: 0x17000C01 RID: 3073
+		// (get) Token: 0x060045B6 RID: 17846 RVA: 0x000AB318 File Offset: 0x000A9518
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BE2 RID: 3042
-		// (get) Token: 0x06004510 RID: 17680 RVA: 0x000A964E File Offset: 0x000A784E
+		// Token: 0x17000C02 RID: 3074
+		// (get) Token: 0x060045B7 RID: 17847 RVA: 0x000AB31B File Offset: 0x000A951B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004511 RID: 17681 RVA: 0x000A9658 File Offset: 0x000A7858
+		// Token: 0x060045B8 RID: 17848 RVA: 0x000AB324 File Offset: 0x000A9524
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ClientBasicInfo()
 		{
 		}
 
-		// Token: 0x06004512 RID: 17682 RVA: 0x000A9710 File Offset: 0x000A7910
+		// Token: 0x060045B9 RID: 17849 RVA: 0x000AB3DC File Offset: 0x000A95DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ClientBasicInfo(ClientBasicInfo other) : this()
@@ -73,10 +73,11 @@ namespace Aki.Protocol
 			this.driverDate_ = other.driverDate_;
 			this.clientVersion_ = other.clientVersion_;
 			this.oSVersion_ = other.oSVersion_;
+			this.qualityVersion_ = other.qualityVersion_;
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06004513 RID: 17683 RVA: 0x000A9824 File Offset: 0x000A7A24
+		// Token: 0x060045BA RID: 17850 RVA: 0x000AB4FC File Offset: 0x000A96FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ClientBasicInfo Clone()
@@ -84,9 +85,9 @@ namespace Aki.Protocol
 			return new ClientBasicInfo(this);
 		}
 
-		// Token: 0x17000BE3 RID: 3043
-		// (get) Token: 0x06004514 RID: 17684 RVA: 0x000A982C File Offset: 0x000A7A2C
-		// (set) Token: 0x06004515 RID: 17685 RVA: 0x000A9834 File Offset: 0x000A7A34
+		// Token: 0x17000C03 RID: 3075
+		// (get) Token: 0x060045BB RID: 17851 RVA: 0x000AB504 File Offset: 0x000A9704
+		// (set) Token: 0x060045BC RID: 17852 RVA: 0x000AB50C File Offset: 0x000A970C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string Platform
@@ -101,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BE4 RID: 3044
-		// (get) Token: 0x06004516 RID: 17686 RVA: 0x000A9847 File Offset: 0x000A7A47
-		// (set) Token: 0x06004517 RID: 17687 RVA: 0x000A984F File Offset: 0x000A7A4F
+		// Token: 0x17000C04 RID: 3076
+		// (get) Token: 0x060045BD RID: 17853 RVA: 0x000AB51F File Offset: 0x000A971F
+		// (set) Token: 0x060045BE RID: 17854 RVA: 0x000AB527 File Offset: 0x000A9727
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string DeviceId
@@ -118,9 +119,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BE5 RID: 3045
-		// (get) Token: 0x06004518 RID: 17688 RVA: 0x000A9862 File Offset: 0x000A7A62
-		// (set) Token: 0x06004519 RID: 17689 RVA: 0x000A986A File Offset: 0x000A7A6A
+		// Token: 0x17000C05 RID: 3077
+		// (get) Token: 0x060045BF RID: 17855 RVA: 0x000AB53A File Offset: 0x000A973A
+		// (set) Token: 0x060045C0 RID: 17856 RVA: 0x000AB542 File Offset: 0x000A9742
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NetStatusType NetStatus
@@ -135,9 +136,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BE6 RID: 3046
-		// (get) Token: 0x0600451A RID: 17690 RVA: 0x000A9873 File Offset: 0x000A7A73
-		// (set) Token: 0x0600451B RID: 17691 RVA: 0x000A987B File Offset: 0x000A7A7B
+		// Token: 0x17000C06 RID: 3078
+		// (get) Token: 0x060045C1 RID: 17857 RVA: 0x000AB54B File Offset: 0x000A974B
+		// (set) Token: 0x060045C2 RID: 17858 RVA: 0x000AB553 File Offset: 0x000A9753
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string Model
@@ -152,9 +153,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BE7 RID: 3047
-		// (get) Token: 0x0600451C RID: 17692 RVA: 0x000A988E File Offset: 0x000A7A8E
-		// (set) Token: 0x0600451D RID: 17693 RVA: 0x000A9896 File Offset: 0x000A7A96
+		// Token: 0x17000C07 RID: 3079
+		// (get) Token: 0x060045C3 RID: 17859 RVA: 0x000AB566 File Offset: 0x000A9766
+		// (set) Token: 0x060045C4 RID: 17860 RVA: 0x000AB56E File Offset: 0x000A976E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string CPU
@@ -169,9 +170,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BE8 RID: 3048
-		// (get) Token: 0x0600451E RID: 17694 RVA: 0x000A98A9 File Offset: 0x000A7AA9
-		// (set) Token: 0x0600451F RID: 17695 RVA: 0x000A98B1 File Offset: 0x000A7AB1
+		// Token: 0x17000C08 RID: 3080
+		// (get) Token: 0x060045C5 RID: 17861 RVA: 0x000AB581 File Offset: 0x000A9781
+		// (set) Token: 0x060045C6 RID: 17862 RVA: 0x000AB589 File Offset: 0x000A9789
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ClientDeviceLevel DeviceLevel
@@ -186,9 +187,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BE9 RID: 3049
-		// (get) Token: 0x06004520 RID: 17696 RVA: 0x000A98BA File Offset: 0x000A7ABA
-		// (set) Token: 0x06004521 RID: 17697 RVA: 0x000A98C2 File Offset: 0x000A7AC2
+		// Token: 0x17000C09 RID: 3081
+		// (get) Token: 0x060045C7 RID: 17863 RVA: 0x000AB592 File Offset: 0x000A9792
+		// (set) Token: 0x060045C8 RID: 17864 RVA: 0x000AB59A File Offset: 0x000A979A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Language
@@ -203,9 +204,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BEA RID: 3050
-		// (get) Token: 0x06004522 RID: 17698 RVA: 0x000A98CB File Offset: 0x000A7ACB
-		// (set) Token: 0x06004523 RID: 17699 RVA: 0x000A98D3 File Offset: 0x000A7AD3
+		// Token: 0x17000C0A RID: 3082
+		// (get) Token: 0x060045C9 RID: 17865 RVA: 0x000AB5A3 File Offset: 0x000A97A3
+		// (set) Token: 0x060045CA RID: 17866 RVA: 0x000AB5AB File Offset: 0x000A97AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string DistinctId
@@ -220,9 +221,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BEB RID: 3051
-		// (get) Token: 0x06004524 RID: 17700 RVA: 0x000A98E6 File Offset: 0x000A7AE6
-		// (set) Token: 0x06004525 RID: 17701 RVA: 0x000A98EE File Offset: 0x000A7AEE
+		// Token: 0x17000C0B RID: 3083
+		// (get) Token: 0x060045CB RID: 17867 RVA: 0x000AB5BE File Offset: 0x000A97BE
+		// (set) Token: 0x060045CC RID: 17868 RVA: 0x000AB5C6 File Offset: 0x000A97C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string MacAddress
@@ -237,9 +238,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BEC RID: 3052
-		// (get) Token: 0x06004526 RID: 17702 RVA: 0x000A9901 File Offset: 0x000A7B01
-		// (set) Token: 0x06004527 RID: 17703 RVA: 0x000A9909 File Offset: 0x000A7B09
+		// Token: 0x17000C0C RID: 3084
+		// (get) Token: 0x060045CD RID: 17869 RVA: 0x000AB5D9 File Offset: 0x000A97D9
+		// (set) Token: 0x060045CE RID: 17870 RVA: 0x000AB5E1 File Offset: 0x000A97E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string PkgId
@@ -254,9 +255,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BED RID: 3053
-		// (get) Token: 0x06004528 RID: 17704 RVA: 0x000A991C File Offset: 0x000A7B1C
-		// (set) Token: 0x06004529 RID: 17705 RVA: 0x000A9924 File Offset: 0x000A7B24
+		// Token: 0x17000C0D RID: 3085
+		// (get) Token: 0x060045CF RID: 17871 RVA: 0x000AB5F4 File Offset: 0x000A97F4
+		// (set) Token: 0x060045D0 RID: 17872 RVA: 0x000AB5FC File Offset: 0x000A97FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ServerTag
@@ -271,9 +272,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BEE RID: 3054
-		// (get) Token: 0x0600452A RID: 17706 RVA: 0x000A9937 File Offset: 0x000A7B37
-		// (set) Token: 0x0600452B RID: 17707 RVA: 0x000A993F File Offset: 0x000A7B3F
+		// Token: 0x17000C0E RID: 3086
+		// (get) Token: 0x060045D1 RID: 17873 RVA: 0x000AB60F File Offset: 0x000A980F
+		// (set) Token: 0x060045D2 RID: 17874 RVA: 0x000AB617 File Offset: 0x000A9817
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SystemLanguage
@@ -288,9 +289,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BEF RID: 3055
-		// (get) Token: 0x0600452C RID: 17708 RVA: 0x000A9952 File Offset: 0x000A7B52
-		// (set) Token: 0x0600452D RID: 17709 RVA: 0x000A995A File Offset: 0x000A7B5A
+		// Token: 0x17000C0F RID: 3087
+		// (get) Token: 0x060045D3 RID: 17875 RVA: 0x000AB62A File Offset: 0x000A982A
+		// (set) Token: 0x060045D4 RID: 17876 RVA: 0x000AB632 File Offset: 0x000A9832
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string OS
@@ -305,9 +306,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BF0 RID: 3056
-		// (get) Token: 0x0600452E RID: 17710 RVA: 0x000A996D File Offset: 0x000A7B6D
-		// (set) Token: 0x0600452F RID: 17711 RVA: 0x000A9975 File Offset: 0x000A7B75
+		// Token: 0x17000C10 RID: 3088
+		// (get) Token: 0x060045D5 RID: 17877 RVA: 0x000AB645 File Offset: 0x000A9845
+		// (set) Token: 0x060045D6 RID: 17878 RVA: 0x000AB64D File Offset: 0x000A984D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string DeviceId2ShuShu
@@ -322,9 +323,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BF1 RID: 3057
-		// (get) Token: 0x06004530 RID: 17712 RVA: 0x000A9988 File Offset: 0x000A7B88
-		// (set) Token: 0x06004531 RID: 17713 RVA: 0x000A9990 File Offset: 0x000A7B90
+		// Token: 0x17000C11 RID: 3089
+		// (get) Token: 0x060045D7 RID: 17879 RVA: 0x000AB660 File Offset: 0x000A9860
+		// (set) Token: 0x060045D8 RID: 17880 RVA: 0x000AB668 File Offset: 0x000A9868
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ScreenHeight
@@ -339,9 +340,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BF2 RID: 3058
-		// (get) Token: 0x06004532 RID: 17714 RVA: 0x000A9999 File Offset: 0x000A7B99
-		// (set) Token: 0x06004533 RID: 17715 RVA: 0x000A99A1 File Offset: 0x000A7BA1
+		// Token: 0x17000C12 RID: 3090
+		// (get) Token: 0x060045D9 RID: 17881 RVA: 0x000AB671 File Offset: 0x000A9871
+		// (set) Token: 0x060045DA RID: 17882 RVA: 0x000AB679 File Offset: 0x000A9879
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ScreenWidth
@@ -356,9 +357,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BF3 RID: 3059
-		// (get) Token: 0x06004534 RID: 17716 RVA: 0x000A99AA File Offset: 0x000A7BAA
-		// (set) Token: 0x06004535 RID: 17717 RVA: 0x000A99B2 File Offset: 0x000A7BB2
+		// Token: 0x17000C13 RID: 3091
+		// (get) Token: 0x060045DB RID: 17883 RVA: 0x000AB682 File Offset: 0x000A9882
+		// (set) Token: 0x060045DC RID: 17884 RVA: 0x000AB68A File Offset: 0x000A988A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string DeviceInfo
@@ -373,9 +374,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BF4 RID: 3060
-		// (get) Token: 0x06004536 RID: 17718 RVA: 0x000A99C5 File Offset: 0x000A7BC5
-		// (set) Token: 0x06004537 RID: 17719 RVA: 0x000A99CD File Offset: 0x000A7BCD
+		// Token: 0x17000C14 RID: 3092
+		// (get) Token: 0x060045DD RID: 17885 RVA: 0x000AB69D File Offset: 0x000A989D
+		// (set) Token: 0x060045DE RID: 17886 RVA: 0x000AB6A5 File Offset: 0x000A98A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string DriverDate
@@ -390,9 +391,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BF5 RID: 3061
-		// (get) Token: 0x06004538 RID: 17720 RVA: 0x000A99E0 File Offset: 0x000A7BE0
-		// (set) Token: 0x06004539 RID: 17721 RVA: 0x000A99E8 File Offset: 0x000A7BE8
+		// Token: 0x17000C15 RID: 3093
+		// (get) Token: 0x060045DF RID: 17887 RVA: 0x000AB6B8 File Offset: 0x000A98B8
+		// (set) Token: 0x060045E0 RID: 17888 RVA: 0x000AB6C0 File Offset: 0x000A98C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ClientVersion
@@ -407,9 +408,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000BF6 RID: 3062
-		// (get) Token: 0x0600453A RID: 17722 RVA: 0x000A99FB File Offset: 0x000A7BFB
-		// (set) Token: 0x0600453B RID: 17723 RVA: 0x000A9A03 File Offset: 0x000A7C03
+		// Token: 0x17000C16 RID: 3094
+		// (get) Token: 0x060045E1 RID: 17889 RVA: 0x000AB6D3 File Offset: 0x000A98D3
+		// (set) Token: 0x060045E2 RID: 17890 RVA: 0x000AB6DB File Offset: 0x000A98DB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string OSVersion
@@ -424,7 +425,24 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600453C RID: 17724 RVA: 0x000A9A16 File Offset: 0x000A7C16
+		// Token: 0x17000C17 RID: 3095
+		// (get) Token: 0x060045E3 RID: 17891 RVA: 0x000AB6EE File Offset: 0x000A98EE
+		// (set) Token: 0x060045E4 RID: 17892 RVA: 0x000AB6F6 File Offset: 0x000A98F6
+		[DebuggerNonUserCode]
+		[GeneratedCode("protoc", null)]
+		public int QualityVersion
+		{
+			get
+			{
+				return this.qualityVersion_;
+			}
+			set
+			{
+				this.qualityVersion_ = value;
+			}
+		}
+
+		// Token: 0x060045E5 RID: 17893 RVA: 0x000AB6FF File Offset: 0x000A98FF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -432,15 +450,15 @@ namespace Aki.Protocol
 			return this.Equals(other as ClientBasicInfo);
 		}
 
-		// Token: 0x0600453D RID: 17725 RVA: 0x000A9A24 File Offset: 0x000A7C24
+		// Token: 0x060045E6 RID: 17894 RVA: 0x000AB710 File Offset: 0x000A9910
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ClientBasicInfo other)
 		{
-			return other != null && (other == this || (!(this.Platform != other.Platform) && !(this.DeviceId != other.DeviceId) && this.NetStatus == other.NetStatus && !(this.Model != other.Model) && !(this.CPU != other.CPU) && this.DeviceLevel == other.DeviceLevel && this.Language == other.Language && !(this.DistinctId != other.DistinctId) && !(this.MacAddress != other.MacAddress) && !(this.PkgId != other.PkgId) && !(this.ServerTag != other.ServerTag) && !(this.SystemLanguage != other.SystemLanguage) && !(this.OS != other.OS) && !(this.DeviceId2ShuShu != other.DeviceId2ShuShu) && this.ScreenHeight == other.ScreenHeight && this.ScreenWidth == other.ScreenWidth && !(this.DeviceInfo != other.DeviceInfo) && !(this.DriverDate != other.DriverDate) && !(this.ClientVersion != other.ClientVersion) && !(this.OSVersion != other.OSVersion) && object.Equals(this._unknownFields, other._unknownFields)));
+			return other != null && (other == this || (!(this.Platform != other.Platform) && !(this.DeviceId != other.DeviceId) && this.NetStatus == other.NetStatus && !(this.Model != other.Model) && !(this.CPU != other.CPU) && this.DeviceLevel == other.DeviceLevel && this.Language == other.Language && !(this.DistinctId != other.DistinctId) && !(this.MacAddress != other.MacAddress) && !(this.PkgId != other.PkgId) && !(this.ServerTag != other.ServerTag) && !(this.SystemLanguage != other.SystemLanguage) && !(this.OS != other.OS) && !(this.DeviceId2ShuShu != other.DeviceId2ShuShu) && this.ScreenHeight == other.ScreenHeight && this.ScreenWidth == other.ScreenWidth && !(this.DeviceInfo != other.DeviceInfo) && !(this.DriverDate != other.DriverDate) && !(this.ClientVersion != other.ClientVersion) && !(this.OSVersion != other.OSVersion) && this.QualityVersion == other.QualityVersion && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600453E RID: 17726 RVA: 0x000A9BD8 File Offset: 0x000A7DD8
+		// Token: 0x060045E7 RID: 17895 RVA: 0x000AB8D4 File Offset: 0x000A9AD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -526,6 +544,10 @@ namespace Aki.Protocol
 			{
 				num ^= this.OSVersion.GetHashCode();
 			}
+			if (this.QualityVersion != 0)
+			{
+				num ^= this.QualityVersion.GetHashCode();
+			}
 			if (this._unknownFields != null)
 			{
 				num ^= this._unknownFields.GetHashCode();
@@ -533,7 +555,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600453F RID: 17727 RVA: 0x000A9E1C File Offset: 0x000A801C
+		// Token: 0x060045E8 RID: 17896 RVA: 0x000ABB31 File Offset: 0x000A9D31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -541,7 +563,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004540 RID: 17728 RVA: 0x000A9E29 File Offset: 0x000A8029
+		// Token: 0x060045E9 RID: 17897 RVA: 0x000ABB3E File Offset: 0x000A9D3E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -549,7 +571,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06004541 RID: 17729 RVA: 0x000A9E34 File Offset: 0x000A8034
+		// Token: 0x060045EA RID: 17898 RVA: 0x000ABB48 File Offset: 0x000A9D48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -654,13 +676,18 @@ namespace Aki.Protocol
 				output.WriteRawTag(162, 1);
 				output.WriteString(this.OSVersion);
 			}
+			if (this.QualityVersion != 0)
+			{
+				output.WriteRawTag(168, 1);
+				output.WriteInt32(this.QualityVersion);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06004542 RID: 17730 RVA: 0x000AA0E4 File Offset: 0x000A82E4
+		// Token: 0x060045EB RID: 17899 RVA: 0x000ABE18 File Offset: 0x000AA018
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -746,6 +773,10 @@ namespace Aki.Protocol
 			{
 				num += 2 + CodedOutputStream.ComputeStringSize(this.OSVersion);
 			}
+			if (this.QualityVersion != 0)
+			{
+				num += 2 + CodedOutputStream.ComputeInt32Size(this.QualityVersion);
+			}
 			if (this._unknownFields != null)
 			{
 				num += this._unknownFields.CalculateSize();
@@ -753,7 +784,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004543 RID: 17731 RVA: 0x000AA338 File Offset: 0x000A8538
+		// Token: 0x060045EC RID: 17900 RVA: 0x000AC084 File Offset: 0x000AA284
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ClientBasicInfo other)
@@ -842,10 +873,14 @@ namespace Aki.Protocol
 			{
 				this.OSVersion = other.OSVersion;
 			}
+			if (other.QualityVersion != 0)
+			{
+				this.QualityVersion = other.QualityVersion;
+			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06004544 RID: 17732 RVA: 0x000AA53B File Offset: 0x000A873B
+		// Token: 0x060045ED RID: 17901 RVA: 0x000AC29B File Offset: 0x000AA49B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -853,7 +888,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06004545 RID: 17733 RVA: 0x000AA544 File Offset: 0x000A8744
+		// Token: 0x060045EE RID: 17902 RVA: 0x000AC2A4 File Offset: 0x000AA4A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -967,7 +1002,7 @@ namespace Aki.Protocol
 						}
 					}
 				}
-				else if (num <= 138U)
+				else if (num <= 146U)
 				{
 					if (num == 128U)
 					{
@@ -979,14 +1014,14 @@ namespace Aki.Protocol
 						this.DeviceInfo = input.ReadString();
 						continue;
 					}
-				}
-				else
-				{
 					if (num == 146U)
 					{
 						this.DriverDate = input.ReadString();
 						continue;
 					}
+				}
+				else
+				{
 					if (num == 154U)
 					{
 						this.ClientVersion = input.ReadString();
@@ -997,132 +1032,143 @@ namespace Aki.Protocol
 						this.OSVersion = input.ReadString();
 						continue;
 					}
+					if (num == 168U)
+					{
+						this.QualityVersion = input.ReadInt32();
+						continue;
+					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x04002EDB RID: 11995
+		// Token: 0x04002F5F RID: 12127
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002EDC RID: 11996
+		// Token: 0x04002F60 RID: 12128
 		public const int PlatformFieldNumber = 1;
 
-		// Token: 0x04002EDD RID: 11997
+		// Token: 0x04002F61 RID: 12129
 		private string platform_ = "";
 
-		// Token: 0x04002EDE RID: 11998
+		// Token: 0x04002F62 RID: 12130
 		public const int DeviceIdFieldNumber = 2;
 
-		// Token: 0x04002EDF RID: 11999
+		// Token: 0x04002F63 RID: 12131
 		private string deviceId_ = "";
 
-		// Token: 0x04002EE0 RID: 12000
+		// Token: 0x04002F64 RID: 12132
 		public const int NetStatusFieldNumber = 3;
 
-		// Token: 0x04002EE1 RID: 12001
+		// Token: 0x04002F65 RID: 12133
 		private NetStatusType netStatus_;
 
-		// Token: 0x04002EE2 RID: 12002
+		// Token: 0x04002F66 RID: 12134
 		public const int ModelFieldNumber = 4;
 
-		// Token: 0x04002EE3 RID: 12003
+		// Token: 0x04002F67 RID: 12135
 		private string model_ = "";
 
-		// Token: 0x04002EE4 RID: 12004
+		// Token: 0x04002F68 RID: 12136
 		public const int CPUFieldNumber = 5;
 
-		// Token: 0x04002EE5 RID: 12005
+		// Token: 0x04002F69 RID: 12137
 		private string cPU_ = "";
 
-		// Token: 0x04002EE6 RID: 12006
+		// Token: 0x04002F6A RID: 12138
 		public const int DeviceLevelFieldNumber = 6;
 
-		// Token: 0x04002EE7 RID: 12007
+		// Token: 0x04002F6B RID: 12139
 		private ClientDeviceLevel deviceLevel_;
 
-		// Token: 0x04002EE8 RID: 12008
+		// Token: 0x04002F6C RID: 12140
 		public const int LanguageFieldNumber = 7;
 
-		// Token: 0x04002EE9 RID: 12009
+		// Token: 0x04002F6D RID: 12141
 		private int language_;
 
-		// Token: 0x04002EEA RID: 12010
+		// Token: 0x04002F6E RID: 12142
 		public const int DistinctIdFieldNumber = 8;
 
-		// Token: 0x04002EEB RID: 12011
+		// Token: 0x04002F6F RID: 12143
 		private string distinctId_ = "";
 
-		// Token: 0x04002EEC RID: 12012
+		// Token: 0x04002F70 RID: 12144
 		public const int MacAddressFieldNumber = 9;
 
-		// Token: 0x04002EED RID: 12013
+		// Token: 0x04002F71 RID: 12145
 		private string macAddress_ = "";
 
-		// Token: 0x04002EEE RID: 12014
+		// Token: 0x04002F72 RID: 12146
 		public const int PkgIdFieldNumber = 10;
 
-		// Token: 0x04002EEF RID: 12015
+		// Token: 0x04002F73 RID: 12147
 		private string pkgId_ = "";
 
-		// Token: 0x04002EF0 RID: 12016
+		// Token: 0x04002F74 RID: 12148
 		public const int ServerTagFieldNumber = 11;
 
-		// Token: 0x04002EF1 RID: 12017
+		// Token: 0x04002F75 RID: 12149
 		private string serverTag_ = "";
 
-		// Token: 0x04002EF2 RID: 12018
+		// Token: 0x04002F76 RID: 12150
 		public const int SystemLanguageFieldNumber = 12;
 
-		// Token: 0x04002EF3 RID: 12019
+		// Token: 0x04002F77 RID: 12151
 		private string systemLanguage_ = "";
 
-		// Token: 0x04002EF4 RID: 12020
+		// Token: 0x04002F78 RID: 12152
 		public const int OSFieldNumber = 13;
 
-		// Token: 0x04002EF5 RID: 12021
+		// Token: 0x04002F79 RID: 12153
 		private string oS_ = "";
 
-		// Token: 0x04002EF6 RID: 12022
+		// Token: 0x04002F7A RID: 12154
 		public const int DeviceId2ShuShuFieldNumber = 14;
 
-		// Token: 0x04002EF7 RID: 12023
+		// Token: 0x04002F7B RID: 12155
 		private string deviceId2ShuShu_ = "";
 
-		// Token: 0x04002EF8 RID: 12024
+		// Token: 0x04002F7C RID: 12156
 		public const int ScreenHeightFieldNumber = 15;
 
-		// Token: 0x04002EF9 RID: 12025
+		// Token: 0x04002F7D RID: 12157
 		private int screenHeight_;
 
-		// Token: 0x04002EFA RID: 12026
+		// Token: 0x04002F7E RID: 12158
 		public const int ScreenWidthFieldNumber = 16;
 
-		// Token: 0x04002EFB RID: 12027
+		// Token: 0x04002F7F RID: 12159
 		private int screenWidth_;
 
-		// Token: 0x04002EFC RID: 12028
+		// Token: 0x04002F80 RID: 12160
 		public const int DeviceInfoFieldNumber = 17;
 
-		// Token: 0x04002EFD RID: 12029
+		// Token: 0x04002F81 RID: 12161
 		private string deviceInfo_ = "";
 
-		// Token: 0x04002EFE RID: 12030
+		// Token: 0x04002F82 RID: 12162
 		public const int DriverDateFieldNumber = 18;
 
-		// Token: 0x04002EFF RID: 12031
+		// Token: 0x04002F83 RID: 12163
 		private string driverDate_ = "";
 
-		// Token: 0x04002F00 RID: 12032
+		// Token: 0x04002F84 RID: 12164
 		public const int ClientVersionFieldNumber = 19;
 
-		// Token: 0x04002F01 RID: 12033
+		// Token: 0x04002F85 RID: 12165
 		private string clientVersion_ = "";
 
-		// Token: 0x04002F02 RID: 12034
+		// Token: 0x04002F86 RID: 12166
 		public const int OSVersionFieldNumber = 20;
 
-		// Token: 0x04002F03 RID: 12035
+		// Token: 0x04002F87 RID: 12167
 		private string oSVersion_ = "";
+
+		// Token: 0x04002F88 RID: 12168
+		public const int QualityVersionFieldNumber = 21;
+
+		// Token: 0x04002F89 RID: 12169
+		private int qualityVersion_;
 	}
 }

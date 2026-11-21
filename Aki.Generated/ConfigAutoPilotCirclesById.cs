@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000BA RID: 186
+	// Token: 0x020000C2 RID: 194
 	public class ConfigAutoPilotCirclesById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600045D RID: 1117 RVA: 0x000726D9 File Offset: 0x000708D9
+		// Token: 0x0600048D RID: 1165 RVA: 0x00076F8D File Offset: 0x0007518D
 		static ConfigAutoPilotCirclesById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAutoPilotCirclesById.CreateStaticDefaultValue), new Action(ConfigAutoPilotCirclesById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600045E RID: 1118 RVA: 0x000726F8 File Offset: 0x000708F8
+		// Token: 0x0600048E RID: 1166 RVA: 0x00076FAC File Offset: 0x000751AC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAutoPilotCirclesById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600045F RID: 1119 RVA: 0x00072777 File Offset: 0x00070977
+		// Token: 0x0600048F RID: 1167 RVA: 0x0007702B File Offset: 0x0007522B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAutoPilotCirclesById.LogPair = null;
 			ConfigAutoPilotCirclesById.HandleId = 0;
 		}
 
-		// Token: 0x06000460 RID: 1120 RVA: 0x00072785 File Offset: 0x00070985
+		// Token: 0x06000490 RID: 1168 RVA: 0x00077039 File Offset: 0x00075239
 		public static void Init()
 		{
 			ConfigAutoPilotCirclesById.HandleId = ConfigCommon.InitDataStatement(ConfigAutoPilotCirclesById.HandleId, "db_autopilotcircles.db", "select BinData from `AutoPilotCircles` where Id=?");
 		}
 
-		// Token: 0x06000461 RID: 1121 RVA: 0x000727A0 File Offset: 0x000709A0
+		// Token: 0x06000491 RID: 1169 RVA: 0x00077054 File Offset: 0x00075254
 		public static AutoPilotCircles? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAutoPilotCirclesById.HandleId, ConfigAutoPilotCirclesById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AutoPilotCircles?(rootAsAutoPilotCircles);
 		}
 
-		// Token: 0x040004FA RID: 1274
+		// Token: 0x04000532 RID: 1330
 		private const string DB = "db_autopilotcircles.db";
 
-		// Token: 0x040004FB RID: 1275
+		// Token: 0x04000533 RID: 1331
 		private const string FILE = "k.可视化编辑/c.Csv/h.环路/*.csv*";
 
-		// Token: 0x040004FC RID: 1276
+		// Token: 0x04000534 RID: 1332
 		private const string TABLE = "AutoPilotCircles";
 
-		// Token: 0x040004FD RID: 1277
+		// Token: 0x04000535 RID: 1333
 		private const string COMMAND = "select BinData from `AutoPilotCircles` where Id=?";
 
-		// Token: 0x040004FE RID: 1278
+		// Token: 0x04000536 RID: 1334
 		private const string KEY_PREFIX = "AutoPilotCirclesById";
 
-		// Token: 0x040004FF RID: 1279
+		// Token: 0x04000537 RID: 1335
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000500 RID: 1280
+		// Token: 0x04000538 RID: 1336
 		private static int HandleId;
 	}
 }

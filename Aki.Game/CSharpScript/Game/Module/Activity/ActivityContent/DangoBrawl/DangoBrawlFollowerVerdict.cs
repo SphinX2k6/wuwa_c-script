@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067DA RID: 26586
+	// Token: 0x0200572A RID: 22314
 	public struct DangoBrawlFollowerVerdict
 	{
-		// Token: 0x040228F1 RID: 141553
+		// Token: 0x0401D14E RID: 119118
 		public int Uid;
 
-		// Token: 0x040228F2 RID: 141554
+		// Token: 0x0401D14F RID: 119119
 		public EDangoBrawlPlaceMode Mode;
 	}
 }

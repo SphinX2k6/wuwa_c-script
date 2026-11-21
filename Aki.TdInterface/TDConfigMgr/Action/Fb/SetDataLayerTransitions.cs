@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200292C RID: 10540
+	// Token: 0x02002C08 RID: 11272
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SetDataLayerTransitions : ActionParams
 	{
-		// Token: 0x0600E9E1 RID: 59873 RVA: 0x002244F4 File Offset: 0x002226F4
-		[NullableContext(1)]
+		// Token: 0x0600F833 RID: 63539 RVA: 0x0024184C File Offset: 0x0023FA4C
+		[NullableContext(0)]
 		public static SetDataLayerTransitions Create(ISetDataLayerTransitions? instance)
 		{
 			if (instance == null)
@@ -24,12 +24,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700494B RID: 18763
-		// (get) Token: 0x0600E9E2 RID: 59874 RVA: 0x00224513 File Offset: 0x00222713
-		[Nullable(1)]
+		// Token: 0x17004CD1 RID: 19665
+		// (get) Token: 0x0600F834 RID: 63540 RVA: 0x0024186B File Offset: 0x0023FA6B
+		[Nullable(0)]
 		public virtual IActorRef VolumeActor
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._VolumeActorInited)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700494C RID: 18764
-		// (get) Token: 0x0600E9E3 RID: 59875 RVA: 0x00224547 File Offset: 0x00222747
+		// Token: 0x17004CD2 RID: 19666
+		// (get) Token: 0x0600F835 RID: 63541 RVA: 0x0024189F File Offset: 0x0023FA9F
 		public virtual string MaterialDataForEnable
 		{
 			get
@@ -52,8 +52,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700494D RID: 18765
-		// (get) Token: 0x0600E9E4 RID: 59876 RVA: 0x00224554 File Offset: 0x00222754
+		// Token: 0x17004CD3 RID: 19667
+		// (get) Token: 0x0600F836 RID: 63542 RVA: 0x002418AC File Offset: 0x0023FAAC
 		public virtual string MaterialDataForDisable
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700494E RID: 18766
-		// (get) Token: 0x0600E9E5 RID: 59877 RVA: 0x00224561 File Offset: 0x00222761
+		// Token: 0x17004CD4 RID: 19668
+		// (get) Token: 0x0600F837 RID: 63543 RVA: 0x002418B9 File Offset: 0x0023FAB9
 		public virtual string VolumeEnterSeq
 		{
 			get
@@ -72,8 +72,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700494F RID: 18767
-		// (get) Token: 0x0600E9E6 RID: 59878 RVA: 0x0022456E File Offset: 0x0022276E
+		// Token: 0x17004CD5 RID: 19669
+		// (get) Token: 0x0600F838 RID: 63544 RVA: 0x002418C6 File Offset: 0x0023FAC6
 		public virtual string VolumeOutSeq
 		{
 			get
@@ -82,13 +82,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008104 RID: 33028
+		// Token: 0x040087D2 RID: 34770
 		private ISetDataLayerTransitions Instance;
 
-		// Token: 0x04008105 RID: 33029
+		// Token: 0x040087D3 RID: 34771
 		private IActorRef _VolumeActorCache;
 
-		// Token: 0x04008106 RID: 33030
+		// Token: 0x040087D4 RID: 34772
 		private bool _VolumeActorInited;
 	}
 }

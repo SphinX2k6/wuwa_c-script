@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004E6 RID: 1254
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200053F RID: 1343
 	public class IMechascoutExplosiveBarrelTriggerConfig : ITeleCtrlTriggerConfig
 	{
-		// Token: 0x0600197C RID: 6524 RVA: 0x0004B368 File Offset: 0x00049568
+		// Token: 0x06001B16 RID: 6934 RVA: 0x0004F0B0 File Offset: 0x0004D2B0
 		private IMechascoutExplosiveBarrelTriggerConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600197D RID: 6525 RVA: 0x0004B3A0 File Offset: 0x000495A0
+		// Token: 0x06001B17 RID: 6935 RVA: 0x0004F0E8 File Offset: 0x0004D2E8
 		public static IMechascoutExplosiveBarrelTriggerConfig Create([Nullable(2)] IMechascoutExplosiveBarrelTriggerConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600197E RID: 6526 RVA: 0x0004B3B3 File Offset: 0x000495B3
+		// Token: 0x06001B18 RID: 6936 RVA: 0x0004F0FB File Offset: 0x0004D2FB
 		public static IMechascoutExplosiveBarrelTriggerConfig CreateFromSetValue([Nullable(2)] IMechascoutExplosiveBarrelTriggerConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600197F RID: 6527 RVA: 0x0004B3C6 File Offset: 0x000495C6
+		// Token: 0x06001B19 RID: 6937 RVA: 0x0004F10E File Offset: 0x0004D30E
 		public new IMechascoutExplosiveBarrelTriggerConfig_SetValue ToSetValue()
 		{
 			return new IMechascoutExplosiveBarrelTriggerConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006C4 RID: 1732
-		// (get) Token: 0x06001980 RID: 6528 RVA: 0x0004B3D9 File Offset: 0x000495D9
-		// (set) Token: 0x06001981 RID: 6529 RVA: 0x0004B404 File Offset: 0x00049604
+		// Token: 0x1700072B RID: 1835
+		// (get) Token: 0x06001B1A RID: 6938 RVA: 0x0004F121 File Offset: 0x0004D321
+		// (set) Token: 0x06001B1B RID: 6939 RVA: 0x0004F14C File Offset: 0x0004D34C
 		public override ETeleCtrlTriggerType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040012AC RID: 4780
+		// Token: 0x040013CE RID: 5070
 		[Nullable(2)]
 		protected new IMechascoutExplosiveBarrelTriggerConfig FbInstance;
 
-		// Token: 0x040012AD RID: 4781
+		// Token: 0x040013CF RID: 5071
 		[Nullable(2)]
 		protected new IMechascoutExplosiveBarrelTriggerConfig_SetValue PocoInterface;
 	}

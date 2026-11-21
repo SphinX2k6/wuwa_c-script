@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AC4 RID: 19140
+	// Token: 0x02004F93 RID: 20371
 	public class ICheckLevelPlayStateT
 	{
-		// Token: 0x17008AC3 RID: 35523
-		// (get) Token: 0x0601E0D6 RID: 123094 RVA: 0x00437878 File Offset: 0x00435A78
-		// (set) Token: 0x0601E0D7 RID: 123095 RVA: 0x00437880 File Offset: 0x00435A80
+		// Token: 0x170091B0 RID: 37296
+		// (get) Token: 0x0601FBBF RID: 129983 RVA: 0x00469098 File Offset: 0x00467298
+		// (set) Token: 0x0601FBC0 RID: 129984 RVA: 0x004690A0 File Offset: 0x004672A0
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008AC4 RID: 35524
-		// (get) Token: 0x0601E0D8 RID: 123096 RVA: 0x00437889 File Offset: 0x00435A89
-		// (set) Token: 0x0601E0D9 RID: 123097 RVA: 0x00437891 File Offset: 0x00435A91
+		// Token: 0x170091B1 RID: 37297
+		// (get) Token: 0x0601FBC1 RID: 129985 RVA: 0x004690A9 File Offset: 0x004672A9
+		// (set) Token: 0x0601FBC2 RID: 129986 RVA: 0x004690B1 File Offset: 0x004672B1
 		public int LevelId { get; set; }
 
-		// Token: 0x17008AC5 RID: 35525
-		// (get) Token: 0x0601E0DA RID: 123098 RVA: 0x0043789A File Offset: 0x00435A9A
-		// (set) Token: 0x0601E0DB RID: 123099 RVA: 0x004378A2 File Offset: 0x00435AA2
+		// Token: 0x170091B2 RID: 37298
+		// (get) Token: 0x0601FBC3 RID: 129987 RVA: 0x004690BA File Offset: 0x004672BA
+		// (set) Token: 0x0601FBC4 RID: 129988 RVA: 0x004690C2 File Offset: 0x004672C2
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008AC6 RID: 35526
-		// (get) Token: 0x0601E0DC RID: 123100 RVA: 0x004378AB File Offset: 0x00435AAB
-		// (set) Token: 0x0601E0DD RID: 123101 RVA: 0x004378B3 File Offset: 0x00435AB3
+		// Token: 0x170091B3 RID: 37299
+		// (get) Token: 0x0601FBC5 RID: 129989 RVA: 0x004690CB File Offset: 0x004672CB
+		// (set) Token: 0x0601FBC6 RID: 129990 RVA: 0x004690D3 File Offset: 0x004672D3
 		public ELevelPlayState State { get; set; }
 
-		// Token: 0x0601E0DE RID: 123102 RVA: 0x004378BC File Offset: 0x00435ABC
+		// Token: 0x0601FBC7 RID: 129991 RVA: 0x004690DC File Offset: 0x004672DC
 		public ICheckLevelPlayStateT()
 		{
 			this.Type = ECondition.CompareVar;

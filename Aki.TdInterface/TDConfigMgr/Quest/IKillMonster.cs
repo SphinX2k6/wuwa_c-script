@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FD1 RID: 4049
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010FD RID: 4349
 	public class IKillMonster
 	{
-		// Token: 0x06005A40 RID: 23104 RVA: 0x000DB748 File Offset: 0x000D9948
+		// Token: 0x06006020 RID: 24608 RVA: 0x000E8388 File Offset: 0x000E6588
 		private IKillMonster_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005A41 RID: 23105 RVA: 0x000DB780 File Offset: 0x000D9980
+		// Token: 0x06006021 RID: 24609 RVA: 0x000E83C0 File Offset: 0x000E65C0
 		public static IKillMonster Create([Nullable(2)] IKillMonster instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A42 RID: 23106 RVA: 0x000DB793 File Offset: 0x000D9993
+		// Token: 0x06006022 RID: 24610 RVA: 0x000E83D3 File Offset: 0x000E65D3
 		public static IKillMonster CreateFromSetValue([Nullable(2)] IKillMonster_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A43 RID: 23107 RVA: 0x000DB7A6 File Offset: 0x000D99A6
+		// Token: 0x06006023 RID: 24611 RVA: 0x000E83E6 File Offset: 0x000E65E6
 		public IKillMonster_SetValue ToSetValue()
 		{
 			return new IKillMonster_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DE8 RID: 7656
-		// (get) Token: 0x06005A44 RID: 23108 RVA: 0x000DB7C5 File Offset: 0x000D99C5
-		// (set) Token: 0x06005A45 RID: 23109 RVA: 0x000DB7F0 File Offset: 0x000D99F0
+		// Token: 0x17001F91 RID: 8081
+		// (get) Token: 0x06006024 RID: 24612 RVA: 0x000E8405 File Offset: 0x000E6605
+		// (set) Token: 0x06006025 RID: 24613 RVA: 0x000E8430 File Offset: 0x000E6630
 		public virtual int NormalAddTime
 		{
 			get
@@ -84,20 +82,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DE9 RID: 7657
-		// (get) Token: 0x06005A46 RID: 23110 RVA: 0x000DB800 File Offset: 0x000D9A00
-		// (set) Token: 0x06005A47 RID: 23111 RVA: 0x000DB893 File Offset: 0x000D9A93
+		// Token: 0x17001F92 RID: 8082
+		// (get) Token: 0x06006026 RID: 24614 RVA: 0x000E8440 File Offset: 0x000E6640
+		// (set) Token: 0x06006027 RID: 24615 RVA: 0x000E84D3 File Offset: 0x000E66D3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IKillSingleMonster> SpecialTime
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -128,7 +126,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -137,23 +135,23 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003667 RID: 13927
+		// Token: 0x0400399F RID: 14751
 		[Nullable(2)]
 		protected IKillMonster FbInstance;
 
-		// Token: 0x04003668 RID: 13928
+		// Token: 0x040039A0 RID: 14752
 		[Nullable(2)]
 		protected IKillMonster_SetValue PocoInterface;
 
-		// Token: 0x04003669 RID: 13929
+		// Token: 0x040039A1 RID: 14753
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IKillSingleMonster> _SpecialTimeCache;
 
-		// Token: 0x0400366A RID: 13930
+		// Token: 0x040039A2 RID: 14754
 		private bool _SpecialTimeInited;
 	}
 }

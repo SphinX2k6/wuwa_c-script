@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002307 RID: 8967
+// Token: 0x020017EB RID: 6123
 [NullableContext(1)]
 [Nullable(0)]
 public class QteAnimItem
 {
-	// Token: 0x06011B46 RID: 72518 RVA: 0x0045A362 File Offset: 0x00458562
+	// Token: 0x0600EFE1 RID: 61409 RVA: 0x00467172 File Offset: 0x00465372
 	public void Init(UUIItem item)
 	{
 		this.Item = item;
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.Item);
 	}
 
-	// Token: 0x06011B47 RID: 72519 RVA: 0x0045A37C File Offset: 0x0045857C
+	// Token: 0x0600EFE2 RID: 61410 RVA: 0x0046718C File Offset: 0x0046538C
 	public void StartAnim(float delay = 0f)
 	{
 		this.StopDelayTimer();
@@ -37,7 +37,7 @@ public class QteAnimItem
 		}, 400f, null, null, true, 1f);
 	}
 
-	// Token: 0x06011B48 RID: 72520 RVA: 0x0045A3FE File Offset: 0x004585FE
+	// Token: 0x0600EFE3 RID: 61411 RVA: 0x0046720E File Offset: 0x0046540E
 	public void StopAnim()
 	{
 		this.StopDelayTimer();
@@ -49,19 +49,19 @@ public class QteAnimItem
 		this.PlayAnim("Close");
 	}
 
-	// Token: 0x06011B49 RID: 72521 RVA: 0x0045A433 File Offset: 0x00458633
+	// Token: 0x0600EFE4 RID: 61412 RVA: 0x00467243 File Offset: 0x00465443
 	public void PressAnim()
 	{
 		this.PlayAnim("Press");
 	}
 
-	// Token: 0x06011B4A RID: 72522 RVA: 0x0045A440 File Offset: 0x00458640
+	// Token: 0x0600EFE5 RID: 61413 RVA: 0x00467250 File Offset: 0x00465450
 	private void PlayAnim(string animName)
 	{
 		this.LevelSequencePlayer.PlaySequencePurely(animName, false, false, null, null, false);
 	}
 
-	// Token: 0x06011B4B RID: 72523 RVA: 0x0045A466 File Offset: 0x00458666
+	// Token: 0x0600EFE6 RID: 61414 RVA: 0x00467276 File Offset: 0x00465476
 	private void StopDelayTimer()
 	{
 		if (this.DelayTimer != null)
@@ -71,40 +71,40 @@ public class QteAnimItem
 		}
 	}
 
-	// Token: 0x06011B4C RID: 72524 RVA: 0x0045A488 File Offset: 0x00458688
+	// Token: 0x0600EFE7 RID: 61415 RVA: 0x00467298 File Offset: 0x00465498
 	public void Clear()
 	{
 		this.StopDelayTimer();
 	}
 
-	// Token: 0x0400864E RID: 34382
+	// Token: 0x0400878E RID: 34702
 	[Nullable(2)]
 	private UUIItem Item;
 
-	// Token: 0x0400864F RID: 34383
+	// Token: 0x0400878F RID: 34703
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04008650 RID: 34384
+	// Token: 0x04008790 RID: 34704
 	[Nullable(2)]
 	private TimerHandle DelayTimer;
 
-	// Token: 0x04008651 RID: 34385
+	// Token: 0x04008791 RID: 34705
 	[Nullable(2)]
 	private string CurAnimName;
 
-	// Token: 0x04008652 RID: 34386
+	// Token: 0x04008792 RID: 34706
 	private const int START_ANIM_TIME = 400;
 
-	// Token: 0x04008653 RID: 34387
+	// Token: 0x04008793 RID: 34707
 	private const string ANIM_START = "Start";
 
-	// Token: 0x04008654 RID: 34388
+	// Token: 0x04008794 RID: 34708
 	private const string ANIM_LOOP = "Loop";
 
-	// Token: 0x04008655 RID: 34389
+	// Token: 0x04008795 RID: 34709
 	private const string ANIM_CLOSE = "Close";
 
-	// Token: 0x04008656 RID: 34390
+	// Token: 0x04008796 RID: 34710
 	private const string ANIM_PRESS = "Press";
 }

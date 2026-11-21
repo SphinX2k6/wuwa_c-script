@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011B0 RID: 4528
+// Token: 0x02000664 RID: 1636
 [NullableContext(1)]
 [Nullable(0)]
 public class BlackCoastActivityTaskView : UiViewBase
 {
-	// Token: 0x0600781B RID: 30747 RVA: 0x001922EF File Offset: 0x001904EF
+	// Token: 0x06004BB2 RID: 19378 RVA: 0x0019AEC8 File Offset: 0x001990C8
 	public BlackCoastActivityTaskView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600781C RID: 30748 RVA: 0x0019230C File Offset: 0x0019050C
+	// Token: 0x06004BB3 RID: 19379 RVA: 0x0019AEE4 File Offset: 0x001990E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -63,7 +63,7 @@ public class BlackCoastActivityTaskView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600781D RID: 30749 RVA: 0x00192524 File Offset: 0x00190724
+	// Token: 0x06004BB4 RID: 19380 RVA: 0x0019B0FC File Offset: 0x001992FC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BlackCoastActivityTaskView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ public class BlackCoastActivityTaskView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600781E RID: 30750 RVA: 0x00192568 File Offset: 0x00190768
+	// Token: 0x06004BB5 RID: 19381 RVA: 0x0019B140 File Offset: 0x00199340
 	private UniTask LoadMaterial()
 	{
 		BlackCoastActivityTaskView.<LoadMaterial>d__12 <LoadMaterial>d__;
@@ -85,25 +85,25 @@ public class BlackCoastActivityTaskView : UiViewBase
 		return <LoadMaterial>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600781F RID: 30751 RVA: 0x001925AC File Offset: 0x001907AC
+	// Token: 0x06004BB6 RID: 19382 RVA: 0x0019B184 File Offset: 0x00199384
 	protected override void OnBeforeShow()
 	{
 		ActivityController.Instance.CheckIsActivityClose(null, new int?(this.ActivityBaseData.Id));
 	}
 
-	// Token: 0x06007820 RID: 30752 RVA: 0x001925DC File Offset: 0x001907DC
+	// Token: 0x06004BB7 RID: 19383 RVA: 0x0019B1B4 File Offset: 0x001993B4
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshTaskLayout));
 	}
 
-	// Token: 0x06007821 RID: 30753 RVA: 0x001925FA File Offset: 0x001907FA
+	// Token: 0x06004BB8 RID: 19384 RVA: 0x0019B1D2 File Offset: 0x001993D2
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshTaskLayout));
 	}
 
-	// Token: 0x06007822 RID: 30754 RVA: 0x00192618 File Offset: 0x00190818
+	// Token: 0x06004BB9 RID: 19385 RVA: 0x0019B1F0 File Offset: 0x001993F0
 	protected override void OnBeforeDestroy()
 	{
 		MediaPlayer mediaPlayer = this.MediaPlayer;
@@ -115,7 +115,7 @@ public class BlackCoastActivityTaskView : UiViewBase
 		this.CancelLoad();
 	}
 
-	// Token: 0x06007823 RID: 30755 RVA: 0x00192638 File Offset: 0x00190838
+	// Token: 0x06004BBA RID: 19386 RVA: 0x0019B210 File Offset: 0x00199410
 	private void CancelLoad()
 	{
 		if (this.HandleId != -1)
@@ -125,19 +125,19 @@ public class BlackCoastActivityTaskView : UiViewBase
 		}
 	}
 
-	// Token: 0x06007824 RID: 30756 RVA: 0x0019265A File Offset: 0x0019085A
+	// Token: 0x06004BBB RID: 19387 RVA: 0x0019B232 File Offset: 0x00199432
 	private PageDot<int> InitPageDot()
 	{
 		return new PageDot<int>();
 	}
 
-	// Token: 0x06007825 RID: 30757 RVA: 0x00192661 File Offset: 0x00190861
+	// Token: 0x06004BBC RID: 19388 RVA: 0x0019B239 File Offset: 0x00199439
 	private BlackCoastTaskItem CreateTaskItem()
 	{
 		return new BlackCoastTaskItem();
 	}
 
-	// Token: 0x06007826 RID: 30758 RVA: 0x00192668 File Offset: 0x00190868
+	// Token: 0x06004BBD RID: 19389 RVA: 0x0019B240 File Offset: 0x00199440
 	private void OnRefreshTaskLayout(int activityId)
 	{
 		if (this.ActivityBaseData != null && this.ActivityBaseData.Id == activityId)
@@ -148,13 +148,13 @@ public class BlackCoastActivityTaskView : UiViewBase
 		}
 	}
 
-	// Token: 0x06007827 RID: 30759 RVA: 0x001926BB File Offset: 0x001908BB
+	// Token: 0x06004BBE RID: 19390 RVA: 0x0019B293 File Offset: 0x00199493
 	private void OnClickPre()
 	{
 		this.RefreshView(this.CurrentSelectedIndex - 1);
 	}
 
-	// Token: 0x06007828 RID: 30760 RVA: 0x001926CC File Offset: 0x001908CC
+	// Token: 0x06004BBF RID: 19391 RVA: 0x0019B2A4 File Offset: 0x001994A4
 	private void OnClickNext()
 	{
 		int index = this.CurrentSelectedIndex + 1;
@@ -167,7 +167,7 @@ public class BlackCoastActivityTaskView : UiViewBase
 		ScrollingTipsController.Instance.ShowTipsByTextId(stageById.GetLockConditionText(), Array.Empty<object>());
 	}
 
-	// Token: 0x06007829 RID: 30761 RVA: 0x00192720 File Offset: 0x00190920
+	// Token: 0x06004BC0 RID: 19392 RVA: 0x0019B2F8 File Offset: 0x001994F8
 	private UniTask InitView(int index)
 	{
 		BlackCoastActivityTaskView.<InitView>d__23 <InitView>d__;
@@ -179,7 +179,7 @@ public class BlackCoastActivityTaskView : UiViewBase
 		return <InitView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600782A RID: 30762 RVA: 0x0019276C File Offset: 0x0019096C
+	// Token: 0x06004BC1 RID: 19393 RVA: 0x0019B344 File Offset: 0x00199544
 	private UniTask RefreshView(int index)
 	{
 		BlackCoastActivityTaskView.<RefreshView>d__24 <RefreshView>d__;
@@ -191,7 +191,7 @@ public class BlackCoastActivityTaskView : UiViewBase
 		return <RefreshView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600782B RID: 30763 RVA: 0x001927B8 File Offset: 0x001909B8
+	// Token: 0x06004BC2 RID: 19394 RVA: 0x0019B390 File Offset: 0x00199590
 	private void RefreshStageInfo()
 	{
 		BlackCoastStageInfo stageById = this.ActivityBaseData.GetStageById(this.StageIdList[this.CurrentSelectedIndex]);
@@ -200,87 +200,87 @@ public class BlackCoastActivityTaskView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(10), stageConfig.Value.TitleDetail, Array.Empty<object>());
 	}
 
-	// Token: 0x0600782C RID: 30764 RVA: 0x0019283F File Offset: 0x00190A3F
+	// Token: 0x06004BC3 RID: 19395 RVA: 0x0019B417 File Offset: 0x00199617
 	private void RefreshTaskList(List<BlackCoastTaskData> data, bool playGridAnim = false)
 	{
 		this.TaskScroll.RefreshByData(data, null, playGridAnim);
 	}
 
-	// Token: 0x0600782D RID: 30765 RVA: 0x00192850 File Offset: 0x00190A50
+	// Token: 0x06004BC4 RID: 19396 RVA: 0x0019B428 File Offset: 0x00199628
 	private void RefreshBg()
 	{
 		BlackCoastStageInfo stageById = this.ActivityBaseData.GetStageById(this.StageIdList[this.CurrentSelectedIndex]);
 		this.MediaPlayer.PlayVideo(stageById.StageId.ToString(), stageById.GetVideoSource(), true);
 	}
 
-	// Token: 0x0600782E RID: 30766 RVA: 0x0019289A File Offset: 0x00190A9A
+	// Token: 0x06004BC5 RID: 19397 RVA: 0x0019B472 File Offset: 0x00199672
 	private void CloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04003746 RID: 14150
+	// Token: 0x040037DF RID: 14303
 	protected ActivityBlackCoastData ActivityBaseData;
 
-	// Token: 0x04003747 RID: 14151
+	// Token: 0x040037E0 RID: 14304
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003748 RID: 14152
+	// Token: 0x040037E1 RID: 14305
 	private GenericLayout<PageDot<int>, int> PageDotLayout;
 
-	// Token: 0x04003749 RID: 14153
+	// Token: 0x040037E2 RID: 14306
 	private GenericLayout<BlackCoastTaskItem, BlackCoastTaskData> TaskScroll;
 
-	// Token: 0x0400374A RID: 14154
+	// Token: 0x040037E3 RID: 14307
 	private List<int> StageIdList = new List<int>();
 
-	// Token: 0x0400374B RID: 14155
+	// Token: 0x040037E4 RID: 14308
 	private int CurrentSelectedIndex;
 
-	// Token: 0x0400374C RID: 14156
+	// Token: 0x040037E5 RID: 14309
 	private MediaPlayer MediaPlayer;
 
-	// Token: 0x0400374D RID: 14157
+	// Token: 0x040037E6 RID: 14310
 	private int HandleId = -1;
 
-	// Token: 0x02007792 RID: 30610
+	// Token: 0x0200691E RID: 26910
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040276D1 RID: 161489
+		// Token: 0x04022A07 RID: 141831
 		public const int Caption = 0;
 
-		// Token: 0x040276D2 RID: 161490
+		// Token: 0x04022A08 RID: 141832
 		public const int PanelBg = 1;
 
-		// Token: 0x040276D3 RID: 161491
+		// Token: 0x04022A09 RID: 141833
 		public const int DotLayout = 2;
 
-		// Token: 0x040276D4 RID: 161492
+		// Token: 0x04022A0A RID: 141834
 		public const int Dot = 3;
 
-		// Token: 0x040276D5 RID: 161493
+		// Token: 0x04022A0B RID: 141835
 		public const int TaskLayout = 4;
 
-		// Token: 0x040276D6 RID: 161494
+		// Token: 0x04022A0C RID: 141836
 		public const int TaskItem = 5;
 
-		// Token: 0x040276D7 RID: 161495
+		// Token: 0x04022A0D RID: 141837
 		public const int ButtonPre = 6;
 
-		// Token: 0x040276D8 RID: 161496
+		// Token: 0x04022A0E RID: 141838
 		public const int ButtonNext = 7;
 
-		// Token: 0x040276D9 RID: 161497
+		// Token: 0x04022A0F RID: 141839
 		public const int TextProgress = 8;
 
-		// Token: 0x040276DA RID: 161498
+		// Token: 0x04022A10 RID: 141840
 		public const int CG = 9;
 
-		// Token: 0x040276DB RID: 161499
+		// Token: 0x04022A11 RID: 141841
 		public const int TextName = 10;
 
-		// Token: 0x040276DC RID: 161500
+		// Token: 0x04022A12 RID: 141842
 		public const int TextureIcon = 11;
 	}
 }

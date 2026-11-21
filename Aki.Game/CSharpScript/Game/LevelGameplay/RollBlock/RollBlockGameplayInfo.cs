@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock
 {
-	// Token: 0x02006AA5 RID: 27301
+	// Token: 0x02005C02 RID: 23554
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RollBlockGameplayInfo
 	{
-		// Token: 0x06043D27 RID: 277799 RVA: 0x0109A8B8 File Offset: 0x01098AB8
+		// Token: 0x06039D7C RID: 236924 RVA: 0x0103EFE0 File Offset: 0x0103D1E0
 		public RollBlockGameplayInfo(RollBlockGamePlayPbInfo info)
 		{
 			this.GroupId = info.GroupId;
@@ -80,67 +80,67 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x040236F7 RID: 145143
+		// Token: 0x0401E8E9 RID: 125161
 		public int GroupId;
 
-		// Token: 0x040236F8 RID: 145144
+		// Token: 0x0401E8EA RID: 125162
 		public int Difficulty;
 
-		// Token: 0x040236F9 RID: 145145
+		// Token: 0x0401E8EB RID: 125163
 		public int TotalDifficulty;
 
-		// Token: 0x040236FA RID: 145146
+		// Token: 0x0401E8EC RID: 125164
 		public bool IsMainController;
 
-		// Token: 0x040236FB RID: 145147
+		// Token: 0x0401E8ED RID: 125165
 		public List<long> EntityIds = new List<long>();
 
-		// Token: 0x040236FC RID: 145148
+		// Token: 0x0401E8EE RID: 125166
 		public List<long> InitVisibleEntityIds = new List<long>();
 
-		// Token: 0x040236FD RID: 145149
+		// Token: 0x0401E8EF RID: 125167
 		public global::Vector Forward;
 
-		// Token: 0x040236FE RID: 145150
+		// Token: 0x0401E8F0 RID: 125168
 		public global::Vector Right;
 
-		// Token: 0x040236FF RID: 145151
+		// Token: 0x0401E8F1 RID: 125169
 		public List<RbBaseComponent> RollBlockEntities = new List<RbBaseComponent>();
 
-		// Token: 0x04023700 RID: 145152
+		// Token: 0x0401E8F2 RID: 125170
 		public global::Vector TmpVec;
 
-		// Token: 0x04023701 RID: 145153
+		// Token: 0x0401E8F3 RID: 125171
 		public global::Rotator TmpRot;
 
-		// Token: 0x04023702 RID: 145154
+		// Token: 0x0401E8F4 RID: 125172
 		public int HasTipActorNum;
 
-		// Token: 0x04023703 RID: 145155
+		// Token: 0x0401E8F5 RID: 125173
 		public int Width;
 
-		// Token: 0x04023704 RID: 145156
+		// Token: 0x0401E8F6 RID: 125174
 		public int Height;
 
-		// Token: 0x04023705 RID: 145157
+		// Token: 0x0401E8F7 RID: 125175
 		public List<RbGridDirection> AvailableInputs = new List<RbGridDirection>();
 
-		// Token: 0x04023706 RID: 145158
+		// Token: 0x0401E8F8 RID: 125176
 		public Dictionary<string, List<RbBaseComponent>> IndexedEntityMap = new Dictionary<string, List<RbBaseComponent>>();
 
-		// Token: 0x04023707 RID: 145159
+		// Token: 0x0401E8F9 RID: 125177
 		public int ShowTipsInputCount;
 
-		// Token: 0x04023708 RID: 145160
+		// Token: 0x0401E8FA RID: 125178
 		public bool ShowedTips;
 
-		// Token: 0x04023709 RID: 145161
+		// Token: 0x0401E8FB RID: 125179
 		public bool MultiBlock;
 
-		// Token: 0x0402370A RID: 145162
+		// Token: 0x0401E8FC RID: 125180
 		public int? CameraTag;
 
-		// Token: 0x0402370B RID: 145163
+		// Token: 0x0401E8FD RID: 125181
 		public ERollBlockInitState InitState;
 	}
 }

@@ -5,24 +5,24 @@ using CSharpScript.Game.Module.KeySetting;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FF0 RID: 28656
+	// Token: 0x02006171 RID: 24945
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NormalizedActionOverride
 	{
-		// Token: 0x040245E9 RID: 148969
+		// Token: 0x0401F89F RID: 129183
 		public string ActionName = "";
 
-		// Token: 0x040245EA RID: 148970
+		// Token: 0x0401F8A0 RID: 129184
 		public EInputBindingType BindingType;
 
-		// Token: 0x040245EB RID: 148971
+		// Token: 0x0401F8A1 RID: 129185
 		public EKeySettingExclusiveType ExclusiveType;
 
-		// Token: 0x040245EC RID: 148972
+		// Token: 0x0401F8A2 RID: 129186
 		public int Version;
 
-		// Token: 0x040245ED RID: 148973
+		// Token: 0x0401F8A3 RID: 129187
 		public List<string> KeyNameList = new List<string>();
 	}
 }

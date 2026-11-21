@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F86 RID: 12166
+// Token: 0x020024DA RID: 9434
 [NullableContext(1)]
 [Nullable(0)]
 public class ReviveExecution : PeriodExecution
 {
-	// Token: 0x06019D85 RID: 105861 RVA: 0x006BEAE3 File Offset: 0x006BCCE3
+	// Token: 0x06017697 RID: 95895 RVA: 0x006E53C3 File Offset: 0x006E35C3
 	public ReviveExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019D86 RID: 105862 RVA: 0x006BEAEC File Offset: 0x006BCCEC
+	// Token: 0x06017698 RID: 95896 RVA: 0x006E53CC File Offset: 0x006E35CC
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -19,7 +19,7 @@ public class ReviveExecution : PeriodExecution
 		this.HealValue = ((extraEffectParameters_ != null && extraEffectParameters_.Length > 1) ? float.Parse(extraEffectParameters_[1]) : 0f);
 	}
 
-	// Token: 0x06019D87 RID: 105863 RVA: 0x006BEB40 File Offset: 0x006BCD40
+	// Token: 0x06017699 RID: 95897 RVA: 0x006E5420 File Offset: 0x006E3620
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -49,9 +49,9 @@ public class ReviveExecution : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x0400C329 RID: 49961
+	// Token: 0x0400C6D2 RID: 50898
 	public float HealRate;
 
-	// Token: 0x0400C32A RID: 49962
+	// Token: 0x0400C6D3 RID: 50899
 	public float HealValue;
 }

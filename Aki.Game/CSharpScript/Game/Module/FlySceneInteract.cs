@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module
 {
-	// Token: 0x020046F2 RID: 18162
+	// Token: 0x02003622 RID: 13858
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlySceneInteract : IStaticVariableResetter
 	{
-		// Token: 0x0602F7F0 RID: 194544 RVA: 0x00B026AC File Offset: 0x00B008AC
+		// Token: 0x06023FB6 RID: 147382 RVA: 0x00A3237C File Offset: 0x00A3057C
 		public void Init()
 		{
 			EventSystem.Instance.Add(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRole));
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module
 			this.AddEntityEvents();
 		}
 
-		// Token: 0x0602F7F1 RID: 194545 RVA: 0x00B0272A File Offset: 0x00B0092A
+		// Token: 0x06023FB7 RID: 147383 RVA: 0x00A323FA File Offset: 0x00A305FA
 		public void Destroy()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRole));
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module
 			this.HandleId = 0;
 		}
 
-		// Token: 0x0602F7F2 RID: 194546 RVA: 0x00B02765 File Offset: 0x00B00965
+		// Token: 0x06023FB8 RID: 147384 RVA: 0x00A32435 File Offset: 0x00A30635
 		private void OnChangeRole(int newEntityId, int oldEntityId)
 		{
 			this.RemoveEntityEvents();
 			this.AddEntityEvents();
 		}
 
-		// Token: 0x0602F7F3 RID: 194547 RVA: 0x00B02774 File Offset: 0x00B00974
+		// Token: 0x06023FB9 RID: 147385 RVA: 0x00A32444 File Offset: 0x00A30644
 		private void AddEntityEvents()
 		{
 			BattleUiModel instance = BattleUiModel.Instance;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module
 			this.ListenForTagAddOrRemove(gameplayTagComponent, GameplayTagDefine.EGameplayTagId["行为状态.动作状态.XA"], new Action<int, bool>(this.OnFlyTagChanged), true);
 		}
 
-		// Token: 0x0602F7F4 RID: 194548 RVA: 0x00B02818 File Offset: 0x00B00A18
+		// Token: 0x06023FBA RID: 147386 RVA: 0x00A324E8 File Offset: 0x00A306E8
 		private void RemoveEntityEvents()
 		{
 			if (this.CurrentEntity == null)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module
 			this.ActorComp = null;
 		}
 
-		// Token: 0x0602F7F5 RID: 194549 RVA: 0x00B028B0 File Offset: 0x00B00AB0
+		// Token: 0x06023FBB RID: 147387 RVA: 0x00A32580 File Offset: 0x00A30780
 		private void ListenForTagAddOrRemove(BaseTagComponent tagComponent, int tagId, Action<int, bool> callback, bool checkExistImmediately = false)
 		{
 			if (checkExistImmediately && tagComponent.HasTag(tagId))
@@ -109,13 +109,13 @@ namespace CSharpScript.Game.Module
 			}
 		}
 
-		// Token: 0x0602F7F6 RID: 194550 RVA: 0x00B028FF File Offset: 0x00B00AFF
+		// Token: 0x06023FBC RID: 147388 RVA: 0x00A325CF File Offset: 0x00A307CF
 		private void OnFlyTagChanged(int tagId, bool tagExist)
 		{
 			this.Refresh(tagExist);
 		}
 
-		// Token: 0x0602F7F7 RID: 194551 RVA: 0x00B02908 File Offset: 0x00B00B08
+		// Token: 0x06023FBD RID: 147389 RVA: 0x00A325D8 File Offset: 0x00A307D8
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (this.CurrentEntity != handle)
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module
 			this.RemoveEntityEvents();
 		}
 
-		// Token: 0x0602F7F8 RID: 194552 RVA: 0x00B0291C File Offset: 0x00B00B1C
+		// Token: 0x06023FBE RID: 147390 RVA: 0x00A325EC File Offset: 0x00A307EC
 		private void Refresh(bool isFlying)
 		{
 			if (this.IsFlying == isFlying)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module
 			}
 		}
 
-		// Token: 0x0602F7F9 RID: 194553 RVA: 0x00B0297C File Offset: 0x00B00B7C
+		// Token: 0x06023FBF RID: 147391 RVA: 0x00A3264C File Offset: 0x00A3084C
 		private void UpdateLocation(global::Vector @out, FVectorDouble? offset)
 		{
 			if (this.ActorComp == null)
@@ -166,46 +166,46 @@ namespace CSharpScript.Game.Module
 			@out.AdditionEqual(this.ActorComp.ActorLocationProxy);
 		}
 
-		// Token: 0x0602F7FA RID: 194554 RVA: 0x00B029EB File Offset: 0x00B00BEB
+		// Token: 0x06023FC0 RID: 147392 RVA: 0x00A326BB File Offset: 0x00A308BB
 		static FlySceneInteract()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlySceneInteract.CreateStaticDefaultValue), new Action(FlySceneInteract.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602F7FB RID: 194555 RVA: 0x00B02A0A File Offset: 0x00B00C0A
+		// Token: 0x06023FC1 RID: 147393 RVA: 0x00A326DA File Offset: 0x00A308DA
 		public static void CreateStaticDefaultValue()
 		{
 			FlySceneInteract.ListenTagStat = Stat.Create("[StrengthHandle]ListenTag", "", "");
 		}
 
-		// Token: 0x0602F7FC RID: 194556 RVA: 0x00B02A25 File Offset: 0x00B00C25
+		// Token: 0x06023FC2 RID: 147394 RVA: 0x00A326F5 File Offset: 0x00A308F5
 		public static void ResetStaticDefaultValue()
 		{
 			FlySceneInteract.ListenTagStat = null;
 		}
 
-		// Token: 0x04019A7D RID: 105085
+		// Token: 0x0401412C RID: 82220
 		[Nullable(2)]
 		private static Stat ListenTagStat;
 
-		// Token: 0x04019A7E RID: 105086
+		// Token: 0x0401412D RID: 82221
 		private bool IsFlying;
 
-		// Token: 0x04019A7F RID: 105087
+		// Token: 0x0401412E RID: 82222
 		private int HandleId;
 
-		// Token: 0x04019A80 RID: 105088
+		// Token: 0x0401412F RID: 82223
 		private readonly global::Vector TmpVector = global::Vector.Create();
 
-		// Token: 0x04019A81 RID: 105089
+		// Token: 0x04014130 RID: 82224
 		[Nullable(2)]
 		private EntityHandle CurrentEntity;
 
-		// Token: 0x04019A82 RID: 105090
+		// Token: 0x04014131 RID: 82225
 		[Nullable(2)]
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x04019A83 RID: 105091
+		// Token: 0x04014132 RID: 82226
 		private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002249 RID: 8777
+// Token: 0x0200172D RID: 5933
 public enum EMotorLevelShowType
 {
-	// Token: 0x0400825B RID: 33371
+	// Token: 0x04008399 RID: 33689
 	NotShow,
-	// Token: 0x0400825C RID: 33372
+	// Token: 0x0400839A RID: 33690
 	Show
 }

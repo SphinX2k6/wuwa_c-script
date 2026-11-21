@@ -2,10 +2,10 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Personal;
 
-// Token: 0x020033E9 RID: 13289
+// Token: 0x0200295B RID: 10587
 public class PersonalizeInfoRedDot : RedDotBase
 {
-	// Token: 0x0601CC77 RID: 117879 RVA: 0x0080A1A4 File Offset: 0x008083A4
+	// Token: 0x0601A96F RID: 108911 RVA: 0x00830768 File Offset: 0x0082E968
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnPersonalCardRefreshRedDot, new Action(base.EventCheck));
@@ -14,7 +14,7 @@ public class PersonalizeInfoRedDot : RedDotBase
 		EventSystem.Instance.Add(EEventName.OnFunctionOpenUpdateNotify, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC78 RID: 117880 RVA: 0x0080A224 File Offset: 0x00808424
+	// Token: 0x0601A970 RID: 108912 RVA: 0x008307E8 File Offset: 0x0082E9E8
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPersonalCardRefreshRedDot, new Action(base.EventCheck));
@@ -23,7 +23,7 @@ public class PersonalizeInfoRedDot : RedDotBase
 		EventSystem.Instance.Remove(EEventName.OnFunctionOpenUpdateNotify, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC79 RID: 117881 RVA: 0x0080A2A1 File Offset: 0x008084A1
+	// Token: 0x0601A971 RID: 108913 RVA: 0x00830865 File Offset: 0x0082EA65
 	protected override bool OnCheck(int uId = 0)
 	{
 		return PersonalModel.Instance.GetPersonalCardRedDotState() || PersonalModel.Instance.GetPersonalTitleRedDotState() || BirthdayModel.Instance.GetBirthdayRedDotState();

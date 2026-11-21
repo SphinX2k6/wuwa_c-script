@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002A2E RID: 10798
+// Token: 0x02001FA9 RID: 8105
 public class SkinTabItem : CommonTabItem, ITabViewRegister
 {
-	// Token: 0x0601677D RID: 92029 RVA: 0x005B1108 File Offset: 0x005AF308
+	// Token: 0x06014186 RID: 82310 RVA: 0x005DC150 File Offset: 0x005DA350
 	public override void BindRedDot(ERedDotName redDotName, int? uId = 0)
 	{
 		int? num = uId;
@@ -17,7 +17,7 @@ public class SkinTabItem : CommonTabItem, ITabViewRegister
 		base.BindRedDot(redDotName, uId);
 	}
 
-	// Token: 0x0601677E RID: 92030 RVA: 0x005B1149 File Offset: 0x005AF349
+	// Token: 0x06014187 RID: 82311 RVA: 0x005DC191 File Offset: 0x005DA391
 	[NullableContext(1)]
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{

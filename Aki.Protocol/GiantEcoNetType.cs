@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015DA RID: 5594
+	// Token: 0x0200164C RID: 5708
 	public enum GiantEcoNetType
 	{
-		// Token: 0x0400BD9C RID: 48540
+		// Token: 0x0400C290 RID: 49808
 		[OriginalName("Fire")]
 		Fire,
-		// Token: 0x0400BD9D RID: 48541
+		// Token: 0x0400C291 RID: 49809
 		[OriginalName("Water")]
 		Water,
-		// Token: 0x0400BD9E RID: 48542
+		// Token: 0x0400C292 RID: 49810
 		[OriginalName("Wood")]
 		Wood
 	}

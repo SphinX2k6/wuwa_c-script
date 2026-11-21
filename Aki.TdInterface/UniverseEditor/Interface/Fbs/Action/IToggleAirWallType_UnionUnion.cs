@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073F2 RID: 29682
+	// Token: 0x02007BDC RID: 31708
 	public class IToggleAirWallType_UnionUnion
 	{
-		// Token: 0x1700E16B RID: 57707
-		// (get) Token: 0x06035EA7 RID: 220839 RVA: 0x0075663D File Offset: 0x0075483D
-		// (set) Token: 0x06035EA8 RID: 220840 RVA: 0x00756645 File Offset: 0x00754845
+		// Token: 0x1700ED80 RID: 60800
+		// (get) Token: 0x0603925A RID: 234074 RVA: 0x007B8DB1 File Offset: 0x007B6FB1
+		// (set) Token: 0x0603925B RID: 234075 RVA: 0x007B8DB9 File Offset: 0x007B6FB9
 		public IToggleAirWallType_Union Type { get; set; }
 
-		// Token: 0x1700E16C RID: 57708
-		// (get) Token: 0x06035EA9 RID: 220841 RVA: 0x0075664E File Offset: 0x0075484E
-		// (set) Token: 0x06035EAA RID: 220842 RVA: 0x00756656 File Offset: 0x00754856
+		// Token: 0x1700ED81 RID: 60801
+		// (get) Token: 0x0603925C RID: 234076 RVA: 0x007B8DC2 File Offset: 0x007B6FC2
+		// (set) Token: 0x0603925D RID: 234077 RVA: 0x007B8DCA File Offset: 0x007B6FCA
 		public object Value { get; set; }
 
-		// Token: 0x06035EAB RID: 220843 RVA: 0x0075665F File Offset: 0x0075485F
+		// Token: 0x0603925E RID: 234078 RVA: 0x007B8DD3 File Offset: 0x007B6FD3
 		public IToggleAirWallType_UnionUnion()
 		{
 			this.Type = IToggleAirWallType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06035EAC RID: 220844 RVA: 0x00756675 File Offset: 0x00754875
+		// Token: 0x0603925F RID: 234079 RVA: 0x007B8DE9 File Offset: 0x007B6FE9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06035EAD RID: 220845 RVA: 0x00756687 File Offset: 0x00754887
+		// Token: 0x06039260 RID: 234080 RVA: 0x007B8DFB File Offset: 0x007B6FFB
 		public IToggleAirWallTypeT AsIToggleAirWallType()
 		{
 			return this.As<IToggleAirWallTypeT>();
 		}
 
-		// Token: 0x06035EAE RID: 220846 RVA: 0x0075668F File Offset: 0x0075488F
+		// Token: 0x06039261 RID: 234081 RVA: 0x007B8E03 File Offset: 0x007B7003
 		public static IToggleAirWallType_UnionUnion FromIToggleAirWallType(IToggleAirWallTypeT _itoggleairwalltype)
 		{
 			return new IToggleAirWallType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035EAF RID: 220847 RVA: 0x007566A4 File Offset: 0x007548A4
+		// Token: 0x06039262 RID: 234082 RVA: 0x007B8E18 File Offset: 0x007B7018
 		public IOpenAirWallT AsIOpenAirWall()
 		{
 			return this.As<IOpenAirWallT>();
 		}
 
-		// Token: 0x06035EB0 RID: 220848 RVA: 0x007566AC File Offset: 0x007548AC
+		// Token: 0x06039263 RID: 234083 RVA: 0x007B8E20 File Offset: 0x007B7020
 		public static IToggleAirWallType_UnionUnion FromIOpenAirWall(IOpenAirWallT _iopenairwall)
 		{
 			return new IToggleAirWallType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035EB1 RID: 220849 RVA: 0x007566C1 File Offset: 0x007548C1
+		// Token: 0x06039264 RID: 234084 RVA: 0x007B8E35 File Offset: 0x007B7035
 		public ICloseAirWallT AsICloseAirWall()
 		{
 			return this.As<ICloseAirWallT>();
 		}
 
-		// Token: 0x06035EB2 RID: 220850 RVA: 0x007566C9 File Offset: 0x007548C9
+		// Token: 0x06039265 RID: 234085 RVA: 0x007B8E3D File Offset: 0x007B703D
 		public static IToggleAirWallType_UnionUnion FromICloseAirWall(ICloseAirWallT _icloseairwall)
 		{
 			return new IToggleAirWallType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035EB3 RID: 220851 RVA: 0x007566E0 File Offset: 0x007548E0
+		// Token: 0x06039266 RID: 234086 RVA: 0x007B8E54 File Offset: 0x007B7054
 		public static int Pack(FlatBufferBuilder builder, IToggleAirWallType_UnionUnion _o)
 		{
 			switch (_o.Type)

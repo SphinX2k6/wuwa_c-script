@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DDA RID: 19930
+	// Token: 0x02003DA3 RID: 15779
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikePopularEntriesPanel : UiPanelBase
 	{
-		// Token: 0x06033720 RID: 210720 RVA: 0x00C04C18 File Offset: 0x00C02E18
+		// Token: 0x0602858B RID: 165259 RVA: 0x00B4E128 File Offset: 0x00B4C328
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033721 RID: 210721 RVA: 0x00C04E7C File Offset: 0x00C0307C
+		// Token: 0x0602858C RID: 165260 RVA: 0x00B4E38C File Offset: 0x00B4C58C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikePopularEntriesPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033722 RID: 210722 RVA: 0x00C04EBF File Offset: 0x00C030BF
+		// Token: 0x0602858D RID: 165261 RVA: 0x00B4E3CF File Offset: 0x00B4C5CF
 		private RoguelikePopularEntriesGroup CreateEntriesGroupItem()
 		{
 			return new RoguelikePopularEntriesGroup
@@ -80,19 +80,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			};
 		}
 
-		// Token: 0x06033723 RID: 210723 RVA: 0x00C04ED8 File Offset: 0x00C030D8
+		// Token: 0x0602858E RID: 165262 RVA: 0x00B4E3E8 File Offset: 0x00B4C5E8
 		private RoguelikePopularEntryTypeItem CreateEntriesTypeItem()
 		{
 			return new RoguelikePopularEntryTypeItem();
 		}
 
-		// Token: 0x06033724 RID: 210724 RVA: 0x00C04EDF File Offset: 0x00C030DF
+		// Token: 0x0602858F RID: 165263 RVA: 0x00B4E3EF File Offset: 0x00B4C5EF
 		private bool IsLastGroup(int index)
 		{
 			return index == RoguelikeModel.Instance.GetEntranceViewModel().EntriesDataGroupList.Count - 1;
 		}
 
-		// Token: 0x06033725 RID: 210725 RVA: 0x00C04EFA File Offset: 0x00C030FA
+		// Token: 0x06028590 RID: 165264 RVA: 0x00B4E40A File Offset: 0x00B4C60A
 		public void Refresh(RoguelikeEntranceViewModel vm)
 		{
 			if (vm.CurrentSelectEntryData != null)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033726 RID: 210726 RVA: 0x00C04F14 File Offset: 0x00C03114
+		// Token: 0x06028591 RID: 165265 RVA: 0x00B4E424 File Offset: 0x00B4C624
 		public void ScrollToGroup(int groupId)
 		{
 			UUIItem itemByKey = this.LayoutEntriesGroup.GetItemByKey(groupId);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033727 RID: 210727 RVA: 0x00C04F44 File Offset: 0x00C03144
+		// Token: 0x06028592 RID: 165266 RVA: 0x00B4E454 File Offset: 0x00B4C654
 		public void RefreshSelectEntry(RoguelikeEntranceViewModel vm, RoguelikeEntryData entryData, bool isSwitch = false)
 		{
 			RogueHotEntryType? rogueHotEntryTypeConfig = RoguelikeConfig.Instance.GetRogueHotEntryTypeConfig((int)entryData.Type);
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0401B4F7 RID: 111863
+		// Token: 0x04015ECA RID: 89802
 		[Nullable(new byte[]
 		{
 			2,
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericScrollViewNew<RoguelikePopularEntriesGroup, RoguelikeEntriesGroupData> LayoutEntriesGroup;
 
-		// Token: 0x0401B4F8 RID: 111864
+		// Token: 0x04015ECB RID: 89803
 		[Nullable(new byte[]
 		{
 			2,
@@ -179,63 +179,63 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoguelikePopularEntryTypeItem, ERoguelikeEntryType> LayoutEntriesType;
 
-		// Token: 0x0401B4F9 RID: 111865
+		// Token: 0x04015ECC RID: 89804
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200AF5F RID: 44895
+		// Token: 0x02009994 RID: 39316
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04035400 RID: 218112
+			// Token: 0x0402FE33 RID: 196147
 			public const int LayoutIcon = 0;
 
-			// Token: 0x04035401 RID: 218113
+			// Token: 0x0402FE34 RID: 196148
 			public const int ItemIcon = 1;
 
-			// Token: 0x04035402 RID: 218114
+			// Token: 0x0402FE35 RID: 196149
 			public const int LayoutEntriesGroup = 2;
 
-			// Token: 0x04035403 RID: 218115
+			// Token: 0x0402FE36 RID: 196150
 			public const int ItemEntriesGroup = 3;
 
-			// Token: 0x04035404 RID: 218116
+			// Token: 0x0402FE37 RID: 196151
 			public const int TexEntryTypeRing = 4;
 
-			// Token: 0x04035405 RID: 218117
+			// Token: 0x0402FE38 RID: 196152
 			public const int TexEntry = 5;
 
-			// Token: 0x04035406 RID: 218118
+			// Token: 0x0402FE39 RID: 196153
 			public const int SpriteEntry = 6;
 
-			// Token: 0x04035407 RID: 218119
+			// Token: 0x0402FE3A RID: 196154
 			public const int TxtEntryName = 7;
 
-			// Token: 0x04035408 RID: 218120
+			// Token: 0x0402FE3B RID: 196155
 			public const int TexEntryTypeIcon = 8;
 
-			// Token: 0x04035409 RID: 218121
+			// Token: 0x0402FE3C RID: 196156
 			public const int TxtTypeName = 9;
 
-			// Token: 0x0403540A RID: 218122
+			// Token: 0x0402FE3D RID: 196157
 			public const int ItemDeactivate = 10;
 
-			// Token: 0x0403540B RID: 218123
+			// Token: 0x0402FE3E RID: 196158
 			public const int ItemActive = 11;
 
-			// Token: 0x0403540C RID: 218124
+			// Token: 0x0402FE3F RID: 196159
 			public const int TxtActive = 12;
 
-			// Token: 0x0403540D RID: 218125
+			// Token: 0x0402FE40 RID: 196160
 			public const int TxtEntryDesc = 13;
 
-			// Token: 0x0403540E RID: 218126
+			// Token: 0x0402FE41 RID: 196161
 			public const int NiagaraTxtEntryDesc = 14;
 
-			// Token: 0x0403540F RID: 218127
+			// Token: 0x0402FE42 RID: 196162
 			public const int PanelEntry = 15;
 
-			// Token: 0x04035410 RID: 218128
+			// Token: 0x0402FE43 RID: 196163
 			public const int FrameIcon = 16;
 		}
 	}

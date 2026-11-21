@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D81 RID: 28033
+	// Token: 0x020074FC RID: 29948
 	public class IPostAkEventType_UnionUnion
 	{
-		// Token: 0x1700D128 RID: 53544
-		// (get) Token: 0x06031848 RID: 202824 RVA: 0x006B661D File Offset: 0x006B481D
-		// (set) Token: 0x06031849 RID: 202825 RVA: 0x006B6625 File Offset: 0x006B4825
+		// Token: 0x1700DC70 RID: 56432
+		// (get) Token: 0x06034844 RID: 215108 RVA: 0x00711D05 File Offset: 0x0070FF05
+		// (set) Token: 0x06034845 RID: 215109 RVA: 0x00711D0D File Offset: 0x0070FF0D
 		public IPostAkEventType_Union Type { get; set; }
 
-		// Token: 0x1700D129 RID: 53545
-		// (get) Token: 0x0603184A RID: 202826 RVA: 0x006B662E File Offset: 0x006B482E
-		// (set) Token: 0x0603184B RID: 202827 RVA: 0x006B6636 File Offset: 0x006B4836
+		// Token: 0x1700DC71 RID: 56433
+		// (get) Token: 0x06034846 RID: 215110 RVA: 0x00711D16 File Offset: 0x0070FF16
+		// (set) Token: 0x06034847 RID: 215111 RVA: 0x00711D1E File Offset: 0x0070FF1E
 		public object Value { get; set; }
 
-		// Token: 0x0603184C RID: 202828 RVA: 0x006B663F File Offset: 0x006B483F
+		// Token: 0x06034848 RID: 215112 RVA: 0x00711D27 File Offset: 0x0070FF27
 		public IPostAkEventType_UnionUnion()
 		{
 			this.Type = IPostAkEventType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603184D RID: 202829 RVA: 0x006B6655 File Offset: 0x006B4855
+		// Token: 0x06034849 RID: 215113 RVA: 0x00711D3D File Offset: 0x0070FF3D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603184E RID: 202830 RVA: 0x006B6667 File Offset: 0x006B4867
+		// Token: 0x0603484A RID: 215114 RVA: 0x00711D4F File Offset: 0x0070FF4F
 		public IPostAkEventTypeT AsIPostAkEventType()
 		{
 			return this.As<IPostAkEventTypeT>();
 		}
 
-		// Token: 0x0603184F RID: 202831 RVA: 0x006B666F File Offset: 0x006B486F
+		// Token: 0x0603484B RID: 215115 RVA: 0x00711D57 File Offset: 0x0070FF57
 		public static IPostAkEventType_UnionUnion FromIPostAkEventType(IPostAkEventTypeT _ipostakeventtype)
 		{
 			return new IPostAkEventType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031850 RID: 202832 RVA: 0x006B6684 File Offset: 0x006B4884
+		// Token: 0x0603484C RID: 215116 RVA: 0x00711D6C File Offset: 0x0070FF6C
 		public IPostAkEventTargetedT AsIPostAkEventTargeted()
 		{
 			return this.As<IPostAkEventTargetedT>();
 		}
 
-		// Token: 0x06031851 RID: 202833 RVA: 0x006B668C File Offset: 0x006B488C
+		// Token: 0x0603484D RID: 215117 RVA: 0x00711D74 File Offset: 0x0070FF74
 		public static IPostAkEventType_UnionUnion FromIPostAkEventTargeted(IPostAkEventTargetedT _ipostakeventtargeted)
 		{
 			return new IPostAkEventType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031852 RID: 202834 RVA: 0x006B66A1 File Offset: 0x006B48A1
+		// Token: 0x0603484E RID: 215118 RVA: 0x00711D89 File Offset: 0x0070FF89
 		public IPostAkEventGlobalT AsIPostAkEventGlobal()
 		{
 			return this.As<IPostAkEventGlobalT>();
 		}
 
-		// Token: 0x06031853 RID: 202835 RVA: 0x006B66A9 File Offset: 0x006B48A9
+		// Token: 0x0603484F RID: 215119 RVA: 0x00711D91 File Offset: 0x0070FF91
 		public static IPostAkEventType_UnionUnion FromIPostAkEventGlobal(IPostAkEventGlobalT _ipostakeventglobal)
 		{
 			return new IPostAkEventType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031854 RID: 202836 RVA: 0x006B66BE File Offset: 0x006B48BE
+		// Token: 0x06034850 RID: 215120 RVA: 0x00711DA6 File Offset: 0x0070FFA6
 		public IPostAkEventMapT AsIPostAkEventMap()
 		{
 			return this.As<IPostAkEventMapT>();
 		}
 
-		// Token: 0x06031855 RID: 202837 RVA: 0x006B66C6 File Offset: 0x006B48C6
+		// Token: 0x06034851 RID: 215121 RVA: 0x00711DAE File Offset: 0x0070FFAE
 		public static IPostAkEventType_UnionUnion FromIPostAkEventMap(IPostAkEventMapT _ipostakeventmap)
 		{
 			return new IPostAkEventType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031856 RID: 202838 RVA: 0x006B66DB File Offset: 0x006B48DB
+		// Token: 0x06034852 RID: 215122 RVA: 0x00711DC3 File Offset: 0x0070FFC3
 		public IPostAkEventMusicSubtitleT AsIPostAkEventMusicSubtitle()
 		{
 			return this.As<IPostAkEventMusicSubtitleT>();
 		}
 
-		// Token: 0x06031857 RID: 202839 RVA: 0x006B66E3 File Offset: 0x006B48E3
+		// Token: 0x06034853 RID: 215123 RVA: 0x00711DCB File Offset: 0x0070FFCB
 		public static IPostAkEventType_UnionUnion FromIPostAkEventMusicSubtitle(IPostAkEventMusicSubtitleT _ipostakeventmusicsubtitle)
 		{
 			return new IPostAkEventType_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031858 RID: 202840 RVA: 0x006B66F8 File Offset: 0x006B48F8
+		// Token: 0x06034854 RID: 215124 RVA: 0x00711DE0 File Offset: 0x0070FFE0
 		public static int Pack(FlatBufferBuilder builder, IPostAkEventType_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200165C RID: 5724
+	// Token: 0x020017CC RID: 6092
 	public class EnterNpcVehicle_SetValue
 	{
-		// Token: 0x04004CB1 RID: 19633
+		// Token: 0x040050AC RID: 20652
 		public int Target;
 
-		// Token: 0x04004CB2 RID: 19634
+		// Token: 0x040050AD RID: 20653
 		public int Seat;
 	}
 }

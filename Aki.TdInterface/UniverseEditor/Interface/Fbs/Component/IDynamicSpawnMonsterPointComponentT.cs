@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005100 RID: 20736
+	// Token: 0x02005665 RID: 22117
 	public class IDynamicSpawnMonsterPointComponentT
 	{
-		// Token: 0x17009714 RID: 38676
-		// (get) Token: 0x0602167E RID: 136830 RVA: 0x004A3992 File Offset: 0x004A1B92
-		// (set) Token: 0x0602167F RID: 136831 RVA: 0x004A399A File Offset: 0x004A1B9A
+		// Token: 0x17009F01 RID: 40705
+		// (get) Token: 0x060235D2 RID: 144850 RVA: 0x004DD91E File Offset: 0x004DBB1E
+		// (set) Token: 0x060235D3 RID: 144851 RVA: 0x004DD926 File Offset: 0x004DBB26
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009715 RID: 38677
-		// (get) Token: 0x06021680 RID: 136832 RVA: 0x004A39A3 File Offset: 0x004A1BA3
-		// (set) Token: 0x06021681 RID: 136833 RVA: 0x004A39AB File Offset: 0x004A1BAB
+		// Token: 0x17009F02 RID: 40706
+		// (get) Token: 0x060235D4 RID: 144852 RVA: 0x004DD92F File Offset: 0x004DBB2F
+		// (set) Token: 0x060235D5 RID: 144853 RVA: 0x004DD937 File Offset: 0x004DBB37
 		public int TagId { get; set; }
 
-		// Token: 0x17009716 RID: 38678
-		// (get) Token: 0x06021682 RID: 136834 RVA: 0x004A39B4 File Offset: 0x004A1BB4
-		// (set) Token: 0x06021683 RID: 136835 RVA: 0x004A39BC File Offset: 0x004A1BBC
+		// Token: 0x17009F03 RID: 40707
+		// (get) Token: 0x060235D6 RID: 144854 RVA: 0x004DD940 File Offset: 0x004DBB40
+		// (set) Token: 0x060235D7 RID: 144855 RVA: 0x004DD948 File Offset: 0x004DBB48
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021684 RID: 136836 RVA: 0x004A39C5 File Offset: 0x004A1BC5
+		// Token: 0x060235D8 RID: 144856 RVA: 0x004DD951 File Offset: 0x004DBB51
 		public IDynamicSpawnMonsterPointComponentT()
 		{
 			this.Disabled = false;

@@ -3,16 +3,16 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FAA RID: 28586
+	// Token: 0x0200612B RID: 24875
 	public class LevelFlowWaitQteStart : LevelFlowActionBase
 	{
-		// Token: 0x060457A5 RID: 284581 RVA: 0x0113C4C6 File Offset: 0x0113A6C6
+		// Token: 0x0603B953 RID: 244051 RVA: 0x010E62CA File Offset: 0x010E44CA
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int?>(EEventName.CommonQteStart, new Action<int?>(this.OnCommonQteStart));
 		}
 
-		// Token: 0x060457A6 RID: 284582 RVA: 0x0113C4E4 File Offset: 0x0113A6E4
+		// Token: 0x0603B954 RID: 244052 RVA: 0x010E62E8 File Offset: 0x010E44E8
 		protected override void OnExecute()
 		{
 			if (LevelFlowModel.Instance.IsEnd)
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x060457A7 RID: 284583 RVA: 0x0113C4F9 File Offset: 0x0113A6F9
+		// Token: 0x0603B955 RID: 244053 RVA: 0x010E62FD File Offset: 0x010E44FD
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int?>(EEventName.CommonQteStart, new Action<int?>(this.OnCommonQteStart));
 		}
 
-		// Token: 0x060457A8 RID: 284584 RVA: 0x0113C517 File Offset: 0x0113A717
+		// Token: 0x0603B956 RID: 244054 RVA: 0x010E631B File Offset: 0x010E451B
 		private void OnCommonQteStart(int? handleId)
 		{
 			base.FinishExecute(true);

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DC5 RID: 3525
+	// Token: 0x02000EAA RID: 3754
 	public struct LifePointActivity : IFlatbufferObject
 	{
-		// Token: 0x17001CCC RID: 7372
-		// (get) Token: 0x06008DC0 RID: 36288 RVA: 0x0027707D File Offset: 0x0027527D
+		// Token: 0x17001D30 RID: 7472
+		// (get) Token: 0x060093DC RID: 37852 RVA: 0x00295606 File Offset: 0x00293806
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008DC1 RID: 36289 RVA: 0x0027708A File Offset: 0x0027528A
+		// Token: 0x060093DD RID: 37853 RVA: 0x00295613 File Offset: 0x00293813
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008DC2 RID: 36290 RVA: 0x00277094 File Offset: 0x00275294
+		// Token: 0x060093DE RID: 37854 RVA: 0x0029561C File Offset: 0x0029381C
 		public static LifePointActivity GetRootAsLifePointActivity(ByteBuffer _bb)
 		{
 			return LifePointActivity.GetRootAsLifePointActivity(_bb, default(LifePointActivity));
 		}
 
-		// Token: 0x06008DC3 RID: 36291 RVA: 0x002770B0 File Offset: 0x002752B0
+		// Token: 0x060093DF RID: 37855 RVA: 0x00295638 File Offset: 0x00293838
 		public static LifePointActivity GetRootAsLifePointActivity(ByteBuffer _bb, LifePointActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008DC4 RID: 36292 RVA: 0x002770CD File Offset: 0x002752CD
+		// Token: 0x060093E0 RID: 37856 RVA: 0x00295655 File Offset: 0x00293855
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008DC5 RID: 36293 RVA: 0x002770DC File Offset: 0x002752DC
+		// Token: 0x060093E1 RID: 37857 RVA: 0x00295664 File Offset: 0x00293864
 		public LifePointActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001CCD RID: 7373
-		// (get) Token: 0x06008DC6 RID: 36294 RVA: 0x002770EC File Offset: 0x002752EC
+		// Token: 0x17001D31 RID: 7473
+		// (get) Token: 0x060093E2 RID: 37858 RVA: 0x00295674 File Offset: 0x00293874
 		public int ActivityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001CCE RID: 7374
-		// (get) Token: 0x06008DC7 RID: 36295 RVA: 0x00277128 File Offset: 0x00275328
+		// Token: 0x17001D32 RID: 7474
+		// (get) Token: 0x060093E3 RID: 37859 RVA: 0x002956B0 File Offset: 0x002938B0
 		public int MarkId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004E5B RID: 20059
+		// Token: 0x04005440 RID: 21568
 		private Table __p;
 	}
 }

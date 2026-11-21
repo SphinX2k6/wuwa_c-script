@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 {
-	// Token: 0x02005A15 RID: 23061
+	// Token: 0x020049F1 RID: 18929
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlShieldAnimator
 	{
-		// Token: 0x0603A7A4 RID: 239524 RVA: 0x00DEA900 File Offset: 0x00DE8B00
+		// Token: 0x0602F6ED RID: 194285 RVA: 0x00D3AE98 File Offset: 0x00D39098
 		[NullableContext(2)]
 		public DangoBrawlShieldAnimator([Nullable(1)] UUIItem sequenceOwner, UUIItem panelShield, UUIText txtShield, int delay)
 		{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 			this.Delay = delay;
 		}
 
-		// Token: 0x0603A7A5 RID: 239525 RVA: 0x00DEA950 File Offset: 0x00DE8B50
+		// Token: 0x0602F6EE RID: 194286 RVA: 0x00D3AEE8 File Offset: 0x00D390E8
 		public void Init(int shield)
 		{
 			this.Target = shield;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 			panelShield.SetUIActive(shield != 0);
 		}
 
-		// Token: 0x0603A7A6 RID: 239526 RVA: 0x00DEA9BC File Offset: 0x00DE8BBC
+		// Token: 0x0602F6EF RID: 194287 RVA: 0x00D3AF54 File Offset: 0x00D39154
 		public void SetShield(int shield)
 		{
 			this.Target = shield;
@@ -56,19 +56,19 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 			this.Drive();
 		}
 
-		// Token: 0x0603A7A7 RID: 239527 RVA: 0x00DEAA00 File Offset: 0x00DE8C00
+		// Token: 0x0602F6F0 RID: 194288 RVA: 0x00D3AF98 File Offset: 0x00D39198
 		public void Tick()
 		{
 			this.Drive();
 		}
 
-		// Token: 0x0603A7A8 RID: 239528 RVA: 0x00DEAA08 File Offset: 0x00DE8C08
+		// Token: 0x0602F6F1 RID: 194289 RVA: 0x00D3AFA0 File Offset: 0x00D391A0
 		public void Clear()
 		{
 			this.Player.Clear();
 		}
 
-		// Token: 0x0603A7A9 RID: 239529 RVA: 0x00DEAA18 File Offset: 0x00DE8C18
+		// Token: 0x0602F6F2 RID: 194290 RVA: 0x00D3AFB0 File Offset: 0x00D391B0
 		private void Drive()
 		{
 			if (this.Target == this.Current)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 			}
 		}
 
-		// Token: 0x0603A7AA RID: 239530 RVA: 0x00DEAAE0 File Offset: 0x00DE8CE0
+		// Token: 0x0602F6F3 RID: 194291 RVA: 0x00D3B078 File Offset: 0x00D39278
 		private void Play(EShieldAnimState next, double now)
 		{
 			if (this.PlayingSeqName != null)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 			this.Player.PlaySequencePurely(this.PlayingSeqName, false, false, null, null, false);
 		}
 
-		// Token: 0x0603A7AB RID: 239531 RVA: 0x00DEAB71 File Offset: 0x00DE8D71
+		// Token: 0x0602F6F4 RID: 194292 RVA: 0x00D3B109 File Offset: 0x00D39309
 		private void OnSeqEnd(string sequenceName)
 		{
 			if (sequenceName != this.PlayingSeqName)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 			this.Drive();
 		}
 
-		// Token: 0x0603A7AC RID: 239532 RVA: 0x00DEABB1 File Offset: 0x00DE8DB1
+		// Token: 0x0602F6F5 RID: 194293 RVA: 0x00D3B149 File Offset: 0x00D39349
 		private static EShieldAnimState Decide(int current, int target)
 		{
 			if (current == 0)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 			return EShieldAnimState.Up;
 		}
 
-		// Token: 0x0603A7AD RID: 239533 RVA: 0x00DEABC4 File Offset: 0x00DE8DC4
+		// Token: 0x0602F6F6 RID: 194294 RVA: 0x00D3B15C File Offset: 0x00D3935C
 		private static string SeqName(EShieldAnimState state)
 		{
 			string result;
@@ -202,45 +202,45 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item.ShieldFSM
 			return result;
 		}
 
-		// Token: 0x0401E784 RID: 124804
+		// Token: 0x0401922B RID: 102955
 		private const string SeqStart = "ShieldStart";
 
-		// Token: 0x0401E785 RID: 124805
+		// Token: 0x0401922C RID: 102956
 		private const string SeqClose = "ShieldClose";
 
-		// Token: 0x0401E786 RID: 124806
+		// Token: 0x0401922D RID: 102957
 		private const string SeqUp = "ShieldUp";
 
-		// Token: 0x0401E787 RID: 124807
+		// Token: 0x0401922E RID: 102958
 		private const string SeqDown = "ShieldDown";
 
-		// Token: 0x0401E788 RID: 124808
+		// Token: 0x0401922F RID: 102959
 		private readonly LevelSequencePlayer Player;
 
-		// Token: 0x0401E789 RID: 124809
+		// Token: 0x04019230 RID: 102960
 		[Nullable(2)]
 		private readonly UUIItem PanelShield;
 
-		// Token: 0x0401E78A RID: 124810
+		// Token: 0x04019231 RID: 102961
 		[Nullable(2)]
 		private readonly UUIText TxtShield;
 
-		// Token: 0x0401E78B RID: 124811
+		// Token: 0x04019232 RID: 102962
 		private readonly int Delay;
 
-		// Token: 0x0401E78C RID: 124812
+		// Token: 0x04019233 RID: 102963
 		private int Current;
 
-		// Token: 0x0401E78D RID: 124813
+		// Token: 0x04019234 RID: 102964
 		private int Target;
 
-		// Token: 0x0401E78E RID: 124814
+		// Token: 0x04019235 RID: 102965
 		private EShieldAnimState State;
 
-		// Token: 0x0401E78F RID: 124815
+		// Token: 0x04019236 RID: 102966
 		private double AnimStartTime;
 
-		// Token: 0x0401E790 RID: 124816
+		// Token: 0x04019237 RID: 102967
 		[Nullable(2)]
 		private string PlayingSeqName;
 	}

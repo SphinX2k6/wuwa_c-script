@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CCD RID: 15565
+	// Token: 0x020040E1 RID: 16609
 	public enum ESkillCategory : sbyte
 	{
-		// Token: 0x0400B4CE RID: 46286
+		// Token: 0x0400BE74 RID: 48756
 		NoCategory = -1,
-		// Token: 0x0400B4CF RID: 46287
+		// Token: 0x0400BE75 RID: 48757
 		Normal,
-		// Token: 0x0400B4D0 RID: 46288
+		// Token: 0x0400BE76 RID: 48758
 		Accumulating,
-		// Token: 0x0400B4D1 RID: 46289
+		// Token: 0x0400BE77 RID: 48759
 		ESkill,
-		// Token: 0x0400B4D2 RID: 46290
+		// Token: 0x0400BE78 RID: 48760
 		RSkill,
-		// Token: 0x0400B4D3 RID: 46291
+		// Token: 0x0400BE79 RID: 48761
 		QteSkill,
-		// Token: 0x0400B4D4 RID: 46292
+		// Token: 0x0400BE7A RID: 48762
 		CounterAttack,
-		// Token: 0x0400B4D5 RID: 46293
+		// Token: 0x0400BE7B RID: 48763
 		GroundDodge,
-		// Token: 0x0400B4D6 RID: 46294
+		// Token: 0x0400BE7C RID: 48764
 		ExtremeDodge,
-		// Token: 0x0400B4D7 RID: 46295
+		// Token: 0x0400BE7D RID: 48765
 		Passive,
-		// Token: 0x0400B4D8 RID: 46296
+		// Token: 0x0400BE7E RID: 48766
 		BattleVision,
-		// Token: 0x0400B4D9 RID: 46297
+		// Token: 0x0400BE7F RID: 48767
 		ExploreTool,
-		// Token: 0x0400B4DA RID: 46298
+		// Token: 0x0400BE80 RID: 48768
 		AirDodge,
-		// Token: 0x0400B4DB RID: 46299
+		// Token: 0x0400BE81 RID: 48769
 		SwitchSkill,
-		// Token: 0x0400B4DC RID: 46300
+		// Token: 0x0400BE82 RID: 48770
 		BreakWeakSkill,
-		// Token: 0x0400B4DD RID: 46301
+		// Token: 0x0400BE83 RID: 48771
 		NoneCategory
 	}
 }

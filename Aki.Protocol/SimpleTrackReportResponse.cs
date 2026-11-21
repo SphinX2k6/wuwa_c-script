@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200122C RID: 4652
+	// Token: 0x02001268 RID: 4712
 	[NetMessage(EMessageId.SimpleTrackReportResponse)]
 	public sealed class SimpleTrackReportResponse : IMessage<SimpleTrackReportResponse>, IMessage, IEquatable<SimpleTrackReportResponse>, IDeepCloneable<SimpleTrackReportResponse>, IBufferMessage
 	{
-		// Token: 0x06018CA3 RID: 101539 RVA: 0x0039B5E2 File Offset: 0x003997E2
+		// Token: 0x0601927D RID: 103037 RVA: 0x003AB48A File Offset: 0x003A968A
 		[NullableContext(1)]
 		public static SimpleTrackReportResponse Create()
 		{
 			return new SimpleTrackReportResponse();
 		}
 
-		// Token: 0x1700538C RID: 21388
-		// (get) Token: 0x06018CA4 RID: 101540 RVA: 0x0039B5E9 File Offset: 0x003997E9
+		// Token: 0x17005509 RID: 21769
+		// (get) Token: 0x0601927E RID: 103038 RVA: 0x003AB491 File Offset: 0x003A9691
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700538D RID: 21389
-		// (get) Token: 0x06018CA5 RID: 101541 RVA: 0x0039B5EC File Offset: 0x003997EC
+		// Token: 0x1700550A RID: 21770
+		// (get) Token: 0x0601927F RID: 103039 RVA: 0x003AB494 File Offset: 0x003A9694
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018CA6 RID: 101542 RVA: 0x0039B5F3 File Offset: 0x003997F3
+		// Token: 0x06019280 RID: 103040 RVA: 0x003AB49B File Offset: 0x003A969B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleTrackReportResponse()
 		{
 		}
 
-		// Token: 0x06018CA7 RID: 101543 RVA: 0x0039B606 File Offset: 0x00399806
+		// Token: 0x06019281 RID: 103041 RVA: 0x003AB4AE File Offset: 0x003A96AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleTrackReportResponse(SimpleTrackReportResponse other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06018CA8 RID: 101544 RVA: 0x0039B63C File Offset: 0x0039983C
+		// Token: 0x06019282 RID: 103042 RVA: 0x003AB4E4 File Offset: 0x003A96E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleTrackReportResponse Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new SimpleTrackReportResponse(this);
 		}
 
-		// Token: 0x1700538E RID: 21390
-		// (get) Token: 0x06018CA9 RID: 101545 RVA: 0x0039B644 File Offset: 0x00399844
-		// (set) Token: 0x06018CAA RID: 101546 RVA: 0x0039B64C File Offset: 0x0039984C
+		// Token: 0x1700550B RID: 21771
+		// (get) Token: 0x06019283 RID: 103043 RVA: 0x003AB4EC File Offset: 0x003A96EC
+		// (set) Token: 0x06019284 RID: 103044 RVA: 0x003AB4F4 File Offset: 0x003A96F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700538F RID: 21391
-		// (get) Token: 0x06018CAB RID: 101547 RVA: 0x0039B655 File Offset: 0x00399855
+		// Token: 0x1700550C RID: 21772
+		// (get) Token: 0x06019285 RID: 103045 RVA: 0x003AB4FD File Offset: 0x003A96FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SimpleTrackReportMsg> SimpleTrackReportMsgs
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018CAC RID: 101548 RVA: 0x0039B65D File Offset: 0x0039985D
+		// Token: 0x06019286 RID: 103046 RVA: 0x003AB505 File Offset: 0x003A9705
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SimpleTrackReportResponse);
 		}
 
-		// Token: 0x06018CAD RID: 101549 RVA: 0x0039B66C File Offset: 0x0039986C
+		// Token: 0x06019287 RID: 103047 RVA: 0x003AB514 File Offset: 0x003A9714
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SimpleTrackReportResponse other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.simpleTrackReportMsgs_.Equals(other.simpleTrackReportMsgs_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018CAE RID: 101550 RVA: 0x0039B6BC File Offset: 0x003998BC
+		// Token: 0x06019288 RID: 103048 RVA: 0x003AB564 File Offset: 0x003A9764
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018CAF RID: 101551 RVA: 0x0039B70F File Offset: 0x0039990F
+		// Token: 0x06019289 RID: 103049 RVA: 0x003AB5B7 File Offset: 0x003A97B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018CB0 RID: 101552 RVA: 0x0039B71C File Offset: 0x0039991C
+		// Token: 0x0601928A RID: 103050 RVA: 0x003AB5C4 File Offset: 0x003A97C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018CB1 RID: 101553 RVA: 0x0039B728 File Offset: 0x00399928
+		// Token: 0x0601928B RID: 103051 RVA: 0x003AB5D0 File Offset: 0x003A97D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018CB2 RID: 101554 RVA: 0x0039B778 File Offset: 0x00399978
+		// Token: 0x0601928C RID: 103052 RVA: 0x003AB620 File Offset: 0x003A9820
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018CB3 RID: 101555 RVA: 0x0039B7CC File Offset: 0x003999CC
+		// Token: 0x0601928D RID: 103053 RVA: 0x003AB674 File Offset: 0x003A9874
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SimpleTrackReportResponse other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06018CB4 RID: 101556 RVA: 0x0039B819 File Offset: 0x00399A19
+		// Token: 0x0601928E RID: 103054 RVA: 0x003AB6C1 File Offset: 0x003A98C1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06018CB5 RID: 101557 RVA: 0x0039B824 File Offset: 0x00399A24
+		// Token: 0x0601928F RID: 103055 RVA: 0x003AB6CC File Offset: 0x003A98CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -221,7 +221,7 @@ namespace Aki.Protocol
 				}
 				if (num != 48U)
 				{
-					if (num != 122U)
+					if (num != 66U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400923D RID: 37437
+		// Token: 0x040094EE RID: 38126
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400923E RID: 37438
+		// Token: 0x040094EF RID: 38127
 		public const int ErrorCodeFieldNumber = 6;
 
-		// Token: 0x0400923F RID: 37439
+		// Token: 0x040094F0 RID: 38128
 		private ErrorCode errorCode_;
 
-		// Token: 0x04009240 RID: 37440
-		public const int SimpleTrackReportMsgsFieldNumber = 15;
+		// Token: 0x040094F1 RID: 38129
+		public const int SimpleTrackReportMsgsFieldNumber = 8;
 
-		// Token: 0x04009241 RID: 37441
-		private static readonly FieldCodec<SimpleTrackReportMsg> _repeated_simpleTrackReportMsgs_codec = FieldCodec.ForMessage<SimpleTrackReportMsg>(122U, SimpleTrackReportMsg.Parser);
+		// Token: 0x040094F2 RID: 38130
+		private static readonly FieldCodec<SimpleTrackReportMsg> _repeated_simpleTrackReportMsgs_codec = FieldCodec.ForMessage<SimpleTrackReportMsg>(66U, SimpleTrackReportMsg.Parser);
 
-		// Token: 0x04009242 RID: 37442
+		// Token: 0x040094F3 RID: 38131
 		private readonly RepeatedField<SimpleTrackReportMsg> simpleTrackReportMsgs_ = new RepeatedField<SimpleTrackReportMsg>();
 	}
 }

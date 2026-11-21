@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061D1 RID: 25041
+	// Token: 0x0200683F RID: 26687
 	public class IAwakePosTypeT
 	{
-		// Token: 0x1700BABB RID: 47803
-		// (get) Token: 0x0602B294 RID: 176788 RVA: 0x005F310A File Offset: 0x005F130A
-		// (set) Token: 0x0602B295 RID: 176789 RVA: 0x005F3112 File Offset: 0x005F1312
+		// Token: 0x1700C43E RID: 50238
+		// (get) Token: 0x0602D9DB RID: 186843 RVA: 0x0063DB7E File Offset: 0x0063BD7E
+		// (set) Token: 0x0602D9DC RID: 186844 RVA: 0x0063DB86 File Offset: 0x0063BD86
 		public EAwakePosType Type { get; set; }
 
-		// Token: 0x0602B296 RID: 176790 RVA: 0x005F311B File Offset: 0x005F131B
+		// Token: 0x0602D9DD RID: 186845 RVA: 0x0063DB8F File Offset: 0x0063BD8F
 		public IAwakePosTypeT()
 		{
 			this.Type = EAwakePosType.TransformVar;

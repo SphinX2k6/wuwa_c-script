@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071B6 RID: 29110
+	// Token: 0x0200626B RID: 25195
 	public class SplineConstrainedDragSequenceProgressController : ISequenceProgressController
 	{
-		// Token: 0x060473CB RID: 291787 RVA: 0x0121C488 File Offset: 0x0121A688
+		// Token: 0x0603CCC6 RID: 249030 RVA: 0x0117638C File Offset: 0x0117458C
 		public void SetSequenceProgress(float progress)
 		{
 			if (this.SimpleSequenceActor == null)
@@ -28,11 +28,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 			float num = Math.Max(0f, Math.Min(1f, progress));
 			float time = this.CachedStartSeconds + num * this.CachedTotalSeconds;
-			FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams(new FFrameTime(), time, "", EMovieScenePositionType.Time, EUpdatePositionMethod.Jump);
+			FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams
+			{
+				Time = time,
+				PositionType = EMovieScenePositionType.Time,
+				UpdateMethod = EUpdatePositionMethod.Jump
+			};
 			player.SetPlaybackPosition(playbackPosition);
 		}
 
-		// Token: 0x060473CC RID: 291788 RVA: 0x0121C50A File Offset: 0x0121A70A
+		// Token: 0x0603CCC7 RID: 249031 RVA: 0x01176416 File Offset: 0x01174616
 		public void Destroy()
 		{
 			if (this.SimpleSequenceActor != null)
@@ -47,7 +52,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473CD RID: 291789 RVA: 0x0121C540 File Offset: 0x0121A740
+		// Token: 0x0603CCC8 RID: 249032 RVA: 0x0117644C File Offset: 0x0117464C
 		[NullableContext(1)]
 		public void OnSequenceLoaded([Nullable(2)] ULevelSequence data, string path)
 		{
@@ -90,16 +95,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			player.SetPlayRate(0f);
 		}
 
-		// Token: 0x0402576E RID: 153454
+		// Token: 0x040203DD RID: 132061
 		private float CachedStartSeconds;
 
-		// Token: 0x0402576F RID: 153455
+		// Token: 0x040203DE RID: 132062
 		private float CachedTotalSeconds;
 
-		// Token: 0x04025770 RID: 153456
+		// Token: 0x040203DF RID: 132063
 		private bool HasAcquiredForbidEvalDisable;
 
-		// Token: 0x04025771 RID: 153457
+		// Token: 0x040203E0 RID: 132064
 		[Nullable(2)]
 		private SimpleLevelSequenceActor SimpleSequenceActor;
 	}

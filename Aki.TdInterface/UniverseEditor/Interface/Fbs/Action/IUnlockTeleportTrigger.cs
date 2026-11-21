@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074E7 RID: 29927
+	// Token: 0x02007CDD RID: 31965
 	public struct IUnlockTeleportTrigger : IFlatbufferObject
 	{
-		// Token: 0x1700E30B RID: 58123
-		// (get) Token: 0x06036676 RID: 222838 RVA: 0x00764252 File Offset: 0x00762452
+		// Token: 0x1700EF35 RID: 61237
+		// (get) Token: 0x06039A8B RID: 236171 RVA: 0x007C74A2 File Offset: 0x007C56A2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036677 RID: 222839 RVA: 0x0076425F File Offset: 0x0076245F
+		// Token: 0x06039A8C RID: 236172 RVA: 0x007C74AF File Offset: 0x007C56AF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036678 RID: 222840 RVA: 0x00764268 File Offset: 0x00762468
+		// Token: 0x06039A8D RID: 236173 RVA: 0x007C74B8 File Offset: 0x007C56B8
 		public static IUnlockTeleportTrigger GetRootAsIUnlockTeleportTrigger(ByteBuffer _bb)
 		{
 			return IUnlockTeleportTrigger.GetRootAsIUnlockTeleportTrigger(_bb, default(IUnlockTeleportTrigger));
 		}
 
-		// Token: 0x06036679 RID: 222841 RVA: 0x00764284 File Offset: 0x00762484
+		// Token: 0x06039A8E RID: 236174 RVA: 0x007C74D4 File Offset: 0x007C56D4
 		public static IUnlockTeleportTrigger GetRootAsIUnlockTeleportTrigger(ByteBuffer _bb, IUnlockTeleportTrigger obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603667A RID: 222842 RVA: 0x007642A1 File Offset: 0x007624A1
+		// Token: 0x06039A8F RID: 236175 RVA: 0x007C74F1 File Offset: 0x007C56F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603667B RID: 222843 RVA: 0x007642B0 File Offset: 0x007624B0
+		// Token: 0x06039A90 RID: 236176 RVA: 0x007C7500 File Offset: 0x007C5700
 		public IUnlockTeleportTrigger __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E30C RID: 58124
-		// (get) Token: 0x0603667C RID: 222844 RVA: 0x007642C0 File Offset: 0x007624C0
+		// Token: 0x1700EF36 RID: 61238
+		// (get) Token: 0x06039A91 RID: 236177 RVA: 0x007C7510 File Offset: 0x007C5710
 		public int TeleportId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603667D RID: 222845 RVA: 0x007642FC File Offset: 0x007624FC
+		// Token: 0x06039A92 RID: 236178 RVA: 0x007C754C File Offset: 0x007C574C
 		public static Offset<IUnlockTeleportTrigger> CreateIUnlockTeleportTrigger(FlatBufferBuilder builder, int TeleportId = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IUnlockTeleportTrigger.EndIUnlockTeleportTrigger(builder);
 		}
 
-		// Token: 0x0603667E RID: 222846 RVA: 0x00764312 File Offset: 0x00762512
+		// Token: 0x06039A93 RID: 236179 RVA: 0x007C7562 File Offset: 0x007C5762
 		public static void StartIUnlockTeleportTrigger(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0603667F RID: 222847 RVA: 0x0076431B File Offset: 0x0076251B
+		// Token: 0x06039A94 RID: 236180 RVA: 0x007C756B File Offset: 0x007C576B
 		public static void AddTeleportId(FlatBufferBuilder builder, int teleportId)
 		{
 			builder.AddInt(0, teleportId, 0);
 		}
 
-		// Token: 0x06036680 RID: 222848 RVA: 0x00764326 File Offset: 0x00762526
+		// Token: 0x06039A95 RID: 236181 RVA: 0x007C7576 File Offset: 0x007C5776
 		public static Offset<IUnlockTeleportTrigger> EndIUnlockTeleportTrigger(FlatBufferBuilder builder)
 		{
 			return new Offset<IUnlockTeleportTrigger>(builder.EndTable());
 		}
 
-		// Token: 0x06036681 RID: 222849 RVA: 0x00764334 File Offset: 0x00762534
+		// Token: 0x06039A96 RID: 236182 RVA: 0x007C7584 File Offset: 0x007C5784
 		public IUnlockTeleportTriggerT UnPack()
 		{
 			IUnlockTeleportTriggerT unlockTeleportTriggerT = new IUnlockTeleportTriggerT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return unlockTeleportTriggerT;
 		}
 
-		// Token: 0x06036682 RID: 222850 RVA: 0x0076434F File Offset: 0x0076254F
+		// Token: 0x06039A97 RID: 236183 RVA: 0x007C759F File Offset: 0x007C579F
 		public void UnPackTo(IUnlockTeleportTriggerT _o)
 		{
 			_o.TeleportId = this.TeleportId;
 		}
 
-		// Token: 0x06036683 RID: 222851 RVA: 0x00764360 File Offset: 0x00762560
+		// Token: 0x06039A98 RID: 236184 RVA: 0x007C75B0 File Offset: 0x007C57B0
 		public static Offset<IUnlockTeleportTrigger> Pack(FlatBufferBuilder builder, IUnlockTeleportTriggerT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IUnlockTeleportTrigger.CreateIUnlockTeleportTrigger(builder, _o.TeleportId);
 		}
 
-		// Token: 0x040123B4 RID: 74676
+		// Token: 0x040133E5 RID: 78821
 		private Table __p;
 	}
 }

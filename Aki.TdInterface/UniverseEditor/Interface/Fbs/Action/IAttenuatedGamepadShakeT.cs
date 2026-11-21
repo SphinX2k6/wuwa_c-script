@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061AD RID: 25005
+	// Token: 0x0200681B RID: 26651
 	public class IAttenuatedGamepadShakeT
 	{
-		// Token: 0x1700BA71 RID: 47729
-		// (get) Token: 0x0602B15A RID: 176474 RVA: 0x005F0FE3 File Offset: 0x005EF1E3
-		// (set) Token: 0x0602B15B RID: 176475 RVA: 0x005F0FEB File Offset: 0x005EF1EB
+		// Token: 0x1700C3F4 RID: 50164
+		// (get) Token: 0x0602D8A1 RID: 186529 RVA: 0x0063BA57 File Offset: 0x00639C57
+		// (set) Token: 0x0602D8A2 RID: 186530 RVA: 0x0063BA5F File Offset: 0x00639C5F
 		public EGamepadShakeType Type { get; set; }
 
-		// Token: 0x1700BA72 RID: 47730
-		// (get) Token: 0x0602B15C RID: 176476 RVA: 0x005F0FF4 File Offset: 0x005EF1F4
-		// (set) Token: 0x0602B15D RID: 176477 RVA: 0x005F0FFC File Offset: 0x005EF1FC
+		// Token: 0x1700C3F5 RID: 50165
+		// (get) Token: 0x0602D8A3 RID: 186531 RVA: 0x0063BA68 File Offset: 0x00639C68
+		// (set) Token: 0x0602D8A4 RID: 186532 RVA: 0x0063BA70 File Offset: 0x00639C70
 		public int CenterEntity { get; set; }
 
-		// Token: 0x1700BA73 RID: 47731
-		// (get) Token: 0x0602B15E RID: 176478 RVA: 0x005F1005 File Offset: 0x005EF205
-		// (set) Token: 0x0602B15F RID: 176479 RVA: 0x005F100D File Offset: 0x005EF20D
+		// Token: 0x1700C3F6 RID: 50166
+		// (get) Token: 0x0602D8A5 RID: 186533 RVA: 0x0063BA79 File Offset: 0x00639C79
+		// (set) Token: 0x0602D8A6 RID: 186534 RVA: 0x0063BA81 File Offset: 0x00639C81
 		public bool IsFollowEntityMovement { get; set; }
 
-		// Token: 0x1700BA74 RID: 47732
-		// (get) Token: 0x0602B160 RID: 176480 RVA: 0x005F1016 File Offset: 0x005EF216
-		// (set) Token: 0x0602B161 RID: 176481 RVA: 0x005F101E File Offset: 0x005EF21E
+		// Token: 0x1700C3F7 RID: 50167
+		// (get) Token: 0x0602D8A7 RID: 186535 RVA: 0x0063BA8A File Offset: 0x00639C8A
+		// (set) Token: 0x0602D8A8 RID: 186536 RVA: 0x0063BA92 File Offset: 0x00639C92
 		public string ForceFeedbackAttenuation { get; set; }
 
-		// Token: 0x1700BA75 RID: 47733
-		// (get) Token: 0x0602B162 RID: 176482 RVA: 0x005F1027 File Offset: 0x005EF227
-		// (set) Token: 0x0602B163 RID: 176483 RVA: 0x005F102F File Offset: 0x005EF22F
+		// Token: 0x1700C3F8 RID: 50168
+		// (get) Token: 0x0602D8A9 RID: 186537 RVA: 0x0063BA9B File Offset: 0x00639C9B
+		// (set) Token: 0x0602D8AA RID: 186538 RVA: 0x0063BAA3 File Offset: 0x00639CA3
 		public float Duration { get; set; }
 
-		// Token: 0x1700BA76 RID: 47734
-		// (get) Token: 0x0602B164 RID: 176484 RVA: 0x005F1038 File Offset: 0x005EF238
-		// (set) Token: 0x0602B165 RID: 176485 RVA: 0x005F1040 File Offset: 0x005EF240
+		// Token: 0x1700C3F9 RID: 50169
+		// (get) Token: 0x0602D8AB RID: 186539 RVA: 0x0063BAAC File Offset: 0x00639CAC
+		// (set) Token: 0x0602D8AC RID: 186540 RVA: 0x0063BAB4 File Offset: 0x00639CB4
 		public bool IsLoop { get; set; }
 
-		// Token: 0x0602B166 RID: 176486 RVA: 0x005F1049 File Offset: 0x005EF249
+		// Token: 0x0602D8AD RID: 186541 RVA: 0x0063BABD File Offset: 0x00639CBD
 		public IAttenuatedGamepadShakeT()
 		{
 			this.Type = EGamepadShakeType.Onetime;

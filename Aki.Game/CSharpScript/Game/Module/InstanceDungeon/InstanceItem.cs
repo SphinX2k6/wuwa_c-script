@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005868 RID: 22632
+	// Token: 0x02004840 RID: 18496
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InstanceItem : UiPanelBase
 	{
-		// Token: 0x06039896 RID: 235670 RVA: 0x00DA9844 File Offset: 0x00DA7A44
+		// Token: 0x0602E7B3 RID: 190387 RVA: 0x00CF856C File Offset: 0x00CF676C
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ParentModel = (this.OpenParam as InstanceDungeonViewModelBase);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039897 RID: 235671 RVA: 0x00DA99C1 File Offset: 0x00DA7BC1
+		// Token: 0x0602E7B4 RID: 190388 RVA: 0x00CF86E9 File Offset: 0x00CF68E9
 		protected override void OnStart()
 		{
 			this.ExtendToggle = base.GetExtendToggle(0);
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			EventSystem.Instance.Add<int>(EEventName.OnChallengeInstanceRedDot, new Action<int>(this.OnChallengeInstanceRedDot));
 		}
 
-		// Token: 0x06039898 RID: 235672 RVA: 0x00DA99FC File Offset: 0x00DA7BFC
+		// Token: 0x0602E7B5 RID: 190389 RVA: 0x00CF8724 File Offset: 0x00CF6924
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnChallengeInstanceRedDot, new Action<int>(this.OnChallengeInstanceRedDot));
 		}
 
-		// Token: 0x06039899 RID: 235673 RVA: 0x00DA9A1A File Offset: 0x00DA7C1A
+		// Token: 0x0602E7B6 RID: 190390 RVA: 0x00CF8742 File Offset: 0x00CF6942
 		private void OnChallengeInstanceRedDot(int instanceId)
 		{
 			if (this.InstanceId != instanceId)
@@ -74,14 +74,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.UpdateRedDot();
 		}
 
-		// Token: 0x0603989A RID: 235674 RVA: 0x00DA9A2C File Offset: 0x00DA7C2C
+		// Token: 0x0602E7B7 RID: 190391 RVA: 0x00CF8754 File Offset: 0x00CF6954
 		[NullableContext(1)]
 		public UUIText GetTitleText()
 		{
 			return base.GetText(2);
 		}
 
-		// Token: 0x0603989B RID: 235675 RVA: 0x00DA9A38 File Offset: 0x00DA7C38
+		// Token: 0x0602E7B8 RID: 190392 RVA: 0x00CF8760 File Offset: 0x00CF6960
 		public void Update(int data, bool isSelect, bool isShow)
 		{
 			this.InstanceId = data;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.UpdateRedDot();
 		}
 
-		// Token: 0x0603989C RID: 235676 RVA: 0x00DA9AD4 File Offset: 0x00DA7CD4
+		// Token: 0x0602E7B9 RID: 190393 RVA: 0x00CF87FC File Offset: 0x00CF69FC
 		private void UpdateLockOrFirstReward()
 		{
 			if (InstanceDungeonEntranceController.Instance.GetInstanceItemLockStateGetter(this.InstanceId))
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.GetItem(4).SetUIActive(false);
 		}
 
-		// Token: 0x0603989D RID: 235677 RVA: 0x00DA9B58 File Offset: 0x00DA7D58
+		// Token: 0x0602E7BA RID: 190394 RVA: 0x00CF8880 File Offset: 0x00CF6A80
 		private void UpdateLevel()
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(this.InstanceId);
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0603989E RID: 235678 RVA: 0x00DA9C88 File Offset: 0x00DA7E88
+		// Token: 0x0602E7BB RID: 190395 RVA: 0x00CF89B0 File Offset: 0x00CF6BB0
 		private void UpdateIcon()
 		{
 			string instanceDetectItemIcon = this.ParentModel.GetInstanceDetectItemIcon(this.InstanceId);
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603989F RID: 235679 RVA: 0x00DA9CF0 File Offset: 0x00DA7EF0
+		// Token: 0x0602E7BC RID: 190396 RVA: 0x00CF8A18 File Offset: 0x00CF6C18
 		private void UpdateTextureTransition()
 		{
 			InstanceDungeonViewModelBase parentModel = this.ParentModel;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.SetExtendToggleTextureTransitionByPath(resourcePath, base.GetUiExtendToggleTextureTransition(5), EToggleTransitionState.ETT_UnCheckedUnHover);
 		}
 
-		// Token: 0x060398A0 RID: 235680 RVA: 0x00DA9D44 File Offset: 0x00DA7F44
+		// Token: 0x0602E7BD RID: 190397 RVA: 0x00CF8A6C File Offset: 0x00CF6C6C
 		private void UpdateRedDot()
 		{
 			InstanceDungeonViewModelBase parentModel = this.ParentModel;
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x060398A1 RID: 235681 RVA: 0x00DA9D7C File Offset: 0x00DA7F7C
+		// Token: 0x0602E7BE RID: 190398 RVA: 0x00CF8AA4 File Offset: 0x00CF6CA4
 		public void BindClickCallback([Nullable(new byte[]
 		{
 			1,
@@ -215,20 +215,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.OnClickCallback = onClickCallback;
 		}
 
-		// Token: 0x060398A2 RID: 235682 RVA: 0x00DA9D85 File Offset: 0x00DA7F85
+		// Token: 0x0602E7BF RID: 190399 RVA: 0x00CF8AAD File Offset: 0x00CF6CAD
 		[NullableContext(1)]
 		public void BindCanExecuteChange(Func<int, bool> canExecuteChange)
 		{
 			this.InstanceCanExecuteChange = canExecuteChange;
 		}
 
-		// Token: 0x060398A3 RID: 235683 RVA: 0x00DA9D8E File Offset: 0x00DA7F8E
+		// Token: 0x0602E7C0 RID: 190400 RVA: 0x00CF8AB6 File Offset: 0x00CF6CB6
 		private bool CanExecuteChange()
 		{
 			return this.InstanceCanExecuteChange == null || this.InstanceCanExecuteChange(this.InstanceId);
 		}
 
-		// Token: 0x060398A4 RID: 235684 RVA: 0x00DA9DAB File Offset: 0x00DA7FAB
+		// Token: 0x0602E7C1 RID: 190401 RVA: 0x00CF8AD3 File Offset: 0x00CF6CD3
 		private void OnClickExtendToggle(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked && this.OnClickCallback != null)
@@ -237,10 +237,10 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0401E172 RID: 123250
+		// Token: 0x04018C0F RID: 101391
 		public UUIExtendToggle ExtendToggle;
 
-		// Token: 0x0401E173 RID: 123251
+		// Token: 0x04018C10 RID: 101392
 		[Nullable(new byte[]
 		{
 			2,
@@ -249,13 +249,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private Action<int, UUIExtendToggle, InstanceDetectionDynamicData> OnClickCallback;
 
-		// Token: 0x0401E174 RID: 123252
+		// Token: 0x04018C11 RID: 101393
 		private Func<int, bool> InstanceCanExecuteChange;
 
-		// Token: 0x0401E175 RID: 123253
+		// Token: 0x04018C12 RID: 101394
 		private int InstanceId;
 
-		// Token: 0x0401E176 RID: 123254
+		// Token: 0x04018C13 RID: 101395
 		private InstanceDungeonViewModelBase ParentModel;
 	}
 }

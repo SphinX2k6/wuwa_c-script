@@ -14,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 {
-	// Token: 0x02006A9E RID: 27294
+	// Token: 0x02005BFB RID: 23547
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CheckInteractionView : UiViewBase
 	{
-		// Token: 0x06043CF0 RID: 277744 RVA: 0x01098CBF File Offset: 0x01096EBF
+		// Token: 0x06039D3E RID: 236862 RVA: 0x0103D507 File Offset: 0x0103B707
 		public CheckInteractionView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043CF1 RID: 277745 RVA: 0x01098CE0 File Offset: 0x01096EE0
+		// Token: 0x06039D3F RID: 236863 RVA: 0x0103D528 File Offset: 0x0103B728
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06043CF2 RID: 277746 RVA: 0x01098D6A File Offset: 0x01096F6A
+		// Token: 0x06039D40 RID: 236864 RVA: 0x0103D5B2 File Offset: 0x0103B7B2
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06043CF3 RID: 277747 RVA: 0x01098DA8 File Offset: 0x01096FA8
+		// Token: 0x06039D41 RID: 236865 RVA: 0x0103D5F0 File Offset: 0x0103B7F0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CheckInteractionView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043CF4 RID: 277748 RVA: 0x01098DEB File Offset: 0x01096FEB
+		// Token: 0x06039D42 RID: 236866 RVA: 0x0103D633 File Offset: 0x0103B833
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearButtons();
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			this.Context = null;
 		}
 
-		// Token: 0x06043CF5 RID: 277749 RVA: 0x01098E24 File Offset: 0x01097024
+		// Token: 0x06039D43 RID: 236867 RVA: 0x0103D66C File Offset: 0x0103B86C
 		private UniTask RebuildButtonsAsync()
 		{
 			CheckInteractionView.<RebuildButtonsAsync>d__16 <RebuildButtonsAsync>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			return <RebuildButtonsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043CF6 RID: 277750 RVA: 0x01098E68 File Offset: 0x01097068
+		// Token: 0x06039D44 RID: 236868 RVA: 0x0103D6B0 File Offset: 0x0103B8B0
 		private void ClearButtons()
 		{
 			foreach (CheckInteractionView.CheckInteractionButtonInfo checkInteractionButtonInfo in this.ButtonInfos)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			this.ButtonInfos.Clear();
 		}
 
-		// Token: 0x06043CF7 RID: 277751 RVA: 0x01098ECC File Offset: 0x010970CC
+		// Token: 0x06039D45 RID: 236869 RVA: 0x0103D714 File Offset: 0x0103B914
 		private int GetSavedState(ISceneInspection config)
 		{
 			OneOf<bool, string, double> worldState = WorldModel.Instance.GetWorldState(config.SaveVarName);
@@ -130,20 +130,20 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			return (int)worldState.AsT3;
 		}
 
-		// Token: 0x06043CF8 RID: 277752 RVA: 0x01098F06 File Offset: 0x01097106
+		// Token: 0x06039D46 RID: 236870 RVA: 0x0103D74E File Offset: 0x0103B94E
 		private bool IsPointChecked(int index)
 		{
 			return (this.CurrentState & 1 << index) != 0;
 		}
 
-		// Token: 0x06043CF9 RID: 277753 RVA: 0x01098F18 File Offset: 0x01097118
+		// Token: 0x06039D47 RID: 236871 RVA: 0x0103D760 File Offset: 0x0103B960
 		private FVectorDouble CreateWorldPosition(ISceneInspectionPoint point)
 		{
 			VectorInfo interactPointPos = point.InteractPointPos;
 			return new FVectorDouble((double)interactPointPos.X.GetValueOrDefault(), (double)interactPointPos.Y.GetValueOrDefault(), (double)interactPointPos.Z.GetValueOrDefault());
 		}
 
-		// Token: 0x06043CFA RID: 277754 RVA: 0x01098F60 File Offset: 0x01097160
+		// Token: 0x06039D48 RID: 236872 RVA: 0x0103D7A8 File Offset: 0x0103B9A8
 		private void OnClickInteractionPoint(int index)
 		{
 			if (index < 0 || index >= this.ButtonInfos.Count)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			checkInteractionButtonInfo.Panel.SetChecked(true);
 		}
 
-		// Token: 0x06043CFB RID: 277755 RVA: 0x01098FF0 File Offset: 0x010971F0
+		// Token: 0x06039D49 RID: 236873 RVA: 0x0103D838 File Offset: 0x0103BA38
 		private void RefreshButtonPositions()
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			}
 		}
 
-		// Token: 0x06043CFC RID: 277756 RVA: 0x0109910C File Offset: 0x0109730C
+		// Token: 0x06039D4A RID: 236874 RVA: 0x0103D954 File Offset: 0x0103BB54
 		private void SetAllButtonsActive(bool active)
 		{
 			foreach (CheckInteractionView.CheckInteractionButtonInfo checkInteractionButtonInfo in this.ButtonInfos)
@@ -201,90 +201,90 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 			}
 		}
 
-		// Token: 0x040236CC RID: 145100
+		// Token: 0x0401E8BE RID: 125118
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040236CD RID: 145101
+		// Token: 0x0401E8BF RID: 125119
 		[Nullable(2)]
 		private ISceneInspection Config;
 
-		// Token: 0x040236CE RID: 145102
+		// Token: 0x0401E8C0 RID: 125120
 		[Nullable(2)]
 		private GeneralContext Context;
 
-		// Token: 0x040236CF RID: 145103
+		// Token: 0x0401E8C1 RID: 125121
 		private int CurrentState;
 
-		// Token: 0x040236D0 RID: 145104
+		// Token: 0x0401E8C2 RID: 125122
 		private readonly List<CheckInteractionView.CheckInteractionButtonInfo> ButtonInfos = new List<CheckInteractionView.CheckInteractionButtonInfo>();
 
-		// Token: 0x040236D1 RID: 145105
+		// Token: 0x0401E8C3 RID: 125123
 		private FVector2D ScreenPositionRef;
 
-		// Token: 0x040236D2 RID: 145106
+		// Token: 0x0401E8C4 RID: 125124
 		private readonly Vector2D ScreenPosition = Vector2D.Create();
 
-		// Token: 0x0200CB92 RID: 52114
+		// Token: 0x0200B771 RID: 46961
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403D742 RID: 251714
+			// Token: 0x04038B24 RID: 232228
 			Caption,
-			// Token: 0x0403D743 RID: 251715
+			// Token: 0x04038B25 RID: 232229
 			Area,
-			// Token: 0x0403D744 RID: 251716
+			// Token: 0x04038B26 RID: 232230
 			CheckButton
 		}
 
-		// Token: 0x0200CB93 RID: 52115
+		// Token: 0x0200B772 RID: 46962
 		[NullableContext(0)]
 		private enum ECheckButtonComponent
 		{
-			// Token: 0x0403D746 RID: 251718
+			// Token: 0x04038B28 RID: 232232
 			Nor,
-			// Token: 0x0403D747 RID: 251719
+			// Token: 0x04038B29 RID: 232233
 			Finish,
-			// Token: 0x0403D748 RID: 251720
+			// Token: 0x04038B2A RID: 232234
 			FinishTick
 		}
 
-		// Token: 0x0200CB94 RID: 52116
+		// Token: 0x0200B773 RID: 46963
 		[Nullable(0)]
 		[RequiredMember]
 		private class CheckInteractionButtonInfo
 		{
-			// Token: 0x06051730 RID: 333616 RVA: 0x0161A1E2 File Offset: 0x016183E2
+			// Token: 0x06047F7A RID: 294778 RVA: 0x015EE4F6 File Offset: 0x015EC6F6
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public CheckInteractionButtonInfo()
 			{
 			}
 
-			// Token: 0x0403D749 RID: 251721
+			// Token: 0x04038B2B RID: 232235
 			[RequiredMember]
 			public CheckInteractionView.CheckInteractionButtonPanel Panel;
 
-			// Token: 0x0403D74A RID: 251722
+			// Token: 0x04038B2C RID: 232236
 			[RequiredMember]
 			public ISceneInspectionPoint Point;
 
-			// Token: 0x0403D74B RID: 251723
+			// Token: 0x04038B2D RID: 232237
 			[RequiredMember]
 			public FVectorDouble WorldPosition;
 		}
 
-		// Token: 0x0200CB95 RID: 52117
+		// Token: 0x0200B774 RID: 46964
 		[Nullable(0)]
 		private class CheckInteractionButtonPanel : UiPanelBase
 		{
-			// Token: 0x06051731 RID: 333617 RVA: 0x0161A1EA File Offset: 0x016183EA
+			// Token: 0x06047F7B RID: 294779 RVA: 0x015EE4FE File Offset: 0x015EC6FE
 			public CheckInteractionButtonPanel(Action clickCallback)
 			{
 				this.ClickCallback = clickCallback;
 			}
 
-			// Token: 0x06051732 RID: 333618 RVA: 0x0161A1FC File Offset: 0x016183FC
+			// Token: 0x06047F7C RID: 294780 RVA: 0x015EE510 File Offset: 0x015EC710
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 3;
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 				this.ComponentRegisterInfos = list;
 			}
 
-			// Token: 0x06051733 RID: 333619 RVA: 0x0161A286 File Offset: 0x01618486
+			// Token: 0x06047F7D RID: 294781 RVA: 0x015EE59A File Offset: 0x015EC79A
 			protected override void OnStart()
 			{
 				UUIButtonComponent rootButton = this.GetRootButton();
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 				this.SequencePlayer = new UiSequencePlayer(base.GetRootItem());
 			}
 
-			// Token: 0x06051734 RID: 333620 RVA: 0x0161A2BB File Offset: 0x016184BB
+			// Token: 0x06047F7E RID: 294782 RVA: 0x015EE5CF File Offset: 0x015EC7CF
 			protected override void OnBeforeDestroy()
 			{
 				UUIButtonComponent rootButton = this.GetRootButton();
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 				this.SequencePlayer = null;
 			}
 
-			// Token: 0x06051735 RID: 333621 RVA: 0x0161A2EB File Offset: 0x016184EB
+			// Token: 0x06047F7F RID: 294783 RVA: 0x015EE5FF File Offset: 0x015EC7FF
 			public void SetChecked(bool isChecked)
 			{
 				UUIItem item = base.GetItem(0);
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 				item3.SetUIActive(isChecked);
 			}
 
-			// Token: 0x06051736 RID: 333622 RVA: 0x0161A328 File Offset: 0x01618528
+			// Token: 0x06047F80 RID: 294784 RVA: 0x015EE63C File Offset: 0x015EC83C
 			public void PlayStartSequence()
 			{
 				UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 				sequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
 			}
 
-			// Token: 0x06051737 RID: 333623 RVA: 0x0161A354 File Offset: 0x01618554
+			// Token: 0x06047F81 RID: 294785 RVA: 0x015EE668 File Offset: 0x015EC868
 			[NullableContext(2)]
 			private UUIButtonComponent GetRootButton()
 			{
@@ -367,16 +367,16 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInspection
 				return ((rootActor != null) ? rootActor.GetComponentByClass(UUIButtonComponent.StaticClass()) : null) as UUIButtonComponent;
 			}
 
-			// Token: 0x06051738 RID: 333624 RVA: 0x0161A377 File Offset: 0x01618577
+			// Token: 0x06047F82 RID: 294786 RVA: 0x015EE68B File Offset: 0x015EC88B
 			private void OnClickButton()
 			{
 				this.ClickCallback();
 			}
 
-			// Token: 0x0403D74C RID: 251724
+			// Token: 0x04038B2E RID: 232238
 			private readonly Action ClickCallback;
 
-			// Token: 0x0403D74D RID: 251725
+			// Token: 0x04038B2F RID: 232239
 			[Nullable(2)]
 			private UiSequencePlayer SequencePlayer;
 		}

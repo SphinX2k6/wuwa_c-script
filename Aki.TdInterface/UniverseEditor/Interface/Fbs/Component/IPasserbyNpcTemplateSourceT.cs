@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056E7 RID: 22247
+	// Token: 0x02005CD6 RID: 23766
 	public class IPasserbyNpcTemplateSourceT
 	{
-		// Token: 0x1700A59F RID: 42399
-		// (get) Token: 0x060252DC RID: 152284 RVA: 0x00521B73 File Offset: 0x0051FD73
-		// (set) Token: 0x060252DD RID: 152285 RVA: 0x00521B7B File Offset: 0x0051FD7B
+		// Token: 0x1700AEA2 RID: 44706
+		// (get) Token: 0x06027743 RID: 161603 RVA: 0x005665BF File Offset: 0x005647BF
+		// (set) Token: 0x06027744 RID: 161604 RVA: 0x005665C7 File Offset: 0x005647C7
 		public EPasserbyNpcSource Type { get; set; }
 
-		// Token: 0x1700A5A0 RID: 42400
-		// (get) Token: 0x060252DE RID: 152286 RVA: 0x00521B84 File Offset: 0x0051FD84
-		// (set) Token: 0x060252DF RID: 152287 RVA: 0x00521B8C File Offset: 0x0051FD8C
+		// Token: 0x1700AEA3 RID: 44707
+		// (get) Token: 0x06027745 RID: 161605 RVA: 0x005665D0 File Offset: 0x005647D0
+		// (set) Token: 0x06027746 RID: 161606 RVA: 0x005665D8 File Offset: 0x005647D8
 		public List<string> TemplateIds { get; set; }
 
-		// Token: 0x060252E0 RID: 152288 RVA: 0x00521B95 File Offset: 0x0051FD95
+		// Token: 0x06027747 RID: 161607 RVA: 0x005665E1 File Offset: 0x005647E1
 		public IPasserbyNpcTemplateSourceT()
 		{
 			this.Type = EPasserbyNpcSource.Template;

@@ -5,18 +5,18 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001963 RID: 6499
+// Token: 0x02000E20 RID: 3616
 public class RoleElementGrid : UiPanelBase
 {
-	// Token: 0x0600BE24 RID: 48676 RVA: 0x002B01EE File Offset: 0x002AE3EE
+	// Token: 0x06009227 RID: 37415 RVA: 0x002BB032 File Offset: 0x002B9232
 	[NullableContext(1)]
 	public RoleElementGrid(AActor actor)
 	{
 		base.CreateThenShowByActor(actor, null);
 	}
 
-	// Token: 0x17000FE5 RID: 4069
-	// (get) Token: 0x0600BE25 RID: 48677 RVA: 0x002B0200 File Offset: 0x002AE400
+	// Token: 0x17001009 RID: 4105
+	// (get) Token: 0x06009228 RID: 37416 RVA: 0x002BB044 File Offset: 0x002B9244
 	private ElementInfo? Config
 	{
 		get
@@ -29,7 +29,7 @@ public class RoleElementGrid : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BE26 RID: 48678 RVA: 0x002B022F File Offset: 0x002AE42F
+	// Token: 0x06009229 RID: 37417 RVA: 0x002BB073 File Offset: 0x002B9273
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class RoleElementGrid : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600BE27 RID: 48679 RVA: 0x002B0268 File Offset: 0x002AE468
+	// Token: 0x0600922A RID: 37418 RVA: 0x002BB0AC File Offset: 0x002B92AC
 	private void UpdateElementTexture()
 	{
 		UUITexture texture = base.GetTexture(0);
@@ -63,22 +63,22 @@ public class RoleElementGrid : UiPanelBase
 		base.SetElementIcon(icon, texture, this.ElementId, null);
 	}
 
-	// Token: 0x0600BE28 RID: 48680 RVA: 0x002B02EF File Offset: 0x002AE4EF
+	// Token: 0x0600922B RID: 37419 RVA: 0x002BB133 File Offset: 0x002B9333
 	public void Refresh(int elementId)
 	{
 		this.ElementId = elementId;
 		this.UpdateElementTexture();
 	}
 
-	// Token: 0x040055B9 RID: 21945
+	// Token: 0x04005666 RID: 22118
 	private int ElementId;
 
-	// Token: 0x02007EB9 RID: 32441
+	// Token: 0x02007048 RID: 28744
 	private enum EChildType
 	{
-		// Token: 0x040296E0 RID: 169696
+		// Token: 0x04024A1D RID: 150045
 		TextureElement,
-		// Token: 0x040296E1 RID: 169697
+		// Token: 0x04024A1E RID: 150046
 		SpriteBg
 	}
 }

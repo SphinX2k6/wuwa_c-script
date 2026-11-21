@@ -6,17 +6,17 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002CF7 RID: 11511
+// Token: 0x02002251 RID: 8785
 public class WeaponResonanceItem : UiPanelBase
 {
-	// Token: 0x060182D0 RID: 99024 RVA: 0x0062662E File Offset: 0x0062482E
+	// Token: 0x06015B71 RID: 88945 RVA: 0x0064C5F6 File Offset: 0x0064A7F6
 	[NullableContext(1)]
 	public WeaponResonanceItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x060182D1 RID: 99025 RVA: 0x00626644 File Offset: 0x00624844
+	// Token: 0x06015B72 RID: 88946 RVA: 0x0064C60C File Offset: 0x0064A80C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -36,7 +36,7 @@ public class WeaponResonanceItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060182D2 RID: 99026 RVA: 0x00626710 File Offset: 0x00624910
+	// Token: 0x06015B73 RID: 88947 RVA: 0x0064C6D8 File Offset: 0x0064A8D8
 	[NullableContext(1)]
 	public void UpdateItem(WeaponDataBase data)
 	{
@@ -63,18 +63,18 @@ public class WeaponResonanceItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0200928D RID: 37517
+	// Token: 0x020084B5 RID: 33973
 	private enum EWeaponResonanceItemDefine
 	{
-		// Token: 0x0402F627 RID: 194087
+		// Token: 0x0402ACB1 RID: 175281
 		FromText,
-		// Token: 0x0402F628 RID: 194088
+		// Token: 0x0402ACB2 RID: 175282
 		DescribeText,
-		// Token: 0x0402F629 RID: 194089
+		// Token: 0x0402ACB3 RID: 175283
 		LevelText,
-		// Token: 0x0402F62A RID: 194090
+		// Token: 0x0402ACB4 RID: 175284
 		SkillText,
-		// Token: 0x0402F62B RID: 194091
+		// Token: 0x0402ACB5 RID: 175285
 		WeaponSprite
 	}
 }

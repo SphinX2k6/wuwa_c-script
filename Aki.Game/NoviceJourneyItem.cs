@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013D8 RID: 5080
+// Token: 0x0200088C RID: 2188
 [NullableContext(1)]
 [Nullable(0)]
 public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 {
-	// Token: 0x06008F64 RID: 36708 RVA: 0x001EFAE4 File Offset: 0x001EDCE4
+	// Token: 0x060062F9 RID: 25337 RVA: 0x001F861C File Offset: 0x001F681C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -50,7 +50,7 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008F65 RID: 36709 RVA: 0x001EFC74 File Offset: 0x001EDE74
+	// Token: 0x060062FA RID: 25338 RVA: 0x001F87AC File Offset: 0x001F69AC
 	private void RequestReward()
 	{
 		if (this.CurrentState == NoviceJourneyDefine.EItemState.Unaccomplished)
@@ -68,7 +68,7 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		}
 	}
 
-	// Token: 0x06008F66 RID: 36710 RVA: 0x001EFD1C File Offset: 0x001EDF1C
+	// Token: 0x060062FB RID: 25339 RVA: 0x001F8854 File Offset: 0x001F6A54
 	private UniTask CreateRewardItem(AActor itemActor)
 	{
 		NoviceJourneyItem.<CreateRewardItem>d__8 <CreateRewardItem>d__;
@@ -80,19 +80,19 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		return <CreateRewardItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008F67 RID: 36711 RVA: 0x001EFD68 File Offset: 0x001EDF68
+	// Token: 0x060062FC RID: 25340 RVA: 0x001F88A0 File Offset: 0x001F6AA0
 	private void HandleRewardItemClick(MediumItemGridExtendCallback parameter)
 	{
 		if (this.CurrentState != NoviceJourneyDefine.EItemState.CanReceive)
 		{
 			IItemData itemData = parameter.Data as IItemData;
-			ItemController.Instance.OpenItemTipsByItemId(itemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(itemData.ItemId, true, null, false);
 			return;
 		}
 		(ActivityManager.GetActivityController(this.ActivityData.Type) as ActivityNoviceJourneyController).RequestReward(this.Config.Value.Id);
 	}
 
-	// Token: 0x06008F68 RID: 36712 RVA: 0x001EFDCC File Offset: 0x001EDFCC
+	// Token: 0x060062FD RID: 25341 RVA: 0x001F8904 File Offset: 0x001F6B04
 	protected override UniTask OnBeforeStartAsync()
 	{
 		NoviceJourneyItem.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -103,7 +103,7 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008F69 RID: 36713 RVA: 0x001EFE10 File Offset: 0x001EE010
+	// Token: 0x060062FE RID: 25342 RVA: 0x001F8948 File Offset: 0x001F6B48
 	protected override void OnStart()
 	{
 		this.StateMap.Add(NoviceJourneyDefine.EItemState.Unaccomplished, new Action(this.HandleUnaccomplished));
@@ -111,7 +111,7 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		this.StateMap.Add(NoviceJourneyDefine.EItemState.HasReceived, new Action(this.HandleHasReceived));
 	}
 
-	// Token: 0x06008F6A RID: 36714 RVA: 0x001EFE68 File Offset: 0x001EE068
+	// Token: 0x060062FF RID: 25343 RVA: 0x001F89A0 File Offset: 0x001F6BA0
 	protected override void OnBeforeDestroy()
 	{
 		foreach (RewardGridItem child in this.RewardItemList)
@@ -120,7 +120,7 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		}
 	}
 
-	// Token: 0x06008F6B RID: 36715 RVA: 0x001EFEBC File Offset: 0x001EE0BC
+	// Token: 0x06006300 RID: 25344 RVA: 0x001F89F4 File Offset: 0x001F6BF4
 	private void HandleUnaccomplished()
 	{
 		base.GetItem(5).SetUIActive(false);
@@ -133,7 +133,7 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		}
 	}
 
-	// Token: 0x06008F6C RID: 36716 RVA: 0x001EFF44 File Offset: 0x001EE144
+	// Token: 0x06006301 RID: 25345 RVA: 0x001F8A7C File Offset: 0x001F6C7C
 	private void HandleCanReceive()
 	{
 		base.GetItem(5).SetUIActive(true);
@@ -147,7 +147,7 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		}
 	}
 
-	// Token: 0x06008F6D RID: 36717 RVA: 0x001EFFF4 File Offset: 0x001EE1F4
+	// Token: 0x06006302 RID: 25346 RVA: 0x001F8B2C File Offset: 0x001F6D2C
 	private void HandleHasReceived()
 	{
 		base.GetItem(5).SetUIActive(false);
@@ -160,13 +160,13 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		}
 	}
 
-	// Token: 0x06008F6E RID: 36718 RVA: 0x001F007C File Offset: 0x001EE27C
+	// Token: 0x06006303 RID: 25347 RVA: 0x001F8BB4 File Offset: 0x001F6DB4
 	public void SetActivityData(ActivityNoviceJourneyData activityData)
 	{
 		this.ActivityData = activityData;
 	}
 
-	// Token: 0x06008F6F RID: 36719 RVA: 0x001F0088 File Offset: 0x001EE288
+	// Token: 0x06006304 RID: 25348 RVA: 0x001F8BC0 File Offset: 0x001F6DC0
 	public override void Refresh(NewbieCourse config, bool isSelected, int gridIndex)
 	{
 		this.Config = new NewbieCourse?(config);
@@ -190,64 +190,64 @@ public class NoviceJourneyItem : GridProxyAbstract<NewbieCourse>
 		this.RefreshCurrentState();
 	}
 
-	// Token: 0x06008F70 RID: 36720 RVA: 0x001F0124 File Offset: 0x001EE324
+	// Token: 0x06006305 RID: 25349 RVA: 0x001F8C5C File Offset: 0x001F6E5C
 	public void RefreshCurrentState()
 	{
 		this.CurrentState = this.ActivityData.GetRewardStateByLevel(this.Config.Value.Id);
 		this.StateMap[this.CurrentState]();
 	}
 
-	// Token: 0x06008F71 RID: 36721 RVA: 0x001F016C File Offset: 0x001EE36C
+	// Token: 0x06006306 RID: 25350 RVA: 0x001F8CA4 File Offset: 0x001F6EA4
 	public override object GetKey(NewbieCourse data, int displayIndex)
 	{
 		return this.Config.Value.Id;
 	}
 
-	// Token: 0x04003F6E RID: 16238
+	// Token: 0x04004006 RID: 16390
 	private readonly Dictionary<NoviceJourneyDefine.EItemState, Action> StateMap = new Dictionary<NoviceJourneyDefine.EItemState, Action>();
 
-	// Token: 0x04003F6F RID: 16239
+	// Token: 0x04004007 RID: 16391
 	private NoviceJourneyDefine.EItemState CurrentState;
 
-	// Token: 0x04003F70 RID: 16240
+	// Token: 0x04004008 RID: 16392
 	private readonly List<RewardGridItem> RewardItemList = new List<RewardGridItem>();
 
-	// Token: 0x04003F71 RID: 16241
+	// Token: 0x04004009 RID: 16393
 	private NewbieCourse? Config;
 
-	// Token: 0x04003F72 RID: 16242
+	// Token: 0x0400400A RID: 16394
 	[Nullable(2)]
 	private ActivityNoviceJourneyData ActivityData;
 
-	// Token: 0x02007A55 RID: 31317
+	// Token: 0x02006BDB RID: 27611
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04028430 RID: 164912
+		// Token: 0x0402374D RID: 145229
 		public const int LevelText = 0;
 
-		// Token: 0x04028431 RID: 164913
+		// Token: 0x0402374E RID: 145230
 		public const int RewardItem1 = 1;
 
-		// Token: 0x04028432 RID: 164914
+		// Token: 0x0402374F RID: 145231
 		public const int RewardItem2 = 2;
 
-		// Token: 0x04028433 RID: 164915
+		// Token: 0x04023750 RID: 145232
 		public const int Button = 3;
 
-		// Token: 0x04028434 RID: 164916
+		// Token: 0x04023751 RID: 145233
 		public const int ReceivedItem = 4;
 
-		// Token: 0x04028435 RID: 164917
+		// Token: 0x04023752 RID: 145234
 		public const int CanReceiveItem = 5;
 
-		// Token: 0x04028436 RID: 164918
+		// Token: 0x04023753 RID: 145235
 		public const int CanReceiveLevelText = 6;
 
-		// Token: 0x04028437 RID: 164919
+		// Token: 0x04023754 RID: 145236
 		public const int SpriteReward = 7;
 
-		// Token: 0x04028438 RID: 164920
+		// Token: 0x04023755 RID: 145237
 		public const int ReceivedItem2 = 8;
 	}
 }

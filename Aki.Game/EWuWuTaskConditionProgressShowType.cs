@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001661 RID: 5729
+// Token: 0x02000B19 RID: 2841
 public enum EWuWuTaskConditionProgressShowType
 {
-	// Token: 0x04004975 RID: 18805
+	// Token: 0x04004A1B RID: 18971
 	OnlyShowComplete,
-	// Token: 0x04004976 RID: 18806
+	// Token: 0x04004A1C RID: 18972
 	ShowCompleteCount,
-	// Token: 0x04004977 RID: 18807
+	// Token: 0x04004A1D RID: 18973
 	ShowTargetConditionProgress
 }

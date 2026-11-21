@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C67 RID: 27751
+	// Token: 0x020073CE RID: 29646
 	public class IPathLineFacingCustomDirectionT
 	{
-		// Token: 0x1700CEAB RID: 52907
-		// (get) Token: 0x06030E57 RID: 200279 RVA: 0x006A3FB4 File Offset: 0x006A21B4
-		// (set) Token: 0x06030E58 RID: 200280 RVA: 0x006A3FBC File Offset: 0x006A21BC
+		// Token: 0x1700D9C6 RID: 55750
+		// (get) Token: 0x06033DB2 RID: 212402 RVA: 0x006FE4B4 File Offset: 0x006FC6B4
+		// (set) Token: 0x06033DB3 RID: 212403 RVA: 0x006FE4BC File Offset: 0x006FC6BC
 		public EPathLineFacingType Type { get; set; }
 
-		// Token: 0x1700CEAC RID: 52908
-		// (get) Token: 0x06030E59 RID: 200281 RVA: 0x006A3FC5 File Offset: 0x006A21C5
-		// (set) Token: 0x06030E5A RID: 200282 RVA: 0x006A3FCD File Offset: 0x006A21CD
+		// Token: 0x1700D9C7 RID: 55751
+		// (get) Token: 0x06033DB4 RID: 212404 RVA: 0x006FE4C5 File Offset: 0x006FC6C5
+		// (set) Token: 0x06033DB5 RID: 212405 RVA: 0x006FE4CD File Offset: 0x006FC6CD
 		public float Yaw { get; set; }
 
-		// Token: 0x06030E5B RID: 200283 RVA: 0x006A3FD6 File Offset: 0x006A21D6
+		// Token: 0x06033DB6 RID: 212406 RVA: 0x006FE4D6 File Offset: 0x006FC6D6
 		public IPathLineFacingCustomDirectionT()
 		{
 			this.Type = EPathLineFacingType.Current;

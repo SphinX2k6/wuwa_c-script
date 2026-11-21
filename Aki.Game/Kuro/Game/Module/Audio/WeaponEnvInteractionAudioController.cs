@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace Kuro.Game.Module.Audio
 {
-	// Token: 0x020044CE RID: 17614
+	// Token: 0x02002F5B RID: 12123
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WeaponEnvInteractionAudioController : ControllerBase
 	{
-		// Token: 0x0602D632 RID: 185906 RVA: 0x00A3DD14 File Offset: 0x00A3BF14
+		// Token: 0x0601CB70 RID: 117616 RVA: 0x008C3974 File Offset: 0x008C1B74
 		protected override bool OnInit()
 		{
 			if (!this.Enabled)
@@ -53,7 +53,7 @@ namespace Kuro.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0602D633 RID: 185907 RVA: 0x00A3DE04 File Offset: 0x00A3C004
+		// Token: 0x0601CB71 RID: 117617 RVA: 0x008C3A64 File Offset: 0x008C1C64
 		protected override bool OnLeaveLevel()
 		{
 			if (!WeaponEnvInteractionAudioController.IsWindows)
@@ -69,7 +69,7 @@ namespace Kuro.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0602D634 RID: 185908 RVA: 0x00A3DE64 File Offset: 0x00A3C064
+		// Token: 0x0601CB72 RID: 117618 RVA: 0x008C3AC4 File Offset: 0x008C1CC4
 		protected override bool OnClear()
 		{
 			if (!WeaponEnvInteractionAudioController.IsWindows)
@@ -81,7 +81,7 @@ namespace Kuro.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0602D635 RID: 185909 RVA: 0x00A3DE80 File Offset: 0x00A3C080
+		// Token: 0x0601CB73 RID: 117619 RVA: 0x008C3AE0 File Offset: 0x008C1CE0
 		private UKuroEnviInteractionComponent GetOrCacheEnviInteractionComponent()
 		{
 			WeaponEnvInteractionAudioController.<>c__DisplayClass11_0 CS$<>8__locals1 = new WeaponEnvInteractionAudioController.<>c__DisplayClass11_0();
@@ -130,7 +130,7 @@ namespace Kuro.Game.Module.Audio
 			return ukuroEnviInteractionComponent2;
 		}
 
-		// Token: 0x0602D636 RID: 185910 RVA: 0x00A3DFF6 File Offset: 0x00A3C1F6
+		// Token: 0x0601CB74 RID: 117620 RVA: 0x008C3C56 File Offset: 0x008C1E56
 		private void ClearComponentCache()
 		{
 			if (this.ComponentCache.Count > 0)
@@ -139,7 +139,7 @@ namespace Kuro.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0602D637 RID: 185911 RVA: 0x00A3E014 File Offset: 0x00A3C214
+		// Token: 0x0601CB75 RID: 117621 RVA: 0x008C3C74 File Offset: 0x008C1E74
 		public unsafe void OnWeaponInteraction(FVector originPoint, float timeInterval)
 		{
 			if (Time.Instance.PlayerTime - this.LastPlayAudioTime < (double)this.PlayAudioCd)
@@ -235,13 +235,13 @@ namespace Kuro.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0602D638 RID: 185912 RVA: 0x00A3E3FC File Offset: 0x00A3C5FC
+		// Token: 0x0601CB76 RID: 117622 RVA: 0x008C405C File Offset: 0x008C225C
 		public bool IsEnabled()
 		{
 			return this.Enabled;
 		}
 
-		// Token: 0x0602D639 RID: 185913 RVA: 0x00A3E404 File Offset: 0x00A3C604
+		// Token: 0x0601CB77 RID: 117623 RVA: 0x008C4064 File Offset: 0x008C2264
 		public void SetEnabled(bool enabled)
 		{
 			if (this.Enabled == enabled)
@@ -257,8 +257,8 @@ namespace Kuro.Game.Module.Audio
 			this.OnClear();
 		}
 
-		// Token: 0x170073A1 RID: 29601
-		// (get) Token: 0x0602D63A RID: 185914 RVA: 0x00A3E429 File Offset: 0x00A3C629
+		// Token: 0x17002D73 RID: 11635
+		// (get) Token: 0x0601CB78 RID: 117624 RVA: 0x008C4089 File Offset: 0x008C2289
 		private static bool IsWindows
 		{
 			get
@@ -267,8 +267,8 @@ namespace Kuro.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x170073A2 RID: 29602
-		// (get) Token: 0x0602D63B RID: 185915 RVA: 0x00A3E438 File Offset: 0x00A3C638
+		// Token: 0x17002D74 RID: 11636
+		// (get) Token: 0x0601CB79 RID: 117625 RVA: 0x008C4098 File Offset: 0x008C2298
 		public static WeaponEnvInteractionAudioController Instance
 		{
 			get
@@ -277,7 +277,7 @@ namespace Kuro.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0602D63C RID: 185916 RVA: 0x00A3E43F File Offset: 0x00A3C63F
+		// Token: 0x0601CB7A RID: 117626 RVA: 0x008C409F File Offset: 0x008C229F
 		public static WeaponEnvInteractionAudioController GetOrCreateInstance()
 		{
 			if (WeaponEnvInteractionAudioController._Instance == null)
@@ -287,7 +287,7 @@ namespace Kuro.Game.Module.Audio
 			return WeaponEnvInteractionAudioController._Instance;
 		}
 
-		// Token: 0x0602D63D RID: 185917 RVA: 0x00A3E453 File Offset: 0x00A3C653
+		// Token: 0x0601CB7B RID: 117627 RVA: 0x008C40B3 File Offset: 0x008C22B3
 		public static bool CreateInstance()
 		{
 			if (WeaponEnvInteractionAudioController._Instance != null)
@@ -298,48 +298,48 @@ namespace Kuro.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0602D63E RID: 185918 RVA: 0x00A3E469 File Offset: 0x00A3C669
+		// Token: 0x0601CB7C RID: 117628 RVA: 0x008C40C9 File Offset: 0x008C22C9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602D63F RID: 185919 RVA: 0x00A3E46B File Offset: 0x00A3C66B
+		// Token: 0x0601CB7D RID: 117629 RVA: 0x008C40CB File Offset: 0x008C22CB
 		public static void ResetStaticDefaultValue()
 		{
 			WeaponEnvInteractionAudioController._Instance = null;
 		}
 
-		// Token: 0x0602D640 RID: 185920 RVA: 0x00A3E473 File Offset: 0x00A3C673
+		// Token: 0x0601CB7E RID: 117630 RVA: 0x008C40D3 File Offset: 0x008C22D3
 		static WeaponEnvInteractionAudioController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WeaponEnvInteractionAudioController.CreateStaticDefaultValue), new Action(WeaponEnvInteractionAudioController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018469 RID: 99433
+		// Token: 0x0400F211 RID: 61969
 		private const float DEFAULT_PLAY_AUDIO_CD = 0.3f;
 
-		// Token: 0x0401846A RID: 99434
+		// Token: 0x0400F212 RID: 61970
 		private const float PLAY_AUDIO_THRESHOLD = 0.9f;
 
-		// Token: 0x0401846B RID: 99435
+		// Token: 0x0400F213 RID: 61971
 		private bool Enabled;
 
-		// Token: 0x0401846C RID: 99436
+		// Token: 0x0400F214 RID: 61972
 		private UKuroInteractionEffectSystem InteractionEffectSystem;
 
-		// Token: 0x0401846D RID: 99437
+		// Token: 0x0400F215 RID: 61973
 		private double LastPlayAudioTime;
 
-		// Token: 0x0401846E RID: 99438
+		// Token: 0x0400F216 RID: 61974
 		private float PlayAudioCd;
 
-		// Token: 0x0401846F RID: 99439
+		// Token: 0x0400F217 RID: 61975
 		private float PlayAudioThreshold;
 
-		// Token: 0x04018470 RID: 99440
+		// Token: 0x0400F218 RID: 61976
 		private readonly Dictionary<int, UKuroEnviInteractionComponent> ComponentCache = new Dictionary<int, UKuroEnviInteractionComponent>();
 
-		// Token: 0x04018471 RID: 99441
+		// Token: 0x0400F219 RID: 61977
 		[Nullable(2)]
 		private static WeaponEnvInteractionAudioController _Instance;
 	}

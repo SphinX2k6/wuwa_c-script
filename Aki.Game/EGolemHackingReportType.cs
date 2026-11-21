@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001001 RID: 4097
+// Token: 0x020004B5 RID: 1205
 public enum EGolemHackingReportType
 {
-	// Token: 0x0400303B RID: 12347
+	// Token: 0x040030D2 RID: 12498
 	Success = 1,
-	// Token: 0x0400303C RID: 12348
+	// Token: 0x040030D3 RID: 12499
 	Reset,
-	// Token: 0x0400303D RID: 12349
+	// Token: 0x040030D4 RID: 12500
 	Fail
 }

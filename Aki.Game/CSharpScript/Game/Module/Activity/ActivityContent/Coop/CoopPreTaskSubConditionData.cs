@@ -3,10 +3,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068EE RID: 26862
+	// Token: 0x0200583E RID: 22590
 	public class CoopPreTaskSubConditionData : CoopSubConditionDataBase
 	{
-		// Token: 0x06043008 RID: 274440 RVA: 0x010521E0 File Offset: 0x010503E0
+		// Token: 0x06037B60 RID: 228192 RVA: 0x00F93808 File Offset: 0x00F91A08
 		public CoopPreTaskSubConditionData(int id, ECoopSubConditionType taskType) : base(id, taskType)
 		{
 			CoopTaskConfig? coopTaskConfigById = CoopConfig.Instance.GetCoopTaskConfigById(id);
@@ -18,13 +18,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.Title = "Coop_Role_Condition_Task";
 		}
 
-		// Token: 0x06043009 RID: 274441 RVA: 0x0105222B File Offset: 0x0105042B
+		// Token: 0x06037B61 RID: 228193 RVA: 0x00F93853 File Offset: 0x00F91A53
 		public override bool IsTaskDone()
 		{
 			return this.CoopPreQuestId != 0 && QuestNewModel.Instance.CheckQuestFinished(this.CoopPreQuestId);
 		}
 
-		// Token: 0x04022E22 RID: 142882
+		// Token: 0x0401D67E RID: 120446
 		public int CoopPreQuestId;
 	}
 }

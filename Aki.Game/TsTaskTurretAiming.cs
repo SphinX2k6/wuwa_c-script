@@ -2,7 +2,6 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Data.Effect.Struct;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Effect;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
@@ -18,9 +17,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskTurretAiming.TsTaskTurretAiming_C")]
 public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700022B RID: 555
-	// (get) Token: 0x06000BD5 RID: 3029 RVA: 0x0003B297 File Offset: 0x00039497
-	// (set) Token: 0x06000BD6 RID: 3030 RVA: 0x0003B2AB File Offset: 0x000394AB
+	// Token: 0x1700022E RID: 558
+	// (get) Token: 0x06000BDB RID: 3035 RVA: 0x0003C517 File Offset: 0x0003A717
+	// (set) Token: 0x06000BDC RID: 3036 RVA: 0x0003C52B File Offset: 0x0003A72B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TargetIdBlackboardKey
 	{
@@ -34,9 +33,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700022C RID: 556
-	// (get) Token: 0x06000BD7 RID: 3031 RVA: 0x0003B2C0 File Offset: 0x000394C0
-	// (set) Token: 0x06000BD8 RID: 3032 RVA: 0x0003B2D4 File Offset: 0x000394D4
+	// Token: 0x1700022F RID: 559
+	// (get) Token: 0x06000BDD RID: 3037 RVA: 0x0003C540 File Offset: 0x0003A740
+	// (set) Token: 0x06000BDE RID: 3038 RVA: 0x0003C554 File Offset: 0x0003A754
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TurretAimingStateBlackboardKey
 	{
@@ -50,9 +49,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700022D RID: 557
-	// (get) Token: 0x06000BD9 RID: 3033 RVA: 0x0003B2E9 File Offset: 0x000394E9
-	// (set) Token: 0x06000BDA RID: 3034 RVA: 0x0003B2FD File Offset: 0x000394FD
+	// Token: 0x17000230 RID: 560
+	// (get) Token: 0x06000BDF RID: 3039 RVA: 0x0003C569 File Offset: 0x0003A769
+	// (set) Token: 0x06000BE0 RID: 3040 RVA: 0x0003C57D File Offset: 0x0003A77D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName MuzzleSocketName
 	{
@@ -66,9 +65,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700022E RID: 558
-	// (get) Token: 0x06000BDB RID: 3035 RVA: 0x0003B312 File Offset: 0x00039512
-	// (set) Token: 0x06000BDC RID: 3036 RVA: 0x0003B326 File Offset: 0x00039526
+	// Token: 0x17000231 RID: 561
+	// (get) Token: 0x06000BE1 RID: 3041 RVA: 0x0003C592 File Offset: 0x0003A792
+	// (set) Token: 0x06000BE2 RID: 3042 RVA: 0x0003C5A6 File Offset: 0x0003A7A6
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName TargetSocketName
 	{
@@ -82,9 +81,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700022F RID: 559
-	// (get) Token: 0x06000BDD RID: 3037 RVA: 0x0003B33B File Offset: 0x0003953B
-	// (set) Token: 0x06000BDE RID: 3038 RVA: 0x0003B34B File Offset: 0x0003954B
+	// Token: 0x17000232 RID: 562
+	// (get) Token: 0x06000BE3 RID: 3043 RVA: 0x0003C5BB File Offset: 0x0003A7BB
+	// (set) Token: 0x06000BE4 RID: 3044 RVA: 0x0003C5CB File Offset: 0x0003A7CB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float StartChargeToleranceDegree
 	{
@@ -98,9 +97,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000230 RID: 560
-	// (get) Token: 0x06000BDF RID: 3039 RVA: 0x0003B35C File Offset: 0x0003955C
-	// (set) Token: 0x06000BE0 RID: 3040 RVA: 0x0003B36C File Offset: 0x0003956C
+	// Token: 0x17000233 RID: 563
+	// (get) Token: 0x06000BE5 RID: 3045 RVA: 0x0003C5DC File Offset: 0x0003A7DC
+	// (set) Token: 0x06000BE6 RID: 3046 RVA: 0x0003C5EC File Offset: 0x0003A7EC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float BreakChargeToleranceDegree
 	{
@@ -114,9 +113,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000231 RID: 561
-	// (get) Token: 0x06000BE1 RID: 3041 RVA: 0x0003B37D File Offset: 0x0003957D
-	// (set) Token: 0x06000BE2 RID: 3042 RVA: 0x0003B38D File Offset: 0x0003958D
+	// Token: 0x17000234 RID: 564
+	// (get) Token: 0x06000BE7 RID: 3047 RVA: 0x0003C5FD File Offset: 0x0003A7FD
+	// (set) Token: 0x06000BE8 RID: 3048 RVA: 0x0003C60D File Offset: 0x0003A80D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float FastChargeTimeSeconds
 	{
@@ -130,9 +129,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000232 RID: 562
-	// (get) Token: 0x06000BE3 RID: 3043 RVA: 0x0003B39E File Offset: 0x0003959E
-	// (set) Token: 0x06000BE4 RID: 3044 RVA: 0x0003B3AE File Offset: 0x000395AE
+	// Token: 0x17000235 RID: 565
+	// (get) Token: 0x06000BE9 RID: 3049 RVA: 0x0003C61E File Offset: 0x0003A81E
+	// (set) Token: 0x06000BEA RID: 3050 RVA: 0x0003C62E File Offset: 0x0003A82E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float SlowChargeTriggerTimeSeconds
 	{
@@ -146,9 +145,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000233 RID: 563
-	// (get) Token: 0x06000BE5 RID: 3045 RVA: 0x0003B3BF File Offset: 0x000395BF
-	// (set) Token: 0x06000BE6 RID: 3046 RVA: 0x0003B3CF File Offset: 0x000395CF
+	// Token: 0x17000236 RID: 566
+	// (get) Token: 0x06000BEB RID: 3051 RVA: 0x0003C63F File Offset: 0x0003A83F
+	// (set) Token: 0x06000BEC RID: 3052 RVA: 0x0003C64F File Offset: 0x0003A84F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float LockTimeSeconds
 	{
@@ -162,9 +161,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000234 RID: 564
-	// (get) Token: 0x06000BE7 RID: 3047 RVA: 0x0003B3E0 File Offset: 0x000395E0
-	// (set) Token: 0x06000BE8 RID: 3048 RVA: 0x0003B3F0 File Offset: 0x000395F0
+	// Token: 0x17000237 RID: 567
+	// (get) Token: 0x06000BED RID: 3053 RVA: 0x0003C660 File Offset: 0x0003A860
+	// (set) Token: 0x06000BEE RID: 3054 RVA: 0x0003C670 File Offset: 0x0003A870
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float FireDelaySeconds
 	{
@@ -178,9 +177,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000235 RID: 565
-	// (get) Token: 0x06000BE9 RID: 3049 RVA: 0x0003B401 File Offset: 0x00039601
-	// (set) Token: 0x06000BEA RID: 3050 RVA: 0x0003B411 File Offset: 0x00039611
+	// Token: 0x17000238 RID: 568
+	// (get) Token: 0x06000BEF RID: 3055 RVA: 0x0003C681 File Offset: 0x0003A881
+	// (set) Token: 0x06000BF0 RID: 3056 RVA: 0x0003C691 File Offset: 0x0003A891
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MaxAimDistance
 	{
@@ -194,9 +193,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000236 RID: 566
-	// (get) Token: 0x06000BEB RID: 3051 RVA: 0x0003B422 File Offset: 0x00039622
-	// (set) Token: 0x06000BEC RID: 3052 RVA: 0x0003B432 File Offset: 0x00039632
+	// Token: 0x17000239 RID: 569
+	// (get) Token: 0x06000BF1 RID: 3057 RVA: 0x0003C6A2 File Offset: 0x0003A8A2
+	// (set) Token: 0x06000BF2 RID: 3058 RVA: 0x0003C6B2 File Offset: 0x0003A8B2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float SightPredictTimeSeconds
 	{
@@ -210,9 +209,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000237 RID: 567
-	// (get) Token: 0x06000BED RID: 3053 RVA: 0x0003B444 File Offset: 0x00039644
-	// (set) Token: 0x06000BEE RID: 3054 RVA: 0x0003B47D File Offset: 0x0003967D
+	// Token: 0x1700023A RID: 570
+	// (get) Token: 0x06000BF3 RID: 3059 RVA: 0x0003C6C4 File Offset: 0x0003A8C4
+	// (set) Token: 0x06000BF4 RID: 3060 RVA: 0x0003C6FD File Offset: 0x0003A8FD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UObject> AimLineEffectPath
 	{
@@ -232,9 +231,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000238 RID: 568
-	// (get) Token: 0x06000BEF RID: 3055 RVA: 0x0003B4A4 File Offset: 0x000396A4
-	// (set) Token: 0x06000BF0 RID: 3056 RVA: 0x0003B4DD File Offset: 0x000396DD
+	// Token: 0x1700023B RID: 571
+	// (get) Token: 0x06000BF5 RID: 3061 RVA: 0x0003C724 File Offset: 0x0003A924
+	// (set) Token: 0x06000BF6 RID: 3062 RVA: 0x0003C75D File Offset: 0x0003A95D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UAnimMontage> ChargeMontage
 	{
@@ -254,9 +253,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000239 RID: 569
-	// (get) Token: 0x06000BF1 RID: 3057 RVA: 0x0003B502 File Offset: 0x00039702
-	// (set) Token: 0x06000BF2 RID: 3058 RVA: 0x0003B512 File Offset: 0x00039712
+	// Token: 0x1700023C RID: 572
+	// (get) Token: 0x06000BF7 RID: 3063 RVA: 0x0003C782 File Offset: 0x0003A982
+	// (set) Token: 0x06000BF8 RID: 3064 RVA: 0x0003C792 File Offset: 0x0003A992
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int FireSkillId
 	{
@@ -270,9 +269,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700023A RID: 570
-	// (get) Token: 0x06000BF3 RID: 3059 RVA: 0x0003B523 File Offset: 0x00039723
-	// (set) Token: 0x06000BF4 RID: 3060 RVA: 0x0003B533 File Offset: 0x00039733
+	// Token: 0x1700023D RID: 573
+	// (get) Token: 0x06000BF9 RID: 3065 RVA: 0x0003C7A3 File Offset: 0x0003A9A3
+	// (set) Token: 0x06000BFA RID: 3066 RVA: 0x0003C7B3 File Offset: 0x0003A9B3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int SlowAimSoundBuffId
 	{
@@ -286,9 +285,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700023B RID: 571
-	// (get) Token: 0x06000BF5 RID: 3061 RVA: 0x0003B544 File Offset: 0x00039744
-	// (set) Token: 0x06000BF6 RID: 3062 RVA: 0x0003B554 File Offset: 0x00039754
+	// Token: 0x1700023E RID: 574
+	// (get) Token: 0x06000BFB RID: 3067 RVA: 0x0003C7C4 File Offset: 0x0003A9C4
+	// (set) Token: 0x06000BFC RID: 3068 RVA: 0x0003C7D4 File Offset: 0x0003A9D4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int FastAimSoundBuffId
 	{
@@ -302,9 +301,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700023C RID: 572
-	// (get) Token: 0x06000BF7 RID: 3063 RVA: 0x0003B565 File Offset: 0x00039765
-	// (set) Token: 0x06000BF8 RID: 3064 RVA: 0x0003B579 File Offset: 0x00039779
+	// Token: 0x1700023F RID: 575
+	// (get) Token: 0x06000BFD RID: 3069 RVA: 0x0003C7E5 File Offset: 0x0003A9E5
+	// (set) Token: 0x06000BFE RID: 3070 RVA: 0x0003C7F9 File Offset: 0x0003A9F9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector SocketPoseForward
 	{
@@ -318,9 +317,9 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700023D RID: 573
-	// (get) Token: 0x06000BF9 RID: 3065 RVA: 0x0003B58E File Offset: 0x0003978E
-	// (set) Token: 0x06000BFA RID: 3066 RVA: 0x0003B59E File Offset: 0x0003979E
+	// Token: 0x17000240 RID: 576
+	// (get) Token: 0x06000BFF RID: 3071 RVA: 0x0003C80E File Offset: 0x0003AA0E
+	// (set) Token: 0x06000C00 RID: 3072 RVA: 0x0003C81E File Offset: 0x0003AA1E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableDebug
 	{
@@ -334,7 +333,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000BFB RID: 3067 RVA: 0x0003B5B0 File Offset: 0x000397B0
+	// Token: 0x06000C01 RID: 3073 RVA: 0x0003C830 File Offset: 0x0003AA30
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -362,13 +361,13 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000BFC RID: 3068 RVA: 0x0003B70C File Offset: 0x0003990C
+	// Token: 0x06000C02 RID: 3074 RVA: 0x0003C98C File Offset: 0x0003AB8C
 	private bool IsConfigValid()
 	{
 		return !string.IsNullOrEmpty(this.TsTargetIdBlackboardKey) && !string.IsNullOrEmpty(this.TsTurretAimingStateBlackboardKey) && this.TsMuzzleSocketName != null && !string.IsNullOrEmpty(this.TsAimLineEffectPath) && !string.IsNullOrEmpty(this.TsChargeMontage) && this.TsStartChargeToleranceDegree >= 0f && this.TsBreakChargeToleranceDegree >= this.TsStartChargeToleranceDegree && this.TsFastChargeTimeSeconds >= 0f && this.TsSlowChargeTriggerTimeSeconds >= 0f && this.TsLockTimeSeconds >= this.TsFastChargeTimeSeconds && this.TsFireDelaySeconds >= 0f && this.TsMaxAimDistance > 0f && this.TsSightPredictTimeSeconds >= 0f;
 	}
 
-	// Token: 0x06000BFD RID: 3069 RVA: 0x0003B7D4 File Offset: 0x000399D4
+	// Token: 0x06000C03 RID: 3075 RVA: 0x0003CA54 File Offset: 0x0003AC54
 	private bool IsRuntimeContextValid(Entity entity)
 	{
 		if (!entity.Valid)
@@ -380,7 +379,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return component != null && component.Valid && component.Owner != null && component2 != null && component2.Valid && this.IsMuzzleSocketValid(entity);
 	}
 
-	// Token: 0x06000BFE RID: 3070 RVA: 0x0003B820 File Offset: 0x00039A20
+	// Token: 0x06000C04 RID: 3076 RVA: 0x0003CAA0 File Offset: 0x0003ACA0
 	private bool IsMuzzleSocketValid(Entity entity)
 	{
 		CharacterActorComponent component = entity.GetComponent<CharacterActorComponent>();
@@ -388,30 +387,27 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return uskeletalMeshComponent != null && uskeletalMeshComponent.IsValid() && this.TsMuzzleSocketName != null && (uskeletalMeshComponent.DoesSocketExist(this.TsMuzzleSocketName ?? FNameUtil.NONE) || uskeletalMeshComponent.GetBoneIndex(this.TsMuzzleSocketName ?? FNameUtil.NONE) >= 0);
 	}
 
-	// Token: 0x06000BFF RID: 3071 RVA: 0x0003B8B4 File Offset: 0x00039AB4
+	// Token: 0x06000C05 RID: 3077 RVA: 0x0003CB34 File Offset: 0x0003AD34
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTurretAiming) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskTurretAiming.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000C00 RID: 3072 RVA: 0x0003B950 File Offset: 0x00039B50
+	// Token: 0x06000C06 RID: 3078 RVA: 0x0003CBE4 File Offset: 0x0003ADE4
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -486,31 +482,28 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.ChangeState(TsTaskTurretAiming.ETurretAimingState.Tracking);
 	}
 
-	// Token: 0x06000C01 RID: 3073 RVA: 0x0003BBC0 File Offset: 0x00039DC0
+	// Token: 0x06000C07 RID: 3079 RVA: 0x0003CE54 File Offset: 0x0003B054
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTurretAiming) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskTurretAiming.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000C02 RID: 3074 RVA: 0x0003BC60 File Offset: 0x00039E60
+	// Token: 0x06000C08 RID: 3080 RVA: 0x0003CF0C File Offset: 0x0003B10C
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -571,7 +564,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.DebugAimAlignment(deltaSeconds, baseActorComponent);
 	}
 
-	// Token: 0x06000C03 RID: 3075 RVA: 0x0003BDCC File Offset: 0x00039FCC
+	// Token: 0x06000C09 RID: 3081 RVA: 0x0003D078 File Offset: 0x0003B278
 	protected override void OnAbort()
 	{
 		string message = "瞄准任务被中止";
@@ -585,7 +578,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.DebugLog(message, array);
 	}
 
-	// Token: 0x06000C04 RID: 3076 RVA: 0x0003BE58 File Offset: 0x0003A058
+	// Token: 0x06000C0A RID: 3082 RVA: 0x0003D104 File Offset: 0x0003B304
 	protected override void OnClear()
 	{
 		Entity entity = this.Entity;
@@ -613,7 +606,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.IsAimLineSnappedToTarget = false;
 	}
 
-	// Token: 0x06000C05 RID: 3077 RVA: 0x0003BF18 File Offset: 0x0003A118
+	// Token: 0x06000C0B RID: 3083 RVA: 0x0003D1C4 File Offset: 0x0003B3C4
 	private void CompleteTask(bool success)
 	{
 		if (!this.IsTaskActive)
@@ -634,13 +627,13 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		base.Finish(success);
 	}
 
-	// Token: 0x06000C06 RID: 3078 RVA: 0x0003BFD2 File Offset: 0x0003A1D2
+	// Token: 0x06000C0C RID: 3084 RVA: 0x0003D27E File Offset: 0x0003B47E
 	private int? GetTargetId(Entity entity)
 	{
 		return BlackboardController.Instance.GetEntityIdByEntity(entity.Id, this.TsTargetIdBlackboardKey);
 	}
 
-	// Token: 0x06000C07 RID: 3079 RVA: 0x0003BFEC File Offset: 0x0003A1EC
+	// Token: 0x06000C0D RID: 3085 RVA: 0x0003D298 File Offset: 0x0003B498
 	[NullableContext(2)]
 	private BaseActorComponent GetValidTargetActorComponent(int targetId)
 	{
@@ -652,7 +645,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return component;
 	}
 
-	// Token: 0x06000C08 RID: 3080 RVA: 0x0003C024 File Offset: 0x0003A224
+	// Token: 0x06000C0E RID: 3086 RVA: 0x0003D2D0 File Offset: 0x0003B4D0
 	private bool ChangeState(TsTaskTurretAiming.ETurretAimingState newState)
 	{
 		if (this.CurrentTurretAimingState == newState)
@@ -683,7 +676,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x06000C09 RID: 3081 RVA: 0x0003C120 File Offset: 0x0003A320
+	// Token: 0x06000C0F RID: 3087 RVA: 0x0003D3CC File Offset: 0x0003B5CC
 	private bool EnterState(TsTaskTurretAiming.ETurretAimingState newState)
 	{
 		switch (newState)
@@ -729,7 +722,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x06000C0A RID: 3082 RVA: 0x0003C1F4 File Offset: 0x0003A3F4
+	// Token: 0x06000C10 RID: 3088 RVA: 0x0003D4A0 File Offset: 0x0003B6A0
 	private void TickTracking(float deltaSeconds, BaseActorComponent targetActorComp)
 	{
 		this.UpdateTargetSightPoint(deltaSeconds, targetActorComp);
@@ -749,7 +742,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000C0B RID: 3083 RVA: 0x0003C25C File Offset: 0x0003A45C
+	// Token: 0x06000C11 RID: 3089 RVA: 0x0003D508 File Offset: 0x0003B708
 	private void TickCharging(float deltaSeconds, BaseActorComponent targetActorComp)
 	{
 		this.UpdateTargetSightPoint(deltaSeconds, targetActorComp);
@@ -776,7 +769,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000C0C RID: 3084 RVA: 0x0003C2EF File Offset: 0x0003A4EF
+	// Token: 0x06000C12 RID: 3090 RVA: 0x0003D59B File Offset: 0x0003B79B
 	private void TickLocked(float deltaSeconds)
 	{
 		this.CurrentStateTimeSeconds += deltaSeconds;
@@ -786,7 +779,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000C0D RID: 3085 RVA: 0x0003C318 File Offset: 0x0003A518
+	// Token: 0x06000C13 RID: 3091 RVA: 0x0003D5C4 File Offset: 0x0003B7C4
 	[NullableContext(2)]
 	private unsafe void TickFiring(AAIController ownerController, int targetId)
 	{
@@ -878,7 +871,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		});
 	}
 
-	// Token: 0x06000C0E RID: 3086 RVA: 0x0003C5F0 File Offset: 0x0003A7F0
+	// Token: 0x06000C14 RID: 3092 RVA: 0x0003D89C File Offset: 0x0003BA9C
 	private string GetStateDebugName(TsTaskTurretAiming.ETurretAimingState state)
 	{
 		switch (state)
@@ -900,7 +893,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000C0F RID: 3087 RVA: 0x0003C648 File Offset: 0x0003A848
+	// Token: 0x06000C15 RID: 3093 RVA: 0x0003D8F4 File Offset: 0x0003BAF4
 	private void UpdateTargetSightPoint(float deltaSeconds, BaseActorComponent targetActorComp)
 	{
 		global::Vector targetSocketLocation = this.TargetSocketLocation;
@@ -930,7 +923,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000C10 RID: 3088 RVA: 0x0003C7AC File Offset: 0x0003A9AC
+	// Token: 0x06000C16 RID: 3094 RVA: 0x0003DA58 File Offset: 0x0003BC58
 	[NullableContext(2)]
 	private void UpdateTurretSightToTarget(global::Vector targetActorPosition)
 	{
@@ -967,7 +960,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		characterAnimationComponent.SetSightTargetPoint(this.SightTargetPoint);
 	}
 
-	// Token: 0x06000C11 RID: 3089 RVA: 0x0003C914 File Offset: 0x0003AB14
+	// Token: 0x06000C17 RID: 3095 RVA: 0x0003DBC0 File Offset: 0x0003BDC0
 	private bool IsAimDirectReachTarget(global::Vector targetPoint, float toleranceDegree)
 	{
 		Entity entity = this.Entity;
@@ -994,7 +987,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return this.TmpWorldSightDir.Normalize(9.99999993922529E-09) && MathUtils.Instance.GetAngleByVectorDot(this.SocketForward, this.TmpWorldSightDir) <= (double)toleranceDegree;
 	}
 
-	// Token: 0x06000C12 RID: 3090 RVA: 0x0003CA18 File Offset: 0x0003AC18
+	// Token: 0x06000C18 RID: 3096 RVA: 0x0003DCCC File Offset: 0x0003BECC
 	private bool PlayAimLineEffect()
 	{
 		int? effectHandle = this.EffectHandle;
@@ -1034,7 +1027,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x06000C13 RID: 3091 RVA: 0x0003CB44 File Offset: 0x0003AD44
+	// Token: 0x06000C19 RID: 3097 RVA: 0x0003DDF8 File Offset: 0x0003BFF8
 	private void StopAimLineEffect()
 	{
 		int? effectHandle = this.EffectHandle;
@@ -1048,7 +1041,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000C14 RID: 3092 RVA: 0x0003CBA0 File Offset: 0x0003ADA0
+	// Token: 0x06000C1A RID: 3098 RVA: 0x0003DE54 File Offset: 0x0003C054
 	private bool UpdateAimLineEffect(float deltaSeconds)
 	{
 		global::Vector aimLineEndPoint = this.GetAimLineEndPoint(deltaSeconds);
@@ -1061,7 +1054,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return this.SetAimLineEffectVectorParam(TsTaskTurretAiming.HIT_POSITION_PARAM_NAME, this.HitPositionWorldRelative);
 	}
 
-	// Token: 0x06000C15 RID: 3093 RVA: 0x0003CBED File Offset: 0x0003ADED
+	// Token: 0x06000C1B RID: 3099 RVA: 0x0003DEA1 File Offset: 0x0003C0A1
 	private bool TrySetAimLineRate(float rate)
 	{
 		if (this.SetAimLineEffectFloatParam(TsTaskTurretAiming.RATE_PARAM_NAME, rate))
@@ -1072,7 +1065,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return false;
 	}
 
-	// Token: 0x06000C16 RID: 3094 RVA: 0x0003CC08 File Offset: 0x0003AE08
+	// Token: 0x06000C1C RID: 3100 RVA: 0x0003DEBC File Offset: 0x0003C0BC
 	[NullableContext(2)]
 	private global::Vector GetAimLineEndPoint(float deltaSeconds)
 	{
@@ -1168,7 +1161,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return this.AimLineEndPointResult;
 	}
 
-	// Token: 0x06000C17 RID: 3095 RVA: 0x0003D06C File Offset: 0x0003B26C
+	// Token: 0x06000C1D RID: 3101 RVA: 0x0003E320 File Offset: 0x0003C520
 	private string GetFirstHitActorName(UKuroHitResult hitResult)
 	{
 		if (hitResult.Actors.Num() <= 0)
@@ -1179,7 +1172,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return ((aactor != null) ? aactor.GetName() : null) ?? "Unknown";
 	}
 
-	// Token: 0x06000C18 RID: 3096 RVA: 0x0003D0B8 File Offset: 0x0003B2B8
+	// Token: 0x06000C1E RID: 3102 RVA: 0x0003E36C File Offset: 0x0003C56C
 	private bool SetAimLineEffectFloatParam(FName parameterName, float value)
 	{
 		bool flag = (this.EffectHandle ?? 0) == 0;
@@ -1196,7 +1189,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x06000C19 RID: 3097 RVA: 0x0003D128 File Offset: 0x0003B328
+	// Token: 0x06000C1F RID: 3103 RVA: 0x0003E3DC File Offset: 0x0003C5DC
 	private bool SetAimLineEffectVectorParam(FName parameterName, global::Vector value)
 	{
 		bool flag = (this.EffectHandle ?? 0) == 0;
@@ -1214,7 +1207,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x06000C1A RID: 3098 RVA: 0x0003D1BC File Offset: 0x0003B3BC
+	// Token: 0x06000C20 RID: 3104 RVA: 0x0003E470 File Offset: 0x0003C670
 	private bool PlayChargeMontage()
 	{
 		if (string.IsNullOrEmpty(this.TsChargeMontage))
@@ -1247,7 +1240,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return this.PlayingMontageId >= 0;
 	}
 
-	// Token: 0x06000C1B RID: 3099 RVA: 0x0003D2A8 File Offset: 0x0003B4A8
+	// Token: 0x06000C21 RID: 3105 RVA: 0x0003E55C File Offset: 0x0003C75C
 	private void StopChargeMontage()
 	{
 		if (this.PlayingMontageId >= 0)
@@ -1266,7 +1259,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000C1C RID: 3100 RVA: 0x0003D30C File Offset: 0x0003B50C
+	// Token: 0x06000C22 RID: 3106 RVA: 0x0003E5C0 File Offset: 0x0003C7C0
 	private void ManageAimSoundBuff(TsTaskTurretAiming.ETurretAimingState currentState)
 	{
 		Entity entity = this.Entity;
@@ -1306,7 +1299,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000C1D RID: 3101 RVA: 0x0003D438 File Offset: 0x0003B638
+	// Token: 0x06000C23 RID: 3107 RVA: 0x0003E6EC File Offset: 0x0003C8EC
 	private void DebugLog(string message, [Nullable(new byte[]
 	{
 		1,
@@ -1315,142 +1308,19 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		2
 	})] params ValueTuple<string, object>[] pairs)
 	{
-		if (Info.Instance.IsBuildShipping || !this.EnableDebug)
-		{
-			return;
-		}
-		Log.Instance.Info(ELogModule.BehaviorTree, ELogAuthor.ZJL, "TsTaskTurretAiming " + message, pairs);
 	}
 
-	// Token: 0x06000C1E RID: 3102 RVA: 0x0003D470 File Offset: 0x0003B670
+	// Token: 0x06000C24 RID: 3108 RVA: 0x0003E6F0 File Offset: 0x0003C8F0
 	private void DrawDebugInfo(BaseActorComponent targetActorComponent)
 	{
-		if (Info.Instance.IsBuildShipping || !this.EnableDebug || !this.IsTaskActive)
-		{
-			return;
-		}
-		Entity entity = this.Entity;
-		if (entity == null || !entity.Valid || !targetActorComponent.Valid || targetActorComponent.Owner == null)
-		{
-			return;
-		}
-		CharacterActorComponent component = entity.GetComponent<CharacterActorComponent>();
-		CharacterAnimationComponent component2 = entity.GetComponent<CharacterAnimationComponent>();
-		TsBaseCharacter tsBaseCharacter = (component != null) ? component.Actor : null;
-		if (component == null || !component.Valid || (component2 == null || !component2.Valid) || (tsBaseCharacter == null || !tsBaseCharacter.IsValid()) || this.TsMuzzleSocketName == null)
-		{
-			return;
-		}
-		global::Vector socketLocation = this.SocketLocation;
-		FVectorDouble fvectorDouble = component.GetSocketLocation(this.TsMuzzleSocketName ?? FNameUtil.NONE);
-		socketLocation.FromUeVector(fvectorDouble);
-		component2.GetWorldSightDirect(this.TmpWorldSightDir);
-		this.DebugSightEndPoint.DeepCopy(this.TmpWorldSightDir);
-		this.DebugSightEndPoint.MultiplyEqual(700.0);
-		this.DebugSightEndPoint.AdditionEqual(this.SocketLocation);
-		UKismetSystemLibrary.D_DrawDebugArrow(tsBaseCharacter, this.SocketLocation.ToUeVector(false), this.DebugSightEndPoint.ToUeVector(false), 30f, TsTaskTurretAiming.currentSightColor, 0.1f, 2f);
-		UKismetSystemLibrary.D_DrawDebugLine(tsBaseCharacter, this.SocketLocation.ToUeVector(false), this.TargetSocketLocation.ToUeVector(false), TsTaskTurretAiming.targetLineColor, 0.1f, 2f);
-		UKismetSystemLibrary.D_DrawDebugLine(tsBaseCharacter, this.SocketLocation.ToUeVector(false), this.AimLineEndPoint.ToUeVector(false), TsTaskTurretAiming.aimLineColor, 0.1f, 2f);
-		UNiagaraComponent uniagaraComponent = ((this.EffectHandle ?? 0) != 0) ? EffectSystem.Instance.GetSureNiagaraComponent(this.EffectHandle.Value) : null;
-		if (uniagaraComponent != null && uniagaraComponent.IsValid())
-		{
-			global::Vector niagaraComponentLocation = this.NiagaraComponentLocation;
-			fvectorDouble = uniagaraComponent.D_K2_GetComponentLocation();
-			niagaraComponentLocation.FromUeVector(fvectorDouble);
-			this.NiagaraAimLineStartPoint.DeepCopy(this.NiagaraComponentLocation);
-			this.NiagaraAimLineStartPoint.SubtractionEqual(this.AimLineEndPoint);
-			if (this.NiagaraAimLineStartPoint.Normalize(9.99999993922529E-09))
-			{
-				this.NiagaraAimLineStartPoint.MultiplyEqual(500.0);
-				this.NiagaraAimLineStartPoint.AdditionEqual(this.NiagaraComponentLocation);
-				UKismetSystemLibrary.D_DrawDebugLine(tsBaseCharacter, this.NiagaraAimLineStartPoint.ToUeVector(false), this.AimLineEndPoint.ToUeVector(false), TsTaskTurretAiming.niagaraAimLineColor, 0.1f, 2f);
-			}
-			UKismetSystemLibrary.D_DrawDebugSphere(tsBaseCharacter, this.NiagaraComponentLocation.ToUeVector(false), 15f, 12, new FLinearColor?(TsTaskTurretAiming.niagaraAimLineColor), 0.1f, 2f);
-			UKismetSystemLibrary.D_DrawDebugSphere(tsBaseCharacter, this.AimLineEndPoint.ToUeVector(false), 15f, 12, new FLinearColor?(TsTaskTurretAiming.niagaraAimLineColor), 0.1f, 2f);
-		}
-		UKismetSystemLibrary.D_DrawDebugSphere(tsBaseCharacter, this.TargetSocketLocation.ToUeVector(false), 30f, 12, new FLinearColor?(TsTaskTurretAiming.targetLineColor), 0.1f, 2f);
-		UKismetSystemLibrary.D_DrawDebugSphere(tsBaseCharacter, this.SightTargetPoint.ToUeVector(false), 20f, 12, new FLinearColor?(TsTaskTurretAiming.sightTargetPointColor), 0.1f, 2f);
-		this.DebugTextLocation.DeepCopy(this.SocketLocation);
-		this.DebugTextLocation.Z += 50.0;
-		UObject worldContextObject = tsBaseCharacter;
-		FVectorDouble textLocation = this.DebugTextLocation.ToUeVector(false);
-		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(16, 2);
-		defaultInterpolatedStringHandler.AppendLiteral("State=");
-		defaultInterpolatedStringHandler.AppendFormatted(this.GetStateDebugName(this.CurrentTurretAimingState));
-		defaultInterpolatedStringHandler.AppendLiteral(" TargetId=");
-		defaultInterpolatedStringHandler.AppendFormatted<int>(this.CurrentTargetId);
-		UKismetSystemLibrary.D_DrawDebugString(worldContextObject, textLocation, defaultInterpolatedStringHandler.ToStringAndClear(), null, new FLinearColor?(TsTaskTurretAiming.debugTextColor), 0.1f);
 	}
 
-	// Token: 0x06000C1F RID: 3103 RVA: 0x0003D85C File Offset: 0x0003BA5C
+	// Token: 0x06000C25 RID: 3109 RVA: 0x0003E700 File Offset: 0x0003C900
 	private void DebugAimAlignment(float deltaSeconds, BaseActorComponent targetActorComponent)
 	{
-		if (Info.Instance.IsBuildShipping || !this.EnableDebug || !this.IsTaskActive)
-		{
-			return;
-		}
-		this.DebugAlignmentLogElapsedSeconds += deltaSeconds;
-		if (this.DebugAlignmentLogElapsedSeconds < 0.5f)
-		{
-			return;
-		}
-		this.DebugAlignmentLogElapsedSeconds = 0f;
-		Entity entity = this.Entity;
-		CharacterActorComponent characterActorComponent = (entity != null) ? entity.GetComponent<CharacterActorComponent>() : null;
-		CharacterAnimationComponent characterAnimationComponent = (entity != null) ? entity.GetComponent<CharacterAnimationComponent>() : null;
-		if (entity == null || !entity.Valid || (characterActorComponent == null || !characterActorComponent.Valid) || (characterAnimationComponent == null || !characterAnimationComponent.Valid) || this.TsMuzzleSocketName == null)
-		{
-			return;
-		}
-		FTransformDouble socketTransform = characterActorComponent.GetSocketTransform(this.TsMuzzleSocketName ?? FNameUtil.NONE);
-		global::Vector socketLocation = this.SocketLocation;
-		FVectorDouble fvectorDouble = socketTransform.GetLocation();
-		socketLocation.FromUeVector(fvectorDouble);
-		global::Vector socketForward = this.SocketForward;
-		FQuat rotation = socketTransform.GetRotation();
-		FVector socketPoseForward = this.SocketPoseForward;
-		FVector fvector = rotation.RotateVector(socketPoseForward);
-		socketForward.FromUeVector(fvector);
-		characterAnimationComponent.GetWorldSightDirect(this.TmpWorldSightDir);
-		global::Vector targetSocketLocation = this.TargetSocketLocation;
-		fvectorDouble = targetActorComponent.GetSocketLocation(this.TsTargetSocketName ?? FNameUtil.NONE);
-		targetSocketLocation.DeepCopy(fvectorDouble);
-		this.DebugTargetDirection.DeepCopy(this.TargetSocketLocation);
-		this.DebugTargetDirection.SubtractionEqual(this.SocketLocation);
-		if (!this.SocketForward.Normalize(9.99999993922529E-09) || !this.TmpWorldSightDir.Normalize(9.99999993922529E-09) || !this.DebugTargetDirection.Normalize(9.99999993922529E-09))
-		{
-			return;
-		}
-		ValueTuple<double, double, double, double, double> niagaraDebugMetrics = this.GetNiagaraDebugMetrics();
-		double item = niagaraDebugMetrics.Item1;
-		double item2 = niagaraDebugMetrics.Item2;
-		double item3 = niagaraDebugMetrics.Item3;
-		double item4 = niagaraDebugMetrics.Item4;
-		double item5 = niagaraDebugMetrics.Item5;
-		this.DebugLog("瞄准方向角度差", new ValueTuple<string, object>[]
-		{
-			new ValueTuple<string, object>("RedToGreenAngleDeg", MathUtils.Instance.GetAngleByVectorDot(this.TmpWorldSightDir, this.DebugTargetDirection)),
-			new ValueTuple<string, object>("RedToCyanAngleDeg", MathUtils.Instance.GetAngleByVectorDot(this.TmpWorldSightDir, this.SocketForward)),
-			new ValueTuple<string, object>("CyanToGreenAngleDeg", MathUtils.Instance.GetAngleByVectorDot(this.SocketForward, this.DebugTargetDirection)),
-			new ValueTuple<string, object>("RedToYellowAngleDeg", item),
-			new ValueTuple<string, object>("CyanToYellowAngleDeg", item2),
-			new ValueTuple<string, object>("NiagaraForwardToYellowAngleDeg", item3),
-			new ValueTuple<string, object>("SelectedHitType", this.AimLineSelectedHitType),
-			new ValueTuple<string, object>("VisibleHitActor", this.AimLineVisibleHitActorName),
-			new ValueTuple<string, object>("SocketToNiagaraDistance", item4),
-			new ValueTuple<string, object>("SocketToAimLineEndDistance", global::Vector.Dist(this.SocketLocation, this.AimLineEndPoint)),
-			new ValueTuple<string, object>("NiagaraToAimLineEndDistance", item5),
-			new ValueTuple<string, object>("AimLineEndToTargetDistance", global::Vector.Dist(this.AimLineEndPoint, this.TargetSocketLocation)),
-			new ValueTuple<string, object>("SocketLocation", this.SocketLocation),
-			new ValueTuple<string, object>("NiagaraLocation", this.NiagaraComponentLocation),
-			new ValueTuple<string, object>("TraceEndPoint", this.AimLineTraceEndPoint),
-			new ValueTuple<string, object>("VisibleHitPoint", this.AimLineVisibleHitPoint),
-			new ValueTuple<string, object>("AimLineEndPoint", this.AimLineEndPoint),
-			new ValueTuple<string, object>("TargetSocketLocation", this.TargetSocketLocation)
-		});
 	}
 
-	// Token: 0x06000C20 RID: 3104 RVA: 0x0003DC64 File Offset: 0x0003BE64
+	// Token: 0x06000C26 RID: 3110 RVA: 0x0003E710 File Offset: 0x0003C910
 	[NullableContext(0)]
 	private ValueTuple<double, double, double, double, double> GetNiagaraDebugMetrics()
 	{
@@ -1485,7 +1355,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return new ValueTuple<double, double, double, double, double>(item, item2, item3, item4, item5);
 	}
 
-	// Token: 0x06000C21 RID: 3105 RVA: 0x0003DDDB File Offset: 0x0003BFDB
+	// Token: 0x06000C27 RID: 3111 RVA: 0x0003E8A8 File Offset: 0x0003CAA8
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskTurretAiming._ClassPtr == IntPtr.Zero)
@@ -1495,22 +1365,22 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return TsTaskTurretAiming._ClassPtr;
 	}
 
-	// Token: 0x06000C22 RID: 3106 RVA: 0x0003DE00 File Offset: 0x0003C000
+	// Token: 0x06000C28 RID: 3112 RVA: 0x0003E8CC File Offset: 0x0003CACC
 	public TsTaskTurretAiming() : this(BuiltinUtils.AllocNativeUObject(TsTaskTurretAiming.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000C23 RID: 3107 RVA: 0x0003DE28 File Offset: 0x0003C028
+	// Token: 0x06000C29 RID: 3113 RVA: 0x0003E8F4 File Offset: 0x0003CAF4
 	public TsTaskTurretAiming(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskTurretAiming.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000C24 RID: 3108 RVA: 0x0003DE5C File Offset: 0x0003C05C
+	// Token: 0x06000C2A RID: 3114 RVA: 0x0003E928 File Offset: 0x0003CB28
 	protected TsTaskTurretAiming(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000C25 RID: 3109 RVA: 0x0003E0CC File Offset: 0x0003C2CC
+	// Token: 0x06000C2B RID: 3115 RVA: 0x0003EB98 File Offset: 0x0003CD98
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -1519,7 +1389,7 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06000C26 RID: 3110 RVA: 0x0003E0FC File Offset: 0x0003C2FC
+	// Token: 0x06000C2C RID: 3116 RVA: 0x0003EBC8 File Offset: 0x0003CDC8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -1528,303 +1398,303 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x04000952 RID: 2386
+	// Token: 0x0400095A RID: 2394
 	private static readonly FName HIT_POSITION_PARAM_NAME = new FName("HitPosition");
 
-	// Token: 0x04000953 RID: 2387
+	// Token: 0x0400095B RID: 2395
 	private static readonly FName RATE_PARAM_NAME = new FName("Rate");
 
-	// Token: 0x04000954 RID: 2388
+	// Token: 0x0400095C RID: 2396
 	private const int SLOW_RATE = 0;
 
-	// Token: 0x04000955 RID: 2389
+	// Token: 0x0400095D RID: 2397
 	private const int FAST_RATE = 1;
 
-	// Token: 0x04000956 RID: 2390
+	// Token: 0x0400095E RID: 2398
 	private const string AIM_LINE_TRACE_PROFILE_KEY = "TsTaskTurretAiming_AimLine";
 
-	// Token: 0x04000957 RID: 2391
+	// Token: 0x0400095F RID: 2399
 	private const float SOCKET_FORWARD_SMOOTH_TIME = 0.01f;
 
-	// Token: 0x04000958 RID: 2392
+	// Token: 0x04000960 RID: 2400
 	private const float TARGET_VELOCITY_SMOOTH_TIME = 0.1f;
 
-	// Token: 0x04000959 RID: 2393
+	// Token: 0x04000961 RID: 2401
 	private const float DEBUG_DRAW_DURATION = 0.1f;
 
-	// Token: 0x0400095A RID: 2394
+	// Token: 0x04000962 RID: 2402
 	private const float DEBUG_LINE_THICKNESS = 2f;
 
-	// Token: 0x0400095B RID: 2395
+	// Token: 0x04000963 RID: 2403
 	private const float DEBUG_ARROW_SIZE = 30f;
 
-	// Token: 0x0400095C RID: 2396
+	// Token: 0x04000964 RID: 2404
 	private const float DEBUG_ARROW_LENGTH = 700f;
 
-	// Token: 0x0400095D RID: 2397
+	// Token: 0x04000965 RID: 2405
 	private const float DEBUG_TARGET_RADIUS = 30f;
 
-	// Token: 0x0400095E RID: 2398
+	// Token: 0x04000966 RID: 2406
 	private const float DEBUG_SIGHT_TARGET_RADIUS = 20f;
 
-	// Token: 0x0400095F RID: 2399
+	// Token: 0x04000967 RID: 2407
 	private const float DEBUG_NIAGARA_RADIUS = 15f;
 
-	// Token: 0x04000960 RID: 2400
+	// Token: 0x04000968 RID: 2408
 	private const float DEBUG_NIAGARA_LINE_EXTENSION = 500f;
 
-	// Token: 0x04000961 RID: 2401
+	// Token: 0x04000969 RID: 2409
 	private const float DEBUG_ALIGNMENT_LOG_INTERVAL = 0.5f;
 
-	// Token: 0x04000962 RID: 2402
+	// Token: 0x0400096A RID: 2410
 	private const int DEBUG_SPHERE_SEGMENTS = 12;
 
-	// Token: 0x04000963 RID: 2403
+	// Token: 0x0400096B RID: 2411
 	private const float DEBUG_TEXT_Z_OFFSET = 50f;
 
-	// Token: 0x04000964 RID: 2404
+	// Token: 0x0400096C RID: 2412
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor currentSightColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x04000965 RID: 2405
+	// Token: 0x0400096D RID: 2413
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor targetLineColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-	// Token: 0x04000966 RID: 2406
+	// Token: 0x0400096E RID: 2414
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor aimLineColor = new FLinearColor(0f, 1f, 1f, 1f);
 
-	// Token: 0x04000967 RID: 2407
+	// Token: 0x0400096F RID: 2415
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor sightTargetPointColor = new FLinearColor(1f, 0f, 1f, 1f);
 
-	// Token: 0x04000968 RID: 2408
+	// Token: 0x04000970 RID: 2416
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor niagaraAimLineColor = new FLinearColor(1f, 1f, 0f, 1f);
 
-	// Token: 0x04000969 RID: 2409
+	// Token: 0x04000971 RID: 2417
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor debugTextColor = new FLinearColor(1f, 1f, 0f, 1f);
 
-	// Token: 0x0400096A RID: 2410
+	// Token: 0x04000972 RID: 2418
 	private bool IsInitTsVariables;
 
-	// Token: 0x0400096B RID: 2411
+	// Token: 0x04000973 RID: 2419
 	private string TsTargetIdBlackboardKey = "";
 
-	// Token: 0x0400096C RID: 2412
+	// Token: 0x04000974 RID: 2420
 	private string TsTurretAimingStateBlackboardKey = "";
 
-	// Token: 0x0400096D RID: 2413
+	// Token: 0x04000975 RID: 2421
 	private FName? TsMuzzleSocketName;
 
-	// Token: 0x0400096E RID: 2414
+	// Token: 0x04000976 RID: 2422
 	private FName? TsTargetSocketName;
 
-	// Token: 0x0400096F RID: 2415
+	// Token: 0x04000977 RID: 2423
 	private float TsStartChargeToleranceDegree = 5f;
 
-	// Token: 0x04000970 RID: 2416
+	// Token: 0x04000978 RID: 2424
 	private float TsBreakChargeToleranceDegree = 7.5f;
 
-	// Token: 0x04000971 RID: 2417
+	// Token: 0x04000979 RID: 2425
 	private float TsFastChargeTimeSeconds = 2.2f;
 
-	// Token: 0x04000972 RID: 2418
+	// Token: 0x0400097A RID: 2426
 	private float TsSlowChargeTriggerTimeSeconds;
 
-	// Token: 0x04000973 RID: 2419
+	// Token: 0x0400097B RID: 2427
 	private float TsLockTimeSeconds = 4f;
 
-	// Token: 0x04000974 RID: 2420
+	// Token: 0x0400097C RID: 2428
 	private float TsFireDelaySeconds = 1f;
 
-	// Token: 0x04000975 RID: 2421
+	// Token: 0x0400097D RID: 2429
 	private float TsMaxAimDistance = 2000f;
 
-	// Token: 0x04000976 RID: 2422
+	// Token: 0x0400097E RID: 2430
 	private float TsSightPredictTimeSeconds;
 
-	// Token: 0x04000977 RID: 2423
+	// Token: 0x0400097F RID: 2431
 	private string TsAimLineEffectPath = "";
 
-	// Token: 0x04000978 RID: 2424
+	// Token: 0x04000980 RID: 2432
 	private string TsChargeMontage = "";
 
-	// Token: 0x04000979 RID: 2425
+	// Token: 0x04000981 RID: 2433
 	private int TsFireSkillId;
 
-	// Token: 0x0400097A RID: 2426
+	// Token: 0x04000982 RID: 2434
 	private int TsSlowAimSoundBuffId;
 
-	// Token: 0x0400097B RID: 2427
+	// Token: 0x04000983 RID: 2435
 	private int TsFastAimSoundBuffId;
 
-	// Token: 0x0400097C RID: 2428
+	// Token: 0x04000984 RID: 2436
 	private TsTaskTurretAiming.ETurretAimingState CurrentTurretAimingState;
 
-	// Token: 0x0400097D RID: 2429
+	// Token: 0x04000985 RID: 2437
 	private float CurrentStateTimeSeconds;
 
-	// Token: 0x0400097E RID: 2430
+	// Token: 0x04000986 RID: 2438
 	private int CurrentTargetId = -1;
 
-	// Token: 0x0400097F RID: 2431
+	// Token: 0x04000987 RID: 2439
 	private bool IsTaskActive;
 
-	// Token: 0x04000980 RID: 2432
+	// Token: 0x04000988 RID: 2440
 	private float DebugAlignmentLogElapsedSeconds;
 
-	// Token: 0x04000981 RID: 2433
+	// Token: 0x04000989 RID: 2441
 	private string AimLineSelectedHitType = "None";
 
-	// Token: 0x04000982 RID: 2434
+	// Token: 0x0400098A RID: 2442
 	private string AimLineVisibleHitActorName = "None";
 
-	// Token: 0x04000983 RID: 2435
+	// Token: 0x0400098B RID: 2443
 	private int? EffectHandle;
 
-	// Token: 0x04000984 RID: 2436
+	// Token: 0x0400098C RID: 2444
 	private int PlayingMontageId = -1;
 
-	// Token: 0x04000985 RID: 2437
+	// Token: 0x0400098D RID: 2445
 	[Nullable(2)]
 	private Entity Entity;
 
-	// Token: 0x04000986 RID: 2438
+	// Token: 0x0400098E RID: 2446
 	[Nullable(2)]
 	private UTraceLineElement AimLineTrace;
 
-	// Token: 0x04000987 RID: 2439
+	// Token: 0x0400098F RID: 2447
 	private bool WaitingFireSkill;
 
-	// Token: 0x04000988 RID: 2440
+	// Token: 0x04000990 RID: 2448
 	private long? TsAiCombatMessageId;
 
-	// Token: 0x04000989 RID: 2441
+	// Token: 0x04000991 RID: 2449
 	private readonly global::Vector SmoothedSocketForward = global::Vector.Create();
 
-	// Token: 0x0400098A RID: 2442
+	// Token: 0x04000992 RID: 2450
 	private bool IsSocketForwardInitialized;
 
-	// Token: 0x0400098B RID: 2443
+	// Token: 0x04000993 RID: 2451
 	private readonly global::Vector SmoothedTargetVelocity = global::Vector.Create();
 
-	// Token: 0x0400098C RID: 2444
+	// Token: 0x04000994 RID: 2452
 	private bool IsTargetVelocityInitialized;
 
-	// Token: 0x0400098D RID: 2445
+	// Token: 0x04000995 RID: 2453
 	private readonly global::Vector FiringHitPosition = global::Vector.Create();
 
-	// Token: 0x0400098E RID: 2446
+	// Token: 0x04000996 RID: 2454
 	private bool IsAimLineSnappedToTarget;
 
-	// Token: 0x0400098F RID: 2447
+	// Token: 0x04000997 RID: 2455
 	private readonly global::Vector TmpWorldSightDir = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04000990 RID: 2448
+	// Token: 0x04000998 RID: 2456
 	private readonly global::Vector SightTargetPoint = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04000991 RID: 2449
+	// Token: 0x04000999 RID: 2457
 	private readonly global::Vector SocketLocation = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04000992 RID: 2450
+	// Token: 0x0400099A RID: 2458
 	private readonly global::Vector TargetSocketLocation = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04000993 RID: 2451
+	// Token: 0x0400099B RID: 2459
 	private readonly global::Vector TargetSightPoint = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04000994 RID: 2452
+	// Token: 0x0400099C RID: 2460
 	private readonly global::Vector SocketForward = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04000995 RID: 2453
+	// Token: 0x0400099D RID: 2461
 	private readonly global::Vector DebugSightEndPoint = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04000996 RID: 2454
+	// Token: 0x0400099E RID: 2462
 	private readonly global::Vector DebugTextLocation = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04000997 RID: 2455
+	// Token: 0x0400099F RID: 2463
 	private readonly global::Vector AimLineEndPoint = global::Vector.Create();
 
-	// Token: 0x04000998 RID: 2456
+	// Token: 0x040009A0 RID: 2464
 	private readonly global::Vector AimLineEndPointResult = global::Vector.Create();
 
-	// Token: 0x04000999 RID: 2457
+	// Token: 0x040009A1 RID: 2465
 	private readonly global::Vector AimLineTraceEndPoint = global::Vector.Create();
 
-	// Token: 0x0400099A RID: 2458
+	// Token: 0x040009A2 RID: 2466
 	private readonly global::Vector AimLineVisibleHitPoint = global::Vector.Create();
 
-	// Token: 0x0400099B RID: 2459
+	// Token: 0x040009A3 RID: 2467
 	private readonly global::Vector NiagaraComponentLocation = global::Vector.Create();
 
-	// Token: 0x0400099C RID: 2460
+	// Token: 0x040009A4 RID: 2468
 	private readonly global::Vector HitPositionWorldRelative = global::Vector.Create();
 
-	// Token: 0x0400099D RID: 2461
+	// Token: 0x040009A5 RID: 2469
 	private readonly global::Vector NiagaraAimLineStartPoint = global::Vector.Create();
 
-	// Token: 0x0400099E RID: 2462
+	// Token: 0x040009A6 RID: 2470
 	private readonly global::Vector DebugTargetDirection = global::Vector.Create();
 
-	// Token: 0x0400099F RID: 2463
+	// Token: 0x040009A7 RID: 2471
 	private readonly global::Vector DebugNiagaraDirection = global::Vector.Create();
 
-	// Token: 0x040009A0 RID: 2464
+	// Token: 0x040009A8 RID: 2472
 	private readonly global::Vector DebugNiagaraForward = global::Vector.Create();
 
-	// Token: 0x040009A1 RID: 2465
+	// Token: 0x040009A9 RID: 2473
 	private FVector EffectVectorParam = new FVector();
 
-	// Token: 0x040009A2 RID: 2466
+	// Token: 0x040009AA RID: 2474
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskTurretAiming.TsTaskTurretAiming_C";
 
-	// Token: 0x040009A3 RID: 2467
+	// Token: 0x040009AB RID: 2475
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040009A4 RID: 2468
+	// Token: 0x040009AC RID: 2476
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040009A5 RID: 2469
+	// Token: 0x040009AD RID: 2477
 	private static int __PropertyOffset_TargetIdBlackboardKey;
 
-	// Token: 0x040009A6 RID: 2470
+	// Token: 0x040009AE RID: 2478
 	private static int __PropertyOffset_TurretAimingStateBlackboardKey;
 
-	// Token: 0x040009A7 RID: 2471
+	// Token: 0x040009AF RID: 2479
 	private static int __PropertyOffset_MuzzleSocketName;
 
-	// Token: 0x040009A8 RID: 2472
+	// Token: 0x040009B0 RID: 2480
 	private static int __PropertyOffset_TargetSocketName;
 
-	// Token: 0x040009A9 RID: 2473
+	// Token: 0x040009B1 RID: 2481
 	private static int __PropertyOffset_StartChargeToleranceDegree;
 
-	// Token: 0x040009AA RID: 2474
+	// Token: 0x040009B2 RID: 2482
 	private static int __PropertyOffset_BreakChargeToleranceDegree;
 
-	// Token: 0x040009AB RID: 2475
+	// Token: 0x040009B3 RID: 2483
 	private static int __PropertyOffset_FastChargeTimeSeconds;
 
-	// Token: 0x040009AC RID: 2476
+	// Token: 0x040009B4 RID: 2484
 	private static int __PropertyOffset_SlowChargeTriggerTimeSeconds;
 
-	// Token: 0x040009AD RID: 2477
+	// Token: 0x040009B5 RID: 2485
 	private static int __PropertyOffset_LockTimeSeconds;
 
-	// Token: 0x040009AE RID: 2478
+	// Token: 0x040009B6 RID: 2486
 	private static int __PropertyOffset_FireDelaySeconds;
 
-	// Token: 0x040009AF RID: 2479
+	// Token: 0x040009B7 RID: 2487
 	private static int __PropertyOffset_MaxAimDistance;
 
-	// Token: 0x040009B0 RID: 2480
+	// Token: 0x040009B8 RID: 2488
 	private static int __PropertyOffset_SightPredictTimeSeconds;
 
-	// Token: 0x040009B1 RID: 2481
+	// Token: 0x040009B9 RID: 2489
 	private static int __PropertyOffset_AimLineEffectPath;
 
-	// Token: 0x040009B2 RID: 2482
+	// Token: 0x040009BA RID: 2490
 	[Nullable(new byte[]
 	{
 		2,
@@ -1832,10 +1702,10 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 	})]
 	private TSoftObjectPtr<UObject> _AimLineEffectPath;
 
-	// Token: 0x040009B3 RID: 2483
+	// Token: 0x040009BB RID: 2491
 	private static int __PropertyOffset_ChargeMontage;
 
-	// Token: 0x040009B4 RID: 2484
+	// Token: 0x040009BC RID: 2492
 	[Nullable(new byte[]
 	{
 		2,
@@ -1843,36 +1713,36 @@ public class TsTaskTurretAiming : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 	})]
 	private TSoftObjectPtr<UAnimMontage> _ChargeMontage;
 
-	// Token: 0x040009B5 RID: 2485
+	// Token: 0x040009BD RID: 2493
 	private static int __PropertyOffset_FireSkillId;
 
-	// Token: 0x040009B6 RID: 2486
+	// Token: 0x040009BE RID: 2494
 	private static int __PropertyOffset_SlowAimSoundBuffId;
 
-	// Token: 0x040009B7 RID: 2487
+	// Token: 0x040009BF RID: 2495
 	private static int __PropertyOffset_FastAimSoundBuffId;
 
-	// Token: 0x040009B8 RID: 2488
+	// Token: 0x040009C0 RID: 2496
 	private static int __PropertyOffset_SocketPoseForward;
 
-	// Token: 0x040009B9 RID: 2489
+	// Token: 0x040009C1 RID: 2497
 	private static int __PropertyOffset_EnableDebug;
 
-	// Token: 0x02007385 RID: 29573
+	// Token: 0x02006508 RID: 25864
 	[NullableContext(0)]
 	private enum ETurretAimingState
 	{
-		// Token: 0x0402660E RID: 157198
+		// Token: 0x04021904 RID: 137476
 		None,
-		// Token: 0x0402660F RID: 157199
+		// Token: 0x04021905 RID: 137477
 		Tracking,
-		// Token: 0x04026610 RID: 157200
+		// Token: 0x04021906 RID: 137478
 		SlowCharging,
-		// Token: 0x04026611 RID: 157201
+		// Token: 0x04021907 RID: 137479
 		FastCharging,
-		// Token: 0x04026612 RID: 157202
+		// Token: 0x04021908 RID: 137480
 		Locked,
-		// Token: 0x04026613 RID: 157203
+		// Token: 0x04021909 RID: 137481
 		Firing
 	}
 }

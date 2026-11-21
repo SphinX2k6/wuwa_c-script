@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002891 RID: 10385
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B66 RID: 11110
 	public class IPreloadSubLevels : SwitchSubLevels
 	{
-		// Token: 0x0600E600 RID: 58880 RVA: 0x0021CE0E File Offset: 0x0021B00E
+		// Token: 0x0600F42F RID: 62511 RVA: 0x00239D8E File Offset: 0x00237F8E
 		public static IPreloadSubLevels Create(IPreloadSubLevels? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046A0 RID: 18080
-		// (get) Token: 0x0600E601 RID: 58881 RVA: 0x0021CE2D File Offset: 0x0021B02D
+		// Token: 0x17004A11 RID: 18961
+		// (get) Token: 0x0600F430 RID: 62512 RVA: 0x00239DAD File Offset: 0x00237FAD
 		public override ESwitchSubLevelsType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046A1 RID: 18081
-		// (get) Token: 0x0600E602 RID: 58882 RVA: 0x0021CE3C File Offset: 0x0021B03C
+		// Token: 0x17004A12 RID: 18962
+		// (get) Token: 0x0600F431 RID: 62513 RVA: 0x00239DBC File Offset: 0x00237FBC
 		public virtual List<string> PreloadLevels
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F27 RID: 32551
+		// Token: 0x040085E6 RID: 34278
 		private IPreloadSubLevels Instance;
 
-		// Token: 0x04007F28 RID: 32552
+		// Token: 0x040085E7 RID: 34279
 		private List<string> _PreloadLevelsCache;
 
-		// Token: 0x04007F29 RID: 32553
+		// Token: 0x040085E8 RID: 34280
 		private bool _PreloadLevelsInited;
 	}
 }

@@ -16,42 +16,42 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048A0 RID: 18592
+	// Token: 0x02003817 RID: 14359
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	[TickController(0)]
 	public class VehicleStreamController : ControllerWithAssistantBase
 	{
-		// Token: 0x060309E6 RID: 199142 RVA: 0x00B49A7D File Offset: 0x00B47C7D
+		// Token: 0x06025512 RID: 152850 RVA: 0x00A84885 File Offset: 0x00A82A85
 		protected override void OnRegisterNetEvent()
 		{
 			base.OnRegisterNetEvent();
 			Net.Instance.Register(ENotifyMessageId.RoadNetworkEntityStartNavNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRoadNetworkEntityStartNavNotify));
 		}
 
-		// Token: 0x060309E7 RID: 199143 RVA: 0x00B49AA1 File Offset: 0x00B47CA1
+		// Token: 0x06025513 RID: 152851 RVA: 0x00A848A9 File Offset: 0x00A82AA9
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.RoadNetworkEntityStartNavNotify);
 			base.OnUnRegisterNetEvent();
 		}
 
-		// Token: 0x060309E8 RID: 199144 RVA: 0x00B49AB9 File Offset: 0x00B47CB9
+		// Token: 0x06025514 RID: 152852 RVA: 0x00A848C1 File Offset: 0x00A82AC1
 		protected override void OnAddEvents()
 		{
 			base.OnAddEvents();
 			EventSystem.Instance.Add(EEventName.TransportSystemInitDone, new Action(this.OnTransportSystemInitDone));
 		}
 
-		// Token: 0x060309E9 RID: 199145 RVA: 0x00B49ADD File Offset: 0x00B47CDD
+		// Token: 0x06025515 RID: 152853 RVA: 0x00A848E5 File Offset: 0x00A82AE5
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.TransportSystemInitDone, new Action(this.OnTransportSystemInitDone));
 			base.OnRemoveEvents();
 		}
 
-		// Token: 0x060309EA RID: 199146 RVA: 0x00B49B04 File Offset: 0x00B47D04
+		// Token: 0x06025516 RID: 152854 RVA: 0x00A8490C File Offset: 0x00A82B0C
 		private void OnTransportSystemInitDone()
 		{
 			VehicleStreamModel instance = VehicleStreamModel.Instance;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			waitTransportInitVehicles.Clear();
 		}
 
-		// Token: 0x060309EB RID: 199147 RVA: 0x00B49BB4 File Offset: 0x00B47DB4
+		// Token: 0x06025517 RID: 152855 RVA: 0x00A849BC File Offset: 0x00A82BBC
 		[NullableContext(2)]
 		private unsafe void OnRoadNetworkEntityStartNavNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			}, -1, true, true);
 		}
 
-		// Token: 0x060309EC RID: 199148 RVA: 0x00B49C20 File Offset: 0x00B47E20
+		// Token: 0x06025518 RID: 152856 RVA: 0x00A84A28 File Offset: 0x00A82C28
 		private void RoadNetworkEntityStartNavNotifyImp(EntityHandle entityHandle, RoadNetworkEntityStartNavNotify notify)
 		{
 			BaseActorComponent component = entityHandle.Entity.GetComponent<BaseActorComponent>();
@@ -121,13 +121,13 @@ namespace CSharpScript.Game.Module.VehicleStream
 			}
 		}
 
-		// Token: 0x060309ED RID: 199149 RVA: 0x00B49C8F File Offset: 0x00B47E8F
+		// Token: 0x06025519 RID: 152857 RVA: 0x00A84A97 File Offset: 0x00A82C97
 		public bool UnRegisterVehicleTeamMember(long vehicleCreatureDataId)
 		{
 			return VehicleStreamModel.Instance.RemoveTeamMember(vehicleCreatureDataId);
 		}
 
-		// Token: 0x060309EE RID: 199150 RVA: 0x00B49C9C File Offset: 0x00B47E9C
+		// Token: 0x0602551A RID: 152858 RVA: 0x00A84AA4 File Offset: 0x00A82CA4
 		public unsafe bool RegisterVehicleAndLaunch(long vehicleCreatureDataId, int vehiclePbDataId, int startRoadId, int startRoadIndex, int destRoadId, int destIndex, global::Vector actorLocation, global::Rotator actorRotator, ITrafficNavigationConfig baseConfig, string enableMoveSyncReason)
 		{
 			EntityHandle entity = CreatureModel.Instance.GetEntity(vehicleCreatureDataId);
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return false;
 		}
 
-		// Token: 0x060309EF RID: 199151 RVA: 0x00B49D64 File Offset: 0x00B47F64
+		// Token: 0x0602551B RID: 152859 RVA: 0x00A84B6C File Offset: 0x00A82D6C
 		public bool RegisterVehicleTeamMember(long vehicleCreatureDataId, int vehiclePbDataId, int startRoadId, int startRoadIndex, int destRoadId, int destIndex, global::Vector actorLocation, global::Rotator actorRotator, ITrafficNavigationConfig baseConfig)
 		{
 			VehicleStreamModel instance = VehicleStreamModel.Instance;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return this.RegisterVehicleTeamMemberImp(vehicleCreatureDataId, vehiclePbDataId, startRoadId, startRoadIndex, destRoadId, destIndex, actorLocation, actorRotator, baseConfig);
 		}
 
-		// Token: 0x060309F0 RID: 199152 RVA: 0x00B49DE4 File Offset: 0x00B47FE4
+		// Token: 0x0602551C RID: 152860 RVA: 0x00A84BEC File Offset: 0x00A82DEC
 		private unsafe bool RegisterVehicleTeamMemberImp(long vehicleCreatureDataId, int vehiclePbDataId, int startRoadId, int startRoadIndex, int destRoadId, int destIndex, global::Vector actorLocation, global::Rotator actorRotator, ITrafficNavigationConfig baseConfig)
 		{
 			VehicleStreamModel instance = VehicleStreamModel.Instance;
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return true;
 		}
 
-		// Token: 0x060309F1 RID: 199153 RVA: 0x00B49F78 File Offset: 0x00B48178
+		// Token: 0x0602551D RID: 152861 RVA: 0x00A84D80 File Offset: 0x00A82F80
 		public bool LaunchVehicle(long vehicleCreatureDataId, USkeletalMeshComponent skeletalMeshComponent)
 		{
 			VehicleTeamMember vehicleTeamMember = VehicleStreamModel.Instance.GetVehicleTeamMember(vehicleCreatureDataId);
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return true;
 		}
 
-		// Token: 0x060309F2 RID: 199154 RVA: 0x00B49FA0 File Offset: 0x00B481A0
+		// Token: 0x0602551E RID: 152862 RVA: 0x00A84DA8 File Offset: 0x00A82FA8
 		[NullableContext(2)]
 		private global::Vector GetSplinePointWorldLocation(int splineId, int pointIndex)
 		{
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return null;
 		}
 
-		// Token: 0x060309F3 RID: 199155 RVA: 0x00B4A314 File Offset: 0x00B48514
+		// Token: 0x0602551F RID: 152863 RVA: 0x00A8511C File Offset: 0x00A8331C
 		public void RequestNetworkEntityUpdateCurRoadPush(long creatureDataId, int roadId, int keyPointIndex)
 		{
 			RoadNetworkEntityUpdateCurRoadPush roadNetworkEntityUpdateCurRoadPush = RoadNetworkEntityUpdateCurRoadPush.Create();
@@ -332,8 +332,8 @@ namespace CSharpScript.Game.Module.VehicleStream
 			Net.Instance.Send(EPushMessageId.RoadNetworkEntityUpdateCurRoadPush, roadNetworkEntityUpdateCurRoadPush);
 		}
 
-		// Token: 0x17007953 RID: 31059
-		// (get) Token: 0x060309F4 RID: 199156 RVA: 0x00B4A34C File Offset: 0x00B4854C
+		// Token: 0x17004CBB RID: 19643
+		// (get) Token: 0x06025520 RID: 152864 RVA: 0x00A85154 File Offset: 0x00A83354
 		public static VehicleStreamController Instance
 		{
 			get
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			}
 		}
 
-		// Token: 0x060309F5 RID: 199157 RVA: 0x00B4A353 File Offset: 0x00B48553
+		// Token: 0x06025521 RID: 152865 RVA: 0x00A8515B File Offset: 0x00A8335B
 		public static VehicleStreamController GetOrCreateInstance()
 		{
 			if (VehicleStreamController._Instance == null)
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return VehicleStreamController._Instance;
 		}
 
-		// Token: 0x060309F6 RID: 199158 RVA: 0x00B4A367 File Offset: 0x00B48567
+		// Token: 0x06025522 RID: 152866 RVA: 0x00A8516F File Offset: 0x00A8336F
 		public static bool CreateInstance()
 		{
 			if (VehicleStreamController._Instance != null)
@@ -363,24 +363,24 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return true;
 		}
 
-		// Token: 0x060309F7 RID: 199159 RVA: 0x00B4A37D File Offset: 0x00B4857D
+		// Token: 0x06025523 RID: 152867 RVA: 0x00A85185 File Offset: 0x00A83385
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060309F8 RID: 199160 RVA: 0x00B4A37F File Offset: 0x00B4857F
+		// Token: 0x06025524 RID: 152868 RVA: 0x00A85187 File Offset: 0x00A83387
 		public static void ResetStaticDefaultValue()
 		{
 			VehicleStreamController._Instance = null;
 		}
 
-		// Token: 0x060309F9 RID: 199161 RVA: 0x00B4A387 File Offset: 0x00B48587
+		// Token: 0x06025525 RID: 152869 RVA: 0x00A8518F File Offset: 0x00A8338F
 		static VehicleStreamController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(VehicleStreamController.CreateStaticDefaultValue), new Action(VehicleStreamController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A1DC RID: 106972
+		// Token: 0x04014A4F RID: 84559
 		[Nullable(2)]
 		private static VehicleStreamController _Instance;
 	}

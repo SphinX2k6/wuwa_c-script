@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C0D RID: 23565
+	// Token: 0x0200622C RID: 25132
 	public class TEntityBatchRefreshUnion
 	{
-		// Token: 0x1700B1E6 RID: 45542
-		// (get) Token: 0x060286BB RID: 165563 RVA: 0x00590526 File Offset: 0x0058E726
-		// (set) Token: 0x060286BC RID: 165564 RVA: 0x0059052E File Offset: 0x0058E72E
+		// Token: 0x1700BB34 RID: 47924
+		// (get) Token: 0x0602ACAB RID: 175275 RVA: 0x005D846E File Offset: 0x005D666E
+		// (set) Token: 0x0602ACAC RID: 175276 RVA: 0x005D8476 File Offset: 0x005D6676
 		public TEntityBatchRefresh Type { get; set; }
 
-		// Token: 0x1700B1E7 RID: 45543
-		// (get) Token: 0x060286BD RID: 165565 RVA: 0x00590537 File Offset: 0x0058E737
-		// (set) Token: 0x060286BE RID: 165566 RVA: 0x0059053F File Offset: 0x0058E73F
+		// Token: 0x1700BB35 RID: 47925
+		// (get) Token: 0x0602ACAD RID: 175277 RVA: 0x005D847F File Offset: 0x005D667F
+		// (set) Token: 0x0602ACAE RID: 175278 RVA: 0x005D8487 File Offset: 0x005D6687
 		public object Value { get; set; }
 
-		// Token: 0x060286BF RID: 165567 RVA: 0x00590548 File Offset: 0x0058E748
+		// Token: 0x0602ACAF RID: 175279 RVA: 0x005D8490 File Offset: 0x005D6690
 		public TEntityBatchRefreshUnion()
 		{
 			this.Type = TEntityBatchRefresh.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060286C0 RID: 165568 RVA: 0x0059055E File Offset: 0x0058E75E
+		// Token: 0x0602ACB0 RID: 175280 RVA: 0x005D84A6 File Offset: 0x005D66A6
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060286C1 RID: 165569 RVA: 0x00590570 File Offset: 0x0058E770
+		// Token: 0x0602ACB1 RID: 175281 RVA: 0x005D84B8 File Offset: 0x005D66B8
 		public IRandomBatchPoolRefreshT AsIRandomBatchPoolRefresh()
 		{
 			return this.As<IRandomBatchPoolRefreshT>();
 		}
 
-		// Token: 0x060286C2 RID: 165570 RVA: 0x00590578 File Offset: 0x0058E778
+		// Token: 0x0602ACB2 RID: 175282 RVA: 0x005D84C0 File Offset: 0x005D66C0
 		public static TEntityBatchRefreshUnion FromIRandomBatchPoolRefresh(IRandomBatchPoolRefreshT _irandombatchpoolrefresh)
 		{
 			return new TEntityBatchRefreshUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060286C3 RID: 165571 RVA: 0x0059058D File Offset: 0x0058E78D
+		// Token: 0x0602ACB3 RID: 175283 RVA: 0x005D84D5 File Offset: 0x005D66D5
 		public IRandomBatchRefreshT AsIRandomBatchRefresh()
 		{
 			return this.As<IRandomBatchRefreshT>();
 		}
 
-		// Token: 0x060286C4 RID: 165572 RVA: 0x00590595 File Offset: 0x0058E795
+		// Token: 0x0602ACB4 RID: 175284 RVA: 0x005D84DD File Offset: 0x005D66DD
 		public static TEntityBatchRefreshUnion FromIRandomBatchRefresh(IRandomBatchRefreshT _irandombatchrefresh)
 		{
 			return new TEntityBatchRefreshUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060286C5 RID: 165573 RVA: 0x005905AA File Offset: 0x0058E7AA
+		// Token: 0x0602ACB5 RID: 175285 RVA: 0x005D84F2 File Offset: 0x005D66F2
 		public ISequenceBatchRefreshT AsISequenceBatchRefresh()
 		{
 			return this.As<ISequenceBatchRefreshT>();
 		}
 
-		// Token: 0x060286C6 RID: 165574 RVA: 0x005905B2 File Offset: 0x0058E7B2
+		// Token: 0x0602ACB6 RID: 175286 RVA: 0x005D84FA File Offset: 0x005D66FA
 		public static TEntityBatchRefreshUnion FromISequenceBatchRefresh(ISequenceBatchRefreshT _isequencebatchrefresh)
 		{
 			return new TEntityBatchRefreshUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060286C7 RID: 165575 RVA: 0x005905C8 File Offset: 0x0058E7C8
+		// Token: 0x0602ACB7 RID: 175287 RVA: 0x005D8510 File Offset: 0x005D6710
 		public static int Pack(FlatBufferBuilder builder, TEntityBatchRefreshUnion _o)
 		{
 			switch (_o.Type)

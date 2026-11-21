@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200427A RID: 17018
+	// Token: 0x020032E1 RID: 13025
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/BP_CharacterController.BP_CharacterController_C")]
-	[UnrealStructLayout(2376, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2376)]
+	[UnrealStructLayout(2416, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2416)]
 	public class BP_CharacterController_C : __TsCharacterController_InheritProxy, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602C29E RID: 180894 RVA: 0x00A189AF File Offset: 0x00A16BAF
+		// Token: 0x06021128 RID: 135464 RVA: 0x009584E3 File Offset: 0x009566E3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_CharacterController_C._ClassPtr == IntPtr.Zero)
@@ -25,65 +25,64 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			return BP_CharacterController_C._ClassPtr;
 		}
 
-		// Token: 0x0602C29F RID: 180895 RVA: 0x00A189D4 File Offset: 0x00A16BD4
+		// Token: 0x06021129 RID: 135465 RVA: 0x00958508 File Offset: 0x00956708
 		public BP_CharacterController_C() : this(BuiltinUtils.AllocNativeUObject(BP_CharacterController_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602C2A0 RID: 180896 RVA: 0x00A189FC File Offset: 0x00A16BFC
+		// Token: 0x0602112A RID: 135466 RVA: 0x00958530 File Offset: 0x00956730
 		[NullableContext(1)]
 		public BP_CharacterController_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_CharacterController_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006DEA RID: 28138
-		// (get) Token: 0x0602C2A1 RID: 180897 RVA: 0x00A18A2F File Offset: 0x00A16C2F
-		// (set) Token: 0x0602C2A2 RID: 180898 RVA: 0x00A18A43 File Offset: 0x00A16C43
+		// Token: 0x1700426C RID: 17004
+		// (get) Token: 0x0602112B RID: 135467 RVA: 0x00958563 File Offset: 0x00956763
+		// (set) Token: 0x0602112C RID: 135468 RVA: 0x00958577 File Offset: 0x00956777
 		public unsafe TsBaseCharacter 当前操作角色
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<TsBaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CharacterController_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<TsBaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CharacterController_C.__PropertyOffset_当前操作角色);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CharacterController_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CharacterController_C.__PropertyOffset_当前操作角色, value);
 			}
 		}
 
-		// Token: 0x17006DEB RID: 28139
-		// (get) Token: 0x0602C2A3 RID: 180899 RVA: 0x00A18A58 File Offset: 0x00A16C58
-		// (set) Token: 0x0602C2A4 RID: 180900 RVA: 0x00A18A68 File Offset: 0x00A16C68
+		// Token: 0x1700426D RID: 17005
+		// (get) Token: 0x0602112D RID: 135469 RVA: 0x0095858C File Offset: 0x0095678C
+		// (set) Token: 0x0602112E RID: 135470 RVA: 0x0095859C File Offset: 0x0095679C
 		public unsafe bool GmIsOpen
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CharacterController_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)BP_CharacterController_C.__PropertyOffset_GmIsOpen) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CharacterController_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_CharacterController_C.__PropertyOffset_GmIsOpen) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006DEC RID: 28140
-		// (get) Token: 0x0602C2A5 RID: 180901 RVA: 0x00A18A79 File Offset: 0x00A16C79
-		// (set) Token: 0x0602C2A6 RID: 180902 RVA: 0x00A18A8D File Offset: 0x00A16C8D
+		// Token: 0x1700426E RID: 17006
+		// (get) Token: 0x0602112F RID: 135471 RVA: 0x009585AD File Offset: 0x009567AD
+		// (set) Token: 0x06021130 RID: 135472 RVA: 0x009585C1 File Offset: 0x009567C1
 		public unsafe BP_KuroCheatManager_C KuroCheatManager
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<BP_KuroCheatManager_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CharacterController_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<BP_KuroCheatManager_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CharacterController_C.__PropertyOffset_KuroCheatManager);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CharacterController_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CharacterController_C.__PropertyOffset_KuroCheatManager, value);
 			}
 		}
 
-		// Token: 0x0602C2A7 RID: 180903 RVA: 0x00A18AA4 File Offset: 0x00A16CA4
+		// Token: 0x06021131 RID: 135473 RVA: 0x009585D8 File Offset: 0x009567D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveUnPossess(APawn UnpossessedPawn)
 		{
 			BP_CharacterController_C.__ReceiveUnPossess_FunctionParams* ptr = stackalloc BP_CharacterController_C.__ReceiveUnPossess_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_CharacterController_C.__ReceiveUnPossess_FunctionParams) & -16L;
@@ -92,20 +91,18 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CharacterController_C.__ReceiveUnPossess_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C2A8 RID: 180904 RVA: 0x00A18AFC File Offset: 0x00A16CFC
+		// Token: 0x06021132 RID: 135474 RVA: 0x00958630 File Offset: 0x00956830
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe override void ReceiveUnPossess_Implementation(APawn UnpossessedPawn)
 		{
 			BP_CharacterController_C.__ReceiveUnPossess_FunctionParams* ptr = stackalloc BP_CharacterController_C.__ReceiveUnPossess_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_CharacterController_C.__ReceiveUnPossess_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_CharacterController_C.__ReceiveUnPossess_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->UnpossessedPawn = ((UnpossessedPawn != null) ? UnpossessedPawn.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CharacterController_C.__ReceiveUnPossess_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CharacterController_C.__ReceiveUnPossess_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C2A9 RID: 180905 RVA: 0x00A18B54 File Offset: 0x00A16D54
+		// Token: 0x06021133 RID: 135475 RVA: 0x00958688 File Offset: 0x00956888
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceivePossess(APawn PossessedPawn)
 		{
 			BP_CharacterController_C.__ReceivePossess_FunctionParams* ptr = stackalloc BP_CharacterController_C.__ReceivePossess_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_CharacterController_C.__ReceivePossess_FunctionParams) & -16L;
@@ -114,36 +111,32 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CharacterController_C.__ReceivePossess_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C2AA RID: 180906 RVA: 0x00A18BAC File Offset: 0x00A16DAC
+		// Token: 0x06021134 RID: 135476 RVA: 0x009586E0 File Offset: 0x009568E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe override void ReceivePossess_Implementation(APawn PossessedPawn)
 		{
 			BP_CharacterController_C.__ReceivePossess_FunctionParams* ptr = stackalloc BP_CharacterController_C.__ReceivePossess_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_CharacterController_C.__ReceivePossess_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_CharacterController_C.__ReceivePossess_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->PossessedPawn = ((PossessedPawn != null) ? PossessedPawn.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CharacterController_C.__ReceivePossess_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CharacterController_C.__ReceivePossess_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C2AB RID: 180907 RVA: 0x00A18C02 File Offset: 0x00A16E02
+		// Token: 0x06021135 RID: 135477 RVA: 0x00958735 File Offset: 0x00956935
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CharacterController_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C2AC RID: 180908 RVA: 0x00A18C16 File Offset: 0x00A16E16
+		// Token: 0x06021136 RID: 135478 RVA: 0x00958749 File Offset: 0x00956949
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected override void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CharacterController_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CharacterController_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C2AD RID: 180909 RVA: 0x00A18C2C File Offset: 0x00A16E2C
+		// Token: 0x06021137 RID: 135479 RVA: 0x00958760 File Offset: 0x00956960
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void OnPressAnyKey(FKey key)
 		{
 			BP_CharacterController_C.__OnPressAnyKey_FunctionParams* ptr = stackalloc BP_CharacterController_C.__OnPressAnyKey_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_CharacterController_C.__OnPressAnyKey_FunctionParams) & -16L;
@@ -156,9 +149,8 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			UnrealReflectionUtils.DestroyStruct(BP_CharacterController_C.__OnPressAnyKey_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602C2AE RID: 180910 RVA: 0x00A18CA0 File Offset: 0x00A16EA0
+		// Token: 0x06021138 RID: 135480 RVA: 0x009587D4 File Offset: 0x009569D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void OnReleaseAnyKey(FKey key)
 		{
 			BP_CharacterController_C.__OnReleaseAnyKey_FunctionParams* ptr = stackalloc BP_CharacterController_C.__OnReleaseAnyKey_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_CharacterController_C.__OnReleaseAnyKey_FunctionParams) & -16L;
@@ -171,85 +163,85 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			UnrealReflectionUtils.DestroyStruct(BP_CharacterController_C.__OnReleaseAnyKey_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602C2AF RID: 180911 RVA: 0x00A18D12 File Offset: 0x00A16F12
+		// Token: 0x06021139 RID: 135481 RVA: 0x00958846 File Offset: 0x00956A46
 		protected BP_CharacterController_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040171BE RID: 94654
+		// Token: 0x04011F14 RID: 73492
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/BP_CharacterController.BP_CharacterController_C";
 
-		// Token: 0x040171BF RID: 94655
+		// Token: 0x04011F15 RID: 73493
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040171C0 RID: 94656
+		// Token: 0x04011F16 RID: 73494
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040171C1 RID: 94657
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011F17 RID: 73495
+		internal static int __PropertyOffset_当前操作角色;
 
-		// Token: 0x040171C2 RID: 94658
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011F18 RID: 73496
+		internal static int __PropertyOffset_GmIsOpen;
 
-		// Token: 0x040171C3 RID: 94659
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011F19 RID: 73497
+		internal static int __PropertyOffset_KuroCheatManager;
 
-		// Token: 0x040171C4 RID: 94660
+		// Token: 0x04011F1A RID: 73498
 		private static IntPtr __ReceiveUnPossess_NativeFunctionPtr;
 
-		// Token: 0x040171C5 RID: 94661
+		// Token: 0x04011F1B RID: 73499
 		private static IntPtr __ReceivePossess_NativeFunctionPtr;
 
-		// Token: 0x040171C6 RID: 94662
+		// Token: 0x04011F1C RID: 73500
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x040171C7 RID: 94663
+		// Token: 0x04011F1D RID: 73501
 		private static IntPtr __OnPressAnyKey_NativeFunctionPtr;
 
-		// Token: 0x040171C8 RID: 94664
+		// Token: 0x04011F1E RID: 73502
 		private static IntPtr __OnReleaseAnyKey_NativeFunctionPtr;
 
-		// Token: 0x0200A665 RID: 42597
+		// Token: 0x0200907F RID: 36991
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected new ref struct __ReceiveUnPossess_FunctionParams
 		{
-			// Token: 0x0403259F RID: 206239
+			// Token: 0x0402CE92 RID: 183954
 			[FieldOffset(0)]
 			public IntPtr UnpossessedPawn;
 		}
 
-		// Token: 0x0200A666 RID: 42598
+		// Token: 0x02009080 RID: 36992
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected new ref struct __ReceivePossess_FunctionParams
 		{
-			// Token: 0x040325A0 RID: 206240
+			// Token: 0x0402CE93 RID: 183955
 			[FieldOffset(0)]
 			public IntPtr PossessedPawn;
 		}
 
-		// Token: 0x0200A667 RID: 42599
+		// Token: 0x02009081 RID: 36993
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected new ref struct __OnPressAnyKey_FunctionParams
 		{
-			// Token: 0x040325A1 RID: 206241
+			// Token: 0x0402CE94 RID: 183956
 			[FieldOffset(0)]
 			public byte key;
 		}
 
-		// Token: 0x0200A668 RID: 42600
+		// Token: 0x02009082 RID: 36994
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected new ref struct __OnReleaseAnyKey_FunctionParams
 		{
-			// Token: 0x040325A2 RID: 206242
+			// Token: 0x0402CE95 RID: 183957
 			[FieldOffset(0)]
 			public byte key;
 		}

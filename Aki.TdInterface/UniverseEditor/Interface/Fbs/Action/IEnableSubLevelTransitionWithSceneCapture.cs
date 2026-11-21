@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006690 RID: 26256
+	// Token: 0x02006D0A RID: 27914
 	public struct IEnableSubLevelTransitionWithSceneCapture : IFlatbufferObject
 	{
-		// Token: 0x1700C31A RID: 49946
-		// (get) Token: 0x0602DA11 RID: 186897 RVA: 0x0063ED42 File Offset: 0x0063CF42
+		// Token: 0x1700CCCB RID: 52427
+		// (get) Token: 0x0603022E RID: 197166 RVA: 0x0068BFF6 File Offset: 0x0068A1F6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DA12 RID: 186898 RVA: 0x0063ED4F File Offset: 0x0063CF4F
+		// Token: 0x0603022F RID: 197167 RVA: 0x0068C003 File Offset: 0x0068A203
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DA13 RID: 186899 RVA: 0x0063ED58 File Offset: 0x0063CF58
+		// Token: 0x06030230 RID: 197168 RVA: 0x0068C00C File Offset: 0x0068A20C
 		public static IEnableSubLevelTransitionWithSceneCapture GetRootAsIEnableSubLevelTransitionWithSceneCapture(ByteBuffer _bb)
 		{
 			return IEnableSubLevelTransitionWithSceneCapture.GetRootAsIEnableSubLevelTransitionWithSceneCapture(_bb, default(IEnableSubLevelTransitionWithSceneCapture));
 		}
 
-		// Token: 0x0602DA14 RID: 186900 RVA: 0x0063ED74 File Offset: 0x0063CF74
+		// Token: 0x06030231 RID: 197169 RVA: 0x0068C028 File Offset: 0x0068A228
 		public static IEnableSubLevelTransitionWithSceneCapture GetRootAsIEnableSubLevelTransitionWithSceneCapture(ByteBuffer _bb, IEnableSubLevelTransitionWithSceneCapture obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DA15 RID: 186901 RVA: 0x0063ED91 File Offset: 0x0063CF91
+		// Token: 0x06030232 RID: 197170 RVA: 0x0068C045 File Offset: 0x0068A245
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DA16 RID: 186902 RVA: 0x0063EDA0 File Offset: 0x0063CFA0
+		// Token: 0x06030233 RID: 197171 RVA: 0x0068C054 File Offset: 0x0068A254
 		public IEnableSubLevelTransitionWithSceneCapture __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C31B RID: 49947
-		// (get) Token: 0x0602DA17 RID: 186903 RVA: 0x0063EDB0 File Offset: 0x0063CFB0
+		// Token: 0x1700CCCC RID: 52428
+		// (get) Token: 0x06030234 RID: 197172 RVA: 0x0068C064 File Offset: 0x0068A264
 		public EEnableSubLevelTransitionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C31C RID: 49948
-		// (get) Token: 0x0602DA18 RID: 186904 RVA: 0x0063EDEC File Offset: 0x0063CFEC
+		// Token: 0x1700CCCD RID: 52429
+		// (get) Token: 0x06030235 RID: 197173 RVA: 0x0068C0A0 File Offset: 0x0068A2A0
 		public string SceneCaptureEffect
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DA19 RID: 186905 RVA: 0x0063EE23 File Offset: 0x0063D023
+		// Token: 0x06030236 RID: 197174 RVA: 0x0068C0D7 File Offset: 0x0068A2D7
 		public Span<byte> GetSceneCaptureEffectBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602DA1A RID: 186906 RVA: 0x0063EE32 File Offset: 0x0063D032
+		// Token: 0x06030237 RID: 197175 RVA: 0x0068C0E6 File Offset: 0x0068A2E6
 		public byte[] GetSceneCaptureEffectArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700C31D RID: 49949
-		// (get) Token: 0x0602DA1B RID: 186907 RVA: 0x0063EE40 File Offset: 0x0063D040
+		// Token: 0x1700CCCE RID: 52430
+		// (get) Token: 0x06030238 RID: 197176 RVA: 0x0068C0F4 File Offset: 0x0068A2F4
 		public string ScreenEffect
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DA1C RID: 186908 RVA: 0x0063EE77 File Offset: 0x0063D077
+		// Token: 0x06030239 RID: 197177 RVA: 0x0068C12B File Offset: 0x0068A32B
 		public Span<byte> GetScreenEffectBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0602DA1D RID: 186909 RVA: 0x0063EE86 File Offset: 0x0063D086
+		// Token: 0x0603023A RID: 197178 RVA: 0x0068C13A File Offset: 0x0068A33A
 		public byte[] GetScreenEffectArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700C31E RID: 49950
-		// (get) Token: 0x0602DA1E RID: 186910 RVA: 0x0063EE94 File Offset: 0x0063D094
+		// Token: 0x1700CCCF RID: 52431
+		// (get) Token: 0x0603023B RID: 197179 RVA: 0x0068C148 File Offset: 0x0068A348
 		public string ScreenEffectLoop
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DA1F RID: 186911 RVA: 0x0063EECC File Offset: 0x0063D0CC
+		// Token: 0x0603023C RID: 197180 RVA: 0x0068C180 File Offset: 0x0068A380
 		public Span<byte> GetScreenEffectLoopBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0602DA20 RID: 186912 RVA: 0x0063EEDC File Offset: 0x0063D0DC
+		// Token: 0x0603023D RID: 197181 RVA: 0x0068C190 File Offset: 0x0068A390
 		public byte[] GetScreenEffectLoopArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700C31F RID: 49951
-		// (get) Token: 0x0602DA21 RID: 186913 RVA: 0x0063EEEC File Offset: 0x0063D0EC
+		// Token: 0x1700CCD0 RID: 52432
+		// (get) Token: 0x0603023E RID: 197182 RVA: 0x0068C1A0 File Offset: 0x0068A3A0
 		public float DelayTime
 		{
 			get
@@ -158,8 +158,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C320 RID: 49952
-		// (get) Token: 0x0602DA22 RID: 186914 RVA: 0x0063EF30 File Offset: 0x0063D130
+		// Token: 0x1700CCD1 RID: 52433
+		// (get) Token: 0x0603023F RID: 197183 RVA: 0x0068C1E4 File Offset: 0x0068A3E4
 		public bool IsAllowInput
 		{
 			get
@@ -169,8 +169,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C321 RID: 49953
-		// (get) Token: 0x0602DA23 RID: 186915 RVA: 0x0063EF70 File Offset: 0x0063D170
+		// Token: 0x1700CCD2 RID: 52434
+		// (get) Token: 0x06030240 RID: 197184 RVA: 0x0068C224 File Offset: 0x0068A424
 		public byte NullMask
 		{
 			get
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DA24 RID: 186916 RVA: 0x0063EFB0 File Offset: 0x0063D1B0
+		// Token: 0x06030241 RID: 197185 RVA: 0x0068C264 File Offset: 0x0068A464
 		public static Offset<IEnableSubLevelTransitionWithSceneCapture> CreateIEnableSubLevelTransitionWithSceneCapture(FlatBufferBuilder builder, EEnableSubLevelTransitionType Type = EEnableSubLevelTransitionType.SceneCapture, StringOffset SceneCaptureEffectOffset = default(StringOffset), StringOffset ScreenEffectOffset = default(StringOffset), StringOffset ScreenEffectLoopOffset = default(StringOffset), float DelayTime = 0f, bool IsAllowInput = false, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -198,61 +198,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableSubLevelTransitionWithSceneCapture.EndIEnableSubLevelTransitionWithSceneCapture(builder);
 		}
 
-		// Token: 0x0602DA25 RID: 186917 RVA: 0x0063EFFF File Offset: 0x0063D1FF
+		// Token: 0x06030242 RID: 197186 RVA: 0x0068C2B3 File Offset: 0x0068A4B3
 		public static void StartIEnableSubLevelTransitionWithSceneCapture(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0602DA26 RID: 186918 RVA: 0x0063F008 File Offset: 0x0063D208
+		// Token: 0x06030243 RID: 197187 RVA: 0x0068C2BC File Offset: 0x0068A4BC
 		public static void AddType(FlatBufferBuilder builder, EEnableSubLevelTransitionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602DA27 RID: 186919 RVA: 0x0063F013 File Offset: 0x0063D213
+		// Token: 0x06030244 RID: 197188 RVA: 0x0068C2C7 File Offset: 0x0068A4C7
 		public static void AddSceneCaptureEffect(FlatBufferBuilder builder, StringOffset sceneCaptureEffectOffset)
 		{
 			builder.AddOffset(1, sceneCaptureEffectOffset.Value, 0);
 		}
 
-		// Token: 0x0602DA28 RID: 186920 RVA: 0x0063F023 File Offset: 0x0063D223
+		// Token: 0x06030245 RID: 197189 RVA: 0x0068C2D7 File Offset: 0x0068A4D7
 		public static void AddScreenEffect(FlatBufferBuilder builder, StringOffset screenEffectOffset)
 		{
 			builder.AddOffset(2, screenEffectOffset.Value, 0);
 		}
 
-		// Token: 0x0602DA29 RID: 186921 RVA: 0x0063F033 File Offset: 0x0063D233
+		// Token: 0x06030246 RID: 197190 RVA: 0x0068C2E7 File Offset: 0x0068A4E7
 		public static void AddScreenEffectLoop(FlatBufferBuilder builder, StringOffset screenEffectLoopOffset)
 		{
 			builder.AddOffset(3, screenEffectLoopOffset.Value, 0);
 		}
 
-		// Token: 0x0602DA2A RID: 186922 RVA: 0x0063F043 File Offset: 0x0063D243
+		// Token: 0x06030247 RID: 197191 RVA: 0x0068C2F7 File Offset: 0x0068A4F7
 		public static void AddDelayTime(FlatBufferBuilder builder, float delayTime)
 		{
 			builder.AddFloat(4, delayTime, 0.0);
 		}
 
-		// Token: 0x0602DA2B RID: 186923 RVA: 0x0063F056 File Offset: 0x0063D256
+		// Token: 0x06030248 RID: 197192 RVA: 0x0068C30A File Offset: 0x0068A50A
 		public static void AddIsAllowInput(FlatBufferBuilder builder, bool isAllowInput)
 		{
 			builder.AddBool(5, isAllowInput, false);
 		}
 
-		// Token: 0x0602DA2C RID: 186924 RVA: 0x0063F061 File Offset: 0x0063D261
+		// Token: 0x06030249 RID: 197193 RVA: 0x0068C315 File Offset: 0x0068A515
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x0602DA2D RID: 186925 RVA: 0x0063F06C File Offset: 0x0063D26C
+		// Token: 0x0603024A RID: 197194 RVA: 0x0068C320 File Offset: 0x0068A520
 		public static Offset<IEnableSubLevelTransitionWithSceneCapture> EndIEnableSubLevelTransitionWithSceneCapture(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnableSubLevelTransitionWithSceneCapture>(builder.EndTable());
 		}
 
-		// Token: 0x0602DA2E RID: 186926 RVA: 0x0063F07C File Offset: 0x0063D27C
+		// Token: 0x0603024B RID: 197195 RVA: 0x0068C330 File Offset: 0x0068A530
 		public IEnableSubLevelTransitionWithSceneCaptureT UnPack()
 		{
 			IEnableSubLevelTransitionWithSceneCaptureT enableSubLevelTransitionWithSceneCaptureT = new IEnableSubLevelTransitionWithSceneCaptureT();
@@ -260,7 +260,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return enableSubLevelTransitionWithSceneCaptureT;
 		}
 
-		// Token: 0x0602DA2F RID: 186927 RVA: 0x0063F098 File Offset: 0x0063D298
+		// Token: 0x0603024C RID: 197196 RVA: 0x0068C34C File Offset: 0x0068A54C
 		public void UnPackTo(IEnableSubLevelTransitionWithSceneCaptureT _o)
 		{
 			_o.Type = this.Type;
@@ -272,7 +272,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602DA30 RID: 186928 RVA: 0x0063F0FC File Offset: 0x0063D2FC
+		// Token: 0x0603024D RID: 197197 RVA: 0x0068C3B0 File Offset: 0x0068A5B0
 		public static Offset<IEnableSubLevelTransitionWithSceneCapture> Pack(FlatBufferBuilder builder, IEnableSubLevelTransitionWithSceneCaptureT _o)
 		{
 			if (_o == null)
@@ -285,7 +285,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableSubLevelTransitionWithSceneCapture.CreateIEnableSubLevelTransitionWithSceneCapture(builder, _o.Type, sceneCaptureEffectOffset, screenEffectOffset, screenEffectLoopOffset, _o.DelayTime, _o.IsAllowInput, _o.NullMask);
 		}
 
-		// Token: 0x04010D47 RID: 68935
+		// Token: 0x04011B6D RID: 72557
 		private Table __p;
 	}
 }

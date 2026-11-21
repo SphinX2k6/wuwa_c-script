@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02001B78 RID: 7032
+// Token: 0x02001037 RID: 4151
 public struct FloroRanchSkillViewParam
 {
-	// Token: 0x04006006 RID: 24582
+	// Token: 0x040060D5 RID: 24789
 	public bool CanSelect;
 
-	// Token: 0x04006007 RID: 24583
+	// Token: 0x040060D6 RID: 24790
 	public EFloroRanchActivityDataType ActivityDataType;
 }

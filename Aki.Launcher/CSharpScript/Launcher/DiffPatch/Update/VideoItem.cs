@@ -5,29 +5,29 @@ using CSharpScript.Launcher.Util.Json;
 
 namespace CSharpScript.Launcher.DiffPatch.Update
 {
-	// Token: 0x0200020C RID: 524
+	// Token: 0x02000211 RID: 529
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VideoItem
 	{
-		// Token: 0x0400087B RID: 2171
+		// Token: 0x040008BC RID: 2236
 		public string PakName = "";
 
-		// Token: 0x0400087C RID: 2172
+		// Token: 0x040008BD RID: 2237
 		[JsonConverter(typeof(TsBigIntJsonConverter))]
 		public long PakSize;
 
-		// Token: 0x0400087D RID: 2173
+		// Token: 0x040008BE RID: 2238
 		public string PakHash = "";
 
-		// Token: 0x0400087E RID: 2174
+		// Token: 0x040008BF RID: 2239
 		public string SigName = "";
 
-		// Token: 0x0400087F RID: 2175
+		// Token: 0x040008C0 RID: 2240
 		[JsonConverter(typeof(TsBigIntJsonConverter))]
 		public long SigSize;
 
-		// Token: 0x04000880 RID: 2176
+		// Token: 0x040008C1 RID: 2241
 		public string SigHash = "";
 	}
 }

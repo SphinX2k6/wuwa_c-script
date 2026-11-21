@@ -1,39 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065C2 RID: 26050
+	// Token: 0x02005540 RID: 21824
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardShopTabViewModel : DockyardViewModelBase
 	{
-		// Token: 0x17009590 RID: 38288
-		// (get) Token: 0x06041582 RID: 267650 RVA: 0x00FD59A8 File Offset: 0x00FD3BA8
+		// Token: 0x170068F2 RID: 26866
+		// (get) Token: 0x06036247 RID: 221767 RVA: 0x00F1C9E4 File Offset: 0x00F1ABE4
 		public virtual DockyardShopBackpackPanelModel BackpackPanelModel { [PreserveBaseOverrides] get; } = new DockyardShopBackpackPanelModel();
 
-		// Token: 0x17009591 RID: 38289
-		// (get) Token: 0x06041583 RID: 267651 RVA: 0x00FD59B0 File Offset: 0x00FD3BB0
+		// Token: 0x170068F3 RID: 26867
+		// (get) Token: 0x06036248 RID: 221768 RVA: 0x00F1C9EC File Offset: 0x00F1ABEC
 		public virtual DockyardShopListPanelModel ListPanelModel { [PreserveBaseOverrides] get; } = new DockyardShopListPanelModel();
 
-		// Token: 0x06041584 RID: 267652 RVA: 0x00FD59B8 File Offset: 0x00FD3BB8
+		// Token: 0x06036249 RID: 221769 RVA: 0x00F1C9F4 File Offset: 0x00F1ABF4
 		public void RegisterMainView(DockyardShopMainView mainView)
 		{
 			this.MainView = mainView;
 		}
 
-		// Token: 0x06041585 RID: 267653 RVA: 0x00FD59C1 File Offset: 0x00FD3BC1
+		// Token: 0x0603624A RID: 221770 RVA: 0x00F1C9FD File Offset: 0x00F1ABFD
 		public override void ItemBlockClick(int id)
 		{
 			base.ItemBlockClick(id);
 			this.MainView.HidePlotPanel();
 		}
 
-		// Token: 0x06041586 RID: 267654 RVA: 0x00FD59D8 File Offset: 0x00FD3BD8
+		// Token: 0x0603624B RID: 221771 RVA: 0x00F1CA14 File Offset: 0x00F1AC14
 		public unsafe void SellClick(int incId, int itemId)
 		{
 			if (this.BackpackPanelModel.IsInDragState || !this.BackpackPanelModel.IsInSelectState || this.BackpackPanelModel.InSelectedBlockId == -1)
@@ -66,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			});
 		}
 
-		// Token: 0x06041587 RID: 267655 RVA: 0x00FD5A8C File Offset: 0x00FD3C8C
+		// Token: 0x0603624C RID: 221772 RVA: 0x00F1CAC8 File Offset: 0x00F1ACC8
 		public override void AllSellClick()
 		{
 			List<FishingItemInfo> leftPanelItemBlockDataList = base.GetLeftPanelItemBlockDataList();
@@ -81,9 +80,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				return;
 			}
 			bool isInSelectState = this.BackpackPanelModel.IsInSelectState;
-			List<int> incIdList = leftIncIdList.Concat(rightIncIdList).ToList<int>();
-			List<int> itemIdList = allSellItemIdList.Concat(allSellItemIdList2).ToList<int>();
-			FishingController.Instance.TryRequestFishingSell(incIdList, itemIdList, isInSelectState, delegate(bool isSuccess)
+			List<int> list = new List<int>(leftIncIdList);
+			list.AddRange(rightIncIdList);
+			List<int> list2 = new List<int>(allSellItemIdList);
+			list2.AddRange(allSellItemIdList2);
+			FishingController.Instance.TryRequestFishingSell(list, list2, isInSelectState, delegate(bool isSuccess)
 			{
 				if (isSuccess)
 				{
@@ -100,13 +101,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			});
 		}
 
-		// Token: 0x06041588 RID: 267656 RVA: 0x00FD5B67 File Offset: 0x00FD3D67
+		// Token: 0x0603624D RID: 221773 RVA: 0x00F1CBA7 File Offset: 0x00F1ADA7
 		public void NotifyMainViewClose()
 		{
 			this.MainView.CloseMe(null);
 		}
 
-		// Token: 0x06041589 RID: 267657 RVA: 0x00FD5B78 File Offset: 0x00FD3D78
+		// Token: 0x0603624E RID: 221774 RVA: 0x00F1CBB8 File Offset: 0x00F1ADB8
 		private List<int> GetAllSellIncIdList(List<FishingItemInfo> dataList)
 		{
 			List<int> list = new List<int>();
@@ -120,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x0604158A RID: 267658 RVA: 0x00FD5BDC File Offset: 0x00FD3DDC
+		// Token: 0x0603624F RID: 221775 RVA: 0x00F1CC1C File Offset: 0x00F1AE1C
 		private List<int> GetAllSellItemIdList(List<FishingItemInfo> dataList)
 		{
 			List<int> list = new List<int>();
@@ -134,14 +135,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x0604158B RID: 267659 RVA: 0x00FD5C40 File Offset: 0x00FD3E40
+		// Token: 0x06036250 RID: 221776 RVA: 0x00F1CC80 File Offset: 0x00F1AE80
 		public void NotifyMainViewUiBlur(bool enable)
 		{
 			this.MainView.NotifyUiBlur(enable);
 		}
 
-		// Token: 0x17009592 RID: 38290
-		// (get) Token: 0x0604158C RID: 267660 RVA: 0x00FD5C50 File Offset: 0x00FD3E50
+		// Token: 0x170068F4 RID: 26868
+		// (get) Token: 0x06036251 RID: 221777 RVA: 0x00F1CC90 File Offset: 0x00F1AE90
 		public bool HasFishingCanSell
 		{
 			get
@@ -167,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0402200E RID: 139278
+		// Token: 0x0401C93F RID: 117055
 		private DockyardShopMainView MainView;
 	}
 }

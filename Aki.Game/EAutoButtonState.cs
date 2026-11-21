@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020027CB RID: 10187
+// Token: 0x02001D46 RID: 7494
 public enum EAutoButtonState
 {
-	// Token: 0x04009D6F RID: 40303
+	// Token: 0x0400A158 RID: 41304
 	AutoAdd,
-	// Token: 0x04009D70 RID: 40304
+	// Token: 0x0400A159 RID: 41305
 	Clear
 }

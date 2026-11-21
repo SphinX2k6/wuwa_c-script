@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DC8 RID: 7624
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FDF RID: 8159
 	public class IRogueRoleSelectRoom : IRogueSelectRoomType
 	{
-		// Token: 0x0600A34B RID: 41803 RVA: 0x00172E40 File Offset: 0x00171040
+		// Token: 0x0600AD55 RID: 44373 RVA: 0x00187568 File Offset: 0x00185768
 		private IRogueRoleSelectRoom_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A34C RID: 41804 RVA: 0x00172E78 File Offset: 0x00171078
+		// Token: 0x0600AD56 RID: 44374 RVA: 0x001875A0 File Offset: 0x001857A0
 		public static IRogueRoleSelectRoom Create([Nullable(2)] IRogueRoleSelectRoom instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A34D RID: 41805 RVA: 0x00172E8B File Offset: 0x0017108B
+		// Token: 0x0600AD57 RID: 44375 RVA: 0x001875B3 File Offset: 0x001857B3
 		public static IRogueRoleSelectRoom CreateFromSetValue([Nullable(2)] IRogueRoleSelectRoom_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A34E RID: 41806 RVA: 0x00172E9E File Offset: 0x0017109E
+		// Token: 0x0600AD58 RID: 44376 RVA: 0x001875C6 File Offset: 0x001857C6
 		public new IRogueRoleSelectRoom_SetValue ToSetValue()
 		{
 			return new IRogueRoleSelectRoom_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003250 RID: 12880
-		// (get) Token: 0x0600A34F RID: 41807 RVA: 0x00172EB1 File Offset: 0x001710B1
-		// (set) Token: 0x0600A350 RID: 41808 RVA: 0x00172EDC File Offset: 0x001710DC
+		// Token: 0x170034EA RID: 13546
+		// (get) Token: 0x0600AD59 RID: 44377 RVA: 0x001875D9 File Offset: 0x001857D9
+		// (set) Token: 0x0600AD5A RID: 44378 RVA: 0x00187604 File Offset: 0x00185804
 		public override ERogueSelectRoomType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061EF RID: 25071
+		// Token: 0x04006777 RID: 26487
 		[Nullable(2)]
 		protected new IRogueRoleSelectRoom FbInstance;
 
-		// Token: 0x040061F0 RID: 25072
+		// Token: 0x04006778 RID: 26488
 		[Nullable(2)]
 		protected new IRogueRoleSelectRoom_SetValue PocoInterface;
 	}

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000550 RID: 1360
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005B7 RID: 1463
 	public class INoiseRemovalNode
 	{
-		// Token: 0x06001BD6 RID: 7126 RVA: 0x000502C4 File Offset: 0x0004E4C4
+		// Token: 0x06001DD2 RID: 7634 RVA: 0x00055080 File Offset: 0x00053280
 		private INoiseRemovalNode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001BD7 RID: 7127 RVA: 0x000502FC File Offset: 0x0004E4FC
+		// Token: 0x06001DD3 RID: 7635 RVA: 0x000550B8 File Offset: 0x000532B8
 		public static INoiseRemovalNode Create([Nullable(2)] INoiseRemovalNode instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BD8 RID: 7128 RVA: 0x0005030F File Offset: 0x0004E50F
+		// Token: 0x06001DD4 RID: 7636 RVA: 0x000550CB File Offset: 0x000532CB
 		public static INoiseRemovalNode CreateFromSetValue([Nullable(2)] INoiseRemovalNode_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BD9 RID: 7129 RVA: 0x00050322 File Offset: 0x0004E522
+		// Token: 0x06001DD5 RID: 7637 RVA: 0x000550DE File Offset: 0x000532DE
 		public INoiseRemovalNode_SetValue ToSetValue()
 		{
 			return new INoiseRemovalNode_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000752 RID: 1874
-		// (get) Token: 0x06001BDA RID: 7130 RVA: 0x00050341 File Offset: 0x0004E541
-		// (set) Token: 0x06001BDB RID: 7131 RVA: 0x0005036C File Offset: 0x0004E56C
+		// Token: 0x170007D5 RID: 2005
+		// (get) Token: 0x06001DD6 RID: 7638 RVA: 0x000550FD File Offset: 0x000532FD
+		// (set) Token: 0x06001DD7 RID: 7639 RVA: 0x00055128 File Offset: 0x00053328
 		public virtual ENoiseRemovalColor Color
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000753 RID: 1875
-		// (get) Token: 0x06001BDC RID: 7132 RVA: 0x0005037C File Offset: 0x0004E57C
-		// (set) Token: 0x06001BDD RID: 7133 RVA: 0x000503DD File Offset: 0x0004E5DD
+		// Token: 0x170007D6 RID: 2006
+		// (get) Token: 0x06001DD8 RID: 7640 RVA: 0x00055138 File Offset: 0x00053338
+		// (set) Token: 0x06001DD9 RID: 7641 RVA: 0x00055199 File Offset: 0x00053399
 		public virtual VectorInfo Position
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040013FA RID: 5114
+		// Token: 0x04001564 RID: 5476
 		[Nullable(2)]
 		protected INoiseRemovalNode FbInstance;
 
-		// Token: 0x040013FB RID: 5115
+		// Token: 0x04001565 RID: 5477
 		[Nullable(2)]
 		protected INoiseRemovalNode_SetValue PocoInterface;
 
-		// Token: 0x040013FC RID: 5116
+		// Token: 0x04001566 RID: 5478
 		private VectorInfo _PositionCache;
 
-		// Token: 0x040013FD RID: 5117
+		// Token: 0x04001567 RID: 5479
 		private bool _PositionInited;
 	}
 }

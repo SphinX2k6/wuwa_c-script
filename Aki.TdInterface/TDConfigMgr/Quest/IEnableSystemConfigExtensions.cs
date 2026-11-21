@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F52 RID: 3922
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200107C RID: 4220
 	public static class IEnableSystemConfigExtensions
 	{
-		// Token: 0x06005732 RID: 22322 RVA: 0x000D5510 File Offset: 0x000D3710
+		// Token: 0x06005D06 RID: 23814 RVA: 0x000E1F7C File Offset: 0x000E017C
 		public static IReadOnlyList<object> GetSystemVars(this IEnableSystemConfig p)
 		{
 			IMotorRacingSystemConfig motorRacingSystemConfig = p as IMotorRacingSystemConfig;
@@ -30,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return systemVars;
 		}
 
-		// Token: 0x06005733 RID: 22323 RVA: 0x000D5568 File Offset: 0x000D3768
+		// Token: 0x06005D07 RID: 23815 RVA: 0x000E1FD4 File Offset: 0x000E01D4
 		public static IReadOnlyList<object> GetVars(this IEnableSystemConfig p)
 		{
 			IGradingSystemConfig gradingSystemConfig = p as IGradingSystemConfig;

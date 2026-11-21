@@ -6,23 +6,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000144 RID: 324
+	// Token: 0x02000148 RID: 328
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlatformSdkReportBaseData : IStaticVariableResetter
 	{
-		// Token: 0x06000A3A RID: 2618 RVA: 0x000444F4 File Offset: 0x000426F4
+		// Token: 0x06000A6E RID: 2670 RVA: 0x00046908 File Offset: 0x00044B08
 		static PlatformSdkReportBaseData()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlatformSdkReportBaseData.CreateStaticDefaultValue), new Action(PlatformSdkReportBaseData.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A3B RID: 2619 RVA: 0x000445D9 File Offset: 0x000427D9
+		// Token: 0x06000A6F RID: 2671 RVA: 0x000469ED File Offset: 0x00044BED
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000A3C RID: 2620 RVA: 0x000445DC File Offset: 0x000427DC
+		// Token: 0x06000A70 RID: 2672 RVA: 0x000469F0 File Offset: 0x00044BF0
 		public static void ResetStaticDefaultValue()
 		{
 			PlatformSdkReportBaseData.BasePkgId = "";
@@ -46,7 +46,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			PlatformSdkReportBaseData.BasePuid = 0L;
 		}
 
-		// Token: 0x06000A3D RID: 2621 RVA: 0x000446A4 File Offset: 0x000428A4
+		// Token: 0x06000A71 RID: 2673 RVA: 0x00046AB8 File Offset: 0x00044CB8
 		public PlatformSdkReportBaseData()
 		{
 			this.event_uuid = UKismetGuidLibrary.NewGuid().ToString();
@@ -89,28 +89,28 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.puid = PlatformSdkReportBaseData.BasePuid;
 		}
 
-		// Token: 0x06000A3E RID: 2622 RVA: 0x00044923 File Offset: 0x00042B23
+		// Token: 0x06000A72 RID: 2674 RVA: 0x00046D37 File Offset: 0x00044F37
 		public virtual string GetReportEventName()
 		{
 			return this.event_name;
 		}
 
-		// Token: 0x06000A3F RID: 2623 RVA: 0x0004492B File Offset: 0x00042B2B
+		// Token: 0x06000A73 RID: 2675 RVA: 0x00046D3F File Offset: 0x00044F3F
 		public virtual string GetCpReportEventName()
 		{
 			return "cp_" + this.event_name;
 		}
 
-		// Token: 0x06000A40 RID: 2624 RVA: 0x0004493D File Offset: 0x00042B3D
+		// Token: 0x06000A74 RID: 2676 RVA: 0x00046D51 File Offset: 0x00044F51
 		public virtual string GetReportData()
 		{
-			return LauncherJson.Stringify<PlatformSdkReportBaseData>(this, new JsonSerializerOptions
+			return LauncherJson.Stringify(this, new JsonSerializerOptions
 			{
 				IncludeFields = true
 			});
 		}
 
-		// Token: 0x06000A41 RID: 2625 RVA: 0x00044954 File Offset: 0x00042B54
+		// Token: 0x06000A75 RID: 2677 RVA: 0x00046D68 File Offset: 0x00044F68
 		public static void InitSdkBaseValue(string pkg_id, string pkg_name, string channel_id, string channel_name, string channel_op, string language, string loginId, string gameVersion, string sdkVersion, string did, string initTime, string gameId, string accessId)
 		{
 			PlatformSdkReportBaseData.BasePkgId = pkg_id;
@@ -128,31 +128,31 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			PlatformSdkReportBaseData.ChangeLanguage(language);
 		}
 
-		// Token: 0x06000A42 RID: 2626 RVA: 0x000449B8 File Offset: 0x00042BB8
+		// Token: 0x06000A76 RID: 2678 RVA: 0x00046DCC File Offset: 0x00044FCC
 		public static void SetCuid(string cuid)
 		{
 			PlatformSdkReportBaseData.BaseUserId = cuid;
 		}
 
-		// Token: 0x06000A43 RID: 2627 RVA: 0x000449C0 File Offset: 0x00042BC0
+		// Token: 0x06000A77 RID: 2679 RVA: 0x00046DD4 File Offset: 0x00044FD4
 		public static void SetPuid(long puid)
 		{
 			PlatformSdkReportBaseData.BasePuid = puid;
 		}
 
-		// Token: 0x06000A44 RID: 2628 RVA: 0x000449C8 File Offset: 0x00042BC8
+		// Token: 0x06000A78 RID: 2680 RVA: 0x00046DDC File Offset: 0x00044FDC
 		public static long GetPuid()
 		{
 			return PlatformSdkReportBaseData.BasePuid;
 		}
 
-		// Token: 0x06000A45 RID: 2629 RVA: 0x000449CF File Offset: 0x00042BCF
+		// Token: 0x06000A79 RID: 2681 RVA: 0x00046DE3 File Offset: 0x00044FE3
 		public static void ChangeLanguage(string language)
 		{
 			PlatformSdkReportBaseData.BaseLanguage = language;
 		}
 
-		// Token: 0x06000A46 RID: 2630 RVA: 0x000449D7 File Offset: 0x00042BD7
+		// Token: 0x06000A7A RID: 2682 RVA: 0x00046DEB File Offset: 0x00044FEB
 		public static void InitSdkRoleValue(string role_id, string role_name, string server_id, string server_name)
 		{
 			PlatformSdkReportBaseData.BaseRoleId = role_id;
@@ -161,148 +161,148 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			PlatformSdkReportBaseData.BaseServerName = server_name;
 		}
 
-		// Token: 0x04000604 RID: 1540
+		// Token: 0x0400063F RID: 1599
 		private const string PROJECT_ID = "Aki";
 
-		// Token: 0x04000605 RID: 1541
+		// Token: 0x04000640 RID: 1600
 		private const int GLOBALSDKTYPEVALUE = 2;
 
-		// Token: 0x04000606 RID: 1542
+		// Token: 0x04000641 RID: 1601
 		private static string BasePkgId = "";
 
-		// Token: 0x04000607 RID: 1543
+		// Token: 0x04000642 RID: 1602
 		private static string BasePkgName = "";
 
-		// Token: 0x04000608 RID: 1544
+		// Token: 0x04000643 RID: 1603
 		private static string BaseChannelId = "";
 
-		// Token: 0x04000609 RID: 1545
+		// Token: 0x04000644 RID: 1604
 		private static string BaseChannelName = "";
 
-		// Token: 0x0400060A RID: 1546
+		// Token: 0x04000645 RID: 1605
 		private static string BaseChannelOp = "";
 
-		// Token: 0x0400060B RID: 1547
+		// Token: 0x04000646 RID: 1606
 		private static string BaseLanguage = "";
 
-		// Token: 0x0400060C RID: 1548
+		// Token: 0x04000647 RID: 1607
 		private static string BaseRoleName = "";
 
-		// Token: 0x0400060D RID: 1549
+		// Token: 0x04000648 RID: 1608
 		private static string BaseServerName = "";
 
-		// Token: 0x0400060E RID: 1550
+		// Token: 0x04000649 RID: 1609
 		private static string BaseServerId = "";
 
-		// Token: 0x0400060F RID: 1551
+		// Token: 0x0400064A RID: 1610
 		private static string BaseRoleId = "";
 
-		// Token: 0x04000610 RID: 1552
+		// Token: 0x0400064B RID: 1611
 		private static string LoginId = "";
 
-		// Token: 0x04000611 RID: 1553
+		// Token: 0x0400064C RID: 1612
 		private static string BaseGameVersion = "";
 
-		// Token: 0x04000612 RID: 1554
+		// Token: 0x0400064D RID: 1613
 		private static string BaseSdkVersion = "";
 
-		// Token: 0x04000613 RID: 1555
+		// Token: 0x0400064E RID: 1614
 		private static string BaseDid = "";
 
-		// Token: 0x04000614 RID: 1556
+		// Token: 0x0400064F RID: 1615
 		private static string BaseUserId = "";
 
-		// Token: 0x04000615 RID: 1557
+		// Token: 0x04000650 RID: 1616
 		private static string BaseInitTime = "";
 
-		// Token: 0x04000616 RID: 1558
+		// Token: 0x04000651 RID: 1617
 		private static string BaseGameId = "";
 
-		// Token: 0x04000617 RID: 1559
+		// Token: 0x04000652 RID: 1618
 		private static string BaseAccessId = "";
 
-		// Token: 0x04000618 RID: 1560
+		// Token: 0x04000653 RID: 1619
 		private static long BasePuid = 0L;
 
-		// Token: 0x04000619 RID: 1561
+		// Token: 0x04000654 RID: 1620
 		public long event_time_ms;
 
-		// Token: 0x0400061A RID: 1562
+		// Token: 0x04000655 RID: 1621
 		public int event_id;
 
-		// Token: 0x0400061B RID: 1563
+		// Token: 0x04000656 RID: 1622
 		public string event_name = "";
 
-		// Token: 0x0400061C RID: 1564
+		// Token: 0x04000657 RID: 1623
 		public string event_uuid = "";
 
-		// Token: 0x0400061D RID: 1565
+		// Token: 0x04000658 RID: 1624
 		public string did = "";
 
-		// Token: 0x0400061E RID: 1566
+		// Token: 0x04000659 RID: 1625
 		public string language = "";
 
-		// Token: 0x0400061F RID: 1567
+		// Token: 0x0400065A RID: 1626
 		public string timezone = "";
 
-		// Token: 0x04000620 RID: 1568
+		// Token: 0x0400065B RID: 1627
 		public string user_id = "";
 
-		// Token: 0x04000621 RID: 1569
+		// Token: 0x0400065C RID: 1628
 		public string game_id = "";
 
-		// Token: 0x04000622 RID: 1570
+		// Token: 0x0400065D RID: 1629
 		public string game_name = "Aki";
 
-		// Token: 0x04000623 RID: 1571
+		// Token: 0x0400065E RID: 1630
 		public string pkg_id = "";
 
-		// Token: 0x04000624 RID: 1572
+		// Token: 0x0400065F RID: 1631
 		public string pkg_name = "";
 
-		// Token: 0x04000625 RID: 1573
+		// Token: 0x04000660 RID: 1632
 		public string channel_id = "";
 
-		// Token: 0x04000626 RID: 1574
+		// Token: 0x04000661 RID: 1633
 		public string channel_name = "";
 
-		// Token: 0x04000627 RID: 1575
+		// Token: 0x04000662 RID: 1634
 		public string channel_op = "";
 
-		// Token: 0x04000628 RID: 1576
+		// Token: 0x04000663 RID: 1635
 		public string role_id = "";
 
-		// Token: 0x04000629 RID: 1577
+		// Token: 0x04000664 RID: 1636
 		public string role_name = "";
 
-		// Token: 0x0400062A RID: 1578
+		// Token: 0x04000665 RID: 1637
 		public string server_id = "";
 
-		// Token: 0x0400062B RID: 1579
+		// Token: 0x04000666 RID: 1638
 		public string server_name = "";
 
-		// Token: 0x0400062C RID: 1580
+		// Token: 0x04000667 RID: 1639
 		public string sdk_version = "";
 
-		// Token: 0x0400062D RID: 1581
+		// Token: 0x04000668 RID: 1640
 		public string game_version = "";
 
-		// Token: 0x0400062E RID: 1582
+		// Token: 0x04000669 RID: 1641
 		public string login_id = "";
 
-		// Token: 0x0400062F RID: 1583
+		// Token: 0x0400066A RID: 1642
 		public string os = "PS5";
 
-		// Token: 0x04000630 RID: 1584
+		// Token: 0x0400066B RID: 1643
 		public string last_phone_open_ts = "";
 
-		// Token: 0x04000631 RID: 1585
+		// Token: 0x0400066C RID: 1644
 		public int sdk_type = 2;
 
-		// Token: 0x04000632 RID: 1586
+		// Token: 0x0400066D RID: 1645
 		public string psn_access_id = "";
 
-		// Token: 0x04000633 RID: 1587
+		// Token: 0x0400066E RID: 1646
 		public long puid;
 	}
 }

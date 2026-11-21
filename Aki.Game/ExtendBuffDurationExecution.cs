@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F8C RID: 12172
+// Token: 0x020024E0 RID: 9440
 [NullableContext(1)]
 [Nullable(0)]
 public class ExtendBuffDurationExecution : PeriodExecution
 {
-	// Token: 0x06019D94 RID: 105876 RVA: 0x006BF398 File Offset: 0x006BD598
+	// Token: 0x060176A6 RID: 95910 RVA: 0x006E5C78 File Offset: 0x006E3E78
 	public ExtendBuffDurationExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019D95 RID: 105877 RVA: 0x006BF3AC File Offset: 0x006BD5AC
+	// Token: 0x060176A7 RID: 95911 RVA: 0x006E5C8C File Offset: 0x006E3E8C
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -53,7 +53,7 @@ public class ExtendBuffDurationExecution : PeriodExecution
 		this.ExtendMagnitude = parameters.ExtraEffectGrowParameters2;
 	}
 
-	// Token: 0x06019D96 RID: 105878 RVA: 0x006BF4A4 File Offset: 0x006BD6A4
+	// Token: 0x060176A8 RID: 95912 RVA: 0x006E5D84 File Offset: 0x006E3F84
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -88,18 +88,18 @@ public class ExtendBuffDurationExecution : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x0400C338 RID: 49976
+	// Token: 0x0400C6E1 RID: 50913
 	private long[] BuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C339 RID: 49977
+	// Token: 0x0400C6E2 RID: 50914
 	[Nullable(2)]
 	private float[] ExtendRatio;
 
-	// Token: 0x0400C33A RID: 49978
+	// Token: 0x0400C6E3 RID: 50915
 	[Nullable(2)]
 	private float[] ExtendMagnitude;
 
-	// Token: 0x0400C33B RID: 49979
+	// Token: 0x0400C6E4 RID: 50916
 	[Nullable(2)]
 	private float[] DurationLimit;
 }

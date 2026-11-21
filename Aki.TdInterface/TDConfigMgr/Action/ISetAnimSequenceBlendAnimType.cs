@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E0A RID: 7690
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200203D RID: 8253
 	public class ISetAnimSequenceBlendAnimType : IBlendAnimTypeBase
 	{
-		// Token: 0x0600A485 RID: 42117 RVA: 0x00175198 File Offset: 0x00173398
+		// Token: 0x0600AF2D RID: 44845 RVA: 0x0018ABA0 File Offset: 0x00188DA0
 		private ISetAnimSequenceBlendAnimType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A486 RID: 42118 RVA: 0x001751D0 File Offset: 0x001733D0
+		// Token: 0x0600AF2E RID: 44846 RVA: 0x0018ABD8 File Offset: 0x00188DD8
 		public static ISetAnimSequenceBlendAnimType Create([Nullable(2)] ISetAnimSequenceBlendAnimType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A487 RID: 42119 RVA: 0x001751E3 File Offset: 0x001733E3
+		// Token: 0x0600AF2F RID: 44847 RVA: 0x0018ABEB File Offset: 0x00188DEB
 		public static ISetAnimSequenceBlendAnimType CreateFromSetValue([Nullable(2)] ISetAnimSequenceBlendAnimType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A488 RID: 42120 RVA: 0x001751F6 File Offset: 0x001733F6
+		// Token: 0x0600AF30 RID: 44848 RVA: 0x0018ABFE File Offset: 0x00188DFE
 		public new ISetAnimSequenceBlendAnimType_SetValue ToSetValue()
 		{
 			return new ISetAnimSequenceBlendAnimType_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700328A RID: 12938
-		// (get) Token: 0x0600A489 RID: 42121 RVA: 0x00175221 File Offset: 0x00173421
-		// (set) Token: 0x0600A48A RID: 42122 RVA: 0x0017524C File Offset: 0x0017344C
+		// Token: 0x17003549 RID: 13641
+		// (get) Token: 0x0600AF31 RID: 44849 RVA: 0x0018AC29 File Offset: 0x00188E29
+		// (set) Token: 0x0600AF32 RID: 44850 RVA: 0x0018AC54 File Offset: 0x00188E54
 		public override EBlendAnimType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700328B RID: 12939
-		// (get) Token: 0x0600A48B RID: 42123 RVA: 0x0017525A File Offset: 0x0017345A
-		// (set) Token: 0x0600A48C RID: 42124 RVA: 0x00175285 File Offset: 0x00173485
+		// Token: 0x1700354A RID: 13642
+		// (get) Token: 0x0600AF33 RID: 44851 RVA: 0x0018AC62 File Offset: 0x00188E62
+		// (set) Token: 0x0600AF34 RID: 44852 RVA: 0x0018AC8D File Offset: 0x00188E8D
 		public virtual string AnimSequence
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700328C RID: 12940
-		// (get) Token: 0x0600A48D RID: 42125 RVA: 0x00175294 File Offset: 0x00173494
-		// (set) Token: 0x0600A48E RID: 42126 RVA: 0x001752CE File Offset: 0x001734CE
+		// Token: 0x1700354B RID: 13643
+		// (get) Token: 0x0600AF35 RID: 44853 RVA: 0x0018AC9C File Offset: 0x00188E9C
+		// (set) Token: 0x0600AF36 RID: 44854 RVA: 0x0018ACD6 File Offset: 0x00188ED6
 		public virtual float? ProtectTime
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006281 RID: 25217
+		// Token: 0x04006858 RID: 26712
 		[Nullable(2)]
 		protected new ISetAnimSequenceBlendAnimType FbInstance;
 
-		// Token: 0x04006282 RID: 25218
+		// Token: 0x04006859 RID: 26713
 		[Nullable(2)]
 		protected new ISetAnimSequenceBlendAnimType_SetValue PocoInterface;
 	}

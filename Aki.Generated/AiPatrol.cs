@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AEE RID: 2798
+	// Token: 0x02000BC8 RID: 3016
 	public struct AiPatrol : IFlatbufferObject
 	{
-		// Token: 0x17000277 RID: 631
-		// (get) Token: 0x060046BC RID: 18108 RVA: 0x001D3520 File Offset: 0x001D1720
+		// Token: 0x1700028E RID: 654
+		// (get) Token: 0x06004C03 RID: 19459 RVA: 0x001F2F00 File Offset: 0x001F1100
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060046BD RID: 18109 RVA: 0x001D352D File Offset: 0x001D172D
+		// Token: 0x06004C04 RID: 19460 RVA: 0x001F2F0D File Offset: 0x001F110D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060046BE RID: 18110 RVA: 0x001D3534 File Offset: 0x001D1734
+		// Token: 0x06004C05 RID: 19461 RVA: 0x001F2F14 File Offset: 0x001F1114
 		public static AiPatrol GetRootAsAiPatrol(ByteBuffer _bb)
 		{
 			return AiPatrol.GetRootAsAiPatrol(_bb, default(AiPatrol));
 		}
 
-		// Token: 0x060046BF RID: 18111 RVA: 0x001D3550 File Offset: 0x001D1750
+		// Token: 0x06004C06 RID: 19462 RVA: 0x001F2F30 File Offset: 0x001F1130
 		public static AiPatrol GetRootAsAiPatrol(ByteBuffer _bb, AiPatrol obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060046C0 RID: 18112 RVA: 0x001D356D File Offset: 0x001D176D
+		// Token: 0x06004C07 RID: 19463 RVA: 0x001F2F4D File Offset: 0x001F114D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060046C1 RID: 18113 RVA: 0x001D357C File Offset: 0x001D177C
+		// Token: 0x06004C08 RID: 19464 RVA: 0x001F2F5C File Offset: 0x001F115C
 		public AiPatrol __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000278 RID: 632
-		// (get) Token: 0x060046C2 RID: 18114 RVA: 0x001D358C File Offset: 0x001D178C
+		// Token: 0x1700028F RID: 655
+		// (get) Token: 0x06004C09 RID: 19465 RVA: 0x001F2F6C File Offset: 0x001F116C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000279 RID: 633
-		// (get) Token: 0x060046C3 RID: 18115 RVA: 0x001D35C8 File Offset: 0x001D17C8
+		// Token: 0x17000290 RID: 656
+		// (get) Token: 0x06004C0A RID: 19466 RVA: 0x001F2FA8 File Offset: 0x001F11A8
 		public bool CirclePatrol
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700027A RID: 634
-		// (get) Token: 0x060046C4 RID: 18116 RVA: 0x001D3608 File Offset: 0x001D1808
+		// Token: 0x17000291 RID: 657
+		// (get) Token: 0x06004C0B RID: 19467 RVA: 0x001F2FE8 File Offset: 0x001F11E8
 		public string PathSpline
 		{
 			get
@@ -88,20 +88,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060046C5 RID: 18117 RVA: 0x001D363F File Offset: 0x001D183F
+		// Token: 0x06004C0C RID: 19468 RVA: 0x001F301F File Offset: 0x001F121F
 		public Span<byte> GetPathSplineBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060046C6 RID: 18118 RVA: 0x001D364E File Offset: 0x001D184E
+		// Token: 0x06004C0D RID: 19469 RVA: 0x001F302E File Offset: 0x001F122E
 		public byte[] GetPathSplineArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700027B RID: 635
-		// (get) Token: 0x060046C7 RID: 18119 RVA: 0x001D3668 File Offset: 0x001D1868
+		// Token: 0x17000292 RID: 658
+		// (get) Token: 0x06004C0E RID: 19470 RVA: 0x001F3048 File Offset: 0x001F1248
 		public bool IsNavigation
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700027C RID: 636
-		// (get) Token: 0x060046C8 RID: 18120 RVA: 0x001D36A8 File Offset: 0x001D18A8
+		// Token: 0x17000293 RID: 659
+		// (get) Token: 0x06004C0F RID: 19471 RVA: 0x001F3088 File Offset: 0x001F1288
 		public int StartIndex
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700027D RID: 637
-		// (get) Token: 0x060046C9 RID: 18121 RVA: 0x001D36E8 File Offset: 0x001D18E8
+		// Token: 0x17000294 RID: 660
+		// (get) Token: 0x06004C10 RID: 19472 RVA: 0x001F30C8 File Offset: 0x001F12C8
 		public float LimitNpcDistance
 		{
 			get
@@ -141,8 +141,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700027E RID: 638
-		// (get) Token: 0x060046CA RID: 18122 RVA: 0x001D372C File Offset: 0x001D192C
+		// Token: 0x17000295 RID: 661
+		// (get) Token: 0x06004C11 RID: 19473 RVA: 0x001F310C File Offset: 0x001F130C
 		public float TurnSpeed
 		{
 			get
@@ -156,8 +156,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700027F RID: 639
-		// (get) Token: 0x060046CB RID: 18123 RVA: 0x001D3770 File Offset: 0x001D1970
+		// Token: 0x17000296 RID: 662
+		// (get) Token: 0x06004C12 RID: 19474 RVA: 0x001F3150 File Offset: 0x001F1350
 		public bool Loop
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000280 RID: 640
-		// (get) Token: 0x060046CC RID: 18124 RVA: 0x001D37B0 File Offset: 0x001D19B0
+		// Token: 0x17000297 RID: 663
+		// (get) Token: 0x06004C13 RID: 19475 RVA: 0x001F3190 File Offset: 0x001F1390
 		public float EndDistance
 		{
 			get
@@ -182,8 +182,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000281 RID: 641
-		// (get) Token: 0x060046CD RID: 18125 RVA: 0x001D37F4 File Offset: 0x001D19F4
+		// Token: 0x17000298 RID: 664
+		// (get) Token: 0x06004C14 RID: 19476 RVA: 0x001F31D4 File Offset: 0x001F13D4
 		public float Sampling
 		{
 			get
@@ -197,8 +197,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000282 RID: 642
-		// (get) Token: 0x060046CE RID: 18126 RVA: 0x001D3838 File Offset: 0x001D1A38
+		// Token: 0x17000299 RID: 665
+		// (get) Token: 0x06004C15 RID: 19477 RVA: 0x001F3218 File Offset: 0x001F1418
 		public bool ContainZ
 		{
 			get
@@ -208,7 +208,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004ACF RID: 19151
+		// Token: 0x040050A9 RID: 20649
 		private Table __p;
 	}
 }

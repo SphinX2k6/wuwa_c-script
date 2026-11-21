@@ -8,12 +8,12 @@ using CSharpScript.Launcher.Platform.PlatformSdk;
 
 namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 {
-	// Token: 0x020000F8 RID: 248
+	// Token: 0x020000FC RID: 252
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotFixNetworkDetectionModel : Singleton
 	{
-		// Token: 0x0600081C RID: 2076 RVA: 0x0003D13C File Offset: 0x0003B33C
+		// Token: 0x06000850 RID: 2128 RVA: 0x0003F4DC File Offset: 0x0003D6DC
 		public List<ILoginServersData> GetLoginServersByClientRegion()
 		{
 			if (this.LoginServerData != null)
@@ -78,7 +78,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			return this.LoginServerData;
 		}
 
-		// Token: 0x0600081D RID: 2077 RVA: 0x0003D2F4 File Offset: 0x0003B4F4
+		// Token: 0x06000851 RID: 2129 RVA: 0x0003F694 File Offset: 0x0003D894
 		public List<IHotFixNetworkDetectSelectData> GetLoginServersLayoutItemData()
 		{
 			List<ILoginServersData> loginServersByClientRegion = this.GetLoginServersByClientRegion();
@@ -95,7 +95,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			return list;
 		}
 
-		// Token: 0x0600081E RID: 2078 RVA: 0x0003D340 File Offset: 0x0003B540
+		// Token: 0x06000852 RID: 2130 RVA: 0x0003F6E0 File Offset: 0x0003D8E0
 		public List<IHotFixNetworkDetectionLayoutItemData> GetNetworkDetectionLayoutItemData()
 		{
 			List<IHotFixNetworkDetectionLayoutItemData> list = new List<IHotFixNetworkDetectionLayoutItemData>();
@@ -113,26 +113,26 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			return list;
 		}
 
-		// Token: 0x0600081F RID: 2079 RVA: 0x0003D390 File Offset: 0x0003B590
+		// Token: 0x06000853 RID: 2131 RVA: 0x0003F730 File Offset: 0x0003D930
 		public bool NeedInterruptDetectionDoubleCheckTips()
 		{
 			return (double)((float)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() * 0.001f) - this.LastDoubleCheckTime >= 5.0;
 		}
 
-		// Token: 0x06000820 RID: 2080 RVA: 0x0003D3C8 File Offset: 0x0003B5C8
+		// Token: 0x06000854 RID: 2132 RVA: 0x0003F768 File Offset: 0x0003D968
 		public void ConfirmInterruptDetection()
 		{
 			float num = (float)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() * 0.001f;
 			this.LastDoubleCheckTime = (double)num;
 		}
 
-		// Token: 0x06000821 RID: 2081 RVA: 0x0003D3F2 File Offset: 0x0003B5F2
+		// Token: 0x06000855 RID: 2133 RVA: 0x0003F792 File Offset: 0x0003D992
 		public void ResetInterruptDetectionCheckTime()
 		{
 			this.LastDoubleCheckTime = 0.0;
 		}
 
-		// Token: 0x06000822 RID: 2082 RVA: 0x0003D404 File Offset: 0x0003B604
+		// Token: 0x06000856 RID: 2134 RVA: 0x0003F7A4 File Offset: 0x0003D9A4
 		public string GetFinalErrorCodeString(IReadOnlyList<IHotFixNetworkDetectionLayoutItemData> datas)
 		{
 			List<string> list = new List<string>();
@@ -147,8 +147,8 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			return string.Join("\n", list);
 		}
 
-		// Token: 0x170000E6 RID: 230
-		// (get) Token: 0x06000823 RID: 2083 RVA: 0x0003D461 File Offset: 0x0003B661
+		// Token: 0x170000EC RID: 236
+		// (get) Token: 0x06000857 RID: 2135 RVA: 0x0003F801 File Offset: 0x0003DA01
 		public static HotFixNetworkDetectionModel Instance
 		{
 			get
@@ -162,12 +162,12 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			}
 		}
 
-		// Token: 0x06000824 RID: 2084 RVA: 0x0003D484 File Offset: 0x0003B684
+		// Token: 0x06000858 RID: 2136 RVA: 0x0003F824 File Offset: 0x0003DA24
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000825 RID: 2085 RVA: 0x0003D486 File Offset: 0x0003B686
+		// Token: 0x06000859 RID: 2137 RVA: 0x0003F826 File Offset: 0x0003DA26
 		public static void ResetStaticDefaultValue()
 		{
 			HotFixNetworkDetectionModel instance = HotFixNetworkDetectionModel._instance;
@@ -178,16 +178,16 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			HotFixNetworkDetectionModel._instance = null;
 		}
 
-		// Token: 0x06000826 RID: 2086 RVA: 0x0003D49F File Offset: 0x0003B69F
+		// Token: 0x0600085A RID: 2138 RVA: 0x0003F83F File Offset: 0x0003DA3F
 		static HotFixNetworkDetectionModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HotFixNetworkDetectionModel.CreateStaticDefaultValue), new Action(HotFixNetworkDetectionModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040004A1 RID: 1185
+		// Token: 0x040004DC RID: 1244
 		private const string SEASERVER = "SEA";
 
-		// Token: 0x040004A2 RID: 1186
+		// Token: 0x040004DD RID: 1245
 		[Nullable(new byte[]
 		{
 			2,
@@ -195,18 +195,18 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 		})]
 		private List<ILoginServersData> LoginServerData;
 
-		// Token: 0x040004A3 RID: 1187
+		// Token: 0x040004DE RID: 1246
 		[Nullable(2)]
 		public ILoginServersData CurrentUiSelectSeverData;
 
-		// Token: 0x040004A4 RID: 1188
+		// Token: 0x040004DF RID: 1247
 		[Nullable(2)]
 		public ILoginServersData CurrentSelectServerData;
 
-		// Token: 0x040004A5 RID: 1189
+		// Token: 0x040004E0 RID: 1248
 		private double LastDoubleCheckTime;
 
-		// Token: 0x040004A6 RID: 1190
+		// Token: 0x040004E1 RID: 1249
 		[Nullable(2)]
 		private static HotFixNetworkDetectionModel _instance;
 	}

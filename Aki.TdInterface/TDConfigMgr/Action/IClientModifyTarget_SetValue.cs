@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018C5 RID: 6341
+	// Token: 0x02001A56 RID: 6742
 	public class IClientModifyTarget_SetValue
 	{
-		// Token: 0x0400557E RID: 21886
+		// Token: 0x040059D8 RID: 23000
 		public EClientModifyTargetType Type;
 	}
 }

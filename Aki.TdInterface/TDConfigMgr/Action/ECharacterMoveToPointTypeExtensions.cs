@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022D9 RID: 8921
+	// Token: 0x02002548 RID: 9544
 	public static class ECharacterMoveToPointTypeExtensions
 	{
-		// Token: 0x0600C34F RID: 49999 RVA: 0x001C8A34 File Offset: 0x001C6C34
+		// Token: 0x0600CF1E RID: 53022 RVA: 0x001E083C File Offset: 0x001DEA3C
 		public static string ToEnumString(this ECharacterMoveToPointType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C350 RID: 50000 RVA: 0x001C8A6C File Offset: 0x001C6C6C
+		// Token: 0x0600CF1F RID: 53023 RVA: 0x001E0874 File Offset: 0x001DEA74
 		public static ECharacterMoveToPointType FromString(string name)
 		{
 			ECharacterMoveToPointType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C351 RID: 50001 RVA: 0x001C8A95 File Offset: 0x001C6C95
+		// Token: 0x0600CF20 RID: 53024 RVA: 0x001E089D File Offset: 0x001DEA9D
 		public static bool TryFromString(string name, out ECharacterMoveToPointType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C352 RID: 50002 RVA: 0x001C8ACE File Offset: 0x001C6CCE
+		// Token: 0x0600CF21 RID: 53025 RVA: 0x001E08D6 File Offset: 0x001DEAD6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C353 RID: 50003 RVA: 0x001C8AE6 File Offset: 0x001C6CE6
+		// Token: 0x0600CF22 RID: 53026 RVA: 0x001E08EE File Offset: 0x001DEAEE
 		public static ECharacterMoveToPointType[] GetValues()
 		{
 			return new ECharacterMoveToPointType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C354 RID: 50004 RVA: 0x001C8AF2 File Offset: 0x001C6CF2
+		// Token: 0x0600CF23 RID: 53027 RVA: 0x001E08FA File Offset: 0x001DEAFA
 		public static string[] GetNames()
 		{
 			return new string[]

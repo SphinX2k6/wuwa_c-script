@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AAF RID: 19119
+	// Token: 0x02004F7E RID: 20350
 	public class ICheckJigsawInfoConditionT
 	{
-		// Token: 0x17008A95 RID: 35477
-		// (get) Token: 0x0601E028 RID: 122920 RVA: 0x00436663 File Offset: 0x00434863
-		// (set) Token: 0x0601E029 RID: 122921 RVA: 0x0043666B File Offset: 0x0043486B
+		// Token: 0x17009182 RID: 37250
+		// (get) Token: 0x0601FB11 RID: 129809 RVA: 0x00467E83 File Offset: 0x00466083
+		// (set) Token: 0x0601FB12 RID: 129810 RVA: 0x00467E8B File Offset: 0x0046608B
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008A96 RID: 35478
-		// (get) Token: 0x0601E02A RID: 122922 RVA: 0x00436674 File Offset: 0x00434874
-		// (set) Token: 0x0601E02B RID: 122923 RVA: 0x0043667C File Offset: 0x0043487C
+		// Token: 0x17009183 RID: 37251
+		// (get) Token: 0x0601FB13 RID: 129811 RVA: 0x00467E94 File Offset: 0x00466094
+		// (set) Token: 0x0601FB14 RID: 129812 RVA: 0x00467E9C File Offset: 0x0046609C
 		public TCheckJigsawInfoUnion JigsawCondition { get; set; }
 
-		// Token: 0x0601E02C RID: 122924 RVA: 0x00436685 File Offset: 0x00434885
+		// Token: 0x0601FB15 RID: 129813 RVA: 0x00467EA5 File Offset: 0x004660A5
 		public ICheckJigsawInfoConditionT()
 		{
 			this.Type = ECondition.CompareVar;

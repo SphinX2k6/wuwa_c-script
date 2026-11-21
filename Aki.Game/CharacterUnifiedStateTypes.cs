@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EEE RID: 12014
+// Token: 0x02002441 RID: 9281
 public static class CharacterUnifiedStateTypes
 {
-	// Token: 0x06019AD6 RID: 105174 RVA: 0x006AE0E4 File Offset: 0x006AC2E4
+	// Token: 0x060173E1 RID: 95201 RVA: 0x006D43A4 File Offset: 0x006D25A4
 	// Note: this type is marked as 'beforefieldinit'.
 	static CharacterUnifiedStateTypes()
 	{
@@ -101,10 +101,15 @@ public static class CharacterUnifiedStateTypes
 			ECharMoveState.Drop,
 			ECharMoveState.FloatingGround
 		};
+		dictionary[ECharPositionState.FlowerAllTerrain] = new HashSet<ECharMoveState>
+		{
+			ECharMoveState.Other,
+			ECharMoveState.FlowerFlying
+		};
 		CharacterUnifiedStateTypes.LegalMoveStates = dictionary;
 	}
 
-	// Token: 0x0400C091 RID: 49297
+	// Token: 0x0400C432 RID: 50226
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<ECharPositionState, HashSet<ECharMoveState>> LegalMoveStates;

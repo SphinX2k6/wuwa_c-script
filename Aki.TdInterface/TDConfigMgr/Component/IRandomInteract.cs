@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000650 RID: 1616
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006ED RID: 1773
 	public class IRandomInteract
 	{
-		// Token: 0x06002294 RID: 8852 RVA: 0x0005F0DC File Offset: 0x0005D2DC
+		// Token: 0x0600259A RID: 9626 RVA: 0x00065DF0 File Offset: 0x00063FF0
 		private IRandomInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002295 RID: 8853 RVA: 0x0005F114 File Offset: 0x0005D314
+		// Token: 0x0600259B RID: 9627 RVA: 0x00065E28 File Offset: 0x00064028
 		public static IRandomInteract Create([Nullable(2)] IRandomInteract instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002296 RID: 8854 RVA: 0x0005F127 File Offset: 0x0005D327
+		// Token: 0x0600259C RID: 9628 RVA: 0x00065E3B File Offset: 0x0006403B
 		public static IRandomInteract CreateFromSetValue([Nullable(2)] IRandomInteract_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002297 RID: 8855 RVA: 0x0005F13A File Offset: 0x0005D33A
+		// Token: 0x0600259D RID: 9629 RVA: 0x00065E4E File Offset: 0x0006404E
 		public IRandomInteract_SetValue ToSetValue()
 		{
 			return new IRandomInteract_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000931 RID: 2353
-		// (get) Token: 0x06002298 RID: 8856 RVA: 0x0005F159 File Offset: 0x0005D359
-		// (set) Token: 0x06002299 RID: 8857 RVA: 0x0005F184 File Offset: 0x0005D384
+		// Token: 0x170009E8 RID: 2536
+		// (get) Token: 0x0600259E RID: 9630 RVA: 0x00065E6D File Offset: 0x0006406D
+		// (set) Token: 0x0600259F RID: 9631 RVA: 0x00065E98 File Offset: 0x00064098
 		public virtual int RandomCount
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000932 RID: 2354
-		// (get) Token: 0x0600229A RID: 8858 RVA: 0x0005F194 File Offset: 0x0005D394
-		// (set) Token: 0x0600229B RID: 8859 RVA: 0x0005F227 File Offset: 0x0005D427
+		// Token: 0x170009E9 RID: 2537
+		// (get) Token: 0x060025A0 RID: 9632 RVA: 0x00065EA8 File Offset: 0x000640A8
+		// (set) Token: 0x060025A1 RID: 9633 RVA: 0x00065F3B File Offset: 0x0006413B
 		public virtual List<IRandomInteractOption> Options
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001805 RID: 6149
+		// Token: 0x040019F7 RID: 6647
 		[Nullable(2)]
 		protected IRandomInteract FbInstance;
 
-		// Token: 0x04001806 RID: 6150
+		// Token: 0x040019F8 RID: 6648
 		[Nullable(2)]
 		protected IRandomInteract_SetValue PocoInterface;
 
-		// Token: 0x04001807 RID: 6151
+		// Token: 0x040019F9 RID: 6649
 		private List<IRandomInteractOption> _OptionsCache;
 
-		// Token: 0x04001808 RID: 6152
+		// Token: 0x040019FA RID: 6650
 		private bool _OptionsInited;
 	}
 }

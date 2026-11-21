@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BA7 RID: 19367
+	// Token: 0x02003B51 RID: 15185
 	public class SkipTaskCommonView : SkipTask
 	{
-		// Token: 0x060322CD RID: 205517 RVA: 0x00BA8754 File Offset: 0x00BA6954
+		// Token: 0x0602705E RID: 159838 RVA: 0x00AEC9C8 File Offset: 0x00AEABC8
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

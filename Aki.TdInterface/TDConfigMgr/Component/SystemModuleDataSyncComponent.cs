@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008B3 RID: 2227
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000956 RID: 2390
 	public class SystemModuleDataSyncComponent : IComponentBase
 	{
-		// Token: 0x060031F5 RID: 12789 RVA: 0x00080204 File Offset: 0x0007E404
+		// Token: 0x06003531 RID: 13617 RVA: 0x000876EC File Offset: 0x000858EC
 		private SystemModuleDataSyncComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060031F6 RID: 12790 RVA: 0x0008023C File Offset: 0x0007E43C
+		// Token: 0x06003532 RID: 13618 RVA: 0x00087724 File Offset: 0x00085924
 		public static SystemModuleDataSyncComponent Create([Nullable(2)] SystemModuleDataSyncComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060031F7 RID: 12791 RVA: 0x0008024F File Offset: 0x0007E44F
+		// Token: 0x06003533 RID: 13619 RVA: 0x00087737 File Offset: 0x00085937
 		public static SystemModuleDataSyncComponent CreateFromSetValue([Nullable(2)] SystemModuleDataSyncComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060031F8 RID: 12792 RVA: 0x00080262 File Offset: 0x0007E462
+		// Token: 0x06003534 RID: 13620 RVA: 0x0008774A File Offset: 0x0008594A
 		public new SystemModuleDataSyncComponent_SetValue ToSetValue()
 		{
 			return new SystemModuleDataSyncComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D51 RID: 3409
-		// (get) Token: 0x060031F9 RID: 12793 RVA: 0x00080290 File Offset: 0x0007E490
-		// (set) Token: 0x060031FA RID: 12794 RVA: 0x000802CA File Offset: 0x0007E4CA
+		// Token: 0x17000E1A RID: 3610
+		// (get) Token: 0x06003535 RID: 13621 RVA: 0x00087778 File Offset: 0x00085978
+		// (set) Token: 0x06003536 RID: 13622 RVA: 0x000877B2 File Offset: 0x000859B2
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D52 RID: 3410
-		// (get) Token: 0x060031FB RID: 12795 RVA: 0x000802D8 File Offset: 0x0007E4D8
-		// (set) Token: 0x060031FC RID: 12796 RVA: 0x00080302 File Offset: 0x0007E502
+		// Token: 0x17000E1B RID: 3611
+		// (get) Token: 0x06003537 RID: 13623 RVA: 0x000877C0 File Offset: 0x000859C0
+		// (set) Token: 0x06003538 RID: 13624 RVA: 0x000877EA File Offset: 0x000859EA
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D53 RID: 3411
-		// (get) Token: 0x060031FD RID: 12797 RVA: 0x00080310 File Offset: 0x0007E510
-		// (set) Token: 0x060031FE RID: 12798 RVA: 0x00080371 File Offset: 0x0007E571
+		// Token: 0x17000E1C RID: 3612
+		// (get) Token: 0x06003539 RID: 13625 RVA: 0x000877F8 File Offset: 0x000859F8
+		// (set) Token: 0x0600353A RID: 13626 RVA: 0x00087859 File Offset: 0x00085A59
 		public virtual ISystemModuleDataSyncMotorRacing SystemModuleData
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040020BF RID: 8383
+		// Token: 0x040022D1 RID: 8913
 		[Nullable(2)]
 		protected new SystemModuleDataSyncComponent FbInstance;
 
-		// Token: 0x040020C0 RID: 8384
+		// Token: 0x040022D2 RID: 8914
 		[Nullable(2)]
 		protected new SystemModuleDataSyncComponent_SetValue PocoInterface;
 
-		// Token: 0x040020C1 RID: 8385
+		// Token: 0x040022D3 RID: 8915
 		private ISystemModuleDataSyncMotorRacing _SystemModuleDataCache;
 
-		// Token: 0x040020C2 RID: 8386
+		// Token: 0x040022D4 RID: 8916
 		private bool _SystemModuleDataInited;
 	}
 }

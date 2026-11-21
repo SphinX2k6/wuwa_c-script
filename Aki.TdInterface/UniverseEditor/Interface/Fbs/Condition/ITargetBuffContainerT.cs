@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CE6 RID: 19686
+	// Token: 0x020051E2 RID: 20962
 	public class ITargetBuffContainerT
 	{
-		// Token: 0x17008EE1 RID: 36577
-		// (get) Token: 0x0601F3F0 RID: 127984 RVA: 0x0045C5D2 File Offset: 0x0045A7D2
-		// (set) Token: 0x0601F3F1 RID: 127985 RVA: 0x0045C5DA File Offset: 0x0045A7DA
+		// Token: 0x1700961A RID: 38426
+		// (get) Token: 0x06021035 RID: 135221 RVA: 0x00490522 File Offset: 0x0048E722
+		// (set) Token: 0x06021036 RID: 135222 RVA: 0x0049052A File Offset: 0x0048E72A
 		public ETargetBuffContainer Type { get; set; }
 
-		// Token: 0x0601F3F2 RID: 127986 RVA: 0x0045C5E3 File Offset: 0x0045A7E3
+		// Token: 0x06021037 RID: 135223 RVA: 0x00490533 File Offset: 0x0048E733
 		public ITargetBuffContainerT()
 		{
 			this.Type = ETargetBuffContainer.Monster;

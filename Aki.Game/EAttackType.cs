@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002EA3 RID: 11939
+// Token: 0x020023F6 RID: 9206
 public enum EAttackType
 {
-	// Token: 0x0400BE3F RID: 48703
+	// Token: 0x0400C1DA RID: 49626
 	Auto,
-	// Token: 0x0400BE40 RID: 48704
+	// Token: 0x0400C1DB RID: 49627
 	Cast,
-	// Token: 0x0400BE41 RID: 48705
+	// Token: 0x0400C1DC RID: 49628
 	Ultra,
-	// Token: 0x0400BE42 RID: 48706
+	// Token: 0x0400C1DD RID: 49629
 	QTE,
-	// Token: 0x0400BE43 RID: 48707
+	// Token: 0x0400C1DE RID: 49630
 	NormalSkill,
-	// Token: 0x0400BE44 RID: 48708
+	// Token: 0x0400C1DF RID: 49631
 	PhantomSkill
 }

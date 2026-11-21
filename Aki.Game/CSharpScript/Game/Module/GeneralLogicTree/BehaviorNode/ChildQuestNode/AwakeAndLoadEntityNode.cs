@@ -6,15 +6,15 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059C7 RID: 22983
+	// Token: 0x020049A0 RID: 18848
 	public class AwakeAndLoadEntityNode : TickBehaviorNode
 	{
-		// Token: 0x0603A438 RID: 238648 RVA: 0x00DDAB27 File Offset: 0x00DD8D27
+		// Token: 0x0602F35F RID: 193375 RVA: 0x00D2A3AF File Offset: 0x00D285AF
 		public AwakeAndLoadEntityNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A439 RID: 238649 RVA: 0x00DDAB30 File Offset: 0x00DD8D30
+		// Token: 0x0602F360 RID: 193376 RVA: 0x00D2A3B8 File Offset: 0x00D285B8
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A43A RID: 238650 RVA: 0x00DDAB94 File Offset: 0x00DD8D94
+		// Token: 0x0602F361 RID: 193377 RVA: 0x00D2A41C File Offset: 0x00D2861C
 		protected unsafe override void OnTick(float _)
 		{
 			if (this.SubmitState != 0)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.Submit();
 		}
 
-		// Token: 0x0603A43B RID: 238651 RVA: 0x00DDAD50 File Offset: 0x00DD8F50
+		// Token: 0x0602F362 RID: 193378 RVA: 0x00D2A5D8 File Offset: 0x00D287D8
 		private void Submit()
 		{
 			if (this.Blackboard.ContainTag(EBehaviorTreeTag.RollbackWaiting))
@@ -113,38 +113,38 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			GeneralLogicTreeController.Instance.RequestSubmitAwakeAndLoadEntityNode(this.Context, new Action<bool>(this.OnAfterSubmitNode));
 		}
 
-		// Token: 0x0603A43C RID: 238652 RVA: 0x00DDAD9C File Offset: 0x00DD8F9C
+		// Token: 0x0602F363 RID: 193379 RVA: 0x00D2A624 File Offset: 0x00D28824
 		private void OnBeforeSubmitNode()
 		{
 			this.SubmitState = 1;
 		}
 
-		// Token: 0x0603A43D RID: 238653 RVA: 0x00DDADA5 File Offset: 0x00DD8FA5
+		// Token: 0x0602F364 RID: 193380 RVA: 0x00D2A62D File Offset: 0x00D2882D
 		private void OnAfterSubmitNode(bool submitSuccess)
 		{
 			this.SubmitState = (submitSuccess ? 2 : 0);
 		}
 
-		// Token: 0x0401E60F RID: 124431
+		// Token: 0x040190AE RID: 102574
 		[Nullable(2)]
 		private List<int> EntityIds;
 
-		// Token: 0x0401E610 RID: 124432
+		// Token: 0x040190AF RID: 102575
 		private int SubmitState;
 
-		// Token: 0x0401E611 RID: 124433
+		// Token: 0x040190B0 RID: 102576
 		private bool NeedCheckVisible;
 
-		// Token: 0x0200BC3A RID: 48186
+		// Token: 0x0200A645 RID: 42565
 		private class ESubmitState
 		{
-			// Token: 0x04038CB3 RID: 232627
+			// Token: 0x04033682 RID: 210562
 			public const int BeforeSubmit = 0;
 
-			// Token: 0x04038CB4 RID: 232628
+			// Token: 0x04033683 RID: 210563
 			public const int Submitting = 1;
 
-			// Token: 0x04038CB5 RID: 232629
+			// Token: 0x04033684 RID: 210564
 			public const int Submitted = 2;
 		}
 	}

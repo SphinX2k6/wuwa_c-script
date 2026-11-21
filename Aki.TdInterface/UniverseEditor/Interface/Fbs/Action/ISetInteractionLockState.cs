@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007004 RID: 28676
+	// Token: 0x020077CD RID: 30669
 	public struct ISetInteractionLockState : IFlatbufferObject
 	{
-		// Token: 0x1700D500 RID: 54528
-		// (get) Token: 0x06032B9D RID: 207773 RVA: 0x006D83C8 File Offset: 0x006D65C8
+		// Token: 0x1700E0D4 RID: 57556
+		// (get) Token: 0x06035E03 RID: 220675 RVA: 0x0073800C File Offset: 0x0073620C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032B9E RID: 207774 RVA: 0x006D83D5 File Offset: 0x006D65D5
+		// Token: 0x06035E04 RID: 220676 RVA: 0x00738019 File Offset: 0x00736219
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032B9F RID: 207775 RVA: 0x006D83DC File Offset: 0x006D65DC
+		// Token: 0x06035E05 RID: 220677 RVA: 0x00738020 File Offset: 0x00736220
 		public static ISetInteractionLockState GetRootAsISetInteractionLockState(ByteBuffer _bb)
 		{
 			return ISetInteractionLockState.GetRootAsISetInteractionLockState(_bb, default(ISetInteractionLockState));
 		}
 
-		// Token: 0x06032BA0 RID: 207776 RVA: 0x006D83F8 File Offset: 0x006D65F8
+		// Token: 0x06035E06 RID: 220678 RVA: 0x0073803C File Offset: 0x0073623C
 		public static ISetInteractionLockState GetRootAsISetInteractionLockState(ByteBuffer _bb, ISetInteractionLockState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032BA1 RID: 207777 RVA: 0x006D8415 File Offset: 0x006D6615
+		// Token: 0x06035E07 RID: 220679 RVA: 0x00738059 File Offset: 0x00736259
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032BA2 RID: 207778 RVA: 0x006D8424 File Offset: 0x006D6624
+		// Token: 0x06035E08 RID: 220680 RVA: 0x00738068 File Offset: 0x00736268
 		public ISetInteractionLockState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D501 RID: 54529
-		// (get) Token: 0x06032BA3 RID: 207779 RVA: 0x006D8434 File Offset: 0x006D6634
+		// Token: 0x1700E0D5 RID: 57557
+		// (get) Token: 0x06035E09 RID: 220681 RVA: 0x00738078 File Offset: 0x00736278
 		public bool IsLock
 		{
 			get
@@ -58,7 +58,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032BA4 RID: 207780 RVA: 0x006D8473 File Offset: 0x006D6673
+		// Token: 0x06035E0A RID: 220682 RVA: 0x007380B7 File Offset: 0x007362B7
 		public static Offset<ISetInteractionLockState> CreateISetInteractionLockState(FlatBufferBuilder builder, bool IsLock = false)
 		{
 			builder.StartTable(1);
@@ -66,25 +66,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetInteractionLockState.EndISetInteractionLockState(builder);
 		}
 
-		// Token: 0x06032BA5 RID: 207781 RVA: 0x006D8489 File Offset: 0x006D6689
+		// Token: 0x06035E0B RID: 220683 RVA: 0x007380CD File Offset: 0x007362CD
 		public static void StartISetInteractionLockState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06032BA6 RID: 207782 RVA: 0x006D8492 File Offset: 0x006D6692
+		// Token: 0x06035E0C RID: 220684 RVA: 0x007380D6 File Offset: 0x007362D6
 		public static void AddIsLock(FlatBufferBuilder builder, bool isLock)
 		{
 			builder.AddBool(0, isLock, false);
 		}
 
-		// Token: 0x06032BA7 RID: 207783 RVA: 0x006D849D File Offset: 0x006D669D
+		// Token: 0x06035E0D RID: 220685 RVA: 0x007380E1 File Offset: 0x007362E1
 		public static Offset<ISetInteractionLockState> EndISetInteractionLockState(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetInteractionLockState>(builder.EndTable());
 		}
 
-		// Token: 0x06032BA8 RID: 207784 RVA: 0x006D84AC File Offset: 0x006D66AC
+		// Token: 0x06035E0E RID: 220686 RVA: 0x007380F0 File Offset: 0x007362F0
 		public ISetInteractionLockStateT UnPack()
 		{
 			ISetInteractionLockStateT setInteractionLockStateT = new ISetInteractionLockStateT();
@@ -92,13 +92,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setInteractionLockStateT;
 		}
 
-		// Token: 0x06032BA9 RID: 207785 RVA: 0x006D84C7 File Offset: 0x006D66C7
+		// Token: 0x06035E0F RID: 220687 RVA: 0x0073810B File Offset: 0x0073630B
 		public void UnPackTo(ISetInteractionLockStateT _o)
 		{
 			_o.IsLock = this.IsLock;
 		}
 
-		// Token: 0x06032BAA RID: 207786 RVA: 0x006D84D8 File Offset: 0x006D66D8
+		// Token: 0x06035E10 RID: 220688 RVA: 0x0073811C File Offset: 0x0073631C
 		public static Offset<ISetInteractionLockState> Pack(FlatBufferBuilder builder, ISetInteractionLockStateT _o)
 		{
 			if (_o == null)
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetInteractionLockState.CreateISetInteractionLockState(builder, _o.IsLock);
 		}
 
-		// Token: 0x04011A29 RID: 72233
+		// Token: 0x04012A0E RID: 76302
 		private Table __p;
 	}
 }

@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.PayShop;
 using CSharpScript.Game.Module.Skin;
 
-// Token: 0x02002A23 RID: 10787
+// Token: 0x02001F9E RID: 8094
 [NullableContext(1)]
 [Nullable(0)]
 public class SkinBuyDetailViewData
 {
-	// Token: 0x0601669C RID: 91804 RVA: 0x005AAE4B File Offset: 0x005A904B
+	// Token: 0x060140A2 RID: 82082 RVA: 0x005D5E27 File Offset: 0x005D4027
 	public static SkinBuyDetailViewData Create(List<ShopSkinData> goodsData)
 	{
 		SkinBuyDetailViewData skinBuyDetailViewData = new SkinBuyDetailViewData();
@@ -18,7 +18,7 @@ public class SkinBuyDetailViewData
 		return skinBuyDetailViewData;
 	}
 
-	// Token: 0x0601669D RID: 91805 RVA: 0x005AAE59 File Offset: 0x005A9059
+	// Token: 0x060140A3 RID: 82083 RVA: 0x005D5E35 File Offset: 0x005D4035
 	public static SkinBuyDetailViewData CreateByRoleSkinData(List<RoleSkinData> skinData)
 	{
 		SkinBuyDetailViewData skinBuyDetailViewData = new SkinBuyDetailViewData();
@@ -26,43 +26,43 @@ public class SkinBuyDetailViewData
 		return skinBuyDetailViewData;
 	}
 
-	// Token: 0x0601669E RID: 91806 RVA: 0x005AAE67 File Offset: 0x005A9067
+	// Token: 0x060140A4 RID: 82084 RVA: 0x005D5E43 File Offset: 0x005D4043
 	public void SetPreviewTitle(string title)
 	{
 		this.PreviewTitle = title;
 	}
 
-	// Token: 0x0601669F RID: 91807 RVA: 0x005AAE70 File Offset: 0x005A9070
+	// Token: 0x060140A5 RID: 82085 RVA: 0x005D5E4C File Offset: 0x005D404C
 	public string GetPreviewTitle()
 	{
 		return this.PreviewTitle;
 	}
 
-	// Token: 0x060166A0 RID: 91808 RVA: 0x005AAE78 File Offset: 0x005A9078
+	// Token: 0x060140A6 RID: 82086 RVA: 0x005D5E54 File Offset: 0x005D4054
 	public void SetIsActivityReward(bool value)
 	{
 		this.IsActivityReward = value;
 	}
 
-	// Token: 0x060166A1 RID: 91809 RVA: 0x005AAE81 File Offset: 0x005A9081
+	// Token: 0x060140A7 RID: 82087 RVA: 0x005D5E5D File Offset: 0x005D405D
 	public bool GetIsActivityReward()
 	{
 		return this.IsActivityReward;
 	}
 
-	// Token: 0x060166A2 RID: 91810 RVA: 0x005AAE89 File Offset: 0x005A9089
+	// Token: 0x060140A8 RID: 82088 RVA: 0x005D5E65 File Offset: 0x005D4065
 	public void SetIndex(int index)
 	{
 		this.CurrentIndex = index;
 	}
 
-	// Token: 0x060166A3 RID: 91811 RVA: 0x005AAE92 File Offset: 0x005A9092
+	// Token: 0x060140A9 RID: 82089 RVA: 0x005D5E6E File Offset: 0x005D406E
 	public int GetIndex()
 	{
 		return this.CurrentIndex;
 	}
 
-	// Token: 0x060166A4 RID: 91812 RVA: 0x005AAE9C File Offset: 0x005A909C
+	// Token: 0x060140AA RID: 82090 RVA: 0x005D5E78 File Offset: 0x005D4078
 	public TItem[] GetConnectOtherReward()
 	{
 		List<TItem> list = new List<TItem>();
@@ -72,13 +72,13 @@ public class SkinBuyDetailViewData
 		return list.ToArray();
 	}
 
-	// Token: 0x060166A5 RID: 91813 RVA: 0x005AAEEF File Offset: 0x005A90EF
+	// Token: 0x060140AB RID: 82091 RVA: 0x005D5ECB File Offset: 0x005D40CB
 	public void InitDataByRoleSkinData(List<RoleSkinData> skinData)
 	{
 		this.AllSkinData = skinData;
 	}
 
-	// Token: 0x060166A6 RID: 91814 RVA: 0x005AAEF8 File Offset: 0x005A90F8
+	// Token: 0x060140AC RID: 82092 RVA: 0x005D5ED4 File Offset: 0x005D40D4
 	public void InitData(List<ShopSkinData> goodsData)
 	{
 		this.AllGoodsData = goodsData;
@@ -90,13 +90,13 @@ public class SkinBuyDetailViewData
 		}
 	}
 
-	// Token: 0x060166A7 RID: 91815 RVA: 0x005AAF70 File Offset: 0x005A9170
+	// Token: 0x060140AD RID: 82093 RVA: 0x005D5F4C File Offset: 0x005D414C
 	public bool CheckIfHaveMutiGood()
 	{
 		return this.AllGoodsData.Count > 1;
 	}
 
-	// Token: 0x060166A8 RID: 91816 RVA: 0x005AAF80 File Offset: 0x005A9180
+	// Token: 0x060140AE RID: 82094 RVA: 0x005D5F5C File Offset: 0x005D415C
 	[NullableContext(2)]
 	public ShopSkinData GetCurrentGoodsData()
 	{
@@ -107,7 +107,7 @@ public class SkinBuyDetailViewData
 		return this.AllGoodsData[this.CurrentIndex];
 	}
 
-	// Token: 0x060166A9 RID: 91817 RVA: 0x005AAFA2 File Offset: 0x005A91A2
+	// Token: 0x060140AF RID: 82095 RVA: 0x005D5F7E File Offset: 0x005D417E
 	public void SwitchToNextGoods()
 	{
 		this.CurrentIndex++;
@@ -117,7 +117,7 @@ public class SkinBuyDetailViewData
 		}
 	}
 
-	// Token: 0x060166AA RID: 91818 RVA: 0x005AAFCE File Offset: 0x005A91CE
+	// Token: 0x060140B0 RID: 82096 RVA: 0x005D5FAA File Offset: 0x005D41AA
 	public void SwitchToPreGoods()
 	{
 		this.CurrentIndex--;
@@ -127,13 +127,13 @@ public class SkinBuyDetailViewData
 		}
 	}
 
-	// Token: 0x060166AB RID: 91819 RVA: 0x005AAFFA File Offset: 0x005A91FA
+	// Token: 0x060140B1 RID: 82097 RVA: 0x005D5FD6 File Offset: 0x005D41D6
 	public RoleSkinData GetCurrentSkinData()
 	{
 		return this.AllSkinData[this.CurrentIndex];
 	}
 
-	// Token: 0x060166AC RID: 91820 RVA: 0x005AB00D File Offset: 0x005A920D
+	// Token: 0x060140B2 RID: 82098 RVA: 0x005D5FE9 File Offset: 0x005D41E9
 	public void SwitchToNextSkinData()
 	{
 		if (this.AllSkinData.Count <= 1)
@@ -143,13 +143,13 @@ public class SkinBuyDetailViewData
 		this.CurrentIndex = (this.CurrentIndex + 1) % this.AllSkinData.Count;
 	}
 
-	// Token: 0x060166AD RID: 91821 RVA: 0x005AB038 File Offset: 0x005A9238
+	// Token: 0x060140B3 RID: 82099 RVA: 0x005D6014 File Offset: 0x005D4214
 	public bool GetIfNeedShowSwitchItem()
 	{
 		return this.GetCurrentSkinData().GetSuitWeaponSkinId() > 0;
 	}
 
-	// Token: 0x060166AE RID: 91822 RVA: 0x005AB048 File Offset: 0x005A9248
+	// Token: 0x060140B4 RID: 82100 RVA: 0x005D6024 File Offset: 0x005D4224
 	public string GetDiscountText()
 	{
 		if (this.GetCurrentGoodsData() == null)
@@ -159,7 +159,7 @@ public class SkinBuyDetailViewData
 		return this.GetCurrentGoodsData().GetDiscountText();
 	}
 
-	// Token: 0x060166AF RID: 91823 RVA: 0x005AB063 File Offset: 0x005A9263
+	// Token: 0x060140B5 RID: 82101 RVA: 0x005D603F File Offset: 0x005D423F
 	[NullableContext(2)]
 	public object GetDiscountTimeData()
 	{
@@ -170,13 +170,13 @@ public class SkinBuyDetailViewData
 		return this.GetCurrentGoodsData().GetDiscountTimeData();
 	}
 
-	// Token: 0x060166B0 RID: 91824 RVA: 0x005AB07A File Offset: 0x005A927A
+	// Token: 0x060140B6 RID: 82102 RVA: 0x005D6056 File Offset: 0x005D4256
 	public bool GetIfDirect()
 	{
 		return this.GetCurrentGoodsData() != null && this.GetCurrentGoodsData().GetIfDirect();
 	}
 
-	// Token: 0x060166B1 RID: 91825 RVA: 0x005AB091 File Offset: 0x005A9291
+	// Token: 0x060140B7 RID: 82103 RVA: 0x005D606D File Offset: 0x005D426D
 	[NullableContext(2)]
 	public IPriceData GetPriceData()
 	{
@@ -187,7 +187,7 @@ public class SkinBuyDetailViewData
 		return this.GetCurrentGoodsData().GetPriceData();
 	}
 
-	// Token: 0x060166B2 RID: 91826 RVA: 0x005AB0A8 File Offset: 0x005A92A8
+	// Token: 0x060140B8 RID: 82104 RVA: 0x005D6084 File Offset: 0x005D4284
 	public string GetDirectPriceText()
 	{
 		if (this.GetCurrentGoodsData() == null)
@@ -197,24 +197,24 @@ public class SkinBuyDetailViewData
 		return this.GetCurrentGoodsData().GetDirectPriceText();
 	}
 
-	// Token: 0x060166B3 RID: 91827 RVA: 0x005AB0C3 File Offset: 0x005A92C3
+	// Token: 0x060140B9 RID: 82105 RVA: 0x005D609F File Offset: 0x005D429F
 	public bool GetIfHaveSkinNeedRole()
 	{
 		return this.GetCurrentSkinData().GetIfHaveRole();
 	}
 
-	// Token: 0x0400A6A1 RID: 42657
+	// Token: 0x0400AA8A RID: 43658
 	private List<RoleSkinData> AllSkinData = new List<RoleSkinData>();
 
-	// Token: 0x0400A6A2 RID: 42658
+	// Token: 0x0400AA8B RID: 43659
 	private List<ShopSkinData> AllGoodsData = new List<ShopSkinData>();
 
-	// Token: 0x0400A6A3 RID: 42659
+	// Token: 0x0400AA8C RID: 43660
 	private int CurrentIndex;
 
-	// Token: 0x0400A6A4 RID: 42660
+	// Token: 0x0400AA8D RID: 43661
 	private string PreviewTitle = "";
 
-	// Token: 0x0400A6A5 RID: 42661
+	// Token: 0x0400AA8E RID: 43662
 	private bool IsActivityReward;
 }

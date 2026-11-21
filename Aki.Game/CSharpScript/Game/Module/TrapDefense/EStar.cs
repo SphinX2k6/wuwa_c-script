@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA3 RID: 19107
+	// Token: 0x02003A4B RID: 14923
 	internal class EStar
 	{
-		// Token: 0x0401A77D RID: 108413
+		// Token: 0x040150CF RID: 86223
 		public const int Icon = 0;
 	}
 }

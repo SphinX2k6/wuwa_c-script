@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -22,12 +21,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Controller
 {
-	// Token: 0x02005591 RID: 21905
+	// Token: 0x02004567 RID: 17767
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MarkAssistant : ControllerAssistantBase
 	{
-		// Token: 0x06037D30 RID: 228656 RVA: 0x00D3A21C File Offset: 0x00D3841C
+		// Token: 0x0602CC2E RID: 183342 RVA: 0x00C87EE4 File Offset: 0x00C860E4
 		[NullableContext(1)]
 		private MarkPointRequestInfo CreateMarkPointInfo(global::Vector location, PbMapMarkType.Types.ENUMS markType, int configId, int mapId)
 		{
@@ -42,7 +41,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			return markPointRequestInfo;
 		}
 
-		// Token: 0x06037D31 RID: 228657 RVA: 0x00D3A274 File Offset: 0x00D38474
+		// Token: 0x0602CC2F RID: 183343 RVA: 0x00C87F3C File Offset: 0x00C8613C
 		[NullableContext(1)]
 		private MapMarkRequest CreateAddMarkRequestObject(global::Vector location, PbMapMarkType.Types.ENUMS markType, int configId, int mapId)
 		{
@@ -52,7 +51,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			return mapMarkRequest;
 		}
 
-		// Token: 0x06037D32 RID: 228658 RVA: 0x00D3A29C File Offset: 0x00D3849C
+		// Token: 0x0602CC30 RID: 183344 RVA: 0x00C87F64 File Offset: 0x00C86164
 		[NullableContext(1)]
 		private DynamicMarkCreateInfo CreateDynamicMarkCreateInfo(MarkPointInfo pointInfo, bool needDungeonId = false, int? forcedConfigId = null, ETrackSource? trackSource = null)
 		{
@@ -85,13 +84,13 @@ namespace CSharpScript.Game.Module.Map.Controller
 			});
 		}
 
-		// Token: 0x06037D33 RID: 228659 RVA: 0x00D3A3E1 File Offset: 0x00D385E1
+		// Token: 0x0602CC31 RID: 183345 RVA: 0x00C880A9 File Offset: 0x00C862A9
 		protected override void OnDestroy()
 		{
 			MapOperationQueue.Clear();
 		}
 
-		// Token: 0x06037D34 RID: 228660 RVA: 0x00D3A3E8 File Offset: 0x00D385E8
+		// Token: 0x0602CC32 RID: 183346 RVA: 0x00C880B0 File Offset: 0x00C862B0
 		public override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.MapTraceNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMapTrackNotify));
@@ -114,7 +113,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			Net.Instance.Register(ENotifyMessageId.CompleteMarkNotify, new Action<IMessage, Net.CallbackStatus>(this.OnCompleteMarkNotify));
 		}
 
-		// Token: 0x06037D35 RID: 228661 RVA: 0x00D3A5F0 File Offset: 0x00D387F0
+		// Token: 0x0602CC33 RID: 183347 RVA: 0x00C882B8 File Offset: 0x00C864B8
 		public override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.MapTraceNotify);
@@ -137,14 +136,14 @@ namespace CSharpScript.Game.Module.Map.Controller
 			Net.Instance.UnRegister(ENotifyMessageId.CompleteMarkNotify);
 		}
 
-		// Token: 0x06037D36 RID: 228662 RVA: 0x00D3A71D File Offset: 0x00D3891D
+		// Token: 0x0602CC34 RID: 183348 RVA: 0x00C883E5 File Offset: 0x00C865E5
 		public override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnCreateEntity));
 			EventSystem.Instance.Add(EEventName.OnUseMapExploreToolSuccess, new Action<MapExploreToolUsingInfo, bool>(this.OnExploreToolSuccess));
 		}
 
-		// Token: 0x06037D37 RID: 228663 RVA: 0x00D3A758 File Offset: 0x00D38958
+		// Token: 0x0602CC35 RID: 183349 RVA: 0x00C88420 File Offset: 0x00C86620
 		public override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnCreateEntity));
@@ -152,7 +151,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			EventSystem.Instance.Remove(EEventName.OnUseMapExploreToolSuccess, new Action<MapExploreToolUsingInfo, bool>(this.OnExploreToolSuccess));
 		}
 
-		// Token: 0x06037D38 RID: 228664 RVA: 0x00D3A7AC File Offset: 0x00D389AC
+		// Token: 0x0602CC36 RID: 183350 RVA: 0x00C88474 File Offset: 0x00C86674
 		[NullableContext(1)]
 		private void OnCreateEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
@@ -172,7 +171,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			this.HandleEventByExploratoryDegree((baseInfo != null) ? baseInfo.Category.ExploratoryDegree : null, handle);
 		}
 
-		// Token: 0x06037D39 RID: 228665 RVA: 0x00D3A858 File Offset: 0x00D38A58
+		// Token: 0x0602CC37 RID: 183351 RVA: 0x00C88520 File Offset: 0x00C86720
 		[NullableContext(1)]
 		private void HandleEventByExploratoryDegree(int? exploratoryDegree, EntityHandle handle)
 		{
@@ -190,7 +189,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			EventSystem.Instance.AddWithTargetUseHoldKey(this, handle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveExploreEntity));
 		}
 
-		// Token: 0x06037D3A RID: 228666 RVA: 0x00D3A8D4 File Offset: 0x00D38AD4
+		// Token: 0x0602CC38 RID: 183352 RVA: 0x00C8859C File Offset: 0x00C8679C
 		[NullableContext(1)]
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
@@ -201,7 +200,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D3B RID: 228667 RVA: 0x00D3A928 File Offset: 0x00D38B28
+		// Token: 0x0602CC39 RID: 183353 RVA: 0x00C885F0 File Offset: 0x00C867F0
 		[NullableContext(1)]
 		private void OnRemoveExploreEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
@@ -239,7 +238,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D3C RID: 228668 RVA: 0x00D3AA4C File Offset: 0x00D38C4C
+		// Token: 0x0602CC3A RID: 183354 RVA: 0x00C88714 File Offset: 0x00C86914
 		private void OnMapTrackNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			MapTraceNotify mapTraceNotify = (MapTraceNotify)msg;
@@ -247,7 +246,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			MapModel.Instance.AddTrackMarkId(mapTraceNotify.MarkId);
 		}
 
-		// Token: 0x06037D3D RID: 228669 RVA: 0x00D3AA84 File Offset: 0x00D38C84
+		// Token: 0x0602CC3B RID: 183355 RVA: 0x00C8874C File Offset: 0x00C8694C
 		private void OnMapCancelTrackNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			MapCancelTraceNotify mapCancelTraceNotify = (MapCancelTraceNotify)msg;
@@ -255,7 +254,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			MapModel.Instance.RemoveTrackMarkId(mapCancelTraceNotify.MarkId);
 		}
 
-		// Token: 0x06037D3E RID: 228670 RVA: 0x00D3AABC File Offset: 0x00D38CBC
+		// Token: 0x0602CC3C RID: 183356 RVA: 0x00C88784 File Offset: 0x00C86984
 		private void OnMapMarkInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			MapMarkInfoNotify mapMarkInfoNotify = (MapMarkInfoNotify)msg;
@@ -292,11 +291,13 @@ namespace CSharpScript.Game.Module.Map.Controller
 			{
 				MapModel.Instance.UpdateMarkHideInfo(hideInfo);
 			}
-			MapModel.Instance.UpdateCompleteMarks(mapMarkInfoNotify.CompleteMarkIds.ToArray<int>());
+			int[] array = new int[mapMarkInfoNotify.CompleteMarkIds.Count];
+			mapMarkInfoNotify.CompleteMarkIds.CopyTo(array, 0);
+			MapModel.Instance.UpdateCompleteMarks(array);
 			this.OnFishingShipMapMarkNotify(mapMarkInfoNotify);
 		}
 
-		// Token: 0x06037D3F RID: 228671 RVA: 0x00D3AC70 File Offset: 0x00D38E70
+		// Token: 0x0602CC3D RID: 183357 RVA: 0x00C88950 File Offset: 0x00C86B50
 		[NullableContext(1)]
 		private void MapInfoListElementProcess(MarkPointInfo elem, bool needDungeonId = false, int? forcedConfigId = null, ETrackSource? trackSource = null)
 		{
@@ -329,7 +330,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			MapModel.Instance.CreateServerSaveMark(info);
 		}
 
-		// Token: 0x06037D40 RID: 228672 RVA: 0x00D3ADB4 File Offset: 0x00D38FB4
+		// Token: 0x0602CC3E RID: 183358 RVA: 0x00C88A94 File Offset: 0x00C86C94
 		[NullableContext(1)]
 		private void MapInfoListHonamiScanProcess(MarkPointInfo elem, [Nullable(2)] Net.CallbackStatus status)
 		{
@@ -340,7 +341,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D41 RID: 228673 RVA: 0x00D3ADFC File Offset: 0x00D38FFC
+		// Token: 0x0602CC3F RID: 183359 RVA: 0x00C88ADC File Offset: 0x00C86CDC
 		private void SystemMarkHideInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			foreach (SystemMarkHideInfoPb hideInfo in ((SystemMarkHideInfoNotify)msg).SystemMarkHideInfo)
@@ -349,14 +350,16 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D42 RID: 228674 RVA: 0x00D3AE54 File Offset: 0x00D39054
+		// Token: 0x0602CC40 RID: 183360 RVA: 0x00C88B34 File Offset: 0x00C86D34
 		[NullableContext(1)]
 		private void OnFishingShipMapMarkNotify(MapMarkInfoNotify notify)
 		{
-			MapModel.Instance.CacheMapFishingShipMark(notify.EntityMapMarkInfo.ToArray<EntityMapMarkInfoPb>());
+			EntityMapMarkInfoPb[] array = new EntityMapMarkInfoPb[notify.EntityMapMarkInfo.Count];
+			notify.EntityMapMarkInfo.CopyTo(array, 0);
+			MapModel.Instance.CacheMapFishingShipMark(array);
 		}
 
-		// Token: 0x06037D43 RID: 228675 RVA: 0x00D3AE6C File Offset: 0x00D3906C
+		// Token: 0x0602CC41 RID: 183361 RVA: 0x00C88B6C File Offset: 0x00C86D6C
 		private void OnAddMarkInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			AddMarkInfoNotify addMarkInfoNotify = (AddMarkInfoNotify)msg;
@@ -374,7 +377,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			this.CreateMarkInternal(addMarkInfoNotify.Info, addMarkInfoNotify.TreasureBoxMarkInfo);
 		}
 
-		// Token: 0x06037D44 RID: 228676 RVA: 0x00D3AF10 File Offset: 0x00D39110
+		// Token: 0x0602CC42 RID: 183362 RVA: 0x00C88C10 File Offset: 0x00C86E10
 		private unsafe void OnMapCustomMarkUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			MapCustomMarkUpdateNotify mapCustomMarkUpdateNotify = (MapCustomMarkUpdateNotify)msg;
@@ -396,7 +399,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06037D45 RID: 228677 RVA: 0x00D3AFB4 File Offset: 0x00D391B4
+		// Token: 0x0602CC43 RID: 183363 RVA: 0x00C88CB4 File Offset: 0x00C86EB4
 		[NullableContext(1)]
 		private void CreateMarkInternal(MarkPointInfo markPointInfo, [Nullable(2)] MarkTreasureBoxInfo treasureBoxMarkInfo = null)
 		{
@@ -503,7 +506,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D46 RID: 228678 RVA: 0x00D3B308 File Offset: 0x00D39508
+		// Token: 0x0602CC44 RID: 183364 RVA: 0x00C89008 File Offset: 0x00C87208
 		private void OnUnlockMarkNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			UnlockMarkNotify unlockMarkNotify = (UnlockMarkNotify)msg;
@@ -515,7 +518,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			instance.SetMarkServerOpenState(unlockMarkNotify.MarkId, true);
 		}
 
-		// Token: 0x06037D47 RID: 228679 RVA: 0x00D3B334 File Offset: 0x00D39534
+		// Token: 0x0602CC45 RID: 183365 RVA: 0x00C89034 File Offset: 0x00C87234
 		private void OnRemoveMarkInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RemoveMarkInfoNotify removeMarkInfoNotify = (RemoveMarkInfoNotify)msg;
@@ -540,49 +543,49 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D48 RID: 228680 RVA: 0x00D3B3E8 File Offset: 0x00D395E8
+		// Token: 0x0602CC46 RID: 183366 RVA: 0x00C890E8 File Offset: 0x00C872E8
 		private void MapMarkShowIdInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			MapMarkShowIdInfoUpdateNotify mapMarkShowIdInfoUpdateNotify = (MapMarkShowIdInfoUpdateNotify)msg;
 			MapModel.Instance.SetMarkExtraShowState(mapMarkShowIdInfoUpdateNotify.MarkId, mapMarkShowIdInfoUpdateNotify.NeedFocus, (MapMarkShowFlag)mapMarkShowIdInfoUpdateNotify.ShowFlag);
 		}
 
-		// Token: 0x06037D49 RID: 228681 RVA: 0x00D3B41C File Offset: 0x00D3961C
+		// Token: 0x0602CC47 RID: 183367 RVA: 0x00C89118 File Offset: 0x00C87318
 		private void OnTemporaryTeleportAllInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			TemporaryTeleportAllInfoNotify temporaryTeleportAllInfoNotify = (TemporaryTeleportAllInfoNotify)msg;
 			MapModel.Instance.FullUpdateTemporaryTeleportInfo(temporaryTeleportAllInfoNotify.AllTemporaryTeleportInfo);
 		}
 
-		// Token: 0x06037D4A RID: 228682 RVA: 0x00D3B440 File Offset: 0x00D39640
+		// Token: 0x0602CC48 RID: 183368 RVA: 0x00C8913C File Offset: 0x00C8733C
 		private void OnAddTemporaryTeleportInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			AddTemporaryTeleportInfoNotify addTemporaryTeleportInfoNotify = (AddTemporaryTeleportInfoNotify)msg;
 			MapModel.Instance.UpdateTemporaryTeleportInfo(addTemporaryTeleportInfoNotify.TemporaryTeleportInfo);
 		}
 
-		// Token: 0x06037D4B RID: 228683 RVA: 0x00D3B464 File Offset: 0x00D39664
+		// Token: 0x0602CC49 RID: 183369 RVA: 0x00C89160 File Offset: 0x00C87360
 		private void OnTreasureBoxSlotAllInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			TreasureBoxSlotAllInfoNotify treasureBoxSlotAllInfoNotify = (TreasureBoxSlotAllInfoNotify)msg;
 			MapModel.Instance.FullUpdateBoxSlotInfo(treasureBoxSlotAllInfoNotify.AllTreasureBoxSlotInfo);
 		}
 
-		// Token: 0x06037D4C RID: 228684 RVA: 0x00D3B488 File Offset: 0x00D39688
+		// Token: 0x0602CC4A RID: 183370 RVA: 0x00C89184 File Offset: 0x00C87384
 		private void OnTreasureChestCountNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			TreasureChestCountNotify treasureChestCountNotify = (TreasureChestCountNotify)msg;
 			MapModel.Instance.FullUpdateTreasureChestCount(treasureChestCountNotify.Data);
 		}
 
-		// Token: 0x06037D4D RID: 228685 RVA: 0x00D3B4AC File Offset: 0x00D396AC
+		// Token: 0x0602CC4B RID: 183371 RVA: 0x00C891A8 File Offset: 0x00C873A8
 		private void OnTreasureChestCountIncrementNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			TreasureChestCountIncrementNotify treasureChestCountIncrementNotify = (TreasureChestCountIncrementNotify)msg;
 			MapModel.Instance.IncrementTreasureChestCount(treasureChestCountIncrementNotify.StatType, treasureChestCountIncrementNotify.InstanceIdList, treasureChestCountIncrementNotify.AreaIdList);
 		}
 
-		// Token: 0x06037D4E RID: 228686 RVA: 0x00D3B4DC File Offset: 0x00D396DC
+		// Token: 0x0602CC4C RID: 183372 RVA: 0x00C891D8 File Offset: 0x00C873D8
 		private void OnOccupationInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			foreach (OccupationPbInfo info in ((OccupationInfoNotify)msg).OccupationInfo)
@@ -593,7 +596,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			EventSystem.Instance.Emit(EEventName.GeneralLogicTreeOccupationInfoChanged);
 		}
 
-		// Token: 0x06037D4F RID: 228687 RVA: 0x00D3B550 File Offset: 0x00D39750
+		// Token: 0x0602CC4D RID: 183373 RVA: 0x00C8924C File Offset: 0x00C8744C
 		private void OnAddOccupationInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			foreach (OccupationPbInfo info in ((AddOccupationInfoNotify)msg).OccupationInfo)
@@ -604,7 +607,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			EventSystem.Instance.Emit(EEventName.GeneralLogicTreeOccupationInfoChanged);
 		}
 
-		// Token: 0x06037D50 RID: 228688 RVA: 0x00D3B5C4 File Offset: 0x00D397C4
+		// Token: 0x0602CC4E RID: 183374 RVA: 0x00C892C0 File Offset: 0x00C874C0
 		private void OnRemoveOccupationInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			foreach (string resource in ((RemoveOccupationInfoNotify)msg).Resource)
@@ -615,14 +618,16 @@ namespace CSharpScript.Game.Module.Map.Controller
 			EventSystem.Instance.Emit(EEventName.GeneralLogicTreeOccupationInfoChanged);
 		}
 
-		// Token: 0x06037D51 RID: 228689 RVA: 0x00D3B638 File Offset: 0x00D39838
+		// Token: 0x0602CC4F RID: 183375 RVA: 0x00C89334 File Offset: 0x00C87534
 		private void OnCompleteMarkNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			CompleteMarkNotify completeMarkNotify = (CompleteMarkNotify)msg;
-			MapModel.Instance.SetCompleteMarkState(completeMarkNotify.MarkIds.ToArray<int>());
+			int[] array = new int[completeMarkNotify.MarkIds.Count];
+			completeMarkNotify.MarkIds.CopyTo(array, 0);
+			MapModel.Instance.SetCompleteMarkState(array);
 		}
 
-		// Token: 0x06037D52 RID: 228690 RVA: 0x00D3B664 File Offset: 0x00D39864
+		// Token: 0x0602CC50 RID: 183376 RVA: 0x00C89370 File Offset: 0x00C87570
 		[NullableContext(1)]
 		private unsafe void OnExploreToolSuccess(MapExploreToolUsingInfo usingInfo, bool useAgain)
 		{
@@ -645,7 +650,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D53 RID: 228691 RVA: 0x00D3B724 File Offset: 0x00D39924
+		// Token: 0x0602CC51 RID: 183377 RVA: 0x00C89430 File Offset: 0x00C87630
 		public void OpenMapViewAndFocus(EMarkType markType, int markId, Action<bool, int> callback = null, bool isFocusTween = true, float startScale = 1f, bool ignoreTeamLimit = false)
 		{
 			if (!ignoreTeamLimit && OnlineModel.Instance.GetIsTeamModel() && !OnlineModel.Instance.GetIsMyTeam())
@@ -662,7 +667,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			WorldMapController.Instance.OpenView(EOpenMapType.Other, false, data, callback);
 		}
 
-		// Token: 0x06037D54 RID: 228692 RVA: 0x00D3B794 File Offset: 0x00D39994
+		// Token: 0x0602CC52 RID: 183378 RVA: 0x00C894A0 File Offset: 0x00C876A0
 		public UniTask RequestTrackInfo()
 		{
 			MarkAssistant.<RequestTrackInfo>d__36 <RequestTrackInfo>d__;
@@ -673,7 +678,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			return <RequestTrackInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037D55 RID: 228693 RVA: 0x00D3B7D8 File Offset: 0x00D399D8
+		// Token: 0x0602CC53 RID: 183379 RVA: 0x00C894E4 File Offset: 0x00C876E4
 		[NullableContext(1)]
 		private MarkData SearchMarkData(int markId)
 		{
@@ -730,7 +735,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			};
 		}
 
-		// Token: 0x06037D56 RID: 228694 RVA: 0x00D3BA58 File Offset: 0x00D39C58
+		// Token: 0x0602CC54 RID: 183380 RVA: 0x00C89764 File Offset: 0x00C87964
 		public void RequestMapMarkReplace(int markId, int configId)
 		{
 			MarkAssistant.<>c__DisplayClass38_0 CS$<>8__locals1 = new MarkAssistant.<>c__DisplayClass38_0();
@@ -756,7 +761,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			});
 		}
 
-		// Token: 0x06037D57 RID: 228695 RVA: 0x00D3BACC File Offset: 0x00D39CCC
+		// Token: 0x0602CC55 RID: 183381 RVA: 0x00C897D8 File Offset: 0x00C879D8
 		[NullableContext(1)]
 		public unsafe void RequestCreateCustomMark(TTrackTarget oneOfTrackPosition, int configId, [Nullable(2)] Action<bool> successCallBack = null)
 		{
@@ -801,7 +806,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 						MapMarkResponse mapMarkResponse = (MapMarkResponse)msg;
 						if (mapMarkResponse == null || mapMarkResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 						{
-							ErrorCodeController.Instance.OpenErrorCodeTipView(mapMarkResponse.ErrorCode, 27926, null, true, true);
+							ErrorCodeController.Instance.OpenErrorCodeTipView(mapMarkResponse.ErrorCode, 18621, null, true, true);
 							Action<bool> successCallBack4 = successCallBack;
 							if (successCallBack4 == null)
 							{
@@ -840,7 +845,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D58 RID: 228696 RVA: 0x00D3BCEC File Offset: 0x00D39EEC
+		// Token: 0x0602CC56 RID: 183382 RVA: 0x00C899F8 File Offset: 0x00C87BF8
 		public void RequestTrackEnrichmentArea(int? itemId = null, Action autoCallBack = null)
 		{
 			if (this.EnrichmentRequestLock)
@@ -862,7 +867,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 				this.EnrichmentRequestLock = false;
 				if (enrichmentAreaResponse == null || enrichmentAreaResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(enrichmentAreaResponse.ErrorCode, 18556, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(enrichmentAreaResponse.ErrorCode, 27649, null, true, true);
 				}
 				if (enrichmentAreaResponse != null && enrichmentAreaResponse.ErrorCode == Aki.Protocol.ErrorCode.Success)
 				{
@@ -876,7 +881,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}, 0);
 		}
 
-		// Token: 0x06037D59 RID: 228697 RVA: 0x00D3BD80 File Offset: 0x00D39F80
+		// Token: 0x0602CC57 RID: 183383 RVA: 0x00C89A8C File Offset: 0x00C87C8C
 		private void CheckTrackNextEnrichmentArea(int removeMarkId)
 		{
 			DynamicMarkCreateInfo dynamicMark = MapModel.Instance.GetDynamicMark(removeMarkId);
@@ -889,7 +894,14 @@ namespace CSharpScript.Game.Module.Map.Controller
 					Dictionary<int, DynamicMarkCreateInfo> markByType = MapModel.Instance.GetMarkByType(EMarkType.EnrichmentArea);
 					if (markByType != null && markByType.Count == 1)
 					{
-						DynamicMarkCreateInfo dynamicMarkCreateInfo = markByType.Values.First<DynamicMarkCreateInfo>();
+						DynamicMarkCreateInfo dynamicMarkCreateInfo = null;
+						using (Dictionary<int, DynamicMarkCreateInfo>.ValueCollection.Enumerator enumerator = markByType.Values.GetEnumerator())
+						{
+							if (enumerator.MoveNext())
+							{
+								dynamicMarkCreateInfo = enumerator.Current;
+							}
+						}
 						EnrichmentAreaConfig? enrichmentAreaConfigByEnrichmentId = MapConfig.Instance.GetEnrichmentAreaConfigByEnrichmentId(dynamicMarkCreateInfo.EntityConfigId.Value);
 						if (enrichmentAreaConfigByEnrichmentId != null)
 						{
@@ -910,7 +922,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D5A RID: 228698 RVA: 0x00D3BE90 File Offset: 0x00D3A090
+		// Token: 0x0602CC58 RID: 183384 RVA: 0x00C89BD8 File Offset: 0x00C87DD8
 		[NullableContext(1)]
 		public void RequestRemoveMapMarks(EMarkType markType, List<int> markIds)
 		{
@@ -937,7 +949,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			});
 		}
 
-		// Token: 0x06037D5B RID: 228699 RVA: 0x00D3BF14 File Offset: 0x00D3A114
+		// Token: 0x0602CC59 RID: 183385 RVA: 0x00C89C5C File Offset: 0x00C87E5C
 		public void RequestTrackMapMark(EMarkType markType, int markId, Action<ETrackMapMarkResultType, bool> resultCallBack = null)
 		{
 			MarkAssistant.<>c__DisplayClass44_0 CS$<>8__locals1 = new MarkAssistant.<>c__DisplayClass44_0();
@@ -975,7 +987,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			resultCallBack2(ETrackMapMarkResultType.Success, true);
 		}
 
-		// Token: 0x06037D5C RID: 228700 RVA: 0x00D3BFC8 File Offset: 0x00D3A1C8
+		// Token: 0x0602CC5A RID: 183386 RVA: 0x00C89D10 File Offset: 0x00C87F10
 		public void RequestCancelTrackMapMark(EMarkType markType, int markId, Action<ETrackMapMarkResultType, bool> resultCallBack = null)
 		{
 			MarkAssistant.<>c__DisplayClass45_0 CS$<>8__locals1 = new MarkAssistant.<>c__DisplayClass45_0();
@@ -1003,7 +1015,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			resultCallBack2(ETrackMapMarkResultType.Success, false);
 		}
 
-		// Token: 0x06037D5D RID: 228701 RVA: 0x00D3C078 File Offset: 0x00D3A278
+		// Token: 0x0602CC5B RID: 183387 RVA: 0x00C89DC0 File Offset: 0x00C87FC0
 		[NullableContext(1)]
 		public void RequestTeleportToTargetByTemporaryTeleport(int teleportId, global::Rotator rot, [Nullable(2)] TOnTelSuccessCallBack successAction = null)
 		{
@@ -1023,7 +1035,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			this.RequestTeleportToTargetByTemporaryTeleportPurely(teleportId, rot, successAction);
 		}
 
-		// Token: 0x06037D5E RID: 228702 RVA: 0x00D3C0F4 File Offset: 0x00D3A2F4
+		// Token: 0x0602CC5C RID: 183388 RVA: 0x00C89E3C File Offset: 0x00C8803C
 		[NullableContext(1)]
 		private void RequestTeleportToTargetByTemporaryTeleportPurely(int teleportId, global::Rotator rot, [Nullable(2)] TOnTelSuccessCallBack successAction = null)
 		{
@@ -1039,7 +1051,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 				TeleportToTargetResponse teleportToTargetResponse = (TeleportToTargetResponse)msg;
 				if (teleportToTargetResponse == null || teleportToTargetResponse.ErrCode > Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(teleportToTargetResponse.ErrCode, 29919, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(teleportToTargetResponse.ErrCode, 26282, null, true, true);
 				}
 			}, 0);
 			if (successAction != null)
@@ -1048,7 +1060,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			}
 		}
 
-		// Token: 0x06037D5F RID: 228703 RVA: 0x00D3C17C File Offset: 0x00D3A37C
+		// Token: 0x0602CC5D RID: 183389 RVA: 0x00C89EC4 File Offset: 0x00C880C4
 		[NullableContext(1)]
 		public void UpdateCustomMapMarkPosition(int markId, global::Vector markUiPos)
 		{
@@ -1063,12 +1075,12 @@ namespace CSharpScript.Game.Module.Map.Controller
 				MapMarkInfoUpdateResponse mapMarkInfoUpdateResponse = (MapMarkInfoUpdateResponse)msg;
 				if (mapMarkInfoUpdateResponse == null || mapMarkInfoUpdateResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(mapMarkInfoUpdateResponse.ErrorCode, 17549, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(mapMarkInfoUpdateResponse.ErrorCode, 26030, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x0401D56A RID: 120170
+		// Token: 0x04017FF5 RID: 98293
 		private bool EnrichmentRequestLock;
 	}
 }

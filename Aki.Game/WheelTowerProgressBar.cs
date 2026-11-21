@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001651 RID: 5713
+// Token: 0x02000B09 RID: 2825
 internal sealed class WheelTowerProgressBar : UiPanelBase
 {
-	// Token: 0x0600A06D RID: 41069 RVA: 0x00235778 File Offset: 0x00233978
+	// Token: 0x0600744B RID: 29771 RVA: 0x0023F5B4 File Offset: 0x0023D7B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,7 +21,7 @@ internal sealed class WheelTowerProgressBar : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A06E RID: 41070 RVA: 0x002357E1 File Offset: 0x002339E1
+	// Token: 0x0600744C RID: 29772 RVA: 0x0023F61D File Offset: 0x0023D81D
 	public void Refresh(int currentProgress)
 	{
 		UUIText text = base.GetText(1);

@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001057 RID: 4183
+// Token: 0x0200050B RID: 1291
 public enum ENpcPokerChangeTimingType
 {
-	// Token: 0x040031A4 RID: 12708
+	// Token: 0x0400323D RID: 12861
 	None,
-	// Token: 0x040031A5 RID: 12709
+	// Token: 0x0400323E RID: 12862
 	BeChooseCard,
-	// Token: 0x040031A6 RID: 12710
+	// Token: 0x0400323F RID: 12863
 	BeDrawCard,
-	// Token: 0x040031A7 RID: 12711
+	// Token: 0x04003240 RID: 12864
 	ChooseCard,
-	// Token: 0x040031A8 RID: 12712
+	// Token: 0x04003241 RID: 12865
 	DrawCard
 }

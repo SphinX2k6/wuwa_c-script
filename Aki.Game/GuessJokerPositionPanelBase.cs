@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001075 RID: 4213
+// Token: 0x02000529 RID: 1321
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerPositionPanelBase
 {
-	// Token: 0x06006CD4 RID: 27860 RVA: 0x0016060D File Offset: 0x0015E80D
+	// Token: 0x06004069 RID: 16489 RVA: 0x00168F41 File Offset: 0x00167141
 	public GuessJokerPositionPanelBase(ECardPositionType position, GuessJokerGamePlayView gamePlayView)
 	{
 		this.Position = position;
 		this.GamePlayView = gamePlayView;
 	}
 
-	// Token: 0x06006CD5 RID: 27861 RVA: 0x0016063C File Offset: 0x0015E83C
+	// Token: 0x0600406A RID: 16490 RVA: 0x00168F70 File Offset: 0x00167170
 	private void AddCardByItem(GuessJokerCardItem cardItem)
 	{
 		if (this.CheckCardExist(cardItem.Data.Id))
@@ -27,7 +27,7 @@ public class GuessJokerPositionPanelBase
 		this.CardIdMap[cardItem.Data.Id] = cardItem;
 	}
 
-	// Token: 0x06006CD6 RID: 27862 RVA: 0x0016068C File Offset: 0x0015E88C
+	// Token: 0x0600406B RID: 16491 RVA: 0x00168FC0 File Offset: 0x001671C0
 	[NullableContext(2)]
 	public GuessJokerCardItem GetCardItemByCardId(int cardId)
 	{
@@ -39,13 +39,13 @@ public class GuessJokerPositionPanelBase
 		return result;
 	}
 
-	// Token: 0x06006CD7 RID: 27863 RVA: 0x001606AC File Offset: 0x0015E8AC
+	// Token: 0x0600406C RID: 16492 RVA: 0x00168FE0 File Offset: 0x001671E0
 	public bool CheckCardExist(int cardId)
 	{
 		return this.CardIdMap.ContainsKey(cardId);
 	}
 
-	// Token: 0x06006CD8 RID: 27864 RVA: 0x001606BC File Offset: 0x0015E8BC
+	// Token: 0x0600406D RID: 16493 RVA: 0x00168FF0 File Offset: 0x001671F0
 	public void InitCardByItemList(List<GuessJokerCardItem> cardList)
 	{
 		for (int i = 0; i < cardList.Count; i++)
@@ -61,7 +61,7 @@ public class GuessJokerPositionPanelBase
 		}
 	}
 
-	// Token: 0x06006CD9 RID: 27865 RVA: 0x00160714 File Offset: 0x0015E914
+	// Token: 0x0600406E RID: 16494 RVA: 0x00169048 File Offset: 0x00167248
 	public void AddCardByItemList(List<GuessJokerCardItem> cardList)
 	{
 		for (int i = 0; i < cardList.Count; i++)
@@ -71,7 +71,7 @@ public class GuessJokerPositionPanelBase
 		this.UpdateCardItemsIndexInPanel();
 	}
 
-	// Token: 0x06006CDA RID: 27866 RVA: 0x00160748 File Offset: 0x0015E948
+	// Token: 0x0600406F RID: 16495 RVA: 0x0016907C File Offset: 0x0016727C
 	[NullableContext(2)]
 	public GuessJokerCardItem RemoveCardByCardId(int cardId)
 	{
@@ -86,7 +86,7 @@ public class GuessJokerPositionPanelBase
 		return null;
 	}
 
-	// Token: 0x06006CDB RID: 27867 RVA: 0x0016078C File Offset: 0x0015E98C
+	// Token: 0x06004070 RID: 16496 RVA: 0x001690C0 File Offset: 0x001672C0
 	public void DealCards(List<GuessJokerCardItem> cardList, Action finishCallback, int dealInterval = 150)
 	{
 		GuessJokerPositionPanelBase.<>c__DisplayClass11_0 CS$<>8__locals1 = new GuessJokerPositionPanelBase.<>c__DisplayClass11_0();
@@ -105,7 +105,7 @@ public class GuessJokerPositionPanelBase
 		CS$<>8__locals1.<DealCards>g__DealNext|1();
 	}
 
-	// Token: 0x06006CDC RID: 27868 RVA: 0x001607F0 File Offset: 0x0015E9F0
+	// Token: 0x06004071 RID: 16497 RVA: 0x00169124 File Offset: 0x00167324
 	[NullableContext(2)]
 	public void AnimateCardsToPosition(Action onComplete = null)
 	{
@@ -157,7 +157,7 @@ public class GuessJokerPositionPanelBase
 		onComplete2();
 	}
 
-	// Token: 0x06006CDD RID: 27869 RVA: 0x001608EC File Offset: 0x0015EAEC
+	// Token: 0x06004072 RID: 16498 RVA: 0x00169220 File Offset: 0x00167420
 	public void ShuffleCards()
 	{
 		Random random = new Random();
@@ -171,7 +171,7 @@ public class GuessJokerPositionPanelBase
 		this.UpdateCardItemsIndexInPanel();
 	}
 
-	// Token: 0x06006CDE RID: 27870 RVA: 0x0016095C File Offset: 0x0015EB5C
+	// Token: 0x06004073 RID: 16499 RVA: 0x00169290 File Offset: 0x00167490
 	public void ShuffleCardsWithAnimation(Action finishCallback)
 	{
 		GuessJokerPositionPanelBase.<>c__DisplayClass14_0 CS$<>8__locals1 = new GuessJokerPositionPanelBase.<>c__DisplayClass14_0();
@@ -214,7 +214,7 @@ public class GuessJokerPositionPanelBase
 		}
 	}
 
-	// Token: 0x06006CDF RID: 27871 RVA: 0x00160AA4 File Offset: 0x0015ECA4
+	// Token: 0x06004074 RID: 16500 RVA: 0x001693D8 File Offset: 0x001675D8
 	public void ShowCardPairNotice(Action finishCallback)
 	{
 		GuessJokerPositionPanelBase.<>c__DisplayClass15_0 CS$<>8__locals1 = new GuessJokerPositionPanelBase.<>c__DisplayClass15_0();
@@ -237,7 +237,7 @@ public class GuessJokerPositionPanelBase
 		finishCallback2();
 	}
 
-	// Token: 0x06006CE0 RID: 27872 RVA: 0x00160B28 File Offset: 0x0015ED28
+	// Token: 0x06004075 RID: 16501 RVA: 0x0016945C File Offset: 0x0016765C
 	public void RemoveCards(Action finishCallback)
 	{
 		GuessJokerPositionPanelBase.<>c__DisplayClass16_0 CS$<>8__locals1 = new GuessJokerPositionPanelBase.<>c__DisplayClass16_0();
@@ -272,7 +272,7 @@ public class GuessJokerPositionPanelBase
 		finishCallback2();
 	}
 
-	// Token: 0x06006CE1 RID: 27873 RVA: 0x00160C1C File Offset: 0x0015EE1C
+	// Token: 0x06004076 RID: 16502 RVA: 0x00169550 File Offset: 0x00167750
 	public List<int> GetCardIdList()
 	{
 		List<int> list = new List<int>();
@@ -283,7 +283,7 @@ public class GuessJokerPositionPanelBase
 		return list;
 	}
 
-	// Token: 0x06006CE2 RID: 27874 RVA: 0x00160C64 File Offset: 0x0015EE64
+	// Token: 0x06004077 RID: 16503 RVA: 0x00169598 File Offset: 0x00167798
 	public void UpdateCardItemsPosition()
 	{
 		ICardLayoutInfo[] array = GuessJokerUtils.CalculateCardLayoutInfo(this.CardItemList.Count, this.Position);
@@ -299,7 +299,7 @@ public class GuessJokerPositionPanelBase
 		}
 	}
 
-	// Token: 0x06006CE3 RID: 27875 RVA: 0x00160CEC File Offset: 0x0015EEEC
+	// Token: 0x06004078 RID: 16504 RVA: 0x00169620 File Offset: 0x00167820
 	public void UpdateCardItemsIndexInPanel()
 	{
 		for (int i = 0; i < this.CardItemList.Count; i++)
@@ -308,7 +308,7 @@ public class GuessJokerPositionPanelBase
 		}
 	}
 
-	// Token: 0x06006CE4 RID: 27876 RVA: 0x00160D24 File Offset: 0x0015EF24
+	// Token: 0x06004079 RID: 16505 RVA: 0x00169658 File Offset: 0x00167858
 	public void SetCardsClickableExcept(bool isClickable, int excludeCardId = 0)
 	{
 		for (int i = 0; i < this.CardItemList.Count; i++)
@@ -326,7 +326,7 @@ public class GuessJokerPositionPanelBase
 		}
 	}
 
-	// Token: 0x06006CE5 RID: 27877 RVA: 0x00160D84 File Offset: 0x0015EF84
+	// Token: 0x0600407A RID: 16506 RVA: 0x001696B8 File Offset: 0x001678B8
 	public void SetCardsDarkExcept(bool isDark, List<int> excludeCardIdList = null)
 	{
 		if (excludeCardIdList == null)
@@ -343,7 +343,7 @@ public class GuessJokerPositionPanelBase
 		}
 	}
 
-	// Token: 0x06006CE6 RID: 27878 RVA: 0x00160DD8 File Offset: 0x0015EFD8
+	// Token: 0x0600407B RID: 16507 RVA: 0x0016970C File Offset: 0x0016790C
 	public void SwapCardPositionsSilently(int cardId1, int cardId2)
 	{
 		GuessJokerCardItem cardItemByCardId = this.GetCardItemByCardId(cardId1);
@@ -367,15 +367,15 @@ public class GuessJokerPositionPanelBase
 		cardItemByCardId2.RefreshCardItem();
 	}
 
-	// Token: 0x04003268 RID: 12904
+	// Token: 0x04003301 RID: 13057
 	public readonly List<GuessJokerCardItem> CardItemList = new List<GuessJokerCardItem>();
 
-	// Token: 0x04003269 RID: 12905
+	// Token: 0x04003302 RID: 13058
 	private readonly Dictionary<int, GuessJokerCardItem> CardIdMap = new Dictionary<int, GuessJokerCardItem>();
 
-	// Token: 0x0400326A RID: 12906
+	// Token: 0x04003303 RID: 13059
 	public readonly ECardPositionType Position;
 
-	// Token: 0x0400326B RID: 12907
+	// Token: 0x04003304 RID: 13060
 	private readonly GuessJokerGamePlayView GamePlayView;
 }

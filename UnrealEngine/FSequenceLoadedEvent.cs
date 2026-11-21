@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002104 RID: 8452
+	// Token: 0x020006DA RID: 1754
 	public sealed class FSequenceLoadedEvent : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601FCCE RID: 130254 RVA: 0x002F4A4D File Offset: 0x002F2C4D
+		// Token: 0x06009513 RID: 38163 RVA: 0x000E0FE4 File Offset: 0x000DF1E4
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSequenceLoadedEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601FCCF RID: 130255 RVA: 0x002F4A59 File Offset: 0x002F2C59
+		// Token: 0x06009514 RID: 38164 RVA: 0x000E0FF0 File Offset: 0x000DF1F0
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSequenceLoadedEvent._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FSequenceLoadedEvent._FunctionPtr;
 		}
 
-		// Token: 0x0601FCD0 RID: 130256 RVA: 0x002F4A7C File Offset: 0x002F2C7C
+		// Token: 0x06009515 RID: 38165 RVA: 0x000E1013 File Offset: 0x000DF213
 		public FSequenceLoadedEvent()
 		{
 		}
 
-		// Token: 0x0601FCD1 RID: 130257 RVA: 0x002F4A84 File Offset: 0x002F2C84
+		// Token: 0x06009516 RID: 38166 RVA: 0x000E101B File Offset: 0x000DF21B
 		[NullableContext(2)]
 		public FSequenceLoadedEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FCD2 RID: 130258 RVA: 0x002F4A8E File Offset: 0x002F2C8E
+		// Token: 0x06009517 RID: 38167 RVA: 0x000E1025 File Offset: 0x000DF225
 		public FSequenceLoadedEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FCD3 RID: 130259 RVA: 0x002F4A99 File Offset: 0x002F2C99
+		// Token: 0x06009518 RID: 38168 RVA: 0x000E1030 File Offset: 0x000DF230
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<ULevelSequence>) ?? ((Action<ULevelSequence>)Delegate.CreateDelegate(typeof(Action<ULevelSequence>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601FCD4 RID: 130260 RVA: 0x002F4ACB File Offset: 0x002F2CCB
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06009519 RID: 38169 RVA: 0x000E1062 File Offset: 0x000DF262
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FSequenceLoadedEvent.RegisterId);
 		}
 
-		// Token: 0x0601FCD5 RID: 130261 RVA: 0x002F4B08 File Offset: 0x002F2D08
+		// Token: 0x0600951A RID: 38170 RVA: 0x000E109C File Offset: 0x000DF29C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(ULevelSequence Sequence)
 		{
 			FSequenceLoadedEvent.__FSequenceLoadedEvent_DelegateParams* ptr = stackalloc FSequenceLoadedEvent.__FSequenceLoadedEvent_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FSequenceLoadedEvent.__FSequenceLoadedEvent_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601FCD6 RID: 130262 RVA: 0x002F4B54 File Offset: 0x002F2D54
+		// Token: 0x0600951B RID: 38171 RVA: 0x000E10E8 File Offset: 0x000DF2E8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<ULevelSequence> action = target as Action<ULevelSequence>;
@@ -95,31 +92,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x04011234 RID: 70196
+		// Token: 0x040040D2 RID: 16594
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011235 RID: 70197
+		// Token: 0x040040D3 RID: 16595
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.SequenceLoadedEvent__DelegateSignature";
 
-		// Token: 0x04011236 RID: 70198
+		// Token: 0x040040D4 RID: 16596
 		private static int RegisterId;
 
-		// Token: 0x020034E3 RID: 13539
+		// Token: 0x02000F0F RID: 3855
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FSequenceLoadedEvent_DelegateParams
+		private ref struct __FSequenceLoadedEvent_DelegateParams
 		{
-			// Token: 0x040174F7 RID: 95479
+			// Token: 0x040062DC RID: 25308
 			[FieldOffset(0)]
 			public IntPtr Sequence;
 		}
 
-		// Token: 0x020034E4 RID: 13540
+		// Token: 0x02000F10 RID: 3856
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174F8 RID: 95480
+			// Token: 0x040062DD RID: 25309
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

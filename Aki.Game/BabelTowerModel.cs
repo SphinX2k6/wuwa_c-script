@@ -5,14 +5,14 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001177 RID: 4471
+// Token: 0x0200062B RID: 1579
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class BabelTowerModel : ModelBase
 {
-	// Token: 0x17000A37 RID: 2615
-	// (get) Token: 0x06007616 RID: 30230 RVA: 0x00187E91 File Offset: 0x00186091
+	// Token: 0x17000A57 RID: 2647
+	// (get) Token: 0x060049AD RID: 18861 RVA: 0x00190A41 File Offset: 0x0018EC41
 	[Nullable(2)]
 	public BabelTowerInstanceData CurrentChallengeInstData
 	{
@@ -23,7 +23,7 @@ public class BabelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06007617 RID: 30231 RVA: 0x00187E99 File Offset: 0x00186099
+	// Token: 0x060049AE RID: 18862 RVA: 0x00190A49 File Offset: 0x0018EC49
 	public void SetTraceId(string traceId)
 	{
 		if (this.CurrentChallengeInstDataInternal != null)
@@ -32,14 +32,14 @@ public class BabelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06007618 RID: 30232 RVA: 0x00187EB0 File Offset: 0x001860B0
+	// Token: 0x060049AF RID: 18863 RVA: 0x00190A60 File Offset: 0x0018EC60
 	protected override bool OnInit()
 	{
 		this.ItemCountMax = ConfigCommonParamById.GetIntConfig("BabelTowerItemCountMax").GetValueOrDefault();
 		return true;
 	}
 
-	// Token: 0x06007619 RID: 30233 RVA: 0x00187ED8 File Offset: 0x001860D8
+	// Token: 0x060049B0 RID: 18864 RVA: 0x00190A88 File Offset: 0x0018EC88
 	public void UpdateCurrentChallengeInstDataByNotify(BabelActivityInstInfoNotify notify)
 	{
 		if (this.CurrentChallengeInstDataInternal == null)
@@ -60,7 +60,7 @@ public class BabelTowerModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnBabelActivityInstInfoUpdate);
 	}
 
-	// Token: 0x0600761A RID: 30234 RVA: 0x00187FA0 File Offset: 0x001861A0
+	// Token: 0x060049B1 RID: 18865 RVA: 0x00190B50 File Offset: 0x0018ED50
 	public bool GetIfLevelTooLow(int instanceId, int[] roleList)
 	{
 		int num = 0;
@@ -88,13 +88,13 @@ public class BabelTowerModel : ModelBase
 		return num3 < (double)this.GetRecommendLevel(instanceId) && num3 != 0.0;
 	}
 
-	// Token: 0x0600761B RID: 30235 RVA: 0x0018803C File Offset: 0x0018623C
+	// Token: 0x060049B2 RID: 18866 RVA: 0x00190BEC File Offset: 0x0018EDEC
 	public int GetRecommendLevel(int instanceId)
 	{
 		return InstanceDungeonConfig.Instance.GetRecommendLevel(instanceId, WorldLevelModel.Instance.CurWorldLevel);
 	}
 
-	// Token: 0x0600761C RID: 30236 RVA: 0x00188054 File Offset: 0x00186254
+	// Token: 0x060049B3 RID: 18867 RVA: 0x00190C04 File Offset: 0x0018EE04
 	public BabelTowerDifficulty? CalculateDifficultyConfigByStarNum(int activityId, int starNum)
 	{
 		IReadOnlyList<BabelTowerDifficulty> configList = ConfigBabelTowerDifficultyByActivityId.GetConfigList(activityId, true);
@@ -113,7 +113,7 @@ public class BabelTowerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600761D RID: 30237 RVA: 0x001880AC File Offset: 0x001862AC
+	// Token: 0x060049B4 RID: 18868 RVA: 0x00190C5C File Offset: 0x0018EE5C
 	public List<int> GetSelectedDeTermList()
 	{
 		List<int> list = new List<int>();
@@ -129,7 +129,7 @@ public class BabelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600761E RID: 30238 RVA: 0x00188124 File Offset: 0x00186324
+	// Token: 0x060049B5 RID: 18869 RVA: 0x00190CD4 File Offset: 0x0018EED4
 	public List<int> GetAllActiveDeTermList()
 	{
 		List<int> list = new List<int>();
@@ -145,7 +145,7 @@ public class BabelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600761F RID: 30239 RVA: 0x001881A8 File Offset: 0x001863A8
+	// Token: 0x060049B6 RID: 18870 RVA: 0x00190D58 File Offset: 0x0018EF58
 	public int GetCurrentDeTermStar()
 	{
 		int num = 0;
@@ -161,7 +161,7 @@ public class BabelTowerModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06007620 RID: 30240 RVA: 0x00188238 File Offset: 0x00186438
+	// Token: 0x060049B7 RID: 18871 RVA: 0x00190DE8 File Offset: 0x0018EFE8
 	public int GetSelectedDeTermCount()
 	{
 		int num = 0;
@@ -176,20 +176,20 @@ public class BabelTowerModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06007621 RID: 30241 RVA: 0x001882A8 File Offset: 0x001864A8
+	// Token: 0x060049B8 RID: 18872 RVA: 0x00190E58 File Offset: 0x0018F058
 	[NullableContext(2)]
 	public IBabelTowerSelectInfo GetDeTermSelectInfo(int deTermId)
 	{
 		return this.DeTermSelectInfo.GetValueOrDefault(deTermId);
 	}
 
-	// Token: 0x06007622 RID: 30242 RVA: 0x001882B6 File Offset: 0x001864B6
+	// Token: 0x060049B9 RID: 18873 RVA: 0x00190E66 File Offset: 0x0018F066
 	public int CoverStarNumToQualityId(int starNum)
 	{
 		return starNum + 2;
 	}
 
-	// Token: 0x06007623 RID: 30243 RVA: 0x001882BC File Offset: 0x001864BC
+	// Token: 0x060049BA RID: 18874 RVA: 0x00190E6C File Offset: 0x0018F06C
 	public bool CheckInBattleBabelTower()
 	{
 		if (!GameModeController.Instance.IsInInstance())
@@ -201,7 +201,7 @@ public class BabelTowerModel : ModelBase
 		return config != null && config.Value.InstSubType == 30;
 	}
 
-	// Token: 0x06007624 RID: 30244 RVA: 0x00188310 File Offset: 0x00186510
+	// Token: 0x060049BB RID: 18875 RVA: 0x00190EC0 File Offset: 0x0018F0C0
 	public bool CheckCanRevive()
 	{
 		BabelTowerInstanceData currentChallengeInstData = this.CurrentChallengeInstData;
@@ -214,7 +214,7 @@ public class BabelTowerModel : ModelBase
 		return currentChallengeInstData.CurStarNum >= num;
 	}
 
-	// Token: 0x06007625 RID: 30245 RVA: 0x0018835E File Offset: 0x0018655E
+	// Token: 0x060049BC RID: 18876 RVA: 0x00190F0E File Offset: 0x0018F10E
 	public int GetCurStarNum()
 	{
 		BabelTowerInstanceData currentChallengeInstData = this.CurrentChallengeInstData;
@@ -225,7 +225,7 @@ public class BabelTowerModel : ModelBase
 		return currentChallengeInstData.CurStarNum;
 	}
 
-	// Token: 0x06007626 RID: 30246 RVA: 0x00188374 File Offset: 0x00186574
+	// Token: 0x060049BD RID: 18877 RVA: 0x00190F24 File Offset: 0x0018F124
 	public List<FormationData> GetPresetTeamList()
 	{
 		List<FormationData> list = new List<FormationData>();
@@ -241,7 +241,7 @@ public class BabelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06007627 RID: 30247 RVA: 0x001883B4 File Offset: 0x001865B4
+	// Token: 0x060049BE RID: 18878 RVA: 0x00190F64 File Offset: 0x0018F164
 	public List<IBabelTowerTeamTab> GetTeamTabList()
 	{
 		if (this.TeamTabList.Count > 0)
@@ -261,8 +261,8 @@ public class BabelTowerModel : ModelBase
 		return this.TeamTabList;
 	}
 
-	// Token: 0x17000A38 RID: 2616
-	// (get) Token: 0x06007628 RID: 30248 RVA: 0x00188420 File Offset: 0x00186620
+	// Token: 0x17000A58 RID: 2648
+	// (get) Token: 0x060049BF RID: 18879 RVA: 0x00190FD0 File Offset: 0x0018F1D0
 	public static BabelTowerModel Instance
 	{
 		get
@@ -271,7 +271,7 @@ public class BabelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06007629 RID: 30249 RVA: 0x00188427 File Offset: 0x00186627
+	// Token: 0x060049C0 RID: 18880 RVA: 0x00190FD7 File Offset: 0x0018F1D7
 	public static BabelTowerModel GetOrCreateInstance()
 	{
 		if (BabelTowerModel._Instance == null)
@@ -281,7 +281,7 @@ public class BabelTowerModel : ModelBase
 		return BabelTowerModel._Instance;
 	}
 
-	// Token: 0x0600762A RID: 30250 RVA: 0x0018843B File Offset: 0x0018663B
+	// Token: 0x060049C1 RID: 18881 RVA: 0x00190FEB File Offset: 0x0018F1EB
 	public static bool CreateInstance()
 	{
 		if (BabelTowerModel._Instance != null)
@@ -292,55 +292,55 @@ public class BabelTowerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600762B RID: 30251 RVA: 0x00188451 File Offset: 0x00186651
+	// Token: 0x060049C2 RID: 18882 RVA: 0x00191001 File Offset: 0x0018F201
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600762C RID: 30252 RVA: 0x00188453 File Offset: 0x00186653
+	// Token: 0x060049C3 RID: 18883 RVA: 0x00191003 File Offset: 0x0018F203
 	public static void ResetStaticDefaultValue()
 	{
 		BabelTowerModel._Instance = null;
 	}
 
-	// Token: 0x0600762D RID: 30253 RVA: 0x0018845B File Offset: 0x0018665B
+	// Token: 0x060049C4 RID: 18884 RVA: 0x0019100B File Offset: 0x0018F20B
 	static BabelTowerModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BabelTowerModel.CreateStaticDefaultValue), new Action(BabelTowerModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003629 RID: 13865
+	// Token: 0x040036C2 RID: 14018
 	[Nullable(2)]
 	private BabelTowerInstanceData CurrentChallengeInstDataInternal;
 
-	// Token: 0x0400362A RID: 13866
+	// Token: 0x040036C3 RID: 14019
 	public int ItemCountMax;
 
-	// Token: 0x0400362B RID: 13867
+	// Token: 0x040036C4 RID: 14020
 	public int CurrentQuickIndex = -1;
 
-	// Token: 0x0400362C RID: 13868
+	// Token: 0x040036C5 RID: 14021
 	public Dictionary<int, IBabelTowerSelectInfo> DeTermSelectInfo = new Dictionary<int, IBabelTowerSelectInfo>();
 
-	// Token: 0x0400362D RID: 13869
+	// Token: 0x040036C6 RID: 14022
 	public bool IsShowLeftTeamPanel;
 
-	// Token: 0x0400362E RID: 13870
+	// Token: 0x040036C7 RID: 14023
 	public int DeTermSelectIndex;
 
-	// Token: 0x0400362F RID: 13871
+	// Token: 0x040036C8 RID: 14024
 	public HashSet<int> ClearedDeTerms = new HashSet<int>();
 
-	// Token: 0x04003630 RID: 13872
+	// Token: 0x040036C9 RID: 14025
 	public int LevelChoseHandle;
 
-	// Token: 0x04003631 RID: 13873
+	// Token: 0x040036CA RID: 14026
 	public int CurrentSelectLevel;
 
-	// Token: 0x04003632 RID: 13874
+	// Token: 0x040036CB RID: 14027
 	private readonly List<IBabelTowerTeamTab> TeamTabList = new List<IBabelTowerTeamTab>();
 
-	// Token: 0x04003633 RID: 13875
+	// Token: 0x040036CC RID: 14028
 	[Nullable(2)]
 	private static BabelTowerModel _Instance;
 }

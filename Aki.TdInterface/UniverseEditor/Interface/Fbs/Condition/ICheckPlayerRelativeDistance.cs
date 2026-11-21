@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AFC RID: 19196
+	// Token: 0x02004FD7 RID: 20439
 	public struct ICheckPlayerRelativeDistance : IFlatbufferObject
 	{
-		// Token: 0x17008B3A RID: 35642
-		// (get) Token: 0x0601E2CF RID: 123599 RVA: 0x0043B518 File Offset: 0x00439718
+		// Token: 0x1700923B RID: 37435
+		// (get) Token: 0x0601FE10 RID: 130576 RVA: 0x0046D5C4 File Offset: 0x0046B7C4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E2D0 RID: 123600 RVA: 0x0043B525 File Offset: 0x00439725
+		// Token: 0x0601FE11 RID: 130577 RVA: 0x0046D5D1 File Offset: 0x0046B7D1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E2D1 RID: 123601 RVA: 0x0043B52C File Offset: 0x0043972C
+		// Token: 0x0601FE12 RID: 130578 RVA: 0x0046D5D8 File Offset: 0x0046B7D8
 		public static ICheckPlayerRelativeDistance GetRootAsICheckPlayerRelativeDistance(ByteBuffer _bb)
 		{
 			return ICheckPlayerRelativeDistance.GetRootAsICheckPlayerRelativeDistance(_bb, default(ICheckPlayerRelativeDistance));
 		}
 
-		// Token: 0x0601E2D2 RID: 123602 RVA: 0x0043B548 File Offset: 0x00439748
+		// Token: 0x0601FE13 RID: 130579 RVA: 0x0046D5F4 File Offset: 0x0046B7F4
 		public static ICheckPlayerRelativeDistance GetRootAsICheckPlayerRelativeDistance(ByteBuffer _bb, ICheckPlayerRelativeDistance obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E2D3 RID: 123603 RVA: 0x0043B565 File Offset: 0x00439765
+		// Token: 0x0601FE14 RID: 130580 RVA: 0x0046D611 File Offset: 0x0046B811
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E2D4 RID: 123604 RVA: 0x0043B574 File Offset: 0x00439774
+		// Token: 0x0601FE15 RID: 130581 RVA: 0x0046D620 File Offset: 0x0046B820
 		public ICheckPlayerRelativeDistance __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B3B RID: 35643
-		// (get) Token: 0x0601E2D5 RID: 123605 RVA: 0x0043B584 File Offset: 0x00439784
+		// Token: 0x1700923C RID: 37436
+		// (get) Token: 0x0601FE16 RID: 130582 RVA: 0x0046D630 File Offset: 0x0046B830
 		public ECondition Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B3C RID: 35644
-		// (get) Token: 0x0601E2D6 RID: 123606 RVA: 0x0043B5C0 File Offset: 0x004397C0
+		// Token: 0x1700923D RID: 37437
+		// (get) Token: 0x0601FE17 RID: 130583 RVA: 0x0046D66C File Offset: 0x0046B86C
 		public int TargetEntityId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E2D7 RID: 123607 RVA: 0x0043B5FC File Offset: 0x004397FC
+		// Token: 0x0601FE18 RID: 130584 RVA: 0x0046D6A8 File Offset: 0x0046B8A8
 		public IDistanceRange? ValidDistanceRanges(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new IDistanceRange?(default(IDistanceRange).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17008B3D RID: 35645
-		// (get) Token: 0x0601E2D8 RID: 123608 RVA: 0x0043B65C File Offset: 0x0043985C
+		// Token: 0x1700923E RID: 37438
+		// (get) Token: 0x0601FE19 RID: 130585 RVA: 0x0046D708 File Offset: 0x0046B908
 		public int ValidDistanceRangesLength
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E2D9 RID: 123609 RVA: 0x0043B687 File Offset: 0x00439887
+		// Token: 0x0601FE1A RID: 130586 RVA: 0x0046D733 File Offset: 0x0046B933
 		public static Offset<ICheckPlayerRelativeDistance> CreateICheckPlayerRelativeDistance(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int TargetEntityId = 0, VectorOffset ValidDistanceRangesOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -114,31 +114,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerRelativeDistance.EndICheckPlayerRelativeDistance(builder);
 		}
 
-		// Token: 0x0601E2DA RID: 123610 RVA: 0x0043B6AB File Offset: 0x004398AB
+		// Token: 0x0601FE1B RID: 130587 RVA: 0x0046D757 File Offset: 0x0046B957
 		public static void StartICheckPlayerRelativeDistance(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E2DB RID: 123611 RVA: 0x0043B6B4 File Offset: 0x004398B4
+		// Token: 0x0601FE1C RID: 130588 RVA: 0x0046D760 File Offset: 0x0046B960
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E2DC RID: 123612 RVA: 0x0043B6BF File Offset: 0x004398BF
+		// Token: 0x0601FE1D RID: 130589 RVA: 0x0046D76B File Offset: 0x0046B96B
 		public static void AddTargetEntityId(FlatBufferBuilder builder, int targetEntityId)
 		{
 			builder.AddInt(1, targetEntityId, 0);
 		}
 
-		// Token: 0x0601E2DD RID: 123613 RVA: 0x0043B6CA File Offset: 0x004398CA
+		// Token: 0x0601FE1E RID: 130590 RVA: 0x0046D776 File Offset: 0x0046B976
 		public static void AddValidDistanceRanges(FlatBufferBuilder builder, VectorOffset validDistanceRangesOffset)
 		{
 			builder.AddOffset(2, validDistanceRangesOffset.Value, 0);
 		}
 
-		// Token: 0x0601E2DE RID: 123614 RVA: 0x0043B6DC File Offset: 0x004398DC
+		// Token: 0x0601FE1F RID: 130591 RVA: 0x0046D788 File Offset: 0x0046B988
 		public static VectorOffset CreateValidDistanceRangesVector(FlatBufferBuilder builder, Offset<IDistanceRange>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E2DF RID: 123615 RVA: 0x0043B71C File Offset: 0x0043991C
+		// Token: 0x0601FE20 RID: 130592 RVA: 0x0046D7C8 File Offset: 0x0046B9C8
 		public static VectorOffset CreateValidDistanceRangesVectorBlock(FlatBufferBuilder builder, Offset<IDistanceRange>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E2E0 RID: 123616 RVA: 0x0043B736 File Offset: 0x00439936
+		// Token: 0x0601FE21 RID: 130593 RVA: 0x0046D7E2 File Offset: 0x0046B9E2
 		public static VectorOffset CreateValidDistanceRangesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IDistanceRange>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E2E1 RID: 123617 RVA: 0x0043B754 File Offset: 0x00439954
+		// Token: 0x0601FE22 RID: 130594 RVA: 0x0046D800 File Offset: 0x0046BA00
 		public static VectorOffset CreateValidDistanceRangesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -173,19 +173,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E2E2 RID: 123618 RVA: 0x0043B76D File Offset: 0x0043996D
+		// Token: 0x0601FE23 RID: 130595 RVA: 0x0046D819 File Offset: 0x0046BA19
 		public static void StartValidDistanceRangesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601E2E3 RID: 123619 RVA: 0x0043B778 File Offset: 0x00439978
+		// Token: 0x0601FE24 RID: 130596 RVA: 0x0046D824 File Offset: 0x0046BA24
 		public static Offset<ICheckPlayerRelativeDistance> EndICheckPlayerRelativeDistance(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckPlayerRelativeDistance>(builder.EndTable());
 		}
 
-		// Token: 0x0601E2E4 RID: 123620 RVA: 0x0043B788 File Offset: 0x00439988
+		// Token: 0x0601FE25 RID: 130597 RVA: 0x0046D834 File Offset: 0x0046BA34
 		public ICheckPlayerRelativeDistanceT UnPack()
 		{
 			ICheckPlayerRelativeDistanceT checkPlayerRelativeDistanceT = new ICheckPlayerRelativeDistanceT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkPlayerRelativeDistanceT;
 		}
 
-		// Token: 0x0601E2E5 RID: 123621 RVA: 0x0043B7A4 File Offset: 0x004399A4
+		// Token: 0x0601FE26 RID: 130598 RVA: 0x0046D850 File Offset: 0x0046BA50
 		public void UnPackTo(ICheckPlayerRelativeDistanceT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E2E6 RID: 123622 RVA: 0x0043B81C File Offset: 0x00439A1C
+		// Token: 0x0601FE27 RID: 130599 RVA: 0x0046D8C8 File Offset: 0x0046BAC8
 		public static Offset<ICheckPlayerRelativeDistance> Pack(FlatBufferBuilder builder, ICheckPlayerRelativeDistanceT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerRelativeDistance.CreateICheckPlayerRelativeDistance(builder, _o.Type, _o.TargetEntityId, validDistanceRangesOffset);
 		}
 
-		// Token: 0x0400D393 RID: 54163
+		// Token: 0x0400DE84 RID: 56964
 		private Table __p;
 	}
 }

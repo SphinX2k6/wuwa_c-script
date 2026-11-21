@@ -5,17 +5,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005B5 RID: 1461
+	// Token: 0x02000620 RID: 1568
 	public class IOperationsAfterEntityGroupFailure_SetValue
 	{
-		// Token: 0x040015E6 RID: 5606
+		// Token: 0x0400175A RID: 5978
 		public bool? IsResetState;
 
-		// Token: 0x040015E7 RID: 5607
+		// Token: 0x0400175B RID: 5979
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> Actions;
 	}

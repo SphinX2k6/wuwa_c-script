@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B5B RID: 19291
+	// Token: 0x02003B03 RID: 15107
 	public class TowerDefenseStrengthenTipsView : GenericPromptFloatTipsBase
 	{
-		// Token: 0x06031F31 RID: 204593 RVA: 0x00B9763E File Offset: 0x00B9583E
+		// Token: 0x06026CC0 RID: 158912 RVA: 0x00ADB87A File Offset: 0x00AD9A7A
 		[NullableContext(1)]
 		public TowerDefenseStrengthenTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06031F32 RID: 204594 RVA: 0x00B97648 File Offset: 0x00B95848
+		// Token: 0x06026CC1 RID: 158913 RVA: 0x00ADB884 File Offset: 0x00AD9A84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031F33 RID: 204595 RVA: 0x00B976B4 File Offset: 0x00B958B4
+		// Token: 0x06026CC2 RID: 158914 RVA: 0x00ADB8F0 File Offset: 0x00AD9AF0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseStrengthenTipsView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F34 RID: 204596 RVA: 0x00B976F8 File Offset: 0x00B958F8
+		// Token: 0x06026CC3 RID: 158915 RVA: 0x00ADB934 File Offset: 0x00AD9B34
 		protected override UniTask OnPlayingStartSequenceAsync()
 		{
 			TowerDefenseStrengthenTipsView.<OnPlayingStartSequenceAsync>d__5 <OnPlayingStartSequenceAsync>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F35 RID: 204597 RVA: 0x00B9773C File Offset: 0x00B9593C
+		// Token: 0x06026CC4 RID: 158916 RVA: 0x00ADB978 File Offset: 0x00AD9B78
 		protected override UniTask OnPlayingCloseSequenceAsync()
 		{
 			TowerDefenseStrengthenTipsView.<OnPlayingCloseSequenceAsync>d__6 <OnPlayingCloseSequenceAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F36 RID: 204598 RVA: 0x00B97780 File Offset: 0x00B95980
+		// Token: 0x06026CC5 RID: 158917 RVA: 0x00ADB9BC File Offset: 0x00AD9BBC
 		private UniTask RefreshTips()
 		{
 			TowerDefenseStrengthenTipsView.<RefreshTips>d__7 <RefreshTips>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <RefreshTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F37 RID: 204599 RVA: 0x00B977C3 File Offset: 0x00B959C3
+		// Token: 0x06026CC6 RID: 158918 RVA: 0x00ADB9FF File Offset: 0x00AD9BFF
 		protected override void SetMainText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 		{
 		}
 
-		// Token: 0x06031F38 RID: 204600 RVA: 0x00B977C5 File Offset: 0x00B959C5
+		// Token: 0x06026CC7 RID: 158919 RVA: 0x00ADBA01 File Offset: 0x00AD9C01
 		protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -95,17 +95,17 @@ namespace CSharpScript.Game.Module.TowerDefence
 		{
 		}
 
-		// Token: 0x0401AA29 RID: 109097
+		// Token: 0x0401537B RID: 86907
 		[Nullable(2)]
 		private TowerDefenseStrengthenTipsItem TipsItem;
 
-		// Token: 0x0200ACE4 RID: 44260
+		// Token: 0x02009703 RID: 38659
 		private class EComponent
 		{
-			// Token: 0x0403488F RID: 215183
+			// Token: 0x0402F238 RID: 193080
 			public const int ItemVerticalLayout = 0;
 
-			// Token: 0x04034890 RID: 215184
+			// Token: 0x0402F239 RID: 193081
 			public const int TipsItem = 1;
 		}
 	}

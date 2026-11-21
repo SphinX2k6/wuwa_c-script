@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x020029D8 RID: 10712
+// Token: 0x02001F53 RID: 8019
 public class ShipTowerStageItemEndless : ShipTowerStageItemBase
 {
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000217 RID: 535
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200023E RID: 574
 	public class ICastConfig
 	{
-		// Token: 0x0600091A RID: 2330 RVA: 0x00028524 File Offset: 0x00026724
+		// Token: 0x0600098E RID: 2446 RVA: 0x00029CE4 File Offset: 0x00027EE4
 		private ICastConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600091B RID: 2331 RVA: 0x0002855C File Offset: 0x0002675C
+		// Token: 0x0600098F RID: 2447 RVA: 0x00029D1C File Offset: 0x00027F1C
 		public static ICastConfig Create([Nullable(2)] ICastConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600091C RID: 2332 RVA: 0x0002856F File Offset: 0x0002676F
+		// Token: 0x06000990 RID: 2448 RVA: 0x00029D2F File Offset: 0x00027F2F
 		public static ICastConfig CreateFromSetValue([Nullable(2)] ICastConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600091D RID: 2333 RVA: 0x00028582 File Offset: 0x00026782
+		// Token: 0x06000991 RID: 2449 RVA: 0x00029D42 File Offset: 0x00027F42
 		public ICastConfig_SetValue ToSetValue()
 		{
 			return new ICastConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002C8 RID: 712
-		// (get) Token: 0x0600091E RID: 2334 RVA: 0x000285AD File Offset: 0x000267AD
-		// (set) Token: 0x0600091F RID: 2335 RVA: 0x000285D8 File Offset: 0x000267D8
+		// Token: 0x170002E7 RID: 743
+		// (get) Token: 0x06000992 RID: 2450 RVA: 0x00029D6D File Offset: 0x00027F6D
+		// (set) Token: 0x06000993 RID: 2451 RVA: 0x00029D98 File Offset: 0x00027F98
 		public virtual int CastAngularVelocity
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002C9 RID: 713
-		// (get) Token: 0x06000920 RID: 2336 RVA: 0x000285E6 File Offset: 0x000267E6
-		// (set) Token: 0x06000921 RID: 2337 RVA: 0x00028611 File Offset: 0x00026811
+		// Token: 0x170002E8 RID: 744
+		// (get) Token: 0x06000994 RID: 2452 RVA: 0x00029DA6 File Offset: 0x00027FA6
+		// (set) Token: 0x06000995 RID: 2453 RVA: 0x00029DD1 File Offset: 0x00027FD1
 		public virtual string CastCameraShake
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002CA RID: 714
-		// (get) Token: 0x06000922 RID: 2338 RVA: 0x0002861F File Offset: 0x0002681F
-		// (set) Token: 0x06000923 RID: 2339 RVA: 0x0002864A File Offset: 0x0002684A
+		// Token: 0x170002E9 RID: 745
+		// (get) Token: 0x06000996 RID: 2454 RVA: 0x00029DDF File Offset: 0x00027FDF
+		// (set) Token: 0x06000997 RID: 2455 RVA: 0x00029E0A File Offset: 0x0002800A
 		public virtual int CastVelocity
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400098C RID: 2444
+		// Token: 0x04000A16 RID: 2582
 		[Nullable(2)]
 		protected ICastConfig FbInstance;
 
-		// Token: 0x0400098D RID: 2445
+		// Token: 0x04000A17 RID: 2583
 		[Nullable(2)]
 		protected ICastConfig_SetValue PocoInterface;
 	}

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Map
 {
-	// Token: 0x0200548A RID: 21642
+	// Token: 0x0200446D RID: 17517
 	public class TilePosition : ITilePosition
 	{
-		// Token: 0x1700847C RID: 33916
-		// (get) Token: 0x06037457 RID: 226391 RVA: 0x00D1DAAC File Offset: 0x00D1BCAC
-		// (set) Token: 0x06037458 RID: 226392 RVA: 0x00D1DAB4 File Offset: 0x00D1BCB4
+		// Token: 0x17005848 RID: 22600
+		// (get) Token: 0x0602C3A1 RID: 181153 RVA: 0x00C6D1A0 File Offset: 0x00C6B3A0
+		// (set) Token: 0x0602C3A2 RID: 181154 RVA: 0x00C6D1A8 File Offset: 0x00C6B3A8
 		public int X { get; set; }
 
-		// Token: 0x1700847D RID: 33917
-		// (get) Token: 0x06037459 RID: 226393 RVA: 0x00D1DABD File Offset: 0x00D1BCBD
-		// (set) Token: 0x0603745A RID: 226394 RVA: 0x00D1DAC5 File Offset: 0x00D1BCC5
+		// Token: 0x17005849 RID: 22601
+		// (get) Token: 0x0602C3A3 RID: 181155 RVA: 0x00C6D1B1 File Offset: 0x00C6B3B1
+		// (set) Token: 0x0602C3A4 RID: 181156 RVA: 0x00C6D1B9 File Offset: 0x00C6B3B9
 		public int Y { get; set; }
 	}
 }

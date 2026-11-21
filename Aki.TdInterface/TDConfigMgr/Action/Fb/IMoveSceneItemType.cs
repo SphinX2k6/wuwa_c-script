@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002824 RID: 10276
+	// Token: 0x02002AF7 RID: 10999
 	public class IMoveSceneItemType
 	{
-		// Token: 0x0600E3EB RID: 58347 RVA: 0x00219213 File Offset: 0x00217413
-		[NullableContext(1)]
+		// Token: 0x0600F210 RID: 61968 RVA: 0x00236077 File Offset: 0x00234277
 		public static IMoveSceneItemType Create(IMoveSceneItemType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004565 RID: 17765
-		// (get) Token: 0x0600E3EC RID: 58348 RVA: 0x00219232 File Offset: 0x00217432
+		// Token: 0x170048D0 RID: 18640
+		// (get) Token: 0x0600F211 RID: 61969 RVA: 0x00236096 File Offset: 0x00234296
 		public virtual EMoveSceneItemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E20 RID: 32288
+		// Token: 0x040084DD RID: 34013
 		private IMoveSceneItemType Instance;
 	}
 }

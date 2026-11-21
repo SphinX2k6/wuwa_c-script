@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FFA RID: 8186
+	// Token: 0x02000655 RID: 1621
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.EToggleState")]
 	public enum EToggleState : byte
 	{
-		// Token: 0x04010C2F RID: 68655
+		// Token: 0x04003DFC RID: 15868
 		ETT_UnChecked,
-		// Token: 0x04010C30 RID: 68656
+		// Token: 0x04003DFD RID: 15869
 		ETT_Checked,
-		// Token: 0x04010C31 RID: 68657
+		// Token: 0x04003DFE RID: 15870
 		ETT_UnDetermined,
-		// Token: 0x04010C32 RID: 68658
+		// Token: 0x04003DFF RID: 15871
 		ETT_MAX
 	}
 }

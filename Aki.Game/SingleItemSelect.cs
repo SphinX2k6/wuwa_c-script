@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002CFD RID: 11517
+// Token: 0x02002257 RID: 8791
 [NullableContext(1)]
 [Nullable(0)]
 public class SingleItemSelect
 {
-	// Token: 0x0601833C RID: 99132 RVA: 0x006286A4 File Offset: 0x006268A4
+	// Token: 0x06015BDD RID: 89053 RVA: 0x0064E66C File Offset: 0x0064C86C
 	public void Init(UUIItem uiItem, ESingleItemSelectViewType openViewType = ESingleItemSelectViewType.Right)
 	{
 		this.ItemGridVariantSelect = new MediumItemGrid();
@@ -39,7 +39,7 @@ public class SingleItemSelect
 		this.ViewOpenData.SelectableComponentData = this.ViewSelectData;
 	}
 
-	// Token: 0x0601833D RID: 99133 RVA: 0x006287B0 File Offset: 0x006269B0
+	// Token: 0x06015BDE RID: 89054 RVA: 0x0064E778 File Offset: 0x0064C978
 	public void OpenItemSelectView()
 	{
 		List<ISelectedData> list = new List<ISelectedData>();
@@ -59,19 +59,19 @@ public class SingleItemSelect
 		UiManager.Instance.OpenView(EUiViewName.CommonItemSelectViewLeft, this.ViewOpenData, null);
 	}
 
-	// Token: 0x0601833E RID: 99134 RVA: 0x00628850 File Offset: 0x00626A50
+	// Token: 0x06015BDF RID: 89055 RVA: 0x0064E818 File Offset: 0x0064CA18
 	public void SetUseWayId(int useWayId)
 	{
 		this.UseWayId = useWayId;
 	}
 
-	// Token: 0x0601833F RID: 99135 RVA: 0x00628859 File Offset: 0x00626A59
+	// Token: 0x06015BE0 RID: 89056 RVA: 0x0064E821 File Offset: 0x0064CA21
 	public void SetInitSortToggleState(bool bSelect)
 	{
 		this.InitSortToggleState = bSelect;
 	}
 
-	// Token: 0x06018340 RID: 99136 RVA: 0x00628862 File Offset: 0x00626A62
+	// Token: 0x06015BE1 RID: 89057 RVA: 0x0064E82A File Offset: 0x0064CA2A
 	private void OnChangeSameMonsterSelectedFunction(List<ISelectedData> currentSelectedData, SelectableExpData expData)
 	{
 		if (currentSelectedData != null && currentSelectedData.Count > 0)
@@ -85,13 +85,13 @@ public class SingleItemSelect
 		this.RefreshCurrentSelectItemGrid();
 	}
 
-	// Token: 0x06018341 RID: 99137 RVA: 0x0062888C File Offset: 0x00626A8C
+	// Token: 0x06015BE2 RID: 89058 RVA: 0x0064E854 File Offset: 0x0064CA54
 	private bool CheckIfCanAdd(List<ISelectedData> currentSelectedData, int uniqueId, int itemId, int count)
 	{
 		return this.CurrentSelectItem == null || uniqueId != this.CurrentSelectItem.IncId || itemId != this.CurrentSelectItem.ItemId || count <= 0;
 	}
 
-	// Token: 0x06018342 RID: 99138 RVA: 0x006288BC File Offset: 0x00626ABC
+	// Token: 0x06015BE3 RID: 89059 RVA: 0x0064E884 File Offset: 0x0064CA84
 	private void RefreshCurrentSelectItemGrid()
 	{
 		if (this.CurrentSelectItem == null)
@@ -154,41 +154,41 @@ public class SingleItemSelect
 		this.OnItemSelectChange(this.CurrentSelectItem);
 	}
 
-	// Token: 0x06018343 RID: 99139 RVA: 0x00628A84 File Offset: 0x00626C84
+	// Token: 0x06015BE4 RID: 89060 RVA: 0x0064EA4C File Offset: 0x0064CC4C
 	public void ClearSelectData()
 	{
 		this.CurrentSelectItem = null;
 		this.RefreshCurrentSelectItemGrid();
 	}
 
-	// Token: 0x06018344 RID: 99140 RVA: 0x00628A93 File Offset: 0x00626C93
+	// Token: 0x06015BE5 RID: 89061 RVA: 0x0064EA5B File Offset: 0x0064CC5B
 	public void SetItemSelectChangeCallBack(Action<ISelectedData> callBack)
 	{
 		this.OnItemSelectChange = callBack;
 	}
 
-	// Token: 0x06018345 RID: 99141 RVA: 0x00628A9C File Offset: 0x00626C9C
+	// Token: 0x06015BE6 RID: 89062 RVA: 0x0064EA64 File Offset: 0x0064CC64
 	public void SetGetItemListFunction(Func<List<ItemDataBase>> func)
 	{
 		this.GetItemList = func;
 	}
 
-	// Token: 0x06018346 RID: 99142 RVA: 0x00628AA5 File Offset: 0x00626CA5
+	// Token: 0x06015BE7 RID: 89063 RVA: 0x0064EA6D File Offset: 0x0064CC6D
 	[NullableContext(2)]
 	public ISelectedData GetCurrentSelectedData()
 	{
 		return this.CurrentSelectItem;
 	}
 
-	// Token: 0x0400B3EC RID: 46060
+	// Token: 0x0400B761 RID: 46945
 	[Nullable(2)]
 	private ISelectedData CurrentSelectItem;
 
-	// Token: 0x0400B3ED RID: 46061
+	// Token: 0x0400B762 RID: 46946
 	[Nullable(2)]
 	private MediumItemGrid ItemGridVariantSelect;
 
-	// Token: 0x0400B3EE RID: 46062
+	// Token: 0x0400B763 RID: 46947
 	[Nullable(new byte[]
 	{
 		2,
@@ -197,7 +197,7 @@ public class SingleItemSelect
 	})]
 	private Func<List<ItemDataBase>> GetItemList;
 
-	// Token: 0x0400B3EF RID: 46063
+	// Token: 0x0400B764 RID: 46948
 	[Nullable(new byte[]
 	{
 		2,
@@ -205,18 +205,18 @@ public class SingleItemSelect
 	})]
 	private Action<ISelectedData> OnItemSelectChange;
 
-	// Token: 0x0400B3F0 RID: 46064
+	// Token: 0x0400B765 RID: 46949
 	private readonly CommonItemSelectViewOpenViewData<ItemDataBase> ViewOpenData = new CommonItemSelectViewOpenViewData<ItemDataBase>();
 
-	// Token: 0x0400B3F1 RID: 46065
+	// Token: 0x0400B766 RID: 46950
 	private readonly SelectableComponentData ViewSelectData = new SelectableComponentData();
 
-	// Token: 0x0400B3F2 RID: 46066
+	// Token: 0x0400B767 RID: 46951
 	private ESingleItemSelectViewType OpenViewType;
 
-	// Token: 0x0400B3F3 RID: 46067
+	// Token: 0x0400B768 RID: 46952
 	private int UseWayId;
 
-	// Token: 0x0400B3F4 RID: 46068
+	// Token: 0x0400B769 RID: 46953
 	private bool InitSortToggleState;
 }

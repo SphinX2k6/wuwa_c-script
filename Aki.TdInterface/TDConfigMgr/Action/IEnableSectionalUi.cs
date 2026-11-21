@@ -6,14 +6,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019EE RID: 6638
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001B81 RID: 7041
 	[JsonConverter(typeof(IEnableSectionalUiConverter))]
 	public class IEnableSectionalUi : IUiOperationType
 	{
-		// Token: 0x06008E21 RID: 36385 RVA: 0x0014C904 File Offset: 0x0014AB04
-		[NullableContext(1)]
+		// Token: 0x06009583 RID: 38275 RVA: 0x0015C774 File Offset: 0x0015A974
 		private IEnableSectionalUi_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,8 +25,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E22 RID: 36386 RVA: 0x0014C93C File Offset: 0x0014AB3C
-		[NullableContext(1)]
+		// Token: 0x06009584 RID: 38276 RVA: 0x0015C7AC File Offset: 0x0015A9AC
 		public static IEnableSectionalUi Create([Nullable(2)] IEnableSectionalUi instance)
 		{
 			if (instance == null)
@@ -42,8 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E23 RID: 36387 RVA: 0x0014C94F File Offset: 0x0014AB4F
-		[NullableContext(1)]
+		// Token: 0x06009585 RID: 38277 RVA: 0x0015C7BF File Offset: 0x0015A9BF
 		public static IEnableSectionalUi CreateFromSetValue([Nullable(2)] IEnableSectionalUi_SetValue value)
 		{
 			if (value == null)
@@ -56,8 +51,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E24 RID: 36388 RVA: 0x0014C964 File Offset: 0x0014AB64
-		[NullableContext(1)]
+		// Token: 0x06009586 RID: 38278 RVA: 0x0015C7D4 File Offset: 0x0015A9D4
 		public new IEnableSectionalUi_SetValue ToSetValue()
 		{
 			return new IEnableSectionalUi_SetValue
@@ -81,9 +75,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D80 RID: 11648
-		// (get) Token: 0x06008E25 RID: 36389 RVA: 0x0014CA36 File Offset: 0x0014AC36
-		// (set) Token: 0x06008E26 RID: 36390 RVA: 0x0014CA61 File Offset: 0x0014AC61
+		// Token: 0x17002F8C RID: 12172
+		// (get) Token: 0x06009587 RID: 38279 RVA: 0x0015C8A6 File Offset: 0x0015AAA6
+		// (set) Token: 0x06009588 RID: 38280 RVA: 0x0015C8D1 File Offset: 0x0015AAD1
 		public override EUiOperationType Type
 		{
 			get
@@ -104,9 +98,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D81 RID: 11649
-		// (get) Token: 0x06008E27 RID: 36391 RVA: 0x0014CA70 File Offset: 0x0014AC70
-		// (set) Token: 0x06008E28 RID: 36392 RVA: 0x0014CAAA File Offset: 0x0014ACAA
+		// Token: 0x17002F8D RID: 12173
+		// (get) Token: 0x06009589 RID: 38281 RVA: 0x0015C8E0 File Offset: 0x0015AAE0
+		// (set) Token: 0x0600958A RID: 38282 RVA: 0x0015C91A File Offset: 0x0015AB1A
 		public virtual bool? ShowMiniMap
 		{
 			get
@@ -128,9 +122,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D82 RID: 11650
-		// (get) Token: 0x06008E29 RID: 36393 RVA: 0x0014CAB8 File Offset: 0x0014ACB8
-		// (set) Token: 0x06008E2A RID: 36394 RVA: 0x0014CAF2 File Offset: 0x0014ACF2
+		// Token: 0x17002F8E RID: 12174
+		// (get) Token: 0x0600958B RID: 38283 RVA: 0x0015C928 File Offset: 0x0015AB28
+		// (set) Token: 0x0600958C RID: 38284 RVA: 0x0015C962 File Offset: 0x0015AB62
 		public virtual bool? ShowQuestTrack
 		{
 			get
@@ -152,9 +146,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D83 RID: 11651
-		// (get) Token: 0x06008E2B RID: 36395 RVA: 0x0014CB00 File Offset: 0x0014AD00
-		// (set) Token: 0x06008E2C RID: 36396 RVA: 0x0014CB3A File Offset: 0x0014AD3A
+		// Token: 0x17002F8F RID: 12175
+		// (get) Token: 0x0600958D RID: 38285 RVA: 0x0015C970 File Offset: 0x0015AB70
+		// (set) Token: 0x0600958E RID: 38286 RVA: 0x0015C9AA File Offset: 0x0015ABAA
 		public virtual bool? ShowEsc
 		{
 			get
@@ -176,9 +170,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D84 RID: 11652
-		// (get) Token: 0x06008E2D RID: 36397 RVA: 0x0014CB48 File Offset: 0x0014AD48
-		// (set) Token: 0x06008E2E RID: 36398 RVA: 0x0014CB82 File Offset: 0x0014AD82
+		// Token: 0x17002F90 RID: 12176
+		// (get) Token: 0x0600958F RID: 38287 RVA: 0x0015C9B8 File Offset: 0x0015ABB8
+		// (set) Token: 0x06009590 RID: 38288 RVA: 0x0015C9F2 File Offset: 0x0015ABF2
 		public virtual bool? ShowSystem
 		{
 			get
@@ -200,9 +194,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D85 RID: 11653
-		// (get) Token: 0x06008E2F RID: 36399 RVA: 0x0014CB90 File Offset: 0x0014AD90
-		// (set) Token: 0x06008E30 RID: 36400 RVA: 0x0014CBCA File Offset: 0x0014ADCA
+		// Token: 0x17002F91 RID: 12177
+		// (get) Token: 0x06009591 RID: 38289 RVA: 0x0015CA00 File Offset: 0x0015AC00
+		// (set) Token: 0x06009592 RID: 38290 RVA: 0x0015CA3A File Offset: 0x0015AC3A
 		public virtual bool? ShowScreenEffect
 		{
 			get
@@ -224,9 +218,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D86 RID: 11654
-		// (get) Token: 0x06008E31 RID: 36401 RVA: 0x0014CBD8 File Offset: 0x0014ADD8
-		// (set) Token: 0x06008E32 RID: 36402 RVA: 0x0014CC12 File Offset: 0x0014AE12
+		// Token: 0x17002F92 RID: 12178
+		// (get) Token: 0x06009593 RID: 38291 RVA: 0x0015CA48 File Offset: 0x0015AC48
+		// (set) Token: 0x06009594 RID: 38292 RVA: 0x0015CA82 File Offset: 0x0015AC82
 		public virtual bool? ShowRoleFormation
 		{
 			get
@@ -248,9 +242,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D87 RID: 11655
-		// (get) Token: 0x06008E33 RID: 36403 RVA: 0x0014CC20 File Offset: 0x0014AE20
-		// (set) Token: 0x06008E34 RID: 36404 RVA: 0x0014CC5A File Offset: 0x0014AE5A
+		// Token: 0x17002F93 RID: 12179
+		// (get) Token: 0x06009595 RID: 38293 RVA: 0x0015CA90 File Offset: 0x0015AC90
+		// (set) Token: 0x06009596 RID: 38294 RVA: 0x0015CACA File Offset: 0x0015ACCA
 		public virtual bool? ShowRoleStatus
 		{
 			get
@@ -272,9 +266,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D88 RID: 11656
-		// (get) Token: 0x06008E35 RID: 36405 RVA: 0x0014CC68 File Offset: 0x0014AE68
-		// (set) Token: 0x06008E36 RID: 36406 RVA: 0x0014CCA2 File Offset: 0x0014AEA2
+		// Token: 0x17002F94 RID: 12180
+		// (get) Token: 0x06009597 RID: 38295 RVA: 0x0015CAD8 File Offset: 0x0015ACD8
+		// (set) Token: 0x06009598 RID: 38296 RVA: 0x0015CB12 File Offset: 0x0015AD12
 		public virtual bool? ShowBossStatus
 		{
 			get
@@ -296,9 +290,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D89 RID: 11657
-		// (get) Token: 0x06008E37 RID: 36407 RVA: 0x0014CCB0 File Offset: 0x0014AEB0
-		// (set) Token: 0x06008E38 RID: 36408 RVA: 0x0014CCEA File Offset: 0x0014AEEA
+		// Token: 0x17002F95 RID: 12181
+		// (get) Token: 0x06009599 RID: 38297 RVA: 0x0015CB20 File Offset: 0x0015AD20
+		// (set) Token: 0x0600959A RID: 38298 RVA: 0x0015CB5A File Offset: 0x0015AD5A
 		public virtual bool? ShowGuideLayer
 		{
 			get
@@ -320,9 +314,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D8A RID: 11658
-		// (get) Token: 0x06008E39 RID: 36409 RVA: 0x0014CCF8 File Offset: 0x0014AEF8
-		// (set) Token: 0x06008E3A RID: 36410 RVA: 0x0014CD32 File Offset: 0x0014AF32
+		// Token: 0x17002F96 RID: 12182
+		// (get) Token: 0x0600959B RID: 38299 RVA: 0x0015CB68 File Offset: 0x0015AD68
+		// (set) Token: 0x0600959C RID: 38300 RVA: 0x0015CBA2 File Offset: 0x0015ADA2
 		public virtual bool? ShowMonsterHpBar
 		{
 			get
@@ -344,9 +338,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D8B RID: 11659
-		// (get) Token: 0x06008E3B RID: 36411 RVA: 0x0014CD40 File Offset: 0x0014AF40
-		// (set) Token: 0x06008E3C RID: 36412 RVA: 0x0014CD7A File Offset: 0x0014AF7A
+		// Token: 0x17002F97 RID: 12183
+		// (get) Token: 0x0600959D RID: 38301 RVA: 0x0015CBB0 File Offset: 0x0015ADB0
+		// (set) Token: 0x0600959E RID: 38302 RVA: 0x0015CBEA File Offset: 0x0015ADEA
 		public virtual bool? ShowDamageText
 		{
 			get
@@ -368,9 +362,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D8C RID: 11660
-		// (get) Token: 0x06008E3D RID: 36413 RVA: 0x0014CD88 File Offset: 0x0014AF88
-		// (set) Token: 0x06008E3E RID: 36414 RVA: 0x0014CDC2 File Offset: 0x0014AFC2
+		// Token: 0x17002F98 RID: 12184
+		// (get) Token: 0x0600959F RID: 38303 RVA: 0x0015CBF8 File Offset: 0x0015ADF8
+		// (set) Token: 0x060095A0 RID: 38304 RVA: 0x0015CC32 File Offset: 0x0015AE32
 		public virtual bool? ShowPing
 		{
 			get
@@ -392,9 +386,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D8D RID: 11661
-		// (get) Token: 0x06008E3F RID: 36415 RVA: 0x0014CDD0 File Offset: 0x0014AFD0
-		// (set) Token: 0x06008E40 RID: 36416 RVA: 0x0014CE0A File Offset: 0x0014B00A
+		// Token: 0x17002F99 RID: 12185
+		// (get) Token: 0x060095A1 RID: 38305 RVA: 0x0015CC40 File Offset: 0x0015AE40
+		// (set) Token: 0x060095A2 RID: 38306 RVA: 0x0015CC7A File Offset: 0x0015AE7A
 		public virtual bool? ShowOther
 		{
 			get
@@ -416,11 +410,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D8E RID: 11662
-		// (get) Token: 0x06008E41 RID: 36417 RVA: 0x0014CE18 File Offset: 0x0014B018
-		// (set) Token: 0x06008E42 RID: 36418 RVA: 0x0014CE3F File Offset: 0x0014B03F
+		// Token: 0x17002F9A RID: 12186
+		// (get) Token: 0x060095A3 RID: 38307 RVA: 0x0015CC88 File Offset: 0x0015AE88
+		// (set) Token: 0x060095A4 RID: 38308 RVA: 0x0015CCAF File Offset: 0x0015AEAF
+		[Nullable(2)]
 		public virtual List<EUiElement> AlwaysShowUiSections
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -434,15 +430,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.AlwaysShowUiSections;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().AlwaysShowUiSections = value;
 			}
 		}
 
-		// Token: 0x17002D8F RID: 11663
-		// (get) Token: 0x06008E43 RID: 36419 RVA: 0x0014CE50 File Offset: 0x0014B050
-		// (set) Token: 0x06008E44 RID: 36420 RVA: 0x0014CE8A File Offset: 0x0014B08A
+		// Token: 0x17002F9B RID: 12187
+		// (get) Token: 0x060095A5 RID: 38309 RVA: 0x0015CCC0 File Offset: 0x0015AEC0
+		// (set) Token: 0x060095A6 RID: 38310 RVA: 0x0015CCFA File Offset: 0x0015AEFA
 		public virtual bool? ShowPositionOfficial
 		{
 			get
@@ -464,10 +461,12 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005829 RID: 22569
+		// Token: 0x04005C8B RID: 23691
+		[Nullable(2)]
 		protected new IEnableSectionalUi FbInstance;
 
-		// Token: 0x0400582A RID: 22570
+		// Token: 0x04005C8C RID: 23692
+		[Nullable(2)]
 		protected new IEnableSectionalUi_SetValue PocoInterface;
 	}
 }

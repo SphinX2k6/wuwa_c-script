@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006314 RID: 25364
+	// Token: 0x02005292 RID: 21138
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballRoleLevelUpButtonItem : UiPanelBase
 	{
-		// Token: 0x0603FD03 RID: 261379 RVA: 0x00F6FF1C File Offset: 0x00F6E11C
+		// Token: 0x060349C4 RID: 215492 RVA: 0x00EB6E78 File Offset: 0x00EB5078
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FD04 RID: 261380 RVA: 0x00F6FF88 File Offset: 0x00F6E188
+		// Token: 0x060349C5 RID: 215493 RVA: 0x00EB6EE4 File Offset: 0x00EB50E4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballRoleLevelUpButtonItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD05 RID: 261381 RVA: 0x00F6FFCC File Offset: 0x00F6E1CC
+		// Token: 0x060349C6 RID: 215494 RVA: 0x00EB6F28 File Offset: 0x00EB5128
 		[NullableContext(1)]
 		public void Refresh(IPinballRoleLevelUpButtonItemData data)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			}
 		}
 
-		// Token: 0x0603FD06 RID: 261382 RVA: 0x00F70098 File Offset: 0x00F6E298
+		// Token: 0x060349C7 RID: 215495 RVA: 0x00EB6FF4 File Offset: 0x00EB51F4
 		private void OnConfirm()
 		{
 			if (this.Data == null)
@@ -104,22 +104,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.Data.ConfirmDelegate(this.Data.Times);
 		}
 
-		// Token: 0x040214C9 RID: 136393
+		// Token: 0x0401BDF8 RID: 114168
 		private IPinballRoleLevelUpButtonItemData Data;
 
-		// Token: 0x040214CA RID: 136394
+		// Token: 0x0401BDF9 RID: 114169
 		private ButtonItem ConfirmButtonItem;
 
-		// Token: 0x040214CB RID: 136395
+		// Token: 0x0401BDFA RID: 114170
 		private CostItem CostItemPanel;
 
-		// Token: 0x0200C506 RID: 50438
+		// Token: 0x0200AEED RID: 44781
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B764 RID: 243556
+			// Token: 0x040360C6 RID: 221382
 			ConfirmButtonItem,
-			// Token: 0x0403B765 RID: 243557
+			// Token: 0x040360C7 RID: 221383
 			CostItem
 		}
 	}

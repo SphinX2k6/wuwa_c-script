@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042C4 RID: 17092
+	// Token: 0x02004720 RID: 18208
 	public class TCommonEventTypeUnion
 	{
-		// Token: 0x17007937 RID: 31031
-		// (get) Token: 0x0601959F RID: 103839 RVA: 0x003A35AB File Offset: 0x003A17AB
-		// (set) Token: 0x060195A0 RID: 103840 RVA: 0x003A35B3 File Offset: 0x003A17B3
+		// Token: 0x17007F68 RID: 32616
+		// (get) Token: 0x0601AD0B RID: 109835 RVA: 0x003CEC83 File Offset: 0x003CCE83
+		// (set) Token: 0x0601AD0C RID: 109836 RVA: 0x003CEC8B File Offset: 0x003CCE8B
 		public TCommonEventType Type { get; set; }
 
-		// Token: 0x17007938 RID: 31032
-		// (get) Token: 0x060195A1 RID: 103841 RVA: 0x003A35BC File Offset: 0x003A17BC
-		// (set) Token: 0x060195A2 RID: 103842 RVA: 0x003A35C4 File Offset: 0x003A17C4
+		// Token: 0x17007F69 RID: 32617
+		// (get) Token: 0x0601AD0D RID: 109837 RVA: 0x003CEC94 File Offset: 0x003CCE94
+		// (set) Token: 0x0601AD0E RID: 109838 RVA: 0x003CEC9C File Offset: 0x003CCE9C
 		public object Value { get; set; }
 
-		// Token: 0x060195A3 RID: 103843 RVA: 0x003A35CD File Offset: 0x003A17CD
+		// Token: 0x0601AD0F RID: 109839 RVA: 0x003CECA5 File Offset: 0x003CCEA5
 		public TCommonEventTypeUnion()
 		{
 			this.Type = TCommonEventType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060195A4 RID: 103844 RVA: 0x003A35E3 File Offset: 0x003A17E3
+		// Token: 0x0601AD10 RID: 109840 RVA: 0x003CECBB File Offset: 0x003CCEBB
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060195A5 RID: 103845 RVA: 0x003A35F5 File Offset: 0x003A17F5
+		// Token: 0x0601AD11 RID: 109841 RVA: 0x003CECCD File Offset: 0x003CCECD
 		public ICommonEventEntityStateChangeT AsICommonEventEntityStateChange()
 		{
 			return this.As<ICommonEventEntityStateChangeT>();
 		}
 
-		// Token: 0x060195A6 RID: 103846 RVA: 0x003A35FD File Offset: 0x003A17FD
+		// Token: 0x0601AD12 RID: 109842 RVA: 0x003CECD5 File Offset: 0x003CCED5
 		public static TCommonEventTypeUnion FromICommonEventEntityStateChange(ICommonEventEntityStateChangeT _icommonevententitystatechange)
 		{
 			return new TCommonEventTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060195A7 RID: 103847 RVA: 0x003A3612 File Offset: 0x003A1812
+		// Token: 0x0601AD13 RID: 109843 RVA: 0x003CECEA File Offset: 0x003CCEEA
 		public ICommonEventVarValueChangeT AsICommonEventVarValueChange()
 		{
 			return this.As<ICommonEventVarValueChangeT>();
 		}
 
-		// Token: 0x060195A8 RID: 103848 RVA: 0x003A361A File Offset: 0x003A181A
+		// Token: 0x0601AD14 RID: 109844 RVA: 0x003CECF2 File Offset: 0x003CCEF2
 		public static TCommonEventTypeUnion FromICommonEventVarValueChange(ICommonEventVarValueChangeT _icommoneventvarvaluechange)
 		{
 			return new TCommonEventTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060195A9 RID: 103849 RVA: 0x003A3630 File Offset: 0x003A1830
+		// Token: 0x0601AD15 RID: 109845 RVA: 0x003CED08 File Offset: 0x003CCF08
 		public static int Pack(FlatBufferBuilder builder, TCommonEventTypeUnion _o)
 		{
 			TCommonEventType type = _o.Type;

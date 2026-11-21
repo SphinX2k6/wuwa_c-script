@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050D3 RID: 20691
+	// Token: 0x020040A3 RID: 16547
 	public class FlowActionSetNpcGroupPerform : FlowActionBase
 	{
-		// Token: 0x06034F36 RID: 216886 RVA: 0x00C8AD60 File Offset: 0x00C88F60
+		// Token: 0x06029E2F RID: 171567 RVA: 0x00BD8048 File Offset: 0x00BD6248
 		protected unsafe override void OnExecute()
 		{
 			FlowDefineNpcGroupPerform flowDefineNpcGroupPerform = this.ActionInfo.Params as FlowDefineNpcGroupPerform;
@@ -81,13 +81,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034F37 RID: 216887 RVA: 0x00C8AEEA File Offset: 0x00C890EA
+		// Token: 0x06029E30 RID: 171568 RVA: 0x00BD81D2 File Offset: 0x00BD63D2
 		protected override void OnInterruptExecute()
 		{
 			this.OnExecute();
 		}
 
-		// Token: 0x06034F38 RID: 216888 RVA: 0x00C8AEF2 File Offset: 0x00C890F2
+		// Token: 0x06029E31 RID: 171569 RVA: 0x00BD81DA File Offset: 0x00BD63DA
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

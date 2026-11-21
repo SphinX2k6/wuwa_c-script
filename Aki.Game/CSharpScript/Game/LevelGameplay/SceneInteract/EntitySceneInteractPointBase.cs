@@ -4,36 +4,36 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 {
-	// Token: 0x02006A6F RID: 27247
+	// Token: 0x02005BCC RID: 23500
 	public abstract class EntitySceneInteractPointBase : IEntitySceneInteractPoint, ISceneInteractPoint
 	{
-		// Token: 0x06043BD4 RID: 277460 RVA: 0x01094A50 File Offset: 0x01092C50
+		// Token: 0x06039C22 RID: 236578 RVA: 0x0103927C File Offset: 0x0103747C
 		public virtual ESceneInteractSearchStrategyType? GetPointStrategyType()
 		{
 			return null;
 		}
 
-		// Token: 0x06043BD5 RID: 277461 RVA: 0x01094A66 File Offset: 0x01092C66
+		// Token: 0x06039C23 RID: 236579 RVA: 0x01039292 File Offset: 0x01037492
 		public virtual ESceneInteractType GetInteractType()
 		{
 			return ESceneInteractType.None;
 		}
 
-		// Token: 0x06043BD6 RID: 277462 RVA: 0x01094A69 File Offset: 0x01092C69
+		// Token: 0x06039C24 RID: 236580 RVA: 0x01039295 File Offset: 0x01037495
 		public virtual void Init()
 		{
 		}
 
-		// Token: 0x06043BD7 RID: 277463 RVA: 0x01094A6B File Offset: 0x01092C6B
+		// Token: 0x06039C25 RID: 236581 RVA: 0x01039297 File Offset: 0x01037497
 		public virtual void Clear()
 		{
 		}
 
-		// Token: 0x06043BD8 RID: 277464
+		// Token: 0x06039C26 RID: 236582
 		[NullableContext(1)]
 		public abstract EntityHandle GetEntityHandle();
 
-		// Token: 0x06043BD9 RID: 277465 RVA: 0x01094A6D File Offset: 0x01092C6D
+		// Token: 0x06039C27 RID: 236583 RVA: 0x01039299 File Offset: 0x01037499
 		public int GetEntityId()
 		{
 			EntityHandle entityHandle = this.GetEntityHandle();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return entityHandle.Id;
 		}
 
-		// Token: 0x06043BDA RID: 277466 RVA: 0x01094A80 File Offset: 0x01092C80
+		// Token: 0x06039C28 RID: 236584 RVA: 0x010392AC File Offset: 0x010374AC
 		[NullableContext(2)]
 		public virtual AActor GetOwnerActor()
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return component.Owner;
 		}
 
-		// Token: 0x06043BDB RID: 277467 RVA: 0x01094AA4 File Offset: 0x01092CA4
+		// Token: 0x06039C29 RID: 236585 RVA: 0x010392D0 File Offset: 0x010374D0
 		[NullableContext(2)]
 		public virtual Vector GetLocation()
 		{
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return this.Location;
 		}
 
-		// Token: 0x0402363D RID: 144957
+		// Token: 0x0401E82F RID: 124975
 		[Nullable(2)]
 		private Vector Location;
 	}

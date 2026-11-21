@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A42 RID: 6722
+	// Token: 0x02001BD7 RID: 7127
 	public class IFadeBackgroundFadeInEffectBlack_SetValue
 	{
-		// Token: 0x040058F0 RID: 22768
+		// Token: 0x04005D55 RID: 23893
 		public EFadeBackgroundFadeInEffectType Type;
 
-		// Token: 0x040058F1 RID: 22769
+		// Token: 0x04005D56 RID: 23894
 		public EFadeInScreenShowType FadeColor;
 
-		// Token: 0x040058F2 RID: 22770
+		// Token: 0x04005D57 RID: 23895
 		public float? FadeInTime;
 
-		// Token: 0x040058F3 RID: 22771
+		// Token: 0x04005D58 RID: 23896
 		public float? FadeOutTime;
 	}
 }

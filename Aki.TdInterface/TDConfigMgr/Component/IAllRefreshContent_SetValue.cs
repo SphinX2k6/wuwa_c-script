@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001BE RID: 446
+	// Token: 0x020001E1 RID: 481
 	public class IAllRefreshContent_SetValue
 	{
-		// Token: 0x0400086C RID: 2156
+		// Token: 0x040008E0 RID: 2272
 		public ERefreshContent Type;
 
-		// Token: 0x0400086D RID: 2157
-		[Nullable(1)]
+		// Token: 0x040008E1 RID: 2273
 		public List<int> EntityIds;
 
-		// Token: 0x0400086E RID: 2158
+		// Token: 0x040008E2 RID: 2274
 		public bool? EdEnableSyncCamp;
 	}
 }

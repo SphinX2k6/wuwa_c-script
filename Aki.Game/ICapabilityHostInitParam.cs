@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000238 RID: 568
+// Token: 0x0200023C RID: 572
 [NullableContext(2)]
 public interface ICapabilityHostInitParam
 {
-	// Token: 0x1700053B RID: 1339
-	// (get) Token: 0x060022F4 RID: 8948
-	// (set) Token: 0x060022F5 RID: 8949
+	// Token: 0x17000562 RID: 1378
+	// (get) Token: 0x060023AC RID: 9132
+	// (set) Token: 0x060023AD RID: 9133
 	[Nullable(1)]
 	object Id { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x1700053C RID: 1340
-	// (get) Token: 0x060022F6 RID: 8950
-	// (set) Token: 0x060022F7 RID: 8951
+	// Token: 0x17000563 RID: 1379
+	// (get) Token: 0x060023AE RID: 9134
+	// (set) Token: 0x060023AF RID: 9135
 	Func<bool> IsValid { get; set; }
 
-	// Token: 0x1700053D RID: 1341
-	// (get) Token: 0x060022F8 RID: 8952
-	// (set) Token: 0x060022F9 RID: 8953
+	// Token: 0x17000564 RID: 1380
+	// (get) Token: 0x060023B0 RID: 9136
+	// (set) Token: 0x060023B1 RID: 9137
 	Func<AActor> GetBoundActor { get; set; }
 }

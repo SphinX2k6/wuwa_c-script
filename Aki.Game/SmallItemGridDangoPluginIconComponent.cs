@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02001971 RID: 6513
+// Token: 0x02000E2E RID: 3630
 public class SmallItemGridDangoPluginIconComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BEC3 RID: 48835 RVA: 0x002B2954 File Offset: 0x002B0B54
+	// Token: 0x060092CB RID: 37579 RVA: 0x002BD8D8 File Offset: 0x002BBAD8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,27 +22,27 @@ public class SmallItemGridDangoPluginIconComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BEC4 RID: 48836 RVA: 0x002B29BD File Offset: 0x002B0BBD
+	// Token: 0x060092CC RID: 37580 RVA: 0x002BD941 File Offset: 0x002BBB41
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.UnderText;
 	}
 
-	// Token: 0x0600BEC5 RID: 48837 RVA: 0x002B29C0 File Offset: 0x002B0BC0
+	// Token: 0x060092CD RID: 37581 RVA: 0x002BD944 File Offset: 0x002BBB44
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemChipIcon";
 	}
 
-	// Token: 0x0600BEC6 RID: 48838 RVA: 0x002B29C7 File Offset: 0x002B0BC7
+	// Token: 0x060092CE RID: 37582 RVA: 0x002BD94B File Offset: 0x002BBB4B
 	[NullableContext(1)]
 	public void RefreshByInfo(IDangoPluginIconInfo dangoPluginIconInfo)
 	{
 		this.OnRefresh(dangoPluginIconInfo);
 	}
 
-	// Token: 0x0600BEC7 RID: 48839 RVA: 0x002B29D0 File Offset: 0x002B0BD0
+	// Token: 0x060092CF RID: 37583 RVA: 0x002BD954 File Offset: 0x002BBB54
 	[NullableContext(2)]
 	protected override void OnRefresh(object tempData)
 	{
@@ -67,12 +67,12 @@ public class SmallItemGridDangoPluginIconComponent : SmallItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007EC0 RID: 32448
+	// Token: 0x0200704F RID: 28751
 	private enum EChildType
 	{
-		// Token: 0x040296F9 RID: 169721
+		// Token: 0x04024A36 RID: 150070
 		TextureQuality,
-		// Token: 0x040296FA RID: 169722
+		// Token: 0x04024A37 RID: 150071
 		TextureMain
 	}
 }

@@ -12,13 +12,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EBE RID: 20158
+	// Token: 0x02003E87 RID: 16007
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class RogueBattleController : UiControllerBase
 	{
-		// Token: 0x06033C37 RID: 212023 RVA: 0x00C2087C File Offset: 0x00C1EA7C
+		// Token: 0x06028AA2 RID: 166562 RVA: 0x00B69D94 File Offset: 0x00B67F94
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.RogueResRoomInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRogueRoomInfoNotify));
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			Net.Instance.Register(ENotifyMessageId.RogueResFormationUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRogueResFormationUpdateNotify));
 		}
 
-		// Token: 0x06033C38 RID: 212024 RVA: 0x00C20934 File Offset: 0x00C1EB34
+		// Token: 0x06028AA3 RID: 166563 RVA: 0x00B69E4C File Offset: 0x00B6804C
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.RogueResRoomInfoNotify);
@@ -40,46 +40,46 @@ namespace CSharpScript.Game.Module.RogueBattle
 			Net.Instance.UnRegister(ENotifyMessageId.RogueResFormationUpdateNotify);
 		}
 
-		// Token: 0x06033C39 RID: 212025 RVA: 0x00C209A1 File Offset: 0x00C1EBA1
+		// Token: 0x06028AA4 RID: 166564 RVA: 0x00B69EB9 File Offset: 0x00B680B9
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.LeaveInstanceDungeon, new Action(this.OnLeaveInstanceDungeon));
 		}
 
-		// Token: 0x06033C3A RID: 212026 RVA: 0x00C209BF File Offset: 0x00C1EBBF
+		// Token: 0x06028AA5 RID: 166565 RVA: 0x00B69ED7 File Offset: 0x00B680D7
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.LeaveInstanceDungeon, new Action(this.OnLeaveInstanceDungeon));
 		}
 
-		// Token: 0x06033C3B RID: 212027 RVA: 0x00C209DD File Offset: 0x00C1EBDD
+		// Token: 0x06028AA6 RID: 166566 RVA: 0x00B69EF5 File Offset: 0x00B680F5
 		protected void OnLeaveInstanceDungeon()
 		{
 			RogueBattleModel.Instance.ClearData();
 		}
 
-		// Token: 0x06033C3C RID: 212028 RVA: 0x00C209EC File Offset: 0x00C1EBEC
+		// Token: 0x06028AA7 RID: 166567 RVA: 0x00B69F04 File Offset: 0x00B68104
 		protected void OnRogueResRoleBondUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResRoleBondUpdateNotify notify = (RogueResRoleBondUpdateNotify)msg;
 			RogueBattleModel.Instance.UpdateFetterData(notify);
 		}
 
-		// Token: 0x06033C3D RID: 212029 RVA: 0x00C20A0C File Offset: 0x00C1EC0C
+		// Token: 0x06028AA8 RID: 166568 RVA: 0x00B69F24 File Offset: 0x00B68124
 		protected void OnRogueResElementUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResElementUpdateNotify notify = (RogueResElementUpdateNotify)msg;
 			RogueBattleModel.Instance.UpdateElementData(notify);
 		}
 
-		// Token: 0x06033C3E RID: 212030 RVA: 0x00C20A2C File Offset: 0x00C1EC2C
+		// Token: 0x06028AA9 RID: 166569 RVA: 0x00B69F44 File Offset: 0x00B68144
 		protected void OnRogueResGainDataUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResGainDataUpdateNotify data = (RogueResGainDataUpdateNotify)msg;
 			RogueBattleModel.Instance.UpdateGainData(data);
 		}
 
-		// Token: 0x06033C3F RID: 212031 RVA: 0x00C20A4C File Offset: 0x00C1EC4C
+		// Token: 0x06028AAA RID: 166570 RVA: 0x00B69F64 File Offset: 0x00B68164
 		protected void OnRogueRoomInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResRoomInfoNotify rogueResRoomInfoNotify = (RogueResRoomInfoNotify)msg;
@@ -103,14 +103,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			WeatherController.Instance.StopWeather();
 		}
 
-		// Token: 0x06033C40 RID: 212032 RVA: 0x00C20B28 File Offset: 0x00C1ED28
+		// Token: 0x06028AAB RID: 166571 RVA: 0x00B6A040 File Offset: 0x00B68240
 		protected void OnRogueResInstOptionsUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResInstOptionsUpdateNotify data = (RogueResInstOptionsUpdateNotify)msg;
 			RogueBattleModel.Instance.UpdateOptionData(data);
 		}
 
-		// Token: 0x06033C41 RID: 212033 RVA: 0x00C20B48 File Offset: 0x00C1ED48
+		// Token: 0x06028AAC RID: 166572 RVA: 0x00B6A060 File Offset: 0x00B68260
 		protected void OnRogueResFormationUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueResFormationUpdateNotify rogueResFormationUpdateNotify = (RogueResFormationUpdateNotify)msg;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033C42 RID: 212034 RVA: 0x00C20B8C File Offset: 0x00C1ED8C
+		// Token: 0x06028AAD RID: 166573 RVA: 0x00B6A0A4 File Offset: 0x00B682A4
 		public UniTask GotoNextRoomRequest()
 		{
 			RogueBattleController.<GotoNextRoomRequest>d__11 <GotoNextRoomRequest>d__;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <GotoNextRoomRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033C43 RID: 212035 RVA: 0x00C20BC8 File Offset: 0x00C1EDC8
+		// Token: 0x06028AAE RID: 166574 RVA: 0x00B6A0E0 File Offset: 0x00B682E0
 		public UniTask SwitchFormationRequest(int index)
 		{
 			RogueBattleController.<SwitchFormationRequest>d__12 <SwitchFormationRequest>d__;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <SwitchFormationRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033C44 RID: 212036 RVA: 0x00C20C0C File Offset: 0x00C1EE0C
+		// Token: 0x06028AAF RID: 166575 RVA: 0x00B6A124 File Offset: 0x00B68324
 		[NullableContext(1)]
 		public UniTask ChangeFormationAllListRequest(int formationIndex, List<int> roleIdList)
 		{
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <ChangeFormationAllListRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033C45 RID: 212037 RVA: 0x00C20C58 File Offset: 0x00C1EE58
+		// Token: 0x06028AB0 RID: 166576 RVA: 0x00B6A170 File Offset: 0x00B68370
 		public UniTask ChangeFormationRequest(int formationIndex, int position, int roleId)
 		{
 			RogueBattleController.<ChangeFormationRequest>d__14 <ChangeFormationRequest>d__;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <ChangeFormationRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033C46 RID: 212038 RVA: 0x00C20CAC File Offset: 0x00C1EEAC
+		// Token: 0x06028AB1 RID: 166577 RVA: 0x00B6A1C4 File Offset: 0x00B683C4
 		public UniTask SelectTokenRequest(int index)
 		{
 			RogueBattleController.<SelectTokenRequest>d__15 <SelectTokenRequest>d__;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <SelectTokenRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033C47 RID: 212039 RVA: 0x00C20CF0 File Offset: 0x00C1EEF0
+		// Token: 0x06028AB2 RID: 166578 RVA: 0x00B6A208 File Offset: 0x00B68408
 		[NullableContext(0)]
 		public UniTask<bool> OpenBuffSelectViewById(int bindId)
 		{
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OpenBuffSelectViewById>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033C48 RID: 212040 RVA: 0x00C20D3C File Offset: 0x00C1EF3C
+		// Token: 0x06028AB3 RID: 166579 RVA: 0x00B6A254 File Offset: 0x00B68454
 		public EUiViewName? GetViewNameByGainType(RogueResDataType type)
 		{
 			switch (type)
@@ -214,8 +214,8 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return null;
 		}
 
-		// Token: 0x17007EE0 RID: 32480
-		// (get) Token: 0x06033C49 RID: 212041 RVA: 0x00C20DD6 File Offset: 0x00C1EFD6
+		// Token: 0x17005290 RID: 21136
+		// (get) Token: 0x06028AB4 RID: 166580 RVA: 0x00B6A2EE File Offset: 0x00B684EE
 		[Nullable(1)]
 		public static RogueBattleController Instance
 		{
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033C4A RID: 212042 RVA: 0x00C20DDD File Offset: 0x00C1EFDD
+		// Token: 0x06028AB5 RID: 166581 RVA: 0x00B6A2F5 File Offset: 0x00B684F5
 		[NullableContext(1)]
 		public static RogueBattleController GetOrCreateInstance()
 		{
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return RogueBattleController._Instance;
 		}
 
-		// Token: 0x06033C4B RID: 212043 RVA: 0x00C20DF1 File Offset: 0x00C1EFF1
+		// Token: 0x06028AB6 RID: 166582 RVA: 0x00B6A309 File Offset: 0x00B68509
 		public static bool CreateInstance()
 		{
 			if (RogueBattleController._Instance != null)
@@ -248,24 +248,24 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return true;
 		}
 
-		// Token: 0x06033C4C RID: 212044 RVA: 0x00C20E07 File Offset: 0x00C1F007
+		// Token: 0x06028AB7 RID: 166583 RVA: 0x00B6A31F File Offset: 0x00B6851F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06033C4D RID: 212045 RVA: 0x00C20E09 File Offset: 0x00C1F009
+		// Token: 0x06028AB8 RID: 166584 RVA: 0x00B6A321 File Offset: 0x00B68521
 		public static void ResetStaticDefaultValue()
 		{
 			RogueBattleController._Instance = null;
 		}
 
-		// Token: 0x06033C4E RID: 212046 RVA: 0x00C20E11 File Offset: 0x00C1F011
+		// Token: 0x06028AB9 RID: 166585 RVA: 0x00B6A329 File Offset: 0x00B68529
 		static RogueBattleController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RogueBattleController.CreateStaticDefaultValue), new Action(RogueBattleController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B815 RID: 112661
+		// Token: 0x040161E8 RID: 90600
 		private static RogueBattleController _Instance;
 	}
 }

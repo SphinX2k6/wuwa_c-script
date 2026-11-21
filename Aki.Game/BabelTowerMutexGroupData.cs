@@ -2,33 +2,33 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001139 RID: 4409
+// Token: 0x020005ED RID: 1517
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerMutexGroupData : IBabelTowerMutexGroupData
 {
-	// Token: 0x170009FE RID: 2558
-	// (get) Token: 0x060073D3 RID: 29651 RVA: 0x0017BB77 File Offset: 0x00179D77
-	// (set) Token: 0x060073D4 RID: 29652 RVA: 0x0017BB7F File Offset: 0x00179D7F
+	// Token: 0x17000A1E RID: 2590
+	// (get) Token: 0x0600476A RID: 18282 RVA: 0x001846C5 File Offset: 0x001828C5
+	// (set) Token: 0x0600476B RID: 18283 RVA: 0x001846CD File Offset: 0x001828CD
 	public int MutexId { get; set; }
 
-	// Token: 0x170009FF RID: 2559
-	// (get) Token: 0x060073D5 RID: 29653 RVA: 0x0017BB88 File Offset: 0x00179D88
-	// (set) Token: 0x060073D6 RID: 29654 RVA: 0x0017BB90 File Offset: 0x00179D90
+	// Token: 0x17000A1F RID: 2591
+	// (get) Token: 0x0600476C RID: 18284 RVA: 0x001846D6 File Offset: 0x001828D6
+	// (set) Token: 0x0600476D RID: 18285 RVA: 0x001846DE File Offset: 0x001828DE
 	public int GroupId { get; set; }
 
-	// Token: 0x17000A00 RID: 2560
-	// (get) Token: 0x060073D7 RID: 29655 RVA: 0x0017BB99 File Offset: 0x00179D99
-	// (set) Token: 0x060073D8 RID: 29656 RVA: 0x0017BBA1 File Offset: 0x00179DA1
+	// Token: 0x17000A20 RID: 2592
+	// (get) Token: 0x0600476E RID: 18286 RVA: 0x001846E7 File Offset: 0x001828E7
+	// (set) Token: 0x0600476F RID: 18287 RVA: 0x001846EF File Offset: 0x001828EF
 	public List<int> DeTermList { get; set; }
 
-	// Token: 0x17000A01 RID: 2561
-	// (get) Token: 0x060073D9 RID: 29657 RVA: 0x0017BBAA File Offset: 0x00179DAA
-	// (set) Token: 0x060073DA RID: 29658 RVA: 0x0017BBB2 File Offset: 0x00179DB2
+	// Token: 0x17000A21 RID: 2593
+	// (get) Token: 0x06004770 RID: 18288 RVA: 0x001846F8 File Offset: 0x001828F8
+	// (set) Token: 0x06004771 RID: 18289 RVA: 0x00184700 File Offset: 0x00182900
 	public bool? IsNecessary { get; set; }
 
-	// Token: 0x17000A02 RID: 2562
-	// (get) Token: 0x060073DB RID: 29659 RVA: 0x0017BBBB File Offset: 0x00179DBB
-	// (set) Token: 0x060073DC RID: 29660 RVA: 0x0017BBC3 File Offset: 0x00179DC3
+	// Token: 0x17000A22 RID: 2594
+	// (get) Token: 0x06004772 RID: 18290 RVA: 0x00184709 File Offset: 0x00182909
+	// (set) Token: 0x06004773 RID: 18291 RVA: 0x00184711 File Offset: 0x00182911
 	public int? CurrentDeTermId { get; set; }
 }

@@ -2,14 +2,14 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020032FC RID: 13052
+// Token: 0x0200286E RID: 10350
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 {
-	// Token: 0x17002759 RID: 10073
-	// (get) Token: 0x0601C6DF RID: 116447 RVA: 0x007F9021 File Offset: 0x007F7221
-	// (set) Token: 0x0601C6E0 RID: 116448 RVA: 0x007F902C File Offset: 0x007F722C
+	// Token: 0x17002AEB RID: 10987
+	// (get) Token: 0x0601A3C5 RID: 107461 RVA: 0x0081F1DD File Offset: 0x0081D3DD
+	// (set) Token: 0x0601A3C6 RID: 107462 RVA: 0x0081F1E8 File Offset: 0x0081D3E8
 	protected bool AutopilotBraking
 	{
 		get
@@ -31,9 +31,9 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		}
 	}
 
-	// Token: 0x1700275A RID: 10074
-	// (get) Token: 0x0601C6E1 RID: 116449 RVA: 0x007F9060 File Offset: 0x007F7260
-	// (set) Token: 0x0601C6E2 RID: 116450 RVA: 0x007F9068 File Offset: 0x007F7268
+	// Token: 0x17002AEC RID: 10988
+	// (get) Token: 0x0601A3C7 RID: 107463 RVA: 0x0081F21C File Offset: 0x0081D41C
+	// (set) Token: 0x0601A3C8 RID: 107464 RVA: 0x0081F224 File Offset: 0x0081D424
 	protected bool AutopilotSprint
 	{
 		get
@@ -70,21 +70,21 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6E3 RID: 116451 RVA: 0x007F90D3 File Offset: 0x007F72D3
+	// Token: 0x0601A3C9 RID: 107465 RVA: 0x0081F28F File Offset: 0x0081D48F
 	protected override bool OnInit()
 	{
 		this.DetectedRecordList = new DoublyLinkedList<MotorcycleSplineMoveComponent.RoadBlockDetectRecord>(null);
 		return base.OnInit();
 	}
 
-	// Token: 0x0601C6E4 RID: 116452 RVA: 0x007F90E7 File Offset: 0x007F72E7
+	// Token: 0x0601A3CA RID: 107466 RVA: 0x0081F2A3 File Offset: 0x0081D4A3
 	protected override void PositionAdjust(float timeKey, float deltaSeconds)
 	{
 		this.CalAdjustRotation(timeKey, deltaSeconds);
 		this.PositionAdjustCommon(timeKey, deltaSeconds);
 	}
 
-	// Token: 0x0601C6E5 RID: 116453 RVA: 0x007F90FC File Offset: 0x007F72FC
+	// Token: 0x0601A3CB RID: 107467 RVA: 0x0081F2B8 File Offset: 0x0081D4B8
 	protected unsafe override void MoveToTargetLocation(float deltaSeconds)
 	{
 		if (this.IsDebug)
@@ -159,7 +159,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		this.ActorComp.ResetRotationCachedTime();
 	}
 
-	// Token: 0x0601C6E6 RID: 116454 RVA: 0x007F93C4 File Offset: 0x007F75C4
+	// Token: 0x0601A3CC RID: 107468 RVA: 0x0081F580 File Offset: 0x0081D780
 	protected unsafe void CalAdjustRotation(float timeKey, float deltaSeconds)
 	{
 		Vector actorForwardProxy = this.ActorComp.ActorForwardProxy;
@@ -244,7 +244,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		this.QuatDelta.Reset();
 	}
 
-	// Token: 0x0601C6E7 RID: 116455 RVA: 0x007F97EC File Offset: 0x007F79EC
+	// Token: 0x0601A3CD RID: 107469 RVA: 0x0081F9A8 File Offset: 0x0081DBA8
 	protected override void InputAdjust()
 	{
 		if (base.CurrentSplineMoveParams == null)
@@ -290,7 +290,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6E8 RID: 116456 RVA: 0x007F99A1 File Offset: 0x007F7BA1
+	// Token: 0x0601A3CE RID: 107470 RVA: 0x0081FB5D File Offset: 0x0081DD5D
 	private void InputAdjustInternal(float left, float right, bool canAutoBrakeAndSprint = false, float predictRightOffset = 0f, float newPredictLength = 0f)
 	{
 		if (this.Using3d)
@@ -301,7 +301,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		this.InputAdjust2dInternal(left, right, canAutoBrakeAndSprint, predictRightOffset, newPredictLength);
 	}
 
-	// Token: 0x0601C6E9 RID: 116457 RVA: 0x007F99C4 File Offset: 0x007F7BC4
+	// Token: 0x0601A3CF RID: 107471 RVA: 0x0081FB80 File Offset: 0x0081DD80
 	private unsafe void InputAdjust2dInternal(float left, float right, bool canAutoBrakeAndSprint = false, float predictRightOffset = 0f, float newPredictLength = 0f)
 	{
 		float num = (newPredictLength > 0f) ? newPredictLength : base.CurrentSplineMoveParams.PredictDist;
@@ -352,7 +352,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		}
 		VehicleActorComponent vehicleActorComp = this.VehicleActorComp;
 		SplineMoveParams currentSplineMoveParams = base.CurrentSplineMoveParams;
-		vehicleActorComp.SetInputDirectByNumber((currentSplineMoveParams != null && currentSplineMoveParams.DisableAutoForward) ? ((float)this.VehicleActorComp.InputDirectProxy.X) : 1f, MathUtils.Instance.Clamp(num2, -1f, 1f), 0f);
+		vehicleActorComp.SetInputDirectByNumber((currentSplineMoveParams != null && currentSplineMoveParams.DisableAutoForward) ? ((float)this.VehicleActorComp.InputDirectProxy.X) : 1f, MathUtils.Instance.Clamp(num2, -1f, 1f), 0f, EInputDirectSpace.Relative);
 		if (canAutoBrakeAndSprint)
 		{
 			if (Math.Abs(angleOffsetInGravityForActor) > (this.AutopilotBraking ? 30f : 90f))
@@ -370,7 +370,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		this.AutopilotSprint = false;
 	}
 
-	// Token: 0x0601C6EA RID: 116458 RVA: 0x007F9CE8 File Offset: 0x007F7EE8
+	// Token: 0x0601A3D0 RID: 107472 RVA: 0x0081FEA4 File Offset: 0x0081E0A4
 	private unsafe void InputAdjust3dInternal(float left, float right, float newPredictLength = 0f)
 	{
 		this.ActorComp.ActorLocationProxy.Subtraction(this.SplineLocation, this.TmpVector1);
@@ -454,7 +454,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		motorcycleActorComponent.SetAirRotateInput(this.TmpVector);
 	}
 
-	// Token: 0x0601C6EB RID: 116459 RVA: 0x007FA25C File Offset: 0x007F845C
+	// Token: 0x0601A3D1 RID: 107473 RVA: 0x00820418 File Offset: 0x0081E618
 	protected unsafe override void UpdateSplineLocationAndDirection()
 	{
 		this.Using3d = (this.ActorComp.VehicleMoveComp.GetMotorSubState() == EMotorSubState.Soaring);
@@ -522,7 +522,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		base.CurrentSplineMoveParams.UpdateParamsByTimeKey(this.SplineTimeKey);
 	}
 
-	// Token: 0x0601C6EC RID: 116460 RVA: 0x007FA4DC File Offset: 0x007F86DC
+	// Token: 0x0601A3D2 RID: 107474 RVA: 0x00820698 File Offset: 0x0081E898
 	private float FindInputKeyInCurrentRouteRange(USplineComponent splineComp, int maxTimeKey)
 	{
 		float num = this.LastTimeKey;
@@ -593,7 +593,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		return result;
 	}
 
-	// Token: 0x0601C6ED RID: 116461 RVA: 0x007FA6CC File Offset: 0x007F88CC
+	// Token: 0x0601A3D3 RID: 107475 RVA: 0x00820888 File Offset: 0x0081EA88
 	private float FindInputKeyByPartition(USplineComponent splineComp, float searchRadius)
 	{
 		FVectorDouble fvectorDouble;
@@ -606,7 +606,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		return splineComp.D_FindInputKeyClosestToWorldLocationByPartitionInGravity(fvectorDouble, this.ActorComp.ActorGravityDirectProxy.ToUeVectorOld(), searchRadius, base.CurrentSplineMoveParams.LayerVerticalLimit);
 	}
 
-	// Token: 0x0601C6EE RID: 116462 RVA: 0x007FA740 File Offset: 0x007F8940
+	// Token: 0x0601A3D4 RID: 107476 RVA: 0x008208FC File Offset: 0x0081EAFC
 	private bool DetectRoadBlock(float detectDistance = 4000f)
 	{
 		float num = detectDistance;
@@ -644,7 +644,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		return false;
 	}
 
-	// Token: 0x0601C6EF RID: 116463 RVA: 0x007FA850 File Offset: 0x007F8A50
+	// Token: 0x0601A3D5 RID: 107477 RVA: 0x00820A0C File Offset: 0x0081EC0C
 	private void TryRoadBlockDetect(float startDist, float endDist)
 	{
 		for (int i = 0; i < 1; i++)
@@ -681,7 +681,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6F0 RID: 116464 RVA: 0x007FA930 File Offset: 0x007F8B30
+	// Token: 0x0601A3D6 RID: 107478 RVA: 0x00820AEC File Offset: 0x0081ECEC
 	private bool TryRoadBlockDetectOnePiece(float inStartDist, float inEndDist, [Nullable(new byte[]
 	{
 		2,
@@ -780,7 +780,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		return flag;
 	}
 
-	// Token: 0x0601C6F1 RID: 116465 RVA: 0x007FABC8 File Offset: 0x007F8DC8
+	// Token: 0x0601A3D7 RID: 107479 RVA: 0x00820D84 File Offset: 0x0081EF84
 	private void DrawBlockDetectRecord()
 	{
 		USplineComponent spline = base.CurrentSplineMoveParams.Spline;
@@ -828,7 +828,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6F2 RID: 116466 RVA: 0x007FADC5 File Offset: 0x007F8FC5
+	// Token: 0x0601A3D8 RID: 107480 RVA: 0x00820F81 File Offset: 0x0081F181
 	protected override void OnSelectNextSplineMoveBegin()
 	{
 		this.AutopilotBraking = false;
@@ -836,7 +836,7 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		base.OnSelectNextSplineMoveBegin();
 	}
 
-	// Token: 0x0601C6F3 RID: 116467 RVA: 0x007FADDB File Offset: 0x007F8FDB
+	// Token: 0x0601A3D9 RID: 107481 RVA: 0x00820F97 File Offset: 0x0081F197
 	protected override void OnSelectNextSplineMoveEnd()
 	{
 		base.OnSelectNextSplineMoveEnd();
@@ -848,13 +848,13 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		this.DetectedRecordList.RemoveAllNodeWithoutHead();
 	}
 
-	// Token: 0x0601C6F4 RID: 116468 RVA: 0x007FAE04 File Offset: 0x007F9004
+	// Token: 0x0601A3DA RID: 107482 RVA: 0x00820FC0 File Offset: 0x0081F1C0
 	public void ForceClearUpdate()
 	{
 		this.LastTimeKey = -1f;
 	}
 
-	// Token: 0x0601C6F5 RID: 116469 RVA: 0x007FAE14 File Offset: 0x007F9014
+	// Token: 0x0601A3DB RID: 107483 RVA: 0x00820FD0 File Offset: 0x0081F1D0
 	protected override void UpdateSplineGravity(ESplineGravityUpdateType type)
 	{
 		base.UpdateSplineGravity(type);
@@ -877,13 +877,13 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6F6 RID: 116470 RVA: 0x007FAF56 File Offset: 0x007F9156
+	// Token: 0x0601A3DC RID: 107484 RVA: 0x00821112 File Offset: 0x0081F312
 	protected override void OnPositiveMovingChanged()
 	{
 		this.DetectedRecordList.RemoveAllNodeWithoutHead();
 	}
 
-	// Token: 0x0601C6F7 RID: 116471 RVA: 0x007FAF64 File Offset: 0x007F9164
+	// Token: 0x0601A3DD RID: 107485 RVA: 0x00821120 File Offset: 0x0081F320
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -891,140 +891,162 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 			return false;
 		}
 		MotorcycleSplineMoveComponent motorcycleSplineMoveComponent = (MotorcycleSplineMoveComponent)componentTemplate;
-		if (base.CanResetComponentProperty("OnTick1") && motorcycleSplineMoveComponent.OnTick1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.OnTick1), "OnTick1"))
+		if (motorcycleSplineMoveComponent.OnTick1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnTick1), "OnTick1"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("QuatDelta"))
+		if (motorcycleSplineMoveComponent.QuatDelta == null)
 		{
-			if (motorcycleSplineMoveComponent.QuatDelta == null)
-			{
-				this.QuatDelta = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.QuatDelta), "QuatDelta"))
-			{
-				return false;
-			}
+			this.QuatDelta = null;
 		}
-		if (base.CanResetComponentProperty("MoveDelta"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.QuatDelta), "QuatDelta"))
 		{
-			if (motorcycleSplineMoveComponent.MoveDelta == null)
-			{
-				this.MoveDelta = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.MoveDelta), "MoveDelta"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("AutopilotBrakingInternal"))
+		if (motorcycleSplineMoveComponent.MoveDelta == null)
 		{
-			this.AutopilotBrakingInternal = motorcycleSplineMoveComponent.AutopilotBrakingInternal;
+			this.MoveDelta = null;
 		}
-		if (base.CanResetComponentProperty("AutopilotSprintInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveDelta), "MoveDelta"))
 		{
-			this.AutopilotSprintInternal = motorcycleSplineMoveComponent.AutopilotSprintInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("DetectedRecordList"))
+		this.AutopilotBrakingInternal = motorcycleSplineMoveComponent.AutopilotBrakingInternal;
+		this.AutopilotSprintInternal = motorcycleSplineMoveComponent.AutopilotSprintInternal;
+		if (motorcycleSplineMoveComponent.DetectedRecordList == null)
 		{
-			if (motorcycleSplineMoveComponent.DetectedRecordList == null)
-			{
-				this.DetectedRecordList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DoublyLinkedList<MotorcycleSplineMoveComponent.RoadBlockDetectRecord>>(this.DetectedRecordList), "DetectedRecordList"))
-			{
-				return false;
-			}
+			this.DetectedRecordList = null;
 		}
-		if (base.CanResetComponentProperty("IsDebug"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectedRecordList), "DetectedRecordList"))
 		{
-			this.IsDebug = motorcycleSplineMoveComponent.IsDebug;
+			return false;
 		}
+		this.IsDebug = motorcycleSplineMoveComponent.IsDebug;
 		return true;
 	}
 
-	// Token: 0x0400E1AD RID: 57773
+	// Token: 0x17002AED RID: 10989
+	// (get) Token: 0x0601A3DE RID: 107486 RVA: 0x00821207 File Offset: 0x0081F407
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AEE RID: 10990
+	// (get) Token: 0x0601A3DF RID: 107487 RVA: 0x0082120A File Offset: 0x0081F40A
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AEF RID: 10991
+	// (get) Token: 0x0601A3E0 RID: 107488 RVA: 0x0082120D File Offset: 0x0081F40D
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AF0 RID: 10992
+	// (get) Token: 0x0601A3E1 RID: 107489 RVA: 0x00821210 File Offset: 0x0081F410
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E658 RID: 58968
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor redColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x0400E1AE RID: 57774
+	// Token: 0x0400E659 RID: 58969
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor greenColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-	// Token: 0x0400E1AF RID: 57775
+	// Token: 0x0400E65A RID: 58970
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor yellowColor = new FLinearColor(1f, 1f, 0f, 1f);
 
-	// Token: 0x0400E1B0 RID: 57776
+	// Token: 0x0400E65B RID: 58971
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor blueColor = new FLinearColor(0f, 0f, 1f, 1f);
 
-	// Token: 0x0400E1B1 RID: 57777
+	// Token: 0x0400E65C RID: 58972
 	private const float AUTOPILOT_BRAKING_THRESHOLD_MIN = 30f;
 
-	// Token: 0x0400E1B2 RID: 57778
+	// Token: 0x0400E65D RID: 58973
 	private const float AUTOPILOT_BRAKING_THRESHOLD_MAX = 90f;
 
-	// Token: 0x0400E1B3 RID: 57779
+	// Token: 0x0400E65E RID: 58974
 	private const float ROAD_BLOCK_DETECT_RADIUS = 15f;
 
-	// Token: 0x0400E1B4 RID: 57780
+	// Token: 0x0400E65F RID: 58975
 	private const float ROAD_BLOCK_DETECT_DIS = 4000f;
 
-	// Token: 0x0400E1B5 RID: 57781
+	// Token: 0x0400E660 RID: 58976
 	private const float ROAD_BLOCK_DETECT_MAX_ANGLE = 10f;
 
-	// Token: 0x0400E1B6 RID: 57782
+	// Token: 0x0400E661 RID: 58977
 	[StaticVariableRuleIgnore]
 	private static readonly double ROAD_BLOCK_DETECT_MAX_ANGLE_COS = Math.Cos(0.1745329201221466);
 
-	// Token: 0x0400E1B7 RID: 57783
+	// Token: 0x0400E662 RID: 58978
 	private const float ROAD_BLOCK_DETECT_HEIGHT = 100f;
 
-	// Token: 0x0400E1B8 RID: 57784
+	// Token: 0x0400E663 RID: 58979
 	private const float ROAD_BLOCK_RIGHT_OFFSET = -500f;
 
-	// Token: 0x0400E1B9 RID: 57785
+	// Token: 0x0400E664 RID: 58980
 	private const float ROAD_BLOCK_NEW_PREDICT_DIST = 1000f;
 
-	// Token: 0x0400E1BA RID: 57786
+	// Token: 0x0400E665 RID: 58981
 	private const float ROAD_BLOCK_DETECT_ADD_DIST_AT_END = 100f;
 
-	// Token: 0x0400E1BB RID: 57787
+	// Token: 0x0400E666 RID: 58982
 	private const int MAX_DETECT_TIMES_ONE_FRAME = 1;
 
-	// Token: 0x0400E1BC RID: 57788
+	// Token: 0x0400E667 RID: 58983
 	private const int PARTITION_SEARCH_RADIUS_MIN = 200;
 
-	// Token: 0x0400E1BD RID: 57789
+	// Token: 0x0400E668 RID: 58984
 	private const int PARTITION_SEARCH_RADIUS_MAX = 50000;
 
-	// Token: 0x0400E1BE RID: 57790
+	// Token: 0x0400E669 RID: 58985
 	private const int ROAD_BLOCK_DETECTE_MAX_CACHE_FRAME = 15;
 
-	// Token: 0x0400E1BF RID: 57791
+	// Token: 0x0400E66A RID: 58986
 	[StaticVariableRuleIgnore]
 	private static readonly float MIN_DETECT_DIST = 266.66666f;
 
-	// Token: 0x0400E1C0 RID: 57792
+	// Token: 0x0400E66B RID: 58987
 	private const string PROFILE_KEY = "Motor SplineMove RoadBlock";
 
-	// Token: 0x0400E1C1 RID: 57793
+	// Token: 0x0400E66C RID: 58988
 	private readonly Stat OnTick1 = Stat.Create("MotorcycleSplineMoveComponent Tick", "", "");
 
-	// Token: 0x0400E1C2 RID: 57794
+	// Token: 0x0400E66D RID: 58989
 	protected Quat QuatDelta = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400E1C3 RID: 57795
+	// Token: 0x0400E66E RID: 58990
 	protected Vector MoveDelta = Vector.Create();
 
-	// Token: 0x0400E1C4 RID: 57796
+	// Token: 0x0400E66F RID: 58991
 	protected bool AutopilotBrakingInternal;
 
-	// Token: 0x0400E1C5 RID: 57797
+	// Token: 0x0400E670 RID: 58992
 	protected bool AutopilotSprintInternal;
 
-	// Token: 0x0400E1C6 RID: 57798
+	// Token: 0x0400E671 RID: 58993
 	[Nullable(new byte[]
 	{
 		2,
@@ -1032,23 +1054,23 @@ public class MotorcycleSplineMoveComponent : VehicleSplineMoveComponent
 	})]
 	private DoublyLinkedList<MotorcycleSplineMoveComponent.RoadBlockDetectRecord> DetectedRecordList;
 
-	// Token: 0x0400E1C7 RID: 57799
+	// Token: 0x0400E672 RID: 58994
 	public bool IsDebug;
 
-	// Token: 0x0200978A RID: 38794
+	// Token: 0x020089AD RID: 35245
 	[NullableContext(0)]
 	public class RoadBlockDetectRecord
 	{
-		// Token: 0x04030711 RID: 198417
+		// Token: 0x0402BD9E RID: 179614
 		public float StartDist;
 
-		// Token: 0x04030712 RID: 198418
+		// Token: 0x0402BD9F RID: 179615
 		public float EndDist;
 
-		// Token: 0x04030713 RID: 198419
+		// Token: 0x0402BDA0 RID: 179616
 		public int DetectFrame = -1;
 
-		// Token: 0x04030714 RID: 198420
+		// Token: 0x0402BDA1 RID: 179617
 		public float BlockDist = -1f;
 	}
 }

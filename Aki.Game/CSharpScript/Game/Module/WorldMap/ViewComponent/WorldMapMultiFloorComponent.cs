@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -16,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 {
-	// Token: 0x020047B1 RID: 18353
+	// Token: 0x020036E2 RID: 14050
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WorldMapMultiFloorComponent : MapComponent
 	{
-		// Token: 0x060300F5 RID: 196853 RVA: 0x00B237DF File Offset: 0x00B219DF
+		// Token: 0x060248C4 RID: 149700 RVA: 0x00A5372B File Offset: 0x00A5192B
 		public WorldMapMultiFloorComponent([Nullable(new byte[]
 		{
 			0,
@@ -32,8 +31,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 		{
 		}
 
-		// Token: 0x17007858 RID: 30808
-		// (get) Token: 0x060300F6 RID: 196854 RVA: 0x00B237E8 File Offset: 0x00B219E8
+		// Token: 0x17004B14 RID: 19220
+		// (get) Token: 0x060248C5 RID: 149701 RVA: 0x00A53734 File Offset: 0x00A51934
 		public override EMapComponent ComponentType
 		{
 			get
@@ -42,8 +41,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007859 RID: 30809
-		// (get) Token: 0x060300F7 RID: 196855 RVA: 0x00B237EB File Offset: 0x00B219EB
+		// Token: 0x17004B15 RID: 19221
+		// (get) Token: 0x060248C6 RID: 149702 RVA: 0x00A53737 File Offset: 0x00A51937
 		public int? SelectedMultiMapGroupId
 		{
 			get
@@ -52,8 +51,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x1700785A RID: 30810
-		// (get) Token: 0x060300F8 RID: 196856 RVA: 0x00B237F3 File Offset: 0x00B219F3
+		// Token: 0x17004B16 RID: 19222
+		// (get) Token: 0x060248C7 RID: 149703 RVA: 0x00A5373F File Offset: 0x00A5193F
 		public int? SelectedMultiMapFloorId
 		{
 			get
@@ -62,8 +61,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x1700785B RID: 30811
-		// (get) Token: 0x060300F9 RID: 196857 RVA: 0x00B237FC File Offset: 0x00B219FC
+		// Token: 0x17004B17 RID: 19223
+		// (get) Token: 0x060248C8 RID: 149704 RVA: 0x00A53748 File Offset: 0x00A51948
 		private WorldMapUiEntity WorldMapUiComponent
 		{
 			get
@@ -78,21 +77,21 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x060300FA RID: 196858 RVA: 0x00B23839 File Offset: 0x00B21A39
+		// Token: 0x060248C9 RID: 149705 RVA: 0x00A53785 File Offset: 0x00A51985
 		protected override void OnEnable()
 		{
 			EventSystem.Instance.Add<int>(EEventName.WorldMapSubMapChanged, new Action<int>(this.OnWorldMapSubMapChanged));
 			EventSystem.Instance.Add(EEventName.MultiMapUnlockChanged, new Action(this.OnMultiMapUnlockChanged));
 		}
 
-		// Token: 0x060300FB RID: 196859 RVA: 0x00B23873 File Offset: 0x00B21A73
+		// Token: 0x060248CA RID: 149706 RVA: 0x00A537BF File Offset: 0x00A519BF
 		protected override void OnDisable()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldMapSubMapChanged, new Action<int>(this.OnWorldMapSubMapChanged));
 			EventSystem.Instance.Remove(EEventName.MultiMapUnlockChanged, new Action(this.OnMultiMapUnlockChanged));
 		}
 
-		// Token: 0x060300FC RID: 196860 RVA: 0x00B238AD File Offset: 0x00B21AAD
+		// Token: 0x060248CB RID: 149707 RVA: 0x00A537F9 File Offset: 0x00A519F9
 		public void Reset()
 		{
 			this.SelectedMultiMapGroupIdInner = null;
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.SetMultiMapMenuActive(false).Forget<bool>();
 		}
 
-		// Token: 0x060300FD RID: 196861 RVA: 0x00B238E4 File Offset: 0x00B21AE4
+		// Token: 0x060248CC RID: 149708 RVA: 0x00A53830 File Offset: 0x00A51A30
 		public void InitMultiMap()
 		{
 			this.MultiMapMenuVisible = false;
@@ -124,7 +123,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x060300FE RID: 196862 RVA: 0x00B23978 File Offset: 0x00B21B78
+		// Token: 0x060248CD RID: 149709 RVA: 0x00A538C4 File Offset: 0x00A51AC4
 		public void UpdateMultiMap()
 		{
 			if (!WorldMapModel.Instance.IsMultiMapVisible)
@@ -180,7 +179,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x060300FF RID: 196863 RVA: 0x00B23AE4 File Offset: 0x00B21CE4
+		// Token: 0x060248CE RID: 149710 RVA: 0x00A53A30 File Offset: 0x00A51C30
 		private int GetWorldMapFocusMultiMapAreaId()
 		{
 			MarkItem clickedItem = this.WorldMapUiComponent.ClickedItem;
@@ -205,7 +204,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return this.WorldMapUiComponent.Map.GetMultiMapAreaIdByPosition(worldMapCenterPosition);
 		}
 
-		// Token: 0x06030100 RID: 196864 RVA: 0x00B23B7C File Offset: 0x00B21D7C
+		// Token: 0x060248CF RID: 149711 RVA: 0x00A53AC8 File Offset: 0x00A51CC8
 		public void SelectMultiMapFloor(int areaId, int? multiMapGroupId = null, int? floor = null, bool playSubMapTween = true)
 		{
 			Area? areaInfo = AreaConfig.Instance.GetAreaInfo(areaId);
@@ -224,9 +223,15 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 				return;
 			}
 			List<MultiMap> list = MapConfig.Instance.GetSubMapConfigByGroupId(multiMapGroupId.Value);
-			list = (from multiMapFloorData in list
-			where MapModel.Instance.CheckUnlockMultiMapIds(multiMapFloorData.Id) || multiMapFloorData.Floor == 0
-			select multiMapFloorData).ToList<MultiMap>();
+			List<MultiMap> list2 = new List<MultiMap>();
+			foreach (MultiMap item in list)
+			{
+				if (MapModel.Instance.CheckUnlockMultiMapIds(item.Id) || item.Floor == 0)
+				{
+					list2.Add(item);
+				}
+			}
+			list = list2;
 			list.Sort((MultiMap a, MultiMap b) => b.Floor.CompareTo(a.Floor));
 			if (list.Count == 1)
 			{
@@ -269,14 +274,14 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			EventSystem.Instance.Emit<int>(EEventName.WorldMapSubMapChangedFromUpdate, selectedMultiMapFloorIdInner.GetValueOrDefault());
 		}
 
-		// Token: 0x06030101 RID: 196865 RVA: 0x00B23DB4 File Offset: 0x00B21FB4
+		// Token: 0x060248D0 RID: 149712 RVA: 0x00A53D40 File Offset: 0x00A51F40
 		public void DeSelectMultiMapFloor(bool playSubMapTween = true)
 		{
 			int worldMapFocusMultiMapAreaId = this.GetWorldMapFocusMultiMapAreaId();
 			this.SelectMultiMapFloor(worldMapFocusMultiMapAreaId, null, null, playSubMapTween);
 		}
 
-		// Token: 0x06030102 RID: 196866 RVA: 0x00B23DE4 File Offset: 0x00B21FE4
+		// Token: 0x060248D1 RID: 149713 RVA: 0x00A53D70 File Offset: 0x00A51F70
 		[NullableContext(0)]
 		public UniTask<bool> SetMultiMapMenuActive(bool active)
 		{
@@ -289,13 +294,13 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return <SetMultiMapMenuActive>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030103 RID: 196867 RVA: 0x00B23E30 File Offset: 0x00B22030
+		// Token: 0x060248D2 RID: 149714 RVA: 0x00A53DBC File Offset: 0x00A51FBC
 		private void OnWorldMapSubMapChanged(int floor)
 		{
 			this.OnChangeMultiMapFloor(floor, null);
 		}
 
-		// Token: 0x06030104 RID: 196868 RVA: 0x00B23E50 File Offset: 0x00B22050
+		// Token: 0x060248D3 RID: 149715 RVA: 0x00A53DDC File Offset: 0x00A51FDC
 		private void OnMultiMapUnlockChanged()
 		{
 			int? selectedMultiMapFloorIdInner = this.SelectedMultiMapFloorIdInner;
@@ -311,14 +316,14 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x06030105 RID: 196869 RVA: 0x00B23EBC File Offset: 0x00B220BC
+		// Token: 0x060248D4 RID: 149716 RVA: 0x00A53E48 File Offset: 0x00A52048
 		private void OnChangeMultiMapFloor(int floor, bool? playShowSubMapTween = null)
 		{
 			this.ChangeMultiMapFloor(floor, true, new bool?(playShowSubMapTween.GetValueOrDefault(true)));
 			EventSystem.Instance.Emit<int>(EEventName.WorldMapSubMapChangedFromUpdate, floor);
 		}
 
-		// Token: 0x06030106 RID: 196870 RVA: 0x00B23EE4 File Offset: 0x00B220E4
+		// Token: 0x060248D5 RID: 149717 RVA: 0x00A53E70 File Offset: 0x00A52070
 		private void ChangeMultiMapFloor(int floor, bool updateMultiMapFloor, bool? playShowSubMapTween = null)
 		{
 			if (this.MultiMapMenuVisible)
@@ -350,7 +355,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x04019EA2 RID: 106146
+		// Token: 0x04014552 RID: 83282
 		[Nullable(new byte[]
 		{
 			2,
@@ -358,19 +363,19 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 		})]
 		public GenericLayout<WorldMapSubMapItem, MultiMap> MultiMapFloorLayout;
 
-		// Token: 0x04019EA3 RID: 106147
+		// Token: 0x04014553 RID: 83283
 		private int? SelectedMultiMapGroupIdInner;
 
-		// Token: 0x04019EA4 RID: 106148
+		// Token: 0x04014554 RID: 83284
 		private int? SelectedMultiMapFloorIdInner;
 
-		// Token: 0x04019EA5 RID: 106149
+		// Token: 0x04014555 RID: 83285
 		public UUIItem MultiMapFloorContainer;
 
-		// Token: 0x04019EA6 RID: 106150
+		// Token: 0x04014556 RID: 83286
 		public TWorldMapPlaySequenceFunction WorldMapViewPlaySequenceFunction;
 
-		// Token: 0x04019EA7 RID: 106151
+		// Token: 0x04014557 RID: 83287
 		private bool MultiMapMenuVisible;
 	}
 }

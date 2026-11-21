@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002035 RID: 8245
+// Token: 0x02001508 RID: 5384
 [NullableContext(2)]
 [Nullable(0)]
 public class KingShipAttributeItem : UiPanelBase
 {
-	// Token: 0x060102EB RID: 66283 RVA: 0x003F0A48 File Offset: 0x003EEC48
+	// Token: 0x0600D753 RID: 55123 RVA: 0x003FD040 File Offset: 0x003FB240
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class KingShipAttributeItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060102EC RID: 66284 RVA: 0x003F0B8F File Offset: 0x003EED8F
+	// Token: 0x0600D754 RID: 55124 RVA: 0x003FD187 File Offset: 0x003FB387
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -46,7 +46,7 @@ public class KingShipAttributeItem : UiPanelBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x060102ED RID: 66285 RVA: 0x003F0BAC File Offset: 0x003EEDAC
+	// Token: 0x0600D755 RID: 55125 RVA: 0x003FD1A4 File Offset: 0x003FB3A4
 	protected override void OnStart()
 	{
 		base.GetItem(2).SetUIActive(false);
@@ -76,7 +76,7 @@ public class KingShipAttributeItem : UiPanelBase
 		base.GetItem(8).SetUIActive(false);
 	}
 
-	// Token: 0x060102EE RID: 66286 RVA: 0x003F0C60 File Offset: 0x003EEE60
+	// Token: 0x0600D756 RID: 55126 RVA: 0x003FD258 File Offset: 0x003FB458
 	[NullableContext(1)]
 	public void RefreshItem(IKingShipAttributeItemData data, Action<bool> onClickTipsCallBack)
 	{
@@ -105,7 +105,7 @@ public class KingShipAttributeItem : UiPanelBase
 		redSprite.SetFillAmount(0f);
 	}
 
-	// Token: 0x060102EF RID: 66287 RVA: 0x003F0D28 File Offset: 0x003EEF28
+	// Token: 0x0600D757 RID: 55127 RVA: 0x003FD320 File Offset: 0x003FB520
 	public void SetIsShow(bool isShow)
 	{
 		this.IsShowByKingShip = isShow;
@@ -121,7 +121,7 @@ public class KingShipAttributeItem : UiPanelBase
 		EventSystem.Instance.Emit<int, bool>(EEventName.OnKingShipAttrItemSetShow, this.AttributeId, isShow);
 	}
 
-	// Token: 0x060102F0 RID: 66288 RVA: 0x003F0D88 File Offset: 0x003EEF88
+	// Token: 0x0600D758 RID: 55128 RVA: 0x003FD380 File Offset: 0x003FB580
 	public void RefreshAttribute(int valueChange)
 	{
 		this.CurrentCount += valueChange;
@@ -178,7 +178,7 @@ public class KingShipAttributeItem : UiPanelBase
 		this.IsGreenSpriteMoving = true;
 	}
 
-	// Token: 0x060102F1 RID: 66289 RVA: 0x003F0EC4 File Offset: 0x003EF0C4
+	// Token: 0x0600D759 RID: 55129 RVA: 0x003FD4BC File Offset: 0x003FB6BC
 	public void RefreshBuffItem(int buffChangeValue, int buffRounds)
 	{
 		if (buffChangeValue == 0)
@@ -188,7 +188,7 @@ public class KingShipAttributeItem : UiPanelBase
 		this.BuffValueList[buffChangeValue] = buffRounds;
 	}
 
-	// Token: 0x060102F2 RID: 66290 RVA: 0x003F0ED8 File Offset: 0x003EF0D8
+	// Token: 0x0600D75A RID: 55130 RVA: 0x003FD4D0 File Offset: 0x003FB6D0
 	public void RefreshUpDownItem()
 	{
 		int num = 0;
@@ -212,7 +212,7 @@ public class KingShipAttributeItem : UiPanelBase
 		this.SetDownItem(true);
 	}
 
-	// Token: 0x060102F3 RID: 66291 RVA: 0x003F0F70 File Offset: 0x003EF170
+	// Token: 0x0600D75B RID: 55131 RVA: 0x003FD568 File Offset: 0x003FB768
 	public void RefreshBuffRounds()
 	{
 		foreach (int key in new List<int>(this.BuffValueList.Keys))
@@ -229,7 +229,7 @@ public class KingShipAttributeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060102F4 RID: 66292 RVA: 0x003F0FF8 File Offset: 0x003EF1F8
+	// Token: 0x0600D75C RID: 55132 RVA: 0x003FD5F0 File Offset: 0x003FB7F0
 	public void SetDownItem(bool visible)
 	{
 		if (base.GetItem(2).IsUIActiveSelf() != visible)
@@ -262,7 +262,7 @@ public class KingShipAttributeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060102F5 RID: 66293 RVA: 0x003F1080 File Offset: 0x003EF280
+	// Token: 0x0600D75D RID: 55133 RVA: 0x003FD678 File Offset: 0x003FB878
 	public void SetUpItem(bool visible)
 	{
 		if (base.GetItem(3).IsUIActiveSelf() != visible)
@@ -295,7 +295,7 @@ public class KingShipAttributeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060102F6 RID: 66294 RVA: 0x003F1108 File Offset: 0x003EF308
+	// Token: 0x0600D75E RID: 55134 RVA: 0x003FD700 File Offset: 0x003FB900
 	public void SetAttributeItem(bool visible, int value = 0)
 	{
 		if (!visible || value == 0)
@@ -339,7 +339,7 @@ public class KingShipAttributeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060102F7 RID: 66295 RVA: 0x003F11D0 File Offset: 0x003EF3D0
+	// Token: 0x0600D75F RID: 55135 RVA: 0x003FD7C8 File Offset: 0x003FB9C8
 	public void Update()
 	{
 		if (this.GreenSprite == null || this.NormalSprite == null || this.RedSprite == null || (!this.IsRedSpriteMoving && !this.IsGreenSpriteMoving))
@@ -374,7 +374,7 @@ public class KingShipAttributeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060102F8 RID: 66296 RVA: 0x003F12DC File Offset: 0x003EF4DC
+	// Token: 0x0600D760 RID: 55136 RVA: 0x003FD8D4 File Offset: 0x003FBAD4
 	private void OnClickButton()
 	{
 		if (this.AttributeId == 0)
@@ -401,7 +401,7 @@ public class KingShipAttributeItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(9), kingShipAttribute.DesText, Array.Empty<object>());
 	}
 
-	// Token: 0x060102F9 RID: 66297 RVA: 0x003F1374 File Offset: 0x003EF574
+	// Token: 0x0600D761 RID: 55137 RVA: 0x003FD96C File Offset: 0x003FBB6C
 	public void CloseTipsItem()
 	{
 		base.GetItem(8).SetUIActive(false);
@@ -423,106 +423,106 @@ public class KingShipAttributeItem : UiPanelBase
 		levelSequencePlayer2.PlayOrReplaySequenceByName("InfoOut", false, null);
 	}
 
-	// Token: 0x060102FA RID: 66298 RVA: 0x003F13D2 File Offset: 0x003EF5D2
+	// Token: 0x0600D762 RID: 55138 RVA: 0x003FD9CA File Offset: 0x003FBBCA
 	[NullableContext(1)]
 	public UUIItem GetShowItem()
 	{
 		return base.GetItem(10);
 	}
 
-	// Token: 0x04007792 RID: 30610
+	// Token: 0x0400787B RID: 30843
 	private int AttributeId;
 
-	// Token: 0x04007793 RID: 30611
+	// Token: 0x0400787C RID: 30844
 	private int MaxCount;
 
-	// Token: 0x04007794 RID: 30612
+	// Token: 0x0400787D RID: 30845
 	private int MinCount;
 
-	// Token: 0x04007795 RID: 30613
+	// Token: 0x0400787E RID: 30846
 	private float BarSpeed;
 
-	// Token: 0x04007796 RID: 30614
+	// Token: 0x0400787F RID: 30847
 	private float KingShipValueUseBigEffect;
 
-	// Token: 0x04007797 RID: 30615
+	// Token: 0x04007880 RID: 30848
 	public int CurrentCount;
 
-	// Token: 0x04007798 RID: 30616
+	// Token: 0x04007881 RID: 30849
 	public bool HaveRefresh;
 
-	// Token: 0x04007799 RID: 30617
+	// Token: 0x04007882 RID: 30850
 	private bool IsRedSpriteMoving;
 
-	// Token: 0x0400779A RID: 30618
+	// Token: 0x04007883 RID: 30851
 	private bool IsGreenSpriteMoving;
 
-	// Token: 0x0400779B RID: 30619
+	// Token: 0x04007884 RID: 30852
 	private UUISprite RedSprite;
 
-	// Token: 0x0400779C RID: 30620
+	// Token: 0x04007885 RID: 30853
 	private UUISprite GreenSprite;
 
-	// Token: 0x0400779D RID: 30621
+	// Token: 0x04007886 RID: 30854
 	private UUISprite NormalSprite;
 
-	// Token: 0x0400779E RID: 30622
+	// Token: 0x04007887 RID: 30855
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400779F RID: 30623
+	// Token: 0x04007888 RID: 30856
 	public Action<bool> OnClickTipsCallBack;
 
-	// Token: 0x040077A0 RID: 30624
+	// Token: 0x04007889 RID: 30857
 	private bool UpHideFlag;
 
-	// Token: 0x040077A1 RID: 30625
+	// Token: 0x0400788A RID: 30858
 	private bool DownHideFlag;
 
-	// Token: 0x040077A2 RID: 30626
+	// Token: 0x0400788B RID: 30859
 	[Nullable(1)]
 	private readonly Dictionary<int, int> BuffValueList = new Dictionary<int, int>();
 
-	// Token: 0x040077A3 RID: 30627
+	// Token: 0x0400788C RID: 30860
 	public bool IsShowByKingShip;
 
-	// Token: 0x0200862F RID: 34351
+	// Token: 0x020077B6 RID: 30646
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402BA9E RID: 178846
+		// Token: 0x04026DAD RID: 159149
 		public const int IconSprite = 0;
 
-		// Token: 0x0402BA9F RID: 178847
+		// Token: 0x04026DAE RID: 159150
 		public const int BarSprite = 1;
 
-		// Token: 0x0402BAA0 RID: 178848
+		// Token: 0x04026DAF RID: 159151
 		public const int DownItem = 2;
 
-		// Token: 0x0402BAA1 RID: 178849
+		// Token: 0x04026DB0 RID: 159152
 		public const int UpItem = 3;
 
-		// Token: 0x0402BAA2 RID: 178850
+		// Token: 0x04026DB1 RID: 159153
 		public const int RedBarSprite = 4;
 
-		// Token: 0x0402BAA3 RID: 178851
+		// Token: 0x04026DB2 RID: 159154
 		public const int GreenBarSprite = 5;
 
-		// Token: 0x0402BAA4 RID: 178852
+		// Token: 0x04026DB3 RID: 159155
 		public const int StrongEffectItem = 6;
 
-		// Token: 0x0402BAA5 RID: 178853
+		// Token: 0x04026DB4 RID: 159156
 		public const int WeekEffectItem = 7;
 
-		// Token: 0x0402BAA6 RID: 178854
+		// Token: 0x04026DB5 RID: 159157
 		public const int TipsItem = 8;
 
-		// Token: 0x0402BAA7 RID: 178855
+		// Token: 0x04026DB6 RID: 159158
 		public const int TipsText = 9;
 
-		// Token: 0x0402BAA8 RID: 178856
+		// Token: 0x04026DB7 RID: 159159
 		public const int ShowItem = 10;
 
-		// Token: 0x0402BAA9 RID: 178857
+		// Token: 0x04026DB8 RID: 159160
 		public const int Button = 11;
 	}
 }

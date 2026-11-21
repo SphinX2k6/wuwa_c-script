@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001738 RID: 5944
+// Token: 0x02000BF1 RID: 3057
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashInstance
 {
-	// Token: 0x0600ABB4 RID: 43956 RVA: 0x00267F87 File Offset: 0x00266187
+	// Token: 0x06007F9B RID: 32667 RVA: 0x00272387 File Offset: 0x00270587
 	public CalabashInstance()
 	{
 		this.LevelCatchGainMap = new Dictionary<int, int>();
@@ -17,7 +16,7 @@ public class CalabashInstance
 		this.RewardedLevelsSet = new HashSet<int>();
 	}
 
-	// Token: 0x0600ABB5 RID: 43957 RVA: 0x00267FB0 File Offset: 0x002661B0
+	// Token: 0x06007F9C RID: 32668 RVA: 0x002723B0 File Offset: 0x002705B0
 	public void SetBaseInfo(CalabashMsg baseInfo)
 	{
 		this.CalabashCurrentLevel = baseInfo.Level;
@@ -25,10 +24,10 @@ public class CalabashInstance
 		this.CalabashMaxLevel = CalabashConfig.Instance.GetCalabashMaxLevel();
 		this.IdentifyGuaranteeCount = baseInfo.IdentifyGuaranteeCount;
 		this.LowCostIdentifyGuaranteeCount = baseInfo.LowCostGuaranteeCount;
-		this.SetUnlockCalabashDevelopRewards(baseInfo.UnlockedDevelopRewards.ToArray<CalabashDevelopInfo>());
+		this.SetUnlockCalabashDevelopRewards(baseInfo.UnlockedDevelopRewards);
 	}
 
-	// Token: 0x0600ABB6 RID: 43958 RVA: 0x00268010 File Offset: 0x00266210
+	// Token: 0x06007F9D RID: 32669 RVA: 0x0027240C File Offset: 0x0027060C
 	public void SetConfigInfo(CalabashCfg configInfo)
 	{
 		foreach (KeyValuePair<int, int> keyValuePair in configInfo.CatchGain)
@@ -38,9 +37,9 @@ public class CalabashInstance
 		}
 	}
 
-	// Token: 0x17000E4E RID: 3662
-	// (get) Token: 0x0600ABB7 RID: 43959 RVA: 0x00268074 File Offset: 0x00266274
-	// (set) Token: 0x0600ABB8 RID: 43960 RVA: 0x0026807C File Offset: 0x0026627C
+	// Token: 0x17000E71 RID: 3697
+	// (get) Token: 0x06007F9E RID: 32670 RVA: 0x00272470 File Offset: 0x00270670
+	// (set) Token: 0x06007F9F RID: 32671 RVA: 0x00272478 File Offset: 0x00270678
 	public int CalabashCurrentLevel
 	{
 		get
@@ -53,9 +52,9 @@ public class CalabashInstance
 		}
 	}
 
-	// Token: 0x17000E4F RID: 3663
-	// (get) Token: 0x0600ABB9 RID: 43961 RVA: 0x00268085 File Offset: 0x00266285
-	// (set) Token: 0x0600ABBA RID: 43962 RVA: 0x0026808D File Offset: 0x0026628D
+	// Token: 0x17000E72 RID: 3698
+	// (get) Token: 0x06007FA0 RID: 32672 RVA: 0x00272481 File Offset: 0x00270681
+	// (set) Token: 0x06007FA1 RID: 32673 RVA: 0x00272489 File Offset: 0x00270689
 	public int CalabashMaxLevel
 	{
 		get
@@ -68,9 +67,9 @@ public class CalabashInstance
 		}
 	}
 
-	// Token: 0x17000E50 RID: 3664
-	// (get) Token: 0x0600ABBB RID: 43963 RVA: 0x00268096 File Offset: 0x00266296
-	// (set) Token: 0x0600ABBC RID: 43964 RVA: 0x0026809E File Offset: 0x0026629E
+	// Token: 0x17000E73 RID: 3699
+	// (get) Token: 0x06007FA2 RID: 32674 RVA: 0x00272492 File Offset: 0x00270692
+	// (set) Token: 0x06007FA3 RID: 32675 RVA: 0x0027249A File Offset: 0x0027069A
 	public int CalabashCurrentExp
 	{
 		get
@@ -83,9 +82,9 @@ public class CalabashInstance
 		}
 	}
 
-	// Token: 0x17000E51 RID: 3665
-	// (get) Token: 0x0600ABBD RID: 43965 RVA: 0x002680A7 File Offset: 0x002662A7
-	// (set) Token: 0x0600ABBE RID: 43966 RVA: 0x002680AF File Offset: 0x002662AF
+	// Token: 0x17000E74 RID: 3700
+	// (get) Token: 0x06007FA4 RID: 32676 RVA: 0x002724A3 File Offset: 0x002706A3
+	// (set) Token: 0x06007FA5 RID: 32677 RVA: 0x002724AB File Offset: 0x002706AB
 	public int IdentifyGuaranteeCount
 	{
 		get
@@ -98,9 +97,9 @@ public class CalabashInstance
 		}
 	}
 
-	// Token: 0x17000E52 RID: 3666
-	// (get) Token: 0x0600ABBF RID: 43967 RVA: 0x002680B8 File Offset: 0x002662B8
-	// (set) Token: 0x0600ABC0 RID: 43968 RVA: 0x002680C0 File Offset: 0x002662C0
+	// Token: 0x17000E75 RID: 3701
+	// (get) Token: 0x06007FA6 RID: 32678 RVA: 0x002724B4 File Offset: 0x002706B4
+	// (set) Token: 0x06007FA7 RID: 32679 RVA: 0x002724BC File Offset: 0x002706BC
 	public int LowCostIdentifyGuaranteeCount
 	{
 		get
@@ -113,8 +112,8 @@ public class CalabashInstance
 		}
 	}
 
-	// Token: 0x0600ABC1 RID: 43969 RVA: 0x002680CC File Offset: 0x002662CC
-	public void SetUnlockCalabashDevelopRewards(CalabashDevelopInfo[] developRewards)
+	// Token: 0x06007FA8 RID: 32680 RVA: 0x002724C8 File Offset: 0x002706C8
+	public void SetUnlockCalabashDevelopRewards(IReadOnlyList<CalabashDevelopInfo> developRewards)
 	{
 		this.DevelopRewards.Clear();
 		foreach (CalabashDevelopInfo calabashDevelopInfo in developRewards)
@@ -132,7 +131,7 @@ public class CalabashInstance
 		}
 	}
 
-	// Token: 0x0600ABC2 RID: 43970 RVA: 0x0026817C File Offset: 0x0026637C
+	// Token: 0x06007FA9 RID: 32681 RVA: 0x00272590 File Offset: 0x00270790
 	public void SetUnlockCalabashDevelopReward(CalabashDevelopInfo developReward)
 	{
 		List<ICalabashDevelopConditionState> list = new List<ICalabashDevelopConditionState>();
@@ -147,13 +146,13 @@ public class CalabashInstance
 		this.DevelopRewards[developReward.MonsterId] = list;
 	}
 
-	// Token: 0x0600ABC3 RID: 43971 RVA: 0x00268200 File Offset: 0x00266400
+	// Token: 0x06007FAA RID: 32682 RVA: 0x00272614 File Offset: 0x00270814
 	public Dictionary<int, List<ICalabashDevelopConditionState>> GetUnlockCalabashDevelopRewards()
 	{
 		return this.DevelopRewards;
 	}
 
-	// Token: 0x0600ABC4 RID: 43972 RVA: 0x00268208 File Offset: 0x00266408
+	// Token: 0x06007FAB RID: 32683 RVA: 0x0027261C File Offset: 0x0027081C
 	public void SetRewardedLevelsSet(List<int> levelList)
 	{
 		this.RewardedLevelsSet.Clear();
@@ -163,13 +162,13 @@ public class CalabashInstance
 		}
 	}
 
-	// Token: 0x0600ABC5 RID: 43973 RVA: 0x00268268 File Offset: 0x00266468
+	// Token: 0x06007FAC RID: 32684 RVA: 0x0027267C File Offset: 0x0027087C
 	public bool IsRewardedByLevel(int level)
 	{
 		return this.RewardedLevelsSet.Contains(level);
 	}
 
-	// Token: 0x0600ABC6 RID: 43974 RVA: 0x00268278 File Offset: 0x00266478
+	// Token: 0x06007FAD RID: 32685 RVA: 0x0027268C File Offset: 0x0027088C
 	public int? GetCatchGainByLevel(int level)
 	{
 		int value;
@@ -180,27 +179,27 @@ public class CalabashInstance
 		return null;
 	}
 
-	// Token: 0x04004DF3 RID: 19955
+	// Token: 0x04004E9C RID: 20124
 	private int CurrentLevel;
 
-	// Token: 0x04004DF4 RID: 19956
+	// Token: 0x04004E9D RID: 20125
 	private int MaxLevel;
 
-	// Token: 0x04004DF5 RID: 19957
+	// Token: 0x04004E9E RID: 20126
 	private int CurrentExp;
 
-	// Token: 0x04004DF6 RID: 19958
+	// Token: 0x04004E9F RID: 20127
 	private int IdentifyGuaranteeCountInternal;
 
-	// Token: 0x04004DF7 RID: 19959
+	// Token: 0x04004EA0 RID: 20128
 	private int LowCostIdentifyGuaranteeCountInternal;
 
-	// Token: 0x04004DF8 RID: 19960
+	// Token: 0x04004EA1 RID: 20129
 	private readonly Dictionary<int, int> LevelCatchGainMap;
 
-	// Token: 0x04004DF9 RID: 19961
+	// Token: 0x04004EA2 RID: 20130
 	private readonly Dictionary<int, List<ICalabashDevelopConditionState>> DevelopRewards;
 
-	// Token: 0x04004DFA RID: 19962
+	// Token: 0x04004EA3 RID: 20131
 	private readonly HashSet<int> RewardedLevelsSet;
 }

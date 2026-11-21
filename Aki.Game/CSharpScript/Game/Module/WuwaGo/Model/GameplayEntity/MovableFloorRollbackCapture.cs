@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 {
-	// Token: 0x02004749 RID: 18249
+	// Token: 0x0200367A RID: 13946
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 	})]
 	internal class MovableFloorRollbackCapture : GameplayEntityRollbackCapture<WuWaGoMovableFloorEntity>
 	{
-		// Token: 0x0602FB1E RID: 195358 RVA: 0x00B0D33C File Offset: 0x00B0B53C
+		// Token: 0x060242E8 RID: 148200 RVA: 0x00A3D308 File Offset: 0x00A3B508
 		public MovableFloorRollbackCapture(WuWaGoMovableFloorEntity entity) : base(entity)
 		{
 			this.CurrentStateIndex = entity.StateIndex;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			this.Coordinate.DeepCopy(entity.Coordinate);
 		}
 
-		// Token: 0x0602FB1F RID: 195359 RVA: 0x00B0D36D File Offset: 0x00B0B56D
+		// Token: 0x060242E9 RID: 148201 RVA: 0x00A3D339 File Offset: 0x00A3B539
 		public override void Restore()
 		{
 			base.Restore();
@@ -28,10 +28,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			base.Entity.SetCoordinate(this.Coordinate);
 		}
 
-		// Token: 0x04019BF6 RID: 105462
+		// Token: 0x040142A6 RID: 82598
 		private readonly int CurrentStateIndex;
 
-		// Token: 0x04019BF7 RID: 105463
+		// Token: 0x040142A7 RID: 82599
 		private readonly Vector Coordinate;
 	}
 }

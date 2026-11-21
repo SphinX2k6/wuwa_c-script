@@ -6,55 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000131 RID: 305
+	// Token: 0x020000AD RID: 173
 	[UnrealObjectPath("/Script/AIModule.BrainComponent")]
 	[UnrealStructLayout(288, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 288)]
-	public class UBrainComponent : UActorComponent, IUnrealUObject, IUnrealObject, IAIResourceInterface, IUnrealNativeInterface, IUnrealInterface
+	public class UBrainComponent : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060015AB RID: 5547 RVA: 0x0001FDC6 File Offset: 0x0001DFC6
+		// Token: 0x06000D20 RID: 3360 RVA: 0x00014D57 File Offset: 0x00012F57
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBrainComponent._ClassPtr;
 		}
 
-		// Token: 0x060015AC RID: 5548 RVA: 0x0001FDD2 File Offset: 0x0001DFD2
-		int IAIResourceInterface.InterfaceOffset()
-		{
-			return UBrainComponent.__InterfaceOffset_IAIResourceInterface;
-		}
-
-		// Token: 0x060015AD RID: 5549 RVA: 0x0001FDDC File Offset: 0x0001DFDC
+		// Token: 0x06000D21 RID: 3361 RVA: 0x00014D64 File Offset: 0x00012F64
 		public UBrainComponent() : this(BuiltinUtils.AllocNativeUObject(UBrainComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060015AE RID: 5550 RVA: 0x0001FE04 File Offset: 0x0001E004
+		// Token: 0x06000D22 RID: 3362 RVA: 0x00014D8C File Offset: 0x00012F8C
 		[NullableContext(1)]
 		public UBrainComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBrainComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170005B1 RID: 1457
-		// (get) Token: 0x060015AF RID: 5551 RVA: 0x0001FE37 File Offset: 0x0001E037
-		// (set) Token: 0x060015B0 RID: 5552 RVA: 0x0001FE4B File Offset: 0x0001E04B
-		[Nullable(2)]
-		public unsafe UBlackboardComponent BlackboardComp
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UBlackboardComponent>(base.NativePtr / (IntPtr)sizeof(void*) + UBrainComponent.__PropertyOffset_BlackboardComp);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UBrainComponent.__PropertyOffset_BlackboardComp, value);
-			}
-		}
-
-		// Token: 0x170005B2 RID: 1458
-		// (get) Token: 0x060015B1 RID: 5553 RVA: 0x0001FE60 File Offset: 0x0001E060
-		// (set) Token: 0x060015B2 RID: 5554 RVA: 0x0001FE74 File Offset: 0x0001E074
+		// Token: 0x17000103 RID: 259
+		// (get) Token: 0x06000D23 RID: 3363 RVA: 0x00014DBF File Offset: 0x00012FBF
+		// (set) Token: 0x06000D24 RID: 3364 RVA: 0x00014DD3 File Offset: 0x00012FD3
 		[Nullable(2)]
 		public unsafe AAIController AIOwner
 		{
@@ -70,7 +46,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060015B3 RID: 5555 RVA: 0x0001FE8C File Offset: 0x0001E08C
+		// Token: 0x06000D25 RID: 3365 RVA: 0x00014DE8 File Offset: 0x00012FE8
 		[NullableContext(1)]
 		public unsafe void StopLogic(string Reason)
 		{
@@ -79,78 +55,72 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x060015B4 RID: 5556 RVA: 0x0001FEB6 File Offset: 0x0001E0B6
+		// Token: 0x06000D26 RID: 3366 RVA: 0x00014E12 File Offset: 0x00013012
 		public void StartLogic()
 		{
 			UBrainComponent.__StartLogic_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060015B5 RID: 5557 RVA: 0x0001FEC3 File Offset: 0x0001E0C3
+		// Token: 0x06000D27 RID: 3367 RVA: 0x00014E1F File Offset: 0x0001301F
 		public void RestartLogic()
 		{
 			UBrainComponent.__RestartLogic_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060015B6 RID: 5558 RVA: 0x0001FED0 File Offset: 0x0001E0D0
+		// Token: 0x06000D28 RID: 3368 RVA: 0x00014E2C File Offset: 0x0001302C
 		public bool IsRunning()
 		{
 			return UBrainComponent.__IsRunning_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060015B7 RID: 5559 RVA: 0x0001FEDD File Offset: 0x0001E0DD
+		// Token: 0x06000D29 RID: 3369 RVA: 0x00014E39 File Offset: 0x00013039
 		public bool IsPaused()
 		{
 			return UBrainComponent.__IsPaused_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060015B8 RID: 5560
+		// Token: 0x06000D2A RID: 3370
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopLogic_Internal(IntPtr @this, in FString Reason);
 
-		// Token: 0x060015B9 RID: 5561
+		// Token: 0x06000D2B RID: 3371
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StartLogic_Internal(IntPtr @this);
 
-		// Token: 0x060015BA RID: 5562
+		// Token: 0x06000D2C RID: 3372
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RestartLogic_Internal(IntPtr @this);
 
-		// Token: 0x060015BB RID: 5563
+		// Token: 0x06000D2D RID: 3373
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsRunning_Internal(IntPtr @this);
 
-		// Token: 0x060015BC RID: 5564
+		// Token: 0x06000D2E RID: 3374
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsPaused_Internal(IntPtr @this);
 
-		// Token: 0x060015BD RID: 5565 RVA: 0x0001FEEA File Offset: 0x0001E0EA
+		// Token: 0x06000D2F RID: 3375 RVA: 0x00014E46 File Offset: 0x00013046
 		static UBrainComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AIModule.BrainComponent");
 		}
 
-		// Token: 0x060015BE RID: 5566 RVA: 0x0001FEF8 File Offset: 0x0001E0F8
+		// Token: 0x06000D30 RID: 3376 RVA: 0x00014E54 File Offset: 0x00013054
 		protected UBrainComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040004AD RID: 1197
-		internal static int __InterfaceOffset_IAIResourceInterface;
-
-		// Token: 0x040004AE RID: 1198
+		// Token: 0x04000242 RID: 578
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/AIModule.BrainComponent";
 
-		// Token: 0x040004AF RID: 1199
+		// Token: 0x04000243 RID: 579
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040004B0 RID: 1200
+		// Token: 0x04000244 RID: 580
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040004B1 RID: 1201
-		internal static int __PropertyOffset_BlackboardComp;
-
-		// Token: 0x040004B2 RID: 1202
+		// Token: 0x04000245 RID: 581
 		internal static int __PropertyOffset_AIOwner;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004306 RID: 17158
+	// Token: 0x02004765 RID: 18277
 	public class TRecallDataUnion
 	{
-		// Token: 0x17007966 RID: 31078
-		// (get) Token: 0x06019729 RID: 104233 RVA: 0x003A5CD0 File Offset: 0x003A3ED0
-		// (set) Token: 0x0601972A RID: 104234 RVA: 0x003A5CD8 File Offset: 0x003A3ED8
+		// Token: 0x17007F99 RID: 32665
+		// (get) Token: 0x0601AEAB RID: 110251 RVA: 0x003D1600 File Offset: 0x003CF800
+		// (set) Token: 0x0601AEAC RID: 110252 RVA: 0x003D1608 File Offset: 0x003CF808
 		public TRecallData Type { get; set; }
 
-		// Token: 0x17007967 RID: 31079
-		// (get) Token: 0x0601972B RID: 104235 RVA: 0x003A5CE1 File Offset: 0x003A3EE1
-		// (set) Token: 0x0601972C RID: 104236 RVA: 0x003A5CE9 File Offset: 0x003A3EE9
+		// Token: 0x17007F9A RID: 32666
+		// (get) Token: 0x0601AEAD RID: 110253 RVA: 0x003D1611 File Offset: 0x003CF811
+		// (set) Token: 0x0601AEAE RID: 110254 RVA: 0x003D1619 File Offset: 0x003CF819
 		public object Value { get; set; }
 
-		// Token: 0x0601972D RID: 104237 RVA: 0x003A5CF2 File Offset: 0x003A3EF2
+		// Token: 0x0601AEAF RID: 110255 RVA: 0x003D1622 File Offset: 0x003CF822
 		public TRecallDataUnion()
 		{
 			this.Type = TRecallData.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601972E RID: 104238 RVA: 0x003A5D08 File Offset: 0x003A3F08
+		// Token: 0x0601AEB0 RID: 110256 RVA: 0x003D1638 File Offset: 0x003CF838
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601972F RID: 104239 RVA: 0x003A5D1A File Offset: 0x003A3F1A
+		// Token: 0x0601AEB1 RID: 110257 RVA: 0x003D164A File Offset: 0x003CF84A
 		public ILevelPlayRecallDataT AsILevelPlayRecallData()
 		{
 			return this.As<ILevelPlayRecallDataT>();
 		}
 
-		// Token: 0x06019730 RID: 104240 RVA: 0x003A5D22 File Offset: 0x003A3F22
+		// Token: 0x0601AEB2 RID: 110258 RVA: 0x003D1652 File Offset: 0x003CF852
 		public static TRecallDataUnion FromILevelPlayRecallData(ILevelPlayRecallDataT _ilevelplayrecalldata)
 		{
 			return new TRecallDataUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019731 RID: 104241 RVA: 0x003A5D37 File Offset: 0x003A3F37
+		// Token: 0x0601AEB3 RID: 110259 RVA: 0x003D1667 File Offset: 0x003CF867
 		public IQuestRecallDataT AsIQuestRecallData()
 		{
 			return this.As<IQuestRecallDataT>();
 		}
 
-		// Token: 0x06019732 RID: 104242 RVA: 0x003A5D3F File Offset: 0x003A3F3F
+		// Token: 0x0601AEB4 RID: 110260 RVA: 0x003D166F File Offset: 0x003CF86F
 		public static TRecallDataUnion FromIQuestRecallData(IQuestRecallDataT _iquestrecalldata)
 		{
 			return new TRecallDataUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019733 RID: 104243 RVA: 0x003A5D54 File Offset: 0x003A3F54
+		// Token: 0x0601AEB5 RID: 110261 RVA: 0x003D1684 File Offset: 0x003CF884
 		public static int Pack(FlatBufferBuilder builder, TRecallDataUnion _o)
 		{
 			TRecallData type = _o.Type;

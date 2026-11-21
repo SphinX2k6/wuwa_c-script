@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025F5 RID: 9717
+	// Token: 0x020028B5 RID: 10421
 	public class PosAndRot : PosA
 	{
-		// Token: 0x0600DA56 RID: 55894 RVA: 0x002089A2 File Offset: 0x00206BA2
-		[NullableContext(1)]
+		// Token: 0x0600E823 RID: 59427 RVA: 0x002250F6 File Offset: 0x002232F6
 		public static PosAndRot Create(IPosAndRot? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700402E RID: 16430
-		// (get) Token: 0x0600DA57 RID: 55895 RVA: 0x002089C4 File Offset: 0x00206BC4
+		// Token: 0x17004367 RID: 17255
+		// (get) Token: 0x0600E824 RID: 59428 RVA: 0x00225118 File Offset: 0x00223318
 		public override float? X
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700402F RID: 16431
-		// (get) Token: 0x0600DA58 RID: 55896 RVA: 0x002089FC File Offset: 0x00206BFC
+		// Token: 0x17004368 RID: 17256
+		// (get) Token: 0x0600E825 RID: 59429 RVA: 0x00225150 File Offset: 0x00223350
 		public override float? Y
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004030 RID: 16432
-		// (get) Token: 0x0600DA59 RID: 55897 RVA: 0x00208A34 File Offset: 0x00206C34
+		// Token: 0x17004369 RID: 17257
+		// (get) Token: 0x0600E826 RID: 59430 RVA: 0x00225188 File Offset: 0x00223388
 		public override float? Z
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004031 RID: 16433
-		// (get) Token: 0x0600DA5A RID: 55898 RVA: 0x00208A6C File Offset: 0x00206C6C
+		// Token: 0x1700436A RID: 17258
+		// (get) Token: 0x0600E827 RID: 59431 RVA: 0x002251C0 File Offset: 0x002233C0
 		public override float? A
 		{
 			get
@@ -77,8 +75,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004032 RID: 16434
-		// (get) Token: 0x0600DA5B RID: 55899 RVA: 0x00208AA4 File Offset: 0x00206CA4
+		// Token: 0x1700436B RID: 17259
+		// (get) Token: 0x0600E828 RID: 59432 RVA: 0x002251F8 File Offset: 0x002233F8
 		public virtual float? Roll
 		{
 			get
@@ -91,8 +89,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004033 RID: 16435
-		// (get) Token: 0x0600DA5C RID: 55900 RVA: 0x00208ADC File Offset: 0x00206CDC
+		// Token: 0x1700436C RID: 17260
+		// (get) Token: 0x0600E829 RID: 59433 RVA: 0x00225230 File Offset: 0x00223430
 		public virtual float? Pitch
 		{
 			get
@@ -105,7 +103,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007939 RID: 31033
+		// Token: 0x04007FD3 RID: 32723
 		private IPosAndRot Instance;
 	}
 }

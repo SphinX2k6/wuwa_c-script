@@ -2,47 +2,47 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056F0 RID: 22256
+	// Token: 0x020046C7 RID: 18119
 	public class KurotatoShopSelectCardData : IKurotatoShopSelectCardData
 	{
-		// Token: 0x170087EA RID: 34794
-		// (get) Token: 0x060389B6 RID: 231862 RVA: 0x00D70566 File Offset: 0x00D6E766
-		// (set) Token: 0x060389B7 RID: 231863 RVA: 0x00D7056E File Offset: 0x00D6E76E
+		// Token: 0x17005BB2 RID: 23474
+		// (get) Token: 0x0602D8C6 RID: 186566 RVA: 0x00CBEB4E File Offset: 0x00CBCD4E
+		// (set) Token: 0x0602D8C7 RID: 186567 RVA: 0x00CBEB56 File Offset: 0x00CBCD56
 		public int Id { get; set; }
 
-		// Token: 0x170087EB RID: 34795
-		// (get) Token: 0x060389B8 RID: 231864 RVA: 0x00D70577 File Offset: 0x00D6E777
-		// (set) Token: 0x060389B9 RID: 231865 RVA: 0x00D7057F File Offset: 0x00D6E77F
+		// Token: 0x17005BB3 RID: 23475
+		// (get) Token: 0x0602D8C8 RID: 186568 RVA: 0x00CBEB5F File Offset: 0x00CBCD5F
+		// (set) Token: 0x0602D8C9 RID: 186569 RVA: 0x00CBEB67 File Offset: 0x00CBCD67
 		public int SelectionId { get; set; }
 
-		// Token: 0x170087EC RID: 34796
-		// (get) Token: 0x060389BA RID: 231866 RVA: 0x00D70588 File Offset: 0x00D6E788
-		// (set) Token: 0x060389BB RID: 231867 RVA: 0x00D70590 File Offset: 0x00D6E790
+		// Token: 0x17005BB4 RID: 23476
+		// (get) Token: 0x0602D8CA RID: 186570 RVA: 0x00CBEB70 File Offset: 0x00CBCD70
+		// (set) Token: 0x0602D8CB RID: 186571 RVA: 0x00CBEB78 File Offset: 0x00CBCD78
 		public EKurotatoCardType CardType { get; set; }
 
-		// Token: 0x170087ED RID: 34797
-		// (get) Token: 0x060389BC RID: 231868 RVA: 0x00D70599 File Offset: 0x00D6E799
-		// (set) Token: 0x060389BD RID: 231869 RVA: 0x00D705A1 File Offset: 0x00D6E7A1
+		// Token: 0x17005BB5 RID: 23477
+		// (get) Token: 0x0602D8CC RID: 186572 RVA: 0x00CBEB81 File Offset: 0x00CBCD81
+		// (set) Token: 0x0602D8CD RID: 186573 RVA: 0x00CBEB89 File Offset: 0x00CBCD89
 		public int OriginalCost { get; set; }
 
-		// Token: 0x170087EE RID: 34798
-		// (get) Token: 0x060389BE RID: 231870 RVA: 0x00D705AA File Offset: 0x00D6E7AA
-		// (set) Token: 0x060389BF RID: 231871 RVA: 0x00D705B2 File Offset: 0x00D6E7B2
+		// Token: 0x17005BB6 RID: 23478
+		// (get) Token: 0x0602D8CE RID: 186574 RVA: 0x00CBEB92 File Offset: 0x00CBCD92
+		// (set) Token: 0x0602D8CF RID: 186575 RVA: 0x00CBEB9A File Offset: 0x00CBCD9A
 		public int Cost { get; set; }
 
-		// Token: 0x170087EF RID: 34799
-		// (get) Token: 0x060389C0 RID: 231872 RVA: 0x00D705BB File Offset: 0x00D6E7BB
-		// (set) Token: 0x060389C1 RID: 231873 RVA: 0x00D705C3 File Offset: 0x00D6E7C3
+		// Token: 0x17005BB7 RID: 23479
+		// (get) Token: 0x0602D8D0 RID: 186576 RVA: 0x00CBEBA3 File Offset: 0x00CBCDA3
+		// (set) Token: 0x0602D8D1 RID: 186577 RVA: 0x00CBEBAB File Offset: 0x00CBCDAB
 		public bool IsLock { get; set; }
 
-		// Token: 0x170087F0 RID: 34800
-		// (get) Token: 0x060389C2 RID: 231874 RVA: 0x00D705CC File Offset: 0x00D6E7CC
-		// (set) Token: 0x060389C3 RID: 231875 RVA: 0x00D705D4 File Offset: 0x00D6E7D4
+		// Token: 0x17005BB8 RID: 23480
+		// (get) Token: 0x0602D8D2 RID: 186578 RVA: 0x00CBEBB4 File Offset: 0x00CBCDB4
+		// (set) Token: 0x0602D8D3 RID: 186579 RVA: 0x00CBEBBC File Offset: 0x00CBCDBC
 		public bool HasBuy { get; set; }
 
-		// Token: 0x170087F1 RID: 34801
-		// (get) Token: 0x060389C4 RID: 231876 RVA: 0x00D705DD File Offset: 0x00D6E7DD
-		// (set) Token: 0x060389C5 RID: 231877 RVA: 0x00D705E5 File Offset: 0x00D6E7E5
+		// Token: 0x17005BB9 RID: 23481
+		// (get) Token: 0x0602D8D4 RID: 186580 RVA: 0x00CBEBC5 File Offset: 0x00CBCDC5
+		// (set) Token: 0x0602D8D5 RID: 186581 RVA: 0x00CBEBCD File Offset: 0x00CBCDCD
 		public bool IsRecommend { get; set; }
 	}
 }

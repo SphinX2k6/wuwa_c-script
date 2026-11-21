@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E51 RID: 20049
+	// Token: 0x02003E1A RID: 15898
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleEnvironmentBuffItemWithTexture : GridProxyAbstract<IRogueBattleEnvironmentInfo>
 	{
-		// Token: 0x06033AB6 RID: 211638 RVA: 0x00C19084 File Offset: 0x00C17284
+		// Token: 0x06028921 RID: 166177 RVA: 0x00B625AC File Offset: 0x00B607AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AB7 RID: 211639 RVA: 0x00C190C0 File Offset: 0x00C172C0
+		// Token: 0x06028922 RID: 166178 RVA: 0x00B625E8 File Offset: 0x00B607E8
 		public override void Refresh(IRogueBattleEnvironmentInfo data, bool isSelected, int gridIndex)
 		{
 			base.SetTextureByPath(data.Icon, base.GetTexture(0), null, null);

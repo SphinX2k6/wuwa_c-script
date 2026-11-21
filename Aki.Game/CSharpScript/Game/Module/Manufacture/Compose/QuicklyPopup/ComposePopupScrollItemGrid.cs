@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 {
-	// Token: 0x02005679 RID: 22137
+	// Token: 0x0200464F RID: 17999
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 	})]
 	public class ComposePopupScrollItemGrid : GridProxyAbstract<ISelectedData>
 	{
-		// Token: 0x06038564 RID: 230756 RVA: 0x00D5EBD8 File Offset: 0x00D5CDD8
+		// Token: 0x0602D461 RID: 185441 RVA: 0x00CACD28 File Offset: 0x00CAAF28
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038565 RID: 230757 RVA: 0x00D5EC44 File Offset: 0x00D5CE44
+		// Token: 0x0602D462 RID: 185442 RVA: 0x00CACD94 File Offset: 0x00CAAF94
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ComposePopupScrollItemGrid.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038566 RID: 230758 RVA: 0x00D5EC87 File Offset: 0x00D5CE87
+		// Token: 0x0602D463 RID: 185443 RVA: 0x00CACDD7 File Offset: 0x00CAAFD7
 		protected override void OnStart()
 		{
 			ComposePopupMediumItemGrid composeItemGrid = this.ComposeItemGrid;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			composeItemGrid.BindOnCanExecuteChange((object _, bool _, EToggleState _) => false);
 		}
 
-		// Token: 0x06038567 RID: 230759 RVA: 0x00D5ECB8 File Offset: 0x00D5CEB8
+		// Token: 0x0602D464 RID: 185444 RVA: 0x00CACE08 File Offset: 0x00CAB008
 		public override void Refresh(ISelectedData data, bool isSelected, int gridIndex)
 		{
 			if (data.ItemId == -1)
@@ -108,11 +108,11 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			}
 		}
 
-		// Token: 0x0401D9BE RID: 121278
+		// Token: 0x04018449 RID: 99401
 		[Nullable(2)]
 		private ComposePopupMediumItemGrid ComposeItemGrid;
 
-		// Token: 0x0401D9BF RID: 121279
+		// Token: 0x0401844A RID: 99402
 		[Nullable(new byte[]
 		{
 			2,

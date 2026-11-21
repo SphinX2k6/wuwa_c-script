@@ -12,16 +12,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B25 RID: 23333
+	// Token: 0x02004B06 RID: 19206
 	public class CookSuccessView : UiViewBase
 	{
-		// Token: 0x0603B13F RID: 241983 RVA: 0x00E16340 File Offset: 0x00E14540
+		// Token: 0x060300B1 RID: 196785 RVA: 0x00D67058 File Offset: 0x00D65258
 		[NullableContext(1)]
 		public CookSuccessView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603B140 RID: 241984 RVA: 0x00E1634C File Offset: 0x00E1454C
+		// Token: 0x060300B2 RID: 196786 RVA: 0x00D67064 File Offset: 0x00D65264
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B141 RID: 241985 RVA: 0x00E164BC File Offset: 0x00E146BC
+		// Token: 0x060300B3 RID: 196787 RVA: 0x00D671D4 File Offset: 0x00D653D4
 		protected override void OnStart()
 		{
 			CookRewardPopData cookRewardPopData = this.OpenParam as CookRewardPopData;
@@ -70,31 +70,31 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.ExpSliderItem = new ExpSliderItem(base.GetItem(4));
 		}
 
-		// Token: 0x0603B142 RID: 241986 RVA: 0x00E16524 File Offset: 0x00E14724
+		// Token: 0x060300B4 RID: 196788 RVA: 0x00D6723C File Offset: 0x00D6543C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.FixSuccess, new Action(this.OnClose));
 		}
 
-		// Token: 0x0603B143 RID: 241987 RVA: 0x00E16542 File Offset: 0x00E14742
+		// Token: 0x060300B5 RID: 196789 RVA: 0x00D6725A File Offset: 0x00D6545A
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FixSuccess, new Action(this.OnClose));
 		}
 
-		// Token: 0x0603B144 RID: 241988 RVA: 0x00E16560 File Offset: 0x00E14760
+		// Token: 0x060300B6 RID: 196790 RVA: 0x00D67278 File Offset: 0x00D65478
 		private void OnConfirm()
 		{
 			this.OnClose();
 		}
 
-		// Token: 0x0603B145 RID: 241989 RVA: 0x00E16568 File Offset: 0x00E14768
+		// Token: 0x060300B7 RID: 196791 RVA: 0x00D67280 File Offset: 0x00D65480
 		private void OnClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603B146 RID: 241990 RVA: 0x00E16574 File Offset: 0x00E14774
+		// Token: 0x060300B8 RID: 196792 RVA: 0x00D6728C File Offset: 0x00D6548C
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			return null;
 		}
 
-		// Token: 0x0603B147 RID: 241991 RVA: 0x00E165CF File Offset: 0x00E147CF
+		// Token: 0x060300B9 RID: 196793 RVA: 0x00D672E7 File Offset: 0x00D654E7
 		protected override void OnAfterShow()
 		{
 			this.RefreshTitle();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RefreshSlider();
 		}
 
-		// Token: 0x0603B148 RID: 241992 RVA: 0x00E165E4 File Offset: 0x00E147E4
+		// Token: 0x060300BA RID: 196794 RVA: 0x00D672FC File Offset: 0x00D654FC
 		private void RefreshTitle()
 		{
 			ECookPopType type = this.Type;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			LguiUtil.Instance.SetLocalText(base.GetText(0), "GetItem", Array.Empty<object>());
 		}
 
-		// Token: 0x0603B149 RID: 241993 RVA: 0x00E16638 File Offset: 0x00E14838
+		// Token: 0x060300BB RID: 196795 RVA: 0x00D67350 File Offset: 0x00D65550
 		private void RefreshScroller()
 		{
 			List<TItem> list = new List<TItem>();
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.CookPopScroll.RefreshByData<TItem>(list, null);
 		}
 
-		// Token: 0x0603B14A RID: 241994 RVA: 0x00E166C4 File Offset: 0x00E148C4
+		// Token: 0x060300BC RID: 196796 RVA: 0x00D673DC File Offset: 0x00D655DC
 		private void RefreshSlider()
 		{
 			ECookPopType type = this.Type;
@@ -170,13 +170,13 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.ExpSliderItem.SetActive(false);
 		}
 
-		// Token: 0x0603B14B RID: 241995 RVA: 0x00E16705 File Offset: 0x00E14905
+		// Token: 0x060300BD RID: 196797 RVA: 0x00D6741D File Offset: 0x00D6561D
 		protected override void OnBeforeDestroy()
 		{
 			this.CookPopScroll.ClearChildren();
 		}
 
-		// Token: 0x0401ECE4 RID: 126180
+		// Token: 0x040197A0 RID: 104352
 		[Nullable(new byte[]
 		{
 			2,
@@ -184,29 +184,29 @@ namespace CSharpScript.Game.Module.Cook.View
 		})]
 		private GenericScrollView<CommonItemSimpleGrid> CookPopScroll;
 
-		// Token: 0x0401ECE5 RID: 126181
+		// Token: 0x040197A1 RID: 104353
 		private ECookPopType Type;
 
-		// Token: 0x0401ECE6 RID: 126182
+		// Token: 0x040197A2 RID: 104354
 		[Nullable(2)]
 		private ExpSliderItem ExpSliderItem;
 
-		// Token: 0x0200BD64 RID: 48484
+		// Token: 0x0200A76D RID: 42861
 		public enum ECookPopDefine
 		{
-			// Token: 0x040391F8 RID: 233976
+			// Token: 0x04033BC4 RID: 211908
 			Title,
-			// Token: 0x040391F9 RID: 233977
+			// Token: 0x04033BC5 RID: 211909
 			Desc,
-			// Token: 0x040391FA RID: 233978
+			// Token: 0x04033BC6 RID: 211910
 			BtnItem,
-			// Token: 0x040391FB RID: 233979
+			// Token: 0x04033BC7 RID: 211911
 			ItemScroller,
-			// Token: 0x040391FC RID: 233980
+			// Token: 0x04033BC8 RID: 211912
 			ExpItem,
-			// Token: 0x040391FD RID: 233981
+			// Token: 0x04033BC9 RID: 211913
 			CancelBtn,
-			// Token: 0x040391FE RID: 233982
+			// Token: 0x04033BCA RID: 211914
 			ConfirmBtn
 		}
 	}

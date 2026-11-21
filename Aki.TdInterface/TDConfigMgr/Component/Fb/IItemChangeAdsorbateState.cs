@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B26 RID: 2854
+	// Token: 0x02000BF4 RID: 3060
 	public class IItemChangeAdsorbateState
 	{
-		// Token: 0x060041E5 RID: 16869 RVA: 0x000A9099 File Offset: 0x000A7299
-		[NullableContext(1)]
+		// Token: 0x0600463E RID: 17982 RVA: 0x000B315D File Offset: 0x000B135D
 		public static IItemChangeAdsorbateState Create(IItemChangeAdsorbateState? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x04002531 RID: 9521
+		// Token: 0x04002779 RID: 10105
 		private IItemChangeAdsorbateState Instance;
 	}
 }

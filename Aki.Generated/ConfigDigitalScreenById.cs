@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000208 RID: 520
+	// Token: 0x0200021A RID: 538
 	public class ConfigDigitalScreenById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C33 RID: 3123 RVA: 0x0009E9EC File Offset: 0x0009CBEC
+		// Token: 0x06000C9F RID: 3231 RVA: 0x000A4924 File Offset: 0x000A2B24
 		static ConfigDigitalScreenById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDigitalScreenById.CreateStaticDefaultValue), new Action(ConfigDigitalScreenById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C34 RID: 3124 RVA: 0x0009EA0C File Offset: 0x0009CC0C
+		// Token: 0x06000CA0 RID: 3232 RVA: 0x000A4944 File Offset: 0x000A2B44
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDigitalScreenById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C35 RID: 3125 RVA: 0x0009EA8B File Offset: 0x0009CC8B
+		// Token: 0x06000CA1 RID: 3233 RVA: 0x000A49C3 File Offset: 0x000A2BC3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDigitalScreenById.LogPair = null;
 			ConfigDigitalScreenById.HandleId = 0;
 		}
 
-		// Token: 0x06000C36 RID: 3126 RVA: 0x0009EA99 File Offset: 0x0009CC99
+		// Token: 0x06000CA2 RID: 3234 RVA: 0x000A49D1 File Offset: 0x000A2BD1
 		public static void Init()
 		{
 			ConfigDigitalScreenById.HandleId = ConfigCommon.InitDataStatement(ConfigDigitalScreenById.HandleId, "db_digital_screen.db", "select BinData from `DigitalScreen` where Id=?");
 		}
 
-		// Token: 0x06000C37 RID: 3127 RVA: 0x0009EAB4 File Offset: 0x0009CCB4
+		// Token: 0x06000CA3 RID: 3235 RVA: 0x000A49EC File Offset: 0x000A2BEC
 		public static DigitalScreen? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDigitalScreenById.HandleId, ConfigDigitalScreenById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DigitalScreen?(rootAsDigitalScreen);
 		}
 
-		// Token: 0x04000E1C RID: 3612
+		// Token: 0x04000E9A RID: 3738
 		private const string DB = "db_digital_screen.db";
 
-		// Token: 0x04000E1D RID: 3613
+		// Token: 0x04000E9B RID: 3739
 		private const string FILE = "s.数码界面.xlsx";
 
-		// Token: 0x04000E1E RID: 3614
+		// Token: 0x04000E9C RID: 3740
 		private const string TABLE = "DigitalScreen";
 
-		// Token: 0x04000E1F RID: 3615
+		// Token: 0x04000E9D RID: 3741
 		private const string COMMAND = "select BinData from `DigitalScreen` where Id=?";
 
-		// Token: 0x04000E20 RID: 3616
+		// Token: 0x04000E9E RID: 3742
 		private const string KEY_PREFIX = "DigitalScreenById";
 
-		// Token: 0x04000E21 RID: 3617
+		// Token: 0x04000E9F RID: 3743
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E22 RID: 3618
+		// Token: 0x04000EA0 RID: 3744
 		private static int HandleId;
 	}
 }

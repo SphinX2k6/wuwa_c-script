@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E25 RID: 24101
+	// Token: 0x02004E0A RID: 19978
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarPointGraduate : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D4AC RID: 251052 RVA: 0x00EC563A File Offset: 0x00EC383A
+		// Token: 0x0603243B RID: 205883 RVA: 0x00E16B9A File Offset: 0x00E14D9A
 		protected override void OnInitData()
 		{
 			this.LastPercent = this.PercentMachine.GetCurPercent();
 		}
 
-		// Token: 0x0603D4AD RID: 251053 RVA: 0x00EC5650 File Offset: 0x00EC3850
+		// Token: 0x0603243C RID: 205884 RVA: 0x00E16BB0 File Offset: 0x00E14DB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D4AE RID: 251054 RVA: 0x00EC571C File Offset: 0x00EC391C
+		// Token: 0x0603243D RID: 205885 RVA: 0x00E16C7C File Offset: 0x00E14E7C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarPointGraduate.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D4AF RID: 251055 RVA: 0x00EC5760 File Offset: 0x00EC3960
+		// Token: 0x0603243E RID: 205886 RVA: 0x00E16CC0 File Offset: 0x00E14EC0
 		protected UniTask InitSlotItem(UUIItem slotItem)
 		{
 			SpecialEnergyBarPointGraduate.<InitSlotItem>d__15 <InitSlotItem>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitSlotItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D4B0 RID: 251056 RVA: 0x00EC57AC File Offset: 0x00EC39AC
+		// Token: 0x0603243F RID: 205887 RVA: 0x00E16D0C File Offset: 0x00E14F0C
 		protected UniTask InitPointItem(UUIItem pointItem)
 		{
 			SpecialEnergyBarPointGraduate.<InitPointItem>d__16 <InitPointItem>d__;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitPointItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D4B1 RID: 251057 RVA: 0x00EC57F8 File Offset: 0x00EC39F8
+		// Token: 0x06032440 RID: 205888 RVA: 0x00E16D58 File Offset: 0x00E14F58
 		protected override void OnStart()
 		{
 			if (this.Config == null)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(true);
 		}
 
-		// Token: 0x0603D4B2 RID: 251058 RVA: 0x00EC5970 File Offset: 0x00EC3B70
+		// Token: 0x06032441 RID: 205889 RVA: 0x00E16ED0 File Offset: 0x00E150D0
 		public void SetGraduateItemOffset(int index, float percent)
 		{
 			UUIItem valueOrDefault = this.GraduateItemList.GetValueOrDefault(index);
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			valueOrDefault.SetAnchorOffsetX(369f * (percent - 0.5f));
 		}
 
-		// Token: 0x0603D4B3 RID: 251059 RVA: 0x00EC5998 File Offset: 0x00EC3B98
+		// Token: 0x06032442 RID: 205890 RVA: 0x00E16EF8 File Offset: 0x00E150F8
 		protected virtual void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -176,19 +176,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastPercent = curPercent;
 		}
 
-		// Token: 0x0603D4B4 RID: 251060 RVA: 0x00EC5A19 File Offset: 0x00EC3C19
+		// Token: 0x06032443 RID: 205891 RVA: 0x00E16F79 File Offset: 0x00E15179
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D4B5 RID: 251061 RVA: 0x00EC5A22 File Offset: 0x00EC3C22
+		// Token: 0x06032444 RID: 205892 RVA: 0x00E16F82 File Offset: 0x00E15182
 		protected override void OnKeyEnableChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D4B6 RID: 251062 RVA: 0x00EC5A2B File Offset: 0x00EC3C2B
+		// Token: 0x06032445 RID: 205893 RVA: 0x00E16F8B File Offset: 0x00E1518B
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -205,61 +205,61 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			slotItem.Tick(delta);
 		}
 
-		// Token: 0x0603D4B7 RID: 251063 RVA: 0x00EC5A57 File Offset: 0x00EC3C57
+		// Token: 0x06032446 RID: 205894 RVA: 0x00E16FB7 File Offset: 0x00E151B7
 		public override void ReplaceFullEffect(UNiagaraSystem niagara)
 		{
 			this.PointItem.ReplaceFullEffect(niagara);
 			this.SlotItem.ReplaceFullEffect(niagara);
 		}
 
-		// Token: 0x0401FF65 RID: 130917
+		// Token: 0x0401AA2C RID: 109100
 		private const int POINT_NUM = 41;
 
-		// Token: 0x0401FF66 RID: 130918
+		// Token: 0x0401AA2D RID: 109101
 		private const float POINT_WIDTH = 9f;
 
-		// Token: 0x0401FF67 RID: 130919
+		// Token: 0x0401AA2E RID: 109102
 		private const float TOTAL_WIDTH = 369f;
 
-		// Token: 0x0401FF68 RID: 130920
+		// Token: 0x0401AA2F RID: 109103
 		[Nullable(2)]
 		protected SpecialEnergyBarSlotItem SlotItem;
 
-		// Token: 0x0401FF69 RID: 130921
+		// Token: 0x0401AA30 RID: 109104
 		[Nullable(2)]
 		protected SpecialEnergyBarPointItem PointItem;
 
-		// Token: 0x0401FF6A RID: 130922
+		// Token: 0x0401AA31 RID: 109105
 		protected List<UUIItem> GraduateItemList = new List<UUIItem>();
 
-		// Token: 0x0401FF6B RID: 130923
+		// Token: 0x0401AA32 RID: 109106
 		protected bool IsKeyEnable;
 
-		// Token: 0x0401FF6C RID: 130924
+		// Token: 0x0401AA33 RID: 109107
 		protected float LastPercent;
 
-		// Token: 0x0401FF6D RID: 130925
+		// Token: 0x0401AA34 RID: 109108
 		protected bool NeedInitSlot = true;
 
-		// Token: 0x0401FF6E RID: 130926
+		// Token: 0x0401AA35 RID: 109109
 		protected bool NeedInitPoint = true;
 
-		// Token: 0x0401FF6F RID: 130927
+		// Token: 0x0401AA36 RID: 109110
 		public bool IsMorph;
 
-		// Token: 0x0200C1A3 RID: 49571
+		// Token: 0x0200ABB2 RID: 43954
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A833 RID: 239667
+			// Token: 0x04035225 RID: 217637
 			SlotItem,
-			// Token: 0x0403A834 RID: 239668
+			// Token: 0x04035226 RID: 217638
 			PointItem,
-			// Token: 0x0403A835 RID: 239669
+			// Token: 0x04035227 RID: 217639
 			GraduateItem,
-			// Token: 0x0403A836 RID: 239670
+			// Token: 0x04035228 RID: 217640
 			KeyContainerItem,
-			// Token: 0x0403A837 RID: 239671
+			// Token: 0x04035229 RID: 217641
 			BottomDescItem
 		}
 	}

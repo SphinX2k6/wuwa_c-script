@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CD7 RID: 23767
+	// Token: 0x02004CB9 RID: 19641
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleLinkEnergyButton : FormationExtraButton
 	{
-		// Token: 0x0603C231 RID: 246321 RVA: 0x00E64D14 File Offset: 0x00E62F14
+		// Token: 0x06031187 RID: 201095 RVA: 0x00DB52F0 File Offset: 0x00DB34F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C232 RID: 246322 RVA: 0x00E64E88 File Offset: 0x00E63088
+		// Token: 0x06031188 RID: 201096 RVA: 0x00DB5464 File Offset: 0x00DB3664
 		protected override UniTask OnCreateAsync()
 		{
 			BattleLinkEnergyButton.<OnCreateAsync>d__37 <OnCreateAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C233 RID: 246323 RVA: 0x00E64ECC File Offset: 0x00E630CC
+		// Token: 0x06031189 RID: 201097 RVA: 0x00DB54A8 File Offset: 0x00DB36A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleLinkEnergyButton.<OnBeforeStartAsync>d__38 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C234 RID: 246324 RVA: 0x00E64F10 File Offset: 0x00E63110
+		// Token: 0x0603118A RID: 201098 RVA: 0x00DB54EC File Offset: 0x00DB36EC
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputDistributeController.Instance.BindAction("Link大招", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputLinkAction));
 		}
 
-		// Token: 0x0603C235 RID: 246325 RVA: 0x00E65130 File Offset: 0x00E63330
+		// Token: 0x0603118B RID: 201099 RVA: 0x00DB570C File Offset: 0x00DB390C
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603C236 RID: 246326 RVA: 0x00E651EC File Offset: 0x00E633EC
+		// Token: 0x0603118C RID: 201100 RVA: 0x00DB57C8 File Offset: 0x00DB39C8
 		[NullableContext(1)]
 		private UniTask LoadNiagara(string path)
 		{
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadNiagara>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C237 RID: 246327 RVA: 0x00E65237 File Offset: 0x00E63437
+		// Token: 0x0603118D RID: 201101 RVA: 0x00DB5813 File Offset: 0x00DB3A13
 		[NullableContext(1)]
 		private void OnInputLinkAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
@@ -209,22 +209,17 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C238 RID: 246328 RVA: 0x00E6524B File Offset: 0x00E6344B
+		// Token: 0x0603118E RID: 201102 RVA: 0x00DB5827 File Offset: 0x00DB3A27
 		private void OnPressLinkButton()
 		{
 			this.LinkAction();
 		}
 
-		// Token: 0x0603C239 RID: 246329 RVA: 0x00E65254 File Offset: 0x00E63454
+		// Token: 0x0603118F RID: 201103 RVA: 0x00DB5830 File Offset: 0x00DB3A30
 		private void LinkAction()
 		{
 			if (CameraController.Instance.IsSequenceCameraInCinematic("MainCamera"))
 			{
-				return;
-			}
-			if (!Info.Instance.IsBuildShipping && BattleLinkModel.Instance.IsNewLinkGmTest())
-			{
-				BattleLinkController.Instance.NewLinkBurstTest().Forget();
 				return;
 			}
 			if (!this.CheckAliveRoles())
@@ -243,7 +238,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C23A RID: 246330 RVA: 0x00E65300 File Offset: 0x00E63500
+		// Token: 0x06031190 RID: 201104 RVA: 0x00DB58B4 File Offset: 0x00DB3AB4
 		private void OnBattleScoreChanged(int scoreId, int score)
 		{
 			if (!this.IsValidScore(scoreId))
@@ -265,7 +260,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateScore(score, this.CurScoreLevelConfig);
 		}
 
-		// Token: 0x0603C23B RID: 246331 RVA: 0x00E6537A File Offset: 0x00E6357A
+		// Token: 0x06031191 RID: 201105 RVA: 0x00DB592E File Offset: 0x00DB3B2E
 		private void OnNewLinkStatusChanged(ENewLinkStatus state)
 		{
 			this.UpdateLinkConfig();
@@ -276,7 +271,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C23C RID: 246332 RVA: 0x00E6539C File Offset: 0x00E6359C
+		// Token: 0x06031192 RID: 201106 RVA: 0x00DB5950 File Offset: 0x00DB3B50
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			if (Info.Instance.IsInKeyBoard())
@@ -326,7 +321,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C23D RID: 246333 RVA: 0x00E6542C File Offset: 0x00E6362C
+		// Token: 0x06031193 RID: 201107 RVA: 0x00DB59E0 File Offset: 0x00DB3BE0
 		private void UpdateLinkConfig()
 		{
 			LinkData? linkConfig = BattleLinkModel.Instance.GetLinkConfig();
@@ -365,7 +360,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C23E RID: 246334 RVA: 0x00E65540 File Offset: 0x00E63740
+		// Token: 0x06031194 RID: 201108 RVA: 0x00DB5AF4 File Offset: 0x00DB3CF4
 		private void UpdateScore(int score, BattleScoreLevelConf? scoreLevelConfig)
 		{
 			this.Score = score;
@@ -404,7 +399,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C23F RID: 246335 RVA: 0x00E65620 File Offset: 0x00E63820
+		// Token: 0x06031195 RID: 201109 RVA: 0x00DB5BD4 File Offset: 0x00DB3DD4
 		public override void Tick(float delta)
 		{
 			if (this.HasValidConfig && this.TickScore != this.TickEndScore && base.GetActive())
@@ -437,7 +432,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C240 RID: 246336 RVA: 0x00E6571C File Offset: 0x00E6391C
+		// Token: 0x06031196 RID: 201110 RVA: 0x00DB5CD0 File Offset: 0x00DB3ED0
 		private void SetTickEndScore(int score)
 		{
 			if (score > 0)
@@ -452,7 +447,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SmoothTime = 200f;
 		}
 
-		// Token: 0x0603C241 RID: 246337 RVA: 0x00E65770 File Offset: 0x00E63970
+		// Token: 0x06031197 RID: 201111 RVA: 0x00DB5D24 File Offset: 0x00DB3F24
 		private void UpdateMaxAndMinScore()
 		{
 			this.MinScoreLevelConfig = null;
@@ -481,13 +476,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			float maxScore = this.MaxScore;
 		}
 
-		// Token: 0x0603C242 RID: 246338 RVA: 0x00E6583C File Offset: 0x00E63A3C
+		// Token: 0x06031198 RID: 201112 RVA: 0x00DB5DF0 File Offset: 0x00DB3FF0
 		public bool IsValidScore(int scoreId)
 		{
 			return scoreId == this.ScoreId && BattleScoreModel.Instance.GetScoreConfig(scoreId, true) != null;
 		}
 
-		// Token: 0x0603C243 RID: 246339 RVA: 0x00E65870 File Offset: 0x00E63A70
+		// Token: 0x06031199 RID: 201113 RVA: 0x00DB5E24 File Offset: 0x00DB4024
 		public bool CheckAliveRoles()
 		{
 			LinkData? linkConfig = BattleLinkModel.Instance.GetLinkConfig();
@@ -509,7 +504,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return num > 1;
 		}
 
-		// Token: 0x0603C244 RID: 246340 RVA: 0x00E658F8 File Offset: 0x00E63AF8
+		// Token: 0x0603119A RID: 201114 RVA: 0x00DB5EAC File Offset: 0x00DB40AC
 		public void RefreshLinkButton(ENewLinkStatus state)
 		{
 			if (state == ENewLinkStatus.None)
@@ -547,7 +542,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C245 RID: 246341 RVA: 0x00E65978 File Offset: 0x00E63B78
+		// Token: 0x0603119B RID: 201115 RVA: 0x00DB5F2C File Offset: 0x00DB412C
 		public void SetLinkButtonState(BattleLinkEnergyButton.ELinkButtonState state)
 		{
 			switch (state)
@@ -787,12 +782,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C246 RID: 246342 RVA: 0x00E65CC1 File Offset: 0x00E63EC1
+		// Token: 0x0603119C RID: 201116 RVA: 0x00DB6275 File Offset: 0x00DB4475
 		protected override void OnShowBattleChildView()
 		{
 		}
 
-		// Token: 0x0603C247 RID: 246343 RVA: 0x00E65CC4 File Offset: 0x00E63EC4
+		// Token: 0x0603119D RID: 201117 RVA: 0x00DB6278 File Offset: 0x00DB4478
 		public string GetResourceId()
 		{
 			BattleLinkModel instance = BattleLinkModel.Instance;
@@ -812,154 +807,154 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return "UiItem_FightLinkBurst";
 		}
 
-		// Token: 0x0401F597 RID: 128407
+		// Token: 0x0401A050 RID: 106576
 		[Nullable(1)]
 		private const string SCORE_NIAGARA_PATH = "/Game/Aki/Effect/UI/Niagaras/RouGe/NS_Fx_LGUI_WhiteCat_Button_Panner.NS_Fx_LGUI_WhiteCat_Button_Panner";
 
-		// Token: 0x0401F598 RID: 128408
+		// Token: 0x0401A051 RID: 106577
 		[Nullable(1)]
 		private const string READY_NIAGARA_PATH = "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_Link.NS_Fx_LGUI_Fight_Link";
 
-		// Token: 0x0401F599 RID: 128409
+		// Token: 0x0401A052 RID: 106578
 		private const int MAX_SMOOTH_TIME = 200;
 
-		// Token: 0x0401F59A RID: 128410
+		// Token: 0x0401A053 RID: 106579
 		private const int LINK_BURST_TRIGGER_INTERVAL = 1000;
 
-		// Token: 0x0401F59B RID: 128411
+		// Token: 0x0401A054 RID: 106580
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat TickStatsObject = Stat.Create("[BattleView]BattleLinkEnergyButtonTick", "", "");
 
-		// Token: 0x0401F59C RID: 128412
+		// Token: 0x0401A055 RID: 106581
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F59D RID: 128413
+		// Token: 0x0401A056 RID: 106582
 		private UUIButtonComponent LinkButton;
 
-		// Token: 0x0401F59E RID: 128414
+		// Token: 0x0401A057 RID: 106583
 		private UNiagaraSystem ScoreNiagara;
 
-		// Token: 0x0401F59F RID: 128415
+		// Token: 0x0401A058 RID: 106584
 		private UUINiagara ScoreUiNiagara;
 
-		// Token: 0x0401F5A0 RID: 128416
+		// Token: 0x0401A059 RID: 106585
 		private UNiagaraSystem ReadyNiagara;
 
-		// Token: 0x0401F5A1 RID: 128417
+		// Token: 0x0401A05A RID: 106586
 		private UUINiagara ReadyUiNiagara;
 
-		// Token: 0x0401F5A2 RID: 128418
+		// Token: 0x0401A05B RID: 106587
 		private UUIItem PointItem;
 
-		// Token: 0x0401F5A3 RID: 128419
+		// Token: 0x0401A05C RID: 106588
 		private UUIItem ForbidItem;
 
-		// Token: 0x0401F5A4 RID: 128420
+		// Token: 0x0401A05D RID: 106589
 		private UUIItem LockItem;
 
-		// Token: 0x0401F5A5 RID: 128421
+		// Token: 0x0401A05E RID: 106590
 		private UUITexture Icon;
 
-		// Token: 0x0401F5A6 RID: 128422
+		// Token: 0x0401A05F RID: 106591
 		private UUITexture IconBg;
 
-		// Token: 0x0401F5A7 RID: 128423
+		// Token: 0x0401A060 RID: 106592
 		private CombineKeyItem KeyItemPc;
 
-		// Token: 0x0401F5A8 RID: 128424
+		// Token: 0x0401A061 RID: 106593
 		private CombineKeyItem KeyItemGp;
 
-		// Token: 0x0401F5A9 RID: 128425
+		// Token: 0x0401A062 RID: 106594
 		private bool HasValidConfig;
 
-		// Token: 0x0401F5AA RID: 128426
+		// Token: 0x0401A063 RID: 106595
 		private bool IsShowFull;
 
-		// Token: 0x0401F5AB RID: 128427
+		// Token: 0x0401A064 RID: 106596
 		private float TickStartScore;
 
-		// Token: 0x0401F5AC RID: 128428
+		// Token: 0x0401A065 RID: 106597
 		private float TickEndScore;
 
-		// Token: 0x0401F5AD RID: 128429
+		// Token: 0x0401A066 RID: 106598
 		private float TickScore;
 
-		// Token: 0x0401F5AE RID: 128430
+		// Token: 0x0401A067 RID: 106599
 		private float MaxScore;
 
-		// Token: 0x0401F5AF RID: 128431
+		// Token: 0x0401A068 RID: 106600
 		private float SmoothTime;
 
-		// Token: 0x0401F5B0 RID: 128432
+		// Token: 0x0401A069 RID: 106601
 		private IReadOnlyList<BattleScoreLevelConf> CurScoreLevelConfigList;
 
-		// Token: 0x0401F5B1 RID: 128433
+		// Token: 0x0401A06A RID: 106602
 		private BattleScoreLevelConf? CurScoreLevelConfig;
 
-		// Token: 0x0401F5B2 RID: 128434
+		// Token: 0x0401A06B RID: 106603
 		private BattleScoreLevelConf? MinScoreLevelConfig;
 
-		// Token: 0x0401F5B3 RID: 128435
+		// Token: 0x0401A06C RID: 106604
 		private BattleScoreLevelConf? MaxScoreLevelConfig;
 
-		// Token: 0x0401F5B4 RID: 128436
+		// Token: 0x0401A06D RID: 106605
 		private int NewLinkId;
 
-		// Token: 0x0401F5B5 RID: 128437
+		// Token: 0x0401A06E RID: 106606
 		private int ScoreId;
 
-		// Token: 0x0401F5B6 RID: 128438
+		// Token: 0x0401A06F RID: 106607
 		private int Score;
 
-		// Token: 0x0401F5B7 RID: 128439
+		// Token: 0x0401A070 RID: 106608
 		private long BurstTriggerCd;
 
-		// Token: 0x0200BF29 RID: 48937
+		// Token: 0x0200A92F RID: 43311
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039A92 RID: 236178
+			// Token: 0x04034454 RID: 214100
 			LinkButton,
-			// Token: 0x04039A93 RID: 236179
+			// Token: 0x04034455 RID: 214101
 			ScoreNiagara,
-			// Token: 0x04039A94 RID: 236180
+			// Token: 0x04034456 RID: 214102
 			PointItem,
-			// Token: 0x04039A95 RID: 236181
+			// Token: 0x04034457 RID: 214103
 			ForbidItem,
-			// Token: 0x04039A96 RID: 236182
+			// Token: 0x04034458 RID: 214104
 			LockItem,
-			// Token: 0x04039A97 RID: 236183
+			// Token: 0x04034459 RID: 214105
 			Icon,
-			// Token: 0x04039A98 RID: 236184
+			// Token: 0x0403445A RID: 214106
 			IconBg,
-			// Token: 0x04039A99 RID: 236185
+			// Token: 0x0403445B RID: 214107
 			ReadyNiagara
 		}
 
-		// Token: 0x0200BF2A RID: 48938
+		// Token: 0x0200A930 RID: 43312
 		[NullableContext(0)]
 		private enum EDesktopChildType
 		{
-			// Token: 0x04039A9B RID: 236187
+			// Token: 0x0403445D RID: 214109
 			KeyItemPc = 8,
-			// Token: 0x04039A9C RID: 236188
+			// Token: 0x0403445E RID: 214110
 			KeyItemGp
 		}
 
-		// Token: 0x0200BF2B RID: 48939
+		// Token: 0x0200A931 RID: 43313
 		[NullableContext(0)]
 		public enum ELinkButtonState
 		{
-			// Token: 0x04039A9E RID: 236190
+			// Token: 0x04034460 RID: 214112
 			Normal,
-			// Token: 0x04039A9F RID: 236191
+			// Token: 0x04034461 RID: 214113
 			Full,
-			// Token: 0x04039AA0 RID: 236192
+			// Token: 0x04034462 RID: 214114
 			Burst,
-			// Token: 0x04039AA1 RID: 236193
+			// Token: 0x04034463 RID: 214115
 			Forbid,
-			// Token: 0x04039AA2 RID: 236194
+			// Token: 0x04034464 RID: 214116
 			Lock
 		}
 	}

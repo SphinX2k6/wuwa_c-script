@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode;
 
-// Token: 0x02002584 RID: 9604
+// Token: 0x02001A6F RID: 6767
 [NullableContext(2)]
 [Nullable(0)]
 public class PhotoThing
 {
-	// Token: 0x060136F3 RID: 79603 RVA: 0x004D6F5F File Offset: 0x004D515F
+	// Token: 0x06010BD4 RID: 68564 RVA: 0x004E598B File Offset: 0x004E3B8B
 	public PhotoThing(EntityPhotoBehaviorNode behaviorNode, [Nullable(new byte[]
 	{
 		2,
@@ -20,10 +20,10 @@ public class PhotoThing
 		this.Type = type;
 	}
 
-	// Token: 0x0400925B RID: 37467
+	// Token: 0x040093B3 RID: 37811
 	public EntityPhotoBehaviorNode BehaviorNode;
 
-	// Token: 0x0400925C RID: 37468
+	// Token: 0x040093B4 RID: 37812
 	[Nullable(new byte[]
 	{
 		2,
@@ -31,6 +31,6 @@ public class PhotoThing
 	})]
 	public List<PhotoMission> PhotoMissions;
 
-	// Token: 0x0400925D RID: 37469
+	// Token: 0x040093B5 RID: 37813
 	public EMissionGetType? Type;
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x02001FC1 RID: 8129
+// Token: 0x02001494 RID: 5268
 [NullableContext(1)]
 [Nullable(0)]
 public static class PhantomStackUtil
 {
-	// Token: 0x0600FE42 RID: 65090 RVA: 0x003DB58E File Offset: 0x003D978E
+	// Token: 0x0600D2AA RID: 53930 RVA: 0x003E7B6A File Offset: 0x003E5D6A
 	public static int GetUnitCount(int selectedCount)
 	{
 		if (selectedCount <= 0)
@@ -19,19 +19,19 @@ public static class PhantomStackUtil
 		return selectedCount;
 	}
 
-	// Token: 0x0600FE43 RID: 65091 RVA: 0x003DB597 File Offset: 0x003D9797
+	// Token: 0x0600D2AB RID: 53931 RVA: 0x003E7B73 File Offset: 0x003E5D73
 	public static int GetUnitCount(ISelectedData data)
 	{
 		return PhantomStackUtil.GetUnitCount(data.SelectedCount);
 	}
 
-	// Token: 0x0600FE44 RID: 65092 RVA: 0x003DB5A4 File Offset: 0x003D97A4
+	// Token: 0x0600D2AC RID: 53932 RVA: 0x003E7B80 File Offset: 0x003E5D80
 	public static bool IsUpdateInfoRemoved(PhantomItem updateInfo)
 	{
 		return updateInfo.StackCount == 0;
 	}
 
-	// Token: 0x0600FE45 RID: 65093 RVA: 0x003DB5B0 File Offset: 0x003D97B0
+	// Token: 0x0600D2AD RID: 53933 RVA: 0x003E7B8C File Offset: 0x003E5D8C
 	public static int GetSelectedUnitCount([Nullable(new byte[]
 	{
 		2,
@@ -50,7 +50,7 @@ public static class PhantomStackUtil
 		return num;
 	}
 
-	// Token: 0x0600FE46 RID: 65094 RVA: 0x003DB608 File Offset: 0x003D9808
+	// Token: 0x0600D2AE RID: 53934 RVA: 0x003E7BE4 File Offset: 0x003E5DE4
 	public static int GetStackUnitCount(int stackCount)
 	{
 		if (stackCount <= 1)
@@ -60,7 +60,7 @@ public static class PhantomStackUtil
 		return stackCount;
 	}
 
-	// Token: 0x0600FE47 RID: 65095 RVA: 0x003DB611 File Offset: 0x003D9811
+	// Token: 0x0600D2AF RID: 53935 RVA: 0x003E7BED File Offset: 0x003E5DED
 	public static bool IsStackedPhantom(int incId)
 	{
 		if (incId > 0)
@@ -71,7 +71,7 @@ public static class PhantomStackUtil
 		return false;
 	}
 
-	// Token: 0x0600FE48 RID: 65096 RVA: 0x003DB634 File Offset: 0x003D9834
+	// Token: 0x0600D2B0 RID: 53936 RVA: 0x003E7C10 File Offset: 0x003E5E10
 	[NullableContext(2)]
 	public static bool CanStackWithSameSpec(PhantomDataBase battleData)
 	{
@@ -83,14 +83,14 @@ public static class PhantomStackUtil
 		return InventoryModel.Instance.GetPhantomItemData(incrId) != null && battleData.GetVisionNoCultivated() && !PhantomBattleModel.Instance.CheckPhantomIsEquip(incrId);
 	}
 
-	// Token: 0x0600FE49 RID: 65097 RVA: 0x003DB674 File Offset: 0x003D9874
+	// Token: 0x0600D2B1 RID: 53937 RVA: 0x003E7C50 File Offset: 0x003E5E50
 	[NullableContext(2)]
 	public static int GetStackUnitCount(PhantomItemData itemData)
 	{
 		return PhantomStackUtil.GetStackUnitCount((itemData != null) ? itemData.GetStackCount() : 0);
 	}
 
-	// Token: 0x0600FE4A RID: 65098 RVA: 0x003DB688 File Offset: 0x003D9888
+	// Token: 0x0600D2B2 RID: 53938 RVA: 0x003E7C64 File Offset: 0x003E5E64
 	public static int GetStackUnitCountByIncIdList(List<int> incIdList)
 	{
 		int num = 0;
@@ -101,7 +101,7 @@ public static class PhantomStackUtil
 		return num;
 	}
 
-	// Token: 0x0600FE4B RID: 65099 RVA: 0x003DB6E8 File Offset: 0x003D98E8
+	// Token: 0x0600D2B3 RID: 53939 RVA: 0x003E7CC4 File Offset: 0x003E5EC4
 	public static int GetStackUnitCountByDataList(List<PhantomItemData> dataList)
 	{
 		int num = 0;
@@ -112,14 +112,14 @@ public static class PhantomStackUtil
 		return num;
 	}
 
-	// Token: 0x0600FE4C RID: 65100 RVA: 0x003DB73C File Offset: 0x003D993C
+	// Token: 0x0600D2B4 RID: 53940 RVA: 0x003E7D18 File Offset: 0x003E5F18
 	public static string GetEchoStackBadgeSpritePath(EMediumItemGridEchoStackType type)
 	{
 		string resourceId = (type == EMediumItemGridEchoStackType.Extract) ? "SP_IconEchoExtract" : "SP_IconEchoStack";
 		return UiResourceConfig.Instance.GetResourcePath(resourceId);
 	}
 
-	// Token: 0x0600FE4D RID: 65101 RVA: 0x003DB765 File Offset: 0x003D9965
+	// Token: 0x0600D2B5 RID: 53941 RVA: 0x003E7D41 File Offset: 0x003E5F41
 	public static string GetEchoStackBadgeCountText(int count)
 	{
 		if (count <= 999)
@@ -129,7 +129,7 @@ public static class PhantomStackUtil
 		return "999+";
 	}
 
-	// Token: 0x0600FE4E RID: 65102 RVA: 0x003DB77C File Offset: 0x003D997C
+	// Token: 0x0600D2B6 RID: 53942 RVA: 0x003E7D58 File Offset: 0x003E5F58
 	public static string GetStackBottomText(int stackCount, int selectedCount, bool alwaysShowSelected = false)
 	{
 		if (selectedCount > 0 || alwaysShowSelected)
@@ -146,15 +146,15 @@ public static class PhantomStackUtil
 		return stackCount.ToString();
 	}
 
-	// Token: 0x040075A8 RID: 30120
+	// Token: 0x04007691 RID: 30353
 	private const int BadgeMaxDisplayCount = 999;
 
-	// Token: 0x040075A9 RID: 30121
+	// Token: 0x04007692 RID: 30354
 	public const string EchoGridBgResourceId = "SP_QualityFrmAEcho";
 
-	// Token: 0x040075AA RID: 30122
+	// Token: 0x04007693 RID: 30355
 	public const string NormalGridBgResourceId = "SP_QualityFrmA";
 
-	// Token: 0x040075AB RID: 30123
+	// Token: 0x04007694 RID: 30356
 	private const string StackSelectedCountColor = "fcdd42ff";
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020000DB RID: 219
+// Token: 0x020000DD RID: 221
 [NullableContext(1)]
 [Nullable(0)]
 public class CurveFloatHandle
 {
-	// Token: 0x060006D0 RID: 1744 RVA: 0x00024294 File Offset: 0x00022494
+	// Token: 0x06000711 RID: 1809 RVA: 0x00024868 File Offset: 0x00022A68
 	[NullableContext(2)]
 	public CurveFloatHandle(UCurveFloat curveFloat = null)
 	{
@@ -27,7 +27,7 @@ public class CurveFloatHandle
 		this.FloatCurvePreInfinityExtrap = curveFloat.FloatCurve.PreInfinityExtrap;
 	}
 
-	// Token: 0x060006D1 RID: 1745 RVA: 0x0002435C File Offset: 0x0002255C
+	// Token: 0x06000712 RID: 1810 RVA: 0x00024930 File Offset: 0x00022B30
 	public void MapRangeClampedTimeAndValue(float oldTimeMin, float oldTimeMax, float newTimeMin, float newTimeMax, float oldValueMin, float oldValueMax, float newValueMin, float newValueMax)
 	{
 		float num = (newValueMax - newValueMin) / (oldValueMax - oldValueMin);
@@ -92,20 +92,20 @@ public class CurveFloatHandle
 		}
 	}
 
-	// Token: 0x060006D2 RID: 1746 RVA: 0x000245F4 File Offset: 0x000227F4
+	// Token: 0x06000713 RID: 1811 RVA: 0x00024BC8 File Offset: 0x00022DC8
 	public void AddKey(RichCurveKeyHandle dataKey)
 	{
 		this.AddKeyInternal(dataKey);
 	}
 
-	// Token: 0x060006D3 RID: 1747 RVA: 0x00024600 File Offset: 0x00022800
+	// Token: 0x06000714 RID: 1812 RVA: 0x00024BD4 File Offset: 0x00022DD4
 	public void AddKey(FRichCurveKey ueDataKey)
 	{
 		RichCurveKeyHandle dataKey = new RichCurveKeyHandle(new FRichCurveKey?(ueDataKey));
 		this.AddKeyInternal(dataKey);
 	}
 
-	// Token: 0x060006D4 RID: 1748 RVA: 0x00024620 File Offset: 0x00022820
+	// Token: 0x06000715 RID: 1813 RVA: 0x00024BF4 File Offset: 0x00022DF4
 	public void AddKey(float time, float? value, ERichCurveInterpMode? interpMode = null)
 	{
 		RichCurveKeyHandle richCurveKeyHandle = new RichCurveKeyHandle();
@@ -118,7 +118,7 @@ public class CurveFloatHandle
 		this.AddKeyInternal(richCurveKeyHandle);
 	}
 
-	// Token: 0x060006D5 RID: 1749 RVA: 0x00024664 File Offset: 0x00022864
+	// Token: 0x06000716 RID: 1814 RVA: 0x00024C38 File Offset: 0x00022E38
 	private void AddKeyInternal(RichCurveKeyHandle dataKey)
 	{
 		int num = -1;
@@ -138,7 +138,7 @@ public class CurveFloatHandle
 		this.FloatCurveKeys.Insert(num, dataKey);
 	}
 
-	// Token: 0x060006D6 RID: 1750 RVA: 0x000246C4 File Offset: 0x000228C4
+	// Token: 0x06000717 RID: 1815 RVA: 0x00024C98 File Offset: 0x00022E98
 	public UCurveFloat ToUeCurveFloat()
 	{
 		UCurveFloat ucurveFloat = new UCurveFloat();
@@ -156,18 +156,18 @@ public class CurveFloatHandle
 		return ucurveFloat;
 	}
 
-	// Token: 0x0400057B RID: 1403
+	// Token: 0x0400058A RID: 1418
 	public bool IsEventCurve;
 
-	// Token: 0x0400057C RID: 1404
+	// Token: 0x0400058B RID: 1419
 	public List<RichCurveKeyHandle> FloatCurveKeys = new List<RichCurveKeyHandle>();
 
-	// Token: 0x0400057D RID: 1405
+	// Token: 0x0400058C RID: 1420
 	public float FloatCurveDefaultValue = float.MaxValue;
 
-	// Token: 0x0400057E RID: 1406
+	// Token: 0x0400058D RID: 1421
 	public ERichCurveExtrapolation FloatCurvePostInfinityExtrap = ERichCurveExtrapolation.RCCE_Constant;
 
-	// Token: 0x0400057F RID: 1407
+	// Token: 0x0400058E RID: 1422
 	public ERichCurveExtrapolation FloatCurvePreInfinityExtrap = ERichCurveExtrapolation.RCCE_Constant;
 }

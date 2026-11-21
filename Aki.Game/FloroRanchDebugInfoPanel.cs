@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B8A RID: 7050
+// Token: 0x02001049 RID: 4169
 public class FloroRanchDebugInfoPanel : UiPanelBase
 {
-	// Token: 0x0600D1E0 RID: 53728 RVA: 0x00301FE0 File Offset: 0x003001E0
+	// Token: 0x0600A5F1 RID: 42481 RVA: 0x0030D0B8 File Offset: 0x0030B2B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -35,13 +35,13 @@ public class FloroRanchDebugInfoPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D1E1 RID: 53729 RVA: 0x003020A7 File Offset: 0x003002A7
+	// Token: 0x0600A5F2 RID: 42482 RVA: 0x0030D17F File Offset: 0x0030B37F
 	protected override void OnStart()
 	{
 		this.LoopScrollView = new LoopScrollView<FloroRanchDebugInfoItem, string>(base.GetLoopScrollViewComponent(1), base.GetItem(2).GetOwner() as AUIBaseActor, new Func<FloroRanchDebugInfoItem>(this.InitItem), false);
 	}
 
-	// Token: 0x0600D1E2 RID: 53730 RVA: 0x003020DC File Offset: 0x003002DC
+	// Token: 0x0600A5F3 RID: 42483 RVA: 0x0030D1B4 File Offset: 0x0030B3B4
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		FloroRanchDebugInfoPanel.<OnBeforeShowAsyncImplement>d__4 <OnBeforeShowAsyncImplement>d__;
@@ -52,32 +52,32 @@ public class FloroRanchDebugInfoPanel : UiPanelBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D1E3 RID: 53731 RVA: 0x0030211F File Offset: 0x0030031F
+	// Token: 0x0600A5F4 RID: 42484 RVA: 0x0030D1F7 File Offset: 0x0030B3F7
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.OnFloroRanchDebugInfoRefresh, new Action(this.OnDebugInfoRefresh));
 	}
 
-	// Token: 0x0600D1E4 RID: 53732 RVA: 0x0030213D File Offset: 0x0030033D
+	// Token: 0x0600A5F5 RID: 42485 RVA: 0x0030D215 File Offset: 0x0030B415
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFloroRanchDebugInfoRefresh, new Action(this.OnDebugInfoRefresh));
 	}
 
-	// Token: 0x0600D1E5 RID: 53733 RVA: 0x0030215B File Offset: 0x0030035B
+	// Token: 0x0600A5F6 RID: 42486 RVA: 0x0030D233 File Offset: 0x0030B433
 	protected void OnClickCloseButton()
 	{
 		base.Hide(null);
 	}
 
-	// Token: 0x0600D1E6 RID: 53734 RVA: 0x00302164 File Offset: 0x00300364
+	// Token: 0x0600A5F7 RID: 42487 RVA: 0x0030D23C File Offset: 0x0030B43C
 	[NullableContext(1)]
 	protected FloroRanchDebugInfoItem InitItem()
 	{
 		return new FloroRanchDebugInfoItem();
 	}
 
-	// Token: 0x0600D1E7 RID: 53735 RVA: 0x0030216C File Offset: 0x0030036C
+	// Token: 0x0600A5F8 RID: 42488 RVA: 0x0030D244 File Offset: 0x0030B444
 	protected void OnDebugInfoRefresh()
 	{
 		List<string> actionInfoList = FloroRanchGamePlayModel.Instance.ActionInfoList;
@@ -85,20 +85,20 @@ public class FloroRanchDebugInfoPanel : UiPanelBase
 		this.LoopScrollView.ScrollToGridIndex(actionInfoList.Count - 1, true);
 	}
 
-	// Token: 0x0400603F RID: 24639
+	// Token: 0x0400610E RID: 24846
 	[Nullable(1)]
 	protected LoopScrollView<FloroRanchDebugInfoItem, string> LoopScrollView;
 
-	// Token: 0x0200810D RID: 33037
+	// Token: 0x0200729B RID: 29339
 	private class EComponent
 	{
-		// Token: 0x0402A1EC RID: 172524
+		// Token: 0x04025520 RID: 152864
 		public const int CloseButton = 0;
 
-		// Token: 0x0402A1ED RID: 172525
+		// Token: 0x04025521 RID: 152865
 		public const int LoopScrollView = 1;
 
-		// Token: 0x0402A1EE RID: 172526
+		// Token: 0x04025522 RID: 152866
 		public const int TemplateActor = 2;
 	}
 }

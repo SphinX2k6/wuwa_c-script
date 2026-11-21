@@ -5,30 +5,30 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006735 RID: 26421
+	// Token: 0x02005685 RID: 22149
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayInputMgr : DropCatchGameplayBaseMgr
 	{
-		// Token: 0x06041EF6 RID: 270070 RVA: 0x00FFEAC5 File Offset: 0x00FFCCC5
+		// Token: 0x06036A42 RID: 223810 RVA: 0x00F3FE91 File Offset: 0x00F3E091
 		public DropCatchGameplayInputMgr(IGameplayLogicContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06041EF7 RID: 270071 RVA: 0x00FFEAD9 File Offset: 0x00FFCCD9
+		// Token: 0x06036A43 RID: 223811 RVA: 0x00F3FEA5 File Offset: 0x00F3E0A5
 		public override void Init()
 		{
 			this.Reset();
 			this.RegisterAllChannels();
 		}
 
-		// Token: 0x06041EF8 RID: 270072 RVA: 0x00FFEAE7 File Offset: 0x00FFCCE7
+		// Token: 0x06036A44 RID: 223812 RVA: 0x00F3FEB3 File Offset: 0x00F3E0B3
 		public void Reset()
 		{
 			this.UnregisterAllChannels();
 		}
 
-		// Token: 0x06041EF9 RID: 270073 RVA: 0x00FFEAF0 File Offset: 0x00FFCCF0
+		// Token: 0x06036A45 RID: 223813 RVA: 0x00F3FEBC File Offset: 0x00F3E0BC
 		public void Set(EDropCatchGameplayInputChannel channel, EDropCatchGameplayInputSource source, EDropCatchRoleDirection value)
 		{
 			DropCatchGameplayInput<EDropCatchRoleDirection> dropCatchGameplayInput;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			dropCatchGameplayInput.Set(source, value);
 		}
 
-		// Token: 0x06041EFA RID: 270074 RVA: 0x00FFEB48 File Offset: 0x00FFCD48
+		// Token: 0x06036A46 RID: 223814 RVA: 0x00F3FF14 File Offset: 0x00F3E114
 		public EDropCatchRoleDirection Get(EDropCatchGameplayInputChannel channel, EDropCatchRoleDirection fallback)
 		{
 			DropCatchGameplayInput<EDropCatchRoleDirection> dropCatchGameplayInput;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return dropCatchGameplayInput.Get(fallback);
 		}
 
-		// Token: 0x06041EFB RID: 270075 RVA: 0x00FFEBA0 File Offset: 0x00FFCDA0
+		// Token: 0x06036A47 RID: 223815 RVA: 0x00F3FF6C File Offset: 0x00F3E16C
 		public void Delete(EDropCatchGameplayInputChannel channel, EDropCatchGameplayInputSource source)
 		{
 			DropCatchGameplayInput<EDropCatchRoleDirection> dropCatchGameplayInput;
@@ -79,25 +79,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			dropCatchGameplayInput.Delete(source);
 		}
 
-		// Token: 0x06041EFC RID: 270076 RVA: 0x00FFEBF4 File Offset: 0x00FFCDF4
+		// Token: 0x06036A48 RID: 223816 RVA: 0x00F3FFC0 File Offset: 0x00F3E1C0
 		public override void Destroy()
 		{
 			this.UnregisterAllChannels();
 		}
 
-		// Token: 0x06041EFD RID: 270077 RVA: 0x00FFEBFC File Offset: 0x00FFCDFC
+		// Token: 0x06036A49 RID: 223817 RVA: 0x00F3FFC8 File Offset: 0x00F3E1C8
 		private void RegisterAllChannels()
 		{
 			this.RegisterChannel(EDropCatchGameplayInputChannel.MoveDirection);
 		}
 
-		// Token: 0x06041EFE RID: 270078 RVA: 0x00FFEC05 File Offset: 0x00FFCE05
+		// Token: 0x06036A4A RID: 223818 RVA: 0x00F3FFD1 File Offset: 0x00F3E1D1
 		private void UnregisterAllChannels()
 		{
 			this.UnregisterChannel(EDropCatchGameplayInputChannel.MoveDirection);
 		}
 
-		// Token: 0x06041EFF RID: 270079 RVA: 0x00FFEC10 File Offset: 0x00FFCE10
+		// Token: 0x06036A4B RID: 223819 RVA: 0x00F3FFDC File Offset: 0x00F3E1DC
 		private void RegisterChannel(EDropCatchGameplayInputChannel channel)
 		{
 			DropCatchGameplayInput<EDropCatchRoleDirection> input = new DropCatchGameplayInput<EDropCatchRoleDirection>();
@@ -141,13 +141,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.Channels.Add(channel, input);
 		}
 
-		// Token: 0x06041F00 RID: 270080 RVA: 0x00FFEC7F File Offset: 0x00FFCE7F
+		// Token: 0x06036A4C RID: 223820 RVA: 0x00F4004B File Offset: 0x00F3E24B
 		private void UnregisterChannel(EDropCatchGameplayInputChannel channel)
 		{
 			this.Channels.Remove(channel);
 		}
 
-		// Token: 0x06041F01 RID: 270081 RVA: 0x00FFEC90 File Offset: 0x00FFCE90
+		// Token: 0x06036A4D RID: 223821 RVA: 0x00F4005C File Offset: 0x00F3E25C
 		public override void OnReadyTick(float deltaTime)
 		{
 			DropCatchGameplayInput<EDropCatchRoleDirection> dropCatchGameplayInput;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F02 RID: 270082 RVA: 0x00FFECB4 File Offset: 0x00FFCEB4
+		// Token: 0x06036A4E RID: 223822 RVA: 0x00F40080 File Offset: 0x00F3E280
 		public override void OnTick(float deltaTime)
 		{
 			foreach (DropCatchGameplayInput<EDropCatchRoleDirection> dropCatchGameplayInput in this.Channels.Values)
@@ -174,24 +174,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F03 RID: 270083 RVA: 0x00FFED38 File Offset: 0x00FFCF38
+		// Token: 0x06036A4F RID: 223823 RVA: 0x00F40104 File Offset: 0x00F3E304
 		public void SetMoveDirectionCommand(EDropCatchRoleDirection direction, float duration)
 		{
 			this.CommandMoveRemainingTime = duration * (float)TimeUtil.Instance.InverseMillisecond;
 			this.Set(EDropCatchGameplayInputChannel.MoveDirection, EDropCatchGameplayInputSource.Command, direction);
 		}
 
-		// Token: 0x06041F04 RID: 270084 RVA: 0x00FFED56 File Offset: 0x00FFCF56
+		// Token: 0x06036A50 RID: 223824 RVA: 0x00F40122 File Offset: 0x00F3E322
 		private void ClearCommandMoveDirection()
 		{
 			this.CommandMoveRemainingTime = 0f;
 			this.Delete(EDropCatchGameplayInputChannel.MoveDirection, EDropCatchGameplayInputSource.Command);
 		}
 
-		// Token: 0x040225AD RID: 140717
+		// Token: 0x0401CE06 RID: 118278
 		private readonly Dictionary<EDropCatchGameplayInputChannel, DropCatchGameplayInput<EDropCatchRoleDirection>> Channels = new Dictionary<EDropCatchGameplayInputChannel, DropCatchGameplayInput<EDropCatchRoleDirection>>();
 
-		// Token: 0x040225AE RID: 140718
+		// Token: 0x0401CE07 RID: 118279
 		private float CommandMoveRemainingTime;
 	}
 }

@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using UnrealEngine;
 
-// Token: 0x02001D4E RID: 7502
+// Token: 0x02001210 RID: 4624
 [NullableContext(1)]
 [Nullable(0)]
 public class StopGamepadShakeImpl : ActionParams, IStopGamepadShake
 {
-	// Token: 0x1700122A RID: 4650
-	// (get) Token: 0x0600E388 RID: 58248 RVA: 0x0035722B File Offset: 0x0035542B
-	// (set) Token: 0x0600E389 RID: 58249 RVA: 0x00357233 File Offset: 0x00355433
+	// Token: 0x17001254 RID: 4692
+	// (get) Token: 0x0600B7A5 RID: 47013 RVA: 0x00362C5B File Offset: 0x00360E5B
+	// (set) Token: 0x0600B7A6 RID: 47014 RVA: 0x00362C63 File Offset: 0x00360E63
 	public FName Tag { get; set; }
 
-	// Token: 0x1700122B RID: 4651
-	// (get) Token: 0x0600E38A RID: 58250 RVA: 0x0035723C File Offset: 0x0035543C
-	// (set) Token: 0x0600E38B RID: 58251 RVA: 0x00357244 File Offset: 0x00355444
+	// Token: 0x17001255 RID: 4693
+	// (get) Token: 0x0600B7A7 RID: 47015 RVA: 0x00362C6C File Offset: 0x00360E6C
+	// (set) Token: 0x0600B7A8 RID: 47016 RVA: 0x00362C74 File Offset: 0x00360E74
 	public UKuroForceFeedbackEffect GamepadShakeAsset { get; set; }
 
-	// Token: 0x1700122C RID: 4652
-	// (get) Token: 0x0600E38C RID: 58252 RVA: 0x0035724D File Offset: 0x0035544D
-	// (set) Token: 0x0600E38D RID: 58253 RVA: 0x00357255 File Offset: 0x00355455
+	// Token: 0x17001256 RID: 4694
+	// (get) Token: 0x0600B7A9 RID: 47017 RVA: 0x00362C7D File Offset: 0x00360E7D
+	// (set) Token: 0x0600B7AA RID: 47018 RVA: 0x00362C85 File Offset: 0x00360E85
 	public UForceFeedbackComponent FeedbackComponent { get; set; }
 }

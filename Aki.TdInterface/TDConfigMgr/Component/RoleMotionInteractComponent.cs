@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200087B RID: 2171
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200091E RID: 2334
 	public class RoleMotionInteractComponent : IComponentBase
 	{
-		// Token: 0x06003041 RID: 12353 RVA: 0x0007C39C File Offset: 0x0007A59C
+		// Token: 0x0600337D RID: 13181 RVA: 0x00083884 File Offset: 0x00081A84
 		private RoleMotionInteractComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003042 RID: 12354 RVA: 0x0007C3D4 File Offset: 0x0007A5D4
+		// Token: 0x0600337E RID: 13182 RVA: 0x000838BC File Offset: 0x00081ABC
 		public static RoleMotionInteractComponent Create([Nullable(2)] RoleMotionInteractComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003043 RID: 12355 RVA: 0x0007C3E7 File Offset: 0x0007A5E7
+		// Token: 0x0600337F RID: 13183 RVA: 0x000838CF File Offset: 0x00081ACF
 		public static RoleMotionInteractComponent CreateFromSetValue([Nullable(2)] RoleMotionInteractComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003044 RID: 12356 RVA: 0x0007C3FA File Offset: 0x0007A5FA
+		// Token: 0x06003380 RID: 13184 RVA: 0x000838E2 File Offset: 0x00081AE2
 		public new RoleMotionInteractComponent_SetValue ToSetValue()
 		{
 			return new RoleMotionInteractComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CCB RID: 3275
-		// (get) Token: 0x06003045 RID: 12357 RVA: 0x0007C428 File Offset: 0x0007A628
-		// (set) Token: 0x06003046 RID: 12358 RVA: 0x0007C462 File Offset: 0x0007A662
+		// Token: 0x17000D94 RID: 3476
+		// (get) Token: 0x06003381 RID: 13185 RVA: 0x00083910 File Offset: 0x00081B10
+		// (set) Token: 0x06003382 RID: 13186 RVA: 0x0008394A File Offset: 0x00081B4A
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CCC RID: 3276
-		// (get) Token: 0x06003047 RID: 12359 RVA: 0x0007C470 File Offset: 0x0007A670
-		// (set) Token: 0x06003048 RID: 12360 RVA: 0x0007C49A File Offset: 0x0007A69A
+		// Token: 0x17000D95 RID: 3477
+		// (get) Token: 0x06003383 RID: 13187 RVA: 0x00083958 File Offset: 0x00081B58
+		// (set) Token: 0x06003384 RID: 13188 RVA: 0x00083982 File Offset: 0x00081B82
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CCD RID: 3277
-		// (get) Token: 0x06003049 RID: 12361 RVA: 0x0007C4A8 File Offset: 0x0007A6A8
-		// (set) Token: 0x0600304A RID: 12362 RVA: 0x0007C509 File Offset: 0x0007A709
+		// Token: 0x17000D96 RID: 3478
+		// (get) Token: 0x06003385 RID: 13189 RVA: 0x00083990 File Offset: 0x00081B90
+		// (set) Token: 0x06003386 RID: 13190 RVA: 0x000839F1 File Offset: 0x00081BF1
 		public virtual IPetalGrabRoleMotionInteract MotionInteractConfig
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001FC1 RID: 8129
+		// Token: 0x040021D3 RID: 8659
 		[Nullable(2)]
 		protected new RoleMotionInteractComponent FbInstance;
 
-		// Token: 0x04001FC2 RID: 8130
+		// Token: 0x040021D4 RID: 8660
 		[Nullable(2)]
 		protected new RoleMotionInteractComponent_SetValue PocoInterface;
 
-		// Token: 0x04001FC3 RID: 8131
+		// Token: 0x040021D5 RID: 8661
 		private IPetalGrabRoleMotionInteract _MotionInteractConfigCache;
 
-		// Token: 0x04001FC4 RID: 8132
+		// Token: 0x040021D6 RID: 8662
 		private bool _MotionInteractConfigInited;
 	}
 }

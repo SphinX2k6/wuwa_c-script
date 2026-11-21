@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Level.KeepFollowing;
 using CSharpScript.Game.LevelGamePlay;
 
-// Token: 0x020030FE RID: 12542
+// Token: 0x02002656 RID: 9814
 [NullableContext(1)]
 [Nullable(0)]
 public class KeepFollowingParams
 {
-	// Token: 0x0601AE3A RID: 110138 RVA: 0x00748130 File Offset: 0x00746330
+	// Token: 0x06018862 RID: 100450 RVA: 0x0076D81C File Offset: 0x0076BA1C
 	public KeepFollowingParams(CharacterActorComponent leader, EHandType? handType = null)
 	{
 		this.Leader = leader;
 		this.HandType = handType;
 	}
 
-	// Token: 0x0601AE3B RID: 110139 RVA: 0x00748146 File Offset: 0x00746346
+	// Token: 0x06018863 RID: 100451 RVA: 0x0076D832 File Offset: 0x0076BA32
 	public void InitWithDataAsset(BP_KeepFollowingConfig_C data)
 	{
 		this.DebugDraw = data.DebugDraw;
@@ -23,7 +23,7 @@ public class KeepFollowingParams
 		this.RotatorParamsInternal = new FollowingRotatorParams(data);
 	}
 
-	// Token: 0x0601AE3C RID: 110140 RVA: 0x0074816C File Offset: 0x0074636C
+	// Token: 0x06018864 RID: 100452 RVA: 0x0076D858 File Offset: 0x0076BA58
 	public void InitWithParams(FollowingMoveParams moveParams, FollowingRotatorParams rotParams, bool? debug = null)
 	{
 		this.DebugDraw = debug.GetValueOrDefault();
@@ -31,8 +31,8 @@ public class KeepFollowingParams
 		this.RotatorParamsInternal = rotParams;
 	}
 
-	// Token: 0x17002515 RID: 9493
-	// (get) Token: 0x0601AE3D RID: 110141 RVA: 0x00748189 File Offset: 0x00746389
+	// Token: 0x170026AA RID: 9898
+	// (get) Token: 0x06018865 RID: 100453 RVA: 0x0076D875 File Offset: 0x0076BA75
 	public FollowingMoveParams MoveParams
 	{
 		get
@@ -45,8 +45,8 @@ public class KeepFollowingParams
 		}
 	}
 
-	// Token: 0x17002516 RID: 9494
-	// (get) Token: 0x0601AE3E RID: 110142 RVA: 0x007481A5 File Offset: 0x007463A5
+	// Token: 0x170026AB RID: 9899
+	// (get) Token: 0x06018866 RID: 100454 RVA: 0x0076D891 File Offset: 0x0076BA91
 	public FollowingRotatorParams RotatorParams
 	{
 		get
@@ -59,28 +59,28 @@ public class KeepFollowingParams
 		}
 	}
 
-	// Token: 0x0400D089 RID: 53385
+	// Token: 0x0400D485 RID: 54405
 	public bool DebugDraw;
 
-	// Token: 0x0400D08A RID: 53386
+	// Token: 0x0400D486 RID: 54406
 	[Nullable(2)]
 	public CharacterActorComponent Leader;
 
-	// Token: 0x0400D08B RID: 53387
+	// Token: 0x0400D487 RID: 54407
 	public EHandType? HandType;
 
-	// Token: 0x0400D08C RID: 53388
+	// Token: 0x0400D488 RID: 54408
 	public bool FollowingOnce;
 
-	// Token: 0x0400D08D RID: 53389
+	// Token: 0x0400D489 RID: 54409
 	[Nullable(2)]
 	public Action<ELevelEventState> Callback;
 
-	// Token: 0x0400D08E RID: 53390
+	// Token: 0x0400D48A RID: 54410
 	[Nullable(2)]
 	private FollowingMoveParams MoveParamsInternal;
 
-	// Token: 0x0400D08F RID: 53391
+	// Token: 0x0400D48B RID: 54411
 	[Nullable(2)]
 	private FollowingRotatorParams RotatorParamsInternal;
 }

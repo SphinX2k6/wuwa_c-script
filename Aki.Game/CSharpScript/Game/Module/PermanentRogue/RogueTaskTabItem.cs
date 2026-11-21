@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005346 RID: 21318
+	// Token: 0x02004316 RID: 17174
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 	})]
 	public class RogueTaskTabItem : GridProxyAbstract<RogueTaskRewardTabData>
 	{
-		// Token: 0x06036770 RID: 223088 RVA: 0x00CE5AD8 File Offset: 0x00CE3CD8
+		// Token: 0x0602B66C RID: 177772 RVA: 0x00C334A8 File Offset: 0x00C316A8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,20 +30,20 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036771 RID: 223089 RVA: 0x00CE5B58 File Offset: 0x00CE3D58
+		// Token: 0x0602B66D RID: 177773 RVA: 0x00C33528 File Offset: 0x00C31728
 		public void SetToggleState(bool bSelect, bool bFire)
 		{
 			EToggleState state = bSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(1).SetToggleState(state, bFire, false, false);
 		}
 
-		// Token: 0x06036772 RID: 223090 RVA: 0x00CE5B7E File Offset: 0x00CE3D7E
+		// Token: 0x0602B66E RID: 177774 RVA: 0x00C3354E File Offset: 0x00C3174E
 		private void SetRedDotVisible(bool bVisible)
 		{
 			base.GetItem(2).SetUIActive(bVisible);
 		}
 
-		// Token: 0x06036773 RID: 223091 RVA: 0x00CE5B90 File Offset: 0x00CE3D90
+		// Token: 0x0602B66F RID: 177775 RVA: 0x00C33560 File Offset: 0x00C31760
 		public void RefreshRedDot()
 		{
 			RogueTaskRewardTabData tabData = this.TabData;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.SetRedDotVisible(valueOrDefault);
 		}
 
-		// Token: 0x06036774 RID: 223092 RVA: 0x00CE5BE6 File Offset: 0x00CE3DE6
+		// Token: 0x0602B670 RID: 177776 RVA: 0x00C335B6 File Offset: 0x00C317B6
 		public override void Refresh(RogueTaskRewardTabData data, bool isSelected, int gridIndex)
 		{
 			this.TabData = data;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06036775 RID: 223093 RVA: 0x00CE5C21 File Offset: 0x00CE3E21
+		// Token: 0x0602B671 RID: 177777 RVA: 0x00C335F1 File Offset: 0x00C317F1
 		private void OnTabToggle(EToggleState state)
 		{
 			RogueTaskRewardTabData tabData = this.TabData;
@@ -94,11 +94,11 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			clickedCallback(this.TabIndex);
 		}
 
-		// Token: 0x0401CD09 RID: 118025
+		// Token: 0x0401773F RID: 96063
 		[Nullable(2)]
 		private RogueTaskRewardTabData TabData;
 
-		// Token: 0x0401CD0A RID: 118026
+		// Token: 0x04017740 RID: 96064
 		private int TabIndex = -1;
 	}
 }

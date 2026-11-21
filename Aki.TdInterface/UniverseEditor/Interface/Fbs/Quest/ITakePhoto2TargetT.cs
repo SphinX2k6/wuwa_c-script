@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200418E RID: 16782
+	// Token: 0x020045E7 RID: 17895
 	public class ITakePhoto2TargetT
 	{
-		// Token: 0x17007702 RID: 30466
-		// (get) Token: 0x06018B05 RID: 101125 RVA: 0x0038E4EB File Offset: 0x0038C6EB
-		// (set) Token: 0x06018B06 RID: 101126 RVA: 0x0038E4F3 File Offset: 0x0038C6F3
+		// Token: 0x17007D2E RID: 32046
+		// (get) Token: 0x0601A25B RID: 107099 RVA: 0x003B993F File Offset: 0x003B7B3F
+		// (set) Token: 0x0601A25C RID: 107100 RVA: 0x003B9947 File Offset: 0x003B7B47
 		public ETakePhoto2TargetType Type { get; set; }
 
-		// Token: 0x17007703 RID: 30467
-		// (get) Token: 0x06018B07 RID: 101127 RVA: 0x0038E4FC File Offset: 0x0038C6FC
-		// (set) Token: 0x06018B08 RID: 101128 RVA: 0x0038E504 File Offset: 0x0038C704
+		// Token: 0x17007D2F RID: 32047
+		// (get) Token: 0x0601A25D RID: 107101 RVA: 0x003B9950 File Offset: 0x003B7B50
+		// (set) Token: 0x0601A25E RID: 107102 RVA: 0x003B9958 File Offset: 0x003B7B58
 		public bool IsOptionalTarget { get; set; }
 
-		// Token: 0x17007704 RID: 30468
-		// (get) Token: 0x06018B09 RID: 101129 RVA: 0x0038E50D File Offset: 0x0038C70D
-		// (set) Token: 0x06018B0A RID: 101130 RVA: 0x0038E515 File Offset: 0x0038C715
+		// Token: 0x17007D30 RID: 32048
+		// (get) Token: 0x0601A25F RID: 107103 RVA: 0x003B9961 File Offset: 0x003B7B61
+		// (set) Token: 0x0601A260 RID: 107104 RVA: 0x003B9969 File Offset: 0x003B7B69
 		public ITakePhoto2TargetCameraDistanceConditionT TargetCameraDistanceCondition { get; set; }
 
-		// Token: 0x17007705 RID: 30469
-		// (get) Token: 0x06018B0B RID: 101131 RVA: 0x0038E51E File Offset: 0x0038C71E
-		// (set) Token: 0x06018B0C RID: 101132 RVA: 0x0038E526 File Offset: 0x0038C726
+		// Token: 0x17007D31 RID: 32049
+		// (get) Token: 0x0601A261 RID: 107105 RVA: 0x003B9972 File Offset: 0x003B7B72
+		// (set) Token: 0x0601A262 RID: 107106 RVA: 0x003B997A File Offset: 0x003B7B7A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06018B0D RID: 101133 RVA: 0x0038E52F File Offset: 0x0038C72F
+		// Token: 0x0601A263 RID: 107107 RVA: 0x003B9983 File Offset: 0x003B7B83
 		public ITakePhoto2TargetT()
 		{
 			this.Type = ETakePhoto2TargetType.Entity;

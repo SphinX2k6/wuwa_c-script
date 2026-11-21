@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002B99 RID: 11161
+// Token: 0x02002115 RID: 8469
 public class SurvivorsHandbookItemDataBase : ISurvivorsHandbookItemDataBase
 {
-	// Token: 0x17001F24 RID: 7972
-	// (get) Token: 0x060171FD RID: 94717 RVA: 0x005DCBAD File Offset: 0x005DADAD
-	// (set) Token: 0x060171FE RID: 94718 RVA: 0x005DCBB5 File Offset: 0x005DADB5
+	// Token: 0x17001F7C RID: 8060
+	// (get) Token: 0x06014C2E RID: 85038 RVA: 0x0060978D File Offset: 0x0060798D
+	// (set) Token: 0x06014C2F RID: 85039 RVA: 0x00609795 File Offset: 0x00607995
 	public int Id { get; set; }
 
-	// Token: 0x17001F25 RID: 7973
-	// (get) Token: 0x060171FF RID: 94719 RVA: 0x005DCBBE File Offset: 0x005DADBE
-	// (set) Token: 0x06017200 RID: 94720 RVA: 0x005DCBC6 File Offset: 0x005DADC6
+	// Token: 0x17001F7D RID: 8061
+	// (get) Token: 0x06014C30 RID: 85040 RVA: 0x0060979E File Offset: 0x0060799E
+	// (set) Token: 0x06014C31 RID: 85041 RVA: 0x006097A6 File Offset: 0x006079A6
 	public bool? LockState { get; set; }
 
-	// Token: 0x17001F26 RID: 7974
-	// (get) Token: 0x06017201 RID: 94721 RVA: 0x005DCBCF File Offset: 0x005DADCF
-	// (set) Token: 0x06017202 RID: 94722 RVA: 0x005DCBD7 File Offset: 0x005DADD7
+	// Token: 0x17001F7E RID: 8062
+	// (get) Token: 0x06014C32 RID: 85042 RVA: 0x006097AF File Offset: 0x006079AF
+	// (set) Token: 0x06014C33 RID: 85043 RVA: 0x006097B7 File Offset: 0x006079B7
 	public bool? IsNew { get; set; }
 }

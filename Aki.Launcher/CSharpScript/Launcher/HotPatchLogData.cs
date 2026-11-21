@@ -8,7 +8,7 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class HotPatchLogData
 	{
-		// Token: 0x06000268 RID: 616 RVA: 0x0000C4F0 File Offset: 0x0000A6F0
+		// Token: 0x06000268 RID: 616 RVA: 0x0000C560 File Offset: 0x0000A760
 		[NullableContext(2)]
 		public HotPatchLogData([Nullable(1)] string eventId, string uniqueId = null, string playerId = null)
 		{
@@ -17,19 +17,19 @@ namespace CSharpScript.Launcher
 			this.player_id = (playerId ?? "");
 		}
 
-		// Token: 0x06000269 RID: 617 RVA: 0x0000C54B File Offset: 0x0000A74B
+		// Token: 0x06000269 RID: 617 RVA: 0x0000C5BB File Offset: 0x0000A7BB
 		public void Report()
 		{
 			HotPatchLogReport.Instance.ReportHotPatchLog(this);
 		}
 
-		// Token: 0x0400013B RID: 315
+		// Token: 0x04000142 RID: 322
 		public string event_id = "";
 
-		// Token: 0x0400013C RID: 316
+		// Token: 0x04000143 RID: 323
 		public string unique_id = "";
 
-		// Token: 0x0400013D RID: 317
+		// Token: 0x04000144 RID: 324
 		public string player_id = "";
 	}
 }

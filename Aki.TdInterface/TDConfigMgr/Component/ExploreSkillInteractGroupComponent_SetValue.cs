@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200016C RID: 364
+	// Token: 0x02000181 RID: 385
 	public class ExploreSkillInteractGroupComponent_SetValue
 	{
-		// Token: 0x040006E9 RID: 1769
+		// Token: 0x04000736 RID: 1846
 		public bool? Disabled;
 
-		// Token: 0x040006EA RID: 1770
+		// Token: 0x04000737 RID: 1847
 		public bool? EdIsLocked;
 
-		// Token: 0x040006EB RID: 1771
-		[Nullable(1)]
+		// Token: 0x04000738 RID: 1848
 		public List<IExploreSkillInteract> ExploreSkillInteractList;
 	}
 }

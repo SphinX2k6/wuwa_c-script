@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.AutoAttach
 {
-	// Token: 0x02005E7D RID: 24189
+	// Token: 0x02004E62 RID: 20066
 	public enum EMoveType
 	{
-		// Token: 0x040201B3 RID: 131507
+		// Token: 0x0401AC7A RID: 109690
 		Velocity,
-		// Token: 0x040201B4 RID: 131508
+		// Token: 0x0401AC7B RID: 109691
 		Inertia
 	}
 }

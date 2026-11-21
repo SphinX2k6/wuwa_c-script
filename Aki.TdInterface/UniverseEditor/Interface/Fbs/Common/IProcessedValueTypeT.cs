@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E46 RID: 24134
+	// Token: 0x02006486 RID: 25734
 	public class IProcessedValueTypeT
 	{
-		// Token: 0x1700B473 RID: 46195
-		// (get) Token: 0x0602950F RID: 169231 RVA: 0x005AA29A File Offset: 0x005A849A
-		// (set) Token: 0x06029510 RID: 169232 RVA: 0x005AA2A2 File Offset: 0x005A84A2
+		// Token: 0x1700BDDC RID: 48604
+		// (get) Token: 0x0602BBAB RID: 179115 RVA: 0x005F3142 File Offset: 0x005F1342
+		// (set) Token: 0x0602BBAC RID: 179116 RVA: 0x005F314A File Offset: 0x005F134A
 		public EProcessedValueType Type { get; set; }
 
-		// Token: 0x06029511 RID: 169233 RVA: 0x005AA2AB File Offset: 0x005A84AB
+		// Token: 0x0602BBAD RID: 179117 RVA: 0x005F3153 File Offset: 0x005F1353
 		public IProcessedValueTypeT()
 		{
 			this.Type = EProcessedValueType.Constant;

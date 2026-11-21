@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021D9 RID: 8665
+	// Token: 0x02002444 RID: 9284
 	public class SetSkillBtnEffect_SetValue
 	{
-		// Token: 0x040071A3 RID: 29091
+		// Token: 0x040077EC RID: 30700
 		public ESkillButtonType SkillBtnType;
 
-		// Token: 0x040071A4 RID: 29092
-		[Nullable(1)]
+		// Token: 0x040077ED RID: 30701
 		public IMusicBattleBtnEffect SkillBtnEffectData;
 
-		// Token: 0x040071A5 RID: 29093
+		// Token: 0x040077EE RID: 30702
 		public float Time;
 	}
 }

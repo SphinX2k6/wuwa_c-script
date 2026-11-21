@@ -4,24 +4,24 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.Hourglass
 {
-	// Token: 0x02006DFD RID: 28157
+	// Token: 0x02005F7C RID: 24444
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class HourglassOpenParam : IHourglassOpenParam
 	{
-		// Token: 0x170099E8 RID: 39400
-		// (get) Token: 0x06044AFF RID: 281343 RVA: 0x010F3EEC File Offset: 0x010F20EC
-		// (set) Token: 0x06044B00 RID: 281344 RVA: 0x010F3EF4 File Offset: 0x010F20F4
+		// Token: 0x17006EEB RID: 28395
+		// (get) Token: 0x0603AC63 RID: 240739 RVA: 0x0109E1B4 File Offset: 0x0109C3B4
+		// (set) Token: 0x0603AC64 RID: 240740 RVA: 0x0109E1BC File Offset: 0x0109C3BC
 		[RequiredMember]
 		public IQteHourglass Config { get; set; }
 
-		// Token: 0x170099E9 RID: 39401
-		// (get) Token: 0x06044B01 RID: 281345 RVA: 0x010F3EFD File Offset: 0x010F20FD
-		// (set) Token: 0x06044B02 RID: 281346 RVA: 0x010F3F05 File Offset: 0x010F2105
+		// Token: 0x17006EEC RID: 28396
+		// (get) Token: 0x0603AC65 RID: 240741 RVA: 0x0109E1C5 File Offset: 0x0109C3C5
+		// (set) Token: 0x0603AC66 RID: 240742 RVA: 0x0109E1CD File Offset: 0x0109C3CD
 		public bool? AutoStartQte { get; set; }
 
-		// Token: 0x06044B03 RID: 281347 RVA: 0x010F3F0E File Offset: 0x010F210E
+		// Token: 0x0603AC67 RID: 240743 RVA: 0x0109E1D6 File Offset: 0x0109C3D6
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public HourglassOpenParam()

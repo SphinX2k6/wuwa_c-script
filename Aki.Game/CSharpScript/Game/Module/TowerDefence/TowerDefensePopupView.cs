@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B5F RID: 19295
+	// Token: 0x02003B07 RID: 15111
 	public class TowerDefensePopupView : UiViewBase, IExtraUiPopFrameType
 	{
-		// Token: 0x06031F54 RID: 204628 RVA: 0x00B97F83 File Offset: 0x00B96183
+		// Token: 0x06026CE3 RID: 158947 RVA: 0x00ADC1BF File Offset: 0x00ADA3BF
 		[NullableContext(1)]
 		public TowerDefensePopupView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06031F55 RID: 204629 RVA: 0x00B97F8C File Offset: 0x00B9618C
+		// Token: 0x06026CE4 RID: 158948 RVA: 0x00ADC1C8 File Offset: 0x00ADA3C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -47,14 +47,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031F56 RID: 204630 RVA: 0x00B980D9 File Offset: 0x00B962D9
+		// Token: 0x06026CE5 RID: 158949 RVA: 0x00ADC315 File Offset: 0x00ADA515
 		[NullableContext(2)]
 		public EUiBehaviourPopType? GetExtraPopFrameType(object param = null)
 		{
 			return new EUiBehaviourPopType?(EUiBehaviourPopType.TowerDefense);
 		}
 
-		// Token: 0x06031F57 RID: 204631 RVA: 0x00B980E4 File Offset: 0x00B962E4
+		// Token: 0x06026CE6 RID: 158950 RVA: 0x00ADC320 File Offset: 0x00ADA520
 		protected override void OnStart()
 		{
 			ITowerDefensePopupViewArgs towerDefensePopupViewArgs = this.OpenParam as ITowerDefensePopupViewArgs;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06031F58 RID: 204632 RVA: 0x00B981A0 File Offset: 0x00B963A0
+		// Token: 0x06026CE7 RID: 158951 RVA: 0x00ADC3DC File Offset: 0x00ADA5DC
 		private void OnClickBtnCancel()
 		{
 			ITowerDefensePopupViewArgs towerDefensePopupViewArgs = this.OpenParam as ITowerDefensePopupViewArgs;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031F59 RID: 204633 RVA: 0x00B981CA File Offset: 0x00B963CA
+		// Token: 0x06026CE8 RID: 158952 RVA: 0x00ADC406 File Offset: 0x00ADA606
 		private void OnClickBtnConfirm()
 		{
 			ITowerDefensePopupViewArgs towerDefensePopupViewArgs = this.OpenParam as ITowerDefensePopupViewArgs;
@@ -99,25 +99,25 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200ACF0 RID: 44272
+		// Token: 0x0200970F RID: 38671
 		private class EComponent
 		{
-			// Token: 0x040348BD RID: 215229
+			// Token: 0x0402F266 RID: 193126
 			public const int TextTips = 0;
 
-			// Token: 0x040348BE RID: 215230
+			// Token: 0x0402F267 RID: 193127
 			public const int TextContent = 1;
 
-			// Token: 0x040348BF RID: 215231
+			// Token: 0x0402F268 RID: 193128
 			public const int BtnCancel = 2;
 
-			// Token: 0x040348C0 RID: 215232
+			// Token: 0x0402F269 RID: 193129
 			public const int BtnConfirm = 3;
 
-			// Token: 0x040348C1 RID: 215233
+			// Token: 0x0402F26A RID: 193130
 			public const int WaitingItem = 4;
 
-			// Token: 0x040348C2 RID: 215234
+			// Token: 0x0402F26B RID: 193131
 			public const int TextTitle = 5;
 		}
 	}

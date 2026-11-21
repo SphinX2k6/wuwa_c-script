@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x020052F7 RID: 21239
+	// Token: 0x020042C7 RID: 17095
 	public interface IRogueEndingItemParam
 	{
-		// Token: 0x1700831A RID: 33562
-		// (get) Token: 0x060365B7 RID: 222647
-		// (set) Token: 0x060365B8 RID: 222648
+		// Token: 0x170056DA RID: 22234
+		// (get) Token: 0x0602B4B3 RID: 177331
+		// (set) Token: 0x0602B4B4 RID: 177332
 		int ConfigId { get; set; }
 
-		// Token: 0x1700831B RID: 33563
-		// (get) Token: 0x060365B9 RID: 222649
-		// (set) Token: 0x060365BA RID: 222650
+		// Token: 0x170056DB RID: 22235
+		// (get) Token: 0x0602B4B5 RID: 177333
+		// (set) Token: 0x0602B4B6 RID: 177334
 		int Index { get; set; }
 
-		// Token: 0x1700831C RID: 33564
-		// (get) Token: 0x060365BB RID: 222651
-		// (set) Token: 0x060365BC RID: 222652
+		// Token: 0x170056DC RID: 22236
+		// (get) Token: 0x0602B4B7 RID: 177335
+		// (set) Token: 0x0602B4B8 RID: 177336
 		float? Rotation { get; set; }
 
-		// Token: 0x1700831D RID: 33565
-		// (get) Token: 0x060365BD RID: 222653
-		// (set) Token: 0x060365BE RID: 222654
+		// Token: 0x170056DD RID: 22237
+		// (get) Token: 0x0602B4B9 RID: 177337
+		// (set) Token: 0x0602B4BA RID: 177338
 		bool IsSubView { get; set; }
 
-		// Token: 0x1700831E RID: 33566
-		// (get) Token: 0x060365BF RID: 222655
-		// (set) Token: 0x060365C0 RID: 222656
+		// Token: 0x170056DE RID: 22238
+		// (get) Token: 0x0602B4BB RID: 177339
+		// (set) Token: 0x0602B4BC RID: 177340
 		bool IsUnlock { get; set; }
 	}
 }

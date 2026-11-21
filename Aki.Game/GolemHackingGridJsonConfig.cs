@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FF5 RID: 4085
+// Token: 0x020004A9 RID: 1193
 [NullableContext(1)]
 [Nullable(0)]
 public class GolemHackingGridJsonConfig
 {
-	// Token: 0x1700087D RID: 2173
-	// (get) Token: 0x060068EC RID: 26860 RVA: 0x0014DD8A File Offset: 0x0014BF8A
-	// (set) Token: 0x060068ED RID: 26861 RVA: 0x0014DD92 File Offset: 0x0014BF92
+	// Token: 0x1700089D RID: 2205
+	// (get) Token: 0x06003C7F RID: 15487 RVA: 0x00156624 File Offset: 0x00154824
+	// (set) Token: 0x06003C80 RID: 15488 RVA: 0x0015662C File Offset: 0x0015482C
 	public string Code { get; set; }
 
-	// Token: 0x1700087E RID: 2174
-	// (get) Token: 0x060068EE RID: 26862 RVA: 0x0014DD9B File Offset: 0x0014BF9B
-	// (set) Token: 0x060068EF RID: 26863 RVA: 0x0014DDA3 File Offset: 0x0014BFA3
+	// Token: 0x1700089E RID: 2206
+	// (get) Token: 0x06003C81 RID: 15489 RVA: 0x00156635 File Offset: 0x00154835
+	// (set) Token: 0x06003C82 RID: 15490 RVA: 0x0015663D File Offset: 0x0015483D
 	public bool? IsCorrect { get; set; }
 
-	// Token: 0x1700087F RID: 2175
-	// (get) Token: 0x060068F0 RID: 26864 RVA: 0x0014DDAC File Offset: 0x0014BFAC
-	// (set) Token: 0x060068F1 RID: 26865 RVA: 0x0014DDB4 File Offset: 0x0014BFB4
+	// Token: 0x1700089F RID: 2207
+	// (get) Token: 0x06003C83 RID: 15491 RVA: 0x00156646 File Offset: 0x00154846
+	// (set) Token: 0x06003C84 RID: 15492 RVA: 0x0015664E File Offset: 0x0015484E
 	public int? Order { get; set; }
 }

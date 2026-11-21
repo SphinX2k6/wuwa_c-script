@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BDA RID: 23514
+	// Token: 0x020061F0 RID: 25072
 	public class IWuWaGoSpikeTrapT
 	{
-		// Token: 0x1700B1B3 RID: 45491
-		// (get) Token: 0x060284C3 RID: 165059 RVA: 0x00589768 File Offset: 0x00587968
-		// (set) Token: 0x060284C4 RID: 165060 RVA: 0x00589770 File Offset: 0x00587970
+		// Token: 0x1700BAFB RID: 47867
+		// (get) Token: 0x0602AA87 RID: 174727 RVA: 0x005D11F8 File Offset: 0x005CF3F8
+		// (set) Token: 0x0602AA88 RID: 174728 RVA: 0x005D1200 File Offset: 0x005CF400
 		public EWuWaGoEntityType Type { get; set; }
 
-		// Token: 0x1700B1B4 RID: 45492
-		// (get) Token: 0x060284C5 RID: 165061 RVA: 0x00589779 File Offset: 0x00587979
-		// (set) Token: 0x060284C6 RID: 165062 RVA: 0x00589781 File Offset: 0x00587981
+		// Token: 0x1700BAFC RID: 47868
+		// (get) Token: 0x0602AA89 RID: 174729 RVA: 0x005D1209 File Offset: 0x005CF409
+		// (set) Token: 0x0602AA8A RID: 174730 RVA: 0x005D1211 File Offset: 0x005CF411
 		public IWuWaGoGridLinkDataT LinkData { get; set; }
 
-		// Token: 0x060284C7 RID: 165063 RVA: 0x0058978A File Offset: 0x0058798A
+		// Token: 0x0602AA8B RID: 174731 RVA: 0x005D121A File Offset: 0x005CF41A
 		public IWuWaGoSpikeTrapT()
 		{
 			this.Type = EWuWaGoEntityType.LevelCenter;

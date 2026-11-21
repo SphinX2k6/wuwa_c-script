@@ -4,28 +4,28 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A18 RID: 6680
+	// Token: 0x02000495 RID: 1173
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroPerformance.EKuroPerformanceAdvice")]
 	public enum EKuroPerformanceAdvice
 	{
-		// Token: 0x0400D5AF RID: 54703
+		// Token: 0x04002ED1 RID: 11985
 		Pa_Error = -2,
-		// Token: 0x0400D5B0 RID: 54704
+		// Token: 0x04002ED2 RID: 11986
 		Pa_None,
-		// Token: 0x0400D5B1 RID: 54705
+		// Token: 0x04002ED3 RID: 11987
 		Pa_Free,
-		// Token: 0x0400D5B2 RID: 54706
+		// Token: 0x04002ED4 RID: 11988
 		Pa_CBound,
-		// Token: 0x0400D5B3 RID: 54707
+		// Token: 0x04002ED5 RID: 11989
 		Pa_GBound,
-		// Token: 0x0400D5B4 RID: 54708
+		// Token: 0x04002ED6 RID: 11990
 		Pa_CGBound,
-		// Token: 0x0400D5B5 RID: 54709
+		// Token: 0x04002ED7 RID: 11991
 		Pa_Downgrade,
-		// Token: 0x0400D5B6 RID: 54710
+		// Token: 0x04002ED8 RID: 11992
 		Pa_Upgrade,
-		// Token: 0x0400D5B7 RID: 54711
+		// Token: 0x04002ED9 RID: 11993
 		Pa_MAX
 	}
 }

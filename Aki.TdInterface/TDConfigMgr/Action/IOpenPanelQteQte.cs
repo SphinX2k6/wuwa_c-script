@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CA2 RID: 7330
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EA9 RID: 7849
 	public class IOpenPanelQteQte : IOpenQteConfig
 	{
-		// Token: 0x06009D53 RID: 40275 RVA: 0x00168604 File Offset: 0x00166804
+		// Token: 0x0600A701 RID: 42753 RVA: 0x0017C264 File Offset: 0x0017A464
 		private IOpenPanelQteQte_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009D54 RID: 40276 RVA: 0x0016863C File Offset: 0x0016683C
+		// Token: 0x0600A702 RID: 42754 RVA: 0x0017C29C File Offset: 0x0017A49C
 		public static IOpenPanelQteQte Create([Nullable(2)] IOpenPanelQteQte instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009D55 RID: 40277 RVA: 0x0016864F File Offset: 0x0016684F
+		// Token: 0x0600A703 RID: 42755 RVA: 0x0017C2AF File Offset: 0x0017A4AF
 		public static IOpenPanelQteQte CreateFromSetValue([Nullable(2)] IOpenPanelQteQte_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009D56 RID: 40278 RVA: 0x00168662 File Offset: 0x00166862
+		// Token: 0x0600A704 RID: 42756 RVA: 0x0017C2C2 File Offset: 0x0017A4C2
 		public new IOpenPanelQteQte_SetValue ToSetValue()
 		{
 			return new IOpenPanelQteQte_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700310D RID: 12557
-		// (get) Token: 0x06009D57 RID: 40279 RVA: 0x00168681 File Offset: 0x00166881
-		// (set) Token: 0x06009D58 RID: 40280 RVA: 0x001686AC File Offset: 0x001668AC
+		// Token: 0x17003391 RID: 13201
+		// (get) Token: 0x0600A705 RID: 42757 RVA: 0x0017C2E1 File Offset: 0x0017A4E1
+		// (set) Token: 0x0600A706 RID: 42758 RVA: 0x0017C30C File Offset: 0x0017A50C
 		public override EOpenQteType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700310E RID: 12558
-		// (get) Token: 0x06009D59 RID: 40281 RVA: 0x001686BA File Offset: 0x001668BA
-		// (set) Token: 0x06009D5A RID: 40282 RVA: 0x001686E5 File Offset: 0x001668E5
+		// Token: 0x17003392 RID: 13202
+		// (get) Token: 0x0600A707 RID: 42759 RVA: 0x0017C31A File Offset: 0x0017A51A
+		// (set) Token: 0x0600A708 RID: 42760 RVA: 0x0017C345 File Offset: 0x0017A545
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F40 RID: 24384
+		// Token: 0x0400649C RID: 25756
 		[Nullable(2)]
 		protected new IOpenPanelQteQte FbInstance;
 
-		// Token: 0x04005F41 RID: 24385
+		// Token: 0x0400649D RID: 25757
 		[Nullable(2)]
 		protected new IOpenPanelQteQte_SetValue PocoInterface;
 	}

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DB0 RID: 19888
+	// Token: 0x02003D79 RID: 15737
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeAchieveLeftItem : UiPanelBase
 	{
-		// Token: 0x06033592 RID: 210322 RVA: 0x00BFCED4 File Offset: 0x00BFB0D4
+		// Token: 0x060283FF RID: 164863 RVA: 0x00B46404 File Offset: 0x00B44604
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033593 RID: 210323 RVA: 0x00BFCF80 File Offset: 0x00BFB180
+		// Token: 0x06028400 RID: 164864 RVA: 0x00B464B0 File Offset: 0x00B446B0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeAchieveLeftItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033594 RID: 210324 RVA: 0x00BFCFC3 File Offset: 0x00BFB1C3
+		// Token: 0x06028401 RID: 164865 RVA: 0x00B464F3 File Offset: 0x00B446F3
 		protected override void OnStart()
 		{
 			this.RefreshByViewModel();
 		}
 
-		// Token: 0x06033595 RID: 210325 RVA: 0x00BFCFCB File Offset: 0x00BFB1CB
+		// Token: 0x06028402 RID: 164866 RVA: 0x00B464FB File Offset: 0x00B446FB
 		protected override void OnBeforeDestroy()
 		{
 			this.TogTempRecordPanel = null;
@@ -59,19 +59,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.OnSelectedRoguelikeInfoChanged = null;
 		}
 
-		// Token: 0x06033596 RID: 210326 RVA: 0x00BFCFE9 File Offset: 0x00BFB1E9
+		// Token: 0x06028403 RID: 164867 RVA: 0x00B46519 File Offset: 0x00B44719
 		public void SetViewModel(RoguelikeAchieveViewModel vm)
 		{
 			this.Vm = vm;
 		}
 
-		// Token: 0x06033597 RID: 210327 RVA: 0x00BFCFF2 File Offset: 0x00BFB1F2
+		// Token: 0x06028404 RID: 164868 RVA: 0x00B46522 File Offset: 0x00B44722
 		public void BindOnSelectedRoguelikeInfoChanged(Action callback)
 		{
 			this.OnSelectedRoguelikeInfoChanged = callback;
 		}
 
-		// Token: 0x06033598 RID: 210328 RVA: 0x00BFCFFC File Offset: 0x00BFB1FC
+		// Token: 0x06028405 RID: 164869 RVA: 0x00B4652C File Offset: 0x00B4472C
 		public void RefreshByViewModel()
 		{
 			this.RefreshStateIcon();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033599 RID: 210329 RVA: 0x00BFD071 File Offset: 0x00BFB271
+		// Token: 0x06028406 RID: 164870 RVA: 0x00B465A1 File Offset: 0x00B447A1
 		private RoguelikeAchieveTogRoleRecordItem CreateRoleRecordItem()
 		{
 			RoguelikeAchieveTogRoleRecordItem roguelikeAchieveTogRoleRecordItem = new RoguelikeAchieveTogRoleRecordItem();
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return roguelikeAchieveTogRoleRecordItem;
 		}
 
-		// Token: 0x0603359A RID: 210330 RVA: 0x00BFD08C File Offset: 0x00BFB28C
+		// Token: 0x06028407 RID: 164871 RVA: 0x00B465BC File Offset: 0x00B447BC
 		private void RefreshRoleRecordList()
 		{
 			List<RoguelikeAchieveSlotData> roleRecordDataList = this.GetRoleRecordDataList();
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			recordItemScroll.RefreshByData(roleRecordDataList, new Action(this.RefreshSelectedRecord), true);
 		}
 
-		// Token: 0x0603359B RID: 210331 RVA: 0x00BFD10C File Offset: 0x00BFB30C
+		// Token: 0x06028408 RID: 164872 RVA: 0x00B4663C File Offset: 0x00B4483C
 		private void RefreshSelectedRecord()
 		{
 			if (this.Vm.IsTempRecordSelected || this.Vm.SelectedRecordGridIndex < 0)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			recordItemScroll2.SelectGridProxy(this.Vm.SelectedRecordGridIndex, true);
 		}
 
-		// Token: 0x0603359C RID: 210332 RVA: 0x00BFD18C File Offset: 0x00BFB38C
+		// Token: 0x06028409 RID: 164873 RVA: 0x00B466BC File Offset: 0x00B448BC
 		private void OnTempRecordToggleStateChanged(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			onSelectedRoguelikeInfoChanged();
 		}
 
-		// Token: 0x0603359D RID: 210333 RVA: 0x00BFD204 File Offset: 0x00BFB404
+		// Token: 0x0602840A RID: 164874 RVA: 0x00B46734 File Offset: 0x00B44934
 		private void OnRoleRecordToggleStateChanged(RoguelikeAchieveSlotData slotData, int gridIndex, EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			onSelectedRoguelikeInfoChanged();
 		}
 
-		// Token: 0x0603359E RID: 210334 RVA: 0x00BFD290 File Offset: 0x00BFB490
+		// Token: 0x0602840B RID: 164875 RVA: 0x00B467C0 File Offset: 0x00B449C0
 		private void RefreshStateIcon()
 		{
 			RoguelikeAchieveViewModel vm = this.Vm;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			sprite2.SetUIActive(false);
 		}
 
-		// Token: 0x0603359F RID: 210335 RVA: 0x00BFD2FC File Offset: 0x00BFB4FC
+		// Token: 0x0602840C RID: 164876 RVA: 0x00B4682C File Offset: 0x00B44A2C
 		private List<RoguelikeAchieveSlotData> GetRoleRecordDataList()
 		{
 			RoguelikeAchieveViewModel vm = this.Vm;
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return new List<RoguelikeAchieveSlotData>(vm.ArchiveSlotList);
 		}
 
-		// Token: 0x060335A0 RID: 210336 RVA: 0x00BFD358 File Offset: 0x00BFB558
+		// Token: 0x0602840D RID: 164877 RVA: 0x00B46888 File Offset: 0x00B44A88
 		private int GetDefaultSelectedRecordGridIndex(List<RoguelikeAchieveSlotData> dataList)
 		{
 			if (dataList.Count <= 0)
@@ -291,11 +291,11 @@ namespace CSharpScript.Game.Module.Roguelike
 			return num;
 		}
 
-		// Token: 0x0401B46B RID: 111723
+		// Token: 0x04015E3E RID: 89662
 		[Nullable(2)]
 		private RoguelikeAchieveTogTempRecordItem TogTempRecordPanel;
 
-		// Token: 0x0401B46C RID: 111724
+		// Token: 0x04015E3F RID: 89663
 		[Nullable(new byte[]
 		{
 			2,
@@ -304,28 +304,28 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericScrollViewNew<RoguelikeAchieveTogRoleRecordItem, RoguelikeAchieveSlotData> RecordItemScroll;
 
-		// Token: 0x0401B46D RID: 111725
+		// Token: 0x04015E40 RID: 89664
 		[Nullable(2)]
 		private RoguelikeAchieveViewModel Vm;
 
-		// Token: 0x0401B46E RID: 111726
+		// Token: 0x04015E41 RID: 89665
 		[Nullable(2)]
 		private Action OnSelectedRoguelikeInfoChanged;
 
-		// Token: 0x0200AF25 RID: 44837
+		// Token: 0x0200995A RID: 39258
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04035303 RID: 217859
+			// Token: 0x0402FD38 RID: 195896
 			public const int TempRecordItem = 0;
 
-			// Token: 0x04035304 RID: 217860
+			// Token: 0x0402FD39 RID: 195897
 			public const int SprStateIcon = 1;
 
-			// Token: 0x04035305 RID: 217861
+			// Token: 0x0402FD3A RID: 195898
 			public const int RecordItemScroll = 2;
 
-			// Token: 0x04035306 RID: 217862
+			// Token: 0x0402FD3B RID: 195899
 			public const int RoleRecordItem = 3;
 		}
 	}

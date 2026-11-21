@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200502B RID: 20523
+	// Token: 0x0200558A RID: 21898
 	public class IConveyorBeltComponentT
 	{
-		// Token: 0x170094F8 RID: 38136
-		// (get) Token: 0x06020E25 RID: 134693 RVA: 0x00492BA5 File Offset: 0x00490DA5
-		// (set) Token: 0x06020E26 RID: 134694 RVA: 0x00492BAD File Offset: 0x00490DAD
+		// Token: 0x17009CD9 RID: 40153
+		// (get) Token: 0x06022D45 RID: 142661 RVA: 0x004CC5F5 File Offset: 0x004CA7F5
+		// (set) Token: 0x06022D46 RID: 142662 RVA: 0x004CC5FD File Offset: 0x004CA7FD
 		public bool Disabled { get; set; }
 
-		// Token: 0x170094F9 RID: 38137
-		// (get) Token: 0x06020E27 RID: 134695 RVA: 0x00492BB6 File Offset: 0x00490DB6
-		// (set) Token: 0x06020E28 RID: 134696 RVA: 0x00492BBE File Offset: 0x00490DBE
+		// Token: 0x17009CDA RID: 40154
+		// (get) Token: 0x06022D47 RID: 142663 RVA: 0x004CC606 File Offset: 0x004CA806
+		// (set) Token: 0x06022D48 RID: 142664 RVA: 0x004CC60E File Offset: 0x004CA80E
 		public List<IConveyorBeltStateT> StateGroups { get; set; }
 
-		// Token: 0x170094FA RID: 38138
-		// (get) Token: 0x06020E29 RID: 134697 RVA: 0x00492BC7 File Offset: 0x00490DC7
-		// (set) Token: 0x06020E2A RID: 134698 RVA: 0x00492BCF File Offset: 0x00490DCF
+		// Token: 0x17009CDB RID: 40155
+		// (get) Token: 0x06022D49 RID: 142665 RVA: 0x004CC617 File Offset: 0x004CA817
+		// (set) Token: 0x06022D4A RID: 142666 RVA: 0x004CC61F File Offset: 0x004CA81F
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020E2B RID: 134699 RVA: 0x00492BD8 File Offset: 0x00490DD8
+		// Token: 0x06022D4B RID: 142667 RVA: 0x004CC628 File Offset: 0x004CA828
 		public IConveyorBeltComponentT()
 		{
 			this.Disabled = false;

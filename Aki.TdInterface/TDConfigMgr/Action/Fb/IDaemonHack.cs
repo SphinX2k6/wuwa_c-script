@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002841 RID: 10305
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B14 RID: 11028
 	public class IDaemonHack : IUiGame
 	{
-		// Token: 0x0600E475 RID: 58485 RVA: 0x0021A00E File Offset: 0x0021820E
+		// Token: 0x0600F29A RID: 62106 RVA: 0x00236E72 File Offset: 0x00235072
 		public static IDaemonHack Create(IDaemonHack? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045B5 RID: 17845
-		// (get) Token: 0x0600E476 RID: 58486 RVA: 0x0021A02D File Offset: 0x0021822D
+		// Token: 0x17004920 RID: 18720
+		// (get) Token: 0x0600F29B RID: 62107 RVA: 0x00236E91 File Offset: 0x00235091
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045B6 RID: 17846
-		// (get) Token: 0x0600E477 RID: 58487 RVA: 0x0021A03C File Offset: 0x0021823C
+		// Token: 0x17004921 RID: 18721
+		// (get) Token: 0x0600F29C RID: 62108 RVA: 0x00236EA0 File Offset: 0x002350A0
 		public virtual List<int> Ids
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045B7 RID: 17847
-		// (get) Token: 0x0600E478 RID: 58488 RVA: 0x0021A0A0 File Offset: 0x002182A0
+		// Token: 0x17004922 RID: 18722
+		// (get) Token: 0x0600F29D RID: 62109 RVA: 0x00236F04 File Offset: 0x00235104
 		public virtual bool? FinishOnClose
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E67 RID: 32359
+		// Token: 0x04008524 RID: 34084
 		private IDaemonHack Instance;
 
-		// Token: 0x04007E68 RID: 32360
+		// Token: 0x04008525 RID: 34085
 		private List<int> _IdsCache;
 
-		// Token: 0x04007E69 RID: 32361
+		// Token: 0x04008526 RID: 34086
 		private bool _IdsInited;
 	}
 }

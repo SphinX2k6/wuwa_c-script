@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001A11 RID: 6673
+// Token: 0x02000ED0 RID: 3792
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssChallengeResultPlayerInfo
 {
-	// Token: 0x0600C3E5 RID: 50149 RVA: 0x002C5C24 File Offset: 0x002C3E24
+	// Token: 0x060097F5 RID: 38901 RVA: 0x002D0C7C File Offset: 0x002CEE7C
 	public int GetPlayerId()
 	{
 		return this.PlayerId;
 	}
 
-	// Token: 0x0600C3E6 RID: 50150 RVA: 0x002C5C2C File Offset: 0x002C3E2C
+	// Token: 0x060097F6 RID: 38902 RVA: 0x002D0C84 File Offset: 0x002CEE84
 	public int GetLikeCount()
 	{
 		return this.LikeCount;
 	}
 
-	// Token: 0x0600C3E7 RID: 50151 RVA: 0x002C5C34 File Offset: 0x002C3E34
+	// Token: 0x060097F7 RID: 38903 RVA: 0x002D0C8C File Offset: 0x002CEE8C
 	public global::AbyssChallengeResultRoleInfo[] GetRoleInfo()
 	{
 		return this.RoleInfo;
 	}
 
-	// Token: 0x0600C3E8 RID: 50152 RVA: 0x002C5C3C File Offset: 0x002C3E3C
+	// Token: 0x060097F8 RID: 38904 RVA: 0x002D0C94 File Offset: 0x002CEE94
 	public void SetLikeCount(int count)
 	{
 		this.LikeCount = count;
 	}
 
-	// Token: 0x0600C3E9 RID: 50153 RVA: 0x002C5C48 File Offset: 0x002C3E48
+	// Token: 0x060097F9 RID: 38905 RVA: 0x002D0CA0 File Offset: 0x002CEEA0
 	public void Phrase(Aki.Protocol.AbyssChallengeResultPlayerInfo data)
 	{
 		this.PlayerId = data.PlayerId;
@@ -49,12 +49,12 @@ public class AbyssChallengeResultPlayerInfo
 		this.RoleInfo = list.ToArray();
 	}
 
-	// Token: 0x04005A58 RID: 23128
+	// Token: 0x04005B27 RID: 23335
 	private int PlayerId;
 
-	// Token: 0x04005A59 RID: 23129
+	// Token: 0x04005B28 RID: 23336
 	private int LikeCount;
 
-	// Token: 0x04005A5A RID: 23130
+	// Token: 0x04005B29 RID: 23337
 	private global::AbyssChallengeResultRoleInfo[] RoleInfo = Array.Empty<global::AbyssChallengeResultRoleInfo>();
 }

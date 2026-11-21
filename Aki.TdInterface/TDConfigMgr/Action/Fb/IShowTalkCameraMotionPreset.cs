@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002542 RID: 9538
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027E9 RID: 10217
 	public class IShowTalkCameraMotionPreset : IShowTalkCameraMotion
 	{
-		// Token: 0x0600D4A4 RID: 54436 RVA: 0x001F7D62 File Offset: 0x001F5F62
+		// Token: 0x0600E204 RID: 57860 RVA: 0x002137C2 File Offset: 0x002119C2
 		public static IShowTalkCameraMotionPreset Create(IShowTalkCameraMotionPreset? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BE2 RID: 15330
-		// (get) Token: 0x0600D4A5 RID: 54437 RVA: 0x001F7D81 File Offset: 0x001F5F81
+		// Token: 0x17003EE0 RID: 16096
+		// (get) Token: 0x0600E205 RID: 57861 RVA: 0x002137E1 File Offset: 0x002119E1
 		public override EShowTalkCameraMotionType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BE3 RID: 15331
-		// (get) Token: 0x0600D4A6 RID: 54438 RVA: 0x001F7D8E File Offset: 0x001F5F8E
+		// Token: 0x17003EE1 RID: 16097
+		// (get) Token: 0x0600E206 RID: 57862 RVA: 0x002137EE File Offset: 0x002119EE
 		public virtual string Sequence
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BE4 RID: 15332
-		// (get) Token: 0x0600D4A7 RID: 54439 RVA: 0x001F7D9B File Offset: 0x001F5F9B
+		// Token: 0x17003EE2 RID: 16098
+		// (get) Token: 0x0600E207 RID: 57863 RVA: 0x002137FB File Offset: 0x002119FB
 		[Nullable(2)]
 		public virtual IFlowCameraShake CamShake
 		{
@@ -60,14 +58,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400748E RID: 29838
+		// Token: 0x04007AE3 RID: 31459
 		private IShowTalkCameraMotionPreset Instance;
 
-		// Token: 0x0400748F RID: 29839
+		// Token: 0x04007AE4 RID: 31460
 		[Nullable(2)]
 		private IFlowCameraShake _CamShakeCache;
 
-		// Token: 0x04007490 RID: 29840
+		// Token: 0x04007AE5 RID: 31461
 		private bool _CamShakeInited;
 	}
 }

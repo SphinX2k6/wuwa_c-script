@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A80 RID: 2688
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B4A RID: 2890
 	public class IInteractEntityPartModelBind : IInteractEntityPartBindBase
 	{
-		// Token: 0x06003DD7 RID: 15831 RVA: 0x0009E721 File Offset: 0x0009C921
+		// Token: 0x06004200 RID: 16896 RVA: 0x000A7CD9 File Offset: 0x000A5ED9
 		public static IInteractEntityPartModelBind Create(IInteractEntityPartModelBind? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E94 RID: 3732
-		// (get) Token: 0x06003DD8 RID: 15832 RVA: 0x0009E740 File Offset: 0x0009C940
+		// Token: 0x17000F67 RID: 3943
+		// (get) Token: 0x06004201 RID: 16897 RVA: 0x000A7CF8 File Offset: 0x000A5EF8
 		public override EInteractEntityPartBindType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E95 RID: 3733
-		// (get) Token: 0x06003DD9 RID: 15833 RVA: 0x0009E750 File Offset: 0x0009C950
+		// Token: 0x17000F68 RID: 3944
+		// (get) Token: 0x06004202 RID: 16898 RVA: 0x000A7D08 File Offset: 0x000A5F08
 		public virtual List<IInteractEntityPartModelOptionPoint> OptionPoints
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400226B RID: 8811
+		// Token: 0x04002487 RID: 9351
 		private IInteractEntityPartModelBind Instance;
 
-		// Token: 0x0400226C RID: 8812
+		// Token: 0x04002488 RID: 9352
 		private List<IInteractEntityPartModelOptionPoint> _OptionPointsCache;
 
-		// Token: 0x0400226D RID: 8813
+		// Token: 0x04002489 RID: 9353
 		private bool _OptionPointsInited;
 	}
 }

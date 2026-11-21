@@ -5,13 +5,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 {
-	// Token: 0x02005BA5 RID: 23461
+	// Token: 0x02004B85 RID: 19333
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class JumpActionHandler : ActionEntryHandlerBase
 	{
-		// Token: 0x17008CE9 RID: 36073
-		// (get) Token: 0x0603B549 RID: 243017 RVA: 0x00E23259 File Offset: 0x00E21459
+		// Token: 0x170060BB RID: 24763
+		// (get) Token: 0x06030496 RID: 197782 RVA: 0x00D737A9 File Offset: 0x00D719A9
 		public override EShowTimelineActionType ActionType
 		{
 			get
@@ -20,19 +20,19 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 			}
 		}
 
-		// Token: 0x0603B54A RID: 243018 RVA: 0x00E2325C File Offset: 0x00E2145C
+		// Token: 0x06030497 RID: 197783 RVA: 0x00D737AC File Offset: 0x00D719AC
 		protected override void OnStartCapture()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnCharJump, new Action<int>(this.OnCharJump));
 		}
 
-		// Token: 0x0603B54B RID: 243019 RVA: 0x00E23277 File Offset: 0x00E21477
+		// Token: 0x06030498 RID: 197784 RVA: 0x00D737C7 File Offset: 0x00D719C7
 		protected override void OnStopCapture()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnCharJump, new Action<int>(this.OnCharJump));
 		}
 
-		// Token: 0x0603B54C RID: 243020 RVA: 0x00E23294 File Offset: 0x00E21494
+		// Token: 0x06030499 RID: 197785 RVA: 0x00D737E4 File Offset: 0x00D719E4
 		public override bool Apply(IShowTimelineAction entry, IComboTimelineReplayContext context)
 		{
 			JumpActionHandler.<>c__DisplayClass4_0 CS$<>8__locals1 = new JumpActionHandler.<>c__DisplayClass4_0();
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 			return CS$<>8__locals1.jumped;
 		}
 
-		// Token: 0x0603B54D RID: 243021 RVA: 0x00E2334C File Offset: 0x00E2154C
+		// Token: 0x0603049A RID: 197786 RVA: 0x00D7389C File Offset: 0x00D71A9C
 		public override string Describe(IShowTimelineAction entry)
 		{
 			return "跳跃";
 		}
 
-		// Token: 0x0603B54E RID: 243022 RVA: 0x00E23354 File Offset: 0x00E21554
+		// Token: 0x0603049B RID: 197787 RVA: 0x00D738A4 File Offset: 0x00D71AA4
 		private void OnCharJump(int entityId)
 		{
 			IComboTimelineCaptureContext context = this.Context;

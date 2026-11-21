@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045AC RID: 17836
+	// Token: 0x020034D4 RID: 13524
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharMaterialContainer : CharRenderBase
 	{
-		// Token: 0x0602DFF0 RID: 188400 RVA: 0x00A955D7 File Offset: 0x00A937D7
+		// Token: 0x060226DA RID: 141018 RVA: 0x009C17F7 File Offset: 0x009BF9F7
 		public void MarkForceUpdateThisFrame()
 		{
 			this.ForceUpdateThisFrame = true;
 		}
 
-		// Token: 0x0602DFF1 RID: 188401 RVA: 0x00A955E0 File Offset: 0x00A937E0
+		// Token: 0x060226DB RID: 141019 RVA: 0x009C1800 File Offset: 0x009BFA00
 		public int GetMaxUpdateParamsPerFrame()
 		{
 			if (this.MaxUpdateParamsPerFrame < 0)
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Render
 			return this.MaxUpdateParamsPerFrame;
 		}
 
-		// Token: 0x0602DFF2 RID: 188402 RVA: 0x00A95618 File Offset: 0x00A93818
+		// Token: 0x060226DC RID: 141020 RVA: 0x009C1838 File Offset: 0x009BFA38
 		public unsafe override void Awake(CharRenderingComponent renderComponent)
 		{
 			base.Awake(renderComponent);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Render
 			this.StatTick = Stat.CreateNoFlameGraph(name2, "", "");
 		}
 
-		// Token: 0x0602DFF3 RID: 188403 RVA: 0x00A95884 File Offset: 0x00A93A84
+		// Token: 0x060226DD RID: 141021 RVA: 0x009C1AA4 File Offset: 0x009BFCA4
 		public unsafe bool AddSkeletalComponent(USkeletalMeshComponent skeletalComp, string skelName, bool useEmptyMaterial = false)
 		{
 			if (string.IsNullOrEmpty(skelName))
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602DFF4 RID: 188404 RVA: 0x00A959CF File Offset: 0x00A93BCF
+		// Token: 0x060226DE RID: 141022 RVA: 0x009C1BEF File Offset: 0x009BFDEF
 		public bool RemoveSkeletalComponent(string bodyName)
 		{
 			if (this.AllBodyInfoList.ContainsKey(bodyName))
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Render
 			return false;
 		}
 
-		// Token: 0x0602DFF5 RID: 188405 RVA: 0x00A959F0 File Offset: 0x00A93BF0
+		// Token: 0x060226DF RID: 141023 RVA: 0x009C1C10 File Offset: 0x009BFE10
 		public void ResetAllState()
 		{
 			foreach (CharBodyInfo charBodyInfo in this.AllBodyInfoList.Values)
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFF6 RID: 188406 RVA: 0x00A95A48 File Offset: 0x00A93C48
+		// Token: 0x060226E0 RID: 141024 RVA: 0x009C1C68 File Offset: 0x009BFE68
 		public void UseAlphaTestCommon()
 		{
 			foreach (CharBodyInfo charBodyInfo in this.AllBodyInfoList.Values)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFF7 RID: 188407 RVA: 0x00A95AA0 File Offset: 0x00A93CA0
+		// Token: 0x060226E1 RID: 141025 RVA: 0x009C1CC0 File Offset: 0x009BFEC0
 		public void RevertAlphaTestCommon()
 		{
 			foreach (CharBodyInfo charBodyInfo in this.AllBodyInfoList.Values)
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFF8 RID: 188408 RVA: 0x00A95AF8 File Offset: 0x00A93CF8
+		// Token: 0x060226E2 RID: 141026 RVA: 0x009C1D18 File Offset: 0x009BFF18
 		public void SetColor(FName? propertyName, FLinearColor color, ECharacterBodySpecifiedType specifiedBodyType = ECharacterBodySpecifiedType.All, ECharacterSlotSpecifiedType specifiedSlotType = ECharacterSlotSpecifiedType.All)
 		{
 			if (FNameUtil.IsEmpty(propertyName))
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFF9 RID: 188409 RVA: 0x00A95B4C File Offset: 0x00A93D4C
+		// Token: 0x060226E3 RID: 141027 RVA: 0x009C1D6C File Offset: 0x009BFF6C
 		public void RevertColor(FName propertyName, ECharacterBodySpecifiedType specifiedBodyType = ECharacterBodySpecifiedType.All, ECharacterSlotSpecifiedType specifiedSlotType = ECharacterSlotSpecifiedType.All)
 		{
 			if (FNameUtil.IsEmpty(new FName?(propertyName)))
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFFA RID: 188410 RVA: 0x00A95B9C File Offset: 0x00A93D9C
+		// Token: 0x060226E4 RID: 141028 RVA: 0x009C1DBC File Offset: 0x009BFFBC
 		public void SetFloat(FName? propertyName, float value, ECharacterBodySpecifiedType specifiedBodyType = ECharacterBodySpecifiedType.All, ECharacterSlotSpecifiedType specifiedSlotType = ECharacterSlotSpecifiedType.All)
 		{
 			if (FNameUtil.IsEmpty(propertyName))
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFFB RID: 188411 RVA: 0x00A95BF0 File Offset: 0x00A93DF0
+		// Token: 0x060226E5 RID: 141029 RVA: 0x009C1E10 File Offset: 0x009C0010
 		public void RevertFloat(FName propertyName, ECharacterBodySpecifiedType specifiedBodyType = ECharacterBodySpecifiedType.All, ECharacterSlotSpecifiedType specifiedSlotType = ECharacterSlotSpecifiedType.All)
 		{
 			if (FNameUtil.IsEmpty(new FName?(propertyName)))
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFFC RID: 188412 RVA: 0x00A95C40 File Offset: 0x00A93E40
+		// Token: 0x060226E6 RID: 141030 RVA: 0x009C1E60 File Offset: 0x009C0060
 		[NullableContext(2)]
 		public void SetTexture(FName propertyName, UTexture texture, ECharacterBodySpecifiedType specifiedBodyType = ECharacterBodySpecifiedType.All, ECharacterSlotSpecifiedType specifiedSlotType = ECharacterSlotSpecifiedType.All)
 		{
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFFD RID: 188413 RVA: 0x00A95C98 File Offset: 0x00A93E98
+		// Token: 0x060226E7 RID: 141031 RVA: 0x009C1EB8 File Offset: 0x009C00B8
 		public void RevertTexture(FName propertyName, ECharacterBodySpecifiedType specifiedBodyType = ECharacterBodySpecifiedType.All, int sectionIndex = -1, ECharacterSlotSpecifiedType specifiedSlotType = ECharacterSlotSpecifiedType.All)
 		{
 			if (FNameUtil.IsEmpty(new FName?(propertyName)))
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFFE RID: 188414 RVA: 0x00A95D0C File Offset: 0x00A93F0C
+		// Token: 0x060226E8 RID: 141032 RVA: 0x009C1F2C File Offset: 0x009C012C
 		public void SetStarScarEnergy(float value)
 		{
 			foreach (CharBodyInfo charBodyInfo in this.AllBodyInfoList.Values)
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFFF RID: 188415 RVA: 0x00A95D64 File Offset: 0x00A93F64
+		// Token: 0x060226E9 RID: 141033 RVA: 0x009C1F84 File Offset: 0x009C0184
 		public void SetNoWater(bool value)
 		{
 			foreach (CharBodyInfo charBodyInfo in this.AllBodyInfoList.Values)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E000 RID: 188416 RVA: 0x00A95DBC File Offset: 0x00A93FBC
+		// Token: 0x060226EA RID: 141034 RVA: 0x009C1FDC File Offset: 0x009C01DC
 		public override void LateUpdate()
 		{
 			this.UpdateCounter++;
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E001 RID: 188417 RVA: 0x00A95F5C File Offset: 0x00A9415C
+		// Token: 0x060226EB RID: 141035 RVA: 0x009C217C File Offset: 0x009C037C
 		public override void Destroy()
 		{
 			foreach (CharBodyInfo charBodyInfo in this.AllBodyInfoList.Values)
@@ -398,19 +398,19 @@ namespace CSharpScript.Game.Render
 			this.AllBodyInfoList.Clear();
 		}
 
-		// Token: 0x0602E002 RID: 188418 RVA: 0x00A95FE0 File Offset: 0x00A941E0
+		// Token: 0x060226EC RID: 141036 RVA: 0x009C2200 File Offset: 0x009C0400
 		public override int GetComponentId()
 		{
 			return 1;
 		}
 
-		// Token: 0x0602E003 RID: 188419 RVA: 0x00A95FE3 File Offset: 0x00A941E3
+		// Token: 0x060226ED RID: 141037 RVA: 0x009C2203 File Offset: 0x009C0403
 		public override string GetStatName()
 		{
 			return "CharMaterialContainer";
 		}
 
-		// Token: 0x0602E004 RID: 188420 RVA: 0x00A95FEC File Offset: 0x00A941EC
+		// Token: 0x060226EE RID: 141038 RVA: 0x009C220C File Offset: 0x009C040C
 		public void StateEnter(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E005 RID: 188421 RVA: 0x00A960B4 File Offset: 0x00A942B4
+		// Token: 0x060226EF RID: 141039 RVA: 0x009C22D4 File Offset: 0x009C04D4
 		public void StateUpdate(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E006 RID: 188422 RVA: 0x00A96184 File Offset: 0x00A94384
+		// Token: 0x060226F0 RID: 141040 RVA: 0x009C23A4 File Offset: 0x009C05A4
 		public unsafe void StateRevert(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -589,7 +589,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E007 RID: 188423 RVA: 0x00A96344 File Offset: 0x00A94544
+		// Token: 0x060226F1 RID: 141041 RVA: 0x009C2564 File Offset: 0x009C0764
 		private void OnStartMaterialReplace(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -636,7 +636,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E008 RID: 188424 RVA: 0x00A964B0 File Offset: 0x00A946B0
+		// Token: 0x060226F2 RID: 141042 RVA: 0x009C26D0 File Offset: 0x009C08D0
 		private void OnUpdateMaterialReplace(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -664,7 +664,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E009 RID: 188425 RVA: 0x00A96560 File Offset: 0x00A94760
+		// Token: 0x060226F3 RID: 141043 RVA: 0x009C2780 File Offset: 0x009C0980
 		private void OnRevertMaterialReplace(CharMaterialControlRuntimeData runtimeData)
 		{
 			if (!runtimeData.DataCache.RevertMaterial)
@@ -684,7 +684,7 @@ namespace CSharpScript.Game.Render
 			runtimeData.ReplaceMaterial = null;
 		}
 
-		// Token: 0x0602E00A RID: 188426 RVA: 0x00A96610 File Offset: 0x00A94810
+		// Token: 0x060226F4 RID: 141044 RVA: 0x009C2830 File Offset: 0x009C0A30
 		private void StartRim(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -711,7 +711,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E00B RID: 188427 RVA: 0x00A966D8 File Offset: 0x00A948D8
+		// Token: 0x060226F5 RID: 141045 RVA: 0x009C28F8 File Offset: 0x009C0AF8
 		private void OnUpdateRim(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -737,7 +737,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E00C RID: 188428 RVA: 0x00A96808 File Offset: 0x00A94A08
+		// Token: 0x060226F6 RID: 141046 RVA: 0x009C2A28 File Offset: 0x009C0C28
 		private void OnRevertRim(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -767,7 +767,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E00D RID: 188429 RVA: 0x00A96920 File Offset: 0x00A94B20
+		// Token: 0x060226F7 RID: 141047 RVA: 0x009C2B40 File Offset: 0x009C0D40
 		private void OnStartDissolve(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -794,7 +794,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E00E RID: 188430 RVA: 0x00A969E8 File Offset: 0x00A94BE8
+		// Token: 0x060226F8 RID: 141048 RVA: 0x009C2C08 File Offset: 0x009C0E08
 		private void OnUpdateDissolve(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -821,7 +821,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E00F RID: 188431 RVA: 0x00A96B20 File Offset: 0x00A94D20
+		// Token: 0x060226F9 RID: 141049 RVA: 0x009C2D40 File Offset: 0x009C0F40
 		private void OnRevertDissolve(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -851,7 +851,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E010 RID: 188432 RVA: 0x00A96C38 File Offset: 0x00A94E38
+		// Token: 0x060226FA RID: 141050 RVA: 0x009C2E58 File Offset: 0x009C1058
 		private void OnStartOutline(CharMaterialControlRuntimeData runtimeData)
 		{
 			if (!runtimeData.DataCache.UseOuterOutlineEffect)
@@ -882,7 +882,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E011 RID: 188433 RVA: 0x00A96D0C File Offset: 0x00A94F0C
+		// Token: 0x060226FB RID: 141051 RVA: 0x009C2F2C File Offset: 0x009C112C
 		private void OnUpdateOutline(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -906,7 +906,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E012 RID: 188434 RVA: 0x00A96E14 File Offset: 0x00A95014
+		// Token: 0x060226FC RID: 141052 RVA: 0x009C3034 File Offset: 0x009C1234
 		private void OnRevertOutline(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -934,7 +934,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E013 RID: 188435 RVA: 0x00A96F10 File Offset: 0x00A95110
+		// Token: 0x060226FD RID: 141053 RVA: 0x009C3130 File Offset: 0x009C1330
 		private void StartColor(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -961,7 +961,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E014 RID: 188436 RVA: 0x00A96FD8 File Offset: 0x00A951D8
+		// Token: 0x060226FE RID: 141054 RVA: 0x009C31F8 File Offset: 0x009C13F8
 		private void OnUpdateColor(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -992,7 +992,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E015 RID: 188437 RVA: 0x00A97114 File Offset: 0x00A95314
+		// Token: 0x060226FF RID: 141055 RVA: 0x009C3334 File Offset: 0x009C1534
 		private void OnRevertColor(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -1022,7 +1022,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E016 RID: 188438 RVA: 0x00A9722C File Offset: 0x00A9542C
+		// Token: 0x06022700 RID: 141056 RVA: 0x009C344C File Offset: 0x009C164C
 		private void StartSampleTexture(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -1049,7 +1049,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E017 RID: 188439 RVA: 0x00A972F4 File Offset: 0x00A954F4
+		// Token: 0x06022701 RID: 141057 RVA: 0x009C3514 File Offset: 0x009C1714
 		private void OnUpdateSampleTexture(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -1085,7 +1085,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E018 RID: 188440 RVA: 0x00A974A0 File Offset: 0x00A956A0
+		// Token: 0x06022702 RID: 141058 RVA: 0x009C36C0 File Offset: 0x009C18C0
 		private void OnRevertSampleTexture(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -1119,7 +1119,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E019 RID: 188441 RVA: 0x00A975F4 File Offset: 0x00A957F4
+		// Token: 0x06022703 RID: 141059 RVA: 0x009C3814 File Offset: 0x009C1A14
 		private void OnStartMotionOffset(CharMaterialControlRuntimeData runtimeData)
 		{
 			foreach (KeyValuePair<string, List<int>> keyValuePair in runtimeData.SpecifiedMaterialIndexMap)
@@ -1145,7 +1145,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E01A RID: 188442 RVA: 0x00A976DC File Offset: 0x00A958DC
+		// Token: 0x06022704 RID: 141060 RVA: 0x009C38FC File Offset: 0x009C1AFC
 		private void OnUpdateMotionOffset(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -1186,7 +1186,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E01B RID: 188443 RVA: 0x00A978A8 File Offset: 0x00A95AA8
+		// Token: 0x06022705 RID: 141061 RVA: 0x009C3AC8 File Offset: 0x009C1CC8
 		private void OnRevertMotionOffset(CharMaterialControlRuntimeData runtimeData)
 		{
 			foreach (KeyValuePair<string, List<int>> keyValuePair in runtimeData.SpecifiedMaterialIndexMap)
@@ -1204,7 +1204,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E01C RID: 188444 RVA: 0x00A97958 File Offset: 0x00A95B58
+		// Token: 0x06022706 RID: 141062 RVA: 0x009C3B78 File Offset: 0x009C1D78
 		private void OnStartDither(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -1231,7 +1231,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E01D RID: 188445 RVA: 0x00A97A20 File Offset: 0x00A95C20
+		// Token: 0x06022707 RID: 141063 RVA: 0x009C3C40 File Offset: 0x009C1E40
 		private void OnUpdateDither(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -1251,7 +1251,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E01E RID: 188446 RVA: 0x00A97AE8 File Offset: 0x00A95CE8
+		// Token: 0x06022708 RID: 141064 RVA: 0x009C3D08 File Offset: 0x009C1F08
 		private void OnRevertDither(CharMaterialControlRuntimeData runtimeData)
 		{
 			bool selectedAllParts = runtimeData.SelectedAllParts;
@@ -1277,7 +1277,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E01F RID: 188447 RVA: 0x00A97BCC File Offset: 0x00A95DCC
+		// Token: 0x06022709 RID: 141065 RVA: 0x009C3DEC File Offset: 0x009C1FEC
 		private void OnUpdateCustomMaterialEffect(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -1321,7 +1321,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E020 RID: 188448 RVA: 0x00A97D60 File Offset: 0x00A95F60
+		// Token: 0x0602270A RID: 141066 RVA: 0x009C3F80 File Offset: 0x009C2180
 		private void OnRevertCustomMaterialEffect(CharMaterialControlRuntimeData runtimeData)
 		{
 			CharMaterialControlDataCache dataCache = runtimeData.DataCache;
@@ -1358,7 +1358,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x040188E9 RID: 100585
+		// Token: 0x04012F24 RID: 77604
 		[Nullable(new byte[]
 		{
 			2,
@@ -1367,23 +1367,23 @@ namespace CSharpScript.Game.Render
 		})]
 		public Dictionary<string, CharBodyInfo> AllBodyInfoList;
 
-		// Token: 0x040188EA RID: 100586
+		// Token: 0x04012F25 RID: 77605
 		private string OwnerActorName = string.Empty;
 
-		// Token: 0x040188EB RID: 100587
+		// Token: 0x04012F26 RID: 77606
 		private readonly List<string> TempReplaceMaterialBodies = new List<string>();
 
-		// Token: 0x040188EC RID: 100588
+		// Token: 0x04012F27 RID: 77607
 		[Nullable(2)]
 		private Stat StatTick;
 
-		// Token: 0x040188ED RID: 100589
+		// Token: 0x04012F28 RID: 77608
 		private int UpdateCounter;
 
-		// Token: 0x040188EE RID: 100590
+		// Token: 0x04012F29 RID: 77609
 		private bool ForceUpdateThisFrame;
 
-		// Token: 0x040188EF RID: 100591
+		// Token: 0x04012F2A RID: 77610
 		private int MaxUpdateParamsPerFrame = -1;
 	}
 }

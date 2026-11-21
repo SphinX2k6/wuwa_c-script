@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200077E RID: 1918
+	// Token: 0x02000798 RID: 1944
 	public class ConfigQuestResourceWhiteAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002D05 RID: 11525 RVA: 0x001579E3 File Offset: 0x00155BE3
+		// Token: 0x06002DA1 RID: 11681 RVA: 0x0015E8EF File Offset: 0x0015CAEF
 		static ConfigQuestResourceWhiteAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestResourceWhiteAll.CreateStaticDefaultValue), new Action(ConfigQuestResourceWhiteAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D06 RID: 11526 RVA: 0x00157A04 File Offset: 0x00155C04
+		// Token: 0x06002DA2 RID: 11682 RVA: 0x0015E910 File Offset: 0x0015CB10
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestResourceWhiteAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D07 RID: 11527 RVA: 0x00157A83 File Offset: 0x00155C83
+		// Token: 0x06002DA3 RID: 11683 RVA: 0x0015E98F File Offset: 0x0015CB8F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestResourceWhiteAll.LogPair = null;
 			ConfigQuestResourceWhiteAll.HandleId = 0;
 		}
 
-		// Token: 0x06002D08 RID: 11528 RVA: 0x00157A91 File Offset: 0x00155C91
+		// Token: 0x06002DA4 RID: 11684 RVA: 0x0015E99D File Offset: 0x0015CB9D
 		public static void Init()
 		{
 			ConfigQuestResourceWhiteAll.HandleId = ConfigCommon.InitDataStatement(ConfigQuestResourceWhiteAll.HandleId, "db_download.db", "select BinData from `QuestResourceWhite`");
 		}
 
-		// Token: 0x06002D09 RID: 11529 RVA: 0x00157AAC File Offset: 0x00155CAC
+		// Token: 0x06002DA5 RID: 11685 RVA: 0x0015E9B8 File Offset: 0x0015CBB8
 		[NullableContext(2)]
 		public static IReadOnlyList<QuestResourceWhite> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003458 RID: 13400
+		// Token: 0x0400350E RID: 13582
 		private const string DB = "db_download.db";
 
-		// Token: 0x04003459 RID: 13401
+		// Token: 0x0400350F RID: 13583
 		private const string FILE = "b.包体管理.xlsx";
 
-		// Token: 0x0400345A RID: 13402
+		// Token: 0x04003510 RID: 13584
 		private const string TABLE = "QuestResourceWhite";
 
-		// Token: 0x0400345B RID: 13403
+		// Token: 0x04003511 RID: 13585
 		private const string COMMAND = "select BinData from `QuestResourceWhite`";
 
-		// Token: 0x0400345C RID: 13404
+		// Token: 0x04003512 RID: 13586
 		private const string KEY_PREFIX = "QuestResourceWhiteAll";
 
-		// Token: 0x0400345D RID: 13405
+		// Token: 0x04003513 RID: 13587
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400345E RID: 13406
+		// Token: 0x04003514 RID: 13588
 		private static int HandleId;
 	}
 }

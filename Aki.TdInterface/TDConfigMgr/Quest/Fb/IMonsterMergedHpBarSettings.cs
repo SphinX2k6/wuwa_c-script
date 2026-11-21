@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001442 RID: 5186
+	// Token: 0x0200159A RID: 5530
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMonsterMergedHpBarSettings
 	{
-		// Token: 0x060075F2 RID: 30194 RVA: 0x00119B85 File Offset: 0x00117D85
-		[NullableContext(1)]
+		// Token: 0x06007CBA RID: 31930 RVA: 0x00128659 File Offset: 0x00126859
+		[NullableContext(0)]
 		public static IMonsterMergedHpBarSettings Create(IMonsterMergedHpBarSettings? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002741 RID: 10049
-		// (get) Token: 0x060075F3 RID: 30195 RVA: 0x00119BA4 File Offset: 0x00117DA4
+		// Token: 0x17002928 RID: 10536
+		// (get) Token: 0x06007CBB RID: 31931 RVA: 0x00128678 File Offset: 0x00126878
 		public virtual List<long> DisplayBuffIds
 		{
 			get
@@ -49,13 +49,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004470 RID: 17520
+		// Token: 0x04004806 RID: 18438
 		private IMonsterMergedHpBarSettings Instance;
 
-		// Token: 0x04004471 RID: 17521
+		// Token: 0x04004807 RID: 18439
 		private List<long> _DisplayBuffIdsCache;
 
-		// Token: 0x04004472 RID: 17522
+		// Token: 0x04004808 RID: 18440
 		private bool _DisplayBuffIdsInited;
 	}
 }

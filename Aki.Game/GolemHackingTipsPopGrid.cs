@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001006 RID: 4102
+// Token: 0x020004BA RID: 1210
 [NullableContext(1)]
 [Nullable(0)]
 public class GolemHackingTipsPopGrid : UiPanelBase
 {
-	// Token: 0x0600692C RID: 26924 RVA: 0x0014EFC4 File Offset: 0x0014D1C4
+	// Token: 0x06003CC1 RID: 15553 RVA: 0x001578EC File Offset: 0x00155AEC
 	public GolemHackingTipsPopGrid(GolemHackingTipsGirdInfo param)
 	{
 		this.Code = param.Code;
@@ -22,7 +22,7 @@ public class GolemHackingTipsPopGrid : UiPanelBase
 		this.Size = param.Size;
 	}
 
-	// Token: 0x0600692D RID: 26925 RVA: 0x0014F078 File Offset: 0x0014D278
+	// Token: 0x06003CC2 RID: 15554 RVA: 0x001579A0 File Offset: 0x00155BA0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -44,7 +44,7 @@ public class GolemHackingTipsPopGrid : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600692E RID: 26926 RVA: 0x0014F168 File Offset: 0x0014D368
+	// Token: 0x06003CC3 RID: 15555 RVA: 0x00157A90 File Offset: 0x00155C90
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -59,7 +59,7 @@ public class GolemHackingTipsPopGrid : UiPanelBase
 		this.InitLine();
 	}
 
-	// Token: 0x0600692F RID: 26927 RVA: 0x0014F1BE File Offset: 0x0014D3BE
+	// Token: 0x06003CC4 RID: 15556 RVA: 0x00157AE6 File Offset: 0x00155CE6
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearDelayTimer();
@@ -71,7 +71,7 @@ public class GolemHackingTipsPopGrid : UiPanelBase
 		this.SequencePlayer = null;
 	}
 
-	// Token: 0x06006930 RID: 26928 RVA: 0x0014F1DE File Offset: 0x0014D3DE
+	// Token: 0x06003CC5 RID: 15557 RVA: 0x00157B06 File Offset: 0x00155D06
 	private void ClearDelayTimer()
 	{
 		if (this.DelayTimerHandle != null)
@@ -84,7 +84,7 @@ public class GolemHackingTipsPopGrid : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006931 RID: 26929 RVA: 0x0014F210 File Offset: 0x0014D410
+	// Token: 0x06003CC6 RID: 15558 RVA: 0x00157B38 File Offset: 0x00155D38
 	public void PlayAnim(int index)
 	{
 		this.ClearDelayTimer();
@@ -110,7 +110,7 @@ public class GolemHackingTipsPopGrid : UiPanelBase
 		sequencePlayer.PlayOrReplaySequenceByName("Notice", false, null);
 	}
 
-	// Token: 0x06006932 RID: 26930 RVA: 0x0014F274 File Offset: 0x0014D474
+	// Token: 0x06003CC7 RID: 15559 RVA: 0x00157B9C File Offset: 0x00155D9C
 	protected void InitLine()
 	{
 		if (this.NextIndex == -1)
@@ -183,35 +183,35 @@ public class GolemHackingTipsPopGrid : UiPanelBase
 		sprite8.SetWidth((float)num9);
 	}
 
-	// Token: 0x0400306A RID: 12394
+	// Token: 0x04003103 RID: 12547
 	private const int PIXEL_OFFSET = 60;
 
-	// Token: 0x0400306B RID: 12395
+	// Token: 0x04003104 RID: 12548
 	private const int GRID_WIDTH = 135;
 
-	// Token: 0x0400306C RID: 12396
+	// Token: 0x04003105 RID: 12549
 	private const int INTERVAL_TIME = 250;
 
-	// Token: 0x0400306D RID: 12397
+	// Token: 0x04003106 RID: 12550
 	protected string Code = "";
 
-	// Token: 0x0400306E RID: 12398
+	// Token: 0x04003107 RID: 12551
 	protected int Index;
 
-	// Token: 0x0400306F RID: 12399
+	// Token: 0x04003108 RID: 12552
 	protected int NextIndex = -1;
 
-	// Token: 0x04003070 RID: 12400
+	// Token: 0x04003109 RID: 12553
 	protected Vector Position = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04003071 RID: 12401
+	// Token: 0x0400310A RID: 12554
 	protected int Size;
 
-	// Token: 0x04003072 RID: 12402
+	// Token: 0x0400310B RID: 12555
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04003073 RID: 12403
+	// Token: 0x0400310C RID: 12556
 	[Nullable(2)]
 	private TimerHandle DelayTimerHandle;
 }

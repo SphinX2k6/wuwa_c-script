@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025E0 RID: 9696
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200289F RID: 10399
 	public class IEffectPlayerPos2 : IPlayerPos2
 	{
-		// Token: 0x0600D9ED RID: 55789 RVA: 0x00207EA3 File Offset: 0x002060A3
+		// Token: 0x0600E7B6 RID: 59318 RVA: 0x0022458F File Offset: 0x0022278F
 		public static IEffectPlayerPos2 Create(IEffectPlayerPos2? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FEF RID: 16367
-		// (get) Token: 0x0600D9EE RID: 55790 RVA: 0x00207EC2 File Offset: 0x002060C2
+		// Token: 0x17004326 RID: 17190
+		// (get) Token: 0x0600E7B7 RID: 59319 RVA: 0x002245AE File Offset: 0x002227AE
 		public override EPos2 Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FF0 RID: 16368
-		// (get) Token: 0x0600D9EF RID: 55791 RVA: 0x00207ECF File Offset: 0x002060CF
+		// Token: 0x17004327 RID: 17191
+		// (get) Token: 0x0600E7B8 RID: 59320 RVA: 0x002245BB File Offset: 0x002227BB
 		public override VectorInfo Offset
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FF1 RID: 16369
-		// (get) Token: 0x0600D9F0 RID: 55792 RVA: 0x00207F03 File Offset: 0x00206103
+		// Token: 0x17004328 RID: 17192
+		// (get) Token: 0x0600E7B9 RID: 59321 RVA: 0x002245EF File Offset: 0x002227EF
 		[Nullable(2)]
 		public virtual string AttachSocket
 		{
@@ -61,14 +59,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007908 RID: 30984
+		// Token: 0x04007F9F RID: 32671
 		private IEffectPlayerPos2 Instance;
 
-		// Token: 0x04007909 RID: 30985
+		// Token: 0x04007FA0 RID: 32672
 		[Nullable(2)]
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x0400790A RID: 30986
+		// Token: 0x04007FA1 RID: 32673
 		private bool _OffsetInited;
 	}
 }

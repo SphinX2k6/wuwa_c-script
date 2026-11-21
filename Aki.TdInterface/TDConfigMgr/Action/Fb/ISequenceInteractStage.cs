@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002850 RID: 10320
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B23 RID: 11043
 	public class ISequenceInteractStage
 	{
-		// Token: 0x0600E4C1 RID: 58561 RVA: 0x0021A93A File Offset: 0x00218B3A
+		// Token: 0x0600F2E6 RID: 62182 RVA: 0x0023779E File Offset: 0x0023599E
 		public static ISequenceInteractStage Create(ISequenceInteractStage? instance)
 		{
 			if (instance == null)
@@ -23,19 +21,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045E3 RID: 17891
-		// (get) Token: 0x0600E4C2 RID: 58562 RVA: 0x0021A959 File Offset: 0x00218B59
+		// Token: 0x1700494E RID: 18766
+		// (get) Token: 0x0600F2E7 RID: 62183 RVA: 0x002377BD File Offset: 0x002359BD
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IInteractEffect> EnterStageEffects
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045E4 RID: 17892
-		// (get) Token: 0x0600E4C3 RID: 58563 RVA: 0x0021A99C File Offset: 0x00218B9C
+		// Token: 0x1700494F RID: 18767
+		// (get) Token: 0x0600F2E8 RID: 62184 RVA: 0x00237800 File Offset: 0x00235A00
 		public virtual List<IInteractPoint> InteractPoints
 		{
 			get
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045E5 RID: 17893
-		// (get) Token: 0x0600E4C4 RID: 58564 RVA: 0x0021AA05 File Offset: 0x00218C05
+		// Token: 0x17004950 RID: 18768
+		// (get) Token: 0x0600F2E9 RID: 62185 RVA: 0x00237869 File Offset: 0x00235A69
 		[Nullable(2)]
 		public virtual string UiTipText
 		{
@@ -86,8 +84,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045E6 RID: 17894
-		// (get) Token: 0x0600E4C5 RID: 58565 RVA: 0x0021AA14 File Offset: 0x00218C14
+		// Token: 0x17004951 RID: 18769
+		// (get) Token: 0x0600F2EA RID: 62186 RVA: 0x00237878 File Offset: 0x00235A78
 		public virtual bool? IsResetAfterStageEnd
 		{
 			get
@@ -100,24 +98,24 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E8E RID: 32398
+		// Token: 0x0400854B RID: 34123
 		private ISequenceInteractStage Instance;
 
-		// Token: 0x04007E8F RID: 32399
+		// Token: 0x0400854C RID: 34124
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IInteractEffect> _EnterStageEffectsCache;
 
-		// Token: 0x04007E90 RID: 32400
+		// Token: 0x0400854D RID: 34125
 		private bool _EnterStageEffectsInited;
 
-		// Token: 0x04007E91 RID: 32401
+		// Token: 0x0400854E RID: 34126
 		private List<IInteractPoint> _InteractPointsCache;
 
-		// Token: 0x04007E92 RID: 32402
+		// Token: 0x0400854F RID: 34127
 		private bool _InteractPointsInited;
 	}
 }

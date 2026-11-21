@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002A11 RID: 10769
+// Token: 0x02001F8C RID: 8076
 [NullableContext(1)]
 [Nullable(0)]
 public class SignalItem : SignalItemBase
 {
-	// Token: 0x06016599 RID: 91545 RVA: 0x005A8168 File Offset: 0x005A6368
+	// Token: 0x06013FA0 RID: 81824 RVA: 0x005D3140 File Offset: 0x005D1340
 	public SignalItem(ESignalType type, float rootHalfWidth, int startDecisionSize, int endDecisionSize) : base(type, rootHalfWidth, startDecisionSize, endDecisionSize)
 	{
 	}
 
-	// Token: 0x0601659A RID: 91546 RVA: 0x005A8178 File Offset: 0x005A6378
+	// Token: 0x06013FA1 RID: 81825 RVA: 0x005D3150 File Offset: 0x005D1350
 	public void Init(UUIItem uiItem, float offsetX)
 	{
 		base.SetRootActor(uiItem.GetOwner(), true);
@@ -26,7 +26,7 @@ public class SignalItem : SignalItemBase
 		this.BgOverSpriteOrangeColor = new FColor?(FColor.FromHex("FF6827"));
 	}
 
-	// Token: 0x0601659B RID: 91547 RVA: 0x005A8204 File Offset: 0x005A6404
+	// Token: 0x06013FA2 RID: 81826 RVA: 0x005D31DC File Offset: 0x005D13DC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class SignalItem : SignalItemBase
 		};
 	}
 
-	// Token: 0x0601659C RID: 91548 RVA: 0x005A828C File Offset: 0x005A648C
+	// Token: 0x06013FA3 RID: 81827 RVA: 0x005D3264 File Offset: 0x005D1464
 	protected override void OnStart()
 	{
 		this.BgSprite = base.GetSprite(0);
@@ -50,7 +50,7 @@ public class SignalItem : SignalItemBase
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0601659D RID: 91549 RVA: 0x005A82EC File Offset: 0x005A64EC
+	// Token: 0x06013FA4 RID: 81828 RVA: 0x005D32C4 File Offset: 0x005D14C4
 	protected override void OnReset()
 	{
 		this.BgSprite.SetFillAmount(1f);
@@ -83,7 +83,7 @@ public class SignalItem : SignalItemBase
 		this.State = ESignalState.NotReach;
 	}
 
-	// Token: 0x0601659E RID: 91550 RVA: 0x005A8434 File Offset: 0x005A6634
+	// Token: 0x06013FA5 RID: 81829 RVA: 0x005D340C File Offset: 0x005D160C
 	public override void InitByGameplayType(ESignalGameplayType type)
 	{
 		base.InitByGameplayType(type);
@@ -97,7 +97,7 @@ public class SignalItem : SignalItemBase
 		base.Reset();
 	}
 
-	// Token: 0x0601659F RID: 91551 RVA: 0x005A8490 File Offset: 0x005A6690
+	// Token: 0x06013FA6 RID: 81830 RVA: 0x005D3468 File Offset: 0x005D1668
 	private void ResetHighlightSignalColor()
 	{
 		string hexStr = (this.GameplayType == ESignalGameplayType.Send) ? "E0FCDEFF" : "FFFBE8FF";
@@ -108,7 +108,7 @@ public class SignalItem : SignalItemBase
 		this.HighlightSignal.SetColor(FColor.FromHex(hexStr));
 	}
 
-	// Token: 0x060165A0 RID: 91552 RVA: 0x005A84D5 File Offset: 0x005A66D5
+	// Token: 0x06013FA7 RID: 81831 RVA: 0x005D34AD File Offset: 0x005D16AD
 	protected override bool OnUpdate()
 	{
 		if (!base.OnUpdate())
@@ -123,7 +123,7 @@ public class SignalItem : SignalItemBase
 		return true;
 	}
 
-	// Token: 0x060165A1 RID: 91553 RVA: 0x005A84F8 File Offset: 0x005A66F8
+	// Token: 0x06013FA8 RID: 81832 RVA: 0x005D34D0 File Offset: 0x005D16D0
 	protected void UpdateState()
 	{
 		float num = (float)(-(float)this.StartDecisionSize) / 2f;
@@ -145,7 +145,7 @@ public class SignalItem : SignalItemBase
 		}
 	}
 
-	// Token: 0x060165A2 RID: 91554 RVA: 0x005A857C File Offset: 0x005A677C
+	// Token: 0x06013FA9 RID: 81833 RVA: 0x005D3554 File Offset: 0x005D1754
 	private void SetState(ESignalState value)
 	{
 		if (this.State == value)
@@ -171,7 +171,7 @@ public class SignalItem : SignalItemBase
 		}
 	}
 
-	// Token: 0x060165A3 RID: 91555 RVA: 0x005A85F0 File Offset: 0x005A67F0
+	// Token: 0x06013FAA RID: 81834 RVA: 0x005D35C8 File Offset: 0x005D17C8
 	private void UpdateOnCatching()
 	{
 		float progress = this.GetProgress();
@@ -181,7 +181,7 @@ public class SignalItem : SignalItemBase
 		this.BgOverSprite.SetFillAmount(progress);
 	}
 
-	// Token: 0x060165A4 RID: 91556 RVA: 0x005A8648 File Offset: 0x005A6848
+	// Token: 0x06013FAB RID: 81835 RVA: 0x005D3620 File Offset: 0x005D1820
 	private void OnSignalCatchFailed()
 	{
 		ESignalType type = this.Type;
@@ -209,7 +209,7 @@ public class SignalItem : SignalItemBase
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Trans", false, null, false);
 	}
 
-	// Token: 0x060165A5 RID: 91557 RVA: 0x005A86F0 File Offset: 0x005A68F0
+	// Token: 0x06013FAC RID: 81836 RVA: 0x005D36C8 File Offset: 0x005D18C8
 	private void OnSignalCatchSuccess()
 	{
 		this.HighlightSignal.SetNiagaraVarFloat("Dissolve", 0f);
@@ -220,7 +220,7 @@ public class SignalItem : SignalItemBase
 		this.Line.SetAlpha(0f);
 	}
 
-	// Token: 0x060165A6 RID: 91558 RVA: 0x005A8752 File Offset: 0x005A6952
+	// Token: 0x06013FAD RID: 81837 RVA: 0x005D372A File Offset: 0x005D192A
 	public override void OnCatchBtnDown()
 	{
 		base.OnCatchBtnDown();
@@ -234,7 +234,7 @@ public class SignalItem : SignalItemBase
 		}
 	}
 
-	// Token: 0x060165A7 RID: 91559 RVA: 0x005A8774 File Offset: 0x005A6974
+	// Token: 0x06013FAE RID: 81838 RVA: 0x005D374C File Offset: 0x005D194C
 	public override void OnCatchBtnUp()
 	{
 		base.OnCatchBtnUp();
@@ -244,7 +244,7 @@ public class SignalItem : SignalItemBase
 		}
 	}
 
-	// Token: 0x060165A8 RID: 91560 RVA: 0x005A87A4 File Offset: 0x005A69A4
+	// Token: 0x06013FAF RID: 81839 RVA: 0x005D377C File Offset: 0x005D197C
 	private bool CheckMeetCatch()
 	{
 		float num = (float)(-(float)this.StartDecisionSize) / 2f;
@@ -252,7 +252,7 @@ public class SignalItem : SignalItemBase
 		return this.RelativeXWhenCatchDown > num && this.RelativeXWhenCatchDown < num2;
 	}
 
-	// Token: 0x060165A9 RID: 91561 RVA: 0x005A87E4 File Offset: 0x005A69E4
+	// Token: 0x06013FB0 RID: 81840 RVA: 0x005D37BC File Offset: 0x005D19BC
 	private bool CheckMeetSuccess()
 	{
 		float num = (float)this.EndDecisionSize / 2f;
@@ -261,14 +261,14 @@ public class SignalItem : SignalItemBase
 		return num3 > num2 && num3 < num;
 	}
 
-	// Token: 0x060165AA RID: 91562 RVA: 0x005A8828 File Offset: 0x005A6A28
+	// Token: 0x06013FB1 RID: 81841 RVA: 0x005D3800 File Offset: 0x005D1A00
 	public override float GetProgress()
 	{
 		float num = (float)(-(float)this.DecisionShowSize) / 2f;
 		return MathCommon.Clamp((this.CurrentRelativeX - num) / this.Width, 0f, 1f);
 	}
 
-	// Token: 0x060165AB RID: 91563 RVA: 0x005A8864 File Offset: 0x005A6A64
+	// Token: 0x06013FB2 RID: 81842 RVA: 0x005D383C File Offset: 0x005D1A3C
 	public float GetCompleteness()
 	{
 		float result = 0f;
@@ -288,7 +288,7 @@ public class SignalItem : SignalItemBase
 		return result;
 	}
 
-	// Token: 0x060165AC RID: 91564 RVA: 0x005A88B0 File Offset: 0x005A6AB0
+	// Token: 0x06013FB3 RID: 81843 RVA: 0x005D3888 File Offset: 0x005D1A88
 	private void SkipFailedAnim()
 	{
 		this.BgOverSprite.SetUIActive(false);
@@ -298,7 +298,7 @@ public class SignalItem : SignalItemBase
 		this.Line.SetAlpha(1f);
 	}
 
-	// Token: 0x060165AD RID: 91565 RVA: 0x005A8900 File Offset: 0x005A6B00
+	// Token: 0x06013FB4 RID: 81844 RVA: 0x005D38D8 File Offset: 0x005D1AD8
 	public override bool TestCanBtnDown()
 	{
 		if (this.State != ESignalState.NotReach)
@@ -310,7 +310,7 @@ public class SignalItem : SignalItemBase
 		return this.CurrentRelativeX > num && this.CurrentRelativeX < num2;
 	}
 
-	// Token: 0x060165AE RID: 91566 RVA: 0x005A8948 File Offset: 0x005A6B48
+	// Token: 0x06013FB5 RID: 81845 RVA: 0x005D3920 File Offset: 0x005D1B20
 	public override bool TestCanBtnUp()
 	{
 		if (this.State == ESignalState.Catching)
@@ -323,77 +323,77 @@ public class SignalItem : SignalItemBase
 		return false;
 	}
 
-	// Token: 0x0400A652 RID: 42578
+	// Token: 0x0400AA3C RID: 43580
 	private const string NIAGARA_PARAM_NAME = "Dissolve";
 
-	// Token: 0x0400A653 RID: 42579
+	// Token: 0x0400AA3D RID: 43581
 	private const string NIAGARA_YELLOW_COLOR = "FFFBE8FF";
 
-	// Token: 0x0400A654 RID: 42580
+	// Token: 0x0400AA3E RID: 43582
 	private const string NIAGARA_RED_COLOR = "FFD6D6FF";
 
-	// Token: 0x0400A655 RID: 42581
+	// Token: 0x0400AA3F RID: 43583
 	private const string NIAGARA_GREEN_COLOR = "E0FCDEFF";
 
-	// Token: 0x0400A656 RID: 42582
+	// Token: 0x0400AA40 RID: 43584
 	private const string NIAGARA_ORANGE_COLOR = "FFBCA4FF";
 
-	// Token: 0x0400A657 RID: 42583
+	// Token: 0x0400AA41 RID: 43585
 	[Nullable(2)]
 	private UUISprite BgSprite;
 
-	// Token: 0x0400A658 RID: 42584
+	// Token: 0x0400AA42 RID: 43586
 	[Nullable(2)]
 	private UUISprite BgOverSprite;
 
-	// Token: 0x0400A659 RID: 42585
+	// Token: 0x0400AA43 RID: 43587
 	[Nullable(2)]
 	private UUINiagara GraySignal;
 
-	// Token: 0x0400A65A RID: 42586
+	// Token: 0x0400AA44 RID: 43588
 	[Nullable(2)]
 	private UUINiagara HighlightSignal;
 
-	// Token: 0x0400A65B RID: 42587
+	// Token: 0x0400AA45 RID: 43589
 	[Nullable(2)]
 	private UUISprite Line;
 
-	// Token: 0x0400A65C RID: 42588
+	// Token: 0x0400AA46 RID: 43590
 	private FColor? BgOverSpriteYellowColor;
 
-	// Token: 0x0400A65D RID: 42589
+	// Token: 0x0400AA47 RID: 43591
 	private FColor? BgOverSpriteGreenColor;
 
-	// Token: 0x0400A65E RID: 42590
+	// Token: 0x0400AA48 RID: 43592
 	private FColor? BgOverSpriteRedColor;
 
-	// Token: 0x0400A65F RID: 42591
+	// Token: 0x0400AA49 RID: 43593
 	private FColor? BgOverSpriteOrangeColor;
 
-	// Token: 0x0400A660 RID: 42592
+	// Token: 0x0400AA4A RID: 43594
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400A661 RID: 42593
+	// Token: 0x0400AA4B RID: 43595
 	private ESignalState State;
 
-	// Token: 0x02009051 RID: 36945
+	// Token: 0x02008298 RID: 33432
 	[NullableContext(0)]
 	private static class EChildComponent
 	{
-		// Token: 0x0402EBB2 RID: 191410
+		// Token: 0x0402A2AA RID: 172714
 		public const int BgSprite = 0;
 
-		// Token: 0x0402EBB3 RID: 191411
+		// Token: 0x0402A2AB RID: 172715
 		public const int GraySignal = 1;
 
-		// Token: 0x0402EBB4 RID: 191412
+		// Token: 0x0402A2AC RID: 172716
 		public const int HighlightSignal = 2;
 
-		// Token: 0x0402EBB5 RID: 191413
+		// Token: 0x0402A2AD RID: 172717
 		public const int Line = 3;
 
-		// Token: 0x0402EBB6 RID: 191414
+		// Token: 0x0402A2AE RID: 172718
 		public const int BgOverSprite = 4;
 	}
 }

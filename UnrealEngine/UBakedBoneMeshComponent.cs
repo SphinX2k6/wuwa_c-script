@@ -6,32 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200087E RID: 2174
-	[NullableContext(1)]
+	// Token: 0x02000189 RID: 393
+	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.BakedBoneMeshComponent")]
 	[UnrealStructLayout(1888, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1888)]
 	public class UBakedBoneMeshComponent : UPrimitiveComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06007669 RID: 30313 RVA: 0x000A9D92 File Offset: 0x000A7F92
+		// Token: 0x06001949 RID: 6473 RVA: 0x0002641A File Offset: 0x0002461A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBakedBoneMeshComponent._ClassPtr;
 		}
 
-		// Token: 0x0600766A RID: 30314 RVA: 0x000A9DA0 File Offset: 0x000A7FA0
+		// Token: 0x0600194A RID: 6474 RVA: 0x00026428 File Offset: 0x00024628
 		public UBakedBoneMeshComponent() : this(BuiltinUtils.AllocNativeUObject(UBakedBoneMeshComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600766B RID: 30315 RVA: 0x000A9DC8 File Offset: 0x000A7FC8
+		// Token: 0x0600194B RID: 6475 RVA: 0x00026450 File Offset: 0x00024650
+		[NullableContext(1)]
 		public UBakedBoneMeshComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBakedBoneMeshComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001C03 RID: 7171
-		// (get) Token: 0x0600766C RID: 30316 RVA: 0x000A9DFB File Offset: 0x000A7FFB
-		// (set) Token: 0x0600766D RID: 30317 RVA: 0x000A9E0B File Offset: 0x000A800B
+		// Token: 0x170002DF RID: 735
+		// (get) Token: 0x0600194C RID: 6476 RVA: 0x00026483 File Offset: 0x00024683
+		// (set) Token: 0x0600194D RID: 6477 RVA: 0x00026493 File Offset: 0x00024693
 		public unsafe bool bTransientInstanceData
 		{
 			get
@@ -44,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C04 RID: 7172
-		// (get) Token: 0x0600766E RID: 30318 RVA: 0x000A9E1C File Offset: 0x000A801C
-		// (set) Token: 0x0600766F RID: 30319 RVA: 0x000A9E2C File Offset: 0x000A802C
+		// Token: 0x170002E0 RID: 736
+		// (get) Token: 0x0600194E RID: 6478 RVA: 0x000264A4 File Offset: 0x000246A4
+		// (set) Token: 0x0600194F RID: 6479 RVA: 0x000264B4 File Offset: 0x000246B4
 		public unsafe bool bEnableNoiseAnimStartTime
 		{
 			get
@@ -59,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C05 RID: 7173
-		// (get) Token: 0x06007670 RID: 30320 RVA: 0x000A9E3D File Offset: 0x000A803D
-		// (set) Token: 0x06007671 RID: 30321 RVA: 0x000A9E4D File Offset: 0x000A804D
+		// Token: 0x170002E1 RID: 737
+		// (get) Token: 0x06001950 RID: 6480 RVA: 0x000264C5 File Offset: 0x000246C5
+		// (set) Token: 0x06001951 RID: 6481 RVA: 0x000264D5 File Offset: 0x000246D5
 		public unsafe bool bEnableFrameInterpolation
 		{
 			get
@@ -74,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C06 RID: 7174
-		// (get) Token: 0x06007672 RID: 30322 RVA: 0x000A9E5E File Offset: 0x000A805E
-		// (set) Token: 0x06007673 RID: 30323 RVA: 0x000A9E6E File Offset: 0x000A806E
+		// Token: 0x170002E2 RID: 738
+		// (get) Token: 0x06001952 RID: 6482 RVA: 0x000264E6 File Offset: 0x000246E6
+		// (set) Token: 0x06001953 RID: 6483 RVA: 0x000264F6 File Offset: 0x000246F6
 		public unsafe bool bEnableBatcher
 		{
 			get
@@ -89,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C07 RID: 7175
-		// (get) Token: 0x06007674 RID: 30324 RVA: 0x000A9E7F File Offset: 0x000A807F
-		// (set) Token: 0x06007675 RID: 30325 RVA: 0x000A9E8F File Offset: 0x000A808F
+		// Token: 0x170002E3 RID: 739
+		// (get) Token: 0x06001954 RID: 6484 RVA: 0x00026507 File Offset: 0x00024707
+		// (set) Token: 0x06001955 RID: 6485 RVA: 0x00026517 File Offset: 0x00024717
 		public unsafe bool bEnableAnimControl
 		{
 			get
@@ -104,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C08 RID: 7176
-		// (get) Token: 0x06007676 RID: 30326 RVA: 0x000A9EA0 File Offset: 0x000A80A0
-		// (set) Token: 0x06007677 RID: 30327 RVA: 0x000A9EB0 File Offset: 0x000A80B0
+		// Token: 0x170002E4 RID: 740
+		// (get) Token: 0x06001956 RID: 6486 RVA: 0x00026528 File Offset: 0x00024728
+		// (set) Token: 0x06001957 RID: 6487 RVA: 0x00026538 File Offset: 0x00024738
 		public unsafe bool bEnableTransitionBlend
 		{
 			get
@@ -119,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C09 RID: 7177
-		// (get) Token: 0x06007678 RID: 30328 RVA: 0x000A9EC1 File Offset: 0x000A80C1
-		// (set) Token: 0x06007679 RID: 30329 RVA: 0x000A9ED1 File Offset: 0x000A80D1
+		// Token: 0x170002E5 RID: 741
+		// (get) Token: 0x06001958 RID: 6488 RVA: 0x00026549 File Offset: 0x00024749
+		// (set) Token: 0x06001959 RID: 6489 RVA: 0x00026559 File Offset: 0x00024759
 		public unsafe bool bEnableMorphBlend
 		{
 			get
@@ -134,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C0A RID: 7178
-		// (get) Token: 0x0600767A RID: 30330 RVA: 0x000A9EE2 File Offset: 0x000A80E2
-		// (set) Token: 0x0600767B RID: 30331 RVA: 0x000A9EF2 File Offset: 0x000A80F2
+		// Token: 0x170002E6 RID: 742
+		// (get) Token: 0x0600195A RID: 6490 RVA: 0x0002656A File Offset: 0x0002476A
+		// (set) Token: 0x0600195B RID: 6491 RVA: 0x0002657A File Offset: 0x0002477A
 		public unsafe bool bRenderExtraMaterials
 		{
 			get
@@ -149,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C0B RID: 7179
-		// (get) Token: 0x0600767C RID: 30332 RVA: 0x000A9F03 File Offset: 0x000A8103
-		// (set) Token: 0x0600767D RID: 30333 RVA: 0x000A9F13 File Offset: 0x000A8113
+		// Token: 0x170002E7 RID: 743
+		// (get) Token: 0x0600195C RID: 6492 RVA: 0x0002658B File Offset: 0x0002478B
+		// (set) Token: 0x0600195D RID: 6493 RVA: 0x0002659B File Offset: 0x0002479B
 		public unsafe float Debugtime
 		{
 			get
@@ -164,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C0C RID: 7180
-		// (get) Token: 0x0600767E RID: 30334 RVA: 0x000A9F24 File Offset: 0x000A8124
-		// (set) Token: 0x0600767F RID: 30335 RVA: 0x000A9F34 File Offset: 0x000A8134
+		// Token: 0x170002E8 RID: 744
+		// (get) Token: 0x0600195E RID: 6494 RVA: 0x000265AC File Offset: 0x000247AC
+		// (set) Token: 0x0600195F RID: 6495 RVA: 0x000265BC File Offset: 0x000247BC
 		public unsafe float CrossFadeTimeTest
 		{
 			get
@@ -179,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C0D RID: 7181
-		// (get) Token: 0x06007680 RID: 30336 RVA: 0x000A9F45 File Offset: 0x000A8145
-		// (set) Token: 0x06007681 RID: 30337 RVA: 0x000A9F55 File Offset: 0x000A8155
+		// Token: 0x170002E9 RID: 745
+		// (get) Token: 0x06001960 RID: 6496 RVA: 0x000265CD File Offset: 0x000247CD
+		// (set) Token: 0x06001961 RID: 6497 RVA: 0x000265DD File Offset: 0x000247DD
 		public unsafe int AnimArrayIndexTest
 		{
 			get
@@ -194,9 +195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C0E RID: 7182
-		// (get) Token: 0x06007682 RID: 30338 RVA: 0x000A9F66 File Offset: 0x000A8166
-		// (set) Token: 0x06007683 RID: 30339 RVA: 0x000A9F76 File Offset: 0x000A8176
+		// Token: 0x170002EA RID: 746
+		// (get) Token: 0x06001962 RID: 6498 RVA: 0x000265EE File Offset: 0x000247EE
+		// (set) Token: 0x06001963 RID: 6499 RVA: 0x000265FE File Offset: 0x000247FE
 		public unsafe float InstanceScale
 		{
 			get
@@ -209,9 +210,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C0F RID: 7183
-		// (get) Token: 0x06007684 RID: 30340 RVA: 0x000A9F87 File Offset: 0x000A8187
-		// (set) Token: 0x06007685 RID: 30341 RVA: 0x000A9F9B File Offset: 0x000A819B
+		// Token: 0x170002EB RID: 747
+		// (get) Token: 0x06001964 RID: 6500 RVA: 0x0002660F File Offset: 0x0002480F
+		// (set) Token: 0x06001965 RID: 6501 RVA: 0x00026623 File Offset: 0x00024823
 		public unsafe FBoxSphereBounds CustomBounds
 		{
 			get
@@ -224,53 +225,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C10 RID: 7184
-		// (get) Token: 0x06007686 RID: 30342 RVA: 0x000A9FB0 File Offset: 0x000A81B0
-		// (set) Token: 0x06007687 RID: 30343 RVA: 0x000A9FE9 File Offset: 0x000A81E9
-		public TArray<UBakedBoneMeshInstanceGroup> InstanceGroups
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UBakedBoneMeshInstanceGroup> result;
-				if ((result = this._InstanceGroups) == null)
-				{
-					result = (this._InstanceGroups = new TArray<UBakedBoneMeshInstanceGroup>(base.NativePtr + (IntPtr)UBakedBoneMeshComponent.__PropertyOffset_InstanceGroups, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.InstanceGroups.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17001C11 RID: 7185
-		// (get) Token: 0x06007688 RID: 30344 RVA: 0x000A9FF8 File Offset: 0x000A81F8
-		// (set) Token: 0x06007689 RID: 30345 RVA: 0x000AA031 File Offset: 0x000A8231
-		public TArray<FInstanceIndexInfo> InstanceIndexInfos
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FInstanceIndexInfo> result;
-				if ((result = this._InstanceIndexInfos) == null)
-				{
-					result = (this._InstanceIndexInfos = new TArray<FInstanceIndexInfo>(base.NativePtr + (IntPtr)UBakedBoneMeshComponent.__PropertyOffset_InstanceIndexInfos, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.InstanceIndexInfos.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17001C12 RID: 7186
-		// (get) Token: 0x0600768A RID: 30346 RVA: 0x000AA040 File Offset: 0x000A8240
-		// (set) Token: 0x0600768B RID: 30347 RVA: 0x000AA079 File Offset: 0x000A8279
+		// Token: 0x170002EC RID: 748
+		// (get) Token: 0x06001966 RID: 6502 RVA: 0x00026638 File Offset: 0x00024838
+		// (set) Token: 0x06001967 RID: 6503 RVA: 0x00026671 File Offset: 0x00024871
+		[Nullable(1)]
 		public TArray<int> SpecifiedUsedMaterialIndices
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -281,20 +242,20 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				this.SpecifiedUsedMaterialIndices.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x0600768C RID: 30348 RVA: 0x000AA087 File Offset: 0x000A8287
-		[NullableContext(2)]
+		// Token: 0x06001968 RID: 6504 RVA: 0x0002667F File Offset: 0x0002487F
 		public void UpdateInstanceTransforms(in TArray<int> InstanceIndices, in TArray<FTransform> InTransforms)
 		{
 			UBakedBoneMeshComponent.__UpdateInstanceTransforms_Internal(base.NativePtr, (InstanceIndices ?? new TArray<int>()).NativePtr, (InTransforms ?? new TArray<FTransform>()).NativePtr);
 		}
 
-		// Token: 0x0600768D RID: 30349 RVA: 0x000AA0B4 File Offset: 0x000A82B4
+		// Token: 0x06001969 RID: 6505 RVA: 0x000266AC File Offset: 0x000248AC
 		public unsafe void UpdateInstanceTransform(int InstanceIndex, in FTransform InTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -302,39 +263,37 @@ namespace UnrealEngine
 			UBakedBoneMeshComponent.__UpdateInstanceTransform_Internal(base.NativePtr, InstanceIndex, ptr);
 		}
 
-		// Token: 0x0600768E RID: 30350 RVA: 0x000AA0EA File Offset: 0x000A82EA
+		// Token: 0x0600196A RID: 6506 RVA: 0x000266E2 File Offset: 0x000248E2
 		public void UpdateInstanceNoiseTexIndex(int InstanceIndex, int InNoiseTexIndex)
 		{
 			UBakedBoneMeshComponent.__UpdateInstanceNoiseTexIndex_Internal(base.NativePtr, InstanceIndex, InNoiseTexIndex);
 		}
 
-		// Token: 0x0600768F RID: 30351 RVA: 0x000AA0F9 File Offset: 0x000A82F9
-		[NullableContext(2)]
+		// Token: 0x0600196B RID: 6507 RVA: 0x000266F1 File Offset: 0x000248F1
 		public void UpdateInstanceCustomData(int InstanceIndex, in TArray<float> InCustomData)
 		{
 			UBakedBoneMeshComponent.__UpdateInstanceCustomData_Internal(base.NativePtr, InstanceIndex, (InCustomData ?? new TArray<float>()).NativePtr);
 		}
 
-		// Token: 0x06007690 RID: 30352 RVA: 0x000AA117 File Offset: 0x000A8317
+		// Token: 0x0600196C RID: 6508 RVA: 0x0002670F File Offset: 0x0002490F
 		public void UpdateInstanceAnimTexIndex(int InstanceIndex, int InAnimTexIndex, float StartTime = 0f, float CrossFadeTime = 0f, bool ForceUpdate = false, bool Loop = true)
 		{
 			UBakedBoneMeshComponent.__UpdateInstanceAnimTexIndex_Internal(base.NativePtr, InstanceIndex, InAnimTexIndex, StartTime, CrossFadeTime, ForceUpdate, Loop);
 		}
 
-		// Token: 0x06007691 RID: 30353 RVA: 0x000AA12D File Offset: 0x000A832D
-		[NullableContext(2)]
+		// Token: 0x0600196D RID: 6509 RVA: 0x00026725 File Offset: 0x00024925
 		public void UpdateGroupCustomData(int InGroupIndex, in TArray<float> InCustomData)
 		{
 			UBakedBoneMeshComponent.__UpdateGroupCustomData_Internal(base.NativePtr, InGroupIndex, (InCustomData ?? new TArray<float>()).NativePtr);
 		}
 
-		// Token: 0x06007692 RID: 30354 RVA: 0x000AA14B File Offset: 0x000A834B
+		// Token: 0x0600196E RID: 6510 RVA: 0x00026743 File Offset: 0x00024943
 		public bool ShouldRenderUsingBatcher()
 		{
 			return UBakedBoneMeshComponent.__ShouldRenderUsingBatcher_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06007693 RID: 30355 RVA: 0x000AA158 File Offset: 0x000A8358
+		// Token: 0x0600196F RID: 6511 RVA: 0x00026750 File Offset: 0x00024950
 		public void SetSubSkeletalMeshesToInstanceGroup(int Index, [Nullable(new byte[]
 		{
 			2,
@@ -344,148 +303,145 @@ namespace UnrealEngine
 			UBakedBoneMeshComponent.__SetSubSkeletalMeshesToInstanceGroup_Internal(base.NativePtr, Index, (InSkeletalMeshes ?? new TArray<USkeletalMesh>()).NativePtr);
 		}
 
-		// Token: 0x06007694 RID: 30356 RVA: 0x000AA176 File Offset: 0x000A8376
+		// Token: 0x06001970 RID: 6512 RVA: 0x0002676E File Offset: 0x0002496E
 		public void SetPlayRateToInstanceGroup(int Index, float InPlayRate)
 		{
 			UBakedBoneMeshComponent.__SetPlayRateToInstanceGroup_Internal(base.NativePtr, Index, InPlayRate);
 		}
 
-		// Token: 0x06007695 RID: 30357 RVA: 0x000AA185 File Offset: 0x000A8385
+		// Token: 0x06001971 RID: 6513 RVA: 0x0002677D File Offset: 0x0002497D
 		public void SetPlayRateToInstance(int Index, float InPlayRate)
 		{
 			UBakedBoneMeshComponent.__SetPlayRateToInstance_Internal(base.NativePtr, Index, InPlayRate);
 		}
 
-		// Token: 0x06007696 RID: 30358 RVA: 0x000AA194 File Offset: 0x000A8394
-		[NullableContext(2)]
+		// Token: 0x06001972 RID: 6514 RVA: 0x0002678C File Offset: 0x0002498C
 		public void SetMainSkeletalMeshToInstanceGroup(int Index, USkeletalMesh InSkeletalMesh)
 		{
 			UBakedBoneMeshComponent.__SetMainSkeletalMeshToInstanceGroup_Internal(base.NativePtr, Index, (InSkeletalMesh != null) ? InSkeletalMesh.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06007697 RID: 30359 RVA: 0x000AA1B2 File Offset: 0x000A83B2
+		// Token: 0x06001973 RID: 6515 RVA: 0x000267AA File Offset: 0x000249AA
 		public void SetCustomBounds(in FBoxSphereBounds InBounds)
 		{
 			UBakedBoneMeshComponent.__SetCustomBounds_Internal(base.NativePtr, InBounds);
 		}
 
-		// Token: 0x06007698 RID: 30360 RVA: 0x000AA1C0 File Offset: 0x000A83C0
+		// Token: 0x06001974 RID: 6516 RVA: 0x000267B8 File Offset: 0x000249B8
 		public void ResumeInstanceAnim(int InstanceIndex)
 		{
 			UBakedBoneMeshComponent.__ResumeInstanceAnim_Internal(base.NativePtr, InstanceIndex);
 		}
 
-		// Token: 0x06007699 RID: 30361 RVA: 0x000AA1CE File Offset: 0x000A83CE
+		// Token: 0x06001975 RID: 6517 RVA: 0x000267C6 File Offset: 0x000249C6
 		public void ResetInstanceGroups(int InNum, bool bForcedInitRenderData = false)
 		{
 			UBakedBoneMeshComponent.__ResetInstanceGroups_Internal(base.NativePtr, InNum, bForcedInitRenderData);
 		}
 
-		// Token: 0x0600769A RID: 30362 RVA: 0x000AA1DD File Offset: 0x000A83DD
+		// Token: 0x06001976 RID: 6518 RVA: 0x000267D5 File Offset: 0x000249D5
 		public bool RemoveInstance(int InstanceIndex)
 		{
 			return UBakedBoneMeshComponent.__RemoveInstance_Internal(base.NativePtr, InstanceIndex);
 		}
 
-		// Token: 0x0600769B RID: 30363 RVA: 0x000AA1EB File Offset: 0x000A83EB
+		// Token: 0x06001977 RID: 6519 RVA: 0x000267E3 File Offset: 0x000249E3
 		public void RefreshRenderState()
 		{
 			UBakedBoneMeshComponent.__RefreshRenderState_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600769C RID: 30364 RVA: 0x000AA1F8 File Offset: 0x000A83F8
+		// Token: 0x06001978 RID: 6520 RVA: 0x000267F0 File Offset: 0x000249F0
 		public void PlayMontage(int InstanceIndex, int InAnimTexIndex, FName SectionName, float CrossFadeTime = 0f, bool Loop = true)
 		{
 			UBakedBoneMeshComponent.__PlayMontage_Internal(base.NativePtr, InstanceIndex, InAnimTexIndex, SectionName, CrossFadeTime, Loop);
 		}
 
-		// Token: 0x0600769D RID: 30365 RVA: 0x000AA20C File Offset: 0x000A840C
+		// Token: 0x06001979 RID: 6521 RVA: 0x00026804 File Offset: 0x00024A04
 		public void PlayAnimOrMontage(int InstanceIndex, int InAnimTexIndex, float StartTime = 0f, float CrossFadeTime = 0f, bool Loop = true)
 		{
 			UBakedBoneMeshComponent.__PlayAnimOrMontage_Internal(base.NativePtr, InstanceIndex, InAnimTexIndex, StartTime, CrossFadeTime, Loop);
 		}
 
-		// Token: 0x0600769E RID: 30366 RVA: 0x000AA220 File Offset: 0x000A8420
+		// Token: 0x0600197A RID: 6522 RVA: 0x00026818 File Offset: 0x00024A18
 		public void PlayAnim()
 		{
 			UBakedBoneMeshComponent.__PlayAnim_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600769F RID: 30367 RVA: 0x000AA22D File Offset: 0x000A842D
+		// Token: 0x0600197B RID: 6523 RVA: 0x00026825 File Offset: 0x00024A25
 		public void PauseInstanceAnim(int InstanceIndex)
 		{
 			UBakedBoneMeshComponent.__PauseInstanceAnim_Internal(base.NativePtr, InstanceIndex);
 		}
 
-		// Token: 0x060076A0 RID: 30368 RVA: 0x000AA23B File Offset: 0x000A843B
+		// Token: 0x0600197C RID: 6524 RVA: 0x00026833 File Offset: 0x00024A33
 		public bool IsValidInstanceIndex(int InstanceIndex)
 		{
 			return UBakedBoneMeshComponent.__IsValidInstanceIndex_Internal(base.NativePtr, InstanceIndex);
 		}
 
-		// Token: 0x060076A1 RID: 30369 RVA: 0x000AA249 File Offset: 0x000A8449
+		// Token: 0x0600197D RID: 6525 RVA: 0x00026841 File Offset: 0x00024A41
 		public bool IsMontage(int InAnimIndex, int GroupId = 0)
 		{
 			return UBakedBoneMeshComponent.__IsMontage_Internal(base.NativePtr, InAnimIndex, GroupId);
 		}
 
-		// Token: 0x060076A2 RID: 30370 RVA: 0x000AA258 File Offset: 0x000A8458
+		// Token: 0x0600197E RID: 6526 RVA: 0x00026850 File Offset: 0x00024A50
 		public int GetNumInstances(int InGroupIndex = -1)
 		{
 			return UBakedBoneMeshComponent.__GetNumInstances_Internal(base.NativePtr, InGroupIndex);
 		}
 
-		// Token: 0x060076A3 RID: 30371 RVA: 0x000AA266 File Offset: 0x000A8466
+		// Token: 0x0600197F RID: 6527 RVA: 0x0002685E File Offset: 0x00024A5E
 		public int GetInstanceGroupId(int InstanceId)
 		{
 			return UBakedBoneMeshComponent.__GetInstanceGroupId_Internal(base.NativePtr, InstanceId);
 		}
 
-		// Token: 0x060076A4 RID: 30372 RVA: 0x000AA274 File Offset: 0x000A8474
+		// Token: 0x06001980 RID: 6528 RVA: 0x0002686C File Offset: 0x00024A6C
 		public float GetInstanceCurPlayTime(int InInstanceIndex)
 		{
 			return UBakedBoneMeshComponent.__GetInstanceCurPlayTime_Internal(base.NativePtr, InInstanceIndex);
 		}
 
-		// Token: 0x060076A5 RID: 30373 RVA: 0x000AA282 File Offset: 0x000A8482
+		// Token: 0x06001981 RID: 6529 RVA: 0x0002687A File Offset: 0x00024A7A
 		public float GetAnimTotalTime(int InAnimIndex, int GroupId = 0)
 		{
 			return UBakedBoneMeshComponent.__GetAnimTotalTime_Internal(base.NativePtr, InAnimIndex, GroupId);
 		}
 
-		// Token: 0x060076A6 RID: 30374 RVA: 0x000AA291 File Offset: 0x000A8491
+		// Token: 0x06001982 RID: 6530 RVA: 0x00026889 File Offset: 0x00024A89
 		public void EmptyInstanceIndexInfos()
 		{
 			UBakedBoneMeshComponent.__EmptyInstanceIndexInfos_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060076A7 RID: 30375 RVA: 0x000AA29E File Offset: 0x000A849E
+		// Token: 0x06001983 RID: 6531 RVA: 0x00026896 File Offset: 0x00024A96
 		public int DefaultAddInstance(int InGroupIndex = 0)
 		{
 			return UBakedBoneMeshComponent.__DefaultAddInstance_Internal(base.NativePtr, InGroupIndex);
 		}
 
-		// Token: 0x060076A8 RID: 30376 RVA: 0x000AA2AC File Offset: 0x000A84AC
+		// Token: 0x06001984 RID: 6532 RVA: 0x000268A4 File Offset: 0x00024AA4
 		public void ClearInstanceData()
 		{
 			UBakedBoneMeshComponent.__ClearInstanceData_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060076A9 RID: 30377 RVA: 0x000AA2B9 File Offset: 0x000A84B9
+		// Token: 0x06001985 RID: 6533 RVA: 0x000268B1 File Offset: 0x00024AB1
 		public bool ChangeMaterialIndex(int InGroupIndex, int InMaterialIndex)
 		{
 			return UBakedBoneMeshComponent.__ChangeMaterialIndex_Internal(base.NativePtr, InGroupIndex, InMaterialIndex);
 		}
 
-		// Token: 0x060076AA RID: 30378 RVA: 0x000AA2C8 File Offset: 0x000A84C8
-		[NullableContext(2)]
+		// Token: 0x06001986 RID: 6534 RVA: 0x000268C0 File Offset: 0x00024AC0
 		public int AddSubSkeletalMeshToInstanceGroup(int Index, USkeletalMesh InSubMesh)
 		{
 			return UBakedBoneMeshComponent.__AddSubSkeletalMeshToInstanceGroup_Internal(base.NativePtr, Index, (InSubMesh != null) ? InSubMesh.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060076AB RID: 30379 RVA: 0x000AA2E8 File Offset: 0x000A84E8
-		[NullableContext(2)]
+		// Token: 0x06001987 RID: 6535 RVA: 0x000268E0 File Offset: 0x00024AE0
 		public unsafe bool AddSubMeshSocketToInstanceGroup(int Index, USkeletalMesh InSubMesh, in FName InSocketName, in FTransform InSocketTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -497,7 +453,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060076AC RID: 30380 RVA: 0x000AA338 File Offset: 0x000A8538
+		// Token: 0x06001988 RID: 6536 RVA: 0x00026930 File Offset: 0x00024B30
 		public unsafe void AddInstanceTransformToInstanceGroup(int InGroupIndex, in FTransform InTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -505,13 +461,13 @@ namespace UnrealEngine
 			UBakedBoneMeshComponent.__AddInstanceTransformToInstanceGroup_Internal(base.NativePtr, InGroupIndex, ptr);
 		}
 
-		// Token: 0x060076AD RID: 30381 RVA: 0x000AA36E File Offset: 0x000A856E
+		// Token: 0x06001989 RID: 6537 RVA: 0x00026966 File Offset: 0x00024B66
 		public bool AddInstanceIndexInfo(int InGroupIndex, int InSubIndex)
 		{
 			return UBakedBoneMeshComponent.__AddInstanceIndexInfo_Internal(base.NativePtr, InGroupIndex, InSubIndex);
 		}
 
-		// Token: 0x060076AE RID: 30382 RVA: 0x000AA380 File Offset: 0x000A8580
+		// Token: 0x0600198A RID: 6538 RVA: 0x00026978 File Offset: 0x00024B78
 		public unsafe int AddInstance(int InGroupIndex, int InAnimIndex, in FTransform InTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -519,232 +475,210 @@ namespace UnrealEngine
 			return UBakedBoneMeshComponent.__AddInstance_Internal(base.NativePtr, InGroupIndex, InAnimIndex, ptr);
 		}
 
-		// Token: 0x060076AF RID: 30383
+		// Token: 0x0600198B RID: 6539
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateInstanceTransforms_Internal(IntPtr @this, IntPtr InstanceIndices, IntPtr InTransforms);
 
-		// Token: 0x060076B0 RID: 30384
+		// Token: 0x0600198C RID: 6540
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateInstanceTransform_Internal(IntPtr @this, int InstanceIndex, in FTransform InTransform);
 
-		// Token: 0x060076B1 RID: 30385
+		// Token: 0x0600198D RID: 6541
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateInstanceNoiseTexIndex_Internal(IntPtr @this, int InstanceIndex, int InNoiseTexIndex);
 
-		// Token: 0x060076B2 RID: 30386
+		// Token: 0x0600198E RID: 6542
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateInstanceCustomData_Internal(IntPtr @this, int InstanceIndex, IntPtr InCustomData);
 
-		// Token: 0x060076B3 RID: 30387
+		// Token: 0x0600198F RID: 6543
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateInstanceAnimTexIndex_Internal(IntPtr @this, int InstanceIndex, int InAnimTexIndex, float StartTime, float CrossFadeTime, bool ForceUpdate, bool Loop);
 
-		// Token: 0x060076B4 RID: 30388
+		// Token: 0x06001990 RID: 6544
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateGroupCustomData_Internal(IntPtr @this, int InGroupIndex, IntPtr InCustomData);
 
-		// Token: 0x060076B5 RID: 30389
+		// Token: 0x06001991 RID: 6545
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ShouldRenderUsingBatcher_Internal(IntPtr @this);
 
-		// Token: 0x060076B6 RID: 30390
+		// Token: 0x06001992 RID: 6546
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSubSkeletalMeshesToInstanceGroup_Internal(IntPtr @this, int Index, IntPtr InSkeletalMeshes);
 
-		// Token: 0x060076B7 RID: 30391
+		// Token: 0x06001993 RID: 6547
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPlayRateToInstanceGroup_Internal(IntPtr @this, int Index, float InPlayRate);
 
-		// Token: 0x060076B8 RID: 30392
+		// Token: 0x06001994 RID: 6548
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPlayRateToInstance_Internal(IntPtr @this, int Index, float InPlayRate);
 
-		// Token: 0x060076B9 RID: 30393
+		// Token: 0x06001995 RID: 6549
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMainSkeletalMeshToInstanceGroup_Internal(IntPtr @this, int Index, IntPtr InSkeletalMesh);
 
-		// Token: 0x060076BA RID: 30394
+		// Token: 0x06001996 RID: 6550
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCustomBounds_Internal(IntPtr @this, in FBoxSphereBounds InBounds);
 
-		// Token: 0x060076BB RID: 30395
+		// Token: 0x06001997 RID: 6551
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResumeInstanceAnim_Internal(IntPtr @this, int InstanceIndex);
 
-		// Token: 0x060076BC RID: 30396
+		// Token: 0x06001998 RID: 6552
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetInstanceGroups_Internal(IntPtr @this, int InNum, bool bForcedInitRenderData);
 
-		// Token: 0x060076BD RID: 30397
+		// Token: 0x06001999 RID: 6553
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RemoveInstance_Internal(IntPtr @this, int InstanceIndex);
 
-		// Token: 0x060076BE RID: 30398
+		// Token: 0x0600199A RID: 6554
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RefreshRenderState_Internal(IntPtr @this);
 
-		// Token: 0x060076BF RID: 30399
+		// Token: 0x0600199B RID: 6555
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayMontage_Internal(IntPtr @this, int InstanceIndex, int InAnimTexIndex, FName SectionName, float CrossFadeTime, bool Loop);
 
-		// Token: 0x060076C0 RID: 30400
+		// Token: 0x0600199C RID: 6556
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayAnimOrMontage_Internal(IntPtr @this, int InstanceIndex, int InAnimTexIndex, float StartTime, float CrossFadeTime, bool Loop);
 
-		// Token: 0x060076C1 RID: 30401
+		// Token: 0x0600199D RID: 6557
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayAnim_Internal(IntPtr @this);
 
-		// Token: 0x060076C2 RID: 30402
+		// Token: 0x0600199E RID: 6558
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PauseInstanceAnim_Internal(IntPtr @this, int InstanceIndex);
 
-		// Token: 0x060076C3 RID: 30403
+		// Token: 0x0600199F RID: 6559
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsValidInstanceIndex_Internal(IntPtr @this, int InstanceIndex);
 
-		// Token: 0x060076C4 RID: 30404
+		// Token: 0x060019A0 RID: 6560
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsMontage_Internal(IntPtr @this, int InAnimIndex, int GroupId);
 
-		// Token: 0x060076C5 RID: 30405
+		// Token: 0x060019A1 RID: 6561
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumInstances_Internal(IntPtr @this, int InGroupIndex);
 
-		// Token: 0x060076C6 RID: 30406
+		// Token: 0x060019A2 RID: 6562
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetInstanceGroupId_Internal(IntPtr @this, int InstanceId);
 
-		// Token: 0x060076C7 RID: 30407
+		// Token: 0x060019A3 RID: 6563
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetInstanceCurPlayTime_Internal(IntPtr @this, int InInstanceIndex);
 
-		// Token: 0x060076C8 RID: 30408
+		// Token: 0x060019A4 RID: 6564
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAnimTotalTime_Internal(IntPtr @this, int InAnimIndex, int GroupId);
 
-		// Token: 0x060076C9 RID: 30409
+		// Token: 0x060019A5 RID: 6565
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __EmptyInstanceIndexInfos_Internal(IntPtr @this);
 
-		// Token: 0x060076CA RID: 30410
+		// Token: 0x060019A6 RID: 6566
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __DefaultAddInstance_Internal(IntPtr @this, int InGroupIndex);
 
-		// Token: 0x060076CB RID: 30411
+		// Token: 0x060019A7 RID: 6567
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearInstanceData_Internal(IntPtr @this);
 
-		// Token: 0x060076CC RID: 30412
+		// Token: 0x060019A8 RID: 6568
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ChangeMaterialIndex_Internal(IntPtr @this, int InGroupIndex, int InMaterialIndex);
 
-		// Token: 0x060076CD RID: 30413
+		// Token: 0x060019A9 RID: 6569
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __AddSubSkeletalMeshToInstanceGroup_Internal(IntPtr @this, int Index, IntPtr InSubMesh);
 
-		// Token: 0x060076CE RID: 30414
+		// Token: 0x060019AA RID: 6570
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __AddSubMeshSocketToInstanceGroup_Internal(IntPtr @this, int Index, IntPtr InSubMesh, in FName InSocketName, in FTransform InSocketTransform);
 
-		// Token: 0x060076CF RID: 30415
+		// Token: 0x060019AB RID: 6571
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddInstanceTransformToInstanceGroup_Internal(IntPtr @this, int InGroupIndex, in FTransform InTransform);
 
-		// Token: 0x060076D0 RID: 30416
+		// Token: 0x060019AC RID: 6572
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __AddInstanceIndexInfo_Internal(IntPtr @this, int InGroupIndex, int InSubIndex);
 
-		// Token: 0x060076D1 RID: 30417
+		// Token: 0x060019AD RID: 6573
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __AddInstance_Internal(IntPtr @this, int InGroupIndex, int InAnimIndex, in FTransform InTransform);
 
-		// Token: 0x060076D2 RID: 30418 RVA: 0x000AA3B7 File Offset: 0x000A85B7
+		// Token: 0x060019AE RID: 6574 RVA: 0x000269AF File Offset: 0x00024BAF
 		static UBakedBoneMeshComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.BakedBoneMeshComponent");
 		}
 
-		// Token: 0x060076D3 RID: 30419 RVA: 0x000AA3C5 File Offset: 0x000A85C5
+		// Token: 0x060019AF RID: 6575 RVA: 0x000269BD File Offset: 0x00024BBD
 		protected UBakedBoneMeshComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003901 RID: 14593
+		// Token: 0x04000820 RID: 2080
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.BakedBoneMeshComponent";
 
-		// Token: 0x04003902 RID: 14594
+		// Token: 0x04000821 RID: 2081
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003903 RID: 14595
+		// Token: 0x04000822 RID: 2082
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003904 RID: 14596
+		// Token: 0x04000823 RID: 2083
 		internal static int __PropertyOffset_bTransientInstanceData;
 
-		// Token: 0x04003905 RID: 14597
+		// Token: 0x04000824 RID: 2084
 		internal static int __PropertyOffset_bEnableNoiseAnimStartTime;
 
-		// Token: 0x04003906 RID: 14598
+		// Token: 0x04000825 RID: 2085
 		internal static int __PropertyOffset_bEnableFrameInterpolation;
 
-		// Token: 0x04003907 RID: 14599
+		// Token: 0x04000826 RID: 2086
 		internal static int __PropertyOffset_bEnableBatcher;
 
-		// Token: 0x04003908 RID: 14600
+		// Token: 0x04000827 RID: 2087
 		internal static int __PropertyOffset_bEnableAnimControl;
 
-		// Token: 0x04003909 RID: 14601
+		// Token: 0x04000828 RID: 2088
 		internal static int __PropertyOffset_bEnableTransitionBlend;
 
-		// Token: 0x0400390A RID: 14602
+		// Token: 0x04000829 RID: 2089
 		internal static int __PropertyOffset_bEnableMorphBlend;
 
-		// Token: 0x0400390B RID: 14603
+		// Token: 0x0400082A RID: 2090
 		internal static int __PropertyOffset_bRenderExtraMaterials;
 
-		// Token: 0x0400390C RID: 14604
+		// Token: 0x0400082B RID: 2091
 		internal static int __PropertyOffset_Debugtime;
 
-		// Token: 0x0400390D RID: 14605
+		// Token: 0x0400082C RID: 2092
 		internal static int __PropertyOffset_CrossFadeTimeTest;
 
-		// Token: 0x0400390E RID: 14606
+		// Token: 0x0400082D RID: 2093
 		internal static int __PropertyOffset_AnimArrayIndexTest;
 
-		// Token: 0x0400390F RID: 14607
+		// Token: 0x0400082E RID: 2094
 		internal static int __PropertyOffset_InstanceScale;
 
-		// Token: 0x04003910 RID: 14608
+		// Token: 0x0400082F RID: 2095
 		internal static int __PropertyOffset_CustomBounds;
 
-		// Token: 0x04003911 RID: 14609
-		internal static int __PropertyOffset_InstanceGroups;
-
-		// Token: 0x04003912 RID: 14610
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UBakedBoneMeshInstanceGroup> _InstanceGroups;
-
-		// Token: 0x04003913 RID: 14611
-		internal static int __PropertyOffset_InstanceIndexInfos;
-
-		// Token: 0x04003914 RID: 14612
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FInstanceIndexInfo> _InstanceIndexInfos;
-
-		// Token: 0x04003915 RID: 14613
+		// Token: 0x04000830 RID: 2096
 		internal static int __PropertyOffset_SpecifiedUsedMaterialIndices;
 
-		// Token: 0x04003916 RID: 14614
-		[Nullable(2)]
+		// Token: 0x04000831 RID: 2097
 		private TArray<int> _SpecifiedUsedMaterialIndices;
 	}
 }

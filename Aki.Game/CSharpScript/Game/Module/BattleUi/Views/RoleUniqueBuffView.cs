@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DB1 RID: 23985
+	// Token: 0x02004D95 RID: 19861
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleUniqueBuffView : BattleVisibleChildView
 	{
-		// Token: 0x0603CEBB RID: 249531 RVA: 0x00EA2908 File Offset: 0x00EA0B08
+		// Token: 0x06031E32 RID: 204338 RVA: 0x00DF37DC File Offset: 0x00DF19DC
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CEBC RID: 249532 RVA: 0x00EA2964 File Offset: 0x00EA0B64
+		// Token: 0x06031E33 RID: 204339 RVA: 0x00DF3838 File Offset: 0x00DF1A38
 		protected override void OnBeforeDestroy()
 		{
 			this.Refresh(null);
@@ -36,21 +36,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEBD RID: 249533 RVA: 0x00EA29D0 File Offset: 0x00EA0BD0
+		// Token: 0x06031E34 RID: 204340 RVA: 0x00DF38A4 File Offset: 0x00DF1AA4
 		public override void Reset()
 		{
 			this.RemoveEvents();
 			base.Reset();
 		}
 
-		// Token: 0x0603CEBE RID: 249534 RVA: 0x00EA29DE File Offset: 0x00EA0BDE
+		// Token: 0x06031E35 RID: 204341 RVA: 0x00DF38B2 File Offset: 0x00DF1AB2
 		private void InitExceedTipItem()
 		{
 			this.ExceedTipItem = new BuffItem(this.RootItem);
 			this.ExceedTipItem.ActivateExceedTip();
 		}
 
-		// Token: 0x0603CEBF RID: 249535 RVA: 0x00EA29FC File Offset: 0x00EA0BFC
+		// Token: 0x06031E36 RID: 204342 RVA: 0x00DF38D0 File Offset: 0x00DF1AD0
 		private void DestroyExceedTipItem()
 		{
 			if (this.ExceedTipItem != null)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEC0 RID: 249536 RVA: 0x00EA2A18 File Offset: 0x00EA0C18
+		// Token: 0x06031E37 RID: 204343 RVA: 0x00DF38EC File Offset: 0x00DF1AEC
 		[NullableContext(2)]
 		public void Refresh(BattleUiRoleData roleData)
 		{
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshAllRoleTopBuffVisible();
 		}
 
-		// Token: 0x0603CEC1 RID: 249537 RVA: 0x00EA2A98 File Offset: 0x00EA0C98
+		// Token: 0x06031E38 RID: 204344 RVA: 0x00DF396C File Offset: 0x00DF1B6C
 		public void Tick(float delta)
 		{
 			this.BuffItemContainer.Tick(delta);
@@ -98,19 +98,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEC2 RID: 249538 RVA: 0x00EA2AFC File Offset: 0x00EA0CFC
+		// Token: 0x06031E39 RID: 204345 RVA: 0x00DF39D0 File Offset: 0x00DF1BD0
 		public void AddBuff(GameplayCue buffCueConfig, int handleId)
 		{
 			this.BuffItemContainer.AddBuffByCue(buffCueConfig, handleId, true);
 		}
 
-		// Token: 0x0603CEC3 RID: 249539 RVA: 0x00EA2B0C File Offset: 0x00EA0D0C
+		// Token: 0x06031E3A RID: 204346 RVA: 0x00DF39E0 File Offset: 0x00DF1BE0
 		public void RemoveBuff(GameplayCue buffCueConfig, int handleId)
 		{
 			this.BuffItemContainer.RemoveBuffByCue(buffCueConfig, handleId, true);
 		}
 
-		// Token: 0x0603CEC4 RID: 249540 RVA: 0x00EA2B20 File Offset: 0x00EA0D20
+		// Token: 0x06031E3B RID: 204347 RVA: 0x00DF39F4 File Offset: 0x00DF1BF4
 		public void OnRemoveEntity(int entityId)
 		{
 			TopBuffContainer topBuffContainer;
@@ -129,26 +129,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEC5 RID: 249541 RVA: 0x00EA2B61 File Offset: 0x00EA0D61
+		// Token: 0x06031E3C RID: 204348 RVA: 0x00DF3A35 File Offset: 0x00DF1C35
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.BattleUiAllRoleDataChanged, new Action(this.OnFormationLoaded));
 		}
 
-		// Token: 0x0603CEC6 RID: 249542 RVA: 0x00EA2B7F File Offset: 0x00EA0D7F
+		// Token: 0x06031E3D RID: 204349 RVA: 0x00DF3A53 File Offset: 0x00DF1C53
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiAllRoleDataChanged, new Action(this.OnFormationLoaded));
 		}
 
-		// Token: 0x0603CEC7 RID: 249543 RVA: 0x00EA2B9D File Offset: 0x00EA0D9D
+		// Token: 0x06031E3E RID: 204350 RVA: 0x00DF3A71 File Offset: 0x00DF1C71
 		private void OnFormationLoaded()
 		{
 			this.LoadAllRoleTopBuff();
 			this.RefreshAllRoleTopBuffVisible();
 		}
 
-		// Token: 0x0603CEC8 RID: 249544 RVA: 0x00EA2BAC File Offset: 0x00EA0DAC
+		// Token: 0x06031E3F RID: 204351 RVA: 0x00DF3A80 File Offset: 0x00DF1C80
 		private void LoadAllRoleTopBuff()
 		{
 			foreach (SceneTeamItem sceneTeamItem in SceneTeamModel.Instance.GetTeamItems(true))
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEC9 RID: 249545 RVA: 0x00EA2C48 File Offset: 0x00EA0E48
+		// Token: 0x06031E40 RID: 204352 RVA: 0x00DF3B1C File Offset: 0x00DF1D1C
 		private UniTask LoadRoleTopBuff(BattleUiRoleData roleData)
 		{
 			RoleUniqueBuffView.<LoadRoleTopBuff>d__21 <LoadRoleTopBuff>d__;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadRoleTopBuff>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CECA RID: 249546 RVA: 0x00EA2C94 File Offset: 0x00EA0E94
+		// Token: 0x06031E41 RID: 204353 RVA: 0x00DF3B68 File Offset: 0x00DF1D68
 		private void RefreshAllRoleTopBuffVisible()
 		{
 			foreach (KeyValuePair<int, TopBuffContainer> keyValuePair in this.RoleBarMap)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CECC RID: 249548 RVA: 0x00EA2D4D File Offset: 0x00EA0F4D
+		// Token: 0x06031E43 RID: 204355 RVA: 0x00DF3C21 File Offset: 0x00DF1E21
 		// Note: this type is marked as 'beforefieldinit'.
 		static RoleUniqueBuffView()
 		{
@@ -211,28 +211,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			RoleUniqueBuffView.RoleClassMap = dictionary;
 		}
 
-		// Token: 0x0401FB9D RID: 129949
+		// Token: 0x0401A65A RID: 108122
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, Type> RoleClassMap;
 
-		// Token: 0x0401FB9E RID: 129950
+		// Token: 0x0401A65B RID: 108123
 		private readonly BuffItemContainer BuffItemContainer = new BuffItemContainer();
 
-		// Token: 0x0401FB9F RID: 129951
+		// Token: 0x0401A65C RID: 108124
 		[Nullable(2)]
 		private BuffItem ExceedTipItem;
 
-		// Token: 0x0401FBA0 RID: 129952
+		// Token: 0x0401A65D RID: 108125
 		private int? EntityId;
 
-		// Token: 0x0401FBA1 RID: 129953
+		// Token: 0x0401A65E RID: 108126
 		[Nullable(2)]
 		private TopBuffContainer CurRoleBar;
 
-		// Token: 0x0401FBA2 RID: 129954
+		// Token: 0x0401A65F RID: 108127
 		private readonly Dictionary<int, TopBuffContainer> RoleBarMap = new Dictionary<int, TopBuffContainer>();
 
-		// Token: 0x0401FBA3 RID: 129955
+		// Token: 0x0401A660 RID: 108128
 		private readonly HashSet<int> NoRoleBarSet = new HashSet<int>();
 	}
 }

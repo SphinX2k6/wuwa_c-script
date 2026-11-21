@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DA8 RID: 28072
+	// Token: 0x02007523 RID: 29987
 	public class IPreprocessOperationConfig_UnionUnion
 	{
-		// Token: 0x1700D15D RID: 53597
-		// (get) Token: 0x0603196D RID: 203117 RVA: 0x006B8631 File Offset: 0x006B6831
-		// (set) Token: 0x0603196E RID: 203118 RVA: 0x006B8639 File Offset: 0x006B6839
+		// Token: 0x1700DCA5 RID: 56485
+		// (get) Token: 0x06034969 RID: 215401 RVA: 0x00713D19 File Offset: 0x00711F19
+		// (set) Token: 0x0603496A RID: 215402 RVA: 0x00713D21 File Offset: 0x00711F21
 		public IPreprocessOperationConfig_Union Type { get; set; }
 
-		// Token: 0x1700D15E RID: 53598
-		// (get) Token: 0x0603196F RID: 203119 RVA: 0x006B8642 File Offset: 0x006B6842
-		// (set) Token: 0x06031970 RID: 203120 RVA: 0x006B864A File Offset: 0x006B684A
+		// Token: 0x1700DCA6 RID: 56486
+		// (get) Token: 0x0603496B RID: 215403 RVA: 0x00713D2A File Offset: 0x00711F2A
+		// (set) Token: 0x0603496C RID: 215404 RVA: 0x00713D32 File Offset: 0x00711F32
 		public object Value { get; set; }
 
-		// Token: 0x06031971 RID: 203121 RVA: 0x006B8653 File Offset: 0x006B6853
+		// Token: 0x0603496D RID: 215405 RVA: 0x00713D3B File Offset: 0x00711F3B
 		public IPreprocessOperationConfig_UnionUnion()
 		{
 			this.Type = IPreprocessOperationConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06031972 RID: 203122 RVA: 0x006B8669 File Offset: 0x006B6869
+		// Token: 0x0603496E RID: 215406 RVA: 0x00713D51 File Offset: 0x00711F51
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06031973 RID: 203123 RVA: 0x006B867B File Offset: 0x006B687B
+		// Token: 0x0603496F RID: 215407 RVA: 0x00713D63 File Offset: 0x00711F63
 		public IPreprocessOperationConfigT AsIPreprocessOperationConfig()
 		{
 			return this.As<IPreprocessOperationConfigT>();
 		}
 
-		// Token: 0x06031974 RID: 203124 RVA: 0x006B8683 File Offset: 0x006B6883
+		// Token: 0x06034970 RID: 215408 RVA: 0x00713D6B File Offset: 0x00711F6B
 		public static IPreprocessOperationConfig_UnionUnion FromIPreprocessOperationConfig(IPreprocessOperationConfigT _ipreprocessoperationconfig)
 		{
 			return new IPreprocessOperationConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031975 RID: 203125 RVA: 0x006B8698 File Offset: 0x006B6898
+		// Token: 0x06034971 RID: 215409 RVA: 0x00713D80 File Offset: 0x00711F80
 		public IFloatingSubtitleLanguageDiffT AsIFloatingSubtitleLanguageDiff()
 		{
 			return this.As<IFloatingSubtitleLanguageDiffT>();
 		}
 
-		// Token: 0x06031976 RID: 203126 RVA: 0x006B86A0 File Offset: 0x006B68A0
+		// Token: 0x06034972 RID: 215410 RVA: 0x00713D88 File Offset: 0x00711F88
 		public static IPreprocessOperationConfig_UnionUnion FromIFloatingSubtitleLanguageDiff(IFloatingSubtitleLanguageDiffT _ifloatingsubtitlelanguagediff)
 		{
 			return new IPreprocessOperationConfig_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031977 RID: 203127 RVA: 0x006B86B8 File Offset: 0x006B68B8
+		// Token: 0x06034973 RID: 215411 RVA: 0x00713DA0 File Offset: 0x00711FA0
 		public static int Pack(FlatBufferBuilder builder, IPreprocessOperationConfig_UnionUnion _o)
 		{
 			IPreprocessOperationConfig_Union type = _o.Type;

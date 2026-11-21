@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A82 RID: 19074
+	// Token: 0x02003A2A RID: 14890
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBdBuffSelectViewModel
 	{
-		// Token: 0x060316F7 RID: 202487 RVA: 0x00B74700 File Offset: 0x00B72900
+		// Token: 0x06026487 RID: 156807 RVA: 0x00AB8684 File Offset: 0x00AB6884
 		public static TrapDefenseBdBuffSelectViewModel Create(TrapDefenseModel model)
 		{
 			return new TrapDefenseBdBuffSelectViewModel
@@ -23,12 +23,12 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x060316F8 RID: 202488 RVA: 0x00B7470E File Offset: 0x00B7290E
+		// Token: 0x06026488 RID: 156808 RVA: 0x00AB8692 File Offset: 0x00AB6892
 		private TrapDefenseBdBuffSelectViewModel()
 		{
 		}
 
-		// Token: 0x060316F9 RID: 202489 RVA: 0x00B74734 File Offset: 0x00B72934
+		// Token: 0x06026489 RID: 156809 RVA: 0x00AB86B8 File Offset: 0x00AB68B8
 		public bool SetBuffList(List<int> idList, int? selectId = null)
 		{
 			this.BdBuffDataList.Clear();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return true;
 		}
 
-		// Token: 0x060316FA RID: 202490 RVA: 0x00B747B8 File Offset: 0x00B729B8
+		// Token: 0x0602648A RID: 156810 RVA: 0x00AB873C File Offset: 0x00AB693C
 		public void SetSelectBuffId(int? id)
 		{
 			TrapDefenseBdBuffData selectBuff = this.BdBuffDataList.Find(delegate(TrapDefenseBdBuffData data)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetSelectBuff(selectBuff);
 		}
 
-		// Token: 0x060316FB RID: 202491 RVA: 0x00B747F4 File Offset: 0x00B729F4
+		// Token: 0x0602648B RID: 156811 RVA: 0x00AB8778 File Offset: 0x00AB6978
 		[NullableContext(2)]
 		public void SetSelectBuff(TrapDefenseBdBuffData buff)
 		{
@@ -77,44 +77,44 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060316FC RID: 202492 RVA: 0x00B74848 File Offset: 0x00B72A48
+		// Token: 0x0602648C RID: 156812 RVA: 0x00AB87CC File Offset: 0x00AB69CC
 		public List<TrapDefenseBdData> GetShowBdDataList()
 		{
 			TrapDefenseLevelData curInstToLevelData = this.Model.GetCurInstToLevelData();
 			return ((curInstToLevelData != null) ? curInstToLevelData.GetShowBdList() : null) ?? this.Model.RougeModeData.BdDataListIgnoreZero;
 		}
 
-		// Token: 0x060316FD RID: 202493 RVA: 0x00B74875 File Offset: 0x00B72A75
+		// Token: 0x0602648D RID: 156813 RVA: 0x00AB87F9 File Offset: 0x00AB69F9
 		public int GetRefreshBuffCostId()
 		{
 			return TrapDefenseConfig.Instance.GetBattleGoldToItemId();
 		}
 
-		// Token: 0x060316FE RID: 202494 RVA: 0x00B74881 File Offset: 0x00B72A81
+		// Token: 0x0602648E RID: 156814 RVA: 0x00AB8805 File Offset: 0x00AB6A05
 		public long GetRefreshBuffCostRemainNum()
 		{
 			return this.Model.BattleData.GetGoldNum();
 		}
 
-		// Token: 0x060316FF RID: 202495 RVA: 0x00B74893 File Offset: 0x00B72A93
+		// Token: 0x0602648F RID: 156815 RVA: 0x00AB8817 File Offset: 0x00AB6A17
 		public void SetRefreshBuffCostNum(int num)
 		{
 			this.RefreshBuffCostNum = num;
 		}
 
-		// Token: 0x06031700 RID: 202496 RVA: 0x00B7489C File Offset: 0x00B72A9C
+		// Token: 0x06026490 RID: 156816 RVA: 0x00AB8820 File Offset: 0x00AB6A20
 		public void SetMaxRefreshCount(int count)
 		{
 			this.MaxRefreshCount = count;
 		}
 
-		// Token: 0x06031701 RID: 202497 RVA: 0x00B748A5 File Offset: 0x00B72AA5
+		// Token: 0x06026491 RID: 156817 RVA: 0x00AB8829 File Offset: 0x00AB6A29
 		public void SetRemainRefreshCount(int count)
 		{
 			this.RemainRefreshCount = count;
 		}
 
-		// Token: 0x06031702 RID: 202498 RVA: 0x00B748B0 File Offset: 0x00B72AB0
+		// Token: 0x06026492 RID: 156818 RVA: 0x00AB8834 File Offset: 0x00AB6A34
 		public string GetRefreshBuffCostIconPath(int? id)
 		{
 			int itemConfigId = id ?? this.GetRefreshBuffCostId();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return ((itemConfig != null) ? itemConfig.GetValueOrDefault().IconSmall : null) ?? itemConfigId.ToString();
 		}
 
-		// Token: 0x06031703 RID: 202499 RVA: 0x00B7490C File Offset: 0x00B72B0C
+		// Token: 0x06026493 RID: 156819 RVA: 0x00AB8890 File Offset: 0x00AB6A90
 		public bool RefreshBuffIsEnoughCost(int? costNum = null)
 		{
 			long refreshBuffCostRemainNum = this.GetRefreshBuffCostRemainNum();
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return refreshBuffCostRemainNum >= (long)num;
 		}
 
-		// Token: 0x06031704 RID: 202500 RVA: 0x00B74941 File Offset: 0x00B72B41
+		// Token: 0x06026494 RID: 156820 RVA: 0x00AB88C5 File Offset: 0x00AB6AC5
 		public void OnOpenView()
 		{
 			this.ShowingViewProcess = true;
 		}
 
-		// Token: 0x06031705 RID: 202501 RVA: 0x00B7494C File Offset: 0x00B72B4C
+		// Token: 0x06026495 RID: 156821 RVA: 0x00AB88D0 File Offset: 0x00AB6AD0
 		public void OnViewClose()
 		{
 			if (this.BdBuffDataList.Count <= 0)
@@ -155,13 +155,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031706 RID: 202502 RVA: 0x00B749A5 File Offset: 0x00B72BA5
+		// Token: 0x06026496 RID: 156822 RVA: 0x00AB8929 File Offset: 0x00AB6B29
 		public void ViewProcessFinish()
 		{
 			this.ShowingViewProcess = false;
 		}
 
-		// Token: 0x06031707 RID: 202503 RVA: 0x00B749B0 File Offset: 0x00B72BB0
+		// Token: 0x06026497 RID: 156823 RVA: 0x00AB8934 File Offset: 0x00AB6B34
 		[NullableContext(0)]
 		public UniTask<bool> RequestSureBuffSelect()
 		{
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <RequestSureBuffSelect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031708 RID: 202504 RVA: 0x00B749F4 File Offset: 0x00B72BF4
+		// Token: 0x06026498 RID: 156824 RVA: 0x00AB8978 File Offset: 0x00AB6B78
 		[NullableContext(0)]
 		public UniTask<bool> RequestUpdateBdBuffList()
 		{
@@ -184,29 +184,29 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <RequestUpdateBdBuffList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401A701 RID: 108289
+		// Token: 0x04015053 RID: 86099
 		public TrapDefenseModel Model;
 
-		// Token: 0x0401A702 RID: 108290
+		// Token: 0x04015054 RID: 86100
 		public List<TrapDefenseBdBuffData> BdBuffDataList = new List<TrapDefenseBdBuffData>();
 
-		// Token: 0x0401A703 RID: 108291
+		// Token: 0x04015055 RID: 86101
 		[Nullable(2)]
 		public TrapDefenseBdBuffData CurSelectBdBuffData;
 
-		// Token: 0x0401A704 RID: 108292
+		// Token: 0x04015056 RID: 86102
 		public int MaxRefreshCount = 1;
 
-		// Token: 0x0401A705 RID: 108293
+		// Token: 0x04015057 RID: 86103
 		public int RemainRefreshCount;
 
-		// Token: 0x0401A706 RID: 108294
+		// Token: 0x04015058 RID: 86104
 		public int RefreshBuffCostNum;
 
-		// Token: 0x0401A707 RID: 108295
+		// Token: 0x04015059 RID: 86105
 		public bool ShowingViewProcess;
 
-		// Token: 0x0401A708 RID: 108296
+		// Token: 0x0401505A RID: 86106
 		public List<List<int>> BackupIdList = new List<List<int>>();
 	}
 }

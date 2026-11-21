@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Fight.FollowShooter;
 using AkiClient.Game.Aki.Data.Fight.Struct;
@@ -10,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007132 RID: 28978
+	// Token: 0x02006360 RID: 25440
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FollowShooterDrone
 	{
-		// Token: 0x06046C2E RID: 289838 RVA: 0x011D5544 File Offset: 0x011D3744
+		// Token: 0x0603DA7F RID: 252543 RVA: 0x011DDF44 File Offset: 0x011DC144
 		private static void ExecuteExecutor(TFollowShooterExecutor executor, Entity entity, FName targetName, SLockOnFollowShooter lockOnFollowShooter, SLockOnFollowShooterAutoAim lockOnFollowShooterAutoAim)
 		{
 			BaseActorComponent baseActorComponent = entity.CheckGetComponent<BaseActorComponent>();
@@ -24,8 +23,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			{
 				return;
 			}
-			foreach (USceneComponent usceneComponent in aactor.GetComponentsByTag(USceneComponent.StaticClass(), targetName).Cast<USceneComponent>())
+			TArray<UActorComponent> componentsByTag = aactor.GetComponentsByTag(USceneComponent.StaticClass(), targetName);
+			if (componentsByTag == null)
 			{
+				return;
+			}
+			foreach (UActorComponent uactorComponent in componentsByTag)
+			{
+				USceneComponent usceneComponent = (USceneComponent)uactorComponent;
 				if (usceneComponent.IsValid())
 				{
 					executor(entity, usceneComponent, lockOnFollowShooter, lockOnFollowShooterAutoAim);
@@ -33,7 +38,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C2F RID: 289839 RVA: 0x011D55C4 File Offset: 0x011D37C4
+		// Token: 0x0603DA80 RID: 252544 RVA: 0x011DDFD0 File Offset: 0x011DC1D0
 		private static void TryShoot(Entity entity, AActor target, float angleDiff, Dictionary<string, double> lastAutoShootTime, SLockOnFollowShooter lockOnFollowShooter, SLockOnFollowShooterAutoAim lockOnFollowShooterAutoAim)
 		{
 			FName shouldAimAtLockOnTargetName = lockOnFollowShooterAutoAim.ShouldAimAtLockOnTargetName;
@@ -80,7 +85,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C30 RID: 289840 RVA: 0x011D56F4 File Offset: 0x011D38F4
+		// Token: 0x0603DA81 RID: 252545 RVA: 0x011DE100 File Offset: 0x011DC300
 		public static bool ShouldUpdateRotationToAimAtLockOnTarget(SLockOnFollowShooterAutoAim lockOnFollowShooterAutoAim, object actorOrEntityId)
 		{
 			EntityHandle entityHandle = null;
@@ -118,7 +123,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x06046C31 RID: 289841 RVA: 0x011D5790 File Offset: 0x011D3990
+		// Token: 0x0603DA82 RID: 252546 RVA: 0x011DE19C File Offset: 0x011DC39C
 		private static void UpdateTransformByStrategy(float deltaTime, FollowShooterAimTarget aimTarget, [Nullable(2)] AActor targetForShoot, [Nullable(new byte[]
 		{
 			2,
@@ -144,7 +149,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C32 RID: 289842 RVA: 0x011D581C File Offset: 0x011D3A1C
+		// Token: 0x0603DA83 RID: 252547 RVA: 0x011DE228 File Offset: 0x011DC428
 		private unsafe static void AllOwnerSceneComponentExecute(Entity entity, BP_FollowShooterConfig_C followShooterConfig, TFollowShooterExecutor executor)
 		{
 			if (followShooterConfig == null || !followShooterConfig.IsValid())
@@ -166,7 +171,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C33 RID: 289843 RVA: 0x011D5904 File Offset: 0x011D3B04
+		// Token: 0x0603DA84 RID: 252548 RVA: 0x011DE314 File Offset: 0x011DC514
 		public unsafe static void SpecificOwnerSceneComponentExecute(Entity entity, BP_FollowShooterConfig_C followShooterConfig, FName targetName, TFollowShooterExecutor executor)
 		{
 			if (followShooterConfig == null || !entity.Valid || FNameUtil.IsNothing(targetName))
@@ -190,7 +195,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C34 RID: 289844 RVA: 0x011D59E0 File Offset: 0x011D3BE0
+		// Token: 0x0603DA85 RID: 252549 RVA: 0x011DE3F4 File Offset: 0x011DC5F4
 		public unsafe static void AttachToByConfig(USceneComponent targetComponent, int tagId, Entity entity, USceneComponent sceneComponent, SLockOnFollowShooter lockOnFollowShooter, SLockOnFollowShooterAutoAim lockOnFollowShooterAutoAim)
 		{
 			FGameplayTag? gameplayTagById = GameplayTagUtils.GetGameplayTagById(tagId);
@@ -225,7 +230,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			FollowShooterAttachStrategies.setSceneComponentAttachStrategy(sceneComponent, slockOnFollowShooterAttachmentRule.AttachStrategy);
 		}
 
-		// Token: 0x06046C35 RID: 289845 RVA: 0x011D5B10 File Offset: 0x011D3D10
+		// Token: 0x0603DA86 RID: 252550 RVA: 0x011DE524 File Offset: 0x011DC724
 		public static void ClearStrategyStatesForOwner(Entity entity, BP_FollowShooterConfig_C followShooterConfig)
 		{
 			TFollowShooterExecutor executor;
@@ -236,19 +241,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			FollowShooterDrone.AllOwnerSceneComponentExecute(entity, followShooterConfig, executor);
 		}
 
-		// Token: 0x06046C36 RID: 289846 RVA: 0x011D5B34 File Offset: 0x011D3D34
+		// Token: 0x0603DA87 RID: 252551 RVA: 0x011DE548 File Offset: 0x011DC748
 		private static void ClearStrategyStateExecutor(Entity entity, USceneComponent sceneComponent, SLockOnFollowShooter lockOnFollowShooter, SLockOnFollowShooterAutoAim lockOnFollowShooterAutoAim)
 		{
 			FollowShooterAttachStrategies.clearFollowShooterAttachStrategiesStateForSceneComponent(sceneComponent);
 		}
 
-		// Token: 0x06046C37 RID: 289847 RVA: 0x011D5B3C File Offset: 0x011D3D3C
+		// Token: 0x0603DA88 RID: 252552 RVA: 0x011DE550 File Offset: 0x011DC750
 		public static void SetHiddenInGame(bool newHidden, Entity entity, USceneComponent sceneComponent, SLockOnFollowShooter lockOnFollowShooter, SLockOnFollowShooterAutoAim lockOnFollowShooterAutoAim)
 		{
 			sceneComponent.SetHiddenInGame(newHidden, true);
 		}
 
-		// Token: 0x06046C38 RID: 289848 RVA: 0x011D5B48 File Offset: 0x011D3D48
+		// Token: 0x0603DA89 RID: 252553 RVA: 0x011DE55C File Offset: 0x011DC75C
 		public static void UpdateTransformToAimAtLockOnTarget(Entity entity, AActor target, Dictionary<string, double> lastAutoShootTime, BP_FollowShooterConfig_C followShooterConfig, float deltaTime)
 		{
 			FVectorDouble? lockOnTargetLocation = LockOnUtils.GetLockOnTargetLocation(target);
@@ -263,7 +268,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			});
 		}
 
-		// Token: 0x06046C39 RID: 289849 RVA: 0x011D5BAC File Offset: 0x011D3DAC
+		// Token: 0x0603DA8A RID: 252554 RVA: 0x011DE5C0 File Offset: 0x011DC7C0
 		public static void UpdateTransformToCameraForward(Entity entity, FVector up, BP_FollowShooterConfig_C followShooterConfig, float deltaTime)
 		{
 			float cameraForwardDistance = (followShooterConfig != null) ? followShooterConfig.LockOnConfig.CameraForwardDistance : 0f;
@@ -274,7 +279,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			});
 		}
 
-		// Token: 0x06046C3A RID: 289850 RVA: 0x011D5BFC File Offset: 0x011D3DFC
+		// Token: 0x0603DA8B RID: 252555 RVA: 0x011DE610 File Offset: 0x011DC810
 		public static UniTask AsyncStartShootAtTargets(int entityId, BP_FollowShooterConfig_C followShooterConfig, List<Vector> targets, [Nullable(2)] UPrimaryDataAsset deadEyeFollowShooterConfig, float selfCenterTimeDilation)
 		{
 			FollowShooterDrone.<AsyncStartShootAtTargets>d__13 <AsyncStartShootAtTargets>d__;
@@ -289,14 +294,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return <AsyncStartShootAtTargets>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0402526F RID: 152175
+		// Token: 0x04020B4F RID: 133967
 		private static readonly int deadEyeTag = GameplayTagDefine.EGameplayTagId["关卡.Common.表现.死眼跳台.瞄准锁定"];
 
-		// Token: 0x0200CE8E RID: 52878
+		// Token: 0x0200BB56 RID: 47958
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E2A8 RID: 254632
+			// Token: 0x040399B2 RID: 235954
 			[Nullable(0)]
 			public static TFollowShooterExecutor <0>__ClearStrategyStateExecutor;
 		}

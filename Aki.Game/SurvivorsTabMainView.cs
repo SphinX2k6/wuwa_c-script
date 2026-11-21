@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B08 RID: 11016
+// Token: 0x02002084 RID: 8324
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsTabMainView : UiViewBase
 {
-	// Token: 0x06016E63 RID: 93795 RVA: 0x005CF552 File Offset: 0x005CD752
+	// Token: 0x06014894 RID: 84116 RVA: 0x005FC0D2 File Offset: 0x005FA2D2
 	[NullableContext(1)]
 	public SurvivorsTabMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016E64 RID: 93796 RVA: 0x005CF570 File Offset: 0x005CD770
+	// Token: 0x06014895 RID: 84117 RVA: 0x005FC0F0 File Offset: 0x005FA2F0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class SurvivorsTabMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016E65 RID: 93797 RVA: 0x005CF674 File Offset: 0x005CD874
+	// Token: 0x06014896 RID: 84118 RVA: 0x005FC1F4 File Offset: 0x005FA3F4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsTabMainView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ public class SurvivorsTabMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016E66 RID: 93798 RVA: 0x005CF6B7 File Offset: 0x005CD8B7
+	// Token: 0x06014897 RID: 84119 RVA: 0x005FC237 File Offset: 0x005FA437
 	protected override void OnStart()
 	{
 		this.RefreshCaption();
@@ -58,7 +58,7 @@ public class SurvivorsTabMainView : UiViewBase
 		this.RefreshDefaultSelectedTab();
 	}
 
-	// Token: 0x06016E67 RID: 93799 RVA: 0x005CF6CC File Offset: 0x005CD8CC
+	// Token: 0x06014898 RID: 84120 RVA: 0x005FC24C File Offset: 0x005FA44C
 	protected override void OnBeforeDestroy()
 	{
 		if (this.LevelSequencePlayerList != null)
@@ -71,7 +71,7 @@ public class SurvivorsTabMainView : UiViewBase
 		this.LevelSequencePlayerList = null;
 	}
 
-	// Token: 0x06016E68 RID: 93800 RVA: 0x005CF72C File Offset: 0x005CD92C
+	// Token: 0x06014899 RID: 84121 RVA: 0x005FC2AC File Offset: 0x005FA4AC
 	private void RefreshDefaultSelectedTab()
 	{
 		SurvivorsTabMainViewData survivorsTabMainViewData = this.OpenParam as SurvivorsTabMainViewData;
@@ -159,7 +159,7 @@ public class SurvivorsTabMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016E69 RID: 93801 RVA: 0x005CF8A4 File Offset: 0x005CDAA4
+	// Token: 0x0601489A RID: 84122 RVA: 0x005FC424 File Offset: 0x005FA624
 	private UniTask CreatePages()
 	{
 		SurvivorsTabMainView.<CreatePages>d__20 <CreatePages>d__;
@@ -170,7 +170,7 @@ public class SurvivorsTabMainView : UiViewBase
 		return <CreatePages>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016E6A RID: 93802 RVA: 0x005CF8E8 File Offset: 0x005CDAE8
+	// Token: 0x0601489B RID: 84123 RVA: 0x005FC468 File Offset: 0x005FA668
 	private UniTask CreateTabs()
 	{
 		SurvivorsTabMainView.<CreateTabs>d__21 <CreateTabs>d__;
@@ -181,7 +181,7 @@ public class SurvivorsTabMainView : UiViewBase
 		return <CreateTabs>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016E6B RID: 93803 RVA: 0x005CF92C File Offset: 0x005CDB2C
+	// Token: 0x0601489C RID: 84124 RVA: 0x005FC4AC File Offset: 0x005FA6AC
 	public void RefreshTabs()
 	{
 		Dictionary<int, SurvivorsTabMainTabItem> tabItemMap = this.WeaponTabComponent.GetTabItemMap();
@@ -246,14 +246,14 @@ public class SurvivorsTabMainView : UiViewBase
 		itemTab2.RefreshTabState(ETabState.Normal);
 	}
 
-	// Token: 0x06016E6C RID: 93804 RVA: 0x005CFA66 File Offset: 0x005CDC66
+	// Token: 0x0601489D RID: 84125 RVA: 0x005FC5E6 File Offset: 0x005FA7E6
 	[NullableContext(1)]
 	private SurvivorsTabMainTabItem CreateWeaponCommonTab([Nullable(2)] UUIItem item, int? index)
 	{
 		return new SurvivorsTabMainTabItem();
 	}
 
-	// Token: 0x06016E6D RID: 93805 RVA: 0x005CFA70 File Offset: 0x005CDC70
+	// Token: 0x0601489E RID: 84126 RVA: 0x005FC5F0 File Offset: 0x005FA7F0
 	private void RefreshCaption()
 	{
 		PopupCaptionItem captionComp = this.CaptionComp;
@@ -282,7 +282,7 @@ public class SurvivorsTabMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016E6E RID: 93806 RVA: 0x005CFB14 File Offset: 0x005CDD14
+	// Token: 0x0601489F RID: 84127 RVA: 0x005FC694 File Offset: 0x005FA894
 	private void RefreshSelectedPage(int index)
 	{
 		if (index == this.CurrentShowPageIndex)
@@ -309,7 +309,7 @@ public class SurvivorsTabMainView : UiViewBase
 		levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x06016E6F RID: 93807 RVA: 0x005CFB9C File Offset: 0x005CDD9C
+	// Token: 0x060148A0 RID: 84128 RVA: 0x005FC71C File Offset: 0x005FA91C
 	private void RefreshSelectedTab(ETabType type)
 	{
 		if (this.CurrentSelectTab != null)
@@ -356,19 +356,19 @@ public class SurvivorsTabMainView : UiViewBase
 		this.CurrentSelectTab = new ETabType?(type);
 	}
 
-	// Token: 0x06016E70 RID: 93808 RVA: 0x005CFC49 File Offset: 0x005CDE49
+	// Token: 0x060148A1 RID: 84129 RVA: 0x005FC7C9 File Offset: 0x005FA9C9
 	private void GoLeft()
 	{
 		this.OnClickChangeBtn(-1);
 	}
 
-	// Token: 0x06016E71 RID: 93809 RVA: 0x005CFC52 File Offset: 0x005CDE52
+	// Token: 0x060148A2 RID: 84130 RVA: 0x005FC7D2 File Offset: 0x005FA9D2
 	private void GoRight()
 	{
 		this.OnClickChangeBtn(1);
 	}
 
-	// Token: 0x06016E72 RID: 93810 RVA: 0x005CFC5C File Offset: 0x005CDE5C
+	// Token: 0x060148A3 RID: 84131 RVA: 0x005FC7DC File Offset: 0x005FA9DC
 	private void OnClickChangeBtn(int step)
 	{
 		ETabType? currentSelectTab = this.CurrentSelectTab;
@@ -387,7 +387,7 @@ public class SurvivorsTabMainView : UiViewBase
 		this.HandleWeaponSwitch(step);
 	}
 
-	// Token: 0x06016E73 RID: 93811 RVA: 0x005CFCAC File Offset: 0x005CDEAC
+	// Token: 0x060148A4 RID: 84132 RVA: 0x005FC82C File Offset: 0x005FAA2C
 	private void HandleRoleSwitch(int step)
 	{
 		if (step != -1)
@@ -424,7 +424,7 @@ public class SurvivorsTabMainView : UiViewBase
 		itemTab2.SetForceSwitch(EToggleState.ETT_Checked, true);
 	}
 
-	// Token: 0x06016E74 RID: 93812 RVA: 0x005CFD04 File Offset: 0x005CDF04
+	// Token: 0x060148A5 RID: 84133 RVA: 0x005FC884 File Offset: 0x005FAA84
 	private void HandleItemSwitch(int step)
 	{
 		if (step != 1)
@@ -462,7 +462,7 @@ public class SurvivorsTabMainView : UiViewBase
 		roleTab2.SetForceSwitch(EToggleState.ETT_Checked, true);
 	}
 
-	// Token: 0x06016E75 RID: 93813 RVA: 0x005CFD60 File Offset: 0x005CDF60
+	// Token: 0x060148A6 RID: 84134 RVA: 0x005FC8E0 File Offset: 0x005FAAE0
 	private void HandleWeaponSwitch(int step)
 	{
 		int selectedIndex = this.WeaponTabComponent.GetSelectedIndex();
@@ -509,7 +509,7 @@ public class SurvivorsTabMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016E76 RID: 93814 RVA: 0x005CFDEC File Offset: 0x005CDFEC
+	// Token: 0x060148A7 RID: 84135 RVA: 0x005FC96C File Offset: 0x005FAB6C
 	private int GetLastUnlockWeaponTabIndex()
 	{
 		int result = -1;
@@ -527,21 +527,21 @@ public class SurvivorsTabMainView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x06016E77 RID: 93815 RVA: 0x005CFE39 File Offset: 0x005CE039
+	// Token: 0x060148A8 RID: 84136 RVA: 0x005FC9B9 File Offset: 0x005FABB9
 	private void OnClickRoleTab(int gridIndex)
 	{
 		this.RefreshSelectedTab(ETabType.Role);
 		this.RefreshSelectedPage(0);
 	}
 
-	// Token: 0x06016E78 RID: 93816 RVA: 0x005CFE49 File Offset: 0x005CE049
+	// Token: 0x060148A9 RID: 84137 RVA: 0x005FC9C9 File Offset: 0x005FABC9
 	private void OnClickItemTab(int gridIndex)
 	{
 		this.RefreshSelectedTab(ETabType.Item);
 		this.RefreshSelectedPage(2);
 	}
 
-	// Token: 0x06016E79 RID: 93817 RVA: 0x005CFE59 File Offset: 0x005CE059
+	// Token: 0x060148AA RID: 84138 RVA: 0x005FC9D9 File Offset: 0x005FABD9
 	private void OnClickWeaponTab(int index)
 	{
 		this.RefreshSelectedTab(ETabType.Weapon);
@@ -554,13 +554,13 @@ public class SurvivorsTabMainView : UiViewBase
 		weaponPage.RefreshByData(this.CachedWeaponGridDataList[index].WeaponData);
 	}
 
-	// Token: 0x06016E7A RID: 93818 RVA: 0x005CFE8A File Offset: 0x005CE08A
+	// Token: 0x060148AB RID: 84139 RVA: 0x005FCA0A File Offset: 0x005FAC0A
 	private void OnClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016E7B RID: 93819 RVA: 0x005CFE94 File Offset: 0x005CE094
+	// Token: 0x060148AC RID: 84140 RVA: 0x005FCA14 File Offset: 0x005FAC14
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -623,13 +623,13 @@ public class SurvivorsTabMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400AA21 RID: 43553
+	// Token: 0x0400AE27 RID: 44583
 	private const int TAB_STEP_LEFT = -1;
 
-	// Token: 0x0400AA22 RID: 43554
+	// Token: 0x0400AE28 RID: 44584
 	private const int TAB_STEP_RIGHT = 1;
 
-	// Token: 0x0400AA23 RID: 43555
+	// Token: 0x0400AE29 RID: 44585
 	[Nullable(new byte[]
 	{
 		2,
@@ -637,26 +637,26 @@ public class SurvivorsTabMainView : UiViewBase
 	})]
 	private List<ISurvivorsWeaponGridData> CachedWeaponGridDataList;
 
-	// Token: 0x0400AA24 RID: 43556
+	// Token: 0x0400AE2A RID: 44586
 	[Nullable(1)]
 	private readonly List<UiPanelBase> PageList = new List<UiPanelBase>();
 
-	// Token: 0x0400AA25 RID: 43557
+	// Token: 0x0400AE2B RID: 44587
 	private int CurrentShowPageIndex = -1;
 
-	// Token: 0x0400AA26 RID: 43558
+	// Token: 0x0400AE2C RID: 44588
 	private PopupCaptionItem CaptionComp;
 
-	// Token: 0x0400AA27 RID: 43559
+	// Token: 0x0400AE2D RID: 44589
 	private SurvivorsRoleDetailTabView RolePage;
 
-	// Token: 0x0400AA28 RID: 43560
+	// Token: 0x0400AE2E RID: 44590
 	private SurvivorsWeaponDetailTabView WeaponPage;
 
-	// Token: 0x0400AA29 RID: 43561
+	// Token: 0x0400AE2F RID: 44591
 	private SurvivorsItemDetailTabView ItemPage;
 
-	// Token: 0x0400AA2A RID: 43562
+	// Token: 0x0400AE30 RID: 44592
 	[Nullable(new byte[]
 	{
 		2,
@@ -664,16 +664,16 @@ public class SurvivorsTabMainView : UiViewBase
 	})]
 	private List<LevelSequencePlayer> LevelSequencePlayerList;
 
-	// Token: 0x0400AA2B RID: 43563
+	// Token: 0x0400AE31 RID: 44593
 	private ETabType? CurrentSelectTab;
 
-	// Token: 0x0400AA2C RID: 43564
+	// Token: 0x0400AE32 RID: 44594
 	private SurvivorsTabMainTabItem RoleTab;
 
-	// Token: 0x0400AA2D RID: 43565
+	// Token: 0x0400AE33 RID: 44595
 	private SurvivorsTabMainTabItem ItemTab;
 
-	// Token: 0x0400AA2E RID: 43566
+	// Token: 0x0400AE34 RID: 44596
 	[Nullable(new byte[]
 	{
 		2,

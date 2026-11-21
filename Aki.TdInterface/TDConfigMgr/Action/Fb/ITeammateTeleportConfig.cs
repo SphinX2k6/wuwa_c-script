@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026BA RID: 9914
+	// Token: 0x0200297D RID: 10621
 	public class ITeammateTeleportConfig
 	{
-		// Token: 0x0600DDC7 RID: 56775 RVA: 0x0020EDC2 File Offset: 0x0020CFC2
-		[NullableContext(1)]
+		// Token: 0x0600EB9E RID: 60318 RVA: 0x0022B562 File Offset: 0x00229762
 		public static ITeammateTeleportConfig Create(ITeammateTeleportConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004215 RID: 16917
-		// (get) Token: 0x0600DDC8 RID: 56776 RVA: 0x0020EDE1 File Offset: 0x0020CFE1
+		// Token: 0x17004552 RID: 17746
+		// (get) Token: 0x0600EB9F RID: 60319 RVA: 0x0022B581 File Offset: 0x00229781
 		public virtual ETeammateTeleportType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B20 RID: 31520
+		// Token: 0x040081BD RID: 33213
 		private ITeammateTeleportConfig Instance;
 	}
 }

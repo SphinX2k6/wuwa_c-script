@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020016F6 RID: 5878
+// Token: 0x02000BAE RID: 2990
 public enum EAutoRunState
 {
-	// Token: 0x04004CDF RID: 19679
+	// Token: 0x04004D86 RID: 19846
 	Stopped,
-	// Token: 0x04004CE0 RID: 19680
+	// Token: 0x04004D87 RID: 19847
 	Running,
-	// Token: 0x04004CE1 RID: 19681
+	// Token: 0x04004D88 RID: 19848
 	AfterRunning
 }

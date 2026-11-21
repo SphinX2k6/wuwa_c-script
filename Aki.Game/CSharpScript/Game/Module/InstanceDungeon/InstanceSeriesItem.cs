@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005866 RID: 22630
+	// Token: 0x0200483E RID: 18494
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InstanceSeriesItem : UiPanelBase
 	{
-		// Token: 0x0603987D RID: 235645 RVA: 0x00DA8D60 File Offset: 0x00DA6F60
+		// Token: 0x0602E79A RID: 190362 RVA: 0x00CF7A88 File Offset: 0x00CF5C88
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ParentModel = (this.OpenParam as InstanceDungeonViewModelBase);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603987E RID: 235646 RVA: 0x00DA8F44 File Offset: 0x00DA7144
+		// Token: 0x0602E79B RID: 190363 RVA: 0x00CF7C6C File Offset: 0x00CF5E6C
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnChallengeInstanceRedDot, new Action<int>(this.OnChallengeInstanceRedDot));
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}, (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 		}
 
-		// Token: 0x0603987F RID: 235647 RVA: 0x00DA8FD5 File Offset: 0x00DA71D5
+		// Token: 0x0602E79C RID: 190364 RVA: 0x00CF7CFD File Offset: 0x00CF5EFD
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnChallengeInstanceRedDot, new Action<int>(this.OnChallengeInstanceRedDot));
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039880 RID: 235648 RVA: 0x00DA9013 File Offset: 0x00DA7213
+		// Token: 0x0602E79D RID: 190365 RVA: 0x00CF7D3B File Offset: 0x00CF5F3B
 		private void OnTimer()
 		{
 			if (!this.NeedOnTimer)
@@ -97,14 +97,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			timerRefreshFunction();
 		}
 
-		// Token: 0x06039881 RID: 235649 RVA: 0x00DA902E File Offset: 0x00DA722E
+		// Token: 0x0602E79E RID: 190366 RVA: 0x00CF7D56 File Offset: 0x00CF5F56
 		[NullableContext(1)]
 		public UUIText GetTitleText()
 		{
 			return base.GetText(3);
 		}
 
-		// Token: 0x06039882 RID: 235650 RVA: 0x00DA9038 File Offset: 0x00DA7238
+		// Token: 0x0602E79F RID: 190367 RVA: 0x00CF7D60 File Offset: 0x00CF5F60
 		[NullableContext(1)]
 		private void RefreshSubTitle(Dictionary<int, string> subTitle)
 		{
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039883 RID: 235651 RVA: 0x00DA914C File Offset: 0x00DA734C
+		// Token: 0x0602E7A0 RID: 190368 RVA: 0x00CF7E74 File Offset: 0x00CF6074
 		private void RefreshByTowerDefense()
 		{
 			if (TowerDefenseController.Instance.CheckIsInstanceUnlock(this.TitleOrInstanceId))
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.GetItem(6).SetUIActive(false);
 		}
 
-		// Token: 0x06039884 RID: 235652 RVA: 0x00DA9274 File Offset: 0x00DA7474
+		// Token: 0x0602E7A1 RID: 190369 RVA: 0x00CF7F9C File Offset: 0x00CF619C
 		private bool RefreshInOnlyOneGrid(bool isSelect)
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(this.TitleOrInstanceId);
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return true;
 		}
 
-		// Token: 0x06039885 RID: 235653 RVA: 0x00DA93AC File Offset: 0x00DA75AC
+		// Token: 0x0602E7A2 RID: 190370 RVA: 0x00CF80D4 File Offset: 0x00CF62D4
 		private void RefreshNotOnlyOneGrid()
 		{
 			InstanceDungeonTitle? titleConfig = InstanceDungeonConfig.Instance.GetTitleConfig(this.TitleOrInstanceId);
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039886 RID: 235654 RVA: 0x00DA9458 File Offset: 0x00DA7658
+		// Token: 0x0602E7A3 RID: 190371 RVA: 0x00CF8180 File Offset: 0x00CF6380
 		public void Update(int data, bool isSelect, bool isOnlyOneGrid = false)
 		{
 			this.TitleOrInstanceId = data;
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.UpdateFinishState();
 		}
 
-		// Token: 0x06039887 RID: 235655 RVA: 0x00DA9539 File Offset: 0x00DA7739
+		// Token: 0x0602E7A4 RID: 190372 RVA: 0x00CF8261 File Offset: 0x00CF6461
 		[NullableContext(1)]
 		public void UpdateSubtitleByText(string text)
 		{
@@ -304,13 +304,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			text2.SetText(text, true);
 		}
 
-		// Token: 0x06039888 RID: 235656 RVA: 0x00DA954E File Offset: 0x00DA774E
+		// Token: 0x0602E7A5 RID: 190373 RVA: 0x00CF8276 File Offset: 0x00CF6476
 		public void RefreshSubtitleByIdAndArgs()
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(8), this.SubtitleTextId, this.SubtitleTextArgs ?? Array.Empty<string>());
 		}
 
-		// Token: 0x06039889 RID: 235657 RVA: 0x00DA9578 File Offset: 0x00DA7778
+		// Token: 0x0602E7A6 RID: 190374 RVA: 0x00CF82A0 File Offset: 0x00CF64A0
 		private bool CheckNeedOnTimer(int id)
 		{
 			if (!ActivityMowingController.Instance.IsMowingInstanceDungeon(id))
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return !activityLevelUnlockState;
 		}
 
-		// Token: 0x0603988A RID: 235658 RVA: 0x00DA95EC File Offset: 0x00DA77EC
+		// Token: 0x0602E7A7 RID: 190375 RVA: 0x00CF8314 File Offset: 0x00CF6514
 		private void RefreshMowingInstance()
 		{
 			ActivityMowingData mowingActivityData = ActivityMowingController.Instance.GetMowingActivityData();
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0603988B RID: 235659 RVA: 0x00DA964A File Offset: 0x00DA784A
+		// Token: 0x0602E7A8 RID: 190376 RVA: 0x00CF8372 File Offset: 0x00CF6572
 		private void UpdateFinishState()
 		{
 			if (this.HasOverrideFinishState)
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0603988C RID: 235660 RVA: 0x00DA9668 File Offset: 0x00DA7868
+		// Token: 0x0602E7A9 RID: 190377 RVA: 0x00CF8390 File Offset: 0x00CF6590
 		private void OnChallengeInstanceRedDot(int instanceId)
 		{
 			List<int> list;
@@ -372,14 +372,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603988D RID: 235661 RVA: 0x00DA96A0 File Offset: 0x00DA78A0
+		// Token: 0x0602E7AA RID: 190378 RVA: 0x00CF83C8 File Offset: 0x00CF65C8
 		[NullableContext(1)]
 		public void BindClickCallback(Action<int, UUIExtendToggle, bool> onClickCallback)
 		{
 			this.OnClickCallback = onClickCallback;
 		}
 
-		// Token: 0x0603988E RID: 235662 RVA: 0x00DA96A9 File Offset: 0x00DA78A9
+		// Token: 0x0602E7AB RID: 190379 RVA: 0x00CF83D1 File Offset: 0x00CF65D1
 		public void BindClickCallbackOnlyOneGrid([Nullable(new byte[]
 		{
 			1,
@@ -390,14 +390,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.OnClickCallbackOnlyOneGrid = onClickCallback;
 		}
 
-		// Token: 0x0603988F RID: 235663 RVA: 0x00DA96B2 File Offset: 0x00DA78B2
+		// Token: 0x0602E7AC RID: 190380 RVA: 0x00CF83DA File Offset: 0x00CF65DA
 		[NullableContext(1)]
 		public void BindCanShowRedDot(Func<int, bool> canShowRedDot)
 		{
 			this.CanShowRedDot = canShowRedDot;
 		}
 
-		// Token: 0x06039890 RID: 235664 RVA: 0x00DA96BC File Offset: 0x00DA78BC
+		// Token: 0x0602E7AD RID: 190381 RVA: 0x00CF83E4 File Offset: 0x00CF65E4
 		private void OnClickExtendToggle(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039891 RID: 235665 RVA: 0x00DA9720 File Offset: 0x00DA7920
+		// Token: 0x0602E7AE RID: 190382 RVA: 0x00CF8448 File Offset: 0x00CF6648
 		private void UpdateLockOrFirstReward(bool isOnlyOneGrid)
 		{
 			bool instanceItemLockStateGetter = InstanceDungeonEntranceController.Instance.GetInstanceItemLockStateGetter(this.TitleOrInstanceId);
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.GetItem(6).SetUIActive(false);
 		}
 
-		// Token: 0x06039892 RID: 235666 RVA: 0x00DA97B8 File Offset: 0x00DA79B8
+		// Token: 0x0602E7AF RID: 190383 RVA: 0x00CF84E0 File Offset: 0x00CF66E0
 		private void OnToggleStateChange(EToggleState state)
 		{
 			bool flag = state == EToggleState.ETT_Checked;
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			item.SetUIActive(flag);
 		}
 
-		// Token: 0x06039893 RID: 235667 RVA: 0x00DA97E4 File Offset: 0x00DA79E4
+		// Token: 0x0602E7B0 RID: 190384 RVA: 0x00CF850C File Offset: 0x00CF670C
 		private void RefreshRedDot()
 		{
 			if (this.CanShowRedDot != null && this.CanShowRedDot(this.TitleOrInstanceId))
@@ -478,10 +478,10 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0401E159 RID: 123225
+		// Token: 0x04018BF6 RID: 101366
 		private UUIExtendToggle ExtendToggle;
 
-		// Token: 0x0401E15A RID: 123226
+		// Token: 0x04018BF7 RID: 101367
 		[Nullable(new byte[]
 		{
 			2,
@@ -489,7 +489,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private Action<int, UUIExtendToggle, bool> OnClickCallback;
 
-		// Token: 0x0401E15B RID: 123227
+		// Token: 0x04018BF8 RID: 101368
 		[Nullable(new byte[]
 		{
 			2,
@@ -498,34 +498,34 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private Action<int, UUIExtendToggle, InstanceDetectionDynamicData> OnClickCallbackOnlyOneGrid;
 
-		// Token: 0x0401E15C RID: 123228
+		// Token: 0x04018BF9 RID: 101369
 		private Func<int, bool> CanShowRedDot;
 
-		// Token: 0x0401E15D RID: 123229
+		// Token: 0x04018BFA RID: 101370
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401E15E RID: 123230
+		// Token: 0x04018BFB RID: 101371
 		private int TitleOrInstanceId;
 
-		// Token: 0x0401E15F RID: 123231
+		// Token: 0x04018BFC RID: 101372
 		private bool IsSelect;
 
-		// Token: 0x0401E160 RID: 123232
+		// Token: 0x04018BFD RID: 101373
 		private bool IsOnlyOneGrid;
 
-		// Token: 0x0401E161 RID: 123233
+		// Token: 0x04018BFE RID: 101374
 		private Action TimerRefreshFunction;
 
-		// Token: 0x0401E162 RID: 123234
+		// Token: 0x04018BFF RID: 101375
 		private bool NeedOnTimer;
 
-		// Token: 0x0401E163 RID: 123235
+		// Token: 0x04018C00 RID: 101376
 		public InstanceDetectionDynamicData CurrentData;
 
-		// Token: 0x0401E164 RID: 123236
+		// Token: 0x04018C01 RID: 101377
 		public string SubtitleTextId;
 
-		// Token: 0x0401E165 RID: 123237
+		// Token: 0x04018C02 RID: 101378
 		[Nullable(new byte[]
 		{
 			2,
@@ -533,16 +533,16 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		public string[] SubtitleTextArgs;
 
-		// Token: 0x0401E166 RID: 123238
+		// Token: 0x04018C03 RID: 101379
 		public bool HasOverrideFinishState;
 
-		// Token: 0x0401E167 RID: 123239
+		// Token: 0x04018C04 RID: 101380
 		public bool OverrideFinishState;
 
-		// Token: 0x0401E168 RID: 123240
+		// Token: 0x04018C05 RID: 101381
 		public string IconRightPath;
 
-		// Token: 0x0401E169 RID: 123241
+		// Token: 0x04018C06 RID: 101382
 		private InstanceDungeonViewModelBase ParentModel;
 	}
 }

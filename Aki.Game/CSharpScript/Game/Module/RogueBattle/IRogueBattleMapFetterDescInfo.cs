@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004ED4 RID: 20180
+	// Token: 0x02003E9D RID: 16029
 	[NullableContext(1)]
 	public interface IRogueBattleMapFetterDescInfo
 	{
-		// Token: 0x17007F17 RID: 32535
-		// (get) Token: 0x06033CC5 RID: 212165
-		// (set) Token: 0x06033CC6 RID: 212166
+		// Token: 0x170052C7 RID: 21191
+		// (get) Token: 0x06028B30 RID: 166704
+		// (set) Token: 0x06028B31 RID: 166705
 		string TextId { get; set; }
 
-		// Token: 0x17007F18 RID: 32536
-		// (get) Token: 0x06033CC7 RID: 212167
-		// (set) Token: 0x06033CC8 RID: 212168
+		// Token: 0x170052C8 RID: 21192
+		// (get) Token: 0x06028B32 RID: 166706
+		// (set) Token: 0x06028B33 RID: 166707
 		[Nullable(2)]
 		string Param { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17007F19 RID: 32537
-		// (get) Token: 0x06033CC9 RID: 212169
-		// (set) Token: 0x06033CCA RID: 212170
+		// Token: 0x170052C9 RID: 21193
+		// (get) Token: 0x06028B34 RID: 166708
+		// (set) Token: 0x06028B35 RID: 166709
 		bool IsReached { get; set; }
 
-		// Token: 0x17007F1A RID: 32538
-		// (get) Token: 0x06033CCB RID: 212171
-		// (set) Token: 0x06033CCC RID: 212172
+		// Token: 0x170052CA RID: 21194
+		// (get) Token: 0x06028B36 RID: 166710
+		// (set) Token: 0x06028B37 RID: 166711
 		ERogueResBondEffectType EffectType { get; set; }
 	}
 }

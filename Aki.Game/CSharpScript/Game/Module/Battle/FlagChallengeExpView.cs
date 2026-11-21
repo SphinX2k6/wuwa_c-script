@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C33 RID: 23603
+	// Token: 0x02004C13 RID: 19475
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FlagChallengeExpView : BattleVisibleChildView
 	{
-		// Token: 0x0603BA2B RID: 244267 RVA: 0x00E3A774 File Offset: 0x00E38974
+		// Token: 0x06030976 RID: 199030 RVA: 0x00D8AAE4 File Offset: 0x00D88CE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BA2C RID: 244268 RVA: 0x00E3A970 File Offset: 0x00E38B70
+		// Token: 0x06030977 RID: 199031 RVA: 0x00D8ACE0 File Offset: 0x00D88EE0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FlagChallengeExpView.<OnBeforeStartAsync>d__35 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BA2D RID: 244269 RVA: 0x00E3A9B4 File Offset: 0x00E38BB4
+		// Token: 0x06030978 RID: 199032 RVA: 0x00D8AD24 File Offset: 0x00D88F24
 		protected override void OnStart()
 		{
 			this.AddExpBar = base.GetSprite(0);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Battle
 			levelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEnd), false);
 		}
 
-		// Token: 0x0603BA2E RID: 244270 RVA: 0x00E3AAFA File Offset: 0x00E38CFA
+		// Token: 0x06030979 RID: 199033 RVA: 0x00D8AE6A File Offset: 0x00D8906A
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ExpTextTimer != null)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA2F RID: 244271 RVA: 0x00E3AB1C File Offset: 0x00E38D1C
+		// Token: 0x0603097A RID: 199034 RVA: 0x00D8AE8C File Offset: 0x00D8908C
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.AddEvents();
 		}
 
-		// Token: 0x0603BA30 RID: 244272 RVA: 0x00E3AB3A File Offset: 0x00E38D3A
+		// Token: 0x0603097B RID: 199035 RVA: 0x00D8AEAA File Offset: 0x00D890AA
 		public override void Reset()
 		{
 			this.RemoveEvents();
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Battle
 			base.Reset();
 		}
 
-		// Token: 0x0603BA31 RID: 244273 RVA: 0x00E3AB74 File Offset: 0x00E38D74
+		// Token: 0x0603097C RID: 199036 RVA: 0x00D8AEE4 File Offset: 0x00D890E4
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnFlagChallengeExpChanged, new Action<int, int, int, int>(this.OnFlagChallengeExpChanged));
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Add(EEventName.LoadingViewOnAfterShow, new Action(this.OnRefreshPendingChangeInfo));
 		}
 
-		// Token: 0x0603BA32 RID: 244274 RVA: 0x00E3ABD8 File Offset: 0x00E38DD8
+		// Token: 0x0603097D RID: 199037 RVA: 0x00D8AF48 File Offset: 0x00D89148
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnFlagChallengeExpChanged, new Action<int, int, int, int>(this.OnFlagChallengeExpChanged));
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Remove(EEventName.LoadingViewOnAfterShow, new Action(this.OnRefreshPendingChangeInfo));
 		}
 
-		// Token: 0x0603BA33 RID: 244275 RVA: 0x00E3AC39 File Offset: 0x00E38E39
+		// Token: 0x0603097E RID: 199038 RVA: 0x00D8AFA9 File Offset: 0x00D891A9
 		[NullableContext(1)]
 		private void OnSequenceEnd(string sequenceName)
 		{
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA34 RID: 244276 RVA: 0x00E3AC5C File Offset: 0x00E38E5C
+		// Token: 0x0603097F RID: 199039 RVA: 0x00D8AFCC File Offset: 0x00D891CC
 		public void StartShow()
 		{
 			this.IsShowFlagChallengeUi = true;
@@ -192,14 +192,14 @@ namespace CSharpScript.Game.Module.Battle
 			this.OnBattleStateChanged(FormationDataController.Instance.GlobalIsInFight);
 		}
 
-		// Token: 0x0603BA35 RID: 244277 RVA: 0x00E3AC89 File Offset: 0x00E38E89
+		// Token: 0x06030980 RID: 199040 RVA: 0x00D8AFF9 File Offset: 0x00D891F9
 		public void EndShow()
 		{
 			this.IsShowFlagChallengeUi = false;
 			this.PlayEndShowAnim();
 		}
 
-		// Token: 0x0603BA36 RID: 244278 RVA: 0x00E3AC98 File Offset: 0x00E38E98
+		// Token: 0x06030981 RID: 199041 RVA: 0x00D8B008 File Offset: 0x00D89208
 		private void PlayStartShowAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Battle
 			flagChallengeAnimItem2.SetUiActive(true);
 		}
 
-		// Token: 0x0603BA37 RID: 244279 RVA: 0x00E3AD00 File Offset: 0x00E38F00
+		// Token: 0x06030982 RID: 199042 RVA: 0x00D8B070 File Offset: 0x00D89270
 		private void PlayEndShowAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Battle
 			flagChallengeAnimItem2.SetUiActive(true);
 		}
 
-		// Token: 0x0603BA38 RID: 244280 RVA: 0x00E3AD68 File Offset: 0x00E38F68
+		// Token: 0x06030983 RID: 199043 RVA: 0x00D8B0D8 File Offset: 0x00D892D8
 		private void PlayLevelUpAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Battle
 			levelSequencePlayer3.PlaySequencePurely("Up", false, false, null, null, false);
 		}
 
-		// Token: 0x0603BA39 RID: 244281 RVA: 0x00E3ADC8 File Offset: 0x00E38FC8
+		// Token: 0x06030984 RID: 199044 RVA: 0x00D8B138 File Offset: 0x00D89338
 		public void Tick(float delta)
 		{
 			if (!base.GetVisible() || this.ProgressAnimSpeed == 0f)
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.Battle
 			currentExpText.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603BA3A RID: 244282 RVA: 0x00E3B1A4 File Offset: 0x00E393A4
+		// Token: 0x06030985 RID: 199045 RVA: 0x00D8B514 File Offset: 0x00D89714
 		private void RefreshFlagChallengeInfo()
 		{
 			int activityId = FlagChallengeBattleModel.Instance.ActivityId;
@@ -435,7 +435,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.RefreshLevelMaxItem();
 		}
 
-		// Token: 0x0603BA3B RID: 244283 RVA: 0x00E3B278 File Offset: 0x00E39478
+		// Token: 0x06030986 RID: 199046 RVA: 0x00D8B5E8 File Offset: 0x00D897E8
 		private void OnFlagChallengeExpChanged(int oldExp, int newExp, int oldLevel, int newLevel)
 		{
 			if (!base.GetVisible())
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.Module.Battle
 			flagChallengeAnimItem.SetUiActive(false);
 		}
 
-		// Token: 0x0603BA3C RID: 244284 RVA: 0x00E3B428 File Offset: 0x00E39628
+		// Token: 0x06030987 RID: 199047 RVA: 0x00D8B798 File Offset: 0x00D89998
 		private void OnBattleStateChanged(bool isInBattleState)
 		{
 			if (!this.IsShowFlagChallengeUi)
@@ -555,7 +555,7 @@ namespace CSharpScript.Game.Module.Battle
 			disableItem.SetUIActive(isInBattleState);
 		}
 
-		// Token: 0x0603BA3D RID: 244285 RVA: 0x00E3B532 File Offset: 0x00E39732
+		// Token: 0x06030988 RID: 199048 RVA: 0x00D8B8A2 File Offset: 0x00D89AA2
 		private void OnRefreshPendingChangeInfo()
 		{
 			if (this.IsPendingChangeInfo)
@@ -565,7 +565,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA3E RID: 244286 RVA: 0x00E3B54C File Offset: 0x00E3974C
+		// Token: 0x06030989 RID: 199049 RVA: 0x00D8B8BC File Offset: 0x00D89ABC
 		private void DelayHideExpText()
 		{
 			if (this.ExpTextTimer != null)
@@ -596,7 +596,7 @@ namespace CSharpScript.Game.Module.Battle
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603BA3F RID: 244287 RVA: 0x00E3B59B File Offset: 0x00E3979B
+		// Token: 0x0603098A RID: 199050 RVA: 0x00D8B90B File Offset: 0x00D89B0B
 		private void RefreshLevelMaxItem()
 		{
 			UUIItem item = base.GetItem(7);
@@ -607,150 +607,150 @@ namespace CSharpScript.Game.Module.Battle
 			item.SetUIActive(this.CurrentLevel == this.MaxLevel);
 		}
 
-		// Token: 0x0603BA40 RID: 244288 RVA: 0x00E3B5BC File Offset: 0x00E397BC
+		// Token: 0x0603098B RID: 199051 RVA: 0x00D8B92C File Offset: 0x00D89B2C
 		[NullableContext(1)]
 		public UUIItem GetLevelBgTextureItem()
 		{
 			return base.GetTexture(11);
 		}
 
-		// Token: 0x0401F0A8 RID: 127144
+		// Token: 0x04019B59 RID: 105305
 		private const float UI_BAR_MIN_PERCENT = 0f;
 
-		// Token: 0x0401F0A9 RID: 127145
+		// Token: 0x04019B5A RID: 105306
 		private const float UI_BAR_MAX_PERCENT = 0.3f;
 
-		// Token: 0x0401F0AA RID: 127146
+		// Token: 0x04019B5B RID: 105307
 		private const float PROGRESS_ANIM_DURATION = 1000f;
 
-		// Token: 0x0401F0AB RID: 127147
+		// Token: 0x04019B5C RID: 105308
 		private const float EXP_TEXT_STAY_DURATION = 2000f;
 
-		// Token: 0x0401F0AC RID: 127148
+		// Token: 0x04019B5D RID: 105309
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat TickStatsObject = Stat.Create("[BattleView]FlagChallengeExpView", "", "");
 
-		// Token: 0x0401F0AD RID: 127149
+		// Token: 0x04019B5E RID: 105310
 		private UUISprite AddExpBar;
 
-		// Token: 0x0401F0AE RID: 127150
+		// Token: 0x04019B5F RID: 105311
 		private UUISprite ChangeExpBar;
 
-		// Token: 0x0401F0AF RID: 127151
+		// Token: 0x04019B60 RID: 105312
 		private UUIArtText LevelText;
 
-		// Token: 0x0401F0B0 RID: 127152
+		// Token: 0x04019B61 RID: 105313
 		private UUIItem ExpValuePanel;
 
-		// Token: 0x0401F0B1 RID: 127153
+		// Token: 0x04019B62 RID: 105314
 		private UUIText AddExpText;
 
-		// Token: 0x0401F0B2 RID: 127154
+		// Token: 0x04019B63 RID: 105315
 		private UUIText CurrentExpText;
 
-		// Token: 0x0401F0B3 RID: 127155
+		// Token: 0x04019B64 RID: 105316
 		private UUITexture LevelMaxLightTexture;
 
-		// Token: 0x0401F0B4 RID: 127156
+		// Token: 0x04019B65 RID: 105317
 		private UUITexture LevelMaxBgTexture;
 
-		// Token: 0x0401F0B5 RID: 127157
+		// Token: 0x04019B66 RID: 105318
 		private UUITexture LevelMaxText;
 
-		// Token: 0x0401F0B6 RID: 127158
+		// Token: 0x04019B67 RID: 105319
 		private UUISprite LevelBgSprite;
 
-		// Token: 0x0401F0B7 RID: 127159
+		// Token: 0x04019B68 RID: 105320
 		private UUIItem DisableItem;
 
-		// Token: 0x0401F0B8 RID: 127160
+		// Token: 0x04019B69 RID: 105321
 		private FlagChallengeAnimItem FlagChallengeAnimItem;
 
-		// Token: 0x0401F0B9 RID: 127161
+		// Token: 0x04019B6A RID: 105322
 		private int CacheOldExp;
 
-		// Token: 0x0401F0BA RID: 127162
+		// Token: 0x04019B6B RID: 105323
 		private int CacheOldLevel;
 
-		// Token: 0x0401F0BB RID: 127163
+		// Token: 0x04019B6C RID: 105324
 		private bool IsPlaying;
 
-		// Token: 0x0401F0BC RID: 127164
+		// Token: 0x04019B6D RID: 105325
 		private int CurrentLevel;
 
-		// Token: 0x0401F0BD RID: 127165
+		// Token: 0x04019B6E RID: 105326
 		private float CurrentExpProgress;
 
-		// Token: 0x0401F0BE RID: 127166
+		// Token: 0x04019B6F RID: 105327
 		private int TargetLevel;
 
-		// Token: 0x0401F0BF RID: 127167
+		// Token: 0x04019B70 RID: 105328
 		private float TargetExpProgress;
 
-		// Token: 0x0401F0C0 RID: 127168
+		// Token: 0x04019B71 RID: 105329
 		private float ProgressAnimSpeed;
 
-		// Token: 0x0401F0C1 RID: 127169
+		// Token: 0x04019B72 RID: 105330
 		private bool IsAddProgress = true;
 
-		// Token: 0x0401F0C2 RID: 127170
+		// Token: 0x04019B73 RID: 105331
 		private bool IsLevelUp;
 
-		// Token: 0x0401F0C3 RID: 127171
+		// Token: 0x04019B74 RID: 105332
 		private int MaxLevel;
 
-		// Token: 0x0401F0C4 RID: 127172
+		// Token: 0x04019B75 RID: 105333
 		private bool IsPendingChangeInfo;
 
-		// Token: 0x0401F0C5 RID: 127173
+		// Token: 0x04019B76 RID: 105334
 		private bool IsShowFlagChallengeUi;
 
-		// Token: 0x0401F0C6 RID: 127174
+		// Token: 0x04019B77 RID: 105335
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F0C7 RID: 127175
+		// Token: 0x04019B78 RID: 105336
 		private TimerHandle ExpTextTimer;
 
-		// Token: 0x0200BE23 RID: 48675
+		// Token: 0x0200A82B RID: 43051
 		[NullableContext(0)]
 		private enum EVisibleReason
 		{
-			// Token: 0x0403955F RID: 234847
+			// Token: 0x04033F22 RID: 212770
 			Default = 1
 		}
 
-		// Token: 0x0200BE24 RID: 48676
+		// Token: 0x0200A82C RID: 43052
 		[NullableContext(0)]
 		private enum EComponentType
 		{
-			// Token: 0x04039561 RID: 234849
+			// Token: 0x04033F24 RID: 212772
 			AddExpBar,
-			// Token: 0x04039562 RID: 234850
+			// Token: 0x04033F25 RID: 212773
 			ChangeExpBar,
-			// Token: 0x04039563 RID: 234851
+			// Token: 0x04033F26 RID: 212774
 			LevelText,
-			// Token: 0x04039564 RID: 234852
+			// Token: 0x04033F27 RID: 212775
 			ExpValuePanel,
-			// Token: 0x04039565 RID: 234853
+			// Token: 0x04033F28 RID: 212776
 			AddExpText,
-			// Token: 0x04039566 RID: 234854
+			// Token: 0x04033F29 RID: 212777
 			CurrentExpText,
-			// Token: 0x04039567 RID: 234855
+			// Token: 0x04033F2A RID: 212778
 			MoraleAnimItem,
-			// Token: 0x04039568 RID: 234856
+			// Token: 0x04033F2B RID: 212779
 			LevelMaxItem,
-			// Token: 0x04039569 RID: 234857
+			// Token: 0x04033F2C RID: 212780
 			LevelMaxLightTexture,
-			// Token: 0x0403956A RID: 234858
+			// Token: 0x04033F2D RID: 212781
 			LevelMaxBgTexture,
-			// Token: 0x0403956B RID: 234859
+			// Token: 0x04033F2E RID: 212782
 			LevelMaxText,
-			// Token: 0x0403956C RID: 234860
+			// Token: 0x04033F2F RID: 212783
 			LevelBgTexture,
-			// Token: 0x0403956D RID: 234861
+			// Token: 0x04033F30 RID: 212784
 			LevelBgSprite,
-			// Token: 0x0403956E RID: 234862
+			// Token: 0x04033F31 RID: 212785
 			DisableItem
 		}
 	}

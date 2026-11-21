@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200142F RID: 5167
+// Token: 0x020008E3 RID: 2275
 public class PinballBattlePauseViewParam : IPinballBattlePauseViewParam
 {
-	// Token: 0x17000CC1 RID: 3265
-	// (get) Token: 0x060091D4 RID: 37332 RVA: 0x001F316F File Offset: 0x001F136F
-	// (set) Token: 0x060091D5 RID: 37333 RVA: 0x001F3177 File Offset: 0x001F1377
+	// Token: 0x17000CE1 RID: 3297
+	// (get) Token: 0x06006569 RID: 25961 RVA: 0x001FBCAB File Offset: 0x001F9EAB
+	// (set) Token: 0x0600656A RID: 25962 RVA: 0x001FBCB3 File Offset: 0x001F9EB3
 	public int LevelId { get; set; }
 }

@@ -5,15 +5,15 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B3A RID: 27450
+	// Token: 0x02005CB2 RID: 23730
 	public class LevelEventInteractGravityFlip : LevelEventBase
 	{
-		// Token: 0x06044144 RID: 278852 RVA: 0x010BD3D6 File Offset: 0x010BB5D6
+		// Token: 0x0603A296 RID: 238230 RVA: 0x01066C62 File Offset: 0x01064E62
 		public LevelEventInteractGravityFlip(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044145 RID: 278853 RVA: 0x010BD3E0 File Offset: 0x010BB5E0
+		// Token: 0x0603A297 RID: 238231 RVA: 0x01066C6C File Offset: 0x01064E6C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.LevelGamePlay;
@@ -12,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FDB RID: 20443
+	// Token: 0x02003FA5 RID: 16293
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotBlendController : ControllerBase
 	{
-		// Token: 0x060344EF RID: 214255 RVA: 0x00C4901E File Offset: 0x00C4721E
+		// Token: 0x06029378 RID: 168824 RVA: 0x00B93076 File Offset: 0x00B91276
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Press)
@@ -30,7 +29,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344F0 RID: 214256 RVA: 0x00C49032 File Offset: 0x00C47232
+		// Token: 0x06029379 RID: 168825 RVA: 0x00B9308A File Offset: 0x00B9128A
 		private void OnInputMoveAxis(string axisName, float axisValue, InputIdentification inputIdentification)
 		{
 			if (Math.Abs(axisValue) < 0.1f)
@@ -43,13 +42,13 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344F1 RID: 214257 RVA: 0x00C49050 File Offset: 0x00C47250
+		// Token: 0x0602937A RID: 168826 RVA: 0x00B930A8 File Offset: 0x00B912A8
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x060344F2 RID: 214258 RVA: 0x00C49054 File Offset: 0x00C47254
+		// Token: 0x0602937B RID: 168827 RVA: 0x00B930AC File Offset: 0x00B912AC
 		protected override bool OnClear()
 		{
 			PlotModel.Instance.IsBlendProcessing = false;
@@ -73,18 +72,18 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x060344F3 RID: 214259 RVA: 0x00C4911C File Offset: 0x00C4731C
+		// Token: 0x0602937C RID: 168828 RVA: 0x00B93174 File Offset: 0x00B91374
 		protected override void OnTick(float delta)
 		{
 			bool isBlendProcessing = PlotModel.Instance.IsBlendProcessing;
 		}
 
-		// Token: 0x060344F4 RID: 214260 RVA: 0x00C49129 File Offset: 0x00C47329
+		// Token: 0x0602937D RID: 168829 RVA: 0x00B93181 File Offset: 0x00B91381
 		protected override void OnAfterTick(float delta)
 		{
 		}
 
-		// Token: 0x060344F5 RID: 214261 RVA: 0x00C4912C File Offset: 0x00C4732C
+		// Token: 0x0602937E RID: 168830 RVA: 0x00B93184 File Offset: 0x00B91384
 		protected override bool OnLeaveLevel()
 		{
 			global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.YZH, "[PlotBlend] PlotBlendController 离开关卡", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -99,14 +98,14 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x060344F6 RID: 214262 RVA: 0x00C49198 File Offset: 0x00C47398
+		// Token: 0x0602937F RID: 168831 RVA: 0x00B931F0 File Offset: 0x00B913F0
 		protected override bool OnChangeMode()
 		{
 			global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.YZH, "[PlotBlend] PlotBlendController 改变模式", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return true;
 		}
 
-		// Token: 0x060344F7 RID: 214263 RVA: 0x00C491C4 File Offset: 0x00C473C4
+		// Token: 0x06029380 RID: 168832 RVA: 0x00B9321C File Offset: 0x00B9141C
 		public void SetupInfo(SetBlendAnim blendInfo, string sourceId)
 		{
 			this.CurrentBlendInfo = blendInfo;
@@ -125,15 +124,20 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344F8 RID: 214264 RVA: 0x00C49220 File Offset: 0x00C47420
+		// Token: 0x06029381 RID: 168833 RVA: 0x00B93278 File Offset: 0x00B91478
 		private void PreloadAnimSequence(IBlendAnimTypeBase blendType)
 		{
-			PropertyInfo property = blendType.GetType().GetProperty("AnimSequence");
-			if (property == null)
+			ISetAnimSequenceBlendAnimType setAnimSequenceBlendAnimType = blendType as ISetAnimSequenceBlendAnimType;
+			string animPath2;
+			if (setAnimSequenceBlendAnimType != null)
 			{
-				return;
+				animPath2 = setAnimSequenceBlendAnimType.AnimSequence;
 			}
-			string animPath = property.GetValue(blendType) as string;
+			else
+			{
+				animPath2 = null;
+			}
+			string animPath = animPath2;
 			if (animPath == null)
 			{
 				return;
@@ -166,7 +170,7 @@ namespace CSharpScript.Game.Module.Plot
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060344F9 RID: 214265 RVA: 0x00C492E0 File Offset: 0x00C474E0
+		// Token: 0x06029382 RID: 168834 RVA: 0x00B93328 File Offset: 0x00B91528
 		private void ExecuteStateMachineBlend(WorldEntity entity, CharacterAnimationComponent animComp, EBlendAnimState targetState)
 		{
 			if (animComp == null)
@@ -265,7 +269,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344FA RID: 214266 RVA: 0x00C495F4 File Offset: 0x00C477F4
+		// Token: 0x06029383 RID: 168835 RVA: 0x00B9363C File Offset: 0x00B9183C
 		private void ExecuteAnimSequenceBlend(UAnimInstance animInstance, IBlendAnimTypeBase blendType)
 		{
 			string animSequence = ((ISetAnimSequenceBlendAnimType)blendType).AnimSequence;
@@ -323,7 +327,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.BindInputAxes(null);
 		}
 
-		// Token: 0x060344FB RID: 214267 RVA: 0x00C4978C File Offset: 0x00C4798C
+		// Token: 0x06029384 RID: 168836 RVA: 0x00B937D4 File Offset: 0x00B919D4
 		[NullableContext(0)]
 		public UniTask<bool> TryExecuteBlend([Nullable(2)] string sourceId)
 		{
@@ -336,7 +340,7 @@ namespace CSharpScript.Game.Module.Plot
 			return <TryExecuteBlend>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060344FC RID: 214268 RVA: 0x00C497D8 File Offset: 0x00C479D8
+		// Token: 0x06029385 RID: 168837 RVA: 0x00B93820 File Offset: 0x00B91A20
 		public void EndBlendOutSwitchPose()
 		{
 			if (!PlotModel.Instance.IsBlendProcessing)
@@ -367,7 +371,7 @@ namespace CSharpScript.Game.Module.Plot
 			PlotModel.Instance.IsBlendProcessing = false;
 		}
 
-		// Token: 0x060344FD RID: 214269 RVA: 0x00C498C5 File Offset: 0x00C47AC5
+		// Token: 0x06029386 RID: 168838 RVA: 0x00B9390D File Offset: 0x00B91B0D
 		private void ClearProtectTime()
 		{
 			if (this.ProtectTimeTimerHandle != null)
@@ -378,7 +382,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.IsInProtectTime = false;
 		}
 
-		// Token: 0x060344FE RID: 214270 RVA: 0x00C498EE File Offset: 0x00C47AEE
+		// Token: 0x06029387 RID: 168839 RVA: 0x00B93936 File Offset: 0x00B91B36
 		private void ClearAnimEndTimer()
 		{
 			if (this.AnimEndTimerHandle != null)
@@ -388,7 +392,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344FF RID: 214271 RVA: 0x00C49910 File Offset: 0x00C47B10
+		// Token: 0x06029388 RID: 168840 RVA: 0x00B93958 File Offset: 0x00B91B58
 		private void ClearBlendData()
 		{
 			this.CurrentBlendInfo = null;
@@ -402,8 +406,8 @@ namespace CSharpScript.Game.Module.Plot
 			this.PreloadPromises.Clear();
 		}
 
-		// Token: 0x17007FBD RID: 32701
-		// (get) Token: 0x06034500 RID: 214272 RVA: 0x00C49994 File Offset: 0x00C47B94
+		// Token: 0x17005371 RID: 21361
+		// (get) Token: 0x06029389 RID: 168841 RVA: 0x00B939DC File Offset: 0x00B91BDC
 		public bool HasBlendInfo
 		{
 			get
@@ -412,8 +416,8 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x17007FBE RID: 32702
-		// (get) Token: 0x06034501 RID: 214273 RVA: 0x00C4999F File Offset: 0x00C47B9F
+		// Token: 0x17005372 RID: 21362
+		// (get) Token: 0x0602938A RID: 168842 RVA: 0x00B939E7 File Offset: 0x00B91BE7
 		public bool HasUnexecutedBlendInfo
 		{
 			get
@@ -422,13 +426,13 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034502 RID: 214274 RVA: 0x00C499B4 File Offset: 0x00C47BB4
+		// Token: 0x0602938B RID: 168843 RVA: 0x00B939FC File Offset: 0x00B91BFC
 		public bool IsAnimationPreloaded(string animPath)
 		{
 			return this.PreloadedAnimationAssets.ContainsKey(animPath);
 		}
 
-		// Token: 0x06034503 RID: 214275 RVA: 0x00C499C4 File Offset: 0x00C47BC4
+		// Token: 0x0602938C RID: 168844 RVA: 0x00B93A0C File Offset: 0x00B91C0C
 		[NullableContext(0)]
 		public UniTask<bool> WaitForAnimationPreload([Nullable(1)] string animPath)
 		{
@@ -441,14 +445,14 @@ namespace CSharpScript.Game.Module.Plot
 			return <WaitForAnimationPreload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034504 RID: 214276 RVA: 0x00C49A0F File Offset: 0x00C47C0F
+		// Token: 0x0602938D RID: 168845 RVA: 0x00B93A57 File Offset: 0x00B91C57
 		[NullableContext(2)]
 		public SetBlendAnim GetCurrentBlendInfo()
 		{
 			return this.CurrentBlendInfo;
 		}
 
-		// Token: 0x06034505 RID: 214277 RVA: 0x00C49A18 File Offset: 0x00C47C18
+		// Token: 0x0602938E RID: 168846 RVA: 0x00B93A60 File Offset: 0x00B91C60
 		public void ClearBlendInfo()
 		{
 			this.CurrentBlendInfo = null;
@@ -457,7 +461,7 @@ namespace CSharpScript.Game.Module.Plot
 			global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.YZH, "[PlotBlend] 手动清理Blend信息", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06034506 RID: 214278 RVA: 0x00C49A58 File Offset: 0x00C47C58
+		// Token: 0x0602938F RID: 168847 RVA: 0x00B93AA0 File Offset: 0x00B91CA0
 		public void BindInputActions([Nullable(new byte[]
 		{
 			2,
@@ -472,7 +476,7 @@ namespace CSharpScript.Game.Module.Plot
 			InputDistributeController.Instance.BindActions(array, new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x06034507 RID: 214279 RVA: 0x00C49A90 File Offset: 0x00C47C90
+		// Token: 0x06029390 RID: 168848 RVA: 0x00B93AD8 File Offset: 0x00B91CD8
 		public void UnBindInputActions([Nullable(new byte[]
 		{
 			2,
@@ -487,7 +491,7 @@ namespace CSharpScript.Game.Module.Plot
 			InputDistributeController.Instance.UnBindActions(array, new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 		}
 
-		// Token: 0x06034508 RID: 214280 RVA: 0x00C49AC8 File Offset: 0x00C47CC8
+		// Token: 0x06029391 RID: 168849 RVA: 0x00B93B10 File Offset: 0x00B91D10
 		public void BindInputAxes([Nullable(new byte[]
 		{
 			2,
@@ -502,7 +506,7 @@ namespace CSharpScript.Game.Module.Plot
 			InputDistributeController.Instance.BindAxes(array, new TInputHandle<float>(this.OnInputMoveAxis));
 		}
 
-		// Token: 0x06034509 RID: 214281 RVA: 0x00C49B00 File Offset: 0x00C47D00
+		// Token: 0x06029392 RID: 168850 RVA: 0x00B93B48 File Offset: 0x00B91D48
 		public void UnBindInputAxes([Nullable(new byte[]
 		{
 			2,
@@ -517,8 +521,8 @@ namespace CSharpScript.Game.Module.Plot
 			InputDistributeController.Instance.UnBindAxes(array, new TInputHandle<float>(this.OnInputMoveAxis));
 		}
 
-		// Token: 0x17007FBF RID: 32703
-		// (get) Token: 0x0603450A RID: 214282 RVA: 0x00C49B38 File Offset: 0x00C47D38
+		// Token: 0x17005373 RID: 21363
+		// (get) Token: 0x06029393 RID: 168851 RVA: 0x00B93B80 File Offset: 0x00B91D80
 		public static PlotBlendController Instance
 		{
 			get
@@ -527,7 +531,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0603450B RID: 214283 RVA: 0x00C49B3F File Offset: 0x00C47D3F
+		// Token: 0x06029394 RID: 168852 RVA: 0x00B93B87 File Offset: 0x00B91D87
 		public static PlotBlendController GetOrCreateInstance()
 		{
 			if (PlotBlendController._Instance == null)
@@ -537,7 +541,7 @@ namespace CSharpScript.Game.Module.Plot
 			return PlotBlendController._Instance;
 		}
 
-		// Token: 0x0603450C RID: 214284 RVA: 0x00C49B53 File Offset: 0x00C47D53
+		// Token: 0x06029395 RID: 168853 RVA: 0x00B93B9B File Offset: 0x00B91D9B
 		public static bool CreateInstance()
 		{
 			if (PlotBlendController._Instance != null)
@@ -548,30 +552,30 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x0603450D RID: 214285 RVA: 0x00C49B69 File Offset: 0x00C47D69
+		// Token: 0x06029396 RID: 168854 RVA: 0x00B93BB1 File Offset: 0x00B91DB1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603450E RID: 214286 RVA: 0x00C49B6B File Offset: 0x00C47D6B
+		// Token: 0x06029397 RID: 168855 RVA: 0x00B93BB3 File Offset: 0x00B91DB3
 		public static void ResetStaticDefaultValue()
 		{
 			PlotBlendController._Instance = null;
 		}
 
-		// Token: 0x0603450F RID: 214287 RVA: 0x00C49B73 File Offset: 0x00C47D73
+		// Token: 0x06029398 RID: 168856 RVA: 0x00B93BBB File Offset: 0x00B91DBB
 		static PlotBlendController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlotBlendController.CreateStaticDefaultValue), new Action(PlotBlendController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BD1C RID: 113948
+		// Token: 0x040166F7 RID: 91895
 		private const float BLEND_IN = 0.1f;
 
-		// Token: 0x0401BD1D RID: 113949
+		// Token: 0x040166F8 RID: 91896
 		private const float BLEND_OUT = 0.1f;
 
-		// Token: 0x0401BD1E RID: 113950
+		// Token: 0x040166F9 RID: 91897
 		private readonly string[] blendMonitorActions = new string[]
 		{
 			"跳跃",
@@ -595,42 +599,42 @@ namespace CSharpScript.Game.Module.Plot
 			"瞄准"
 		};
 
-		// Token: 0x0401BD1F RID: 113951
+		// Token: 0x040166FA RID: 91898
 		private readonly string[] blendMonitorAxes = new string[]
 		{
 			"MoveForward",
 			"MoveRight"
 		};
 
-		// Token: 0x0401BD20 RID: 113952
+		// Token: 0x040166FB RID: 91899
 		[Nullable(2)]
 		private SetBlendAnim CurrentBlendInfo;
 
-		// Token: 0x0401BD21 RID: 113953
+		// Token: 0x040166FC RID: 91900
 		private bool SetupInfoExecuted;
 
-		// Token: 0x0401BD22 RID: 113954
+		// Token: 0x040166FD RID: 91901
 		[Nullable(2)]
 		private string TriggerSourceId;
 
-		// Token: 0x0401BD23 RID: 113955
+		// Token: 0x040166FE RID: 91902
 		private readonly Dictionary<string, UAnimSequence> PreloadedAnimationAssets = new Dictionary<string, UAnimSequence>();
 
-		// Token: 0x0401BD24 RID: 113956
+		// Token: 0x040166FF RID: 91903
 		private readonly Dictionary<string, CustomPromise<bool>> PreloadPromises = new Dictionary<string, CustomPromise<bool>>();
 
-		// Token: 0x0401BD25 RID: 113957
+		// Token: 0x04016700 RID: 91904
 		private bool IsInProtectTime;
 
-		// Token: 0x0401BD26 RID: 113958
+		// Token: 0x04016701 RID: 91905
 		[Nullable(2)]
 		private TimerHandle ProtectTimeTimerHandle;
 
-		// Token: 0x0401BD27 RID: 113959
+		// Token: 0x04016702 RID: 91906
 		[Nullable(2)]
 		private TimerHandle AnimEndTimerHandle;
 
-		// Token: 0x0401BD28 RID: 113960
+		// Token: 0x04016703 RID: 91907
 		[Nullable(2)]
 		private static PlotBlendController _Instance;
 	}

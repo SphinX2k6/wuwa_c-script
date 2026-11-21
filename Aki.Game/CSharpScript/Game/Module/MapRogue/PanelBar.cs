@@ -5,11 +5,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005607 RID: 22023
+	// Token: 0x020045DD RID: 17885
 	public class PanelBar : UiPanelBase
 	{
-		// Token: 0x1700871D RID: 34589
-		// (get) Token: 0x060380CD RID: 229581 RVA: 0x00D46451 File Offset: 0x00D44651
+		// Token: 0x17005AE4 RID: 23268
+		// (get) Token: 0x0602CFCB RID: 184267 RVA: 0x00C94199 File Offset: 0x00C92399
 		protected bool IsActive
 		{
 			get
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x060380CE RID: 229582 RVA: 0x00D4647C File Offset: 0x00D4467C
+		// Token: 0x0602CFCC RID: 184268 RVA: 0x00C941C4 File Offset: 0x00C923C4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,26 +30,26 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060380CF RID: 229583 RVA: 0x00D464EC File Offset: 0x00D446EC
+		// Token: 0x0602CFCD RID: 184269 RVA: 0x00C94234 File Offset: 0x00C92434
 		protected override void OnStart()
 		{
 			base.GetSprite(1).SetUIActive(false);
 		}
 
-		// Token: 0x060380D0 RID: 229584 RVA: 0x00D464FB File Offset: 0x00D446FB
+		// Token: 0x0602CFCE RID: 184270 RVA: 0x00C94243 File Offset: 0x00C92443
 		public void SetDirection(int direction)
 		{
 			this.Direction = direction;
 		}
 
-		// Token: 0x060380D1 RID: 229585 RVA: 0x00D46504 File Offset: 0x00D44704
+		// Token: 0x0602CFCF RID: 184271 RVA: 0x00C9424C File Offset: 0x00C9244C
 		public void SetLimit(int limit)
 		{
 			this.Limit = limit;
 			base.GetText(0).SetText(limit.ToString(), true);
 		}
 
-		// Token: 0x060380D2 RID: 229586 RVA: 0x00D46524 File Offset: 0x00D44724
+		// Token: 0x0602CFD0 RID: 184272 RVA: 0x00C9426C File Offset: 0x00C9246C
 		public void SetCurrentValue(int current)
 		{
 			UUISprite sprite = base.GetSprite(2);
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			item.SetAnchorOffsetX(anchorOffsetX);
 		}
 
-		// Token: 0x060380D3 RID: 229587 RVA: 0x00D465A4 File Offset: 0x00D447A4
+		// Token: 0x0602CFD1 RID: 184273 RVA: 0x00C942EC File Offset: 0x00C924EC
 		public void SetPreviewValue(int changeValue)
 		{
 			if (changeValue > 0)
@@ -94,20 +94,20 @@ namespace CSharpScript.Game.Module.MapRogue
 			sprite2.SetUIActive(num3 > 0f);
 		}
 
-		// Token: 0x060380D4 RID: 229588 RVA: 0x00D4668C File Offset: 0x00D4488C
+		// Token: 0x0602CFD2 RID: 184274 RVA: 0x00C943D4 File Offset: 0x00C925D4
 		public void ClosePreviewValue()
 		{
 			base.GetSprite(1).SetUIActive(false);
 			this.SetCurrentValue(this.Current);
 		}
 
-		// Token: 0x0401D762 RID: 120674
+		// Token: 0x040181ED RID: 98797
 		protected int Direction = 1;
 
-		// Token: 0x0401D763 RID: 120675
+		// Token: 0x040181EE RID: 98798
 		protected int Limit;
 
-		// Token: 0x0401D764 RID: 120676
+		// Token: 0x040181EF RID: 98799
 		protected int Current;
 	}
 }

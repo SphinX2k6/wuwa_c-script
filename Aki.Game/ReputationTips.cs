@@ -6,16 +6,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F8D RID: 8077
+// Token: 0x0200144F RID: 5199
 public class ReputationTips : UiViewBase
 {
-	// Token: 0x0600FAA9 RID: 64169 RVA: 0x003CBDA1 File Offset: 0x003C9FA1
+	// Token: 0x0600CEC8 RID: 52936 RVA: 0x003D78D4 File Offset: 0x003D5AD4
 	[NullableContext(1)]
 	public ReputationTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FAAA RID: 64170 RVA: 0x003CBDAC File Offset: 0x003C9FAC
+	// Token: 0x0600CEC9 RID: 52937 RVA: 0x003D78E0 File Offset: 0x003D5AE0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -29,46 +29,46 @@ public class ReputationTips : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FAAB RID: 64171 RVA: 0x003CBE15 File Offset: 0x003CA015
+	// Token: 0x0600CECA RID: 52938 RVA: 0x003D7949 File Offset: 0x003D5B49
 	protected override void OnBeforeCreate()
 	{
 		this.ItemList = (IntPair[])this.OpenParam;
 	}
 
-	// Token: 0x0600FAAC RID: 64172 RVA: 0x003CBE28 File Offset: 0x003CA028
+	// Token: 0x0600CECB RID: 52939 RVA: 0x003D795C File Offset: 0x003D5B5C
 	protected override void OnStart()
 	{
 		this.DailyTask = new ReputationTipsItem(base.GetItem(0));
 		base.GetItem(1).SetUIActive(false);
 	}
 
-	// Token: 0x0600FAAD RID: 64173 RVA: 0x003CBE49 File Offset: 0x003CA049
+	// Token: 0x0600CECC RID: 52940 RVA: 0x003D797D File Offset: 0x003D5B7D
 	protected override void OnAfterShow()
 	{
 		this.DailyTask.UpdateItem(this.ItemList[0].Item1, this.ItemList[0].Item2);
 	}
 
-	// Token: 0x0600FAAE RID: 64174 RVA: 0x003CBE78 File Offset: 0x003CA078
+	// Token: 0x0600CECD RID: 52941 RVA: 0x003D79AC File Offset: 0x003D5BAC
 	protected override void OnBeforeDestroy()
 	{
 		this.DailyTask.Destroy(null);
 		this.DailyTask = null;
 	}
 
-	// Token: 0x040074B6 RID: 29878
+	// Token: 0x04007597 RID: 30103
 	[Nullable(2)]
 	private ReputationTipsItem DailyTask;
 
-	// Token: 0x040074B7 RID: 29879
+	// Token: 0x04007598 RID: 30104
 	[Nullable(2)]
 	private IntPair[] ItemList;
 
-	// Token: 0x02008577 RID: 34167
+	// Token: 0x020076FC RID: 30460
 	private enum EReputationTips
 	{
-		// Token: 0x0402B752 RID: 178002
+		// Token: 0x04026A75 RID: 158325
 		DailyTask,
-		// Token: 0x0402B753 RID: 178003
+		// Token: 0x04026A76 RID: 158326
 		WorldEvent
 	}
 }

@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019A5 RID: 6565
+	// Token: 0x02000451 RID: 1105
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroInteractionEffect.KuroInteractionEffectSystem")]
-	[UnrealStructLayout(1104, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1104)]
+	[UnrealStructLayout(1936, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1936)]
 	public class UKuroInteractionEffectSystem : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060186DC RID: 100060 RVA: 0x002400E4 File Offset: 0x0023E2E4
+		// Token: 0x06006AD9 RID: 27353 RVA: 0x0009B9D9 File Offset: 0x00099BD9
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroInteractionEffectSystem._ClassPtr;
 		}
 
-		// Token: 0x060186DD RID: 100061 RVA: 0x002400F0 File Offset: 0x0023E2F0
+		// Token: 0x06006ADA RID: 27354 RVA: 0x0009B9E8 File Offset: 0x00099BE8
 		public UKuroInteractionEffectSystem() : this(BuiltinUtils.AllocNativeUObject(UKuroInteractionEffectSystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060186DE RID: 100062 RVA: 0x00240118 File Offset: 0x0023E318
+		// Token: 0x06006ADB RID: 27355 RVA: 0x0009BA10 File Offset: 0x00099C10
 		[NullableContext(1)]
 		public UKuroInteractionEffectSystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroInteractionEffectSystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006197 RID: 24983
-		// (get) Token: 0x060186DF RID: 100063 RVA: 0x0024014C File Offset: 0x0023E34C
-		// (set) Token: 0x060186E0 RID: 100064 RVA: 0x00240185 File Offset: 0x0023E385
+		// Token: 0x1700154C RID: 5452
+		// (get) Token: 0x06006ADC RID: 27356 RVA: 0x0009BA44 File Offset: 0x00099C44
+		// (set) Token: 0x06006ADD RID: 27357 RVA: 0x0009BA7D File Offset: 0x00099C7D
 		[Nullable(new byte[]
 		{
 			1,
@@ -72,9 +72,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006198 RID: 24984
-		// (get) Token: 0x060186E1 RID: 100065 RVA: 0x00240194 File Offset: 0x0023E394
-		// (set) Token: 0x060186E2 RID: 100066 RVA: 0x002401CD File Offset: 0x0023E3CD
+		// Token: 0x1700154D RID: 5453
+		// (get) Token: 0x06006ADE RID: 27358 RVA: 0x0009BA8C File Offset: 0x00099C8C
+		// (set) Token: 0x06006ADF RID: 27359 RVA: 0x0009BAC5 File Offset: 0x00099CC5
 		[Nullable(new byte[]
 		{
 			1,
@@ -117,9 +117,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006199 RID: 24985
-		// (get) Token: 0x060186E3 RID: 100067 RVA: 0x002401DC File Offset: 0x0023E3DC
-		// (set) Token: 0x060186E4 RID: 100068 RVA: 0x00240215 File Offset: 0x0023E415
+		// Token: 0x1700154E RID: 5454
+		// (get) Token: 0x06006AE0 RID: 27360 RVA: 0x0009BAD4 File Offset: 0x00099CD4
+		// (set) Token: 0x06006AE1 RID: 27361 RVA: 0x0009BB0D File Offset: 0x00099D0D
 		[Nullable(new byte[]
 		{
 			1,
@@ -162,9 +162,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700619A RID: 24986
-		// (get) Token: 0x060186E5 RID: 100069 RVA: 0x00240223 File Offset: 0x0023E423
-		// (set) Token: 0x060186E6 RID: 100070 RVA: 0x00240233 File Offset: 0x0023E433
+		// Token: 0x1700154F RID: 5455
+		// (get) Token: 0x06006AE2 RID: 27362 RVA: 0x0009BB1B File Offset: 0x00099D1B
+		// (set) Token: 0x06006AE3 RID: 27363 RVA: 0x0009BB2B File Offset: 0x00099D2B
 		public unsafe float GrassCutReadBack
 		{
 			get
@@ -177,9 +177,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700619B RID: 24987
-		// (get) Token: 0x060186E7 RID: 100071 RVA: 0x00240244 File Offset: 0x0023E444
-		// (set) Token: 0x060186E8 RID: 100072 RVA: 0x00240258 File Offset: 0x0023E458
+		// Token: 0x17001550 RID: 5456
+		// (get) Token: 0x06006AE4 RID: 27364 RVA: 0x0009BB3C File Offset: 0x00099D3C
+		// (set) Token: 0x06006AE5 RID: 27365 RVA: 0x0009BB50 File Offset: 0x00099D50
 		public unsafe UDataTable IEMeshInteractionConfigTable
 		{
 			get
@@ -192,9 +192,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700619C RID: 24988
-		// (get) Token: 0x060186E9 RID: 100073 RVA: 0x0024026D File Offset: 0x0023E46D
-		// (set) Token: 0x060186EA RID: 100074 RVA: 0x00240281 File Offset: 0x0023E481
+		// Token: 0x17001551 RID: 5457
+		// (get) Token: 0x06006AE6 RID: 27366 RVA: 0x0009BB65 File Offset: 0x00099D65
+		// (set) Token: 0x06006AE7 RID: 27367 RVA: 0x0009BB79 File Offset: 0x00099D79
 		public unsafe UMaterialParameterCollection WaterSimMPC
 		{
 			get
@@ -207,20 +207,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060186EB RID: 100075 RVA: 0x00240296 File Offset: 0x0023E496
+		// Token: 0x06006AE8 RID: 27368 RVA: 0x0009BB8E File Offset: 0x00099D8E
 		public void SetGlobalUINiagaraPause(bool bPause)
 		{
 			UKuroInteractionEffectSystem.__SetGlobalUINiagaraPause_Internal(base.NativePtr, bPause);
 		}
 
-		// Token: 0x060186EC RID: 100076 RVA: 0x002402A4 File Offset: 0x0023E4A4
+		// Token: 0x06006AE9 RID: 27369 RVA: 0x0009BB9C File Offset: 0x00099D9C
 		[NullableContext(1)]
 		public FKuroInteractionEffectTraceStaticMesh SearchInteractionStaticMeshConfig([Nullable(2)] UStaticMesh StaticMesh)
 		{
 			return new FKuroInteractionEffectTraceStaticMesh(UKuroInteractionEffectSystem.__SearchInteractionStaticMeshConfig_Internal(base.NativePtr, (StaticMesh != null) ? StaticMesh.NativePtr : IntPtr.Zero), null);
 		}
 
-		// Token: 0x060186ED RID: 100077 RVA: 0x002402C7 File Offset: 0x0023E4C7
+		// Token: 0x06006AEA RID: 27370 RVA: 0x0009BBBF File Offset: 0x00099DBF
 		[NullableContext(1)]
 		public TArray<int> SearchInteractionFoliageArray([Nullable(new byte[]
 		{
@@ -231,7 +231,7 @@ namespace UnrealEngine
 			return new TArray<int>(UKuroInteractionEffectSystem.__SearchInteractionFoliageArray_Internal(base.NativePtr, (FoliageTypeNames ?? new TArray<string>()).NativePtr), null);
 		}
 
-		// Token: 0x060186EE RID: 100078 RVA: 0x002402EC File Offset: 0x0023E4EC
+		// Token: 0x06006AEB RID: 27371 RVA: 0x0009BBE4 File Offset: 0x00099DE4
 		[NullableContext(1)]
 		public unsafe int SearchInteractionFoliage(string FoliageTypeName)
 		{
@@ -241,87 +241,97 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060186EF RID: 100079 RVA: 0x00240316 File Offset: 0x0023E516
+		// Token: 0x06006AEC RID: 27372 RVA: 0x0009BC0E File Offset: 0x00099E0E
 		public void RegisterSPModelCharacterEIComp(UNiagaraComponent InNiagaraComp, UKuroEnviInteractionComponent SourceEIComp)
 		{
 			UKuroInteractionEffectSystem.__RegisterSPModelCharacterEIComp_Internal(base.NativePtr, (InNiagaraComp != null) ? InNiagaraComp.NativePtr : IntPtr.Zero, (SourceEIComp != null) ? SourceEIComp.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060186F0 RID: 100080 RVA: 0x00240343 File Offset: 0x0023E543
+		// Token: 0x06006AED RID: 27373 RVA: 0x0009BC3B File Offset: 0x00099E3B
 		public void RegisterNDIKuroRenderingEIComp(UNiagaraComponent InNiagaraComp, UKuroEnviInteractionComponent SourceEIComp)
 		{
 			UKuroInteractionEffectSystem.__RegisterNDIKuroRenderingEIComp_Internal(base.NativePtr, (InNiagaraComp != null) ? InNiagaraComp.NativePtr : IntPtr.Zero, (SourceEIComp != null) ? SourceEIComp.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060186F1 RID: 100081 RVA: 0x00240370 File Offset: 0x0023E570
+		// Token: 0x06006AEE RID: 27374 RVA: 0x0009BC68 File Offset: 0x00099E68
+		public void RefreshInteractionVoxelBakeData()
+		{
+			UKuroInteractionEffectSystem.__RefreshInteractionVoxelBakeData_Internal(base.NativePtr);
+		}
+
+		// Token: 0x06006AEF RID: 27375 RVA: 0x0009BC75 File Offset: 0x00099E75
 		public static UKuroInteractionEffectSystem GetKuroInteractionEffectSystem(UWorld World)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroInteractionEffectSystem>(UKuroInteractionEffectSystem.__GetKuroInteractionEffectSystem_Internal((World != null) ? World.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x060186F2 RID: 100082 RVA: 0x0024038C File Offset: 0x0023E58C
+		// Token: 0x06006AF0 RID: 27376 RVA: 0x0009BC91 File Offset: 0x00099E91
 		public bool GetGlobalUINiagaraPause()
 		{
 			return UKuroInteractionEffectSystem.__GetGlobalUINiagaraPause_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060186F3 RID: 100083
+		// Token: 0x06006AF1 RID: 27377
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetGlobalUINiagaraPause_Internal(IntPtr @this, bool bPause);
 
-		// Token: 0x060186F4 RID: 100084
+		// Token: 0x06006AF2 RID: 27378
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SearchInteractionStaticMeshConfig_Internal(IntPtr @this, IntPtr StaticMesh);
 
-		// Token: 0x060186F5 RID: 100085
+		// Token: 0x06006AF3 RID: 27379
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SearchInteractionFoliageArray_Internal(IntPtr @this, IntPtr FoliageTypeNames);
 
-		// Token: 0x060186F6 RID: 100086
+		// Token: 0x06006AF4 RID: 27380
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __SearchInteractionFoliage_Internal(IntPtr @this, in FString FoliageTypeName);
 
-		// Token: 0x060186F7 RID: 100087
+		// Token: 0x06006AF5 RID: 27381
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterSPModelCharacterEIComp_Internal(IntPtr @this, IntPtr InNiagaraComp, IntPtr SourceEIComp);
 
-		// Token: 0x060186F8 RID: 100088
+		// Token: 0x06006AF6 RID: 27382
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterNDIKuroRenderingEIComp_Internal(IntPtr @this, IntPtr InNiagaraComp, IntPtr SourceEIComp);
 
-		// Token: 0x060186F9 RID: 100089
+		// Token: 0x06006AF7 RID: 27383
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern void __RefreshInteractionVoxelBakeData_Internal(IntPtr @this);
+
+		// Token: 0x06006AF8 RID: 27384
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetKuroInteractionEffectSystem_Internal(IntPtr World);
 
-		// Token: 0x060186FA RID: 100090
+		// Token: 0x06006AF9 RID: 27385
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetGlobalUINiagaraPause_Internal(IntPtr @this);
 
-		// Token: 0x060186FB RID: 100091 RVA: 0x00240399 File Offset: 0x0023E599
+		// Token: 0x06006AFA RID: 27386 RVA: 0x0009BC9E File Offset: 0x00099E9E
 		static UKuroInteractionEffectSystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroInteractionEffect.KuroInteractionEffectSystem");
 		}
 
-		// Token: 0x060186FC RID: 100092 RVA: 0x002403A7 File Offset: 0x0023E5A7
+		// Token: 0x06006AFB RID: 27387 RVA: 0x0009BCAC File Offset: 0x00099EAC
 		protected UKuroInteractionEffectSystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D33A RID: 54074
+		// Token: 0x04002D53 RID: 11603
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroInteractionEffect.KuroInteractionEffectSystem";
 
-		// Token: 0x0400D33B RID: 54075
+		// Token: 0x04002D54 RID: 11604
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D33C RID: 54076
+		// Token: 0x04002D55 RID: 11605
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D33D RID: 54077
+		// Token: 0x04002D56 RID: 11606
 		internal static int __PropertyOffset_EnviInteractionCollections;
 
-		// Token: 0x0400D33E RID: 54078
+		// Token: 0x04002D57 RID: 11607
 		[Nullable(new byte[]
 		{
 			2,
@@ -331,10 +341,10 @@ namespace UnrealEngine
 		})]
 		private TMap<TWeakObjectPtr<UKuroEnviInteractionComponent>, FKuroEnviInteractionData> _EnviInteractionCollections;
 
-		// Token: 0x0400D33F RID: 54079
+		// Token: 0x04002D58 RID: 11608
 		internal static int __PropertyOffset_SPModelEICompCollections;
 
-		// Token: 0x0400D340 RID: 54080
+		// Token: 0x04002D59 RID: 11609
 		[Nullable(new byte[]
 		{
 			2,
@@ -345,10 +355,10 @@ namespace UnrealEngine
 		})]
 		private TMap<TWeakObjectPtr<UNiagaraComponent>, TWeakObjectPtr<UKuroEnviInteractionComponent>> _SPModelEICompCollections;
 
-		// Token: 0x0400D341 RID: 54081
+		// Token: 0x04002D5A RID: 11610
 		internal static int __PropertyOffset_NDIKuroRenderingCollections;
 
-		// Token: 0x0400D342 RID: 54082
+		// Token: 0x04002D5B RID: 11611
 		[Nullable(new byte[]
 		{
 			2,
@@ -359,13 +369,13 @@ namespace UnrealEngine
 		})]
 		private TMap<TWeakObjectPtr<UNiagaraComponent>, TWeakObjectPtr<UKuroEnviInteractionComponent>> _NDIKuroRenderingCollections;
 
-		// Token: 0x0400D343 RID: 54083
+		// Token: 0x04002D5C RID: 11612
 		internal static int __PropertyOffset_GrassCutReadBack;
 
-		// Token: 0x0400D344 RID: 54084
+		// Token: 0x04002D5D RID: 11613
 		internal static int __PropertyOffset_IEMeshInteractionConfigTable;
 
-		// Token: 0x0400D345 RID: 54085
+		// Token: 0x04002D5E RID: 11614
 		internal static int __PropertyOffset_WaterSimMPC;
 	}
 }

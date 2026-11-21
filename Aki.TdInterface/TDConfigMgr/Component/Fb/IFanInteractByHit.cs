@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CCD RID: 3277
+	// Token: 0x02000DB1 RID: 3505
 	public class IFanInteractByHit : IFanInteractType
 	{
-		// Token: 0x06004AEC RID: 19180 RVA: 0x000BB707 File Offset: 0x000B9907
-		[NullableContext(1)]
+		// Token: 0x06004FA7 RID: 20391 RVA: 0x000C633F File Offset: 0x000C453F
 		public static IFanInteractByHit Create(IFanInteractByHit? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700170F RID: 5903
-		// (get) Token: 0x06004AED RID: 19181 RVA: 0x000BB726 File Offset: 0x000B9926
+		// Token: 0x17001840 RID: 6208
+		// (get) Token: 0x06004FA8 RID: 20392 RVA: 0x000C635E File Offset: 0x000C455E
 		public override EFanInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AE2 RID: 10978
+		// Token: 0x04002D68 RID: 11624
 		private IFanInteractByHit Instance;
 	}
 }

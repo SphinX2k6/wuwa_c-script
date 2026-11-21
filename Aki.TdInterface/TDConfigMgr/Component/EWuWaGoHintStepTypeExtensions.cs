@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A4C RID: 2636
+	// Token: 0x02000B15 RID: 2837
 	public static class EWuWaGoHintStepTypeExtensions
 	{
-		// Token: 0x06003A07 RID: 14855 RVA: 0x00095C48 File Offset: 0x00093E48
+		// Token: 0x06003DF1 RID: 15857 RVA: 0x0009E818 File Offset: 0x0009CA18
 		public static string ToEnumString(this EWuWaGoHintStepType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003A08 RID: 14856 RVA: 0x00095C80 File Offset: 0x00093E80
+		// Token: 0x06003DF2 RID: 15858 RVA: 0x0009E850 File Offset: 0x0009CA50
 		public static EWuWaGoHintStepType FromString(string name)
 		{
 			EWuWaGoHintStepType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003A09 RID: 14857 RVA: 0x00095CA9 File Offset: 0x00093EA9
+		// Token: 0x06003DF3 RID: 15859 RVA: 0x0009E879 File Offset: 0x0009CA79
 		public static bool TryFromString(string name, out EWuWaGoHintStepType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003A0A RID: 14858 RVA: 0x00095CE2 File Offset: 0x00093EE2
+		// Token: 0x06003DF4 RID: 15860 RVA: 0x0009E8B2 File Offset: 0x0009CAB2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003A0B RID: 14859 RVA: 0x00095CFA File Offset: 0x00093EFA
+		// Token: 0x06003DF5 RID: 15861 RVA: 0x0009E8CA File Offset: 0x0009CACA
 		public static EWuWaGoHintStepType[] GetValues()
 		{
 			return new EWuWaGoHintStepType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003A0C RID: 14860 RVA: 0x00095D06 File Offset: 0x00093F06
+		// Token: 0x06003DF6 RID: 15862 RVA: 0x0009E8D6 File Offset: 0x0009CAD6
 		public static string[] GetNames()
 		{
 			return new string[]

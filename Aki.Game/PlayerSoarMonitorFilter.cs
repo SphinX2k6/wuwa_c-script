@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020034C0 RID: 13504
+// Token: 0x02002A34 RID: 10804
 [NullableContext(1)]
 [Nullable(0)]
 public class PlayerSoarMonitorFilter : EntityToLoadFilter
 {
-	// Token: 0x0601D696 RID: 120470 RVA: 0x008348A0 File Offset: 0x00832AA0
+	// Token: 0x0601B395 RID: 111509 RVA: 0x0085BD48 File Offset: 0x00859F48
 	private static bool PlayerSoarMonitorCriteria(EntityHandle entityHandle)
 	{
 		EEntityType entityType = (EEntityType)entityHandle.EntityType;
 		return entityType == EEntityType.Player || entityType == EEntityType.SceneItem || entityType == EEntityType.PlayerEntity || entityType == EEntityType.SceneEntity;
 	}
 
-	// Token: 0x170028D5 RID: 10453
-	// (get) Token: 0x0601D697 RID: 120471 RVA: 0x008348C7 File Offset: 0x00832AC7
+	// Token: 0x17002C6D RID: 11373
+	// (get) Token: 0x0601B396 RID: 111510 RVA: 0x0085BD6F File Offset: 0x00859F6F
 	public override string DebugName
 	{
 		get
@@ -25,7 +25,7 @@ public class PlayerSoarMonitorFilter : EntityToLoadFilter
 		}
 	}
 
-	// Token: 0x0601D698 RID: 120472 RVA: 0x008348CE File Offset: 0x00832ACE
+	// Token: 0x0601B397 RID: 111511 RVA: 0x0085BD76 File Offset: 0x00859F76
 	public override void Init()
 	{
 		base.Init();
@@ -33,7 +33,7 @@ public class PlayerSoarMonitorFilter : EntityToLoadFilter
 		EventSystem.Instance.Add<bool>(EEventName.SlowStreamingBySoar, new Action<bool>(this.OnSlowStreamingBySoar));
 	}
 
-	// Token: 0x0601D699 RID: 120473 RVA: 0x0083490E File Offset: 0x00832B0E
+	// Token: 0x0601B398 RID: 111512 RVA: 0x0085BDB6 File Offset: 0x00859FB6
 	public override void Cleanup()
 	{
 		EventSystem.Instance.Remove<bool>(EEventName.PlayerSoarChanged, new Action<bool>(this.OnPlayerSoarChanged));
@@ -41,14 +41,14 @@ public class PlayerSoarMonitorFilter : EntityToLoadFilter
 		base.Cleanup();
 	}
 
-	// Token: 0x0601D69A RID: 120474 RVA: 0x0083494E File Offset: 0x00832B4E
+	// Token: 0x0601B399 RID: 111513 RVA: 0x0085BDF6 File Offset: 0x00859FF6
 	private void OnPlayerSoarChanged(bool isPlayerSoar)
 	{
 		base.MaxLoadingCount = (isPlayerSoar ? 1L : 4L);
 		base.LoadingInterval = (isPlayerSoar ? 10L : 0L);
 	}
 
-	// Token: 0x0601D69B RID: 120475 RVA: 0x00834970 File Offset: 0x00832B70
+	// Token: 0x0601B39A RID: 111514 RVA: 0x0085BE18 File Offset: 0x0085A018
 	private void OnSlowStreamingBySoar(bool enableSlowStreaming)
 	{
 		Func<EntityHandle, bool> criteria;
@@ -66,17 +66,17 @@ public class PlayerSoarMonitorFilter : EntityToLoadFilter
 		base.Criteria = criteria;
 	}
 
-	// Token: 0x0400E7BE RID: 59326
+	// Token: 0x0400EC72 RID: 60530
 	private const long SOAR_MAX_LOADING_ENTITY_COUNT = 1L;
 
-	// Token: 0x0400E7BF RID: 59327
+	// Token: 0x0400EC73 RID: 60531
 	private const long SOAR_LOADING_INTERVAL = 10L;
 
-	// Token: 0x02009870 RID: 39024
+	// Token: 0x02008A8A RID: 35466
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0403092B RID: 198955
+		// Token: 0x0402BFAE RID: 180142
 		[Nullable(new byte[]
 		{
 			0,
@@ -84,7 +84,7 @@ public class PlayerSoarMonitorFilter : EntityToLoadFilter
 		})]
 		public static Func<EntityHandle, bool> <0>__PlayerSoarMonitorCriteria;
 
-		// Token: 0x0403092C RID: 198956
+		// Token: 0x0402BFAF RID: 180143
 		[Nullable(new byte[]
 		{
 			0,

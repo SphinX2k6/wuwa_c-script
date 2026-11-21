@@ -11,13 +11,13 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiPerceptionEvents
 {
-	// Token: 0x06000DE3 RID: 3555 RVA: 0x0004ECBC File Offset: 0x0004CEBC
+	// Token: 0x06000DE9 RID: 3561 RVA: 0x0004F84C File Offset: 0x0004DA4C
 	public AiPerceptionEvents(AiController aiController)
 	{
 		this.AiController = aiController;
 	}
 
-	// Token: 0x06000DE4 RID: 3556 RVA: 0x0004EDC8 File Offset: 0x0004CFC8
+	// Token: 0x06000DEA RID: 3562 RVA: 0x0004F958 File Offset: 0x0004DB58
 	private void OnSceneItemDestroy(Entity entity)
 	{
 		BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -32,7 +32,7 @@ public class AiPerceptionEvents
 		}
 	}
 
-	// Token: 0x06000DE5 RID: 3557 RVA: 0x0004EE58 File Offset: 0x0004D058
+	// Token: 0x06000DEB RID: 3563 RVA: 0x0004F9E8 File Offset: 0x0004DBE8
 	public void Clear(bool force = false)
 	{
 		this.AiHateAddEntities.Clear();
@@ -64,7 +64,7 @@ public class AiPerceptionEvents
 		}
 	}
 
-	// Token: 0x06000DE6 RID: 3558 RVA: 0x0004EF61 File Offset: 0x0004D161
+	// Token: 0x06000DEC RID: 3564 RVA: 0x0004FAF1 File Offset: 0x0004DCF1
 	public void TickPerception()
 	{
 		if (this.PerceptionEvents.Count == 0)
@@ -74,7 +74,7 @@ public class AiPerceptionEvents
 		this.CallPerception();
 	}
 
-	// Token: 0x06000DE7 RID: 3559 RVA: 0x0004EF77 File Offset: 0x0004D177
+	// Token: 0x06000DED RID: 3565 RVA: 0x0004FB07 File Offset: 0x0004DD07
 	public void TickHate()
 	{
 		if (this.HateOutRangeEvents.Count > 0)
@@ -87,7 +87,7 @@ public class AiPerceptionEvents
 		}
 	}
 
-	// Token: 0x06000DE8 RID: 3560 RVA: 0x0004EFA4 File Offset: 0x0004D1A4
+	// Token: 0x06000DEE RID: 3566 RVA: 0x0004FB34 File Offset: 0x0004DD34
 	private void CallHateOutRange()
 	{
 		foreach (int item in this.AiHateAddEntities)
@@ -111,7 +111,7 @@ public class AiPerceptionEvents
 		}
 	}
 
-	// Token: 0x06000DE9 RID: 3561 RVA: 0x0004F0B0 File Offset: 0x0004D2B0
+	// Token: 0x06000DEF RID: 3567 RVA: 0x0004FC40 File Offset: 0x0004DE40
 	private void CallHate()
 	{
 		bool flag = this.AiHateAddEntities.Count > 0;
@@ -163,7 +163,7 @@ public class AiPerceptionEvents
 		}
 	}
 
-	// Token: 0x06000DEA RID: 3562 RVA: 0x0004F344 File Offset: 0x0004D544
+	// Token: 0x06000DF0 RID: 3568 RVA: 0x0004FED4 File Offset: 0x0004E0D4
 	private void CallPerception()
 	{
 		bool flag = this.AiPerceptionAddEntities.Count > 0;
@@ -215,7 +215,7 @@ public class AiPerceptionEvents
 		}
 	}
 
-	// Token: 0x06000DEB RID: 3563 RVA: 0x0004F5D8 File Offset: 0x0004D7D8
+	// Token: 0x06000DF1 RID: 3569 RVA: 0x00050168 File Offset: 0x0004E368
 	private void MigrateActor(List<int> entities, TArray<AActor> outActors)
 	{
 		foreach (int id in entities)
@@ -234,7 +234,7 @@ public class AiPerceptionEvents
 		entities.Clear();
 	}
 
-	// Token: 0x06000DEC RID: 3564 RVA: 0x0004F664 File Offset: 0x0004D864
+	// Token: 0x06000DF2 RID: 3570 RVA: 0x000501F4 File Offset: 0x0004E3F4
 	private void MigrateActorIds(List<int> entityIds, TArray<int> outIds)
 	{
 		foreach (int value in entityIds)
@@ -243,7 +243,7 @@ public class AiPerceptionEvents
 		}
 	}
 
-	// Token: 0x06000DED RID: 3565 RVA: 0x0004F6B4 File Offset: 0x0004D8B4
+	// Token: 0x06000DF3 RID: 3571 RVA: 0x00050244 File Offset: 0x0004E444
 	public void AddAiHateEvent(UKuroPerceptionEventBinder handler)
 	{
 		if (this.HateEvents.Contains(handler))
@@ -260,7 +260,7 @@ public class AiPerceptionEvents
 		this.HateEvents.Add(handler);
 	}
 
-	// Token: 0x06000DEE RID: 3566 RVA: 0x0004F74C File Offset: 0x0004D94C
+	// Token: 0x06000DF4 RID: 3572 RVA: 0x000502DC File Offset: 0x0004E4DC
 	private void CollectEvent(bool addOrRemove, Entity entity, List<int> addEntities, List<int> removeEntities)
 	{
 		if (addOrRemove && addEntities != null)
@@ -300,7 +300,7 @@ public class AiPerceptionEvents
 		}
 	}
 
-	// Token: 0x06000DEF RID: 3567 RVA: 0x0004F7E8 File Offset: 0x0004D9E8
+	// Token: 0x06000DF5 RID: 3573 RVA: 0x00050378 File Offset: 0x0004E578
 	private void CollectEventById(bool addOrRemove, int entity, [Nullable(2)] List<int> addEntities, List<int> removeEntities)
 	{
 		if (addOrRemove && addEntities != null)
@@ -340,19 +340,19 @@ public class AiPerceptionEvents
 		}
 	}
 
-	// Token: 0x06000DF0 RID: 3568 RVA: 0x0004F85C File Offset: 0x0004DA5C
+	// Token: 0x06000DF6 RID: 3574 RVA: 0x000503EC File Offset: 0x0004E5EC
 	public void CollectAiHateEvent(bool addOrRemove, Entity entity)
 	{
 		this.CollectEvent(addOrRemove, entity, this.AiHateAddEntities, this.AiHateRemoveEntities);
 	}
 
-	// Token: 0x06000DF1 RID: 3569 RVA: 0x0004F872 File Offset: 0x0004DA72
+	// Token: 0x06000DF7 RID: 3575 RVA: 0x00050402 File Offset: 0x0004E602
 	public void CollectAiHateEventById(bool addOrRemove, int entityId)
 	{
 		this.CollectEventById(addOrRemove, entityId, this.AiHateAddEntities, this.AiHateRemoveEntityIds);
 	}
 
-	// Token: 0x06000DF2 RID: 3570 RVA: 0x0004F888 File Offset: 0x0004DA88
+	// Token: 0x06000DF8 RID: 3576 RVA: 0x00050418 File Offset: 0x0004E618
 	public void AddAiHateOutRangeEvent(UKuroPerceptionEventBinder handler)
 	{
 		if (this.HateOutRangeEvents.Contains(handler))
@@ -362,7 +362,7 @@ public class AiPerceptionEvents
 		this.HateOutRangeEvents.Add(handler);
 	}
 
-	// Token: 0x06000DF3 RID: 3571 RVA: 0x0004F8A5 File Offset: 0x0004DAA5
+	// Token: 0x06000DF9 RID: 3577 RVA: 0x00050435 File Offset: 0x0004E635
 	public void CollectAiHateOutRangeEvent(Entity entity)
 	{
 		if (this.AiHateOutRangeEntities.Contains(entity.Id))
@@ -372,7 +372,7 @@ public class AiPerceptionEvents
 		this.AiHateOutRangeEntities.Add(entity.Id);
 	}
 
-	// Token: 0x06000DF4 RID: 3572 RVA: 0x0004F8CC File Offset: 0x0004DACC
+	// Token: 0x06000DFA RID: 3578 RVA: 0x0005045C File Offset: 0x0004E65C
 	public void AddAiPerceptionEvent(UKuroPerceptionEventBinder handler, bool includeFriend, bool includeEnemy, bool includeNeutral)
 	{
 		if (this.PerceptionEvents.Contains(handler))
@@ -392,7 +392,7 @@ public class AiPerceptionEvents
 		this.PerceptionEvents.Add(handler);
 	}
 
-	// Token: 0x06000DF5 RID: 3573 RVA: 0x0004F974 File Offset: 0x0004DB74
+	// Token: 0x06000DFB RID: 3579 RVA: 0x00050504 File Offset: 0x0004E704
 	public void SetPerceptionEventState(bool includeFriend, bool includeEnemy, bool includeNeutral)
 	{
 		this.IncludeFriend = includeFriend;
@@ -400,7 +400,7 @@ public class AiPerceptionEvents
 		this.IncludeNeutral = includeNeutral;
 	}
 
-	// Token: 0x06000DF6 RID: 3574 RVA: 0x0004F98B File Offset: 0x0004DB8B
+	// Token: 0x06000DFC RID: 3580 RVA: 0x0005051B File Offset: 0x0004E71B
 	public void CollectAiPerceptionEventByActorComp(bool addOrRemove, BaseActorComponent actorComp, ERelation relation)
 	{
 		if (relation != ERelation.Friend)
@@ -424,7 +424,7 @@ public class AiPerceptionEvents
 		this.CollectEvent(addOrRemove, actorComp.Entity, this.AiPerceptionAddEntities, this.AiPerceptionRemoveEntities);
 	}
 
-	// Token: 0x06000DF7 RID: 3575 RVA: 0x0004F9CB File Offset: 0x0004DBCB
+	// Token: 0x06000DFD RID: 3581 RVA: 0x0005055B File Offset: 0x0004E75B
 	public void CollectAiPerceptionEventById(bool addOrRemove, int id, ERelation relation)
 	{
 		if (relation != ERelation.Friend)
@@ -448,7 +448,7 @@ public class AiPerceptionEvents
 		this.CollectEventById(addOrRemove, id, this.AiPerceptionAddEntities, this.AiPerceptionRemoveEntities);
 	}
 
-	// Token: 0x06000DF8 RID: 3576 RVA: 0x0004FA06 File Offset: 0x0004DC06
+	// Token: 0x06000DFE RID: 3582 RVA: 0x00050596 File Offset: 0x0004E796
 	public void CollectAiRemovePerceptionEventByEntityId(bool addOrRemove, int entityId, ERelation relation)
 	{
 		if (relation != ERelation.Friend)
@@ -472,7 +472,7 @@ public class AiPerceptionEvents
 		this.CollectEventById(addOrRemove, entityId, null, this.AiPerceptionRemoveEntityIds);
 	}
 
-	// Token: 0x06000DF9 RID: 3577 RVA: 0x0004FA3C File Offset: 0x0004DC3C
+	// Token: 0x06000DFF RID: 3583 RVA: 0x000505CC File Offset: 0x0004E7CC
 	public void AddSceneItemDestroyEvent(float distance, UKuroActorEventBinder eventBinder)
 	{
 		if (this.DestroyEvent == null)
@@ -483,7 +483,7 @@ public class AiPerceptionEvents
 		this.DestroyEventListenSizeSquared = distance * distance;
 	}
 
-	// Token: 0x06000DFA RID: 3578 RVA: 0x0004FA72 File Offset: 0x0004DC72
+	// Token: 0x06000E00 RID: 3584 RVA: 0x00050602 File Offset: 0x0004E802
 	public void RemoveSceneItemDestroyEvent(UKuroActorEventBinder eventBinder)
 	{
 		EventSystem.Instance.Remove(EEventName.OnSceneItemDurabilityEmpty, new Action<Entity>(this.OnSceneItemDestroy));
@@ -491,7 +491,7 @@ public class AiPerceptionEvents
 		this.BroadcastSet.Clear();
 	}
 
-	// Token: 0x06000DFB RID: 3579 RVA: 0x0004FAA2 File Offset: 0x0004DCA2
+	// Token: 0x06000E01 RID: 3585 RVA: 0x00050632 File Offset: 0x0004E832
 	public void ForceTriggerSceneItemDestroyEvent(AActor actor)
 	{
 		UKuroActorEventBinder destroyEvent = this.DestroyEvent;
@@ -502,7 +502,7 @@ public class AiPerceptionEvents
 		this.DestroyEvent.Callback.Broadcast(actor, true);
 	}
 
-	// Token: 0x06000DFC RID: 3580 RVA: 0x0004FAD0 File Offset: 0x0004DCD0
+	// Token: 0x06000E02 RID: 3586 RVA: 0x00050660 File Offset: 0x0004E860
 	public void OnSenseSceneItem(BaseActorComponent otherActorComp)
 	{
 		if (this.DestroyEvent == null || this.BroadcastSet.Contains(otherActorComp.Entity.Id))
@@ -518,7 +518,7 @@ public class AiPerceptionEvents
 		this.DestroyEvent.Callback.Broadcast(otherActorComp.Owner, true);
 	}
 
-	// Token: 0x06000DFD RID: 3581 RVA: 0x0004FB54 File Offset: 0x0004DD54
+	// Token: 0x06000E03 RID: 3587 RVA: 0x000506E4 File Offset: 0x0004E8E4
 	[NullableContext(2)]
 	private unsafe void PrintBroadInfo([Nullable(1)] string info, List<int> addIds, List<int> removeIds)
 	{
@@ -531,82 +531,82 @@ public class AiPerceptionEvents
 		instance.Info(flag, entity, info, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x04000B4B RID: 2891
+	// Token: 0x04000B53 RID: 2899
 	private readonly List<int> AiHateAddEntities = new List<int>();
 
-	// Token: 0x04000B4C RID: 2892
+	// Token: 0x04000B54 RID: 2900
 	private readonly List<int> AiHateRemoveEntities = new List<int>();
 
-	// Token: 0x04000B4D RID: 2893
+	// Token: 0x04000B55 RID: 2901
 	private readonly List<int> AiHateRemoveEntityIds = new List<int>();
 
-	// Token: 0x04000B4E RID: 2894
+	// Token: 0x04000B56 RID: 2902
 	private readonly List<int> AiPerceptionAddEntities = new List<int>();
 
-	// Token: 0x04000B4F RID: 2895
+	// Token: 0x04000B57 RID: 2903
 	private readonly List<int> AiPerceptionRemoveEntities = new List<int>();
 
-	// Token: 0x04000B50 RID: 2896
+	// Token: 0x04000B58 RID: 2904
 	private readonly List<int> AiPerceptionRemoveEntityIds = new List<int>();
 
-	// Token: 0x04000B51 RID: 2897
+	// Token: 0x04000B59 RID: 2905
 	private readonly List<int> AiHateOutRangeEntities = new List<int>();
 
-	// Token: 0x04000B52 RID: 2898
+	// Token: 0x04000B5A RID: 2906
 	private readonly TArray<AActor> AiHateAddActors = new TArray<AActor>();
 
-	// Token: 0x04000B53 RID: 2899
+	// Token: 0x04000B5B RID: 2907
 	private readonly TArray<AActor> AiHateRemoveActors = new TArray<AActor>();
 
-	// Token: 0x04000B54 RID: 2900
+	// Token: 0x04000B5C RID: 2908
 	private readonly TArray<int> AiHateRemoveActorIds = new TArray<int>();
 
-	// Token: 0x04000B55 RID: 2901
+	// Token: 0x04000B5D RID: 2909
 	private readonly TArray<AActor> AiPerceptionAddActors = new TArray<AActor>();
 
-	// Token: 0x04000B56 RID: 2902
+	// Token: 0x04000B5E RID: 2910
 	private readonly TArray<AActor> AiPerceptionRemoveActors = new TArray<AActor>();
 
-	// Token: 0x04000B57 RID: 2903
+	// Token: 0x04000B5F RID: 2911
 	private readonly TArray<int> AiPerceptionRemoveActorIds = new TArray<int>();
 
-	// Token: 0x04000B58 RID: 2904
+	// Token: 0x04000B60 RID: 2912
 	private readonly TArray<AActor> EmptyActors = new TArray<AActor>();
 
-	// Token: 0x04000B59 RID: 2905
+	// Token: 0x04000B61 RID: 2913
 	private readonly TArray<int> EmptyActorIds = new TArray<int>();
 
-	// Token: 0x04000B5A RID: 2906
+	// Token: 0x04000B62 RID: 2914
 	private readonly TArray<AActor> AiHateOutRangeAddActors = new TArray<AActor>();
 
-	// Token: 0x04000B5B RID: 2907
+	// Token: 0x04000B63 RID: 2915
 	private readonly List<UKuroPerceptionEventBinder> HateEvents = new List<UKuroPerceptionEventBinder>();
 
-	// Token: 0x04000B5C RID: 2908
+	// Token: 0x04000B64 RID: 2916
 	private readonly List<UKuroPerceptionEventBinder> PerceptionEvents = new List<UKuroPerceptionEventBinder>();
 
-	// Token: 0x04000B5D RID: 2909
+	// Token: 0x04000B65 RID: 2917
 	private readonly List<UKuroPerceptionEventBinder> HateOutRangeEvents = new List<UKuroPerceptionEventBinder>();
 
-	// Token: 0x04000B5E RID: 2910
+	// Token: 0x04000B66 RID: 2918
 	private readonly AiController AiController;
 
-	// Token: 0x04000B5F RID: 2911
+	// Token: 0x04000B67 RID: 2919
 	private bool IncludeFriend = true;
 
-	// Token: 0x04000B60 RID: 2912
+	// Token: 0x04000B68 RID: 2920
 	private bool IncludeEnemy = true;
 
-	// Token: 0x04000B61 RID: 2913
+	// Token: 0x04000B69 RID: 2921
 	private bool IncludeNeutral = true;
 
-	// Token: 0x04000B62 RID: 2914
+	// Token: 0x04000B6A RID: 2922
 	[Nullable(2)]
 	private UKuroActorEventBinder DestroyEvent;
 
-	// Token: 0x04000B63 RID: 2915
+	// Token: 0x04000B6B RID: 2923
 	private float DestroyEventListenSizeSquared;
 
-	// Token: 0x04000B64 RID: 2916
+	// Token: 0x04000B6C RID: 2924
 	private readonly HashSet<int> BroadcastSet = new HashSet<int>();
 }

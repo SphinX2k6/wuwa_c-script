@@ -7,50 +7,50 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.QuickTimeAction
 {
-	// Token: 0x02003EB1 RID: 16049
+	// Token: 0x0200317E RID: 12670
 	[UnrealObjectPath("/Game/Aki/Data/QuickTimeAction/SQtaCondition_Content.SQtaCondition_Content")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 43)]
 	public class SQtaCondition_Content : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602895C RID: 166236 RVA: 0x009AFD9F File Offset: 0x009ADF9F
+		// Token: 0x0601F3FF RID: 127999 RVA: 0x009299D1 File Offset: 0x00927BD1
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SQtaCondition_Content._ScriptStructPtr != 0) ? SQtaCondition_Content._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/QuickTimeAction/SQtaCondition_Content.SQtaCondition_Content", ref SQtaCondition_Content._ScriptStructPtr);
 		}
 
-		// Token: 0x17005E9D RID: 24221
-		// (get) Token: 0x0602895D RID: 166237 RVA: 0x009AFDC3 File Offset: 0x009ADFC3
-		// (set) Token: 0x0602895E RID: 166238 RVA: 0x009AFDD7 File Offset: 0x009ADFD7
+		// Token: 0x1700384D RID: 14413
+		// (get) Token: 0x0601F400 RID: 128000 RVA: 0x009299F5 File Offset: 0x00927BF5
+		// (set) Token: 0x0601F401 RID: 128001 RVA: 0x00929A09 File Offset: 0x00927C09
 		public unsafe TEnumAsByte<EQtaConditionType> ConditionType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_ConditionType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_ConditionType) = value;
 			}
 		}
 
-		// Token: 0x17005E9E RID: 24222
-		// (get) Token: 0x0602895F RID: 166239 RVA: 0x009AFDEC File Offset: 0x009ADFEC
-		// (set) Token: 0x06028960 RID: 166240 RVA: 0x009AFE00 File Offset: 0x009AE000
+		// Token: 0x1700384E RID: 14414
+		// (get) Token: 0x0601F402 RID: 128002 RVA: 0x00929A1E File Offset: 0x00927C1E
+		// (set) Token: 0x0601F403 RID: 128003 RVA: 0x00929A32 File Offset: 0x00927C32
 		public unsafe TEnumAsByte<EQtaCondition_CheckInputType> InputMatchType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_InputMatchType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_InputMatchType) = value;
 			}
 		}
 
-		// Token: 0x17005E9F RID: 24223
-		// (get) Token: 0x06028961 RID: 166241 RVA: 0x009AFE18 File Offset: 0x009AE018
-		// (set) Token: 0x06028962 RID: 166242 RVA: 0x009AFE5B File Offset: 0x009AE05B
+		// Token: 0x1700384F RID: 14415
+		// (get) Token: 0x0601F404 RID: 128004 RVA: 0x00929A48 File Offset: 0x00927C48
+		// (set) Token: 0x0601F405 RID: 128005 RVA: 0x00929A8B File Offset: 0x00927C8B
 		[Nullable(1)]
 		public FGameplayTagContainer Tags
 		{
@@ -61,136 +61,125 @@ namespace AkiClient.Game.Aki.Data.QuickTimeAction
 				FGameplayTagContainer result;
 				if ((result = this._Tags) == null)
 				{
-					result = (this._Tags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._Tags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_Tags, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_Tags, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005EA0 RID: 24224
-		// (get) Token: 0x06028963 RID: 166243 RVA: 0x009AFE7C File Offset: 0x009AE07C
-		// (set) Token: 0x06028964 RID: 166244 RVA: 0x009AFE8C File Offset: 0x009AE08C
+		// Token: 0x17003850 RID: 14416
+		// (get) Token: 0x0601F406 RID: 128006 RVA: 0x00929AAC File Offset: 0x00927CAC
+		// (set) Token: 0x0601F407 RID: 128007 RVA: 0x00929ABC File Offset: 0x00927CBC
 		public unsafe bool AnyTag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_AnyTag) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_AnyTag) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005EA1 RID: 24225
-		// (get) Token: 0x06028965 RID: 166245 RVA: 0x009AFE9D File Offset: 0x009AE09D
-		// (set) Token: 0x06028966 RID: 166246 RVA: 0x009AFEB1 File Offset: 0x009AE0B1
+		// Token: 0x17003851 RID: 14417
+		// (get) Token: 0x0601F408 RID: 128008 RVA: 0x00929ACD File Offset: 0x00927CCD
+		// (set) Token: 0x0601F409 RID: 128009 RVA: 0x00929AE1 File Offset: 0x00927CE1
 		public unsafe TEnumAsByte<EQtaCondition_EventName> EventName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_EventName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_EventName) = value;
 			}
 		}
 
-		// Token: 0x17005EA2 RID: 24226
-		// (get) Token: 0x06028967 RID: 166247 RVA: 0x009AFEC6 File Offset: 0x009AE0C6
-		// (set) Token: 0x06028968 RID: 166248 RVA: 0x009AFED6 File Offset: 0x009AE0D6
+		// Token: 0x17003852 RID: 14418
+		// (get) Token: 0x0601F40A RID: 128010 RVA: 0x00929AF6 File Offset: 0x00927CF6
+		// (set) Token: 0x0601F40B RID: 128011 RVA: 0x00929B06 File Offset: 0x00927D06
 		public unsafe bool Reverse
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_Reverse) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SQtaCondition_Content.__PropertyOffset_Reverse) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06028969 RID: 166249 RVA: 0x009AFEE7 File Offset: 0x009AE0E7
+		// Token: 0x0601F40C RID: 128012 RVA: 0x00929B17 File Offset: 0x00927D17
 		public SQtaCondition_Content()
 		{
 		}
 
-		// Token: 0x0602896A RID: 166250 RVA: 0x009AFEEF File Offset: 0x009AE0EF
-		public SQtaCondition_Content(TEnumAsByte<EQtaConditionType> ConditionType, TEnumAsByte<EQtaCondition_CheckInputType> InputMatchType, [Nullable(1)] FGameplayTagContainer Tags, bool AnyTag, TEnumAsByte<EQtaCondition_EventName> EventName, bool Reverse)
-		{
-			this.ConditionType = ConditionType;
-			this.InputMatchType = InputMatchType;
-			this.Tags = Tags;
-			this.AnyTag = AnyTag;
-			this.EventName = EventName;
-			this.Reverse = Reverse;
-		}
-
-		// Token: 0x0602896B RID: 166251 RVA: 0x009AFF24 File Offset: 0x009AE124
+		// Token: 0x0601F40D RID: 128013 RVA: 0x00929B1F File Offset: 0x00927D1F
 		protected override IntPtr GetUStructPtr()
 		{
 			return SQtaCondition_Content.StaticStruct();
 		}
 
-		// Token: 0x0602896C RID: 166252 RVA: 0x009AFF30 File Offset: 0x009AE130
+		// Token: 0x0601F40E RID: 128014 RVA: 0x00929B2B File Offset: 0x00927D2B
 		[NullableContext(2)]
 		public SQtaCondition_Content(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602896D RID: 166253 RVA: 0x009AFF3A File Offset: 0x009AE13A
+		// Token: 0x0601F40F RID: 128015 RVA: 0x00929B35 File Offset: 0x00927D35
 		public SQtaCondition_Content(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602896E RID: 166254 RVA: 0x009AFF45 File Offset: 0x009AE145
+		// Token: 0x0601F410 RID: 128016 RVA: 0x00929B40 File Offset: 0x00927D40
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SQtaCondition_Content(Pointer, false, true);
 		}
 
-		// Token: 0x0602896F RID: 166255 RVA: 0x009AFF4F File Offset: 0x009AE14F
+		// Token: 0x0601F411 RID: 128017 RVA: 0x00929B4A File Offset: 0x00927D4A
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SQtaCondition_Content(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014B6D RID: 84845
+		// Token: 0x04010B95 RID: 68501
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/QuickTimeAction/SQtaCondition_Content.SQtaCondition_Content";
 
-		// Token: 0x04014B6E RID: 84846
+		// Token: 0x04010B96 RID: 68502
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014B6F RID: 84847
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010B97 RID: 68503
+		internal static int __PropertyOffset_ConditionType;
 
-		// Token: 0x04014B70 RID: 84848
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010B98 RID: 68504
+		internal static int __PropertyOffset_InputMatchType;
 
-		// Token: 0x04014B71 RID: 84849
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010B99 RID: 68505
+		internal static int __PropertyOffset_Tags;
 
-		// Token: 0x04014B72 RID: 84850
+		// Token: 0x04010B9A RID: 68506
 		[Nullable(2)]
 		private FGameplayTagContainer _Tags;
 
-		// Token: 0x04014B73 RID: 84851
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010B9B RID: 68507
+		internal static int __PropertyOffset_AnyTag;
 
-		// Token: 0x04014B74 RID: 84852
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010B9C RID: 68508
+		internal static int __PropertyOffset_EventName;
 
-		// Token: 0x04014B75 RID: 84853
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010B9D RID: 68509
+		internal static int __PropertyOffset_Reverse;
 	}
 }

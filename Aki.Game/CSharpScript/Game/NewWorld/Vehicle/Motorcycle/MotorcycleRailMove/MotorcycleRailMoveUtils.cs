@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x0200704C RID: 28748
+	// Token: 0x020061CD RID: 25037
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleRailMoveUtils : Singleton
 	{
-		// Token: 0x06045F78 RID: 286584 RVA: 0x0116EF78 File Offset: 0x0116D178
+		// Token: 0x0603C15E RID: 246110 RVA: 0x01118CF0 File Offset: 0x01116EF0
 		[NullableContext(2)]
 		public unsafe bool ExecCheckList([Nullable(1)] RailMoveContext checkRailMoveContext, EnterRailCondition enterRailCondition = null, [Nullable(new byte[]
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return true;
 		}
 
-		// Token: 0x06045F79 RID: 286585 RVA: 0x0116F040 File Offset: 0x0116D240
+		// Token: 0x0603C15F RID: 246111 RVA: 0x01118DB8 File Offset: 0x01116FB8
 		public bool CalcRailMoveTargetNotAdvanceBySpeed(RailMoveContext checkRailMoveContext, double minSpeed, double maxSpeed)
 		{
 			SplineCurve railSpline = checkRailMoveContext.RailSpline;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return true;
 		}
 
-		// Token: 0x06045F7A RID: 286586 RVA: 0x0116F184 File Offset: 0x0116D384
+		// Token: 0x0603C160 RID: 246112 RVA: 0x01118EFC File Offset: 0x011170FC
 		public bool CalcRailMoveTargetAdvanceBySpeed(RailMoveContext checkRailMoveContext, double duration, double minSpeed, double maxSpeed)
 		{
 			SplineCurve railSpline = checkRailMoveContext.RailSpline;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return true;
 		}
 
-		// Token: 0x06045F7B RID: 286587 RVA: 0x0116F3E8 File Offset: 0x0116D5E8
+		// Token: 0x0603C161 RID: 246113 RVA: 0x01119160 File Offset: 0x01117360
 		public bool RailMoveCheckerCheckRelativeLocation(RailMoveContext checkRailMoveContext, [Nullable(2)] EnterRailCondition enterRailCondition = null)
 		{
 			if (enterRailCondition == null)
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return num <= (double)enterRailCondition.MaxAngleBetweenTargetUpAndDirPlaneProjectionOfTargetToCurrent;
 		}
 
-		// Token: 0x06045F7C RID: 286588 RVA: 0x0116F52C File Offset: 0x0116D72C
+		// Token: 0x0603C162 RID: 246114 RVA: 0x011192A4 File Offset: 0x011174A4
 		public bool RailMoveCheckerCheckVehicleNotReverseMove(RailMoveContext checkRailMoveContext, [Nullable(2)] EnterRailCondition enterRailCondition = null)
 		{
 			Vector tmpVector = this.TmpVector1;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return checkRailMoveContext.SourceVel.DotProduct(tmpVector) >= 0.0;
 		}
 
-		// Token: 0x06045F7D RID: 286589 RVA: 0x0116F570 File Offset: 0x0116D770
+		// Token: 0x0603C163 RID: 246115 RVA: 0x011192E8 File Offset: 0x011174E8
 		public bool RailMoveCheckerCheckAngleBetweenVehicleUpAndRailUp(RailMoveContext checkRailMoveContext, [Nullable(2)] EnterRailCondition enterRailCondition = null)
 		{
 			if (enterRailCondition == null)
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return MathUtils.Instance.GetAngleByVectorDot(tmpVector2, tmpVector) <= (double)enterRailCondition.MaxAngleBetweenUpAndRailUp;
 		}
 
-		// Token: 0x06045F7E RID: 286590 RVA: 0x0116F5D4 File Offset: 0x0116D7D4
+		// Token: 0x0603C164 RID: 246116 RVA: 0x01119358 File Offset: 0x01117558
 		public bool RailMoveCheckerCheckAngleBetweenVehicleForwardAndRailTangent(RailMoveContext checkRailMoveContext, [Nullable(2)] EnterRailCondition enterRailCondition = null)
 		{
 			if (enterRailCondition == null)
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return Math.Abs(MathUtils.Instance.GetAngleByVectorDot(tmpVector2, tmpVector)) <= (double)enterRailCondition.MaxAngleBetweenForwardAndRailTangent;
 		}
 
-		// Token: 0x06045F7F RID: 286591 RVA: 0x0116F660 File Offset: 0x0116D860
+		// Token: 0x0603C165 RID: 246117 RVA: 0x011193F0 File Offset: 0x011175F0
 		public bool RailMoveCheckerCheckAngleBetweenVehicleVelocityAndRailTangent(RailMoveContext checkRailMoveContext, [Nullable(2)] EnterRailCondition enterRailCondition = null)
 		{
 			if (enterRailCondition == null)
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return !tmpVector.IsZero() && (checkRailMoveContext.SourceVel.IsNearlyZero(9.999999747378752E-05) || Math.Abs(MathUtils.Instance.GetAngleByVectorDot(tmpVector, checkRailMoveContext.SourceVel)) <= (double)enterRailCondition.MaxAngleBetweenVelocityAndRailTangent);
 		}
 
-		// Token: 0x06045F80 RID: 286592 RVA: 0x0116F6EC File Offset: 0x0116D8EC
+		// Token: 0x0603C166 RID: 246118 RVA: 0x01119488 File Offset: 0x01117688
 		public double GetDistanceFromTargetToRail(USplineComponent targetSplineComp, TRailMoveGetter targetMoveGetter)
 		{
 			if (!targetMoveGetter(MathUtils.Instance.CommonTempVector, null, null))
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return MathUtils.Instance.VectorDistance(fvectorDouble2, MathUtils.Instance.CommonTempVector);
 		}
 
-		// Token: 0x06045F81 RID: 286593 RVA: 0x0116F754 File Offset: 0x0116D954
+		// Token: 0x0603C167 RID: 246119 RVA: 0x011194F0 File Offset: 0x011176F0
 		public EMotorcycleSide? GetRailRelativeSideOfTarget(USplineComponent targetSplineComp, TRailMoveGetter vehicleMoveGetter)
 		{
 			Vector tmpVector = this.TmpVector1;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return new EMotorcycleSide?((tmpVector2.Y < 0.0) ? EMotorcycleSide.Left : EMotorcycleSide.Right);
 		}
 
-		// Token: 0x06045F82 RID: 286594 RVA: 0x0116F810 File Offset: 0x0116DA10
+		// Token: 0x0603C168 RID: 246120 RVA: 0x011195AC File Offset: 0x011177AC
 		public void UpdateRailMoveConfig(string targetRowName, MotorcycleRailMoveConfig targetConfig, [Nullable(new byte[]
 		{
 			1,
@@ -341,8 +341,8 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			targetConfig.UpdateFromUeData(smotorRailMoveConfig);
 		}
 
-		// Token: 0x17009BE6 RID: 39910
-		// (get) Token: 0x06045F83 RID: 286595 RVA: 0x0116F878 File Offset: 0x0116DA78
+		// Token: 0x17007157 RID: 29015
+		// (get) Token: 0x0603C169 RID: 246121 RVA: 0x01119614 File Offset: 0x01117814
 		public static MotorcycleRailMoveUtils Instance
 		{
 			get
@@ -356,12 +356,12 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045F84 RID: 286596 RVA: 0x0116F89B File Offset: 0x0116DA9B
+		// Token: 0x0603C16A RID: 246122 RVA: 0x01119637 File Offset: 0x01117837
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045F85 RID: 286597 RVA: 0x0116F89D File Offset: 0x0116DA9D
+		// Token: 0x0603C16B RID: 246123 RVA: 0x01119639 File Offset: 0x01117839
 		public static void ResetStaticDefaultValue()
 		{
 			MotorcycleRailMoveUtils instance = MotorcycleRailMoveUtils._instance;
@@ -372,31 +372,31 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			MotorcycleRailMoveUtils._instance = null;
 		}
 
-		// Token: 0x06045F86 RID: 286598 RVA: 0x0116F8B6 File Offset: 0x0116DAB6
+		// Token: 0x0603C16C RID: 246124 RVA: 0x01119652 File Offset: 0x01117852
 		static MotorcycleRailMoveUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleRailMoveUtils.CreateStaticDefaultValue), new Action(MotorcycleRailMoveUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040249D8 RID: 149976
+		// Token: 0x0401FC8E RID: 130190
 		private readonly Vector TmpVector1 = Vector.Create();
 
-		// Token: 0x040249D9 RID: 149977
+		// Token: 0x0401FC8F RID: 130191
 		private readonly Vector TmpVector2 = Vector.Create();
 
-		// Token: 0x040249DA RID: 149978
+		// Token: 0x0401FC90 RID: 130192
 		private readonly Vector TmpVector3 = Vector.Create();
 
-		// Token: 0x040249DB RID: 149979
+		// Token: 0x0401FC91 RID: 130193
 		private readonly Vector TmpVector4 = Vector.Create();
 
-		// Token: 0x040249DC RID: 149980
+		// Token: 0x0401FC92 RID: 130194
 		private readonly Vector TmpVector5 = Vector.Create();
 
-		// Token: 0x040249DD RID: 149981
+		// Token: 0x0401FC93 RID: 130195
 		private readonly Rotator TmpRotator1 = Rotator.Create();
 
-		// Token: 0x040249DE RID: 149982
+		// Token: 0x0401FC94 RID: 130196
 		public TRailMoveChecker RailMoveCheckerCheckRailLenLeft = delegate(RailMoveContext checkRailMoveContext, [Nullable(2)] EnterRailCondition enterRailCondition = null)
 		{
 			RailMoveTarget railMoveTarget = checkRailMoveContext.RailMoveTarget;
@@ -412,7 +412,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return railMoveTarget.TargetSplineDist > ((enterRailCondition != null) ? enterRailCondition.MinRailLenLeftAfterEnterRail : 0f);
 		};
 
-		// Token: 0x040249DF RID: 149983
+		// Token: 0x0401FC95 RID: 130197
 		[Nullable(2)]
 		private static MotorcycleRailMoveUtils _instance;
 	}

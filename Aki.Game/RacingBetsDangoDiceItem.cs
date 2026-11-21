@@ -9,7 +9,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200270F RID: 9999
+// Token: 0x02001BFA RID: 7162
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class RacingBetsDangoDiceItem : GridProxyAbstract<DangoIdToDiceNum>
 {
-	// Token: 0x060147EE RID: 83950 RVA: 0x0052D1B8 File Offset: 0x0052B3B8
+	// Token: 0x06011CD0 RID: 72912 RVA: 0x0053BED4 File Offset: 0x0053A0D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,21 +31,21 @@ public class RacingBetsDangoDiceItem : GridProxyAbstract<DangoIdToDiceNum>
 		};
 	}
 
-	// Token: 0x060147EF RID: 83951 RVA: 0x0052D23E File Offset: 0x0052B43E
+	// Token: 0x06011CD1 RID: 72913 RVA: 0x0053BF5A File Offset: 0x0053A15A
 	protected override void OnBeforeCreateImplement()
 	{
 		this.UiLevelSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiLevelSequence);
 	}
 
-	// Token: 0x060147F0 RID: 83952 RVA: 0x0052D258 File Offset: 0x0052B458
+	// Token: 0x06011CD2 RID: 72914 RVA: 0x0053BF74 File Offset: 0x0053A174
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnRacingBetsDangoRoundStart, new Action<int>(this.OnRacingBetsDangoRoundStart));
 		EventSystem.Instance.Add<int, IReadOnlyList<DangoIdToDiceNum>, CustomPromise>(EEventName.OnRacingBetsDangoOrderRefresh, new Action<int, IReadOnlyList<DangoIdToDiceNum>, CustomPromise>(this.OnRacingBetsDangoOrderRefresh));
 	}
 
-	// Token: 0x060147F1 RID: 83953 RVA: 0x0052D294 File Offset: 0x0052B494
+	// Token: 0x06011CD3 RID: 72915 RVA: 0x0053BFB0 File Offset: 0x0053A1B0
 	public override void Refresh(DangoIdToDiceNum diceInfo, bool isSelected, int gridIndex)
 	{
 		this.DiceInfo = diceInfo;
@@ -70,14 +70,14 @@ public class RacingBetsDangoDiceItem : GridProxyAbstract<DangoIdToDiceNum>
 		}
 	}
 
-	// Token: 0x060147F2 RID: 83954 RVA: 0x0052D34D File Offset: 0x0052B54D
+	// Token: 0x06011CD4 RID: 72916 RVA: 0x0053C069 File Offset: 0x0053A269
 	protected override void OnAfterHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRacingBetsDangoRoundStart, new Action<int>(this.OnRacingBetsDangoRoundStart));
 		EventSystem.Instance.Remove<int, IReadOnlyList<DangoIdToDiceNum>, CustomPromise>(EEventName.OnRacingBetsDangoOrderRefresh, new Action<int, IReadOnlyList<DangoIdToDiceNum>, CustomPromise>(this.OnRacingBetsDangoOrderRefresh));
 	}
 
-	// Token: 0x060147F3 RID: 83955 RVA: 0x0052D388 File Offset: 0x0052B588
+	// Token: 0x06011CD5 RID: 72917 RVA: 0x0053C0A4 File Offset: 0x0053A2A4
 	private void OnRacingBetsDangoRoundStart(int dangoId)
 	{
 		if (this.DiceInfo.DangoId == dangoId)
@@ -112,7 +112,7 @@ public class RacingBetsDangoDiceItem : GridProxyAbstract<DangoIdToDiceNum>
 		}
 	}
 
-	// Token: 0x060147F4 RID: 83956 RVA: 0x0052D3FB File Offset: 0x0052B5FB
+	// Token: 0x06011CD6 RID: 72918 RVA: 0x0053C117 File Offset: 0x0053A317
 	private void OnRacingBetsDangoOrderRefresh(int _1, IReadOnlyList<DangoIdToDiceNum> _2, CustomPromise _3)
 	{
 		UUIItem item = base.GetItem(4);
@@ -128,26 +128,26 @@ public class RacingBetsDangoDiceItem : GridProxyAbstract<DangoIdToDiceNum>
 		uiLevelSequence.StopPrevSequence(false, true);
 	}
 
-	// Token: 0x04009A35 RID: 39477
+	// Token: 0x04009B8D RID: 39821
 	private DangoIdToDiceNum DiceInfo;
 
-	// Token: 0x04009A36 RID: 39478
+	// Token: 0x04009B8E RID: 39822
 	[Nullable(2)]
 	public UiBehaviorLevelSequence UiLevelSequence;
 
-	// Token: 0x02008D5D RID: 36189
+	// Token: 0x02007EE6 RID: 32486
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402DDF4 RID: 187892
+		// Token: 0x0402910B RID: 168203
 		DiceTexture,
-		// Token: 0x0402DDF5 RID: 187893
+		// Token: 0x0402910C RID: 168204
 		DiceNumTexture,
-		// Token: 0x0402DDF6 RID: 187894
+		// Token: 0x0402910D RID: 168205
 		DangoBgTexture,
-		// Token: 0x0402DDF7 RID: 187895
+		// Token: 0x0402910E RID: 168206
 		DangoTexture,
-		// Token: 0x0402DDF8 RID: 187896
+		// Token: 0x0402910F RID: 168207
 		ArrowItem
 	}
 }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{37600991-511A-49CC-9A91-B04AB32BBB5E}</ProjectGuid>
+    <ProjectGuid>{03A230D2-6EEE-4B35-BE86-5EB1E30E8F96}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Aki.Config</RootNamespace>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,29 +32,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Google.FlatBuffers">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Google.FlatBuffers.dll</HintPath>
-    </Reference>
-    <Reference Include="Sharphereal.Core">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Sharphereal.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\Google.FlatBuffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.Immutable.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="UnrealEngine">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UnrealEngine.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Linq.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +78,11 @@
     <Compile Include="AchievementStarLevel.cs" />
     <Compile Include="ActionMapping.cs" />
     <Compile Include="Activity.cs" />
+    <Compile Include="ActivityAction.cs" />
+    <Compile Include="ActivityActionClientType.cs" />
+    <Compile Include="ActivityCondition.cs" />
+    <Compile Include="ActivityConditionClientType.cs" />
+    <Compile Include="ActivityConditionGroup.cs" />
     <Compile Include="ActivityFilter.cs" />
     <Compile Include="ActivityGamePlayPlot.cs" />
     <Compile Include="ActivityLinkage.cs" />
@@ -169,6 +164,12 @@
     <Compile Include="AuthorizationMapping.cs" />
     <Compile Include="AutoPilotCircles.cs" />
     <Compile Include="AutoRole.cs" />
+    <Compile Include="AvgBackground.cs" />
+    <Compile Include="AvgCg.cs" />
+    <Compile Include="AvgLocationChange.cs" />
+    <Compile Include="AvgShowItem.cs" />
+    <Compile Include="AvgShowPrefab.cs" />
+    <Compile Include="AvgSolarSchoolRoleAnimation.cs" />
     <Compile Include="AvgTalkerConfig.cs" />
     <Compile Include="AvignonStage.cs" />
     <Compile Include="AvignonTask.cs" />
@@ -265,6 +266,7 @@
     <Compile Include="ChatPartner.cs" />
     <Compile Include="ChatPartnerFilter.cs" />
     <Compile Include="ChatTheme.cs" />
+    <Compile Include="ChildEntityOwnerData.cs" />
     <Compile Include="ChildUiCameraMapping.cs" />
     <Compile Include="ChipHandBook.cs" />
     <Compile Include="ChipType.cs" />
@@ -286,6 +288,7 @@
     <Compile Include="CloudTime.cs" />
     <Compile Include="ClueContent.cs" />
     <Compile Include="ClueEntrance.cs" />
+    <Compile Include="CollaborativeContent.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="CombinationAction.cs" />
     <Compile Include="CombinationAxis.cs" />
@@ -357,7 +360,15 @@
     <Compile Include="ConfigActionMappingAll.cs" />
     <Compile Include="ConfigActionMappingByActionName.cs" />
     <Compile Include="ConfigActionMappingByActionType.cs" />
+    <Compile Include="ConfigActivityActionAll.cs" />
+    <Compile Include="ConfigActivityActionById.cs" />
+    <Compile Include="ConfigActivityActionClientTypeById.cs" />
     <Compile Include="ConfigActivityById.cs" />
+    <Compile Include="ConfigActivityConditionAll.cs" />
+    <Compile Include="ConfigActivityConditionById.cs" />
+    <Compile Include="ConfigActivityConditionByType.cs" />
+    <Compile Include="ConfigActivityConditionGroupAll.cs" />
+    <Compile Include="ConfigActivityConditionGroupById.cs" />
     <Compile Include="ConfigActivityFilterAll.cs" />
     <Compile Include="ConfigActivityFilterById.cs" />
     <Compile Include="ConfigActivityGamePlayPlotById.cs" />
@@ -484,6 +495,13 @@
     <Compile Include="ConfigAutoPilotCirclesById.cs" />
     <Compile Include="ConfigAutoRoleByAll.cs" />
     <Compile Include="ConfigAutoRoleById.cs" />
+    <Compile Include="ConfigAvgBackgroundById.cs" />
+    <Compile Include="ConfigAvgCgById.cs" />
+    <Compile Include="ConfigAvgLocationChangeById.cs" />
+    <Compile Include="ConfigAvgLocationChangeLang.cs" />
+    <Compile Include="ConfigAvgShowItemById.cs" />
+    <Compile Include="ConfigAvgShowPrefabById.cs" />
+    <Compile Include="ConfigAvgSolarSchoolRoleAnimationById.cs" />
     <Compile Include="ConfigAvgTalkerConfigById.cs" />
     <Compile Include="ConfigAvignonStageAll.cs" />
     <Compile Include="ConfigAvignonStageById.cs" />
@@ -640,6 +658,7 @@
     <Compile Include="ConfigChatPartnerFilterById.cs" />
     <Compile Include="ConfigChatThemeAll.cs" />
     <Compile Include="ConfigChatThemeById.cs" />
+    <Compile Include="ConfigChildEntityOwnerDataByGuid.cs" />
     <Compile Include="ConfigChildUiCameraMappingAll.cs" />
     <Compile Include="ConfigChildUiCameraMappingById.cs" />
     <Compile Include="ConfigChildUiCameraMappingByViewName.cs" />
@@ -671,6 +690,8 @@
     <Compile Include="ConfigClueContentByGroupId.cs" />
     <Compile Include="ConfigClueContentById.cs" />
     <Compile Include="ConfigClueEntranceById.cs" />
+    <Compile Include="ConfigCollaborativeContentAll.cs" />
+    <Compile Include="ConfigCollaborativeContentById.cs" />
     <Compile Include="ConfigCombinationActionAll.cs" />
     <Compile Include="ConfigCombinationActionByActionName.cs" />
     <Compile Include="ConfigCombinationActionByActionType.cs" />
@@ -875,6 +896,8 @@
     <Compile Include="ConfigDropCatchRoleById.cs" />
     <Compile Include="ConfigDropPackageById.cs" />
     <Compile Include="ConfigDropShowPlanById.cs" />
+    <Compile Include="ConfigDualSenseLightBarAll.cs" />
+    <Compile Include="ConfigDualSenseLightBarById.cs" />
     <Compile Include="ConfigDungeonDetectionAll.cs" />
     <Compile Include="ConfigDungeonDetectionByDungeonId.cs" />
     <Compile Include="ConfigDungeonDetectionById.cs" />
@@ -979,6 +1002,7 @@
     <Compile Include="ConfigExploreToolsByPhantomSkillId.cs" />
     <Compile Include="ConfigExploreTypeByType.cs" />
     <Compile Include="ConfigExternalSourceSettingById.cs" />
+    <Compile Include="ConfigExtraDamageTextById.cs" />
     <Compile Include="ConfigFaceExpressionDataById.cs" />
     <Compile Include="ConfigFarmGoldActivityAll.cs" />
     <Compile Include="ConfigFarmGoldActivityByActivityIdAndInstanceId.cs" />
@@ -1195,6 +1219,7 @@
     <Compile Include="ConfigGamePlayInformationInfoById.cs" />
     <Compile Include="ConfigGamePlayScanByUid.cs" />
     <Compile Include="ConfigGamePlayScanCompositeByUid.cs" />
+    <Compile Include="ConfigGameStatisticById.cs" />
     <Compile Include="ConfigGatherActivityAll.cs" />
     <Compile Include="ConfigGatherActivityById.cs" />
     <Compile Include="ConfigGenderTextByMaleText.cs" />
@@ -1703,6 +1728,7 @@
     <Compile Include="ConfigMotorDecalPreviewByStickerId.cs" />
     <Compile Include="ConfigMotorDecalQuestByIp.cs" />
     <Compile Include="ConfigMotorDecalQuestByTaskId.cs" />
+    <Compile Include="ConfigMotorDecorationsAll.cs" />
     <Compile Include="ConfigMotorDecorationsById.cs" />
     <Compile Include="ConfigMotorDecorationsPartById.cs" />
     <Compile Include="ConfigMotorDevelopActivityByActivityId.cs" />
@@ -1776,6 +1802,7 @@
     <Compile Include="ConfigMotorSkinAll.cs" />
     <Compile Include="ConfigMotorSkinById.cs" />
     <Compile Include="ConfigMotorSkinShowById.cs" />
+    <Compile Include="ConfigMotorStickerAll.cs" />
     <Compile Include="ConfigMotorStickerById.cs" />
     <Compile Include="ConfigMotorStickerPartById.cs" />
     <Compile Include="ConfigMotorTaskById.cs" />
@@ -2189,6 +2216,8 @@
     <Compile Include="ConfigPreOpenDetectionById.cs" />
     <Compile Include="ConfigPreviewItemAll.cs" />
     <Compile Include="ConfigPreviewItemById.cs" />
+    <Compile Include="ConfigPrizeActivityById.cs" />
+    <Compile Include="ConfigPrizeAwardsGroupById.cs" />
     <Compile Include="ConfigProjectorPatternById.cs" />
     <Compile Include="ConfigPropertyIndexAll.cs" />
     <Compile Include="ConfigPropertyIndexById.cs" />
@@ -2283,6 +2312,8 @@
     <Compile Include="ConfigRecallEntityByRecallAndInstanceId.cs" />
     <Compile Include="ConfigRecallEntityByRecallId.cs" />
     <Compile Include="ConfigRecallFunctionById.cs" />
+    <Compile Include="ConfigRecallRouletteFuncAll.cs" />
+    <Compile Include="ConfigRecallRouletteFuncByFunctionId.cs" />
     <Compile Include="ConfigRecommendPackAll.cs" />
     <Compile Include="ConfigRecordConfigById.cs" />
     <Compile Include="ConfigRedDotByRelativeName.cs" />
@@ -2555,6 +2586,53 @@
     <Compile Include="ConfigRoleSkinTrialUiConfigById.cs" />
     <Compile Include="ConfigRoleTagAll.cs" />
     <Compile Include="ConfigRoleTagById.cs" />
+    <Compile Include="ConfigRoleTowerBranchAll.cs" />
+    <Compile Include="ConfigRoleTowerBranchById.cs" />
+    <Compile Include="ConfigRoleTowerEchoLevelAll.cs" />
+    <Compile Include="ConfigRoleTowerEchoLevelByActivityId.cs" />
+    <Compile Include="ConfigRoleTowerEchoLevelById.cs" />
+    <Compile Include="ConfigRoleTowerFloorAll.cs" />
+    <Compile Include="ConfigRoleTowerFloorByBranch.cs" />
+    <Compile Include="ConfigRoleTowerFloorByFloorGroupId.cs" />
+    <Compile Include="ConfigRoleTowerFloorById.cs" />
+    <Compile Include="ConfigRoleTowerLevelAll.cs" />
+    <Compile Include="ConfigRoleTowerLevelByGroupId.cs" />
+    <Compile Include="ConfigRoleTowerLevelById.cs" />
+    <Compile Include="ConfigRoleTowerLevelGroupAll.cs" />
+    <Compile Include="ConfigRoleTowerLevelGroupByActivityId.cs" />
+    <Compile Include="ConfigRoleTowerLevelGroupById.cs" />
+    <Compile Include="ConfigRoleTowerParamByActivityId.cs" />
+    <Compile Include="ConfigRoleTowerRewardAll.cs" />
+    <Compile Include="ConfigRoleTowerRewardByActivityId.cs" />
+    <Compile Include="ConfigRoleTowerRewardById.cs" />
+    <Compile Include="ConfigRoleTowerRewardByTabId.cs" />
+    <Compile Include="ConfigRoleTowerRewardTabAll.cs" />
+    <Compile Include="ConfigRoleTowerRewardTabByActivityId.cs" />
+    <Compile Include="ConfigRoleTowerRewardTabById.cs" />
+    <Compile Include="ConfigRoleTowerRoleAll.cs" />
+    <Compile Include="ConfigRoleTowerRoleById.cs" />
+    <Compile Include="ConfigRoleTowerRoleByRoleId.cs" />
+    <Compile Include="ConfigRoleTowerScoreRewardAll.cs" />
+    <Compile Include="ConfigRoleTowerScoreRewardByActivityId.cs" />
+    <Compile Include="ConfigRoleTowerScoreRewardById.cs" />
+    <Compile Include="ConfigRoleTowerStageAll.cs" />
+    <Compile Include="ConfigRoleTowerStageById.cs" />
+    <Compile Include="ConfigRoleTowerStarAll.cs" />
+    <Compile Include="ConfigRoleTowerStarByGroupId.cs" />
+    <Compile Include="ConfigRoleTowerStarById.cs" />
+    <Compile Include="ConfigRoleTowerStarGroupAll.cs" />
+    <Compile Include="ConfigRoleTowerStarGroupById.cs" />
+    <Compile Include="ConfigRoleTowerTokenAll.cs" />
+    <Compile Include="ConfigRoleTowerTokenByActivityId.cs" />
+    <Compile Include="ConfigRoleTowerTokenById.cs" />
+    <Compile Include="ConfigRoleTowerTokenTypeAll.cs" />
+    <Compile Include="ConfigRoleTowerTokenTypeById.cs" />
+    <Compile Include="ConfigRoleTowerTokenZoneAll.cs" />
+    <Compile Include="ConfigRoleTowerTokenZoneByActivityId.cs" />
+    <Compile Include="ConfigRoleTowerTokenZoneById.cs" />
+    <Compile Include="ConfigRoleTowerWaveAll.cs" />
+    <Compile Include="ConfigRoleTowerWaveByFloorId.cs" />
+    <Compile Include="ConfigRoleTowerWaveById.cs" />
     <Compile Include="ConfigRoleTrainingDegreeByDifficultyLevel.cs" />
     <Compile Include="ConfigRoleTrialActivityById.cs" />
     <Compile Include="ConfigRoleTrialInfoById.cs" />
@@ -2701,6 +2779,144 @@
     <Compile Include="ConfigSoarById.cs" />
     <Compile Include="ConfigSoarChallengeAll.cs" />
     <Compile Include="ConfigSoarChallengeById.cs" />
+    <Compile Include="ConfigSolarSchoolActivityAll.cs" />
+    <Compile Include="ConfigSolarSchoolActivityById.cs" />
+    <Compile Include="ConfigSolarSchoolAffairsById.cs" />
+    <Compile Include="ConfigSolarSchoolAffairsOptionByGroupId.cs" />
+    <Compile Include="ConfigSolarSchoolAffairsOptionById.cs" />
+    <Compile Include="ConfigSolarSchoolAttrAll.cs" />
+    <Compile Include="ConfigSolarSchoolAttrByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolAttrById.cs" />
+    <Compile Include="ConfigSolarSchoolAvgParamAll.cs" />
+    <Compile Include="ConfigSolarSchoolAvgParamByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolAvgParamById.cs" />
+    <Compile Include="ConfigSolarSchoolBehaviorAll.cs" />
+    <Compile Include="ConfigSolarSchoolBehaviorByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolBehaviorByBehaviorId.cs" />
+    <Compile Include="ConfigSolarSchoolBehaviorById.cs" />
+    <Compile Include="ConfigSolarSchoolBehaviorCategoryAll.cs" />
+    <Compile Include="ConfigSolarSchoolBehaviorCategoryByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolBehaviorCategoryById.cs" />
+    <Compile Include="ConfigSolarSchoolBuffById.cs" />
+    <Compile Include="ConfigSolarSchoolBuffEffectById.cs" />
+    <Compile Include="ConfigSolarSchoolCalendarAll.cs" />
+    <Compile Include="ConfigSolarSchoolCalendarByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolCalendarByDayIndex.cs" />
+    <Compile Include="ConfigSolarSchoolCalendarById.cs" />
+    <Compile Include="ConfigSolarSchoolCalendarByInstanceId.cs" />
+    <Compile Include="ConfigSolarSchoolDatePeriodAll.cs" />
+    <Compile Include="ConfigSolarSchoolDatePeriodByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolDatePeriodById.cs" />
+    <Compile Include="ConfigSolarSchoolEndingAll.cs" />
+    <Compile Include="ConfigSolarSchoolEndingByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolEndingById.cs" />
+    <Compile Include="ConfigSolarSchoolEndingFlowAll.cs" />
+    <Compile Include="ConfigSolarSchoolEndingFlowByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolEndingFlowById.cs" />
+    <Compile Include="ConfigSolarSchoolEndingSummaryByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolEndingSummaryById.cs" />
+    <Compile Include="ConfigSolarSchoolEventCheckById.cs" />
+    <Compile Include="ConfigSolarSchoolEventCheckOptByGroupId.cs" />
+    <Compile Include="ConfigSolarSchoolEventCheckOptById.cs" />
+    <Compile Include="ConfigSolarSchoolEventProbabilityAll.cs" />
+    <Compile Include="ConfigSolarSchoolEventProbabilityById.cs" />
+    <Compile Include="ConfigSolarSchoolExamById.cs" />
+    <Compile Include="ConfigSolarSchoolExamByInstanceId.cs" />
+    <Compile Include="ConfigSolarSchoolExamChoiceByGroupId.cs" />
+    <Compile Include="ConfigSolarSchoolExamChoiceById.cs" />
+    <Compile Include="ConfigSolarSchoolExamEventById.cs" />
+    <Compile Include="ConfigSolarSchoolExamScoreRankByGroupId.cs" />
+    <Compile Include="ConfigSolarSchoolExamScoreRankById.cs" />
+    <Compile Include="ConfigSolarSchoolFlowAll.cs" />
+    <Compile Include="ConfigSolarSchoolFlowByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolFlowById.cs" />
+    <Compile Include="ConfigSolarSchoolForumById.cs" />
+    <Compile Include="ConfigSolarSchoolForumPostById.cs" />
+    <Compile Include="ConfigSolarSchoolFunctionByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolFunctionById.cs" />
+    <Compile Include="ConfigSolarSchoolGalleryAll.cs" />
+    <Compile Include="ConfigSolarSchoolGalleryById.cs" />
+    <Compile Include="ConfigSolarSchoolInfluenceById.cs" />
+    <Compile Include="ConfigSolarSchoolInfluenceLevelByInfluenceTypeAndLevel.cs" />
+    <Compile Include="ConfigSolarSchoolInstanceAll.cs" />
+    <Compile Include="ConfigSolarSchoolInstanceByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolInstanceById.cs" />
+    <Compile Include="ConfigSolarSchoolItemAll.cs" />
+    <Compile Include="ConfigSolarSchoolItemByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolItemById.cs" />
+    <Compile Include="ConfigSolarSchoolItemEffectAll.cs" />
+    <Compile Include="ConfigSolarSchoolItemEffectById.cs" />
+    <Compile Include="ConfigSolarSchoolLetterById.cs" />
+    <Compile Include="ConfigSolarSchoolLetterPageById.cs" />
+    <Compile Include="ConfigSolarSchoolLocationAll.cs" />
+    <Compile Include="ConfigSolarSchoolLocationByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolLocationByActivityIdAndInstanceId.cs" />
+    <Compile Include="ConfigSolarSchoolLocationById.cs" />
+    <Compile Include="ConfigSolarSchoolOptionsAll.cs" />
+    <Compile Include="ConfigSolarSchoolOptionsByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolOptionsById.cs" />
+    <Compile Include="ConfigSolarSchoolParamAll.cs" />
+    <Compile Include="ConfigSolarSchoolParamByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolParamByActivityIdAndKey.cs" />
+    <Compile Include="ConfigSolarSchoolParamById.cs" />
+    <Compile Include="ConfigSolarSchoolPopupById.cs" />
+    <Compile Include="ConfigSolarSchoolQuestAll.cs" />
+    <Compile Include="ConfigSolarSchoolQuestByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolQuestById.cs" />
+    <Compile Include="ConfigSolarSchoolQuestDisplayByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolQuestDisplayById.cs" />
+    <Compile Include="ConfigSolarSchoolQuestNodeAll.cs" />
+    <Compile Include="ConfigSolarSchoolQuestNodeByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolQuestNodeById.cs" />
+    <Compile Include="ConfigSolarSchoolQuestRewardById.cs" />
+    <Compile Include="ConfigSolarSchoolRewardAll.cs" />
+    <Compile Include="ConfigSolarSchoolRewardById.cs" />
+    <Compile Include="ConfigSolarSchoolRewardsAll.cs" />
+    <Compile Include="ConfigSolarSchoolRewardsById.cs" />
+    <Compile Include="ConfigSolarSchoolRoleAll.cs" />
+    <Compile Include="ConfigSolarSchoolRoleByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolRoleById.cs" />
+    <Compile Include="ConfigSolarSchoolRoleFavorAll.cs" />
+    <Compile Include="ConfigSolarSchoolRoleFavorByRoleId.cs" />
+    <Compile Include="ConfigSolarSchoolRoleFavorLevelAll.cs" />
+    <Compile Include="ConfigSolarSchoolRoleFavorLevelByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolRoleFavorLevelByRoleId.cs" />
+    <Compile Include="ConfigSolarSchoolRoleFavorLevelByRoleIdAndFavorLevel.cs" />
+    <Compile Include="ConfigSolarSchoolRoleScheduleAll.cs" />
+    <Compile Include="ConfigSolarSchoolRoleScheduleByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolRoleScheduleById.cs" />
+    <Compile Include="ConfigSolarSchoolRoleScheduleByRoleId.cs" />
+    <Compile Include="ConfigSolarSchoolRoleSpineById.cs" />
+    <Compile Include="ConfigSolarSchoolRoleTalkAll.cs" />
+    <Compile Include="ConfigSolarSchoolRoleTalkByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolRoleTalkByActivityIdAndRoleIdAndTalkType.cs" />
+    <Compile Include="ConfigSolarSchoolRoleTalkById.cs" />
+    <Compile Include="ConfigSolarSchoolScratchTicketCoAll.cs" />
+    <Compile Include="ConfigSolarSchoolScratchTicketCoByRoundId.cs" />
+    <Compile Include="ConfigSolarSchoolScratchTicketReAll.cs" />
+    <Compile Include="ConfigSolarSchoolScratchTicketReById.cs" />
+    <Compile Include="ConfigSolarSchoolShopAll.cs" />
+    <Compile Include="ConfigSolarSchoolShopByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolShopById.cs" />
+    <Compile Include="ConfigSolarSchoolShopGoodsAll.cs" />
+    <Compile Include="ConfigSolarSchoolShopGoodsByGroupId.cs" />
+    <Compile Include="ConfigSolarSchoolShopRefreshAll.cs" />
+    <Compile Include="ConfigSolarSchoolShopRefreshByShopId.cs" />
+    <Compile Include="ConfigSolarSchoolShopRefreshByShopIdAndWeek.cs" />
+    <Compile Include="ConfigSolarSchoolSpanAll.cs" />
+    <Compile Include="ConfigSolarSchoolSpanByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolSpanById.cs" />
+    <Compile Include="ConfigSolarSchoolSummaryItemByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolSummaryItemById.cs" />
+    <Compile Include="ConfigSolarSchoolTaskAll.cs" />
+    <Compile Include="ConfigSolarSchoolTaskById.cs" />
+    <Compile Include="ConfigSolarSchoolTaskByTaskTab.cs" />
+    <Compile Include="ConfigSolarSchoolTaskByTaskType.cs" />
+    <Compile Include="ConfigSolarSchoolTimeSlotAll.cs" />
+    <Compile Include="ConfigSolarSchoolTimeSlotByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolTimeSlotById.cs" />
+    <Compile Include="ConfigSolarSchoolViewInfoByActivityId.cs" />
+    <Compile Include="ConfigSolarSchoolViewInfoByViewName.cs" />
     <Compile Include="ConfigSortById.cs" />
     <Compile Include="ConfigSortRuleByIdAndDataId.cs" />
     <Compile Include="ConfigSoundAreaPlayInfoAll.cs" />
@@ -3170,6 +3386,7 @@
     <Compile Include="DropPackageType.cs" />
     <Compile Include="DropPlan.cs" />
     <Compile Include="DropShowPlan.cs" />
+    <Compile Include="DualSenseLightBar.cs" />
     <Compile Include="DungeonDetection.cs" />
     <Compile Include="DungeonEntrance.cs" />
     <Compile Include="DungeonPackInfo.cs" />
@@ -3240,6 +3457,7 @@
     <Compile Include="ExploreTools.cs" />
     <Compile Include="ExploreType.cs" />
     <Compile Include="ExternalSourceSetting.cs" />
+    <Compile Include="ExtraDamageText.cs" />
     <Compile Include="FaceExpressionData.cs" />
     <Compile Include="FarmGoldActivity.cs" />
     <Compile Include="FarmGoldDifficulty.cs" />
@@ -3398,6 +3616,7 @@
     <Compile Include="GameplayTagDefine.cs" />
     <Compile Include="GameplayTagIdLookup.cs" />
     <Compile Include="GameplayTagRuntimeTable.cs" />
+    <Compile Include="GameStatistic.cs" />
     <Compile Include="GASkill.cs" />
     <Compile Include="GatherActivity.cs" />
     <Compile Include="GenderText.cs" />
@@ -3543,6 +3762,7 @@
     <Compile Include="Interjection.cs" />
     <Compile Include="IntIntMap.cs" />
     <Compile Include="IntPair.cs" />
+    <Compile Include="IntRange.cs" />
     <Compile Include="IntVector.cs" />
     <Compile Include="IntVector2D.cs" />
     <Compile Include="ItemAccessedPath.cs" />
@@ -4033,6 +4253,8 @@
     <Compile Include="PreheatVote.cs" />
     <Compile Include="PreOpenDetection.cs" />
     <Compile Include="PreviewItem.cs" />
+    <Compile Include="PrizeActivity.cs" />
+    <Compile Include="PrizeAwardsGroup.cs" />
     <Compile Include="ProAddEntry.cs" />
     <Compile Include="ProjectorPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -4106,6 +4328,7 @@
     <Compile Include="RecallEntity.cs" />
     <Compile Include="RecallFunction.cs" />
     <Compile Include="RecallMark.cs" />
+    <Compile Include="RecallRouletteFunc.cs" />
     <Compile Include="RecommendPack.cs" />
     <Compile Include="RecordCondition.cs" />
     <Compile Include="RecordConfig.cs" />
@@ -4299,6 +4522,25 @@
     <Compile Include="RoleSkinTrialInfo.cs" />
     <Compile Include="RoleSkinTrialUiConfig.cs" />
     <Compile Include="RoleTag.cs" />
+    <Compile Include="RoleTowerBranch.cs" />
+    <Compile Include="RoleTowerBuff.cs" />
+    <Compile Include="RoleTowerCond.cs" />
+    <Compile Include="RoleTowerEchoLevel.cs" />
+    <Compile Include="RoleTowerFloor.cs" />
+    <Compile Include="RoleTowerLevel.cs" />
+    <Compile Include="RoleTowerLevelGroup.cs" />
+    <Compile Include="RoleTowerParam.cs" />
+    <Compile Include="RoleTowerReward.cs" />
+    <Compile Include="RoleTowerRewardTab.cs" />
+    <Compile Include="RoleTowerRole.cs" />
+    <Compile Include="RoleTowerScoreReward.cs" />
+    <Compile Include="RoleTowerStage.cs" />
+    <Compile Include="RoleTowerStar.cs" />
+    <Compile Include="RoleTowerStarGroup.cs" />
+    <Compile Include="RoleTowerToken.cs" />
+    <Compile Include="RoleTowerTokenType.cs" />
+    <Compile Include="RoleTowerTokenZone.cs" />
+    <Compile Include="RoleTowerWave.cs" />
     <Compile Include="RoleTrainingDegree.cs" />
     <Compile Include="RoleTrialActivity.cs" />
     <Compile Include="RoleTrialInfo.cs" />
@@ -4424,6 +4666,65 @@
     <Compile Include="SListenEventExportDefine.cs" />
     <Compile Include="Soar.cs" />
     <Compile Include="SoarChallenge.cs" />
+    <Compile Include="SolarSchoolActivity.cs" />
+    <Compile Include="SolarSchoolAffairs.cs" />
+    <Compile Include="SolarSchoolAffairsOption.cs" />
+    <Compile Include="SolarSchoolAttr.cs" />
+    <Compile Include="SolarSchoolAvgParam.cs" />
+    <Compile Include="SolarSchoolBehavior.cs" />
+    <Compile Include="SolarSchoolBehaviorCategory.cs" />
+    <Compile Include="SolarSchoolBuff.cs" />
+    <Compile Include="SolarSchoolBuffEffect.cs" />
+    <Compile Include="SolarSchoolCalendar.cs" />
+    <Compile Include="SolarSchoolDatePeriod.cs" />
+    <Compile Include="SolarSchoolEnding.cs" />
+    <Compile Include="SolarSchoolEndingFlow.cs" />
+    <Compile Include="SolarSchoolEndingSummary.cs" />
+    <Compile Include="SolarSchoolEventCheck.cs" />
+    <Compile Include="SolarSchoolEventCheckOpt.cs" />
+    <Compile Include="SolarSchoolEventProbability.cs" />
+    <Compile Include="SolarSchoolExam.cs" />
+    <Compile Include="SolarSchoolExamChoice.cs" />
+    <Compile Include="SolarSchoolExamEvent.cs" />
+    <Compile Include="SolarSchoolExamScoreRank.cs" />
+    <Compile Include="SolarSchoolFlow.cs" />
+    <Compile Include="SolarSchoolForum.cs" />
+    <Compile Include="SolarSchoolForumPost.cs" />
+    <Compile Include="SolarSchoolFunction.cs" />
+    <Compile Include="SolarSchoolGallery.cs" />
+    <Compile Include="SolarSchoolInfluence.cs" />
+    <Compile Include="SolarSchoolInfluenceLevel.cs" />
+    <Compile Include="SolarSchoolInstance.cs" />
+    <Compile Include="SolarSchoolItem.cs" />
+    <Compile Include="SolarSchoolItemEffect.cs" />
+    <Compile Include="SolarSchoolLetter.cs" />
+    <Compile Include="SolarSchoolLetterPage.cs" />
+    <Compile Include="SolarSchoolLocation.cs" />
+    <Compile Include="SolarSchoolOptions.cs" />
+    <Compile Include="SolarSchoolParam.cs" />
+    <Compile Include="SolarSchoolPopup.cs" />
+    <Compile Include="SolarSchoolQuest.cs" />
+    <Compile Include="SolarSchoolQuestDisplay.cs" />
+    <Compile Include="SolarSchoolQuestNode.cs" />
+    <Compile Include="SolarSchoolQuestReward.cs" />
+    <Compile Include="SolarSchoolReward.cs" />
+    <Compile Include="SolarSchoolRewards.cs" />
+    <Compile Include="SolarSchoolRole.cs" />
+    <Compile Include="SolarSchoolRoleFavor.cs" />
+    <Compile Include="SolarSchoolRoleFavorLevel.cs" />
+    <Compile Include="SolarSchoolRoleSchedule.cs" />
+    <Compile Include="SolarSchoolRoleSpine.cs" />
+    <Compile Include="SolarSchoolRoleTalk.cs" />
+    <Compile Include="SolarSchoolScratchTicketCo.cs" />
+    <Compile Include="SolarSchoolScratchTicketRe.cs" />
+    <Compile Include="SolarSchoolShop.cs" />
+    <Compile Include="SolarSchoolShopGoods.cs" />
+    <Compile Include="SolarSchoolShopRefresh.cs" />
+    <Compile Include="SolarSchoolSpan.cs" />
+    <Compile Include="SolarSchoolSummaryItem.cs" />
+    <Compile Include="SolarSchoolTask.cs" />
+    <Compile Include="SolarSchoolTimeSlot.cs" />
+    <Compile Include="SolarSchoolViewInfo.cs" />
     <Compile Include="Sort.cs" />
     <Compile Include="SortRule.cs" />
     <Compile Include="SoundAreaPlayInfo.cs" />
@@ -4509,9 +4810,11 @@
     <Compile Include="Tetris.cs" />
     <Compile Include="TetrisAchievement.cs" />
     <Compile Include="TetrisBoardItemConfig.cs" />
+    <Compile Include="TetrisBombConfig.cs" />
     <Compile Include="TetrisGem.cs" />
     <Compile Include="TetrisMap.cs" />
     <Compile Include="TetrisPreset.cs" />
+    <Compile Include="TetrisRotationConfig.cs" />
     <Compile Include="TetrisSetting.cs" />
     <Compile Include="TetrisShape.cs" />
     <Compile Include="TetrisShapeConfig.cs" />
@@ -4651,12 +4954,28 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aki.Common\Aki.Common.csproj">
-      <Project>{37600991-511A-49CC-9A91-B04AB32BBB5C}</Project>
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8F93}</Project>
       <Name>Aki.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Aki.Launcher\Aki.Launcher.csproj">
-      <Project>{37600991-511A-49CC-9A91-B04AB32BBB5F}</Project>
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8F97}</Project>
       <Name>Aki.Launcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sharphereal.Core\Sharphereal.Core.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8F9E}</Project>
+      <Name>Sharphereal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Collections\System.Collections.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA0}</Project>
+      <Name>System.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Runtime\System.Runtime.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA2}</Project>
+      <Name>System.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnrealEngine\UnrealEngine.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA4}</Project>
+      <Name>UnrealEngine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

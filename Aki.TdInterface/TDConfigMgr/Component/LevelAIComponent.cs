@@ -7,13 +7,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000821 RID: 2081
+	// Token: 0x020008C4 RID: 2244
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelAIComponent : IComponentBase
 	{
-		// Token: 0x06002D3F RID: 11583 RVA: 0x000753F0 File Offset: 0x000735F0
-		[NullableContext(1)]
+		// Token: 0x0600306F RID: 12399 RVA: 0x0007C754 File Offset: 0x0007A954
+		[NullableContext(0)]
 		private LevelAIComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,8 +28,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002D40 RID: 11584 RVA: 0x00075428 File Offset: 0x00073628
-		[NullableContext(1)]
+		// Token: 0x06003070 RID: 12400 RVA: 0x0007C78C File Offset: 0x0007A98C
+		[NullableContext(0)]
 		public static LevelAIComponent Create([Nullable(2)] LevelAIComponent instance)
 		{
 			if (instance == null)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D41 RID: 11585 RVA: 0x0007543B File Offset: 0x0007363B
-		[NullableContext(1)]
+		// Token: 0x06003071 RID: 12401 RVA: 0x0007C79F File Offset: 0x0007A99F
+		[NullableContext(0)]
 		public static LevelAIComponent CreateFromSetValue([Nullable(2)] LevelAIComponent_SetValue value)
 		{
 			if (value == null)
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D42 RID: 11586 RVA: 0x00075450 File Offset: 0x00073650
-		[NullableContext(1)]
+		// Token: 0x06003072 RID: 12402 RVA: 0x0007C7B4 File Offset: 0x0007A9B4
+		[NullableContext(0)]
 		public new LevelAIComponent_SetValue ToSetValue()
 		{
 			return new LevelAIComponent_SetValue
@@ -71,9 +71,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BD1 RID: 3025
-		// (get) Token: 0x06002D43 RID: 11587 RVA: 0x000754AC File Offset: 0x000736AC
-		// (set) Token: 0x06002D44 RID: 11588 RVA: 0x000754E6 File Offset: 0x000736E6
+		// Token: 0x17000C94 RID: 3220
+		// (get) Token: 0x06003073 RID: 12403 RVA: 0x0007C810 File Offset: 0x0007AA10
+		// (set) Token: 0x06003074 RID: 12404 RVA: 0x0007C84A File Offset: 0x0007AA4A
 		public override bool? Disabled
 		{
 			get
@@ -95,9 +95,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BD2 RID: 3026
-		// (get) Token: 0x06002D45 RID: 11589 RVA: 0x000754F4 File Offset: 0x000736F4
-		// (set) Token: 0x06002D46 RID: 11590 RVA: 0x0007551E File Offset: 0x0007371E
+		// Token: 0x17000C95 RID: 3221
+		// (get) Token: 0x06003075 RID: 12405 RVA: 0x0007C858 File Offset: 0x0007AA58
+		// (set) Token: 0x06003076 RID: 12406 RVA: 0x0007C882 File Offset: 0x0007AA82
 		public override bool? EdIsLocked
 		{
 			get
@@ -114,20 +114,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BD3 RID: 3027
-		// (get) Token: 0x06002D47 RID: 11591 RVA: 0x0007552C File Offset: 0x0007372C
-		// (set) Token: 0x06002D48 RID: 11592 RVA: 0x000755BF File Offset: 0x000737BF
+		// Token: 0x17000C96 RID: 3222
+		// (get) Token: 0x06003077 RID: 12407 RVA: 0x0007C890 File Offset: 0x0007AA90
+		// (set) Token: 0x06003078 RID: 12408 RVA: 0x0007C923 File Offset: 0x0007AB23
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ILevelAIState> States
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -158,7 +158,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -167,9 +167,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BD4 RID: 3028
-		// (get) Token: 0x06002D49 RID: 11593 RVA: 0x000755D4 File Offset: 0x000737D4
-		// (set) Token: 0x06002D4A RID: 11594 RVA: 0x000755FB File Offset: 0x000737FB
+		// Token: 0x17000C97 RID: 3223
+		// (get) Token: 0x06003079 RID: 12409 RVA: 0x0007C938 File Offset: 0x0007AB38
+		// (set) Token: 0x0600307A RID: 12410 RVA: 0x0007C95F File Offset: 0x0007AB5F
 		public virtual string BtTreeAsset
 		{
 			get
@@ -191,9 +191,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BD5 RID: 3029
-		// (get) Token: 0x06002D4B RID: 11595 RVA: 0x0007560C File Offset: 0x0007380C
-		// (set) Token: 0x06002D4C RID: 11596 RVA: 0x0007566D File Offset: 0x0007386D
+		// Token: 0x17000C98 RID: 3224
+		// (get) Token: 0x0600307B RID: 12411 RVA: 0x0007C970 File Offset: 0x0007AB70
+		// (set) Token: 0x0600307C RID: 12412 RVA: 0x0007C9D1 File Offset: 0x0007ABD1
 		public virtual ICommonBtOverride CommonBtOverride
 		{
 			get
@@ -221,9 +221,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BD6 RID: 3030
-		// (get) Token: 0x06002D4D RID: 11597 RVA: 0x00075682 File Offset: 0x00073882
-		// (set) Token: 0x06002D4E RID: 11598 RVA: 0x00075699 File Offset: 0x00073899
+		// Token: 0x17000C99 RID: 3225
+		// (get) Token: 0x0600307D RID: 12413 RVA: 0x0007C9E6 File Offset: 0x0007ABE6
+		// (set) Token: 0x0600307E RID: 12414 RVA: 0x0007C9FD File Offset: 0x0007ABFD
 		public virtual IPerformerAiBtTree EdPerformerAi
 		{
 			get
@@ -240,28 +240,28 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001DF3 RID: 7667
+		// Token: 0x04001FFF RID: 8191
 		protected new LevelAIComponent FbInstance;
 
-		// Token: 0x04001DF4 RID: 7668
+		// Token: 0x04002000 RID: 8192
 		protected new LevelAIComponent_SetValue PocoInterface;
 
-		// Token: 0x04001DF5 RID: 7669
+		// Token: 0x04002001 RID: 8193
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ILevelAIState> _StatesCache;
 
-		// Token: 0x04001DF6 RID: 7670
+		// Token: 0x04002002 RID: 8194
 		private bool _StatesInited;
 
-		// Token: 0x04001DF7 RID: 7671
-		[Nullable(1)]
+		// Token: 0x04002003 RID: 8195
+		[Nullable(0)]
 		private ICommonBtOverride _CommonBtOverrideCache;
 
-		// Token: 0x04001DF8 RID: 7672
+		// Token: 0x04002004 RID: 8196
 		private bool _CommonBtOverrideInited;
 	}
 }

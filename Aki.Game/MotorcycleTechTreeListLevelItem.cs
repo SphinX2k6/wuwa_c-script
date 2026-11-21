@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002241 RID: 8769
+// Token: 0x02001725 RID: 5925
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class MotorcycleTechTreeListLevelItem : GridProxyAbstract<IMotorTechLevelPoint>
 {
-	// Token: 0x060111BB RID: 70075 RVA: 0x0042C880 File Offset: 0x0042AA80
+	// Token: 0x0600E651 RID: 58961 RVA: 0x00439424 File Offset: 0x00437624
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class MotorcycleTechTreeListLevelItem : GridProxyAbstract<IMotorTechLevel
 		};
 	}
 
-	// Token: 0x060111BC RID: 70076 RVA: 0x0042C8F0 File Offset: 0x0042AAF0
+	// Token: 0x0600E652 RID: 58962 RVA: 0x00439494 File Offset: 0x00437694
 	[NullableContext(1)]
 	public override void Refresh(IMotorTechLevelPoint data, bool isSelected, int gridIndex)
 	{
@@ -66,19 +66,19 @@ public class MotorcycleTechTreeListLevelItem : GridProxyAbstract<IMotorTechLevel
 		LguiUtil.Instance.SetLocalTextNew(text2, data.Desc, Array.Empty<object>());
 	}
 
-	// Token: 0x0200877D RID: 34685
+	// Token: 0x02007906 RID: 30982
 	private class EMotorTechLevelItemComponent
 	{
-		// Token: 0x0402C09F RID: 180383
+		// Token: 0x040273B7 RID: 160695
 		public const int TxtLevelTitle = 0;
 
-		// Token: 0x0402C0A0 RID: 180384
+		// Token: 0x040273B8 RID: 160696
 		public const int TxtDesc = 1;
 
-		// Token: 0x0402C0A1 RID: 180385
+		// Token: 0x040273B9 RID: 160697
 		public const int CurLevelItem = 2;
 
-		// Token: 0x0402C0A2 RID: 180386
+		// Token: 0x040273BA RID: 160698
 		public const int BgItem = 3;
 	}
 }

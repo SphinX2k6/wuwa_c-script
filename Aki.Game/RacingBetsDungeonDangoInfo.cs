@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Dango.DangoLogic;
 using CSharpScript.Game.Module.RacingBets;
 using CSharpScript.Game.Module.RacingBets.Data;
 
-// Token: 0x020026DB RID: 9947
+// Token: 0x02001BC6 RID: 7110
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsDungeonDangoInfo
 {
-	// Token: 0x0601464E RID: 83534 RVA: 0x005285B0 File Offset: 0x005267B0
+	// Token: 0x06011B30 RID: 72496 RVA: 0x005372E8 File Offset: 0x005354E8
 	public RacingBetsDungeonDangoInfo(RacingBetsInstanceDangoInfo message)
 	{
 		this.DangoId = message.DangoId;
@@ -22,7 +22,7 @@ public class RacingBetsDungeonDangoInfo
 		this.BpId = message.BpId;
 	}
 
-	// Token: 0x0601464F RID: 83535 RVA: 0x00528618 File Offset: 0x00526818
+	// Token: 0x06011B31 RID: 72497 RVA: 0x00537350 File Offset: 0x00535550
 	public int RealPoint()
 	{
 		RacingBetsSeasonData racingBetsSeasonData = RacingBetsModel.Instance.GetRacingBetsSeasonData();
@@ -37,7 +37,7 @@ public class RacingBetsDungeonDangoInfo
 		return ((this.CurPoint - 1) % num2 + num2) % num2 + 1;
 	}
 
-	// Token: 0x06014650 RID: 83536 RVA: 0x0052869C File Offset: 0x0052689C
+	// Token: 0x06011B32 RID: 72498 RVA: 0x005373D4 File Offset: 0x005355D4
 	public Dice? GetDiceConfig()
 	{
 		DangoConfig instance = DangoConfig.Instance;
@@ -48,7 +48,7 @@ public class RacingBetsDungeonDangoInfo
 		return instance.GetDiceById(this.DiceId);
 	}
 
-	// Token: 0x06014651 RID: 83537 RVA: 0x005286C8 File Offset: 0x005268C8
+	// Token: 0x06011B33 RID: 72499 RVA: 0x00537400 File Offset: 0x00535600
 	public string GetDiceIcon(int diceNum)
 	{
 		Dice? diceConfig = this.GetDiceConfig();
@@ -75,7 +75,7 @@ public class RacingBetsDungeonDangoInfo
 		}
 	}
 
-	// Token: 0x06014652 RID: 83538 RVA: 0x00528774 File Offset: 0x00526974
+	// Token: 0x06011B34 RID: 72500 RVA: 0x005374AC File Offset: 0x005356AC
 	public bool IsHalfPass()
 	{
 		RacingBetsSeasonData racingBetsSeasonData = RacingBetsModel.Instance.GetRacingBetsSeasonData();
@@ -90,7 +90,7 @@ public class RacingBetsDungeonDangoInfo
 		return this.CurPoint >= num2 / 2;
 	}
 
-	// Token: 0x06014653 RID: 83539 RVA: 0x005287F8 File Offset: 0x005269F8
+	// Token: 0x06011B35 RID: 72501 RVA: 0x00537530 File Offset: 0x00535730
 	public bool IsAbuDango()
 	{
 		DangoConfig instance = DangoConfig.Instance;
@@ -98,27 +98,27 @@ public class RacingBetsDungeonDangoInfo
 		return dango != null && dango.GetValueOrDefault().Type == 1;
 	}
 
-	// Token: 0x04009934 RID: 39220
+	// Token: 0x04009A8C RID: 39564
 	public readonly int DangoId;
 
-	// Token: 0x04009935 RID: 39221
+	// Token: 0x04009A8D RID: 39565
 	public readonly int DiceId;
 
-	// Token: 0x04009936 RID: 39222
+	// Token: 0x04009A8E RID: 39566
 	public readonly long EntityId;
 
-	// Token: 0x04009937 RID: 39223
+	// Token: 0x04009A8F RID: 39567
 	public readonly int BpId;
 
-	// Token: 0x04009938 RID: 39224
+	// Token: 0x04009A90 RID: 39568
 	public int CurPoint;
 
-	// Token: 0x04009939 RID: 39225
+	// Token: 0x04009A91 RID: 39569
 	public int High;
 
-	// Token: 0x0400993A RID: 39226
+	// Token: 0x04009A92 RID: 39570
 	public int Rank;
 
-	// Token: 0x0400993B RID: 39227
+	// Token: 0x04009A93 RID: 39571
 	public int LastRank;
 }

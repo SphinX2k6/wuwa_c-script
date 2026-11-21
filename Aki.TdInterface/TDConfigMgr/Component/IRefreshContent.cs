@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200066A RID: 1642
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000707 RID: 1799
 	public class IRefreshContent
 	{
-		// Token: 0x0600231C RID: 8988 RVA: 0x00060284 File Offset: 0x0005E484
+		// Token: 0x06002622 RID: 9762 RVA: 0x00066F98 File Offset: 0x00065198
 		private IRefreshContent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600231D RID: 8989 RVA: 0x000602BC File Offset: 0x0005E4BC
+		// Token: 0x06002623 RID: 9763 RVA: 0x00066FD0 File Offset: 0x000651D0
 		public static IRefreshContent Create([Nullable(2)] IRefreshContent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600231E RID: 8990 RVA: 0x000602CF File Offset: 0x0005E4CF
+		// Token: 0x06002624 RID: 9764 RVA: 0x00066FE3 File Offset: 0x000651E3
 		public static IRefreshContent CreateFromSetValue([Nullable(2)] IRefreshContent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600231F RID: 8991 RVA: 0x000602E2 File Offset: 0x0005E4E2
+		// Token: 0x06002625 RID: 9765 RVA: 0x00066FF6 File Offset: 0x000651F6
 		public IRefreshContent_SetValue ToSetValue()
 		{
 			return new IRefreshContent_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700094E RID: 2382
-		// (get) Token: 0x06002320 RID: 8992 RVA: 0x000602F5 File Offset: 0x0005E4F5
-		// (set) Token: 0x06002321 RID: 8993 RVA: 0x00060320 File Offset: 0x0005E520
+		// Token: 0x17000A05 RID: 2565
+		// (get) Token: 0x06002626 RID: 9766 RVA: 0x00067009 File Offset: 0x00065209
+		// (set) Token: 0x06002627 RID: 9767 RVA: 0x00067034 File Offset: 0x00065234
 		public virtual ERefreshContent Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001852 RID: 6226
+		// Token: 0x04001A44 RID: 6724
 		[Nullable(2)]
 		protected IRefreshContent FbInstance;
 
-		// Token: 0x04001853 RID: 6227
+		// Token: 0x04001A45 RID: 6725
 		[Nullable(2)]
 		protected IRefreshContent_SetValue PocoInterface;
 	}

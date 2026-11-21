@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EAA RID: 20138
+	// Token: 0x020053D3 RID: 21459
 	public struct IAnimalModel : IFlatbufferObject
 	{
-		// Token: 0x1700907A RID: 36986
-		// (get) Token: 0x0601FB56 RID: 129878 RVA: 0x0046A438 File Offset: 0x00468638
+		// Token: 0x170097DB RID: 38875
+		// (get) Token: 0x06021857 RID: 137303 RVA: 0x0049F8B4 File Offset: 0x0049DAB4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FB57 RID: 129879 RVA: 0x0046A445 File Offset: 0x00468645
+		// Token: 0x06021858 RID: 137304 RVA: 0x0049F8C1 File Offset: 0x0049DAC1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FB58 RID: 129880 RVA: 0x0046A44C File Offset: 0x0046864C
+		// Token: 0x06021859 RID: 137305 RVA: 0x0049F8C8 File Offset: 0x0049DAC8
 		public static IAnimalModel GetRootAsIAnimalModel(ByteBuffer _bb)
 		{
 			return IAnimalModel.GetRootAsIAnimalModel(_bb, default(IAnimalModel));
 		}
 
-		// Token: 0x0601FB59 RID: 129881 RVA: 0x0046A468 File Offset: 0x00468668
+		// Token: 0x0602185A RID: 137306 RVA: 0x0049F8E4 File Offset: 0x0049DAE4
 		public static IAnimalModel GetRootAsIAnimalModel(ByteBuffer _bb, IAnimalModel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FB5A RID: 129882 RVA: 0x0046A485 File Offset: 0x00468685
+		// Token: 0x0602185B RID: 137307 RVA: 0x0049F901 File Offset: 0x0049DB01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FB5B RID: 129883 RVA: 0x0046A494 File Offset: 0x00468694
+		// Token: 0x0602185C RID: 137308 RVA: 0x0049F910 File Offset: 0x0049DB10
 		public IAnimalModel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700907B RID: 36987
-		// (get) Token: 0x0601FB5C RID: 129884 RVA: 0x0046A4A4 File Offset: 0x004686A4
+		// Token: 0x170097DC RID: 38876
+		// (get) Token: 0x0602185D RID: 137309 RVA: 0x0049F920 File Offset: 0x0049DB20
 		public EModelType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700907C RID: 36988
-		// (get) Token: 0x0601FB5D RID: 129885 RVA: 0x0046A4E0 File Offset: 0x004686E0
+		// Token: 0x170097DD RID: 38877
+		// (get) Token: 0x0602185E RID: 137310 RVA: 0x0049F95C File Offset: 0x0049DB5C
 		public string BlueprintPath
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FB5E RID: 129886 RVA: 0x0046A517 File Offset: 0x00468717
+		// Token: 0x0602185F RID: 137311 RVA: 0x0049F993 File Offset: 0x0049DB93
 		public Span<byte> GetBlueprintPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601FB5F RID: 129887 RVA: 0x0046A526 File Offset: 0x00468726
+		// Token: 0x06021860 RID: 137312 RVA: 0x0049F9A2 File Offset: 0x0049DBA2
 		public byte[] GetBlueprintPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700907D RID: 36989
-		// (get) Token: 0x0601FB60 RID: 129888 RVA: 0x0046A534 File Offset: 0x00468734
+		// Token: 0x170097DE RID: 38878
+		// (get) Token: 0x06021861 RID: 137313 RVA: 0x0049F9B0 File Offset: 0x0049DBB0
 		public IMeshAnimalModel? AnimalModel
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700907E RID: 36990
-		// (get) Token: 0x0601FB61 RID: 129889 RVA: 0x0046A594 File Offset: 0x00468794
+		// Token: 0x170097DF RID: 38879
+		// (get) Token: 0x06021862 RID: 137314 RVA: 0x0049FA10 File Offset: 0x0049DC10
 		public string Abp
 		{
 			get
@@ -119,19 +119,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FB62 RID: 129890 RVA: 0x0046A5CC File Offset: 0x004687CC
+		// Token: 0x06021863 RID: 137315 RVA: 0x0049FA48 File Offset: 0x0049DC48
 		public Span<byte> GetAbpBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0601FB63 RID: 129891 RVA: 0x0046A5DC File Offset: 0x004687DC
+		// Token: 0x06021864 RID: 137316 RVA: 0x0049FA58 File Offset: 0x0049DC58
 		public byte[] GetAbpArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x0601FB64 RID: 129892 RVA: 0x0046A5EB File Offset: 0x004687EB
+		// Token: 0x06021865 RID: 137317 RVA: 0x0049FA67 File Offset: 0x0049DC67
 		public static Offset<IAnimalModel> CreateIAnimalModel(FlatBufferBuilder builder, EModelType Type = EModelType.LevelPrefab, StringOffset BlueprintPathOffset = default(StringOffset), Offset<IMeshAnimalModel> AnimalModelOffset = default(Offset<IMeshAnimalModel>), StringOffset AbpOffset = default(StringOffset))
 		{
 			builder.StartTable(4);
@@ -142,43 +142,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAnimalModel.EndIAnimalModel(builder);
 		}
 
-		// Token: 0x0601FB65 RID: 129893 RVA: 0x0046A617 File Offset: 0x00468817
+		// Token: 0x06021866 RID: 137318 RVA: 0x0049FA93 File Offset: 0x0049DC93
 		public static void StartIAnimalModel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601FB66 RID: 129894 RVA: 0x0046A620 File Offset: 0x00468820
+		// Token: 0x06021867 RID: 137319 RVA: 0x0049FA9C File Offset: 0x0049DC9C
 		public static void AddType(FlatBufferBuilder builder, EModelType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601FB67 RID: 129895 RVA: 0x0046A62B File Offset: 0x0046882B
+		// Token: 0x06021868 RID: 137320 RVA: 0x0049FAA7 File Offset: 0x0049DCA7
 		public static void AddBlueprintPath(FlatBufferBuilder builder, StringOffset blueprintPathOffset)
 		{
 			builder.AddOffset(1, blueprintPathOffset.Value, 0);
 		}
 
-		// Token: 0x0601FB68 RID: 129896 RVA: 0x0046A63B File Offset: 0x0046883B
+		// Token: 0x06021869 RID: 137321 RVA: 0x0049FAB7 File Offset: 0x0049DCB7
 		public static void AddAnimalModel(FlatBufferBuilder builder, Offset<IMeshAnimalModel> animalModelOffset)
 		{
 			builder.AddOffset(2, animalModelOffset.Value, 0);
 		}
 
-		// Token: 0x0601FB69 RID: 129897 RVA: 0x0046A64B File Offset: 0x0046884B
+		// Token: 0x0602186A RID: 137322 RVA: 0x0049FAC7 File Offset: 0x0049DCC7
 		public static void AddAbp(FlatBufferBuilder builder, StringOffset abpOffset)
 		{
 			builder.AddOffset(3, abpOffset.Value, 0);
 		}
 
-		// Token: 0x0601FB6A RID: 129898 RVA: 0x0046A65B File Offset: 0x0046885B
+		// Token: 0x0602186B RID: 137323 RVA: 0x0049FAD7 File Offset: 0x0049DCD7
 		public static Offset<IAnimalModel> EndIAnimalModel(FlatBufferBuilder builder)
 		{
 			return new Offset<IAnimalModel>(builder.EndTable());
 		}
 
-		// Token: 0x0601FB6B RID: 129899 RVA: 0x0046A668 File Offset: 0x00468868
+		// Token: 0x0602186C RID: 137324 RVA: 0x0049FAE4 File Offset: 0x0049DCE4
 		public IAnimalModelT UnPack()
 		{
 			IAnimalModelT animalModelT = new IAnimalModelT();
@@ -186,7 +186,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return animalModelT;
 		}
 
-		// Token: 0x0601FB6C RID: 129900 RVA: 0x0046A684 File Offset: 0x00468884
+		// Token: 0x0602186D RID: 137325 RVA: 0x0049FB00 File Offset: 0x0049DD00
 		public void UnPackTo(IAnimalModelT _o)
 		{
 			_o.Type = this.Type;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Abp = this.Abp;
 		}
 
-		// Token: 0x0601FB6D RID: 129901 RVA: 0x0046A6E4 File Offset: 0x004688E4
+		// Token: 0x0602186E RID: 137326 RVA: 0x0049FB60 File Offset: 0x0049DD60
 		public static Offset<IAnimalModel> Pack(FlatBufferBuilder builder, IAnimalModelT _o)
 		{
 			if (_o == null)
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAnimalModel.CreateIAnimalModel(builder, _o.Type, blueprintPathOffset, animalModelOffset, abpOffset);
 		}
 
-		// Token: 0x0400DC8D RID: 56461
+		// Token: 0x0400E829 RID: 59433
 		private Table __p;
 	}
 }

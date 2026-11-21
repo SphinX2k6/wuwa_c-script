@@ -4,10 +4,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F87 RID: 28551
+	// Token: 0x02006108 RID: 24840
 	public class LevelFlowExitMoveWithSpline : LevelFlowActionBase
 	{
-		// Token: 0x06045701 RID: 284417 RVA: 0x01137E29 File Offset: 0x01136029
+		// Token: 0x0603B8AF RID: 243887 RVA: 0x010E1C2D File Offset: 0x010DFE2D
 		[NullableContext(1)]
 		public LevelFlowExitMoveWithSpline Init(int entityId)
 		{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045702 RID: 284418 RVA: 0x01137E34 File Offset: 0x01136034
+		// Token: 0x0603B8B0 RID: 243888 RVA: 0x010E1C38 File Offset: 0x010DFE38
 		protected override void OnExecute()
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(this.EntityId);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x06045703 RID: 284419 RVA: 0x01137F84 File Offset: 0x01136184
+		// Token: 0x0603B8B1 RID: 243889 RVA: 0x010E1D88 File Offset: 0x010DFF88
 		protected unsafe override void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x040243B9 RID: 148409
+		// Token: 0x0401F66E RID: 128622
 		private int EntityId;
 	}
 }

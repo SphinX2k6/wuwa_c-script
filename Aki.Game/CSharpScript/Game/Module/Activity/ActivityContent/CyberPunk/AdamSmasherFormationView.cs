@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -12,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068A3 RID: 26787
+	// Token: 0x020057F3 RID: 22515
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AdamSmasherFormationView : UiViewBase
 	{
-		// Token: 0x06042D7D RID: 273789 RVA: 0x0104594C File Offset: 0x01043B4C
+		// Token: 0x060378D5 RID: 227541 RVA: 0x00F86EE0 File Offset: 0x00F850E0
 		public AdamSmasherFormationView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042D7E RID: 273790 RVA: 0x01045984 File Offset: 0x01043B84
+		// Token: 0x060378D6 RID: 227542 RVA: 0x00F86F18 File Offset: 0x00F85118
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042D7F RID: 273791 RVA: 0x01045A90 File Offset: 0x01043C90
+		// Token: 0x060378D7 RID: 227543 RVA: 0x00F87024 File Offset: 0x00F85224
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AdamSmasherFormationView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -52,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042D80 RID: 273792 RVA: 0x01045AD3 File Offset: 0x01043CD3
+		// Token: 0x060378D8 RID: 227544 RVA: 0x00F87067 File Offset: 0x00F85267
 		protected override void OnStart()
 		{
 			this.FilterSortEntranceItem.UpdateData(EFilterSortGroupId.EditBattleTeam, this.AllRoleList, Array.Empty<object>());
@@ -62,19 +61,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshButtonState();
 		}
 
-		// Token: 0x06042D81 RID: 273793 RVA: 0x01045B12 File Offset: 0x01043D12
+		// Token: 0x060378D9 RID: 227545 RVA: 0x00F870A6 File Offset: 0x00F852A6
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 		}
 
-		// Token: 0x06042D82 RID: 273794 RVA: 0x01045B30 File Offset: 0x01043D30
+		// Token: 0x060378DA RID: 227546 RVA: 0x00F870C4 File Offset: 0x00F852C4
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 		}
 
-		// Token: 0x06042D83 RID: 273795 RVA: 0x01045B4E File Offset: 0x01043D4E
+		// Token: 0x060378DB RID: 227547 RVA: 0x00F870E2 File Offset: 0x00F852E2
 		protected override void OnBeforeDestroy()
 		{
 			RoleSelectModel.Instance.ClearData();
@@ -86,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.FilterSortEntranceItem = null;
 		}
 
-		// Token: 0x06042D84 RID: 273796 RVA: 0x01045B74 File Offset: 0x01043D74
+		// Token: 0x060378DC RID: 227548 RVA: 0x00F87108 File Offset: 0x00F85308
 		private UniTask InitRoleGroupLayout()
 		{
 			AdamSmasherFormationView.<InitRoleGroupLayout>d__21 <InitRoleGroupLayout>d__;
@@ -97,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <InitRoleGroupLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042D85 RID: 273797 RVA: 0x01045BB8 File Offset: 0x01043DB8
+		// Token: 0x060378DD RID: 227549 RVA: 0x00F8714C File Offset: 0x00F8534C
 		private AdamFormationRoleGroupInfo[] GenerateAllRoleGroupInfo([Nullable(new byte[]
 		{
 			2,
@@ -150,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return list.ToArray();
 		}
 
-		// Token: 0x06042D86 RID: 273798 RVA: 0x01045CB0 File Offset: 0x01043EB0
+		// Token: 0x060378DE RID: 227550 RVA: 0x00F87244 File Offset: 0x00F85444
 		private List<RoleDataBase> GetClassifiedRoleList(List<RoleDataBase> wholeRoleList, bool needTrial)
 		{
 			List<RoleDataBase> list = new List<RoleDataBase>();
@@ -188,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return list;
 		}
 
-		// Token: 0x06042D87 RID: 273799 RVA: 0x01045D64 File Offset: 0x01043F64
+		// Token: 0x060378DF RID: 227551 RVA: 0x00F872F8 File Offset: 0x00F854F8
 		private void OnFilterSortUpdate(List<RoleDataBase> list, bool isOutSideChange, EFilterSortType operationType)
 		{
 			Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -211,7 +210,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.DynamicRoleGroupLayout.RefreshByData(this.GenerateAllRoleGroupInfo(list2), false, false);
 		}
 
-		// Token: 0x06042D88 RID: 273800 RVA: 0x01045E04 File Offset: 0x01044004
+		// Token: 0x060378E0 RID: 227552 RVA: 0x00F87398 File Offset: 0x00F85598
 		private AdamFormationRoleContainer OnCreateRoleGroup(AdamFormationRoleGroupInfo data, UUIItem uiItem, int index)
 		{
 			return new AdamFormationRoleContainer
@@ -221,7 +220,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042D89 RID: 273801 RVA: 0x01045E29 File Offset: 0x01044029
+		// Token: 0x060378E1 RID: 227553 RVA: 0x00F873BD File Offset: 0x00F855BD
 		private void RefreshRoleSelect(RoleDataBase roleData)
 		{
 			this.CurSelectRole = roleData;
@@ -229,7 +228,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshButtonState();
 		}
 
-		// Token: 0x06042D8A RID: 273802 RVA: 0x01045E3E File Offset: 0x0104403E
+		// Token: 0x060378E2 RID: 227554 RVA: 0x00F873D2 File Offset: 0x00F855D2
 		private WeeklyRogueRolePosItem CreateTeamSlotItem()
 		{
 			return new WeeklyRogueRolePosItem
@@ -238,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042D8B RID: 273803 RVA: 0x01045E58 File Offset: 0x01044058
+		// Token: 0x060378E3 RID: 227555 RVA: 0x00F873EC File Offset: 0x00F855EC
 		[NullableContext(2)]
 		private void OnBtnRolePosClick(RoleDataBase data)
 		{
@@ -266,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshButtonState();
 		}
 
-		// Token: 0x06042D8C RID: 273804 RVA: 0x01045F18 File Offset: 0x01044118
+		// Token: 0x060378E4 RID: 227556 RVA: 0x00F874AC File Offset: 0x00F856AC
 		private List<int> GetCurrentSelectRoleList()
 		{
 			Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -282,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return list;
 		}
 
-		// Token: 0x06042D8D RID: 273805 RVA: 0x01045F5C File Offset: 0x0104415C
+		// Token: 0x060378E5 RID: 227557 RVA: 0x00F874F0 File Offset: 0x00F856F0
 		private void RefreshTeamSelect()
 		{
 			Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -301,7 +300,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.TeamSlotLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06042D8E RID: 273806 RVA: 0x01045FC0 File Offset: 0x010441C0
+		// Token: 0x060378E6 RID: 227558 RVA: 0x00F87554 File Offset: 0x00F85754
 		private void RefreshButtonState()
 		{
 			bool enableClick = RoleSelectModel.Instance.RoleIndexMap.Count > 0;
@@ -313,7 +312,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			startChallengeButtonItem.SetEnableClick(enableClick);
 		}
 
-		// Token: 0x06042D8F RID: 273807 RVA: 0x01045FF4 File Offset: 0x010441F4
+		// Token: 0x060378E7 RID: 227559 RVA: 0x00F87588 File Offset: 0x00F85788
 		private void OnClickStartChallenge(int a)
 		{
 			List<int> currentSelectRoleList = this.GetCurrentSelectRoleList();
@@ -330,7 +329,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			});
 		}
 
-		// Token: 0x06042D90 RID: 273808 RVA: 0x0104608C File Offset: 0x0104428C
+		// Token: 0x060378E8 RID: 227560 RVA: 0x00F87620 File Offset: 0x00F85820
 		private void OnClickRoleDetail(int a)
 		{
 			if (this.CurSelectRole == null)
@@ -340,38 +339,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 			int dataId = this.CurSelectRole.GetDataId();
 			List<int> currentSelectRoleList = this.GetCurrentSelectRoleList();
-			List<int> ownedRoleIds = (from role in this.CachedOwnRoleList
-			select role.GetDataId()).ToList<int>();
-			List<int> ownedSelectedFirst = (from id in currentSelectRoleList
-			where ownedRoleIds.Contains(id)
-			select id).ToList<int>();
-			List<int> list = new List<int>(ownedSelectedFirst);
-			list.AddRange(from id in ownedRoleIds
-			where !ownedSelectedFirst.Contains(id)
-			select id);
+			List<int> list = new List<int>();
+			foreach (RoleDataBase roleDataBase in this.CachedOwnRoleList)
+			{
+				list.Add(roleDataBase.GetDataId());
+			}
+			List<int> list2 = new List<int>();
+			foreach (int item in currentSelectRoleList)
+			{
+				if (list.Contains(item))
+				{
+					list2.Add(item);
+				}
+			}
+			List<int> list3 = new List<int>(list2);
+			foreach (int item2 in list)
+			{
+				if (!list2.Contains(item2))
+				{
+					list3.Add(item2);
+				}
+			}
 			OpenRoleMainViewData param = new OpenRoleMainViewData
 			{
 				AgentType = ERoleAgentType.Normal,
 				SelectRoleId = new int?(dataId),
-				RoleIdList = list,
+				RoleIdList = list3,
 				TeamPositionType = new ETeamPositionType?(ETeamPositionType.RoleSelect)
 			};
 			RoleController.Instance.OpenRoleMainViewByParam(param);
 		}
 
-		// Token: 0x06042D91 RID: 273809 RVA: 0x01046183 File Offset: 0x01044383
+		// Token: 0x060378E9 RID: 227561 RVA: 0x00F87790 File Offset: 0x00F85990
 		private void OnClickHelp()
 		{
 			HelpController.Instance.OpenHelpById(this.GetHelpId());
 		}
 
-		// Token: 0x06042D92 RID: 273810 RVA: 0x01046195 File Offset: 0x01044395
+		// Token: 0x060378EA RID: 227562 RVA: 0x00F877A2 File Offset: 0x00F859A2
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06042D93 RID: 273811 RVA: 0x0104619E File Offset: 0x0104439E
+		// Token: 0x060378EB RID: 227563 RVA: 0x00F877AB File Offset: 0x00F859AB
 		private void OnActivityClose(IReadOnlySet<int> closeActivities)
 		{
 			if (closeActivities.Contains(CyberPunkController.Instance.CurrentActivityId))
@@ -380,7 +391,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042D94 RID: 273812 RVA: 0x010461BC File Offset: 0x010443BC
+		// Token: 0x060378EC RID: 227564 RVA: 0x00F877CC File Offset: 0x00F859CC
 		private void RefreshTargetInfo()
 		{
 			CyberPunkConfig instance = CyberPunkConfig.Instance;
@@ -403,28 +414,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(6), edgeRunnerLordGym.Value.BuffDesc, Array.Empty<object>());
 		}
 
-		// Token: 0x06042D95 RID: 273813 RVA: 0x010462C3 File Offset: 0x010444C3
+		// Token: 0x060378ED RID: 227565 RVA: 0x00F878D3 File Offset: 0x00F85AD3
 		private int GetHelpId()
 		{
 			return 0;
 		}
 
-		// Token: 0x04022C89 RID: 142473
+		// Token: 0x0401D4E5 RID: 120037
 		public const int FORMATION_MAX_NUM = 3;
 
-		// Token: 0x04022C8A RID: 142474
+		// Token: 0x0401D4E6 RID: 120038
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022C8B RID: 142475
+		// Token: 0x0401D4E7 RID: 120039
 		[Nullable(2)]
 		private ButtonItem RoleDetailButtonItem;
 
-		// Token: 0x04022C8C RID: 142476
+		// Token: 0x0401D4E8 RID: 120040
 		[Nullable(2)]
 		private ButtonItem StartChallengeButtonItem;
 
-		// Token: 0x04022C8D RID: 142477
+		// Token: 0x0401D4E9 RID: 120041
 		[Nullable(new byte[]
 		{
 			2,
@@ -432,7 +443,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		private FilterSortEntrance<RoleDataBase> FilterSortEntranceItem;
 
-		// Token: 0x04022C8E RID: 142478
+		// Token: 0x0401D4EA RID: 120042
 		[Nullable(new byte[]
 		{
 			2,
@@ -442,7 +453,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		protected DynamicScrollView<AdamFormationRoleContainer, AdamFormationRoleSizeItem, AdamFormationRoleGroupInfo> DynamicRoleGroupLayout;
 
-		// Token: 0x04022C8F RID: 142479
+		// Token: 0x0401D4EB RID: 120043
 		[Nullable(new byte[]
 		{
 			2,
@@ -451,50 +462,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		private GenericLayout<WeeklyRogueRolePosItem, IWeeklyRogueRolePosInfo> TeamSlotLayout;
 
-		// Token: 0x04022C90 RID: 142480
+		// Token: 0x0401D4EC RID: 120044
 		private List<RoleDataBase> AllRoleList = new List<RoleDataBase>();
 
-		// Token: 0x04022C91 RID: 142481
+		// Token: 0x0401D4ED RID: 120045
 		private readonly List<RoleDataBase> CachedTrialRoleList = new List<RoleDataBase>();
 
-		// Token: 0x04022C92 RID: 142482
+		// Token: 0x0401D4EE RID: 120046
 		private List<RoleDataBase> CachedOwnRoleList = new List<RoleDataBase>();
 
-		// Token: 0x04022C93 RID: 142483
+		// Token: 0x0401D4EF RID: 120047
 		private HashSet<int> RecommendedRoleIdSet = new HashSet<int>();
 
-		// Token: 0x04022C94 RID: 142484
+		// Token: 0x0401D4F0 RID: 120048
 		private int StageId;
 
-		// Token: 0x04022C95 RID: 142485
+		// Token: 0x0401D4F1 RID: 120049
 		[Nullable(2)]
 		private RoleDataBase CurSelectRole;
 
-		// Token: 0x0200CA6E RID: 51822
+		// Token: 0x0200B437 RID: 46135
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403D303 RID: 250627
+			// Token: 0x04037BE1 RID: 228321
 			Caption,
-			// Token: 0x0403D304 RID: 250628
+			// Token: 0x04037BE2 RID: 228322
 			DynamicGroupLayout,
-			// Token: 0x0403D305 RID: 250629
+			// Token: 0x04037BE3 RID: 228323
 			DynamicGroupItem,
-			// Token: 0x0403D306 RID: 250630
+			// Token: 0x04037BE4 RID: 228324
 			FilterSortItem,
-			// Token: 0x0403D307 RID: 250631
+			// Token: 0x04037BE5 RID: 228325
 			BossNameText,
-			// Token: 0x0403D308 RID: 250632
+			// Token: 0x04037BE6 RID: 228326
 			BossLevelText,
-			// Token: 0x0403D309 RID: 250633
+			// Token: 0x04037BE7 RID: 228327
 			BuffDescText,
-			// Token: 0x0403D30A RID: 250634
+			// Token: 0x04037BE8 RID: 228328
 			RoleListLayout,
-			// Token: 0x0403D30B RID: 250635
+			// Token: 0x04037BE9 RID: 228329
 			RoleListGroupItem,
-			// Token: 0x0403D30C RID: 250636
+			// Token: 0x04037BEA RID: 228330
 			BtnRoleDetail,
-			// Token: 0x0403D30D RID: 250637
+			// Token: 0x04037BEB RID: 228331
 			BtnStartChallenge
 		}
 	}

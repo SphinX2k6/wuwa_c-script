@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D00 RID: 3328
+	// Token: 0x02000CF0 RID: 3312
 	[NetMessage(EMessageId.PhantomSettingBatchUpdateResponse)]
 	public sealed class PhantomSettingBatchUpdateResponse : IMessage<PhantomSettingBatchUpdateResponse>, IMessage, IEquatable<PhantomSettingBatchUpdateResponse>, IDeepCloneable<PhantomSettingBatchUpdateResponse>, IBufferMessage
 	{
-		// Token: 0x06011FD6 RID: 73686 RVA: 0x002A1535 File Offset: 0x0029F735
+		// Token: 0x06011EDA RID: 73434 RVA: 0x0029F91D File Offset: 0x0029DB1D
 		[NullableContext(1)]
 		public static PhantomSettingBatchUpdateResponse Create()
 		{
 			return new PhantomSettingBatchUpdateResponse();
 		}
 
-		// Token: 0x17003B9C RID: 15260
-		// (get) Token: 0x06011FD7 RID: 73687 RVA: 0x002A153C File Offset: 0x0029F73C
+		// Token: 0x17003B67 RID: 15207
+		// (get) Token: 0x06011EDB RID: 73435 RVA: 0x0029F924 File Offset: 0x0029DB24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003B9D RID: 15261
-		// (get) Token: 0x06011FD8 RID: 73688 RVA: 0x002A153F File Offset: 0x0029F73F
+		// Token: 0x17003B68 RID: 15208
+		// (get) Token: 0x06011EDC RID: 73436 RVA: 0x0029F927 File Offset: 0x0029DB27
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011FD9 RID: 73689 RVA: 0x002A1546 File Offset: 0x0029F746
+		// Token: 0x06011EDD RID: 73437 RVA: 0x0029F92E File Offset: 0x0029DB2E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomSettingBatchUpdateResponse()
 		{
 		}
 
-		// Token: 0x06011FDA RID: 73690 RVA: 0x002A1559 File Offset: 0x0029F759
+		// Token: 0x06011EDE RID: 73438 RVA: 0x0029F941 File Offset: 0x0029DB41
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomSettingBatchUpdateResponse(PhantomSettingBatchUpdateResponse other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06011FDB RID: 73691 RVA: 0x002A158F File Offset: 0x0029F78F
+		// Token: 0x06011EDF RID: 73439 RVA: 0x0029F977 File Offset: 0x0029DB77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomSettingBatchUpdateResponse Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new PhantomSettingBatchUpdateResponse(this);
 		}
 
-		// Token: 0x17003B9E RID: 15262
-		// (get) Token: 0x06011FDC RID: 73692 RVA: 0x002A1597 File Offset: 0x0029F797
-		// (set) Token: 0x06011FDD RID: 73693 RVA: 0x002A159F File Offset: 0x0029F79F
+		// Token: 0x17003B69 RID: 15209
+		// (get) Token: 0x06011EE0 RID: 73440 RVA: 0x0029F97F File Offset: 0x0029DB7F
+		// (set) Token: 0x06011EE1 RID: 73441 RVA: 0x0029F987 File Offset: 0x0029DB87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003B9F RID: 15263
-		// (get) Token: 0x06011FDE RID: 73694 RVA: 0x002A15A8 File Offset: 0x0029F7A8
+		// Token: 0x17003B6A RID: 15210
+		// (get) Token: 0x06011EE2 RID: 73442 RVA: 0x0029F990 File Offset: 0x0029DB90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PhantomSettingInfo> Settings
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011FDF RID: 73695 RVA: 0x002A15B0 File Offset: 0x0029F7B0
+		// Token: 0x06011EE3 RID: 73443 RVA: 0x0029F998 File Offset: 0x0029DB98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomSettingBatchUpdateResponse);
 		}
 
-		// Token: 0x06011FE0 RID: 73696 RVA: 0x002A15C0 File Offset: 0x0029F7C0
+		// Token: 0x06011EE4 RID: 73444 RVA: 0x0029F9A8 File Offset: 0x0029DBA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomSettingBatchUpdateResponse other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.settings_.Equals(other.settings_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06011FE1 RID: 73697 RVA: 0x002A1610 File Offset: 0x0029F810
+		// Token: 0x06011EE5 RID: 73445 RVA: 0x0029F9F8 File Offset: 0x0029DBF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06011FE2 RID: 73698 RVA: 0x002A1663 File Offset: 0x0029F863
+		// Token: 0x06011EE6 RID: 73446 RVA: 0x0029FA4B File Offset: 0x0029DC4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06011FE3 RID: 73699 RVA: 0x002A1670 File Offset: 0x0029F870
+		// Token: 0x06011EE7 RID: 73447 RVA: 0x0029FA58 File Offset: 0x0029DC58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06011FE4 RID: 73700 RVA: 0x002A167C File Offset: 0x0029F87C
+		// Token: 0x06011EE8 RID: 73448 RVA: 0x0029FA64 File Offset: 0x0029DC64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011FE5 RID: 73701 RVA: 0x002A16CC File Offset: 0x0029F8CC
+		// Token: 0x06011EE9 RID: 73449 RVA: 0x0029FAB4 File Offset: 0x0029DCB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06011FE6 RID: 73702 RVA: 0x002A1720 File Offset: 0x0029F920
+		// Token: 0x06011EEA RID: 73450 RVA: 0x0029FB08 File Offset: 0x0029DD08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomSettingBatchUpdateResponse other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06011FE7 RID: 73703 RVA: 0x002A176D File Offset: 0x0029F96D
+		// Token: 0x06011EEB RID: 73451 RVA: 0x0029FB55 File Offset: 0x0029DD55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06011FE8 RID: 73704 RVA: 0x002A1778 File Offset: 0x0029F978
+		// Token: 0x06011EEC RID: 73452 RVA: 0x0029FB60 File Offset: 0x0029DD60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -221,7 +221,7 @@ namespace Aki.Protocol
 				}
 				if (num != 8U)
 				{
-					if (num != 66U)
+					if (num != 74U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040070BA RID: 28858
+		// Token: 0x040070D2 RID: 28882
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040070BB RID: 28859
+		// Token: 0x040070D3 RID: 28883
 		public const int ErrorCodeFieldNumber = 1;
 
-		// Token: 0x040070BC RID: 28860
+		// Token: 0x040070D4 RID: 28884
 		private ErrorCode errorCode_;
 
-		// Token: 0x040070BD RID: 28861
-		public const int SettingsFieldNumber = 8;
+		// Token: 0x040070D5 RID: 28885
+		public const int SettingsFieldNumber = 9;
 
-		// Token: 0x040070BE RID: 28862
-		private static readonly FieldCodec<PhantomSettingInfo> _repeated_settings_codec = FieldCodec.ForMessage<PhantomSettingInfo>(66U, PhantomSettingInfo.Parser);
+		// Token: 0x040070D6 RID: 28886
+		private static readonly FieldCodec<PhantomSettingInfo> _repeated_settings_codec = FieldCodec.ForMessage<PhantomSettingInfo>(74U, PhantomSettingInfo.Parser);
 
-		// Token: 0x040070BF RID: 28863
+		// Token: 0x040070D7 RID: 28887
 		private readonly RepeatedField<PhantomSettingInfo> settings_ = new RepeatedField<PhantomSettingInfo>();
 	}
 }

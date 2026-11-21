@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028B2 RID: 10418
+	// Token: 0x02000841 RID: 2113
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SpinePlugin.SpineSkeletonDataAsset")]
 	[UnrealStructLayout(272, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 272)]
 	public class USpineSkeletonDataAsset : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06026A51 RID: 158289 RVA: 0x003AF719 File Offset: 0x003AD919
+		// Token: 0x0600B83F RID: 47167 RVA: 0x00127475 File Offset: 0x00125675
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USpineSkeletonDataAsset._ClassPtr;
 		}
 
-		// Token: 0x06026A52 RID: 158290 RVA: 0x003AF728 File Offset: 0x003AD928
+		// Token: 0x0600B840 RID: 47168 RVA: 0x00127484 File Offset: 0x00125684
 		public USpineSkeletonDataAsset() : this(BuiltinUtils.AllocNativeUObject(USpineSkeletonDataAsset.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06026A53 RID: 158291 RVA: 0x003AF750 File Offset: 0x003AD950
+		// Token: 0x0600B841 RID: 47169 RVA: 0x001274AC File Offset: 0x001256AC
 		public USpineSkeletonDataAsset(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USpineSkeletonDataAsset.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170094EE RID: 38126
-		// (get) Token: 0x06026A54 RID: 158292 RVA: 0x003AF783 File Offset: 0x003AD983
-		// (set) Token: 0x06026A55 RID: 158293 RVA: 0x003AF793 File Offset: 0x003AD993
+		// Token: 0x17002259 RID: 8793
+		// (get) Token: 0x0600B842 RID: 47170 RVA: 0x001274DF File Offset: 0x001256DF
+		// (set) Token: 0x0600B843 RID: 47171 RVA: 0x001274EF File Offset: 0x001256EF
 		public unsafe float DefaultMix
 		{
 			get
@@ -44,30 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094EF RID: 38127
-		// (get) Token: 0x06026A56 RID: 158294 RVA: 0x003AF7A4 File Offset: 0x003AD9A4
-		// (set) Token: 0x06026A57 RID: 158295 RVA: 0x003AF7DD File Offset: 0x003AD9DD
-		public TArray<FSpineAnimationStateMixData> MixData
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FSpineAnimationStateMixData> result;
-				if ((result = this._MixData) == null)
-				{
-					result = (this._MixData = new TArray<FSpineAnimationStateMixData>(base.NativePtr + (IntPtr)USpineSkeletonDataAsset.__PropertyOffset_MixData, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.MixData.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170094F0 RID: 38128
-		// (get) Token: 0x06026A58 RID: 158296 RVA: 0x003AF7EC File Offset: 0x003AD9EC
-		// (set) Token: 0x06026A59 RID: 158297 RVA: 0x003AF825 File Offset: 0x003ADA25
+		// Token: 0x1700225A RID: 8794
+		// (get) Token: 0x0600B844 RID: 47172 RVA: 0x00127500 File Offset: 0x00125700
+		// (set) Token: 0x0600B845 RID: 47173 RVA: 0x00127539 File Offset: 0x00125739
 		public TArray<string> Bones
 		{
 			get
@@ -86,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094F1 RID: 38129
-		// (get) Token: 0x06026A5A RID: 158298 RVA: 0x003AF834 File Offset: 0x003ADA34
-		// (set) Token: 0x06026A5B RID: 158299 RVA: 0x003AF86D File Offset: 0x003ADA6D
+		// Token: 0x1700225B RID: 8795
+		// (get) Token: 0x0600B846 RID: 47174 RVA: 0x00127548 File Offset: 0x00125748
+		// (set) Token: 0x0600B847 RID: 47175 RVA: 0x00127581 File Offset: 0x00125781
 		public TArray<string> Slots
 		{
 			get
@@ -107,9 +86,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094F2 RID: 38130
-		// (get) Token: 0x06026A5C RID: 158300 RVA: 0x003AF87C File Offset: 0x003ADA7C
-		// (set) Token: 0x06026A5D RID: 158301 RVA: 0x003AF8B5 File Offset: 0x003ADAB5
+		// Token: 0x1700225C RID: 8796
+		// (get) Token: 0x0600B848 RID: 47176 RVA: 0x00127590 File Offset: 0x00125790
+		// (set) Token: 0x0600B849 RID: 47177 RVA: 0x001275C9 File Offset: 0x001257C9
 		public TArray<string> Skins
 		{
 			get
@@ -128,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094F3 RID: 38131
-		// (get) Token: 0x06026A5E RID: 158302 RVA: 0x003AF8C4 File Offset: 0x003ADAC4
-		// (set) Token: 0x06026A5F RID: 158303 RVA: 0x003AF8FD File Offset: 0x003ADAFD
+		// Token: 0x1700225D RID: 8797
+		// (get) Token: 0x0600B84A RID: 47178 RVA: 0x001275D8 File Offset: 0x001257D8
+		// (set) Token: 0x0600B84B RID: 47179 RVA: 0x00127611 File Offset: 0x00125811
 		public TArray<string> Animations
 		{
 			get
@@ -149,9 +128,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094F4 RID: 38132
-		// (get) Token: 0x06026A60 RID: 158304 RVA: 0x003AF90C File Offset: 0x003ADB0C
-		// (set) Token: 0x06026A61 RID: 158305 RVA: 0x003AF945 File Offset: 0x003ADB45
+		// Token: 0x1700225E RID: 8798
+		// (get) Token: 0x0600B84C RID: 47180 RVA: 0x00127620 File Offset: 0x00125820
+		// (set) Token: 0x0600B84D RID: 47181 RVA: 0x00127659 File Offset: 0x00125859
 		public TArray<string> Events
 		{
 			get
@@ -170,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094F5 RID: 38133
-		// (get) Token: 0x06026A62 RID: 158306 RVA: 0x003AF954 File Offset: 0x003ADB54
-		// (set) Token: 0x06026A63 RID: 158307 RVA: 0x003AF98D File Offset: 0x003ADB8D
+		// Token: 0x1700225F RID: 8799
+		// (get) Token: 0x0600B84E RID: 47182 RVA: 0x00127668 File Offset: 0x00125868
+		// (set) Token: 0x0600B84F RID: 47183 RVA: 0x001276A1 File Offset: 0x001258A1
 		public TArray<byte> rawData
 		{
 			get
@@ -191,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094F6 RID: 38134
-		// (get) Token: 0x06026A64 RID: 158308 RVA: 0x003AF99B File Offset: 0x003ADB9B
-		// (set) Token: 0x06026A65 RID: 158309 RVA: 0x003AF9AF File Offset: 0x003ADBAF
+		// Token: 0x17002260 RID: 8800
+		// (get) Token: 0x0600B850 RID: 47184 RVA: 0x001276AF File Offset: 0x001258AF
+		// (set) Token: 0x0600B851 RID: 47185 RVA: 0x001276C3 File Offset: 0x001258C3
 		public unsafe FName skeletonDataFileName
 		{
 			get
@@ -206,44 +185,33 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06026A66 RID: 158310 RVA: 0x003AF9C4 File Offset: 0x003ADBC4
+		// Token: 0x0600B852 RID: 47186 RVA: 0x001276D8 File Offset: 0x001258D8
 		static USpineSkeletonDataAsset()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SpinePlugin.SpineSkeletonDataAsset");
 		}
 
-		// Token: 0x06026A67 RID: 158311 RVA: 0x003AF9D2 File Offset: 0x003ADBD2
+		// Token: 0x0600B853 RID: 47187 RVA: 0x001276E6 File Offset: 0x001258E6
 		protected USpineSkeletonDataAsset(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015378 RID: 86904
+		// Token: 0x040053A2 RID: 21410
 		public new const string __ObjectPath = "/Script/SpinePlugin.SpineSkeletonDataAsset";
 
-		// Token: 0x04015379 RID: 86905
+		// Token: 0x040053A3 RID: 21411
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401537A RID: 86906
+		// Token: 0x040053A4 RID: 21412
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401537B RID: 86907
+		// Token: 0x040053A5 RID: 21413
 		internal static int __PropertyOffset_DefaultMix;
 
-		// Token: 0x0401537C RID: 86908
-		internal static int __PropertyOffset_MixData;
-
-		// Token: 0x0401537D RID: 86909
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FSpineAnimationStateMixData> _MixData;
-
-		// Token: 0x0401537E RID: 86910
+		// Token: 0x040053A6 RID: 21414
 		internal static int __PropertyOffset_Bones;
 
-		// Token: 0x0401537F RID: 86911
+		// Token: 0x040053A7 RID: 21415
 		[Nullable(new byte[]
 		{
 			2,
@@ -251,10 +219,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _Bones;
 
-		// Token: 0x04015380 RID: 86912
+		// Token: 0x040053A8 RID: 21416
 		internal static int __PropertyOffset_Slots;
 
-		// Token: 0x04015381 RID: 86913
+		// Token: 0x040053A9 RID: 21417
 		[Nullable(new byte[]
 		{
 			2,
@@ -262,10 +230,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _Slots;
 
-		// Token: 0x04015382 RID: 86914
+		// Token: 0x040053AA RID: 21418
 		internal static int __PropertyOffset_Skins;
 
-		// Token: 0x04015383 RID: 86915
+		// Token: 0x040053AB RID: 21419
 		[Nullable(new byte[]
 		{
 			2,
@@ -273,10 +241,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _Skins;
 
-		// Token: 0x04015384 RID: 86916
+		// Token: 0x040053AC RID: 21420
 		internal static int __PropertyOffset_Animations;
 
-		// Token: 0x04015385 RID: 86917
+		// Token: 0x040053AD RID: 21421
 		[Nullable(new byte[]
 		{
 			2,
@@ -284,10 +252,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _Animations;
 
-		// Token: 0x04015386 RID: 86918
+		// Token: 0x040053AE RID: 21422
 		internal static int __PropertyOffset_Events;
 
-		// Token: 0x04015387 RID: 86919
+		// Token: 0x040053AF RID: 21423
 		[Nullable(new byte[]
 		{
 			2,
@@ -295,14 +263,14 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _Events;
 
-		// Token: 0x04015388 RID: 86920
+		// Token: 0x040053B0 RID: 21424
 		internal static int __PropertyOffset_rawData;
 
-		// Token: 0x04015389 RID: 86921
+		// Token: 0x040053B1 RID: 21425
 		[Nullable(2)]
 		private TArray<byte> _rawData;
 
-		// Token: 0x0401538A RID: 86922
+		// Token: 0x040053B2 RID: 21426
 		internal static int __PropertyOffset_skeletonDataFileName;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Level
 {
-	// Token: 0x02004412 RID: 17426
+	// Token: 0x0200487A RID: 18554
 	public struct IMainWpPartitionData : IFlatbufferObject
 	{
-		// Token: 0x17007AF1 RID: 31473
-		// (get) Token: 0x06019F32 RID: 106290 RVA: 0x003B617B File Offset: 0x003B437B
+		// Token: 0x17008130 RID: 33072
+		// (get) Token: 0x0601B703 RID: 112387 RVA: 0x003E2387 File Offset: 0x003E0587
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			}
 		}
 
-		// Token: 0x06019F33 RID: 106291 RVA: 0x003B6188 File Offset: 0x003B4388
+		// Token: 0x0601B704 RID: 112388 RVA: 0x003E2394 File Offset: 0x003E0594
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019F34 RID: 106292 RVA: 0x003B6190 File Offset: 0x003B4390
+		// Token: 0x0601B705 RID: 112389 RVA: 0x003E239C File Offset: 0x003E059C
 		public static IMainWpPartitionData GetRootAsIMainWpPartitionData(ByteBuffer _bb)
 		{
 			return IMainWpPartitionData.GetRootAsIMainWpPartitionData(_bb, default(IMainWpPartitionData));
 		}
 
-		// Token: 0x06019F35 RID: 106293 RVA: 0x003B61AC File Offset: 0x003B43AC
+		// Token: 0x0601B706 RID: 112390 RVA: 0x003E23B8 File Offset: 0x003E05B8
 		public static IMainWpPartitionData GetRootAsIMainWpPartitionData(ByteBuffer _bb, IMainWpPartitionData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019F36 RID: 106294 RVA: 0x003B61C9 File Offset: 0x003B43C9
+		// Token: 0x0601B707 RID: 112391 RVA: 0x003E23D5 File Offset: 0x003E05D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019F37 RID: 106295 RVA: 0x003B61D8 File Offset: 0x003B43D8
+		// Token: 0x0601B708 RID: 112392 RVA: 0x003E23E4 File Offset: 0x003E05E4
 		public IMainWpPartitionData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06019F38 RID: 106296 RVA: 0x003B61E8 File Offset: 0x003B43E8
+		// Token: 0x0601B709 RID: 112393 RVA: 0x003E23F4 File Offset: 0x003E05F4
 		public ISubWpData? SubWpData(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			return new ISubWpData?(default(ISubWpData).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007AF2 RID: 31474
-		// (get) Token: 0x06019F39 RID: 106297 RVA: 0x003B6248 File Offset: 0x003B4448
+		// Token: 0x17008131 RID: 33073
+		// (get) Token: 0x0601B70A RID: 112394 RVA: 0x003E2454 File Offset: 0x003E0654
 		public int SubWpDataLength
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			}
 		}
 
-		// Token: 0x06019F3A RID: 106298 RVA: 0x003B6273 File Offset: 0x003B4473
+		// Token: 0x0601B70B RID: 112395 RVA: 0x003E247F File Offset: 0x003E067F
 		public static Offset<IMainWpPartitionData> CreateIMainWpPartitionData(FlatBufferBuilder builder, VectorOffset SubWpDataOffset = default(VectorOffset))
 		{
 			builder.StartTable(1);
@@ -82,19 +82,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			return IMainWpPartitionData.EndIMainWpPartitionData(builder);
 		}
 
-		// Token: 0x06019F3B RID: 106299 RVA: 0x003B6289 File Offset: 0x003B4489
+		// Token: 0x0601B70C RID: 112396 RVA: 0x003E2495 File Offset: 0x003E0695
 		public static void StartIMainWpPartitionData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06019F3C RID: 106300 RVA: 0x003B6292 File Offset: 0x003B4492
+		// Token: 0x0601B70D RID: 112397 RVA: 0x003E249E File Offset: 0x003E069E
 		public static void AddSubWpData(FlatBufferBuilder builder, VectorOffset subWpDataOffset)
 		{
 			builder.AddOffset(0, subWpDataOffset.Value, 0);
 		}
 
-		// Token: 0x06019F3D RID: 106301 RVA: 0x003B62A4 File Offset: 0x003B44A4
+		// Token: 0x0601B70E RID: 112398 RVA: 0x003E24B0 File Offset: 0x003E06B0
 		public static VectorOffset CreateSubWpDataVector(FlatBufferBuilder builder, Offset<ISubWpData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019F3E RID: 106302 RVA: 0x003B62E4 File Offset: 0x003B44E4
+		// Token: 0x0601B70F RID: 112399 RVA: 0x003E24F0 File Offset: 0x003E06F0
 		public static VectorOffset CreateSubWpDataVectorBlock(FlatBufferBuilder builder, Offset<ISubWpData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019F3F RID: 106303 RVA: 0x003B62FE File Offset: 0x003B44FE
+		// Token: 0x0601B710 RID: 112400 RVA: 0x003E250A File Offset: 0x003E070A
 		public static VectorOffset CreateSubWpDataVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ISubWpData>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -121,7 +121,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019F40 RID: 106304 RVA: 0x003B631C File Offset: 0x003B451C
+		// Token: 0x0601B711 RID: 112401 RVA: 0x003E2528 File Offset: 0x003E0728
 		public static VectorOffset CreateSubWpDataVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -129,19 +129,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019F41 RID: 106305 RVA: 0x003B6335 File Offset: 0x003B4535
+		// Token: 0x0601B712 RID: 112402 RVA: 0x003E2541 File Offset: 0x003E0741
 		public static void StartSubWpDataVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06019F42 RID: 106306 RVA: 0x003B6340 File Offset: 0x003B4540
+		// Token: 0x0601B713 RID: 112403 RVA: 0x003E254C File Offset: 0x003E074C
 		public static Offset<IMainWpPartitionData> EndIMainWpPartitionData(FlatBufferBuilder builder)
 		{
 			return new Offset<IMainWpPartitionData>(builder.EndTable());
 		}
 
-		// Token: 0x06019F43 RID: 106307 RVA: 0x003B6350 File Offset: 0x003B4550
+		// Token: 0x0601B714 RID: 112404 RVA: 0x003E255C File Offset: 0x003E075C
 		public IMainWpPartitionDataT UnPack()
 		{
 			IMainWpPartitionDataT mainWpPartitionDataT = new IMainWpPartitionDataT();
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			return mainWpPartitionDataT;
 		}
 
-		// Token: 0x06019F44 RID: 106308 RVA: 0x003B636C File Offset: 0x003B456C
+		// Token: 0x0601B715 RID: 112405 RVA: 0x003E2578 File Offset: 0x003E0778
 		public void UnPackTo(IMainWpPartitionDataT _o)
 		{
 			_o.SubWpData = new List<ISubWpDataT>();
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			}
 		}
 
-		// Token: 0x06019F45 RID: 106309 RVA: 0x003B63CC File Offset: 0x003B45CC
+		// Token: 0x0601B716 RID: 112406 RVA: 0x003E25D8 File Offset: 0x003E07D8
 		public static Offset<IMainWpPartitionData> Pack(FlatBufferBuilder builder, IMainWpPartitionDataT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Level
 			return IMainWpPartitionData.CreateIMainWpPartitionData(builder, subWpDataOffset);
 		}
 
-		// Token: 0x0400C36F RID: 50031
+		// Token: 0x0400CD9C RID: 52636
 		private Table __p;
 	}
 }

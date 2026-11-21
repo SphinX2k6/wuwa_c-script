@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CD7 RID: 3287
+	// Token: 0x02000DCD RID: 3533
 	public class IPasserbyNpcSource
 	{
-		// Token: 0x06004B25 RID: 19237 RVA: 0x000BBDA7 File Offset: 0x000B9FA7
-		[NullableContext(1)]
+		// Token: 0x06005028 RID: 20520 RVA: 0x000C7113 File Offset: 0x000C5313
 		public static IPasserbyNpcSource Create(IPasserbyNpcSource? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001734 RID: 5940
-		// (get) Token: 0x06004B26 RID: 19238 RVA: 0x000BBDC6 File Offset: 0x000B9FC6
+		// Token: 0x17001889 RID: 6281
+		// (get) Token: 0x06005029 RID: 20521 RVA: 0x000C7132 File Offset: 0x000C5332
 		public virtual EPasserbyNpcSource Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AFA RID: 11002
+		// Token: 0x04002DAA RID: 11690
 		private IPasserbyNpcSource Instance;
 	}
 }

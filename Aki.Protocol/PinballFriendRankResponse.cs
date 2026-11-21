@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D48 RID: 3400
+	// Token: 0x02000D38 RID: 3384
 	[NetMessage(EMessageId.PinballFriendRankResponse)]
 	public sealed class PinballFriendRankResponse : IMessage<PinballFriendRankResponse>, IMessage, IEquatable<PinballFriendRankResponse>, IDeepCloneable<PinballFriendRankResponse>, IBufferMessage
 	{
-		// Token: 0x0601257D RID: 75133 RVA: 0x002AD30E File Offset: 0x002AB50E
+		// Token: 0x06012481 RID: 74881 RVA: 0x002AB6F2 File Offset: 0x002A98F2
 		[NullableContext(1)]
 		public static PinballFriendRankResponse Create()
 		{
 			return new PinballFriendRankResponse();
 		}
 
-		// Token: 0x17003CC7 RID: 15559
-		// (get) Token: 0x0601257E RID: 75134 RVA: 0x002AD315 File Offset: 0x002AB515
+		// Token: 0x17003C92 RID: 15506
+		// (get) Token: 0x06012482 RID: 74882 RVA: 0x002AB6F9 File Offset: 0x002A98F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CC8 RID: 15560
-		// (get) Token: 0x0601257F RID: 75135 RVA: 0x002AD318 File Offset: 0x002AB518
+		// Token: 0x17003C93 RID: 15507
+		// (get) Token: 0x06012483 RID: 74883 RVA: 0x002AB6FC File Offset: 0x002A98FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012580 RID: 75136 RVA: 0x002AD31F File Offset: 0x002AB51F
+		// Token: 0x06012484 RID: 74884 RVA: 0x002AB703 File Offset: 0x002A9903
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballFriendRankResponse()
 		{
 		}
 
-		// Token: 0x06012581 RID: 75137 RVA: 0x002AD334 File Offset: 0x002AB534
+		// Token: 0x06012485 RID: 74885 RVA: 0x002AB718 File Offset: 0x002A9918
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballFriendRankResponse(PinballFriendRankResponse other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012582 RID: 75138 RVA: 0x002AD391 File Offset: 0x002AB591
+		// Token: 0x06012486 RID: 74886 RVA: 0x002AB775 File Offset: 0x002A9975
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballFriendRankResponse Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new PinballFriendRankResponse(this);
 		}
 
-		// Token: 0x17003CC9 RID: 15561
-		// (get) Token: 0x06012583 RID: 75139 RVA: 0x002AD399 File Offset: 0x002AB599
-		// (set) Token: 0x06012584 RID: 75140 RVA: 0x002AD3A1 File Offset: 0x002AB5A1
+		// Token: 0x17003C94 RID: 15508
+		// (get) Token: 0x06012487 RID: 74887 RVA: 0x002AB77D File Offset: 0x002A997D
+		// (set) Token: 0x06012488 RID: 74888 RVA: 0x002AB785 File Offset: 0x002A9985
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CCA RID: 15562
-		// (get) Token: 0x06012585 RID: 75141 RVA: 0x002AD3AA File Offset: 0x002AB5AA
+		// Token: 0x17003C95 RID: 15509
+		// (get) Token: 0x06012489 RID: 74889 RVA: 0x002AB78E File Offset: 0x002A998E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PinballRankData> RankData
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CCB RID: 15563
-		// (get) Token: 0x06012586 RID: 75142 RVA: 0x002AD3B2 File Offset: 0x002AB5B2
-		// (set) Token: 0x06012587 RID: 75143 RVA: 0x002AD3BA File Offset: 0x002AB5BA
+		// Token: 0x17003C96 RID: 15510
+		// (get) Token: 0x0601248A RID: 74890 RVA: 0x002AB796 File Offset: 0x002A9996
+		// (set) Token: 0x0601248B RID: 74891 RVA: 0x002AB79E File Offset: 0x002A999E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballRankData PlayerSelf
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012588 RID: 75144 RVA: 0x002AD3C3 File Offset: 0x002AB5C3
+		// Token: 0x0601248C RID: 74892 RVA: 0x002AB7A7 File Offset: 0x002A99A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PinballFriendRankResponse);
 		}
 
-		// Token: 0x06012589 RID: 75145 RVA: 0x002AD3D4 File Offset: 0x002AB5D4
+		// Token: 0x0601248D RID: 74893 RVA: 0x002AB7B8 File Offset: 0x002A99B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PinballFriendRankResponse other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.rankData_.Equals(other.rankData_) && object.Equals(this.PlayerSelf, other.PlayerSelf) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601258A RID: 75146 RVA: 0x002AD438 File Offset: 0x002AB638
+		// Token: 0x0601248E RID: 74894 RVA: 0x002AB81C File Offset: 0x002A9A1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601258B RID: 75147 RVA: 0x002AD4A1 File Offset: 0x002AB6A1
+		// Token: 0x0601248F RID: 74895 RVA: 0x002AB885 File Offset: 0x002A9A85
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601258C RID: 75148 RVA: 0x002AD4AE File Offset: 0x002AB6AE
+		// Token: 0x06012490 RID: 74896 RVA: 0x002AB892 File Offset: 0x002A9A92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,21 +169,21 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601258D RID: 75149 RVA: 0x002AD4B8 File Offset: 0x002AB6B8
+		// Token: 0x06012491 RID: 74897 RVA: 0x002AB89C File Offset: 0x002A9A9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.ErrorCode != ErrorCode.Success)
+			{
+				output.WriteRawTag(32);
+				output.WriteEnum((int)this.ErrorCode);
+			}
 			this.rankData_.WriteTo(ref output, PinballFriendRankResponse._repeated_rankData_codec);
 			if (this.playerSelf_ != null)
 			{
-				output.WriteRawTag(82);
+				output.WriteRawTag(90);
 				output.WriteMessage(this.PlayerSelf);
-			}
-			if (this.ErrorCode != ErrorCode.Success)
-			{
-				output.WriteRawTag(96);
-				output.WriteEnum((int)this.ErrorCode);
 			}
 			if (this._unknownFields != null)
 			{
@@ -191,7 +191,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601258E RID: 75150 RVA: 0x002AD524 File Offset: 0x002AB724
+		// Token: 0x06012492 RID: 74898 RVA: 0x002AB908 File Offset: 0x002A9B08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601258F RID: 75151 RVA: 0x002AD590 File Offset: 0x002AB790
+		// Token: 0x06012493 RID: 74899 RVA: 0x002AB974 File Offset: 0x002A9B74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PinballFriendRankResponse other)
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06012590 RID: 75152 RVA: 0x002AD609 File Offset: 0x002AB809
+		// Token: 0x06012494 RID: 74900 RVA: 0x002AB9ED File Offset: 0x002A9BED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -246,7 +246,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012591 RID: 75153 RVA: 0x002AD614 File Offset: 0x002AB814
+		// Token: 0x06012495 RID: 74901 RVA: 0x002AB9F8 File Offset: 0x002A9BF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -258,57 +258,57 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 26U)
+				if (num != 32U)
 				{
-					if (num != 82U)
+					if (num != 42U)
 					{
-						if (num != 96U)
+						if (num != 90U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.ErrorCode = (ErrorCode)input.ReadEnum();
+							if (this.playerSelf_ == null)
+							{
+								this.PlayerSelf = new PinballRankData();
+							}
+							input.ReadMessage(this.PlayerSelf);
 						}
 					}
 					else
 					{
-						if (this.playerSelf_ == null)
-						{
-							this.PlayerSelf = new PinballRankData();
-						}
-						input.ReadMessage(this.PlayerSelf);
+						this.rankData_.AddEntriesFrom(ref input, PinballFriendRankResponse._repeated_rankData_codec);
 					}
 				}
 				else
 				{
-					this.rankData_.AddEntriesFrom(ref input, PinballFriendRankResponse._repeated_rankData_codec);
+					this.ErrorCode = (ErrorCode)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x04007249 RID: 29257
+		// Token: 0x04007261 RID: 29281
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400724A RID: 29258
-		public const int ErrorCodeFieldNumber = 12;
+		// Token: 0x04007262 RID: 29282
+		public const int ErrorCodeFieldNumber = 4;
 
-		// Token: 0x0400724B RID: 29259
+		// Token: 0x04007263 RID: 29283
 		private ErrorCode errorCode_;
 
-		// Token: 0x0400724C RID: 29260
-		public const int RankDataFieldNumber = 3;
+		// Token: 0x04007264 RID: 29284
+		public const int RankDataFieldNumber = 5;
 
-		// Token: 0x0400724D RID: 29261
-		private static readonly FieldCodec<PinballRankData> _repeated_rankData_codec = FieldCodec.ForMessage<PinballRankData>(26U, PinballRankData.Parser);
+		// Token: 0x04007265 RID: 29285
+		private static readonly FieldCodec<PinballRankData> _repeated_rankData_codec = FieldCodec.ForMessage<PinballRankData>(42U, PinballRankData.Parser);
 
-		// Token: 0x0400724E RID: 29262
+		// Token: 0x04007266 RID: 29286
 		private readonly RepeatedField<PinballRankData> rankData_ = new RepeatedField<PinballRankData>();
 
-		// Token: 0x0400724F RID: 29263
-		public const int PlayerSelfFieldNumber = 10;
+		// Token: 0x04007267 RID: 29287
+		public const int PlayerSelfFieldNumber = 11;
 
-		// Token: 0x04007250 RID: 29264
+		// Token: 0x04007268 RID: 29288
 		private PinballRankData playerSelf_;
 	}
 }

@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C5A RID: 3162
+	// Token: 0x02000D33 RID: 3379
 	public class ISplineWayPointWithWeight : ISplineWayPoint
 	{
-		// Token: 0x0600486E RID: 18542 RVA: 0x000B6049 File Offset: 0x000B4249
-		[NullableContext(1)]
+		// Token: 0x06004CF3 RID: 19699 RVA: 0x000C063D File Offset: 0x000BE83D
 		public static ISplineWayPointWithWeight Create(ISplineWayPointWithWeight? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001577 RID: 5495
-		// (get) Token: 0x0600486F RID: 18543 RVA: 0x000B6068 File Offset: 0x000B4268
+		// Token: 0x17001688 RID: 5768
+		// (get) Token: 0x06004CF4 RID: 19700 RVA: 0x000C065C File Offset: 0x000BE85C
 		public override int Spline
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001578 RID: 5496
-		// (get) Token: 0x06004870 RID: 18544 RVA: 0x000B6075 File Offset: 0x000B4275
+		// Token: 0x17001689 RID: 5769
+		// (get) Token: 0x06004CF5 RID: 19701 RVA: 0x000C0669 File Offset: 0x000BE869
 		public override int PointId
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001579 RID: 5497
-		// (get) Token: 0x06004871 RID: 18545 RVA: 0x000B6082 File Offset: 0x000B4282
+		// Token: 0x1700168A RID: 5770
+		// (get) Token: 0x06004CF6 RID: 19702 RVA: 0x000C0676 File Offset: 0x000BE876
 		public virtual int Weight
 		{
 			get
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002945 RID: 10565
+		// Token: 0x04002BA6 RID: 11174
 		private ISplineWayPointWithWeight Instance;
 	}
 }

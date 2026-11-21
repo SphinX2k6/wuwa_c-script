@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001800 RID: 6144
+// Token: 0x02000CB9 RID: 3257
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ElementInfoConfig : ConfigBase
 {
-	// Token: 0x0600B417 RID: 46103 RVA: 0x0028AAC0 File Offset: 0x00288CC0
+	// Token: 0x06008802 RID: 34818 RVA: 0x002951E0 File Offset: 0x002933E0
 	public List<ElementInfo> GetConfigList(int[] idList)
 	{
 		List<ElementInfo> list = new List<ElementInfo>();
@@ -25,13 +25,13 @@ public class ElementInfoConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x0600B418 RID: 46104 RVA: 0x0028AB29 File Offset: 0x00288D29
+	// Token: 0x06008803 RID: 34819 RVA: 0x00295249 File Offset: 0x00293449
 	public ElementInfo? GetElementInfo(int elementId)
 	{
 		return ConfigElementInfoById.GetConfig(elementId, true);
 	}
 
-	// Token: 0x0600B419 RID: 46105 RVA: 0x0028AB34 File Offset: 0x00288D34
+	// Token: 0x06008804 RID: 34820 RVA: 0x00295254 File Offset: 0x00293454
 	[NullableContext(2)]
 	public string GetElementInfoValueByParam(int elementId, string param, [Nullable(1)] string tag)
 	{
@@ -249,20 +249,20 @@ public class ElementInfoConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600B41A RID: 46106 RVA: 0x0028B089 File Offset: 0x00289289
+	// Token: 0x06008805 RID: 34821 RVA: 0x002957A9 File Offset: 0x002939A9
 	public string GetElementInfoLocalName(string name)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(name, null);
 	}
 
-	// Token: 0x0600B41B RID: 46107 RVA: 0x0028B094 File Offset: 0x00289294
+	// Token: 0x06008806 RID: 34822 RVA: 0x002957B4 File Offset: 0x002939B4
 	public string GetElementInfoNameByElementId(int elementId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetElementInfo(elementId).Value.Name, null);
 	}
 
-	// Token: 0x17000F20 RID: 3872
-	// (get) Token: 0x0600B41C RID: 46108 RVA: 0x0028B0BE File Offset: 0x002892BE
+	// Token: 0x17000F43 RID: 3907
+	// (get) Token: 0x06008807 RID: 34823 RVA: 0x002957DE File Offset: 0x002939DE
 	public static ElementInfoConfig Instance
 	{
 		get
@@ -271,7 +271,7 @@ public class ElementInfoConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600B41D RID: 46109 RVA: 0x0028B0C5 File Offset: 0x002892C5
+	// Token: 0x06008808 RID: 34824 RVA: 0x002957E5 File Offset: 0x002939E5
 	public static ElementInfoConfig GetOrCreateInstance()
 	{
 		if (ElementInfoConfig._Instance == null)
@@ -281,7 +281,7 @@ public class ElementInfoConfig : ConfigBase
 		return ElementInfoConfig._Instance;
 	}
 
-	// Token: 0x0600B41E RID: 46110 RVA: 0x0028B0D9 File Offset: 0x002892D9
+	// Token: 0x06008809 RID: 34825 RVA: 0x002957F9 File Offset: 0x002939F9
 	public static bool CreateInstance()
 	{
 		if (ElementInfoConfig._Instance != null)
@@ -292,24 +292,24 @@ public class ElementInfoConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600B41F RID: 46111 RVA: 0x0028B0EF File Offset: 0x002892EF
+	// Token: 0x0600880A RID: 34826 RVA: 0x0029580F File Offset: 0x00293A0F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B420 RID: 46112 RVA: 0x0028B0F1 File Offset: 0x002892F1
+	// Token: 0x0600880B RID: 34827 RVA: 0x00295811 File Offset: 0x00293A11
 	public static void ResetStaticDefaultValue()
 	{
 		ElementInfoConfig._Instance = null;
 	}
 
-	// Token: 0x0600B421 RID: 46113 RVA: 0x0028B0F9 File Offset: 0x002892F9
+	// Token: 0x0600880C RID: 34828 RVA: 0x00295819 File Offset: 0x00293A19
 	static ElementInfoConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ElementInfoConfig.CreateStaticDefaultValue), new Action(ElementInfoConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005167 RID: 20839
+	// Token: 0x04005212 RID: 21010
 	[Nullable(2)]
 	private static ElementInfoConfig _Instance;
 }

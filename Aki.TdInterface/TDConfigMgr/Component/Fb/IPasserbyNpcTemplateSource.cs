@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CD8 RID: 3288
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DCE RID: 3534
 	public class IPasserbyNpcTemplateSource : IPasserbyNpcSource
 	{
-		// Token: 0x06004B28 RID: 19240 RVA: 0x000BBDDB File Offset: 0x000B9FDB
+		// Token: 0x0600502B RID: 20523 RVA: 0x000C7147 File Offset: 0x000C5347
 		public static IPasserbyNpcTemplateSource Create(IPasserbyNpcTemplateSource? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001735 RID: 5941
-		// (get) Token: 0x06004B29 RID: 19241 RVA: 0x000BBDFA File Offset: 0x000B9FFA
+		// Token: 0x1700188A RID: 6282
+		// (get) Token: 0x0600502C RID: 20524 RVA: 0x000C7166 File Offset: 0x000C5366
 		public override EPasserbyNpcSource Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001736 RID: 5942
-		// (get) Token: 0x06004B2A RID: 19242 RVA: 0x000BBE08 File Offset: 0x000BA008
+		// Token: 0x1700188B RID: 6283
+		// (get) Token: 0x0600502D RID: 20525 RVA: 0x000C7174 File Offset: 0x000C5374
 		public virtual List<string> TemplateIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AFB RID: 11003
+		// Token: 0x04002DAB RID: 11691
 		private IPasserbyNpcTemplateSource Instance;
 
-		// Token: 0x04002AFC RID: 11004
+		// Token: 0x04002DAC RID: 11692
 		private List<string> _TemplateIdsCache;
 
-		// Token: 0x04002AFD RID: 11005
+		// Token: 0x04002DAD RID: 11693
 		private bool _TemplateIdsInited;
 	}
 }

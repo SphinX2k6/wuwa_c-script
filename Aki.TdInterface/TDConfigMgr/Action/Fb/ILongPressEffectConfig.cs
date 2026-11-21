@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002611 RID: 9745
+	// Token: 0x020028D1 RID: 10449
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ILongPressEffectConfig
 	{
-		// Token: 0x0600DAC8 RID: 56008 RVA: 0x0020969E File Offset: 0x0020789E
-		[NullableContext(1)]
+		// Token: 0x0600E895 RID: 59541 RVA: 0x00225DF2 File Offset: 0x00223FF2
+		[NullableContext(0)]
 		public static ILongPressEffectConfig Create(ILongPressEffectConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004068 RID: 16488
-		// (get) Token: 0x0600DAC9 RID: 56009 RVA: 0x002096BD File Offset: 0x002078BD
+		// Token: 0x170043A1 RID: 17313
+		// (get) Token: 0x0600E896 RID: 59542 RVA: 0x00225E11 File Offset: 0x00224011
 		public virtual string CameraShakeBpPath
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004069 RID: 16489
-		// (get) Token: 0x0600DACA RID: 56010 RVA: 0x002096CA File Offset: 0x002078CA
+		// Token: 0x170043A2 RID: 17314
+		// (get) Token: 0x0600E897 RID: 59543 RVA: 0x00225E1E File Offset: 0x0022401E
 		public virtual string LongPressSound
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700406A RID: 16490
-		// (get) Token: 0x0600DACB RID: 56011 RVA: 0x002096D7 File Offset: 0x002078D7
+		// Token: 0x170043A3 RID: 17315
+		// (get) Token: 0x0600E898 RID: 59544 RVA: 0x00225E2B File Offset: 0x0022402B
 		public virtual IGamePadInteractVibration GamePadVibration
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700406B RID: 16491
-		// (get) Token: 0x0600DACC RID: 56012 RVA: 0x0020970B File Offset: 0x0020790B
+		// Token: 0x170043A4 RID: 17316
+		// (get) Token: 0x0600E899 RID: 59545 RVA: 0x00225E5F File Offset: 0x0022405F
 		public virtual string LongPressScreenEffect
 		{
 			get
@@ -70,19 +70,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700406C RID: 16492
-		// (get) Token: 0x0600DACD RID: 56013 RVA: 0x00209718 File Offset: 0x00207918
+		// Token: 0x170043A5 RID: 17317
+		// (get) Token: 0x0600E89A RID: 59546 RVA: 0x00225E6C File Offset: 0x0022406C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> PlayEffects
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -105,24 +105,24 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007983 RID: 31107
+		// Token: 0x0400801D RID: 32797
 		private ILongPressEffectConfig Instance;
 
-		// Token: 0x04007984 RID: 31108
+		// Token: 0x0400801E RID: 32798
 		private IGamePadInteractVibration _GamePadVibrationCache;
 
-		// Token: 0x04007985 RID: 31109
+		// Token: 0x0400801F RID: 32799
 		private bool _GamePadVibrationInited;
 
-		// Token: 0x04007986 RID: 31110
+		// Token: 0x04008020 RID: 32800
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _PlayEffectsCache;
 
-		// Token: 0x04007987 RID: 31111
+		// Token: 0x04008021 RID: 32801
 		private bool _PlayEffectsInited;
 	}
 }

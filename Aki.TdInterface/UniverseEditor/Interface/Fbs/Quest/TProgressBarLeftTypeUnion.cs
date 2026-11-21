@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042F7 RID: 17143
+	// Token: 0x02004756 RID: 18262
 	public class TProgressBarLeftTypeUnion
 	{
-		// Token: 0x1700795C RID: 31068
-		// (get) Token: 0x060196C5 RID: 104133 RVA: 0x003A529A File Offset: 0x003A349A
-		// (set) Token: 0x060196C6 RID: 104134 RVA: 0x003A52A2 File Offset: 0x003A34A2
+		// Token: 0x17007F8F RID: 32655
+		// (get) Token: 0x0601AE47 RID: 110151 RVA: 0x003D0BCA File Offset: 0x003CEDCA
+		// (set) Token: 0x0601AE48 RID: 110152 RVA: 0x003D0BD2 File Offset: 0x003CEDD2
 		public TProgressBarLeftType Type { get; set; }
 
-		// Token: 0x1700795D RID: 31069
-		// (get) Token: 0x060196C7 RID: 104135 RVA: 0x003A52AB File Offset: 0x003A34AB
-		// (set) Token: 0x060196C8 RID: 104136 RVA: 0x003A52B3 File Offset: 0x003A34B3
+		// Token: 0x17007F90 RID: 32656
+		// (get) Token: 0x0601AE49 RID: 110153 RVA: 0x003D0BDB File Offset: 0x003CEDDB
+		// (set) Token: 0x0601AE4A RID: 110154 RVA: 0x003D0BE3 File Offset: 0x003CEDE3
 		public object Value { get; set; }
 
-		// Token: 0x060196C9 RID: 104137 RVA: 0x003A52BC File Offset: 0x003A34BC
+		// Token: 0x0601AE4B RID: 110155 RVA: 0x003D0BEC File Offset: 0x003CEDEC
 		public TProgressBarLeftTypeUnion()
 		{
 			this.Type = TProgressBarLeftType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060196CA RID: 104138 RVA: 0x003A52D2 File Offset: 0x003A34D2
+		// Token: 0x0601AE4C RID: 110156 RVA: 0x003D0C02 File Offset: 0x003CEE02
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060196CB RID: 104139 RVA: 0x003A52E4 File Offset: 0x003A34E4
+		// Token: 0x0601AE4D RID: 110157 RVA: 0x003D0C14 File Offset: 0x003CEE14
 		public IUseCountT AsIUseCount()
 		{
 			return this.As<IUseCountT>();
 		}
 
-		// Token: 0x060196CC RID: 104140 RVA: 0x003A52EC File Offset: 0x003A34EC
+		// Token: 0x0601AE4E RID: 110158 RVA: 0x003D0C1C File Offset: 0x003CEE1C
 		public static TProgressBarLeftTypeUnion FromIUseCount(IUseCountT _iusecount)
 		{
 			return new TProgressBarLeftTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060196CD RID: 104141 RVA: 0x003A5301 File Offset: 0x003A3501
+		// Token: 0x0601AE4F RID: 110159 RVA: 0x003D0C31 File Offset: 0x003CEE31
 		public IUseVarT AsIUseVar()
 		{
 			return this.As<IUseVarT>();
 		}
 
-		// Token: 0x060196CE RID: 104142 RVA: 0x003A5309 File Offset: 0x003A3509
+		// Token: 0x0601AE50 RID: 110160 RVA: 0x003D0C39 File Offset: 0x003CEE39
 		public static TProgressBarLeftTypeUnion FromIUseVar(IUseVarT _iusevar)
 		{
 			return new TProgressBarLeftTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060196CF RID: 104143 RVA: 0x003A5320 File Offset: 0x003A3520
+		// Token: 0x0601AE51 RID: 110161 RVA: 0x003D0C50 File Offset: 0x003CEE50
 		public static int Pack(FlatBufferBuilder builder, TProgressBarLeftTypeUnion _o)
 		{
 			TProgressBarLeftType type = _o.Type;

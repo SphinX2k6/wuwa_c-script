@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Character.Input.Enum;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C70 RID: 23664
+	// Token: 0x02004C50 RID: 19536
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiDefine
 	{
-		// Token: 0x0603BD14 RID: 245012 RVA: 0x00E4A478 File Offset: 0x00E48678
+		// Token: 0x06030C62 RID: 199778 RVA: 0x00D9A9F4 File Offset: 0x00D98BF4
 		// Note: this type is marked as 'beforefieldinit'.
 		static BattleUiDefine()
 		{
@@ -52,107 +52,107 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiDefine.bossStateViewResourceIdMap = dictionary4;
 		}
 
-		// Token: 0x0401F296 RID: 127638
+		// Token: 0x04019D4A RID: 105802
 		public const float DAMAGE_LEFT_RATIO = 0.25f;
 
-		// Token: 0x0401F297 RID: 127639
+		// Token: 0x04019D4B RID: 105803
 		public const float DAMAGE_MIDDLE_RATIO = 0.75f;
 
-		// Token: 0x0401F298 RID: 127640
+		// Token: 0x04019D4C RID: 105804
 		public const float DAMAGE_RIGHT_RATIO = 1f;
 
-		// Token: 0x0401F299 RID: 127641
+		// Token: 0x04019D4D RID: 105805
 		public const int DAMAGE_ANIMATION_MAX_LENGTH = 240;
 
-		// Token: 0x0401F29A RID: 127642
+		// Token: 0x04019D4E RID: 105806
 		public const int CURE_DAMAGE_TEXT = 8;
 
-		// Token: 0x0401F29B RID: 127643
+		// Token: 0x04019D4F RID: 105807
 		public const int IMMUNITY_DAMAGE_TEXT_ID = 9;
 
-		// Token: 0x0401F29C RID: 127644
+		// Token: 0x04019D50 RID: 105808
 		public const int ATK_DAMAGE_TEXT = 10;
 
-		// Token: 0x0401F29D RID: 127645
+		// Token: 0x04019D51 RID: 105809
 		public const int SHEILD_COVER_TEXT = 12;
 
-		// Token: 0x0401F29E RID: 127646
+		// Token: 0x04019D52 RID: 105810
 		public const string IMMUNITY_DAMAGE_TEXT = "Immune";
 
-		// Token: 0x0401F29F RID: 127647
+		// Token: 0x04019D53 RID: 105811
 		public const int SKILL_COOLDOWN_INTERVAL = 100;
 
-		// Token: 0x0401F2A0 RID: 127648
+		// Token: 0x04019D54 RID: 105812
 		public const int SKILL_COOLDOWN_DELAY = 100;
 
-		// Token: 0x0401F2A1 RID: 127649
+		// Token: 0x04019D55 RID: 105813
 		public const float SKILL_COOLDOWN_LOOP_INTERVAL = 0.1f;
 
-		// Token: 0x0401F2A2 RID: 127650
+		// Token: 0x04019D56 RID: 105814
 		public const int SECOND_TO_MILLISECOND = 1000;
 
-		// Token: 0x0401F2A3 RID: 127651
+		// Token: 0x04019D57 RID: 105815
 		public const int HEAD_STATE_RANGE = 1000000;
 
-		// Token: 0x0401F2A4 RID: 127652
+		// Token: 0x04019D58 RID: 105816
 		public const int CHANGE_COOLDOWN_INTERVAL = 100;
 
-		// Token: 0x0401F2A5 RID: 127653
+		// Token: 0x04019D59 RID: 105817
 		public const int CHANGE_COOLDOWN_DELAY = 100;
 
-		// Token: 0x0401F2A6 RID: 127654
+		// Token: 0x04019D5A RID: 105818
 		public const float CHANGE_COOLDOWN_LOOP_INTERVAL = 0.1f;
 
-		// Token: 0x0401F2A7 RID: 127655
+		// Token: 0x04019D5B RID: 105819
 		public const int BE_HIT_DELAY = 5000;
 
-		// Token: 0x0401F2A8 RID: 127656
+		// Token: 0x04019D5C RID: 105820
 		public const int DAMAGE_VIEW_OFFSET_MAX_DISTANCE = 640000;
 
-		// Token: 0x0401F2A9 RID: 127657
+		// Token: 0x04019D5D RID: 105821
 		public const float DAMAGE_VIEW_OFFSET_MIN_RATIO = 0.2f;
 
-		// Token: 0x0401F2AA RID: 127658
+		// Token: 0x04019D5E RID: 105822
 		public const int REFRESH_POSITION_INTERVAL = 1000;
 
-		// Token: 0x0401F2AB RID: 127659
+		// Token: 0x04019D5F RID: 105823
 		public const int CLAMP_RANGE = 130;
 
-		// Token: 0x0401F2AC RID: 127660
+		// Token: 0x04019D60 RID: 105824
 		public const int INPUT_SKILL_ACTION_NUM = 6;
 
-		// Token: 0x0401F2AD RID: 127661
+		// Token: 0x04019D61 RID: 105825
 		public const int SPECIAL_ENERGY_BAR_WIDTH = 440;
 
-		// Token: 0x0401F2AE RID: 127662
+		// Token: 0x04019D62 RID: 105826
 		public const float AREAL_BOX_WIETH_A = 35.2f;
 
-		// Token: 0x0401F2AF RID: 127663
+		// Token: 0x04019D63 RID: 105827
 		public const float AREAL_BOX_WIETH_B = 123.2f;
 
-		// Token: 0x0401F2B0 RID: 127664
+		// Token: 0x04019D64 RID: 105828
 		public const float AREAL_BOX_WIETH_C = 250f;
 
-		// Token: 0x0401F2B1 RID: 127665
+		// Token: 0x04019D65 RID: 105829
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<EElementPowerType, int> elementTypeToElementTag;
 
-		// Token: 0x0401F2B2 RID: 127666
+		// Token: 0x04019D66 RID: 105830
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<int, EElementPowerType> elementTagToElementType;
 
-		// Token: 0x0401F2B3 RID: 127667
+		// Token: 0x04019D67 RID: 105831
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<EInputAction, int> hideInputTagMap;
 
-		// Token: 0x0401F2B4 RID: 127668
+		// Token: 0x04019D68 RID: 105832
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<EBossStateViewType, string> bossStateViewResourceIdMap;
 
-		// Token: 0x0401F2B5 RID: 127669
+		// Token: 0x04019D69 RID: 105833
 		public const int DELAY_REFRESH_ELEMENT_BALL = 3000;
 
-		// Token: 0x0401F2B6 RID: 127670
+		// Token: 0x04019D6A RID: 105834
 		public const float BUFF_END_REMAINING_TIME = 2f;
 	}
 }

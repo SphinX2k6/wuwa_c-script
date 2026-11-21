@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000FE1 RID: 4065
+	// Token: 0x0200025D RID: 605
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.PhysicsConstraintActor")]
 	[UnrealStructLayout(1072, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1072)]
 	public class APhysicsConstraintActor : ARigidBodyBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600DB97 RID: 56215 RVA: 0x001438AE File Offset: 0x00141AAE
+		// Token: 0x060033B3 RID: 13235 RVA: 0x00049EBE File Offset: 0x000480BE
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return APhysicsConstraintActor._ClassPtr;
 		}
 
-		// Token: 0x0600DB98 RID: 56216 RVA: 0x001438BC File Offset: 0x00141ABC
+		// Token: 0x060033B4 RID: 13236 RVA: 0x00049ECC File Offset: 0x000480CC
 		public APhysicsConstraintActor() : this(BuiltinUtils.AllocNativeUObject(APhysicsConstraintActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600DB99 RID: 56217 RVA: 0x001438E4 File Offset: 0x00141AE4
+		// Token: 0x060033B5 RID: 13237 RVA: 0x00049EF4 File Offset: 0x000480F4
 		[NullableContext(1)]
 		public APhysicsConstraintActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(APhysicsConstraintActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170033C7 RID: 13255
-		// (get) Token: 0x0600DB9A RID: 56218 RVA: 0x00143917 File Offset: 0x00141B17
-		// (set) Token: 0x0600DB9B RID: 56219 RVA: 0x0014392B File Offset: 0x00141B2B
+		// Token: 0x17000733 RID: 1843
+		// (get) Token: 0x060033B6 RID: 13238 RVA: 0x00049F27 File Offset: 0x00048127
+		// (set) Token: 0x060033B7 RID: 13239 RVA: 0x00049F3B File Offset: 0x0004813B
 		public unsafe UPhysicsConstraintComponent ConstraintComp
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170033C8 RID: 13256
-		// (get) Token: 0x0600DB9C RID: 56220 RVA: 0x00143940 File Offset: 0x00141B40
-		// (set) Token: 0x0600DB9D RID: 56221 RVA: 0x00143954 File Offset: 0x00141B54
+		// Token: 0x17000734 RID: 1844
+		// (get) Token: 0x060033B8 RID: 13240 RVA: 0x00049F50 File Offset: 0x00048150
+		// (set) Token: 0x060033B9 RID: 13241 RVA: 0x00049F64 File Offset: 0x00048164
 		public unsafe AActor ConstraintActor1_DEPRECATED
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170033C9 RID: 13257
-		// (get) Token: 0x0600DB9E RID: 56222 RVA: 0x00143969 File Offset: 0x00141B69
-		// (set) Token: 0x0600DB9F RID: 56223 RVA: 0x0014397D File Offset: 0x00141B7D
+		// Token: 0x17000735 RID: 1845
+		// (get) Token: 0x060033BA RID: 13242 RVA: 0x00049F79 File Offset: 0x00048179
+		// (set) Token: 0x060033BB RID: 13243 RVA: 0x00049F8D File Offset: 0x0004818D
 		public unsafe AActor ConstraintActor2_DEPRECATED
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170033CA RID: 13258
-		// (get) Token: 0x0600DBA0 RID: 56224 RVA: 0x00143992 File Offset: 0x00141B92
-		// (set) Token: 0x0600DBA1 RID: 56225 RVA: 0x001439AB File Offset: 0x00141BAB
+		// Token: 0x17000736 RID: 1846
+		// (get) Token: 0x060033BC RID: 13244 RVA: 0x00049FA2 File Offset: 0x000481A2
+		// (set) Token: 0x060033BD RID: 13245 RVA: 0x00049FBB File Offset: 0x000481BB
 		public unsafe bool bDisableCollision_DEPRECATED
 		{
 			get
@@ -90,40 +90,40 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600DBA2 RID: 56226 RVA: 0x001439DB File Offset: 0x00141BDB
+		// Token: 0x060033BE RID: 13246 RVA: 0x00049FEB File Offset: 0x000481EB
 		static APhysicsConstraintActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.PhysicsConstraintActor");
 		}
 
-		// Token: 0x0600DBA3 RID: 56227 RVA: 0x001439E9 File Offset: 0x00141BE9
+		// Token: 0x060033BF RID: 13247 RVA: 0x00049FF9 File Offset: 0x000481F9
 		protected APhysicsConstraintActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040076D0 RID: 30416
+		// Token: 0x040011FA RID: 4602
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.PhysicsConstraintActor";
 
-		// Token: 0x040076D1 RID: 30417
+		// Token: 0x040011FB RID: 4603
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040076D2 RID: 30418
+		// Token: 0x040011FC RID: 4604
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040076D3 RID: 30419
+		// Token: 0x040011FD RID: 4605
 		internal static int __PropertyOffset_ConstraintComp;
 
-		// Token: 0x040076D4 RID: 30420
+		// Token: 0x040011FE RID: 4606
 		internal static int __PropertyOffset_ConstraintActor1_DEPRECATED;
 
-		// Token: 0x040076D5 RID: 30421
+		// Token: 0x040011FF RID: 4607
 		internal static int __PropertyOffset_ConstraintActor2_DEPRECATED;
 
-		// Token: 0x040076D6 RID: 30422
+		// Token: 0x04001200 RID: 4608
 		internal static int __PropertyOffset_bDisableCollision_DEPRECATED;
 
-		// Token: 0x040076D7 RID: 30423
+		// Token: 0x04001201 RID: 4609
 		internal static byte __PropertyMask_bDisableCollision_DEPRECATED;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002581 RID: 9601
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200282F RID: 10287
 	public class IVisualNovelPerformanceSwitchAudioState : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D785 RID: 55173 RVA: 0x002019AA File Offset: 0x001FFBAA
+		// Token: 0x0600E4FF RID: 58623 RVA: 0x0021D6DE File Offset: 0x0021B8DE
 		public static IVisualNovelPerformanceSwitchAudioState Create(IVisualNovelPerformanceSwitchAudioState? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E45 RID: 15941
-		// (get) Token: 0x0600D786 RID: 55174 RVA: 0x002019C9 File Offset: 0x001FFBC9
+		// Token: 0x1700414F RID: 16719
+		// (get) Token: 0x0600E500 RID: 58624 RVA: 0x0021D6FD File Offset: 0x0021B8FD
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E46 RID: 15942
-		// (get) Token: 0x0600D787 RID: 55175 RVA: 0x002019D8 File Offset: 0x001FFBD8
+		// Token: 0x17004150 RID: 16720
+		// (get) Token: 0x0600E501 RID: 58625 RVA: 0x0021D70C File Offset: 0x0021B90C
 		public override float? StartTime
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E47 RID: 15943
-		// (get) Token: 0x0600D788 RID: 55176 RVA: 0x00201A0E File Offset: 0x001FFC0E
+		// Token: 0x17004151 RID: 16721
+		// (get) Token: 0x0600E502 RID: 58626 RVA: 0x0021D742 File Offset: 0x0021B942
 		public virtual IAudioState AudioState
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007743 RID: 30531
+		// Token: 0x04007DA9 RID: 32169
 		private IVisualNovelPerformanceSwitchAudioState Instance;
 
-		// Token: 0x04007744 RID: 30532
+		// Token: 0x04007DAA RID: 32170
 		[Nullable(2)]
 		private IAudioState _AudioStateCache;
 
-		// Token: 0x04007745 RID: 30533
+		// Token: 0x04007DAB RID: 32171
 		private bool _AudioStateInited;
 	}
 }

@@ -3,257 +3,267 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016C2 RID: 5826
+	// Token: 0x0200183C RID: 6204
 	[EnumExtensions]
 	public enum ESystemType
 	{
-		// Token: 0x04004E2C RID: 20012
+		// Token: 0x0400524C RID: 21068
 		Shop,
-		// Token: 0x04004E2D RID: 20013
+		// Token: 0x0400524D RID: 21069
 		RegionQuest,
-		// Token: 0x04004E2E RID: 20014
+		// Token: 0x0400524E RID: 21070
 		ContributionLevel,
-		// Token: 0x04004E2F RID: 20015
+		// Token: 0x0400524F RID: 21071
 		InstanceEntrance,
-		// Token: 0x04004E30 RID: 20016
+		// Token: 0x04005250 RID: 21072
 		MingSuTi,
-		// Token: 0x04004E31 RID: 20017
+		// Token: 0x04005251 RID: 21073
 		InformationView,
-		// Token: 0x04004E32 RID: 20018
+		// Token: 0x04005252 RID: 21074
 		DailyQuest,
-		// Token: 0x04004E33 RID: 20019
+		// Token: 0x04005253 RID: 21075
 		Cook,
-		// Token: 0x04004E34 RID: 20020
+		// Token: 0x04005254 RID: 21076
 		FixCook,
-		// Token: 0x04004E35 RID: 20021
+		// Token: 0x04005255 RID: 21077
 		Synthetic,
-		// Token: 0x04004E36 RID: 20022
+		// Token: 0x04005256 RID: 21078
 		Forging,
-		// Token: 0x04004E37 RID: 20023
+		// Token: 0x04005257 RID: 21079
 		Expostulation,
-		// Token: 0x04004E38 RID: 20024
+		// Token: 0x04005258 RID: 21080
 		RoleDescription,
-		// Token: 0x04004E39 RID: 20025
+		// Token: 0x04005259 RID: 21081
 		TrialRoleDescription,
-		// Token: 0x04004E3A RID: 20026
+		// Token: 0x0400525A RID: 21082
 		RogueAbilitySelect,
-		// Token: 0x04004E3B RID: 20027
+		// Token: 0x0400525B RID: 21083
 		RogueShop,
-		// Token: 0x04004E3C RID: 20028
+		// Token: 0x0400525C RID: 21084
 		RogueRandomEvent,
-		// Token: 0x04004E3D RID: 20029
+		// Token: 0x0400525D RID: 21085
 		RogueActivityIntroduce,
-		// Token: 0x04004E3E RID: 20030
+		// Token: 0x0400525E RID: 21086
 		RogueSettlement,
-		// Token: 0x04004E3F RID: 20031
+		// Token: 0x0400525F RID: 21087
 		RogueTowerTrial,
-		// Token: 0x04004E40 RID: 20032
+		// Token: 0x04005260 RID: 21088
 		GameSysOpen,
-		// Token: 0x04004E41 RID: 20033
+		// Token: 0x04005261 RID: 21089
 		TurntableControl,
-		// Token: 0x04004E42 RID: 20034
+		// Token: 0x04005262 RID: 21090
 		InstanceFailure,
-		// Token: 0x04004E43 RID: 20035
+		// Token: 0x04005263 RID: 21091
 		FeedingPets,
-		// Token: 0x04004E44 RID: 20036
+		// Token: 0x04005264 RID: 21092
 		SoundAreaPlayInfo,
-		// Token: 0x04004E45 RID: 20037
+		// Token: 0x04005265 RID: 21093
 		LordChallenge,
-		// Token: 0x04004E46 RID: 20038
+		// Token: 0x04005266 RID: 21094
 		ExploreLevelView,
-		// Token: 0x04004E47 RID: 20039
+		// Token: 0x04005267 RID: 21095
 		ConfirmBox,
-		// Token: 0x04004E48 RID: 20040
+		// Token: 0x04005268 RID: 21096
 		ConfirmBox2,
-		// Token: 0x04004E49 RID: 20041
+		// Token: 0x04005269 RID: 21097
 		ActivityIntroduce,
-		// Token: 0x04004E4A RID: 20042
+		// Token: 0x0400526A RID: 21098
 		ActivitySubInterface,
-		// Token: 0x04004E4B RID: 20043
+		// Token: 0x0400526B RID: 21099
 		Photograph,
-		// Token: 0x04004E4C RID: 20044
+		// Token: 0x0400526C RID: 21100
 		DigitalScreen,
-		// Token: 0x04004E4D RID: 20045
+		// Token: 0x0400526D RID: 21101
 		ChasingMoonMain,
-		// Token: 0x04004E4E RID: 20046
+		// Token: 0x0400526E RID: 21102
 		Gramophone,
-		// Token: 0x04004E4F RID: 20047
+		// Token: 0x0400526F RID: 21103
 		DreamLink,
-		// Token: 0x04004E50 RID: 20048
+		// Token: 0x04005270 RID: 21104
 		MowBuffDistribute,
-		// Token: 0x04004E51 RID: 20049
+		// Token: 0x04005271 RID: 21105
 		ScratchTicket,
-		// Token: 0x04004E52 RID: 20050
+		// Token: 0x04005272 RID: 21106
 		PreheatingCheckIn,
-		// Token: 0x04004E53 RID: 20051
+		// Token: 0x04005273 RID: 21107
 		MowingTowerActivity,
-		// Token: 0x04004E54 RID: 20052
+		// Token: 0x04005274 RID: 21108
 		SoaringChallenge,
-		// Token: 0x04004E55 RID: 20053
+		// Token: 0x04005275 RID: 21109
 		MotorRaceChallenge,
-		// Token: 0x04004E56 RID: 20054
+		// Token: 0x04005276 RID: 21110
+		MechaStuntTrackChallenge,
+		// Token: 0x04005277 RID: 21111
 		PhotoMemoryTopic,
-		// Token: 0x04004E57 RID: 20055
+		// Token: 0x04005278 RID: 21112
 		LordGymEntrance,
-		// Token: 0x04004E58 RID: 20056
+		// Token: 0x04005279 RID: 21113
 		RaidReportSettlement,
-		// Token: 0x04004E59 RID: 20057
+		// Token: 0x0400527A RID: 21114
 		HideLordOpen,
-		// Token: 0x04004E5A RID: 20058
+		// Token: 0x0400527B RID: 21115
 		FishingDock,
-		// Token: 0x04004E5B RID: 20059
+		// Token: 0x0400527C RID: 21116
 		FishingCage,
-		// Token: 0x04004E5C RID: 20060
+		// Token: 0x0400527D RID: 21117
 		FishingItemDelivery,
-		// Token: 0x04004E5D RID: 20061
+		// Token: 0x0400527E RID: 21118
 		RogueTokenSelect,
-		// Token: 0x04004E5E RID: 20062
+		// Token: 0x0400527F RID: 21119
 		SlashAndTower,
-		// Token: 0x04004E5F RID: 20063
+		// Token: 0x04005280 RID: 21120
 		BossRushPlayInfo,
-		// Token: 0x04004E60 RID: 20064
+		// Token: 0x04005281 RID: 21121
 		GravityFlipControl,
-		// Token: 0x04004E61 RID: 20065
+		// Token: 0x04005282 RID: 21122
 		PermanentRogueAbilitySelect,
-		// Token: 0x04004E62 RID: 20066
+		// Token: 0x04005283 RID: 21123
 		PermanentRogueShop,
-		// Token: 0x04004E63 RID: 20067
+		// Token: 0x04005284 RID: 21124
 		PermanentRogueRandomEvent,
-		// Token: 0x04004E64 RID: 20068
+		// Token: 0x04005285 RID: 21125
 		PermanentRogueActivityIntroduce,
-		// Token: 0x04004E65 RID: 20069
+		// Token: 0x04005286 RID: 21126
 		PermanentRogueSettlement,
-		// Token: 0x04004E66 RID: 20070
+		// Token: 0x04005287 RID: 21127
 		PermanentRogueTokenSelect,
-		// Token: 0x04004E67 RID: 20071
+		// Token: 0x04005288 RID: 21128
 		CiacconaAvgSystemBoard,
-		// Token: 0x04004E68 RID: 20072
+		// Token: 0x04005289 RID: 21129
 		CiacconaAvgChapterBoard,
-		// Token: 0x04004E69 RID: 20073
+		// Token: 0x0400528A RID: 21130
 		DangoAbyssActivity,
-		// Token: 0x04004E6A RID: 20074
+		// Token: 0x0400528B RID: 21131
 		PhantomBattleChallenge,
-		// Token: 0x04004E6B RID: 20075
+		// Token: 0x0400528C RID: 21132
 		CoBathing,
-		// Token: 0x04004E6C RID: 20076
+		// Token: 0x0400528D RID: 21133
 		PlotReview,
-		// Token: 0x04004E6D RID: 20077
+		// Token: 0x0400528E RID: 21134
 		PlotReviewJumpTips,
-		// Token: 0x04004E6E RID: 20078
+		// Token: 0x0400528F RID: 21135
 		MoraleSystem,
-		// Token: 0x04004E6F RID: 20079
+		// Token: 0x04005290 RID: 21136
 		LifePointChallenge,
-		// Token: 0x04004E70 RID: 20080
+		// Token: 0x04005291 RID: 21137
 		GreatSwordChallenge,
-		// Token: 0x04004E71 RID: 20081
+		// Token: 0x04005292 RID: 21138
 		TrapDefenseMapChange,
-		// Token: 0x04004E72 RID: 20082
+		// Token: 0x04005293 RID: 21139
 		HonamiStorySafeBag,
-		// Token: 0x04004E73 RID: 20083
+		// Token: 0x04005294 RID: 21140
 		HonamiStoryFightPreparation,
-		// Token: 0x04004E74 RID: 20084
+		// Token: 0x04005295 RID: 21141
 		HonamiStoryMascot,
-		// Token: 0x04004E75 RID: 20085
+		// Token: 0x04005296 RID: 21142
 		HonamiStoryTalentTree,
-		// Token: 0x04004E76 RID: 20086
+		// Token: 0x04005297 RID: 21143
 		HonamiStoryResourceStation,
-		// Token: 0x04004E77 RID: 20087
+		// Token: 0x04005298 RID: 21144
 		HonamiStoryChooseLevel,
-		// Token: 0x04004E78 RID: 20088
+		// Token: 0x04005299 RID: 21145
 		HonamiStoryWareHouse,
-		// Token: 0x04004E79 RID: 20089
+		// Token: 0x0400529A RID: 21146
 		FindBug,
-		// Token: 0x04004E7A RID: 20090
+		// Token: 0x0400529B RID: 21147
 		InfrastructureItemDelivery,
-		// Token: 0x04004E7B RID: 20091
+		// Token: 0x0400529C RID: 21148
 		SurvivorsGameplay,
-		// Token: 0x04004E7C RID: 20092
+		// Token: 0x0400529D RID: 21149
 		PhotographFightActivity,
-		// Token: 0x04004E7D RID: 20093
+		// Token: 0x0400529E RID: 21150
 		TransitionPopup,
-		// Token: 0x04004E7E RID: 20094
+		// Token: 0x0400529F RID: 21151
 		InfrActivityFinishInfrastructure,
-		// Token: 0x04004E7F RID: 20095
+		// Token: 0x040052A0 RID: 21152
 		Enrollment,
-		// Token: 0x04004E80 RID: 20096
+		// Token: 0x040052A1 RID: 21153
 		Motorcycle,
-		// Token: 0x04004E81 RID: 20097
+		// Token: 0x040052A2 RID: 21154
 		MotorcycleDiy,
-		// Token: 0x04004E82 RID: 20098
+		// Token: 0x040052A3 RID: 21155
 		Map,
-		// Token: 0x04004E83 RID: 20099
+		// Token: 0x040052A4 RID: 21156
 		AreaTerminalGamePlay,
-		// Token: 0x04004E84 RID: 20100
+		// Token: 0x040052A5 RID: 21157
 		GuessCardGamePlayView,
-		// Token: 0x04004E85 RID: 20101
+		// Token: 0x040052A6 RID: 21158
 		GuessJokerSelectRoleView,
-		// Token: 0x04004E86 RID: 20102
+		// Token: 0x040052A7 RID: 21159
 		ChangePhantomExhibitView,
-		// Token: 0x04004E87 RID: 20103
+		// Token: 0x040052A8 RID: 21160
 		ChangeWeaponExhibitView,
-		// Token: 0x04004E88 RID: 20104
+		// Token: 0x040052A9 RID: 21161
 		DrinksMixDrinksView,
-		// Token: 0x04004E89 RID: 20105
+		// Token: 0x040052AA RID: 21162
 		DrinksSelectRoleView,
-		// Token: 0x04004E8A RID: 20106
+		// Token: 0x040052AB RID: 21163
 		FurnitureDiyShop,
-		// Token: 0x04004E8B RID: 20107
+		// Token: 0x040052AC RID: 21164
 		TakePhoto,
-		// Token: 0x04004E8C RID: 20108
+		// Token: 0x040052AD RID: 21165
 		SpringFestivalBrochure,
-		// Token: 0x04004E8D RID: 20109
+		// Token: 0x040052AE RID: 21166
 		SpringFestivalPictureAlbum,
-		// Token: 0x04004E8E RID: 20110
+		// Token: 0x040052AF RID: 21167
 		PictureCaption,
-		// Token: 0x04004E8F RID: 20111
+		// Token: 0x040052B0 RID: 21168
 		Coop,
-		// Token: 0x04004E90 RID: 20112
+		// Token: 0x040052B1 RID: 21169
 		RhythmSpaceshipInMainStory,
-		// Token: 0x04004E91 RID: 20113
+		// Token: 0x040052B2 RID: 21170
 		DropCatchInMainStory,
-		// Token: 0x04004E92 RID: 20114
+		// Token: 0x040052B3 RID: 21171
 		TetrisBoardGameEndlessLevel,
-		// Token: 0x04004E93 RID: 20115
+		// Token: 0x040052B4 RID: 21172
 		VillageInfrMainView,
-		// Token: 0x04004E94 RID: 20116
+		// Token: 0x040052B5 RID: 21173
 		VillageInfrDelivery,
-		// Token: 0x04004E95 RID: 20117
+		// Token: 0x040052B6 RID: 21174
 		VillageInfrFinishConstruction,
-		// Token: 0x04004E96 RID: 20118
+		// Token: 0x040052B7 RID: 21175
 		InteractiveComic,
-		// Token: 0x04004E97 RID: 20119
+		// Token: 0x040052B8 RID: 21176
 		CyberpunkCollaborationVehicleShare,
-		// Token: 0x04004E98 RID: 20120
+		// Token: 0x040052B9 RID: 21177
 		CyberpunkCollaborationVehicleShareInProgress,
-		// Token: 0x04004E99 RID: 20121
+		// Token: 0x040052BA RID: 21178
 		QuestBranch,
-		// Token: 0x04004E9A RID: 20122
+		// Token: 0x040052BB RID: 21179
 		QuestBranchTips,
-		// Token: 0x04004E9B RID: 20123
+		// Token: 0x040052BC RID: 21180
 		SheriffCriminalIdentityConfirmed,
-		// Token: 0x04004E9C RID: 20124
+		// Token: 0x040052BD RID: 21181
 		SheriffAnomaly,
-		// Token: 0x04004E9D RID: 20125
+		// Token: 0x040052BE RID: 21182
 		SheriffMainStoryError,
-		// Token: 0x04004E9E RID: 20126
+		// Token: 0x040052BF RID: 21183
 		DollGrabDelivery,
-		// Token: 0x04004E9F RID: 20127
+		// Token: 0x040052C0 RID: 21184
 		WriteLetter,
-		// Token: 0x04004EA0 RID: 20128
+		// Token: 0x040052C1 RID: 21185
 		MechascoutMindSpaceDungeon,
-		// Token: 0x04004EA1 RID: 20129
+		// Token: 0x040052C2 RID: 21186
 		RoverRogueTrophy,
-		// Token: 0x04004EA2 RID: 20130
+		// Token: 0x040052C3 RID: 21187
 		FoxFailureTips,
-		// Token: 0x04004EA3 RID: 20131
+		// Token: 0x040052C4 RID: 21188
 		GiantDelivery,
-		// Token: 0x04004EA4 RID: 20132
+		// Token: 0x040052C5 RID: 21189
 		DangoBrawlVictorySettlement,
-		// Token: 0x04004EA5 RID: 20133
+		// Token: 0x040052C6 RID: 21190
 		DangoBrawlFailureSettlement,
-		// Token: 0x04004EA6 RID: 20134
+		// Token: 0x040052C7 RID: 21191
 		InformationViewPopup,
-		// Token: 0x04004EA7 RID: 20135
-		DeliverItemProbeCollectibles
+		// Token: 0x040052C8 RID: 21192
+		DeliverItemProbeCollectibles,
+		// Token: 0x040052C9 RID: 21193
+		HandBookPage,
+		// Token: 0x040052CA RID: 21194
+		HandBookTips,
+		// Token: 0x040052CB RID: 21195
+		DiceNpcBattlePreparation,
+		// Token: 0x040052CC RID: 21196
+		DiceBattle
 	}
 }

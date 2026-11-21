@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002167 RID: 8551
+	// Token: 0x020023C8 RID: 9160
 	public class RestoreAiBehaviorTree_SetValue
 	{
-		// Token: 0x04007064 RID: 28772
-		[Nullable(1)]
+		// Token: 0x04007699 RID: 30361
 		public string Key;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FAB RID: 4011
+	// Token: 0x02001093 RID: 4243
 	public struct RegressDisposableReward : IFlatbufferObject
 	{
-		// Token: 0x17002D90 RID: 11664
-		// (get) Token: 0x0600BAC9 RID: 47817 RVA: 0x002DB7F1 File Offset: 0x002D99F1
+		// Token: 0x17002E0B RID: 11787
+		// (get) Token: 0x0600C113 RID: 49427 RVA: 0x002F7F81 File Offset: 0x002F6181
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BACA RID: 47818 RVA: 0x002DB7FE File Offset: 0x002D99FE
+		// Token: 0x0600C114 RID: 49428 RVA: 0x002F7F8E File Offset: 0x002F618E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BACB RID: 47819 RVA: 0x002DB808 File Offset: 0x002D9A08
+		// Token: 0x0600C115 RID: 49429 RVA: 0x002F7F98 File Offset: 0x002F6198
 		public static RegressDisposableReward GetRootAsRegressDisposableReward(ByteBuffer _bb)
 		{
 			return RegressDisposableReward.GetRootAsRegressDisposableReward(_bb, default(RegressDisposableReward));
 		}
 
-		// Token: 0x0600BACC RID: 47820 RVA: 0x002DB824 File Offset: 0x002D9A24
+		// Token: 0x0600C116 RID: 49430 RVA: 0x002F7FB4 File Offset: 0x002F61B4
 		public static RegressDisposableReward GetRootAsRegressDisposableReward(ByteBuffer _bb, RegressDisposableReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BACD RID: 47821 RVA: 0x002DB841 File Offset: 0x002D9A41
+		// Token: 0x0600C117 RID: 49431 RVA: 0x002F7FD1 File Offset: 0x002F61D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BACE RID: 47822 RVA: 0x002DB850 File Offset: 0x002D9A50
+		// Token: 0x0600C118 RID: 49432 RVA: 0x002F7FE0 File Offset: 0x002F61E0
 		public RegressDisposableReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002D91 RID: 11665
-		// (get) Token: 0x0600BACF RID: 47823 RVA: 0x002DB860 File Offset: 0x002D9A60
+		// Token: 0x17002E0C RID: 11788
+		// (get) Token: 0x0600C119 RID: 49433 RVA: 0x002F7FF0 File Offset: 0x002F61F0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002D92 RID: 11666
-		// (get) Token: 0x0600BAD0 RID: 47824 RVA: 0x002DB89C File Offset: 0x002D9A9C
+		// Token: 0x17002E0D RID: 11789
+		// (get) Token: 0x0600C11A RID: 49434 RVA: 0x002F802C File Offset: 0x002F622C
 		public int DropId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002D93 RID: 11667
-		// (get) Token: 0x0600BAD1 RID: 47825 RVA: 0x002DB8D8 File Offset: 0x002D9AD8
+		// Token: 0x17002E0E RID: 11790
+		// (get) Token: 0x0600C11B RID: 49435 RVA: 0x002F8068 File Offset: 0x002F6268
 		public int HighDropId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002D94 RID: 11668
-		// (get) Token: 0x0600BAD2 RID: 47826 RVA: 0x002DB914 File Offset: 0x002D9B14
+		// Token: 0x17002E0F RID: 11791
+		// (get) Token: 0x0600C11C RID: 49436 RVA: 0x002F80A4 File Offset: 0x002F62A4
 		public int BuyLvConsumeItem
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002D95 RID: 11669
-		// (get) Token: 0x0600BAD3 RID: 47827 RVA: 0x002DB954 File Offset: 0x002D9B54
+		// Token: 0x17002E10 RID: 11792
+		// (get) Token: 0x0600C11D RID: 49437 RVA: 0x002F80E4 File Offset: 0x002F62E4
 		public int BuyLvConsumeNum
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002D96 RID: 11670
-		// (get) Token: 0x0600BAD4 RID: 47828 RVA: 0x002DB994 File Offset: 0x002D9B94
+		// Token: 0x17002E11 RID: 11793
+		// (get) Token: 0x0600C11E RID: 49438 RVA: 0x002F8124 File Offset: 0x002F6324
 		public int HighRewardPreviewId
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002D97 RID: 11671
-		// (get) Token: 0x0600BAD5 RID: 47829 RVA: 0x002DB9D4 File Offset: 0x002D9BD4
+		// Token: 0x17002E12 RID: 11794
+		// (get) Token: 0x0600C11F RID: 49439 RVA: 0x002F8164 File Offset: 0x002F6364
 		public int ShowRecommendActivityGroup
 		{
 			get
@@ -152,7 +152,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005084 RID: 20612
+		// Token: 0x0400566C RID: 22124
 		private Table __p;
 	}
 }

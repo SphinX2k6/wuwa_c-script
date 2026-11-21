@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 {
-	// Token: 0x020000AA RID: 170
+	// Token: 0x020000AD RID: 173
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VideoResourceDiffUpdater : ResourceDiffUpdater
 	{
-		// Token: 0x060005D9 RID: 1497 RVA: 0x00033AF8 File Offset: 0x00031CF8
+		// Token: 0x060005F1 RID: 1521 RVA: 0x00035188 File Offset: 0x00033388
 		public VideoResourceDiffUpdater(string name, int priority, EVideoResSizeType videoResType) : base(name, priority, new List<ResPackageInfo>())
 		{
 			this.VideoResType = videoResType;
 		}
 
-		// Token: 0x060005DA RID: 1498 RVA: 0x00033B2C File Offset: 0x00031D2C
+		// Token: 0x060005F2 RID: 1522 RVA: 0x000351BC File Offset: 0x000333BC
 		public void SetDownloadVideos(List<int> videoIds, int gender)
 		{
 			this.VideoIds = videoIds;
@@ -56,7 +56,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			};
 		}
 
-		// Token: 0x060005DB RID: 1499 RVA: 0x00033C6C File Offset: 0x00031E6C
+		// Token: 0x060005F3 RID: 1523 RVA: 0x000352FC File Offset: 0x000334FC
 		public override UniTask UpdateResourceProcedure()
 		{
 			VideoResourceDiffUpdater.<UpdateResourceProcedure>d__6 <UpdateResourceProcedure>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <UpdateResourceProcedure>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005DC RID: 1500 RVA: 0x00033CB0 File Offset: 0x00031EB0
+		// Token: 0x060005F4 RID: 1524 RVA: 0x00035340 File Offset: 0x00033540
 		protected override UniTask AnalysisManifests()
 		{
 			VideoResourceDiffUpdater.<AnalysisManifests>d__7 <AnalysisManifests>d__;
@@ -78,16 +78,16 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <AnalysisManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040003A3 RID: 931
+		// Token: 0x040003D1 RID: 977
 		public List<int> VideoIds = new List<int>();
 
-		// Token: 0x040003A4 RID: 932
+		// Token: 0x040003D2 RID: 978
 		public int Gender = -1;
 
-		// Token: 0x040003A5 RID: 933
+		// Token: 0x040003D3 RID: 979
 		public readonly EVideoResSizeType VideoResType;
 
-		// Token: 0x040003A6 RID: 934
+		// Token: 0x040003D4 RID: 980
 		private List<string> VideoPacks = new List<string>();
 	}
 }

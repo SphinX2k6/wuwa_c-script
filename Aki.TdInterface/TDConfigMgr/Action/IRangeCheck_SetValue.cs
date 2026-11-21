@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D89 RID: 7561
+	// Token: 0x02001F9A RID: 8090
 	public class IRangeCheck_SetValue
 	{
-		// Token: 0x04006167 RID: 24935
+		// Token: 0x040066E3 RID: 26339
 		public ERangeCheckType Type;
 	}
 }

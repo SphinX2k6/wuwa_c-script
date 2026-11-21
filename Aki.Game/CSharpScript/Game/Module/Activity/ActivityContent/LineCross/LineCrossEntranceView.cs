@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x02006563 RID: 25955
+	// Token: 0x020054E1 RID: 21729
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LineCrossEntranceView : UiViewBase
 	{
-		// Token: 0x060410B5 RID: 266421 RVA: 0x00FC3991 File Offset: 0x00FC1B91
+		// Token: 0x06035D7A RID: 220538 RVA: 0x00F0A975 File Offset: 0x00F08B75
 		public LineCrossEntranceView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060410B6 RID: 266422 RVA: 0x00FC399C File Offset: 0x00FC1B9C
+		// Token: 0x06035D7B RID: 220539 RVA: 0x00F0A980 File Offset: 0x00F08B80
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060410B7 RID: 266423 RVA: 0x00FC3A28 File Offset: 0x00FC1C28
+		// Token: 0x06035D7C RID: 220540 RVA: 0x00F0AA0C File Offset: 0x00F08C0C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LineCrossEntranceView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -48,31 +48,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060410B8 RID: 266424 RVA: 0x00FC3A6B File Offset: 0x00FC1C6B
+		// Token: 0x06035D7D RID: 220541 RVA: 0x00F0AA4F File Offset: 0x00F08C4F
 		private LineCrossItem CreateItem()
 		{
 			return new LineCrossItem();
 		}
 
-		// Token: 0x060410B9 RID: 266425 RVA: 0x00FC3A72 File Offset: 0x00FC1C72
+		// Token: 0x06035D7E RID: 220542 RVA: 0x00F0AA56 File Offset: 0x00F08C56
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060410BA RID: 266426 RVA: 0x00FC3A7B File Offset: 0x00FC1C7B
+		// Token: 0x06035D7F RID: 220543 RVA: 0x00F0AA5F File Offset: 0x00F08C5F
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x060410BB RID: 266427 RVA: 0x00FC3A83 File Offset: 0x00FC1C83
+		// Token: 0x06035D80 RID: 220544 RVA: 0x00F0AA67 File Offset: 0x00F08C67
 		private void RefreshView()
 		{
 			this.RefreshScroller();
 		}
 
-		// Token: 0x060410BC RID: 266428 RVA: 0x00FC3A8C File Offset: 0x00FC1C8C
+		// Token: 0x06035D81 RID: 220545 RVA: 0x00F0AA70 File Offset: 0x00F08C70
 		private UniTask RefreshScroller()
 		{
 			LineCrossEntranceView.<RefreshScroller>d__10 <RefreshScroller>d__;
@@ -83,13 +83,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return <RefreshScroller>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060410BD RID: 266429 RVA: 0x00FC3ACF File Offset: 0x00FC1CCF
+		// Token: 0x06035D82 RID: 220546 RVA: 0x00F0AAB3 File Offset: 0x00F08CB3
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.LineCrossActivityData.Id);
 		}
 
-		// Token: 0x060410BE RID: 266430 RVA: 0x00FC3AEC File Offset: 0x00FC1CEC
+		// Token: 0x06035D83 RID: 220547 RVA: 0x00F0AAD0 File Offset: 0x00F08CD0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -118,26 +118,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			};
 		}
 
-		// Token: 0x04021E7A RID: 138874
+		// Token: 0x0401C7AB RID: 116651
 		private LineCrossActivityData LineCrossActivityData;
 
-		// Token: 0x04021E7B RID: 138875
+		// Token: 0x0401C7AC RID: 116652
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021E7C RID: 138876
+		// Token: 0x0401C7AD RID: 116653
 		protected GenericScrollViewNew<LineCrossItem, ItemData> ScrollView;
 
-		// Token: 0x0200C759 RID: 51033
+		// Token: 0x0200B13E RID: 45374
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403C3A7 RID: 246695
+			// Token: 0x04036CF9 RID: 224505
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C3A8 RID: 246696
+			// Token: 0x04036CFA RID: 224506
 			public const int Scroller = 1;
 
-			// Token: 0x0403C3A9 RID: 246697
+			// Token: 0x04036CFB RID: 224507
 			public const int Item = 2;
 		}
 	}

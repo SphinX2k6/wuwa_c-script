@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076B4 RID: 30388
+	// Token: 0x02007EBF RID: 32447
 	public class TEnableFunctionRestrictionUnion
 	{
-		// Token: 0x1700E611 RID: 58897
-		// (get) Token: 0x0603746C RID: 226412 RVA: 0x0077D83A File Offset: 0x0077BA3A
-		// (set) Token: 0x0603746D RID: 226413 RVA: 0x0077D842 File Offset: 0x0077BA42
+		// Token: 0x1700F24D RID: 62029
+		// (get) Token: 0x0603A90F RID: 239887 RVA: 0x007E198E File Offset: 0x007DFB8E
+		// (set) Token: 0x0603A910 RID: 239888 RVA: 0x007E1996 File Offset: 0x007DFB96
 		public TEnableFunctionRestriction Type { get; set; }
 
-		// Token: 0x1700E612 RID: 58898
-		// (get) Token: 0x0603746E RID: 226414 RVA: 0x0077D84B File Offset: 0x0077BA4B
-		// (set) Token: 0x0603746F RID: 226415 RVA: 0x0077D853 File Offset: 0x0077BA53
+		// Token: 0x1700F24E RID: 62030
+		// (get) Token: 0x0603A911 RID: 239889 RVA: 0x007E199F File Offset: 0x007DFB9F
+		// (set) Token: 0x0603A912 RID: 239890 RVA: 0x007E19A7 File Offset: 0x007DFBA7
 		public object Value { get; set; }
 
-		// Token: 0x06037470 RID: 226416 RVA: 0x0077D85C File Offset: 0x0077BA5C
+		// Token: 0x0603A913 RID: 239891 RVA: 0x007E19B0 File Offset: 0x007DFBB0
 		public TEnableFunctionRestrictionUnion()
 		{
 			this.Type = TEnableFunctionRestriction.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037471 RID: 226417 RVA: 0x0077D872 File Offset: 0x0077BA72
+		// Token: 0x0603A914 RID: 239892 RVA: 0x007E19C6 File Offset: 0x007DFBC6
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037472 RID: 226418 RVA: 0x0077D884 File Offset: 0x0077BA84
+		// Token: 0x0603A915 RID: 239893 RVA: 0x007E19D8 File Offset: 0x007DFBD8
 		public IInteractiveItemsFunctionT AsIInteractiveItemsFunction()
 		{
 			return this.As<IInteractiveItemsFunctionT>();
 		}
 
-		// Token: 0x06037473 RID: 226419 RVA: 0x0077D88C File Offset: 0x0077BA8C
+		// Token: 0x0603A916 RID: 239894 RVA: 0x007E19E0 File Offset: 0x007DFBE0
 		public static TEnableFunctionRestrictionUnion FromIInteractiveItemsFunction(IInteractiveItemsFunctionT _iinteractiveitemsfunction)
 		{
 			return new TEnableFunctionRestrictionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037474 RID: 226420 RVA: 0x0077D8A1 File Offset: 0x0077BAA1
+		// Token: 0x0603A917 RID: 239895 RVA: 0x007E19F5 File Offset: 0x007DFBF5
 		public IMotorRadioUiFunctionT AsIMotorRadioUiFunction()
 		{
 			return this.As<IMotorRadioUiFunctionT>();
 		}
 
-		// Token: 0x06037475 RID: 226421 RVA: 0x0077D8A9 File Offset: 0x0077BAA9
+		// Token: 0x0603A918 RID: 239896 RVA: 0x007E19FD File Offset: 0x007DFBFD
 		public static TEnableFunctionRestrictionUnion FromIMotorRadioUiFunction(IMotorRadioUiFunctionT _imotorradiouifunction)
 		{
 			return new TEnableFunctionRestrictionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037476 RID: 226422 RVA: 0x0077D8BE File Offset: 0x0077BABE
+		// Token: 0x0603A919 RID: 239897 RVA: 0x007E1A12 File Offset: 0x007DFC12
 		public ITeleportDungeonFunctionT AsITeleportDungeonFunction()
 		{
 			return this.As<ITeleportDungeonFunctionT>();
 		}
 
-		// Token: 0x06037477 RID: 226423 RVA: 0x0077D8C6 File Offset: 0x0077BAC6
+		// Token: 0x0603A91A RID: 239898 RVA: 0x007E1A1A File Offset: 0x007DFC1A
 		public static TEnableFunctionRestrictionUnion FromITeleportDungeonFunction(ITeleportDungeonFunctionT _iteleportdungeonfunction)
 		{
 			return new TEnableFunctionRestrictionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037478 RID: 226424 RVA: 0x0077D8DC File Offset: 0x0077BADC
+		// Token: 0x0603A91B RID: 239899 RVA: 0x007E1A30 File Offset: 0x007DFC30
 		public static int Pack(FlatBufferBuilder builder, TEnableFunctionRestrictionUnion _o)
 		{
 			switch (_o.Type)

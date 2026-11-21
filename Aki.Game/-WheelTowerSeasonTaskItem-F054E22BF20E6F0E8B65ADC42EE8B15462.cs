@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x020015DB RID: 5595
+// Token: 0x02000A93 RID: 2707
 internal enum <WheelTowerSeasonTaskItem>F054E22BF20E6F0E8B65ADC42EE8B15462D10FBF1903DA99F947CD1299486C189__EWheelTowerSeasonTaskItemComponent
 {
-	// Token: 0x04004673 RID: 18035
+	// Token: 0x04004719 RID: 18201
 	TxtName,
-	// Token: 0x04004674 RID: 18036
+	// Token: 0x0400471A RID: 18202
 	TxtDesc,
-	// Token: 0x04004675 RID: 18037
+	// Token: 0x0400471B RID: 18203
 	TxtProgress,
-	// Token: 0x04004676 RID: 18038
+	// Token: 0x0400471C RID: 18204
 	SprQualityLight,
-	// Token: 0x04004677 RID: 18039
+	// Token: 0x0400471D RID: 18205
 	TexTaskQuality,
-	// Token: 0x04004678 RID: 18040
+	// Token: 0x0400471E RID: 18206
 	TexTimeTag,
-	// Token: 0x04004679 RID: 18041
+	// Token: 0x0400471F RID: 18207
 	RewardLayout,
-	// Token: 0x0400467A RID: 18042
+	// Token: 0x04004720 RID: 18208
 	RewardItem,
-	// Token: 0x0400467B RID: 18043
+	// Token: 0x04004721 RID: 18209
 	BtnGet,
-	// Token: 0x0400467C RID: 18044
+	// Token: 0x04004722 RID: 18210
 	TxtDoing,
-	// Token: 0x0400467D RID: 18045
+	// Token: 0x04004723 RID: 18211
 	FinishItem,
-	// Token: 0x0400467E RID: 18046
+	// Token: 0x04004724 RID: 18212
 	RedPointItem
 }

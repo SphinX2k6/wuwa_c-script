@@ -2,38 +2,38 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042B7 RID: 17079
+	// Token: 0x02004713 RID: 18195
 	public enum TBtNode : byte
 	{
-		// Token: 0x0400BF65 RID: 48997
+		// Token: 0x0400C972 RID: 51570
 		NONE,
-		// Token: 0x0400BF66 RID: 48998
+		// Token: 0x0400C973 RID: 51571
 		IActionBtNode,
-		// Token: 0x0400BF67 RID: 48999
+		// Token: 0x0400C974 RID: 51572
 		IActionWithResultBtNode,
-		// Token: 0x0400BF68 RID: 49000
+		// Token: 0x0400C975 RID: 51573
 		IAlwaysFalseBtNode,
-		// Token: 0x0400BF69 RID: 49001
+		// Token: 0x0400C976 RID: 51574
 		IAlwaysTrueBtNode,
-		// Token: 0x0400BF6A RID: 49002
+		// Token: 0x0400C977 RID: 51575
 		IChildQuestBtNode,
-		// Token: 0x0400BF6B RID: 49003
+		// Token: 0x0400C978 RID: 51576
 		IConditionBtNode,
-		// Token: 0x0400BF6C RID: 49004
+		// Token: 0x0400C979 RID: 51577
 		IConditionSelectorBtNode,
-		// Token: 0x0400BF6D RID: 49005
+		// Token: 0x0400C97A RID: 51578
 		IParallelSelectBtNode,
-		// Token: 0x0400BF6E RID: 49006
+		// Token: 0x0400C97B RID: 51579
 		IQuestFailedBtNode,
-		// Token: 0x0400BF6F RID: 49007
+		// Token: 0x0400C97C RID: 51580
 		IQuestSucceedBtNode,
-		// Token: 0x0400BF70 RID: 49008
+		// Token: 0x0400C97D RID: 51581
 		IRepeaterBtNode,
-		// Token: 0x0400BF71 RID: 49009
+		// Token: 0x0400C97E RID: 51582
 		ISelectBtNode,
-		// Token: 0x0400BF72 RID: 49010
+		// Token: 0x0400C97F RID: 51583
 		ISequenceBtNode,
-		// Token: 0x0400BF73 RID: 49011
+		// Token: 0x0400C980 RID: 51584
 		IStartBtNode
 	}
 }

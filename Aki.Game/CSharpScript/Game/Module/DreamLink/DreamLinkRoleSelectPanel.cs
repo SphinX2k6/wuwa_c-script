@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AAB RID: 23211
+	// Token: 0x02004A87 RID: 19079
 	public class DreamLinkRoleSelectPanel : UiPanelBase
 	{
-		// Token: 0x0603ACC7 RID: 240839 RVA: 0x00E02520 File Offset: 0x00E00720
+		// Token: 0x0602FC13 RID: 195603 RVA: 0x00D52ACC File Offset: 0x00D50CCC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603ACC8 RID: 240840 RVA: 0x00E025AC File Offset: 0x00E007AC
+		// Token: 0x0602FC14 RID: 195604 RVA: 0x00D52B58 File Offset: 0x00D50D58
 		private void RefreshHandle()
 		{
 			foreach (DreamLinkRoleItem dreamLinkRoleItem in this.RoleItemList)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ACC9 RID: 240841 RVA: 0x00E025FC File Offset: 0x00E007FC
+		// Token: 0x0602FC15 RID: 195605 RVA: 0x00D52BA8 File Offset: 0x00D50DA8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DreamLinkRoleSelectPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ACCA RID: 240842 RVA: 0x00E02640 File Offset: 0x00E00840
+		// Token: 0x0602FC16 RID: 195606 RVA: 0x00D52BEC File Offset: 0x00D50DEC
 		public void RefreshInstId(int instId)
 		{
 			foreach (DreamLinkRoleItem dreamLinkRoleItem in this.RoleItemList)
@@ -57,20 +57,20 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0401EB00 RID: 125696
+		// Token: 0x040195A7 RID: 103847
 		[Nullable(1)]
 		public List<DreamLinkRoleItem> RoleItemList = new List<DreamLinkRoleItem>();
 
-		// Token: 0x0200BCF5 RID: 48373
+		// Token: 0x0200A6FE RID: 42750
 		private class EPanelDefine
 		{
-			// Token: 0x04038FD3 RID: 233427
+			// Token: 0x0403399E RID: 211358
 			public const int RoleItem1 = 0;
 
-			// Token: 0x04038FD4 RID: 233428
+			// Token: 0x0403399F RID: 211359
 			public const int RoleItem2 = 1;
 
-			// Token: 0x04038FD5 RID: 233429
+			// Token: 0x040339A0 RID: 211360
 			public const int RoleItem3 = 2;
 		}
 	}

@@ -4,46 +4,46 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043A1 RID: 17313
+	// Token: 0x020033BF RID: 13247
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/EBaseCurveType.EBaseCurveType")]
 	public enum EBaseCurveType : byte
 	{
-		// Token: 0x04017A9E RID: 96926
+		// Token: 0x04012610 RID: 75280
 		线性,
-		// Token: 0x04017A9F RID: 96927
+		// Token: 0x04012611 RID: 75281
 		二阶_凹函数,
-		// Token: 0x04017AA0 RID: 96928
+		// Token: 0x04012612 RID: 75282
 		二阶_凸函数,
-		// Token: 0x04017AA1 RID: 96929
+		// Token: 0x04012613 RID: 75283
 		三阶_凹函数,
-		// Token: 0x04017AA2 RID: 96930
+		// Token: 0x04012614 RID: 75284
 		三阶_凸函数,
-		// Token: 0x04017AA3 RID: 96931
+		// Token: 0x04012615 RID: 75285
 		三阶_S函数,
-		// Token: 0x04017AA4 RID: 96932
+		// Token: 0x04012616 RID: 75286
 		三阶_反S函数,
-		// Token: 0x04017AA5 RID: 96933
+		// Token: 0x04012617 RID: 75287
 		幂函数_凹函数,
-		// Token: 0x04017AA6 RID: 96934
+		// Token: 0x04012618 RID: 75288
 		幂函数_凸函数,
-		// Token: 0x04017AA7 RID: 96935
+		// Token: 0x04012619 RID: 75289
 		幂函数_S函数,
-		// Token: 0x04017AA8 RID: 96936
+		// Token: 0x0401261A RID: 75290
 		幂函数_反S函数,
-		// Token: 0x04017AA9 RID: 96937
+		// Token: 0x0401261B RID: 75291
 		幂函数_抛物线,
-		// Token: 0x04017AAA RID: 96938
+		// Token: 0x0401261C RID: 75292
 		缓入缓出,
-		// Token: 0x04017AAB RID: 96939
+		// Token: 0x0401261D RID: 75293
 		缓入急出,
-		// Token: 0x04017AAC RID: 96940
+		// Token: 0x0401261E RID: 75294
 		急入缓出,
-		// Token: 0x04017AAD RID: 96941
+		// Token: 0x0401261F RID: 75295
 		急入急出,
-		// Token: 0x04017AAE RID: 96942
+		// Token: 0x04012620 RID: 75296
 		资产曲线,
-		// Token: 0x04017AAF RID: 96943
+		// Token: 0x04012621 RID: 75297
 		EBaseCurveType_MAX
 	}
 }

@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C6E RID: 7278
+	// Token: 0x02000514 RID: 1300
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnTunnelFlickSwitch : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C376 RID: 115574 RVA: 0x00299A48 File Offset: 0x00297C48
+		// Token: 0x06007972 RID: 31090 RVA: 0x000B2420 File Offset: 0x000B0620
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnTunnelFlickSwitch.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C377 RID: 115575 RVA: 0x00299A54 File Offset: 0x00297C54
+		// Token: 0x06007973 RID: 31091 RVA: 0x000B242C File Offset: 0x000B062C
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnTunnelFlickSwitch._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnTunnelFlickSwitch._FunctionPtr;
 		}
 
-		// Token: 0x0601C378 RID: 115576 RVA: 0x00299A77 File Offset: 0x00297C77
+		// Token: 0x06007974 RID: 31092 RVA: 0x000B244F File Offset: 0x000B064F
 		public FOnTunnelFlickSwitch()
 		{
 		}
 
-		// Token: 0x0601C379 RID: 115577 RVA: 0x00299A7F File Offset: 0x00297C7F
+		// Token: 0x06007975 RID: 31093 RVA: 0x000B2457 File Offset: 0x000B0657
 		[NullableContext(2)]
 		public FOnTunnelFlickSwitch(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C37A RID: 115578 RVA: 0x00299A89 File Offset: 0x00297C89
+		// Token: 0x06007976 RID: 31094 RVA: 0x000B2461 File Offset: 0x000B0661
 		public FOnTunnelFlickSwitch(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C37B RID: 115579 RVA: 0x00299A94 File Offset: 0x00297C94
+		// Token: 0x06007977 RID: 31095 RVA: 0x000B246C File Offset: 0x000B066C
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C37C RID: 115580 RVA: 0x00299AC6 File Offset: 0x00297CC6
+		// Token: 0x06007978 RID: 31096 RVA: 0x000B249E File Offset: 0x000B069E
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool> Callback)
 		{
 			if (FOnTunnelFlickSwitch.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnTunnelFlickSwitch.RegisterId);
 		}
 
-		// Token: 0x0601C37D RID: 115581 RVA: 0x00299B00 File Offset: 0x00297D00
+		// Token: 0x06007979 RID: 31097 RVA: 0x000B24D8 File Offset: 0x000B06D8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C37E RID: 115582 RVA: 0x00299B0C File Offset: 0x00297D0C
+		// Token: 0x0600797A RID: 31098 RVA: 0x000B24E4 File Offset: 0x000B06E4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool bGoLeft)
 		{
 			FOnTunnelFlickSwitch.__FOnTunnelFlickSwitch_DelegateParams* ptr = stackalloc FOnTunnelFlickSwitch.__FOnTunnelFlickSwitch_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FOnTunnelFlickSwitch.__FOnTunnelFlickSwitch_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601C37F RID: 115583 RVA: 0x00299B48 File Offset: 0x00297D48
+		// Token: 0x0600797B RID: 31099 RVA: 0x000B2520 File Offset: 0x000B0720
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FOnTunnelFlickSwitch.__FOnTunnelFlickSwitch_DelegateParams*)__Parameters)->bGoLeft);
 		}
 
-		// Token: 0x0400F2CE RID: 62158
+		// Token: 0x04003399 RID: 13209
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F2CF RID: 62159
+		// Token: 0x0400339A RID: 13210
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.OnTunnelFlickSwitch__DelegateSignature";
 
-		// Token: 0x0400F2D0 RID: 62160
+		// Token: 0x0400339B RID: 13211
 		private static int RegisterId;
 
-		// Token: 0x02003209 RID: 12809
+		// Token: 0x02000C7E RID: 3198
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FOnTunnelFlickSwitch_DelegateParams
+		private ref struct __FOnTunnelFlickSwitch_DelegateParams
 		{
-			// Token: 0x0401706C RID: 94316
+			// Token: 0x04005EE0 RID: 24288
 			[FieldOffset(0)]
 			public bool bGoLeft;
 		}
 
-		// Token: 0x0200320A RID: 12810
+		// Token: 0x02000C7F RID: 3199
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401706D RID: 94317
+			// Token: 0x04005EE1 RID: 24289
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

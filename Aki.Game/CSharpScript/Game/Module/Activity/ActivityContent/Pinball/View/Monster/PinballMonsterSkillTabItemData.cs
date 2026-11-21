@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 {
-	// Token: 0x0200632B RID: 25387
+	// Token: 0x020052A9 RID: 21161
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballMonsterSkillTabItemData : IPinballMonsterSkillTabItemData
 	{
-		// Token: 0x170092F7 RID: 37623
-		// (get) Token: 0x0603FDF0 RID: 261616 RVA: 0x00F74268 File Offset: 0x00F72468
-		// (set) Token: 0x0603FDF1 RID: 261617 RVA: 0x00F74270 File Offset: 0x00F72470
+		// Token: 0x17006659 RID: 26201
+		// (get) Token: 0x06034AB1 RID: 215729 RVA: 0x00EBB1C4 File Offset: 0x00EB93C4
+		// (set) Token: 0x06034AB2 RID: 215730 RVA: 0x00EBB1CC File Offset: 0x00EB93CC
 		public bool IsSelected { get; set; }
 
-		// Token: 0x170092F8 RID: 37624
-		// (get) Token: 0x0603FDF2 RID: 261618 RVA: 0x00F74279 File Offset: 0x00F72479
-		// (set) Token: 0x0603FDF3 RID: 261619 RVA: 0x00F74281 File Offset: 0x00F72481
+		// Token: 0x1700665A RID: 26202
+		// (get) Token: 0x06034AB3 RID: 215731 RVA: 0x00EBB1D5 File Offset: 0x00EB93D5
+		// (set) Token: 0x06034AB4 RID: 215732 RVA: 0x00EBB1DD File Offset: 0x00EB93DD
 		public string Name { get; set; }
 
-		// Token: 0x170092F9 RID: 37625
-		// (get) Token: 0x0603FDF4 RID: 261620 RVA: 0x00F7428A File Offset: 0x00F7248A
-		// (set) Token: 0x0603FDF5 RID: 261621 RVA: 0x00F74292 File Offset: 0x00F72492
+		// Token: 0x1700665B RID: 26203
+		// (get) Token: 0x06034AB5 RID: 215733 RVA: 0x00EBB1E6 File Offset: 0x00EB93E6
+		// (set) Token: 0x06034AB6 RID: 215734 RVA: 0x00EBB1EE File Offset: 0x00EB93EE
 		public Action<int> OnSelected { get; set; }
 	}
 }

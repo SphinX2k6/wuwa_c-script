@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003401 RID: 13313
+// Token: 0x02002973 RID: 10611
 public class RedDotBattleViewQuestBtn : RedDotBase
 {
-	// Token: 0x0601CCEC RID: 117996 RVA: 0x0080ADFD File Offset: 0x00808FFD
+	// Token: 0x0601A9E4 RID: 109028 RVA: 0x008313C1 File Offset: 0x0082F5C1
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnQuestRedDotStateChange, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CCED RID: 117997 RVA: 0x0080AE1B File Offset: 0x0080901B
+	// Token: 0x0601A9E5 RID: 109029 RVA: 0x008313DF File Offset: 0x0082F5DF
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnQuestRedDotStateChange, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CCEE RID: 117998 RVA: 0x0080AE3C File Offset: 0x0080903C
+	// Token: 0x0601A9E6 RID: 109030 RVA: 0x00831400 File Offset: 0x0082F600
 	protected override bool OnCheck(int uId = 0)
 	{
 		Dictionary<int, bool> allRedDotData = QuestNewModel.Instance.GetAllRedDotData();
@@ -45,7 +45,7 @@ public class RedDotBattleViewQuestBtn : RedDotBase
 		return false;
 	}
 
-	// Token: 0x0601CCEF RID: 117999 RVA: 0x0080AF34 File Offset: 0x00809134
+	// Token: 0x0601A9E7 RID: 109031 RVA: 0x008314F8 File Offset: 0x0082F6F8
 	protected override bool IsAllEventParamAsUId()
 	{
 		return false;

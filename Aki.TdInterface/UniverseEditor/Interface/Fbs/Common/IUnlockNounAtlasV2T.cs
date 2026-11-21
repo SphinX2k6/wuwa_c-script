@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E64 RID: 24164
+	// Token: 0x020064A4 RID: 25764
 	public class IUnlockNounAtlasV2T
 	{
-		// Token: 0x1700B4AE RID: 46254
-		// (get) Token: 0x06029625 RID: 169509 RVA: 0x005AC2C4 File Offset: 0x005AA4C4
-		// (set) Token: 0x06029626 RID: 169510 RVA: 0x005AC2CC File Offset: 0x005AA4CC
+		// Token: 0x1700BE17 RID: 48663
+		// (get) Token: 0x0602BCC1 RID: 179393 RVA: 0x005F516C File Offset: 0x005F336C
+		// (set) Token: 0x0602BCC2 RID: 179394 RVA: 0x005F5174 File Offset: 0x005F3374
 		public EUnlockAtlasSystemTypeV2 Type { get; set; }
 
-		// Token: 0x1700B4AF RID: 46255
-		// (get) Token: 0x06029627 RID: 169511 RVA: 0x005AC2D5 File Offset: 0x005AA4D5
-		// (set) Token: 0x06029628 RID: 169512 RVA: 0x005AC2DD File Offset: 0x005AA4DD
+		// Token: 0x1700BE18 RID: 48664
+		// (get) Token: 0x0602BCC3 RID: 179395 RVA: 0x005F517D File Offset: 0x005F337D
+		// (set) Token: 0x0602BCC4 RID: 179396 RVA: 0x005F5185 File Offset: 0x005F3385
 		public int Id { get; set; }
 
-		// Token: 0x06029629 RID: 169513 RVA: 0x005AC2E6 File Offset: 0x005AA4E6
+		// Token: 0x0602BCC5 RID: 179397 RVA: 0x005F518E File Offset: 0x005F338E
 		public IUnlockNounAtlasV2T()
 		{
 			this.Type = EUnlockAtlasSystemTypeV2.GeographicalAtlas;

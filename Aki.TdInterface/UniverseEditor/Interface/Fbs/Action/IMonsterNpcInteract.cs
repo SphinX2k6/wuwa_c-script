@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006ADF RID: 27359
+	// Token: 0x02007216 RID: 29206
 	public struct IMonsterNpcInteract : IFlatbufferObject
 	{
-		// Token: 0x1700CAF8 RID: 51960
-		// (get) Token: 0x0602FF46 RID: 196422 RVA: 0x006856B6 File Offset: 0x006838B6
+		// Token: 0x1700D5C7 RID: 54727
+		// (get) Token: 0x06032D1A RID: 208154 RVA: 0x006DCD70 File Offset: 0x006DAF70
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FF47 RID: 196423 RVA: 0x006856C3 File Offset: 0x006838C3
+		// Token: 0x06032D1B RID: 208155 RVA: 0x006DCD7D File Offset: 0x006DAF7D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FF48 RID: 196424 RVA: 0x006856CC File Offset: 0x006838CC
+		// Token: 0x06032D1C RID: 208156 RVA: 0x006DCD84 File Offset: 0x006DAF84
 		public static IMonsterNpcInteract GetRootAsIMonsterNpcInteract(ByteBuffer _bb)
 		{
 			return IMonsterNpcInteract.GetRootAsIMonsterNpcInteract(_bb, default(IMonsterNpcInteract));
 		}
 
-		// Token: 0x0602FF49 RID: 196425 RVA: 0x006856E8 File Offset: 0x006838E8
+		// Token: 0x06032D1D RID: 208157 RVA: 0x006DCDA0 File Offset: 0x006DAFA0
 		public static IMonsterNpcInteract GetRootAsIMonsterNpcInteract(ByteBuffer _bb, IMonsterNpcInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FF4A RID: 196426 RVA: 0x00685705 File Offset: 0x00683905
+		// Token: 0x06032D1E RID: 208158 RVA: 0x006DCDBD File Offset: 0x006DAFBD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FF4B RID: 196427 RVA: 0x00685714 File Offset: 0x00683914
+		// Token: 0x06032D1F RID: 208159 RVA: 0x006DCDCC File Offset: 0x006DAFCC
 		public IMonsterNpcInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CAF9 RID: 51961
-		// (get) Token: 0x0602FF4C RID: 196428 RVA: 0x00685724 File Offset: 0x00683924
+		// Token: 0x1700D5C8 RID: 54728
+		// (get) Token: 0x06032D20 RID: 208160 RVA: 0x006DCDDC File Offset: 0x006DAFDC
 		public EExecClientBattleActionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CAFA RID: 51962
-		// (get) Token: 0x0602FF4D RID: 196429 RVA: 0x00685760 File Offset: 0x00683960
+		// Token: 0x1700D5C9 RID: 54729
+		// (get) Token: 0x06032D21 RID: 208161 RVA: 0x006DCE18 File Offset: 0x006DB018
 		public int MonsterNpcEntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CAFB RID: 51963
-		// (get) Token: 0x0602FF4E RID: 196430 RVA: 0x0068579C File Offset: 0x0068399C
+		// Token: 0x1700D5CA RID: 54730
+		// (get) Token: 0x06032D22 RID: 208162 RVA: 0x006DCE54 File Offset: 0x006DB054
 		public IMonsterNpcInteractTriggerHook? Config
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FF4F RID: 196431 RVA: 0x006857F9 File Offset: 0x006839F9
+		// Token: 0x06032D23 RID: 208163 RVA: 0x006DCEB1 File Offset: 0x006DB0B1
 		public static Offset<IMonsterNpcInteract> CreateIMonsterNpcInteract(FlatBufferBuilder builder, EExecClientBattleActionType Type = EExecClientBattleActionType.SendTagEventToControlCharacter, int MonsterNpcEntityId = 0, Offset<IMonsterNpcInteractTriggerHook> ConfigOffset = default(Offset<IMonsterNpcInteractTriggerHook>))
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMonsterNpcInteract.EndIMonsterNpcInteract(builder);
 		}
 
-		// Token: 0x0602FF50 RID: 196432 RVA: 0x0068581D File Offset: 0x00683A1D
+		// Token: 0x06032D24 RID: 208164 RVA: 0x006DCED5 File Offset: 0x006DB0D5
 		public static void StartIMonsterNpcInteract(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602FF51 RID: 196433 RVA: 0x00685826 File Offset: 0x00683A26
+		// Token: 0x06032D25 RID: 208165 RVA: 0x006DCEDE File Offset: 0x006DB0DE
 		public static void AddType(FlatBufferBuilder builder, EExecClientBattleActionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602FF52 RID: 196434 RVA: 0x00685831 File Offset: 0x00683A31
+		// Token: 0x06032D26 RID: 208166 RVA: 0x006DCEE9 File Offset: 0x006DB0E9
 		public static void AddMonsterNpcEntityId(FlatBufferBuilder builder, int monsterNpcEntityId)
 		{
 			builder.AddInt(1, monsterNpcEntityId, 0);
 		}
 
-		// Token: 0x0602FF53 RID: 196435 RVA: 0x0068583C File Offset: 0x00683A3C
+		// Token: 0x06032D27 RID: 208167 RVA: 0x006DCEF4 File Offset: 0x006DB0F4
 		public static void AddConfig(FlatBufferBuilder builder, Offset<IMonsterNpcInteractTriggerHook> configOffset)
 		{
 			builder.AddOffset(2, configOffset.Value, 0);
 		}
 
-		// Token: 0x0602FF54 RID: 196436 RVA: 0x0068584C File Offset: 0x00683A4C
+		// Token: 0x06032D28 RID: 208168 RVA: 0x006DCF04 File Offset: 0x006DB104
 		public static Offset<IMonsterNpcInteract> EndIMonsterNpcInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterNpcInteract>(builder.EndTable());
 		}
 
-		// Token: 0x0602FF55 RID: 196437 RVA: 0x0068585C File Offset: 0x00683A5C
+		// Token: 0x06032D29 RID: 208169 RVA: 0x006DCF14 File Offset: 0x006DB114
 		public IMonsterNpcInteractT UnPack()
 		{
 			IMonsterNpcInteractT monsterNpcInteractT = new IMonsterNpcInteractT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return monsterNpcInteractT;
 		}
 
-		// Token: 0x0602FF56 RID: 196438 RVA: 0x00685878 File Offset: 0x00683A78
+		// Token: 0x06032D2A RID: 208170 RVA: 0x006DCF30 File Offset: 0x006DB130
 		public void UnPackTo(IMonsterNpcInteractT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.Config = ((this.Config != null) ? this.Config.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602FF57 RID: 196439 RVA: 0x006858CC File Offset: 0x00683ACC
+		// Token: 0x06032D2B RID: 208171 RVA: 0x006DCF84 File Offset: 0x006DB184
 		public static Offset<IMonsterNpcInteract> Pack(FlatBufferBuilder builder, IMonsterNpcInteractT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMonsterNpcInteract.CreateIMonsterNpcInteract(builder, _o.Type, _o.MonsterNpcEntityId, configOffset);
 		}
 
-		// Token: 0x0401132E RID: 70446
+		// Token: 0x04012241 RID: 74305
 		private Table __p;
 	}
 }

@@ -8,57 +8,57 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068AD RID: 26797
+	// Token: 0x020057FD RID: 22525
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class CyberPunkController : ActivityControllerBase
 	{
-		// Token: 0x06042DFE RID: 273918 RVA: 0x01047EF7 File Offset: 0x010460F7
+		// Token: 0x06037956 RID: 227670 RVA: 0x00F89507 File Offset: 0x00F87707
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06042DFF RID: 273919 RVA: 0x01047EF9 File Offset: 0x010460F9
+		// Token: 0x06037957 RID: 227671 RVA: 0x00F89509 File Offset: 0x00F87709
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x06042E00 RID: 273920 RVA: 0x01047EFC File Offset: 0x010460FC
+		// Token: 0x06037958 RID: 227672 RVA: 0x00F8950C File Offset: 0x00F8770C
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_ActivityGuideCyberpunk";
 		}
 
-		// Token: 0x06042E01 RID: 273921 RVA: 0x01047F03 File Offset: 0x01046103
+		// Token: 0x06037959 RID: 227673 RVA: 0x00F89513 File Offset: 0x00F87713
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new CyberPunkSubView();
 		}
 
-		// Token: 0x06042E02 RID: 273922 RVA: 0x01047F0A File Offset: 0x0104610A
+		// Token: 0x0603795A RID: 227674 RVA: 0x00F8951A File Offset: 0x00F8771A
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.CurrentActivityId = data.Id;
 			return new CyberPunkData();
 		}
 
-		// Token: 0x06042E03 RID: 273923 RVA: 0x01047F1D File Offset: 0x0104611D
+		// Token: 0x0603795B RID: 227675 RVA: 0x00F8952D File Offset: 0x00F8772D
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.EdgeRunnerUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnEdgeRunnerUpdate));
 			Net.Instance.Register(ENotifyMessageId.EdgeRunnerPreUnlockAvailableNotify, new Action<IMessage, Net.CallbackStatus>(this.OnEdgeRunnerFunctionPreUnlock));
 		}
 
-		// Token: 0x06042E04 RID: 273924 RVA: 0x01047F57 File Offset: 0x01046157
+		// Token: 0x0603795C RID: 227676 RVA: 0x00F89567 File Offset: 0x00F87767
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.EdgeRunnerUpdateNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.EdgeRunnerPreUnlockAvailableNotify);
 		}
 
-		// Token: 0x06042E05 RID: 273925 RVA: 0x01047F7C File Offset: 0x0104617C
+		// Token: 0x0603795D RID: 227677 RVA: 0x00F8958C File Offset: 0x00F8778C
 		[NullableContext(2)]
 		private void OnEdgeRunnerUpdate(IMessage msg, Net.CallbackStatus _)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			EventSystem.Instance.Emit(EEventName.OnCyberPunkTaskRefresh);
 		}
 
-		// Token: 0x06042E06 RID: 273926 RVA: 0x01047FE4 File Offset: 0x010461E4
+		// Token: 0x0603795E RID: 227678 RVA: 0x00F895F4 File Offset: 0x00F877F4
 		[NullableContext(2)]
 		private void OnEdgeRunnerFunctionPreUnlock(IMessage msg, Net.CallbackStatus _)
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			currentActivityDataStatic.AddPreUnlockedQuestIds(notify);
 		}
 
-		// Token: 0x06042E07 RID: 273927 RVA: 0x0104800C File Offset: 0x0104620C
+		// Token: 0x0603795F RID: 227679 RVA: 0x00F8961C File Offset: 0x00F8781C
 		[NullableContext(2)]
 		public CyberPunkData GetCurrentActivityDataStatic()
 		{
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return currentActivitiesByType[0] as CyberPunkData;
 		}
 
-		// Token: 0x06042E08 RID: 273928 RVA: 0x01048040 File Offset: 0x01046240
+		// Token: 0x06037960 RID: 227680 RVA: 0x00F89650 File Offset: 0x00F87850
 		[NullableContext(2)]
 		public void RequestScoreReward(int scoreId, Action callback = null)
 		{
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 				}
 				if (edgeRunnerScoreRewardResponse.ErrCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(edgeRunnerScoreRewardResponse.ErrCode, 27370, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(edgeRunnerScoreRewardResponse.ErrCode, 20097, null, true, true);
 					return;
 				}
 				CyberPunkData currentActivityDataStatic = this.GetCurrentActivityDataStatic();
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}, 0);
 		}
 
-		// Token: 0x06042E09 RID: 273929 RVA: 0x01048098 File Offset: 0x01046298
+		// Token: 0x06037961 RID: 227681 RVA: 0x00F896A8 File Offset: 0x00F878A8
 		public void RequestTaskReward(int[] taskIds, [Nullable(2)] Action callback = null)
 		{
 			EdgeRunnerTaskRewardRequest edgeRunnerTaskRewardRequest = EdgeRunnerTaskRewardRequest.Create();
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 				}
 				if (edgeRunnerTaskRewardResponse.ErrCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(edgeRunnerTaskRewardResponse.ErrCode, 22840, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(edgeRunnerTaskRewardResponse.ErrCode, 17834, null, true, true);
 					return;
 				}
 				CyberPunkData currentActivityDataStatic2 = this.GetCurrentActivityDataStatic();
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}, 0);
 		}
 
-		// Token: 0x06042E0A RID: 273930 RVA: 0x0104810C File Offset: 0x0104630C
+		// Token: 0x06037962 RID: 227682 RVA: 0x00F8971C File Offset: 0x00F8791C
 		[NullableContext(2)]
 		public void PreOpenStoryFunction(int functionId, Action callback = null)
 		{
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 				}
 				if (edgeRunnerFunctionPreUnlockResponse.ErrCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(edgeRunnerFunctionPreUnlockResponse.ErrCode, 22129, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(edgeRunnerFunctionPreUnlockResponse.ErrCode, 20110, null, true, true);
 					return;
 				}
 				Action callback2 = callback;
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}, 0);
 		}
 
-		// Token: 0x06042E0B RID: 273931 RVA: 0x01048150 File Offset: 0x01046350
+		// Token: 0x06037963 RID: 227683 RVA: 0x00F89760 File Offset: 0x00F87960
 		[NullableContext(2)]
 		public CyberPunkData GetCurrentActivityData()
 		{
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return result;
 		}
 
-		// Token: 0x06042E0C RID: 273932 RVA: 0x01048184 File Offset: 0x01046384
+		// Token: 0x06037964 RID: 227684 RVA: 0x00F89794 File Offset: 0x00F87994
 		public string GetTimeVisibleAndRemainTimeText()
 		{
 			CyberPunkData currentActivityData = this.GetCurrentActivityData();
@@ -245,8 +245,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return item2;
 		}
 
-		// Token: 0x170097C7 RID: 38855
-		// (get) Token: 0x06042E0D RID: 273933 RVA: 0x010481C4 File Offset: 0x010463C4
+		// Token: 0x17006B07 RID: 27399
+		// (get) Token: 0x06037965 RID: 227685 RVA: 0x00F897D4 File Offset: 0x00F879D4
 		public static CyberPunkController Instance
 		{
 			get
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E0E RID: 273934 RVA: 0x010481CB File Offset: 0x010463CB
+		// Token: 0x06037966 RID: 227686 RVA: 0x00F897DB File Offset: 0x00F879DB
 		public static CyberPunkController GetOrCreateInstance()
 		{
 			if (CyberPunkController._Instance == null)
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return CyberPunkController._Instance;
 		}
 
-		// Token: 0x06042E0F RID: 273935 RVA: 0x010481DF File Offset: 0x010463DF
+		// Token: 0x06037967 RID: 227687 RVA: 0x00F897EF File Offset: 0x00F879EF
 		public static bool CreateInstance()
 		{
 			if (CyberPunkController._Instance != null)
@@ -276,27 +276,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return true;
 		}
 
-		// Token: 0x06042E10 RID: 273936 RVA: 0x010481F5 File Offset: 0x010463F5
+		// Token: 0x06037968 RID: 227688 RVA: 0x00F89805 File Offset: 0x00F87A05
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06042E11 RID: 273937 RVA: 0x010481F7 File Offset: 0x010463F7
+		// Token: 0x06037969 RID: 227689 RVA: 0x00F89807 File Offset: 0x00F87A07
 		public static void ResetStaticDefaultValue()
 		{
 			CyberPunkController._Instance = null;
 		}
 
-		// Token: 0x06042E12 RID: 273938 RVA: 0x010481FF File Offset: 0x010463FF
+		// Token: 0x0603796A RID: 227690 RVA: 0x00F8980F File Offset: 0x00F87A0F
 		static CyberPunkController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CyberPunkController.CreateStaticDefaultValue), new Action(CyberPunkController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022CB7 RID: 142519
+		// Token: 0x0401D513 RID: 120083
 		public int CurrentActivityId;
 
-		// Token: 0x04022CB8 RID: 142520
+		// Token: 0x0401D514 RID: 120084
 		[Nullable(2)]
 		private static CyberPunkController _Instance;
 	}

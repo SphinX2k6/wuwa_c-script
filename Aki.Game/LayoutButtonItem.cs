@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020017EE RID: 6126
+// Token: 0x02000CA7 RID: 3239
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class LayoutButtonItem : GridProxyAbstract<ButtonItemData>
 {
-	// Token: 0x0600B339 RID: 45881 RVA: 0x00287EFC File Offset: 0x002860FC
+	// Token: 0x06008723 RID: 34595 RVA: 0x002925D0 File Offset: 0x002907D0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -37,7 +37,7 @@ public class LayoutButtonItem : GridProxyAbstract<ButtonItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B33A RID: 45882 RVA: 0x00287FC3 File Offset: 0x002861C3
+	// Token: 0x06008724 RID: 34596 RVA: 0x00292697 File Offset: 0x00290897
 	private void ButtonClick()
 	{
 		if (this.CurrentData != null)
@@ -46,7 +46,7 @@ public class LayoutButtonItem : GridProxyAbstract<ButtonItemData>
 		}
 	}
 
-	// Token: 0x0600B33B RID: 45883 RVA: 0x00287FE8 File Offset: 0x002861E8
+	// Token: 0x06008725 RID: 34597 RVA: 0x002926BC File Offset: 0x002908BC
 	public override void Refresh(ButtonItemData data, bool isSelected, int gridIndex)
 	{
 		if (this.CurrentData != null && this.CurrentData.RedDotName != null)
@@ -63,7 +63,7 @@ public class LayoutButtonItem : GridProxyAbstract<ButtonItemData>
 		text.ShowTextNew(data.ButtonText);
 	}
 
-	// Token: 0x0600B33C RID: 45884 RVA: 0x0028806D File Offset: 0x0028626D
+	// Token: 0x06008726 RID: 34598 RVA: 0x00292741 File Offset: 0x00290941
 	protected override void OnBeforeDestroy()
 	{
 		if (this.CurrentData != null && this.CurrentData.RedDotName != null)
@@ -72,7 +72,7 @@ public class LayoutButtonItem : GridProxyAbstract<ButtonItemData>
 		}
 	}
 
-	// Token: 0x0600B33D RID: 45885 RVA: 0x002880AB File Offset: 0x002862AB
+	// Token: 0x06008727 RID: 34599 RVA: 0x0029277F File Offset: 0x0029097F
 	public void SetEnableClick(bool state)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -83,7 +83,7 @@ public class LayoutButtonItem : GridProxyAbstract<ButtonItemData>
 		button.SetSelfInteractive(state);
 	}
 
-	// Token: 0x0600B33E RID: 45886 RVA: 0x002880BF File Offset: 0x002862BF
+	// Token: 0x06008728 RID: 34600 RVA: 0x00292793 File Offset: 0x00290993
 	public void SetShowText(string text)
 	{
 		UUIText text2 = base.GetText(1);
@@ -94,7 +94,7 @@ public class LayoutButtonItem : GridProxyAbstract<ButtonItemData>
 		text2.ShowTextNew(text);
 	}
 
-	// Token: 0x0600B33F RID: 45887 RVA: 0x002880D3 File Offset: 0x002862D3
+	// Token: 0x06008729 RID: 34601 RVA: 0x002927A7 File Offset: 0x002909A7
 	public void SetLocalText(string textId, [Nullable(new byte[]
 	{
 		2,
@@ -109,7 +109,7 @@ public class LayoutButtonItem : GridProxyAbstract<ButtonItemData>
 		LguiUtil.Instance.SetLocalText(base.GetText(1), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600B340 RID: 45888 RVA: 0x00288103 File Offset: 0x00286303
+	// Token: 0x0600872A RID: 34602 RVA: 0x002927D7 File Offset: 0x002909D7
 	public void SetRedDotVisible(bool bVisible)
 	{
 		UUIItem item = base.GetItem(2);
@@ -120,21 +120,21 @@ public class LayoutButtonItem : GridProxyAbstract<ButtonItemData>
 		item.SetUIActive(bVisible);
 	}
 
-	// Token: 0x04005122 RID: 20770
+	// Token: 0x040051CD RID: 20941
 	[Nullable(2)]
 	private ButtonItemData CurrentData;
 
-	// Token: 0x02007DDC RID: 32220
+	// Token: 0x02006F62 RID: 28514
 	[NullableContext(0)]
 	private class EButtonItemDefine
 	{
-		// Token: 0x0402931B RID: 168731
+		// Token: 0x04024646 RID: 149062
 		public const int Button = 0;
 
-		// Token: 0x0402931C RID: 168732
+		// Token: 0x04024647 RID: 149063
 		public const int ButtonText = 1;
 
-		// Token: 0x0402931D RID: 168733
+		// Token: 0x04024648 RID: 149064
 		public const int RedDot = 2;
 	}
 }

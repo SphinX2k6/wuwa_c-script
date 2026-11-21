@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E47 RID: 7751
+// Token: 0x02001309 RID: 4873
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponHandBookItem : UiPanelBase, IDynamicScrollItem<WeaponHandBookDynamicData>
 {
-	// Token: 0x0600EBB9 RID: 60345 RVA: 0x0037F0B4 File Offset: 0x0037D2B4
+	// Token: 0x0600BFD8 RID: 49112 RVA: 0x0038AD44 File Offset: 0x00388F44
 	public UniTask Init(UUIItem actor)
 	{
 		WeaponHandBookItem.<Init>d__4 <Init>d__;
@@ -24,7 +24,7 @@ public class WeaponHandBookItem : UiPanelBase, IDynamicScrollItem<WeaponHandBook
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EBBA RID: 60346 RVA: 0x0037F0FF File Offset: 0x0037D2FF
+	// Token: 0x0600BFD9 RID: 49113 RVA: 0x0038AD8F File Offset: 0x00388F8F
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class WeaponHandBookItem : UiPanelBase, IDynamicScrollItem<WeaponHandBook
 		};
 	}
 
-	// Token: 0x0600EBBB RID: 60347 RVA: 0x0037F138 File Offset: 0x0037D338
+	// Token: 0x0600BFDA RID: 49114 RVA: 0x0038ADC8 File Offset: 0x00388FC8
 	private UniTask InitChildItem()
 	{
 		WeaponHandBookItem.<InitChildItem>d__6 <InitChildItem>d__;
@@ -45,7 +45,7 @@ public class WeaponHandBookItem : UiPanelBase, IDynamicScrollItem<WeaponHandBook
 		return <InitChildItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EBBC RID: 60348 RVA: 0x0037F17B File Offset: 0x0037D37B
+	// Token: 0x0600BFDB RID: 49115 RVA: 0x0038AE0B File Offset: 0x0038900B
 	[return: Nullable(2)]
 	public AUIBaseActor GetUsingItem(WeaponHandBookDynamicData data)
 	{
@@ -56,13 +56,13 @@ public class WeaponHandBookItem : UiPanelBase, IDynamicScrollItem<WeaponHandBook
 		return base.GetItem(1).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x0600EBBD RID: 60349 RVA: 0x0037F1AD File Offset: 0x0037D3AD
+	// Token: 0x0600BFDC RID: 49116 RVA: 0x0038AE3D File Offset: 0x0038903D
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0600EBBE RID: 60350 RVA: 0x0037F1B8 File Offset: 0x0037D3B8
+	// Token: 0x0600BFDD RID: 49117 RVA: 0x0038AE48 File Offset: 0x00389048
 	public void Update(WeaponHandBookDynamicData data, int gridIndex)
 	{
 		WeaponHandBookTitleItem weaponHandBookTitleItem = this.WeaponHandBookTitleItem;
@@ -106,7 +106,7 @@ public class WeaponHandBookItem : UiPanelBase, IDynamicScrollItem<WeaponHandBook
 		weaponHandBookTitleItem3.Update(data.TitleId);
 	}
 
-	// Token: 0x04006D4F RID: 27983
+	// Token: 0x04006E30 RID: 28208
 	[Nullable(new byte[]
 	{
 		2,
@@ -114,22 +114,22 @@ public class WeaponHandBookItem : UiPanelBase, IDynamicScrollItem<WeaponHandBook
 	})]
 	public Action<UUIExtendToggle, int> OnClickCallBack;
 
-	// Token: 0x04006D50 RID: 27984
+	// Token: 0x04006E31 RID: 28209
 	[Nullable(2)]
 	private WeaponHandBookTitleItem WeaponHandBookTitleItem;
 
-	// Token: 0x04006D51 RID: 27985
+	// Token: 0x04006E32 RID: 28210
 	[Nullable(2)]
 	private WeaponHandBookLayoutItem WeaponHandBookLayoutItem;
 
-	// Token: 0x020083F7 RID: 33783
+	// Token: 0x0200757C RID: 30076
 	[NullableContext(0)]
 	private class EWeaponDynamicItemDefine
 	{
-		// Token: 0x0402AF56 RID: 175958
+		// Token: 0x0402627A RID: 156282
 		public const int TitleItem = 0;
 
-		// Token: 0x0402AF57 RID: 175959
+		// Token: 0x0402627B RID: 156283
 		public const int LayoutItem = 1;
 	}
 }

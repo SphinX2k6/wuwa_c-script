@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200021F RID: 543
+	// Token: 0x02000231 RID: 561
 	public class ConfigDreamLinkRoleDungeonById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000CBE RID: 3262 RVA: 0x000A1A0C File Offset: 0x0009FC0C
+		// Token: 0x06000D2A RID: 3370 RVA: 0x000A7944 File Offset: 0x000A5B44
 		static ConfigDreamLinkRoleDungeonById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDreamLinkRoleDungeonById.CreateStaticDefaultValue), new Action(ConfigDreamLinkRoleDungeonById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000CBF RID: 3263 RVA: 0x000A1A2C File Offset: 0x0009FC2C
+		// Token: 0x06000D2B RID: 3371 RVA: 0x000A7964 File Offset: 0x000A5B64
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDreamLinkRoleDungeonById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000CC0 RID: 3264 RVA: 0x000A1AAB File Offset: 0x0009FCAB
+		// Token: 0x06000D2C RID: 3372 RVA: 0x000A79E3 File Offset: 0x000A5BE3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDreamLinkRoleDungeonById.LogPair = null;
 			ConfigDreamLinkRoleDungeonById.HandleId = 0;
 		}
 
-		// Token: 0x06000CC1 RID: 3265 RVA: 0x000A1AB9 File Offset: 0x0009FCB9
+		// Token: 0x06000D2D RID: 3373 RVA: 0x000A79F1 File Offset: 0x000A5BF1
 		public static void Init()
 		{
 			ConfigDreamLinkRoleDungeonById.HandleId = ConfigCommon.InitDataStatement(ConfigDreamLinkRoleDungeonById.HandleId, "db_dreamlink.db", "select BinData from `DreamLinkRoleDungeon` where Id=?");
 		}
 
-		// Token: 0x06000CC2 RID: 3266 RVA: 0x000A1AD4 File Offset: 0x0009FCD4
+		// Token: 0x06000D2E RID: 3374 RVA: 0x000A7A0C File Offset: 0x000A5C0C
 		public static DreamLinkRoleDungeon? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDreamLinkRoleDungeonById.HandleId, ConfigDreamLinkRoleDungeonById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DreamLinkRoleDungeon?(rootAsDreamLinkRoleDungeon);
 		}
 
-		// Token: 0x04000EBD RID: 3773
+		// Token: 0x04000F3B RID: 3899
 		private const string DB = "db_dreamlink.db";
 
-		// Token: 0x04000EBE RID: 3774
+		// Token: 0x04000F3C RID: 3900
 		private const string FILE = "m.梦境链接活动.xlsx";
 
-		// Token: 0x04000EBF RID: 3775
+		// Token: 0x04000F3D RID: 3901
 		private const string TABLE = "DreamLinkRoleDungeon";
 
-		// Token: 0x04000EC0 RID: 3776
+		// Token: 0x04000F3E RID: 3902
 		private const string COMMAND = "select BinData from `DreamLinkRoleDungeon` where Id=?";
 
-		// Token: 0x04000EC1 RID: 3777
+		// Token: 0x04000F3F RID: 3903
 		private const string KEY_PREFIX = "DreamLinkRoleDungeonById";
 
-		// Token: 0x04000EC2 RID: 3778
+		// Token: 0x04000F40 RID: 3904
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000EC3 RID: 3779
+		// Token: 0x04000F41 RID: 3905
 		private static int HandleId;
 	}
 }

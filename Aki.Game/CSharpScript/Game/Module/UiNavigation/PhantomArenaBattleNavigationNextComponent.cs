@@ -6,15 +6,15 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049AB RID: 18859
+	// Token: 0x02003925 RID: 14629
 	public class PhantomArenaBattleNavigationNextComponent : NavigationGroupNextComponent
 	{
-		// Token: 0x06031182 RID: 201090 RVA: 0x00B645B6 File Offset: 0x00B627B6
+		// Token: 0x06025CB8 RID: 154808 RVA: 0x00A9F506 File Offset: 0x00A9D706
 		public PhantomArenaBattleNavigationNextComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031183 RID: 201091 RVA: 0x00B645C0 File Offset: 0x00B627C0
+		// Token: 0x06025CB9 RID: 154809 RVA: 0x00A9F510 File Offset: 0x00A9D710
 		protected override void OnInit()
 		{
 			base.OnInit();
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.Proxy = (((viewByName != null) ? viewByName.OpenParam : null) as PhantomArenaBattleDetailsViewProxy);
 		}
 
-		// Token: 0x06031184 RID: 201092 RVA: 0x00B645FA File Offset: 0x00B627FA
+		// Token: 0x06025CBA RID: 154810 RVA: 0x00A9F54A File Offset: 0x00A9D74A
 		protected override void JumpToNextGroupListener()
 		{
 			base.JumpToNextGroupListener();
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031185 RID: 201093 RVA: 0x00B64616 File Offset: 0x00B62816
+		// Token: 0x06025CBB RID: 154811 RVA: 0x00A9F566 File Offset: 0x00A9D766
 		protected override void OnRelease(HotKeyMap config)
 		{
 			base.OnRelease(config);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A4B2 RID: 107698
+		// Token: 0x04014D24 RID: 85284
 		[Nullable(2)]
 		protected PhantomArenaBattleDetailsViewProxy Proxy;
 	}

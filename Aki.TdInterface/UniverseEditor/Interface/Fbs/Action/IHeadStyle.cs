@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068CA RID: 26826
+	// Token: 0x02006F7A RID: 28538
 	public struct IHeadStyle : IFlatbufferObject
 	{
-		// Token: 0x1700C70F RID: 50959
-		// (get) Token: 0x0602EC9E RID: 191646 RVA: 0x00662AB1 File Offset: 0x00660CB1
+		// Token: 0x1700D109 RID: 53513
+		// (get) Token: 0x06031650 RID: 202320 RVA: 0x006B2BF9 File Offset: 0x006B0DF9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EC9F RID: 191647 RVA: 0x00662ABE File Offset: 0x00660CBE
+		// Token: 0x06031651 RID: 202321 RVA: 0x006B2C06 File Offset: 0x006B0E06
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602ECA0 RID: 191648 RVA: 0x00662AC8 File Offset: 0x00660CC8
+		// Token: 0x06031652 RID: 202322 RVA: 0x006B2C10 File Offset: 0x006B0E10
 		public static IHeadStyle GetRootAsIHeadStyle(ByteBuffer _bb)
 		{
 			return IHeadStyle.GetRootAsIHeadStyle(_bb, default(IHeadStyle));
 		}
 
-		// Token: 0x0602ECA1 RID: 191649 RVA: 0x00662AE4 File Offset: 0x00660CE4
+		// Token: 0x06031653 RID: 202323 RVA: 0x006B2C2C File Offset: 0x006B0E2C
 		public static IHeadStyle GetRootAsIHeadStyle(ByteBuffer _bb, IHeadStyle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602ECA2 RID: 191650 RVA: 0x00662B01 File Offset: 0x00660D01
+		// Token: 0x06031654 RID: 202324 RVA: 0x006B2C49 File Offset: 0x006B0E49
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602ECA3 RID: 191651 RVA: 0x00662B10 File Offset: 0x00660D10
+		// Token: 0x06031655 RID: 202325 RVA: 0x006B2C58 File Offset: 0x006B0E58
 		public IHeadStyle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C710 RID: 50960
-		// (get) Token: 0x0602ECA4 RID: 191652 RVA: 0x00662B20 File Offset: 0x00660D20
+		// Token: 0x1700D10A RID: 53514
+		// (get) Token: 0x06031656 RID: 202326 RVA: 0x006B2C68 File Offset: 0x006B0E68
 		public EHeadStyle Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602ECA5 RID: 191653 RVA: 0x00662B5C File Offset: 0x00660D5C
+		// Token: 0x06031657 RID: 202327 RVA: 0x006B2CA4 File Offset: 0x006B0EA4
 		public static Offset<IHeadStyle> CreateIHeadStyle(FlatBufferBuilder builder, EHeadStyle Type = EHeadStyle.Normal)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHeadStyle.EndIHeadStyle(builder);
 		}
 
-		// Token: 0x0602ECA6 RID: 191654 RVA: 0x00662B72 File Offset: 0x00660D72
+		// Token: 0x06031658 RID: 202328 RVA: 0x006B2CBA File Offset: 0x006B0EBA
 		public static void StartIHeadStyle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602ECA7 RID: 191655 RVA: 0x00662B7B File Offset: 0x00660D7B
+		// Token: 0x06031659 RID: 202329 RVA: 0x006B2CC3 File Offset: 0x006B0EC3
 		public static void AddType(FlatBufferBuilder builder, EHeadStyle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602ECA8 RID: 191656 RVA: 0x00662B86 File Offset: 0x00660D86
+		// Token: 0x0603165A RID: 202330 RVA: 0x006B2CCE File Offset: 0x006B0ECE
 		public static Offset<IHeadStyle> EndIHeadStyle(FlatBufferBuilder builder)
 		{
 			return new Offset<IHeadStyle>(builder.EndTable());
 		}
 
-		// Token: 0x0602ECA9 RID: 191657 RVA: 0x00662B94 File Offset: 0x00660D94
+		// Token: 0x0603165B RID: 202331 RVA: 0x006B2CDC File Offset: 0x006B0EDC
 		public IHeadStyleT UnPack()
 		{
 			IHeadStyleT headStyleT = new IHeadStyleT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return headStyleT;
 		}
 
-		// Token: 0x0602ECAA RID: 191658 RVA: 0x00662BAF File Offset: 0x00660DAF
+		// Token: 0x0603165C RID: 202332 RVA: 0x006B2CF7 File Offset: 0x006B0EF7
 		public void UnPackTo(IHeadStyleT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602ECAB RID: 191659 RVA: 0x00662BC0 File Offset: 0x00660DC0
+		// Token: 0x0603165D RID: 202333 RVA: 0x006B2D08 File Offset: 0x006B0F08
 		public static Offset<IHeadStyle> Pack(FlatBufferBuilder builder, IHeadStyleT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHeadStyle.CreateIHeadStyle(builder, _o.Type);
 		}
 
-		// Token: 0x04011027 RID: 69671
+		// Token: 0x04011E8E RID: 73358
 		private Table __p;
 	}
 }

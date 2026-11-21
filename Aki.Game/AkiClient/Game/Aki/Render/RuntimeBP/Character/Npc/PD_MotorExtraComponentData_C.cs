@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using AkiClient.Game.Aki.Character.Vehicle.Motor.Diy.HeadLight.Common.Lensflare;
-using AkiClient.Game.Aki.Character.Vehicle.Motor.Diy.HeadLight.Common.VolumetricConeLight;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using UnrealEngine;
 using UnrealEngine.Interface;
@@ -10,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 {
-	// Token: 0x02003E00 RID: 15872
+	// Token: 0x0200311E RID: 12574
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/Npc/PD_MotorExtraComponentData.PD_MotorExtraComponentData_C")]
 	[UnrealStructLayout(352, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 344)]
 	public class PD_MotorExtraComponentData_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06027A6B RID: 162411 RVA: 0x00997860 File Offset: 0x00995A60
+		// Token: 0x0601ED20 RID: 126240 RVA: 0x0091E85F File Offset: 0x0091CA5F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (PD_MotorExtraComponentData_C._ClassPtr == IntPtr.Zero)
@@ -27,80 +25,80 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			return PD_MotorExtraComponentData_C._ClassPtr;
 		}
 
-		// Token: 0x06027A6C RID: 162412 RVA: 0x00997884 File Offset: 0x00995A84
+		// Token: 0x0601ED21 RID: 126241 RVA: 0x0091E884 File Offset: 0x0091CA84
 		public PD_MotorExtraComponentData_C() : this(BuiltinUtils.AllocNativeUObject(PD_MotorExtraComponentData_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06027A6D RID: 162413 RVA: 0x009978AC File Offset: 0x00995AAC
+		// Token: 0x0601ED22 RID: 126242 RVA: 0x0091E8AC File Offset: 0x0091CAAC
 		[NullableContext(1)]
 		public PD_MotorExtraComponentData_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(PD_MotorExtraComponentData_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005932 RID: 22834
-		// (get) Token: 0x06027A6E RID: 162414 RVA: 0x009978DF File Offset: 0x00995ADF
-		// (set) Token: 0x06027A6F RID: 162415 RVA: 0x009978F3 File Offset: 0x00995AF3
+		// Token: 0x170035B4 RID: 13748
+		// (get) Token: 0x0601ED23 RID: 126243 RVA: 0x0091E8DF File Offset: 0x0091CADF
+		// (set) Token: 0x0601ED24 RID: 126244 RVA: 0x0091E8F3 File Offset: 0x0091CAF3
 		public unsafe USkeletalMesh MotorMesh
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMesh>(base.NativePtr / (IntPtr)sizeof(void*) + PD_MotorExtraComponentData_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMesh>(base.NativePtr / (IntPtr)sizeof(void*) + PD_MotorExtraComponentData_C.__PropertyOffset_MotorMesh);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_MotorExtraComponentData_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_MotorExtraComponentData_C.__PropertyOffset_MotorMesh, value);
 			}
 		}
 
-		// Token: 0x17005933 RID: 22835
-		// (get) Token: 0x06027A70 RID: 162416 RVA: 0x00997908 File Offset: 0x00995B08
-		// (set) Token: 0x06027A71 RID: 162417 RVA: 0x0099791C File Offset: 0x00995B1C
+		// Token: 0x170035B5 RID: 13749
+		// (get) Token: 0x0601ED25 RID: 126245 RVA: 0x0091E908 File Offset: 0x0091CB08
+		// (set) Token: 0x0601ED26 RID: 126246 RVA: 0x0091E91C File Offset: 0x0091CB1C
 		public unsafe FName AO贴花插槽名
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_AO贴花插槽名);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_AO贴花插槽名) = value;
 			}
 		}
 
-		// Token: 0x17005934 RID: 22836
-		// (get) Token: 0x06027A72 RID: 162418 RVA: 0x00997931 File Offset: 0x00995B31
-		// (set) Token: 0x06027A73 RID: 162419 RVA: 0x00997945 File Offset: 0x00995B45
+		// Token: 0x170035B6 RID: 13750
+		// (get) Token: 0x0601ED27 RID: 126247 RVA: 0x0091E931 File Offset: 0x0091CB31
+		// (set) Token: 0x0601ED28 RID: 126248 RVA: 0x0091E945 File Offset: 0x0091CB45
 		public unsafe FTransform AO贴花位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_AO贴花位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_AO贴花位置) = value;
 			}
 		}
 
-		// Token: 0x17005935 RID: 22837
-		// (get) Token: 0x06027A74 RID: 162420 RVA: 0x0099795A File Offset: 0x00995B5A
-		// (set) Token: 0x06027A75 RID: 162421 RVA: 0x0099796E File Offset: 0x00995B6E
+		// Token: 0x170035B7 RID: 13751
+		// (get) Token: 0x0601ED29 RID: 126249 RVA: 0x0091E95A File Offset: 0x0091CB5A
+		// (set) Token: 0x0601ED2A RID: 126250 RVA: 0x0091E96E File Offset: 0x0091CB6E
 		public unsafe UMaterialInstance AO_Decal_Mat
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstance>(base.NativePtr / (IntPtr)sizeof(void*) + PD_MotorExtraComponentData_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstance>(base.NativePtr / (IntPtr)sizeof(void*) + PD_MotorExtraComponentData_C.__PropertyOffset_AO_Decal_Mat);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_MotorExtraComponentData_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_MotorExtraComponentData_C.__PropertyOffset_AO_Decal_Mat, value);
 			}
 		}
 
-		// Token: 0x17005936 RID: 22838
-		// (get) Token: 0x06027A76 RID: 162422 RVA: 0x00997984 File Offset: 0x00995B84
-		// (set) Token: 0x06027A77 RID: 162423 RVA: 0x009979BD File Offset: 0x00995BBD
+		// Token: 0x170035B8 RID: 13752
+		// (get) Token: 0x0601ED2B RID: 126251 RVA: 0x0091E984 File Offset: 0x0091CB84
+		// (set) Token: 0x0601ED2C RID: 126252 RVA: 0x0091E9BD File Offset: 0x0091CBBD
 		[Nullable(1)]
 		public TArray<PD_CharacterControllerData_C> FX_DA
 		{
@@ -111,7 +109,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 				TArray<PD_CharacterControllerData_C> result;
 				if ((result = this._FX_DA) == null)
 				{
-					result = (this._FX_DA = new TArray<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_4, this));
+					result = (this._FX_DA = new TArray<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_FX_DA, this));
 				}
 				return result;
 			}
@@ -122,157 +120,97 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			}
 		}
 
-		// Token: 0x17005937 RID: 22839
-		// (get) Token: 0x06027A78 RID: 162424 RVA: 0x009979CB File Offset: 0x00995BCB
-		// (set) Token: 0x06027A79 RID: 162425 RVA: 0x009979DF File Offset: 0x00995BDF
+		// Token: 0x170035B9 RID: 13753
+		// (get) Token: 0x0601ED2D RID: 126253 RVA: 0x0091E9CB File Offset: 0x0091CBCB
+		// (set) Token: 0x0601ED2E RID: 126254 RVA: 0x0091E9DF File Offset: 0x0091CBDF
 		public unsafe FName 车灯插槽名
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_车灯插槽名);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_车灯插槽名) = value;
 			}
 		}
 
-		// Token: 0x17005938 RID: 22840
-		// (get) Token: 0x06027A7A RID: 162426 RVA: 0x009979F4 File Offset: 0x00995BF4
-		// (set) Token: 0x06027A7B RID: 162427 RVA: 0x00997A08 File Offset: 0x00995C08
+		// Token: 0x170035BA RID: 13754
+		// (get) Token: 0x0601ED2F RID: 126255 RVA: 0x0091E9F4 File Offset: 0x0091CBF4
+		// (set) Token: 0x0601ED30 RID: 126256 RVA: 0x0091EA08 File Offset: 0x0091CC08
 		public unsafe FTransform 车灯位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_车灯位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_车灯位置) = value;
 			}
 		}
 
-		// Token: 0x17005939 RID: 22841
-		// (get) Token: 0x06027A7C RID: 162428 RVA: 0x00997A1D File Offset: 0x00995C1D
-		// (set) Token: 0x06027A7D RID: 162429 RVA: 0x00997A31 File Offset: 0x00995C31
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<BP_VolumetricConeLightShaft_InMotor_C> 车灯蓝图
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_7);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_7) = value;
-			}
-		}
-
-		// Token: 0x1700593A RID: 22842
-		// (get) Token: 0x06027A7E RID: 162430 RVA: 0x00997A46 File Offset: 0x00995C46
-		// (set) Token: 0x06027A7F RID: 162431 RVA: 0x00997A5A File Offset: 0x00995C5A
+		// Token: 0x170035BB RID: 13755
+		// (get) Token: 0x0601ED31 RID: 126257 RVA: 0x0091EA1D File Offset: 0x0091CC1D
+		// (set) Token: 0x0601ED32 RID: 126258 RVA: 0x0091EA31 File Offset: 0x0091CC31
 		public unsafe FName 炫光插槽名
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_炫光插槽名);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_炫光插槽名) = value;
 			}
 		}
 
-		// Token: 0x1700593B RID: 22843
-		// (get) Token: 0x06027A80 RID: 162432 RVA: 0x00997A6F File Offset: 0x00995C6F
-		// (set) Token: 0x06027A81 RID: 162433 RVA: 0x00997A83 File Offset: 0x00995C83
+		// Token: 0x170035BC RID: 13756
+		// (get) Token: 0x0601ED33 RID: 126259 RVA: 0x0091EA46 File Offset: 0x0091CC46
+		// (set) Token: 0x0601ED34 RID: 126260 RVA: 0x0091EA5A File Offset: 0x0091CC5A
 		public unsafe FTransform 炫光位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_炫光位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_炫光位置) = value;
 			}
 		}
 
-		// Token: 0x1700593C RID: 22844
-		// (get) Token: 0x06027A82 RID: 162434 RVA: 0x00997A98 File Offset: 0x00995C98
-		// (set) Token: 0x06027A83 RID: 162435 RVA: 0x00997AAC File Offset: 0x00995CAC
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<BP_SceneLensflare_Motor_C> 炫光蓝图
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_10);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)PD_MotorExtraComponentData_C.__PropertyOffset_10) = value;
-			}
-		}
-
-		// Token: 0x06027A84 RID: 162436 RVA: 0x00997AC1 File Offset: 0x00995CC1
+		// Token: 0x0601ED35 RID: 126261 RVA: 0x0091EA6F File Offset: 0x0091CC6F
 		protected PD_MotorExtraComponentData_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401410D RID: 82189
+		// Token: 0x0401061A RID: 67098
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Character/Npc/PD_MotorExtraComponentData.PD_MotorExtraComponentData_C";
 
-		// Token: 0x0401410E RID: 82190
+		// Token: 0x0401061B RID: 67099
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401410F RID: 82191
+		// Token: 0x0401061C RID: 67100
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014110 RID: 82192
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401061D RID: 67101
+		internal static int __PropertyOffset_MotorMesh;
 
-		// Token: 0x04014111 RID: 82193
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401061E RID: 67102
+		internal static int __PropertyOffset_AO贴花插槽名;
 
-		// Token: 0x04014112 RID: 82194
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401061F RID: 67103
+		internal static int __PropertyOffset_AO贴花位置;
 
-		// Token: 0x04014113 RID: 82195
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010620 RID: 67104
+		internal static int __PropertyOffset_AO_Decal_Mat;
 
-		// Token: 0x04014114 RID: 82196
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010621 RID: 67105
+		internal static int __PropertyOffset_FX_DA;
 
-		// Token: 0x04014115 RID: 82197
+		// Token: 0x04010622 RID: 67106
 		[Nullable(new byte[]
 		{
 			2,
@@ -280,22 +218,16 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 		})]
 		private TArray<PD_CharacterControllerData_C> _FX_DA;
 
-		// Token: 0x04014116 RID: 82198
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010623 RID: 67107
+		internal static int __PropertyOffset_车灯插槽名;
 
-		// Token: 0x04014117 RID: 82199
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010624 RID: 67108
+		internal static int __PropertyOffset_车灯位置;
 
-		// Token: 0x04014118 RID: 82200
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010625 RID: 67109
+		internal static int __PropertyOffset_炫光插槽名;
 
-		// Token: 0x04014119 RID: 82201
-		internal static int __PropertyOffset_8;
-
-		// Token: 0x0401411A RID: 82202
-		internal static int __PropertyOffset_9;
-
-		// Token: 0x0401411B RID: 82203
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010626 RID: 67110
+		internal static int __PropertyOffset_炫光位置;
 	}
 }

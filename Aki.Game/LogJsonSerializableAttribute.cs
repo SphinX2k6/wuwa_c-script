@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200355E RID: 13662
+// Token: 0x02002AD3 RID: 10963
 [AttributeUsage(AttributeTargets.Class)]
 internal sealed class LogJsonSerializableAttribute : Attribute
 {

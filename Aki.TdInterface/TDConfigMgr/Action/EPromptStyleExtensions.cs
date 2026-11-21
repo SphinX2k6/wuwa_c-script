@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023E1 RID: 9185
+	// Token: 0x02002678 RID: 9848
 	public static class EPromptStyleExtensions
 	{
-		// Token: 0x0600C7F3 RID: 51187 RVA: 0x001D44E8 File Offset: 0x001D26E8
+		// Token: 0x0600D476 RID: 54390 RVA: 0x001EDC94 File Offset: 0x001EBE94
 		public static string ToEnumString(this EPromptStyle value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7F4 RID: 51188 RVA: 0x001D453C File Offset: 0x001D273C
+		// Token: 0x0600D477 RID: 54391 RVA: 0x001EDCE8 File Offset: 0x001EBEE8
 		public static EPromptStyle FromString(string name)
 		{
 			EPromptStyle result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7F5 RID: 51189 RVA: 0x001D4568 File Offset: 0x001D2768
+		// Token: 0x0600D478 RID: 54392 RVA: 0x001EDD14 File Offset: 0x001EBF14
 		public static bool TryFromString(string name, out EPromptStyle value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C7F6 RID: 51190 RVA: 0x001D45D0 File Offset: 0x001D27D0
+		// Token: 0x0600D479 RID: 54393 RVA: 0x001EDD7C File Offset: 0x001EBF7C
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C7F7 RID: 51191 RVA: 0x001D45F8 File Offset: 0x001D27F8
+		// Token: 0x0600D47A RID: 54394 RVA: 0x001EDDA4 File Offset: 0x001EBFA4
 		public static EPromptStyle[] GetValues()
 		{
 			return new EPromptStyle[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C7F8 RID: 51192 RVA: 0x001D460B File Offset: 0x001D280B
+		// Token: 0x0600D47B RID: 54395 RVA: 0x001EDDB7 File Offset: 0x001EBFB7
 		public static string[] GetNames()
 		{
 			return new string[]

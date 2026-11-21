@@ -5,19 +5,19 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Battle;
 using CSharpScript.Utils;
 
-// Token: 0x02002EE9 RID: 12009
+// Token: 0x0200243C RID: 9276
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterTriggerComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x06019A77 RID: 105079 RVA: 0x006AB218 File Offset: 0x006A9418
+	// Token: 0x06017379 RID: 95097 RVA: 0x006D14F4 File Offset: 0x006CF6F4
 	static CharacterTriggerComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterTriggerComponent.CreateStaticDefaultValue), new Action(CharacterTriggerComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700237E RID: 9086
-	// (get) Token: 0x06019A78 RID: 105080 RVA: 0x006AB237 File Offset: 0x006A9437
+	// Token: 0x17002437 RID: 9271
+	// (get) Token: 0x0601737A RID: 95098 RVA: 0x006D1513 File Offset: 0x006CF713
 	public Dictionary<string, Func<TFormulaValue[], TFormulaValue>> TriggerFormulaFunc
 	{
 		get
@@ -26,13 +26,13 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 		}
 	}
 
-	// Token: 0x06019A79 RID: 105081 RVA: 0x006AB23F File Offset: 0x006A943F
+	// Token: 0x0601737B RID: 95099 RVA: 0x006D151B File Offset: 0x006CF71B
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06019A7A RID: 105082 RVA: 0x006AB244 File Offset: 0x006A9444
+	// Token: 0x0601737C RID: 95100 RVA: 0x006D1520 File Offset: 0x006CF720
 	protected override bool OnStart()
 	{
 		if (CharacterTriggerComponent._builtinFunc != null)
@@ -71,7 +71,7 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 		return true;
 	}
 
-	// Token: 0x06019A7B RID: 105083 RVA: 0x006AB2E8 File Offset: 0x006A94E8
+	// Token: 0x0601737D RID: 95101 RVA: 0x006D15C4 File Offset: 0x006CF7C4
 	protected override bool OnClear()
 	{
 		this.BuildInFunctions.Clear();
@@ -83,7 +83,7 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 		return true;
 	}
 
-	// Token: 0x06019A7C RID: 105084 RVA: 0x006AB35C File Offset: 0x006A955C
+	// Token: 0x0601737E RID: 95102 RVA: 0x006D1638 File Offset: 0x006CF838
 	[NullableContext(2)]
 	public unsafe int AddTrigger(ITriggerConfig config, [Nullable(1)] TTriggerCallback callback, TTriggerChecker checker = null)
 	{
@@ -149,14 +149,14 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 		return num;
 	}
 
-	// Token: 0x06019A7D RID: 105085 RVA: 0x006AB5B8 File Offset: 0x006A97B8
+	// Token: 0x0601737F RID: 95103 RVA: 0x006D1894 File Offset: 0x006CFA94
 	[NullableContext(2)]
 	public Trigger GetTrigger(int handle)
 	{
 		return this.TriggerMap.GetValueOrDefault(handle);
 	}
 
-	// Token: 0x06019A7E RID: 105086 RVA: 0x006AB5C8 File Offset: 0x006A97C8
+	// Token: 0x06017380 RID: 95104 RVA: 0x006D18A4 File Offset: 0x006CFAA4
 	public void RemoveTrigger(int handle)
 	{
 		Trigger valueOrDefault = this.TriggerMap.GetValueOrDefault(handle);
@@ -167,7 +167,7 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 		}
 	}
 
-	// Token: 0x06019A7F RID: 105087 RVA: 0x006AB5F8 File Offset: 0x006A97F8
+	// Token: 0x06017381 RID: 95105 RVA: 0x006D18D4 File Offset: 0x006CFAD4
 	public void SetTriggerActive(int handle, bool active)
 	{
 		Trigger valueOrDefault = this.TriggerMap.GetValueOrDefault(handle);
@@ -178,7 +178,7 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 		valueOrDefault.SetActive(active);
 	}
 
-	// Token: 0x06019A80 RID: 105088 RVA: 0x006AB614 File Offset: 0x006A9814
+	// Token: 0x06017382 RID: 95106 RVA: 0x006D18F0 File Offset: 0x006CFAF0
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<string, Func<TFormulaValue[], TFormulaValue>> dictionary = new Dictionary<string, Func<TFormulaValue[], TFormulaValue>>();
@@ -610,14 +610,14 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 		CharacterTriggerComponent._builtinFunc = dictionary;
 	}
 
-	// Token: 0x06019A81 RID: 105089 RVA: 0x006AB9C7 File Offset: 0x006A9BC7
+	// Token: 0x06017383 RID: 95107 RVA: 0x006D1CA3 File Offset: 0x006CFEA3
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterTriggerComponent._builtinFunc = null;
 		CharacterTriggerComponent._triggerHandleCounter = 0;
 	}
 
-	// Token: 0x06019A82 RID: 105090 RVA: 0x006AB9D8 File Offset: 0x006A9BD8
+	// Token: 0x06017384 RID: 95108 RVA: 0x006D1CB4 File Offset: 0x006CFEB4
 	[NullableContext(2)]
 	private unsafe static int CheckRoleAttr(Entity entity, int checkType, int attrId, float threshold)
 	{
@@ -646,7 +646,7 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 		return (checkType == 2 && num.Value > threshold) ? 1 : 0;
 	}
 
-	// Token: 0x06019A83 RID: 105091 RVA: 0x006ABAD4 File Offset: 0x006A9CD4
+	// Token: 0x06017385 RID: 95109 RVA: 0x006D1DB0 File Offset: 0x006CFFB0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -654,16 +654,46 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 			return false;
 		}
 		CharacterTriggerComponent characterTriggerComponent = (CharacterTriggerComponent)componentTemplate;
-		return (!base.CanResetComponentProperty("TriggerMap") || characterTriggerComponent.TriggerMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, Trigger>>(this.TriggerMap), "TriggerMap")) && (!base.CanResetComponentProperty("BuildInFunctions") || characterTriggerComponent.BuildInFunctions == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, Func<TFormulaValue[], TFormulaValue>>>(this.BuildInFunctions), "BuildInFunctions"));
+		return (characterTriggerComponent.TriggerMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TriggerMap), "TriggerMap")) && (characterTriggerComponent.BuildInFunctions == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuildInFunctions), "BuildInFunctions"));
 	}
 
-	// Token: 0x0400C038 RID: 49208
+	// Token: 0x17002438 RID: 9272
+	// (get) Token: 0x06017386 RID: 95110 RVA: 0x006D1E14 File Offset: 0x006D0014
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002439 RID: 9273
+	// (get) Token: 0x06017387 RID: 95111 RVA: 0x006D1E17 File Offset: 0x006D0017
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700243A RID: 9274
+	// (get) Token: 0x06017388 RID: 95112 RVA: 0x006D1E1A File Offset: 0x006D001A
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C3D3 RID: 50131
 	private readonly Dictionary<int, Trigger> TriggerMap = new Dictionary<int, Trigger>();
 
-	// Token: 0x0400C039 RID: 49209
+	// Token: 0x0400C3D4 RID: 50132
 	private readonly Dictionary<string, Func<TFormulaValue[], TFormulaValue>> BuildInFunctions = new Dictionary<string, Func<TFormulaValue[], TFormulaValue>>();
 
-	// Token: 0x0400C03A RID: 49210
+	// Token: 0x0400C3D5 RID: 50133
 	[Nullable(new byte[]
 	{
 		2,
@@ -673,6 +703,6 @@ public class CharacterTriggerComponent : EntityComponent, IStaticVariableResette
 	})]
 	private static Dictionary<string, Func<TFormulaValue[], TFormulaValue>> _builtinFunc;
 
-	// Token: 0x0400C03B RID: 49211
+	// Token: 0x0400C3D6 RID: 50134
 	private static int _triggerHandleCounter;
 }

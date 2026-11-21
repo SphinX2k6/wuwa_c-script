@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054CB RID: 21707
+	// Token: 0x02005A51 RID: 23121
 	public class ILevelAiCycleLooplyT
 	{
-		// Token: 0x17009FF8 RID: 40952
-		// (get) Token: 0x06023C6C RID: 146540 RVA: 0x004F2304 File Offset: 0x004F0504
-		// (set) Token: 0x06023C6D RID: 146541 RVA: 0x004F230C File Offset: 0x004F050C
+		// Token: 0x1700A832 RID: 43058
+		// (get) Token: 0x06025D24 RID: 154916 RVA: 0x0052F378 File Offset: 0x0052D578
+		// (set) Token: 0x06025D25 RID: 154917 RVA: 0x0052F380 File Offset: 0x0052D580
 		public ELevelAiCycleMode Type { get; set; }
 
-		// Token: 0x17009FF9 RID: 40953
-		// (get) Token: 0x06023C6E RID: 146542 RVA: 0x004F2315 File Offset: 0x004F0515
-		// (set) Token: 0x06023C6F RID: 146543 RVA: 0x004F231D File Offset: 0x004F051D
+		// Token: 0x1700A833 RID: 43059
+		// (get) Token: 0x06025D26 RID: 154918 RVA: 0x0052F389 File Offset: 0x0052D589
+		// (set) Token: 0x06025D27 RID: 154919 RVA: 0x0052F391 File Offset: 0x0052D591
 		public bool IsCircle { get; set; }
 
-		// Token: 0x06023C70 RID: 146544 RVA: 0x004F2326 File Offset: 0x004F0526
+		// Token: 0x06025D28 RID: 154920 RVA: 0x0052F39A File Offset: 0x0052D59A
 		public ILevelAiCycleLooplyT()
 		{
 			this.Type = ELevelAiCycleMode.Loop;

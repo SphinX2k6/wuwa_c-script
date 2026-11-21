@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004AA RID: 1194
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000503 RID: 1283
 	public class IKeyRotatorConfig : ICommonRotationConfig
 	{
-		// Token: 0x06001810 RID: 6160 RVA: 0x00048444 File Offset: 0x00046644
+		// Token: 0x060019AA RID: 6570 RVA: 0x0004C18C File Offset: 0x0004A38C
 		private IKeyRotatorConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001811 RID: 6161 RVA: 0x0004847C File Offset: 0x0004667C
+		// Token: 0x060019AB RID: 6571 RVA: 0x0004C1C4 File Offset: 0x0004A3C4
 		public static IKeyRotatorConfig Create([Nullable(2)] IKeyRotatorConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001812 RID: 6162 RVA: 0x0004848F File Offset: 0x0004668F
+		// Token: 0x060019AC RID: 6572 RVA: 0x0004C1D7 File Offset: 0x0004A3D7
 		public static IKeyRotatorConfig CreateFromSetValue([Nullable(2)] IKeyRotatorConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001813 RID: 6163 RVA: 0x000484A4 File Offset: 0x000466A4
+		// Token: 0x060019AD RID: 6573 RVA: 0x0004C1EC File Offset: 0x0004A3EC
 		public new IKeyRotatorConfig_SetValue ToSetValue()
 		{
 			return new IKeyRotatorConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000668 RID: 1640
-		// (get) Token: 0x06001814 RID: 6164 RVA: 0x000484F2 File Offset: 0x000466F2
-		// (set) Token: 0x06001815 RID: 6165 RVA: 0x0004851D File Offset: 0x0004671D
+		// Token: 0x170006CF RID: 1743
+		// (get) Token: 0x060019AE RID: 6574 RVA: 0x0004C23A File Offset: 0x0004A43A
+		// (set) Token: 0x060019AF RID: 6575 RVA: 0x0004C265 File Offset: 0x0004A465
 		public override ERotationType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000669 RID: 1641
-		// (get) Token: 0x06001816 RID: 6166 RVA: 0x0004852B File Offset: 0x0004672B
-		// (set) Token: 0x06001817 RID: 6167 RVA: 0x0004855A File Offset: 0x0004675A
+		// Token: 0x170006D0 RID: 1744
+		// (get) Token: 0x060019B0 RID: 6576 RVA: 0x0004C273 File Offset: 0x0004A473
+		// (set) Token: 0x060019B1 RID: 6577 RVA: 0x0004C2A2 File Offset: 0x0004A4A2
 		public override float Time
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700066A RID: 1642
-		// (get) Token: 0x06001818 RID: 6168 RVA: 0x00048568 File Offset: 0x00046768
-		// (set) Token: 0x06001819 RID: 6169 RVA: 0x000485A2 File Offset: 0x000467A2
+		// Token: 0x170006D1 RID: 1745
+		// (get) Token: 0x060019B2 RID: 6578 RVA: 0x0004C2B0 File Offset: 0x0004A4B0
+		// (set) Token: 0x060019B3 RID: 6579 RVA: 0x0004C2EA File Offset: 0x0004A4EA
 		public override float? Cd
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700066B RID: 1643
-		// (get) Token: 0x0600181A RID: 6170 RVA: 0x000485B0 File Offset: 0x000467B0
-		// (set) Token: 0x0600181B RID: 6171 RVA: 0x000485D7 File Offset: 0x000467D7
+		// Token: 0x170006D2 RID: 1746
+		// (get) Token: 0x060019B4 RID: 6580 RVA: 0x0004C2F8 File Offset: 0x0004A4F8
+		// (set) Token: 0x060019B5 RID: 6581 RVA: 0x0004C31F File Offset: 0x0004A51F
 		[Nullable(2)]
 		public override string Curve
 		{
@@ -161,9 +159,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700066C RID: 1644
-		// (get) Token: 0x0600181C RID: 6172 RVA: 0x000485E8 File Offset: 0x000467E8
-		// (set) Token: 0x0600181D RID: 6173 RVA: 0x00048649 File Offset: 0x00046849
+		// Token: 0x170006D3 RID: 1747
+		// (get) Token: 0x060019B6 RID: 6582 RVA: 0x0004C330 File Offset: 0x0004A530
+		// (set) Token: 0x060019B7 RID: 6583 RVA: 0x0004C391 File Offset: 0x0004A591
 		public virtual VectorInfo KeyRotator
 		{
 			get
@@ -191,18 +189,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040011E6 RID: 4582
+		// Token: 0x04001308 RID: 4872
 		[Nullable(2)]
 		protected new IKeyRotatorConfig FbInstance;
 
-		// Token: 0x040011E7 RID: 4583
+		// Token: 0x04001309 RID: 4873
 		[Nullable(2)]
 		protected new IKeyRotatorConfig_SetValue PocoInterface;
 
-		// Token: 0x040011E8 RID: 4584
+		// Token: 0x0400130A RID: 4874
 		private VectorInfo _KeyRotatorCache;
 
-		// Token: 0x040011E9 RID: 4585
+		// Token: 0x0400130B RID: 4875
 		private bool _KeyRotatorInited;
 	}
 }

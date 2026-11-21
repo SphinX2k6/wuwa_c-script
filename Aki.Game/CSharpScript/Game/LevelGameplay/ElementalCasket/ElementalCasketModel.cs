@@ -7,14 +7,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E67 RID: 28263
+	// Token: 0x02005FE8 RID: 24552
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class ElementalCasketModel : ModelBase
 	{
-		// Token: 0x17009A4B RID: 39499
-		// (get) Token: 0x06044DF6 RID: 282102 RVA: 0x0110059B File Offset: 0x010FE79B
+		// Token: 0x17006F60 RID: 28512
+		// (get) Token: 0x0603AF83 RID: 241539 RVA: 0x010AAAFB File Offset: 0x010A8CFB
 		public HashSet<int> NeedPlayerDetectableSet
 		{
 			get
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x17009A4C RID: 39500
-		// (get) Token: 0x06044DF7 RID: 282103 RVA: 0x011005B6 File Offset: 0x010FE7B6
+		// Token: 0x17006F61 RID: 28513
+		// (get) Token: 0x0603AF84 RID: 241540 RVA: 0x010AAB16 File Offset: 0x010A8D16
 		public Dictionary<int, MonsterElementalDetectable> MonsterDetectableMap
 		{
 			get
@@ -41,8 +41,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x17009A4D RID: 39501
-		// (get) Token: 0x06044DF8 RID: 282104 RVA: 0x011005D1 File Offset: 0x010FE7D1
+		// Token: 0x17006F62 RID: 28514
+		// (get) Token: 0x0603AF85 RID: 241541 RVA: 0x010AAB31 File Offset: 0x010A8D31
 		public HashSet<SceneItemElementalFieldActorController> ElementalFieldActivatedControllers
 		{
 			get
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x17009A4E RID: 39502
-		// (get) Token: 0x06044DF9 RID: 282105 RVA: 0x011005EC File Offset: 0x010FE7EC
+		// Token: 0x17006F63 RID: 28515
+		// (get) Token: 0x0603AF86 RID: 241542 RVA: 0x010AAB4C File Offset: 0x010A8D4C
 		public HashSet<SceneItemElementalFieldActorController> ElementalFieldAllControllers
 		{
 			get
@@ -69,8 +69,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x17009A4F RID: 39503
-		// (get) Token: 0x06044DFA RID: 282106 RVA: 0x01100607 File Offset: 0x010FE807
+		// Token: 0x17006F64 RID: 28516
+		// (get) Token: 0x0603AF87 RID: 241543 RVA: 0x010AAB67 File Offset: 0x010A8D67
 		public int FireFieldBlockRequestCount
 		{
 			get
@@ -79,8 +79,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x17009A50 RID: 39504
-		// (get) Token: 0x06044DFB RID: 282107 RVA: 0x0110060F File Offset: 0x010FE80F
+		// Token: 0x17006F65 RID: 28517
+		// (get) Token: 0x0603AF88 RID: 241544 RVA: 0x010AAB6F File Offset: 0x010A8D6F
 		public HashSet<int> PlayerElementalFieldBlockHolders
 		{
 			get
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DFC RID: 282108 RVA: 0x0110062C File Offset: 0x010FE82C
+		// Token: 0x0603AF89 RID: 241545 RVA: 0x010AAB8C File Offset: 0x010A8D8C
 		public bool AddPlayerElementalFieldBlockHolder(int entityId)
 		{
 			HashSet<int> playerElementalFieldBlockHolders = this.PlayerElementalFieldBlockHolders;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return result;
 		}
 
-		// Token: 0x06044DFD RID: 282109 RVA: 0x01100654 File Offset: 0x010FE854
+		// Token: 0x0603AF8A RID: 241546 RVA: 0x010AABB4 File Offset: 0x010A8DB4
 		public unsafe bool RemovePlayerElementalFieldBlockHolder(int entityId)
 		{
 			HashSet<int> internalPlayerElementalFieldBlockHolders = this.InternalPlayerElementalFieldBlockHolders;
@@ -121,21 +121,21 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return internalPlayerElementalFieldBlockHolders.Count == 0;
 		}
 
-		// Token: 0x06044DFE RID: 282110 RVA: 0x011006DD File Offset: 0x010FE8DD
+		// Token: 0x0603AF8B RID: 241547 RVA: 0x010AAC3D File Offset: 0x010A8E3D
 		protected override bool OnClear()
 		{
 			this.ClearAll();
 			return true;
 		}
 
-		// Token: 0x06044DFF RID: 282111 RVA: 0x011006E6 File Offset: 0x010FE8E6
+		// Token: 0x0603AF8C RID: 241548 RVA: 0x010AAC46 File Offset: 0x010A8E46
 		protected override bool OnLeaveLevel()
 		{
 			this.ClearAll();
 			return true;
 		}
 
-		// Token: 0x06044E00 RID: 282112 RVA: 0x011006F0 File Offset: 0x010FE8F0
+		// Token: 0x0603AF8D RID: 241549 RVA: 0x010AAC50 File Offset: 0x010A8E50
 		public void RequestFireFieldBlock()
 		{
 			if (SundryModel.Instance.GetModuleDebugLevel("ElementalCasket") >= 4)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.InternalFireFieldBlockRequestCount++;
 		}
 
-		// Token: 0x06044E01 RID: 282113 RVA: 0x01100764 File Offset: 0x010FE964
+		// Token: 0x0603AF8E RID: 241550 RVA: 0x010AACC4 File Offset: 0x010A8EC4
 		public void ReleaseFireFieldBlock()
 		{
 			if (SundryModel.Instance.GetModuleDebugLevel("ElementalCasket") >= 4)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			Log.Instance.Error(ELogModule.LevelPlay, ELogAuthor.XDW, "ReleaseFireFieldBlock: FireFieldBlockRequestCount is 0, 有不成对的", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06044E02 RID: 282114 RVA: 0x011007FC File Offset: 0x010FE9FC
+		// Token: 0x0603AF8F RID: 241551 RVA: 0x010AAD5C File Offset: 0x010A8F5C
 		private void ClearAll()
 		{
 			ElementalFieldCollision collision = this.Collision;
@@ -216,8 +216,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.PlayerFieldElementalType = null;
 		}
 
-		// Token: 0x17009A51 RID: 39505
-		// (get) Token: 0x06044E03 RID: 282115 RVA: 0x011008D7 File Offset: 0x010FEAD7
+		// Token: 0x17006F66 RID: 28518
+		// (get) Token: 0x0603AF90 RID: 241552 RVA: 0x010AAE37 File Offset: 0x010A9037
 		public static ElementalCasketModel Instance
 		{
 			get
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E04 RID: 282116 RVA: 0x011008DE File Offset: 0x010FEADE
+		// Token: 0x0603AF91 RID: 241553 RVA: 0x010AAE3E File Offset: 0x010A903E
 		public static ElementalCasketModel GetOrCreateInstance()
 		{
 			if (ElementalCasketModel._Instance == null)
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return ElementalCasketModel._Instance;
 		}
 
-		// Token: 0x06044E05 RID: 282117 RVA: 0x011008F2 File Offset: 0x010FEAF2
+		// Token: 0x0603AF92 RID: 241554 RVA: 0x010AAE52 File Offset: 0x010A9052
 		public static bool CreateInstance()
 		{
 			if (ElementalCasketModel._Instance != null)
@@ -247,24 +247,24 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044E06 RID: 282118 RVA: 0x01100908 File Offset: 0x010FEB08
+		// Token: 0x0603AF93 RID: 241555 RVA: 0x010AAE68 File Offset: 0x010A9068
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044E07 RID: 282119 RVA: 0x0110090A File Offset: 0x010FEB0A
+		// Token: 0x0603AF94 RID: 241556 RVA: 0x010AAE6A File Offset: 0x010A906A
 		public static void ResetStaticDefaultValue()
 		{
 			ElementalCasketModel._Instance = null;
 		}
 
-		// Token: 0x06044E08 RID: 282120 RVA: 0x01100912 File Offset: 0x010FEB12
+		// Token: 0x0603AF95 RID: 241557 RVA: 0x010AAE72 File Offset: 0x010A9072
 		static ElementalCasketModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ElementalCasketModel.CreateStaticDefaultValue), new Action(ElementalCasketModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06044E09 RID: 282121 RVA: 0x01100934 File Offset: 0x010FEB34
+		// Token: 0x0603AF96 RID: 241558 RVA: 0x010AAE94 File Offset: 0x010A9094
 		public ElementalCasketModel()
 		{
 			ElementalFieldBlockTarget elementalFieldBlockTarget = new ElementalFieldBlockTarget();
@@ -276,19 +276,19 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			base..ctor();
 		}
 
-		// Token: 0x04023DA0 RID: 146848
+		// Token: 0x0401F055 RID: 127061
 		[Nullable(2)]
 		public ElementalFieldCollision Collision;
 
-		// Token: 0x04023DA1 RID: 146849
+		// Token: 0x0401F056 RID: 127062
 		[Nullable(2)]
 		public ElementalFieldReactionManager ReactionManager;
 
-		// Token: 0x04023DA2 RID: 146850
+		// Token: 0x0401F057 RID: 127063
 		[Nullable(2)]
 		private HashSet<int> InternalNeedPlayerDetectableSet;
 
-		// Token: 0x04023DA3 RID: 146851
+		// Token: 0x0401F058 RID: 127064
 		[Nullable(new byte[]
 		{
 			2,
@@ -296,37 +296,37 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 		})]
 		private Dictionary<int, MonsterElementalDetectable> InternalMonsterDetectableMap;
 
-		// Token: 0x04023DA4 RID: 146852
+		// Token: 0x0401F059 RID: 127065
 		public EElementalType? PlayerFieldElementalType;
 
-		// Token: 0x04023DA5 RID: 146853
+		// Token: 0x0401F05A RID: 127066
 		public bool CoreOperating;
 
-		// Token: 0x04023DA6 RID: 146854
+		// Token: 0x0401F05B RID: 127067
 		[Nullable(2)]
 		public ElementalCoreData PlayerElementalCoreData;
 
-		// Token: 0x04023DA7 RID: 146855
+		// Token: 0x0401F05C RID: 127068
 		private int InternalFireFieldBlockRequestCount;
 
-		// Token: 0x04023DA8 RID: 146856
+		// Token: 0x0401F05D RID: 127069
 		public readonly IElementalFieldBlockTarget FireElementalFieldBlockTarget;
 
-		// Token: 0x04023DA9 RID: 146857
+		// Token: 0x0401F05E RID: 127070
 		[Nullable(2)]
 		private HashSet<int> InternalPlayerElementalFieldBlockHolders;
 
-		// Token: 0x04023DAA RID: 146858
+		// Token: 0x0401F05F RID: 127071
 		[Nullable(2)]
 		public TimerHandle SceneItemFieldRenderMaskTimer;
 
-		// Token: 0x04023DAB RID: 146859
+		// Token: 0x0401F060 RID: 127072
 		public readonly List<int> SceneItemFieldRenderMaskList;
 
-		// Token: 0x04023DAC RID: 146860
+		// Token: 0x0401F061 RID: 127073
 		public readonly List<int?> SceneItemFieldRenderMaskSlots;
 
-		// Token: 0x04023DAD RID: 146861
+		// Token: 0x0401F062 RID: 127074
 		[Nullable(new byte[]
 		{
 			2,
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 		})]
 		public HashSet<SceneItemElementalFieldActorController> InternalElementalFieldActivatedControllers;
 
-		// Token: 0x04023DAE RID: 146862
+		// Token: 0x0401F063 RID: 127075
 		[Nullable(new byte[]
 		{
 			2,
@@ -342,11 +342,11 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 		})]
 		public HashSet<SceneItemElementalFieldActorController> InternalElementalFieldAllControllers;
 
-		// Token: 0x04023DAF RID: 146863
+		// Token: 0x0401F064 RID: 127076
 		[Nullable(2)]
 		public ISceneItemElementalFieldSphereSnapshot PlayerFieldSphere;
 
-		// Token: 0x04023DB0 RID: 146864
+		// Token: 0x0401F065 RID: 127077
 		[Nullable(2)]
 		private static ElementalCasketModel _Instance;
 	}

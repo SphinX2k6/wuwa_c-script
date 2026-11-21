@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200446A RID: 17514
+	// Token: 0x020048D2 RID: 18642
 	public struct IDartCompetitorBubbles : IFlatbufferObject
 	{
-		// Token: 0x17007B95 RID: 31637
-		// (get) Token: 0x0601A198 RID: 106904 RVA: 0x003BA986 File Offset: 0x003B8B86
+		// Token: 0x170081D4 RID: 33236
+		// (get) Token: 0x0601B969 RID: 113001 RVA: 0x003E6B92 File Offset: 0x003E4D92
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A199 RID: 106905 RVA: 0x003BA993 File Offset: 0x003B8B93
+		// Token: 0x0601B96A RID: 113002 RVA: 0x003E6B9F File Offset: 0x003E4D9F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A19A RID: 106906 RVA: 0x003BA99C File Offset: 0x003B8B9C
+		// Token: 0x0601B96B RID: 113003 RVA: 0x003E6BA8 File Offset: 0x003E4DA8
 		public static IDartCompetitorBubbles GetRootAsIDartCompetitorBubbles(ByteBuffer _bb)
 		{
 			return IDartCompetitorBubbles.GetRootAsIDartCompetitorBubbles(_bb, default(IDartCompetitorBubbles));
 		}
 
-		// Token: 0x0601A19B RID: 106907 RVA: 0x003BA9B8 File Offset: 0x003B8BB8
+		// Token: 0x0601B96C RID: 113004 RVA: 0x003E6BC4 File Offset: 0x003E4DC4
 		public static IDartCompetitorBubbles GetRootAsIDartCompetitorBubbles(ByteBuffer _bb, IDartCompetitorBubbles obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A19C RID: 106908 RVA: 0x003BA9D5 File Offset: 0x003B8BD5
+		// Token: 0x0601B96D RID: 113005 RVA: 0x003E6BE1 File Offset: 0x003E4DE1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A19D RID: 106909 RVA: 0x003BA9E4 File Offset: 0x003B8BE4
+		// Token: 0x0601B96E RID: 113006 RVA: 0x003E6BF0 File Offset: 0x003E4DF0
 		public IDartCompetitorBubbles __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007B96 RID: 31638
-		// (get) Token: 0x0601A19E RID: 106910 RVA: 0x003BA9F4 File Offset: 0x003B8BF4
+		// Token: 0x170081D5 RID: 33237
+		// (get) Token: 0x0601B96F RID: 113007 RVA: 0x003E6C00 File Offset: 0x003E4E00
 		public IBubbleIndex? PlayerRoundScoreOver150
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B97 RID: 31639
-		// (get) Token: 0x0601A19F RID: 106911 RVA: 0x003BAA54 File Offset: 0x003B8C54
+		// Token: 0x170081D6 RID: 33238
+		// (get) Token: 0x0601B970 RID: 113008 RVA: 0x003E6C60 File Offset: 0x003E4E60
 		public IBubbleIndex? CompetitorRoundScoreOver150
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B98 RID: 31640
-		// (get) Token: 0x0601A1A0 RID: 106912 RVA: 0x003BAAB4 File Offset: 0x003B8CB4
+		// Token: 0x170081D7 RID: 33239
+		// (get) Token: 0x0601B971 RID: 113009 RVA: 0x003E6CC0 File Offset: 0x003E4EC0
 		public IBubbleIndex? CompetitorRoundScore100To149
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B99 RID: 31641
-		// (get) Token: 0x0601A1A1 RID: 106913 RVA: 0x003BAB14 File Offset: 0x003B8D14
+		// Token: 0x170081D8 RID: 33240
+		// (get) Token: 0x0601B972 RID: 113010 RVA: 0x003E6D20 File Offset: 0x003E4F20
 		public IBubbleIndex? CompetitorHitZeroScore
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A1A2 RID: 106914 RVA: 0x003BAB72 File Offset: 0x003B8D72
+		// Token: 0x0601B973 RID: 113011 RVA: 0x003E6D7E File Offset: 0x003E4F7E
 		public static Offset<IDartCompetitorBubbles> CreateIDartCompetitorBubbles(FlatBufferBuilder builder, Offset<IBubbleIndex> PlayerRoundScoreOver150Offset = default(Offset<IBubbleIndex>), Offset<IBubbleIndex> CompetitorRoundScoreOver150Offset = default(Offset<IBubbleIndex>), Offset<IBubbleIndex> CompetitorRoundScore100To149Offset = default(Offset<IBubbleIndex>), Offset<IBubbleIndex> CompetitorHitZeroScoreOffset = default(Offset<IBubbleIndex>))
 		{
 			builder.StartTable(4);
@@ -119,43 +119,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartCompetitorBubbles.EndIDartCompetitorBubbles(builder);
 		}
 
-		// Token: 0x0601A1A3 RID: 106915 RVA: 0x003BAB9E File Offset: 0x003B8D9E
+		// Token: 0x0601B974 RID: 113012 RVA: 0x003E6DAA File Offset: 0x003E4FAA
 		public static void StartIDartCompetitorBubbles(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601A1A4 RID: 106916 RVA: 0x003BABA7 File Offset: 0x003B8DA7
+		// Token: 0x0601B975 RID: 113013 RVA: 0x003E6DB3 File Offset: 0x003E4FB3
 		public static void AddPlayerRoundScoreOver150(FlatBufferBuilder builder, Offset<IBubbleIndex> playerRoundScoreOver150Offset)
 		{
 			builder.AddOffset(0, playerRoundScoreOver150Offset.Value, 0);
 		}
 
-		// Token: 0x0601A1A5 RID: 106917 RVA: 0x003BABB7 File Offset: 0x003B8DB7
+		// Token: 0x0601B976 RID: 113014 RVA: 0x003E6DC3 File Offset: 0x003E4FC3
 		public static void AddCompetitorRoundScoreOver150(FlatBufferBuilder builder, Offset<IBubbleIndex> competitorRoundScoreOver150Offset)
 		{
 			builder.AddOffset(1, competitorRoundScoreOver150Offset.Value, 0);
 		}
 
-		// Token: 0x0601A1A6 RID: 106918 RVA: 0x003BABC7 File Offset: 0x003B8DC7
+		// Token: 0x0601B977 RID: 113015 RVA: 0x003E6DD3 File Offset: 0x003E4FD3
 		public static void AddCompetitorRoundScore100To149(FlatBufferBuilder builder, Offset<IBubbleIndex> competitorRoundScore100To149Offset)
 		{
 			builder.AddOffset(2, competitorRoundScore100To149Offset.Value, 0);
 		}
 
-		// Token: 0x0601A1A7 RID: 106919 RVA: 0x003BABD7 File Offset: 0x003B8DD7
+		// Token: 0x0601B978 RID: 113016 RVA: 0x003E6DE3 File Offset: 0x003E4FE3
 		public static void AddCompetitorHitZeroScore(FlatBufferBuilder builder, Offset<IBubbleIndex> competitorHitZeroScoreOffset)
 		{
 			builder.AddOffset(3, competitorHitZeroScoreOffset.Value, 0);
 		}
 
-		// Token: 0x0601A1A8 RID: 106920 RVA: 0x003BABE7 File Offset: 0x003B8DE7
+		// Token: 0x0601B979 RID: 113017 RVA: 0x003E6DF3 File Offset: 0x003E4FF3
 		public static Offset<IDartCompetitorBubbles> EndIDartCompetitorBubbles(FlatBufferBuilder builder)
 		{
 			return new Offset<IDartCompetitorBubbles>(builder.EndTable());
 		}
 
-		// Token: 0x0601A1A9 RID: 106921 RVA: 0x003BABF4 File Offset: 0x003B8DF4
+		// Token: 0x0601B97A RID: 113018 RVA: 0x003E6E00 File Offset: 0x003E5000
 		public IDartCompetitorBubblesT UnPack()
 		{
 			IDartCompetitorBubblesT dartCompetitorBubblesT = new IDartCompetitorBubblesT();
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return dartCompetitorBubblesT;
 		}
 
-		// Token: 0x0601A1AA RID: 106922 RVA: 0x003BAC10 File Offset: 0x003B8E10
+		// Token: 0x0601B97B RID: 113019 RVA: 0x003E6E1C File Offset: 0x003E501C
 		public void UnPackTo(IDartCompetitorBubblesT _o)
 		{
 			_o.PlayerRoundScoreOver150 = ((this.PlayerRoundScoreOver150 != null) ? this.PlayerRoundScoreOver150.Value.UnPack() : null);
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.CompetitorHitZeroScore = ((this.CompetitorHitZeroScore != null) ? this.CompetitorHitZeroScore.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601A1AB RID: 106923 RVA: 0x003BACDC File Offset: 0x003B8EDC
+		// Token: 0x0601B97C RID: 113020 RVA: 0x003E6EE8 File Offset: 0x003E50E8
 		public static Offset<IDartCompetitorBubbles> Pack(FlatBufferBuilder builder, IDartCompetitorBubblesT _o)
 		{
 			if (_o == null)
@@ -186,7 +186,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartCompetitorBubbles.CreateIDartCompetitorBubbles(builder, playerRoundScoreOver150Offset, competitorRoundScoreOver150Offset, competitorRoundScore100To149Offset, competitorHitZeroScoreOffset);
 		}
 
-		// Token: 0x0400C45B RID: 50267
+		// Token: 0x0400CE89 RID: 52873
 		private Table __p;
 	}
 }

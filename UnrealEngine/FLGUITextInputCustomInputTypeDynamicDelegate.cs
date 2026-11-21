@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020D1 RID: 8401
+	// Token: 0x020006C4 RID: 1732
 	public sealed class FLGUITextInputCustomInputTypeDynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601FA5E RID: 129630 RVA: 0x002F0F7D File Offset: 0x002EF17D
+		// Token: 0x06009409 RID: 37897 RVA: 0x000DF315 File Offset: 0x000DD515
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUITextInputCustomInputTypeDynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601FA5F RID: 129631 RVA: 0x002F0F89 File Offset: 0x002EF189
+		// Token: 0x0600940A RID: 37898 RVA: 0x000DF321 File Offset: 0x000DD521
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUITextInputCustomInputTypeDynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUITextInputCustomInputTypeDynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601FA60 RID: 129632 RVA: 0x002F0FAC File Offset: 0x002EF1AC
+		// Token: 0x0600940B RID: 37899 RVA: 0x000DF344 File Offset: 0x000DD544
 		public FLGUITextInputCustomInputTypeDynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601FA61 RID: 129633 RVA: 0x002F0FB4 File Offset: 0x002EF1B4
+		// Token: 0x0600940C RID: 37900 RVA: 0x000DF34C File Offset: 0x000DD54C
 		[NullableContext(2)]
 		public FLGUITextInputCustomInputTypeDynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FA62 RID: 129634 RVA: 0x002F0FBE File Offset: 0x002EF1BE
+		// Token: 0x0600940D RID: 37901 RVA: 0x000DF356 File Offset: 0x000DD556
 		public FLGUITextInputCustomInputTypeDynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FA63 RID: 129635 RVA: 0x002F0FC9 File Offset: 0x002EF1C9
+		// Token: 0x0600940E RID: 37902 RVA: 0x000DF361 File Offset: 0x000DD561
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<string, bool>) ?? ((Func<string, bool>)Delegate.CreateDelegate(typeof(Func<string, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601FA64 RID: 129636 RVA: 0x002F0FFB File Offset: 0x002EF1FB
+		// Token: 0x0600940F RID: 37903 RVA: 0x000DF393 File Offset: 0x000DD593
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Func<string, bool> Callback)
 		{
 			if (FLGUITextInputCustomInputTypeDynamicDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUITextInputCustomInputTypeDynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601FA65 RID: 129637 RVA: 0x002F1038 File Offset: 0x002EF238
+		// Token: 0x06009410 RID: 37904 RVA: 0x000DF3D0 File Offset: 0x000DD5D0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool Execute(string InString)
 		{
 			FLGUITextInputCustomInputTypeDynamicDelegate.__FLGUITextInputCustomInputTypeDynamicDelegate_DelegateParams* ptr = stackalloc FLGUITextInputCustomInputTypeDynamicDelegate.__FLGUITextInputCustomInputTypeDynamicDelegate_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FLGUITextInputCustomInputTypeDynamicDelegate.__FLGUITextInputCustomInputTypeDynamicDelegate_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x0601FA66 RID: 129638 RVA: 0x002F1094 File Offset: 0x002EF294
+		// Token: 0x06009411 RID: 37905 RVA: 0x000DF42C File Offset: 0x000DD62C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<string, bool> func = target as Func<string, bool>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			((FLGUITextInputCustomInputTypeDynamicDelegate.__FLGUITextInputCustomInputTypeDynamicDelegate_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x0401113E RID: 69950
+		// Token: 0x04004081 RID: 16513
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401113F RID: 69951
+		// Token: 0x04004082 RID: 16514
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUITextInputCustomInputTypeDynamicDelegate__DelegateSignature";
 
-		// Token: 0x04011140 RID: 69952
+		// Token: 0x04004083 RID: 16515
 		private static int RegisterId;
 
-		// Token: 0x020034C6 RID: 13510
+		// Token: 0x02000EF4 RID: 3828
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FLGUITextInputCustomInputTypeDynamicDelegate_DelegateParams
+		private ref struct __FLGUITextInputCustomInputTypeDynamicDelegate_DelegateParams
 		{
-			// Token: 0x040174D0 RID: 95440
+			// Token: 0x040062B7 RID: 25271
 			[FieldOffset(0)]
 			public FString InString;
 
-			// Token: 0x040174D1 RID: 95441
+			// Token: 0x040062B8 RID: 25272
 			[FieldOffset(16)]
 			public bool __Result;
 		}
 
-		// Token: 0x020034C7 RID: 13511
+		// Token: 0x02000EF5 RID: 3829
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174D2 RID: 95442
+			// Token: 0x040062B9 RID: 25273
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

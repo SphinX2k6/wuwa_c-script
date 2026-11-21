@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EB0 RID: 7856
+// Token: 0x02001372 RID: 4978
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryRoleTipItem : UiPanelBase
 {
-	// Token: 0x0600F19F RID: 61855 RVA: 0x003A2520 File Offset: 0x003A0720
+	// Token: 0x0600C5BE RID: 50622 RVA: 0x003AE020 File Offset: 0x003AC220
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,7 +48,7 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F1A0 RID: 61856 RVA: 0x003A2738 File Offset: 0x003A0938
+	// Token: 0x0600C5BF RID: 50623 RVA: 0x003AE238 File Offset: 0x003AC438
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryRoleTipItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F1A1 RID: 61857 RVA: 0x003A277C File Offset: 0x003A097C
+	// Token: 0x0600C5C0 RID: 50624 RVA: 0x003AE27C File Offset: 0x003AC47C
 	protected override void OnStart()
 	{
 		TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -79,37 +79,37 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		EventSystem.Instance.Add<bool>(EEventName.OnHonamiStorySkillDescModeChange, new Action<bool>(this.OnSkillDescModeChange));
 	}
 
-	// Token: 0x0600F1A2 RID: 61858 RVA: 0x003A2815 File Offset: 0x003A0A15
+	// Token: 0x0600C5C1 RID: 50625 RVA: 0x003AE315 File Offset: 0x003AC515
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHonamiStorySkillDescModeChange, new Action<bool>(this.OnSkillDescModeChange));
 	}
 
-	// Token: 0x0600F1A3 RID: 61859 RVA: 0x003A2833 File Offset: 0x003A0A33
+	// Token: 0x0600C5C2 RID: 50626 RVA: 0x003AE333 File Offset: 0x003AC533
 	private HonamiStoryWeaponSuitInfoItem CreateSuitItem()
 	{
 		return new HonamiStoryWeaponSuitInfoItem();
 	}
 
-	// Token: 0x0600F1A4 RID: 61860 RVA: 0x003A283A File Offset: 0x003A0A3A
+	// Token: 0x0600C5C3 RID: 50627 RVA: 0x003AE33A File Offset: 0x003AC53A
 	private HonamiStoryTipsTextItem CreateSkill()
 	{
 		return new HonamiStoryTipsTextItem();
 	}
 
-	// Token: 0x0600F1A5 RID: 61861 RVA: 0x003A2841 File Offset: 0x003A0A41
+	// Token: 0x0600C5C4 RID: 50628 RVA: 0x003AE341 File Offset: 0x003AC541
 	private HonamiStoryTipsPropertyItem CreateProperty()
 	{
 		return new HonamiStoryTipsPropertyItem();
 	}
 
-	// Token: 0x0600F1A6 RID: 61862 RVA: 0x003A2848 File Offset: 0x003A0A48
+	// Token: 0x0600C5C5 RID: 50629 RVA: 0x003AE348 File Offset: 0x003AC548
 	private HonamiStoryWeaponTagItem CreateTagItem()
 	{
 		return new HonamiStoryWeaponTagItem();
 	}
 
-	// Token: 0x0600F1A7 RID: 61863 RVA: 0x003A2850 File Offset: 0x003A0A50
+	// Token: 0x0600C5C6 RID: 50630 RVA: 0x003AE350 File Offset: 0x003AC550
 	public void Refresh(HonamiStoryRoleEquipData equipData)
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(16);
@@ -125,7 +125,7 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		this.ShowTips(true);
 	}
 
-	// Token: 0x0600F1A8 RID: 61864 RVA: 0x003A28AC File Offset: 0x003A0AAC
+	// Token: 0x0600C5C7 RID: 50631 RVA: 0x003AE3AC File Offset: 0x003AC5AC
 	public void RefreshItemTipsOpen()
 	{
 		if (!base.IsUiActiveInHierarchy())
@@ -141,7 +141,7 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		extendToggle.RootUIComp.Get().SetUIActive(tipsOpen);
 	}
 
-	// Token: 0x0600F1A9 RID: 61865 RVA: 0x003A28F4 File Offset: 0x003A0AF4
+	// Token: 0x0600C5C8 RID: 50632 RVA: 0x003AE3F4 File Offset: 0x003AC5F4
 	private void RefreshWeaponTips()
 	{
 		if (this.EquipData == null)
@@ -213,7 +213,7 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		item4.SetUIActive(flag);
 	}
 
-	// Token: 0x0600F1AA RID: 61866 RVA: 0x003A2AB0 File Offset: 0x003A0CB0
+	// Token: 0x0600C5C9 RID: 50633 RVA: 0x003AE5B0 File Offset: 0x003AC7B0
 	private void RefreshPluginTips()
 	{
 		List<HonamiStoryEquipItemData> list = (this.EquipData != null) ? this.EquipData.GetPluginList() : new List<HonamiStoryEquipItemData>();
@@ -314,13 +314,13 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		item3.SetUIActive(!flag);
 	}
 
-	// Token: 0x0600F1AB RID: 61867 RVA: 0x003A2DC0 File Offset: 0x003A0FC0
+	// Token: 0x0600C5CA RID: 50634 RVA: 0x003AE8C0 File Offset: 0x003ACAC0
 	public void RegisterCloseCallback(Action callback)
 	{
 		this.CloseCallback = callback;
 	}
 
-	// Token: 0x0600F1AC RID: 61868 RVA: 0x003A2DCC File Offset: 0x003A0FCC
+	// Token: 0x0600C5CB RID: 50635 RVA: 0x003AE8CC File Offset: 0x003ACACC
 	public void ShowTips(bool isShow)
 	{
 		this.SetActive(isShow);
@@ -335,7 +335,7 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		this.LevelSequencePlayer.PlayOrReplaySequenceByName("In", false, null);
 	}
 
-	// Token: 0x0600F1AD RID: 61869 RVA: 0x003A2E24 File Offset: 0x003A1024
+	// Token: 0x0600C5CC RID: 50636 RVA: 0x003AE924 File Offset: 0x003ACB24
 	private void OnClickedButton(EToggleState toggleState)
 	{
 		HonamiStoryBackpackLogicController backpackLogic = HonamiStoryModel.Instance.GetBackpackLogic();
@@ -351,7 +351,7 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		extendToggle.RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0600F1AE RID: 61870 RVA: 0x003A2E66 File Offset: 0x003A1066
+	// Token: 0x0600C5CD RID: 50637 RVA: 0x003AE966 File Offset: 0x003ACB66
 	private void OnClickedArrowButton()
 	{
 		Action closeCallback = this.CloseCallback;
@@ -362,14 +362,14 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		this.ShowTips(false);
 	}
 
-	// Token: 0x0600F1AF RID: 61871 RVA: 0x003A2E80 File Offset: 0x003A1080
+	// Token: 0x0600C5CE RID: 50638 RVA: 0x003AE980 File Offset: 0x003ACB80
 	private void OnSkillDescModeChange(bool _)
 	{
 		this.RefreshWeaponTips();
 		this.RefreshPluginTips();
 	}
 
-	// Token: 0x0600F1B0 RID: 61872 RVA: 0x003A2E90 File Offset: 0x003A1090
+	// Token: 0x0600C5CF RID: 50639 RVA: 0x003AE990 File Offset: 0x003ACB90
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -409,14 +409,14 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x04006FB9 RID: 28601
+	// Token: 0x0400709A RID: 28826
 	[Nullable(2)]
 	private HonamiStoryRoleEquipData EquipData;
 
-	// Token: 0x04006FBA RID: 28602
+	// Token: 0x0400709B RID: 28827
 	private GenericLayout<HonamiStoryWeaponSuitInfoItem, IHonamiStoryWeaponSuitData> SuitVerticalLayout;
 
-	// Token: 0x04006FBB RID: 28603
+	// Token: 0x0400709C RID: 28828
 	[Nullable(new byte[]
 	{
 		2,
@@ -425,7 +425,7 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 	})]
 	protected GenericLayout<HonamiStoryTipsTextItem, IHonamiStoryTipsBuffInfo> SkillLayout;
 
-	// Token: 0x04006FBC RID: 28604
+	// Token: 0x0400709D RID: 28829
 	[Nullable(new byte[]
 	{
 		2,
@@ -434,60 +434,60 @@ public class HonamiStoryRoleTipItem : UiPanelBase
 	})]
 	protected GenericLayout<HonamiStoryTipsPropertyItem, IHonamiStoryTipsPropertyData> PropertyLayout;
 
-	// Token: 0x04006FBD RID: 28605
+	// Token: 0x0400709E RID: 28830
 	private GenericLayout<HonamiStoryWeaponTagItem, int> TagLayout;
 
-	// Token: 0x04006FBE RID: 28606
+	// Token: 0x0400709F RID: 28831
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006FBF RID: 28607
+	// Token: 0x040070A0 RID: 28832
 	[Nullable(2)]
 	private Action CloseCallback;
 
-	// Token: 0x0200848D RID: 33933
+	// Token: 0x02007612 RID: 30226
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B250 RID: 176720
+		// Token: 0x04026574 RID: 157044
 		WeaponInfoPanel,
-		// Token: 0x0402B251 RID: 176721
+		// Token: 0x04026575 RID: 157045
 		WeaponInfoText,
-		// Token: 0x0402B252 RID: 176722
+		// Token: 0x04026576 RID: 157046
 		SuitInfoPanel,
-		// Token: 0x0402B253 RID: 176723
+		// Token: 0x04026577 RID: 157047
 		SuitActiveVerticalLayout,
-		// Token: 0x0402B254 RID: 176724
+		// Token: 0x04026578 RID: 157048
 		SuitActiveItem,
-		// Token: 0x0402B255 RID: 176725
+		// Token: 0x04026579 RID: 157049
 		SkillInfoPanel,
-		// Token: 0x0402B256 RID: 176726
+		// Token: 0x0402657A RID: 157050
 		SkillVerticalLayout,
-		// Token: 0x0402B257 RID: 176727
+		// Token: 0x0402657B RID: 157051
 		SkillItem,
-		// Token: 0x0402B258 RID: 176728
+		// Token: 0x0402657C RID: 157052
 		PropertyInfoPanel,
-		// Token: 0x0402B259 RID: 176729
+		// Token: 0x0402657D RID: 157053
 		PropertyInfoVerticalLayout,
-		// Token: 0x0402B25A RID: 176730
+		// Token: 0x0402657E RID: 157054
 		PropertyInfoItem,
-		// Token: 0x0402B25B RID: 176731
+		// Token: 0x0402657F RID: 157055
 		ArrowButton,
-		// Token: 0x0402B25C RID: 176732
+		// Token: 0x04026580 RID: 157056
 		WeaponEmptyPanel,
-		// Token: 0x0402B25D RID: 176733
+		// Token: 0x04026581 RID: 157057
 		ItemEmptyPanel,
-		// Token: 0x0402B25E RID: 176734
+		// Token: 0x04026582 RID: 157058
 		PanelSelf,
-		// Token: 0x0402B25F RID: 176735
+		// Token: 0x04026583 RID: 157059
 		ToggleClose,
-		// Token: 0x0402B260 RID: 176736
+		// Token: 0x04026584 RID: 157060
 		ScrollView,
-		// Token: 0x0402B261 RID: 176737
+		// Token: 0x04026585 RID: 157061
 		TagPanel,
-		// Token: 0x0402B262 RID: 176738
+		// Token: 0x04026586 RID: 157062
 		TagLayout,
-		// Token: 0x0402B263 RID: 176739
+		// Token: 0x04026587 RID: 157063
 		TagItem
 	}
 }

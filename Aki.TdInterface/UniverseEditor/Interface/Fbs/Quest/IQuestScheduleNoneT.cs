@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200402F RID: 16431
+	// Token: 0x02004470 RID: 17520
 	public class IQuestScheduleNoneT
 	{
-		// Token: 0x1700739C RID: 29596
-		// (get) Token: 0x06017C48 RID: 97352 RVA: 0x0036DDA6 File Offset: 0x0036BFA6
-		// (set) Token: 0x06017C49 RID: 97353 RVA: 0x0036DDAE File Offset: 0x0036BFAE
+		// Token: 0x1700799E RID: 31134
+		// (get) Token: 0x060192E1 RID: 103137 RVA: 0x00397B9A File Offset: 0x00395D9A
+		// (set) Token: 0x060192E2 RID: 103138 RVA: 0x00397BA2 File Offset: 0x00395DA2
 		public EQuestScheduleType Type { get; set; }
 
-		// Token: 0x06017C4A RID: 97354 RVA: 0x0036DDB7 File Offset: 0x0036BFB7
+		// Token: 0x060192E3 RID: 103139 RVA: 0x00397BAB File Offset: 0x00395DAB
 		public IQuestScheduleNoneT()
 		{
 			this.Type = EQuestScheduleType.None;

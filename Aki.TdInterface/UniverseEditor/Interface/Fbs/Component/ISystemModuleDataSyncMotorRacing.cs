@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A22 RID: 23074
+	// Token: 0x0200602F RID: 24623
 	public struct ISystemModuleDataSyncMotorRacing : IFlatbufferObject
 	{
-		// Token: 0x1700AD70 RID: 44400
-		// (get) Token: 0x060272F9 RID: 160505 RVA: 0x00563E06 File Offset: 0x00562006
+		// Token: 0x1700B6A8 RID: 46760
+		// (get) Token: 0x06029871 RID: 170097 RVA: 0x005AADCA File Offset: 0x005A8FCA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060272FA RID: 160506 RVA: 0x00563E13 File Offset: 0x00562013
+		// Token: 0x06029872 RID: 170098 RVA: 0x005AADD7 File Offset: 0x005A8FD7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060272FB RID: 160507 RVA: 0x00563E1C File Offset: 0x0056201C
+		// Token: 0x06029873 RID: 170099 RVA: 0x005AADE0 File Offset: 0x005A8FE0
 		public static ISystemModuleDataSyncMotorRacing GetRootAsISystemModuleDataSyncMotorRacing(ByteBuffer _bb)
 		{
 			return ISystemModuleDataSyncMotorRacing.GetRootAsISystemModuleDataSyncMotorRacing(_bb, default(ISystemModuleDataSyncMotorRacing));
 		}
 
-		// Token: 0x060272FC RID: 160508 RVA: 0x00563E38 File Offset: 0x00562038
+		// Token: 0x06029874 RID: 170100 RVA: 0x005AADFC File Offset: 0x005A8FFC
 		public static ISystemModuleDataSyncMotorRacing GetRootAsISystemModuleDataSyncMotorRacing(ByteBuffer _bb, ISystemModuleDataSyncMotorRacing obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060272FD RID: 160509 RVA: 0x00563E55 File Offset: 0x00562055
+		// Token: 0x06029875 RID: 170101 RVA: 0x005AAE19 File Offset: 0x005A9019
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060272FE RID: 160510 RVA: 0x00563E64 File Offset: 0x00562064
+		// Token: 0x06029876 RID: 170102 RVA: 0x005AAE28 File Offset: 0x005A9028
 		public ISystemModuleDataSyncMotorRacing __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AD71 RID: 44401
-		// (get) Token: 0x060272FF RID: 160511 RVA: 0x00563E74 File Offset: 0x00562074
+		// Token: 0x1700B6A9 RID: 46761
+		// (get) Token: 0x06029877 RID: 170103 RVA: 0x005AAE38 File Offset: 0x005A9038
 		public ESyncDataSystemType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AD72 RID: 44402
-		// (get) Token: 0x06027300 RID: 160512 RVA: 0x00563EB0 File Offset: 0x005620B0
+		// Token: 0x1700B6AA RID: 46762
+		// (get) Token: 0x06029878 RID: 170104 RVA: 0x005AAE74 File Offset: 0x005A9074
 		public int MotorParkourId
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027301 RID: 160513 RVA: 0x00563EEC File Offset: 0x005620EC
+		// Token: 0x06029879 RID: 170105 RVA: 0x005AAEB0 File Offset: 0x005A90B0
 		public IMotorParkourSystemVar? Vars(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IMotorParkourSystemVar?(default(IMotorParkourSystemVar).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700AD73 RID: 44403
-		// (get) Token: 0x06027302 RID: 160514 RVA: 0x00563F4C File Offset: 0x0056214C
+		// Token: 0x1700B6AB RID: 46763
+		// (get) Token: 0x0602987A RID: 170106 RVA: 0x005AAF10 File Offset: 0x005A9110
 		public int VarsLength
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027303 RID: 160515 RVA: 0x00563F77 File Offset: 0x00562177
+		// Token: 0x0602987B RID: 170107 RVA: 0x005AAF3B File Offset: 0x005A913B
 		public static Offset<ISystemModuleDataSyncMotorRacing> CreateISystemModuleDataSyncMotorRacing(FlatBufferBuilder builder, ESyncDataSystemType Type = ESyncDataSystemType.MotorRacing, int MotorParkourId = 0, VectorOffset VarsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -115,31 +115,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISystemModuleDataSyncMotorRacing.EndISystemModuleDataSyncMotorRacing(builder);
 		}
 
-		// Token: 0x06027304 RID: 160516 RVA: 0x00563F9B File Offset: 0x0056219B
+		// Token: 0x0602987C RID: 170108 RVA: 0x005AAF5F File Offset: 0x005A915F
 		public static void StartISystemModuleDataSyncMotorRacing(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06027305 RID: 160517 RVA: 0x00563FA4 File Offset: 0x005621A4
+		// Token: 0x0602987D RID: 170109 RVA: 0x005AAF68 File Offset: 0x005A9168
 		public static void AddType(FlatBufferBuilder builder, ESyncDataSystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06027306 RID: 160518 RVA: 0x00563FAF File Offset: 0x005621AF
+		// Token: 0x0602987E RID: 170110 RVA: 0x005AAF73 File Offset: 0x005A9173
 		public static void AddMotorParkourId(FlatBufferBuilder builder, int motorParkourId)
 		{
 			builder.AddInt(1, motorParkourId, 0);
 		}
 
-		// Token: 0x06027307 RID: 160519 RVA: 0x00563FBA File Offset: 0x005621BA
+		// Token: 0x0602987F RID: 170111 RVA: 0x005AAF7E File Offset: 0x005A917E
 		public static void AddVars(FlatBufferBuilder builder, VectorOffset varsOffset)
 		{
 			builder.AddOffset(2, varsOffset.Value, 0);
 		}
 
-		// Token: 0x06027308 RID: 160520 RVA: 0x00563FCC File Offset: 0x005621CC
+		// Token: 0x06029880 RID: 170112 RVA: 0x005AAF90 File Offset: 0x005A9190
 		public static VectorOffset CreateVarsVector(FlatBufferBuilder builder, Offset<IMotorParkourSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027309 RID: 160521 RVA: 0x0056400C File Offset: 0x0056220C
+		// Token: 0x06029881 RID: 170113 RVA: 0x005AAFD0 File Offset: 0x005A91D0
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, Offset<IMotorParkourSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602730A RID: 160522 RVA: 0x00564026 File Offset: 0x00562226
+		// Token: 0x06029882 RID: 170114 RVA: 0x005AAFEA File Offset: 0x005A91EA
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IMotorParkourSystemVar>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -166,7 +166,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602730B RID: 160523 RVA: 0x00564044 File Offset: 0x00562244
+		// Token: 0x06029883 RID: 170115 RVA: 0x005AB008 File Offset: 0x005A9208
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -174,19 +174,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602730C RID: 160524 RVA: 0x0056405D File Offset: 0x0056225D
+		// Token: 0x06029884 RID: 170116 RVA: 0x005AB021 File Offset: 0x005A9221
 		public static void StartVarsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602730D RID: 160525 RVA: 0x00564068 File Offset: 0x00562268
+		// Token: 0x06029885 RID: 170117 RVA: 0x005AB02C File Offset: 0x005A922C
 		public static Offset<ISystemModuleDataSyncMotorRacing> EndISystemModuleDataSyncMotorRacing(FlatBufferBuilder builder)
 		{
 			return new Offset<ISystemModuleDataSyncMotorRacing>(builder.EndTable());
 		}
 
-		// Token: 0x0602730E RID: 160526 RVA: 0x00564078 File Offset: 0x00562278
+		// Token: 0x06029886 RID: 170118 RVA: 0x005AB03C File Offset: 0x005A923C
 		public ISystemModuleDataSyncMotorRacingT UnPack()
 		{
 			ISystemModuleDataSyncMotorRacingT systemModuleDataSyncMotorRacingT = new ISystemModuleDataSyncMotorRacingT();
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return systemModuleDataSyncMotorRacingT;
 		}
 
-		// Token: 0x0602730F RID: 160527 RVA: 0x00564094 File Offset: 0x00562294
+		// Token: 0x06029887 RID: 170119 RVA: 0x005AB058 File Offset: 0x005A9258
 		public void UnPackTo(ISystemModuleDataSyncMotorRacingT _o)
 		{
 			_o.Type = this.Type;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027310 RID: 160528 RVA: 0x0056410C File Offset: 0x0056230C
+		// Token: 0x06029888 RID: 170120 RVA: 0x005AB0D0 File Offset: 0x005A92D0
 		public static Offset<ISystemModuleDataSyncMotorRacing> Pack(FlatBufferBuilder builder, ISystemModuleDataSyncMotorRacingT _o)
 		{
 			if (_o == null)
@@ -226,7 +226,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISystemModuleDataSyncMotorRacing.CreateISystemModuleDataSyncMotorRacing(builder, _o.Type, _o.MotorParkourId, varsOffset);
 		}
 
-		// Token: 0x0400F078 RID: 61560
+		// Token: 0x0400FD6F RID: 64879
 		private Table __p;
 	}
 }

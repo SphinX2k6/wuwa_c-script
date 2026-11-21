@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001D5 RID: 469
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020001FC RID: 508
 	public class IAudioEventConfig
 	{
-		// Token: 0x06000784 RID: 1924 RVA: 0x0002510C File Offset: 0x0002330C
-		[NullableContext(1)]
+		// Token: 0x060007F2 RID: 2034 RVA: 0x000267EC File Offset: 0x000249EC
 		private IAudioEventConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000785 RID: 1925 RVA: 0x00025144 File Offset: 0x00023344
-		[NullableContext(1)]
+		// Token: 0x060007F3 RID: 2035 RVA: 0x00026824 File Offset: 0x00024A24
 		public static IAudioEventConfig Create([Nullable(2)] IAudioEventConfig instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000786 RID: 1926 RVA: 0x00025157 File Offset: 0x00023357
-		[NullableContext(1)]
+		// Token: 0x060007F4 RID: 2036 RVA: 0x00026837 File Offset: 0x00024A37
 		public static IAudioEventConfig CreateFromSetValue([Nullable(2)] IAudioEventConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000787 RID: 1927 RVA: 0x0002516A File Offset: 0x0002336A
-		[NullableContext(1)]
+		// Token: 0x060007F5 RID: 2037 RVA: 0x0002684A File Offset: 0x00024A4A
 		public IAudioEventConfig_SetValue ToSetValue()
 		{
 			return new IAudioEventConfig_SetValue
@@ -63,11 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000260 RID: 608
-		// (get) Token: 0x06000788 RID: 1928 RVA: 0x0002517D File Offset: 0x0002337D
-		// (set) Token: 0x06000789 RID: 1929 RVA: 0x000251A4 File Offset: 0x000233A4
+		// Token: 0x1700027C RID: 636
+		// (get) Token: 0x060007F6 RID: 2038 RVA: 0x0002685D File Offset: 0x00024A5D
+		// (set) Token: 0x060007F7 RID: 2039 RVA: 0x00026884 File Offset: 0x00024A84
+		[Nullable(2)]
 		public virtual string CollectAkEvent
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -81,16 +77,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.CollectAkEvent;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().CollectAkEvent = value;
 			}
 		}
 
-		// Token: 0x040008AA RID: 2218
+		// Token: 0x04000931 RID: 2353
+		[Nullable(2)]
 		protected IAudioEventConfig FbInstance;
 
-		// Token: 0x040008AB RID: 2219
+		// Token: 0x04000932 RID: 2354
+		[Nullable(2)]
 		protected IAudioEventConfig_SetValue PocoInterface;
 	}
 }

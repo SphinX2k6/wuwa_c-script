@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004334 RID: 17204
+	// Token: 0x02004796 RID: 18326
 	public static class TUseWeatherSwitchConditionVerify
 	{
-		// Token: 0x0601982C RID: 104492 RVA: 0x003A758C File Offset: 0x003A578C
+		// Token: 0x0601AFBA RID: 110522 RVA: 0x003D2FB4 File Offset: 0x003D11B4
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.SceneItem;
 
-// Token: 0x020016E5 RID: 5861
+// Token: 0x02000B9D RID: 2973
 public class SeatMorphRuntimeStruct
 {
-	// Token: 0x0600A7FE RID: 43006 RVA: 0x0025B767 File Offset: 0x00259967
+	// Token: 0x06007BDE RID: 31710 RVA: 0x00265B6F File Offset: 0x00263D6F
 	public void SetTargetSeatMorph(double v)
 	{
 		this.TargetSeatMorph = MathUtils.Instance.Clamp(v, 0.0, 1.0);
 	}
 
-	// Token: 0x0600A7FF RID: 43007 RVA: 0x0025B78C File Offset: 0x0025998C
+	// Token: 0x06007BDF RID: 31711 RVA: 0x00265B94 File Offset: 0x00263D94
 	[NullableContext(1)]
 	public SeatMorphRuntimeStruct(Entity seatEntity, int charEntityId)
 	{
@@ -20,7 +20,7 @@ public class SeatMorphRuntimeStruct
 		this.SceneItemProceduralMatComp = seatEntity.GetComponent<SceneItemProceduralMaterialComponent>();
 	}
 
-	// Token: 0x0600A800 RID: 43008 RVA: 0x0025B7B3 File Offset: 0x002599B3
+	// Token: 0x06007BE0 RID: 31712 RVA: 0x00265BBB File Offset: 0x00263DBB
 	public bool TrySetTargetSeatMorph(int charEntityId, double v)
 	{
 		if (this.CharEntityId != charEntityId)
@@ -35,7 +35,7 @@ public class SeatMorphRuntimeStruct
 		return true;
 	}
 
-	// Token: 0x0600A801 RID: 43009 RVA: 0x0025B7E0 File Offset: 0x002599E0
+	// Token: 0x06007BE1 RID: 31713 RVA: 0x00265BE8 File Offset: 0x00263DE8
 	public bool Update(float delta)
 	{
 		if (EntitySystem.Instance.Get(this.SeatEntityId) == null)
@@ -65,19 +65,19 @@ public class SeatMorphRuntimeStruct
 		return false;
 	}
 
-	// Token: 0x04004BB0 RID: 19376
+	// Token: 0x04004C57 RID: 19543
 	private int SeatEntityId;
 
-	// Token: 0x04004BB1 RID: 19377
+	// Token: 0x04004C58 RID: 19544
 	private double TargetSeatMorph;
 
-	// Token: 0x04004BB2 RID: 19378
+	// Token: 0x04004C59 RID: 19545
 	private double CurrentSeatMorph;
 
-	// Token: 0x04004BB3 RID: 19379
+	// Token: 0x04004C5A RID: 19546
 	[Nullable(2)]
 	private SceneItemProceduralMaterialComponent SceneItemProceduralMatComp;
 
-	// Token: 0x04004BB4 RID: 19380
+	// Token: 0x04004C5B RID: 19547
 	private int CharEntityId;
 }

@@ -13,30 +13,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x0200536A RID: 21354
+	// Token: 0x0200434D RID: 17229
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GuqinView : MusicalInstrumentBaseView
 	{
-		// Token: 0x060368FC RID: 223484 RVA: 0x00CEB9DB File Offset: 0x00CE9BDB
+		// Token: 0x0602B842 RID: 178242 RVA: 0x00C3A867 File Offset: 0x00C38A67
 		public GuqinView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060368FD RID: 223485 RVA: 0x00CEBA01 File Offset: 0x00CE9C01
+		// Token: 0x0602B843 RID: 178243 RVA: 0x00C3A88D File Offset: 0x00C38A8D
 		protected override EInstrumentType GetMusicalInstrumentType()
 		{
 			return EInstrumentType.ChineseZither;
 		}
 
-		// Token: 0x060368FE RID: 223486 RVA: 0x00CEBA04 File Offset: 0x00CE9C04
+		// Token: 0x0602B844 RID: 178244 RVA: 0x00C3A890 File Offset: 0x00C38A90
 		[PreserveBaseOverrides]
 		protected new virtual GuqinSubModel GetSubModel()
 		{
 			return (GuqinSubModel)MusicalInstrumentModel.Instance.GetSubModel(EInstrumentType.ChineseZither);
 		}
 
-		// Token: 0x060368FF RID: 223487 RVA: 0x00CEBA18 File Offset: 0x00CE9C18
+		// Token: 0x0602B845 RID: 178245 RVA: 0x00C3A8A4 File Offset: 0x00C38AA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036900 RID: 223488 RVA: 0x00CEBB8C File Offset: 0x00CE9D8C
+		// Token: 0x0602B846 RID: 178246 RVA: 0x00C3AA18 File Offset: 0x00C38C18
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GuqinView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036901 RID: 223489 RVA: 0x00CEBBD0 File Offset: 0x00CE9DD0
+		// Token: 0x0602B847 RID: 178247 RVA: 0x00C3AA5C File Offset: 0x00C38C5C
 		private UniTask CreateKeyItems()
 		{
 			GuqinView.<CreateKeyItems>d__12 <CreateKeyItems>d__;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <CreateKeyItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036902 RID: 223490 RVA: 0x00CEBC14 File Offset: 0x00CE9E14
+		// Token: 0x0602B848 RID: 178248 RVA: 0x00C3AAA0 File Offset: 0x00C38CA0
 		protected override void OnStart()
 		{
 			this.AddEvents();
@@ -112,19 +112,19 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}
 		}
 
-		// Token: 0x06036903 RID: 223491 RVA: 0x00CEBCA7 File Offset: 0x00CE9EA7
+		// Token: 0x0602B849 RID: 178249 RVA: 0x00C3AB33 File Offset: 0x00C38D33
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<EInputControllerMainType, EInputControllerMainType>(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.OnInputControllerMainTypeChange));
 		}
 
-		// Token: 0x06036904 RID: 223492 RVA: 0x00CEBCC5 File Offset: 0x00CE9EC5
+		// Token: 0x0602B84A RID: 178250 RVA: 0x00C3AB51 File Offset: 0x00C38D51
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.OnInputControllerMainTypeChange));
 		}
 
-		// Token: 0x06036905 RID: 223493 RVA: 0x00CEBCE4 File Offset: 0x00CE9EE4
+		// Token: 0x0602B84B RID: 178251 RVA: 0x00C3AB70 File Offset: 0x00C38D70
 		private void OnInputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
 		{
 			if (now == EInputControllerMainType.Gamepad)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}
 		}
 
-		// Token: 0x06036906 RID: 223494 RVA: 0x00CEBD44 File Offset: 0x00CE9F44
+		// Token: 0x0602B84C RID: 178252 RVA: 0x00C3ABD0 File Offset: 0x00C38DD0
 		private void InitQteMode()
 		{
 			MusicalInstrumentQteData qteData = this.GetSubModel().GetQteData();
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			item6.SetUIActive(true);
 		}
 
-		// Token: 0x06036907 RID: 223495 RVA: 0x00CEBE34 File Offset: 0x00CEA034
+		// Token: 0x0602B84D RID: 178253 RVA: 0x00C3ACC0 File Offset: 0x00C38EC0
 		private GuqinQteItem InitGuqinQteItem()
 		{
 			return new GuqinQteItem
@@ -200,14 +200,14 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			};
 		}
 
-		// Token: 0x06036908 RID: 223496 RVA: 0x00CEBE4D File Offset: 0x00CEA04D
+		// Token: 0x0602B84E RID: 178254 RVA: 0x00C3ACD9 File Offset: 0x00C38ED9
 		[NullableContext(2)]
 		private GuqinKeyConfig GetKeyConfigCallback(int rowIndex, int columnIndex)
 		{
 			return this.GetSubModel().GetKeyConfig(rowIndex, columnIndex);
 		}
 
-		// Token: 0x06036909 RID: 223497 RVA: 0x00CEBE5C File Offset: 0x00CEA05C
+		// Token: 0x0602B84F RID: 178255 RVA: 0x00C3ACE8 File Offset: 0x00C38EE8
 		private void OnSelectAudioType(EZitherAudioType audioType)
 		{
 			this.AudioType = audioType;
@@ -242,19 +242,19 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			uiViewSequence.PlayOrReplaySequenceByName("Switch", false, null);
 		}
 
-		// Token: 0x0603690A RID: 223498 RVA: 0x00CEBF40 File Offset: 0x00CEA140
+		// Token: 0x0602B850 RID: 178256 RVA: 0x00C3ADCC File Offset: 0x00C38FCC
 		private void OnCloseBtnClick()
 		{
 			base.Exit();
 		}
 
-		// Token: 0x0603690B RID: 223499 RVA: 0x00CEBF48 File Offset: 0x00CEA148
+		// Token: 0x0602B851 RID: 178257 RVA: 0x00C3ADD4 File Offset: 0x00C38FD4
 		private void OnHelpBtnClick()
 		{
 			HelpController.Instance.OpenHelpById(662);
 		}
 
-		// Token: 0x0603690C RID: 223500 RVA: 0x00CEBF59 File Offset: 0x00CEA159
+		// Token: 0x0602B852 RID: 178258 RVA: 0x00C3ADE5 File Offset: 0x00C38FE5
 		protected override void OnQtePerformance(int rowIndex, int columnIndex, bool success)
 		{
 			if (success)
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}
 		}
 
-		// Token: 0x0603690D RID: 223501 RVA: 0x00CEBF70 File Offset: 0x00CEA170
+		// Token: 0x0602B853 RID: 178259 RVA: 0x00C3ADFC File Offset: 0x00C38FFC
 		protected override void PostAudioEventByIndex(int rowIndex, int columnIndex)
 		{
 			GuqinKeyConfig keyConfig = this.GetSubModel().GetKeyConfig(rowIndex, columnIndex);
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			MusicalInstrumentController.Instance.SyncServerRequest(@event);
 		}
 
-		// Token: 0x0603690E RID: 223502 RVA: 0x00CEBFCC File Offset: 0x00CEA1CC
+		// Token: 0x0602B854 RID: 178260 RVA: 0x00C3AE58 File Offset: 0x00C39058
 		public void OnGamepadChangePitch(EZitherGamepadPitchType pitchType)
 		{
 			for (int i = 0; i < this.KeyGroupViews.Count; i++)
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}
 		}
 
-		// Token: 0x0603690F RID: 223503 RVA: 0x00CEC004 File Offset: 0x00CEA204
+		// Token: 0x0602B855 RID: 178261 RVA: 0x00C3AE90 File Offset: 0x00C39090
 		public void OnGamepadPressPitch(EZitherGamepadPitchType pitchType)
 		{
 			int num = this.HeldPitchTypes.IndexOf(pitchType);
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.OnGamepadChangePitch(pitchType);
 		}
 
-		// Token: 0x06036910 RID: 223504 RVA: 0x00CEC044 File Offset: 0x00CEA244
+		// Token: 0x0602B856 RID: 178262 RVA: 0x00C3AED0 File Offset: 0x00C390D0
 		public void OnGamepadReleasePitch(EZitherGamepadPitchType pitchType)
 		{
 			int num = this.HeldPitchTypes.IndexOf(pitchType);
@@ -314,25 +314,25 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.OnGamepadChangePitch(pitchType2);
 		}
 
-		// Token: 0x06036911 RID: 223505 RVA: 0x00CEC09F File Offset: 0x00CEA29F
+		// Token: 0x0602B857 RID: 178263 RVA: 0x00C3AF2B File Offset: 0x00C3912B
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0401CD7E RID: 118142
+		// Token: 0x04017814 RID: 96276
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401CD7F RID: 118143
+		// Token: 0x04017815 RID: 96277
 		[Nullable(2)]
 		private GuqinModeToggleItem FundamentalToneToggleItem;
 
-		// Token: 0x0401CD80 RID: 118144
+		// Token: 0x04017816 RID: 96278
 		[Nullable(2)]
 		private GuqinModeToggleItem OverToneToggleItem;
 
-		// Token: 0x0401CD81 RID: 118145
+		// Token: 0x04017817 RID: 96279
 		[Nullable(new byte[]
 		{
 			2,
@@ -341,38 +341,38 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 		})]
 		private GenericLayout<GuqinQteItem, MusicalInstrumentQteItemData> QteLayout;
 
-		// Token: 0x0401CD82 RID: 118146
+		// Token: 0x04017818 RID: 96280
 		private EZitherAudioType AudioType = EZitherAudioType.FundamentalTone;
 
-		// Token: 0x0401CD83 RID: 118147
+		// Token: 0x04017819 RID: 96281
 		private readonly List<ZitherKeyGroupView> KeyGroupViews = new List<ZitherKeyGroupView>();
 
-		// Token: 0x0401CD84 RID: 118148
+		// Token: 0x0401781A RID: 96282
 		private readonly List<EZitherGamepadPitchType> HeldPitchTypes = new List<EZitherGamepadPitchType>();
 
-		// Token: 0x0200B5E3 RID: 46563
+		// Token: 0x0200A01A RID: 40986
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04037184 RID: 225668
+			// Token: 0x04031BD7 RID: 203735
 			CaptionItem,
-			// Token: 0x04037185 RID: 225669
+			// Token: 0x04031BD8 RID: 203736
 			NormalMode,
-			// Token: 0x04037186 RID: 225670
+			// Token: 0x04031BD9 RID: 203737
 			SpecialMode,
-			// Token: 0x04037187 RID: 225671
+			// Token: 0x04031BDA RID: 203738
 			HighGroup,
-			// Token: 0x04037188 RID: 225672
+			// Token: 0x04031BDB RID: 203739
 			MiddleGroup,
-			// Token: 0x04037189 RID: 225673
+			// Token: 0x04031BDC RID: 203740
 			LowGroup,
-			// Token: 0x0403718A RID: 225674
+			// Token: 0x04031BDD RID: 203741
 			PnlTopQte,
-			// Token: 0x0403718B RID: 225675
+			// Token: 0x04031BDE RID: 203742
 			PnlQteLayout,
-			// Token: 0x0403718C RID: 225676
+			// Token: 0x04031BDF RID: 203743
 			QteKeyItem,
-			// Token: 0x0403718D RID: 225677
+			// Token: 0x04031BE0 RID: 203744
 			BtnVisible
 		}
 	}

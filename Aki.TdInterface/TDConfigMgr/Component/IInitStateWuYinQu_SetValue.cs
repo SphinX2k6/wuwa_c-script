@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000471 RID: 1137
+	// Token: 0x020004CA RID: 1226
 	public class IInitStateWuYinQu_SetValue
 	{
-		// Token: 0x04001155 RID: 4437
+		// Token: 0x04001277 RID: 4727
 		public EInitStateType Type;
 	}
 }

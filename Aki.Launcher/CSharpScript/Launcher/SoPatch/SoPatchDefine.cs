@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.SoPatch
 {
-	// Token: 0x02000106 RID: 262
+	// Token: 0x0200010A RID: 266
 	public static class SoPatchDefine
 	{
-		// Token: 0x0600087F RID: 2175 RVA: 0x0003EA2B File Offset: 0x0003CC2B
+		// Token: 0x060008B3 RID: 2227 RVA: 0x00040DCB File Offset: 0x0003EFCB
 		[NullableContext(1)]
 		public static void CheckCondition(string expect, string value, CheckConditions condition, int num)
 		{

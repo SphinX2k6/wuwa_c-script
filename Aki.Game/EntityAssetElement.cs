@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Core.Fight;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02003314 RID: 13076
+// Token: 0x02002886 RID: 10374
 [NullableContext(2)]
 [Nullable(0)]
 public class EntityAssetElement
 {
-	// Token: 0x0601C7C1 RID: 116673 RVA: 0x007FDE54 File Offset: 0x007FC054
+	// Token: 0x0601A4BA RID: 107706 RVA: 0x008243C0 File Offset: 0x008225C0
 	[NullableContext(1)]
 	public EntityAssetElement(EntityHandle handle)
 	{
@@ -29,9 +29,9 @@ public class EntityAssetElement
 		handle.Priority = (ResourceSystem.EResourceLoadPriority)Math.Max((int)this.LoadPriority, (int)handle.Priority);
 	}
 
-	// Token: 0x17002777 RID: 10103
-	// (get) Token: 0x0601C7C2 RID: 116674 RVA: 0x007FDEFC File Offset: 0x007FC0FC
-	// (set) Token: 0x0601C7C3 RID: 116675 RVA: 0x007FDF04 File Offset: 0x007FC104
+	// Token: 0x17002B14 RID: 11028
+	// (get) Token: 0x0601A4BB RID: 107707 RVA: 0x00824468 File Offset: 0x00822668
+	// (set) Token: 0x0601A4BC RID: 107708 RVA: 0x00824470 File Offset: 0x00822670
 	public ELoadResultType LoadState
 	{
 		get
@@ -44,9 +44,9 @@ public class EntityAssetElement
 		}
 	}
 
-	// Token: 0x17002778 RID: 10104
-	// (get) Token: 0x0601C7C4 RID: 116676 RVA: 0x007FDF0D File Offset: 0x007FC10D
-	// (set) Token: 0x0601C7C5 RID: 116677 RVA: 0x007FDF15 File Offset: 0x007FC115
+	// Token: 0x17002B15 RID: 11029
+	// (get) Token: 0x0601A4BD RID: 107709 RVA: 0x00824479 File Offset: 0x00822679
+	// (set) Token: 0x0601A4BE RID: 107710 RVA: 0x00824481 File Offset: 0x00822681
 	public bool CollectMinorAsset
 	{
 		get
@@ -59,8 +59,8 @@ public class EntityAssetElement
 		}
 	}
 
-	// Token: 0x17002779 RID: 10105
-	// (get) Token: 0x0601C7C6 RID: 116678 RVA: 0x007FDF1E File Offset: 0x007FC11E
+	// Token: 0x17002B16 RID: 11030
+	// (get) Token: 0x0601A4BF RID: 107711 RVA: 0x0082448A File Offset: 0x0082268A
 	public Entity Entity
 	{
 		get
@@ -74,9 +74,9 @@ public class EntityAssetElement
 		}
 	}
 
-	// Token: 0x1700277A RID: 10106
-	// (get) Token: 0x0601C7C7 RID: 116679 RVA: 0x007FDF31 File Offset: 0x007FC131
-	// (set) Token: 0x0601C7C8 RID: 116680 RVA: 0x007FDF39 File Offset: 0x007FC139
+	// Token: 0x17002B17 RID: 11031
+	// (get) Token: 0x0601A4C0 RID: 107712 RVA: 0x0082449D File Offset: 0x0082269D
+	// (set) Token: 0x0601A4C1 RID: 107713 RVA: 0x008244A5 File Offset: 0x008226A5
 	public string BlueprintClassPath
 	{
 		get
@@ -89,7 +89,7 @@ public class EntityAssetElement
 		}
 	}
 
-	// Token: 0x0601C7C9 RID: 116681 RVA: 0x007FDF44 File Offset: 0x007FC144
+	// Token: 0x0601A4C2 RID: 107714 RVA: 0x008244B0 File Offset: 0x008226B0
 	[NullableContext(1)]
 	public void SetCharacterLoadTypes(IReadOnlyList<ECharacterLoadType> loadTypes)
 	{
@@ -117,7 +117,7 @@ public class EntityAssetElement
 		this.FightAssetManager.SkillAssetManager.ResetForLoadTypeChange();
 	}
 
-	// Token: 0x0601C7CA RID: 116682 RVA: 0x007FDFF4 File Offset: 0x007FC1F4
+	// Token: 0x0601A4C3 RID: 107715 RVA: 0x00824560 File Offset: 0x00822760
 	[NullableContext(1)]
 	public void AddCallback(Action<ELoadResultType> callback)
 	{
@@ -132,7 +132,7 @@ public class EntityAssetElement
 		this.Callbacks.Add(callback);
 	}
 
-	// Token: 0x0601C7CB RID: 116683 RVA: 0x007FE01C File Offset: 0x007FC21C
+	// Token: 0x0601A4C4 RID: 107716 RVA: 0x00824588 File Offset: 0x00822788
 	public void DoCallback(ELoadResultType result)
 	{
 		if (this.Callbacks == null || this.Callbacks.Count == 0)
@@ -146,13 +146,13 @@ public class EntityAssetElement
 		this.Callbacks = null;
 	}
 
-	// Token: 0x0601C7CC RID: 116684 RVA: 0x007FE08C File Offset: 0x007FC28C
+	// Token: 0x0601A4C5 RID: 107717 RVA: 0x008245F8 File Offset: 0x008227F8
 	public void ClearCallback()
 	{
 		this.Callbacks = null;
 	}
 
-	// Token: 0x0601C7CD RID: 116685 RVA: 0x007FE098 File Offset: 0x007FC298
+	// Token: 0x0601A4C6 RID: 107718 RVA: 0x00824604 File Offset: 0x00822804
 	public void Clear()
 	{
 		UHoldPreloadObject holdPreloadObject = PreloadModelNew.Instance.HoldPreloadObject;
@@ -172,30 +172,30 @@ public class EntityAssetElement
 		this.IsDestroy = true;
 	}
 
-	// Token: 0x0601C7CE RID: 116686 RVA: 0x007FE116 File Offset: 0x007FC316
+	// Token: 0x0601A4C7 RID: 107719 RVA: 0x00824682 File Offset: 0x00822882
 	public void PrintDebugInfo()
 	{
 	}
 
-	// Token: 0x0400E240 RID: 57920
+	// Token: 0x0400E6F1 RID: 59121
 	[Nullable(0)]
 	public UniTask<ELoadResultType>? Promise;
 
-	// Token: 0x0400E241 RID: 57921
+	// Token: 0x0400E6F2 RID: 59122
 	[Nullable(1)]
 	public AssetElement MainAsset;
 
-	// Token: 0x0400E242 RID: 57922
+	// Token: 0x0400E6F3 RID: 59123
 	[Nullable(1)]
 	public FightAssetManager FightAssetManager;
 
-	// Token: 0x0400E243 RID: 57923
+	// Token: 0x0400E6F4 RID: 59124
 	public EntityHandle EntityHandle;
 
-	// Token: 0x0400E244 RID: 57924
+	// Token: 0x0400E6F5 RID: 59125
 	public CreatureDataComponent CreatureDataComponent;
 
-	// Token: 0x0400E245 RID: 57925
+	// Token: 0x0400E6F6 RID: 59126
 	[Nullable(new byte[]
 	{
 		2,
@@ -203,13 +203,13 @@ public class EntityAssetElement
 	})]
 	public List<Action<ELoadResultType>> Callbacks;
 
-	// Token: 0x0400E246 RID: 57926
+	// Token: 0x0400E6F7 RID: 59127
 	public readonly ResourceSystem.EResourceLoadPriority LoadPriority = ResourceSystem.EResourceLoadPriority.Default;
 
-	// Token: 0x0400E247 RID: 57927
+	// Token: 0x0400E6F8 RID: 59128
 	public bool HasMorphAssets;
 
-	// Token: 0x0400E248 RID: 57928
+	// Token: 0x0400E6F9 RID: 59129
 	[Nullable(new byte[]
 	{
 		2,
@@ -217,19 +217,19 @@ public class EntityAssetElement
 	})]
 	public HashSet<string> MorphAssetsPaths;
 
-	// Token: 0x0400E249 RID: 57929
+	// Token: 0x0400E6FA RID: 59130
 	[Nullable(1)]
 	public List<int> CharacterLoadTypeList = new List<int>();
 
-	// Token: 0x0400E24A RID: 57930
+	// Token: 0x0400E6FB RID: 59131
 	private ELoadResultType LoadStateInternal;
 
-	// Token: 0x0400E24B RID: 57931
+	// Token: 0x0400E6FC RID: 59132
 	private bool CollectMinorAssetInternal;
 
-	// Token: 0x0400E24C RID: 57932
+	// Token: 0x0400E6FD RID: 59133
 	private string BlueprintClassPathInternal;
 
-	// Token: 0x0400E24D RID: 57933
+	// Token: 0x0400E6FE RID: 59134
 	public bool IsDestroy;
 }

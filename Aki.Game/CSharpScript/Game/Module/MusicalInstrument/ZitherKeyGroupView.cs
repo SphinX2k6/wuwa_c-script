@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x0200536E RID: 21358
+	// Token: 0x02004351 RID: 17233
 	public class ZitherKeyGroupView : UiPanelBase
 	{
-		// Token: 0x06036923 RID: 223523 RVA: 0x00CEC4F8 File Offset: 0x00CEA6F8
+		// Token: 0x0602B869 RID: 178281 RVA: 0x00C3B384 File Offset: 0x00C39584
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036924 RID: 223524 RVA: 0x00CEC564 File Offset: 0x00CEA764
+		// Token: 0x0602B86A RID: 178282 RVA: 0x00C3B3F0 File Offset: 0x00C395F0
 		public void Refresh(bool isInteractive)
 		{
 			UUIItem item = base.GetItem(1);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}
 		}
 
-		// Token: 0x0401CD89 RID: 118153
+		// Token: 0x0401781F RID: 96287
 		[Nullable(new byte[]
 		{
 			2,
@@ -51,15 +51,15 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 		})]
 		public List<MusicalInstrumentKeyItem> KeyItems;
 
-		// Token: 0x0401CD8A RID: 118154
+		// Token: 0x04017820 RID: 96288
 		private bool IsInteractive = true;
 
-		// Token: 0x0200B5E9 RID: 46569
+		// Token: 0x0200A020 RID: 40992
 		private enum EZitherKeyGroupViewComponent
 		{
-			// Token: 0x040371A9 RID: 225705
+			// Token: 0x04031BFC RID: 203772
 			NoteLayout,
-			// Token: 0x040371AA RID: 225706
+			// Token: 0x04031BFD RID: 203773
 			DisableMask
 		}
 	}

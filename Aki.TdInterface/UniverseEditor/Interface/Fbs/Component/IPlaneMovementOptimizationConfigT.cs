@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005746 RID: 22342
+	// Token: 0x02005D4D RID: 23885
 	public class IPlaneMovementOptimizationConfigT
 	{
-		// Token: 0x1700A6B3 RID: 42675
-		// (get) Token: 0x06025703 RID: 153347 RVA: 0x0052A9FA File Offset: 0x00528BFA
-		// (set) Token: 0x06025704 RID: 153348 RVA: 0x0052AA02 File Offset: 0x00528C02
+		// Token: 0x1700AFD7 RID: 45015
+		// (get) Token: 0x06027C23 RID: 162851 RVA: 0x00570B86 File Offset: 0x0056ED86
+		// (set) Token: 0x06027C24 RID: 162852 RVA: 0x00570B8E File Offset: 0x0056ED8E
 		public EPerformanceOptimizationType Type { get; set; }
 
-		// Token: 0x06025705 RID: 153349 RVA: 0x0052AA0B File Offset: 0x00528C0B
+		// Token: 0x06027C25 RID: 162853 RVA: 0x00570B97 File Offset: 0x0056ED97
 		public IPlaneMovementOptimizationConfigT()
 		{
 			this.Type = EPerformanceOptimizationType.PlaneMovementOptimization;

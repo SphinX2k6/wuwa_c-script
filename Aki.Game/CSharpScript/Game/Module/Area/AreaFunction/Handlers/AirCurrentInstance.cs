@@ -11,19 +11,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 {
-	// Token: 0x02005EAA RID: 24234
+	// Token: 0x02004E8F RID: 20111
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class AirCurrentInstance : IAreaFunctionInstance
 	{
-		// Token: 0x0603DA8E RID: 252558 RVA: 0x00EE39E4 File Offset: 0x00EE1BE4
+		// Token: 0x06032A1E RID: 207390 RVA: 0x00E34F30 File Offset: 0x00E33130
 		public AirCurrentInstance(IAirCurrentData config, int functionId)
 		{
 			this.Config = config;
 			this.FunctionId = functionId;
 		}
 
-		// Token: 0x0603DA8F RID: 252559 RVA: 0x00EE3A8D File Offset: 0x00EE1C8D
+		// Token: 0x06032A1F RID: 207391 RVA: 0x00E34FD9 File Offset: 0x00E331D9
 		public void OnEnter()
 		{
 			this.State = EAirCurrentState.Free;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			this.HasEmittedGuideTrigger = false;
 		}
 
-		// Token: 0x0603DA90 RID: 252560 RVA: 0x00EE3AA4 File Offset: 0x00EE1CA4
+		// Token: 0x06032A20 RID: 207392 RVA: 0x00E34FF0 File Offset: 0x00E331F0
 		private int? FindSourceAreaId()
 		{
 			AreaModel instance = AreaModel.Instance;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			return null;
 		}
 
-		// Token: 0x0603DA91 RID: 252561 RVA: 0x00EE3BE0 File Offset: 0x00EE1DE0
+		// Token: 0x06032A21 RID: 207393 RVA: 0x00E3512C File Offset: 0x00E3332C
 		public void OnTick(double deltaMs)
 		{
 			Entity localRoleEntity = AreaFunctionUtils.GetLocalRoleEntity();
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			this.RunCurrent(localRoleEntity);
 		}
 
-		// Token: 0x0603DA92 RID: 252562 RVA: 0x00EE3C35 File Offset: 0x00EE1E35
+		// Token: 0x06032A22 RID: 207394 RVA: 0x00E35181 File Offset: 0x00E33381
 		public void OnLeave(string reason)
 		{
 			this.LeaveInWind(reason);
 		}
 
-		// Token: 0x0603DA93 RID: 252563 RVA: 0x00EE3C40 File Offset: 0x00EE1E40
+		// Token: 0x06032A23 RID: 207395 RVA: 0x00E3518C File Offset: 0x00E3338C
 		private EAirCurrentState ResolveState(Entity entity, double z)
 		{
 			float? topTeleportHeight = this.Config.TopTeleportHeight;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			}
 		}
 
-		// Token: 0x0603DA94 RID: 252564 RVA: 0x00EE3CF8 File Offset: 0x00EE1EF8
+		// Token: 0x06032A24 RID: 207396 RVA: 0x00E35244 File Offset: 0x00E33444
 		private void Transit(EAirCurrentState nextState, double z)
 		{
 			if (nextState == this.State)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			this.State = nextState;
 		}
 
-		// Token: 0x0603DA95 RID: 252565 RVA: 0x00EE3D24 File Offset: 0x00EE1F24
+		// Token: 0x06032A25 RID: 207397 RVA: 0x00E35270 File Offset: 0x00E33470
 		private void RunCurrent(Entity entity)
 		{
 			if (this.State != EAirCurrentState.InWind)
@@ -196,13 +196,13 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			this.LeaveInWind("NoCarrierState");
 		}
 
-		// Token: 0x0603DA96 RID: 252566 RVA: 0x00EE3D74 File Offset: 0x00EE1F74
+		// Token: 0x06032A26 RID: 207398 RVA: 0x00E352C0 File Offset: 0x00E334C0
 		private bool IsInEffectiveHeight(double z)
 		{
 			return z > (double)this.Config.FallTeleportHeight && z <= (double)this.Config.EffectiveHeight;
 		}
 
-		// Token: 0x0603DA97 RID: 252567 RVA: 0x00EE3D99 File Offset: 0x00EE1F99
+		// Token: 0x06032A27 RID: 207399 RVA: 0x00E352E5 File Offset: 0x00E334E5
 		private void EmitGuideTriggerOnce()
 		{
 			if (this.HasEmittedGuideTrigger)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, "AirCurrent");
 		}
 
-		// Token: 0x0603DA98 RID: 252568 RVA: 0x00EE3DC0 File Offset: 0x00EE1FC0
+		// Token: 0x06032A28 RID: 207400 RVA: 0x00E3530C File Offset: 0x00E3350C
 		private bool IsCharacterGliding(Entity entity)
 		{
 			if (this.Config.Character == null)
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			return component != null && component.MoveState == global::ECharMoveState.Glide;
 		}
 
-		// Token: 0x0603DA99 RID: 252569 RVA: 0x00EE3DE8 File Offset: 0x00EE1FE8
+		// Token: 0x06032A29 RID: 207401 RVA: 0x00E35334 File Offset: 0x00E33534
 		private bool IsMotorSoaring(Entity entity)
 		{
 			if (this.Config.Motor == null)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			return component2 != null && component2.MotorSubState == EMotorSubState.Soaring;
 		}
 
-		// Token: 0x0603DA9A RID: 252570 RVA: 0x00EE3E50 File Offset: 0x00EE2050
+		// Token: 0x06032A2A RID: 207402 RVA: 0x00E3539C File Offset: 0x00E3359C
 		private unsafe void EnsureWindBullet(Entity entity)
 		{
 			if (this.WindBulletId != 0)
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			instance3.Warn(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x0603DA9B RID: 252571 RVA: 0x00EE41B1 File Offset: 0x00EE23B1
+		// Token: 0x06032A2B RID: 207403 RVA: 0x00E356FD File Offset: 0x00E338FD
 		private void DestroyWindBullet()
 		{
 			if (this.WindBulletId == 0)
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			this.WindBulletId = 0;
 		}
 
-		// Token: 0x0603DA9C RID: 252572 RVA: 0x00EE41D8 File Offset: 0x00EE23D8
+		// Token: 0x06032A2C RID: 207404 RVA: 0x00E35724 File Offset: 0x00E33924
 		private void EnsureMotorWindField(Entity entity)
 		{
 			if (this.MotorWindFieldStarted)
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			this.MotorWindComp = component2;
 		}
 
-		// Token: 0x0603DA9D RID: 252573 RVA: 0x00EE4320 File Offset: 0x00EE2520
+		// Token: 0x06032A2D RID: 207405 RVA: 0x00E3586C File Offset: 0x00E33A6C
 		private void RemoveMotorWindField()
 		{
 			if (!this.MotorWindFieldStarted)
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			this.MotorWindComp = null;
 		}
 
-		// Token: 0x0603DA9E RID: 252574 RVA: 0x00EE436C File Offset: 0x00EE256C
+		// Token: 0x06032A2E RID: 207406 RVA: 0x00E358B8 File Offset: 0x00E33AB8
 		private void RequestTeleport()
 		{
 			if (this.IsTeleportRequestPending)
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			}, 0);
 		}
 
-		// Token: 0x0603DA9F RID: 252575 RVA: 0x00EE43E8 File Offset: 0x00EE25E8
+		// Token: 0x06032A2F RID: 207407 RVA: 0x00E35934 File Offset: 0x00E33B34
 		private void LeaveInWind(string reason)
 		{
 			if (this.WindBulletId != 0 || this.MotorWindFieldStarted)
@@ -484,47 +484,47 @@ namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 			this.RemoveMotorWindField();
 		}
 
-		// Token: 0x0402029F RID: 131743
+		// Token: 0x0401AD66 RID: 109926
 		private readonly global::Vector BulletSize = global::Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x040202A0 RID: 131744
+		// Token: 0x0401AD67 RID: 109927
 		private readonly global::Vector LocalOffset = global::Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x040202A1 RID: 131745
+		// Token: 0x0401AD68 RID: 109928
 		private readonly global::Vector WorldOffset = global::Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x040202A2 RID: 131746
+		// Token: 0x0401AD69 RID: 109929
 		private readonly global::Transform MotorBaseTrans = global::Transform.Create();
 
-		// Token: 0x040202A3 RID: 131747
+		// Token: 0x0401AD6A RID: 109930
 		private readonly global::Transform BulletSpawnTrans = global::Transform.Create();
 
-		// Token: 0x040202A4 RID: 131748
+		// Token: 0x0401AD6B RID: 109931
 		private EAirCurrentState State;
 
-		// Token: 0x040202A5 RID: 131749
+		// Token: 0x0401AD6C RID: 109932
 		private int WindBulletId;
 
-		// Token: 0x040202A6 RID: 131750
+		// Token: 0x0401AD6D RID: 109933
 		private bool MotorWindFieldStarted;
 
-		// Token: 0x040202A7 RID: 131751
+		// Token: 0x0401AD6E RID: 109934
 		private int MotorWindFieldEntityId;
 
-		// Token: 0x040202A8 RID: 131752
+		// Token: 0x0401AD6F RID: 109935
 		[Nullable(2)]
 		private MotorcycleWindFieldComponent MotorWindComp;
 
-		// Token: 0x040202A9 RID: 131753
+		// Token: 0x0401AD70 RID: 109936
 		private bool IsTeleportRequestPending;
 
-		// Token: 0x040202AA RID: 131754
+		// Token: 0x0401AD71 RID: 109937
 		private bool HasEmittedGuideTrigger;
 
-		// Token: 0x040202AB RID: 131755
+		// Token: 0x0401AD72 RID: 109938
 		private readonly IAirCurrentData Config;
 
-		// Token: 0x040202AC RID: 131756
+		// Token: 0x0401AD73 RID: 109939
 		private readonly int FunctionId;
 	}
 }

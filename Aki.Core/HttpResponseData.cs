@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000AF RID: 175
+// Token: 0x020000B1 RID: 177
 [NullableContext(1)]
 [Nullable(0)]
 public class HttpResponseData
 {
-	// Token: 0x06000547 RID: 1351 RVA: 0x0001C27D File Offset: 0x0001A47D
+	// Token: 0x06000588 RID: 1416 RVA: 0x0001C965 File Offset: 0x0001AB65
 	public HttpResponseData(bool Success, int Code, string Data)
 	{
 		this.Success = Success;
@@ -14,12 +14,12 @@ public class HttpResponseData
 		this.Data = Data;
 	}
 
-	// Token: 0x0400045F RID: 1119
+	// Token: 0x0400046D RID: 1133
 	public readonly bool Success;
 
-	// Token: 0x04000460 RID: 1120
+	// Token: 0x0400046E RID: 1134
 	public readonly int Code;
 
-	// Token: 0x04000461 RID: 1121
+	// Token: 0x0400046F RID: 1135
 	public readonly string Data;
 }

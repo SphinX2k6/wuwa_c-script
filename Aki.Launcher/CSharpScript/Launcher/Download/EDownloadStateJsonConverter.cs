@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Launcher.Download
 {
-	// Token: 0x02000203 RID: 515
+	// Token: 0x02000208 RID: 520
 	public class EDownloadStateJsonConverter : JsonConverter<EDownloadState>
 	{
-		// Token: 0x06000D3C RID: 3388 RVA: 0x000502D8 File Offset: 0x0004E4D8
+		// Token: 0x06000D7D RID: 3453 RVA: 0x00052DC4 File Offset: 0x00050FC4
 		public override EDownloadState Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Launcher.Download
 			return EDownloadStateExtensions.FromString(@string);
 		}
 
-		// Token: 0x06000D3D RID: 3389 RVA: 0x000502FC File Offset: 0x0004E4FC
+		// Token: 0x06000D7E RID: 3454 RVA: 0x00052DE8 File Offset: 0x00050FE8
 		public override void Write(Utf8JsonWriter writer, EDownloadState value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057F0 RID: 22512
+	// Token: 0x020047C7 RID: 18375
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattlePassExtraRewardView : UiViewBase
 	{
-		// Token: 0x0603937D RID: 234365 RVA: 0x00D9161C File Offset: 0x00D8F81C
+		// Token: 0x0602E291 RID: 189073 RVA: 0x00CE0464 File Offset: 0x00CDE664
 		public BattlePassExtraRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603937E RID: 234366 RVA: 0x00D91628 File Offset: 0x00D8F828
+		// Token: 0x0602E292 RID: 189074 RVA: 0x00CE0470 File Offset: 0x00CDE670
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603937F RID: 234367 RVA: 0x00D91798 File Offset: 0x00D8F998
+		// Token: 0x0602E293 RID: 189075 RVA: 0x00CE05E0 File Offset: 0x00CDE7E0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattlePassExtraRewardView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039380 RID: 234368 RVA: 0x00D917DC File Offset: 0x00D8F9DC
+		// Token: 0x0602E294 RID: 189076 RVA: 0x00CE0624 File Offset: 0x00CDE824
 		protected override void OnStart()
 		{
 			this.CommonScroll = new GenericScrollViewNew<RewardSmallItemGrid, RewardItemData>(base.GetScrollViewWithScrollbar(2), new Func<RewardSmallItemGrid>(this.OnCreateRewardItem), null, false, null);
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.Refresh();
 		}
 
-		// Token: 0x06039381 RID: 234369 RVA: 0x00D91831 File Offset: 0x00D8FA31
+		// Token: 0x0602E295 RID: 189077 RVA: 0x00CE0679 File Offset: 0x00CDE879
 		protected override void OnBeforeDestroy()
 		{
 			this.SelectedItemGrid = null;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ExtraScroll = null;
 		}
 
-		// Token: 0x06039382 RID: 234370 RVA: 0x00D91848 File Offset: 0x00D8FA48
+		// Token: 0x0602E296 RID: 189078 RVA: 0x00CE0690 File Offset: 0x00CDE890
 		private void Refresh()
 		{
 			RewardData<IBattlePassExtraRewardInfo> dataCache = this.DataCache;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039383 RID: 234371 RVA: 0x00D91904 File Offset: 0x00D8FB04
+		// Token: 0x0602E297 RID: 189079 RVA: 0x00CE074C File Offset: 0x00CDE94C
 		private int SortCompare(RewardItemData aRewardItem, RewardItemData bRewardItem)
 		{
 			EDropItemType dropItemType = aRewardItem.GetDropItemType();
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return aRewardItem.ConfigId - bRewardItem.ConfigId;
 		}
 
-		// Token: 0x06039384 RID: 234372 RVA: 0x00D91966 File Offset: 0x00D8FB66
+		// Token: 0x0602E298 RID: 189080 RVA: 0x00CE07AE File Offset: 0x00CDE9AE
 		private RewardSmallItemGrid OnCreateRewardItem()
 		{
 			RewardSmallItemGrid rewardSmallItemGrid = new RewardSmallItemGrid();
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return rewardSmallItemGrid;
 		}
 
-		// Token: 0x06039385 RID: 234373 RVA: 0x00D919A4 File Offset: 0x00D8FBA4
+		// Token: 0x0602E299 RID: 189081 RVA: 0x00CE07EC File Offset: 0x00CDE9EC
 		private void OnClickedRewardItem(MediumItemGridExtendCallback callbackParameter)
 		{
 			ItemGridBase selectedItemGrid = this.SelectedItemGrid;
@@ -170,10 +170,10 @@ namespace CSharpScript.Game.Module.ItemReward
 				ItemController.Instance.OpenItemTipsByItemUid(uniqueId, configId, true, null);
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(configId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(configId, true, null, false);
 		}
 
-		// Token: 0x06039386 RID: 234374 RVA: 0x00D91A08 File Offset: 0x00D8FC08
+		// Token: 0x0602E29A RID: 189082 RVA: 0x00CE0851 File Offset: 0x00CDEA51
 		private void OnClickRight()
 		{
 			base.CloseMe(null);
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			dataCache.GetRewardInfo().RightAction();
 		}
 
-		// Token: 0x06039387 RID: 234375 RVA: 0x00D91A2B File Offset: 0x00D8FC2B
+		// Token: 0x0602E29B RID: 189083 RVA: 0x00CE0874 File Offset: 0x00CDEA74
 		private void OnClickLeft()
 		{
 			base.CloseMe(null);
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			dataCache.GetRewardInfo().LeftAction();
 		}
 
-		// Token: 0x0401DF03 RID: 122627
+		// Token: 0x0401899A RID: 100762
 		[Nullable(new byte[]
 		{
 			2,
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private RewardData<IBattlePassExtraRewardInfo> DataCache;
 
-		// Token: 0x0401DF04 RID: 122628
+		// Token: 0x0401899B RID: 100763
 		[Nullable(new byte[]
 		{
 			2,
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private GenericScrollViewNew<RewardSmallItemGrid, RewardItemData> CommonScroll;
 
-		// Token: 0x0401DF05 RID: 122629
+		// Token: 0x0401899C RID: 100764
 		[Nullable(new byte[]
 		{
 			2,
@@ -223,33 +223,33 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private GenericScrollViewNew<RewardSmallItemGrid, RewardItemData> ExtraScroll;
 
-		// Token: 0x0401DF06 RID: 122630
+		// Token: 0x0401899D RID: 100765
 		[Nullable(2)]
 		private ItemGridBase SelectedItemGrid;
 
-		// Token: 0x0200B9CB RID: 47563
+		// Token: 0x0200A3E1 RID: 41953
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x040382B8 RID: 230072
+			// Token: 0x04032CA5 RID: 208037
 			public const int RightButton = 0;
 
-			// Token: 0x040382B9 RID: 230073
+			// Token: 0x04032CA6 RID: 208038
 			public const int LeftButton = 1;
 
-			// Token: 0x040382BA RID: 230074
+			// Token: 0x04032CA7 RID: 208039
 			public const int UpScroll = 2;
 
-			// Token: 0x040382BB RID: 230075
+			// Token: 0x04032CA8 RID: 208040
 			public const int UpScrollItem = 3;
 
-			// Token: 0x040382BC RID: 230076
+			// Token: 0x04032CA9 RID: 208041
 			public const int DownScroll = 4;
 
-			// Token: 0x040382BD RID: 230077
+			// Token: 0x04032CAA RID: 208042
 			public const int DownScrollItem = 5;
 
-			// Token: 0x040382BE RID: 230078
+			// Token: 0x04032CAB RID: 208043
 			public const int TxtTips = 6;
 		}
 	}

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A3D RID: 19005
+	// Token: 0x02004F00 RID: 20224
 	public class ICheckGiantTotalProgressCanActivateNodeT
 	{
-		// Token: 0x17008998 RID: 35224
-		// (get) Token: 0x0601DC1C RID: 121884 RVA: 0x0042F434 File Offset: 0x0042D634
-		// (set) Token: 0x0601DC1D RID: 121885 RVA: 0x0042F43C File Offset: 0x0042D63C
+		// Token: 0x1700906D RID: 36973
+		// (get) Token: 0x0601F6A5 RID: 128677 RVA: 0x0046032C File Offset: 0x0045E52C
+		// (set) Token: 0x0601F6A6 RID: 128678 RVA: 0x00460334 File Offset: 0x0045E534
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008999 RID: 35225
-		// (get) Token: 0x0601DC1E RID: 121886 RVA: 0x0042F445 File Offset: 0x0042D645
-		// (set) Token: 0x0601DC1F RID: 121887 RVA: 0x0042F44D File Offset: 0x0042D64D
+		// Token: 0x1700906E RID: 36974
+		// (get) Token: 0x0601F6A7 RID: 128679 RVA: 0x0046033D File Offset: 0x0045E53D
+		// (set) Token: 0x0601F6A8 RID: 128680 RVA: 0x00460345 File Offset: 0x0045E545
 		public bool HasActivateNode { get; set; }
 
-		// Token: 0x0601DC20 RID: 121888 RVA: 0x0042F456 File Offset: 0x0042D656
+		// Token: 0x0601F6A9 RID: 128681 RVA: 0x0046034E File Offset: 0x0045E54E
 		public ICheckGiantTotalProgressCanActivateNodeT()
 		{
 			this.Type = ECondition.CompareVar;

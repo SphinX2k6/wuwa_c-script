@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002E21 RID: 11809
+// Token: 0x0200237D RID: 9085
 [NullableContext(1)]
 [Nullable(0)]
 public class AnimalDeathSyncComponent : BaseDeathComponent
 {
-	// Token: 0x06018DEE RID: 101870 RVA: 0x00667D04 File Offset: 0x00665F04
+	// Token: 0x060166B0 RID: 91824 RVA: 0x0068DCCC File Offset: 0x0068BECC
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -29,7 +29,7 @@ public class AnimalDeathSyncComponent : BaseDeathComponent
 		return true;
 	}
 
-	// Token: 0x06018DEF RID: 101871 RVA: 0x00667D98 File Offset: 0x00665F98
+	// Token: 0x060166B1 RID: 91825 RVA: 0x0068DD60 File Offset: 0x0068BF60
 	private void OnBeHit(global::HitInformation hitData, HitContext hitContext)
 	{
 		if (hitData.DamageId == 0L)
@@ -53,14 +53,14 @@ public class AnimalDeathSyncComponent : BaseDeathComponent
 		CreatureController.Instance.AnimalDieRequest(base.Entity.GetComponent<CreatureDataComponent>().GetCreatureDataId(), base.Entity.GetComponent<BaseActorComponent>().ActorLocationProxy);
 	}
 
-	// Token: 0x06018DF0 RID: 101872 RVA: 0x00667E51 File Offset: 0x00666051
+	// Token: 0x060166B2 RID: 91826 RVA: 0x0068DE19 File Offset: 0x0068C019
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget<global::HitInformation, HitContext>(base.Entity, EEventName.CharBeHitLocal, new Action<global::HitInformation, HitContext>(this.OnBeHit));
 		return true;
 	}
 
-	// Token: 0x06018DF1 RID: 101873 RVA: 0x00667E74 File Offset: 0x00666074
+	// Token: 0x060166B3 RID: 91827 RVA: 0x0068DE3C File Offset: 0x0068C03C
 	public override bool ExecuteDeath(long? preMessageId)
 	{
 		if (!base.ExecuteDeath(preMessageId))
@@ -83,7 +83,7 @@ public class AnimalDeathSyncComponent : BaseDeathComponent
 		return true;
 	}
 
-	// Token: 0x06018DF2 RID: 101874 RVA: 0x00667EFC File Offset: 0x006660FC
+	// Token: 0x060166B4 RID: 91828 RVA: 0x0068DEC4 File Offset: 0x0068C0C4
 	public void PlayDieAnimation()
 	{
 		if (this.HadPlayDeathAnim)
@@ -113,19 +113,19 @@ public class AnimalDeathSyncComponent : BaseDeathComponent
 		this.OnDeathEnded(0f);
 	}
 
-	// Token: 0x06018DF3 RID: 101875 RVA: 0x00667FEC File Offset: 0x006661EC
+	// Token: 0x060166B5 RID: 91829 RVA: 0x0068DFB4 File Offset: 0x0068C1B4
 	public void OnDeathEnded(float delta)
 	{
 		this.OnDeathEndedInternal();
 	}
 
-	// Token: 0x06018DF4 RID: 101876 RVA: 0x00667FF4 File Offset: 0x006661F4
+	// Token: 0x060166B6 RID: 91830 RVA: 0x0068DFBC File Offset: 0x0068C1BC
 	public void OnDeathEnded(bool bInterrupted)
 	{
 		this.OnDeathEndedInternal();
 	}
 
-	// Token: 0x06018DF5 RID: 101877 RVA: 0x00667FFC File Offset: 0x006661FC
+	// Token: 0x060166B7 RID: 91831 RVA: 0x0068DFC4 File Offset: 0x0068C1C4
 	private void OnDeathEndedInternal()
 	{
 		base.Entity.Disable("[BaseAttributeComponent.DieAnimationFinished] 死亡动画播放完后隐藏");
@@ -138,7 +138,7 @@ public class AnimalDeathSyncComponent : BaseDeathComponent
 		this.HadPlayDeathAnim = false;
 	}
 
-	// Token: 0x06018DF6 RID: 101878 RVA: 0x00668048 File Offset: 0x00666248
+	// Token: 0x060166B8 RID: 91832 RVA: 0x0068E010 File Offset: 0x0068C210
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -146,46 +146,57 @@ public class AnimalDeathSyncComponent : BaseDeathComponent
 			return false;
 		}
 		AnimalDeathSyncComponent animalDeathSyncComponent = (AnimalDeathSyncComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TagComponent"))
+		if (animalDeathSyncComponent.TagComponent == null)
 		{
-			if (animalDeathSyncComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			if (animalDeathSyncComponent.UnifiedStateComponent == null)
-			{
-				this.UnifiedStateComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseUnifiedStateComponent>(this.UnifiedStateComponent), "UnifiedStateComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("HadPlayDeathAnim"))
+		if (animalDeathSyncComponent.UnifiedStateComponent == null)
 		{
-			this.HadPlayDeathAnim = animalDeathSyncComponent.HadPlayDeathAnim;
+			this.UnifiedStateComponent = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComponent), "UnifiedStateComponent"))
+		{
+			return false;
+		}
+		this.HadPlayDeathAnim = animalDeathSyncComponent.HadPlayDeathAnim;
 		return true;
 	}
 
-	// Token: 0x0400BA88 RID: 47752
+	// Token: 0x170022E7 RID: 8935
+	// (get) Token: 0x060166B9 RID: 91833 RVA: 0x0068E092 File Offset: 0x0068C292
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170022E8 RID: 8936
+	// (get) Token: 0x060166BA RID: 91834 RVA: 0x0068E095 File Offset: 0x0068C295
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400BE16 RID: 48662
 	private const int DISAPPEAR_REMOVE_DELAY = 1600;
 
-	// Token: 0x0400BA89 RID: 47753
+	// Token: 0x0400BE17 RID: 48663
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400BA8A RID: 47754
+	// Token: 0x0400BE18 RID: 48664
 	[Nullable(2)]
 	private BaseUnifiedStateComponent UnifiedStateComponent;
 
-	// Token: 0x0400BA8B RID: 47755
+	// Token: 0x0400BE19 RID: 48665
 	private bool HadPlayDeathAnim;
 }

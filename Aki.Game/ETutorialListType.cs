@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001DC1 RID: 7617
+// Token: 0x02001283 RID: 4739
 public enum ETutorialListType
 {
-	// Token: 0x04006B0F RID: 27407
+	// Token: 0x04006BF0 RID: 27632
 	Tip,
-	// Token: 0x04006B10 RID: 27408
+	// Token: 0x04006BF1 RID: 27633
 	Timing,
-	// Token: 0x04006B11 RID: 27409
+	// Token: 0x04006BF2 RID: 27634
 	Pop
 }

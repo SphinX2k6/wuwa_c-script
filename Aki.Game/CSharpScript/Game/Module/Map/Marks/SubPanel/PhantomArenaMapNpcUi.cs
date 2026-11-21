@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 {
-	// Token: 0x020054D5 RID: 21717
+	// Token: 0x020044A8 RID: 17576
 	public class PhantomArenaMapNpcUi : UiPanelBase
 	{
-		// Token: 0x06037722 RID: 227106 RVA: 0x00D2B7C8 File Offset: 0x00D299C8
+		// Token: 0x0602C5C7 RID: 181703 RVA: 0x00C792B0 File Offset: 0x00C774B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06037723 RID: 227107 RVA: 0x00D2B8B5 File Offset: 0x00D29AB5
+		// Token: 0x0602C5C8 RID: 181704 RVA: 0x00C7939D File Offset: 0x00C7759D
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new UiSequencePlayer(this.RootItem);
 			this.LevelSequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.OnEndSequence));
 		}
 
-		// Token: 0x06037724 RID: 227108 RVA: 0x00D2B8E0 File Offset: 0x00D29AE0
+		// Token: 0x0602C5C9 RID: 181705 RVA: 0x00C793C8 File Offset: 0x00C775C8
 		[NullableContext(1)]
 		private void OnEndSequence(string sequenceName)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			}
 		}
 
-		// Token: 0x06037725 RID: 227109 RVA: 0x00D2B92C File Offset: 0x00D29B2C
+		// Token: 0x0602C5CA RID: 181706 RVA: 0x00C79414 File Offset: 0x00C77614
 		protected override void OnAfterShow()
 		{
 			UiSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			levelSequencePlayer.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x06037726 RID: 227110 RVA: 0x00D2B958 File Offset: 0x00D29B58
+		// Token: 0x0602C5CB RID: 181707 RVA: 0x00C79440 File Offset: 0x00C77640
 		public void SetData(int markId)
 		{
 			if (this.MarkId == markId)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			}
 		}
 
-		// Token: 0x06037727 RID: 227111 RVA: 0x00D2BB5C File Offset: 0x00D29D5C
+		// Token: 0x0602C5CC RID: 181708 RVA: 0x00C79644 File Offset: 0x00C77844
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -146,38 +146,38 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x0401D38A RID: 119690
+		// Token: 0x04017E03 RID: 97795
 		[Nullable(2)]
 		private UiSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401D38B RID: 119691
+		// Token: 0x04017E04 RID: 97796
 		private bool IsNeedUnlockEffect;
 
-		// Token: 0x0401D38C RID: 119692
+		// Token: 0x04017E05 RID: 97797
 		private int MarkId;
 
-		// Token: 0x0200B742 RID: 46914
+		// Token: 0x0200A171 RID: 41329
 		public static class EComponents
 		{
-			// Token: 0x040377E3 RID: 227299
+			// Token: 0x0403221C RID: 205340
 			public const int SelfItem = 0;
 
-			// Token: 0x040377E4 RID: 227300
+			// Token: 0x0403221D RID: 205341
 			public const int TextNum = 1;
 
-			// Token: 0x040377E5 RID: 227301
+			// Token: 0x0403221E RID: 205342
 			public const int TexNpc = 2;
 
-			// Token: 0x040377E6 RID: 227302
+			// Token: 0x0403221F RID: 205343
 			public const int PnlLock = 3;
 
-			// Token: 0x040377E7 RID: 227303
+			// Token: 0x04032220 RID: 205344
 			public const int PnlDone = 4;
 
-			// Token: 0x040377E8 RID: 227304
+			// Token: 0x04032221 RID: 205345
 			public const int TexBg = 5;
 
-			// Token: 0x040377E9 RID: 227305
+			// Token: 0x04032222 RID: 205346
 			public const int TexDoneBg = 6;
 		}
 	}

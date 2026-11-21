@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D65 RID: 23909
+	// Token: 0x02004D47 RID: 19783
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MiniMapView : BattleVisibleChildView
 	{
-		// Token: 0x0603CB40 RID: 248640 RVA: 0x00E9322B File Offset: 0x00E9142B
+		// Token: 0x06031A9B RID: 203419 RVA: 0x00DE3A67 File Offset: 0x00DE1C67
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsInitFinished = false;
 		}
 
-		// Token: 0x0603CB41 RID: 248641 RVA: 0x00E93244 File Offset: 0x00E91444
+		// Token: 0x06031A9C RID: 203420 RVA: 0x00DE3A80 File Offset: 0x00DE1C80
 		protected override UniTask InitializeAsync(object param = null)
 		{
 			MiniMapView.<InitializeAsync>d__15 <InitializeAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB42 RID: 248642 RVA: 0x00E93287 File Offset: 0x00E91487
+		// Token: 0x06031A9D RID: 203421 RVA: 0x00DE3AC3 File Offset: 0x00DE1CC3
 		public override void Reset()
 		{
 			this.MiniMap.Destroy(null);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603CB43 RID: 248643 RVA: 0x00E932BC File Offset: 0x00E914BC
+		// Token: 0x06031A9E RID: 203422 RVA: 0x00DE3AF8 File Offset: 0x00DE1CF8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CB44 RID: 248644 RVA: 0x00E933A4 File Offset: 0x00E915A4
+		// Token: 0x06031A9F RID: 203423 RVA: 0x00DE3BE0 File Offset: 0x00DE1DE0
 		private void OpenMapView()
 		{
 			WorldMapController.Instance.OpenView(EOpenMapType.Mouse, true, null, null);
 		}
 
-		// Token: 0x0603CB45 RID: 248645 RVA: 0x00E933B4 File Offset: 0x00E915B4
+		// Token: 0x06031AA0 RID: 203424 RVA: 0x00DE3BF0 File Offset: 0x00DE1DF0
 		public void RefreshShow()
 		{
 			if (!this.IsInitFinished)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetUIRelativeRotation(this.TempSightRotator);
 		}
 
-		// Token: 0x0603CB46 RID: 248646 RVA: 0x00E93488 File Offset: 0x00E91688
+		// Token: 0x06031AA1 RID: 203425 RVA: 0x00DE3CC4 File Offset: 0x00DE1EC4
 		private float ClampCameraYaw(float desiredYaw)
 		{
 			ECustomCameraMode? cameraMode = CameraModel.Instance.MainModel.CameraMode;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return desiredYaw;
 		}
 
-		// Token: 0x0603CB47 RID: 248647 RVA: 0x00E9357A File Offset: 0x00E9177A
+		// Token: 0x06031AA2 RID: 203426 RVA: 0x00DE3DB6 File Offset: 0x00DE1FB6
 		private void UpdateMarkItems(float _)
 		{
 			if (this.LastTickFrame == Time.Instance.Frame)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateMarkItemsForStat();
 		}
 
-		// Token: 0x0603CB48 RID: 248648 RVA: 0x00E935A8 File Offset: 0x00E917A8
+		// Token: 0x06031AA3 RID: 203427 RVA: 0x00DE3DE4 File Offset: 0x00DE1FE4
 		private void UpdateMarkItemsForStat()
 		{
 			if (!base.IsUiActiveInHierarchy())
@@ -168,31 +168,37 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB49 RID: 248649 RVA: 0x00E93696 File Offset: 0x00E91896
+		// Token: 0x06031AA4 RID: 203428 RVA: 0x00DE3ED2 File Offset: 0x00DE20D2
 		public void RefreshOnPlatformChanged()
 		{
 			EventSystem.Instance.Emit(EEventName.ModelReady);
 		}
 
-		// Token: 0x0603CB4A RID: 248650 RVA: 0x00E936A8 File Offset: 0x00E918A8
+		// Token: 0x06031AA5 RID: 203429 RVA: 0x00DE3EE4 File Offset: 0x00DE20E4
 		public void SetRoguelikeVisible(bool visible)
 		{
 			base.SetVisible(1, visible);
 		}
 
-		// Token: 0x0603CB4B RID: 248651 RVA: 0x00E936B2 File Offset: 0x00E918B2
+		// Token: 0x06031AA6 RID: 203430 RVA: 0x00DE3EEE File Offset: 0x00DE20EE
 		public void SetBattleLinkVisible(bool visible)
 		{
 			base.SetVisible(2, visible);
 		}
 
-		// Token: 0x0603CB4C RID: 248652 RVA: 0x00E936BC File Offset: 0x00E918BC
+		// Token: 0x06031AA7 RID: 203431 RVA: 0x00DE3EF8 File Offset: 0x00DE20F8
 		public void SetShipTowerVisible(bool visible)
 		{
 			base.SetVisible(3, visible);
 		}
 
-		// Token: 0x0603CB4D RID: 248653 RVA: 0x00E936C6 File Offset: 0x00E918C6
+		// Token: 0x06031AA8 RID: 203432 RVA: 0x00DE3F02 File Offset: 0x00DE2102
+		public void SetRoleTowerVisible(bool visible)
+		{
+			base.SetVisible(4, visible);
+		}
+
+		// Token: 0x06031AA9 RID: 203433 RVA: 0x00DE3F0C File Offset: 0x00DE210C
 		public void RefreshMiniMap()
 		{
 			MiniMap miniMap = this.MiniMap;
@@ -203,72 +209,74 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			miniMap.ChangeMapAsync(MapModel.Instance.CurrentMapConfigId);
 		}
 
-		// Token: 0x0401F9EB RID: 129515
+		// Token: 0x0401A4A3 RID: 107683
 		private const float UPDATE_INTERVAL = 100f;
 
-		// Token: 0x0401F9EC RID: 129516
+		// Token: 0x0401A4A4 RID: 107684
 		private const float PLAYER_ROTATE_UPDATE_THRESHOLD = 10f;
 
-		// Token: 0x0401F9ED RID: 129517
+		// Token: 0x0401A4A5 RID: 107685
 		private MiniMap MiniMap;
 
-		// Token: 0x0401F9EE RID: 129518
+		// Token: 0x0401A4A6 RID: 107686
 		private float RealMinimapScale;
 
-		// Token: 0x0401F9EF RID: 129519
+		// Token: 0x0401A4A7 RID: 107687
 		private bool IsInitFinished;
 
-		// Token: 0x0401F9F0 RID: 129520
+		// Token: 0x0401A4A8 RID: 107688
 		private TimerHandle TimerId;
 
-		// Token: 0x0401F9F1 RID: 129521
+		// Token: 0x0401A4A9 RID: 107689
 		private FRotator TempSightRotator = new FRotator(0f, 0f, 0f);
 
-		// Token: 0x0401F9F2 RID: 129522
+		// Token: 0x0401A4AA RID: 107690
 		private FRotator TempPlayerRotator = new FRotator(0f, 0f, 0f);
 
-		// Token: 0x0401F9F3 RID: 129523
+		// Token: 0x0401A4AB RID: 107691
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatUpdateMarkItems = Stat.Create("MiniMapView.UpdateMarkItems", "", "");
 
-		// Token: 0x0401F9F4 RID: 129524
+		// Token: 0x0401A4AC RID: 107692
 		private int LastTickFrame = -1;
 
-		// Token: 0x0401F9F5 RID: 129525
+		// Token: 0x0401A4AD RID: 107693
 		[Nullable(1)]
 		private readonly Vector2D CachedPlayerLocation2D = Vector2D.Create();
 
-		// Token: 0x0401F9F6 RID: 129526
+		// Token: 0x0401A4AE RID: 107694
 		[Nullable(1)]
 		private readonly Vector2D CachedAnchorOffset = Vector2D.Create();
 
-		// Token: 0x0200C014 RID: 49172
+		// Token: 0x0200AA1A RID: 43546
 		[NullableContext(0)]
 		private enum EChildComponentType
 		{
-			// Token: 0x04039F5F RID: 237407
+			// Token: 0x04034921 RID: 215329
 			MiniMapRoot,
-			// Token: 0x04039F60 RID: 237408
+			// Token: 0x04034922 RID: 215330
 			PlayerItem,
-			// Token: 0x04039F61 RID: 237409
+			// Token: 0x04034923 RID: 215331
 			PlayerSight,
-			// Token: 0x04039F62 RID: 237410
+			// Token: 0x04034924 RID: 215332
 			MiniMapButton
 		}
 
-		// Token: 0x0200C015 RID: 49173
+		// Token: 0x0200AA1B RID: 43547
 		[NullableContext(0)]
 		private enum EVisibleReason
 		{
-			// Token: 0x04039F64 RID: 237412
+			// Token: 0x04034926 RID: 215334
 			Default,
-			// Token: 0x04039F65 RID: 237413
+			// Token: 0x04034927 RID: 215335
 			Roguelike,
-			// Token: 0x04039F66 RID: 237414
+			// Token: 0x04034928 RID: 215336
 			BattleLink,
-			// Token: 0x04039F67 RID: 237415
-			ShipTower
+			// Token: 0x04034929 RID: 215337
+			ShipTower,
+			// Token: 0x0403492A RID: 215338
+			RoleTower
 		}
 	}
 }

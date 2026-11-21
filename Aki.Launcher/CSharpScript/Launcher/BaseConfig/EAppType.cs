@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x0200026E RID: 622
+	// Token: 0x02000275 RID: 629
 	[EnumExtensions]
 	public enum EAppType
 	{
-		// Token: 0x04000A0B RID: 2571
+		// Token: 0x04000A59 RID: 2649
 		[EnumStringMember("Development")]
 		DEVELOPMENT,
-		// Token: 0x04000A0C RID: 2572
+		// Token: 0x04000A5A RID: 2650
 		[EnumStringMember("Prerelease")]
 		PREREKEASE,
-		// Token: 0x04000A0D RID: 2573
+		// Token: 0x04000A5B RID: 2651
 		[EnumStringMember("Product")]
 		PRODUCT
 	}

@@ -8,14 +8,14 @@ using UnrealEngine;
 [Nullable(0)]
 public class AudioPoolItem
 {
-	// Token: 0x060000B4 RID: 180 RVA: 0x00006653 File Offset: 0x00004853
+	// Token: 0x060000B6 RID: 182 RVA: 0x000063CB File Offset: 0x000045CB
 	public AudioPoolItem(string path)
 	{
 		this.Path = path;
 		this.UseTime = Time.Instance.Now;
 	}
 
-	// Token: 0x060000B5 RID: 181 RVA: 0x0000667D File Offset: 0x0000487D
+	// Token: 0x060000B7 RID: 183 RVA: 0x000063F5 File Offset: 0x000045F5
 	public int AddCallback(Action callback)
 	{
 		if (this.LoadFinishCallBack == null)
@@ -27,7 +27,7 @@ public class AudioPoolItem
 		return this.CallbackId;
 	}
 
-	// Token: 0x060000B6 RID: 182 RVA: 0x000066B8 File Offset: 0x000048B8
+	// Token: 0x060000B8 RID: 184 RVA: 0x00006430 File Offset: 0x00004630
 	public unsafe bool DeleteCallback(int callbackFlag)
 	{
 		if (this.LoadFinishCallBack == null)
@@ -50,7 +50,7 @@ public class AudioPoolItem
 		return false;
 	}
 
-	// Token: 0x060000B7 RID: 183 RVA: 0x0000674C File Offset: 0x0000494C
+	// Token: 0x060000B9 RID: 185 RVA: 0x000064C4 File Offset: 0x000046C4
 	public void DoCallback()
 	{
 		if (this.LoadFinishCallBack != null)
@@ -63,7 +63,7 @@ public class AudioPoolItem
 		}
 	}
 
-	// Token: 0x060000B8 RID: 184 RVA: 0x000067B8 File Offset: 0x000049B8
+	// Token: 0x060000BA RID: 186 RVA: 0x00006530 File Offset: 0x00004730
 	public void Destroy()
 	{
 		if (this.AudioEvent != null)
@@ -79,19 +79,19 @@ public class AudioPoolItem
 		instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0400008F RID: 143
+	// Token: 0x04000090 RID: 144
 	private readonly string Path;
 
-	// Token: 0x04000090 RID: 144
+	// Token: 0x04000091 RID: 145
 	[Nullable(2)]
 	public UAkAudioEvent AudioEvent;
 
-	// Token: 0x04000091 RID: 145
+	// Token: 0x04000092 RID: 146
 	public double UseTime;
 
-	// Token: 0x04000092 RID: 146
+	// Token: 0x04000093 RID: 147
 	private Dictionary<int, Action> LoadFinishCallBack = new Dictionary<int, Action>();
 
-	// Token: 0x04000093 RID: 147
+	// Token: 0x04000094 RID: 148
 	private int CallbackId;
 }

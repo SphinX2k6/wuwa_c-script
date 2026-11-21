@@ -2,44 +2,44 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x02006495 RID: 25749
+	// Token: 0x02005413 RID: 21523
 	internal enum <MatchThreeLevelDetailView>F00FF749569645AF311BCD343CD41AA5165958489483A83893C3A8AA4BA25DE36__EComponents
 	{
-		// Token: 0x04021A3F RID: 137791
+		// Token: 0x0401C370 RID: 115568
 		CaptionItem,
-		// Token: 0x04021A40 RID: 137792
+		// Token: 0x0401C371 RID: 115569
 		PnlLeftMenu,
-		// Token: 0x04021A41 RID: 137793
+		// Token: 0x0401C372 RID: 115570
 		TogLevelEasy,
-		// Token: 0x04021A42 RID: 137794
+		// Token: 0x0401C373 RID: 115571
 		PnlScore,
-		// Token: 0x04021A43 RID: 137795
+		// Token: 0x0401C374 RID: 115572
 		TxtScoreNum,
-		// Token: 0x04021A44 RID: 137796
+		// Token: 0x0401C375 RID: 115573
 		PnlRightInfo,
-		// Token: 0x04021A45 RID: 137797
+		// Token: 0x0401C376 RID: 115574
 		BtnSelectRole,
-		// Token: 0x04021A46 RID: 137798
+		// Token: 0x0401C377 RID: 115575
 		SpriteSkill1,
-		// Token: 0x04021A47 RID: 137799
+		// Token: 0x0401C378 RID: 115576
 		SpriteSkill2,
-		// Token: 0x04021A48 RID: 137800
+		// Token: 0x0401C379 RID: 115577
 		SpineRole,
-		// Token: 0x04021A49 RID: 137801
+		// Token: 0x0401C37A RID: 115578
 		TxtRoleName,
-		// Token: 0x04021A4A RID: 137802
+		// Token: 0x0401C37B RID: 115579
 		PnlBgNor,
-		// Token: 0x04021A4B RID: 137803
+		// Token: 0x0401C37C RID: 115580
 		PnlSquare,
-		// Token: 0x04021A4C RID: 137804
+		// Token: 0x0401C37D RID: 115581
 		PnlBgEndless,
-		// Token: 0x04021A4D RID: 137805
+		// Token: 0x0401C37E RID: 115582
 		TogLevelDifficult,
-		// Token: 0x04021A4E RID: 137806
+		// Token: 0x0401C37F RID: 115583
 		SpineRoleBack,
-		// Token: 0x04021A4F RID: 137807
+		// Token: 0x0401C380 RID: 115584
 		BtnSelectRoleRedDot,
-		// Token: 0x04021A50 RID: 137808
+		// Token: 0x0401C381 RID: 115585
 		PnlRaycastMask
 	}
 }

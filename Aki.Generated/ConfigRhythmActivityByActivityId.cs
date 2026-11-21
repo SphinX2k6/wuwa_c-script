@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007EC RID: 2028
+	// Token: 0x02000808 RID: 2056
 	public class ConfigRhythmActivityByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F9A RID: 12186 RVA: 0x00166548 File Offset: 0x00164748
+		// Token: 0x06003042 RID: 12354 RVA: 0x0016D830 File Offset: 0x0016BA30
 		static ConfigRhythmActivityByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRhythmActivityByActivityId.CreateStaticDefaultValue), new Action(ConfigRhythmActivityByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F9B RID: 12187 RVA: 0x00166568 File Offset: 0x00164768
+		// Token: 0x06003043 RID: 12355 RVA: 0x0016D850 File Offset: 0x0016BA50
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRhythmActivityByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F9C RID: 12188 RVA: 0x001665E7 File Offset: 0x001647E7
+		// Token: 0x06003044 RID: 12356 RVA: 0x0016D8CF File Offset: 0x0016BACF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRhythmActivityByActivityId.LogPair = null;
 			ConfigRhythmActivityByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06002F9D RID: 12189 RVA: 0x001665F5 File Offset: 0x001647F5
+		// Token: 0x06003045 RID: 12357 RVA: 0x0016D8DD File Offset: 0x0016BADD
 		public static void Init()
 		{
 			ConfigRhythmActivityByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigRhythmActivityByActivityId.HandleId, "db_rhythmship.db", "select BinData from `RhythmActivity` where ActivityId=?");
 		}
 
-		// Token: 0x06002F9E RID: 12190 RVA: 0x00166610 File Offset: 0x00164810
+		// Token: 0x06003046 RID: 12358 RVA: 0x0016D8F8 File Offset: 0x0016BAF8
 		public static RhythmActivity? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRhythmActivityByActivityId.HandleId, ConfigRhythmActivityByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RhythmActivity?(rootAsRhythmActivity);
 		}
 
-		// Token: 0x0400375A RID: 14170
+		// Token: 0x0400381E RID: 14366
 		private const string DB = "db_rhythmship.db";
 
-		// Token: 0x0400375B RID: 14171
+		// Token: 0x0400381F RID: 14367
 		private const string FILE = "j.节奏飞船_局外.xlsx";
 
-		// Token: 0x0400375C RID: 14172
+		// Token: 0x04003820 RID: 14368
 		private const string TABLE = "RhythmActivity";
 
-		// Token: 0x0400375D RID: 14173
+		// Token: 0x04003821 RID: 14369
 		private const string COMMAND = "select BinData from `RhythmActivity` where ActivityId=?";
 
-		// Token: 0x0400375E RID: 14174
+		// Token: 0x04003822 RID: 14370
 		private const string KEY_PREFIX = "RhythmActivityByActivityId";
 
-		// Token: 0x0400375F RID: 14175
+		// Token: 0x04003823 RID: 14371
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003760 RID: 14176
+		// Token: 0x04003824 RID: 14372
 		private static int HandleId;
 	}
 }

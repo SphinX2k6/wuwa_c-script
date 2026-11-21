@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040A2 RID: 16546
+	// Token: 0x020044E3 RID: 17635
 	public static class IReceiveTelecomChildQuestConditionVerify
 	{
-		// Token: 0x0601816C RID: 98668 RVA: 0x00379078 File Offset: 0x00377278
+		// Token: 0x0601980D RID: 104461 RVA: 0x003A2FA8 File Offset: 0x003A11A8
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -19,7 +19,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 				{
 					verifyAction = (IReceiveTelecomChildQuestConditionVerify.<>O.<0>__Verify = new VerifyTableAction(IConditionGroupVerify.Verify));
 				}
-				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false))
+				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 10, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 12, 1UL, 1UL, false))
 				{
 					return verifier.VerifyTableEnd(tablePos);
 				}
@@ -27,11 +27,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return false;
 		}
 
-		// Token: 0x02007949 RID: 31049
+		// Token: 0x02008190 RID: 33168
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013268 RID: 78440
+			// Token: 0x040142CB RID: 82635
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

@@ -1,28 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020021B3 RID: 8627
-[NullableContext(1)]
-[Nullable(0)]
-public class LordGymThird5LittleLoadingView : UiViewBase, IUiCameraBehavior
+// Token: 0x02001697 RID: 5783
+public class LordGymThird5LittleLoadingView : UiViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x06010C95 RID: 68757 RVA: 0x00413C31 File Offset: 0x00411E31
+	// Token: 0x0600E126 RID: 57638 RVA: 0x00420519 File Offset: 0x0041E719
+	[NullableContext(1)]
 	public LordGymThird5LittleLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010C96 RID: 68758 RVA: 0x00413C3A File Offset: 0x00411E3A
+	// Token: 0x0600E127 RID: 57639 RVA: 0x00420522 File Offset: 0x0041E722
 	protected override void OnStartImplementImplement()
 	{
 		this.UiViewSequence.AddSequenceFinishEvent("Start", new Action<string>(this.OnStartSequenceFinished), false);
 	}
 
-	// Token: 0x06010C97 RID: 68759 RVA: 0x00413C5C File Offset: 0x00411E5C
+	// Token: 0x0600E128 RID: 57640 RVA: 0x00420544 File Offset: 0x0041E744
 	protected override void OnHandleLoadScene()
 	{
 		if (!UiSceneManager.Instance.HasLordSkeletalHandle())
@@ -38,7 +37,7 @@ public class LordGymThird5LittleLoadingView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06010C98 RID: 68760 RVA: 0x00413CB0 File Offset: 0x00411EB0
+	// Token: 0x0600E129 RID: 57641 RVA: 0x00420598 File Offset: 0x0041E798
 	private int GetInitialLordEntranceId()
 	{
 		LordGymLordEntranceSelectViewParam lordGymLordEntranceSelectViewParam = this.OpenParam as LordGymLordEntranceSelectViewParam;
@@ -87,7 +86,7 @@ public class LordGymThird5LittleLoadingView : UiViewBase, IUiCameraBehavior
 		return config.Value.LordEntranceList(num);
 	}
 
-	// Token: 0x06010C99 RID: 68761 RVA: 0x00413DA8 File Offset: 0x00411FA8
+	// Token: 0x0600E12A RID: 57642 RVA: 0x00420690 File Offset: 0x0041E890
 	protected override UniTask OnHandlePostLoadSceneAsync(bool isSceneLoad)
 	{
 		LordGymThird5LittleLoadingView.<OnHandlePostLoadSceneAsync>d__7 <OnHandlePostLoadSceneAsync>d__;
@@ -99,7 +98,8 @@ public class LordGymThird5LittleLoadingView : UiViewBase, IUiCameraBehavior
 		return <OnHandlePostLoadSceneAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010C9A RID: 68762 RVA: 0x00413DF4 File Offset: 0x00411FF4
+	// Token: 0x0600E12B RID: 57643 RVA: 0x004206DC File Offset: 0x0041E8DC
+	[NullableContext(1)]
 	private void OnStartSequenceFinished(string _)
 	{
 		if (this.IsAdvancing || string.IsNullOrEmpty(this.BossSettingsName))
@@ -108,43 +108,43 @@ public class LordGymThird5LittleLoadingView : UiViewBase, IUiCameraBehavior
 		}
 		this.IsAdvancing = true;
 		LordGymModel.Instance.PlayThird5SceneEffect(this.GetInitialLordEntranceId());
-		UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(this.BossSettingsName, true, true, "10015", false, delegate(UiCameraAnimationDefine.IFinishData handleData)
+		UiCameraModel.Instance.PushCameraHandleByHandleName(this.BossSettingsName, true, true, "10015", false, delegate(UiCameraDefine.IFinishData handleData)
 		{
 			this.CloseAndOpenBossSelectView();
-		}, null);
+		});
 		base.PlaySequence("Sync", null, false);
 	}
 
-	// Token: 0x06010C9B RID: 68763 RVA: 0x00413E69 File Offset: 0x00412069
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x0600E12C RID: 57644 RVA: 0x00420748 File Offset: 0x0041E948
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
 	}
 
-	// Token: 0x06010C9C RID: 68764 RVA: 0x00413E6B File Offset: 0x0041206B
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x0600E12D RID: 57645 RVA: 0x0042074A File Offset: 0x0041E94A
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
 		if (this.StartHandle != null)
 		{
-			UiCameraAnimationManager.Instance.PopCameraHandle(this.StartHandle, null);
+			UiCameraModel.Instance.PopCameraHandle(this.StartHandle, null);
 			this.StartHandle = null;
 		}
 	}
 
-	// Token: 0x06010C9D RID: 68765 RVA: 0x00413E90 File Offset: 0x00412090
+	// Token: 0x0600E12E RID: 57646 RVA: 0x00420770 File Offset: 0x0041E970
 	private void CloseAndOpenBossSelectView()
 	{
 		LordGymLordEntranceSelectViewParam param = this.OpenParam as LordGymLordEntranceSelectViewParam;
 		UiManager.Instance.CloseAndOpenView(EUiViewName.LordGymThird5LittleLoadingView, EUiViewName.LordGymThird5BossSelectView, param, null, true);
 	}
 
-	// Token: 0x04007FA2 RID: 32674
+	// Token: 0x040080E9 RID: 33001
 	[Nullable(2)]
 	private UiCameraHandleData StartHandle;
 
-	// Token: 0x04007FA3 RID: 32675
+	// Token: 0x040080EA RID: 33002
 	[Nullable(2)]
 	private string BossSettingsName;
 
-	// Token: 0x04007FA4 RID: 32676
+	// Token: 0x040080EB RID: 33003
 	private bool IsAdvancing;
 }

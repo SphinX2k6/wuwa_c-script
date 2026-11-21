@@ -10,13 +10,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C31 RID: 23601
+	// Token: 0x02004C11 RID: 19473
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class FlagChallengeBattleController : ControllerBase
 	{
-		// Token: 0x0603B9DA RID: 244186 RVA: 0x00E399FC File Offset: 0x00E37BFC
+		// Token: 0x06030925 RID: 198949 RVA: 0x00D89D6C File Offset: 0x00D87F6C
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.FlagChallengeTempRoleLevelNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTempRoleLevelNotify));
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603B9DB RID: 244187 RVA: 0x00E39AB4 File Offset: 0x00E37CB4
+		// Token: 0x06030926 RID: 198950 RVA: 0x00D89E24 File Offset: 0x00D88024
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.FlagChallengeTempRoleLevelNotify);
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603B9DC RID: 244188 RVA: 0x00E39B3A File Offset: 0x00E37D3A
+		// Token: 0x06030927 RID: 198951 RVA: 0x00D89EAA File Offset: 0x00D880AA
 		protected override bool OnLeaveLevel()
 		{
 			FlagChallengeBattleModel.Instance.OnLeaveInstance();
 			return true;
 		}
 
-		// Token: 0x0603B9DD RID: 244189 RVA: 0x00E39B48 File Offset: 0x00E37D48
+		// Token: 0x06030928 RID: 198952 RVA: 0x00D89EB8 File Offset: 0x00D880B8
 		public UniTask LeaveFlagChallengeInstance()
 		{
 			FlagChallengeBattleController.<LeaveFlagChallengeInstance>d__3 <LeaveFlagChallengeInstance>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <LeaveFlagChallengeInstance>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B9DE RID: 244190 RVA: 0x00E39B84 File Offset: 0x00E37D84
+		// Token: 0x06030929 RID: 198953 RVA: 0x00D89EF4 File Offset: 0x00D880F4
 		private void OnTempRoleLevelNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
 			FlagChallengeTempRoleLevelNotify flagChallengeTempRoleLevelNotify = (FlagChallengeTempRoleLevelNotify)msg;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603B9DF RID: 244191 RVA: 0x00E39C04 File Offset: 0x00E37E04
+		// Token: 0x0603092A RID: 198954 RVA: 0x00D89F74 File Offset: 0x00D88174
 		private void OnInstNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
 			FlagChallengeInstNotify flagChallengeInstNotify = (FlagChallengeInstNotify)msg;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Battle
 			FlagChallengeBattleModel.Instance.HandleInstNotify(flagChallengeInstNotify);
 		}
 
-		// Token: 0x0603B9E0 RID: 244192 RVA: 0x00E39C48 File Offset: 0x00E37E48
+		// Token: 0x0603092B RID: 198955 RVA: 0x00D89FB8 File Offset: 0x00D881B8
 		private void OnSettleNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
 			int challengeLevelId = ((FlagChallengeSettleNotify)msg).ChallengeLevelId;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.OpenSettleView();
 		}
 
-		// Token: 0x0603B9E1 RID: 244193 RVA: 0x00E39C74 File Offset: 0x00E37E74
+		// Token: 0x0603092C RID: 198956 RVA: 0x00D89FE4 File Offset: 0x00D881E4
 		private void OnBoxExpNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
 			FlagChallengeBoxExpNotify flagChallengeBoxExpNotify = (FlagChallengeBoxExpNotify)msg;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603B9E2 RID: 244194 RVA: 0x00E39CD7 File Offset: 0x00E37ED7
+		// Token: 0x0603092D RID: 198957 RVA: 0x00D8A047 File Offset: 0x00D88247
 		private void OnStrongholdOccupied(int strongholdId)
 		{
 			if (!FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon)
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.OpenOccupiedSuccessView(strongholdId);
 		}
 
-		// Token: 0x0603B9E3 RID: 244195 RVA: 0x00E39CF0 File Offset: 0x00E37EF0
+		// Token: 0x0603092E RID: 198958 RVA: 0x00D8A060 File Offset: 0x00D88260
 		private void OnFixedRoleLevelUpdate(int activityId, int level, int exp)
 		{
 			FlagChallengeBattleModel instance = FlagChallengeBattleModel.Instance;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603B9E4 RID: 244196 RVA: 0x00E39D39 File Offset: 0x00E37F39
+		// Token: 0x0603092F RID: 198959 RVA: 0x00D8A0A9 File Offset: 0x00D882A9
 		public void OpenOccupiedSuccessView(int strongholdId)
 		{
 			UiManager.Instance.OpenView(EUiViewName.FlagChallengeOccupiedSuccessView, new FlagChallengeOccupiedSuccessViewParams
@@ -152,20 +152,20 @@ namespace CSharpScript.Game.Module.Battle
 			}, null);
 		}
 
-		// Token: 0x0603B9E5 RID: 244197 RVA: 0x00E39D67 File Offset: 0x00E37F67
+		// Token: 0x06030930 RID: 198960 RVA: 0x00D8A0D7 File Offset: 0x00D882D7
 		public void OpenSettleView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FlagChallengeSettleView, null, null);
 		}
 
-		// Token: 0x0603B9E6 RID: 244198 RVA: 0x00E39D7A File Offset: 0x00E37F7A
+		// Token: 0x06030931 RID: 198961 RVA: 0x00D8A0EA File Offset: 0x00D882EA
 		public void OpenPauseView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FlagChallengePauseView, null, null);
 		}
 
-		// Token: 0x17008DAB RID: 36267
-		// (get) Token: 0x0603B9E7 RID: 244199 RVA: 0x00E39D8D File Offset: 0x00E37F8D
+		// Token: 0x1700617D RID: 24957
+		// (get) Token: 0x06030932 RID: 198962 RVA: 0x00D8A0FD File Offset: 0x00D882FD
 		[Nullable(1)]
 		public static FlagChallengeBattleController Instance
 		{
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603B9E8 RID: 244200 RVA: 0x00E39D94 File Offset: 0x00E37F94
+		// Token: 0x06030933 RID: 198963 RVA: 0x00D8A104 File Offset: 0x00D88304
 		[NullableContext(1)]
 		public static FlagChallengeBattleController GetOrCreateInstance()
 		{
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Battle
 			return FlagChallengeBattleController._Instance;
 		}
 
-		// Token: 0x0603B9E9 RID: 244201 RVA: 0x00E39DA8 File Offset: 0x00E37FA8
+		// Token: 0x06030934 RID: 198964 RVA: 0x00D8A118 File Offset: 0x00D88318
 		public static bool CreateInstance()
 		{
 			if (FlagChallengeBattleController._Instance != null)
@@ -198,24 +198,24 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603B9EA RID: 244202 RVA: 0x00E39DBE File Offset: 0x00E37FBE
+		// Token: 0x06030935 RID: 198965 RVA: 0x00D8A12E File Offset: 0x00D8832E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B9EB RID: 244203 RVA: 0x00E39DC0 File Offset: 0x00E37FC0
+		// Token: 0x06030936 RID: 198966 RVA: 0x00D8A130 File Offset: 0x00D88330
 		public static void ResetStaticDefaultValue()
 		{
 			FlagChallengeBattleController._Instance = null;
 		}
 
-		// Token: 0x0603B9EC RID: 244204 RVA: 0x00E39DC8 File Offset: 0x00E37FC8
+		// Token: 0x06030937 RID: 198967 RVA: 0x00D8A138 File Offset: 0x00D88338
 		static FlagChallengeBattleController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlagChallengeBattleController.CreateStaticDefaultValue), new Action(FlagChallengeBattleController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F094 RID: 127124
+		// Token: 0x04019B45 RID: 105285
 		private static FlagChallengeBattleController _Instance;
 	}
 }

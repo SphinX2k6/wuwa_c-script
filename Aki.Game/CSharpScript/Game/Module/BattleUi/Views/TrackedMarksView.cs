@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Map.Misc;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E48 RID: 24136
+	// Token: 0x02004E2D RID: 20013
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrackedMarksView : BattleChildView
 	{
-		// Token: 0x0603D60C RID: 251404 RVA: 0x00ECDB54 File Offset: 0x00ECBD54
+		// Token: 0x0603259C RID: 206236 RVA: 0x00E1F0C4 File Offset: 0x00E1D2C4
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D60D RID: 251405 RVA: 0x00ECDBF8 File Offset: 0x00ECBDF8
+		// Token: 0x0603259D RID: 206237 RVA: 0x00E1F168 File Offset: 0x00E1D368
 		public override void Reset()
 		{
 			base.Reset();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TrackedMarks.Clear();
 		}
 
-		// Token: 0x0603D60E RID: 251406 RVA: 0x00ECDCA0 File Offset: 0x00ECBEA0
+		// Token: 0x0603259E RID: 206238 RVA: 0x00E1F210 File Offset: 0x00E1D410
 		public void OnShowBattleChildViewPanel()
 		{
 			foreach (Dictionary<int, TrackedMark> dictionary in this.TrackedMarks.Values)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D60F RID: 251407 RVA: 0x00ECDD30 File Offset: 0x00ECBF30
+		// Token: 0x0603259F RID: 206239 RVA: 0x00E1F2A0 File Offset: 0x00E1D4A0
 		public void Update(float delta)
 		{
 			TrackModel.Instance.ClearGroupMinDistance();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TrackedMarksDirty = false;
 		}
 
-		// Token: 0x0603D610 RID: 251408 RVA: 0x00ECDE84 File Offset: 0x00ECC084
+		// Token: 0x060325A0 RID: 206240 RVA: 0x00E1F3F4 File Offset: 0x00E1D5F4
 		public bool IsTrackTargetRepeat(TrackedMark item, ETrackSource inSourceId)
 		{
 			foreach (KeyValuePair<int, Dictionary<int, TrackedMark>> keyValuePair in this.TrackedMarks)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603D611 RID: 251409 RVA: 0x00ECDF38 File Offset: 0x00ECC138
+		// Token: 0x060325A1 RID: 206241 RVA: 0x00E1F4A8 File Offset: 0x00E1D6A8
 		public void OnHideBattleChildViewPanel()
 		{
 			foreach (Dictionary<int, TrackedMark> dictionary in this.TrackedMarks.Values)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D612 RID: 251410 RVA: 0x00ECDFC8 File Offset: 0x00ECC1C8
+		// Token: 0x060325A2 RID: 206242 RVA: 0x00E1F538 File Offset: 0x00E1D738
 		private void TrackMark(ITrackData trackData)
 		{
 			if (!MarkItemUtil.CanShowTrackMark(trackData))
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TrackedMarksDirty = true;
 		}
 
-		// Token: 0x0603D613 RID: 251411 RVA: 0x00ECE0DC File Offset: 0x00ECC2DC
+		// Token: 0x060325A3 RID: 206243 RVA: 0x00E1F64C File Offset: 0x00E1D84C
 		private void UnTrackMark(ITrackData trackData)
 		{
 			Dictionary<int, TrackedMark> dictionary;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TrackedMarksDirty = true;
 		}
 
-		// Token: 0x0603D614 RID: 251412 RVA: 0x00ECE150 File Offset: 0x00ECC350
+		// Token: 0x060325A4 RID: 206244 RVA: 0x00E1F6C0 File Offset: 0x00E1D8C0
 		private void UpdateTrackTarget(ETrackSource trackSource, int id, TTrackTarget trackTarget)
 		{
 			Dictionary<int, TrackedMark> dictionary;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D615 RID: 251413 RVA: 0x00ECE184 File Offset: 0x00ECC384
+		// Token: 0x060325A5 RID: 206245 RVA: 0x00E1F6F4 File Offset: 0x00E1D8F4
 		private void SetTrackMarkOccupied(ETrackSource trackSource, int id, bool bOccupied)
 		{
 			Dictionary<int, TrackedMark> dictionary;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D616 RID: 251414 RVA: 0x00ECE1B4 File Offset: 0x00ECC3B4
+		// Token: 0x060325A6 RID: 206246 RVA: 0x00E1F724 File Offset: 0x00E1D924
 		private void SetInteractSpotOccupied(ETrackSource trackSource, int id, bool bOccupied)
 		{
 			Dictionary<int, TrackedMark> dictionary;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D617 RID: 251415 RVA: 0x00ECE1E4 File Offset: 0x00ECC3E4
+		// Token: 0x060325A7 RID: 206247 RVA: 0x00E1F754 File Offset: 0x00E1D954
 		private void OnWorldMapSubMapChanged(int floor)
 		{
 			foreach (Dictionary<int, TrackedMark> dictionary in this.TrackedMarks.Values)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D618 RID: 251416 RVA: 0x00ECE274 File Offset: 0x00ECC474
+		// Token: 0x060325A8 RID: 206248 RVA: 0x00E1F7E4 File Offset: 0x00E1D9E4
 		private void OnMarkItemShowStateChange(int markId)
 		{
 			using (Dictionary<int, Dictionary<int, TrackedMark>>.ValueCollection.Enumerator enumerator = this.TrackedMarks.Values.GetEnumerator())
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D619 RID: 251417 RVA: 0x00ECE2D4 File Offset: 0x00ECC4D4
+		// Token: 0x060325A9 RID: 206249 RVA: 0x00E1F844 File Offset: 0x00E1DA44
 		private void OnMarkItemUpdateMarkHideInfo()
 		{
 			foreach (Dictionary<int, TrackedMark> dictionary in this.TrackedMarks.Values)
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D61A RID: 251418 RVA: 0x00ECE364 File Offset: 0x00ECC564
+		// Token: 0x060325AA RID: 206250 RVA: 0x00E1F8D4 File Offset: 0x00E1DAD4
 		private void OnLevelPlayStateChange()
 		{
 			foreach (Dictionary<int, TrackedMark> dictionary in this.TrackedMarks.Values)
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D61B RID: 251419 RVA: 0x00ECE3F4 File Offset: 0x00ECC5F4
+		// Token: 0x060325AB RID: 206251 RVA: 0x00E1F964 File Offset: 0x00E1DB64
 		private void OnLevelPlayStateChange(int levelId, ELevelPlayState state)
 		{
 			foreach (Dictionary<int, TrackedMark> dictionary in this.TrackedMarks.Values)
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D61C RID: 251420 RVA: 0x00ECE484 File Offset: 0x00ECC684
+		// Token: 0x060325AC RID: 206252 RVA: 0x00E1F9F4 File Offset: 0x00E1DBF4
 		private void BindEvents()
 		{
 			EventSystem.Instance.Add<ITrackData>(EEventName.TrackMark, new Action<ITrackData>(this.TrackMark));
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.LevelPlayRewardDetailUpdate, new Action(this.OnLevelPlayStateChange));
 		}
 
-		// Token: 0x0603D61D RID: 251421 RVA: 0x00ECE5C8 File Offset: 0x00ECC7C8
+		// Token: 0x060325AD RID: 206253 RVA: 0x00E1FB38 File Offset: 0x00E1DD38
 		private void UnbindEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.TrackMark, new Action<ITrackData>(this.TrackMark));
@@ -332,20 +332,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.LevelPlayRewardDetailUpdate, new Action(this.OnLevelPlayStateChange));
 		}
 
-		// Token: 0x0603D61E RID: 251422 RVA: 0x00ECE709 File Offset: 0x00ECC909
+		// Token: 0x060325AE RID: 206254 RVA: 0x00E1FC79 File Offset: 0x00E1DE79
 		protected override bool DestroyOverride()
 		{
 			return true;
 		}
 
-		// Token: 0x04020068 RID: 131176
+		// Token: 0x0401AB2F RID: 109359
 		[StaticVariableRuleIgnore]
 		private static readonly Stat TickStatsObject = Stat.Create("(BattleView)UpdateTrackDistance", "", "");
 
-		// Token: 0x04020069 RID: 131177
+		// Token: 0x0401AB30 RID: 109360
 		private readonly Dictionary<int, Dictionary<int, TrackedMark>> TrackedMarks = new Dictionary<int, Dictionary<int, TrackedMark>>();
 
-		// Token: 0x0402006A RID: 131178
+		// Token: 0x0401AB31 RID: 109361
 		private bool TrackedMarksDirty;
 	}
 }

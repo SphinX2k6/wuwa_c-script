@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000653 RID: 1619
+	// Token: 0x020006F0 RID: 1776
 	public class IRandomInteractOption_SetValue
 	{
-		// Token: 0x0400180F RID: 6159
+		// Token: 0x04001A01 RID: 6657
 		public int Weight;
 
-		// Token: 0x04001810 RID: 6160
-		[Nullable(1)]
+		// Token: 0x04001A02 RID: 6658
 		public IInteractOption Option;
 	}
 }

@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001639 RID: 5689
+	// Token: 0x020016B0 RID: 5808
 	public enum RbGridDirection
 	{
-		// Token: 0x0400C07E RID: 49278
+		// Token: 0x0400C589 RID: 50569
 		[OriginalName("RbForward")]
 		RbForward,
-		// Token: 0x0400C07F RID: 49279
+		// Token: 0x0400C58A RID: 50570
 		[OriginalName("RbBackward")]
 		RbBackward,
-		// Token: 0x0400C080 RID: 49280
+		// Token: 0x0400C58B RID: 50571
 		[OriginalName("RbRight")]
 		RbRight,
-		// Token: 0x0400C081 RID: 49281
+		// Token: 0x0400C58C RID: 50572
 		[OriginalName("RbLeft")]
 		RbLeft
 	}

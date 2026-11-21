@@ -5,24 +5,24 @@ using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004989 RID: 18825
+	// Token: 0x02003903 RID: 14595
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapMoveForwardComponent : HotKeyComponent
 	{
-		// Token: 0x06031106 RID: 200966 RVA: 0x00B6334D File Offset: 0x00B6154D
+		// Token: 0x06025C3C RID: 154684 RVA: 0x00A9E29D File Offset: 0x00A9C49D
 		public MapMoveForwardComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031107 RID: 200967 RVA: 0x00B63358 File Offset: 0x00B61558
+		// Token: 0x06025C3D RID: 154685 RVA: 0x00A9E2A8 File Offset: 0x00A9C4A8
 		protected override void OnInit()
 		{
 			string axisName = base.GetAxisName();
 			WorldMapModel.Instance.WorldMapAxisInteractValidation.InitAxisLock(axisName);
 		}
 
-		// Token: 0x06031108 RID: 200968 RVA: 0x00B6337C File Offset: 0x00B6157C
+		// Token: 0x06025C3E RID: 154686 RVA: 0x00A9E2CC File Offset: 0x00A9C4CC
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			TsUiNavigationBehaviorListener focusListener = viewHandle.GetFocusListener();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 		}
 
-		// Token: 0x06031109 RID: 200969 RVA: 0x00B633E0 File Offset: 0x00B615E0
+		// Token: 0x06025C3F RID: 154687 RVA: 0x00A9E330 File Offset: 0x00A9C530
 		protected override void OnInputAxis(string axisName, float value)
 		{
 			WorldMapAxisInteractValidation worldMapAxisInteractValidation = WorldMapModel.Instance.WorldMapAxisInteractValidation;

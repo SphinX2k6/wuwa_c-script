@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200067C RID: 1660
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200071B RID: 1819
 	public class IRenderFogBarrier : IRenderSpecifiedRangeType
 	{
-		// Token: 0x06002382 RID: 9090 RVA: 0x00060DB8 File Offset: 0x0005EFB8
+		// Token: 0x06002694 RID: 9876 RVA: 0x00067C7C File Offset: 0x00065E7C
 		private IRenderFogBarrier_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002383 RID: 9091 RVA: 0x00060DF0 File Offset: 0x0005EFF0
+		// Token: 0x06002695 RID: 9877 RVA: 0x00067CB4 File Offset: 0x00065EB4
 		public static IRenderFogBarrier Create([Nullable(2)] IRenderFogBarrier instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002384 RID: 9092 RVA: 0x00060E03 File Offset: 0x0005F003
+		// Token: 0x06002696 RID: 9878 RVA: 0x00067CC7 File Offset: 0x00065EC7
 		public static IRenderFogBarrier CreateFromSetValue([Nullable(2)] IRenderFogBarrier_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002385 RID: 9093 RVA: 0x00060E18 File Offset: 0x0005F018
+		// Token: 0x06002697 RID: 9879 RVA: 0x00067CDC File Offset: 0x00065EDC
 		public new IRenderFogBarrier_SetValue ToSetValue()
 		{
 			return new IRenderFogBarrier_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000966 RID: 2406
-		// (get) Token: 0x06002386 RID: 9094 RVA: 0x00060E66 File Offset: 0x0005F066
-		// (set) Token: 0x06002387 RID: 9095 RVA: 0x00060E91 File Offset: 0x0005F091
+		// Token: 0x17000A20 RID: 2592
+		// (get) Token: 0x06002698 RID: 9880 RVA: 0x00067D2A File Offset: 0x00065F2A
+		// (set) Token: 0x06002699 RID: 9881 RVA: 0x00067D55 File Offset: 0x00065F55
 		public override ERenderSpecifiedRangeType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000967 RID: 2407
-		// (get) Token: 0x06002388 RID: 9096 RVA: 0x00060E9F File Offset: 0x0005F09F
-		// (set) Token: 0x06002389 RID: 9097 RVA: 0x00060EC6 File Offset: 0x0005F0C6
+		// Token: 0x17000A21 RID: 2593
+		// (get) Token: 0x0600269A RID: 9882 RVA: 0x00067D63 File Offset: 0x00065F63
+		// (set) Token: 0x0600269B RID: 9883 RVA: 0x00067D8A File Offset: 0x00065F8A
 		public virtual ITargetEntityType CenterTarget
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000968 RID: 2408
-		// (get) Token: 0x0600238A RID: 9098 RVA: 0x00060ED4 File Offset: 0x0005F0D4
-		// (set) Token: 0x0600238B RID: 9099 RVA: 0x00060F35 File Offset: 0x0005F135
+		// Token: 0x17000A22 RID: 2594
+		// (get) Token: 0x0600269C RID: 9884 RVA: 0x00067D98 File Offset: 0x00065F98
+		// (set) Token: 0x0600269D RID: 9885 RVA: 0x00067DF9 File Offset: 0x00065FF9
 		public virtual VectorInfo Center
 		{
 			get
@@ -142,9 +140,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000969 RID: 2409
-		// (get) Token: 0x0600238C RID: 9100 RVA: 0x00060F4C File Offset: 0x0005F14C
-		// (set) Token: 0x0600238D RID: 9101 RVA: 0x00060FAD File Offset: 0x0005F1AD
+		// Token: 0x17000A23 RID: 2595
+		// (get) Token: 0x0600269E RID: 9886 RVA: 0x00067E10 File Offset: 0x00066010
+		// (set) Token: 0x0600269F RID: 9887 RVA: 0x00067E71 File Offset: 0x00066071
 		public virtual VectorInfo Size
 		{
 			get
@@ -172,9 +170,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700096A RID: 2410
-		// (get) Token: 0x0600238E RID: 9102 RVA: 0x00060FC4 File Offset: 0x0005F1C4
-		// (set) Token: 0x0600238F RID: 9103 RVA: 0x00061025 File Offset: 0x0005F225
+		// Token: 0x17000A24 RID: 2596
+		// (get) Token: 0x060026A0 RID: 9888 RVA: 0x00067E88 File Offset: 0x00066088
+		// (set) Token: 0x060026A1 RID: 9889 RVA: 0x00067EE9 File Offset: 0x000660E9
 		[Nullable(2)]
 		public virtual VectorInfo Rotator
 		{
@@ -205,30 +203,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001880 RID: 6272
+		// Token: 0x04001A79 RID: 6777
 		[Nullable(2)]
 		protected new IRenderFogBarrier FbInstance;
 
-		// Token: 0x04001881 RID: 6273
+		// Token: 0x04001A7A RID: 6778
 		[Nullable(2)]
 		protected new IRenderFogBarrier_SetValue PocoInterface;
 
-		// Token: 0x04001882 RID: 6274
+		// Token: 0x04001A7B RID: 6779
 		private VectorInfo _CenterCache;
 
-		// Token: 0x04001883 RID: 6275
+		// Token: 0x04001A7C RID: 6780
 		private bool _CenterInited;
 
-		// Token: 0x04001884 RID: 6276
+		// Token: 0x04001A7D RID: 6781
 		private VectorInfo _SizeCache;
 
-		// Token: 0x04001885 RID: 6277
+		// Token: 0x04001A7E RID: 6782
 		private bool _SizeInited;
 
-		// Token: 0x04001886 RID: 6278
+		// Token: 0x04001A7F RID: 6783
 		private VectorInfo _RotatorCache;
 
-		// Token: 0x04001887 RID: 6279
+		// Token: 0x04001A80 RID: 6784
 		private bool _RotatorInited;
 	}
 }

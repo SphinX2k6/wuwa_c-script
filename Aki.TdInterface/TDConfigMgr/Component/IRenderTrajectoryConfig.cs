@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000682 RID: 1666
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000723 RID: 1827
 	public class IRenderTrajectoryConfig
 	{
-		// Token: 0x060023AA RID: 9130 RVA: 0x0006139C File Offset: 0x0005F59C
+		// Token: 0x060026C6 RID: 9926 RVA: 0x00068364 File Offset: 0x00066564
 		private IRenderTrajectoryConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060023AB RID: 9131 RVA: 0x000613D4 File Offset: 0x0005F5D4
+		// Token: 0x060026C7 RID: 9927 RVA: 0x0006839C File Offset: 0x0006659C
 		public static IRenderTrajectoryConfig Create([Nullable(2)] IRenderTrajectoryConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023AC RID: 9132 RVA: 0x000613E7 File Offset: 0x0005F5E7
+		// Token: 0x060026C8 RID: 9928 RVA: 0x000683AF File Offset: 0x000665AF
 		public static IRenderTrajectoryConfig CreateFromSetValue([Nullable(2)] IRenderTrajectoryConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023AD RID: 9133 RVA: 0x000613FA File Offset: 0x0005F5FA
+		// Token: 0x060026C9 RID: 9929 RVA: 0x000683C2 File Offset: 0x000665C2
 		public IRenderTrajectoryConfig_SetValue ToSetValue()
 		{
 			return new IRenderTrajectoryConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000971 RID: 2417
-		// (get) Token: 0x060023AE RID: 9134 RVA: 0x00061419 File Offset: 0x0005F619
-		// (set) Token: 0x060023AF RID: 9135 RVA: 0x00061448 File Offset: 0x0005F648
+		// Token: 0x17000A2D RID: 2605
+		// (get) Token: 0x060026CA RID: 9930 RVA: 0x000683E1 File Offset: 0x000665E1
+		// (set) Token: 0x060026CB RID: 9931 RVA: 0x00068410 File Offset: 0x00066610
 		public virtual float Time
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000972 RID: 2418
-		// (get) Token: 0x060023B0 RID: 9136 RVA: 0x00061456 File Offset: 0x0005F656
-		// (set) Token: 0x060023B1 RID: 9137 RVA: 0x00061481 File Offset: 0x0005F681
+		// Token: 0x17000A2E RID: 2606
+		// (get) Token: 0x060026CC RID: 9932 RVA: 0x0006841E File Offset: 0x0006661E
+		// (set) Token: 0x060026CD RID: 9933 RVA: 0x00068449 File Offset: 0x00066649
 		public virtual string Effect
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400189D RID: 6301
+		// Token: 0x04001A9A RID: 6810
 		[Nullable(2)]
 		protected IRenderTrajectoryConfig FbInstance;
 
-		// Token: 0x0400189E RID: 6302
+		// Token: 0x04001A9B RID: 6811
 		[Nullable(2)]
 		protected IRenderTrajectoryConfig_SetValue PocoInterface;
 	}

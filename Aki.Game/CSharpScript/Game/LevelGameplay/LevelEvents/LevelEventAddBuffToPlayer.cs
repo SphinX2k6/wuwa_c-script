@@ -5,17 +5,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AEE RID: 27374
+	// Token: 0x02005C66 RID: 23654
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventAddBuffToPlayer : LevelEventAddBuffClientPrePerformance
 	{
-		// Token: 0x06043FD4 RID: 278484 RVA: 0x010AE159 File Offset: 0x010AC359
+		// Token: 0x0603A126 RID: 237862 RVA: 0x010579D5 File Offset: 0x01055BD5
 		public LevelEventAddBuffToPlayer(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06043FD5 RID: 278485 RVA: 0x010AE164 File Offset: 0x010AC364
+		// Token: 0x0603A127 RID: 237863 RVA: 0x010579E0 File Offset: 0x01055BE0
 		[return: Nullable(2)]
 		protected override EntityHandle GetTargetEntity(TriggerContext context)
 		{
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return null;
 		}
 
-		// Token: 0x06043FD6 RID: 278486 RVA: 0x010AE20F File Offset: 0x010AC40F
+		// Token: 0x0603A128 RID: 237864 RVA: 0x01057A8B File Offset: 0x01055C8B
 		protected override List<long> GetBuffIds(ActionParams inParams)
 		{
 			return (inParams as AddBuffToPlayer).BuffIds;

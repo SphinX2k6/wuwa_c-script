@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x02005980 RID: 22912
+	// Token: 0x02004959 RID: 18777
 	internal enum EMindsetEntryComp
 	{
-		// Token: 0x0401E55D RID: 124253
+		// Token: 0x04018FFB RID: 102395
 		Root,
-		// Token: 0x0401E55E RID: 124254
+		// Token: 0x04018FFC RID: 102396
 		PnlTagNew,
-		// Token: 0x0401E55F RID: 124255
+		// Token: 0x04018FFD RID: 102397
 		RedDot,
-		// Token: 0x0401E560 RID: 124256
+		// Token: 0x04018FFE RID: 102398
 		TxtLevel,
-		// Token: 0x0401E561 RID: 124257
+		// Token: 0x04018FFF RID: 102399
 		PnlGot,
-		// Token: 0x0401E562 RID: 124258
+		// Token: 0x04019000 RID: 102400
 		SprDesc05Txt
 	}
 }

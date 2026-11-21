@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DD4 RID: 3540
+	// Token: 0x02000ED0 RID: 3792
 	public class IExhibitItemType
 	{
-		// Token: 0x06005053 RID: 20563 RVA: 0x000C6806 File Offset: 0x000C4A06
-		[NullableContext(1)]
+		// Token: 0x06005578 RID: 21880 RVA: 0x000D2056 File Offset: 0x000D0256
 		public static IExhibitItemType Create(IExhibitItemType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A68 RID: 6760
-		// (get) Token: 0x06005054 RID: 20564 RVA: 0x000C6825 File Offset: 0x000C4A25
+		// Token: 0x17001BD3 RID: 7123
+		// (get) Token: 0x06005579 RID: 21881 RVA: 0x000D2075 File Offset: 0x000D0275
 		public virtual EExhibitItemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E19 RID: 11801
+		// Token: 0x040030DF RID: 12511
 		private IExhibitItemType Instance;
 	}
 }

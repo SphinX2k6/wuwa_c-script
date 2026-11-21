@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200265A RID: 9818
+// Token: 0x02001B45 RID: 6981
 public class FocusModeToggle : UiPanelBase
 {
-	// Token: 0x0601416E RID: 82286 RVA: 0x00510664 File Offset: 0x0050E864
+	// Token: 0x06011650 RID: 71248 RVA: 0x0051F31C File Offset: 0x0051D51C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class FocusModeToggle : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601416F RID: 82287 RVA: 0x005106CD File Offset: 0x0050E8CD
+	// Token: 0x06011651 RID: 71249 RVA: 0x0051F385 File Offset: 0x0051D585
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -33,7 +33,7 @@ public class FocusModeToggle : UiPanelBase
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06014170 RID: 82288 RVA: 0x005106E8 File Offset: 0x0050E8E8
+	// Token: 0x06011652 RID: 71250 RVA: 0x0051F3A0 File Offset: 0x0051D5A0
 	protected override void OnBeforeDestroy()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -45,7 +45,7 @@ public class FocusModeToggle : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014171 RID: 82289 RVA: 0x00510724 File Offset: 0x0050E924
+	// Token: 0x06011653 RID: 71251 RVA: 0x0051F3DC File Offset: 0x0051D5DC
 	[NullableContext(1)]
 	public void BindToggleCallback(Action<EToggleState> onToggleStateChange, Action<EToggleState> onPointUpCallBack)
 	{
@@ -58,7 +58,7 @@ public class FocusModeToggle : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014172 RID: 82290 RVA: 0x0051076B File Offset: 0x0050E96B
+	// Token: 0x06011654 RID: 71252 RVA: 0x0051F423 File Offset: 0x0051D623
 	public void SetToggleState(bool bActive)
 	{
 		this.ManualSetToggleState = true;
@@ -70,14 +70,14 @@ public class FocusModeToggle : UiPanelBase
 		this.ManualSetToggleState = false;
 	}
 
-	// Token: 0x06014173 RID: 82291 RVA: 0x00510798 File Offset: 0x0050E998
+	// Token: 0x06011655 RID: 71253 RVA: 0x0051F450 File Offset: 0x0051D650
 	[NullableContext(1)]
 	public void SetButtonText(string textTableId)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(1), textTableId, Array.Empty<object>());
 	}
 
-	// Token: 0x06014174 RID: 82292 RVA: 0x005107B4 File Offset: 0x0050E9B4
+	// Token: 0x06011656 RID: 71254 RVA: 0x0051F46C File Offset: 0x0051D66C
 	private bool CanToggleExecuteChange()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -91,16 +91,16 @@ public class FocusModeToggle : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x04009776 RID: 38774
+	// Token: 0x040098CE RID: 39118
 	private bool ManualSetToggleState;
 
-	// Token: 0x02008C95 RID: 35989
+	// Token: 0x02007E1E RID: 32286
 	private class EChildComponent
 	{
-		// Token: 0x0402DA11 RID: 186897
+		// Token: 0x04028D28 RID: 167208
 		public const int Toggle = 0;
 
-		// Token: 0x0402DA12 RID: 186898
+		// Token: 0x04028D29 RID: 167209
 		public const int ToggleText = 1;
 	}
 }

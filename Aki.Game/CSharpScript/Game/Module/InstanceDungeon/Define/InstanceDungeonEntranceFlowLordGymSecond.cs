@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058DB RID: 22747
+	// Token: 0x020048B3 RID: 18611
 	public class InstanceDungeonEntranceFlowLordGymSecond : InstanceDungeonEntranceFlowBase
 	{
-		// Token: 0x06039CBC RID: 236732 RVA: 0x00DBADF4 File Offset: 0x00DB8FF4
+		// Token: 0x0602EBDF RID: 191455 RVA: 0x00D09D4C File Offset: 0x00D07F4C
 		protected override void OnCreate()
 		{
 			base.AddStep(delegate

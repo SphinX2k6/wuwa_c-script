@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FA7 RID: 4007
+// Token: 0x0200045C RID: 1116
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureSceneItemChangeAreaFurnitureContext : IFurnitureSceneItemChangeAreaFurnitureContext
 {
-	// Token: 0x1700082A RID: 2090
-	// (get) Token: 0x06006672 RID: 26226 RVA: 0x00144145 File Offset: 0x00142345
-	// (set) Token: 0x06006673 RID: 26227 RVA: 0x0014414D File Offset: 0x0014234D
+	// Token: 0x1700084C RID: 2124
+	// (get) Token: 0x06003A0A RID: 14858 RVA: 0x0014C9D9 File Offset: 0x0014ABD9
+	// (set) Token: 0x06003A0B RID: 14859 RVA: 0x0014C9E1 File Offset: 0x0014ABE1
 	public FurnitureAreaData SourceAreaData { get; set; }
 
-	// Token: 0x1700082B RID: 2091
-	// (get) Token: 0x06006674 RID: 26228 RVA: 0x00144156 File Offset: 0x00142356
-	// (set) Token: 0x06006675 RID: 26229 RVA: 0x0014415E File Offset: 0x0014235E
+	// Token: 0x1700084D RID: 2125
+	// (get) Token: 0x06003A0C RID: 14860 RVA: 0x0014C9EA File Offset: 0x0014ABEA
+	// (set) Token: 0x06003A0D RID: 14861 RVA: 0x0014C9F2 File Offset: 0x0014ABF2
 	public FurnitureAreaData TargetAreaData { get; set; }
 }

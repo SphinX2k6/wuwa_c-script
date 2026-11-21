@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200094C RID: 2380
+	// Token: 0x02000997 RID: 2455
 	public class ConfigSkillTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060037DB RID: 14299 RVA: 0x00195437 File Offset: 0x00193637
+		// Token: 0x0600399D RID: 14749 RVA: 0x001A2657 File Offset: 0x001A0857
 		static ConfigSkillTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkillTypeById.CreateStaticDefaultValue), new Action(ConfigSkillTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060037DC RID: 14300 RVA: 0x00195458 File Offset: 0x00193658
+		// Token: 0x0600399E RID: 14750 RVA: 0x001A2678 File Offset: 0x001A0878
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkillTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060037DD RID: 14301 RVA: 0x001954D7 File Offset: 0x001936D7
+		// Token: 0x0600399F RID: 14751 RVA: 0x001A26F7 File Offset: 0x001A08F7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkillTypeById.LogPair = null;
 			ConfigSkillTypeById.HandleId = 0;
 		}
 
-		// Token: 0x060037DE RID: 14302 RVA: 0x001954E5 File Offset: 0x001936E5
+		// Token: 0x060039A0 RID: 14752 RVA: 0x001A2705 File Offset: 0x001A0905
 		public static void Init()
 		{
 			ConfigSkillTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigSkillTypeById.HandleId, "db_skill.db", "select BinData from `SkillType` where Id = ?");
 		}
 
-		// Token: 0x060037DF RID: 14303 RVA: 0x00195500 File Offset: 0x00193700
+		// Token: 0x060039A1 RID: 14753 RVA: 0x001A2720 File Offset: 0x001A0920
 		public static SkillType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSkillTypeById.HandleId, ConfigSkillTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SkillType?(rootAsSkillType);
 		}
 
-		// Token: 0x040040FA RID: 16634
+		// Token: 0x04004307 RID: 17159
 		private const string DB = "db_skill.db";
 
-		// Token: 0x040040FB RID: 16635
+		// Token: 0x04004308 RID: 17160
 		private const string FILE = "j.技能.xlsx";
 
-		// Token: 0x040040FC RID: 16636
+		// Token: 0x04004309 RID: 17161
 		private const string TABLE = "SkillType";
 
-		// Token: 0x040040FD RID: 16637
+		// Token: 0x0400430A RID: 17162
 		private const string COMMAND = "select BinData from `SkillType` where Id = ?";
 
-		// Token: 0x040040FE RID: 16638
+		// Token: 0x0400430B RID: 17163
 		private const string KEY_PREFIX = "SkillTypeById";
 
-		// Token: 0x040040FF RID: 16639
+		// Token: 0x0400430C RID: 17164
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004100 RID: 16640
+		// Token: 0x0400430D RID: 17165
 		private static int HandleId;
 	}
 }

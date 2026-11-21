@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000050 RID: 80
+	// Token: 0x02000058 RID: 88
 	public class ConfigActivitySignById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060001E0 RID: 480 RVA: 0x00064510 File Offset: 0x00062710
+		// Token: 0x06000210 RID: 528 RVA: 0x00068DC4 File Offset: 0x00066FC4
 		static ConfigActivitySignById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivitySignById.CreateStaticDefaultValue), new Action(ConfigActivitySignById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060001E1 RID: 481 RVA: 0x00064530 File Offset: 0x00062730
+		// Token: 0x06000211 RID: 529 RVA: 0x00068DE4 File Offset: 0x00066FE4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivitySignById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060001E2 RID: 482 RVA: 0x000645AF File Offset: 0x000627AF
+		// Token: 0x06000212 RID: 530 RVA: 0x00068E63 File Offset: 0x00067063
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivitySignById.LogPair = null;
 			ConfigActivitySignById.HandleId = 0;
 		}
 
-		// Token: 0x060001E3 RID: 483 RVA: 0x000645BD File Offset: 0x000627BD
+		// Token: 0x06000213 RID: 531 RVA: 0x00068E71 File Offset: 0x00067071
 		public static void Init()
 		{
 			ConfigActivitySignById.HandleId = ConfigCommon.InitDataStatement(ConfigActivitySignById.HandleId, "db_sevendaysign.db", "select BinData from `ActivitySign` where Id=?");
 		}
 
-		// Token: 0x060001E4 RID: 484 RVA: 0x000645D8 File Offset: 0x000627D8
+		// Token: 0x06000214 RID: 532 RVA: 0x00068E8C File Offset: 0x0006708C
 		public static ActivitySign? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigActivitySignById.HandleId, ConfigActivitySignById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ActivitySign?(rootAsActivitySign);
 		}
 
-		// Token: 0x04000214 RID: 532
+		// Token: 0x0400024C RID: 588
 		private const string DB = "db_sevendaysign.db";
 
-		// Token: 0x04000215 RID: 533
+		// Token: 0x0400024D RID: 589
 		private const string FILE = "q.七天签到.xlsx";
 
-		// Token: 0x04000216 RID: 534
+		// Token: 0x0400024E RID: 590
 		private const string TABLE = "ActivitySign";
 
-		// Token: 0x04000217 RID: 535
+		// Token: 0x0400024F RID: 591
 		private const string COMMAND = "select BinData from `ActivitySign` where Id=?";
 
-		// Token: 0x04000218 RID: 536
+		// Token: 0x04000250 RID: 592
 		private const string KEY_PREFIX = "ActivitySignById";
 
-		// Token: 0x04000219 RID: 537
+		// Token: 0x04000251 RID: 593
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400021A RID: 538
+		// Token: 0x04000252 RID: 594
 		private static int HandleId;
 	}
 }

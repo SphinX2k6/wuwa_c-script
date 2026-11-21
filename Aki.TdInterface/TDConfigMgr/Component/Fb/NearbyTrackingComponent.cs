@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BF4 RID: 3060
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CC4 RID: 3268
 	public class NearbyTrackingComponent : IComponentBase
 	{
-		// Token: 0x0600464B RID: 17995 RVA: 0x000B197C File Offset: 0x000AFB7C
+		// Token: 0x06004AAE RID: 19118 RVA: 0x000BBB46 File Offset: 0x000B9D46
 		public static NearbyTrackingComponent Create(INearbyTrackingComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001420 RID: 5152
-		// (get) Token: 0x0600464C RID: 17996 RVA: 0x000B199C File Offset: 0x000AFB9C
+		// Token: 0x17001521 RID: 5409
+		// (get) Token: 0x06004AAF RID: 19119 RVA: 0x000BBB68 File Offset: 0x000B9D68
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001421 RID: 5153
-		// (get) Token: 0x0600464D RID: 17997 RVA: 0x000B19D4 File Offset: 0x000AFBD4
+		// Token: 0x17001522 RID: 5410
+		// (get) Token: 0x06004AB0 RID: 19120 RVA: 0x000BBBA0 File Offset: 0x000B9DA0
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001422 RID: 5154
-		// (get) Token: 0x0600464E RID: 17998 RVA: 0x000B19EA File Offset: 0x000AFBEA
+		// Token: 0x17001523 RID: 5411
+		// (get) Token: 0x06004AB1 RID: 19121 RVA: 0x000BBBB6 File Offset: 0x000B9DB6
 		public virtual bool IsEnable
 		{
 			get
@@ -56,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001423 RID: 5155
-		// (get) Token: 0x0600464F RID: 17999 RVA: 0x000B19F8 File Offset: 0x000AFBF8
+		// Token: 0x17001524 RID: 5412
+		// (get) Token: 0x06004AB2 RID: 19122 RVA: 0x000BBBC4 File Offset: 0x000B9DC4
 		public virtual bool? IsEnableWhileUnlock
 		{
 			get
@@ -70,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001424 RID: 5156
-		// (get) Token: 0x06004650 RID: 18000 RVA: 0x000B1A30 File Offset: 0x000AFC30
+		// Token: 0x17001525 RID: 5413
+		// (get) Token: 0x06004AB3 RID: 19123 RVA: 0x000BBBFC File Offset: 0x000B9DFC
 		public virtual bool? IsEnbaleWhileHoming
 		{
 			get
@@ -84,8 +81,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001425 RID: 5157
-		// (get) Token: 0x06004651 RID: 18001 RVA: 0x000B1A66 File Offset: 0x000AFC66
+		// Token: 0x17001526 RID: 5414
+		// (get) Token: 0x06004AB4 RID: 19124 RVA: 0x000BBC32 File Offset: 0x000B9E32
 		public virtual INearbyTracking TrackingType
 		{
 			get
@@ -100,13 +97,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002805 RID: 10245
+		// Token: 0x04002A51 RID: 10833
 		private INearbyTrackingComponent Instance;
 
-		// Token: 0x04002806 RID: 10246
+		// Token: 0x04002A52 RID: 10834
 		private INearbyTracking _TrackingTypeCache;
 
-		// Token: 0x04002807 RID: 10247
+		// Token: 0x04002A53 RID: 10835
 		private bool _TrackingTypeInited;
 	}
 }

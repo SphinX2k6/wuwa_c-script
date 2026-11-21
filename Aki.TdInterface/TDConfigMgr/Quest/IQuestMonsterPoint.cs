@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001087 RID: 4231
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011B5 RID: 4533
 	public class IQuestMonsterPoint : IQuestStatisticsType
 	{
-		// Token: 0x06005F5A RID: 24410 RVA: 0x000E6F80 File Offset: 0x000E5180
+		// Token: 0x06006553 RID: 25939 RVA: 0x000F40A0 File Offset: 0x000F22A0
 		private IQuestMonsterPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005F5B RID: 24411 RVA: 0x000E6FB8 File Offset: 0x000E51B8
+		// Token: 0x06006554 RID: 25940 RVA: 0x000F40D8 File Offset: 0x000F22D8
 		public static IQuestMonsterPoint Create([Nullable(2)] IQuestMonsterPoint instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F5C RID: 24412 RVA: 0x000E6FCB File Offset: 0x000E51CB
+		// Token: 0x06006555 RID: 25941 RVA: 0x000F40EB File Offset: 0x000F22EB
 		public static IQuestMonsterPoint CreateFromSetValue([Nullable(2)] IQuestMonsterPoint_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F5D RID: 24413 RVA: 0x000E6FE0 File Offset: 0x000E51E0
+		// Token: 0x06006556 RID: 25942 RVA: 0x000F4100 File Offset: 0x000F2300
 		public new IQuestMonsterPoint_SetValue ToSetValue()
 		{
 			return new IQuestMonsterPoint_SetValue
@@ -70,9 +68,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F66 RID: 8038
-		// (get) Token: 0x06005F5E RID: 24414 RVA: 0x000E706A File Offset: 0x000E526A
-		// (set) Token: 0x06005F5F RID: 24415 RVA: 0x000E7095 File Offset: 0x000E5295
+		// Token: 0x17002118 RID: 8472
+		// (get) Token: 0x06006557 RID: 25943 RVA: 0x000F418A File Offset: 0x000F238A
+		// (set) Token: 0x06006558 RID: 25944 RVA: 0x000F41B5 File Offset: 0x000F23B5
 		public override EStatisticsEventType Type
 		{
 			get
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F67 RID: 8039
-		// (get) Token: 0x06005F60 RID: 24416 RVA: 0x000E70A3 File Offset: 0x000E52A3
-		// (set) Token: 0x06005F61 RID: 24417 RVA: 0x000E70CA File Offset: 0x000E52CA
+		// Token: 0x17002119 RID: 8473
+		// (get) Token: 0x06006559 RID: 25945 RVA: 0x000F41C3 File Offset: 0x000F23C3
+		// (set) Token: 0x0600655A RID: 25946 RVA: 0x000F41EA File Offset: 0x000F23EA
 		public override VarRef Var
 		{
 			get
@@ -117,9 +115,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F68 RID: 8040
-		// (get) Token: 0x06005F62 RID: 24418 RVA: 0x000E70D8 File Offset: 0x000E52D8
-		// (set) Token: 0x06005F63 RID: 24419 RVA: 0x000E7112 File Offset: 0x000E5312
+		// Token: 0x1700211A RID: 8474
+		// (get) Token: 0x0600655B RID: 25947 RVA: 0x000F41F8 File Offset: 0x000F23F8
+		// (set) Token: 0x0600655C RID: 25948 RVA: 0x000F4232 File Offset: 0x000F2432
 		public virtual EElementCategory? DamageElementType
 		{
 			get
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F69 RID: 8041
-		// (get) Token: 0x06005F64 RID: 24420 RVA: 0x000E7120 File Offset: 0x000E5320
-		// (set) Token: 0x06005F65 RID: 24421 RVA: 0x000E715A File Offset: 0x000E535A
+		// Token: 0x1700211B RID: 8475
+		// (get) Token: 0x0600655D RID: 25949 RVA: 0x000F4240 File Offset: 0x000F2440
+		// (set) Token: 0x0600655E RID: 25950 RVA: 0x000F427A File Offset: 0x000F247A
 		public virtual ESkillCategory? SkillCategory
 		{
 			get
@@ -165,9 +163,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F6A RID: 8042
-		// (get) Token: 0x06005F66 RID: 24422 RVA: 0x000E7168 File Offset: 0x000E5368
-		// (set) Token: 0x06005F67 RID: 24423 RVA: 0x000E718F File Offset: 0x000E538F
+		// Token: 0x1700211C RID: 8476
+		// (get) Token: 0x0600655F RID: 25951 RVA: 0x000F4288 File Offset: 0x000F2488
+		// (set) Token: 0x06006560 RID: 25952 RVA: 0x000F42AF File Offset: 0x000F24AF
 		[Nullable(2)]
 		public virtual List<int> KillByEntities
 		{
@@ -192,9 +190,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F6B RID: 8043
-		// (get) Token: 0x06005F68 RID: 24424 RVA: 0x000E71A0 File Offset: 0x000E53A0
-		// (set) Token: 0x06005F69 RID: 24425 RVA: 0x000E71DA File Offset: 0x000E53DA
+		// Token: 0x1700211D RID: 8477
+		// (get) Token: 0x06006561 RID: 25953 RVA: 0x000F42C0 File Offset: 0x000F24C0
+		// (set) Token: 0x06006562 RID: 25954 RVA: 0x000F42FA File Offset: 0x000F24FA
 		public virtual bool? KilledByAny
 		{
 			get
@@ -216,20 +214,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F6C RID: 8044
-		// (get) Token: 0x06005F6A RID: 24426 RVA: 0x000E71E8 File Offset: 0x000E53E8
-		// (set) Token: 0x06005F6B RID: 24427 RVA: 0x000E727B File Offset: 0x000E547B
+		// Token: 0x1700211E RID: 8478
+		// (get) Token: 0x06006563 RID: 25955 RVA: 0x000F4308 File Offset: 0x000F2508
+		// (set) Token: 0x06006564 RID: 25956 RVA: 0x000F439B File Offset: 0x000F259B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMonsterPointTypeConfig> TypeConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -260,7 +258,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -269,20 +267,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F6D RID: 8045
-		// (get) Token: 0x06005F6C RID: 24428 RVA: 0x000E7290 File Offset: 0x000E5490
-		// (set) Token: 0x06005F6D RID: 24429 RVA: 0x000E7323 File Offset: 0x000E5523
+		// Token: 0x1700211F RID: 8479
+		// (get) Token: 0x06006565 RID: 25957 RVA: 0x000F43B0 File Offset: 0x000F25B0
+		// (set) Token: 0x06006566 RID: 25958 RVA: 0x000F4443 File Offset: 0x000F2643
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMonsterPointEntityConfig> EntityConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -313,7 +311,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -322,9 +320,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F6E RID: 8046
-		// (get) Token: 0x06005F6E RID: 24430 RVA: 0x000E7338 File Offset: 0x000E5538
-		// (set) Token: 0x06005F6F RID: 24431 RVA: 0x000E7372 File Offset: 0x000E5572
+		// Token: 0x17002120 RID: 8480
+		// (get) Token: 0x06006567 RID: 25959 RVA: 0x000F4458 File Offset: 0x000F2658
+		// (set) Token: 0x06006568 RID: 25960 RVA: 0x000F4492 File Offset: 0x000F2692
 		public virtual bool? OnlyCountThisTreeAwakeEntities
 		{
 			get
@@ -346,9 +344,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F6F RID: 8047
-		// (get) Token: 0x06005F70 RID: 24432 RVA: 0x000E7380 File Offset: 0x000E5580
-		// (set) Token: 0x06005F71 RID: 24433 RVA: 0x000E73E1 File Offset: 0x000E55E1
+		// Token: 0x17002121 RID: 8481
+		// (get) Token: 0x06006569 RID: 25961 RVA: 0x000F44A0 File Offset: 0x000F26A0
+		// (set) Token: 0x0600656A RID: 25962 RVA: 0x000F4501 File Offset: 0x000F2701
 		[Nullable(2)]
 		public virtual IBindCrossSceneSyncKillMonster BindCrossSceneSyncKillMonster
 		{
@@ -379,40 +377,40 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003989 RID: 14729
+		// Token: 0x04003CD6 RID: 15574
 		[Nullable(2)]
 		protected new IQuestMonsterPoint FbInstance;
 
-		// Token: 0x0400398A RID: 14730
+		// Token: 0x04003CD7 RID: 15575
 		[Nullable(2)]
 		protected new IQuestMonsterPoint_SetValue PocoInterface;
 
-		// Token: 0x0400398B RID: 14731
+		// Token: 0x04003CD8 RID: 15576
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMonsterPointTypeConfig> _TypeConfigsCache;
 
-		// Token: 0x0400398C RID: 14732
+		// Token: 0x04003CD9 RID: 15577
 		private bool _TypeConfigsInited;
 
-		// Token: 0x0400398D RID: 14733
+		// Token: 0x04003CDA RID: 15578
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMonsterPointEntityConfig> _EntityConfigsCache;
 
-		// Token: 0x0400398E RID: 14734
+		// Token: 0x04003CDB RID: 15579
 		private bool _EntityConfigsInited;
 
-		// Token: 0x0400398F RID: 14735
+		// Token: 0x04003CDC RID: 15580
 		private IBindCrossSceneSyncKillMonster _BindCrossSceneSyncKillMonsterCache;
 
-		// Token: 0x04003990 RID: 14736
+		// Token: 0x04003CDD RID: 15581
 		private bool _BindCrossSceneSyncKillMonsterInited;
 	}
 }

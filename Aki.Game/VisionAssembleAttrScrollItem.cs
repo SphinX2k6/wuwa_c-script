@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200248A RID: 9354
+// Token: 0x02001970 RID: 6512
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class VisionAssembleAttrScrollItem : GridProxyAbstract<VisionAssembleAttrData>
 {
-	// Token: 0x06012C69 RID: 76905 RVA: 0x004A1808 File Offset: 0x0049FA08
+	// Token: 0x06010122 RID: 65826 RVA: 0x004AEF70 File Offset: 0x004AD170
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,13 +34,13 @@ public class VisionAssembleAttrScrollItem : GridProxyAbstract<VisionAssembleAttr
 		};
 	}
 
-	// Token: 0x06012C6A RID: 76906 RVA: 0x004A192B File Offset: 0x0049FB2B
+	// Token: 0x06010123 RID: 65827 RVA: 0x004AF093 File Offset: 0x004AD293
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06012C6B RID: 76907 RVA: 0x004A1940 File Offset: 0x0049FB40
+	// Token: 0x06010124 RID: 65828 RVA: 0x004AF0A8 File Offset: 0x004AD2A8
 	public void PlaySequence(string name)
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -56,19 +56,19 @@ public class VisionAssembleAttrScrollItem : GridProxyAbstract<VisionAssembleAttr
 		levelSequencePlayer2.PlayLevelSequenceByName(name, false, null, false);
 	}
 
-	// Token: 0x06012C6C RID: 76908 RVA: 0x004A197C File Offset: 0x0049FB7C
+	// Token: 0x06010125 RID: 65829 RVA: 0x004AF0E4 File Offset: 0x004AD2E4
 	public void SetLeftItemAlpha(float alpha)
 	{
 		base.GetItem(0).SetAlpha(alpha);
 	}
 
-	// Token: 0x06012C6D RID: 76909 RVA: 0x004A198B File Offset: 0x0049FB8B
+	// Token: 0x06010126 RID: 65830 RVA: 0x004AF0F3 File Offset: 0x004AD2F3
 	public void SetRightItemAlpha(float alpha)
 	{
 		base.GetItem(11).SetAlpha(alpha);
 	}
 
-	// Token: 0x06012C6E RID: 76910 RVA: 0x004A199C File Offset: 0x0049FB9C
+	// Token: 0x06010127 RID: 65831 RVA: 0x004AF104 File Offset: 0x004AD304
 	private void RefreshBg(int gridIndex)
 	{
 		bool uiactive = gridIndex % 2 == 0;
@@ -76,7 +76,7 @@ public class VisionAssembleAttrScrollItem : GridProxyAbstract<VisionAssembleAttr
 		base.GetItem(5).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06012C6F RID: 76911 RVA: 0x004A19CC File Offset: 0x0049FBCC
+	// Token: 0x06010128 RID: 65832 RVA: 0x004AF134 File Offset: 0x004AD334
 	public override void Refresh(VisionAssembleAttrData data, bool isSelected, int gridIndex)
 	{
 		this.RefreshBg(gridIndex);
@@ -107,37 +107,37 @@ public class VisionAssembleAttrScrollItem : GridProxyAbstract<VisionAssembleAttr
 		base.GetText(8).SetText(formatAttributeValueString2, true);
 	}
 
-	// Token: 0x04008D65 RID: 36197
+	// Token: 0x04008EAC RID: 36524
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008A01 RID: 35329
+	// Token: 0x02007B88 RID: 31624
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CD0D RID: 183565
+		// Token: 0x04028023 RID: 163875
 		LeftItem,
-		// Token: 0x0402CD0E RID: 183566
+		// Token: 0x04028024 RID: 163876
 		LeftSpriteBg,
-		// Token: 0x0402CD0F RID: 183567
+		// Token: 0x04028025 RID: 163877
 		LeftTextureIcon,
-		// Token: 0x0402CD10 RID: 183568
+		// Token: 0x04028026 RID: 163878
 		LeftAttributeText,
-		// Token: 0x0402CD11 RID: 183569
+		// Token: 0x04028027 RID: 163879
 		LeftNumText,
-		// Token: 0x0402CD12 RID: 183570
+		// Token: 0x04028028 RID: 163880
 		RightSpriteBg,
-		// Token: 0x0402CD13 RID: 183571
+		// Token: 0x04028029 RID: 163881
 		RightTextureIcon,
-		// Token: 0x0402CD14 RID: 183572
+		// Token: 0x0402802A RID: 163882
 		RightAttributeText,
-		// Token: 0x0402CD15 RID: 183573
+		// Token: 0x0402802B RID: 163883
 		RightNumText,
-		// Token: 0x0402CD16 RID: 183574
+		// Token: 0x0402802C RID: 163884
 		UpItem,
-		// Token: 0x0402CD17 RID: 183575
+		// Token: 0x0402802D RID: 163885
 		DownItem,
-		// Token: 0x0402CD18 RID: 183576
+		// Token: 0x0402802E RID: 163886
 		RightItem
 	}
 }

@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200461A RID: 17946
+	// Token: 0x02003543 RID: 13635
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ComponentActionId : Singleton
 	{
-		// Token: 0x170075C5 RID: 30149
-		// (get) Token: 0x0602E3D9 RID: 189401 RVA: 0x00AB161E File Offset: 0x00AAF81E
+		// Token: 0x1700487D RID: 18557
+		// (get) Token: 0x06022ACE RID: 142030 RVA: 0x009DDD12 File Offset: 0x009DBF12
 		public static ComponentActionId Instance
 		{
 			get
@@ -23,12 +23,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E3DA RID: 189402 RVA: 0x00AB1641 File Offset: 0x00AAF841
+		// Token: 0x06022ACF RID: 142031 RVA: 0x009DDD35 File Offset: 0x009DBF35
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E3DB RID: 189403 RVA: 0x00AB1643 File Offset: 0x00AAF843
+		// Token: 0x06022AD0 RID: 142032 RVA: 0x009DDD37 File Offset: 0x009DBF37
 		public static void ResetStaticDefaultValue()
 		{
 			ComponentActionId instance = ComponentActionId._instance;
@@ -39,16 +39,16 @@ namespace CSharpScript.Game.Ui
 			ComponentActionId._instance = null;
 		}
 
-		// Token: 0x0602E3DC RID: 189404 RVA: 0x00AB165C File Offset: 0x00AAF85C
+		// Token: 0x06022AD1 RID: 142033 RVA: 0x009DDD50 File Offset: 0x009DBF50
 		static ComponentActionId()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ComponentActionId.CreateStaticDefaultValue), new Action(ComponentActionId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018D35 RID: 101685
+		// Token: 0x04013374 RID: 78708
 		public int SelfIncrementId;
 
-		// Token: 0x04018D36 RID: 101686
+		// Token: 0x04013375 RID: 78709
 		[Nullable(2)]
 		private static ComponentActionId _instance;
 	}

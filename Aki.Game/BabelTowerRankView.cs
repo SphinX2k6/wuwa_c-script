@@ -10,38 +10,38 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001182 RID: 4482
+// Token: 0x02000636 RID: 1590
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 {
-	// Token: 0x0600767D RID: 30333 RVA: 0x0018A55B File Offset: 0x0018875B
+	// Token: 0x06004A14 RID: 18964 RVA: 0x0019310B File Offset: 0x0019130B
 	public BabelTowerRankView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600767E RID: 30334 RVA: 0x0018A581 File Offset: 0x00188781
+	// Token: 0x06004A15 RID: 18965 RVA: 0x00193131 File Offset: 0x00191331
 	[NullableContext(2)]
 	public EUiBehaviourPopType? GetExtraPopFrameType(object param = null)
 	{
 		return new EUiBehaviourPopType?(EUiBehaviourPopType.BabelTowerRank);
 	}
 
-	// Token: 0x0600767F RID: 30335 RVA: 0x0018A58A File Offset: 0x0018878A
+	// Token: 0x06004A16 RID: 18966 RVA: 0x0019313A File Offset: 0x0019133A
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.OpenView, new Action<EUiViewName, int>(this.OnViewOpen));
 	}
 
-	// Token: 0x06007680 RID: 30336 RVA: 0x0018A5AA File Offset: 0x001887AA
+	// Token: 0x06004A17 RID: 18967 RVA: 0x0019315A File Offset: 0x0019135A
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
 		EventSystem.Instance.Remove<EUiViewName, int>(EEventName.OpenView, new Action<EUiViewName, int>(this.OnViewOpen));
 	}
 
-	// Token: 0x06007681 RID: 30337 RVA: 0x0018A5CA File Offset: 0x001887CA
+	// Token: 0x06004A18 RID: 18968 RVA: 0x0019317A File Offset: 0x0019137A
 	private void OnViewOpen(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.PersonalRootView)
@@ -50,7 +50,7 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		}
 	}
 
-	// Token: 0x06007682 RID: 30338 RVA: 0x0018A5EC File Offset: 0x001887EC
+	// Token: 0x06004A19 RID: 18969 RVA: 0x0019319C File Offset: 0x0019139C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -70,7 +70,7 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007683 RID: 30339 RVA: 0x0018A6B8 File Offset: 0x001888B8
+	// Token: 0x06004A1A RID: 18970 RVA: 0x00193268 File Offset: 0x00191468
 	private void OnToggleTabClick(EToggleState state)
 	{
 		bool flag = state == EToggleState.ETT_Checked;
@@ -88,7 +88,7 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		this.RefreshRankListOnly();
 	}
 
-	// Token: 0x06007684 RID: 30340 RVA: 0x0018A73C File Offset: 0x0018893C
+	// Token: 0x06004A1B RID: 18971 RVA: 0x001932EC File Offset: 0x001914EC
 	protected override void OnBeforeShow()
 	{
 		int? num = this.OpenParam as int?;
@@ -104,7 +104,7 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		}
 	}
 
-	// Token: 0x06007685 RID: 30341 RVA: 0x0018A7A8 File Offset: 0x001889A8
+	// Token: 0x06004A1C RID: 18972 RVA: 0x00193358 File Offset: 0x00191558
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerRankView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -115,7 +115,7 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007686 RID: 30342 RVA: 0x0018A7EC File Offset: 0x001889EC
+	// Token: 0x06004A1D RID: 18973 RVA: 0x0019339C File Offset: 0x0019159C
 	private UniTask InitDropDown()
 	{
 		BabelTowerRankView.<InitDropDown>d__20 <InitDropDown>d__;
@@ -126,7 +126,7 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		return <InitDropDown>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007687 RID: 30343 RVA: 0x0018A830 File Offset: 0x00188A30
+	// Token: 0x06004A1E RID: 18974 RVA: 0x001933E0 File Offset: 0x001915E0
 	private TableTextArgNew GetLevelTextId(int levelId)
 	{
 		if (levelId == -1)
@@ -136,14 +136,14 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		return new TableTextArgNew(BabelTowerConfig.Instance.GetBabelTowerLevelConfig(levelId).NameText, Array.Empty<object>());
 	}
 
-	// Token: 0x06007688 RID: 30344 RVA: 0x0018A86E File Offset: 0x00188A6E
+	// Token: 0x06004A1F RID: 18975 RVA: 0x0019341E File Offset: 0x0019161E
 	private void OnDropDownSelect(int index, int levelId)
 	{
 		this.CurrentRankType = levelId;
 		this.RefreshRankListByType();
 	}
 
-	// Token: 0x06007689 RID: 30345 RVA: 0x0018A87D File Offset: 0x00188A7D
+	// Token: 0x06004A20 RID: 18976 RVA: 0x0019342D File Offset: 0x0019162D
 	private void RefreshRankListByType()
 	{
 		this.RebuildRankListData();
@@ -151,14 +151,14 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		this.RefreshScrollView();
 	}
 
-	// Token: 0x0600768A RID: 30346 RVA: 0x0018A891 File Offset: 0x00188A91
+	// Token: 0x06004A21 RID: 18977 RVA: 0x00193441 File Offset: 0x00191641
 	private void RefreshRankListOnly()
 	{
 		this.RebuildRankListData();
 		this.RefreshScrollView();
 	}
 
-	// Token: 0x0600768B RID: 30347 RVA: 0x0018A8A0 File Offset: 0x00188AA0
+	// Token: 0x06004A22 RID: 18978 RVA: 0x00193450 File Offset: 0x00191650
 	[return: Nullable(2)]
 	private BabelTowerRankItemData TryAppendRankItem(List<BabelTowerRankItemData> list, PublicBabelTowerInfo protoData, bool isMyRank)
 	{
@@ -172,7 +172,7 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		return babelTowerRankItemData;
 	}
 
-	// Token: 0x0600768C RID: 30348 RVA: 0x0018A8D8 File Offset: 0x00188AD8
+	// Token: 0x06004A23 RID: 18979 RVA: 0x00193488 File Offset: 0x00191688
 	private void RebuildRankListData()
 	{
 		List<BabelTowerRankItemData> rankListData = this.RankListData;
@@ -206,7 +206,7 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		}
 	}
 
-	// Token: 0x0600768D RID: 30349 RVA: 0x0018A9BC File Offset: 0x00188BBC
+	// Token: 0x06004A24 RID: 18980 RVA: 0x0019356C File Offset: 0x0019176C
 	private void RefreshMyRankItem()
 	{
 		if (this.MyRankItem == null)
@@ -224,7 +224,7 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		this.MyRankItem.Refresh(this.MyRankItemData, false, num);
 	}
 
-	// Token: 0x0600768E RID: 30350 RVA: 0x0018AA44 File Offset: 0x00188C44
+	// Token: 0x06004A25 RID: 18981 RVA: 0x001935F4 File Offset: 0x001917F4
 	private void RefreshScrollView()
 	{
 		bool flag = this.RankListData.Count > 0;
@@ -240,20 +240,20 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 		}
 	}
 
-	// Token: 0x0600768F RID: 30351 RVA: 0x0018AA96 File Offset: 0x00188C96
+	// Token: 0x06004A26 RID: 18982 RVA: 0x00193646 File Offset: 0x00191846
 	private BabelTowerRankItem CreateItem()
 	{
 		return new BabelTowerRankItem();
 	}
 
-	// Token: 0x0400365F RID: 13919
+	// Token: 0x040036F8 RID: 14072
 	private const int TOTAL_RANK_LEVEL_ID = -1;
 
-	// Token: 0x04003660 RID: 13920
+	// Token: 0x040036F9 RID: 14073
 	[Nullable(2)]
 	private BabelTowerData BabelTowerData;
 
-	// Token: 0x04003661 RID: 13921
+	// Token: 0x040036FA RID: 14074
 	[Nullable(new byte[]
 	{
 		2,
@@ -262,20 +262,20 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 	})]
 	private LoopScrollView<BabelTowerRankItem, BabelTowerRankItemData> RankScrollView;
 
-	// Token: 0x04003662 RID: 13922
+	// Token: 0x040036FB RID: 14075
 	[Nullable(2)]
 	private BabelTowerRankItem MyRankItem;
 
-	// Token: 0x04003663 RID: 13923
+	// Token: 0x040036FC RID: 14076
 	private bool ShowAnonymous;
 
-	// Token: 0x04003664 RID: 13924
+	// Token: 0x040036FD RID: 14077
 	private readonly List<BabelTowerRankItemData> RankListData = new List<BabelTowerRankItemData>();
 
-	// Token: 0x04003665 RID: 13925
+	// Token: 0x040036FE RID: 14078
 	private readonly BabelTowerRankItemData MyRankItemData = new BabelTowerRankItemData();
 
-	// Token: 0x04003666 RID: 13926
+	// Token: 0x040036FF RID: 14079
 	[Nullable(new byte[]
 	{
 		2,
@@ -283,30 +283,30 @@ public class BabelTowerRankView : UiViewBase, IExtraUiPopFrameType
 	})]
 	private CommonDropDown<TableTextArgNew, int> RankDropDown;
 
-	// Token: 0x04003667 RID: 13927
+	// Token: 0x04003700 RID: 14080
 	private int CurrentRankType = -1;
 
-	// Token: 0x04003668 RID: 13928
+	// Token: 0x04003701 RID: 14081
 	[Nullable(2)]
 	private TogTabItemSubComponent TogTabItemIns;
 
-	// Token: 0x02007759 RID: 30553
+	// Token: 0x020068E6 RID: 26854
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x040275EC RID: 161260
+		// Token: 0x04022925 RID: 141605
 		public const int DropDownItem = 0;
 
-		// Token: 0x040275ED RID: 161261
+		// Token: 0x04022926 RID: 141606
 		public const int TogTabItem = 1;
 
-		// Token: 0x040275EE RID: 161262
+		// Token: 0x04022927 RID: 141607
 		public const int LoopViewRank = 2;
 
-		// Token: 0x040275EF RID: 161263
+		// Token: 0x04022928 RID: 141608
 		public const int ItemRank = 3;
 
-		// Token: 0x040275F0 RID: 161264
+		// Token: 0x04022929 RID: 141609
 		public const int ItemMyRank = 4;
 	}
 }

@@ -4,19 +4,19 @@ using Aki.Protocol;
 using CSharpScript.Core.Extension;
 using CSharpScript.Game.Camera;
 
-// Token: 0x02002FC7 RID: 12231
+// Token: 0x0200251B RID: 9499
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayCueMagnitude : GameplayCueBase
 {
-	// Token: 0x06019ED0 RID: 106192 RVA: 0x006C8178 File Offset: 0x006C6378
+	// Token: 0x060177E2 RID: 96226 RVA: 0x006EEA4C File Offset: 0x006ECC4C
 	protected override void OnInit()
 	{
 		this.Min = (float)this.CueConfig.Min;
 		this.Max = (float)this.CueConfig.Max;
 	}
 
-	// Token: 0x06019ED1 RID: 106193 RVA: 0x006C81A0 File Offset: 0x006C63A0
+	// Token: 0x060177E3 RID: 96227 RVA: 0x006EEA74 File Offset: 0x006ECC74
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -44,25 +44,25 @@ public class GameplayCueMagnitude : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019ED2 RID: 106194 RVA: 0x006C8257 File Offset: 0x006C6457
+	// Token: 0x060177E4 RID: 96228 RVA: 0x006EEB2B File Offset: 0x006ECD2B
 	protected override void OnCreate()
 	{
 		this.InitComponent();
 		this.IsMagnified = this.StartMagnify();
 	}
 
-	// Token: 0x06019ED3 RID: 106195 RVA: 0x006C826B File Offset: 0x006C646B
+	// Token: 0x060177E5 RID: 96229 RVA: 0x006EEB3F File Offset: 0x006ECD3F
 	protected override void OnDestroy()
 	{
 		this.StopMagnify();
 	}
 
-	// Token: 0x06019ED4 RID: 106196 RVA: 0x006C8273 File Offset: 0x006C6473
+	// Token: 0x060177E6 RID: 96230 RVA: 0x006EEB47 File Offset: 0x006ECD47
 	protected virtual void OnSetMagnitude(float normalizedValue)
 	{
 	}
 
-	// Token: 0x06019ED5 RID: 106197 RVA: 0x006C8275 File Offset: 0x006C6475
+	// Token: 0x060177E7 RID: 96231 RVA: 0x006EEB49 File Offset: 0x006ECD49
 	[NullableContext(1)]
 	public override void OnChangeRole(EntityHandle newEntityHandle)
 	{
@@ -72,25 +72,25 @@ public class GameplayCueMagnitude : GameplayCueBase
 		this.IsMagnified = this.StartMagnify();
 	}
 
-	// Token: 0x06019ED6 RID: 106198 RVA: 0x006C8296 File Offset: 0x006C6496
+	// Token: 0x060177E8 RID: 96232 RVA: 0x006EEB6A File Offset: 0x006ECD6A
 	protected virtual bool UseMagnitude()
 	{
 		return this.CueConfig.Magni != 0 && !this.IsInstant;
 	}
 
-	// Token: 0x06019ED7 RID: 106199 RVA: 0x006C82B0 File Offset: 0x006C64B0
+	// Token: 0x060177E9 RID: 96233 RVA: 0x006EEB84 File Offset: 0x006ECD84
 	[NullableContext(1)]
 	public virtual void SyncMagnitude(GameplayCueMagnitude cueRef)
 	{
 	}
 
-	// Token: 0x06019ED8 RID: 106200 RVA: 0x006C82B2 File Offset: 0x006C64B2
+	// Token: 0x060177EA RID: 96234 RVA: 0x006EEB86 File Offset: 0x006ECD86
 	private bool HasMagnitudeComponent()
 	{
 		return this.AttributeComponent != null && this.BuffComponent != null && this.TagComponent != null;
 	}
 
-	// Token: 0x06019ED9 RID: 106201 RVA: 0x006C82D0 File Offset: 0x006C64D0
+	// Token: 0x060177EB RID: 96235 RVA: 0x006EEBA4 File Offset: 0x006ECDA4
 	private bool StartMagnify()
 	{
 		if (!this.UseMagnitude() || !this.HasMagnitudeComponent())
@@ -163,7 +163,7 @@ public class GameplayCueMagnitude : GameplayCueBase
 		return this.SetMagnitude(value, true);
 	}
 
-	// Token: 0x06019EDA RID: 106202 RVA: 0x006C8534 File Offset: 0x006C6734
+	// Token: 0x060177EC RID: 96236 RVA: 0x006EEE08 File Offset: 0x006ED008
 	private void StopMagnify()
 	{
 		if (!this.IsMagnified)
@@ -211,7 +211,7 @@ public class GameplayCueMagnitude : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019EDB RID: 106203 RVA: 0x006C8628 File Offset: 0x006C6828
+	// Token: 0x060177ED RID: 96237 RVA: 0x006EEEFC File Offset: 0x006ED0FC
 	private void OnAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		EAttributeType? maxAttributeId = this.MaxAttributeId;
@@ -226,13 +226,13 @@ public class GameplayCueMagnitude : GameplayCueBase
 		this.SetMagnitude(this.Value, true);
 	}
 
-	// Token: 0x06019EDC RID: 106204 RVA: 0x006C866E File Offset: 0x006C686E
+	// Token: 0x060177EE RID: 96238 RVA: 0x006EEF42 File Offset: 0x006ED142
 	private void OnTagCountChanged(int tagCount, int tagId, int exactTagId, int oldCount)
 	{
 		this.SetMagnitude((float)tagCount, true);
 	}
 
-	// Token: 0x06019EDD RID: 106205 RVA: 0x006C867C File Offset: 0x006C687C
+	// Token: 0x060177EF RID: 96239 RVA: 0x006EEF50 File Offset: 0x006ED150
 	private bool SetMagnitude(float value, bool isLog = true)
 	{
 		if (!this.Check(this.Max >= this.Min, "Buff特效表Min>Max！有问题"))
@@ -245,7 +245,7 @@ public class GameplayCueMagnitude : GameplayCueBase
 		return true;
 	}
 
-	// Token: 0x06019EDE RID: 106206 RVA: 0x006C86C4 File Offset: 0x006C68C4
+	// Token: 0x060177F0 RID: 96240 RVA: 0x006EEF98 File Offset: 0x006ED198
 	protected virtual float Normalize()
 	{
 		if (this.BuffIdNeedTick != 0)
@@ -259,13 +259,13 @@ public class GameplayCueMagnitude : GameplayCueBase
 		return (MathUtils.Instance.Clamp(this.Value, this.Min, this.Max) - this.Min) / (this.Max - this.Min);
 	}
 
-	// Token: 0x06019EDF RID: 106207 RVA: 0x006C8725 File Offset: 0x006C6925
+	// Token: 0x060177F1 RID: 96241 RVA: 0x006EEFF9 File Offset: 0x006ED1F9
 	protected float ToRange(float normalizedValue)
 	{
 		return normalizedValue * (this.Max - this.Min) + this.Min;
 	}
 
-	// Token: 0x06019EE0 RID: 106208 RVA: 0x006C8740 File Offset: 0x006C6940
+	// Token: 0x060177F2 RID: 96242 RVA: 0x006EF014 File Offset: 0x006ED214
 	[NullableContext(1)]
 	private bool Check(bool toCheck, string message)
 	{
@@ -281,7 +281,7 @@ public class GameplayCueMagnitude : GameplayCueBase
 		return true;
 	}
 
-	// Token: 0x06019EE1 RID: 106209 RVA: 0x006C8788 File Offset: 0x006C6988
+	// Token: 0x060177F3 RID: 96243 RVA: 0x006EF05C File Offset: 0x006ED25C
 	private float ComputeMagnitudeValueByBuff()
 	{
 		IActiveBuff buffByHandle = this.BuffComponent.GetBuffByHandle(this.BuffHandleId);
@@ -295,7 +295,7 @@ public class GameplayCueMagnitude : GameplayCueBase
 		return 0f;
 	}
 
-	// Token: 0x06019EE2 RID: 106210 RVA: 0x006C87EC File Offset: 0x006C69EC
+	// Token: 0x060177F4 RID: 96244 RVA: 0x006EF0C0 File Offset: 0x006ED2C0
 	private void InitComponent()
 	{
 		this.AttributeComponent = this.EntityHandle.Entity.GetComponent<BaseAttributeComponent>();
@@ -303,42 +303,42 @@ public class GameplayCueMagnitude : GameplayCueBase
 		this.TagComponent = this.EntityHandle.Entity.GetComponent<BaseTagComponent>();
 	}
 
-	// Token: 0x0400C437 RID: 50231
+	// Token: 0x0400C7E0 RID: 51168
 	private bool IsMagnified;
 
-	// Token: 0x0400C438 RID: 50232
+	// Token: 0x0400C7E1 RID: 51169
 	private ITagTask TagCountChangedTask;
 
-	// Token: 0x0400C439 RID: 50233
+	// Token: 0x0400C7E2 RID: 51170
 	private BaseAttributeComponent AttributeComponent;
 
-	// Token: 0x0400C43A RID: 50234
+	// Token: 0x0400C7E3 RID: 51171
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400C43B RID: 50235
+	// Token: 0x0400C7E4 RID: 51172
 	private BaseBuffComponent BuffComponent;
 
-	// Token: 0x0400C43C RID: 50236
+	// Token: 0x0400C7E5 RID: 51173
 	private EAttributeType? MaxAttributeId;
 
-	// Token: 0x0400C43D RID: 50237
+	// Token: 0x0400C7E6 RID: 51174
 	private float Min;
 
-	// Token: 0x0400C43E RID: 50238
+	// Token: 0x0400C7E7 RID: 51175
 	private float Max;
 
-	// Token: 0x0400C43F RID: 50239
+	// Token: 0x0400C7E8 RID: 51176
 	protected float Value;
 
-	// Token: 0x0400C440 RID: 50240
+	// Token: 0x0400C7E9 RID: 51177
 	private int BuffIdNeedTick;
 
-	// Token: 0x0400C441 RID: 50241
+	// Token: 0x0400C7EA RID: 51178
 	private bool CameraPitchTick;
 
-	// Token: 0x0400C442 RID: 50242
+	// Token: 0x0400C7EB RID: 51179
 	private float StartFlowTime;
 
-	// Token: 0x0400C443 RID: 50243
+	// Token: 0x0400C7EC RID: 51180
 	private bool ExistFlowTimeTick;
 }

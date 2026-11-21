@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A9F RID: 2719
+	// Token: 0x02000B74 RID: 2932
 	public class ConfigWriteLetterById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003FCF RID: 16335 RVA: 0x001C327C File Offset: 0x001C147C
+		// Token: 0x060044CD RID: 17613 RVA: 0x001E2610 File Offset: 0x001E0810
 		static ConfigWriteLetterById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWriteLetterById.CreateStaticDefaultValue), new Action(ConfigWriteLetterById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003FD0 RID: 16336 RVA: 0x001C329C File Offset: 0x001C149C
+		// Token: 0x060044CE RID: 17614 RVA: 0x001E2630 File Offset: 0x001E0830
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWriteLetterById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003FD1 RID: 16337 RVA: 0x001C331B File Offset: 0x001C151B
+		// Token: 0x060044CF RID: 17615 RVA: 0x001E26AF File Offset: 0x001E08AF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWriteLetterById.LogPair = null;
 			ConfigWriteLetterById.HandleId = 0;
 		}
 
-		// Token: 0x06003FD2 RID: 16338 RVA: 0x001C3329 File Offset: 0x001C1529
+		// Token: 0x060044D0 RID: 17616 RVA: 0x001E26BD File Offset: 0x001E08BD
 		public static void Init()
 		{
 			ConfigWriteLetterById.HandleId = ConfigCommon.InitDataStatement(ConfigWriteLetterById.HandleId, "db_writeletter.db", "select BinData from `WriteLetter` where Id=?");
 		}
 
-		// Token: 0x06003FD3 RID: 16339 RVA: 0x001C3344 File Offset: 0x001C1544
+		// Token: 0x060044D1 RID: 17617 RVA: 0x001E26D8 File Offset: 0x001E08D8
 		public static WriteLetter? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWriteLetterById.HandleId, ConfigWriteLetterById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new WriteLetter?(rootAsWriteLetter);
 		}
 
-		// Token: 0x04004A3F RID: 19007
+		// Token: 0x04005012 RID: 20498
 		private const string DB = "db_writeletter.db";
 
-		// Token: 0x04004A40 RID: 19008
+		// Token: 0x04005013 RID: 20499
 		private const string FILE = "k.可视化编辑/c.Csv/y.秧秧写信玩法/*.csv*";
 
-		// Token: 0x04004A41 RID: 19009
+		// Token: 0x04005014 RID: 20500
 		private const string TABLE = "WriteLetter";
 
-		// Token: 0x04004A42 RID: 19010
+		// Token: 0x04005015 RID: 20501
 		private const string COMMAND = "select BinData from `WriteLetter` where Id=?";
 
-		// Token: 0x04004A43 RID: 19011
+		// Token: 0x04005016 RID: 20502
 		private const string KEY_PREFIX = "WriteLetterById";
 
-		// Token: 0x04004A44 RID: 19012
+		// Token: 0x04005017 RID: 20503
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004A45 RID: 19013
+		// Token: 0x04005018 RID: 20504
 		private static int HandleId;
 	}
 }

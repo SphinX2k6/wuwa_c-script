@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DFD RID: 3581
+	// Token: 0x02000EE2 RID: 3810
 	public struct MatchThreeFillRules : IFlatbufferObject
 	{
-		// Token: 0x17001E8A RID: 7818
-		// (get) Token: 0x060092A0 RID: 37536 RVA: 0x0028202D File Offset: 0x0028022D
+		// Token: 0x17001EEE RID: 7918
+		// (get) Token: 0x060098BC RID: 39100 RVA: 0x0029FFCA File Offset: 0x0029E1CA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060092A1 RID: 37537 RVA: 0x0028203A File Offset: 0x0028023A
+		// Token: 0x060098BD RID: 39101 RVA: 0x0029FFD7 File Offset: 0x0029E1D7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060092A2 RID: 37538 RVA: 0x00282044 File Offset: 0x00280244
+		// Token: 0x060098BE RID: 39102 RVA: 0x0029FFE0 File Offset: 0x0029E1E0
 		public static MatchThreeFillRules GetRootAsMatchThreeFillRules(ByteBuffer _bb)
 		{
 			return MatchThreeFillRules.GetRootAsMatchThreeFillRules(_bb, default(MatchThreeFillRules));
 		}
 
-		// Token: 0x060092A3 RID: 37539 RVA: 0x00282060 File Offset: 0x00280260
+		// Token: 0x060098BF RID: 39103 RVA: 0x0029FFFC File Offset: 0x0029E1FC
 		public static MatchThreeFillRules GetRootAsMatchThreeFillRules(ByteBuffer _bb, MatchThreeFillRules obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060092A4 RID: 37540 RVA: 0x0028207D File Offset: 0x0028027D
+		// Token: 0x060098C0 RID: 39104 RVA: 0x002A0019 File Offset: 0x0029E219
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060092A5 RID: 37541 RVA: 0x0028208C File Offset: 0x0028028C
+		// Token: 0x060098C1 RID: 39105 RVA: 0x002A0028 File Offset: 0x0029E228
 		public MatchThreeFillRules __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001E8B RID: 7819
-		// (get) Token: 0x060092A6 RID: 37542 RVA: 0x0028209C File Offset: 0x0028029C
+		// Token: 0x17001EEF RID: 7919
+		// (get) Token: 0x060098C2 RID: 39106 RVA: 0x002A0038 File Offset: 0x0029E238
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E8C RID: 7820
-		// (get) Token: 0x060092A7 RID: 37543 RVA: 0x002820D8 File Offset: 0x002802D8
+		// Token: 0x17001EF0 RID: 7920
+		// (get) Token: 0x060098C3 RID: 39107 RVA: 0x002A0074 File Offset: 0x0029E274
 		public int Count
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E8D RID: 7821
-		// (get) Token: 0x060092A8 RID: 37544 RVA: 0x00282114 File Offset: 0x00280314
+		// Token: 0x17001EF1 RID: 7921
+		// (get) Token: 0x060098C4 RID: 39108 RVA: 0x002A00B0 File Offset: 0x0029E2B0
 		public float EliminateProbability
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E8E RID: 7822
-		// (get) Token: 0x060092A9 RID: 37545 RVA: 0x00282154 File Offset: 0x00280354
+		// Token: 0x17001EF2 RID: 7922
+		// (get) Token: 0x060098C5 RID: 39109 RVA: 0x002A00F0 File Offset: 0x0029E2F0
 		public float RandomProbability
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060092AA RID: 37546 RVA: 0x00282198 File Offset: 0x00280398
+		// Token: 0x060098C6 RID: 39110 RVA: 0x002A0134 File Offset: 0x0029E334
 		public int Pool(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001E8F RID: 7823
-		// (get) Token: 0x060092AB RID: 37547 RVA: 0x002821D8 File Offset: 0x002803D8
+		// Token: 0x17001EF3 RID: 7923
+		// (get) Token: 0x060098C7 RID: 39111 RVA: 0x002A0174 File Offset: 0x0029E374
 		public int PoolLength
 		{
 			get
@@ -135,37 +135,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060092AC RID: 37548 RVA: 0x00282204 File Offset: 0x00280404
+		// Token: 0x060098C8 RID: 39112 RVA: 0x002A01A0 File Offset: 0x0029E3A0
 		public Span<int> GetPoolBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x060092AD RID: 37549 RVA: 0x00282214 File Offset: 0x00280414
+		// Token: 0x060098C9 RID: 39113 RVA: 0x002A01B0 File Offset: 0x0029E3B0
 		public int[] GetPoolArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060092AE RID: 37550 RVA: 0x0028222C File Offset: 0x0028042C
+		// Token: 0x060098CA RID: 39114 RVA: 0x002A01C8 File Offset: 0x0029E3C8
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PoolIter()或GetPoolBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Pool()
+		public int[] Pool()
 		{
-			MatchThreeFillRules matchThreeFillRules = this;
-			return matchThreeFillRules.GetPoolArray() ?? Array.Empty<int>();
+			return this.GetPoolArray();
 		}
 
-		// Token: 0x060092AF RID: 37551 RVA: 0x00282250 File Offset: 0x00280450
+		// Token: 0x060098CB RID: 39115 RVA: 0x002A01D0 File Offset: 0x0029E3D0
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PoolIter()
+		public IEnumerable<int> PoolIter()
 		{
 			MatchThreeFillRules.<PoolIter>d__22 <PoolIter>d__ = new MatchThreeFillRules.<PoolIter>d__22(-2);
 			<PoolIter>d__.<>3__<>4__this = this;
 			return <PoolIter>d__;
 		}
 
-		// Token: 0x04004E9D RID: 20125
+		// Token: 0x04005482 RID: 21634
 		private Table __p;
 	}
 }

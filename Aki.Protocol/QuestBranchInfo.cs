@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E06 RID: 3590
+	// Token: 0x02000DF6 RID: 3574
 	public sealed class QuestBranchInfo : IMessage<QuestBranchInfo>, IMessage, IEquatable<QuestBranchInfo>, IDeepCloneable<QuestBranchInfo>, IBufferMessage
 	{
-		// Token: 0x060134C9 RID: 79049 RVA: 0x002CF198 File Offset: 0x002CD398
+		// Token: 0x060133E4 RID: 78820 RVA: 0x002CDAD8 File Offset: 0x002CBCD8
 		[NullableContext(1)]
 		public static QuestBranchInfo Create()
 		{
 			return new QuestBranchInfo();
 		}
 
-		// Token: 0x17004004 RID: 16388
-		// (get) Token: 0x060134CA RID: 79050 RVA: 0x002CF19F File Offset: 0x002CD39F
+		// Token: 0x17003FDA RID: 16346
+		// (get) Token: 0x060133E5 RID: 78821 RVA: 0x002CDADF File Offset: 0x002CBCDF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004005 RID: 16389
-		// (get) Token: 0x060134CB RID: 79051 RVA: 0x002CF1A2 File Offset: 0x002CD3A2
+		// Token: 0x17003FDB RID: 16347
+		// (get) Token: 0x060133E6 RID: 78822 RVA: 0x002CDAE2 File Offset: 0x002CBCE2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060134CC RID: 79052 RVA: 0x002CF1A9 File Offset: 0x002CD3A9
+		// Token: 0x060133E7 RID: 78823 RVA: 0x002CDAE9 File Offset: 0x002CBCE9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestBranchInfo()
 		{
 		}
 
-		// Token: 0x060134CD RID: 79053 RVA: 0x002CF1D4 File Offset: 0x002CD3D4
+		// Token: 0x060133E8 RID: 78824 RVA: 0x002CDB14 File Offset: 0x002CBD14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestBranchInfo(QuestBranchInfo other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060134CE RID: 79054 RVA: 0x002CF22B File Offset: 0x002CD42B
+		// Token: 0x060133E9 RID: 78825 RVA: 0x002CDB6B File Offset: 0x002CBD6B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestBranchInfo Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new QuestBranchInfo(this);
 		}
 
-		// Token: 0x17004006 RID: 16390
-		// (get) Token: 0x060134CF RID: 79055 RVA: 0x002CF233 File Offset: 0x002CD433
+		// Token: 0x17003FDC RID: 16348
+		// (get) Token: 0x060133EA RID: 78826 RVA: 0x002CDB73 File Offset: 0x002CBD73
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<OneQuestBranchPageInfo> QuestBranchInfos
@@ -80,8 +80,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004007 RID: 16391
-		// (get) Token: 0x060134D0 RID: 79056 RVA: 0x002CF23B File Offset: 0x002CD43B
+		// Token: 0x17003FDD RID: 16349
+		// (get) Token: 0x060133EB RID: 78827 RVA: 0x002CDB7B File Offset: 0x002CBD7B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockTimePoints
@@ -92,8 +92,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004008 RID: 16392
-		// (get) Token: 0x060134D1 RID: 79057 RVA: 0x002CF243 File Offset: 0x002CD443
+		// Token: 0x17003FDE RID: 16350
+		// (get) Token: 0x060133EC RID: 78828 RVA: 0x002CDB83 File Offset: 0x002CBD83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockBranchComponentsGroup
@@ -104,7 +104,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060134D2 RID: 79058 RVA: 0x002CF24B File Offset: 0x002CD44B
+		// Token: 0x060133ED RID: 78829 RVA: 0x002CDB8B File Offset: 0x002CBD8B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			return this.Equals(other as QuestBranchInfo);
 		}
 
-		// Token: 0x060134D3 RID: 79059 RVA: 0x002CF25C File Offset: 0x002CD45C
+		// Token: 0x060133EE RID: 78830 RVA: 0x002CDB9C File Offset: 0x002CBD9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(QuestBranchInfo other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.questBranchInfos_.Equals(other.questBranchInfos_) && this.unlockTimePoints_.Equals(other.unlockTimePoints_) && this.unlockBranchComponentsGroup_.Equals(other.unlockBranchComponentsGroup_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060134D4 RID: 79060 RVA: 0x002CF2C4 File Offset: 0x002CD4C4
+		// Token: 0x060133EF RID: 78831 RVA: 0x002CDC04 File Offset: 0x002CBE04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060134D5 RID: 79061 RVA: 0x002CF314 File Offset: 0x002CD514
+		// Token: 0x060133F0 RID: 78832 RVA: 0x002CDC54 File Offset: 0x002CBE54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060134D6 RID: 79062 RVA: 0x002CF321 File Offset: 0x002CD521
+		// Token: 0x060133F1 RID: 78833 RVA: 0x002CDC61 File Offset: 0x002CBE61
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060134D7 RID: 79063 RVA: 0x002CF32C File Offset: 0x002CD52C
+		// Token: 0x060133F2 RID: 78834 RVA: 0x002CDC6C File Offset: 0x002CBE6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060134D8 RID: 79064 RVA: 0x002CF380 File Offset: 0x002CD580
+		// Token: 0x060133F3 RID: 78835 RVA: 0x002CDCC0 File Offset: 0x002CBEC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060134D9 RID: 79065 RVA: 0x002CF3E0 File Offset: 0x002CD5E0
+		// Token: 0x060133F4 RID: 78836 RVA: 0x002CDD20 File Offset: 0x002CBF20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(QuestBranchInfo other)
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060134DA RID: 79066 RVA: 0x002CF43B File Offset: 0x002CD63B
+		// Token: 0x060133F5 RID: 78837 RVA: 0x002CDD7B File Offset: 0x002CBF7B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -205,7 +205,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060134DB RID: 79067 RVA: 0x002CF444 File Offset: 0x002CD644
+		// Token: 0x060133F6 RID: 78838 RVA: 0x002CDD84 File Offset: 0x002CBF84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,34 +248,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400769D RID: 30365
+		// Token: 0x040076C7 RID: 30407
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400769E RID: 30366
+		// Token: 0x040076C8 RID: 30408
 		public const int QuestBranchInfosFieldNumber = 1;
 
-		// Token: 0x0400769F RID: 30367
+		// Token: 0x040076C9 RID: 30409
 		private static readonly FieldCodec<OneQuestBranchPageInfo> _repeated_questBranchInfos_codec = FieldCodec.ForMessage<OneQuestBranchPageInfo>(10U, OneQuestBranchPageInfo.Parser);
 
-		// Token: 0x040076A0 RID: 30368
+		// Token: 0x040076CA RID: 30410
 		private readonly RepeatedField<OneQuestBranchPageInfo> questBranchInfos_ = new RepeatedField<OneQuestBranchPageInfo>();
 
-		// Token: 0x040076A1 RID: 30369
+		// Token: 0x040076CB RID: 30411
 		public const int UnlockTimePointsFieldNumber = 2;
 
-		// Token: 0x040076A2 RID: 30370
+		// Token: 0x040076CC RID: 30412
 		private static readonly FieldCodec<int> _repeated_unlockTimePoints_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x040076A3 RID: 30371
+		// Token: 0x040076CD RID: 30413
 		private readonly RepeatedField<int> unlockTimePoints_ = new RepeatedField<int>();
 
-		// Token: 0x040076A4 RID: 30372
+		// Token: 0x040076CE RID: 30414
 		public const int UnlockBranchComponentsGroupFieldNumber = 3;
 
-		// Token: 0x040076A5 RID: 30373
+		// Token: 0x040076CF RID: 30415
 		private static readonly FieldCodec<int> _repeated_unlockBranchComponentsGroup_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x040076A6 RID: 30374
+		// Token: 0x040076D0 RID: 30416
 		private readonly RepeatedField<int> unlockBranchComponentsGroup_ = new RepeatedField<int>();
 	}
 }

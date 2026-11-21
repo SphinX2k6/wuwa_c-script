@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Jobs
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064F1 RID: 25841
+	// Token: 0x0200546F RID: 21615
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BoardFillStrategy
 	{
-		// Token: 0x06040DB2 RID: 265650 RVA: 0x00FB5F68 File Offset: 0x00FB4168
+		// Token: 0x06035A76 RID: 219766 RVA: 0x00EFCF98 File Offset: 0x00EFB198
 		public BoardFillStrategy(SequenceDetector detector, [Nullable(2)] int[] fillRuleIds, GameRandom rng)
 		{
 			this.Detector = detector;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ActivePool = this.DefaultPool;
 		}
 
-		// Token: 0x06040DB3 RID: 265651 RVA: 0x00FB6038 File Offset: 0x00FB4238
+		// Token: 0x06035A77 RID: 219767 RVA: 0x00EFD068 File Offset: 0x00EFB268
 		private unsafe void EnsureConfigLoaded()
 		{
 			if (this.ConfigLoaded)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Rules = list.ToArray();
 		}
 
-		// Token: 0x06040DB4 RID: 265652 RVA: 0x00FB622C File Offset: 0x00FB442C
+		// Token: 0x06035A78 RID: 219768 RVA: 0x00EFD25C File Offset: 0x00EFB45C
 		private int SelectRuleIndex()
 		{
 			for (int i = this.Rules.Length - 1; i >= 0; i--)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return -1;
 		}
 
-		// Token: 0x06040DB5 RID: 265653 RVA: 0x00FB626A File Offset: 0x00FB446A
+		// Token: 0x06035A79 RID: 219769 RVA: 0x00EFD29A File Offset: 0x00EFB49A
 		public void NotifyTurnResolved(bool hadCascade)
 		{
 			if (hadCascade)
@@ -105,21 +105,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SelectRuleIndex();
 		}
 
-		// Token: 0x06040DB6 RID: 265654 RVA: 0x00FB6293 File Offset: 0x00FB4493
+		// Token: 0x06035A7A RID: 219770 RVA: 0x00EFD2C3 File Offset: 0x00EFB4C3
 		public void Reset()
 		{
 			this.NoCascadeStreak = 0;
 			this.ActivePool = this.DefaultPool;
 		}
 
-		// Token: 0x06040DB7 RID: 265655 RVA: 0x00FB62A8 File Offset: 0x00FB44A8
+		// Token: 0x06035A7B RID: 219771 RVA: 0x00EFD2D8 File Offset: 0x00EFB4D8
 		private bool RollEliminate(in BoardFillStrategy.FillRule rule)
 		{
 			float num = rule.EliminateProb + rule.RandomProb;
 			return num > 0f && this.Rng.NextDouble() * (double)num < (double)rule.EliminateProb;
 		}
 
-		// Token: 0x06040DB8 RID: 265656 RVA: 0x00FB62E4 File Offset: 0x00FB44E4
+		// Token: 0x06035A7C RID: 219772 RVA: 0x00EFD314 File Offset: 0x00EFB514
 		public int RefillDirtyColumns(Board board, HashSet<int> dirtyCols, List<PieceMoveEvent> moves, List<int> landedCols)
 		{
 			this.EnsureConfigLoaded();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.CommitShadow(board, dirtyCols, moves, landedCols);
 		}
 
-		// Token: 0x06040DB9 RID: 265657 RVA: 0x00FB6390 File Offset: 0x00FB4590
+		// Token: 0x06035A7D RID: 219773 RVA: 0x00EFD3C0 File Offset: 0x00EFB5C0
 		private void LoadShadow(Board board)
 		{
 			Array.Clear(this.Occ, 0, this.Occ.Length);
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040DBA RID: 265658 RVA: 0x00FB643C File Offset: 0x00FB463C
+		// Token: 0x06035A7E RID: 219774 RVA: 0x00EFD46C File Offset: 0x00EFB66C
 		private void SettleShadow()
 		{
 			bool flag;
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			while (flag);
 		}
 
-		// Token: 0x06040DBB RID: 265659 RVA: 0x00FB6480 File Offset: 0x00FB4680
+		// Token: 0x06035A7F RID: 219775 RVA: 0x00EFD4B0 File Offset: 0x00EFB6B0
 		private bool PullInto(int r, int c)
 		{
 			int num2;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.TryDiagonalInto(num2 + 1, r, c);
 		}
 
-		// Token: 0x06040DBC RID: 265660 RVA: 0x00FB64C4 File Offset: 0x00FB46C4
+		// Token: 0x06035A80 RID: 219776 RVA: 0x00EFD4F4 File Offset: 0x00EFB6F4
 		private int ScanUp(int r, int c, out int blockRow)
 		{
 			blockRow = -1;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return -2;
 		}
 
-		// Token: 0x06040DBD RID: 265661 RVA: 0x00FB6500 File Offset: 0x00FB4700
+		// Token: 0x06035A81 RID: 219777 RVA: 0x00EFD530 File Offset: 0x00EFB730
 		private bool TryDiagonalInto(int startRow, int endRow, int c)
 		{
 			if (startRow <= 0 || endRow >= 7 || startRow > endRow)
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return false;
 		}
 
-		// Token: 0x06040DBE RID: 265662 RVA: 0x00FB6554 File Offset: 0x00FB4754
+		// Token: 0x06035A82 RID: 219778 RVA: 0x00EFD584 File Offset: 0x00EFB784
 		private bool TryDiagonalFrom(int r, int c, int srcCol)
 		{
 			if (srcCol < 0 || srcCol >= 8)
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return true;
 		}
 
-		// Token: 0x06040DBF RID: 265663 RVA: 0x00FB65A0 File Offset: 0x00FB47A0
+		// Token: 0x06035A83 RID: 219779 RVA: 0x00EFD5D0 File Offset: 0x00EFB7D0
 		private void MoveInShadow(int fromRow, int fromCol, int toRow, int toCol)
 		{
 			int num = fromRow * 8 + fromCol;
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.PushWay(num2, toRow, toCol);
 		}
 
-		// Token: 0x06040DC0 RID: 265664 RVA: 0x00FB6600 File Offset: 0x00FB4800
+		// Token: 0x06035A84 RID: 219780 RVA: 0x00EFD630 File Offset: 0x00EFB830
 		private void SpawnInto(int r, int c)
 		{
 			int num = r * 8 + c;
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.PushWay(num, r, c);
 		}
 
-		// Token: 0x06040DC1 RID: 265665 RVA: 0x00FB665C File Offset: 0x00FB485C
+		// Token: 0x06035A85 RID: 219781 RVA: 0x00EFD68C File Offset: 0x00EFB88C
 		private void MarkFillSlots()
 		{
 			for (int i = 0; i < this.IsFillSlot.Length; i++)
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040DC2 RID: 265666 RVA: 0x00FB669C File Offset: 0x00FB489C
+		// Token: 0x06035A86 RID: 219782 RVA: 0x00EFD6CC File Offset: 0x00EFB8CC
 		private void PushWay(int idx, int row, int col)
 		{
 			int num = idx * 6;
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.WayCount[idx] = num2 + 1;
 		}
 
-		// Token: 0x06040DC3 RID: 265667 RVA: 0x00FB6708 File Offset: 0x00FB4908
+		// Token: 0x06035A87 RID: 219783 RVA: 0x00EFD738 File Offset: 0x00EFB938
 		private void CopyWay(int from, int to)
 		{
 			int num = this.WayCount[from];
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.WayCount[from] = 0;
 		}
 
-		// Token: 0x06040DC4 RID: 265668 RVA: 0x00FB6760 File Offset: 0x00FB4960
+		// Token: 0x06035A88 RID: 219784 RVA: 0x00EFD790 File Offset: 0x00EFB990
 		private void WriteBackExisting(Board board)
 		{
 			for (int i = 0; i < 7; i++)
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040DC5 RID: 265669 RVA: 0x00FB679C File Offset: 0x00FB499C
+		// Token: 0x06035A89 RID: 219785 RVA: 0x00EFD7CC File Offset: 0x00EFB9CC
 		private int CommitShadow(Board board, HashSet<int> dirtyCols, List<PieceMoveEvent> moves, List<int> landedCols)
 		{
 			int num = 0;
@@ -372,7 +372,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return num;
 		}
 
-		// Token: 0x06040DC6 RID: 265670 RVA: 0x00FB6864 File Offset: 0x00FB4A64
+		// Token: 0x06035A8A RID: 219786 RVA: 0x00EFD894 File Offset: 0x00EFBA94
 		private void EmitWay(int idx, Piece piece, List<PieceMoveEvent> moves)
 		{
 			int num = idx * 6;
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040DC7 RID: 265671 RVA: 0x00FB68C0 File Offset: 0x00FB4AC0
+		// Token: 0x06035A8B RID: 219787 RVA: 0x00EFD8F0 File Offset: 0x00EFBAF0
 		private void TryPitySeed(Board board)
 		{
 			bool flag = this.Rng.Next(2) == 0;
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SeedScan(board, !flag, outerReverse, innerReverse);
 		}
 
-		// Token: 0x06040DC8 RID: 265672 RVA: 0x00FB6918 File Offset: 0x00FB4B18
+		// Token: 0x06035A8C RID: 219788 RVA: 0x00EFD948 File Offset: 0x00EFBB48
 		private bool SeedScan(Board board, bool horizontalMatch, bool outerReverse, bool innerReverse)
 		{
 			if (horizontalMatch)
@@ -431,7 +431,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return false;
 		}
 
-		// Token: 0x06040DC9 RID: 265673 RVA: 0x00FB69B4 File Offset: 0x00FB4BB4
+		// Token: 0x06035A8D RID: 219789 RVA: 0x00EFD9E4 File Offset: 0x00EFBBE4
 		private bool TrySeedCell(Board board, int r, int c, bool horizontal)
 		{
 			int num = r * 8 + c;
@@ -451,58 +451,58 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return false;
 		}
 
-		// Token: 0x06040DCA RID: 265674 RVA: 0x00FB6A1E File Offset: 0x00FB4C1E
+		// Token: 0x06035A8E RID: 219790 RVA: 0x00EFDA4E File Offset: 0x00EFBC4E
 		private EPieceType NextSpawnType()
 		{
 			return this.ActivePool[this.Rng.Next(this.ActivePool.Length)];
 		}
 
-		// Token: 0x04021CA8 RID: 138408
+		// Token: 0x0401C5D9 RID: 116185
 		private const int Rows = 7;
 
-		// Token: 0x04021CA9 RID: 138409
+		// Token: 0x0401C5DA RID: 116186
 		private const int Cols = 8;
 
-		// Token: 0x04021CAA RID: 138410
+		// Token: 0x0401C5DB RID: 116187
 		private const byte OccEmpty = 0;
 
-		// Token: 0x04021CAB RID: 138411
+		// Token: 0x0401C5DC RID: 116188
 		private const byte OccBlock = 1;
 
-		// Token: 0x04021CAC RID: 138412
+		// Token: 0x0401C5DD RID: 116189
 		private const byte OccFixed = 2;
 
-		// Token: 0x04021CAD RID: 138413
+		// Token: 0x0401C5DE RID: 116190
 		private const byte OccMove = 3;
 
-		// Token: 0x04021CAE RID: 138414
+		// Token: 0x0401C5DF RID: 116191
 		private const int MaxWay = 6;
 
-		// Token: 0x04021CAF RID: 138415
+		// Token: 0x0401C5E0 RID: 116192
 		private const int ScanSealed = -1;
 
-		// Token: 0x04021CB0 RID: 138416
+		// Token: 0x0401C5E1 RID: 116193
 		private const int ScanOpenTop = -2;
 
-		// Token: 0x04021CB1 RID: 138417
+		// Token: 0x0401C5E2 RID: 116194
 		private readonly SequenceDetector Detector;
 
-		// Token: 0x04021CB2 RID: 138418
+		// Token: 0x0401C5E3 RID: 116195
 		private readonly GameRandom Rng;
 
-		// Token: 0x04021CB3 RID: 138419
+		// Token: 0x0401C5E4 RID: 116196
 		private readonly bool[] IsFillSlot = new bool[56];
 
-		// Token: 0x04021CB4 RID: 138420
+		// Token: 0x0401C5E5 RID: 116197
 		private readonly bool[] Decided = new bool[56];
 
-		// Token: 0x04021CB5 RID: 138421
+		// Token: 0x0401C5E6 RID: 116198
 		private readonly EPieceType[] SlotColor = new EPieceType[56];
 
-		// Token: 0x04021CB6 RID: 138422
+		// Token: 0x0401C5E7 RID: 116199
 		private readonly byte[] Occ = new byte[56];
 
-		// Token: 0x04021CB7 RID: 138423
+		// Token: 0x0401C5E8 RID: 116200
 		[Nullable(new byte[]
 		{
 			1,
@@ -510,19 +510,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 		})]
 		private readonly Piece[] Occupant = new Piece[56];
 
-		// Token: 0x04021CB8 RID: 138424
+		// Token: 0x0401C5E9 RID: 116201
 		private readonly int[] WayCount = new int[56];
 
-		// Token: 0x04021CB9 RID: 138425
+		// Token: 0x0401C5EA RID: 116202
 		private readonly int[] WayRow = new int[336];
 
-		// Token: 0x04021CBA RID: 138426
+		// Token: 0x0401C5EB RID: 116203
 		private readonly int[] WayCol = new int[336];
 
-		// Token: 0x04021CBB RID: 138427
+		// Token: 0x0401C5EC RID: 116204
 		private readonly int[] SpawnCount = new int[8];
 
-		// Token: 0x04021CBC RID: 138428
+		// Token: 0x0401C5ED RID: 116205
 		private readonly EPieceType[] DefaultPool = new EPieceType[]
 		{
 			EPieceType.Red,
@@ -532,27 +532,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			EPieceType.Purple
 		};
 
-		// Token: 0x04021CBD RID: 138429
+		// Token: 0x0401C5EE RID: 116206
 		[Nullable(2)]
 		private readonly int[] RuleIds;
 
-		// Token: 0x04021CBE RID: 138430
+		// Token: 0x0401C5EF RID: 116207
 		private bool ConfigLoaded;
 
-		// Token: 0x04021CBF RID: 138431
+		// Token: 0x0401C5F0 RID: 116208
 		private BoardFillStrategy.FillRule[] Rules = Array.Empty<BoardFillStrategy.FillRule>();
 
-		// Token: 0x04021CC0 RID: 138432
+		// Token: 0x0401C5F1 RID: 116209
 		private EPieceType[] ActivePool;
 
-		// Token: 0x04021CC1 RID: 138433
+		// Token: 0x0401C5F2 RID: 116210
 		private int NoCascadeStreak;
 
-		// Token: 0x0200C729 RID: 50985
+		// Token: 0x0200B10F RID: 45327
 		[Nullable(0)]
 		private readonly struct FillRule
 		{
-			// Token: 0x06050EA4 RID: 331428 RVA: 0x015DEBD2 File Offset: 0x015DCDD2
+			// Token: 0x06047384 RID: 291716 RVA: 0x0159692E File Offset: 0x01594B2E
 			public FillRule(int count, float eliminateProb, float randomProb, EPieceType[] pool)
 			{
 				this.Count = count;
@@ -561,16 +561,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 				this.Pool = pool;
 			}
 
-			// Token: 0x0403C2B3 RID: 246451
+			// Token: 0x04036C0E RID: 224270
 			public readonly int Count;
 
-			// Token: 0x0403C2B4 RID: 246452
+			// Token: 0x04036C0F RID: 224271
 			public readonly float EliminateProb;
 
-			// Token: 0x0403C2B5 RID: 246453
+			// Token: 0x04036C10 RID: 224272
 			public readonly float RandomProb;
 
-			// Token: 0x0403C2B6 RID: 246454
+			// Token: 0x04036C11 RID: 224273
 			public readonly EPieceType[] Pool;
 		}
 	}

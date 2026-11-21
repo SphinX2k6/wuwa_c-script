@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006E0 RID: 1760
+	// Token: 0x020006F8 RID: 1784
 	public class ConfigPhotoLightById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002950 RID: 10576 RVA: 0x00142D43 File Offset: 0x00140F43
+		// Token: 0x060029E0 RID: 10720 RVA: 0x001497BF File Offset: 0x001479BF
 		static ConfigPhotoLightById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoLightById.CreateStaticDefaultValue), new Action(ConfigPhotoLightById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002951 RID: 10577 RVA: 0x00142D64 File Offset: 0x00140F64
+		// Token: 0x060029E1 RID: 10721 RVA: 0x001497E0 File Offset: 0x001479E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoLightById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002952 RID: 10578 RVA: 0x00142DE3 File Offset: 0x00140FE3
+		// Token: 0x060029E2 RID: 10722 RVA: 0x0014985F File Offset: 0x00147A5F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoLightById.LogPair = null;
 			ConfigPhotoLightById.HandleId = 0;
 		}
 
-		// Token: 0x06002953 RID: 10579 RVA: 0x00142DF1 File Offset: 0x00140FF1
+		// Token: 0x060029E3 RID: 10723 RVA: 0x0014986D File Offset: 0x00147A6D
 		public static void Init()
 		{
 			ConfigPhotoLightById.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoLightById.HandleId, "db_photonew.db", "select BinData from `PhotoLight` where Id=?");
 		}
 
-		// Token: 0x06002954 RID: 10580 RVA: 0x00142E0C File Offset: 0x0014100C
+		// Token: 0x060029E4 RID: 10724 RVA: 0x00149888 File Offset: 0x00147A88
 		public static PhotoLight? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhotoLightById.HandleId, ConfigPhotoLightById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhotoLight?(rootAsPhotoLight);
 		}
 
-		// Token: 0x04003006 RID: 12294
+		// Token: 0x040030AE RID: 12462
 		private const string DB = "db_photonew.db";
 
-		// Token: 0x04003007 RID: 12295
+		// Token: 0x040030AF RID: 12463
 		private const string FILE = "p.拍照新.xlsx";
 
-		// Token: 0x04003008 RID: 12296
+		// Token: 0x040030B0 RID: 12464
 		private const string TABLE = "PhotoLight";
 
-		// Token: 0x04003009 RID: 12297
+		// Token: 0x040030B1 RID: 12465
 		private const string COMMAND = "select BinData from `PhotoLight` where Id=?";
 
-		// Token: 0x0400300A RID: 12298
+		// Token: 0x040030B2 RID: 12466
 		private const string KEY_PREFIX = "PhotoLightById";
 
-		// Token: 0x0400300B RID: 12299
+		// Token: 0x040030B3 RID: 12467
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400300C RID: 12300
+		// Token: 0x040030B4 RID: 12468
 		private static int HandleId;
 	}
 }

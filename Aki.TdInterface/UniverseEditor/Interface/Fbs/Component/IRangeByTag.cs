@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057F9 RID: 22521
+	// Token: 0x02005E00 RID: 24064
 	public struct IRangeByTag : IFlatbufferObject
 	{
-		// Token: 0x1700A83A RID: 43066
-		// (get) Token: 0x06025DA4 RID: 155044 RVA: 0x005386E2 File Offset: 0x005368E2
+		// Token: 0x1700B15E RID: 45406
+		// (get) Token: 0x060282C4 RID: 164548 RVA: 0x0057E86E File Offset: 0x0057CA6E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025DA5 RID: 155045 RVA: 0x005386EF File Offset: 0x005368EF
+		// Token: 0x060282C5 RID: 164549 RVA: 0x0057E87B File Offset: 0x0057CA7B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025DA6 RID: 155046 RVA: 0x005386F8 File Offset: 0x005368F8
+		// Token: 0x060282C6 RID: 164550 RVA: 0x0057E884 File Offset: 0x0057CA84
 		public static IRangeByTag GetRootAsIRangeByTag(ByteBuffer _bb)
 		{
 			return IRangeByTag.GetRootAsIRangeByTag(_bb, default(IRangeByTag));
 		}
 
-		// Token: 0x06025DA7 RID: 155047 RVA: 0x00538714 File Offset: 0x00536914
+		// Token: 0x060282C7 RID: 164551 RVA: 0x0057E8A0 File Offset: 0x0057CAA0
 		public static IRangeByTag GetRootAsIRangeByTag(ByteBuffer _bb, IRangeByTag obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025DA8 RID: 155048 RVA: 0x00538731 File Offset: 0x00536931
+		// Token: 0x060282C8 RID: 164552 RVA: 0x0057E8BD File Offset: 0x0057CABD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025DA9 RID: 155049 RVA: 0x00538740 File Offset: 0x00536940
+		// Token: 0x060282C9 RID: 164553 RVA: 0x0057E8CC File Offset: 0x0057CACC
 		public IRangeByTag __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A83B RID: 43067
-		// (get) Token: 0x06025DAA RID: 155050 RVA: 0x00538750 File Offset: 0x00536950
+		// Token: 0x1700B15F RID: 45407
+		// (get) Token: 0x060282CA RID: 164554 RVA: 0x0057E8DC File Offset: 0x0057CADC
 		public int Tag
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A83C RID: 43068
-		// (get) Token: 0x06025DAB RID: 155051 RVA: 0x0053878C File Offset: 0x0053698C
+		// Token: 0x1700B160 RID: 45408
+		// (get) Token: 0x060282CB RID: 164555 RVA: 0x0057E918 File Offset: 0x0057CB18
 		public float Range
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A83D RID: 43069
-		// (get) Token: 0x06025DAC RID: 155052 RVA: 0x005387CC File Offset: 0x005369CC
+		// Token: 0x1700B161 RID: 45409
+		// (get) Token: 0x060282CC RID: 164556 RVA: 0x0057E958 File Offset: 0x0057CB58
 		public float ExitRange
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A83E RID: 43070
-		// (get) Token: 0x06025DAD RID: 155053 RVA: 0x0053880C File Offset: 0x00536A0C
+		// Token: 0x1700B162 RID: 45410
+		// (get) Token: 0x060282CD RID: 164557 RVA: 0x0057E998 File Offset: 0x0057CB98
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025DAE RID: 155054 RVA: 0x00538849 File Offset: 0x00536A49
+		// Token: 0x060282CE RID: 164558 RVA: 0x0057E9D5 File Offset: 0x0057CBD5
 		public static Offset<IRangeByTag> CreateIRangeByTag(FlatBufferBuilder builder, int Tag = 0, float Range = 0f, float ExitRange = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRangeByTag.EndIRangeByTag(builder);
 		}
 
-		// Token: 0x06025DAF RID: 155055 RVA: 0x00538875 File Offset: 0x00536A75
+		// Token: 0x060282CF RID: 164559 RVA: 0x0057EA01 File Offset: 0x0057CC01
 		public static void StartIRangeByTag(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06025DB0 RID: 155056 RVA: 0x0053887E File Offset: 0x00536A7E
+		// Token: 0x060282D0 RID: 164560 RVA: 0x0057EA0A File Offset: 0x0057CC0A
 		public static void AddTag(FlatBufferBuilder builder, int tag)
 		{
 			builder.AddInt(0, tag, 0);
 		}
 
-		// Token: 0x06025DB1 RID: 155057 RVA: 0x00538889 File Offset: 0x00536A89
+		// Token: 0x060282D1 RID: 164561 RVA: 0x0057EA15 File Offset: 0x0057CC15
 		public static void AddRange(FlatBufferBuilder builder, float range)
 		{
 			builder.AddFloat(1, range, 0.0);
 		}
 
-		// Token: 0x06025DB2 RID: 155058 RVA: 0x0053889C File Offset: 0x00536A9C
+		// Token: 0x060282D2 RID: 164562 RVA: 0x0057EA28 File Offset: 0x0057CC28
 		public static void AddExitRange(FlatBufferBuilder builder, float exitRange)
 		{
 			builder.AddFloat(2, exitRange, 0.0);
 		}
 
-		// Token: 0x06025DB3 RID: 155059 RVA: 0x005388AF File Offset: 0x00536AAF
+		// Token: 0x060282D3 RID: 164563 RVA: 0x0057EA3B File Offset: 0x0057CC3B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06025DB4 RID: 155060 RVA: 0x005388BA File Offset: 0x00536ABA
+		// Token: 0x060282D4 RID: 164564 RVA: 0x0057EA46 File Offset: 0x0057CC46
 		public static Offset<IRangeByTag> EndIRangeByTag(FlatBufferBuilder builder)
 		{
 			return new Offset<IRangeByTag>(builder.EndTable());
 		}
 
-		// Token: 0x06025DB5 RID: 155061 RVA: 0x005388C8 File Offset: 0x00536AC8
+		// Token: 0x060282D5 RID: 164565 RVA: 0x0057EA54 File Offset: 0x0057CC54
 		public IRangeByTagT UnPack()
 		{
 			IRangeByTagT rangeByTagT = new IRangeByTagT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return rangeByTagT;
 		}
 
-		// Token: 0x06025DB6 RID: 155062 RVA: 0x005388E3 File Offset: 0x00536AE3
+		// Token: 0x060282D6 RID: 164566 RVA: 0x0057EA6F File Offset: 0x0057CC6F
 		public void UnPackTo(IRangeByTagT _o)
 		{
 			_o.Tag = this.Tag;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06025DB7 RID: 155063 RVA: 0x00538918 File Offset: 0x00536B18
+		// Token: 0x060282D7 RID: 164567 RVA: 0x0057EAA4 File Offset: 0x0057CCA4
 		public static Offset<IRangeByTag> Pack(FlatBufferBuilder builder, IRangeByTagT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRangeByTag.CreateIRangeByTag(builder, _o.Tag, _o.Range, _o.ExitRange, _o.NullMask);
 		}
 
-		// Token: 0x0400ECEF RID: 60655
+		// Token: 0x0400F9DA RID: 63962
 		private Table __p;
 	}
 }

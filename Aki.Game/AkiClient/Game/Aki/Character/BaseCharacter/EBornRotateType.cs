@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004295 RID: 17045
+	// Token: 0x020032F2 RID: 13042
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EBornRotateType.EBornRotateType")]
 	public enum EBornRotateType : byte
 	{
-		// Token: 0x040172B1 RID: 94897
+		// Token: 0x04011FB9 RID: 73657
 		保持自身,
-		// Token: 0x040172B2 RID: 94898
+		// Token: 0x04011FBA RID: 73658
 		同步玩家当前角色,
-		// Token: 0x040172B3 RID: 94899
+		// Token: 0x04011FBB RID: 73659
 		朝向镜头前一定距离,
-		// Token: 0x040172B4 RID: 94900
+		// Token: 0x04011FBC RID: 73660
 		EBornRotateType_MAX
 	}
 }

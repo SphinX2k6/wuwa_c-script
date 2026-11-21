@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DB2 RID: 3506
+	// Token: 0x02000E97 RID: 3735
 	public struct KurotatoScoreAward : IFlatbufferObject
 	{
-		// Token: 0x17001C1F RID: 7199
-		// (get) Token: 0x06008B82 RID: 35714 RVA: 0x00272241 File Offset: 0x00270441
+		// Token: 0x17001C83 RID: 7299
+		// (get) Token: 0x0600919E RID: 37278 RVA: 0x00290B9D File Offset: 0x0028ED9D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008B83 RID: 35715 RVA: 0x0027224E File Offset: 0x0027044E
+		// Token: 0x0600919F RID: 37279 RVA: 0x00290BAA File Offset: 0x0028EDAA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008B84 RID: 35716 RVA: 0x00272258 File Offset: 0x00270458
+		// Token: 0x060091A0 RID: 37280 RVA: 0x00290BB4 File Offset: 0x0028EDB4
 		public static KurotatoScoreAward GetRootAsKurotatoScoreAward(ByteBuffer _bb)
 		{
 			return KurotatoScoreAward.GetRootAsKurotatoScoreAward(_bb, default(KurotatoScoreAward));
 		}
 
-		// Token: 0x06008B85 RID: 35717 RVA: 0x00272274 File Offset: 0x00270474
+		// Token: 0x060091A1 RID: 37281 RVA: 0x00290BD0 File Offset: 0x0028EDD0
 		public static KurotatoScoreAward GetRootAsKurotatoScoreAward(ByteBuffer _bb, KurotatoScoreAward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008B86 RID: 35718 RVA: 0x00272291 File Offset: 0x00270491
+		// Token: 0x060091A2 RID: 37282 RVA: 0x00290BED File Offset: 0x0028EDED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008B87 RID: 35719 RVA: 0x002722A0 File Offset: 0x002704A0
+		// Token: 0x060091A3 RID: 37283 RVA: 0x00290BFC File Offset: 0x0028EDFC
 		public KurotatoScoreAward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001C20 RID: 7200
-		// (get) Token: 0x06008B88 RID: 35720 RVA: 0x002722B0 File Offset: 0x002704B0
+		// Token: 0x17001C84 RID: 7300
+		// (get) Token: 0x060091A4 RID: 37284 RVA: 0x00290C0C File Offset: 0x0028EE0C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001C21 RID: 7201
-		// (get) Token: 0x06008B89 RID: 35721 RVA: 0x002722EC File Offset: 0x002704EC
+		// Token: 0x17001C85 RID: 7301
+		// (get) Token: 0x060091A5 RID: 37285 RVA: 0x00290C48 File Offset: 0x0028EE48
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001C22 RID: 7202
-		// (get) Token: 0x06008B8A RID: 35722 RVA: 0x00272328 File Offset: 0x00270528
+		// Token: 0x17001C86 RID: 7302
+		// (get) Token: 0x060091A6 RID: 37286 RVA: 0x00290C84 File Offset: 0x0028EE84
 		public int Score
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001C23 RID: 7203
-		// (get) Token: 0x06008B8B RID: 35723 RVA: 0x00272364 File Offset: 0x00270564
+		// Token: 0x17001C87 RID: 7303
+		// (get) Token: 0x060091A7 RID: 37287 RVA: 0x00290CC0 File Offset: 0x0028EEC0
 		public int DropId
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004E44 RID: 20036
+		// Token: 0x04005429 RID: 21545
 		private Table __p;
 	}
 }

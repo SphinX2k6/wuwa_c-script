@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051F1 RID: 20977
+	// Token: 0x020041C1 RID: 16833
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 	})]
 	public class CardSkillComponent : CardComponentBase<ICardSkillComponentData>
 	{
-		// Token: 0x06035A78 RID: 219768 RVA: 0x00CB5310 File Offset: 0x00CB3510
+		// Token: 0x0602A973 RID: 174451 RVA: 0x00C0294C File Offset: 0x00C00B4C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,26 +31,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			};
 		}
 
-		// Token: 0x06035A79 RID: 219769 RVA: 0x00CB53A3 File Offset: 0x00CB35A3
+		// Token: 0x0602A974 RID: 174452 RVA: 0x00C029DF File Offset: 0x00C00BDF
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
 			this.Sequence.BindOnEndSequenceEvent(new Action<string>(this.OnSequenceEndEvent));
 		}
 
-		// Token: 0x06035A7A RID: 219770 RVA: 0x00CB53CD File Offset: 0x00CB35CD
+		// Token: 0x0602A975 RID: 174453 RVA: 0x00C02A09 File Offset: 0x00C00C09
 		protected override void OnBeforeDestroy()
 		{
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x06035A7B RID: 219771 RVA: 0x00CB53DA File Offset: 0x00CB35DA
+		// Token: 0x0602A976 RID: 174454 RVA: 0x00C02A16 File Offset: 0x00C00C16
 		private void OnSkillBtnClick()
 		{
 			this.SkillBtnClick();
 		}
 
-		// Token: 0x06035A7C RID: 219772 RVA: 0x00CB53E8 File Offset: 0x00CB35E8
+		// Token: 0x0602A977 RID: 174455 RVA: 0x00C02A24 File Offset: 0x00C00C24
 		private void OnSequenceEndEvent(string sequenceName)
 		{
 			if (sequenceName == "NorToUse")
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			}
 		}
 
-		// Token: 0x06035A7D RID: 219773 RVA: 0x00CB547C File Offset: 0x00CB367C
+		// Token: 0x0602A978 RID: 174456 RVA: 0x00C02AB8 File Offset: 0x00C00CB8
 		private void SwitchUseToNor()
 		{
 			this.Sequence.StopPrevSequence(false, true);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			base.GetItem(0).SetUIActive(true);
 		}
 
-		// Token: 0x06035A7E RID: 219774 RVA: 0x00CB54C0 File Offset: 0x00CB36C0
+		// Token: 0x0602A979 RID: 174457 RVA: 0x00C02AFC File Offset: 0x00C00CFC
 		private void SwitchNorToUse()
 		{
 			this.Sequence.StopPrevSequence(false, true);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			base.GetButton(3).RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x06035A7F RID: 219775 RVA: 0x00CB551C File Offset: 0x00CB371C
+		// Token: 0x0602A97A RID: 174458 RVA: 0x00C02B58 File Offset: 0x00C00D58
 		private void SwitchCdToNor()
 		{
 			this.Sequence.StopPrevSequence(false, true);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			base.GetSprite(1).SetUIActive(true);
 		}
 
-		// Token: 0x06035A80 RID: 219776 RVA: 0x00CB5560 File Offset: 0x00CB3760
+		// Token: 0x0602A97B RID: 174459 RVA: 0x00C02B9C File Offset: 0x00C00D9C
 		private void SwitchUseToCd()
 		{
 			this.Sequence.StopPrevSequence(false, true);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			base.GetSprite(2).SetUIActive(true);
 		}
 
-		// Token: 0x06035A81 RID: 219777 RVA: 0x00CB55C8 File Offset: 0x00CB37C8
+		// Token: 0x0602A97C RID: 174460 RVA: 0x00C02C04 File Offset: 0x00C00E04
 		public override void Refresh(ICardSkillComponentData data)
 		{
 			if (!data.InFight)
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			this.Data = data;
 		}
 
-		// Token: 0x06035A82 RID: 219778 RVA: 0x00CB561A File Offset: 0x00CB381A
+		// Token: 0x0602A97D RID: 174461 RVA: 0x00C02C56 File Offset: 0x00C00E56
 		public void TriggerCanUseState()
 		{
 			this.SwitchNorToUse();
 		}
 
-		// Token: 0x06035A83 RID: 219779 RVA: 0x00CB5624 File Offset: 0x00CB3824
+		// Token: 0x0602A97E RID: 174462 RVA: 0x00C02C60 File Offset: 0x00C00E60
 		public void TriggerNormalState(ICardSkillComponentData data)
 		{
 			ICardSkillComponentData data2 = this.Data;
@@ -177,29 +177,29 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			}
 		}
 
-		// Token: 0x0401C776 RID: 116598
+		// Token: 0x040171AB RID: 94635
 		public Action SkillBtnClick;
 
-		// Token: 0x0401C777 RID: 116599
+		// Token: 0x040171AC RID: 94636
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0401C778 RID: 116600
+		// Token: 0x040171AD RID: 94637
 		protected ICardSkillComponentData Data;
 
-		// Token: 0x0200B372 RID: 45938
+		// Token: 0x02009DAA RID: 40362
 		[NullableContext(0)]
 		private static class EComponentDefine
 		{
-			// Token: 0x04036627 RID: 222759
+			// Token: 0x0403107A RID: 200826
 			public const int NormalItem = 0;
 
-			// Token: 0x04036628 RID: 222760
+			// Token: 0x0403107B RID: 200827
 			public const int NormalIcon = 1;
 
-			// Token: 0x04036629 RID: 222761
+			// Token: 0x0403107C RID: 200828
 			public const int CountDownIcon = 2;
 
-			// Token: 0x0403662A RID: 222762
+			// Token: 0x0403107D RID: 200829
 			public const int SkillBtn = 3;
 		}
 	}

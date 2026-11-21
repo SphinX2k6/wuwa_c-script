@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000456 RID: 1110
+	// Token: 0x0200046C RID: 1132
 	public class ConfigItemExchangeLimitByItemId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001A0E RID: 6670 RVA: 0x000ECC38 File Offset: 0x000EAE38
+		// Token: 0x06001A92 RID: 6802 RVA: 0x000F338C File Offset: 0x000F158C
 		static ConfigItemExchangeLimitByItemId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigItemExchangeLimitByItemId.CreateStaticDefaultValue), new Action(ConfigItemExchangeLimitByItemId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001A0F RID: 6671 RVA: 0x000ECC58 File Offset: 0x000EAE58
+		// Token: 0x06001A93 RID: 6803 RVA: 0x000F33AC File Offset: 0x000F15AC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigItemExchangeLimitByItemId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001A10 RID: 6672 RVA: 0x000ECCD7 File Offset: 0x000EAED7
+		// Token: 0x06001A94 RID: 6804 RVA: 0x000F342B File Offset: 0x000F162B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigItemExchangeLimitByItemId.LogPair = null;
 			ConfigItemExchangeLimitByItemId.HandleId = 0;
 		}
 
-		// Token: 0x06001A11 RID: 6673 RVA: 0x000ECCE5 File Offset: 0x000EAEE5
+		// Token: 0x06001A95 RID: 6805 RVA: 0x000F3439 File Offset: 0x000F1639
 		public static void Init()
 		{
 			ConfigItemExchangeLimitByItemId.HandleId = ConfigCommon.InitDataStatement(ConfigItemExchangeLimitByItemId.HandleId, "db_item_exchange.db", "select BinData from `ItemExchangeLimit` where ItemId=?");
 		}
 
-		// Token: 0x06001A12 RID: 6674 RVA: 0x000ECD00 File Offset: 0x000EAF00
+		// Token: 0x06001A96 RID: 6806 RVA: 0x000F3454 File Offset: 0x000F1654
 		public static ItemExchangeLimit? GetConfig(int p0ItemId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigItemExchangeLimitByItemId.HandleId, ConfigItemExchangeLimitByItemId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ItemExchangeLimit?(rootAsItemExchangeLimit);
 		}
 
-		// Token: 0x04001E3E RID: 7742
+		// Token: 0x04001ED8 RID: 7896
 		private const string DB = "db_item_exchange.db";
 
-		// Token: 0x04001E3F RID: 7743
+		// Token: 0x04001ED9 RID: 7897
 		private const string FILE = "d.道具兑换.xlsx";
 
-		// Token: 0x04001E40 RID: 7744
+		// Token: 0x04001EDA RID: 7898
 		private const string TABLE = "ItemExchangeLimit";
 
-		// Token: 0x04001E41 RID: 7745
+		// Token: 0x04001EDB RID: 7899
 		private const string COMMAND = "select BinData from `ItemExchangeLimit` where ItemId=?";
 
-		// Token: 0x04001E42 RID: 7746
+		// Token: 0x04001EDC RID: 7900
 		private const string KEY_PREFIX = "ItemExchangeLimitByItemId";
 
-		// Token: 0x04001E43 RID: 7747
+		// Token: 0x04001EDD RID: 7901
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001E44 RID: 7748
+		// Token: 0x04001EDE RID: 7902
 		private static int HandleId;
 	}
 }

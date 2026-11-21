@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AAC RID: 19116
+	// Token: 0x02003A54 RID: 14932
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseLevelGoToPanel : UiPanelBase
 	{
-		// Token: 0x06031881 RID: 202881 RVA: 0x00B7C1B0 File Offset: 0x00B7A3B0
+		// Token: 0x06026611 RID: 157201 RVA: 0x00AC0164 File Offset: 0x00ABE364
 		public UniTask Init(UUIItem item)
 		{
 			TrapDefenseLevelGoToPanel.<Init>d__2 <Init>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031882 RID: 202882 RVA: 0x00B7C1FC File Offset: 0x00B7A3FC
+		// Token: 0x06026612 RID: 157202 RVA: 0x00AC01B0 File Offset: 0x00ABE3B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031883 RID: 202883 RVA: 0x00B7C368 File Offset: 0x00B7A568
+		// Token: 0x06026613 RID: 157203 RVA: 0x00AC031C File Offset: 0x00ABE51C
 		public void UpdateData(TrapDefenseLevelData data)
 		{
 			this.LevelData = data;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031884 RID: 202884 RVA: 0x00B7C42A File Offset: 0x00B7A62A
+		// Token: 0x06026614 RID: 157204 RVA: 0x00AC03DE File Offset: 0x00ABE5DE
 		private void ShowGotoBtn()
 		{
 			this.SetBtnEnabled(true);
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06031885 RID: 202885 RVA: 0x00B7C458 File Offset: 0x00B7A658
+		// Token: 0x06026615 RID: 157205 RVA: 0x00AC040C File Offset: 0x00ABE60C
 		private void SetBtnEnabled(bool enable)
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			button.SetSelfInteractive(enable);
 		}
 
-		// Token: 0x06031886 RID: 202886 RVA: 0x00B7C46C File Offset: 0x00B7A66C
+		// Token: 0x06026616 RID: 157206 RVA: 0x00AC0420 File Offset: 0x00ABE620
 		public void OnClickBtnGoTo()
 		{
 			if (GameModeModel.Instance.IsMulti)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031887 RID: 202887 RVA: 0x00B7C4FC File Offset: 0x00B7A6FC
+		// Token: 0x06026617 RID: 157207 RVA: 0x00AC04B0 File Offset: 0x00ABE6B0
 		public void UpdateLockConditionInfo()
 		{
 			ValueTuple<ELevelGeneralCondition, int, string, Dictionary<string, string>> openConditionLockCondition = this.LevelData.GetOpenConditionLockCondition();
@@ -253,35 +253,35 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A797 RID: 108439
+		// Token: 0x040150E9 RID: 86249
 		public TrapDefenseLevelData LevelData;
 
-		// Token: 0x0200AC01 RID: 44033
+		// Token: 0x02009621 RID: 38433
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04034445 RID: 214085
+			// Token: 0x0402EDF6 RID: 191990
 			public const int BtnGoTo = 0;
 
-			// Token: 0x04034446 RID: 214086
+			// Token: 0x0402EDF7 RID: 191991
 			public const int ItemRootTime = 1;
 
-			// Token: 0x04034447 RID: 214087
+			// Token: 0x0402EDF8 RID: 191992
 			public const int TextDownTime = 2;
 
-			// Token: 0x04034448 RID: 214088
+			// Token: 0x0402EDF9 RID: 191993
 			public const int ItemRootProgress = 3;
 
-			// Token: 0x04034449 RID: 214089
+			// Token: 0x0402EDFA RID: 191994
 			public const int TextDescProgress = 4;
 
-			// Token: 0x0403444A RID: 214090
+			// Token: 0x0402EDFB RID: 191995
 			public const int TextStarProgress = 5;
 
-			// Token: 0x0403444B RID: 214091
+			// Token: 0x0402EDFC RID: 191996
 			public const int ItemRedDot = 6;
 
-			// Token: 0x0403444C RID: 214092
+			// Token: 0x0402EDFD RID: 191997
 			public const int PanelButton = 7;
 		}
 	}

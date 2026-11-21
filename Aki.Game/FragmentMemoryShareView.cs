@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C1F RID: 7199
+// Token: 0x020010DE RID: 4318
 public class FragmentMemoryShareView : UiPanelBase
 {
-	// Token: 0x0600D82D RID: 55341 RVA: 0x0032047C File Offset: 0x0031E67C
+	// Token: 0x0600AC43 RID: 44099 RVA: 0x0032B854 File Offset: 0x00329A54
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -26,13 +26,13 @@ public class FragmentMemoryShareView : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D82E RID: 55342 RVA: 0x00320527 File Offset: 0x0031E727
+	// Token: 0x0600AC44 RID: 44100 RVA: 0x0032B8FF File Offset: 0x00329AFF
 	protected override void OnStart()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600D82F RID: 55343 RVA: 0x0032052F File Offset: 0x0031E72F
+	// Token: 0x0600AC45 RID: 44101 RVA: 0x0032B907 File Offset: 0x00329B07
 	private void RefreshView()
 	{
 		this.CurrentData = (this.OpenParam as FragmentMemoryCollectData);
@@ -42,47 +42,47 @@ public class FragmentMemoryShareView : UiPanelBase
 		this.RefreshTime();
 	}
 
-	// Token: 0x0600D830 RID: 55344 RVA: 0x0032055A File Offset: 0x0031E75A
+	// Token: 0x0600AC46 RID: 44102 RVA: 0x0032B932 File Offset: 0x00329B32
 	private void RefreshTime()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "FragmentMemoryCollectTime", new <>z__ReadOnlySingleElementList<object>(this.CurrentData.GetTimeText()));
 	}
 
-	// Token: 0x0600D831 RID: 55345 RVA: 0x00320584 File Offset: 0x0031E784
+	// Token: 0x0600AC47 RID: 44103 RVA: 0x0032B95C File Offset: 0x00329B5C
 	private void RefreshTexture()
 	{
 		base.SetTextureByPath(this.CurrentData.GetBgResource(), base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x0600D832 RID: 55346 RVA: 0x003205B3 File Offset: 0x0031E7B3
+	// Token: 0x0600AC48 RID: 44104 RVA: 0x0032B98B File Offset: 0x00329B8B
 	private void RefreshName()
 	{
 		base.GetText(1).ShowTextNew(this.CurrentData.GetTitle());
 	}
 
-	// Token: 0x0600D833 RID: 55347 RVA: 0x003205CC File Offset: 0x0031E7CC
+	// Token: 0x0600AC49 RID: 44105 RVA: 0x0032B9A4 File Offset: 0x00329BA4
 	private void RefreshDesc()
 	{
 		base.GetText(3).ShowTextNew(this.CurrentData.GetDesc());
 	}
 
-	// Token: 0x04006294 RID: 25236
+	// Token: 0x04006366 RID: 25446
 	[Nullable(2)]
 	private FragmentMemoryCollectData CurrentData;
 
-	// Token: 0x020081D8 RID: 33240
+	// Token: 0x02007361 RID: 29537
 	private class EComponents
 	{
-		// Token: 0x0402A608 RID: 173576
+		// Token: 0x0402592F RID: 153903
 		public const int Texture = 0;
 
-		// Token: 0x0402A609 RID: 173577
+		// Token: 0x04025930 RID: 153904
 		public const int Name = 1;
 
-		// Token: 0x0402A60A RID: 173578
+		// Token: 0x04025931 RID: 153905
 		public const int Time = 2;
 
-		// Token: 0x0402A60B RID: 173579
+		// Token: 0x04025932 RID: 153906
 		public const int Desc = 3;
 	}
 }

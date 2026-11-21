@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B2C RID: 23340
+	// Token: 0x02006142 RID: 24898
 	public enum IVehicleTypedConfig_Union : byte
 	{
-		// Token: 0x0400F24F RID: 62031
+		// Token: 0x0400FF55 RID: 65365
 		NONE,
-		// Token: 0x0400F250 RID: 62032
+		// Token: 0x0400FF56 RID: 65366
 		IVehicleTypedConfig,
-		// Token: 0x0400F251 RID: 62033
+		// Token: 0x0400FF57 RID: 65367
 		IVehicleTypedMotorConfig
 	}
 }

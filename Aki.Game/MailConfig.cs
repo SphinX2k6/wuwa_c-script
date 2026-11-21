@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020021C9 RID: 8649
+// Token: 0x020016AD RID: 5805
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class MailConfig : ConfigBase
 {
-	// Token: 0x06010CE7 RID: 68839 RVA: 0x00415237 File Offset: 0x00413437
+	// Token: 0x0600E178 RID: 57720 RVA: 0x00421B17 File Offset: 0x0041FD17
 	public int? GetMailSize()
 	{
 		return ConfigCommonParamById.GetIntConfig("mail_size");
 	}
 
-	// Token: 0x06010CE8 RID: 68840 RVA: 0x00415243 File Offset: 0x00413443
+	// Token: 0x0600E179 RID: 57721 RVA: 0x00421B23 File Offset: 0x0041FD23
 	public int? GetFavoriteMailSize()
 	{
 		return ConfigCommonParamById.GetIntConfig("MailFavoriteSize");
 	}
 
-	// Token: 0x06010CE9 RID: 68841 RVA: 0x00415250 File Offset: 0x00413450
+	// Token: 0x0600E17A RID: 57722 RVA: 0x00421B30 File Offset: 0x0041FD30
 	public int GetMailSpaceWarningThresholdRate()
 	{
 		return ConfigCommonParamById.GetIntConfig("MailWarningThreshold").GetValueOrDefault();
 	}
 
-	// Token: 0x06010CEA RID: 68842 RVA: 0x00415270 File Offset: 0x00413470
+	// Token: 0x0600E17B RID: 57723 RVA: 0x00421B50 File Offset: 0x0041FD50
 	public int GetMailSpaceWarningThreshold()
 	{
 		double valueOrDefault = (double)this.GetMailSize().GetValueOrDefault();
@@ -35,7 +35,7 @@ public class MailConfig : ConfigBase
 		return (int)Math.Floor(valueOrDefault * (double)mailSpaceWarningThresholdRate / 100.0);
 	}
 
-	// Token: 0x06010CEB RID: 68843 RVA: 0x004152A8 File Offset: 0x004134A8
+	// Token: 0x0600E17C RID: 57724 RVA: 0x00421B88 File Offset: 0x0041FD88
 	public IReadOnlyList<MailFilter> GetAllMailFilterConfig()
 	{
 		IReadOnlyList<MailFilter> configList = ConfigMailFilterAll.GetConfigList(true);
@@ -46,7 +46,7 @@ public class MailConfig : ConfigBase
 		return new List<MailFilter>();
 	}
 
-	// Token: 0x06010CEC RID: 68844 RVA: 0x004152C8 File Offset: 0x004134C8
+	// Token: 0x0600E17D RID: 57725 RVA: 0x00421BA8 File Offset: 0x0041FDA8
 	public EMailFilter[] GetFilterTypeList()
 	{
 		HashSet<EMailFilter> hashSet = new HashSet<EMailFilter>();
@@ -69,7 +69,7 @@ public class MailConfig : ConfigBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06010CED RID: 68845 RVA: 0x0041536C File Offset: 0x0041356C
+	// Token: 0x0600E17E RID: 57726 RVA: 0x00421C4C File Offset: 0x0041FE4C
 	public MailFilter GetMailFilterConfigById(int id)
 	{
 		MailFilter? config = ConfigMailFilterById.GetConfig(id, true);
@@ -85,7 +85,7 @@ public class MailConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x06010CEE RID: 68846 RVA: 0x004153C0 File Offset: 0x004135C0
+	// Token: 0x0600E17F RID: 57727 RVA: 0x00421CA0 File Offset: 0x0041FEA0
 	public MailTo? GetMailToConfigById(int id)
 	{
 		if (id <= 0)
@@ -95,7 +95,7 @@ public class MailConfig : ConfigBase
 		return ConfigMailToById.GetConfig(id, true);
 	}
 
-	// Token: 0x06010CEF RID: 68847 RVA: 0x004153E4 File Offset: 0x004135E4
+	// Token: 0x0600E180 RID: 57728 RVA: 0x00421CC4 File Offset: 0x0041FEC4
 	public void ApplyTemplateJumpId(MailData mailData)
 	{
 		if (mailData.GetSubContentJumpId() > 0)
@@ -109,8 +109,8 @@ public class MailConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x17001559 RID: 5465
-	// (get) Token: 0x06010CF0 RID: 68848 RVA: 0x0041544C File Offset: 0x0041364C
+	// Token: 0x17001590 RID: 5520
+	// (get) Token: 0x0600E181 RID: 57729 RVA: 0x00421D2C File Offset: 0x0041FF2C
 	public static MailConfig Instance
 	{
 		get
@@ -119,7 +119,7 @@ public class MailConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06010CF1 RID: 68849 RVA: 0x00415453 File Offset: 0x00413653
+	// Token: 0x0600E182 RID: 57730 RVA: 0x00421D33 File Offset: 0x0041FF33
 	public static MailConfig GetOrCreateInstance()
 	{
 		if (MailConfig._Instance == null)
@@ -129,7 +129,7 @@ public class MailConfig : ConfigBase
 		return MailConfig._Instance;
 	}
 
-	// Token: 0x06010CF2 RID: 68850 RVA: 0x00415467 File Offset: 0x00413667
+	// Token: 0x0600E183 RID: 57731 RVA: 0x00421D47 File Offset: 0x0041FF47
 	public static bool CreateInstance()
 	{
 		if (MailConfig._Instance != null)
@@ -140,24 +140,24 @@ public class MailConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06010CF3 RID: 68851 RVA: 0x0041547D File Offset: 0x0041367D
+	// Token: 0x0600E184 RID: 57732 RVA: 0x00421D5D File Offset: 0x0041FF5D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010CF4 RID: 68852 RVA: 0x0041547F File Offset: 0x0041367F
+	// Token: 0x0600E185 RID: 57733 RVA: 0x00421D5F File Offset: 0x0041FF5F
 	public static void ResetStaticDefaultValue()
 	{
 		MailConfig._Instance = null;
 	}
 
-	// Token: 0x06010CF5 RID: 68853 RVA: 0x00415487 File Offset: 0x00413687
+	// Token: 0x0600E186 RID: 57734 RVA: 0x00421D67 File Offset: 0x0041FF67
 	static MailConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MailConfig.CreateStaticDefaultValue), new Action(MailConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007FD2 RID: 32722
+	// Token: 0x04008119 RID: 33049
 	[Nullable(2)]
 	private static MailConfig _Instance;
 }

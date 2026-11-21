@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EA8 RID: 20136
+	// Token: 0x020053D1 RID: 21457
 	public class IAnimalEmotionBubbleEntryT
 	{
-		// Token: 0x17009078 RID: 36984
-		// (get) Token: 0x0601FB50 RID: 129872 RVA: 0x0046A3D6 File Offset: 0x004685D6
-		// (set) Token: 0x0601FB51 RID: 129873 RVA: 0x0046A3DE File Offset: 0x004685DE
+		// Token: 0x170097D9 RID: 38873
+		// (get) Token: 0x06021851 RID: 137297 RVA: 0x0049F852 File Offset: 0x0049DA52
+		// (set) Token: 0x06021852 RID: 137298 RVA: 0x0049F85A File Offset: 0x0049DA5A
 		public string MontagePath { get; set; }
 
-		// Token: 0x17009079 RID: 36985
-		// (get) Token: 0x0601FB52 RID: 129874 RVA: 0x0046A3E7 File Offset: 0x004685E7
-		// (set) Token: 0x0601FB53 RID: 129875 RVA: 0x0046A3EF File Offset: 0x004685EF
+		// Token: 0x170097DA RID: 38874
+		// (get) Token: 0x06021853 RID: 137299 RVA: 0x0049F863 File Offset: 0x0049DA63
+		// (set) Token: 0x06021854 RID: 137300 RVA: 0x0049F86B File Offset: 0x0049DA6B
 		public string EmotionName { get; set; }
 
-		// Token: 0x0601FB54 RID: 129876 RVA: 0x0046A3F8 File Offset: 0x004685F8
+		// Token: 0x06021855 RID: 137301 RVA: 0x0049F874 File Offset: 0x0049DA74
 		public IAnimalEmotionBubbleEntryT()
 		{
 			this.MontagePath = null;

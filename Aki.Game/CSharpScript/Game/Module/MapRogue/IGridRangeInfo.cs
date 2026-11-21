@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055A9 RID: 21929
+	// Token: 0x0200457F RID: 17791
 	public interface IGridRangeInfo
 	{
-		// Token: 0x1700868C RID: 34444
-		// (get) Token: 0x06037E1A RID: 228890
-		// (set) Token: 0x06037E1B RID: 228891
+		// Token: 0x17005A53 RID: 23123
+		// (get) Token: 0x0602CD18 RID: 183576
+		// (set) Token: 0x0602CD19 RID: 183577
 		double CenterX { get; set; }
 
-		// Token: 0x1700868D RID: 34445
-		// (get) Token: 0x06037E1C RID: 228892
-		// (set) Token: 0x06037E1D RID: 228893
+		// Token: 0x17005A54 RID: 23124
+		// (get) Token: 0x0602CD1A RID: 183578
+		// (set) Token: 0x0602CD1B RID: 183579
 		double CenterY { get; set; }
 
-		// Token: 0x1700868E RID: 34446
-		// (get) Token: 0x06037E1E RID: 228894
-		// (set) Token: 0x06037E1F RID: 228895
+		// Token: 0x17005A55 RID: 23125
+		// (get) Token: 0x0602CD1C RID: 183580
+		// (set) Token: 0x0602CD1D RID: 183581
 		double RadiusX { get; set; }
 
-		// Token: 0x1700868F RID: 34447
-		// (get) Token: 0x06037E20 RID: 228896
-		// (set) Token: 0x06037E21 RID: 228897
+		// Token: 0x17005A56 RID: 23126
+		// (get) Token: 0x0602CD1E RID: 183582
+		// (set) Token: 0x0602CD1F RID: 183583
 		double RadiusY { get; set; }
 	}
 }

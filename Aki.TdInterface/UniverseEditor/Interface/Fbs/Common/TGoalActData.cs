@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E8A RID: 24202
+	// Token: 0x020064CD RID: 25805
 	public enum TGoalActData : byte
 	{
-		// Token: 0x0400F8CA RID: 63690
+		// Token: 0x0401062D RID: 67117
 		NONE,
-		// Token: 0x0400F8CB RID: 63691
+		// Token: 0x0401062E RID: 67118
 		IDiscardForEnergyToDeployType,
-		// Token: 0x0400F8CC RID: 63692
+		// Token: 0x0401062F RID: 67119
 		IDiscardForEnergyToEvolutionType
 	}
 }

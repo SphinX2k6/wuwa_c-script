@@ -11,10 +11,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014FE RID: 5374
+// Token: 0x020009B6 RID: 2486
 public class NormalRewardItem : SignRewardItemBase
 {
-	// Token: 0x0600993E RID: 39230 RVA: 0x002127B8 File Offset: 0x002109B8
+	// Token: 0x06006D18 RID: 27928 RVA: 0x0021C4D0 File Offset: 0x0021A6D0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -49,7 +49,7 @@ public class NormalRewardItem : SignRewardItemBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600993F RID: 39231 RVA: 0x00212948 File Offset: 0x00210B48
+	// Token: 0x06006D19 RID: 27929 RVA: 0x0021C660 File Offset: 0x0021A860
 	protected override UniTask OnBeforeStartAsync()
 	{
 		NormalRewardItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ public class NormalRewardItem : SignRewardItemBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009940 RID: 39232 RVA: 0x0021298B File Offset: 0x00210B8B
+	// Token: 0x06006D1A RID: 27930 RVA: 0x0021C6A3 File Offset: 0x0021A8A3
 	protected override void OnBeforeDestroy()
 	{
 		if (this.CommonSmallItemGridInner != null)
@@ -69,20 +69,20 @@ public class NormalRewardItem : SignRewardItemBase
 		}
 	}
 
-	// Token: 0x06009941 RID: 39233 RVA: 0x002129A1 File Offset: 0x00210BA1
+	// Token: 0x06006D1B RID: 27931 RVA: 0x0021C6B9 File Offset: 0x0021A8B9
 	public void SetDayText(int day)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "DayNum", new <>z__ReadOnlySingleElementList<object>(day));
 	}
 
-	// Token: 0x06009942 RID: 39234 RVA: 0x002129C4 File Offset: 0x00210BC4
+	// Token: 0x06006D1C RID: 27932 RVA: 0x0021C6DC File Offset: 0x0021A8DC
 	[NullableContext(1)]
 	public void SetStateText(string textId)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x06009943 RID: 39235 RVA: 0x002129E0 File Offset: 0x00210BE0
+	// Token: 0x06006D1D RID: 27933 RVA: 0x0021C6F8 File Offset: 0x0021A8F8
 	public override void RefreshByData(OneItemConfig data, SignState state, int index)
 	{
 		this.Index = index;
@@ -109,7 +109,7 @@ public class NormalRewardItem : SignRewardItemBase
 		this.RefreshGrid(data, state);
 	}
 
-	// Token: 0x06009944 RID: 39236 RVA: 0x00212ABC File Offset: 0x00210CBC
+	// Token: 0x06006D1E RID: 27934 RVA: 0x0021C7D4 File Offset: 0x0021A9D4
 	private void RefreshGrid(OneItemConfig data, SignState state)
 	{
 		int count = data.Count;
@@ -160,7 +160,7 @@ public class NormalRewardItem : SignRewardItemBase
 		this.CommonSmallItemGridInner.Apply<PhantomSmallItemGrid>(parameters3);
 	}
 
-	// Token: 0x06009945 RID: 39237 RVA: 0x00212C7A File Offset: 0x00210E7A
+	// Token: 0x06006D1F RID: 27935 RVA: 0x0021C992 File Offset: 0x0021AB92
 	[NullableContext(1)]
 	private void OnExtendToggleClicked(MediumItemGridExtendCallback callback)
 	{
@@ -177,41 +177,41 @@ public class NormalRewardItem : SignRewardItemBase
 		onClickToGet(this.Index);
 	}
 
-	// Token: 0x04004365 RID: 17253
+	// Token: 0x0400440A RID: 17418
 	[Nullable(2)]
 	private SmallItemGrid CommonSmallItemGridInner;
 
-	// Token: 0x04004366 RID: 17254
+	// Token: 0x0400440B RID: 17419
 	private int ConfigId;
 
-	// Token: 0x02007B35 RID: 31541
+	// Token: 0x02006CC0 RID: 27840
 	private class ENormalRewardItemComponents
 	{
-		// Token: 0x0402884E RID: 165966
+		// Token: 0x04023B8A RID: 146314
 		public const int CommonItemGridSmall = 0;
 
-		// Token: 0x0402884F RID: 165967
+		// Token: 0x04023B8B RID: 146315
 		public const int TxtDay = 1;
 
-		// Token: 0x04028850 RID: 165968
+		// Token: 0x04023B8C RID: 146316
 		public const int TxtReward = 2;
 
-		// Token: 0x04028851 RID: 165969
+		// Token: 0x04023B8D RID: 146317
 		public const int Toggle = 3;
 
-		// Token: 0x04028852 RID: 165970
+		// Token: 0x04023B8E RID: 146318
 		public const int PnlReward = 4;
 
-		// Token: 0x04028853 RID: 165971
+		// Token: 0x04023B8F RID: 146319
 		public const int SprFrame = 5;
 
-		// Token: 0x04028854 RID: 165972
+		// Token: 0x04023B90 RID: 146320
 		public const int SprBgDesc = 6;
 
-		// Token: 0x04028855 RID: 165973
+		// Token: 0x04023B91 RID: 146321
 		public const int SpriteBg = 7;
 
-		// Token: 0x04028856 RID: 165974
+		// Token: 0x04023B92 RID: 146322
 		public const int RewardEffect = 8;
 	}
 }

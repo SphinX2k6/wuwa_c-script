@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075DE RID: 30174
+	// Token: 0x02007DE3 RID: 32227
 	public class IVisualNovelRoleIntroductionSolarSchoolT
 	{
-		// Token: 0x1700E53D RID: 58685
-		// (get) Token: 0x06036F74 RID: 225140 RVA: 0x00775958 File Offset: 0x00773B58
-		// (set) Token: 0x06036F75 RID: 225141 RVA: 0x00775960 File Offset: 0x00773B60
+		// Token: 0x1700F171 RID: 61809
+		// (get) Token: 0x0603A3E3 RID: 238563 RVA: 0x007D95AC File Offset: 0x007D77AC
+		// (set) Token: 0x0603A3E4 RID: 238564 RVA: 0x007D95B4 File Offset: 0x007D77B4
 		public EVisualNovelSubType Type { get; set; }
 
-		// Token: 0x1700E53E RID: 58686
-		// (get) Token: 0x06036F76 RID: 225142 RVA: 0x00775969 File Offset: 0x00773B69
-		// (set) Token: 0x06036F77 RID: 225143 RVA: 0x00775971 File Offset: 0x00773B71
+		// Token: 0x1700F172 RID: 61810
+		// (get) Token: 0x0603A3E5 RID: 238565 RVA: 0x007D95BD File Offset: 0x007D77BD
+		// (set) Token: 0x0603A3E6 RID: 238566 RVA: 0x007D95C5 File Offset: 0x007D77C5
 		public int IntroductionId { get; set; }
 
-		// Token: 0x1700E53F RID: 58687
-		// (get) Token: 0x06036F78 RID: 225144 RVA: 0x0077597A File Offset: 0x00773B7A
-		// (set) Token: 0x06036F79 RID: 225145 RVA: 0x00775982 File Offset: 0x00773B82
+		// Token: 0x1700F173 RID: 61811
+		// (get) Token: 0x0603A3E7 RID: 238567 RVA: 0x007D95CE File Offset: 0x007D77CE
+		// (set) Token: 0x0603A3E8 RID: 238568 RVA: 0x007D95D6 File Offset: 0x007D77D6
 		public float Duration { get; set; }
 
-		// Token: 0x1700E540 RID: 58688
-		// (get) Token: 0x06036F7A RID: 225146 RVA: 0x0077598B File Offset: 0x00773B8B
-		// (set) Token: 0x06036F7B RID: 225147 RVA: 0x00775993 File Offset: 0x00773B93
+		// Token: 0x1700F174 RID: 61812
+		// (get) Token: 0x0603A3E9 RID: 238569 RVA: 0x007D95DF File Offset: 0x007D77DF
+		// (set) Token: 0x0603A3EA RID: 238570 RVA: 0x007D95E7 File Offset: 0x007D77E7
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036F7C RID: 225148 RVA: 0x0077599C File Offset: 0x00773B9C
+		// Token: 0x0603A3EB RID: 238571 RVA: 0x007D95F0 File Offset: 0x007D77F0
 		public IVisualNovelRoleIntroductionSolarSchoolT()
 		{
 			this.Type = EVisualNovelSubType.SolarSchool;

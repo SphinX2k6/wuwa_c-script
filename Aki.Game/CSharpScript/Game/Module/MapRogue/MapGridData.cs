@@ -6,27 +6,27 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055A2 RID: 21922
+	// Token: 0x02004578 RID: 17784
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapGridData : IPathNode
 	{
-		// Token: 0x17008681 RID: 34433
-		// (get) Token: 0x06037DFB RID: 228859 RVA: 0x00D3D983 File Offset: 0x00D3BB83
-		// (set) Token: 0x06037DFC RID: 228860 RVA: 0x00D3D98B File Offset: 0x00D3BB8B
+		// Token: 0x17005A48 RID: 23112
+		// (get) Token: 0x0602CCF9 RID: 183545 RVA: 0x00C8B6CB File Offset: 0x00C898CB
+		// (set) Token: 0x0602CCFA RID: 183546 RVA: 0x00C8B6D3 File Offset: 0x00C898D3
 		public int GridIndex { get; set; }
 
-		// Token: 0x17008682 RID: 34434
-		// (get) Token: 0x06037DFD RID: 228861 RVA: 0x00D3D994 File Offset: 0x00D3BB94
-		// (set) Token: 0x06037DFE RID: 228862 RVA: 0x00D3D99C File Offset: 0x00D3BB9C
+		// Token: 0x17005A49 RID: 23113
+		// (get) Token: 0x0602CCFB RID: 183547 RVA: 0x00C8B6DC File Offset: 0x00C898DC
+		// (set) Token: 0x0602CCFC RID: 183548 RVA: 0x00C8B6E4 File Offset: 0x00C898E4
 		public int Cost { get; set; }
 
-		// Token: 0x17008683 RID: 34435
-		// (get) Token: 0x06037DFF RID: 228863 RVA: 0x00D3D9A5 File Offset: 0x00D3BBA5
-		// (set) Token: 0x06037E00 RID: 228864 RVA: 0x00D3D9AD File Offset: 0x00D3BBAD
+		// Token: 0x17005A4A RID: 23114
+		// (get) Token: 0x0602CCFD RID: 183549 RVA: 0x00C8B6ED File Offset: 0x00C898ED
+		// (set) Token: 0x0602CCFE RID: 183550 RVA: 0x00C8B6F5 File Offset: 0x00C898F5
 		public bool Walkable { get; set; }
 
-		// Token: 0x06037E01 RID: 228865 RVA: 0x00D3D9B8 File Offset: 0x00D3BBB8
+		// Token: 0x0602CCFF RID: 183551 RVA: 0x00C8B700 File Offset: 0x00C89900
 		public void RefreshByServer(RogueResGridData data)
 		{
 			this.GridId = data.ConfigId;
@@ -53,85 +53,85 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.Cost = (this.HasEvent(null) ? 1000000 : 1);
 		}
 
-		// Token: 0x06037E02 RID: 228866 RVA: 0x00D3DB28 File Offset: 0x00D3BD28
+		// Token: 0x0602CD00 RID: 183552 RVA: 0x00C8B870 File Offset: 0x00C89A70
 		public bool HasEvent(bool? hasVision = null)
 		{
 			return (hasVision ?? this.HasVision) && !this.IsExplore && this.GridEventId != 0;
 		}
 
-		// Token: 0x06037E03 RID: 228867 RVA: 0x00D3DB66 File Offset: 0x00D3BD66
+		// Token: 0x0602CD01 RID: 183553 RVA: 0x00C8B8AE File Offset: 0x00C89AAE
 		public bool IsValid()
 		{
 			return this.GridId != 0;
 		}
 
-		// Token: 0x06037E04 RID: 228868 RVA: 0x00D3DB71 File Offset: 0x00D3BD71
+		// Token: 0x0602CD02 RID: 183554 RVA: 0x00C8B8B9 File Offset: 0x00C89AB9
 		public bool NeedTriggerEvent()
 		{
 			return !this.IsExplore && this.GridEventId != 0;
 		}
 
-		// Token: 0x06037E05 RID: 228869 RVA: 0x00D3DB86 File Offset: 0x00D3BD86
+		// Token: 0x0602CD03 RID: 183555 RVA: 0x00C8B8CE File Offset: 0x00C89ACE
 		public bool IsUnlock()
 		{
 			return this.ConditionInfo == null || this.ConditionInfo.Id == 0 || this.ConditionInfo.Current >= this.ConditionInfo.Target;
 		}
 
-		// Token: 0x0401D59F RID: 120223
+		// Token: 0x0401802A RID: 98346
 		public int GridId;
 
-		// Token: 0x0401D5A1 RID: 120225
+		// Token: 0x0401802C RID: 98348
 		public int GridTypeId;
 
-		// Token: 0x0401D5A2 RID: 120226
+		// Token: 0x0401802D RID: 98349
 		public int GroundPathIndex;
 
-		// Token: 0x0401D5A3 RID: 120227
+		// Token: 0x0401802E RID: 98350
 		public int ExtraPathIndex = -1;
 
-		// Token: 0x0401D5A4 RID: 120228
+		// Token: 0x0401802F RID: 98351
 		public int GridEventId;
 
-		// Token: 0x0401D5A5 RID: 120229
+		// Token: 0x04018030 RID: 98352
 		public EGridEventType GridEventType;
 
-		// Token: 0x0401D5A6 RID: 120230
+		// Token: 0x04018031 RID: 98353
 		public int EventType = -1;
 
-		// Token: 0x0401D5A8 RID: 120232
+		// Token: 0x04018033 RID: 98355
 		public int WalkCost;
 
-		// Token: 0x0401D5A9 RID: 120233
+		// Token: 0x04018034 RID: 98356
 		public int EventCost;
 
-		// Token: 0x0401D5AA RID: 120234
+		// Token: 0x04018035 RID: 98357
 		public bool IsExplore;
 
-		// Token: 0x0401D5AB RID: 120235
+		// Token: 0x04018036 RID: 98358
 		public bool HasVision;
 
-		// Token: 0x0401D5AC RID: 120236
+		// Token: 0x04018037 RID: 98359
 		public bool IsBlock;
 
-		// Token: 0x0401D5AE RID: 120238
+		// Token: 0x04018039 RID: 98361
 		public int Lv;
 
-		// Token: 0x0401D5AF RID: 120239
+		// Token: 0x0401803A RID: 98362
 		public int ToleranceLv;
 
-		// Token: 0x0401D5B0 RID: 120240
+		// Token: 0x0401803B RID: 98363
 		public int SkipBattleLv;
 
-		// Token: 0x0401D5B1 RID: 120241
+		// Token: 0x0401803C RID: 98364
 		public bool CanSkipBattle;
 
-		// Token: 0x0401D5B2 RID: 120242
+		// Token: 0x0401803D RID: 98365
 		public List<int> OccupiedEffectIdList = new List<int>();
 
-		// Token: 0x0401D5B3 RID: 120243
+		// Token: 0x0401803E RID: 98366
 		public List<int> RewardItemIdList = new List<int>();
 
-		// Token: 0x0401D5B4 RID: 120244
+		// Token: 0x0401803F RID: 98367
 		[Nullable(2)]
 		public CondInfo ConditionInfo;
 	}

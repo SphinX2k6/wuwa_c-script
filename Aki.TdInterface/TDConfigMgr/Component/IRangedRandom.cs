@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000660 RID: 1632
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006FD RID: 1789
 	public class IRangedRandom
 	{
-		// Token: 0x060022EC RID: 8940 RVA: 0x0005FCDC File Offset: 0x0005DEDC
+		// Token: 0x060025F2 RID: 9714 RVA: 0x000669F0 File Offset: 0x00064BF0
 		private IRangedRandom_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060022ED RID: 8941 RVA: 0x0005FD14 File Offset: 0x0005DF14
+		// Token: 0x060025F3 RID: 9715 RVA: 0x00066A28 File Offset: 0x00064C28
 		public static IRangedRandom Create([Nullable(2)] IRangedRandom instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022EE RID: 8942 RVA: 0x0005FD27 File Offset: 0x0005DF27
+		// Token: 0x060025F4 RID: 9716 RVA: 0x00066A3B File Offset: 0x00064C3B
 		public static IRangedRandom CreateFromSetValue([Nullable(2)] IRangedRandom_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022EF RID: 8943 RVA: 0x0005FD3A File Offset: 0x0005DF3A
+		// Token: 0x060025F5 RID: 9717 RVA: 0x00066A4E File Offset: 0x00064C4E
 		public IRangedRandom_SetValue ToSetValue()
 		{
 			return new IRangedRandom_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000945 RID: 2373
-		// (get) Token: 0x060022F0 RID: 8944 RVA: 0x0005FD59 File Offset: 0x0005DF59
-		// (set) Token: 0x060022F1 RID: 8945 RVA: 0x0005FD88 File Offset: 0x0005DF88
+		// Token: 0x170009FC RID: 2556
+		// (get) Token: 0x060025F6 RID: 9718 RVA: 0x00066A6D File Offset: 0x00064C6D
+		// (set) Token: 0x060025F7 RID: 9719 RVA: 0x00066A9C File Offset: 0x00064C9C
 		public virtual float Left
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000946 RID: 2374
-		// (get) Token: 0x060022F2 RID: 8946 RVA: 0x0005FD96 File Offset: 0x0005DF96
-		// (set) Token: 0x060022F3 RID: 8947 RVA: 0x0005FDC5 File Offset: 0x0005DFC5
+		// Token: 0x170009FD RID: 2557
+		// (get) Token: 0x060025F8 RID: 9720 RVA: 0x00066AAA File Offset: 0x00064CAA
+		// (set) Token: 0x060025F9 RID: 9721 RVA: 0x00066AD9 File Offset: 0x00064CD9
 		public virtual float Right
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400183B RID: 6203
+		// Token: 0x04001A2D RID: 6701
 		[Nullable(2)]
 		protected IRangedRandom FbInstance;
 
-		// Token: 0x0400183C RID: 6204
+		// Token: 0x04001A2E RID: 6702
 		[Nullable(2)]
 		protected IRangedRandom_SetValue PocoInterface;
 	}

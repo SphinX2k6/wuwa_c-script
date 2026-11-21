@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200321E RID: 12830
+// Token: 0x0200278D RID: 10125
 public class NpcPerformAiControlState : NpcPerformBaseState
 {
-	// Token: 0x0601BA98 RID: 113304 RVA: 0x0079A396 File Offset: 0x00798596
+	// Token: 0x0601961D RID: 103965 RVA: 0x007C2B32 File Offset: 0x007C0D32
 	[NullableContext(1)]
 	public NpcPerformAiControlState(EntityHandle owner, ENpcPerformState state, [Nullable(new byte[]
 	{

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AA8 RID: 10920
+	// Token: 0x02002D9C RID: 11676
 	public class StopMotorCruise : ActionParams
 	{
-		// Token: 0x0600EFC4 RID: 61380 RVA: 0x0022D85B File Offset: 0x0022BA5B
-		[NullableContext(1)]
+		// Token: 0x0600FE7A RID: 65146 RVA: 0x0024B567 File Offset: 0x00249767
 		public static StopMotorCruise Create(IStopMotorCruise? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x040083EA RID: 33770
+		// Token: 0x04008AEE RID: 35566
 		private IStopMotorCruise Instance;
 	}
 }

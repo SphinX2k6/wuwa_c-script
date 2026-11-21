@@ -12,36 +12,36 @@ using UnrealEngine.Interface;
 
 namespace CSharpScript.Game.Module.DataLayerSwitch
 {
-	// Token: 0x02005AD2 RID: 23250
+	// Token: 0x02004AB3 RID: 19123
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DataLayersTransitionTask : IStaticVariableResetter
 	{
-		// Token: 0x0603AE1A RID: 241178 RVA: 0x00E09BE8 File Offset: 0x00E07DE8
+		// Token: 0x0602FD8C RID: 195980 RVA: 0x00D5A8C8 File Offset: 0x00D58AC8
 		static DataLayersTransitionTask()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DataLayersTransitionTask.CreateStaticDefaultValue), new Action(DataLayersTransitionTask.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603AE1B RID: 241179 RVA: 0x00E09C07 File Offset: 0x00E07E07
+		// Token: 0x0602FD8D RID: 195981 RVA: 0x00D5A8E7 File Offset: 0x00D58AE7
 		public static void CreateStaticDefaultValue()
 		{
 			DataLayersTransitionTask.MaxTaskId = 0;
 		}
 
-		// Token: 0x0603AE1C RID: 241180 RVA: 0x00E09C0F File Offset: 0x00E07E0F
+		// Token: 0x0602FD8E RID: 195982 RVA: 0x00D5A8EF File Offset: 0x00D58AEF
 		public static void ResetStaticDefaultValue()
 		{
 			DataLayersTransitionTask.MaxTaskId = 0;
 		}
 
-		// Token: 0x0603AE1D RID: 241181 RVA: 0x00E09C18 File Offset: 0x00E07E18
+		// Token: 0x0602FD8F RID: 195983 RVA: 0x00D5A8F8 File Offset: 0x00D58AF8
 		public DataLayersTransitionTask()
 		{
 			this.TaskId = ++DataLayersTransitionTask.MaxTaskId;
 		}
 
-		// Token: 0x0603AE1E RID: 241182 RVA: 0x00E09CA8 File Offset: 0x00E07EA8
+		// Token: 0x0602FD90 RID: 195984 RVA: 0x00D5A988 File Offset: 0x00D58B88
 		private UKuroSceneModifierSubsystem GetKuroSceneModifierSubsystem()
 		{
 			UKuroSceneModifierSubsystem kuroSceneModifierSubsystemCache = this.KuroSceneModifierSubsystemCache;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			return this.KuroSceneModifierSubsystemCache;
 		}
 
-		// Token: 0x0603AE1F RID: 241183 RVA: 0x00E09D40 File Offset: 0x00E07F40
+		// Token: 0x0602FD91 RID: 195985 RVA: 0x00D5AA20 File Offset: 0x00D58C20
 		public unsafe void StartTask()
 		{
 			Log instance = Log.Instance;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			this.Transition();
 		}
 
-		// Token: 0x0603AE20 RID: 241184 RVA: 0x00E09DEC File Offset: 0x00E07FEC
+		// Token: 0x0602FD92 RID: 195986 RVA: 0x00D5AACC File Offset: 0x00D58CCC
 		[NullableContext(1)]
 		private void InitUeContainerFromSet(HashSet<FName> inSet, TArray<FName> outUeSet)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE21 RID: 241185 RVA: 0x00E09E44 File Offset: 0x00E08044
+		// Token: 0x0602FD93 RID: 195987 RVA: 0x00D5AB24 File Offset: 0x00D58D24
 		[NullableContext(1)]
 		private void InitUeContainerFromSet(HashSet<FName> inSet, TSet<FName> outUeSet)
 		{
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE22 RID: 241186 RVA: 0x00E09E9C File Offset: 0x00E0809C
+		// Token: 0x0602FD94 RID: 195988 RVA: 0x00D5AB7C File Offset: 0x00D58D7C
 		[NullableContext(1)]
 		private void ChangeDataLayerState(HashSet<FName> dataLayerNames, bool targetState)
 		{
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE23 RID: 241187 RVA: 0x00E09F6C File Offset: 0x00E0816C
+		// Token: 0x0602FD95 RID: 195989 RVA: 0x00D5AC4C File Offset: 0x00D58E4C
 		private void Transition()
 		{
 			if (this.ToActivateDataLayerNames != null)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}).Run(this.AbortSignal);
 		}
 
-		// Token: 0x0603AE24 RID: 241188 RVA: 0x00E0A0B4 File Offset: 0x00E082B4
+		// Token: 0x0602FD96 RID: 195990 RVA: 0x00D5AD94 File Offset: 0x00D58F94
 		private UniTask TransitionPartLoadResources()
 		{
 			DataLayersTransitionTask.<TransitionPartLoadResources>d__51 <TransitionPartLoadResources>d__;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			return <TransitionPartLoadResources>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AE25 RID: 241189 RVA: 0x00E0A0F8 File Offset: 0x00E082F8
+		// Token: 0x0602FD97 RID: 195991 RVA: 0x00D5ADD8 File Offset: 0x00D58FD8
 		[NullableContext(1)]
 		private void StartTrackedResourceLoad<[Nullable(0)] T>(string path, [Nullable(new byte[]
 		{
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE26 RID: 241190 RVA: 0x00E0A16E File Offset: 0x00E0836E
+		// Token: 0x0602FD98 RID: 195992 RVA: 0x00D5AE4E File Offset: 0x00D5904E
 		[NullableContext(1)]
 		private void TransitionPartCheckBeforeTransition(SequenceContext ctx)
 		{
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			this.CheckLogBeforeTransition();
 		}
 
-		// Token: 0x0603AE27 RID: 241191 RVA: 0x00E0A1AC File Offset: 0x00E083AC
+		// Token: 0x0602FD99 RID: 195993 RVA: 0x00D5AE8C File Offset: 0x00D5908C
 		private void OnTransitionAborted()
 		{
 			SimpleLevelSequenceActor simpleLevelSequenceActor = this.SimpleLevelSequenceActor;
@@ -236,7 +236,12 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 				if (player != null && player.IsValid())
 				{
 					FQualifiedFrameTime endTime = player.GetEndTime();
-					player.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams(endTime.Time, 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Jump));
+					player.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams
+					{
+						Frame = endTime.Time,
+						PositionType = EMovieScenePositionType.Frame,
+						UpdateMethod = EUpdatePositionMethod.Jump
+					});
 				}
 			}
 			foreach (int id in this.ActiveLoadIds)
@@ -271,7 +276,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			kuroSceneModifierSubsystem2.ResetMaterialsByDataLayer(this.ToDeactivateDataLayerNamesUeSet);
 		}
 
-		// Token: 0x0603AE28 RID: 241192 RVA: 0x00E0A314 File Offset: 0x00E08514
+		// Token: 0x0602FD9A RID: 195994 RVA: 0x00D5AFFC File Offset: 0x00D591FC
 		private unsafe void CheckLogBeforeTransition()
 		{
 			HashSet<FName> toActivateDataLayerNames = this.ToActivateDataLayerNames;
@@ -314,7 +319,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE29 RID: 241193 RVA: 0x00E0A4C0 File Offset: 0x00E086C0
+		// Token: 0x0602FD9B RID: 195995 RVA: 0x00D5B1A8 File Offset: 0x00D593A8
 		private UniTask TransitionPartPlaySeqToBeforeModifyMatMark()
 		{
 			DataLayersTransitionTask.<TransitionPartPlaySeqToBeforeModifyMatMark>d__56 <TransitionPartPlaySeqToBeforeModifyMatMark>d__;
@@ -325,7 +330,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			return <TransitionPartPlaySeqToBeforeModifyMatMark>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AE2A RID: 241194 RVA: 0x00E0A504 File Offset: 0x00E08704
+		// Token: 0x0602FD9C RID: 195996 RVA: 0x00D5B1EC File Offset: 0x00D593EC
 		private void TransitionPartModifyMat()
 		{
 			UKuroSceneMatModifyDataAsset matDataForActivating = this.MatDataForActivating;
@@ -349,7 +354,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE2B RID: 241195 RVA: 0x00E0A574 File Offset: 0x00E08774
+		// Token: 0x0602FD9D RID: 195997 RVA: 0x00D5B25C File Offset: 0x00D5945C
 		[NullableContext(1)]
 		private unsafe UniTask PollWithTimeout(string logTag, Func<bool> check, int intervalMs, float maxWaitTime)
 		{
@@ -438,7 +443,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			return tcs.Task;
 		}
 
-		// Token: 0x0603AE2C RID: 241196 RVA: 0x00E0A7B4 File Offset: 0x00E089B4
+		// Token: 0x0602FD9E RID: 195998 RVA: 0x00D5B49C File Offset: 0x00D5969C
 		[NullableContext(1)]
 		private Func<bool> CreatePlayerDriftChecker()
 		{
@@ -462,7 +467,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			};
 		}
 
-		// Token: 0x0603AE2D RID: 241197 RVA: 0x00E0A84C File Offset: 0x00E08A4C
+		// Token: 0x0602FD9F RID: 195999 RVA: 0x00D5B534 File Offset: 0x00D59734
 		private UniTask TransitionPartLoadDataLayer()
 		{
 			DataLayersTransitionTask.<TransitionPartLoadDataLayer>d__61 <TransitionPartLoadDataLayer>d__;
@@ -473,7 +478,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			return <TransitionPartLoadDataLayer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AE2E RID: 241198 RVA: 0x00E0A890 File Offset: 0x00E08A90
+		// Token: 0x0602FDA0 RID: 196000 RVA: 0x00D5B578 File Offset: 0x00D59778
 		private UniTask TryWaitDataLayerStreaming(HashSet<FName> dataLayerNames, bool considerVoxel, bool modifyBudget, ELoadMode loadMode, float maxWaitTime)
 		{
 			DataLayersTransitionTask.<TryWaitDataLayerStreaming>d__62 <TryWaitDataLayerStreaming>d__;
@@ -489,7 +494,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			return <TryWaitDataLayerStreaming>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AE2F RID: 241199 RVA: 0x00E0A900 File Offset: 0x00E08B00
+		// Token: 0x0602FDA1 RID: 196001 RVA: 0x00D5B5E8 File Offset: 0x00D597E8
 		private UniTask TransitionPartUnloadDataLayer()
 		{
 			DataLayersTransitionTask.<TransitionPartUnloadDataLayer>d__63 <TransitionPartUnloadDataLayer>d__;
@@ -500,7 +505,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			return <TransitionPartUnloadDataLayer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AE30 RID: 241200 RVA: 0x00E0A943 File Offset: 0x00E08B43
+		// Token: 0x0602FDA2 RID: 196002 RVA: 0x00D5B62B File Offset: 0x00D5982B
 		private void TransitionPartResetMat()
 		{
 			UKuroSceneModifierSubsystem kuroSceneModifierSubsystem = this.GetKuroSceneModifierSubsystem();
@@ -516,7 +521,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			kuroSceneModifierSubsystem2.ResetMaterialsByDataLayer(this.ToDeactivateDataLayerNamesUeSet);
 		}
 
-		// Token: 0x0603AE31 RID: 241201 RVA: 0x00E0A974 File Offset: 0x00E08B74
+		// Token: 0x0602FDA3 RID: 196003 RVA: 0x00D5B65C File Offset: 0x00D5985C
 		private void TransitionPartClearCustomCullFlag()
 		{
 			if (this.ShouldClearCustomCullFlag)
@@ -528,7 +533,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE32 RID: 241202 RVA: 0x00E0A9C0 File Offset: 0x00E08BC0
+		// Token: 0x0602FDA4 RID: 196004 RVA: 0x00D5B6A8 File Offset: 0x00D598A8
 		private UniTask TransitionPartRenderAssetsCheck()
 		{
 			DataLayersTransitionTask.<TransitionPartRenderAssetsCheck>d__66 <TransitionPartRenderAssetsCheck>d__;
@@ -539,7 +544,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			return <TransitionPartRenderAssetsCheck>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AE33 RID: 241203 RVA: 0x00E0AA03 File Offset: 0x00E08C03
+		// Token: 0x0602FDA5 RID: 196005 RVA: 0x00D5B6EB File Offset: 0x00D598EB
 		private void TransitionPartFixBornLocation()
 		{
 			if (this.ShouldEmitFixBornLocation)
@@ -548,7 +553,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE34 RID: 241204 RVA: 0x00E0AA20 File Offset: 0x00E08C20
+		// Token: 0x0602FDA6 RID: 196006 RVA: 0x00D5B708 File Offset: 0x00D59908
 		private UniTask TransitionPartPlaySeqToEnd()
 		{
 			DataLayersTransitionTask.<TransitionPartPlaySeqToEnd>d__68 <TransitionPartPlaySeqToEnd>d__;
@@ -559,7 +564,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			return <TransitionPartPlaySeqToEnd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AE35 RID: 241205 RVA: 0x00E0AA64 File Offset: 0x00E08C64
+		// Token: 0x0602FDA7 RID: 196007 RVA: 0x00D5B74C File Offset: 0x00D5994C
 		public unsafe void StopTask(bool success)
 		{
 			Log instance = Log.Instance;
@@ -585,7 +590,7 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			taskFinishCallback(this, success);
 		}
 
-		// Token: 0x0603AE36 RID: 241206 RVA: 0x00E0AB1C File Offset: 0x00E08D1C
+		// Token: 0x0602FDA8 RID: 196008 RVA: 0x00D5B804 File Offset: 0x00D59A04
 		public unsafe void AbortTask()
 		{
 			Log instance = Log.Instance;
@@ -600,109 +605,109 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			this.AbortSignal.Abort();
 		}
 
-		// Token: 0x0401EBA3 RID: 125859
+		// Token: 0x0401965F RID: 104031
 		private const float DEFAULT_WAIT_DATALAYER_STREAMING_RADIUS = 3500f;
 
-		// Token: 0x0401EBA4 RID: 125860
+		// Token: 0x04019660 RID: 104032
 		private static int MaxTaskId;
 
-		// Token: 0x0401EBA5 RID: 125861
+		// Token: 0x04019661 RID: 104033
 		private readonly int TaskId;
 
-		// Token: 0x0401EBA6 RID: 125862
+		// Token: 0x04019662 RID: 104034
 		public UKuroSceneMatModifyDataAsset MatDataForActivating;
 
-		// Token: 0x0401EBA7 RID: 125863
+		// Token: 0x04019663 RID: 104035
 		public string MatPathForActivating;
 
-		// Token: 0x0401EBA8 RID: 125864
+		// Token: 0x04019664 RID: 104036
 		public bool MatDataForActivatingLoaded;
 
-		// Token: 0x0401EBA9 RID: 125865
+		// Token: 0x04019665 RID: 104037
 		public UKuroSceneMatModifyDataAsset MatDataForDeactivating;
 
-		// Token: 0x0401EBAA RID: 125866
+		// Token: 0x04019666 RID: 104038
 		public string MatPathForDeactivating;
 
-		// Token: 0x0401EBAB RID: 125867
+		// Token: 0x04019667 RID: 104039
 		public bool MatDataForDeactivatingLoaded;
 
-		// Token: 0x0401EBAC RID: 125868
+		// Token: 0x04019668 RID: 104040
 		public ULevelSequence SeqData;
 
-		// Token: 0x0401EBAD RID: 125869
+		// Token: 0x04019669 RID: 104041
 		public string SeqPath;
 
-		// Token: 0x0401EBAE RID: 125870
+		// Token: 0x0401966A RID: 104042
 		public bool SeqDataLoaded;
 
-		// Token: 0x0401EBAF RID: 125871
+		// Token: 0x0401966B RID: 104043
 		public string SeqMarkBeforeModifyMat;
 
-		// Token: 0x0401EBB0 RID: 125872
+		// Token: 0x0401966C RID: 104044
 		public HashSet<FName> ToActivateDataLayerNames;
 
-		// Token: 0x0401EBB1 RID: 125873
+		// Token: 0x0401966D RID: 104045
 		public HashSet<FName> ToDeactivateDataLayerNames;
 
-		// Token: 0x0401EBB2 RID: 125874
+		// Token: 0x0401966E RID: 104046
 		public bool ShouldWaitDataLayersActivateFinish;
 
-		// Token: 0x0401EBB3 RID: 125875
+		// Token: 0x0401966F RID: 104047
 		public bool ShouldConsiderVoxelDuringWaitDataLayersActivateFinish;
 
-		// Token: 0x0401EBB4 RID: 125876
+		// Token: 0x04019670 RID: 104048
 		public float MaxTimeForWaitDataLayerActivateFinish;
 
-		// Token: 0x0401EBB5 RID: 125877
+		// Token: 0x04019671 RID: 104049
 		public bool ShouldModifyBudgetDuringWaitDataLayerActivateFinish = true;
 
-		// Token: 0x0401EBB6 RID: 125878
+		// Token: 0x04019672 RID: 104050
 		public ELoadMode TargetLoadModeDuringWaitDataLayerActivateFinish = ELoadMode.InGameLoading;
 
-		// Token: 0x0401EBB7 RID: 125879
+		// Token: 0x04019673 RID: 104051
 		public bool ShouldWaitDataLayersDeactivateFinish;
 
-		// Token: 0x0401EBB8 RID: 125880
+		// Token: 0x04019674 RID: 104052
 		public bool ShouldConsiderVoxelDuringWaitDataLayersDeactivateFinish;
 
-		// Token: 0x0401EBB9 RID: 125881
+		// Token: 0x04019675 RID: 104053
 		public float MaxTimeForWaitDataLayerDeactivateFinish;
 
-		// Token: 0x0401EBBA RID: 125882
+		// Token: 0x04019676 RID: 104054
 		public bool ShouldModifyBudgetDuringWaitDataLayerDeactivateFinish = true;
 
-		// Token: 0x0401EBBB RID: 125883
+		// Token: 0x04019677 RID: 104055
 		public ELoadMode TargetLoadModeDuringWaitDataLayerDeactivateFinish = ELoadMode.InGameLoading;
 
-		// Token: 0x0401EBBC RID: 125884
+		// Token: 0x04019678 RID: 104056
 		public float WaitDataLayerStreamingRadius = 3500f;
 
-		// Token: 0x0401EBBD RID: 125885
+		// Token: 0x04019679 RID: 104057
 		public bool IsServerControlledDataLayer;
 
-		// Token: 0x0401EBBE RID: 125886
+		// Token: 0x0401967A RID: 104058
 		public bool ShouldClearCustomCullFlag;
 
-		// Token: 0x0401EBBF RID: 125887
+		// Token: 0x0401967B RID: 104059
 		public bool ShouldCheckRenderAssets;
 
-		// Token: 0x0401EBC0 RID: 125888
+		// Token: 0x0401967C RID: 104060
 		public float RenderAssetsCheckRadius = 7000f;
 
-		// Token: 0x0401EBC1 RID: 125889
+		// Token: 0x0401967D RID: 104061
 		public float WaitRenderAssetsTimeout = 40f;
 
-		// Token: 0x0401EBC2 RID: 125890
+		// Token: 0x0401967E RID: 104062
 		public bool ShouldEmitFixBornLocation;
 
-		// Token: 0x0401EBC3 RID: 125891
+		// Token: 0x0401967F RID: 104063
 		public bool ShouldAbortOnPlayerDrift;
 
-		// Token: 0x0401EBC4 RID: 125892
+		// Token: 0x04019680 RID: 104064
 		public float DriftAbortDistanceSquare = 10000f;
 
-		// Token: 0x0401EBC5 RID: 125893
+		// Token: 0x04019681 RID: 104065
 		[Nullable(new byte[]
 		{
 			2,
@@ -710,27 +715,27 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 		})]
 		public Action<DataLayersTransitionTask, bool> TaskFinishCallback;
 
-		// Token: 0x0401EBC6 RID: 125894
+		// Token: 0x04019682 RID: 104066
 		[Nullable(1)]
 		public ISequenceAbortSignal AbortSignal = new DataLayerTransitionAbortSignal();
 
-		// Token: 0x0401EBC7 RID: 125895
+		// Token: 0x04019683 RID: 104067
 		private SimpleLevelSequenceActor SimpleLevelSequenceActor;
 
-		// Token: 0x0401EBC8 RID: 125896
+		// Token: 0x04019684 RID: 104068
 		private TSet<FName> ToActivateDataLayerNamesUeSet;
 
-		// Token: 0x0401EBC9 RID: 125897
+		// Token: 0x04019685 RID: 104069
 		private TSet<FName> ToDeactivateDataLayerNamesUeSet;
 
-		// Token: 0x0401EBCA RID: 125898
+		// Token: 0x04019686 RID: 104070
 		private UKuroSceneModifierSubsystem KuroSceneModifierSubsystemCache;
 
-		// Token: 0x0401EBCB RID: 125899
+		// Token: 0x04019687 RID: 104071
 		[Nullable(1)]
 		private readonly HashSet<int> ActiveLoadIds = new HashSet<int>();
 
-		// Token: 0x0401EBCC RID: 125900
+		// Token: 0x04019688 RID: 104072
 		[Nullable(1)]
 		private readonly HashSet<Action> ActivePollFinishers = new HashSet<Action>();
 	}

@@ -10,12 +10,12 @@ using CSharpScript.Game.KuroSimpleCombat;
 using CSharpScript.Game.LevelGamePlay.Common;
 using UnrealEngine;
 
-// Token: 0x02000ECC RID: 3788
+// Token: 0x02000381 RID: 897
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueEntityRedirectFilter : KscEntityRedirectFilter
 {
-	// Token: 0x06005E19 RID: 24089 RVA: 0x0011528C File Offset: 0x0011348C
+	// Token: 0x060031B0 RID: 12720 RVA: 0x0011CF44 File Offset: 0x0011B144
 	protected unsafe override bool OnCreateEntity(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
 		ISurvivorsRogueCombatInfo survivorsRogueCombatInfo = SurvivorsRogueEntityModelBuilder.Get(entityData, componentDataMap);
@@ -43,7 +43,7 @@ public class SurvivorsRogueEntityRedirectFilter : KscEntityRedirectFilter
 		return true;
 	}
 
-	// Token: 0x06005E1A RID: 24090 RVA: 0x0011537C File Offset: 0x0011357C
+	// Token: 0x060031B1 RID: 12721 RVA: 0x0011D034 File Offset: 0x0011B234
 	private unsafe void CreateEntityFromModel(ISurvivorsRogueCombatInfo model)
 	{
 		ISurvivorsRogueCombatInfo survivorsRogueCombatInfo = model;
@@ -81,7 +81,7 @@ public class SurvivorsRogueEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Add(survivorsRogueCombatInfo);
 	}
 
-	// Token: 0x06005E1B RID: 24091 RVA: 0x0011548C File Offset: 0x0011368C
+	// Token: 0x060031B2 RID: 12722 RVA: 0x0011D144 File Offset: 0x0011B344
 	protected override void OnInstantiateEntities()
 	{
 		foreach (ISurvivorsRogueCombatInfo model in this.PendingEntities)
@@ -91,7 +91,7 @@ public class SurvivorsRogueEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Clear();
 	}
 
-	// Token: 0x06005E1C RID: 24092 RVA: 0x001154EC File Offset: 0x001136EC
+	// Token: 0x060031B3 RID: 12723 RVA: 0x0011D1A4 File Offset: 0x0011B3A4
 	private void InstantiateEntity(ISurvivorsRogueCombatInfo model)
 	{
 		AActor renderActor = null;
@@ -215,7 +215,7 @@ public class SurvivorsRogueEntityRedirectFilter : KscEntityRedirectFilter
 		});
 	}
 
-	// Token: 0x06005E1D RID: 24093 RVA: 0x0011583C File Offset: 0x00113A3C
+	// Token: 0x060031B4 RID: 12724 RVA: 0x0011D4F4 File Offset: 0x0011B6F4
 	protected override bool OnRemoveEntity(int creatureDataId)
 	{
 		SurvivorsRogueSubModel survivorsRogueSubModel = KuroSimpleCombatController.Instance.GetSubModel(EKscGameplayType.SurvivorsRogue) as SurvivorsRogueSubModel;
@@ -243,7 +243,7 @@ public class SurvivorsRogueEntityRedirectFilter : KscEntityRedirectFilter
 		return true;
 	}
 
-	// Token: 0x06005E1E RID: 24094 RVA: 0x001158CC File Offset: 0x00113ACC
+	// Token: 0x060031B5 RID: 12725 RVA: 0x0011D584 File Offset: 0x0011B784
 	private void RemoveEntity(ISurvivorsRogueCombatInfo model, EKscEntityRemoveReasonType removeReasonType)
 	{
 		SurvivorsRogueWorldEntityModel survivorsRogueWorldEntityModel;
@@ -259,7 +259,7 @@ public class SurvivorsRogueEntityRedirectFilter : KscEntityRedirectFilter
 		}
 	}
 
-	// Token: 0x06005E1F RID: 24095 RVA: 0x00115948 File Offset: 0x00113B48
+	// Token: 0x060031B6 RID: 12726 RVA: 0x0011D600 File Offset: 0x0011B800
 	public override void Reset()
 	{
 		(KuroSimpleCombatController.Instance.GetSubModel(EKscGameplayType.SurvivorsRogue) as SurvivorsRogueSubModel).GetAllEntities(this.CachedAllEntities);
@@ -279,7 +279,7 @@ public class SurvivorsRogueEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Clear();
 	}
 
-	// Token: 0x06005E20 RID: 24096 RVA: 0x00115A40 File Offset: 0x00113C40
+	// Token: 0x060031B7 RID: 12727 RVA: 0x0011D6F8 File Offset: 0x0011B8F8
 	[return: Nullable(2)]
 	public string FillUpModelInfo(ISurvivorsRogueCombatInfo model)
 	{
@@ -310,15 +310,15 @@ public class SurvivorsRogueEntityRedirectFilter : KscEntityRedirectFilter
 		return null;
 	}
 
-	// Token: 0x04002AD0 RID: 10960
+	// Token: 0x04002B6B RID: 11115
 	private static readonly Pool<SurvivorsRogueWorldEntityModel> WorldEntityPool = new Pool<SurvivorsRogueWorldEntityModel>(100, () => new SurvivorsRogueWorldEntityModel(), null);
 
-	// Token: 0x04002AD1 RID: 10961
+	// Token: 0x04002B6C RID: 11116
 	private readonly List<ISurvivorsRogueCombatInfo> PendingEntities = new List<ISurvivorsRogueCombatInfo>();
 
-	// Token: 0x04002AD2 RID: 10962
+	// Token: 0x04002B6D RID: 11117
 	private readonly List<ISurvivorsRogueCombatInfo> CachedAllEntities = new List<ISurvivorsRogueCombatInfo>();
 
-	// Token: 0x04002AD3 RID: 10963
+	// Token: 0x04002B6E RID: 11118
 	private readonly Dictionary<int, SurvivorsRogueWorldEntityModel> InitializedEntities = new Dictionary<int, SurvivorsRogueWorldEntityModel>();
 }

@@ -1,49 +1,49 @@
 ﻿using System;
 
-// Token: 0x02000084 RID: 132
+// Token: 0x02000086 RID: 134
 [Flags]
 public enum EEntityTypeQuery
 {
-	// Token: 0x040003BE RID: 958
-	NormalEntity = 1,
-	// Token: 0x040003BF RID: 959
-	NormalEntityAlwaysTick = 2,
-	// Token: 0x040003C0 RID: 960
-	NormalEntityAlwaysTickWhitoutNotRenderedGroup = 4,
-	// Token: 0x040003C1 RID: 961
-	MoveSceneItem = 8,
-	// Token: 0x040003C2 RID: 962
-	SimpleNPC = 16,
-	// Token: 0x040003C3 RID: 963
-	NormalNPC = 32,
-	// Token: 0x040003C4 RID: 964
-	PasserbyNPC = 64,
-	// Token: 0x040003C5 RID: 965
-	Monster = 64,
-	// Token: 0x040003C6 RID: 966
-	Animal = 64,
-	// Token: 0x040003C7 RID: 967
-	Boss = 128,
-	// Token: 0x040003C8 RID: 968
-	Team = 256,
-	// Token: 0x040003C9 RID: 969
-	MasterRole = 256,
-	// Token: 0x040003CA RID: 970
-	MasterRoleDerivedMonster = 256,
-	// Token: 0x040003CB RID: 971
-	Vision = 256,
 	// Token: 0x040003CC RID: 972
-	SceneItem = 15,
+	NormalEntity = 1,
 	// Token: 0x040003CD RID: 973
-	Player = 256,
+	NormalEntityAlwaysTick = 2,
 	// Token: 0x040003CE RID: 974
-	Character = 496,
+	NormalEntityAlwaysTickWhitoutNotRenderedGroup = 4,
 	// Token: 0x040003CF RID: 975
-	SceneItemOrCharacter = 511,
+	MoveSceneItem = 8,
 	// Token: 0x040003D0 RID: 976
-	All = 511,
+	SimpleNPC = 16,
 	// Token: 0x040003D1 RID: 977
-	Custom = 512,
+	NormalNPC = 32,
 	// Token: 0x040003D2 RID: 978
+	PasserbyNPC = 64,
+	// Token: 0x040003D3 RID: 979
+	Monster = 64,
+	// Token: 0x040003D4 RID: 980
+	Animal = 64,
+	// Token: 0x040003D5 RID: 981
+	Boss = 128,
+	// Token: 0x040003D6 RID: 982
+	Team = 256,
+	// Token: 0x040003D7 RID: 983
+	MasterRole = 256,
+	// Token: 0x040003D8 RID: 984
+	MasterRoleDerivedMonster = 256,
+	// Token: 0x040003D9 RID: 985
+	Vision = 256,
+	// Token: 0x040003DA RID: 986
+	SceneItem = 15,
+	// Token: 0x040003DB RID: 987
+	Player = 256,
+	// Token: 0x040003DC RID: 988
+	Character = 496,
+	// Token: 0x040003DD RID: 989
+	SceneItemOrCharacter = 511,
+	// Token: 0x040003DE RID: 990
+	All = 511,
+	// Token: 0x040003DF RID: 991
+	Custom = 512,
+	// Token: 0x040003E0 RID: 992
 	MaxIndex = 9
 }

@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02001A47 RID: 6727
+// Token: 0x02000F06 RID: 3846
 internal enum EPluginPanelComponent
 {
-	// Token: 0x04005B3B RID: 23355
+	// Token: 0x04005C0A RID: 23562
 	Slot0,
-	// Token: 0x04005B3C RID: 23356
+	// Token: 0x04005C0B RID: 23563
 	Slot1,
-	// Token: 0x04005B3D RID: 23357
+	// Token: 0x04005C0C RID: 23564
 	Slot2,
-	// Token: 0x04005B3E RID: 23358
+	// Token: 0x04005C0D RID: 23565
 	Slot3,
-	// Token: 0x04005B3F RID: 23359
+	// Token: 0x04005C0E RID: 23566
 	Slot4,
-	// Token: 0x04005B40 RID: 23360
+	// Token: 0x04005C0F RID: 23567
 	Slot5,
-	// Token: 0x04005B41 RID: 23361
+	// Token: 0x04005C10 RID: 23568
 	Slot6,
-	// Token: 0x04005B42 RID: 23362
+	// Token: 0x04005C11 RID: 23569
 	Slot7,
-	// Token: 0x04005B43 RID: 23363
+	// Token: 0x04005C12 RID: 23570
 	Slot8
 }

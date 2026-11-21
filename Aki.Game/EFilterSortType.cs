@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200182B RID: 6187
+// Token: 0x02000CE4 RID: 3300
 public enum EFilterSortType
 {
-	// Token: 0x04005244 RID: 21060
+	// Token: 0x040052EF RID: 21231
 	Filter,
-	// Token: 0x04005245 RID: 21061
+	// Token: 0x040052F0 RID: 21232
 	Sort
 }

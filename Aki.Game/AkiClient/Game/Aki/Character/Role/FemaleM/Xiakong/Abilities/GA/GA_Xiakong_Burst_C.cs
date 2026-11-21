@@ -9,14 +9,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Role.FemaleM.Xiakong.Abilities.GA
 {
-	// Token: 0x02004099 RID: 16537
+	// Token: 0x02003297 RID: 12951
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/Role/FemaleM/Xiakong/Abilities/GA/GA_Xiakong_Burst.GA_Xiakong_Burst_C")]
 	[UnrealStructLayout(1544, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1544)]
 	public class GA_Xiakong_Burst_C : GA_Base_C, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602A972 RID: 174450 RVA: 0x009E55E8 File Offset: 0x009E37E8
+		// Token: 0x0602073A RID: 132922 RVA: 0x00946EF8 File Offset: 0x009450F8
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (GA_Xiakong_Burst_C._ClassPtr == IntPtr.Zero)
@@ -26,103 +26,101 @@ namespace AkiClient.Game.Aki.Character.Role.FemaleM.Xiakong.Abilities.GA
 			return GA_Xiakong_Burst_C._ClassPtr;
 		}
 
-		// Token: 0x0602A973 RID: 174451 RVA: 0x009E560C File Offset: 0x009E380C
+		// Token: 0x0602073B RID: 132923 RVA: 0x00946F1C File Offset: 0x0094511C
 		public GA_Xiakong_Burst_C() : this(BuiltinUtils.AllocNativeUObject(GA_Xiakong_Burst_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602A974 RID: 174452 RVA: 0x009E5634 File Offset: 0x009E3834
+		// Token: 0x0602073C RID: 132924 RVA: 0x00946F44 File Offset: 0x00945144
 		[NullableContext(1)]
 		public GA_Xiakong_Burst_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(GA_Xiakong_Burst_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700686E RID: 26734
-		// (get) Token: 0x0602A975 RID: 174453 RVA: 0x009E5667 File Offset: 0x009E3867
-		// (set) Token: 0x0602A976 RID: 174454 RVA: 0x009E5677 File Offset: 0x009E3877
+		// Token: 0x17003F1C RID: 16156
+		// (get) Token: 0x0602073D RID: 132925 RVA: 0x00946F77 File Offset: 0x00945177
+		// (set) Token: 0x0602073E RID: 132926 RVA: 0x00946F87 File Offset: 0x00945187
 		public unsafe int 夏空
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)GA_Xiakong_Burst_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)GA_Xiakong_Burst_C.__PropertyOffset_夏空);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)GA_Xiakong_Burst_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)GA_Xiakong_Burst_C.__PropertyOffset_夏空) = value;
 			}
 		}
 
-		// Token: 0x1700686F RID: 26735
-		// (get) Token: 0x0602A977 RID: 174455 RVA: 0x009E5688 File Offset: 0x009E3888
-		// (set) Token: 0x0602A978 RID: 174456 RVA: 0x009E5698 File Offset: 0x009E3898
+		// Token: 0x17003F1D RID: 16157
+		// (get) Token: 0x0602073F RID: 132927 RVA: 0x00946F98 File Offset: 0x00945198
+		// (set) Token: 0x06020740 RID: 132928 RVA: 0x00946FA8 File Offset: 0x009451A8
 		public unsafe bool IsInterrupt
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)GA_Xiakong_Burst_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)GA_Xiakong_Burst_C.__PropertyOffset_IsInterrupt) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)GA_Xiakong_Burst_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)GA_Xiakong_Burst_C.__PropertyOffset_IsInterrupt) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006870 RID: 26736
-		// (get) Token: 0x0602A979 RID: 174457 RVA: 0x009E56A9 File Offset: 0x009E38A9
-		// (set) Token: 0x0602A97A RID: 174458 RVA: 0x009E56BD File Offset: 0x009E38BD
+		// Token: 0x17003F1E RID: 16158
+		// (get) Token: 0x06020741 RID: 132929 RVA: 0x00946FB9 File Offset: 0x009451B9
+		// (set) Token: 0x06020742 RID: 132930 RVA: 0x00946FCD File Offset: 0x009451CD
 		public unsafe UAkAudioEvent Ak_Event01
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_Ak_Event01);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_Ak_Event01, value);
 			}
 		}
 
-		// Token: 0x17006871 RID: 26737
-		// (get) Token: 0x0602A97B RID: 174459 RVA: 0x009E56D2 File Offset: 0x009E38D2
-		// (set) Token: 0x0602A97C RID: 174460 RVA: 0x009E56E6 File Offset: 0x009E38E6
+		// Token: 0x17003F1F RID: 16159
+		// (get) Token: 0x06020743 RID: 132931 RVA: 0x00946FE2 File Offset: 0x009451E2
+		// (set) Token: 0x06020744 RID: 132932 RVA: 0x00946FF6 File Offset: 0x009451F6
 		public unsafe UAkAudioEvent 目标
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_目标);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_目标, value);
 			}
 		}
 
-		// Token: 0x17006872 RID: 26738
-		// (get) Token: 0x0602A97D RID: 174461 RVA: 0x009E56FB File Offset: 0x009E38FB
-		// (set) Token: 0x0602A97E RID: 174462 RVA: 0x009E570F File Offset: 0x009E390F
+		// Token: 0x17003F20 RID: 16160
+		// (get) Token: 0x06020745 RID: 132933 RVA: 0x0094700B File Offset: 0x0094520B
+		// (set) Token: 0x06020746 RID: 132934 RVA: 0x0094701F File Offset: 0x0094521F
 		public unsafe UAkAudioEvent Ak_Event02
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_Ak_Event02);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + GA_Xiakong_Burst_C.__PropertyOffset_Ak_Event02, value);
 			}
 		}
 
-		// Token: 0x0602A97F RID: 174463 RVA: 0x009E5724 File Offset: 0x009E3924
+		// Token: 0x06020747 RID: 132935 RVA: 0x00947034 File Offset: 0x00945234
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Buff校验()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__Buff校验_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A980 RID: 174464 RVA: 0x009E5738 File Offset: 0x009E3938
+		// Token: 0x06020748 RID: 132936 RVA: 0x00947048 File Offset: 0x00945248
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetIsInterrupt(bool value)
 		{
 			GA_Xiakong_Burst_C.__SetIsInterrupt_FunctionParams* ptr = stackalloc GA_Xiakong_Burst_C.__SetIsInterrupt_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(GA_Xiakong_Burst_C.__SetIsInterrupt_FunctionParams) & -16L;
@@ -131,9 +129,8 @@ namespace AkiClient.Game.Aki.Character.Role.FemaleM.Xiakong.Abilities.GA
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__SetIsInterrupt_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602A981 RID: 174465 RVA: 0x009E5780 File Offset: 0x009E3980
+		// Token: 0x06020749 RID: 132937 RVA: 0x00947090 File Offset: 0x00945290
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 判定结果(bool 是否成功, bool 是否后台自动判定, int 颜色类型)
 		{
 			GA_Xiakong_Burst_C.__判定结果_FunctionParams* ptr = stackalloc GA_Xiakong_Burst_C.__判定结果_FunctionParams[(UIntPtr)247] + 15L / (long)sizeof(GA_Xiakong_Burst_C.__判定结果_FunctionParams) & -16L;
@@ -144,65 +141,57 @@ namespace AkiClient.Game.Aki.Character.Role.FemaleM.Xiakong.Abilities.GA
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__判定结果_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602A982 RID: 174466 RVA: 0x009E57D7 File Offset: 0x009E39D7
+		// Token: 0x0602074A RID: 132938 RVA: 0x009470E7 File Offset: 0x009452E7
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnTick_5D118C384AE61F1C80292E812B331739()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__OnTick_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A983 RID: 174467 RVA: 0x009E57EB File Offset: 0x009E39EB
+		// Token: 0x0602074B RID: 132939 RVA: 0x009470FB File Offset: 0x009452FB
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnCancelled_5D118C384AE61F1C80292E812B331739()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__OnCancelled_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A984 RID: 174468 RVA: 0x009E57FF File Offset: 0x009E39FF
+		// Token: 0x0602074C RID: 132940 RVA: 0x0094710F File Offset: 0x0094530F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnInterrupted_5D118C384AE61F1C80292E812B331739()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__OnInterrupted_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A985 RID: 174469 RVA: 0x009E5813 File Offset: 0x009E3A13
+		// Token: 0x0602074D RID: 132941 RVA: 0x00947123 File Offset: 0x00945323
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnBlendOut_5D118C384AE61F1C80292E812B331739()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__OnBlendOut_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A986 RID: 174470 RVA: 0x009E5827 File Offset: 0x009E3A27
+		// Token: 0x0602074E RID: 132942 RVA: 0x00947137 File Offset: 0x00945337
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnCompleted_5D118C384AE61F1C80292E812B331739()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__OnCompleted_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A987 RID: 174471 RVA: 0x009E583B File Offset: 0x009E3A3B
+		// Token: 0x0602074F RID: 132943 RVA: 0x0094714B File Offset: 0x0094534B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void K2_ActivateAbility()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__K2_ActivateAbility_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A988 RID: 174472 RVA: 0x009E584F File Offset: 0x009E3A4F
+		// Token: 0x06020750 RID: 132944 RVA: 0x0094715F File Offset: 0x0094535F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected override void K2_ActivateAbility_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, GA_Xiakong_Burst_C.__K2_ActivateAbility_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, GA_Xiakong_Burst_C.__K2_ActivateAbility_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A989 RID: 174473 RVA: 0x009E5864 File Offset: 0x009E3A64
+		// Token: 0x06020751 RID: 132945 RVA: 0x00947174 File Offset: 0x00945374
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void K2_OnEndAbility(bool bWasCancelled)
 		{
 			GA_Xiakong_Burst_C.__K2_OnEndAbility_FunctionParams* ptr = stackalloc GA_Xiakong_Burst_C.__K2_OnEndAbility_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(GA_Xiakong_Burst_C.__K2_OnEndAbility_FunctionParams) & -16L;
@@ -211,114 +200,113 @@ namespace AkiClient.Game.Aki.Character.Role.FemaleM.Xiakong.Abilities.GA
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, GA_Xiakong_Burst_C.__K2_OnEndAbility_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602A98A RID: 174474 RVA: 0x009E58AC File Offset: 0x009E3AAC
+		// Token: 0x06020752 RID: 132946 RVA: 0x009471BC File Offset: 0x009453BC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe override void K2_OnEndAbility_Implementation(bool bWasCancelled)
 		{
 			GA_Xiakong_Burst_C.__K2_OnEndAbility_FunctionParams* ptr = stackalloc GA_Xiakong_Burst_C.__K2_OnEndAbility_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(GA_Xiakong_Burst_C.__K2_OnEndAbility_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(GA_Xiakong_Burst_C.__K2_OnEndAbility_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bWasCancelled = bWasCancelled;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, GA_Xiakong_Burst_C.__K2_OnEndAbility_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, GA_Xiakong_Burst_C.__K2_OnEndAbility_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602A98B RID: 174475 RVA: 0x009E58F3 File Offset: 0x009E3AF3
+		// Token: 0x06020753 RID: 132947 RVA: 0x00947202 File Offset: 0x00945402
 		protected GA_Xiakong_Burst_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401606E RID: 90222
+		// Token: 0x04011888 RID: 71816
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/Role/FemaleM/Xiakong/Abilities/GA/GA_Xiakong_Burst.GA_Xiakong_Burst_C";
 
-		// Token: 0x0401606F RID: 90223
+		// Token: 0x04011889 RID: 71817
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04016070 RID: 90224
+		// Token: 0x0401188A RID: 71818
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04016071 RID: 90225
-		internal new static int __PropertyOffset_1;
+		// Token: 0x0401188B RID: 71819
+		internal static int __PropertyOffset_夏空;
 
-		// Token: 0x04016072 RID: 90226
-		internal new static int __PropertyOffset_2;
+		// Token: 0x0401188C RID: 71820
+		internal static int __PropertyOffset_IsInterrupt;
 
-		// Token: 0x04016073 RID: 90227
-		internal new static int __PropertyOffset_3;
+		// Token: 0x0401188D RID: 71821
+		internal static int __PropertyOffset_Ak_Event01;
 
-		// Token: 0x04016074 RID: 90228
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401188E RID: 71822
+		internal static int __PropertyOffset_目标;
 
-		// Token: 0x04016075 RID: 90229
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401188F RID: 71823
+		internal static int __PropertyOffset_Ak_Event02;
 
-		// Token: 0x04016076 RID: 90230
+		// Token: 0x04011890 RID: 71824
 		private static IntPtr __Buff校验_NativeFunctionPtr;
 
-		// Token: 0x04016077 RID: 90231
+		// Token: 0x04011891 RID: 71825
 		private static IntPtr __SetIsInterrupt_NativeFunctionPtr;
 
-		// Token: 0x04016078 RID: 90232
+		// Token: 0x04011892 RID: 71826
 		private static IntPtr __判定结果_NativeFunctionPtr;
 
-		// Token: 0x04016079 RID: 90233
+		// Token: 0x04011893 RID: 71827
 		private static IntPtr __OnTick_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr;
 
-		// Token: 0x0401607A RID: 90234
+		// Token: 0x04011894 RID: 71828
 		private static IntPtr __OnCancelled_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr;
 
-		// Token: 0x0401607B RID: 90235
+		// Token: 0x04011895 RID: 71829
 		private static IntPtr __OnInterrupted_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr;
 
-		// Token: 0x0401607C RID: 90236
+		// Token: 0x04011896 RID: 71830
 		private static IntPtr __OnBlendOut_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr;
 
-		// Token: 0x0401607D RID: 90237
+		// Token: 0x04011897 RID: 71831
 		private static IntPtr __OnCompleted_5D118C384AE61F1C80292E812B331739_NativeFunctionPtr;
 
-		// Token: 0x0401607E RID: 90238
+		// Token: 0x04011898 RID: 71832
 		private static IntPtr __K2_ActivateAbility_NativeFunctionPtr;
 
-		// Token: 0x0401607F RID: 90239
+		// Token: 0x04011899 RID: 71833
 		private static IntPtr __K2_OnEndAbility_NativeFunctionPtr;
 
-		// Token: 0x0200A3D4 RID: 41940
+		// Token: 0x02008F6B RID: 36715
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetIsInterrupt_FunctionParams
 		{
-			// Token: 0x040321CB RID: 205259
+			// Token: 0x0402CCEB RID: 183531
 			[FieldOffset(0)]
 			public bool value;
 		}
 
-		// Token: 0x0200A3D5 RID: 41941
+		// Token: 0x02008F6C RID: 36716
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 232)]
 		protected ref struct __判定结果_FunctionParams
 		{
-			// Token: 0x040321CC RID: 205260
+			// Token: 0x0402CCEC RID: 183532
 			[FieldOffset(0)]
 			public bool 是否成功;
 
-			// Token: 0x040321CD RID: 205261
+			// Token: 0x0402CCED RID: 183533
 			[FieldOffset(1)]
 			public bool 是否后台自动判定;
 
-			// Token: 0x040321CE RID: 205262
+			// Token: 0x0402CCEE RID: 183534
 			[FieldOffset(4)]
 			public int 颜色类型;
 		}
 
-		// Token: 0x0200A3D6 RID: 41942
+		// Token: 0x02008F6D RID: 36717
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected new ref struct __K2_OnEndAbility_FunctionParams
 		{
-			// Token: 0x040321CF RID: 205263
+			// Token: 0x0402CCEF RID: 183535
 			[FieldOffset(0)]
 			public bool bWasCancelled;
 		}

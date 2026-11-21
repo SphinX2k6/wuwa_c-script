@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020016BF RID: 5823
+// Token: 0x02000B77 RID: 2935
 public class LogAdviceData
 {
-	// Token: 0x0600A664 RID: 42596 RVA: 0x00253DA4 File Offset: 0x00251FA4
+	// Token: 0x06007A44 RID: 31300 RVA: 0x0025E1B4 File Offset: 0x0025C3B4
 	[NullableContext(1)]
 	public void Phrase(AdviceContentData source)
 	{
@@ -14,12 +14,12 @@ public class LogAdviceData
 		this.type = source.GetType().Value;
 	}
 
-	// Token: 0x04004B17 RID: 19223
+	// Token: 0x04004BBE RID: 19390
 	public int id;
 
-	// Token: 0x04004B18 RID: 19224
+	// Token: 0x04004BBF RID: 19391
 	public int word;
 
-	// Token: 0x04004B19 RID: 19225
+	// Token: 0x04004BC0 RID: 19392
 	public PbAdviceContentType type;
 }

@@ -6,12 +6,12 @@ using CSharpScript.Game.NewWorld.Pawn.SensoryInfo;
 
 namespace CSharpScript.Game.NewWorld.Pawn.Component
 {
-	// Token: 0x0200706E RID: 28782
+	// Token: 0x020061EF RID: 25071
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PawnSensoryComponent : EntityComponent
 	{
-		// Token: 0x06046154 RID: 287060 RVA: 0x0117CFD8 File Offset: 0x0117B1D8
+		// Token: 0x0603C358 RID: 246616 RVA: 0x0112690C File Offset: 0x01124B0C
 		protected override bool OnInit()
 		{
 			this.LastSensoryRange = 0.0;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x06046155 RID: 287061 RVA: 0x0117D032 File Offset: 0x0117B232
+		// Token: 0x0603C359 RID: 246617 RVA: 0x01126966 File Offset: 0x01124B66
 		public int AddSensoryInfo(BaseSensoryInfo sensoryParam)
 		{
 			if (this.ActorComp == null)
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return result;
 		}
 
-		// Token: 0x06046156 RID: 287062 RVA: 0x0117D05F File Offset: 0x0117B25F
+		// Token: 0x0603C35A RID: 246618 RVA: 0x01126993 File Offset: 0x01124B93
 		public void RemoveSensoryInfo(int key)
 		{
 			this.SensoryInfoController.RemoveSensoryInfo(key);
 			this.SetSensoryRange();
 		}
 
-		// Token: 0x06046157 RID: 287063 RVA: 0x0117D074 File Offset: 0x0117B274
+		// Token: 0x0603C35B RID: 246619 RVA: 0x011269A8 File Offset: 0x01124BA8
 		private void SetSensoryRange()
 		{
 			double maxSensoryRange = this.SensoryInfoController.MaxSensoryRange;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x06046158 RID: 287064 RVA: 0x0117D0A0 File Offset: 0x0117B2A0
+		// Token: 0x0603C35C RID: 246620 RVA: 0x011269D4 File Offset: 0x01124BD4
 		protected override void OnTick(float delta)
 		{
 			if (this.ActorComp == null || this.SensoryInfoController == null || this.SensoryInfoController.SensoryInfoType == 0)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x06046159 RID: 287065 RVA: 0x0117D194 File Offset: 0x0117B394
+		// Token: 0x0603C35D RID: 246621 RVA: 0x01126AC8 File Offset: 0x01124CC8
 		protected override bool OnClear()
 		{
 			this.TmpHandles.Clear();
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x0604615A RID: 287066 RVA: 0x0117D1B4 File Offset: 0x0117B3B4
+		// Token: 0x0603C35E RID: 246622 RVA: 0x01126AE8 File Offset: 0x01124CE8
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -96,64 +96,82 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 				return false;
 			}
 			PawnSensoryComponent pawnSensoryComponent = (PawnSensoryComponent)componentTemplate;
-			if (base.CanResetComponentProperty("LastSensoryRange"))
+			this.LastSensoryRange = pawnSensoryComponent.LastSensoryRange;
+			if (pawnSensoryComponent.SensoryInfoController == null)
 			{
-				this.LastSensoryRange = pawnSensoryComponent.LastSensoryRange;
+				this.SensoryInfoController = null;
 			}
-			if (base.CanResetComponentProperty("SensoryInfoController"))
-			{
-				if (pawnSensoryComponent.SensoryInfoController == null)
-				{
-					this.SensoryInfoController = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SensoryInfoController>(this.SensoryInfoController), "SensoryInfoController"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IntervalTime"))
-			{
-				this.IntervalTime = pawnSensoryComponent.IntervalTime;
-			}
-			if (base.CanResetComponentProperty("TmpHandles") && pawnSensoryComponent.TmpHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<EntityHandle>>(this.TmpHandles), "TmpHandles"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SensoryInfoController), "SensoryInfoController"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			this.IntervalTime = pawnSensoryComponent.IntervalTime;
+			if (pawnSensoryComponent.TmpHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpHandles), "TmpHandles"))
 			{
-				if (pawnSensoryComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			return !base.CanResetComponentProperty("LastLocation") || pawnSensoryComponent.LastLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastLocation), "LastLocation");
+			if (pawnSensoryComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+			{
+				return false;
+			}
+			return pawnSensoryComponent.LastLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLocation), "LastLocation");
 		}
 
-		// Token: 0x04024B2C RID: 150316
+		// Token: 0x1700719F RID: 29087
+		// (get) Token: 0x0603C35F RID: 246623 RVA: 0x01126BBA File Offset: 0x01124DBA
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071A0 RID: 29088
+		// (get) Token: 0x0603C360 RID: 246624 RVA: 0x01126BBD File Offset: 0x01124DBD
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071A1 RID: 29089
+		// (get) Token: 0x0603C361 RID: 246625 RVA: 0x01126BC0 File Offset: 0x01124DC0
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FDE7 RID: 130535
 		private const float TICK_INTERVAL_TIME = 1000f;
 
-		// Token: 0x04024B2D RID: 150317
+		// Token: 0x0401FDE8 RID: 130536
 		private double LastSensoryRange;
 
-		// Token: 0x04024B2E RID: 150318
+		// Token: 0x0401FDE9 RID: 130537
 		[Nullable(2)]
 		private SensoryInfoController SensoryInfoController;
 
-		// Token: 0x04024B2F RID: 150319
+		// Token: 0x0401FDEA RID: 130538
 		private float IntervalTime;
 
-		// Token: 0x04024B30 RID: 150320
+		// Token: 0x0401FDEB RID: 130539
 		private readonly List<EntityHandle> TmpHandles = new List<EntityHandle>();
 
-		// Token: 0x04024B31 RID: 150321
+		// Token: 0x0401FDEC RID: 130540
 		[Nullable(2)]
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x04024B32 RID: 150322
+		// Token: 0x0401FDED RID: 130541
 		private readonly Vector LastLocation = Vector.Create();
 	}
 }

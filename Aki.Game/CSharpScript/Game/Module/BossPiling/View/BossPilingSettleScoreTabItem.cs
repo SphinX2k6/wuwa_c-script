@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C17 RID: 23575
+	// Token: 0x02004BF7 RID: 19447
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 	})]
 	public class BossPilingSettleScoreTabItem : GridProxyAbstract<BossPilingScoreTabInfo>
 	{
-		// Token: 0x0603B923 RID: 244003 RVA: 0x00E35004 File Offset: 0x00E33204
+		// Token: 0x0603086E RID: 198766 RVA: 0x00D85360 File Offset: 0x00D83560
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B924 RID: 244004 RVA: 0x00E35090 File Offset: 0x00E33290
+		// Token: 0x0603086F RID: 198767 RVA: 0x00D853EC File Offset: 0x00D835EC
 		[NullableContext(1)]
 		public override void Refresh(BossPilingScoreTabInfo data, bool isSelected, int gridIndex)
 		{
@@ -51,14 +51,14 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			text.SetChangeColor(isAchieve, fcolor);
 		}
 
-		// Token: 0x0200BE02 RID: 48642
+		// Token: 0x0200A80A RID: 43018
 		private enum EItem
 		{
-			// Token: 0x040394AF RID: 234671
+			// Token: 0x04033E72 RID: 212594
 			SpriteScore,
-			// Token: 0x040394B0 RID: 234672
+			// Token: 0x04033E73 RID: 212595
 			TxtTarget,
-			// Token: 0x040394B1 RID: 234673
+			// Token: 0x04033E74 RID: 212596
 			PanelFinish
 		}
 	}

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029BB RID: 10683
+// Token: 0x02001F36 RID: 7990
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerMonsterWordItem : UiPanelBase
 {
-	// Token: 0x06016263 RID: 90723 RVA: 0x00599FB4 File Offset: 0x005981B4
+	// Token: 0x06013C69 RID: 81001 RVA: 0x005C4F40 File Offset: 0x005C3140
 	public UniTask Init(UUIItem item)
 	{
 		ShipTowerMonsterWordItem.<Init>d__2 <Init>d__;
@@ -24,7 +24,7 @@ public class ShipTowerMonsterWordItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016264 RID: 90724 RVA: 0x0059A000 File Offset: 0x00598200
+	// Token: 0x06013C6A RID: 81002 RVA: 0x005C4F8C File Offset: 0x005C318C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class ShipTowerMonsterWordItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016265 RID: 90725 RVA: 0x0059A05C File Offset: 0x0059825C
+	// Token: 0x06013C6B RID: 81003 RVA: 0x005C4FE8 File Offset: 0x005C31E8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerMonsterWordItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class ShipTowerMonsterWordItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016266 RID: 90726 RVA: 0x0059A09F File Offset: 0x0059829F
+	// Token: 0x06013C6C RID: 81004 RVA: 0x005C502B File Offset: 0x005C322B
 	public void UpdateData(ShipTowerMonsterWordItemData data)
 	{
 		base.GetText(0).SetText(data.Title, true);
@@ -58,13 +58,13 @@ public class ShipTowerMonsterWordItem : UiPanelBase
 		layoutInfo.RefreshByData(data.InfoList, null, false);
 	}
 
-	// Token: 0x06016267 RID: 90727 RVA: 0x0059A0CC File Offset: 0x005982CC
+	// Token: 0x06013C6D RID: 81005 RVA: 0x005C5058 File Offset: 0x005C3258
 	private ShipTowerMonsterWordInfoItem CreateItem()
 	{
 		return new ShipTowerMonsterWordInfoItem();
 	}
 
-	// Token: 0x0400A4FD RID: 42237
+	// Token: 0x0400A8E7 RID: 43239
 	[Nullable(new byte[]
 	{
 		2,
@@ -73,17 +73,17 @@ public class ShipTowerMonsterWordItem : UiPanelBase
 	})]
 	private GenericLayout<ShipTowerMonsterWordInfoItem, ShipTowerMonsterWordInfoItemData> LayoutInfo;
 
-	// Token: 0x02008FD2 RID: 36818
+	// Token: 0x0200821A RID: 33306
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E942 RID: 190786
+		// Token: 0x0402A03F RID: 172095
 		public const int TxtTitle = 0;
 
-		// Token: 0x0402E943 RID: 190787
+		// Token: 0x0402A040 RID: 172096
 		public const int VLayoutContainer = 1;
 
-		// Token: 0x0402E944 RID: 190788
+		// Token: 0x0402A041 RID: 172097
 		public const int ItemWordInfo = 2;
 	}
 }

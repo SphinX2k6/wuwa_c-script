@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006ACA RID: 27338
+	// Token: 0x020071FE RID: 29182
 	public struct IModifySceneItemAttributeTag : IFlatbufferObject
 	{
-		// Token: 0x1700CACE RID: 51918
-		// (get) Token: 0x0602FE7E RID: 196222 RVA: 0x006841BA File Offset: 0x006823BA
+		// Token: 0x1700D596 RID: 54678
+		// (get) Token: 0x06032C34 RID: 207924 RVA: 0x006DB45E File Offset: 0x006D965E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FE7F RID: 196223 RVA: 0x006841C7 File Offset: 0x006823C7
+		// Token: 0x06032C35 RID: 207925 RVA: 0x006DB46B File Offset: 0x006D966B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FE80 RID: 196224 RVA: 0x006841D0 File Offset: 0x006823D0
+		// Token: 0x06032C36 RID: 207926 RVA: 0x006DB474 File Offset: 0x006D9674
 		public static IModifySceneItemAttributeTag GetRootAsIModifySceneItemAttributeTag(ByteBuffer _bb)
 		{
 			return IModifySceneItemAttributeTag.GetRootAsIModifySceneItemAttributeTag(_bb, default(IModifySceneItemAttributeTag));
 		}
 
-		// Token: 0x0602FE81 RID: 196225 RVA: 0x006841EC File Offset: 0x006823EC
+		// Token: 0x06032C37 RID: 207927 RVA: 0x006DB490 File Offset: 0x006D9690
 		public static IModifySceneItemAttributeTag GetRootAsIModifySceneItemAttributeTag(ByteBuffer _bb, IModifySceneItemAttributeTag obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FE82 RID: 196226 RVA: 0x00684209 File Offset: 0x00682409
+		// Token: 0x06032C38 RID: 207928 RVA: 0x006DB4AD File Offset: 0x006D96AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FE83 RID: 196227 RVA: 0x00684218 File Offset: 0x00682418
+		// Token: 0x06032C39 RID: 207929 RVA: 0x006DB4BC File Offset: 0x006D96BC
 		public IModifySceneItemAttributeTag __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CACF RID: 51919
-		// (get) Token: 0x0602FE84 RID: 196228 RVA: 0x00684228 File Offset: 0x00682428
+		// Token: 0x1700D597 RID: 54679
+		// (get) Token: 0x06032C3A RID: 207930 RVA: 0x006DB4CC File Offset: 0x006D96CC
 		public EChangeEntityPrefabPerformanceType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CAD0 RID: 51920
-		// (get) Token: 0x0602FE85 RID: 196229 RVA: 0x00684264 File Offset: 0x00682464
+		// Token: 0x1700D598 RID: 54680
+		// (get) Token: 0x06032C3B RID: 207931 RVA: 0x006DB508 File Offset: 0x006D9708
 		public bool IsAddTag
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FE86 RID: 196230 RVA: 0x006842A4 File Offset: 0x006824A4
+		// Token: 0x06032C3C RID: 207932 RVA: 0x006DB548 File Offset: 0x006D9748
 		public int PerformanceTag(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700CAD1 RID: 51921
-		// (get) Token: 0x0602FE87 RID: 196231 RVA: 0x006842E4 File Offset: 0x006824E4
+		// Token: 0x1700D599 RID: 54681
+		// (get) Token: 0x06032C3D RID: 207933 RVA: 0x006DB588 File Offset: 0x006D9788
 		public int PerformanceTagLength
 		{
 			get
@@ -100,19 +100,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FE88 RID: 196232 RVA: 0x0068430F File Offset: 0x0068250F
+		// Token: 0x06032C3E RID: 207934 RVA: 0x006DB5B3 File Offset: 0x006D97B3
 		public Span<int> GetPerformanceTagBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0602FE89 RID: 196233 RVA: 0x0068431E File Offset: 0x0068251E
+		// Token: 0x06032C3F RID: 207935 RVA: 0x006DB5C2 File Offset: 0x006D97C2
 		public int[] GetPerformanceTagArray()
 		{
 			return this.__p.__vector_as_array<int>(8);
 		}
 
-		// Token: 0x0602FE8A RID: 196234 RVA: 0x0068432C File Offset: 0x0068252C
+		// Token: 0x06032C40 RID: 207936 RVA: 0x006DB5D0 File Offset: 0x006D97D0
 		public static Offset<IModifySceneItemAttributeTag> CreateIModifySceneItemAttributeTag(FlatBufferBuilder builder, EChangeEntityPrefabPerformanceType Type = EChangeEntityPrefabPerformanceType.Target, bool IsAddTag = false, VectorOffset PerformanceTagOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -122,31 +122,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IModifySceneItemAttributeTag.EndIModifySceneItemAttributeTag(builder);
 		}
 
-		// Token: 0x0602FE8B RID: 196235 RVA: 0x00684350 File Offset: 0x00682550
+		// Token: 0x06032C41 RID: 207937 RVA: 0x006DB5F4 File Offset: 0x006D97F4
 		public static void StartIModifySceneItemAttributeTag(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602FE8C RID: 196236 RVA: 0x00684359 File Offset: 0x00682559
+		// Token: 0x06032C42 RID: 207938 RVA: 0x006DB5FD File Offset: 0x006D97FD
 		public static void AddType(FlatBufferBuilder builder, EChangeEntityPrefabPerformanceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602FE8D RID: 196237 RVA: 0x00684364 File Offset: 0x00682564
+		// Token: 0x06032C43 RID: 207939 RVA: 0x006DB608 File Offset: 0x006D9808
 		public static void AddIsAddTag(FlatBufferBuilder builder, bool isAddTag)
 		{
 			builder.AddBool(1, isAddTag, false);
 		}
 
-		// Token: 0x0602FE8E RID: 196238 RVA: 0x0068436F File Offset: 0x0068256F
+		// Token: 0x06032C44 RID: 207940 RVA: 0x006DB613 File Offset: 0x006D9813
 		public static void AddPerformanceTag(FlatBufferBuilder builder, VectorOffset performanceTagOffset)
 		{
 			builder.AddOffset(2, performanceTagOffset.Value, 0);
 		}
 
-		// Token: 0x0602FE8F RID: 196239 RVA: 0x00684380 File Offset: 0x00682580
+		// Token: 0x06032C45 RID: 207941 RVA: 0x006DB624 File Offset: 0x006D9824
 		public static VectorOffset CreatePerformanceTagVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FE90 RID: 196240 RVA: 0x006843B7 File Offset: 0x006825B7
+		// Token: 0x06032C46 RID: 207942 RVA: 0x006DB65B File Offset: 0x006D985B
 		public static VectorOffset CreatePerformanceTagVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FE91 RID: 196241 RVA: 0x006843D1 File Offset: 0x006825D1
+		// Token: 0x06032C47 RID: 207943 RVA: 0x006DB675 File Offset: 0x006D9875
 		public static VectorOffset CreatePerformanceTagVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FE92 RID: 196242 RVA: 0x006843EF File Offset: 0x006825EF
+		// Token: 0x06032C48 RID: 207944 RVA: 0x006DB693 File Offset: 0x006D9893
 		public static VectorOffset CreatePerformanceTagVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -181,19 +181,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FE93 RID: 196243 RVA: 0x00684408 File Offset: 0x00682608
+		// Token: 0x06032C49 RID: 207945 RVA: 0x006DB6AC File Offset: 0x006D98AC
 		public static void StartPerformanceTagVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602FE94 RID: 196244 RVA: 0x00684413 File Offset: 0x00682613
+		// Token: 0x06032C4A RID: 207946 RVA: 0x006DB6B7 File Offset: 0x006D98B7
 		public static Offset<IModifySceneItemAttributeTag> EndIModifySceneItemAttributeTag(FlatBufferBuilder builder)
 		{
 			return new Offset<IModifySceneItemAttributeTag>(builder.EndTable());
 		}
 
-		// Token: 0x0602FE95 RID: 196245 RVA: 0x00684420 File Offset: 0x00682620
+		// Token: 0x06032C4B RID: 207947 RVA: 0x006DB6C4 File Offset: 0x006D98C4
 		public IModifySceneItemAttributeTagT UnPack()
 		{
 			IModifySceneItemAttributeTagT modifySceneItemAttributeTagT = new IModifySceneItemAttributeTagT();
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return modifySceneItemAttributeTagT;
 		}
 
-		// Token: 0x0602FE96 RID: 196246 RVA: 0x0068443C File Offset: 0x0068263C
+		// Token: 0x06032C4C RID: 207948 RVA: 0x006DB6E0 File Offset: 0x006D98E0
 		public void UnPackTo(IModifySceneItemAttributeTagT _o)
 		{
 			_o.Type = this.Type;
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FE97 RID: 196247 RVA: 0x00684490 File Offset: 0x00682690
+		// Token: 0x06032C4D RID: 207949 RVA: 0x006DB734 File Offset: 0x006D9934
 		public static Offset<IModifySceneItemAttributeTag> Pack(FlatBufferBuilder builder, IModifySceneItemAttributeTagT _o)
 		{
 			if (_o == null)
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IModifySceneItemAttributeTag.CreateIModifySceneItemAttributeTag(builder, _o.Type, _o.IsAddTag, performanceTagOffset);
 		}
 
-		// Token: 0x04011310 RID: 70416
+		// Token: 0x0401221F RID: 74271
 		private Table __p;
 	}
 }

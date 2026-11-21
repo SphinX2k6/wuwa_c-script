@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200603D RID: 24637
+	// Token: 0x02004FBB RID: 20411
 	public enum ESpringFunctionType
 	{
-		// Token: 0x04020935 RID: 133429
+		// Token: 0x0401B262 RID: 111202
 		Gameplay,
-		// Token: 0x04020936 RID: 133430
+		// Token: 0x0401B263 RID: 111203
 		Card,
-		// Token: 0x04020937 RID: 133431
+		// Token: 0x0401B264 RID: 111204
 		Drink,
-		// Token: 0x04020938 RID: 133432
+		// Token: 0x0401B265 RID: 111205
 		DIY,
-		// Token: 0x04020939 RID: 133433
+		// Token: 0x0401B266 RID: 111206
 		DIYShop,
-		// Token: 0x0402093A RID: 133434
+		// Token: 0x0401B267 RID: 111207
 		Preset,
-		// Token: 0x0402093B RID: 133435
+		// Token: 0x0401B268 RID: 111208
 		Exhibition,
-		// Token: 0x0402093C RID: 133436
+		// Token: 0x0401B269 RID: 111209
 		Draw,
-		// Token: 0x0402093D RID: 133437
+		// Token: 0x0401B26A RID: 111210
 		Publicity
 	}
 }

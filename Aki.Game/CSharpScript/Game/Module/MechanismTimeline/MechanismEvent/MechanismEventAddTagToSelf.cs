@@ -5,22 +5,22 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 {
-	// Token: 0x02005480 RID: 21632
+	// Token: 0x02004463 RID: 17507
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MechanismEventAddTagToSelf : MechanismEventBase
 	{
-		// Token: 0x0603731B RID: 226075 RVA: 0x00D1669A File Offset: 0x00D1489A
+		// Token: 0x0602C264 RID: 180836 RVA: 0x00C65AF2 File Offset: 0x00C63CF2
 		public MechanismEventAddTagToSelf(IMechanismEventInfo eventInfo, MechanismEventContext context, SceneItemEventListenerComponent eventListenerComponent, bool isServerAction) : base(eventInfo, context, eventListenerComponent, isServerAction)
 		{
 		}
 
-		// Token: 0x0603731C RID: 226076 RVA: 0x00D166A7 File Offset: 0x00D148A7
+		// Token: 0x0602C265 RID: 180837 RVA: 0x00C65AFF File Offset: 0x00C63CFF
 		protected override void OnTrigger(ActionParams @params)
 		{
 		}
 
-		// Token: 0x0603731D RID: 226077 RVA: 0x00D166AC File Offset: 0x00D148AC
+		// Token: 0x0602C266 RID: 180838 RVA: 0x00C65B04 File Offset: 0x00C63D04
 		protected unsafe override void OnStart(ActionParams @params)
 		{
 			SeqEventAddTagToSelf seqEventAddTagToSelf = @params as SeqEventAddTagToSelf;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			this.EventListenerComponent.AddTags(seqEventAddTagToSelf.Tags);
 		}
 
-		// Token: 0x0603731E RID: 226078 RVA: 0x00D16734 File Offset: 0x00D14934
+		// Token: 0x0602C267 RID: 180839 RVA: 0x00C65B8C File Offset: 0x00C63D8C
 		protected unsafe override void OnEnd(ActionParams @params)
 		{
 			SeqEventAddTagToSelf seqEventAddTagToSelf = @params as SeqEventAddTagToSelf;

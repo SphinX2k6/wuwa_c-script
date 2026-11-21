@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003BA RID: 954
+	// Token: 0x020003D0 RID: 976
 	public class ConfigGuideDownLoadQuestById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001663 RID: 5731 RVA: 0x000D812F File Offset: 0x000D632F
+		// Token: 0x060016E7 RID: 5863 RVA: 0x000DE883 File Offset: 0x000DCA83
 		static ConfigGuideDownLoadQuestById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGuideDownLoadQuestById.CreateStaticDefaultValue), new Action(ConfigGuideDownLoadQuestById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001664 RID: 5732 RVA: 0x000D8150 File Offset: 0x000D6350
+		// Token: 0x060016E8 RID: 5864 RVA: 0x000DE8A4 File Offset: 0x000DCAA4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGuideDownLoadQuestById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001665 RID: 5733 RVA: 0x000D81CF File Offset: 0x000D63CF
+		// Token: 0x060016E9 RID: 5865 RVA: 0x000DE923 File Offset: 0x000DCB23
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGuideDownLoadQuestById.LogPair = null;
 			ConfigGuideDownLoadQuestById.HandleId = 0;
 		}
 
-		// Token: 0x06001666 RID: 5734 RVA: 0x000D81DD File Offset: 0x000D63DD
+		// Token: 0x060016EA RID: 5866 RVA: 0x000DE931 File Offset: 0x000DCB31
 		public static void Init()
 		{
 			ConfigGuideDownLoadQuestById.HandleId = ConfigCommon.InitDataStatement(ConfigGuideDownLoadQuestById.HandleId, "db_download.db", "select BinData from `GuideDownLoadQuest` where Id=?");
 		}
 
-		// Token: 0x06001667 RID: 5735 RVA: 0x000D81F8 File Offset: 0x000D63F8
+		// Token: 0x060016EB RID: 5867 RVA: 0x000DE94C File Offset: 0x000DCB4C
 		public static GuideDownLoadQuest? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGuideDownLoadQuestById.HandleId, ConfigGuideDownLoadQuestById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GuideDownLoadQuest?(rootAsGuideDownLoadQuest);
 		}
 
-		// Token: 0x040019FA RID: 6650
+		// Token: 0x04001A94 RID: 6804
 		private const string DB = "db_download.db";
 
-		// Token: 0x040019FB RID: 6651
+		// Token: 0x04001A95 RID: 6805
 		private const string FILE = "b.包体管理.xlsx";
 
-		// Token: 0x040019FC RID: 6652
+		// Token: 0x04001A96 RID: 6806
 		private const string TABLE = "GuideDownLoadQuest";
 
-		// Token: 0x040019FD RID: 6653
+		// Token: 0x04001A97 RID: 6807
 		private const string COMMAND = "select BinData from `GuideDownLoadQuest` where Id=?";
 
-		// Token: 0x040019FE RID: 6654
+		// Token: 0x04001A98 RID: 6808
 		private const string KEY_PREFIX = "GuideDownLoadQuestById";
 
-		// Token: 0x040019FF RID: 6655
+		// Token: 0x04001A99 RID: 6809
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A00 RID: 6656
+		// Token: 0x04001A9A RID: 6810
 		private static int HandleId;
 	}
 }

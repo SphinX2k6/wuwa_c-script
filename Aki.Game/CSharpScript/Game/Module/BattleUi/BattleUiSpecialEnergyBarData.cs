@@ -8,15 +8,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005CA3 RID: 23715
+	// Token: 0x02004C85 RID: 19589
 	public class BattleUiSpecialEnergyBarData
 	{
-		// Token: 0x0603BEB0 RID: 245424 RVA: 0x00E5152D File Offset: 0x00E4F72D
+		// Token: 0x06030E03 RID: 200195 RVA: 0x00DA1BD5 File Offset: 0x00D9FDD5
 		public void Init()
 		{
 		}
 
-		// Token: 0x0603BEB1 RID: 245425 RVA: 0x00E51530 File Offset: 0x00E4F730
+		// Token: 0x06030E04 RID: 200196 RVA: 0x00DA1BD8 File Offset: 0x00D9FDD8
 		public UniTask<bool> Preload()
 		{
 			BattleUiSpecialEnergyBarData.<Preload>d__8 <Preload>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return <Preload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BEB2 RID: 245426 RVA: 0x00E51573 File Offset: 0x00E4F773
+		// Token: 0x06030E05 RID: 200197 RVA: 0x00DA1C1B File Offset: 0x00D9FE1B
 		public void OnLeaveLevel()
 		{
 			this.IsInit = false;
@@ -37,12 +37,12 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.SpecialEnergyBarInfoMap.Clear();
 		}
 
-		// Token: 0x0603BEB3 RID: 245427 RVA: 0x00E515A0 File Offset: 0x00E4F7A0
+		// Token: 0x06030E06 RID: 200198 RVA: 0x00DA1C48 File Offset: 0x00D9FE48
 		public void Clear()
 		{
 		}
 
-		// Token: 0x0603BEB4 RID: 245428 RVA: 0x00E515A4 File Offset: 0x00E4F7A4
+		// Token: 0x06030E07 RID: 200199 RVA: 0x00DA1C4C File Offset: 0x00D9FE4C
 		[NullableContext(2)]
 		public SpecialEnergyBarInfo GetSpecialEnergyBarInfo(int id)
 		{
@@ -64,28 +64,28 @@ namespace CSharpScript.Game.Module.BattleUi
 			return specialEnergyBarInfo;
 		}
 
-		// Token: 0x0401F43E RID: 128062
+		// Token: 0x04019EF7 RID: 106231
 		public bool IsOpenLog;
 
-		// Token: 0x0401F43F RID: 128063
+		// Token: 0x04019EF8 RID: 106232
 		public bool IsSpecialEnergyBarEditorModeOpen;
 
-		// Token: 0x0401F440 RID: 128064
+		// Token: 0x04019EF9 RID: 106233
 		[Nullable(2)]
 		private UDataTable DataTable;
 
-		// Token: 0x0401F441 RID: 128065
+		// Token: 0x04019EFA RID: 106234
 		[Nullable(1)]
 		public List<int> EnvironmentPropertyList = new List<int>();
 
-		// Token: 0x0401F442 RID: 128066
+		// Token: 0x04019EFB RID: 106235
 		[Nullable(1)]
 		public Dictionary<int, SpecialEnergyBarInfo> SpecialEnergyBarInfoMap = new Dictionary<int, SpecialEnergyBarInfo>();
 
-		// Token: 0x0401F443 RID: 128067
+		// Token: 0x04019EFC RID: 106236
 		private bool IsInit;
 
-		// Token: 0x0401F444 RID: 128068
+		// Token: 0x04019EFD RID: 106237
 		private bool IsLoading;
 	}
 }

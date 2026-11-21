@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002A8D RID: 10893
+// Token: 0x02002009 RID: 8201
 [NullableContext(1)]
 [Nullable(0)]
 public class SplashScreenQueue
 {
-	// Token: 0x06016ADA RID: 92890 RVA: 0x005BE2AC File Offset: 0x005BC4AC
+	// Token: 0x060144FF RID: 83199 RVA: 0x005EA494 File Offset: 0x005E8694
 	public unsafe void EnQueue(SplashScreenTask task)
 	{
 		if (this.CurrentRunningTask != null && this.CurrentRunningTask.SourceModule == task.SourceModule)
@@ -46,7 +46,7 @@ public class SplashScreenQueue
 		instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
 	}
 
-	// Token: 0x06016ADB RID: 92891 RVA: 0x005BE42C File Offset: 0x005BC62C
+	// Token: 0x06014500 RID: 83200 RVA: 0x005EA614 File Offset: 0x005E8814
 	public unsafe void ProcessQueueSingle()
 	{
 		if (this.IsSplashScreenTaskRunning())
@@ -115,7 +115,7 @@ public class SplashScreenQueue
 		}
 	}
 
-	// Token: 0x06016ADC RID: 92892 RVA: 0x005BE664 File Offset: 0x005BC864
+	// Token: 0x06014501 RID: 83201 RVA: 0x005EA84C File Offset: 0x005E8A4C
 	public unsafe bool FinishTask(ESplashScreenSourceModuleType taskSourceModule = ESplashScreenSourceModuleType.None)
 	{
 		if (this.CurrentRunningTask == null)
@@ -151,7 +151,7 @@ public class SplashScreenQueue
 		return true;
 	}
 
-	// Token: 0x06016ADD RID: 92893 RVA: 0x005BE75C File Offset: 0x005BC95C
+	// Token: 0x06014502 RID: 83202 RVA: 0x005EA944 File Offset: 0x005E8B44
 	public void ProcessQueue()
 	{
 		this.TaskQueue.Sort(delegate(SplashScreenTask taskA, SplashScreenTask taskB)
@@ -193,13 +193,13 @@ public class SplashScreenQueue
 		this.ProcessQueueSingle();
 	}
 
-	// Token: 0x06016ADE RID: 92894 RVA: 0x005BE78E File Offset: 0x005BC98E
+	// Token: 0x06014503 RID: 83203 RVA: 0x005EA976 File Offset: 0x005E8B76
 	public bool IsSplashScreenTaskRunning()
 	{
 		return this.CurrentRunningTask != null;
 	}
 
-	// Token: 0x06016ADF RID: 92895 RVA: 0x005BE79C File Offset: 0x005BC99C
+	// Token: 0x06014504 RID: 83204 RVA: 0x005EA984 File Offset: 0x005E8B84
 	public bool IsTaskInQueue(SplashScreenTask task)
 	{
 		using (List<SplashScreenTask>.Enumerator enumerator = this.TaskQueue.GetEnumerator())
@@ -215,7 +215,7 @@ public class SplashScreenQueue
 		return false;
 	}
 
-	// Token: 0x06016AE0 RID: 92896 RVA: 0x005BE7FC File Offset: 0x005BC9FC
+	// Token: 0x06014505 RID: 83205 RVA: 0x005EA9E4 File Offset: 0x005E8BE4
 	public void ClearAllTask()
 	{
 		if (this.CurrentRunningTask != null)
@@ -230,19 +230,19 @@ public class SplashScreenQueue
 		this.TaskQueue = new List<SplashScreenTask>();
 	}
 
-	// Token: 0x0400A844 RID: 43076
+	// Token: 0x0400AC49 RID: 44105
 	public List<SplashScreenTask> TaskQueue = new List<SplashScreenTask>();
 
-	// Token: 0x0400A845 RID: 43077
+	// Token: 0x0400AC4A RID: 44106
 	[Nullable(2)]
 	private SplashScreenTask CurrentRunningTask;
 
-	// Token: 0x0400A846 RID: 43078
+	// Token: 0x0400AC4B RID: 44107
 	private bool IsShowLongTask;
 
-	// Token: 0x0400A847 RID: 43079
+	// Token: 0x0400AC4C RID: 44108
 	private int? LongTaskMaxNum;
 
-	// Token: 0x0400A848 RID: 43080
+	// Token: 0x0400AC4D RID: 44109
 	private int FinishedInQueueLongTaskNum;
 }

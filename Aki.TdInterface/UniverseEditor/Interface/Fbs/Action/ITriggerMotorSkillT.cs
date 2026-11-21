@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007488 RID: 29832
+	// Token: 0x02007C7B RID: 31867
 	public class ITriggerMotorSkillT
 	{
-		// Token: 0x1700E27B RID: 57979
-		// (get) Token: 0x06036376 RID: 222070 RVA: 0x0075EEA0 File Offset: 0x0075D0A0
-		// (set) Token: 0x06036377 RID: 222071 RVA: 0x0075EEA8 File Offset: 0x0075D0A8
+		// Token: 0x1700EE9A RID: 61082
+		// (get) Token: 0x06039763 RID: 235363 RVA: 0x007C1C5C File Offset: 0x007BFE5C
+		// (set) Token: 0x06039764 RID: 235364 RVA: 0x007C1C64 File Offset: 0x007BFE64
 		public EExecClientBattleActionType Type { get; set; }
 
-		// Token: 0x1700E27C RID: 57980
-		// (get) Token: 0x06036378 RID: 222072 RVA: 0x0075EEB1 File Offset: 0x0075D0B1
-		// (set) Token: 0x06036379 RID: 222073 RVA: 0x0075EEB9 File Offset: 0x0075D0B9
+		// Token: 0x1700EE9B RID: 61083
+		// (get) Token: 0x06039765 RID: 235365 RVA: 0x007C1C6D File Offset: 0x007BFE6D
+		// (set) Token: 0x06039766 RID: 235366 RVA: 0x007C1C75 File Offset: 0x007BFE75
 		public int MotorSkillId { get; set; }
 
-		// Token: 0x0603637A RID: 222074 RVA: 0x0075EEC2 File Offset: 0x0075D0C2
+		// Token: 0x06039767 RID: 235367 RVA: 0x007C1C7E File Offset: 0x007BFE7E
 		public ITriggerMotorSkillT()
 		{
 			this.Type = EExecClientBattleActionType.SendTagEventToControlCharacter;

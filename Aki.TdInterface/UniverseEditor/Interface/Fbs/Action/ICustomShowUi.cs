@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006516 RID: 25878
+	// Token: 0x02006B84 RID: 27524
 	public struct ICustomShowUi : IFlatbufferObject
 	{
-		// Token: 0x1700C068 RID: 49256
-		// (get) Token: 0x0602CE35 RID: 183861 RVA: 0x0062A33A File Offset: 0x0062853A
+		// Token: 0x1700C9F8 RID: 51704
+		// (get) Token: 0x0602F5CB RID: 193995 RVA: 0x006765DA File Offset: 0x006747DA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CE36 RID: 183862 RVA: 0x0062A347 File Offset: 0x00628547
+		// Token: 0x0602F5CC RID: 193996 RVA: 0x006765E7 File Offset: 0x006747E7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CE37 RID: 183863 RVA: 0x0062A350 File Offset: 0x00628550
+		// Token: 0x0602F5CD RID: 193997 RVA: 0x006765F0 File Offset: 0x006747F0
 		public static ICustomShowUi GetRootAsICustomShowUi(ByteBuffer _bb)
 		{
 			return ICustomShowUi.GetRootAsICustomShowUi(_bb, default(ICustomShowUi));
 		}
 
-		// Token: 0x0602CE38 RID: 183864 RVA: 0x0062A36C File Offset: 0x0062856C
+		// Token: 0x0602F5CE RID: 193998 RVA: 0x0067660C File Offset: 0x0067480C
 		public static ICustomShowUi GetRootAsICustomShowUi(ByteBuffer _bb, ICustomShowUi obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CE39 RID: 183865 RVA: 0x0062A389 File Offset: 0x00628589
+		// Token: 0x0602F5CF RID: 193999 RVA: 0x00676629 File Offset: 0x00674829
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CE3A RID: 183866 RVA: 0x0062A398 File Offset: 0x00628598
+		// Token: 0x0602F5D0 RID: 194000 RVA: 0x00676638 File Offset: 0x00674838
 		public ICustomShowUi __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C069 RID: 49257
-		// (get) Token: 0x0602CE3B RID: 183867 RVA: 0x0062A3A8 File Offset: 0x006285A8
+		// Token: 0x1700C9F9 RID: 51705
+		// (get) Token: 0x0602F5D1 RID: 194001 RVA: 0x00676648 File Offset: 0x00674848
 		public ICustomScreenTextSetting? TextSetting
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C06A RID: 49258
-		// (get) Token: 0x0602CE3C RID: 183868 RVA: 0x0062A408 File Offset: 0x00628608
+		// Token: 0x1700C9FA RID: 51706
+		// (get) Token: 0x0602F5D2 RID: 194002 RVA: 0x006766A8 File Offset: 0x006748A8
 		public bool IsHideCircle
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C06B RID: 49259
-		// (get) Token: 0x0602CE3D RID: 183869 RVA: 0x0062A448 File Offset: 0x00628648
+		// Token: 0x1700C9FB RID: 51707
+		// (get) Token: 0x0602F5D3 RID: 194003 RVA: 0x006766E8 File Offset: 0x006748E8
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CE3E RID: 183870 RVA: 0x0062A484 File Offset: 0x00628684
+		// Token: 0x0602F5D4 RID: 194004 RVA: 0x00676724 File Offset: 0x00674924
 		public static Offset<ICustomShowUi> CreateICustomShowUi(FlatBufferBuilder builder, Offset<ICustomScreenTextSetting> TextSettingOffset = default(Offset<ICustomScreenTextSetting>), bool IsHideCircle = false, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomShowUi.EndICustomShowUi(builder);
 		}
 
-		// Token: 0x0602CE3F RID: 183871 RVA: 0x0062A4A8 File Offset: 0x006286A8
+		// Token: 0x0602F5D5 RID: 194005 RVA: 0x00676748 File Offset: 0x00674948
 		public static void StartICustomShowUi(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602CE40 RID: 183872 RVA: 0x0062A4B1 File Offset: 0x006286B1
+		// Token: 0x0602F5D6 RID: 194006 RVA: 0x00676751 File Offset: 0x00674951
 		public static void AddTextSetting(FlatBufferBuilder builder, Offset<ICustomScreenTextSetting> textSettingOffset)
 		{
 			builder.AddOffset(0, textSettingOffset.Value, 0);
 		}
 
-		// Token: 0x0602CE41 RID: 183873 RVA: 0x0062A4C1 File Offset: 0x006286C1
+		// Token: 0x0602F5D7 RID: 194007 RVA: 0x00676761 File Offset: 0x00674961
 		public static void AddIsHideCircle(FlatBufferBuilder builder, bool isHideCircle)
 		{
 			builder.AddBool(1, isHideCircle, false);
 		}
 
-		// Token: 0x0602CE42 RID: 183874 RVA: 0x0062A4CC File Offset: 0x006286CC
+		// Token: 0x0602F5D8 RID: 194008 RVA: 0x0067676C File Offset: 0x0067496C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602CE43 RID: 183875 RVA: 0x0062A4D7 File Offset: 0x006286D7
+		// Token: 0x0602F5D9 RID: 194009 RVA: 0x00676777 File Offset: 0x00674977
 		public static Offset<ICustomShowUi> EndICustomShowUi(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomShowUi>(builder.EndTable());
 		}
 
-		// Token: 0x0602CE44 RID: 183876 RVA: 0x0062A4E4 File Offset: 0x006286E4
+		// Token: 0x0602F5DA RID: 194010 RVA: 0x00676784 File Offset: 0x00674984
 		public ICustomShowUiT UnPack()
 		{
 			ICustomShowUiT customShowUiT = new ICustomShowUiT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return customShowUiT;
 		}
 
-		// Token: 0x0602CE45 RID: 183877 RVA: 0x0062A500 File Offset: 0x00628700
+		// Token: 0x0602F5DB RID: 194011 RVA: 0x006767A0 File Offset: 0x006749A0
 		public void UnPackTo(ICustomShowUiT _o)
 		{
 			_o.TextSetting = ((this.TextSetting != null) ? this.TextSetting.Value.UnPack() : null);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602CE46 RID: 183878 RVA: 0x0062A554 File Offset: 0x00628754
+		// Token: 0x0602F5DC RID: 194012 RVA: 0x006767F4 File Offset: 0x006749F4
 		public static Offset<ICustomShowUi> Pack(FlatBufferBuilder builder, ICustomShowUiT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomShowUi.CreateICustomShowUi(builder, textSettingOffset, _o.IsHideCircle, _o.NullMask);
 		}
 
-		// Token: 0x04010B5F RID: 68447
+		// Token: 0x04011977 RID: 72055
 		private Table __p;
 	}
 }

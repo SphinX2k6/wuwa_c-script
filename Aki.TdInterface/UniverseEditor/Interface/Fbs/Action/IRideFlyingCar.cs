@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006ECD RID: 28365
+	// Token: 0x02007651 RID: 30289
 	public struct IRideFlyingCar : IFlatbufferObject
 	{
-		// Token: 0x1700D312 RID: 54034
-		// (get) Token: 0x06032205 RID: 205317 RVA: 0x006C6BBE File Offset: 0x006C4DBE
+		// Token: 0x1700DE69 RID: 56937
+		// (get) Token: 0x06035245 RID: 217669 RVA: 0x007228F2 File Offset: 0x00720AF2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032206 RID: 205318 RVA: 0x006C6BCB File Offset: 0x006C4DCB
+		// Token: 0x06035246 RID: 217670 RVA: 0x007228FF File Offset: 0x00720AFF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032207 RID: 205319 RVA: 0x006C6BD4 File Offset: 0x006C4DD4
+		// Token: 0x06035247 RID: 217671 RVA: 0x00722908 File Offset: 0x00720B08
 		public static IRideFlyingCar GetRootAsIRideFlyingCar(ByteBuffer _bb)
 		{
 			return IRideFlyingCar.GetRootAsIRideFlyingCar(_bb, default(IRideFlyingCar));
 		}
 
-		// Token: 0x06032208 RID: 205320 RVA: 0x006C6BF0 File Offset: 0x006C4DF0
+		// Token: 0x06035248 RID: 217672 RVA: 0x00722924 File Offset: 0x00720B24
 		public static IRideFlyingCar GetRootAsIRideFlyingCar(ByteBuffer _bb, IRideFlyingCar obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032209 RID: 205321 RVA: 0x006C6C0D File Offset: 0x006C4E0D
+		// Token: 0x06035249 RID: 217673 RVA: 0x00722941 File Offset: 0x00720B41
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603220A RID: 205322 RVA: 0x006C6C1C File Offset: 0x006C4E1C
+		// Token: 0x0603524A RID: 217674 RVA: 0x00722950 File Offset: 0x00720B50
 		public IRideFlyingCar __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D313 RID: 54035
-		// (get) Token: 0x0603220B RID: 205323 RVA: 0x006C6C2C File Offset: 0x006C4E2C
+		// Token: 0x1700DE6A RID: 56938
+		// (get) Token: 0x0603524B RID: 217675 RVA: 0x00722960 File Offset: 0x00720B60
 		public ESimpleGameplayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D314 RID: 54036
-		// (get) Token: 0x0603220C RID: 205324 RVA: 0x006C6C68 File Offset: 0x006C4E68
+		// Token: 0x1700DE6B RID: 56939
+		// (get) Token: 0x0603524C RID: 217676 RVA: 0x0072299C File Offset: 0x00720B9C
 		public int FirstPersonCameraTag
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D315 RID: 54037
-		// (get) Token: 0x0603220D RID: 205325 RVA: 0x006C6CA4 File Offset: 0x006C4EA4
+		// Token: 0x1700DE6C RID: 56940
+		// (get) Token: 0x0603524D RID: 217677 RVA: 0x007229D8 File Offset: 0x00720BD8
 		public int ThirdPersonCameraTag
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D316 RID: 54038
-		// (get) Token: 0x0603220E RID: 205326 RVA: 0x006C6CE0 File Offset: 0x006C4EE0
+		// Token: 0x1700DE6D RID: 56941
+		// (get) Token: 0x0603524E RID: 217678 RVA: 0x00722A14 File Offset: 0x00720C14
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603220F RID: 205327 RVA: 0x006C6D1D File Offset: 0x006C4F1D
+		// Token: 0x0603524F RID: 217679 RVA: 0x00722A51 File Offset: 0x00720C51
 		public static Offset<IRideFlyingCar> CreateIRideFlyingCar(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher, int FirstPersonCameraTag = 0, int ThirdPersonCameraTag = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRideFlyingCar.EndIRideFlyingCar(builder);
 		}
 
-		// Token: 0x06032210 RID: 205328 RVA: 0x006C6D49 File Offset: 0x006C4F49
+		// Token: 0x06035250 RID: 217680 RVA: 0x00722A7D File Offset: 0x00720C7D
 		public static void StartIRideFlyingCar(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06032211 RID: 205329 RVA: 0x006C6D52 File Offset: 0x006C4F52
+		// Token: 0x06035251 RID: 217681 RVA: 0x00722A86 File Offset: 0x00720C86
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032212 RID: 205330 RVA: 0x006C6D5D File Offset: 0x006C4F5D
+		// Token: 0x06035252 RID: 217682 RVA: 0x00722A91 File Offset: 0x00720C91
 		public static void AddFirstPersonCameraTag(FlatBufferBuilder builder, int firstPersonCameraTag)
 		{
 			builder.AddInt(1, firstPersonCameraTag, 0);
 		}
 
-		// Token: 0x06032213 RID: 205331 RVA: 0x006C6D68 File Offset: 0x006C4F68
+		// Token: 0x06035253 RID: 217683 RVA: 0x00722A9C File Offset: 0x00720C9C
 		public static void AddThirdPersonCameraTag(FlatBufferBuilder builder, int thirdPersonCameraTag)
 		{
 			builder.AddInt(2, thirdPersonCameraTag, 0);
 		}
 
-		// Token: 0x06032214 RID: 205332 RVA: 0x006C6D73 File Offset: 0x006C4F73
+		// Token: 0x06035254 RID: 217684 RVA: 0x00722AA7 File Offset: 0x00720CA7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06032215 RID: 205333 RVA: 0x006C6D7E File Offset: 0x006C4F7E
+		// Token: 0x06035255 RID: 217685 RVA: 0x00722AB2 File Offset: 0x00720CB2
 		public static Offset<IRideFlyingCar> EndIRideFlyingCar(FlatBufferBuilder builder)
 		{
 			return new Offset<IRideFlyingCar>(builder.EndTable());
 		}
 
-		// Token: 0x06032216 RID: 205334 RVA: 0x006C6D8C File Offset: 0x006C4F8C
+		// Token: 0x06035256 RID: 217686 RVA: 0x00722AC0 File Offset: 0x00720CC0
 		public IRideFlyingCarT UnPack()
 		{
 			IRideFlyingCarT rideFlyingCarT = new IRideFlyingCarT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return rideFlyingCarT;
 		}
 
-		// Token: 0x06032217 RID: 205335 RVA: 0x006C6DA7 File Offset: 0x006C4FA7
+		// Token: 0x06035257 RID: 217687 RVA: 0x00722ADB File Offset: 0x00720CDB
 		public void UnPackTo(IRideFlyingCarT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06032218 RID: 205336 RVA: 0x006C6DDC File Offset: 0x006C4FDC
+		// Token: 0x06035258 RID: 217688 RVA: 0x00722B10 File Offset: 0x00720D10
 		public static Offset<IRideFlyingCar> Pack(FlatBufferBuilder builder, IRideFlyingCarT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRideFlyingCar.CreateIRideFlyingCar(builder, _o.Type, _o.FirstPersonCameraTag, _o.ThirdPersonCameraTag, _o.NullMask);
 		}
 
-		// Token: 0x040118BF RID: 71871
+		// Token: 0x04012844 RID: 75844
 		private Table __p;
 	}
 }

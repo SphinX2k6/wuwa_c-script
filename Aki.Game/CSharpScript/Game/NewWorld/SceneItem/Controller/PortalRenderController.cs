@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 {
-	// Token: 0x02007237 RID: 29239
+	// Token: 0x020062EC RID: 25324
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class PortalRenderController : ControllerBase
 	{
-		// Token: 0x06047A70 RID: 293488 RVA: 0x01255768 File Offset: 0x01253968
+		// Token: 0x0603D3D1 RID: 250833 RVA: 0x011AE300 File Offset: 0x011AC500
 		public int RegisterCapture(PortalRenderCaptureParams @params, int ownerEntityId)
 		{
 			PortalRenderCaptureEntry portalRenderCaptureEntry = null;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return result;
 		}
 
-		// Token: 0x06047A71 RID: 293489 RVA: 0x0125588C File Offset: 0x01253A8C
+		// Token: 0x0603D3D2 RID: 250834 RVA: 0x011AE424 File Offset: 0x011AC624
 		public void UnregisterCapture(int handle, int retiringEffectHandle = 0)
 		{
 			int num = this.CaptureEntries.FindIndex((PortalRenderCaptureEntry e) => e.Handle == handle);
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x06047A72 RID: 293490 RVA: 0x012559EC File Offset: 0x01253BEC
+		// Token: 0x0603D3D3 RID: 250835 RVA: 0x011AE584 File Offset: 0x011AC784
 		public void SetCaptureRenderTexture(int handle, UTextureRenderTarget2D rt)
 		{
 			PortalRenderCaptureEntry portalRenderCaptureEntry = this.FindCaptureEntry(handle);
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			portalRenderCaptureEntry.Params.Capture.TextureTarget = rt;
 		}
 
-		// Token: 0x06047A73 RID: 293491 RVA: 0x01255A2C File Offset: 0x01253C2C
+		// Token: 0x0603D3D4 RID: 250836 RVA: 0x011AE5C4 File Offset: 0x011AC7C4
 		public void SetCaptureEnabled(int handle, bool enabled)
 		{
 			PortalRenderCaptureEntry portalRenderCaptureEntry = this.FindCaptureEntry(handle);
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			portalRenderCaptureEntry.Enabled = enabled;
 		}
 
-		// Token: 0x06047A74 RID: 293492 RVA: 0x01255A4C File Offset: 0x01253C4C
+		// Token: 0x0603D3D5 RID: 250837 RVA: 0x011AE5E4 File Offset: 0x011AC7E4
 		public void SetCaptureMaxViewDistance(int handle, float maxViewDistance)
 		{
 			PortalRenderCaptureEntry portalRenderCaptureEntry = this.FindCaptureEntry(handle);
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			portalRenderCaptureEntry.MaxViewDistance = maxViewDistance;
 		}
 
-		// Token: 0x06047A75 RID: 293493 RVA: 0x01255A6C File Offset: 0x01253C6C
+		// Token: 0x0603D3D6 RID: 250838 RVA: 0x011AE604 File Offset: 0x011AC804
 		public void SwitchMeshMaterialTexture(SceneInteractionActor interactionActor, string meshActorKey, string paramName, UTexture texture)
 		{
 			AStaticMeshActor astaticMeshActor = interactionActor.GetActorByKey(meshActorKey) as AStaticMeshActor;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			umaterialInstanceDynamic.SetTextureParameterValue(FNameUtil.GetDynamicFName(paramName).Value, texture);
 		}
 
-		// Token: 0x06047A76 RID: 293494 RVA: 0x01255B48 File Offset: 0x01253D48
+		// Token: 0x0603D3D7 RID: 250839 RVA: 0x011AE6E0 File Offset: 0x011AC8E0
 		public bool SwitchEffectNiagaraTexture(SceneInteractionActor interactionActor, string effectActorKey, string userParameterName, UTexture texture)
 		{
 			BP_EffectActor_C bp_EffectActor_C = interactionActor.GetActorByKey(effectActorKey) as BP_EffectActor_C;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047A77 RID: 293495 RVA: 0x01255BB4 File Offset: 0x01253DB4
+		// Token: 0x0603D3D8 RID: 250840 RVA: 0x011AE74C File Offset: 0x011AC94C
 		protected unsafe override void OnTick(float delta)
 		{
 			for (int i = this.RetiringRenderTargets.Count - 1; i >= 0; i--)
@@ -211,7 +211,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 				ValueTuple<UTextureRenderTarget2D, int> valueTuple = this.RetiringRenderTargets[i];
 				if (!EffectSystem.Instance.IsValid(valueTuple.Item2))
 				{
-					UKismetRenderingLibrary.ReleaseRenderTarget2D(valueTuple.Item1);
+					if (valueTuple.Item1.IsValid())
+					{
+						UKismetRenderingLibrary.ReleaseRenderTarget2D(valueTuple.Item1);
+					}
 					this.RetiringRenderTargets.RemoveAt(i);
 				}
 			}
@@ -251,7 +254,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047A78 RID: 293496 RVA: 0x01255D48 File Offset: 0x01253F48
+		// Token: 0x0603D3D9 RID: 250841 RVA: 0x011AE8F0 File Offset: 0x011ACAF0
 		protected override bool OnClear()
 		{
 			foreach (PortalRenderCaptureEntry entry in this.CaptureEntries)
@@ -261,16 +264,40 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.CaptureEntries.Clear();
 			foreach (ValueTuple<UTextureRenderTarget2D, int> valueTuple in this.RetiringRenderTargets)
 			{
-				UKismetRenderingLibrary.ReleaseRenderTarget2D(valueTuple.Item1);
+				if (valueTuple.Item1.IsValid())
+				{
+					UKismetRenderingLibrary.ReleaseRenderTarget2D(valueTuple.Item1);
+				}
 			}
 			this.RetiringRenderTargets.Clear();
 			this.TryReleaseRenderTargetPool();
+			this.RoundRobinIndex = 0;
 			this.NextCaptureHandle = 1;
+			return true;
+		}
+
+		// Token: 0x0603D3DA RID: 250842 RVA: 0x011AE9C4 File Offset: 0x011ACBC4
+		protected override bool OnLeaveLevel()
+		{
+			foreach (PortalRenderCaptureEntry entry in this.CaptureEntries)
+			{
+				this.ReleaseDynamicRenderTarget(entry);
+			}
+			this.CaptureEntries.Clear();
+			foreach (ValueTuple<UTextureRenderTarget2D, int> valueTuple in this.RetiringRenderTargets)
+			{
+				if (valueTuple.Item1.IsValid())
+				{
+					UKismetRenderingLibrary.ReleaseRenderTarget2D(valueTuple.Item1);
+				}
+			}
+			this.RetiringRenderTargets.Clear();
+			this.TryReleaseRenderTargetPool();
 			this.RoundRobinIndex = 0;
 			return true;
 		}
 
-		// Token: 0x06047A79 RID: 293497 RVA: 0x01255E0C File Offset: 0x0125400C
+		// Token: 0x0603D3DB RID: 250843 RVA: 0x011AEA90 File Offset: 0x011ACC90
 		private void ReleaseDynamicRenderTarget(PortalRenderCaptureEntry entry)
 		{
 			UTextureRenderTarget2D rt = entry.Rt;
@@ -278,16 +305,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			{
 				return;
 			}
-			if (entry.Params.Capture.TextureTarget == rt)
+			if (entry.Params.Capture.IsValid() && entry.Params.Capture.TextureTarget == rt)
 			{
 				entry.Params.Capture.TextureTarget = null;
 			}
-			UKismetRenderingLibrary.ReleaseRenderTarget2D(rt);
+			if (rt.IsValid())
+			{
+				UKismetRenderingLibrary.ReleaseRenderTarget2D(rt);
+			}
 			entry.Rt = null;
 			entry.IsDynamicRt = false;
 		}
 
-		// Token: 0x06047A7A RID: 293498 RVA: 0x01255E64 File Offset: 0x01254064
+		// Token: 0x0603D3DC RID: 250844 RVA: 0x011AEB04 File Offset: 0x011ACD04
 		private unsafe void TryAcquireRenderTargetPool()
 		{
 			if (!this.EnableRenderTargetPoolAdjustment || this.CaptureEntries.Count != 0 || this.RetiringRenderTargets.Count != 0)
@@ -308,7 +338,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06047A7B RID: 293499 RVA: 0x01255F20 File Offset: 0x01254120
+		// Token: 0x0603D3DD RID: 250845 RVA: 0x011AEBC0 File Offset: 0x011ACDC0
 		private void TryReleaseRenderTargetPool()
 		{
 			if (this.CaptureEntries.Count != 0 || this.RetiringRenderTargets.Count != 0 || this.RenderTargetPoolMinBeforeCapture == null)
@@ -325,7 +355,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.RenderTargetPoolMinBeforeCapture = null;
 		}
 
-		// Token: 0x06047A7C RID: 293500 RVA: 0x01255FAC File Offset: 0x012541AC
+		// Token: 0x0603D3DE RID: 250846 RVA: 0x011AEC4C File Offset: 0x011ACE4C
 		private void UpdateCaptureEntry(PortalRenderCaptureEntry entry)
 		{
 			Transform playerCameraTransform = this.GetPlayerCameraTransform();
@@ -345,14 +375,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			PortalUtils.Instance.UpdateCaptureCamera(playerCameraTransform, entry.Params.SourcePortalWorld, entry.Params.TargetPortalWorld, entry.Params.SourcePortalBounds, entry.Params.Capture, this.CaptureDebugEnabled);
 		}
 
-		// Token: 0x06047A7D RID: 293501 RVA: 0x012560AC File Offset: 0x012542AC
+		// Token: 0x0603D3DF RID: 250847 RVA: 0x011AED4C File Offset: 0x011ACF4C
 		[NullableContext(2)]
 		private PortalRenderCaptureEntry FindCaptureEntry(int handle)
 		{
 			return this.CaptureEntries.Find((PortalRenderCaptureEntry e) => e.Handle == handle);
 		}
 
-		// Token: 0x06047A7E RID: 293502 RVA: 0x012560E0 File Offset: 0x012542E0
+		// Token: 0x0603D3E0 RID: 250848 RVA: 0x011AED80 File Offset: 0x011ACF80
 		private Transform GetPlayerCameraTransform()
 		{
 			Transform tmpCameraTrans = this.TmpCameraTrans;
@@ -372,8 +402,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return tmpCameraTrans;
 		}
 
-		// Token: 0x17009E3E RID: 40510
-		// (get) Token: 0x06047A7F RID: 293503 RVA: 0x01256156 File Offset: 0x01254356
+		// Token: 0x170073F5 RID: 29685
+		// (get) Token: 0x0603D3E1 RID: 250849 RVA: 0x011AEDF6 File Offset: 0x011ACFF6
 		public static PortalRenderController Instance
 		{
 			get
@@ -382,7 +412,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047A80 RID: 293504 RVA: 0x0125615D File Offset: 0x0125435D
+		// Token: 0x0603D3E2 RID: 250850 RVA: 0x011AEDFD File Offset: 0x011ACFFD
 		public static PortalRenderController GetOrCreateInstance()
 		{
 			if (PortalRenderController._Instance == null)
@@ -392,7 +422,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return PortalRenderController._Instance;
 		}
 
-		// Token: 0x06047A81 RID: 293505 RVA: 0x01256171 File Offset: 0x01254371
+		// Token: 0x0603D3E3 RID: 250851 RVA: 0x011AEE11 File Offset: 0x011AD011
 		public static bool CreateInstance()
 		{
 			if (PortalRenderController._Instance != null)
@@ -403,51 +433,51 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047A82 RID: 293506 RVA: 0x01256187 File Offset: 0x01254387
+		// Token: 0x0603D3E4 RID: 250852 RVA: 0x011AEE27 File Offset: 0x011AD027
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047A83 RID: 293507 RVA: 0x01256189 File Offset: 0x01254389
+		// Token: 0x0603D3E5 RID: 250853 RVA: 0x011AEE29 File Offset: 0x011AD029
 		public static void ResetStaticDefaultValue()
 		{
 			PortalRenderController._Instance = null;
 		}
 
-		// Token: 0x06047A84 RID: 293508 RVA: 0x01256191 File Offset: 0x01254391
+		// Token: 0x0603D3E6 RID: 250854 RVA: 0x011AEE31 File Offset: 0x011AD031
 		static PortalRenderController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PortalRenderController.CreateStaticDefaultValue), new Action(PortalRenderController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025B38 RID: 154424
+		// Token: 0x040207A7 RID: 133031
 		public int MaxCaptureUpdatesPerTick = 1;
 
-		// Token: 0x04025B39 RID: 154425
+		// Token: 0x040207A8 RID: 133032
 		public bool EnableRenderTargetPoolAdjustment;
 
-		// Token: 0x04025B3A RID: 154426
+		// Token: 0x040207A9 RID: 133033
 		public bool UseOffAxisProjection = true;
 
-		// Token: 0x04025B3B RID: 154427
+		// Token: 0x040207AA RID: 133034
 		public bool CaptureDebugEnabled;
 
-		// Token: 0x04025B3C RID: 154428
+		// Token: 0x040207AB RID: 133035
 		private const int DEFAULT_RENDER_TARGET_SIZE = 64;
 
-		// Token: 0x04025B3D RID: 154429
+		// Token: 0x040207AC RID: 133036
 		private const float DEFAULT_MAX_VIEW_DISTANCE = 1f;
 
-		// Token: 0x04025B3E RID: 154430
+		// Token: 0x040207AD RID: 133037
 		private const int CAPTURE_RENDER_TARGET_POOL_MIN = 600;
 
-		// Token: 0x04025B3F RID: 154431
+		// Token: 0x040207AE RID: 133038
 		private const string RENDER_TARGET_POOL_MIN_CVAR = "r.RenderTargetPoolMin";
 
-		// Token: 0x04025B40 RID: 154432
+		// Token: 0x040207AF RID: 133039
 		private readonly List<PortalRenderCaptureEntry> CaptureEntries = new List<PortalRenderCaptureEntry>();
 
-		// Token: 0x04025B41 RID: 154433
+		// Token: 0x040207B0 RID: 133040
 		[TupleElementNames(new string[]
 		{
 			"Rt",
@@ -461,28 +491,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 		})]
 		private readonly List<ValueTuple<UTextureRenderTarget2D, int>> RetiringRenderTargets = new List<ValueTuple<UTextureRenderTarget2D, int>>();
 
-		// Token: 0x04025B42 RID: 154434
+		// Token: 0x040207B1 RID: 133041
 		private int NextCaptureHandle = 1;
 
-		// Token: 0x04025B43 RID: 154435
+		// Token: 0x040207B2 RID: 133042
 		private int RoundRobinIndex;
 
-		// Token: 0x04025B44 RID: 154436
+		// Token: 0x040207B3 RID: 133043
 		private int? RenderTargetPoolMinBeforeCapture;
 
-		// Token: 0x04025B45 RID: 154437
+		// Token: 0x040207B4 RID: 133044
 		private readonly Transform TmpCameraTrans = Transform.Create();
 
-		// Token: 0x04025B46 RID: 154438
+		// Token: 0x040207B5 RID: 133045
 		private readonly Vector TmpLoc = Vector.Create();
 
-		// Token: 0x04025B47 RID: 154439
+		// Token: 0x040207B6 RID: 133046
 		private readonly Rotator TmpRot = Rotator.Create();
 
-		// Token: 0x04025B48 RID: 154440
+		// Token: 0x040207B7 RID: 133047
 		private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04025B49 RID: 154441
+		// Token: 0x040207B8 RID: 133048
 		[Nullable(2)]
 		private static PortalRenderController _Instance;
 	}

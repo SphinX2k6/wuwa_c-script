@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000DE RID: 222
+// Token: 0x020000E0 RID: 224
 public class CubicCurveWithStartSlope : CurveBase
 {
-	// Token: 0x060006DC RID: 1756 RVA: 0x00024970 File Offset: 0x00022B70
+	// Token: 0x0600071D RID: 1821 RVA: 0x00024F44 File Offset: 0x00023144
 	[NullableContext(1)]
 	public CubicCurveWithStartSlope(params float[] @params) : base(Array.Empty<float>())
 	{
@@ -26,18 +26,18 @@ public class CubicCurveWithStartSlope : CurveBase
 		this.C = @params[0];
 	}
 
-	// Token: 0x060006DD RID: 1757 RVA: 0x00024A2C File Offset: 0x00022C2C
+	// Token: 0x0600071E RID: 1822 RVA: 0x00025000 File Offset: 0x00023200
 	public override float GetCurrentValueInternal(float key)
 	{
 		return ((this.A * key + this.B) * key + this.C) * key;
 	}
 
-	// Token: 0x0400058A RID: 1418
+	// Token: 0x04000599 RID: 1433
 	private readonly float A;
 
-	// Token: 0x0400058B RID: 1419
+	// Token: 0x0400059A RID: 1434
 	private readonly float B;
 
-	// Token: 0x0400058C RID: 1420
+	// Token: 0x0400059B RID: 1435
 	private readonly float C = 1f;
 }

@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F5A RID: 20314
+	// Token: 0x02003F23 RID: 16163
 	[NullableContext(1)]
 	public interface IQuickHackSkillCondition
 	{
-		// Token: 0x0603410B RID: 213259
+		// Token: 0x06028F79 RID: 167801
 		bool Check(QuickHackSkillInstance skillConfig, EQuickHackTargetType? hackType, [Nullable(new byte[]
 		{
 			2,

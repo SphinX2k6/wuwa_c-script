@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CC7 RID: 27847
+	// Token: 0x02005E41 RID: 24129
 	public class LevelConditionCheckMusicBeatsEvent : LevelConditionBase
 	{
-		// Token: 0x06044626 RID: 280102 RVA: 0x010DD3E8 File Offset: 0x010DB5E8
+		// Token: 0x0603A780 RID: 239488 RVA: 0x0108743C File Offset: 0x0108563C
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return false;
 		}
 
-		// Token: 0x06044627 RID: 280103 RVA: 0x010DD5E0 File Offset: 0x010DB7E0
+		// Token: 0x0603A781 RID: 239489 RVA: 0x01087634 File Offset: 0x01085834
 		private unsafe bool CheckLoopBeat(int beatCount, MusicBeatType config)
 		{
 			if (config.BeatConfigLength != 2)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return false;
 		}
 
-		// Token: 0x06044628 RID: 280104 RVA: 0x010DD728 File Offset: 0x010DB928
+		// Token: 0x0603A782 RID: 239490 RVA: 0x0108777C File Offset: 0x0108597C
 		private unsafe bool CheckSpecialBeat(int beatCount, MusicBeatType config)
 		{
 			Span<int> beatConfigBytes = config.GetBeatConfigBytes();

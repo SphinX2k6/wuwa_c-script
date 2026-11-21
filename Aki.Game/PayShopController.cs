@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -15,13 +14,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002356 RID: 9046
+// Token: 0x0200183B RID: 6203
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PayShopController : UiControllerBase
 {
-	// Token: 0x0601204B RID: 73803 RVA: 0x0046AEE8 File Offset: 0x004690E8
+	// Token: 0x0600F4FB RID: 62715 RVA: 0x00477FA4 File Offset: 0x004761A4
 	protected override void OnRegisterNetEvent()
 	{
 		Net instance = Net.Instance;
@@ -58,7 +57,7 @@ public class PayShopController : UiControllerBase
 		instance4.Register(id4, callback4);
 	}
 
-	// Token: 0x0601204C RID: 73804 RVA: 0x0046AFA4 File Offset: 0x004691A4
+	// Token: 0x0600F4FC RID: 62716 RVA: 0x00478060 File Offset: 0x00476260
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PayShopInfoNotify);
@@ -67,21 +66,21 @@ public class PayShopController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.PayShopConditionFinishNotify);
 	}
 
-	// Token: 0x0601204D RID: 73805 RVA: 0x0046AFF1 File Offset: 0x004691F1
+	// Token: 0x0600F4FD RID: 62717 RVA: 0x004780AD File Offset: 0x004762AD
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.OnFunctionOpenUpdate));
 	}
 
-	// Token: 0x0601204E RID: 73806 RVA: 0x0046B02B File Offset: 0x0046922B
+	// Token: 0x0600F4FE RID: 62718 RVA: 0x004780E7 File Offset: 0x004762E7
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Remove(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.OnFunctionOpenUpdate));
 	}
 
-	// Token: 0x0601204F RID: 73807 RVA: 0x0046B068 File Offset: 0x00469268
+	// Token: 0x0600F4FF RID: 62719 RVA: 0x00478124 File Offset: 0x00476324
 	[NullableContext(2)]
 	private static void NotifyPayShopInfo(IMessage msg, Net.CallbackStatus _)
 	{
@@ -94,31 +93,31 @@ public class PayShopController : UiControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		RepeatedField<PayShopInfo> infos = payShopInfoNotify.Infos;
 		PayShopModel.Instance.Version = payShopInfoNotify.Version;
-		PayShopModel.Instance.SetPayShopInfoList(infos.ToList<PayShopInfo>());
-		PayShopModel.Instance.SetPayShopTabData(payShopInfoNotify.PayShopTabConfigs.ToList<PayShopTabConfigInfo>());
-		PayShopModel.Instance.SetPayShopRecommendData(payShopInfoNotify.PayShopRecommends.ToList<PayShopRecommendConfigInfo>());
+		PayShopModel.Instance.SetPayShopInfoList(infos);
+		PayShopModel.Instance.SetPayShopTabData(payShopInfoNotify.PayShopTabConfigs);
+		PayShopModel.Instance.SetPayShopRecommendData(payShopInfoNotify.PayShopRecommends);
 		PayGiftController.Instance.OnShopInfoNotify(payShopInfoNotify);
 	}
 
-	// Token: 0x06012050 RID: 73808 RVA: 0x0046B104 File Offset: 0x00469304
+	// Token: 0x0600F500 RID: 62720 RVA: 0x004781B4 File Offset: 0x004763B4
 	[NullableContext(2)]
 	private static void NotifyPayShopUnlock(IMessage msg, Net.CallbackStatus _)
 	{
 		RepeatedField<int> unlockList = ((PayShopUnlockNotify)msg).UnlockList;
-		PayShopModel.Instance.UnLockPayShopGoods(unlockList.ToList<int>());
+		PayShopModel.Instance.UnLockPayShopGoods(unlockList);
 	}
 
-	// Token: 0x06012051 RID: 73809 RVA: 0x0046B130 File Offset: 0x00469330
+	// Token: 0x0600F501 RID: 62721 RVA: 0x004781D8 File Offset: 0x004763D8
 	[NullableContext(2)]
 	private static void NotifyPayShopConditionFinish(IMessage msg, Net.CallbackStatus _)
 	{
 		RepeatedField<Aki.Protocol.PayShopItem> items = ((PayShopConditionFinishNotify)msg).Items;
-		PayShopModel.Instance.SetPayShopGoodsList(items.ToList<Aki.Protocol.PayShopItem>());
+		PayShopModel.Instance.SetPayShopGoodsList(items);
 		Log.Instance.Info(ELogModule.Shop, ELogAuthor.YZY, "PayShop:ShopItem NotifyPayShopConditionFinish 接收到商品信息更新", default(ReadOnlySpan<ValueTuple<string, object>>));
-		EventSystem.Instance.Emit<List<Aki.Protocol.PayShopItem>>(EEventName.OnPayShopConditionFinish, items.ToList<Aki.Protocol.PayShopItem>());
+		EventSystem.Instance.Emit<List<Aki.Protocol.PayShopItem>>(EEventName.OnPayShopConditionFinish, new List<Aki.Protocol.PayShopItem>(items));
 	}
 
-	// Token: 0x06012052 RID: 73810 RVA: 0x0046B18C File Offset: 0x0046938C
+	// Token: 0x0600F502 RID: 62722 RVA: 0x00478230 File Offset: 0x00476430
 	[NullableContext(2)]
 	private unsafe static void NotifyPayShopDirectBuy(IMessage msg, Net.CallbackStatus _)
 	{
@@ -144,7 +143,7 @@ public class PayShopController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.PayShopGoodsBuy);
 	}
 
-	// Token: 0x06012053 RID: 73811 RVA: 0x0046B274 File Offset: 0x00469474
+	// Token: 0x0600F503 RID: 62723 RVA: 0x00478318 File Offset: 0x00476518
 	private void OnWorldDone()
 	{
 		if (FunctionModel.Instance.IsOpen(10010))
@@ -153,7 +152,7 @@ public class PayShopController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06012054 RID: 73812 RVA: 0x0046B290 File Offset: 0x00469490
+	// Token: 0x0600F504 RID: 62724 RVA: 0x00478334 File Offset: 0x00476534
 	private void OnFunctionOpenUpdate(EFunctionType functionType, bool isOpen)
 	{
 		if (functionType != EFunctionType.Shop)
@@ -167,7 +166,7 @@ public class PayShopController : UiControllerBase
 		this.SendRequestPayShopInfo(false, 0);
 	}
 
-	// Token: 0x06012055 RID: 73813 RVA: 0x0046B2A8 File Offset: 0x004694A8
+	// Token: 0x0600F505 RID: 62725 RVA: 0x0047834C File Offset: 0x0047654C
 	[NullableContext(0)]
 	public UniTask<bool> SendRequestPayShopInfo(bool needErrorCode = true, int timeoutMs = 0)
 	{
@@ -180,7 +179,7 @@ public class PayShopController : UiControllerBase
 		return <SendRequestPayShopInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012056 RID: 73814 RVA: 0x0046B2F4 File Offset: 0x004694F4
+	// Token: 0x0600F506 RID: 62726 RVA: 0x00478398 File Offset: 0x00476598
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -198,7 +197,7 @@ public class PayShopController : UiControllerBase
 		return <SendRequestPayShopUpdateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012057 RID: 73815 RVA: 0x0046B348 File Offset: 0x00469548
+	// Token: 0x0600F507 RID: 62727 RVA: 0x004783EC File Offset: 0x004765EC
 	[NullableContext(2)]
 	public unsafe void SendRequestPayShopUpdate(PayShopDefine.EPayShopTabType payShopId, bool isSwitch, Action<PayShopUpdateResponse> responseCallback = null)
 	{
@@ -274,7 +273,7 @@ public class PayShopController : UiControllerBase
 			}
 			else
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 22804, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 26133, null, true, true);
 				Action<PayShopUpdateResponse> responseCallback3 = responseCallback;
 				if (responseCallback3 == null)
 				{
@@ -286,7 +285,7 @@ public class PayShopController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06012058 RID: 73816 RVA: 0x0046B410 File Offset: 0x00469610
+	// Token: 0x0600F508 RID: 62728 RVA: 0x004784B4 File Offset: 0x004766B4
 	private List<string> GetShopQueryProductIdArray(PayShopDefine.EPayShopTabType payShopId)
 	{
 		List<string> list = new List<string>();
@@ -307,7 +306,7 @@ public class PayShopController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x06012059 RID: 73817 RVA: 0x0046B4D4 File Offset: 0x004696D4
+	// Token: 0x0600F509 RID: 62729 RVA: 0x00478578 File Offset: 0x00476778
 	public void OpenBuySkinDetailView(PayShopGoods good)
 	{
 		if (!good.IsDirect())
@@ -325,7 +324,7 @@ public class PayShopController : UiControllerBase
 		LogReportController.Instance.LogReport(onOpenGiftPackageDetailsViewLogEvent);
 	}
 
-	// Token: 0x0601205A RID: 73818 RVA: 0x0046B550 File Offset: 0x00469750
+	// Token: 0x0600F50A RID: 62730 RVA: 0x004785F4 File Offset: 0x004767F4
 	public void SendRequestPayShopItemUpdate(int[] goodsIdList)
 	{
 		Log instance = Log.Instance;
@@ -342,14 +341,14 @@ public class PayShopController : UiControllerBase
 			if (payShopItemUpdateResponse.ErrorCode == Aki.Protocol.ErrorCode.Success)
 			{
 				RepeatedField<Aki.Protocol.PayShopItem> items = payShopItemUpdateResponse.Items;
-				PayShopModel.Instance.SetPayShopGoodsList(items.ToList<Aki.Protocol.PayShopItem>());
+				PayShopModel.Instance.SetPayShopGoodsList(items);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(payShopItemUpdateResponse.ErrorCode, 27686, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(payShopItemUpdateResponse.ErrorCode, 16503, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x0601205B RID: 73819 RVA: 0x0046B5C8 File Offset: 0x004697C8
+	// Token: 0x0600F50B RID: 62731 RVA: 0x0047866C File Offset: 0x0047686C
 	public unsafe void SendRequestPayShopBuy(int goodsId, int count = 1)
 	{
 		Log instance = Log.Instance;
@@ -364,7 +363,7 @@ public class PayShopController : UiControllerBase
 		this.SendRequestPayShopNormalBuy(goodsId, count, goodsData);
 	}
 
-	// Token: 0x0601205C RID: 73820 RVA: 0x0046B64C File Offset: 0x0046984C
+	// Token: 0x0600F50C RID: 62732 RVA: 0x004786F0 File Offset: 0x004768F0
 	protected unsafe void SendRequestPayShopNormalBuy(int goodsId, int buyCount, PayShopGoodsData payShopData)
 	{
 		PayShopBuyRequest payShopBuyRequest = PayShopBuyRequest.Create();
@@ -402,11 +401,11 @@ public class PayShopController : UiControllerBase
 				EventSystem.Instance.Emit(EEventName.ShopVersionCodeChange);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(payShopBuyResponse.ErrorCode, 25381, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(payShopBuyResponse.ErrorCode, 19539, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x0601205D RID: 73821 RVA: 0x0046B6C0 File Offset: 0x004698C0
+	// Token: 0x0600F50D RID: 62733 RVA: 0x00478764 File Offset: 0x00476964
 	public void ActivityPayShopBuyRequest(List<ActivityBuyItem> buyItems, [Nullable(new byte[]
 	{
 		2,
@@ -423,7 +422,7 @@ public class PayShopController : UiControllerBase
 		this.ActivityPayShopBuyRequestInternal(buyItems, goodsData, callback);
 	}
 
-	// Token: 0x0601205E RID: 73822 RVA: 0x0046B700 File Offset: 0x00469900
+	// Token: 0x0600F50E RID: 62734 RVA: 0x004787A4 File Offset: 0x004769A4
 	private void ActivityPayShopBuyRequestInternal(List<ActivityBuyItem> buyItems, PayShopGoodsData payShopData, [Nullable(new byte[]
 	{
 		2,
@@ -492,7 +491,7 @@ public class PayShopController : UiControllerBase
 				}
 				if (activityPayShopBuyResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(activityPayShopBuyResponse.ErrorCode, 18847, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(activityPayShopBuyResponse.ErrorCode, 29072, null, true, true);
 				}
 				return;
 			}
@@ -505,7 +504,7 @@ public class PayShopController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0601205F RID: 73823 RVA: 0x0046B76C File Offset: 0x0046996C
+	// Token: 0x0600F50F RID: 62735 RVA: 0x00478810 File Offset: 0x00476A10
 	public void OpenGiftDetailsView(PayShopGoods good)
 	{
 		Log.Instance.Info(ELogModule.Shop, ELogAuthor.XXJ, "PayShop:ShopItem 打开礼包界面", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -523,7 +522,7 @@ public class PayShopController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06012060 RID: 73824 RVA: 0x0046B81C File Offset: 0x00469A1C
+	// Token: 0x0600F510 RID: 62736 RVA: 0x004788C0 File Offset: 0x00476AC0
 	[NullableContext(2)]
 	public void OpenExchangePopView(int goodsId, PayShopExchangeExtraData extraData = null)
 	{
@@ -545,7 +544,7 @@ public class PayShopController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06012061 RID: 73825 RVA: 0x0046B8EC File Offset: 0x00469AEC
+	// Token: 0x0600F511 RID: 62737 RVA: 0x00478990 File Offset: 0x00476B90
 	public void OpenBuyViewByGoodsId(PayShopGoods good, [Nullable(2)] PayShopExchangeExtraData extraData = null)
 	{
 		int id = good.GetGoodsData().Id;
@@ -574,7 +573,7 @@ public class PayShopController : UiControllerBase
 		this.OpenExchangePopView(id, extraData);
 	}
 
-	// Token: 0x06012062 RID: 73826 RVA: 0x0046B9AE File Offset: 0x00469BAE
+	// Token: 0x0600F512 RID: 62738 RVA: 0x00478A52 File Offset: 0x00476C52
 	[NullableContext(2)]
 	public void OpenPayShopView(PayShopViewData data = null, TOpenViewCallBack finishCallback = null)
 	{
@@ -586,7 +585,7 @@ public class PayShopController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PayShopRootView, data, finishCallback);
 	}
 
-	// Token: 0x06012063 RID: 73827 RVA: 0x0046B9E8 File Offset: 0x00469BE8
+	// Token: 0x0600F513 RID: 62739 RVA: 0x00478A8C File Offset: 0x00476C8C
 	public void OpenPayShopViewWithTab(PayShopDefine.EPayShopTabType tab, int switchId)
 	{
 		if (!FunctionModel.Instance.IsOpen(10010))
@@ -606,7 +605,7 @@ public class PayShopController : UiControllerBase
 		EventSystem.Instance.Emit<PayShopDefine.EPayShopTabType, int>(EEventName.SwitchPayShopTabItem, tab, switchId);
 	}
 
-	// Token: 0x06012064 RID: 73828 RVA: 0x0046BA60 File Offset: 0x00469C60
+	// Token: 0x0600F514 RID: 62740 RVA: 0x00478B04 File Offset: 0x00476D04
 	public void OpenPayShopViewWithTabResolver(Func<PayShopJumpParam> tabResolver)
 	{
 		if (!FunctionModel.Instance.IsOpen(10010))
@@ -626,7 +625,7 @@ public class PayShopController : UiControllerBase
 		EventSystem.Instance.Emit<PayShopDefine.EPayShopTabType, int>(EEventName.SwitchPayShopTabItem, payShopJumpParam.PayShopId, payShopJumpParam.SwitchId);
 	}
 
-	// Token: 0x06012065 RID: 73829 RVA: 0x0046BAE0 File Offset: 0x00469CE0
+	// Token: 0x0600F515 RID: 62741 RVA: 0x00478B84 File Offset: 0x00476D84
 	public void OpenPayShopViewToRecharge()
 	{
 		if (PayItemController.Instance.CurrentBlockBetaState && FeatureRestrictionTemplate.TemplateForPioneerClient.Check())
@@ -646,7 +645,7 @@ public class PayShopController : UiControllerBase
 		EventSystem.Instance.Emit<PayShopDefine.EPayShopTabType, int>(EEventName.SwitchPayShopTabItem, PayShopDefine.EPayShopTabType.Recharge, 1);
 	}
 
-	// Token: 0x06012066 RID: 73830 RVA: 0x0046BB58 File Offset: 0x00469D58
+	// Token: 0x0600F516 RID: 62742 RVA: 0x00478BFC File Offset: 0x00476DFC
 	public void ClosePayShopGoodDetailPopView()
 	{
 		foreach (EUiViewName euiViewName in new List<EUiViewName>
@@ -662,8 +661,8 @@ public class PayShopController : UiControllerBase
 		}
 	}
 
-	// Token: 0x1700178F RID: 6031
-	// (get) Token: 0x06012067 RID: 73831 RVA: 0x0046BBD4 File Offset: 0x00469DD4
+	// Token: 0x170017C9 RID: 6089
+	// (get) Token: 0x0600F517 RID: 62743 RVA: 0x00478C78 File Offset: 0x00476E78
 	public static PayShopController Instance
 	{
 		get
@@ -672,7 +671,7 @@ public class PayShopController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06012068 RID: 73832 RVA: 0x0046BBDB File Offset: 0x00469DDB
+	// Token: 0x0600F518 RID: 62744 RVA: 0x00478C7F File Offset: 0x00476E7F
 	public static PayShopController GetOrCreateInstance()
 	{
 		if (PayShopController._Instance == null)
@@ -682,7 +681,7 @@ public class PayShopController : UiControllerBase
 		return PayShopController._Instance;
 	}
 
-	// Token: 0x06012069 RID: 73833 RVA: 0x0046BBEF File Offset: 0x00469DEF
+	// Token: 0x0600F519 RID: 62745 RVA: 0x00478C93 File Offset: 0x00476E93
 	public static bool CreateInstance()
 	{
 		if (PayShopController._Instance != null)
@@ -693,32 +692,32 @@ public class PayShopController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0601206A RID: 73834 RVA: 0x0046BC05 File Offset: 0x00469E05
+	// Token: 0x0600F51A RID: 62746 RVA: 0x00478CA9 File Offset: 0x00476EA9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601206B RID: 73835 RVA: 0x0046BC07 File Offset: 0x00469E07
+	// Token: 0x0600F51B RID: 62747 RVA: 0x00478CAB File Offset: 0x00476EAB
 	public static void ResetStaticDefaultValue()
 	{
 		PayShopController._Instance = null;
 	}
 
-	// Token: 0x0601206C RID: 73836 RVA: 0x0046BC0F File Offset: 0x00469E0F
+	// Token: 0x0600F51C RID: 62748 RVA: 0x00478CB3 File Offset: 0x00476EB3
 	static PayShopController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PayShopController.CreateStaticDefaultValue), new Action(PayShopController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008808 RID: 34824
+	// Token: 0x0400894B RID: 35147
 	[Nullable(2)]
 	private static PayShopController _Instance;
 
-	// Token: 0x020088D8 RID: 35032
+	// Token: 0x02007A61 RID: 31329
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402C790 RID: 182160
+		// Token: 0x04027AA4 RID: 162468
 		[Nullable(new byte[]
 		{
 			0,
@@ -727,7 +726,7 @@ public class PayShopController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <0>__NotifyPayShopInfo;
 
-		// Token: 0x0402C791 RID: 182161
+		// Token: 0x04027AA5 RID: 162469
 		[Nullable(new byte[]
 		{
 			0,
@@ -736,7 +735,7 @@ public class PayShopController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <1>__NotifyPayShopUnlock;
 
-		// Token: 0x0402C792 RID: 182162
+		// Token: 0x04027AA6 RID: 162470
 		[Nullable(new byte[]
 		{
 			0,
@@ -745,7 +744,7 @@ public class PayShopController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <2>__NotifyPayShopDirectBuy;
 
-		// Token: 0x0402C793 RID: 182163
+		// Token: 0x04027AA7 RID: 162471
 		[Nullable(new byte[]
 		{
 			0,

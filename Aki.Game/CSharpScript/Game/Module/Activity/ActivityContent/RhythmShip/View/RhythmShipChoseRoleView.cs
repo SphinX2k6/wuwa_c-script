@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200621E RID: 25118
+	// Token: 0x0200519C RID: 20892
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RhythmShipChoseRoleView : UiViewBase
 	{
-		// Token: 0x0603F5B9 RID: 259513 RVA: 0x00F50662 File Offset: 0x00F4E862
+		// Token: 0x0603427A RID: 213626 RVA: 0x00E975BA File Offset: 0x00E957BA
 		public RhythmShipChoseRoleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F5BA RID: 259514 RVA: 0x00F5066C File Offset: 0x00F4E86C
+		// Token: 0x0603427B RID: 213627 RVA: 0x00E975C4 File Offset: 0x00E957C4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5BB RID: 259515 RVA: 0x00F50718 File Offset: 0x00F4E918
+		// Token: 0x0603427C RID: 213628 RVA: 0x00E97670 File Offset: 0x00E95870
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipChoseRoleView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F5BC RID: 259516 RVA: 0x00F5075C File Offset: 0x00F4E95C
+		// Token: 0x0603427D RID: 213629 RVA: 0x00E976B4 File Offset: 0x00E958B4
 		protected override void OnStart()
 		{
 			RhythmShipData activityData = RhythmShipModel.Instance.ActivityData;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}, true);
 		}
 
-		// Token: 0x0603F5BD RID: 259517 RVA: 0x00F507D2 File Offset: 0x00F4E9D2
+		// Token: 0x0603427E RID: 213630 RVA: 0x00E9772A File Offset: 0x00E9592A
 		private RhythmShipChoseRoleItem InitRoleItem()
 		{
 			return new RhythmShipChoseRoleItem
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5BE RID: 259518 RVA: 0x00F507EB File Offset: 0x00F4E9EB
+		// Token: 0x0603427F RID: 213631 RVA: 0x00E97743 File Offset: 0x00E95943
 		[NullableContext(2)]
 		private void OnClickRoleItem(int roleId, UUIExtendToggle toggle)
 		{
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.CurrentSelectRole = roleId;
 		}
 
-		// Token: 0x0603F5BF RID: 259519 RVA: 0x00F50814 File Offset: 0x00F4EA14
+		// Token: 0x06034280 RID: 213632 RVA: 0x00E9776C File Offset: 0x00E9596C
 		private void OnClickConfirmBtn()
 		{
 			if (this.CurrentSelectRole != 0)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603F5C0 RID: 259520 RVA: 0x00F50880 File Offset: 0x00F4EA80
+		// Token: 0x06034281 RID: 213633 RVA: 0x00E977D8 File Offset: 0x00E959D8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -140,11 +140,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return null;
 		}
 
-		// Token: 0x04021110 RID: 135440
+		// Token: 0x0401BA3F RID: 113215
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021111 RID: 135441
+		// Token: 0x0401BA40 RID: 113216
 		[Nullable(new byte[]
 		{
 			2,
@@ -152,11 +152,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		private GenericLayout<RhythmShipChoseRoleItem, int> RoleLayout;
 
-		// Token: 0x04021112 RID: 135442
+		// Token: 0x0401BA41 RID: 113217
 		[Nullable(2)]
 		private UUIExtendToggle CurrentSelectToggle;
 
-		// Token: 0x04021113 RID: 135443
+		// Token: 0x0401BA42 RID: 113218
 		private int CurrentSelectRole;
 	}
 }

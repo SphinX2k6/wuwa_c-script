@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002BAA RID: 11178
+// Token: 0x02002126 RID: 8486
 public class TimeOfDayAnimController : IStaticVariableResetter
 {
-	// Token: 0x0601727D RID: 94845 RVA: 0x005DE9C9 File Offset: 0x005DCBC9
+	// Token: 0x06014CAE RID: 85166 RVA: 0x0060B59D File Offset: 0x0060979D
 	static TimeOfDayAnimController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TimeOfDayAnimController.CreateStaticDefaultValue), new Action(TimeOfDayAnimController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601727E RID: 94846 RVA: 0x005DE9E8 File Offset: 0x005DCBE8
+	// Token: 0x06014CAF RID: 85167 RVA: 0x0060B5BC File Offset: 0x006097BC
 	public static void CreateStaticDefaultValue()
 	{
 		TimeOfDayAnimController.TickId = 0;
@@ -21,7 +21,7 @@ public class TimeOfDayAnimController : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0601727F RID: 94847 RVA: 0x005DEA1A File Offset: 0x005DCC1A
+	// Token: 0x06014CB0 RID: 85168 RVA: 0x0060B5EE File Offset: 0x006097EE
 	public static void ResetStaticDefaultValue()
 	{
 		TimeOfDayAnimController.TickId = 0;
@@ -29,7 +29,7 @@ public class TimeOfDayAnimController : IStaticVariableResetter
 		TimeOfDayAnimController.CallBack = null;
 	}
 
-	// Token: 0x06017280 RID: 94848 RVA: 0x005DEA30 File Offset: 0x005DCC30
+	// Token: 0x06014CB1 RID: 85169 RVA: 0x0060B604 File Offset: 0x00609804
 	[NullableContext(1)]
 	public static void PlayTimeAnimation(double startSecond, double setSecond, Action callBack)
 	{
@@ -48,14 +48,14 @@ public class TimeOfDayAnimController : IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0400AD4B RID: 44363
+	// Token: 0x0400B152 RID: 45394
 	public static int TickId;
 
-	// Token: 0x0400AD4C RID: 44364
+	// Token: 0x0400B153 RID: 45395
 	[Nullable(2)]
 	public static CustomPromise PrePromise;
 
-	// Token: 0x0400AD4D RID: 44365
+	// Token: 0x0400B154 RID: 45396
 	[Nullable(2)]
 	public static Action CallBack;
 }

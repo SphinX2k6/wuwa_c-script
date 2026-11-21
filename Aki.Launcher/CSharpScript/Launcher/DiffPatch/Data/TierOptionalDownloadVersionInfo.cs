@@ -5,18 +5,18 @@ using CSharpScript.Launcher.Define;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x02000235 RID: 565
+	// Token: 0x0200023A RID: 570
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TierOptionalDownloadVersionInfo : OptionalDownloadVersionInfo
 	{
-		// Token: 0x06000E5F RID: 3679 RVA: 0x000557CB File Offset: 0x000539CB
+		// Token: 0x06000EA0 RID: 3744 RVA: 0x000582D3 File Offset: 0x000564D3
 		public TierOptionalDownloadVersionInfo(string packageVersion, string remoteVersion, Dictionary<string, string> remoteManifestHash, string packKey, string tierLabel) : base(packageVersion, remoteVersion, remoteManifestHash, packKey)
 		{
 			this.TierLabel = tierLabel;
 		}
 
-		// Token: 0x06000E60 RID: 3680 RVA: 0x000557E0 File Offset: 0x000539E0
+		// Token: 0x06000EA1 RID: 3745 RVA: 0x000582E8 File Offset: 0x000564E8
 		public override string GetResType()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(2, 3);
@@ -28,7 +28,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x040008FA RID: 2298
+		// Token: 0x0400093C RID: 2364
 		private readonly string TierLabel;
 	}
 }

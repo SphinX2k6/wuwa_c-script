@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DA9 RID: 3497
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EA5 RID: 3749
 	public class ISceneItemSequenceEventData
 	{
-		// Token: 0x06004F76 RID: 20342 RVA: 0x000C4CA1 File Offset: 0x000C2EA1
+		// Token: 0x0600549B RID: 21659 RVA: 0x000D04F1 File Offset: 0x000CE6F1
 		public static ISceneItemSequenceEventData Create(ISceneItemSequenceEventData? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019E1 RID: 6625
-		// (get) Token: 0x06004F77 RID: 20343 RVA: 0x000C4CC0 File Offset: 0x000C2EC0
+		// Token: 0x17001B4C RID: 6988
+		// (get) Token: 0x0600549C RID: 21660 RVA: 0x000D0510 File Offset: 0x000CE710
 		public virtual string SeqGuid
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019E2 RID: 6626
-		// (get) Token: 0x06004F78 RID: 20344 RVA: 0x000C4CCD File Offset: 0x000C2ECD
+		// Token: 0x17001B4D RID: 6989
+		// (get) Token: 0x0600549D RID: 21661 RVA: 0x000D051D File Offset: 0x000CE71D
 		public virtual string SeqPath
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019E3 RID: 6627
-		// (get) Token: 0x06004F79 RID: 20345 RVA: 0x000C4CDA File Offset: 0x000C2EDA
+		// Token: 0x17001B4E RID: 6990
+		// (get) Token: 0x0600549E RID: 21662 RVA: 0x000D052A File Offset: 0x000CE72A
 		public virtual List<ISceneItemSeqEventCbType> EventCallbacks
 		{
 			get
@@ -59,13 +56,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D98 RID: 11672
+		// Token: 0x0400305E RID: 12382
 		private ISceneItemSequenceEventData Instance;
 
-		// Token: 0x04002D99 RID: 11673
+		// Token: 0x0400305F RID: 12383
 		private List<ISceneItemSeqEventCbType> _EventCallbacksCache;
 
-		// Token: 0x04002D9A RID: 11674
+		// Token: 0x04003060 RID: 12384
 		private bool _EventCallbacksInited;
 	}
 }

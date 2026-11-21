@@ -4,12 +4,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x020069AB RID: 27051
+	// Token: 0x02005B07 RID: 23303
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelGeneralContextUtil
 	{
-		// Token: 0x06043471 RID: 275569 RVA: 0x010664BC File Offset: 0x010646BC
+		// Token: 0x060394A9 RID: 234665 RVA: 0x0100A724 File Offset: 0x01008924
 		[NullableContext(2)]
 		public static GeneralContext CreateByServerContext(GameCtxPb contextPb)
 		{
@@ -142,14 +142,14 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x06043472 RID: 275570 RVA: 0x01066940 File Offset: 0x01064B40
+		// Token: 0x060394AA RID: 234666 RVA: 0x0100ABA8 File Offset: 0x01008DA8
 		private static GeneralLogicTreeContext CreateGeneralLogicTreeContext(GameCtxType subType, BehaviorTreeCtxPb contextPb)
 		{
 			long treeIncId = MathUtils.Instance.LongToBigInt(contextPb.IncId);
 			return GeneralLogicTreeContext.Create((BtType)contextPb.BtType, treeIncId, contextPb.BtId, contextPb.NodeId, new GameCtxType?(subType));
 		}
 
-		// Token: 0x06043473 RID: 275571 RVA: 0x0106697C File Offset: 0x01064B7C
+		// Token: 0x060394AB RID: 234667 RVA: 0x0100ABE4 File Offset: 0x01008DE4
 		private static EntityContext CreateEntityContext(GameCtxType subType, EntityCtxPb contextPb)
 		{
 			long incId = contextPb.IncId;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return EntityContext.Create((entity != null) ? entity.Id : 0, new GameCtxType?(subType));
 		}
 
-		// Token: 0x06043474 RID: 275572 RVA: 0x010669B4 File Offset: 0x01064BB4
+		// Token: 0x060394AC RID: 234668 RVA: 0x0100AC1C File Offset: 0x01008E1C
 		private static DynamicInteractContext CreateDynamicInteractContext(GameCtxType subType, EntityCtxPb entityContextPb, GameCtxPb finalContexrPb)
 		{
 			long incId = entityContextPb.IncId;

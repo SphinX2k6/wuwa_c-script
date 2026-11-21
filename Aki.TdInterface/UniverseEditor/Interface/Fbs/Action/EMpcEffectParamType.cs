@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FBC RID: 24508
+	// Token: 0x0200660E RID: 26126
 	public enum EMpcEffectParamType : byte
 	{
-		// Token: 0x0400FEF2 RID: 65266
+		// Token: 0x04010CAA RID: 68778
 		PostProcessVolumeCenterPosition
 	}
 }

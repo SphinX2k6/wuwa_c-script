@@ -7,19 +7,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200249B RID: 9371
+// Token: 0x02001982 RID: 6530
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionDetailComponent : UiPanelBase
 {
-	// Token: 0x06012D08 RID: 77064 RVA: 0x004A4D58 File Offset: 0x004A2F58
+	// Token: 0x060101C9 RID: 65993 RVA: 0x004B2860 File Offset: 0x004B0A60
 	[NullableContext(1)]
 	public VisionDetailComponent(UUIItem actor)
 	{
 		this.SourceItem = actor;
 	}
 
-	// Token: 0x06012D09 RID: 77065 RVA: 0x004A4D68 File Offset: 0x004A2F68
+	// Token: 0x060101CA RID: 65994 RVA: 0x004B2870 File Offset: 0x004B0A70
 	public UniTask Init()
 	{
 		VisionDetailComponent.<Init>d__7 <Init>d__;
@@ -30,7 +30,7 @@ public class VisionDetailComponent : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012D0A RID: 77066 RVA: 0x004A4DAB File Offset: 0x004A2FAB
+	// Token: 0x060101CB RID: 65995 RVA: 0x004B28B3 File Offset: 0x004B0AB3
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class VisionDetailComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012D0B RID: 77067 RVA: 0x004A4DE4 File Offset: 0x004A2FE4
+	// Token: 0x060101CC RID: 65996 RVA: 0x004B28EC File Offset: 0x004B0AEC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionDetailComponent.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -51,14 +51,14 @@ public class VisionDetailComponent : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012D0C RID: 77068 RVA: 0x004A4E27 File Offset: 0x004A3027
+	// Token: 0x060101CD RID: 65997 RVA: 0x004B292F File Offset: 0x004B0B2F
 	protected override void OnStart()
 	{
 		this.UnderComponent = new VisionDetailUnderComponent(base.GetItem(0));
 		this.VisionDetailInfoComponent.SetClickCallBack(new Action(this.OnClickMainItem));
 	}
 
-	// Token: 0x06012D0D RID: 77069 RVA: 0x004A4E52 File Offset: 0x004A3052
+	// Token: 0x060101CE RID: 65998 RVA: 0x004B295A File Offset: 0x004B0B5A
 	public UUIItem GetTxtItemByIndex(int index)
 	{
 		VisionDetailInfoComponent visionDetailInfoComponent = this.VisionDetailInfoComponent;
@@ -69,19 +69,19 @@ public class VisionDetailComponent : UiPanelBase
 		return visionDetailInfoComponent.GetTxtItemByIndex(index);
 	}
 
-	// Token: 0x06012D0E RID: 77070 RVA: 0x004A4E66 File Offset: 0x004A3066
+	// Token: 0x060101CF RID: 65999 RVA: 0x004B296E File Offset: 0x004B0B6E
 	protected void OnClickMainItem()
 	{
 	}
 
-	// Token: 0x06012D0F RID: 77071 RVA: 0x004A4E68 File Offset: 0x004A3068
+	// Token: 0x060101D0 RID: 66000 RVA: 0x004B2970 File Offset: 0x004B0B70
 	[NullableContext(1)]
 	public void SetUnderLeftButtonText(string textId)
 	{
 		this.UnderComponent.RefreshLeftButtonText(textId);
 	}
 
-	// Token: 0x06012D10 RID: 77072 RVA: 0x004A4E76 File Offset: 0x004A3076
+	// Token: 0x060101D1 RID: 66001 RVA: 0x004B297E File Offset: 0x004B0B7E
 	[NullableContext(1)]
 	public void Update(PhantomBattleData data, int roleId, int cost, bool ifCompare = false)
 	{
@@ -93,7 +93,7 @@ public class VisionDetailComponent : UiPanelBase
 		this.UnderComponent.Update(data);
 	}
 
-	// Token: 0x06012D11 RID: 77073 RVA: 0x004A4EA8 File Offset: 0x004A30A8
+	// Token: 0x060101D2 RID: 66002 RVA: 0x004B29B0 File Offset: 0x004B0BB0
 	private void RefreshDetailView()
 	{
 		int key = (this.CurrentCompareState > false) ? 1 : 0;
@@ -153,52 +153,52 @@ public class VisionDetailComponent : UiPanelBase
 		this.VisionDetailInfoComponent.SetActive(true);
 	}
 
-	// Token: 0x06012D12 RID: 77074 RVA: 0x004A5164 File Offset: 0x004A3364
+	// Token: 0x060101D3 RID: 66003 RVA: 0x004B2C6C File Offset: 0x004B0E6C
 	public void SetButtonPanelShowState(bool state)
 	{
 		this.UnderComponent.SetActive(state);
 	}
 
-	// Token: 0x06012D13 RID: 77075 RVA: 0x004A5172 File Offset: 0x004A3372
+	// Token: 0x060101D4 RID: 66004 RVA: 0x004B2C7A File Offset: 0x004B0E7A
 	public void RefreshViewByCompareState(bool state)
 	{
 		this.UnderComponent.RefreshViewByCompareState(state);
 	}
 
-	// Token: 0x06012D14 RID: 77076 RVA: 0x004A5180 File Offset: 0x004A3380
+	// Token: 0x060101D5 RID: 66005 RVA: 0x004B2C88 File Offset: 0x004B0E88
 	public VisionDetailUnderComponent GetDetailUnderComponent()
 	{
 		return this.UnderComponent;
 	}
 
-	// Token: 0x04008DAC RID: 36268
+	// Token: 0x04008EF6 RID: 36598
 	private bool CurrentCompareState;
 
-	// Token: 0x04008DAD RID: 36269
+	// Token: 0x04008EF7 RID: 36599
 	private int RoleId;
 
-	// Token: 0x04008DAE RID: 36270
+	// Token: 0x04008EF8 RID: 36600
 	private int Cost;
 
-	// Token: 0x04008DAF RID: 36271
+	// Token: 0x04008EF9 RID: 36601
 	private PhantomBattleData CurrentPhantomData;
 
-	// Token: 0x04008DB0 RID: 36272
+	// Token: 0x04008EFA RID: 36602
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x04008DB1 RID: 36273
+	// Token: 0x04008EFB RID: 36603
 	private VisionDetailUnderComponent UnderComponent;
 
-	// Token: 0x04008DB2 RID: 36274
+	// Token: 0x04008EFC RID: 36604
 	private VisionDetailInfoComponent VisionDetailInfoComponent;
 
-	// Token: 0x02008A1A RID: 35354
+	// Token: 0x02007BA4 RID: 31652
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CD8F RID: 183695
+		// Token: 0x040280AF RID: 164015
 		UnderPanel,
-		// Token: 0x0402CD90 RID: 183696
+		// Token: 0x040280B0 RID: 164016
 		InfoPanel
 	}
 }

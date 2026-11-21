@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020C8 RID: 8392
+	// Token: 0x0200231D RID: 8989
 	public class JumpTalk_SetValue
 	{
-		// Token: 0x04006E8D RID: 28301
+		// Token: 0x040074AB RID: 29867
 		public int TalkId;
 	}
 }

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x0200712C RID: 28972
+	// Token: 0x0200635A RID: 25434
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class SocketTrackingStrategy : IFollowShooterAttachStrategy
 	{
-		// Token: 0x06046BD4 RID: 289748 RVA: 0x011D25F0 File Offset: 0x011D07F0
+		// Token: 0x0603DA22 RID: 252450 RVA: 0x011DB150 File Offset: 0x011D9350
 		public void OnAttach(USceneComponent sceneComponent, SLockOnFollowShooterAttachmentRule attachmentRule, USceneComponent targetComponent)
 		{
 			this.TrackingMap[sceneComponent] = new SocketTrackingInfo
@@ -23,19 +23,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			sceneComponent.D_K2_SetWorldTransform(ftransformDouble, false, ref WorldGlobal.SweepHitResult, true);
 		}
 
-		// Token: 0x06046BD5 RID: 289749 RVA: 0x011D2643 File Offset: 0x011D0843
+		// Token: 0x0603DA23 RID: 252451 RVA: 0x011DB1A3 File Offset: 0x011D93A3
 		public void OnDetach(USceneComponent sceneComponent, SLockOnFollowShooterAttachmentRule attachmentRule)
 		{
 			this.TrackingMap.Remove(sceneComponent);
 		}
 
-		// Token: 0x06046BD6 RID: 289750 RVA: 0x011D2652 File Offset: 0x011D0852
+		// Token: 0x0603DA24 RID: 252452 RVA: 0x011DB1B2 File Offset: 0x011D93B2
 		public void ClearForSceneComponent(USceneComponent sceneComponent)
 		{
 			this.TrackingMap.Remove(sceneComponent);
 		}
 
-		// Token: 0x06046BD7 RID: 289751 RVA: 0x011D2664 File Offset: 0x011D0864
+		// Token: 0x0603DA25 RID: 252453 RVA: 0x011DB1C4 File Offset: 0x011D93C4
 		public float? UpdateTransform(USceneComponent sceneComponent, IUpdateRotationParams @params)
 		{
 			ISocketTrackingInfo validTrackingInfo = this.GetValidTrackingInfo(sceneComponent);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return new float?(value);
 		}
 
-		// Token: 0x06046BD8 RID: 289752 RVA: 0x011D275C File Offset: 0x011D095C
+		// Token: 0x0603DA26 RID: 252454 RVA: 0x011DB2BC File Offset: 0x011D94BC
 		[return: Nullable(2)]
 		private ISocketTrackingInfo GetValidTrackingInfo(USceneComponent sceneComponent)
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return socketTrackingInfo;
 		}
 
-		// Token: 0x06046BD9 RID: 289753 RVA: 0x011D27AC File Offset: 0x011D09AC
+		// Token: 0x0603DA27 RID: 252455 RVA: 0x011DB30C File Offset: 0x011D950C
 		private FTransformDouble? ComputeFakeSocketWorldTransform(ISocketTrackingInfo trackingInfo, FRotator fakeParentRotation)
 		{
 			USceneComponent usceneComponent;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return new FTransformDouble?(UKismetMathLibrary.D_ComposeTransforms(ftransformDouble, ftransformDouble3));
 		}
 
-		// Token: 0x06046BDA RID: 289754 RVA: 0x011D281C File Offset: 0x011D0A1C
+		// Token: 0x0603DA28 RID: 252456 RVA: 0x011DB37C File Offset: 0x011D957C
 		private FRotator? DeriveFakeParentRotation(USceneComponent sceneComponent, ISocketTrackingInfo trackingInfo)
 		{
 			USceneComponent usceneComponent;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return new FRotator?((fquat * fquat2).Rotator());
 		}
 
-		// Token: 0x04025244 RID: 152132
+		// Token: 0x04020B24 RID: 133924
 		private readonly Dictionary<USceneComponent, ISocketTrackingInfo> TrackingMap = new Dictionary<USceneComponent, ISocketTrackingInfo>();
 	}
 }

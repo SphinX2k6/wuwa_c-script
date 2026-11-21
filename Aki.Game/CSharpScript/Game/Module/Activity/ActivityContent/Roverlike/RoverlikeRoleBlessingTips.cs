@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200614E RID: 24910
+	// Token: 0x020050CC RID: 20684
 	public class RoverlikeRoleBlessingTips : UiViewBase
 	{
-		// Token: 0x0603EF83 RID: 257923 RVA: 0x00F36B85 File Offset: 0x00F34D85
+		// Token: 0x06033C43 RID: 212035 RVA: 0x00E7DA59 File Offset: 0x00E7BC59
 		[NullableContext(1)]
 		public RoverlikeRoleBlessingTips(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EF84 RID: 257924 RVA: 0x00F36B90 File Offset: 0x00F34D90
+		// Token: 0x06033C44 RID: 212036 RVA: 0x00E7DA64 File Offset: 0x00E7BC64
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EF85 RID: 257925 RVA: 0x00F36C3C File Offset: 0x00F34E3C
+		// Token: 0x06033C45 RID: 212037 RVA: 0x00E7DB10 File Offset: 0x00E7BD10
 		protected override void OnBeforeShow()
 		{
 			RoverlikeGainEntry roverlikeGainEntry = this.OpenParam as RoverlikeGainEntry;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshTips(roverlikeGainEntry);
 		}
 
-		// Token: 0x0603EF86 RID: 257926 RVA: 0x00F36C60 File Offset: 0x00F34E60
+		// Token: 0x06033C46 RID: 212038 RVA: 0x00E7DB34 File Offset: 0x00E7BD34
 		protected override void OnFinishShow()
 		{
 			RoverlikeActivityController instance = RoverlikeActivityController.Instance;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}, (float)valueOrDefault, null, null, true, 1f);
 		}
 
-		// Token: 0x0603EF87 RID: 257927 RVA: 0x00F36CF0 File Offset: 0x00F34EF0
+		// Token: 0x06033C47 RID: 212039 RVA: 0x00E7DBC4 File Offset: 0x00E7BDC4
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearCloseTimer();
 		}
 
-		// Token: 0x0603EF88 RID: 257928 RVA: 0x00F36CF8 File Offset: 0x00F34EF8
+		// Token: 0x06033C48 RID: 212040 RVA: 0x00E7DBCC File Offset: 0x00E7BDCC
 		[NullableContext(1)]
 		private void RefreshTips(RoverlikeGainEntry entry)
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), blessConfig.Value.TriggerRoleInfo, Array.Empty<object>());
 		}
 
-		// Token: 0x0603EF89 RID: 257929 RVA: 0x00F36DAA File Offset: 0x00F34FAA
+		// Token: 0x06033C49 RID: 212041 RVA: 0x00E7DC7E File Offset: 0x00E7BE7E
 		private void ClearCloseTimer()
 		{
 			if (this.CloseTimer != null && TimerSystem.Instance.Has(this.CloseTimer))
@@ -109,23 +109,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.CloseTimer = null;
 		}
 
-		// Token: 0x04020DCD RID: 134605
+		// Token: 0x0401B6FA RID: 112378
 		[Nullable(2)]
 		private TimerHandle CloseTimer;
 
-		// Token: 0x0200C3B1 RID: 50097
+		// Token: 0x0200AD98 RID: 44440
 		private class EComponents
 		{
-			// Token: 0x0403B0D8 RID: 241880
+			// Token: 0x04035A39 RID: 219705
 			public const int PanelSelf = 0;
 
-			// Token: 0x0403B0D9 RID: 241881
+			// Token: 0x04035A3A RID: 219706
 			public const int TexHeadIcon = 1;
 
-			// Token: 0x0403B0DA RID: 241882
+			// Token: 0x04035A3B RID: 219707
 			public const int TxtName = 2;
 
-			// Token: 0x0403B0DB RID: 241883
+			// Token: 0x04035A3C RID: 219708
 			public const int TxtInfo = 3;
 		}
 	}

@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D67 RID: 19815
+	// Token: 0x02005266 RID: 21094
 	public enum EAiWanderType : ushort
 	{
-		// Token: 0x0400D7C5 RID: 55237
+		// Token: 0x0400E2FE RID: 58110
 		None,
-		// Token: 0x0400D7C6 RID: 55238
+		// Token: 0x0400E2FF RID: 58111
 		SmallRange = 300,
-		// Token: 0x0400D7C7 RID: 55239
+		// Token: 0x0400E300 RID: 58112
 		SmallRangeLargeBody,
-		// Token: 0x0400D7C8 RID: 55240
+		// Token: 0x0400E301 RID: 58113
 		MiddleRange = 600,
-		// Token: 0x0400D7C9 RID: 55241
+		// Token: 0x0400E302 RID: 58114
 		MiddleRangeLargeBody,
-		// Token: 0x0400D7CA RID: 55242
+		// Token: 0x0400E303 RID: 58115
 		BigRange = 1000,
-		// Token: 0x0400D7CB RID: 55243
+		// Token: 0x0400E304 RID: 58116
 		BigRangeLargeBody
 	}
 }

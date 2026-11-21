@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019BC RID: 6588
+	// Token: 0x02000456 RID: 1110
 	public sealed class FLogDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018808 RID: 100360 RVA: 0x002419EE File Offset: 0x0023FBEE
+		// Token: 0x06006B1D RID: 27421 RVA: 0x0009BF2A File Offset: 0x0009A12A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLogDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018809 RID: 100361 RVA: 0x002419FA File Offset: 0x0023FBFA
+		// Token: 0x06006B1E RID: 27422 RVA: 0x0009BF36 File Offset: 0x0009A136
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLogDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLogDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601880A RID: 100362 RVA: 0x00241A1D File Offset: 0x0023FC1D
+		// Token: 0x06006B1F RID: 27423 RVA: 0x0009BF59 File Offset: 0x0009A159
 		public FLogDelegate()
 		{
 		}
 
-		// Token: 0x0601880B RID: 100363 RVA: 0x00241A25 File Offset: 0x0023FC25
+		// Token: 0x06006B20 RID: 27424 RVA: 0x0009BF61 File Offset: 0x0009A161
 		[NullableContext(2)]
 		public FLogDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601880C RID: 100364 RVA: 0x00241A2F File Offset: 0x0023FC2F
+		// Token: 0x06006B21 RID: 27425 RVA: 0x0009BF6B File Offset: 0x0009A16B
 		public FLogDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601880D RID: 100365 RVA: 0x00241A3A File Offset: 0x0023FC3A
+		// Token: 0x06006B22 RID: 27426 RVA: 0x0009BF76 File Offset: 0x0009A176
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FName, int, string, string>) ?? ((Action<FName, int, string, string>)Delegate.CreateDelegate(typeof(Action<FName, int, string, string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601880E RID: 100366 RVA: 0x00241A6C File Offset: 0x0023FC6C
+		// Token: 0x06006B23 RID: 27427 RVA: 0x0009BFA8 File Offset: 0x0009A1A8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FName, int, string, string> Callback)
 		{
 			if (FLogDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLogDelegate.RegisterId);
 		}
 
-		// Token: 0x0601880F RID: 100367 RVA: 0x00241AA8 File Offset: 0x0023FCA8
+		// Token: 0x06006B24 RID: 27428 RVA: 0x0009BFE4 File Offset: 0x0009A1E4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(in FName Category, int Verbosity, string Format, string Message)
 		{
 			FLogDelegate.__FLogDelegate_DelegateParams* ptr = stackalloc FLogDelegate.__FLogDelegate_DelegateParams[(UIntPtr)63] + 15L / (long)sizeof(FLogDelegate.__FLogDelegate_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FLogDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06018810 RID: 100368 RVA: 0x00241B20 File Offset: 0x0023FD20
+		// Token: 0x06006B25 RID: 27429 RVA: 0x0009C05C File Offset: 0x0009A25C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FName, int, string, string> action = target as Action<FName, int, string, string>;
@@ -97,43 +94,43 @@ namespace UnrealEngine
 			action(((FLogDelegate.__FLogDelegate_DelegateParams*)__Parameters)->Category, ((FLogDelegate.__FLogDelegate_DelegateParams*)__Parameters)->Verbosity, arg, arg2);
 		}
 
-		// Token: 0x0400D3BF RID: 54207
+		// Token: 0x04002D6C RID: 11628
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D3C0 RID: 54208
+		// Token: 0x04002D6D RID: 11629
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroLogAnalyzer.LogDelegate__DelegateSignature";
 
-		// Token: 0x0400D3C1 RID: 54209
+		// Token: 0x04002D6E RID: 11630
 		private static int RegisterId;
 
-		// Token: 0x02003088 RID: 12424
+		// Token: 0x02000B6C RID: 2924
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __FLogDelegate_DelegateParams
+		private ref struct __FLogDelegate_DelegateParams
 		{
-			// Token: 0x04016D6C RID: 93548
+			// Token: 0x04005C8A RID: 23690
 			[FieldOffset(0)]
 			public FName Category;
 
-			// Token: 0x04016D6D RID: 93549
+			// Token: 0x04005C8B RID: 23691
 			[FieldOffset(12)]
 			public int Verbosity;
 
-			// Token: 0x04016D6E RID: 93550
+			// Token: 0x04005C8C RID: 23692
 			[FieldOffset(16)]
 			public FString Format;
 
-			// Token: 0x04016D6F RID: 93551
+			// Token: 0x04005C8D RID: 23693
 			[FieldOffset(32)]
 			public FString Message;
 		}
 
-		// Token: 0x02003089 RID: 12425
+		// Token: 0x02000B6D RID: 2925
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016D70 RID: 93552
+			// Token: 0x04005C8E RID: 23694
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

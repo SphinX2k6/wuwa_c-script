@@ -6,12 +6,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002A05 RID: 10757
+// Token: 0x02001F80 RID: 8064
 [NullableContext(2)]
 [Nullable(0)]
 public class ShowerSkillButton : UiPanelBase
 {
-	// Token: 0x0601651E RID: 91422 RVA: 0x005A60A4 File Offset: 0x005A42A4
+	// Token: 0x06013F25 RID: 81701 RVA: 0x005D107C File Offset: 0x005CF27C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class ShowerSkillButton : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601651F RID: 91423 RVA: 0x005A614D File Offset: 0x005A434D
+	// Token: 0x06013F26 RID: 81702 RVA: 0x005D1125 File Offset: 0x005CF325
 	protected override void OnStart()
 	{
 		this.CoolDownUiItem = base.GetItem(1);
@@ -37,7 +37,7 @@ public class ShowerSkillButton : UiPanelBase
 		this.SetSkillButtonEnable(true);
 	}
 
-	// Token: 0x06016520 RID: 91424 RVA: 0x005A617D File Offset: 0x005A437D
+	// Token: 0x06013F27 RID: 81703 RVA: 0x005D1155 File Offset: 0x005CF355
 	private void SetSkillButtonEnable(bool bEnable)
 	{
 		this.Enable = bEnable;
@@ -49,7 +49,7 @@ public class ShowerSkillButton : UiPanelBase
 		button.SetSelfInteractive(bEnable);
 	}
 
-	// Token: 0x06016521 RID: 91425 RVA: 0x005A6198 File Offset: 0x005A4398
+	// Token: 0x06013F28 RID: 81704 RVA: 0x005D1170 File Offset: 0x005CF370
 	public void TickSkillCoolDown(float delta)
 	{
 		if (this.CurrentCoolDownTime <= 0f || this.TotalCoolDownTime <= 0f || this.CoolDownBarUiSprite == null)
@@ -65,7 +65,7 @@ public class ShowerSkillButton : UiPanelBase
 		coolDownUiText.SetText(this.CurrentCoolDownTime.ToString(defaultInterpolatedStringHandler.ToStringAndClear()), true);
 	}
 
-	// Token: 0x06016522 RID: 91426 RVA: 0x005A622F File Offset: 0x005A442F
+	// Token: 0x06013F29 RID: 81705 RVA: 0x005D1207 File Offset: 0x005CF407
 	public void ResetSkillCoolDown()
 	{
 		this.SetSkillButtonEnable(true);
@@ -78,7 +78,7 @@ public class ShowerSkillButton : UiPanelBase
 		this.CurrentCoolDownTime = 0f;
 	}
 
-	// Token: 0x06016523 RID: 91427 RVA: 0x005A625C File Offset: 0x005A445C
+	// Token: 0x06013F2A RID: 81706 RVA: 0x005D1234 File Offset: 0x005CF434
 	private void ResetCoolDownTimer()
 	{
 		if (this.ChangeCoolDownRefreshTimerId != null && TimerSystem.Instance.Has(this.ChangeCoolDownRefreshTimerId))
@@ -91,7 +91,7 @@ public class ShowerSkillButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016524 RID: 91428 RVA: 0x005A62C0 File Offset: 0x005A44C0
+	// Token: 0x06013F2B RID: 81707 RVA: 0x005D1298 File Offset: 0x005CF498
 	public void PlaySwitchCd()
 	{
 		int? intConfig = ConfigCommonParamById.GetIntConfig("ShowerVisionChangeCoolDown");
@@ -102,7 +102,7 @@ public class ShowerSkillButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016525 RID: 91429 RVA: 0x005A6308 File Offset: 0x005A4508
+	// Token: 0x06013F2C RID: 81708 RVA: 0x005D12E0 File Offset: 0x005CF4E0
 	private void PlaySkillTimeDown(float coolDownTime, float totalCoolDown)
 	{
 		this.ResetCoolDownTimer();
@@ -130,7 +130,7 @@ public class ShowerSkillButton : UiPanelBase
 		this.SetSkillButtonEnable(false);
 	}
 
-	// Token: 0x06016526 RID: 91430 RVA: 0x005A63F4 File Offset: 0x005A45F4
+	// Token: 0x06013F2D RID: 81709 RVA: 0x005D13CC File Offset: 0x005CF5CC
 	private void OnSkillCoolDownRefresh(float delta)
 	{
 		this.CurrentCoolDownTime -= 0.1f;
@@ -147,13 +147,13 @@ public class ShowerSkillButton : UiPanelBase
 		this.FinishSkillCoolDown();
 	}
 
-	// Token: 0x06016527 RID: 91431 RVA: 0x005A648A File Offset: 0x005A468A
+	// Token: 0x06013F2E RID: 81710 RVA: 0x005D1462 File Offset: 0x005CF662
 	protected void FinishSkillCoolDown()
 	{
 		this.ResetSkillCoolDown();
 	}
 
-	// Token: 0x06016528 RID: 91432 RVA: 0x005A6494 File Offset: 0x005A4694
+	// Token: 0x06013F2F RID: 81711 RVA: 0x005D146C File Offset: 0x005CF66C
 	[NullableContext(1)]
 	private void RefreshTimeDilationAtTimerCreate(TimerHandle timerId)
 	{
@@ -169,20 +169,20 @@ public class ShowerSkillButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016529 RID: 91433 RVA: 0x005A64D4 File Offset: 0x005A46D4
+	// Token: 0x06013F30 RID: 81712 RVA: 0x005D14AC File Offset: 0x005CF6AC
 	private float GetTimeDilation()
 	{
 		return Time.Instance.TimeDilation;
 	}
 
-	// Token: 0x0601652A RID: 91434 RVA: 0x005A64E0 File Offset: 0x005A46E0
+	// Token: 0x06013F31 RID: 81713 RVA: 0x005D14B8 File Offset: 0x005CF6B8
 	[NullableContext(1)]
 	public void SetPressCallback(Action onPressCallback)
 	{
 		this.OnPressCallback = onPressCallback;
 	}
 
-	// Token: 0x0601652B RID: 91435 RVA: 0x005A64E9 File Offset: 0x005A46E9
+	// Token: 0x06013F32 RID: 81714 RVA: 0x005D14C1 File Offset: 0x005CF6C1
 	private void OnButtonClick()
 	{
 		if (!this.Enable)
@@ -202,7 +202,7 @@ public class ShowerSkillButton : UiPanelBase
 		onPressCallback();
 	}
 
-	// Token: 0x0601652C RID: 91436 RVA: 0x005A6518 File Offset: 0x005A4718
+	// Token: 0x06013F33 RID: 81715 RVA: 0x005D14F0 File Offset: 0x005CF6F0
 	[NullableContext(1)]
 	public void SetSkillIconSprite(string path)
 	{
@@ -212,77 +212,77 @@ public class ShowerSkillButton : UiPanelBase
 		base.SetSpriteTransitionByPath(path, uiSpriteTransition, EUISelectableSelectionState.EUISelectableSelectionState_MAX).Forget();
 	}
 
-	// Token: 0x0601652D RID: 91437 RVA: 0x005A6569 File Offset: 0x005A4769
+	// Token: 0x06013F34 RID: 81716 RVA: 0x005D1541 File Offset: 0x005CF741
 	public void SetButtonInteractive(bool value)
 	{
 		base.GetButton(0).SetSelfInteractive(value);
 	}
 
-	// Token: 0x0601652E RID: 91438 RVA: 0x005A6578 File Offset: 0x005A4778
+	// Token: 0x06013F35 RID: 81717 RVA: 0x005D1550 File Offset: 0x005CF750
 	public void SetDisabledHint(Action callback)
 	{
 		this.DisabledHintCallback = callback;
 	}
 
-	// Token: 0x0400A5FF RID: 42495
+	// Token: 0x0400A9E9 RID: 43497
 	private const int SKILL_COOLDOWN_INTERVAL = 100;
 
-	// Token: 0x0400A600 RID: 42496
+	// Token: 0x0400A9EA RID: 43498
 	private const float SKILL_COOLDOWN_LOOP_INTERVAL = 0.1f;
 
-	// Token: 0x0400A601 RID: 42497
+	// Token: 0x0400A9EB RID: 43499
 	private Action OnPressCallback;
 
-	// Token: 0x0400A602 RID: 42498
+	// Token: 0x0400A9EC RID: 43500
 	private bool Enable;
 
-	// Token: 0x0400A603 RID: 42499
+	// Token: 0x0400A9ED RID: 43501
 	private Action DisabledHintCallback;
 
-	// Token: 0x0400A604 RID: 42500
+	// Token: 0x0400A9EE RID: 43502
 	private UUIItem CoolDownUiItem;
 
-	// Token: 0x0400A605 RID: 42501
+	// Token: 0x0400A9EF RID: 43503
 	private UUIText CoolDownUiText;
 
-	// Token: 0x0400A606 RID: 42502
+	// Token: 0x0400A9F0 RID: 43504
 	private UUISprite CoolDownBarUiSprite;
 
-	// Token: 0x0400A607 RID: 42503
+	// Token: 0x0400A9F1 RID: 43505
 	private float CurrentCoolDownTime;
 
-	// Token: 0x0400A608 RID: 42504
+	// Token: 0x0400A9F2 RID: 43506
 	private float TotalCoolDownTime;
 
-	// Token: 0x0400A609 RID: 42505
+	// Token: 0x0400A9F3 RID: 43507
 	private double CoolDownStartTime;
 
-	// Token: 0x0400A60A RID: 42506
+	// Token: 0x0400A9F4 RID: 43508
 	private TimerHandle ChangeCoolDownRefreshTimerId;
 
-	// Token: 0x0400A60B RID: 42507
+	// Token: 0x0400A9F5 RID: 43509
 	private readonly TimerHandle HideCdTimerId;
 
-	// Token: 0x0400A60C RID: 42508
+	// Token: 0x0400A9F6 RID: 43510
 	private readonly int CdFixedPoint = 1;
 
-	// Token: 0x02009040 RID: 36928
+	// Token: 0x02008287 RID: 33415
 	[NullableContext(0)]
 	private class EShowerSkillButtonDefine
 	{
-		// Token: 0x0402EB52 RID: 191314
+		// Token: 0x0402A24A RID: 172618
 		public const int Button = 0;
 
-		// Token: 0x0402EB53 RID: 191315
+		// Token: 0x0402A24B RID: 172619
 		public const int CoolDownItem = 1;
 
-		// Token: 0x0402EB54 RID: 191316
+		// Token: 0x0402A24C RID: 172620
 		public const int CoolDownBarSprite = 2;
 
-		// Token: 0x0402EB55 RID: 191317
+		// Token: 0x0402A24D RID: 172621
 		public const int CoolDownText = 3;
 
-		// Token: 0x0402EB56 RID: 191318
+		// Token: 0x0402A24E RID: 172622
 		public const int SkillIconSprite = 4;
 	}
 }

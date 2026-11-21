@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020001AC RID: 428
+	// Token: 0x020001B0 RID: 432
 	public sealed class BlackSwordChallengeInfo : IMessage<BlackSwordChallengeInfo>, IMessage, IEquatable<BlackSwordChallengeInfo>, IDeepCloneable<BlackSwordChallengeInfo>, IBufferMessage
 	{
-		// Token: 0x06003209 RID: 12809 RVA: 0x0007F413 File Offset: 0x0007D613
+		// Token: 0x06003296 RID: 12950 RVA: 0x00080B7F File Offset: 0x0007ED7F
 		[NullableContext(1)]
 		public static BlackSwordChallengeInfo Create()
 		{
 			return new BlackSwordChallengeInfo();
 		}
 
-		// Token: 0x170007D3 RID: 2003
-		// (get) Token: 0x0600320A RID: 12810 RVA: 0x0007F41A File Offset: 0x0007D61A
+		// Token: 0x170007EC RID: 2028
+		// (get) Token: 0x06003297 RID: 12951 RVA: 0x00080B86 File Offset: 0x0007ED86
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<BlackSwordChallengeInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170007D4 RID: 2004
-		// (get) Token: 0x0600320B RID: 12811 RVA: 0x0007F421 File Offset: 0x0007D621
+		// Token: 0x170007ED RID: 2029
+		// (get) Token: 0x06003298 RID: 12952 RVA: 0x00080B8D File Offset: 0x0007ED8D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170007D5 RID: 2005
-		// (get) Token: 0x0600320C RID: 12812 RVA: 0x0007F424 File Offset: 0x0007D624
+		// Token: 0x170007EE RID: 2030
+		// (get) Token: 0x06003299 RID: 12953 RVA: 0x00080B90 File Offset: 0x0007ED90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600320D RID: 12813 RVA: 0x0007F42B File Offset: 0x0007D62B
+		// Token: 0x0600329A RID: 12954 RVA: 0x00080B97 File Offset: 0x0007ED97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BlackSwordChallengeInfo()
 		{
 		}
 
-		// Token: 0x0600320E RID: 12814 RVA: 0x0007F433 File Offset: 0x0007D633
+		// Token: 0x0600329B RID: 12955 RVA: 0x00080B9F File Offset: 0x0007ED9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BlackSwordChallengeInfo(BlackSwordChallengeInfo other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600320F RID: 12815 RVA: 0x0007F470 File Offset: 0x0007D670
+		// Token: 0x0600329C RID: 12956 RVA: 0x00080BDC File Offset: 0x0007EDDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BlackSwordChallengeInfo Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new BlackSwordChallengeInfo(this);
 		}
 
-		// Token: 0x170007D6 RID: 2006
-		// (get) Token: 0x06003210 RID: 12816 RVA: 0x0007F478 File Offset: 0x0007D678
-		// (set) Token: 0x06003211 RID: 12817 RVA: 0x0007F480 File Offset: 0x0007D680
+		// Token: 0x170007EF RID: 2031
+		// (get) Token: 0x0600329D RID: 12957 RVA: 0x00080BE4 File Offset: 0x0007EDE4
+		// (set) Token: 0x0600329E RID: 12958 RVA: 0x00080BEC File Offset: 0x0007EDEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelPlayId
@@ -96,9 +96,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170007D7 RID: 2007
-		// (get) Token: 0x06003212 RID: 12818 RVA: 0x0007F489 File Offset: 0x0007D689
-		// (set) Token: 0x06003213 RID: 12819 RVA: 0x0007F491 File Offset: 0x0007D691
+		// Token: 0x170007F0 RID: 2032
+		// (get) Token: 0x0600329F RID: 12959 RVA: 0x00080BF5 File Offset: 0x0007EDF5
+		// (set) Token: 0x060032A0 RID: 12960 RVA: 0x00080BFD File Offset: 0x0007EDFD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsUnLocked
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170007D8 RID: 2008
-		// (get) Token: 0x06003214 RID: 12820 RVA: 0x0007F49A File Offset: 0x0007D69A
-		// (set) Token: 0x06003215 RID: 12821 RVA: 0x0007F4A2 File Offset: 0x0007D6A2
+		// Token: 0x170007F1 RID: 2033
+		// (get) Token: 0x060032A1 RID: 12961 RVA: 0x00080C06 File Offset: 0x0007EE06
+		// (set) Token: 0x060032A2 RID: 12962 RVA: 0x00080C0E File Offset: 0x0007EE0E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CompleteNumber
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003216 RID: 12822 RVA: 0x0007F4AB File Offset: 0x0007D6AB
+		// Token: 0x060032A3 RID: 12963 RVA: 0x00080C17 File Offset: 0x0007EE17
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BlackSwordChallengeInfo);
 		}
 
-		// Token: 0x06003217 RID: 12823 RVA: 0x0007F4BC File Offset: 0x0007D6BC
+		// Token: 0x060032A4 RID: 12964 RVA: 0x00080C28 File Offset: 0x0007EE28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BlackSwordChallengeInfo other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelPlayId == other.LevelPlayId && this.IsUnLocked == other.IsUnLocked && this.CompleteNumber == other.CompleteNumber && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06003218 RID: 12824 RVA: 0x0007F518 File Offset: 0x0007D718
+		// Token: 0x060032A5 RID: 12965 RVA: 0x00080C84 File Offset: 0x0007EE84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003219 RID: 12825 RVA: 0x0007F589 File Offset: 0x0007D789
+		// Token: 0x060032A6 RID: 12966 RVA: 0x00080CF5 File Offset: 0x0007EEF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600321A RID: 12826 RVA: 0x0007F596 File Offset: 0x0007D796
+		// Token: 0x060032A7 RID: 12967 RVA: 0x00080D02 File Offset: 0x0007EF02
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600321B RID: 12827 RVA: 0x0007F5A0 File Offset: 0x0007D7A0
+		// Token: 0x060032A8 RID: 12968 RVA: 0x00080D0C File Offset: 0x0007EF0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600321C RID: 12828 RVA: 0x0007F614 File Offset: 0x0007D814
+		// Token: 0x060032A9 RID: 12969 RVA: 0x00080D80 File Offset: 0x0007EF80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600321D RID: 12829 RVA: 0x0007F678 File Offset: 0x0007D878
+		// Token: 0x060032AA RID: 12970 RVA: 0x00080DE4 File Offset: 0x0007EFE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BlackSwordChallengeInfo other)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600321E RID: 12830 RVA: 0x0007F6DC File Offset: 0x0007D8DC
+		// Token: 0x060032AB RID: 12971 RVA: 0x00080E48 File Offset: 0x0007F048
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600321F RID: 12831 RVA: 0x0007F6E8 File Offset: 0x0007D8E8
+		// Token: 0x060032AC RID: 12972 RVA: 0x00080E54 File Offset: 0x0007F054
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -307,28 +307,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400295C RID: 10588
+		// Token: 0x040029D7 RID: 10711
 		private static readonly MessageParser<BlackSwordChallengeInfo> _parser = new MessageParser<BlackSwordChallengeInfo>(() => new BlackSwordChallengeInfo());
 
-		// Token: 0x0400295D RID: 10589
+		// Token: 0x040029D8 RID: 10712
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400295E RID: 10590
+		// Token: 0x040029D9 RID: 10713
 		public const int LevelPlayIdFieldNumber = 1;
 
-		// Token: 0x0400295F RID: 10591
+		// Token: 0x040029DA RID: 10714
 		private int levelPlayId_;
 
-		// Token: 0x04002960 RID: 10592
+		// Token: 0x040029DB RID: 10715
 		public const int IsUnLockedFieldNumber = 2;
 
-		// Token: 0x04002961 RID: 10593
+		// Token: 0x040029DC RID: 10716
 		private bool isUnLocked_;
 
-		// Token: 0x04002962 RID: 10594
+		// Token: 0x040029DD RID: 10717
 		public const int CompleteNumberFieldNumber = 3;
 
-		// Token: 0x04002963 RID: 10595
+		// Token: 0x040029DE RID: 10718
 		private int completeNumber_;
 	}
 }

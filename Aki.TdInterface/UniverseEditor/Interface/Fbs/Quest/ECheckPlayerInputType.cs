@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C92 RID: 15506
+	// Token: 0x020040A4 RID: 16548
 	public enum ECheckPlayerInputType : byte
 	{
-		// Token: 0x0400B317 RID: 45847
+		// Token: 0x0400BCAE RID: 48302
 		PressButton
 	}
 }

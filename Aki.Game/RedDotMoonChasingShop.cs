@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033C7 RID: 13255
+// Token: 0x02002939 RID: 10553
 [NullableContext(1)]
 [Nullable(0)]
 public class RedDotMoonChasingShop : RedDotBase
 {
-	// Token: 0x0601CBD1 RID: 117713 RVA: 0x00808DC9 File Offset: 0x00806FC9
+	// Token: 0x0601A8C9 RID: 108745 RVA: 0x0082F38D File Offset: 0x0082D58D
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.MoonChasingRewardAndShop);
 	}
 
-	// Token: 0x0601CBD2 RID: 117714 RVA: 0x00808DD8 File Offset: 0x00806FD8
+	// Token: 0x0601A8CA RID: 108746 RVA: 0x0082F39C File Offset: 0x0082D59C
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.MoonChasingRefreshRewardRedDot, new Action(base.EventCheck));
@@ -23,7 +23,7 @@ public class RedDotMoonChasingShop : RedDotBase
 		EventSystem.Instance.Add<int>(EEventName.GoodsSoldOut, new Action<int>(this.OnGoodsSoldOut));
 	}
 
-	// Token: 0x0601CBD3 RID: 117715 RVA: 0x00808E58 File Offset: 0x00807058
+	// Token: 0x0601A8CB RID: 108747 RVA: 0x0082F41C File Offset: 0x0082D61C
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.MoonChasingRefreshRewardRedDot, new Action(base.EventCheck));
@@ -32,32 +32,32 @@ public class RedDotMoonChasingShop : RedDotBase
 		EventSystem.Instance.Remove<int>(EEventName.GoodsSoldOut, new Action<int>(this.OnGoodsSoldOut));
 	}
 
-	// Token: 0x0601CBD4 RID: 117716 RVA: 0x00808ED5 File Offset: 0x008070D5
+	// Token: 0x0601A8CC RID: 108748 RVA: 0x0082F499 File Offset: 0x0082D699
 	protected override bool IsAllEventParamAsUId()
 	{
 		return false;
 	}
 
-	// Token: 0x0601CBD5 RID: 117717 RVA: 0x00808ED8 File Offset: 0x008070D8
+	// Token: 0x0601A8CD RID: 108749 RVA: 0x0082F49C File Offset: 0x0082D69C
 	protected override bool OnCheck(int uId = 0)
 	{
 		ActivityMoonChasingController.Instance.RefreshActivityRedDot();
 		return MoonChasingRewardModel.Instance.GetShopRedDotState();
 	}
 
-	// Token: 0x0601CBD6 RID: 117718 RVA: 0x00808EEE File Offset: 0x008070EE
+	// Token: 0x0601A8CE RID: 108750 RVA: 0x0082F4B2 File Offset: 0x0082D6B2
 	private void OnGoodsSoldOut(int _)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CBD7 RID: 117719 RVA: 0x00808EF6 File Offset: 0x008070F6
+	// Token: 0x0601A8CF RID: 108751 RVA: 0x0082F4BA File Offset: 0x0082D6BA
 	private void OnUnLockGoods(IReadOnlyDictionary<int, HashSet<int>> payShopMap)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CBD8 RID: 117720 RVA: 0x00808EFE File Offset: 0x008070FE
+	// Token: 0x0601A8D0 RID: 108752 RVA: 0x0082F4C2 File Offset: 0x0082D6C2
 	private void OnRefreshGoodsList(IReadOnlySet<int> tabSet)
 	{
 		base.EventCheck();

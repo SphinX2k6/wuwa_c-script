@@ -14,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045D9 RID: 17881
+	// Token: 0x02003502 RID: 13570
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class RenderModuleModel : ModelBase
 	{
-		// Token: 0x0602E16E RID: 188782 RVA: 0x00A9FEBD File Offset: 0x00A9E0BD
+		// Token: 0x06022862 RID: 141410 RVA: 0x009CC599 File Offset: 0x009CA799
 		public EWuYinQuState GetCurrentKeyState(string actorKey)
 		{
 			if (actorKey == this.CurrentBattleKey)
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Render
 			return EWuYinQuState.StateIdle;
 		}
 
-		// Token: 0x0602E16F RID: 188783 RVA: 0x00A9FED5 File Offset: 0x00A9E0D5
+		// Token: 0x06022863 RID: 141411 RVA: 0x009CC5B1 File Offset: 0x009CA7B1
 		public bool GetIdleClearAtmosphere(string actorKey)
 		{
 			return actorKey == this.CurrentBattleKey && this.IsIdleClearAtmosphere;
 		}
 
-		// Token: 0x0602E170 RID: 188784 RVA: 0x00A9FEF0 File Offset: 0x00A9E0F0
+		// Token: 0x06022864 RID: 141412 RVA: 0x009CC5CC File Offset: 0x009CA7CC
 		public unsafe void SetBattleState(string key, EWuYinQuState state, bool instantTransition = false)
 		{
 			this.CurrentBattleKey = key;
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0602E171 RID: 188785 RVA: 0x00A9FF91 File Offset: 0x00A9E191
+		// Token: 0x06022865 RID: 141413 RVA: 0x009CC66D File Offset: 0x009CA86D
 		public bool IsStateInstantTransition()
 		{
 			return this.InstantTransition;
 		}
 
-		// Token: 0x0602E172 RID: 188786 RVA: 0x00A9FF9C File Offset: 0x00A9E19C
+		// Token: 0x06022866 RID: 141414 RVA: 0x009CC678 File Offset: 0x009CA878
 		private string GetStateString(EWuYinQuState inputState)
 		{
 			string result;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Render
 			return result;
 		}
 
-		// Token: 0x0602E173 RID: 188787 RVA: 0x00A9FFF4 File Offset: 0x00A9E1F4
+		// Token: 0x06022867 RID: 141415 RVA: 0x009CC6D0 File Offset: 0x009CA8D0
 		public TArray<string> GetWuYinQuBattleDebugInfo()
 		{
 			TArray<string> tarray = new TArray<string>();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Render
 			return tarray;
 		}
 
-		// Token: 0x0602E174 RID: 188788 RVA: 0x00AA00AC File Offset: 0x00A9E2AC
+		// Token: 0x06022868 RID: 141416 RVA: 0x009CC788 File Offset: 0x009CA988
 		public EWuYinQuState GetBattleState(string key)
 		{
 			if (this.CurrentBattleKey == key)
@@ -124,14 +124,14 @@ namespace CSharpScript.Game.Render
 			return EWuYinQuState.StateIdle;
 		}
 
-		// Token: 0x0602E175 RID: 188789 RVA: 0x00AA00C4 File Offset: 0x00A9E2C4
+		// Token: 0x06022869 RID: 141417 RVA: 0x009CC7A0 File Offset: 0x009CA9A0
 		[NullableContext(2)]
 		public string GetCurrentBattleKey()
 		{
 			return this.CurrentBattleKey;
 		}
 
-		// Token: 0x0602E176 RID: 188790 RVA: 0x00AA00CC File Offset: 0x00A9E2CC
+		// Token: 0x0602286A RID: 141418 RVA: 0x009CC7A8 File Offset: 0x009CA9A8
 		public void AddBattleReference(FVectorDouble location)
 		{
 			this.BattleRefCount++;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E177 RID: 188791 RVA: 0x00AA00ED File Offset: 0x00A9E2ED
+		// Token: 0x0602286B RID: 141419 RVA: 0x009CC7C9 File Offset: 0x009CA9C9
 		public float GetSnowIntensity()
 		{
 			RenderDataManager instance = RenderDataManager.Instance;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Render
 			return instance.GetSnowIntensity();
 		}
 
-		// Token: 0x0602E178 RID: 188792 RVA: 0x00AA0103 File Offset: 0x00A9E303
+		// Token: 0x0602286C RID: 141420 RVA: 0x009CC7DF File Offset: 0x009CA9DF
 		public float GetRainIntensity()
 		{
 			RenderDataManager instance = RenderDataManager.Instance;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Render
 			return instance.GetRainIntensity();
 		}
 
-		// Token: 0x0602E179 RID: 188793 RVA: 0x00AA0119 File Offset: 0x00A9E319
+		// Token: 0x0602286D RID: 141421 RVA: 0x009CC7F5 File Offset: 0x009CA9F5
 		public void DecBattleReference()
 		{
 			this.BattleRefCount--;
@@ -173,12 +173,12 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E17A RID: 188794 RVA: 0x00AA0159 File Offset: 0x00A9E359
+		// Token: 0x0602286E RID: 141422 RVA: 0x009CC835 File Offset: 0x009CAA35
 		public void SetStreamingSourceState(FVectorDouble location, bool isEnable)
 		{
 		}
 
-		// Token: 0x0602E17B RID: 188795 RVA: 0x00AA015C File Offset: 0x00A9E35C
+		// Token: 0x0602286F RID: 141423 RVA: 0x009CC838 File Offset: 0x009CAA38
 		[return: Nullable(2)]
 		public WuYinQuBattleActor GetWuYinQuBattleActorByName(string name)
 		{
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Render
 			return null;
 		}
 
-		// Token: 0x0602E17C RID: 188796 RVA: 0x00AA017C File Offset: 0x00A9E37C
+		// Token: 0x06022870 RID: 141424 RVA: 0x009CC858 File Offset: 0x009CAA58
 		[NullableContext(2)]
 		public bool AddWuYinQuBattleActor(WuYinQuBattleActor actor)
 		{
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Render
 			return false;
 		}
 
-		// Token: 0x0602E17D RID: 188797 RVA: 0x00AA01EC File Offset: 0x00A9E3EC
+		// Token: 0x06022871 RID: 141425 RVA: 0x009CC8C8 File Offset: 0x009CAAC8
 		[NullableContext(2)]
 		public bool RemoveWuYinQuBattleActor(WuYinQuBattleActor actor)
 		{
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Render
 			return this.AllWuYinQuBattleActors.Remove(key);
 		}
 
-		// Token: 0x0602E17E RID: 188798 RVA: 0x00AA0240 File Offset: 0x00A9E440
+		// Token: 0x06022872 RID: 141426 RVA: 0x009CC91C File Offset: 0x009CAB1C
 		public void AddTickableObject(IRenderModuleTickableObject obj)
 		{
 			if (this.TickableObjects.IndexOf(obj) < 0)
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E17F RID: 188799 RVA: 0x00AA0260 File Offset: 0x00A9E460
+		// Token: 0x06022873 RID: 141427 RVA: 0x009CC93C File Offset: 0x009CAB3C
 		public void RemoveTickableObject(IRenderModuleTickableObject obj)
 		{
 			int num = this.TickableObjects.IndexOf(obj);
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Render
 			this.TickableObjects.RemoveAt(this.TickableObjects.Count - 1);
 		}
 
-		// Token: 0x0602E180 RID: 188800 RVA: 0x00AA02D4 File Offset: 0x00A9E4D4
+		// Token: 0x06022874 RID: 141428 RVA: 0x009CC9B0 File Offset: 0x009CABB0
 		public void AddCharRenderShell(CharRenderingComponent charRenderingComponent)
 		{
 			CharRenderShell charRenderShell = new CharRenderShell();
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Render
 			this.AllRenderShell[charRenderingComponent] = charRenderShell;
 		}
 
-		// Token: 0x0602E181 RID: 188801 RVA: 0x00AA02FB File Offset: 0x00A9E4FB
+		// Token: 0x06022875 RID: 141429 RVA: 0x009CC9D7 File Offset: 0x009CABD7
 		public bool RemoveCharRenderShell(CharRenderingComponent charRenderingComponent)
 		{
 			CharRenderShell valueOrDefault = this.AllRenderShell.GetValueOrDefault(charRenderingComponent);
@@ -277,8 +277,8 @@ namespace CSharpScript.Game.Render
 			return this.AllRenderShell.Remove(charRenderingComponent);
 		}
 
-		// Token: 0x170075AB RID: 30123
-		// (get) Token: 0x0602E182 RID: 188802 RVA: 0x00AA0320 File Offset: 0x00A9E520
+		// Token: 0x17004863 RID: 18531
+		// (get) Token: 0x06022876 RID: 141430 RVA: 0x009CC9FC File Offset: 0x009CABFC
 		public bool ForceTickCharRenderShell
 		{
 			get
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E183 RID: 188803 RVA: 0x00AA0328 File Offset: 0x00A9E528
+		// Token: 0x06022877 RID: 141431 RVA: 0x009CCA04 File Offset: 0x009CAC04
 		private void OnSetGamePaused(bool isPaused)
 		{
 			if (!isPaused && this.ForceTickCharRenderShellInternal)
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E184 RID: 188804 RVA: 0x00AA0367 File Offset: 0x00A9E567
+		// Token: 0x06022878 RID: 141432 RVA: 0x009CCA43 File Offset: 0x009CAC43
 		private void OnWorldDone()
 		{
 			RenderDataManager instance = RenderDataManager.Instance;
@@ -305,13 +305,13 @@ namespace CSharpScript.Game.Render
 			instance.SetIsPlayerMale(instance2 != null && instance2.GetPlayerGender() == EPlayerGender.Male);
 		}
 
-		// Token: 0x0602E185 RID: 188805 RVA: 0x00AA0387 File Offset: 0x00A9E587
+		// Token: 0x06022879 RID: 141433 RVA: 0x009CCA63 File Offset: 0x009CAC63
 		private void OnBattleStateChanged(bool inBattle)
 		{
 			UKuroRenderingRuntimeBPPluginBPLibrary.SetCharacterInBattle(GlobalData.World, inBattle);
 		}
 
-		// Token: 0x0602E186 RID: 188806 RVA: 0x00AA0394 File Offset: 0x00A9E594
+		// Token: 0x0602287A RID: 141434 RVA: 0x009CCA70 File Offset: 0x009CAC70
 		public void DisableForceTickCharRenderShell(string reason)
 		{
 			Log instance = Log.Instance;
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Render
 			this.ForceTickCharRenderShellInternal = false;
 		}
 
-		// Token: 0x0602E187 RID: 188807 RVA: 0x00AA03D0 File Offset: 0x00A9E5D0
+		// Token: 0x0602287B RID: 141435 RVA: 0x009CCAAC File Offset: 0x009CACAC
 		public void EnableForceTickCharRenderShell(string reason)
 		{
 			if (!TickSystem.Instance.IsPaused)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Render
 			this.ForceTickCharRenderShellInternal = true;
 		}
 
-		// Token: 0x0602E188 RID: 188808 RVA: 0x00AA0440 File Offset: 0x00A9E640
+		// Token: 0x0602287C RID: 141436 RVA: 0x009CCB1C File Offset: 0x009CAD1C
 		public unsafe void Tick(float delta)
 		{
 			float num = 0.001f;
@@ -556,7 +556,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E189 RID: 188809 RVA: 0x00AA0998 File Offset: 0x00A9EB98
+		// Token: 0x0602287D RID: 141437 RVA: 0x009CD074 File Offset: 0x009CB274
 		protected override bool OnInit()
 		{
 			this.BattleRefCount = 0;
@@ -586,7 +586,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E18A RID: 188810 RVA: 0x00AA0B1C File Offset: 0x00A9ED1C
+		// Token: 0x0602287E RID: 141438 RVA: 0x009CD1F8 File Offset: 0x009CB3F8
 		protected override bool OnClear()
 		{
 			this.DoClear();
@@ -609,7 +609,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E18B RID: 188811 RVA: 0x00AA0C6C File Offset: 0x00A9EE6C
+		// Token: 0x0602287F RID: 141439 RVA: 0x009CD348 File Offset: 0x009CB548
 		protected override bool OnLeaveLevel()
 		{
 			this.TempDependenciesNotMatchDataLayerSet.Clear();
@@ -623,7 +623,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E18C RID: 188812 RVA: 0x00AA0D00 File Offset: 0x00A9EF00
+		// Token: 0x06022880 RID: 141440 RVA: 0x009CD3DC File Offset: 0x009CB5DC
 		private void DoClear()
 		{
 			this.TickableObjects = new List<IRenderModuleTickableObject>();
@@ -634,13 +634,13 @@ namespace CSharpScript.Game.Render
 			this.BattleRefCount = 0;
 		}
 
-		// Token: 0x0602E18D RID: 188813 RVA: 0x00AA0D38 File Offset: 0x00A9EF38
+		// Token: 0x06022881 RID: 141441 RVA: 0x009CD414 File Offset: 0x009CB614
 		public int EnableGlobalData(ItemMaterialControllerGlobalData globalMaterialData)
 		{
 			return -1;
 		}
 
-		// Token: 0x0602E18E RID: 188814 RVA: 0x00AA0D3B File Offset: 0x00A9EF3B
+		// Token: 0x06022882 RID: 141442 RVA: 0x009CD417 File Offset: 0x009CB617
 		public int EnableActorData([Nullable(2)] ItemMaterialControllerActorData actorMaterialData, AActor actor)
 		{
 			if (actor != null && actorMaterialData != null)
@@ -650,41 +650,41 @@ namespace CSharpScript.Game.Render
 			return -1;
 		}
 
-		// Token: 0x0602E18F RID: 188815 RVA: 0x00AA0D51 File Offset: 0x00A9EF51
+		// Token: 0x06022883 RID: 141443 RVA: 0x009CD42D File Offset: 0x009CB62D
 		public void DisableGlobal(int handle)
 		{
 		}
 
-		// Token: 0x0602E190 RID: 188816 RVA: 0x00AA0D53 File Offset: 0x00A9EF53
+		// Token: 0x06022884 RID: 141444 RVA: 0x009CD42F File Offset: 0x009CB62F
 		public void DisableAllGlobal()
 		{
 		}
 
-		// Token: 0x0602E191 RID: 188817 RVA: 0x00AA0D55 File Offset: 0x00A9EF55
+		// Token: 0x06022885 RID: 141445 RVA: 0x009CD431 File Offset: 0x009CB631
 		public void DisableActorData(int handle)
 		{
 			ItemMaterialManager.Instance.DisableActorData(handle);
 		}
 
-		// Token: 0x0602E192 RID: 188818 RVA: 0x00AA0D63 File Offset: 0x00A9EF63
+		// Token: 0x06022886 RID: 141446 RVA: 0x009CD43F File Offset: 0x009CB63F
 		public void DisableAllActorData()
 		{
 			ItemMaterialManager.Instance.DisableAllActorData();
 		}
 
-		// Token: 0x0602E193 RID: 188819 RVA: 0x00AA0D70 File Offset: 0x00A9EF70
+		// Token: 0x06022887 RID: 141447 RVA: 0x009CD44C File Offset: 0x009CB64C
 		public void UpdateItemMaterialParameterCollection(ItemMaterialControllerMPCData_C data)
 		{
 			ItemMaterialParameterCollectionController.UpdateMaterialParameterCollection(data, RenderDataManager.Instance.GetSceneInteractionMaterialParameterCollection());
 		}
 
-		// Token: 0x0602E194 RID: 188820 RVA: 0x00AA0D82 File Offset: 0x00A9EF82
+		// Token: 0x06022888 RID: 141448 RVA: 0x009CD45E File Offset: 0x009CB65E
 		private void OnStartTeleport(bool b)
 		{
 			UKuroRenderingRuntimeBPPluginBPLibrary.StopSomeWeatherBeforeTeleport(GlobalData.World);
 		}
 
-		// Token: 0x0602E195 RID: 188821 RVA: 0x00AA0D90 File Offset: 0x00A9EF90
+		// Token: 0x06022889 RID: 141449 RVA: 0x009CD46C File Offset: 0x009CB66C
 		[NullableContext(2)]
 		private void OnCompleteTeleport(TeleportContext teleportContext)
 		{
@@ -695,7 +695,7 @@ namespace CSharpScript.Game.Render
 			}, interval, null, null, true, 1f);
 		}
 
-		// Token: 0x0602E196 RID: 188822 RVA: 0x00AA0DD8 File Offset: 0x00A9EFD8
+		// Token: 0x0602288A RID: 141450 RVA: 0x009CD4B4 File Offset: 0x009CB6B4
 		private void OnEnterOrExitUltraSkill(bool isEnter)
 		{
 			if (isEnter && !this.WasEffectPostProcessDisabled)
@@ -731,7 +731,7 @@ namespace CSharpScript.Game.Render
 			this.UltraSkillCounter = 0f;
 		}
 
-		// Token: 0x0602E197 RID: 188823 RVA: 0x00AA0EA4 File Offset: 0x00A9F0A4
+		// Token: 0x0602288B RID: 141451 RVA: 0x009CD580 File Offset: 0x009CB780
 		private void OnSequenceCameraStatus(bool isEnter, string cameraName)
 		{
 			if (cameraName != "MainCamera")
@@ -763,7 +763,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E198 RID: 188824 RVA: 0x00AA0F2C File Offset: 0x00A9F12C
+		// Token: 0x0602288C RID: 141452 RVA: 0x009CD608 File Offset: 0x009CB808
 		private void CameraModeChanged(ECustomCameraMode newMode, ECustomCameraMode? oldMode, string cameraName)
 		{
 			if (cameraName != "MainCamera")
@@ -786,7 +786,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E199 RID: 188825 RVA: 0x00AA0FAC File Offset: 0x00A9F1AC
+		// Token: 0x0602288D RID: 141453 RVA: 0x009CD688 File Offset: 0x009CB888
 		public void AddDependenciesNotMatchDataLayer(string path)
 		{
 			Log instance = Log.Instance;
@@ -798,13 +798,13 @@ namespace CSharpScript.Game.Render
 			this.DependenciesNotMatchDataLayerSet.Add(path);
 		}
 
-		// Token: 0x0602E19A RID: 188826 RVA: 0x00AA0FED File Offset: 0x00A9F1ED
+		// Token: 0x0602288E RID: 141454 RVA: 0x009CD6C9 File Offset: 0x009CB8C9
 		public bool IsDependenciesNotMatchDataLayer(string path)
 		{
 			return this.DependenciesNotMatchDataLayerSet.Contains(path);
 		}
 
-		// Token: 0x0602E19B RID: 188827 RVA: 0x00AA0FFC File Offset: 0x00A9F1FC
+		// Token: 0x0602288F RID: 141455 RVA: 0x009CD6D8 File Offset: 0x009CB8D8
 		public void RemoveDependenciesNotMatchDataLayer(string path)
 		{
 			Log instance = Log.Instance;
@@ -816,7 +816,7 @@ namespace CSharpScript.Game.Render
 			this.DependenciesNotMatchDataLayerSet.Remove(path);
 		}
 
-		// Token: 0x0602E19C RID: 188828 RVA: 0x00AA1040 File Offset: 0x00A9F240
+		// Token: 0x06022890 RID: 141456 RVA: 0x009CD71C File Offset: 0x009CB91C
 		public void FlushTempDependenciesNotMatchDataLayers()
 		{
 			foreach (string item in this.TempDependenciesNotMatchDataLayerSet)
@@ -825,8 +825,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x170075AC RID: 30124
-		// (get) Token: 0x0602E19D RID: 188829 RVA: 0x00AA109C File Offset: 0x00A9F29C
+		// Token: 0x17004864 RID: 18532
+		// (get) Token: 0x06022891 RID: 141457 RVA: 0x009CD778 File Offset: 0x009CB978
 		public static RenderModuleModel Instance
 		{
 			get
@@ -835,7 +835,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E19E RID: 188830 RVA: 0x00AA10A3 File Offset: 0x00A9F2A3
+		// Token: 0x06022892 RID: 141458 RVA: 0x009CD77F File Offset: 0x009CB97F
 		public static RenderModuleModel GetOrCreateInstance()
 		{
 			if (RenderModuleModel._Instance == null)
@@ -845,7 +845,7 @@ namespace CSharpScript.Game.Render
 			return RenderModuleModel._Instance;
 		}
 
-		// Token: 0x0602E19F RID: 188831 RVA: 0x00AA10B7 File Offset: 0x00A9F2B7
+		// Token: 0x06022893 RID: 141459 RVA: 0x009CD793 File Offset: 0x009CB993
 		public static bool CreateInstance()
 		{
 			if (RenderModuleModel._Instance != null)
@@ -856,80 +856,80 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E1A0 RID: 188832 RVA: 0x00AA10CD File Offset: 0x00A9F2CD
+		// Token: 0x06022894 RID: 141460 RVA: 0x009CD7A9 File Offset: 0x009CB9A9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E1A1 RID: 188833 RVA: 0x00AA10CF File Offset: 0x00A9F2CF
+		// Token: 0x06022895 RID: 141461 RVA: 0x009CD7AB File Offset: 0x009CB9AB
 		public static void ResetStaticDefaultValue()
 		{
 			RenderModuleModel._Instance = null;
 		}
 
-		// Token: 0x0602E1A2 RID: 188834 RVA: 0x00AA10D7 File Offset: 0x00A9F2D7
+		// Token: 0x06022896 RID: 141462 RVA: 0x009CD7B3 File Offset: 0x009CB9B3
 		static RenderModuleModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RenderModuleModel.CreateStaticDefaultValue), new Action(RenderModuleModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018B22 RID: 101154
+		// Token: 0x04013160 RID: 78176
 		private List<IRenderModuleTickableObject> TickableObjects = new List<IRenderModuleTickableObject>();
 
-		// Token: 0x04018B23 RID: 101155
+		// Token: 0x04013161 RID: 78177
 		private Dictionary<CharRenderingComponent, CharRenderShell> AllRenderShell = new Dictionary<CharRenderingComponent, CharRenderShell>();
 
-		// Token: 0x04018B24 RID: 101156
+		// Token: 0x04013162 RID: 78178
 		private Dictionary<string, WuYinQuBattleActor> AllWuYinQuBattleActors = new Dictionary<string, WuYinQuBattleActor>();
 
-		// Token: 0x04018B25 RID: 101157
+		// Token: 0x04013163 RID: 78179
 		[Nullable(2)]
 		private string CurrentBattleKey;
 
-		// Token: 0x04018B26 RID: 101158
+		// Token: 0x04013164 RID: 78180
 		private EWuYinQuState CurrentBattleState = EWuYinQuState.EWuYinQuState_MAX;
 
-		// Token: 0x04018B27 RID: 101159
+		// Token: 0x04013165 RID: 78181
 		private EWuYinQuState CurrentInputBattleState = EWuYinQuState.EWuYinQuState_MAX;
 
-		// Token: 0x04018B28 RID: 101160
+		// Token: 0x04013166 RID: 78182
 		private bool IsIdleClearAtmosphere;
 
-		// Token: 0x04018B29 RID: 101161
+		// Token: 0x04013167 RID: 78183
 		private bool InstantTransition;
 
-		// Token: 0x04018B2A RID: 101162
+		// Token: 0x04013168 RID: 78184
 		[Nullable(2)]
 		private UMaterialParameterCollection MpcForGameplay;
 
-		// Token: 0x04018B2B RID: 101163
+		// Token: 0x04013169 RID: 78185
 		private readonly FName mpcForGameplayNameBurstTime = new FName("BurstTime");
 
-		// Token: 0x04018B2C RID: 101164
+		// Token: 0x0401316A RID: 78186
 		private readonly int UltraSkillCounterMax = 16;
 
-		// Token: 0x04018B2D RID: 101165
+		// Token: 0x0401316B RID: 78187
 		private float UltraSkillCounter = -16f;
 
-		// Token: 0x04018B2E RID: 101166
+		// Token: 0x0401316C RID: 78188
 		private bool IsInUltraSkill;
 
-		// Token: 0x04018B2F RID: 101167
+		// Token: 0x0401316D RID: 78189
 		private int BattleRefCount;
 
-		// Token: 0x04018B30 RID: 101168
+		// Token: 0x0401316E RID: 78190
 		private bool ForceTickCharRenderShellInternal;
 
-		// Token: 0x04018B31 RID: 101169
+		// Token: 0x0401316F RID: 78191
 		private bool WasEffectPostProcessDisabled;
 
-		// Token: 0x04018B32 RID: 101170
+		// Token: 0x04013170 RID: 78192
 		private readonly HashSet<string> TempDependenciesNotMatchDataLayerSet = new HashSet<string>();
 
-		// Token: 0x04018B33 RID: 101171
+		// Token: 0x04013171 RID: 78193
 		private readonly HashSet<string> DependenciesNotMatchDataLayerSet = new HashSet<string>();
 
-		// Token: 0x04018B34 RID: 101172
+		// Token: 0x04013172 RID: 78194
 		[Nullable(2)]
 		private static RenderModuleModel _Instance;
 	}

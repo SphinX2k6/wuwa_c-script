@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020029F5 RID: 10741
+// Token: 0x02001F70 RID: 8048
 public class ShopItem : UiPanelBase
 {
-	// Token: 0x0601647D RID: 91261 RVA: 0x005A2924 File Offset: 0x005A0B24
+	// Token: 0x06013E84 RID: 81540 RVA: 0x005CD8FC File Offset: 0x005CBAFC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class ShopItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601647E RID: 91262 RVA: 0x005A2AC8 File Offset: 0x005A0CC8
+	// Token: 0x06013E85 RID: 81541 RVA: 0x005CDAA0 File Offset: 0x005CBCA0
 	[NullableContext(1)]
 	public void UpdateItem(ShopItemFullInfo data)
 	{
@@ -70,7 +70,7 @@ public class ShopItem : UiPanelBase
 		this.UpdateLimitTime();
 	}
 
-	// Token: 0x0601647F RID: 91263 RVA: 0x005A2C64 File Offset: 0x005A0E64
+	// Token: 0x06013E86 RID: 81542 RVA: 0x005CDC3C File Offset: 0x005CBE3C
 	protected void UpdateLockState()
 	{
 		bool flag = this.ItemInfo.IsInteractive();
@@ -108,7 +108,7 @@ public class ShopItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016480 RID: 91264 RVA: 0x005A2E28 File Offset: 0x005A1028
+	// Token: 0x06013E87 RID: 81543 RVA: 0x005CDE00 File Offset: 0x005CC000
 	protected void UpdateLimitTime()
 	{
 		if (this.ItemInfo.EndTime != 0U)
@@ -133,70 +133,70 @@ public class ShopItem : UiPanelBase
 		base.GetText(10).SetUIActive(this.ItemInfo.InSaleTime());
 	}
 
-	// Token: 0x06016481 RID: 91265 RVA: 0x005A2EFF File Offset: 0x005A10FF
+	// Token: 0x06013E88 RID: 81544 RVA: 0x005CDED7 File Offset: 0x005CC0D7
 	public void Tick()
 	{
 		this.UpdateLockState();
 		this.UpdateLimitTime();
 	}
 
-	// Token: 0x06016482 RID: 91266 RVA: 0x005A2F0D File Offset: 0x005A110D
+	// Token: 0x06013E89 RID: 81545 RVA: 0x005CDEE5 File Offset: 0x005CC0E5
 	private void ButtonClick()
 	{
 		ShopModel.Instance.OpenItemInfo = this.ItemInfo;
 		EventSystem.Instance.Emit(EEventName.OpenItemInfo);
 	}
 
-	// Token: 0x0400A5B7 RID: 42423
+	// Token: 0x0400A9A1 RID: 43425
 	private const int SECONDS_PER_DAY = 86400;
 
-	// Token: 0x0400A5B8 RID: 42424
+	// Token: 0x0400A9A2 RID: 43426
 	private readonly FColor red = new FColor(byte.MaxValue, 0, 0, byte.MaxValue);
 
-	// Token: 0x0400A5B9 RID: 42425
+	// Token: 0x0400A9A3 RID: 43427
 	private readonly FColor soldOutColor = FColor.FromHex("FFFFFFFF");
 
-	// Token: 0x0400A5BA RID: 42426
+	// Token: 0x0400A9A4 RID: 43428
 	private readonly FColor coinNotEnoughColor = FColor.FromHex("9D2437FF");
 
-	// Token: 0x0400A5BB RID: 42427
+	// Token: 0x0400A9A5 RID: 43429
 	[Nullable(2)]
 	public ShopItemFullInfo ItemInfo;
 
-	// Token: 0x0200902E RID: 36910
+	// Token: 0x02008275 RID: 33397
 	private enum EShopItemDefine
 	{
-		// Token: 0x0402EADA RID: 191194
+		// Token: 0x0402A1D2 RID: 172498
 		Button,
-		// Token: 0x0402EADB RID: 191195
+		// Token: 0x0402A1D3 RID: 172499
 		Name,
-		// Token: 0x0402EADC RID: 191196
+		// Token: 0x0402A1D4 RID: 172500
 		Icon,
-		// Token: 0x0402EADD RID: 191197
+		// Token: 0x0402A1D5 RID: 172501
 		Quality,
-		// Token: 0x0402EADE RID: 191198
+		// Token: 0x0402A1D6 RID: 172502
 		Quality2,
-		// Token: 0x0402EADF RID: 191199
+		// Token: 0x0402A1D7 RID: 172503
 		Count,
-		// Token: 0x0402EAE0 RID: 191200
+		// Token: 0x0402A1D8 RID: 172504
 		CurrencyIcon,
-		// Token: 0x0402EAE1 RID: 191201
+		// Token: 0x0402A1D9 RID: 172505
 		PriceText,
-		// Token: 0x0402EAE2 RID: 191202
+		// Token: 0x0402A1DA RID: 172506
 		OriginalPriceText,
-		// Token: 0x0402EAE3 RID: 191203
+		// Token: 0x0402A1DB RID: 172507
 		PurchaseLimitText,
-		// Token: 0x0402EAE4 RID: 191204
+		// Token: 0x0402A1DC RID: 172508
 		LimitTimeText,
-		// Token: 0x0402EAE5 RID: 191205
+		// Token: 0x0402A1DD RID: 172509
 		UnLockItem,
-		// Token: 0x0402EAE6 RID: 191206
+		// Token: 0x0402A1DE RID: 172510
 		LockItem,
-		// Token: 0x0402EAE7 RID: 191207
+		// Token: 0x0402A1DF RID: 172511
 		LockConditionItem,
-		// Token: 0x0402EAE8 RID: 191208
+		// Token: 0x0402A1E0 RID: 172512
 		LockConditionText,
-		// Token: 0x0402EAE9 RID: 191209
+		// Token: 0x0402A1E1 RID: 172513
 		LockLimitText
 	}
 }

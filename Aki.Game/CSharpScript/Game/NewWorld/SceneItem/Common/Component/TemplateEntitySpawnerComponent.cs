@@ -9,12 +9,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x0200722A RID: 29226
+	// Token: 0x020062DF RID: 25311
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TemplateEntitySpawnerComponent : EntityComponent
 	{
-		// Token: 0x06047A2D RID: 293421 RVA: 0x01253808 File Offset: 0x01251A08
+		// Token: 0x0603D387 RID: 250759 RVA: 0x011AC428 File Offset: 0x011AA628
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047A2E RID: 293422 RVA: 0x01253850 File Offset: 0x01251A50
+		// Token: 0x0603D388 RID: 250760 RVA: 0x011AC470 File Offset: 0x011AA670
 		protected override bool OnStart()
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047A2F RID: 293423 RVA: 0x0125390C File Offset: 0x01251B0C
+		// Token: 0x0603D389 RID: 250761 RVA: 0x011AC52C File Offset: 0x011AA72C
 		protected override bool OnEnd()
 		{
 			if (this.WaitEntityTask != null)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047A30 RID: 293424 RVA: 0x01253980 File Offset: 0x01251B80
+		// Token: 0x0603D38A RID: 250762 RVA: 0x011AC5A0 File Offset: 0x011AA7A0
 		public void OnNotifyUpdateContent(List<SpawnerEntityInfo> infos)
 		{
 			List<long> list = new List<long>();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047A31 RID: 293425 RVA: 0x01253A0C File Offset: 0x01251C0C
+		// Token: 0x0603D38B RID: 250763 RVA: 0x011AC62C File Offset: 0x011AA82C
 		private void OnAllEntityCreated(bool? result)
 		{
 			this.WaitEntityTask = null;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047A32 RID: 293426 RVA: 0x01253C5C File Offset: 0x01251E5C
+		// Token: 0x0603D38C RID: 250764 RVA: 0x011AC87C File Offset: 0x011AAA7C
 		private void WaitAllSceneItemLoadCompleted()
 		{
 			using (HashSet<Entity>.Enumerator enumerator = this.AllEntity.GetEnumerator())
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047A33 RID: 293427 RVA: 0x01253D88 File Offset: 0x01251F88
+		// Token: 0x0603D38D RID: 250765 RVA: 0x011AC9A8 File Offset: 0x011AABA8
 		private void OnAllSceneItemLoadCompleted()
 		{
 			foreach (Entity entity in this.AllEntity)
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047A34 RID: 293428 RVA: 0x01253E08 File Offset: 0x01252008
+		// Token: 0x0603D38E RID: 250766 RVA: 0x011ACA28 File Offset: 0x011AAC28
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -193,67 +193,75 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			TemplateEntitySpawnerComponent templateEntitySpawnerComponent = (TemplateEntitySpawnerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (templateEntitySpawnerComponent.CreatureDataComp == null)
 			{
-				if (templateEntitySpawnerComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("WaitEntityTask"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (templateEntitySpawnerComponent.WaitEntityTask == null)
-				{
-					this.WaitEntityTask = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WaitEntityTask>(this.WaitEntityTask), "WaitEntityTask"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CacheSpawnedEntityInfos"))
+			if (templateEntitySpawnerComponent.WaitEntityTask == null)
 			{
-				if (templateEntitySpawnerComponent.CacheSpawnedEntityInfos == null)
-				{
-					this.CacheSpawnedEntityInfos = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<SpawnerEntityInfo>>(this.CacheSpawnedEntityInfos), "CacheSpawnedEntityInfos"))
-				{
-					return false;
-				}
+				this.WaitEntityTask = null;
 			}
-			if (base.CanResetComponentProperty("IsInitHide"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitEntityTask), "WaitEntityTask"))
 			{
-				this.IsInitHide = templateEntitySpawnerComponent.IsInitHide;
+				return false;
 			}
-			return (!base.CanResetComponentProperty("AllEntity") || templateEntitySpawnerComponent.AllEntity == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.AllEntity), "AllEntity")) && (!base.CanResetComponentProperty("GroupTypeMap") || templateEntitySpawnerComponent.GroupTypeMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<Entity>>>(this.GroupTypeMap), "GroupTypeMap")) && (!base.CanResetComponentProperty("NotLoadCompletedEntity") || templateEntitySpawnerComponent.NotLoadCompletedEntity == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.NotLoadCompletedEntity), "NotLoadCompletedEntity"));
+			if (templateEntitySpawnerComponent.CacheSpawnedEntityInfos == null)
+			{
+				this.CacheSpawnedEntityInfos = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheSpawnedEntityInfos), "CacheSpawnedEntityInfos"))
+			{
+				return false;
+			}
+			this.IsInitHide = templateEntitySpawnerComponent.IsInitHide;
+			return (templateEntitySpawnerComponent.AllEntity == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.AllEntity), "AllEntity")) && (templateEntitySpawnerComponent.GroupTypeMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.GroupTypeMap), "GroupTypeMap")) && (templateEntitySpawnerComponent.NotLoadCompletedEntity == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.NotLoadCompletedEntity), "NotLoadCompletedEntity"));
 		}
 
-		// Token: 0x04025B06 RID: 154374
+		// Token: 0x170073EC RID: 29676
+		// (get) Token: 0x0603D38F RID: 250767 RVA: 0x011ACB3B File Offset: 0x011AAD3B
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073ED RID: 29677
+		// (get) Token: 0x0603D390 RID: 250768 RVA: 0x011ACB3E File Offset: 0x011AAD3E
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020775 RID: 132981
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025B07 RID: 154375
+		// Token: 0x04020776 RID: 132982
 		[Nullable(2)]
 		private WaitEntityTask WaitEntityTask;
 
-		// Token: 0x04025B08 RID: 154376
+		// Token: 0x04020777 RID: 132983
 		private List<SpawnerEntityInfo> CacheSpawnedEntityInfos = new List<SpawnerEntityInfo>();
 
-		// Token: 0x04025B09 RID: 154377
+		// Token: 0x04020778 RID: 132984
 		private bool IsInitHide;
 
-		// Token: 0x04025B0A RID: 154378
+		// Token: 0x04020779 RID: 132985
 		private readonly HashSet<Entity> AllEntity = new HashSet<Entity>();
 
-		// Token: 0x04025B0B RID: 154379
+		// Token: 0x0402077A RID: 132986
 		private readonly Dictionary<int, HashSet<Entity>> GroupTypeMap = new Dictionary<int, HashSet<Entity>>();
 
-		// Token: 0x04025B0C RID: 154380
+		// Token: 0x0402077B RID: 132987
 		private readonly HashSet<Entity> NotLoadCompletedEntity = new HashSet<Entity>();
 	}
 }

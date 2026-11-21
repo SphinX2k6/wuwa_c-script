@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001886 RID: 6278
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A11 RID: 6673
 	public class ICharacterLookAtPlayerData : ICharacterLookAtData
 	{
-		// Token: 0x060086DB RID: 34523 RVA: 0x001400D8 File Offset: 0x0013E2D8
+		// Token: 0x06008E03 RID: 36355 RVA: 0x0014F90C File Offset: 0x0014DB0C
 		private ICharacterLookAtPlayerData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060086DC RID: 34524 RVA: 0x00140110 File Offset: 0x0013E310
+		// Token: 0x06008E04 RID: 36356 RVA: 0x0014F944 File Offset: 0x0014DB44
 		public static ICharacterLookAtPlayerData Create([Nullable(2)] ICharacterLookAtPlayerData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086DD RID: 34525 RVA: 0x00140123 File Offset: 0x0013E323
+		// Token: 0x06008E05 RID: 36357 RVA: 0x0014F957 File Offset: 0x0014DB57
 		public static ICharacterLookAtPlayerData CreateFromSetValue([Nullable(2)] ICharacterLookAtPlayerData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086DE RID: 34526 RVA: 0x00140136 File Offset: 0x0013E336
+		// Token: 0x06008E06 RID: 36358 RVA: 0x0014F96A File Offset: 0x0014DB6A
 		public new ICharacterLookAtPlayerData_SetValue ToSetValue()
 		{
 			return new ICharacterLookAtPlayerData_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BF9 RID: 11257
-		// (get) Token: 0x060086DF RID: 34527 RVA: 0x00140149 File Offset: 0x0013E349
-		// (set) Token: 0x060086E0 RID: 34528 RVA: 0x00140174 File Offset: 0x0013E374
+		// Token: 0x17002DF4 RID: 11764
+		// (get) Token: 0x06008E07 RID: 36359 RVA: 0x0014F97D File Offset: 0x0014DB7D
+		// (set) Token: 0x06008E08 RID: 36360 RVA: 0x0014F9A8 File Offset: 0x0014DBA8
 		public override ECharacterLookAt Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040054F8 RID: 21752
+		// Token: 0x04005945 RID: 22853
 		[Nullable(2)]
 		protected new ICharacterLookAtPlayerData FbInstance;
 
-		// Token: 0x040054F9 RID: 21753
+		// Token: 0x04005946 RID: 22854
 		[Nullable(2)]
 		protected new ICharacterLookAtPlayerData_SetValue PocoInterface;
 	}

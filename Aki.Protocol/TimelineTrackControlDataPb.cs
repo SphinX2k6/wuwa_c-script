@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001376 RID: 4982
+	// Token: 0x020013E9 RID: 5097
 	public sealed class TimelineTrackControlDataPb : IMessage<TimelineTrackControlDataPb>, IMessage, IEquatable<TimelineTrackControlDataPb>, IDeepCloneable<TimelineTrackControlDataPb>, IBufferMessage
 	{
-		// Token: 0x0601A73F RID: 108351 RVA: 0x003D728F File Offset: 0x003D548F
+		// Token: 0x0601B1C8 RID: 111048 RVA: 0x003F24A3 File Offset: 0x003F06A3
 		[NullableContext(1)]
 		public static TimelineTrackControlDataPb Create()
 		{
 			return new TimelineTrackControlDataPb();
 		}
 
-		// Token: 0x1700593A RID: 22842
-		// (get) Token: 0x0601A740 RID: 108352 RVA: 0x003D7296 File Offset: 0x003D5496
+		// Token: 0x17005BCE RID: 23502
+		// (get) Token: 0x0601B1C9 RID: 111049 RVA: 0x003F24AA File Offset: 0x003F06AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<TimelineTrackControlDataPb> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700593B RID: 22843
-		// (get) Token: 0x0601A741 RID: 108353 RVA: 0x003D729D File Offset: 0x003D549D
+		// Token: 0x17005BCF RID: 23503
+		// (get) Token: 0x0601B1CA RID: 111050 RVA: 0x003F24B1 File Offset: 0x003F06B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700593C RID: 22844
-		// (get) Token: 0x0601A742 RID: 108354 RVA: 0x003D72A0 File Offset: 0x003D54A0
+		// Token: 0x17005BD0 RID: 23504
+		// (get) Token: 0x0601B1CB RID: 111051 RVA: 0x003F24B4 File Offset: 0x003F06B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A743 RID: 108355 RVA: 0x003D72A7 File Offset: 0x003D54A7
+		// Token: 0x0601B1CC RID: 111052 RVA: 0x003F24BB File Offset: 0x003F06BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TimelineTrackControlDataPb()
 		{
 		}
 
-		// Token: 0x0601A744 RID: 108356 RVA: 0x003D72AF File Offset: 0x003D54AF
+		// Token: 0x0601B1CD RID: 111053 RVA: 0x003F24C3 File Offset: 0x003F06C3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TimelineTrackControlDataPb(TimelineTrackControlDataPb other) : this()
@@ -69,7 +69,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601A745 RID: 108357 RVA: 0x003D72D4 File Offset: 0x003D54D4
+		// Token: 0x0601B1CE RID: 111054 RVA: 0x003F24E8 File Offset: 0x003F06E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TimelineTrackControlDataPb Clone()
@@ -77,9 +77,9 @@ namespace Aki.Protocol
 			return new TimelineTrackControlDataPb(this);
 		}
 
-		// Token: 0x1700593D RID: 22845
-		// (get) Token: 0x0601A746 RID: 108358 RVA: 0x003D72DC File Offset: 0x003D54DC
-		// (set) Token: 0x0601A747 RID: 108359 RVA: 0x003D72E4 File Offset: 0x003D54E4
+		// Token: 0x17005BD1 RID: 23505
+		// (get) Token: 0x0601B1CF RID: 111055 RVA: 0x003F24F0 File Offset: 0x003F06F0
+		// (set) Token: 0x0601B1D0 RID: 111056 RVA: 0x003F24F8 File Offset: 0x003F06F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ControlPoint
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A748 RID: 108360 RVA: 0x003D72ED File Offset: 0x003D54ED
+		// Token: 0x0601B1D1 RID: 111057 RVA: 0x003F2501 File Offset: 0x003F0701
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TimelineTrackControlDataPb);
 		}
 
-		// Token: 0x0601A749 RID: 108361 RVA: 0x003D72FB File Offset: 0x003D54FB
+		// Token: 0x0601B1D2 RID: 111058 RVA: 0x003F250F File Offset: 0x003F070F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TimelineTrackControlDataPb other)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ControlPoint == other.ControlPoint && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601A74A RID: 108362 RVA: 0x003D732C File Offset: 0x003D552C
+		// Token: 0x0601B1D3 RID: 111059 RVA: 0x003F2540 File Offset: 0x003F0740
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -127,7 +127,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A74B RID: 108363 RVA: 0x003D736B File Offset: 0x003D556B
+		// Token: 0x0601B1D4 RID: 111060 RVA: 0x003F257F File Offset: 0x003F077F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -135,7 +135,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601A74C RID: 108364 RVA: 0x003D7378 File Offset: 0x003D5578
+		// Token: 0x0601B1D5 RID: 111061 RVA: 0x003F258C File Offset: 0x003F078C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -143,7 +143,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601A74D RID: 108365 RVA: 0x003D7381 File Offset: 0x003D5581
+		// Token: 0x0601B1D6 RID: 111062 RVA: 0x003F2595 File Offset: 0x003F0795
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -159,7 +159,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A74E RID: 108366 RVA: 0x003D73B4 File Offset: 0x003D55B4
+		// Token: 0x0601B1D7 RID: 111063 RVA: 0x003F25C8 File Offset: 0x003F07C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -176,7 +176,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A74F RID: 108367 RVA: 0x003D73F2 File Offset: 0x003D55F2
+		// Token: 0x0601B1D8 RID: 111064 RVA: 0x003F2606 File Offset: 0x003F0806
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TimelineTrackControlDataPb other)
@@ -192,7 +192,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601A750 RID: 108368 RVA: 0x003D7423 File Offset: 0x003D5623
+		// Token: 0x0601B1D9 RID: 111065 RVA: 0x003F2637 File Offset: 0x003F0837
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -200,7 +200,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601A751 RID: 108369 RVA: 0x003D742C File Offset: 0x003D562C
+		// Token: 0x0601B1DA RID: 111066 RVA: 0x003F2640 File Offset: 0x003F0840
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -223,16 +223,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009A01 RID: 39425
+		// Token: 0x04009E46 RID: 40518
 		private static readonly MessageParser<TimelineTrackControlDataPb> _parser = new MessageParser<TimelineTrackControlDataPb>(() => new TimelineTrackControlDataPb());
 
-		// Token: 0x04009A02 RID: 39426
+		// Token: 0x04009E47 RID: 40519
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009A03 RID: 39427
+		// Token: 0x04009E48 RID: 40520
 		public const int ControlPointFieldNumber = 1;
 
-		// Token: 0x04009A04 RID: 39428
+		// Token: 0x04009E49 RID: 40521
 		private int controlPoint_;
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02002603 RID: 9731
-// (Invoke) Token: 0x06013D0D RID: 81165
+// Token: 0x02001AEE RID: 6894
+// (Invoke) Token: 0x060111EF RID: 70127
 public delegate void TCommonQteCallback(CommonQteContextBase context);

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Qte;
 using Cysharp.Threading.Tasks;
@@ -8,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 {
-	// Token: 0x02005023 RID: 20515
+	// Token: 0x02003FED RID: 16365
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SequenceQteHandleBase<[Nullable(0)] T> : ISequenceCommonQteHandle where T : CommonQteContextBase
 	{
-		// Token: 0x060347F8 RID: 215032 RVA: 0x00C5DAC8 File Offset: 0x00C5BCC8
+		// Token: 0x0602969B RID: 169627 RVA: 0x00BA9014 File Offset: 0x00BA7214
 		public SequenceQteHandleBase(SequenceQteManager qteManager, T context)
 		{
 			this.QteManager = qteManager;
@@ -22,45 +21,45 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.Context.FailCallback = new TCommonQteCallback(this.OnQteFailed);
 		}
 
-		// Token: 0x17008018 RID: 32792
-		// (get) Token: 0x060347F9 RID: 215033 RVA: 0x00C5DB87 File Offset: 0x00C5BD87
-		// (set) Token: 0x060347FA RID: 215034 RVA: 0x00C5DB8F File Offset: 0x00C5BD8F
+		// Token: 0x170053CD RID: 21453
+		// (get) Token: 0x0602969C RID: 169628 RVA: 0x00BA90D3 File Offset: 0x00BA72D3
+		// (set) Token: 0x0602969D RID: 169629 RVA: 0x00BA90DB File Offset: 0x00BA72DB
 		public int SubtitleId { get; set; } = -1;
 
-		// Token: 0x17008019 RID: 32793
-		// (get) Token: 0x060347FB RID: 215035 RVA: 0x00C5DB98 File Offset: 0x00C5BD98
-		// (set) Token: 0x060347FC RID: 215036 RVA: 0x00C5DBA0 File Offset: 0x00C5BDA0
+		// Token: 0x170053CE RID: 21454
+		// (get) Token: 0x0602969E RID: 169630 RVA: 0x00BA90E4 File Offset: 0x00BA72E4
+		// (set) Token: 0x0602969F RID: 169631 RVA: 0x00BA90EC File Offset: 0x00BA72EC
 		public int OptionIndex { get; set; } = -1;
 
-		// Token: 0x1700801A RID: 32794
-		// (get) Token: 0x060347FD RID: 215037 RVA: 0x00C5DBA9 File Offset: 0x00C5BDA9
-		// (set) Token: 0x060347FE RID: 215038 RVA: 0x00C5DBB1 File Offset: 0x00C5BDB1
+		// Token: 0x170053CF RID: 21455
+		// (get) Token: 0x060296A0 RID: 169632 RVA: 0x00BA90F5 File Offset: 0x00BA72F5
+		// (set) Token: 0x060296A1 RID: 169633 RVA: 0x00BA90FD File Offset: 0x00BA72FD
 		public bool IsProgressQte { get; set; }
 
-		// Token: 0x1700801B RID: 32795
-		// (get) Token: 0x060347FF RID: 215039 RVA: 0x00C5DBBA File Offset: 0x00C5BDBA
-		// (set) Token: 0x06034800 RID: 215040 RVA: 0x00C5DBC2 File Offset: 0x00C5BDC2
+		// Token: 0x170053D0 RID: 21456
+		// (get) Token: 0x060296A2 RID: 169634 RVA: 0x00BA9106 File Offset: 0x00BA7306
+		// (set) Token: 0x060296A3 RID: 169635 RVA: 0x00BA910E File Offset: 0x00BA730E
 		[Nullable(2)]
 		public FFrameTime SequenceQteStartRange { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700801C RID: 32796
-		// (get) Token: 0x06034801 RID: 215041 RVA: 0x00C5DBCB File Offset: 0x00C5BDCB
-		// (set) Token: 0x06034802 RID: 215042 RVA: 0x00C5DBD3 File Offset: 0x00C5BDD3
+		// Token: 0x170053D1 RID: 21457
+		// (get) Token: 0x060296A4 RID: 169636 RVA: 0x00BA9117 File Offset: 0x00BA7317
+		// (set) Token: 0x060296A5 RID: 169637 RVA: 0x00BA911F File Offset: 0x00BA731F
 		[Nullable(2)]
 		public FFrameTime SequenceQteEndRange { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700801D RID: 32797
-		// (get) Token: 0x06034803 RID: 215043 RVA: 0x00C5DBDC File Offset: 0x00C5BDDC
-		// (set) Token: 0x06034804 RID: 215044 RVA: 0x00C5DBE4 File Offset: 0x00C5BDE4
+		// Token: 0x170053D2 RID: 21458
+		// (get) Token: 0x060296A6 RID: 169638 RVA: 0x00BA9128 File Offset: 0x00BA7328
+		// (set) Token: 0x060296A7 RID: 169639 RVA: 0x00BA9130 File Offset: 0x00BA7330
 		public bool IsUpdateWithProgress { get; set; }
 
-		// Token: 0x1700801E RID: 32798
-		// (get) Token: 0x06034805 RID: 215045 RVA: 0x00C5DBED File Offset: 0x00C5BDED
-		// (set) Token: 0x06034806 RID: 215046 RVA: 0x00C5DBF5 File Offset: 0x00C5BDF5
+		// Token: 0x170053D3 RID: 21459
+		// (get) Token: 0x060296A8 RID: 169640 RVA: 0x00BA9139 File Offset: 0x00BA7339
+		// (set) Token: 0x060296A9 RID: 169641 RVA: 0x00BA9141 File Offset: 0x00BA7341
 		[Nullable(2)]
 		public QteSpineInfoProxy SpineInfo { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x06034807 RID: 215047 RVA: 0x00C5DC00 File Offset: 0x00C5BE00
+		// Token: 0x060296AA RID: 169642 RVA: 0x00BA914C File Offset: 0x00BA734C
 		public void SetEventSpineComponents(List<USpineSkeletonAnimationComponent> components)
 		{
 			this.EventSpineComponents.Clear();
@@ -73,14 +72,14 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x06034808 RID: 215048 RVA: 0x00C5DC68 File Offset: 0x00C5BE68
+		// Token: 0x060296AB RID: 169643 RVA: 0x00BA91B4 File Offset: 0x00BA73B4
 		public void OnSequenceAnimFinished()
 		{
 			this.MarkSequenceQtePending = false;
 			this.CheckFinish();
 		}
 
-		// Token: 0x06034809 RID: 215049 RVA: 0x00C5DC77 File Offset: 0x00C5BE77
+		// Token: 0x060296AC RID: 169644 RVA: 0x00BA91C3 File Offset: 0x00BA73C3
 		[NullableContext(2)]
 		protected void OnQteSucceed(CommonQteContextBase context)
 		{
@@ -89,7 +88,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.OnCommonQteFinished();
 		}
 
-		// Token: 0x0603480A RID: 215050 RVA: 0x00C5DC96 File Offset: 0x00C5BE96
+		// Token: 0x060296AD RID: 169645 RVA: 0x00BA91E2 File Offset: 0x00BA73E2
 		[NullableContext(2)]
 		protected void OnQteFailed(CommonQteContextBase context)
 		{
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.OnCommonQteFinished();
 		}
 
-		// Token: 0x0603480B RID: 215051 RVA: 0x00C5DCB8 File Offset: 0x00C5BEB8
+		// Token: 0x060296AE RID: 169646 RVA: 0x00BA9204 File Offset: 0x00BA7404
 		public virtual void OnBegin()
 		{
 			if (!this.IsProgressQte)
@@ -128,7 +127,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x0603480C RID: 215052 RVA: 0x00C5DD6C File Offset: 0x00C5BF6C
+		// Token: 0x060296AF RID: 169647 RVA: 0x00BA92B8 File Offset: 0x00BA74B8
 		public virtual void OnFinish()
 		{
 			this.ResultSpineCheckList.Clear();
@@ -147,7 +146,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x0603480D RID: 215053 RVA: 0x00C5DDD4 File Offset: 0x00C5BFD4
+		// Token: 0x060296B0 RID: 169648 RVA: 0x00BA9320 File Offset: 0x00BA7520
 		public void ForceStopSequenceQte()
 		{
 			if (this.Context.IsActive())
@@ -164,13 +163,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.OnFinish();
 		}
 
-		// Token: 0x0603480E RID: 215054 RVA: 0x00C5DE81 File Offset: 0x00C5C081
+		// Token: 0x060296B1 RID: 169649 RVA: 0x00BA93CD File Offset: 0x00BA75CD
 		protected virtual void OnReceiveTick(float delta)
 		{
 			this.Progress = MathUtils.Instance.Clamp(this.Context.GetProgress(), 0f, 1f);
 		}
 
-		// Token: 0x0603480F RID: 215055 RVA: 0x00C5DEB0 File Offset: 0x00C5C0B0
+		// Token: 0x060296B2 RID: 169650 RVA: 0x00BA93FC File Offset: 0x00BA75FC
 		public void OnTick(float inDelta)
 		{
 			bool flag = this.CleanupInvalidEventSpines();
@@ -213,7 +212,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x06034810 RID: 215056 RVA: 0x00C5DFAC File Offset: 0x00C5C1AC
+		// Token: 0x060296B3 RID: 169651 RVA: 0x00BA94F8 File Offset: 0x00BA76F8
 		protected virtual void UpdateSequenceQte(float delta)
 		{
 			if (this.CacheProgress > this.LastProgress)
@@ -236,7 +235,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x06034811 RID: 215057 RVA: 0x00C5E0FC File Offset: 0x00C5C2FC
+		// Token: 0x060296B4 RID: 169652 RVA: 0x00BA9648 File Offset: 0x00BA7848
 		protected void OnSpineFinishedCallback(string spineName)
 		{
 			if (this.ResultSpineCheckList.Remove(spineName) && this.ResultSpineCheckList.Count == 0 && this.PendingEventResultSpineTracks.Count == 0)
@@ -245,42 +244,48 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x06034812 RID: 215058 RVA: 0x00C5E12C File Offset: 0x00C5C32C
+		// Token: 0x060296B5 RID: 169653 RVA: 0x00BA9678 File Offset: 0x00BA7878
 		[NullableContext(2)]
 		private void OnEventSpineCompleteCallback(UTrackEntry entry)
 		{
 			this.OnEventSpineFinishedCallback(entry, "Complete");
 		}
 
-		// Token: 0x06034813 RID: 215059 RVA: 0x00C5E13A File Offset: 0x00C5C33A
+		// Token: 0x060296B6 RID: 169654 RVA: 0x00BA9686 File Offset: 0x00BA7886
 		[NullableContext(2)]
 		private void OnEventSpineInterruptCallback(UTrackEntry entry)
 		{
 			this.OnEventSpineFinishedCallback(entry, "Interrupt");
 		}
 
-		// Token: 0x06034814 RID: 215060 RVA: 0x00C5E148 File Offset: 0x00C5C348
+		// Token: 0x060296B7 RID: 169655 RVA: 0x00BA9694 File Offset: 0x00BA7894
 		[NullableContext(2)]
 		private void OnEventSpineEndCallback(UTrackEntry entry)
 		{
 			this.OnEventSpineFinishedCallback(entry, "End");
 		}
 
-		// Token: 0x06034815 RID: 215061 RVA: 0x00C5E156 File Offset: 0x00C5C356
+		// Token: 0x060296B8 RID: 169656 RVA: 0x00BA96A2 File Offset: 0x00BA78A2
 		[NullableContext(2)]
 		private void OnEventSpineDisposeCallback(UTrackEntry entry)
 		{
 			this.OnEventSpineFinishedCallback(entry, "Dispose");
 		}
 
-		// Token: 0x06034816 RID: 215062 RVA: 0x00C5E164 File Offset: 0x00C5C364
+		// Token: 0x060296B9 RID: 169657 RVA: 0x00BA96B0 File Offset: 0x00BA78B0
 		private void OnEventSpineFinishedCallback([Nullable(2)] UTrackEntry entry, string eventName)
 		{
 			if (entry == null)
 			{
 				return;
 			}
-			this.EventSpineTracks.Values.FirstOrDefault((SequenceQteHandleBase<T>.EventSpineTrackState value) => value.Track == entry);
+			foreach (SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState in this.EventSpineTracks.Values)
+			{
+				if (eventSpineTrackState.Track == entry)
+				{
+					break;
+				}
+			}
 			if (ObjectUtils.IsValid(entry))
 			{
 				this.RemoveEventSpineCallbacks(entry);
@@ -291,7 +296,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x06034817 RID: 215063 RVA: 0x00C5E1F0 File Offset: 0x00C5C3F0
+		// Token: 0x060296BA RID: 169658 RVA: 0x00BA9750 File Offset: 0x00BA7950
 		protected virtual void OnCommonQteFinished()
 		{
 			this.HasCommonQteFinished = true;
@@ -300,7 +305,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.CheckFinish();
 		}
 
-		// Token: 0x06034818 RID: 215064 RVA: 0x00C5E234 File Offset: 0x00C5C434
+		// Token: 0x060296BB RID: 169659 RVA: 0x00BA9794 File Offset: 0x00BA7994
 		protected void UpdateSpine()
 		{
 			if (this.SpineInfo == null)
@@ -332,7 +337,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			view2.ManualUpdateNiagara(this.SpineInfo.NiagaraParamNames, this.CacheProgress);
 		}
 
-		// Token: 0x06034819 RID: 215065 RVA: 0x00C5E2BC File Offset: 0x00C5C4BC
+		// Token: 0x060296BC RID: 169660 RVA: 0x00BA981C File Offset: 0x00BA7A1C
 		private HashSet<string> GetActiveProgressSpineNames()
 		{
 			HashSet<string> hashSet = new HashSet<string>();
@@ -356,7 +361,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			return hashSet;
 		}
 
-		// Token: 0x0603481A RID: 215066 RVA: 0x00C5E394 File Offset: 0x00C5C594
+		// Token: 0x060296BD RID: 169661 RVA: 0x00BA98F4 File Offset: 0x00BA7AF4
 		private void UpdateProgressSpineSegments(HashSet<string> activeSpineNames)
 		{
 			this.CloseInactiveProgressSpines(activeSpineNames);
@@ -396,7 +401,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.HasPlayProgressSpine = (this.ActiveProgressSpineNames.Count > 0);
 		}
 
-		// Token: 0x0603481B RID: 215067 RVA: 0x00C5E554 File Offset: 0x00C5C754
+		// Token: 0x060296BE RID: 169662 RVA: 0x00BA9AB4 File Offset: 0x00BA7CB4
 		private void PlayStartSpines()
 		{
 			if (this.HasPlayProgressSpine)
@@ -420,7 +425,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x0603481C RID: 215068 RVA: 0x00C5E628 File Offset: 0x00C5C828
+		// Token: 0x060296BF RID: 169663 RVA: 0x00BA9B88 File Offset: 0x00BA7D88
 		private void CloseStartSpines()
 		{
 			if (this.HasPlayStartSpine)
@@ -431,10 +436,10 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x0603481D RID: 215069 RVA: 0x00C5E658 File Offset: 0x00C5C858
+		// Token: 0x060296C0 RID: 169664 RVA: 0x00BA9BB8 File Offset: 0x00BA7DB8
 		private void CloseInactiveProgressSpines(HashSet<string> activeSpineNames)
 		{
-			foreach (string text in this.ActiveProgressSpineNames.ToList<string>())
+			foreach (string text in new List<string>(this.ActiveProgressSpineNames))
 			{
 				if (!activeSpineNames.Contains(text))
 				{
@@ -452,7 +457,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x0603481E RID: 215070 RVA: 0x00C5E714 File Offset: 0x00C5C914
+		// Token: 0x060296C1 RID: 169665 RVA: 0x00BA9C74 File Offset: 0x00BA7E74
 		protected void CloseSpine([Nullable(new byte[]
 		{
 			2,
@@ -474,7 +479,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x0603481F RID: 215071 RVA: 0x00C5E784 File Offset: 0x00C5C984
+		// Token: 0x060296C2 RID: 169666 RVA: 0x00BA9CE4 File Offset: 0x00BA7EE4
 		protected void CloseAllSpine()
 		{
 			if (this.SpineInfo == null)
@@ -492,7 +497,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.HasPlayStartSpine = false;
 		}
 
-		// Token: 0x06034820 RID: 215072 RVA: 0x00C5E82C File Offset: 0x00C5CA2C
+		// Token: 0x060296C3 RID: 169667 RVA: 0x00BA9D8C File Offset: 0x00BA7F8C
 		protected void CloseProgressSpine()
 		{
 			if (this.SpineInfo == null)
@@ -513,7 +518,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x06034821 RID: 215073 RVA: 0x00C5E8A4 File Offset: 0x00C5CAA4
+		// Token: 0x060296C4 RID: 169668 RVA: 0x00BA9E04 File Offset: 0x00BA8004
 		[NullableContext(2)]
 		protected void PlayResultSpine(bool isSuccess, QteSpineInfoProxy spineInfo = null)
 		{
@@ -554,7 +559,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			int count = this.ResultSpineCheckList.Count;
 		}
 
-		// Token: 0x06034822 RID: 215074 RVA: 0x00C5E9FC File Offset: 0x00C5CBFC
+		// Token: 0x060296C5 RID: 169669 RVA: 0x00BA9F5C File Offset: 0x00BA815C
 		[NullableContext(2)]
 		private void PlayEventSpine(string spineName, bool isLoop, bool freeze, float blendInTime, bool waitForFinish = false)
 		{
@@ -563,7 +568,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 				return;
 			}
 			int num = 0;
-			foreach (USpineSkeletonAnimationComponent uspineSkeletonAnimationComponent in this.EventSpineComponents.ToList<USpineSkeletonAnimationComponent>())
+			foreach (USpineSkeletonAnimationComponent uspineSkeletonAnimationComponent in new List<USpineSkeletonAnimationComponent>(this.EventSpineComponents))
 			{
 				if (!ObjectUtils.IsValid(uspineSkeletonAnimationComponent))
 				{
@@ -607,10 +612,10 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x06034823 RID: 215075 RVA: 0x00C5EB8C File Offset: 0x00C5CD8C
+		// Token: 0x060296C6 RID: 169670 RVA: 0x00BAA0EC File Offset: 0x00BA82EC
 		private void UpdateEventSpine(string spineName, float progress)
 		{
-			foreach (SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState in this.EventSpineTracks.Values.ToList<SequenceQteHandleBase<T>.EventSpineTrackState>())
+			foreach (SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState in this.EventSpineTracks.Values)
 			{
 				if (!(eventSpineTrackState.AnimationName != spineName) && eventSpineTrackState.IsFrozen && ObjectUtils.IsValid(eventSpineTrackState.Component) && ObjectUtils.IsValid(eventSpineTrackState.Track) && eventSpineTrackState.Track.isValidAnimation())
 				{
@@ -621,7 +626,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x06034824 RID: 215076 RVA: 0x00C5EC40 File Offset: 0x00C5CE40
+		// Token: 0x060296C7 RID: 169671 RVA: 0x00BAA19C File Offset: 0x00BA839C
 		[NullableContext(2)]
 		private void CloseEventSpine(string spineName, float blendOutTime)
 		{
@@ -629,7 +634,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			{
 				return;
 			}
-			foreach (SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState in this.EventSpineTracks.Values.ToList<SequenceQteHandleBase<T>.EventSpineTrackState>())
+			foreach (SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState in this.EventSpineTracks.Values)
 			{
 				if (!(eventSpineTrackState.AnimationName != spineName))
 				{
@@ -643,10 +648,10 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x06034825 RID: 215077 RVA: 0x00C5ECCC File Offset: 0x00C5CECC
+		// Token: 0x060296C8 RID: 169672 RVA: 0x00BAA224 File Offset: 0x00BA8424
 		private void ReleaseAllEventSpines(bool closeAnimation)
 		{
-			foreach (SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState in this.EventSpineTracks.Values.ToList<SequenceQteHandleBase<T>.EventSpineTrackState>())
+			foreach (SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState in this.EventSpineTracks.Values)
 			{
 				USpineSkeletonAnimationComponent component = eventSpineTrackState.Component;
 				this.RemoveEventSpineTrack(component);
@@ -659,7 +664,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.PendingEventResultSpineTracks.Clear();
 		}
 
-		// Token: 0x06034826 RID: 215078 RVA: 0x00C5ED5C File Offset: 0x00C5CF5C
+		// Token: 0x060296C9 RID: 169673 RVA: 0x00BAA2B0 File Offset: 0x00BA84B0
 		private void RemoveEventSpineTrack(USpineSkeletonAnimationComponent component)
 		{
 			SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState;
@@ -674,7 +679,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.PendingEventResultSpineTracks.Remove(eventSpineTrackState.Track);
 		}
 
-		// Token: 0x06034827 RID: 215079 RVA: 0x00C5EDA8 File Offset: 0x00C5CFA8
+		// Token: 0x060296CA RID: 169674 RVA: 0x00BAA2FC File Offset: 0x00BA84FC
 		private void RemoveEventSpineCallbacks(UTrackEntry track)
 		{
 			track.AnimationComplete.Remove(new Action<UTrackEntry>(this.OnEventSpineCompleteCallback));
@@ -683,11 +688,11 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			track.AnimationDispose.Remove(new Action<UTrackEntry>(this.OnEventSpineDisposeCallback));
 		}
 
-		// Token: 0x06034828 RID: 215080 RVA: 0x00C5EE14 File Offset: 0x00C5D014
+		// Token: 0x060296CB RID: 169675 RVA: 0x00BAA368 File Offset: 0x00BA8568
 		private bool CleanupInvalidEventSpines()
 		{
 			bool flag = false;
-			foreach (SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState in this.EventSpineTracks.Values.ToList<SequenceQteHandleBase<T>.EventSpineTrackState>())
+			foreach (SequenceQteHandleBase<T>.EventSpineTrackState eventSpineTrackState in this.EventSpineTracks.Values)
 			{
 				if (!ObjectUtils.IsValid(eventSpineTrackState.Component) || !ObjectUtils.IsValid(eventSpineTrackState.Track) || !eventSpineTrackState.Track.isValidAnimation())
 				{
@@ -700,7 +705,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			return flag;
 		}
 
-		// Token: 0x06034829 RID: 215081 RVA: 0x00C5EEC8 File Offset: 0x00C5D0C8
+		// Token: 0x060296CC RID: 169676 RVA: 0x00BAA418 File Offset: 0x00BA8618
 		protected void CheckFinish()
 		{
 			if (this.HasFinished)
@@ -715,101 +720,101 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.QteManager.OnSequenceQteFinished(this.Context.QteId);
 		}
 
-		// Token: 0x0603482A RID: 215082 RVA: 0x00C5EF00 File Offset: 0x00C5D100
+		// Token: 0x060296CD RID: 169677 RVA: 0x00BAA450 File Offset: 0x00BA8650
 		protected bool IsSequenceQteFinished()
 		{
 			return this.IsForceStop || (this.ResultSpineCheckList.Count == 0 && this.PendingEventResultSpineTracks.Count == 0 && this.CheckProgressFinish() && !this.MarkSequenceQtePending && !this.Context.IsPending());
 		}
 
-		// Token: 0x0603482B RID: 215083 RVA: 0x00C5EF60 File Offset: 0x00C5D160
+		// Token: 0x060296CE RID: 169678 RVA: 0x00BAA4B0 File Offset: 0x00BA86B0
 		protected bool CheckProgressFinish()
 		{
 			return MathUtils.Instance.IsNearlyEqual((double)this.CacheProgress, (double)this.Progress, null);
 		}
 
-		// Token: 0x0401BFA8 RID: 114600
+		// Token: 0x04016993 RID: 92563
 		private const string EVENT_SUCCESS = "plot_seq_qte_success";
 
-		// Token: 0x0401BFA9 RID: 114601
+		// Token: 0x04016994 RID: 92564
 		private const string EVENT_FAIL = "plot_seq_qte_timeout";
 
-		// Token: 0x0401BFAA RID: 114602
+		// Token: 0x04016995 RID: 92565
 		public const float PERCENT = 0.01f;
 
-		// Token: 0x0401BFAB RID: 114603
+		// Token: 0x04016996 RID: 92566
 		private const float BLEND_OUT_TIME = 0.5f;
 
-		// Token: 0x0401BFAC RID: 114604
+		// Token: 0x04016997 RID: 92567
 		protected readonly SequenceQteManager QteManager;
 
-		// Token: 0x0401BFAD RID: 114605
+		// Token: 0x04016998 RID: 92568
 		protected readonly T Context;
 
-		// Token: 0x0401BFB4 RID: 114612
+		// Token: 0x0401699F RID: 92575
 		protected bool MarkSequenceQtePending;
 
-		// Token: 0x0401BFB5 RID: 114613
+		// Token: 0x040169A0 RID: 92576
 		protected bool IsForceStop;
 
-		// Token: 0x0401BFB6 RID: 114614
+		// Token: 0x040169A1 RID: 92577
 		protected float UpdateInterval;
 
-		// Token: 0x0401BFB7 RID: 114615
+		// Token: 0x040169A2 RID: 92578
 		protected float Progress;
 
-		// Token: 0x0401BFB8 RID: 114616
+		// Token: 0x040169A3 RID: 92579
 		protected float CacheProgress;
 
-		// Token: 0x0401BFB9 RID: 114617
+		// Token: 0x040169A4 RID: 92580
 		protected float LastProgress;
 
-		// Token: 0x0401BFBA RID: 114618
+		// Token: 0x040169A5 RID: 92581
 		protected float ProgressLerpSpeed = -1f;
 
-		// Token: 0x0401BFBB RID: 114619
+		// Token: 0x040169A6 RID: 92582
 		protected float TickInterval;
 
-		// Token: 0x0401BFBC RID: 114620
+		// Token: 0x040169A7 RID: 92583
 		protected float TickCheckTime;
 
-		// Token: 0x0401BFBD RID: 114621
+		// Token: 0x040169A8 RID: 92584
 		protected bool HasFinished;
 
-		// Token: 0x0401BFBE RID: 114622
+		// Token: 0x040169A9 RID: 92585
 		protected bool HasCommonQteFinished;
 
-		// Token: 0x0401BFBF RID: 114623
+		// Token: 0x040169AA RID: 92586
 		protected bool NeedTick;
 
-		// Token: 0x0401BFC0 RID: 114624
+		// Token: 0x040169AB RID: 92587
 		protected int SectionLength;
 
-		// Token: 0x0401BFC2 RID: 114626
+		// Token: 0x040169AD RID: 92589
 		protected float CacheSpineProgress;
 
-		// Token: 0x0401BFC3 RID: 114627
+		// Token: 0x040169AE RID: 92590
 		[Nullable(2)]
 		protected PlotSubtitleView View;
 
-		// Token: 0x0401BFC4 RID: 114628
+		// Token: 0x040169AF RID: 92591
 		protected bool HasPlayProgressSpine;
 
-		// Token: 0x0401BFC5 RID: 114629
+		// Token: 0x040169B0 RID: 92592
 		protected bool HasPlayStartSpine;
 
-		// Token: 0x0401BFC6 RID: 114630
+		// Token: 0x040169B1 RID: 92593
 		private readonly HashSet<string> ActiveProgressSpineNames = new HashSet<string>();
 
-		// Token: 0x0401BFC7 RID: 114631
+		// Token: 0x040169B2 RID: 92594
 		private readonly Dictionary<string, QteProgressSpineSegmentProxy> ActiveProgressSpineSegments = new Dictionary<string, QteProgressSpineSegmentProxy>();
 
-		// Token: 0x0401BFC8 RID: 114632
+		// Token: 0x040169B3 RID: 92595
 		protected readonly HashSet<string> ResultSpineCheckList = new HashSet<string>();
 
-		// Token: 0x0401BFC9 RID: 114633
+		// Token: 0x040169B4 RID: 92596
 		private readonly HashSet<USpineSkeletonAnimationComponent> EventSpineComponents = new HashSet<USpineSkeletonAnimationComponent>();
 
-		// Token: 0x0401BFCA RID: 114634
+		// Token: 0x040169B5 RID: 92597
 		[Nullable(new byte[]
 		{
 			1,
@@ -819,40 +824,40 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 		})]
 		private readonly Dictionary<USpineSkeletonAnimationComponent, SequenceQteHandleBase<T>.EventSpineTrackState> EventSpineTracks = new Dictionary<USpineSkeletonAnimationComponent, SequenceQteHandleBase<T>.EventSpineTrackState>();
 
-		// Token: 0x0401BFCB RID: 114635
+		// Token: 0x040169B6 RID: 92598
 		private readonly HashSet<UTrackEntry> PendingEventResultSpineTracks = new HashSet<UTrackEntry>();
 
-		// Token: 0x0401BFCC RID: 114636
+		// Token: 0x040169B7 RID: 92599
 		private readonly HashSet<string> MissingEventSpineAnimationNames = new HashSet<string>();
 
-		// Token: 0x0200B158 RID: 45400
+		// Token: 0x02009B90 RID: 39824
 		[Nullable(0)]
 		[RequiredMember]
 		private class EventSpineTrackState
 		{
-			// Token: 0x0604E5F2 RID: 321010 RVA: 0x014CDBD6 File Offset: 0x014CBDD6
+			// Token: 0x06044BFD RID: 281597 RVA: 0x01487366 File Offset: 0x01485566
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public EventSpineTrackState()
 			{
 			}
 
-			// Token: 0x04035CF9 RID: 220409
+			// Token: 0x04030741 RID: 198465
 			[RequiredMember]
 			public USpineSkeletonAnimationComponent Component;
 
-			// Token: 0x04035CFA RID: 220410
+			// Token: 0x04030742 RID: 198466
 			[RequiredMember]
 			public UTrackEntry Track;
 
-			// Token: 0x04035CFB RID: 220411
+			// Token: 0x04030743 RID: 198467
 			[RequiredMember]
 			public string AnimationName;
 
-			// Token: 0x04035CFC RID: 220412
+			// Token: 0x04030744 RID: 198468
 			public bool IsFrozen;
 
-			// Token: 0x04035CFD RID: 220413
+			// Token: 0x04030745 RID: 198469
 			public float Duration;
 		}
 	}

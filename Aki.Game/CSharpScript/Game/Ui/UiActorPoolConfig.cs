@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046CA RID: 18122
+	// Token: 0x020035FB RID: 13819
 	public class UiActorPoolConfig : IStaticVariableResetter
 	{
-		// Token: 0x0602EBB5 RID: 191413 RVA: 0x00AD07ED File Offset: 0x00ACE9ED
+		// Token: 0x06023301 RID: 144129 RVA: 0x009FF181 File Offset: 0x009FD381
 		static UiActorPoolConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiActorPoolConfig.CreateStaticDefaultValue), new Action(UiActorPoolConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602EBB6 RID: 191414 RVA: 0x00AD080C File Offset: 0x00ACEA0C
+		// Token: 0x06023302 RID: 144130 RVA: 0x009FF1A0 File Offset: 0x009FD3A0
 		public static void CreateStaticDefaultValue()
 		{
 			IPrepareLoadStruct[] array = new IPrepareLoadStruct[21];
@@ -124,13 +124,13 @@ namespace CSharpScript.Game.Ui
 			UiActorPoolConfig.PrepareConfigList = array;
 		}
 
-		// Token: 0x0602EBB7 RID: 191415 RVA: 0x00AD0CC9 File Offset: 0x00ACEEC9
+		// Token: 0x06023303 RID: 144131 RVA: 0x009FF65D File Offset: 0x009FD85D
 		public static void ResetStaticDefaultValue()
 		{
 			UiActorPoolConfig.PrepareConfigList = null;
 		}
 
-		// Token: 0x0401970A RID: 104202
+		// Token: 0x04013DB1 RID: 81329
 		[Nullable(new byte[]
 		{
 			2,

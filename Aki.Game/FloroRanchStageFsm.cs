@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B56 RID: 6998
+// Token: 0x02001015 RID: 4117
 [Nullable(new byte[]
 {
 	0,
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 })]
 public class FloroRanchStageFsm : FloroRanchFsmBase<EFloroRanchStageStateType, FloroRanchStateBase>
 {
-	// Token: 0x0600CF99 RID: 53145 RVA: 0x002F48C0 File Offset: 0x002F2AC0
+	// Token: 0x0600A3AA RID: 41898 RVA: 0x002FF998 File Offset: 0x002FDB98
 	protected override void InitStateInstance()
 	{
 		this.CurrentStateType = EFloroRanchStageStateType.None;
@@ -21,7 +21,7 @@ public class FloroRanchStageFsm : FloroRanchFsmBase<EFloroRanchStageStateType, F
 		base.RegisterState(EFloroRanchStageStateType.GameExit, new FloroRanchGameExitState(this));
 	}
 
-	// Token: 0x0600CF9A RID: 53146 RVA: 0x002F4918 File Offset: 0x002F2B18
+	// Token: 0x0600A3AB RID: 41899 RVA: 0x002FF9F0 File Offset: 0x002FDBF0
 	protected unsafe override bool CheckCanChangeState(EFloroRanchStageStateType curStateType, EFloroRanchStageStateType nextStateType)
 	{
 		List<EFloroRanchStageStateType> list;

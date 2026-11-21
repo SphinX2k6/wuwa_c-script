@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F9B RID: 12187
+// Token: 0x020024EF RID: 9455
 [NullableContext(1)]
 [Nullable(0)]
 public class StartBattleQte : PeriodExecution
 {
-	// Token: 0x06019DCC RID: 105932 RVA: 0x006C1B8F File Offset: 0x006BFD8F
+	// Token: 0x060176DE RID: 95966 RVA: 0x006E8457 File Offset: 0x006E6657
 	public StartBattleQte(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DCD RID: 105933 RVA: 0x006C1B98 File Offset: 0x006BFD98
+	// Token: 0x060176DF RID: 95967 RVA: 0x006E8460 File Offset: 0x006E6660
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -21,7 +21,7 @@ public class StartBattleQte : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DCE RID: 105934 RVA: 0x006C1BC8 File Offset: 0x006BFDC8
+	// Token: 0x060176E0 RID: 95968 RVA: 0x006E8490 File Offset: 0x006E6690
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -57,7 +57,7 @@ public class StartBattleQte : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DCF RID: 105935 RVA: 0x006C1C90 File Offset: 0x006BFE90
+	// Token: 0x060176E1 RID: 95969 RVA: 0x006E8558 File Offset: 0x006E6758
 	public override string GetDebugEffectString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(12, 2);
@@ -68,6 +68,6 @@ public class StartBattleQte : PeriodExecution
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C372 RID: 50034
+	// Token: 0x0400C71B RID: 50971
 	protected int? BattleQteId;
 }

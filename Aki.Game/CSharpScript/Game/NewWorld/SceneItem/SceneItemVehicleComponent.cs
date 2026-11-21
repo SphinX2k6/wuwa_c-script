@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007199 RID: 29081
+	// Token: 0x0200624E RID: 25166
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemVehicleComponent : EntityComponent
 	{
-		// Token: 0x06047280 RID: 291456 RVA: 0x01213B24 File Offset: 0x01211D24
+		// Token: 0x0603CB6F RID: 248687 RVA: 0x0116DE6B File Offset: 0x0116C06B
 		protected override bool OnStart()
 		{
 			this.CreatureData = base.Entity.GetComponent<CreatureDataComponent>();
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047281 RID: 291457 RVA: 0x01213B50 File Offset: 0x01211D50
+		// Token: 0x0603CB70 RID: 248688 RVA: 0x0116DE98 File Offset: 0x0116C098
 		protected override void OnTick(float delta)
 		{
 			if (MathUtils.Instance.IsNearlyZero((double)delta, null) || this.ActorComp == null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.DeltaTime = 0f;
 		}
 
-		// Token: 0x06047282 RID: 291458 RVA: 0x01213C5C File Offset: 0x01211E5C
+		// Token: 0x0603CB71 RID: 248689 RVA: 0x0116DFA4 File Offset: 0x0116C1A4
 		protected override bool OnEnd()
 		{
 			foreach (SceneItemVehicleComponent.SceneItemVehicleFeature sceneItemVehicleFeature in this.ConfigList)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047283 RID: 291459 RVA: 0x01213CD0 File Offset: 0x01211ED0
+		// Token: 0x0603CB72 RID: 248690 RVA: 0x0116E018 File Offset: 0x0116C218
 		private unsafe void Initialize()
 		{
 			CreatureDataComponent creatureData = this.CreatureData;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			GameBudgetInterfaceController.Instance.SetUsePerformanceActorCalculateBounds(base.Entity.GameBudgetConfig.GroupName, base.Entity.GameBudgetManagedToken, true);
 		}
 
-		// Token: 0x06047284 RID: 291460 RVA: 0x01213E74 File Offset: 0x01212074
+		// Token: 0x0603CB73 RID: 248691 RVA: 0x0116E1BC File Offset: 0x0116C3BC
 		private void InitMontageConfig(IMovementVehicleFeature feature)
 		{
 			IMovementPerformConfig movePerformConfig = feature.MovePerformConfig;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047285 RID: 291461 RVA: 0x01213EB8 File Offset: 0x012120B8
+		// Token: 0x0603CB74 RID: 248692 RVA: 0x0116E200 File Offset: 0x0116C400
 		private void InitPassengerCueConfig(IMovementVehicleFeature feature)
 		{
 			IMovementPerformConfig movePerformConfig = feature.MovePerformConfig;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047286 RID: 291462 RVA: 0x01213EFC File Offset: 0x012120FC
+		// Token: 0x0603CB75 RID: 248693 RVA: 0x0116E244 File Offset: 0x0116C444
 		private void InitAudioConfig(IAudioVehicleFeature feature)
 		{
 			if (feature.AudioConfigs != null)
@@ -151,8 +151,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D9A RID: 40346
-		// (get) Token: 0x06047287 RID: 291463 RVA: 0x01213F34 File Offset: 0x01212134
+		// Token: 0x170072DC RID: 29404
+		// (get) Token: 0x0603CB76 RID: 248694 RVA: 0x0116E27C File Offset: 0x0116C47C
 		[Nullable(2)]
 		public USkeletalMeshComponent SkeletonMeshComponent
 		{
@@ -177,8 +177,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D9B RID: 40347
-		// (get) Token: 0x06047288 RID: 291464 RVA: 0x01213F82 File Offset: 0x01212182
+		// Token: 0x170072DD RID: 29405
+		// (get) Token: 0x0603CB77 RID: 248695 RVA: 0x0116E2CA File Offset: 0x0116C4CA
 		[Nullable(2)]
 		public UAnimInstance AnimInstance
 		{
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047289 RID: 291465 RVA: 0x01213FAA File Offset: 0x012121AA
+		// Token: 0x0603CB78 RID: 248696 RVA: 0x0116E2F2 File Offset: 0x0116C4F2
 		[return: Nullable(2)]
 		public USceneComponent GetStaticMeshVehicleSeats(string key)
 		{
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return referenceActor.RootComponent;
 		}
 
-		// Token: 0x0604728A RID: 291466 RVA: 0x01213FCC File Offset: 0x012121CC
+		// Token: 0x0603CB79 RID: 248697 RVA: 0x0116E314 File Offset: 0x0116C514
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -219,190 +219,202 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemVehicleComponent sceneItemVehicleComponent = (SceneItemVehicleComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureData"))
+			if (sceneItemVehicleComponent.CreatureData == null)
 			{
-				if (sceneItemVehicleComponent.CreatureData == null)
-				{
-					this.CreatureData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureData), "CreatureData"))
-				{
-					return false;
-				}
+				this.CreatureData = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemVehicleComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("Speed"))
-			{
-				this.Speed = sceneItemVehicleComponent.Speed;
-			}
-			if (base.CanResetComponentProperty("DeltaTime"))
-			{
-				this.DeltaTime = sceneItemVehicleComponent.DeltaTime;
-			}
-			if (base.CanResetComponentProperty("ConfigList") && sceneItemVehicleComponent.ConfigList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<SceneItemVehicleComponent.SceneItemVehicleFeature>>(this.ConfigList), "ConfigList"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureData), "CreatureData"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("SkeletalMeshCompInternal"))
+			if (sceneItemVehicleComponent.ActorComp == null)
 			{
-				if (sceneItemVehicleComponent.SkeletalMeshCompInternal == null)
-				{
-					this.SkeletalMeshCompInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.SkeletalMeshCompInternal), "SkeletalMeshCompInternal"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("AnimInstanceInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemVehicleComponent.AnimInstanceInternal == null)
-				{
-					this.AnimInstanceInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.AnimInstanceInternal), "AnimInstanceInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			return !base.CanResetComponentProperty("LastLocation") || sceneItemVehicleComponent.LastLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastLocation), "LastLocation");
+			this.Speed = sceneItemVehicleComponent.Speed;
+			this.DeltaTime = sceneItemVehicleComponent.DeltaTime;
+			if (sceneItemVehicleComponent.ConfigList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConfigList), "ConfigList"))
+			{
+				return false;
+			}
+			if (sceneItemVehicleComponent.SkeletalMeshCompInternal == null)
+			{
+				this.SkeletalMeshCompInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkeletalMeshCompInternal), "SkeletalMeshCompInternal"))
+			{
+				return false;
+			}
+			if (sceneItemVehicleComponent.AnimInstanceInternal == null)
+			{
+				this.AnimInstanceInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimInstanceInternal), "AnimInstanceInternal"))
+			{
+				return false;
+			}
+			return sceneItemVehicleComponent.LastLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLocation), "LastLocation");
 		}
 
-		// Token: 0x040256AA RID: 153258
+		// Token: 0x170072DE RID: 29406
+		// (get) Token: 0x0603CB7A RID: 248698 RVA: 0x0116E43C File Offset: 0x0116C63C
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072DF RID: 29407
+		// (get) Token: 0x0603CB7B RID: 248699 RVA: 0x0116E43F File Offset: 0x0116C63F
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072E0 RID: 29408
+		// (get) Token: 0x0603CB7C RID: 248700 RVA: 0x0116E442 File Offset: 0x0116C642
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402031A RID: 131866
 		private const int DELTA_TIME = 200;
 
-		// Token: 0x040256AB RID: 153259
+		// Token: 0x0402031B RID: 131867
 		private const int SPEED_MOVE_DISTANCE_TOLERENCE = 1000;
 
-		// Token: 0x040256AC RID: 153260
+		// Token: 0x0402031C RID: 131868
 		internal const float CENTIMETER_TO_METER = 0.01f;
 
-		// Token: 0x040256AD RID: 153261
+		// Token: 0x0402031D RID: 131869
 		internal const int CHANGE_VEHICLE_SPEED_TOLERENCE = 50;
 
-		// Token: 0x040256AE RID: 153262
+		// Token: 0x0402031E RID: 131870
 		internal const float CHANGE_MONTAGE_RATE_TOLERENCE = 0.1f;
 
-		// Token: 0x040256AF RID: 153263
+		// Token: 0x0402031F RID: 131871
 		[Nullable(2)]
 		private CreatureDataComponent CreatureData;
 
-		// Token: 0x040256B0 RID: 153264
+		// Token: 0x04020320 RID: 131872
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040256B1 RID: 153265
+		// Token: 0x04020321 RID: 131873
 		private float Speed;
 
-		// Token: 0x040256B2 RID: 153266
+		// Token: 0x04020322 RID: 131874
 		private float DeltaTime;
 
-		// Token: 0x040256B3 RID: 153267
+		// Token: 0x04020323 RID: 131875
 		private readonly List<SceneItemVehicleComponent.SceneItemVehicleFeature> ConfigList = new List<SceneItemVehicleComponent.SceneItemVehicleFeature>();
 
-		// Token: 0x040256B4 RID: 153268
+		// Token: 0x04020324 RID: 131876
 		[Nullable(2)]
 		private USkeletalMeshComponent SkeletalMeshCompInternal;
 
-		// Token: 0x040256B5 RID: 153269
+		// Token: 0x04020325 RID: 131877
 		[Nullable(2)]
 		private UAnimInstance AnimInstanceInternal;
 
-		// Token: 0x040256B6 RID: 153270
+		// Token: 0x04020326 RID: 131878
 		private readonly Vector LastLocation = Vector.Create();
 
-		// Token: 0x0200CEE8 RID: 52968
+		// Token: 0x0200BA7E RID: 47742
 		[Nullable(0)]
 		[RequiredMember]
 		private class IMontageMovementMapping
 		{
-			// Token: 0x06051FC9 RID: 335817 RVA: 0x016467C7 File Offset: 0x016449C7
+			// Token: 0x06048773 RID: 296819 RVA: 0x016188EF File Offset: 0x01616AEF
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public IMontageMovementMapping()
 			{
 			}
 
-			// Token: 0x0403E3E6 RID: 254950
+			// Token: 0x0403970C RID: 235276
 			[RequiredMember]
 			public double[] SpeedRange;
 
-			// Token: 0x0403E3E7 RID: 254951
+			// Token: 0x0403970D RID: 235277
 			[RequiredMember]
 			public double[] MontageRange;
 
-			// Token: 0x0403E3E8 RID: 254952
+			// Token: 0x0403970E RID: 235278
 			public float LastRate;
 		}
 
-		// Token: 0x0200CEE9 RID: 52969
+		// Token: 0x0200BA7F RID: 47743
 		[Nullable(0)]
 		[RequiredMember]
 		private class ICueMovementMapping
 		{
-			// Token: 0x06051FCA RID: 335818 RVA: 0x016467CF File Offset: 0x016449CF
+			// Token: 0x06048774 RID: 296820 RVA: 0x016188F7 File Offset: 0x01616AF7
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public ICueMovementMapping()
 			{
 			}
 
-			// Token: 0x0403E3E9 RID: 254953
+			// Token: 0x0403970F RID: 235279
 			[RequiredMember]
 			public double[] SpeedRange;
 
-			// Token: 0x0403E3EA RID: 254954
+			// Token: 0x04039710 RID: 235280
 			[RequiredMember]
 			public List<long> GameplayCueIdList;
 
-			// Token: 0x0403E3EB RID: 254955
+			// Token: 0x04039711 RID: 235281
 			public bool InRange;
 
-			// Token: 0x0403E3EC RID: 254956
+			// Token: 0x04039712 RID: 235282
 			[RequiredMember]
 			public List<int> GameplayCueHandleList;
 		}
 
-		// Token: 0x0200CEEA RID: 52970
+		// Token: 0x0200BA80 RID: 47744
 		[Nullable(0)]
 		[RequiredMember]
 		private class IAudioFeatureConfig
 		{
-			// Token: 0x06051FCB RID: 335819 RVA: 0x016467D7 File Offset: 0x016449D7
+			// Token: 0x06048775 RID: 296821 RVA: 0x016188FF File Offset: 0x01616AFF
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public IAudioFeatureConfig()
 			{
 			}
 
-			// Token: 0x0403E3ED RID: 254957
+			// Token: 0x04039713 RID: 235283
 			[RequiredMember]
 			public double[] SpeedRange;
 
-			// Token: 0x0403E3EE RID: 254958
+			// Token: 0x04039714 RID: 235284
 			[RequiredMember]
 			public string Event;
 
-			// Token: 0x0403E3EF RID: 254959
+			// Token: 0x04039715 RID: 235285
 			public int AudioHandle;
 		}
 
-		// Token: 0x0200CEEB RID: 52971
+		// Token: 0x0200BA81 RID: 47745
 		[NullableContext(2)]
 		[Nullable(0)]
 		private abstract class SceneItemVehicleFeature
 		{
-			// Token: 0x06051FCC RID: 335820 RVA: 0x016467DF File Offset: 0x016449DF
+			// Token: 0x06048776 RID: 296822 RVA: 0x01618907 File Offset: 0x01616B07
 			[NullableContext(1)]
 			public SceneItemVehicleFeature(SceneItemActorComponent actor, SceneItemVehicleComponent vehicle)
 			{
@@ -410,29 +422,29 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				this.VehicleComp = vehicle;
 			}
 
-			// Token: 0x06051FCD RID: 335821
+			// Token: 0x06048777 RID: 296823
 			public abstract void Update(float speed);
 
-			// Token: 0x06051FCE RID: 335822
+			// Token: 0x06048778 RID: 296824
 			public abstract void Clear();
 
-			// Token: 0x0403E3F0 RID: 254960
+			// Token: 0x04039716 RID: 235286
 			protected SceneItemVehicleComponent VehicleComp;
 
-			// Token: 0x0403E3F1 RID: 254961
+			// Token: 0x04039717 RID: 235287
 			protected SceneItemActorComponent ActorComp;
 		}
 
-		// Token: 0x0200CEEC RID: 52972
+		// Token: 0x0200BA82 RID: 47746
 		[Nullable(0)]
 		private class MontageConfig : SceneItemVehicleComponent.SceneItemVehicleFeature
 		{
-			// Token: 0x06051FCF RID: 335823 RVA: 0x016467F5 File Offset: 0x016449F5
+			// Token: 0x06048779 RID: 296825 RVA: 0x0161891D File Offset: 0x01616B1D
 			public MontageConfig(SceneItemActorComponent actor, SceneItemVehicleComponent vehicle) : base(actor, vehicle)
 			{
 			}
 
-			// Token: 0x06051FD0 RID: 335824 RVA: 0x01646800 File Offset: 0x01644A00
+			// Token: 0x0604877A RID: 296826 RVA: 0x01618928 File Offset: 0x01616B28
 			public unsafe bool Init(IMovementVehicleFeature feature)
 			{
 				IMovementPerformConfig movePerformConfig = feature.MovePerformConfig;
@@ -496,7 +508,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 
-			// Token: 0x06051FD1 RID: 335825 RVA: 0x016469F8 File Offset: 0x01644BF8
+			// Token: 0x0604877B RID: 296827 RVA: 0x01618B20 File Offset: 0x01616D20
 			public override void Update(float speed)
 			{
 				if (this.TagComp != null)
@@ -520,7 +532,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x06051FD2 RID: 335826 RVA: 0x01646B14 File Offset: 0x01644D14
+			// Token: 0x0604877C RID: 296828 RVA: 0x01618C3C File Offset: 0x01616E3C
 			public override void Clear()
 			{
 				SceneItemVehicleComponent vehicleComp = this.VehicleComp;
@@ -532,11 +544,11 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				this.MontageMovementMapping.Clear();
 			}
 
-			// Token: 0x0403E3F2 RID: 254962
+			// Token: 0x04039718 RID: 235288
 			[Nullable(2)]
 			private BaseTagComponent TagComp;
 
-			// Token: 0x0403E3F3 RID: 254963
+			// Token: 0x04039719 RID: 235289
 			[Nullable(new byte[]
 			{
 				2,
@@ -545,16 +557,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			private Dictionary<int, SceneItemVehicleComponent.IMontageMovementMapping> MontageMovementMapping;
 		}
 
-		// Token: 0x0200CEED RID: 52973
+		// Token: 0x0200BA83 RID: 47747
 		[Nullable(0)]
 		private class GameplayCueConfig : SceneItemVehicleComponent.SceneItemVehicleFeature
 		{
-			// Token: 0x06051FD3 RID: 335827 RVA: 0x01646B7B File Offset: 0x01644D7B
+			// Token: 0x0604877D RID: 296829 RVA: 0x01618CA3 File Offset: 0x01616EA3
 			public GameplayCueConfig(SceneItemActorComponent actor, SceneItemVehicleComponent vehicle) : base(actor, vehicle)
 			{
 			}
 
-			// Token: 0x06051FD4 RID: 335828 RVA: 0x01646B88 File Offset: 0x01644D88
+			// Token: 0x0604877E RID: 296830 RVA: 0x01618CB0 File Offset: 0x01616EB0
 			public bool Init(IMovementVehicleFeature feature)
 			{
 				IMovementPerformConfig movePerformConfig = feature.MovePerformConfig;
@@ -611,7 +623,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return this.GameplayCueConfigList.Count > 0;
 			}
 
-			// Token: 0x06051FD5 RID: 335829 RVA: 0x01646D3C File Offset: 0x01644F3C
+			// Token: 0x0604877F RID: 296831 RVA: 0x01618E64 File Offset: 0x01617064
 			public override void Update(float speed)
 			{
 				if (this.GameplayCueConfigList == null || this.GameplayCueConfigList.Count == 0)
@@ -658,7 +670,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x06051FD6 RID: 335830 RVA: 0x01646F68 File Offset: 0x01645168
+			// Token: 0x06048780 RID: 296832 RVA: 0x01619090 File Offset: 0x01617290
 			private void InitPassengerList()
 			{
 				if (this.PerformComp == null || this.PerformComp.PassengerInfoMap.Count == 0)
@@ -687,7 +699,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x06051FD7 RID: 335831 RVA: 0x0164702C File Offset: 0x0164522C
+			// Token: 0x06048781 RID: 296833 RVA: 0x01619154 File Offset: 0x01617354
 			private void ClearPassengerCue()
 			{
 				if (this.GameplayCueConfigList == null || this.GameplayCueConfigList.Count == 0 || this.PassengerCueCompList == null || this.PassengerCueCompList.Count == 0)
@@ -711,13 +723,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x06051FD8 RID: 335832 RVA: 0x01647144 File Offset: 0x01645344
+			// Token: 0x06048782 RID: 296834 RVA: 0x0161926C File Offset: 0x0161746C
 			public override void Clear()
 			{
 				this.ClearPassengerCue();
 			}
 
-			// Token: 0x0403E3F4 RID: 254964
+			// Token: 0x0403971A RID: 235290
 			[Nullable(new byte[]
 			{
 				2,
@@ -725,7 +737,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			})]
 			private List<SceneItemVehicleComponent.ICueMovementMapping> GameplayCueConfigList;
 
-			// Token: 0x0403E3F5 RID: 254965
+			// Token: 0x0403971B RID: 235291
 			[Nullable(new byte[]
 			{
 				2,
@@ -733,21 +745,21 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			})]
 			private List<BaseGameplayCueComponent> PassengerCueCompList;
 
-			// Token: 0x0403E3F6 RID: 254966
+			// Token: 0x0403971C RID: 235292
 			[Nullable(2)]
 			private VehicleSceneItemPerformComponent PerformComp;
 		}
 
-		// Token: 0x0200CEEE RID: 52974
+		// Token: 0x0200BA84 RID: 47748
 		[Nullable(0)]
 		private class AudioConfig : SceneItemVehicleComponent.SceneItemVehicleFeature
 		{
-			// Token: 0x06051FD9 RID: 335833 RVA: 0x0164714C File Offset: 0x0164534C
+			// Token: 0x06048783 RID: 296835 RVA: 0x01619274 File Offset: 0x01617474
 			public AudioConfig(SceneItemActorComponent actor, SceneItemVehicleComponent vehicle) : base(actor, vehicle)
 			{
 			}
 
-			// Token: 0x06051FDA RID: 335834 RVA: 0x01647158 File Offset: 0x01645358
+			// Token: 0x06048784 RID: 296836 RVA: 0x01619280 File Offset: 0x01617480
 			public bool Init(IAudioVehicleFeature feature)
 			{
 				IVehicleAudioConfig audioConfigs = feature.AudioConfigs;
@@ -773,7 +785,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return true;
 			}
 
-			// Token: 0x06051FDB RID: 335835 RVA: 0x016471C8 File Offset: 0x016453C8
+			// Token: 0x06048785 RID: 296837 RVA: 0x016192F0 File Offset: 0x016174F0
 			public override void Update(float speed)
 			{
 				if (this.AudioConfigInst != null)
@@ -788,7 +800,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x06051FDC RID: 335836 RVA: 0x016471F8 File Offset: 0x016453F8
+			// Token: 0x06048786 RID: 296838 RVA: 0x01619320 File Offset: 0x01617520
 			private void UpdateRtpc(float speed)
 			{
 				if (Math.Abs(this.LastSpeed - speed) < 50f && (this.LastSpeed == 0f || speed != 0f))
@@ -810,13 +822,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x06051FDD RID: 335837 RVA: 0x016472DB File Offset: 0x016454DB
+			// Token: 0x06048787 RID: 296839 RVA: 0x01619403 File Offset: 0x01617603
 			public override void Clear()
 			{
 				this.StopAudioEvent();
 			}
 
-			// Token: 0x06051FDE RID: 335838 RVA: 0x016472E4 File Offset: 0x016454E4
+			// Token: 0x06048788 RID: 296840 RVA: 0x0161940C File Offset: 0x0161760C
 			private void StopAudioEvent()
 			{
 				if (this.AudioConfigInst != null && this.AudioConfigInst.AudioHandle != 0)
@@ -826,10 +838,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x0403E3F7 RID: 254967
+			// Token: 0x0403971D RID: 235293
 			private float LastSpeed;
 
-			// Token: 0x0403E3F8 RID: 254968
+			// Token: 0x0403971E RID: 235294
 			[Nullable(2)]
 			private SceneItemVehicleComponent.IAudioFeatureConfig AudioConfigInst;
 		}

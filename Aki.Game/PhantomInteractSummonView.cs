@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
@@ -10,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002487 RID: 9351
+// Token: 0x0200196C RID: 6508
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomInteractSummonView : UiViewBase
 {
-	// Token: 0x06012C3E RID: 76862 RVA: 0x004A0AD1 File Offset: 0x0049ECD1
+	// Token: 0x060100F5 RID: 65781 RVA: 0x004AE229 File Offset: 0x004AC429
 	public PhantomInteractSummonView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012C3F RID: 76863 RVA: 0x004A0AF0 File Offset: 0x0049ECF0
+	// Token: 0x060100F6 RID: 65782 RVA: 0x004AE248 File Offset: 0x004AC448
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,13 +45,13 @@ public class PhantomInteractSummonView : UiViewBase
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x06012C40 RID: 76864 RVA: 0x004A0C02 File Offset: 0x0049EE02
+	// Token: 0x060100F7 RID: 65783 RVA: 0x004AE35A File Offset: 0x004AC55A
 	private void OnClickedCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012C41 RID: 76865 RVA: 0x004A0C0C File Offset: 0x0049EE0C
+	// Token: 0x060100F8 RID: 65784 RVA: 0x004AE364 File Offset: 0x004AC564
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomInteractSummonView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -63,7 +62,7 @@ public class PhantomInteractSummonView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012C42 RID: 76866 RVA: 0x004A0C50 File Offset: 0x0049EE50
+	// Token: 0x060100F9 RID: 65785 RVA: 0x004AE3A8 File Offset: 0x004AC5A8
 	private UniTask PreloadSceneEffect(string effectPath)
 	{
 		PhantomInteractSummonView.<PreloadSceneEffect>d__16 <PreloadSceneEffect>d__;
@@ -75,7 +74,7 @@ public class PhantomInteractSummonView : UiViewBase
 		return <PreloadSceneEffect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012C43 RID: 76867 RVA: 0x004A0C9C File Offset: 0x0049EE9C
+	// Token: 0x060100FA RID: 65786 RVA: 0x004AE3F4 File Offset: 0x004AC5F4
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -91,7 +90,7 @@ public class PhantomInteractSummonView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012C44 RID: 76868 RVA: 0x004A0D00 File Offset: 0x0049EF00
+	// Token: 0x060100FB RID: 65787 RVA: 0x004AE458 File Offset: 0x004AC658
 	protected override void OnStart()
 	{
 		bool uiactive = Info.Instance.IsInTouch();
@@ -99,7 +98,7 @@ public class PhantomInteractSummonView : UiViewBase
 		PhantomInteractModel.Instance.DisableAutoExposureOnViewOpen();
 	}
 
-	// Token: 0x06012C45 RID: 76869 RVA: 0x004A0D2F File Offset: 0x0049EF2F
+	// Token: 0x060100FC RID: 65788 RVA: 0x004AE487 File Offset: 0x004AC687
 	protected override void OnAddEventListener()
 	{
 		if (EventSystem.Instance.HasWithTarget<HitInformation, HitContext>(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<HitInformation, HitContext>(this.OnCharBeHit)))
@@ -109,13 +108,13 @@ public class PhantomInteractSummonView : UiViewBase
 		EventSystem.Instance.AddWithTarget(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<HitInformation, HitContext>(this.OnCharBeHit));
 	}
 
-	// Token: 0x06012C46 RID: 76870 RVA: 0x004A0D6F File Offset: 0x0049EF6F
+	// Token: 0x060100FD RID: 65789 RVA: 0x004AE4C7 File Offset: 0x004AC6C7
 	protected override void OnRemoveEventListener()
 	{
 		this.RemoveCharBeHitListener();
 	}
 
-	// Token: 0x06012C47 RID: 76871 RVA: 0x004A0D78 File Offset: 0x0049EF78
+	// Token: 0x060100FE RID: 65790 RVA: 0x004AE4D0 File Offset: 0x004AC6D0
 	protected override void OnBeforeShow()
 	{
 		PhantomInteractModel instance = PhantomInteractModel.Instance;
@@ -137,7 +136,7 @@ public class PhantomInteractSummonView : UiViewBase
 		this.SetOtherTeamEntitiesEnable(false);
 	}
 
-	// Token: 0x06012C48 RID: 76872 RVA: 0x004A0DE4 File Offset: 0x0049EFE4
+	// Token: 0x060100FF RID: 65791 RVA: 0x004AE53C File Offset: 0x004AC73C
 	protected override void OnAfterHide()
 	{
 		PhantomInteractDetailPanelGroup detailPanelGroup = this.DetailPanelGroup;
@@ -153,7 +152,7 @@ public class PhantomInteractSummonView : UiViewBase
 		this.SetOtherTeamEntitiesEnable(true);
 	}
 
-	// Token: 0x06012C49 RID: 76873 RVA: 0x004A0E30 File Offset: 0x0049F030
+	// Token: 0x06010100 RID: 65792 RVA: 0x004AE588 File Offset: 0x004AC788
 	protected override void OnAfterDestroy()
 	{
 		PhantomInteractModel instance = PhantomInteractModel.Instance;
@@ -164,13 +163,13 @@ public class PhantomInteractSummonView : UiViewBase
 		instance.ReEnableAutoExposureOnViewClose();
 	}
 
-	// Token: 0x06012C4A RID: 76874 RVA: 0x004A0E41 File Offset: 0x0049F041
+	// Token: 0x06010101 RID: 65793 RVA: 0x004AE599 File Offset: 0x004AC799
 	public void Refresh(PhantomInteractInfoData viewData)
 	{
-		this.VisionList.Refresh(viewData.EquippedVisionData.Cast<IPhantomInteractItemData>().ToList<IPhantomInteractItemData>(), false, false);
+		this.VisionList.Refresh(new List<IPhantomInteractItemData>(viewData.EquippedVisionData), false, false);
 	}
 
-	// Token: 0x06012C4B RID: 76875 RVA: 0x004A0E60 File Offset: 0x0049F060
+	// Token: 0x06010102 RID: 65794 RVA: 0x004AE5B4 File Offset: 0x004AC7B4
 	private void OnListItemClick(IPhantomInteractItemData itemData)
 	{
 		this.VisionList.SetSelectedItem(itemData.ItemIndex);
@@ -183,7 +182,7 @@ public class PhantomInteractSummonView : UiViewBase
 		PhantomInteractController.Instance.OpenPhantomVisionEditView(itemData.ItemIndex, true);
 	}
 
-	// Token: 0x06012C4C RID: 76876 RVA: 0x004A0EB0 File Offset: 0x0049F0B0
+	// Token: 0x06010103 RID: 65795 RVA: 0x004AE604 File Offset: 0x004AC804
 	private void OnListItemLongPress(IPhantomInteractItemData itemData, bool isHover)
 	{
 		if (!isHover)
@@ -216,7 +215,7 @@ public class PhantomInteractSummonView : UiViewBase
 		this.ShowDetail = true;
 	}
 
-	// Token: 0x06012C4D RID: 76877 RVA: 0x004A0F48 File Offset: 0x0049F148
+	// Token: 0x06010104 RID: 65796 RVA: 0x004AE69C File Offset: 0x004AC89C
 	private void OnListItemHover(IPhantomInteractItemData itemData, bool isHover)
 	{
 		bool flag = isHover && ((itemData != null) ? itemData.MonsterId : 0) > 0;
@@ -247,13 +246,13 @@ public class PhantomInteractSummonView : UiViewBase
 		this.ShowDetail = flag;
 	}
 
-	// Token: 0x06012C4E RID: 76878 RVA: 0x004A0FD8 File Offset: 0x0049F1D8
+	// Token: 0x06010105 RID: 65797 RVA: 0x004AE72C File Offset: 0x004AC92C
 	private static void OnClickEditBtn()
 	{
 		PhantomInteractController.Instance.OpenPhantomVisionEditView(0, true);
 	}
 
-	// Token: 0x06012C4F RID: 76879 RVA: 0x004A0FE6 File Offset: 0x0049F1E6
+	// Token: 0x06010106 RID: 65798 RVA: 0x004AE73A File Offset: 0x004AC93A
 	private void OnClickBlank()
 	{
 		if (!this.ShowDetail)
@@ -275,14 +274,14 @@ public class PhantomInteractSummonView : UiViewBase
 		visionList.SetSelectedItem(-1);
 	}
 
-	// Token: 0x06012C50 RID: 76880 RVA: 0x004A1023 File Offset: 0x0049F223
+	// Token: 0x06010107 RID: 65799 RVA: 0x004AE777 File Offset: 0x004AC977
 	private void OnCharBeHit(HitInformation hitData, HitContext hitContext)
 	{
 		this.RemoveCharBeHitListener();
 		UiManager.Instance.ResetToBattleView(null);
 	}
 
-	// Token: 0x06012C51 RID: 76881 RVA: 0x004A1036 File Offset: 0x0049F236
+	// Token: 0x06010108 RID: 65800 RVA: 0x004AE78A File Offset: 0x004AC98A
 	private void RemoveCharBeHitListener()
 	{
 		if (!EventSystem.Instance.HasWithTarget<HitInformation, HitContext>(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<HitInformation, HitContext>(this.OnCharBeHit)))
@@ -292,7 +291,7 @@ public class PhantomInteractSummonView : UiViewBase
 		EventSystem.Instance.RemoveWithTarget(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<HitInformation, HitContext>(this.OnCharBeHit));
 	}
 
-	// Token: 0x06012C52 RID: 76882 RVA: 0x004A1078 File Offset: 0x0049F278
+	// Token: 0x06010109 RID: 65801 RVA: 0x004AE7CC File Offset: 0x004AC9CC
 	private void SetOtherTeamEntitiesEnable(bool isEnable)
 	{
 		foreach (EntityHandle entityHandle in SceneTeamModel.Instance.GetTeamEntities(false))
@@ -322,71 +321,71 @@ public class PhantomInteractSummonView : UiViewBase
 		}
 	}
 
-	// Token: 0x04008D56 RID: 36182
+	// Token: 0x04008E9D RID: 36509
 	private const string POST_FX_PATH = "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Post_SimpleLight.DA_Fx_Group_Post_SimpleLight";
 
-	// Token: 0x04008D57 RID: 36183
+	// Token: 0x04008E9E RID: 36510
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04008D58 RID: 36184
+	// Token: 0x04008E9F RID: 36511
 	[Nullable(2)]
 	private PhantomInteractListPanel VisionList;
 
-	// Token: 0x04008D59 RID: 36185
+	// Token: 0x04008EA0 RID: 36512
 	[Nullable(2)]
 	private PhantomInteractDetailPanelGroup DetailPanelGroup;
 
-	// Token: 0x04008D5A RID: 36186
+	// Token: 0x04008EA1 RID: 36513
 	private bool ShowDetail;
 
-	// Token: 0x04008D5B RID: 36187
+	// Token: 0x04008EA2 RID: 36514
 	private readonly PhantomInteractDetailViewModel DetailViewModel = new PhantomInteractDetailViewModel();
 
-	// Token: 0x04008D5C RID: 36188
+	// Token: 0x04008EA3 RID: 36515
 	[Nullable(2)]
 	private UUIItem RedDotItem;
 
-	// Token: 0x04008D5D RID: 36189
+	// Token: 0x04008EA4 RID: 36516
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04008D5E RID: 36190
+	// Token: 0x04008EA5 RID: 36517
 	private int? PostFxHandle;
 
-	// Token: 0x04008D5F RID: 36191
+	// Token: 0x04008EA6 RID: 36518
 	private int LongPressDetailMonsterId;
 
-	// Token: 0x04008D60 RID: 36192
+	// Token: 0x04008EA7 RID: 36519
 	private readonly Dictionary<int, int> DisabledEntityHandles = new Dictionary<int, int>();
 
-	// Token: 0x020089FB RID: 35323
+	// Token: 0x02007B82 RID: 31618
 	[NullableContext(0)]
 	private enum ENode
 	{
-		// Token: 0x0402CCF3 RID: 183539
+		// Token: 0x04028009 RID: 163849
 		ItemVisionList,
-		// Token: 0x0402CCF4 RID: 183540
+		// Token: 0x0402800A RID: 163850
 		ItemCaption,
-		// Token: 0x0402CCF5 RID: 183541
+		// Token: 0x0402800B RID: 163851
 		BtnEdit,
-		// Token: 0x0402CCF6 RID: 183542
+		// Token: 0x0402800C RID: 163852
 		ItemLongPressTip,
-		// Token: 0x0402CCF7 RID: 183543
+		// Token: 0x0402800D RID: 163853
 		TxtLongPressTip,
-		// Token: 0x0402CCF8 RID: 183544
+		// Token: 0x0402800E RID: 163854
 		ItemPanelPhantomTip,
-		// Token: 0x0402CCF9 RID: 183545
+		// Token: 0x0402800F RID: 163855
 		ItemRedDot,
-		// Token: 0x0402CCFA RID: 183546
+		// Token: 0x04028010 RID: 163856
 		BtnBlank
 	}
 
-	// Token: 0x020089FC RID: 35324
+	// Token: 0x02007B83 RID: 31619
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402CCFB RID: 183547
+		// Token: 0x04028011 RID: 163857
 		[Nullable(0)]
 		public static Action <0>__OnClickEditBtn;
 	}

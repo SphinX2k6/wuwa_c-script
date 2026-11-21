@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056BA RID: 22202
+	// Token: 0x02005C5E RID: 23646
 	public class IPartHitConfigT
 	{
-		// Token: 0x1700A53D RID: 42301
-		// (get) Token: 0x06025162 RID: 151906 RVA: 0x0051F01D File Offset: 0x0051D21D
-		// (set) Token: 0x06025163 RID: 151907 RVA: 0x0051F025 File Offset: 0x0051D225
+		// Token: 0x1700ADD1 RID: 44497
+		// (get) Token: 0x060273B7 RID: 160695 RVA: 0x0055FF65 File Offset: 0x0055E165
+		// (set) Token: 0x060273B8 RID: 160696 RVA: 0x0055FF6D File Offset: 0x0055E16D
 		public string PartName { get; set; }
 
-		// Token: 0x1700A53E RID: 42302
-		// (get) Token: 0x06025164 RID: 151908 RVA: 0x0051F02E File Offset: 0x0051D22E
-		// (set) Token: 0x06025165 RID: 151909 RVA: 0x0051F036 File Offset: 0x0051D236
+		// Token: 0x1700ADD2 RID: 44498
+		// (get) Token: 0x060273B9 RID: 160697 RVA: 0x0055FF76 File Offset: 0x0055E176
+		// (set) Token: 0x060273BA RID: 160698 RVA: 0x0055FF7E File Offset: 0x0055E17E
 		public THitBulletTypeUnion HitBullets { get; set; }
 
-		// Token: 0x1700A53F RID: 42303
-		// (get) Token: 0x06025166 RID: 151910 RVA: 0x0051F03F File Offset: 0x0051D23F
-		// (set) Token: 0x06025167 RID: 151911 RVA: 0x0051F047 File Offset: 0x0051D247
+		// Token: 0x1700ADD3 RID: 44499
+		// (get) Token: 0x060273BB RID: 160699 RVA: 0x0055FF87 File Offset: 0x0055E187
+		// (set) Token: 0x060273BC RID: 160700 RVA: 0x0055FF8F File Offset: 0x0055E18F
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x1700A540 RID: 42304
-		// (get) Token: 0x06025168 RID: 151912 RVA: 0x0051F050 File Offset: 0x0051D250
-		// (set) Token: 0x06025169 RID: 151913 RVA: 0x0051F058 File Offset: 0x0051D258
+		// Token: 0x1700ADD4 RID: 44500
+		// (get) Token: 0x060273BD RID: 160701 RVA: 0x0055FF98 File Offset: 0x0055E198
+		// (set) Token: 0x060273BE RID: 160702 RVA: 0x0055FFA0 File Offset: 0x0055E1A0
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602516A RID: 151914 RVA: 0x0051F061 File Offset: 0x0051D261
+		// Token: 0x060273BF RID: 160703 RVA: 0x0055FFA9 File Offset: 0x0055E1A9
 		public IPartHitConfigT()
 		{
 			this.PartName = null;

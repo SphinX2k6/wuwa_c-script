@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C61 RID: 23649
+	// Token: 0x02006286 RID: 25222
 	public class TModelTypeUnion
 	{
-		// Token: 0x1700B21E RID: 45598
-		// (get) Token: 0x06028875 RID: 166005 RVA: 0x00592EEE File Offset: 0x005910EE
-		// (set) Token: 0x06028876 RID: 166006 RVA: 0x00592EF6 File Offset: 0x005910F6
+		// Token: 0x1700BB70 RID: 47984
+		// (get) Token: 0x0602AE85 RID: 175749 RVA: 0x005DB154 File Offset: 0x005D9354
+		// (set) Token: 0x0602AE86 RID: 175750 RVA: 0x005DB15C File Offset: 0x005D935C
 		public TModelType Type { get; set; }
 
-		// Token: 0x1700B21F RID: 45599
-		// (get) Token: 0x06028877 RID: 166007 RVA: 0x00592EFF File Offset: 0x005910FF
-		// (set) Token: 0x06028878 RID: 166008 RVA: 0x00592F07 File Offset: 0x00591107
+		// Token: 0x1700BB71 RID: 47985
+		// (get) Token: 0x0602AE87 RID: 175751 RVA: 0x005DB165 File Offset: 0x005D9365
+		// (set) Token: 0x0602AE88 RID: 175752 RVA: 0x005DB16D File Offset: 0x005D936D
 		public object Value { get; set; }
 
-		// Token: 0x06028879 RID: 166009 RVA: 0x00592F10 File Offset: 0x00591110
+		// Token: 0x0602AE89 RID: 175753 RVA: 0x005DB176 File Offset: 0x005D9376
 		public TModelTypeUnion()
 		{
 			this.Type = TModelType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602887A RID: 166010 RVA: 0x00592F26 File Offset: 0x00591126
+		// Token: 0x0602AE8A RID: 175754 RVA: 0x005DB18C File Offset: 0x005D938C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602887B RID: 166011 RVA: 0x00592F38 File Offset: 0x00591138
+		// Token: 0x0602AE8B RID: 175755 RVA: 0x005DB19E File Offset: 0x005D939E
 		public IAnimalModelT AsIAnimalModel()
 		{
 			return this.As<IAnimalModelT>();
 		}
 
-		// Token: 0x0602887C RID: 166012 RVA: 0x00592F40 File Offset: 0x00591140
+		// Token: 0x0602AE8C RID: 175756 RVA: 0x005DB1A6 File Offset: 0x005D93A6
 		public static TModelTypeUnion FromIAnimalModel(IAnimalModelT _ianimalmodel)
 		{
 			return new TModelTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602887D RID: 166013 RVA: 0x00592F55 File Offset: 0x00591155
+		// Token: 0x0602AE8D RID: 175757 RVA: 0x005DB1BB File Offset: 0x005D93BB
 		public ILevelPrefabT AsILevelPrefab()
 		{
 			return this.As<ILevelPrefabT>();
 		}
 
-		// Token: 0x0602887E RID: 166014 RVA: 0x00592F5D File Offset: 0x0059115D
+		// Token: 0x0602AE8E RID: 175758 RVA: 0x005DB1C3 File Offset: 0x005D93C3
 		public static TModelTypeUnion FromILevelPrefab(ILevelPrefabT _ilevelprefab)
 		{
 			return new TModelTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602887F RID: 166015 RVA: 0x00592F72 File Offset: 0x00591172
+		// Token: 0x0602AE8F RID: 175759 RVA: 0x005DB1D8 File Offset: 0x005D93D8
 		public IModelIdT AsIModelId()
 		{
 			return this.As<IModelIdT>();
 		}
 
-		// Token: 0x06028880 RID: 166016 RVA: 0x00592F7A File Offset: 0x0059117A
+		// Token: 0x0602AE90 RID: 175760 RVA: 0x005DB1E0 File Offset: 0x005D93E0
 		public static TModelTypeUnion FromIModelId(IModelIdT _imodelid)
 		{
 			return new TModelTypeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028881 RID: 166017 RVA: 0x00592F8F File Offset: 0x0059118F
+		// Token: 0x0602AE91 RID: 175761 RVA: 0x005DB1F5 File Offset: 0x005D93F5
 		public INpcModelT AsINpcModel()
 		{
 			return this.As<INpcModelT>();
 		}
 
-		// Token: 0x06028882 RID: 166018 RVA: 0x00592F97 File Offset: 0x00591197
+		// Token: 0x0602AE92 RID: 175762 RVA: 0x005DB1FD File Offset: 0x005D93FD
 		public static TModelTypeUnion FromINpcModel(INpcModelT _inpcmodel)
 		{
 			return new TModelTypeUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028883 RID: 166019 RVA: 0x00592FAC File Offset: 0x005911AC
+		// Token: 0x0602AE93 RID: 175763 RVA: 0x005DB214 File Offset: 0x005D9414
 		public static int Pack(FlatBufferBuilder builder, TModelTypeUnion _o)
 		{
 			switch (_o.Type)

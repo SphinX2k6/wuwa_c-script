@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001242 RID: 4674
+	// Token: 0x02001382 RID: 4994
 	public static class EFlipperConditionStepExtensions
 	{
-		// Token: 0x060069D0 RID: 27088 RVA: 0x000FD84C File Offset: 0x000FBA4C
+		// Token: 0x06007023 RID: 28707 RVA: 0x0010B478 File Offset: 0x00109678
 		public static string ToEnumString(this EFlipperConditionStep value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069D1 RID: 27089 RVA: 0x000FD874 File Offset: 0x000FBA74
+		// Token: 0x06007024 RID: 28708 RVA: 0x0010B4A0 File Offset: 0x001096A0
 		public static EFlipperConditionStep FromString(string name)
 		{
 			EFlipperConditionStep result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069D2 RID: 27090 RVA: 0x000FD89D File Offset: 0x000FBA9D
+		// Token: 0x06007025 RID: 28709 RVA: 0x0010B4C9 File Offset: 0x001096C9
 		public static bool TryFromString(string name, out EFlipperConditionStep value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x060069D3 RID: 27091 RVA: 0x000FD8C2 File Offset: 0x000FBAC2
+		// Token: 0x06007026 RID: 28710 RVA: 0x0010B4EE File Offset: 0x001096EE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060069D4 RID: 27092 RVA: 0x000FD8D2 File Offset: 0x000FBAD2
+		// Token: 0x06007027 RID: 28711 RVA: 0x0010B4FE File Offset: 0x001096FE
 		public static EFlipperConditionStep[] GetValues()
 		{
 			return new EFlipperConditionStep[1];
 		}
 
-		// Token: 0x060069D5 RID: 27093 RVA: 0x000FD8DA File Offset: 0x000FBADA
+		// Token: 0x06007028 RID: 28712 RVA: 0x0010B506 File Offset: 0x00109706
 		public static string[] GetNames()
 		{
 			return new string[]

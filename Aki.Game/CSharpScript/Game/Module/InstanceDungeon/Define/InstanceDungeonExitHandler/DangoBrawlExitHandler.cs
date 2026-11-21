@@ -7,10 +7,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058E9 RID: 22761
+	// Token: 0x020048C1 RID: 18625
 	public class DangoBrawlExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D06 RID: 236806 RVA: 0x00DBB784 File Offset: 0x00DB9984
+		// Token: 0x0602EC29 RID: 191529 RVA: 0x00D0A6DC File Offset: 0x00D088DC
 		public override bool Checker()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			return config != null && config.Value.InstSubType == 58;
 		}
 
-		// Token: 0x06039D07 RID: 236807 RVA: 0x00DBB7D8 File Offset: 0x00DB99D8
+		// Token: 0x0602EC2A RID: 191530 RVA: 0x00D0A730 File Offset: 0x00D08930
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

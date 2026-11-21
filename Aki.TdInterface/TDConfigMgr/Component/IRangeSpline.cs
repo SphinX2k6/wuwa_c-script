@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000662 RID: 1634
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006FF RID: 1791
 	public class IRangeSpline : ISplineType
 	{
-		// Token: 0x060022F6 RID: 8950 RVA: 0x0005FDE4 File Offset: 0x0005DFE4
+		// Token: 0x060025FC RID: 9724 RVA: 0x00066AF8 File Offset: 0x00064CF8
 		private IRangeSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060022F7 RID: 8951 RVA: 0x0005FE1C File Offset: 0x0005E01C
+		// Token: 0x060025FD RID: 9725 RVA: 0x00066B30 File Offset: 0x00064D30
 		public static IRangeSpline Create([Nullable(2)] IRangeSpline instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022F8 RID: 8952 RVA: 0x0005FE2F File Offset: 0x0005E02F
+		// Token: 0x060025FE RID: 9726 RVA: 0x00066B43 File Offset: 0x00064D43
 		public static IRangeSpline CreateFromSetValue([Nullable(2)] IRangeSpline_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022F9 RID: 8953 RVA: 0x0005FE42 File Offset: 0x0005E042
+		// Token: 0x060025FF RID: 9727 RVA: 0x00066B56 File Offset: 0x00064D56
 		public new IRangeSpline_SetValue ToSetValue()
 		{
 			return new IRangeSpline_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000947 RID: 2375
-		// (get) Token: 0x060022FA RID: 8954 RVA: 0x0005FE6D File Offset: 0x0005E06D
-		// (set) Token: 0x060022FB RID: 8955 RVA: 0x0005FE98 File Offset: 0x0005E098
+		// Token: 0x170009FE RID: 2558
+		// (get) Token: 0x06002600 RID: 9728 RVA: 0x00066B81 File Offset: 0x00064D81
+		// (set) Token: 0x06002601 RID: 9729 RVA: 0x00066BAC File Offset: 0x00064DAC
 		public override ESplineType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000948 RID: 2376
-		// (get) Token: 0x060022FC RID: 8956 RVA: 0x0005FEA6 File Offset: 0x0005E0A6
-		// (set) Token: 0x060022FD RID: 8957 RVA: 0x0005FED5 File Offset: 0x0005E0D5
+		// Token: 0x170009FF RID: 2559
+		// (get) Token: 0x06002602 RID: 9730 RVA: 0x00066BBA File Offset: 0x00064DBA
+		// (set) Token: 0x06002603 RID: 9731 RVA: 0x00066BE9 File Offset: 0x00064DE9
 		public virtual float Height
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000949 RID: 2377
-		// (get) Token: 0x060022FE RID: 8958 RVA: 0x0005FEE4 File Offset: 0x0005E0E4
-		// (set) Token: 0x060022FF RID: 8959 RVA: 0x0005FF77 File Offset: 0x0005E177
+		// Token: 0x17000A00 RID: 2560
+		// (get) Token: 0x06002604 RID: 9732 RVA: 0x00066BF8 File Offset: 0x00064DF8
+		// (set) Token: 0x06002605 RID: 9733 RVA: 0x00066C8B File Offset: 0x00064E8B
 		public virtual List<ICommonSplinePoint> Points
 		{
 			get
@@ -146,18 +144,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400183F RID: 6207
+		// Token: 0x04001A31 RID: 6705
 		[Nullable(2)]
 		protected new IRangeSpline FbInstance;
 
-		// Token: 0x04001840 RID: 6208
+		// Token: 0x04001A32 RID: 6706
 		[Nullable(2)]
 		protected new IRangeSpline_SetValue PocoInterface;
 
-		// Token: 0x04001841 RID: 6209
+		// Token: 0x04001A33 RID: 6707
 		private List<ICommonSplinePoint> _PointsCache;
 
-		// Token: 0x04001842 RID: 6210
+		// Token: 0x04001A34 RID: 6708
 		private bool _PointsInited;
 	}
 }

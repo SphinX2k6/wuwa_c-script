@@ -8,55 +8,55 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common.InputView.View
 {
-	// Token: 0x02005B74 RID: 23412
+	// Token: 0x02004B54 RID: 19284
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonModifyNameInputView : CommonInputViewBase
 	{
-		// Token: 0x0603B3E7 RID: 242663 RVA: 0x00E1FEFB File Offset: 0x00E1E0FB
+		// Token: 0x06030334 RID: 197428 RVA: 0x00D7046F File Offset: 0x00D6E66F
 		public CommonModifyNameInputView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603B3E8 RID: 242664 RVA: 0x00E1FF04 File Offset: 0x00E1E104
+		// Token: 0x06030335 RID: 197429 RVA: 0x00D70478 File Offset: 0x00D6E678
 		protected override void OnAddEventListener()
 		{
 			base.OnAddEventListener();
 			EventSystem.Instance.Add(EEventName.OnModifyNameStateChange, new Action(this.OnModifyNameStateChange));
 		}
 
-		// Token: 0x0603B3E9 RID: 242665 RVA: 0x00E1FF28 File Offset: 0x00E1E128
+		// Token: 0x06030336 RID: 197430 RVA: 0x00D7049C File Offset: 0x00D6E69C
 		protected override void OnRemoveEventListener()
 		{
 			base.OnRemoveEventListener();
 			EventSystem.Instance.Remove(EEventName.OnModifyNameStateChange, new Action(this.OnModifyNameStateChange));
 		}
 
-		// Token: 0x0603B3EA RID: 242666 RVA: 0x00E1FF4C File Offset: 0x00E1E14C
+		// Token: 0x06030337 RID: 197431 RVA: 0x00D704C0 File Offset: 0x00D6E6C0
 		protected override int GetMaxLimit()
 		{
 			return 12;
 		}
 
-		// Token: 0x0603B3EB RID: 242667 RVA: 0x00E1FF50 File Offset: 0x00E1E150
+		// Token: 0x06030338 RID: 197432 RVA: 0x00D704C4 File Offset: 0x00D6E6C4
 		protected override bool IsAllowMultiLine()
 		{
 			return false;
 		}
 
-		// Token: 0x0603B3EC RID: 242668 RVA: 0x00E1FF53 File Offset: 0x00E1E153
+		// Token: 0x06030339 RID: 197433 RVA: 0x00D704C7 File Offset: 0x00D6E6C7
 		protected override void InitExtraParam()
 		{
 			this.RefreshUi();
 		}
 
-		// Token: 0x0603B3ED RID: 242669 RVA: 0x00E1FF5B File Offset: 0x00E1E15B
+		// Token: 0x0603033A RID: 197434 RVA: 0x00D704CF File Offset: 0x00D6E6CF
 		protected override void RefreshDuplicateName(string inputText)
 		{
 			this.RefreshUi();
 		}
 
-		// Token: 0x0603B3EE RID: 242670 RVA: 0x00E1FF64 File Offset: 0x00E1E164
+		// Token: 0x0603033B RID: 197435 RVA: 0x00D704D8 File Offset: 0x00D6E6D8
 		private void RefreshUi()
 		{
 			EModifyNameState personalModifyNameState = PersonalModel.Instance.GetPersonalModifyNameState();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			this.ConfirmButton.SetSelfInteractive(flag && flag2 && !flag3);
 		}
 
-		// Token: 0x0603B3EF RID: 242671 RVA: 0x00E2000B File Offset: 0x00E1E20B
+		// Token: 0x0603033C RID: 197436 RVA: 0x00D7057F File Offset: 0x00D6E77F
 		protected override void ExecuteInputConfirm(string inputText)
 		{
 			CommonModifyNameInputView.<>c__DisplayClass8_0 CS$<>8__locals1 = new CommonModifyNameInputView.<>c__DisplayClass8_0();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			}, true);
 		}
 
-		// Token: 0x0603B3F0 RID: 242672 RVA: 0x00E2004A File Offset: 0x00E1E24A
+		// Token: 0x0603033D RID: 197437 RVA: 0x00D705BE File Offset: 0x00D6E7BE
 		private void OnModifyNameStateChange()
 		{
 			this.RefreshUi();

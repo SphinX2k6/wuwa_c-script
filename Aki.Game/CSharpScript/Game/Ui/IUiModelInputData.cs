@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200462A RID: 17962
+	// Token: 0x02003554 RID: 13652
 	[NullableContext(1)]
 	public interface IUiModelInputData
 	{
-		// Token: 0x170075DE RID: 30174
-		// (get) Token: 0x0602E442 RID: 189506
-		// (set) Token: 0x0602E443 RID: 189507
+		// Token: 0x17004898 RID: 18584
+		// (get) Token: 0x06022B55 RID: 142165
+		// (set) Token: 0x06022B56 RID: 142166
 		UUIDraggableComponent DragComponent { get; set; }
 
-		// Token: 0x170075DF RID: 30175
-		// (get) Token: 0x0602E444 RID: 189508
-		// (set) Token: 0x0602E445 RID: 189509
+		// Token: 0x17004899 RID: 18585
+		// (get) Token: 0x06022B57 RID: 142167
+		// (set) Token: 0x06022B58 RID: 142168
 		UiModelBase ModelBase { get; set; }
 	}
 }

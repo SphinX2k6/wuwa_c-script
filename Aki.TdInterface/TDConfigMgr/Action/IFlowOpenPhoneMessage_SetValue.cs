@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A98 RID: 6808
+	// Token: 0x02001C2D RID: 7213
 	public class IFlowOpenPhoneMessage_SetValue
 	{
-		// Token: 0x040059F9 RID: 23033
+		// Token: 0x04005E62 RID: 24162
 		public EPhoneSystemInteractType Type;
 
-		// Token: 0x040059FA RID: 23034
-		[Nullable(1)]
+		// Token: 0x04005E63 RID: 24163
 		public IMessageBoard PhoneBoardType;
 	}
 }

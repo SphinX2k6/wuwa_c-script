@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044AA RID: 17578
+	// Token: 0x02004912 RID: 18706
 	public class IEnrichmentItemT
 	{
-		// Token: 0x17007C0E RID: 31758
-		// (get) Token: 0x0601A40C RID: 107532 RVA: 0x003C020B File Offset: 0x003BE40B
-		// (set) Token: 0x0601A40D RID: 107533 RVA: 0x003C0213 File Offset: 0x003BE413
+		// Token: 0x1700824D RID: 33357
+		// (get) Token: 0x0601BBDD RID: 113629 RVA: 0x003EC417 File Offset: 0x003EA617
+		// (set) Token: 0x0601BBDE RID: 113630 RVA: 0x003EC41F File Offset: 0x003EA61F
 		public int ItemId { get; set; }
 
-		// Token: 0x17007C0F RID: 31759
-		// (get) Token: 0x0601A40E RID: 107534 RVA: 0x003C021C File Offset: 0x003BE41C
-		// (set) Token: 0x0601A40F RID: 107535 RVA: 0x003C0224 File Offset: 0x003BE424
+		// Token: 0x1700824E RID: 33358
+		// (get) Token: 0x0601BBDF RID: 113631 RVA: 0x003EC428 File Offset: 0x003EA628
+		// (set) Token: 0x0601BBE0 RID: 113632 RVA: 0x003EC430 File Offset: 0x003EA630
 		public EEnrichmentAreaType EnrichmentAreaType { get; set; }
 
-		// Token: 0x17007C10 RID: 31760
-		// (get) Token: 0x0601A410 RID: 107536 RVA: 0x003C022D File Offset: 0x003BE42D
-		// (set) Token: 0x0601A411 RID: 107537 RVA: 0x003C0235 File Offset: 0x003BE435
+		// Token: 0x1700824F RID: 33359
+		// (get) Token: 0x0601BBE1 RID: 113633 RVA: 0x003EC439 File Offset: 0x003EA639
+		// (set) Token: 0x0601BBE2 RID: 113634 RVA: 0x003EC441 File Offset: 0x003EA641
 		public int LevelId { get; set; }
 
-		// Token: 0x17007C11 RID: 31761
-		// (get) Token: 0x0601A412 RID: 107538 RVA: 0x003C023E File Offset: 0x003BE43E
-		// (set) Token: 0x0601A413 RID: 107539 RVA: 0x003C0246 File Offset: 0x003BE446
+		// Token: 0x17008250 RID: 33360
+		// (get) Token: 0x0601BBE3 RID: 113635 RVA: 0x003EC44A File Offset: 0x003EA64A
+		// (set) Token: 0x0601BBE4 RID: 113636 RVA: 0x003EC452 File Offset: 0x003EA652
 		public int EnrichmentId { get; set; }
 
-		// Token: 0x17007C12 RID: 31762
-		// (get) Token: 0x0601A414 RID: 107540 RVA: 0x003C024F File Offset: 0x003BE44F
-		// (set) Token: 0x0601A415 RID: 107541 RVA: 0x003C0257 File Offset: 0x003BE457
+		// Token: 0x17008251 RID: 33361
+		// (get) Token: 0x0601BBE5 RID: 113637 RVA: 0x003EC45B File Offset: 0x003EA65B
+		// (set) Token: 0x0601BBE6 RID: 113638 RVA: 0x003EC463 File Offset: 0x003EA663
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x17007C13 RID: 31763
-		// (get) Token: 0x0601A416 RID: 107542 RVA: 0x003C0260 File Offset: 0x003BE460
-		// (set) Token: 0x0601A417 RID: 107543 RVA: 0x003C0268 File Offset: 0x003BE468
+		// Token: 0x17008252 RID: 33362
+		// (get) Token: 0x0601BBE7 RID: 113639 RVA: 0x003EC46C File Offset: 0x003EA66C
+		// (set) Token: 0x0601BBE8 RID: 113640 RVA: 0x003EC474 File Offset: 0x003EA674
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A418 RID: 107544 RVA: 0x003C0271 File Offset: 0x003BE471
+		// Token: 0x0601BBE9 RID: 113641 RVA: 0x003EC47D File Offset: 0x003EA67D
 		public IEnrichmentItemT()
 		{
 			this.ItemId = 0;

@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EF9 RID: 20217
+	// Token: 0x0200542B RID: 21547
 	public class IBatchBulletCasterComponentT
 	{
-		// Token: 0x17009177 RID: 37239
-		// (get) Token: 0x0601FEF6 RID: 130806 RVA: 0x00471E7E File Offset: 0x0047007E
-		// (set) Token: 0x0601FEF7 RID: 130807 RVA: 0x00471E86 File Offset: 0x00470086
+		// Token: 0x170098F9 RID: 39161
+		// (get) Token: 0x06021C66 RID: 138342 RVA: 0x004A8212 File Offset: 0x004A6412
+		// (set) Token: 0x06021C67 RID: 138343 RVA: 0x004A821A File Offset: 0x004A641A
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009178 RID: 37240
-		// (get) Token: 0x0601FEF8 RID: 130808 RVA: 0x00471E8F File Offset: 0x0047008F
-		// (set) Token: 0x0601FEF9 RID: 130809 RVA: 0x00471E97 File Offset: 0x00470097
+		// Token: 0x170098FA RID: 39162
+		// (get) Token: 0x06021C68 RID: 138344 RVA: 0x004A8223 File Offset: 0x004A6423
+		// (set) Token: 0x06021C69 RID: 138345 RVA: 0x004A822B File Offset: 0x004A642B
 		public string WarningEffect { get; set; }
 
-		// Token: 0x17009179 RID: 37241
-		// (get) Token: 0x0601FEFA RID: 130810 RVA: 0x00471EA0 File Offset: 0x004700A0
-		// (set) Token: 0x0601FEFB RID: 130811 RVA: 0x00471EA8 File Offset: 0x004700A8
+		// Token: 0x170098FB RID: 39163
+		// (get) Token: 0x06021C6A RID: 138346 RVA: 0x004A8234 File Offset: 0x004A6434
+		// (set) Token: 0x06021C6B RID: 138347 RVA: 0x004A823C File Offset: 0x004A643C
 		public EBatchBulletMovementType MovementType { get; set; }
 
-		// Token: 0x1700917A RID: 37242
-		// (get) Token: 0x0601FEFC RID: 130812 RVA: 0x00471EB1 File Offset: 0x004700B1
-		// (set) Token: 0x0601FEFD RID: 130813 RVA: 0x00471EB9 File Offset: 0x004700B9
+		// Token: 0x170098FC RID: 39164
+		// (get) Token: 0x06021C6C RID: 138348 RVA: 0x004A8245 File Offset: 0x004A6445
+		// (set) Token: 0x06021C6D RID: 138349 RVA: 0x004A824D File Offset: 0x004A644D
 		public List<IPosRotT> BulletList { get; set; }
 
-		// Token: 0x1700917B RID: 37243
-		// (get) Token: 0x0601FEFE RID: 130814 RVA: 0x00471EC2 File Offset: 0x004700C2
-		// (set) Token: 0x0601FEFF RID: 130815 RVA: 0x00471ECA File Offset: 0x004700CA
+		// Token: 0x170098FD RID: 39165
+		// (get) Token: 0x06021C6E RID: 138350 RVA: 0x004A8256 File Offset: 0x004A6456
+		// (set) Token: 0x06021C6F RID: 138351 RVA: 0x004A825E File Offset: 0x004A645E
 		public List<IBatchBulletItemT> BatchList { get; set; }
 
-		// Token: 0x1700917C RID: 37244
-		// (get) Token: 0x0601FF00 RID: 130816 RVA: 0x00471ED3 File Offset: 0x004700D3
-		// (set) Token: 0x0601FF01 RID: 130817 RVA: 0x00471EDB File Offset: 0x004700DB
+		// Token: 0x170098FE RID: 39166
+		// (get) Token: 0x06021C70 RID: 138352 RVA: 0x004A8267 File Offset: 0x004A6467
+		// (set) Token: 0x06021C71 RID: 138353 RVA: 0x004A826F File Offset: 0x004A646F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601FF02 RID: 130818 RVA: 0x00471EE4 File Offset: 0x004700E4
+		// Token: 0x06021C72 RID: 138354 RVA: 0x004A8278 File Offset: 0x004A6478
 		public IBatchBulletCasterComponentT()
 		{
 			this.Disabled = false;

@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B48 RID: 11080
+// Token: 0x020020C4 RID: 8388
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueMainView : UiTickViewBase
 {
-	// Token: 0x06016FAB RID: 94123 RVA: 0x005D4F84 File Offset: 0x005D3184
+	// Token: 0x060149DC RID: 84444 RVA: 0x00601AF0 File Offset: 0x005FFCF0
 	public SurvivorsRogueMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016FAC RID: 94124 RVA: 0x005D5098 File Offset: 0x005D3298
+	// Token: 0x060149DD RID: 84445 RVA: 0x00601C04 File Offset: 0x005FFE04
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -55,7 +55,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06016FAD RID: 94125 RVA: 0x005D530C File Offset: 0x005D350C
+	// Token: 0x060149DE RID: 84446 RVA: 0x00601E78 File Offset: 0x00600078
 	protected override UniTask OnCreateAsync()
 	{
 		SurvivorsRogueMainView.<OnCreateAsync>d__33 <OnCreateAsync>d__;
@@ -66,7 +66,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016FAE RID: 94126 RVA: 0x005D5350 File Offset: 0x005D3550
+	// Token: 0x060149DF RID: 84447 RVA: 0x00601EBC File Offset: 0x006000BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueMainView.<OnBeforeStartAsync>d__34 <OnBeforeStartAsync>d__;
@@ -77,7 +77,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016FAF RID: 94127 RVA: 0x005D5393 File Offset: 0x005D3593
+	// Token: 0x060149E0 RID: 84448 RVA: 0x00601EFF File Offset: 0x006000FF
 	protected override void OnStart()
 	{
 		this.ScrollViewComp.OnLateUpdate.Bind(delegate(float _)
@@ -87,7 +87,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06016FB0 RID: 94128 RVA: 0x005D53B1 File Offset: 0x005D35B1
+	// Token: 0x060149E1 RID: 84449 RVA: 0x00601F1D File Offset: 0x0060011D
 	protected override void OnBeforeShow()
 	{
 		SplashScreenController.Instance.FinishCurTask(ESplashScreenSourceModuleType.None);
@@ -97,7 +97,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		SurvivorsActivityController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x06016FB1 RID: 94129 RVA: 0x005D53E4 File Offset: 0x005D35E4
+	// Token: 0x060149E2 RID: 84450 RVA: 0x00601F50 File Offset: 0x00600150
 	protected override void OnAfterShow()
 	{
 		SurvivorsRogueController.Instance.TryOpenWeaponUnlockView().ContinueWith(delegate(bool isOpen)
@@ -109,7 +109,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06016FB2 RID: 94130 RVA: 0x005D5404 File Offset: 0x005D3604
+	// Token: 0x060149E3 RID: 84451 RVA: 0x00601F70 File Offset: 0x00600170
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.SurvivorsInstSettle, new Action<bool>(this.OnSurvivorsInstSettle));
@@ -119,7 +119,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		EventSystem.Instance.Add<int>(EEventName.SurvivorsRogueTalentNodeUpdate, new Action<int>(this.OnSurvivorsRogueTalentNodeUpdate));
 	}
 
-	// Token: 0x06016FB3 RID: 94131 RVA: 0x005D549C File Offset: 0x005D369C
+	// Token: 0x060149E4 RID: 84452 RVA: 0x00602008 File Offset: 0x00600208
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.SurvivorsInstSettle, new Action<bool>(this.OnSurvivorsInstSettle));
@@ -129,7 +129,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.SurvivorsRogueTalentNodeUpdate, new Action<int>(this.OnSurvivorsRogueTalentNodeUpdate));
 	}
 
-	// Token: 0x06016FB4 RID: 94132 RVA: 0x005D5534 File Offset: 0x005D3734
+	// Token: 0x060149E5 RID: 84453 RVA: 0x006020A0 File Offset: 0x006002A0
 	protected override void OnBeforeDestroy()
 	{
 		this.ItemParallaxList.Clear();
@@ -144,7 +144,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.UnBindTweenerComplete();
 	}
 
-	// Token: 0x06016FB5 RID: 94133 RVA: 0x005D55A8 File Offset: 0x005D37A8
+	// Token: 0x060149E6 RID: 84454 RVA: 0x00602114 File Offset: 0x00600314
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -160,7 +160,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		return <LoadCurveFloat>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016FB6 RID: 94134 RVA: 0x005D55EC File Offset: 0x005D37EC
+	// Token: 0x060149E7 RID: 84455 RVA: 0x00602158 File Offset: 0x00600358
 	protected override void OnTick(float delta)
 	{
 		foreach (SurvivorsLevelInfoItem survivorsLevelInfoItem in this.LevelInfoItemMap.Values)
@@ -169,7 +169,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FB7 RID: 94135 RVA: 0x005D5644 File Offset: 0x005D3844
+	// Token: 0x060149E8 RID: 84456 RVA: 0x006021B0 File Offset: 0x006003B0
 	private void OnRefreshRedDot(int activityId)
 	{
 		if (this.ActivityDataBase.Id != activityId)
@@ -179,7 +179,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.RefreshFunctionButton();
 	}
 
-	// Token: 0x06016FB8 RID: 94136 RVA: 0x005D565C File Offset: 0x005D385C
+	// Token: 0x060149E9 RID: 84457 RVA: 0x006021C8 File Offset: 0x006003C8
 	private void OnActivityCrossDay()
 	{
 		this.RefreshFunctionButton();
@@ -198,7 +198,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FB9 RID: 94137 RVA: 0x005D56DE File Offset: 0x005D38DE
+	// Token: 0x060149EA RID: 84458 RVA: 0x0060224A File Offset: 0x0060044A
 	private void OnViewClose(EUiViewName viewName, int viewId)
 	{
 		if (viewName != EUiViewName.SurvivorsWeaponUnlockView)
@@ -208,13 +208,13 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.StartLevelUnlockFlow();
 	}
 
-	// Token: 0x06016FBA RID: 94138 RVA: 0x005D56F4 File Offset: 0x005D38F4
+	// Token: 0x060149EB RID: 84459 RVA: 0x00602260 File Offset: 0x00600460
 	private void OnSurvivorsRogueTalentNodeUpdate(int nodeId)
 	{
 		this.RefreshFunctionButton();
 	}
 
-	// Token: 0x06016FBB RID: 94139 RVA: 0x005D56FC File Offset: 0x005D38FC
+	// Token: 0x060149EC RID: 84460 RVA: 0x00602268 File Offset: 0x00600468
 	private void InitScrollView()
 	{
 		this.ScrollViewComp = base.GetScrollViewWithScrollbar(2);
@@ -228,7 +228,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.CenterPosY = this.ScrollViewComp.RootUIComp.Get().GetHeight() / 2f;
 	}
 
-	// Token: 0x06016FBC RID: 94140 RVA: 0x005D57D0 File Offset: 0x005D39D0
+	// Token: 0x060149ED RID: 84461 RVA: 0x0060233C File Offset: 0x0060053C
 	private void InitParallaxItem()
 	{
 		TWeakObjectPtr<UUIItem> contentUIItem = base.GetScrollViewWithScrollbar(1).ContentUIItem;
@@ -241,7 +241,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.ItemParallaxList.Add(item);
 	}
 
-	// Token: 0x06016FBD RID: 94141 RVA: 0x005D5828 File Offset: 0x005D3A28
+	// Token: 0x060149EE RID: 84462 RVA: 0x00602394 File Offset: 0x00600594
 	private void InitCurSelectPos()
 	{
 		int levelId = this.LevelInfo.LevelId;
@@ -260,14 +260,14 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FBE RID: 94142 RVA: 0x005D58B0 File Offset: 0x005D3AB0
+	// Token: 0x060149EF RID: 84463 RVA: 0x0060241C File Offset: 0x0060061C
 	private bool OnPointerBeginDrag(ULGUIPointerEventData _)
 	{
 		this.IsDragging = true;
 		return true;
 	}
 
-	// Token: 0x06016FBF RID: 94143 RVA: 0x005D58BA File Offset: 0x005D3ABA
+	// Token: 0x060149F0 RID: 84464 RVA: 0x00602426 File Offset: 0x00600626
 	private bool OnPointerEndDrag(ULGUIPointerEventData _)
 	{
 		this.IsDragging = false;
@@ -275,7 +275,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		return true;
 	}
 
-	// Token: 0x06016FC0 RID: 94144 RVA: 0x005D58CC File Offset: 0x005D3ACC
+	// Token: 0x060149F1 RID: 84465 RVA: 0x00602438 File Offset: 0x00600638
 	private void OnScrollValueChange(FVector2D inVector)
 	{
 		float y = inVector.Y;
@@ -297,7 +297,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FC1 RID: 94145 RVA: 0x005D597C File Offset: 0x005D3B7C
+	// Token: 0x060149F2 RID: 84466 RVA: 0x006024E8 File Offset: 0x006006E8
 	private void UpdateParallaxItemPos(float posY)
 	{
 		for (int i = 0; i < this.ItemParallaxList.Count; i++)
@@ -308,7 +308,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FC2 RID: 94146 RVA: 0x005D59DC File Offset: 0x005D3BDC
+	// Token: 0x060149F3 RID: 84467 RVA: 0x00602548 File Offset: 0x00600748
 	protected void ScrollLevelIdToBottom(int levelId, bool tween = true)
 	{
 		SurvivorsLevelItem survivorsLevelItem;
@@ -333,7 +333,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FC3 RID: 94147 RVA: 0x005D5A8C File Offset: 0x005D3C8C
+	// Token: 0x060149F4 RID: 84468 RVA: 0x006025F8 File Offset: 0x006007F8
 	protected void ScrollLevelIdToCenter(int levelId)
 	{
 		SurvivorsLevelItem survivorsLevelItem;
@@ -352,7 +352,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.ScrollViewComp.ContentUIItem.Get().SetAnchorOffset(this.TempVector2D.ToUeVector2D(false));
 	}
 
-	// Token: 0x06016FC4 RID: 94148 RVA: 0x005D5B0E File Offset: 0x005D3D0E
+	// Token: 0x060149F5 RID: 84469 RVA: 0x0060267A File Offset: 0x0060087A
 	private void ScrollTweenerStart()
 	{
 		this.IsTweenerComplete = false;
@@ -360,7 +360,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.SetLevelItemInteractive(false);
 	}
 
-	// Token: 0x06016FC5 RID: 94149 RVA: 0x005D5B2A File Offset: 0x005D3D2A
+	// Token: 0x060149F6 RID: 84470 RVA: 0x00602696 File Offset: 0x00600896
 	protected void ScrollTweenerEnd()
 	{
 		this.IsTweenerComplete = true;
@@ -368,7 +368,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.SetLevelItemInteractive(true);
 	}
 
-	// Token: 0x06016FC6 RID: 94150 RVA: 0x005D5B48 File Offset: 0x005D3D48
+	// Token: 0x060149F7 RID: 84471 RVA: 0x006026B4 File Offset: 0x006008B4
 	private void BindTweenerComplete()
 	{
 		if (this.IsBindTweenerComplete)
@@ -383,7 +383,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.ScrollViewComp.Tweener.OnCompleteCallBack.Bind(new Action(this.TweenerComplete));
 	}
 
-	// Token: 0x06016FC7 RID: 94151 RVA: 0x005D5B94 File Offset: 0x005D3D94
+	// Token: 0x060149F8 RID: 84472 RVA: 0x00602700 File Offset: 0x00600900
 	private void UnBindTweenerComplete()
 	{
 		this.IsBindTweenerComplete = false;
@@ -395,7 +395,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		tweener.OnCompleteCallBack.Unbind();
 	}
 
-	// Token: 0x06016FC8 RID: 94152 RVA: 0x005D5BB7 File Offset: 0x005D3DB7
+	// Token: 0x060149F9 RID: 84473 RVA: 0x00602723 File Offset: 0x00600923
 	private void TweenerComplete()
 	{
 		if (base.IsDestroyOrDestroying)
@@ -405,19 +405,19 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.ScrollTweenerEnd();
 	}
 
-	// Token: 0x06016FC9 RID: 94153 RVA: 0x005D5BC8 File Offset: 0x005D3DC8
+	// Token: 0x060149FA RID: 84474 RVA: 0x00602734 File Offset: 0x00600934
 	private bool IsTopArea()
 	{
 		return this.CurrentDiff == 2;
 	}
 
-	// Token: 0x06016FCA RID: 94154 RVA: 0x005D5BD3 File Offset: 0x005D3DD3
+	// Token: 0x060149FB RID: 84475 RVA: 0x0060273F File Offset: 0x0060093F
 	private bool IsBottomArea()
 	{
 		return this.CurrentDiff == 0;
 	}
 
-	// Token: 0x06016FCB RID: 94155 RVA: 0x005D5BE0 File Offset: 0x005D3DE0
+	// Token: 0x060149FC RID: 84476 RVA: 0x0060274C File Offset: 0x0060094C
 	private UniTask InitAllLevel()
 	{
 		SurvivorsRogueMainView.<InitAllLevel>d__63 <InitAllLevel>d__;
@@ -428,7 +428,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		return <InitAllLevel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016FCC RID: 94156 RVA: 0x005D5C24 File Offset: 0x005D3E24
+	// Token: 0x060149FD RID: 84477 RVA: 0x00602790 File Offset: 0x00600990
 	private unsafe void InitDiffArea()
 	{
 		Span<int> areaBoundLevelIdBytes = SurvivorsRogueConfig.Instance.GetSurvivorsActivityConfigByActivityId(this.ActivityDataBase.Id).Value.GetAreaBoundLevelIdBytes();
@@ -453,7 +453,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		base.GetSpine(22).SetAnimation(0, animationName, true);
 	}
 
-	// Token: 0x06016FCD RID: 94157 RVA: 0x005D5D40 File Offset: 0x005D3F40
+	// Token: 0x060149FE RID: 84478 RVA: 0x006028AC File Offset: 0x00600AAC
 	[NullableContext(2)]
 	private void OnAnimationComplete(UTrackEntry entry)
 	{
@@ -474,7 +474,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FCE RID: 94158 RVA: 0x005D5D88 File Offset: 0x005D3F88
+	// Token: 0x060149FF RID: 84479 RVA: 0x006028F4 File Offset: 0x00600AF4
 	private void UpdateLevelInfoPos()
 	{
 		foreach (KeyValuePair<int, SurvivorsLevelItem> keyValuePair in this.LevelItemMap)
@@ -490,7 +490,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FCF RID: 94159 RVA: 0x005D5E18 File Offset: 0x005D4018
+	// Token: 0x06014A00 RID: 84480 RVA: 0x00602984 File Offset: 0x00600B84
 	private void UpdateCurrentDiffArea(float posY)
 	{
 		ESurvivorsLevelDiff esurvivorsLevelDiff = ESurvivorsLevelDiff.Easy;
@@ -513,7 +513,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.RefreshCurrentDiffInfo();
 	}
 
-	// Token: 0x06016FD0 RID: 94160 RVA: 0x005D5E90 File Offset: 0x005D4090
+	// Token: 0x06014A01 RID: 84481 RVA: 0x006029FC File Offset: 0x00600BFC
 	private void RefreshCurrentDiffInfo()
 	{
 		UUIText text = base.GetText(21);
@@ -534,7 +534,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.GetDiffToggle((ESurvivorsLevelDiff)this.CurrentDiff).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06016FD1 RID: 94161 RVA: 0x005D5F04 File Offset: 0x005D4104
+	// Token: 0x06014A02 RID: 84482 RVA: 0x00602A70 File Offset: 0x00600C70
 	protected int GetNearestCenterLevelId()
 	{
 		int result = 0;
@@ -557,7 +557,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		return result;
 	}
 
-	// Token: 0x06016FD2 RID: 94162 RVA: 0x005D5FD8 File Offset: 0x005D41D8
+	// Token: 0x06014A03 RID: 84483 RVA: 0x00602B44 File Offset: 0x00600D44
 	private UUIExtendToggle GetDiffToggle(ESurvivorsLevelDiff diff)
 	{
 		switch (diff)
@@ -573,7 +573,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FD3 RID: 94163 RVA: 0x005D6014 File Offset: 0x005D4214
+	// Token: 0x06014A04 RID: 84484 RVA: 0x00602B80 File Offset: 0x00600D80
 	private void SetLevelItemInteractive(bool enable)
 	{
 		foreach (SurvivorsLevelItem survivorsLevelItem in this.LevelItemMap.Values)
@@ -582,7 +582,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FD4 RID: 94164 RVA: 0x005D606C File Offset: 0x005D426C
+	// Token: 0x06014A05 RID: 84485 RVA: 0x00602BD8 File Offset: 0x00600DD8
 	private void StartLevelUnlockFlow()
 	{
 		bool flag = false;
@@ -626,7 +626,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		UiLayer.Instance.SetShowNormalMaskLayer(false, "");
 	}
 
-	// Token: 0x06016FD5 RID: 94165 RVA: 0x005D61B0 File Offset: 0x005D43B0
+	// Token: 0x06014A06 RID: 84486 RVA: 0x00602D1C File Offset: 0x00600F1C
 	private void RefreshLevelInfo()
 	{
 		int num = this.LevelItemMap.Count;
@@ -645,7 +645,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FD6 RID: 94166 RVA: 0x005D625C File Offset: 0x005D445C
+	// Token: 0x06014A07 RID: 84487 RVA: 0x00602DC8 File Offset: 0x00600FC8
 	private void RefreshFunctionButton()
 	{
 		string text = this.ActivityDataBase.GetFinishedRewardTaskCount().ToString();
@@ -684,7 +684,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06016FD7 RID: 94167 RVA: 0x005D63C0 File Offset: 0x005D45C0
+	// Token: 0x06014A08 RID: 84488 RVA: 0x00602F2C File Offset: 0x0060112C
 	private void OnClickedBtnReward()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsRogueRewardView, null, delegate(bool success, int viewId)
@@ -696,19 +696,19 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06016FD8 RID: 94168 RVA: 0x005D63DE File Offset: 0x005D45DE
+	// Token: 0x06014A09 RID: 84489 RVA: 0x00602F4A File Offset: 0x0060114A
 	private void OnClickedBtnHandbook()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsHandbookView, null, null);
 	}
 
-	// Token: 0x06016FD9 RID: 94169 RVA: 0x005D63F1 File Offset: 0x005D45F1
+	// Token: 0x06014A0A RID: 84490 RVA: 0x00602F5D File Offset: 0x0060115D
 	private void OnClickedBtnTalentTree()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsTalentTreeView, null, null);
 	}
 
-	// Token: 0x06016FDA RID: 94170 RVA: 0x005D6404 File Offset: 0x005D4604
+	// Token: 0x06014A0B RID: 84491 RVA: 0x00602F70 File Offset: 0x00601170
 	private void OnClickedBtnUp()
 	{
 		if (this.IsDragging)
@@ -727,7 +727,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.ScrollLevelIdToBottom(survivorsRogueDiffAreaInfo.LowerBoundLevelId, true);
 	}
 
-	// Token: 0x06016FDB RID: 94171 RVA: 0x005D6450 File Offset: 0x005D4650
+	// Token: 0x06014A0C RID: 84492 RVA: 0x00602FBC File Offset: 0x006011BC
 	private void OnClickedBtnDown()
 	{
 		if (this.IsDragging)
@@ -746,7 +746,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		this.ScrollLevelIdToBottom(survivorsRogueDiffAreaInfo.LowerBoundLevelId, true);
 	}
 
-	// Token: 0x06016FDC RID: 94172 RVA: 0x005D649C File Offset: 0x005D469C
+	// Token: 0x06014A0D RID: 84493 RVA: 0x00603008 File Offset: 0x00601208
 	private void OnSurvivorsInstSettle(bool success)
 	{
 		if (!success)
@@ -760,7 +760,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016FDD RID: 94173 RVA: 0x005D6508 File Offset: 0x005D4708
+	// Token: 0x06014A0E RID: 84494 RVA: 0x00603074 File Offset: 0x00601274
 	private void OnButtonClickedCallback(int levelId)
 	{
 		bool isInfinite = this.ActivityDataBase.IsEndlessMode(levelId);
@@ -793,13 +793,13 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsRogueExitView, param, null);
 	}
 
-	// Token: 0x06016FDE RID: 94174 RVA: 0x005D6621 File Offset: 0x005D4821
+	// Token: 0x06014A0F RID: 84495 RVA: 0x0060318D File Offset: 0x0060138D
 	private void OnCloseBtnClicked()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016FDF RID: 94175 RVA: 0x005D662C File Offset: 0x005D482C
+	// Token: 0x06014A10 RID: 84496 RVA: 0x00603198 File Offset: 0x00601398
 	private void OnHelpBtnClicked()
 	{
 		SurvivorsActivityConfig? survivorsActivityConfig;
@@ -810,7 +810,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0400AB67 RID: 43879
+	// Token: 0x0400AF6D RID: 44909
 	private readonly string[] diffIdToleSpineName = new string[]
 	{
 		"Idle1",
@@ -818,7 +818,7 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		"Idle3"
 	};
 
-	// Token: 0x0400AB68 RID: 43880
+	// Token: 0x0400AF6E RID: 44910
 	private readonly string[] diffIdUnlockToSpineName = new string[]
 	{
 		"None",
@@ -826,95 +826,95 @@ public class SurvivorsRogueMainView : UiTickViewBase
 		"Idle2to3"
 	};
 
-	// Token: 0x0400AB69 RID: 43881
+	// Token: 0x0400AF6F RID: 44911
 	private const int CENTER_AREA_HALF_HEIGHT = 100;
 
-	// Token: 0x0400AB6A RID: 43882
+	// Token: 0x0400AF70 RID: 44912
 	protected SurvivorsActivityData ActivityDataBase;
 
-	// Token: 0x0400AB6B RID: 43883
+	// Token: 0x0400AF71 RID: 44913
 	protected UUIScrollViewWithScrollbarComponent ScrollViewComp;
 
-	// Token: 0x0400AB6C RID: 43884
+	// Token: 0x0400AF72 RID: 44914
 	[Nullable(2)]
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400AB6D RID: 43885
+	// Token: 0x0400AF73 RID: 44915
 	[Nullable(2)]
 	protected SurvivorsFunctionButtonItem ButtonTalentTree;
 
-	// Token: 0x0400AB6E RID: 43886
+	// Token: 0x0400AF74 RID: 44916
 	[Nullable(2)]
 	protected SurvivorsFunctionButtonItem ButtonHandbook;
 
-	// Token: 0x0400AB6F RID: 43887
+	// Token: 0x0400AF75 RID: 44917
 	[Nullable(2)]
 	protected SurvivorsFunctionButtonItem ButtonReward;
 
-	// Token: 0x0400AB70 RID: 43888
+	// Token: 0x0400AF76 RID: 44918
 	protected readonly Dictionary<int, SurvivorsLevelInfoItem> LevelInfoItemMap = new Dictionary<int, SurvivorsLevelInfoItem>();
 
-	// Token: 0x0400AB71 RID: 43889
+	// Token: 0x0400AF77 RID: 44919
 	protected readonly Dictionary<int, SurvivorsLevelItem> LevelItemMap = new Dictionary<int, SurvivorsLevelItem>();
 
-	// Token: 0x0400AB72 RID: 43890
+	// Token: 0x0400AF78 RID: 44920
 	private SurvivorsActivityDefine.SurvivorsLevelInfo LevelInfo;
 
-	// Token: 0x0400AB73 RID: 43891
+	// Token: 0x0400AF79 RID: 44921
 	[Nullable(2)]
 	private UCurveFloat UiCurveAreaMove;
 
-	// Token: 0x0400AB74 RID: 43892
+	// Token: 0x0400AF7A RID: 44922
 	private readonly List<SurvivorsRogueParallaxItem> ItemParallaxList = new List<SurvivorsRogueParallaxItem>();
 
-	// Token: 0x0400AB75 RID: 43893
+	// Token: 0x0400AF7B RID: 44923
 	private float CenterPosY;
 
-	// Token: 0x0400AB76 RID: 43894
+	// Token: 0x0400AF7C RID: 44924
 	private float CenterAreaHalfHeight;
 
-	// Token: 0x0400AB77 RID: 43895
+	// Token: 0x0400AF7D RID: 44925
 	private float LastScrollValue = 0.001f;
 
-	// Token: 0x0400AB78 RID: 43896
+	// Token: 0x0400AF7E RID: 44926
 	protected float ScrollContentInitPosY;
 
-	// Token: 0x0400AB79 RID: 43897
+	// Token: 0x0400AF7F RID: 44927
 	protected float ScrollContentLastPosY;
 
-	// Token: 0x0400AB7A RID: 43898
+	// Token: 0x0400AF80 RID: 44928
 	protected bool IsDragging;
 
-	// Token: 0x0400AB7B RID: 43899
+	// Token: 0x0400AF81 RID: 44929
 	protected bool StartElasticMovement;
 
-	// Token: 0x0400AB7C RID: 43900
+	// Token: 0x0400AF82 RID: 44930
 	protected readonly List<SurvivorsRogueDiffAreaInfo> DiffAreaUiInfoList = new List<SurvivorsRogueDiffAreaInfo>();
 
-	// Token: 0x0400AB7D RID: 43901
+	// Token: 0x0400AF83 RID: 44931
 	protected int CurrentDiff = -1;
 
-	// Token: 0x0400AB7E RID: 43902
+	// Token: 0x0400AF84 RID: 44932
 	protected int CurrentUnlockDiff = -1;
 
-	// Token: 0x0400AB7F RID: 43903
+	// Token: 0x0400AF85 RID: 44933
 	private readonly float ChangeAreaDuration = ConfigCommonParamById.GetFloatConfig("SurvivorsRogueChangeAreaDuration").GetValueOrDefault();
 
-	// Token: 0x0400AB80 RID: 43904
+	// Token: 0x0400AF86 RID: 44934
 	private readonly float AreaBottomScale = ConfigCommonParamById.GetFloatConfig("SurvivorsRogueAreaBottomScale").GetValueOrDefault();
 
-	// Token: 0x0400AB81 RID: 43905
+	// Token: 0x0400AF87 RID: 44935
 	private readonly float BackgroundParallaxFactor = ConfigCommonParamById.GetFloatConfig("SurvivorsRogueBackgroundParallaxFactor").GetValueOrDefault();
 
-	// Token: 0x0400AB82 RID: 43906
+	// Token: 0x0400AF88 RID: 44936
 	private readonly float AutoAttachVelocityY = ConfigCommonParamById.GetFloatConfig("SurvivorsRogueAutoAttachVelocityY").GetValueOrDefault();
 
-	// Token: 0x0400AB83 RID: 43907
+	// Token: 0x0400AF89 RID: 44937
 	private readonly Vector2D TempVector2D = Vector2D.Create();
 
-	// Token: 0x0400AB84 RID: 43908
+	// Token: 0x0400AF8A RID: 44938
 	private bool IsTweenerComplete = true;
 
-	// Token: 0x0400AB85 RID: 43909
+	// Token: 0x0400AF8B RID: 44939
 	private bool IsBindTweenerComplete;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A10 RID: 2576
+	// Token: 0x02000AD5 RID: 2773
 	public static class ESpawnConfigTypeExtensions
 	{
-		// Token: 0x060038F9 RID: 14585 RVA: 0x00093450 File Offset: 0x00091650
+		// Token: 0x06003CD1 RID: 15569 RVA: 0x0009BD40 File Offset: 0x00099F40
 		public static string ToEnumString(this ESpawnConfigType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038FA RID: 14586 RVA: 0x00093478 File Offset: 0x00091678
+		// Token: 0x06003CD2 RID: 15570 RVA: 0x0009BD68 File Offset: 0x00099F68
 		public static ESpawnConfigType FromString(string name)
 		{
 			ESpawnConfigType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038FB RID: 14587 RVA: 0x000934A1 File Offset: 0x000916A1
+		// Token: 0x06003CD3 RID: 15571 RVA: 0x0009BD91 File Offset: 0x00099F91
 		public static bool TryFromString(string name, out ESpawnConfigType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060038FC RID: 14588 RVA: 0x000934C6 File Offset: 0x000916C6
+		// Token: 0x06003CD4 RID: 15572 RVA: 0x0009BDB6 File Offset: 0x00099FB6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038FD RID: 14589 RVA: 0x000934D6 File Offset: 0x000916D6
+		// Token: 0x06003CD5 RID: 15573 RVA: 0x0009BDC6 File Offset: 0x00099FC6
 		public static ESpawnConfigType[] GetValues()
 		{
 			return new ESpawnConfigType[1];
 		}
 
-		// Token: 0x060038FE RID: 14590 RVA: 0x000934DE File Offset: 0x000916DE
+		// Token: 0x06003CD6 RID: 15574 RVA: 0x0009BDCE File Offset: 0x00099FCE
 		public static string[] GetNames()
 		{
 			return new string[]

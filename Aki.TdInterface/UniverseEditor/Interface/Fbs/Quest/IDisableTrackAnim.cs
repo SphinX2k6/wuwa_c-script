@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DD6 RID: 15830
+	// Token: 0x02004211 RID: 16913
 	public struct IDisableTrackAnim : IFlatbufferObject
 	{
-		// Token: 0x17006D52 RID: 27986
-		// (get) Token: 0x060161AD RID: 90541 RVA: 0x00331F4A File Offset: 0x0033014A
+		// Token: 0x17007332 RID: 29490
+		// (get) Token: 0x060177CC RID: 96204 RVA: 0x0035A94E File Offset: 0x00358B4E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060161AE RID: 90542 RVA: 0x00331F57 File Offset: 0x00330157
+		// Token: 0x060177CD RID: 96205 RVA: 0x0035A95B File Offset: 0x00358B5B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060161AF RID: 90543 RVA: 0x00331F60 File Offset: 0x00330160
+		// Token: 0x060177CE RID: 96206 RVA: 0x0035A964 File Offset: 0x00358B64
 		public static IDisableTrackAnim GetRootAsIDisableTrackAnim(ByteBuffer _bb)
 		{
 			return IDisableTrackAnim.GetRootAsIDisableTrackAnim(_bb, default(IDisableTrackAnim));
 		}
 
-		// Token: 0x060161B0 RID: 90544 RVA: 0x00331F7C File Offset: 0x0033017C
+		// Token: 0x060177CF RID: 96207 RVA: 0x0035A980 File Offset: 0x00358B80
 		public static IDisableTrackAnim GetRootAsIDisableTrackAnim(ByteBuffer _bb, IDisableTrackAnim obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060161B1 RID: 90545 RVA: 0x00331F99 File Offset: 0x00330199
+		// Token: 0x060177D0 RID: 96208 RVA: 0x0035A99D File Offset: 0x00358B9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060161B2 RID: 90546 RVA: 0x00331FA8 File Offset: 0x003301A8
+		// Token: 0x060177D1 RID: 96209 RVA: 0x0035A9AC File Offset: 0x00358BAC
 		public IDisableTrackAnim __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006D53 RID: 27987
-		// (get) Token: 0x060161B3 RID: 90547 RVA: 0x00331FB8 File Offset: 0x003301B8
+		// Token: 0x17007333 RID: 29491
+		// (get) Token: 0x060177D2 RID: 96210 RVA: 0x0035A9BC File Offset: 0x00358BBC
 		public IConditionGroup? Condition
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060161B4 RID: 90548 RVA: 0x00332015 File Offset: 0x00330215
+		// Token: 0x060177D3 RID: 96211 RVA: 0x0035AA19 File Offset: 0x00358C19
 		public static Offset<IDisableTrackAnim> CreateIDisableTrackAnim(FlatBufferBuilder builder, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>))
 		{
 			builder.StartTable(1);
@@ -71,25 +71,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDisableTrackAnim.EndIDisableTrackAnim(builder);
 		}
 
-		// Token: 0x060161B5 RID: 90549 RVA: 0x0033202B File Offset: 0x0033022B
+		// Token: 0x060177D4 RID: 96212 RVA: 0x0035AA2F File Offset: 0x00358C2F
 		public static void StartIDisableTrackAnim(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060161B6 RID: 90550 RVA: 0x00332034 File Offset: 0x00330234
+		// Token: 0x060177D5 RID: 96213 RVA: 0x0035AA38 File Offset: 0x00358C38
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(0, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x060161B7 RID: 90551 RVA: 0x00332044 File Offset: 0x00330244
+		// Token: 0x060177D6 RID: 96214 RVA: 0x0035AA48 File Offset: 0x00358C48
 		public static Offset<IDisableTrackAnim> EndIDisableTrackAnim(FlatBufferBuilder builder)
 		{
 			return new Offset<IDisableTrackAnim>(builder.EndTable());
 		}
 
-		// Token: 0x060161B8 RID: 90552 RVA: 0x00332054 File Offset: 0x00330254
+		// Token: 0x060177D7 RID: 96215 RVA: 0x0035AA58 File Offset: 0x00358C58
 		public IDisableTrackAnimT UnPack()
 		{
 			IDisableTrackAnimT disableTrackAnimT = new IDisableTrackAnimT();
@@ -97,13 +97,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return disableTrackAnimT;
 		}
 
-		// Token: 0x060161B9 RID: 90553 RVA: 0x00332070 File Offset: 0x00330270
+		// Token: 0x060177D8 RID: 96216 RVA: 0x0035AA74 File Offset: 0x00358C74
 		public void UnPackTo(IDisableTrackAnimT _o)
 		{
 			_o.Condition = ((this.Condition != null) ? this.Condition.Value.UnPack() : null);
 		}
 
-		// Token: 0x060161BA RID: 90554 RVA: 0x003320AC File Offset: 0x003302AC
+		// Token: 0x060177D9 RID: 96217 RVA: 0x0035AAB0 File Offset: 0x00358CB0
 		public static Offset<IDisableTrackAnim> Pack(FlatBufferBuilder builder, IDisableTrackAnimT _o)
 		{
 			if (_o == null)
@@ -114,7 +114,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDisableTrackAnim.CreateIDisableTrackAnim(builder, conditionOffset);
 		}
 
-		// Token: 0x0400B71E RID: 46878
+		// Token: 0x0400C0F2 RID: 49394
 		private Table __p;
 	}
 }

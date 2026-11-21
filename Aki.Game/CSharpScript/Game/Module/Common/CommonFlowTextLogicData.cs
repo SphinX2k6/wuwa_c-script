@@ -5,29 +5,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common
 {
-	// Token: 0x02005B42 RID: 23362
+	// Token: 0x02004B23 RID: 19235
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonFlowTextLogicData<[Nullable(2)] T> : ICommonFlowTextLogicData<T>
 	{
-		// Token: 0x17008C97 RID: 35991
-		// (get) Token: 0x0603B266 RID: 242278 RVA: 0x00E1ABCC File Offset: 0x00E18DCC
-		// (set) Token: 0x0603B267 RID: 242279 RVA: 0x00E1ABD4 File Offset: 0x00E18DD4
+		// Token: 0x17006071 RID: 24689
+		// (get) Token: 0x060301D8 RID: 197080 RVA: 0x00D6B8E4 File Offset: 0x00D69AE4
+		// (set) Token: 0x060301D9 RID: 197081 RVA: 0x00D6B8EC File Offset: 0x00D69AEC
 		public Func<ITalkItem, UUIText> GetTextComp { get; set; }
 
-		// Token: 0x17008C98 RID: 35992
-		// (get) Token: 0x0603B268 RID: 242280 RVA: 0x00E1ABDD File Offset: 0x00E18DDD
-		// (set) Token: 0x0603B269 RID: 242281 RVA: 0x00E1ABE5 File Offset: 0x00E18DE5
+		// Token: 0x17006072 RID: 24690
+		// (get) Token: 0x060301DA RID: 197082 RVA: 0x00D6B8F5 File Offset: 0x00D69AF5
+		// (set) Token: 0x060301DB RID: 197083 RVA: 0x00D6B8FD File Offset: 0x00D69AFD
 		public Action<ITalkItem, T> TextAnimStartDelegate { get; set; }
 
-		// Token: 0x17008C99 RID: 35993
-		// (get) Token: 0x0603B26A RID: 242282 RVA: 0x00E1ABEE File Offset: 0x00E18DEE
-		// (set) Token: 0x0603B26B RID: 242283 RVA: 0x00E1ABF6 File Offset: 0x00E18DF6
+		// Token: 0x17006073 RID: 24691
+		// (get) Token: 0x060301DC RID: 197084 RVA: 0x00D6B906 File Offset: 0x00D69B06
+		// (set) Token: 0x060301DD RID: 197085 RVA: 0x00D6B90E File Offset: 0x00D69B0E
 		public Action<ITalkItem, T> TextAnimFinishDelegate { get; set; }
 
-		// Token: 0x17008C9A RID: 35994
-		// (get) Token: 0x0603B26C RID: 242284 RVA: 0x00E1ABFF File Offset: 0x00E18DFF
-		// (set) Token: 0x0603B26D RID: 242285 RVA: 0x00E1AC07 File Offset: 0x00E18E07
+		// Token: 0x17006074 RID: 24692
+		// (get) Token: 0x060301DE RID: 197086 RVA: 0x00D6B917 File Offset: 0x00D69B17
+		// (set) Token: 0x060301DF RID: 197087 RVA: 0x00D6B91F File Offset: 0x00D69B1F
 		public Action ClearDelegate { get; set; }
 	}
 }

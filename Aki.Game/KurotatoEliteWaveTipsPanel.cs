@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001CBA RID: 7354
+// Token: 0x0200117C RID: 4476
 public class KurotatoEliteWaveTipsPanel : UiPanelBase
 {
-	// Token: 0x0600DE34 RID: 56884 RVA: 0x0033F393 File Offset: 0x0033D593
+	// Token: 0x0600B251 RID: 45649 RVA: 0x0034ADCF File Offset: 0x00348FCF
 	protected override void OnStart()
 	{
 		this.SeqPlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x0600DE35 RID: 56885 RVA: 0x0033F3A8 File Offset: 0x0033D5A8
+	// Token: 0x0600B252 RID: 45650 RVA: 0x0034ADE4 File Offset: 0x00348FE4
 	public void PlayEliteWave()
 	{
 		base.SetUiActive(true);
 		this.SeqPlayer.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x040065FD RID: 26109
+	// Token: 0x040066DC RID: 26332
 	[Nullable(1)]
 	private LevelSequencePlayer SeqPlayer;
 }

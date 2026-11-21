@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002FA1 RID: 12193
+// Token: 0x020024F5 RID: 9461
 [NullableContext(1)]
 [Nullable(0)]
 public class RemoveBuffByFilter : PeriodExecution
 {
-	// Token: 0x06019DDC RID: 105948 RVA: 0x006C234E File Offset: 0x006C054E
+	// Token: 0x060176EE RID: 95982 RVA: 0x006E8BEA File Offset: 0x006E6DEA
 	public RemoveBuffByFilter(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DDD RID: 105949 RVA: 0x006C2358 File Offset: 0x006C0558
+	// Token: 0x060176EF RID: 95983 RVA: 0x006E8BF4 File Offset: 0x006E6DF4
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -39,7 +39,7 @@ public class RemoveBuffByFilter : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DDE RID: 105950 RVA: 0x006C23F0 File Offset: 0x006C05F0
+	// Token: 0x060176F0 RID: 95984 RVA: 0x006E8C8C File Offset: 0x006E6E8C
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -62,7 +62,7 @@ public class RemoveBuffByFilter : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DDF RID: 105951 RVA: 0x006C24A0 File Offset: 0x006C06A0
+	// Token: 0x060176F1 RID: 95985 RVA: 0x006E8D3C File Offset: 0x006E6F3C
 	public override string GetDebugEffectString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(17, 2);
@@ -73,10 +73,10 @@ public class RemoveBuffByFilter : PeriodExecution
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C37F RID: 50047
+	// Token: 0x0400C728 RID: 50984
 	private ERemoveBuffFilterType FilterType;
 
-	// Token: 0x0400C380 RID: 50048
+	// Token: 0x0400C729 RID: 50985
 	[Nullable(2)]
 	private HashSet<long> KeepBuffIds;
 }

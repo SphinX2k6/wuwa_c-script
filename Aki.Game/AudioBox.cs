@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020001EC RID: 492
+// Token: 0x020001F0 RID: 496
 public class AudioBox
 {
-	// Token: 0x06001E91 RID: 7825 RVA: 0x000989B8 File Offset: 0x00096BB8
+	// Token: 0x06001F2E RID: 7982 RVA: 0x0009FB34 File Offset: 0x0009DD34
 	[NullableContext(1)]
 	public static int Compare(AudioBox a, AudioBox b)
 	{
@@ -16,7 +16,7 @@ public class AudioBox
 		return num;
 	}
 
-	// Token: 0x06001E92 RID: 7826 RVA: 0x000989DB File Offset: 0x00096BDB
+	// Token: 0x06001F2F RID: 7983 RVA: 0x0009FB57 File Offset: 0x0009DD57
 	public AudioBox(int priority, int pbDataId, EAudioBoxType boxType)
 	{
 		this.Priority = priority;
@@ -24,12 +24,12 @@ public class AudioBox
 		this.BoxType = boxType;
 	}
 
-	// Token: 0x040012D7 RID: 4823
+	// Token: 0x0400131A RID: 4890
 	public int Priority;
 
-	// Token: 0x040012D8 RID: 4824
+	// Token: 0x0400131B RID: 4891
 	public int PbDataId;
 
-	// Token: 0x040012D9 RID: 4825
+	// Token: 0x0400131C RID: 4892
 	public EAudioBoxType BoxType;
 }

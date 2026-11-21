@@ -7,13 +7,13 @@ using CSharpScript.Game.Common.Event;
 [Nullable(0)]
 public class AiTaunt
 {
-	// Token: 0x06000E07 RID: 3591 RVA: 0x0004FED4 File Offset: 0x0004E0D4
+	// Token: 0x06000E0D RID: 3597 RVA: 0x00050A64 File Offset: 0x0004EC64
 	public AiTaunt(AiController AiController)
 	{
 		this.AiController = AiController;
 	}
 
-	// Token: 0x06000E08 RID: 3592 RVA: 0x0004FEE4 File Offset: 0x0004E0E4
+	// Token: 0x06000E0E RID: 3598 RVA: 0x00050A74 File Offset: 0x0004EC74
 	private unsafe void OnAiTauntAddOrRemoveHandler(bool addOrRemove, int instigatorEntityId, int handleId)
 	{
 		if (addOrRemove)
@@ -51,7 +51,7 @@ public class AiTaunt
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 	}
 
-	// Token: 0x06000E09 RID: 3593 RVA: 0x0005004C File Offset: 0x0004E24C
+	// Token: 0x06000E0F RID: 3599 RVA: 0x00050BDC File Offset: 0x0004EDDC
 	private void OnAiHateTargetChangedHandler(int? newId, int? preId)
 	{
 		if (this.CurrentInstigatorEntityId.GetValueOrDefault() != -1)
@@ -71,7 +71,7 @@ public class AiTaunt
 		}
 	}
 
-	// Token: 0x06000E0A RID: 3594 RVA: 0x000500D9 File Offset: 0x0004E2D9
+	// Token: 0x06000E10 RID: 3600 RVA: 0x00050C69 File Offset: 0x0004EE69
 	public void Init(AiHateList hateList)
 	{
 		this.HateList = hateList;
@@ -80,7 +80,7 @@ public class AiTaunt
 		this.BindEvent();
 	}
 
-	// Token: 0x06000E0B RID: 3595 RVA: 0x00050100 File Offset: 0x0004E300
+	// Token: 0x06000E11 RID: 3601 RVA: 0x00050C90 File Offset: 0x0004EE90
 	public unsafe void Tick()
 	{
 		if (this.CurrentInstigatorEntityId == null || this.CurrentInstigatorEntityId.GetValueOrDefault() == -1)
@@ -125,7 +125,7 @@ public class AiTaunt
 		this.ClearCurrentTauntAndGe();
 	}
 
-	// Token: 0x06000E0C RID: 3596 RVA: 0x00050227 File Offset: 0x0004E427
+	// Token: 0x06000E12 RID: 3602 RVA: 0x00050DB7 File Offset: 0x0004EFB7
 	public void Clear()
 	{
 		this.ClearCurrentTauntAndGe();
@@ -135,7 +135,7 @@ public class AiTaunt
 		this.UnBindEvent();
 	}
 
-	// Token: 0x06000E0D RID: 3597 RVA: 0x00050254 File Offset: 0x0004E454
+	// Token: 0x06000E13 RID: 3603 RVA: 0x00050DE4 File Offset: 0x0004EFE4
 	private void ClearCurrentTaunt()
 	{
 		if (this.CurrentInstigatorEntityId != null && this.HateList != null)
@@ -146,14 +146,14 @@ public class AiTaunt
 		this.ActiveHandleId = null;
 	}
 
-	// Token: 0x06000E0E RID: 3598 RVA: 0x000502A4 File Offset: 0x0004E4A4
+	// Token: 0x06000E14 RID: 3604 RVA: 0x00050E34 File Offset: 0x0004F034
 	public void Reset(AiHateList hateList)
 	{
 		this.Clear();
 		this.Init(hateList);
 	}
 
-	// Token: 0x06000E0F RID: 3599 RVA: 0x000502B4 File Offset: 0x0004E4B4
+	// Token: 0x06000E15 RID: 3605 RVA: 0x00050E44 File Offset: 0x0004F044
 	public void ClearCurrentTauntAndGe()
 	{
 		if (this.ActiveHandleId != null)
@@ -167,7 +167,7 @@ public class AiTaunt
 		this.ClearCurrentTaunt();
 	}
 
-	// Token: 0x06000E10 RID: 3600 RVA: 0x00050320 File Offset: 0x0004E520
+	// Token: 0x06000E16 RID: 3606 RVA: 0x00050EB0 File Offset: 0x0004F0B0
 	public void BindEvent()
 	{
 		if (!this.AiController.CharAiDesignComp.Valid)
@@ -178,7 +178,7 @@ public class AiTaunt
 		EventSystem.Instance.AddWithTarget(this.AiController.CharAiDesignComp.Entity, EEventName.AiHateTargetChanged, new Action<int?, int?>(this.OnAiHateTargetChangedHandler));
 	}
 
-	// Token: 0x06000E11 RID: 3601 RVA: 0x00050398 File Offset: 0x0004E598
+	// Token: 0x06000E17 RID: 3607 RVA: 0x00050F28 File Offset: 0x0004F128
 	public void UnBindEvent()
 	{
 		CharacterAiComponent charAiDesignComp = this.AiController.CharAiDesignComp;
@@ -197,19 +197,19 @@ public class AiTaunt
 		}
 	}
 
-	// Token: 0x04000B6C RID: 2924
+	// Token: 0x04000B74 RID: 2932
 	private const long TAUNT_VALUE = 1000000000L;
 
-	// Token: 0x04000B6D RID: 2925
+	// Token: 0x04000B75 RID: 2933
 	[Nullable(2)]
 	private AiHateList HateList;
 
-	// Token: 0x04000B6E RID: 2926
+	// Token: 0x04000B76 RID: 2934
 	private int? CurrentInstigatorEntityId;
 
-	// Token: 0x04000B6F RID: 2927
+	// Token: 0x04000B77 RID: 2935
 	private int? ActiveHandleId;
 
-	// Token: 0x04000B70 RID: 2928
+	// Token: 0x04000B78 RID: 2936
 	private readonly AiController AiController;
 }

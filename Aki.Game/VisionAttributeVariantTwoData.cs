@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02002498 RID: 9368
+// Token: 0x0200197F RID: 6527
 public class VisionAttributeVariantTwoData
 {
-	// Token: 0x04008DA4 RID: 36260
+	// Token: 0x04008EED RID: 36589
 	public int FetterId;
 
-	// Token: 0x04008DA5 RID: 36261
+	// Token: 0x04008EEE RID: 36590
 	public EFetterCompare State;
 }

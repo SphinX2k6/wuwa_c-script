@@ -6,18 +6,18 @@ using CSharpScript.Game.NewWorld.Character.Custom.Components;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x02007124 RID: 28964
+	// Token: 0x02006352 RID: 25426
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleHookDetectRestriction : IStaticVariableResetter
 	{
-		// Token: 0x06046B7E RID: 289662 RVA: 0x011CF867 File Offset: 0x011CDA67
+		// Token: 0x0603D9C9 RID: 252361 RVA: 0x011D84B7 File Offset: 0x011D66B7
 		static MotorcycleHookDetectRestriction()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleHookDetectRestriction.CreateStaticDefaultValue), new Action(MotorcycleHookDetectRestriction.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06046B7F RID: 289663 RVA: 0x011CF888 File Offset: 0x011CDA88
+		// Token: 0x0603D9CA RID: 252362 RVA: 0x011D84D8 File Offset: 0x011D66D8
 		public static void CreateStaticDefaultValue()
 		{
 			MotorcycleHookDetectRestriction.MotorcycleHookSkillIds = new HashSet<int>
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			MotorcycleHookDetectRestriction.MotorcycleHookSkillIdToType = dictionary;
 		}
 
-		// Token: 0x06046B80 RID: 289664 RVA: 0x011CF93D File Offset: 0x011CDB3D
+		// Token: 0x0603D9CB RID: 252363 RVA: 0x011D858D File Offset: 0x011D678D
 		public static void ResetStaticDefaultValue()
 		{
 			MotorcycleHookDetectRestriction.MotorcycleHookSkillIds = null;
 			MotorcycleHookDetectRestriction.MotorcycleHookSkillIdToType = null;
 		}
 
-		// Token: 0x06046B81 RID: 289665 RVA: 0x011CF94C File Offset: 0x011CDB4C
+		// Token: 0x0603D9CC RID: 252364 RVA: 0x011D859C File Offset: 0x011D679C
 		public MotorcycleHookDetectRestriction([Nullable(new byte[]
 		{
 			1,
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.GetExploreComponent = getExploreComponent;
 		}
 
-		// Token: 0x06046B82 RID: 289666 RVA: 0x011CF9CC File Offset: 0x011CDBCC
+		// Token: 0x0603D9CD RID: 252365 RVA: 0x011D861C File Offset: 0x011D681C
 		public unsafe bool SetDisabled(bool disabled, string reason)
 		{
 			if (this.Disabled == disabled)
@@ -86,19 +86,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B83 RID: 289667 RVA: 0x011CFA4E File Offset: 0x011CDC4E
+		// Token: 0x0603D9CE RID: 252366 RVA: 0x011D869E File Offset: 0x011D689E
 		public bool IsDisabled()
 		{
 			return this.Disabled || this.AreAllSkillIdsDisabled();
 		}
 
-		// Token: 0x06046B84 RID: 289668 RVA: 0x011CFA60 File Offset: 0x011CDC60
+		// Token: 0x0603D9CF RID: 252367 RVA: 0x011D86B0 File Offset: 0x011D68B0
 		public bool CanHandleSkillId(int skillId)
 		{
 			return MotorcycleHookDetectRestriction.MotorcycleHookSkillIdToType.ContainsKey(skillId);
 		}
 
-		// Token: 0x06046B85 RID: 289669 RVA: 0x011CFA70 File Offset: 0x011CDC70
+		// Token: 0x0603D9D0 RID: 252368 RVA: 0x011D86C0 File Offset: 0x011D68C0
 		public unsafe bool SetDisabledBySkillId(int skillId, bool disabled, string reason)
 		{
 			EHookInteractType ehookInteractType;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B86 RID: 289670 RVA: 0x011CFC1C File Offset: 0x011CDE1C
+		// Token: 0x0603D9D1 RID: 252369 RVA: 0x011D886C File Offset: 0x011D6A6C
 		public bool ClearSkillIdRestrictions(string reason)
 		{
 			if (this.DisabledSkillIds.Count == 0)
@@ -172,19 +172,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B87 RID: 289671 RVA: 0x011CFCBC File Offset: 0x011CDEBC
+		// Token: 0x0603D9D2 RID: 252370 RVA: 0x011D890C File Offset: 0x011D6B0C
 		public HashSet<EHookInteractType> GetEnabledTypes()
 		{
 			return this.EnabledTypes;
 		}
 
-		// Token: 0x06046B88 RID: 289672 RVA: 0x011CFCC4 File Offset: 0x011CDEC4
+		// Token: 0x0603D9D3 RID: 252371 RVA: 0x011D8914 File Offset: 0x011D6B14
 		public bool IsTypeDisabled(EHookInteractType hookType)
 		{
 			return !this.EnabledTypes.Contains(hookType);
 		}
 
-		// Token: 0x06046B89 RID: 289673 RVA: 0x011CFCD8 File Offset: 0x011CDED8
+		// Token: 0x0603D9D4 RID: 252372 RVA: 0x011D8928 File Offset: 0x011D6B28
 		private bool AreAllSkillIdsDisabled()
 		{
 			foreach (int item in MotorcycleHookDetectRestriction.MotorcycleHookSkillIds)
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B8A RID: 289674 RVA: 0x011CFD38 File Offset: 0x011CDF38
+		// Token: 0x0603D9D5 RID: 252373 RVA: 0x011D8988 File Offset: 0x011D6B88
 		private void ClearActiveTarget(string reason)
 		{
 			MotorcycleExploreComponent motorcycleExploreComponent = this.GetExploreComponent();
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			motorcycleExploreComponent.ClearDetectedTarget(reason);
 		}
 
-		// Token: 0x06046B8B RID: 289675 RVA: 0x011CFD50 File Offset: 0x011CDF50
+		// Token: 0x0603D9D6 RID: 252374 RVA: 0x011D89A0 File Offset: 0x011D6BA0
 		private void ClearTargetByType(EHookInteractType hookType, string reason)
 		{
 			MotorcycleExploreComponent motorcycleExploreComponent = this.GetExploreComponent();
@@ -233,24 +233,24 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x04025207 RID: 152071
+		// Token: 0x04020AE7 RID: 133863
 		[Nullable(2)]
 		public static HashSet<int> MotorcycleHookSkillIds;
 
-		// Token: 0x04025208 RID: 152072
+		// Token: 0x04020AE8 RID: 133864
 		[Nullable(2)]
 		private static Dictionary<int, EHookInteractType> MotorcycleHookSkillIdToType;
 
-		// Token: 0x04025209 RID: 152073
+		// Token: 0x04020AE9 RID: 133865
 		private bool Disabled;
 
-		// Token: 0x0402520A RID: 152074
+		// Token: 0x04020AEA RID: 133866
 		private readonly HashSet<int> DisabledSkillIds = new HashSet<int>();
 
-		// Token: 0x0402520B RID: 152075
+		// Token: 0x04020AEB RID: 133867
 		private readonly HashSet<EHookInteractType> EnabledTypes;
 
-		// Token: 0x0402520C RID: 152076
+		// Token: 0x04020AEC RID: 133868
 		[Nullable(new byte[]
 		{
 			1,

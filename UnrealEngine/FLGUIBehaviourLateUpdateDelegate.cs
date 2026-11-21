@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002027 RID: 8231
+	// Token: 0x0200066B RID: 1643
 	public sealed class FLGUIBehaviourLateUpdateDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F040 RID: 127040 RVA: 0x002E1B8C File Offset: 0x002DFD8C
+		// Token: 0x06008E42 RID: 36418 RVA: 0x000D60E5 File Offset: 0x000D42E5
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIBehaviourLateUpdateDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F041 RID: 127041 RVA: 0x002E1B98 File Offset: 0x002DFD98
+		// Token: 0x06008E43 RID: 36419 RVA: 0x000D60F1 File Offset: 0x000D42F1
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIBehaviourLateUpdateDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIBehaviourLateUpdateDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F042 RID: 127042 RVA: 0x002E1BBB File Offset: 0x002DFDBB
+		// Token: 0x06008E44 RID: 36420 RVA: 0x000D6114 File Offset: 0x000D4314
 		public FLGUIBehaviourLateUpdateDelegate()
 		{
 		}
 
-		// Token: 0x0601F043 RID: 127043 RVA: 0x002E1BC3 File Offset: 0x002DFDC3
+		// Token: 0x06008E45 RID: 36421 RVA: 0x000D611C File Offset: 0x000D431C
 		[NullableContext(2)]
 		public FLGUIBehaviourLateUpdateDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F044 RID: 127044 RVA: 0x002E1BCD File Offset: 0x002DFDCD
+		// Token: 0x06008E46 RID: 36422 RVA: 0x000D6126 File Offset: 0x000D4326
 		public FLGUIBehaviourLateUpdateDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F045 RID: 127045 RVA: 0x002E1BD8 File Offset: 0x002DFDD8
+		// Token: 0x06008E47 RID: 36423 RVA: 0x000D6131 File Offset: 0x000D4331
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<float>) ?? ((Action<float>)Delegate.CreateDelegate(typeof(Action<float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F046 RID: 127046 RVA: 0x002E1C0A File Offset: 0x002DFE0A
+		// Token: 0x06008E48 RID: 36424 RVA: 0x000D6163 File Offset: 0x000D4363
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<float> Callback)
 		{
 			if (FLGUIBehaviourLateUpdateDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIBehaviourLateUpdateDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F047 RID: 127047 RVA: 0x002E1C44 File Offset: 0x002DFE44
+		// Token: 0x06008E49 RID: 36425 RVA: 0x000D61A0 File Offset: 0x000D43A0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(float DeltaTime)
 		{
 			FLGUIBehaviourLateUpdateDelegate.__FLGUIBehaviourLateUpdateDelegate_DelegateParams* ptr = stackalloc FLGUIBehaviourLateUpdateDelegate.__FLGUIBehaviourLateUpdateDelegate_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FLGUIBehaviourLateUpdateDelegate.__FLGUIBehaviourLateUpdateDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F048 RID: 127048 RVA: 0x002E1C84 File Offset: 0x002DFE84
+		// Token: 0x06008E4A RID: 36426 RVA: 0x000D61E0 File Offset: 0x000D43E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<float> action = target as Action<float>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLGUIBehaviourLateUpdateDelegate.__FLGUIBehaviourLateUpdateDelegate_DelegateParams*)__Parameters)->DeltaTime);
 		}
 
-		// Token: 0x04010DA2 RID: 69026
+		// Token: 0x04003E9F RID: 16031
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010DA3 RID: 69027
+		// Token: 0x04003EA0 RID: 16032
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIBehaviourLateUpdateDelegate__DelegateSignature";
 
-		// Token: 0x04010DA4 RID: 69028
+		// Token: 0x04003EA1 RID: 16033
 		private static int RegisterId;
 
-		// Token: 0x02003433 RID: 13363
+		// Token: 0x02000E76 RID: 3702
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FLGUIBehaviourLateUpdateDelegate_DelegateParams
+		private ref struct __FLGUIBehaviourLateUpdateDelegate_DelegateParams
 		{
-			// Token: 0x04017412 RID: 95250
+			// Token: 0x04006221 RID: 25121
 			[FieldOffset(0)]
 			public float DeltaTime;
 		}
 
-		// Token: 0x02003434 RID: 13364
+		// Token: 0x02000E77 RID: 3703
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017413 RID: 95251
+			// Token: 0x04006222 RID: 25122
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

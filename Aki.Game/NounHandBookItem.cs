@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E3A RID: 7738
+// Token: 0x020012FC RID: 4860
 [NullableContext(1)]
 [Nullable(0)]
 public class NounHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookNounDynamicData>
 {
-	// Token: 0x0600EB36 RID: 60214 RVA: 0x0037C210 File Offset: 0x0037A410
+	// Token: 0x0600BF55 RID: 48981 RVA: 0x00387EB0 File Offset: 0x003860B0
 	public UniTask Init(UUIItem actor)
 	{
 		NounHandBookItem.<Init>d__4 <Init>d__;
@@ -24,7 +24,7 @@ public class NounHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookNounDyna
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EB37 RID: 60215 RVA: 0x0037C25C File Offset: 0x0037A45C
+	// Token: 0x0600BF56 RID: 48982 RVA: 0x00387EFC File Offset: 0x003860FC
 	private UniTask InitChildItem()
 	{
 		NounHandBookItem.<InitChildItem>d__5 <InitChildItem>d__;
@@ -35,7 +35,7 @@ public class NounHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookNounDyna
 		return <InitChildItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EB38 RID: 60216 RVA: 0x0037C2A0 File Offset: 0x0037A4A0
+	// Token: 0x0600BF57 RID: 48983 RVA: 0x00387F40 File Offset: 0x00386140
 	public AUIBaseActor GetUsingItem(HandBookNounDynamicData data)
 	{
 		if (data.HandBookNounConfigId != null)
@@ -50,13 +50,13 @@ public class NounHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookNounDyna
 		return base.GetItem(0).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x0600EB39 RID: 60217 RVA: 0x0037C2FA File Offset: 0x0037A4FA
+	// Token: 0x0600BF58 RID: 48984 RVA: 0x00387F9A File Offset: 0x0038619A
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0600EB3A RID: 60218 RVA: 0x0037C303 File Offset: 0x0037A503
+	// Token: 0x0600BF59 RID: 48985 RVA: 0x00387FA3 File Offset: 0x003861A3
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -66,7 +66,7 @@ public class NounHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookNounDyna
 		};
 	}
 
-	// Token: 0x0600EB3B RID: 60219 RVA: 0x0037C33C File Offset: 0x0037A53C
+	// Token: 0x0600BF5A RID: 48986 RVA: 0x00387FDC File Offset: 0x003861DC
 	public void Update(HandBookNounDynamicData data, int gridIndex)
 	{
 		if (this.HandBookNounDesItem != null)
@@ -103,7 +103,7 @@ public class NounHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookNounDyna
 		}
 	}
 
-	// Token: 0x0600EB3C RID: 60220 RVA: 0x0037C417 File Offset: 0x0037A617
+	// Token: 0x0600BF5B RID: 48987 RVA: 0x003880B7 File Offset: 0x003862B7
 	public void RefreshNewState()
 	{
 		if (this.HandBookNounToggleItem != null)
@@ -116,7 +116,7 @@ public class NounHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookNounDyna
 		}
 	}
 
-	// Token: 0x0600EB3D RID: 60221 RVA: 0x0037C43F File Offset: 0x0037A63F
+	// Token: 0x0600BF5C RID: 48988 RVA: 0x003880DF File Offset: 0x003862DF
 	public void BindChildToggleCallback(TChildNounToggleFunction toggleFunction)
 	{
 		this.OnChildToggleCallback = toggleFunction;
@@ -126,7 +126,7 @@ public class NounHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookNounDyna
 		}
 	}
 
-	// Token: 0x0600EB3E RID: 60222 RVA: 0x0037C45C File Offset: 0x0037A65C
+	// Token: 0x0600BF5D RID: 48989 RVA: 0x003880FC File Offset: 0x003862FC
 	public void BindToggleCallback(TNounToggleFunction toggleFunction)
 	{
 		this.OnToggleCallback = toggleFunction;
@@ -136,19 +136,19 @@ public class NounHandBookItem : UiPanelBase, IDynamicScrollItem<HandBookNounDyna
 		}
 	}
 
-	// Token: 0x04006D1E RID: 27934
+	// Token: 0x04006DFF RID: 28159
 	[Nullable(2)]
 	private HandBookNounToggleItem HandBookNounToggleItem;
 
-	// Token: 0x04006D1F RID: 27935
+	// Token: 0x04006E00 RID: 28160
 	[Nullable(2)]
 	private HandBookNounDesItem HandBookNounDesItem;
 
-	// Token: 0x04006D20 RID: 27936
+	// Token: 0x04006E01 RID: 28161
 	[Nullable(2)]
 	private TNounToggleFunction OnToggleCallback;
 
-	// Token: 0x04006D21 RID: 27937
+	// Token: 0x04006E02 RID: 28162
 	[Nullable(2)]
 	private TChildNounToggleFunction OnChildToggleCallback;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200074E RID: 1870
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007EF RID: 2031
 	public class ITargetGearGroupFailureCondition
 	{
-		// Token: 0x06002865 RID: 10341 RVA: 0x0006B110 File Offset: 0x00069310
+		// Token: 0x06002B89 RID: 11145 RVA: 0x000722B8 File Offset: 0x000704B8
 		private ITargetGearGroupFailureCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002866 RID: 10342 RVA: 0x0006B148 File Offset: 0x00069348
+		// Token: 0x06002B8A RID: 11146 RVA: 0x000722F0 File Offset: 0x000704F0
 		public static ITargetGearGroupFailureCondition Create([Nullable(2)] ITargetGearGroupFailureCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002867 RID: 10343 RVA: 0x0006B15B File Offset: 0x0006935B
+		// Token: 0x06002B8B RID: 11147 RVA: 0x00072303 File Offset: 0x00070503
 		public static ITargetGearGroupFailureCondition CreateFromSetValue([Nullable(2)] ITargetGearGroupFailureCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002868 RID: 10344 RVA: 0x0006B16E File Offset: 0x0006936E
+		// Token: 0x06002B8C RID: 11148 RVA: 0x00072316 File Offset: 0x00070516
 		public ITargetGearGroupFailureCondition_SetValue ToSetValue()
 		{
 			return new ITargetGearGroupFailureCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A9E RID: 2718
-		// (get) Token: 0x06002869 RID: 10345 RVA: 0x0006B181 File Offset: 0x00069381
-		// (set) Token: 0x0600286A RID: 10346 RVA: 0x0006B1AC File Offset: 0x000693AC
+		// Token: 0x17000B5E RID: 2910
+		// (get) Token: 0x06002B8D RID: 11149 RVA: 0x00072329 File Offset: 0x00070529
+		// (set) Token: 0x06002B8E RID: 11150 RVA: 0x00072354 File Offset: 0x00070554
 		public virtual ETargetGearGroupFailureCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B31 RID: 6961
+		// Token: 0x04001D36 RID: 7478
 		[Nullable(2)]
 		protected ITargetGearGroupFailureCondition FbInstance;
 
-		// Token: 0x04001B32 RID: 6962
+		// Token: 0x04001D37 RID: 7479
 		[Nullable(2)]
 		protected ITargetGearGroupFailureCondition_SetValue PocoInterface;
 	}

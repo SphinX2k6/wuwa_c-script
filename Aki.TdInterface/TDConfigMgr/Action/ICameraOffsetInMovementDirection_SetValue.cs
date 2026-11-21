@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001849 RID: 6217
+	// Token: 0x020019D4 RID: 6612
 	public class ICameraOffsetInMovementDirection_SetValue
 	{
-		// Token: 0x04005454 RID: 21588
+		// Token: 0x040058A0 RID: 22688
 		public float MinInterpolationSpeed;
 
-		// Token: 0x04005455 RID: 21589
+		// Token: 0x040058A1 RID: 22689
 		public float MaxInterpolationSpeed;
 
-		// Token: 0x04005456 RID: 21590
+		// Token: 0x040058A2 RID: 22690
 		public float OffsetDistance1;
 
-		// Token: 0x04005457 RID: 21591
+		// Token: 0x040058A3 RID: 22691
 		public float OffsetDistance2;
 
-		// Token: 0x04005458 RID: 21592
+		// Token: 0x040058A4 RID: 22692
 		[Nullable(2)]
 		public IBaseCurve OffsetCurve;
 
-		// Token: 0x04005459 RID: 21593
+		// Token: 0x040058A5 RID: 22693
 		public int? CenteringWaitTime;
 
-		// Token: 0x0400545A RID: 21594
+		// Token: 0x040058A6 RID: 22694
 		public int? StartupWaitTime;
 	}
 }

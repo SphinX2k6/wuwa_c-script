@@ -1,58 +1,58 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001E65 RID: 7781
+// Token: 0x02001327 RID: 4903
 [NullableContext(1)]
 [Nullable(0)]
 public class Binding : HoldingHandsRelation
 {
-	// Token: 0x04006DB3 RID: 28083
+	// Token: 0x04006E94 RID: 28308
 	[Nullable(2)]
 	public HandRuntime LeaderRuntime;
 
-	// Token: 0x04006DB4 RID: 28084
+	// Token: 0x04006E95 RID: 28309
 	[Nullable(2)]
 	public HandRuntime FollowerRuntime;
 
-	// Token: 0x04006DB5 RID: 28085
+	// Token: 0x04006E96 RID: 28310
 	public EBindingState State;
 
-	// Token: 0x04006DB6 RID: 28086
+	// Token: 0x04006E97 RID: 28311
 	public double BindDirDamping = 100.0;
 
-	// Token: 0x04006DB7 RID: 28087
+	// Token: 0x04006E98 RID: 28312
 	public bool Updated;
 
-	// Token: 0x04006DB8 RID: 28088
+	// Token: 0x04006E99 RID: 28313
 	public bool Reachable;
 
-	// Token: 0x04006DB9 RID: 28089
+	// Token: 0x04006E9A RID: 28314
 	public bool LastReachable;
 
-	// Token: 0x04006DBA RID: 28090
+	// Token: 0x04006E9B RID: 28315
 	public double ReachableTime;
 
-	// Token: 0x04006DBB RID: 28091
+	// Token: 0x04006E9C RID: 28316
 	public double UnReachableTime;
 
-	// Token: 0x04006DBC RID: 28092
+	// Token: 0x04006E9D RID: 28317
 	public double ToReachableDistance;
 
-	// Token: 0x04006DBD RID: 28093
+	// Token: 0x04006E9E RID: 28318
 	public bool NoLerpNextUpdate;
 
-	// Token: 0x04006DBE RID: 28094
+	// Token: 0x04006E9F RID: 28319
 	public Vector Down = Vector.Create();
 
-	// Token: 0x04006DBF RID: 28095
+	// Token: 0x04006EA0 RID: 28320
 	public Vector ShoulderDelta = Vector.Create();
 
-	// Token: 0x04006DC0 RID: 28096
+	// Token: 0x04006EA1 RID: 28321
 	public Vector ShoulderDeltaUnit = Vector.Create();
 
-	// Token: 0x04006DC1 RID: 28097
+	// Token: 0x04006EA2 RID: 28322
 	public Vector FoShoulderToLeAnimBindPos = Vector.Create();
 
-	// Token: 0x04006DC2 RID: 28098
+	// Token: 0x04006EA3 RID: 28323
 	public Vector BindPosDelta = Vector.Create();
 }

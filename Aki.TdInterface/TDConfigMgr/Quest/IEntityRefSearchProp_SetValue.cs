@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F60 RID: 3936
+	// Token: 0x0200108A RID: 4234
 	public class IEntityRefSearchProp_SetValue
 	{
-		// Token: 0x040034E6 RID: 13542
-		[Nullable(1)]
+		// Token: 0x04003817 RID: 14359
 		public string SearchText;
 
-		// Token: 0x040034E7 RID: 13543
+		// Token: 0x04003818 RID: 14360
 		public int? ResultCount;
 
-		// Token: 0x040034E8 RID: 13544
+		// Token: 0x04003819 RID: 14361
 		public int? ResultIndex;
 	}
 }

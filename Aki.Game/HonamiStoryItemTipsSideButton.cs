@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EAE RID: 7854
+// Token: 0x02001370 RID: 4976
 public class HonamiStoryItemTipsSideButton : UiPanelBase
 {
-	// Token: 0x0600F172 RID: 61810 RVA: 0x003A13D0 File Offset: 0x0039F5D0
+	// Token: 0x0600C591 RID: 50577 RVA: 0x003ACED8 File Offset: 0x003AB0D8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class HonamiStoryItemTipsSideButton : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F173 RID: 61811 RVA: 0x003A1450 File Offset: 0x0039F650
+	// Token: 0x0600C592 RID: 50578 RVA: 0x003ACF58 File Offset: 0x003AB158
 	[NullableContext(1)]
 	public void SetSpriteByResourceId(string resourceId)
 	{
@@ -31,14 +31,14 @@ public class HonamiStoryItemTipsSideButton : UiPanelBase
 		this.SetSpriteByPath(path, base.GetSprite(1), false, null, null);
 	}
 
-	// Token: 0x0600F174 RID: 61812 RVA: 0x003A1492 File Offset: 0x0039F692
+	// Token: 0x0600C593 RID: 50579 RVA: 0x003ACF9A File Offset: 0x003AB19A
 	[NullableContext(1)]
 	public void SetLocalTextNew(string key)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), key, Array.Empty<object>());
 	}
 
-	// Token: 0x0600F175 RID: 61813 RVA: 0x003A14AB File Offset: 0x0039F6AB
+	// Token: 0x0600C594 RID: 50580 RVA: 0x003ACFB3 File Offset: 0x003AB1B3
 	private void OnClicked()
 	{
 		Action onClickedCb = this.OnClickedCb;
@@ -49,18 +49,18 @@ public class HonamiStoryItemTipsSideButton : UiPanelBase
 		onClickedCb();
 	}
 
-	// Token: 0x04006FAE RID: 28590
+	// Token: 0x0400708F RID: 28815
 	[Nullable(2)]
 	public Action OnClickedCb;
 
-	// Token: 0x02008483 RID: 33923
+	// Token: 0x02007608 RID: 30216
 	private enum EBtn
 	{
-		// Token: 0x0402B224 RID: 176676
+		// Token: 0x04026548 RID: 157000
 		Btn,
-		// Token: 0x0402B225 RID: 176677
+		// Token: 0x04026549 RID: 157001
 		Sprite,
-		// Token: 0x0402B226 RID: 176678
+		// Token: 0x0402654A RID: 157002
 		Txt
 	}
 }

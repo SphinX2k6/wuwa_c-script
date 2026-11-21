@@ -3,95 +3,95 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200628E RID: 25230
+	// Token: 0x020068FF RID: 26879
 	public class ICameraLookAtT
 	{
-		// Token: 0x1700BC34 RID: 48180
-		// (get) Token: 0x0602B931 RID: 178481 RVA: 0x005FFDC0 File Offset: 0x005FDFC0
-		// (set) Token: 0x0602B932 RID: 178482 RVA: 0x005FFDC8 File Offset: 0x005FDFC8
+		// Token: 0x1700C5BC RID: 50620
+		// (get) Token: 0x0602E092 RID: 188562 RVA: 0x0064ABC8 File Offset: 0x00648DC8
+		// (set) Token: 0x0602E093 RID: 188563 RVA: 0x0064ABD0 File Offset: 0x00648DD0
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x1700BC35 RID: 48181
-		// (get) Token: 0x0602B933 RID: 178483 RVA: 0x005FFDD1 File Offset: 0x005FDFD1
-		// (set) Token: 0x0602B934 RID: 178484 RVA: 0x005FFDD9 File Offset: 0x005FDFD9
+		// Token: 0x1700C5BD RID: 50621
+		// (get) Token: 0x0602E094 RID: 188564 RVA: 0x0064ABD9 File Offset: 0x00648DD9
+		// (set) Token: 0x0602E095 RID: 188565 RVA: 0x0064ABE1 File Offset: 0x00648DE1
 		public int PosEntityId { get; set; }
 
-		// Token: 0x1700BC36 RID: 48182
-		// (get) Token: 0x0602B935 RID: 178485 RVA: 0x005FFDE2 File Offset: 0x005FDFE2
-		// (set) Token: 0x0602B936 RID: 178486 RVA: 0x005FFDEA File Offset: 0x005FDFEA
+		// Token: 0x1700C5BE RID: 50622
+		// (get) Token: 0x0602E096 RID: 188566 RVA: 0x0064ABEA File Offset: 0x00648DEA
+		// (set) Token: 0x0602E097 RID: 188567 RVA: 0x0064ABF2 File Offset: 0x00648DF2
 		public float FadeInTime { get; set; }
 
-		// Token: 0x1700BC37 RID: 48183
-		// (get) Token: 0x0602B937 RID: 178487 RVA: 0x005FFDF3 File Offset: 0x005FDFF3
-		// (set) Token: 0x0602B938 RID: 178488 RVA: 0x005FFDFB File Offset: 0x005FDFFB
+		// Token: 0x1700C5BF RID: 50623
+		// (get) Token: 0x0602E098 RID: 188568 RVA: 0x0064ABFB File Offset: 0x00648DFB
+		// (set) Token: 0x0602E099 RID: 188569 RVA: 0x0064AC03 File Offset: 0x00648E03
 		public float StayTime { get; set; }
 
-		// Token: 0x1700BC38 RID: 48184
-		// (get) Token: 0x0602B939 RID: 178489 RVA: 0x005FFE04 File Offset: 0x005FE004
-		// (set) Token: 0x0602B93A RID: 178490 RVA: 0x005FFE0C File Offset: 0x005FE00C
+		// Token: 0x1700C5C0 RID: 50624
+		// (get) Token: 0x0602E09A RID: 188570 RVA: 0x0064AC0C File Offset: 0x00648E0C
+		// (set) Token: 0x0602E09B RID: 188571 RVA: 0x0064AC14 File Offset: 0x00648E14
 		public float FadeOutTime { get; set; }
 
-		// Token: 0x1700BC39 RID: 48185
-		// (get) Token: 0x0602B93B RID: 178491 RVA: 0x005FFE15 File Offset: 0x005FE015
-		// (set) Token: 0x0602B93C RID: 178492 RVA: 0x005FFE1D File Offset: 0x005FE01D
+		// Token: 0x1700C5C1 RID: 50625
+		// (get) Token: 0x0602E09C RID: 188572 RVA: 0x0064AC1D File Offset: 0x00648E1D
+		// (set) Token: 0x0602E09D RID: 188573 RVA: 0x0064AC25 File Offset: 0x00648E25
 		public bool LockCamera { get; set; }
 
-		// Token: 0x1700BC3A RID: 48186
-		// (get) Token: 0x0602B93D RID: 178493 RVA: 0x005FFE26 File Offset: 0x005FE026
-		// (set) Token: 0x0602B93E RID: 178494 RVA: 0x005FFE2E File Offset: 0x005FE02E
+		// Token: 0x1700C5C2 RID: 50626
+		// (get) Token: 0x0602E09E RID: 188574 RVA: 0x0064AC2E File Offset: 0x00648E2E
+		// (set) Token: 0x0602E09F RID: 188575 RVA: 0x0064AC36 File Offset: 0x00648E36
 		public IVectorInfoT CameraPos { get; set; }
 
-		// Token: 0x1700BC3B RID: 48187
-		// (get) Token: 0x0602B93F RID: 178495 RVA: 0x005FFE37 File Offset: 0x005FE037
-		// (set) Token: 0x0602B940 RID: 178496 RVA: 0x005FFE3F File Offset: 0x005FE03F
+		// Token: 0x1700C5C3 RID: 50627
+		// (get) Token: 0x0602E0A0 RID: 188576 RVA: 0x0064AC3F File Offset: 0x00648E3F
+		// (set) Token: 0x0602E0A1 RID: 188577 RVA: 0x0064AC47 File Offset: 0x00648E47
 		public int CameraPosEntityId { get; set; }
 
-		// Token: 0x1700BC3C RID: 48188
-		// (get) Token: 0x0602B941 RID: 178497 RVA: 0x005FFE48 File Offset: 0x005FE048
-		// (set) Token: 0x0602B942 RID: 178498 RVA: 0x005FFE50 File Offset: 0x005FE050
+		// Token: 0x1700C5C4 RID: 50628
+		// (get) Token: 0x0602E0A2 RID: 188578 RVA: 0x0064AC50 File Offset: 0x00648E50
+		// (set) Token: 0x0602E0A3 RID: 188579 RVA: 0x0064AC58 File Offset: 0x00648E58
 		public bool IsLockCameraPos { get; set; }
 
-		// Token: 0x1700BC3D RID: 48189
-		// (get) Token: 0x0602B943 RID: 178499 RVA: 0x005FFE59 File Offset: 0x005FE059
-		// (set) Token: 0x0602B944 RID: 178500 RVA: 0x005FFE61 File Offset: 0x005FE061
+		// Token: 0x1700C5C5 RID: 50629
+		// (get) Token: 0x0602E0A4 RID: 188580 RVA: 0x0064AC61 File Offset: 0x00648E61
+		// (set) Token: 0x0602E0A5 RID: 188581 RVA: 0x0064AC69 File Offset: 0x00648E69
 		public int Fov { get; set; }
 
-		// Token: 0x1700BC3E RID: 48190
-		// (get) Token: 0x0602B945 RID: 178501 RVA: 0x005FFE6A File Offset: 0x005FE06A
-		// (set) Token: 0x0602B946 RID: 178502 RVA: 0x005FFE72 File Offset: 0x005FE072
+		// Token: 0x1700C5C6 RID: 50630
+		// (get) Token: 0x0602E0A6 RID: 188582 RVA: 0x0064AC72 File Offset: 0x00648E72
+		// (set) Token: 0x0602E0A7 RID: 188583 RVA: 0x0064AC7A File Offset: 0x00648E7A
 		public int ArmLength { get; set; }
 
-		// Token: 0x1700BC3F RID: 48191
-		// (get) Token: 0x0602B947 RID: 178503 RVA: 0x005FFE7B File Offset: 0x005FE07B
-		// (set) Token: 0x0602B948 RID: 178504 RVA: 0x005FFE83 File Offset: 0x005FE083
+		// Token: 0x1700C5C7 RID: 50631
+		// (get) Token: 0x0602E0A8 RID: 188584 RVA: 0x0064AC83 File Offset: 0x00648E83
+		// (set) Token: 0x0602E0A9 RID: 188585 RVA: 0x0064AC8B File Offset: 0x00648E8B
 		public bool BanInput { get; set; }
 
-		// Token: 0x1700BC40 RID: 48192
-		// (get) Token: 0x0602B949 RID: 178505 RVA: 0x005FFE8C File Offset: 0x005FE08C
-		// (set) Token: 0x0602B94A RID: 178506 RVA: 0x005FFE94 File Offset: 0x005FE094
+		// Token: 0x1700C5C8 RID: 50632
+		// (get) Token: 0x0602E0AA RID: 188586 RVA: 0x0064AC94 File Offset: 0x00648E94
+		// (set) Token: 0x0602E0AB RID: 188587 RVA: 0x0064AC9C File Offset: 0x00648E9C
 		public bool HideUi { get; set; }
 
-		// Token: 0x1700BC41 RID: 48193
-		// (get) Token: 0x0602B94B RID: 178507 RVA: 0x005FFE9D File Offset: 0x005FE09D
-		// (set) Token: 0x0602B94C RID: 178508 RVA: 0x005FFEA5 File Offset: 0x005FE0A5
+		// Token: 0x1700C5C9 RID: 50633
+		// (get) Token: 0x0602E0AC RID: 188588 RVA: 0x0064ACA5 File Offset: 0x00648EA5
+		// (set) Token: 0x0602E0AD RID: 188589 RVA: 0x0064ACAD File Offset: 0x00648EAD
 		public bool CancelBuffer { get; set; }
 
-		// Token: 0x1700BC42 RID: 48194
-		// (get) Token: 0x0602B94D RID: 178509 RVA: 0x005FFEAE File Offset: 0x005FE0AE
-		// (set) Token: 0x0602B94E RID: 178510 RVA: 0x005FFEB6 File Offset: 0x005FE0B6
+		// Token: 0x1700C5CA RID: 50634
+		// (get) Token: 0x0602E0AE RID: 188590 RVA: 0x0064ACB6 File Offset: 0x00648EB6
+		// (set) Token: 0x0602E0AF RID: 188591 RVA: 0x0064ACBE File Offset: 0x00648EBE
 		public bool CancelBlendOut { get; set; }
 
-		// Token: 0x1700BC43 RID: 48195
-		// (get) Token: 0x0602B94F RID: 178511 RVA: 0x005FFEBF File Offset: 0x005FE0BF
-		// (set) Token: 0x0602B950 RID: 178512 RVA: 0x005FFEC7 File Offset: 0x005FE0C7
+		// Token: 0x1700C5CB RID: 50635
+		// (get) Token: 0x0602E0B0 RID: 188592 RVA: 0x0064ACC7 File Offset: 0x00648EC7
+		// (set) Token: 0x0602E0B1 RID: 188593 RVA: 0x0064ACCF File Offset: 0x00648ECF
 		public bool DisableCameraOffSet { get; set; }
 
-		// Token: 0x1700BC44 RID: 48196
-		// (get) Token: 0x0602B951 RID: 178513 RVA: 0x005FFED0 File Offset: 0x005FE0D0
-		// (set) Token: 0x0602B952 RID: 178514 RVA: 0x005FFED8 File Offset: 0x005FE0D8
+		// Token: 0x1700C5CC RID: 50636
+		// (get) Token: 0x0602E0B2 RID: 188594 RVA: 0x0064ACD8 File Offset: 0x00648ED8
+		// (set) Token: 0x0602E0B3 RID: 188595 RVA: 0x0064ACE0 File Offset: 0x00648EE0
 		public ushort NullMask { get; set; }
 
-		// Token: 0x0602B953 RID: 178515 RVA: 0x005FFEE4 File Offset: 0x005FE0E4
+		// Token: 0x0602E0B4 RID: 188596 RVA: 0x0064ACEC File Offset: 0x00648EEC
 		public ICameraLookAtT()
 		{
 			this.Pos = null;

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E0E RID: 28174
+	// Token: 0x02007589 RID: 30089
 	public class IRangeCheck_UnionUnion
 	{
-		// Token: 0x1700D205 RID: 53765
-		// (get) Token: 0x06031C7A RID: 203898 RVA: 0x006BD711 File Offset: 0x006BB911
-		// (set) Token: 0x06031C7B RID: 203899 RVA: 0x006BD719 File Offset: 0x006BB919
+		// Token: 0x1700DD4D RID: 56653
+		// (get) Token: 0x06034C76 RID: 216182 RVA: 0x00718DF9 File Offset: 0x00716FF9
+		// (set) Token: 0x06034C77 RID: 216183 RVA: 0x00718E01 File Offset: 0x00717001
 		public IRangeCheck_Union Type { get; set; }
 
-		// Token: 0x1700D206 RID: 53766
-		// (get) Token: 0x06031C7C RID: 203900 RVA: 0x006BD722 File Offset: 0x006BB922
-		// (set) Token: 0x06031C7D RID: 203901 RVA: 0x006BD72A File Offset: 0x006BB92A
+		// Token: 0x1700DD4E RID: 56654
+		// (get) Token: 0x06034C78 RID: 216184 RVA: 0x00718E0A File Offset: 0x0071700A
+		// (set) Token: 0x06034C79 RID: 216185 RVA: 0x00718E12 File Offset: 0x00717012
 		public object Value { get; set; }
 
-		// Token: 0x06031C7E RID: 203902 RVA: 0x006BD733 File Offset: 0x006BB933
+		// Token: 0x06034C7A RID: 216186 RVA: 0x00718E1B File Offset: 0x0071701B
 		public IRangeCheck_UnionUnion()
 		{
 			this.Type = IRangeCheck_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06031C7F RID: 203903 RVA: 0x006BD749 File Offset: 0x006BB949
+		// Token: 0x06034C7B RID: 216187 RVA: 0x00718E31 File Offset: 0x00717031
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06031C80 RID: 203904 RVA: 0x006BD75B File Offset: 0x006BB95B
+		// Token: 0x06034C7C RID: 216188 RVA: 0x00718E43 File Offset: 0x00717043
 		public IRangeCheckT AsIRangeCheck()
 		{
 			return this.As<IRangeCheckT>();
 		}
 
-		// Token: 0x06031C81 RID: 203905 RVA: 0x006BD763 File Offset: 0x006BB963
+		// Token: 0x06034C7D RID: 216189 RVA: 0x00718E4B File Offset: 0x0071704B
 		public static IRangeCheck_UnionUnion FromIRangeCheck(IRangeCheckT _irangecheck)
 		{
 			return new IRangeCheck_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031C82 RID: 203906 RVA: 0x006BD778 File Offset: 0x006BB978
+		// Token: 0x06034C7E RID: 216190 RVA: 0x00718E60 File Offset: 0x00717060
 		public IConeRangeCheckT AsIConeRangeCheck()
 		{
 			return this.As<IConeRangeCheckT>();
 		}
 
-		// Token: 0x06031C83 RID: 203907 RVA: 0x006BD780 File Offset: 0x006BB980
+		// Token: 0x06034C7F RID: 216191 RVA: 0x00718E68 File Offset: 0x00717068
 		public static IRangeCheck_UnionUnion FromIConeRangeCheck(IConeRangeCheckT _iconerangecheck)
 		{
 			return new IRangeCheck_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031C84 RID: 203908 RVA: 0x006BD798 File Offset: 0x006BB998
+		// Token: 0x06034C80 RID: 216192 RVA: 0x00718E80 File Offset: 0x00717080
 		public static int Pack(FlatBufferBuilder builder, IRangeCheck_UnionUnion _o)
 		{
 			IRangeCheck_Union type = _o.Type;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000563 RID: 1379
+	// Token: 0x020005CA RID: 1482
 	public class INpcModelConfig_SetValue
 	{
-		// Token: 0x04001430 RID: 5168
+		// Token: 0x0400159A RID: 5530
 		public ENpcModelType Type;
 	}
 }

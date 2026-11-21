@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013A1 RID: 5025
+	// Token: 0x020014F2 RID: 5362
 	public class IPermanentRogueUi : IShowUi
 	{
-		// Token: 0x060072D5 RID: 29397 RVA: 0x00113D7A File Offset: 0x00111F7A
-		[NullableContext(1)]
+		// Token: 0x0600797C RID: 31100 RVA: 0x00122436 File Offset: 0x00120636
 		public static IPermanentRogueUi Create(IPermanentRogueUi? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002566 RID: 9574
-		// (get) Token: 0x060072D6 RID: 29398 RVA: 0x00113D99 File Offset: 0x00111F99
+		// Token: 0x1700273A RID: 10042
+		// (get) Token: 0x0600797D RID: 31101 RVA: 0x00122455 File Offset: 0x00120655
 		public override EShowUiType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002567 RID: 9575
-		// (get) Token: 0x060072D7 RID: 29399 RVA: 0x00113DA6 File Offset: 0x00111FA6
+		// Token: 0x1700273B RID: 10043
+		// (get) Token: 0x0600797E RID: 31102 RVA: 0x00122462 File Offset: 0x00120662
 		public virtual ERogueUiType UiType
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002568 RID: 9576
-		// (get) Token: 0x060072D8 RID: 29400 RVA: 0x00113DB3 File Offset: 0x00111FB3
+		// Token: 0x1700273C RID: 10044
+		// (get) Token: 0x0600797F RID: 31103 RVA: 0x0012246F File Offset: 0x0012066F
 		public virtual int BindId
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400425F RID: 16991
+		// Token: 0x040045E0 RID: 17888
 		private IPermanentRogueUi Instance;
 	}
 }

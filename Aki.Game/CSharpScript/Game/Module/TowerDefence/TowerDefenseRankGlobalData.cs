@@ -6,13 +6,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B18 RID: 19224
+	// Token: 0x02003AC0 RID: 15040
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseRankGlobalData
 	{
-		// Token: 0x17007B4E RID: 31566
-		// (get) Token: 0x06031CC0 RID: 203968 RVA: 0x00B8F126 File Offset: 0x00B8D326
+		// Token: 0x17004EFB RID: 20219
+		// (get) Token: 0x06026A50 RID: 158288 RVA: 0x00AD3192 File Offset: 0x00AD1392
 		public bool IsOpenAnonymousName
 		{
 			get
@@ -21,25 +21,25 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CC1 RID: 203969 RVA: 0x00B8F12E File Offset: 0x00B8D32E
+		// Token: 0x06026A51 RID: 158289 RVA: 0x00AD319A File Offset: 0x00AD139A
 		public void SetIsOpenAnonymousName(bool isOpen)
 		{
 			this.IsOpenAnonymousNameInternal = isOpen;
 		}
 
-		// Token: 0x06031CC2 RID: 203970 RVA: 0x00B8F137 File Offset: 0x00B8D337
+		// Token: 0x06026A52 RID: 158290 RVA: 0x00AD31A3 File Offset: 0x00AD13A3
 		private int SortNormalPassData(TowerDefenseRankItemData aData, TowerDefenseRankItemData bData)
 		{
 			return bData.PassScore - aData.PassScore;
 		}
 
-		// Token: 0x06031CC3 RID: 203971 RVA: 0x00B8F146 File Offset: 0x00B8D346
+		// Token: 0x06026A53 RID: 158291 RVA: 0x00AD31B2 File Offset: 0x00AD13B2
 		private int SortDifficultPassData(TowerDefenseRankItemData aData, TowerDefenseRankItemData bData)
 		{
 			return aData.PassScore - bData.PassScore;
 		}
 
-		// Token: 0x06031CC4 RID: 203972 RVA: 0x00B8F158 File Offset: 0x00B8D358
+		// Token: 0x06026A54 RID: 158292 RVA: 0x00AD31C4 File Offset: 0x00AD13C4
 		private void RefreshPassDataRank(int instanceId, List<TowerDefenseRankItemData> allDataList, List<TowerDefenseRankItemData> refDataList)
 		{
 			TowerDefenceInstance? towerDefenseInstanceByInstance = InstanceDungeonConfig.Instance.GetTowerDefenseInstanceByInstance(instanceId);
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CC5 RID: 203973 RVA: 0x00B8F24C File Offset: 0x00B8D44C
+		// Token: 0x06026A55 RID: 158293 RVA: 0x00AD32B8 File Offset: 0x00AD14B8
 		private TowerDefenseRankItemData CreateOwnSinglePassData(int instanceId)
 		{
 			TowerDefenseRankItemData towerDefenseRankItemData = new TowerDefenseRankItemData(false, InstanceDungeonConfig.Instance.GetTowerDefenseInstanceByInstance(instanceId).Value.IsDifficult, TowerDefencePassInfo.Create());
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return towerDefenseRankItemData;
 		}
 
-		// Token: 0x06031CC6 RID: 203974 RVA: 0x00B8F28C File Offset: 0x00B8D48C
+		// Token: 0x06026A56 RID: 158294 RVA: 0x00AD32F8 File Offset: 0x00AD14F8
 		private TowerDefenseRankItemData CreateOwnMultiPassData(int instanceId)
 		{
 			TowerDefenseRankItemData towerDefenseRankItemData = new TowerDefenseRankItemData(true, InstanceDungeonConfig.Instance.GetTowerDefenseInstanceByInstance(instanceId).Value.IsDifficult, TowerDefencePassInfo.Create());
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return towerDefenseRankItemData;
 		}
 
-		// Token: 0x06031CC7 RID: 203975 RVA: 0x00B8F2CC File Offset: 0x00B8D4CC
+		// Token: 0x06026A57 RID: 158295 RVA: 0x00AD3338 File Offset: 0x00AD1538
 		private void RefreshOwnPassData(int instanceId)
 		{
 			TowerDefenseRankItemData towerDefenseRankItemData;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.OwnMultiPassData.IsInRank = this.MultiPassDataList.Contains(towerDefenseRankItemData2);
 		}
 
-		// Token: 0x06031CC8 RID: 203976 RVA: 0x00B8F348 File Offset: 0x00B8D548
+		// Token: 0x06026A58 RID: 158296 RVA: 0x00AD33B4 File Offset: 0x00AD15B4
 		private List<TowerDefenseRankItemData> GetOrAddSinglePassData(int instanceId)
 		{
 			List<TowerDefenseRankItemData> list;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return list;
 		}
 
-		// Token: 0x06031CC9 RID: 203977 RVA: 0x00B8F37C File Offset: 0x00B8D57C
+		// Token: 0x06026A59 RID: 158297 RVA: 0x00AD33E8 File Offset: 0x00AD15E8
 		private List<TowerDefenseRankItemData> GetOrAddMultiPassData(int instanceId)
 		{
 			List<TowerDefenseRankItemData> list;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return list;
 		}
 
-		// Token: 0x06031CCA RID: 203978 RVA: 0x00B8F3AD File Offset: 0x00B8D5AD
+		// Token: 0x06026A5A RID: 158298 RVA: 0x00AD3419 File Offset: 0x00AD1619
 		public void RefreshAllPassDataRank(int instanceId)
 		{
 			this.RefreshPassDataRank(instanceId, this.GetOrAddSinglePassData(instanceId), this.SinglePassDataList);
@@ -140,8 +140,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshSelfRankItemDataName(instanceId);
 		}
 
-		// Token: 0x06031CCB RID: 203979 RVA: 0x00B8F3E8 File Offset: 0x00B8D5E8
-		public void SetFriendServerData(List<OneTowerDefencePassInfo> friendPassDataList)
+		// Token: 0x06026A5B RID: 158299 RVA: 0x00AD3454 File Offset: 0x00AD1654
+		public void SetFriendServerData(IReadOnlyList<OneTowerDefencePassInfo> friendPassDataList)
 		{
 			this.AllSinglePassDataMap.Clear();
 			this.AllMultiPassDataMap.Clear();
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CCC RID: 203980 RVA: 0x00B8F4D8 File Offset: 0x00B8D6D8
+		// Token: 0x06026A5C RID: 158300 RVA: 0x00AD3540 File Offset: 0x00AD1740
 		private void RemoveAllSelfPassData(Dictionary<int, List<TowerDefenseRankItemData>> dataMap)
 		{
 			foreach (KeyValuePair<int, List<TowerDefenseRankItemData>> keyValuePair in dataMap)
@@ -182,22 +182,22 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CCD RID: 203981 RVA: 0x00B8F550 File Offset: 0x00B8D750
+		// Token: 0x06026A5D RID: 158301 RVA: 0x00AD35B8 File Offset: 0x00AD17B8
 		private void SetSelfSinglePassData(TowerDefenseRankItemData itemData, int instanceId)
 		{
 			itemData.IsSelf = true;
 			this.AllOwnSinglePassDataMap[instanceId] = itemData;
 		}
 
-		// Token: 0x06031CCE RID: 203982 RVA: 0x00B8F566 File Offset: 0x00B8D766
+		// Token: 0x06026A5E RID: 158302 RVA: 0x00AD35CE File Offset: 0x00AD17CE
 		private void SetSelfMultiPassData(TowerDefenseRankItemData itemData, int instanceId)
 		{
 			itemData.IsSelf = true;
 			this.AllOwnMultiPassData[instanceId] = itemData;
 		}
 
-		// Token: 0x06031CCF RID: 203983 RVA: 0x00B8F57C File Offset: 0x00B8D77C
-		public void SetSelfServerData(List<OneTowerDefencePassInfo> selfPassDataList)
+		// Token: 0x06026A5F RID: 158303 RVA: 0x00AD35E4 File Offset: 0x00AD17E4
+		public void SetSelfServerData(IReadOnlyList<OneTowerDefencePassInfo> selfPassDataList)
 		{
 			this.RemoveAllSelfPassData(this.AllSinglePassDataMap);
 			this.RemoveAllSelfPassData(this.AllMultiPassDataMap);
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CD0 RID: 203984 RVA: 0x00B8F6A0 File Offset: 0x00B8D8A0
+		// Token: 0x06026A60 RID: 158304 RVA: 0x00AD3704 File Offset: 0x00AD1904
 		public void RefreshSelfRankItemDataName(int instanceId)
 		{
 			List<TowerDefenseRankItemData> list;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CD1 RID: 203985 RVA: 0x00B8F768 File Offset: 0x00B8D968
+		// Token: 0x06026A61 RID: 158305 RVA: 0x00AD37CC File Offset: 0x00AD19CC
 		public List<TowerDefenseRankItemData> GetRankDataListByTabType(TowerDefenceDefine.ETabType tabType)
 		{
 			if (tabType == TowerDefenceDefine.ETabType.Single)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return this.MultiPassDataList;
 		}
 
-		// Token: 0x06031CD2 RID: 203986 RVA: 0x00B8F77A File Offset: 0x00B8D97A
+		// Token: 0x06026A62 RID: 158306 RVA: 0x00AD37DE File Offset: 0x00AD19DE
 		public TowerDefenseRankItemData GetSelfRankDataByTabType(TowerDefenceDefine.ETabType tabType)
 		{
 			if (tabType == TowerDefenceDefine.ETabType.Single)
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return this.OwnMultiPassData;
 		}
 
-		// Token: 0x06031CD3 RID: 203987 RVA: 0x00B8F78C File Offset: 0x00B8D98C
+		// Token: 0x06026A63 RID: 158307 RVA: 0x00AD37F0 File Offset: 0x00AD19F0
 		public string GetBestRecordText(int instanceId)
 		{
 			this.RefreshOwnPassData(instanceId);
@@ -300,14 +300,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return TimeUtil.Instance.GetTimeDataFormat((double)num);
 		}
 
-		// Token: 0x06031CD4 RID: 203988 RVA: 0x00B8F7FF File Offset: 0x00B8D9FF
+		// Token: 0x06026A64 RID: 158308 RVA: 0x00AD3863 File Offset: 0x00AD1A63
 		public bool HasOwnRecord(int instanceId)
 		{
 			this.RefreshOwnPassData(instanceId);
 			return !this.OwnSinglePassData.IsEmpty || !this.OwnMultiPassData.IsEmpty;
 		}
 
-		// Token: 0x06031CD5 RID: 203989 RVA: 0x00B8F828 File Offset: 0x00B8DA28
+		// Token: 0x06026A65 RID: 158309 RVA: 0x00AD388C File Offset: 0x00AD1A8C
 		public bool IsOwnSingleBestScore(int instanceId)
 		{
 			bool isEmpty = this.OwnSinglePassData.IsEmpty;
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return passScore <= passScore2;
 		}
 
-		// Token: 0x06031CD6 RID: 203990 RVA: 0x00B8F8A4 File Offset: 0x00B8DAA4
+		// Token: 0x06026A66 RID: 158310 RVA: 0x00AD3908 File Offset: 0x00AD1B08
 		public bool IsOwnSingleBestRecord(int instanceId)
 		{
 			bool isEmpty = this.OwnSinglePassData.IsEmpty;
@@ -347,31 +347,31 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return passTime <= passTime2;
 		}
 
-		// Token: 0x0401A935 RID: 108853
+		// Token: 0x04015287 RID: 86663
 		private bool IsOpenAnonymousNameInternal;
 
-		// Token: 0x0401A936 RID: 108854
+		// Token: 0x04015288 RID: 86664
 		private Dictionary<int, List<TowerDefenseRankItemData>> AllSinglePassDataMap = new Dictionary<int, List<TowerDefenseRankItemData>>();
 
-		// Token: 0x0401A937 RID: 108855
+		// Token: 0x04015289 RID: 86665
 		private List<TowerDefenseRankItemData> SinglePassDataList = new List<TowerDefenseRankItemData>();
 
-		// Token: 0x0401A938 RID: 108856
+		// Token: 0x0401528A RID: 86666
 		private Dictionary<int, List<TowerDefenseRankItemData>> AllMultiPassDataMap = new Dictionary<int, List<TowerDefenseRankItemData>>();
 
-		// Token: 0x0401A939 RID: 108857
+		// Token: 0x0401528B RID: 86667
 		private List<TowerDefenseRankItemData> MultiPassDataList = new List<TowerDefenseRankItemData>();
 
-		// Token: 0x0401A93A RID: 108858
+		// Token: 0x0401528C RID: 86668
 		private Dictionary<int, TowerDefenseRankItemData> AllOwnSinglePassDataMap = new Dictionary<int, TowerDefenseRankItemData>();
 
-		// Token: 0x0401A93B RID: 108859
+		// Token: 0x0401528D RID: 86669
 		private Dictionary<int, TowerDefenseRankItemData> AllOwnMultiPassData = new Dictionary<int, TowerDefenseRankItemData>();
 
-		// Token: 0x0401A93C RID: 108860
+		// Token: 0x0401528E RID: 86670
 		private TowerDefenseRankItemData OwnSinglePassData;
 
-		// Token: 0x0401A93D RID: 108861
+		// Token: 0x0401528F RID: 86671
 		private TowerDefenseRankItemData OwnMultiPassData;
 	}
 }

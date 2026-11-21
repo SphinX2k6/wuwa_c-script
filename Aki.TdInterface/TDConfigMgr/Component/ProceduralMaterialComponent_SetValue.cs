@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200085A RID: 2138
+	// Token: 0x020008FD RID: 2301
 	public class ProceduralMaterialComponent_SetValue
 	{
-		// Token: 0x04001F27 RID: 7975
+		// Token: 0x04002139 RID: 8505
 		public bool? Disabled;
 
-		// Token: 0x04001F28 RID: 7976
+		// Token: 0x0400213A RID: 8506
 		public bool? EdIsLocked;
 
-		// Token: 0x04001F29 RID: 7977
-		[Nullable(1)]
+		// Token: 0x0400213B RID: 8507
 		public List<ICustomPrimitiveDataConfig> ProceduralMaterialConfigs;
 	}
 }

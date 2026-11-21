@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064FB RID: 25851
+	// Token: 0x02006B69 RID: 27497
 	public struct ICustomScreenBackgroundImage : IFlatbufferObject
 	{
-		// Token: 0x1700C045 RID: 49221
-		// (get) Token: 0x0602CD83 RID: 183683 RVA: 0x006292D0 File Offset: 0x006274D0
+		// Token: 0x1700C9D5 RID: 51669
+		// (get) Token: 0x0602F519 RID: 193817 RVA: 0x00675570 File Offset: 0x00673770
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CD84 RID: 183684 RVA: 0x006292DD File Offset: 0x006274DD
+		// Token: 0x0602F51A RID: 193818 RVA: 0x0067557D File Offset: 0x0067377D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CD85 RID: 183685 RVA: 0x006292E4 File Offset: 0x006274E4
+		// Token: 0x0602F51B RID: 193819 RVA: 0x00675584 File Offset: 0x00673784
 		public static ICustomScreenBackgroundImage GetRootAsICustomScreenBackgroundImage(ByteBuffer _bb)
 		{
 			return ICustomScreenBackgroundImage.GetRootAsICustomScreenBackgroundImage(_bb, default(ICustomScreenBackgroundImage));
 		}
 
-		// Token: 0x0602CD86 RID: 183686 RVA: 0x00629300 File Offset: 0x00627500
+		// Token: 0x0602F51C RID: 193820 RVA: 0x006755A0 File Offset: 0x006737A0
 		public static ICustomScreenBackgroundImage GetRootAsICustomScreenBackgroundImage(ByteBuffer _bb, ICustomScreenBackgroundImage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CD87 RID: 183687 RVA: 0x0062931D File Offset: 0x0062751D
+		// Token: 0x0602F51D RID: 193821 RVA: 0x006755BD File Offset: 0x006737BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CD88 RID: 183688 RVA: 0x0062932C File Offset: 0x0062752C
+		// Token: 0x0602F51E RID: 193822 RVA: 0x006755CC File Offset: 0x006737CC
 		public ICustomScreenBackgroundImage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C046 RID: 49222
-		// (get) Token: 0x0602CD89 RID: 183689 RVA: 0x0062933C File Offset: 0x0062753C
+		// Token: 0x1700C9D6 RID: 51670
+		// (get) Token: 0x0602F51F RID: 193823 RVA: 0x006755DC File Offset: 0x006737DC
 		public ECustomScreenType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C047 RID: 49223
-		// (get) Token: 0x0602CD8A RID: 183690 RVA: 0x00629378 File Offset: 0x00627578
+		// Token: 0x1700C9D7 RID: 51671
+		// (get) Token: 0x0602F520 RID: 193824 RVA: 0x00675618 File Offset: 0x00673818
 		public string BackgroundImagePath
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CD8B RID: 183691 RVA: 0x006293AF File Offset: 0x006275AF
+		// Token: 0x0602F521 RID: 193825 RVA: 0x0067564F File Offset: 0x0067384F
 		public Span<byte> GetBackgroundImagePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602CD8C RID: 183692 RVA: 0x006293BE File Offset: 0x006275BE
+		// Token: 0x0602F522 RID: 193826 RVA: 0x0067565E File Offset: 0x0067385E
 		public byte[] GetBackgroundImagePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602CD8D RID: 183693 RVA: 0x006293CC File Offset: 0x006275CC
+		// Token: 0x0602F523 RID: 193827 RVA: 0x0067566C File Offset: 0x0067386C
 		public static Offset<ICustomScreenBackgroundImage> CreateICustomScreenBackgroundImage(FlatBufferBuilder builder, ECustomScreenType Type = ECustomScreenType.Spine, StringOffset BackgroundImagePathOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomScreenBackgroundImage.EndICustomScreenBackgroundImage(builder);
 		}
 
-		// Token: 0x0602CD8E RID: 183694 RVA: 0x006293E9 File Offset: 0x006275E9
+		// Token: 0x0602F524 RID: 193828 RVA: 0x00675689 File Offset: 0x00673889
 		public static void StartICustomScreenBackgroundImage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602CD8F RID: 183695 RVA: 0x006293F2 File Offset: 0x006275F2
+		// Token: 0x0602F525 RID: 193829 RVA: 0x00675692 File Offset: 0x00673892
 		public static void AddType(FlatBufferBuilder builder, ECustomScreenType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CD90 RID: 183696 RVA: 0x006293FD File Offset: 0x006275FD
+		// Token: 0x0602F526 RID: 193830 RVA: 0x0067569D File Offset: 0x0067389D
 		public static void AddBackgroundImagePath(FlatBufferBuilder builder, StringOffset backgroundImagePathOffset)
 		{
 			builder.AddOffset(1, backgroundImagePathOffset.Value, 0);
 		}
 
-		// Token: 0x0602CD91 RID: 183697 RVA: 0x0062940D File Offset: 0x0062760D
+		// Token: 0x0602F527 RID: 193831 RVA: 0x006756AD File Offset: 0x006738AD
 		public static Offset<ICustomScreenBackgroundImage> EndICustomScreenBackgroundImage(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomScreenBackgroundImage>(builder.EndTable());
 		}
 
-		// Token: 0x0602CD92 RID: 183698 RVA: 0x0062941C File Offset: 0x0062761C
+		// Token: 0x0602F528 RID: 193832 RVA: 0x006756BC File Offset: 0x006738BC
 		public ICustomScreenBackgroundImageT UnPack()
 		{
 			ICustomScreenBackgroundImageT customScreenBackgroundImageT = new ICustomScreenBackgroundImageT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return customScreenBackgroundImageT;
 		}
 
-		// Token: 0x0602CD93 RID: 183699 RVA: 0x00629437 File Offset: 0x00627637
+		// Token: 0x0602F529 RID: 193833 RVA: 0x006756D7 File Offset: 0x006738D7
 		public void UnPackTo(ICustomScreenBackgroundImageT _o)
 		{
 			_o.Type = this.Type;
 			_o.BackgroundImagePath = this.BackgroundImagePath;
 		}
 
-		// Token: 0x0602CD94 RID: 183700 RVA: 0x00629454 File Offset: 0x00627654
+		// Token: 0x0602F52A RID: 193834 RVA: 0x006756F4 File Offset: 0x006738F4
 		public static Offset<ICustomScreenBackgroundImage> Pack(FlatBufferBuilder builder, ICustomScreenBackgroundImageT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomScreenBackgroundImage.CreateICustomScreenBackgroundImage(builder, _o.Type, backgroundImagePathOffset);
 		}
 
-		// Token: 0x04010B3E RID: 68414
+		// Token: 0x04011956 RID: 72022
 		private Table __p;
 	}
 }

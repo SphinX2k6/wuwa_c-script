@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005420 RID: 21536
+	// Token: 0x020059A6 RID: 22950
 	public class IInitStateBirthT
 	{
-		// Token: 0x17009E6A RID: 40554
-		// (get) Token: 0x060235F3 RID: 144883 RVA: 0x004E50EF File Offset: 0x004E32EF
-		// (set) Token: 0x060235F4 RID: 144884 RVA: 0x004E50F7 File Offset: 0x004E32F7
+		// Token: 0x1700A6A4 RID: 42660
+		// (get) Token: 0x060256AB RID: 153259 RVA: 0x0052211B File Offset: 0x0052031B
+		// (set) Token: 0x060256AC RID: 153260 RVA: 0x00522123 File Offset: 0x00520323
 		public EInitStateType Type { get; set; }
 
-		// Token: 0x17009E6B RID: 40555
-		// (get) Token: 0x060235F5 RID: 144885 RVA: 0x004E5100 File Offset: 0x004E3300
-		// (set) Token: 0x060235F6 RID: 144886 RVA: 0x004E5108 File Offset: 0x004E3308
+		// Token: 0x1700A6A5 RID: 42661
+		// (get) Token: 0x060256AD RID: 153261 RVA: 0x0052212C File Offset: 0x0052032C
+		// (set) Token: 0x060256AE RID: 153262 RVA: 0x00522134 File Offset: 0x00520334
 		public string BirthTag { get; set; }
 
-		// Token: 0x060235F7 RID: 144887 RVA: 0x004E5111 File Offset: 0x004E3311
+		// Token: 0x060256AF RID: 153263 RVA: 0x0052213D File Offset: 0x0052033D
 		public IInitStateBirthT()
 		{
 			this.Type = EInitStateType.Birth;

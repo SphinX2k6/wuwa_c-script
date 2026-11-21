@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x0200598B RID: 22923
+	// Token: 0x02004964 RID: 18788
 	internal enum EGiantQuestGuideComponent
 	{
-		// Token: 0x0401E58B RID: 124299
+		// Token: 0x04019029 RID: 102441
 		Root,
-		// Token: 0x0401E58C RID: 124300
+		// Token: 0x0401902A RID: 102442
 		TxtDesc,
-		// Token: 0x0401E58D RID: 124301
+		// Token: 0x0401902B RID: 102443
 		HorizontalScroll,
-		// Token: 0x0401E58E RID: 124302
+		// Token: 0x0401902C RID: 102444
 		ItemGridTemplate,
-		// Token: 0x0401E58F RID: 124303
+		// Token: 0x0401902D RID: 102445
 		BtnGoto,
-		// Token: 0x0401E590 RID: 124304
+		// Token: 0x0401902E RID: 102446
 		TxtDoing,
-		// Token: 0x0401E591 RID: 124305
+		// Token: 0x0401902F RID: 102447
 		PnlDone,
-		// Token: 0x0401E592 RID: 124306
+		// Token: 0x04019030 RID: 102448
 		PnlNew
 	}
 }

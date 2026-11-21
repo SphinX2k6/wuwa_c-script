@@ -6,24 +6,24 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Utils;
 using UnrealEngine;
 
-// Token: 0x02002FED RID: 12269
+// Token: 0x02002542 RID: 9538
 [NullableContext(1)]
 [Nullable(0)]
 public class KillTrigger : Trigger
 {
-	// Token: 0x0601A00B RID: 106507 RVA: 0x006CEAF3 File Offset: 0x006CCCF3
+	// Token: 0x0601793F RID: 96575 RVA: 0x006F698F File Offset: 0x006F4B8F
 	[NullableContext(2)]
 	public KillTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A00C RID: 106508 RVA: 0x006CEB04 File Offset: 0x006CCD04
+	// Token: 0x06017940 RID: 96576 RVA: 0x006F69A0 File Offset: 0x006F4BA0
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
 	}
 
-	// Token: 0x0601A00D RID: 106509 RVA: 0x006CEB20 File Offset: 0x006CCD20
+	// Token: 0x06017941 RID: 96577 RVA: 0x006F69BC File Offset: 0x006F4BBC
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -34,7 +34,7 @@ public class KillTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A00E RID: 106510 RVA: 0x006CEB84 File Offset: 0x006CCD84
+	// Token: 0x06017942 RID: 96578 RVA: 0x006F6A20 File Offset: 0x006F4C20
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -45,7 +45,7 @@ public class KillTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A00F RID: 106511 RVA: 0x006CEBE8 File Offset: 0x006CCDE8
+	// Token: 0x06017943 RID: 96579 RVA: 0x006F6A84 File Offset: 0x006F4C84
 	private void OnEvent(Entity attacker, Entity victim, RequirementPayload req, DamageResult result, FVectorDouble hitPos)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -69,12 +69,12 @@ public class KillTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A010 RID: 106512 RVA: 0x006CED09 File Offset: 0x006CCF09
+	// Token: 0x06017944 RID: 96580 RVA: 0x006F6BA5 File Offset: 0x006F4DA5
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4CF RID: 50383
+	// Token: 0x0400C897 RID: 51351
 	protected ETriggerTargetType TargetType;
 }

@@ -2,62 +2,62 @@
 
 namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 {
-	// Token: 0x0200575A RID: 22362
+	// Token: 0x02004731 RID: 18225
 	internal enum EComponent
 	{
-		// Token: 0x0401DCCA RID: 122058
+		// Token: 0x04018760 RID: 100192
 		ItemCaption,
-		// Token: 0x0401DCCB RID: 122059
+		// Token: 0x04018761 RID: 100193
 		MultiScrollViewLevel,
-		// Token: 0x0401DCCC RID: 122060
+		// Token: 0x04018762 RID: 100194
 		ItemDifficultyTitle,
-		// Token: 0x0401DCCD RID: 122061
+		// Token: 0x04018763 RID: 100195
 		ItemLevel,
-		// Token: 0x0401DCCE RID: 122062
+		// Token: 0x04018764 RID: 100196
 		TextNumber,
-		// Token: 0x0401DCCF RID: 122063
+		// Token: 0x04018765 RID: 100197
 		TextName,
-		// Token: 0x0401DCD0 RID: 122064
+		// Token: 0x04018766 RID: 100198
 		TexturePicture,
-		// Token: 0x0401DCD1 RID: 122065
+		// Token: 0x04018767 RID: 100199
 		BtnMonsterHandBook,
-		// Token: 0x0401DCD2 RID: 122066
+		// Token: 0x04018768 RID: 100200
 		ItemRedDotMonsterHandBook,
-		// Token: 0x0401DCD3 RID: 122067
+		// Token: 0x04018769 RID: 100201
 		ItemLevelDetailPanel,
-		// Token: 0x0401DCD4 RID: 122068
+		// Token: 0x0401876A RID: 100202
 		TextLevelDetail,
-		// Token: 0x0401DCD5 RID: 122069
+		// Token: 0x0401876B RID: 100203
 		ScrollTarget,
-		// Token: 0x0401DCD6 RID: 122070
+		// Token: 0x0401876C RID: 100204
 		ItemUnlockRolePanel,
-		// Token: 0x0401DCD7 RID: 122071
+		// Token: 0x0401876D RID: 100205
 		ScrollReward,
-		// Token: 0x0401DCD8 RID: 122072
+		// Token: 0x0401876E RID: 100206
 		ItemNormalGotoPanel,
-		// Token: 0x0401DCD9 RID: 122073
+		// Token: 0x0401876F RID: 100207
 		ItemStartBtn,
-		// Token: 0x0401DCDA RID: 122074
+		// Token: 0x04018770 RID: 100208
 		ItemProgressPanel,
-		// Token: 0x0401DCDB RID: 122075
+		// Token: 0x04018771 RID: 100209
 		TextProgressWave,
-		// Token: 0x0401DCDC RID: 122076
+		// Token: 0x04018772 RID: 100210
 		ItemNoProgressPanel,
-		// Token: 0x0401DCDD RID: 122077
+		// Token: 0x04018773 RID: 100211
 		ItemLockPanel,
-		// Token: 0x0401DCDE RID: 122078
+		// Token: 0x04018774 RID: 100212
 		TextUnlockTip,
-		// Token: 0x0401DCDF RID: 122079
+		// Token: 0x04018775 RID: 100213
 		ItemRewardPanel,
-		// Token: 0x0401DCE0 RID: 122080
+		// Token: 0x04018776 RID: 100214
 		TextModeName,
-		// Token: 0x0401DCE1 RID: 122081
+		// Token: 0x04018777 RID: 100215
 		ItemRecordPanel,
-		// Token: 0x0401DCE2 RID: 122082
+		// Token: 0x04018778 RID: 100216
 		ItemRolePanel,
-		// Token: 0x0401DCE3 RID: 122083
+		// Token: 0x04018779 RID: 100217
 		TextureRole,
-		// Token: 0x0401DCE4 RID: 122084
+		// Token: 0x0401877A RID: 100218
 		TextRoleName
 	}
 }

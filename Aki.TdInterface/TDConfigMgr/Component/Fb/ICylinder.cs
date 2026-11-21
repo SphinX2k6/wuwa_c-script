@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A5E RID: 2654
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B27 RID: 2855
 	public class ICylinder
 	{
-		// Token: 0x06003D1C RID: 15644 RVA: 0x0009D18F File Offset: 0x0009B38F
+		// Token: 0x0600413C RID: 16700 RVA: 0x000A6607 File Offset: 0x000A4807
 		public static ICylinder Create(ICylinder? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E1D RID: 3613
-		// (get) Token: 0x06003D1D RID: 15645 RVA: 0x0009D1AE File Offset: 0x0009B3AE
+		// Token: 0x17000EE9 RID: 3817
+		// (get) Token: 0x0600413D RID: 16701 RVA: 0x000A6626 File Offset: 0x000A4826
 		public virtual bool IsUse
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E1E RID: 3614
-		// (get) Token: 0x06003D1E RID: 15646 RVA: 0x0009D1BB File Offset: 0x0009B3BB
+		// Token: 0x17000EEA RID: 3818
+		// (get) Token: 0x0600413E RID: 16702 RVA: 0x000A6633 File Offset: 0x000A4833
 		public virtual int Radius
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E1F RID: 3615
-		// (get) Token: 0x06003D1F RID: 15647 RVA: 0x0009D1C8 File Offset: 0x0009B3C8
+		// Token: 0x17000EEB RID: 3819
+		// (get) Token: 0x0600413F RID: 16703 RVA: 0x000A6640 File Offset: 0x000A4840
 		public virtual int Height
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E20 RID: 3616
-		// (get) Token: 0x06003D20 RID: 15648 RVA: 0x0009D1D5 File Offset: 0x0009B3D5
+		// Token: 0x17000EEC RID: 3820
+		// (get) Token: 0x06004140 RID: 16704 RVA: 0x000A664D File Offset: 0x000A484D
 		public virtual PosA CylinderPos
 		{
 			get
@@ -69,14 +67,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400220B RID: 8715
+		// Token: 0x04002422 RID: 9250
 		private ICylinder Instance;
 
-		// Token: 0x0400220C RID: 8716
+		// Token: 0x04002423 RID: 9251
 		[Nullable(2)]
 		private PosA _CylinderPosCache;
 
-		// Token: 0x0400220D RID: 8717
+		// Token: 0x04002424 RID: 9252
 		private bool _CylinderPosInited;
 	}
 }

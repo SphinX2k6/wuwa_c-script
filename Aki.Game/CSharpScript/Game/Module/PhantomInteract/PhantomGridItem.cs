@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomInteract
 {
-	// Token: 0x02005100 RID: 20736
+	// Token: 0x020040D0 RID: 16592
 	internal class PhantomGridItem : UiPanelBase
 	{
-		// Token: 0x06035006 RID: 217094 RVA: 0x00C8DE92 File Offset: 0x00C8C092
+		// Token: 0x06029EFF RID: 171775 RVA: 0x00BDB16E File Offset: 0x00BD936E
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.PhantomInteract
 			};
 		}
 
-		// Token: 0x06035007 RID: 217095 RVA: 0x00C8DECC File Offset: 0x00C8C0CC
+		// Token: 0x06029F00 RID: 171776 RVA: 0x00BDB1A8 File Offset: 0x00BD93A8
 		[NullableContext(2)]
 		public void SetIcon(string path)
 		{

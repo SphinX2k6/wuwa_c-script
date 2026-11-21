@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 {
-	// Token: 0x0200644C RID: 25676
+	// Token: 0x020053CA RID: 21450
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorQuestItem : GridProxyAbstract<int>
 	{
-		// Token: 0x17009483 RID: 38019
-		// (get) Token: 0x06040895 RID: 264341 RVA: 0x00F9EFF9 File Offset: 0x00F9D1F9
+		// Token: 0x170067E5 RID: 26597
+		// (get) Token: 0x06035556 RID: 218454 RVA: 0x00EE5F75 File Offset: 0x00EE4175
 		private ActivityMotorLinkageData ActivityData
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x06040896 RID: 264342 RVA: 0x00F9F008 File Offset: 0x00F9D208
+		// Token: 0x06035557 RID: 218455 RVA: 0x00EE5F84 File Offset: 0x00EE4184
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			};
 		}
 
-		// Token: 0x06040897 RID: 264343 RVA: 0x00F9F10B File Offset: 0x00F9D30B
+		// Token: 0x06035558 RID: 218456 RVA: 0x00EE6087 File Offset: 0x00EE4287
 		protected override void OnStart()
 		{
 			this.ItemScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), new Func<CommonItemSmallItemGrid>(this.ItemProxyCreate), null, false, null);
 		}
 
-		// Token: 0x06040898 RID: 264344 RVA: 0x00F9F130 File Offset: 0x00F9D330
+		// Token: 0x06035559 RID: 218457 RVA: 0x00EE60AC File Offset: 0x00EE42AC
 		private void OnClickReceive()
 		{
 			UUIButtonComponent button = base.GetButton(1);
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}).Forget();
 		}
 
-		// Token: 0x06040899 RID: 264345 RVA: 0x00F9F198 File Offset: 0x00F9D398
+		// Token: 0x0603555A RID: 218458 RVA: 0x00EE6114 File Offset: 0x00EE4314
 		private void OnClickSkip()
 		{
 			SkipTaskManager.RunByConfigId(ActivityMotorLinkageConfig.Instance.GetQuestConfig(this.QuestId).AccessId, null);
 		}
 
-		// Token: 0x0604089A RID: 264346 RVA: 0x00F9F1C4 File Offset: 0x00F9D3C4
+		// Token: 0x0603555B RID: 218459 RVA: 0x00EE6140 File Offset: 0x00EE4340
 		public override void Refresh(int questId, bool isSelected, int gridIndex)
 		{
 			bool flag = this.QuestId == questId;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			item.SetUIActive(this.ActivityData.IsQuestCanReceive(questId));
 		}
 
-		// Token: 0x0604089B RID: 264347 RVA: 0x00F9F220 File Offset: 0x00F9D420
+		// Token: 0x0603555C RID: 218460 RVA: 0x00EE619C File Offset: 0x00EE439C
 		private void RefreshRewardPreview(int questId)
 		{
 			List<TItem> displayRewardCommonInfo = this.GetDisplayRewardCommonInfo(questId);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			itemScrollView.RefreshByData(displayRewardCommonInfo, null, false);
 		}
 
-		// Token: 0x0604089C RID: 264348 RVA: 0x00F9F248 File Offset: 0x00F9D448
+		// Token: 0x0603555D RID: 218461 RVA: 0x00EE61C4 File Offset: 0x00EE43C4
 		private List<TItem> GetDisplayRewardCommonInfo(int questId)
 		{
 			MotorLinkageQuest questConfig = ActivityMotorLinkageConfig.Instance.GetQuestConfig(questId);
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return list;
 		}
 
-		// Token: 0x0604089D RID: 264349 RVA: 0x00F9F2C0 File Offset: 0x00F9D4C0
+		// Token: 0x0603555E RID: 218462 RVA: 0x00EE623C File Offset: 0x00EE443C
 		private void RefreshQuestInfo(int questId)
 		{
 			MotorLinkageQuest questConfig = ActivityMotorLinkageConfig.Instance.GetQuestConfig(questId);
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			text2.ShowTextNew("MotorLinkage_Quest_Completed");
 		}
 
-		// Token: 0x0604089E RID: 264350 RVA: 0x00F9F364 File Offset: 0x00F9D564
+		// Token: 0x0603555F RID: 218463 RVA: 0x00EE62E0 File Offset: 0x00EE44E0
 		private void RefreshButtonState(EMotorQuestState state)
 		{
 			UUIItem item = base.GetItem(2);
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			button2.RootUIComp.Get().SetUIActive(state == EMotorQuestState.ProgressCanSkip);
 		}
 
-		// Token: 0x0604089F RID: 264351 RVA: 0x00F9F3E4 File Offset: 0x00F9D5E4
+		// Token: 0x06035560 RID: 218464 RVA: 0x00EE6360 File Offset: 0x00EE4560
 		private EMotorQuestState GetMotorQuestState(int questId)
 		{
 			if (this.ActivityData.IsQuestCanReceive(questId))
@@ -190,16 +190,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return EMotorQuestState.Progress;
 		}
 
-		// Token: 0x060408A0 RID: 264352 RVA: 0x00F9F429 File Offset: 0x00F9D629
+		// Token: 0x06035561 RID: 218465 RVA: 0x00EE63A5 File Offset: 0x00EE45A5
 		private CommonItemSmallItemGrid ItemProxyCreate()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x040218F7 RID: 137463
+		// Token: 0x0401C226 RID: 115238
 		private int QuestId = -1;
 
-		// Token: 0x040218F8 RID: 137464
+		// Token: 0x0401C227 RID: 115239
 		[Nullable(new byte[]
 		{
 			2,

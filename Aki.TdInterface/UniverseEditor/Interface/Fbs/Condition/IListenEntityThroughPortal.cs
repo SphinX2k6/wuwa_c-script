@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C4F RID: 19535
+	// Token: 0x02005142 RID: 20802
 	public struct IListenEntityThroughPortal : IFlatbufferObject
 	{
-		// Token: 0x17008DEF RID: 36335
-		// (get) Token: 0x0601EF89 RID: 126857 RVA: 0x00455018 File Offset: 0x00453218
+		// Token: 0x17009518 RID: 38168
+		// (get) Token: 0x06020B8D RID: 134029 RVA: 0x004888F4 File Offset: 0x00486AF4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EF8A RID: 126858 RVA: 0x00455025 File Offset: 0x00453225
+		// Token: 0x06020B8E RID: 134030 RVA: 0x00488901 File Offset: 0x00486B01
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EF8B RID: 126859 RVA: 0x0045502C File Offset: 0x0045322C
+		// Token: 0x06020B8F RID: 134031 RVA: 0x00488908 File Offset: 0x00486B08
 		public static IListenEntityThroughPortal GetRootAsIListenEntityThroughPortal(ByteBuffer _bb)
 		{
 			return IListenEntityThroughPortal.GetRootAsIListenEntityThroughPortal(_bb, default(IListenEntityThroughPortal));
 		}
 
-		// Token: 0x0601EF8C RID: 126860 RVA: 0x00455048 File Offset: 0x00453248
+		// Token: 0x06020B90 RID: 134032 RVA: 0x00488924 File Offset: 0x00486B24
 		public static IListenEntityThroughPortal GetRootAsIListenEntityThroughPortal(ByteBuffer _bb, IListenEntityThroughPortal obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EF8D RID: 126861 RVA: 0x00455065 File Offset: 0x00453265
+		// Token: 0x06020B91 RID: 134033 RVA: 0x00488941 File Offset: 0x00486B41
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EF8E RID: 126862 RVA: 0x00455074 File Offset: 0x00453274
+		// Token: 0x06020B92 RID: 134034 RVA: 0x00488950 File Offset: 0x00486B50
 		public IListenEntityThroughPortal __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008DF0 RID: 36336
-		// (get) Token: 0x0601EF8F RID: 126863 RVA: 0x00455084 File Offset: 0x00453284
+		// Token: 0x17009519 RID: 38169
+		// (get) Token: 0x06020B93 RID: 134035 RVA: 0x00488960 File Offset: 0x00486B60
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008DF1 RID: 36337
-		// (get) Token: 0x0601EF90 RID: 126864 RVA: 0x004550C0 File Offset: 0x004532C0
+		// Token: 0x1700951A RID: 38170
+		// (get) Token: 0x06020B94 RID: 134036 RVA: 0x0048899C File Offset: 0x00486B9C
 		public TTargetEntity CheckTargetType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EF91 RID: 126865 RVA: 0x004550FC File Offset: 0x004532FC
+		// Token: 0x06020B95 RID: 134037 RVA: 0x004889D8 File Offset: 0x00486BD8
 		public TTable? CheckTarget<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,32 +88,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601EF92 RID: 126866 RVA: 0x00455140 File Offset: 0x00453340
+		// Token: 0x06020B96 RID: 134038 RVA: 0x00488A1C File Offset: 0x00486C1C
 		public IPlayerEntity CheckTargetAsIPlayerEntity()
 		{
 			return this.CheckTarget<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x0601EF93 RID: 126867 RVA: 0x0045515C File Offset: 0x0045335C
+		// Token: 0x06020B97 RID: 134039 RVA: 0x00488A38 File Offset: 0x00486C38
 		public ISelfEntity CheckTargetAsISelfEntity()
 		{
 			return this.CheckTarget<ISelfEntity>().Value;
 		}
 
-		// Token: 0x0601EF94 RID: 126868 RVA: 0x00455178 File Offset: 0x00453378
+		// Token: 0x06020B98 RID: 134040 RVA: 0x00488A54 File Offset: 0x00486C54
 		public ITargetEntity CheckTargetAsITargetEntity()
 		{
 			return this.CheckTarget<ITargetEntity>().Value;
 		}
 
-		// Token: 0x0601EF95 RID: 126869 RVA: 0x00455194 File Offset: 0x00453394
+		// Token: 0x06020B99 RID: 134041 RVA: 0x00488A70 File Offset: 0x00486C70
 		public ITriggeredEntity CheckTargetAsITriggeredEntity()
 		{
 			return this.CheckTarget<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x17008DF2 RID: 36338
-		// (get) Token: 0x0601EF96 RID: 126870 RVA: 0x004551B0 File Offset: 0x004533B0
+		// Token: 0x1700951B RID: 38171
+		// (get) Token: 0x06020B9A RID: 134042 RVA: 0x00488A8C File Offset: 0x00486C8C
 		public int PortalEntityId
 		{
 			get
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EF97 RID: 126871 RVA: 0x004551ED File Offset: 0x004533ED
+		// Token: 0x06020B9B RID: 134043 RVA: 0x00488AC9 File Offset: 0x00486CC9
 		public static Offset<IListenEntityThroughPortal> CreateIListenEntityThroughPortal(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, TTargetEntity CheckTarget_type = TTargetEntity.NONE, int CheckTargetOffset = 0, int PortalEntityId = 0)
 		{
 			builder.StartTable(4);
@@ -138,43 +138,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IListenEntityThroughPortal.EndIListenEntityThroughPortal(builder);
 		}
 
-		// Token: 0x0601EF98 RID: 126872 RVA: 0x00455219 File Offset: 0x00453419
+		// Token: 0x06020B9C RID: 134044 RVA: 0x00488AF5 File Offset: 0x00486CF5
 		public static void StartIListenEntityThroughPortal(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601EF99 RID: 126873 RVA: 0x00455222 File Offset: 0x00453422
+		// Token: 0x06020B9D RID: 134045 RVA: 0x00488AFE File Offset: 0x00486CFE
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EF9A RID: 126874 RVA: 0x0045522D File Offset: 0x0045342D
+		// Token: 0x06020B9E RID: 134046 RVA: 0x00488B09 File Offset: 0x00486D09
 		public static void AddCheckTargetType(FlatBufferBuilder builder, TTargetEntity checkTargetType)
 		{
 			builder.AddByte(1, (byte)checkTargetType, 0);
 		}
 
-		// Token: 0x0601EF9B RID: 126875 RVA: 0x00455238 File Offset: 0x00453438
+		// Token: 0x06020B9F RID: 134047 RVA: 0x00488B14 File Offset: 0x00486D14
 		public static void AddCheckTarget(FlatBufferBuilder builder, int checkTargetOffset)
 		{
 			builder.AddOffset(2, checkTargetOffset, 0);
 		}
 
-		// Token: 0x0601EF9C RID: 126876 RVA: 0x00455243 File Offset: 0x00453443
+		// Token: 0x06020BA0 RID: 134048 RVA: 0x00488B1F File Offset: 0x00486D1F
 		public static void AddPortalEntityId(FlatBufferBuilder builder, int portalEntityId)
 		{
 			builder.AddInt(3, portalEntityId, 0);
 		}
 
-		// Token: 0x0601EF9D RID: 126877 RVA: 0x0045524E File Offset: 0x0045344E
+		// Token: 0x06020BA1 RID: 134049 RVA: 0x00488B2A File Offset: 0x00486D2A
 		public static Offset<IListenEntityThroughPortal> EndIListenEntityThroughPortal(FlatBufferBuilder builder)
 		{
 			return new Offset<IListenEntityThroughPortal>(builder.EndTable());
 		}
 
-		// Token: 0x0601EF9E RID: 126878 RVA: 0x0045525C File Offset: 0x0045345C
+		// Token: 0x06020BA2 RID: 134050 RVA: 0x00488B38 File Offset: 0x00486D38
 		public IListenEntityThroughPortalT UnPack()
 		{
 			IListenEntityThroughPortalT listenEntityThroughPortalT = new IListenEntityThroughPortalT();
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return listenEntityThroughPortalT;
 		}
 
-		// Token: 0x0601EF9F RID: 126879 RVA: 0x00455278 File Offset: 0x00453478
+		// Token: 0x06020BA3 RID: 134051 RVA: 0x00488B54 File Offset: 0x00486D54
 		public void UnPackTo(IListenEntityThroughPortalT _o)
 		{
 			_o.Type = this.Type;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.PortalEntityId = this.PortalEntityId;
 		}
 
-		// Token: 0x0601EFA0 RID: 126880 RVA: 0x004553C0 File Offset: 0x004535C0
+		// Token: 0x06020BA4 RID: 134052 RVA: 0x00488C9C File Offset: 0x00486E9C
 		public static Offset<IListenEntityThroughPortal> Pack(FlatBufferBuilder builder, IListenEntityThroughPortalT _o)
 		{
 			if (_o == null)
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IListenEntityThroughPortal.CreateIListenEntityThroughPortal(builder, _o.Type, checkTarget_type, checkTargetOffset, _o.PortalEntityId);
 		}
 
-		// Token: 0x0400D5F8 RID: 54776
+		// Token: 0x0400E117 RID: 57623
 		private Table __p;
 	}
 }

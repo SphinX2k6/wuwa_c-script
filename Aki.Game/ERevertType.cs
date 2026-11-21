@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000DCE RID: 3534
+// Token: 0x02000280 RID: 640
 public enum ERevertType
 {
-	// Token: 0x04002587 RID: 9607
+	// Token: 0x0400260B RID: 9739
 	HorizontalViewRevert,
-	// Token: 0x04002588 RID: 9608
+	// Token: 0x0400260C RID: 9740
 	VerticalViewRevert
 }

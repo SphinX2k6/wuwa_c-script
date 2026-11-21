@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
@@ -9,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.Views
 {
-	// Token: 0x0200540A RID: 21514
+	// Token: 0x020043ED RID: 17389
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MenuScrollSettingButtonItem : MenuScrollSettingBaseItem
 	{
-		// Token: 0x06036FAE RID: 225198 RVA: 0x00D06A08 File Offset: 0x00D04C08
+		// Token: 0x0602BEF7 RID: 179959 RVA: 0x00C55E28 File Offset: 0x00C54028
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +28,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			};
 		}
 
-		// Token: 0x06036FAF RID: 225199 RVA: 0x00D06ABA File Offset: 0x00D04CBA
+		// Token: 0x0602BEF8 RID: 179960 RVA: 0x00C55EDA File Offset: 0x00C540DA
 		protected override void OnStart()
 		{
 			this.ButtonItem = new ButtonItem(base.GetItem(1));
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.ButtonItem.SetFunction(new Action<int>(this.OnButtonClickCallback));
 		}
 
-		// Token: 0x06036FB0 RID: 225200 RVA: 0x00D06AF6 File Offset: 0x00D04CF6
+		// Token: 0x0602BEF9 RID: 179961 RVA: 0x00C55F16 File Offset: 0x00C54116
 		protected override void OnBeforeDestroy()
 		{
 			if (this.Data != null)
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FB1 RID: 225201 RVA: 0x00D06B08 File Offset: 0x00D04D08
+		// Token: 0x0602BEFA RID: 179962 RVA: 0x00C55F28 File Offset: 0x00C54128
 		private void OnButtonClickCallback(int _)
 		{
 			if (base.GetItemClickLimit(this.ButtonItem.GetBtn()))
@@ -79,7 +78,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}, null);
 		}
 
-		// Token: 0x06036FB2 RID: 225202 RVA: 0x00D06BCC File Offset: 0x00D04DCC
+		// Token: 0x0602BEFB RID: 179963 RVA: 0x00C55FEC File Offset: 0x00C541EC
 		public override void Update(MenuData data, bool bGameSettingsUpdate)
 		{
 			this.Data = data;
@@ -93,18 +92,18 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06036FB3 RID: 225203 RVA: 0x00D06C20 File Offset: 0x00D04E20
+		// Token: 0x0602BEFC RID: 179964 RVA: 0x00C56040 File Offset: 0x00C54240
 		protected void RefreshTitle()
 		{
 			if (this.Data.CustomTitleArgs != null && this.Data.CustomTitleArgs.Length != 0)
 			{
-				LguiUtil.Instance.SetLocalTextNew(base.GetText(0), this.Data.FunctionName, this.Data.CustomTitleArgs.ToArray<string>());
+				LguiUtil.Instance.SetLocalTextNew(base.GetText(0), this.Data.FunctionName, this.Data.CustomTitleArgs);
 				return;
 			}
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), this.Data.FunctionName, Array.Empty<object>());
 		}
 
-		// Token: 0x06036FB4 RID: 225204 RVA: 0x00D06C98 File Offset: 0x00D04E98
+		// Token: 0x0602BEFD RID: 179965 RVA: 0x00C560B4 File Offset: 0x00C542B4
 		private void RefreshButton()
 		{
 			base.GetRootItem().SetUIActive(true);
@@ -126,7 +125,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.SetButtonText((this.Data.OptionsNameList.Count > targetConfig) ? this.Data.OptionsNameList[targetConfig] : null, targetConfig, false);
 		}
 
-		// Token: 0x06036FB5 RID: 225205 RVA: 0x00D06D38 File Offset: 0x00D04F38
+		// Token: 0x0602BEFE RID: 179966 RVA: 0x00C56154 File Offset: 0x00C54354
 		private void RefreshDetailText()
 		{
 			if (this.Data == null)
@@ -142,7 +141,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			LguiUtil.Instance.SetLocalTextNew(text, detailTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x06036FB6 RID: 225206 RVA: 0x00D06D81 File Offset: 0x00D04F81
+		// Token: 0x0602BEFF RID: 179967 RVA: 0x00C5619D File Offset: 0x00C5439D
 		private void RefreshDetailSpriteVisible()
 		{
 			if (this.Data == null)
@@ -157,7 +156,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			sprite.SetUIActive(this.Data.ShowHelpBtn());
 		}
 
-		// Token: 0x06036FB7 RID: 225207 RVA: 0x00D06DA8 File Offset: 0x00D04FA8
+		// Token: 0x0602BF00 RID: 179968 RVA: 0x00C561C4 File Offset: 0x00C543C4
 		public UniTask RefreshDetailSprite()
 		{
 			MenuScrollSettingButtonItem.<RefreshDetailSprite>d__13 <RefreshDetailSprite>d__;
@@ -168,7 +167,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return <RefreshDetailSprite>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036FB8 RID: 225208 RVA: 0x00D06DEC File Offset: 0x00D04FEC
+		// Token: 0x0602BF01 RID: 179969 RVA: 0x00C56208 File Offset: 0x00C54408
 		private void ChangeButton(int functionId, int index)
 		{
 			if (this.Data == null)
@@ -192,7 +191,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.SetButtonText(this.Data.OptionsNameList[index], index, true);
 		}
 
-		// Token: 0x06036FB9 RID: 225209 RVA: 0x00D06E4C File Offset: 0x00D0504C
+		// Token: 0x0602BF02 RID: 179970 RVA: 0x00C56268 File Offset: 0x00C54468
 		private void SetButtonTextForResolution(int index, bool fire = false)
 		{
 			string newText;
@@ -213,7 +212,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FBA RID: 225210 RVA: 0x00D06EEC File Offset: 0x00D050EC
+		// Token: 0x0602BF03 RID: 179971 RVA: 0x00C56308 File Offset: 0x00C54508
 		[NullableContext(2)]
 		public void SetButtonText(string value, int index, bool fire = false)
 		{
@@ -233,13 +232,13 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FBB RID: 225211 RVA: 0x00D06F3E File Offset: 0x00D0513E
+		// Token: 0x0602BF04 RID: 179972 RVA: 0x00C5635A File Offset: 0x00C5455A
 		public override void SetInteractionActive(bool val)
 		{
 			this.ButtonItem.SetEnableClick(val && this.Data.GetButtonEnable());
 		}
 
-		// Token: 0x06036FBC RID: 225212 RVA: 0x00D06F5C File Offset: 0x00D0515C
+		// Token: 0x0602BF05 RID: 179973 RVA: 0x00C56378 File Offset: 0x00C54578
 		protected override void OnSetDetailVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(3);
@@ -261,7 +260,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FBD RID: 225213 RVA: 0x00D0700B File Offset: 0x00D0520B
+		// Token: 0x0602BF06 RID: 179974 RVA: 0x00C56427 File Offset: 0x00C54627
 		private void RefreshRedDot()
 		{
 			ButtonItem buttonItem = this.ButtonItem;
@@ -272,39 +271,39 @@ namespace CSharpScript.Game.Module.Menu.Views
 			buttonItem.SetRedDotVisible(this.Data.EnableRedDot);
 		}
 
-		// Token: 0x0401D028 RID: 118824
+		// Token: 0x04017AC1 RID: 96961
 		private readonly string ButtonResolutionFormatStr = "{0}x{1}";
 
-		// Token: 0x0401D029 RID: 118825
+		// Token: 0x04017AC2 RID: 96962
 		private readonly string AccountSettingPrefix = "Account,";
 
-		// Token: 0x0401D02A RID: 118826
+		// Token: 0x04017AC3 RID: 96963
 		[Nullable(2)]
 		private ButtonItem ButtonItem;
 
-		// Token: 0x0200B69A RID: 46746
+		// Token: 0x0200A0D2 RID: 41170
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04037527 RID: 226599
+			// Token: 0x04031F7C RID: 204668
 			public const int Title = 0;
 
-			// Token: 0x04037528 RID: 226600
+			// Token: 0x04031F7D RID: 204669
 			public const int Button = 1;
 
-			// Token: 0x04037529 RID: 226601
+			// Token: 0x04031F7E RID: 204670
 			public const int Name = 2;
 
-			// Token: 0x0403752A RID: 226602
+			// Token: 0x04031F7F RID: 204671
 			public const int DetailItem = 3;
 
-			// Token: 0x0403752B RID: 226603
+			// Token: 0x04031F80 RID: 204672
 			public const int DetailText = 4;
 
-			// Token: 0x0403752C RID: 226604
+			// Token: 0x04031F81 RID: 204673
 			public const int DetailSprite = 5;
 
-			// Token: 0x0403752D RID: 226605
+			// Token: 0x04031F82 RID: 204674
 			public const int DetailToggleTransition = 6;
 		}
 	}

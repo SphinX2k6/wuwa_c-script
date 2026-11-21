@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.Item
 {
-	// Token: 0x02005B2E RID: 23342
+	// Token: 0x02004B0F RID: 19215
 	public class CookMaterialItemContent : UiPanelBase
 	{
-		// Token: 0x0603B1A4 RID: 242084 RVA: 0x00E18334 File Offset: 0x00E16534
+		// Token: 0x06030116 RID: 196886 RVA: 0x00D6904C File Offset: 0x00D6724C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Cook.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B1A5 RID: 242085 RVA: 0x00E18528 File Offset: 0x00E16728
+		// Token: 0x06030117 RID: 196887 RVA: 0x00D69240 File Offset: 0x00D67440
 		private void OnClick(EToggleState toggleState)
 		{
 			Action clickDelegate = this.ClickDelegate;
@@ -64,19 +64,19 @@ namespace CSharpScript.Game.Module.Cook.Item
 			clickDelegate();
 		}
 
-		// Token: 0x0603B1A6 RID: 242086 RVA: 0x00E1853A File Offset: 0x00E1673A
+		// Token: 0x06030118 RID: 196888 RVA: 0x00D69252 File Offset: 0x00D67452
 		public void SetSelect()
 		{
 			base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603B1A7 RID: 242087 RVA: 0x00E1854D File Offset: 0x00E1674D
+		// Token: 0x06030119 RID: 196889 RVA: 0x00D69265 File Offset: 0x00D67465
 		public void SetDelect()
 		{
 			base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603B1A8 RID: 242088 RVA: 0x00E18560 File Offset: 0x00E16760
+		// Token: 0x0603011A RID: 196890 RVA: 0x00D69278 File Offset: 0x00D67478
 		protected override void OnStart()
 		{
 			base.GetSprite(0).SetUIActive(true);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Cook.Item
 			base.GetSprite(11).SetUIActive(false);
 		}
 
-		// Token: 0x0603B1A9 RID: 242089 RVA: 0x00E1862B File Offset: 0x00E1682B
+		// Token: 0x0603011B RID: 196891 RVA: 0x00D69343 File Offset: 0x00D67543
 		[NullableContext(1)]
 		public void Update(ISingleItemInfo data)
 		{
@@ -107,13 +107,13 @@ namespace CSharpScript.Game.Module.Cook.Item
 			this.RefreshQuality();
 		}
 
-		// Token: 0x0603B1AA RID: 242090 RVA: 0x00E18647 File Offset: 0x00E16847
+		// Token: 0x0603011C RID: 196892 RVA: 0x00D6935F File Offset: 0x00D6755F
 		public void RefreshNeed(int num = 1)
 		{
 			this.RefreshHave(num);
 		}
 
-		// Token: 0x0603B1AB RID: 242091 RVA: 0x00E18650 File Offset: 0x00E16850
+		// Token: 0x0603011D RID: 196893 RVA: 0x00D69368 File Offset: 0x00D67568
 		protected void RefreshHave(int times = 1)
 		{
 			int num = this.CookItemData.Proto_ItemNum * times;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Cook.Item
 			base.GetText(2).SetText(newText, true);
 		}
 
-		// Token: 0x0603B1AC RID: 242092 RVA: 0x00E18718 File Offset: 0x00E16918
+		// Token: 0x0603011E RID: 196894 RVA: 0x00D69430 File Offset: 0x00D67630
 		private void RefreshIcon()
 		{
 			if (this.CookItemData.Proto_IsUnlock)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Cook.Item
 			base.GetTexture(1).SetUIActive(false);
 		}
 
-		// Token: 0x0603B1AD RID: 242093 RVA: 0x00E1878C File Offset: 0x00E1698C
+		// Token: 0x0603011F RID: 196895 RVA: 0x00D694A4 File Offset: 0x00D676A4
 		private void RefreshQuality()
 		{
 			if (this.CookItemData.Proto_IsUnlock)
@@ -172,45 +172,45 @@ namespace CSharpScript.Game.Module.Cook.Item
 			base.GetSprite(0).SetUIActive(false);
 		}
 
-		// Token: 0x0603B1AE RID: 242094 RVA: 0x00E187E4 File Offset: 0x00E169E4
+		// Token: 0x06030120 RID: 196896 RVA: 0x00D694FC File Offset: 0x00D676FC
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0401ED07 RID: 126215
+		// Token: 0x040197C3 RID: 104387
 		[Nullable(2)]
 		private ISingleItemInfo CookItemData;
 
-		// Token: 0x0401ED08 RID: 126216
+		// Token: 0x040197C4 RID: 104388
 		[Nullable(2)]
 		public Action ClickDelegate;
 
-		// Token: 0x0200BD69 RID: 48489
+		// Token: 0x0200A772 RID: 42866
 		private enum ECookMaterialItemComponents
 		{
-			// Token: 0x04039222 RID: 234018
+			// Token: 0x04033BEE RID: 211950
 			SprQuality,
-			// Token: 0x04039223 RID: 234019
+			// Token: 0x04033BEF RID: 211951
 			TexIcon,
-			// Token: 0x04039224 RID: 234020
+			// Token: 0x04033BF0 RID: 211952
 			TxtNum,
-			// Token: 0x04039225 RID: 234021
+			// Token: 0x04033BF1 RID: 211953
 			PnlNum,
-			// Token: 0x04039226 RID: 234022
+			// Token: 0x04033BF2 RID: 211954
 			PnlItemBase,
-			// Token: 0x04039227 RID: 234023
+			// Token: 0x04033BF3 RID: 211955
 			PnlRedPoint,
-			// Token: 0x04039228 RID: 234024
+			// Token: 0x04033BF4 RID: 211956
 			PnlRedPoint1,
-			// Token: 0x04039229 RID: 234025
+			// Token: 0x04033BF5 RID: 211957
 			PnlCD,
-			// Token: 0x0403922A RID: 234026
+			// Token: 0x04033BF6 RID: 211958
 			BarCd,
-			// Token: 0x0403922B RID: 234027
+			// Token: 0x04033BF7 RID: 211959
 			TxtCD,
-			// Token: 0x0403922C RID: 234028
+			// Token: 0x04033BF8 RID: 211960
 			SprDark,
-			// Token: 0x0403922D RID: 234029
+			// Token: 0x04033BF9 RID: 211961
 			SprLock
 		}
 	}

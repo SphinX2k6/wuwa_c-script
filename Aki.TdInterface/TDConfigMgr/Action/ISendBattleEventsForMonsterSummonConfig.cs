@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DFA RID: 7674
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200202D RID: 8237
 	public class ISendBattleEventsForMonsterSummonConfig
 	{
-		// Token: 0x0600A433 RID: 42035 RVA: 0x001747A8 File Offset: 0x001729A8
+		// Token: 0x0600AEDB RID: 44763 RVA: 0x0018A1B0 File Offset: 0x001883B0
 		private ISendBattleEventsForMonsterSummonConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A434 RID: 42036 RVA: 0x001747E0 File Offset: 0x001729E0
+		// Token: 0x0600AEDC RID: 44764 RVA: 0x0018A1E8 File Offset: 0x001883E8
 		public static ISendBattleEventsForMonsterSummonConfig Create([Nullable(2)] ISendBattleEventsForMonsterSummonConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A435 RID: 42037 RVA: 0x001747F3 File Offset: 0x001729F3
+		// Token: 0x0600AEDD RID: 44765 RVA: 0x0018A1FB File Offset: 0x001883FB
 		public static ISendBattleEventsForMonsterSummonConfig CreateFromSetValue([Nullable(2)] ISendBattleEventsForMonsterSummonConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A436 RID: 42038 RVA: 0x00174806 File Offset: 0x00172A06
+		// Token: 0x0600AEDE RID: 44766 RVA: 0x0018A20E File Offset: 0x0018840E
 		public ISendBattleEventsForMonsterSummonConfig_SetValue ToSetValue()
 		{
 			return new ISendBattleEventsForMonsterSummonConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003279 RID: 12921
-		// (get) Token: 0x0600A437 RID: 42039 RVA: 0x00174825 File Offset: 0x00172A25
-		// (set) Token: 0x0600A438 RID: 42040 RVA: 0x00174850 File Offset: 0x00172A50
+		// Token: 0x17003538 RID: 13624
+		// (get) Token: 0x0600AEDF RID: 44767 RVA: 0x0018A22D File Offset: 0x0018842D
+		// (set) Token: 0x0600AEE0 RID: 44768 RVA: 0x0018A258 File Offset: 0x00188458
 		public virtual int TagConfigId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700327A RID: 12922
-		// (get) Token: 0x0600A439 RID: 42041 RVA: 0x00174860 File Offset: 0x00172A60
-		// (set) Token: 0x0600A43A RID: 42042 RVA: 0x0017489A File Offset: 0x00172A9A
+		// Token: 0x17003539 RID: 13625
+		// (get) Token: 0x0600AEE1 RID: 44769 RVA: 0x0018A268 File Offset: 0x00188468
+		// (set) Token: 0x0600AEE2 RID: 44770 RVA: 0x0018A2A2 File Offset: 0x001884A2
 		public virtual int? DelayTime
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006258 RID: 25176
+		// Token: 0x0400682F RID: 26671
 		[Nullable(2)]
 		protected ISendBattleEventsForMonsterSummonConfig FbInstance;
 
-		// Token: 0x04006259 RID: 25177
+		// Token: 0x04006830 RID: 26672
 		[Nullable(2)]
 		protected ISendBattleEventsForMonsterSummonConfig_SetValue PocoInterface;
 	}

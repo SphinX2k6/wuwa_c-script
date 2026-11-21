@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200210E RID: 8462
+	// Token: 0x0200236F RID: 9071
 	public class PlayerInput_SetValue
 	{
-		// Token: 0x04006F6D RID: 28525
+		// Token: 0x040075A1 RID: 30113
 		public EPlayerInputType Input;
 	}
 }

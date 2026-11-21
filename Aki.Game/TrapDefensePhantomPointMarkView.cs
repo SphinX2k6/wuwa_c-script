@@ -4,15 +4,15 @@ using CSharpScript.Game.Module.GameMainView.TrapDefense;
 using CSharpScript.Game.Module.TrapDefense;
 using UnrealEngine;
 
-// Token: 0x02001D31 RID: 7473
+// Token: 0x020011F3 RID: 4595
 public class TrapDefensePhantomPointMarkView : TrapDefenseMarkView
 {
-	// Token: 0x0600E24E RID: 57934 RVA: 0x00352A68 File Offset: 0x00350C68
+	// Token: 0x0600B66B RID: 46699 RVA: 0x0035E498 File Offset: 0x0035C698
 	public TrapDefensePhantomPointMarkView(int markId) : base(markId)
 	{
 	}
 
-	// Token: 0x0600E24F RID: 57935 RVA: 0x00352A71 File Offset: 0x00350C71
+	// Token: 0x0600B66C RID: 46700 RVA: 0x0035E4A1 File Offset: 0x0035C6A1
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,13 +21,13 @@ public class TrapDefensePhantomPointMarkView : TrapDefenseMarkView
 		};
 	}
 
-	// Token: 0x0600E250 RID: 57936 RVA: 0x00352A94 File Offset: 0x00350C94
+	// Token: 0x0600B66D RID: 46701 RVA: 0x0035E4C4 File Offset: 0x0035C6C4
 	protected override void OnBeforeShow()
 	{
 		this.RefreshIcon();
 	}
 
-	// Token: 0x0600E251 RID: 57937 RVA: 0x00352A9C File Offset: 0x00350C9C
+	// Token: 0x0600B66E RID: 46702 RVA: 0x0035E4CC File Offset: 0x0035C6CC
 	private void RefreshIcon()
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -46,7 +46,7 @@ public class TrapDefensePhantomPointMarkView : TrapDefenseMarkView
 		});
 	}
 
-	// Token: 0x0600E252 RID: 57938 RVA: 0x00352B22 File Offset: 0x00350D22
+	// Token: 0x0600B66F RID: 46703 RVA: 0x0035E552 File Offset: 0x0035C752
 	public override void OnTowerDefenseStepUpdate(ETowerDefenseEventProcessStatus status)
 	{
 		if (status == ETowerDefenseEventProcessStatus.Ready)
@@ -55,10 +55,10 @@ public class TrapDefensePhantomPointMarkView : TrapDefenseMarkView
 		}
 	}
 
-	// Token: 0x02008336 RID: 33590
+	// Token: 0x020074BF RID: 29887
 	private static class EChildComponent
 	{
-		// Token: 0x0402AC95 RID: 175253
+		// Token: 0x04025FBD RID: 155581
 		public const int Icon = 0;
 	}
 }

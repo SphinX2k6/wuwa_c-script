@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F76 RID: 8054
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021B1 RID: 8625
 	public class ITalkOptionPreConditionBase
 	{
-		// Token: 0x0600B138 RID: 45368 RVA: 0x0019DB74 File Offset: 0x0019BD74
+		// Token: 0x0600BC12 RID: 48146 RVA: 0x001B3AC8 File Offset: 0x001B1CC8
 		private ITalkOptionPreConditionBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B139 RID: 45369 RVA: 0x0019DBAC File Offset: 0x0019BDAC
+		// Token: 0x0600BC13 RID: 48147 RVA: 0x001B3B00 File Offset: 0x001B1D00
 		public static ITalkOptionPreConditionBase Create([Nullable(2)] ITalkOptionPreConditionBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B13A RID: 45370 RVA: 0x0019DBBF File Offset: 0x0019BDBF
+		// Token: 0x0600BC14 RID: 48148 RVA: 0x001B3B13 File Offset: 0x001B1D13
 		public static ITalkOptionPreConditionBase CreateFromSetValue([Nullable(2)] ITalkOptionPreConditionBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B13B RID: 45371 RVA: 0x0019DBD2 File Offset: 0x0019BDD2
+		// Token: 0x0600BC15 RID: 48149 RVA: 0x001B3B26 File Offset: 0x001B1D26
 		public ITalkOptionPreConditionBase_SetValue ToSetValue()
 		{
 			return new ITalkOptionPreConditionBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036C3 RID: 14019
-		// (get) Token: 0x0600B13C RID: 45372 RVA: 0x0019DBE5 File Offset: 0x0019BDE5
-		// (set) Token: 0x0600B13D RID: 45373 RVA: 0x0019DC10 File Offset: 0x0019BE10
+		// Token: 0x1700398F RID: 14735
+		// (get) Token: 0x0600BC16 RID: 48150 RVA: 0x001B3B39 File Offset: 0x001B1D39
+		// (set) Token: 0x0600BC17 RID: 48151 RVA: 0x001B3B64 File Offset: 0x001B1D64
 		public virtual ETalkOptionPreConditionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B36 RID: 27446
+		// Token: 0x0400711E RID: 28958
 		[Nullable(2)]
 		protected ITalkOptionPreConditionBase FbInstance;
 
-		// Token: 0x04006B37 RID: 27447
+		// Token: 0x0400711F RID: 28959
 		[Nullable(2)]
 		protected ITalkOptionPreConditionBase_SetValue PocoInterface;
 	}

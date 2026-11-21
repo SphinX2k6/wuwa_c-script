@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062D9 RID: 25305
+	// Token: 0x0200694A RID: 26954
 	public class IChangeElementalBoxStateTargetT
 	{
-		// Token: 0x1700BCE2 RID: 48354
-		// (get) Token: 0x0602BBDF RID: 179167 RVA: 0x00604BF6 File Offset: 0x00602DF6
-		// (set) Token: 0x0602BBE0 RID: 179168 RVA: 0x00604BFE File Offset: 0x00602DFE
+		// Token: 0x1700C66C RID: 50796
+		// (get) Token: 0x0602E348 RID: 189256 RVA: 0x0064FC02 File Offset: 0x0064DE02
+		// (set) Token: 0x0602E349 RID: 189257 RVA: 0x0064FC0A File Offset: 0x0064DE0A
 		public EChangeElementalBoxStateTargetType Type { get; set; }
 
-		// Token: 0x0602BBE1 RID: 179169 RVA: 0x00604C07 File Offset: 0x00602E07
+		// Token: 0x0602E34A RID: 189258 RVA: 0x0064FC13 File Offset: 0x0064DE13
 		public IChangeElementalBoxStateTargetT()
 		{
 			this.Type = EChangeElementalBoxStateTargetType.Player;

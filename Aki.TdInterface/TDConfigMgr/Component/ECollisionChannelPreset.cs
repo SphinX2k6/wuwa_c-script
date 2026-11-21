@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000082 RID: 130
+	// Token: 0x02000087 RID: 135
 	[EnumExtensions]
 	public enum ECollisionChannelPreset
 	{
-		// Token: 0x04000286 RID: 646
+		// Token: 0x0400029D RID: 669
 		CanBePassedThrough
 	}
 }

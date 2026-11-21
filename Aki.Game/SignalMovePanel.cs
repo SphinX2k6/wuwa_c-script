@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A14 RID: 10772
+// Token: 0x02001F8F RID: 8079
 [NullableContext(2)]
 [Nullable(0)]
 public class SignalMovePanel : UiComponentAction
 {
-	// Token: 0x060165C3 RID: 91587 RVA: 0x005A8C70 File Offset: 0x005A6E70
+	// Token: 0x06013FCA RID: 81866 RVA: 0x005D3C48 File Offset: 0x005D1E48
 	[NullableContext(1)]
 	public UniTask Init(UUIItem uiItem, ESignalGameplayType gameplayType)
 	{
@@ -24,7 +24,7 @@ public class SignalMovePanel : UiComponentAction
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060165C4 RID: 91588 RVA: 0x005A8CC4 File Offset: 0x005A6EC4
+	// Token: 0x06013FCB RID: 81867 RVA: 0x005D3C9C File Offset: 0x005D1E9C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class SignalMovePanel : UiComponentAction
 		};
 	}
 
-	// Token: 0x060165C5 RID: 91589 RVA: 0x005A8D4C File Offset: 0x005A6F4C
+	// Token: 0x06013FCC RID: 81868 RVA: 0x005D3D24 File Offset: 0x005D1F24
 	protected override void OnStart()
 	{
 		this.LongNode = base.GetItem(0);
@@ -54,7 +54,7 @@ public class SignalMovePanel : UiComponentAction
 		this.ShortLineNode.SetUIActive(false);
 	}
 
-	// Token: 0x060165C6 RID: 91590 RVA: 0x005A8DE8 File Offset: 0x005A6FE8
+	// Token: 0x06013FCD RID: 81869 RVA: 0x005D3DC0 File Offset: 0x005D1FC0
 	private void CreateSignals()
 	{
 		SignalDecodeModel instance = SignalDecodeModel.Instance;
@@ -114,7 +114,7 @@ public class SignalMovePanel : UiComponentAction
 		this.Signals = list.ToArray();
 	}
 
-	// Token: 0x060165C7 RID: 91591 RVA: 0x005A900C File Offset: 0x005A720C
+	// Token: 0x06013FCE RID: 81870 RVA: 0x005D3FE4 File Offset: 0x005D21E4
 	public void InitByGameplayType(ESignalGameplayType type)
 	{
 		if (this.Signals == null)
@@ -128,13 +128,13 @@ public class SignalMovePanel : UiComponentAction
 		}
 	}
 
-	// Token: 0x060165C8 RID: 91592 RVA: 0x005A9040 File Offset: 0x005A7240
+	// Token: 0x06013FCF RID: 81871 RVA: 0x005D4018 File Offset: 0x005D2218
 	public void InitMoveNode()
 	{
 		this.MoveNode.RootUIComp.Get().SetAnchorOffsetX(-1280f);
 	}
 
-	// Token: 0x060165C9 RID: 91593 RVA: 0x005A906C File Offset: 0x005A726C
+	// Token: 0x06013FD0 RID: 81872 RVA: 0x005D4044 File Offset: 0x005D2244
 	public void StartAgain()
 	{
 		if (this.Signals == null)
@@ -148,14 +148,14 @@ public class SignalMovePanel : UiComponentAction
 		}
 	}
 
-	// Token: 0x060165CA RID: 91594 RVA: 0x005A909F File Offset: 0x005A729F
+	// Token: 0x06013FD1 RID: 81873 RVA: 0x005D4077 File Offset: 0x005D2277
 	public void UpdateMove(float delta)
 	{
 		this.UpdatePanelMove(delta);
 		this.UpdateSignals();
 	}
 
-	// Token: 0x060165CB RID: 91595 RVA: 0x005A90B0 File Offset: 0x005A72B0
+	// Token: 0x06013FD2 RID: 81874 RVA: 0x005D4088 File Offset: 0x005D2288
 	public float GetCompleteness()
 	{
 		float num = 0f;
@@ -177,7 +177,7 @@ public class SignalMovePanel : UiComponentAction
 		return num2 / num;
 	}
 
-	// Token: 0x060165CC RID: 91596 RVA: 0x005A9110 File Offset: 0x005A7310
+	// Token: 0x06013FD3 RID: 81875 RVA: 0x005D40E8 File Offset: 0x005D22E8
 	public float GetProgress()
 	{
 		float num = 0f;
@@ -194,14 +194,14 @@ public class SignalMovePanel : UiComponentAction
 		return num2 / num;
 	}
 
-	// Token: 0x060165CD RID: 91597 RVA: 0x005A9168 File Offset: 0x005A7368
+	// Token: 0x06013FD4 RID: 81876 RVA: 0x005D4140 File Offset: 0x005D2340
 	private void UpdatePanelMove(float delta)
 	{
 		float anchorOffsetX = this.MoveNode.RootUIComp.Get().GetAnchorOffsetX() + delta / 1000f * this.Speed;
 		this.MoveNode.RootUIComp.Get().SetAnchorOffsetX(anchorOffsetX);
 	}
 
-	// Token: 0x060165CE RID: 91598 RVA: 0x005A91B8 File Offset: 0x005A73B8
+	// Token: 0x06013FD5 RID: 81877 RVA: 0x005D4190 File Offset: 0x005D2390
 	private void UpdateSignals()
 	{
 		float anchorOffsetX = this.MoveNode.RootUIComp.Get().GetAnchorOffsetX();
@@ -212,7 +212,7 @@ public class SignalMovePanel : UiComponentAction
 		}
 	}
 
-	// Token: 0x060165CF RID: 91599 RVA: 0x005A9214 File Offset: 0x005A7414
+	// Token: 0x06013FD6 RID: 81878 RVA: 0x005D41EC File Offset: 0x005D23EC
 	public void OnCatchBtnDown()
 	{
 		SignalItemBase[] signals = this.Signals;
@@ -222,7 +222,7 @@ public class SignalMovePanel : UiComponentAction
 		}
 	}
 
-	// Token: 0x060165D0 RID: 91600 RVA: 0x005A9240 File Offset: 0x005A7440
+	// Token: 0x06013FD7 RID: 81879 RVA: 0x005D4218 File Offset: 0x005D2418
 	public void OnCatchBtnUp()
 	{
 		SignalItemBase[] signals = this.Signals;
@@ -232,7 +232,7 @@ public class SignalMovePanel : UiComponentAction
 		}
 	}
 
-	// Token: 0x0400A66F RID: 42607
+	// Token: 0x0400AA59 RID: 43609
 	[Nullable(new byte[]
 	{
 		2,
@@ -240,41 +240,41 @@ public class SignalMovePanel : UiComponentAction
 	})]
 	private SignalItemBase[] Signals;
 
-	// Token: 0x0400A670 RID: 42608
+	// Token: 0x0400AA5A RID: 43610
 	private UUIItem LongNode;
 
-	// Token: 0x0400A671 RID: 42609
+	// Token: 0x0400AA5B RID: 43611
 	private UUIItem ShortNode;
 
-	// Token: 0x0400A672 RID: 42610
+	// Token: 0x0400AA5C RID: 43612
 	private UUIItem LineNode;
 
-	// Token: 0x0400A673 RID: 42611
+	// Token: 0x0400AA5D RID: 43613
 	private UUIItem ShortLineNode;
 
-	// Token: 0x0400A674 RID: 42612
+	// Token: 0x0400AA5E RID: 43614
 	private UUIHorizontalLayout MoveNode;
 
-	// Token: 0x0400A675 RID: 42613
+	// Token: 0x0400AA5F RID: 43615
 	private float Speed;
 
-	// Token: 0x02009053 RID: 36947
+	// Token: 0x0200829A RID: 33434
 	[NullableContext(0)]
 	private static class EChildComponent
 	{
-		// Token: 0x0402EBB9 RID: 191417
+		// Token: 0x0402A2B1 RID: 172721
 		public const int LongNode = 0;
 
-		// Token: 0x0402EBBA RID: 191418
+		// Token: 0x0402A2B2 RID: 172722
 		public const int ShortNode = 1;
 
-		// Token: 0x0402EBBB RID: 191419
+		// Token: 0x0402A2B3 RID: 172723
 		public const int LineNode = 2;
 
-		// Token: 0x0402EBBC RID: 191420
+		// Token: 0x0402A2B4 RID: 172724
 		public const int ShortLineNode = 3;
 
-		// Token: 0x0402EBBD RID: 191421
+		// Token: 0x0402A2B5 RID: 172725
 		public const int MoveNode = 4;
 	}
 }

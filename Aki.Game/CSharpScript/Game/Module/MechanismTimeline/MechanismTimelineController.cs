@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MechanismTimeline
 {
-	// Token: 0x0200547B RID: 21627
+	// Token: 0x0200445E RID: 17502
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MechanismTimelineController : ControllerBase
 	{
-		// Token: 0x060372E3 RID: 226019 RVA: 0x00D16043 File Offset: 0x00D14243
+		// Token: 0x0602C22C RID: 180780 RVA: 0x00C6549B File Offset: 0x00C6369B
 		protected override bool OnInit()
 		{
 			bool result = base.OnInit();
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return result;
 		}
 
-		// Token: 0x060372E4 RID: 226020 RVA: 0x00D1606B File Offset: 0x00D1426B
+		// Token: 0x0602C22D RID: 180781 RVA: 0x00C654C3 File Offset: 0x00C636C3
 		protected override bool OnClear()
 		{
 			bool result = base.OnClear();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return result;
 		}
 
-		// Token: 0x060372E5 RID: 226021 RVA: 0x00D16084 File Offset: 0x00D14284
+		// Token: 0x0602C22E RID: 180782 RVA: 0x00C654DC File Offset: 0x00C636DC
 		private unsafe void OnTriggerMechanismEvent(FName eventType, FName eventName, EMechanismEventExecuteType executeType, UMovieSceneSequencePlayer sequencePlayer, uint sectionId)
 		{
 			MechanismEventContext contextByPlayer = MechanismTimelineModel.Instance.GetContextByPlayer(sequencePlayer);
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			sceneItemEventListenerComponent.ExecuteEvent(sequencePlayer, eventType.ToString(), eventName.ToString(), executeType, mechanismEventLevelPrefabContext);
 		}
 
-		// Token: 0x060372E6 RID: 226022 RVA: 0x00D1634C File Offset: 0x00D1454C
+		// Token: 0x0602C22F RID: 180783 RVA: 0x00C657A4 File Offset: 0x00C639A4
 		public void RequestSceneItemSequenceFrameStart(int playerId, long createDataId, string seqGuid, string eventName)
 		{
 			SceneItemSequenceFrameStartRequest sceneItemSequenceFrameStartRequest = SceneItemSequenceFrameStartRequest.Create();
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			}, 0);
 		}
 
-		// Token: 0x060372E7 RID: 226023 RVA: 0x00D163AC File Offset: 0x00D145AC
+		// Token: 0x0602C230 RID: 180784 RVA: 0x00C65804 File Offset: 0x00C63A04
 		public void RequestSceneItemSequenceFrameEnd(int playerId, long createDataId, string seqGuid, string eventName)
 		{
 			SceneItemSequenceFrameEndRequest sceneItemSequenceFrameEndRequest = SceneItemSequenceFrameEndRequest.Create();
@@ -140,8 +140,8 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			}, 0);
 		}
 
-		// Token: 0x1700845A RID: 33882
-		// (get) Token: 0x060372E8 RID: 226024 RVA: 0x00D1640C File Offset: 0x00D1460C
+		// Token: 0x17005826 RID: 22566
+		// (get) Token: 0x0602C231 RID: 180785 RVA: 0x00C65864 File Offset: 0x00C63A64
 		public static MechanismTimelineController Instance
 		{
 			get
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			}
 		}
 
-		// Token: 0x060372E9 RID: 226025 RVA: 0x00D16413 File Offset: 0x00D14613
+		// Token: 0x0602C232 RID: 180786 RVA: 0x00C6586B File Offset: 0x00C63A6B
 		public static MechanismTimelineController GetOrCreateInstance()
 		{
 			if (MechanismTimelineController._Instance == null)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return MechanismTimelineController._Instance;
 		}
 
-		// Token: 0x060372EA RID: 226026 RVA: 0x00D16427 File Offset: 0x00D14627
+		// Token: 0x0602C233 RID: 180787 RVA: 0x00C6587F File Offset: 0x00C63A7F
 		public static bool CreateInstance()
 		{
 			if (MechanismTimelineController._Instance != null)
@@ -171,24 +171,24 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return true;
 		}
 
-		// Token: 0x060372EB RID: 226027 RVA: 0x00D1643D File Offset: 0x00D1463D
+		// Token: 0x0602C234 RID: 180788 RVA: 0x00C65895 File Offset: 0x00C63A95
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060372EC RID: 226028 RVA: 0x00D1643F File Offset: 0x00D1463F
+		// Token: 0x0602C235 RID: 180789 RVA: 0x00C65897 File Offset: 0x00C63A97
 		public static void ResetStaticDefaultValue()
 		{
 			MechanismTimelineController._Instance = null;
 		}
 
-		// Token: 0x060372ED RID: 226029 RVA: 0x00D16447 File Offset: 0x00D14647
+		// Token: 0x0602C236 RID: 180790 RVA: 0x00C6589F File Offset: 0x00C63A9F
 		static MechanismTimelineController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MechanismTimelineController.CreateStaticDefaultValue), new Action(MechanismTimelineController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D1B4 RID: 119220
+		// Token: 0x04017C4D RID: 97357
 		[Nullable(2)]
 		private static MechanismTimelineController _Instance;
 	}

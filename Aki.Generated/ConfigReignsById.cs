@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007E0 RID: 2016
+	// Token: 0x020007FC RID: 2044
 	public class ConfigReignsById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F52 RID: 12114 RVA: 0x00164AC4 File Offset: 0x00162CC4
+		// Token: 0x06002FFA RID: 12282 RVA: 0x0016BDAC File Offset: 0x00169FAC
 		static ConfigReignsById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigReignsById.CreateStaticDefaultValue), new Action(ConfigReignsById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F53 RID: 12115 RVA: 0x00164AE4 File Offset: 0x00162CE4
+		// Token: 0x06002FFB RID: 12283 RVA: 0x0016BDCC File Offset: 0x00169FCC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigReignsById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F54 RID: 12116 RVA: 0x00164B63 File Offset: 0x00162D63
+		// Token: 0x06002FFC RID: 12284 RVA: 0x0016BE4B File Offset: 0x0016A04B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigReignsById.LogPair = null;
 			ConfigReignsById.HandleId = 0;
 		}
 
-		// Token: 0x06002F55 RID: 12117 RVA: 0x00164B71 File Offset: 0x00162D71
+		// Token: 0x06002FFD RID: 12285 RVA: 0x0016BE59 File Offset: 0x0016A059
 		public static void Init()
 		{
 			ConfigReignsById.HandleId = ConfigCommon.InitDataStatement(ConfigReignsById.HandleId, "db_reigns.db", "select BinData from `Reigns` where Id=?");
 		}
 
-		// Token: 0x06002F56 RID: 12118 RVA: 0x00164B8C File Offset: 0x00162D8C
+		// Token: 0x06002FFE RID: 12286 RVA: 0x0016BE74 File Offset: 0x0016A074
 		public static Reigns? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigReignsById.HandleId, ConfigReignsById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Reigns?(rootAsReigns);
 		}
 
-		// Token: 0x04003706 RID: 14086
+		// Token: 0x040037CA RID: 14282
 		private const string DB = "db_reigns.db";
 
-		// Token: 0x04003707 RID: 14087
+		// Token: 0x040037CB RID: 14283
 		private const string FILE = "k.可视化编辑/c.Csv/w.王权玩法总表/*.csv*";
 
-		// Token: 0x04003708 RID: 14088
+		// Token: 0x040037CC RID: 14284
 		private const string TABLE = "Reigns";
 
-		// Token: 0x04003709 RID: 14089
+		// Token: 0x040037CD RID: 14285
 		private const string COMMAND = "select BinData from `Reigns` where Id=?";
 
-		// Token: 0x0400370A RID: 14090
+		// Token: 0x040037CE RID: 14286
 		private const string KEY_PREFIX = "ReignsById";
 
-		// Token: 0x0400370B RID: 14091
+		// Token: 0x040037CF RID: 14287
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400370C RID: 14092
+		// Token: 0x040037D0 RID: 14288
 		private static int HandleId;
 	}
 }

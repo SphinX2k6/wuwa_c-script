@@ -2,14 +2,14 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000109 RID: 265
+	// Token: 0x02000112 RID: 274
 	public enum EOnlineInteractType
 	{
-		// Token: 0x0400058D RID: 1421
+		// Token: 0x040005B7 RID: 1463
 		HostOnly,
-		// Token: 0x0400058E RID: 1422
+		// Token: 0x040005B8 RID: 1464
 		EveryOne,
-		// Token: 0x0400058F RID: 1423
+		// Token: 0x040005B9 RID: 1465
 		NoOne
 	}
 }

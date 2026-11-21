@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000E24 RID: 3620
+// Token: 0x020002D9 RID: 729
 public enum ELogoSize
 {
-	// Token: 0x040027FC RID: 10236
+	// Token: 0x04002895 RID: 10389
 	Small,
-	// Token: 0x040027FD RID: 10237
+	// Token: 0x04002896 RID: 10390
 	Medium,
-	// Token: 0x040027FE RID: 10238
+	// Token: 0x04002897 RID: 10391
 	Large
 }

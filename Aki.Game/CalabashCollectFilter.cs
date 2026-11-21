@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using FilterDefine;
 
-// Token: 0x02001833 RID: 6195
+// Token: 0x02000CEC RID: 3308
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashCollectFilter : CommonFilter
 {
-	// Token: 0x0600B5BE RID: 46526 RVA: 0x00291C74 File Offset: 0x0028FE74
+	// Token: 0x060089A9 RID: 35241 RVA: 0x0029C394 File Offset: 0x0029A594
 	protected object GetPhantomItemId(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((CalabashDevelopRewardData)data).DevelopRewardData.MonsterId;
 	}
 
-	// Token: 0x0600B5BF RID: 46527 RVA: 0x00291C9C File Offset: 0x0028FE9C
+	// Token: 0x060089AA RID: 35242 RVA: 0x0029C3BC File Offset: 0x0029A5BC
 	protected object GetPhantomRarity(object data, Dictionary<int, string> currentSelectMap)
 	{
 		int monsterId = ((CalabashDevelopRewardData)data).DevelopRewardData.MonsterId;
 		return PhantomBattleModel.Instance.GetMonsterRarity(monsterId);
 	}
 
-	// Token: 0x0600B5C0 RID: 46528 RVA: 0x00291CD0 File Offset: 0x0028FED0
+	// Token: 0x060089AB RID: 35243 RVA: 0x0029C3F0 File Offset: 0x0029A5F0
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.Phantom, new TFilterConfig(this.GetPhantomItemId));

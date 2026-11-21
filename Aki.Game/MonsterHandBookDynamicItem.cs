@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E2E RID: 7726
+// Token: 0x020012F0 RID: 4848
 public class MonsterHandBookDynamicItem : UiPanelBase, IDynamicScrollBaseItem<MonsterHandBookDynamicData>
 {
-	// Token: 0x0600EAF3 RID: 60147 RVA: 0x0037AAF0 File Offset: 0x00378CF0
+	// Token: 0x0600BF12 RID: 48914 RVA: 0x0038677C File Offset: 0x0038497C
 	[NullableContext(1)]
 	public UniTask Init(UUIItem actor)
 	{
@@ -23,7 +23,7 @@ public class MonsterHandBookDynamicItem : UiPanelBase, IDynamicScrollBaseItem<Mo
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EAF4 RID: 60148 RVA: 0x0037AB3B File Offset: 0x00378D3B
+	// Token: 0x0600BF13 RID: 48915 RVA: 0x003867C7 File Offset: 0x003849C7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class MonsterHandBookDynamicItem : UiPanelBase, IDynamicScrollBaseItem<Mo
 		};
 	}
 
-	// Token: 0x0600EAF5 RID: 60149 RVA: 0x0037AB74 File Offset: 0x00378D74
+	// Token: 0x0600BF14 RID: 48916 RVA: 0x00386800 File Offset: 0x00384A00
 	[NullableContext(1)]
 	public FVector2D GetItemSize(MonsterHandBookDynamicData data)
 	{
@@ -46,18 +46,18 @@ public class MonsterHandBookDynamicItem : UiPanelBase, IDynamicScrollBaseItem<Mo
 		return new FVector2D(item2.GetWidth(), item2.GetHeight());
 	}
 
-	// Token: 0x0600EAF6 RID: 60150 RVA: 0x0037ABC1 File Offset: 0x00378DC1
+	// Token: 0x0600BF15 RID: 48917 RVA: 0x0038684D File Offset: 0x00384A4D
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x020083E2 RID: 33762
+	// Token: 0x02007567 RID: 30055
 	private class EMonsterDynamicItemDefine
 	{
-		// Token: 0x0402AEEB RID: 175851
+		// Token: 0x0402620E RID: 156174
 		public const int TitleItem = 0;
 
-		// Token: 0x0402AEEC RID: 175852
+		// Token: 0x0402620F RID: 156175
 		public const int LayoutItem = 1;
 	}
 }

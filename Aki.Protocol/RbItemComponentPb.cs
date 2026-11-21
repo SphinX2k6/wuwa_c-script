@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E90 RID: 3728
+	// Token: 0x02000E80 RID: 3712
 	public sealed class RbItemComponentPb : IMessage<RbItemComponentPb>, IMessage, IEquatable<RbItemComponentPb>, IDeepCloneable<RbItemComponentPb>, IBufferMessage
 	{
-		// Token: 0x06014058 RID: 82008 RVA: 0x002EA796 File Offset: 0x002E8996
+		// Token: 0x06013F73 RID: 81779 RVA: 0x002E90DA File Offset: 0x002E72DA
 		[NullableContext(1)]
 		public static RbItemComponentPb Create()
 		{
 			return new RbItemComponentPb();
 		}
 
-		// Token: 0x1700429C RID: 17052
-		// (get) Token: 0x06014059 RID: 82009 RVA: 0x002EA79D File Offset: 0x002E899D
+		// Token: 0x17004272 RID: 17010
+		// (get) Token: 0x06013F74 RID: 81780 RVA: 0x002E90E1 File Offset: 0x002E72E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700429D RID: 17053
-		// (get) Token: 0x0601405A RID: 82010 RVA: 0x002EA7A0 File Offset: 0x002E89A0
+		// Token: 0x17004273 RID: 17011
+		// (get) Token: 0x06013F75 RID: 81781 RVA: 0x002E90E4 File Offset: 0x002E72E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601405B RID: 82011 RVA: 0x002EA7A7 File Offset: 0x002E89A7
+		// Token: 0x06013F76 RID: 81782 RVA: 0x002E90EB File Offset: 0x002E72EB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbItemComponentPb()
 		{
 		}
 
-		// Token: 0x0601405C RID: 82012 RVA: 0x002EA7BC File Offset: 0x002E89BC
+		// Token: 0x06013F77 RID: 81783 RVA: 0x002E9100 File Offset: 0x002E7300
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbItemComponentPb(RbItemComponentPb other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601405D RID: 82013 RVA: 0x002EA832 File Offset: 0x002E8A32
+		// Token: 0x06013F78 RID: 81784 RVA: 0x002E9176 File Offset: 0x002E7376
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbItemComponentPb Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new RbItemComponentPb(this);
 		}
 
-		// Token: 0x1700429E RID: 17054
-		// (get) Token: 0x0601405E RID: 82014 RVA: 0x002EA83A File Offset: 0x002E8A3A
-		// (set) Token: 0x0601405F RID: 82015 RVA: 0x002EA842 File Offset: 0x002E8A42
+		// Token: 0x17004274 RID: 17012
+		// (get) Token: 0x06013F79 RID: 81785 RVA: 0x002E917E File Offset: 0x002E737E
+		// (set) Token: 0x06013F7A RID: 81786 RVA: 0x002E9186 File Offset: 0x002E7386
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int GamePlayIncId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700429F RID: 17055
-		// (get) Token: 0x06014060 RID: 82016 RVA: 0x002EA84B File Offset: 0x002E8A4B
+		// Token: 0x17004275 RID: 17013
+		// (get) Token: 0x06013F7B RID: 81787 RVA: 0x002E918F File Offset: 0x002E738F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RbGridPosition> OccupiedCellPositions
@@ -108,9 +108,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042A0 RID: 17056
-		// (get) Token: 0x06014061 RID: 82017 RVA: 0x002EA853 File Offset: 0x002E8A53
-		// (set) Token: 0x06014062 RID: 82018 RVA: 0x002EA86B File Offset: 0x002E8A6B
+		// Token: 0x17004276 RID: 17014
+		// (get) Token: 0x06013F7C RID: 81788 RVA: 0x002E9197 File Offset: 0x002E7397
+		// (set) Token: 0x06013F7D RID: 81789 RVA: 0x002E91AF File Offset: 0x002E73AF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbBreakableObstaclePbType BreakableObstacleType
@@ -130,9 +130,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042A1 RID: 17057
-		// (get) Token: 0x06014063 RID: 82019 RVA: 0x002EA881 File Offset: 0x002E8A81
-		// (set) Token: 0x06014064 RID: 82020 RVA: 0x002EA899 File Offset: 0x002E8A99
+		// Token: 0x17004277 RID: 17015
+		// (get) Token: 0x06013F7E RID: 81790 RVA: 0x002E91C5 File Offset: 0x002E73C5
+		// (set) Token: 0x06013F7F RID: 81791 RVA: 0x002E91DD File Offset: 0x002E73DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbLaserEmitterPbType RbLaserEmitterType
@@ -152,8 +152,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042A2 RID: 17058
-		// (get) Token: 0x06014065 RID: 82021 RVA: 0x002EA8AF File Offset: 0x002E8AAF
+		// Token: 0x17004278 RID: 17016
+		// (get) Token: 0x06013F80 RID: 81792 RVA: 0x002E91F3 File Offset: 0x002E73F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbItemComponentPb.TypeOneofCase TypeCase
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014066 RID: 82022 RVA: 0x002EA8B7 File Offset: 0x002E8AB7
+		// Token: 0x06013F81 RID: 81793 RVA: 0x002E91FB File Offset: 0x002E73FB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearType()
@@ -173,7 +173,7 @@ namespace Aki.Protocol
 			this.type_ = null;
 		}
 
-		// Token: 0x06014067 RID: 82023 RVA: 0x002EA8C7 File Offset: 0x002E8AC7
+		// Token: 0x06013F82 RID: 81794 RVA: 0x002E920B File Offset: 0x002E740B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RbItemComponentPb);
 		}
 
-		// Token: 0x06014068 RID: 82024 RVA: 0x002EA8D8 File Offset: 0x002E8AD8
+		// Token: 0x06013F83 RID: 81795 RVA: 0x002E921C File Offset: 0x002E741C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RbItemComponentPb other)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.GamePlayIncId == other.GamePlayIncId && this.occupiedCellPositions_.Equals(other.occupiedCellPositions_) && object.Equals(this.BreakableObstacleType, other.BreakableObstacleType) && object.Equals(this.RbLaserEmitterType, other.RbLaserEmitterType) && this.TypeCase == other.TypeCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06014069 RID: 82025 RVA: 0x002EA960 File Offset: 0x002E8B60
+		// Token: 0x06013F84 RID: 81796 RVA: 0x002E92A4 File Offset: 0x002E74A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601406A RID: 82026 RVA: 0x002EA9E4 File Offset: 0x002E8BE4
+		// Token: 0x06013F85 RID: 81797 RVA: 0x002E9328 File Offset: 0x002E7528
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601406B RID: 82027 RVA: 0x002EA9F1 File Offset: 0x002E8BF1
+		// Token: 0x06013F86 RID: 81798 RVA: 0x002E9335 File Offset: 0x002E7535
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -232,7 +232,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601406C RID: 82028 RVA: 0x002EA9FC File Offset: 0x002E8BFC
+		// Token: 0x06013F87 RID: 81799 RVA: 0x002E9340 File Offset: 0x002E7540
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -259,7 +259,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601406D RID: 82029 RVA: 0x002EAA84 File Offset: 0x002E8C84
+		// Token: 0x06013F88 RID: 81800 RVA: 0x002E93C8 File Offset: 0x002E75C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -285,7 +285,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601406E RID: 82030 RVA: 0x002EAB08 File Offset: 0x002E8D08
+		// Token: 0x06013F89 RID: 81801 RVA: 0x002E944C File Offset: 0x002E764C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RbItemComponentPb other)
@@ -322,7 +322,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601406F RID: 82031 RVA: 0x002EABB0 File Offset: 0x002E8DB0
+		// Token: 0x06013F8A RID: 81802 RVA: 0x002E94F4 File Offset: 0x002E76F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -330,7 +330,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06014070 RID: 82032 RVA: 0x002EABBC File Offset: 0x002E8DBC
+		// Token: 0x06013F8B RID: 81803 RVA: 0x002E9500 File Offset: 0x002E7700
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -384,44 +384,44 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007A3C RID: 31292
+		// Token: 0x04007A66 RID: 31334
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007A3D RID: 31293
+		// Token: 0x04007A67 RID: 31335
 		public const int GamePlayIncIdFieldNumber = 1;
 
-		// Token: 0x04007A3E RID: 31294
+		// Token: 0x04007A68 RID: 31336
 		private int gamePlayIncId_;
 
-		// Token: 0x04007A3F RID: 31295
+		// Token: 0x04007A69 RID: 31337
 		public const int OccupiedCellPositionsFieldNumber = 2;
 
-		// Token: 0x04007A40 RID: 31296
+		// Token: 0x04007A6A RID: 31338
 		private static readonly FieldCodec<RbGridPosition> _repeated_occupiedCellPositions_codec = FieldCodec.ForMessage<RbGridPosition>(18U, RbGridPosition.Parser);
 
-		// Token: 0x04007A41 RID: 31297
+		// Token: 0x04007A6B RID: 31339
 		private readonly RepeatedField<RbGridPosition> occupiedCellPositions_ = new RepeatedField<RbGridPosition>();
 
-		// Token: 0x04007A42 RID: 31298
+		// Token: 0x04007A6C RID: 31340
 		public const int BreakableObstacleTypeFieldNumber = 3;
 
-		// Token: 0x04007A43 RID: 31299
+		// Token: 0x04007A6D RID: 31341
 		public const int RbLaserEmitterTypeFieldNumber = 4;
 
-		// Token: 0x04007A44 RID: 31300
+		// Token: 0x04007A6E RID: 31342
 		private object type_;
 
-		// Token: 0x04007A45 RID: 31301
+		// Token: 0x04007A6F RID: 31343
 		private RbItemComponentPb.TypeOneofCase typeCase_;
 
-		// Token: 0x0200190C RID: 6412
+		// Token: 0x02001984 RID: 6532
 		public enum TypeOneofCase
 		{
-			// Token: 0x0400C946 RID: 51526
+			// Token: 0x0400CE71 RID: 52849
 			None,
-			// Token: 0x0400C947 RID: 51527
+			// Token: 0x0400CE72 RID: 52850
 			BreakableObstacleType = 3,
-			// Token: 0x0400C948 RID: 51528
+			// Token: 0x0400CE73 RID: 52851
 			RbLaserEmitterType
 		}
 	}

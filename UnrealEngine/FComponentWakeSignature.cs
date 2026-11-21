@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000965 RID: 2405
+	// Token: 0x020001B9 RID: 441
 	[UnrealStructLayout(1, 1, UnrealReflectionPropertyTypeCode.MulticastSparseDelegate)]
 	public sealed class FComponentWakeSignature : FSparseDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060087D8 RID: 34776 RVA: 0x000C2892 File Offset: 0x000C0A92
+		// Token: 0x06002060 RID: 8288 RVA: 0x0002FAEF File Offset: 0x0002DCEF
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FComponentWakeSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x060087D9 RID: 34777 RVA: 0x000C289E File Offset: 0x000C0A9E
+		// Token: 0x06002061 RID: 8289 RVA: 0x0002FAFB File Offset: 0x0002DCFB
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FComponentWakeSignature._FunctionPtr == IntPtr.Zero)
@@ -27,8 +27,8 @@ namespace UnrealEngine
 			return FComponentWakeSignature._FunctionPtr;
 		}
 
-		// Token: 0x17002012 RID: 8210
-		// (get) Token: 0x060087DA RID: 34778 RVA: 0x000C28C1 File Offset: 0x000C0AC1
+		// Token: 0x17000481 RID: 1153
+		// (get) Token: 0x06002062 RID: 8290 RVA: 0x0002FB1E File Offset: 0x0002DD1E
 		public override FName DelegateName
 		{
 			get
@@ -37,21 +37,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060087DB RID: 34779 RVA: 0x000C28C8 File Offset: 0x000C0AC8
+		// Token: 0x06002063 RID: 8291 RVA: 0x0002FB25 File Offset: 0x0002DD25
 		[NullableContext(2)]
 		public FComponentWakeSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060087DC RID: 34780 RVA: 0x000C28D2 File Offset: 0x000C0AD2
+		// Token: 0x06002064 RID: 8292 RVA: 0x0002FB2F File Offset: 0x0002DD2F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UPrimitiveComponent, FName>) ?? ((Action<UPrimitiveComponent, FName>)Delegate.CreateDelegate(typeof(Action<UPrimitiveComponent, FName>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060087DD RID: 34781 RVA: 0x000C2904 File Offset: 0x000C0B04
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06002065 RID: 8293 RVA: 0x0002FB64 File Offset: 0x0002DD64
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace UnrealEngine
 			base.Add(delegateName, Callback, FComponentWakeSignature.RegisterId);
 		}
 
-		// Token: 0x060087DE RID: 34782 RVA: 0x000C2954 File Offset: 0x000C0B54
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06002066 RID: 8294 RVA: 0x0002FBB4 File Offset: 0x0002DDB4
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			base.Remove(delegateName, Callback);
 		}
 
-		// Token: 0x060087DF RID: 34783 RVA: 0x000C2974 File Offset: 0x000C0B74
+		// Token: 0x06002067 RID: 8295 RVA: 0x0002FBD4 File Offset: 0x0002DDD4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UPrimitiveComponent WakingComponent, FName BoneName)
 		{
 			FComponentWakeSignature.__FComponentWakeSignature_DelegateParams* ptr = stackalloc FComponentWakeSignature.__FComponentWakeSignature_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FComponentWakeSignature.__FComponentWakeSignature_DelegateParams) & -16L;
@@ -96,10 +93,9 @@ namespace UnrealEngine
 			FSparseDelegate.BroadcastInternal(base.GetOwner().NativePtr, this.DelegateName, (void*)ptr);
 		}
 
-		// Token: 0x060087E0 RID: 34784 RVA: 0x000C29D8 File Offset: 0x000C0BD8
+		// Token: 0x06002068 RID: 8296 RVA: 0x0002FC38 File Offset: 0x0002DE38
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UPrimitiveComponent, FName> action = target as Action<UPrimitiveComponent, FName>;
@@ -111,35 +107,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, ((FComponentWakeSignature.__FComponentWakeSignature_DelegateParams*)__Parameters)->BoneName);
 		}
 
-		// Token: 0x04004091 RID: 16529
+		// Token: 0x04000AC4 RID: 2756
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04004092 RID: 16530
+		// Token: 0x04000AC5 RID: 2757
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ComponentWakeSignature__DelegateSignature";
 
-		// Token: 0x04004093 RID: 16531
+		// Token: 0x04000AC6 RID: 2758
 		private static int RegisterId;
 
-		// Token: 0x02002CDD RID: 11485
+		// Token: 0x02000999 RID: 2457
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FComponentWakeSignature_DelegateParams
+		private ref struct __FComponentWakeSignature_DelegateParams
 		{
-			// Token: 0x0401668A RID: 91786
+			// Token: 0x040058FF RID: 22783
 			[FieldOffset(0)]
 			public IntPtr WakingComponent;
 
-			// Token: 0x0401668B RID: 91787
+			// Token: 0x04005900 RID: 22784
 			[FieldOffset(8)]
 			public FName BoneName;
 		}
 
-		// Token: 0x02002CDE RID: 11486
+		// Token: 0x0200099A RID: 2458
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401668C RID: 91788
+			// Token: 0x04005901 RID: 22785
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

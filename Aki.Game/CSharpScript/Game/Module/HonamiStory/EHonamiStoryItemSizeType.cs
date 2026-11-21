@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x0200592B RID: 22827
+	// Token: 0x02004904 RID: 18692
 	public enum EHonamiStoryItemSizeType
 	{
-		// Token: 0x0401E3C4 RID: 123844
+		// Token: 0x04018E61 RID: 101985
 		Empty,
-		// Token: 0x0401E3C5 RID: 123845
+		// Token: 0x04018E62 RID: 101986
 		OneByOne,
-		// Token: 0x0401E3C6 RID: 123846
+		// Token: 0x04018E63 RID: 101987
 		TwoByTwo,
-		// Token: 0x0401E3C7 RID: 123847
+		// Token: 0x04018E64 RID: 101988
 		ThreeByThree
 	}
 }

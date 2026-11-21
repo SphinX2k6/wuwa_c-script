@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008F0 RID: 2288
+	// Token: 0x02000999 RID: 2457
 	public static class EAkEventTypeExtensions
 	{
-		// Token: 0x060033E9 RID: 13289 RVA: 0x00084B8C File Offset: 0x00082D8C
+		// Token: 0x06003743 RID: 14147 RVA: 0x0008C3B8 File Offset: 0x0008A5B8
 		public static string ToEnumString(this EAkEventType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033EA RID: 13290 RVA: 0x00084BD4 File Offset: 0x00082DD4
+		// Token: 0x06003744 RID: 14148 RVA: 0x0008C400 File Offset: 0x0008A600
 		public static EAkEventType FromString(string name)
 		{
 			EAkEventType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033EB RID: 13291 RVA: 0x00084C00 File Offset: 0x00082E00
+		// Token: 0x06003745 RID: 14149 RVA: 0x0008C42C File Offset: 0x0008A62C
 		public static bool TryFromString(string name, out EAkEventType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060033EC RID: 13292 RVA: 0x00084C56 File Offset: 0x00082E56
+		// Token: 0x06003746 RID: 14150 RVA: 0x0008C482 File Offset: 0x0008A682
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033ED RID: 13293 RVA: 0x00084C76 File Offset: 0x00082E76
+		// Token: 0x06003747 RID: 14151 RVA: 0x0008C4A2 File Offset: 0x0008A6A2
 		public static EAkEventType[] GetValues()
 		{
 			return new EAkEventType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033EE RID: 13294 RVA: 0x00084C86 File Offset: 0x00082E86
+		// Token: 0x06003748 RID: 14152 RVA: 0x0008C4B2 File Offset: 0x0008A6B2
 		public static string[] GetNames()
 		{
 			return new string[]

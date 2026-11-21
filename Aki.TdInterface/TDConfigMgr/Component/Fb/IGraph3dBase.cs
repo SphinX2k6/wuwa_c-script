@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E3F RID: 3647
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F3B RID: 3899
 	public class IGraph3dBase
 	{
-		// Token: 0x06005269 RID: 21097 RVA: 0x000CAE5F File Offset: 0x000C905F
+		// Token: 0x06005790 RID: 22416 RVA: 0x000D6727 File Offset: 0x000D4927
 		public static IGraph3dBase Create(IGraph3dBase? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BA8 RID: 7080
-		// (get) Token: 0x0600526A RID: 21098 RVA: 0x000CAE7E File Offset: 0x000C907E
+		// Token: 0x17001D15 RID: 7445
+		// (get) Token: 0x06005791 RID: 22417 RVA: 0x000D6746 File Offset: 0x000D4946
 		public virtual EGraph3dType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BA9 RID: 7081
-		// (get) Token: 0x0600526B RID: 21099 RVA: 0x000CAE8C File Offset: 0x000C908C
+		// Token: 0x17001D16 RID: 7446
+		// (get) Token: 0x06005792 RID: 22418 RVA: 0x000D6754 File Offset: 0x000D4954
 		public virtual List<IGraph3dNodeBase> Nodes
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BAA RID: 7082
-		// (get) Token: 0x0600526C RID: 21100 RVA: 0x000CAEF8 File Offset: 0x000C90F8
+		// Token: 0x17001D17 RID: 7447
+		// (get) Token: 0x06005793 RID: 22419 RVA: 0x000D67C0 File Offset: 0x000D49C0
 		public virtual List<IGraph3dEdgeBase> Edges
 		{
 			get
@@ -75,19 +72,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F7E RID: 12158
+		// Token: 0x04003246 RID: 12870
 		private IGraph3dBase Instance;
 
-		// Token: 0x04002F7F RID: 12159
+		// Token: 0x04003247 RID: 12871
 		private List<IGraph3dNodeBase> _NodesCache;
 
-		// Token: 0x04002F80 RID: 12160
+		// Token: 0x04003248 RID: 12872
 		private bool _NodesInited;
 
-		// Token: 0x04002F81 RID: 12161
+		// Token: 0x04003249 RID: 12873
 		private List<IGraph3dEdgeBase> _EdgesCache;
 
-		// Token: 0x04002F82 RID: 12162
+		// Token: 0x0400324A RID: 12874
 		private bool _EdgesInited;
 	}
 }

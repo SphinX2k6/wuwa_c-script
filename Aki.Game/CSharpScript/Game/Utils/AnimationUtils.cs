@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004545 RID: 17733
+	// Token: 0x0200346D RID: 13421
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AnimationUtils
 	{
-		// Token: 0x0602DD61 RID: 187745 RVA: 0x00A89730 File Offset: 0x00A87930
+		// Token: 0x06022443 RID: 140355 RVA: 0x009B4E64 File Offset: 0x009B3064
 		public static void GetRootLocationCurveValue(Entity entity, Vector outV)
 		{
 			outV.Reset();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Utils
 			outV.Set((double)curveValue, (double)curveValue2, (double)curveValue3);
 		}
 
-		// Token: 0x0602DD62 RID: 187746 RVA: 0x00A897A4 File Offset: 0x00A879A4
+		// Token: 0x06022444 RID: 140356 RVA: 0x009B4ED8 File Offset: 0x009B30D8
 		public static void GetRootLocationCurveValueWithDelta(Entity entity, float deltaTime, Vector outV)
 		{
 			outV.Reset();

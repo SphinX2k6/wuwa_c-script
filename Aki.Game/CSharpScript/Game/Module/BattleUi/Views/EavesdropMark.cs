@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D1B RID: 23835
+	// Token: 0x02004CFD RID: 19709
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EavesdropMark : UiPanelBase
 	{
-		// Token: 0x0603C68E RID: 247438 RVA: 0x00E7BA14 File Offset: 0x00E79C14
+		// Token: 0x060315E7 RID: 202215 RVA: 0x00DCC094 File Offset: 0x00DCA294
 		public EavesdropMark(AActor trackActor, int entityId)
 		{
 			if (GlobalData.World == null)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TargetTagComp.AddTagAddOrRemoveListener(EavesdropMark.EndTag, new BaseTagComponent.TTagSwitchedCallback(this.OnGameplayEnd), null);
 		}
 
-		// Token: 0x0603C68F RID: 247439 RVA: 0x00E7BADC File Offset: 0x00E79CDC
+		// Token: 0x060315E8 RID: 202216 RVA: 0x00DCC15C File Offset: 0x00DCA35C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C690 RID: 247440 RVA: 0x00E7BB88 File Offset: 0x00E79D88
+		// Token: 0x060315E9 RID: 202217 RVA: 0x00DCC208 File Offset: 0x00DCA408
 		protected override void OnStart()
 		{
 			this.NormalItem = base.GetItem(0);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetUIRelativeScale3D(fvector);
 		}
 
-		// Token: 0x0603C691 RID: 247441 RVA: 0x00E7BD28 File Offset: 0x00E79F28
+		// Token: 0x060315EA RID: 202218 RVA: 0x00DCC3A8 File Offset: 0x00DCA5A8
 		public void Update()
 		{
 			double? num = this.UpdateDistText();
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C692 RID: 247442 RVA: 0x00E7BDB8 File Offset: 0x00E79FB8
+		// Token: 0x060315EB RID: 202219 RVA: 0x00DCC438 File Offset: 0x00DCA638
 		private void UpdateRotation()
 		{
 			Rotator cameraRotator = CameraController.Instance.MainModel.CameraRotator;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x0603C693 RID: 247443 RVA: 0x00E7BE90 File Offset: 0x00E7A090
+		// Token: 0x060315EC RID: 202220 RVA: 0x00DCC510 File Offset: 0x00DCA710
 		private double? UpdateDistText()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603C694 RID: 247444 RVA: 0x00E7BF68 File Offset: 0x00E7A168
+		// Token: 0x060315ED RID: 202221 RVA: 0x00DCC5E8 File Offset: 0x00DCA7E8
 		private void UpdateLocation()
 		{
 			FVectorDouble inVec = this.MeshComp.D_GetSocketLocation(EavesdropMark.HeadName);
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RootItem.SetUIRelativeLocation(uirelativeLocation);
 		}
 
-		// Token: 0x0603C695 RID: 247445 RVA: 0x00E7BFAD File Offset: 0x00E7A1AD
+		// Token: 0x060315EE RID: 202222 RVA: 0x00DCC62D File Offset: 0x00DCA82D
 		private void OnChangeToNormal(int tagId, bool tagExist)
 		{
 			if (!tagExist)
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayChangeToNormalSeq();
 		}
 
-		// Token: 0x0603C696 RID: 247446 RVA: 0x00E7BFC2 File Offset: 0x00E7A1C2
+		// Token: 0x060315EF RID: 202223 RVA: 0x00DCC642 File Offset: 0x00DCA842
 		private void OnStartTaking(int tagId, bool tagExist)
 		{
 			if (!tagExist)
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTakingSeq();
 		}
 
-		// Token: 0x0603C697 RID: 247447 RVA: 0x00E7BFD7 File Offset: 0x00E7A1D7
+		// Token: 0x060315F0 RID: 202224 RVA: 0x00DCC657 File Offset: 0x00DCA857
 		private void OnGameplayEnd(int tagId, bool tagExist)
 		{
 			if (!tagExist)
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayEndSeq();
 		}
 
-		// Token: 0x0603C698 RID: 247448 RVA: 0x00E7BFF0 File Offset: 0x00E7A1F0
+		// Token: 0x060315F1 RID: 202225 RVA: 0x00DCC670 File Offset: 0x00DCA870
 		public void PlayFoundSeq()
 		{
 			if (this.SeqState == EavesdropMark.ESeqState.Found)
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C699 RID: 247449 RVA: 0x00E7C070 File Offset: 0x00E7A270
+		// Token: 0x060315F2 RID: 202226 RVA: 0x00DCC6F0 File Offset: 0x00DCA8F0
 		private void PlayFoundSeqInternal()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NextSeqState = EavesdropMark.ESeqState.None;
 		}
 
-		// Token: 0x0603C69A RID: 247450 RVA: 0x00E7C0B0 File Offset: 0x00E7A2B0
+		// Token: 0x060315F3 RID: 202227 RVA: 0x00DCC730 File Offset: 0x00DCA930
 		private void PlayNormalSeqInternal()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NextSeqState = EavesdropMark.ESeqState.None;
 		}
 
-		// Token: 0x0603C69B RID: 247451 RVA: 0x00E7C0F0 File Offset: 0x00E7A2F0
+		// Token: 0x060315F4 RID: 202228 RVA: 0x00DCC770 File Offset: 0x00DCA970
 		public void PlayEndSeq()
 		{
 			if (this.SeqState == EavesdropMark.ESeqState.None)
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SeqState = EavesdropMark.ESeqState.None;
 		}
 
-		// Token: 0x0603C69C RID: 247452 RVA: 0x00E7C168 File Offset: 0x00E7A368
+		// Token: 0x060315F5 RID: 202229 RVA: 0x00DCC7E8 File Offset: 0x00DCA9E8
 		public void PlayTakingSeq()
 		{
 			if (this.SeqState == EavesdropMark.ESeqState.Taking)
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C69D RID: 247453 RVA: 0x00E7C1B4 File Offset: 0x00E7A3B4
+		// Token: 0x060315F6 RID: 202230 RVA: 0x00DCC834 File Offset: 0x00DCAA34
 		public void PlayChangeToNormalSeq()
 		{
 			if (this.SeqState == EavesdropMark.ESeqState.Normal)
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C69E RID: 247454 RVA: 0x00E7C200 File Offset: 0x00E7A400
+		// Token: 0x060315F7 RID: 202231 RVA: 0x00DCC880 File Offset: 0x00DCAA80
 		private void PlayTakingSeqInternal()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NextSeqState = EavesdropMark.ESeqState.None;
 		}
 
-		// Token: 0x0603C69F RID: 247455 RVA: 0x00E7C240 File Offset: 0x00E7A440
+		// Token: 0x060315F8 RID: 202232 RVA: 0x00DCC8C0 File Offset: 0x00DCAAC0
 		private void SequenceFinishEvent(string sequenceName)
 		{
 			if (!(sequenceName == "Eavesdrop_Close") && !(sequenceName == "Talk_Close"))
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C6A0 RID: 247456 RVA: 0x00E7C360 File Offset: 0x00E7A560
+		// Token: 0x060315F9 RID: 202233 RVA: 0x00DCC9E0 File Offset: 0x00DCABE0
 		public void Initialize(UUIItem parent, float showDist)
 		{
 			base.CreateThenShowByResourceIdAsync("UiItem_Eavesdrop", parent, false).Forget();
@@ -452,137 +452,137 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.SneakEnd, new Action(this.OnSneakEnd));
 		}
 
-		// Token: 0x0603C6A1 RID: 247457 RVA: 0x00E7C3CE File Offset: 0x00E7A5CE
+		// Token: 0x060315FA RID: 202234 RVA: 0x00DCCA4E File Offset: 0x00DCAC4E
 		private void OnSneakStart()
 		{
 			this.SetActive(true);
 		}
 
-		// Token: 0x0603C6A2 RID: 247458 RVA: 0x00E7C3D7 File Offset: 0x00E7A5D7
+		// Token: 0x060315FB RID: 202235 RVA: 0x00DCCA57 File Offset: 0x00DCAC57
 		private void OnSneakEnd()
 		{
 			this.SetActive(false);
 		}
 
-		// Token: 0x0603C6A3 RID: 247459 RVA: 0x00E7C3E0 File Offset: 0x00E7A5E0
+		// Token: 0x060315FC RID: 202236 RVA: 0x00DCCA60 File Offset: 0x00DCAC60
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.SneakStart, new Action(this.OnSneakStart));
 			EventSystem.Instance.Remove(EEventName.SneakEnd, new Action(this.OnSneakEnd));
 		}
 
-		// Token: 0x0401F798 RID: 128920
+		// Token: 0x0401A251 RID: 107089
 		private const float UPDATE_TOLERATION = 0.1f;
 
-		// Token: 0x0401F799 RID: 128921
+		// Token: 0x0401A252 RID: 107090
 		private const float HEAD_OFFSET = 150f;
 
-		// Token: 0x0401F79A RID: 128922
+		// Token: 0x0401A253 RID: 107091
 		private const string NORMAL_START = "Eavesdrop_Start";
 
-		// Token: 0x0401F79B RID: 128923
+		// Token: 0x0401A254 RID: 107092
 		private const string NORMAL_END = "Eavesdrop_Close";
 
-		// Token: 0x0401F79C RID: 128924
+		// Token: 0x0401A255 RID: 107093
 		private const string TAKING_START = "Talk_Start";
 
-		// Token: 0x0401F79D RID: 128925
+		// Token: 0x0401A256 RID: 107094
 		private const string TAKING_LOOP = "Loop";
 
-		// Token: 0x0401F79E RID: 128926
+		// Token: 0x0401A257 RID: 107095
 		private const string TAKING_END = "Talk_Close";
 
-		// Token: 0x0401F79F RID: 128927
+		// Token: 0x0401A258 RID: 107096
 		private const string FOUND = "BeFound_Start";
 
-		// Token: 0x0401F7A0 RID: 128928
+		// Token: 0x0401A259 RID: 107097
 		[StaticVariableRuleIgnore]
 		private static readonly int NormalTag = GameplayTagDefine.EGameplayTagId["怪物.common.关卡.偷听玩法.常态"];
 
-		// Token: 0x0401F7A1 RID: 128929
+		// Token: 0x0401A25A RID: 107098
 		[StaticVariableRuleIgnore]
 		private static readonly int StartTakingTag = GameplayTagDefine.EGameplayTagId["怪物.common.关卡.偷听玩法.剧情中"];
 
-		// Token: 0x0401F7A2 RID: 128930
+		// Token: 0x0401A25B RID: 107099
 		[StaticVariableRuleIgnore]
 		private static readonly int EndTag = GameplayTagDefine.EGameplayTagId["怪物.common.关卡.偷听玩法.剧情结束"];
 
-		// Token: 0x0401F7A3 RID: 128931
+		// Token: 0x0401A25C RID: 107100
 		[StaticVariableRuleIgnore]
 		private static readonly FName HeadName = new FName("Bip001Head");
 
-		// Token: 0x0401F7A4 RID: 128932
+		// Token: 0x0401A25D RID: 107101
 		[Nullable(2)]
 		private readonly AActor TrackingActor;
 
-		// Token: 0x0401F7A5 RID: 128933
+		// Token: 0x0401A25E RID: 107102
 		private readonly int? TrackingEntityId;
 
-		// Token: 0x0401F7A6 RID: 128934
+		// Token: 0x0401A25F RID: 107103
 		[Nullable(2)]
 		private readonly BaseTagComponent TargetTagComp;
 
-		// Token: 0x0401F7A7 RID: 128935
+		// Token: 0x0401A260 RID: 107104
 		[Nullable(2)]
 		private USkeletalMeshComponent MeshComp;
 
-		// Token: 0x0401F7A8 RID: 128936
+		// Token: 0x0401A261 RID: 107105
 		[Nullable(2)]
 		private UUIItem NormalItem;
 
-		// Token: 0x0401F7A9 RID: 128937
+		// Token: 0x0401A262 RID: 107106
 		[Nullable(2)]
 		private UUIText DistText;
 
-		// Token: 0x0401F7AA RID: 128938
+		// Token: 0x0401A263 RID: 107107
 		[Nullable(2)]
 		private UUIItem TakingItem;
 
-		// Token: 0x0401F7AB RID: 128939
+		// Token: 0x0401A264 RID: 107108
 		[Nullable(2)]
 		private UUIItem FoundItem;
 
-		// Token: 0x0401F7AC RID: 128940
+		// Token: 0x0401A265 RID: 107109
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F7AD RID: 128941
+		// Token: 0x0401A266 RID: 107110
 		private readonly Rotator RootActorRotation = Rotator.Create();
 
-		// Token: 0x0401F7AE RID: 128942
+		// Token: 0x0401A267 RID: 107111
 		private EavesdropMark.ESeqState SeqState = EavesdropMark.ESeqState.None;
 
-		// Token: 0x0401F7AF RID: 128943
+		// Token: 0x0401A268 RID: 107112
 		private EavesdropMark.ESeqState NextSeqState = EavesdropMark.ESeqState.None;
 
-		// Token: 0x0401F7B0 RID: 128944
+		// Token: 0x0401A269 RID: 107113
 		private float ShowDist = -1f;
 
-		// Token: 0x0200BF93 RID: 49043
+		// Token: 0x0200A999 RID: 43417
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04039CC4 RID: 236740
+			// Token: 0x04034686 RID: 214662
 			NormalItem,
-			// Token: 0x04039CC5 RID: 236741
+			// Token: 0x04034687 RID: 214663
 			DistText,
-			// Token: 0x04039CC6 RID: 236742
+			// Token: 0x04034688 RID: 214664
 			TakingItem,
-			// Token: 0x04039CC7 RID: 236743
+			// Token: 0x04034689 RID: 214665
 			FoundItem
 		}
 
-		// Token: 0x0200BF94 RID: 49044
+		// Token: 0x0200A99A RID: 43418
 		[NullableContext(0)]
 		private enum ESeqState
 		{
-			// Token: 0x04039CC9 RID: 236745
+			// Token: 0x0403468B RID: 214667
 			Normal,
-			// Token: 0x04039CCA RID: 236746
+			// Token: 0x0403468C RID: 214668
 			Taking,
-			// Token: 0x04039CCB RID: 236747
+			// Token: 0x0403468D RID: 214669
 			Found,
-			// Token: 0x04039CCC RID: 236748
+			// Token: 0x0403468E RID: 214670
 			None
 		}
 	}

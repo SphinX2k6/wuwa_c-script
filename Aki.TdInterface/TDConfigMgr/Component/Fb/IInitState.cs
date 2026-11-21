@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A89 RID: 2697
+	// Token: 0x02000B53 RID: 2899
 	public class IInitState
 	{
-		// Token: 0x06003E1D RID: 15901 RVA: 0x0009F286 File Offset: 0x0009D486
-		[NullableContext(1)]
+		// Token: 0x06004246 RID: 16966 RVA: 0x000A883E File Offset: 0x000A6A3E
 		public static IInitState Create(IInitState? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EC8 RID: 3784
-		// (get) Token: 0x06003E1E RID: 15902 RVA: 0x0009F2A5 File Offset: 0x0009D4A5
+		// Token: 0x17000F9B RID: 3995
+		// (get) Token: 0x06004247 RID: 16967 RVA: 0x000A885D File Offset: 0x000A6A5D
 		public virtual EInitStateType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400229C RID: 8860
+		// Token: 0x040024B8 RID: 9400
 		private IInitState Instance;
 	}
 }

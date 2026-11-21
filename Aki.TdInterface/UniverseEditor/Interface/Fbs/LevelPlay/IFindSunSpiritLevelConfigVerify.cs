@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044C9 RID: 17609
+	// Token: 0x02004931 RID: 18737
 	public static class IFindSunSpiritLevelConfigVerify
 	{
-		// Token: 0x0601A515 RID: 107797 RVA: 0x003C1F60 File Offset: 0x003C0160
+		// Token: 0x0601BCE6 RID: 113894 RVA: 0x003EE16C File Offset: 0x003EC36C
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos))
@@ -26,11 +26,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return false;
 		}
 
-		// Token: 0x020079AA RID: 31146
+		// Token: 0x020081F3 RID: 33267
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013334 RID: 78644
+			// Token: 0x0401439B RID: 82843
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

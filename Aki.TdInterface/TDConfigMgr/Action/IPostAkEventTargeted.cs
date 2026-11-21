@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D3C RID: 7484
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F4D RID: 8013
 	public class IPostAkEventTargeted : IPostAkEventType
 	{
-		// Token: 0x0600A099 RID: 41113 RVA: 0x0016E534 File Offset: 0x0016C734
+		// Token: 0x0600AA85 RID: 43653 RVA: 0x00182958 File Offset: 0x00180B58
 		private IPostAkEventTargeted_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A09A RID: 41114 RVA: 0x0016E56C File Offset: 0x0016C76C
+		// Token: 0x0600AA86 RID: 43654 RVA: 0x00182990 File Offset: 0x00180B90
 		public static IPostAkEventTargeted Create([Nullable(2)] IPostAkEventTargeted instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A09B RID: 41115 RVA: 0x0016E57F File Offset: 0x0016C77F
+		// Token: 0x0600AA87 RID: 43655 RVA: 0x001829A3 File Offset: 0x00180BA3
 		public static IPostAkEventTargeted CreateFromSetValue([Nullable(2)] IPostAkEventTargeted_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A09C RID: 41116 RVA: 0x0016E592 File Offset: 0x0016C792
+		// Token: 0x0600AA88 RID: 43656 RVA: 0x001829B6 File Offset: 0x00180BB6
 		public new IPostAkEventTargeted_SetValue ToSetValue()
 		{
 			return new IPostAkEventTargeted_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031C9 RID: 12745
-		// (get) Token: 0x0600A09D RID: 41117 RVA: 0x0016E5BD File Offset: 0x0016C7BD
-		// (set) Token: 0x0600A09E RID: 41118 RVA: 0x0016E5E8 File Offset: 0x0016C7E8
+		// Token: 0x1700345D RID: 13405
+		// (get) Token: 0x0600AA89 RID: 43657 RVA: 0x001829E1 File Offset: 0x00180BE1
+		// (set) Token: 0x0600AA8A RID: 43658 RVA: 0x00182A0C File Offset: 0x00180C0C
 		public override EPostAkEvent Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031CA RID: 12746
-		// (get) Token: 0x0600A09F RID: 41119 RVA: 0x0016E5F6 File Offset: 0x0016C7F6
-		// (set) Token: 0x0600A0A0 RID: 41120 RVA: 0x0016E621 File Offset: 0x0016C821
+		// Token: 0x1700345E RID: 13406
+		// (get) Token: 0x0600AA8B RID: 43659 RVA: 0x00182A1A File Offset: 0x00180C1A
+		// (set) Token: 0x0600AA8C RID: 43660 RVA: 0x00182A45 File Offset: 0x00180C45
 		public virtual int EntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031CB RID: 12747
-		// (get) Token: 0x0600A0A1 RID: 41121 RVA: 0x0016E62F File Offset: 0x0016C82F
-		// (set) Token: 0x0600A0A2 RID: 41122 RVA: 0x0016E65A File Offset: 0x0016C85A
+		// Token: 0x1700345F RID: 13407
+		// (get) Token: 0x0600AA8D RID: 43661 RVA: 0x00182A53 File Offset: 0x00180C53
+		// (set) Token: 0x0600AA8E RID: 43662 RVA: 0x00182A7E File Offset: 0x00180C7E
 		public virtual string AkEvent
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060C6 RID: 24774
+		// Token: 0x04006642 RID: 26178
 		[Nullable(2)]
 		protected new IPostAkEventTargeted FbInstance;
 
-		// Token: 0x040060C7 RID: 24775
+		// Token: 0x04006643 RID: 26179
 		[Nullable(2)]
 		protected new IPostAkEventTargeted_SetValue PocoInterface;
 	}

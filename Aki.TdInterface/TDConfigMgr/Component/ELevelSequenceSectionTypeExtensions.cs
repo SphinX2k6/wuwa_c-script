@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200098C RID: 2444
+	// Token: 0x02000A3F RID: 2623
 	public static class ELevelSequenceSectionTypeExtensions
 	{
-		// Token: 0x060036A7 RID: 13991 RVA: 0x0008E56C File Offset: 0x0008C76C
+		// Token: 0x06003A2E RID: 14894 RVA: 0x000964D8 File Offset: 0x000946D8
 		public static string ToEnumString(this ELevelSequenceSectionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036A8 RID: 13992 RVA: 0x0008E5A4 File Offset: 0x0008C7A4
+		// Token: 0x06003A2F RID: 14895 RVA: 0x00096510 File Offset: 0x00094710
 		public static ELevelSequenceSectionType FromString(string name)
 		{
 			ELevelSequenceSectionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036A9 RID: 13993 RVA: 0x0008E5CD File Offset: 0x0008C7CD
+		// Token: 0x06003A30 RID: 14896 RVA: 0x00096539 File Offset: 0x00094739
 		public static bool TryFromString(string name, out ELevelSequenceSectionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060036AA RID: 13994 RVA: 0x0008E606 File Offset: 0x0008C806
+		// Token: 0x06003A31 RID: 14897 RVA: 0x00096572 File Offset: 0x00094772
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036AB RID: 13995 RVA: 0x0008E61E File Offset: 0x0008C81E
+		// Token: 0x06003A32 RID: 14898 RVA: 0x0009658A File Offset: 0x0009478A
 		public static ELevelSequenceSectionType[] GetValues()
 		{
 			return new ELevelSequenceSectionType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036AC RID: 13996 RVA: 0x0008E62A File Offset: 0x0008C82A
+		// Token: 0x06003A33 RID: 14899 RVA: 0x00096596 File Offset: 0x00094796
 		public static string[] GetNames()
 		{
 			return new string[]

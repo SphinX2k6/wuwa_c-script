@@ -7,11 +7,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000056 RID: 86
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class DragActorPlayComponent : IComponentBase
 	{
-		// Token: 0x060002E2 RID: 738 RVA: 0x0001AA4C File Offset: 0x00018C4C
+		// Token: 0x060002E6 RID: 742 RVA: 0x0001B3C0 File Offset: 0x000195C0
 		private DragActorPlayComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060002E3 RID: 739 RVA: 0x0001AA84 File Offset: 0x00018C84
+		// Token: 0x060002E7 RID: 743 RVA: 0x0001B3F8 File Offset: 0x000195F8
 		public static DragActorPlayComponent Create([Nullable(2)] DragActorPlayComponent instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060002E4 RID: 740 RVA: 0x0001AA97 File Offset: 0x00018C97
+		// Token: 0x060002E8 RID: 744 RVA: 0x0001B40B File Offset: 0x0001960B
 		public static DragActorPlayComponent CreateFromSetValue([Nullable(2)] DragActorPlayComponent_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060002E5 RID: 741 RVA: 0x0001AAAC File Offset: 0x00018CAC
+		// Token: 0x060002E9 RID: 745 RVA: 0x0001B420 File Offset: 0x00019620
 		public new DragActorPlayComponent_SetValue ToSetValue()
 		{
 			return new DragActorPlayComponent_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000102 RID: 258
-		// (get) Token: 0x060002E6 RID: 742 RVA: 0x0001AAFC File Offset: 0x00018CFC
-		// (set) Token: 0x060002E7 RID: 743 RVA: 0x0001AB36 File Offset: 0x00018D36
+		// Token: 0x17000104 RID: 260
+		// (get) Token: 0x060002EA RID: 746 RVA: 0x0001B470 File Offset: 0x00019670
+		// (set) Token: 0x060002EB RID: 747 RVA: 0x0001B4AA File Offset: 0x000196AA
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000103 RID: 259
-		// (get) Token: 0x060002E8 RID: 744 RVA: 0x0001AB44 File Offset: 0x00018D44
-		// (set) Token: 0x060002E9 RID: 745 RVA: 0x0001AB6E File Offset: 0x00018D6E
+		// Token: 0x17000105 RID: 261
+		// (get) Token: 0x060002EC RID: 748 RVA: 0x0001B4B8 File Offset: 0x000196B8
+		// (set) Token: 0x060002ED RID: 749 RVA: 0x0001B4E2 File Offset: 0x000196E2
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000104 RID: 260
-		// (get) Token: 0x060002EA RID: 746 RVA: 0x0001AB7C File Offset: 0x00018D7C
-		// (set) Token: 0x060002EB RID: 747 RVA: 0x0001AC0F File Offset: 0x00018E0F
+		// Token: 0x17000106 RID: 262
+		// (get) Token: 0x060002EE RID: 750 RVA: 0x0001B4F0 File Offset: 0x000196F0
+		// (set) Token: 0x060002EF RID: 751 RVA: 0x0001B583 File Offset: 0x00019783
 		public virtual List<IDragActorPlayConfig> Configs
 		{
 			get
@@ -146,9 +144,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000105 RID: 261
-		// (get) Token: 0x060002EC RID: 748 RVA: 0x0001AC24 File Offset: 0x00018E24
-		// (set) Token: 0x060002ED RID: 749 RVA: 0x0001AC4B File Offset: 0x00018E4B
+		// Token: 0x17000107 RID: 263
+		// (get) Token: 0x060002F0 RID: 752 RVA: 0x0001B598 File Offset: 0x00019798
+		// (set) Token: 0x060002F1 RID: 753 RVA: 0x0001B5BF File Offset: 0x000197BF
 		[Nullable(2)]
 		public virtual string ExitSendSelfEvent
 		{
@@ -173,20 +171,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000106 RID: 262
-		// (get) Token: 0x060002EE RID: 750 RVA: 0x0001AC59 File Offset: 0x00018E59
-		// (set) Token: 0x060002EF RID: 751 RVA: 0x0001AC70 File Offset: 0x00018E70
+		// Token: 0x17000108 RID: 264
+		// (get) Token: 0x060002F2 RID: 754 RVA: 0x0001B5CD File Offset: 0x000197CD
+		// (set) Token: 0x060002F3 RID: 755 RVA: 0x0001B5E4 File Offset: 0x000197E4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IActorRef> EdSequenceActorRefs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -199,7 +197,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -207,18 +205,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040001DB RID: 475
+		// Token: 0x040001E0 RID: 480
 		[Nullable(2)]
 		protected new DragActorPlayComponent FbInstance;
 
-		// Token: 0x040001DC RID: 476
+		// Token: 0x040001E1 RID: 481
 		[Nullable(2)]
 		protected new DragActorPlayComponent_SetValue PocoInterface;
 
-		// Token: 0x040001DD RID: 477
+		// Token: 0x040001E2 RID: 482
 		private List<IDragActorPlayConfig> _ConfigsCache;
 
-		// Token: 0x040001DE RID: 478
+		// Token: 0x040001E3 RID: 483
 		private bool _ConfigsInited;
 	}
 }

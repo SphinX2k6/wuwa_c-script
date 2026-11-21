@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200736E RID: 29550
+	// Token: 0x02007B4F RID: 31567
 	public class ITeammateTeleportConfig_UnionUnion
 	{
-		// Token: 0x1700E057 RID: 57431
-		// (get) Token: 0x06035A12 RID: 219666 RVA: 0x0074D881 File Offset: 0x0074BA81
-		// (set) Token: 0x06035A13 RID: 219667 RVA: 0x0074D889 File Offset: 0x0074BA89
+		// Token: 0x1700EC62 RID: 60514
+		// (get) Token: 0x06038D8B RID: 232843 RVA: 0x007AFABD File Offset: 0x007ADCBD
+		// (set) Token: 0x06038D8C RID: 232844 RVA: 0x007AFAC5 File Offset: 0x007ADCC5
 		public ITeammateTeleportConfig_Union Type { get; set; }
 
-		// Token: 0x1700E058 RID: 57432
-		// (get) Token: 0x06035A14 RID: 219668 RVA: 0x0074D892 File Offset: 0x0074BA92
-		// (set) Token: 0x06035A15 RID: 219669 RVA: 0x0074D89A File Offset: 0x0074BA9A
+		// Token: 0x1700EC63 RID: 60515
+		// (get) Token: 0x06038D8D RID: 232845 RVA: 0x007AFACE File Offset: 0x007ADCCE
+		// (set) Token: 0x06038D8E RID: 232846 RVA: 0x007AFAD6 File Offset: 0x007ADCD6
 		public object Value { get; set; }
 
-		// Token: 0x06035A16 RID: 219670 RVA: 0x0074D8A3 File Offset: 0x0074BAA3
+		// Token: 0x06038D8F RID: 232847 RVA: 0x007AFADF File Offset: 0x007ADCDF
 		public ITeammateTeleportConfig_UnionUnion()
 		{
 			this.Type = ITeammateTeleportConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06035A17 RID: 219671 RVA: 0x0074D8B9 File Offset: 0x0074BAB9
+		// Token: 0x06038D90 RID: 232848 RVA: 0x007AFAF5 File Offset: 0x007ADCF5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06035A18 RID: 219672 RVA: 0x0074D8CB File Offset: 0x0074BACB
+		// Token: 0x06038D91 RID: 232849 RVA: 0x007AFB07 File Offset: 0x007ADD07
 		public ITeammateTeleportConfigT AsITeammateTeleportConfig()
 		{
 			return this.As<ITeammateTeleportConfigT>();
 		}
 
-		// Token: 0x06035A19 RID: 219673 RVA: 0x0074D8D3 File Offset: 0x0074BAD3
+		// Token: 0x06038D92 RID: 232850 RVA: 0x007AFB0F File Offset: 0x007ADD0F
 		public static ITeammateTeleportConfig_UnionUnion FromITeammateTeleportConfig(ITeammateTeleportConfigT _iteammateteleportconfig)
 		{
 			return new ITeammateTeleportConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035A1A RID: 219674 RVA: 0x0074D8E8 File Offset: 0x0074BAE8
+		// Token: 0x06038D93 RID: 232851 RVA: 0x007AFB24 File Offset: 0x007ADD24
 		public ITelePortAfterTimeOutT AsITelePortAfterTimeOut()
 		{
 			return this.As<ITelePortAfterTimeOutT>();
 		}
 
-		// Token: 0x06035A1B RID: 219675 RVA: 0x0074D8F0 File Offset: 0x0074BAF0
+		// Token: 0x06038D94 RID: 232852 RVA: 0x007AFB2C File Offset: 0x007ADD2C
 		public static ITeammateTeleportConfig_UnionUnion FromITelePortAfterTimeOut(ITelePortAfterTimeOutT _iteleportaftertimeout)
 		{
 			return new ITeammateTeleportConfig_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035A1C RID: 219676 RVA: 0x0074D908 File Offset: 0x0074BB08
+		// Token: 0x06038D95 RID: 232853 RVA: 0x007AFB44 File Offset: 0x007ADD44
 		public static int Pack(FlatBufferBuilder builder, ITeammateTeleportConfig_UnionUnion _o)
 		{
 			ITeammateTeleportConfig_Union type = _o.Type;

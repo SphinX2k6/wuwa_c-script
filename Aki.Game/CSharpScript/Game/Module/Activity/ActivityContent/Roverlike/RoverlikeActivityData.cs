@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,12 +9,12 @@ using CSharpScript.Game.Module.PayShop;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060D9 RID: 24793
+	// Token: 0x02005057 RID: 20567
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeActivityData : ActivityBaseData
 	{
-		// Token: 0x0603EABA RID: 256698 RVA: 0x00F22F5C File Offset: 0x00F2115C
+		// Token: 0x0603377E RID: 210814 RVA: 0x00E69D24 File Offset: 0x00E67F24
 		protected override void PhraseEx(ActivityData data)
 		{
 			RoverRogueActivityData roverRogueActivityData = data.RoverRogueActivityData;
@@ -103,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshNewLootUnlockRedDot();
 		}
 
-		// Token: 0x0603EABB RID: 256699 RVA: 0x00F23230 File Offset: 0x00F21430
+		// Token: 0x0603377F RID: 210815 RVA: 0x00E69FF8 File Offset: 0x00E681F8
 		private void SyncLevelSelectLootFromEquipped()
 		{
 			RoverlikeLevelSelectData levelSelectDataInternal = this.LevelSelectDataInternal;
@@ -114,13 +113,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			levelSelectDataInternal.SelectedLootId = this.EquippedLootIdInternal;
 		}
 
-		// Token: 0x0603EABC RID: 256700 RVA: 0x00F23254 File Offset: 0x00F21454
+		// Token: 0x06033780 RID: 210816 RVA: 0x00E6A01C File Offset: 0x00E6821C
 		protected override bool GetExDataFinishShowState()
 		{
 			return this.QuestData.IsAllTaken() && this.IsAllShopGoodsBought();
 		}
 
-		// Token: 0x0603EABD RID: 256701 RVA: 0x00F2326C File Offset: 0x00F2146C
+		// Token: 0x06033781 RID: 210817 RVA: 0x00E6A034 File Offset: 0x00E68234
 		public bool IsAllShopGoodsBought()
 		{
 			RoverRogueActivity? paramConfig = this.GetParamConfig();
@@ -155,13 +154,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603EABE RID: 256702 RVA: 0x00F23344 File Offset: 0x00F21544
+		// Token: 0x06033782 RID: 210818 RVA: 0x00E6A10C File Offset: 0x00E6830C
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.QuestData.HasRedDot() || this.HasShopRedDot() || this.HasNewLevelUnlockRedDot();
 		}
 
-		// Token: 0x0603EABF RID: 256703 RVA: 0x00F23364 File Offset: 0x00F21564
+		// Token: 0x06033783 RID: 210819 RVA: 0x00E6A12C File Offset: 0x00E6832C
 		public bool HasShopRedDot()
 		{
 			RoverRogueActivity? paramConfig = this.GetParamConfig();
@@ -192,61 +191,61 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return false;
 		}
 
-		// Token: 0x0603EAC0 RID: 256704 RVA: 0x00F23468 File Offset: 0x00F21668
+		// Token: 0x06033784 RID: 210820 RVA: 0x00E6A230 File Offset: 0x00E68430
 		public RoverRogueActivity? GetParamConfig()
 		{
 			return RoverlikeConfig.Instance.GetActivityParamConfig(base.Id);
 		}
 
-		// Token: 0x0603EAC1 RID: 256705 RVA: 0x00F2347A File Offset: 0x00F2167A
+		// Token: 0x06033785 RID: 210821 RVA: 0x00E6A242 File Offset: 0x00E68442
 		public bool IsRoleTypeUnlocked(int roleTypeId)
 		{
 			return this.UnlockRoleTypeSetInternal.Contains(roleTypeId);
 		}
 
-		// Token: 0x0603EAC2 RID: 256706 RVA: 0x00F23488 File Offset: 0x00F21688
+		// Token: 0x06033786 RID: 210822 RVA: 0x00E6A250 File Offset: 0x00E68450
 		public void AddUnlockRoleType(int roleTypeId)
 		{
 			this.UnlockRoleTypeSetInternal.Add(roleTypeId);
 		}
 
-		// Token: 0x0603EAC3 RID: 256707 RVA: 0x00F23497 File Offset: 0x00F21697
+		// Token: 0x06033787 RID: 210823 RVA: 0x00E6A25F File Offset: 0x00E6845F
 		public bool IsBlessRoleUnlocked(int blessRoleId)
 		{
 			return this.UnlockBlessRoleIdSetInternal.Contains(blessRoleId);
 		}
 
-		// Token: 0x0603EAC4 RID: 256708 RVA: 0x00F234A5 File Offset: 0x00F216A5
+		// Token: 0x06033788 RID: 210824 RVA: 0x00E6A26D File Offset: 0x00E6846D
 		public void AddUnlockBlessRole(int blessRoleId)
 		{
 			this.UnlockBlessRoleIdSetInternal.Add(blessRoleId);
 		}
 
-		// Token: 0x0603EAC5 RID: 256709 RVA: 0x00F234B4 File Offset: 0x00F216B4
+		// Token: 0x06033789 RID: 210825 RVA: 0x00E6A27C File Offset: 0x00E6847C
 		public bool IsLootUnlocked(int lootId)
 		{
 			return this.UnlockLootIdSetInternal.Contains(lootId);
 		}
 
-		// Token: 0x0603EAC6 RID: 256710 RVA: 0x00F234C2 File Offset: 0x00F216C2
+		// Token: 0x0603378A RID: 210826 RVA: 0x00E6A28A File Offset: 0x00E6848A
 		public void AddUnlockLoot(int lootId)
 		{
 			this.UnlockLootIdSetInternal.Add(lootId);
 		}
 
-		// Token: 0x0603EAC7 RID: 256711 RVA: 0x00F234D1 File Offset: 0x00F216D1
+		// Token: 0x0603378B RID: 210827 RVA: 0x00E6A299 File Offset: 0x00E68499
 		public bool IsLootFeatureUnlocked()
 		{
 			return this.EquippedLootIdInternal > 0;
 		}
 
-		// Token: 0x0603EAC8 RID: 256712 RVA: 0x00F234DC File Offset: 0x00F216DC
+		// Token: 0x0603378C RID: 210828 RVA: 0x00E6A2A4 File Offset: 0x00E684A4
 		public int GetEquippedLootId()
 		{
 			return this.EquippedLootIdInternal;
 		}
 
-		// Token: 0x0603EAC9 RID: 256713 RVA: 0x00F234E4 File Offset: 0x00F216E4
+		// Token: 0x0603378D RID: 210829 RVA: 0x00E6A2AC File Offset: 0x00E684AC
 		public void SetEquippedLoot(int lootId)
 		{
 			int num = (lootId > 0) ? lootId : 0;
@@ -259,19 +258,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EACA RID: 256714 RVA: 0x00F23526 File Offset: 0x00F21726
+		// Token: 0x0603378E RID: 210830 RVA: 0x00E6A2EE File Offset: 0x00E684EE
 		public bool IsBlessUnlocked(int blessId)
 		{
 			return this.UnlockBlessIdSetInternal.Contains(blessId);
 		}
 
-		// Token: 0x0603EACB RID: 256715 RVA: 0x00F23534 File Offset: 0x00F21734
+		// Token: 0x0603378F RID: 210831 RVA: 0x00E6A2FC File Offset: 0x00E684FC
 		public bool IsItemUnlocked(int itemId)
 		{
 			return this.UnlockItemIdSetInternal.Contains(itemId);
 		}
 
-		// Token: 0x0603EACC RID: 256716 RVA: 0x00F23544 File Offset: 0x00F21744
+		// Token: 0x06033790 RID: 210832 RVA: 0x00E6A30C File Offset: 0x00E6850C
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -296,8 +295,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return new ValueTuple<int, int>(num2, num);
 		}
 
-		// Token: 0x17009125 RID: 37157
-		// (get) Token: 0x0603EACD RID: 256717 RVA: 0x00F235C0 File Offset: 0x00F217C0
+		// Token: 0x17006487 RID: 25735
+		// (get) Token: 0x06033791 RID: 210833 RVA: 0x00E6A388 File Offset: 0x00E68588
 		[Nullable(2)]
 		public RoverRogueHistoryInsInfo HistoryInsInfo
 		{
@@ -308,15 +307,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EACE RID: 256718 RVA: 0x00F235C8 File Offset: 0x00F217C8
+		// Token: 0x06033792 RID: 210834 RVA: 0x00E6A390 File Offset: 0x00E68590
 		public bool HasSaveProgress()
 		{
 			RoverRogueHistoryInsInfo historyInsInfoInternal = this.HistoryInsInfoInternal;
 			return ((historyInsInfoInternal != null) ? historyInsInfoInternal.CurInsId : 0) > 0;
 		}
 
-		// Token: 0x17009126 RID: 37158
-		// (get) Token: 0x0603EACF RID: 256719 RVA: 0x00F235DF File Offset: 0x00F217DF
+		// Token: 0x17006488 RID: 25736
+		// (get) Token: 0x06033793 RID: 210835 RVA: 0x00E6A3A7 File Offset: 0x00E685A7
 		public RoverlikeTalentTreeData TalentTreeData
 		{
 			get
@@ -325,8 +324,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009127 RID: 37159
-		// (get) Token: 0x0603EAD0 RID: 256720 RVA: 0x00F235E7 File Offset: 0x00F217E7
+		// Token: 0x17006489 RID: 25737
+		// (get) Token: 0x06033794 RID: 210836 RVA: 0x00E6A3AF File Offset: 0x00E685AF
 		public RoverlikeLevelSelectData LevelSelectData
 		{
 			get
@@ -335,13 +334,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EAD1 RID: 256721 RVA: 0x00F235EF File Offset: 0x00F217EF
+		// Token: 0x06033795 RID: 210837 RVA: 0x00E6A3B7 File Offset: 0x00E685B7
 		public bool HasNewLevelUnlockRedDot()
 		{
 			return this.HasNewLevelUnlockRedDotInternal;
 		}
 
-		// Token: 0x0603EAD2 RID: 256722 RVA: 0x00F235F8 File Offset: 0x00F217F8
+		// Token: 0x06033796 RID: 210838 RVA: 0x00E6A3C0 File Offset: 0x00E685C0
 		public void RefreshNewLevelUnlockRedDot()
 		{
 			RoverlikeLevelSelectData levelSelectDataInternal = this.LevelSelectDataInternal;
@@ -350,18 +349,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 				return;
 			}
 			List<int> unlockedInsIdList = levelSelectDataInternal.GetUnlockedInsIdList();
-			HashSet<int> seenIds = this.GetSeenUnlockedInsIds();
-			if (seenIds == null)
+			HashSet<int> seenUnlockedInsIds = this.GetSeenUnlockedInsIds();
+			if (seenUnlockedInsIds == null)
 			{
 				this.SaveSeenUnlockedInsIds(new HashSet<int>(unlockedInsIdList));
 				this.SetNewLevelUnlockRedDot(false);
 				return;
 			}
-			bool newLevelUnlockRedDot = unlockedInsIdList.Any((int instId) => !seenIds.Contains(instId));
+			bool newLevelUnlockRedDot = false;
+			foreach (int item in unlockedInsIdList)
+			{
+				if (!seenUnlockedInsIds.Contains(item))
+				{
+					newLevelUnlockRedDot = true;
+					break;
+				}
+			}
 			this.SetNewLevelUnlockRedDot(newLevelUnlockRedDot);
 		}
 
-		// Token: 0x0603EAD3 RID: 256723 RVA: 0x00F23660 File Offset: 0x00F21860
+		// Token: 0x06033797 RID: 210839 RVA: 0x00E6A450 File Offset: 0x00E68650
 		public void MarkLevelUnlockRedDotRead()
 		{
 			RoverlikeLevelSelectData levelSelectDataInternal = this.LevelSelectDataInternal;
@@ -373,7 +380,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SetNewLevelUnlockRedDot(false);
 		}
 
-		// Token: 0x0603EAD4 RID: 256724 RVA: 0x00F23690 File Offset: 0x00F21890
+		// Token: 0x06033798 RID: 210840 RVA: 0x00E6A480 File Offset: 0x00E68680
 		private void SetNewLevelUnlockRedDot(bool value)
 		{
 			if (this.HasNewLevelUnlockRedDotInternal == value)
@@ -384,41 +391,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603EAD5 RID: 256725 RVA: 0x00F236B9 File Offset: 0x00F218B9
+		// Token: 0x06033799 RID: 210841 RVA: 0x00E6A4A9 File Offset: 0x00E686A9
 		[NullableContext(2)]
 		private HashSet<int> GetSeenUnlockedInsIds()
 		{
 			return LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoverRogueSeenUnlockedInsIds, null);
 		}
 
-		// Token: 0x0603EAD6 RID: 256726 RVA: 0x00F236C6 File Offset: 0x00F218C6
+		// Token: 0x0603379A RID: 210842 RVA: 0x00E6A4B6 File Offset: 0x00E686B6
 		private void SaveSeenUnlockedInsIds(HashSet<int> ids)
 		{
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoverRogueSeenUnlockedInsIds, ids);
 		}
 
-		// Token: 0x0603EAD7 RID: 256727 RVA: 0x00F236D4 File Offset: 0x00F218D4
+		// Token: 0x0603379B RID: 210843 RVA: 0x00E6A4C4 File Offset: 0x00E686C4
 		public bool HasNewBlessUnlockRedDot()
 		{
 			return this.HasNewBlessUnlockRedDotInternal;
 		}
 
-		// Token: 0x0603EAD8 RID: 256728 RVA: 0x00F236DC File Offset: 0x00F218DC
+		// Token: 0x0603379C RID: 210844 RVA: 0x00E6A4CC File Offset: 0x00E686CC
 		public IReadOnlySet<int> GetNewUnlockedBlessIds()
 		{
 			return this.NewUnlockedBlessIdSetInternal;
 		}
 
-		// Token: 0x0603EAD9 RID: 256729 RVA: 0x00F236E4 File Offset: 0x00F218E4
+		// Token: 0x0603379D RID: 210845 RVA: 0x00E6A4D4 File Offset: 0x00E686D4
 		public bool IsBlessNewUnlocked(int blessId)
 		{
 			return this.NewUnlockedBlessIdSetInternal.Contains(blessId);
 		}
 
-		// Token: 0x0603EADA RID: 256730 RVA: 0x00F236F4 File Offset: 0x00F218F4
+		// Token: 0x0603379E RID: 210846 RVA: 0x00E6A4E4 File Offset: 0x00E686E4
 		public void RefreshNewBlessUnlockRedDot()
 		{
-			List<int> list = this.UnlockBlessIdSetInternal.ToList<int>();
+			List<int> list = new List<int>(this.UnlockBlessIdSetInternal);
 			HashSet<int> seenUnlockedBlessIds = this.GetSeenUnlockedBlessIds();
 			if (seenUnlockedBlessIds == null)
 			{
@@ -438,26 +445,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SetNewBlessUnlockRedDot(this.NewUnlockedBlessIdSetInternal.Count > 0);
 		}
 
-		// Token: 0x0603EADB RID: 256731 RVA: 0x00F237A8 File Offset: 0x00F219A8
+		// Token: 0x0603379F RID: 210847 RVA: 0x00E6A598 File Offset: 0x00E68798
 		public void MarkBlessUnlockRedDotRead()
 		{
 			this.SaveSeenUnlockedBlessIds(new HashSet<int>(this.UnlockBlessIdSetInternal));
 			this.SetNewBlessUnlockRedDot(false);
 		}
 
-		// Token: 0x0603EADC RID: 256732 RVA: 0x00F237C2 File Offset: 0x00F219C2
+		// Token: 0x060337A0 RID: 210848 RVA: 0x00E6A5B2 File Offset: 0x00E687B2
 		public void ClearNewUnlockedBlessIds()
 		{
 			this.NewUnlockedBlessIdSetInternal.Clear();
 		}
 
-		// Token: 0x0603EADD RID: 256733 RVA: 0x00F237CF File Offset: 0x00F219CF
+		// Token: 0x060337A1 RID: 210849 RVA: 0x00E6A5BF File Offset: 0x00E687BF
 		public void MarkBlessNewUnlockedRead(int blessId)
 		{
 			this.NewUnlockedBlessIdSetInternal.Remove(blessId);
 		}
 
-		// Token: 0x0603EADE RID: 256734 RVA: 0x00F237DE File Offset: 0x00F219DE
+		// Token: 0x060337A2 RID: 210850 RVA: 0x00E6A5CE File Offset: 0x00E687CE
 		private void SetNewBlessUnlockRedDot(bool value)
 		{
 			if (this.HasNewBlessUnlockRedDotInternal == value)
@@ -468,41 +475,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603EADF RID: 256735 RVA: 0x00F23807 File Offset: 0x00F21A07
+		// Token: 0x060337A3 RID: 210851 RVA: 0x00E6A5F7 File Offset: 0x00E687F7
 		[NullableContext(2)]
 		private HashSet<int> GetSeenUnlockedBlessIds()
 		{
 			return LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoverRogueSeenUnlockedBlessIds, null);
 		}
 
-		// Token: 0x0603EAE0 RID: 256736 RVA: 0x00F23814 File Offset: 0x00F21A14
+		// Token: 0x060337A4 RID: 210852 RVA: 0x00E6A604 File Offset: 0x00E68804
 		private void SaveSeenUnlockedBlessIds(HashSet<int> ids)
 		{
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoverRogueSeenUnlockedBlessIds, ids);
 		}
 
-		// Token: 0x0603EAE1 RID: 256737 RVA: 0x00F23822 File Offset: 0x00F21A22
+		// Token: 0x060337A5 RID: 210853 RVA: 0x00E6A612 File Offset: 0x00E68812
 		public bool HasNewLootUnlockRedDot()
 		{
 			return this.IsLootFeatureUnlocked() && this.HasNewLootUnlockRedDotInternal;
 		}
 
-		// Token: 0x0603EAE2 RID: 256738 RVA: 0x00F23834 File Offset: 0x00F21A34
+		// Token: 0x060337A6 RID: 210854 RVA: 0x00E6A624 File Offset: 0x00E68824
 		public IReadOnlySet<int> GetNewUnlockedLootIds()
 		{
 			return this.NewUnlockedLootIdSetInternal;
 		}
 
-		// Token: 0x0603EAE3 RID: 256739 RVA: 0x00F2383C File Offset: 0x00F21A3C
+		// Token: 0x060337A7 RID: 210855 RVA: 0x00E6A62C File Offset: 0x00E6882C
 		public bool IsLootNewUnlocked(int lootId)
 		{
 			return this.NewUnlockedLootIdSetInternal.Contains(lootId);
 		}
 
-		// Token: 0x0603EAE4 RID: 256740 RVA: 0x00F2384C File Offset: 0x00F21A4C
+		// Token: 0x060337A8 RID: 210856 RVA: 0x00E6A63C File Offset: 0x00E6883C
 		public void RefreshNewLootUnlockRedDot()
 		{
-			List<int> list = this.UnlockLootIdSetInternal.ToList<int>();
+			List<int> list = new List<int>(this.UnlockLootIdSetInternal);
 			HashSet<int> seenUnlockedLootIds = this.GetSeenUnlockedLootIds();
 			if (seenUnlockedLootIds == null)
 			{
@@ -522,26 +529,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SetNewLootUnlockRedDot(this.NewUnlockedLootIdSetInternal.Count > 0);
 		}
 
-		// Token: 0x0603EAE5 RID: 256741 RVA: 0x00F23900 File Offset: 0x00F21B00
+		// Token: 0x060337A9 RID: 210857 RVA: 0x00E6A6F0 File Offset: 0x00E688F0
 		public void MarkLootUnlockRedDotRead()
 		{
 			this.SaveSeenUnlockedLootIds(new HashSet<int>(this.UnlockLootIdSetInternal));
 			this.SetNewLootUnlockRedDot(false);
 		}
 
-		// Token: 0x0603EAE6 RID: 256742 RVA: 0x00F2391A File Offset: 0x00F21B1A
+		// Token: 0x060337AA RID: 210858 RVA: 0x00E6A70A File Offset: 0x00E6890A
 		public void ClearNewUnlockedLootIds()
 		{
 			this.NewUnlockedLootIdSetInternal.Clear();
 		}
 
-		// Token: 0x0603EAE7 RID: 256743 RVA: 0x00F23927 File Offset: 0x00F21B27
+		// Token: 0x060337AB RID: 210859 RVA: 0x00E6A717 File Offset: 0x00E68917
 		public void MarkLootNewUnlockedRead(int lootId)
 		{
 			this.NewUnlockedLootIdSetInternal.Remove(lootId);
 		}
 
-		// Token: 0x0603EAE8 RID: 256744 RVA: 0x00F23936 File Offset: 0x00F21B36
+		// Token: 0x060337AC RID: 210860 RVA: 0x00E6A726 File Offset: 0x00E68926
 		private void SetNewLootUnlockRedDot(bool value)
 		{
 			if (this.HasNewLootUnlockRedDotInternal == value)
@@ -552,21 +559,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603EAE9 RID: 256745 RVA: 0x00F2395F File Offset: 0x00F21B5F
+		// Token: 0x060337AD RID: 210861 RVA: 0x00E6A74F File Offset: 0x00E6894F
 		[NullableContext(2)]
 		private HashSet<int> GetSeenUnlockedLootIds()
 		{
 			return LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoverRogueSeenUnlockedLootIds, null);
 		}
 
-		// Token: 0x0603EAEA RID: 256746 RVA: 0x00F2396C File Offset: 0x00F21B6C
+		// Token: 0x060337AE RID: 210862 RVA: 0x00E6A75C File Offset: 0x00E6895C
 		private void SaveSeenUnlockedLootIds(HashSet<int> ids)
 		{
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoverRogueSeenUnlockedLootIds, ids);
 		}
 
-		// Token: 0x17009128 RID: 37160
-		// (get) Token: 0x0603EAEB RID: 256747 RVA: 0x00F2397C File Offset: 0x00F21B7C
+		// Token: 0x1700648A RID: 25738
+		// (get) Token: 0x060337AF RID: 210863 RVA: 0x00E6A76C File Offset: 0x00E6896C
 		public RoverlikeQuestData QuestData
 		{
 			get
@@ -580,7 +587,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EAEC RID: 256748 RVA: 0x00F239A4 File Offset: 0x00F21BA4
+		// Token: 0x060337B0 RID: 210864 RVA: 0x00E6A794 File Offset: 0x00E68994
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -593,7 +600,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return new ValueTuple<int, int>(questData.GetTakenCount(), questData.GetTotalCount());
 		}
 
-		// Token: 0x0603EAED RID: 256749 RVA: 0x00F239CC File Offset: 0x00F21BCC
+		// Token: 0x060337B1 RID: 210865 RVA: 0x00E6A7BC File Offset: 0x00E689BC
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -637,52 +644,52 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return new ValueTuple<int, int>(num, num2);
 		}
 
-		// Token: 0x04020C35 RID: 134197
+		// Token: 0x0401B562 RID: 111970
 		private readonly HashSet<int> UnlockRoleTypeSetInternal = new HashSet<int>();
 
-		// Token: 0x04020C36 RID: 134198
+		// Token: 0x0401B563 RID: 111971
 		private readonly HashSet<int> UnlockBlessRoleIdSetInternal = new HashSet<int>();
 
-		// Token: 0x04020C37 RID: 134199
+		// Token: 0x0401B564 RID: 111972
 		private readonly HashSet<int> UnlockLootIdSetInternal = new HashSet<int>();
 
-		// Token: 0x04020C38 RID: 134200
+		// Token: 0x0401B565 RID: 111973
 		private int EquippedLootIdInternal;
 
-		// Token: 0x04020C39 RID: 134201
+		// Token: 0x0401B566 RID: 111974
 		private readonly HashSet<int> UnlockBlessIdSetInternal = new HashSet<int>();
 
-		// Token: 0x04020C3A RID: 134202
+		// Token: 0x0401B567 RID: 111975
 		private readonly HashSet<int> UnlockItemIdSetInternal = new HashSet<int>();
 
-		// Token: 0x04020C3B RID: 134203
+		// Token: 0x0401B568 RID: 111976
 		[Nullable(2)]
 		private RoverRogueHistoryInsInfo HistoryInsInfoInternal;
 
-		// Token: 0x04020C3C RID: 134204
+		// Token: 0x0401B569 RID: 111977
 		[Nullable(2)]
 		private RoverlikeTalentTreeData TalentTreeDataInternal;
 
-		// Token: 0x04020C3D RID: 134205
+		// Token: 0x0401B56A RID: 111978
 		[Nullable(2)]
 		private RoverlikeLevelSelectData LevelSelectDataInternal;
 
-		// Token: 0x04020C3E RID: 134206
+		// Token: 0x0401B56B RID: 111979
 		private bool HasNewLevelUnlockRedDotInternal;
 
-		// Token: 0x04020C3F RID: 134207
+		// Token: 0x0401B56C RID: 111980
 		private bool HasNewBlessUnlockRedDotInternal;
 
-		// Token: 0x04020C40 RID: 134208
+		// Token: 0x0401B56D RID: 111981
 		private readonly HashSet<int> NewUnlockedBlessIdSetInternal = new HashSet<int>();
 
-		// Token: 0x04020C41 RID: 134209
+		// Token: 0x0401B56E RID: 111982
 		private bool HasNewLootUnlockRedDotInternal;
 
-		// Token: 0x04020C42 RID: 134210
+		// Token: 0x0401B56F RID: 111983
 		private readonly HashSet<int> NewUnlockedLootIdSetInternal = new HashSet<int>();
 
-		// Token: 0x04020C43 RID: 134211
+		// Token: 0x0401B570 RID: 111984
 		[Nullable(2)]
 		private RoverlikeQuestData QuestDataInternal;
 	}

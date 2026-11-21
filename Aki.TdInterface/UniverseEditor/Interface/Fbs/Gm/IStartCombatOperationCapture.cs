@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046A8 RID: 18088
+	// Token: 0x02004B10 RID: 19216
 	public struct IStartCombatOperationCapture : IFlatbufferObject
 	{
-		// Token: 0x1700807B RID: 32891
-		// (get) Token: 0x0601B7AF RID: 112559 RVA: 0x003E6DBF File Offset: 0x003E4FBF
+		// Token: 0x170086BC RID: 34492
+		// (get) Token: 0x0601CF84 RID: 118660 RVA: 0x0041305B File Offset: 0x0041125B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B7B0 RID: 112560 RVA: 0x003E6DCC File Offset: 0x003E4FCC
+		// Token: 0x0601CF85 RID: 118661 RVA: 0x00413068 File Offset: 0x00411268
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B7B1 RID: 112561 RVA: 0x003E6DD4 File Offset: 0x003E4FD4
+		// Token: 0x0601CF86 RID: 118662 RVA: 0x00413070 File Offset: 0x00411270
 		public static IStartCombatOperationCapture GetRootAsIStartCombatOperationCapture(ByteBuffer _bb)
 		{
 			return IStartCombatOperationCapture.GetRootAsIStartCombatOperationCapture(_bb, default(IStartCombatOperationCapture));
 		}
 
-		// Token: 0x0601B7B2 RID: 112562 RVA: 0x003E6DF0 File Offset: 0x003E4FF0
+		// Token: 0x0601CF87 RID: 118663 RVA: 0x0041308C File Offset: 0x0041128C
 		public static IStartCombatOperationCapture GetRootAsIStartCombatOperationCapture(ByteBuffer _bb, IStartCombatOperationCapture obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B7B3 RID: 112563 RVA: 0x003E6E0D File Offset: 0x003E500D
+		// Token: 0x0601CF88 RID: 118664 RVA: 0x004130A9 File Offset: 0x004112A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B7B4 RID: 112564 RVA: 0x003E6E1C File Offset: 0x003E501C
+		// Token: 0x0601CF89 RID: 118665 RVA: 0x004130B8 File Offset: 0x004112B8
 		public IStartCombatOperationCapture __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700807C RID: 32892
-		// (get) Token: 0x0601B7B5 RID: 112565 RVA: 0x003E6E2C File Offset: 0x003E502C
+		// Token: 0x170086BD RID: 34493
+		// (get) Token: 0x0601CF8A RID: 118666 RVA: 0x004130C8 File Offset: 0x004112C8
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x1700807D RID: 32893
-		// (get) Token: 0x0601B7B6 RID: 112566 RVA: 0x003E6E68 File Offset: 0x003E5068
+		// Token: 0x170086BE RID: 34494
+		// (get) Token: 0x0601CF8B RID: 118667 RVA: 0x00413104 File Offset: 0x00411304
 		public string FileId
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B7B7 RID: 112567 RVA: 0x003E6E9F File Offset: 0x003E509F
+		// Token: 0x0601CF8C RID: 118668 RVA: 0x0041313B File Offset: 0x0041133B
 		public Span<byte> GetFileIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601B7B8 RID: 112568 RVA: 0x003E6EAE File Offset: 0x003E50AE
+		// Token: 0x0601CF8D RID: 118669 RVA: 0x0041314A File Offset: 0x0041134A
 		public byte[] GetFileIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601B7B9 RID: 112569 RVA: 0x003E6EBC File Offset: 0x003E50BC
+		// Token: 0x0601CF8E RID: 118670 RVA: 0x00413158 File Offset: 0x00411358
 		public static Offset<IStartCombatOperationCapture> CreateIStartCombatOperationCapture(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, StringOffset FileIdOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IStartCombatOperationCapture.EndIStartCombatOperationCapture(builder);
 		}
 
-		// Token: 0x0601B7BA RID: 112570 RVA: 0x003E6ED9 File Offset: 0x003E50D9
+		// Token: 0x0601CF8F RID: 118671 RVA: 0x00413175 File Offset: 0x00411375
 		public static void StartIStartCombatOperationCapture(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601B7BB RID: 112571 RVA: 0x003E6EE2 File Offset: 0x003E50E2
+		// Token: 0x0601CF90 RID: 118672 RVA: 0x0041317E File Offset: 0x0041137E
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B7BC RID: 112572 RVA: 0x003E6EED File Offset: 0x003E50ED
+		// Token: 0x0601CF91 RID: 118673 RVA: 0x00413189 File Offset: 0x00411389
 		public static void AddFileId(FlatBufferBuilder builder, StringOffset fileIdOffset)
 		{
 			builder.AddOffset(1, fileIdOffset.Value, 0);
 		}
 
-		// Token: 0x0601B7BD RID: 112573 RVA: 0x003E6EFD File Offset: 0x003E50FD
+		// Token: 0x0601CF92 RID: 118674 RVA: 0x00413199 File Offset: 0x00411399
 		public static Offset<IStartCombatOperationCapture> EndIStartCombatOperationCapture(FlatBufferBuilder builder)
 		{
 			return new Offset<IStartCombatOperationCapture>(builder.EndTable());
 		}
 
-		// Token: 0x0601B7BE RID: 112574 RVA: 0x003E6F0C File Offset: 0x003E510C
+		// Token: 0x0601CF93 RID: 118675 RVA: 0x004131A8 File Offset: 0x004113A8
 		public IStartCombatOperationCaptureT UnPack()
 		{
 			IStartCombatOperationCaptureT startCombatOperationCaptureT = new IStartCombatOperationCaptureT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return startCombatOperationCaptureT;
 		}
 
-		// Token: 0x0601B7BF RID: 112575 RVA: 0x003E6F27 File Offset: 0x003E5127
+		// Token: 0x0601CF94 RID: 118676 RVA: 0x004131C3 File Offset: 0x004113C3
 		public void UnPackTo(IStartCombatOperationCaptureT _o)
 		{
 			_o.Type = this.Type;
 			_o.FileId = this.FileId;
 		}
 
-		// Token: 0x0601B7C0 RID: 112576 RVA: 0x003E6F44 File Offset: 0x003E5144
+		// Token: 0x0601CF95 RID: 118677 RVA: 0x004131E0 File Offset: 0x004113E0
 		public static Offset<IStartCombatOperationCapture> Pack(FlatBufferBuilder builder, IStartCombatOperationCaptureT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IStartCombatOperationCapture.CreateIStartCombatOperationCapture(builder, _o.Type, fileIdOffset);
 		}
 
-		// Token: 0x0400C873 RID: 51315
+		// Token: 0x0400D2A2 RID: 53922
 		private Table __p;
 	}
 }

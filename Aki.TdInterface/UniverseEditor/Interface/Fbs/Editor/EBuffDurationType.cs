@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004804 RID: 18436
+	// Token: 0x02004C6C RID: 19564
 	public enum EBuffDurationType : byte
 	{
-		// Token: 0x0400CCB1 RID: 52401
+		// Token: 0x0400D6EB RID: 55019
 		Instant,
-		// Token: 0x0400CCB2 RID: 52402
+		// Token: 0x0400D6EC RID: 55020
 		Permanent,
-		// Token: 0x0400CCB3 RID: 52403
+		// Token: 0x0400D6ED RID: 55021
 		HasDuration
 	}
 }

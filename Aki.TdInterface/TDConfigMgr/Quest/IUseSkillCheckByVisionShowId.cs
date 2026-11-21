@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011EA RID: 4586
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001326 RID: 4902
 	public class IUseSkillCheckByVisionShowId : IUseSkillCheckBase
 	{
-		// Token: 0x06006820 RID: 26656 RVA: 0x000F8D74 File Offset: 0x000F6F74
+		// Token: 0x06006E61 RID: 28257 RVA: 0x00106680 File Offset: 0x00104880
 		private IUseSkillCheckByVisionShowId_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006821 RID: 26657 RVA: 0x000F8DAC File Offset: 0x000F6FAC
+		// Token: 0x06006E62 RID: 28258 RVA: 0x001066B8 File Offset: 0x001048B8
 		public static IUseSkillCheckByVisionShowId Create([Nullable(2)] IUseSkillCheckByVisionShowId instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006822 RID: 26658 RVA: 0x000F8DBF File Offset: 0x000F6FBF
+		// Token: 0x06006E63 RID: 28259 RVA: 0x001066CB File Offset: 0x001048CB
 		public static IUseSkillCheckByVisionShowId CreateFromSetValue([Nullable(2)] IUseSkillCheckByVisionShowId_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006823 RID: 26659 RVA: 0x000F8DD2 File Offset: 0x000F6FD2
+		// Token: 0x06006E64 RID: 28260 RVA: 0x001066DE File Offset: 0x001048DE
 		public new IUseSkillCheckByVisionShowId_SetValue ToSetValue()
 		{
 			return new IUseSkillCheckByVisionShowId_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021B6 RID: 8630
-		// (get) Token: 0x06006824 RID: 26660 RVA: 0x000F8DF1 File Offset: 0x000F6FF1
-		// (set) Token: 0x06006825 RID: 26661 RVA: 0x000F8E1C File Offset: 0x000F701C
+		// Token: 0x17002377 RID: 9079
+		// (get) Token: 0x06006E65 RID: 28261 RVA: 0x001066FD File Offset: 0x001048FD
+		// (set) Token: 0x06006E66 RID: 28262 RVA: 0x00106728 File Offset: 0x00104928
 		public override EUseSkillCheckType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021B7 RID: 8631
-		// (get) Token: 0x06006826 RID: 26662 RVA: 0x000F8E2A File Offset: 0x000F702A
-		// (set) Token: 0x06006827 RID: 26663 RVA: 0x000F8E55 File Offset: 0x000F7055
+		// Token: 0x17002378 RID: 9080
+		// (get) Token: 0x06006E67 RID: 28263 RVA: 0x00106736 File Offset: 0x00104936
+		// (set) Token: 0x06006E68 RID: 28264 RVA: 0x00106761 File Offset: 0x00104961
 		public virtual int VisionId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E65 RID: 15973
+		// Token: 0x040041D3 RID: 16851
 		[Nullable(2)]
 		protected new IUseSkillCheckByVisionShowId FbInstance;
 
-		// Token: 0x04003E66 RID: 15974
+		// Token: 0x040041D4 RID: 16852
 		[Nullable(2)]
 		protected new IUseSkillCheckByVisionShowId_SetValue PocoInterface;
 	}

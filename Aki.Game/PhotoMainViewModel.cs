@@ -4,13 +4,13 @@ using Aki.Config;
 using AkiClient.Game.Aki.Data.Camera.PhotoCamera;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x0200257F RID: 9599
+// Token: 0x02001A6A RID: 6762
 [NullableContext(2)]
 [Nullable(0)]
 public class PhotoMainViewModel
 {
-	// Token: 0x17001905 RID: 6405
-	// (get) Token: 0x060136B6 RID: 79542 RVA: 0x004D6873 File Offset: 0x004D4A73
+	// Token: 0x1700193F RID: 6463
+	// (get) Token: 0x06010B97 RID: 68503 RVA: 0x004E529F File Offset: 0x004E349F
 	public PhotoCameraType CurrentMode
 	{
 		get
@@ -19,7 +19,7 @@ public class PhotoMainViewModel
 		}
 	}
 
-	// Token: 0x060136B7 RID: 79543 RVA: 0x004D687B File Offset: 0x004D4A7B
+	// Token: 0x06010B98 RID: 68504 RVA: 0x004E52A7 File Offset: 0x004E34A7
 	public UniTask PlaySwitchModeAnimAsync(PhotoCameraType target)
 	{
 		Func<PhotoCameraType, UniTask> onRequestPlaySwitchModeAnim = this.OnRequestPlaySwitchModeAnim;
@@ -30,7 +30,7 @@ public class PhotoMainViewModel
 		return onRequestPlaySwitchModeAnim(target);
 	}
 
-	// Token: 0x060136B8 RID: 79544 RVA: 0x004D6893 File Offset: 0x004D4A93
+	// Token: 0x06010B99 RID: 68505 RVA: 0x004E52BF File Offset: 0x004E34BF
 	public UniTask WaitSwitchModeAnimEndAsync(PhotoCameraType target)
 	{
 		Func<PhotoCameraType, UniTask> onRequestWaitSwitchModeAnimEnd = this.OnRequestWaitSwitchModeAnimEnd;
@@ -41,7 +41,7 @@ public class PhotoMainViewModel
 		return onRequestWaitSwitchModeAnimEnd(target);
 	}
 
-	// Token: 0x060136B9 RID: 79545 RVA: 0x004D68AB File Offset: 0x004D4AAB
+	// Token: 0x06010B9A RID: 68506 RVA: 0x004E52D7 File Offset: 0x004E34D7
 	public void SetMode(PhotoCameraType mode)
 	{
 		if (this.CurrentModeInternal == mode)
@@ -57,8 +57,8 @@ public class PhotoMainViewModel
 		onModeChanged(mode);
 	}
 
-	// Token: 0x17001906 RID: 6406
-	// (get) Token: 0x060136BA RID: 79546 RVA: 0x004D68CF File Offset: 0x004D4ACF
+	// Token: 0x17001940 RID: 6464
+	// (get) Token: 0x06010B9B RID: 68507 RVA: 0x004E52FB File Offset: 0x004E34FB
 	public bool IsSwitchingMode
 	{
 		get
@@ -67,7 +67,7 @@ public class PhotoMainViewModel
 		}
 	}
 
-	// Token: 0x060136BB RID: 79547 RVA: 0x004D68D7 File Offset: 0x004D4AD7
+	// Token: 0x06010B9C RID: 68508 RVA: 0x004E5303 File Offset: 0x004E3503
 	public void SetSwitchingMode(bool switching)
 	{
 		if (this.IsSwitchingModeInternal == switching)
@@ -83,8 +83,8 @@ public class PhotoMainViewModel
 		onSwitchingModeChanged(switching);
 	}
 
-	// Token: 0x17001907 RID: 6407
-	// (get) Token: 0x060136BC RID: 79548 RVA: 0x004D68FB File Offset: 0x004D4AFB
+	// Token: 0x17001941 RID: 6465
+	// (get) Token: 0x06010B9D RID: 68509 RVA: 0x004E5327 File Offset: 0x004E3527
 	public int CurrentTabId
 	{
 		get
@@ -93,7 +93,7 @@ public class PhotoMainViewModel
 		}
 	}
 
-	// Token: 0x060136BD RID: 79549 RVA: 0x004D6903 File Offset: 0x004D4B03
+	// Token: 0x06010B9E RID: 68510 RVA: 0x004E532F File Offset: 0x004E352F
 	public void SetTabId(int tabId)
 	{
 		if (this.CurrentTabIdInternal == tabId)
@@ -109,8 +109,8 @@ public class PhotoMainViewModel
 		onTabChanged(tabId);
 	}
 
-	// Token: 0x17001908 RID: 6408
-	// (get) Token: 0x060136BE RID: 79550 RVA: 0x004D6927 File Offset: 0x004D4B27
+	// Token: 0x17001942 RID: 6466
+	// (get) Token: 0x06010B9F RID: 68511 RVA: 0x004E5353 File Offset: 0x004E3553
 	public int LastTabId
 	{
 		get
@@ -119,14 +119,14 @@ public class PhotoMainViewModel
 		}
 	}
 
-	// Token: 0x060136BF RID: 79551 RVA: 0x004D692F File Offset: 0x004D4B2F
+	// Token: 0x06010BA0 RID: 68512 RVA: 0x004E535B File Offset: 0x004E355B
 	public void SetLastTabId(int tabId)
 	{
 		this.LastTabIdInternal = tabId;
 	}
 
-	// Token: 0x17001909 RID: 6409
-	// (get) Token: 0x060136C0 RID: 79552 RVA: 0x004D6938 File Offset: 0x004D4B38
+	// Token: 0x17001943 RID: 6467
+	// (get) Token: 0x06010BA1 RID: 68513 RVA: 0x004E5364 File Offset: 0x004E3564
 	public int CurrentStickerId
 	{
 		get
@@ -135,14 +135,14 @@ public class PhotoMainViewModel
 		}
 	}
 
-	// Token: 0x060136C1 RID: 79553 RVA: 0x004D6940 File Offset: 0x004D4B40
+	// Token: 0x06010BA2 RID: 68514 RVA: 0x004E536C File Offset: 0x004E356C
 	public void SetStickerId(int stickerId)
 	{
 		this.CurrentStickerIdInternal = stickerId;
 	}
 
-	// Token: 0x1700190A RID: 6410
-	// (get) Token: 0x060136C2 RID: 79554 RVA: 0x004D6949 File Offset: 0x004D4B49
+	// Token: 0x17001944 RID: 6468
+	// (get) Token: 0x06010BA3 RID: 68515 RVA: 0x004E5375 File Offset: 0x004E3575
 	public int CurrentFrameId
 	{
 		get
@@ -151,7 +151,7 @@ public class PhotoMainViewModel
 		}
 	}
 
-	// Token: 0x060136C3 RID: 79555 RVA: 0x004D6951 File Offset: 0x004D4B51
+	// Token: 0x06010BA4 RID: 68516 RVA: 0x004E537D File Offset: 0x004E357D
 	public void SetFrameId(int frameId)
 	{
 		if (this.CurrentFrameIdInternal == frameId)
@@ -167,123 +167,123 @@ public class PhotoMainViewModel
 		onFrameSelected(frameId);
 	}
 
-	// Token: 0x060136C4 RID: 79556 RVA: 0x004D6975 File Offset: 0x004D4B75
+	// Token: 0x06010BA5 RID: 68517 RVA: 0x004E53A1 File Offset: 0x004E35A1
 	public void ResetFrameId()
 	{
 		this.CurrentFrameIdInternal = 1;
 	}
 
-	// Token: 0x04009224 RID: 37412
+	// Token: 0x0400937C RID: 37756
 	private PhotoCameraType CurrentModeInternal;
 
-	// Token: 0x04009225 RID: 37413
+	// Token: 0x0400937D RID: 37757
 	public Action<PhotoCameraType> OnModeChanged;
 
-	// Token: 0x04009226 RID: 37414
+	// Token: 0x0400937E RID: 37758
 	public Func<PhotoCameraType, UniTask> OnRequestPlaySwitchModeAnim;
 
-	// Token: 0x04009227 RID: 37415
+	// Token: 0x0400937F RID: 37759
 	public Func<PhotoCameraType, UniTask> OnRequestWaitSwitchModeAnimEnd;
 
-	// Token: 0x04009228 RID: 37416
+	// Token: 0x04009380 RID: 37760
 	private bool IsSwitchingModeInternal;
 
-	// Token: 0x04009229 RID: 37417
+	// Token: 0x04009381 RID: 37761
 	public Action<bool> OnSwitchingModeChanged;
 
-	// Token: 0x0400922A RID: 37418
+	// Token: 0x04009382 RID: 37762
 	private int CurrentTabIdInternal;
 
-	// Token: 0x0400922B RID: 37419
+	// Token: 0x04009383 RID: 37763
 	public Action<int> OnTabChanged;
 
-	// Token: 0x0400922C RID: 37420
+	// Token: 0x04009384 RID: 37764
 	private int LastTabIdInternal;
 
-	// Token: 0x0400922D RID: 37421
+	// Token: 0x04009385 RID: 37765
 	public float FovInputValue;
 
-	// Token: 0x0400922E RID: 37422
+	// Token: 0x04009386 RID: 37766
 	public float MoveForwardInputValue;
 
-	// Token: 0x0400922F RID: 37423
+	// Token: 0x04009387 RID: 37767
 	public float MoveRightInputValue;
 
-	// Token: 0x04009230 RID: 37424
+	// Token: 0x04009388 RID: 37768
 	public float MoveUpInputValue;
 
-	// Token: 0x04009231 RID: 37425
+	// Token: 0x04009389 RID: 37769
 	public Action OnRequestClose;
 
-	// Token: 0x04009232 RID: 37426
+	// Token: 0x0400938A RID: 37770
 	public Action OnRequestHideUi;
 
-	// Token: 0x04009233 RID: 37427
+	// Token: 0x0400938B RID: 37771
 	public Action<bool> OnFilterDetailModeChanged;
 
-	// Token: 0x04009234 RID: 37428
+	// Token: 0x0400938C RID: 37772
 	public Action OnDetailPanelClosed;
 
-	// Token: 0x04009235 RID: 37429
+	// Token: 0x0400938D RID: 37773
 	public Action OnDetailPanelOpened;
 
-	// Token: 0x04009236 RID: 37430
+	// Token: 0x0400938E RID: 37774
 	public Action<PhotoSticker> OnRequestCreateSticker;
 
-	// Token: 0x04009237 RID: 37431
+	// Token: 0x0400938F RID: 37775
 	public Action OnRequestRemoveSticker;
 
-	// Token: 0x04009238 RID: 37432
+	// Token: 0x04009390 RID: 37776
 	public Action OnCameraReset;
 
-	// Token: 0x04009239 RID: 37433
+	// Token: 0x04009391 RID: 37777
 	private int CurrentStickerIdInternal = 1;
 
-	// Token: 0x0400923A RID: 37434
+	// Token: 0x04009392 RID: 37778
 	public Action<bool> OnStickerSelectedChanged;
 
-	// Token: 0x0400923B RID: 37435
+	// Token: 0x04009393 RID: 37779
 	public Action OnStickerRemoved;
 
-	// Token: 0x0400923C RID: 37436
+	// Token: 0x04009394 RID: 37780
 	public const int DEFAULT_FRAME_ID = 1;
 
-	// Token: 0x0400923D RID: 37437
+	// Token: 0x04009395 RID: 37781
 	private int CurrentFrameIdInternal = 1;
 
-	// Token: 0x0400923E RID: 37438
+	// Token: 0x04009396 RID: 37782
 	public Action<int> OnFrameSelected;
 
-	// Token: 0x0400923F RID: 37439
+	// Token: 0x04009397 RID: 37783
 	public const int DEFAULT_SELECT_ID = 1;
 
-	// Token: 0x04009240 RID: 37440
+	// Token: 0x04009398 RID: 37784
 	public int CurrentWeatherId;
 
-	// Token: 0x04009241 RID: 37441
+	// Token: 0x04009399 RID: 37785
 	public int CurrentWindId = 1;
 
-	// Token: 0x04009242 RID: 37442
+	// Token: 0x0400939A RID: 37786
 	public int CurrentWindStrength;
 
-	// Token: 0x04009243 RID: 37443
+	// Token: 0x0400939B RID: 37787
 	public int CurrentAtmosphereId = 1;
 
-	// Token: 0x04009244 RID: 37444
+	// Token: 0x0400939C RID: 37788
 	public int CurrentAtmosphereStrength;
 
-	// Token: 0x04009245 RID: 37445
+	// Token: 0x0400939D RID: 37789
 	public int CurrentLightId = 1;
 
-	// Token: 0x04009246 RID: 37446
+	// Token: 0x0400939E RID: 37790
 	public int CurrentLightDirection;
 
-	// Token: 0x04009247 RID: 37447
+	// Token: 0x0400939F RID: 37791
 	public int CurrentExpressionId = 1;
 
-	// Token: 0x04009248 RID: 37448
+	// Token: 0x040093A0 RID: 37792
 	public int CurrentSelfieMotionId = 1;
 
-	// Token: 0x04009249 RID: 37449
+	// Token: 0x040093A1 RID: 37793
 	public int CurrentTemplateId = 1;
 }

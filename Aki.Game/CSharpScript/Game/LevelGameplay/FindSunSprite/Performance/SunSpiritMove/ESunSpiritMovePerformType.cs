@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.SunSpiritMove
 {
-	// Token: 0x02006E55 RID: 28245
+	// Token: 0x02005FD6 RID: 24534
 	public enum ESunSpiritMovePerformType
 	{
-		// Token: 0x04023D1F RID: 146719
+		// Token: 0x0401EFD4 RID: 126932
 		Jump,
-		// Token: 0x04023D20 RID: 146720
+		// Token: 0x0401EFD5 RID: 126933
 		Run
 	}
 }

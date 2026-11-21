@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x02000F46 RID: 3910
+// Token: 0x020003FB RID: 1019
 public interface IDrinksMixRoleInfo
 {
-	// Token: 0x170007A7 RID: 1959
-	// (get) Token: 0x0600639F RID: 25503
-	// (set) Token: 0x060063A0 RID: 25504
+	// Token: 0x170007C9 RID: 1993
+	// (get) Token: 0x06003737 RID: 14135
+	// (set) Token: 0x06003738 RID: 14136
 	int RoleId { get; set; }
 
-	// Token: 0x170007A8 RID: 1960
-	// (get) Token: 0x060063A1 RID: 25505
-	// (set) Token: 0x060063A2 RID: 25506
+	// Token: 0x170007CA RID: 1994
+	// (get) Token: 0x06003739 RID: 14137
+	// (set) Token: 0x0600373A RID: 14138
 	bool FirstPass { get; set; }
 
-	// Token: 0x170007A9 RID: 1961
-	// (get) Token: 0x060063A3 RID: 25507
-	// (set) Token: 0x060063A4 RID: 25508
+	// Token: 0x170007CB RID: 1995
+	// (get) Token: 0x0600373B RID: 14139
+	// (set) Token: 0x0600373C RID: 14140
 	bool MaxLike { get; set; }
 
-	// Token: 0x170007AA RID: 1962
-	// (get) Token: 0x060063A5 RID: 25509
-	// (set) Token: 0x060063A6 RID: 25510
+	// Token: 0x170007CC RID: 1996
+	// (get) Token: 0x0600373D RID: 14141
+	// (set) Token: 0x0600373E RID: 14142
 	bool RewardGet { get; set; }
 }

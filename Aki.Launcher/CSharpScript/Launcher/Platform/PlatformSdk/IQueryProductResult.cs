@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000142 RID: 322
+	// Token: 0x02000146 RID: 326
 	public class IQueryProductResult
 	{
-		// Token: 0x040005FC RID: 1532
+		// Token: 0x04000637 RID: 1591
 		[Nullable(1)]
 		public string FailReason;
 
-		// Token: 0x040005FD RID: 1533
+		// Token: 0x04000638 RID: 1592
 		public bool NeedReLogin;
 
-		// Token: 0x040005FE RID: 1534
+		// Token: 0x04000639 RID: 1593
 		[Nullable(new byte[]
 		{
 			2,

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E2A RID: 20010
+	// Token: 0x02003DF3 RID: 15859
 	public class RoguelikeSkillDetail : UiPanelBase
 	{
-		// Token: 0x06033998 RID: 211352 RVA: 0x00C12758 File Offset: 0x00C10958
+		// Token: 0x06028803 RID: 165891 RVA: 0x00B5BC8C File Offset: 0x00B59E8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 18;
@@ -64,12 +64,12 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033999 RID: 211353 RVA: 0x00C12A19 File Offset: 0x00C10C19
+		// Token: 0x06028804 RID: 165892 RVA: 0x00B5BF4D File Offset: 0x00B5A14D
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x0603399A RID: 211354 RVA: 0x00C12A1C File Offset: 0x00C10C1C
+		// Token: 0x06028805 RID: 165893 RVA: 0x00B5BF50 File Offset: 0x00B5A150
 		private void OnClickBtnUpgrade()
 		{
 			int skillPoint = RoguelikeModel.Instance.GetParamConfigBySeasonId(null).Value.SkillPoint;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x0603399B RID: 211355 RVA: 0x00C12B30 File Offset: 0x00C10D30
+		// Token: 0x06028806 RID: 165894 RVA: 0x00B5C064 File Offset: 0x00B5A264
 		public void Refresh(RogueTalentTree data)
 		{
 			this.Data = new RogueTalentTree?(data);
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.UpdateDetail(num, isMax);
 		}
 
-		// Token: 0x0603399C RID: 211356 RVA: 0x00C12DF0 File Offset: 0x00C10FF0
+		// Token: 0x06028807 RID: 165895 RVA: 0x00B5C324 File Offset: 0x00B5A524
 		public void UpdateDetail(int level, bool isMax)
 		{
 			if (level < 0)
@@ -184,64 +184,64 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetItem(13).SetUIActive(isMax);
 		}
 
-		// Token: 0x0401B5EC RID: 112108
+		// Token: 0x04015FBF RID: 90047
 		public RogueTalentTree? Data;
 
-		// Token: 0x0200AFD7 RID: 45015
+		// Token: 0x02009A09 RID: 39433
 		private static class ERoguelikeSkillDetailDefine
 		{
-			// Token: 0x0403561E RID: 218654
+			// Token: 0x0403004E RID: 196686
 			public const int TxtSkillName = 0;
 
-			// Token: 0x0403561F RID: 218655
+			// Token: 0x0403004F RID: 196687
 			public const int SprSkillIcon = 1;
 
-			// Token: 0x04035620 RID: 218656
+			// Token: 0x04030050 RID: 196688
 			public const int PanelCurLevel = 2;
 
-			// Token: 0x04035621 RID: 218657
+			// Token: 0x04030051 RID: 196689
 			public const int TxtCurLevel = 3;
 
-			// Token: 0x04035622 RID: 218658
+			// Token: 0x04030052 RID: 196690
 			public const int TxtCurDesc = 4;
 
-			// Token: 0x04035623 RID: 218659
+			// Token: 0x04030053 RID: 196691
 			public const int PanelNextItem = 5;
 
-			// Token: 0x04035624 RID: 218660
+			// Token: 0x04030054 RID: 196692
 			public const int TxtNextLevel = 6;
 
-			// Token: 0x04035625 RID: 218661
+			// Token: 0x04030055 RID: 196693
 			public const int TxtNextDesc = 7;
 
-			// Token: 0x04035626 RID: 218662
+			// Token: 0x04030056 RID: 196694
 			public const int TxtCost = 8;
 
-			// Token: 0x04035627 RID: 218663
+			// Token: 0x04030057 RID: 196695
 			public const int BtnUpgrade = 9;
 
-			// Token: 0x04035628 RID: 218664
+			// Token: 0x04030058 RID: 196696
 			public const int TxtBtnUpgrade = 10;
 
-			// Token: 0x04035629 RID: 218665
+			// Token: 0x04030059 RID: 196697
 			public const int CostPanel = 11;
 
-			// Token: 0x0403562A RID: 218666
+			// Token: 0x0403005A RID: 196698
 			public const int TexCostIcon = 12;
 
-			// Token: 0x0403562B RID: 218667
+			// Token: 0x0403005B RID: 196699
 			public const int PanelMaxLevel = 13;
 
-			// Token: 0x0403562C RID: 218668
+			// Token: 0x0403005C RID: 196700
 			public const int PanelActivateCondition = 14;
 
-			// Token: 0x0403562D RID: 218669
+			// Token: 0x0403005D RID: 196701
 			public const int TxtActivateCondition = 15;
 
-			// Token: 0x0403562E RID: 218670
+			// Token: 0x0403005E RID: 196702
 			public const int PanelCost = 16;
 
-			// Token: 0x0403562F RID: 218671
+			// Token: 0x0403005F RID: 196703
 			public const int TexSkillIcon = 17;
 		}
 	}

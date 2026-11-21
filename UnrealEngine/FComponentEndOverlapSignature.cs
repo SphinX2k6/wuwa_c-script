@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000956 RID: 2390
+	// Token: 0x020001B1 RID: 433
 	[UnrealStructLayout(1, 1, UnrealReflectionPropertyTypeCode.MulticastSparseDelegate)]
 	public sealed class FComponentEndOverlapSignature : FSparseDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06008738 RID: 34616 RVA: 0x000C13BD File Offset: 0x000BF5BD
+		// Token: 0x06002018 RID: 8216 RVA: 0x0002ECB5 File Offset: 0x0002CEB5
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FComponentEndOverlapSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06008739 RID: 34617 RVA: 0x000C13C9 File Offset: 0x000BF5C9
+		// Token: 0x06002019 RID: 8217 RVA: 0x0002ECC1 File Offset: 0x0002CEC1
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FComponentEndOverlapSignature._FunctionPtr == IntPtr.Zero)
@@ -27,8 +27,8 @@ namespace UnrealEngine
 			return FComponentEndOverlapSignature._FunctionPtr;
 		}
 
-		// Token: 0x17001FFA RID: 8186
-		// (get) Token: 0x0600873A RID: 34618 RVA: 0x000C13EC File Offset: 0x000BF5EC
+		// Token: 0x17000479 RID: 1145
+		// (get) Token: 0x0600201A RID: 8218 RVA: 0x0002ECE4 File Offset: 0x0002CEE4
 		public override FName DelegateName
 		{
 			get
@@ -37,21 +37,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600873B RID: 34619 RVA: 0x000C13F3 File Offset: 0x000BF5F3
+		// Token: 0x0600201B RID: 8219 RVA: 0x0002ECEB File Offset: 0x0002CEEB
 		[NullableContext(2)]
 		public FComponentEndOverlapSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600873C RID: 34620 RVA: 0x000C13FD File Offset: 0x000BF5FD
+		// Token: 0x0600201C RID: 8220 RVA: 0x0002ECF5 File Offset: 0x0002CEF5
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int>) ?? ((Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int>)Delegate.CreateDelegate(typeof(Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0600873D RID: 34621 RVA: 0x000C1430 File Offset: 0x000BF630
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600201D RID: 8221 RVA: 0x0002ED28 File Offset: 0x0002CF28
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -73,8 +72,7 @@ namespace UnrealEngine
 			base.Add(delegateName, Callback, FComponentEndOverlapSignature.RegisterId);
 		}
 
-		// Token: 0x0600873E RID: 34622 RVA: 0x000C1480 File Offset: 0x000BF680
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600201E RID: 8222 RVA: 0x0002ED78 File Offset: 0x0002CF78
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -87,10 +85,9 @@ namespace UnrealEngine
 			base.Remove(delegateName, Callback);
 		}
 
-		// Token: 0x0600873F RID: 34623 RVA: 0x000C14A0 File Offset: 0x000BF6A0
+		// Token: 0x0600201F RID: 8223 RVA: 0x0002ED98 File Offset: 0x0002CF98
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UPrimitiveComponent OverlappedComponent, AActor OtherActor, UPrimitiveComponent OtherComp, int OtherBodyIndex)
 		{
 			FComponentEndOverlapSignature.__FComponentEndOverlapSignature_DelegateParams* ptr = stackalloc FComponentEndOverlapSignature.__FComponentEndOverlapSignature_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FComponentEndOverlapSignature.__FComponentEndOverlapSignature_DelegateParams) & -16L;
@@ -102,10 +99,9 @@ namespace UnrealEngine
 			FSparseDelegate.BroadcastInternal(base.GetOwner().NativePtr, this.DelegateName, (void*)ptr);
 		}
 
-		// Token: 0x06008740 RID: 34624 RVA: 0x000C1530 File Offset: 0x000BF730
+		// Token: 0x06002020 RID: 8224 RVA: 0x0002EE28 File Offset: 0x0002D028
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int> action = target as Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int>;
@@ -119,43 +115,43 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, orCreateUObjectByNativePointer3, ((FComponentEndOverlapSignature.__FComponentEndOverlapSignature_DelegateParams*)__Parameters)->OtherBodyIndex);
 		}
 
-		// Token: 0x04004057 RID: 16471
+		// Token: 0x04000AAC RID: 2732
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04004058 RID: 16472
+		// Token: 0x04000AAD RID: 2733
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ComponentEndOverlapSignature__DelegateSignature";
 
-		// Token: 0x04004059 RID: 16473
+		// Token: 0x04000AAE RID: 2734
 		private static int RegisterId;
 
-		// Token: 0x02002CCD RID: 11469
+		// Token: 0x02000989 RID: 2441
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FComponentEndOverlapSignature_DelegateParams
+		private ref struct __FComponentEndOverlapSignature_DelegateParams
 		{
-			// Token: 0x0401666D RID: 91757
+			// Token: 0x040058E2 RID: 22754
 			[FieldOffset(0)]
 			public IntPtr OverlappedComponent;
 
-			// Token: 0x0401666E RID: 91758
+			// Token: 0x040058E3 RID: 22755
 			[FieldOffset(8)]
 			public IntPtr OtherActor;
 
-			// Token: 0x0401666F RID: 91759
+			// Token: 0x040058E4 RID: 22756
 			[FieldOffset(16)]
 			public IntPtr OtherComp;
 
-			// Token: 0x04016670 RID: 91760
+			// Token: 0x040058E5 RID: 22757
 			[FieldOffset(24)]
 			public int OtherBodyIndex;
 		}
 
-		// Token: 0x02002CCE RID: 11470
+		// Token: 0x0200098A RID: 2442
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016671 RID: 91761
+			// Token: 0x040058E6 RID: 22758
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

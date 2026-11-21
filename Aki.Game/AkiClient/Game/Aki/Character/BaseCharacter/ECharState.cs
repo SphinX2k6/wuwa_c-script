@@ -4,70 +4,70 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042A2 RID: 17058
+	// Token: 0x020032FD RID: 13053
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ECharState.ECharState")]
 	public enum ECharState : byte
 	{
-		// Token: 0x0401730F RID: 94991
+		// Token: 0x0401200D RID: 73741
 		其他,
-		// Token: 0x04017310 RID: 94992
+		// Token: 0x0401200E RID: 73742
 		站立,
-		// Token: 0x04017311 RID: 94993
+		// Token: 0x0401200F RID: 73743
 		行走,
-		// Token: 0x04017312 RID: 94994
+		// Token: 0x04012010 RID: 73744
 		行走停止,
-		// Token: 0x04017313 RID: 94995
+		// Token: 0x04012011 RID: 73745
 		跑步,
-		// Token: 0x04017314 RID: 94996
+		// Token: 0x04012012 RID: 73746
 		跑步停止,
-		// Token: 0x04017315 RID: 94997
+		// Token: 0x04012013 RID: 73747
 		冲刺,
-		// Token: 0x04017316 RID: 94998
+		// Token: 0x04012014 RID: 73748
 		冲刺停止,
-		// Token: 0x04017317 RID: 94999
+		// Token: 0x04012015 RID: 73749
 		闪避,
-		// Token: 0x04017318 RID: 95000
+		// Token: 0x04012016 RID: 73750
 		弹反,
-		// Token: 0x04017319 RID: 95001
+		// Token: 0x04012017 RID: 73751
 		落地翻滚,
-		// Token: 0x0401731A RID: 95002
+		// Token: 0x04012018 RID: 73752
 		击倒,
-		// Token: 0x0401731B RID: 95003
+		// Token: 0x04012019 RID: 73753
 		轻击,
-		// Token: 0x0401731C RID: 95004
+		// Token: 0x0401201A RID: 73754
 		重击,
-		// Token: 0x0401731D RID: 95005
+		// Token: 0x0401201B RID: 73755
 		正常攀爬,
-		// Token: 0x0401731E RID: 95006
+		// Token: 0x0401201C RID: 73756
 		快速攀爬,
-		// Token: 0x0401731F RID: 95007
+		// Token: 0x0401201D RID: 73757
 		滑翔,
-		// Token: 0x04017320 RID: 95008
+		// Token: 0x0401201E RID: 73758
 		击飞,
-		// Token: 0x04017321 RID: 95009
+		// Token: 0x0401201F RID: 73759
 		加速游泳,
-		// Token: 0x04017322 RID: 95010
+		// Token: 0x04012020 RID: 73760
 		正常游泳,
-		// Token: 0x04017323 RID: 95011
+		// Token: 0x04012021 RID: 73761
 		摇荡,
-		// Token: 0x04017324 RID: 95012
+		// Token: 0x04012022 RID: 73762
 		被抓取,
-		// Token: 0x04017325 RID: 95013
+		// Token: 0x04012023 RID: 73763
 		滑坡,
-		// Token: 0x04017326 RID: 95014
+		// Token: 0x04012024 RID: 73764
 		特殊飞行,
-		// Token: 0x04017327 RID: 95015
+		// Token: 0x04012025 RID: 73765
 		进入攀爬,
-		// Token: 0x04017328 RID: 95016
+		// Token: 0x04012026 RID: 73766
 		退出攀爬,
-		// Token: 0x04017329 RID: 95017
+		// Token: 0x04012027 RID: 73767
 		普通滑雪,
-		// Token: 0x0401732A RID: 95018
+		// Token: 0x04012028 RID: 73768
 		受击倒地起身,
-		// Token: 0x0401732B RID: 95019
+		// Token: 0x04012029 RID: 73769
 		翱翔,
-		// Token: 0x0401732C RID: 95020
+		// Token: 0x0401202A RID: 73770
 		ECharState_MAX
 	}
 }

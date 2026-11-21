@@ -7,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 {
-	// Token: 0x02006447 RID: 25671
+	// Token: 0x020053C5 RID: 21445
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityMotorLinkageData : ActivityBaseData
 	{
-		// Token: 0x06040863 RID: 264291 RVA: 0x00F9E2A0 File Offset: 0x00F9C4A0
+		// Token: 0x06035524 RID: 218404 RVA: 0x00EE521C File Offset: 0x00EE341C
 		protected override void PhraseEx(ActivityData data)
 		{
 			MotorCycleIpActivityData motorCycleIpActivityData = data.MotorCycleIpActivityData;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x06040864 RID: 264292 RVA: 0x00F9E329 File Offset: 0x00F9C529
+		// Token: 0x06035525 RID: 218405 RVA: 0x00EE52A5 File Offset: 0x00EE34A5
 		public bool CanSubViewPlayShowView()
 		{
 			if (this.CanSubViewPlayShowViewInternal)
@@ -43,13 +43,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return false;
 		}
 
-		// Token: 0x06040865 RID: 264293 RVA: 0x00F9E33D File Offset: 0x00F9C53D
+		// Token: 0x06035526 RID: 218406 RVA: 0x00EE52B9 File Offset: 0x00EE34B9
 		public void SetCanSubViewPlayShowView(bool value)
 		{
 			this.CanSubViewPlayShowViewInternal = value;
 		}
 
-		// Token: 0x06040866 RID: 264294 RVA: 0x00F9E348 File Offset: 0x00F9C548
+		// Token: 0x06035527 RID: 218407 RVA: 0x00EE52C4 File Offset: 0x00EE34C4
 		public List<int> GetSortedQuestList(int ipId)
 		{
 			IEnumerable<MotorLinkageQuest> questConfigListByIpId = ActivityMotorLinkageConfig.Instance.GetQuestConfigListByIpId(ipId);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return list2;
 		}
 
-		// Token: 0x06040867 RID: 264295 RVA: 0x00F9E4AC File Offset: 0x00F9C6AC
+		// Token: 0x06035528 RID: 218408 RVA: 0x00EE5428 File Offset: 0x00EE3628
 		public List<int> GetSortedIpList()
 		{
 			List<MotorLinkageIp> list = new List<MotorLinkageIp>(ActivityMotorLinkageConfig.Instance.GetIpConfigAll());
@@ -99,13 +99,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return list2;
 		}
 
-		// Token: 0x06040868 RID: 264296 RVA: 0x00F9E53C File Offset: 0x00F9C73C
+		// Token: 0x06035529 RID: 218409 RVA: 0x00EE54B8 File Offset: 0x00EE36B8
 		public bool IsStickerReceived(int stickerId)
 		{
 			return InventoryModel.Instance.GetItemCountByConfigId(stickerId, 0) > 0;
 		}
 
-		// Token: 0x06040869 RID: 264297 RVA: 0x00F9E550 File Offset: 0x00F9C750
+		// Token: 0x0603552A RID: 218410 RVA: 0x00EE54CC File Offset: 0x00EE36CC
 		public int GetQuestCurrentProgress(int questId)
 		{
 			global::ActivityTaskData activityTaskData;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return activityTaskData.Current;
 		}
 
-		// Token: 0x0604086A RID: 264298 RVA: 0x00F9E578 File Offset: 0x00F9C778
+		// Token: 0x0603552B RID: 218411 RVA: 0x00EE54F4 File Offset: 0x00EE36F4
 		public int GetQuestTargetProgress(int questId)
 		{
 			global::ActivityTaskData activityTaskData;
@@ -127,21 +127,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return activityTaskData.Target;
 		}
 
-		// Token: 0x0604086B RID: 264299 RVA: 0x00F9E5A0 File Offset: 0x00F9C7A0
+		// Token: 0x0603552C RID: 218412 RVA: 0x00EE551C File Offset: 0x00EE371C
 		public bool IsQuestCanReceive(int questId)
 		{
 			global::ActivityTaskData activityTaskData;
 			return this.ActivityQuestData.TryGetValue(questId, out activityTaskData) && activityTaskData.Status == EActivityTaskState.FinishedAndUnclaimed;
 		}
 
-		// Token: 0x0604086C RID: 264300 RVA: 0x00F9E5C8 File Offset: 0x00F9C7C8
+		// Token: 0x0603552D RID: 218413 RVA: 0x00EE5544 File Offset: 0x00EE3744
 		public bool IsQuestRewardReceived(int questId)
 		{
 			global::ActivityTaskData activityTaskData;
 			return this.ActivityQuestData.TryGetValue(questId, out activityTaskData) && activityTaskData.Status == EActivityTaskState.FinishedAndClaimed;
 		}
 
-		// Token: 0x0604086D RID: 264301 RVA: 0x00F9E5F0 File Offset: 0x00F9C7F0
+		// Token: 0x0603552E RID: 218414 RVA: 0x00EE556C File Offset: 0x00EE376C
 		public void OnQuestUpdateNotify(MotorcycleTaskUpdateNotify notify)
 		{
 			ConditionTask task = notify.Task;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x0604086E RID: 264302 RVA: 0x00F9E690 File Offset: 0x00F9C890
+		// Token: 0x0603552F RID: 218415 RVA: 0x00EE560C File Offset: 0x00EE380C
 		public void OnRewardReceiveNotify(int[] questIpList)
 		{
 			foreach (int key in questIpList)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0604086F RID: 264303 RVA: 0x00F9E6E0 File Offset: 0x00F9C8E0
+		// Token: 0x06035530 RID: 218416 RVA: 0x00EE565C File Offset: 0x00EE385C
 		public bool HasAnyRewardCanReceive()
 		{
 			foreach (MotorLinkageIp motorLinkageIp in ActivityMotorLinkageConfig.Instance.GetIpConfigAll())
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return false;
 		}
 
-		// Token: 0x06040870 RID: 264304 RVA: 0x00F9E740 File Offset: 0x00F9C940
+		// Token: 0x06035531 RID: 218417 RVA: 0x00EE56BC File Offset: 0x00EE38BC
 		public int GetAllIpTotalProgress()
 		{
 			int num = 0;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return num;
 		}
 
-		// Token: 0x06040871 RID: 264305 RVA: 0x00F9E7A0 File Offset: 0x00F9C9A0
+		// Token: 0x06035532 RID: 218418 RVA: 0x00EE571C File Offset: 0x00EE391C
 		public int GetAllIpCurrentProgress()
 		{
 			int num = 0;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return num;
 		}
 
-		// Token: 0x06040872 RID: 264306 RVA: 0x00F9E800 File Offset: 0x00F9CA00
+		// Token: 0x06035533 RID: 218419 RVA: 0x00EE577C File Offset: 0x00EE397C
 		public bool IpHasAnyRewardCanReceive(int ipId)
 		{
 			foreach (MotorLinkageQuest motorLinkageQuest in ActivityMotorLinkageConfig.Instance.GetQuestConfigListByIpId(ipId))
@@ -222,13 +222,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return false;
 		}
 
-		// Token: 0x06040873 RID: 264307 RVA: 0x00F9E864 File Offset: 0x00F9CA64
+		// Token: 0x06035534 RID: 218420 RVA: 0x00EE57E0 File Offset: 0x00EE39E0
 		public int GetIpTotalProgress(int ipId)
 		{
 			return ActivityMotorLinkageConfig.Instance.GetQuestConfigListByIpId(ipId).Count;
 		}
 
-		// Token: 0x06040874 RID: 264308 RVA: 0x00F9E878 File Offset: 0x00F9CA78
+		// Token: 0x06035535 RID: 218421 RVA: 0x00EE57F4 File Offset: 0x00EE39F4
 		public int GetIpCurrentProgress(int ipId)
 		{
 			IEnumerable<MotorLinkageQuest> questConfigListByIpId = ActivityMotorLinkageConfig.Instance.GetQuestConfigListByIpId(ipId);
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return num;
 		}
 
-		// Token: 0x06040875 RID: 264309 RVA: 0x00F9E8DC File Offset: 0x00F9CADC
+		// Token: 0x06035536 RID: 218422 RVA: 0x00EE5858 File Offset: 0x00EE3A58
 		public bool IsActivityCompleted()
 		{
 			IReadOnlyList<MotorLinkageQuest> questConfigAll = ActivityMotorLinkageConfig.Instance.GetQuestConfigAll();
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return num >= questConfigAll.Count;
 		}
 
-		// Token: 0x06040876 RID: 264310 RVA: 0x00F9E94C File Offset: 0x00F9CB4C
+		// Token: 0x06035537 RID: 218423 RVA: 0x00EE58C8 File Offset: 0x00EE3AC8
 		private EActivityTaskState TaskServerStatus2ClientStatus(ConditionTaskState serverStatus)
 		{
 			switch (serverStatus)
@@ -274,42 +274,42 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x06040877 RID: 264311 RVA: 0x00F9E969 File Offset: 0x00F9CB69
+		// Token: 0x06035538 RID: 218424 RVA: 0x00EE58E5 File Offset: 0x00EE3AE5
 		public void ReadRedDot()
 		{
 			ActivityModel.Instance.SaveActivityData(base.Id, 0, 0, 0, 1);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06040878 RID: 264312 RVA: 0x00F9E995 File Offset: 0x00F9CB95
+		// Token: 0x06035539 RID: 218425 RVA: 0x00EE5911 File Offset: 0x00EE3B11
 		public bool HasSkipRedDot()
 		{
 			return base.IsUnLock() && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 1, 0, 0) == 0;
 		}
 
-		// Token: 0x06040879 RID: 264313 RVA: 0x00F9E9B8 File Offset: 0x00F9CBB8
+		// Token: 0x0603553A RID: 218426 RVA: 0x00EE5934 File Offset: 0x00EE3B34
 		public void ReadSkipRedDot()
 		{
 			ActivityModel.Instance.SaveActivityData(base.Id, 1, 0, 0, 1);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0604087A RID: 264314 RVA: 0x00F9E9E4 File Offset: 0x00F9CBE4
+		// Token: 0x0603553B RID: 218427 RVA: 0x00EE5960 File Offset: 0x00EE3B60
 		public override bool GetExDataRedPointShowState()
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 0, 0, 0) == 0 || this.HasSkipRedDot() || (!this.IsActivityCompleted() && this.HasAnyRewardCanReceive());
 		}
 
-		// Token: 0x0604087B RID: 264315 RVA: 0x00F9EA1D File Offset: 0x00F9CC1D
+		// Token: 0x0603553C RID: 218428 RVA: 0x00EE5999 File Offset: 0x00EE3B99
 		protected override bool GetExDataFinishShowState()
 		{
 			return this.IsActivityCompleted();
 		}
 
-		// Token: 0x040218D9 RID: 137433
+		// Token: 0x0401C208 RID: 115208
 		private readonly Dictionary<int, global::ActivityTaskData> ActivityQuestData = new Dictionary<int, global::ActivityTaskData>();
 
-		// Token: 0x040218DA RID: 137434
+		// Token: 0x0401C209 RID: 115209
 		private bool CanSubViewPlayShowViewInternal;
 	}
 }

@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002341 RID: 9025
+// Token: 0x02001826 RID: 6182
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayExchangePopView : UiViewBase
 {
-	// Token: 0x06011E51 RID: 73297 RVA: 0x00467153 File Offset: 0x00465353
+	// Token: 0x0600F301 RID: 62209 RVA: 0x0047421B File Offset: 0x0047241B
 	[NullableContext(1)]
 	public GameplayExchangePopView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011E52 RID: 73298 RVA: 0x0046715C File Offset: 0x0046535C
+	// Token: 0x0600F302 RID: 62210 RVA: 0x00474224 File Offset: 0x00472424
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -72,7 +72,7 @@ public class GameplayExchangePopView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011E53 RID: 73299 RVA: 0x00467420 File Offset: 0x00465620
+	// Token: 0x0600F303 RID: 62211 RVA: 0x004744E8 File Offset: 0x004726E8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GameplayExchangePopView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -83,7 +83,7 @@ public class GameplayExchangePopView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011E54 RID: 73300 RVA: 0x00467464 File Offset: 0x00465664
+	// Token: 0x0600F304 RID: 62212 RVA: 0x0047452C File Offset: 0x0047272C
 	protected override void OnStart()
 	{
 		if (this.ViewProxy == null)
@@ -102,20 +102,20 @@ public class GameplayExchangePopView : UiViewBase
 		base.GetItem(13).SetUIActive(true);
 	}
 
-	// Token: 0x06011E55 RID: 73301 RVA: 0x004674E9 File Offset: 0x004656E9
+	// Token: 0x0600F305 RID: 62213 RVA: 0x004745B1 File Offset: 0x004727B1
 	[NullableContext(1)]
 	protected virtual NumberSelectComponent CreateNumberSelectComponent(UUIItem item)
 	{
 		return new NumberSelectComponent(item);
 	}
 
-	// Token: 0x06011E56 RID: 73302 RVA: 0x004674F1 File Offset: 0x004656F1
+	// Token: 0x0600F306 RID: 62214 RVA: 0x004745B9 File Offset: 0x004727B9
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06011E57 RID: 73303 RVA: 0x004674F9 File Offset: 0x004656F9
+	// Token: 0x0600F307 RID: 62215 RVA: 0x004745C1 File Offset: 0x004727C1
 	protected override void OnBeforeDestroy()
 	{
 		this.NumberSelect.Destroy(null);
@@ -123,7 +123,7 @@ public class GameplayExchangePopView : UiViewBase
 		this.RemoveResellTimer();
 	}
 
-	// Token: 0x06011E58 RID: 73304 RVA: 0x00467519 File Offset: 0x00465719
+	// Token: 0x0600F308 RID: 62216 RVA: 0x004745E1 File Offset: 0x004727E1
 	public void RefreshView()
 	{
 		this.RefreshShopItem();
@@ -136,7 +136,7 @@ public class GameplayExchangePopView : UiViewBase
 		this.RefreshTipTitleItem();
 	}
 
-	// Token: 0x06011E59 RID: 73305 RVA: 0x0046754B File Offset: 0x0046574B
+	// Token: 0x0600F309 RID: 62217 RVA: 0x00474613 File Offset: 0x00472813
 	public void RefreshShopItem()
 	{
 		if (this.ViewProxy == null)
@@ -146,7 +146,7 @@ public class GameplayExchangePopView : UiViewBase
 		this.ViewProxy.ShopItemRefresh();
 	}
 
-	// Token: 0x06011E5A RID: 73306 RVA: 0x00467561 File Offset: 0x00465761
+	// Token: 0x0600F30A RID: 62218 RVA: 0x00474629 File Offset: 0x00472829
 	public void RefreshDescribeText()
 	{
 		if (this.ViewProxy == null)
@@ -156,14 +156,14 @@ public class GameplayExchangePopView : UiViewBase
 		GameplayShopUtil.SetText(base.GetText(5), this.ViewProxy.DescribeTextData);
 	}
 
-	// Token: 0x06011E5B RID: 73307 RVA: 0x00467584 File Offset: 0x00465784
+	// Token: 0x0600F30B RID: 62219 RVA: 0x0047464C File Offset: 0x0047284C
 	public void RefreshConfirmButtonState()
 	{
 		bool selfInteractive = this.ViewProxy.CheckConfirmButtonCanInteract();
 		base.GetButton(7).SetSelfInteractive(selfInteractive);
 	}
 
-	// Token: 0x06011E5C RID: 73308 RVA: 0x004675AC File Offset: 0x004657AC
+	// Token: 0x0600F30C RID: 62220 RVA: 0x00474674 File Offset: 0x00472874
 	public void RefreshPriceInfo()
 	{
 		if (this.ViewProxy == null)
@@ -181,7 +181,7 @@ public class GameplayExchangePopView : UiViewBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x06011E5D RID: 73309 RVA: 0x00467638 File Offset: 0x00465838
+	// Token: 0x0600F30D RID: 62221 RVA: 0x00474700 File Offset: 0x00472900
 	public void RefreshLimitText()
 	{
 		if (this.ViewProxy == null)
@@ -198,7 +198,7 @@ public class GameplayExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011E5E RID: 73310 RVA: 0x00467690 File Offset: 0x00465890
+	// Token: 0x0600F30E RID: 62222 RVA: 0x00474758 File Offset: 0x00472958
 	public void RefreshCurrency()
 	{
 		if (this.ViewProxy == null)
@@ -217,7 +217,7 @@ public class GameplayExchangePopView : UiViewBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06011E5F RID: 73311 RVA: 0x004676C8 File Offset: 0x004658C8
+	// Token: 0x0600F30F RID: 62223 RVA: 0x00474790 File Offset: 0x00472990
 	private UniTask RefreshCurrencyAsync()
 	{
 		GameplayExchangePopView.<RefreshCurrencyAsync>d__21 <RefreshCurrencyAsync>d__;
@@ -228,7 +228,7 @@ public class GameplayExchangePopView : UiViewBase
 		return <RefreshCurrencyAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011E60 RID: 73312 RVA: 0x0046770C File Offset: 0x0046590C
+	// Token: 0x0600F310 RID: 62224 RVA: 0x004747D4 File Offset: 0x004729D4
 	public void RefreshLockText()
 	{
 		this.RemoveResellTimer();
@@ -248,7 +248,7 @@ public class GameplayExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011E61 RID: 73313 RVA: 0x004677A1 File Offset: 0x004659A1
+	// Token: 0x0600F311 RID: 62225 RVA: 0x00474869 File Offset: 0x00472A69
 	public void RefreshReSellText(float _)
 	{
 		if (this.ViewProxy == null)
@@ -259,7 +259,7 @@ public class GameplayExchangePopView : UiViewBase
 		this.RefreshLockText();
 	}
 
-	// Token: 0x06011E62 RID: 73314 RVA: 0x004677BD File Offset: 0x004659BD
+	// Token: 0x0600F312 RID: 62226 RVA: 0x00474885 File Offset: 0x00472A85
 	public void RemoveResellTimer()
 	{
 		if (this.ResellTimerId != null)
@@ -269,7 +269,7 @@ public class GameplayExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011E63 RID: 73315 RVA: 0x004677E0 File Offset: 0x004659E0
+	// Token: 0x0600F313 RID: 62227 RVA: 0x004748A8 File Offset: 0x00472AA8
 	public void RefreshLeftTimeText()
 	{
 		if (this.ViewProxy == null)
@@ -290,7 +290,7 @@ public class GameplayExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011E64 RID: 73316 RVA: 0x00467863 File Offset: 0x00465A63
+	// Token: 0x0600F314 RID: 62228 RVA: 0x0047492B File Offset: 0x00472B2B
 	public void RefreshTipTitleItem()
 	{
 		if (this.ViewProxy == null)
@@ -305,7 +305,7 @@ public class GameplayExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011E65 RID: 73317 RVA: 0x0046789E File Offset: 0x00465A9E
+	// Token: 0x0600F315 RID: 62229 RVA: 0x00474966 File Offset: 0x00472B66
 	public void RefreshNumberSelectComponentButtonState()
 	{
 		if (this.NumberSelect.GetIfLimit())
@@ -315,13 +315,13 @@ public class GameplayExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011E66 RID: 73318 RVA: 0x004678C5 File Offset: 0x00465AC5
+	// Token: 0x0600F316 RID: 62230 RVA: 0x0047498D File Offset: 0x00472B8D
 	private void BeforeEnterPayShop()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011E67 RID: 73319 RVA: 0x004678D0 File Offset: 0x00465AD0
+	// Token: 0x0600F317 RID: 62231 RVA: 0x00474998 File Offset: 0x00472B98
 	[NullableContext(1)]
 	private TableTextArgNew GetExchangeTableText(int selectValue)
 	{
@@ -330,20 +330,20 @@ public class GameplayExchangePopView : UiViewBase
 		return new TableTextArgNew((!string.IsNullOrEmpty(text) && !StringUtils.IsEmpty(text)) ? text : "Text_BugCount_Text", new <>z__ReadOnlySingleElementList<object>(selectValue));
 	}
 
-	// Token: 0x06011E68 RID: 73320 RVA: 0x0046791E File Offset: 0x00465B1E
+	// Token: 0x0600F318 RID: 62232 RVA: 0x004749E6 File Offset: 0x00472BE6
 	private void ValueChangeFunction(int selectValue)
 	{
 		this.ViewProxy.BuyCount = selectValue;
 		this.RefreshPriceInfo();
 	}
 
-	// Token: 0x06011E69 RID: 73321 RVA: 0x00467932 File Offset: 0x00465B32
+	// Token: 0x0600F319 RID: 62233 RVA: 0x004749FA File Offset: 0x00472BFA
 	private void OnCancelClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011E6A RID: 73322 RVA: 0x0046793B File Offset: 0x00465B3B
+	// Token: 0x0600F31A RID: 62234 RVA: 0x00474A03 File Offset: 0x00472C03
 	private void OnConfirmClick()
 	{
 		if (this.ViewProxy == null)
@@ -353,62 +353,62 @@ public class GameplayExchangePopView : UiViewBase
 		this.ViewProxy.OnConfirmButtonClick(base.GetViewId());
 	}
 
-	// Token: 0x04008789 RID: 34697
+	// Token: 0x040088CC RID: 35020
 	[Nullable(1)]
 	private const string COLOR = "FED12E";
 
-	// Token: 0x0400878A RID: 34698
+	// Token: 0x040088CD RID: 35021
 	protected IGameplayShopExchangePopViewProxy ViewProxy;
 
-	// Token: 0x0400878B RID: 34699
+	// Token: 0x040088CE RID: 35022
 	protected TimerHandle ResellTimerId;
 
-	// Token: 0x0400878C RID: 34700
+	// Token: 0x040088CF RID: 35023
 	protected UiPanelBase ShopItem;
 
-	// Token: 0x0400878D RID: 34701
+	// Token: 0x040088D0 RID: 35024
 	protected NumberSelectComponent NumberSelect;
 
-	// Token: 0x0400878E RID: 34702
+	// Token: 0x040088D1 RID: 35025
 	private CommonCurrencyItemListComponent CustomCurrencyItemList;
 
-	// Token: 0x020088C1 RID: 35009
+	// Token: 0x02007A4A RID: 31306
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402C718 RID: 182040
+		// Token: 0x04027A2C RID: 162348
 		EndTimeIcon,
-		// Token: 0x0402C719 RID: 182041
+		// Token: 0x04027A2D RID: 162349
 		EndTimeText,
-		// Token: 0x0402C71A RID: 182042
+		// Token: 0x04027A2E RID: 162350
 		ItemAttach,
-		// Token: 0x0402C71B RID: 182043
+		// Token: 0x04027A2F RID: 162351
 		CurrencyIcon,
-		// Token: 0x0402C71C RID: 182044
+		// Token: 0x04027A30 RID: 162352
 		CurrencyCount,
-		// Token: 0x0402C71D RID: 182045
+		// Token: 0x04027A31 RID: 162353
 		DescribeText,
-		// Token: 0x0402C71E RID: 182046
+		// Token: 0x04027A32 RID: 162354
 		CancelButton,
-		// Token: 0x0402C71F RID: 182047
+		// Token: 0x04027A33 RID: 162355
 		ConfirmButton,
-		// Token: 0x0402C720 RID: 182048
+		// Token: 0x04027A34 RID: 162356
 		TipTitleItem,
-		// Token: 0x0402C721 RID: 182049
+		// Token: 0x04027A35 RID: 162357
 		NumberSelect,
-		// Token: 0x0402C722 RID: 182050
+		// Token: 0x04027A36 RID: 162358
 		LimitText,
-		// Token: 0x0402C723 RID: 182051
+		// Token: 0x04027A37 RID: 162359
 		LockItem,
-		// Token: 0x0402C724 RID: 182052
+		// Token: 0x04027A38 RID: 162360
 		LockText,
-		// Token: 0x0402C725 RID: 182053
+		// Token: 0x04027A39 RID: 162361
 		ItemPanel,
-		// Token: 0x0402C726 RID: 182054
+		// Token: 0x04027A3A RID: 162362
 		LeftTimeDescText,
-		// Token: 0x0402C727 RID: 182055
+		// Token: 0x04027A3B RID: 162363
 		LeftTimeItem,
-		// Token: 0x0402C728 RID: 182056
+		// Token: 0x04027A3C RID: 162364
 		LeftTimeText
 	}
 }

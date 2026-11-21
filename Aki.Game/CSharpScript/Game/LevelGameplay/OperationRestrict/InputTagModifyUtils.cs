@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 {
-	// Token: 0x02006ABE RID: 27326
+	// Token: 0x02005C36 RID: 23606
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputTagModifyUtils : Singleton
 	{
-		// Token: 0x06043E53 RID: 278099 RVA: 0x010A4EF8 File Offset: 0x010A30F8
+		// Token: 0x06039F9A RID: 237466 RVA: 0x0104E4DC File Offset: 0x0104C6DC
 		private void InitTagInfoCache()
 		{
 			this.TagParentInfoCache.Clear();
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E54 RID: 278100 RVA: 0x010A5010 File Offset: 0x010A3210
+		// Token: 0x06039F9B RID: 237467 RVA: 0x0104E5F4 File Offset: 0x0104C7F4
 		private void GetAllChildInputTag(string inputTag, HashSet<string> childrenTagsContainer, bool bIncludeChildOfChild = false)
 		{
 			if (this.TagParentInfoCache.Count == 0 || this.TagChildrenInfoCache.Count > 0)
@@ -62,7 +61,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E55 RID: 278101 RVA: 0x010A50DC File Offset: 0x010A32DC
+		// Token: 0x06039F9C RID: 237468 RVA: 0x0104E6C0 File Offset: 0x0104C8C0
 		private void GetAllChildInputTag(string inputTag, List<string> childrenTagsContainer, bool bIncludeChildOfChild = false)
 		{
 			if (this.TagParentInfoCache.Count == 0 || this.TagChildrenInfoCache.Count > 0)
@@ -84,7 +83,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E56 RID: 278102 RVA: 0x010A5170 File Offset: 0x010A3370
+		// Token: 0x06039F9D RID: 237469 RVA: 0x0104E754 File Offset: 0x0104C954
 		private string GetParentInputTag(string inputTag)
 		{
 			if (this.TagParentInfoCache.Count == 0 || this.TagChildrenInfoCache.Count > 0)
@@ -96,7 +95,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			return text ?? "";
 		}
 
-		// Token: 0x06043E57 RID: 278103 RVA: 0x010A51B8 File Offset: 0x010A33B8
+		// Token: 0x06039F9E RID: 237470 RVA: 0x0104E79C File Offset: 0x0104C99C
 		public bool GetIsInputTagEnable(IEnumerable<string> targetTagList, string tagToCheck, bool fullMatch = false)
 		{
 			if (this.TagParentInfoCache.Count == 0 || this.TagChildrenInfoCache.Count > 0)
@@ -105,7 +104,17 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 			if (fullMatch)
 			{
-				return targetTagList.Contains(tagToCheck);
+				using (IEnumerator<string> enumerator = targetTagList.GetEnumerator())
+				{
+					while (enumerator.MoveNext())
+					{
+						if (enumerator.Current == tagToCheck)
+						{
+							return true;
+						}
+					}
+				}
+				return false;
 			}
 			HashSet<string> hashSet = new HashSet<string>(targetTagList);
 			string text = tagToCheck;
@@ -120,7 +129,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			return false;
 		}
 
-		// Token: 0x06043E58 RID: 278104 RVA: 0x010A521C File Offset: 0x010A341C
+		// Token: 0x06039F9F RID: 237471 RVA: 0x0104E83C File Offset: 0x0104CA3C
 		private void ModifyInputTag(List<string> targetTagList, string[] tagsToAdd, string[] tagsToRem)
 		{
 			foreach (string item in tagsToRem)
@@ -140,7 +149,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E59 RID: 278105 RVA: 0x010A5284 File Offset: 0x010A3484
+		// Token: 0x06039FA0 RID: 237472 RVA: 0x0104E8A4 File Offset: 0x0104CAA4
 		private void EnableInputTag(List<string> targetTagList, string targetTagName)
 		{
 			if (this.GetIsInputTagEnable(targetTagList, targetTagName, false))
@@ -152,10 +161,12 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			this.GetAllChildInputTag(parentInputTag, hashSet, false);
 			HashSet<string> hashSet2 = new HashSet<string>();
 			this.GetAllChildInputTag(targetTagName, hashSet2, true);
+			string[] array = new string[hashSet2.Count];
+			hashSet2.CopyTo(array);
 			this.ModifyInputTag(targetTagList, new string[]
 			{
 				targetTagName
-			}, hashSet2.ToArray<string>());
+			}, array);
 			int num = 0;
 			foreach (string item in targetTagList)
 			{
@@ -170,7 +181,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E5A RID: 278106 RVA: 0x010A533C File Offset: 0x010A353C
+		// Token: 0x06039FA1 RID: 237473 RVA: 0x0104E96C File Offset: 0x0104CB6C
 		private void DisableInputTag(List<string> targetTagList, string targetTagName)
 		{
 			if (!this.GetIsInputTagEnable(targetTagList, targetTagName, false))
@@ -206,7 +217,7 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E5B RID: 278107 RVA: 0x010A5450 File Offset: 0x010A3650
+		// Token: 0x06039FA2 RID: 237474 RVA: 0x0104EA80 File Offset: 0x0104CC80
 		public void SetEnableInputTag(List<string> targetTagList, string targetTagName, bool enable)
 		{
 			if (enable)
@@ -217,8 +228,8 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			this.DisableInputTag(targetTagList, targetTagName);
 		}
 
-		// Token: 0x17009966 RID: 39270
-		// (get) Token: 0x06043E5C RID: 278108 RVA: 0x010A5466 File Offset: 0x010A3666
+		// Token: 0x17006E69 RID: 28265
+		// (get) Token: 0x06039FA3 RID: 237475 RVA: 0x0104EA96 File Offset: 0x0104CC96
 		public static InputTagModifyUtils Instance
 		{
 			get
@@ -232,12 +243,12 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			}
 		}
 
-		// Token: 0x06043E5D RID: 278109 RVA: 0x010A5489 File Offset: 0x010A3689
+		// Token: 0x06039FA4 RID: 237476 RVA: 0x0104EAB9 File Offset: 0x0104CCB9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043E5E RID: 278110 RVA: 0x010A548B File Offset: 0x010A368B
+		// Token: 0x06039FA5 RID: 237477 RVA: 0x0104EABB File Offset: 0x0104CCBB
 		public static void ResetStaticDefaultValue()
 		{
 			InputTagModifyUtils instance = InputTagModifyUtils._instance;
@@ -248,13 +259,13 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 			InputTagModifyUtils._instance = null;
 		}
 
-		// Token: 0x06043E5F RID: 278111 RVA: 0x010A54A4 File Offset: 0x010A36A4
+		// Token: 0x06039FA6 RID: 237478 RVA: 0x0104EAD4 File Offset: 0x0104CCD4
 		static InputTagModifyUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputTagModifyUtils.CreateStaticDefaultValue), new Action(InputTagModifyUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040237C5 RID: 145349
+		// Token: 0x0401EA62 RID: 125538
 		[Nullable(new byte[]
 		{
 			1,
@@ -263,10 +274,10 @@ namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 		})]
 		private readonly Dictionary<string, string> TagParentInfoCache = new Dictionary<string, string>();
 
-		// Token: 0x040237C6 RID: 145350
+		// Token: 0x0401EA63 RID: 125539
 		private readonly Dictionary<string, HashSet<string>> TagChildrenInfoCache = new Dictionary<string, HashSet<string>>();
 
-		// Token: 0x040237C7 RID: 145351
+		// Token: 0x0401EA64 RID: 125540
 		[Nullable(2)]
 		private static InputTagModifyUtils _instance;
 	}

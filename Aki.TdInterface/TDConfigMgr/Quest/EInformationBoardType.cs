@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E6A RID: 3690
+	// Token: 0x02000F7D RID: 3965
 	[EnumExtensions]
 	public enum EInformationBoardType
 	{
-		// Token: 0x0400309A RID: 12442
+		// Token: 0x0400339C RID: 13212
 		DangoAbyss
 	}
 }

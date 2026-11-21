@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D8D RID: 19853
+	// Token: 0x02003D56 RID: 15702
 	public enum EDescModel
 	{
-		// Token: 0x0401B3D7 RID: 111575
+		// Token: 0x04015DAA RID: 89514
 		SIMPLE,
-		// Token: 0x0401B3D8 RID: 111576
+		// Token: 0x04015DAB RID: 89515
 		DETAIL
 	}
 }

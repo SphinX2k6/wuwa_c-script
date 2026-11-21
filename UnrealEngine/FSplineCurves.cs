@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001178 RID: 4472
+	// Token: 0x02000288 RID: 648
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.SplineCurves")]
 	[UnrealStructLayout(112, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 112)]
 	public class FSplineCurves : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601069D RID: 67229 RVA: 0x00181CCE File Offset: 0x0017FECE
+		// Token: 0x06004706 RID: 18182 RVA: 0x000639BE File Offset: 0x00061BBE
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSplineCurves._ScriptStructPtr != 0) ? FSplineCurves._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.SplineCurves", ref FSplineCurves._ScriptStructPtr);
 		}
 
-		// Token: 0x17004004 RID: 16388
-		// (get) Token: 0x0601069E RID: 67230 RVA: 0x00181CF4 File Offset: 0x0017FEF4
-		// (set) Token: 0x0601069F RID: 67231 RVA: 0x00181D37 File Offset: 0x0017FF37
+		// Token: 0x17000D14 RID: 3348
+		// (get) Token: 0x06004707 RID: 18183 RVA: 0x000639E4 File Offset: 0x00061BE4
+		// (set) Token: 0x06004708 RID: 18184 RVA: 0x00063A27 File Offset: 0x00061C27
 		public FInterpCurveVector Position
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004005 RID: 16389
-		// (get) Token: 0x060106A0 RID: 67232 RVA: 0x00181D58 File Offset: 0x0017FF58
-		// (set) Token: 0x060106A1 RID: 67233 RVA: 0x00181D9B File Offset: 0x0017FF9B
+		// Token: 0x17000D15 RID: 3349
+		// (get) Token: 0x06004709 RID: 18185 RVA: 0x00063A48 File Offset: 0x00061C48
+		// (set) Token: 0x0600470A RID: 18186 RVA: 0x00063A8B File Offset: 0x00061C8B
 		public FInterpCurveQuat Rotation
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004006 RID: 16390
-		// (get) Token: 0x060106A2 RID: 67234 RVA: 0x00181DBC File Offset: 0x0017FFBC
-		// (set) Token: 0x060106A3 RID: 67235 RVA: 0x00181DFF File Offset: 0x0017FFFF
+		// Token: 0x17000D16 RID: 3350
+		// (get) Token: 0x0600470B RID: 18187 RVA: 0x00063AAC File Offset: 0x00061CAC
+		// (set) Token: 0x0600470C RID: 18188 RVA: 0x00063AEF File Offset: 0x00061CEF
 		public FInterpCurveVector Scale
 		{
 			get
@@ -82,9 +82,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004007 RID: 16391
-		// (get) Token: 0x060106A4 RID: 67236 RVA: 0x00181E20 File Offset: 0x00180020
-		// (set) Token: 0x060106A5 RID: 67237 RVA: 0x00181E63 File Offset: 0x00180063
+		// Token: 0x17000D17 RID: 3351
+		// (get) Token: 0x0600470D RID: 18189 RVA: 0x00063B10 File Offset: 0x00061D10
+		// (set) Token: 0x0600470E RID: 18190 RVA: 0x00063B53 File Offset: 0x00061D53
 		public FInterpCurveFloat ReparamTable
 		{
 			get
@@ -103,27 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004008 RID: 16392
-		// (get) Token: 0x060106A6 RID: 67238 RVA: 0x00181E84 File Offset: 0x00180084
-		// (set) Token: 0x060106A7 RID: 67239 RVA: 0x00181E98 File Offset: 0x00180098
-		[Nullable(2)]
-		public unsafe USplineMetadata Metadata_DEPRECATED
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<USplineMetadata>(base.NativePtr / (IntPtr)sizeof(void*) + FSplineCurves.__PropertyOffset_Metadata_DEPRECATED);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + FSplineCurves.__PropertyOffset_Metadata_DEPRECATED, value);
-			}
-		}
-
-		// Token: 0x17004009 RID: 16393
-		// (get) Token: 0x060106A8 RID: 67240 RVA: 0x00181EAD File Offset: 0x001800AD
-		// (set) Token: 0x060106A9 RID: 67241 RVA: 0x00181EBD File Offset: 0x001800BD
+		// Token: 0x17000D18 RID: 3352
+		// (get) Token: 0x0600470F RID: 18191 RVA: 0x00063B74 File Offset: 0x00061D74
+		// (set) Token: 0x06004710 RID: 18192 RVA: 0x00063B84 File Offset: 0x00061D84
 		public unsafe uint Version
 		{
 			get
@@ -136,89 +118,75 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060106AA RID: 67242 RVA: 0x00181ECE File Offset: 0x001800CE
+		// Token: 0x06004711 RID: 18193 RVA: 0x00063B95 File Offset: 0x00061D95
 		public FSplineCurves()
 		{
 		}
 
-		// Token: 0x060106AB RID: 67243 RVA: 0x00181ED6 File Offset: 0x001800D6
-		public FSplineCurves(FInterpCurveVector Position, FInterpCurveQuat Rotation, FInterpCurveVector Scale, FInterpCurveFloat ReparamTable, USplineMetadata Metadata_DEPRECATED, uint Version)
-		{
-			this.Position = Position;
-			this.Rotation = Rotation;
-			this.Scale = Scale;
-			this.ReparamTable = ReparamTable;
-			this.Metadata_DEPRECATED = Metadata_DEPRECATED;
-			this.Version = Version;
-		}
-
-		// Token: 0x060106AC RID: 67244 RVA: 0x00181F0B File Offset: 0x0018010B
+		// Token: 0x06004712 RID: 18194 RVA: 0x00063B9D File Offset: 0x00061D9D
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSplineCurves.StaticStruct();
 		}
 
-		// Token: 0x060106AD RID: 67245 RVA: 0x00181F17 File Offset: 0x00180117
+		// Token: 0x06004713 RID: 18195 RVA: 0x00063BA9 File Offset: 0x00061DA9
 		[NullableContext(2)]
 		public FSplineCurves(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060106AE RID: 67246 RVA: 0x00181F21 File Offset: 0x00180121
+		// Token: 0x06004714 RID: 18196 RVA: 0x00063BB3 File Offset: 0x00061DB3
 		public FSplineCurves(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060106AF RID: 67247 RVA: 0x00181F2C File Offset: 0x0018012C
+		// Token: 0x06004715 RID: 18197 RVA: 0x00063BBE File Offset: 0x00061DBE
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSplineCurves(Pointer, false, true);
 		}
 
-		// Token: 0x060106B0 RID: 67248 RVA: 0x00181F36 File Offset: 0x00180136
+		// Token: 0x06004716 RID: 18198 RVA: 0x00063BC8 File Offset: 0x00061DC8
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSplineCurves(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04008C97 RID: 35991
+		// Token: 0x04001B5B RID: 7003
 		public const string __ObjectPath = "/Script/Engine.SplineCurves";
 
-		// Token: 0x04008C98 RID: 35992
+		// Token: 0x04001B5C RID: 7004
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04008C99 RID: 35993
+		// Token: 0x04001B5D RID: 7005
 		internal static int __PropertyOffset_Position;
 
-		// Token: 0x04008C9A RID: 35994
+		// Token: 0x04001B5E RID: 7006
 		[Nullable(2)]
 		private FInterpCurveVector _Position;
 
-		// Token: 0x04008C9B RID: 35995
+		// Token: 0x04001B5F RID: 7007
 		internal static int __PropertyOffset_Rotation;
 
-		// Token: 0x04008C9C RID: 35996
+		// Token: 0x04001B60 RID: 7008
 		[Nullable(2)]
 		private FInterpCurveQuat _Rotation;
 
-		// Token: 0x04008C9D RID: 35997
+		// Token: 0x04001B61 RID: 7009
 		internal static int __PropertyOffset_Scale;
 
-		// Token: 0x04008C9E RID: 35998
+		// Token: 0x04001B62 RID: 7010
 		[Nullable(2)]
 		private FInterpCurveVector _Scale;
 
-		// Token: 0x04008C9F RID: 35999
+		// Token: 0x04001B63 RID: 7011
 		internal static int __PropertyOffset_ReparamTable;
 
-		// Token: 0x04008CA0 RID: 36000
+		// Token: 0x04001B64 RID: 7012
 		[Nullable(2)]
 		private FInterpCurveFloat _ReparamTable;
 
-		// Token: 0x04008CA1 RID: 36001
-		internal static int __PropertyOffset_Metadata_DEPRECATED;
-
-		// Token: 0x04008CA2 RID: 36002
+		// Token: 0x04001B65 RID: 7013
 		internal static int __PropertyOffset_Version;
 	}
 }

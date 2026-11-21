@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000438 RID: 1080
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000491 RID: 1169
 	public class IHookFetchMoveUniform : IHookFetchMoveModeBase
 	{
-		// Token: 0x060015CD RID: 5581 RVA: 0x00043EA0 File Offset: 0x000420A0
+		// Token: 0x06001767 RID: 5991 RVA: 0x00047BE8 File Offset: 0x00045DE8
 		private IHookFetchMoveUniform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060015CE RID: 5582 RVA: 0x00043ED8 File Offset: 0x000420D8
+		// Token: 0x06001768 RID: 5992 RVA: 0x00047C20 File Offset: 0x00045E20
 		public static IHookFetchMoveUniform Create([Nullable(2)] IHookFetchMoveUniform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060015CF RID: 5583 RVA: 0x00043EEB File Offset: 0x000420EB
+		// Token: 0x06001769 RID: 5993 RVA: 0x00047C33 File Offset: 0x00045E33
 		public static IHookFetchMoveUniform CreateFromSetValue([Nullable(2)] IHookFetchMoveUniform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060015D0 RID: 5584 RVA: 0x00043EFE File Offset: 0x000420FE
+		// Token: 0x0600176A RID: 5994 RVA: 0x00047C46 File Offset: 0x00045E46
 		public new IHookFetchMoveUniform_SetValue ToSetValue()
 		{
 			return new IHookFetchMoveUniform_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005F0 RID: 1520
-		// (get) Token: 0x060015D1 RID: 5585 RVA: 0x00043F1D File Offset: 0x0004211D
-		// (set) Token: 0x060015D2 RID: 5586 RVA: 0x00043F48 File Offset: 0x00042148
+		// Token: 0x17000657 RID: 1623
+		// (get) Token: 0x0600176B RID: 5995 RVA: 0x00047C65 File Offset: 0x00045E65
+		// (set) Token: 0x0600176C RID: 5996 RVA: 0x00047C90 File Offset: 0x00045E90
 		public override EHookFetchMoveMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005F1 RID: 1521
-		// (get) Token: 0x060015D3 RID: 5587 RVA: 0x00043F56 File Offset: 0x00042156
-		// (set) Token: 0x060015D4 RID: 5588 RVA: 0x00043F85 File Offset: 0x00042185
+		// Token: 0x17000658 RID: 1624
+		// (get) Token: 0x0600176D RID: 5997 RVA: 0x00047C9E File Offset: 0x00045E9E
+		// (set) Token: 0x0600176E RID: 5998 RVA: 0x00047CCD File Offset: 0x00045ECD
 		public virtual float Speed
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040010C5 RID: 4293
+		// Token: 0x040011E7 RID: 4583
 		[Nullable(2)]
 		protected new IHookFetchMoveUniform FbInstance;
 
-		// Token: 0x040010C6 RID: 4294
+		// Token: 0x040011E8 RID: 4584
 		[Nullable(2)]
 		protected new IHookFetchMoveUniform_SetValue PocoInterface;
 	}

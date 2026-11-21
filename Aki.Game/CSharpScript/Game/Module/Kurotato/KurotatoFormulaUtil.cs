@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Core.Extension;
@@ -8,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005718 RID: 22296
+	// Token: 0x020046EF RID: 18159
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class KurotatoFormulaUtil
 	{
-		// Token: 0x06038AA6 RID: 232102 RVA: 0x00D70A54 File Offset: 0x00D6EC54
+		// Token: 0x0602D9B6 RID: 186806 RVA: 0x00CBF03C File Offset: 0x00CBD23C
 		public static float GetFormulaResult(int formulaId, int weaponId = 0, int weaponIncId = 0)
 		{
 			KurotatoFormula? formulaById = KurotatoConfig.Instance.GetFormulaById(formulaId);
@@ -51,7 +50,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return (float)(Math.Ceiling(num * (double)num2) / (double)num2);
 		}
 
-		// Token: 0x06038AA7 RID: 232103 RVA: 0x00D70B24 File Offset: 0x00D6ED24
+		// Token: 0x0602D9B7 RID: 186807 RVA: 0x00CBF10C File Offset: 0x00CBD30C
 		private static float ApplyLimit(float value, KurotatoFormula config)
 		{
 			EKurotatoFormulaLimitType limitType = (EKurotatoFormulaLimitType)config.LimitType;
@@ -67,13 +66,13 @@ namespace CSharpScript.Game.Module.Kurotato
 			return num;
 		}
 
-		// Token: 0x06038AA8 RID: 232104 RVA: 0x00D70B6A File Offset: 0x00D6ED6A
+		// Token: 0x0602D9B8 RID: 186808 RVA: 0x00CBF152 File Offset: 0x00CBD352
 		public static float GetAttr(int attrType)
 		{
 			return (float)KurotatoModel.Instance.BattleData.GetPlayerPropertyValue(attrType);
 		}
 
-		// Token: 0x06038AA9 RID: 232105 RVA: 0x00D70B80 File Offset: 0x00D6ED80
+		// Token: 0x0602D9B9 RID: 186809 RVA: 0x00CBF168 File Offset: 0x00CBD368
 		private static float GetWeaponEntityAttrValue(int attrType, int weaponIncId)
 		{
 			AKSC_Entity weaponEntity = KurotatoFormulaUtil.GetWeaponEntity(weaponIncId);
@@ -104,7 +103,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return (float)num2.GetValueOrDefault();
 		}
 
-		// Token: 0x06038AAA RID: 232106 RVA: 0x00D70BEC File Offset: 0x00D6EDEC
+		// Token: 0x0602D9BA RID: 186810 RVA: 0x00CBF1D4 File Offset: 0x00CBD3D4
 		private static float CalcFormulaType1(KurotatoFormula config, int weaponId, int weaponIncId)
 		{
 			float num = KurotatoFormulaUtil.ResolvePropValue(config.Prop1, weaponId, weaponIncId) + KurotatoFormulaUtil.ResolvePropValue(config.Prop2, weaponId, weaponIncId) + KurotatoFormulaUtil.ResolvePropValue(config.Prop3, weaponId, weaponIncId);
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return num / (float)config.ParamInt1;
 		}
 
-		// Token: 0x06038AAB RID: 232107 RVA: 0x00D70C3C File Offset: 0x00D6EE3C
+		// Token: 0x0602D9BB RID: 186811 RVA: 0x00CBF224 File Offset: 0x00CBD424
 		private static float ResolvePropValue(string prop, int weaponId, int weaponIncId)
 		{
 			if (string.IsNullOrEmpty(prop))
@@ -150,7 +149,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return KurotatoFormulaUtil.GetWeaponBasicPropertyValue(id, weaponId);
 		}
 
-		// Token: 0x06038AAC RID: 232108 RVA: 0x00D70CF4 File Offset: 0x00D6EEF4
+		// Token: 0x0602D9BC RID: 186812 RVA: 0x00CBF2DC File Offset: 0x00CBD4DC
 		private static float GetWeaponBasicPropertyValue(int propId, int weaponId)
 		{
 			KurotatoProperty? propertyById = KurotatoConfig.Instance.GetPropertyById(propId);
@@ -178,61 +177,18 @@ namespace CSharpScript.Game.Module.Kurotato
 			return KurotatoFormulaUtil.GetKSCBasePropertyValue(baseProperty.Value, text);
 		}
 
-		// Token: 0x06038AAD RID: 232109 RVA: 0x00D70DA4 File Offset: 0x00D6EFA4
+		// Token: 0x0602D9BD RID: 186813 RVA: 0x00CBF38C File Offset: 0x00CBD58C
 		private static float GetKSCBasePropertyValue(KSCBaseProperty baseProperty, string varName)
 		{
-			PropertyInfo property = typeof(KSCBaseProperty).GetProperty(varName);
-			if (property != null)
+			int num;
+			if (baseProperty.TryGetMember(varName, out num))
 			{
-				object value = property.GetValue(baseProperty);
-				if (value is float)
-				{
-					return (float)value;
-				}
-				if (value is int)
-				{
-					int num = (int)value;
-					return (float)num;
-				}
-				if (value is long)
-				{
-					long num2 = (long)value;
-					return (float)num2;
-				}
-				if (value is double)
-				{
-					double num3 = (double)value;
-					return (float)num3;
-				}
-			}
-			FieldInfo field = typeof(KSCBaseProperty).GetField(varName);
-			if (field != null)
-			{
-				object value2 = field.GetValue(baseProperty);
-				if (value2 is float)
-				{
-					return (float)value2;
-				}
-				if (value2 is int)
-				{
-					int num4 = (int)value2;
-					return (float)num4;
-				}
-				if (value2 is long)
-				{
-					long num5 = (long)value2;
-					return (float)num5;
-				}
-				if (value2 is double)
-				{
-					double num6 = (double)value2;
-					return (float)num6;
-				}
+				return (float)num;
 			}
 			return 0f;
 		}
 
-		// Token: 0x06038AAE RID: 232110 RVA: 0x00D70EAC File Offset: 0x00D6F0AC
+		// Token: 0x0602D9BE RID: 186814 RVA: 0x00CBF3B0 File Offset: 0x00CBD5B0
 		[NullableContext(2)]
 		private static AKSC_Entity GetWeaponEntity(int weaponIncId)
 		{
@@ -249,7 +205,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return result;
 		}
 
-		// Token: 0x06038AAF RID: 232111 RVA: 0x00D70EEC File Offset: 0x00D6F0EC
+		// Token: 0x0602D9BF RID: 186815 RVA: 0x00CBF3F0 File Offset: 0x00CBD5F0
 		private static float CalcFormulaType2(KurotatoFormula config, int weaponId)
 		{
 			KurotatoFormulaUtil.<>c__DisplayClass12_0 CS$<>8__locals1;
@@ -286,7 +242,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return num25 * num26 * num27;
 		}
 
-		// Token: 0x06038AB0 RID: 232112 RVA: 0x00D7110C File Offset: 0x00D6F30C
+		// Token: 0x0602D9C0 RID: 186816 RVA: 0x00CBF610 File Offset: 0x00CBD810
 		private static float CalcFormulaType3(KurotatoFormula config, int weaponId, int weaponIncId)
 		{
 			float num = KurotatoFormulaUtil.ResolvePropValue(config.Prop1, weaponId, weaponIncId);
@@ -295,7 +251,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return num / num3;
 		}
 
-		// Token: 0x06038AB1 RID: 232113 RVA: 0x00D71150 File Offset: 0x00D6F350
+		// Token: 0x0602D9C1 RID: 186817 RVA: 0x00CBF654 File Offset: 0x00CBD854
 		private static float CalcFormulaType4(KurotatoFormula config, int weaponId, int weaponIncId)
 		{
 			float num = KurotatoFormulaUtil.ResolvePropValue(config.Prop1, weaponId, weaponIncId);
@@ -303,13 +259,13 @@ namespace CSharpScript.Game.Module.Kurotato
 			return num * (1f + num2 / 10000f);
 		}
 
-		// Token: 0x06038AB2 RID: 232114 RVA: 0x00D71188 File Offset: 0x00D6F388
+		// Token: 0x0602D9C2 RID: 186818 RVA: 0x00CBF68C File Offset: 0x00CBD88C
 		private static float CalcFormulaType5(KurotatoFormula config, int weaponId, int weaponIncId)
 		{
 			return KurotatoFormulaUtil.ResolvePropValue(config.Prop1, weaponId, weaponIncId) * (float)config.ParamInt1 / 10000f;
 		}
 
-		// Token: 0x06038AB3 RID: 232115 RVA: 0x00D711A8 File Offset: 0x00D6F3A8
+		// Token: 0x0602D9C3 RID: 186819 RVA: 0x00CBF6AC File Offset: 0x00CBD8AC
 		private static float CalcFormulaType6(KurotatoFormula config, int weaponId, int weaponIncId)
 		{
 			float num = KurotatoFormulaUtil.ResolvePropValue(config.Prop1, weaponId, weaponIncId);
@@ -321,17 +277,17 @@ namespace CSharpScript.Game.Module.Kurotato
 			return num * (1f + num2 / (float)config.ParamInt1);
 		}
 
-		// Token: 0x06038AB5 RID: 232117 RVA: 0x00D7128E File Offset: 0x00D6F48E
+		// Token: 0x0602D9C5 RID: 186821 RVA: 0x00CBF792 File Offset: 0x00CBD992
 		[CompilerGenerated]
 		internal static float <CalcFormulaType2>g__GetAttrWithWeaponBasic|12_0(EKSC_AttrType attrType, ref KurotatoFormulaUtil.<>c__DisplayClass12_0 A_1)
 		{
 			return KurotatoFormulaUtil.GetAttr((int)attrType) + KurotatoFormulaUtil.GetWeaponBasicPropertyValue((int)attrType, A_1.weaponId);
 		}
 
-		// Token: 0x0401DBFD RID: 121853
+		// Token: 0x04018693 RID: 99987
 		private const float PERMYRIAD_RATIO = 10000f;
 
-		// Token: 0x0401DBFE RID: 121854
+		// Token: 0x04018694 RID: 99988
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyDictionary<int, Func<KurotatoWeapon, float>> WeaponBasicPropertyMap = new Dictionary<int, Func<KurotatoWeapon, float>>
 		{
@@ -357,7 +313,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			}
 		};
 
-		// Token: 0x0401DBFF RID: 121855
+		// Token: 0x04018695 RID: 99989
 		private const float MinDivisor = 0.1f;
 	}
 }

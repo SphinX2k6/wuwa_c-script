@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.LevelFlow.Section
 {
-	// Token: 0x02006F70 RID: 28528
-	// (Invoke) Token: 0x06045668 RID: 284264
+	// Token: 0x020060F1 RID: 24817
+	// (Invoke) Token: 0x0603B816 RID: 243734
 	public delegate LevelFlowSection TSectionCreator();
 }

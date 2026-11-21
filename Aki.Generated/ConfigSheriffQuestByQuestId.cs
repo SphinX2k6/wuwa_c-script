@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200091D RID: 2333
+	// Token: 0x02000968 RID: 2408
 	public class ConfigSheriffQuestByQuestId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060036C1 RID: 14017 RVA: 0x0018EE60 File Offset: 0x0018D060
+		// Token: 0x06003883 RID: 14467 RVA: 0x0019C080 File Offset: 0x0019A280
 		static ConfigSheriffQuestByQuestId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSheriffQuestByQuestId.CreateStaticDefaultValue), new Action(ConfigSheriffQuestByQuestId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060036C2 RID: 14018 RVA: 0x0018EE80 File Offset: 0x0018D080
+		// Token: 0x06003884 RID: 14468 RVA: 0x0019C0A0 File Offset: 0x0019A2A0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSheriffQuestByQuestId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060036C3 RID: 14019 RVA: 0x0018EEFF File Offset: 0x0018D0FF
+		// Token: 0x06003885 RID: 14469 RVA: 0x0019C11F File Offset: 0x0019A31F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSheriffQuestByQuestId.LogPair = null;
 			ConfigSheriffQuestByQuestId.HandleId = 0;
 		}
 
-		// Token: 0x060036C4 RID: 14020 RVA: 0x0018EF0D File Offset: 0x0018D10D
+		// Token: 0x06003886 RID: 14470 RVA: 0x0019C12D File Offset: 0x0019A32D
 		public static void Init()
 		{
 			ConfigSheriffQuestByQuestId.HandleId = ConfigCommon.InitDataStatement(ConfigSheriffQuestByQuestId.HandleId, "db_sheriff.db", "select BinData from `SheriffQuest` where QuestId=?");
 		}
 
-		// Token: 0x060036C5 RID: 14021 RVA: 0x0018EF28 File Offset: 0x0018D128
+		// Token: 0x06003887 RID: 14471 RVA: 0x0019C148 File Offset: 0x0019A348
 		public static SheriffQuest? GetConfig(int p0QuestId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSheriffQuestByQuestId.HandleId, ConfigSheriffQuestByQuestId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SheriffQuest?(rootAsSheriffQuest);
 		}
 
-		// Token: 0x04003FB1 RID: 16305
+		// Token: 0x040041BE RID: 16830
 		private const string DB = "db_sheriff.db";
 
-		// Token: 0x04003FB2 RID: 16306
+		// Token: 0x040041BF RID: 16831
 		private const string FILE = "m.明慎台系统.xlsx";
 
-		// Token: 0x04003FB3 RID: 16307
+		// Token: 0x040041C0 RID: 16832
 		private const string TABLE = "SheriffQuest";
 
-		// Token: 0x04003FB4 RID: 16308
+		// Token: 0x040041C1 RID: 16833
 		private const string COMMAND = "select BinData from `SheriffQuest` where QuestId=?";
 
-		// Token: 0x04003FB5 RID: 16309
+		// Token: 0x040041C2 RID: 16834
 		private const string KEY_PREFIX = "SheriffQuestByQuestId";
 
-		// Token: 0x04003FB6 RID: 16310
+		// Token: 0x040041C3 RID: 16835
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003FB7 RID: 16311
+		// Token: 0x040041C4 RID: 16836
 		private static int HandleId;
 	}
 }

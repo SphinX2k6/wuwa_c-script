@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001979 RID: 6521
+// Token: 0x02000E36 RID: 3638
 public class SmallItemGridExchangeRewardComponent : SmallItemGridVisibleComponent
 {
-	// Token: 0x0600BEE6 RID: 48870 RVA: 0x002B2EEB File Offset: 0x002B10EB
+	// Token: 0x060092EE RID: 37614 RVA: 0x002BDE6F File Offset: 0x002BC06F
 	[NullableContext(2)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBFirstReward";
 	}
 
-	// Token: 0x0600BEE7 RID: 48871 RVA: 0x002B2EF4 File Offset: 0x002B10F4
+	// Token: 0x060092EF RID: 37615 RVA: 0x002BDE78 File Offset: 0x002BC078
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,19 +28,19 @@ public class SmallItemGridExchangeRewardComponent : SmallItemGridVisibleComponen
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BEE8 RID: 48872 RVA: 0x002B2F5D File Offset: 0x002B115D
+	// Token: 0x060092F0 RID: 37616 RVA: 0x002BDEE1 File Offset: 0x002BC0E1
 	protected override void OnStart()
 	{
 		base.GetSprite(1).SetColor(FColor.FromHex("#468fba"));
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "InstanceDungeon_ExchangeReward", Array.Empty<object>());
 	}
 
-	// Token: 0x02007EC5 RID: 32453
+	// Token: 0x02007054 RID: 28756
 	private enum EComponents
 	{
-		// Token: 0x04029703 RID: 169731
+		// Token: 0x04024A40 RID: 150080
 		TxtContent,
-		// Token: 0x04029704 RID: 169732
+		// Token: 0x04024A41 RID: 150081
 		SpriteBg
 	}
 }

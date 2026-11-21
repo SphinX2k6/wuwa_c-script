@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E64 RID: 3684
+	// Token: 0x02000F77 RID: 3959
 	[EnumExtensions]
 	public enum EFastReturnPosType
 	{
-		// Token: 0x04003089 RID: 12425
+		// Token: 0x0400338B RID: 13195
 		EntityPos,
-		// Token: 0x0400308A RID: 12426
+		// Token: 0x0400338C RID: 13196
 		GravityEntityPos
 	}
 }

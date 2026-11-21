@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 {
-	// Token: 0x020071A2 RID: 29090
+	// Token: 0x02006257 RID: 25175
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SceneItemStreamingTriggerModel : ModelBase
 	{
-		// Token: 0x060472F6 RID: 291574 RVA: 0x0121712E File Offset: 0x0121532E
+		// Token: 0x0603CBEE RID: 248814 RVA: 0x01171092 File Offset: 0x0116F292
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x060472F7 RID: 291575 RVA: 0x01217131 File Offset: 0x01215331
+		// Token: 0x0603CBEF RID: 248815 RVA: 0x01171095 File Offset: 0x0116F295
 		protected override bool OnClear()
 		{
 			TimerHandle timerHandle = this.TimerHandle;
@@ -34,8 +34,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return true;
 		}
 
-		// Token: 0x17009D9D RID: 40349
-		// (get) Token: 0x060472F8 RID: 291576 RVA: 0x01217165 File Offset: 0x01215365
+		// Token: 0x170072EA RID: 29418
+		// (get) Token: 0x0603CBF0 RID: 248816 RVA: 0x011710C9 File Offset: 0x0116F2C9
 		public static SceneItemStreamingTriggerModel Instance
 		{
 			get
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			}
 		}
 
-		// Token: 0x060472F9 RID: 291577 RVA: 0x0121716C File Offset: 0x0121536C
+		// Token: 0x0603CBF1 RID: 248817 RVA: 0x011710D0 File Offset: 0x0116F2D0
 		public static SceneItemStreamingTriggerModel GetOrCreateInstance()
 		{
 			if (SceneItemStreamingTriggerModel._Instance == null)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return SceneItemStreamingTriggerModel._Instance;
 		}
 
-		// Token: 0x060472FA RID: 291578 RVA: 0x01217180 File Offset: 0x01215380
+		// Token: 0x0603CBF2 RID: 248818 RVA: 0x011710E4 File Offset: 0x0116F2E4
 		public static bool CreateInstance()
 		{
 			if (SceneItemStreamingTriggerModel._Instance != null)
@@ -65,24 +65,24 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return true;
 		}
 
-		// Token: 0x060472FB RID: 291579 RVA: 0x01217196 File Offset: 0x01215396
+		// Token: 0x0603CBF3 RID: 248819 RVA: 0x011710FA File Offset: 0x0116F2FA
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060472FC RID: 291580 RVA: 0x01217198 File Offset: 0x01215398
+		// Token: 0x0603CBF4 RID: 248820 RVA: 0x011710FC File Offset: 0x0116F2FC
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemStreamingTriggerModel._Instance = null;
 		}
 
-		// Token: 0x060472FD RID: 291581 RVA: 0x012171A0 File Offset: 0x012153A0
+		// Token: 0x0603CBF5 RID: 248821 RVA: 0x01171104 File Offset: 0x0116F304
 		static SceneItemStreamingTriggerModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemStreamingTriggerModel.CreateStaticDefaultValue), new Action(SceneItemStreamingTriggerModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040256E0 RID: 153312
+		// Token: 0x0402034F RID: 131919
 		[Nullable(new byte[]
 		{
 			2,
@@ -90,11 +90,11 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 		})]
 		public HashSet<SceneItemStreamingTriggerComponent> Triggers;
 
-		// Token: 0x040256E1 RID: 153313
+		// Token: 0x04020350 RID: 131920
 		[Nullable(2)]
 		public TimerHandle TimerHandle;
 
-		// Token: 0x040256E2 RID: 153314
+		// Token: 0x04020351 RID: 131921
 		[Nullable(2)]
 		private static SceneItemStreamingTriggerModel _Instance;
 	}

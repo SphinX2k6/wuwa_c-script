@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000382 RID: 898
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003CB RID: 971
 	public class IFillType
 	{
-		// Token: 0x060011D1 RID: 4561 RVA: 0x0003B998 File Offset: 0x00039B98
+		// Token: 0x06001315 RID: 4885 RVA: 0x0003EC7C File Offset: 0x0003CE7C
 		private IFillType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060011D2 RID: 4562 RVA: 0x0003B9D0 File Offset: 0x00039BD0
+		// Token: 0x06001316 RID: 4886 RVA: 0x0003ECB4 File Offset: 0x0003CEB4
 		public static IFillType Create([Nullable(2)] IFillType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011D3 RID: 4563 RVA: 0x0003B9E3 File Offset: 0x00039BE3
+		// Token: 0x06001317 RID: 4887 RVA: 0x0003ECC7 File Offset: 0x0003CEC7
 		public static IFillType CreateFromSetValue([Nullable(2)] IFillType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011D4 RID: 4564 RVA: 0x0003B9F6 File Offset: 0x00039BF6
+		// Token: 0x06001318 RID: 4888 RVA: 0x0003ECDA File Offset: 0x0003CEDA
 		public IFillType_SetValue ToSetValue()
 		{
 			return new IFillType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000503 RID: 1283
-		// (get) Token: 0x060011D5 RID: 4565 RVA: 0x0003BA09 File Offset: 0x00039C09
-		// (set) Token: 0x060011D6 RID: 4566 RVA: 0x0003BA34 File Offset: 0x00039C34
+		// Token: 0x17000557 RID: 1367
+		// (get) Token: 0x06001319 RID: 4889 RVA: 0x0003ECED File Offset: 0x0003CEED
+		// (set) Token: 0x0600131A RID: 4890 RVA: 0x0003ED18 File Offset: 0x0003CF18
 		public virtual EFillType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E82 RID: 3714
+		// Token: 0x04000F79 RID: 3961
 		[Nullable(2)]
 		protected IFillType FbInstance;
 
-		// Token: 0x04000E83 RID: 3715
+		// Token: 0x04000F7A RID: 3962
 		[Nullable(2)]
 		protected IFillType_SetValue PocoInterface;
 	}

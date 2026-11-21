@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015C7 RID: 5575
+	// Token: 0x02001726 RID: 5926
 	[EnumExtensions]
 	public enum EDoInteract
 	{
-		// Token: 0x04004A4E RID: 19022
+		// Token: 0x04004E08 RID: 19976
 		Direct,
-		// Token: 0x04004A4F RID: 19023
+		// Token: 0x04004E09 RID: 19977
 		Option,
-		// Token: 0x04004A50 RID: 19024
+		// Token: 0x04004E0A RID: 19978
 		Auto
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E95 RID: 20117
+	// Token: 0x020053BE RID: 21438
 	public struct IAllKillCondition : IFlatbufferObject
 	{
-		// Token: 0x17009045 RID: 36933
-		// (get) Token: 0x0601FA7E RID: 129662 RVA: 0x00468952 File Offset: 0x00466B52
+		// Token: 0x170097A4 RID: 38820
+		// (get) Token: 0x06021773 RID: 137075 RVA: 0x0049DBB6 File Offset: 0x0049BDB6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FA7F RID: 129663 RVA: 0x0046895F File Offset: 0x00466B5F
+		// Token: 0x06021774 RID: 137076 RVA: 0x0049DBC3 File Offset: 0x0049BDC3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FA80 RID: 129664 RVA: 0x00468968 File Offset: 0x00466B68
+		// Token: 0x06021775 RID: 137077 RVA: 0x0049DBCC File Offset: 0x0049BDCC
 		public static IAllKillCondition GetRootAsIAllKillCondition(ByteBuffer _bb)
 		{
 			return IAllKillCondition.GetRootAsIAllKillCondition(_bb, default(IAllKillCondition));
 		}
 
-		// Token: 0x0601FA81 RID: 129665 RVA: 0x00468984 File Offset: 0x00466B84
+		// Token: 0x06021776 RID: 137078 RVA: 0x0049DBE8 File Offset: 0x0049BDE8
 		public static IAllKillCondition GetRootAsIAllKillCondition(ByteBuffer _bb, IAllKillCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FA82 RID: 129666 RVA: 0x004689A1 File Offset: 0x00466BA1
+		// Token: 0x06021777 RID: 137079 RVA: 0x0049DC05 File Offset: 0x0049BE05
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FA83 RID: 129667 RVA: 0x004689B0 File Offset: 0x00466BB0
+		// Token: 0x06021778 RID: 137080 RVA: 0x0049DC14 File Offset: 0x0049BE14
 		public IAllKillCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009046 RID: 36934
-		// (get) Token: 0x0601FA84 RID: 129668 RVA: 0x004689C0 File Offset: 0x00466BC0
+		// Token: 0x170097A5 RID: 38821
+		// (get) Token: 0x06021779 RID: 137081 RVA: 0x0049DC24 File Offset: 0x0049BE24
 		public ESpawnMonsterCompleteCondition Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FA85 RID: 129669 RVA: 0x004689FC File Offset: 0x00466BFC
+		// Token: 0x0602177A RID: 137082 RVA: 0x0049DC60 File Offset: 0x0049BE60
 		public static Offset<IAllKillCondition> CreateIAllKillCondition(FlatBufferBuilder builder, ESpawnMonsterCompleteCondition Type = ESpawnMonsterCompleteCondition.AllKill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAllKillCondition.EndIAllKillCondition(builder);
 		}
 
-		// Token: 0x0601FA86 RID: 129670 RVA: 0x00468A12 File Offset: 0x00466C12
+		// Token: 0x0602177B RID: 137083 RVA: 0x0049DC76 File Offset: 0x0049BE76
 		public static void StartIAllKillCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601FA87 RID: 129671 RVA: 0x00468A1B File Offset: 0x00466C1B
+		// Token: 0x0602177C RID: 137084 RVA: 0x0049DC7F File Offset: 0x0049BE7F
 		public static void AddType(FlatBufferBuilder builder, ESpawnMonsterCompleteCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601FA88 RID: 129672 RVA: 0x00468A26 File Offset: 0x00466C26
+		// Token: 0x0602177D RID: 137085 RVA: 0x0049DC8A File Offset: 0x0049BE8A
 		public static Offset<IAllKillCondition> EndIAllKillCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IAllKillCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601FA89 RID: 129673 RVA: 0x00468A34 File Offset: 0x00466C34
+		// Token: 0x0602177E RID: 137086 RVA: 0x0049DC98 File Offset: 0x0049BE98
 		public IAllKillConditionT UnPack()
 		{
 			IAllKillConditionT allKillConditionT = new IAllKillConditionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return allKillConditionT;
 		}
 
-		// Token: 0x0601FA8A RID: 129674 RVA: 0x00468A4F File Offset: 0x00466C4F
+		// Token: 0x0602177F RID: 137087 RVA: 0x0049DCB3 File Offset: 0x0049BEB3
 		public void UnPackTo(IAllKillConditionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601FA8B RID: 129675 RVA: 0x00468A60 File Offset: 0x00466C60
+		// Token: 0x06021780 RID: 137088 RVA: 0x0049DCC4 File Offset: 0x0049BEC4
 		public static Offset<IAllKillCondition> Pack(FlatBufferBuilder builder, IAllKillConditionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAllKillCondition.CreateIAllKillCondition(builder, _o.Type);
 		}
 
-		// Token: 0x0400DC6F RID: 56431
+		// Token: 0x0400E80A RID: 59402
 		private Table __p;
 	}
 }

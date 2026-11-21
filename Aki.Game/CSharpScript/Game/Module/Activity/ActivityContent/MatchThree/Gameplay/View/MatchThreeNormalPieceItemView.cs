@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064DD RID: 25821
+	// Token: 0x0200545B RID: 21595
 	public class MatchThreeNormalPieceItemView : MatchThreePieceItemView
 	{
-		// Token: 0x06040CEA RID: 265450 RVA: 0x00FB27D8 File Offset: 0x00FB09D8
+		// Token: 0x060359AE RID: 219566 RVA: 0x00EF9808 File Offset: 0x00EF7A08
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040CEB RID: 265451 RVA: 0x00FB2820 File Offset: 0x00FB0A20
+		// Token: 0x060359AF RID: 219567 RVA: 0x00EF9850 File Offset: 0x00EF7A50
 		protected override UniTask PrepareAppearanceAsync()
 		{
 			MatchThreeNormalPieceItemView.<PrepareAppearanceAsync>d__3 <PrepareAppearanceAsync>d__;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <PrepareAppearanceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040CEC RID: 265452 RVA: 0x00FB2863 File Offset: 0x00FB0A63
+		// Token: 0x060359B0 RID: 219568 RVA: 0x00EF9893 File Offset: 0x00EF7A93
 		private void OnSpriteLoaded(bool success)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			spriteLoadPromise.TrySetResult(success);
 		}
 
-		// Token: 0x06040CED RID: 265453 RVA: 0x00FB2894 File Offset: 0x00FB0A94
+		// Token: 0x060359B1 RID: 219569 RVA: 0x00EF98C4 File Offset: 0x00EF7AC4
 		protected override void RefreshAppearance()
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -70,14 +70,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SetSpriteByPath(UiResourceConfig.Instance.GetResourcePath(item), sprite, false, null, new Action<bool>(this.OnSpriteLoaded));
 		}
 
-		// Token: 0x04021C31 RID: 138289
+		// Token: 0x0401C562 RID: 116066
 		[Nullable(2)]
 		private UniTaskCompletionSource<bool> SpriteLoadPromise;
 
-		// Token: 0x0200C70D RID: 50957
+		// Token: 0x0200B0F3 RID: 45299
 		private enum EComponent
 		{
-			// Token: 0x0403C229 RID: 246313
+			// Token: 0x04036B84 RID: 224132
 			SprIcon
 		}
 	}

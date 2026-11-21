@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200215B RID: 8539
+// Token: 0x02001633 RID: 5683
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomDiscardPlanSmartDiscardReport : PlayerCommonLogData
 {
-	// Token: 0x170014FD RID: 5373
-	// (get) Token: 0x06010A45 RID: 68165 RVA: 0x0040C17A File Offset: 0x0040A37A
-	// (set) Token: 0x06010A46 RID: 68166 RVA: 0x0040C182 File Offset: 0x0040A382
+	// Token: 0x1700152B RID: 5419
+	// (get) Token: 0x0600DEB8 RID: 57016 RVA: 0x004188C2 File Offset: 0x00416AC2
+	// (set) Token: 0x0600DEB9 RID: 57017 RVA: 0x004188CA File Offset: 0x00416ACA
 	public override string event_id { get; set; } = "1843";
 
-	// Token: 0x04007E12 RID: 32274
+	// Token: 0x04007F22 RID: 32546
 	public int i_type;
 }

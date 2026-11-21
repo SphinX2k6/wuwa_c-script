@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C2F RID: 19503
+	// Token: 0x02005122 RID: 20770
 	public class IGramophoneCheckConditionT
 	{
-		// Token: 0x17008DAD RID: 36269
-		// (get) Token: 0x0601EE7F RID: 126591 RVA: 0x00453243 File Offset: 0x00451443
-		// (set) Token: 0x0601EE80 RID: 126592 RVA: 0x0045324B File Offset: 0x0045144B
+		// Token: 0x170094D6 RID: 38102
+		// (get) Token: 0x06020A83 RID: 133763 RVA: 0x00486B1F File Offset: 0x00484D1F
+		// (set) Token: 0x06020A84 RID: 133764 RVA: 0x00486B27 File Offset: 0x00484D27
 		public ECommonMatchType CheckType { get; set; }
 
-		// Token: 0x17008DAE RID: 36270
-		// (get) Token: 0x0601EE81 RID: 126593 RVA: 0x00453254 File Offset: 0x00451454
-		// (set) Token: 0x0601EE82 RID: 126594 RVA: 0x0045325C File Offset: 0x0045145C
+		// Token: 0x170094D7 RID: 38103
+		// (get) Token: 0x06020A85 RID: 133765 RVA: 0x00486B30 File Offset: 0x00484D30
+		// (set) Token: 0x06020A86 RID: 133766 RVA: 0x00486B38 File Offset: 0x00484D38
 		public List<int> PlayList { get; set; }
 
-		// Token: 0x0601EE83 RID: 126595 RVA: 0x00453265 File Offset: 0x00451465
+		// Token: 0x06020A87 RID: 133767 RVA: 0x00486B41 File Offset: 0x00484D41
 		public IGramophoneCheckConditionT()
 		{
 			this.CheckType = ECommonMatchType.MatchAll;

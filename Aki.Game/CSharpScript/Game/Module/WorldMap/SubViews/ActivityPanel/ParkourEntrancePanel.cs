@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityPanel
 {
-	// Token: 0x02004845 RID: 18501
+	// Token: 0x02003776 RID: 14198
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ParkourEntrancePanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030693 RID: 198291 RVA: 0x00B3CB65 File Offset: 0x00B3AD65
+		// Token: 0x06024E63 RID: 151139 RVA: 0x00A6CD4D File Offset: 0x00A6AF4D
 		public override string GetResourceId()
 		{
 			return "UiView_Huodong_Prefab";
 		}
 
-		// Token: 0x06030694 RID: 198292 RVA: 0x00B3CB6C File Offset: 0x00B3AD6C
+		// Token: 0x06024E64 RID: 151140 RVA: 0x00A6CD54 File Offset: 0x00A6AF54
 		protected override void OnStart()
 		{
 			this.ScoreTipsView = new TipsListView();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityPanel
 			base.OnStart();
 		}
 
-		// Token: 0x06030695 RID: 198293 RVA: 0x00B3CB91 File Offset: 0x00B3AD91
+		// Token: 0x06024E65 RID: 151141 RVA: 0x00A6CD79 File Offset: 0x00A6AF79
 		protected override void OnBeforeDestroy()
 		{
 			TipsListView scoreTipsView = this.ScoreTipsView;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityPanel
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x06030696 RID: 198294 RVA: 0x00B3CBAC File Offset: 0x00B3ADAC
+		// Token: 0x06024E66 RID: 151142 RVA: 0x00A6CD94 File Offset: 0x00A6AF94
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityPanel
 			verticalLayout.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06030697 RID: 198295 RVA: 0x00B3CBF4 File Offset: 0x00B3ADF4
+		// Token: 0x06024E67 RID: 151143 RVA: 0x00A6CDDC File Offset: 0x00A6AFDC
 		protected override void OnShowWorldMapSecondaryUi(params object[] parameters)
 		{
 			if (parameters.Length != 0)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityPanel
 			}
 		}
 
-		// Token: 0x06030698 RID: 198296 RVA: 0x00B3CC56 File Offset: 0x00B3AE56
+		// Token: 0x06024E68 RID: 151144 RVA: 0x00A6CE3E File Offset: 0x00A6B03E
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			TipsListView scoreTipsView = this.ScoreTipsView;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityPanel
 			scoreTipsView.Clear();
 		}
 
-		// Token: 0x06030699 RID: 198297 RVA: 0x00B3CC68 File Offset: 0x00B3AE68
+		// Token: 0x06024E69 RID: 151145 RVA: 0x00A6CE50 File Offset: 0x00A6B050
 		private void RefreshScore()
 		{
 			if (this.SelectedMarkItem == null)
@@ -120,28 +120,28 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityPanel
 			instanceDungeonCostTip2.SetRightText(challengeDataByMarkId.GetMaxScore().ToString());
 		}
 
-		// Token: 0x0603069A RID: 198298 RVA: 0x00B3CDAB File Offset: 0x00B3AFAB
+		// Token: 0x06024E6A RID: 151146 RVA: 0x00A6CF93 File Offset: 0x00A6B193
 		protected override void OnConfirmBtnClick(int index)
 		{
 			this.HandleTrack();
 		}
 
-		// Token: 0x0401A05B RID: 106587
+		// Token: 0x0401470F RID: 83727
 		[Nullable(2)]
 		private ParkourMarkItem SelectedMarkItem;
 
-		// Token: 0x0401A05C RID: 106588
+		// Token: 0x04014710 RID: 83728
 		[Nullable(2)]
 		private TipsListView ScoreTipsView;
 
-		// Token: 0x0200AB24 RID: 43812
+		// Token: 0x020094D2 RID: 38098
 		[Nullable(0)]
 		public static class ParkourConstants
 		{
-			// Token: 0x04034021 RID: 213025
+			// Token: 0x0402E79C RID: 190364
 			public const string SCORE_KEY = "score";
 
-			// Token: 0x04034022 RID: 213026
+			// Token: 0x0402E79D RID: 190365
 			public const string LINE_NUMBER_KEY = "line";
 		}
 	}

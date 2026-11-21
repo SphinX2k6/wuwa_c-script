@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020029BC RID: 10684
+	// Token: 0x0200086C RID: 2156
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnVisibilityChangedEvent : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060277E1 RID: 161761 RVA: 0x003C45D2 File Offset: 0x003C27D2
+		// Token: 0x0600BB2E RID: 47918 RVA: 0x0012BCC2 File Offset: 0x00129EC2
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnVisibilityChangedEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x060277E2 RID: 161762 RVA: 0x003C45DE File Offset: 0x003C27DE
+		// Token: 0x0600BB2F RID: 47919 RVA: 0x0012BCCE File Offset: 0x00129ECE
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnVisibilityChangedEvent._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnVisibilityChangedEvent._FunctionPtr;
 		}
 
-		// Token: 0x060277E3 RID: 161763 RVA: 0x003C4601 File Offset: 0x003C2801
+		// Token: 0x0600BB30 RID: 47920 RVA: 0x0012BCF1 File Offset: 0x00129EF1
 		public FOnVisibilityChangedEvent()
 		{
 		}
 
-		// Token: 0x060277E4 RID: 161764 RVA: 0x003C4609 File Offset: 0x003C2809
+		// Token: 0x0600BB31 RID: 47921 RVA: 0x0012BCF9 File Offset: 0x00129EF9
 		[NullableContext(2)]
 		public FOnVisibilityChangedEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060277E5 RID: 161765 RVA: 0x003C4613 File Offset: 0x003C2813
+		// Token: 0x0600BB32 RID: 47922 RVA: 0x0012BD03 File Offset: 0x00129F03
 		public FOnVisibilityChangedEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060277E6 RID: 161766 RVA: 0x003C461E File Offset: 0x003C281E
+		// Token: 0x0600BB33 RID: 47923 RVA: 0x0012BD0E File Offset: 0x00129F0E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<ESlateVisibility>) ?? ((Action<ESlateVisibility>)Delegate.CreateDelegate(typeof(Action<ESlateVisibility>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060277E7 RID: 161767 RVA: 0x003C4650 File Offset: 0x003C2850
+		// Token: 0x0600BB34 RID: 47924 RVA: 0x0012BD40 File Offset: 0x00129F40
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<ESlateVisibility> Callback)
 		{
 			if (FOnVisibilityChangedEvent.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnVisibilityChangedEvent.RegisterId);
 		}
 
-		// Token: 0x060277E8 RID: 161768 RVA: 0x003C468A File Offset: 0x003C288A
+		// Token: 0x0600BB35 RID: 47925 RVA: 0x0012BD7A File Offset: 0x00129F7A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<ESlateVisibility> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060277E9 RID: 161769 RVA: 0x003C4694 File Offset: 0x003C2894
+		// Token: 0x0600BB36 RID: 47926 RVA: 0x0012BD84 File Offset: 0x00129F84
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(ESlateVisibility InVisibility)
 		{
 			FOnVisibilityChangedEvent.__FOnVisibilityChangedEvent_DelegateParams* ptr = stackalloc FOnVisibilityChangedEvent.__FOnVisibilityChangedEvent_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FOnVisibilityChangedEvent.__FOnVisibilityChangedEvent_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x060277EA RID: 161770 RVA: 0x003C46D0 File Offset: 0x003C28D0
+		// Token: 0x0600BB37 RID: 47927 RVA: 0x0012BDC0 File Offset: 0x00129FC0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<ESlateVisibility> action = target as Action<ESlateVisibility>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FOnVisibilityChangedEvent.__FOnVisibilityChangedEvent_DelegateParams*)__Parameters)->InVisibility);
 		}
 
-		// Token: 0x04015A88 RID: 88712
+		// Token: 0x040054CD RID: 21709
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04015A89 RID: 88713
+		// Token: 0x040054CE RID: 21710
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/UMG.OnVisibilityChangedEvent__DelegateSignature";
 
-		// Token: 0x04015A8A RID: 88714
+		// Token: 0x040054CF RID: 21711
 		private static int RegisterId;
 
-		// Token: 0x02003BCB RID: 15307
+		// Token: 0x0200140C RID: 5132
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FOnVisibilityChangedEvent_DelegateParams
+		private ref struct __FOnVisibilityChangedEvent_DelegateParams
 		{
-			// Token: 0x04017DB4 RID: 97716
+			// Token: 0x040068BA RID: 26810
 			[FieldOffset(0)]
 			public ESlateVisibility InVisibility;
 		}
 
-		// Token: 0x02003BCC RID: 15308
+		// Token: 0x0200140D RID: 5133
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017DB5 RID: 97717
+			// Token: 0x040068BB RID: 26811
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

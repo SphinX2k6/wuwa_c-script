@@ -9,14 +9,14 @@ using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 
-// Token: 0x020019EE RID: 6638
+// Token: 0x02000EAD RID: 3757
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class DailyActivityModel : ModelBase
 {
-	// Token: 0x17001036 RID: 4150
-	// (get) Token: 0x0600C227 RID: 49703 RVA: 0x002BD016 File Offset: 0x002BB216
+	// Token: 0x1700105B RID: 4187
+	// (get) Token: 0x06009634 RID: 38452 RVA: 0x002C7FEE File Offset: 0x002C61EE
 	public int ActivityValue
 	{
 		get
@@ -25,8 +25,8 @@ public class DailyActivityModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001037 RID: 4151
-	// (get) Token: 0x0600C228 RID: 49704 RVA: 0x002BD01E File Offset: 0x002BB21E
+	// Token: 0x1700105C RID: 4188
+	// (get) Token: 0x06009635 RID: 38453 RVA: 0x002C7FF6 File Offset: 0x002C61F6
 	public int ActivityMaxValue
 	{
 		get
@@ -35,8 +35,8 @@ public class DailyActivityModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001038 RID: 4152
-	// (get) Token: 0x0600C229 RID: 49705 RVA: 0x002BD026 File Offset: 0x002BB226
+	// Token: 0x1700105D RID: 4189
+	// (get) Token: 0x06009636 RID: 38454 RVA: 0x002C7FFE File Offset: 0x002C61FE
 	public Dictionary<int, DailyActivityDefine.IActivityGoalData> DailyActivityGoalMap
 	{
 		get
@@ -45,8 +45,8 @@ public class DailyActivityModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001039 RID: 4153
-	// (get) Token: 0x0600C22A RID: 49706 RVA: 0x002BD02E File Offset: 0x002BB22E
+	// Token: 0x1700105E RID: 4190
+	// (get) Token: 0x06009637 RID: 38455 RVA: 0x002C8006 File Offset: 0x002C6206
 	public List<DailyActiveTaskData> DailyActivityTaskList
 	{
 		get
@@ -55,8 +55,8 @@ public class DailyActivityModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700103A RID: 4154
-	// (get) Token: 0x0600C22B RID: 49707 RVA: 0x002BD036 File Offset: 0x002BB236
+	// Token: 0x1700105F RID: 4191
+	// (get) Token: 0x06009638 RID: 38456 RVA: 0x002C800E File Offset: 0x002C620E
 	public long DayEndTime
 	{
 		get
@@ -65,9 +65,9 @@ public class DailyActivityModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700103B RID: 4155
-	// (get) Token: 0x0600C22C RID: 49708 RVA: 0x002BD03E File Offset: 0x002BB23E
-	// (set) Token: 0x0600C22D RID: 49709 RVA: 0x002BD046 File Offset: 0x002BB246
+	// Token: 0x17001060 RID: 4192
+	// (get) Token: 0x06009639 RID: 38457 RVA: 0x002C8016 File Offset: 0x002C6216
+	// (set) Token: 0x0600963A RID: 38458 RVA: 0x002C801E File Offset: 0x002C621E
 	[Nullable(2)]
 	public RewardPopupData RewardData
 	{
@@ -83,19 +83,19 @@ public class DailyActivityModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C22E RID: 49710 RVA: 0x002BD04F File Offset: 0x002BB24F
+	// Token: 0x0600963B RID: 38459 RVA: 0x002C8027 File Offset: 0x002C6227
 	public bool ShouldShowLivenessRewardDoubleTag(int itemConfigId)
 	{
 		return itemConfigId == 1 && this.IsUnionExpDoubleBonusActive();
 	}
 
-	// Token: 0x0600C22F RID: 49711 RVA: 0x002BD05D File Offset: 0x002BB25D
+	// Token: 0x0600963C RID: 38460 RVA: 0x002C8035 File Offset: 0x002C6235
 	public bool IsUnionExpDoubleBonusActive()
 	{
 		return this.GetUnionExpDoubleBonusEndTime() > 0L;
 	}
 
-	// Token: 0x0600C230 RID: 49712 RVA: 0x002BD06C File Offset: 0x002BB26C
+	// Token: 0x0600963D RID: 38461 RVA: 0x002C8044 File Offset: 0x002C6244
 	public long GetUnionExpDoubleBonusEndTime()
 	{
 		List<ActivityBaseData> currentActivitiesByType = ActivityModel.Instance.GetCurrentActivitiesByType(ActivityType.NewPlayerSupportActivityV2);
@@ -116,7 +116,7 @@ public class DailyActivityModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600C231 RID: 49713 RVA: 0x002BD0FC File Offset: 0x002BB2FC
+	// Token: 0x0600963E RID: 38462 RVA: 0x002C80D4 File Offset: 0x002C62D4
 	public bool TryGetActiveLivenessUnionExpBonusSplitRule(out DailyActivityModel.LivenessUnionExpBonusSplitRule rule)
 	{
 		rule = default(DailyActivityModel.LivenessUnionExpBonusSplitRule);
@@ -131,7 +131,7 @@ public class DailyActivityModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600C232 RID: 49714 RVA: 0x002BD134 File Offset: 0x002BB334
+	// Token: 0x0600963F RID: 38463 RVA: 0x002C810C File Offset: 0x002C630C
 	[NullableContext(2)]
 	public string GetUnionExpDoubleBonusRemainArgForBanner()
 	{
@@ -155,43 +155,43 @@ public class DailyActivityModel : ModelBase
 		return TimeUtil.Instance.GetCountDownDataFormat2(num, new CommonDefine.ETimeType?(value), new CommonDefine.ETimeType?(value2)).CountDownText ?? "";
 	}
 
-	// Token: 0x0600C233 RID: 49715 RVA: 0x002BD204 File Offset: 0x002BB404
+	// Token: 0x06009640 RID: 38464 RVA: 0x002C81DC File Offset: 0x002C63DC
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0600C234 RID: 49716 RVA: 0x002BD207 File Offset: 0x002BB407
+	// Token: 0x06009641 RID: 38465 RVA: 0x002C81DF File Offset: 0x002C63DF
 	public void EmitDailyActivityStateCheck()
 	{
 		EventSystem.Instance.Emit(EEventName.DailyActivityStateNotify);
 	}
 
-	// Token: 0x0600C235 RID: 49717 RVA: 0x002BD219 File Offset: 0x002BB419
+	// Token: 0x06009642 RID: 38466 RVA: 0x002C81F1 File Offset: 0x002C63F1
 	public int? GetWeeklyChallengeRefreshTime()
 	{
 		return ((ServerStorageMap)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.FirstOpenDailyActivityTab)).Get(999);
 	}
 
-	// Token: 0x0600C236 RID: 49718 RVA: 0x002BD236 File Offset: 0x002BB436
+	// Token: 0x06009643 RID: 38467 RVA: 0x002C820E File Offset: 0x002C640E
 	public void SetWeeklyChallengeRefreshTime(int time)
 	{
 		((ServerStorageMap)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.FirstOpenDailyActivityTab)).Set(999, time);
 	}
 
-	// Token: 0x0600C237 RID: 49719 RVA: 0x002BD254 File Offset: 0x002BB454
+	// Token: 0x06009644 RID: 38468 RVA: 0x002C822C File Offset: 0x002C642C
 	public int? GetFirstOpenTabTime(DailyActivityDefine.EDailyActivityMainTab tab)
 	{
 		return ((ServerStorageMap)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.FirstOpenDailyActivityTab)).Get((int)tab);
 	}
 
-	// Token: 0x0600C238 RID: 49720 RVA: 0x002BD26D File Offset: 0x002BB46D
+	// Token: 0x06009645 RID: 38469 RVA: 0x002C8245 File Offset: 0x002C6445
 	public void SetFirstOpenTabTime(DailyActivityDefine.EDailyActivityMainTab tab, int time)
 	{
 		((ServerStorageMap)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.FirstOpenDailyActivityTab)).Set((int)tab, time);
 	}
 
-	// Token: 0x0600C239 RID: 49721 RVA: 0x002BD288 File Offset: 0x002BB488
+	// Token: 0x06009646 RID: 38470 RVA: 0x002C8260 File Offset: 0x002C6460
 	public void MarkWeeklyPlayOpened()
 	{
 		long weeklyEndTime = WeeklyChallengeModel.Instance.WeeklyEndTime;
@@ -207,7 +207,7 @@ public class DailyActivityModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.WeeklyChallengeRefreshRedDotChanged);
 	}
 
-	// Token: 0x0600C23A RID: 49722 RVA: 0x002BD2D4 File Offset: 0x002BB4D4
+	// Token: 0x06009647 RID: 38471 RVA: 0x002C82AC File Offset: 0x002C64AC
 	public void InitGoalData()
 	{
 		this.GoalDataMap = new Dictionary<int, DailyActivityDefine.IActivityGoalData>();
@@ -235,7 +235,7 @@ public class DailyActivityModel : ModelBase
 		this.MaxActivity = allActivityGoalData[allActivityGoalData.Count - 1].Goal;
 	}
 
-	// Token: 0x0600C23B RID: 49723 RVA: 0x002BD410 File Offset: 0x002BB610
+	// Token: 0x06009648 RID: 38472 RVA: 0x002C83E8 File Offset: 0x002C65E8
 	public List<int> GetCanRewardIdList()
 	{
 		List<int> list = new List<int>();
@@ -249,7 +249,7 @@ public class DailyActivityModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600C23C RID: 49724 RVA: 0x002BD480 File Offset: 0x002BB680
+	// Token: 0x06009649 RID: 38473 RVA: 0x002C8458 File Offset: 0x002C6658
 	public void RefreshActivityInfo(int[] goalIds)
 	{
 		foreach (int key in goalIds)
@@ -265,7 +265,7 @@ public class DailyActivityModel : ModelBase
 		this.EmitDailyActivityStateCheck();
 	}
 
-	// Token: 0x0600C23D RID: 49725 RVA: 0x002BD4E4 File Offset: 0x002BB6E4
+	// Token: 0x0600964A RID: 38474 RVA: 0x002C84BC File Offset: 0x002C66BC
 	public void RefreshActivityValue(int value)
 	{
 		this.Activity = value;
@@ -278,13 +278,13 @@ public class DailyActivityModel : ModelBase
 		this.EmitDailyActivityStateCheck();
 	}
 
-	// Token: 0x0600C23E RID: 49726 RVA: 0x002BD574 File Offset: 0x002BB774
+	// Token: 0x0600964B RID: 38475 RVA: 0x002C854C File Offset: 0x002C674C
 	public List<TItem> GetActivityRewardById(int id)
 	{
 		return this.GoalDataMap[id].Rewards;
 	}
 
-	// Token: 0x0600C23F RID: 49727 RVA: 0x002BD588 File Offset: 0x002BB788
+	// Token: 0x0600964C RID: 38476 RVA: 0x002C8560 File Offset: 0x002C6760
 	public void RefreshDailyActivityData(LivenessInfo activityInfo)
 	{
 		this.Activity = ((activityInfo != null) ? activityInfo.LivenessCount : 0);
@@ -337,7 +337,7 @@ public class DailyActivityModel : ModelBase
 		this.EmitDailyActivityStateCheck();
 	}
 
-	// Token: 0x0600C240 RID: 49728 RVA: 0x002BD7F0 File Offset: 0x002BB9F0
+	// Token: 0x0600964D RID: 38477 RVA: 0x002C87C8 File Offset: 0x002C69C8
 	public void UpdateDailyActivityData(LivenessInfo activityInfo)
 	{
 		this.Activity = ((activityInfo != null) ? activityInfo.LivenessCount : 0);
@@ -383,7 +383,7 @@ public class DailyActivityModel : ModelBase
 		this.EmitDailyActivityStateCheck();
 	}
 
-	// Token: 0x0600C241 RID: 49729 RVA: 0x002BD984 File Offset: 0x002BBB84
+	// Token: 0x0600964E RID: 38478 RVA: 0x002C895C File Offset: 0x002C6B5C
 	public void SortTaskDataList()
 	{
 		this.TaskDataList.Sort(delegate(DailyActiveTaskData a, DailyActiveTaskData b)
@@ -400,7 +400,7 @@ public class DailyActivityModel : ModelBase
 		});
 	}
 
-	// Token: 0x0600C242 RID: 49730 RVA: 0x002BD9B0 File Offset: 0x002BBBB0
+	// Token: 0x0600964F RID: 38479 RVA: 0x002C8988 File Offset: 0x002C6B88
 	public EDailyActiveState GetActivityGoalState(int goalValue, bool isClaimed)
 	{
 		EDailyActiveState result = EDailyActiveState.Unfinished;
@@ -415,7 +415,7 @@ public class DailyActivityModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600C243 RID: 49731 RVA: 0x002BD9D4 File Offset: 0x002BBBD4
+	// Token: 0x06009650 RID: 38480 RVA: 0x002C89AC File Offset: 0x002C6BAC
 	private bool CheckIsTaskRewardWaitTake()
 	{
 		if (this.Activity >= this.MaxActivity)
@@ -435,7 +435,7 @@ public class DailyActivityModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600C244 RID: 49732 RVA: 0x002BDA40 File Offset: 0x002BBC40
+	// Token: 0x06009651 RID: 38481 RVA: 0x002C8A18 File Offset: 0x002C6C18
 	private bool CheckIsActivityRewardWaitTake()
 	{
 		bool result = false;
@@ -450,19 +450,19 @@ public class DailyActivityModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600C245 RID: 49733 RVA: 0x002BDAA4 File Offset: 0x002BBCA4
+	// Token: 0x06009652 RID: 38482 RVA: 0x002C8A7C File Offset: 0x002C6C7C
 	public bool CheckIsRewardWaitTake()
 	{
 		return this.CheckIsTaskRewardWaitTake() || this.CheckIsActivityRewardWaitTake();
 	}
 
-	// Token: 0x0600C246 RID: 49734 RVA: 0x002BDAB6 File Offset: 0x002BBCB6
+	// Token: 0x06009653 RID: 38483 RVA: 0x002C8A8E File Offset: 0x002C6C8E
 	public bool CheckIsFinish()
 	{
 		return this.Activity >= this.MaxActivity;
 	}
 
-	// Token: 0x0600C247 RID: 49735 RVA: 0x002BDACC File Offset: 0x002BBCCC
+	// Token: 0x06009654 RID: 38484 RVA: 0x002C8AA4 File Offset: 0x002C6CA4
 	public int GetLastNotTaken()
 	{
 		int result = 0;
@@ -480,8 +480,8 @@ public class DailyActivityModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x1700103C RID: 4156
-	// (get) Token: 0x0600C248 RID: 49736 RVA: 0x002BDB28 File Offset: 0x002BBD28
+	// Token: 0x17001061 RID: 4193
+	// (get) Token: 0x06009655 RID: 38485 RVA: 0x002C8B00 File Offset: 0x002C6D00
 	public static DailyActivityModel Instance
 	{
 		get
@@ -490,7 +490,7 @@ public class DailyActivityModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C249 RID: 49737 RVA: 0x002BDB2F File Offset: 0x002BBD2F
+	// Token: 0x06009656 RID: 38486 RVA: 0x002C8B07 File Offset: 0x002C6D07
 	public static DailyActivityModel GetOrCreateInstance()
 	{
 		if (DailyActivityModel._Instance == null)
@@ -500,7 +500,7 @@ public class DailyActivityModel : ModelBase
 		return DailyActivityModel._Instance;
 	}
 
-	// Token: 0x0600C24A RID: 49738 RVA: 0x002BDB43 File Offset: 0x002BBD43
+	// Token: 0x06009657 RID: 38487 RVA: 0x002C8B1B File Offset: 0x002C6D1B
 	public static bool CreateInstance()
 	{
 		if (DailyActivityModel._Instance != null)
@@ -511,46 +511,46 @@ public class DailyActivityModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600C24B RID: 49739 RVA: 0x002BDB59 File Offset: 0x002BBD59
+	// Token: 0x06009658 RID: 38488 RVA: 0x002C8B31 File Offset: 0x002C6D31
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C24C RID: 49740 RVA: 0x002BDB5B File Offset: 0x002BBD5B
+	// Token: 0x06009659 RID: 38489 RVA: 0x002C8B33 File Offset: 0x002C6D33
 	public static void ResetStaticDefaultValue()
 	{
 		DailyActivityModel._Instance = null;
 	}
 
-	// Token: 0x0600C24D RID: 49741 RVA: 0x002BDB63 File Offset: 0x002BBD63
+	// Token: 0x0600965A RID: 38490 RVA: 0x002C8B3B File Offset: 0x002C6D3B
 	static DailyActivityModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DailyActivityModel.CreateStaticDefaultValue), new Action(DailyActivityModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005966 RID: 22886
+	// Token: 0x04005A35 RID: 23093
 	private int Activity;
 
-	// Token: 0x04005967 RID: 22887
+	// Token: 0x04005A36 RID: 23094
 	private int MaxActivity;
 
-	// Token: 0x04005968 RID: 22888
+	// Token: 0x04005A37 RID: 23095
 	private Dictionary<int, DailyActivityDefine.IActivityGoalData> GoalDataMap = new Dictionary<int, DailyActivityDefine.IActivityGoalData>();
 
-	// Token: 0x04005969 RID: 22889
+	// Token: 0x04005A38 RID: 23096
 	private List<DailyActiveTaskData> TaskDataList = new List<DailyActiveTaskData>();
 
-	// Token: 0x0400596A RID: 22890
+	// Token: 0x04005A39 RID: 23097
 	private long DayEnd;
 
-	// Token: 0x0400596B RID: 22891
+	// Token: 0x04005A3A RID: 23098
 	[Nullable(2)]
 	private RewardPopupData RewardPopupData;
 
-	// Token: 0x0400596C RID: 22892
+	// Token: 0x04005A3B RID: 23099
 	public int AreaId;
 
-	// Token: 0x0400596D RID: 22893
+	// Token: 0x04005A3C RID: 23100
 	[Nullable(new byte[]
 	{
 		2,
@@ -558,17 +558,17 @@ public class DailyActivityModel : ModelBase
 	})]
 	public List<RewardItemData> ShowRewardList;
 
-	// Token: 0x0400596E RID: 22894
+	// Token: 0x04005A3D RID: 23101
 	[Nullable(2)]
 	private static DailyActivityModel _Instance;
 
-	// Token: 0x02007F26 RID: 32550
+	// Token: 0x020070B5 RID: 28853
 	[NullableContext(0)]
 	public readonly struct LivenessUnionExpBonusSplitRule
 	{
-		// Token: 0x1700A065 RID: 41061
-		// (get) Token: 0x06049CDD RID: 302301 RVA: 0x0131E889 File Offset: 0x0131CA89
-		// (set) Token: 0x06049CDE RID: 302302 RVA: 0x0131E891 File Offset: 0x0131CA91
+		// Token: 0x17007803 RID: 30723
+		// (get) Token: 0x060400FB RID: 262395 RVA: 0x012C1D85 File Offset: 0x012BFF85
+		// (set) Token: 0x060400FC RID: 262396 RVA: 0x012C1D8D File Offset: 0x012BFF8D
 		public int BonusPercent { get; set; }
 	}
 }

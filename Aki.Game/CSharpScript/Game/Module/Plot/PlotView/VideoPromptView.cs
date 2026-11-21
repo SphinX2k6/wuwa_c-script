@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005074 RID: 20596
+	// Token: 0x02004044 RID: 16452
 	public class VideoPromptView : UiViewBase
 	{
-		// Token: 0x06034C37 RID: 216119 RVA: 0x00C7C115 File Offset: 0x00C7A315
+		// Token: 0x06029B2C RID: 170796 RVA: 0x00BC94ED File Offset: 0x00BC76ED
 		[NullableContext(1)]
 		public VideoPromptView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06034C38 RID: 216120 RVA: 0x00C7C120 File Offset: 0x00C7A320
+		// Token: 0x06029B2D RID: 170797 RVA: 0x00BC94F8 File Offset: 0x00BC76F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034C39 RID: 216121 RVA: 0x00C7C168 File Offset: 0x00C7A368
+		// Token: 0x06029B2E RID: 170798 RVA: 0x00BC9540 File Offset: 0x00BC7740
 		protected override UniTask OnBeforeStartAsync()
 		{
 			VideoPromptView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034C3A RID: 216122 RVA: 0x00C7C1AB File Offset: 0x00C7A3AB
+		// Token: 0x06029B2F RID: 170799 RVA: 0x00BC9583 File Offset: 0x00BC7783
 		protected override void OnStart()
 		{
 			this.OnVideoViewShow();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			EventSystem.Instance.Add<bool>(EEventName.VideoViewHide, new Action<bool>(this.OnVideoViewHide));
 		}
 
-		// Token: 0x06034C3B RID: 216123 RVA: 0x00C7C1EC File Offset: 0x00C7A3EC
+		// Token: 0x06029B30 RID: 170800 RVA: 0x00BC95C4 File Offset: 0x00BC77C4
 		protected override void OnAfterShow()
 		{
 			VideoPromptParam videoPromptParam = this.OpenParam as VideoPromptParam;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034C3C RID: 216124 RVA: 0x00C7C24C File Offset: 0x00C7A44C
+		// Token: 0x06029B31 RID: 170801 RVA: 0x00BC9624 File Offset: 0x00BC7824
 		protected override void OnAfterHide()
 		{
 			this.OnVideoViewHide(false);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			EventSystem.Instance.Remove<bool>(EEventName.VideoViewHide, new Action<bool>(this.OnVideoViewHide));
 		}
 
-		// Token: 0x06034C3D RID: 216125 RVA: 0x00C7C298 File Offset: 0x00C7A498
+		// Token: 0x06029B32 RID: 170802 RVA: 0x00BC9670 File Offset: 0x00BC7870
 		private void OnVideoViewShow()
 		{
 			UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.VideoView);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034C3E RID: 216126 RVA: 0x00C7C2E1 File Offset: 0x00C7A4E1
+		// Token: 0x06029B33 RID: 170803 RVA: 0x00BC96B9 File Offset: 0x00BC78B9
 		private void OnVideoViewHide(bool _)
 		{
 			if (this.HasAttachVideoView)
@@ -101,13 +101,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0401C1DE RID: 115166
+		// Token: 0x04016C09 RID: 93193
 		private bool HasAttachVideoView;
 
-		// Token: 0x0200B210 RID: 45584
+		// Token: 0x02009C49 RID: 40009
 		private enum EChildComp
 		{
-			// Token: 0x04035FD2 RID: 221138
+			// Token: 0x04030A26 RID: 199206
 			Texture
 		}
 	}

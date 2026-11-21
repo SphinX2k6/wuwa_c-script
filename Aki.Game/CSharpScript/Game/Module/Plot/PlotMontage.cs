@@ -5,10 +5,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02005000 RID: 20480
+	// Token: 0x02003FCA RID: 16330
 	public class PlotMontage
 	{
-		// Token: 0x06034665 RID: 214629 RVA: 0x00C51EC4 File Offset: 0x00C500C4
+		// Token: 0x060294F2 RID: 169202 RVA: 0x00B9BC48 File Offset: 0x00B99E48
 		[NullableContext(2)]
 		public void StartPlayMontage(PlayMontage inMontageData)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.EntitySet.Add(entityHandle);
 		}
 
-		// Token: 0x06034666 RID: 214630 RVA: 0x00C51F90 File Offset: 0x00C50190
+		// Token: 0x060294F3 RID: 169203 RVA: 0x00B9BD14 File Offset: 0x00B99F14
 		public void StopAllMontage()
 		{
 			foreach (EntityHandle entityHandle in this.EntitySet)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.EntitySet.Clear();
 		}
 
-		// Token: 0x0401BE7A RID: 114298
+		// Token: 0x04016857 RID: 92247
 		[Nullable(1)]
 		private readonly HashSet<EntityHandle> EntitySet = new HashSet<EntityHandle>();
 	}

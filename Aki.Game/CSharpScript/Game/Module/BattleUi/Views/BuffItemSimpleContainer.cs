@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D14 RID: 23828
+	// Token: 0x02004CF6 RID: 19702
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BuffItemSimpleContainer
 	{
-		// Token: 0x0603C654 RID: 247380 RVA: 0x00E79EB4 File Offset: 0x00E780B4
+		// Token: 0x060315AD RID: 202157 RVA: 0x00DCA534 File Offset: 0x00DC8734
 		public void Init(UUIItem buffParentItem, int maxItemCount = 6, bool isSmallContainer = false)
 		{
 			this.BuffParentItem = buffParentItem;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsSmallContainer = isSmallContainer;
 		}
 
-		// Token: 0x0603C655 RID: 247381 RVA: 0x00E79ECC File Offset: 0x00E780CC
+		// Token: 0x060315AE RID: 202158 RVA: 0x00DCA54C File Offset: 0x00DC874C
 		public void Tick(float delta)
 		{
 			int frame = Time.Instance.Frame;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C656 RID: 247382 RVA: 0x00E79FC4 File Offset: 0x00E781C4
+		// Token: 0x060315AF RID: 202159 RVA: 0x00DCA644 File Offset: 0x00DC8844
 		public void RefreshBuff(List<long> buffIds)
 		{
 			this.ClearAll();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C657 RID: 247383 RVA: 0x00E7A018 File Offset: 0x00E78218
+		// Token: 0x060315B0 RID: 202160 RVA: 0x00DCA698 File Offset: 0x00DC8898
 		public void AddBuffByBuffId(long buffId)
 		{
 			BuffDefinition buffDefinition = BuffController.Instance.GetBuffDefinition(buffId, null);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C658 RID: 247384 RVA: 0x00E7A07C File Offset: 0x00E7827C
+		// Token: 0x060315B1 RID: 202161 RVA: 0x00DCA6FC File Offset: 0x00DC88FC
 		public void AddBuffByCue(in GameplayCue buffCueConfig, long handleId, bool playAnim = false)
 		{
 			if (!this.CheckCanShow(buffCueConfig))
@@ -103,13 +103,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddBuffItemInfo(buffItemInfo, playAnim);
 		}
 
-		// Token: 0x0603C659 RID: 247385 RVA: 0x00E7A0F4 File Offset: 0x00E782F4
+		// Token: 0x060315B2 RID: 202162 RVA: 0x00DCA774 File Offset: 0x00DC8974
 		private bool CheckCanShow(GameplayCue buffCueConfig)
 		{
 			return !this.IsSmallContainer || buffCueConfig.ParametersLength <= 4 || !(buffCueConfig.Parameters(4) == "1");
 		}
 
-		// Token: 0x0603C65A RID: 247386 RVA: 0x00E7A120 File Offset: 0x00E78320
+		// Token: 0x060315B3 RID: 202163 RVA: 0x00DCA7A0 File Offset: 0x00DC89A0
 		public void RemoveBuffByBuffId(long buffId)
 		{
 			BuffDefinition buffDefinition = BuffController.Instance.GetBuffDefinition(buffId, null);
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C65B RID: 247387 RVA: 0x00E7A180 File Offset: 0x00E78380
+		// Token: 0x060315B4 RID: 202164 RVA: 0x00DCA800 File Offset: 0x00DC8A00
 		public void RemoveBuffByCue(GameplayCue buffCueConfig, long handleId, bool playAnim = false)
 		{
 			long id = buffCueConfig.Id;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C65C RID: 247388 RVA: 0x00E7A1E8 File Offset: 0x00E783E8
+		// Token: 0x060315B5 RID: 202165 RVA: 0x00DCA868 File Offset: 0x00DC8A68
 		private BuffItemInfo NewBuffItemInfo(GameplayCue buffCueConfig)
 		{
 			BuffItemInfo buffItemInfo = (this.BuffItemInfoPool.Count > 0) ? this.BuffItemInfoPool.Pop<BuffItemInfo>() : new BuffItemInfo();
@@ -159,14 +159,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return buffItemInfo;
 		}
 
-		// Token: 0x0603C65D RID: 247389 RVA: 0x00E7A239 File Offset: 0x00E78439
+		// Token: 0x060315B6 RID: 202166 RVA: 0x00DCA8B9 File Offset: 0x00DC8AB9
 		private void RecycleBuffItemInfo(BuffItemInfo buffItemInfo)
 		{
 			buffItemInfo.Clear();
 			this.BuffItemInfoPool.Add(buffItemInfo);
 		}
 
-		// Token: 0x0603C65E RID: 247390 RVA: 0x00E7A250 File Offset: 0x00E78450
+		// Token: 0x060315B7 RID: 202167 RVA: 0x00DCA8D0 File Offset: 0x00DC8AD0
 		private void AddBuffItemInfo(BuffItemInfo buffItemInfo, bool playAnim = false)
 		{
 			int num = this.InsertBuffItemInfo(buffItemInfo);
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C65F RID: 247391 RVA: 0x00E7A2B4 File Offset: 0x00E784B4
+		// Token: 0x060315B8 RID: 202168 RVA: 0x00DCA934 File Offset: 0x00DC8B34
 		private int InsertBuffItemInfo(BuffItemInfo newInfo)
 		{
 			int count = this.BuffItemInfoList.Count;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return count;
 		}
 
-		// Token: 0x0603C660 RID: 247392 RVA: 0x00E7A30C File Offset: 0x00E7850C
+		// Token: 0x060315B9 RID: 202169 RVA: 0x00DCA98C File Offset: 0x00DC8B8C
 		private void RemoveBuffItemInfo(BuffItemInfo buffItemInfo, bool playAnim = false)
 		{
 			int num = this.BuffItemInfoList.IndexOf(buffItemInfo);
@@ -230,13 +230,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RecycleBuffItemInfo(buffItemInfo);
 		}
 
-		// Token: 0x0603C661 RID: 247393 RVA: 0x00E7A3FE File Offset: 0x00E785FE
+		// Token: 0x060315BA RID: 202170 RVA: 0x00DCAA7E File Offset: 0x00DC8C7E
 		private BuffItemBase NewBuffItem(GameplayCue? cueConfig)
 		{
 			return this.HiddenBuffItemPool.GetBuffItem(this.BuffParentItem, cueConfig);
 		}
 
-		// Token: 0x0603C662 RID: 247394 RVA: 0x00E7A414 File Offset: 0x00E78614
+		// Token: 0x060315BB RID: 202171 RVA: 0x00DCAA94 File Offset: 0x00DC8C94
 		private void ActivateBuffItem(BuffItemInfo buffItemInfo, int index, bool playAnim = false)
 		{
 			BuffItemBase buffItem = buffItemInfo.BuffItem;
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			Log.Instance.Error(ELogModule.Battle, ELogAuthor.CFT, "要插入的buff图标前面的buff没有buffItem", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0603C663 RID: 247395 RVA: 0x00E7A4A0 File Offset: 0x00E786A0
+		// Token: 0x060315BC RID: 202172 RVA: 0x00DCAB20 File Offset: 0x00DC8D20
 		public void DeactivateBuffItem(BuffItemInfo buffItemInfo, bool playAnim = false)
 		{
 			BuffItemBase buffItem = buffItemInfo.BuffItem;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HiddenBuffItemPool.RecycleBuffItem(buffItem);
 		}
 
-		// Token: 0x0603C664 RID: 247396 RVA: 0x00E7A50C File Offset: 0x00E7870C
+		// Token: 0x060315BD RID: 202173 RVA: 0x00DCAB8C File Offset: 0x00DC8D8C
 		public void ClearAll()
 		{
 			foreach (BuffItemInfo buffItemInfo in this.BuffItemInfoList)
@@ -299,38 +299,38 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NextTickFrame = 0;
 		}
 
-		// Token: 0x0401F782 RID: 128898
+		// Token: 0x0401A23B RID: 107067
 		private const int MAX_ITEM_COUNT = 6;
 
-		// Token: 0x0401F783 RID: 128899
+		// Token: 0x0401A23C RID: 107068
 		private const int TICK_INTERVAL_FRAME_AT_MORE = 2;
 
-		// Token: 0x0401F784 RID: 128900
+		// Token: 0x0401A23D RID: 107069
 		private readonly List<BuffItemInfo> BuffItemInfoList = new List<BuffItemInfo>();
 
-		// Token: 0x0401F785 RID: 128901
+		// Token: 0x0401A23E RID: 107070
 		private readonly Dictionary<long, BuffItemInfo> StateBuffItemInfoMap = new Dictionary<long, BuffItemInfo>();
 
-		// Token: 0x0401F786 RID: 128902
+		// Token: 0x0401A23F RID: 107071
 		private readonly List<BuffItemInfo> BuffItemInfoPool = new List<BuffItemInfo>();
 
-		// Token: 0x0401F787 RID: 128903
+		// Token: 0x0401A240 RID: 107072
 		private readonly List<BuffItemBase> HidingBuffItemList = new List<BuffItemBase>();
 
-		// Token: 0x0401F788 RID: 128904
+		// Token: 0x0401A241 RID: 107073
 		private readonly BuffItemPool HiddenBuffItemPool = new BuffItemPool();
 
-		// Token: 0x0401F789 RID: 128905
+		// Token: 0x0401A242 RID: 107074
 		[Nullable(2)]
 		private UUIItem BuffParentItem;
 
-		// Token: 0x0401F78A RID: 128906
+		// Token: 0x0401A243 RID: 107075
 		private int MaxItemCount;
 
-		// Token: 0x0401F78B RID: 128907
+		// Token: 0x0401A244 RID: 107076
 		private bool IsSmallContainer;
 
-		// Token: 0x0401F78C RID: 128908
+		// Token: 0x0401A245 RID: 107077
 		private int NextTickFrame;
 	}
 }

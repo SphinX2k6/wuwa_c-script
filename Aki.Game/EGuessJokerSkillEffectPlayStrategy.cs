@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200104F RID: 4175
+// Token: 0x02000503 RID: 1283
 public enum EGuessJokerSkillEffectPlayStrategy
 {
-	// Token: 0x04003178 RID: 12664
+	// Token: 0x04003211 RID: 12817
 	Always,
-	// Token: 0x04003179 RID: 12665
+	// Token: 0x04003212 RID: 12818
 	NotOnce
 }

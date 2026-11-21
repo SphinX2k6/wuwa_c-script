@@ -6,13 +6,13 @@ namespace Aki.TDConfigMgr.Component
 	// Token: 0x0200004F RID: 79
 	public class CurveControlComponent_SetValue
 	{
-		// Token: 0x04000198 RID: 408
+		// Token: 0x0400019D RID: 413
 		public bool? Disabled;
 
-		// Token: 0x04000199 RID: 409
+		// Token: 0x0400019E RID: 414
 		public bool? EdIsLocked;
 
-		// Token: 0x0400019A RID: 410
+		// Token: 0x0400019F RID: 415
 		[Nullable(2)]
 		public IChargeSlashControl CurveControlConfig;
 	}

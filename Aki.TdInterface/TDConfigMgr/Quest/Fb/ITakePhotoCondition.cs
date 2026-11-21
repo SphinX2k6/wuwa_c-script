@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013AC RID: 5036
+	// Token: 0x020014FD RID: 5373
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITakePhotoCondition : IQuestCondition
 	{
-		// Token: 0x0600730E RID: 29454 RVA: 0x001145A5 File Offset: 0x001127A5
-		[NullableContext(1)]
+		// Token: 0x060079B5 RID: 31157 RVA: 0x00122C61 File Offset: 0x00120E61
+		[NullableContext(0)]
 		public static ITakePhotoCondition Create(ITakePhotoCondition? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002589 RID: 9609
-		// (get) Token: 0x0600730F RID: 29455 RVA: 0x001145C4 File Offset: 0x001127C4
+		// Token: 0x1700275D RID: 10077
+		// (get) Token: 0x060079B6 RID: 31158 RVA: 0x00122C80 File Offset: 0x00120E80
 		public override EChildQuest Type
 		{
 			get
@@ -35,8 +35,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700258A RID: 9610
-		// (get) Token: 0x06007310 RID: 29456 RVA: 0x001145D1 File Offset: 0x001127D1
+		// Token: 0x1700275E RID: 10078
+		// (get) Token: 0x060079B7 RID: 31159 RVA: 0x00122C8D File Offset: 0x00120E8D
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700258B RID: 9611
-		// (get) Token: 0x06007311 RID: 29457 RVA: 0x00114605 File Offset: 0x00112805
+		// Token: 0x1700275F RID: 10079
+		// (get) Token: 0x060079B8 RID: 31160 RVA: 0x00122CC1 File Offset: 0x00120EC1
 		public virtual ITakePhotoTimeCondition TimeCondition
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700258C RID: 9612
-		// (get) Token: 0x06007312 RID: 29458 RVA: 0x00114639 File Offset: 0x00112839
+		// Token: 0x17002760 RID: 10080
+		// (get) Token: 0x060079B9 RID: 31161 RVA: 0x00122CF5 File Offset: 0x00120EF5
 		public virtual ITakePhotoPosCondition PosCondition
 		{
 			get
@@ -83,12 +83,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700258D RID: 9613
-		// (get) Token: 0x06007313 RID: 29459 RVA: 0x00114670 File Offset: 0x00112870
-		[Nullable(1)]
+		// Token: 0x17002761 RID: 10081
+		// (get) Token: 0x060079BA RID: 31162 RVA: 0x00122D2C File Offset: 0x00120F2C
+		[Nullable(0)]
 		public virtual List<IPhotoTarget> PhotoTargets
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._PhotoTargetsInited)
@@ -106,32 +106,32 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004284 RID: 17028
+		// Token: 0x04004605 RID: 17925
 		private ITakePhotoCondition Instance;
 
-		// Token: 0x04004285 RID: 17029
+		// Token: 0x04004606 RID: 17926
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004286 RID: 17030
+		// Token: 0x04004607 RID: 17927
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004287 RID: 17031
+		// Token: 0x04004608 RID: 17928
 		private ITakePhotoTimeCondition _TimeConditionCache;
 
-		// Token: 0x04004288 RID: 17032
+		// Token: 0x04004609 RID: 17929
 		private bool _TimeConditionInited;
 
-		// Token: 0x04004289 RID: 17033
+		// Token: 0x0400460A RID: 17930
 		private ITakePhotoPosCondition _PosConditionCache;
 
-		// Token: 0x0400428A RID: 17034
+		// Token: 0x0400460B RID: 17931
 		private bool _PosConditionInited;
 
-		// Token: 0x0400428B RID: 17035
-		[Nullable(1)]
+		// Token: 0x0400460C RID: 17932
+		[Nullable(0)]
 		private List<IPhotoTarget> _PhotoTargetsCache;
 
-		// Token: 0x0400428C RID: 17036
+		// Token: 0x0400460D RID: 17933
 		private bool _PhotoTargetsInited;
 	}
 }

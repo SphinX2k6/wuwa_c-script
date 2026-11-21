@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003254 RID: 12884
+// Token: 0x020027C3 RID: 10179
 public class RoleTagComponent : BaseTagComponent
 {
-	// Token: 0x0601BCC4 RID: 113860 RVA: 0x007ACA7E File Offset: 0x007AAC7E
+	// Token: 0x06019883 RID: 104579 RVA: 0x007D4F39 File Offset: 0x007D3139
 	[NullableContext(2)]
 	protected override bool OnCreate(IEntityArgs args = null)
 	{
@@ -15,14 +15,14 @@ public class RoleTagComponent : BaseTagComponent
 		return true;
 	}
 
-	// Token: 0x0601BCC5 RID: 113861 RVA: 0x007ACA9D File Offset: 0x007AAC9D
+	// Token: 0x06019884 RID: 104580 RVA: 0x007D4F58 File Offset: 0x007D3158
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationLoaded));
 		return true;
 	}
 
-	// Token: 0x0601BCC6 RID: 113862 RVA: 0x007ACABC File Offset: 0x007AACBC
+	// Token: 0x06019885 RID: 104581 RVA: 0x007D4F78 File Offset: 0x007D3178
 	private unsafe void OnFormationLoaded()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -80,7 +80,7 @@ public class RoleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601BCC7 RID: 113863 RVA: 0x007ACD34 File Offset: 0x007AAF34
+	// Token: 0x06019886 RID: 104582 RVA: 0x007D51F0 File Offset: 0x007D33F0
 	protected override void OnAnyTagChanged(int tagId, int newCount, int oldCount, int exactTagId)
 	{
 		if (tagId == 0 || oldCount == newCount)
@@ -109,15 +109,53 @@ public class RoleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601BCC8 RID: 113864 RVA: 0x007ACE37 File Offset: 0x007AB037
-	[NullableContext(1)]
-	public override bool ClearComponent(EntityComponent componentTemplate)
+	// Token: 0x170028C0 RID: 10432
+	// (get) Token: 0x06019887 RID: 104583 RVA: 0x007D52F3 File Offset: 0x007D34F3
+	public override bool NeedCreateInternal
 	{
-		if (!base.ClearComponent(componentTemplate))
+		get
 		{
-			return false;
+			return true;
 		}
-		RoleTagComponent roleTagComponent = (RoleTagComponent)componentTemplate;
-		return true;
+	}
+
+	// Token: 0x170028C1 RID: 10433
+	// (get) Token: 0x06019888 RID: 104584 RVA: 0x007D52F6 File Offset: 0x007D34F6
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028C2 RID: 10434
+	// (get) Token: 0x06019889 RID: 104585 RVA: 0x007D52F9 File Offset: 0x007D34F9
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028C3 RID: 10435
+	// (get) Token: 0x0601988A RID: 104586 RVA: 0x007D52FC File Offset: 0x007D34FC
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028C4 RID: 10436
+	// (get) Token: 0x0601988B RID: 104587 RVA: 0x007D52FF File Offset: 0x007D34FF
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
 	}
 }

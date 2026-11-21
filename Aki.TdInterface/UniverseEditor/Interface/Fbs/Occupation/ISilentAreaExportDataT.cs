@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043C9 RID: 17353
+	// Token: 0x0200482E RID: 18478
 	public class ISilentAreaExportDataT
 	{
-		// Token: 0x17007AB5 RID: 31413
-		// (get) Token: 0x06019E0C RID: 105996 RVA: 0x003B423D File Offset: 0x003B243D
-		// (set) Token: 0x06019E0D RID: 105997 RVA: 0x003B4245 File Offset: 0x003B2445
+		// Token: 0x170080EF RID: 33007
+		// (get) Token: 0x0601B5B9 RID: 112057 RVA: 0x003E004D File Offset: 0x003DE24D
+		// (set) Token: 0x0601B5BA RID: 112058 RVA: 0x003E0055 File Offset: 0x003DE255
 		public string Id { get; set; }
 
-		// Token: 0x17007AB6 RID: 31414
-		// (get) Token: 0x06019E0E RID: 105998 RVA: 0x003B424E File Offset: 0x003B244E
-		// (set) Token: 0x06019E0F RID: 105999 RVA: 0x003B4256 File Offset: 0x003B2456
+		// Token: 0x170080F0 RID: 33008
+		// (get) Token: 0x0601B5BB RID: 112059 RVA: 0x003E005E File Offset: 0x003DE25E
+		// (set) Token: 0x0601B5BC RID: 112060 RVA: 0x003E0066 File Offset: 0x003DE266
 		public string NameStringKey { get; set; }
 
-		// Token: 0x17007AB7 RID: 31415
-		// (get) Token: 0x06019E10 RID: 106000 RVA: 0x003B425F File Offset: 0x003B245F
-		// (set) Token: 0x06019E11 RID: 106001 RVA: 0x003B4267 File Offset: 0x003B2467
+		// Token: 0x170080F1 RID: 33009
+		// (get) Token: 0x0601B5BD RID: 112061 RVA: 0x003E006F File Offset: 0x003DE26F
+		// (set) Token: 0x0601B5BE RID: 112062 RVA: 0x003E0077 File Offset: 0x003DE277
 		public string Name { get; set; }
 
-		// Token: 0x17007AB8 RID: 31416
-		// (get) Token: 0x06019E12 RID: 106002 RVA: 0x003B4270 File Offset: 0x003B2470
-		// (set) Token: 0x06019E13 RID: 106003 RVA: 0x003B4278 File Offset: 0x003B2478
+		// Token: 0x170080F2 RID: 33010
+		// (get) Token: 0x0601B5BF RID: 112063 RVA: 0x003E0080 File Offset: 0x003DE280
+		// (set) Token: 0x0601B5C0 RID: 112064 RVA: 0x003E0088 File Offset: 0x003DE288
 		public ISilentAreaOccupationDataT Data { get; set; }
 
-		// Token: 0x06019E14 RID: 106004 RVA: 0x003B4281 File Offset: 0x003B2481
+		// Token: 0x0601B5C1 RID: 112065 RVA: 0x003E0091 File Offset: 0x003DE291
 		public ISilentAreaExportDataT()
 		{
 			this.Id = null;

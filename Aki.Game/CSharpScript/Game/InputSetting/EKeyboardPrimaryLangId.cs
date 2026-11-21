@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FFC RID: 28668
+	// Token: 0x0200617D RID: 24957
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct EKeyboardPrimaryLangId : IEquatable<EKeyboardPrimaryLangId>
 	{
-		// Token: 0x06045BCB RID: 285643 RVA: 0x011561A0 File Offset: 0x011543A0
+		// Token: 0x0603BD81 RID: 245121 RVA: 0x01100508 File Offset: 0x010FE708
 		private EKeyboardPrimaryLangId(string value)
 		{
 			this._value = value;
 		}
 
-		// Token: 0x06045BCC RID: 285644 RVA: 0x011561A9 File Offset: 0x011543A9
+		// Token: 0x0603BD82 RID: 245122 RVA: 0x01100511 File Offset: 0x010FE711
 		public bool Equals(EKeyboardPrimaryLangId other)
 		{
 			return this._value == other._value;
 		}
 
-		// Token: 0x06045BCD RID: 285645 RVA: 0x011561BC File Offset: 0x011543BC
+		// Token: 0x0603BD83 RID: 245123 RVA: 0x01100524 File Offset: 0x010FE724
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.InputSetting
 			return false;
 		}
 
-		// Token: 0x06045BCE RID: 285646 RVA: 0x011561E1 File Offset: 0x011543E1
+		// Token: 0x0603BD84 RID: 245124 RVA: 0x01100549 File Offset: 0x010FE749
 		public override int GetHashCode()
 		{
 			if (this._value == null)
@@ -42,64 +42,64 @@ namespace CSharpScript.Game.InputSetting
 			return this._value.GetHashCode();
 		}
 
-		// Token: 0x06045BCF RID: 285647 RVA: 0x011561F8 File Offset: 0x011543F8
+		// Token: 0x0603BD85 RID: 245125 RVA: 0x01100560 File Offset: 0x010FE760
 		public override string ToString()
 		{
 			return this._value;
 		}
 
-		// Token: 0x06045BD0 RID: 285648 RVA: 0x01156200 File Offset: 0x01154400
+		// Token: 0x0603BD86 RID: 245126 RVA: 0x01100568 File Offset: 0x010FE768
 		public static implicit operator string(EKeyboardPrimaryLangId id)
 		{
 			return id.ToString();
 		}
 
-		// Token: 0x06045BD1 RID: 285649 RVA: 0x0115620F File Offset: 0x0115440F
+		// Token: 0x0603BD87 RID: 245127 RVA: 0x01100577 File Offset: 0x010FE777
 		public static explicit operator EKeyboardPrimaryLangId(string value)
 		{
 			return new EKeyboardPrimaryLangId(value);
 		}
 
-		// Token: 0x06045BD2 RID: 285650 RVA: 0x01156217 File Offset: 0x01154417
+		// Token: 0x0603BD88 RID: 245128 RVA: 0x0110057F File Offset: 0x010FE77F
 		public static bool operator ==(EKeyboardPrimaryLangId left, EKeyboardPrimaryLangId right)
 		{
 			return left.Equals(right);
 		}
 
-		// Token: 0x06045BD3 RID: 285651 RVA: 0x01156221 File Offset: 0x01154421
+		// Token: 0x0603BD89 RID: 245129 RVA: 0x01100589 File Offset: 0x010FE789
 		public static bool operator !=(EKeyboardPrimaryLangId left, EKeyboardPrimaryLangId right)
 		{
 			return !left.Equals(right);
 		}
 
-		// Token: 0x040247AB RID: 149419
+		// Token: 0x0401FA61 RID: 129633
 		private readonly string _value;
 
-		// Token: 0x040247AC RID: 149420
+		// Token: 0x0401FA62 RID: 129634
 		public static readonly EKeyboardPrimaryLangId Default = new EKeyboardPrimaryLangId("Default");
 
-		// Token: 0x040247AD RID: 149421
+		// Token: 0x0401FA63 RID: 129635
 		public static readonly EKeyboardPrimaryLangId French = new EKeyboardPrimaryLangId("French");
 
-		// Token: 0x040247AE RID: 149422
+		// Token: 0x0401FA64 RID: 129636
 		public static readonly EKeyboardPrimaryLangId German = new EKeyboardPrimaryLangId("German");
 
-		// Token: 0x040247AF RID: 149423
+		// Token: 0x0401FA65 RID: 129637
 		public static readonly EKeyboardPrimaryLangId Italian = new EKeyboardPrimaryLangId("Italian");
 
-		// Token: 0x040247B0 RID: 149424
+		// Token: 0x0401FA66 RID: 129638
 		public static readonly EKeyboardPrimaryLangId Spanish = new EKeyboardPrimaryLangId("Spanish");
 
-		// Token: 0x040247B1 RID: 149425
+		// Token: 0x0401FA67 RID: 129639
 		public static readonly EKeyboardPrimaryLangId Swedish = new EKeyboardPrimaryLangId("Swedish");
 
-		// Token: 0x040247B2 RID: 149426
+		// Token: 0x0401FA68 RID: 129640
 		public static readonly EKeyboardPrimaryLangId Japanese = new EKeyboardPrimaryLangId("Japanese");
 
-		// Token: 0x040247B3 RID: 149427
+		// Token: 0x0401FA69 RID: 129641
 		public static readonly EKeyboardPrimaryLangId Russian = new EKeyboardPrimaryLangId("Russian");
 
-		// Token: 0x040247B4 RID: 149428
+		// Token: 0x0401FA6A RID: 129642
 		public static readonly EKeyboardPrimaryLangId Thai = new EKeyboardPrimaryLangId("Thai");
 	}
 }

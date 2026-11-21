@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Area.AreaFunction.Handlers
 {
-	// Token: 0x02005EA9 RID: 24233
+	// Token: 0x02004E8E RID: 20110
 	internal enum EAirCurrentState
 	{
-		// Token: 0x0402029D RID: 131741
+		// Token: 0x0401AD64 RID: 109924
 		Free,
-		// Token: 0x0402029E RID: 131742
+		// Token: 0x0401AD65 RID: 109925
 		InWind
 	}
 }

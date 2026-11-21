@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200092A RID: 2346
+	// Token: 0x020009D7 RID: 2519
 	public static class EEffectAreaTypeExtensions
 	{
-		// Token: 0x060034EE RID: 13550 RVA: 0x0008A538 File Offset: 0x00088738
+		// Token: 0x0600385A RID: 14426 RVA: 0x000920B8 File Offset: 0x000902B8
 		public static string ToEnumString(this EEffectAreaType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034EF RID: 13551 RVA: 0x0008A560 File Offset: 0x00088760
+		// Token: 0x0600385B RID: 14427 RVA: 0x000920E0 File Offset: 0x000902E0
 		public static EEffectAreaType FromString(string name)
 		{
 			EEffectAreaType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034F0 RID: 13552 RVA: 0x0008A589 File Offset: 0x00088789
+		// Token: 0x0600385C RID: 14428 RVA: 0x00092109 File Offset: 0x00090309
 		public static bool TryFromString(string name, out EEffectAreaType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060034F1 RID: 13553 RVA: 0x0008A5AE File Offset: 0x000887AE
+		// Token: 0x0600385D RID: 14429 RVA: 0x0009212E File Offset: 0x0009032E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034F2 RID: 13554 RVA: 0x0008A5BE File Offset: 0x000887BE
+		// Token: 0x0600385E RID: 14430 RVA: 0x0009213E File Offset: 0x0009033E
 		public static EEffectAreaType[] GetValues()
 		{
 			return new EEffectAreaType[1];
 		}
 
-		// Token: 0x060034F3 RID: 13555 RVA: 0x0008A5C6 File Offset: 0x000887C6
+		// Token: 0x0600385F RID: 14431 RVA: 0x00092146 File Offset: 0x00090346
 		public static string[] GetNames()
 		{
 			return new string[]

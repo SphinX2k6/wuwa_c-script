@@ -2,160 +2,160 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019ED RID: 6637
+// Token: 0x02000EAC RID: 3756
 [NullableContext(1)]
 [Nullable(0)]
 public class DailyActivityDefine
 {
-	// Token: 0x04005962 RID: 22882
+	// Token: 0x04005A31 RID: 23089
 	public const int DAILY_ACTIVITY_HELP = 27;
 
-	// Token: 0x04005963 RID: 22883
+	// Token: 0x04005A32 RID: 23090
 	public const string REWARD_BACKGROUND_COLOR_UNFINISHED = "00000033";
 
-	// Token: 0x04005964 RID: 22884
+	// Token: 0x04005A33 RID: 23091
 	public const string REWARD_BACKGROUND_COLOR_FINISHED = "F3EAAB1E";
 
-	// Token: 0x04005965 RID: 22885
+	// Token: 0x04005A34 RID: 23092
 	public const int WEEKLY_REFRESH_TIME_STORAGE_KEY = 999;
 
-	// Token: 0x02007F1F RID: 32543
+	// Token: 0x020070AE RID: 28846
 	[NullableContext(0)]
 	public class RewardTuple
 	{
-		// Token: 0x04029860 RID: 170080
+		// Token: 0x04024B9D RID: 150429
 		public int Id;
 
-		// Token: 0x04029861 RID: 170081
+		// Token: 0x04024B9E RID: 150430
 		public int Num;
 
-		// Token: 0x04029862 RID: 170082
+		// Token: 0x04024B9F RID: 150431
 		public bool Received;
 
-		// Token: 0x04029863 RID: 170083
+		// Token: 0x04024BA0 RID: 150432
 		public bool IsDoubleRewardVisible;
 	}
 
-	// Token: 0x02007F20 RID: 32544
+	// Token: 0x020070AF RID: 28847
 	public interface IActivityGoalData
 	{
-		// Token: 0x1700A054 RID: 41044
-		// (get) Token: 0x06049CB9 RID: 302265
-		// (set) Token: 0x06049CBA RID: 302266
+		// Token: 0x170077F2 RID: 30706
+		// (get) Token: 0x060400D7 RID: 262359
+		// (set) Token: 0x060400D8 RID: 262360
 		int Id { get; set; }
 
-		// Token: 0x1700A055 RID: 41045
-		// (get) Token: 0x06049CBB RID: 302267
-		// (set) Token: 0x06049CBC RID: 302268
+		// Token: 0x170077F3 RID: 30707
+		// (get) Token: 0x060400D9 RID: 262361
+		// (set) Token: 0x060400DA RID: 262362
 		int Goal { get; set; }
 
-		// Token: 0x1700A056 RID: 41046
-		// (get) Token: 0x06049CBD RID: 302269
-		// (set) Token: 0x06049CBE RID: 302270
+		// Token: 0x170077F4 RID: 30708
+		// (get) Token: 0x060400DB RID: 262363
+		// (set) Token: 0x060400DC RID: 262364
 		List<TItem> Rewards { get; set; }
 
-		// Token: 0x1700A057 RID: 41047
-		// (get) Token: 0x06049CBF RID: 302271
-		// (set) Token: 0x06049CC0 RID: 302272
+		// Token: 0x170077F5 RID: 30709
+		// (get) Token: 0x060400DD RID: 262365
+		// (set) Token: 0x060400DE RID: 262366
 		bool Achieved { get; set; }
 
-		// Token: 0x1700A058 RID: 41048
-		// (get) Token: 0x06049CC1 RID: 302273
-		// (set) Token: 0x06049CC2 RID: 302274
+		// Token: 0x170077F6 RID: 30710
+		// (get) Token: 0x060400DF RID: 262367
+		// (set) Token: 0x060400E0 RID: 262368
 		EDailyActiveState State { get; set; }
 	}
 
-	// Token: 0x02007F21 RID: 32545
+	// Token: 0x020070B0 RID: 28848
 	[Nullable(0)]
 	public class ActivityGoalData
 	{
-		// Token: 0x1700A059 RID: 41049
-		// (get) Token: 0x06049CC3 RID: 302275 RVA: 0x0131E802 File Offset: 0x0131CA02
-		// (set) Token: 0x06049CC4 RID: 302276 RVA: 0x0131E80A File Offset: 0x0131CA0A
+		// Token: 0x170077F7 RID: 30711
+		// (get) Token: 0x060400E1 RID: 262369 RVA: 0x012C1CFE File Offset: 0x012BFEFE
+		// (set) Token: 0x060400E2 RID: 262370 RVA: 0x012C1D06 File Offset: 0x012BFF06
 		public int Id { get; set; }
 
-		// Token: 0x1700A05A RID: 41050
-		// (get) Token: 0x06049CC5 RID: 302277 RVA: 0x0131E813 File Offset: 0x0131CA13
-		// (set) Token: 0x06049CC6 RID: 302278 RVA: 0x0131E81B File Offset: 0x0131CA1B
+		// Token: 0x170077F8 RID: 30712
+		// (get) Token: 0x060400E3 RID: 262371 RVA: 0x012C1D0F File Offset: 0x012BFF0F
+		// (set) Token: 0x060400E4 RID: 262372 RVA: 0x012C1D17 File Offset: 0x012BFF17
 		public int Goal { get; set; }
 
-		// Token: 0x1700A05B RID: 41051
-		// (get) Token: 0x06049CC7 RID: 302279 RVA: 0x0131E824 File Offset: 0x0131CA24
-		// (set) Token: 0x06049CC8 RID: 302280 RVA: 0x0131E82C File Offset: 0x0131CA2C
+		// Token: 0x170077F9 RID: 30713
+		// (get) Token: 0x060400E5 RID: 262373 RVA: 0x012C1D20 File Offset: 0x012BFF20
+		// (set) Token: 0x060400E6 RID: 262374 RVA: 0x012C1D28 File Offset: 0x012BFF28
 		public List<TItem> Rewards { get; set; }
 
-		// Token: 0x1700A05C RID: 41052
-		// (get) Token: 0x06049CC9 RID: 302281 RVA: 0x0131E835 File Offset: 0x0131CA35
-		// (set) Token: 0x06049CCA RID: 302282 RVA: 0x0131E83D File Offset: 0x0131CA3D
+		// Token: 0x170077FA RID: 30714
+		// (get) Token: 0x060400E7 RID: 262375 RVA: 0x012C1D31 File Offset: 0x012BFF31
+		// (set) Token: 0x060400E8 RID: 262376 RVA: 0x012C1D39 File Offset: 0x012BFF39
 		public bool Achieved { get; set; }
 
-		// Token: 0x1700A05D RID: 41053
-		// (get) Token: 0x06049CCB RID: 302283 RVA: 0x0131E846 File Offset: 0x0131CA46
-		// (set) Token: 0x06049CCC RID: 302284 RVA: 0x0131E84E File Offset: 0x0131CA4E
+		// Token: 0x170077FB RID: 30715
+		// (get) Token: 0x060400E9 RID: 262377 RVA: 0x012C1D42 File Offset: 0x012BFF42
+		// (set) Token: 0x060400EA RID: 262378 RVA: 0x012C1D4A File Offset: 0x012BFF4A
 		public EDailyActiveState State { get; set; }
 	}
 
-	// Token: 0x02007F22 RID: 32546
+	// Token: 0x020070B1 RID: 28849
 	[NullableContext(0)]
 	public enum EDailyActivityMainTab
 	{
-		// Token: 0x0402986A RID: 170090
+		// Token: 0x04024BA7 RID: 150439
 		Daily = 1,
-		// Token: 0x0402986B RID: 170091
+		// Token: 0x04024BA8 RID: 150440
 		Weekly
 	}
 
-	// Token: 0x02007F23 RID: 32547
+	// Token: 0x020070B2 RID: 28850
 	public interface IDailyActivityMainTabData
 	{
-		// Token: 0x1700A05E RID: 41054
-		// (get) Token: 0x06049CCE RID: 302286
-		// (set) Token: 0x06049CCF RID: 302287
+		// Token: 0x170077FC RID: 30716
+		// (get) Token: 0x060400EC RID: 262380
+		// (set) Token: 0x060400ED RID: 262381
 		DailyActivityDefine.EDailyActivityMainTab TabType { get; set; }
 
-		// Token: 0x1700A05F RID: 41055
-		// (get) Token: 0x06049CD0 RID: 302288
-		// (set) Token: 0x06049CD1 RID: 302289
+		// Token: 0x170077FD RID: 30717
+		// (get) Token: 0x060400EE RID: 262382
+		// (set) Token: 0x060400EF RID: 262383
 		bool IsFinished { get; set; }
 	}
 
-	// Token: 0x02007F24 RID: 32548
+	// Token: 0x020070B3 RID: 28851
 	[NullableContext(0)]
 	public class DailyActivityMainTabData : DailyActivityDefine.IDailyActivityMainTabData
 	{
-		// Token: 0x1700A060 RID: 41056
-		// (get) Token: 0x06049CD2 RID: 302290 RVA: 0x0131E85F File Offset: 0x0131CA5F
-		// (set) Token: 0x06049CD3 RID: 302291 RVA: 0x0131E867 File Offset: 0x0131CA67
+		// Token: 0x170077FE RID: 30718
+		// (get) Token: 0x060400F0 RID: 262384 RVA: 0x012C1D5B File Offset: 0x012BFF5B
+		// (set) Token: 0x060400F1 RID: 262385 RVA: 0x012C1D63 File Offset: 0x012BFF63
 		public DailyActivityDefine.EDailyActivityMainTab TabType { get; set; }
 
-		// Token: 0x1700A061 RID: 41057
-		// (get) Token: 0x06049CD4 RID: 302292 RVA: 0x0131E870 File Offset: 0x0131CA70
-		// (set) Token: 0x06049CD5 RID: 302293 RVA: 0x0131E878 File Offset: 0x0131CA78
+		// Token: 0x170077FF RID: 30719
+		// (get) Token: 0x060400F2 RID: 262386 RVA: 0x012C1D6C File Offset: 0x012BFF6C
+		// (set) Token: 0x060400F3 RID: 262387 RVA: 0x012C1D74 File Offset: 0x012BFF74
 		public bool IsFinished { get; set; }
 	}
 
-	// Token: 0x02007F25 RID: 32549
+	// Token: 0x020070B4 RID: 28852
 	public interface IActivityRewardPanelDataAdapter
 	{
-		// Token: 0x1700A062 RID: 41058
-		// (get) Token: 0x06049CD7 RID: 302295
+		// Token: 0x17007800 RID: 30720
+		// (get) Token: 0x060400F5 RID: 262389
 		double CurrentValue { get; }
 
-		// Token: 0x1700A063 RID: 41059
-		// (get) Token: 0x06049CD8 RID: 302296
+		// Token: 0x17007801 RID: 30721
+		// (get) Token: 0x060400F6 RID: 262390
 		double MaxValue { get; }
 
-		// Token: 0x1700A064 RID: 41060
-		// (get) Token: 0x06049CD9 RID: 302297
+		// Token: 0x17007802 RID: 30722
+		// (get) Token: 0x060400F7 RID: 262391
 		IReadOnlyDictionary<int, DailyActivityDefine.IActivityGoalData> GoalMap { get; }
 
-		// Token: 0x06049CDA RID: 302298
+		// Token: 0x060400F8 RID: 262392
 		List<int> GetCanRewardIdList();
 
-		// Token: 0x06049CDB RID: 302299
+		// Token: 0x060400F9 RID: 262393
 		void RequestReward(List<int> idList, Action onClose);
 
-		// Token: 0x06049CDC RID: 302300
+		// Token: 0x060400FA RID: 262394
 		List<TItem> GetRewardById(int id);
 	}
 }

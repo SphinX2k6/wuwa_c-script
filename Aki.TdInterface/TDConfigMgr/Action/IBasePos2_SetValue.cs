@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017FB RID: 6139
+	// Token: 0x02001984 RID: 6532
 	public class IBasePos2_SetValue
 	{
-		// Token: 0x04005392 RID: 21394
+		// Token: 0x040057DA RID: 22490
 		public EPos2 Type;
 	}
 }

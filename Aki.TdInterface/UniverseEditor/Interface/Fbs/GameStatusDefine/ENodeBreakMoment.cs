@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046E4 RID: 18148
+	// Token: 0x02004B4C RID: 19276
 	public enum ENodeBreakMoment : byte
 	{
-		// Token: 0x0400C969 RID: 51561
+		// Token: 0x0400D398 RID: 54168
 		Null,
-		// Token: 0x0400C96A RID: 51562
+		// Token: 0x0400D399 RID: 54169
 		Before,
-		// Token: 0x0400C96B RID: 51563
+		// Token: 0x0400D39A RID: 54170
 		After
 	}
 }

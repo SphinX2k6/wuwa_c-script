@@ -2,28 +2,28 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EA4 RID: 7844
+	// Token: 0x020020DD RID: 8413
 	public class ISplineMovePattern_SetValue
 	{
-		// Token: 0x04006405 RID: 25605
+		// Token: 0x040069F3 RID: 27123
 		public ESplineMovePattern Type;
 
-		// Token: 0x04006406 RID: 25606
+		// Token: 0x040069F4 RID: 27124
 		public float? MaxOffsetDistance;
 
-		// Token: 0x04006407 RID: 25607
+		// Token: 0x040069F5 RID: 27125
 		public bool? IsOneWay;
 
-		// Token: 0x04006408 RID: 25608
+		// Token: 0x040069F6 RID: 27126
 		public float? LayerVerticalLimit;
 
-		// Token: 0x04006409 RID: 25609
+		// Token: 0x040069F7 RID: 27127
 		public bool? DynamicGravity;
 
-		// Token: 0x0400640A RID: 25610
+		// Token: 0x040069F8 RID: 27128
 		public float? GravitySwitchAngularVelocity;
 
-		// Token: 0x0400640B RID: 25611
+		// Token: 0x040069F9 RID: 27129
 		public int? AutoExitDistance;
 	}
 }

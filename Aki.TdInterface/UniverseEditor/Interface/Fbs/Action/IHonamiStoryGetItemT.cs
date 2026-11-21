@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006925 RID: 26917
+	// Token: 0x02006FD8 RID: 28632
 	public class IHonamiStoryGetItemT
 	{
-		// Token: 0x1700C7B3 RID: 51123
-		// (get) Token: 0x0602EFDD RID: 192477 RVA: 0x00668363 File Offset: 0x00666563
-		// (set) Token: 0x0602EFDE RID: 192478 RVA: 0x0066836B File Offset: 0x0066656B
+		// Token: 0x1700D1B6 RID: 53686
+		// (get) Token: 0x060319AD RID: 203181 RVA: 0x006B884B File Offset: 0x006B6A4B
+		// (set) Token: 0x060319AE RID: 203182 RVA: 0x006B8853 File Offset: 0x006B6A53
 		public int ActivityId { get; set; }
 
-		// Token: 0x1700C7B4 RID: 51124
-		// (get) Token: 0x0602EFDF RID: 192479 RVA: 0x00668374 File Offset: 0x00666574
-		// (set) Token: 0x0602EFE0 RID: 192480 RVA: 0x0066837C File Offset: 0x0066657C
+		// Token: 0x1700D1B7 RID: 53687
+		// (get) Token: 0x060319AF RID: 203183 RVA: 0x006B885C File Offset: 0x006B6A5C
+		// (set) Token: 0x060319B0 RID: 203184 RVA: 0x006B8864 File Offset: 0x006B6A64
 		public List<int> ItemId { get; set; }
 
-		// Token: 0x0602EFE1 RID: 192481 RVA: 0x00668385 File Offset: 0x00666585
+		// Token: 0x060319B1 RID: 203185 RVA: 0x006B886D File Offset: 0x006B6A6D
 		public IHonamiStoryGetItemT()
 		{
 			this.ActivityId = 0;

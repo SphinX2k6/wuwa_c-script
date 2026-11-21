@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046D5 RID: 18133
+	// Token: 0x02004B3D RID: 19261
 	public struct IUpdateSceneRoles : IFlatbufferObject
 	{
-		// Token: 0x170080D4 RID: 32980
-		// (get) Token: 0x0601B921 RID: 112929 RVA: 0x003E925E File Offset: 0x003E745E
+		// Token: 0x17008715 RID: 34581
+		// (get) Token: 0x0601D0F6 RID: 119030 RVA: 0x004154FA File Offset: 0x004136FA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B922 RID: 112930 RVA: 0x003E926B File Offset: 0x003E746B
+		// Token: 0x0601D0F7 RID: 119031 RVA: 0x00415507 File Offset: 0x00413707
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B923 RID: 112931 RVA: 0x003E9274 File Offset: 0x003E7474
+		// Token: 0x0601D0F8 RID: 119032 RVA: 0x00415510 File Offset: 0x00413710
 		public static IUpdateSceneRoles GetRootAsIUpdateSceneRoles(ByteBuffer _bb)
 		{
 			return IUpdateSceneRoles.GetRootAsIUpdateSceneRoles(_bb, default(IUpdateSceneRoles));
 		}
 
-		// Token: 0x0601B924 RID: 112932 RVA: 0x003E9290 File Offset: 0x003E7490
+		// Token: 0x0601D0F9 RID: 119033 RVA: 0x0041552C File Offset: 0x0041372C
 		public static IUpdateSceneRoles GetRootAsIUpdateSceneRoles(ByteBuffer _bb, IUpdateSceneRoles obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B925 RID: 112933 RVA: 0x003E92AD File Offset: 0x003E74AD
+		// Token: 0x0601D0FA RID: 119034 RVA: 0x00415549 File Offset: 0x00413749
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B926 RID: 112934 RVA: 0x003E92BC File Offset: 0x003E74BC
+		// Token: 0x0601D0FB RID: 119035 RVA: 0x00415558 File Offset: 0x00413758
 		public IUpdateSceneRoles __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170080D5 RID: 32981
-		// (get) Token: 0x0601B927 RID: 112935 RVA: 0x003E92CC File Offset: 0x003E74CC
+		// Token: 0x17008716 RID: 34582
+		// (get) Token: 0x0601D0FC RID: 119036 RVA: 0x00415568 File Offset: 0x00413768
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x170080D6 RID: 32982
-		// (get) Token: 0x0601B928 RID: 112936 RVA: 0x003E9308 File Offset: 0x003E7508
+		// Token: 0x17008717 RID: 34583
+		// (get) Token: 0x0601D0FD RID: 119037 RVA: 0x004155A4 File Offset: 0x004137A4
 		public string Group
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B929 RID: 112937 RVA: 0x003E933F File Offset: 0x003E753F
+		// Token: 0x0601D0FE RID: 119038 RVA: 0x004155DB File Offset: 0x004137DB
 		public Span<byte> GetGroupBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601B92A RID: 112938 RVA: 0x003E934E File Offset: 0x003E754E
+		// Token: 0x0601D0FF RID: 119039 RVA: 0x004155EA File Offset: 0x004137EA
 		public byte[] GetGroupArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601B92B RID: 112939 RVA: 0x003E935C File Offset: 0x003E755C
+		// Token: 0x0601D100 RID: 119040 RVA: 0x004155F8 File Offset: 0x004137F8
 		public static Offset<IUpdateSceneRoles> CreateIUpdateSceneRoles(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, StringOffset GroupOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IUpdateSceneRoles.EndIUpdateSceneRoles(builder);
 		}
 
-		// Token: 0x0601B92C RID: 112940 RVA: 0x003E9379 File Offset: 0x003E7579
+		// Token: 0x0601D101 RID: 119041 RVA: 0x00415615 File Offset: 0x00413815
 		public static void StartIUpdateSceneRoles(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601B92D RID: 112941 RVA: 0x003E9382 File Offset: 0x003E7582
+		// Token: 0x0601D102 RID: 119042 RVA: 0x0041561E File Offset: 0x0041381E
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B92E RID: 112942 RVA: 0x003E938D File Offset: 0x003E758D
+		// Token: 0x0601D103 RID: 119043 RVA: 0x00415629 File Offset: 0x00413829
 		public static void AddGroup(FlatBufferBuilder builder, StringOffset groupOffset)
 		{
 			builder.AddOffset(1, groupOffset.Value, 0);
 		}
 
-		// Token: 0x0601B92F RID: 112943 RVA: 0x003E939D File Offset: 0x003E759D
+		// Token: 0x0601D104 RID: 119044 RVA: 0x00415639 File Offset: 0x00413839
 		public static Offset<IUpdateSceneRoles> EndIUpdateSceneRoles(FlatBufferBuilder builder)
 		{
 			return new Offset<IUpdateSceneRoles>(builder.EndTable());
 		}
 
-		// Token: 0x0601B930 RID: 112944 RVA: 0x003E93AC File Offset: 0x003E75AC
+		// Token: 0x0601D105 RID: 119045 RVA: 0x00415648 File Offset: 0x00413848
 		public IUpdateSceneRolesT UnPack()
 		{
 			IUpdateSceneRolesT updateSceneRolesT = new IUpdateSceneRolesT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return updateSceneRolesT;
 		}
 
-		// Token: 0x0601B931 RID: 112945 RVA: 0x003E93C7 File Offset: 0x003E75C7
+		// Token: 0x0601D106 RID: 119046 RVA: 0x00415663 File Offset: 0x00413863
 		public void UnPackTo(IUpdateSceneRolesT _o)
 		{
 			_o.Type = this.Type;
 			_o.Group = this.Group;
 		}
 
-		// Token: 0x0601B932 RID: 112946 RVA: 0x003E93E4 File Offset: 0x003E75E4
+		// Token: 0x0601D107 RID: 119047 RVA: 0x00415680 File Offset: 0x00413880
 		public static Offset<IUpdateSceneRoles> Pack(FlatBufferBuilder builder, IUpdateSceneRolesT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IUpdateSceneRoles.CreateIUpdateSceneRoles(builder, _o.Type, groupOffset);
 		}
 
-		// Token: 0x0400C8A7 RID: 51367
+		// Token: 0x0400D2D6 RID: 53974
 		private Table __p;
 	}
 }

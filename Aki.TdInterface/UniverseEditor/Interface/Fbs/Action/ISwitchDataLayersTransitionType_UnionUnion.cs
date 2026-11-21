@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007254 RID: 29268
+	// Token: 0x02007A29 RID: 31273
 	public class ISwitchDataLayersTransitionType_UnionUnion
 	{
-		// Token: 0x1700D929 RID: 55593
-		// (get) Token: 0x06033EA6 RID: 212646 RVA: 0x006FBB05 File Offset: 0x006F9D05
-		// (set) Token: 0x06033EA7 RID: 212647 RVA: 0x006FBB0D File Offset: 0x006F9D0D
+		// Token: 0x1700E522 RID: 58658
+		// (get) Token: 0x060371A8 RID: 225704 RVA: 0x0075CE65 File Offset: 0x0075B065
+		// (set) Token: 0x060371A9 RID: 225705 RVA: 0x0075CE6D File Offset: 0x0075B06D
 		public ISwitchDataLayersTransitionType_Union Type { get; set; }
 
-		// Token: 0x1700D92A RID: 55594
-		// (get) Token: 0x06033EA8 RID: 212648 RVA: 0x006FBB16 File Offset: 0x006F9D16
-		// (set) Token: 0x06033EA9 RID: 212649 RVA: 0x006FBB1E File Offset: 0x006F9D1E
+		// Token: 0x1700E523 RID: 58659
+		// (get) Token: 0x060371AA RID: 225706 RVA: 0x0075CE76 File Offset: 0x0075B076
+		// (set) Token: 0x060371AB RID: 225707 RVA: 0x0075CE7E File Offset: 0x0075B07E
 		public object Value { get; set; }
 
-		// Token: 0x06033EAA RID: 212650 RVA: 0x006FBB27 File Offset: 0x006F9D27
+		// Token: 0x060371AC RID: 225708 RVA: 0x0075CE87 File Offset: 0x0075B087
 		public ISwitchDataLayersTransitionType_UnionUnion()
 		{
 			this.Type = ISwitchDataLayersTransitionType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06033EAB RID: 212651 RVA: 0x006FBB3D File Offset: 0x006F9D3D
+		// Token: 0x060371AD RID: 225709 RVA: 0x0075CE9D File Offset: 0x0075B09D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06033EAC RID: 212652 RVA: 0x006FBB4F File Offset: 0x006F9D4F
+		// Token: 0x060371AE RID: 225710 RVA: 0x0075CEAF File Offset: 0x0075B0AF
 		public ISwitchDataLayersTransitionTypeT AsISwitchDataLayersTransitionType()
 		{
 			return this.As<ISwitchDataLayersTransitionTypeT>();
 		}
 
-		// Token: 0x06033EAD RID: 212653 RVA: 0x006FBB57 File Offset: 0x006F9D57
+		// Token: 0x060371AF RID: 225711 RVA: 0x0075CEB7 File Offset: 0x0075B0B7
 		public static ISwitchDataLayersTransitionType_UnionUnion FromISwitchDataLayersTransitionType(ISwitchDataLayersTransitionTypeT _iswitchdatalayerstransitiontype)
 		{
 			return new ISwitchDataLayersTransitionType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06033EAE RID: 212654 RVA: 0x006FBB6C File Offset: 0x006F9D6C
+		// Token: 0x060371B0 RID: 225712 RVA: 0x0075CECC File Offset: 0x0075B0CC
 		public ISwitchDataLayersTransitionWithSequenceT AsISwitchDataLayersTransitionWithSequence()
 		{
 			return this.As<ISwitchDataLayersTransitionWithSequenceT>();
 		}
 
-		// Token: 0x06033EAF RID: 212655 RVA: 0x006FBB74 File Offset: 0x006F9D74
+		// Token: 0x060371B1 RID: 225713 RVA: 0x0075CED4 File Offset: 0x0075B0D4
 		public static ISwitchDataLayersTransitionType_UnionUnion FromISwitchDataLayersTransitionWithSequence(ISwitchDataLayersTransitionWithSequenceT _iswitchdatalayerstransitionwithsequence)
 		{
 			return new ISwitchDataLayersTransitionType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06033EB0 RID: 212656 RVA: 0x006FBB8C File Offset: 0x006F9D8C
+		// Token: 0x060371B2 RID: 225714 RVA: 0x0075CEEC File Offset: 0x0075B0EC
 		public static int Pack(FlatBufferBuilder builder, ISwitchDataLayersTransitionType_UnionUnion _o)
 		{
 			ISwitchDataLayersTransitionType_Union type = _o.Type;

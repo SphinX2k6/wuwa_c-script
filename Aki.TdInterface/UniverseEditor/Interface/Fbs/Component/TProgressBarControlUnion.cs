@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C91 RID: 23697
+	// Token: 0x020062C2 RID: 25282
 	public class TProgressBarControlUnion
 	{
-		// Token: 0x1700B23E RID: 45630
-		// (get) Token: 0x06028963 RID: 166243 RVA: 0x005944F2 File Offset: 0x005926F2
-		// (set) Token: 0x06028964 RID: 166244 RVA: 0x005944FA File Offset: 0x005926FA
+		// Token: 0x1700BB98 RID: 48024
+		// (get) Token: 0x0602AFA9 RID: 176041 RVA: 0x005DCC2A File Offset: 0x005DAE2A
+		// (set) Token: 0x0602AFAA RID: 176042 RVA: 0x005DCC32 File Offset: 0x005DAE32
 		public TProgressBarControl Type { get; set; }
 
-		// Token: 0x1700B23F RID: 45631
-		// (get) Token: 0x06028965 RID: 166245 RVA: 0x00594503 File Offset: 0x00592703
-		// (set) Token: 0x06028966 RID: 166246 RVA: 0x0059450B File Offset: 0x0059270B
+		// Token: 0x1700BB99 RID: 48025
+		// (get) Token: 0x0602AFAB RID: 176043 RVA: 0x005DCC3B File Offset: 0x005DAE3B
+		// (set) Token: 0x0602AFAC RID: 176044 RVA: 0x005DCC43 File Offset: 0x005DAE43
 		public object Value { get; set; }
 
-		// Token: 0x06028967 RID: 166247 RVA: 0x00594514 File Offset: 0x00592714
+		// Token: 0x0602AFAD RID: 176045 RVA: 0x005DCC4C File Offset: 0x005DAE4C
 		public TProgressBarControlUnion()
 		{
 			this.Type = TProgressBarControl.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028968 RID: 166248 RVA: 0x0059452A File Offset: 0x0059272A
+		// Token: 0x0602AFAE RID: 176046 RVA: 0x005DCC62 File Offset: 0x005DAE62
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028969 RID: 166249 RVA: 0x0059453C File Offset: 0x0059273C
+		// Token: 0x0602AFAF RID: 176047 RVA: 0x005DCC74 File Offset: 0x005DAE74
 		public ICaptureStrategicPointT AsICaptureStrategicPoint()
 		{
 			return this.As<ICaptureStrategicPointT>();
 		}
 
-		// Token: 0x0602896A RID: 166250 RVA: 0x00594544 File Offset: 0x00592744
+		// Token: 0x0602AFB0 RID: 176048 RVA: 0x005DCC7C File Offset: 0x005DAE7C
 		public static TProgressBarControlUnion FromICaptureStrategicPoint(ICaptureStrategicPointT _icapturestrategicpoint)
 		{
 			return new TProgressBarControlUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602896B RID: 166251 RVA: 0x00594559 File Offset: 0x00592759
+		// Token: 0x0602AFB1 RID: 176049 RVA: 0x005DCC91 File Offset: 0x005DAE91
 		public ICaptureStrategicPoint2T AsICaptureStrategicPoint2()
 		{
 			return this.As<ICaptureStrategicPoint2T>();
 		}
 
-		// Token: 0x0602896C RID: 166252 RVA: 0x00594561 File Offset: 0x00592761
+		// Token: 0x0602AFB2 RID: 176050 RVA: 0x005DCC99 File Offset: 0x005DAE99
 		public static TProgressBarControlUnion FromICaptureStrategicPoint2(ICaptureStrategicPoint2T _icapturestrategicpoint2)
 		{
 			return new TProgressBarControlUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602896D RID: 166253 RVA: 0x00594576 File Offset: 0x00592776
+		// Token: 0x0602AFB3 RID: 176051 RVA: 0x005DCCAE File Offset: 0x005DAEAE
 		public IChargingDeviceT AsIChargingDevice()
 		{
 			return this.As<IChargingDeviceT>();
 		}
 
-		// Token: 0x0602896E RID: 166254 RVA: 0x0059457E File Offset: 0x0059277E
+		// Token: 0x0602AFB4 RID: 176052 RVA: 0x005DCCB6 File Offset: 0x005DAEB6
 		public static TProgressBarControlUnion FromIChargingDevice(IChargingDeviceT _ichargingdevice)
 		{
 			return new TProgressBarControlUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602896F RID: 166255 RVA: 0x00594593 File Offset: 0x00592793
+		// Token: 0x0602AFB5 RID: 176053 RVA: 0x005DCCCB File Offset: 0x005DAECB
 		public IMatchTargetChargingDeviceT AsIMatchTargetChargingDevice()
 		{
 			return this.As<IMatchTargetChargingDeviceT>();
 		}
 
-		// Token: 0x06028970 RID: 166256 RVA: 0x0059459B File Offset: 0x0059279B
+		// Token: 0x0602AFB6 RID: 176054 RVA: 0x005DCCD3 File Offset: 0x005DAED3
 		public static TProgressBarControlUnion FromIMatchTargetChargingDevice(IMatchTargetChargingDeviceT _imatchtargetchargingdevice)
 		{
 			return new TProgressBarControlUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028971 RID: 166257 RVA: 0x005945B0 File Offset: 0x005927B0
+		// Token: 0x0602AFB7 RID: 176055 RVA: 0x005DCCE8 File Offset: 0x005DAEE8
 		public ITimedStrikeDeviceT AsITimedStrikeDevice()
 		{
 			return this.As<ITimedStrikeDeviceT>();
 		}
 
-		// Token: 0x06028972 RID: 166258 RVA: 0x005945B8 File Offset: 0x005927B8
+		// Token: 0x0602AFB8 RID: 176056 RVA: 0x005DCCF0 File Offset: 0x005DAEF0
 		public static TProgressBarControlUnion FromITimedStrikeDevice(ITimedStrikeDeviceT _itimedstrikedevice)
 		{
 			return new TProgressBarControlUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028973 RID: 166259 RVA: 0x005945D0 File Offset: 0x005927D0
+		// Token: 0x0602AFB9 RID: 176057 RVA: 0x005DCD08 File Offset: 0x005DAF08
 		public static int Pack(FlatBufferBuilder builder, TProgressBarControlUnion _o)
 		{
 			switch (_o.Type)

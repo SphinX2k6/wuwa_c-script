@@ -6,12 +6,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 {
-	// Token: 0x02006458 RID: 25688
+	// Token: 0x020053D6 RID: 21462
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityMotorDevelopData : ActivityBaseData
 	{
-		// Token: 0x060408FC RID: 264444 RVA: 0x00FA04A8 File Offset: 0x00F9E6A8
+		// Token: 0x060355BD RID: 218557 RVA: 0x00EE7424 File Offset: 0x00EE5624
 		protected override void PhraseEx(ActivityData data)
 		{
 			MotorDevelopActivityData motorDevelopActivityData = data.MotorDevelopActivityData;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			this.InitMotorDevelopTask(repeatedField);
 		}
 
-		// Token: 0x060408FD RID: 264445 RVA: 0x00FA04D4 File Offset: 0x00F9E6D4
+		// Token: 0x060355BE RID: 218558 RVA: 0x00EE7450 File Offset: 0x00EE5650
 		public void InitMotorDevelopTask(IReadOnlyList<ConditionTask> tasks)
 		{
 			this.TaskMap.Clear();
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			}
 		}
 
-		// Token: 0x060408FE RID: 264446 RVA: 0x00FA0534 File Offset: 0x00F9E734
+		// Token: 0x060355BF RID: 218559 RVA: 0x00EE74B0 File Offset: 0x00EE56B0
 		public void UpdateMotorDevelopTask(IReadOnlyList<ConditionTask> tasks)
 		{
 			foreach (ConditionTask conditionTask in tasks)
@@ -42,13 +42,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			}
 		}
 
-		// Token: 0x060408FF RID: 264447 RVA: 0x00FA0588 File Offset: 0x00F9E788
+		// Token: 0x060355C0 RID: 218560 RVA: 0x00EE7504 File Offset: 0x00EE5704
 		public List<ConditionTask> GetMotorDevelopTaskList()
 		{
 			return new List<ConditionTask>(this.TaskMap.Values);
 		}
 
-		// Token: 0x06040900 RID: 264448 RVA: 0x00FA059A File Offset: 0x00F9E79A
+		// Token: 0x060355C1 RID: 218561 RVA: 0x00EE7516 File Offset: 0x00EE5716
 		public void SetActivityFirstUnlockUnReadFlag(int flagId)
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			instance.SaveActivityData(base.Id, 2, 0, 0, flagId);
 		}
 
-		// Token: 0x06040901 RID: 264449 RVA: 0x00FA05B5 File Offset: 0x00F9E7B5
+		// Token: 0x060355C2 RID: 218562 RVA: 0x00EE7531 File Offset: 0x00EE5731
 		public void CheckAndCloseFirstUnlockReadFlag()
 		{
 			if (base.IsUnLock())
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			}
 		}
 
-		// Token: 0x06040902 RID: 264450 RVA: 0x00FA05C8 File Offset: 0x00F9E7C8
+		// Token: 0x060355C3 RID: 218563 RVA: 0x00EE7544 File Offset: 0x00EE5744
 		public override bool GetExDataRedPointShowState()
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			return false;
 		}
 
-		// Token: 0x06040903 RID: 264451 RVA: 0x00FA06C8 File Offset: 0x00F9E8C8
+		// Token: 0x060355C4 RID: 218564 RVA: 0x00EE7644 File Offset: 0x00EE5844
 		protected override bool GetExDataFinishShowState()
 		{
 			using (List<ConditionTask>.Enumerator enumerator = new List<ConditionTask>(this.TaskMap.Values).GetEnumerator())
@@ -122,13 +122,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			return true;
 		}
 
-		// Token: 0x04021929 RID: 137513
+		// Token: 0x0401C258 RID: 115288
 		private const int FIRSTOPEN = 1;
 
-		// Token: 0x0402192A RID: 137514
+		// Token: 0x0401C259 RID: 115289
 		private const int FIRSTUNLOCK = 2;
 
-		// Token: 0x0402192B RID: 137515
+		// Token: 0x0401C25A RID: 115290
 		private readonly Dictionary<int, ConditionTask> TaskMap = new Dictionary<int, ConditionTask>();
 	}
 }

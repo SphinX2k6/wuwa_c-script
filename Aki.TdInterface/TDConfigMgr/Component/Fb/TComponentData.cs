@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E4E RID: 3662
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F5F RID: 3935
 	public class TComponentData
 	{
-		// Token: 0x060052AE RID: 21166 RVA: 0x000CB76D File Offset: 0x000C996D
+		// Token: 0x0600582A RID: 22570 RVA: 0x000D7921 File Offset: 0x000D5B21
 		public static TComponentData Create(TComponentData? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BCF RID: 7119
-		// (get) Token: 0x060052AF RID: 21167 RVA: 0x000CB78C File Offset: 0x000C998C
+		// Token: 0x17001D67 RID: 7527
+		// (get) Token: 0x0600582B RID: 22571 RVA: 0x000D7940 File Offset: 0x000D5B40
 		public virtual string Key
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BD0 RID: 7120
-		// (get) Token: 0x060052B0 RID: 21168 RVA: 0x000CB799 File Offset: 0x000C9999
+		// Token: 0x17001D68 RID: 7528
+		// (get) Token: 0x0600582C RID: 22572 RVA: 0x000D794D File Offset: 0x000D5B4D
 		public virtual IComponentBase Value
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002FAB RID: 12203
+		// Token: 0x040032A2 RID: 12962
 		private TComponentData Instance;
 
-		// Token: 0x04002FAC RID: 12204
+		// Token: 0x040032A3 RID: 12963
 		private IComponentBase _ValueCache;
 
-		// Token: 0x04002FAD RID: 12205
+		// Token: 0x040032A4 RID: 12964
 		private bool _ValueInited;
 	}
 }
